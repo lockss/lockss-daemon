@@ -1,10 +1,10 @@
 /*
- * $Id: TestDaemonStatusService.java,v 1.1 2013-03-22 04:47:31 fergaloy-sf Exp $
+ * $Id: TestDaemonStatusService.java,v 1.2 2014-04-04 22:00:45 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,6 +35,7 @@ package org.lockss.ws.status;
 import java.io.IOException;
 import java.util.Collection;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Properties;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
@@ -51,13 +52,14 @@ import org.lockss.plugin.PluginTestUtil;
 import org.lockss.plugin.SubTreeArticleIterator;
 import org.lockss.plugin.simulated.SimulatedArchivalUnit;
 import org.lockss.plugin.simulated.SimulatedContentGenerator;
-import org.lockss.plugin.simulated.SimulatedPlugin;
+import org.lockss.plugin.simulated.SimulatedDefinablePlugin;
 import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockLockssDaemon;
 import org.lockss.util.ExternalizableMap;
 import org.lockss.util.Logger;
 import org.lockss.ws.entities.IdNamePair;
+import org.lockss.ws.entities.PluginWsResult;
 
 /**
  * Test class for org.lockss.ws.status.DaemonStatusService
@@ -92,6 +94,12 @@ public class TestDaemonStatusService extends LockssTestCase {
 
     PluginTestUtil.crawlSimAu(sau0);
 
+    SimulatedArchivalUnit sau1 =
+	PluginTestUtil.createAndStartSimAu(MySimulatedPlugin1.class,
+	    simAuConfig(tempDirPath + "/1"));
+
+    PluginTestUtil.crawlSimAu(sau1);
+
     service = new DaemonStatusServiceImpl();
   }
 
@@ -108,13 +116,155 @@ public class TestDaemonStatusService extends LockssTestCase {
   }
 
   /**
-   * Runs the test that get the identifiers of all the AUs.
+   * Runs the test that gets the identifiers of all the AUs.
    * 
    * @throws Exception
    */
   public void testGetAuIds() throws Exception {
     Collection<IdNamePair> auIds = service.getAuIds();
-    assertEquals(1, auIds.size());
+    assertEquals(2, auIds.size());
+  }
+
+  /**
+   * Runs the test that queries plugins.
+   * 
+   * @throws Exception
+   */
+  public void testQueryPlugins() throws Exception {
+    String pluginIdStart =
+	"org.lockss.ws.status.TestDaemonStatusService$MySimulatedPlugin";
+    String query = "select *";
+    List<PluginWsResult> plugins = service.queryPlugins(query);
+    assertEquals(2, plugins.size());
+    PluginWsResult plugin = plugins.get(0);
+    assertTrue(plugin.getPluginId().startsWith(pluginIdStart));
+    assertEquals("Simulated Content", plugin.getName());
+    assertEquals("SimulatedVersion", plugin.getVersion());
+    assertEquals("Builtin", plugin.getType());
+    assertNull(plugin.getRegistry());
+    plugin = plugins.get(1);
+    assertTrue(plugin.getPluginId().startsWith(pluginIdStart));
+    assertEquals("Simulated Content", plugin.getName());
+    assertEquals("SimulatedVersion", plugin.getVersion());
+    assertEquals("Builtin", plugin.getType());
+    assertNull(plugin.getRegistry());
+
+    query = "select pluginId";
+    plugins = service.queryPlugins(query);
+    assertEquals(2, plugins.size());
+    plugin = plugins.get(0);
+    assertTrue(plugin.getPluginId().startsWith(pluginIdStart));
+    assertNull(plugin.getName());
+    assertNull(plugin.getVersion());
+    assertNull(plugin.getType());
+    assertNull(plugin.getDefinition());
+    assertNull(plugin.getRegistry());
+    plugin = plugins.get(0);
+    assertTrue(plugin.getPluginId().startsWith(pluginIdStart));
+    assertNull(plugin.getName());
+    assertNull(plugin.getVersion());
+    assertNull(plugin.getType());
+    assertNull(plugin.getDefinition());
+    assertNull(plugin.getRegistry());
+
+    query = "select name";
+    plugins = service.queryPlugins(query);
+    assertEquals(2, plugins.size());
+    plugin = plugins.get(0);
+    assertNull(plugin.getPluginId());
+    assertEquals("Simulated Content", plugin.getName());
+    assertNull(plugin.getVersion());
+    assertNull(plugin.getType());
+    assertNull(plugin.getDefinition());
+    assertNull(plugin.getRegistry());
+    plugin = plugins.get(1);
+    assertNull(plugin.getPluginId());
+    assertEquals("Simulated Content", plugin.getName());
+    assertNull(plugin.getVersion());
+    assertNull(plugin.getType());
+    assertNull(plugin.getDefinition());
+    assertNull(plugin.getRegistry());
+
+    query = "select version, type";
+    plugins = service.queryPlugins(query);
+    assertEquals(2, plugins.size());
+    plugin = plugins.get(0);
+    assertNull(plugin.getPluginId());
+    assertNull(plugin.getName());
+    assertEquals("SimulatedVersion", plugin.getVersion());
+    assertEquals("Builtin", plugin.getType());
+    assertNull(plugin.getDefinition());
+    assertNull(plugin.getRegistry());
+    plugin = plugins.get(1);
+    assertNull(plugin.getPluginId());
+    assertNull(plugin.getName());
+    assertEquals("SimulatedVersion", plugin.getVersion());
+    assertEquals("Builtin", plugin.getType());
+    assertNull(plugin.getDefinition());
+    assertNull(plugin.getRegistry());
+
+    String pluginIdStart0 =
+	"org.lockss.ws.status.TestDaemonStatusService$MySimulatedPlugin0";
+    query = "select * where pluginId like '%Plugin0'";
+    plugins = service.queryPlugins(query);
+    assertEquals(1, plugins.size());
+    plugin = plugins.get(0);
+    assertEquals(pluginIdStart0, plugin.getPluginId());
+    assertEquals("Simulated Content", plugin.getName());
+    assertEquals("SimulatedVersion", plugin.getVersion());
+    assertEquals("Builtin", plugin.getType());
+    assertEquals(1, plugin.getDefinition().size());
+    assertNull(plugin.getRegistry());
+
+    String pluginIdStart1 =
+	"org.lockss.ws.status.TestDaemonStatusService$MySimulatedPlugin1";
+    query = "select * where pluginId like '%Plugin1'";
+    plugins = service.queryPlugins(query);
+    assertEquals(1, plugins.size());
+    plugin = plugins.get(0);
+    assertEquals(pluginIdStart1, plugin.getPluginId());
+    assertEquals("Simulated Content", plugin.getName());
+    assertEquals("SimulatedVersion", plugin.getVersion());
+    assertEquals("Builtin", plugin.getType());
+    assertEquals(2, plugin.getDefinition().size());
+    assertNull(plugin.getRegistry());
+
+    query = "select * where name = 'Real Content'";
+    plugins = service.queryPlugins(query);
+    assertEquals(0, plugins.size());
+
+    query = "select * where pluginId like '%Plugin0' or name = 'Real Content'";
+    plugins = service.queryPlugins(query);
+    assertEquals(1, plugins.size());
+    plugin = plugins.get(0);
+    assertEquals(pluginIdStart0, plugin.getPluginId());
+    assertEquals("Simulated Content", plugin.getName());
+    assertEquals("SimulatedVersion", plugin.getVersion());
+    assertEquals("Builtin", plugin.getType());
+    assertEquals(1, plugin.getDefinition().size());
+    assertNull(plugin.getRegistry());
+
+    query = "select * where pluginId like '%Plugin0' and name = 'Real Content'";
+    plugins = service.queryPlugins(query);
+    assertEquals(0, plugins.size());
+
+    query = "select pluginId,definition where type='Builtin' order by pluginId";
+    plugins = service.queryPlugins(query);
+    assertEquals(2, plugins.size());
+    plugin = plugins.get(0);
+    assertEquals(pluginIdStart0, plugin.getPluginId());
+    assertNull(plugin.getName());
+    assertNull(plugin.getVersion());
+    assertNull(plugin.getType());
+    assertEquals(1, plugin.getDefinition().size());
+    assertNull(plugin.getRegistry());
+    plugin = plugins.get(1);
+    assertEquals(pluginIdStart1, plugin.getPluginId());
+    assertNull(plugin.getName());
+    assertNull(plugin.getVersion());
+    assertNull(plugin.getType());
+    assertEquals(2, plugin.getDefinition().size());
+    assertNull(plugin.getRegistry());
   }
 
   private Configuration simAuConfig(String rootPath) {
@@ -161,7 +311,7 @@ public class TestDaemonStatusService extends LockssTestCase {
     }
   }
 
-  private static class MySimulatedPlugin extends SimulatedPlugin {
+  private static class MySimulatedPlugin extends SimulatedDefinablePlugin {
     ArticleMetadataExtractor simulatedArticleMetadataExtractor = null;
     int version = 2;
     /**
@@ -202,6 +352,24 @@ public class TestDaemonStatusService extends LockssTestCase {
     public ExternalizableMap getDefinitionMap() {
       ExternalizableMap map = new ExternalizableMap();
       map.putString("au_start_url", "\"%splugin0/%s\", base_url, volume");
+      return map;
+    }
+  }
+
+  public static class MySimulatedPlugin1 extends MySimulatedPlugin {
+    public MySimulatedPlugin1() {
+      simulatedArticleMetadataExtractor = new ArticleMetadataExtractor() {
+        public void extract(MetadataTarget target, ArticleFiles af,
+            Emitter emitter) throws IOException, PluginException {
+          ArticleMetadata md = new ArticleMetadata();
+          emitter.emitMetadata(af, md);
+        }
+      };
+    }
+    public ExternalizableMap getDefinitionMap() {
+      ExternalizableMap map = new ExternalizableMap();
+      map.putString("key1", "value1");
+      map.putString("key2", "value2");
       return map;
     }
   }

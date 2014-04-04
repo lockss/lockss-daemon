@@ -1,10 +1,10 @@
 /*
- * $Id: PluginManager.java,v 1.247 2013-11-29 19:19:32 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.248 2014-04-04 22:00:47 fergaloy-sf Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -2616,7 +2616,7 @@ public class PluginManager
   }
 
   /** @return loadable PluginInfo for plugin, or null */
-  PluginInfo getLoadablePluginInfo(Plugin plugin) {
+  public PluginInfo getLoadablePluginInfo(Plugin plugin) {
     return (PluginInfo)pluginfoMap.get(getPluginKey(plugin));
   }
 

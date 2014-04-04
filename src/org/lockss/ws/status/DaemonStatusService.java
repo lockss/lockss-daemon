@@ -1,10 +1,10 @@
 /*
- * $Id: DaemonStatusService.java,v 1.1 2013-03-22 04:47:32 fergaloy-sf Exp $
+ * $Id: DaemonStatusService.java,v 1.2 2014-04-04 22:00:45 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,12 +36,14 @@
 package org.lockss.ws.status;
 
 import java.util.Collection;
+import java.util.List;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebService;
 import org.lockss.ws.entities.AuStatus;
 import org.lockss.ws.entities.IdNamePair;
 import org.lockss.ws.entities.LockssWebServicesFault;
+import org.lockss.ws.entities.PluginWsResult;
 
 @WebService
 public interface DaemonStatusService {
@@ -76,4 +78,17 @@ public interface DaemonStatusService {
   @WebMethod
   AuStatus getAuStatus(@WebParam(name = "auId") String auId)
       throws LockssWebServicesFault;
+
+  /**
+   * Provides the selected properties of selected plugins in the system.
+   * 
+   * @param query
+   *          A String with the query used to specify what properties to
+   *          retrieve from which plugins.
+   * @return a List<PluginWsResult> with the results.
+   * @throws LockssWebServicesFault
+   */
+  @WebMethod
+  List<PluginWsResult> queryPlugins(@WebParam(name = "pluginQuery") String
+      pluginQuery) throws LockssWebServicesFault;
 }
