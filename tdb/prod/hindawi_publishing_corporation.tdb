@@ -3901,6 +3901,20 @@
   
   {
     title <
+      name = International Journal of Embryology ;
+      issn = 2356-699X ;
+      eissn = 2314-8357 ;
+      issnl = 2356-699X
+    >
+
+    param[journal_id] = ijembry
+
+    au < exists ; 2014 ; International Journal of Embryology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
       name = International Journal of Endocrinology ;
       issn = 1687-8337 ;
       eissn = 1687-8345 ;
@@ -3914,14 +3928,30 @@
     au < released ; 2011 ; International Journal of Endocrinology Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; International Journal of Endocrinology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; International Journal of Endocrinology Volume 2013 ; 2013 ; 2013 >
-    au < expected ; 2014 ; International Journal of Endocrinology Volume 2014 ; 2014 ; 2014 >
+    au < exists ; 2014 ; International Journal of Endocrinology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Engineering Mathematics ;
+      issn = 2356-7007 ;
+      eissn = 2314-6109 ;
+      issnl = 2356-7007
+    >
+
+    param[journal_id] = ijem
+
+    au < exists ; 2013 ; International Journal of Engineering Mathematics Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; International Journal of Engineering Mathematics Volume 2014 ; 2014 ; 2014 >
 
   }
 
   {
     title <
       name = International Journal of Evolutionary Biology ;
-      issn = 2090-052X ;
+      issn = 2090-8032 ;
+      eissn = 2090-052X ;
       issnl = 2090-052X
     >
 
@@ -3932,7 +3962,7 @@
     au < released ; 2011 ; International Journal of Evolutionary Biology Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; International Journal of Evolutionary Biology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; International Journal of Evolutionary Biology Volume 2013 ; 2013 ; 2013 >
-    au < expected ; 2014 ; International Journal of Evolutionary Biology Volume 2014 ; 2014 ; 2014 >
+    au < exists ; 2014 ; International Journal of Evolutionary Biology Volume 2014 ; 2014 ; 2014 >
     
   }
   
@@ -3950,10 +3980,24 @@
     au < released ; 2011 ; International Journal of Family Medicine Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; International Journal of Family Medicine Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; International Journal of Family Medicine Volume 2013 ; 2013 ; 2013 >
-    au < expected ; 2014 ; International Journal of Family Medicine Volume 2014 ; 2014 ; 2014 >
+    au < exists ; 2014 ; International Journal of Family Medicine Volume 2014 ; 2014 ; 2014 >
     
   }
 
+  {
+    title <
+      name = International Journal of Food Science ;
+      issn = 2356-7015 ;
+      eissn = 2314-5765 ;
+      issnl = 2356-7015
+    >
+
+    param[journal_id] = ijfs
+
+    au < exists ; 2013 ; International Journal of Food Science Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; International Journal of Food Science Volume 2014 ; 2014 ; 2014 >
+
+  }
 
   {
     title <
@@ -3970,7 +4014,7 @@
     au < released ; 2011 ; International Journal of Forestry Research Volume 2011 ; 2011 ; 2011 >
     au < released ; 2012 ; International Journal of Forestry Research Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; International Journal of Forestry Research Volume 2013 ; 2013 ; 2013 >
-    au < expected ; 2014 ; International Journal of Forestry Research Volume 2014 ; 2014 ; 2014 >
+    au < exists ; 2014 ; International Journal of Forestry Research Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4010,15 +4054,25 @@
       issnl = 1687-885X
     >
 
+    {
     param[journal_id] = ijgp
 
-    au < released ; 2009 ; International Journal of Geophysics Volume 2009 ; 2009 ; 2009 >
-    au < released ; 2010 ; International Journal of Geophysics Volume 2010 ; 2010 ; 2010 >
-    au < released ; 2011 ; International Journal of Geophysics Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Geophysics Volume 2012 ; 2012 ; 2012 >
-    au < manifest ; 2013 ; International Journal of Geophysics Volume 2013 ; 2013 ; 2013 >
-    au < expected ; 2014 ; International Journal of Geophysics Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2009 ; International Journal of Geophysics Volume 2009 [superseded] ; 2009 ; 2009 >
+    au < down ; 2010 ; International Journal of Geophysics Volume 2010 [superseded] ; 2010 ; 2010 >
+    au < down ; 2011 ; International Journal of Geophysics Volume 2011 [superseded] ; 2011 ; 2011 >
+    }
+    
+    {
+    param[journal_id] = ijge
 
+    au < exists ; 2009 ; International Journal of Geophysics Volume 2009 ; 2009 ; 2009 >
+    au < exists ; 2010 ; International Journal of Geophysics Volume 2010 ; 2010 ; 2010 >
+    au < exists ; 2011 ; International Journal of Geophysics Volume 2011 ; 2011 ; 2011 >
+    au < exists ; 2012 ; International Journal of Geophysics Volume 2012 ; 2012 ; 2012 >
+    au < exists ; 2013 ; International Journal of Geophysics Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; International Journal of Geophysics Volume 2014 ; 2014 ; 2014 >
+    }
+    
   }
 
   {
