@@ -1,5 +1,5 @@
 /*
- * $Id: TestRoyalSocietyOfChemistryMetadataExtractor.java,v 1.7 2012-08-08 07:19:51 tlipkis Exp $
+ * $Id: TestRoyalSocietyOfChemistryMetadataExtractor.java,v 1.8 2014-04-07 16:25:38 etenbrink Exp $
  */
 
 /*
@@ -38,21 +38,15 @@ import org.lockss.config.Configuration;
 import org.lockss.extractor.*;
 
 import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.ArticleFiles;
 import org.lockss.plugin.CachedUrl;
-import org.lockss.plugin.Plugin;
 import org.lockss.plugin.PluginTestUtil;
 import org.lockss.plugin.simulated.SimulatedArchivalUnit;
 import org.lockss.plugin.simulated.SimulatedContentGenerator;
 import org.lockss.plugin.simulated.SimulatedPlugin;
-import org.lockss.repository.LockssRepositoryImpl;
-import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockCachedUrl;
 import org.lockss.test.MockLockssDaemon;
 import org.lockss.util.Logger;
-import org.lockss.util.StringUtil;
-import java.io.File;
 import java.util.*;
 
 /**
@@ -65,7 +59,7 @@ import java.util.*;
  */
 public class TestRoyalSocietyOfChemistryMetadataExtractor extends LockssTestCase {
 
-	  static Logger log = Logger.getLogger("TestRoyalSocietyOfChemistryMetadataExtractor");
+	  static Logger log = Logger.getLogger(TestRoyalSocietyOfChemistryMetadataExtractor.class);
 
 	  private MockLockssDaemon theDaemon;
 	  private SimulatedArchivalUnit sau;	// Simulated AU to generate content
@@ -180,7 +174,7 @@ public class TestRoyalSocietyOfChemistryMetadataExtractor extends LockssTestCase
 	    FileMetadataExtractor me = new RoyalSocietyOfChemistryHtmlMetadataExtractorFactory.RoyalSocietyOfChemistryHtmlExtractor(); 
 	    FileMetadataListExtractor mle =
 	      new FileMetadataListExtractor(me);
-	    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
+	    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
 	    assertNotEmpty(mdlist);
 	    ArticleMetadata md = mdlist.get(0);
 	    assertNotNull(md);	    
@@ -197,7 +191,7 @@ public class TestRoyalSocietyOfChemistryMetadataExtractor extends LockssTestCase
 	    assertEquals(goodArticleTitle,
 			 md.get(MetadataField.FIELD_ARTICLE_TITLE));
 	    assertEquals(goodJournalTitle,
-			 md.get(MetadataField.FIELD_JOURNAL_TITLE));
+			 md.get(MetadataField.FIELD_PUBLICATION_TITLE));
 	    assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));    
 	  }
 
@@ -217,7 +211,7 @@ public class TestRoyalSocietyOfChemistryMetadataExtractor extends LockssTestCase
 	    FileMetadataExtractor me = new RoyalSocietyOfChemistryHtmlMetadataExtractorFactory.RoyalSocietyOfChemistryHtmlExtractor();	     
 	    FileMetadataListExtractor mle =
 	      new FileMetadataListExtractor(me);
-	    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
+	    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
 	    assertNotEmpty(mdlist);
 	    ArticleMetadata md = mdlist.get(0);
 	    assertNotNull(md);
