@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 
-# $Id: tdbq.py,v 1.22 2013-11-12 00:32:16 thib_gc Exp $
+# $Id: tdbq.py,v 1.23 2014-04-07 21:19:10 thib_gc Exp $
 
 __copyright__ = '''\
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,7 +29,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '''0.4.3'''
+__version__ = '''0.4.4'''
 
 from optparse import OptionGroup, OptionParser
 import re
@@ -651,6 +651,8 @@ def tdbq_reprocess(tdb, options):
 STR_TO_LAMBDA_AU = {
     'au:auid': lambda au: au.auid(),
     'au:auidplus': lambda au: au.auidplus(),
+    'au:isbn': lambda au: au.isbn(),
+    'au:eisbn': lambda au: au.eisbn(),
     'au:name': lambda au: au.name(),
     'au:plugin': lambda au: au.plugin(),
     'au:pluginPrefix': lambda au: au.get(AU.PLUGIN_PREFIX),
@@ -664,9 +666,9 @@ STR_TO_LAMBDA_AU = {
     'au:year': lambda au: au.year(),
     'auid': lambda au: au.auid(),
     'auidplus': lambda au: au.auidplus(),
-    'eisbn': lambda au: au.title().eisbn(),
+    'eisbn': lambda au: au.eisbn(),
     'eissn': lambda au: au.title().eissn(),
-    'isbn': lambda au: au.title().isbn(),
+    'isbn': lambda au: au.isbn(),
     'issn': lambda au: au.title().issn(),
     'issnl': lambda au: au.title().issnl(),
     'doi': lambda au: au.title().doi(),
@@ -682,9 +684,7 @@ STR_TO_LAMBDA_AU = {
     'status1': lambda au: au.get('status1'),
     'status2': lambda au: au.get('status2'),
     'title': lambda au: au.title().name(),
-    'title:eisbn': lambda au: au.title().eisbn(),
     'title:eissn': lambda au: au.title().eissn(),
-    'title:isbn': lambda au: au.title().isbn(),
     'title:issn': lambda au: au.title().issn(),
     'title:issnl': lambda au: au.title().issnl(),
     'title:doi': lambda au: au.title().doi(),

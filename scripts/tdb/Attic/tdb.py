@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
-# $Id: tdb.py,v 1.23 2013-11-12 00:24:02 thib_gc Exp $
+# $Id: tdb.py,v 1.24 2014-04-07 21:19:10 thib_gc Exp $
 
 __copyright__ = '''\
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -28,7 +28,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.4.5'
+__version__ = '0.4.6'
 
 import re
 
@@ -106,9 +106,7 @@ class Publisher(Map):
 class Title(Map):
     '''A TDB Title object.'''
 
-    EISBN = ('eisbn',)
     EISSN = ('eissn',)
-    ISBN = ('isbn',)
     ISSN = ('issn',)
     ISSNL = ('issnl',)
     DOI = ('doi',)
@@ -126,9 +124,7 @@ class Title(Map):
         # Fixed
         self.__publisher = None
         # Memoized
-        self.__eisbn = Undef
         self.__eissn = Undef
-        self.__isbn = Undef
         self.__issn = Undef
         self.__issnl = Undef
         self.__doi = Undef
@@ -137,17 +133,9 @@ class Title(Map):
     
     def set_publisher(self, publisher): self.__publisher = publisher
 
-    def eisbn(self):
-        ret = self.__eisbn
-        if ret is Undef: ret = self.__eisbn = self._internal_get(Title.EISBN)
-        return ret
     def eissn(self):
         ret = self.__eissn
         if ret is Undef: ret = self.__eissn = self._internal_get(Title.EISSN)
-        return ret
-    def isbn(self):
-        ret = self.__isbn
-        if ret is Undef: ret = self.__isbn = self._internal_get(Title.ISBN)
         return ret
     def issn(self):
         ret = self.__issn
