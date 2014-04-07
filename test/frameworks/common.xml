@@ -206,7 +206,8 @@
 		<value>ca.sfu.lib.plugin.contentdm.ContentDmFrontEndPlugin</value>
 		<value>ca.sfu.lib.plugin.contentdm.LockssdmPlugin</value>
 	    <value>org.lockss.plugin.iop.ClockssIOPSciencePlugin</value>
-	    <value>org.lockss.plugin.taylorandfrancis.TaylorAndFrancisPlugin</value>
+      <value>org.lockss.plugin.taylorandfrancis.TaylorAndFrancisPlugin</value>
+      <value>org.lockss.plugin.taylorandfrancis.ClockssTaylorAndFrancisPlugin</value>
 	    <value>org.lockss.plugin.pion.ClockssPionPlugin</value>
 	    <value>org.lockss.plugin.pion.ClockssPionIPerceptionPlugin</value>
 		<value>org.lockss.plugin.springer.ClockssSpringerSourcePlugin</value>
@@ -226,9 +227,12 @@
 		<value>org.lockss.plugin.igiglobal.IgiGlobalPlugin</value>
 		<value>org.lockss.plugin.autobiography.ClockssAutoBiographyPlugin</value>
 		<value>org.lockss.plugin.georgthiemeverlag.GeorgThiemeVerlagPlugin</value>
-		<value>org.lockss.plugin.georgthiemeverlag.ClockssGeorgThiemeVerlagPlugin</value>
-    <value>org.lockss.plugin.org.lockss.plugin.americanmathematicalsociety.AmericanMathematicalSocietyPlugin</value>
-    <value>org.lockss.plugin.org.lockss.plugin.americanmathematicalsociety.ClockssAmericanMathematicalSocietyPlugin</value>
+        <value>org.lockss.plugin.georgthiemeverlag.ClockssGeorgThiemeVerlagPlugin</value>
+        <value>org.lockss.plugin.clockss.stanforduniversitypress.ClockssSUPressOnix2BooksZipSourcePlugin</value>
+        <value>org.lockss.plugin.clockss.onixbooks.ClockssOnix3BooksSourcePlugin</value>
+        <value>org.lockss.plugin.taylorandfrancis.ClockssTaylorAndFrancisSourcePlugin</value>
+        <value>org.lockss.plugin.org.lockss.plugin.americanmathematicalsociety.AmericanMathematicalSocietyPlugin</value>
+        <value>org.lockss.plugin.org.lockss.plugin.americanmathematicalsociety.ClockssAmericanMathematicalSocietyPlugin</value>
       </list>
     </property>
 
