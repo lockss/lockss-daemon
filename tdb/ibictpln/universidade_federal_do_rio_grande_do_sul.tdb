@@ -1020,16 +1020,16 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = renote
 
-      au < testing ; 2003 ; 1 ; RENOTE Volume 2003 ; 2003 >
-      au < testing ; 2004 ; 2 ; RENOTE Volume 2004 ; 2004 >
-      au < testing ; 2005 ; 3 ; RENOTE Volume 2005 ; 2005 >
-      au < testing ; 2006 ; 4 ; RENOTE Volume 2006 ; 2006 >
-      au < testing ; 2007 ; 5 ; RENOTE Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 6 ; RENOTE Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 7 ; RENOTE Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 8 ; RENOTE Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 9 ; RENOTE Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 10 ; RENOTE Volume 2012 ; 2012 >
+      au < ready ; 2003 ; 1 ; RENOTE Volume 2003 ; 2003 >
+      au < ready ; 2004 ; 2 ; RENOTE Volume 2004 ; 2004 >
+      au < ready ; 2005 ; 3 ; RENOTE Volume 2005 ; 2005 >
+      au < ready ; 2006 ; 4 ; RENOTE Volume 2006 ; 2006 >
+      au < ready ; 2007 ; 5 ; RENOTE Volume 2007 ; 2007 >
+      au < ready ; 2008 ; 6 ; RENOTE Volume 2008 ; 2008 >
+      au < ready ; 2009 ; 7 ; RENOTE Volume 2009 ; 2009 >
+      au < ready ; 2010 ; 8 ; RENOTE Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 9 ; RENOTE Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 10 ; RENOTE Volume 2012 ; 2012 >
       au < expected ; 2013 ; 11 ; RENOTE Volume 2013 ; 2013 >
       au < expected ; 2014 ; 12 ; RENOTE Volume 2014 ; 2014 >
 
@@ -1046,8 +1046,8 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = presenca
 
-      au < testing ; 2011 ; 1 ; Revista Brasileira de Estudos da Presença Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 2 ; Revista Brasileira de Estudos da Presença Volume 2012 ; 2012 >
+      au < ready ; 2011 ; 1 ; Revista Brasileira de Estudos da Presença Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 2 ; Revista Brasileira de Estudos da Presença Volume 2012 ; 2012 >
       au < expected ; 2013 ; 3 ; Revista Brasileira de Estudos da Presença Volume 2013 ; 2013 >
       au < expected ; 2014 ; 4 ; Revista Brasileira de Estudos da Presença Volume 2014 ; 2014 >
 
@@ -1064,19 +1064,19 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = rbpae
 
-      au < testing ; 2000 ; 1 ; Revista Brasileira de Política e Administração da Educação Volume 2000 ; 2000 >
-      au < testing ; 2001 ; 2 ; Revista Brasileira de Política e Administração da Educação Volume 2001 ; 2001 >
-      au < testing ; 2002 ; 3 ; Revista Brasileira de Política e Administração da Educação Volume 2002 ; 2002 >
-      au < testing ; 2003 ; 4 ; Revista Brasileira de Política e Administração da Educação Volume 2003 ; 2003 >
-      au < testing ; 2004 ; 5 ; Revista Brasileira de Política e Administração da Educação Volume 2004 ; 2004 >
-      au < testing ; 2005 ; 6 ; Revista Brasileira de Política e Administração da Educação Volume 2005 ; 2005 >
-      au < testing ; 2006 ; 7 ; Revista Brasileira de Política e Administração da Educação Volume 2006 ; 2006 >
-      au < testing ; 2007 ; 8 ; Revista Brasileira de Política e Administração da Educação Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 9 ; Revista Brasileira de Política e Administração da Educação Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 10 ; Revista Brasileira de Política e Administração da Educação Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 11 ; Revista Brasileira de Política e Administração da Educação Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 12 ; Revista Brasileira de Política e Administração da Educação Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 13 ; Revista Brasileira de Política e Administração da Educação Volume 2012 ; 2012 >
+      au < ready ; 2000 ; 1 ; Revista Brasileira de Política e Administração da Educação Volume 2000 ; 2000 >
+      au < ready ; 2001 ; 2 ; Revista Brasileira de Política e Administração da Educação Volume 2001 ; 2001 >
+      au < ready ; 2002 ; 3 ; Revista Brasileira de Política e Administração da Educação Volume 2002 ; 2002 >
+      au < ready ; 2003 ; 4 ; Revista Brasileira de Política e Administração da Educação Volume 2003 ; 2003 >
+      au < ready ; 2004 ; 5 ; Revista Brasileira de Política e Administração da Educação Volume 2004 ; 2004 >
+      au < ready ; 2005 ; 6 ; Revista Brasileira de Política e Administração da Educação Volume 2005 ; 2005 >
+      au < ready ; 2006 ; 7 ; Revista Brasileira de Política e Administração da Educação Volume 2006 ; 2006 >
+      au < ready ; 2007 ; 8 ; Revista Brasileira de Política e Administração da Educação Volume 2007 ; 2007 >
+      au < ready ; 2008 ; 9 ; Revista Brasileira de Política e Administração da Educação Volume 2008 ; 2008 >
+      au < ready ; 2009 ; 10 ; Revista Brasileira de Política e Administração da Educação Volume 2009 ; 2009 >
+      au < ready ; 2010 ; 11 ; Revista Brasileira de Política e Administração da Educação Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 12 ; Revista Brasileira de Política e Administração da Educação Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 13 ; Revista Brasileira de Política e Administração da Educação Volume 2012 ; 2012 >
       au < expected ; 2013 ; 14 ; Revista Brasileira de Política e Administração da Educação Volume 2013 ; 2013 >
       au < expected ; 2014 ; 15 ; Revista Brasileira de Política e Administração da Educação Volume 2014 ; 2014 >
 
@@ -1094,18 +1094,18 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = RevistadaFaculdadeOdontologia
 
-      au < testing ; 2000 ; 1 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2000 ; 2000 >
-      au < testing ; 2001 ; 2 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2001 ; 2001 >
-      au < testing ; 2002 ; 3 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2002 ; 2002 >
-      au < testing ; 2004 ; 5 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2004 ; 2004 >
-      au < testing ; 2005 ; 6 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2005 ; 2005 >
-      au < testing ; 2006 ; 7 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2006 ; 2006 >
-      au < testing ; 2007 ; 8 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 9 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 10 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 11 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 12 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 13 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2012 ; 2012 >
+      au < ready ; 2000 ; 1 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2000 ; 2000 >
+      au < ready ; 2001 ; 2 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2001 ; 2001 >
+      au < ready ; 2002 ; 3 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2002 ; 2002 >
+      au < ready ; 2004 ; 5 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2004 ; 2004 >
+      au < ready ; 2005 ; 6 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2005 ; 2005 >
+      au < ready ; 2006 ; 7 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2006 ; 2006 >
+      au < ready ; 2007 ; 8 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2007 ; 2007 >
+      au < ready ; 2008 ; 9 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2008 ; 2008 >
+      au < ready ; 2009 ; 10 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2009 ; 2009 >
+      au < ready ; 2010 ; 11 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 12 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 13 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2012 ; 2012 >
       au < expected ; 2013 ; 14 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2013 ; 2013 >
       au < expected ; 2014 ; 15 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2014 ; 2014 >
 
@@ -1122,13 +1122,13 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = rita
 
-      au < testing ; 2004 ; 1 ; Revista de Informática Teórica e Aplicada Volume 2004 ; 2004 >
-      au < testing ; 2007 ; 4 ; Revista de Informática Teórica e Aplicada Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 5 ; Revista de Informática Teórica e Aplicada Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 6 ; Revista de Informática Teórica e Aplicada Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 7 ; Revista de Informática Teórica e Aplicada Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 8 ; Revista de Informática Teórica e Aplicada Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 9 ; Revista de Informática Teórica e Aplicada Volume 2012 ; 2012 >
+      au < ready ; 2004 ; 1 ; Revista de Informática Teórica e Aplicada Volume 2004 ; 2004 >
+      au < ready ; 2007 ; 4 ; Revista de Informática Teórica e Aplicada Volume 2007 ; 2007 >
+      au < ready ; 2008 ; 5 ; Revista de Informática Teórica e Aplicada Volume 2008 ; 2008 >
+      au < ready ; 2009 ; 6 ; Revista de Informática Teórica e Aplicada Volume 2009 ; 2009 >
+      au < ready ; 2010 ; 7 ; Revista de Informática Teórica e Aplicada Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 8 ; Revista de Informática Teórica e Aplicada Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 9 ; Revista de Informática Teórica e Aplicada Volume 2012 ; 2012 >
       au < expected ; 2013 ; 10 ; Revista de Informática Teórica e Aplicada Volume 2013 ; 2013 >
       au < expected ; 2014 ; 11 ; Revista de Informática Teórica e Aplicada Volume 2014 ; 2014 >
 
@@ -1145,8 +1145,8 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = reic
 
-      au < testing ; 2011 ; 1 ; Revista de Iniciação Científica Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 2 ; Revista de Iniciação Científica Volume 2012 ; 2012 >
+      au < ready ; 2011 ; 1 ; Revista de Iniciação Científica Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 2 ; Revista de Iniciação Científica Volume 2012 ; 2012 >
       au < expected ; 2013 ; 3 ; Revista de Iniciação Científica Volume 2013 ; 2013 >
       au < expected ; 2014 ; 4 ; Revista de Iniciação Científica Volume 2014 ; 2014 >
 
@@ -1164,12 +1164,12 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = debates
 
-      au < testing ; 2007 ; 1 ; Revista Debates Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 2 ; Revista Debates Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 3 ; Revista Debates Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 4 ; Revista Debates Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 5 ; Revista Debates Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 6 ; Revista Debates Volume 2012 ; 2012 >
+      au < ready ; 2007 ; 1 ; Revista Debates Volume 2007 ; 2007 >
+      au < ready ; 2008 ; 2 ; Revista Debates Volume 2008 ; 2008 >
+      au < ready ; 2009 ; 3 ; Revista Debates Volume 2009 ; 2009 >
+      au < ready ; 2010 ; 4 ; Revista Debates Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 5 ; Revista Debates Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 6 ; Revista Debates Volume 2012 ; 2012 >
       au < expected ; 2013 ; 7 ; Revista Debates Volume 2013 ; 2013 >
       au < expected ; 2014 ; 8 ; Revista Debates Volume 2014 ; 2014 >
 
