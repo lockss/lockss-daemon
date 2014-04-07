@@ -2613,7 +2613,7 @@
     >
 
     {
-    param[journal_id] = edu
+    param[journal_id] = edri
 
     au < exists ; exists ; 2011 ; Education Research International Volume 2011 ; 2011 ; 2011 >
     au < exists ; exists ; 2012 ; Education Research International Volume 2012 ; 2012 ; 2012 >
@@ -3622,6 +3622,321 @@
     au < exists ; exists ; 2013 ; International Journal of Geophysics Volume 2013 ; 2013 ; 2013 >
     au < exists ; exists ; 2014 ; International Journal of Geophysics Volume 2014 ; 2014 ; 2014 >
     
+  }
+
+  {
+    title <
+      name = International Journal of Hepatology ;
+      issn = 2090-3448 ;
+      eissn = 2090-3456 ;
+      issnl = 2090-3448
+    >
+
+    param[journal_id] = ijh
+
+    au < exists ; exists ; 2011 ; International Journal of Hepatology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Hepatology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Hepatology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Hepatology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Hypertension ;
+      issn = 2090-0384 ;
+      eissn = 2090-0392 ;
+      issnl = 2090-0384
+    >
+
+    param[journal_id] = ijhy
+
+    au < exists ; exists ; 2010 ; International Journal of Hypertension Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Hypertension Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Hypertension Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Hypertension Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Hypertension Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Inflammation ;
+      issn = 2090-8040 ;
+      eissn = 2042-0099 ;
+      issnl = 2090-8040
+    >
+
+    param[journal_id] = iji
+
+    au < exists ; exists ; 2010 ; International Journal of Inflammation Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Inflammation Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Inflammation Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Inflammation Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Inflammation Volume 2014 ; 2014 ; 2014 >
+    
+  }
+
+  {
+    title <
+      name = International Journal of Inorganic Chemistry ;
+      issn = 2090-2026 ;
+      eissn = 2090-2034 ;
+      issnl = 2090-2026
+    >
+
+    param[journal_id] = ijic
+
+    au < exists ; exists ; 2008 ; Research Letters in Inorganic Chemistry Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; Research Letters in Inorganic Chemistry Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; International Journal of Inorganic Chemistry Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Inorganic Chemistry Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Inorganic Chemistry Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Inorganic Chemistry Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Inorganic Chemistry Volume 2014 ; 2014 ; 2014 >
+    
+  }
+
+  {
+    title <
+      name = International Journal of Manufacturing Engineering ;
+      issn = 2356-7023 ;
+      eissn = 2314-5781 ;
+      issnl = 2356-7023
+    >
+
+    param[journal_id] = ijme
+
+    au < exists ; exists ; 2013 ; International Journal of Manufacturing Engineering Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Manufacturing Engineering Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Mathematics and Mathematical Sciences ;
+      issn = 0161-1712 ;
+      eissn = 1687-0425 ;
+      issnl = 0161-1712
+    >
+
+    param[journal_id] = ijmms
+
+    au < exists ; exists ; 1971 ; International Journal of Mathematics and Mathematical Sciences Volume 1 (1971) ; 1971 ; 1 >
+    au < exists ; exists ; 1972 ; International Journal of Mathematics and Mathematical Sciences Volume 2 (1972) ; 1972 ; 2 >
+    au < exists ; exists ; 1973 ; International Journal of Mathematics and Mathematical Sciences Volume 3 (1973) ; 1973 ; 3 >
+    au < exists ; exists ; 1974 ; International Journal of Mathematics and Mathematical Sciences Volume 4 (1974) ; 1974 ; 4 >
+    au < exists ; exists ; 1975 ; International Journal of Mathematics and Mathematical Sciences Volume 5 (1975) ; 1975 ; 5 >
+    au < exists ; exists ; 1976 ; International Journal of Mathematics and Mathematical Sciences Volume 6 (1976) ; 1976 ; 6 >
+    au < exists ; exists ; 1977 ; International Journal of Mathematics and Mathematical Sciences Volume 7 (1977) ; 1977 ; 7 >
+    au < exists ; exists ; 1978 ; International Journal of Mathematics and Mathematical Sciences Volume 8 (1978) ; 1978 ; 8 >
+    au < exists ; exists ; 1979 ; International Journal of Mathematics and Mathematical Sciences Volume 9 (1979) ; 1979 ; 9 >
+    au < exists ; exists ; 1980 ; International Journal of Mathematics and Mathematical Sciences Volume 10 (1980) ; 1980 ; 10 >
+    au < exists ; exists ; 1981 ; International Journal of Mathematics and Mathematical Sciences Volume 11 (1981) ; 1981 ; 11 >
+    au < exists ; exists ; 1982 ; International Journal of Mathematics and Mathematical Sciences Volume 12 (1982) ; 1982 ; 12 >
+    au < exists ; exists ; 1983 ; International Journal of Mathematics and Mathematical Sciences Volume 13 (1983) ; 1983 ; 13 >
+    au < exists ; exists ; 1984 ; International Journal of Mathematics and Mathematical Sciences Volume 14 (1984) ; 1984 ; 14 >
+    au < exists ; exists ; 1985 ; International Journal of Mathematics and Mathematical Sciences Volume 15 (1985) ; 1985 ; 15 >
+    au < exists ; exists ; 1986 ; International Journal of Mathematics and Mathematical Sciences Volume 16 (1986) ; 1986 ; 16 >
+    au < exists ; exists ; 1987 ; International Journal of Mathematics and Mathematical Sciences Volume 17 (1987) ; 1987 ; 17 >
+    au < exists ; exists ; 1988 ; International Journal of Mathematics and Mathematical Sciences Volume 18 (1988) ; 1988 ; 18 >
+    au < exists ; exists ; 1989 ; International Journal of Mathematics and Mathematical Sciences Volume 19 (1989) ; 1989 ; 19 >
+    au < exists ; exists ; 1990 ; International Journal of Mathematics and Mathematical Sciences Volume 20 (1990) ; 1990 ; 20 >
+    au < exists ; exists ; 1991 ; International Journal of Mathematics and Mathematical Sciences Volume 21 (1991) ; 1991 ; 21 >
+    au < exists ; exists ; 1992 ; International Journal of Mathematics and Mathematical Sciences Volume 22 (1992) ; 1992 ; 22 >
+    au < exists ; exists ; 1993 ; International Journal of Mathematics and Mathematical Sciences Volume 23 (1993) ; 1993 ; 23 >
+    au < exists ; exists ; 1994 ; International Journal of Mathematics and Mathematical Sciences Volume 24 (1994) ; 1994 ; 24 >
+    au < exists ; exists ; 1995 ; International Journal of Mathematics and Mathematical Sciences Volume 25 (1995) ; 1995 ; 25 >
+    au < exists ; exists ; 1996 ; International Journal of Mathematics and Mathematical Sciences Volume 26 (1996) ; 1996 ; 26 >
+    au < exists ; exists ; 1997 ; International Journal of Mathematics and Mathematical Sciences Volume 27 (1997) ; 1997 ; 27 >
+    au < exists ; exists ; 1998 ; International Journal of Mathematics and Mathematical Sciences Volume 28 (1998) ; 1998 ; 28 >
+    au < exists ; exists ; 1999 ; International Journal of Mathematics and Mathematical Sciences Volume 29 (1999) ; 1999 ; 29 >
+    au < exists ; exists ; 2000 ; International Journal of Mathematics and Mathematical Sciences Volume 30 (2000) ; 2000 ; 30 >
+    au < exists ; exists ; 2001 ; International Journal of Mathematics and Mathematical Sciences Volume 31 (2001) ; 2001 ; 31 >
+    au < exists ; exists ; 2002 ; International Journal of Mathematics and Mathematical Sciences Volume 32 (2002) ; 2002 ; 32 >
+    au < exists ; exists ; 2003 ; International Journal of Mathematics and Mathematical Sciences Volume 2003 ; 2003 ; 2003 >
+    au < exists ; exists ; 2004 ; International Journal of Mathematics and Mathematical Sciences Volume 2004 ; 2004 ; 2004 >
+    au < exists ; exists ; 2005 ; International Journal of Mathematics and Mathematical Sciences Volume 2005 ; 2005 ; 2005 >
+    au < exists ; exists ; 2006 ; International Journal of Mathematics and Mathematical Sciences Volume 2006 ; 2006 ; 2006 >
+    au < exists ; exists ; 2007 ; International Journal of Mathematics and Mathematical Sciences Volume 2007 ; 2007 ; 2007 >
+    au < exists ; exists ; 2008 ; International Journal of Mathematics and Mathematical Sciences Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; International Journal of Mathematics and Mathematical Sciences Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; International Journal of Mathematics and Mathematical Sciences Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Mathematics and Mathematical Sciences Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Mathematics and Mathematical Sciences Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Mathematics and Mathematical Sciences Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Mathematics and Mathematical Sciences Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Medical Genetics ;
+      issn = 2356-7031 ;
+      eissn = 2314-8225 ;
+      issnl = 2356-7031
+    >
+
+    param[journal_id] = ijmg
+
+    au < exists ; exists ; 2014 ; International Journal of Manufacturing Engineering Volume 2014 ; 2014 ; 2014 >
+
+  }
+  
+  {
+    title <
+      name = International Journal of Medicinal Chemistry ;
+      issn = 2090-2069 ;
+      eissn = 2090-2077 ;
+      issnl = 2090-2069
+    >
+
+    param[journal_id] = ijmc
+
+    au < exists ; exists ; 2011 ; International Journal of Medicinal Chemistry Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Medicinal Chemistry Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Medicinal Chemistry Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Medicinal Chemistry Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Metals ;
+      issn = 2356-704X ;
+      eissn = 2314-680X ;
+      issnl = 2356-704X
+    >
+
+    param[journal_id] = ijmet
+
+    au < exists ; exists ; 2013 ; International Journal of Metals Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Metals Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Microbiology ;
+      issn = 1687-918X ;
+      eissn = 1687-9198 ;
+      issnl = 1687-918X
+    >
+
+    param[journal_id] = ijmicro
+
+    au < exists ; exists ; 2009 ; International Journal of Microbiology Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; International Journal of Microbiology Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Microbiology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Microbiology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Microbiology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Microbiology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Microwave Science and Technology ;
+      issn = 1687-5826 ;
+      eissn = 1687-5834 ;
+      issnl = 1687-5826
+    >
+
+    param[journal_id] = ijmst
+
+    au < exists ; exists ; 2007 ; International Journal of Microwave Science and Technology Volume 2007 ; 2007 ; 2007 >
+    au < exists ; exists ; 2008 ; International Journal of Microwave Science and Technology Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; International Journal of Microwave Science and Technology Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; International Journal of Microwave Science and Technology Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Microwave Science and Technology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Microwave Science and Technology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Microwave Science and Technology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Microwave Science and Technology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Mineralogy ;
+      issn = 2356-7058 ;
+      eissn = 2314-6036 ;
+      issnl = 2356-7058
+    >
+
+    param[journal_id] = ijm
+
+    au < exists ; exists ; 2014 ; International Journal of Mineralogy Volume 2014 ; 2014 ; 2014 >
+
+  }
+  
+  {
+    title <
+      name = International Journal of Molecular Imaging ;
+      issn = 2090-1712 ;
+      eissn = 2090-1720 ;
+      issnl = 2090-1712
+    >
+
+    param[journal_id] = ijmi
+
+    au < exists ; exists ; 2011 ; International Journal of Molecular Imaging Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Molecular Imaging Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Molecular Imaging Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Jorunal of Molecular Imaging Volume 2014 ; 2014 ; 2014 >
+
+  }
+  
+  {
+    title <
+      name = International Journal of Navigation and Observation ;
+      issn = 1687-5990 ;
+      eissn = 1687-6008 ;
+      issnl = 1687-5990
+    >
+
+    param[journal_id] = ijno
+
+    au < exists ; exists ; 2008 ; International Journal of Navigation and Observation Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; International Journal of Navigation and Observation Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; International Journal of Navigation and Observation Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Navigation and Observation Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Navigation and Observation Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Navigation and Observation Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Navigation and Observation Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Nephrology ;
+      issn = 2090-214X ;
+      eissn = 2090-2158 ;
+      issnl = 2090-214X
+    >
+
+    param[journal_id] = ijn
+
+    au < exists ; exists ; 2010 ; International Journal of Nephrology Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Nephrology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Nephrology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Nephrology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Nephrology Volume 2014 ; 2014 ; 2014 >
+    
+  }
+  
+  {
+    title <
+      name = International Journal of Nuclear Energy ;
+      issn = 2356-7066 ;
+      eissn = 2314-6060 ;
+      issnl = 2356-7066
+    >
+
+    param[journal_id] = ijne
+
+    au < exists ; exists ; 2013 ; International Journal of Nuclear Energy Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Nuclear Energy Volume 2014 ; 2014 ; 2014 >
+
   }
 
   {

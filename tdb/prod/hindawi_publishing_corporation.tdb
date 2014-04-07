@@ -4078,40 +4078,61 @@
   {
     title <
       name = International Journal of Hepatology ;
-      issn = 2090-3456 ;
-      issnl = 2090-3456
+      issn = 2090-3448 ;
+      eissn = 2090-3456 ;
+      issnl = 2090-3448
     >
 
+    {
     param[journal_id] = ijhep
 
-    au < released ; 2011 ; International Journal of Hepatology Volume 2011 ; 2011 ; 2011 >
-    au < released ; 2012 ; International Journal of Hepatology Volume 2012 ; 2012 ; 2012 >
-    au < manifest ; 2013 ; International Journal of Hepatology Volume 2013 ; 2013 ; 2013 >
-    au < expected ; 2014 ; International Journal of Hepatology Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2011 ; International Journal of Hepatology Volume 2011 [superseded] ; 2011 ; 2011 >
+    au < down ; 2012 ; International Journal of Hepatology Volume 2012 [superseded] ; 2012 ; 2012 >
+    }
+
+    {
+    param[journal_id] = ijh
+
+    au < exists ; 2011 ; International Journal of Hepatology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; 2012 ; International Journal of Hepatology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; 2013 ; International Journal of Hepatology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; International Journal of Hepatology Volume 2014 ; 2014 ; 2014 >
+    }
   }
 
   {
     title <
       name = International Journal of Hypertension ;
-      issn = 2090-0392 ;
-      issnl = 2090-0392
+      issn = 2090-0384 ;
+      eissn = 2090-0392 ;
+      issnl = 2090-0384
     >
 
+    {
     param[journal_id] = ijht
 
-    au < released ; 2010 ; International Journal of Hypertension Volume 2010 ; 2010 ; 2010 >
-    au < released ; 2011 ; International Journal of Hypertension Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Hypertension Volume 2012 ; 2012 ; 2012 >
-    au < manifest ; 2013 ; International Journal of Hypertension Volume 2013 ; 2013 ; 2013 >
-    au < expected ; 2014 ; International Journal of Hypertension Volume 2014 ; 2014 ; 2014 >
-    
+    au < down ; 2010 ; International Journal of Hypertension Volume 2010 [superseded] ; 2010 ; 2010 >
+    au < down ; 2011 ; International Journal of Hypertension Volume 2011 [superseded] ; 2011 ; 2011 >
+    }
+
+    {
+    param[journal_id] = ijhy
+
+    au < exists ; 2010 ; International Journal of Hypertension Volume 2010 ; 2010 ; 2010 >
+    au < exists ; 2011 ; International Journal of Hypertension Volume 2011 ; 2011 ; 2011 >
+    au < exists ; 2012 ; International Journal of Hypertension Volume 2012 ; 2012 ; 2012 >
+    au < exists ; 2013 ; International Journal of Hypertension Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; International Journal of Hypertension Volume 2014 ; 2014 ; 2014 >
+    }
+
   }
 
   {
     title <
       name = International Journal of Inflammation ;
-      issn = 2042-0099 ;
-      issnl = 2042-0099
+      issn = 2090-8040 ;
+      eissn = 2042-0099 ;
+      issnl = 2090-8040
     >
 
     param[journal_id] = iji
@@ -4120,7 +4141,7 @@
     au < released ; 2011 ; International Journal of Inflammation Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; International Journal of Inflammation Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; International Journal of Inflammation Volume 2013 ; 2013 ; 2013 >
-    au < expected ; 2014 ; International Journal of Inflammation Volume 2014 ; 2014 ; 2014 >
+    au < exists ; 2014 ; International Journal of Inflammation Volume 2014 ; 2014 ; 2014 >
     
   }
 
@@ -4137,14 +4158,29 @@
 
     au < ready ; 2008 ; Research Letters in Inorganic Chemistry Volume 2008 ; 2008 ; 2008 >
     au < ready ; 2009 ; Research Letters in Inorganic Chemistry Volume 2009 ; 2009 ; 2009 >
-    au < ready ; 2010 ; Research Letters in Inorganic Chemistry Volume 2010 ; 2010 ; 2010 >
+    au < ready ; 2010 ; International Journal of Inorganic Chemistry Volume 2010 ; 2010 ; 2010 >
     au < released ; 2011 ; International Journal of Inorganic Chemistry Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; International Journal of Inorganic Chemistry Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; International Journal of Inorganic Chemistry Volume 2013 ; 2013 ; 2013 >
-    au < expected ; 2014 ; International Journal of Inorganic Chemistry Volume 2014 ; 2014 ; 2014 >
+    au < exists ; 2014 ; International Journal of Inorganic Chemistry Volume 2014 ; 2014 ; 2014 >
     
   }
 
+  {
+    title <
+      name = International Journal of Manufacturing Engineering ;
+      issn = 2356-7023 ;
+      eissn = 2314-5781 ;
+      issnl = 2356-7023
+    >
+
+    param[journal_id] = ijme
+
+    au < exists ; 2013 ; International Journal of Manufacturing Engineering Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; International Journal of Manufacturing Engineering Volume 2014 ; 2014 ; 2014 >
+
+  }
+  
   {
     title <
       name = International Journal of Mathematics and Mathematical Sciences ;
@@ -4198,10 +4234,24 @@
     au < released ; 2011 ; International Journal of Mathematics and Mathematical Sciences Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; International Journal of Mathematics and Mathematical Sciences Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; International Journal of Mathematics and Mathematical Sciences Volume 2013 ; 2013 ; 2013 >
-    au < expected ; 2014 ; International Journal of Mathematics and Mathematical Sciences Volume 2014 ; 2014 ; 2014 >
+    au < exists ; 2014 ; International Journal of Mathematics and Mathematical Sciences Volume 2014 ; 2014 ; 2014 >
 
   }
 
+  {
+    title <
+      name = International Journal of Medical Genetics ;
+      issn = 2356-7031 ;
+      eissn = 2314-8225 ;
+      issnl = 2356-7031
+    >
+
+    param[journal_id] = ijmg
+
+    au < exists ; 2014 ; International Journal of Manufacturing Engineering Volume 2014 ; 2014 ; 2014 >
+
+  }
+  
   {
     title <
       name = International Journal of Medicinal Chemistry ;
@@ -4215,7 +4265,22 @@
     au < released ; 2011 ; International Journal of Medicinal Chemistry Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; International Journal of Medicinal Chemistry Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; International Journal of Medicinal Chemistry Volume 2013 ; 2013 ; 2013 >
-    au < expected ; 2014 ; International Journal of Medicinal Chemistry Volume 2014 ; 2014 ; 2014 >
+    au < exists ; 2014 ; International Journal of Medicinal Chemistry Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Metals ;
+      issn = 2356-704X ;
+      eissn = 2314-680X ;
+      issnl = 2356-704X
+    >
+
+    param[journal_id] = ijmet
+
+    au < exists ; 2013 ; International Journal of Metals Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; International Journal of Metals Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4227,14 +4292,24 @@
       issnl = 1687-918X
     >
 
+    {
     param[journal_id] = ijmb
 
-    au < released ; 2009 ; International Journal of Microbiology Volume 2009 ; 2009 ; 2009 >
-    au < released ; 2010 ; International Journal of Microbiology Volume 2010 ; 2010 ; 2010 >
-    au < released ; 2011 ; International Journal of Microbiology Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Microbiology Volume 2012 ; 2012 ; 2012 >
-    au < manifest ; 2013 ; International Journal of Microbiology Volume 2013 ; 2013 ; 2013 >
-    au < expected ; 2014 ; International Journal of Microbiology Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2009 ; International Journal of Microbiology Volume 2009 [superseded] ; 2009 ; 2009 >
+    au < down ; 2010 ; International Journal of Microbiology Volume 2010 [superseded] ; 2010 ; 2010 >
+    au < down ; 2011 ; International Journal of Microbiology Volume 2011 [superseded] ; 2011 ; 2011 >
+    }
+
+    {
+    param[journal_id] = ijmicro
+
+    au < exists ; 2009 ; International Journal of Microbiology Volume 2009 ; 2009 ; 2009 >
+    au < exists ; 2010 ; International Journal of Microbiology Volume 2010 ; 2010 ; 2010 >
+    au < exists ; 2011 ; International Journal of Microbiology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; 2012 ; International Journal of Microbiology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; 2013 ; International Journal of Microbiology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; International Journal of Microbiology Volume 2014 ; 2014 ; 2014 >
+    }
 
   }
 
@@ -4255,10 +4330,24 @@
     au < released ; 2011 ; International Journal of Microwave Science and Technology Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; International Journal of Microwave Science and Technology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; International Journal of Microwave Science and Technology Volume 2013 ; 2013 ; 2013 >
-    au < expected ; 2014 ; International Journal of Microwave Science and Technology Volume 2014 ; 2014 ; 2014 >
+    au < exists ; 2014 ; International Journal of Microwave Science and Technology Volume 2014 ; 2014 ; 2014 >
 
   }
 
+  {
+    title <
+      name = International Journal of Mineralogy ;
+      issn = 2356-7058 ;
+      eissn = 2314-6036 ;
+      issnl = 2356-7058
+    >
+
+    param[journal_id] = ijm
+
+    au < exists ; 2014 ; International Journal of Mineralogy Volume 2014 ; 2014 ; 2014 >
+
+  }
+  
   {
     title <
       name = International Journal of Molecular Imaging ;
@@ -4272,7 +4361,7 @@
     au < released ; 2011 ; International Journal of Molecular Imaging Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; International Journal of Molecular Imaging Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; International Journal of Molecular Imaging Volume 2013 ; 2013 ; 2013 >
-    au < expected ; 2014 ; International Jorunal of Molecular Imaging Volume 2014 ; 2014 ; 2014 >
+    au < exists ; 2014 ; International Jorunal of Molecular Imaging Volume 2014 ; 2014 ; 2014 >
 
   }
   
@@ -4292,15 +4381,16 @@
     au < released ; 2011 ; International Journal of Navigation and Observation Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; International Journal of Navigation and Observation Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; International Journal of Navigation and Observation Volume 2013 ; 2013 ; 2013 >
-    au < expected ; 2014 ; International Journal of Navigation and Observation Volume 2014 ; 2014 ; 2014 >
+    au < exists ; 2014 ; International Journal of Navigation and Observation Volume 2014 ; 2014 ; 2014 >
 
   }
 
   {
     title <
       name = International Journal of Nephrology ;
-      issn = 2090-2158 ;
-      issnl = 2090-2158
+      issn = 2090-214X ;
+      eissn = 2090-2158 ;
+      issnl = 2090-214X
     >
 
     param[journal_id] = ijn
@@ -4309,10 +4399,25 @@
     au < released ; 2011 ; International Journal of Nephrology Volume 2011 ; 2011 ; 2011 >
     au < released ; 2012 ; International Journal of Nephrology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; International Journal of Nephrology Volume 2013 ; 2013 ; 2013 >
-    au < expected ; 2014 ; International Journal of Nephrology Volume 2014 ; 2014 ; 2014 >
+    au < exists ; 2014 ; International Journal of Nephrology Volume 2014 ; 2014 ; 2014 >
     
   }
   
+  {
+    title <
+      name = International Journal of Nuclear Energy ;
+      issn = 2356-7066 ;
+      eissn = 2314-6060 ;
+      issnl = 2356-7066
+    >
+
+    param[journal_id] = ijne
+
+    au < exists ; 2013 ; International Journal of Nuclear Energy Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; International Journal of Nuclear Energy Volume 2014 ; 2014 ; 2014 >
+
+  }
+
   {
     title <
       name = International Journal of Oceanography ;
