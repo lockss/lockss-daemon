@@ -1994,7 +1994,7 @@
       au < zapped ; finished ; 2011 ; International Journal of Critical Accounting Volume 3 ; 3 >
       au < finished ; crawling ; 2012 ; International Journal of Critical Accounting Volume 4 ; 4 >
       au < crawling ; exists ; 2013 ; International Journal of Critical Accounting Volume 5 ; 5 >
-      au < expected ; exists ; 2014 ; International Journal of Critical Accounting Volume 6 ; 6 >
+      au < manifest ; exists ; 2014 ; International Journal of Critical Accounting Volume 6 ; 6 >
 
     }
 
@@ -2542,7 +2542,7 @@
       au < crawling ; exists ; 2010 ; International Journal of Electronic Security and Digital Forensics Volume 3 ; 3 >
       au < finished ; crawling ; 2012 ; International Journal of Electronic Security and Digital Forensics Volume 4 ; 4 >
       au < crawling ; exists ; 2013 ; International Journal of Electronic Security and Digital Forensics Volume 5 ; 5 >
-      au < expected ; exists ; 2014 ; International Journal of Electronic Security and Digital Forensics Volume 6 ; 6 >
+      au < manifest ; exists ; 2014 ; International Journal of Electronic Security and Digital Forensics Volume 6 ; 6 >
 
     }
 
@@ -2849,7 +2849,7 @@
       au < crawling ; exists ; 2010 ; International Journal of Environment and Health Volume 4 ; 4 >
       au < zapped ; finished ; 2011 ; International Journal of Environment and Health Volume 5 ; 5 >
       au < finished ; crawling ; 2012-2013 ; International Journal of Environment and Health Volume 6 ; 6 >
-      au < expected ; exists ; 2014 ; International Journal of Environment and Health Volume 7 ; 7 >
+      au < manifest ; exists ; 2014 ; International Journal of Environment and Health Volume 7 ; 7 >
 
     }
 
@@ -5343,7 +5343,7 @@
 
       param[journal_issn] = 2051-6800
 
-      au < exists ; exists ; 2014 ; International Journal of Migration and Residential Mobility Volume 1 ; 1 >
+      au < manifest ; exists ; 2014 ; International Journal of Migration and Residential Mobility Volume 1 ; 1 >
 
     }
 
@@ -7014,7 +7014,7 @@
       param[journal_issn] = 2048-8467
       
       au < finished ; crawling ; 2013 ; International Journal of Space Science and Engineering Volume 1 ; 1 >
-      au < expected ; exists ; 2014 ; International Journal of Space Science and Engineering Volume 2 ; 2 >
+      au < manifest ; exists ; 2014 ; International Journal of Space Science and Engineering Volume 2 ; 2 >
 
     }
 
@@ -7927,7 +7927,7 @@
       au < crawling ; exists ; 2013 ; International Journal of Vehicle Design Volume 62 ; 62 >
       au < crawling ; exists ; 2013 ; International Journal of Vehicle Design Volume 63 ; 63 >
       au < manifest ; exists ; 2014 ; International Journal of Vehicle Design Volume 64 ; 64 >
-      au < expected ; exists ; 2014 ; International Journal of Vehicle Design Volume 65 ; 65 >
+      au < manifest ; exists ; 2014 ; International Journal of Vehicle Design Volume 65 ; 65 >
       au < expected ; exists ; 2014 ; International Journal of Vehicle Design Volume 66 ; 66 >
 
     }
@@ -8317,7 +8317,7 @@
 
       param[journal_issn] = 2052-0336
 
-      au < exists ; exists ; 2014 ; Latin American Journal of Management for Sustainable Development Volume 1 ; 1 >
+      au < manifest ; exists ; 2014 ; Latin American Journal of Management for Sustainable Development Volume 1 ; 1 >
 
     }
 
