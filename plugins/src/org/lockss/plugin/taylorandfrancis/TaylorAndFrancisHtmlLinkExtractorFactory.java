@@ -1,4 +1,4 @@
-/* $Id: TaylorAndFrancisHtmlLinkExtractorFactory.java,v 1.1 2014-03-03 22:41:32 pgust Exp $
+/* $Id: TaylorAndFrancisHtmlLinkExtractorFactory.java,v 1.2 2014-04-07 21:52:55 alexandraohlson Exp $
  */
 
 /*
@@ -51,7 +51,9 @@ extends BaseAtyponHtmlLinkExtractorFactory {
 
   public LinkExtractor createLinkExtractor(String mimeType) {
 
-    JsoupHtmlLinkExtractor extractor = new JsoupHtmlLinkExtractor();
+    // The parent (BaseAtypon) creates a Jsoup Link Extractor and sets default
+    // restrictions on it which we need
+    JsoupHtmlLinkExtractor extractor = (JsoupHtmlLinkExtractor) super.createLinkExtractor(mimeType);
     // register extractor for 'onclick' attribute of 'p' tag 
     extractor.registerTagExtractor (
         "p", new TaylorAndFrancisSimpleTagLinkExtractor(ONCLICK_NAME));

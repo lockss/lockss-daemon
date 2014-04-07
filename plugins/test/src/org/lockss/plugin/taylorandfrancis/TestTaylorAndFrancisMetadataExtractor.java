@@ -468,24 +468,23 @@ public class TestTaylorAndFrancisMetadataExtractor extends LockssTestCase {
   public void testTitleNormalization() throws Exception {
  
     
-    assertEquals(TaylorAndFrancisHtmlMetadataExtractorFactory.normalizeTitle("One Two Three"), "one two three");
-    assertEquals(TaylorAndFrancisHtmlMetadataExtractorFactory.normalizeTitle("One & Three"), "one and three");
-    assertEquals(TaylorAndFrancisHtmlMetadataExtractorFactory.normalizeTitle("One and Three"), "one and three");
-    assertEquals(TaylorAndFrancisHtmlMetadataExtractorFactory.normalizeTitle("The One Two Three"), "one two three");
-    assertEquals(TaylorAndFrancisHtmlMetadataExtractorFactory.normalizeTitle("Theatre is Great"), "theatre is great");
-    assertEquals(TaylorAndFrancisHtmlMetadataExtractorFactory.normalizeTitle("The Theatre is Great"), "theatre is great");
+    assertEquals("one two three", TaylorAndFrancisHtmlMetadataExtractorFactory.normalizeTitle("One Two Three"));
+    assertEquals("one and three",TaylorAndFrancisHtmlMetadataExtractorFactory.normalizeTitle("One & Three"));
+    assertEquals("one and three",TaylorAndFrancisHtmlMetadataExtractorFactory.normalizeTitle("One and Three"));
+    assertEquals("one two three", TaylorAndFrancisHtmlMetadataExtractorFactory.normalizeTitle("The One Two Three"));
+    assertEquals( "theatre is great", TaylorAndFrancisHtmlMetadataExtractorFactory.normalizeTitle("Theatre is Great"));
+    assertEquals("theatre is great", TaylorAndFrancisHtmlMetadataExtractorFactory.normalizeTitle("The Theatre is Great"));
     assertEquals(TaylorAndFrancisHtmlMetadataExtractorFactory.normalizeTitle("The Title of the Book & Other Mysteries"),
         TaylorAndFrancisHtmlMetadataExtractorFactory.normalizeTitle("the title of the book and other mysteries"));
     
-    String titleWithoutControlChars = "A long hyphenated-title with a \"wonderful\" inset quotation";
-    String titleWithControlChars = "A long hyphenated\u2013title with a \u201cwonderful\u201d inset quotation";
+    String titleWithoutControlChars = "A long hyphenated-title with a \"wonderful\" inset-quotation";
+    String titleWithControlChars = "A long hyphenated\u2013title with a \u201cwonderful\u201d inset\u2013quotation";
     assertNotEquals(titleWithoutControlChars, titleWithControlChars);
     // normalize both
     assertEquals(TaylorAndFrancisHtmlMetadataExtractorFactory.normalizeTitle(titleWithControlChars),
         TaylorAndFrancisHtmlMetadataExtractorFactory.normalizeTitle(titleWithoutControlChars));
     // normalize only the first, lower case the one without control chars
-    assertEquals(TaylorAndFrancisHtmlMetadataExtractorFactory.normalizeTitle(titleWithControlChars),
-        titleWithoutControlChars.toLowerCase());
+    assertEquals(titleWithoutControlChars.toLowerCase(), TaylorAndFrancisHtmlMetadataExtractorFactory.normalizeTitle(titleWithControlChars));
   }
 
 
