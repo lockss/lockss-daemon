@@ -3779,7 +3779,7 @@
 
     param[journal_id] = ijmg
 
-    au < exists ; exists ; 2014 ; International Journal of Manufacturing Engineering Volume 2014 ; 2014 ; 2014 >
+    au < exists ; exists ; 2014 ; International Journal of Medical Genetics Volume 2014 ; 2014 ; 2014 >
 
   }
   
@@ -3941,6 +3941,410 @@
 
   {
     title <
+      name = International Journal of Oceanography ;
+      issn = 1687-9406 ;
+      eissn = 1687-9414 ;
+      issnl = 1687-9406
+    >
+
+    param[journal_id] = ijocean
+
+    au < exists ; exists ; 2009 ; International Journal of Oceanography Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; International Journal of Oceanography Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Oceanography Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Oceanography Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Oceanography Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Oceanography Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Optics ;
+      issn = 1687-9384 ;
+      eissn = 1687-9392 ;
+      issnl = 1687-9384
+    >
+
+    param[journal_id] = ijo
+
+    au < exists ; exists ; 2008 ; International Journal of Optics Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; International Journal of Optics Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; International Journal of Optics Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Optics Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Optics Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Optics Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Optics Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Otolaryngology ;
+      issn = 1687-9201 ;
+      eissn = 1687-921X ;
+      issnl = 1687-9201
+    >
+
+    param[journal_id] = ijoto
+   
+    au < exists ; exists ; 2009 ; International Journal of Otolaryngology Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; International Journal of Otolaryngology Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Otolaryngology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Otolaryngology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Otolaryngology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Otolaryngology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Palliative Care ;
+      issn = 2356-7074 ;
+      eissn = 2314-579X ;
+      issnl = 2356-7074
+    >
+
+    param[journal_id] = ijpc
+
+    au < exists ; exists ; 2014 ; International Journal of Palliative Care Volume 2014 ; 2014 ; 2014 >
+
+  }
+  
+  {
+    title <
+      name = International Journal of Partial Differential Equations ;
+      issn = 2356-7082 ;
+      eissn = 2314-6524 ;
+      issnl = 2356-7082
+    >
+
+    param[journal_id] = ijpde
+
+    au < exists ; exists ; 2013 ; International Journal of Partial Differential Equations Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Partial Differential Equations Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Pediatrics ;
+      issn = 1687-9740 ;
+      eissn = 1687-9759 ;
+      issnl = 1687-9740 
+    >
+
+    param[journal_id] = ijpedi
+
+    au < exists ; exists ; 2009 ; International Journal of Pediatrics Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; International Journal of Pediatrics Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Pediatrics Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Pediatrics Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Pediatrics Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Pediatrics Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Peptides ;
+      issn = 1687-9767 ;
+      eissn = 1687-9775 ;
+      issnl = 1687-9767
+    >
+
+    param[journal_id] = ijpep
+
+    au < exists ; exists ; 2009 ; International Journal of Peptides Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; International Journal of Peptides Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Peptides Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Peptides Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Peptides Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Peptides Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Photochemistry ;
+      issn = 2356-7090 ;
+      eissn = 2314-7148 ;
+      issnl = 2356-7090
+    >
+
+    param[journal_id] = ijpho
+
+    au < exists ; exists ; 2014 ; International Journal of Photochemistry Volume 2014 ; 2014 ; 2014 >
+
+  }
+  
+  {
+    title <
+      name = International Journal of Photoenergy ;
+      issn = 1110-662X ;
+      eissn = 1687-529X ;
+      issnl = 1110-662X
+    >
+
+    param[journal_id] = ijp
+
+    au < exists ; exists ; 1999 ; International Journal of Photoenergy Volume 1 (1999) ; 1999 ; 1 >
+    au < exists ; exists ; 2000 ; International Journal of Photoenergy Volume 2 (2000) ; 2000 ; 2 >
+    au < exists ; exists ; 2001 ; International Journal of Photoenergy Volume 3 (2001) ; 2001 ; 3 >
+    au < exists ; exists ; 2002 ; International Journal of Photoenergy Volume 4 (2002) ; 2002 ; 4 >
+    au < exists ; exists ; 2003 ; International Journal of Photoenergy Volume 5 (2003) ; 2003 ; 5 >
+    au < exists ; exists ; 2004 ; International Journal of Photoenergy Volume 6 (2004) ; 2004 ; 6 >
+    au < exists ; exists ; 2005 ; International Journal of Photoenergy Volume 7 (2005) ; 2005 ; 7 >
+    au < exists ; exists ; 2006 ; International Journal of Photoenergy Volume 2006 ; 2006 ; 2006 >
+    au < exists ; exists ; 2007 ; International Journal of Photoenergy Volume 2007 ; 2007 ; 2007 >
+    au < exists ; exists ; 2008 ; International Journal of Photoenergy Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; International Journal of Photoenergy Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; International Journal of Photoenergy Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Photoenergy Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Photoenergy Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Photoenergy Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Photoenergy Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Plant Genomics ;
+      issn = 1687-5370 ;
+      eissn = 1687-5389 ;
+      issnl = 1687-5389
+    >
+
+    param[journal_id] = ijpg
+
+    au < exists ; exists ; 2007 ; International Journal of Plant Genomics Volume 2007 ; 2007 ; 2007 >
+    au < exists ; exists ; 2008 ; International Journal of Plant Genomics Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; International Journal of Plant Genomics Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; International Journal of Plant Genomics Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Plant Genomics Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Plant Genomics Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Plant Genomics Volume 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; 2014 ; International Journal of Plant Genomics Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Polymer Science ;
+      issn = 1687-9422 ;
+      eissn = 1687-9430 ;
+      issnl = 1687-9422
+    >
+
+    param[journal_id] = ijps
+
+    au < exists ; exists ; 2009 ; International Journal of Polymer Science Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; International Journal of Polymer Science Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Polymer Science Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Polymer Science Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Polymer Science Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Polymer Science Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Population Research ;
+      issn = 2090-4029 ;
+      eissn = 2090-4037 ;
+      issnl = 2090-4029
+    >
+
+    param[journal_id] = ijpr
+
+    au < exists ; exists ; 2011 ; International Journal of Population Research Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Population Research Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Population Research Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Population Research Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Proteomics ;
+      issn = 2090-2166 ;
+      eissn = 2090-2174 ;
+      issnl = 2090-2166
+    >
+
+    param[journal_id] = ijpro
+
+    au < exists ; exists ; 2010 ; International Journal of Proteomics Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Proteomics Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Proteomics Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Proteomics Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Proteomics Volume 2014 ; 2014 ; 2014 >
+    
+  }
+
+  {
+    title <
+      name = International Journal of Reconfigurable Computing ;
+      issn = 1687-7195 ;
+      eissn = 1687-7209 ;
+      issnl = 1687-7195
+    >
+
+    param[journal_id] = ijrc
+
+    au < exists ; exists ; 2008 ; International Journal of Reconfigurable Computing Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; International Journal of Reconfigurable Computing Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; International Journal of Reconfigurable Computing Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Reconfigurable Computing Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Reconfigurable Computing Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Reconfigurable Computing Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Reconfigurable Computing Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Reproductive Medicine ;
+      issn = 2356-7104 ;
+      eissn = 2314-5757 ;
+      issnl = 2356-7104
+    >
+
+    param[journal_id] = ijrmed
+
+    au < exists ; exists ; 2013 ; International Journal of Reproductive Medicine Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Reproductive Medicine Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Rheumatology ;
+      issn = 1687-9260 ;
+      eissn = 1687-9279 ;
+      issnl = 1687-9260
+    >
+
+    param[journal_id] = ijr
+
+    au < exists ; exists ; 2009 ; International Journal of Rheumatology Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; International Journal of Rheumatology Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Rheumatology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Rheumatology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Rheumatology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Rheumatology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Rotating Machinery ;
+      issn = 1023-621X ;
+      eissn = 1542-3034 ;
+      issnl = 1023-621X
+    >
+
+    param[journal_id] = ijrm
+
+    au < exists ; exists ; 1995 ; International Journal of Rotating Machinery Volume 1 (1995) ; 1995 ; 1 >
+    au < exists ; exists ; 1996 ; International Journal of Rotating Machinery Volume 2 (1996) ; 1996 ; 2 >
+    au < exists ; exists ; 1997 ; International Journal of Rotating Machinery Volume 3 (1997) ; 1997 ; 3 >
+    au < exists ; exists ; 1998 ; International Journal of Rotating Machinery Volume 4 (1998) ; 1998 ; 4 >
+    au < exists ; exists ; 1999 ; International Journal of Rotating Machinery Volume 5 (1999) ; 1999 ; 5 >
+    au < exists ; exists ; 2000 ; International Journal of Rotating Machinery Volume 6 (2000) ; 2000 ; 6 >
+    au < exists ; exists ; 2001 ; International Journal of Rotating Machinery Volume 7 (2001) ; 2001 ; 7 >
+    au < exists ; exists ; 2002 ; International Journal of Rotating Machinery Volume 8 (2002) ; 2002 ; 8 >
+    au < exists ; exists ; 2003 ; International Journal of Rotating Machinery Volume 9 (2003) ; 2003 ; 9 >
+    au < exists ; exists ; 2004 ; International Journal of Rotating Machinery Volume 10 (2004) ; 2004 ; 10 >
+    au < exists ; exists ; 2005 ; International Journal of Rotating Machinery Volume 2005 ; 2005 ; 2005 >
+    au < exists ; exists ; 2006 ; International Journal of Rotating Machinery Volume 2006 ; 2006 ; 2006 >
+    au < exists ; exists ; 2007 ; International Journal of Rotating Machinery Volume 2007 ; 2007 ; 2007 >
+    au < exists ; exists ; 2008 ; International Journal of Rotating Machinery Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; International Journal of Rotating Machinery Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; International Journal of Rotating Machinery Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Rotating Machinery Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Rotating Machinery Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Rotating Machinery Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Rotating Machinery Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Statistical Mechanics ;
+      issn = 2356-7112 ;
+      eissn = 2314-6850 ;
+      issnl = 2356-7112
+    >
+
+    param[journal_id] = ijsm
+
+    au < exists ; exists ; 2013 ; International Journal of Statistical Mechanics Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Statistical Mechanics Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Stochastic Analysis ;
+      issn = 2090-3332 ;
+      eissn = 2090-3340 ;
+      issnl = 2090-3332
+    >
+
+    param[journal_id] = ijsa
+
+    au < exists ; exists ; 1987 ; Journal of Applied Mathematics and Simulation Volume 1 (1987) ; 1987 ; 1 >
+    au < exists ; exists ; 1988 ; Journal of Applied Mathematics and Simulation Volume 1 (1988) ; 1988 ; 1 >
+    au < exists ; exists ; 1989 ; Journal of Applied Mathematics and Simulation Volume 2 (1989) ; 1989 ; 2 >
+    au < exists ; exists ; 1990 ; Journal of Applied Mathematics and Simulation Volume 3 (1990) ; 1990 ; 3 >
+    au < exists ; exists ; 1991 ; Journal of Applied Mathematics and Simulation Volume 4 (1991) ; 1991 ; 4 >
+    au < exists ; exists ; 1992 ; Journal of Applied Mathematics and Simulation Volume 5 (1992) ; 1992 ; 5 >
+    au < exists ; exists ; 1993 ; Journal of Applied Mathematics and Simulation Volume 6 (1993) ; 1993 ; 6 >
+    au < exists ; exists ; 1994 ; Journal of Applied Mathematics and Simulation Volume 7 (1994) ; 1994 ; 7 >
+    au < exists ; exists ; 1995 ; Journal of Applied Mathematics and Simulation Volume 8 (1995) ; 1995 ; 8 >
+    au < exists ; exists ; 1996 ; Journal of Applied Mathematics and Simulation Volume 9 (1996) ; 1996 ; 9 >
+    au < exists ; exists ; 1997 ; Journal of Applied Mathematics and Simulation Volume 10 (1997) ; 1997 ; 10 >
+    au < exists ; exists ; 1998 ; Journal of Applied Mathematics and Simulation Volume 11 (1998) ; 1998 ; 11 >
+    au < exists ; exists ; 1999 ; Journal of Applied Mathematics and Simulation Volume 12 (1999) ; 1999 ; 12 >
+    au < exists ; exists ; 2000 ; Journal of Applied Mathematics and Simulation Volume 13 (2000) ; 2000 ; 13 >
+    au < exists ; exists ; 2001 ; Journal of Applied Mathematics and Simulation Volume 14 (2001) ; 2001 ; 14 >
+    au < exists ; exists ; 2002 ; Journal of Applied Mathematics and Simulation Volume 15 (2002) ; 2002 ; 15 >
+    au < exists ; exists ; 2003 ; Journal of Applied Mathematics and Simulation Volume 16 (2003) ; 2003 ; 16 >
+    au < exists ; exists ; 2004 ; Journal of Applied Mathematics and Simulation Volume 2004 ; 2004 ; 2004 >
+    au < exists ; exists ; 2005 ; Journal of Applied Mathematics and Simulation Volume 2005 ; 2005 ; 2005 >
+    au < exists ; exists ; 2006 ; Journal of Applied Mathematics and Simulation Volume 2006 ; 2006 ; 2006 >
+    au < exists ; exists ; 2007 ; Journal of Applied Mathematics and Simulation Volume 2007 ; 2007 ; 2007 >
+    au < exists ; exists ; 2008 ; Journal of Applied Mathematics and Simulation Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; Journal of Applied Mathematics and Simulation Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; International Journal of Stochastic Analysis Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Stochastic Analysis Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Stochastic Analysis Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Stochastic Analysis Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Stochastic Analysis Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Spectroscopy ;
+      issn = 1687-9449 ;
+      eissn = 1687-9457 ;
+      issnl = 1687-9449
+    >
+
+    param[journal_id] = ijs
+
+    au < exists ; exists ; 2009 ; International Journal of Spectroscopy Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; International Journal of Spectroscopy Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Spectroscopy Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Spectroscopy Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Spectroscopy Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Spectroscopy Volume 2014 ; 2014 ; 2014 >
+
+  }
+  {
+    title <
       name = Journal of Chemistry ;
       issn = 2090-9063 ;
       eissn = 2090-9071 ;
@@ -4021,6 +4425,26 @@
     au < exists ; exists ; 2012 ; Clinical and Developmental Immunology Volume 2012 ; 2012 ; 2012 >
     au < exists ; exists ; 2013 ; Clinical and Developmental Immunology Volume 2013 ; 2013 ; 2013 >
     au < exists ; exists ; 2014 ; Journal of Immunology Research Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Quality and Reliability Engineering ;
+      issn = 2314-8055 ;
+      eissn = 2314-8047 ;
+      issnl = 2314-8055
+    >
+
+    param[journal_id] = jqre
+
+    au < exists ; exists ; 2008 ; Journal of Quality and Reliability Engineering Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; Journal of Quality and Reliability Engineering Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; Journal of Quality and Reliability Engineering Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Journal of Quality and Reliability Engineering Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Quality and Reliability Engineering Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Journal of Quality and Reliability Engineering Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Quality and Reliability Engineering Volume 2014 ; 2014 ; 2014 >
 
   }
 
