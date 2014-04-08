@@ -1202,17 +1202,17 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = read
 
-      au < testing ; 2002 ; 1 ; Revista Eletrônica de Administração Volume 2002 ; 2002 >
-      au < testing ; 2003 ; 2 ; Revista Eletrônica de Administração Volume 2003 ; 2003 >
-      au < testing ; 2004 ; 3 ; Revista Eletrônica de Administração Volume 2004 ; 2004 >
-      au < testing ; 2005 ; 4 ; Revista Eletrônica de Administração Volume 2005 ; 2005 >
-      au < testing ; 2006 ; 5 ; Revista Eletrônica de Administração Volume 2006 ; 2006 >
-      au < testing ; 2007 ; 6 ; Revista Eletrônica de Administração Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 7 ; Revista Eletrônica de Administração Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 8 ; Revista Eletrônica de Administração Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 9 ; Revista Eletrônica de Administração Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 10 ; Revista Eletrônica de Administração Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 11 ; Revista Eletrônica de Administração Volume 2012 ; 2012 >
+      au < ready ; 2002 ; 1 ; Revista Eletrônica de Administração Volume 2002 ; 2002 >
+      au < ready ; 2003 ; 2 ; Revista Eletrônica de Administração Volume 2003 ; 2003 >
+      au < ready ; 2004 ; 3 ; Revista Eletrônica de Administração Volume 2004 ; 2004 >
+      au < ready ; 2005 ; 4 ; Revista Eletrônica de Administração Volume 2005 ; 2005 >
+      au < ready ; 2006 ; 5 ; Revista Eletrônica de Administração Volume 2006 ; 2006 >
+      au < ready ; 2007 ; 6 ; Revista Eletrônica de Administração Volume 2007 ; 2007 >
+      au < ready ; 2008 ; 7 ; Revista Eletrônica de Administração Volume 2008 ; 2008 >
+      au < ready ; 2009 ; 8 ; Revista Eletrônica de Administração Volume 2009 ; 2009 >
+      au < ready ; 2010 ; 9 ; Revista Eletrônica de Administração Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 10 ; Revista Eletrônica de Administração Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 11 ; Revista Eletrônica de Administração Volume 2012 ; 2012 >
       au < expected ; 2013 ; 12 ; Revista Eletrônica de Administração Volume 2013 ; 2013 >
       au < expected ; 2014 ; 13 ; Revista Eletrônica de Administração Volume 2014 ; 2014 >
 
@@ -1229,37 +1229,38 @@
       comment[publisher] = Universidade Federal do Rio Grande do Sul
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = RevistaGauchadeEnfermagem
+      comment[notReady] = no substance
 
-      au < testing ; 1983 ; 1 ; Revista Gaúcha de Enfermagem Volume 1983 ; 1983 >
-      au < testing ; 1984 ; 2 ; Revista Gaúcha de Enfermagem Volume 1984 ; 1984 >
-      au < testing ; 1985 ; 3 ; Revista Gaúcha de Enfermagem Volume 1985 ; 1985 >
-      au < testing ; 1986 ; 4 ; Revista Gaúcha de Enfermagem Volume 1986 ; 1986 >
-      au < testing ; 1987 ; 5 ; Revista Gaúcha de Enfermagem Volume 1987 ; 1987 >
-      au < testing ; 1988 ; 6 ; Revista Gaúcha de Enfermagem Volume 1988 ; 1988 >
-      au < testing ; 1989 ; 7 ; Revista Gaúcha de Enfermagem Volume 1989 ; 1989 >
-      au < testing ; 1990 ; 8 ; Revista Gaúcha de Enfermagem Volume 1990 ; 1990 >
-      au < testing ; 1991 ; 9 ; Revista Gaúcha de Enfermagem Volume 1991 ; 1991 >
-      au < testing ; 1992 ; 10 ; Revista Gaúcha de Enfermagem Volume 1992 ; 1992 >
-      au < testing ; 1993 ; 11 ; Revista Gaúcha de Enfermagem Volume 1993 ; 1993 >
-      au < testing ; 1994 ; 12 ; Revista Gaúcha de Enfermagem Volume 1994 ; 1994 >
-      au < testing ; 1995 ; 13 ; Revista Gaúcha de Enfermagem Volume 1995 ; 1995 >
-      au < testing ; 1996 ; 14 ; Revista Gaúcha de Enfermagem Volume 1996 ; 1996 >
-      au < testing ; 1997 ; 15 ; Revista Gaúcha de Enfermagem Volume 1997 ; 1997 >
-      au < testing ; 1998 ; 16 ; Revista Gaúcha de Enfermagem Volume 1998 ; 1998 >
-      au < testing ; 1999 ; 17 ; Revista Gaúcha de Enfermagem Volume 1999 ; 1999 >
-      au < testing ; 2000 ; 18 ; Revista Gaúcha de Enfermagem Volume 2000 ; 2000 >
-      au < testing ; 2001 ; 19 ; Revista Gaúcha de Enfermagem Volume 2001 ; 2001 >
-      au < testing ; 2002 ; 20 ; Revista Gaúcha de Enfermagem Volume 2002 ; 2002 >
-      au < testing ; 2003 ; 21 ; Revista Gaúcha de Enfermagem Volume 2003 ; 2003 >
-      au < testing ; 2004 ; 22 ; Revista Gaúcha de Enfermagem Volume 2004 ; 2004 >
-      au < testing ; 2005 ; 23 ; Revista Gaúcha de Enfermagem Volume 2005 ; 2005 >
-      au < testing ; 2006 ; 24 ; Revista Gaúcha de Enfermagem Volume 2006 ; 2006 >
-      au < testing ; 2007 ; 25 ; Revista Gaúcha de Enfermagem Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 26 ; Revista Gaúcha de Enfermagem Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 27 ; Revista Gaúcha de Enfermagem Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 28 ; Revista Gaúcha de Enfermagem Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 29 ; Revista Gaúcha de Enfermagem Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 30 ; Revista Gaúcha de Enfermagem Volume 2012 ; 2012 >
+      au < notReady ; 1983 ; 1 ; Revista Gaúcha de Enfermagem Volume 1983 ; 1983 >
+      au < notReady ; 1984 ; 2 ; Revista Gaúcha de Enfermagem Volume 1984 ; 1984 >
+      au < notReady ; 1985 ; 3 ; Revista Gaúcha de Enfermagem Volume 1985 ; 1985 >
+      au < notReady ; 1986 ; 4 ; Revista Gaúcha de Enfermagem Volume 1986 ; 1986 >
+      au < notReady ; 1987 ; 5 ; Revista Gaúcha de Enfermagem Volume 1987 ; 1987 >
+      au < notReady ; 1988 ; 6 ; Revista Gaúcha de Enfermagem Volume 1988 ; 1988 >
+      au < notReady ; 1989 ; 7 ; Revista Gaúcha de Enfermagem Volume 1989 ; 1989 >
+      au < notReady ; 1990 ; 8 ; Revista Gaúcha de Enfermagem Volume 1990 ; 1990 >
+      au < notReady ; 1991 ; 9 ; Revista Gaúcha de Enfermagem Volume 1991 ; 1991 >
+      au < notReady ; 1992 ; 10 ; Revista Gaúcha de Enfermagem Volume 1992 ; 1992 >
+      au < notReady ; 1993 ; 11 ; Revista Gaúcha de Enfermagem Volume 1993 ; 1993 >
+      au < notReady ; 1994 ; 12 ; Revista Gaúcha de Enfermagem Volume 1994 ; 1994 >
+      au < notReady ; 1995 ; 13 ; Revista Gaúcha de Enfermagem Volume 1995 ; 1995 >
+      au < notReady ; 1996 ; 14 ; Revista Gaúcha de Enfermagem Volume 1996 ; 1996 >
+      au < notReady ; 1997 ; 15 ; Revista Gaúcha de Enfermagem Volume 1997 ; 1997 >
+      au < ready ; 1998 ; 16 ; Revista Gaúcha de Enfermagem Volume 1998 ; 1998 >
+      au < ready ; 1999 ; 17 ; Revista Gaúcha de Enfermagem Volume 1999 ; 1999 >
+      au < ready ; 2000 ; 18 ; Revista Gaúcha de Enfermagem Volume 2000 ; 2000 >
+      au < ready ; 2001 ; 19 ; Revista Gaúcha de Enfermagem Volume 2001 ; 2001 >
+      au < ready ; 2002 ; 20 ; Revista Gaúcha de Enfermagem Volume 2002 ; 2002 >
+      au < ready ; 2003 ; 21 ; Revista Gaúcha de Enfermagem Volume 2003 ; 2003 >
+      au < ready ; 2004 ; 22 ; Revista Gaúcha de Enfermagem Volume 2004 ; 2004 >
+      au < ready ; 2005 ; 23 ; Revista Gaúcha de Enfermagem Volume 2005 ; 2005 >
+      au < ready ; 2006 ; 24 ; Revista Gaúcha de Enfermagem Volume 2006 ; 2006 >
+      au < ready ; 2007 ; 25 ; Revista Gaúcha de Enfermagem Volume 2007 ; 2007 >
+      au < ready ; 2008 ; 26 ; Revista Gaúcha de Enfermagem Volume 2008 ; 2008 >
+      au < ready ; 2009 ; 27 ; Revista Gaúcha de Enfermagem Volume 2009 ; 2009 >
+      au < ready ; 2010 ; 28 ; Revista Gaúcha de Enfermagem Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 29 ; Revista Gaúcha de Enfermagem Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 30 ; Revista Gaúcha de Enfermagem Volume 2012 ; 2012 >
       au < expected ; 2013 ; 31 ; Revista Gaúcha de Enfermagem Volume 2013 ; 2013 >
       au < expected ; 2014 ; 32 ; Revista Gaúcha de Enfermagem Volume 2014 ; 2014 >
 
@@ -1277,12 +1278,12 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = hcpa
 
-      au < testing ; 2007 ; 1 ; Revista HCPA Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 2 ; Revista HCPA Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 3 ; Revista HCPA Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 4 ; Revista HCPA Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 5 ; Revista HCPA Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 6 ; Revista HCPA Volume 2012 ; 2012 >
+      au < ready ; 2007 ; 1 ; Revista HCPA Volume 2007 ; 2007 >
+      au < ready ; 2008 ; 2 ; Revista HCPA Volume 2008 ; 2008 >
+      au < ready ; 2009 ; 3 ; Revista HCPA Volume 2009 ; 2009 >
+      au < ready ; 2010 ; 4 ; Revista HCPA Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 5 ; Revista HCPA Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 6 ; Revista HCPA Volume 2012 ; 2012 >
       au < expected ; 2013 ; 7 ; Revista HCPA Volume 2013 ; 2013 >
       au < expected ; 2014 ; 8 ; Revista HCPA Volume 2014 ; 2014 >
 
@@ -1299,8 +1300,8 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = PolisePsique
 
-      au < testing ; 2011 ; 1 ; Revista Polis e Psique Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 2 ; Revista Polis e Psique Volume 2012 ; 2012 >
+      au < ready ; 2011 ; 1 ; Revista Polis e Psique Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 2 ; Revista Polis e Psique Volume 2012 ; 2012 >
       au < expected ; 2013 ; 3 ; Revista Polis e Psique Volume 2013 ; 2013 >
       au < expected ; 2014 ; 4 ; Revista Polis e Psique Volume 2014 ; 2014 >
 
@@ -1317,8 +1318,8 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = RevistaValise
 
-      au < testing ; 2011 ; 1 ; Revista-Valise Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 2 ; Revista-Valise Volume 2012 ; 2012 >
+      au < ready ; 2011 ; 1 ; Revista-Valise Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 2 ; Revista-Valise Volume 2012 ; 2012 >
       au < expected ; 2013 ; 3 ; Revista-Valise Volume 2013 ; 2013 >
       au < expected ; 2014 ; 4 ; Revista-Valise Volume 2014 ; 2014 >
 
@@ -1355,20 +1356,20 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = sociologias
 
-      au < testing ; 1999 ; 1 ; Sociologias Volume 1999 ; 1999 >
-      au < testing ; 2000 ; 2 ; Sociologias Volume 2000 ; 2000 >
-      au < testing ; 2001 ; 3 ; Sociologias Volume 2001 ; 2001 >
-      au < testing ; 2002 ; 4 ; Sociologias Volume 2002 ; 2002 >
-      au < testing ; 2003 ; 5 ; Sociologias Volume 2003 ; 2003 >
-      au < testing ; 2004 ; 6 ; Sociologias Volume 2004 ; 2004 >
-      au < testing ; 2005 ; 7 ; Sociologias Volume 2005 ; 2005 >
-      au < testing ; 2006 ; 8 ; Sociologias Volume 2006 ; 2006 >
-      au < testing ; 2007 ; 9 ; Sociologias Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 10 ; Sociologias Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 11 ; Sociologias Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 12 ; Sociologias Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 13 ; Sociologias Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 14 ; Sociologias Volume 2012 ; 2012 >
+      au < ready ; 1999 ; 1 ; Sociologias Volume 1999 ; 1999 >
+      au < ready ; 2000 ; 2 ; Sociologias Volume 2000 ; 2000 >
+      au < ready ; 2001 ; 3 ; Sociologias Volume 2001 ; 2001 >
+      au < ready ; 2002 ; 4 ; Sociologias Volume 2002 ; 2002 >
+      au < ready ; 2003 ; 5 ; Sociologias Volume 2003 ; 2003 >
+      au < ready ; 2004 ; 6 ; Sociologias Volume 2004 ; 2004 >
+      au < ready ; 2005 ; 7 ; Sociologias Volume 2005 ; 2005 >
+      au < ready ; 2006 ; 8 ; Sociologias Volume 2006 ; 2006 >
+      au < ready ; 2007 ; 9 ; Sociologias Volume 2007 ; 2007 >
+      au < ready ; 2008 ; 10 ; Sociologias Volume 2008 ; 2008 >
+      au < ready ; 2009 ; 11 ; Sociologias Volume 2009 ; 2009 >
+      au < ready ; 2010 ; 12 ; Sociologias Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 13 ; Sociologias Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 14 ; Sociologias Volume 2012 ; 2012 >
       au < expected ; 2013 ; 15 ; Sociologias Volume 2013 ; 2013 >
       au < expected ; 2014 ; 16 ; Sociologias Volume 2014 ; 2014 >
 
@@ -1385,8 +1386,8 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = translatio
 
-      au < testing ; 2011 ; 1 ; Translatio Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 2 ; Translatio Volume 2012 ; 2012 >
+      au < ready ; 2011 ; 1 ; Translatio Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 2 ; Translatio Volume 2012 ; 2012 >
       au < expected ; 2013 ; 3 ; Translatio Volume 2013 ; 2013 >
       au < expected ; 2014 ; 4 ; Translatio Volume 2014 ; 2014 >
 
