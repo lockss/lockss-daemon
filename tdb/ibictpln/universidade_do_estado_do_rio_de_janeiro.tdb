@@ -322,9 +322,9 @@
       param[base_url] = http://www.e-publicacoes.uerj.br/
       param[journal_id] = muralinternacional
 
-      au < releasing ; 2010 ; 1 ; Mural Internacional Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 2 ; Mural Internacional Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 3 ; Mural Internacional Volume 2012 ; 2012 >
+      au < released ; 2010 ; 1 ; Mural Internacional Volume 2010 ; 2010 >
+      au < released ; 2011 ; 2 ; Mural Internacional Volume 2011 ; 2011 >
+      au < released ; 2012 ; 3 ; Mural Internacional Volume 2012 ; 2012 >
       au < expected ; 2013 ; 4 ; Mural Internacional Volume 2013 ; 2013 >
 
   }
