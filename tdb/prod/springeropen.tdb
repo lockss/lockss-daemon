@@ -211,7 +211,7 @@
         param[journal_issn] = 2196-5641 
         comment[platform] = BMC
 
-        au < exists  ; 2014 ; Chemical and Biological Technologies in Agriculture Volume 1 ; 1 >
+        au < manifest  ; 2014 ; Chemical and Biological Technologies in Agriculture Volume 1 ; 1 >
 
     }
 
@@ -787,7 +787,7 @@
         param[journal_issn] = 2197-5620 
         comment[platform] = BMC
 
-        au < exists ; 2014 ; Forest Ecosystems Volume 1 ; 1 >
+        au < manifest ; 2014 ; Forest Ecosystems Volume 1 ; 1 >
 
     }
 
@@ -802,7 +802,7 @@
         param[journal_issn] = 2196-4092 
         comment[platform] = BMC
 
-        au < exists ; 2014 ; Geoscience Letters Volume 1 ; 1 >
+        au < manifest ; 2014 ; Geoscience Letters Volume 1 ; 1 >
 
     }
 
@@ -920,7 +920,7 @@
         param[journal_issn] = 2197-1714 
         comment[platform] = BioMedCentralPlugin
 
-        au < exists ; 2014 ; Injury Epidemiology Volume 1 ; 1 >
+        au < manifest ; 2014 ; Injury Epidemiology Volume 1 ; 1 >
 
     }
 
@@ -1646,7 +1646,7 @@
           issnl = 2196-5404
         >
   
-        param[base_url] = http://www.nanoscalereslett.com/
+        param[base_url] = http://www.nanoconvergencejournal.com/
         param[journal_issn] = 2196-5404
         comment[platform] = BMC
 
@@ -1760,7 +1760,7 @@
   
         au < manifest ; 2012 ; Planetary Science Volume 1 ; 1 >
         au < manifest ; 2013 ; Planetary Science Volume 2 ; 2 >
-        au < expected ; 2014 ; Planetary Science Volume 3 ; 3 >
+        au < manifest ; 2014 ; Planetary Science Volume 3 ; 3 >
   
     }
   
@@ -1827,7 +1827,7 @@
         param[journal_issn] = 0717-6317
         comment[platform] = BMC
 
-        au < exists ; 2014 ; Revista Chilena de Historia Natural Volume 1 ; 1 >
+        au < manifest ; 2014 ; Revista Chilena de Historia Natural Volume 1 ; 1 >
 
     }
 
