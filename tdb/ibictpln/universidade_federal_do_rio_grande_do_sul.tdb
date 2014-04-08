@@ -37,9 +37,9 @@
 
       au < notReady ; 2008 ; 1 ; AEDOS Volume 2008 ; 2008 >
       au < notReady ; 2009 ; 2 ; AEDOS Volume 2009 ; 2009 >
-      au < ready ; 2010 ; 3 ; AEDOS Volume 2010 ; 2010 >
+      au < releasing ; 2010 ; 3 ; AEDOS Volume 2010 ; 2010 >
       au < notReady ; 2011 ; 4 ; AEDOS Volume 2011 ; 2011 >
-      au < ready ; 2012 ; 5 ; AEDOS Volume 2012 ; 2012 >
+      au < releasing ; 2012 ; 5 ; AEDOS Volume 2012 ; 2012 >
       au < expected ; 2013 ; 6 ; AEDOS Volume 2013 ; 2013 >
       au < expected ; 2014 ; 7 ; AEDOS Volume 2014 ; 2014 >
 
@@ -57,18 +57,18 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = ambienteconstruido
 
-      au < ready ; 1997 ; 1 ; Ambiente Construído Volume 1997 ; 1997 >
-      au < ready ; 2002 ; 6 ; Ambiente Construído Volume 2002 ; 2002 >
-      au < ready ; 2003 ; 7 ; Ambiente Construído Volume 2003 ; 2003 >
-      au < ready ; 2004 ; 8 ; Ambiente Construído Volume 2004 ; 2004 >
-      au < ready ; 2005 ; 9 ; Ambiente Construído Volume 2005 ; 2005 >
-      au < ready ; 2006 ; 10 ; Ambiente Construído Volume 2006 ; 2006 >
-      au < ready ; 2007 ; 11 ; Ambiente Construído Volume 2007 ; 2007 >
-      au < ready ; 2008 ; 12 ; Ambiente Construído Volume 2008 ; 2008 >
-      au < ready ; 2009 ; 13 ; Ambiente Construído Volume 2009 ; 2009 >
-      au < ready ; 2010 ; 14 ; Ambiente Construído Volume 2010 ; 2010 >
-      au < ready ; 2011 ; 15 ; Ambiente Construído Volume 2011 ; 2011 >
-      au < ready ; 2012 ; 16 ; Ambiente Construído Volume 2012 ; 2012 >
+      au < releasing ; 1997 ; 1 ; Ambiente Construído Volume 1997 ; 1997 >
+      au < releasing ; 2002 ; 6 ; Ambiente Construído Volume 2002 ; 2002 >
+      au < releasing ; 2003 ; 7 ; Ambiente Construído Volume 2003 ; 2003 >
+      au < releasing ; 2004 ; 8 ; Ambiente Construído Volume 2004 ; 2004 >
+      au < releasing ; 2005 ; 9 ; Ambiente Construído Volume 2005 ; 2005 >
+      au < releasing ; 2006 ; 10 ; Ambiente Construído Volume 2006 ; 2006 >
+      au < releasing ; 2007 ; 11 ; Ambiente Construído Volume 2007 ; 2007 >
+      au < releasing ; 2008 ; 12 ; Ambiente Construído Volume 2008 ; 2008 >
+      au < releasing ; 2009 ; 13 ; Ambiente Construído Volume 2009 ; 2009 >
+      au < releasing ; 2010 ; 14 ; Ambiente Construído Volume 2010 ; 2010 >
+      au < releasing ; 2011 ; 15 ; Ambiente Construído Volume 2011 ; 2011 >
+      au < releasing ; 2012 ; 16 ; Ambiente Construído Volume 2012 ; 2012 >
       au < expected ; 2013 ; 17 ; Ambiente Construído Volume 2013 ; 2013 >
       au < expected ; 2014 ; 18 ; Ambiente Construído Volume 2014 ; 2014 >
 
@@ -86,36 +86,36 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = AnaliseEconomica
 
-      au < ready ; 1983 ; 1 ; Análise Econômica Volume 1983 ; 1983 >
-      au < ready ; 1984 ; 2 ; Análise Econômica Volume 1984 ; 1984 >
-      au < ready ; 1985 ; 3 ; Análise Econômica Volume 1985 ; 1985 >
-      au < ready ; 1986 ; 4 ; Análise Econômica Volume 1986 ; 1986 >
-      au < ready ; 1987 ; 5 ; Análise Econômica Volume 1987 ; 1987 >
-      au < ready ; 1988 ; 6 ; Análise Econômica Volume 1988 ; 1988 >
-      au < ready ; 1989 ; 7 ; Análise Econômica Volume 1989 ; 1989 >
-      au < ready ; 1990 ; 8 ; Análise Econômica Volume 1990 ; 1990 >
-      au < ready ; 1991 ; 9 ; Análise Econômica Volume 1991 ; 1991 >
-      au < ready ; 1992 ; 10 ; Análise Econômica Volume 1992 ; 1992 >
-      au < ready ; 1993 ; 11 ; Análise Econômica Volume 1993 ; 1993 >
-      au < ready ; 1994 ; 12 ; Análise Econômica Volume 1994 ; 1994 >
-      au < ready ; 1995 ; 13 ; Análise Econômica Volume 1995 ; 1995 >
-      au < ready ; 1996 ; 14 ; Análise Econômica Volume 1996 ; 1996 >
-      au < ready ; 1997 ; 15 ; Análise Econômica Volume 1997 ; 1997 >
-      au < ready ; 1998 ; 16 ; Análise Econômica Volume 1998 ; 1998 >
-      au < ready ; 1999 ; 17 ; Análise Econômica Volume 1999 ; 1999 >
-      au < ready ; 2000 ; 18 ; Análise Econômica Volume 2000 ; 2000 >
-      au < ready ; 2001 ; 19 ; Análise Econômica Volume 2001 ; 2001 >
-      au < ready ; 2002 ; 20 ; Análise Econômica Volume 2002 ; 2002 >
-      au < ready ; 2003 ; 21 ; Análise Econômica Volume 2003 ; 2003 >
-      au < ready ; 2004 ; 22 ; Análise Econômica Volume 2004 ; 2004 >
-      au < ready ; 2005 ; 23 ; Análise Econômica Volume 2005 ; 2005 >
-      au < ready ; 2006 ; 24 ; Análise Econômica Volume 2006 ; 2006 >
-      au < ready ; 2007 ; 25 ; Análise Econômica Volume 2007 ; 2007 >
-      au < ready ; 2008 ; 26 ; Análise Econômica Volume 2008 ; 2008 >
-      au < ready ; 2009 ; 27 ; Análise Econômica Volume 2009 ; 2009 >
-      au < ready ; 2010 ; 28 ; Análise Econômica Volume 2010 ; 2010 >
-      au < ready ; 2011 ; 29 ; Análise Econômica Volume 2011 ; 2011 >
-      au < ready ; 2012 ; 30 ; Análise Econômica Volume 2012 ; 2012 >
+      au < releasing ; 1983 ; 1 ; Análise Econômica Volume 1983 ; 1983 >
+      au < releasing ; 1984 ; 2 ; Análise Econômica Volume 1984 ; 1984 >
+      au < releasing ; 1985 ; 3 ; Análise Econômica Volume 1985 ; 1985 >
+      au < releasing ; 1986 ; 4 ; Análise Econômica Volume 1986 ; 1986 >
+      au < releasing ; 1987 ; 5 ; Análise Econômica Volume 1987 ; 1987 >
+      au < releasing ; 1988 ; 6 ; Análise Econômica Volume 1988 ; 1988 >
+      au < releasing ; 1989 ; 7 ; Análise Econômica Volume 1989 ; 1989 >
+      au < releasing ; 1990 ; 8 ; Análise Econômica Volume 1990 ; 1990 >
+      au < releasing ; 1991 ; 9 ; Análise Econômica Volume 1991 ; 1991 >
+      au < releasing ; 1992 ; 10 ; Análise Econômica Volume 1992 ; 1992 >
+      au < releasing ; 1993 ; 11 ; Análise Econômica Volume 1993 ; 1993 >
+      au < releasing ; 1994 ; 12 ; Análise Econômica Volume 1994 ; 1994 >
+      au < releasing ; 1995 ; 13 ; Análise Econômica Volume 1995 ; 1995 >
+      au < releasing ; 1996 ; 14 ; Análise Econômica Volume 1996 ; 1996 >
+      au < releasing ; 1997 ; 15 ; Análise Econômica Volume 1997 ; 1997 >
+      au < releasing ; 1998 ; 16 ; Análise Econômica Volume 1998 ; 1998 >
+      au < releasing ; 1999 ; 17 ; Análise Econômica Volume 1999 ; 1999 >
+      au < releasing ; 2000 ; 18 ; Análise Econômica Volume 2000 ; 2000 >
+      au < releasing ; 2001 ; 19 ; Análise Econômica Volume 2001 ; 2001 >
+      au < releasing ; 2002 ; 20 ; Análise Econômica Volume 2002 ; 2002 >
+      au < releasing ; 2003 ; 21 ; Análise Econômica Volume 2003 ; 2003 >
+      au < releasing ; 2004 ; 22 ; Análise Econômica Volume 2004 ; 2004 >
+      au < releasing ; 2005 ; 23 ; Análise Econômica Volume 2005 ; 2005 >
+      au < releasing ; 2006 ; 24 ; Análise Econômica Volume 2006 ; 2006 >
+      au < releasing ; 2007 ; 25 ; Análise Econômica Volume 2007 ; 2007 >
+      au < releasing ; 2008 ; 26 ; Análise Econômica Volume 2008 ; 2008 >
+      au < releasing ; 2009 ; 27 ; Análise Econômica Volume 2009 ; 2009 >
+      au < releasing ; 2010 ; 28 ; Análise Econômica Volume 2010 ; 2010 >
+      au < releasing ; 2011 ; 29 ; Análise Econômica Volume 2011 ; 2011 >
+      au < releasing ; 2012 ; 30 ; Análise Econômica Volume 2012 ; 2012 >
       au < expected ; 2013 ; 31 ; Análise Econômica Volume 2013 ; 2013 >
       au < expected ; 2014 ; 32 ; Análise Econômica Volume 2014 ; 2014 >
 
@@ -133,26 +133,26 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = anos90
 
-      au < ready ; 1993 ; 1 ; Anos Noventa Volume 1993 ; 1993 >
-      au < ready ; 1994 ; 2 ; Anos Noventa Volume 1994 ; 1994 >
-      au < ready ; 1995 ; 3 ; Anos Noventa Volume 1995 ; 1995 >
-      au < ready ; 1996 ; 4 ; Anos Noventa Volume 1996 ; 1996 >
-      au < ready ; 1997 ; 5 ; Anos Noventa Volume 1997 ; 1997 >
-      au < ready ; 1998 ; 6 ; Anos Noventa Volume 1998 ; 1998 >
-      au < ready ; 1999 ; 7 ; Anos Noventa Volume 1999 ; 1999 >
-      au < ready ; 2000 ; 8 ; Anos Noventa Volume 2000 ; 2000 >
-      au < ready ; 2001 ; 9 ; Anos Noventa Volume 2001 ; 2001 >
-      au < ready ; 2002 ; 10 ; Anos Noventa Volume 2002 ; 2002 >
-      au < ready ; 2003 ; 11 ; Anos Noventa Volume 2003 ; 2003 >
-      au < ready ; 2004 ; 12 ; Anos Noventa Volume 2004 ; 2004 >
-      au < ready ; 2005 ; 13 ; Anos Noventa Volume 2005 ; 2005 >
-      au < ready ; 2006 ; 14 ; Anos Noventa Volume 2006 ; 2006 >
-      au < ready ; 2007 ; 15 ; Anos Noventa Volume 2007 ; 2007 >
-      au < ready ; 2008 ; 16 ; Anos Noventa Volume 2008 ; 2008 >
-      au < ready ; 2009 ; 17 ; Anos Noventa Volume 2009 ; 2009 >
-      au < ready ; 2010 ; 18 ; Anos Noventa Volume 2010 ; 2010 >
-      au < ready ; 2011 ; 19 ; Anos Noventa Volume 2011 ; 2011 >
-      au < ready ; 2012 ; 20 ; Anos Noventa Volume 2012 ; 2012 >
+      au < releasing ; 1993 ; 1 ; Anos Noventa Volume 1993 ; 1993 >
+      au < releasing ; 1994 ; 2 ; Anos Noventa Volume 1994 ; 1994 >
+      au < releasing ; 1995 ; 3 ; Anos Noventa Volume 1995 ; 1995 >
+      au < releasing ; 1996 ; 4 ; Anos Noventa Volume 1996 ; 1996 >
+      au < releasing ; 1997 ; 5 ; Anos Noventa Volume 1997 ; 1997 >
+      au < releasing ; 1998 ; 6 ; Anos Noventa Volume 1998 ; 1998 >
+      au < releasing ; 1999 ; 7 ; Anos Noventa Volume 1999 ; 1999 >
+      au < releasing ; 2000 ; 8 ; Anos Noventa Volume 2000 ; 2000 >
+      au < releasing ; 2001 ; 9 ; Anos Noventa Volume 2001 ; 2001 >
+      au < releasing ; 2002 ; 10 ; Anos Noventa Volume 2002 ; 2002 >
+      au < releasing ; 2003 ; 11 ; Anos Noventa Volume 2003 ; 2003 >
+      au < releasing ; 2004 ; 12 ; Anos Noventa Volume 2004 ; 2004 >
+      au < releasing ; 2005 ; 13 ; Anos Noventa Volume 2005 ; 2005 >
+      au < releasing ; 2006 ; 14 ; Anos Noventa Volume 2006 ; 2006 >
+      au < releasing ; 2007 ; 15 ; Anos Noventa Volume 2007 ; 2007 >
+      au < releasing ; 2008 ; 16 ; Anos Noventa Volume 2008 ; 2008 >
+      au < releasing ; 2009 ; 17 ; Anos Noventa Volume 2009 ; 2009 >
+      au < releasing ; 2010 ; 18 ; Anos Noventa Volume 2010 ; 2010 >
+      au < releasing ; 2011 ; 19 ; Anos Noventa Volume 2011 ; 2011 >
+      au < releasing ; 2012 ; 20 ; Anos Noventa Volume 2012 ; 2012 >
       au < expected ; 2013 ; 21 ; Anos Noventa Volume 2013 ; 2013 >
       au < expected ; 2014 ; 22 ; Anos Noventa Volume 2014 ; 2014 >
 
@@ -169,7 +169,7 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = austral
 
-      au < ready ; 2012 ; 1 ; Austral: Revista Brasileira de Estratégia e Relações Internacionais Volume 2012 ; 2012 >
+      au < releasing ; 2012 ; 1 ; Austral: Revista Brasileira de Estratégia e Relações Internacionais Volume 2012 ; 2012 >
       au < expected ; 2013 ; 2 ; Austral: Revista Brasileira de Estratégia e Relações Internacionais Volume 2013 ; 2013 >
       au < expected ; 2014 ; 3 ; Austral: Revista Brasileira de Estratégia e Relações Internacionais Volume 2014 ; 2014 >
 
@@ -234,7 +234,7 @@
       param[journal_id] = CadernosdoAplicacao
       comment[notReady] = can't fetch permission page
 
-      au < ready ; 2008 ; 1 ; Cadernos do Aplicação Volume 2008 ; 2008 >
+      au < releasing ; 2008 ; 1 ; Cadernos do Aplicação Volume 2008 ; 2008 >
       au < notReady ; 2009 ; 2 ; Cadernos do Aplicação Volume 2009 ; 2009 >
       au < notReady ; 2010 ; 3 ; Cadernos do Aplicação Volume 2010 ; 2010 >
       au < notReady ; 2011 ; 4 ; Cadernos do Aplicação Volume 2011 ; 2011 >
@@ -261,7 +261,7 @@
       au < notReady ; 2008 ; 2 ; Cadernos do IL Volume 2008 ; 2008 >
       au < notReady ; 2009 ; 3 ; Cadernos do IL Volume 2009 ; 2009 >
       au < notReady ; 2010 ; 4 ; Cadernos do IL Volume 2010 ; 2010 >
-      au < ready ; 2011 ; 5 ; Cadernos do IL Volume 2011 ; 2011 >
+      au < releasing ; 2011 ; 5 ; Cadernos do IL Volume 2011 ; 2011 >
       au < notReady ; 2012 ; 6 ; Cadernos do IL Volume 2012 ; 2012 >
       au < expected ; 2013 ; 7 ; Cadernos do IL Volume 2013 ; 2013 >
       au < expected ; 2014 ; 8 ; Cadernos do IL Volume 2014 ; 2014 >
@@ -280,7 +280,7 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = ppgdir
 
-      au < ready ; 2012 ; 1 ; Cadernos do Programa de Pós-Graduação em Direito Volume 2012 ; 2012 >
+      au < releasing ; 2012 ; 1 ; Cadernos do Programa de Pós-Graduação em Direito Volume 2012 ; 2012 >
       au < expected ; 2013 ; 2 ; Cadernos do Programa de Pós-Graduação em Direito Volume 2013 ; 2013 >
       au < expected ; 2014 ; 3 ; Cadernos do Programa de Pós-Graduação em Direito Volume 2014 ; 2014 >
 
@@ -301,10 +301,10 @@
 
       au < notReady ; 2006 ; 1 ; Cena Volume 2006 ; 2006 >
       au < notReady ; 2008 ; 3 ; Cena Volume 2008 ; 2008 >
-      au < ready ; 2009 ; 4 ; Cena Volume 2009 ; 2009 >
-      au < ready ; 2010 ; 5 ; Cena Volume 2010 ; 2010 >
-      au < ready ; 2011 ; 6 ; Cena Volume 2011 ; 2011 >
-      au < ready ; 2012 ; 7 ; Cena Volume 2012 ; 2012 >
+      au < releasing ; 2009 ; 4 ; Cena Volume 2009 ; 2009 >
+      au < releasing ; 2010 ; 5 ; Cena Volume 2010 ; 2010 >
+      au < releasing ; 2011 ; 6 ; Cena Volume 2011 ; 2011 >
+      au < releasing ; 2012 ; 7 ; Cena Volume 2012 ; 2012 >
       au < expected ; 2013 ; 8 ; Cena Volume 2013 ; 2013 >
       au < expected ; 2014 ; 9 ; Cena Volume 2014 ; 2014 >
 
@@ -391,17 +391,17 @@
       param[journal_id] = ConTexto
       comment[notReady] = can't fetch permission page
 
-      au < ready ; 2001 ; 1 ; ConTexto Volume 2001 ; 2001 >
-      au < ready ; 2002 ; 2 ; ConTexto Volume 2002 ; 2002 >
+      au < releasing ; 2001 ; 1 ; ConTexto Volume 2001 ; 2001 >
+      au < releasing ; 2002 ; 2 ; ConTexto Volume 2002 ; 2002 >
       au < notReady ; 2003 ; 3 ; ConTexto Volume 2003 ; 2003 >
-      au < ready ; 2004 ; 4 ; ConTexto Volume 2004 ; 2004 >
-      au < ready ; 2005 ; 5 ; ConTexto Volume 2005 ; 2005 >
-      au < ready ; 2006 ; 6 ; ConTexto Volume 2006 ; 2006 >
+      au < releasing ; 2004 ; 4 ; ConTexto Volume 2004 ; 2004 >
+      au < releasing ; 2005 ; 5 ; ConTexto Volume 2005 ; 2005 >
+      au < releasing ; 2006 ; 6 ; ConTexto Volume 2006 ; 2006 >
       au < notReady ; 2007 ; 7 ; ConTexto Volume 2007 ; 2007 >
       au < notReady ; 2008 ; 8 ; ConTexto Volume 2008 ; 2008 >
-      au < ready ; 2009 ; 9 ; ConTexto Volume 2009 ; 2009 >
+      au < releasing ; 2009 ; 9 ; ConTexto Volume 2009 ; 2009 >
       au < notReady ; 2010 ; 10 ; ConTexto Volume 2010 ; 2010 >
-      au < ready ; 2011 ; 11 ; ConTexto Volume 2011 ; 2011 >
+      au < releasing ; 2011 ; 11 ; ConTexto Volume 2011 ; 2011 >
       au < notReady ; 2012 ; 12 ; ConTexto Volume 2012 ; 2012 >
       au < expected ; 2013 ; 13 ; ConTexto Volume 2013 ; 2013 >
       au < expected ; 2014 ; 14 ; ConTexto Volume 2014 ; 2014 >
@@ -420,11 +420,11 @@
       param[journal_id] = contingentia
       comment[notReady] = can't fetch permission page
 
-      au < ready ; 2006 ; 1 ; Contingentia Volume 2006 ; 2006 >
+      au < releasing ; 2006 ; 1 ; Contingentia Volume 2006 ; 2006 >
       au < notReady ; 2007 ; 2 ; Contingentia Volume 2007 ; 2007 >
       au < notReady ; 2008 ; 3 ; Contingentia Volume 2008 ; 2008 >
-      au < ready ; 2009 ; 4 ; Contingentia Volume 2009 ; 2009 >
-      au < ready ; 2010 ; 5 ; Contingentia Volume 2010 ; 2010 >
+      au < releasing ; 2009 ; 4 ; Contingentia Volume 2009 ; 2009 >
+      au < releasing ; 2010 ; 5 ; Contingentia Volume 2010 ; 2010 >
       au < notReady ; 2011 ; 6 ; Contingentia Volume 2011 ; 2011 >
       au < expected ; 2012 ; 7 ; Contingentia Volume 2012 ; 2012 >
       au < expected ; 2013 ; 8 ; Contingentia Volume 2013 ; 2013 >
@@ -445,10 +445,10 @@
       comment[notReady] = can't fetch permission page
 
       au < notReady ; 2005 ; 1 ; Debate Terminológico Volume 2005 ; 2005 >
-      au < ready ; 2006 ; 2 ; Debate Terminológico Volume 2006 ; 2006 >
+      au < releasing ; 2006 ; 2 ; Debate Terminológico Volume 2006 ; 2006 >
       au < notReady ; 2007 ; 3 ; Debate Terminológico Volume 2007 ; 2007 >
-      au < ready ; 2008 ; 4 ; Debate Terminológico Volume 2008 ; 2008 >
-      au < ready ; 2009 ; 5 ; Debate Terminológico Volume 2009 ; 2009 >
+      au < releasing ; 2008 ; 4 ; Debate Terminológico Volume 2008 ; 2008 >
+      au < releasing ; 2009 ; 5 ; Debate Terminológico Volume 2009 ; 2009 >
       au < notReady ; 2011 ; 7 ; Debate Terminológico Volume 2011 ; 2011 >
       au < notReady ; 2012 ; 8 ; Debate Terminológico Volume 2012 ; 2012 >
       au < expected ; 2013 ; 9 ; Debate Terminológico Volume 2013 ; 2013 >
@@ -470,16 +470,16 @@
       comment[notReady] = can't fetch permission pages
 
       au < notReady ; 1997 ; 1 ; Debates do NER Volume 1997 ; 1997 >
-      au < ready ; 2001 ; 5 ; Debates do NER Volume 2001 ; 2001 >
-      au < ready ; 2003 ; 7 ; Debates do NER Volume 2003 ; 2003 >
+      au < releasing ; 2001 ; 5 ; Debates do NER Volume 2001 ; 2001 >
+      au < releasing ; 2003 ; 7 ; Debates do NER Volume 2003 ; 2003 >
       au < notReady ; 2004 ; 8 ; Debates do NER Volume 2004 ; 2004 >
       au < notReady ; 2005 ; 9 ; Debates do NER Volume 2005 ; 2005 >
       au < notReady ; 2006 ; 10 ; Debates do NER Volume 2006 ; 2006 >
       au < notReady ; 2007 ; 11 ; Debates do NER Volume 2007 ; 2007 >
       au < notReady ; 2008 ; 12 ; Debates do NER Volume 2008 ; 2008 >
       au < notReady ; 2009 ; 13 ; Debates do NER Volume 2009 ; 2009 >
-      au < ready ; 2010 ; 14 ; Debates do NER Volume 2010 ; 2010 >
-      au < ready ; 2011 ; 15 ; Debates do NER Volume 2011 ; 2011 >
+      au < releasing ; 2010 ; 14 ; Debates do NER Volume 2010 ; 2010 >
+      au < releasing ; 2011 ; 15 ; Debates do NER Volume 2011 ; 2011 >
       au < notReady ; 2012 ; 16 ; Debates do NER Volume 2012 ; 2012 >
       au < expected ; 2013 ; 17 ; Debates do NER Volume 2013 ; 2013 >
       au < expected ; 2014 ; 18 ; Debates do NER Volume 2014 ; 2014 >
@@ -499,18 +499,18 @@
       param[journal_id] = educacaoerealidade
       comment[notReady] = can't fetch permission pages
 
-      au < ready ; 2001 ; 1 ; Educação & Realidade Volume 2001 ; 2001 >
-      au < ready ; 2002 ; 2 ; Educação & Realidade Volume 2002 ; 2002 >
-      au < ready ; 2003 ; 3 ; Educação & Realidade Volume 2003 ; 2003 >
-      au < ready ; 2004 ; 4 ; Educação & Realidade Volume 2004 ; 2004 >
+      au < releasing ; 2001 ; 1 ; Educação & Realidade Volume 2001 ; 2001 >
+      au < releasing ; 2002 ; 2 ; Educação & Realidade Volume 2002 ; 2002 >
+      au < releasing ; 2003 ; 3 ; Educação & Realidade Volume 2003 ; 2003 >
+      au < releasing ; 2004 ; 4 ; Educação & Realidade Volume 2004 ; 2004 >
       au < notReady ; 2005 ; 5 ; Educação & Realidade Volume 2005 ; 2005 >
       au < notReady ; 2006 ; 6 ; Educação & Realidade Volume 2006 ; 2006 >
       au < notReady ; 2007 ; 7 ; Educação & Realidade Volume 2007 ; 2007 >
-      au < ready ; 2008 ; 8 ; Educação & Realidade Volume 2008 ; 2008 >
+      au < releasing ; 2008 ; 8 ; Educação & Realidade Volume 2008 ; 2008 >
       au < notReady ; 2009 ; 9 ; Educação & Realidade Volume 2009 ; 2009 >
       au < notReady ; 2010 ; 10 ; Educação & Realidade Volume 2010 ; 2010 >
-      au < ready ; 2011 ; 11 ; Educação & Realidade Volume 2011 ; 2011 >
-      au < ready ; 2012 ; 12 ; Educação & Realidade Volume 2012 ; 2012 >
+      au < releasing ; 2011 ; 11 ; Educação & Realidade Volume 2011 ; 2011 >
+      au < releasing ; 2012 ; 12 ; Educação & Realidade Volume 2012 ; 2012 >
       au < expected ; 2013 ; 13 ; Educação & Realidade Volume 2013 ; 2013 >
       au < expected ; 2014 ; 14 ; Educação & Realidade Volume 2014 ; 2014 >
 
@@ -530,15 +530,15 @@
       comment[notReady] = can't fetch permission pages
 
       au < notReady ; 2000 ; 1 ; Em Pauta Volume 2000 ; 2000 >
-      au < ready ; 2001 ; 2 ; Em Pauta Volume 2001 ; 2001 >
-      au < ready ; 2002 ; 3 ; Em Pauta Volume 2002 ; 2002 >
-      au < ready ; 2003 ; 4 ; Em Pauta Volume 2003 ; 2003 >
-      au < ready ; 2004 ; 5 ; Em Pauta Volume 2004 ; 2004 >
+      au < releasing ; 2001 ; 2 ; Em Pauta Volume 2001 ; 2001 >
+      au < releasing ; 2002 ; 3 ; Em Pauta Volume 2002 ; 2002 >
+      au < releasing ; 2003 ; 4 ; Em Pauta Volume 2003 ; 2003 >
+      au < releasing ; 2004 ; 5 ; Em Pauta Volume 2004 ; 2004 >
       au < notReady ; 2005 ; 6 ; Em Pauta Volume 2005 ; 2005 >
       au < notReady ; 2006 ; 7 ; Em Pauta Volume 2006 ; 2006 >
       au < notReady ; 2007 ; 8 ; Em Pauta Volume 2007 ; 2007 >
       au < notReady ; 2008 ; 9 ; Em Pauta Volume 2008 ; 2008 >
-      au < ready ; 2012 ; 13 ; Em Pauta Volume 2012 ; 2012 >
+      au < releasing ; 2012 ; 13 ; Em Pauta Volume 2012 ; 2012 >
       au < expected ; 2013 ; 14 ; Em Pauta Volume 2013 ; 2013 >
       au < expected ; 2014 ; 15 ; Em Pauta Volume 2014 ; 2014 >
 
@@ -557,11 +557,11 @@
       comment[notReady] = can't fetch permission pages
 
       au < notReady ; 2003 ; 1 ; em questão Volume 2003 ; 2003 >
-      au < ready ; 2004 ; 2 ; em questão Volume 2004 ; 2004 >
-      au < ready ; 2005 ; 3 ; em questão Volume 2005 ; 2005 >
-      au < ready ; 2006 ; 4 ; em questão Volume 2006 ; 2006 >
+      au < releasing ; 2004 ; 2 ; em questão Volume 2004 ; 2004 >
+      au < releasing ; 2005 ; 3 ; em questão Volume 2005 ; 2005 >
+      au < releasing ; 2006 ; 4 ; em questão Volume 2006 ; 2006 >
       au < notReady ; 2007 ; 5 ; em questão Volume 2007 ; 2007 >
-      au < ready ; 2008 ; 6 ; em questão Volume 2008 ; 2008 >
+      au < releasing ; 2008 ; 6 ; em questão Volume 2008 ; 2008 >
       au < notReady ; 2009 ; 7 ; em questão Volume 2009 ; 2009 >
       au < notReady ; 2010 ; 8 ; em questão Volume 2010 ; 2010 >
       au < notReady ; 2011 ; 9 ; em questão Volume 2011 ; 2011 >
@@ -583,11 +583,11 @@
       param[journal_id] = EspacoAmerindio
       comment[notReady] = can't fetch permission pages
 
-      au < ready ; 2007 ; 1 ; Espaço Ameríndio Volume 2007 ; 2007 >
+      au < releasing ; 2007 ; 1 ; Espaço Ameríndio Volume 2007 ; 2007 >
       au < notReady ; 2008 ; 2 ; Espaço Ameríndio Volume 2008 ; 2008 >
-      au < ready ; 2009 ; 3 ; Espaço Ameríndio Volume 2009 ; 2009 >
-      au < ready ; 2010 ; 4 ; Espaço Ameríndio Volume 2010 ; 2010 >
-      au < ready ; 2011 ; 5 ; Espaço Ameríndio Volume 2011 ; 2011 >
+      au < releasing ; 2009 ; 3 ; Espaço Ameríndio Volume 2009 ; 2009 >
+      au < releasing ; 2010 ; 4 ; Espaço Ameríndio Volume 2010 ; 2010 >
+      au < releasing ; 2011 ; 5 ; Espaço Ameríndio Volume 2011 ; 2011 >
       au < notReady ; 2012 ; 6 ; Espaço Ameríndio Volume 2012 ; 2012 >
       au < expected ; 2013 ; 7 ; Espaço Ameríndio Volume 2013 ; 2013 >
       au < expected ; 2014 ; 8 ; Espaço Ameríndio Volume 2014 ; 2014 >
@@ -626,13 +626,13 @@
       param[journal_id] = RevEnvelhecer
       comment[notReady] = can't fetch permission page
 
-      au < ready ; 1999 ; 1 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 1999 ; 1999 >
+      au < releasing ; 1999 ; 1 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 1999 ; 1999 >
       au < notReady ; 2001 ; 3 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 2001 ; 2001 >
       au < notReady ; 2002 ; 4 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 2002 ; 2002 >
-      au < ready ; 2003 ; 5 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 2003 ; 2003 >
-      au < ready ; 2004 ; 6 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 2004 ; 2004 >
+      au < releasing ; 2003 ; 5 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 2003 ; 2003 >
+      au < releasing ; 2004 ; 6 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 2004 ; 2004 >
       au < notReady ; 2005 ; 7 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 2005 ; 2005 >
-      au < ready ; 2006 ; 8 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 2006 ; 2006 >
+      au < releasing ; 2006 ; 8 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 2006 ; 2006 >
       au < notReady ; 2007 ; 9 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 2007 ; 2007 >
       au < notReady ; 2008 ; 10 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 2008 ; 2008 >
       au < notReady ; 2009 ; 11 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 2009 ; 2009 >
@@ -675,12 +675,12 @@
       param[journal_id] = asphe
       comment[notReady] = can't fetch permission pages
 
-      au < ready ; 1997 ; 1 ; History of Education Journal Volume 1997 ; 1997 >
-      au < ready ; 1998 ; 2 ; History of Education Journal Volume 1998 ; 1998 >
+      au < releasing ; 1997 ; 1 ; History of Education Journal Volume 1997 ; 1997 >
+      au < releasing ; 1998 ; 2 ; History of Education Journal Volume 1998 ; 1998 >
       au < notReady ; 1999 ; 3 ; History of Education Journal Volume 1999 ; 1999 >
-      au < ready ; 2000 ; 4 ; History of Education Journal Volume 2000 ; 2000 >
+      au < releasing ; 2000 ; 4 ; History of Education Journal Volume 2000 ; 2000 >
       au < notReady ; 2001 ; 5 ; History of Education Journal Volume 2001 ; 2001 >
-      au < ready ; 2002 ; 6 ; History of Education Journal Volume 2002 ; 2002 >
+      au < releasing ; 2002 ; 6 ; History of Education Journal Volume 2002 ; 2002 >
       au < notReady ; 2003 ; 7 ; History of Education Journal Volume 2003 ; 2003 >
       au < notReady ; 2004 ; 8 ; History of Education Journal Volume 2004 ; 2004 >
 
@@ -697,11 +697,11 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = iluminuras
 
-      au < ready ; 2008 ; 1 ; ILUMINURAS Volume 2008 ; 2008 >
-      au < ready ; 2009 ; 2 ; ILUMINURAS Volume 2009 ; 2009 >
-      au < ready ; 2010 ; 3 ; ILUMINURAS Volume 2010 ; 2010 >
-      au < ready ; 2011 ; 4 ; ILUMINURAS Volume 2011 ; 2011 >
-      au < ready ; 2012 ; 5 ; ILUMINURAS Volume 2012 ; 2012 >
+      au < releasing ; 2008 ; 1 ; ILUMINURAS Volume 2008 ; 2008 >
+      au < releasing ; 2009 ; 2 ; ILUMINURAS Volume 2009 ; 2009 >
+      au < releasing ; 2010 ; 3 ; ILUMINURAS Volume 2010 ; 2010 >
+      au < releasing ; 2011 ; 4 ; ILUMINURAS Volume 2011 ; 2011 >
+      au < releasing ; 2012 ; 5 ; ILUMINURAS Volume 2012 ; 2012 >
       au < expected ; 2013 ; 6 ; ILUMINURAS Volume 2013 ; 2013 >
       au < expected ; 2014 ; 7 ; ILUMINURAS Volume 2014 ; 2014 >
 
@@ -719,21 +719,21 @@
       param[journal_id] = InfEducTeoriaPratica
       comment[notReady] = no substance
 
-      au < ready ; 1998 ; 1 ; Informática na educação: teoria & prática Volume 1998 ; 1998 >
-      au < ready ; 1999 ; 2 ; Informática na educação: teoria & prática Volume 1999 ; 1999 >
-      au < ready ; 2000 ; 3 ; Informática na educação: teoria & prática Volume 2000 ; 2000 >
+      au < releasing ; 1998 ; 1 ; Informática na educação: teoria & prática Volume 1998 ; 1998 >
+      au < releasing ; 1999 ; 2 ; Informática na educação: teoria & prática Volume 1999 ; 1999 >
+      au < releasing ; 2000 ; 3 ; Informática na educação: teoria & prática Volume 2000 ; 2000 >
       au < notReady ; 2001 ; 4 ; Informática na educação: teoria & prática Volume 2001 ; 2001 >
-      au < ready ; 2002 ; 5 ; Informática na educação: teoria & prática Volume 2002 ; 2002 >
-      au < ready ; 2003 ; 6 ; Informática na educação: teoria & prática Volume 2003 ; 2003 >
-      au < ready ; 2004 ; 7 ; Informática na educação: teoria & prática Volume 2004 ; 2004 >
-      au < ready ; 2005 ; 8 ; Informática na educação: teoria & prática Volume 2005 ; 2005 >
-      au < ready ; 2006 ; 9 ; Informática na educação: teoria & prática Volume 2006 ; 2006 >
-      au < ready ; 2007 ; 10 ; Informática na educação: teoria & prática Volume 2007 ; 2007 >
-      au < ready ; 2008 ; 11 ; Informática na educação: teoria & prática Volume 2008 ; 2008 >
-      au < ready ; 2009 ; 12 ; Informática na educação: teoria & prática Volume 2009 ; 2009 >
-      au < ready ; 2010 ; 13 ; Informática na educação: teoria & prática Volume 2010 ; 2010 >
-      au < ready ; 2011 ; 14 ; Informática na educação: teoria & prática Volume 2011 ; 2011 >
-      au < ready ; 2012 ; 15 ; Informática na educação: teoria & prática Volume 2012 ; 2012 >
+      au < releasing ; 2002 ; 5 ; Informática na educação: teoria & prática Volume 2002 ; 2002 >
+      au < releasing ; 2003 ; 6 ; Informática na educação: teoria & prática Volume 2003 ; 2003 >
+      au < releasing ; 2004 ; 7 ; Informática na educação: teoria & prática Volume 2004 ; 2004 >
+      au < releasing ; 2005 ; 8 ; Informática na educação: teoria & prática Volume 2005 ; 2005 >
+      au < releasing ; 2006 ; 9 ; Informática na educação: teoria & prática Volume 2006 ; 2006 >
+      au < releasing ; 2007 ; 10 ; Informática na educação: teoria & prática Volume 2007 ; 2007 >
+      au < releasing ; 2008 ; 11 ; Informática na educação: teoria & prática Volume 2008 ; 2008 >
+      au < releasing ; 2009 ; 12 ; Informática na educação: teoria & prática Volume 2009 ; 2009 >
+      au < releasing ; 2010 ; 13 ; Informática na educação: teoria & prática Volume 2010 ; 2010 >
+      au < releasing ; 2011 ; 14 ; Informática na educação: teoria & prática Volume 2011 ; 2011 >
+      au < releasing ; 2012 ; 15 ; Informática na educação: teoria & prática Volume 2012 ; 2012 >
       au < expected ; 2013 ; 16 ; Informática na educação: teoria & prática Volume 2013 ; 2013 >
       au < expected ; 2014 ; 17 ; Informática na educação: teoria & prática Volume 2014 ; 2014 >
 
@@ -750,20 +750,20 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = intexto
 
-      au < ready ; 1997 ; 1 ; Intexto Volume 1997 ; 1997 >
-      au < ready ; 1998 ; 2 ; Intexto Volume 1998 ; 1998 >
-      au < ready ; 1999 ; 3 ; Intexto Volume 1999 ; 1999 >
-      au < ready ; 2001 ; 5 ; Intexto Volume 2001 ; 2001 >
-      au < ready ; 2003 ; 7 ; Intexto Volume 2003 ; 2003 >
-      au < ready ; 2004 ; 8 ; Intexto Volume 2004 ; 2004 >
-      au < ready ; 2005 ; 9 ; Intexto Volume 2005 ; 2005 >
-      au < ready ; 2006 ; 10 ; Intexto Volume 2006 ; 2006 >
-      au < ready ; 2007 ; 11 ; Intexto Volume 2007 ; 2007 >
-      au < ready ; 2008 ; 12 ; Intexto Volume 2008 ; 2008 >
-      au < ready ; 2009 ; 13 ; Intexto Volume 2009 ; 2009 >
-      au < ready ; 2010 ; 14 ; Intexto Volume 2010 ; 2010 >
-      au < ready ; 2011 ; 15 ; Intexto Volume 2011 ; 2011 >
-      au < ready ; 2012 ; 16 ; Intexto Volume 2012 ; 2012 >
+      au < releasing ; 1997 ; 1 ; Intexto Volume 1997 ; 1997 >
+      au < releasing ; 1998 ; 2 ; Intexto Volume 1998 ; 1998 >
+      au < releasing ; 1999 ; 3 ; Intexto Volume 1999 ; 1999 >
+      au < releasing ; 2001 ; 5 ; Intexto Volume 2001 ; 2001 >
+      au < releasing ; 2003 ; 7 ; Intexto Volume 2003 ; 2003 >
+      au < releasing ; 2004 ; 8 ; Intexto Volume 2004 ; 2004 >
+      au < releasing ; 2005 ; 9 ; Intexto Volume 2005 ; 2005 >
+      au < releasing ; 2006 ; 10 ; Intexto Volume 2006 ; 2006 >
+      au < releasing ; 2007 ; 11 ; Intexto Volume 2007 ; 2007 >
+      au < releasing ; 2008 ; 12 ; Intexto Volume 2008 ; 2008 >
+      au < releasing ; 2009 ; 13 ; Intexto Volume 2009 ; 2009 >
+      au < releasing ; 2010 ; 14 ; Intexto Volume 2010 ; 2010 >
+      au < releasing ; 2011 ; 15 ; Intexto Volume 2011 ; 2011 >
+      au < releasing ; 2012 ; 16 ; Intexto Volume 2012 ; 2012 >
       au < expected ; 2013 ; 17 ; Intexto Volume 2013 ; 2013 >
       au < expected ; 2014 ; 18 ; Intexto Volume 2014 ; 2014 >
 
@@ -813,14 +813,14 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = NauLiteraria
 
-      au < ready ; 2005 ; 1 ; Nau Literária Volume 2005 ; 2005 >
-      au < ready ; 2006 ; 2 ; Nau Literária Volume 2006 ; 2006 >
-      au < ready ; 2007 ; 3 ; Nau Literária Volume 2007 ; 2007 >
-      au < ready ; 2008 ; 4 ; Nau Literária Volume 2008 ; 2008 >
-      au < ready ; 2009 ; 5 ; Nau Literária Volume 2009 ; 2009 >
-      au < ready ; 2010 ; 6 ; Nau Literária Volume 2010 ; 2010 >
-      au < ready ; 2011 ; 7 ; Nau Literária Volume 2011 ; 2011 >
-      au < ready ; 2012 ; 8 ; Nau Literária Volume 2012 ; 2012 >
+      au < releasing ; 2005 ; 1 ; Nau Literária Volume 2005 ; 2005 >
+      au < releasing ; 2006 ; 2 ; Nau Literária Volume 2006 ; 2006 >
+      au < releasing ; 2007 ; 3 ; Nau Literária Volume 2007 ; 2007 >
+      au < releasing ; 2008 ; 4 ; Nau Literária Volume 2008 ; 2008 >
+      au < releasing ; 2009 ; 5 ; Nau Literária Volume 2009 ; 2009 >
+      au < releasing ; 2010 ; 6 ; Nau Literária Volume 2010 ; 2010 >
+      au < releasing ; 2011 ; 7 ; Nau Literária Volume 2011 ; 2011 >
+      au < releasing ; 2012 ; 8 ; Nau Literária Volume 2012 ; 2012 >
       au < expected ; 2013 ; 9 ; Nau Literária Volume 2013 ; 2013 >
       au < expected ; 2014 ; 10 ; Nau Literária Volume 2014 ; 2014 >
 
@@ -839,41 +839,41 @@
       param[journal_id] = organon
       comment[notReady] = can't fetch permission page
 
-      au < ready ; 1956 ; 1 ; Organon Volume 1956 ; 1956 >
-      au < ready ; 1959 ; 4 ; Organon Volume 1959 ; 1959 >
-      au < ready ; 1960 ; 5 ; Organon Volume 1960 ; 1960 >
-      au < ready ; 1961 ; 6 ; Organon Volume 1961 ; 1961 >
-      au < ready ; 1962 ; 7 ; Organon Volume 1962 ; 1962 >
-      au < ready ; 1963 ; 8 ; Organon Volume 1963 ; 1963 >
-      au < ready ; 1964 ; 9 ; Organon Volume 1964 ; 1964 >
-      au < ready ; 1966 ; 11 ; Organon Volume 1966 ; 1966 >
-      au < ready ; 1967 ; 12 ; Organon Volume 1967 ; 1967 >
-      au < ready ; 1968 ; 13 ; Organon Volume 1968 ; 1968 >
-      au < ready ; 1969 ; 14 ; Organon Volume 1969 ; 1969 >
-      au < ready ; 1986 ; 31 ; Organon Volume 1986 ; 1986 >
-      au < ready ; 1989 ; 34 ; Organon Volume 1989 ; 1989 >
-      au < ready ; 1991 ; 36 ; Organon Volume 1991 ; 1991 >
-      au < ready ; 1992 ; 37 ; Organon Volume 1992 ; 1992 >
-      au < ready ; 1993 ; 38 ; Organon Volume 1993 ; 1993 >
-      au < ready ; 1994 ; 39 ; Organon Volume 1994 ; 1994 >
-      au < ready ; 1995 ; 40 ; Organon Volume 1995 ; 1995 >
-      au < ready ; 1996 ; 41 ; Organon Volume 1996 ; 1996 >
-      au < ready ; 1997 ; 42 ; Organon Volume 1997 ; 1997 >
-      au < ready ; 1998 ; 43 ; Organon Volume 1998 ; 1998 >
-      au < ready ; 1999 ; 44 ; Organon Volume 1999 ; 1999 >
-      au < ready ; 2000 ; 45 ; Organon Volume 2000 ; 2000 >
-      au < ready ; 2001 ; 46 ; Organon Volume 2001 ; 2001 >
+      au < releasing ; 1956 ; 1 ; Organon Volume 1956 ; 1956 >
+      au < releasing ; 1959 ; 4 ; Organon Volume 1959 ; 1959 >
+      au < releasing ; 1960 ; 5 ; Organon Volume 1960 ; 1960 >
+      au < releasing ; 1961 ; 6 ; Organon Volume 1961 ; 1961 >
+      au < releasing ; 1962 ; 7 ; Organon Volume 1962 ; 1962 >
+      au < releasing ; 1963 ; 8 ; Organon Volume 1963 ; 1963 >
+      au < releasing ; 1964 ; 9 ; Organon Volume 1964 ; 1964 >
+      au < releasing ; 1966 ; 11 ; Organon Volume 1966 ; 1966 >
+      au < releasing ; 1967 ; 12 ; Organon Volume 1967 ; 1967 >
+      au < releasing ; 1968 ; 13 ; Organon Volume 1968 ; 1968 >
+      au < releasing ; 1969 ; 14 ; Organon Volume 1969 ; 1969 >
+      au < releasing ; 1986 ; 31 ; Organon Volume 1986 ; 1986 >
+      au < releasing ; 1989 ; 34 ; Organon Volume 1989 ; 1989 >
+      au < releasing ; 1991 ; 36 ; Organon Volume 1991 ; 1991 >
+      au < releasing ; 1992 ; 37 ; Organon Volume 1992 ; 1992 >
+      au < releasing ; 1993 ; 38 ; Organon Volume 1993 ; 1993 >
+      au < releasing ; 1994 ; 39 ; Organon Volume 1994 ; 1994 >
+      au < releasing ; 1995 ; 40 ; Organon Volume 1995 ; 1995 >
+      au < releasing ; 1996 ; 41 ; Organon Volume 1996 ; 1996 >
+      au < releasing ; 1997 ; 42 ; Organon Volume 1997 ; 1997 >
+      au < releasing ; 1998 ; 43 ; Organon Volume 1998 ; 1998 >
+      au < releasing ; 1999 ; 44 ; Organon Volume 1999 ; 1999 >
+      au < releasing ; 2000 ; 45 ; Organon Volume 2000 ; 2000 >
+      au < releasing ; 2001 ; 46 ; Organon Volume 2001 ; 2001 >
       au < notReady ; 2002 ; 47 ; Organon Volume 2002 ; 2002 >
-      au < ready ; 2003 ; 48 ; Organon Volume 2003 ; 2003 >
-      au < ready ; 2004 ; 49 ; Organon Volume 2004 ; 2004 >
-      au < ready ; 2005 ; 50 ; Organon Volume 2005 ; 2005 >
-      au < ready ; 2006 ; 51 ; Organon Volume 2006 ; 2006 >
-      au < ready ; 2007 ; 52 ; Organon Volume 2007 ; 2007 >
-      au < ready ; 2008 ; 53 ; Organon Volume 2008 ; 2008 >
-      au < ready ; 2009 ; 54 ; Organon Volume 2009 ; 2009 >
-      au < ready ; 2010 ; 55 ; Organon Volume 2010 ; 2010 >
-      au < ready ; 2011 ; 56 ; Organon Volume 2011 ; 2011 >
-      au < ready ; 2012 ; 57 ; Organon Volume 2012 ; 2012 >
+      au < releasing ; 2003 ; 48 ; Organon Volume 2003 ; 2003 >
+      au < releasing ; 2004 ; 49 ; Organon Volume 2004 ; 2004 >
+      au < releasing ; 2005 ; 50 ; Organon Volume 2005 ; 2005 >
+      au < releasing ; 2006 ; 51 ; Organon Volume 2006 ; 2006 >
+      au < releasing ; 2007 ; 52 ; Organon Volume 2007 ; 2007 >
+      au < releasing ; 2008 ; 53 ; Organon Volume 2008 ; 2008 >
+      au < releasing ; 2009 ; 54 ; Organon Volume 2009 ; 2009 >
+      au < releasing ; 2010 ; 55 ; Organon Volume 2010 ; 2010 >
+      au < releasing ; 2011 ; 56 ; Organon Volume 2011 ; 2011 >
+      au < releasing ; 2012 ; 57 ; Organon Volume 2012 ; 2012 >
       au < expected ; 2013 ; 58 ; Organon Volume 2013 ; 2013 >
       au < expected ; 2014 ; 59 ; Organon Volume 2014 ; 2014 >
 
@@ -1020,16 +1020,16 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = renote
 
-      au < ready ; 2003 ; 1 ; RENOTE Volume 2003 ; 2003 >
-      au < ready ; 2004 ; 2 ; RENOTE Volume 2004 ; 2004 >
-      au < ready ; 2005 ; 3 ; RENOTE Volume 2005 ; 2005 >
-      au < ready ; 2006 ; 4 ; RENOTE Volume 2006 ; 2006 >
-      au < ready ; 2007 ; 5 ; RENOTE Volume 2007 ; 2007 >
-      au < ready ; 2008 ; 6 ; RENOTE Volume 2008 ; 2008 >
-      au < ready ; 2009 ; 7 ; RENOTE Volume 2009 ; 2009 >
-      au < ready ; 2010 ; 8 ; RENOTE Volume 2010 ; 2010 >
-      au < ready ; 2011 ; 9 ; RENOTE Volume 2011 ; 2011 >
-      au < ready ; 2012 ; 10 ; RENOTE Volume 2012 ; 2012 >
+      au < releasing ; 2003 ; 1 ; RENOTE Volume 2003 ; 2003 >
+      au < releasing ; 2004 ; 2 ; RENOTE Volume 2004 ; 2004 >
+      au < releasing ; 2005 ; 3 ; RENOTE Volume 2005 ; 2005 >
+      au < releasing ; 2006 ; 4 ; RENOTE Volume 2006 ; 2006 >
+      au < releasing ; 2007 ; 5 ; RENOTE Volume 2007 ; 2007 >
+      au < releasing ; 2008 ; 6 ; RENOTE Volume 2008 ; 2008 >
+      au < releasing ; 2009 ; 7 ; RENOTE Volume 2009 ; 2009 >
+      au < releasing ; 2010 ; 8 ; RENOTE Volume 2010 ; 2010 >
+      au < releasing ; 2011 ; 9 ; RENOTE Volume 2011 ; 2011 >
+      au < releasing ; 2012 ; 10 ; RENOTE Volume 2012 ; 2012 >
       au < expected ; 2013 ; 11 ; RENOTE Volume 2013 ; 2013 >
       au < expected ; 2014 ; 12 ; RENOTE Volume 2014 ; 2014 >
 
@@ -1046,8 +1046,8 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = presenca
 
-      au < ready ; 2011 ; 1 ; Revista Brasileira de Estudos da Presença Volume 2011 ; 2011 >
-      au < ready ; 2012 ; 2 ; Revista Brasileira de Estudos da Presença Volume 2012 ; 2012 >
+      au < releasing ; 2011 ; 1 ; Revista Brasileira de Estudos da Presença Volume 2011 ; 2011 >
+      au < releasing ; 2012 ; 2 ; Revista Brasileira de Estudos da Presença Volume 2012 ; 2012 >
       au < expected ; 2013 ; 3 ; Revista Brasileira de Estudos da Presença Volume 2013 ; 2013 >
       au < expected ; 2014 ; 4 ; Revista Brasileira de Estudos da Presença Volume 2014 ; 2014 >
 
@@ -1064,19 +1064,19 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = rbpae
 
-      au < ready ; 2000 ; 1 ; Revista Brasileira de Política e Administração da Educação Volume 2000 ; 2000 >
-      au < ready ; 2001 ; 2 ; Revista Brasileira de Política e Administração da Educação Volume 2001 ; 2001 >
-      au < ready ; 2002 ; 3 ; Revista Brasileira de Política e Administração da Educação Volume 2002 ; 2002 >
-      au < ready ; 2003 ; 4 ; Revista Brasileira de Política e Administração da Educação Volume 2003 ; 2003 >
-      au < ready ; 2004 ; 5 ; Revista Brasileira de Política e Administração da Educação Volume 2004 ; 2004 >
-      au < ready ; 2005 ; 6 ; Revista Brasileira de Política e Administração da Educação Volume 2005 ; 2005 >
-      au < ready ; 2006 ; 7 ; Revista Brasileira de Política e Administração da Educação Volume 2006 ; 2006 >
-      au < ready ; 2007 ; 8 ; Revista Brasileira de Política e Administração da Educação Volume 2007 ; 2007 >
-      au < ready ; 2008 ; 9 ; Revista Brasileira de Política e Administração da Educação Volume 2008 ; 2008 >
-      au < ready ; 2009 ; 10 ; Revista Brasileira de Política e Administração da Educação Volume 2009 ; 2009 >
-      au < ready ; 2010 ; 11 ; Revista Brasileira de Política e Administração da Educação Volume 2010 ; 2010 >
-      au < ready ; 2011 ; 12 ; Revista Brasileira de Política e Administração da Educação Volume 2011 ; 2011 >
-      au < ready ; 2012 ; 13 ; Revista Brasileira de Política e Administração da Educação Volume 2012 ; 2012 >
+      au < releasing ; 2000 ; 1 ; Revista Brasileira de Política e Administração da Educação Volume 2000 ; 2000 >
+      au < releasing ; 2001 ; 2 ; Revista Brasileira de Política e Administração da Educação Volume 2001 ; 2001 >
+      au < releasing ; 2002 ; 3 ; Revista Brasileira de Política e Administração da Educação Volume 2002 ; 2002 >
+      au < releasing ; 2003 ; 4 ; Revista Brasileira de Política e Administração da Educação Volume 2003 ; 2003 >
+      au < releasing ; 2004 ; 5 ; Revista Brasileira de Política e Administração da Educação Volume 2004 ; 2004 >
+      au < releasing ; 2005 ; 6 ; Revista Brasileira de Política e Administração da Educação Volume 2005 ; 2005 >
+      au < releasing ; 2006 ; 7 ; Revista Brasileira de Política e Administração da Educação Volume 2006 ; 2006 >
+      au < releasing ; 2007 ; 8 ; Revista Brasileira de Política e Administração da Educação Volume 2007 ; 2007 >
+      au < releasing ; 2008 ; 9 ; Revista Brasileira de Política e Administração da Educação Volume 2008 ; 2008 >
+      au < releasing ; 2009 ; 10 ; Revista Brasileira de Política e Administração da Educação Volume 2009 ; 2009 >
+      au < releasing ; 2010 ; 11 ; Revista Brasileira de Política e Administração da Educação Volume 2010 ; 2010 >
+      au < releasing ; 2011 ; 12 ; Revista Brasileira de Política e Administração da Educação Volume 2011 ; 2011 >
+      au < releasing ; 2012 ; 13 ; Revista Brasileira de Política e Administração da Educação Volume 2012 ; 2012 >
       au < expected ; 2013 ; 14 ; Revista Brasileira de Política e Administração da Educação Volume 2013 ; 2013 >
       au < expected ; 2014 ; 15 ; Revista Brasileira de Política e Administração da Educação Volume 2014 ; 2014 >
 
@@ -1094,18 +1094,18 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = RevistadaFaculdadeOdontologia
 
-      au < ready ; 2000 ; 1 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2000 ; 2000 >
-      au < ready ; 2001 ; 2 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2001 ; 2001 >
-      au < ready ; 2002 ; 3 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2002 ; 2002 >
-      au < ready ; 2004 ; 5 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2004 ; 2004 >
-      au < ready ; 2005 ; 6 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2005 ; 2005 >
-      au < ready ; 2006 ; 7 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2006 ; 2006 >
-      au < ready ; 2007 ; 8 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2007 ; 2007 >
-      au < ready ; 2008 ; 9 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2008 ; 2008 >
-      au < ready ; 2009 ; 10 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2009 ; 2009 >
-      au < ready ; 2010 ; 11 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2010 ; 2010 >
-      au < ready ; 2011 ; 12 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2011 ; 2011 >
-      au < ready ; 2012 ; 13 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2012 ; 2012 >
+      au < releasing ; 2000 ; 1 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2000 ; 2000 >
+      au < releasing ; 2001 ; 2 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2001 ; 2001 >
+      au < releasing ; 2002 ; 3 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2002 ; 2002 >
+      au < releasing ; 2004 ; 5 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2004 ; 2004 >
+      au < releasing ; 2005 ; 6 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2005 ; 2005 >
+      au < releasing ; 2006 ; 7 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2006 ; 2006 >
+      au < releasing ; 2007 ; 8 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2007 ; 2007 >
+      au < releasing ; 2008 ; 9 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2008 ; 2008 >
+      au < releasing ; 2009 ; 10 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2009 ; 2009 >
+      au < releasing ; 2010 ; 11 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2010 ; 2010 >
+      au < releasing ; 2011 ; 12 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2011 ; 2011 >
+      au < releasing ; 2012 ; 13 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2012 ; 2012 >
       au < expected ; 2013 ; 14 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2013 ; 2013 >
       au < expected ; 2014 ; 15 ; Revista da Faculdade de Odontologia de Porto Alegre Volume 2014 ; 2014 >
 
@@ -1122,13 +1122,13 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = rita
 
-      au < ready ; 2004 ; 1 ; Revista de Informática Teórica e Aplicada Volume 2004 ; 2004 >
-      au < ready ; 2007 ; 4 ; Revista de Informática Teórica e Aplicada Volume 2007 ; 2007 >
-      au < ready ; 2008 ; 5 ; Revista de Informática Teórica e Aplicada Volume 2008 ; 2008 >
-      au < ready ; 2009 ; 6 ; Revista de Informática Teórica e Aplicada Volume 2009 ; 2009 >
-      au < ready ; 2010 ; 7 ; Revista de Informática Teórica e Aplicada Volume 2010 ; 2010 >
-      au < ready ; 2011 ; 8 ; Revista de Informática Teórica e Aplicada Volume 2011 ; 2011 >
-      au < ready ; 2012 ; 9 ; Revista de Informática Teórica e Aplicada Volume 2012 ; 2012 >
+      au < releasing ; 2004 ; 1 ; Revista de Informática Teórica e Aplicada Volume 2004 ; 2004 >
+      au < releasing ; 2007 ; 4 ; Revista de Informática Teórica e Aplicada Volume 2007 ; 2007 >
+      au < releasing ; 2008 ; 5 ; Revista de Informática Teórica e Aplicada Volume 2008 ; 2008 >
+      au < releasing ; 2009 ; 6 ; Revista de Informática Teórica e Aplicada Volume 2009 ; 2009 >
+      au < releasing ; 2010 ; 7 ; Revista de Informática Teórica e Aplicada Volume 2010 ; 2010 >
+      au < releasing ; 2011 ; 8 ; Revista de Informática Teórica e Aplicada Volume 2011 ; 2011 >
+      au < releasing ; 2012 ; 9 ; Revista de Informática Teórica e Aplicada Volume 2012 ; 2012 >
       au < expected ; 2013 ; 10 ; Revista de Informática Teórica e Aplicada Volume 2013 ; 2013 >
       au < expected ; 2014 ; 11 ; Revista de Informática Teórica e Aplicada Volume 2014 ; 2014 >
 
@@ -1145,8 +1145,8 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = reic
 
-      au < ready ; 2011 ; 1 ; Revista de Iniciação Científica Volume 2011 ; 2011 >
-      au < ready ; 2012 ; 2 ; Revista de Iniciação Científica Volume 2012 ; 2012 >
+      au < releasing ; 2011 ; 1 ; Revista de Iniciação Científica Volume 2011 ; 2011 >
+      au < releasing ; 2012 ; 2 ; Revista de Iniciação Científica Volume 2012 ; 2012 >
       au < expected ; 2013 ; 3 ; Revista de Iniciação Científica Volume 2013 ; 2013 >
       au < expected ; 2014 ; 4 ; Revista de Iniciação Científica Volume 2014 ; 2014 >
 
@@ -1164,12 +1164,12 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = debates
 
-      au < ready ; 2007 ; 1 ; Revista Debates Volume 2007 ; 2007 >
-      au < ready ; 2008 ; 2 ; Revista Debates Volume 2008 ; 2008 >
-      au < ready ; 2009 ; 3 ; Revista Debates Volume 2009 ; 2009 >
-      au < ready ; 2010 ; 4 ; Revista Debates Volume 2010 ; 2010 >
-      au < ready ; 2011 ; 5 ; Revista Debates Volume 2011 ; 2011 >
-      au < ready ; 2012 ; 6 ; Revista Debates Volume 2012 ; 2012 >
+      au < releasing ; 2007 ; 1 ; Revista Debates Volume 2007 ; 2007 >
+      au < releasing ; 2008 ; 2 ; Revista Debates Volume 2008 ; 2008 >
+      au < releasing ; 2009 ; 3 ; Revista Debates Volume 2009 ; 2009 >
+      au < releasing ; 2010 ; 4 ; Revista Debates Volume 2010 ; 2010 >
+      au < releasing ; 2011 ; 5 ; Revista Debates Volume 2011 ; 2011 >
+      au < releasing ; 2012 ; 6 ; Revista Debates Volume 2012 ; 2012 >
       au < expected ; 2013 ; 7 ; Revista Debates Volume 2013 ; 2013 >
       au < expected ; 2014 ; 8 ; Revista Debates Volume 2014 ; 2014 >
 
@@ -1202,17 +1202,17 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = read
 
-      au < ready ; 2002 ; 1 ; Revista Eletrônica de Administração Volume 2002 ; 2002 >
-      au < ready ; 2003 ; 2 ; Revista Eletrônica de Administração Volume 2003 ; 2003 >
-      au < ready ; 2004 ; 3 ; Revista Eletrônica de Administração Volume 2004 ; 2004 >
-      au < ready ; 2005 ; 4 ; Revista Eletrônica de Administração Volume 2005 ; 2005 >
-      au < ready ; 2006 ; 5 ; Revista Eletrônica de Administração Volume 2006 ; 2006 >
-      au < ready ; 2007 ; 6 ; Revista Eletrônica de Administração Volume 2007 ; 2007 >
-      au < ready ; 2008 ; 7 ; Revista Eletrônica de Administração Volume 2008 ; 2008 >
-      au < ready ; 2009 ; 8 ; Revista Eletrônica de Administração Volume 2009 ; 2009 >
-      au < ready ; 2010 ; 9 ; Revista Eletrônica de Administração Volume 2010 ; 2010 >
-      au < ready ; 2011 ; 10 ; Revista Eletrônica de Administração Volume 2011 ; 2011 >
-      au < ready ; 2012 ; 11 ; Revista Eletrônica de Administração Volume 2012 ; 2012 >
+      au < releasing ; 2002 ; 1 ; Revista Eletrônica de Administração Volume 2002 ; 2002 >
+      au < releasing ; 2003 ; 2 ; Revista Eletrônica de Administração Volume 2003 ; 2003 >
+      au < releasing ; 2004 ; 3 ; Revista Eletrônica de Administração Volume 2004 ; 2004 >
+      au < releasing ; 2005 ; 4 ; Revista Eletrônica de Administração Volume 2005 ; 2005 >
+      au < releasing ; 2006 ; 5 ; Revista Eletrônica de Administração Volume 2006 ; 2006 >
+      au < releasing ; 2007 ; 6 ; Revista Eletrônica de Administração Volume 2007 ; 2007 >
+      au < releasing ; 2008 ; 7 ; Revista Eletrônica de Administração Volume 2008 ; 2008 >
+      au < releasing ; 2009 ; 8 ; Revista Eletrônica de Administração Volume 2009 ; 2009 >
+      au < releasing ; 2010 ; 9 ; Revista Eletrônica de Administração Volume 2010 ; 2010 >
+      au < releasing ; 2011 ; 10 ; Revista Eletrônica de Administração Volume 2011 ; 2011 >
+      au < releasing ; 2012 ; 11 ; Revista Eletrônica de Administração Volume 2012 ; 2012 >
       au < expected ; 2013 ; 12 ; Revista Eletrônica de Administração Volume 2013 ; 2013 >
       au < expected ; 2014 ; 13 ; Revista Eletrônica de Administração Volume 2014 ; 2014 >
 
@@ -1246,21 +1246,21 @@
       au < notReady ; 1995 ; 13 ; Revista Gaúcha de Enfermagem Volume 1995 ; 1995 >
       au < notReady ; 1996 ; 14 ; Revista Gaúcha de Enfermagem Volume 1996 ; 1996 >
       au < notReady ; 1997 ; 15 ; Revista Gaúcha de Enfermagem Volume 1997 ; 1997 >
-      au < ready ; 1998 ; 16 ; Revista Gaúcha de Enfermagem Volume 1998 ; 1998 >
-      au < ready ; 1999 ; 17 ; Revista Gaúcha de Enfermagem Volume 1999 ; 1999 >
-      au < ready ; 2000 ; 18 ; Revista Gaúcha de Enfermagem Volume 2000 ; 2000 >
-      au < ready ; 2001 ; 19 ; Revista Gaúcha de Enfermagem Volume 2001 ; 2001 >
-      au < ready ; 2002 ; 20 ; Revista Gaúcha de Enfermagem Volume 2002 ; 2002 >
-      au < ready ; 2003 ; 21 ; Revista Gaúcha de Enfermagem Volume 2003 ; 2003 >
-      au < ready ; 2004 ; 22 ; Revista Gaúcha de Enfermagem Volume 2004 ; 2004 >
-      au < ready ; 2005 ; 23 ; Revista Gaúcha de Enfermagem Volume 2005 ; 2005 >
-      au < ready ; 2006 ; 24 ; Revista Gaúcha de Enfermagem Volume 2006 ; 2006 >
-      au < ready ; 2007 ; 25 ; Revista Gaúcha de Enfermagem Volume 2007 ; 2007 >
-      au < ready ; 2008 ; 26 ; Revista Gaúcha de Enfermagem Volume 2008 ; 2008 >
-      au < ready ; 2009 ; 27 ; Revista Gaúcha de Enfermagem Volume 2009 ; 2009 >
-      au < ready ; 2010 ; 28 ; Revista Gaúcha de Enfermagem Volume 2010 ; 2010 >
-      au < ready ; 2011 ; 29 ; Revista Gaúcha de Enfermagem Volume 2011 ; 2011 >
-      au < ready ; 2012 ; 30 ; Revista Gaúcha de Enfermagem Volume 2012 ; 2012 >
+      au < releasing ; 1998 ; 16 ; Revista Gaúcha de Enfermagem Volume 1998 ; 1998 >
+      au < releasing ; 1999 ; 17 ; Revista Gaúcha de Enfermagem Volume 1999 ; 1999 >
+      au < releasing ; 2000 ; 18 ; Revista Gaúcha de Enfermagem Volume 2000 ; 2000 >
+      au < releasing ; 2001 ; 19 ; Revista Gaúcha de Enfermagem Volume 2001 ; 2001 >
+      au < releasing ; 2002 ; 20 ; Revista Gaúcha de Enfermagem Volume 2002 ; 2002 >
+      au < releasing ; 2003 ; 21 ; Revista Gaúcha de Enfermagem Volume 2003 ; 2003 >
+      au < releasing ; 2004 ; 22 ; Revista Gaúcha de Enfermagem Volume 2004 ; 2004 >
+      au < releasing ; 2005 ; 23 ; Revista Gaúcha de Enfermagem Volume 2005 ; 2005 >
+      au < releasing ; 2006 ; 24 ; Revista Gaúcha de Enfermagem Volume 2006 ; 2006 >
+      au < releasing ; 2007 ; 25 ; Revista Gaúcha de Enfermagem Volume 2007 ; 2007 >
+      au < releasing ; 2008 ; 26 ; Revista Gaúcha de Enfermagem Volume 2008 ; 2008 >
+      au < releasing ; 2009 ; 27 ; Revista Gaúcha de Enfermagem Volume 2009 ; 2009 >
+      au < releasing ; 2010 ; 28 ; Revista Gaúcha de Enfermagem Volume 2010 ; 2010 >
+      au < releasing ; 2011 ; 29 ; Revista Gaúcha de Enfermagem Volume 2011 ; 2011 >
+      au < releasing ; 2012 ; 30 ; Revista Gaúcha de Enfermagem Volume 2012 ; 2012 >
       au < expected ; 2013 ; 31 ; Revista Gaúcha de Enfermagem Volume 2013 ; 2013 >
       au < expected ; 2014 ; 32 ; Revista Gaúcha de Enfermagem Volume 2014 ; 2014 >
 
@@ -1278,12 +1278,12 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = hcpa
 
-      au < ready ; 2007 ; 1 ; Revista HCPA Volume 2007 ; 2007 >
-      au < ready ; 2008 ; 2 ; Revista HCPA Volume 2008 ; 2008 >
-      au < ready ; 2009 ; 3 ; Revista HCPA Volume 2009 ; 2009 >
-      au < ready ; 2010 ; 4 ; Revista HCPA Volume 2010 ; 2010 >
-      au < ready ; 2011 ; 5 ; Revista HCPA Volume 2011 ; 2011 >
-      au < ready ; 2012 ; 6 ; Revista HCPA Volume 2012 ; 2012 >
+      au < releasing ; 2007 ; 1 ; Revista HCPA Volume 2007 ; 2007 >
+      au < releasing ; 2008 ; 2 ; Revista HCPA Volume 2008 ; 2008 >
+      au < releasing ; 2009 ; 3 ; Revista HCPA Volume 2009 ; 2009 >
+      au < releasing ; 2010 ; 4 ; Revista HCPA Volume 2010 ; 2010 >
+      au < releasing ; 2011 ; 5 ; Revista HCPA Volume 2011 ; 2011 >
+      au < releasing ; 2012 ; 6 ; Revista HCPA Volume 2012 ; 2012 >
       au < expected ; 2013 ; 7 ; Revista HCPA Volume 2013 ; 2013 >
       au < expected ; 2014 ; 8 ; Revista HCPA Volume 2014 ; 2014 >
 
@@ -1300,8 +1300,8 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = PolisePsique
 
-      au < ready ; 2011 ; 1 ; Revista Polis e Psique Volume 2011 ; 2011 >
-      au < ready ; 2012 ; 2 ; Revista Polis e Psique Volume 2012 ; 2012 >
+      au < releasing ; 2011 ; 1 ; Revista Polis e Psique Volume 2011 ; 2011 >
+      au < releasing ; 2012 ; 2 ; Revista Polis e Psique Volume 2012 ; 2012 >
       au < expected ; 2013 ; 3 ; Revista Polis e Psique Volume 2013 ; 2013 >
       au < expected ; 2014 ; 4 ; Revista Polis e Psique Volume 2014 ; 2014 >
 
@@ -1318,8 +1318,8 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = RevistaValise
 
-      au < ready ; 2011 ; 1 ; Revista-Valise Volume 2011 ; 2011 >
-      au < ready ; 2012 ; 2 ; Revista-Valise Volume 2012 ; 2012 >
+      au < releasing ; 2011 ; 1 ; Revista-Valise Volume 2011 ; 2011 >
+      au < releasing ; 2012 ; 2 ; Revista-Valise Volume 2012 ; 2012 >
       au < expected ; 2013 ; 3 ; Revista-Valise Volume 2013 ; 2013 >
       au < expected ; 2014 ; 4 ; Revista-Valise Volume 2014 ; 2014 >
 
@@ -1356,20 +1356,20 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = sociologias
 
-      au < ready ; 1999 ; 1 ; Sociologias Volume 1999 ; 1999 >
-      au < ready ; 2000 ; 2 ; Sociologias Volume 2000 ; 2000 >
-      au < ready ; 2001 ; 3 ; Sociologias Volume 2001 ; 2001 >
-      au < ready ; 2002 ; 4 ; Sociologias Volume 2002 ; 2002 >
-      au < ready ; 2003 ; 5 ; Sociologias Volume 2003 ; 2003 >
-      au < ready ; 2004 ; 6 ; Sociologias Volume 2004 ; 2004 >
-      au < ready ; 2005 ; 7 ; Sociologias Volume 2005 ; 2005 >
-      au < ready ; 2006 ; 8 ; Sociologias Volume 2006 ; 2006 >
-      au < ready ; 2007 ; 9 ; Sociologias Volume 2007 ; 2007 >
-      au < ready ; 2008 ; 10 ; Sociologias Volume 2008 ; 2008 >
-      au < ready ; 2009 ; 11 ; Sociologias Volume 2009 ; 2009 >
-      au < ready ; 2010 ; 12 ; Sociologias Volume 2010 ; 2010 >
-      au < ready ; 2011 ; 13 ; Sociologias Volume 2011 ; 2011 >
-      au < ready ; 2012 ; 14 ; Sociologias Volume 2012 ; 2012 >
+      au < releasing ; 1999 ; 1 ; Sociologias Volume 1999 ; 1999 >
+      au < releasing ; 2000 ; 2 ; Sociologias Volume 2000 ; 2000 >
+      au < releasing ; 2001 ; 3 ; Sociologias Volume 2001 ; 2001 >
+      au < releasing ; 2002 ; 4 ; Sociologias Volume 2002 ; 2002 >
+      au < releasing ; 2003 ; 5 ; Sociologias Volume 2003 ; 2003 >
+      au < releasing ; 2004 ; 6 ; Sociologias Volume 2004 ; 2004 >
+      au < releasing ; 2005 ; 7 ; Sociologias Volume 2005 ; 2005 >
+      au < releasing ; 2006 ; 8 ; Sociologias Volume 2006 ; 2006 >
+      au < releasing ; 2007 ; 9 ; Sociologias Volume 2007 ; 2007 >
+      au < releasing ; 2008 ; 10 ; Sociologias Volume 2008 ; 2008 >
+      au < releasing ; 2009 ; 11 ; Sociologias Volume 2009 ; 2009 >
+      au < releasing ; 2010 ; 12 ; Sociologias Volume 2010 ; 2010 >
+      au < releasing ; 2011 ; 13 ; Sociologias Volume 2011 ; 2011 >
+      au < releasing ; 2012 ; 14 ; Sociologias Volume 2012 ; 2012 >
       au < expected ; 2013 ; 15 ; Sociologias Volume 2013 ; 2013 >
       au < expected ; 2014 ; 16 ; Sociologias Volume 2014 ; 2014 >
 
@@ -1386,8 +1386,8 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = translatio
 
-      au < ready ; 2011 ; 1 ; Translatio Volume 2011 ; 2011 >
-      au < ready ; 2012 ; 2 ; Translatio Volume 2012 ; 2012 >
+      au < releasing ; 2011 ; 1 ; Translatio Volume 2011 ; 2011 >
+      au < releasing ; 2012 ; 2 ; Translatio Volume 2012 ; 2012 >
       au < expected ; 2013 ; 3 ; Translatio Volume 2013 ; 2013 >
       au < expected ; 2014 ; 4 ; Translatio Volume 2014 ; 2014 >
 

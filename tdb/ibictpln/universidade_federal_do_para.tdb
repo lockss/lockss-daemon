@@ -55,21 +55,21 @@
       param[base_url] = http://www.periodicos.ufpa.br/
       param[journal_id] = ncn
 
-      au < ready ; 1998 ; 1 ; Novos Cadernos NAEA Volume 1 ; 1998 >
-      au < ready ; 1999 ; 2 ; Novos Cadernos NAEA Volume 2 ; 1999 >
-      au < ready ; 2000 ; 3 ; Novos Cadernos NAEA Volume 3 ; 2000 >
-      au < ready ; 2001 ; 4 ; Novos Cadernos NAEA Volume 4 ; 2001 >
-      au < ready ; 2002 ; 5 ; Novos Cadernos NAEA Volume 5 ; 2002 >
-      au < ready ; 2003 ; 6 ; Novos Cadernos NAEA Volume 6 ; 2003 >
-      au < ready ; 2004 ; 7 ; Novos Cadernos NAEA Volume 7 ; 2004 >
-      au < ready ; 2005 ; 8 ; Novos Cadernos NAEA Volume 8 ; 2005 >
-      au < ready ; 2006 ; 9 ; Novos Cadernos NAEA Volume 9 ; 2006 >
-      au < ready ; 2007 ; 10 ; Novos Cadernos NAEA Volume 10 ; 2007 >
-      au < ready ; 2008 ; 11 ; Novos Cadernos NAEA Volume 11 ; 2008 >
-      au < ready ; 2009 ; 12 ; Novos Cadernos NAEA Volume 12 ; 2009 >
-      au < ready ; 2010 ; 13 ; Novos Cadernos NAEA Volume 13 ; 2010 >
-      au < ready ; 2011 ; 14 ; Novos Cadernos NAEA Volume 14 ; 2011 >
-      au < ready ; 2012 ; 15 ; Novos Cadernos NAEA Volume 15 ; 2012 >
+      au < releasing ; 1998 ; 1 ; Novos Cadernos NAEA Volume 1 ; 1998 >
+      au < releasing ; 1999 ; 2 ; Novos Cadernos NAEA Volume 2 ; 1999 >
+      au < releasing ; 2000 ; 3 ; Novos Cadernos NAEA Volume 3 ; 2000 >
+      au < releasing ; 2001 ; 4 ; Novos Cadernos NAEA Volume 4 ; 2001 >
+      au < releasing ; 2002 ; 5 ; Novos Cadernos NAEA Volume 5 ; 2002 >
+      au < releasing ; 2003 ; 6 ; Novos Cadernos NAEA Volume 6 ; 2003 >
+      au < releasing ; 2004 ; 7 ; Novos Cadernos NAEA Volume 7 ; 2004 >
+      au < releasing ; 2005 ; 8 ; Novos Cadernos NAEA Volume 8 ; 2005 >
+      au < releasing ; 2006 ; 9 ; Novos Cadernos NAEA Volume 9 ; 2006 >
+      au < releasing ; 2007 ; 10 ; Novos Cadernos NAEA Volume 10 ; 2007 >
+      au < releasing ; 2008 ; 11 ; Novos Cadernos NAEA Volume 11 ; 2008 >
+      au < releasing ; 2009 ; 12 ; Novos Cadernos NAEA Volume 12 ; 2009 >
+      au < releasing ; 2010 ; 13 ; Novos Cadernos NAEA Volume 13 ; 2010 >
+      au < releasing ; 2011 ; 14 ; Novos Cadernos NAEA Volume 14 ; 2011 >
+      au < releasing ; 2012 ; 15 ; Novos Cadernos NAEA Volume 15 ; 2012 >
       au < expected ; 2013 ; 16 ; Novos Cadernos NAEA Volume 16 ; 2013 >
 
   }
