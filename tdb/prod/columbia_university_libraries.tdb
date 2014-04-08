@@ -30,6 +30,7 @@
       param[base_url] = http://cusj.columbia.edu/cusj/ 
       
       comment[doNotProcess] = PDFs have many errors. No response from publisher. Defer processing.
+      comment[released] = possible that 2008 and 2009 were released accidentally using OJS legacy plugin
   
       au < doNotProcess ; 2006 ; Columbia Undergraduate Science Journal 2006 ; 1 ; 2006 >
       au < doNotProcess ; 2007 ; Columbia Undergraduate Science Journal 2007 ; 2 ; 2007 >
