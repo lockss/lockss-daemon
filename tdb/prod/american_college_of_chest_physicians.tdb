@@ -7,58 +7,6 @@
   {
 
     title <
-      name = ACCP Critical Care Medicine Board Review: 20th Edition ;
-      type = book ;
-      isbn = 978-0-916609-76-4
-    >
-
-    comment[url] = http://books.publications.chestnet.org/book.aspx?bookid=49
-    comment[platform] = Silverchair
-
-  }
-
-  {
-
-    title <
-      name = ACCP Pulmonary Medicine Board Review: 25th Edition ;
-      type = book ;
-      isbn = 978-0-916609-77-1
-    >
-
-    comment[url] = http://books.publications.chestnet.org/book.aspx?bookid=50
-    comment[platform] = Silverchair
-
-  }
-
-  {
-
-    title <
-      name = ACCP Sleep Medicine Board Review: 4th Edition ;
-      type = book ;
-      isbn = 978-0-916609-75-7
-    >
-
-    comment[url] = http://books.publications.chestnet.org/book.aspx?bookid=48
-    comment[platform] = Silverchair
-
-  }
-
-  {
-
-    title <
-      name = ACCP/AAP Pediatric Pulmonary Medicine Board Review: 1st Edition ;
-      type = book ;
-      isbn = 978-0-916609-85-6
-    >
-
-    comment[url] = http://books.publications.chestnet.org/book.aspx?bookid=47
-    comment[platform] = Silverchair
-
-  }
-
-  {
-
-    title <
       name = Chest ;
       issn = 0012-3692 ;
       eissn = 1931-3543 ;
@@ -66,25 +14,55 @@
     >
     
     comment[down] = moved to Silverchair.
+    
+    {
+    
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://chestjournal.chestpubs.org/
+      implicit < status ; year ; name ; param[volume_name] >
 
-    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-    param[base_url] = http://chestjournal.chestpubs.org/
-    implicit < status ; year ; name ; param[volume_name] >
+      au < down ; 2005 ; Chest Volume 127 ; 127 >
+      au < down ; 2005 ; Chest Volume 128 ; 128 >
+      au < down ; 2006 ; Chest Volume 129 ; 129 >
+      au < down ; 2006 ; Chest Volume 130 ; 130 >
+      au < down ; 2007 ; Chest Volume 131 ; 131 >
+      au < down ; 2007 ; Chest Volume 132 ; 132 >
+      au < down ; 2008 ; Chest Volume 133 ; 133 >
+      au < down ; 2008 ; Chest Volume 134 ; 134 >
+      au < down ; 2009 ; Chest Volume 135 ; 135 >
+      au < down ; 2009 ; Chest Volume 136 ; 136 >
+      au < down ; 2010 ; Chest Volume 137 ; 137 >
+      au < down ; 2010 ; Chest Volume 138 ; 138 >
+      au < down ; 2011 ; Chest Volume 139 ; 139 >
+      au < down ; 2011 ; Chest Volume 140 ; 140 >
+    
+    }
 
-    au < down ; 2005 ; Chest Volume 127 ; 127 >
-    au < down ; 2005 ; Chest Volume 128 ; 128 >
-    au < down ; 2006 ; Chest Volume 129 ; 129 >
-    au < down ; 2006 ; Chest Volume 130 ; 130 >
-    au < down ; 2007 ; Chest Volume 131 ; 131 >
-    au < down ; 2007 ; Chest Volume 132 ; 132 >
-    au < down ; 2008 ; Chest Volume 133 ; 133 >
-    au < down ; 2008 ; Chest Volume 134 ; 134 >
-    au < down ; 2009 ; Chest Volume 135 ; 135 >
-    au < down ; 2009 ; Chest Volume 136 ; 136 >
-    au < down ; 2010 ; Chest Volume 137 ; 137 >
-    au < down ; 2010 ; Chest Volume 138 ; 138 >
-    au < down ; 2011 ; Chest Volume 139 ; 139 >
-    au < down ; 2011 ; Chest Volume 140 ; 140 >
+    {
+    
+      plugin = needs plugin
+      param[base_url] = http://journal.publications.chestnet.org/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < doNotProcess ; 2005 ; Chest Volume 127 ; 127 >
+      au < doNotProcess ; 2005 ; Chest Volume 128 ; 128 >
+      au < doNotProcess ; 2006 ; Chest Volume 129 ; 129 >
+      au < doNotProcess ; 2006 ; Chest Volume 130 ; 130 >
+      au < doNotProcess ; 2007 ; Chest Volume 131 ; 131 >
+      au < doNotProcess ; 2007 ; Chest Volume 132 ; 132 >
+      au < doNotProcess ; 2008 ; Chest Volume 133 ; 133 >
+      au < doNotProcess ; 2008 ; Chest Volume 134 ; 134 >
+      au < doNotProcess ; 2009 ; Chest Volume 135 ; 135 >
+      au < doNotProcess ; 2009 ; Chest Volume 136 ; 136 >
+      au < doNotProcess ; 2010 ; Chest Volume 137 ; 137 >
+      au < doNotProcess ; 2010 ; Chest Volume 138 ; 138 >
+      au < doNotProcess ; 2011 ; Chest Volume 139 ; 139 >
+      au < doNotProcess ; 2011 ; Chest Volume 140 ; 140 >
+      au < exists ; 2012 ; Chest Volume 141 ; 141 >
+      au < exists ; 2013 ; Chest Volume 142 ; 142 >
+      au < exists ; 2014 ; Chest Volume 143 ; 143 >
+    
+    }
 
   }
 
