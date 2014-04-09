@@ -86,20 +86,4 @@
       
     }
   
-    {
-    
-      title < 
-        name = Rocky Mountain Geology ;
-        issn = 1555-7340 ;
-        eissn = 1555-7332
-      >
-
-      comment[ERROR] = This AU released to ingest1 with no slash at the end of the url. Do not change url.
-      param[base_url] = http://rmg.geoscienceworld.org
-      implicit < status ; status2 ; year ; name ; param[volume_name] >
-         
-      au < down ; exists ; 2012 ; Rocky Mountain Geology Volume 47 [to delete] ; 47 >
-      
-    }
-  
 }
