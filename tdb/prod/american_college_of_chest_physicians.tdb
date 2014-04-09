@@ -40,7 +40,7 @@
 
     {
     
-      plugin = needs plugin
+      plugin = needs.plugin
       param[base_url] = http://journal.publications.chestnet.org/
       implicit < status ; year ; name ; param[volume_name] >
 
