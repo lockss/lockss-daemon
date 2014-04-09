@@ -1560,7 +1560,7 @@
       name = Bioinorganic Chemistry and Applications ;
       issn = 1565-3633 ;
       eissn = 1687-479X ;
-      issnl = 1687-479X
+      issnl = 1565-3633
     >
 
     param[journal_id] = bca
@@ -1582,9 +1582,37 @@
   
   {
     title <
+      name = BioMed Research International ;
+      issn = 2314-6133 ;
+      eissn = 2314-6141 ;
+      issnl = 2314-6133
+    >
+
+    param[journal_id] = bmri
+
+    au < exists ; exists ; 2001 ; BioMed Research International Volume 1 (2001) ; 2001 ; 1 >
+    au < exists ; exists ; 2002 ; BioMed Research International Volume 2 (2002) ; 2002 ; 2 >
+    au < exists ; exists ; 2003 ; BioMed Research International Volume 2003 ; 2003 ; 2003 >
+    au < exists ; exists ; 2004 ; BioMed Research International Volume 2004 ; 2004 ; 2004 >
+    au < exists ; exists ; 2005 ; BioMed Research International Volume 2005 ; 2005 ; 2005 >
+    au < exists ; exists ; 2006 ; BioMed Research International Volume 2006 ; 2006 ; 2006 >
+    au < exists ; exists ; 2007 ; BioMed Research International Volume 2007 ; 2007 ; 2007 >
+    au < exists ; exists ; 2008 ; BioMed Research International Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; BioMed Research International Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; BioMed Research International Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; BioMed Research International Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; BioMed Research International Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; BioMed Research International Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; BioMed Research International Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
       name = Biotechnology Research International ;
-      issn = 2090-3146 ;
-      issnl = 2090-3146
+      issn = 2090-3138 ;
+      eissn = 2090-3146 ;
+      issnl = 2090-3138
     >
 
     param[journal_id] = btri
@@ -1618,7 +1646,7 @@
       name = Cardiology Research and Practice ;
       issn = 2090-8016 ;
       eissn = 2090-0597 ;
-      issnl = 2090-0597
+      issnl = 2090-8016
     >
 
     param[journal_id] = crp
@@ -4271,6 +4299,25 @@
 
   {
     title <
+      name = International Journal of Spectroscopy ;
+      issn = 1687-9449 ;
+      eissn = 1687-9457 ;
+      issnl = 1687-9449
+    >
+
+    param[journal_id] = ijs
+
+    au < exists ; exists ; 2009 ; International Journal of Spectroscopy Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; International Journal of Spectroscopy Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Spectroscopy Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Spectroscopy Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Spectroscopy Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Spectroscopy Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
       name = International Journal of Statistical Mechanics ;
       issn = 2356-7112 ;
       eissn = 2314-6850 ;
@@ -4327,22 +4374,145 @@
 
   {
     title <
-      name = International Journal of Spectroscopy ;
-      issn = 1687-9449 ;
-      eissn = 1687-9457 ;
-      issnl = 1687-9449
+      name = International Journal of Superconductivity ;
+      issn = 2356-7120 ;
+      eissn = 2314-6869 ;
+      issnl = 2356-7120
     >
 
-    param[journal_id] = ijs
+    param[journal_id] = ijsu
 
-    au < exists ; exists ; 2009 ; International Journal of Spectroscopy Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; International Journal of Spectroscopy Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Spectroscopy Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Spectroscopy Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Spectroscopy Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Spectroscopy Volume 2014 ; 2014 ; 2014 >
+    au < exists ; exists ; 2013 ; International Journal of Superconductivity Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Superconductivity Volume 2014 ; 2014 ; 2014 >
 
   }
+
+  {
+    title <
+      name = International Journal of Surgical Oncology ;
+      issn = 2090-1402 ;
+      eissn = 2090-1410 ;
+      issnl = 2090-1402
+    >
+
+    param[journal_id] = ijso
+
+    au < exists ; exists ; 2010 ; International Journal of Surgical Oncology Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Surgical Oncology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Surgical Oncology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Surgical Oncology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Surgical Oncology Volume 2014 ; 2014 ; 2014 >
+    
+  }
+
+  {
+    title <
+      name = International Journal of Telemedicine and Applications ;
+      issn = 1687-6415 ;
+      eissn = 1687-6423 ;
+      issnl = 1687-6415
+    >
+
+    param[journal_id] = ijta
+
+    au < exists ; exists ; 2008 ; International Journal of Telemedicine and Applications Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; International Journal of Telemedicine and Applications Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; International Journal of Telemedicine and Applications Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Telemedicine and Applications Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Telemedicine and Applications Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Telemedicine and Applications Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Telemedicine and Applications Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Tissue Engineering ;
+      issn = 2314-4408 ;
+      eissn = 2314-4416 ;
+      issnl = 2314-4408
+    >
+
+    param[journal_id] = ijte
+
+    au < exists ; exists ; 2013 ; International Journal of Tissue Engineering Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Tissue Engineering Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Vascular Medicine ;
+      issn = 2090-2824 ;
+      eissn = 2090-2832 ;
+      issnl = 2090-2824
+    >
+
+    param[journal_id] = ijvm
+
+    au < exists ; exists ; 2010 ; International Journal of Vascular Medicine Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Vascular Medicine Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Vascular Medicine Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Vascular Medicine Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Vascular Medicine Volume 2014 ; 2014 ; 2014 >
+    
+  }
+  
+  {
+    title <
+      name = International Journal of Vehicular Technology ;
+      issn = 1687-5702 ;
+      eissn = 1687-5710 ;
+      issnl = 1687-5702
+    >
+
+    param[journal_id] = ijvt
+
+    au < exists ; exists ; 2008 ; International Journal of Vehicular Technology Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; International Journal of Vehicular Technology Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; International Journal of Vehicular Technology Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Vehicular Technology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Vehicular Technology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Vehicular Technology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Vehicular Technology Volume 2014 ; 2014 ; 2014 >
+
+  }
+  
+  {
+    title <
+      name = International Journal of Zoology ;
+      issn = 1687-8477 ;
+      eissn = 1687-8485 ;
+      issnl = 1687-8477
+    >
+
+    param[journal_id] = ijz
+
+    au < exists ; exists ; 2009 ; International Journal of Zoology Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; International Journal of Zoology Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Zoology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Zoology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Zoology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Zoology Volume 2014 ; 2014 ; 2014 >
+
+  }
+  
+  {
+    title <
+      name = International Scholarly Research Notices ;
+      eissn = 2356-7872 ;
+      issnl = 2356-7872
+    >
+
+    param[journal_id] = isrn
+
+    au < exists ; exists ; 2011 ; International Scholarly Research Notices Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Scholarly Research Notices Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Scholarly Research Notices Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Scholarly Research Notices Volume 2014 ; 2014 ; 2014 >
+
+  }
+
   {
     title <
       name = Journal of Chemistry ;
