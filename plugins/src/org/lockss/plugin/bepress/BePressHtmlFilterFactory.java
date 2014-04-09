@@ -1,10 +1,10 @@
 /*
- * $Id: BePressHtmlFilterFactory.java,v 1.3 2010-07-06 23:03:21 thib_gc Exp $
+ * $Id: BePressHtmlFilterFactory.java,v 1.4 2014-04-09 13:56:04 aishizaki Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -53,6 +53,12 @@ public class BePressHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("select", "name", "url"),
         // Sidebar can contain short-term customizations (e.g. promos about special issues)
         HtmlNodeFilters.tagWithAttribute("div", "id", "sidebar"),
+        // this contains changing download numbers and date - only
+        // on articles at http://docs.lib.purdue.edu/clcweb/ (so far)
+        HtmlNodeFilters.tagWithAttribute("div", "id", "custom-fields"),
+        // also removing an "AltMetric box" which indicates "buzz" on an article
+        HtmlNodeFilters.tagWithAttribute("div", "id", "doi"),
+
     };
     return new HtmlFilterInputStream(in,
                                      encoding,
