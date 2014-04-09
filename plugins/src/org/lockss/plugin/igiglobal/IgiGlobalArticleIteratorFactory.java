@@ -1,5 +1,5 @@
 /*
- * $Id: IgiGlobalArticleIteratorFactory.java,v 1.15 2014-04-09 23:10:15 etenbrink Exp $
+ * $Id: IgiGlobalArticleIteratorFactory.java,v 1.16 2014-04-09 23:26:52 etenbrink Exp $
  */
 
 /*
@@ -106,18 +106,10 @@ public class IgiGlobalArticleIteratorFactory
     // set up Abstract to be an aspect that will trigger an ArticleFiles
     // NOTE - for the moment this also means an abstract could be considered a 
     // FULL_TEXT_CU until this is deprecated
-    // though the ordered list for role full text will mean if any of the others 
-    // are there, they will become the FTCU
+    // the abstract would only be considered FT iff there is no pdf landing nor FT html
     builder.addAspect(
         ABSTRACT_PATTERN, ABSTRACT_REPLACEMENT,
         ArticleFiles.ROLE_ABSTRACT, ArticleFiles.ROLE_ARTICLE_METADATA);
-    
-    // The order in which we want to define full_text_cu.
-    // First one that exists will get the job
-    builder.setFullTextFromRoles(
-        ArticleFiles.ROLE_FULL_TEXT_HTML,
-        ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE,
-        ArticleFiles.ROLE_ABSTRACT);
     
     return builder.getSubTreeArticleIterator();
   }
