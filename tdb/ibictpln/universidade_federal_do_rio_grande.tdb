@@ -5,6 +5,7 @@
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
     implicit < status ; year ; volume ; name ; param[year] >
+    comment[notReady] = can't fetch permission pages
 
   {
 
@@ -18,30 +19,30 @@
       param[base_url] = http://www.seer.furg.br/
       param[journal_id] = biblos
 
-      au < testing ; 1985 ; 1 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 1985 ; 1985 >
-      au < testing ; 1987 ; 3 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 1987 ; 1987 >
-      au < testing ; 1990 ; 6 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 1990 ; 1990 >
-      au < testing ; 1992 ; 8 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 1992 ; 1992 >
-      au < testing ; 1993 ; 9 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 1993 ; 1993 >
-      au < testing ; 1994 ; 10 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 1994 ; 1994 >
-      au < testing ; 1995 ; 11 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 1995 ; 1995 >
-      au < testing ; 1996 ; 12 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 1996 ; 1996 >
-      au < testing ; 1997 ; 13 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 1997 ; 1997 >
-      au < testing ; 1998 ; 14 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 1998 ; 1998 >
-      au < testing ; 1999 ; 15 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 1999 ; 1999 >
-      au < testing ; 2000 ; 16 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2000 ; 2000 >
-      au < testing ; 2001 ; 17 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2001 ; 2001 >
-      au < testing ; 2002 ; 18 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2002 ; 2002 >
-      au < testing ; 2003 ; 19 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2003 ; 2003 >
-      au < testing ; 2004 ; 20 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2004 ; 2004 >
-      au < testing ; 2005 ; 21 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2005 ; 2005 >
-      au < testing ; 2006 ; 22 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2006 ; 2006 >
-      au < testing ; 2007 ; 23 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 24 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 25 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 26 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 27 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 28 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2012 ; 2012 >
+      au < notReady ; 1985 ; 1 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 1985 ; 1985 >
+      au < notReady ; 1987 ; 3 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 1987 ; 1987 >
+      au < notReady ; 1990 ; 6 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 1990 ; 1990 >
+      au < notReady ; 1992 ; 8 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 1992 ; 1992 >
+      au < notReady ; 1993 ; 9 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 1993 ; 1993 >
+      au < notReady ; 1994 ; 10 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 1994 ; 1994 >
+      au < notReady ; 1995 ; 11 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 1995 ; 1995 >
+      au < notReady ; 1996 ; 12 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 1996 ; 1996 >
+      au < notReady ; 1997 ; 13 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 1997 ; 1997 >
+      au < notReady ; 1998 ; 14 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 1998 ; 1998 >
+      au < notReady ; 1999 ; 15 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 1999 ; 1999 >
+      au < notReady ; 2000 ; 16 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2000 ; 2000 >
+      au < notReady ; 2001 ; 17 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2001 ; 2001 >
+      au < notReady ; 2002 ; 18 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2002 ; 2002 >
+      au < notReady ; 2003 ; 19 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2003 ; 2003 >
+      au < notReady ; 2004 ; 20 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2004 ; 2004 >
+      au < notReady ; 2005 ; 21 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2005 ; 2005 >
+      au < notReady ; 2006 ; 22 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2006 ; 2006 >
+      au < notReady ; 2007 ; 23 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2007 ; 2007 >
+      au < notReady ; 2008 ; 24 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2008 ; 2008 >
+      au < notReady ; 2009 ; 25 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2009 ; 2009 >
+      au < notReady ; 2010 ; 26 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2010 ; 2010 >
+      au < notReady ; 2011 ; 27 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2011 ; 2011 >
+      au < notReady ; 2012 ; 28 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2012 ; 2012 >
       au < expected ; 2013 ; 29 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2013 ; 2013 >
       au < expected ; 2014 ; 30 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2014 ; 2014 >
 
@@ -78,13 +79,13 @@
       param[base_url] = http://www.seer.furg.br/
       param[journal_id] = juris
 
-      au < testing ; 2005 ; 1 ; JURIS-Revista da Faculdade de Direito Volume 2005 ; 2005 >
-      au < testing ; 2006 ; 2 ; JURIS-Revista da Faculdade de Direito Volume 2006 ; 2006 >
-      au < testing ; 2008 ; 4 ; JURIS-Revista da Faculdade de Direito Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 5 ; JURIS-Revista da Faculdade de Direito Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 6 ; JURIS-Revista da Faculdade de Direito Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 7 ; JURIS-Revista da Faculdade de Direito Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 8 ; JURIS-Revista da Faculdade de Direito Volume 2012 ; 2012 >
+      au < notReady ; 2005 ; 1 ; JURIS-Revista da Faculdade de Direito Volume 2005 ; 2005 >
+      au < notReady ; 2006 ; 2 ; JURIS-Revista da Faculdade de Direito Volume 2006 ; 2006 >
+      au < notReady ; 2008 ; 4 ; JURIS-Revista da Faculdade de Direito Volume 2008 ; 2008 >
+      au < notReady ; 2009 ; 5 ; JURIS-Revista da Faculdade de Direito Volume 2009 ; 2009 >
+      au < notReady ; 2010 ; 6 ; JURIS-Revista da Faculdade de Direito Volume 2010 ; 2010 >
+      au < notReady ; 2011 ; 7 ; JURIS-Revista da Faculdade de Direito Volume 2011 ; 2011 >
+      au < notReady ; 2012 ; 8 ; JURIS-Revista da Faculdade de Direito Volume 2012 ; 2012 >
       au < expected ; 2013 ; 9 ; JURIS-Revista da Faculdade de Direito Volume 2013 ; 2013 >
       au < expected ; 2014 ; 10 ; JURIS-Revista da Faculdade de Direito Volume 2014 ; 2014 >
 
@@ -123,22 +124,22 @@
       param[base_url] = http://www.seer.furg.br/
       param[journal_id] = ambeduc
 
-      au < testing ; 1996 ; 1 ; Revista Ambiente & Educação Volume 1996 ; 1996 >
-      au < testing ; 1997 ; 2 ; Revista Ambiente & Educação Volume 1997 ; 1997 >
-      au < testing ; 1998 ; 3 ; Revista Ambiente & Educação Volume 1998 ; 1998 >
-      au < testing ; 1999 ; 4 ; Revista Ambiente & Educação Volume 1999 ; 1999 >
-      au < testing ; 2000 ; 5 ; Revista Ambiente & Educação Volume 2000 ; 2000 >
-      au < testing ; 2002 ; 7 ; Revista Ambiente & Educação Volume 2002 ; 2002 >
-      au < testing ; 2003 ; 8 ; Revista Ambiente & Educação Volume 2003 ; 2003 >
-      au < testing ; 2004 ; 9 ; Revista Ambiente & Educação Volume 2004 ; 2004 >
-      au < testing ; 2005 ; 10 ; Revista Ambiente & Educação Volume 2005 ; 2005 >
-      au < testing ; 2006 ; 11 ; Revista Ambiente & Educação Volume 2006 ; 2006 >
-      au < testing ; 2007 ; 12 ; Revista Ambiente & Educação Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 13 ; Revista Ambiente & Educação Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 14 ; Revista Ambiente & Educação Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 15 ; Revista Ambiente & Educação Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 16 ; Revista Ambiente & Educação Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 17 ; Revista Ambiente & Educação Volume 2012 ; 2012 >
+      au < notReady ; 1996 ; 1 ; Revista Ambiente & Educação Volume 1996 ; 1996 >
+      au < notReady ; 1997 ; 2 ; Revista Ambiente & Educação Volume 1997 ; 1997 >
+      au < notReady ; 1998 ; 3 ; Revista Ambiente & Educação Volume 1998 ; 1998 >
+      au < notReady ; 1999 ; 4 ; Revista Ambiente & Educação Volume 1999 ; 1999 >
+      au < notReady ; 2000 ; 5 ; Revista Ambiente & Educação Volume 2000 ; 2000 >
+      au < notReady ; 2002 ; 7 ; Revista Ambiente & Educação Volume 2002 ; 2002 >
+      au < notReady ; 2003 ; 8 ; Revista Ambiente & Educação Volume 2003 ; 2003 >
+      au < notReady ; 2004 ; 9 ; Revista Ambiente & Educação Volume 2004 ; 2004 >
+      au < notReady ; 2005 ; 10 ; Revista Ambiente & Educação Volume 2005 ; 2005 >
+      au < notReady ; 2006 ; 11 ; Revista Ambiente & Educação Volume 2006 ; 2006 >
+      au < notReady ; 2007 ; 12 ; Revista Ambiente & Educação Volume 2007 ; 2007 >
+      au < notReady ; 2008 ; 13 ; Revista Ambiente & Educação Volume 2008 ; 2008 >
+      au < notReady ; 2009 ; 14 ; Revista Ambiente & Educação Volume 2009 ; 2009 >
+      au < notReady ; 2010 ; 15 ; Revista Ambiente & Educação Volume 2010 ; 2010 >
+      au < notReady ; 2011 ; 16 ; Revista Ambiente & Educação Volume 2011 ; 2011 >
+      au < notReady ; 2012 ; 17 ; Revista Ambiente & Educação Volume 2012 ; 2012 >
       au < expected ; 2013 ; 18 ; Revista Ambiente & Educação Volume 2013 ; 2013 >
       au < expected ; 2014 ; 19 ; Revista Ambiente & Educação Volume 2014 ; 2014 >
 
@@ -156,39 +157,39 @@
       param[base_url] = http://www.seer.furg.br/
       param[journal_id] = atlantica
 
-      au < testing ; 1977 ; 1 ; Revista Atlântica Volume 1977 ; 1977 >
-      au < testing ; 1978 ; 2 ; Revista Atlântica Volume 1978 ; 1978 >
-      au < testing ; 1980 ; 4 ; Revista Atlântica Volume 1980 ; 1980 >
-      au < testing ; 1982 ; 6 ; Revista Atlântica Volume 1982 ; 1982 >
-      au < testing ; 1983 ; 7 ; Revista Atlântica Volume 1983 ; 1983 >
-      au < testing ; 1984 ; 8 ; Revista Atlântica Volume 1984 ; 1984 >
-      au < testing ; 1986 ; 10 ; Revista Atlântica Volume 1986 ; 1986 >
-      au < testing ; 1987 ; 11 ; Revista Atlântica Volume 1987 ; 1987 >
-      au < testing ; 1988 ; 12 ; Revista Atlântica Volume 1988 ; 1988 >
-      au < testing ; 1989 ; 13 ; Revista Atlântica Volume 1989 ; 1989 >
-      au < testing ; 1990 ; 14 ; Revista Atlântica Volume 1990 ; 1990 >
-      au < testing ; 1991 ; 15 ; Revista Atlântica Volume 1991 ; 1991 >
-      au < testing ; 1992 ; 16 ; Revista Atlântica Volume 1992 ; 1992 >
-      au < testing ; 1993 ; 17 ; Revista Atlântica Volume 1993 ; 1993 >
-      au < testing ; 1994 ; 18 ; Revista Atlântica Volume 1994 ; 1994 >
-      au < testing ; 1995 ; 19 ; Revista Atlântica Volume 1995 ; 1995 >
-      au < testing ; 1996 ; 20 ; Revista Atlântica Volume 1996 ; 1996 >
-      au < testing ; 1997 ; 21 ; Revista Atlântica Volume 1997 ; 1997 >
-      au < testing ; 1998 ; 22 ; Revista Atlântica Volume 1998 ; 1998 >
-      au < testing ; 1999 ; 23 ; Revista Atlântica Volume 1999 ; 1999 >
-      au < testing ; 2000 ; 24 ; Revista Atlântica Volume 2000 ; 2000 >
-      au < testing ; 2001 ; 25 ; Revista Atlântica Volume 2001 ; 2001 >
-      au < testing ; 2002 ; 26 ; Revista Atlântica Volume 2002 ; 2002 >
-      au < testing ; 2003 ; 27 ; Revista Atlântica Volume 2003 ; 2003 >
-      au < testing ; 2004 ; 28 ; Revista Atlântica Volume 2004 ; 2004 >
-      au < testing ; 2005 ; 29 ; Revista Atlântica Volume 2005 ; 2005 >
-      au < testing ; 2006 ; 30 ; Revista Atlântica Volume 2006 ; 2006 >
-      au < testing ; 2007 ; 31 ; Revista Atlântica Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 32 ; Revista Atlântica Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 33 ; Revista Atlântica Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 34 ; Revista Atlântica Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 35 ; Revista Atlântica Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 36 ; Revista Atlântica Volume 2012 ; 2012 >
+      au < notReady ; 1977 ; 1 ; Revista Atlântica Volume 1977 ; 1977 >
+      au < notReady ; 1978 ; 2 ; Revista Atlântica Volume 1978 ; 1978 >
+      au < notReady ; 1980 ; 4 ; Revista Atlântica Volume 1980 ; 1980 >
+      au < notReady ; 1982 ; 6 ; Revista Atlântica Volume 1982 ; 1982 >
+      au < notReady ; 1983 ; 7 ; Revista Atlântica Volume 1983 ; 1983 >
+      au < notReady ; 1984 ; 8 ; Revista Atlântica Volume 1984 ; 1984 >
+      au < notReady ; 1986 ; 10 ; Revista Atlântica Volume 1986 ; 1986 >
+      au < notReady ; 1987 ; 11 ; Revista Atlântica Volume 1987 ; 1987 >
+      au < notReady ; 1988 ; 12 ; Revista Atlântica Volume 1988 ; 1988 >
+      au < notReady ; 1989 ; 13 ; Revista Atlântica Volume 1989 ; 1989 >
+      au < notReady ; 1990 ; 14 ; Revista Atlântica Volume 1990 ; 1990 >
+      au < notReady ; 1991 ; 15 ; Revista Atlântica Volume 1991 ; 1991 >
+      au < notReady ; 1992 ; 16 ; Revista Atlântica Volume 1992 ; 1992 >
+      au < notReady ; 1993 ; 17 ; Revista Atlântica Volume 1993 ; 1993 >
+      au < notReady ; 1994 ; 18 ; Revista Atlântica Volume 1994 ; 1994 >
+      au < notReady ; 1995 ; 19 ; Revista Atlântica Volume 1995 ; 1995 >
+      au < notReady ; 1996 ; 20 ; Revista Atlântica Volume 1996 ; 1996 >
+      au < notReady ; 1997 ; 21 ; Revista Atlântica Volume 1997 ; 1997 >
+      au < notReady ; 1998 ; 22 ; Revista Atlântica Volume 1998 ; 1998 >
+      au < notReady ; 1999 ; 23 ; Revista Atlântica Volume 1999 ; 1999 >
+      au < notReady ; 2000 ; 24 ; Revista Atlântica Volume 2000 ; 2000 >
+      au < notReady ; 2001 ; 25 ; Revista Atlântica Volume 2001 ; 2001 >
+      au < notReady ; 2002 ; 26 ; Revista Atlântica Volume 2002 ; 2002 >
+      au < notReady ; 2003 ; 27 ; Revista Atlântica Volume 2003 ; 2003 >
+      au < notReady ; 2004 ; 28 ; Revista Atlântica Volume 2004 ; 2004 >
+      au < notReady ; 2005 ; 29 ; Revista Atlântica Volume 2005 ; 2005 >
+      au < notReady ; 2006 ; 30 ; Revista Atlântica Volume 2006 ; 2006 >
+      au < notReady ; 2007 ; 31 ; Revista Atlântica Volume 2007 ; 2007 >
+      au < notReady ; 2008 ; 32 ; Revista Atlântica Volume 2008 ; 2008 >
+      au < notReady ; 2009 ; 33 ; Revista Atlântica Volume 2009 ; 2009 >
+      au < notReady ; 2010 ; 34 ; Revista Atlântica Volume 2010 ; 2010 >
+      au < notReady ; 2011 ; 35 ; Revista Atlântica Volume 2011 ; 2011 >
+      au < notReady ; 2012 ; 36 ; Revista Atlântica Volume 2012 ; 2012 >
       au < expected ; 2013 ; 37 ; Revista Atlântica Volume 2013 ; 2013 >
       au < expected ; 2014 ; 38 ; Revista Atlântica Volume 2014 ; 2014 >
 
@@ -205,9 +206,9 @@
       param[base_url] = http://www.seer.furg.br/
       param[journal_id] = revbea
 
-      au < testing ; 2010 ; 1 ; Revista Brasileira de Educação Ambiental (REVBEA) Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 2 ; Revista Brasileira de Educação Ambiental (REVBEA) Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 3 ; Revista Brasileira de Educação Ambiental (REVBEA) Volume 2012 ; 2012 >
+      au < notReady ; 2010 ; 1 ; Revista Brasileira de Educação Ambiental (REVBEA) Volume 2010 ; 2010 >
+      au < notReady ; 2011 ; 2 ; Revista Brasileira de Educação Ambiental (REVBEA) Volume 2011 ; 2011 >
+      au < notReady ; 2012 ; 3 ; Revista Brasileira de Educação Ambiental (REVBEA) Volume 2012 ; 2012 >
       au < expected ; 2013 ; 4 ; Revista Brasileira de Educação Ambiental (REVBEA) Volume 2013 ; 2013 >
       au < expected ; 2014 ; 5 ; Revista Brasileira de Educação Ambiental (REVBEA) Volume 2014 ; 2014 >
 
@@ -224,14 +225,14 @@
       param[base_url] = http://www.seer.furg.br/
       param[journal_id] = redsis
 
-      au < testing ; 2005 ; 1 ; Revista Didática Sistêmica Volume 2005 ; 2005 >
-      au < testing ; 2006 ; 2 ; Revista Didática Sistêmica Volume 2006 ; 2006 >
-      au < testing ; 2007 ; 3 ; Revista Didática Sistêmica Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 4 ; Revista Didática Sistêmica Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 5 ; Revista Didática Sistêmica Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 6 ; Revista Didática Sistêmica Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 7 ; Revista Didática Sistêmica Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 8 ; Revista Didática Sistêmica Volume 2012 ; 2012 >
+      au < notReady ; 2005 ; 1 ; Revista Didática Sistêmica Volume 2005 ; 2005 >
+      au < notReady ; 2006 ; 2 ; Revista Didática Sistêmica Volume 2006 ; 2006 >
+      au < notReady ; 2007 ; 3 ; Revista Didática Sistêmica Volume 2007 ; 2007 >
+      au < notReady ; 2008 ; 4 ; Revista Didática Sistêmica Volume 2008 ; 2008 >
+      au < notReady ; 2009 ; 5 ; Revista Didática Sistêmica Volume 2009 ; 2009 >
+      au < notReady ; 2010 ; 6 ; Revista Didática Sistêmica Volume 2010 ; 2010 >
+      au < notReady ; 2011 ; 7 ; Revista Didática Sistêmica Volume 2011 ; 2011 >
+      au < notReady ; 2012 ; 8 ; Revista Didática Sistêmica Volume 2012 ; 2012 >
       au < expected ; 2013 ; 9 ; Revista Didática Sistêmica Volume 2013 ; 2013 >
       au < expected ; 2014 ; 10 ; Revista Didática Sistêmica Volume 2014 ; 2014 >
 
