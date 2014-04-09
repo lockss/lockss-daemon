@@ -8,6 +8,8 @@
   comment[0] = publisher uses three digit volume numbers in manifest URL
   plugin = org.lockss.plugin.portlandpress.ClockssPortlandPressPlugin
   implicit < status ; status2 ; year ; name ; param[volume_name] >
+  
+  comment[platform] = moving to HighWire Open in mid-2015
 
   {
   
