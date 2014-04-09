@@ -13,14 +13,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>16</string>
+    <string>17</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>5</string>
+        <string>6</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -65,7 +65,7 @@
       <string>1,"^%s.*[.](bmp|css|gif|ico|jpe?g|js|png|tif?f)([?]v=.+)?$", base_url</string>
       <string>4,"^%s", base_url</string>
       <string>1,"^%sgateway/contentowned/articles[.]aspx", base_url</string>
-      <string>1,"^%sgateway/(issue|article(/full-text-pdf|/full-text-html)?)/[0-9]+$", base_url</string>
+      <string>1,"^%sgateway/(issue|article(/full-text-(pdf|html))?)/[0-9]+$", base_url</string>
       <string>1,"^%spdf[.]aspx[?]", base_url</string>
       <string>1,"^%sviewtitle[.]aspx[?]titleid=[0-9]+$", base_url</string>
     </list>
