@@ -134,4 +134,286 @@
 
   }
 
+  {
+
+      title <
+        name = Claves ;
+        eissn = 1983-3709
+      >
+
+      comment[publisher] = Universidade Federal da Paraíba
+      param[base_url] = http://periodicos.ufpb.br/ojs2/
+      param[journal_id] = claves
+
+      au < exists ; 2006 ; 1 ; Claves Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 2 ; Claves Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 3 ; Claves Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 4 ; Claves Volume 2009 ; 2009 >
+
+  }
+
+  {
+
+      title <
+        name = Gaia Scientia ;
+        eissn = 1981-1268
+      >
+
+      comment[publisher] = Universidade Federal da Paraíba
+      param[base_url] = http://periodicos.ufpb.br/ojs2/
+      param[journal_id] = gaia
+
+      au < exists ; 2007 ; 1 ; Gaia Scientia Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 2 ; Gaia Scientia Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 3 ; Gaia Scientia Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 4 ; Gaia Scientia Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 5 ; Gaia Scientia Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 6 ; Gaia Scientia Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 7 ; Gaia Scientia Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 8 ; Gaia Scientia Volume 2014 ; 2014 >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Urban and Environmental Engineering (JUEE) ;
+        eissn = 1982-3932
+      >
+
+      comment[publisher] = Universidade Federal da Paraíba
+      param[base_url] = http://periodicos.ufpb.br/ojs2/
+      param[journal_id] = juee
+
+      au < exists ; 2007 ; 1 ; Journal of Urban and Environmental Engineering (JUEE) Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 2 ; Journal of Urban and Environmental Engineering (JUEE) Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 3 ; Journal of Urban and Environmental Engineering (JUEE) Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 4 ; Journal of Urban and Environmental Engineering (JUEE) Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 5 ; Journal of Urban and Environmental Engineering (JUEE) Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 6 ; Journal of Urban and Environmental Engineering (JUEE) Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 7 ; Journal of Urban and Environmental Engineering (JUEE) Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 8 ; Journal of Urban and Environmental Engineering (JUEE) Volume 2014 ; 2014 >
+
+  }
+
+  {
+
+      title <
+        name = Língua, Linguística & Literatura ;
+        eissn = 2237-0900
+      >
+
+      comment[publisher] = Universidade Federal da Paraíba
+      param[base_url] = http://periodicos.ufpb.br/ojs2/
+      param[journal_id] = dclv
+
+      au < exists ; 2003 ; 1 ; Língua, Linguística & Literatura Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 2 ; Língua, Linguística & Literatura Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 3 ; Língua, Linguística & Literatura Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 4 ; Língua, Linguística & Literatura Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 5 ; Língua, Linguística & Literatura Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 6 ; Língua, Linguística & Literatura Volume 2008 ; 2008 >
+      au < exists ; 2010 ; 8 ; Língua, Linguística & Literatura Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 9 ; Língua, Linguística & Literatura Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 10 ; Língua, Linguística & Literatura Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 11 ; Língua, Linguística & Literatura Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 12 ; Língua, Linguística & Literatura Volume 2014 ; 2014 >
+
+  }
+
+  {
+
+      title <
+        name = Moringa: Artes do Espetáculo ;
+        eissn = 2177-8841
+      >
+
+      comment[publisher] = Universidade Federal da Paraíba
+      param[base_url] = http://periodicos.ufpb.br/ojs2/
+      param[journal_id] = moringa
+
+      au < exists ; 2010 ; 1 ; Moringa: Artes do Espetáculo Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 2 ; Moringa: Artes do Espetáculo Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 3 ; Moringa: Artes do Espetáculo Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 4 ; Moringa: Artes do Espetáculo Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 5 ; Moringa: Artes do Espetáculo Volume 2014 ; 2014 >
+
+  }
+
+  {
+
+      title <
+        name = Okara: Geograifa em Debate ;
+        eissn = 1982-3878
+      >
+
+      comment[publisher] = Universidade Federal da Paraíba
+      param[base_url] = http://www.ies.ufpb.br/ojs2/
+      param[journal_id] = okara
+
+      au < exists ; 2007 ; 1 ; Okara: Geograifa em Debate Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 2 ; Okara: Geograifa em Debate Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 3 ; Okara: Geograifa em Debate Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 4 ; Okara: Geograifa em Debate Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 5 ; Okara: Geograifa em Debate Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 6 ; Okara: Geograifa em Debate Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 7 ; Okara: Geograifa em Debate Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 8 ; Okara: Geograifa em Debate Volume 2014 ; 2014 >
+
+  }
+
+  {
+
+      title <
+        name = Prim@ Facie ;
+        eissn = 1678-2593
+      >
+
+      comment[publisher] = Universidade Federal da Paraíba
+      param[base_url] = http://periodicos.ufpb.br/ojs2/
+      param[journal_id] = primafacie
+
+      au < exists ; 2005 ; 1 ; Prim@ Facie Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 2 ; Prim@ Facie Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 3 ; Prim@ Facie Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 4 ; Prim@ Facie Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 5 ; Prim@ Facie Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 6 ; Prim@ Facie Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 7 ; Prim@ Facie Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 8 ; Prim@ Facie Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 9 ; Prim@ Facie Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 10 ; Prim@ Facie Volume 2014 ; 2014 >
+
+  }
+
+  {
+
+      title <
+        name = Problemata: Revista Internacional de Filosofia ;
+        eissn = 2236-8612
+      >
+
+      comment[publisher] = Universidade Federal da Paraíba
+      param[base_url] = http://periodicos.ufpb.br/ojs2/
+      param[journal_id] = problemata
+
+      au < exists ; 1998 ; 1 ; Problemata: Revista Internacional de Filosofia Volume 1998 ; 1998 >
+      au < exists ; 2011 ; 2 ; Problemata: Revista Internacional de Filosofia Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 3 ; Problemata: Revista Internacional de Filosofia Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 4 ; Problemata: Revista Internacional de Filosofia Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 5 ; Problemata: Revista Internacional de Filosofia Volume 2014 ; 2014 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Eletrônica Extensão Cidadã ;
+        eissn = 1982-2138
+      >
+
+      comment[publisher] = Universidade Federal da Paraíba
+      param[base_url] = http://www.ies.ufpb.br/ojs2/
+      param[journal_id] = extensaocidada
+
+      au < exists ; 2006 ; 1 ; Revista Eletrônica Extensão Cidadã Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 2 ; Revista Eletrônica Extensão Cidadã Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 3 ; Revista Eletrônica Extensão Cidadã Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 4 ; Revista Eletrônica Extensão Cidadã Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 5 ; Revista Eletrônica Extensão Cidadã Volume 2010 ; 2010 >
+      au < expected ; 2011 ; 6 ; Revista Eletrônica Extensão Cidadã Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 7 ; Revista Eletrônica Extensão Cidadã Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 8 ; Revista Eletrônica Extensão Cidadã Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 9 ; Revista Eletrônica Extensão Cidadã Volume 2014 ; 2014 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Evidenciação Contábil & Finanças ;
+        eissn = 2318-1001
+      >
+
+      comment[publisher] = Universidade Federal da Paraíba
+      param[base_url] = http://periodicos.ufpb.br/ojs2/
+      param[journal_id] = recfin
+
+      au < exists ; 2013 ; 1 ; Revista Evidenciação Contábil & Finanças Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 2 ; Revista Evidenciação Contábil & Finanças Volume 2014 ; 2014 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Lugares de Educação ;
+        eissn = 2237-1451
+      >
+
+      comment[publisher] = Universidade Federal da Paraíba
+      param[base_url] = http://periodicos.ufpb.br/ojs2/
+      param[journal_id] = rle
+
+      au < exists ; 2011 ; 1 ; Revista Lugares de Educação Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 2 ; Revista Lugares de Educação Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 3 ; Revista Lugares de Educação Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 4 ; Revista Lugares de Educação Volume 2014 ; 2014 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Nordestina de Biologia ;
+        issn = 0100-7653 ;
+        eissn = 2236-1480
+      >
+
+      comment[publisher] = Universidade Federal da Paraíba
+      param[base_url] = http://periodicos.ufpb.br/ojs2/
+      param[journal_id] = revnebio
+
+      au < exists ; 1978 ; 1 ; Revista Nordestina de Biologia Volume 1978 ; 1978 >
+      au < exists ; 1979 ; 2 ; Revista Nordestina de Biologia Volume 1979 ; 1979 >
+      au < exists ; 1980 ; 3 ; Revista Nordestina de Biologia Volume 1980 ; 1980 >
+      au < exists ; 1981 ; 4 ; Revista Nordestina de Biologia Volume 1981 ; 1981 >
+      au < exists ; 1982 ; 5 ; Revista Nordestina de Biologia Volume 1982 ; 1982 >
+      au < exists ; 1989 ; 6 ; Revista Nordestina de Biologia Volume 1989 ; 1989 >
+      au < exists ; 1992 ; 7 ; Revista Nordestina de Biologia Volume 1992 ; 1992 >
+      au < exists ; 1993 ; 8 ; Revista Nordestina de Biologia Volume 1993 ; 1993 >
+      au < exists ; 1994 ; 9 ; Revista Nordestina de Biologia Volume 1994 ; 1994 >
+      au < exists ; 1995 ; 10 ; Revista Nordestina de Biologia Volume 1995 ; 1995 >
+      au < exists ; 1998 ; 11 ; Revista Nordestina de Biologia Volume 1998 ; 1998 >
+      au < exists ; 1999 ; 12 ; Revista Nordestina de Biologia Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 13 ; Revista Nordestina de Biologia Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 14 ; Revista Nordestina de Biologia Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 15 ; Revista Nordestina de Biologia Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 16 ; Revista Nordestina de Biologia Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 17 ; Revista Nordestina de Biologia Volume 2004 ; 2004 >
+      au < exists ; 2008 ; 18 ; Revista Nordestina de Biologia Volume 2008 ; 2008 >
+      au < exists ; 2010 ; 19 ; Revista Nordestina de Biologia Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 20 ; Revista Nordestina de Biologia Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 21 ; Revista Nordestina de Biologia Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 22 ; Revista Nordestina de Biologia Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 23 ; Revista Nordestina de Biologia Volume 2014 ; 2014 >
+
+  }
+
+  {
+
+      title <
+        name = Teoria Política & Social ;
+        issn = 0100-7653 ;
+        eissn = 2236-1480
+      >
+
+      comment[publisher] = Universidade Federal da Paraíba
+      param[base_url] = http://periodicos.ufpb.br/ojs2/
+      param[journal_id] = tps
+
+      au < exists ; 2008 ; 1 ; Teoria Política & Social Volume 2008 ; 2008 >
+
+  }
+
 }
