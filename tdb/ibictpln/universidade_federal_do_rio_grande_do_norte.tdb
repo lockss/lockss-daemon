@@ -333,4 +333,106 @@
 
   }
 
+  {
+
+      title <
+        name = Revista Constituição e Garantia de Direitos ;
+        eissn = 1982-310X
+      >
+
+      comment[publisher] = Universidade Federal do Rio Grande do Norte
+      param[base_url] = http://periodicos.ufrn.br/
+      param[journal_id] = constituicaoegarantiadedireitos
+
+      au < exists ; 2007 ; 1 ; Revista Constituição e Garantia de Direitos Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 2 ; Revista Constituição e Garantia de Direitos Volume 2008 ; 2008 >
+      au < exists ; 2010 ; 3 ; Revista Constituição e Garantia de Direitos Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 4 ; Revista Constituição e Garantia de Direitos Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 5 ; Revista Constituição e Garantia de Direitos Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 6 ; Revista Constituição e Garantia de Direitos Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 7 ; Revista Constituição e Garantia de Direitos Volume 2014 ; 2014 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Direito E-nergia ;
+        eissn = 2175-6198
+      >
+
+      comment[publisher] = Universidade Federal do Rio Grande do Norte
+      param[base_url] = http://periodicos.ufrn.br/
+      param[journal_id] = direitoenergia
+
+      au < exists ; 2009 ; 1 ; Revista Direito E-nergia Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 2 ; Revista Direito E-nergia Volume 2010 ; 2010 >
+      au < expected ; 2011 ; 3 ; Revista Direito E-nergia Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 4 ; Revista Direito E-nergia Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 5 ; Revista Direito E-nergia Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 6 ; Revista Direito E-nergia Volume 2014 ; 2014 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Inter-Legere ;
+        eissn = 1982-1662
+      >
+
+      comment[publisher] = Universidade Federal do Rio Grande do Norte
+      param[base_url] = http://periodicos.ufrn.br/
+      param[journal_id] = interlegere
+
+      au < exists ; 2007 ; 1 ; Revista Inter-Legere Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 2 ; Revista Inter-Legere Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 3 ; Revista Inter-Legere Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 4 ; Revista Inter-Legere Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 5 ; Revista Inter-Legere Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 6 ; Revista Inter-Legere Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 7 ; Revista Inter-Legere Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 8 ; Revista Inter-Legere Volume 2014 ; 2014 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Porto ;
+        eissn = 2237-8510
+      >
+
+      comment[publisher] = Universidade Federal do Rio Grande do Norte
+      param[base_url] = http://periodicos.ufrn.br/
+      param[journal_id] = porto
+
+      au < exists ; 2011 ; 1 ; Revista Porto Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 2 ; Revista Porto Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 3 ; Revista Porto Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 4 ; Revista Porto Volume 2014 ; 2014 >
+
+  }
+
+  {
+
+      title <
+        name = Saberes: revista interdisciplinar de Filosofia e Educação ;
+        eissn = 1984-3879
+      >
+
+      comment[publisher] = Universidade Federal do Rio Grande do Norte
+      param[base_url] = http://periodicos.ufrn.br/
+      param[journal_id] = saberes
+
+      au < exists ; 2008 ; 1 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 2 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 3 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 4 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 5 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 6 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 7 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2014 ; 2014 >
+
+  }
+
 }

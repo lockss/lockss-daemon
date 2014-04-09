@@ -1,0 +1,133 @@
+{
+  publisher <
+    name = Universidade Federal do Estado do Rio de Janeiro - UNIRIO
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = AlcanCead ;
+        eissn = 2179-1430
+      >
+
+      comment[publisher] = Universidade Federal do Estado do Rio de Janeiro - UNIRIO
+      param[base_url] = http://www.seer.unirio.br/
+      param[journal_id] = alcance
+
+      au < exists ; 2010 ; 1 ; AlcanCead Volume 2010 ; 2010 >
+      au < expected ; 2011 ; 2 ; AlcanCead Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 3 ; AlcanCead Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 4 ; AlcanCead Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 5 ; AlcanCead Volume 2014 ; 2014 >
+
+  }
+
+  {
+
+      title <
+        name = Anais do SIMPOM ;
+        eissn = 2317-398X
+      >
+
+      comment[publisher] = Universidade Federal do Estado do Rio de Janeiro - UNIRIO
+      param[base_url] = http://www.seer.unirio.br/
+      param[journal_id] = simpom
+
+      au < exists ; 2010 ; 1 ; Anais do SIMPOM Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 2 ; Anais do SIMPOM Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 3 ; Anais do SIMPOM Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 4 ; Anais do SIMPOM Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 5 ; Anais do SIMPOM Volume 2014 ; 2014 >
+
+  }
+
+  {
+
+      title <
+        name = Cadernos do Colóquio ;
+        eissn = 1808-8805
+      >
+
+      comment[publisher] = Universidade Federal do Estado do Rio de Janeiro - UNIRIO
+      param[base_url] = http://www.seer.unirio.br/
+      param[journal_id] = coloquio
+
+      au < exists ; 1998 ; 1 ; Cadernos do Colóquio Volume 1998 ; 1998 >
+      au < exists ; 1999 ; 2 ; Cadernos do Colóquio Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 3 ; Cadernos do Colóquio Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 4 ; Cadernos do Colóquio Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 5 ; Cadernos do Colóquio Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 6 ; Cadernos do Colóquio Volume 2003 ; 2003 >
+      au < exists ; 2005 ; 7 ; Cadernos do Colóquio Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 8 ; Cadernos do Colóquio Volume 2006 ; 2006 >
+      au < exists ; 2008 ; 9 ; Cadernos do Colóquio Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 10 ; Cadernos do Colóquio Volume 2009 ; 2009 >
+
+  }
+
+  {
+
+      title <
+        name = iSys: Revista Brasileira de Sistemas de Informação ;
+        eissn = 1984-2902
+      >
+
+      comment[publisher] = Universidade Federal do Estado do Rio de Janeiro - UNIRIO
+      param[base_url] = http://www.seer.unirio.br/
+      param[journal_id] = isys
+
+      au < exists ; 2008 ; 1 ; iSys: Revista Brasileira de Sistemas de Informação Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 2 ; iSys: Revista Brasileira de Sistemas de Informação Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 3 ; iSys: Revista Brasileira de Sistemas de Informação Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 4 ; iSys: Revista Brasileira de Sistemas de Informação Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 5 ; iSys: Revista Brasileira de Sistemas de Informação Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 6 ; iSys: Revista Brasileira de Sistemas de Informação Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 7 ; iSys: Revista Brasileira de Sistemas de Informação Volume 2014 ; 2014 >
+
+  }
+
+  {
+
+      title <
+        name = Itinerarium ;
+        eissn = 1983-7666
+      >
+
+      comment[publisher] = Universidade Federal do Estado do Rio de Janeiro - UNIRIO
+      param[base_url] = http://www.seer.unirio.br/
+      param[journal_id] = itinerarium
+
+      au < exists ; 2008 ; 1 ; Itinerarium Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 2 ; Itinerarium Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 3 ; Itinerarium Volume 2010 ; 2010 >
+      au < expected ; 2011 ; 4 ; Itinerarium Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 5 ; Itinerarium Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 6 ; Itinerarium Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 7 ; Itinerarium Volume 2014 ; 2014 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Pesquisa: Cuidado é fundamental Online ;
+        eissn = 2175-5361
+      >
+
+      comment[publisher] = Universidade Federal do Estado do Rio de Janeiro - UNIRIO
+      param[base_url] = http://www.seer.unirio.br/
+      param[journal_id] = cuidadofundamental
+
+      au < exists ; 2009 ; 1 ; Revista de Pesquisa: Cuidado é fundamental Online Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 2 ; Revista de Pesquisa: Cuidado é fundamental Online Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 3 ; Revista de Pesquisa: Cuidado é fundamental Online Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 4 ; Revista de Pesquisa: Cuidado é fundamental Online Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 5 ; Revista de Pesquisa: Cuidado é fundamental Online Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 6 ; Revista de Pesquisa: Cuidado é fundamental Online Volume 2014 ; 2014 >
+
+  }
+
+}
