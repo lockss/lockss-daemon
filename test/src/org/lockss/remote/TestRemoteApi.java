@@ -1,10 +1,10 @@
 /*
- * $Id: TestRemoteApi.java,v 1.25 2014-01-14 04:34:23 tlipkis Exp $
+ * $Id: TestRemoteApi.java,v 1.26 2014-04-09 17:43:21 fergaloy-sf Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -41,7 +41,7 @@ import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.mail.MimeMessage;
 import org.lockss.plugin.*;
 import org.lockss.protocol.MockIdentityManager;
-import org.lockss.state.*;
+import org.lockss.subscription.SubscriptionManager;
 import org.lockss.test.*;
 import org.lockss.util.*;
 
@@ -57,6 +57,7 @@ public class TestRemoteApi extends LockssTestCase {
   MyMockPluginManager mpm;
   MyIdentityManager idMgr;
   RemoteApi rapi;
+  SubscriptionManager subscriptionManager;
 
   public void setUp() throws Exception {
     super.setUp();
@@ -73,6 +74,10 @@ public class TestRemoteApi extends LockssTestCase {
     idMgr.initService(daemon);
     daemon.setDaemonInited(true);
     rapi.startService();
+    subscriptionManager = new SubscriptionManager();
+    daemon.setSubscriptionManager(subscriptionManager);
+    subscriptionManager.initService(daemon);
+    subscriptionManager.startService();
   }
 
   public void tearDown() throws Exception {

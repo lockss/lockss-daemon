@@ -1,5 +1,5 @@
 /*
- * $Id: SubscriptionManager.java,v 1.14 2014-03-26 19:13:36 fergaloy-sf Exp $
+ * $Id: SubscriptionManager.java,v 1.15 2014-04-09 17:43:21 fergaloy-sf Exp $
  */
 
 /*
@@ -32,7 +32,16 @@
 package org.lockss.subscription;
 
 import static org.lockss.db.DbManager.*;
+import static org.lockss.metadata.MetadataManager.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.Reader;
+import java.nio.charset.Charset;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -48,6 +57,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipOutputStream;
 import java.util.Properties;
 import java.util.Set;
 import java.util.TreeSet;
@@ -264,6 +275,48 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 
   private static final String CANNOT_ROLL_BACK_DB_CONNECTION_ERROR_MESSAGE =
       "Cannot rollback the connection";
+
+  // The name of the file used for back-up purposes.
+  private static final String BACKUP_FILENAME = "subscriptions.bak";
+
+  // Query to find all the subscription data for backup purposes.
+  private static final String FIND_SUBSCRIPTION_BACKUP_DATA_QUERY = "select"
+      + " pu." + PUBLISHER_NAME_COLUMN
+      + ",p." + PUBLICATION_ID_COLUMN
+      + ",n." + NAME_COLUMN
+      + ",pl." + PLATFORM_NAME_COLUMN
+      + ",i1." + ISSN_COLUMN + " as " + P_ISSN_TYPE
+      + ",i2." + ISSN_COLUMN + " as " + E_ISSN_TYPE
+      + ",sr." + SUBSCRIPTION_RANGE_COLUMN
+      + ",sr." + SUBSCRIBED_COLUMN
+      + ",sr." + RANGE_IDX_COLUMN
+      + " from " + SUBSCRIPTION_RANGE_TABLE + " sr"
+      + "," + SUBSCRIPTION_TABLE + " s"
+      + "," + PUBLISHER_TABLE + " pu"
+      + "," + PUBLICATION_TABLE + " p"
+      + "," + MD_ITEM_NAME_TABLE + " n"
+      + "," + PLATFORM_TABLE + " pl"
+      + "," + MD_ITEM_TABLE + " mi"
+      + " left outer join " + ISSN_TABLE + " i1"
+      + " on mi." + MD_ITEM_SEQ_COLUMN + " = i1." + MD_ITEM_SEQ_COLUMN
+      + " and i1." + ISSN_TYPE_COLUMN + " = '" + P_ISSN_TYPE + "'"
+      + " left outer join " + ISSN_TABLE + " i2"
+      + " on mi." + MD_ITEM_SEQ_COLUMN + " = i2." + MD_ITEM_SEQ_COLUMN
+      + " and i2." + ISSN_TYPE_COLUMN + " = '" + E_ISSN_TYPE + "'"
+      + " where sr." + SUBSCRIPTION_SEQ_COLUMN + " = s."
+      + SUBSCRIPTION_SEQ_COLUMN
+      + " and s." + PUBLICATION_SEQ_COLUMN + " = p." + PUBLICATION_SEQ_COLUMN
+      + " and p." + PUBLISHER_SEQ_COLUMN + " = pu." + PUBLISHER_SEQ_COLUMN
+      + " and p." + MD_ITEM_SEQ_COLUMN + " = mi." + MD_ITEM_SEQ_COLUMN
+      + " and mi." + MD_ITEM_SEQ_COLUMN + " = n." + MD_ITEM_SEQ_COLUMN
+      + " and n." + NAME_TYPE_COLUMN + " = '" + PRIMARY_NAME_TYPE + "'"
+      + " and s." + PLATFORM_SEQ_COLUMN + " = pl." + PLATFORM_SEQ_COLUMN
+      + " order by pu." + PUBLISHER_NAME_COLUMN
+      + ",n." + NAME_COLUMN
+      + ",pl." + PLATFORM_NAME_COLUMN;
+
+  // The field separator in the subscription backup file.
+  private static final String BACKUP_FIELD_SEPARATOR = "\t";
 
   // The database manager.
   private DbManager dbManager = null;
@@ -2742,7 +2795,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     if (log.isDebug3())
       log.debug3(DEBUG_HEADER + "Added " + count + " subscribed ranges.");
 
-    // Persist the un subscribed ranges.
+    // Persist the unsubscribed ranges.
     count =
 	persistUnsubscribedRanges(conn, subscriptionSeq, unsubscribedRanges);
     if (log.isDebug3())
@@ -2783,7 +2836,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       return null;
     }
 
-    // Get the susbscription publication.
+    // Get the subscription publication.
     SerialPublication publication = subscription.getPublication();
     if (log.isDebug3())
       log.debug3(DEBUG_HEADER + "publication = " + publication);
@@ -2820,9 +2873,17 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     int count = 0;
 
     if (subscribedRanges != null) {
-      // Persist the subscribed ranges.
+      // Find the existing subscribed ranges for the subscription.
+      List<BibliographicPeriod> existingRanges =
+	  findSubscriptionRanges(conn, subscriptionSeq, true);
+
+      // Loop through all the subscribed ranges to be persisted.
       for (BibliographicPeriod range : subscribedRanges) {
-	count += persistSubscriptionRange(conn, subscriptionSeq, range, true);
+	// Check whether the range to be persisted does not exist already.
+	if (!existingRanges.contains(range)) {
+	  // Yes: Persist the subscribed ranges.
+	  count += persistSubscriptionRange(conn, subscriptionSeq, range, true);
+	}
       }
     }
 
@@ -2847,9 +2908,18 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     int count = 0;
 
     if (unsubscribedRanges != null) {
-      // Persist the unsubscribed ranges.
+      // Find the existing unsubscribed ranges for the subscription.
+      List<BibliographicPeriod> existingRanges =
+	  findSubscriptionRanges(conn, subscriptionSeq, false);
+
+      // Loop through all the unsubscribed ranges to be persisted.
       for (BibliographicPeriod range : unsubscribedRanges) {
-	count += persistSubscriptionRange(conn, subscriptionSeq, range, false);
+	// Check whether the range to be persisted does not exist already.
+	if (!existingRanges.contains(range)) {
+	  // Persist the unsubscribed range.
+	  count +=
+	      persistSubscriptionRange(conn, subscriptionSeq, range, false);
+	}
       }
     }
 
@@ -3428,5 +3498,457 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     }
 
     return INSERT_SUBSCRIPTION_RANGE_QUERY;
+  }
+
+  /**
+   * Writes to a zip file the subscription definitions.
+   * 
+   * @param zipStream
+   *          A ZipOutputStream to the zip file.
+   * 
+   * @throws DbException, IOException
+   */
+  public void writeSubscriptionsBackupToZip(ZipOutputStream zipStream)
+      throws DbException, IOException {
+    final String DEBUG_HEADER = "writeSubscriptionsBackupToZip(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    // Get the subscriptions.
+    List<Subscription> subscriptions = findSubscriptionDataForBackup();
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "subscriptions = " + subscriptions);
+
+    // Do nothing if there are no subscriptions.
+    if (subscriptions == null || subscriptions.size() == 0) {
+      if (log.isDebug2())
+	log.debug2(DEBUG_HEADER + "No subscriptions to write.");
+      return;
+    }
+
+    // Create the subscription backup file entry.
+    zipStream.putNextEntry(new ZipEntry(BACKUP_FILENAME));
+
+    // Loop through all the subscription definitions to be backed up.
+    for (Subscription subscription : subscriptions) {
+      // Write this subscription definition to the zip file.
+      writeSubscriptionBackupToStream(subscription, zipStream);
+    }
+
+    // Close the subscription backup file entry.
+    zipStream.closeEntry();
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Provides the subscription data for backup purposes.
+   * 
+   * @return a List<Subscription> with the subscription data.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  private List<Subscription> findSubscriptionDataForBackup()
+      throws DbException {
+    final String DEBUG_HEADER = "findSubscriptionDataForBackup(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    String publicationName;
+    String platformName;
+    String publisherName;
+    String publicationId;
+    String pIssn;
+    String eIssn;
+    String range;
+    Boolean subscribed;
+    String previousPublicationName = null;
+    String previousPlatformName = null;
+    String previousPublisherName = null;
+    String previousPublicationId = null;
+    String previousPissn = null;
+    String previousEissn = null;
+    SerialPublication publication;
+    Subscription subscription = null;
+    List<Subscription> subscriptions = new ArrayList<Subscription>();
+
+    // Get a connection to the database.
+    Connection conn = dbManager.getConnection();
+
+    String query = FIND_SUBSCRIPTION_BACKUP_DATA_QUERY;
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "SQL = " + query);
+
+    PreparedStatement getSubscriptionDataForBackup =
+	dbManager.prepareStatement(conn, query);
+    ResultSet resultSet = null;
+
+    try {
+      // Get the subscriptions from the database.
+      resultSet = dbManager.executeQuery(getSubscriptionDataForBackup);
+
+      // Loop through all the results.
+      while (resultSet.next()) {
+	// Get the publication data.
+	publisherName = resultSet.getString(PUBLISHER_NAME_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "publisherName = " + publisherName);
+
+	publicationName = resultSet.getString(NAME_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "publicationName = " + publicationName);
+
+	platformName = resultSet.getString(PLATFORM_NAME_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "platformName = " + platformName);
+
+	publicationId = resultSet.getString(PUBLICATION_ID_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "publicationId = " + publicationId);
+
+	pIssn = resultSet.getString(P_ISSN_TYPE);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pIssn = " + pIssn);
+
+	eIssn = resultSet.getString(E_ISSN_TYPE);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "eIssn = " + eIssn);
+
+	// Check whether the publication of this result does not correspond to
+	// the publication of the previous result.
+	if (((publicationName == null && previousPublicationName != null)
+	     || (publicationName != null
+	         && !publicationName.equals(previousPublicationName)))
+	    || ((platformName == null && previousPlatformName != null)
+		|| (platformName != null
+		    && !platformName.equals(previousPlatformName)))
+	    || ((publicationId == null && previousPublicationId != null)
+		|| (publicationId != null
+		    && !publicationId.equals(previousPublicationId)))
+	    || ((publisherName == null && previousPublisherName != null)
+		|| (publisherName != null
+		    && !publisherName.equals(previousPublisherName)))
+	    || ((pIssn == null && previousPissn != null)
+		|| (pIssn != null && !pIssn.equals(previousPissn)))
+	    || ((pIssn == null && previousEissn != null)
+		|| (pIssn != null && !eIssn.equals(previousEissn)))) {
+
+	  // Yes: Start a new subscription.
+	  publication = new SerialPublication();
+	  publication.setPublisherName(publisherName);
+	  publication.setPublicationName(publicationName);
+	  publication.setPlatformName(platformName);
+	  publication.setProprietaryId(publicationId);
+	  publication.setPissn(pIssn);
+	  publication.setEissn(eIssn);
+
+	  // Validate the publication name.
+	  publication.getTdbTitle();
+
+	  subscription = new Subscription();
+	  subscription.setPublication(publication);
+	  subscription.
+	  setSubscribedRanges(new ArrayList<BibliographicPeriod>());
+	  subscription.
+	  setUnsubscribedRanges(new ArrayList<BibliographicPeriod>());
+
+	  subscriptions.add(subscription);
+
+	  // Remember the publication for this subscription.
+	  previousPublisherName = publisherName;
+	  previousPublicationName = publicationName;
+	  previousPlatformName = platformName;
+	  previousPublicationId = publicationId;
+	  previousPissn = pIssn;
+	  previousEissn = eIssn;
+	}
+
+	// Get the subscription data.
+	range = resultSet.getString(SUBSCRIPTION_RANGE_COLUMN);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "range = " + range);
+
+	subscribed = resultSet.getBoolean(SUBSCRIBED_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "subscribed = " + subscribed);
+
+	if (subscribed.booleanValue()) {
+	  subscription.getSubscribedRanges().
+	  add(new BibliographicPeriod(range));
+	} else {
+	  subscription.getUnsubscribedRanges().
+	  add(new BibliographicPeriod(range));
+	}
+      }
+    } catch (SQLException sqle) {
+      String message = "Cannot get subscriptions for backup";
+      log.error(message, sqle);
+      log.error("SQL = '" + query + "'.");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(getSubscriptionDataForBackup);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "subscriptions.size() = "
+	+ subscriptions.size());
+    return subscriptions;
+  }
+
+  /**
+   * Writes to a stream the definition of a subscription for backup purposes.
+   * 
+   * @param subscription
+   *          A Subscription with the subscription definition.
+   * @param outputStream
+   *          An OutputStream where to write the subscription data.
+   * 
+   * @throws IOException
+   */
+  private void writeSubscriptionBackupToStream(Subscription subscription,
+      OutputStream outputStream) throws IOException {
+    final String DEBUG_HEADER = "writeSubscriptionBackupToStream(): ";
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "subscription = " + subscription);
+
+    // Ignore empty subscriptions.
+    if (subscription == null) {
+      log.warning("Null subscription not added to backup file.");
+      return;
+    }
+
+    // Get the subscription publication.
+    SerialPublication publication = subscription.getPublication();
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "publication = " + publication);
+
+    // Ignore subscriptions with no publication.
+    if (publication == null) {
+      log.warning("Subscription with null publication not added to backup " +
+	  "file.");
+      return;
+    }
+
+    // Write the publication data.
+    StringBuilder entry = new StringBuilder(StringUtil
+	.blankOutNlsAndTabs(publication.getPublicationName()));
+
+    entry.append(BACKUP_FIELD_SEPARATOR)
+    .append(StringUtil.blankOutNlsAndTabs(publication.getPlatformName()))
+    .append(BACKUP_FIELD_SEPARATOR)
+    .append(StringUtil.blankOutNlsAndTabs(publication.getPublisherName()))
+    .append(BACKUP_FIELD_SEPARATOR)
+    .append(StringUtil.blankOutNlsAndTabs(publication.getPissn()))
+    .append(BACKUP_FIELD_SEPARATOR)
+    .append(StringUtil.blankOutNlsAndTabs(publication.getEissn()))
+    .append(BACKUP_FIELD_SEPARATOR)
+    .append(StringUtil.blankOutNlsAndTabs(publication.getProprietaryId()));
+
+    // Loop through all the subscribed ranges.
+    for (BibliographicPeriod range : subscription.getSubscribedRanges()) {
+      // Write the subscribed range.
+      entry.append(BACKUP_FIELD_SEPARATOR).append("true")
+      .append(BACKUP_FIELD_SEPARATOR)
+      .append(StringUtil.blankOutNlsAndTabs(range.toDisplayableString()));
+    }
+
+    // Loop through all the unsubscribed ranges.
+    for (BibliographicPeriod range : subscription.getUnsubscribedRanges()) {
+      // Write the unsubscribed range.
+      entry.append(BACKUP_FIELD_SEPARATOR).append("false")
+      .append(BACKUP_FIELD_SEPARATOR)
+      .append(StringUtil.blankOutNlsAndTabs(range.toDisplayableString()));
+    }
+
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "entry = " + entry);
+
+    // Write the entry to the output stream.
+    outputStream.write((entry.toString() + "\n")
+	.getBytes(Charset.forName("UTF-8")));
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Loads into the system the subscriptions defined in a backup file.
+   * 
+   * @param backupDir
+   *          A File with the directory where the backup files are stored.
+   */
+  public void loadSubscriptionsFromBackup(File backupDir) {
+    final String DEBUG_HEADER = "loadSubscriptionsFromBackup(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "backupDir = " + backupDir);
+
+    // Get the backup file.
+    File backupFile = new File(backupDir, BACKUP_FILENAME);
+
+    // Do nothing more if the backup file does not exist.
+    if (!backupFile.exists()) {
+      if (log.isDebug()) log.debug("No subscription backup file named '" +
+	  BACKUP_FILENAME + "' found in directory '" + backupDir + "'.");
+
+      return;
+    }
+
+    // Get the subscriptions defined in the backup file.
+    List<Subscription> subscriptions =
+	getSubscriptionsFromBackupFile(backupFile);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "subscriptions.size() = "
+	+ subscriptions.size());
+
+    // Add to the system any subscriptions defined in the backup file.
+    if (subscriptions.size() > 0) {
+      addSubscriptions(subscriptions, new SubscriptionOperationStatus());
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Provides the subscriptions defined in a backup file.
+   * 
+   * @param backupFile
+   *          A File with the backup file.
+   * @return a List<Subscription> with the subscriptions defined in the backup
+   *         file.
+   */
+  private List<Subscription> getSubscriptionsFromBackupFile(File backupFile) {
+    final String DEBUG_HEADER = "getSubscriptionsFromBackupFile(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "backupFile = " + backupFile);
+
+    List<Subscription> subscriptions = new ArrayList<Subscription>();
+
+    InputStream is = null;
+    Reader r = null;
+    BufferedReader br = null;
+    Subscription subscription = null;
+
+    try {
+      String line;
+      is = new FileInputStream(backupFile);
+      r = new InputStreamReader(is, "UTF-8");
+      br = new BufferedReader(r);
+
+      // Loop through all the lines in the backup file.
+      while ((line = br.readLine()) != null) {
+	// Get the subscription defined in the line, if any.
+	subscription = getSubscriptionFromBackupFileLine(line);
+
+	// Add the defined subscription to the results.
+	if (subscription != null) {
+	  subscriptions.add(subscription);
+	}
+      }
+    } catch (Exception e) {
+      log.error("Exception caught processing subscription backup file = "
+	  + backupFile, e);
+    } finally {
+      if (br != null) {
+	try {
+	  br.close();
+	} catch(Throwable t) {
+	  if (log.isDebug()) log.debug(DEBUG_HEADER
+	      + "Cound not close BufferedReader for file = " + backupFile);
+	}
+      }
+
+      if (r != null) {
+	try {
+	  r.close();
+	} catch(Throwable t) {
+	  if (log.isDebug()) log.debug(DEBUG_HEADER
+	      + "Cound not close Reader for file = " + backupFile);
+	}
+      }
+
+      if (is != null) {
+	try {
+	  is.close();
+	} catch(Throwable t) {
+	  if (log.isDebug()) log.debug(DEBUG_HEADER
+	      + "Cound not close InputStream for file = " + backupFile);
+	}
+      }
+    }
+
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "subscriptions = " + subscriptions);
+    return subscriptions;
+  }
+
+  /**
+   * Provides the subscription defined in one line of a backup file.
+   * 
+   * @param line
+   *          A String with the subscription definition.
+   * @return a Subscription with the subscriptions defined in the line.
+   */
+  private Subscription getSubscriptionFromBackupFileLine(String line) {
+    final String DEBUG_HEADER = "getSubscriptionFromBackupFileLine(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "line = " + line);
+
+    // Ignore empty lines.
+    if (line == null || line.length() == 0) {
+      if (log.isDebug())
+	log.debug("No subscription definition in line '" + line + "'.");
+
+      return null;
+    }
+
+    // Parse the line.
+    Collection<String> items = StringUtil.breakAt(line, BACKUP_FIELD_SEPARATOR);
+
+    // Ignore lines that do not contain a complete subscription definition.
+    if (items == null || items.size() < 8) {
+      if (log.isDebug())
+	log.debug("No subscription definition in line '" + line + "'.");
+
+      return null;
+    }
+
+    Iterator<String> iterator = items.iterator();
+
+    // Get the publication of the subscription.
+    SerialPublication publication = new SerialPublication();
+    publication.setPublicationName(iterator.next());
+    publication.setPlatformName(iterator.next());
+    publication.setPublisherName(iterator.next());
+
+    String pIssn = iterator.next();
+    
+    if (!pIssn.isEmpty()) {
+      publication.setPissn(pIssn);
+    }
+
+    String eIssn = iterator.next();
+    
+    if (!eIssn.isEmpty()) {
+      publication.setEissn(eIssn);
+    }
+
+    String proprietaryId = iterator.next();
+    
+    if (!proprietaryId.isEmpty()) {
+      publication.setProprietaryId(proprietaryId);
+    }
+
+    // Get the subscription ranges.
+    List<BibliographicPeriod> subscribedRanges =
+	new ArrayList<BibliographicPeriod>();
+    List<BibliographicPeriod> unSubscribedRanges =
+	new ArrayList<BibliographicPeriod>();
+
+    while (iterator.hasNext()) {
+      if ("true".equals(iterator.next())) {
+	subscribedRanges.add(new BibliographicPeriod(iterator.next()));
+      } else {
+	unSubscribedRanges.add(new BibliographicPeriod(iterator.next()));
+      }
+    }
+
+    // Create the subscription to be returned.
+    Subscription subscription = new Subscription();
+
+    subscription.setPublication(publication);
+    subscription.setSubscribedRanges(subscribedRanges);
+    subscription.setUnsubscribedRanges(unSubscribedRanges);
+
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "subscription = " + subscription);
+    return subscription;
   }
 }

@@ -1,10 +1,10 @@
 /*
- * $Id: RemoteApi.java,v 1.76 2013-03-16 22:03:17 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.77 2014-04-09 17:43:21 fergaloy-sf Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -45,6 +45,7 @@ import org.lockss.plugin.*;
 import org.lockss.poller.*;
 import org.lockss.protocol.*;
 import org.lockss.state.*;
+import org.lockss.subscription.SubscriptionManager;
 import org.lockss.repository.*;
 import org.lockss.servlet.ServletManager;
 import org.lockss.util.*;
@@ -540,6 +541,14 @@ public class RemoteApi
       if (aus != null) {
 	addAusToZip(zip, aus);
       }
+
+      // Add any configured subscriptions to the zip file.
+      SubscriptionManager subMgr = getDaemon().getSubscriptionManager();
+      
+      if (subMgr != null && subMgr.isReady()) {
+	subMgr.writeSubscriptionsBackupToZip(zip);
+      }
+
       zip.close();
       return file;
     } catch (IOException e) {
@@ -670,6 +679,14 @@ public class RemoteApi
     File dir = FileUtil.createTempDir("locksscfg", "");
     try {
       ZipUtil.unzip(configBackupStream, dir);
+
+      // Restore any subscriptions from the zip file.
+      SubscriptionManager subMgr = getDaemon().getSubscriptionManager();
+      
+      if (subMgr != null && subMgr.isReady()) {
+	subMgr.loadSubscriptionsFromBackup(dir);
+      }
+
       File autxt = new File(dir, ConfigManager.CONFIG_FILE_AU_CONFIG);
       if (!autxt.exists()) {
 	throw new InvalidAuConfigBackupFile("Uploaded file does not appear to be a saved AU configuration: no au.txt");

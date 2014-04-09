@@ -1,10 +1,10 @@
 /*
- * $Id: SerialPublication.java,v 1.2 2013-09-05 18:49:47 fergaloy-sf Exp $
+ * $Id: SerialPublication.java,v 1.3 2014-04-09 17:43:21 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,6 +36,7 @@ import java.util.Collection;
 import org.lockss.config.TdbTitle;
 import org.lockss.config.TdbUtil;
 import org.lockss.util.Logger;
+import org.lockss.util.MetadataUtil;
 
 /**
  * Representation of a serial publication for subscription purposes.
@@ -140,16 +141,16 @@ public class SerialPublication {
 	      log.debug3(DEBUG_HEADER + "publisherName = " + publisherName);
 
 	    // Loop through all the titles.
-	    for (TdbTitle tdbTitle : tdbTitles) {
+	    for (TdbTitle title : tdbTitles) {
 	      // Get the title publisher name.
-	      String titlePublisherName = tdbTitle.getTdbPublisher().getName();
+	      String titlePublisherName = title.getTdbPublisher().getName();
 	      if (log.isDebug3()) log.debug3(DEBUG_HEADER
 		  + "titlePublisherName = " + titlePublisherName);
 
 	      // Check whether this title belongs to the publication publisher.
 	      if (publisherName.equals(titlePublisherName)) {
 		// Yes: Populate this title into the publication.
-		setTdbTitle(tdbTitle);
+		setTdbTitle(title);
 		break;
 	      }
 	    }
@@ -157,13 +158,44 @@ public class SerialPublication {
 	}
       }
     }
-      
+
     // Check whether the publication still has no TdbTitle.
     if (tdbTitle == null) {
-      // Yes: Report the problem.
-      String message = "Cannot find tdbTitle with name '" + publicationName
-	  + "' for publisher with name '" + publisherName + "'.";
-      log.error(message);
+      // Yes: Get the TdbTitle from the eISSN.
+      TdbTitle title =
+	  TdbUtil.getTdb().getTdbTitleByIssn(MetadataUtil.formatIssn(eIssn));
+
+      // Check whether the TdbTitle is not found.
+      if (title == null) {
+	// Yes: Get the TdbTitle from the pISSN.
+	title =
+	    TdbUtil.getTdb().getTdbTitleByIssn(MetadataUtil.formatIssn(pIssn));
+      }
+
+      // Check whether the TdbTitle was found.
+      if (title != null) {
+	// Yes: Populate it into the publication.
+	setTdbTitle(title);
+
+	// Use the publisher name from the TdbTitle, if different.
+	String titlePublisherName = title.getTdbPublisher().getName();
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	    + "titlePublisherName = " + titlePublisherName);
+
+	if (!publisherName.equals(titlePublisherName)) {
+	  setPublisherName(titlePublisherName);
+	}
+
+	// Use the publication name from the TdbTitle.
+	setPublicationName(title.getName());
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	    + "Changed publication name to '" + publicationName + "'.");
+      } else {
+	// No: Report the problem.
+	String message = "Cannot find tdbTitle with name '" + publicationName
+	    + "' for publisher with name '" + publisherName + "'.";
+	log.error(message);
+      }
     }
 
     return tdbTitle;
