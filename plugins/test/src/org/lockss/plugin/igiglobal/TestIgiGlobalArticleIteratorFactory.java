@@ -194,7 +194,7 @@ public class TestIgiGlobalArticleIteratorFactory extends ArticleIteratorTestCase
     }
     
     Stack<String[]> expStack = new Stack<String[]>();
-    String [] af1 = {null,
+    String [] af1 = {BASE_URL + "gateway/article/54321",
         null,
         null,
         BASE_URL + "gateway/article/54321"};
@@ -234,8 +234,11 @@ public class TestIgiGlobalArticleIteratorFactory extends ArticleIteratorTestCase
           assertEquals(ARTICLE_FAIL_MSG + " Expected: " + exp[i] + " Actual: " + act[i], exp[i],act[i]);
         }
       }
-      else fail(ARTICLE_FAIL_MSG + " length of expected and actual ArticleFiles content not the same:" + exp.length + "!=" + act.length);
+      else
+        fail(ARTICLE_FAIL_MSG + " length of expected and actual ArticleFiles content not the same:" + exp.length + "!=" + act.length);
     }
-    
+    if (!expStack.empty()) {
+      fail("Test stack is not empty:");
+    }
   }
 }

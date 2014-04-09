@@ -177,21 +177,21 @@ public class TestIgiGlobalBooksArticleIteratorFactory extends ArticleIteratorTes
     // fulltextcu
     // FULL_TEXT_PDF
     // ABSTRACT 
-    String [] af1 = {null,
+    String [] af1 = {BASE_URL + "gateway/chapter/11111",
         null,
         BASE_URL + "gateway/chapter/11111"};
     
-    String [] af2 = {BASE_URL + "gateway/chapter/full-text-pdf/55656",
-        BASE_URL + "gateway/chapter/full-text-pdf/55656",
-        BASE_URL + "gateway/chapter/55656"};
-    
-    String [] af3 = {BASE_URL + "gateway/chapter/full-text-html/54321",
+    String [] af2 = {BASE_URL + "gateway/chapter/full-text-html/54321",
         null,
         BASE_URL + "gateway/chapter/54321"};
     
-    String [] af4 = {BASE_URL + "gateway/chapter/full-text-pdf/12345",
+    String [] af3 = {BASE_URL + "gateway/chapter/full-text-pdf/12345",
         BASE_URL + "gateway/chapter/full-text-pdf/12345", 
         null};
+    
+    String [] af4 = {BASE_URL + "gateway/chapter/full-text-pdf/55656",
+        BASE_URL + "gateway/chapter/full-text-pdf/55656",
+        BASE_URL + "gateway/chapter/55656"};
     
     expStack.push(af4);
     expStack.push(af3);
@@ -212,8 +212,11 @@ public class TestIgiGlobalBooksArticleIteratorFactory extends ArticleIteratorTes
           assertEquals(ARTICLE_FAIL_MSG + " Expected: " + exp[i] + " Actual: " + act[i], exp[i],act[i]);
         }
       }
-      else fail(ARTICLE_FAIL_MSG + " length of expected and actual ArticleFiles content not the same:" + exp.length + "!=" + act.length);
+      else
+        fail(ARTICLE_FAIL_MSG + " length of expected and actual ArticleFiles content not the same:" + exp.length + "!=" + act.length);
     }
-    
+    if (!expStack.empty()) {
+      fail("Test stack is not empty:");
+    }
   }
 }
