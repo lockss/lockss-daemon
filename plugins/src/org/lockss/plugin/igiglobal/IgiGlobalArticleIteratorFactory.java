@@ -1,5 +1,5 @@
 /*
- * $Id: IgiGlobalArticleIteratorFactory.java,v 1.14 2014-01-07 00:22:40 etenbrink Exp $
+ * $Id: IgiGlobalArticleIteratorFactory.java,v 1.15 2014-04-09 23:10:15 etenbrink Exp $
  */
 
 /*
@@ -99,6 +99,10 @@ public class IgiGlobalArticleIteratorFactory
         FULLTEXT_HTML_PATTERN, FULLTEXT_HTML_REPLACEMENT,
         ArticleFiles.ROLE_FULL_TEXT_HTML);
     
+    builder.addAspect(
+        FULLTEXT_PDF_PATTERN, FULLTEXT_PDF_REPLACEMENT,
+        ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE, ArticleFiles.ROLE_ARTICLE_METADATA);
+    
     // set up Abstract to be an aspect that will trigger an ArticleFiles
     // NOTE - for the moment this also means an abstract could be considered a 
     // FULL_TEXT_CU until this is deprecated
@@ -108,17 +112,12 @@ public class IgiGlobalArticleIteratorFactory
         ABSTRACT_PATTERN, ABSTRACT_REPLACEMENT,
         ArticleFiles.ROLE_ABSTRACT, ArticleFiles.ROLE_ARTICLE_METADATA);
     
-    builder.addAspect(
-        FULLTEXT_PDF_PATTERN, FULLTEXT_PDF_REPLACEMENT,
-        ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE, ArticleFiles.ROLE_ARTICLE_METADATA);
-    
     // The order in which we want to define full_text_cu.
     // First one that exists will get the job
-    // In this case, there are two jobs, one for counting articles (abstract is 
-    // good) and the other for metadata (fulltext is correct)
     builder.setFullTextFromRoles(
         ArticleFiles.ROLE_FULL_TEXT_HTML,
-        ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE);
+        ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE,
+        ArticleFiles.ROLE_ABSTRACT);
     
     return builder.getSubTreeArticleIterator();
   }
