@@ -860,8 +860,8 @@
     param[journal_id] = ano
     comment[superseded] = see journal id 'ijo'
 
-    au < superseded ; 2008 ; Advances in Nonlinear Optics Volume 2008 [superseded] ; 2008 ; 2008 >
-    au < superseded ; 2009 ; Advances in Nonlinear Optics Volume 2009 [superseded] ; 2009 ; 2009 >
+    au < down ; 2008 ; Advances in Nonlinear Optics Volume 2008 [superseded] ; 2008 ; 2008 >
+    au < down ; 2009 ; Advances in Nonlinear Optics Volume 2009 [superseded] ; 2009 ; 2009 >
 
   }
 
@@ -2483,24 +2483,24 @@
     comment[superseded] = see journal id 'jir'
     param[journal_id] = cdi
 
-    au < superseded ; 1994 ; Clinical and Developmental Immunology Volume 1 (1994) [superseded] ; 1994 ; 1 >
-    au < superseded ; 1995 ; Clinical and Developmental Immunology Volume 2 (1995) [superseded] ; 1995 ; 2 >
-    au < superseded ; 1996 ; Clinical and Developmental Immunology Volume 3 (1996) [superseded] ; 1996 ; 3 >
-    au < superseded ; 1997 ; Clinical and Developmental Immunology Volume 4 (1997) [superseded] ; 1997 ; 4 >
-    au < superseded ; 1998 ; Clinical and Developmental Immunology Volume 5 (1998) [superseded] ; 1998 ; 5 >
-    au < superseded ; 1999 ; Clinical and Developmental Immunology Volume 6 (1999) [superseded] ; 1999 ; 6 >
-    au < superseded ; 2000 ; Clinical and Developmental Immunology Volume 7 (2000) [superseded] ; 2000 ; 7 >
-    au < superseded ; 2001 ; Clinical and Developmental Immunology Volume 8 (2001) [superseded] ; 2001 ; 8 >
-    au < superseded ; 2002 ; Clinical and Developmental Immunology Volume 9 (2002) [superseded] ; 2002 ; 9 >
-    au < superseded ; 2003 ; Clinical and Developmental Immunology Volume 10 (2003) [superseded] ; 2003 ; 10 >
-    au < superseded ; 2004 ; Clinical and Developmental Immunology Volume 11 (2004) [superseded] ; 2004 ; 11 >
-    au < superseded ; 2005 ; Clinical and Developmental Immunology Volume 12 (2005) [superseded] ; 2005 ; 12 >
-    au < superseded ; 2006 ; Clinical and Developmental Immunology Volume 13 (2006) [superseded] ; 2006 ; 13 >
-    au < superseded ; 2007 ; Clinical and Developmental Immunology Volume 2007 [superseded] ; 2007 ; 2007 >
-    au < superseded ; 2008 ; Clinical and Developmental Immunology Volume 2008 [superseded] ; 2008 ; 2008 >
-    au < superseded ; 2009 ; Clinical and Developmental Immunology Volume 2009 [superseded] ; 2009 ; 2009 >
-    au < superseded ; 2010 ; Clinical and Developmental Immunology Volume 2010 [superseded] ; 2010 ; 2010 >
-    au < superseded ; 2011 ; Clinical and Developmental Immunology Volume 2011 [superseded] ; 2011 ; 2011 >
+    au < down ; 1994 ; Clinical and Developmental Immunology Volume 1 (1994) [superseded] ; 1994 ; 1 >
+    au < down ; 1995 ; Clinical and Developmental Immunology Volume 2 (1995) [superseded] ; 1995 ; 2 >
+    au < down ; 1996 ; Clinical and Developmental Immunology Volume 3 (1996) [superseded] ; 1996 ; 3 >
+    au < down ; 1997 ; Clinical and Developmental Immunology Volume 4 (1997) [superseded] ; 1997 ; 4 >
+    au < down ; 1998 ; Clinical and Developmental Immunology Volume 5 (1998) [superseded] ; 1998 ; 5 >
+    au < down ; 1999 ; Clinical and Developmental Immunology Volume 6 (1999) [superseded] ; 1999 ; 6 >
+    au < down ; 2000 ; Clinical and Developmental Immunology Volume 7 (2000) [superseded] ; 2000 ; 7 >
+    au < down ; 2001 ; Clinical and Developmental Immunology Volume 8 (2001) [superseded] ; 2001 ; 8 >
+    au < down ; 2002 ; Clinical and Developmental Immunology Volume 9 (2002) [superseded] ; 2002 ; 9 >
+    au < down ; 2003 ; Clinical and Developmental Immunology Volume 10 (2003) [superseded] ; 2003 ; 10 >
+    au < down ; 2004 ; Clinical and Developmental Immunology Volume 11 (2004) [superseded] ; 2004 ; 11 >
+    au < down ; 2005 ; Clinical and Developmental Immunology Volume 12 (2005) [superseded] ; 2005 ; 12 >
+    au < down ; 2006 ; Clinical and Developmental Immunology Volume 13 (2006) [superseded] ; 2006 ; 13 >
+    au < down ; 2007 ; Clinical and Developmental Immunology Volume 2007 [superseded] ; 2007 ; 2007 >
+    au < down ; 2008 ; Clinical and Developmental Immunology Volume 2008 [superseded] ; 2008 ; 2008 >
+    au < down ; 2009 ; Clinical and Developmental Immunology Volume 2009 [superseded] ; 2009 ; 2009 >
+    au < down ; 2010 ; Clinical and Developmental Immunology Volume 2010 [superseded] ; 2010 ; 2010 >
+    au < down ; 2011 ; Clinical and Developmental Immunology Volume 2011 [superseded] ; 2011 ; 2011 >
 
   }
 
@@ -2515,17 +2515,17 @@
     comment[superseded] = see journal id 'ijg'
     param[journal_id] = cfg
 
-    au < superseded ; 2001 ; Comparative and Functional Genomics Volume 1 (2001) [superseded] ; 2001 ; 1 >
-    au < superseded ; 2002 ; Comparative and Functional Genomics Volume 2 (2002) [superseded] ; 2002 ; 2 >
-    au < superseded ; 2003 ; Comparative and Functional Genomics Volume 3 (2003) [superseded] ; 2003 ; 3 >
-    au < superseded ; 2004 ; Comparative and Functional Genomics Volume 4 (2004) [superseded] ; 2004 ; 4 >
-    au < superseded ; 2005 ; Comparative and Functional Genomics Volume 5 (2005) [superseded] ; 2005 ; 5 >
-    au < superseded ; 2006 ; Comparative and Functional Genomics Volume 6 (2006) [superseded] ; 2006 ; 6 >
-    au < superseded ; 2007 ; Comparative and Functional Genomics Volume 2007 [superseded] ; 2007 ; 2007 >
-    au < superseded ; 2008 ; Comparative and Functional Genomics Volume 2008 [superseded] ; 2008 ; 2008 >
-    au < superseded ; 2009 ; Comparative and Functional Genomics Volume 2009 [superseded] ; 2009 ; 2009 >
-    au < superseded ; 2010 ; Comparative and Functional Genomics Volume 2010 [superseded] ; 2010 ; 2010 >
-    au < superseded ; 2011 ; Comparative and Functional Genomics Volume 2011 [superseded] ; 2011 ; 2011 >
+    au < down ; 2001 ; Comparative and Functional Genomics Volume 1 (2001) [superseded] ; 2001 ; 1 >
+    au < down ; 2002 ; Comparative and Functional Genomics Volume 2 (2002) [superseded] ; 2002 ; 2 >
+    au < down ; 2003 ; Comparative and Functional Genomics Volume 3 (2003) [superseded] ; 2003 ; 3 >
+    au < down ; 2004 ; Comparative and Functional Genomics Volume 4 (2004) [superseded] ; 2004 ; 4 >
+    au < down ; 2005 ; Comparative and Functional Genomics Volume 5 (2005) [superseded] ; 2005 ; 5 >
+    au < down ; 2006 ; Comparative and Functional Genomics Volume 6 (2006) [superseded] ; 2006 ; 6 >
+    au < down ; 2007 ; Comparative and Functional Genomics Volume 2007 [superseded] ; 2007 ; 2007 >
+    au < down ; 2008 ; Comparative and Functional Genomics Volume 2008 [superseded] ; 2008 ; 2008 >
+    au < down ; 2009 ; Comparative and Functional Genomics Volume 2009 [superseded] ; 2009 ; 2009 >
+    au < down ; 2010 ; Comparative and Functional Genomics Volume 2010 [superseded] ; 2010 ; 2010 >
+    au < down ; 2011 ; Comparative and Functional Genomics Volume 2011 [superseded] ; 2011 ; 2011 >
 
   }
 
@@ -2753,9 +2753,9 @@
     
     param[journal_id] = denm
 
-    au < superseded ; 2006 ; Differential Equations and Nonlinear Mechanics Volume 2006 [superseded] ; 2006 ; 2006 >
-    au < superseded ; 2007 ; Differential Equations and Nonlinear Mechanics Volume 2007 [superseded] ; 2007 ; 2007 >
-    au < superseded ; 2008 ; Differential Equations and Nonlinear Mechanics Volume 2008 [superseded] ; 2008 ; 2008 >
+    au < down ; 2006 ; Differential Equations and Nonlinear Mechanics Volume 2006 [superseded] ; 2006 ; 2006 >
+    au < down ; 2007 ; Differential Equations and Nonlinear Mechanics Volume 2007 [superseded] ; 2007 ; 2007 >
+    au < down ; 2008 ; Differential Equations and Nonlinear Mechanics Volume 2008 [superseded] ; 2008 ; 2008 >
 
   }
 
@@ -4746,7 +4746,7 @@
      comment[superseded] = see journal id 'ape'
      param[journal_id] = ijpme
 
-     au < superseded ; 2008 ; International Journal of Power Management Electronics Volume 2008 [superseded] ; 2008 ; 2008 >
+     au < down ; 2008 ; International Journal of Power Management Electronics Volume 2008 [superseded] ; 2008 ; 2008 >
 
    }
 
@@ -4797,7 +4797,7 @@
      comment[superseded] = see journal id 'jc'
      param[journal_id] = ijrs
 
-     au < superseded ; 2008 ; International Journal of Reacting Systems Volume 2008 [superseded] ; 2008 ; 2008 >
+     au < down ; 2008 ; International Journal of Reacting Systems Volume 2008 [superseded] ; 2008 ; 2008 >
 
   }
     
@@ -7087,10 +7087,10 @@
      comment[superseded] =  see journal id 'ijeco'
      param[journal_id] = rleco
 
-     au < superseded ; 2007 ; Research Letters in Ecology Volume 2007 [superseded] ; 2007 ; 2007 >
-     au < superseded ; 2008 ; Research Letters in Ecology Volume 2008 [superseded] ; 2008 ; 2008 >
-     au < superseded ; 2009 ; Research Letters in Ecology Volume 2009 [superseded] ; 2009 ; 2009 >
-     au < superseded ; 2010 ; Research Letters in Ecology Volume 2010 [superseded] ; 2010 ; 2010 >
+     au < down; 2007 ; Research Letters in Ecology Volume 2007 [superseded] ; 2007 ; 2007 >
+     au < down; 2008 ; Research Letters in Ecology Volume 2008 [superseded] ; 2008 ; 2008 >
+     au < down; 2009 ; Research Letters in Ecology Volume 2009 [superseded] ; 2009 ; 2009 >
+     au < down; 2010 ; Research Letters in Ecology Volume 2010 [superseded] ; 2010 ; 2010 >
 
   }
 
