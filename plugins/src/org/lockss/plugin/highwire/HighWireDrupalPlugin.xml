@@ -13,18 +13,18 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Substance</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Poll</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -99,14 +99,16 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <!-- all images, resources, css, js, etc. -->
+      <!-- no gifs from other volumes -->
       <string>2,"^%scontent/(?!([^/]+/)?%s)[^?]*[.](?:gif)", base_url, volume_name</string>
+      <!-- all images, resources, css, js, etc. -->
       <string>1,"^https?://%s/[^?]*[.](?:bmp|gif|ico|jpe?g|png|tif?f|(css|js)(?:[?].*)?)$", base_url_host</string>
       <string>1,"^https?://%s[^?]*/highwire/jcore", base_url_host</string>
       <!-- Do not crawl unless from base url -->
       <string>4,"^%s", base_url</string>
       <string>2,"^%s(?:[^?]+(?:most-(?:cited|read)|featured_article|featured-podcasts|(?:back-matter|ed-board)[.]pdf)|content/(?:by/|early/|[^{]+[{]))", base_url</string>
       <string>1,"^%s(?:content(?:/[^/]+)?/(?:%s|suppl)|highwire/(?:filestream|markup))/", base_url, volume_name</string>
+      <string>1,"^%shighwire/citation/[^/]+/ris$", base_url</string>
     </list>
   </entry>
   <entry>
@@ -126,6 +128,10 @@
     <list>
       <string>500=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
     </list>
+  </entry>
+  <entry>
+    <string>text/html_link_extractor_factory</string>
+    <string>org.lockss.plugin.highwire.HighWireDrupalHtmlLinkExtractorFactory</string>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
