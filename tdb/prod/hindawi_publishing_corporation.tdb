@@ -5526,6 +5526,203 @@
 
   {
     title <
+      name = ISRN Computational Mathematics ;
+      eissn = 2090-7842 ;
+      issnl = 2090-7842
+    >
+
+    param[journal_id] = isrn.computational.mathematics
+
+    au < exists ; 2012 ; ISRN Computational Mathematics Volume 2012 ; 2012 ; 2012 >
+    au < exists ; 2013 ; ISRN Computational Mathematics Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; ISRN Computational Mathematics Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = ISRN Condensed Matter Physics ;
+      eissn = 2090-7400 ;
+      issnl = 2090-7400
+    >
+
+    param[journal_id] = isrn.cmp
+
+    au < exists ; 2011 ; ISRN Condensed Matter Physics Volume 2011 ; 2011 ; 2011 >
+    au < exists ; 2012 ; ISRN Condensed Matter Physics Volume 2012 ; 2012 ; 2012 >
+    au < exists ; 2013 ; ISRN Condensed Matter Physics Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; ISRN Condensed Matter Physics Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = ISRN Corrosion ;
+      eissn = 2090-8903 ;
+      issnl = 2090-8903
+    >
+
+    param[journal_id] = isrn.corrosion
+
+    au < exists ; 2012 ; ISRN Corrosion Volume 2012 ; 2012 ; 2012 >
+    au < exists ; 2013 ; ISRN Corrosion Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; ISRN Corrosion Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = ISRN Dentistry ;
+      eissn = 2090-438X ;
+      issnl = 2090-438X
+    >
+
+    param[journal_id] = isrn.dentistry
+
+    au < exists ; 2011 ; ISRN Dentistry Volume 2011 ; 2011 ; 2011 >
+    au < exists ; 2012 ; ISRN Dentistry Volume 2012 ; 2012 ; 2012 >
+    au < exists ; 2013 ; ISRN Dentistry Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; ISRN Dentistry Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = ISRN Dermatology ;
+      eissn = 2090-4606 ;
+      issnl = 2090-4606
+    >
+
+    param[journal_id] = isrn.dermatology
+
+    au < exists ; 2011 ; ISRN Dermatology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; 2012 ; ISRN Dermatology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; 2013 ; ISRN Dermatology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; ISRN Dermatology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = ISRN Developmental Biology ;
+      eissn = 2314-4653 ;
+      issnl = 2314-4653
+    >
+
+    param[journal_id] = isrn.developmental.biology
+
+    au < exists ; 2013 ; ISRN Developmental Biology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; ISRN Developmental Biology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = ISRN Discrete Mathematics ;
+      eissn = 2090-7788 ;
+      issnl = 2090-7788
+    >
+
+    param[journal_id] = isrn.discrete.mathematics
+
+    au < exists ; 2011 ; ISRN Discrete Mathematics Volume 2011 ; 2011 ; 2011 >
+    au < exists ; 2012 ; ISRN Discrete Mathematics Volume 2012 ; 2012 ; 2012 >
+    au < exists ; 2013 ; ISRN Discrete Mathematics Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; ISRN Discrete Mathematics Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = ISRN Chemical Engineering ;
+      eissn = 2090-861X ;
+      issnl = 2090-861X
+    >
+
+    param[journal_id] = isrn.chemical.engineering
+
+    au < exists ; 2012 ; ISRN Chemical Engineering Volume 2012 ; 2012 ; 2012 >
+    au < exists ; 2013 ; ISRN Chemical Engineering Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; ISRN Chemical Engineering Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = ISRN Chromatography ;
+      eissn = 2090-8636 ;
+      issnl = 2090-8636
+    >
+
+    param[journal_id] = isrn.chromatography
+
+    au < exists ; 2012 ; ISRN Chromatography Volume 2012 ; 2012 ; 2012 >
+    au < exists ; 2013 ; ISRN Chromatography Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; ISRN Chromatography Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = ISRN Civil Engineering ;
+      eissn = 2090-5114 ;
+      issnl = 2090-5114
+    >
+
+    param[journal_id] = isrn.civil.engineering
+
+    au < exists ; 2012 ; ISRN Civil Engineering Volume 2012 ; 2012 ; 2012 >
+    au < exists ; 2013 ; ISRN Civil Engineering Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; ISRN Civil Engineering Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = ISRN Combinatorics ;
+      eissn = 2090-8911 ;
+      issnl = 2090-8911
+    >
+
+    param[journal_id] = isrn.combinatorics
+
+    au < exists ; 2013 ; ISRN Combinatorics Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; ISRN Combinatorics Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = ISRN Communications and Networking ;
+      eissn = 2090-4363 ;
+      issnl = 2090-4363
+    >
+
+    param[journal_id] = isrn.communications.networking
+
+    au < exists ; 2011 ; ISRN Communications and Networking Volume 2011 ; 2011 ; 2011 >
+    au < exists ; 2012 ; ISRN Communications and Networking Volume 2012 ; 2012 ; 2012 >
+    au < exists ; 2013 ; ISRN Communications and Networking Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; ISRN Communications and Networking Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = ISRN Computational Biology ;
+      eissn = 2314-5420 ;
+      issnl = 2314-5420
+    >
+
+    param[journal_id] = isrn.computational.biology
+
+    au < exists ; 2013 ; ISRN Computational Biology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; ISRN Computational Biology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
       name = Journal of Aging Research ;
       issn = 2090-2212 ;
       issnl = 2090-2212
