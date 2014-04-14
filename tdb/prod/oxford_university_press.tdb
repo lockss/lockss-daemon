@@ -16681,6 +16681,22 @@
   {
 
     title <
+      name = Oxford Medical Case Reports ;
+      eissn = 2053-8855 ;
+      issnl = 2053-8855
+    >
+
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    param[base_url] = http://omcr.oxfordjournals.org/
+    implicit < status ; year ; name ; param[volume] >
+
+    au < exists ; 2014 ; Oxford Medical Case Reports Volume 2014 ; 2014 >
+
+  }
+
+  {
+
+    title <
       name = Oxford Review of Economic Policy ;
       issn = 0266-903X ;
       eissn = 1460-2121 ;
