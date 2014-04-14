@@ -153,6 +153,22 @@
   {
   
     title <
+      name = Great Plains Research ;
+      issn = 1052-5165 ;
+      eissn = 2334-2463 ;
+      issnl = 2334-2463
+    >
+
+    param[journal_dir] = great_plains_research
+    attr[journal_id] = gpr
+
+    au < exists ; 2014 ; Great Plains Research Volume 24 ; 24 >
+
+  }
+
+  {
+  
+    title <
       name = Histories of Anthropology Annual ;
       issn = 1940-5138 ;
       eissn = 1557-637X ;
