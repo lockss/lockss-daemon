@@ -17,9 +17,8 @@
     >
 
     param[base_url] = http://perspectives.geoscienceworld.org/
-    comment[2012] = links on manifest page not working
     
-    au < testing ; 2012 ; Geochemistry Perspectives Volume 1 ; 1 >
+    au < ready ; 2012 ; Geochemistry Perspectives Volume 1 ; 1 >
     au < ready ; 2013 ; Geochemistry Perspectives Volume 2 ; 2 >
     au < expected ; 2014 ; Geochemistry Perspectives Volume 3 ; 3 >
     
