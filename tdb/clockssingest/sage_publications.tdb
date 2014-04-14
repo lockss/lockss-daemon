@@ -2423,7 +2423,7 @@
       au < finished ; crawling ; 2011 ; Anthropological Theory Volume 11 ; 11 ; >
       au < zapped ; finished ; 2012 ; Anthropological Theory Volume 12 ; 12 ; >
       au < crawling ; exists ; 2013 ; Anthropological Theory Volume 13 ; 13 ; >
-      au < expected ; exists ; 2014 ; Anthropological Theory Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2014 ; Anthropological Theory Volume 14 ; 14 ; >
  
     }
 
@@ -4222,7 +4222,7 @@
       au < finished ; crawling ; 2011 ; Business Information Review Volume 28 ; 28 ; >
       au < zapped ; finished ; 2012 ; Business Information Review Volume 29 ; 29 ; >
       au < crawling ; exists ; 2013 ; Business Information Review Volume 30 ; 30 ; >
-      au < expected ; exists ; 2014 ; Business Information Review Volume 31 ; 31 ; >
+      au < manifest ; exists ; 2014 ; Business Information Review Volume 31 ; 31 ; >
 
     }
 
@@ -6643,7 +6643,7 @@
       au < finished ; crawling ; 2011 ; Crime, Media, Culture Volume 7 ; 7 ; >
       au < finished ; crawling ; 2012 ; Crime, Media, Culture Volume 8 ; 8 ; >
       au < crawling ; exists ; 2013 ; Crime, Media, Culture Volume 9 ; 9 ; >
-      au < expected ; exists ; 2014 ; Crime, Media, Culture Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2014 ; Crime, Media, Culture Volume 10 ; 10 ; >
 
     }
 
@@ -9732,7 +9732,7 @@
     au < exists ; exists ; 2011 ; European Journal of Probation Volume 3 ; 3 ; >
     au < exists ; exists ; 2012 ; European Journal of Probation Volume 4 ; 4 ; >
     au < exists ; exists ; 2013 ; European Journal of Probation Volume 5 ; 5 ; >
-    au < expected ; exists ; 2014 ; European Journal of Probation Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2014 ; European Journal of Probation Volume 6 ; 6 ; >
 
   }
 
@@ -11516,7 +11516,7 @@
       au < finished ; crawling ; 2011 ; Global Social Policy Volume 11 ; 11 ; >
       au < finished ; crawling ; 2012 ; Global Social Policy Volume 12 ; 12 ; >
       au < crawling ; exists ; 2013 ; Global Social Policy Volume 13 ; 13 ; >
-      au < expected ; exists ; 2014 ; Global Social Policy Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2014 ; Global Social Policy Volume 14 ; 14 ; >
 
     }
 
@@ -38169,7 +38169,7 @@
       au < zapped ; finished ; 2011 ; Youth Justice Volume 11 ; 11 ; >
       au < finished ; crawling ; 2012 ; Youth Justice Volume 12 ; 12 ; >
       au < crawling ; exists ; 2013 ; Youth Justice Volume 13 ; 13 ; >
-      au < expected ; exists ; 2014 ; Youth Justice Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2014 ; Youth Justice Volume 14 ; 14 ; >
 
     }
 
@@ -39586,7 +39586,7 @@
     param[base_url] = http://foi.sagepub.com/
 
     au < crawling ; exists ; 2013 ; Forum Italicum: A Journal of Italian Studies Volume 47 ; 47 ; >
-    au < expected ; exists ; 2014 ; Forum Italicum: A Journal of Italian Studies Volume 48 ; 48 ; >
+    au < manifest ; exists ; 2014 ; Forum Italicum: A Journal of Italian Studies Volume 48 ; 48 ; >
 
     }
 
@@ -39736,7 +39736,7 @@
     param[base_url] = http://paa.sagepub.com/
 
     au < crawling ; exists ; 2013 ; Pacifica: Australasian Theological Studies Volume 26 ; 26 ; >
-    au < expected ; exists ; 2014 ; Pacifica: Australasian Theological Studies Volume 27 ; 27 ; >
+    au < manifest ; exists ; 2014 ; Pacifica: Australasian Theological Studies Volume 27 ; 27 ; >
 
     }
 
@@ -39868,7 +39868,7 @@
     param[base_url] = http://wfr.sagepub.com/
 
     au < crawling ; exists ; 2013 ; World Future Review Volume 5 ; 5 ; >
-    au < expected ; exists ; 2014 ; World Future Review Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2014 ; World Future Review Volume 6 ; 6 ; >
 
     }
 

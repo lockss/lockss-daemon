@@ -822,7 +822,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; exists ; 2013 ; Geothermal Energy Volume 1 ; 1 >
-        au < expected ; exists ; 2014 ; Geothermal Energy Volume 2 ; 2 >
+        au < manifest ; exists ; 2014 ; Geothermal Energy Volume 2 ; 2 >
   
     }
   
@@ -1654,7 +1654,7 @@
         param[journal_issn] = 2196-5404
         comment[platform] = BioMedCentralPlugin
 
-        au < exists ; exists ; 2014 ; Nano Convergence Volume 1 ; 1 >
+        au < manifest ; exists ; 2014 ; Nano Convergence Volume 1 ; 1 >
 
     }
 
@@ -1882,7 +1882,7 @@
   
         au < manifest ; exists ; 2012 ; Security Informatics Volume 1 ; 1 >
         au < manifest ; exists ; 2013 ; Security Informatics Volume 2 ; 2 >
-        au < expected ; exists ; 2014 ; Security Informatics Volume 3 ; 3 >
+        au < manifest ; exists ; 2014 ; Security Informatics Volume 3 ; 3 >
   
     }
   
