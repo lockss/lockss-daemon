@@ -1,8 +1,7 @@
 {
 
   publisher <
-    name = Geological Society of America ;
-    info[tester] = 8
+    name = Geological Society of America
   >
     
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
