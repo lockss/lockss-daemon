@@ -1,8 +1,7 @@
 {
 
   publisher <
-    name = Future Science ;
-    info[tester] = 7
+    name = Future Science
   >
 
   plugin = org.lockss.plugin.atypon.futurescience.FutureSciencePlugin
