@@ -1,28 +1,12 @@
 {
 
   publisher <
-    name = United Kingdom Serials Group;
+    name = United Kingdom Serials Group ;
     info[tester] = 4
   >
 
-  plugin = org.lockss.plugin.metapress.MetaPressPlugin
-  param[base_url] = http://uksg.metapress.com/
+  comment[moving] = from Metapress to Atypon.
 
-  {
-
-    title <
-      name = The E-Resources Management Handbook ;
-      type = book ;
-      isbn = 0-9552448-0-3 
-    >
-    
-    param[journal_issn] = 
-    implicit < status ; year ; isbn ; name ; param[chapter_name]>
-    
-    comment[0] = This is a book with multiple chapters. May need different plugin? 
-    
-  }
-  
   {
 
     title <
@@ -30,12 +14,14 @@
       eissn = 2048-7754
     >
     
+    plugin = org.lockss.plugin.metapress.MetaPressPlugin
+    param[base_url] = http://uksg.metapress.com/
     param[journal_issn] = 2048-7754
     implicit < status ; year ; name ; param[volume_name]>
     
     au < released ; 2012 ; Insights: the UKSG journal Volume 25 ; 25 >
-    au < manifest ; 2013 ; Insights: the UKSG journal Volume 26 ; 26 >
-    au < manifest ; 2014 ; Insights: the UKSG journal Volume 27 ; 27 >
+    au < exists ; 2013 ; Insights: the UKSG journal Volume 26 ; 26 >
+    au < exists ; 2014 ; Insights: the UKSG journal Volume 27 ; 27 >
     
   }
   
@@ -48,6 +34,8 @@
       issnl = 0953-0460
     >
 
+    plugin = org.lockss.plugin.metapress.MetaPressPlugin
+    param[base_url] = http://uksg.metapress.com/
     param[journal_issn] = 0953-0460
     implicit < status ; year ; name ; param[volume_name] >
 
@@ -71,8 +59,8 @@
     au < released ; 2005 ; Serials: The Journal for the Serials Community Volume 18 ; 18 >
     au < released ; 2006 ; Serials: The Journal for the Serials Community Volume 19 ; 19 >
     au < released ; 2007 ; Serials: The Journal for the Serials Community Volume 20 ; 20 >
-    au < manifest ; 2008 ; Serials: The Journal for the Serials Community Volume 21 ; 21 >
-    au < manifest ; 2009 ; Serials: The Journal for the Serials Community Volume 22 ; 22 >
+    au < exists ; 2008 ; Serials: The Journal for the Serials Community Volume 21 ; 21 >
+    au < exists ; 2009 ; Serials: The Journal for the Serials Community Volume 22 ; 22 >
     au < released ; 2010 ; Serials: The Journal for the Serials Community Volume 23 ; 23 >
     au < released ; 2011 ; Serials: The Journal for the Serials Community Volume 24 ; 24 >
 

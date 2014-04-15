@@ -4,23 +4,10 @@
     name = United Kingdom Serials Group ;
     info[back] = 2010 ;
     info[contract] = 2011 ;
-    info[tester] = 4 ;
-    
-    comment[platform] = Metapress
+    info[tester] = 4
   >
 
-  plugin = org.lockss.plugin.metapress.ClockssMetaPressPlugin
-  param[base_url] = http://uksg.metapress.com/
-
-  {
-
-    title <
-      name = The E-Resources Management Handbook ;
-      type = book ;
-      eisbn = 0-9552448-0-3 
-    >
-
-  }
+    comment[moving] = from MetaPress to Atypon.
 
   {
 
@@ -30,12 +17,14 @@
     >
     comment[continues] = 0953-0460
     
+    plugin = org.lockss.plugin.metapress.ClockssMetaPressPlugin
+    param[base_url] = http://uksg.metapress.com/
     param[journal_issn] = 2048-7754
     implicit < status ; status2 ; year ; name ; param[volume_name]>
     
     au < finished ; crawling ; 2012 ; Insights: the UKSG journal Volume 25 ; 25 >
     au < crawling ; exists ; 2013 ; Insights: the UKSG journal Volume 26 ; 26 >
-    au < manifest ; exists ; 2014 ; Insights: the UKSG journal Volume 27 ; 27 >
+    au < doNotProcess ; exists ; 2014 ; Insights: the UKSG journal Volume 27 ; 27 >
     
   }
 
@@ -50,6 +39,8 @@
 
     comment[continued_by] = 2048-7754
     
+    plugin = org.lockss.plugin.metapress.ClockssMetaPressPlugin
+    param[base_url] = http://uksg.metapress.com/
     param[journal_issn] = 0953-0460
     implicit < status ; status2 ; year ; name ; param[volume_name] >
     
