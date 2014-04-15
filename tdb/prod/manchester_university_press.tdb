@@ -5,6 +5,8 @@
     info[tester] = 5
   >
   
+  comment[moving] = from MetaPress to Atypon
+  
   implicit < status ; year ; name ; param[volume_name] >
 
   {
