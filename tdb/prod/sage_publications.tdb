@@ -2734,7 +2734,7 @@
         au < released ; 2011 ; Anthropological Theory Volume 11 ; 11 >
         au < released ; 2012 ; Anthropological Theory Volume 12 ; 12 >
         au < manifest ; 2013 ; Anthropological Theory Volume 13 ; 13 >
-        au < expected ; 2014 ; Anthropological Theory Volume 14 ; 14 >
+        au < manifest ; 2014 ; Anthropological Theory Volume 14 ; 14 >
 
       }
 
@@ -4744,7 +4744,7 @@
         au < released ; 2011 ; Business Information Review Volume 28 ; 28 >
         au < released ; 2012 ; Business Information Review Volume 29 ; 29 >
         au < manifest ; 2013 ; Business Information Review Volume 30 ; 30 >
-        au < expected ; 2014 ; Business Information Review Volume 31 ; 31 >
+        au < manifest ; 2014 ; Business Information Review Volume 31 ; 31 >
 
       }
 
@@ -7419,7 +7419,7 @@
         au < released ; 2011 ; Crime, Media, Culture Volume 7 ; 7 >
         au < released ; 2012 ; Crime, Media, Culture Volume 8 ; 8 >
         au < manifest ; 2013 ; Crime, Media, Culture Volume 9 ; 9 >
-        au < expected ; 2014 ; Crime, Media, Culture Volume 10 ; 10 >
+        au < manifest ; 2014 ; Crime, Media, Culture Volume 10 ; 10 >
 
       }
 
@@ -10927,7 +10927,7 @@
     au < exists ; 2011 ; European Journal of Probation Volume 3 ; 3 >
     au < exists ; 2012 ; European Journal of Probation Volume 4 ; 4 >
     au < exists ; 2013 ; European Journal of Probation Volume 5 ; 5 >
-    au < expected ; 2014 ; European Journal of Probation Volume 6 ; 6 >
+    au < manifest ; 2014 ; European Journal of Probation Volume 6 ; 6 >
 
   }
 
@@ -12984,7 +12984,7 @@
         au < released ; 2011 ; Global Social Policy Volume 11 ; 11 >
         au < released ; 2012 ; Global Social Policy Volume 12 ; 12 >
         au < manifest ; 2013 ; Global Social Policy Volume 13 ; 13 >
-        au < expected ; 2014 ; Global Social Policy Volume 14 ; 14 >
+        au < manifest ; 2014 ; Global Social Policy Volume 14 ; 14 >
 
       }
 
@@ -41487,7 +41487,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Youth Justice Volume 11 ; 11 >
         au < released ; 2012 ; Youth Justice Volume 12 ; 12 >
         au < manifest ; 2013 ; Youth Justice Volume 13 ; 13 >
-        au < expected ; 2014 ; Youth Justice Volume 14 ; 14 >
+        au < manifest ; 2014 ; Youth Justice Volume 14 ; 14 >
 
       }
 
@@ -42528,7 +42528,6 @@ comment[mpj] = now published by Brill
         issnl = 0004-9441
       >
 
-      comment[upcoming] = online 2013
       pluginSuffix = HighWirePressH20Plugin
       param[base_url] = http://aed.sagepub.com/
       implicit < status ; year ; name ; param[volume_name] >
@@ -42603,7 +42602,6 @@ comment[mpj] = now published by Brill
         issnl = 0308-5759
       >
 
-    comment[upcoming] = online 2013
     pluginSuffix = HighWirePressH20Plugin
     param[base_url] = http://aaf.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
@@ -42700,7 +42698,6 @@ comment[mpj] = now published by Brill
         issnl = 1038-4162
       >
 
-    comment[upcoming] = online 2013
     pluginSuffix = HighWirePressH20Plugin
     param[base_url] = http://acd.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
@@ -42756,13 +42753,51 @@ comment[mpj] = now published by Brill
         issnl = 0146-6453
       >
 
-    comment[upcoming] = online 2013
     pluginSuffix = HighWirePressH20Plugin
     param[base_url] = http://ani.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2013 ; Annals of the ICRP Volume 43 ; 43 >
-    au < expected ; 2014 ; Annals of the ICRP Volume 44 ; 44 >
+    au < exists ; 1977 ; Annals of the ICRP Volume 1 ; 1 >
+    au < exists ; 1978-1979 ; Annals of the ICRP Volume 2 ; 2 >
+    au < exists ; 1979 ; Annals of the ICRP Volume 3 ; 3 >
+    au < exists ; 1980 ; Annals of the ICRP Volume 4 ; 4 >
+    au < exists ; 1981 ; Annals of the ICRP Volume 5 ; 5 >
+    au < exists ; 1981 ; Annals of the ICRP Volume 6 ; 6 >
+    au < exists ; 1982 ; Annals of the ICRP Volume 7 ; 7 >
+    au < exists ; 1982 ; Annals of the ICRP Volume 8 ; 8 >
+    au < exists ; 1982 ; Annals of the ICRP Volume 9 ; 9 >
+    au < exists ; 1983 ; Annals of the ICRP Volume 10 ; 10 >
+    au < exists ; 1983 ; Annals of the ICRP Volume 11-13 ; 11-13 >
+    au < exists ; 1984 ; Annals of the ICRP Volume 14 ; 14 >
+    au < exists ; 1985 ; Annals of the ICRP Volume 15 ; 15 >
+    au < exists ; 1986 ; Annals of the ICRP Volume 16 ; 16 >
+    au < exists ; 1987 ; Annals of the ICRP Volume 17 ; 17 >
+    au < exists ; 1987 ; Annals of the ICRP Volume 18 ; 18 >
+    au < exists ; 1988 ; Annals of the ICRP Volume 19 ; 19 >
+    au < exists ; 1989 ; Annals of the ICRP Volume 20 ; 20 >
+    au < exists ; 1991 ; Annals of the ICRP Volume 21 ; 21 >
+    au < exists ; 1991 ; Annals of the ICRP Volume 22 ; 22 >
+    au < exists ; 1993 ; Annals of the ICRP Volume 23 ; 23 >
+    au < exists ; 1994 ; Annals of the ICRP Volume 24 ; 24 >
+    au < exists ; 1995 ; Annals of the ICRP Volume 25 ; 25 >
+    au < exists ; 1996 ; Annals of the ICRP Volume 26 ; 26 >
+    au < exists ; 1997 ; Annals of the ICRP Volume 27 ; 27 >
+    au < exists ; 1998 ; Annals of the ICRP Volume 28 ; 28 >
+    au < exists ; 1999 ; Annals of the ICRP Volume 29 ; 29 >
+    au < exists ; 2000 ; Annals of the ICRP Volume 30 ; 30 >
+    au < exists ; 2001 ; Annals of the ICRP Volume 31 ; 31 >
+    au < exists ; 2002 ; Annals of the ICRP Volume 32 ; 32 >
+    au < exists ; 2003 ; Annals of the ICRP Volume 33 ; 33 >
+    au < exists ; 2004 ; Annals of the ICRP Volume 34 ; 34 >
+    au < exists ; 2005 ; Annals of the ICRP Volume 35 ; 35 >
+    au < exists ; 2006 ; Annals of the ICRP Volume 36 ; 36 >
+    au < exists ; 2007 ; Annals of the ICRP Volume 37 ; 37 >
+    au < exists ; 2008 ; Annals of the ICRP Volume 38 ; 38 >
+    au < exists ; 2009 ; Annals of the ICRP Volume 39 ; 39 >
+    au < exists ; 2010 ; Annals of the ICRP Volume 40 ; 40 >
+    au < exists ; 2012 ; Annals of the ICRP Volume 41 ; 41 >
+    au < exists ; 2013 ; Annals of the ICRP Volume 42 ; 42 >
+    au < expected ; 2014 ; Annals of the ICRP Volume 43 ; 43 >
 
     }
 
@@ -42775,7 +42810,6 @@ comment[mpj] = now published by Brill
         issnl = 0731-1214
       >
 
-    comment[upcoming] = online 2014, Volume 57
     pluginSuffix = HighWirePressH20Plugin
     param[base_url] = http://spx.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
@@ -42792,7 +42826,6 @@ comment[mpj] = now published by Brill
         issnl = 2278-6821
       >
 
-    comment[upcoming] = online 2013
     pluginSuffix = HighWirePressH20Plugin
     param[base_url] = http://brj.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
@@ -42811,20 +42844,98 @@ comment[mpj] = now published by Brill
         issnl = 0008-4174
       >
 
-    comment[upcoming] = online 2013
     pluginSuffix = HighWirePressH20Plugin
     param[base_url] = http://cjo.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2013 ; Canadian Journal of Occupational Therapy Volume 1 ; 1 >
-    au < expected ; 2014 ; Canadian Journal of Occupational Therapy Volume 2 ; 2 >
+    au < exists ; 1933-1934 ; Canadian Journal of Occupational Therapy Volume 1 ; 1 >
+    au < exists ; 1934-1935 ; Canadian Journal of Occupational Therapy Volume 2 ; 2 >
+    au < exists ; 1935-1936 ; Canadian Journal of Occupational Therapy Volume 3 ; 3 >
+    au < exists ; 1937 ; Canadian Journal of Occupational Therapy Volume 4 ; 4 >
+    au < exists ; 1938 ; Canadian Journal of Occupational Therapy Volume 5 ; 5 >
+    au < exists ; 1939 ; Canadian Journal of Occupational Therapy Volume 6 ; 6 >
+    au < exists ; 1940 ; Canadian Journal of Occupational Therapy Volume 7 ; 7 >
+    au < exists ; 1941 ; Canadian Journal of Occupational Therapy Volume 8 ; 8 >
+    au < exists ; 1942 ; Canadian Journal of Occupational Therapy Volume 9 ; 9 >
+    au < exists ; 1943 ; Canadian Journal of Occupational Therapy Volume 10 ; 10 >
+    au < exists ; 1944 ; Canadian Journal of Occupational Therapy Volume 11 ; 11 >
+    au < exists ; 1945 ; Canadian Journal of Occupational Therapy Volume 12 ; 12 >
+    au < exists ; 1946 ; Canadian Journal of Occupational Therapy Volume 13 ; 13 >
+    au < exists ; 1947 ; Canadian Journal of Occupational Therapy Volume 14 ; 14 >
+    au < exists ; 1948 ; Canadian Journal of Occupational Therapy Volume 15 ; 15 >
+    au < exists ; 1949 ; Canadian Journal of Occupational Therapy Volume 16 ; 16 >
+    au < exists ; 1950 ; Canadian Journal of Occupational Therapy Volume 17 ; 17 >
+    au < exists ; 1951 ; Canadian Journal of Occupational Therapy Volume 18 ; 18 >
+    au < exists ; 1952 ; Canadian Journal of Occupational Therapy Volume 19 ; 19 >
+    au < exists ; 1953 ; Canadian Journal of Occupational Therapy Volume 20 ; 20 >
+    au < exists ; 1954 ; Canadian Journal of Occupational Therapy Volume 21 ; 21 >
+    au < exists ; 1955 ; Canadian Journal of Occupational Therapy Volume 22 ; 22 >
+    au < exists ; 1956 ; Canadian Journal of Occupational Therapy Volume 23 ; 23 >
+    au < exists ; 1957 ; Canadian Journal of Occupational Therapy Volume 24 ; 24 >
+    au < exists ; 1958 ; Canadian Journal of Occupational Therapy Volume 25 ; 25 >
+    au < exists ; 1959 ; Canadian Journal of Occupational Therapy Volume 26 ; 26 >
+    au < exists ; 1960 ; Canadian Journal of Occupational Therapy Volume 27 ; 27 >
+    au < exists ; 1961 ; Canadian Journal of Occupational Therapy Volume 28 ; 28 >
+    au < exists ; 1962 ; Canadian Journal of Occupational Therapy Volume 29 ; 29 >
+    au < exists ; 1963 ; Canadian Journal of Occupational Therapy Volume 30 ; 30 >
+    au < exists ; 1964 ; Canadian Journal of Occupational Therapy Volume 31 ; 31 >
+    au < exists ; 1965 ; Canadian Journal of Occupational Therapy Volume 32 ; 32 >
+    au < exists ; 1966 ; Canadian Journal of Occupational Therapy Volume 33 ; 33 >
+    au < exists ; 1967 ; Canadian Journal of Occupational Therapy Volume 34 ; 34 >
+    au < exists ; 1968 ; Canadian Journal of Occupational Therapy Volume 35 ; 35 >
+    au < exists ; 1969 ; Canadian Journal of Occupational Therapy Volume 36 ; 36 >
+    au < exists ; 1970 ; Canadian Journal of Occupational Therapy Volume 37 ; 37 >
+    au < exists ; 1971 ; Canadian Journal of Occupational Therapy Volume 38 ; 38 >
+    au < exists ; 1972 ; Canadian Journal of Occupational Therapy Volume 39 ; 39 >
+    au < exists ; 1973 ; Canadian Journal of Occupational Therapy Volume 40 ; 40 >
+    au < exists ; 1974 ; Canadian Journal of Occupational Therapy Volume 41 ; 41 >
+    au < exists ; 1975 ; Canadian Journal of Occupational Therapy Volume 42 ; 42 >
+    au < exists ; 1976 ; Canadian Journal of Occupational Therapy Volume 43 ; 43 >
+    au < exists ; 1977 ; Canadian Journal of Occupational Therapy Volume 44 ; 44 >
+    au < exists ; 1978 ; Canadian Journal of Occupational Therapy Volume 45 ; 45 >
+    au < exists ; 1979 ; Canadian Journal of Occupational Therapy Volume 46 ; 46 >
+    au < exists ; 1980 ; Canadian Journal of Occupational Therapy Volume 47 ; 47 >
+    au < exists ; 1981 ; Canadian Journal of Occupational Therapy Volume 48 ; 48 >
+    au < exists ; 1982 ; Canadian Journal of Occupational Therapy Volume 49 ; 49 >
+    au < exists ; 1983 ; Canadian Journal of Occupational Therapy Volume 50 ; 50 >
+    au < exists ; 1984 ; Canadian Journal of Occupational Therapy Volume 51 ; 51 >
+    au < exists ; 1985 ; Canadian Journal of Occupational Therapy Volume 52 ; 52 >
+    au < exists ; 1986 ; Canadian Journal of Occupational Therapy Volume 53 ; 53 >
+    au < exists ; 1987 ; Canadian Journal of Occupational Therapy Volume 54 ; 54 >
+    au < exists ; 1988 ; Canadian Journal of Occupational Therapy Volume 55 ; 55 >
+    au < exists ; 1989 ; Canadian Journal of Occupational Therapy Volume 56 ; 56 >
+    au < exists ; 1990 ; Canadian Journal of Occupational Therapy Volume 57 ; 57 >
+    au < exists ; 1991 ; Canadian Journal of Occupational Therapy Volume 58 ; 58 >
+    au < exists ; 1992 ; Canadian Journal of Occupational Therapy Volume 59 ; 59 >
+    au < exists ; 1993 ; Canadian Journal of Occupational Therapy Volume 60 ; 60 >
+    au < exists ; 1994 ; Canadian Journal of Occupational Therapy Volume 61 ; 61 >
+    au < exists ; 1995 ; Canadian Journal of Occupational Therapy Volume 62 ; 62 >
+    au < exists ; 1996 ; Canadian Journal of Occupational Therapy Volume 63 ; 63 >
+    au < exists ; 1997 ; Canadian Journal of Occupational Therapy Volume 64 ; 64 >
+    au < exists ; 1998 ; Canadian Journal of Occupational Therapy Volume 65 ; 65 >
+    au < exists ; 1999 ; Canadian Journal of Occupational Therapy Volume 66 ; 66 >
+    au < exists ; 1900 ; Canadian Journal of Occupational Therapy Volume 67 ; 67 >
+    au < exists ; 2001 ; Canadian Journal of Occupational Therapy Volume 68 ; 68 >
+    au < exists ; 2002 ; Canadian Journal of Occupational Therapy Volume 69 ; 69 >
+    au < exists ; 2003 ; Canadian Journal of Occupational Therapy Volume 70 ; 70 >
+    au < exists ; 2004 ; Canadian Journal of Occupational Therapy Volume 71 ; 71 >
+    au < exists ; 2005 ; Canadian Journal of Occupational Therapy Volume 72 ; 72 >
+    au < exists ; 2006 ; Canadian Journal of Occupational Therapy Volume 73 ; 73 >
+    au < exists ; 2007 ; Canadian Journal of Occupational Therapy Volume 74 ; 74 >
+    au < exists ; 2008 ; Canadian Journal of Occupational Therapy Volume 75 ; 75 >
+    au < exists ; 2009 ; Canadian Journal of Occupational Therapy Volume 76 ; 76 >
+    au < exists ; 2010 ; Canadian Journal of Occupational Therapy Volume 77 ; 77 >
+    au < exists ; 2011 ; Canadian Journal of Occupational Therapy Volume 78 ; 78 >
+    au < exists ; 2012 ; Canadian Journal of Occupational Therapy Volume 79 ; 79 >
+    au < exists ; 2013 ; Canadian Journal of Occupational Therapy Volume 80 ; 80 >
+    au < exists ; 2014 ; Canadian Journal of Occupational Therapy Volume 81 ; 81 >
 
     }
 
     {
 
       title <
-        name = Canadian Pharmacists Journal  ;
+        name = Canadian Pharmacists Journal ;
         issn = 1715-1635 ;
         eissn = 1913-701X 
       >
@@ -42833,8 +42944,17 @@ comment[mpj] = now published by Brill
     param[base_url] = http://cph.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2013 ; Canadian Pharmacists Journal Volume 1 ; 1 >
-    au < expected ; 2014 ; Canadian Pharmacists Journal Volume 2 ; 2 >
+    au < exists ; 2004 ; Canadian Pharmacists Journal Volume 137 ; 137 >
+    au < exists ; 2005 ; Canadian Pharmacists Journal Volume 138 ; 138 >
+    au < exists ; 2006 ; Canadian Pharmacists Journal Volume 139 ; 139 >
+    au < exists ; 2007 ; Canadian Pharmacists Journal Volume 140 ; 140 >
+    au < exists ; 2008 ; Canadian Pharmacists Journal Volume 141 ; 141 >
+    au < exists ; 2009 ; Canadian Pharmacists Journal Volume 142 ; 142 >
+    au < exists ; 2010 ; Canadian Pharmacists Journal Volume 143 ; 143 >
+    au < exists ; 2011 ; Canadian Pharmacists Journal Volume 144 ; 144 >
+    au < exists ; 2012 ; Canadian Pharmacists Journal Volume 145 ; 145 >
+    au < exists ; 2013 ; Canadian Pharmacists Journal Volume 146 ; 146 >
+    au < exists ; 2014 ; Canadian Pharmacists Journal Volume 147 ; 147 >
 
     }
 
@@ -42865,7 +42985,6 @@ comment[mpj] = now published by Brill
         issnl = 2050-3032
       >
 
-    comment[upcoming] = online 2013
     pluginSuffix = HighWirePressH20Plugin
     param[base_url] = http://crr.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
@@ -42881,12 +43000,11 @@ comment[mpj] = now published by Brill
         name = Drug Science, Policy and Law
       >
 
-    comment[upcoming] = online 2013
     pluginSuffix = HighWirePressH20Plugin
     param[base_url] = http://dsp.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2013 ; Drug Science, Policy and Law Volume 1 ; 1 >
+    au < exists ; 2013-2014 ; Drug Science, Policy and Law Volume 1 ; 1 >
     au < expected ; 2014 ; Drug Science, Policy and Law Volume 2 ; 2 >
 
     }
@@ -42918,11 +43036,43 @@ comment[mpj] = now published by Brill
         issnl = 1071-1007
       >
 
-    comment[upcoming] = online 2013
     pluginSuffix = HighWirePressH20Plugin
     param[base_url] = http://fai.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
+    au < exists ; 1980-1981 ; Foot & Ankle International Volume 1 ; 1 >
+    au < exists ; 1981-1982 ; Foot & Ankle International Volume 2 ; 2 >
+    au < exists ; 1982-1983 ; Foot & Ankle International Volume 3 ; 3 >
+    au < exists ; 1983-1984 ; Foot & Ankle International Volume 4 ; 4 >
+    au < exists ; 1984-1985 ; Foot & Ankle International Volume 5 ; 5 >
+    au < exists ; 1985-1986 ; Foot & Ankle International Volume 6 ; 6 >
+    au < exists ; 1986-1987 ; Foot & Ankle International Volume 7 ; 7 >
+    au < exists ; 1987-1988 ; Foot & Ankle International Volume 8 ; 8 >
+    au < exists ; 1988-1989 ; Foot & Ankle International Volume 9 ; 9 >
+    au < exists ; 1989-1990 ; Foot & Ankle International Volume 10 ; 10 >
+    au < exists ; 1990-1991 ; Foot & Ankle International Volume 11 ; 11 >
+    au < exists ; 1991 ; Foot & Ankle International Volume 12 ; 12 >
+    au < exists ; 1992 ; Foot & Ankle International Volume 13 ; 13 >
+    au < exists ; 1993 ; Foot & Ankle International Volume 14 ; 14 >
+    au < exists ; 1994 ; Foot & Ankle International Volume 15 ; 15 >
+    au < exists ; 1995 ; Foot & Ankle International Volume 16 ; 16 >
+    au < exists ; 1996 ; Foot & Ankle International Volume 17 ; 17 >
+    au < exists ; 1997 ; Foot & Ankle International Volume 18 ; 18 >
+    au < exists ; 1998 ; Foot & Ankle International Volume 19 ; 19 >
+    au < exists ; 1999 ; Foot & Ankle International Volume 20 ; 20 >
+    au < exists ; 2000 ; Foot & Ankle International Volume 21 ; 21 >
+    au < exists ; 2001 ; Foot & Ankle International Volume 22 ; 22 >
+    au < exists ; 2002 ; Foot & Ankle International Volume 23 ; 23 >
+    au < exists ; 2003 ; Foot & Ankle International Volume 24 ; 24 >
+    au < exists ; 2004 ; Foot & Ankle International Volume 25 ; 25 >
+    au < exists ; 2005 ; Foot & Ankle International Volume 26 ; 26 >
+    au < exists ; 2006 ; Foot & Ankle International Volume 27 ; 27 >
+    au < exists ; 2007 ; Foot & Ankle International Volume 28 ; 28 >
+    au < exists ; 2008 ; Foot & Ankle International Volume 29 ; 29 >
+    au < exists ; 2009 ; Foot & Ankle International Volume 30 ; 30 >
+    au < exists ; 2010 ; Foot & Ankle International Volume 31 ; 31 >
+    au < exists ; 2011 ; Foot & Ankle International Volume 32 ; 32 >
+    au < exists ; 2012 ; Foot & Ankle International Volume 33 ; 33 >
     au < manifest ; 2013 ; Foot & Ankle International Volume 34 ; 34 >
     au < manifest ; 2014 ; Foot & Ankle International Volume 35 ; 35 >
 
@@ -42937,11 +43087,56 @@ comment[mpj] = now published by Brill
         issnl = 0014-5858
       >
 
-    comment[upcoming] = online 2013
     pluginSuffix = HighWirePressH20Plugin
     param[base_url] = http://foi.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
+    au < exists ; 1967 ; Forum Italicum: A Journal of Italian Studies Volume 1 ; 1 >
+    au < exists ; 1968 ; Forum Italicum: A Journal of Italian Studies Volume 2 ; 2 >
+    au < exists ; 1969 ; Forum Italicum: A Journal of Italian Studies Volume 3 ; 3 >
+    au < exists ; 1970 ; Forum Italicum: A Journal of Italian Studies Volume 4 ; 4 >
+    au < exists ; 1971 ; Forum Italicum: A Journal of Italian Studies Volume 5 ; 5 >
+    au < exists ; 1972 ; Forum Italicum: A Journal of Italian Studies Volume 6 ; 6 >
+    au < exists ; 1973 ; Forum Italicum: A Journal of Italian Studies Volume 7 ; 7 >
+    au < exists ; 1974 ; Forum Italicum: A Journal of Italian Studies Volume 8 ; 8 >
+    au < exists ; 1975 ; Forum Italicum: A Journal of Italian Studies Volume 9 ; 9 >
+    au < exists ; 1976 ; Forum Italicum: A Journal of Italian Studies Volume 10 ; 10 >
+    au < exists ; 1977 ; Forum Italicum: A Journal of Italian Studies Volume 11 ; 11 >
+    au < exists ; 1978 ; Forum Italicum: A Journal of Italian Studies Volume 12 ; 12 >
+    au < exists ; 1979 ; Forum Italicum: A Journal of Italian Studies Volume 13 ; 13 >
+    au < exists ; 1980 ; Forum Italicum: A Journal of Italian Studies Volume 14 ; 14 >
+    au < exists ; 1981 ; Forum Italicum: A Journal of Italian Studies Volume 15 ; 15 >
+    au < exists ; 1982 ; Forum Italicum: A Journal of Italian Studies Volume 16 ; 16 >
+    au < exists ; 1983 ; Forum Italicum: A Journal of Italian Studies Volume 17 ; 17 >
+    au < exists ; 1984 ; Forum Italicum: A Journal of Italian Studies Volume 18 ; 18 >
+    au < exists ; 1985 ; Forum Italicum: A Journal of Italian Studies Volume 19 ; 19 >
+    au < exists ; 1986 ; Forum Italicum: A Journal of Italian Studies Volume 20 ; 20 >
+    au < exists ; 1987 ; Forum Italicum: A Journal of Italian Studies Volume 21 ; 21 >
+    au < exists ; 1988 ; Forum Italicum: A Journal of Italian Studies Volume 22 ; 22 >
+    au < exists ; 1989 ; Forum Italicum: A Journal of Italian Studies Volume 23 ; 23 >
+    au < exists ; 1990 ; Forum Italicum: A Journal of Italian Studies Volume 24 ; 24 >
+    au < exists ; 1991 ; Forum Italicum: A Journal of Italian Studies Volume 25 ; 25 >
+    au < exists ; 1992 ; Forum Italicum: A Journal of Italian Studies Volume 26 ; 26 >
+    au < exists ; 1993 ; Forum Italicum: A Journal of Italian Studies Volume 27 ; 27 >
+    au < exists ; 1994 ; Forum Italicum: A Journal of Italian Studies Volume 28 ; 28 >
+    au < exists ; 1995 ; Forum Italicum: A Journal of Italian Studies Volume 29 ; 29 >
+    au < exists ; 1996 ; Forum Italicum: A Journal of Italian Studies Volume 30 ; 30 >
+    au < exists ; 1997 ; Forum Italicum: A Journal of Italian Studies Volume 31 ; 31 >
+    au < exists ; 1998 ; Forum Italicum: A Journal of Italian Studies Volume 32 ; 32 >
+    au < exists ; 1999 ; Forum Italicum: A Journal of Italian Studies Volume 33 ; 33 >
+    au < exists ; 2000 ; Forum Italicum: A Journal of Italian Studies Volume 34 ; 34 >
+    au < exists ; 2001 ; Forum Italicum: A Journal of Italian Studies Volume 35 ; 35 >
+    au < exists ; 2002 ; Forum Italicum: A Journal of Italian Studies Volume 36 ; 36 >
+    au < exists ; 2003 ; Forum Italicum: A Journal of Italian Studies Volume 37 ; 37 >
+    au < exists ; 2004 ; Forum Italicum: A Journal of Italian Studies Volume 38 ; 38 >
+    au < exists ; 2005 ; Forum Italicum: A Journal of Italian Studies Volume 39 ; 39 >
+    au < exists ; 2006 ; Forum Italicum: A Journal of Italian Studies Volume 40 ; 40 >
+    au < exists ; 2007 ; Forum Italicum: A Journal of Italian Studies Volume 41 ; 41 >
+    au < exists ; 2008 ; Forum Italicum: A Journal of Italian Studies Volume 42 ; 42 >
+    au < exists ; 2009 ; Forum Italicum: A Journal of Italian Studies Volume 43 ; 43 >
+    au < exists ; 2010 ; Forum Italicum: A Journal of Italian Studies Volume 44 ; 44 >
+    au < exists ; 2011 ; Forum Italicum: A Journal of Italian Studies Volume 45 ; 45 >
+    au < exists ; 2012 ; Forum Italicum: A Journal of Italian Studies Volume 46 ; 46 >
     au < exists ; 2013 ; Forum Italicum: A Journal of Italian Studies Volume 47 ; 47 >
     au < expected ; 2014 ; Forum Italicum: A Journal of Italian Studies Volume 48 ; 48 >
 
@@ -42989,7 +43184,6 @@ comment[mpj] = now published by Brill
         issnl = 0300-0605
       >
 
-    comment[upcoming] = online 2013
     pluginSuffix = HighWirePressH20Plugin
     param[base_url] = http://imr.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
@@ -43049,11 +43243,49 @@ comment[mpj] = now published by Brill
         issnl = 0091-8296
       >
 
-    comment[upcoming] = online 2013
     pluginSuffix = HighWirePressH20Plugin
     param[base_url] = http://mis.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
+    au < exists ; 1973 ; Missiology: An International Review Volume 1 ; 1 >
+    au < exists ; 1974 ; Missiology: An International Review Volume 2 ; 2 >
+    au < exists ; 1975 ; Missiology: An International Review Volume 3 ; 3 >
+    au < exists ; 1976 ; Missiology: An International Review Volume 4 ; 4 >
+    au < exists ; 1977 ; Missiology: An International Review Volume 5 ; 5 >
+    au < exists ; 1978 ; Missiology: An International Review Volume 6 ; 6 >
+    au < exists ; 1979 ; Missiology: An International Review Volume 7 ; 7 >
+    au < exists ; 1980 ; Missiology: An International Review Volume 8 ; 8 >
+    au < exists ; 1981 ; Missiology: An International Review Volume 9 ; 9 >
+    au < exists ; 1982 ; Missiology: An International Review Volume 10 ; 10 >
+    au < exists ; 1983 ; Missiology: An International Review Volume 11 ; 11 >
+    au < exists ; 1984 ; Missiology: An International Review Volume 12 ; 12 >
+    au < exists ; 1985 ; Missiology: An International Review Volume 13 ; 13 >
+    au < exists ; 1986 ; Missiology: An International Review Volume 14 ; 14 >
+    au < exists ; 1987 ; Missiology: An International Review Volume 15 ; 15 >
+    au < exists ; 1988 ; Missiology: An International Review Volume 16 ; 16 >
+    au < exists ; 1989 ; Missiology: An International Review Volume 17 ; 17 >
+    au < exists ; 1990 ; Missiology: An International Review Volume 18 ; 18 >
+    au < exists ; 1991 ; Missiology: An International Review Volume 19 ; 19 >
+    au < exists ; 1992 ; Missiology: An International Review Volume 20 ; 20 >
+    au < exists ; 1993 ; Missiology: An International Review Volume 21 ; 21 >
+    au < exists ; 1994 ; Missiology: An International Review Volume 22 ; 22 >
+    au < exists ; 1995 ; Missiology: An International Review Volume 23 ; 23 >
+    au < exists ; 1996 ; Missiology: An International Review Volume 24 ; 24 >
+    au < exists ; 1997 ; Missiology: An International Review Volume 25 ; 25 >
+    au < exists ; 1998 ; Missiology: An International Review Volume 26 ; 26 >
+    au < exists ; 1999 ; Missiology: An International Review Volume 27 ; 27 >
+    au < exists ; 2000 ; Missiology: An International Review Volume 28 ; 28 >
+    au < exists ; 2001 ; Missiology: An International Review Volume 29 ; 29 >
+    au < exists ; 2002 ; Missiology: An International Review Volume 30 ; 30 >
+    au < exists ; 2003 ; Missiology: An International Review Volume 31 ; 31 >
+    au < exists ; 2004 ; Missiology: An International Review Volume 32 ; 32 >
+    au < exists ; 2005 ; Missiology: An International Review Volume 33 ; 33 >
+    au < exists ; 2006 ; Missiology: An International Review Volume 34 ; 34 >
+    au < exists ; 2007 ; Missiology: An International Review Volume 35 ; 35 >
+    au < exists ; 2008 ; Missiology: An International Review Volume 36 ; 36 >
+    au < exists ; 2009 ; Missiology: An International Review Volume 37 ; 37 >
+    au < exists ; 2010 ; Missiology: An International Review Volume 38 ; 38 >
+    au < exists ; 2011 ; Missiology: An International Review Volume 39 ; 39 >
     au < manifest ; 2012 ; Missiology: An International Review Volume 40 ; 40 >
     au < manifest ; 2013 ; Missiology: An International Review Volume 41 ; 41 >
     au < manifest ; 2014 ; Missiology: An International Review Volume 42 ; 42 >
@@ -43069,7 +43301,6 @@ comment[mpj] = now published by Brill
         issnl = 2050-1579
       >
 
-    comment[upcoming] = online 2013
     pluginSuffix = HighWirePressH20Plugin
     param[base_url] = http://mmc.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
@@ -43088,13 +43319,37 @@ comment[mpj] = now published by Brill
         issnl = 1030-570X
       >
 
-    comment[upcoming] = online 2013
     pluginSuffix = HighWirePressH20Plugin
     param[base_url] = http://paa.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
+    au < exists ; 1988 ; Pacifica: Australasian Theological Studies Volume 1 ; 1 >
+    au < exists ; 1989 ; Pacifica: Australasian Theological Studies Volume 2 ; 2 >
+    au < exists ; 1990 ; Pacifica: Australasian Theological Studies Volume 3 ; 3 >
+    au < exists ; 1991 ; Pacifica: Australasian Theological Studies Volume 4 ; 4 >
+    au < exists ; 1992 ; Pacifica: Australasian Theological Studies Volume 5 ; 5 >
+    au < exists ; 1993 ; Pacifica: Australasian Theological Studies Volume 6 ; 6 >
+    au < exists ; 1994 ; Pacifica: Australasian Theological Studies Volume 7 ; 7 >
+    au < exists ; 1995 ; Pacifica: Australasian Theological Studies Volume 8 ; 8 >
+    au < exists ; 1996 ; Pacifica: Australasian Theological Studies Volume 9 ; 9 >
+    au < exists ; 1997 ; Pacifica: Australasian Theological Studies Volume 10 ; 10 >
+    au < exists ; 1998 ; Pacifica: Australasian Theological Studies Volume 11 ; 11 >
+    au < exists ; 1999 ; Pacifica: Australasian Theological Studies Volume 12 ; 12 >
+    au < exists ; 2000 ; Pacifica: Australasian Theological Studies Volume 13 ; 13 >
+    au < exists ; 2001 ; Pacifica: Australasian Theological Studies Volume 14 ; 14 >
+    au < exists ; 2002 ; Pacifica: Australasian Theological Studies Volume 15 ; 15 >
+    au < exists ; 2003 ; Pacifica: Australasian Theological Studies Volume 16 ; 16 >
+    au < exists ; 2004 ; Pacifica: Australasian Theological Studies Volume 17 ; 17 >
+    au < exists ; 2005 ; Pacifica: Australasian Theological Studies Volume 18 ; 18 >
+    au < exists ; 2006 ; Pacifica: Australasian Theological Studies Volume 19 ; 19 >
+    au < exists ; 2007 ; Pacifica: Australasian Theological Studies Volume 20 ; 20 >
+    au < exists ; 2008 ; Pacifica: Australasian Theological Studies Volume 21 ; 21 >
+    au < exists ; 2009 ; Pacifica: Australasian Theological Studies Volume 22 ; 22 >
+    au < exists ; 2010 ; Pacifica: Australasian Theological Studies Volume 23 ; 23 >
+    au < exists ; 2011 ; Pacifica: Australasian Theological Studies Volume 24 ; 24 >
+    au < exists ; 2012 ; Pacifica: Australasian Theological Studies Volume 25 ; 25 >
     au < manifest ; 2013 ; Pacifica: Australasian Theological Studies Volume 26 ; 26 >
-    au < expected ; 2014 ; Pacifica: Australasian Theological Studies Volume 27 ; 27 >
+    au < manifest ; 2014 ; Pacifica: Australasian Theological Studies Volume 27 ; 27 >
 
     }
 
@@ -43120,7 +43375,6 @@ comment[mpj] = now published by Brill
         name = SAGE Open Engineering
       >
 
-    comment[upcoming] = online 2013
     pluginSuffix = HighWirePressH20Plugin
     param[base_url] = http://seo.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
@@ -43136,13 +43390,12 @@ comment[mpj] = now published by Brill
         name = SAGE Open Medicine
       >
 
-    comment[upcoming] = online 2013
     pluginSuffix = HighWirePressH20Plugin
     param[base_url] = http://smo.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 2013 ; SAGE Open Medicine Volume 1 ; 1 >
-    au < expected ; 2014 ; SAGE Open Medicine Volume 2 ;2 >
+    au < expected ; 2014 ; SAGE Open Medicine Volume 2 ; 2 >
 
     }
 
@@ -43173,7 +43426,6 @@ comment[mpj] = now published by Brill
         issnl = 2049-9361
       >
 
-    comment[upcoming] = online 2013
     pluginSuffix = HighWirePressH20Plugin
     param[base_url] = http://tai.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
@@ -43233,13 +43485,16 @@ comment[mpj] = now published by Brill
         issnl = 1946-7567
       >
 
-    comment[upcoming] = online 2013
     pluginSuffix = HighWirePressH20Plugin
     param[base_url] = http://wfr.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
+    au < exists ; 2009 ; World Future Review Volume 1 ; 1 >
+    au < exists ; 2010 ; World Future Review Volume 2 ; 2 >
+    au < exists ; 2011 ; World Future Review Volume 3 ; 3 >
+    au < exists ; 2012 ; World Future Review Volume 4 ; 4 >
     au < manifest ; 2013 ; World Future Review Volume 5 ; 5 >
-    au < expected ; 2014 ; World Future Review Volume 6 ; 6 >
+    au < manifest ; 2014 ; World Future Review Volume 6 ; 6 >
 
     }
     
@@ -43250,7 +43505,6 @@ comment[mpj] = now published by Brill
         eissn = 2325-9671 
       >
 
-    comment[upcoming] = online 2013
     pluginSuffix = HighWirePressH20Plugin
     param[base_url] = http://ojs.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
@@ -43267,11 +43521,48 @@ comment[mpj] = now published by Brill
         eissn = 0362-1537 
       >
 
-    comment[upcoming] = online 2013
     pluginSuffix = HighWirePressH20Plugin
     param[base_url] = http://tax.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
+    au < exists ; 1971 ; Transactional Analysis Journal Volume 1 ; 1 >
+    au < exists ; 1972 ; Transactional Analysis Journal Volume 2 ; 2 >
+    au < exists ; 1973 ; Transactional Analysis Journal Volume 3 ; 3 >
+    au < exists ; 1974 ; Transactional Analysis Journal Volume 4 ; 4 >
+    au < exists ; 1975 ; Transactional Analysis Journal Volume 5 ; 5 >
+    au < exists ; 1976 ; Transactional Analysis Journal Volume 6 ; 6 >
+    au < exists ; 1977 ; Transactional Analysis Journal Volume 7 ; 7 >
+    au < exists ; 1978 ; Transactional Analysis Journal Volume 8 ; 8 >
+    au < exists ; 1979 ; Transactional Analysis Journal Volume 9 ; 9 >
+    au < exists ; 1980 ; Transactional Analysis Journal Volume 10 ; 10 >
+    au < exists ; 1981 ; Transactional Analysis Journal Volume 11 ; 11 >
+    au < exists ; 1982 ; Transactional Analysis Journal Volume 12 ; 12 >
+    au < exists ; 1983 ; Transactional Analysis Journal Volume 13 ; 13 >
+    au < exists ; 1984 ; Transactional Analysis Journal Volume 14 ; 14 >
+    au < exists ; 1985 ; Transactional Analysis Journal Volume 15 ; 15 >
+    au < exists ; 1986 ; Transactional Analysis Journal Volume 16 ; 16 >
+    au < exists ; 1987 ; Transactional Analysis Journal Volume 17 ; 17 >
+    au < exists ; 1988 ; Transactional Analysis Journal Volume 18 ; 18 >
+    au < exists ; 1989 ; Transactional Analysis Journal Volume 19 ; 19 >
+    au < exists ; 1990 ; Transactional Analysis Journal Volume 20 ; 20 >
+    au < exists ; 1991 ; Transactional Analysis Journal Volume 21 ; 21 >
+    au < exists ; 1992 ; Transactional Analysis Journal Volume 22 ; 22 >
+    au < exists ; 1993 ; Transactional Analysis Journal Volume 23 ; 23 >
+    au < exists ; 1994 ; Transactional Analysis Journal Volume 24 ; 24 >
+    au < exists ; 1995 ; Transactional Analysis Journal Volume 25 ; 25 >
+    au < exists ; 1996 ; Transactional Analysis Journal Volume 26 ; 26 >
+    au < exists ; 1997 ; Transactional Analysis Journal Volume 27 ; 27 >
+    au < exists ; 1998 ; Transactional Analysis Journal Volume 28 ; 28 >
+    au < exists ; 1999 ; Transactional Analysis Journal Volume 29 ; 29 >
+    au < exists ; 2000 ; Transactional Analysis Journal Volume 30 ; 30 >
+    au < exists ; 2001 ; Transactional Analysis Journal Volume 31 ; 31 >
+    au < exists ; 2002 ; Transactional Analysis Journal Volume 32 ; 32 >
+    au < exists ; 2003 ; Transactional Analysis Journal Volume 33 ; 33 >
+    au < exists ; 2004 ; Transactional Analysis Journal Volume 34 ; 34 >
+    au < exists ; 2005 ; Transactional Analysis Journal Volume 35 ; 35 >
+    au < exists ; 2006 ; Transactional Analysis Journal Volume 36 ; 36 >
+    au < exists ; 2007 ; Transactional Analysis Journal Volume 37 ; 37 >
+    au < exists ; 2008 ; Transactional Analysis Journal Volume 38 ; 38 >
     au < manifest ; 2009 ; Transactional Analysis Journal Volume 39 ; 39 >
     au < manifest ; 2010 ; Transactional Analysis Journal Volume 40 ; 40 >
     au < manifest ; 2011 ; Transactional Analysis Journal Volume 41 ; 41 >
