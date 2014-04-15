@@ -2253,9 +2253,9 @@
       >
 
       param[journal_issn] = 1752-3591
-      comment[notReady] = fetch error
+      comment[notReady] = fetch error on Volume 1
       
-      au < notReady ; 2007-2008 ;  International Journal of Dynamical Systems and Differential Equations Volume 1 ; 1 >
+      au < doNotProcess ; 2007-2008 ;  International Journal of Dynamical Systems and Differential Equations Volume 1 ; 1 >
       au < released ; 2009 ;  International Journal of Dynamical Systems and Differential Equations Volume 2 ; 2 >
       au < released ; 2011 ;  International Journal of Dynamical Systems and Differential Equations Volume 3 ; 3 >
       au < released ; 2012 ; International Journal of Dynamical Systems and Differential Equations Volume 4 ; 4 >
@@ -5063,7 +5063,7 @@
       >
 
       param[journal_issn] = 1741-5209
-      comment[notReady] = fetch error
+      comment[notReady] = fetch error on volume 17
       
       au < exists ; 1986 ; International Journal of Materials and Product Technology Volume 1 ; 1 >
       au < exists ; 1987 ; International Journal of Materials and Product Technology Volume 2 ; 2 >
@@ -5081,7 +5081,7 @@
       au < exists ; 1999 ; International Journal of Materials and Product Technology Volume 14 ; 14 >
       au < released ; 2000 ; International Journal of Materials and Product Technology Volume 15 ; 15 >
       au < released ; 2001 ; International Journal of Materials and Product Technology Volume 16 ; 16 >
-      au < notReady ; 2002 ; International Journal of Materials and Product Technology Volume 17 ; 17 >
+      au < doNotProcess ; 2002 ; International Journal of Materials and Product Technology Volume 17 ; 17 >
       au < released ; 2003 ; International Journal of Materials and Product Technology Volume 18 ; 18 >
       au < released ; 2003 ; International Journal of Materials and Product Technology Volume 19 ; 19 >
       au < released ; 2004 ; International Journal of Materials and Product Technology Volume 20 ; 20 >
@@ -5465,13 +5465,13 @@
       >
 
       param[journal_issn] = 1746-6180
-      comment[notReady] = fetch error
+      comment[notReady] = fetch error on volume 5
       
       au < released ; 2006 ; International Journal of Modelling, Identification and Control Volume 1 ; 1 >
       au < released ; 2007 ; International Journal of Modelling, Identification and Control Volume 2 ; 2 >
       au < released ; 2008 ; International Journal of Modelling, Identification and Control Volume 3 ; 3 >
       au < released ; 2008 ; International Journal of Modelling, Identification and Control Volume 4 ; 4 >
-      au < notReady ; 2008 ; International Journal of Modelling, Identification and Control Volume 5 ; 5 >
+      au < doNotProcess ; 2008 ; International Journal of Modelling, Identification and Control Volume 5 ; 5 >
       au < released ; 2009 ; International Journal of Modelling, Identification and Control Volume 6 ; 6 >
       au < released ; 2009 ; International Journal of Modelling, Identification and Control Volume 7 ; 7 >
       au < released ; 2009 ; International Journal of Modelling, Identification and Control Volume 8 ; 8 >
