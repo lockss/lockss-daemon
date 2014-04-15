@@ -129,19 +129,6 @@
       
       {
       
-        param[journal_issn] = 1757-5036
-        comment[journal_code] = bmcbiophys
-        
-        comment[volume2] = malformed. May 2009 uses issn 2046-1682. April uses both issns.
-
-        au < exists ; 2008 ; PMC Biophysics Volume 1 ; 1 >
-        au < doNotProcess ; 2009 ; PMC Biophysics Volume 2 ; 2 >
-        au < exists ; 2010 ; PMC Biophysics Volume 3 ; 3 >
-      
-      }
-
-      {
-      
         param[journal_issn] = 2046-1682
         attr[journal_code] = bmcbiophys
 
