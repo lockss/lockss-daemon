@@ -833,7 +833,7 @@
         comment[platform] = BMC
   
         au < manifest ; 2013 ; Geothermal Energy Volume 1 ; 1 >
-        au < expected ; 2014 ; Geothermal Energy Volume 2 ; 2 >
+        au < manifest ; 2014 ; Geothermal Energy Volume 2 ; 2 >
   
     }
   
