@@ -2,11 +2,12 @@
 
   publisher <
     name = Alliance for Children and Families
-    
   >
   
-  plugin = org.lockss.plugin.metapress.MetaPressPlugin
-  param[base_url] = http://essential.metapress.com/
+  comment[moving] = from MetaPress to Atypon
+  
+  plugin = needs.plugin
+  param[base_url] = 
   implicit < status ; year ; name ; param[volume_name] >  
   
   {
