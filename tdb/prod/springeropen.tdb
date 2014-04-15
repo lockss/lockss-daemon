@@ -1665,7 +1665,7 @@
         param[journal_issn] = 2196-5404
         comment[platform] = BMC
 
-        au < exists ; 2014 ; Nano Convergence Volume 1 ; 1 >
+        au < manifest ; 2014 ; Nano Convergence Volume 1 ; 1 >
 
     }
 
@@ -1893,7 +1893,7 @@
   
         au < manifest ; 2012 ; Security Informatics Volume 1 ; 1 >
         au < manifest ; 2013 ; Security Informatics Volume 2 ; 2 >
-        au < expected ; 2014 ; Security Informatics Volume 3 ; 3 >
+        au < manifest ; 2014 ; Security Informatics Volume 3 ; 3 >
   
     }
   
