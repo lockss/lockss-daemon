@@ -6,10 +6,6 @@
     info[tester] = 0
   >
   
-    plugin = org.lockss.plugin.metapress.ClockssMetaPressPlugin
-    param[base_url] = http://liverpool.metapress.com/
-    implicit < status ; year ; name ; param[volume_name] >
-
   {
   
     title <
@@ -17,14 +13,13 @@
       type = bookSeries
     >
 
-    comment[platform1] = On Metapress, but may have a different format than for journals.
-    comment[platform2] = params for journal are journal_issn and volume_name
+    comment[moving] = from MetaPress to Atypon
     
     plugin = needs.plugin
-    param[base_url] = http://liverpool.metapress.com/
+    param[base_url] = 
     implicit < status ; status2 ; year ; isbn ; name >
 
-    au < exists ; exists ; 2004 ; 9780853230397 ; The Acts of the Council of Chalcedon >
+    au < doNotProcess ; exists ; 2004 ; 9780853230397 ; The Acts of the Council of Chalcedon >
     
   }
 
