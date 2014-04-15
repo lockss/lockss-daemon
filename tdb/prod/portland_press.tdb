@@ -2,7 +2,7 @@
 
   publisher <
     name = Portland Press ;
-    info[tester] = 8
+    info[tester] = 0
   >
   
   plugin = org.lockss.plugin.portlandpress.PortlandPressPlugin
