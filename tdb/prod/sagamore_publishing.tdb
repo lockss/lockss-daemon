@@ -6,6 +6,8 @@
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
     implicit < status ; year ; volume ; name ; param[year] >
     param[base_url] = http://js.sagamorepub.com/
+    
+    comment[CAUTION] = This publisher has supscription journals. currently our testing process shows successful result, even though pdf file sizes are zero.
 
   {
     title <
@@ -15,15 +17,15 @@
 
     param[journal_id] = ajess
 
-    au < testing ; 2004 ; 1 ; Asian Journal of Exercise and Sports Science Volume 1 ; 2004 >
-    au < testing ; 2005 ; 2 ; Asian Journal of Exercise and Sports Science Volume 2 ; 2005 >
-    au < testing ; 2006 ; 3 ; Asian Journal of Exercise and Sports Science Volume 3 ; 2006 >
-    au < testing ; 2007 ; 4 ; Asian Journal of Exercise and Sports Science Volume 4 ; 2007 >
-    au < testing ; 2008 ; 5 ; Asian Journal of Exercise and Sports Science Volume 5 ; 2008 >
-    au < testing ; 2009 ; 6 ; Asian Journal of Exercise and Sports Science Volume 6 ; 2009 >
-    au < testing ; 2010 ; 7 ; Asian Journal of Exercise and Sports Science Volume 7 ; 2010 >
-    au < testing ; 2011 ; 8 ; Asian Journal of Exercise and Sports Science Volume 8 ; 2011 >
-    au < testing ; 2012 ; 9 ; Asian Journal of Exercise and Sports Science Volume 9 ; 2012 >
+    au < notReady ; 2004 ; 1 ; Asian Journal of Exercise and Sports Science Volume 1 ; 2004 >
+    au < notReady ; 2005 ; 2 ; Asian Journal of Exercise and Sports Science Volume 2 ; 2005 >
+    au < notReady ; 2006 ; 3 ; Asian Journal of Exercise and Sports Science Volume 3 ; 2006 >
+    au < notReady ; 2007 ; 4 ; Asian Journal of Exercise and Sports Science Volume 4 ; 2007 >
+    au < notReady ; 2008 ; 5 ; Asian Journal of Exercise and Sports Science Volume 5 ; 2008 >
+    au < notReady ; 2009 ; 6 ; Asian Journal of Exercise and Sports Science Volume 6 ; 2009 >
+    au < notReady ; 2010 ; 7 ; Asian Journal of Exercise and Sports Science Volume 7 ; 2010 >
+    au < notReady ; 2011 ; 8 ; Asian Journal of Exercise and Sports Science Volume 8 ; 2011 >
+    au < notReady ; 2012 ; 9 ; Asian Journal of Exercise and Sports Science Volume 9 ; 2012 >
     au < manifest ; 2013 ; 10 ; Asian Journal of Exercise and Sports Science Volume 10 ; 2013 >
     au < manifest ; 2014 ; 11 ; Asian Journal of Exercise and Sports Science Volume 11 ; 2014 >
   }
