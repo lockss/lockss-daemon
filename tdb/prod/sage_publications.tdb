@@ -11443,6 +11443,38 @@
 
     }
     
+  {
+
+    title <
+      name = Exceptional Children ;
+      issn = 0014-4029 
+    >
+
+    {
+
+      pluginSuffix = HighWirePressH20Plugin
+      param[base_url] = http://ecx.sagepub.com/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2001 ; Exceptional Children Volume 67 ; 67 >
+      au < exists ; 2001-2002 ; Exceptional Children Volume 68 ; 68 >
+      au < exists ; 2003 ; Exceptional Children Volume 69 ; 69 >
+      au < exists ; 2004 ; Exceptional Children Volume 70 ; 70 >
+      au < exists ; 2004-2005 ; Exceptional Children Volume 71 ; 71 >
+      au < exists ; 2005-2006 ; Exceptional Children Volume 72 ; 72 >
+      au < exists ; 2006-2007 ; Exceptional Children Volume 73 ; 73 >
+      au < exists ; 2007-2008 ; Exceptional Children Volume 74 ; 74 >
+      au < exists ; 2009 ; Exceptional Children Volume 75 ; 75 >
+      au < exists ; 2010 ; Exceptional Children Volume 76 ; 76 >
+      au < exists ; 2011 ; Exceptional Children Volume 77 ; 77 >
+      au < exists ; 2012 ; Exceptional Children Volume 78 ; 78 >
+      au < doesNotExist ; 2013 ; Exceptional Children Volume 79 ; 79 >
+      au < exists ; 2014 ; Exceptional Children Volume 80 ; 80 >
+
+    }
+
+  }
+  
     {
 
       title <
@@ -14103,6 +14135,26 @@
 
     }
 
+  {
+
+    title <
+      name = History of Science ;
+      issn = 0073-2753 ;
+      eissn = 1753-8564 
+    >
+
+    {
+
+      pluginSuffix = HighWirePressH20Plugin
+      param[base_url] = http://hos.sagepub.com/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2014 ; History of Science Volume 52 ; 52 >
+
+    }
+
+  }
+
     {
 
       title <
@@ -14691,6 +14743,36 @@
     }
 
     {
+    
+      title <
+        name = Humanity & Society ;
+        issn = 0160-5976 
+      >
+  
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://has.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+        
+        au < manifest ; 2003 ; Humanity & Society Volume 27 ; 27 >
+        au < manifest ; 2004 ; Humanity & Society Volume 28 ; 28 >
+        au < manifest ; 2005 ; Humanity & Society Volume 29 ; 29 >
+        au < manifest ; 2006 ; Humanity & Society Volume 30 ; 30 >
+        au < manifest ; 2007 ; Humanity & Society Volume 31 ; 31 >
+        au < released ; 2008 ; Humanity & Society Volume 32 ; 32 >
+        au < released ; 2009 ; Humanity & Society Volume 33 ; 33 >
+        au < released ; 2010 ; Humanity & Society Volume 34 ; 34 >
+        au < released ; 2011 ; Humanity & Society Volume 35 ; 35 >
+        au < released ; 2012 ; Humanity & Society Volume 36 ; 36 >
+        au < manifest ; 2013 ; Humanity & Society Volume 37 ; 37 >
+        au < manifest ; 2014 ; Humanity & Society Volume 38 ; 38 >
+  
+      }
+      
+    }
+
+    {
 
       title <
         name = IFLA Journal ;
@@ -15215,36 +15297,6 @@
     }
 
     {
-    
-      title <
-        name = Humanity & Society ;
-        issn = 0160-5976 
-      >
-  
-      {
-
-        pluginSuffix = HighWirePressH20Plugin
-        param[base_url] = http://has.sagepub.com/
-        implicit < status ; year ; name ; param[volume_name] >
-        
-        au < manifest ; 2003 ; Humanity & Society Volume 27 ; 27 >
-        au < manifest ; 2004 ; Humanity & Society Volume 28 ; 28 >
-        au < manifest ; 2005 ; Humanity & Society Volume 29 ; 29 >
-        au < manifest ; 2006 ; Humanity & Society Volume 30 ; 30 >
-        au < manifest ; 2007 ; Humanity & Society Volume 31 ; 31 >
-        au < released ; 2008 ; Humanity & Society Volume 32 ; 32 >
-        au < released ; 2009 ; Humanity & Society Volume 33 ; 33 >
-        au < released ; 2010 ; Humanity & Society Volume 34 ; 34 >
-        au < released ; 2011 ; Humanity & Society Volume 35 ; 35 >
-        au < released ; 2012 ; Humanity & Society Volume 36 ; 36 >
-        au < manifest ; 2013 ; Humanity & Society Volume 37 ; 37 >
-        au < manifest ; 2014 ; Humanity & Society Volume 38 ; 38 >
-  
-      }
-      
-    }
-
-    {
 
       title <
         name = ICAN: Infant, Child, & Adolescent Nutrition ;
@@ -15381,7 +15433,6 @@
         param[base_url] = http://ivi.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-
         au < manifest ; 2002 ; Information Visualization Volume 1 ; 1 >
         au < manifest ; 2003 ; Information Visualization Volume 2 ; 2 >
         au < manifest ; 2004 ; Information Visualization Volume 3 ; 3 >
@@ -15399,6 +15450,27 @@
       }
 
     }
+
+  {
+
+    title <
+      name = Insight on Africa ;
+      issn = 0975-0878 ;
+      eissn = 0976-3465 
+    >
+
+    {
+
+      pluginSuffix = HighWirePressH20Plugin
+      param[base_url] = http://ioa.sagepub.com/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2013 ; Insight on Africa Volume 5 ; 5 >
+      au < expected ; 2014 ; Insight on Africa Volume 6 ; 6 >
+
+    }
+
+  }
 
     {
 
@@ -26747,6 +26819,27 @@ comment[mpj] = now published by Brill
 
     }
 
+  {
+
+    title <
+      name = Journal for the History of Astronomy ;
+      issn = 0021-8286 ;
+      eissn = 1753-8556 
+    >
+
+
+    {
+
+      pluginSuffix = HighWirePressH20Plugin
+      param[base_url] = http://jha.sagepub.com/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2014 ; Journal for the History of Astronomy Volume 45 ; 45 >
+
+    }
+
+  }
+
     {
 
       title <
@@ -26759,7 +26852,6 @@ comment[mpj] = now published by Brill
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://jil.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-
 
         au < manifest ; 1911 ; Journal of the Institution of Locomotive Engineers Volume 1 ; 1 >
         au < manifest ; 1912 ; Journal of the Institution of Locomotive Engineers Volume 2 ; 2 >
