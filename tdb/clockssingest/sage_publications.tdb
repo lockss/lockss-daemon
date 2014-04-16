@@ -10165,9 +10165,6 @@
     >
 
       param[base_url] = http://ecx.sagepub.com/
-
-    {
-
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2001 ; Exceptional Children Volume 67 ; 67 ; >
@@ -10185,9 +10182,8 @@
       au < doesNotExist ; doesNotExist ; 2013 ; Exceptional Children Volume 79 ; 79 ; >
       au < exists ; exists ; 2014 ; Exceptional Children Volume 80 ; 80 ; >
 
-    }
-
   }
+
   {
   
     title <
@@ -10196,10 +10192,7 @@
       eissn = 1745-5308
     >
 
-    param[base_url] = http://ext.sagepub.com/
-
-    {
-
+      param[base_url] = http://ext.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < manifest ; exists ; 1889-1890 ; The Expository Times Volume 1 ; 1 ; >
@@ -10328,8 +10321,6 @@
       au < finished ; crawling ; 2012-2013 ; The Expository Times Volume 124 ; 124 ; >
       au < crawling ; exists ; 2013-2014 ; The Expository Times Volume 125 ; 125 ; >
       au < expected ; exists ; 2014-2015 ; The Expository Times Volume 126 ; 126 ; >
-
-    }
 
   }
 
@@ -12324,14 +12315,9 @@
     >
 
       param[base_url] = http://hos.sagepub.com/
-
-    {
-
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2014 ; History of Science Volume 52 ; 52 ; >
-
-    }
 
   }
 
@@ -13493,16 +13479,11 @@
       eissn = 0976-3465 
     >
 
-    param[base_url] = http://ioa.sagepub.com/
-
-    {
-
+      param[base_url] = http://ioa.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2013 ; Insight on Africa Volume 5 ; 5 ; >
       au < expected ; exists ; 2014 ; Insight on Africa Volume 6 ; 6 ; >
-
-    }
 
   }
 
@@ -23981,14 +23962,9 @@
     >
 
       param[base_url] = http://jha.sagepub.com/
-
-    {
-
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2014 ; Journal for the History of Astronomy Volume 45 ; 45 ; >
-
-    }
 
   }
 
@@ -24973,7 +24949,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://lin.sagepub.com/
 
-      au < expected ; exists ; 2014 ; Language and Linguistics Volume 15 ; 15 ; >
+      au < exists ; exists ; 2014 ; Language and Linguistics Volume 15 ; 15 ; >
 
   }
 
@@ -32557,6 +32533,16 @@
     param[base_url] = http://sjs.sagepub.com/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
+    au < exists ; exists ; 2002 ; Scandinavian Journal of Surgery Volume 91 ; 91 ; >
+    au < exists ; exists ; 2003 ; Scandinavian Journal of Surgery Volume 92 ; 92 ; >
+    au < exists ; exists ; 2004 ; Scandinavian Journal of Surgery Volume 93 ; 93 ; >
+    au < exists ; exists ; 2005 ; Scandinavian Journal of Surgery Volume 94 ; 94 ; >
+    au < exists ; exists ; 2006 ; Scandinavian Journal of Surgery Volume 95 ; 95 ; >
+    au < exists ; exists ; 2007 ; Scandinavian Journal of Surgery Volume 96 ; 96 ; >
+    au < exists ; exists ; 2008 ; Scandinavian Journal of Surgery Volume 97 ; 97 ; >
+    au < exists ; exists ; 2009 ; Scandinavian Journal of Surgery Volume 98 ; 98 ; >
+    au < exists ; exists ; 2010 ; Scandinavian Journal of Surgery Volume 99 ; 99 ; >
+    au < exists ; exists ; 2011 ; Scandinavian Journal of Surgery Volume 100 ; 100 ; >
     au < exists ; exists ; 2012 ; Scandinavian Journal of Surgery Volume 101 ; 101 ; >
     au < crawling ; exists ; 2013 ; Scandinavian Journal of Surgery Volume 102 ; 102 ; >
     au < expected ; exists ; 2014 ; Scandinavian Journal of Surgery Volume 103 ; 103 ; >
@@ -36306,6 +36292,62 @@
 
   }
 
+  {
+
+    title <
+      name = Transactional Analysis Journal ;
+      issn = 0362-1537 
+    >
+
+      param[base_url] = http://tax.sagepub.com/
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < exists ; exists ; 1971 ; Transactional Analysis Journal Volume 1 ; 1 ; >
+      au < exists ; exists ; 1972 ; Transactional Analysis Journal Volume 2 ; 2 ; >
+      au < exists ; exists ; 1973 ; Transactional Analysis Journal Volume 3 ; 3 ; >
+      au < exists ; exists ; 1974 ; Transactional Analysis Journal Volume 4 ; 4 ; >
+      au < exists ; exists ; 1975 ; Transactional Analysis Journal Volume 5 ; 5 ; >
+      au < exists ; exists ; 1976 ; Transactional Analysis Journal Volume 6 ; 6 ; >
+      au < exists ; exists ; 1977 ; Transactional Analysis Journal Volume 7 ; 7 ; >
+      au < exists ; exists ; 1978 ; Transactional Analysis Journal Volume 8 ; 8 ; >
+      au < exists ; exists ; 1979 ; Transactional Analysis Journal Volume 9 ; 9 ; >
+      au < exists ; exists ; 1980 ; Transactional Analysis Journal Volume 10 ; 10 ; >
+      au < exists ; exists ; 1981 ; Transactional Analysis Journal Volume 11 ; 11 ; >
+      au < exists ; exists ; 1982 ; Transactional Analysis Journal Volume 12 ; 12 ; >
+      au < exists ; exists ; 1983 ; Transactional Analysis Journal Volume 13 ; 13 ; >
+      au < exists ; exists ; 1984 ; Transactional Analysis Journal Volume 14 ; 14 ; >
+      au < exists ; exists ; 1985 ; Transactional Analysis Journal Volume 15 ; 15 ; >
+      au < exists ; exists ; 1986 ; Transactional Analysis Journal Volume 16 ; 16 ; >
+      au < exists ; exists ; 1987 ; Transactional Analysis Journal Volume 17 ; 17 ; >
+      au < exists ; exists ; 1988 ; Transactional Analysis Journal Volume 18 ; 18 ; >
+      au < exists ; exists ; 1989 ; Transactional Analysis Journal Volume 19 ; 19 ; >
+      au < exists ; exists ; 1990 ; Transactional Analysis Journal Volume 20 ; 20 ; >
+      au < exists ; exists ; 1991 ; Transactional Analysis Journal Volume 21 ; 21 ; >
+      au < exists ; exists ; 1992 ; Transactional Analysis Journal Volume 22 ; 22 ; >
+      au < exists ; exists ; 1993 ; Transactional Analysis Journal Volume 23 ; 23 ; >
+      au < exists ; exists ; 1994 ; Transactional Analysis Journal Volume 24 ; 24 ; >
+      au < exists ; exists ; 1995 ; Transactional Analysis Journal Volume 25 ; 25 ; >
+      au < exists ; exists ; 1996 ; Transactional Analysis Journal Volume 26 ; 26 ; >
+      au < exists ; exists ; 1997 ; Transactional Analysis Journal Volume 27 ; 27 ; >
+      au < exists ; exists ; 1998 ; Transactional Analysis Journal Volume 28 ; 28 ; >
+      au < exists ; exists ; 1999 ; Transactional Analysis Journal Volume 29 ; 29 ; >
+      au < exists ; exists ; 2000 ; Transactional Analysis Journal Volume 30 ; 30 ; >
+      au < exists ; exists ; 2001 ; Transactional Analysis Journal Volume 31 ; 31 ; >
+      au < exists ; exists ; 2002 ; Transactional Analysis Journal Volume 32 ; 32 ; >
+      au < exists ; exists ; 2003 ; Transactional Analysis Journal Volume 33 ; 33 ; >
+      au < exists ; exists ; 2004 ; Transactional Analysis Journal Volume 34 ; 34 ; >
+      au < exists ; exists ; 2005 ; Transactional Analysis Journal Volume 35 ; 35 ; >
+      au < exists ; exists ; 2006 ; Transactional Analysis Journal Volume 36 ; 36 ; >
+      au < exists ; exists ; 2007 ; Transactional Analysis Journal Volume 37 ; 37 ; >
+      au < exists ; exists ; 2008 ; Transactional Analysis Journal Volume 38 ; 38 ; >
+      au < exists ; exists ; 2009 ; Transactional Analysis Journal Volume 39 ; 39 ; >
+      au < exists ; exists ; 2010 ; Transactional Analysis Journal Volume 40 ; 40 ; >
+      au < exists ; exists ; 2011 ; Transactional Analysis Journal Volume 41 ; 41 ; >
+      au < exists ; exists ; 2012 ; Transactional Analysis Journal Volume 42 ; 42 ; >
+      au < exists ; exists ; 2013 ; Transactional Analysis Journal Volume 43 ; 43 ; >
+      au < expected ; exists ; 2014 ; Transactional Analysis Journal Volume 44 ; 44 ; >
+
+  }
   {
   
     title <
