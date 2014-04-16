@@ -8,7 +8,9 @@
 
       plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
       implicit < status ; status2 ; year ; name ; volume ; param[year] >
-      param[base_url] = http://www.librelloph.com/ojs/
+      
+      {
+      param[base_url] = http://www.librelloph.com/
 
   {
     title <
@@ -18,8 +20,8 @@
       param[journal_id] = challengesinsustainability
       comment[issn] = missing
     
-      au < ingNotReady ; exists ; 2013 ; Challenges in Sustainability Volume 1 ; 1 ; 2013 >
-      au < manifest ; exists ; 2014 ; Challenges in Sustainability Volume 2 ; 2 ; 2014 >
+      au < exists ; exists ; 2013 ; Challenges in Sustainability Volume 1 ; 1 ; 2013 >
+      au < exists ; exists ; 2014 ; Challenges in Sustainability Volume 2 ; 2 ; 2014 >
     
   }
 
@@ -31,8 +33,8 @@
 
       param[journal_id] = journalofhumansecurity
 
-      au < ingNotReady ; exists ; 2013 ; Journal of Human Security Volume 9 ; 9 ; 2013 >
-      au < manifest ; exists ; 2014 ; Journal of Human Security Volume 10 ; 10 ; 2014 >
+      au < exists ; exists ; 2013 ; Journal of Human Security Volume 9 ; 9 ; 2013 >
+      au < exists ; exists ; 2014 ; Journal of Human Security Volume 10 ; 10 ; 2014 >
 
   }
 
@@ -44,8 +46,8 @@
       param[journal_id] = mediaandcommunication
       comment[issn] = missing
 
-      au < ingNotReady ; exists ; 2013 ; Media and Communication Volume 1 ; 1 ; 2013 >
-      au < expected ; exists ; 2014 ; Media and Communication Volume 2 ; 2 ; 2014 >
+      au < exists ; exists ; 2013 ; Media and Communication Volume 1 ; 1 ; 2013 >
+      au < exists ; exists ; 2014 ; Media and Communication Volume 2 ; 2 ; 2014 >
 
   }
 
@@ -57,8 +59,8 @@
       param[journal_id] = politicsandgovernance
       comment[issn] = missing
 
-      au < ingNotReady ; exists ; 2013 ; Politics and Governance Volume 1 ; 1 ; 2013 >
-      au < manifest ; exists ; 2014 ; Politics and Governance Volume 2 ; 2 ; 2014 >
+      au < exists ; exists ; 2013 ; Politics and Governance Volume 1 ; 1 ; 2013 >
+      au < exists ; exists ; 2014 ; Politics and Governance Volume 2 ; 2 ; 2014 >
 
   }
 
@@ -70,8 +72,49 @@
       param[journal_id] = socialinclusion
       comment[issn] = missing
 
-      au < ingNotReady ; exists ; 2013 ; Social Inclusion Volume 1 ; 1 ; 2013 >
-      au < expected ; exists ; 2014 ; Social Inclusion Volume 2 ; 2 ; 2014 >
+      au < exists ; exists ; 2013 ; Social Inclusion Volume 1 ; 1 ; 2013 >
+      au < exists ; exists ; 2014 ; Social Inclusion Volume 2 ; 2 ; 2014 >
 
+  }
+  }
+  {
+    param[base_url] = http://www.librelloph.com/ojs/
+  {
+    title <
+      name = Challenges in Sustainability 
+    >
+      param[journal_id] = challengesinsustainability    
+      au < down ; exists ; 2013 ; Challenges in Sustainability Volume 1 [to delete] ; 1 ; 2013 >
+  }
+  {
+    title <
+      name = Journal of Human Security ;
+      issn = 1835-3800
+    >
+      param[journal_id] = journalofhumansecurity
+      au < down ; exists ; 2013 ; Journal of Human Security Volume 9 [to delete] ; 9 ; 2013 >
+  }
+  {
+    title <
+      name = Media and Communication
+    >
+      param[journal_id] = mediaandcommunication
+      au < down ; exists ; 2013 ; Media and Communication Volume 1 [to delete] ; 1 ; 2013 >
+  }
+  {
+    title <
+      name = Politics and Governance
+    >
+
+      param[journal_id] = politicsandgovernance
+      au < down ; exists ; 2013 ; Politics and Governance Volume 1 [to delete] ; 1 ; 2013 >
+  }
+  {
+    title <
+      name = Social Inclusion
+    >
+      param[journal_id] = socialinclusion
+      au < down ; exists ; 2013 ; Social Inclusion Volume 1 [to delete] ; 1 ; 2013 >
+  }
   }
 }
