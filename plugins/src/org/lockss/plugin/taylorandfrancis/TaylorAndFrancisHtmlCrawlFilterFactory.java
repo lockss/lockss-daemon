@@ -1,5 +1,5 @@
 /*
- * $Id: TaylorAndFrancisHtmlCrawlFilterFactory.java,v 1.6 2014-03-11 19:38:39 thib_gc Exp $
+ * $Id: TaylorAndFrancisHtmlCrawlFilterFactory.java,v 1.7 2014-04-17 21:31:07 alexandraohlson Exp $
  */
 
 /*
@@ -64,7 +64,15 @@ public class TaylorAndFrancisHtmlCrawlFilterFactory implements FilterFactory {
         // links to T&F articles go directly to other article
         HtmlNodeFilters.tagWithAttribute("div",  "id", "referencesPanel"),
         // If cited by other T&F could go directly to other article 
-        HtmlNodeFilters.tagWithAttribute("div",  "id", "citationsPanel"),     
+        HtmlNodeFilters.tagWithAttribute("div",  "id", "citationsPanel"), 
+        //full article has in-line references with direct links 
+        //example: http://www.tandfonline.com/doi/full/10.1080/09064702.2012.670665#.U0weNlXC02c
+        // reference #20
+        HtmlNodeFilters.tagWithAttribute("span",  "class", "referenceDiv"),     
+        // full page with references in a list at the bottom - some with direct links, see
+        //example: http://www.tandfonline.com/doi/full/10.1080/09064702.2012.670665#.U0weNlXC02c
+        // reference #20
+        HtmlNodeFilters.tagWithAttribute("ul",  "class", "references"),     
         
         // on a Corrigendum abstract or full text page, there will be a link to "Original Article"
         // and on the Original Article page there will be a link back to the "Corrigendum"

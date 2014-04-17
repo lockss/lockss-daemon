@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaylorAndFrancisHtmlFilterFactory.java,v 1.14 2014-03-11 19:38:39 thib_gc Exp $
+ * $Id: TestTaylorAndFrancisHtmlFilterFactory.java,v 1.15 2014-04-17 21:31:08 alexandraohlson Exp $
  */
 
 /*
@@ -183,6 +183,74 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
             "<li></li>" +
             "</ul>" +
             "</div>";
+    
+    private static final String inLineRefHtml =
+        "<div>" +
+            "The article starts and then. In a previous paper, Author et al. " +
+            "(<span class=\"referenceDiv\">" +
+            "<a class=\"dropDownLabel\" href=\"#CIT0020\">" +
+            "2011</a>" +
+            "<!--RIDCIT0020-->" +
+            "<span class=\"dropDown dropDownAlt\" style=\"left: -17px; top: 22px\">" +
+            "<span class=\"blockspan bd\">" +
+            "<strong>" +
+            "20." +
+            "</strong>" +
+            "Author  ,   Q. 2011  . Title of Referenced Article  .   Acta  ,   1  Ð  19  .  " +
+            "Accessed 16 December 2011, available at: " +
+            "<a href=\"http://www.tandfonline.com/doi/full/10.1080/09064702.2011.642000\" target=\"_blank\">" +
+            "http://www.tandfonline.com/doi/full/10.1080/09064702.2011.642000</a>" +
+            "   .<br>" +
+            "</br>" +
+            "<br>" +
+            "</br>" +
+            "<a href=\"/servlet/linkout?suffix=&amp;dbid=16384&amp;doi=10.1080/09064702.2012.670665\" " +
+            "title=\"OpenURL University of British Columbia\" onclick=\"newWindow(this.href);return false\" " +
+            "class=\"sfxLink\">" +
+            "<img src=\"/userimages/98671/sfxbutton\" alt=\"OpenURL University of British Columbia\" />" +
+            "</a>" +
+            "<a href=\"/servlet/linkout?suffix=&amp;dbid=16384&amp;doi=10.1080/09064702.2012.670665\" " +
+            "title=\"OpenURL Stanford University\" onclick=\"newWindow(this.href);return false\" " +
+            "class=\"sfxLink\">" +
+            "<img src=\"/userimages/98617/sfxbutton\" alt=\"OpenURL Stanford University\" />" +
+            "</a>" +
+            "<a href=\"#inline_references\">" +
+            "View all references</a>" +
+            "</span>" +
+            "<span class=\"blockspan ft\">" +
+            "</span>" +
+            "</span>" +
+            "</span>" +
+            ") and the rest of the article continues</div>";
+    private static final String inLineRefFiltered =
+        "<div>" +
+            "The article starts and then. In a previous paper, Author et al. " +
+            "(" +
+            ") and the rest of the article continues</div>";
+    
+    private static final String fullRefListing = 
+        "<div>" +
+            "<ul class=\"references\">" +
+            "<li id=\"CIT0001\">" +
+            "<strong>" +
+            "20." +
+            "</strong>" +
+            "   <span class=\"NLM_year\">" +
+            "2011</span>" +
+            "  .   Title of Referenced Article .   Reference Journal  ,   1  Ð  19  .     Accessed 16 December 2011, available at: " +
+            "<a href=\"http://www.tandfonline.com/doi/full/10.1080/09064702.2011.642000\" target=\"_blank\">" +
+            "http://www.tandfonline.com/doi/full/10.1080/09064702.2011.642000</a>" +
+            "   . <a href=\"/servlet/linkout?suffix=CIT0020&amp;dbid=16384&amp;doi=10.1080/09064702.2012.670665\" " +
+            "title=\"OpenURL University of British Columbia\" onclick=\"newWindow(this.href);return false\" class=\"sfxLink\">" +
+            "<img src=\"/userimages/98671/sfxbutton\" alt=\"OpenURL University of British Columbia\" />" +
+            "</a>" +
+            "</li>" +
+            "</ul>" +
+            "</div>";
+
+    private static final String fullRefListingFiltered =
+        "<div>" +
+            "</div>";
 
     public void setUp() throws Exception {
       super.setUp();
@@ -206,6 +274,22 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
       assertEquals(StringUtil.fromInputStream(actIn),
                    articleCorrigendumFiltered);
     }
+    
+    public void testMoreReferences() throws Exception {
+      InputStream actIn =
+        fact.createFilteredInputStream(mau,
+                                       new StringInputStream(inLineRefHtml),
+                                       Constants.DEFAULT_ENCODING);
+      assertEquals(StringUtil.fromInputStream(actIn),
+                   inLineRefFiltered);
+      
+      actIn =
+          fact.createFilteredInputStream(mau,
+                                         new StringInputStream(fullRefListing),
+                                         Constants.DEFAULT_ENCODING);
+        assertEquals(StringUtil.fromInputStream(actIn),
+                     fullRefListingFiltered);
+    } 
     
   }
 
