@@ -348,7 +348,7 @@
     au < manifest ; exists ; 2010 ; International Journal of Artificial Life Research (IJALR) Volume 1 ; 1 > 
     au < finished ; crawling ; 2011 ; International Journal of Artificial Life Research (IJALR) Volume 2 ; 2 > 
     au < finished ; crawling ; 2012 ; International Journal of Artificial Life Research (IJALR) Volume 3 ; 3 > 
-    au < manifest ; exists ; 2013 ; International Journal of Artificial Life Research (IJALR) Volume 4 ; 4 > 
+    au < testing ; exists ; 2013 ; International Journal of Artificial Life Research (IJALR) Volume 4 ; 4 > 
     au < expected ; exists ; 2014 ; International Journal of Artificial Life Research (IJALR) Volume 5 ; 5 > 
 
   }
@@ -684,7 +684,7 @@
 
     au < finished ; crawling ; 2011 ; International Journal of Cyber Warfare and Terrorism (IJCWT) Volume 1 ; 1 > 
     au < finished ; crawling ; 2012 ; International Journal of Cyber Warfare and Terrorism (IJCWT) Volume 2 ; 2 > 
-    au < manifest ; exists ; 2013 ; International Journal of Cyber Warfare and Terrorism (IJCWT) Volume 3 ; 3 > 
+    au < testing ; exists ; 2013 ; International Journal of Cyber Warfare and Terrorism (IJCWT) Volume 3 ; 3 > 
     au < expected ; exists ; 2014 ; International Journal of Cyber Warfare and Terrorism (IJCWT) Volume 4 ; 4 > 
 
   }
@@ -723,7 +723,7 @@
     param[journal_issn] = 1941-6296
 
     au < manifest ; exists ; 2009 ; International Journal of Decision Support System Technology (IJDSST) Volume 1 ; 1 > 
-    au < manifest ; exists ; 2010 ; International Journal of Decision Support System Technology (IJDSST) Volume 2 ; 2 > 
+    au < testing ; exists ; 2010 ; International Journal of Decision Support System Technology (IJDSST) Volume 2 ; 2 > 
     au < finished ; crawling ; 2011 ; International Journal of Decision Support System Technology (IJDSST) Volume 3 ; 3 > 
     au < finished ; crawling ; 2012 ; International Journal of Decision Support System Technology (IJDSST) Volume 4 ; 4 > 
     au < crawling ; exists ; 2013 ; International Journal of Decision Support System Technology (IJDSST) Volume 5 ; 5 > 
@@ -2148,7 +2148,7 @@
     >
     param[journal_issn] = 1947-3036
 
-    au < manifest ; exists ; 2010 ; International Journal of Secure Software Engineering (IJSSE) Volume 1 ; 1 > 
+    au < testing ; exists ; 2010 ; International Journal of Secure Software Engineering (IJSSE) Volume 1 ; 1 > 
     au < finished ; crawling ; 2011 ; International Journal of Secure Software Engineering (IJSSE) Volume 2 ; 2 > 
     au < finished ; crawling ; 2012 ; International Journal of Secure Software Engineering (IJSSE) Volume 3 ; 3 > 
     au < crawling ; exists ; 2013 ; International Journal of Secure Software Engineering (IJSSE) Volume 4 ; 4 > 
