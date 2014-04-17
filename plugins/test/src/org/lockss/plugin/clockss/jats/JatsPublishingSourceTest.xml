@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD Journal Publishing DTD v3.0 20080202//EN" "http://www.schweizerbart.de/resources/xml/dtd/journalpublishing3.dtd">
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" article-type="research-article" dtd-version="3.0" xml:lang="en">
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="publisher">xjid</journal-id>
+      <journal-title-group>
+        <journal-title>Excellent Journal - Smart</journal-title>
+        <journal-subtitle>With a Subtitle</journal-subtitle>
+        <abbrev-journal-title>xjid</abbrev-journal-title>
+      </journal-title-group>
+      <issn>0077-9999</issn>
+      <publisher>
+        <publisher-name>Schweizerbart Science Publishers</publisher-name>
+        <publisher-loc>Stuttgart, Germany
+          <uri>http://www.schweizerbart.com/</uri>
+          <email>mail@test.com</email>
+        </publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      
+      <article-id pub-id-type="publisher-id">98765</article-id>
+      <article-id pub-id-type="doi">10.1111/xjid/172/test</article-id>
+      <title-group>
+        <article-title>Single-Title of 
+Article</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib>
+          <name>
+            <surname>Foo</surname>
+            <given-names>Firstie</given-names>
+          </name>
+        </contrib>
+        <contrib>
+          <name>
+            <surname>Bar</surname>
+            <given-names>Second</given-names>
+          </name>
+        </contrib>
+       </contrib-group>
+      <pub-date pub-type="pub">
+        <day>01</day>
+        <month>05</month>
+        <year>1998</year>
+      </pub-date>
+      <volume>172</volume>
+      <issue>2-3</issue>
+      <fpage>309</fpage>
+      <lpage>323</lpage>
+      <abstract>
+        <p>The abstract of this article goes here</p>
+      </abstract>
+      <kwd-group>
+        <kwd>stuff</kwd>
+        <kwd>pressure</kwd>
+        <kwd>testing</kwd>
+      </kwd-group>
+      <counts>
+        <fig-count count="5"/>
+        <table-count count="3"/>
+      </counts>
+      <custom-meta-group>
+        <custom-meta>
+          <meta-name>paper_type</meta-name>
+          <meta-value>1</meta-value>
+        </custom-meta>
+        <custom-meta>
+          <meta-name>paper_type_name</meta-name>
+          <meta-value>research_paper</meta-value>
+        </custom-meta>
+      </custom-meta-group>
+    </article-meta>
+  </front>
+  <body>
+    <p>
+      <preformat>
+The entire article goes in here
+</preformat>
+    </p>
+  </body>
+  <back>
+    <ref-list>
+      <ref id="ref1">
+        <mixed-citation>Bell, P. M. &amp; Mao, H. K. (1981): Degree of hydrostaticity in He, Ne, and Ar pressuretransmitting media. - Carnegie Inst. Washington Yb. 80: 404-406.</mixed-citation>
+      </ref>
+      <ref id="ref2">
+        <mixed-citation>Chai, M. &amp; Brown, M. (1996): Effects of static non-hydrostatic stress on the R lines of ruby single crystals. - Geophys. Res. Lett. 23: 3339-3342.</mixed-citation>
+      </ref>
+      <ref id="ref3">
+        <mixed-citation>Cohen, R. E., Mazin, I. I. &amp; Isaak, D. E. (1997): Magnetic collapse in transition metal oxides at high pressure: Implications for the Earth. - Science 275: 654-657.</mixed-citation>
+      </ref>
+      <ref id="ref4">
+        <mixed-citation>Fei, Y. (1996): Crystal chemistry of FeO at high pressure and temperature. - In: DYAR, M. D., MCCAMMON, C. &amp; SCHAEFER, M. W. (eds.): Mineral spectroscopy: A tribute to ROGER G. BURNS. - The Geochemical Society, pp. 243-254.</mixed-citation>
+      </ref>
+      <ref id="ref5">
+        <mixed-citation>Hazen, R. M., Mao, H. K., Finger, L. W. &amp; Bell, P. M. (1981): Irreversible unit-cell volume changes of wüstite single crystals quenched from high pressure. - Carnegie Inst. Washington Yb. 80: 274-277.</mixed-citation>
+      </ref>
+      <ref id="ref6">
+        <mixed-citation>Hemley, R. J., Mao, H. K., Shen, G., Badro, J., Gillet, P., Hanfland, M. &amp; Häusermann, D. (1997): X-ray imaging of stress and strain of diamond, iron, and tungsten at megabar pressures. - Science 276: 1242-1245.</mixed-citation>
+      </ref>
+      <ref id="ref7">
+        <mixed-citation>Hemley, R. J., Zha, C. S., Lephcoat, A. P., Mao, H. K., Finger, L. W. &amp; Cox, D. E. (1989): X-ray diffraction and equation of state of solid neon to 110 GPa. - Phys. Rev. B 39: 11820-11827.</mixed-citation>
+      </ref>
+      <ref id="ref8">
+        <mixed-citation>Isaak, D. G., Cohen, R. E., Mehl, M. J. &amp; Singh, D. J. (1993): Phase stability of wüstite at high pressure from first-principles linearized augmented plane-wave calculations. - Phys. Rev. B 47: 7720-7731.</mixed-citation>
+      </ref>
+      <ref id="ref9">
+        <mixed-citation>Jackson, I., Khanna, S. K., Revcolevschi, A. &amp; Berthon, J. (1990): Elasticity, shear-mode softening and high-pressure polymorphism of Wüstite (Fe1_xO). - J. Geophys. Res. 95: 21671-21685.</mixed-citation>
+      </ref>
+      <ref id="ref10">
+        <mixed-citation>Jeanloz, R. &amp; Sato-Sorensen, Y. (1986): Hydrostatic compression of Fel_xO wüstite. - J. Geophys. Res. 91: 4665-4672.</mixed-citation>
+      </ref>
+      <ref id="ref11">
+        <mixed-citation>Knittle, E. &amp; Jeanloz, R. (1991): The high-pressure phase diagram of Fe0.94O: A possible constituent of the earth's core. - J. Geophys. Res. 96: 16169-16180.</mixed-citation>
+      </ref>
+      <ref id="ref12">
+        <mixed-citation>Liu, M. &amp; Liu, L. G. (1987): Bulk moduli of Wüstite and periclase: a comparative study. - Phys. Earth Planet. Inter. 45: 273-279.</mixed-citation>
+      </ref>
+      <ref id="ref13">
+        <mixed-citation>Loubeyre, P., Le Toullec, R., Häusermann, D., Hanfland, M., Hemley, R. J..Mao, H. K. &amp; Finger, L. W. (1996): X-ray diffraction and equation of state of hydrogen at megabar pressures. - Nature 383: 702-704.</mixed-citation>
+      </ref>
+      <ref id="ref14">
+        <mixed-citation>Loubeyre, P., Le Toullec, R., Pinceaux, J. P., Mao, H. K., Hu, J. &amp; Hemley, R. J. (1993): Equation of state and phase diagram of solid 4He from single-crystal X-ray diffraction over a large P-T domain. - Phys. Rev. Lett. 71: 2272-2275.</mixed-citation>
+      </ref>
+      <ref id="ref15">
+        <mixed-citation>Mao, H. K. &amp; Hemley, R. J. (1996): Energy dispersive X-ray diffraction of microcrystals at ultrahigh pressures. - High Pressure Res. 14: 257-267. </mixed-citation>
+      </ref>
+      <ref id="ref16">
+        <mixed-citation>Mao, H. K. (1996): Experimental studies of Earth deep interior: Accuracy and versatility of diamond cells. - Phil. Trans. R. Soc. Lond. A 354: 1315-1333.</mixed-citation>
+      </ref>
+      <ref id="ref17">
+        <mixed-citation>Mao, H. K., Shu, J., Fei, Y., Hu, H. &amp; Hemley, R. J. (1996): The wüstite enigma. -Phys. Earth Planet. Inter. 96: 135-145.</mixed-citation>
+      </ref>
+      <ref id="ref18">
+        <mixed-citation>Mao, H. K., Takahashi, T., Bassett, W. A. &amp; Weaver, J. S. (1969): Effect of pressure and temperature on the molar volumes of wüstite and of three (Fe, Mg)2SiO4 spinel solid solutions. - J. Geophys. Res. 74: 1061-1069.</mixed-citation>
+      </ref>
+      <ref id="ref19">
+        <mixed-citation>Mao, H. K., Xu, J. &amp; Bell, P. M. (1986): Calibration of the ruby pressure gauge to 800 kbar under quasihydrostatic conditions. - J. Geophys. Res. 91, B 5: 4673-4676.</mixed-citation>
+      </ref>
+      <ref id="ref20">
+        <mixed-citation>Merrill, L. &amp; Bassett, W. A. (1974): Miniature diamond-anvil cell for X-ray diffraction studies. - Rev. Sci. Instrum. 45: 290-294.</mixed-citation>
+      </ref>
+      <ref id="ref21">
+        <mixed-citation>Ringwood, A. E. (1977): Composition of the core and implications for origin of the earth. - Geochem. J. 11: 111-135.</mixed-citation>
+      </ref>
+      <ref id="ref22">
+        <mixed-citation>Rosenhauer, M., Mao, H. &amp; Woermann, E. (1976): Compressibility of magnesiowüstite (FeO.4Mg0.6O) to 264 kbar. - Carnegie Inst. Washington Yb. 75: 513-515.</mixed-citation>
+      </ref>
+      <ref id="ref23">
+        <mixed-citation>Stevenson, D. J. (1981): Models of the Earth's core. - Science 241: 611-619.</mixed-citation>
+      </ref>
+      <ref id="ref24">
+        <mixed-citation>Yagi, T., Suzuki, T. &amp; Akimoto, S. (1985): Static compression of wüstite (Fe0.98O) to 120 GPa. - J. Geophys. Res. 90: 8784-8788.</mixed-citation>
+      </ref>
+      <ref id="ref25">
+        <mixed-citation>Zou, G., Mao, H. K., Bell, P. M. &amp; Virgo, D. (1980): High-pressure experiments on the iron oxide wüstite (Fe1_xO). - Carnegie Inst. Washington Yb. 79: 374-376.</mixed-citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>
