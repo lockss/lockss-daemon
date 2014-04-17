@@ -18427,6 +18427,33 @@
 
   }
 
+    {
+
+      title <
+        name = Journal of Diabetes Science and Technology ;
+        issn = 1932-2968 ;
+        eissn = 1932-2968
+      >
+
+        param[base_url] = http://dst.sagepub.com/
+
+      {
+
+        pluginSuffix = ClockssHighWirePressH20Plugin
+
+        au < exists ; exists ; 2007 ; Journal of Diabetes Science and Technology Volume 1 ; 1 ; >
+        au < exists ; exists ; 2008 ; Journal of Diabetes Science and Technology Volume 2 ; 2 ; >
+        au < exists ; exists ; 2009 ; Journal of Diabetes Science and Technology Volume 3 ; 3 ; >
+        au < exists ; exists ; 2010 ; Journal of Diabetes Science and Technology Volume 4 ; 4 ; >
+        au < exists ; exists ; 2011 ; Journal of Diabetes Science and Technology Volume 5 ; 5 ; >
+        au < exists ; exists ; 2012 ; Journal of Diabetes Science and Technology Volume 6 ; 6 ; >
+        au < exists ; exists ; 2013 ; Journal of Diabetes Science and Technology Volume 7 ; 7 ; >
+        au < exists ; exists ; 2014 ; Journal of Diabetes Science and Technology Volume 8 ; 8 ; >
+
+      }
+
+    }
+
   {
   
     title <
