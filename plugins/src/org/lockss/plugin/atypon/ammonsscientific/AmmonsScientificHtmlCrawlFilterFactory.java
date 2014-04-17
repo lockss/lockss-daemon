@@ -1,5 +1,5 @@
 /*
- * $Id: AmmonsScientificHtmlCrawlFilterFactory.java,v 1.1 2014-04-08 19:00:04 alexandraohlson Exp $
+ * $Id: AmmonsScientificHtmlCrawlFilterFactory.java,v 1.2 2014-04-17 21:25:08 alexandraohlson Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.atypon.ammonsscientific;
 
 import java.io.InputStream;
+import java.util.regex.Pattern;
 
 import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
@@ -46,6 +47,8 @@ import org.lockss.plugin.*;
 import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
 
 public class AmmonsScientificHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory {
+  
+  protected static final Pattern corrections = Pattern.compile("Original Article|Original|Corrigendum|Correction|Errata|Erratum", Pattern.CASE_INSENSITIVE);
 
   NodeFilter[] filters = new NodeFilter[] {
       // do not follow an "original article" link back to a previous volume
@@ -61,9 +64,10 @@ public class AmmonsScientificHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlF
           // if there is a class val, it will equal "ref" or "ref nowrap"
           if ( (classVal == null) || classVal.startsWith("ref") ) {
             String allText = (((CompositeTag)node).toPlainTextString()).trim();
-            // We've trimmed leading/trailing spaces to make regex more specific 
-            // to try to make sure we only match this limited set of words
-            return (allText.matches("(?is)Original Article") || allText.matches("(?is)Original") || allText.matches("(?is)Errat.*") );
+            // Because we match against the not-very-unique word "Original", we've trimmed
+            // the text and must match exactly (not just find)
+            return corrections.matcher(allText).matches(); 
+            //return (allText.matches("(?is)Original Article") || allText.matches("(?is)Original") || allText.matches("(?is)Errat.*") );
           }
           return false;
         }

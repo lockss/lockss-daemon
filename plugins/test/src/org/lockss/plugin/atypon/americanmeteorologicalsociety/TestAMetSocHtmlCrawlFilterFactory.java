@@ -1,5 +1,5 @@
 /*
- * $Id: TestAMetSocHtmlCrawlFilterFactory.java,v 1.1 2013-07-31 21:43:59 alexandraohlson Exp $
+ * $Id: TestAMetSocHtmlCrawlFilterFactory.java,v 1.2 2014-04-17 21:25:08 alexandraohlson Exp $
  */
 package org.lockss.plugin.atypon.americanmeteorologicalsociety;
 
@@ -77,6 +77,44 @@ public class TestAMetSocHtmlCrawlFilterFactory extends LockssTestCase {
           "            "+
           "       </li>"+
           "</ul>";
+  
+  private static final String againCorrig =
+      "<td align=\"right\" valign=\"top\" width=\"18\" class=\"nowrap\">2360</td>" +
+      "<td align=\"right\" valign=\"top\" width=\"18\" class=\"tocCheck\">" +
+      "<input type=\"checkbox\" name=\"doi\" value=\"10.1175/2007JAS2421.1\"/>" +
+      "<img src=\"/templates/jsp/_style2/_AP/images/access_free.gif\" alt=\"open access\" title=\"open access\" class=\"accessIcon\" /></td>" +
+      "<td valign=\"top\" width=\"85%\">" +
+      "<div class=\"art_title\">Foo</div>" +
+      "<span class=\"author\">Marvin A. Geller</span>, <span class=\"author\">Tiehan Zhou</span>, <span class=\"author\">Kevin Hamilton</span><br />" +
+      "<a class=\"ref nowrap \" href=\"/doi/abs/10.1175/2007JAS2421.1\">Abstract</a>" +
+      "." +
+      "<a class=\"ref nowrap\" href=\"/doi/full/10.1175/2007JAS2421.1\">Full Text</a>" +
+      "    ." +
+      "    <a class=\"ref nowrap\" target=\"_blank\" title=\"Opens new window\" href=\"/doi/pdf/10.1175/2007JAS2421.1\">PDF (1068 KB)</a>" +
+      "<span class=\"linkDemarcator\"> | </span>" +
+      "<a class=\"ref nowrap\" href=\"/doi/full/10.1175/JAS2898.1\">Corrigendum</a>" +
+      "&nbsp;<a href=\"/servlet/linkout?suffix=s0&amp;dbid=16384&amp;type=tocOpenUrl&amp;doi=10.1175/2007JAS2421.1&amp;url=http%3A%2F%2Flibrary.stanford.edu%2Fsfx%3Fsid%3Dams%26id%3Ddoi%3A10.1175%2F2007JAS2421.1\" title=\"OpenURL STANFORD UNIV. GREEN LIBRARY\" onclick=\"newWindow(this.href);return false\" class=\"sfxLink\">" +
+      "<img src=\"/userimages/2097/sfxbutton\" alt=\"OpenURL STANFORD UNIV. GREEN LIBRARY\" /></a>" +
+      "</td>";
+  
+  private static final String filteredAgainCorrig =
+      "<td align=\"right\" valign=\"top\" width=\"18\" class=\"nowrap\">2360</td>" +
+      "<td align=\"right\" valign=\"top\" width=\"18\" class=\"tocCheck\">" +
+      "<input type=\"checkbox\" name=\"doi\" value=\"10.1175/2007JAS2421.1\"/>" +
+      "<img src=\"/templates/jsp/_style2/_AP/images/access_free.gif\" alt=\"open access\" title=\"open access\" class=\"accessIcon\" /></td>" +
+      "<td valign=\"top\" width=\"85%\">" +
+      "<div class=\"art_title\">Foo</div>" +
+      "<span class=\"author\">Marvin A. Geller</span>, <span class=\"author\">Tiehan Zhou</span>, <span class=\"author\">Kevin Hamilton</span><br />" +
+      "<a class=\"ref nowrap \" href=\"/doi/abs/10.1175/2007JAS2421.1\">Abstract</a>" +
+      "." +
+      "<a class=\"ref nowrap\" href=\"/doi/full/10.1175/2007JAS2421.1\">Full Text</a>" +
+      "    ." +
+      "    <a class=\"ref nowrap\" target=\"_blank\" title=\"Opens new window\" href=\"/doi/pdf/10.1175/2007JAS2421.1\">PDF (1068 KB)</a>" +
+      "<span class=\"linkDemarcator\"> | </span>" +
+      "" +
+      "&nbsp;<a href=\"/servlet/linkout?suffix=s0&amp;dbid=16384&amp;type=tocOpenUrl&amp;doi=10.1175/2007JAS2421.1&amp;url=http%3A%2F%2Flibrary.stanford.edu%2Fsfx%3Fsid%3Dams%26id%3Ddoi%3A10.1175%2F2007JAS2421.1\" title=\"OpenURL STANFORD UNIV. GREEN LIBRARY\" onclick=\"newWindow(this.href);return false\" class=\"sfxLink\">" +
+      "<img src=\"/userimages/2097/sfxbutton\" alt=\"OpenURL STANFORD UNIV. GREEN LIBRARY\" /></a>" +
+      "</td>";
 
 
   public void testCitationsFiltering() throws Exception {
@@ -91,6 +129,10 @@ public class TestAMetSocHtmlCrawlFilterFactory extends LockssTestCase {
      actIn = fact.createFilteredInputStream(mau, new StringInputStream(withCorrigendum),
         Constants.DEFAULT_ENCODING);
     assertEquals(withoutCorrigendum, StringUtil.fromInputStream(actIn));
+    
+    actIn = fact.createFilteredInputStream(mau, new StringInputStream(againCorrig),
+        Constants.DEFAULT_ENCODING);
+    assertEquals(filteredAgainCorrig, StringUtil.fromInputStream(actIn));
   }
 
 
