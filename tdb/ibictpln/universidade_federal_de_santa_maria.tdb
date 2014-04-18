@@ -341,26 +341,26 @@
       comment[publisher] = Universidade Federal de Santa Maria
       param[journal_id] = extensaorural
 
-      au < testing ; 1993 ; 1 ; Extensão Rural Volume 1993 ; 1993 >
-      au < testing ; 1994 ; 2 ; Extensão Rural Volume 1994 ; 1994 >
-      au < testing ; 1995 ; 3 ; Extensão Rural Volume 1995 ; 1995 >
-      au < testing ; 1996 ; 4 ; Extensão Rural Volume 1996 ; 1996 >
-      au < testing ; 1997 ; 5 ; Extensão Rural Volume 1997 ; 1997 >
-      au < testing ; 1998 ; 6 ; Extensão Rural Volume 1998 ; 1998 >
-      au < testing ; 1999 ; 7 ; Extensão Rural Volume 1999 ; 1999 >
-      au < testing ; 2000 ; 8 ; Extensão Rural Volume 2000 ; 2000 >
-      au < testing ; 2001 ; 9 ; Extensão Rural Volume 2001 ; 2001 >
-      au < testing ; 2002 ; 10 ; Extensão Rural Volume 2002 ; 2002 >
-      au < testing ; 2003 ; 11 ; Extensão Rural Volume 2003 ; 2003 >
-      au < testing ; 2004 ; 12 ; Extensão Rural Volume 2004 ; 2004 >
-      au < testing ; 2005 ; 13 ; Extensão Rural Volume 2005 ; 2005 >
-      au < testing ; 2006 ; 14 ; Extensão Rural Volume 2006 ; 2006 >
-      au < testing ; 2007 ; 15 ; Extensão Rural Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 16 ; Extensão Rural Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 17 ; Extensão Rural Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 18 ; Extensão Rural Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 19 ; Extensão Rural Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 20 ; Extensão Rural Volume 2012 ; 2012 >
+      au < ready ; 1993 ; 1 ; Extensão Rural Volume 1993 ; 1993 >
+      au < ready ; 1994 ; 2 ; Extensão Rural Volume 1994 ; 1994 >
+      au < ready ; 1995 ; 3 ; Extensão Rural Volume 1995 ; 1995 >
+      au < ready ; 1996 ; 4 ; Extensão Rural Volume 1996 ; 1996 >
+      au < ready ; 1997 ; 5 ; Extensão Rural Volume 1997 ; 1997 >
+      au < ready ; 1998 ; 6 ; Extensão Rural Volume 1998 ; 1998 >
+      au < ready ; 1999 ; 7 ; Extensão Rural Volume 1999 ; 1999 >
+      au < ready ; 2000 ; 8 ; Extensão Rural Volume 2000 ; 2000 >
+      au < ready ; 2001 ; 9 ; Extensão Rural Volume 2001 ; 2001 >
+      au < ready ; 2002 ; 10 ; Extensão Rural Volume 2002 ; 2002 >
+      au < ready ; 2003 ; 11 ; Extensão Rural Volume 2003 ; 2003 >
+      au < ready ; 2004 ; 12 ; Extensão Rural Volume 2004 ; 2004 >
+      au < ready ; 2005 ; 13 ; Extensão Rural Volume 2005 ; 2005 >
+      au < ready ; 2006 ; 14 ; Extensão Rural Volume 2006 ; 2006 >
+      au < ready ; 2007 ; 15 ; Extensão Rural Volume 2007 ; 2007 >
+      au < ready ; 2008 ; 16 ; Extensão Rural Volume 2008 ; 2008 >
+      au < ready ; 2009 ; 17 ; Extensão Rural Volume 2009 ; 2009 >
+      au < ready ; 2010 ; 18 ; Extensão Rural Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 19 ; Extensão Rural Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 20 ; Extensão Rural Volume 2012 ; 2012 >
       au < expected ; 2013 ; 21 ; Extensão Rural Volume 2013 ; 2013 >
       au < expected ; 2014 ; 22 ; Extensão Rural Volume 2014 ; 2014 >
 
@@ -377,28 +377,28 @@
       comment[publisher] = Universidade Federal de Santa Maria
       param[journal_id] = letras
 
-      au < testing ; 1991 ; 1 ; Letras Volume 1991 ; 1991 >
-      au < testing ; 1992 ; 2 ; Letras Volume 1992 ; 1992 >
-      au < testing ; 1993 ; 3 ; Letras Volume 1993 ; 1993 >
-      au < testing ; 1994 ; 4 ; Letras Volume 1994 ; 1994 >
-      au < testing ; 1995 ; 5 ; Letras Volume 1995 ; 1995 >
-      au < testing ; 1996 ; 6 ; Letras Volume 1996 ; 1996 >
-      au < testing ; 1997 ; 7 ; Letras Volume 1997 ; 1997 >
-      au < testing ; 1998 ; 8 ; Letras Volume 1998 ; 1998 >
-      au < testing ; 1999 ; 9 ; Letras Volume 1999 ; 1999 >
-      au < testing ; 2000 ; 10 ; Letras Volume 2000 ; 2000 >
-      au < testing ; 2001 ; 11 ; Letras Volume 2001 ; 2001 >
-      au < testing ; 2002 ; 12 ; Letras Volume 2002 ; 2002 >
-      au < testing ; 2003 ; 13 ; Letras Volume 2003 ; 2003 >
-      au < testing ; 2004 ; 14 ; Letras Volume 2004 ; 2004 >
-      au < testing ; 2005 ; 15 ; Letras Volume 2005 ; 2005 >
-      au < testing ; 2006 ; 16 ; Letras Volume 2006 ; 2006 >
-      au < testing ; 2007 ; 17 ; Letras Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 18 ; Letras Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 19 ; Letras Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 20 ; Letras Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 21 ; Letras Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 22 ; Letras Volume 2012 ; 2012 >
+      au < ready ; 1991 ; 1 ; Letras Volume 1991 ; 1991 >
+      au < ready ; 1992 ; 2 ; Letras Volume 1992 ; 1992 >
+      au < ready ; 1993 ; 3 ; Letras Volume 1993 ; 1993 >
+      au < ready ; 1994 ; 4 ; Letras Volume 1994 ; 1994 >
+      au < ready ; 1995 ; 5 ; Letras Volume 1995 ; 1995 >
+      au < ready ; 1996 ; 6 ; Letras Volume 1996 ; 1996 >
+      au < ready ; 1997 ; 7 ; Letras Volume 1997 ; 1997 >
+      au < ready ; 1998 ; 8 ; Letras Volume 1998 ; 1998 >
+      au < ready ; 1999 ; 9 ; Letras Volume 1999 ; 1999 >
+      au < ready ; 2000 ; 10 ; Letras Volume 2000 ; 2000 >
+      au < ready ; 2001 ; 11 ; Letras Volume 2001 ; 2001 >
+      au < ready ; 2002 ; 12 ; Letras Volume 2002 ; 2002 >
+      au < ready ; 2003 ; 13 ; Letras Volume 2003 ; 2003 >
+      au < ready ; 2004 ; 14 ; Letras Volume 2004 ; 2004 >
+      au < ready ; 2005 ; 15 ; Letras Volume 2005 ; 2005 >
+      au < ready ; 2006 ; 16 ; Letras Volume 2006 ; 2006 >
+      au < ready ; 2007 ; 17 ; Letras Volume 2007 ; 2007 >
+      au < ready ; 2008 ; 18 ; Letras Volume 2008 ; 2008 >
+      au < ready ; 2009 ; 19 ; Letras Volume 2009 ; 2009 >
+      au < ready ; 2010 ; 20 ; Letras Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 21 ; Letras Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 22 ; Letras Volume 2012 ; 2012 >
       au < expected ; 2013 ; 23 ; Letras Volume 2013 ; 2013 >
       au < expected ; 2014 ; 24 ; Letras Volume 2014 ; 2014 >
 
@@ -414,11 +414,11 @@
       comment[publisher] = Universidade Federal de Santa Maria
       param[journal_id] = reaufsm
 
-      au < testing ; 2008 ; 1 ; Revista de Administração da UFSM Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 2 ; Revista de Administração da UFSM Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 3 ; Revista de Administração da UFSM Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 4 ; Revista de Administração da UFSM Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 5 ; Revista de Administração da UFSM Volume 2012 ; 2012 >
+      au < ready ; 2008 ; 1 ; Revista de Administração da UFSM Volume 2008 ; 2008 >
+      au < ready ; 2009 ; 2 ; Revista de Administração da UFSM Volume 2009 ; 2009 >
+      au < ready ; 2010 ; 3 ; Revista de Administração da UFSM Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 4 ; Revista de Administração da UFSM Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 5 ; Revista de Administração da UFSM Volume 2012 ; 2012 >
       au < expected ; 2013 ; 6 ; Revista de Administração da UFSM Volume 2013 ; 2013 >
       au < expected ; 2014 ; 7 ; Revista de Administração da UFSM Volume 2014 ; 2014 >
 
@@ -434,15 +434,15 @@
       comment[publisher] = Universidade Federal de Santa Maria
       param[journal_id] = contabilidade
 
-      au < testing ; 2004 ; 1 ; Revista Eletrônica de Contabilidade Volume 2004 ; 2004 >
-      au < testing ; 2005 ; 2 ; Revista Eletrônica de Contabilidade Volume 2005 ; 2005 >
-      au < testing ; 2006 ; 3 ; Revista Eletrônica de Contabilidade Volume 2006 ; 2006 >
-      au < testing ; 2007 ; 4 ; Revista Eletrônica de Contabilidade Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 5 ; Revista Eletrônica de Contabilidade Volume 2008 ; 2008 >
+      au < ready ; 2004 ; 1 ; Revista Eletrônica de Contabilidade Volume 2004 ; 2004 >
+      au < ready ; 2005 ; 2 ; Revista Eletrônica de Contabilidade Volume 2005 ; 2005 >
+      au < ready ; 2006 ; 3 ; Revista Eletrônica de Contabilidade Volume 2006 ; 2006 >
+      au < ready ; 2007 ; 4 ; Revista Eletrônica de Contabilidade Volume 2007 ; 2007 >
+      au < ready ; 2008 ; 5 ; Revista Eletrônica de Contabilidade Volume 2008 ; 2008 >
       au < exists ; 2009 ; 6 ; Revista Eletrônica de Contabilidade Volume 2009 ; 2009 >
       au < exists ; 2010 ; 7 ; Revista Eletrônica de Contabilidade Volume 2010 ; 2010 >
       au < exists ; 2011 ; 8 ; Revista Eletrônica de Contabilidade Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 9 ; Revista Eletrônica de Contabilidade Volume 2012 ; 2012 >
+      au < ready ; 2012 ; 9 ; Revista Eletrônica de Contabilidade Volume 2012 ; 2012 >
       au < expected ; 2013 ; 10 ; Revista Eletrônica de Contabilidade Volume 2013 ; 2013 >
       au < expected ; 2014 ; 11 ; Revista Eletrônica de Contabilidade Volume 2014 ; 2014 >
 
