@@ -1,5 +1,5 @@
 /*
- * $Id: TestDaemonStatusService.java,v 1.2 2014-04-04 22:00:45 fergaloy-sf Exp $
+ * $Id: TestDaemonStatusService.java,v 1.3 2014-04-18 19:35:02 fergaloy-sf Exp $
  */
 
 /*
@@ -58,6 +58,7 @@ import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockLockssDaemon;
 import org.lockss.util.ExternalizableMap;
 import org.lockss.util.Logger;
+import org.lockss.ws.entities.AuWsResult;
 import org.lockss.ws.entities.IdNamePair;
 import org.lockss.ws.entities.PluginWsResult;
 
@@ -265,6 +266,171 @@ public class TestDaemonStatusService extends LockssTestCase {
     assertNull(plugin.getType());
     assertEquals(2, plugin.getDefinition().size());
     assertNull(plugin.getRegistry());
+  }
+
+  /**
+   * Runs the test that queries Archival Units.
+   * 
+   * @throws Exception
+   */
+  public void testQueryAus() throws Exception {
+    String auIdStart =
+	"org|lockss|ws|status|TestDaemonStatusService$MySimulatedPlugin";
+    String pluginNameStart =
+	"org.lockss.ws.status.TestDaemonStatusService$MySimulatedPlugin";
+    String query = "select *";
+    List<AuWsResult> aus = service.queryAus(query);
+    assertEquals(2, aus.size());
+    AuWsResult au = aus.get(0);
+    assertTrue(au.getAuId().startsWith(auIdStart));
+    assertTrue(au.getName().startsWith("Simulated Content: /"));
+    assertEquals(au.getName(), au.getVolume());
+    assertTrue(au.getPluginName().startsWith(pluginNameStart));
+    assertEquals("Subscription", au.getAccessType());
+    assertTrue(au.getAvailableFromPublisher());
+    assertEquals(1, au.getAuConfiguration().getDefParams().size());
+    assertEquals(6, au.getAuConfiguration().getNonDefParams().size());
+    assertFalse(au.getIsBulkContent());
+    au = aus.get(1);
+    assertTrue(au.getAuId().startsWith(auIdStart));
+    assertTrue(au.getName().startsWith("Simulated Content: /"));
+    assertEquals(au.getName(), au.getVolume());
+    assertTrue(au.getPluginName().startsWith(pluginNameStart));
+    assertEquals("Subscription", au.getAccessType());
+    assertTrue(au.getAvailableFromPublisher());
+    assertEquals(1, au.getAuConfiguration().getDefParams().size());
+    assertEquals(6, au.getAuConfiguration().getNonDefParams().size());
+    assertFalse(au.getIsBulkContent());
+
+    query = "select auId";
+    aus = service.queryAus(query);
+    assertEquals(2, aus.size());
+    au = aus.get(0);
+    assertTrue(au.getAuId().startsWith(auIdStart));
+    assertNull(au.getName());
+    assertNull(au.getVolume());
+    assertNull(au.getPluginName());
+    assertNull(au.getAccessType());
+    assertNull(au.getAvailableFromPublisher());
+    assertNull(au.getAuConfiguration());
+    assertNull(au.getIsBulkContent());
+    au = aus.get(1);
+    assertTrue(au.getAuId().startsWith(auIdStart));
+    assertNull(au.getName());
+    assertNull(au.getVolume());
+    assertNull(au.getPluginName());
+    assertNull(au.getAccessType());
+    assertNull(au.getAvailableFromPublisher());
+    assertNull(au.getAuConfiguration());
+    assertNull(au.getIsBulkContent());
+
+    query = "select name, accessType, isBulkContent";
+    aus = service.queryAus(query);
+    assertEquals(2, aus.size());
+    au = aus.get(0);
+    assertNull(au.getAuId());
+    assertTrue(au.getName().startsWith("Simulated Content: /"));
+    assertNull(au.getVolume());
+    assertNull(au.getPluginName());
+    assertEquals("Subscription", au.getAccessType());
+    assertNull(au.getAvailableFromPublisher());
+    assertNull(au.getAuConfiguration());
+    assertFalse(au.getIsBulkContent());
+    au = aus.get(1);
+    assertNull(au.getAuId());
+    assertTrue(au.getName().startsWith("Simulated Content: /"));
+    assertNull(au.getVolume());
+    assertNull(au.getPluginName());
+    assertEquals("Subscription", au.getAccessType());
+    assertNull(au.getAvailableFromPublisher());
+    assertNull(au.getAuConfiguration());
+    assertFalse(au.getIsBulkContent());
+
+    String auIdStart0 =
+	"org|lockss|ws|status|TestDaemonStatusService$MySimulatedPlugin0&root~%2F";
+    String pluginName0 =
+	"org.lockss.ws.status.TestDaemonStatusService$MySimulatedPlugin0";
+    query = "select * where auId like '%Service\\$MySimulatedPlugin0%'";
+    aus = service.queryAus(query);
+    assertEquals(1, aus.size());
+    au = aus.get(0);
+    assertTrue(au.getAuId().startsWith(auIdStart0));
+    assertTrue(au.getName().startsWith("Simulated Content: /"));
+    assertEquals(au.getName(), au.getVolume());
+    assertEquals(pluginName0, au.getPluginName());
+    assertEquals("Subscription", au.getAccessType());
+    assertTrue(au.getAvailableFromPublisher());
+    assertEquals(1, au.getAuConfiguration().getDefParams().size());
+    assertEquals(6, au.getAuConfiguration().getNonDefParams().size());
+    assertFalse(au.getIsBulkContent());
+
+    query = "select * where name like 'Real Content%'";
+    aus = service.queryAus(query);
+    assertEquals(0, aus.size());
+
+    query = "select * where auId like '%Service\\$MySimulatedPlugin0%' "
+	+ "or name like 'Real Content%'";
+    aus = service.queryAus(query);
+    assertEquals(1, aus.size());
+    au = aus.get(0);
+    assertTrue(au.getAuId().startsWith(auIdStart0));
+    assertTrue(au.getName().startsWith("Simulated Content: /"));
+    assertEquals(au.getName(), au.getVolume());
+    assertEquals(pluginName0, au.getPluginName());
+    assertEquals("Subscription", au.getAccessType());
+    assertTrue(au.getAvailableFromPublisher());
+    assertEquals(1, au.getAuConfiguration().getDefParams().size());
+    assertEquals(6, au.getAuConfiguration().getNonDefParams().size());
+    assertFalse(au.getIsBulkContent());
+
+    query = "select * where auId like '%Service\\$MySimulatedPlugin0%' "
+	+ "and name like 'Real Content%'";
+    aus = service.queryAus(query);
+    assertEquals(0, aus.size());
+
+    String auIdStart1 =
+	"org|lockss|ws|status|TestDaemonStatusService$MySimulatedPlugin1&root~%2F";
+    String pluginName1 =
+	"org.lockss.ws.status.TestDaemonStatusService$MySimulatedPlugin1";
+    query = "select auId, pluginName where accessType = 'Subscription' "
+	+ "order by auId";
+    aus = service.queryAus(query);
+    assertEquals(2, aus.size());
+    au = aus.get(0);
+    assertTrue(au.getAuId().startsWith(auIdStart0));
+    assertNull(au.getName());
+    assertNull(au.getVolume());
+    assertEquals(pluginName0, au.getPluginName());
+    assertNull(au.getAccessType());
+    assertNull(au.getAvailableFromPublisher());
+    assertNull(au.getAuConfiguration());
+    assertNull(au.getIsBulkContent());
+    au = aus.get(1);
+    assertTrue(au.getAuId().startsWith(auIdStart1));
+    assertNull(au.getName());
+    assertNull(au.getVolume());
+    assertEquals(pluginName1, au.getPluginName());
+    assertNull(au.getAccessType());
+    assertNull(au.getAvailableFromPublisher());
+    assertNull(au.getAuConfiguration());
+    assertNull(au.getIsBulkContent());
+
+    query = "select newContentCrawlUrls where accessType = 'Subscription' "
+	+ "order by auId";
+    aus = service.queryAus(query);
+    assertEquals(2, aus.size());
+    au = aus.get(0);
+    assertEquals(1, au.getNewContentCrawlUrls().size());
+    au = aus.get(1);
+    assertEquals(1, au.getNewContentCrawlUrls().size());
+
+    query = "select urlStems where accessType = 'Subscription' order by auId";
+    aus = service.queryAus(query);
+    assertEquals(2, aus.size());
+    au = aus.get(0);
+    assertEquals(1, au.getUrlStems().size());
+    au = aus.get(1);
+    assertEquals(1, au.getUrlStems().size());
   }
 
   private Configuration simAuConfig(String rootPath) {

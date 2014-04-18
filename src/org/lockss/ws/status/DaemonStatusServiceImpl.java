@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatusServiceImpl.java,v 1.4 2014-04-04 22:00:45 fergaloy-sf Exp $
+ * $Id: DaemonStatusServiceImpl.java,v 1.5 2014-04-18 19:35:03 fergaloy-sf Exp $
  */
 
 /*
@@ -35,7 +35,6 @@
  */
 package org.lockss.ws.status;
 
-import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
@@ -47,23 +46,12 @@ import org.josql.QueryExecutionException;
 import org.josql.QueryParseException;
 import org.josql.QueryResults;
 import org.lockss.app.LockssDaemon;
-import org.lockss.crawler.CrawlManager;
-import org.lockss.daemon.CrawlWindow;
-import org.lockss.daemon.TitleConfig;
 import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.AuUtil;
-import org.lockss.plugin.CachedUrlSet;
-import org.lockss.plugin.Plugin;
 import org.lockss.plugin.PluginManager;
-import org.lockss.poller.Poll;
-import org.lockss.poller.PollManager;
-import org.lockss.repository.LockssRepositoryImpl;
-import org.lockss.state.AuState;
-import org.lockss.state.NodeManager;
-import org.lockss.state.NodeState;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 import org.lockss.ws.entities.AuStatus;
+import org.lockss.ws.entities.AuWsResult;
 import org.lockss.ws.entities.IdNamePair;
 import org.lockss.ws.entities.LockssWebServicesFault;
 import org.lockss.ws.entities.LockssWebServicesFaultInfo;
@@ -138,177 +126,20 @@ public class DaemonStatusServiceImpl implements DaemonStatusService {
   @Override
   public AuStatus getAuStatus(String auId) throws LockssWebServicesFault {
     final String DEBUG_HEADER = "getAuStatus(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auId = " + auId);
 
-    try {
-      log.debug2(DEBUG_HEADER + "auId = " + auId);
-      if (StringUtil.isNullString(auId)) {
-	throw new LockssWebServicesFault(
-	    new IllegalArgumentException("Invalid Archival Unit identifier"),
-	    new LockssWebServicesFaultInfo("Archival Unit identifier = "
-		+ auId));
-      }
-
-      LockssDaemon theDaemon = LockssDaemon.getLockssDaemon();
-      PluginManager pluginMgr = theDaemon.getPluginManager();
-      ArchivalUnit au = pluginMgr.getAuFromId(auId);
-      if (au == null) {
-	throw new LockssWebServicesFault(
-	    "No Archival Unit with provided identifier",
-	    new LockssWebServicesFaultInfo("Archival Unit identifier = "
-		+ auId));
-      }
-
-      AuStatus result = new AuStatus();
-
-      result.setVolume(au.getName());
-
-      TitleConfig tc = au.getTitleConfig();
-      if (tc != null) {
-	result.setJournalTitle(tc.getJournalTitle());
-      }
-
-      Plugin plugin = au.getPlugin();
-      result.setPluginName(plugin.getPluginName());
-
-      String yearAsString = null;
-      try {
-	yearAsString = AuUtil.getTitleAttribute(au, "year");
-	if (yearAsString != null) {
-	  result.setYear(Integer.valueOf(yearAsString));
-	}
-      } catch (NumberFormatException nfe) {
-	log.warning("Invalid year title attribute '" + yearAsString
-	    + "' for auId '" + auId + "'", nfe);
-      }
-
-      NodeManager nodeMgr = theDaemon.getNodeManager(au);
-      AuState state = nodeMgr.getAuState();
-
-      AuState.AccessType atype = state.getAccessType();
-      if (atype != null) {
-	result.setAccessType(atype.toString());
-      }
-      long contentSize = AuUtil.getAuContentSize(au, false);
-      if (contentSize != -1) {
-	result.setContentSize(contentSize);
-      }
-
-      long du = AuUtil.getAuDiskUsage(au, false);
-      if (du != -1) {
-	result.setDiskUsage(du);
-      }
-
-      String spec = LockssRepositoryImpl.getRepositorySpec(au);
-      String repo =
-	  LockssRepositoryImpl.mapAuToFileLocation(LockssRepositoryImpl
-	      .getLocalRepositoryPath(spec), au);
-      result.setRepository(repo);
-
-      CachedUrlSet auCus = au.getAuCachedUrlSet();
-      NodeState topNode = nodeMgr.getNodeState(auCus);
-
-      if (AuUtil.getProtocolVersion(au) == Poll.V3_PROTOCOL) {
-	if (state.getV3Agreement() < 0) {
-	  if (state.getLastCrawlTime() < 0) {
-	    result.setStatus("Waiting for Crawl");
-	  } else {
-	    result.setStatus("Waiting for Poll");
-	  }
-	} else {
-	  result.setStatus(doubleToPercent(state.getHighestV3Agreement())
-	      + "% Agreement");
-	  if (state.getHighestV3Agreement() != state.getV3Agreement()) {
-	    result.setRecentPollAgreement(state.getV3Agreement());
-	  }
-	}
-      } else {
-	result.setStatus(topNode.hasDamage() ? "Repairing" : "Ok");
-      }
-
-      String publishingPlatform = plugin.getPublishingPlatform();
-      if (!StringUtil.isNullString(publishingPlatform)) {
-	result.setPublishingPlatform(publishingPlatform);
-      }
-
-      String publisher = AuUtil.getTitleAttribute(au, "publisher");
-      if (!StringUtil.isNullString(publisher)) {
-	result.setPublisher(publisher);
-      }
-
-      result.setAvailableFromPublisher(!AuUtil.isPubDown(au));
-      result.setSubstanceState(state.getSubstanceState().toString());
-      result.setCreationTime(state.getAuCreationTime());
-
-      AuUtil.AuProxyInfo aupinfo = AuUtil.getAuProxyInfo(au);
-      if (aupinfo.isAuOverride()) {
-	String disp =
-	    (aupinfo.getHost() == null ? "Direct connection" : aupinfo
-		.getHost() + ":" + aupinfo.getPort());
-	result.setCrawlProxy(disp);
-      }
-
-      CrawlWindow window = au.getCrawlSpec().getCrawlWindow();
-      if (window != null) {
-	String wmsg = window.toString();
-	if (wmsg.length() > 140) {
-	  wmsg = "(not displayable)";
-	}
-	if (!window.canCrawl()) {
-	  wmsg = "Currently closed: " + wmsg;
-	}
-	result.setCrawlWindow(wmsg);
-      }
-
-      String crawlPool = au.getFetchRateLimiterKey();
-      if (crawlPool == null) {
-	crawlPool = "(none)";
-      }
-      result.setCrawlPool(crawlPool);
-
-      result.setLastCompletedCrawl(state.getLastCrawlTime());
-
-      long lastCrawlAttempt = state.getLastCrawlAttempt();
-      if (lastCrawlAttempt > 0) {
-	result.setLastCrawl(lastCrawlAttempt);
-	result.setLastCrawlResult(state.getLastCrawlResultMsg());
-      }
-
-      long lastTopLevelPollTime = state.getLastTopLevelPollTime();
-      if (lastTopLevelPollTime > 0) {
-	result.setLastCompletedPoll(lastTopLevelPollTime);
-      }
-
-      long lastPollStart = state.getLastPollStart();
-      if (lastPollStart > 0) {
-	result.setLastPoll(lastPollStart);
-	String pollResult = state.getLastPollResultMsg();
-	if (!StringUtil.isNullString(pollResult)) {
-	  result.setLastPollResult(state.getLastPollResultMsg());
-	}
-      }
-
-      CrawlManager crawlMgr = theDaemon.getCrawlManager();
-      result.setCurrentlyCrawling(crawlMgr.getStatusSource().getStatus()
-	  .isRunningNCCrawl(au));
-
-      PollManager pollMgr = theDaemon.getPollManager();
-      result.setCurrentlyPolling(pollMgr.isPollRunning(au));
-
-      if (theDaemon.isDetectClockssSubscription()) {
-	result.setSubscriptionStatus(AuUtil.getAuState(au)
-	    .getClockssSubscriptionStatusString());
-      }
-
-      if (log.isDebug2()) {
-	log.debug2(DEBUG_HEADER + "result = " + result);
-      }
-
-      return result;
-    } catch (LockssWebServicesFault wsf) {
-      throw wsf;
-    } catch (Exception e) {
-      throw new LockssWebServicesFault(e);
+    // Input validation.
+    if (StringUtil.isNullString(auId)) {
+      throw new LockssWebServicesFault(
+	  new IllegalArgumentException("Invalid Archival Unit identifier"),
+	  new LockssWebServicesFaultInfo("Archival Unit identifier = " + auId));
     }
+
+    // Get the status.
+    AuStatus result = new AuHelper().getAuStatus(auId);
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+
+    return result;
   }
 
   /**
@@ -372,17 +203,62 @@ public class DaemonStatusServiceImpl implements DaemonStatusService {
   }
 
   /**
-   * Formats 100 times a double to print as a percentage. An input value of 1.0
-   * will produce "100.00".
+   * Provides the selected properties of selected archival units in the system.
    * 
-   * @param d
-   *          A double with the value to convert.
-   * @return a String representing the double.
+   * @param query
+   *          A String with the query used to specify what properties to
+   *          retrieve from which archival units.
+   * @return a List<AuWsResult> with the results.
+   * @throws LockssWebServicesFault
    */
-  private String doubleToPercent(double d) {
-    int i = (int) (d * 10000);
-    double pc = i / 100.0;
-    return new DecimalFormat("0.00").format(pc);
+  @Override
+  public List<AuWsResult> queryAus(String auQuery) throws LockssWebServicesFault
+  {
+    final String DEBUG_HEADER = "queryAus(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auQuery = " + auQuery);
+
+    AuHelper auHelper = new AuHelper();
+    List<AuWsResult> results = null;
+
+    // Create the full query.
+    String fullQuery = createFullQuery(auQuery, AuHelper.SOURCE_FQCN,
+	AuHelper.PROPERTY_NAMES, AuHelper.RESULT_FQCN);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "fullQuery = " + fullQuery);
+
+    // Create a new JoSQL query.
+    Query q = new Query();
+
+    try {
+      // Parse the SQL-like query.
+      q.parse(fullQuery);
+
+      try {
+	// Execute the query.
+	QueryResults qr = q.execute(auHelper.createUniverse());
+
+	// Get the query results.
+	results = (List<AuWsResult>)qr.getResults();
+	if (log.isDebug3()) {
+	  log.debug3(DEBUG_HEADER + "results.size() = " + results.size());
+	  log.debug3(DEBUG_HEADER + "results = "
+	      + auHelper.nonDefaultToString(results));
+	}
+      } catch (QueryExecutionException qee) {
+	log.error("Caught QueryExecuteException", qee);
+	log.error("fullQuery = '" + fullQuery + "'");
+	throw new LockssWebServicesFault(qee,
+	    new LockssWebServicesFaultInfo("auQuery = " + auQuery));
+      }
+    } catch (QueryParseException qpe) {
+      log.error("Caught QueryParseException", qpe);
+      log.error("fullQuery = '" + fullQuery + "'");
+	throw new LockssWebServicesFault(qpe,
+	    new LockssWebServicesFaultInfo("auQuery = " + auQuery));
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "results = "
+	+ auHelper.nonDefaultToString(results));
+    return results;
   }
 
   /**

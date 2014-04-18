@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatusService.java,v 1.2 2014-04-04 22:00:45 fergaloy-sf Exp $
+ * $Id: DaemonStatusService.java,v 1.3 2014-04-18 19:35:03 fergaloy-sf Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebService;
 import org.lockss.ws.entities.AuStatus;
+import org.lockss.ws.entities.AuWsResult;
 import org.lockss.ws.entities.IdNamePair;
 import org.lockss.ws.entities.LockssWebServicesFault;
 import org.lockss.ws.entities.PluginWsResult;
@@ -91,4 +92,17 @@ public interface DaemonStatusService {
   @WebMethod
   List<PluginWsResult> queryPlugins(@WebParam(name = "pluginQuery") String
       pluginQuery) throws LockssWebServicesFault;
+
+  /**
+   * Provides the selected properties of selected archival units in the system.
+   * 
+   * @param query
+   *          A String with the query used to specify what properties to
+   *          retrieve from which archival units.
+   * @return a List<AuWsResult> with the results.
+   * @throws LockssWebServicesFault
+   */
+  @WebMethod
+  List<AuWsResult> queryAus(@WebParam(name = "auQuery") String auQuery)
+      throws LockssWebServicesFault;
 }
