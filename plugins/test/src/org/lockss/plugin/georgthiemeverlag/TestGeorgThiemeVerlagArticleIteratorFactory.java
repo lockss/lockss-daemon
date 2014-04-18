@@ -1,5 +1,5 @@
 /*
- * $Id: TestGeorgThiemeVerlagArticleIteratorFactory.java,v 1.6 2014-02-28 20:10:54 etenbrink Exp $
+ * $Id: TestGeorgThiemeVerlagArticleIteratorFactory.java,v 1.7 2014-04-18 20:29:06 etenbrink Exp $
  */
 
 /*
@@ -59,8 +59,6 @@ public class TestGeorgThiemeVerlagArticleIteratorFactory extends ArticleIterator
   private final String JOURNAL_ID = "10.1055/s-00000002";
   private final String VOLUME_NAME = "2010";
   
-//      <string>"%sejournals/issues/%s/%s", base_url, journal_id, volume_name</string>
-  private final String AU_URL = BASE_URL + "ejournals/issues/" + JOURNAL_ID + "/" + VOLUME_NAME;
   private final Configuration AU_CONFIG = ConfigurationUtil.fromArgs(
       BASE_URL_KEY, BASE_URL,
       JOURNAL_ID_KEY, JOURNAL_ID,
@@ -214,25 +212,25 @@ public class TestGeorgThiemeVerlagArticleIteratorFactory extends ArticleIterator
     }
     
     Stack<String[]> expStack = new Stack<String[]>();
-    String [] af1 = {
+    String [] af3 = {
         BASE_URL + "ejournals/pdf/10.1055/s-1.pdf",
         BASE_URL + "ejournals/html/10.1055/s-1",
         BASE_URL + "ejournals/pdf/10.1055/s-1.pdf",
         BASE_URL + "ejournals/abstract/10.1055/s-1"};
     
-    String [] af2 = {
+    String [] af1 = {
         BASE_URL + "ejournals/html/10.1055/s-2",
         BASE_URL + "ejournals/html/10.1055/s-2",
         null,
         BASE_URL + "ejournals/abstract/10.1055/s-2"};
     
-    String [] af3 = {
+    String [] af4 = {
         BASE_URL + "ejournals/pdf/10.1055/s-3.pdf",
         BASE_URL + "ejournals/html/10.1055/s-3",
         BASE_URL + "ejournals/pdf/10.1055/s-3.pdf",
         BASE_URL + "ejournals/html/10.1055/s-3"};
     
-    String [] af4 = {
+    String [] af2 = {
         BASE_URL + "ejournals/html/10.1055/s-4",
         BASE_URL + "ejournals/html/10.1055/s-4",
         null,
