@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireDrupalHtmlLinkExtractorFactory.java,v 1.1 2014-04-11 17:11:59 etenbrink Exp $
+ * $Id: HighWireDrupalHtmlLinkExtractorFactory.java,v 1.2 2014-04-18 20:36:05 etenbrink Exp $
  */
 
 /*
@@ -61,7 +61,7 @@ public class HighWireDrupalHtmlLinkExtractorFactory implements LinkExtractorFact
   private static final String SHORTLINK = "shortlink";
   
   protected static Pattern URL_PATTERN = Pattern.compile(
-      "^(https?://.*/)content/[^/]+/[^/]+/[^/?]+$", Pattern.CASE_INSENSITIVE);
+      "^(https?://[^/]+/)content/[^/]+/[^/]+/[^/?]+$", Pattern.CASE_INSENSITIVE);
   protected static Pattern NODE_PATTERN = Pattern.compile(
       "^/node/([0-9]+)$", Pattern.CASE_INSENSITIVE);
   
