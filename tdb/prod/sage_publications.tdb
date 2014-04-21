@@ -17624,6 +17624,23 @@
     {
 
       title <
+        name = Jadavpur Journal of International Relations ;
+        issn = 0973-5984 ;
+        issnl = 0973-5984
+      >
+
+      pluginSuffix = HighWirePressH20Plugin
+      param[base_url] = http://jnr.sagepub.com/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2013 ; Jadavpur Journal of International Relations Volume 17 ; 17 >
+      au < expected ; 2014 ; Jadavpur Journal of International Relations Volume 18 ; 18 >
+
+    }
+    
+    {
+
+      title <
         name = Journal for the Study of the New Testament ;
         issn = 0142-064X ;
         eissn = 1745-5294 ;
@@ -20837,7 +20854,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
       title <
         name = Journal of Diabetes Science and Technology ;
-        issn = 1932-2968 
+        eissn = 1932-2968 
       >
 
       {
