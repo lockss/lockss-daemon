@@ -14,7 +14,7 @@
     >
     
     plugin = org.lockss.plugin.bepress.BePressPlugin 
-    param[base_url] = http://jevohealth.com/journal
+    param[base_url] = http://jevohealth.com/journal/
     param[journal_abbr] = journal
     implicit < status ; year ; name ; param[volume] >
 
