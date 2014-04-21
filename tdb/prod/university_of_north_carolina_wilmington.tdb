@@ -18,12 +18,12 @@
     param[journal_dir] = ecotone
     attr[journal_id] = ect
 
-    au < manifest ; 2005-2006 ; Ecotone Volume 1 ; 1 >
-    au < manifest ; 2006-2007 ; Ecotone Volume 2 ; 2 >
-    au < manifest ; 2007-2008 ; Ecotone Volume 3 ; 3 >
-    au < manifest ; 2008 ; Ecotone Volume 4 ; 4 >
-    au < manifest ; 2009-2010 ; Ecotone Volume 5 ; 5 >
-    au < manifest ; 2010-2011 ; Ecotone Volume 6 ; 6 >
+    au < testing ; 2005-2006 ; Ecotone Volume 1 ; 1 >
+    au < testing ; 2006-2007 ; Ecotone Volume 2 ; 2 >
+    au < testing ; 2007-2008 ; Ecotone Volume 3 ; 3 >
+    au < testing ; 2008 ; Ecotone Volume 4 ; 4 >
+    au < testing ; 2009-2010 ; Ecotone Volume 5 ; 5 >
+    au < testing ; 2010-2011 ; Ecotone Volume 6 ; 6 >
     au < released ; 2011 ; Ecotone Volume 7 ; 7 >
     au < expected ; 2012 ; Ecotone Volume 8 ; 8 >
 
