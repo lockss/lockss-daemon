@@ -36,7 +36,7 @@ BEGIN {
           r[pn] = "4"
         } else if ((substr(p[pn],1,2) >= "CA") && (substr(p[pn],1,2) <= "Rz")) {
           r[pn] = "5"
-        } else if (substr(p[pn],1,1) >= "SA") {
+        } else if (substr(p[pn],1,2) >= "SA") {
           r[pn] = "8"
         }
       }
