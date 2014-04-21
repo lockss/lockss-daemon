@@ -583,7 +583,7 @@
       au < zapped ; finished ; 2011 ; Advances in Dental Research Volume 23 ; 23 ; >
       au < finished ; crawling ; 2012 ; Advances in Dental Research Volume 24 ; 24 ; >
       au < crawling ; exists ; 2013 ; Advances in Dental Research Volume 25 ; 25 ; >
-      au < expected ; exists ; 2014 ; Advances in Dental Research Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2014 ; Advances in Dental Research Volume 26 ; 26 ; >
 
     }
 
@@ -9048,7 +9048,7 @@
       au < finished ; crawling ; 2011 ; Environment and Urbanization Volume 23 ; 23 ; >
       au < finished ; crawling ; 2012 ; Environment and Urbanization Volume 24 ; 24 ; >
       au < crawling ; exists ; 2013 ; Environment and Urbanization Volume 25 ; 25 ; >
-      au < expected ; exists ; 2014 ; Environment and Urbanization Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2014 ; Environment and Urbanization Volume 26 ; 26 ; >
 
     }
 
@@ -9072,7 +9072,7 @@
       au < finished ; crawling ; 2011 ; Environment and Urbanization Asia Volume 2 ; 2 ; >
       au < finished ; crawling ; 2012 ; Environment and Urbanization Asia Volume 3 ; 3 ; >
       au < crawling ; exists ; 2013 ; Environment and Urbanization Asia Volume 4 ; 4 ; >
-      au < expected ; exists ; 2014 ; Environment and Urbanization Asia Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2014 ; Environment and Urbanization Asia Volume 5 ; 5 ; >
 
     }
 
@@ -11422,7 +11422,7 @@
       au < finished ; crawling ; 2011 ; Global Health Promotion Volume 18 ; 18 ; >
       au < finished ; crawling ; 2012 ; Global Health Promotion Volume 19 ; 19 ; >
       au < crawling ; exists ; 2013 ; Global Health Promotion Volume 20 ; 20 ; >
-      au < expected ; exists ; 2014 ; Global Health Promotion Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2014 ; Global Health Promotion Volume 21 ; 21 ; >
 
     }
 
@@ -23973,7 +23973,7 @@
       au < finished ; crawling ; 2011 ; Journal of the American Psychoanalytic Association Volume 59 ; 59 ; >
       au < finished ; crawling ; 2012 ; Journal of the American Psychoanalytic Association Volume 60 ; 60 ; >
       au < crawling ; exists ; 2013 ; Journal of the American Psychoanalytic Association Volume 61 ; 61 ; >
-      au < expected ; exists ; 2014 ; Journal of the American Psychoanalytic Association Volume 62 ; 62 ; >
+      au < manifest ; exists ; 2014 ; Journal of the American Psychoanalytic Association Volume 62 ; 62 ; >
 
     }
 
@@ -23990,7 +23990,7 @@
       param[base_url] = http://jha.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2014 ; Journal for the History of Astronomy Volume 45 ; 45 ; >
+      au < manifest ; exists ; 2014 ; Journal for the History of Astronomy Volume 45 ; 45 ; >
 
   }
 
@@ -30547,7 +30547,7 @@
       au < finished ; crawling ; 2011 ; Psychological Science in the Public Interest Volume 12 ; 12 ; >
       au < zapped ; finished ; 2012 ; Psychological Science in the Public Interest Volume 13 ; 13 ; >
       au < crawling ; exists ; 2013 ; Psychological Science in the Public Interest Volume 14 ; 14 ; >
-      au < expected ; exists ; 2014 ; Psychological Science in the Public Interest Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2014 ; Psychological Science in the Public Interest Volume 15 ; 15 ; >
 
     }
 
@@ -31452,7 +31452,7 @@
         au < crawling ; exists ; 2011 ; Recherche et Applications en Marketing (English Edition) Volume 26 ; 26 >
         au < exists ; exists ; 2012 ; Recherche et Applications en Marketing (English Edition) Volume 27 ; 27 >
         au < crawling ; exists ; 2013 ; Recherche et Applications en Marketing (English Edition) Volume 28 ; 28 >
-        au < expected ; exists ; 2014 ; Recherche et Applications en Marketing (English Edition) Volume 29 ; 29 >
+        au < manifest ; exists ; 2014 ; Recherche et Applications en Marketing (English Edition) Volume 29 ; 29 >
 
       }
 
@@ -34852,7 +34852,7 @@
       au < zapped ; finished ; 2011 ; Surgical Innovation Volume 18 ; 18 ; >
       au < finished ; crawling ; 2012 ; Surgical Innovation Volume 19 ; 19 ; >
       au < crawling ; exists ; 2013 ; Surgical Innovation Volume 20 ; 20 ; >
-      au < expected ; exists ; 2014 ; Surgical Innovation Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2014 ; Surgical Innovation Volume 21 ; 21 ; >
 
     }
 
@@ -36366,11 +36366,11 @@
       au < exists ; exists ; 2006 ; Transactional Analysis Journal Volume 36 ; 36 ; >
       au < exists ; exists ; 2007 ; Transactional Analysis Journal Volume 37 ; 37 ; >
       au < exists ; exists ; 2008 ; Transactional Analysis Journal Volume 38 ; 38 ; >
-      au < exists ; exists ; 2009 ; Transactional Analysis Journal Volume 39 ; 39 ; >
-      au < exists ; exists ; 2010 ; Transactional Analysis Journal Volume 40 ; 40 ; >
-      au < exists ; exists ; 2011 ; Transactional Analysis Journal Volume 41 ; 41 ; >
+      au < manifest ; exists ; 2009 ; Transactional Analysis Journal Volume 39 ; 39 ; >
+      au < manifest ; exists ; 2010 ; Transactional Analysis Journal Volume 40 ; 40 ; >
+      au < manifest ; exists ; 2011 ; Transactional Analysis Journal Volume 41 ; 41 ; >
       au < exists ; exists ; 2012 ; Transactional Analysis Journal Volume 42 ; 42 ; >
-      au < exists ; exists ; 2013 ; Transactional Analysis Journal Volume 43 ; 43 ; >
+      au < manifest ; exists ; 2013 ; Transactional Analysis Journal Volume 43 ; 43 ; >
       au < expected ; exists ; 2014 ; Transactional Analysis Journal Volume 44 ; 44 ; >
 
   }
