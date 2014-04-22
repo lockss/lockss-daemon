@@ -262,10 +262,10 @@
     param[base_url] = http://openresearchsoftware.metajnl.com/
     param[journal_id] = jors
     
-    comment[notReady] = This journal does not have an editorial policies page: http://openresearchsoftware.metajnl.com/index.php/jors/about/editorialPolicies
+    comment[doNotProcess] = This journal does not have an editorial policies page: http://openresearchsoftware.metajnl.com/index.php/jors/about/editorialPolicies
     
-    au < down ; exists ; 2013 ; The Journal of Open Research Software Volume 1 [to delete] ; 1 ; 2013 >
-    au < expected ; exists ; 2014 ; The Journal of Open Research Software Volume 2 ; 2 ; 2014 >
+    au < doNotProcess ; exists ; 2013 ; The Journal of Open Research Software Volume 1 [to delete] ; 1 ; 2013 >
+    au < doNotProcess ; exists ; 2014 ; The Journal of Open Research Software Volume 2 ; 2 ; 2014 >
 
   }
   
@@ -325,7 +325,7 @@
     {
        param[base_url] = http://pia-journal.co.uk/
        comment[zapped] = Bad base_url
-        au < superseded ; exists ; 2011 ; Papers from the Institute of Archaeology Volume 21 [to delete] ; 21 ; 2011 >
+        au < down ; crawling ; 2011 ; Papers from the Institute of Archaeology Volume 21 ; 21 ; 2011 >
     }
     au < manifest ; exists ; 1990 ; Papers from the Institute of Archaeology Volume 1 ; 1 ; 1990 >
     au < manifest ; exists ; 1991 ; Papers from the Institute of Archaeology Volume 2 ; 2 ; 1991 >
