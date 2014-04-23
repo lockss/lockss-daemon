@@ -1,5 +1,5 @@
 /*
- * $Id: AuUtil.java,v 1.43 2014-01-07 20:42:37 tlipkis Exp $
+ * $Id: AuUtil.java,v 1.44 2014-04-23 20:44:45 tlipkis Exp $
  */
 
 /*
@@ -285,6 +285,13 @@ public class AuUtil {
 		  dfault);
   }
 
+  public static int minReplicasForNoQuorumPeerRepair(ArchivalUnit au,
+						     int dfault) {
+    return getPluginDefinition(au)
+      .getInt(DefinablePlugin.KEY_MIN_REPLICAS_FOR_NO_QUORUM_PEER_REPAIR,
+	      dfault);
+  }
+
   public static boolean isPubDown(ArchivalUnit au) {
     return isPubNever(au) ||
       getBoolValue(getAuParamOrTitleDefault(au, ConfigParamDescr.PUB_DOWN),
@@ -490,6 +497,18 @@ public class AuUtil {
 					 String dfault) {
     String res = getTitleAttribute(au, key);
     return (res != null) ? res : dfault;
+  }
+
+  public static boolean hasSubstancePatterns(ArchivalUnit au) {
+    TypedEntryMap map = getPluginDefinition(au);
+    return
+      (map.getMapElement(DefinableArchivalUnit.KEY_AU_SUBSTANCE_URL_PATTERN)
+       != null) ||
+      (map.getMapElement(DefinableArchivalUnit.KEY_AU_NON_SUBSTANCE_URL_PATTERN)
+       != null) ||
+      (map.getString(DefinablePlugin.KEY_PLUGIN_SUBSTANCE_PREDICATE_FACTORY,
+		     null)
+       != null);
   }
 
   public static int getSubstanceTestThreshold(ArchivalUnit au) {

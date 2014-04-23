@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuUtil.java,v 1.23 2014-01-07 20:42:37 tlipkis Exp $
+ * $Id: TestAuUtil.java,v 1.24 2014-04-23 20:44:45 tlipkis Exp $
  */
 
 /*
@@ -270,6 +270,32 @@ public class TestAuUtil extends LockssTestCase {
     assertFalse(AuUtil.isDeleteExtraFiles(au, true));
   }
 
+  public void testIsRepairFromPublisherWhenTooClose() throws Exception {
+    ExternalizableMap map = new ExternalizableMap();
+    DefinablePlugin dplug = new DefinablePlugin();
+    dplug.initPlugin(getMockLockssDaemon(), "FooPlugin", map, null);
+    DefinableArchivalUnit au = new LocalDefinableArchivalUnit(dplug, map);
+    assertFalse(AuUtil.isRepairFromPublisherWhenTooClose(au, false));
+    assertTrue(AuUtil.isRepairFromPublisherWhenTooClose(au, true));
+    map.putBoolean(DefinablePlugin.KEY_REPAIR_FROM_PUBLISHER_WHEN_TOO_CLOSE,
+		   true);
+    assertTrue(AuUtil.isRepairFromPublisherWhenTooClose(au, false));
+    map.putBoolean(DefinablePlugin.KEY_REPAIR_FROM_PUBLISHER_WHEN_TOO_CLOSE,
+		   false);
+    assertFalse(AuUtil.isRepairFromPublisherWhenTooClose(au, true));
+  }
+
+  public void testMinReplicasForNoQuorumPeerRepair() throws Exception {
+    ExternalizableMap map = new ExternalizableMap();
+    DefinablePlugin dplug = new DefinablePlugin();
+    dplug.initPlugin(getMockLockssDaemon(), "FooPlugin", map, null);
+    DefinableArchivalUnit au = new LocalDefinableArchivalUnit(dplug, map);
+    assertEquals(-1, AuUtil.minReplicasForNoQuorumPeerRepair(au, -1));
+    assertEquals(2, AuUtil.minReplicasForNoQuorumPeerRepair(au, 2));
+    map.putInt(DefinablePlugin.KEY_MIN_REPLICAS_FOR_NO_QUORUM_PEER_REPAIR, 2);
+    assertEquals(2, AuUtil.minReplicasForNoQuorumPeerRepair(au, -1));
+  }
+
   public void testGetTitleAttribute() {
     LocalMockArchivalUnit mau = new LocalMockArchivalUnit();
     TitleConfig tc = makeTitleConfig(ConfigParamDescr.PUB_DOWN, "false");
@@ -287,6 +313,28 @@ public class TestAuUtil extends LockssTestCase {
     attrs.put("foo", "bar");
     assertEquals("bar", AuUtil.getTitleAttribute(mau, "foo"));
     assertEquals("bar", AuUtil.getTitleAttribute(mau, "foo", "7"));
+  }
+
+  public void testHasSubstancePatterns() throws Exception {
+    ExternalizableMap map = new ExternalizableMap();
+    DefinablePlugin dplug = new DefinablePlugin();
+    dplug.initPlugin(getMockLockssDaemon(), "FooPlugin", map, null);
+    DefinableArchivalUnit au = new LocalDefinableArchivalUnit(dplug, map);
+    assertFalse(AuUtil.hasSubstancePatterns(au));
+    map.putString(DefinableArchivalUnit.KEY_AU_SUBSTANCE_URL_PATTERN,
+		  "/fulltext/");
+    assertTrue(AuUtil.hasSubstancePatterns(au));
+    map.removeMapElement(DefinableArchivalUnit.KEY_AU_SUBSTANCE_URL_PATTERN);
+    assertFalse(AuUtil.hasSubstancePatterns(au));
+    map.putCollection(DefinableArchivalUnit.KEY_AU_NON_SUBSTANCE_URL_PATTERN,
+		      ListUtil.list("/fulltext/"));
+    assertTrue(AuUtil.hasSubstancePatterns(au));
+
+    map.removeMapElement(DefinableArchivalUnit.KEY_AU_NON_SUBSTANCE_URL_PATTERN);
+    assertFalse(AuUtil.hasSubstancePatterns(au));
+    map.putString(DefinablePlugin.KEY_PLUGIN_SUBSTANCE_PREDICATE_FACTORY,
+		  "factname");
+    assertTrue(AuUtil.hasSubstancePatterns(au));
   }
 
   public void testGetSubstanceTestThreshold() throws Exception {
