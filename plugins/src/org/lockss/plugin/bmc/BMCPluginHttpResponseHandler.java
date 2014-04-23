@@ -1,5 +1,5 @@
 /*
- * $Id: BMCPluginHttpResponseHandler.java,v 1.1 2013-05-24 18:56:49 aishizaki Exp $
+ * $Id: BMCPluginHttpResponseHandler.java,v 1.2 2014-04-23 19:41:17 aishizaki Exp $
  */
 
 /*
@@ -53,7 +53,8 @@ public class BMCPluginHttpResponseHandler implements CacheResultHandler {
     switch (responseCode) {
       case 500:
         log.debug2("500");
-        if (   url.endsWith("prepub")) {
+        if ((url.endsWith("prepub")) ||
+            (url.matches(".*/mathml/M\\d+$"))){
           return new CacheException.NoRetryDeadLinkException("500 Internal Server Error (non-fatal)");
         }
         else {

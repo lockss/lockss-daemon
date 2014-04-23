@@ -1,4 +1,4 @@
-<!--  $Id: BMCPlugin.xml,v 1.49 2014-03-17 19:18:49 aishizaki Exp $
+<!--  $Id: BMCPlugin.xml,v 1.50 2014-04-23 19:41:17 aishizaki Exp $
    -->
 <map>
   <entry>
@@ -15,7 +15,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>35</string>
+    <string>36</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -26,11 +26,11 @@
       </entry>
       <entry>
         <string>Substance</string>
-        <string>4</string>
+        <string>5</string>
       </entry>
       <entry>
         <string>Poll</string>
-        <string>10</string>
+        <string>11</string>
       </entry>
     </map>
   </entry>
@@ -81,7 +81,7 @@
       <string>2,"^%s%s/%s/.*email\?from=standard$", base_url, journal_issn, volume_name</string>
       <!-- http://www.biomedcentral.com/bmcoralhealth/content/2/August/2002 
         only rule that uses the attr[journal_id] rather than the journal_issn
-      -->   
+      -->  
       <string>1, "^%s[^/]+/content/%s$", base_url, volume_name</string> 
       <string>1, "^%s[^/]+/content/%s/", base_url, volume_name</string> 
       <string>1, "^%s%s/%s$", base_url, journal_issn, volume_name</string> 
@@ -95,15 +95,15 @@
       http://www.biomedcentral.com/1472-6890/11/9       (fulltext)
       http://www.biomedcentral.com/content/pdf/1472-6890-11-9.pdf
       -->
-      <string>1, "^%scontent/(epub|pdf)/%s-%s[\w-]*", base_url, journal_issn, volume_name</string>      
+      <string>1, "^%scontent/(epub|pdf)/%s-%s[\w-]*(\.pdf)?", base_url, journal_issn, volume_name</string>      
       <string>1, "^%s%s/%s/[\d]+", base_url, journal_issn, volume_name</string>      
-      <string>1, "^%s%s/%s/[\d]+/abstract", base_url, journal_issn, volume_name</string>    
+      <string>1, "^%s%s/%s/[\d]+/[\d]+/abstract", base_url, journal_issn, volume_name</string>    
     </list>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%scontent/pdf/%s-%s-[-\d]{1,7}.pdf$", base_url, journal_issn, volume_name </string>
+      <string>"^%scontent/pdf/%s-%s-[-\d]+\.pdf$", base_url, journal_issn, volume_name </string>
     </list>
   </entry>    
   <entry>
