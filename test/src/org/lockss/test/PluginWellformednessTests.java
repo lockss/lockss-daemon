@@ -1,5 +1,5 @@
 /*
-n * $Id: PluginWellformednessTests.java,v 1.5 2013-10-17 07:52:46 tlipkis Exp $
+n * $Id: PluginWellformednessTests.java,v 1.6 2014-04-23 20:49:11 tlipkis Exp $
  */
 
 /*
@@ -199,7 +199,7 @@ public final class PluginWellformednessTests extends LockssTestCase {
 
     AuUtil.isRepairFromPublisherWhenTooClose(au, true);
     AuUtil.isRepairFromPublisherWhenTooClose(au, false);
-
+    AuUtil.minReplicasForNoQuorumPeerRepair(au, 2);
   }
 
   public static void main(String[] argv) {
