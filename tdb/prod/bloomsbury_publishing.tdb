@@ -64,11 +64,11 @@
     >
 
     param[publisher_id] = bloomsbury
-    param[journal_id] = ???
+    param[journal_id] = arcul
     param[journal_issn] = 2050-7836
 
-    au < expected ; 2013 ; Architecture and Culture Volume 1 ; 1 >
-    au < expected ; 2014 ; Architecture and Culture Volume 2 ; 2 >
+    au < exists ; 2013 ; Architecture and Culture Volume 1 ; 1 >
+    au < exists ; 2014 ; Architecture and Culture Volume 2 ; 2 >
 
   }
 
@@ -311,7 +311,7 @@
     au < doNotProcess ; 1999 ; Journal for the Study of Food and Society Volume 3 ; 3 >
     au < doNotProcess ; 2000 ; Journal for the Study of Food and Society Volume 4 ; 4 >
     au < doNotProcess ; 2001 ; Journal for the Study of Food and Society Volume 5 ; 5 >
-    au < doNotProcess ; 2002 ; Journal for the Study of Food and Society Volume 6 ; 6 >
+    au < doNotProcess ; 2002-2003 ; Journal for the Study of Food and Society Volume 6 ; 6 >
 
   }
 

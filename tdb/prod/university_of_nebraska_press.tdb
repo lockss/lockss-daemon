@@ -199,9 +199,11 @@
     >
 
     param[journal_dir] = journal_of_austrian_studies
-    attr[journal_id] = 
+    attr[journal_id] = oas
 
-    au < expected ; 2013 ; Journal of Austrian Studies Volume 1 ; 1 >
+    au < exists ; 2012 ; Journal of Austrian Studies Volume 45 ; 45 >
+    au < exists ; 2013 ; Journal of Austrian Studies Volume 46 ; 46 >
+    au < doNotProcess ; 2012 ; Journal of Austrian Studies Volume 47 ; 47 >
     
   }
 

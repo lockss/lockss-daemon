@@ -16,20 +16,20 @@
     param[base_url] = http://www.clinmed.rcpjournal.org/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < expected ; 2001 ; Clinical Medicine Volume 1 ; 1 >
-    au < expected ; 2002 ; Clinical Medicine Volume 2 ; 2 >
-    au < expected ; 2003 ; Clinical Medicine Volume 3 ; 3 >
-    au < expected ; 2004 ; Clinical Medicine Volume 4 ; 4 >
-    au < expected ; 2005 ; Clinical Medicine Volume 5 ; 5 >
-    au < expected ; 2006 ; Clinical Medicine Volume 6 ; 6 >
-    au < expected ; 2007 ; Clinical Medicine Volume 7 ; 7 >
-    au < expected ; 2008 ; Clinical Medicine Volume 8 ; 8 >
-    au < expected ; 2009 ; Clinical Medicine Volume 9 ; 9 >
-    au < expected ; 2010 ; Clinical Medicine Volume 10 ; 10 >
-    au < expected ; 2011 ; Clinical Medicine Volume 11 ; 11 >
-    au < expected ; 2012 ; Clinical Medicine Volume 12 ; 12 >
-    au < expected ; 2013 ; Clinical Medicine Volume 13 ; 13 >
-    au < expected ; 2014 ; Clinical Medicine Volume 14 ; 14 >
+    au < exists ; 2001 ; Clinical Medicine Volume 1 ; 1 >
+    au < exists ; 2002 ; Clinical Medicine Volume 2 ; 2 >
+    au < exists ; 2003 ; Clinical Medicine Volume 3 ; 3 >
+    au < exists ; 2004 ; Clinical Medicine Volume 4 ; 4 >
+    au < exists ; 2005 ; Clinical Medicine Volume 5 ; 5 >
+    au < exists ; 2006 ; Clinical Medicine Volume 6 ; 6 >
+    au < exists ; 2007 ; Clinical Medicine Volume 7 ; 7 >
+    au < exists ; 2008 ; Clinical Medicine Volume 8 ; 8 >
+    au < exists ; 2009 ; Clinical Medicine Volume 9 ; 9 >
+    au < exists ; 2010 ; Clinical Medicine Volume 10 ; 10 >
+    au < exists ; 2011 ; Clinical Medicine Volume 11 ; 11 >
+    au < exists ; 2012 ; Clinical Medicine Volume 12 ; 12 >
+    au < exists ; 2013 ; Clinical Medicine Volume 13 ; 13 >
+    au < exists ; 2014 ; Clinical Medicine Volume 14 ; 14 >
     
   }
     

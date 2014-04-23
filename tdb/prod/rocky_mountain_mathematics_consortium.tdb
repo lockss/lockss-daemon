@@ -8,6 +8,8 @@
   param[base_url] = http://rmmc.asu.edu/
   implicit < status ; year ; name ; param[volume_name] >
   
+  comment[plugin] = Plugin is down and needs work.  See status of plugin.
+  
   {
   
     title <

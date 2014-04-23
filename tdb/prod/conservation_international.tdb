@@ -10,20 +10,6 @@
 
   {
     title <
-      name = Advances in Applied Biodiversity Science
-    >
-    
-    comment[aabs_issn] = There is no issn for this title which appears to be a serial book. Each AU has an associated isbn.
-    param[journal_id] = aabs
-  
-    au < exists ; 2003 ; Advances in Applied Biodiversity Science 2003 ; 2003 >
-    au < exists ; 2004 ; Advances in Applied Biodiversity Science 2004 ; 2004 >
-    au < exists ; 2007 ; Advances in Applied Biodiversity Science 2007 ; 2007 >
-
-  }
-
-  {
-    title <
       name = Edentata ;
       issn = 1413-4411 ;
       issnl = 1413-4411

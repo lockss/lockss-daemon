@@ -4,8 +4,7 @@
     name = Royal College of General Practitioners
   >
 
-  plugin = needs.plugin
-  comment[platform] = HW Drupal
+  plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
   implicit < status ; year ; name ; param[volume_name] >
 
   {
@@ -19,15 +18,15 @@
 
     param[base_url] = http://bjgp.org/
 
-    au < doNotProcess ; 2005 ; British Journal of General Practice Volume 55 ; 55 >
-    au < doNotProcess ; 2006 ; British Journal of General Practice Volume 56 ; 56 >
-    au < doNotProcess ; 2007 ; British Journal of General Practice Volume 57 ; 57 >
-    au < doNotProcess ; 2008 ; British Journal of General Practice Volume 58 ; 58 >
-    au < doNotProcess ; 2009 ; British Journal of General Practice Volume 59 ; 59 >
-    au < doNotProcess ; 2010 ; British Journal of General Practice Volume 60 ; 60 >
-    au < doNotProcess ; 2011 ; British Journal of General Practice Volume 61 ; 61 >
-    au < doNotProcess ; 2012 ; British Journal of General Practice Volume 62 ; 62 >
-    au < doNotProcess ; 2013 ; British Journal of General Practice Volume 63 ; 63 >
+    au < exists ; 2005 ; British Journal of General Practice Volume 55 ; 55 >
+    au < exists ; 2006 ; British Journal of General Practice Volume 56 ; 56 >
+    au < exists ; 2007 ; British Journal of General Practice Volume 57 ; 57 >
+    au < exists ; 2008 ; British Journal of General Practice Volume 58 ; 58 >
+    au < exists ; 2009 ; British Journal of General Practice Volume 59 ; 59 >
+    au < exists ; 2010 ; British Journal of General Practice Volume 60 ; 60 >
+    au < exists ; 2011 ; British Journal of General Practice Volume 61 ; 61 >
+    au < exists ; 2012 ; British Journal of General Practice Volume 62 ; 62 >
+    au < exists ; 2013 ; British Journal of General Practice Volume 63 ; 63 >
 
   }
 

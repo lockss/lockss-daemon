@@ -7078,10 +7078,10 @@
   {
     title <
       name = Journal of Technology Management and Strategy in China ;
-      issn = 1756-4425
+      issn = 1746-8779
     >
 
-    param[journal_issn] = 1756-4425
+    param[journal_issn] = 1746-8779
     comment[0] = translation or compilation from 1746-8779 described on china.emeraldinsight.com with no AUs 
 
     au < exists ; 2006 ; Journal of Technology Management and Strategy in China Volume 1 ; 1 >
@@ -9058,9 +9058,15 @@
     
     param[journal_issn] = 1443-9883
     
-    au < exists ; 2012 ; Qualitative Research Journal Volume 1 ; 1 >
-    au < expected ; 2013 ; Qualitative Research Journal Volume 2 ; 2 >
-    au < doNotProcess ; 2014 ; Qualitative Research Journal Volume 3 ; 3 >
+    au < exists ; 2006 ; Qualitative Research Journal Volume 6 ; 6 >
+    au < exists ; 2007 ; Qualitative Research Journal Volume 7 ; 7 >
+    au < exists ; 2008 ; Qualitative Research Journal Volume 8 ; 8 >
+    au < exists ; 2009 ; Qualitative Research Journal Volume 9 ; 9 >
+    au < exists ; 2010 ; Qualitative Research Journal Volume 10 ; 10 >
+    au < exists ; 2011 ; Qualitative Research Journal Volume 11 ; 11 >
+    au < exists ; 2012 ; Qualitative Research Journal Volume 12 ; 12 >
+    au < doNotProcess ; 2013 ; Qualitative Research Journal Volume 13 ; 13 >
+    au < doNotProcess ; 2014 ; Qualitative Research Journal Volume 14 ; 14 >
   
   }
 

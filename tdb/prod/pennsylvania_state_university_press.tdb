@@ -130,11 +130,11 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
-      param[journal_dir] = edgar_allan_poe_review
-      attr[journal_id] = 
+      param[journal_dir] = the_edgar_allan_poe_review
+      attr[journal_id] = eap
 
-      au < expected ; 2013 ; The Edgar Allan Poe Review Volume 14 ; 14 >
-      au < expected ; 2014 ; The Edgar Allen Poe Review Volume 15 ; 15 >
+      au < exists ; 2013 ; The Edgar Allan Poe Review Volume 14 ; 14 >
+      au < exists ; 2014 ; The Edgar Allen Poe Review Volume 15 ; 15 >
 
     }
 

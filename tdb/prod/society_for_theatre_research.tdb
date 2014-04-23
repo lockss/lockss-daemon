@@ -17,9 +17,9 @@
     >
 
       param[journal_dir] = theatre_notebook
-      attr[journal_id] = 
+      attr[journal_id] = thn
       
-      au < expected ; 2012 ; Theatre Notebook Volume 1 ; 1 >
+      au < exists ; 2013 ; Theatre Notebook Volume 67 ; 67 >
 
   }
 

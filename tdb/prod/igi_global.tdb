@@ -52,24 +52,6 @@
   {
 
     title <
-      name = Information Technology Management ;
-      issn = 1080-286X ;
-      issnl = 1080-286X
-    >
-
-    comment[0] = content not online yet
-    param[journal_issn] = 1080-286X
-
-    au < expected ; 1988 ; Information Technology Management Volume 1 ; 1 >
-    au < expected ; 1989 ; Information Technology Management Volume 2 ; 2 >
-    au < expected ; 1990 ; Information Technology Management Volume 3 ; 3 >
-
-
-  }
-
-  {
-
-    title <
       name = International Journal of 3-D Information Modeling (IJ3DIM) ;
       issn = 2156-1710 ;
       eissn = 2156-1702 ;
@@ -2030,21 +2012,6 @@
   {
 
     title <
-      name = International Journal of Pharmacology and Pharmaceutical Technology (IJPPT) ;
-      issn = 2166-7276 ;
-      eissn = 2166-7284
-    >
-
-    comment[0] = forthcoming in 2014 as of 9-18-2013
-    param[journal_issn] = 2166-7276
-
-    au < expected ; 2014 ; International Journal of Pharmacology and Pharmaceutical Technology (IJPPT) Volume 1 ; 1 >
-
-  }
-
-  {
-
-    title <
       name = International Journal of Privacy and Health Information Management (IJPHIM) ;
       issn = 2155-5621 ;
       eissn = 2155-563X ;
@@ -2528,23 +2495,6 @@
     au < released ; 2012 ; International Journal of Technology Diffusion (IJTD) Volume 3 ; 3 >
     au < manifest ; 2013 ; International Journal of Technology Diffusion (IJTD) Volume 4 ; 4 >
     au < expected ; 2014 ; International Journal of Technology Diffusion (IJTD) Volume 5 ; 5 >
-
-  }
-
-  {
-
-    title <
-      name = International Journal of Telework and Telecommuting Technologies (IJTTT) ;
-      issn = 2160-9896 ;
-      eissn = 2160-990X ;
-      issnl = 2160-9896
-    >
-
-    comment[0] = forthcoming
-    param[journal_issn] = 2160-9896
-
-    au < expected ; 2013 ; International Journal of Telework and Telecommuting Technologies (IJTTT) Volume 1 ; 1 >
-    au < expected ; 2014 ; International Journal of Telework and Telecommuting Technologies (IJTTT) Volume 2 ; 2 >
 
   }
 
