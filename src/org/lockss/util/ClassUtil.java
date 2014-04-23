@@ -1,5 +1,5 @@
 /*
- * $Id: ClassUtil.java,v 1.2 2003-12-17 02:49:59 tlipkis Exp $
+ * $Id: ClassUtil.java,v 1.3 2014-04-23 21:11:19 clairegriffin Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -75,4 +75,26 @@ public class ClassUtil {
     }
   }
 
+  /**
+   * instantiate a class handle any exceptions
+   *
+   * @param className the name of the class to instantiate
+   * @param type the type or Class to instantiate
+   *
+   * @return an instance of the class cast as a object of type T
+   *
+   * @throws java.lang.IllegalStateException if we unable to make the class
+   */
+  public static <T> T instantiate(final String className, final Class<T> type)
+      throws IllegalStateException {
+    try {
+      return type.cast(Class.forName(className).newInstance());
+    } catch (final InstantiationException e) {
+      throw new IllegalStateException(e);
+    } catch (final IllegalAccessException e) {
+      throw new IllegalStateException(e);
+    } catch (final ClassNotFoundException e) {
+      throw new IllegalStateException(e);
+    }
+  }
 }
