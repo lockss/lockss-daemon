@@ -42642,6 +42642,8 @@ comment[mpj] = now published by Brill
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
   
+        au < exists ; 1997 ; Vision: The Journal of Business Perspective Volume 1 ; 1 >
+        au < exists ; 1998 ; Vision: The Journal of Business Perspective Volume 2 ; 2 >
         au < exists ; 1999 ; Vision: The Journal of Business Perspective Volume 3 ; 3 >
         au < manifest ; 2000 ; Vision: The Journal of Business Perspective Volume 4 ; 4 >
         au < manifest ; 2001 ; Vision: The Journal of Business Perspective Volume 5 ; 5 >
