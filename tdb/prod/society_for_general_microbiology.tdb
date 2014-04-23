@@ -491,7 +491,7 @@
       param[base_url] = http://jmmcr.sgmjournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < HighWirePressH20Plugin ; expected ; 2014 ; JMM Case Reports Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; exists ; 2014 ; JMM Case Reports Volume 1 ; 1 >
 
     }
 
