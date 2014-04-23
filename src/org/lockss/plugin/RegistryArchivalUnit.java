@@ -1,5 +1,5 @@
 /*
- * $Id: RegistryArchivalUnit.java,v 1.31 2013-11-29 19:18:59 tlipkis Exp $
+ * $Id: RegistryArchivalUnit.java,v 1.32 2014-04-23 20:45:28 tlipkis Exp $
  */
 
 /*
@@ -59,13 +59,13 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
   protected static final Logger log = Logger.getLogger("RegistryArchivalUnit");
 
   /** The interval between recrawls of the loadable plugin
-      registry AUs.  */
+      registry AUs.  Changes take effect only when AU is started. */
   static final String PARAM_REGISTRY_CRAWL_INTERVAL =
     RegistryPlugin.PREFIX + "crawlInterval";
   static final long DEFAULT_REGISTRY_CRAWL_INTERVAL = Constants.DAY;
 
   /** The proxy to use for registry crawls, or DIRECT to override a global
-   * crawl proxy. */
+   * crawl proxy.  Changes take effect at start of next crawl. */
   static final String PARAM_REGISTRY_CRAWL_PROXY =
     RegistryPlugin.PREFIX + "crawlProxy";
 
@@ -107,6 +107,12 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
     fetchRateLimiter = recomputeFetchRateLimiter(fetchRateLimiter);
     enablePolls = config.getBoolean(PARAM_ENABLE_REGISTRY_POLLS,
 				    DEFAULT_ENABLE_REGISTRY_POLLS);
+    if (changedKeys.contains(PARAM_REGISTRY_CRAWL_PROXY)) {
+      String proxy = config.get(PARAM_REGISTRY_CRAWL_PROXY);
+      paramMap.putString(ConfigParamDescr.CRAWL_PROXY.getKey(), proxy);
+      log.debug2("Setting Registry AU crawl proxy to " + proxy);
+    }
+
   }
 
   public void loadAuConfigDescrs(Configuration auConfig)
@@ -121,11 +127,6 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
     if (log.isDebug2()) {
       log.debug2("Setting Registry AU recrawl interval to " +
 		 StringUtil.timeIntervalToString(paramMap.getLong(KEY_AU_NEW_CONTENT_CRAWL_INTERVAL)));
-    }
-    String proxy = config.get(PARAM_REGISTRY_CRAWL_PROXY);
-    if (!StringUtil.isNullString(proxy)) {
-      paramMap.putString(ConfigParamDescr.CRAWL_PROXY.getKey(), proxy);
-      log.debug2("Setting Registry AU crawl proxy to " + proxy);
     }
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestRegistryArchivalUnit.java,v 1.18 2014-01-14 04:32:05 tlipkis Exp $
+ * $Id: TestRegistryArchivalUnit.java,v 1.19 2014-04-23 20:45:28 tlipkis Exp $
  */
 
 /*
@@ -107,6 +107,19 @@ public class TestRegistryArchivalUnit extends LockssTestCase {
     AuUtil.AuProxyInfo aupinfo = AuUtil.getAuProxyInfo(au);
     assertEquals("proxy.host", aupinfo.getHost());
     assertEquals(1234, aupinfo.getPort());
+
+    // Ensure can change on the fly
+    ConfigurationUtil.addFromArgs(RegistryArchivalUnit.PARAM_REGISTRY_CRAWL_PROXY,
+				  "proxy2.host:4321");
+    aupinfo = AuUtil.getAuProxyInfo(au);
+    assertEquals("proxy2.host", aupinfo.getHost());
+    assertEquals(4321, aupinfo.getPort());
+
+    // Ensure can remove
+    ConfigurationUtil.removeKey(RegistryArchivalUnit.PARAM_REGISTRY_CRAWL_PROXY);
+    aupinfo = AuUtil.getAuProxyInfo(au);
+    assertNull(aupinfo.getHost());
+    assertEquals(0, aupinfo.getPort());
   }
 
   public void testRateLimiter() throws Exception {
