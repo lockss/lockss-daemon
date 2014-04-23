@@ -1,5 +1,5 @@
 /*
- * $Id: CharRing.java,v 1.10 2006-11-15 21:17:53 troberts Exp $
+ * $Id: CharRing.java,v 1.11 2014-04-23 20:48:18 tlipkis Exp $
  */
 
 /*
@@ -196,6 +196,34 @@ public class CharRing {
     }
     if (chunk2 != 0) {
       System.arraycopy(chars, 0, returnChars, pos + chunk1, chunk2);
+    }
+    head = (head + numToReturn) % capacity;
+    size -= numToReturn;
+    return numToReturn;
+  }
+
+  /**
+   * remove the next len chars from the ring into a StringBuilder.
+   * @param sb StringBuilder to append to
+   * @return number of chars removed from the ring
+   */
+  public int remove(StringBuilder sb, int len) {
+    int numToReturn = len < size ? len : size;
+    if (numToReturn == 0) {
+      return 0;
+    }
+    //number of chars to remove from end of array
+    int chunk1 =
+      numToReturn < (capacity - head) ? numToReturn : (capacity - head);
+
+    //number of chars to remove from start of array
+    int chunk2 = numToReturn - chunk1;
+
+    if (chunk1 != 0) {
+      sb.append(chars, head, chunk1);
+    }
+    if (chunk2 != 0) {
+      sb.append(chars, 0, chunk2);
     }
     head = (head + numToReturn) % capacity;
     size -= numToReturn;
@@ -445,7 +473,7 @@ public class CharRing {
   }
 
   public String toString() {
-    StringBuffer sb = new StringBuffer(size);
+    StringBuilder sb = new StringBuilder(size);
     for (int ix=0; ix<size; ix++) {
       sb.append(chars[(head + ix) % capacity]);
     }

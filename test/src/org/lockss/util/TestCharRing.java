@@ -1,5 +1,5 @@
 /*
- * $Id: TestCharRing.java,v 1.11 2006-11-15 21:17:53 troberts Exp $
+ * $Id: TestCharRing.java,v 1.12 2014-04-23 20:48:18 tlipkis Exp $
  */
 
 /*
@@ -427,7 +427,16 @@ public class TestCharRing extends LockssTestCase {
     }
   }
 
-  public void testSBRemove() throws Exception {
+  public void testStringBuilderRemove() throws Exception {
+    StringBuilder sb = new StringBuilder();
+    assertEquals(5, cr.remove(sb, 10));
+    assertEquals("abcde", sb.toString());
+    cr.add("1234".toCharArray());
+    assertEquals(3, cr.remove(sb, 3));
+    assertEquals("abcde123", sb.toString());
+  }
+
+  public void testStringBufferRemove() throws Exception {
     StringBuffer sb = new StringBuffer();
     assertEquals(5, cr.remove(sb, 10));
     assertEquals("abcde", sb.toString());
@@ -525,7 +534,7 @@ public class TestCharRing extends LockssTestCase {
   }
 
   private String makeStringFromCharRing(CharRing ring) {
-    StringBuffer sb = new StringBuffer();
+    StringBuilder sb = new StringBuilder();
     for (int ix=0; ix<ring.size(); ix++) {
       sb.append(ring.get(ix));
     }
