@@ -5297,6 +5297,523 @@
 
   {
     title <
+      name = ISRN Molecular Biology ;
+      eissn = 2090-7907 ;
+      issnl = 2090-7907
+    >
+
+    param[journal_id] = isrn.molecular.biology
+
+    au < exists ; exists ; 2012 ; ISRN Molecular Biology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; ISRN Molecular Biology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; ISRN Molecular Biology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = ISRN Nanomaterials ;
+      eissn = 2090-8741 ;
+      issnl = 2090-8741
+    >
+
+    param[journal_id] = isrn.nanomaterials
+
+    au < exists ; exists ; 2012 ; ISRN Nanomaterials Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; ISRN Nanomaterials Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; ISRN Nanomaterials Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = ISRN Neuroscience ;
+      eissn = 2314-4661 ;
+      issnl = 2314-4661
+    >
+
+    param[journal_id] = isrn.neuroscience
+
+    au < exists ; exists ; 2013 ; ISRN Neuroscience Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; ISRN Neuroscience Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = ISRN Nursing ;
+      eissn = 2090-5491 ;
+      issnl = 2090-5491
+    >
+
+    param[journal_id] = isrn.nursing
+
+    au < exists ; exists ; 2011 ; ISRN Nursing Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; ISRN Nursing Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; ISRN Nursing Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; ISRN Nursing Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = ISRN Obesity ;
+      eissn = 2090-9446 ;
+      issnl = 2090-9446
+    >
+
+    param[journal_id] = isrn.obesity
+
+    au < exists ; exists ; 2012 ; ISRN Obesity Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; ISRN Obesity Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; ISRN Obesity Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = ISRN Obstetrics and Gynecology ;
+      eissn = 2090-4444 ;
+      issnl = 2090-4444
+    >
+
+    param[journal_id] = isrn.obgyn
+
+    au < exists ; exists ; 2011 ; ISRN Obstetrics and Gynecology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; ISRN Obstetrics and Gynecology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; ISRN Obstetrics and Gynecology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; ISRN Obstetrics and Gynecology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = ISRN Oncology ;
+      eissn = 2090-567X ;
+      issnl = 2090-567X
+    >
+
+    param[journal_id] = isrn.oncology
+
+    au < exists ; exists ; 2011 ; ISRN Oncology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; ISRN Oncology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; ISRN Oncology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; ISRN Oncology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = ISRN Ophthalmology ;
+      eissn = 2090-5696 ;
+      issnl = 2090-5696
+    >
+
+    param[journal_id] = isrn.ophthalmology
+
+    au < exists ; exists ; 2011 ; ISRN Ophthalmology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; ISRN Ophthalmology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; ISRN Ophthalmology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; ISRN Ophthalmology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = ISRN Organic Chemistry ;
+      eissn = 2090-5157 ;
+      issnl = 2090-5157
+    >
+
+    param[journal_id] = isrn.organic.chemistry
+
+    au < exists ; exists ; 2011 ; ISRN Organic Chemistry Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; ISRN Organic Chemistry Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; ISRN Organic Chemistry Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; ISRN Organic Chemistry Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = ISRN Orthopedics ;
+      eissn = 2090-617X ;
+      issnl = 2090-617X
+    >
+
+    param[journal_id] = isrn.orthopedics
+
+    au < exists ; exists ; 2011 ; ISRN Orthopedics Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; ISRN Orthopedics Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; ISRN Orthopedics Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; ISRN Orthopedics Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = ISRN Otolaryngology ;
+      eissn = 2090-5750 ;
+      issnl = 2090-5750
+    >
+
+    param[journal_id] = isrn.otolaryngology
+
+    au < exists ; exists ; 2011 ; ISRN Otolaryngology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; ISRN Otolaryngology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; ISRN Otolaryngology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; ISRN Otolaryngology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = ISRN Oxidative Medicine ;
+      eissn = 2314-6400 ;
+      issnl = 2314-6400
+    >
+
+    param[journal_id] = isrn.oxidative.medicine
+
+    au < exists ; exists ; 2013 ; ISRN Oxidative Medicine Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; ISRN Oxidative Medicine Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = ISRN Paleontology ;
+      eissn = 2314-6281 ;
+      issnl = 2314-6281
+    >
+
+    param[journal_id] = isrn.paleontology
+
+    au < expected ; exists ; 2014 ; ISRN Paleontology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = ISRN Pathology ;
+      eissn = 2090-5718 ;
+      issnl = 2090-5718
+    >
+
+    param[journal_id] = isrn.pathology
+
+    au < exists ; exists ; 2011 ; ISRN Pathology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; ISRN Pathology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; ISRN Pathology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; ISRN Pathology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = ISRN Pharmaceutics ;
+      eissn = 2090-6153 ;
+      issnl = 2090-6153
+    >
+
+    param[journal_id] = isrn.pharmaceutics
+
+    au < exists ; exists ; 2011 ; ISRN Pharmaceutics Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; ISRN Pharmaceutics Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; ISRN Pharmaceutics Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; ISRN Pharmaceutics Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = ISRN Pharmaceutics ;
+      eissn = 2090-6153 ;
+      issnl = 2090-6153
+    >
+
+    param[journal_id] = isrn.pharmaceutics
+
+    au < exists ; exists ; 2011 ; ISRN Pharmaceutics Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; ISRN Pharmaceutics Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; ISRN Pharmaceutics Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; ISRN Pharmaceutics Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = ISRN Pharmacology ;
+      eissn = 2090-5173 ;
+      issnl = 2090-5173
+    >
+
+    param[journal_id] = isrn.pharmacology
+
+    au < exists ; exists ; 2011 ; ISRN Pharmacology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; ISRN Pharmacology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; ISRN Pharmacology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; ISRN Pharmacology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = ISRN Polymer Science ;
+      eissn = 2090-8733 ;
+      issnl = 2090-8733
+    >
+
+    param[journal_id] = isrn.polymer.science
+
+    au < exists ; exists ; 2012 ; ISRN Polymer Science Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; ISRN Polymer Science Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; ISRN Polymer Science Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = ISRN Power Engineering ;
+      eissn = 2314-632X ;
+      issnl = 2314-632X
+    >
+
+    param[journal_id] = isrn.power.engineering
+
+    au < exists ; exists ; 2013 ; ISRN Power Engineering Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; ISRN Power Engineering Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = ISRN Preventive Medicine ;
+      eissn = 2090-8784 ;
+      issnl = 2090-8784
+    >
+
+    param[journal_id] = isrn.preventive.medicine
+
+    au < exists ; exists ; 2013 ; ISRN Preventive Medicine Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; ISRN Preventive Medicine Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = ISRN Psychiatry ;
+      eissn = 2090-7966 ;
+      issnl = 2090-7966
+    >
+
+    param[journal_id] = isrn.psychiatry
+
+    au < exists ; exists ; 2012 ; ISRN Psychiatry Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; ISRN Psychiatry Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; ISRN Psychiatry Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = ISRN Public Health ;
+      eissn = 2090-8008 ;
+      issnl = 2090-8008
+    >
+
+    param[journal_id] = isrn.public.health
+
+    au < exists ; exists ; 2012 ; ISRN Public Health Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; ISRN Public Health Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; ISRN Public Health Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = ISRN Rehabilitation ;
+      eissn = 2090-6137 ;
+      issnl = 2090-6137
+    >
+
+    param[journal_id] = isrn.rehabilitation
+
+    au < exists ; exists ; 2012 ; ISRN Rehabilitation Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; ISRN Rehabilitation Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; ISRN Rehabilitation Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = ISRN Renewable Energy ;
+      eissn = 2090-746X ;
+      issnl = 2090-746X
+    >
+
+    param[journal_id] = isrn.renewable.energy
+
+    au < exists ; exists ; 2011 ; ISRN Renewable Energy Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; ISRN Renewable Energy Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; ISRN Renewable Energy Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; ISRN Renewable Energy Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = ISRN Rheumatology ;
+      eissn = 2090-5475 ;
+      issnl = 2090-5475
+    >
+
+    param[journal_id] = isrn.rheumatology
+
+    au < exists ; exists ; 2011 ; ISRN Rheumatology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; ISRN Rheumatology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; ISRN Rheumatology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; ISRN Rheumatology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = ISRN Sensor Networks ;
+      eissn = 2090-7745 ;
+      issnl = 2090-7745
+    >
+
+    param[journal_id] = isrn.sensor.networks
+
+    au < exists ; exists ; 2012 ; ISRN Sensor Networks Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; ISRN Sensor Networks Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; ISRN Sensor Networks Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = ISRN Signal Processing ;
+      eissn = 2090-505X ;
+      issnl = 2090-505X
+    >
+
+    param[journal_id] = isrn.signal.processing
+
+    au < exists ; exists ; 2011 ; ISRN Signal Processing Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; ISRN Signal Processing Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; ISRN Signal Processing Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; ISRN Signal Processing Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = ISRN Stroke ;
+      eissn = 2090-9454 ;
+      issnl = 2090-9454
+    >
+
+    param[journal_id] = isrn.stroke
+
+    au < exists ; exists ; 2012 ; ISRN Stroke Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; ISRN Stroke Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; ISRN Stroke Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = ISRN Tribology ;
+      eissn = 2090-889X ;
+      issnl = 2090-889X
+    >
+
+    param[journal_id] = isrn.tribology
+
+    au < exists ; exists ; 2013 ; ISRN Tribology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; ISRN Tribology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = ISRN Urology ;
+      eissn = 2090-5815 ;
+      issnl = 2090-5815
+    >
+
+    param[journal_id] = isrn.urology
+
+    au < exists ; exists ; 2011 ; ISRN Urology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; ISRN Urology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; ISRN Urology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; ISRN Urology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = ISRN Veterinary Science ;
+      eissn = 2090-4460 ;
+      issnl = 2090-4460
+    >
+
+    param[journal_id] = isrn.veterinary.science
+
+    au < exists ; exists ; 2011 ; ISRN Veterinary Science Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; ISRN Veterinary Science Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; ISRN Veterinary Science Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; ISRN Veterinary Science Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = ISRN Virology ;
+      eissn = 2090-8814 ;
+      issnl = 2090-8814
+    >
+
+    param[journal_id] = isrn.virology
+
+    au < exists ; exists ; 2013 ; ISRN Virology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; ISRN Virology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Addiction ;
+      issn = 2090-7834 ;
+      eissn = 2090-7850 ;
+      issnl = 2090-7834
+    >
+
+    param[journal_id] = jad
+
+    au < exists ; exists ; 2013 ; Journal of Addiction Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Addiction Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Aerodynamics ;
+      issn = 2356-7139 ;
+      eissn = 2314-6206 ;
+      issnl = 2356-7139
+    >
+
+    param[journal_id] = jaer
+
+    au < exists ; exists ; 2014 ; Journal of Aerodynamics Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
       name = Journal of Chemistry ;
       issn = 2090-9063 ;
       eissn = 2090-9071 ;
