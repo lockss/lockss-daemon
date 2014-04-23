@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.248 2014-04-04 22:00:47 fergaloy-sf Exp $
+ * $Id: PluginManager.java,v 1.249 2014-04-23 20:45:09 tlipkis Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.net.*;
 import java.security.KeyStore;
 import java.util.*;
 import java.util.jar.*;
+import java.util.regex.*;
 
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.*;
@@ -69,8 +70,19 @@ public class PluginManager
     Configuration.PLATFORM + "pluginDir";
   static final String DEFAULT_PLUGIN_LOCATION = "plugins";
 
-  /** List of plugins to load at startup. */
+  /** List of plugins to load at startup.  Normally used only in testing. */
   static final String PARAM_PLUGIN_REGISTRY = PREFIX + "registry";
+
+  /** List of jars from which to load all plugins at startup.  Normally
+   * used only in testing. */
+  static final String PARAM_PLUGIN_REGISTRY_JARS = PREFIX + "registryJars";
+
+  /** Pattern describing members of jars listed in {@value
+   * #PARAM_PLUGIN_REGISTRY_JARS} that are plugin files. */
+  static final String PARAM_PLUGIN_MEMBER_PATTERN =
+    PREFIX + "registryMemberPattern";
+  static final String DEFAULT_PLUGIN_MEMBER_PATTERN =
+    "^(.*Plugin)\\.(?:xml|class)$";
 
   /** List of plugins not to load, or to remove if already loaded. */
   static final String PARAM_PLUGIN_RETRACT = PREFIX + "retract";
@@ -536,6 +548,7 @@ public class PluginManager
 
       // Process the built-in plugin registry.
       if (changedKeys.contains(PARAM_PLUGIN_REGISTRY) ||
+	  changedKeys.contains(PARAM_PLUGIN_REGISTRY_JARS) ||
 	  changedKeys.contains(PARAM_PLUGIN_RETRACT)) {
 	synchStaticPluginList(config);
       }
@@ -1641,7 +1654,12 @@ public class PluginManager
     }
 
     try {
-      return loadPlugin(pluginKey, loader);
+      PluginInfo info = loadPlugin(pluginKey, loader);
+      Plugin newPlug = info.getPlugin();
+
+      log.info("Loaded plugin: version " + newPlug.getVersion() +
+	       " of " + newPlug.getPluginName());
+      return info;
     } catch (PluginException.PluginNotFound e) {
       log.error("Plugin not found: " + pluginName);
     } catch (PluginException.LinkageError e) {
@@ -2710,13 +2728,26 @@ public class PluginManager
     }
   }
 
-  // Synch the plugin registry with the plugins listed in names
+  // Ensure plugins listed in o.l.plugin.registry or in jars listed in
+  // o.l.plugin.registryJars are loaded.
   void synchStaticPluginList(Configuration config) {
-    List nameList = config.getList(PARAM_PLUGIN_REGISTRY);
-    for (Iterator iter = nameList.iterator(); iter.hasNext(); ) {
-      String name = (String)iter.next();
+    List<String> nameList = config.getList(PARAM_PLUGIN_REGISTRY);
+    for (String name : nameList) {
       String key = pluginKeyFromName(name);
       ensurePluginLoaded(key);
+    }
+
+    List<String> jarList = config.getList(PARAM_PLUGIN_REGISTRY_JARS);
+    if (!jarList.isEmpty()) {
+      Pattern pat =
+	Pattern.compile(config.get(PARAM_PLUGIN_MEMBER_PATTERN,
+				   DEFAULT_PLUGIN_MEMBER_PATTERN));
+      for (String name : getClasspath()) {
+	if (jarList.contains(name) ||
+	    jarList.contains(new File(name).getName())) {
+	  ensureJarPluginsLoaded(name, pat);
+	}
+      }
     }
 
     // remove plugins on retract list, unless they have one or more
@@ -2736,6 +2767,33 @@ public class PluginManager
 	}
       }
     }
+  }
+
+  // Load plugins in jar whose name matches PARAM_PLUGIN_MEMBER_PATTERN
+  void ensureJarPluginsLoaded(String jarname, Pattern pat) {
+    try {
+      JarFile jar = new JarFile(jarname);
+      for (Enumeration<JarEntry> en = jar.entries(); en.hasMoreElements(); ) {
+	JarEntry ent = en.nextElement();
+	Matcher mat = pat.matcher(ent.getName());
+	if (mat.matches()) {
+	  String membname = mat.group(1);
+	  String plugname = membname.replace('/', '.');
+	  String plugkey = pluginKeyFromName(plugname);
+	  ensurePluginLoaded(plugkey);
+	}
+      }
+    } catch (IOException e) {
+      log.error("Couldn't open plugin registry jar: " + jarname);
+    }
+  }
+    
+  private static List<String> getClasspath() {
+    String cp = System.getProperty("java.class.path");
+    if (cp == null) {
+      return Collections.EMPTY_LIST;
+    }
+    return StringUtil.breakAt(cp, File.pathSeparator);
   }
 
   /**
@@ -2861,11 +2919,11 @@ public class PluginManager
    * Given a file representing a JAR, retrieve a list of available
    * plugin classes to load.
    */
-  private List getJarPluginClasses(File blessedJar) throws IOException {
+  private List<String> getJarPluginClasses(File blessedJar) throws IOException {
     JarFile jar = new JarFile(blessedJar);
     Manifest manifest = jar.getManifest();
     Map entries = manifest.getEntries();
-    List plugins = new ArrayList();
+    List<String> plugins = new ArrayList<String>();
 
     for (Iterator manIter = entries.keySet().iterator(); manIter.hasNext();) {
       String key = (String)manIter.next();
@@ -2949,8 +3007,6 @@ public class PluginManager
       }
 
       Plugin newPlug = info.getPlugin();
-      log.info("Loaded plugin: version " + newPlug.getVersion() +
-	       " of " + newPlug.getPluginName());
       setPlugin(key, newPlug);
       if (startAus && newPlug != oldPlug) {
 	changedPluginKeys.add(key);
