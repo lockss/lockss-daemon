@@ -1,5 +1,5 @@
 /*
- * $Id: JsoupHtmlLinkExtractor.java,v 1.5 2013-10-16 01:46:57 clairegriffin Exp $
+ * $Id: JsoupHtmlLinkExtractor.java,v 1.6 2014-04-23 20:43:42 tlipkis Exp $
  */
 
 /*
@@ -279,13 +279,13 @@ public class JsoupHtmlLinkExtractor implements LinkExtractor {
   /**
    * Node Visitor for JSoup parser
    */
-  protected class LinkExtractorNodeVisitor implements NodeVisitor,
-                                                      Callback {
+  protected class LinkExtractorNodeVisitor implements NodeVisitor,Callback {
     private Callback m_cb;
     private ArchivalUnit m_au;
     private URL m_baseUrl;
     private String m_encoding;
     private boolean m_inScript;
+    private LinkExtractor m_styleAttrExtractor;
 
     /**
      * Constructor
@@ -312,6 +312,7 @@ public class JsoupHtmlLinkExtractor implements LinkExtractor {
       m_tagTable.put("script", new ScriptTagLinkExtractor(this));
       m_tagTable.put("base", new BaseTagLinkExtractor(this));
       m_tagTable.put("style", new StyleTagLinkExtractor(m_encoding));
+      m_styleAttrExtractor = new StyleAttrLinkExtractor(m_encoding);
     }
 
     /**
@@ -324,6 +325,9 @@ public class JsoupHtmlLinkExtractor implements LinkExtractor {
     @Override
     public void head(final Node node, final int depth) {
       LinkExtractor tle = m_tagTable.get(node.nodeName());
+      if (node.hasAttr("style")) {
+	m_styleAttrExtractor.tagBegin(node, m_au, this);
+      }
       if(tle != null && !m_inScript) {
         tle.tagBegin(node, m_au, this);
       }
@@ -343,6 +347,9 @@ public class JsoupHtmlLinkExtractor implements LinkExtractor {
       LinkExtractor tle = m_tagTable.get(name);
       if(tle != null && ("script".equalsIgnoreCase(name) || !m_inScript)) {
         tle.tagEnd(node, m_au, this);
+      }
+      if (node.hasAttr("style")) {
+	m_styleAttrExtractor.tagEnd(node, m_au, this);
       }
     }
 
@@ -634,14 +641,45 @@ public class JsoupHtmlLinkExtractor implements LinkExtractor {
   }
 
   /**
-   * Link Extractor for the css tag
+   * Base Link Extractor for tags containing style text
    */
-  public static class StyleTagLinkExtractor extends BaseLinkExtractor {
+  public static class BaseStyleLinkExtractor extends BaseLinkExtractor {
 
-    String m_encoding;
+    protected String m_encoding;
+
+    public BaseStyleLinkExtractor(String encoding) {
+      m_encoding = encoding;
+    }
+
+    // Dispatch to CSS extractor
+    void processStyleText(final String text,
+			  final Node node, final ArchivalUnit au,
+			  final Callback cb) {
+      InputStream in = new ReaderInputStream(new StringReader(text),
+					     m_encoding);
+      try {
+	org.lockss.extractor.LinkExtractor cssExtractor =
+	  au.getLinkExtractor("text/css");
+	if (cssExtractor != null) {
+	  cssExtractor.extractUrls(au, in, m_encoding, node.baseUri(), cb);
+	}
+      }
+      catch(IOException e) {
+	theLog.debug3("IOException in CSS extractor", e);
+      }
+      catch(PluginException e) {
+	theLog.debug3("PluginException in CSS extractor", e);
+      }
+    }
+  }
+
+  /**
+   * Link Extractor for the style tag
+   */
+  public static class StyleTagLinkExtractor extends BaseStyleLinkExtractor {
 
     public StyleTagLinkExtractor(String encoding) {
-      m_encoding = encoding;
+      super(encoding);
     }
 
     /**
@@ -655,21 +693,36 @@ public class JsoupHtmlLinkExtractor implements LinkExtractor {
     public void tagBegin(final Node node, final ArchivalUnit au,
                          final Callback cb) {
       super.tagBegin(node, au, cb);
-      InputStream in =
-        new ReaderInputStream(new StringReader(node.outerHtml()),
-                              m_encoding);
-      try {
-        au.getLinkExtractor("text/css").extractUrls(au,
-                                                    in,
-                                                    m_encoding,
-                                                    node.baseUri(),
-                                                    cb);
-      }
-      catch(IOException e) {
-        theLog.debug3("css:tagbegin: io exception should not happen");
-      }
-      catch(PluginException e) {
-        theLog.debug3("css:tagbegin: plugin exception");
+      processStyleText(node.outerHtml(), node, au, cb);
+    }
+  }
+
+
+  /**
+   * Link Extractor for tags with a style attribute
+   */
+  public static class StyleAttrLinkExtractor extends BaseStyleLinkExtractor {
+
+    public StyleAttrLinkExtractor(String encoding) {
+      super(encoding);
+    }
+
+    /**
+     * Extract link(s) from this tag.
+     *
+     * @param node the node containing the link
+     * @param au   Current archival unit to which this html document belongs.
+     * @param cb   A callback to record extracted links.
+     */
+    @Override
+    public void tagBegin(final Node node, final ArchivalUnit au,
+                         final Callback cb) {
+      super.tagBegin(node, au, cb);
+      // style attr is very common, creating css parser is expensive, do
+      // only if evidence of URLs
+      String val = node.attr("style");
+      if (val != null && StringUtil.indexOfIgnoreCase(val, "url(") >= 0) {
+	processStyleText(val, node, au, cb);
       }
     }
   }
