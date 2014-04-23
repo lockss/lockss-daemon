@@ -1,5 +1,5 @@
 /*
- * $Id: RandomInputStream.java,v 1.1 2008-11-02 21:16:58 tlipkis Exp $
+ * $Id: RandomInputStream.java,v 1.2 2014-04-23 20:49:30 tlipkis Exp $
  */
 
 /*
@@ -45,12 +45,10 @@ public class RandomInputStream extends InputStream {
   private LockssRandom rand;
 
   public RandomInputStream() {
-    System.out.println("new LockssRandom()");
     rand = new LockssRandom();
   }
 
   public RandomInputStream(long seed) {
-    System.out.println("new LockssRandom("+seed+")");
     rand = new LockssRandom(seed);
   }
 
