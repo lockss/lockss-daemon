@@ -1,5 +1,5 @@
 /*
- * $Id: MockUrlCacher.java,v 1.40 2012-03-12 05:26:37 tlipkis Exp $
+ * $Id: MockUrlCacher.java,v 1.41 2014-04-23 20:48:59 tlipkis Exp $
  */
 
 /*
@@ -199,10 +199,16 @@ public class MockUrlCacher implements UrlCacher {
   }
 
   private void throwExceptionIfSet() throws IOException {
-    logger.debug3("Deciding whether to throw an exception");
     if (cachingException != null && numTimesToThrow > 0) {
+      logger.debug3("Throwing exception " +
+		    ClassUtil.getClassNameWithoutPackage(cachingException.getClass())
+		    + " " +
+		    StringUtil.numberOfUnits(numTimesToThrow, "more time"),
+		    new Throwable());
       numTimesToThrow--;
       throw cachingException;
+    } else if (cachingException != null) {
+      logger.debug3("Done throwing exception");
     } else {
       logger.debug3("No cachingException set");
     }
