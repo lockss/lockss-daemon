@@ -1,5 +1,5 @@
 /*
- * $Id: ListObjects.java,v 1.25 2014-01-14 04:30:42 tlipkis Exp $
+ * $Id: ListObjects.java,v 1.26 2014-04-23 20:48:03 tlipkis Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import javax.servlet.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
+import org.lockss.state.*;
 import org.lockss.util.*;
 import org.mortbay.html.*;
 
@@ -102,6 +103,10 @@ public class ListObjects extends LockssServlet {
 	new FileList().execute();
       } else if (type.equalsIgnoreCase("filesm")) {
 	new FileMemberList().execute();
+      } else if (type.equalsIgnoreCase("suburls")) {
+	new SubstanceUrlList().execute();
+      } else if (type.equalsIgnoreCase("subfiles")) {
+	new SubstanceFileList().execute();
       } else if (type.equalsIgnoreCase("articles")) {
 	boolean isDoi = !StringUtil.isNullString(getParameter("doi"));
 	if (isDoi) {
@@ -216,7 +221,7 @@ public class ListObjects extends LockssServlet {
       return au.getAuCachedUrlSet().contentHashIterator();
     }
 
-    void processCu(CachedUrl cu) {
+    protected void processCu(CachedUrl cu) {
       if (cu.hasContent()) {
 	processContentCu(cu);
 	itemCnt++;
@@ -256,6 +261,51 @@ public class ListObjects extends LockssServlet {
       return StringUtil.numberOfUnits(n,
 				      "URL (including archive members)",
 				      "URLs (including archive members)");
+    }
+  }
+
+  /** Base class for substance URLs/files */
+  abstract class SubstanceList extends UrlList {
+
+    protected SubstanceChecker subChecker;
+    
+    SubstanceList() {
+      super();
+      subChecker = new SubstanceChecker(au);
+    }
+
+    Iterator getIterator() {
+      return au.getAuCachedUrlSet().contentHashIterator();
+    }
+  }
+
+  /** List substance URLs in AU */
+  class SubstanceUrlList extends SubstanceList {
+
+    SubstanceUrlList() {
+      super();
+    }
+
+    void printHeader() {
+      wrtr.println("# Substance URLs* in " + au.getName());
+    }
+
+    String units(int n) {
+      return StringUtil.numberOfUnits(n, "substance URL", "substance URLs");
+    }
+
+    protected void processCu(CachedUrl cu) {
+      if (cu.hasContent()) {
+	String url = cu.getUrl();
+	if (subChecker.isSubstanceUrl(url)) {
+	  wrtr.println(url);
+	  itemCnt++;
+	}
+      }
+    }
+
+    void processContentCu(CachedUrl cu) {
+      throw new IllegalStateException("Shouldn't be called");
     }
   }
 
@@ -299,6 +349,41 @@ public class ListObjects extends LockssServlet {
       return StringUtil.numberOfUnits(n,
 				      "file (including archive members)",
 				      "files (including archive members)");
+    }
+  }
+
+  /** List substance URLs in AU */
+  class SubstanceFileList extends SubstanceList {
+
+    SubstanceFileList() {
+      super();
+    }
+
+    void printHeader() {
+      wrtr.println("# Substance files* in " + au.getName());
+    }
+
+    String units(int n) {
+      return StringUtil.numberOfUnits(n, "substance file", "substance files");
+    }
+
+    protected void processCu(CachedUrl cu) {
+      if (cu.hasContent()) {
+	String url = cu.getUrl();
+	if (subChecker.isSubstanceUrl(url)) {
+	  String contentType = cu.getContentType();
+	  long bytes = cu.getContentSize();
+	  if (contentType == null) {
+	    contentType = "unknown";
+	  }
+	  wrtr.println(url + "\t" + contentType + "\t" + bytes);
+	  itemCnt++;
+	}
+      }
+    }
+
+    void processContentCu(CachedUrl cu) {
+      throw new IllegalStateException("Shouldn't be called");
     }
   }
 
