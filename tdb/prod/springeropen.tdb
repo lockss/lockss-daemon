@@ -802,7 +802,7 @@
         param[journal_issn] = 2196-419X 
         comment[platform] = BioMedCentralPlugin
 
-        au < exists ; 2014 ; Functional Linguistics Volume 1 ; 1 >
+        au < manifest ; 2014 ; Functional Linguistics Volume 1 ; 1 >
 
     }
 
@@ -1415,7 +1415,7 @@
         au < manifest ; 2011 ; Journal of Mathematical Neuroscience Volume 1 ; 1 >
         au < manifest ; 2012 ; Journal of Mathematical Neuroscience Volume 2 ; 2 >
         au < manifest ; 2013 ; Journal of Mathematical Neuroscience Volume 3 ; 3 >
-        au < expected ; 2014 ; Journal of Mathematical Neuroscience Volume 4 ; 4 >
+        au < manifest ; 2014 ; Journal of Mathematical Neuroscience Volume 4 ; 4 >
   
     }
   
