@@ -3,29 +3,6 @@
     name = SAGE Publications
   >
 
-  rights = openaccess
-
-  {
-    title <
-      name = Auto/Biography ;
-      issn = 0967-5507 ;
-      eissn = 1479-9715 ;
-      issnl = 0967-5507
-    >
-
-    plugin = org.lockss.plugin.autobiography.AutoBiographyPlugin
-    param[base_url] = http://autobiography.stanford.clockss.org/
-    param[journal_id] = aub
-    
-   implicit < status ; year ; name ; param[volume_name] >
-   
-   comment[doNotProcess] = Do not release these.
-    
-    au < doNotProcess ; 2004 ; Auto/Biography Volume 12 ; 12 >
-    au < doNotProcess ; 2005 ; Auto/Biography Volume 13 ; 13 >
-    au < doNotProcess ; 2006-2007 ; Auto/Biography Volume 14 ; 14 >
-  }
-
     {
 
       title <
@@ -33,6 +10,7 @@
         issn = 1522-1628 
       >
     
+      rights = openaccess
       plugin = org.lockss.plugin.highwire.HighWireTriggeredPlugin
       param[base_url] = http://graft.stanford.clockss.org/
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
