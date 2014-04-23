@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.76 2014-01-07 20:42:54 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.77 2014-04-23 20:47:11 tlipkis Exp $
  */
 
 /*
@@ -115,6 +115,9 @@ public class DefinablePlugin extends BasePlugin {
 
   public static final String KEY_REPAIR_FROM_PUBLISHER_WHEN_TOO_CLOSE =
     "plugin_repair_from_publisher_when_too_close";
+
+  public static final String KEY_MIN_REPLICAS_FOR_NO_QUORUM_PEER_REPAIR =
+    "plugin_min_replicas_for_no_quorum_peer_repair";
 
   public static final String KEY_PLUGIN_DELETE_EXTRA_FILES =
     "plugin_delete_extra_files";

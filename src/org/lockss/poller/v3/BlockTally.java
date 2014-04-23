@@ -1,5 +1,5 @@
 /*
- * $Id: BlockTally.java,v 1.31 2013-05-06 20:36:06 barry409 Exp $
+ * $Id: BlockTally.java,v 1.32 2014-04-23 20:47:11 tlipkis Exp $
  */
 
 /*
@@ -218,6 +218,10 @@ public class BlockTally implements VoteBlockTallier.VoteBlockTally {
     }
   }
 
+  public Collection<ParticipantUserData> getSortedRepairCandidates(int minReplicas) {
+    return versionCounts.getSortedRepairCandidates(minReplicas);
+  }
+
   public Collection<ParticipantUserData> getAgreeVoters() {
     return Collections.unmodifiableCollection(agreeVoters);
   }
@@ -272,5 +276,9 @@ public class BlockTally implements VoteBlockTallier.VoteBlockTally {
   void addVoterOnlyVoter(ParticipantUserData id) {
     disagreeVoters.add(id);
     voterOnlyVoters.add(id);
+  }
+
+  boolean isVoterOnly() {
+    return disagreeVoters.size() == voterOnlyVoters.size();
   }
 }
