@@ -1,10 +1,43 @@
+/*
+ * $Id: HtmlFormExtractor.java,v 1.8 2014-04-23 22:42:59 clairegriffin Exp $
+ */
+
+/*
+
+Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
+all rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the name of Stanford University shall not
+be used in advertising or otherwise to promote the sale, use or other dealings
+in this Software without prior written authorization from Stanford University.
+
+*/
 package org.lockss.extractor;
 
 import org.jsoup.nodes.Element;
+import org.jsoup.nodes.FormElement;
 import org.jsoup.nodes.Node;
 import org.jsoup.select.Elements;
 import org.lockss.config.Configuration;
 import org.lockss.config.CurrentConfig;
+import org.lockss.extractor.JsoupHtmlLinkExtractor.BaseLinkExtractor;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.uiapi.util.Constants;
 import org.lockss.util.*;
@@ -13,7 +46,6 @@ import java.nio.charset.Charset;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-import static org.lockss.extractor.JsoupHtmlLinkExtractor.BaseLinkExtractor;
 
 /**
  * Processing form data for submission:
@@ -58,9 +90,17 @@ import static org.lockss.extractor.JsoupHtmlLinkExtractor.BaseLinkExtractor;
  */
 public class HtmlFormExtractor {
   public static final String PREFIX = Configuration.PREFIX +
-    "extractor.htmlformextractor.";
+                                          "extractor.htmlformextractor.";
   public static final String PARAM_MAX_FORM_URLS = PREFIX + "max_form_urls";
   public static final int DEFAULT_MAX_FORM_URLS = 1000000;
+  public static final String PARAM_FORM_TAG_CLASS = PREFIX + "form_tag_class";
+  public static final String DEFAULT_FORM_TAG_CLASS =
+      FormTagLinkExtractor.class.getName();
+  public static final String PARAM_FORM_ELEMENT_TAG_CLASS =
+      PREFIX + "form_element_tag_class";
+  public static final String DEFAULT_FORM_ELEMENT_TAG_CLASS =
+      FormElementLinkExtractor.class.getName();
+
   static final Logger theLogger = Logger.getLogger("HtmlFormExtractor");
 
   /**
@@ -116,10 +156,6 @@ public class HtmlFormExtractor {
    */
   String m_encoding;
 
-  /**
-   * the id of the currently open form
-   */
-  String m_openForm;
 
   /**
    * the au for this form processor
@@ -136,7 +172,7 @@ public class HtmlFormExtractor {
    * if the form has no id.
    */
   Map<String, FormUrlGenerator> m_forms =
-    new LinkedHashMap<String, FormUrlGenerator>();
+      new LinkedHashMap<String, FormUrlGenerator>();
 
   /**
    * the form tag extractor to use with this form processor
@@ -146,12 +182,7 @@ public class HtmlFormExtractor {
   /**
    * the form elements tag extractor to use with this form processor
    */
-  private FormElementLinkExtractor m_formTagsExtractor;
-
-  /**
-   * The key used to store the currently open form
-   */
-  private static final String DEF_OPEN_FORM_ID = "*open*";
+  private FormElementLinkExtractor m_formElementLinkExtractor;
 
 
   /**
@@ -168,17 +199,20 @@ public class HtmlFormExtractor {
 
   private Map<String, FieldIterator> m_fieldGenerator;
 
+  private List<FormUrlGenerator> urlGenerators;
+
+
   /**
    * Construct a new Form Proceesor
    *
-   * @param au       the au for which we will be processing forms
-   * @param cb       callback for handling a found link
+   * @param au the au for which we will be processing forms
+   * @param cb callback for handling a found link
    * @param encoding the base document encoding
    */
   public HtmlFormExtractor(final ArchivalUnit au,
                            final LinkExtractor.Callback cb,
                            final String encoding,
-                           Map<String, FormFieldRestrictions>  restrictions,
+                           Map<String, FormFieldRestrictions> restrictions,
                            Map<String, FieldIterator> generators) {
     m_au = au;
     m_cb = cb;
@@ -187,44 +221,52 @@ public class HtmlFormExtractor {
     m_maxFormUrls = CurrentConfig.getIntParam(PARAM_MAX_FORM_URLS,
                                               DEFAULT_MAX_FORM_URLS);
     m_numFormUrls = 0;
-    m_openForm = null;
-    if(restrictions != null) {
+    if (restrictions != null) {
       m_fieldRestrictions = restrictions;
-    }
-    else {
+    } else {
       m_fieldRestrictions = new HashMap<String, FormFieldRestrictions>();
     }
-    if(generators != null) {
+    if (generators != null) {
       m_fieldGenerator = generators;
-    }
-    else {
+    } else {
       m_fieldGenerator = new HashMap<String, FieldIterator>();
     }
+    urlGenerators = new ArrayList<FormUrlGenerator>();
   }
 
+  /**
+   * Initialze the FormExtractor adding any forms for processing
+   * and attaching the correct FormLinkExtractor and TagLinkExtractor classes
+   * to the doc extractor tag table
+   *
+   * @param docExtractor the document extractor to which we will add our form
+   * extractors
+   * @param forms a list of Jsoup FormElement for which we will extract urls
+   */
   public void initProcessor(JsoupHtmlLinkExtractor docExtractor,
-                            Elements forms) {
-    docExtractor.registerTagExtractor(FORM_TAG, getFormLinkExtractor());
-        /* add the form tag and all tags related to forms */
-    FormElementLinkExtractor tag_extractor = getTagsLinkExtractor();
-    for(String el_name : FORM_TAG_ELEMENTS) {
-      docExtractor.registerTagExtractor(el_name, tag_extractor);
+                            List<FormElement> forms) {
+    m_formExtractor = getFormLinkExtractor();
+    m_formElementLinkExtractor = getTagsLinkExtractor();
+    for (String el_name : FORM_TAG_ELEMENTS) {
+      docExtractor.registerTagExtractor(el_name, m_formElementLinkExtractor);
     }
-    if(forms != null) {
+
+    if (forms != null) {
       // add all the forms which have
-      for(Element form : forms) {
+      for (FormElement form : forms) {
         addForm(form);
       }
     }
   }
+
   /**
    * Add a form field restriction to the field restrictions table
    *
-   * @param field        the name of the field to attach the restrictions to.
+   * @param field the name of the field to attach the restrictions to.
    * @param restrictions the actual restrictions to use for that field
    */
   public void addFieldRestrictions(String field, FormFieldRestrictions
-    restrictions) {
+                                                     restrictions) {
     m_fieldRestrictions.put(field, restrictions);
   }
 
@@ -242,7 +284,7 @@ public class HtmlFormExtractor {
   /**
    * Add a form field restriction to the field generator table
    *
-   * @param field    the name of the field to attach the generator to.
+   * @param field the name of the field to attach the generator to.
    * @param iterator the actual field iterator to use
    */
   public void addFieldGenerator(String field, FieldIterator iterator) {
@@ -281,6 +323,16 @@ public class HtmlFormExtractor {
   }
 
   /**
+   * Get the form url generators for all forms found in the
+   * page
+   *
+   * @return a list of FormUrlGenerators
+   */
+  protected List<FormUrlGenerator> getUrlGenerators() {
+    return urlGenerators;
+  }
+
+  /**
    * Add a form element to the form table.  The form is stored by
    * it's id so this form must have an id.
    *
@@ -289,99 +341,154 @@ public class HtmlFormExtractor {
    * @throws IllegalArgumentException if el is a form or el has no id.
    */
   public void addForm(Element el) {
-    if(!el.tagName().equalsIgnoreCase(FORM_TAG)) {
+    if (!el.tagName().equalsIgnoreCase(FORM_TAG)) {
       throw new IllegalArgumentException(
-        "Attempt to add non-form element to form table");
+       "Attempt to add non-form element to form table");
     }
-    if(StringUtil.isNullString(el.id())) {
-      throw new IllegalArgumentException(
-        "Attempt to add form without a form id to the form table");
-
+    FormUrlGenerator formUrlGenerator = new FormUrlGenerator(el);
+    urlGenerators.add(formUrlGenerator);
+    if (!StringUtil.isNullString(el.id())) {
+      m_forms.put(el.id(), new FormUrlGenerator(el));
     }
-    m_forms.put(el.id(), new FormUrlGenerator(el));
   }
 
+  /**
+   * Create a new FormUrlGenerator for a form and if the form has
+   * an id at it to the id table.
+   *
+   * @param fe the element to add
+   *
+   * @throws IllegalArgumentException if el is a form or el has no id.
+   */
+  public void addForm(FormElement fe) {
+    FormUrlGenerator formUrlGenerator = new FormUrlGenerator(fe);
+    urlGenerators.add(formUrlGenerator);
+    if (!StringUtil.isNullString(fe.id())) {
+      m_forms.put(fe.id(), formUrlGenerator);
+    }
+    Elements elements = fe.elements();
+    for (Element element : elements) {
+      formUrlGenerator.addElement(element);
+    }
+  }
+
+  /**
+   * Determine if we should extract forms based on the installed
+   * FormFieldRestrictions
+   *
+   * @param id the id found in the form element
+   * @param name the name for this form element
+   * @param action the action for this form element
+   * @param val the submission value for this form element
+   *
+   * @return true if none of the above values is in the list of
+   * restricted field elements
+   */
   protected boolean shouldProcessForm(String id, String name,
                                       String action, String val) {
-    boolean process_form = true;
-    FormFieldRestrictions restrictions = null;
-    if(m_fieldRestrictions != null)
-    {
+    FormFieldRestrictions restrictions;
+    if (m_fieldRestrictions != null) {
       restrictions = m_fieldRestrictions.get(FORM_ID);
-      if(restrictions != null &&  !restrictions.isAllowed(id))
-      {
+      if (restrictions != null && !restrictions.isAllowed(id)) {
         return false;
       }
       restrictions = m_fieldRestrictions.get(FORM_NAME);
-      if(restrictions != null && !restrictions.isAllowed(name))
-      {
+      if (restrictions != null && !restrictions.isAllowed(name)) {
         return false;
       }
 
       restrictions = m_fieldRestrictions.get(FORM_ACTION);
-      if(restrictions != null && !restrictions.isAllowed(action))
-      {
+      if (restrictions != null && !restrictions.isAllowed(action)) {
         return false;
       }
       restrictions = m_fieldRestrictions.get(SUBMIT_VALUE);
-      if(restrictions != null && !restrictions.isAllowed(val))
-      {
+      if (restrictions != null && !restrictions.isAllowed(val)) {
         return false;
       }
-
     }
     return true;
   }
 
   /**
-   * process all forms remaining in the form table.
+   * process all forms in the form table.
    */
   public void processForms() {
-    for(FormUrlGenerator form : m_forms.values()) {
+    for (FormUrlGenerator form : urlGenerators) {
       form.emitLinks(m_au, m_cb);
     }
   }
 
   /**
-   * Get the tag link extractor for this form processor.  There is one and
-   * only one for each form processor
+   * Get the 'form' tag link extractor for this form processor and attach it to
+   * this HtmlFormExtractor.  There is one and only one for each
+   * HtmlFormExtractor.  To override the default form extractor
+   * subclass FormTagLinkExtractor and override appropriate methods and incl
+   * in the au config.
    *
    * @return the FormTagLinkExtractor for this form processor
    */
   public FormTagLinkExtractor getFormLinkExtractor() {
-    if(m_formExtractor == null) {
-      m_formExtractor = new FormTagLinkExtractor();
+    if (m_formExtractor == null) {
+      String className = CurrentConfig.getParam(PARAM_FORM_TAG_CLASS,
+                                                DEFAULT_FORM_TAG_CLASS);
+      m_formExtractor =
+          ClassUtil.instantiate(className, FormTagLinkExtractor.class);
+      m_formExtractor.setExtractor(this);
     }
     return m_formExtractor;
   }
 
   /**
    * Get the form elements tag link extractor for this .  There is one and
-   * only one for each form processor
+   * only one for each form processor.  To override the default form extractor
+   * subclass FormElementLinkExtractor and override appropriate methods and
+   * included in the au config
    *
-   * @return the FormTagLinkExtractor for this form processor
+   * @return the FormElementLinkExtractor for this form processor
    */
   public FormElementLinkExtractor getTagsLinkExtractor() {
-    if(m_formTagsExtractor == null) {
-      m_formTagsExtractor = new FormElementLinkExtractor();
+    if (m_formElementLinkExtractor == null) {
+      String className = CurrentConfig.getParam(PARAM_FORM_ELEMENT_TAG_CLASS,
+                                                DEFAULT_FORM_ELEMENT_TAG_CLASS);
+      m_formElementLinkExtractor =
+          ClassUtil.instantiate(className, FormElementLinkExtractor.class);
+      m_formElementLinkExtractor.setExtractor(this);
+
     }
-    return m_formTagsExtractor;
+    return m_formElementLinkExtractor;
   }
 
+  /**
+   * Make an url encoded name=value pair
+   *
+   * @param name the name to encode
+   * @param value the value encode
+   *
+   * @return a urlencoded name=value string
+   */
   static public String makeEncodedString(String name, String value) {
     StringBuilder sb = new StringBuilder();
     String enc_name = name;
     String enc_val = value;
-    if(!StringUtil.isNullString(name)) {
+    if (!StringUtil.isNullString(name)) {
       enc_name = UrlUtil.encodeUrl(name);
     }
-    if(!StringUtil.isNullString(value)) {
+    if (!StringUtil.isNullString(value)) {
       enc_val = UrlUtil.encodeUrl(value);
     }
     sb.append(enc_name).append("=").append(enc_val);
     return sb.toString();
   }
 
+  /**
+   * Make a url encoded assignment of name to multiple values:
+   * name=val1&name=val2...name=valn
+   *
+   * @param name the name to encode
+   * @param values the list of values to encode
+   *
+   * @return a urlencoded sequence of name=val pairings
+   */
   static public String makeEncodedString(String name,
                                          Collection<String> values) {
     StringBuilder sb = new StringBuilder();
@@ -389,16 +496,19 @@ public class HtmlFormExtractor {
     String enc_val;
     int amp_ct = values.size();
 
-    for(final String value : values) {
+    for (final String value : values) {
       enc_val = UrlUtil.encodeUrl(value);
       sb.append(enc_name).append("=").append(enc_val);
-      if(--amp_ct > 0) {
+      if (--amp_ct > 0) {
         sb.append("&");
       }
     }
     return sb.toString();
-    }
+  }
 
+  /**
+   * Interface for all Field Iterators
+   */
   public interface FieldIterator extends Iterator<String> {
     /**
      * reset the iterator fields back to the starting position. This
@@ -410,6 +520,7 @@ public class HtmlFormExtractor {
     /**
      * return the last iteration we use this instead of a next() call so we
      * can wrap around sensibly.
+     *
      * @return the last result of the cast to next()
      */
     public String last();
@@ -419,113 +530,99 @@ public class HtmlFormExtractor {
   /**
    * The extractor for a "form" tag.
    * This does all of the work necessary to handle the begin and end tags.
-   * There are two types of tags processed
+   * In addition unlike other LinkExtractors this will requires you to
+   * set the HtmlFormExtractor before use.
    */
-  public class FormTagLinkExtractor extends BaseLinkExtractor {
+  public static class FormTagLinkExtractor extends BaseLinkExtractor {
 
     int open_ct = 0;
+    HtmlFormExtractor extractor;
 
     /**
      * Extract link(s) from this tag.
      *
      * @param node the node containing the link
-     * @param au   Current archival unit to which this html document belongs.
-     * @param cb   A callback to record extracted links.
+     * @param au Current archival unit to which this html document belongs.
+     * @param cb A callback to record extracted links.
      */
     public void tagBegin(final Node node, final ArchivalUnit au,
                          final LinkExtractor.Callback cb) {
       super.tagBegin(node, au, cb);
-      Element el = (Element) node;
       // --- required attributes ---
-      String action = el.attr("action");
-      //where to send form
-      //if(StringUtil.isNullString(action)) {
-      // if a form has no action
-      //   theLogger.siteWarning("form can not be processed: no action");
-      //  return;
-      //}
       open_ct++;
-      if(m_openForm != null) {
+      if (open_ct > 1) {
         // if we have an open form - we can't open a new one.
-        if(theLogger.isDebug())
+        if (theLogger.isDebug()) {
           theLogger.debug("form can not be processed: nested form");
-        return;
+        }
       }
-      m_openForm = el.attr("id");
-      if(StringUtil.isNullString(m_openForm)) {
-        m_openForm = DEF_OPEN_FORM_ID;
-      }
-      m_forms.put(m_openForm, new FormUrlGenerator(el));
+
     }
 
     /**
      * Perform any extractions based on end tag processing.
      *
      * @param node the node containing the link
-     * @param au   Current archival unit to which this html document belongs.
-     * @param cb   A callback to record extracted links.
+     * @param au Current archival unit to which this html document belongs.
+     * @param cb A callback to record extracted links.
      */
     @Override
     public void tagEnd(final Node node, final ArchivalUnit au,
                        final LinkExtractor.Callback cb) {
       super.tagEnd(node, au, cb);
-      Element el = (Element) node;
-      if(m_openForm == null) {
+      if (open_ct > 1) {
         // we found a end tag with no matching begin
-        if(theLogger.isDebug())
-          theLogger.debug("HtmlFormExtractor found unmatched form tag.");
-        return;
+        if (theLogger.isDebug()) {
+          theLogger.debug("HtmlFormExtractor skipping nested close");
+        }
       }
       open_ct--;
-      if(open_ct < 1 ) {
-        if(StringUtil.isNullString(el.attr("id"))) {
-          FormUrlGenerator open_form = m_forms.remove(DEF_OPEN_FORM_ID);
-          open_form.emitLinks(au, cb);
-        }
-        m_openForm = null;
-      }
+    }
+
+    protected void setExtractor(HtmlFormExtractor extractor) {
+      this.extractor = extractor;
     }
   }
 
-  /**
-   * Tag Link Extractor for one of the elements which may
-   * be found within or attached to a form
-   */
-  public class FormElementLinkExtractor extends BaseLinkExtractor {
+
+  public static class FormElementLinkExtractor extends BaseLinkExtractor {
+
+    HtmlFormExtractor extractor;
 
     /**
      * Extract link(s) from a tag found in "form".  These tags should be one
      * of the FORM_TAG_ELEMENTS defined above.
      *
      * @param node the node containing the link
-     * @param au   Current archival unit to which this html document belongs.
-     * @param cb   A callback to record extracted links.
+     * @param au Current archival unit to which this html document belongs.
+     * @param cb A callback to record extracted links.
      */
     @Override
     public void tagBegin(final Node node, final ArchivalUnit au,
                          final LinkExtractor.Callback cb) {
       super.tagBegin(node, au, cb);
+      if (extractor == null) {
+        return;
+      }
+
       Element el = (Element) node;
       String name = el.tagName().toLowerCase();
 
-      if(FORM_TAG_ELEMENTS.contains(name)) {
+      if (FORM_TAG_ELEMENTS.contains(name)) {
         String f_id = el.attr(FORM_TAG);
-        if(StringUtil.isNullString(f_id)) {
-          // if we don't have a form id, set it to the open form
-          f_id = m_openForm;
-        }
-        FormUrlGenerator form = m_forms.get(f_id);
-        if(form != null)  {
-          form.addElement(el);
-        }
-        else {
-          if(theLogger.isDebug())
-           theLogger.debug("unable to find form for tag " + name);
+        if (!StringUtil.isNullString(f_id)) {
+          FormUrlGenerator form = extractor.getForm(f_id);
+          if (form != null) {
+            form.addElement(el);
+          }
         }
       }
     }
-  }
 
+    protected void setExtractor(HtmlFormExtractor extractor) {
+      this.extractor = extractor;
+    }
+  }
 
   /**
    * The actual url generator for a specific form.
@@ -534,6 +631,7 @@ public class HtmlFormExtractor {
    * out the the forms links
    */
   public class FormUrlGenerator {
+    Element m_form;
 
     /**
      * Specifies where to send the form-data when a form is submitted. A form
@@ -542,7 +640,8 @@ public class HtmlFormExtractor {
     String m_action;
 
     /**
-     * Specifies the character encodings that are to be used for the form submission
+     * Specifies the character encodings that are to be used for the form
+     * submission
      */
     String m_charset;
 
@@ -583,7 +682,7 @@ public class HtmlFormExtractor {
 
 
     FormUrlGenerator(Element el) {
-
+      m_form = el;
       // the only required attribute
       m_action = el.attr("abs:action");
 
@@ -597,19 +696,37 @@ public class HtmlFormExtractor {
       m_id = el.attr("id");
       m_name = el.attr("name");
 
-      if(StringUtil.isNullString(m_charset) ||
-        !Charset.isSupported(m_charset)) {
+      if (StringUtil.isNullString(m_charset) ||
+              !Charset.isSupported(m_charset)) {
         m_charset = m_encoding;// default charset is the documents encoding.
       }
-      if(StringUtil.isNullString(m_method)) {
+      if (StringUtil.isNullString(m_method)) {
         m_method = "get"; // default method type is "get"
       }
-      if(StringUtil.isNullString(m_enctype)) {
+      if (StringUtil.isNullString(m_enctype)) {
         m_enctype = Constants.FORM_ENCODING_URL;
       }
       m_submits = new ArrayList<Element>();
       m_controls = new LinkedHashMap<String, FormControlElement>();
-  }
+    }
+
+    /**
+     * Test if a element can be added to the the current FormUrlGenerator
+     * This prevents the adding of duplicate elements and elements being
+     * added to a form if the 'form' attr is different from the form 'id'
+     * @param el the element to add
+     * @return true iff the element is not already added AND
+     *  if the element has a 'form' attr it equals the form 'id'
+     */
+    boolean canAddElement(Element el) {
+      String el_form = el.attr("form");
+      if (StringUtil.isNullString(el_form) || el_form.equals(m_id)) {
+        // if an element is the same as an existing element we ignore it
+        Elements elements = m_form.getElementsByTag(el.tagName());
+        return elements != null && elements.contains(el);
+      }
+      return false;
+    }
 
     /**
      * Called by the tag begin for an form element tag to add the element to
@@ -618,14 +735,15 @@ public class HtmlFormExtractor {
      * @param el The element tag to add
      */
     void addElement(Element el) {
-      if(el.tagName().equalsIgnoreCase("select")) {
-        addSelectElement(el);
-      }
-      else if(el.tagName().equalsIgnoreCase("input")) {
-        addInputElement(el);
-      }
-      else if(el.tagName().equalsIgnoreCase("button")) {
-        addButtonElement(el);
+      String el_form = el.attr("form");
+      if (StringUtil.isNullString(el_form) || el_form.equals(m_id)) {
+        if (el.tagName().equalsIgnoreCase("select")) {
+          addSelectElement(el);
+        } else if (el.tagName().equalsIgnoreCase("input")) {
+          addInputElement(el);
+        } else if (el.tagName().equalsIgnoreCase("button")) {
+          addButtonElement(el);
+        }
       }
     }
 
@@ -642,42 +760,37 @@ public class HtmlFormExtractor {
       String type = el.attr("type");
       String val = el.attr("value");
       boolean req = el.hasAttr("required");
-      JsoupHtmlLinkExtractor.checkLink(el,m_cb,"src");
+      JsoupHtmlLinkExtractor.checkLink(el, m_cb, "src");
       //String src = el.attr("src");
       // unlike buttons which use the img tag, input tags use a "src" attribute
       //if(!StringUtil.isNullString(src)) {
       // m_cb.foundLink(src);
       //}
-      if(type.equalsIgnoreCase("submit")) {
+      if (type.equalsIgnoreCase("submit")) {
         addSubmit(el, name, val);
-      }
-      else if(type.equalsIgnoreCase("image")) {
+      } else if (type.equalsIgnoreCase("image")) {
         // input tags of type "image" use a "src" attribute
         //if(src != null) {
         //  m_cb.foundLink(src);
         //}
         // but it acts like a submit button
         addSubmit(el, name, val);
-      }
-      else if(type.equalsIgnoreCase("hidden")) {
+      } else if (type.equalsIgnoreCase("hidden")) {
         // always req, never multisel
         addControl(type, name, val, true, false);
-      }
-      else if(type.equalsIgnoreCase("checkbox")) {
-        if(StringUtil.isNullString(val)) {
+      } else if (type.equalsIgnoreCase("checkbox")) {
+        if (StringUtil.isNullString(val)) {
           val = "on"; // default value
         }
         // may be required, always multisel
         addControl(type, name, val, req, true);
-      }
-      else if(type.equalsIgnoreCase("radio")) {
+      } else if (type.equalsIgnoreCase("radio")) {
         // always req i.e. one radio is always on, never multisel.
         addControl(type, name, val, true, false);
-      }
-      else {
+      } else {
         // all other input types, check to see if we have a field generator
         FieldIterator iter = m_fieldGenerator.get(name);
-        if(iter != null) {
+        if (iter != null) {
           addFieldIterator(type, name, req, iter);
         }
       }
@@ -687,12 +800,12 @@ public class HtmlFormExtractor {
      * Extract any data from an "button" tag and add it to the form
      * processor if it is of type submit.
      *
-     * @param el The "input" element tag to add
+     * @param el The "button" element tag to add
      */
     void addButtonElement(final Element el) {
       String type = el.attr("type");
       // the only button types we care about is submit
-      if(type.equalsIgnoreCase("submit")) {
+      if (type.equalsIgnoreCase("submit")) {
         addSubmit(el, el.attr("name"), el.attr("value"));
       }
     }
@@ -710,26 +823,26 @@ public class HtmlFormExtractor {
       // this is an optional attribute
       String name = el.attr("name");
 
-      if(StringUtil.isNullString(name) ||
-        (selections == null || selections.isEmpty())) {
+      if (StringUtil.isNullString(name) ||
+              (selections == null || selections.isEmpty())) {
         theLogger.debug3("'select' requires 'name' & 'options' attributes");
         return;
       }
 
       String multiple = el.attr("multiple");
       boolean allow_multi = (multiple != null) &&
-        multiple.equalsIgnoreCase("multiple");
+                                multiple.equalsIgnoreCase("multiple");
       FormControlElement fc =
-        new FormControlElement("select", name, allow_multi, false);
-      if(m_fieldRestrictions != null)  {
+          new FormControlElement("select", name, allow_multi, false);
+      if (m_fieldRestrictions != null) {
         fc.setRestrictions(m_fieldRestrictions.get(name));
       }
       m_controls.put(name, fc);
 
-      for(Element sel : selections) {
+      for (Element sel : selections) {
         String value = sel.val();
 
-        if(StringUtil.isNullString(value)) {
+        if (StringUtil.isNullString(value)) {
           // if a value isn't specified the text of the select is the value.
           value = sel.text();
         }
@@ -743,14 +856,14 @@ public class HtmlFormExtractor {
      *
      * @param type the "input" element type
      * @param name the "input" element name
-     * @param req  is the element required
+     * @param req is the element required
      * @param iter the FieldIterator which will generate all values for
-     *             this field.
+     * this field.
      */
     void addFieldIterator(String type, String name,
                           boolean req, FieldIterator iter) {
       FormControlElement fc = m_controls.get(name);
-      if(fc == null) {
+      if (fc == null) {
         fc = new FormControlElement(type, name, false, req, iter);
         m_controls.put(name, fc);
       }
@@ -760,22 +873,22 @@ public class HtmlFormExtractor {
      * Add a value to the "input" element with this name.  This will create a
      * new FormControlElement if one does not exist;
      *
-     * @param type  the "input" element type
-     * @param name  the "input" element name
+     * @param type the "input" element type
+     * @param name the "input" element name
      * @param value the value for this "input" element
-     * @param req   is the element required
+     * @param req is the element required
      * @param multi are multi selections allowed.
      */
     void addControl(String type, String name, String value,
                     boolean req, boolean multi) {
-      if(StringUtil.isNullString(name) || StringUtil.isNullString(value)) {
+      if (StringUtil.isNullString(name) || StringUtil.isNullString(value)) {
         theLogger.debug3("element requires 'name' & 'value' ");
         return;
       }
       FormControlElement fc = m_controls.get(name);
-      if(fc == null) {
+      if (fc == null) {
         fc = new FormControlElement(type, name, multi, req);
-        if(m_fieldRestrictions != null) {
+        if (m_fieldRestrictions != null) {
           fc.setRestrictions(m_fieldRestrictions.get(name));
         }
         m_controls.put(name, fc);
@@ -788,33 +901,33 @@ public class HtmlFormExtractor {
      * This will check for duplicates before adding.  We only pay attention to
      * the fields which might effect the url.
      *
-     * @param el    the element to add to the submit table
-     * @param name  the name (null ok)
+     * @param el the element to add to the submit table
+     * @param name the name (null ok)
      * @param value the value (null ok)
      */
     void addSubmit(Element el, String name, String value) {
       boolean duplicate = false;
       String action = el.attr("formaction");
       // make sure we have an action that can be used to process this form
-      if(StringUtil.isNullString(action) && StringUtil.isNullString(m_action))
-      {
+      if (StringUtil.isNullString(action) &&
+              StringUtil.isNullString(m_action)) {
         //we skip this because we can't act on it.
         return;
       }
       // check for a duplicate and skip it if we don't have different name:
       // value pair or action
-      for(Element sub_el : m_submits) {
+      for (Element sub_el : m_submits) {
         String sub_action = sub_el.attr("formaction");
         String sub_name = sub_el.attr("name");
         String sub_val = sub_el.attr("value");
-        if(StringUtil.equalStringsIgnoreCase(action, sub_action) &&
-          StringUtil.equalStringsIgnoreCase(name, sub_name) &&
-          StringUtil.equalStringsIgnoreCase(value, sub_val)) {
+        if (StringUtil.equalStringsIgnoreCase(action, sub_action) &&
+                StringUtil.equalStringsIgnoreCase(name, sub_name) &&
+                StringUtil.equalStringsIgnoreCase(value, sub_val)) {
           duplicate = true;
           break;
         }
       }
-      if(!duplicate) {
+      if (!duplicate) {
         m_submits.add(el);
       }
     }
@@ -830,24 +943,24 @@ public class HtmlFormExtractor {
     void emitLinks(ArchivalUnit au, LinkExtractor.Callback cb) {
 
       // Do not extract links if no submit button is seen in the form.
-      if(m_submits.isEmpty()) {
+      if (m_submits.isEmpty()) {
         return;
       }
       // for every submit element we need to generate all permutations.
-      for(Element el : m_submits) {
+      for (Element el : m_submits) {
         String method = el.attr("formmethod");
         String action = el.attr("formaction");
         String enctype = el.attr("formenctype");
 
         // replace the defaults with the local submit buttons commands if
         // necessary
-        if(StringUtil.isNullString(method)) {
+        if (StringUtil.isNullString(method)) {
           method = m_method;
         }
-        if(StringUtil.isNullString(action)) {
+        if (StringUtil.isNullString(action)) {
           action = m_action;
         }
-        if(StringUtil.isNullString(enctype)) {
+        if (StringUtil.isNullString(enctype)) {
           enctype = m_enctype;
         }
         // make sure to add this submit button to the controls list.
@@ -855,21 +968,21 @@ public class HtmlFormExtractor {
         String type = el.attr("type");
         String val = el.attr("value");
         // make sure we should process this form
-        if(shouldProcessForm(m_id, m_name, action, val)) {
-          if(!StringUtil.isNullString(name) && !StringUtil.isNullString(val)) {
+        if (shouldProcessForm(m_id, m_name, action, val)) {
+          if (!StringUtil.isNullString(name) && !StringUtil.isNullString(val)) {
             // add the name/value pair for this submit
             addControl(type, name, val, true, false);
           }
           FormElementCollector m_collector =
               new FormElementCollector(this, m_controls, action,
-                  method, enctype);
-          for(String link : m_collector) {
-            if(!StringUtil.isNullString(link)) {
+                                       method, enctype);
+          for (String link : m_collector) {
+            if (!StringUtil.isNullString(link)) {
               m_numFormUrls++;
               cb.foundLink(link);
             }
           }
-          if(name != null) {
+          if (name != null) {
             // now remove any added submit name:value pair
             m_controls.remove(name);
           }
@@ -881,6 +994,7 @@ public class HtmlFormExtractor {
       return m_maxFormUrls;
     }
   }
+
   /**
    * This a variant of the power set iterator.
    * instead of using an index into an array it uses multiple iterators
@@ -924,14 +1038,13 @@ public class HtmlFormExtractor {
       FormElementIterator() {
         m_numUrlSeen = 0;
         m_args = m_controls.keySet();
-        if(m_method.equalsIgnoreCase("post"))
-        {
+        if (m_method.equalsIgnoreCase("post")) {
           m_args = CollectionUtil.asSortedList(m_controls.keySet());
         }
-        for(String arg : m_args) {
+        for (String arg : m_args) {
           FormControlElement control = m_controls.get(arg);
           FieldIterator field_iter = control.getFieldIterator();
-          if(field_iter.hasNext()) {
+          if (field_iter.hasNext()) {
             m_components.add(field_iter);
             // queue up the "next" value so we don't start with null
             field_iter.next();
@@ -941,21 +1054,21 @@ public class HtmlFormExtractor {
 
       @Override
       public boolean hasNext() {
-        return(m_numUrlSeen <= m_maxFormUrls) && m_hasNext;
+        return (m_numUrlSeen <= m_maxFormUrls) && m_hasNext;
 
       }
 
       @Override
       public String next() {
-        if(!hasNext()) {
+        if (!hasNext()) {
           return null;
         }
 
         boolean isFirstArgSeen = false;
         StringBuilder url = new StringBuilder().append(m_action);
-        for(FieldIterator component : m_components) {
+        for (FieldIterator component : m_components) {
           String arg = component.last();
-          if(!StringUtil.isNullString(arg)) {
+          if (!StringUtil.isNullString(arg)) {
             url.append(isFirstArgSeen ? '&' : '?');
             url.append(component.last());
             isFirstArgSeen = true;
@@ -971,18 +1084,17 @@ public class HtmlFormExtractor {
       }
 
       private void incrementPositions() {
-        if(!hasNext()) {
+        if (!hasNext()) {
           return;
         }
         m_numUrlSeen++;
-        for(int i = 0; i < m_components.size(); ++i) {
+        for (int i = 0; i < m_components.size(); ++i) {
           FieldIterator component = m_components.get(i);
-          if(component.hasNext()) {
+          if (component.hasNext()) {
             component.next();
             break;
-          }
-          else {
-            if(i + 1 == m_components.size()) {
+          } else {
+            if (i + 1 == m_components.size()) {
               m_hasNext = false;
               break;
             }
@@ -1009,19 +1121,20 @@ public class HtmlFormExtractor {
 
     /**
      * Constructor for an element which will be made of name:values pairs
+     *
      * @param type the type of control element
      * @param name the name of for this control element
      * @param multi is multi selection permitted
      * @param req is this element required to have a value
      */
     FormControlElement(String type, String name, boolean multi,
-                              boolean req) {
+                       boolean req) {
       m_type = type;
       m_name = name;
       m_values = new ArrayList<String>();
       m_multi = multi;
       isRequired = req;
-      if(!req && !multi) {
+      if (!req && !multi) {
         m_values.add("");
       }
     }
@@ -1029,6 +1142,7 @@ public class HtmlFormExtractor {
     /**
      * Constructor for an element which will simply use an iterator to
      * generate all values.
+     *
      * @param type the type of control element
      * @param name the name of for this control element
      * @param multi is multi selection permitted
@@ -1036,31 +1150,32 @@ public class HtmlFormExtractor {
      * @param iter the iterator for this element
      */
     FormControlElement(String type, String name,
-                              boolean multi, boolean req, FieldIterator iter) {
+                       boolean multi, boolean req, FieldIterator iter) {
       this(type, name, multi, req);
       m_iterator = iter;
     }
 
     /**
      * Add another value for this element
+     *
      * @param value the value to add
      */
     void addControlElement(String value) {
-      if(value == null) {
+      if (value == null) {
         value = "";
       }
-      if(!m_values.contains(value)) {
-        if(m_restrictions == null || m_restrictions.isAllowed(value)) {
+      if (!m_values.contains(value)) {
+        if (m_restrictions == null || m_restrictions.isAllowed(value)) {
           m_values.add(value);
         }
       }
     }
 
     FieldIterator getFieldIterator() {
-      if(m_iterator != null) {
+      if (m_iterator != null) {
         return m_iterator;
       }
-      if(m_multi) {
+      if (m_multi) {
         return new MultiSelectFieldIterator(m_name, m_values);
       }
       return new SingleSelectFieldIterator(m_name, m_values);
@@ -1076,8 +1191,6 @@ public class HtmlFormExtractor {
    * Iterator class used for single select fields.
    */
   protected static class SingleSelectFieldIterator implements FieldIterator {
-    private int m_size;
-    private int m_pos;
     private String m_last;
     private String m_name;
     Iterator<String> m_iterator;
@@ -1102,15 +1215,14 @@ public class HtmlFormExtractor {
 
     @Override
     public String next() {
-      if(!hasNext()) {
+      if (!hasNext()) {
         return null;
       }
 
       String val = m_iterator.next();
-      if(StringUtil.isNullString(val)) {
+      if (StringUtil.isNullString(val)) {
         m_last = "";
-      }
-      else {
+      } else {
         m_last = HtmlFormExtractor.makeEncodedString(m_name, val);
       }
       return m_last;
@@ -1127,6 +1239,7 @@ public class HtmlFormExtractor {
       m_iterator.remove();
     }
   }
+
   /**
    * Iterator used for multi select fields. We wrap a standard powerset
    * iterator into a FieldIterator which allows resets and a call to last
@@ -1162,10 +1275,9 @@ public class HtmlFormExtractor {
     @Override
     public String next() {
       List<String> val = m_psi.next();
-      if(val == null || val.isEmpty()) {
+      if (val == null || val.isEmpty()) {
         m_last = "";
-      }
-      else {
+      } else {
         m_last = HtmlFormExtractor.makeEncodedString(m_name, val);
       }
       return m_last;
@@ -1180,6 +1292,7 @@ public class HtmlFormExtractor {
   //  --------------------------------------------------
   //    Form Field Restrictions and Field Generators
   //  --------------------------------------------------
+
   /**
    * Restrictions for a form field.
    * this is the union of the include list (if non-null) less the exclude list
@@ -1198,15 +1311,17 @@ public class HtmlFormExtractor {
      * Take a list of values and exclude any items in the exclude list and
      * keep any items not excluded or in the include list if such a list
      * exists.
+     *
      * @param in the incoming collection of items to include
+     *
      * @return the set of items which remain
      */
     public Collection<String> restrict(Collection<String> in) {
       Set<String> permitted = new TreeSet<String>(in);
-      if(m_exclude != null) {
+      if (m_exclude != null) {
         permitted.removeAll(m_exclude);
       }
-      if(m_include != null) {
+      if (m_include != null) {
         permitted.retainAll(m_include);
       }
       return permitted;
@@ -1216,17 +1331,19 @@ public class HtmlFormExtractor {
     /**
      * Is this element allowed ie in the included list and not in the exclude
      * list.
+     *
      * @param value the value to check
+     *
      * @return true iff the item is not excluded and is either in the include
      * list or no such list exists.
      */
     public boolean isAllowed(String value) {
       boolean allow = true;
 
-      if(m_exclude != null) {
+      if (m_exclude != null) {
         allow = !m_exclude.contains(value);
       }
-      if(allow && m_include != null) {
+      if (allow && m_include != null) {
         allow = m_include.contains(value);
       }
       return allow;
@@ -1271,10 +1388,9 @@ public class HtmlFormExtractor {
     public String next() {
       String val = m_iterator.next();
 
-      if(val == null || val.isEmpty()) {
+      if (val == null || val.isEmpty()) {
         m_last = "";
-      }
-      else {
+      } else {
         m_last = HtmlFormExtractor.makeEncodedString(m_name, val);
       }
       return m_last;
@@ -1299,7 +1415,7 @@ public class HtmlFormExtractor {
    * min an max a increment at a time.
    */
   public static class IntegerFieldIterator implements FieldIterator {
-    private Integer  nextValue;
+    private Integer nextValue;
     private Integer minValue;
     private Integer maxValue;
     private Integer incrValue;
@@ -1343,7 +1459,7 @@ public class HtmlFormExtractor {
    * min an max a increment at a time.
    */
   public static class FloatFieldIterator implements FieldIterator {
-    private Float  nextValue;
+    private Float nextValue;
     private Float minValue;
     private Float maxValue;
     private Float incrValue;
@@ -1409,9 +1525,9 @@ public class HtmlFormExtractor {
       incrField = field;
       incrValue = incr;
       formatter = new SimpleDateFormat(format);
-      if(theLogger.isDebug2())   {
-        theLogger.debug2("start:"+formatter.format(start.getTime())+
-                         "end:"+formatter.format(end.getTime()));
+      if (theLogger.isDebug2()) {
+        theLogger.debug2("start:" + formatter.format(start.getTime()) +
+                         "end:" + formatter.format(end.getTime()));
         theLogger.debug2("nextDate:" + formatter.format(nextDate.getTime()));
       }
     }
@@ -1434,14 +1550,14 @@ public class HtmlFormExtractor {
     }
 
     public String next() {
-      if(theLogger.isDebug3())   {
+      if (theLogger.isDebug3()) {
         theLogger.debug3("next() in: " +
                          formatter.format(nextDate.getTime()));
       }
       lastValue = HtmlFormExtractor.makeEncodedString(m_name,
           formatter.format(nextDate.getTime()));
       nextDate.add(incrField, incrValue);
-      if(theLogger.isDebug3())   {
+      if (theLogger.isDebug3()) {
         theLogger.debug3("next() out: " +
                          formatter.format(nextDate.getTime()));
       }
