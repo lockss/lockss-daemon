@@ -336,7 +336,6 @@
     comment[bmj_down] = The BMJ site is brand-new and requires changes to the HighWire plugin. Suspending these AUs for now.
 
     param[base_url] = http://www.bmj.com/
-    plugin = needs.plugin
 
     au < HighWirePressH20Plugin ; doNotProcess ; 1840-1841 ; BMJ Volume s1-1 (1840-1841) ; s1-1 >
     au < HighWirePressH20Plugin ; doNotProcess ; 1841 ; BMJ Volume s1-2 (1841) ; s1-2 >
@@ -425,8 +424,8 @@
     au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; BMJ Volume 337 ; 337 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; BMJ Volume 338 ; 338 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; BMJ Volume 339 ; 339 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; BMJ Volume 340 ; 340 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; BMJ Volume 341 ; 341 >
+    au < HighWirePressH20Plugin ; down ; 2010 ; BMJ Volume 340 ; 340 >
+    au < HighWirePressH20Plugin ; down ; 2010 ; BMJ Volume 341 ; 341 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; BMJ Volume 342 ; 342 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; BMJ Volume 343 ; 343 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2012 ; BMJ Volume 344 ; 344 >
