@@ -1,5 +1,5 @@
 /*
- * $Id: TestDaemonStatusService.java,v 1.3 2014-04-18 19:35:02 fergaloy-sf Exp $
+ * $Id: TestDaemonStatusService.java,v 1.4 2014-04-25 23:11:00 fergaloy-sf Exp $
  */
 
 /*
@@ -53,6 +53,7 @@ import org.lockss.plugin.SubTreeArticleIterator;
 import org.lockss.plugin.simulated.SimulatedArchivalUnit;
 import org.lockss.plugin.simulated.SimulatedContentGenerator;
 import org.lockss.plugin.simulated.SimulatedDefinablePlugin;
+import org.lockss.protocol.IdentityManager;
 import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockLockssDaemon;
@@ -61,6 +62,8 @@ import org.lockss.util.Logger;
 import org.lockss.ws.entities.AuWsResult;
 import org.lockss.ws.entities.IdNamePair;
 import org.lockss.ws.entities.PluginWsResult;
+import org.lockss.ws.entities.RepositorySpaceWsResult;
+import org.lockss.ws.entities.RepositoryWsResult;
 
 /**
  * Test class for org.lockss.ws.status.DaemonStatusService
@@ -69,16 +72,19 @@ import org.lockss.ws.entities.PluginWsResult;
  */
 public class TestDaemonStatusService extends LockssTestCase {
   static Logger log = Logger.getLogger(TestDaemonStatusService.class);
+  static String TEST_LOCAL_IP = "127.1.2.3";
 
   private MockLockssDaemon theDaemon;
   private DaemonStatusServiceImpl service;
+  private String tempDirPath;
 
   public void setUp() throws Exception {
     super.setUp();
 
-    String tempDirPath = getTempDir().getAbsolutePath();
+    tempDirPath = getTempDir().getAbsolutePath();
 
     Properties props = new Properties();
+    props.setProperty(IdentityManager.PARAM_LOCAL_IP, TEST_LOCAL_IP);
     props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
 		      tempDirPath);
     ConfigurationUtil.setCurrentConfigFromProps(props);
@@ -100,6 +106,8 @@ public class TestDaemonStatusService extends LockssTestCase {
 	    simAuConfig(tempDirPath + "/1"));
 
     PluginTestUtil.crawlSimAu(sau1);
+
+    theDaemon.getRemoteApi().startService();
 
     service = new DaemonStatusServiceImpl();
   }
@@ -431,6 +439,97 @@ public class TestDaemonStatusService extends LockssTestCase {
     assertEquals(1, au.getUrlStems().size());
     au = aus.get(1);
     assertEquals(1, au.getUrlStems().size());
+  }
+
+  /**
+   * Runs the test that queries repository spaces.
+   * 
+   * @throws Exception
+   */
+  public void testQueryRepositorySpaces() throws Exception {
+    String query = "select *";
+    List<RepositorySpaceWsResult> spaces = service.queryRepositorySpaces(query);
+    int spaceCount = spaces.size();
+    assertTrue(spaceCount > 0);
+
+    RepositorySpaceWsResult result = spaces.get(0);
+    assertEquals("local:" + tempDirPath, result.getRepositorySpaceId());
+    assertTrue(result.getSize() > 0);
+    assertTrue(result.getUsed() > 0);
+    assertTrue(result.getFree() > 0);
+    assertTrue(result.getPercentageFull() > 0);
+    assertTrue(result.getPercentageFull() <= 1);
+    assertEquals(2, result.getActiveCount().intValue());
+    assertEquals(0, result.getInactiveCount().intValue());
+    assertEquals(0, result.getDeletedCount().intValue());
+    assertEquals(0, result.getOrphanedCount().intValue());
+
+    query = "select * where size > 1";
+    spaces = service.queryRepositorySpaces(query);
+    assertEquals(spaceCount, spaces.size());
+
+    query = "select * where used < 1";
+    spaces = service.queryRepositorySpaces(query);
+    assertEquals(0, spaces.size());
+
+    query = "select * where activeCount = 2";
+    spaces = service.queryRepositorySpaces(query);
+    assertEquals(spaceCount, spaces.size());
+
+    query = "select * where orphanedCount = 1";
+    spaces = service.queryRepositorySpaces(query);
+    assertEquals(0, spaces.size());
+  }
+
+  /**
+   * Runs the test that queries repositories.
+   * 
+   * @throws Exception
+   */
+  public void testQueryRepositories() throws Exception {
+    String auNameStart = "Simulated Content: " + tempDirPath;
+    String pluginNameStart =
+	"org.lockss.ws.status.TestDaemonStatusService$MySimulatedPlugin";
+
+    String query = "select *";
+    List<RepositoryWsResult> repositories = service.queryRepositories(query);
+    assertEquals(2, repositories.size());
+
+    RepositoryWsResult result = repositories.get(0);
+    assertEquals("local:" + tempDirPath, result.getRepositorySpaceId());
+    assertTrue(result.getDirectoryName().startsWith(tempDirPath));
+    assertTrue(result.getAuName().startsWith(auNameStart));
+    assertFalse(result.getInternal());
+    assertEquals("Active", result.getStatus());
+    assertTrue(result.getDiskUsage() > 0);
+    assertTrue(result.getPluginName().startsWith(pluginNameStart));
+
+    result = repositories.get(1);
+    assertEquals("local:" + tempDirPath, result.getRepositorySpaceId());
+    assertTrue(result.getDirectoryName().startsWith(tempDirPath));
+    assertTrue(result.getAuName().startsWith(auNameStart));
+    assertFalse(result.getInternal());
+    assertEquals("Active", result.getStatus());
+    assertTrue(result.getDiskUsage() > 0);
+    assertTrue(result.getPluginName().startsWith(pluginNameStart));
+
+    String pluginName0 =
+	"org.lockss.ws.status.TestDaemonStatusService$MySimulatedPlugin0";
+    String pluginName1 =
+	"org.lockss.ws.status.TestDaemonStatusService$MySimulatedPlugin1";
+    query = "select * where status = 'Active' order by pluginName";
+    repositories = service.queryRepositories(query);
+    assertEquals(2, repositories.size());
+
+    result = repositories.get(0);
+    assertEquals(pluginName0, result.getPluginName());
+
+    result = repositories.get(1);
+    assertEquals(pluginName1, result.getPluginName());
+
+    query = "select * where internal = 'true'";
+    repositories = service.queryRepositories(query);
+    assertEquals(0, repositories.size());
   }
 
   private Configuration simAuConfig(String rootPath) {

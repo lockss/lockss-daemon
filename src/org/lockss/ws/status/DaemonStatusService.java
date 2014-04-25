@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatusService.java,v 1.3 2014-04-18 19:35:03 fergaloy-sf Exp $
+ * $Id: DaemonStatusService.java,v 1.4 2014-04-25 23:10:59 fergaloy-sf Exp $
  */
 
 /*
@@ -42,9 +42,14 @@ import javax.jws.WebParam;
 import javax.jws.WebService;
 import org.lockss.ws.entities.AuStatus;
 import org.lockss.ws.entities.AuWsResult;
+import org.lockss.ws.entities.CrawlWsResult;
 import org.lockss.ws.entities.IdNamePair;
 import org.lockss.ws.entities.LockssWebServicesFault;
+import org.lockss.ws.entities.PeerWsResult;
 import org.lockss.ws.entities.PluginWsResult;
+import org.lockss.ws.entities.RepositorySpaceWsResult;
+import org.lockss.ws.entities.RepositoryWsResult;
+import org.lockss.ws.entities.VoteWsResult;
 
 @WebService
 public interface DaemonStatusService {
@@ -105,4 +110,74 @@ public interface DaemonStatusService {
   @WebMethod
   List<AuWsResult> queryAus(@WebParam(name = "auQuery") String auQuery)
       throws LockssWebServicesFault;
+
+  /**
+   * Provides the selected properties of selected peers in the system.
+   * 
+   * @param query
+   *          A String with the query used to specify what properties to
+   *          retrieve from which peers.
+   * @return a List<PeerWsResult> with the results.
+   * @throws LockssWebServicesFault
+   */
+  @WebMethod
+  List<PeerWsResult> queryPeers(@WebParam(name = "peerQuery") String peerQuery)
+      throws LockssWebServicesFault;
+
+  /**
+   * Provides the selected properties of selected votes in the system.
+   * 
+   * @param query
+   *          A String with the query used to specify what properties to
+   *          retrieve from which votes.
+   * @return a List<VotelWsResult> with the results.
+   * @throws LockssWebServicesFault
+   */
+  @WebMethod
+  List<VoteWsResult> queryVotes(
+      @WebParam(name = "voteQuery") String voteQuery)
+	  throws LockssWebServicesFault;
+
+  /**
+   * Provides the selected properties of selected repository spaces in the
+   * system.
+   * 
+   * @param query
+   *          A String with the query used to specify what properties to
+   *          retrieve from which repository spaces.
+   * @return a List<RepositorySpaceWsResult> with the results.
+   * @throws LockssWebServicesFault
+   */
+  @WebMethod
+  List<RepositorySpaceWsResult> queryRepositorySpaces(
+      @WebParam(name = "repositorySpaceQuery") String repositorySpaceQuery)
+	  throws LockssWebServicesFault;
+
+  /**
+   * Provides the selected properties of selected repositories in the system.
+   * 
+   * @param query
+   *          A String with the query used to specify what properties to
+   *          retrieve from which repositories.
+   * @return a List<RepositoryWsResult> with the results.
+   * @throws LockssWebServicesFault
+   */
+  @WebMethod
+  List<RepositoryWsResult> queryRepositories(
+      @WebParam(name = "repositoryQuery") String repositoryQuery)
+	  throws LockssWebServicesFault;
+
+  /**
+   * Provides the selected properties of selected crawls in the system.
+   * 
+   * @param query
+   *          A String with the query used to specify what properties to
+   *          retrieve from which crawls.
+   * @return a List<CrawlWsResult> with the results.
+   * @throws LockssWebServicesFault
+   */
+  @WebMethod
+  List<CrawlWsResult> queryCrawls(
+      @WebParam(name = "crawlQuery") String crawlQuery)
+	  throws LockssWebServicesFault;
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatusServiceImpl.java,v 1.5 2014-04-18 19:35:03 fergaloy-sf Exp $
+ * $Id: DaemonStatusServiceImpl.java,v 1.6 2014-04-25 23:10:59 fergaloy-sf Exp $
  */
 
 /*
@@ -52,10 +52,15 @@ import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 import org.lockss.ws.entities.AuStatus;
 import org.lockss.ws.entities.AuWsResult;
+import org.lockss.ws.entities.CrawlWsResult;
 import org.lockss.ws.entities.IdNamePair;
 import org.lockss.ws.entities.LockssWebServicesFault;
 import org.lockss.ws.entities.LockssWebServicesFaultInfo;
+import org.lockss.ws.entities.PeerWsResult;
 import org.lockss.ws.entities.PluginWsResult;
+import org.lockss.ws.entities.RepositorySpaceWsResult;
+import org.lockss.ws.entities.RepositoryWsResult;
+import org.lockss.ws.entities.VoteWsResult;
 import org.lockss.ws.status.DaemonStatusService;
 
 @WebService
@@ -258,6 +263,310 @@ public class DaemonStatusServiceImpl implements DaemonStatusService {
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "results = "
 	+ auHelper.nonDefaultToString(results));
+    return results;
+  }
+
+  /**
+   * Provides the selected properties of selected peers in the system.
+   * 
+   * @param query
+   *          A String with the query used to specify what properties to
+   *          retrieve from which peers.
+   * @return a List<PeerWsResult> with the results.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public List<PeerWsResult> queryPeers(String peerQuery)
+      throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "queryPeers(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "peerQuery = " + peerQuery);
+
+    PeerHelper peerHelper = new PeerHelper();
+    List<PeerWsResult> results = null;
+
+    // Create the full query.
+    String fullQuery = createFullQuery(peerQuery, PeerHelper.SOURCE_FQCN,
+	PeerHelper.PROPERTY_NAMES, PeerHelper.RESULT_FQCN);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "fullQuery = " + fullQuery);
+
+    // Create a new JoSQL query.
+    Query q = new Query();
+
+    try {
+      // Parse the SQL-like query.
+      q.parse(fullQuery);
+
+      try {
+	// Execute the query.
+	QueryResults qr = q.execute(peerHelper.createUniverse());
+
+	// Get the query results.
+	results = (List<PeerWsResult>)qr.getResults();
+	if (log.isDebug3()) {
+	  log.debug3(DEBUG_HEADER + "results.size() = " + results.size());
+	  log.debug3(DEBUG_HEADER + "results = "
+	      + peerHelper.nonDefaultToString(results));
+	}
+      } catch (QueryExecutionException qee) {
+	log.error("Caught QueryExecuteException", qee);
+	log.error("fullQuery = '" + fullQuery + "'");
+	throw new LockssWebServicesFault(qee,
+	    new LockssWebServicesFaultInfo("peerQuery = " + peerQuery));
+      }
+    } catch (QueryParseException qpe) {
+      log.error("Caught QueryParseException", qpe);
+      log.error("fullQuery = '" + fullQuery + "'");
+	throw new LockssWebServicesFault(qpe,
+	    new LockssWebServicesFaultInfo("peerQuery = " + peerQuery));
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "results = "
+	+ peerHelper.nonDefaultToString(results));
+    return results;
+  }
+
+  /**
+   * Provides the selected properties of selected votes in the system.
+   * 
+   * @param query
+   *          A String with the query used to specify what properties to
+   *          retrieve from which votes.
+   * @return a List<VoteWsResult> with the results.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public List<VoteWsResult> queryVotes(String voteQuery)
+      throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "queryVotes(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "voteQuery = " + voteQuery);
+
+    VoteHelper voteHelper = new VoteHelper();
+    List<VoteWsResult> results = null;
+
+    // Create the full query.
+    String fullQuery = createFullQuery(voteQuery, VoteHelper.SOURCE_FQCN,
+	VoteHelper.PROPERTY_NAMES, VoteHelper.RESULT_FQCN);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "fullQuery = " + fullQuery);
+
+    // Create a new JoSQL query.
+    Query q = new Query();
+
+    try {
+      // Parse the SQL-like query.
+      q.parse(fullQuery);
+
+      try {
+	// Execute the query.
+	QueryResults qr = q.execute(voteHelper.createUniverse());
+
+	// Get the query results.
+	results = (List<VoteWsResult>)qr.getResults();
+	if (log.isDebug3()) {
+	  log.debug3(DEBUG_HEADER + "results.size() = " + results.size());
+	  log.debug3(DEBUG_HEADER + "results = "
+	      + voteHelper.nonDefaultToString(results));
+	}
+      } catch (QueryExecutionException qee) {
+	log.error("Caught QueryExecuteException", qee);
+	log.error("fullQuery = '" + fullQuery + "'");
+	throw new LockssWebServicesFault(qee,
+	    new LockssWebServicesFaultInfo("voteQuery = " + voteQuery));
+      }
+    } catch (QueryParseException qpe) {
+      log.error("Caught QueryParseException", qpe);
+      log.error("fullQuery = '" + fullQuery + "'");
+	throw new LockssWebServicesFault(qpe,
+	    new LockssWebServicesFaultInfo("voteQuery = " + voteQuery));
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "results = "
+	+ voteHelper.nonDefaultToString(results));
+    return results;
+  }
+
+  /**
+   * Provides the selected properties of selected repository spaces in the
+   * system.
+   * 
+   * @param query
+   *          A String with the query used to specify what properties to
+   *          retrieve from which repository spaces.
+   * @return a List<RepositorySpaceWsResult> with the results.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public List<RepositorySpaceWsResult> queryRepositorySpaces(
+      String repositorySpaceQuery) throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "queryRepositorySpaces(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "repositorySpaceQuery = "
+	+ repositorySpaceQuery);
+
+    RepositorySpaceHelper repositorySpaceHelper = new RepositorySpaceHelper();
+    List<RepositorySpaceWsResult> results = null;
+
+    // Create the full query.
+    String fullQuery = createFullQuery(repositorySpaceQuery,
+	RepositorySpaceHelper.SOURCE_FQCN, RepositorySpaceHelper.PROPERTY_NAMES,
+	RepositorySpaceHelper.RESULT_FQCN);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "fullQuery = " + fullQuery);
+
+    // Create a new JoSQL query.
+    Query q = new Query();
+
+    try {
+      // Parse the SQL-like query.
+      q.parse(fullQuery);
+
+      try {
+	// Execute the query.
+	QueryResults qr = q.execute(repositorySpaceHelper.createUniverse());
+
+	// Get the query results.
+	results = (List<RepositorySpaceWsResult>)qr.getResults();
+	if (log.isDebug3()) {
+	  log.debug3(DEBUG_HEADER + "results.size() = " + results.size());
+	  log.debug3(DEBUG_HEADER + "results = "
+	      + repositorySpaceHelper.nonDefaultToString(results));
+	}
+      } catch (QueryExecutionException qee) {
+	log.error("Caught QueryExecuteException", qee);
+	log.error("fullQuery = '" + fullQuery + "'");
+	throw new LockssWebServicesFault(qee,
+	    new LockssWebServicesFaultInfo("repositorySpaceQuery = "
+		+ repositorySpaceQuery));
+      }
+    } catch (QueryParseException qpe) {
+      log.error("Caught QueryParseException", qpe);
+      log.error("fullQuery = '" + fullQuery + "'");
+	throw new LockssWebServicesFault(qpe,
+	    new LockssWebServicesFaultInfo("repositorySpaceQuery = "
+		+ repositorySpaceQuery));
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "results = "
+	+ repositorySpaceHelper.nonDefaultToString(results));
+    return results;
+  }
+
+  /**
+   * Provides the selected properties of selected repositories in the system.
+   * 
+   * @param query
+   *          A String with the query used to specify what properties to
+   *          retrieve from which repositories.
+   * @return a List<RepositoryWsResult> with the results.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public List<RepositoryWsResult> queryRepositories(
+      String repositoryQuery) throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "queryRepositories(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "repositoryQuery = "
+	+ repositoryQuery);
+
+    RepositoryHelper repositoryHelper = new RepositoryHelper();
+    List<RepositoryWsResult> results = null;
+
+    // Create the full query.
+    String fullQuery = createFullQuery(repositoryQuery,
+	RepositoryHelper.SOURCE_FQCN, RepositoryHelper.PROPERTY_NAMES,
+	RepositoryHelper.RESULT_FQCN);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "fullQuery = " + fullQuery);
+
+    // Create a new JoSQL query.
+    Query q = new Query();
+
+    try {
+      // Parse the SQL-like query.
+      q.parse(fullQuery);
+
+      try {
+	// Execute the query.
+	QueryResults qr = q.execute(repositoryHelper.createUniverse());
+
+	// Get the query results.
+	results = (List<RepositoryWsResult>)qr.getResults();
+	if (log.isDebug3()) {
+	  log.debug3(DEBUG_HEADER + "results.size() = " + results.size());
+	  log.debug3(DEBUG_HEADER + "results = "
+	      + repositoryHelper.nonDefaultToString(results));
+	}
+      } catch (QueryExecutionException qee) {
+	log.error("Caught QueryExecuteException", qee);
+	log.error("fullQuery = '" + fullQuery + "'");
+	throw new LockssWebServicesFault(qee,
+	    new LockssWebServicesFaultInfo("repositoryQuery = "
+		+ repositoryQuery));
+      }
+    } catch (QueryParseException qpe) {
+      log.error("Caught QueryParseException", qpe);
+      log.error("fullQuery = '" + fullQuery + "'");
+	throw new LockssWebServicesFault(qpe,
+	    new LockssWebServicesFaultInfo("repositoryQuery = "
+		+ repositoryQuery));
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "results = "
+	+ repositoryHelper.nonDefaultToString(results));
+    return results;
+  }
+
+  /**
+   * Provides the selected properties of selected crawls in the system.
+   * 
+   * @param query
+   *          A String with the query used to specify what properties to
+   *          retrieve from which crawls.
+   * @return a List<CrawlWsResult> with the results.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public List<CrawlWsResult> queryCrawls(String crawlQuery)
+      throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "queryCrawls(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "crawlQuery = " + crawlQuery);
+
+    CrawlHelper crawlHelper = new CrawlHelper();
+    List<CrawlWsResult> results = null;
+
+    // Create the full query.
+    String fullQuery = createFullQuery(crawlQuery, CrawlHelper.SOURCE_FQCN,
+	CrawlHelper.PROPERTY_NAMES, CrawlHelper.RESULT_FQCN);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "fullQuery = " + fullQuery);
+
+    // Create a new JoSQL query.
+    Query q = new Query();
+
+    try {
+      // Parse the SQL-like query.
+      q.parse(fullQuery);
+
+      try {
+	// Execute the query.
+	QueryResults qr = q.execute(crawlHelper.createUniverse());
+
+	// Get the query results.
+	results = (List<CrawlWsResult>)qr.getResults();
+	if (log.isDebug3()) {
+	  log.debug3(DEBUG_HEADER + "results.size() = " + results.size());
+	  log.debug3(DEBUG_HEADER + "results = "
+	      + crawlHelper.nonDefaultToString(results));
+	}
+      } catch (QueryExecutionException qee) {
+	log.error("Caught QueryExecuteException", qee);
+	log.error("fullQuery = '" + fullQuery + "'");
+	throw new LockssWebServicesFault(qee,
+	    new LockssWebServicesFaultInfo("crawlQuery = " + crawlQuery));
+      }
+    } catch (QueryParseException qpe) {
+      log.error("Caught QueryParseException", qpe);
+      log.error("fullQuery = '" + fullQuery + "'");
+	throw new LockssWebServicesFault(qpe,
+	    new LockssWebServicesFaultInfo("crawlQuery = " + crawlQuery));
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "results = "
+	+ crawlHelper.nonDefaultToString(results));
     return results;
   }
 
