@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
-# $Id: tdbout.py,v 1.15 2014-04-23 21:03:21 tlipkis Exp $
+# $Id: tdbout.py,v 1.16 2014-04-25 18:43:02 thib_gc Exp $
 
-# Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+# Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,7 +26,7 @@
 # be used in advertising or otherwise to promote the sale, use or other dealings
 # in this Software without prior written authorization from Stanford University.
 
-__version__ = '''0.3.4'''
+__version__ = '''0.3.5'''
 
 from optparse import OptionGroup, OptionParser
 import sys
@@ -91,6 +91,9 @@ class TdboutConstants:
     OPTION_JOURNALS_SHORT = 'j'
     OPTION_JOURNALS_HELP = 'iterate over titles (not AUs) and output a CSV list of publishers, titles, ISSNs and eISSNs'
 
+    OPTION_TYPE_JOURNAL = 'type-journal'
+    OPTION_TYPE_JOURNAL_HELP = 'when --%s/-%s is specified, only output titles that are of type "journal"' % (OPTION_JOURNALS, OPTION_JOURNALS_SHORT)
+
 def process_tdbout(tdb, options):
     fields = options.fields.split(',')
     result = [[lam(au) or '' for lam in map(tdbq.str_to_lambda_au, fields)] for au in tdb.aus()]
@@ -109,8 +112,11 @@ def process_tdbout(tdb, options):
 
 # Temporary hack until we have better publisher-title-AU visitors (currently AU-oriented)
 def process_journals(tdb, options):
-    result = [[title.publisher().name(), title.name(), title.issn() or '', title.eissn() or ''] for title in tdb.titles()]
     import csv
+    from tdb import Title
+    if options.type_journal: titles = filter(lambda t: t.type() == Title.Type.JOURNAL, tdb.titles())
+    else: titles = tdb.titles()
+    result = [[title.publisher().name(), title.name(), title.issn() or '', title.eissn() or ''] for title in titles]
     writer = csv.writer(sys.stdout, dialect='excel')
     for row in result: writer.writerow(row)
 
@@ -202,6 +208,9 @@ def __option_parser__(parser=None):
                             '--' + TdboutConstants.OPTION_JOURNALS,
                             action='store_true',
                             help=TdboutConstants.OPTION_JOURNALS_HELP)
+    tdbout_group.add_option('--' + TdboutConstants.OPTION_TYPE_JOURNAL,
+                            action='store_true',
+                            help=TdboutConstants.OPTION_TYPE_JOURNAL_HELP)
     parser.add_option_group(tdbout_group)
     return parser
 
