@@ -3,6 +3,8 @@
   publisher <
     name = American Society of Agronomy
   >
+  
+    comment[platform] = MarkLogic See Jira PD-48
 
   {
 
@@ -29,8 +31,19 @@
     au < down ; 2007 ; Agronomy Journal Volume 99 ; 99 >
 
     {
-    param[base_url] = http://www.agronomy.org/
+    param[base_url] = https://dl.sciencesocieties.org/
     param[journal_id] = aj
+    plugin = needs.plugin
+    implicit < status ; year ; name ; param[volume_name] >
+    
+    au < exists ; 2008 ; Agronomy Journal Volume 100 ; 100 >
+    au < exists ; 2009 ; Agronomy Journal Volume 101 ; 101 >
+    au < exists ; 2010 ; Agronomy Journal Volume 102 ; 102 >
+    au < exists ; 2011 ; Agronomy Journal Volume 103 ; 103 >
+    au < exists ; 2012 ; Agronomy Journal Volume 104 ; 104 >
+    au < exists ; 2013 ; Agronomy Journal Volume 105 ; 105 >
+    au < exists ; 2014 ; Agronomy Journal Volume 106 ; 106 >
+    
     }
   }
 
@@ -41,8 +54,16 @@
       eissn = 1435-0653
     >
 
-    param[base_url] = www.crops.org/
+    param[base_url] = https://dl.sciencesocieties.org/
     param[journal_id] = cs
+    plugin = needs.plugin
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2010 ; Crop Science Volume 50 ; 50 >
+    au < exists ; 2011 ; Crop Science Volume 51 ; 51 >
+    au < exists ; 2012 ; Crop Science Volume 52 ; 52 >
+    au < exists ; 2013 ; Crop Science Volume 53 ; 53 >
+    au < exists ; 2014 ; Crop Science Volume 54 ; 54 >
 
   }
 
@@ -53,8 +74,12 @@
       eissn = 2325-3606
     >
 
-    param[base_url] = http://www.agronomy.org/
-    param[journal_id] = crops-and-soils
+    param[base_url] = https://dl.sciencesocieties.org/
+    param[journal_id] = cns
+    plugin = needs.plugin
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2013 ; Crops & Soils Volume 46 ; 46 >
 
   }
 
@@ -66,7 +91,11 @@
     >
 
     param[base_url] = http://www.agronomy.org/
-    param[journal_id] = csa-news
+    param[journal_id] = csa
+    plugin = needs.plugin
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2013 ; CSA News Volume 58 ; 58 >
 
   }
 
@@ -92,8 +121,13 @@
     au < down ; 2007 ; Journal of Environmental Quality Volume 36 ; 36 >
 
     {
-    param[base_url] = http://www.agronomy.org/
+    param[base_url] = https://dl.sciencesocieties.org/
     param[journal_id] = jeq
+    plugin = needs.plugin
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2013 ; Journal of Environmental Quality Volume 58 ; 58 >
+
     }
     
   }
@@ -104,9 +138,12 @@
       eissn = 1940-3496
     >
 
-    param[base_url] = www.crops.org/
+    param[base_url] = https://dl.sciencesocieties.org/
     param[journal_id] = jpr
+    plugin = needs.plugin
+    implicit < status ; year ; name ; param[volume_name] >
 
+    au < exists ; 2013 ; Journal of Plant Registrations Volume 7 ; 7 >
 
   }
 
@@ -116,7 +153,12 @@
       eissn = 0890-8524
     >
 
-    comment[0] = website is not up yet
+    param[base_url] = https://dl.sciencesocieties.org/
+    param[journal_id] = jpa
+    plugin = needs.plugin
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 1999 ; Journal of Production Agriculture Volume 12 ; 12 >
 
   }
 
@@ -126,9 +168,12 @@
       eissn = 2186-8281
     >
 
-    param[base_url] = http://www.agronomy.org/
+    param[base_url] = https://dl.sciencesocieties.org/
     param[journal_id] = nse
+    plugin = needs.plugin
+    implicit < status ; year ; name ; param[volume_name] >
 
+    au < exists ; 2013 ; Natural Sciences Education Volume 42 ; 42 >
 
   }
 
@@ -138,9 +183,12 @@
       eissn = 1940-3372
     >
 
-    param[base_url] = www.crops.org/
+    param[base_url] = https://dl.sciencesocieties.org/
     param[journal_id] = tpg
+    plugin = needs.plugin
+    implicit < status ; year ; name ; param[volume_name] >
 
+    au < exists ; 2013 ; The Plant Genome Volume 6 ; 6 >
 
   }
 
@@ -150,8 +198,12 @@
       eissn = 2163-2812
     >
 
-    param[base_url] = www.soils.org/
+    param[base_url] = https://dl.sciencesocieties.org/
     param[journal_id] = sh
+    plugin = needs.plugin
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2013 ; Soil Horizons Volume 54 ; 54 >
 
   }
 
@@ -162,8 +214,12 @@
       eissn = 1435-0661
     >
 
-    param[base_url] = www.soils.org/
+    param[base_url] = https://dl.sciencesocieties.org/
     param[journal_id] = sssaj
+    plugin = needs.plugin
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2013 ; Soil Science Society of America Volume 77 ; 77 >
 
   }
 
@@ -173,9 +229,12 @@
       eissn = 1539-1663
     >
 
-    param[base_url] = www.soils.org/
+    param[base_url] = https://dl.sciencesocieties.org/
     param[journal_id] = vzj
+    plugin = needs.plugin
+    implicit < status ; year ; name ; param[volume_name] >
 
+    au < exists ; 2013 ; Vadose Zone Journal Volume 12 ; 12 >
 
   }
 }
