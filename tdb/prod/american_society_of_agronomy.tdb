@@ -90,7 +90,7 @@
       eissn = 2325-3584
     >
 
-    param[base_url] = http://www.agronomy.org/
+    param[base_url] = https://dl.sciencesocieties.org/
     param[journal_id] = csa
     plugin = needs.plugin
     implicit < status ; year ; name ; param[volume_name] >
