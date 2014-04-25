@@ -7,6 +7,7 @@
   >
 
   plugin = needs.plugin
+  implicit < status ; status2 ; year ; name ; param[volume_name] >
 
   {
     title <
@@ -15,7 +16,7 @@
       eissn = 1435-0645
     >
     
-    param[base_url] = http://www.agronomy.org/
+    param[base_url] = https://dl.sciencesocieties.org/
     param[journal_id] = aj
 
 
@@ -29,7 +30,7 @@
       eissn = 1435-0653
     >
 
-    param[base_url] = www.crops.org/
+    param[base_url] = https://dl.sciencesocieties.org/
     param[journal_id] = cs
 
 
@@ -42,8 +43,8 @@
       eissn = 2325-3606
     >
 
-    param[base_url] = http://www.agronomy.org/
-    param[journal_id] = crops-and-soils
+    param[base_url] = https://dl.sciencesocieties.org/
+    param[journal_id] = cns
 
 
   }
@@ -55,8 +56,8 @@
       eissn = 2325-3584
     >
 
-    param[base_url] = http://www.agronomy.org/
-    param[journal_id] = csa-news
+    param[base_url] = https://dl.sciencesocieties.org/
+    param[journal_id] = csa
 
 
   }
@@ -68,7 +69,7 @@
       eissn = 1537-2537
     >
 
-    param[base_url] = http://www.agronomy.org/
+    param[base_url] = https://dl.sciencesocieties.org/
     param[journal_id] = jeq
 
 
@@ -80,7 +81,7 @@
       eissn = 1940-3496
     >
 
-    param[base_url] = www.crops.org/
+    param[base_url] = https://dl.sciencesocieties.org/
     param[journal_id] = jpr
 
 
@@ -92,7 +93,8 @@
       eissn = 0890-8524
     >
 
-    comment[0] = website is not up yet
+    param[base_url] = https://dl.sciencesocieties.org/
+    param[journal_id] = jpa
 
 
   }
@@ -103,7 +105,7 @@
       eissn = 2186-8281
     >
 
-    param[base_url] = http://www.agronomy.org/
+    param[base_url] = https://dl.sciencesocieties.org/
     param[journal_id] = nse
 
 
@@ -115,7 +117,7 @@
       eissn = 1940-3372
     >
 
-    param[base_url] = www.crops.org/
+    param[base_url] = https://dl.sciencesocieties.org/
     param[journal_id] = tpg
 
 
@@ -127,7 +129,7 @@
       eissn = 2163-2812
     >
 
-    param[base_url] = www.soils.org/
+    param[base_url] = https://dl.sciencesocieties.org/
     param[journal_id] = sh
 
 
@@ -140,7 +142,7 @@
       eissn = 1435-0661
     >
 
-    param[base_url] = www.soils.org/
+    param[base_url] = https://dl.sciencesocieties.org/
     param[journal_id] = sssaj
 
 
@@ -152,7 +154,7 @@
       eissn = 1539-1663
     >
 
-    param[base_url] = www.soils.org/
+    param[base_url] = https://dl.sciencesocieties.org/
     param[journal_id] = vzj
 
 
