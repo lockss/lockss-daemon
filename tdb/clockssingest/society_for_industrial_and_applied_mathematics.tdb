@@ -54,7 +54,7 @@
     au < manifest ; exists ; 2010 ; Journal on Applied Dynamical Systems Volume 9 ; 9 >
     au < crawling ; exists ; 2011 ; Journal on Applied Dynamical Systems Volume 10 ; 10 >
     au < finished ; crawling ; 2012 ; Journal on Applied Dynamical Systems Volume 11 ; 11 >
-    au < testing ; exists ; 2013 ; Journal on Applied Dynamical Systems Volume 12 ; 12 >
+    au < ready ; exists ; 2013 ; Journal on Applied Dynamical Systems Volume 12 ; 12 >
     au < manifest ; exists ; 2014 ; Journal on Applied Dynamical Systems Volume 13 ; 13 >
 
   }
@@ -232,7 +232,7 @@
     au < manifest ; exists ; 2010 ; Journal on Financial Mathematics Volume 1 ; 1 >
     au < finished ; crawling ; 2011 ; Journal on Financial Mathematics Volume 2 ; 2 >
     au < finished ; crawling ; 2012 ; Journal on Financial Mathematics Volume 3 ; 3 >
-    au < testing ; exists ; 2013 ; Journal on Financial Mathematics Volume 4 ; 4 >
+    au < ready ; exists ; 2013 ; Journal on Financial Mathematics Volume 4 ; 4 >
     au < manifest ; exists ; 2014 ; Journal on Financial Mathematics Volume 5 ; 5 >
 
   }
@@ -387,7 +387,7 @@
 
     param[journal_id] = sjuqa3
 
-    au < testing ; exists ; 2013 ; Journal on Uncertainty Quantification Volume 1 ; 1 >
+    au < ready ; exists ; 2013 ; Journal on Uncertainty Quantification Volume 1 ; 1 >
     au < manifest ; exists ; 2014 ; Journal on Uncertainty Quantification Volume 2 ; 2 >
 
   }
@@ -412,7 +412,7 @@
     au < manifest ; exists ; 2010 ; SIAM Review Volume 52 ; 52 >
     au < crawling ; exists ; 2011 ; SIAM Review Volume 53 ; 53 >
     au < crawling ; exists ; 2012 ; SIAM Review Volume 54 ; 54 >
-    au < testing ; exists ; 2013 ; SIAM Review Volume 55 ; 55 >
+    au < ready ; exists ; 2013 ; SIAM Review Volume 55 ; 55 >
     au < manifest ; exists ; 2014 ; SIAM Review Volume 56 ; 56 >
 
   }
@@ -437,7 +437,7 @@
     au < manifest ; exists ; 2010 ; Theory of Probability and its Applications Volume 54 ; 54 >
     au < finished ; crawling ; 2011 ; Theory of Probability and its Applications Volume 55 ; 55 >
     au < finished ; crawling ; 2012 ; Theory of Probability and its Applications Volume 56 ; 56 >
-    au < testing ; exists ; 2013 ; Theory of Probability and its Applications Volume 57 ; 57 >
+    au < ready ; exists ; 2013 ; Theory of Probability and its Applications Volume 57 ; 57 >
     au < manifest ; exists ; 2014 ; Theory of Probability and its Applications Volume 58 ; 58 >
 
   }
