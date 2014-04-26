@@ -60,11 +60,30 @@
     >
   
     param[journal_issn] = 1080-286X 
-    comment[0] = content coming soon, 9/17/13
+    comment[0] = content coming soon, 4/25/14
 
-    au < expected ; exists ; 1988 ; Information Technology Management Volume 1 ; 1 > 
-    au < expected ; exists ; 1989 ; Information Technology Management Volume 2 ; 2 > 
-    au < expected ; exists ; 1990 ; Information Technology Management Volume 3 ; 3 > 
+    au < expected ; exists ; 1988 ; Information Technology Management Volume 1 ; 1 >
+    au < expected ; exists ; 1989 ; Information Technology Management Volume 2 ; 2 >
+    au < expected ; exists ; 1990 ; Information Technology Management Volume 3 ; 3 >
+    au < expected ; exists ; 1991 ; Information Technology Management Volume 4 ; 4 >
+    au < expected ; exists ; 1992 ; Information Technology Management Volume 5 ; 5 >
+    au < expected ; exists ; 1993 ; Information Technology Management Volume 6 ; 6 >
+    au < expected ; exists ; 1994 ; Information Technology Management Volume 7 ; 7 >
+    au < expected ; exists ; 1995 ; Information Technology Management Volume 8 ; 8 >
+    au < expected ; exists ; 1996 ; Information Technology Management Volume 9 ; 9 >
+    au < expected ; exists ; 1997 ; Information Technology Management Volume 10 ; 10 >
+    au < expected ; exists ; 1998 ; Information Technology Management Volume 11 ; 11 >
+    au < expected ; exists ; 1999 ; Information Technology Management Volume 12 ; 12 >
+    au < expected ; exists ; 2000 ; Information Technology Management Volume 13 ; 13 >
+    au < expected ; exists ; 2001 ; Information Technology Management Volume 14 ; 14 >
+    au < expected ; exists ; 2002 ; Information Technology Management Volume 15 ; 15 >
+    au < expected ; exists ; 2003 ; Information Technology Management Volume 16 ; 16 >
+    au < expected ; exists ; 2004 ; Information Technology Management Volume 17 ; 17 >
+    au < expected ; exists ; 2005 ; Information Technology Management Volume 18 ; 18 >
+    au < expected ; exists ; 2006 ; Information Technology Management Volume 19 ; 19 >
+    au < expected ; exists ; 2007 ; Information Technology Management Volume 20 ; 20 >
+    au < expected ; exists ; 2008 ; Information Technology Management Volume 21 ; 21 >
+    au < expected ; exists ; 2009 ; Information Technology Management Volume 22 ; 22 >
 
   }
 
@@ -2519,8 +2538,9 @@
     >
 
     param[journal_issn] = 2160-9896 
+    comment[0] = content coming soon, 4/25/2014
 
-    au < exists ; exists ; 2013 ; International Journal of Telework and Telecommuting Technologies (IJTTT) Volume 1 ; 1 > 
+    au < expected ; exists ; 2013 ; International Journal of Telework and Telecommuting Technologies (IJTTT) Volume 1 ; 1 > 
     au < expected ; exists ; 2014 ; International Journal of Telework and Telecommuting Technologies (IJTTT) Volume 2 ; 2 > 
 
   }
