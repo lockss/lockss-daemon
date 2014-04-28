@@ -54,9 +54,10 @@
       comment[publisher] = Universidade Federal do Estado do Rio de Janeiro - UNIRIO
       param[base_url] = http://www.seer.unirio.br/
       param[journal_id] = coloquio
+      comment[notReady] = no substance
 
-      au < testing ; 1998 ; 1 ; Cadernos do Colóquio Volume 1998 ; 1998 >
-      au < testing ; 1999 ; 2 ; Cadernos do Colóquio Volume 1999 ; 1999 >
+      au < notReady ; 1998 ; 1 ; Cadernos do Colóquio Volume 1998 ; 1998 >
+      au < notReady ; 1999 ; 2 ; Cadernos do Colóquio Volume 1999 ; 1999 >
       au < ready ; 2000 ; 3 ; Cadernos do Colóquio Volume 2000 ; 2000 >
       au < ready ; 2001 ; 4 ; Cadernos do Colóquio Volume 2001 ; 2001 >
       au < ready ; 2002 ; 5 ; Cadernos do Colóquio Volume 2002 ; 2002 >
@@ -120,11 +121,12 @@
       comment[publisher] = Universidade Federal do Estado do Rio de Janeiro - UNIRIO
       param[base_url] = http://www.seer.unirio.br/
       param[journal_id] = cuidadofundamental
+      comment[notReady] = low agreement. 
 
       au < ready ; 2009 ; 1 ; Revista de Pesquisa: Cuidado é fundamental Online Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 2 ; Revista de Pesquisa: Cuidado é fundamental Online Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 3 ; Revista de Pesquisa: Cuidado é fundamental Online Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 4 ; Revista de Pesquisa: Cuidado é fundamental Online Volume 2012 ; 2012 >
+      au < notReady ; 2010 ; 2 ; Revista de Pesquisa: Cuidado é fundamental Online Volume 2010 ; 2010 >
+      au < notReady ; 2011 ; 3 ; Revista de Pesquisa: Cuidado é fundamental Online Volume 2011 ; 2011 >
+      au < notReady ; 2012 ; 4 ; Revista de Pesquisa: Cuidado é fundamental Online Volume 2012 ; 2012 >
       au < expected ; 2013 ; 5 ; Revista de Pesquisa: Cuidado é fundamental Online Volume 2013 ; 2013 >
       au < expected ; 2014 ; 6 ; Revista de Pesquisa: Cuidado é fundamental Online Volume 2014 ; 2014 >
 
