@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = Illiesia
+    name = Illiesia ;
+    info[contract] = 2013 
   >
 
   plugin = org.lockss.plugin.illiesia.ClockssIlliesiaPlugin
