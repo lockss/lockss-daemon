@@ -264,7 +264,7 @@
     
     comment[doNotProcess] = This journal does not have an editorial policies page: http://openresearchsoftware.metajnl.com/index.php/jors/about/editorialPolicies
     
-    au < doNotProcess ; exists ; 2013 ; The Journal of Open Research Software Volume 1 [to delete] ; 1 ; 2013 >
+    au < doNotProcess ; exists ; 2013 ; The Journal of Open Research Software Volume 1 ; 1 ; 2013 >
     au < doNotProcess ; exists ; 2014 ; The Journal of Open Research Software Volume 2 ; 2 ; 2014 >
 
   }
