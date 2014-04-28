@@ -394,23 +394,23 @@
       param[base_url] = http://www.foss-rec.net/
       param[home_url] = http://www.fossil-record.net/
 
-      au < exists ; exists ; 1998 ; 1998 ; Fossil Record Reports Volume 1 ; 1 >
-      au < exists ; exists ; 1999 ; 1999 ; Fossil Record Reports Volume 2 ; 2 >
-      au < exists ; exists ; 2000 ; 2000 ; Fossil Record Reports Volume 3 ; 3 >
-      au < exists ; exists ; 2001 ; 2001 ; Fossil Record Reports Volume 4 ; 4 >
-      au < exists ; exists ; 2002 ; 2002 ; Fossil Record Reports Volume 5 ; 5 >
-      au < exists ; exists ; 2003 ; 2003 ; Fossil Record Reports Volume 6 ; 6 >
-      au < exists ; exists ; 2004 ; 2004 ; Fossil Record Reports Volume 7 ; 7 >
-      au < exists ; exists ; 2005 ; 2005 ; Fossil Record Reports Volume 8 ; 8 >
-      au < exists ; exists ; 2006 ; 2006 ; Fossil Record Reports Volume 9 ; 9 >
-      au < exists ; exists ; 2007 ; 2007 ; Fossil Record Reports Volume 10 ; 10 >
-      au < exists ; exists ; 2008 ; 2008 ; Fossil Record Reports Volume 11 ; 11 >
-      au < exists ; exists ; 2009 ; 2009 ; Fossil Record Reports Volume 12 ; 12 >
-      au < exists ; exists ; 2010 ; 2010 ; Fossil Record Reports Volume 13 ; 13 >
-      au < exists ; exists ; 2011 ; 2011 ; Fossil Record Reports Volume 14 ; 14 >
-      au < exists ; exists ; 2012 ; 2012 ; Fossil Record Reports Volume 15 ; 15 >
-      au < exists ; exists ; 2013 ; 2013 ; Fossil Record Reports Volume 16 ; 16 >
-      au < exists ; exists ; 2014 ; 2014 ; Fossil Record Reports Volume 17 ; 17 >
+      au < manifest ; exists ; 1998 ; 1998 ; Fossil Record Reports Volume 1 ; 1 >
+      au < manifest ; exists ; 1999 ; 1999 ; Fossil Record Reports Volume 2 ; 2 >
+      au < manifest ; exists ; 2000 ; 2000 ; Fossil Record Reports Volume 3 ; 3 >
+      au < manifest ; exists ; 2001 ; 2001 ; Fossil Record Reports Volume 4 ; 4 >
+      au < manifest ; exists ; 2002 ; 2002 ; Fossil Record Reports Volume 5 ; 5 >
+      au < manifest ; exists ; 2003 ; 2003 ; Fossil Record Reports Volume 6 ; 6 >
+      au < manifest ; exists ; 2004 ; 2004 ; Fossil Record Reports Volume 7 ; 7 >
+      au < manifest ; exists ; 2005 ; 2005 ; Fossil Record Reports Volume 8 ; 8 >
+      au < manifest ; exists ; 2006 ; 2006 ; Fossil Record Reports Volume 9 ; 9 >
+      au < manifest ; exists ; 2007 ; 2007 ; Fossil Record Reports Volume 10 ; 10 >
+      au < manifest ; exists ; 2008 ; 2008 ; Fossil Record Reports Volume 11 ; 11 >
+      au < manifest ; exists ; 2009 ; 2009 ; Fossil Record Reports Volume 12 ; 12 >
+      au < manifest ; exists ; 2010 ; 2010 ; Fossil Record Reports Volume 13 ; 13 >
+      au < manifest ; exists ; 2011 ; 2011 ; Fossil Record Reports Volume 14 ; 14 >
+      au < manifest ; exists ; 2012 ; 2012 ; Fossil Record Reports Volume 15 ; 15 >
+      au < manifest ; exists ; 2013 ; 2013 ; Fossil Record Reports Volume 16 ; 16 >
+      au < manifest ; exists ; 2014 ; 2014 ; Fossil Record Reports Volume 17 ; 17 >
     
    }
     
@@ -764,24 +764,24 @@
       param[base_url] = http://www.sci-dril.net/
       param[home_url] = http://www.scientific-drilling.net/
 
-      au < exists ; exists ; 2005 ; 2005 ; Scientific Drilling Volume 1 ; 1 >
-      au < exists ; exists ; 2006 ; 2006 ; Scientific Drilling Volume 2 ; 2 >
-      au < exists ; exists ; 2006 ; 2006 ; Scientific Drilling Volume 3 ; 3 >
-      au < exists ; exists ; 2007 ; 2007 ; Scientific Drilling Volume 4 ; 4 >
-      au < exists ; exists ; 2007 ; 2007 ; Scientific Drilling Volume 5 ; 5 >
-      au < exists ; exists ; 2007 ; 2007 ; Scientific Drilling Volume SpecialIssue ; SpecialIssue >
-      au < exists ; exists ; 2008 ; 2008 ; Scientific Drilling Volume 6 ; 6 >
-      au < exists ; exists ; 2009 ; 2009 ; Scientific Drilling Volume 7 ; 7 >
-      au < exists ; exists ; 2009 ; 2009 ; Scientific Drilling Volume 8 ; 8 >
-      au < exists ; exists ; 2010 ; 2010 ; Scientific Drilling Volume 9 ; 9 >
-      au < exists ; exists ; 2010 ; 2010 ; Scientific Drilling Volume 10 ; 10 >
-      au < exists ; exists ; 2011 ; 2011 ; Scientific Drilling Volume 11 ; 11 >
-      au < exists ; exists ; 2011 ; 2011 ; Scientific Drilling Volume 12 ; 12 >
-      au < exists ; exists ; 2012 ; 2012 ; Scientific Drilling Volume 13 ; 13 >
-      au < exists ; exists ; 2012 ; 2012 ; Scientific Drilling Volume 14 ; 14 >
-      au < exists ; exists ; 2013 ; 2013 ; Scientific Drilling Volume 15 ; 15 >
-      au < exists ; exists ; 2013 ; 2013 ; Scientific Drilling Volume 16 ; 16 >
-      au < exists ; exists ; 2014 ; 2014 ; Scientific Drilling Volume 17 ; 17 >
+      au < manifest ; exists ; 2005 ; 2005 ; Scientific Drilling Volume 1 ; 1 >
+      au < manifest ; exists ; 2006 ; 2006 ; Scientific Drilling Volume 2 ; 2 >
+      au < manifest ; exists ; 2006 ; 2006 ; Scientific Drilling Volume 3 ; 3 >
+      au < manifest ; exists ; 2007 ; 2007 ; Scientific Drilling Volume 4 ; 4 >
+      au < manifest ; exists ; 2007 ; 2007 ; Scientific Drilling Volume 5 ; 5 >
+      au < manifest ; exists ; 2007 ; 2007 ; Scientific Drilling Volume SpecialIssue ; SpecialIssue >
+      au < manifest ; exists ; 2008 ; 2008 ; Scientific Drilling Volume 6 ; 6 >
+      au < manifest ; exists ; 2009 ; 2009 ; Scientific Drilling Volume 7 ; 7 >
+      au < manifest ; exists ; 2009 ; 2009 ; Scientific Drilling Volume 8 ; 8 >
+      au < manifest ; exists ; 2010 ; 2010 ; Scientific Drilling Volume 9 ; 9 >
+      au < manifest ; exists ; 2010 ; 2010 ; Scientific Drilling Volume 10 ; 10 >
+      au < manifest ; exists ; 2011 ; 2011 ; Scientific Drilling Volume 11 ; 11 >
+      au < manifest ; exists ; 2011 ; 2011 ; Scientific Drilling Volume 12 ; 12 >
+      au < manifest ; exists ; 2012 ; 2012 ; Scientific Drilling Volume 13 ; 13 >
+      au < manifest ; exists ; 2012 ; 2012 ; Scientific Drilling Volume 14 ; 14 >
+      au < manifest ; exists ; 2013 ; 2013 ; Scientific Drilling Volume 15 ; 15 >
+      au < manifest ; exists ; 2013 ; 2013 ; Scientific Drilling Volume 16 ; 16 >
+      au < manifest ; exists ; 2014 ; 2014 ; Scientific Drilling Volume 17 ; 17 >
       au < expected ; exists ; 2014 ; 2014 ; Scientific Drilling Volume 18 ; 18 >
     
    }
