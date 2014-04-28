@@ -24460,7 +24460,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < manifest ; exists ; 1974-1975 ; Journal of Urban History Volume 1 ; 1 ; >
-      au < doesNotExist ; doesNotExist ; 0 ; Journal of Urban History Volume 2 ; 2 ; >
+      au < exists ; exists ; 1976 ; Journal of Urban History Volume 2 ; 2 ; >
       au < manifest ; exists ; 1976-1977 ; Journal of Urban History Volume 3 ; 3 ; >
       au < manifest ; exists ; 1977-1978 ; Journal of Urban History Volume 4 ; 4 ; >
       au < manifest ; exists ; 1978-1979 ; Journal of Urban History Volume 5 ; 5 ; >
