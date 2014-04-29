@@ -17,6 +17,7 @@
     param[base_url] = http://www.otago.ac.nz/
     implicit < status ; year ; name ; param[volume] >
     comment[doNotProcess] = Plugin needs update and review
+    comment[publisher] = may have stopped publishing in 2011. http://www.otago.ac.nz/classics/scholia/
     
     au < down ; 1992 ; Scholia Volume 1 ; 1 >
     au < down ; 1993 ; Scholia Volume 2 ; 2 >
@@ -31,13 +32,13 @@
     au < down ; 2002 ; Scholia Volume 11 ; 11 >
     au < down ; 2003 ; Scholia Volume 12 ; 12 >
     au < down ; 2004 ; Scholia Volume 13 ; 13 >
-    au < notReady ; 2005 ; Scholia Volume 14 ; 14 >
-    au < notReady ; 2006 ; Scholia Volume 15 ; 15 >
-    au < notReady ; 2007 ; Scholia Volume 16 ; 16 >
-    au < notReady ; 2008 ; Scholia Volume 17 ; 17 >
-    au < notReady ; 2009 ; Scholia Volume 18 ; 18 >
-    au < notReady ; 2010 ; Scholia Volume 19 ; 19 >
-    au < notReady ; 2011 ; Scholia Volume 20 ; 20 >
+    au < doNotProcess ; 2005 ; Scholia Volume 14 ; 14 >
+    au < doNotProcess ; 2006 ; Scholia Volume 15 ; 15 >
+    au < doNotProcess ; 2007 ; Scholia Volume 16 ; 16 >
+    au < doNotProcess ; 2008 ; Scholia Volume 17 ; 17 >
+    au < doNotProcess ; 2009 ; Scholia Volume 18 ; 18 >
+    au < doNotProcess ; 2010 ; Scholia Volume 19 ; 19 >
+    au < doNotProcess ; 2011 ; Scholia Volume 20 ; 20 >
 
   }
   
