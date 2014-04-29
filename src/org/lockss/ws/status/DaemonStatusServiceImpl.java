@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatusServiceImpl.java,v 1.6 2014-04-25 23:10:59 fergaloy-sf Exp $
+ * $Id: DaemonStatusServiceImpl.java,v 1.7 2014-04-29 19:47:04 fergaloy-sf Exp $
  */
 
 /*
@@ -58,6 +58,7 @@ import org.lockss.ws.entities.LockssWebServicesFault;
 import org.lockss.ws.entities.LockssWebServicesFaultInfo;
 import org.lockss.ws.entities.PeerWsResult;
 import org.lockss.ws.entities.PluginWsResult;
+import org.lockss.ws.entities.PollWsResult;
 import org.lockss.ws.entities.RepositorySpaceWsResult;
 import org.lockss.ws.entities.RepositoryWsResult;
 import org.lockss.ws.entities.VoteWsResult;
@@ -567,6 +568,65 @@ public class DaemonStatusServiceImpl implements DaemonStatusService {
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "results = "
 	+ crawlHelper.nonDefaultToString(results));
+    return results;
+  }
+
+  /**
+   * Provides the selected properties of selected polls in the system.
+   * 
+   * @param query
+   *          A String with the query used to specify what properties to
+   *          retrieve from which polls.
+   * @return a List<PollWsResult> with the results.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public List<PollWsResult> queryPolls(String pollQuery)
+      throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "queryPolls(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "pollQuery = " + pollQuery);
+
+    PollHelper pollHelper = new PollHelper();
+    List<PollWsResult> results = null;
+
+    // Create the full query.
+    String fullQuery = createFullQuery(pollQuery, PollHelper.SOURCE_FQCN,
+	PollHelper.PROPERTY_NAMES, PollHelper.RESULT_FQCN);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "fullQuery = " + fullQuery);
+
+    // Create a new JoSQL query.
+    Query q = new Query();
+
+    try {
+      // Parse the SQL-like query.
+      q.parse(fullQuery);
+
+      try {
+	// Execute the query.
+	QueryResults qr = q.execute(pollHelper.createUniverse());
+
+	// Get the query results.
+	results = (List<PollWsResult>)qr.getResults();
+	if (log.isDebug3()) {
+	  log.debug3(DEBUG_HEADER + "results.size() = " + results.size());
+	  log.debug3(DEBUG_HEADER + "results = "
+	      + pollHelper.nonDefaultToString(results));
+	}
+      } catch (QueryExecutionException qee) {
+	log.error("Caught QueryExecuteException", qee);
+	log.error("fullQuery = '" + fullQuery + "'");
+	throw new LockssWebServicesFault(qee,
+	    new LockssWebServicesFaultInfo("pollQuery = " + pollQuery));
+      }
+    } catch (QueryParseException qpe) {
+      log.error("Caught QueryParseException", qpe);
+      log.error("fullQuery = '" + fullQuery + "'");
+	throw new LockssWebServicesFault(qpe,
+	    new LockssWebServicesFaultInfo("pollQuery = " + pollQuery));
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "results = "
+	+ pollHelper.nonDefaultToString(results));
     return results;
   }
 
