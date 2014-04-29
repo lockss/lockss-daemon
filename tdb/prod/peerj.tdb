@@ -2,11 +2,12 @@
 
   publisher <
     name = PeerJ ;
-    info[tester] = 0
+    info[tester] = 4
   >
 
   comment[platform] = Developed by Highwire.
   comment[volume] = Use year as volume name
+  
     plugin = org.lockss.plugin.peerj.PeerJPlugin
     param[base_url] = https://peerj.com/
     
