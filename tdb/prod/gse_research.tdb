@@ -8,28 +8,19 @@
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = 
+    param[publisher_id] = gse
     implicit < status ; year ; name ; param[volume_name] >
 
   {
     title <
-      name = GSE Research ;
-      issn = 2048-7665
-    >
-    
-    param[journal_id] = 
-    param[journal_issn] = 
-
-  }
-
-  {
-    title <
-      name = International Journal of Nuclear Energy Management and Safety ;
+      name = International Journal on Nuclear Energy Management and Safety ;
       eissn = 2047-2617
     >
 
-    param[journal_id] = 
-    param[journal_issn] = 
+    param[journal_id] = ijnems
+    param[journal_issn] = 2047-2617
+    
+    au < exists ; 2011 ; International Journal on Nuclear Energy Management and Safety Volume 1 ; 1 > 
 
   }
 
