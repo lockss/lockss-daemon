@@ -1010,8 +1010,10 @@ while (my $line = <>) {
       if (defined($man_contents) && ($man_contents =~ m/journals\/$param{journal_id}\/$param{volume_name}/)) {
         if ($man_contents =~ m/<title>(.*)<\/title>/si) {
           $vol_title = $1;
-          $vol_title =~ s/ \| / /g;
+          #$vol_title =~ s/ \| / /g;
           $vol_title =~ s/\s*\n\s*/ /g;
+          $vol_title =~ s/An Open Access Journal//;
+          $vol_title =~ s/\s*/ /g;
         } 
         $result = "Manifest"
       } else {
