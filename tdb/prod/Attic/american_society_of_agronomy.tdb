@@ -212,34 +212,4 @@
 
   }
 
-  {
-    title <
-      name = Soil Science Society of America Journal;
-      issn = 0361-5995 ;
-      eissn = 1435-0661
-    >
-
-    param[base_url] = https://dl.sciencesocieties.org/
-    param[journal_id] = sssaj
-    plugin = needs.plugin
-    implicit < status ; year ; name ; param[volume_name] >
-
-    au < exists ; 2013 ; Soil Science Society of America Volume 77 ; 77 >
-
-  }
-
-  {
-    title <
-      name = Vadose Zone Journal ;
-      eissn = 1539-1663
-    >
-
-    param[base_url] = https://dl.sciencesocieties.org/
-    param[journal_id] = vzj
-    plugin = needs.plugin
-    implicit < status ; year ; name ; param[volume_name] >
-
-    au < exists ; 2013 ; Vadose Zone Journal Volume 12 ; 12 >
-
-  }
 }
