@@ -1013,7 +1013,7 @@ while (my $line = <>) {
           #$vol_title =~ s/ \| / /g;
           $vol_title =~ s/\s*\n\s*/ /g;
           $vol_title =~ s/An Open Access Journal//;
-          $vol_title =~ s/\s*/ /g;
+          $vol_title =~ s/\s+/ /g;
         } 
         $result = "Manifest"
       } else {
