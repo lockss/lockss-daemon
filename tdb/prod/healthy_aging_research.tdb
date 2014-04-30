@@ -1,12 +1,12 @@
 {
 
   publisher <
-    name = Healthy Aging Research ;
-    info[contract] = 2013 ;
-    comment[platform] = custom
+    name = Healthy Aging Research
+
   >
   
   plugin = needs.plugin
+  comment[platform] = custom, open access
   param[base_url] = http://www.har-journal.com/
   implicit < status ; year ; name ; param[volume_name] >
   
