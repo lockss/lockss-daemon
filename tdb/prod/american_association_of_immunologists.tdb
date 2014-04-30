@@ -177,6 +177,7 @@
       
         plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
+        comment[notReady] = No manifest page
 
         au < doNotProcess ; 1916 ; The Journal of Immunology Volume 1 ; 1 >
         au < doNotProcess ; 1917 ; The Journal of Immunology Volume 2 ; 2 >
@@ -355,7 +356,7 @@
         au < ready ; 2005 ; The Journal of Immunology Volume 175 ; 175 >
         au < ready ; 2006 ; The Journal of Immunology Volume 176 ; 176 >
         au < ready ; 2006 ; The Journal of Immunology Volume 177 ; 177 >
-        au < testing ; 2007 ; The Journal of Immunology Volume 178 ; 178 >
+        au < notReady ; 2007 ; The Journal of Immunology Volume 178 ; 178 >
         au < ready ; 2007 ; The Journal of Immunology Volume 179 ; 179 >
         au < ready ; 2008 ; The Journal of Immunology Volume 180 ; 180 >
         au < ready ; 2008 ; The Journal of Immunology Volume 181 ; 181 >
