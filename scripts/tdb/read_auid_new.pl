@@ -999,6 +999,29 @@ while (my $line = <>) {
     }
     sleep(4);
                 
+  } elsif (($plugin eq "HindawiPublishingCorporationPlugin") || ($plugin eq "ClockssHindawiPublishingCorporationPlugin")) {
+    $url = sprintf("%sjournals/%s/%s/",
+      $param{base_url}, $param{journal_id}, $param{volume_name});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+      if (defined($man_contents) && ($man_contents =~ m/journals\/$param{journal_id}\/$param{volume_name}/)) {
+        if ($man_contents =~ m/<title>(.*)<\/title>/si) {
+          $vol_title = $1;
+          $vol_title =~ s/ \| / /g;
+          $vol_title =~ s/\s*\n\s*/ /g;
+        } 
+        $result = "Manifest"
+      } else {
+        $result = "--NO_TAG--"
+      }
+    } else {
+      $result = "--REQ_FAIL--"
+    }
+    sleep(4);
+                
   } elsif ($plugin eq "EmeraldPlugin") {
     $url = sprintf("%scrawlers/lockss.htm?issn=%s&volume=%s", 
       $param{base_url}, $param{journal_issn}, $param{volume_name});
