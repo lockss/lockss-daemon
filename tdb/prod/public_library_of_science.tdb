@@ -83,14 +83,14 @@
       issnl = 1932-6203
     >
     
-    comment[0] = repository error, too many files
+    comment[0] = repository error, too many files for Vol 1-3
     
     param[base_url] = http://www.plosone.org/    
     param[journal_id] = plosone
 
-    au < notReady ; 2006 ; PLoS One Volume 1 ; 1 ; 2006 >
-    au < notReady ; 2007 ; PLoS One Volume 2 ; 2 ; 2007 >
-    au < notReady ; 2008 ; PLoS One Volume 3 ; 3 ; 2008 >
+    au < doNotProcess ; 2006 ; PLoS One Volume 1 ; 1 ; 2006 >
+    au < doNotProcess ; 2007 ; PLoS One Volume 2 ; 2 ; 2007 >
+    au < doNotProcess ; 2008 ; PLoS One Volume 3 ; 3 ; 2008 >
     au < doNotProcess ; 2009 ; PLoS One Volume 4 ; 4 ; 2009 >
     au < doNotProcess ; 2010 ; PLoS One Volume 5 ; 5 ; 2010 >
     au < doNotProcess ; 2011 ; PLoS One Volume 6 ; 6 ; 2011 >
