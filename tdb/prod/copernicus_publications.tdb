@@ -705,11 +705,14 @@
 
    {
     title <
-      name = Nonlinear Processes in Geophysics Discussions 
+      name = Nonlinear Processes in Geophysics Discussions ;
+      eissn = 2198-5634
     >
       attr[journal_id] = NPGD
-      comment[1] = to be published in 2014
+      param[base_url] = http://www.nonlin-processes-geophys-discuss.net/
       param[home_url] = http://www.nonlinear-processes-in-geophysics.net/
+
+      au < exists ; 2014 ; 2014 ; Nonlinear Processes in Geophysics Discussions Volume 1 ; 1 >
 
    }
           
