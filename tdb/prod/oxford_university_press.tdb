@@ -15337,7 +15337,7 @@
     param[base_url] = http://mtp.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; exists ; 1983 ; Music Therapy Perspectives Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 1982-1984 ; Music Therapy Perspectives Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; exists ; 1984 ; Music Therapy Perspectives Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; exists ; 1985 ; Music Therapy Perspectives Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; exists ; 1986 ; Music Therapy Perspectives Volume 4 ; 4 >
