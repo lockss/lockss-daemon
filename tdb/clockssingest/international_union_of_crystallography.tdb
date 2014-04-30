@@ -18,6 +18,8 @@
       eissn = 1600-5368
     >
     
+    comment[doNotProcess] = Moving to a new platform as of summer 2014.
+    
     param[journal_id] = e
     
     au < manifest ; exists ; 2008 ; 64 ; Acta Crystallographica Section E: Structure Reports Online Volume 64 Part 1 ; 2008 ; 01 >
@@ -92,18 +94,18 @@
     au < crawling ; exists ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 Part 10 ; 2013 ; 10 >
     au < crawling ; exists ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 Part 11 ; 2013 ; 11 >
     au < crawling ; exists ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 Part 12 ; 2013 ; 12 >
-    au < manifest ; exists ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 Part 1 ; 2014 ; 01 >
-    au < manifest ; exists ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 Part 2 ; 2014 ; 02 >
-    au < manifest ; exists ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 Part 3 ; 2014 ; 03 >
-    au < manifest ; exists ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 Part 4 ; 2014 ; 04 >
-    au < expected ; exists ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 Part 5 ; 2014 ; 05 >
-    au < expected ; exists ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 Part 6 ; 2014 ; 06 >
-    au < expected ; exists ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 Part 7 ; 2014 ; 07 >
-    au < expected ; exists ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 Part 8 ; 2014 ; 08 >
-    au < expected ; exists ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 Part 9 ; 2014 ; 09 >
-    au < expected ; exists ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 Part 10 ; 2014 ; 10 >
-    au < expected ; exists ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 Part 11 ; 2014 ; 11 >
-    au < expected ; exists ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 Part 12 ; 2014 ; 12 >
+    au < doNotProcess ; exists ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 Part 1 ; 2014 ; 01 >
+    au < doNotProcess ; exists ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 Part 2 ; 2014 ; 02 >
+    au < doNotProcess ; exists ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 Part 3 ; 2014 ; 03 >
+    au < doNotProcess ; exists ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 Part 4 ; 2014 ; 04 >
+    au < doNotProcess ; exists ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 Part 5 ; 2014 ; 05 >
+    au < doNotProcess ; exists ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 Part 6 ; 2014 ; 06 >
+    au < doNotProcess ; exists ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 Part 7 ; 2014 ; 07 >
+    au < doNotProcess ; exists ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 Part 8 ; 2014 ; 08 >
+    au < doNotProcess ; exists ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 Part 9 ; 2014 ; 09 >
+    au < doNotProcess ; exists ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 Part 10 ; 2014 ; 10 >
+    au < doNotProcess ; exists ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 Part 11 ; 2014 ; 11 >
+    au < doNotProcess ; exists ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 Part 12 ; 2014 ; 12 >
   
   }
 
