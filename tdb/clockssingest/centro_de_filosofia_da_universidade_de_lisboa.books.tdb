@@ -8,7 +8,7 @@
   
     plugin = needs.plugin
     comment[0] = Needs updated e-book list with fulltext e-books only.
-    implicit < status ; status2 ; isbn ; name >
+    implicit < status ; status2 ; param[isbn] ; name >
     
   {
   
