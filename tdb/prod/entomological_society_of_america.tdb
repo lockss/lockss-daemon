@@ -35,7 +35,7 @@
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
       param[journal_id] = esaa
-      comment[notReady] = login needed for book reviews
+      comment[notReady] = style sheet kept changing
       
       au < doNotProcess ; 2000 ; Annals of the Entomological Society of America Volume 93 ; 93 >
       au < doNotProcess ; 2001 ; Annals of the Entomological Society of America Volume 94 ; 94 >
