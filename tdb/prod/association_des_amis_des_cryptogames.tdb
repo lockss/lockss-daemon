@@ -4,7 +4,7 @@
     name = Association des Amis des Cryptogames
   >
 
-  plugin =  
+  plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
   implicit < status ; year ; name ; param[volume_name] >
   param[base_url] = http://www.bioone.org/
 
@@ -14,8 +14,13 @@
       issn = 
     >
     
-     comment[0] = coming 2013
- 
+      param[journal_id] = crya
+      
+      au < exists ; 2011 ; Cryptogamie, Algologie Volume 32 ; 32 >
+      au < exists ; 2012 ; Cryptogamie, Algologie Volume 33 ; 33 >
+      au < exists ; 2013 ; Cryptogamie, Algologie Volume 34 ; 34 >
+      au < exists ; 2014 ; Cryptogamie, Algologie Volume 35 ; 35 >
+
   }
   
   {
@@ -24,8 +29,13 @@
       issn = 
     >
     
-     comment[0] = coming 2013
- 
+      param[journal_id] = cryb
+
+      au < exists ; 2011 ; Cryptogamie, Bryologie Volume 32 ; 32 >
+      au < exists ; 2012 ; Cryptogamie, Bryologie Volume 33 ; 33 >
+      au < exists ; 2013 ; Cryptogamie, Bryologie Volume 34 ; 34 >
+      au < exists ; 2014 ; Cryptogamie, Bryologie Volume 35 ; 35 >
+
   }
   
   {
@@ -34,8 +44,13 @@
       issn = 
     >
     
-     comment[0] = coming 2013
- 
+      param[journal_id] = crym
+
+      au < exists ; 2011 ; Cryptogamie, Mycologie Volume 32 ; 32 >
+      au < exists ; 2012 ; Cryptogamie, Mycologie Volume 33 ; 33 >
+      au < exists ; 2013 ; Cryptogamie, Mycologie Volume 34 ; 34 >
+      au < exists ; 2014 ; Cryptogamie, Mycologie Volume 35 ; 35 >
+
   }
   
 }
