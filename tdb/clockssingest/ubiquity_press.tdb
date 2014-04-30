@@ -325,7 +325,7 @@
     {
        param[base_url] = http://pia-journal.co.uk/
        comment[zapped] = Bad base_url
-        au < down ; crawling ; 2011 ; Papers from the Institute of Archaeology Volume 21 ; 21 ; 2011 >
+        au < superseded ; down ; 2011 ; Papers from the Institute of Archaeology Volume 21 [superseded] ; 21 ; 2011 >
     }
     au < manifest ; exists ; 1990 ; Papers from the Institute of Archaeology Volume 1 ; 1 ; 1990 >
     au < manifest ; exists ; 1991 ; Papers from the Institute of Archaeology Volume 2 ; 2 ; 1991 >
