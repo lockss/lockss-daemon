@@ -16,6 +16,7 @@
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://www.japmaonline.org/
     implicit < status ; year ; name ; param[volume_name] >
+    comment[notReady] = No manifest pages.. for anything, it seems. Should contact the publisher.
 
     au < released ; 1965 ; Journal of the American Podiatric Medical Association Volume 55 [tables of contents only] ; 55 >
     au < released ; 1966 ; Journal of the American Podiatric Medical Association Volume 56 [tables of contents only] ; 56 >
@@ -75,7 +76,7 @@
     au < released ; 2010 ; Journal of the American Podiatric Medical Association Volume 100 ; 100 >
     au < released ; 2011 ; Journal of the American Podiatric Medical Association Volume 101 ; 101 >
     au < released ; 2012 ; Journal of the American Podiatric Medical Association Volume 102 ; 102 >
-    au < testing ; 2013 ; Journal of the American Podiatric Medical Association Volume 103 ; 103 >
+    au < notReady ; 2013 ; Journal of the American Podiatric Medical Association Volume 103 ; 103 >
     au < manifest ; 2014 ; Journal of the American Podiatric Medical Association Volume 104 ; 104 >
 
   }
