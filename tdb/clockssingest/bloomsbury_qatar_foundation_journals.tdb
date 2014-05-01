@@ -398,6 +398,8 @@
     plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
     param[journal_id] = tasmeem
 
+    au < exists ; exists ; 2014 ; Tasmeem Volume 2014 ; 2014 >
+
   }
 
 }
