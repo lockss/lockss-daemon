@@ -378,12 +378,11 @@
     {
       plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
       param[journal_id] = stsp
+      comment[journal] = stopped publishing.
 
       au < doNotProcess ; doNotProcess ; 2010 ; Sustainable Technologies, Systems and Policies Volume 2010 ; 2010 >
       au < doNotProcess ; doNotProcess ; 2012 ; Sustainable Technologies, Systems and Policies Volume 2012 ; 2012 >
       au < exists ; exists ; 2012 ; Sustainable Technologies, Systems and Policies Volume CCS+Workshop ; CCS+Workshop >
-      au < expected ; exists ; 2013 ; Sustainable Technologies, Systems and Policies Volume 2013 ; 2013 >
-      au < expected ; exists ; 2014 ; Sustainable Technologies, Systems and Policies Volume 2014 ; 2014 >
       
     }
   }
