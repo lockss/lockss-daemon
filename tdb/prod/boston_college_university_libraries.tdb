@@ -21,6 +21,7 @@
       >
     
       param[journal_id] = catholic
+      comment[notReady] = OJS2 pattern manifest page redirects to new url: http://digitalcommons.lmu.edu/ce/?year=2013 AU Test can't find permission page
 
       au < released ; 1997 ; Catholic Education Volume 1 (1997) ; 1 ; 1997 >   
       au < released ; 1998 ; Catholic Education Volume 1-2 (1998) ; 1-2 ; 1998 > 
@@ -38,7 +39,7 @@
       au < released ; 2010 ; Catholic Education Volume 13-14 (2010) ; 13-14 ; 2010 >
       au < released ; 2011 ; Catholic Education Volume 14-15 (2011) ; 14-15 ; 2011 >
       au < released ; 2012 ; Catholic Education Volume 15-16 (2012) ; 15-16 ; 2012 >
-      au < testing ; 2013 ; Catholic Education Volume 16-17 (2013) ; 16-17 ; 2013 >
+      au < notReady ; 2013 ; Catholic Education Volume 16-17 (2013) ; 16-17 ; 2013 >
       au < expected ; 2014 ; Catholic Education Volume 17-18 (2014) ; 17-18 ; 2014 >
     
     }
@@ -68,7 +69,7 @@
       
       au < released ; 2011 ; Information Technology and Libraries Volume 30 (2011) ; 30 ; 2011 >
       au < released ; 2012 ; Information Technology and Libraries Volume 31 (2012) ; 31 ; 2012 >
-      au < testing ; 2013 ; Information Technology and Libraries Volume 32 (2013) ; 32 ; 2013 >
+      au < ready ; 2013 ; Information Technology and Libraries Volume 32 (2013) ; 32 ; 2013 >
       au < manifest ; 2014 ; Information Technology and Libraries Volume 33 (2014) ; 33 ; 2014 >
 
     }
@@ -104,7 +105,7 @@
       param[journal_id] = levantine
 
       au < released ; 2012 ; Levantine Review Volume 1 (2012) ; 1 ; 2012 >
-      au < testing ; 2013 ; Levantine Review Volume 2 (2013) ; 2 ; 2013 >
+      au < ready ; 2013 ; Levantine Review Volume 2 (2013) ; 2 ; 2013 >
       au < expected ; 2014 ; Levantine Review Volume 3 (2014) ; 3 ; 2014 >
       
      }
@@ -118,7 +119,7 @@
       
       au < released ; 2011 ; Lumen et Vita Volume 1 (2011) ; 1 ; 2011 >
       au < released ; 2012 ; Lumen et Vita Volume 2 (2012) ; 2 ; 2012 >
-      au < testing ; 2013 ; Lumen et Vita Volume 3 (2013) ; 3 ; 2013 >
+      au < ready ; 2013 ; Lumen et Vita Volume 3 (2013) ; 3 ; 2013 >
       au < expected ; 2014 ; Lumen et Vita Volume 4 (2014) ; 4 ; 2014 >
 
       }
@@ -189,15 +190,15 @@
       au < manifest ; 2002 ; PROCEEDINGS of the Fifty-seventh Annual Convention ; 57 ; 2002 >
       au < manifest ; 2003 ; PROCEEDINGS of the Fifty-eighth Annual Convention ; 58 ; 2003 >
       au < manifest ; 2004 ; PROCEEDINGS of the Fifty-ninth Annual Convention ; 59 ; 2004 >
-      au < testing ; 2005 ; PROCEEDINGS of the Sixtieth Annual Convention ; 60 ; 2005 >
-      au < testing ; 2006 ; PROCEEDINGS of the Sixty-First Annual Convention ; 61 ; 2006 >
-      au < testing ; 2007 ; PROCEEDINGS of the Sixty-Second Annual Convention ; 62 ; 2007 >
-      au < testing ; 2008 ; PROCEEDINGS of the Sixty-Third Annual Convention ; 63 ; 2008 >
-      au < testing ; 2009 ; PROCEEDINGS of the Sixty-Fourth Annual Convention ; 64 ; 2009 >
-      au < testing ; 2010 ; PROCEEDINGS of the Sixty-Fifth Annual Convention ; 65 ; 2010 >
-      au < testing ; 2011 ; PROCEEDINGS of the Sixty-Sixth Annual Convention ; 66 ; 2011 >
-      au < testing ; 2012 ; Proceedings of the Catholic Theological Society of America Volume 67 (2012) ; 67 ; 2012 >
-      au < testing ; 2013 ; Proceedings of the Catholic Theological Society of America Volume 68 (2013) ; 68 ; 2013 >
+      au < ready ; 2005 ; PROCEEDINGS of the Sixtieth Annual Convention ; 60 ; 2005 >
+      au < ready ; 2006 ; PROCEEDINGS of the Sixty-First Annual Convention ; 61 ; 2006 >
+      au < ready ; 2007 ; PROCEEDINGS of the Sixty-Second Annual Convention ; 62 ; 2007 >
+      au < ready ; 2008 ; PROCEEDINGS of the Sixty-Third Annual Convention ; 63 ; 2008 >
+      au < ready ; 2009 ; PROCEEDINGS of the Sixty-Fourth Annual Convention ; 64 ; 2009 >
+      au < ready ; 2010 ; PROCEEDINGS of the Sixty-Fifth Annual Convention ; 65 ; 2010 >
+      au < ready ; 2011 ; PROCEEDINGS of the Sixty-Sixth Annual Convention ; 66 ; 2011 >
+      au < ready ; 2012 ; Proceedings of the Catholic Theological Society of America Volume 67 (2012) ; 67 ; 2012 >
+      au < ready ; 2013 ; Proceedings of the Catholic Theological Society of America Volume 68 (2013) ; 68 ; 2013 >
       au < expected ; 2014 ; Proceedings of the Catholic Theological Society of America Volume 69 (2014) ; 69 ; 2014 >
 
     }
