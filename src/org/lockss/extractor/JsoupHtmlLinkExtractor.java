@@ -1,5 +1,5 @@
 /*
- * $Id: JsoupHtmlLinkExtractor.java,v 1.7 2014-04-23 22:42:59 clairegriffin Exp $
+ * $Id: JsoupHtmlLinkExtractor.java,v 1.8 2014-05-01 06:17:57 clairegriffin Exp $
  */
 
 /*
@@ -65,6 +65,7 @@ public class JsoupHtmlLinkExtractor implements LinkExtractor {
   public static final String PARAM_PROCESS_FORMS =
       PREFIX + "process_forms";
   public static final boolean DEFAULT_PROCESS_FORMS = true;
+
   /**
    * the theLog for this class
    */
@@ -260,9 +261,7 @@ public class JsoupHtmlLinkExtractor implements LinkExtractor {
     HtmlFormExtractor formExtractor = null;
     if (m_processForms) {
       // create a form processor
-      formExtractor = new HtmlFormExtractor(au, cb, encoding,
-                                            m_formRestrictors,
-                                            m_formGenerators);
+      formExtractor = getFormExtractor(au, encoding, cb);
       // To allow for HTML 5 forms which allow free form getFieldIterator we
       // grab all
       // forms. When we encounter an input elements with the 'form'
@@ -271,8 +270,7 @@ public class JsoupHtmlLinkExtractor implements LinkExtractor {
       formExtractor.initProcessor(this, els.forms());
     }
     // Now we walk the document as usual and process found urls
-    doc.traverse(new LinkExtractorNodeVisitor(au, srcUrl, wrapped_cb,
-                                              encoding));
+    doc.traverse(new LinkExtractorNodeVisitor(au, srcUrl, wrapped_cb,encoding));
     if (formExtractor != null) {
       // Now we're ready to process any unprocessed forms
       formExtractor.processForms();
@@ -280,6 +278,22 @@ public class JsoupHtmlLinkExtractor implements LinkExtractor {
     if (m_enableStats) {
       m_statsMgr.stopMeasurement();
     }
+  }
+
+  /**
+   * Create a new FormExtractor for use to extract generated form urls. Override
+   * to use a different HtmlFormExtractor.
+   * @param au the archival unit
+   * @param encoding  the character encoding for the input stream url
+   * @param cb  the callback used to report a found link
+   * @return  a new HtmlFormExtractor
+   */
+  protected HtmlFormExtractor getFormExtractor(final ArchivalUnit au,
+                                               final String encoding,
+                                               final Callback cb) {
+    return new HtmlFormExtractor(au, cb, encoding,
+                                          m_formRestrictors,
+                                          m_formGenerators);
   }
 
   /**
