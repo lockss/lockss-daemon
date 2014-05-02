@@ -37,18 +37,19 @@
     {  
       
       param[base_url] = http://library.web.cern.ch/library/Webzine/
+      comment[plugin] = Plugin needs review.
     
-      au < manifest ; 2000 ; High Energy Physics Libraries Webzine Issue 1 ; 1 >
-      au < manifest ; 2000 ; High Energy Physics Libraries Webzine Issue 2 ; 2 >
-      au < manifest ; 2001 ; High Energy Physics Libraries Webzine Issue 3 ; 3 >
-      au < manifest ; 2001 ; High Energy Physics Libraries Webzine Issue 4 ; 4 >
-      au < manifest ; 2001 ; High Energy Physics Libraries Webzine Issue 5 ; 5 >
-      au < manifest ; 2002 ; High Energy Physics Libraries Webzine Issue 6 ; 6 >
-      au < manifest ; 2003 ; High Energy Physics Libraries Webzine Issue 7 ; 7 >
-      au < manifest ; 2003 ; High Energy Physics Libraries Webzine Issue 8 ; 8 >
-      au < manifest ; 2004 ; High Energy Physics Libraries Webzine Issue 9 ; 9 >
-      au < manifest ; 2004 ; High Energy Physics Libraries Webzine Issue 10 ; 10 >
-      au < manifest ; 2005 ; High Energy Physics Libraries Webzine Issue 11 ; 11 >
+      au < doNotProcess ; 2000 ; High Energy Physics Libraries Webzine Issue 1 ; 1 >
+      au < doNotProcess ; 2000 ; High Energy Physics Libraries Webzine Issue 2 ; 2 >
+      au < doNotProcess ; 2001 ; High Energy Physics Libraries Webzine Issue 3 ; 3 >
+      au < doNotProcess ; 2001 ; High Energy Physics Libraries Webzine Issue 4 ; 4 >
+      au < doNotProcess ; 2001 ; High Energy Physics Libraries Webzine Issue 5 ; 5 >
+      au < doNotProcess ; 2002 ; High Energy Physics Libraries Webzine Issue 6 ; 6 >
+      au < doNotProcess ; 2003 ; High Energy Physics Libraries Webzine Issue 7 ; 7 >
+      au < doNotProcess ; 2003 ; High Energy Physics Libraries Webzine Issue 8 ; 8 >
+      au < doNotProcess ; 2004 ; High Energy Physics Libraries Webzine Issue 9 ; 9 >
+      au < doNotProcess ; 2004 ; High Energy Physics Libraries Webzine Issue 10 ; 10 >
+      au < doNotProcess ; 2005 ; High Energy Physics Libraries Webzine Issue 11 ; 11 >
       au < exists ; 2006 ; High Energy Physics Libraries Webzine Issue 12 ; 12 >
       au < exists ; 2006 ; High Energy Physics Libraries Webzine Issue 13 ; 13 >
       
