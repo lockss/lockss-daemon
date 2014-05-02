@@ -39,14 +39,26 @@
 
   {
     title <
+      name = Organic Farming
+    >
+
+      comment[issn] = missing
+      param[journal_id] = organicfarming
+
+      au < exists ; exists ; 2014 ; Journal of Human Security Volume 1 ; 1 ; 2014 >
+
+  }
+
+  {
+    title <
       name = Media and Communication
     >
     
       param[journal_id] = mediaandcommunication
       comment[issn] = missing
+      comment[publisher] = as of 2014 moved to another publisher
 
       au < manifest ; exists ; 2013 ; Media and Communication Volume 1 ; 1 ; 2013 >
-      au < exists ; exists ; 2014 ; Media and Communication Volume 2 ; 2 ; 2014 >
 
   }
 
@@ -57,9 +69,9 @@
 
       param[journal_id] = politicsandgovernance
       comment[issn] = missing
+      comment[publisher] = as of 2014 moved to another publisher
 
       au < manifest ; exists ; 2013 ; Politics and Governance Volume 1 ; 1 ; 2013 >
-      au < manifest ; exists ; 2014 ; Politics and Governance Volume 2 ; 2 ; 2014 >
 
   }
 
@@ -70,9 +82,9 @@
 
       param[journal_id] = socialinclusion
       comment[issn] = missing
+      comment[publisher] = as of 2014 moved to another publisher
 
       au < manifest ; exists ; 2013 ; Social Inclusion Volume 1 ; 1 ; 2013 >
-      au < exists ; exists ; 2014 ; Social Inclusion Volume 2 ; 2 ; 2014 >
 
   }
 }
