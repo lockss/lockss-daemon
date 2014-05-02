@@ -38579,7 +38579,7 @@ comment[mpj] = now published by Brill
         param[base_url] = http://tjx.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
         
-        comment[notReadyv90] = V90 has a dead link for the first issue. 2011-12-07
+        comment[doNotProcess_v90] = V90 has a dead link for the first issue. 2011-12-07
         
         au < manifest ; 1920 ; Theology Volume 1 ; 1 >
         au < manifest ; 1921 ; Theology Volume 2 ; 2 >
@@ -38670,7 +38670,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 1984 ; Theology Volume 87 ; 87 >
         au < manifest ; 1985 ; Theology Volume 88 ; 88 >
         au < manifest ; 1986 ; Theology Volume 89 ; 89 >
-        au < notReady ; 1987 ; Theology Volume 90 ; 90 >
+        au < doNotProcess ; 1987 ; Theology Volume 90 ; 90 >
         au < manifest ; 1988 ; Theology Volume 91 ; 91 >
         au < manifest ; 1989 ; Theology Volume 92 ; 92 >
         au < manifest ; 1990 ; Theology Volume 93 ; 93 >
