@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlFormExtractor.java,v 1.8 2014-04-23 22:42:59 clairegriffin Exp $
+ * $Id: HtmlFormExtractor.java,v 1.9 2014-05-02 07:21:41 clairegriffin Exp $
  */
 
 /*
@@ -456,6 +456,14 @@ public class HtmlFormExtractor {
 
     }
     return m_formElementLinkExtractor;
+  }
+
+  public void setFormExtractor(FormTagLinkExtractor formExtractor) {
+    m_formExtractor = formExtractor;
+  }
+
+  public void setTagsLinkExtractor(FormElementLinkExtractor tagExtractor) {
+    m_formElementLinkExtractor = tagExtractor;
   }
 
   /**
