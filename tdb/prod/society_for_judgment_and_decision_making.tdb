@@ -18,6 +18,8 @@
     
     comment[notReady_v7] = V7 403 Forbidden http://journal.sjdm.org/11/111202/data.dta
     
+    comment[doNotProcess] = plugin needs review
+    
     au < released ; 2006 ; Judgment and Decision Making Volume 1 ; 1 >
     au < released ; 2007 ; Judgment and Decision Making Volume 2 ; 2 >
     au < released ; 2008 ; Judgment and Decision Making Volume 3 ; 3 >
@@ -25,7 +27,7 @@
     au < released ; 2010 ; Judgment and Decision Making Volume 5 ; 5 >
     au < released ; 2011 ; Judgment and Decision Making Volume 6 ; 6 >
     au < released ; 2012 ; Judgment and Decision Making Volume 7 ; 7 >
-    au < manifest ; 2013 ; Judgment and Decision Making Volume 8 ; 8 >
+    au < doNotProcess ; 2013 ; Judgment and Decision Making Volume 8 ; 8 >
     au < expected ; 2014 ; Judgment and Decision Making Volume 9 ; 9 >
 
   }
