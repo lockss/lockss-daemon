@@ -1,5 +1,5 @@
 /*
- * $Id: ACMXmlSchemaHelper.java,v 1.3 2014-01-29 17:16:06 aishizaki Exp $
+ * $Id: ACMXmlSchemaHelper.java,v 1.4 2014-05-02 13:49:38 aishizaki Exp $
  */
 
 /*
@@ -44,6 +44,7 @@ import java.util.*;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import org.apache.commons.lang.StringUtils;
 
 /**
  *  A helper class that defines a schema for XML metadata extraction for
@@ -59,6 +60,104 @@ implements SourceXmlSchemaHelper {
   /* 
    *  ACM specific node evaluators to extract the information we want
    */
+  /**
+   *  Journal or Proceedings Title
+   *  <journal_rec>
+   *  <journal_name>ACM Journal of Computer Documentation (JCD)</journal_name>
+   *  OR
+   *  <proceeding_rec>
+   *  <acronym>NordiCHI '10</acronym>
+   *  <proc_desc>Proceedings of the 6th Nordic Conference</proc_desc>
+   *  <proc_title>Human-Computer Interaction</proc_title>
+   *  <proc_subtitle>Extending Boundaries</proc_subtitle>
+   *  from dl.acm.org: 
+   *  acronym: proc_desc on proc_title: proc_subtitle
+   *  
+   */  
+  static private final NodeValue ACM_JOURNAL_TITLE_VALUE = new NodeValue() {   
+    @Override
+    public String getValue(Node node) {
+      if (node == null) {
+        return null;
+      }
+      log.debug3("getValue of ACM journal/proceedings title");
+      String nodeName = node.getNodeName();
+      String title = null;
+
+      /* the incoming node will either be the journal_name or 
+       * catenated proceedings title
+       * 
+       */
+      if ("journal_name".equalsIgnoreCase(nodeName)) {
+        title = node.getTextContent();
+        return title;
+      } else if ("proceeding_rec".equalsIgnoreCase(nodeName)) {
+        String ptitle = null;
+        String pdesc = null;
+        String pacro = null;
+        String psubt = null;
+        NodeList childNodes = node.getChildNodes();
+        for (int m = 0; m < childNodes.getLength(); m++) {
+          Node infoNode = childNodes.item(m);
+          nodeName = infoNode.getNodeName();
+          if ("acronym".equalsIgnoreCase(nodeName)) {
+            pacro = infoNode.getTextContent();
+          } else if ("proc_desc".equalsIgnoreCase(nodeName)) {
+            pdesc = infoNode.getTextContent();
+          } else if ("proc_title".equalsIgnoreCase(nodeName)) {
+            ptitle = infoNode.getTextContent();
+          } else if ("proc_subtitle".equalsIgnoreCase(nodeName)) {
+            psubt = infoNode.getTextContent();
+          } else
+            continue;
+        }
+        // now construct the title from available pieces
+        title = makeProceedingsTitle(pacro, pdesc, ptitle, psubt);
+      }
+      return title;
+    }
+  };
+  
+  /* makeProceedingsTitle(
+   *  acro - ACM's acronym for the conference
+   *  desc - proceedings description
+   *  title - proceedings title
+   *  subtitle - proceedings subtitle)
+   * proc_acronym: proc_desc on proc_title: proc_subtitle
+   *  if all elements aren't there, put together something credible
+   */
+  public static String makeProceedingsTitle(String acro, String desc, String title, String subt) {
+    StringBuilder ptitle = new StringBuilder();
+    Boolean hasAcro = false;
+    Boolean hasDesc = false;
+
+    if (!(hasAcro = StringUtils.isEmpty(acro))) {
+      ptitle.append(acro);      
+    }
+    if (!(hasDesc = StringUtils.isEmpty(desc))) {
+      if (!hasAcro) {
+        ptitle.append(": ");
+      }
+      ptitle.append(desc);
+    }
+    if (!StringUtils.isEmpty(title)) {
+      if (!hasDesc) {
+        ptitle.append(" on ");
+      } else if (!hasAcro) {
+        ptitle.append(": ");
+      } 
+      ptitle.append(title);
+    }
+    if (!StringUtils.isEmpty(subt)) {
+      if (ptitle.length() > 0) {
+        ptitle.append(": ");
+      }
+      ptitle.append(subt);
+    }
+
+    return ptitle.toString();
+  }
+  
   /*
    * AUTHOR information example
    * NODE = <au>
@@ -154,8 +253,8 @@ implements SourceXmlSchemaHelper {
   private static final String ACM_eissn = "//eissn";
   private static final String ACM_journal_id = "//journal_code";
   // using ACM_journal_name for both proceeding and periodical name
-  private static final String ACM_journal_name = "//journal_name | //proc_desc";
-
+  //private static final String ACM_journal_name = "//journal_name | //proc_desc";
+  private static final String ACM_journal_name = "//journal_name | //proceeding_rec";
   /* vol, issue */
   private static final String ACM_issue = ".//issue";
   private static final String ACM_vol = ".//volume";
@@ -228,7 +327,8 @@ implements SourceXmlSchemaHelper {
 
     // periodical + proceedings
     // proceeding_id = either journal_name or proceeding description
-    ACM_globalMap.put(ACM_journal_name, XmlDomMetadataExtractor.TEXT_VALUE);
+    //ACM_globalMap.put(ACM_journal_name, XmlDomMetadataExtractor.TEXT_VALUE);
+    ACM_globalMap.put(ACM_journal_name, ACM_JOURNAL_TITLE_VALUE);
     ACM_globalMap.put(ACM_publisher_name, XmlDomMetadataExtractor.TEXT_VALUE); 
     ACM_globalMap.put(ACM_fmatter, XmlDomMetadataExtractor.TEXT_VALUE);
     ACM_globalMap.put(ACM_bmatter, XmlDomMetadataExtractor.TEXT_VALUE);

@@ -1,4 +1,4 @@
-/* $Id: TestACMSourceXmlMetadataExtractorHelper.java,v 1.6 2014-02-14 20:01:08 alexandraohlson Exp $
+/* $Id: TestACMSourceXmlMetadataExtractorHelper.java,v 1.7 2014-05-02 13:49:38 aishizaki Exp $
 
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -75,10 +75,21 @@ public class TestACMSourceXmlMetadataExtractorHelper
   private static final String BASIC_CONTENT_FILE_NAME = "test_jats1.xml";
   final static String ARTICLE_BASE = BASE_URL + "8aug2010/TEST-TEST00/";
   final static String pdfUrl = "12-authorname.pdf";
+  //final static String htmlUrlinMetadata = "2065056\111110_f_lastname.html";
   final static String htmlUrlinMetadata = "2065056\111110_f_lastname.html";
   final static String htmlUrl = "2065056/111110_f_lastname.html";
   final static String badpdfUrl = "8aug2010/TEST-BADTEST00/DummyMetadataTest.pdf";
   final static String GOOD_JOURNAL_NAME = "Journal Name";
+  final static String GOOD_PROC_ACRONYM = "ACRONYM";
+  final static String GOOD_PROC_DESC = "Proceedings Description";
+  final static String GOOD_PROC_TITLE = "Proceedings Title";
+  final static String GOOD_PROC_SUBTITLE = "Proceedings Subtitle";
+  final static String GOOD_PROCEEDINGS_TITLE = 
+    ACMXmlSchemaHelper.makeProceedingsTitle(
+      GOOD_PROC_ACRONYM, 
+      GOOD_PROC_DESC, 
+      GOOD_PROC_TITLE, 
+      GOOD_PROC_SUBTITLE);
   final static String GOOD_JOURNAL_ID = "J123";
   final static String GOOD_ARTICLE_ID = "2222222";
   final static String GOOD_ISSN = "0000-0000";
@@ -242,8 +253,10 @@ public class TestACMSourceXmlMetadataExtractorHelper
     "<proceeding ver=\"4.0\" ts=\"12/22/2008\">"+
     "<proceeding_rec>"+
     "<proc_id>"+GOOD_JOURNAL_ID+"</proc_id>"+
-    "<acronym>"+GOOD_JOURNAL_CODE+"</acronym>"+
-    "<proc_desc>"+GOOD_JOURNAL_NAME+"</proc_desc>"+
+    "<acronym>"+GOOD_PROC_ACRONYM+"</acronym>"+
+    "<proc_desc>"+GOOD_PROC_DESC+"</proc_desc>"+
+    "<proc_title>"+GOOD_PROC_TITLE+"</proc_title>"+
+    "<proc_subtitle>"+GOOD_PROC_SUBTITLE+"</proc_subtitle>"+
     "<journal_abbr>Journal Abbr</journal_abbr>"+
     "<isbn>"+GOOD_ISBN+"</isbn>"+
     "<language>"+GOOD_LANGUAGE+"</language>"+
@@ -418,7 +431,7 @@ public class TestACMSourceXmlMetadataExtractorHelper
       "<proceeding ver=\"4.0\" ts=\"12/22/2008\">"+
       "<proceeding_rec>"+
       "<proc_id>"+GOOD_JOURNAL_ID+"</proc_id>"+
-      "<acronym>"+GOOD_JOURNAL_CODE+"</acronym>"+
+      "<acronym>"+GOOD_PROC_ACRONYM+"</acronym>"+
       "<proc_desc>"+NAME_WITH_AMPER+"</proc_desc>"+
       "<journal_abbr>Journal Abbr</journal_abbr>"+
       "<isbn>"+GOOD_ISBN+"</isbn>"+
@@ -746,7 +759,9 @@ public class TestACMSourceXmlMetadataExtractorHelper
       //assertEquals(HARDWIRED_PUBLISHER, md.get(MetadataField.FIELD_PUBLISHER));
       assertEquals(GOOD_TITLE, md.get(MetadataField.FIELD_ARTICLE_TITLE));
       //use FIELD_JOURNAL_TITLE for content5/6 until they adopt the latest daemon
-      assertEquals(GOOD_JOURNAL_NAME, md.get(MetadataField.FIELD_JOURNAL_TITLE));
+log.info("1: "+GOOD_PROCEEDINGS_TITLE);
+log.info("2: "+md.get(MetadataField.FIELD_JOURNAL_TITLE));
+      assertEquals(GOOD_PROCEEDINGS_TITLE, md.get(MetadataField.FIELD_JOURNAL_TITLE));
       //assertEquals(GOOD_JOURNAL_NAME, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
       assertEquals(GOOD_ARTICLE_ID, md.get(MetadataField.FIELD_PROPRIETARY_IDENTIFIER));
       assertEquals(goodAuthors.toString(), md.getList(MetadataField.FIELD_AUTHOR).toString());
@@ -827,6 +842,34 @@ public class TestACMSourceXmlMetadataExtractorHelper
       IOUtil.safeClose(file_input);
     }
 
+  }
+  
+  public void testProceedingsTitles() throws Exception {
+    String acro = "ABC";
+    String desc = "1st Workshop";
+    String title = "Testing Titles";
+    String subt = "Subtitle, too";
+    List<String> resultsList = new ArrayList<String>();
+    
+    StringBuilder str = new StringBuilder();
+    resultsList.add(ACMXmlSchemaHelper.makeProceedingsTitle(acro, desc, title, subt));
+    resultsList.add(ACMXmlSchemaHelper.makeProceedingsTitle(null, desc, title, subt));
+    resultsList.add(ACMXmlSchemaHelper.makeProceedingsTitle(acro, null, title, subt));
+    resultsList.add(ACMXmlSchemaHelper.makeProceedingsTitle(acro, desc, null, null));
+    resultsList.add(ACMXmlSchemaHelper.makeProceedingsTitle(null, null, title, subt));
+    resultsList.add(ACMXmlSchemaHelper.makeProceedingsTitle(acro, null, null, subt));
+    resultsList.add(ACMXmlSchemaHelper.makeProceedingsTitle(acro, desc, null, null));
+    resultsList.add(ACMXmlSchemaHelper.makeProceedingsTitle(null, desc, null, subt));
+    resultsList.add(ACMXmlSchemaHelper.makeProceedingsTitle(null, desc, title, null));
+    resultsList.add(ACMXmlSchemaHelper.makeProceedingsTitle(acro, null, title, null));
+    resultsList.add(ACMXmlSchemaHelper.makeProceedingsTitle(null, null, null, subt));
+    resultsList.add(ACMXmlSchemaHelper.makeProceedingsTitle(acro, null, null, null));
+    resultsList.add(ACMXmlSchemaHelper.makeProceedingsTitle(null, desc, null, null));
+    resultsList.add(ACMXmlSchemaHelper.makeProceedingsTitle(null, null, title, null));
+    resultsList.add(ACMXmlSchemaHelper.makeProceedingsTitle(acro, null, null, null));
+    resultsList.add(ACMXmlSchemaHelper.makeProceedingsTitle(null, null, null, null));
+    assertNotEmpty(resultsList);
+    
   }
   
 }
