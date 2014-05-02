@@ -9,6 +9,7 @@
   implicit < status ; year ; isbn ; eisbn ; name ; param[eisbn] >
   
   comment[9781587294488] = hash errors for pdfs like http://muse.jhu.edu/books/9781587294488/9781587294488-1.pdf
+  comment[doNotProcess] = Publisher moving to new platform.
   
   {
 
@@ -918,7 +919,7 @@
       au < released ; 2003 ; 9780472089062 ; 9780472024414 ; Lewd and Notorious: Female Transgression in the Eighteenth Century ; 9780472024414 >
       au < released ; 2003 ; 9780801887505 ; 9781421402758 ; Manufacturing Revolution: The Intellectual Origins of Early American Industry ; 9781421402758 >
       au < released ; 2003 ; 9781578066131 ; 9781604730517 ; Mass Media and the Shaping of American Feminism, 1963-1975 ; 9781604730517 >
-      au < notReady ; 2003 ; 9780877458647 ; 9781587294488 ; Millennial Ecuador: Critical Essays on Cultural Transformations and Social Dynamics ; 9781587294488 >
+      au < doNotProcess ; 2003 ; 9780877458647 ; 9781587294488 ; Millennial Ecuador: Critical Essays on Cultural Transformations and Social Dynamics ; 9781587294488 >
       au < released ; 2003 ; 9780871545305 ; 9781610443487 ; Muslims in the United States: The State of Research ; 9781610443487 >
       au < released ; 2003 ;  ; 9780803203327 ; Myth and History in the Creation of Yellowstone National Park ; 9780803203327 >
       au < released ; 2003 ; 9780937058688 ; 9781935978374 ; Naked Before God: Uncovering the Body in Anglo-Saxon England ; 9781935978374 >
@@ -1226,7 +1227,7 @@
       au < released ; 2005 ; 9781578067855 ; 9781617030680 ; Can Anything Beat White?: A Black Family's Letters ; 9781617030680 >
       au < released ; 2005 ; 9780292709287 ; 9780292796904 ; Cañar: A Year in the Highlands of Ecuador ; 9780292796904 >
       au < released ; 2005 ; 9780813536866 ; 9780813537917 ; Cash For Your Trash: Scrap Recycling in America ; 9780813537917 >
-      au < notReady ; 2005 ;  ; 9781587294235 ; Central Standard: A Time, a Place, a Family ; 9781587294235 >
+      au < doNotProcess ; 2005 ;  ; 9781587294235 ; Central Standard: A Time, a Place, a Family ; 9781587294235 >
       au < released ; 2005 ; 9780889204744 ; 9780889209121 ; Children's Health Issues in Historical Perspective ; 9780889209121 >
       au < released ; 2005 ; 9780791463192 ; 9780791483923 ; Chinese Discourses on the Peasant, 1900-1949 ; 9780791483923 >
       au < released ; 2005 ; 9780820326573 ; 9780820343969 ; Civil War Time: Temporality and Identity in America, 1861-1865 ; 9780820343969 >
@@ -1239,7 +1240,7 @@
       au < released ; 2005 ;  ; 9780803204942 ; Creeks and Southerners: Biculturalism on the Early American Frontier ; 9780803204942 >
       au < released ; 2005 ; 9780824828097 ; 9780824862039 ; Crisis in North Korea ; 9780824862039 >
       au < released ; 2005 ; 9780253346476 ; 9780253111487 ; Cross on the Star of David: The Christian World in Israel's Foreign Policy, 1948-1967 ; 9780253111487 >
-      au < notReady ; 2005 ;  ; 9781587294259 ; Currency of the Heart: A Year of Investing, Death, Work, and Coins ; 9781587294259 >
+      au < doNotProcess ; 2005 ;  ; 9781587294259 ; Currency of the Heart: A Year of Investing, Death, Work, and Coins ; 9781587294259 >
       au < released ; 2005 ; 9780874176193 ; 9780874176537 ; Cutting The Wire: Gaming Prohibition And The Internet ; 9780874176537 >
       au < released ; 2005 ; 9781585444724 ; 9781603446082 ; Dat: Tackling Life and the NFL ; 9781603446082 >
       au < released ; 2005 ; 9781563682773 ; 9781563683336 ; Deaf Daughter, Hearing Father ; 9781563683336 >
@@ -1255,7 +1256,7 @@
       au < released ; 2005 ; 9780791460931 ; 9780791485064 ; Exquisite Rebel: The Essays of Voltairine de Cleyre -- Anarchist, Feminist, Genius ; 9780791485064 >
       au < released ; 2005 ;  ; 9780803204782 ; False Mystics: Deviant Orthodoxy in Colonial Mexico ; 9780803204782 >
       au < released ; 2005 ; 9780253346612 ; 9780253111548 ; Farmers and the State in Colonial Kano: Land Tenure and the Legal Imagination ; 9780253111548 >
-      au < notReady ; 2005 ;  ; 9781587294426 ; Fauna and Flora, Earth and Sky: Brushes with Nature's Wisdom ; 9781587294426 >
+      au < doNotProcess ; 2005 ;  ; 9781587294426 ; Fauna and Flora, Earth and Sky: Brushes with Nature's Wisdom ; 9781587294426 >
       au < released ; 2005 ; 9780826336491 ; 9780826336507 ; Feast of Souls: Indians and Spaniards in the Seventeenth-Century Missions of Florida and New Mexico ; 9780826336507 >
       au < released ; 2005 ; 9780814727300 ; 9780814728390 ; Feeling Italian: The Art of Ethnicity in America ; 9780814728390 >
       au < released ; 2005 ; 9780826514943 ; 9780826591982 ; Felon for Peace: The Memoir of a Vietnam-Era Draft Resister ; 9780826591982 >
@@ -1263,7 +1264,7 @@
       au < released ; 2005 ; 9780823224685 ; 9780823247851 ; First among Equals: Abraham Lincoln's Reputation During His Administration ; 9780823247851 >
       au < released ; 2005 ;  ; 9780803205611 ; Flood Stage and Rising ; 9780803205611 >
       au < released ; 2005 ; 9780889204669 ; 9780889209169 ; Florence Nightingale on Women, Medicine, Midwifery and Prostitution: Collected Works of Florence Nightingale, Volume 8 ; 9780889209169 >
-      au < notReady ; 2005 ;  ; 9781587294129 ; From Beacon Hill to the Crystal Palace: The 1851 Travel Diary of a Working-Class Woman ; 9781587294129 >
+      au < doNotProcess ; 2005 ;  ; 9781587294129 ; From Beacon Hill to the Crystal Palace: The 1851 Travel Diary of a Working-Class Woman ; 9781587294129 >
       au < released ; 2005 ; 9781585443963 ; 9781603445931 ; From Ethnic Conflict to Stillborn Reform: The Former Soviet Union and Yugoslavia ; 9781603445931 >
       au < released ; 2005 ; 9780791464052 ; 9780791483510 ; Gandhi's Pilgrimage of Faith: From Darkness to Light ; 9780791483510 >
       au < released ; 2005 ; 9780292705432 ; 9780292797307 ; Gender and the Boundaries of Dress in Contemporary Peru ; 9780292797307 >
@@ -1272,7 +1273,7 @@
       au < released ; 2005 ; 9780253345899 ; 9780253002532 ; Governing Soviet Journalism: The Press and the Socialist Person after Stalin ; 9780253002532 >
       au < released ; 2005 ; 9781585444885 ; 9781603445504 ; Greatest Generation Comes Home: The Veteran in American Society ; 9781603445504 >
       au < released ; 2005 ; 9780814782842 ; 9780814784396 ; Groundwork: Local Black Freedom Movements in America ; 9780814784396 >
-      au < notReady ; 2005 ;  ; 9781587294150 ; Growing Up with the Town: Family and Community on the Great Plains ; 9781587294150 >
+      au < doNotProcess ; 2005 ;  ; 9781587294150 ; Growing Up with the Town: Family and Community on the Great Plains ; 9781587294150 >
       au < released ; 2005 ; 9780824828851 ; 9780824862749 ; Handmade Culture: Raku Potters, Patrons, and Tea Practitioners in Japan ; 9780824862749 >
       au < released ; 2005 ; 9780826514929 ; 9780826591975 ; Hierarchy, Commerce, and Fraud in Bourbon Spanish America: A Postal Inspector's Exposé ; 9780826591975 >
       au < released ; 2005 ; 9780299214104 ; 9780299214135 ; Historical Evidence and Argument ; 9780299214135 >
@@ -1288,7 +1289,7 @@
       au < released ; 2005 ; 9780812219050 ; 9780812203301 ; Incest and Agency in Elizabeth's England ; 9780812203301 >
       au < released ; 2005 ; 9780791465059 ; 9780791483060 ; International Self, The: Psychoanalysis and the Search for Israeli-Palestinian Peace ; 9780791483060 >
       au < released ; 2005 ; 9781585443864 ; 9781603445979 ; Into the Wild Blue Yonder: My Life in the Air Force ; 9781603445979 >
-      au < notReady ; 2005 ; 9780871546623 ; 9781610444453 ; Italians Then, Mexicans Now: Immigrant Origins and the Second-Generation Progress, 1890-2000 ; 9781610444453 >
+      au < doNotProcess ; 2005 ; 9780871546623 ; 9781610444453 ; Italians Then, Mexicans Now: Immigrant Origins and the Second-Generation Progress, 1890-2000 ; 9781610444453 >
       au < released ; 2005 ; 9780791464076 ; 9780791483497 ; Jakub's World: A Boy's Story of Loss and Survival in the Holocaust ; 9780791483497 >
       au < released ; 2005 ; 9780824828295 ; 9780824863142 ; Japan's Colonization of Korea: Discourse and Power ; 9780824863142 >
       au < released ; 2005 ; 9780814747803 ; 9780814748657 ; Jewish Girls Coming of Age in America, 1860-1920 ; 9780814748657 >
@@ -1558,7 +1559,7 @@
       au < released ; 2006 ; 9780253347589 ; 9780253112378 ; Negotiating with the Enemy: U.S.-China Talks during the Cold War, 1949-1972 ; 9780253112378 >
       au < released ; 2006 ; 9780791466797 ; 9780791482063 ; Nervous Conditions: Science and the Body Politic in Early Industrial Britain ; 9780791482063 >
       au < released ; 2006 ; 9780801884719 ; 9780801889226 ; Networked Machinists: High-Technology Industries in Antebellum America ; 9780801889226 >
-      au < notReady ; 2006 ; 9780871549891 ; 9781610445719 ; New Destinations: Mexican Immigration in the United States ; 9781610445719 >
+      au < doNotProcess ; 2006 ; 9780871549891 ; 9781610445719 ; New Destinations: Mexican Immigration in the United States ; 9781610445719 >
       au < released ; 2006 ; 9780299210847 ; 9780299210830 ; Nightmare's Fairy Tale: A Young Refugee's Home Fronts, 1938-1948 ; 9780299210830 >
       au < released ; 2006 ; 9780889204980 ; 9781554581344 ; No Insignificant Part: The Rhodesia Native Regiment and the East Africa Campaign of the First World War ; 9781554581344 >
       au < released ; 2006 ; 9781931968270 ; 9781935603740 ; Notorious Murders, Black Lanterns, and Moveable Goods: Transformation of Edinburgh's Underworld in the Early Nineteeth Century ; 9781935603740 >
@@ -1644,7 +1645,7 @@
       au < released ; 2006 ; 9780821416792 ; 9780821442098 ; The Wake of Wellington: Englishness in 1852 ; 9780821442098 >
       au < released ; 2006 ; 9780801884276 ; 9780801889448 ; Thinking with Objects: The Transformation of Mechanics in the Seventeenth Century ; 9780801889448 >
       au < released ; 2006 ; 9780813124032 ; 9780813171425 ; Through Mobility We Conquer: The Mechanization of U.S. Cavalry ; 9780813171425 >
-      au < notReady ; 2006 ; 9781587294730 ; 9781587297298 ; Transatlantic Stowe: Harriet Beecher Stowe and European Culture ; 9781587297298 >
+      au < doNotProcess ; 2006 ; 9781587294730 ; 9781587297298 ; Transatlantic Stowe: Harriet Beecher Stowe and European Culture ; 9781587297298 >
       au < released ; 2006 ; 9780791468012 ; 9780791481585 ; Transformation of Plantation Politics, The: Black Politics, Concentrated Poverty, and Social Capital in the Mississippi Delta ; 9780791481585 >
       au < released ; 2006 ; 9781585444786 ; 9781603445627 ; Traveling between Worlds: German-American Encounters ; 9781603445627 >
       au < released ; 2006 ; 9780253347954 ; 9780253112439 ; Troubled Hero: A Medal of Honor, Vietnam, and the War at Home ; 9780253112439 >
@@ -1665,7 +1666,7 @@
       au < released ; 2006 ; 9780299217846 ; 9780299217839 ; Women in Print: Essays on the Print Culture of American Women from the Nineteenth and Twentieth Centuries ; 9780299217839 >
       au < released ; 2006 ; 9780299213848 ; 9780299213831 ; Women's Organizations and Democracy in South Africa: Contesting Authority ; 9780299213831 >
       au < released ; 2006 ; 9780814719848 ; 9780814785454 ; Woodrow Wilson: Essential Writings and Speeches of the Scholar-President ; 9780814785454 >
-      au < notReady ; 2006 ; 9781587295096 ; 9781587297304 ; Writing the Trail: Five Women's Frontier Narratives ; 9781587297304 >
+      au < doNotProcess ; 2006 ; 9781587295096 ; 9781587297304 ; Writing the Trail: Five Women's Frontier Narratives ; 9781587297304 >
       au < released ; 2006 ; 9781585444878 ; 9781603445672 ; Yankee Invasion of Texas ; 9781603445672 >
       au < released ; 2007 ; 9781554580095 ; 9781554580873 ; 163256: A Memoir of Resistance ; 9781554580873 >
       au < released ; 2007 ; 9780814333433 ; 9780814335536 ; A Badger Boy in Blue: The Civil War Letters of Chauncey H. Cooke ; 9780814335536 >
@@ -1737,7 +1738,7 @@
       au < released ; 2007 ; 9780826340665 ; 9780826340689 ; Discarded Pages: Araceli Cab Cumí, Maya Poet and Politician ; 9780826340689 >
       au < released ; 2007 ; 9780871546449 ; 9781610444194 ; Disease Prevention as Social Change: The State, Society, and Public Health in the United States, France, Great Britain, and Canada ; 9781610444194 >
       au < released ; 2007 ; 9780824829940 ; 9780824862251 ; Donors of Longmen: Faith, Politics, and Patronage in Medieval Chinese Buddhist Sculpture ; 9780824862251 >
-      au < notReady ; 2007 ; 9780877459965 ; 9781587297168 ; Dream Not of Other Worlds: Teaching in a Segregated Elementary School,1970 ; 9781587297168 >
+      au < doNotProcess ; 2007 ; 9780877459965 ; 9781587297168 ; Dream Not of Other Worlds: Teaching in a Segregated Elementary School,1970 ; 9781587297168 >
       au < released ; 2007 ; 9780253348616 ; 9780253116918 ; Dying in the Law of Moses: Crypto-Jewish Martyrdom in the Iberian World ; 9780253116918 >
       au < released ; 2007 ; 9780817315788 ; 9780817380328 ; Eagle Days: A Marine Legal/Infantry Officer in Vietnam ; 9780817380328 >
       au < released ; 2007 ; 9780824831813 ; 9780824862275 ; East-West Montage: Reflections on Asian Bodies in Diaspora ; 9780824862275 >
@@ -1793,7 +1794,7 @@
       au < released ; 2007 ; 9780268028862 ; 9780268079642 ; Ireland Now: Tales of Change from the Global Island ; 9780268079642 >
       au < released ; 2007 ; 9780812220100 ; 9780812200973 ; Irish Politics and Social Conflict in the Age of the American Revolution ; 9780812200973 >
       au < released ; 2007 ; 9780873515818 ; 9780873516747 ; Italian Voices: Making Minnesota Our Home ; 9780873516747 >
-      au < notReady ; 2007 ; 9780877459996 ; 9781587297205 ; James Van Allen: The First Eight Billion Miles ; 9781587297205 >
+      au < doNotProcess ; 2007 ; 9780877459996 ; 9781587297205 ; James Van Allen: The First Eight Billion Miles ; 9781587297205 >
       au < released ; 2007 ;  ; 9780803205635 ; Jean-Paul Sartre and The Jewish Question: Anti-antisemitism and the Politics of the French Intellectual ; 9780803205635 >
       au < released ; 2007 ;  ; 9780803205659 ; Jeb Stuart and the Confederate Defeat at Gettysburg ; 9780803205659 >
       au < released ; 2007 ; 9780814707203 ; 9780814707739 ; Jewish Women Pioneering the Frontier Trail: A History in the American West ; 9780814707739 >
@@ -1832,7 +1833,7 @@
       au < released ; 2007 ; 9780791472156 ; 9780791479520 ; Of Irony and Empire: Islam, the West, and the Transcultural Invention of Africa ; 9780791479520 >
       au < released ; 2007 ; 9780814775837 ; 9780814777497 ; Once You Go Black: Choice, Desire, and the Black American Intellectual ; 9780814777497 >
       au < released ; 2007 ; 9780889205055 ; 9781554581290 ; Onward to the Olympics: Historical Perspectives on the Olympic Games ; 9781554581290 >
-      au < notReady ; 2007 ; 9781587296161 ; 9781587297502 ; Oppenheimer Is Watching Me: A Memoir ; 9781587297502 >
+      au < doNotProcess ; 2007 ; 9781587296161 ; 9781587297502 ; Oppenheimer Is Watching Me: A Memoir ; 9781587297502 >
       au < released ; 2007 ; 9780791469576 ; 9780791480762 ; Paradoxes of Nationalism, The: The French Revolution and Its Meaning for Contemporary Nation Building ; 9780791480762 >
       au < released ; 2007 ; 9780268025915 ; 9780268077655 ; Pastoral Quechua: The History of Christian Translation in Colonial Peru, 1550-1650 ; 9780268077655 >
       au < released ; 2007 ; 9780824830731 ; 9780824863906 ; Pathways to the Present ; 9780824863906 >
@@ -1903,7 +1904,7 @@
       au < released ; 2007 ; 9780812219968 ; 9780812200546 ; The History of the Counts of Guines and Lords of Ardres ; 9780812200546 >
       au < released ; 2007 ; 9781421400433 ; 9780801892318 ; The Horse in the City: Living Machines in the Nineteenth Century ; 9780801892318 >
       au < released ; 2007 ;  ; 9780803205642 ; The Life of Jews in Poland before the Holocaust: A Memoir ; 9780803205642 >
-      au < notReady ; 2007 ; 9780299213244 ; 9780299213237 ; The Man Who Would Marry Susan Sontag: And Other Intimate Literary Portraits of the Bohemian Era ; 9780299213237 >
+      au < doNotProcess ; 2007 ; 9780299213244 ; 9780299213237 ; The Man Who Would Marry Susan Sontag: And Other Intimate Literary Portraits of the Bohemian Era ; 9780299213237 >
       au < released ; 2007 ; 9780253347916 ; 9780253112170 ; The Mellah of Marrakesh: Jewish and Muslim Space in Morocco's Red City ; 9780253112170 >
       au < released ; 2007 ; 9780253349453 ; 9780253116871 ; The Nazi Ancestral Proof: Genealogy, Racial Science, and the Final Solution ; 9780253116871 >
       au < released ; 2007 ; 9780874176988 ; 9780874177121 ; The Opium Debate and Chinese Exclusion Laws in the Nineteenth-Century American West ; 9780874177121 >
@@ -1916,7 +1917,7 @@
       au < released ; 2007 ; 9780814748015 ; 9780814790113 ; The Shtetl: New Evaluations ; 9780814790113 >
       au < released ; 2007 ;  ; 9780803206946 ; The Thirty Years' War and German Memory in the Nineteenth Century ; 9780803206946 >
       au < released ; 2007 ; 9781421404165 ; 9780801896477 ; The Treasure of the San Jos: Death at Sea in the War of the Spanish Succession ; 9780801896477 >
-      au < notReady ; 2007 ; 9780823226788 ; 9780823248612 ; The Value of Worthless Lives: Writing Italian American Immigrant Autobiographies ; 9780823248612 >
+      au < doNotProcess ; 2007 ; 9780823226788 ; 9780823248612 ; The Value of Worthless Lives: Writing Italian American Immigrant Autobiographies ; 9780823248612 >
       au < released ; 2007 ; 9780813124131 ; 9780813171586 ; The View from the Ground: Experiences of Civil War Soldiers ; 9780813171586 >
       au < released ; 2007 ; 9781554580002 ; 9781554580897 ; The Wartime Letters of Leslie and Cecil Frost, 1915-1919 ; 9781554580897 >
       au < released ; 2007 ; 9780801885891 ; 9781421404301 ; The World Map, 1300-1492: The Persistence of Tradition and Transformation ; 9781421404301 >
@@ -1985,14 +1986,14 @@
       au < released ; 2008 ; 9780813543062 ; 9780813545776 ; Blacks, Reds, and Russians: Sojourners in Search of the Soviet Promise ; 9780813545776 >
       au < released ; 2008 ;  ; 9781592137060 ; Blue Skies: A History of Cable Television ; 9781592137060 >
       au < released ; 2008 ; 9780826515988 ; 9780826592453 ; Bodies of Knowledge: The Medicalization of Reproduction in Greece ; 9780826592453 >
-      au < notReady ; 2008 ; 9780299229641 ; 9780299229634 ; Body Soviet: Propaganda, Hygiene, and the Revolutionary State ; 9780299229634 >
+      au < doNotProcess ; 2008 ; 9780299229641 ; 9780299229634 ; Body Soviet: Propaganda, Hygiene, and the Revolutionary State ; 9780299229634 >
       au < released ; 2008 ; 9781558496767 ; 9781613760734 ; Boycotts, Buses, and Passes: Black Women's Resistance in the U.S. South and South Africa ; 9781613760734 >
       au < released ; 2008 ; 9780292718562 ; 9780292793958 ; Brazil Imagined: 1500 to the Present ; 9780292793958 >
       au < released ; 2008 ; 9780813541822 ; 9780813543802 ; Breeding Contempt: The History of Coerced Sterilization in the United States ; 9780813543802 >
       au < released ; 2008 ; 9780826344274 ; 9780826344298 ; Buffalo Bill on Stage ; 9780826344298 >
       au < released ; 2008 ; 9780295988467 ; 9780295800394 ; Carl Maxey: a fighting life ; 9780295800394 >
       au < released ; 2008 ; 9781604730135 ; 9781604733198 ; Carole Landis: A Most Beautiful Girl ; 9781604733198 >
-      au < notReady ; 2008 ; 9780299223502 ; 9780299223533 ; Cataclysms: A History of the Twentieth Century from Europe's Edge ; 9780299223533 >
+      au < doNotProcess ; 2008 ; 9780299223502 ; 9780299223533 ; Cataclysms: A History of the Twentieth Century from Europe's Edge ; 9780299223533 >
       au < released ; 2008 ; 9780873389457 ; 9781612776019 ; Caution and Cooperation: The American Civil War in British-American Relations ; 9781612776019 >
       au < released ; 2008 ; 9781603440264 ; 9781603443876 ; Cemeteries of Ambivalent Desire: Unearthing Deep South Narratives from a Texas Graveyard ; 9781603443876 >
       au < released ; 2008 ; 9781931968539 ; 9781935603788 ; Chains of Opportunity: The University of Akron and the Emergence of The Polymer Age 1909-2007 ; 9781935603788 >
@@ -2044,7 +2045,7 @@
       au < released ; 2008 ;  ; 9780803217812 ; Give Me Eighty Men: Women and the Myth of the Fetterman Fight ; 9780803217812 >
       au < released ; 2008 ; 9780791475515 ; 9780791477731 ; Global Neighborhoods: Jewish Quarters in Paris, London, and Berlin ; 9780791477731 >
       au < released ; 2008 ; 9780801888250 ; 9781421401669 ; God – or Gorilla: Images of Evolution in the Jazz Age ; 9781421401669 >
-      au < notReady ; 2008 ; 9781603440387 ; 9781603444194 ; Gods of Diyala: Transfer of Command in Iraq ; 9781603444194 >
+      au < doNotProcess ; 2008 ; 9781603440387 ; 9781603444194 ; Gods of Diyala: Transfer of Command in Iraq ; 9781603444194 >
       au < released ; 2008 ;  ; 9780803217676 ; Good Neighbors, Bad Times: Echoes of My Father's German Village ; 9780803217676 >
       au < released ; 2008 ; 9780801889868 ; 9781421402031 ; Gustavus Vasa Fox of the Union Navy: A Biography ; 9781421402031 >
       au < released ; 2008 ; 9780824831196 ; 9780824862725 ; Haena: Through the Eyes of Ancestors ; 9780824862725 >
@@ -2070,7 +2071,7 @@
       au < released ; 2008 ; 9780809329090 ; 9780809386642 ; In Lincoln's Shadow: The 1908 Race Riot in Springfield, Illinois ; 9780809386642 >
       au < released ; 2008 ; 9780813543314 ; 9780813545141 ; In Sputnik's Shadow: The President's Science Advisory Committee and Cold War America ; 9780813545141 >
       au < released ; 2008 ; 9780821418079 ; 9780821442883 ; In the Balance of Power: Independent Black Politics and Third-Party Movements in the United States ; 9780821442883 >
-      au < notReady ; 2008 ; 9780271034539 ; 9780271053363 ; In the Name of Reason: Technocrats and Politics in Chile ; 9780271053363 >
+      au < doNotProcess ; 2008 ; 9780271034539 ; 9780271053363 ; In the Name of Reason: Technocrats and Politics in Chile ; 9780271053363 >
       au < released ; 2008 ; 9780253351210 ; 9780253003164 ; India in Africa, Africa in India: Indian Ocean Cosmopolitanisms ; 9780253003164 >
       au < released ; 2008 ; 9781603440592 ; 9781603444187 ; Inside the VC and the NVA: The Real Story of North Vietnam's Armed Forces ; 9781603444187 >
       au < released ; 2008 ; 9780801886966 ; 9781421402383 ; Intensely Human: The Health of the Black Soldier in the American Civil War ; 9781421402383 >
@@ -2078,7 +2079,7 @@
       au < released ; 2008 ; 9780870818868 ; 9781607320012 ; Invasion and Transformation: Interdisciplinary Perspectives on the Conquest of Mexico ; 9781607320012 >
       au < released ; 2008 ; 9780826343109 ; 9780826343123 ; Inventing the Fiesta City: Heritage and Carnival in San Antonio ; 9780826343123 >
       au < released ; 2008 ; 9780299223342 ; 9780299223335 ; Ireland's New Worlds: Immigrants, Politics, and Society in the United States and Australia, 1815-1922 ; 9780299223335 >
-      au < notReady ; 2008 ; 9781603440684 ; 9781603444002 ; It's a Long Way from Llano: The Journey of a Wildlife Biologist ; 9781603444002 >
+      au < doNotProcess ; 2008 ; 9781603440684 ; 9781603444002 ; It's a Long Way from Llano: The Journey of a Wildlife Biologist ; 9781603444002 >
       au < released ; 2008 ; 9780823229796 ; 9780823248049 ; Jack Toffey's War: A Son's Memoir ; 9780823248049 >
       au < released ; 2008 ; 9780873516136 ; 9780873516754 ; Jacob's Well: A Case for Rethinking Family History ; 9780873516754 >
       au < released ; 2008 ; 9781558496491 ; 9781613761090 ; James Jesus Angleton, the CIA, and the Craft of Counterintelligence ; 9781613761090 >
@@ -2182,7 +2183,7 @@
       au < released ; 2008 ;  ; 9780803220423 ; The Lakota Ghost Dance of 1890 ; 9780803220423 >
       au < released ; 2008 ; 9780292717541 ; 9780292794627 ; The Los Angeles Plaza: Sacred and Contested Space ; 9780292794627 >
       au < released ; 2008 ; 9780801886935 ; 9780801893308 ; The Mantra of Efficiency: From Waterwheel to Social Control ; 9780801893308 >
-      au < notReady ; 2008 ; 9780817316082 ; 9780817380373 ; The Metal Life Car: The Inventor, the Imposter, and the Business of Lifesaving ; 9780817380373 >
+      au < doNotProcess ; 2008 ; 9780817316082 ; 9780817380373 ; The Metal Life Car: The Inventor, the Imposter, and the Business of Lifesaving ; 9780817380373 >
       au < released ; 2008 ;  ; 9780803248168 ; The Nebraska-Kansas Act of 1854 ; 9780803248168 >
       au < released ; 2008 ;  ; 9781592135776 ; The Origins of Capitalism and the "Rise of the West" ; 9781592135776 >
       au < released ; 2008 ; 9781558496859 ; 9781613761571 ; The Other Side of Grief: The Home Front and the Aftermath in American Narratives of the Vietnam War ; 9781613761571 >
@@ -2332,7 +2333,7 @@
       au < released ; 2009 ; 9780801891106 ; 9781421403236 ; Deliver Me from Pain: Anesthesia and Birth in America ; 9781421403236 >
       au < released ; 2009 ;  ; 9781592139200 ; DES Daughters, Embodied Knowledge, and the Transformation of Women's Health Politics in the Late Twentieth Century ; 9781592139200 >
       au < released ; 2009 ; 9789622095878 ; 9789888052219 ; Disease, Colonialism, and the State: Malaria in Modern East Asian History ; 9789888052219 >
-      au < notReady ; 2009 ; 9780813927992 ; 9780813928180 ; Distant Revolutions: 1848 and the Challenge to American Exceptionalism ; 9780813928180 >
+      au < doNotProcess ; 2009 ; 9780813927992 ; 9780813928180 ; Distant Revolutions: 1848 and the Challenge to American Exceptionalism ; 9780813928180 >
       au < released ; 2009 ; 9780292719095 ; 9780292793729 ; Dividing the Isthmus: Central American Transnational Histories, Literatures, and Cultures ; 9780292793729 >
       au < released ; 2009 ; 9780809329106 ; 9780809386499 ; Double Duty in the Civil War: The Letters of Sailor and Soldier Edward W. Bacon ; 9780809386499 >
       au < released ; 2009 ; 9780870819414 ; 9780870819735 ; Dr. Chales David Spivak: A Jewish Immigrant and the American Tuberculosis Movement ; 9780870819735 >
@@ -2362,7 +2363,7 @@
       au < released ; 2009 ; 9780292719149 ; 9780292795235 ; Future: A Recent History ; 9780292795235 >
       au < released ; 2009 ; 9780809329441 ; 9780809386550 ; George Washington's Enforcers: Policing the Continental Army ; 9780809386550 >
       au < released ; 2009 ; 9780472050659 ; 9780472026548 ; Grassroots at the Gateway: Class Politics and Black Freedom Struggle in St. Louis, 1936-75 ; 9780472026548 >
-      au < notReady ; 2009 ; 9781603440967 ; 9781603443425 ; Guarding the Border: The Military Memoirs of the Ward Schrantz, 1912-1917 ; 9781603443425 >
+      au < doNotProcess ; 2009 ; 9781603440967 ; 9781603443425 ; Guarding the Border: The Military Memoirs of the Ward Schrantz, 1912-1917 ; 9781603443425 >
       au < released ; 2009 ; 9780873389495 ; 9781612776071 ; Guerrilla Daughter ; 9781612776071 >
       au < released ; 2009 ; 9780253318138 ; 9780253002884 ; Habits of Whiteness: A Pragmatist Reconstruction ; 9780253002884 >
       au < released ; 2009 ; 9781557535108 ; 9781612490762 ; Habsburg Lemberg: Architecture, Public Space, and Politics in the Galician Capital, 1772-1914 ; 9781612490762 >
@@ -2398,7 +2399,7 @@
       au < released ; 2009 ; 9782760306905 ; 9782760317925 ; La Rénovation de l'héritage démocratique: Entre fondation et refondation ; 9782760317925 >
       au < released ; 2009 ; 9780812241495 ; 9780812206098 ; Language and History in Ancient Greek Culture ; 9780812206098 >
       au < released ; 2009 ; 9780253353016 ; 9780253002891 ; Language, Emotion, and Politics in South India: The Making of a Mother Tongue ; 9780253002891 >
-      au < notReady ; 2009 ; 9781603441124 ; 9781603443517 ; Leadership of George Bush: An Insider's View of the Forty-first President ; 9781603443517 >
+      au < doNotProcess ; 2009 ; 9781603441124 ; 9781603443517 ; Leadership of George Bush: An Insider's View of the Forty-first President ; 9781603443517 >
       au < released ; 2009 ; 9780823230969 ; 9780823248100 ; Letters to Lee: From Pearl Harbor to the War's Final Mission ; 9780823248100 >
       au < released ; 2009 ;  ; 9780803224704 ; Lev Shternberg: Anthropologist, Russian Socialist, Jewish Activist ; 9780803224704 >
       au < released ; 2009 ; 9789622099494 ; 9789888052516 ; Light and Shade: Sketches from an Uncommon Life ; 9789888052516 >
@@ -2541,7 +2542,7 @@
       au < released ; 2009 ; 9780776607122 ; 9780776618791 ; The Forgotten Peace: Mediation at Niagara Falls ; 9780776618791 >
       au < released ; 2009 ; 9781421404042 ; 9780801897818 ; The Fragile Fabric of Union: Cotton, Federal Politics, and the Global Origins of the Civil War ; 9780801897818 >
       au < released ; 2009 ; 9780809328932 ; 9780809386543 ; The Gambler King of Clark Street: Micheal C. McDonald and the Rise of Chicago's Democratic Machine ; 9780809386543 >
-      au < notReady ; 2009 ; 9780813546834 ; 9780813548111 ; The Great Industrial War: Framing Class Conflict in the Media, 1865-1950 ; 9780813548111 >
+      au < doNotProcess ; 2009 ; 9780813546834 ; 9780813548111 ; The Great Industrial War: Framing Class Conflict in the Media, 1865-1950 ; 9780813548111 >
       au < released ; 2009 ; 9780824832827 ; 9780824837563 ; The Growth Idea: Purpose and Prosperity in Postwar Japan ; 9780824837563 >
       au < released ; 2009 ; 9781592139224 ; 9781592139231 ; The Historiography of Communism ; 9781592139231 >
       au < released ; 2009 ; 9780813545837 ; 9780813551180 ; The History of American Homeopathy: From Rational Medicine to Holistic Health Care ; 9780813551180 >
@@ -2590,7 +2591,7 @@
       au < released ; 2009 ; 9781604733709 ; 9781604731385 ; Thomas Jefferson on Wine ; 9781604731385 >
       au < released ; 2009 ; 9780813544311 ; 9780813546452 ; To Change the World: My Years in Cuba ; 9780813546452 >
       au < released ; 2009 ; 9780817353469 ; 9780817382902 ; To Command the Sky: The Battle for Air Superiority Over Germany, 1942-1944 ; 9780817382902 >
-      au < notReady ; 2009 ; 9781603441117 ; 9781603443746 ; To Get a Better School System: One Hundred Years of Education Reform in Texas ; 9781603443746 >
+      au < doNotProcess ; 2009 ; 9781603441117 ; 9781603443746 ; To Get a Better School System: One Hundred Years of Education Reform in Texas ; 9781603443746 >
       au < released ; 2009 ; 9789622099975 ; 9789888053629 ; To Serve and to Lead: A History of the Diocesan Boys' School in Hong Kong ; 9789888053629 >
       au < released ; 2009 ; 9780824831967 ; 9780824865238 ; Tonga: A New Bibliography ; 9780824865238 >
       au < released ; 2009 ; 9782760306943 ; 9782760317956 ; Tous les chemins mènent à Rome: Arts de vivre et de réussir à la cour pontificale au XVIe siècle ; 9782760317956 >
@@ -2609,7 +2610,7 @@
       au < released ; 2009 ; 9780292718883 ; 9780292793811 ; Vital Enemies: Slavery, Predation, and the Amerindian Political Economy of Life ; 9780292793811 >
       au < released ; 2009 ; 9781603441391 ; 9781603443791 ; Waiting: One Wife's Year of the Vietnam War ; 9781603443791 >
       au < released ; 2009 ; 9780814783139 ; 9780814733127 ; Want to Start a Revolution?: Radical Women in the Black Freedom Struggle ; 9780814733127 >
-      au < notReady ; 2009 ; 9780821418055 ; 9780821443248 ; Wanted – Correspondence: Women's Letters to a Union Soldier ; 9780821443248 >
+      au < doNotProcess ; 2009 ; 9780821418055 ; 9780821443248 ; Wanted – Correspondence: Women's Letters to a Union Soldier ; 9780821443248 >
       au < released ; 2009 ; 9780813544380 ; 9780813546469 ; War and Disease: Biomedical Research on Malaria in the Twentieth Century ; 9780813546469 >
       au < released ; 2009 ; 9781603441155 ; 9781603443807 ; War and the Environment: Military Destruction in the Modern Age ; 9781603443807 >
       au < released ; 2009 ; 9780896802704 ; 9780896804715 ; Wartime in Burma: A Diary, January to June 1942 ; 9780896804715 >
@@ -2655,7 +2656,7 @@
       au < released ; 2010 ; 9780809329731 ; 9780809386062 ; Mother Jones: The Miner's Angel ; 9780809386062 >
       au < released ; 2010 ; 9780822960805 ; 9780822973812 ; Nature in the New World: From Christopher Columbus to Gonzalo Fernández de Oviedo ; 9780822973812 >
       au < released ; 2010 ; 9780271037295 ; 9780271053493 ; Opening Windows onto Hidden Lives: Women, Country Life, and Early Rural Sociological Research ; 9780271053493 >
-      au < notReady ; 2010 ; 9781603441841 ; 9781603442510 ; Operation PLUM: The Ill-fated 27th Bombardment Group and the Fight for the Western Pacific ; 9781603442510 >
+      au < doNotProcess ; 2010 ; 9781603441841 ; 9781603442510 ; Operation PLUM: The Ill-fated 27th Bombardment Group and the Fight for the Western Pacific ; 9781603442510 >
       au < released ; 2010 ; 9780817356453 ; 9780817385224 ; Paths to a Middle Ground: The Diplomacy of Natchez, Boukfouka, Nogales, and San Fernando de las Barrancas, 1791-1795 ; 9780817385224 >
       au < released ; 2010 ;  ; 9780803226951 ; Picture This: World War I Posters and Visual Culture ; 9780803226951 >
       au < released ; 2010 ; 9780814722336 ; 9780814722824 ; Plague Ports: The Global Urban Impact of Bubonic Plague, 1894-1901 ; 9780814722824 >
