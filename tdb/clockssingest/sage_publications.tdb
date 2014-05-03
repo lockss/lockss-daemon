@@ -1312,7 +1312,7 @@
       au < finished ; crawling ; 2011 ; The American Journal of Sports Medicine Volume 39 ; 39 ; >
       au < zapped ; finished ; 2012 ; The American Journal of Sports Medicine Volume 40 ; 40 ; >
       au < exists ; exists ; 2013 ; The American Journal of Sports Medicine Volume 41 ; 41 ; >
-      au < expected ; exists ; 2014 ; The American Journal of Sports Medicine Volume 42 ; 42 ; >
+      au < manifest ; exists ; 2014 ; The American Journal of Sports Medicine Volume 42 ; 42 ; >
 
     }
 
@@ -2343,10 +2343,10 @@
       au < exists ; exists ; 2006 ; Annals of Pharmacotherapy Volume 40 ; 40 ; >
       au < exists ; exists ; 2007 ; Annals of Pharmacotherapy Volume 41 ; 41 ; >
       au < exists ; exists ; 2008 ; Annals of Pharmacotherapy Volume 42 ; 42 ; >
-      au < exists ; exists ; 2009 ; Annals of Pharmacotherapy Volume 43 ; 43 ; >
-      au < exists ; exists ; 2010 ; Annals of Pharmacotherapy Volume 44 ; 44 ; >
+      au < manifest ; exists ; 2009 ; Annals of Pharmacotherapy Volume 43 ; 43 ; >
+      au < manifest ; exists ; 2010 ; Annals of Pharmacotherapy Volume 44 ; 44 ; >
       au < exists ; exists ; 2011 ; Annals of Pharmacotherapy Volume 45 ; 45 ; >
-      au < exists ; exists ; 2012 ; Annals of Pharmacotherapy Volume 46 ; 46 ; >
+      au < manifest ; exists ; 2012 ; Annals of Pharmacotherapy Volume 46 ; 46 ; >
       au < manifest ; exists ; 2013 ; Annals of Pharmacotherapy Volume 47 ; 47 ; >
       au < manifest ; exists ; 2014 ; Annals of Pharmacotherapy Volume 48 ; 48 ; >
 
@@ -2365,7 +2365,7 @@
       param[base_url] = http://aor.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2014 ; Annals of Otology, Rhinology & Laryngology Volume 123 ; 123 ; >
+      au < manifest ; exists ; 2014 ; Annals of Otology, Rhinology & Laryngology Volume 123 ; 123 ; >
 
   }
 
@@ -3325,7 +3325,7 @@
         au < crawling ; exists ; 2011 ; The Bible Translator Volume 62 ; 62 >
         au < finished ; crawling ; 2012 ; The Bible Translator Volume 63 ; 63 >
         au < crawling ; exists ; 2013 ; The Bible Translator Volume 64 ; 64 >
-        au < expected ; exists ; 2014 ; The Bible Translator Volume 65 ; 65 >
+        au < manifest ; exists ; 2014 ; The Bible Translator Volume 65 ; 65 >
 
       }
 
@@ -3967,7 +3967,7 @@
       au < crawling ; exists ; 2013 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 119 ; 119 ; >
       au < crawling ; exists ; 2013 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 120 ; 120 ; >
       au < manifest ; exists ; 2014 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 121 ; 121 ; >
-      au < expected ; exists ; 2014 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 122 ; 122 ; >
+      au < manifest ; exists ; 2014 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 122 ; 122 ; >
       au < expected ; exists ; 2014 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 123 ; 123 ; >
       au < expected ; exists ; 2014 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 124 ; 124 ; >
 
@@ -4162,7 +4162,7 @@
       au < finished ; crawling ; 2011 ; Business Communication Quarterly Volume 74 ; 74 ; >
       au < zapped ; finished ; 2012 ; Business Communication Quarterly Volume 75 ; 75 ; >
       au < crawling ; exists ; 2013 ; Business Communication Quarterly Volume 76 ; 76 ; >
-      au < expected ; exists ; 2014 ; Business Communication Quarterly Volume 77 ; 77 ; >
+      au < manifest ; exists ; 2014 ; Business Communication Quarterly Volume 77 ; 77 ; >
 
     }
 
@@ -4272,7 +4272,7 @@
       au < finished ; crawling ; 2011 ; Canadian Journal of School Psychology Volume 26 ; 26 ; >
       au < finished ; crawling ; 2012 ; Canadian Journal of School Psychology Volume 27 ; 27 ; >
       au < crawling ; exists ; 2013 ; Canadian Journal of School Psychology Volume 28 ; 28 ; >
-      au < expected ; exists ; 2014 ; Canadian Journal of School Psychology Volume 29 ; 29 ; >
+      au < manifest ; exists ; 2014 ; Canadian Journal of School Psychology Volume 29 ; 29 ; >
 
     }
 
@@ -4441,7 +4441,7 @@
 
         au < finished ; crawling ; 2012 ; Career Development and Transition for Exceptional Individuals Volume 35 ; 35 ; >
         au < crawling ; exists ; 2013 ; Career Development and Transition for Exceptional Individuals Volume 36 ; 36 ; >
-        au < expected ; exists ; 2014 ; Career Development and Transition for Exceptional Individuals Volume 37 ; 37 ; >
+        au < manifest ; exists ; 2014 ; Career Development and Transition for Exceptional Individuals Volume 37 ; 37 ; >
 
       }
 
@@ -4633,7 +4633,7 @@
       au < finished ; crawling ; 2011 ; Child Maltreatment Volume 16 ; 16 ; >
       au < finished ; crawling ; 2012 ; Child Maltreatment Volume 17 ; 17 ; >
       au < crawling ; exists ; 2013 ; Child Maltreatment Volume 18 ; 18 ; >
-      au < expected ; exists ; 2014 ; Child Maltreatment Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2014 ; Child Maltreatment Volume 19 ; 19 ; >
 
     }
 
@@ -4738,7 +4738,7 @@
       au < finished ; crawling ; 2011 ; China Information Volume 25 ; 25 ; >
       au < finished ; crawling ; 2012 ; China Information Volume 26 ; 26 ; >
       au < crawling ; exists ; 2013 ; China Information Volume 27 ; 27 ; >
-      au < expected ; exists ; 2014 ; China Information Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2014 ; China Information Volume 28 ; 28 ; >
 
     }
 
@@ -4845,7 +4845,7 @@
       au < finished ; crawling ; 2011 ; Chronic Illness Volume 7 ; 7 ; >
       au < finished ; crawling ; 2012 ; Chronic Illness Volume 8 ; 8 ; >
       au < crawling ; exists ; 2013 ; Chronic Illness Volume 9 ; 9 ; >
-      au < expected ; exists ; 2014 ; Chronic Illness Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2014 ; Chronic Illness Volume 10 ; 10 ; >
 
     }
 
@@ -6835,7 +6835,7 @@
       au < finished ; crawling ; 2011 ; Criminal Justice Review Volume 36 ; 36 ; >
       au < finished ; crawling ; 2012 ; Criminal Justice Review Volume 37 ; 37 ; >
       au < crawling ; exists ; 2013 ; Criminal Justice Review Volume 38 ; 38 ; >
-      au < expected ; exists ; 2014 ; Criminal Justice Review Volume 39 ; 39 ; >
+      au < manifest ; exists ; 2014 ; Criminal Justice Review Volume 39 ; 39 ; >
 
     }
 
@@ -7239,7 +7239,7 @@
       au < finished ; crawling ; 2011 ; Cultural Dynamics Volume 23 ; 23 ; >
       au < zapped ; finished ; 2012 ; Cultural Dynamics Volume 24 ; 24 ; >
       au < crawling ; exists ; 2013 ; Cultural Dynamics Volume 25 ; 25 ; >
-      au < expected ; exists ; 2014 ; Cultural Dynamics Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2014 ; Cultural Dynamics Volume 26 ; 26 ; >
 
     }
 
@@ -7764,7 +7764,7 @@
       au < finished ; crawling ; 2011 ; Dialogues in Human Geography Volume 1 ; 1 ; >
       au < finished ; crawling ; 2012 ; Dialogues in Human Geography Volume 2 ; 2 ; >
       au < crawling ; exists ; 2013 ; Dialogues in Human Geography Volume 3 ; 3 ; >
-      au < expected ; exists ; 2014 ; Dialogues in Human Geography Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2014 ; Dialogues in Human Geography Volume 4 ; 4 ; >
 
     }
 
@@ -8886,7 +8886,7 @@
       au < finished ; crawling ; 2011 ; Electronic News Volume 5 ; 5 ; >
       au < finished ; crawling ; 2012 ; Electronic News Volume 6 ; 6 ; >
       au < crawling ; exists ; 2013 ; Electronic News Volume 7 ; 7 ; >
-      au < expected ; exists ; 2014 ; Electronic News Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2014 ; Electronic News Volume 8 ; 8 ; >
 
     }
 
@@ -9620,7 +9620,7 @@
       au < finished ; crawling ; 2011 ; European Journal of Industrial Relations Volume 17 ; 17 ; >
       au < finished ; crawling ; 2012 ; European Journal of Industrial Relations Volume 18 ; 18 ; >
       au < crawling ; exists ; 2013 ; European Journal of Industrial Relations Volume 19 ; 19 ; >
-      au < expected ; exists ; 2014 ; European Journal of Industrial Relations Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2014 ; European Journal of Industrial Relations Volume 20 ; 20 ; >
 
     }
 
@@ -9669,7 +9669,7 @@
       au < finished ; crawling ; 2011 ; European Journal of International Relations Volume 17 ; 17 ; >
       au < finished ; crawling ; 2012 ; European Journal of International Relations Volume 18 ; 18 ; >
       au < crawling ; exists ; 2013 ; European Journal of International Relations Volume 19 ; 19 ; >
-      au < expected ; exists ; 2014 ; European Journal of International Relations Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2014 ; European Journal of International Relations Volume 20 ; 20 ; >
 
     }
 
@@ -9731,7 +9731,7 @@
     au < exists ; exists ; 2010 ; European Journal of Probation Volume 2 ; 2 ; >
     au < exists ; exists ; 2011 ; European Journal of Probation Volume 3 ; 3 ; >
     au < exists ; exists ; 2012 ; European Journal of Probation Volume 4 ; 4 ; >
-    au < exists ; exists ; 2013 ; European Journal of Probation Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2013 ; European Journal of Probation Volume 5 ; 5 ; >
     au < manifest ; exists ; 2014 ; European Journal of Probation Volume 6 ; 6 ; >
 
   }
@@ -10167,20 +10167,20 @@
       param[base_url] = http://ecx.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2001 ; Exceptional Children Volume 67 ; 67 ; >
-      au < exists ; exists ; 2001-2002 ; Exceptional Children Volume 68 ; 68 ; >
-      au < exists ; exists ; 2003 ; Exceptional Children Volume 69 ; 69 ; >
-      au < exists ; exists ; 2004 ; Exceptional Children Volume 70 ; 70 ; >
-      au < exists ; exists ; 2004-2005 ; Exceptional Children Volume 71 ; 71 ; >
-      au < exists ; exists ; 2005-2006 ; Exceptional Children Volume 72 ; 72 ; >
-      au < exists ; exists ; 2006-2007 ; Exceptional Children Volume 73 ; 73 ; >
-      au < exists ; exists ; 2007-2008 ; Exceptional Children Volume 74 ; 74 ; >
-      au < exists ; exists ; 2009 ; Exceptional Children Volume 75 ; 75 ; >
-      au < exists ; exists ; 2010 ; Exceptional Children Volume 76 ; 76 ; >
-      au < exists ; exists ; 2011 ; Exceptional Children Volume 77 ; 77 ; >
-      au < exists ; exists ; 2012 ; Exceptional Children Volume 78 ; 78 ; >
+      au < manifest ; exists ; 2001 ; Exceptional Children Volume 67 ; 67 ; >
+      au < manifest ; exists ; 2001-2002 ; Exceptional Children Volume 68 ; 68 ; >
+      au < manifest ; exists ; 2003 ; Exceptional Children Volume 69 ; 69 ; >
+      au < manifest ; exists ; 2004 ; Exceptional Children Volume 70 ; 70 ; >
+      au < manifest ; exists ; 2004-2005 ; Exceptional Children Volume 71 ; 71 ; >
+      au < manifest ; exists ; 2005-2006 ; Exceptional Children Volume 72 ; 72 ; >
+      au < manifest ; exists ; 2006-2007 ; Exceptional Children Volume 73 ; 73 ; >
+      au < manifest ; exists ; 2007-2008 ; Exceptional Children Volume 74 ; 74 ; >
+      au < manifest ; exists ; 2009 ; Exceptional Children Volume 75 ; 75 ; >
+      au < manifest ; exists ; 2010 ; Exceptional Children Volume 76 ; 76 ; >
+      au < manifest ; exists ; 2011 ; Exceptional Children Volume 77 ; 77 ; >
+      au < manifest ; exists ; 2012 ; Exceptional Children Volume 78 ; 78 ; >
       au < doesNotExist ; doesNotExist ; 2013 ; Exceptional Children Volume 79 ; 79 ; >
-      au < exists ; exists ; 2014 ; Exceptional Children Volume 80 ; 80 ; >
+      au < manifest ; exists ; 2014 ; Exceptional Children Volume 80 ; 80 ; >
 
   }
 
@@ -11192,7 +11192,7 @@
       au < finished ; crawling ; 2011 ; Geriatric Orthopaedic Surgery & Rehabilitation Volume 2 ; 2 ; >
       au < finished ; crawling ; 2012 ; Geriatric Orthopaedic Surgery & Rehabilitation Volume 3 ; 3 ; >
       au < crawling ; exists ; 2013 ; Geriatric Orthopaedic Surgery & Rehabilitation Volume 4 ; 4 ; >
-      au < expected ; exists ; 2014 ; Geriatric Orthopaedic Surgery & Rehabilitation Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2014 ; Geriatric Orthopaedic Surgery & Rehabilitation Volume 5 ; 5 ; >
 
     }
 
@@ -11372,7 +11372,7 @@
       au < finished ; crawling ; 2011 ; Global Business Review Volume 12 ; 12 ; >
       au < finished ; crawling ; 2012 ; Global Business Review Volume 13 ; 13 ; >
       au < crawling ; exists ; 2013 ; Global Business Review Volume 14 ; 14 ; >
-      au < expected ; exists ; 2014 ; Global Business Review Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2014 ; Global Business Review Volume 15 ; 15 ; >
 
     }
 
@@ -11495,7 +11495,7 @@
       au < finished ; crawling ; 2011 ; Global Media and Communication Volume 7 ; 7 ; >
       au < finished ; crawling ; 2012 ; Global Media and Communication Volume 8 ; 8 ; >
       au < crawling ; exists ; 2013 ; Global Media and Communication Volume 9 ; 9 ; >
-      au < expected ; exists ; 2014 ; Global Media and Communication Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2014 ; Global Media and Communication Volume 10 ; 10 ; >
 
     }
 
@@ -11762,19 +11762,19 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://inq.sagepub.com/
 
-      au < exists ; exists ; 2001 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 38 ; 38 ; >
-      au < exists ; exists ; 2002 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 39 ; 39 ; >
-      au < exists ; exists ; 2003 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 40 ; 40 ; >
-      au < exists ; exists ; 2004 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 41 ; 41 ; >
-      au < exists ; exists ; 2005 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 42 ; 42 ; >
-      au < exists ; exists ; 2006 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 43 ; 43 ; >
-      au < exists ; exists ; 2007 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 44 ; 44 ; >
-      au < exists ; exists ; 2008 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 45 ; 45 ; >
-      au < exists ; exists ; 2009 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 46 ; 46 ; >
-      au < exists ; exists ; 2010 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 47 ; 47 ; >
-      au < exists ; exists ; 2011 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 48 ; 48 ; >
-      au < exists ; exists ; 2012 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 49 ; 49 ; >
-      au < exists ; exists ; 2013 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 50 ; 50 ; >
+      au < manifest ; exists ; 2001 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 38 ; 38 ; >
+      au < manifest ; exists ; 2002 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 39 ; 39 ; >
+      au < manifest ; exists ; 2003 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 40 ; 40 ; >
+      au < manifest ; exists ; 2004 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 41 ; 41 ; >
+      au < manifest ; exists ; 2005 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 42 ; 42 ; >
+      au < manifest ; exists ; 2006 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 43 ; 43 ; >
+      au < manifest ; exists ; 2007 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 44 ; 44 ; >
+      au < manifest ; exists ; 2008 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 45 ; 45 ; >
+      au < manifest ; exists ; 2009 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 46 ; 46 ; >
+      au < manifest ; exists ; 2010 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 47 ; 47 ; >
+      au < manifest ; exists ; 2011 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 48 ; 48 ; >
+      au < manifest ; exists ; 2012 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 49 ; 49 ; >
+      au < manifest ; exists ; 2013 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 50 ; 50 ; >
 
     }
 
@@ -12317,7 +12317,7 @@
       param[base_url] = http://hos.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2014 ; History of Science Volume 52 ; 52 ; >
+      au < manifest ; exists ; 2014 ; History of Science Volume 52 ; 52 ; >
 
   }
 
@@ -12989,7 +12989,7 @@
       au < finished ; crawling ; 2011 ; IFLA Journal Volume 37 ; 37 ; >
       au < finished ; crawling ; 2012 ; IFLA Journal Volume 38 ; 38 ; >
       au < crawling ; exists ; 2013 ; IFLA Journal Volume 39 ; 39 ; >
-      au < expected ; exists ; 2014 ; IFLA Journal Volume 40 ; 40 ; >
+      au < manifest ; exists ; 2014 ; IFLA Journal Volume 40 ; 40 ; >
 
     }
 
