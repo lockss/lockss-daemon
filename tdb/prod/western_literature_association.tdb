@@ -17,7 +17,10 @@
 
     param[journal_dir] = western_american_literature
     attr[journal_id] = wal
+    
+    comment[v43] = malformed manifest page. no content.
 
+    au < doNotProcess ; 2008 ; Western American Literature Volume 43 ; 43 >
     au < released ; 2009-2010 ; Western American Literature Volume 44 ; 44 >
     au < released ; 2010-2011 ; Western American Literature Volume 45 ; 45 >
     au < released ; 2011 ; Western American Literature Volume 46 ; 46 >

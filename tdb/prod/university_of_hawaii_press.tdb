@@ -638,7 +638,8 @@ comment[mn20] = URL with 403 Forbidden error
       attr[journal_id] = jwj
 
       au < ready ; 2013 ; U.S.-Japan Women's Journal Volume 43 ; 43 >
-      au < doNotProcess ; 2014 ; U.S.-Japan Women's Journal Volume 44 ; 44 >
+      au < manifest ; 2013 ; U.S.-Japan Women's Journal Volume 44 ; 44 >
+      au < doNotProcess ; 2014 ; U.S.-Japan Women's Journal Volume 45 ; 45 >
     
     }
   }

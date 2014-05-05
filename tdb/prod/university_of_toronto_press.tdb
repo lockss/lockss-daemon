@@ -30,6 +30,7 @@
     au < released ; 2011 ; The Canadian Historical Review Volume 92 ; 92 >
     au < released ; 2012 ; The Canadian Historical Review Volume 93 ; 93 >
     au < ready ; 2013 ; The Canadian Historical Review Volume 94 ; 94 >
+    au < doNotProcess ; 2014 ; The Canadian Historical Review Volume 95 ; 95 >
 
   }
 
@@ -53,6 +54,7 @@
     au < released ; 2011 ; Canadian Journal of Criminology and Criminal Justice Volume 53 ; 53 >
     au < released ; 2012 ; Canadian Journal of Criminology and Criminal Justice Volume 54 ; 54 >
     au < ready ; 2013 ; Canadian Journal of Criminology and Criminal Justice Volume 55 ; 55 >
+    au < doNotProcess ; 2014 ; Canadian Journal of Criminology and Criminal Justice Volume 56 ; 56 >
 
   }
 
@@ -72,6 +74,7 @@
     au < released ; 2011 ; Canadian Journal of Information and Library Science Volume 35 ; 35 >
     au < released ; 2012 ; Canadian Journal of Information and Library Science Volume 36 ; 36 >
     au < ready ; 2013 ; Canadian Journal of Information and Library Science Volume 37 ; 37 >
+    au < doNotProcess ; 2014 ; Canadian Journal of Information and Library Science Volume 38 ; 38 >
 
   }
   
@@ -96,6 +99,7 @@
     au < released ; 2011 ; Canadian Journal of Law and Society Volume 26 ; 26 >
     au < released ; 2012 ; Canadian Journal of Law and Society Volume 27 ; 27 >
     au < ready ; 2013 ; Canadian Journal of Law and Society Volume 28 ; 28 >
+    au < doNotProcess ; 2014 ; Canadian Journal of Law and Society Volume 29 ; 29 >
 
   }
 
@@ -122,6 +126,7 @@
     au < released ; 2011 ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 56 ; 56 >
     au < released ; 2012 ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 57 ; 57 >
     au < ready ; 2013 ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 58 ; 58 >
+    au < doNotProcess ; 2014 ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 59 ; 59 >
 
 
   }
@@ -166,6 +171,7 @@
     au < released ; 2011 ; Canadian Journal of Women and the Law Volume 23 ; 23 >
     au < released ; 2012 ; Canadian Journal of Women and the Law Volume 24 ; 24 >
     au < ready ; 2013 ; Canadian Journal of Women and the Law Volume 25 ; 25 >
+    au < doNotProcess ; 2014 ; Canadian Journal of Women and the Law Volume 26 ; 26 >
 
   }
 
@@ -190,6 +196,7 @@
     au < released ; 2011 ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 67 ; 67 >
     au < released ; 2012 ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 68 ; 68 >
     au < ready ; 2013 ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 69 ; 69 >
+    au < doNotProcess ; 2014 ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 70 ; 70 >
 
   }
 
@@ -210,6 +217,7 @@
     au < released ; 2011 ; Canadian Public Policy Volume 37 ; 37 >
     au < released ; 2012 ; Canadian Public Policy Volume 38 ; 38 >
     au < ready ; 2013 ; Canadian Public Policy Volume 39 ; 39 >
+    au < doNotProcess ; 2014 ; Canadian Public Policy Volume 40 ; 40 >
 
   }
 
@@ -592,8 +600,9 @@
 
     param[journal_dir] = university_of_toronto_quarterly
     attr[journal_id] = utq
-    comment[au_81]= hash compare failure, to be fixed. (as of 06/13/2012)
+    comment[v73] = malformed manifest page. No content.
 
+    au < doNotProcess ; 2004 ; University of Toronto Quarterly Volume 73 ; 73 >
     au < released ; 2005 ; University of Toronto Quarterly Volume 74 ; 74 >
     au < released ; 2006 ; University of Toronto Quarterly Volume 75 ; 75 >
     au < released ; 2007 ; University of Toronto Quarterly Volume 76 ; 76 >
