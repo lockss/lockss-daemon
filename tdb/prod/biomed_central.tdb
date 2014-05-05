@@ -5577,6 +5577,22 @@
 
     {
       title <
+        name = Neuroglia ;
+        issn = 2050-3997 ;
+        issnl = 2050-3997
+      >
+
+      param[base_url] = http://www.neurogliajournal.com/
+      param[journal_issn] = 2050-3997
+      comment[0] = no publication yet, 5/5/2014
+
+      au < expected ; 2013 ; Neuroglia Volume 1 ; 1 >
+      au < expected ; 2014 ; Neuroglia Volume 2 ; 2 >
+
+    }
+
+    {
+      title <
         name = Nutrition & Metabolism ;
         eissn = 1743-7075 ;
         issnl = 1743-7075
@@ -5623,6 +5639,22 @@
       au < manifest ; 2013 ; Nutrition Journal Volume 12 ; 12 >
       au < manifest ; 2014 ; Nutrition Journal Volume 13 ; 13 >
       
+    }
+
+    {
+      title <
+        name = Open Network Biology ;
+        issn = 2046-7826 ;
+        issnl = 2046-7826
+      >
+
+      param[base_url] = http://www.opennetworkbiology.com/
+      param[journal_issn] = 2046-7826
+      comment[0] = no publication yet, 5/5/2014
+
+      au < expected ; 2013 ; Open Network Biology Volume 1 ; 1 >
+      au < expected ; 2014 ; Open Network Biology Volume 2 ; 2 >
+
     }
 
     {
