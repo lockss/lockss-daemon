@@ -37,7 +37,7 @@
     {
     
       param[base_url] = http://www.tesl-ej.org/
-      implicit < status ; year ; name ; param[volume] ; param[num_issue_range] >      
+      implicit < status ; year ; name ; param[volume] ; param[num_issue_range] >
 
       au < released ; 1994-1995 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 1 ; 1 ; 01-04 >
       au < released ; 1996-1997 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 2 ; 2 ; 05-08 >
@@ -54,7 +54,10 @@
       au < manifest ; 2009-2010 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 13 ; 13 ; 49-52 >
       au < exists ; 2010-2011 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 14 ; 14 ; 53-56 >
       au < exists ; 2011-2012 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 15 ; 15 ; 57-60 >
-    
+      au < exists ; 2012-2013 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 16 ; 16 ; 61-64 >
+      au < exists ; 2013-2014 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 17 ; 17 ; 65-68 >
+      au < expected ; 2014-2015 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 18 ; 18 ; 69-72 >
+
     }
   
   }
