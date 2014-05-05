@@ -235,6 +235,7 @@
     au < released ; 2011 ; Canadian Review of American Studies Volume 41 ; 41 >
     au < released ; 2012 ; Canadian Review of American Studies Volume 42 ; 42 >
     au < ready ; 2013 ; Canadian Review of American Sutdies Volume 43 ; 43 >
+    au < doNotProcess ; 2014 ; Canadian Review of American Sutdies Volume 44 ; 44 >
 
   }
 
@@ -260,6 +261,7 @@
     au < released ; 2011 ; Canadian Theatre Review Issue 148 ; 148 >
     au < released ; 2012 ; Canadian Theatre Review Issue 149 ; 149 >
     au < ready ; 2013 ; Canadian Theatre Review Issue 150 ; 150 >
+    au < doNotProcess ; 2013 ; Canadian Theatre Review Issue 151 ; 151 >
 
   }
 
@@ -275,6 +277,7 @@
     attr[journal_id] = car
 
     au < ready ; 2013 ; Cartographica: The International Journal for Geographic Information and Geovisualization Volume 48 ; 48 >
+    au < doNotProcess ; 2014 ; Cartographica: The International Journal for Geographic Information and Geovisualization Volume 49 ; 49 >
 
   }
 
@@ -316,6 +319,7 @@
     au < released ; 2010-2011 ; Eighteenth-Century Fiction Volume 23 ; 23 >
     au < released ; 2011-2012 ; Eighteenth-Century Fiction Volume 24 ; 24 >
     au < ready ; 2012-2013 ; Eighteenth-Century Fiction Volume 25 ; 25 >
+    au < expected ; 2013-2014 ; Eighteenth-Century Fiction Volume 26 ; 26 >
 
   }
 
@@ -353,6 +357,7 @@
     au < released ; 2011 ; Genocide Studies and Prevention Volume 6 ; 6 >
     au < released ; 2012 ; Genocide Studies and Prevention Volume 7 ; 7 >
     au < ready ; 2013 ; Genocide Studies and Prevention Volume 8 ; 8 >
+    au < doNotProcess ; 2014 ; Genocide Studies and Prevention Volume 9 ; 9 >
 
   }
 
@@ -373,6 +378,7 @@
     au < released ; 2011 ; Histoire sociale / Social History Volume 44 ; 44 >
     au < released ; 2012 ; Histoire sociale / Social History Volume 45 ; 45 >
     au < ready ; 2013 ; Histoire sociale / Social History Volume 46 ; 46 >
+    au < doNotProcess ; 2014 ; Histoire sociale / Social History Volume 47 ; 47 >
 
   }
 
@@ -389,6 +395,7 @@
     attr[journal_id] = ijc
 
     au < ready ; 2013 ; International Journal of Canadian Studies Volume 47 ; 47 >
+    au < doNotProcess ; 2014 ; International Journal of Canadian Studies Volume 48 ; 48 >
 
   }
 
@@ -413,6 +420,7 @@
     au < released ; 2011 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 45 ; 45 >
     au < released ; 2012 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 46 ; 46 >
     au < ready ; 2013 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 47 ; 47 >
+    au < doNotProcess ; 2014 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 48 ; 48 >
 
   }
 
@@ -454,6 +462,7 @@
     au < released ; 2010-2011 ; Journal of Scholarly Publishing Volume 42 ; 42 >
     au < released ; 2011-2012 ; Journal of Scholarly Publishing Volume 43 ; 43 >
     au < ready ; 2012-2013 ; Journal of Scholarly Publishing Volume 44 ; 44 >
+    au < expected ; 2013-2014 ; Journal of Scholarly Publishing Volume 45 ; 45 >
 
   }
 
@@ -478,6 +487,7 @@
     au < released ; 2011 ; Modern Drama Volume 54 ; 54 >
     au < released ; 2012 ; Modern Drama Volume 55 ; 55 >
     au < ready ; 2013 ; Modern Drama Volume 56 ; 56 >
+    au < doNotProcess ; 2014 ; Modern Drama Volume 57 ; 57 >
 
   }
 
@@ -501,6 +511,7 @@
     au < released ; 2011 ; Seminar: A Journal of Germanic Studies Volume 47 ; 47 >
     au < released ; 2012 ; Seminar: A Journal of Germanic Studies Volume 48 ; 48 >
     au < ready ; 2013 ; Seminar: A Journal of Germanic Studies Volume 49 ; 49 >
+    au < doNotProcess ; 2014 ; Seminar: A Journal of Germanic Studies Volume 50 ; 50 >
 
   }
 
@@ -521,6 +532,7 @@
     au < released ; 2011 ; The Tocqueville Review/La revue Tocqueville Volume 32 ; 32 >
     au < released ; 2012 ; The Tocqueville Review/La revue Tocqueville Volume 33 ; 33 >
     au < ready ; 2013 ; The Tocqueville Review/La revue Tocqueville Volume 34 ; 34 >
+    au < doNotProcess ; 2014 ; The Tocqueville Review/La revue Tocqueville Volume 35 ; 35 >
 
   }
 
@@ -539,6 +551,7 @@
     au < released ; 2011 ; Toronto Journal of Theology Volume 27 ; 27 >
     au < released ; 2012 ; Toronto Journal of Theology Volume 28 ; 28 >
     au < ready ; 2013 ; Toronto Journal of Theology Volume 29 ; 29 >
+    au < doNotProcess ; 2014 ; Toronto Journal of Theology Volume 30 ; 30 >
 
   }
 
@@ -564,6 +577,7 @@
     au < released ; 2011 ; University of Toronto Law Journal Volume 61 ; 61 >
     au < released ; 2012 ; University of Toronto Law Journal Volume 62 ; 62 >
     au < ready ; 2013 ; University of Toronto Law Journal Volume 63 ; 63 >
+    au < doNotProcess ; 2014 ; University of Toronto Law Journal Volume 64 ; 64 >
 
   }
 
@@ -589,6 +603,7 @@
     au < released ; 2011 ; University of Toronto Quarterly Volume 80 ; 80 >
     au < released ; 2012 ; University of Toronto Quarterly Volume 81 ; 81 >
     au < ready ; 2013 ; University of Toronto Quarterly Volume 82 ; 82 >
+    au < doNotProcess ; 2014 ; University of Toronto Quarterly Volume 83 ; 83 >
 
   }
 
