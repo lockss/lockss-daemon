@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>3</string>
+        <string>4</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -107,6 +107,7 @@
       <!-- exclude the following file (appears to be a test) with a ungettable link -->
       <string>2, "^%sv1/articles/90815\?format=html$", api_url</string>
       <!-- manifest pages -->
+      <!-- test only <string>1,"^%sv1/articles/9132[\d]{1}\?format=html", api_url</string> -->
       <string>1,"^%sv1/articles/(\d)+\?format=html$", api_url</string>
       <!-- temporarily limit # of articles to crawl for local testing...    -->
       <!-- <string>1,"^%sv1/articles/908(\d){2}\?format=html$", api_url</string> -->
@@ -130,7 +131,12 @@
       </entry>
     </map>
   </entry>
-
+  <!-- not ready for prime time...
+  <entry>
+    <string>text/html_link_extractor_factory</string>
+    <string>org.lockss.plugin.figshare.FigshareHtmlLinkExtractorFactory</string>
+  </entry>
+  -->
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.figshare.FigshareArticleIteratorFactory</string>
@@ -139,6 +145,16 @@
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.figshare.FigshareArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <!-- this is to catch the 403 errors produced when trying to crawl 2012 --
+         there have been some test files (I think) that use a link that is 
+         403 (forbidden)
+     -->
+    <string>plugin_cache_result_list</string>
+    <list>
+      <string>403=org.lockss.plugin.figshare.FigshareHttpResponseHandler</string>
+    </list>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
