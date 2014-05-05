@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingHtmlLinkExtractor.java,v 1.9 2013-07-15 19:41:02 clairegriffin Exp $
+ * $Id: TestGoslingHtmlLinkExtractor.java,v 1.9.8.1 2014-05-05 17:32:30 wkwilson Exp $
  */
 
 /*
@@ -195,6 +195,18 @@ public class TestGoslingHtmlLinkExtractor extends LockssTestCase {
 			 "<link rel=\"stylesheet\" type=\"text/css\" media=\"screen\"  href=", "</link>");
   }
   
+  public void testStyleAttr() throws IOException {
+    extractor = new GoslingHtmlLinkExtractor();
+
+    String url= "http://www.example.com/back.png";
+
+    String source =
+      "<html><head><title>Test</title></head><body>"+
+      "<span class=\"foo\" " +
+      "style=\"background: url('" + url + "') no-repeat 0px -64px;\" />";
+    assertEquals(SetUtil.set(url), parseSingleSource(source));
+  }
+
   public void testDoCrawlStyleAbsolute() throws IOException {
     performDoCrawlStyle("<style>",
                         "http://www.example.com/",

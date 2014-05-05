@@ -1,5 +1,5 @@
 /*
- * $Id: NodeFilterHtmlLinkRewriterFactory.java,v 1.26 2014-03-03 22:37:27 pgust Exp $
+ * $Id: NodeFilterHtmlLinkRewriterFactory.java,v 1.26.2.1 2014-05-05 17:32:36 wkwilson Exp $
  */
 
 /*
@@ -172,9 +172,15 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
     }
     NodeFilter relLinkXform = new OrFilter(relLinkXforms);
 
-    // Rewrite CSS style imports
-    StyleXform styleXform = new StyleXform(au, encoding, url, srvLink);
-    relXforms.add(styleXform);
+    // Rewrite CSS style segments
+    StyleTagXform styleTagXform =
+      new StyleTagXform(au, encoding, url, srvLink);
+    relXforms.add(styleTagXform);
+
+    // Rewrite CSS style attributes
+    StyleAttrXform styleAttrXform =
+      new StyleAttrXform(au, encoding, url, srvLink);
+    relXforms.add(styleAttrXform);
 
     // Rewrite <script>s
     ScriptXform scriptXform = new ScriptXform(au, encoding, url, srvLink);
@@ -271,7 +277,8 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
       ListUtil.list(base,
 		    relLinkXform,
 		    absLinkXform,
-		    styleXform,
+		    styleTagXform,
+		    styleAttrXform,
 		    scriptXform,
 		    relRefreshXform,
 		    absRefreshXform);
@@ -352,6 +359,7 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
   }
 
   @SuppressWarnings("serial")
+  @Deprecated
   abstract class RelStyleRegexXform extends HtmlNodeFilters.StyleRegexXform
     implements RelXform {
 
@@ -365,13 +373,29 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
   }
 
   @SuppressWarnings("serial")
-  class StyleXform extends HtmlNodeFilters.StyleXformDispatch
+  class StyleTagXform extends HtmlNodeFilters.StyleTagXformDispatch
     implements RelXform {
 
-    public StyleXform(ArchivalUnit au,
-                      String charset,
-                      String baseUrl,
-                      ServletUtil.LinkTransform xform) {
+    public StyleTagXform(ArchivalUnit au,
+			 String charset,
+			 String baseUrl,
+			 ServletUtil.LinkTransform xform) {
+      super(au, charset, baseUrl, xform);
+    }
+
+    public void setBaseUrl(String baseUrl) {
+      super.setBaseUrl(baseUrl);
+    }
+  }
+
+  @SuppressWarnings("serial")
+  class StyleAttrXform extends HtmlNodeFilters.StyleAttrXformDispatch
+    implements RelXform {
+
+    public StyleAttrXform(ArchivalUnit au,
+			  String charset,
+			  String baseUrl,
+			  ServletUtil.LinkTransform xform) {
       super(au, charset, baseUrl, xform);
     }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: Tdb.java,v 1.24 2014-01-14 08:56:10 tlipkis Exp $
+ * $Id: Tdb.java,v 1.24.4.1 2014-05-05 17:32:37 wkwilson Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ import org.lockss.util.*;
  * a specified plugin ID. 
  *
  * @author  Philip Gust
- * @version $Id: Tdb.java,v 1.24 2014-01-14 08:56:10 tlipkis Exp $
+ * @version $Id: Tdb.java,v 1.24.4.1 2014-05-05 17:32:37 wkwilson Exp $
  */
 public class Tdb {
   /**
@@ -96,7 +96,7 @@ public class Tdb {
    * also handle this exception.
    * 
    * @author  Philip Gust
-   * @version $Id: Tdb.java,v 1.24 2014-01-14 08:56:10 tlipkis Exp $
+   * @version $Id: Tdb.java,v 1.24.4.1 2014-05-05 17:32:37 wkwilson Exp $
    */
   @SuppressWarnings("serial")
   static public class TdbException extends Exception {
@@ -1272,6 +1272,25 @@ public class Tdb {
     private final Set<String> diffPluginIds = new HashSet<String>();
     private int tdbAuCountDiff;
     
+    public String toString() {
+      StringBuilder sb = new StringBuilder();
+      sb.append("[Tdb.Diffa");
+      if (!newPublishers.isEmpty()) {
+	sb.append(" newPubs: ");
+	sb.append(newPublishers);
+      }
+      if (!newTitles.isEmpty()) {
+	sb.append(" newTitles: ");
+	sb.append(newTitles);
+      }
+      if (!newAus.isEmpty()) {
+	sb.append(" newAus: ");
+	sb.append(newAus);
+      }
+      sb.append("]");
+      return sb.toString();
+    }
+
     Differences() {
     }
 
@@ -1305,8 +1324,7 @@ public class Tdb {
 			       newTitles.iterator());
     }
 
-    /** @return an Iterator over all the newly added TdbAus, including
-     * those belonging to newly added TdbTitles and TdbPublishers. */
+    /** @return an Iterator over all the newly added or changed TdbAus, */
     public Iterator<TdbAu> newTdbAuIterator() {
       return new IteratorChain(new Iterator[] {
 	  new ObjectGraphIterator(newPublishers.iterator(),

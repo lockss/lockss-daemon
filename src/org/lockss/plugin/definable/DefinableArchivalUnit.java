@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.98 2013-12-03 00:47:58 thib_gc Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.98.4.1 2014-05-05 17:32:37 wkwilson Exp $
  */
 
 /*
@@ -39,14 +39,15 @@ import org.apache.oro.text.regex.*;
 import org.lockss.config.*;
 import org.lockss.crawler.*;
 import org.lockss.daemon.*;
+import org.lockss.daemon.PluginException.LinkageError;
 import org.lockss.plugin.*;
 import org.lockss.plugin.ExploderHelper;
 import org.lockss.plugin.base.*;
 import org.lockss.util.*;
 import org.lockss.util.Constants.RegexpContext;
 import org.lockss.plugin.definable.DefinablePlugin.*;
-import org.lockss.oai.*;
 import org.lockss.state.AuState;
+
 import static org.lockss.plugin.definable.DefinablePlugin.PrintfContext;
 
 /**
@@ -96,7 +97,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   /** List of HTTP request headers <hdr>:<val> to be sent with each fetch */
   public static final String KEY_AU_HTTP_REQUEST_HEADERS =
     "au_http_request_header";
-
+  
   //public static final String KEY_AU_URL_NORMALIZER = "au_url_normalizer";
   public static final String KEY_AU_EXPLODER_HELPER = "au_exploder_helper";
   public static final String KEY_AU_EXPLODER_PATTERN = "au_exploder_pattern";
@@ -358,7 +359,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     }
     return fact.makeSubstancePredicate(this);
   }
-
+  
   Map<String,List<String>> featureUrlMap;
 
   /** Return URLs expanded from au_feature_urls. */
@@ -556,28 +557,6 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     return null;
   }
 
-  protected OaiRequestData makeOaiData() {
-    URL oai_request_url =
-      paramMap.getUrl(ConfigParamDescr.OAI_REQUEST_URL.getKey());
-    String oaiRequestUrlStr = oai_request_url.toString();
-    String oai_au_spec = null;
-    try {
-      oai_au_spec = paramMap.getString(ConfigParamDescr.OAI_SPEC.getKey());
-    } catch (NoSuchElementException ex) {
-      // This is acceptable.  Null value will fetch all entries.
-      log.debug("No oai_spec for this plugin.");
-    }
-    log.debug3("Creating OaiRequestData with oaiRequestUrlStr" +
-	       oaiRequestUrlStr + " and oai_au_spec " + oai_au_spec);
-    return new OaiRequestData(oaiRequestUrlStr,
-                      "http://purl.org/dc/elements/1.1/",
-                      "identifier",
-                      oai_au_spec,
-                      "oai_dc"
-                      );
-
-  }
-
   protected CrawlSpec makeCrawlSpec() throws LockssRegexpException {
     CrawlSpec res;
     CrawlRule rule = makeRules();
@@ -585,35 +564,32 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
                                                 DefinablePlugin.DEFAULT_CRAWL_TYPE);
     //XXX put makePermissionCheckersHere
 
-    if(crawl_type.equals(DefinablePlugin.CRAWL_TYPE_OAI)) {
-      boolean follow_links =
-          definitionMap.getBoolean(DefinablePlugin.KEY_FOLLOW_LINKS, true);
-      res = new OaiCrawlSpec(makeOaiData(), getPermissionPages(),
-			     null, rule, follow_links,
-			     makeLoginPageChecker());
-    } else { // for now use the default spider crawl spec
-      int depth = definitionMap.getInt(KEY_AU_REFETCH_DEPTH,
-				       DEFAULT_AU_REFETCH_DEPTH);
-      String exploderPattern = definitionMap.getString(KEY_AU_EXPLODER_PATTERN,
-						  DEFAULT_AU_EXPLODER_PATTERN);
-      ExploderHelper eh = getDefinablePlugin().getExploderHelper();
 
-      res = new SpiderCrawlSpec(getNewContentCrawlUrls(),
+    // for now use the default spider crawl spec
+    int depth = definitionMap.getInt(KEY_AU_REFETCH_DEPTH,
+				       DEFAULT_AU_REFETCH_DEPTH);
+    String exploderPattern = definitionMap.getString(KEY_AU_EXPLODER_PATTERN,
+						  DEFAULT_AU_EXPLODER_PATTERN);
+    ExploderHelper eh = getDefinablePlugin().getExploderHelper();
+
+    res = new SpiderCrawlSpec(getNewContentCrawlUrls(),
 				getPermissionPages(), rule, depth,
 				makePermissionChecker(),
 				makeLoginPageChecker(), exploderPattern, eh);
-      String cookiePolicy =
+    String cookiePolicy =
           definitionMap.getString(KEY_AU_CRAWL_COOKIE_POLICY, null);
-      if (cookiePolicy != null) {
-	res.setCookiePolicy(cookiePolicy);
-      }
+    if (cookiePolicy != null) {
+      res.setCookiePolicy(cookiePolicy);
     }
-    
     return res;
   }
 
   protected LoginPageChecker makeLoginPageChecker() {
     return getDefinablePlugin().makeLoginPageChecker();
+  }
+  
+  public CrawlInitializer makeCrawlInitializer(CrawlSpec spec) {
+	return getDefinablePlugin().getCrawlInitializer(this, spec);
   }
 
   protected PermissionChecker makePermissionChecker() {

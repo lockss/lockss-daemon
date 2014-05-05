@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.77 2014-04-23 20:47:11 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.77.2.1 2014-05-05 17:32:37 wkwilson Exp $
  */
 
 /*
@@ -97,6 +97,9 @@ public class DefinablePlugin extends BasePlugin {
 
   public static final String KEY_PLUGIN_ARTICLE_ITERATOR_FACTORY =
     "plugin_article_iterator_factory";
+ 
+  public static final String KEY_PLUGIN_CRAWL_INITIALIZER_FACTORY = 
+    "plugin_crawl_initializer_factory";
 
   public static final String KEY_PLUGIN_ARTICLE_METADATA_EXTRACTOR_FACTORY =
     "plugin_article_metadata_extractor_factory";
@@ -887,6 +890,30 @@ public class DefinablePlugin extends BasePlugin {
       }
     }
     return exploderHelper;
+  }
+  
+  protected CrawlInitializerFactory crawlInitializerFactory = null;
+
+  protected CrawlInitializerFactory getCrawlInitializerFactory() {
+    if (crawlInitializerFactory == null) {
+      String factClass =
+    definitionMap.getString(DefinablePlugin.KEY_PLUGIN_CRAWL_INITIALIZER_FACTORY,
+				null);
+      if (factClass != null) {
+    	crawlInitializerFactory =
+    	(CrawlInitializerFactory)newAuxClass(factClass, CrawlInitializerFactory.class);
+      }
+    }
+    
+    return crawlInitializerFactory;
+  }
+  
+  protected CrawlInitializer getCrawlInitializer(ArchivalUnit au, CrawlSpec spec) {
+	CrawlInitializerFactory fact = getCrawlInitializerFactory();
+	if (fact == null) {
+	  return null;
+	}
+	return fact.createCrawlInitializer(au, spec);
   }
 
   protected CrawlUrlComparatorFactory crawlUrlComparatorFactory = null;

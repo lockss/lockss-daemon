@@ -9,7 +9,24 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>16</string>
+    <string>18</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>2</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -141,6 +158,29 @@
     <list>
       <string>&quot;%spublishing/journals/lockss/?journalcode=%s&amp;volume=%s&amp;year=%d&quot;, base_url, journal_code, volume_name, year</string>
       <string>&quot;%slockss.htm&quot;, resolver_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^%spublishing/journals/%s/article[.]asp[?]doi=", base_url, journal_code</string>
     </list>
   </entry>
 </map>

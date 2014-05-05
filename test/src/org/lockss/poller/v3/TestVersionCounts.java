@@ -1,5 +1,5 @@
 /*
- * $Id: TestVersionCounts.java,v 1.3 2013-07-16 04:00:17 dshr Exp $
+ * $Id: TestVersionCounts.java,v 1.3.8.1 2014-05-05 17:32:33 wkwilson Exp $
  */
 
 /*
@@ -303,5 +303,51 @@ public class TestVersionCounts extends LockssTestCase {
     repairCandidates = versionCounts.getRepairCandidates(0,
 					SetUtil.set(HashResult.make(hash1)));
     assertEmpty(repairCandidates);
+  }
+
+  public void testSortedRepairCandidates() throws Exception {
+    VersionCounts versionCounts = VersionCounts.make();
+
+    VoteBlock vb1 = makeVoteBlock("http://test.com/foo1");
+    addVersion(vb1, "content 1 for foo1");
+
+    VoteBlock vb2 = makeVoteBlock("http://test.com/foo1");
+    addVersion(vb2, "content 2 for foo1");
+
+    VoteBlock vb3 = makeVoteBlock("http://test.com/foo1");
+    addVersion(vb3, "content 3 for foo1");
+    addVersion(vb3, "content 2 for foo1");
+
+    versionCounts.vote(vb1, participant1);
+    versionCounts.vote(vb2, participant2);
+    versionCounts.vote(vb3, participant3);
+
+    Map<Integer, Collection<ParticipantUserData>> repairCandidates;
+
+    repairCandidates = versionCounts.getSortedRepairCandidatesMap(2);
+    assertEquals(SetUtil.set(2), repairCandidates.keySet());
+    assertSameElements(SetUtil.set(participant2),
+		       repairCandidates.get(2));
+    assertEquals(ListUtil.list(participant2),
+		 versionCounts.getSortedRepairCandidates(2));
+
+    repairCandidates = versionCounts.getSortedRepairCandidatesMap(1);
+    assertIsomorphic(ListUtil.list(2, 1), repairCandidates.keySet());
+    assertSameElements(SetUtil.set(participant2),
+		       repairCandidates.get(2));
+    assertSameElements(SetUtil.set(participant1, participant3),
+		       repairCandidates.get(1));
+
+    List<ParticipantUserData> lst = versionCounts.getSortedRepairCandidates(1);
+    assertTrue(""+lst, (lst.equals(ListUtil.list(participant2,
+						 participant1,
+						 participant3)) ||
+			lst.equals(ListUtil.list(participant2,
+						 participant3,
+						 participant1))));
+
+    assertEmpty(versionCounts.getSortedRepairCandidatesMap(4));
+    assertEmpty(versionCounts.getSortedRepairCandidates(4));
+
   }
 }

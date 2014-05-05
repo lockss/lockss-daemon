@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.86 2014-01-29 05:21:20 tlipkis Exp $
+ * $Id: ServletUtil.java,v 1.86.2.1 2014-05-05 17:32:32 wkwilson Exp $
  */
 
 /*
@@ -2032,8 +2032,6 @@ public class ServletUtil {
 	    tbl.add("<br>");
 	  }
 	}
-      } else if (spec instanceof OaiCrawlSpec) {
-	tbl.add("(OAI)");
       } else {
 	tbl.add("(Unknown CrawlSpec type)");
       }

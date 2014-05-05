@@ -1,5 +1,5 @@
 /*
- * $Id: MockListRecords.java,v 1.5 2005-10-11 05:52:05 tlipkis Exp $
+ * $Id: MockListRecords.java,v 1.5.148.1 2014-05-05 17:32:36 wkwilson Exp $
  */
 
 /*
@@ -33,7 +33,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.test;
 
 import org.lockss.test.*;
-import org.lockss.oai.*;
 import org.lockss.util.Logger;
 
 import ORG.oclc.oai.harvester2.verb.ListRecords;

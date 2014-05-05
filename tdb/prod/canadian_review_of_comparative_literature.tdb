@@ -1,0 +1,24 @@
+{
+  publisher <
+    name = Canadian Review of Comparative Literature
+  >
+
+  implicit < status ; year; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée ;
+      issn = 0319-051X ;
+      eissn = 1913-9659
+    >
+
+    param[journal_dir] = canadian_review_of_comparative_literature
+    attr[journal_id] = crc
+    
+    au < manifest ; 2014 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 41 ; 41 >
+  }
+
+}

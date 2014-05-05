@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
-# $Id: tdbparse.py,v 1.20 2013-02-15 19:54:39 thib_gc Exp $
+# $Id: tdbparse.py,v 1.20.22.1 2014-05-05 17:32:34 wkwilson Exp $
 
 __copyright__ = '''\
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -28,7 +28,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '''0.4.8'''
+__version__ = '''0.4.9'''
 
 from optparse import OptionGroup, OptionParser
 import re
@@ -795,6 +795,7 @@ class TdbParser(object):
 
 def tdbparse(file, options):
     tdb = TdbParser(TdbScanner(file, options), options).parse()
+    if getattr(options, 'journals', False): return tdb
     return tdbq.tdbq_reprocess(tdb, options)
 
 def __option_parser__(parser=None):

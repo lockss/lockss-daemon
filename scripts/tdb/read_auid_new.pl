@@ -16,6 +16,7 @@ my $cc_license_tag = "rel..license";
 my $cc_license_url = "href=.http://creativecommons\.org/licenses/(by|by-sa|by-nc|by-nd|by-nc-sa|by-nc-nd)/(1\.0|2\.0|2\.5|3\.0|4\.0)/?.";
 my $cc_by_tag = "href..http://creativecommons.org/licenses/by";
 my $bmc_tag = "<span>Archive</span>";
+my $bmc2_tag = "<span>Issues</span>";
 my $igi_tag = "/gateway/issue/";
 my $total_manifests = 0;
 my $total_missing = 0;
@@ -980,7 +981,7 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$bmc_tag/) && ($man_contents =~ m/content\/$param{volume_name}/)) {
+      if (defined($man_contents) && (($man_contents =~ m/$bmc_tag/) || ($man_contents =~ m/$bmc2_tag/)) && ($man_contents =~ m/content\/$param{volume_name}/)) {
         if ($man_contents =~ m/<title>(.*)<\/title>/si) {
           $vol_title = $1;
           $vol_title =~ s/ \| / /g;
@@ -988,6 +989,33 @@ while (my $line = <>) {
           if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
             $vol_title = "\"" . $vol_title . "\"";
           }
+        } 
+        $result = "Manifest"
+      } else {
+        $result = "--NO_TAG--"
+      }
+    } else {
+      $result = "--REQ_FAIL--"
+    }
+    sleep(4);
+                
+  } elsif (($plugin eq "HindawiPublishingCorporationPlugin") || ($plugin eq "ClockssHindawiPublishingCorporationPlugin")) {
+    $url = sprintf("%sjournals/%s/%s/",
+      $param{base_url}, $param{journal_id}, $param{volume_name});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+      if (defined($man_contents) && ($man_contents =~ m/journals\/$param{journal_id}\/$param{volume_name}/)) {
+        if ($man_contents =~ m/<title>(.*)<\/title>/si) {
+          $vol_title = $1;
+          #$vol_title =~ s/ \| / /g;
+          $vol_title =~ s/\s*\n\s*/ /g;
+          $vol_title =~ s/An Open Access Journal//;
+          $vol_title =~ s/\s+/ /g;
+          $vol_title =~ s/&#8212;/Volume $param{volume_name}/g;
+          
         } 
         $result = "Manifest"
       } else {

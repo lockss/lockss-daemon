@@ -13,14 +13,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>9</string>
+    <string>10</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>4</string>
+        <string>5</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -64,8 +64,8 @@
       <string>1,"^%smedia/.*/supmat/", base_url</string>
       <string>4,"^%s.*/10[.][0-9a-z]{4,6}/", base_url</string>
       <string>2,"^%s.*/10[.][0-9a-z]{4,6}/www[.]", base_url</string>
-      <string>2,"^%s(?:rss/thieme|ejournals/(?:journal|issues|sample|recommend|topten|linkout))", base_url</string>
-      <string>1,"^%sejournals/(?:issue|abstract|html|pdf|ris)/10[.][0-9a-z]{4,6}/[.a-z0-9-]+(?:[.]pdf|/BIB|[?]issue=.+)?$", base_url</string>
+      <string>2,"^%s(?:[^/]+/)?(?:rss/thieme|ejournals/(?:journal|issues|sample|recommend|topten|linkout))", base_url</string>
+      <string>1,"^%s(?:[^/]+/)?ejournals/(?:issue|abstract|html|pdf|ris)/10[.][0-9a-z]{4,6}/[.a-z0-9-]+(?:[.]pdf|/BIB|[?]issue=.+)?$", base_url</string>
     </list>
   </entry>
   <entry>

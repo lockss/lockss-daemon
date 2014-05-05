@@ -1,0 +1,26 @@
+{
+
+  publisher <
+    name = Ancestral Health Society ;
+    info[tester] = 0
+  >
+  
+  {
+  
+    title <
+      name = Journal of Evolution and Health ;
+      issn = 2334-3591 ;
+      issnl = 2334-3591
+    >
+    
+    plugin = org.lockss.plugin.bepress.BePressPlugin 
+    param[base_url] = http://jevohealth.com/
+    param[journal_abbr] = journal
+    implicit < status ; year ; name ; param[volume] >
+
+    au < manifest ; 2013 ; Journal of Evolution and Health Volume 1 ; 1 >
+    au < expected ; 2014 ; Journal of Evolution and Health Volume 2 ; 2 >
+
+  }
+
+}

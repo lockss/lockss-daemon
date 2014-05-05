@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.27 2014-01-14 04:30:10 tlipkis Exp $
+ * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.27.4.1 2014-05-05 17:32:32 wkwilson Exp $
  */
 
 /*
@@ -176,6 +176,9 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     "Abs img" +
     "<img src=\"CPROTO://www.example.com/icons/logo2.gif\" alt=\"BMJ 2\" title=\"BMJ 2\" />\n" +
     "<br>\n" +
+    "style attr" +
+    "<span class=\"foo\" style=\"background: url('/images/bar.png') no-repeat 0px -64px;\" />\n" +
+    "<br>\n" +
 
     // repeat above after changing the base URL
 
@@ -226,6 +229,9 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     "<br>\n" +
     "Abs img" +
     "<img src=\"CPROTO://www.example.com/icons/logo2.gif\" alt=\"BMJ 2\" title=\"BMJ 2\" />\n" +
+    "<br>\n" +
+    "style attr" +
+    "<span class=\"foo\" style=\"background: url('images/bar.png') no-repeat 0px -64px;\" />\n" +
     "<br>\n" +
 
     "</body>\n" +
@@ -296,6 +302,8 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     "<br>\n" +
     "Abs img<img src=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fwww.example.com%2Ficons%2Flogo2.gif\" alt=\"BMJ 2\" title=\"BMJ 2\" />\n" +
     "<br>\n" +
+    "style attr<span class=\"foo\" style=\"background: url('LPROTO://lockss.box:9524/ServeContent?url=CPROTO://www.example.com/images/bar.png') no-repeat 0px -64px;\" />\n" +
+    "<br>\n" +
 
     // Base URL change
     "<base href=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fwww.example.com%2Fotherdir%2F\" />\n" +
@@ -336,6 +344,8 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     "Rel img<img src=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fwww.example.com%2Ficons%2Flogo.gif\" alt=\"BMJ 1\" title=\"BMJ 1\" />\n" +
     "<br>\n" +
     "Abs img<img src=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fwww.example.com%2Ficons%2Flogo2.gif\" alt=\"BMJ 2\" title=\"BMJ 2\" />\n" +
+    "<br>\n" +
+    "style attr<span class=\"foo\" style=\"background: url('LPROTO://lockss.box:9524/ServeContent?url=CPROTO://www.example.com/otherdir/images/bar.png') no-repeat 0px -64px;\" />\n" +
     "<br>\n" +
 
     "</body>\n" +

@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.149 2013-04-09 04:46:13 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.149.14.1 2014-05-05 17:32:31 wkwilson Exp $
  */
 
 /*
@@ -1185,19 +1185,11 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   }
 
   protected Crawler makeNewContentCrawler(ArchivalUnit au, CrawlSpec spec) {
-    //check CrawlSpec if it is Oai Type then create OaiCrawler Instead of NewContentCrawler
-    if (spec instanceof OaiCrawlSpec) {
-      logger.debug("Creating OaiCrawler for " + au);
-      OaiCrawler oc = new OaiCrawler(au, spec, AuUtil.getAuState(au));
-      oc.setCrawlManager(this);
-      return oc;
-    } else {
-      logger.debug("Creating NewContentCrawler for " + au);
-      NewContentCrawler nc =
-	new NewContentCrawler(au, spec, AuUtil.getAuState(au));
-      nc.setCrawlManager(this);
-      return nc;
-    }
+    logger.debug("Creating NewContentCrawler for " + au);
+    NewContentCrawler nc =
+    		new NewContentCrawler(au, spec, AuUtil.getAuState(au));
+    nc.setCrawlManager(this);
+    return nc;
   }
 
   protected Crawler makeRepairCrawler(ArchivalUnit au,

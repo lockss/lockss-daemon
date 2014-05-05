@@ -1,5 +1,5 @@
 /*
- * $Id: SilverchairHtmlCrawlFilterFactory.java,v 1.1 2014-04-15 19:10:29 thib_gc Exp $
+ * $Id: SilverchairHtmlCrawlFilterFactory.java,v 1.1.2.1 2014-05-05 17:32:31 wkwilson Exp $
  */
 
 /*
@@ -72,11 +72,8 @@ public class SilverchairHtmlCrawlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("a", "class", "prev"),
         HtmlNodeFilters.tagWithAttributeRegex("a", "class", "next"),
         // Link back to issue TOC (to prune impact of potential overcrawl)
-        HtmlNodeFilters.tagWithAttribute("a", "id", "scm6MainContent_lnkFullIssueName"), // (ACCP)
-        HtmlNodeFilters.tagWithAttribute("a", "id", "ctl00_scm6MainContent_lnkFullIssueName"), // (ACP)
-        // Right column portlets but not the portletTabMenu portlet that
-        // has links to the PDF and citation files (AMA, ACCP, ACP)
-        HtmlNodeFilters.tagWithAttribute("div", "class", "portletContentHolder"),
+        HtmlNodeFilters.tagWithAttribute("a", "id", "scm6MainContent_lnkFullIssueName"), // [ACCP, AMA, APA]
+        HtmlNodeFilters.tagWithAttribute("a", "id", "ctl00_scm6MainContent_lnkFullIssueName"), // [ACP]
         // Letter links are article links (AMA)
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "letterSubmitForm"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "letterBody"), // Ideally, div that contains a such div as a child
@@ -88,8 +85,22 @@ public class SilverchairHtmlCrawlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "scm6MainContent_divCorrections"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "scm6MainContent_divCorrectionLinkToParent"),
         // Cross links: "This article/letter/etc. relates to...", "This erratum
-        // concerns..." (ACCP, ACP)
+        // concerns...", "See also...", [ACCP, ACP]
         HtmlNodeFilters.tagWithAttribute("div", "class", "linkType"),
+        /*
+         * The right column ('portletColumn') is likely to reference articles
+         * (most read, related articles, most recent articles...), but it also
+         * contains the links to the main article views and citation files in
+         * a recognizable <div> ('scm6MainContent_ToolBox'). This node filter
+         * prunes the subtree under portletColumn so that it only contains the
+         * scm6MainContent_ToolBox subtree.
+         * ACCP, AMA, APA:
+         *     <div id="scm6MainContent_ToolBox"> inside <div class="portletColumn">
+         * ACP:
+         *     <div id="ctl00_scm6MainContent_ToolBox"> but not inside <div class="portletColumn">
+         */
+        new AllExceptSubtreeNodeFilter(HtmlNodeFilters.tagWithAttributeRegex("div", "class", "portletColumn"),
+                                    HtmlNodeFilters.tagWithAttribute("div", "id", "scm6MainContent_ToolBox")),
     };
     return new HtmlFilterInputStream(in,
                                      encoding,
@@ -98,7 +109,7 @@ public class SilverchairHtmlCrawlFilterFactory implements FilterFactory {
   }
 
   public static void main(String[] args) throws Exception {
-    String file = "/tmp/p2/f714864";
+    String file = "/tmp/foo2/f3";
     IOUtils.copy(new SilverchairHtmlCrawlFilterFactory().createFilteredInputStream(null, new FileInputStream(file), "utf-8"),
                  new FileOutputStream(file + ".out"));
   }
