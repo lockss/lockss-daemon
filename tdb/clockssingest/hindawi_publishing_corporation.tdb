@@ -1570,18 +1570,18 @@
 
     param[journal_id] = bca
 
-    au < exists ; exists ; 2003 ; Bioinorganic Chemistry and Applications Volume 1 (2003) ; 2003 ; 1 >
-    au < exists ; exists ; 2004 ; Bioinorganic Chemistry and Applications Volume 2 (2004) ; 2004 ; 2 >
-    au < exists ; exists ; 2005 ; Bioinorganic Chemistry and Applications Volume 3 (2005) ; 2005 ; 3 >
-    au < exists ; exists ; 2006 ; Bioinorganic Chemistry and Applications Volume 2006 ; 2006 ; 2006 >
-    au < exists ; exists ; 2007 ; Bioinorganic Chemistry and Applications Volume 2007 ; 2007 ; 2007 >
-    au < exists ; exists ; 2008 ; Bioinorganic Chemistry and Applications Volume 2008 ; 2008 ; 2008 >
-    au < exists ; exists ; 2009 ; Bioinorganic Chemistry and Applications Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; Bioinorganic Chemistry and Applications Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; Bioinorganic Chemistry and Applications Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Bioinorganic Chemistry and Applications Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Bioinorganic Chemistry and Applications Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Bioinorganic Chemistry and Applications Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2003 ; Bioinorganic Chemistry and Applications Volume 1 (2003) ; 2003 ; 1 >
+    au < manifest ; exists ; 2004 ; Bioinorganic Chemistry and Applications Volume 2 (2004) ; 2004 ; 2 >
+    au < manifest ; exists ; 2005 ; Bioinorganic Chemistry and Applications Volume 3 (2005) ; 2005 ; 3 >
+    au < manifest ; exists ; 2006 ; Bioinorganic Chemistry and Applications Volume 2006 ; 2006 ; 2006 >
+    au < manifest ; exists ; 2007 ; Bioinorganic Chemistry and Applications Volume 2007 ; 2007 ; 2007 >
+    au < manifest ; exists ; 2008 ; Bioinorganic Chemistry and Applications Volume 2008 ; 2008 ; 2008 >
+    au < manifest ; exists ; 2009 ; Bioinorganic Chemistry and Applications Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; Bioinorganic Chemistry and Applications Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; Bioinorganic Chemistry and Applications Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Bioinorganic Chemistry and Applications Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Bioinorganic Chemistry and Applications Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Bioinorganic Chemistry and Applications Volume 2014 ; 2014 ; 2014 >
 
   }
   
@@ -1595,20 +1595,20 @@
 
     param[journal_id] = bmri
 
-    au < exists ; exists ; 2001 ; BioMed Research International Volume 1 (2001) ; 2001 ; 1 >
-    au < exists ; exists ; 2002 ; BioMed Research International Volume 2 (2002) ; 2002 ; 2 >
-    au < exists ; exists ; 2003 ; BioMed Research International Volume 2003 ; 2003 ; 2003 >
-    au < exists ; exists ; 2004 ; BioMed Research International Volume 2004 ; 2004 ; 2004 >
-    au < exists ; exists ; 2005 ; BioMed Research International Volume 2005 ; 2005 ; 2005 >
-    au < exists ; exists ; 2006 ; BioMed Research International Volume 2006 ; 2006 ; 2006 >
-    au < exists ; exists ; 2007 ; BioMed Research International Volume 2007 ; 2007 ; 2007 >
-    au < exists ; exists ; 2008 ; BioMed Research International Volume 2008 ; 2008 ; 2008 >
-    au < exists ; exists ; 2009 ; BioMed Research International Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; BioMed Research International Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; BioMed Research International Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; BioMed Research International Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; BioMed Research International Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; BioMed Research International Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2001 ; BioMed Research International Volume 1 (2001) ; 2001 ; 1 >
+    au < manifest ; exists ; 2002 ; BioMed Research International Volume 2 (2002) ; 2002 ; 2 >
+    au < manifest ; exists ; 2003 ; BioMed Research International Volume 2003 ; 2003 ; 2003 >
+    au < manifest ; exists ; 2004 ; BioMed Research International Volume 2004 ; 2004 ; 2004 >
+    au < manifest ; exists ; 2005 ; BioMed Research International Volume 2005 ; 2005 ; 2005 >
+    au < manifest ; exists ; 2006 ; BioMed Research International Volume 2006 ; 2006 ; 2006 >
+    au < manifest ; exists ; 2007 ; BioMed Research International Volume 2007 ; 2007 ; 2007 >
+    au < manifest ; exists ; 2008 ; BioMed Research International Volume 2008 ; 2008 ; 2008 >
+    au < manifest ; exists ; 2009 ; BioMed Research International Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; BioMed Research International Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; BioMed Research International Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; BioMed Research International Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; BioMed Research International Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; BioMed Research International Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -1622,10 +1622,10 @@
 
     param[journal_id] = btri
 
-    au < exists ; exists ; 2011 ; Biotechnology Research International Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Biotechnology Research International Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Biotechnology Research International Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Biotechnology Research International Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2011 ; Biotechnology Research International Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Biotechnology Research International Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Biotechnology Research International Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Biotechnology Research International Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -1639,10 +1639,10 @@
 
     param[journal_id] = bmr
 
-    au < exists ; exists ; 2011 ; Bone Marrow Research Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Bone Marrow Research Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Bone Marrow Research Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Bone Marrow Research Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2011 ; Bone Marrow Research Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Bone Marrow Research Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Bone Marrow Research Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Bone Marrow Research Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -1656,12 +1656,12 @@
 
     param[journal_id] = crp
 
-    au < exists ; exists ; 2009 ; Cardiology Research and Practice Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; Cardiology Research and Practice Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; Cardiology Research and Practice Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Cardiology Research and Practice Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Cardiology Research and Practice Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Cardiology Research and Practice Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2009 ; Cardiology Research and Practice Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; Cardiology Research and Practice Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; Cardiology Research and Practice Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Cardiology Research and Practice Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Cardiology Research and Practice Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Cardiology Research and Practice Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -1675,12 +1675,12 @@
 
     param[journal_id] = cpn
 
-    au < exists ; exists ; 2009 ; Cardiovascular Psychiatry and Neurology Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; Cardiovascular Psychiatry and Neurology Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; Cardiovascular Psychiatry and Neurology Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Cardiovascular Psychiatry and Neurology Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Cardiovascular Psychiatry and Neurology Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Cardiovascular Phychiatry and Neurology Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2009 ; Cardiovascular Psychiatry and Neurology Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; Cardiovascular Psychiatry and Neurology Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; Cardiovascular Psychiatry and Neurology Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Cardiovascular Psychiatry and Neurology Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Cardiovascular Psychiatry and Neurology Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Cardiovascular Phychiatry and Neurology Volume 2014 ; 2014 ; 2014 >
     
   }
 
@@ -1694,10 +1694,10 @@
 
     param[journal_id] = cria
 
-    au < exists ; exists ; 2011 ; Case Reports in Anesthesiology Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Case Reports in Anesthesiology Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Case Reports in Anesthesiology Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Case Reports in Anesthesiology Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2011 ; Case Reports in Anesthesiology Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Case Reports in Anesthesiology Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Case Reports in Anesthesiology Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Case Reports in Anesthesiology Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -1711,10 +1711,10 @@
 
     param[journal_id] = cric
 
-    au < exists ; exists ; 2011 ; Case Reports in Cardiology Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Case Reports in Cardiology Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Case Reports in Cardiology Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Case Reports in Cardiology Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2011 ; Case Reports in Cardiology Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Case Reports in Cardiology Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Case Reports in Cardiology Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Case Reports in Cardiology Volume 2014 ; 2014 ; 2014 >
 
   }
   
@@ -1728,10 +1728,10 @@
 
     param[journal_id] = cricc
 
-    au < exists ; exists ; 2011 ; Case Reports in Critical Care Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Case Reports in Critical Care Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Case Reports in Critical Care Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Case Reports in Critical Care Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2011 ; Case Reports in Critical Care Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Case Reports in Critical Care Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Case Reports in Critical Care Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Case Reports in Critical Care Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -1745,10 +1745,10 @@
 
     param[journal_id] = crid
 
-    au < exists ; exists ; 2011 ; Case Reports in Dentistry Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Case Reports in Dentistry Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Case Reports in Dentistry Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Case Reports in Dentistry Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2011 ; Case Reports in Dentistry Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Case Reports in Dentistry Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Case Reports in Dentistry Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Case Reports in Dentistry Volume 2014 ; 2014 ; 2014 >
 
   }
   
@@ -1762,10 +1762,10 @@
 
     param[journal_id] = cridm
 
-    au < exists ; exists ; 2011 ; Case Reports in Dermatological Medicine Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Case Reports in Dermatological Medicine Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Case Reports in Dermatological Medicine Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Case Reports in Dermatological Medicine Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2011 ; Case Reports in Dermatological Medicine Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Case Reports in Dermatological Medicine Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Case Reports in Dermatological Medicine Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Case Reports in Dermatological Medicine Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -1779,10 +1779,10 @@
 
     param[journal_id] = criem
 
-    au < exists ; exists ; 2011 ; Case Reports in Emergency Medicine Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Case Reports in Emergency Medicine Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Case Reports in Emergency Medicine Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Case Reports in Emergency Medicine Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2011 ; Case Reports in Emergency Medicine Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Case Reports in Emergency Medicine Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Case Reports in Emergency Medicine Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Case Reports in Emergency Medicine Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -1796,10 +1796,10 @@
 
     param[journal_id] = crie
 
-    au < exists ; exists ; 2011 ; Case Reports in Endocrinology Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Case Reports in Endocrinology Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Case Reports in Endocrinology Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Case Reports in Endocrinology Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2011 ; Case Reports in Endocrinology Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Case Reports in Endocrinology Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Case Reports in Endocrinology Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Case Reports in Endocrinology Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -1813,10 +1813,10 @@
 
     param[journal_id] = crigm
 
-    au < exists ; exists ; 2011 ; Case Reports in Gastrointestinal Medicine Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Case Reports in Gastrointestinal Medicine Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Case Reports in Gastrointestinal Medicine Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Case Reports in Gastrointestinal Medicine Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2011 ; Case Reports in Gastrointestinal Medicine Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Case Reports in Gastrointestinal Medicine Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Case Reports in Gastrointestinal Medicine Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Case Reports in Gastrointestinal Medicine Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -1830,10 +1830,10 @@
 
     param[journal_id] = crig
 
-    au < exists ; exists ; 2011 ; Case Reports in Genetics Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Case Reports in Genetics Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Case Reports in Genetics Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Case Reports in Genetics Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2011 ; Case Reports in Genetics Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Case Reports in Genetics Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Case Reports in Genetics Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Case Reports in Genetics Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -1847,10 +1847,10 @@
 
     param[journal_id] = crihem
 
-    au < exists ; exists ; 2011 ; Case Reports in Hematology Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Case Reports in Hematology Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Case Reports in Hematology Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Case Reports in Hematology Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2011 ; Case Reports in Hematology Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Case Reports in Hematology Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Case Reports in Hematology Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Case Reports in Hematology Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -1864,10 +1864,10 @@
 
     param[journal_id] = crihep
 
-    au < exists ; exists ; 2011 ; Case Reports in Hepatology Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Case Reports in Hepatology Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Case Reports in Hepatology Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Case Reports in Hepatology Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2011 ; Case Reports in Hepatology Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Case Reports in Hepatology Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Case Reports in Hepatology Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Case Reports in Hepatology Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -1881,10 +1881,10 @@
 
     param[journal_id] = crii
 
-    au < exists ; exists ; 2011 ; Case Reports in Immunology Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Case Reports in Immunology Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Case Reports in Immunology Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Case Reports in Immunology Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2011 ; Case Reports in Immunology Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Case Reports in Immunology Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Case Reports in Immunology Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Case Reports in Immunology Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -1898,10 +1898,10 @@
 
     param[journal_id] = criid
 
-    au < exists ; exists ; 2011 ; Case Reports in Infectious Diseases Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Case Reports in Infectious Diseases Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Case Reports in Infectious Diseases Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Case Reports in Infectious Diseases Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2011 ; Case Reports in Infectious Diseases Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Case Reports in Infectious Diseases Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Case Reports in Infectious Diseases Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Case Reports in Infectious Diseases Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -1915,12 +1915,12 @@
 
     param[journal_id] = crim
 
-    au < exists ; exists ; 2009 ; Case Reports in Medicine Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; Case Reports in Medicine Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; Case Reports in Medicine Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Case Reports in Medicine Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Case Reports in Medicine Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Case Reports in Medicine Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2009 ; Case Reports in Medicine Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; Case Reports in Medicine Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; Case Reports in Medicine Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Case Reports in Medicine Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Case Reports in Medicine Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Case Reports in Medicine Volume 2014 ; 2014 ; 2014 >
     
   }
 
@@ -1934,10 +1934,10 @@
 
     param[journal_id] = crin
 
-    au < exists ; exists ; 2011 ; Case Reports in Nephrology Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Case Reports in Nephrology Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Case Reports in Nephrology Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Case Reports in Nephrology Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2011 ; Case Reports in Nephrology Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Case Reports in Nephrology Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Case Reports in Nephrology Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Case Reports in Nephrology Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -1951,10 +1951,10 @@
 
     param[journal_id] = crinm
 
-    au < exists ; exists ; 2011 ; Case Reports in Neurological Medicine Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Case Reports in Neurological Medicine Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Case Reports in Neurological Medicine Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Case Reports in Neurological Medicine Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2011 ; Case Reports in Neurological Medicine Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Case Reports in Neurological Medicine Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Case Reports in Neurological Medicine Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Case Reports in Neurological Medicine Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -1968,10 +1968,10 @@
 
     param[journal_id] = criog
 
-    au < exists ; exists ; 2011 ; Case Reports in Obstetrics and Gynecology Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Case Reports in Obstetrics and Gynecology Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Case Reports in Obstetrics and Gynecology Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Case Reports in Obstetrics and Gynecology Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2011 ; Case Reports in Obstetrics and Gynecology Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Case Reports in Obstetrics and Gynecology Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Case Reports in Obstetrics and Gynecology Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Case Reports in Obstetrics and Gynecology Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -1985,10 +1985,10 @@
 
     param[journal_id] = crionm
 
-    au < exists ; exists ; 2011 ; Case Reports in Oncological Medicine Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Case Reports in Oncological Medicine Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Case Reports in Oncological Medicine Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Case Reports in Oncological Medicine Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2011 ; Case Reports in Oncological Medicine Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Case Reports in Oncological Medicine Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Case Reports in Oncological Medicine Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Case Reports in Oncological Medicine Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2002,10 +2002,10 @@
 
     param[journal_id] = criopm
 
-    au < exists ; exists ; 2011 ; Case Reports in Ophthalmological Medicine Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Case Reports in Ophthalmological Medicine Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Case Reports in Ophthalmological Medicine Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Case Reports in Ophthalmological Medicine Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2011 ; Case Reports in Ophthalmological Medicine Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Case Reports in Ophthalmological Medicine Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Case Reports in Ophthalmological Medicine Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Case Reports in Ophthalmological Medicine Volume 2014 ; 2014 ; 2014 >
 
   }
  
@@ -2019,10 +2019,10 @@
 
     param[journal_id] = crior
 
-    au < exists ; exists ; 2011 ; Case Reports in Orthopedics Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Case Reports in Orthopedics Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Case Reports in Orthopedics Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Case Reports in Orthopedics Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2011 ; Case Reports in Orthopedics Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Case Reports in Orthopedics Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Case Reports in Orthopedics Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Case Reports in Orthopedics Volume 2014 ; 2014 ; 2014 >
 
   }
   
@@ -2036,10 +2036,10 @@
 
     param[journal_id] = criot
 
-    au < exists ; exists ; 2011 ; Case Reports in Otolaryngology Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Case Reports in Otolaryngology Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Case Reports in Otolaryngology Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Case Reports in Otolaryngology Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2011 ; Case Reports in Otolaryngology Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Case Reports in Otolaryngology Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Case Reports in Otolaryngology Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Case Reports in Otolaryngology Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2053,10 +2053,10 @@
 
     param[journal_id] = cripa
 
-    au < exists ; exists ; 2011 ; Case Reports in Pathology Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Case Reports in Pathology Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Case Reports in Pathology Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Case Reports in Pathology Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2011 ; Case Reports in Pathology Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Case Reports in Pathology Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Case Reports in Pathology Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Case Reports in Pathology Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2070,10 +2070,10 @@
 
     param[journal_id] = cripe
 
-    au < exists ; exists ; 2011 ; Case Reports in Pediatrics Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Case Reports in Pediatrics Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Case Reports in Pediatrics Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Case Reports in Pediatrics Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2011 ; Case Reports in Pediatrics Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Case Reports in Pediatrics Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Case Reports in Pediatrics Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Case Reports in Pediatrics Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2087,10 +2087,10 @@
 
     param[journal_id] = crips
 
-    au < exists ; exists ; 2011 ; Case Reports in Psychiatry Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Case Reports in Psychiatry Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Case Reports in Psychiatry Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Case Reports in Psychiatry Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2011 ; Case Reports in Psychiatry Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Case Reports in Psychiatry Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Case Reports in Psychiatry Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Case Reports in Psychiatry Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2104,10 +2104,10 @@
 
     param[journal_id] = cripu
 
-    au < exists ; exists ; 2011 ; Case Reports in Pulmonology Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Case Reports in Pulmonology Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Case Reports in Pulmonology Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Case Reports in Pulmonology Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2011 ; Case Reports in Pulmonology Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Case Reports in Pulmonology Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Case Reports in Pulmonology Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Case Reports in Pulmonology Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2121,10 +2121,10 @@
 
     param[journal_id] = crira
 
-    au < exists ; exists ; 2011 ; Case Reports in Radiology Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Case Reports in Radiology Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Case Reports in Radiology Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Case Reports in Radiology Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2011 ; Case Reports in Radiology Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Case Reports in Radiology Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Case Reports in Radiology Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Case Reports in Radiology Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2138,10 +2138,10 @@
 
     param[journal_id] = crirh
 
-    au < exists ; exists ; 2011 ; Case Reports in Rheumatology Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Case Reports in Rheumatology Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Case Reports in Rheumatology Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Case Reports in Rheumatology Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2011 ; Case Reports in Rheumatology Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Case Reports in Rheumatology Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Case Reports in Rheumatology Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Case Reports in Rheumatology Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2155,10 +2155,10 @@
 
     param[journal_id] = cris
 
-    au < exists ; exists ; 2011 ; Case Reports in Surgery Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Case Reports in Surgery Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Case Reports in Surgery Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Case Reports in Surgery Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2011 ; Case Reports in Surgery Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Case Reports in Surgery Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Case Reports in Surgery Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Case Reports in Surgery Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2172,10 +2172,10 @@
 
     param[journal_id] = crit
 
-    au < exists ; exists ; 2011 ; Case Reports in Transplantation Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Case Reports in Transplantation Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Case Reports in Transplantation Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Case Reports in Transplantation Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2011 ; Case Reports in Transplantation Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Case Reports in Transplantation Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Case Reports in Transplantation Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Case Reports in Transplantation Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2189,10 +2189,10 @@
 
     param[journal_id] = criu
 
-    au < exists ; exists ; 2011 ; Case Reports in Urology Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Case Reports in Urology Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Case Reports in Urology Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Case Reports in Urology Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2011 ; Case Reports in Urology Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Case Reports in Urology Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Case Reports in Urology Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Case Reports in Urology Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2206,10 +2206,10 @@
 
     param[journal_id] = crivam
 
-    au < exists ; exists ; 2011 ; Case Reports in Vascular Medicine Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Case Reports in Vascular Medicine Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Case Reports in Vascular Medicine Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Case Reports in Vascular Medicine Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2011 ; Case Reports in Vascular Medicine Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Case Reports in Vascular Medicine Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Case Reports in Vascular Medicine Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Case Reports in Vascular Medicine Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2223,10 +2223,10 @@
 
     param[journal_id] = crivem
 
-    au < exists ; exists ; 2011 ; Case Reports in Veterinary Medicine Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Case Reports in Veterinary Medicine Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Case Reports in Veterinary Medicine Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Case Reports in Veterinary Medicine Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2011 ; Case Reports in Veterinary Medicine Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Case Reports in Veterinary Medicine Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Case Reports in Veterinary Medicine Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Case Reports in Veterinary Medicine Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2240,11 +2240,11 @@
 
     param[journal_id] = cherp
 
-    au < exists ; exists ; 2010 ; Chemotherapy Research and Practice Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; Chemotherapy Research and Practice Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Chemotherapy Research and Practice Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Chemotherapy Research and Practice Volume 2013 ; 2013 ; 2013 >
-    au < expected ; exists ; 2014 ; Chemotherapy Research and Practice Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2010 ; Chemotherapy Research and Practice Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; Chemotherapy Research and Practice Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Chemotherapy Research and Practice Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Chemotherapy Research and Practice Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Chemotherapy Research and Practice Volume 2014 ; 2014 ; 2014 >
     
   }
   
@@ -2258,10 +2258,10 @@
 
     param[journal_id] = cdr
 
-    au < exists ; exists ; 2011 ; Child Development Research Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Child Development Research Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Child Development Reserach Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Child Development Research Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2011 ; Child Development Research Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Child Development Research Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Child Development Reserach Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Child Development Research Volume 2014 ; 2014 ; 2014 >
 
   }
   
@@ -2274,7 +2274,7 @@
 
     param[journal_id] = cjb
 
-    au < exists ; exists ; 2014 ; Chinese Journal of Biology Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2014 ; Chinese Journal of Biology Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2287,8 +2287,8 @@
 
     param[journal_id] = cje
 
-    au < exists ; exists ; 2013 ; Chinese Journal of Engineering Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Chinese Journal of Engineering Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2013 ; Chinese Journal of Engineering Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Chinese Journal of Engineering Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2301,8 +2301,8 @@
 
     param[journal_id] = cjm
 
-    au < exists ; exists ; 2013 ; Chinese Journal of Mathematics Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Chinese Journal of Mathematics Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2013 ; Chinese Journal of Mathematics Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Chinese Journal of Mathematics Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2316,11 +2316,11 @@
 
     param[journal_id] = cholesterol
 
-    au < exists ; exists ; 2010 ; Cholesterol Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; Cholesterol Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Cholesterol Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Cholesterol Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Cholesterol Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2010 ; Cholesterol Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; Cholesterol Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Cholesterol Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Cholesterol Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Cholesterol Volume 2014 ; 2014 ; 2014 >
     
   }
 
@@ -2334,10 +2334,10 @@
 
     param[journal_id] = cri
 
-    au < exists ; exists ; 2011 ; Chromatography Research International Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Chromatography Research International Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Chromatography Research International Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Chromatography Research International Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2011 ; Chromatography Research International Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Chromatography Research International Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Chromatography Research International Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Chromatography Research International Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2350,24 +2350,25 @@
     >
 
     param[journal_id] = cmmm
+    comment[0] = no issue in 2004
 
-    au < exists ; exists ; 1997 ; Computational and Mathematical Methods in Medicine Volume 1 (1997) ; 1997 ; 1 >
-    au < exists ; exists ; 1998 ; Computational and Mathematical Methods in Medicine Volume 1 (1998) ; 1998 ; 1 >
-    au < exists ; exists ; 1999 ; Computational and Mathematical Methods in Medicine Volume 1-2 (1999) ; 1999 ; 1-2 >
-    au < exists ; exists ; 2000 ; Computational and Mathematical Methods in Medicine Volume 2-3 (2000) ; 2000 ; 2-3 >
-    au < exists ; exists ; 2001 ; Computational and Mathematical Methods in Medicine Volume 3 (2001) ; 2001 ; 3 >
-    au < exists ; exists ; 2002 ; Computational and Mathematical Methods in Medicine Volume 4 (2002) ; 2002 ; 4 >
-    au < exists ; exists ; 2003 ; Computational and Mathematical Methods in Medicine Volume 5 (2003) ; 2003 ; 5 >
-    au < exists ; exists ; 2005 ; Computational and Mathematical Methods in Medicine Volume 6 (2005) ; 2005 ; 6 >
-    au < exists ; exists ; 2006 ; Computational and Mathematical Methods in Medicine Volume 7 (2006) ; 2006 ; 7 >
-    au < exists ; exists ; 2007 ; Computational and Mathematical Methods in Medicine Volume 8 (2007) ; 2007 ; 8 >
-    au < exists ; exists ; 2008 ; Computational and Mathematical Methods in Medicine Volume 9 (2008) ; 2008 ; 9 >
-    au < exists ; exists ; 2009 ; Computational and Mathematical Methods in Medicine Volume 10 (2009) ; 2009 ; 10 >
-    au < exists ; exists ; 2010 ; Computational and Mathematical Methods in Medicine Volume 11 (2010) ; 2010 ; 11 >
-    au < exists ; exists ; 2011 ; Computational and Mathematical Methods in Medicine Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Computational and Mathematical Methods in Medicine Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Computational and Mathematical Methods in Medicine Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Computational and Mathematical Methods in Medicine Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 1997 ; Computational and Mathematical Methods in Medicine Volume 1 (1997) ; 1997 ; 1 >
+    au < manifest ; exists ; 1998 ; Computational and Mathematical Methods in Medicine Volume 1 (1998) ; 1998 ; 1 >
+    au < manifest ; exists ; 1999 ; Computational and Mathematical Methods in Medicine Volume 1-2 (1999) ; 1999 ; 1-2 >
+    au < manifest ; exists ; 2000 ; Computational and Mathematical Methods in Medicine Volume 2-3 (2000) ; 2000 ; 2-3 >
+    au < manifest ; exists ; 2001 ; Computational and Mathematical Methods in Medicine Volume 3 (2001) ; 2001 ; 3 >
+    au < manifest ; exists ; 2002 ; Computational and Mathematical Methods in Medicine Volume 4 (2002) ; 2002 ; 4 >
+    au < manifest ; exists ; 2003 ; Computational and Mathematical Methods in Medicine Volume 5 (2003) ; 2003 ; 5 >
+    au < manifest ; exists ; 2005 ; Computational and Mathematical Methods in Medicine Volume 6 (2005) ; 2005 ; 6 >
+    au < manifest ; exists ; 2006 ; Computational and Mathematical Methods in Medicine Volume 7 (2006) ; 2006 ; 7 >
+    au < manifest ; exists ; 2007 ; Computational and Mathematical Methods in Medicine Volume 8 (2007) ; 2007 ; 8 >
+    au < manifest ; exists ; 2008 ; Computational and Mathematical Methods in Medicine Volume 9 (2008) ; 2008 ; 9 >
+    au < manifest ; exists ; 2009 ; Computational and Mathematical Methods in Medicine Volume 10 (2009) ; 2009 ; 10 >
+    au < manifest ; exists ; 2010 ; Computational and Mathematical Methods in Medicine Volume 11 (2010) ; 2010 ; 11 >
+    au < manifest ; exists ; 2011 ; Computational and Mathematical Methods in Medicine Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Computational and Mathematical Methods in Medicine Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Computational and Mathematical Methods in Medicine Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Computational and Mathematical Methods in Medicine Volume 2014 ; 2014 ; 2014 >
 
   }
   
@@ -2381,8 +2382,8 @@
 
     param[journal_id] = cbj
 
-    au < exists ; exists ; 2013 ; Computational Biology Journal Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Computational Biology Journal Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2013 ; Computational Biology Journal Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Computational Biology Journal Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2396,14 +2397,14 @@
 
     param[journal_id] = cin
 
-    au < exists ; exists ; 2007 ; Computational Intelligence and Neuroscience Volume 2007 ; 2007 ; 2007 >
-    au < exists ; exists ; 2008 ; Computational Intelligence and Neuroscience Volume 2008 ; 2008 ; 2008 >
-    au < exists ; exists ; 2009 ; Computational Intelligence and Neuroscience Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; Computational Intelligence and Neuroscience Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; Computational Intelligence and Neuroscience Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Computational Intelligence and Neuroscience Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Computational Intelligence and Neuroscience Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Computational Intelligence and Neuroscience Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2007 ; Computational Intelligence and Neuroscience Volume 2007 ; 2007 ; 2007 >
+    au < manifest ; exists ; 2008 ; Computational Intelligence and Neuroscience Volume 2008 ; 2008 ; 2008 >
+    au < manifest ; exists ; 2009 ; Computational Intelligence and Neuroscience Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; Computational Intelligence and Neuroscience Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; Computational Intelligence and Neuroscience Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Computational Intelligence and Neuroscience Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Computational Intelligence and Neuroscience Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Computational Intelligence and Neuroscience Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2417,8 +2418,8 @@
 
     param[journal_id] = cpis
 
-    au < exists ; exists ; 2013 ; Conference Papers in Science Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Conference Papers in Science Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2013 ; Conference Papers in Science Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Conference Papers in Science Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2432,11 +2433,11 @@
 
     param[journal_id] = ccrp
 
-    au < exists ; exists ; 2010 ; Critical Care Research and Practice Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; Critical Care Research and Practice Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Critical Care Research and Practice Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Critical Care Research and Practice Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Critical Care Research and Practice Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2010 ; Critical Care Research and Practice Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; Critical Care Research and Practice Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Critical Care Research and Practice Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Critical Care Research and Practice Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Critical Care Research and Practice Volume 2014 ; 2014 ; 2014 >
     
   }
   {
@@ -2449,13 +2450,13 @@
 
     param[journal_id] = cggr
 
-    au < exists ; exists ; 2008 ; Current Gerontology and Geriatrics Research Volume 2008 ; 2008 ; 2008 >
-    au < exists ; exists ; 2009 ; Current Gerontology and Geriatrics Research Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; Current Gerontology and Geriatrics Research Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; Current Gerontology and Geriatrics Research Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Current Gerontology and Geriatrics Research Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Current Gerontology and Geriatrics Research Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Current Gerontology and Geriatrics Research Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2008 ; Current Gerontology and Geriatrics Research Volume 2008 ; 2008 ; 2008 >
+    au < manifest ; exists ; 2009 ; Current Gerontology and Geriatrics Research Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; Current Gerontology and Geriatrics Research Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; Current Gerontology and Geriatrics Research Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Current Gerontology and Geriatrics Research Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Current Gerontology and Geriatrics Research Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Current Gerontology and Geriatrics Research Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2468,8 +2469,8 @@
 
     param[journal_id] = dpis
 
-    au < exists ; exists ; 2013 ; Dataset Papers in Science Volume 2013 ; 2013 ; 2013 >
-    au < expected ; exists ; 2014 ; Dataset Papers in Science Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2013 ; Dataset Papers in Science Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Dataset Papers in Science Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2483,11 +2484,11 @@
 
     param[journal_id] = drt
 
-    au < exists ; exists ; 2010 ; Depression Research and Treatment Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; Depression Research and Treatment Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Depression Research and Treatment Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Depression Research and Treatment Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Depression Research and Treatment Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2010 ; Depression Research and Treatment Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; Depression Research and Treatment Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Depression Research and Treatment Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Depression Research and Treatment Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Depression Research and Treatment Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2501,12 +2502,12 @@
 
     param[journal_id] = drp
 
-    au < exists ; exists ; 2009 ; Dermatology Research and Practice Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; Dermatology Research and Practice Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; Dermatology Research and Practice Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Dermatology Research and Practice Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Dermatology Research and Practice Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Dermatology Research and Practice Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2009 ; Dermatology Research and Practice Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; Dermatology Research and Practice Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; Dermatology Research and Practice Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Dermatology Research and Practice Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Dermatology Research and Practice Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Dermatology Research and Practice Volume 2014 ; 2014 ; 2014 >
     
   }
   
@@ -2520,7 +2521,7 @@
 
     param[journal_id] = dbj
 
-    au < exists ; exists ; 2013 ; Developmental Biology Journal Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2013 ; Developmental Biology Journal Volume 2013 ; 2013 ; 2013 >
     au < expected ; exists ; 2014 ; Developmental Biology Journal Volume 2014 ; 2014 ; 2014 >
 
   }
@@ -2534,21 +2535,23 @@
     >
 
     param[journal_id] = dte
-
-    au < exists ; exists ; 2001 ; Diagnostic and Therapeutic Endoscopy Volume 1 (2001) ; 2001 ; 1 >
-    au < exists ; exists ; 2002 ; Diagnostic and Therapeutic Endoscopy Volume 2 (2002) ; 2002 ; 2 >
-    au < exists ; exists ; 2003 ; Diagnostic and Therapeutic Endoscopy Volume 3 (2003) ; 2003 ; 3 >
-    au < exists ; exists ; 2004 ; Diagnostic and Therapeutic Endoscopy Volume 4 (2004) ; 2004 ; 4 >
-    au < exists ; exists ; 2005 ; Diagnostic and Therapeutic Endoscopy Volume 5 (2005) ; 2005 ; 5 >
-    au < exists ; exists ; 2006 ; Diagnostic and Therapeutic Endoscopy Volume 6 (2006) ; 2006 ; 6 >
-    au < exists ; exists ; 2007 ; Diagnostic and Therapeutic Endoscopy Volume 7 (2007) ; 2007 ; 7 >
-    au < exists ; exists ; 2008 ; Diagnostic and Therapeutic Endoscopy Volume 2008 ; 2008 ; 2008 >
-    au < exists ; exists ; 2009 ; Diagnostic and Therapeutic Endoscopy Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; Diagnostic and Therapeutic Endoscopy Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; Diagnostic and Therapeutic Endoscopy Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Diagnostic and Therapeutic Endoscopy Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Diagnostic and Therapeutic Endoscopy Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Diagnostic and Therapeutic Endoscopy Volume 2014 ; 2014 ; 2014 >
+    comment[0] = no issue from 2002 to 2007
+    
+    au < exists ; exists ; 1994 ; Diagnostic and Therapeutic Endoscopy Volume 1 (1994) ; 1994 ; 1 >
+    au < exists ; exists ; 1995 ; Diagnostic and Therapeutic Endoscopy Volume 1-2 (2005) ; 2005 ; 1-2 >
+    au < exists ; exists ; 1996 ; Diagnostic and Therapeutic Endoscopy Volume 2-3 (2006) ; 2006 ; 2-3 >
+    au < exists ; exists ; 1997 ; Diagnostic and Therapeutic Endoscopy Volume 3-4 (2007) ; 2007 ; 3-4 >
+    au < exists ; exists ; 1998 ; Diagnostic and Therapeutic Endoscopy Volume 4-5 (1998) ; 1998 ; 4-5 >
+    au < exists ; exists ; 1999 ; Diagnostic and Therapeutic Endoscopy Volume 5-6 (1999) ; 1999 ; 5-6 >
+    au < exists ; exists ; 2000 ; Diagnostic and Therapeutic Endoscopy Volume 6-7 (2000) ; 2000 ; 6-7 >
+    au < manifest ; exists ; 2001 ; Diagnostic and Therapeutic Endoscopy Volume 7 (2001) ; 2001 ; 7 >
+    au < manifest ; exists ; 2008 ; Diagnostic and Therapeutic Endoscopy Volume 2008 ; 2008 ; 2008 >
+    au < manifest ; exists ; 2009 ; Diagnostic and Therapeutic Endoscopy Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; Diagnostic and Therapeutic Endoscopy Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; Diagnostic and Therapeutic Endoscopy Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Diagnostic and Therapeutic Endoscopy Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Diagnostic and Therapeutic Endoscopy Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Diagnostic and Therapeutic Endoscopy Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2563,23 +2566,23 @@
     param[journal_id] = ddns
     comment[2003] = no issue in 2003
 
-    au < exists ; exists ; 1997 ; Discrete Dynamics in Nature and Society Volume 1 (1997) ; 1997 ; 1 >
-    au < exists ; exists ; 1998 ; Discrete Dynamics in Nature and Society Volume 1-2 (1998) ; 1998 ; 1-2 >
-    au < exists ; exists ; 1999 ; Discrete Dynamics in Nature and Society Volume 3 (1999) ; 1999 ; 3 >
-    au < exists ; exists ; 2000 ; Discrete Dynamics in Nature and Society Volume 4-5 (2000) ; 2000 ; 4-5 >
-    au < exists ; exists ; 2001 ; Discrete Dynamics in Nature and Society Volume 6 (2001) ; 2001 ; 6 >
-    au < exists ; exists ; 2002 ; Discrete Dynamics in Nature and Society Volume 7 (2002) ; 2002 ; 7 >
-    au < exists ; exists ; 2004 ; Discrete Dynamics in Nature and Society Volume 2004 ; 2004 ; 2004 >
-    au < exists ; exists ; 2005 ; Discrete Dynamics in Nature and Society Volume 2005 ; 2005 ; 2005 >
-    au < exists ; exists ; 2006 ; Discrete Dynamics in Nature and Society Volume 2006 ; 2006 ; 2006 >
-    au < exists ; exists ; 2007 ; Discrete Dynamics in Nature and Society Volume 2007 ; 2007 ; 2007 >
-    au < exists ; exists ; 2008 ; Discrete Dynamics in Nature and Society Volume 2008 ; 2008 ; 2008 >
-    au < exists ; exists ; 2009 ; Discrete Dynamics in Nature and Society Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; Discrete Dynamics in Nature and Society Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; Discrete Dynamics in Nature and Society Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Discrete Dynamics in Nature and Society Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Discrete Dynamics in Nature and Society Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Discrete Dynamics in Nature and Society Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 1997 ; Discrete Dynamics in Nature and Society Volume 1 (1997) ; 1997 ; 1 >
+    au < manifest ; exists ; 1998 ; Discrete Dynamics in Nature and Society Volume 1-2 (1998) ; 1998 ; 1-2 >
+    au < manifest ; exists ; 1999 ; Discrete Dynamics in Nature and Society Volume 3 (1999) ; 1999 ; 3 >
+    au < manifest ; exists ; 2000 ; Discrete Dynamics in Nature and Society Volume 4-5 (2000) ; 2000 ; 4-5 >
+    au < manifest ; exists ; 2001 ; Discrete Dynamics in Nature and Society Volume 6 (2001) ; 2001 ; 6 >
+    au < manifest ; exists ; 2002 ; Discrete Dynamics in Nature and Society Volume 7 (2002) ; 2002 ; 7 >
+    au < manifest ; exists ; 2004 ; Discrete Dynamics in Nature and Society Volume 2004 ; 2004 ; 2004 >
+    au < manifest ; exists ; 2005 ; Discrete Dynamics in Nature and Society Volume 2005 ; 2005 ; 2005 >
+    au < manifest ; exists ; 2006 ; Discrete Dynamics in Nature and Society Volume 2006 ; 2006 ; 2006 >
+    au < manifest ; exists ; 2007 ; Discrete Dynamics in Nature and Society Volume 2007 ; 2007 ; 2007 >
+    au < manifest ; exists ; 2008 ; Discrete Dynamics in Nature and Society Volume 2008 ; 2008 ; 2008 >
+    au < manifest ; exists ; 2009 ; Discrete Dynamics in Nature and Society Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; Discrete Dynamics in Nature and Society Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; Discrete Dynamics in Nature and Society Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Discrete Dynamics in Nature and Society Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Discrete Dynamics in Nature and Society Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Discrete Dynamics in Nature and Society Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2594,26 +2597,26 @@
     param[journal_id] = dm
     comment[0] = no issue in 1995, 1997
 
-    au < exists ; exists ; 2011 ; Disease Markers Volume 11 (1993) ; 1993 ; 11 >
-    au < exists ; exists ; 2012 ; Disease Markers Volume 12 (1994) ; 1994 ; 12 >
-    au < exists ; exists ; 2013 ; Disease Markers Volume 12-13 (1996) ; 1996 ; -1213 >
-    au < exists ; exists ; 2014 ; Disease Markers Volume 13-14 (1998) ; 1998 ; 13-14 >
-    au < exists ; exists ; 2005 ; Disease Markers Volume 15 (1999) ; 1999 ; 15 >
-    au < exists ; exists ; 2006 ; Disease Markers Volume 16 (2000) ; 2000 ; 16 >
-    au < exists ; exists ; 2007 ; Disease Markers Volume 17 (2001) ; 2001 ; 17 >
-    au < exists ; exists ; 2008 ; Disease Markers Volume 18 (2002) ; 2002 ; 18 >
-    au < exists ; exists ; 2009 ; Disease Markers Volume 19 (2003) ; 2003 ; 19 >
-    au < exists ; exists ; 2010 ; Disease Markers Volume 19-20 (2004) ; 2004 ; 19-20 >
-    au < exists ; exists ; 2005 ; Disease Markers Volume 21 (2005) ; 2005 ; 21 >
-    au < exists ; exists ; 2006 ; Disease Markers Volume 22 (2006) ; 2006 ; 22 >
-    au < exists ; exists ; 2007 ; Disease Markers Volume 23 (2007) ; 2007 ; 23 >
-    au < exists ; exists ; 2008 ; Disease Markers Volume 24-25 (2008) ; 2008 ; 24-25 >
-    au < exists ; exists ; 2009 ; Disease Markers Volume 26-27 (2009) ; 2009 ; 26-27 >
-    au < exists ; exists ; 2010 ; Disease Markers Volume 28-29 (2010) ; 2010 ; 28-29 >
-    au < exists ; exists ; 2011 ; Disease Markers Volume 30-31 (2011) ; 2011 ; 30-31 >
-    au < exists ; exists ; 2012 ; Disease Markers Volume 32-33 (2012) ; 2012 ; 32-33 >
-    au < exists ; exists ; 2013 ; Disease Markers Volume 35 (2013) ; 2013 ; 35 >
-    au < exists ; exists ; 2014 ; Disease Markers Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 1993 ; Disease Markers Volume 11 (1993) ; 1993 ; 11 >
+    au < manifest ; exists ; 1994 ; Disease Markers Volume 12 (1994) ; 1994 ; 12 >
+    au < manifest ; exists ; 1996 ; Disease Markers Volume 12-13 (1996) ; 1996 ; 12-13 >
+    au < manifest ; exists ; 1998 ; Disease Markers Volume 13-14 (1998) ; 1998 ; 13-14 >
+    au < manifest ; exists ; 1999 ; Disease Markers Volume 15 (1999) ; 1999 ; 15 >
+    au < manifest ; exists ; 2000 ; Disease Markers Volume 16 (2000) ; 2000 ; 16 >
+    au < manifest ; exists ; 2001 ; Disease Markers Volume 17 (2001) ; 2001 ; 17 >
+    au < manifest ; exists ; 2002 ; Disease Markers Volume 18 (2002) ; 2002 ; 18 >
+    au < manifest ; exists ; 2003 ; Disease Markers Volume 19 (2003) ; 2003 ; 19 >
+    au < manifest ; exists ; 2004 ; Disease Markers Volume 19-20 (2004) ; 2004 ; 19-20 >
+    au < manifest ; exists ; 2005 ; Disease Markers Volume 21 (2005) ; 2005 ; 21 >
+    au < manifest ; exists ; 2006 ; Disease Markers Volume 22 (2006) ; 2006 ; 22 >
+    au < manifest ; exists ; 2007 ; Disease Markers Volume 23 (2007) ; 2007 ; 23 >
+    au < manifest ; exists ; 2008 ; Disease Markers Volume 24-25 (2008) ; 2008 ; 24-25 >
+    au < manifest ; exists ; 2009 ; Disease Markers Volume 26-27 (2009) ; 2009 ; 26-27 >
+    au < manifest ; exists ; 2010 ; Disease Markers Volume 28-29 (2010) ; 2010 ; 28-29 >
+    au < manifest ; exists ; 2011 ; Disease Markers Volume 30-31 (2011) ; 2011 ; 30-31 >
+    au < manifest ; exists ; 2012 ; Disease Markers Volume 32-33 (2012) ; 2012 ; 32-33 >
+    au < manifest ; exists ; 2013 ; Disease Markers Volume 35 (2013) ; 2013 ; 35 >
+    au < manifest ; exists ; 2014 ; Disease Markers Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2628,11 +2631,11 @@
     {
     param[journal_id] = ecri
 
-    au < exists ; exists ; 2010 ; Economics Research International Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; Economics Research International Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Economics Research International Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Economics Research International Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Economics Research International Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2010 ; Economics Research International Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; Economics Research International Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Economics Research International Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Economics Research International Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Economics Research International Volume 2014 ; 2014 ; 2014 >
     }
 
   }
@@ -2648,10 +2651,10 @@
     {
     param[journal_id] = edri
 
-    au < exists ; exists ; 2011 ; Education Research International Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Education Research International Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Education Research International Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Education Research International Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2011 ; Education Research International Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Education Research International Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Education Research International Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Education Research International Volume 2014 ; 2014 ; 2014 >
     }
 
   }
@@ -2666,11 +2669,11 @@
 
     param[journal_id] = emi
 
-    au < exists ; exists ; 2010 ; Emergency Medicine International Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; Emergency Medicine International Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Emergency Medicine International Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Emergency Medicine International Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Emergency Medicine International Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2010 ; Emergency Medicine International Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; Emergency Medicine International Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Emergency Medicine International Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Emergency Medicine International Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Emergency Medicine International Volume 2014 ; 2014 ; 2014 >
     
   }
 
@@ -2684,11 +2687,11 @@
 
     param[journal_id] = er
 
-    au < exists ; exists ; 2010 ; Enzyme Research Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; Enzyme Research Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Enzyme Research Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Enzyme Research Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Enzyme Research Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2010 ; Enzyme Research Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; Enzyme Research Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Enzyme Research Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Enzyme Research Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Enzyme Research Volume 2014 ; 2014 ; 2014 >
     
   }
 
@@ -2702,10 +2705,10 @@
 
     param[journal_id] = eri
 
-    au < exists ; exists ; 2011 ; Epidemiology Research International Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Epidemiology Research International Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Epidemiology Research International Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Epidemiology Research International Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2011 ; Epidemiology Research International Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Epidemiology Research International Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Epidemiology Research International Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Epidemiology Research International Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2719,11 +2722,11 @@
 
     param[journal_id] = ert
 
-    au < exists ; exists ; 2010 ; Epilepsy Research and Treatment Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; Epilepsy Research and Treatment Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Epilepsy Research and Treatment Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Epilepsy Research and Treatment Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Epilepsy Research and Treatment Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2010 ; Epilepsy Research and Treatment Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; Epilepsy Research and Treatment Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Epilepsy Research and Treatment Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Epilepsy Research and Treatment Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Epilepsy Research and Treatment Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2737,17 +2740,17 @@
 
     param[journal_id] = ecam
 
-    au < exists ; exists ; 2004 ; Evidence-based Complementary and Alternative Medicine Volume 1 (2004) ; 2004 ; 1 >
-    au < exists ; exists ; 2005 ; Evidence-based Complementary and Alternative Medicine Volume 2 (2005) ; 2005 ; 2 >
-    au < exists ; exists ; 2006 ; Evidence-based Complementary and Alternative Medicine Volume 3 (2006) ; 2006 ; 3 >
-    au < exists ; exists ; 2007 ; Evidence-based Complementary and Alternative Medicine Volume 4 (2007) ; 2007 ; 4 >
-    au < exists ; exists ; 2008 ; Evidence-based Complementary and Alternative Medicine Volume 5 (2008) ; 2008 ; 5 >
-    au < exists ; exists ; 2009 ; Evidence-based Complementary and Alternative Medicine Volume 6 (2009) ; 2009 ; 6 >
-    au < exists ; exists ; 2010 ; Evidence-based Complementary and Alternative Medicine Volume 7 (2010) ; 2010 ; 7 >
-    au < exists ; exists ; 2011 ; Evidence-based Complementary and Alternative Medicine Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Evidence-based Complementary and Alternative Medicine Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Evidence-based Complementary and Alternative Medicine Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Evidence-based Complementary and Alternative Medicine Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2004 ; Evidence-based Complementary and Alternative Medicine Volume 1 (2004) ; 2004 ; 1 >
+    au < manifest ; exists ; 2005 ; Evidence-based Complementary and Alternative Medicine Volume 2 (2005) ; 2005 ; 2 >
+    au < manifest ; exists ; 2006 ; Evidence-based Complementary and Alternative Medicine Volume 3 (2006) ; 2006 ; 3 >
+    au < manifest ; exists ; 2007 ; Evidence-based Complementary and Alternative Medicine Volume 4 (2007) ; 2007 ; 4 >
+    au < manifest ; exists ; 2008 ; Evidence-based Complementary and Alternative Medicine Volume 5 (2008) ; 2008 ; 5 >
+    au < manifest ; exists ; 2009 ; Evidence-based Complementary and Alternative Medicine Volume 6 (2009) ; 2009 ; 6 >
+    au < manifest ; exists ; 2010 ; Evidence-based Complementary and Alternative Medicine Volume 7 (2010) ; 2010 ; 7 >
+    au < manifest ; exists ; 2011 ; Evidence-based Complementary and Alternative Medicine Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Evidence-based Complementary and Alternative Medicine Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Evidence-based Complementary and Alternative Medicine Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Evidence-based Complementary and Alternative Medicine Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2761,8 +2764,8 @@
 
     param[journal_id] = gt
 
-    au < exists ; exists ; 2013 ; Game Theory Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Game Theory Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2013 ; Game Theory Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Game Theory Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2776,13 +2779,13 @@
 
     param[journal_id] = grp
 
-    au < exists ; exists ; 2008 ; Gastroenterology Research and Practice Volume 2008 ; 2008 ; 2008 >
-    au < exists ; exists ; 2009 ; Gastroenterology Research and Practice Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; Gastroenterology Research and Practice Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; Gastroenterology Research and Practice Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Gastroenterology Research and Practice Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Gastroenterology Research and Practice Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Gastroenterology Research and Practice Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2008 ; Gastroenterology Research and Practice Volume 2008 ; 2008 ; 2008 >
+    au < manifest ; exists ; 2009 ; Gastroenterology Research and Practice Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; Gastroenterology Research and Practice Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; Gastroenterology Research and Practice Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Gastroenterology Research and Practice Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Gastroenterology Research and Practice Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Gastroenterology Research and Practice Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2795,10 +2798,10 @@
 
     param[journal_id] = gri
 
-    au < exists ; exists ; 2011 ; Genetics Research International Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Genetics Research International Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Genetics Research International Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Genetics Research International Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2011 ; Genetics Research International Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Genetics Research International Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Genetics Research International Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Genetics Research International Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2812,8 +2815,8 @@
 
     param[journal_id] = geography
 
-    au < exists ; exists ; 2013 ; Geography Journal Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Geography Journal Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2013 ; Geography Journal Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Geography Journal Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2827,8 +2830,8 @@
 
     param[journal_id] = geometry
 
-    au < exists ; exists ; 2013 ; Geometry Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Geometry Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2013 ; Geometry Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Geometry Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2842,11 +2845,11 @@
 
     param[journal_id] = heprt
 
-    au < exists ; exists ; 2010 ; Hepatitis Research and Treatment Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; Hepatitis Research and Treatment Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Hepatitis Research and Treatment Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Hepatitis Research and Treatment Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Hepatitis Research and Treatment Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2010 ; Hepatitis Research and Treatment Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; Hepatitis Research and Treatment Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Hepatitis Research and Treatment Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Hepatitis Research and Treatment Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Hepatitis Research and Treatment Volume 2014 ; 2014 ; 2014 >
     
   }
 
@@ -2859,18 +2862,21 @@
     >
 
     param[journal_id] = hpb
+    comment[0] = no issue from 2001 to 2007
 
-    au < exists ; exists ; 1997 ; HPB Surgery Volume 1 (1997) ; 1997 ; 1 >
-    au < exists ; exists ; 1998 ; HPB Surgery Volume 2 (1998) ; 1998 ; 2 >
-    au < exists ; exists ; 1999 ; HPB Surgery Volume 3 (1999) ; 1999 ; 3 >
-    au < exists ; exists ; 2000 ; HPB Surgery Volume 4 (2000) ; 2000 ; 4 >
-    au < exists ; exists ; 2001 ; HPB Surgery Volume 5 (2001) ; 2001 ; 5 >
-    au < exists ; exists ; 2002 ; HPB Surgery Volume 6 (2002) ; 2002 ; 6 >
-    au < exists ; exists ; 2003 ; HPB Surgery Volume 7 (2003) ; 2003 ; 7 >
-    au < exists ; exists ; 2004 ; HPB Surgery Volume 8 (2004) ; 2004 ; 8 >
-    au < exists ; exists ; 2005 ; HPB Surgery Volume 9 (2005) ; 2005 ; 9 >
-    au < exists ; exists ; 2006 ; HPB Surgery Volume 10 (2006) ; 2006 ; 10 >
-    au < exists ; exists ; 2007 ; HPB Surgery Volume 11 (2007) ; 2007 ; 11 >
+    au < exists ; exists ; 1988 ; HPB Surgery Volume 1 (1988) ; 1988 ; 1 >
+    au < exists ; exists ; 1989 ; HPB Surgery Volume 1 (1989) ; 1989 ; 1 >
+    au < exists ; exists ; 1990 ; HPB Surgery Volume 2-3 (1990) ; 1990 ; 2-3 >
+    au < exists ; exists ; 1991 ; HPB Surgery Volume 3-5 (1991) ; 1991 ; 3-5 >
+    au < exists ; exists ; 1992 ; HPB Surgery Volume 5-6 (1992) ; 1992 ; 5-6 >
+    au < exists ; exists ; 1993 ; HPB Surgery Volume 6-7 (1993) ; 1993 ; 6-7 >
+    au < exists ; exists ; 1994 ; HPB Surgery Volume 7-8 (1994) ; 1994 ; 7-8 >
+    au < exists ; exists ; 1995 ; HPB Surgery Volume 8-9 (1995) ; 1995 ; 8-9 >
+    au < exists ; exists ; 1996 ; HPB Surgery Volume 9-10 (1996) ; 1996 ; 9-10 >
+    au < exists ; exists ; 1997 ; HPB Surgery Volume 10 (1997) ; 1997 ; 10 >
+    au < exists ; exists ; 1998 ; HPB Surgery Volume 10-11 (1998) ; 1998 ; 10-11 >
+    au < exists ; exists ; 1999 ; HPB Surgery Volume 11 (1999) ; 1999 ; 11 >
+    au < exists ; exists ; 2000 ; HPB Surgery Volume 11 (2000) ; 2000 ; 11 >
     au < exists ; exists ; 2008 ; HPB Surgery Volume 2008 ; 2008 ; 2008 >
     au < exists ; exists ; 2009 ; HPB Surgery Volume 2009 ; 2009 ; 2009 >
     au < exists ; exists ; 2010 ; HPB Surgery Volume 2010 ; 2010 ; 2010 >
