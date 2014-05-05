@@ -1,5 +1,5 @@
 /*
- * $Id: TestHtmlNodeFilters.java,v 1.13 2014-04-23 20:44:31 tlipkis Exp $
+ * $Id: TestHtmlNodeFilters.java,v 1.12 2014-01-07 20:42:22 tlipkis Exp $
  */
 
 /*
@@ -403,7 +403,7 @@ public class TestHtmlNodeFilters extends LockssTestCase {
 		 ((MetaTag)node).getAttribute("content"));
   }
 
-  public void testEmptyStyleTagDispatch() throws Exception {
+  public void testEmptyStyleDispatch() throws Exception {
     MockArchivalUnit mau = new MockArchivalUnit();
     MockLinkRewriterFactory lrf = new MockLinkRewriterFactory();    
     String src =
@@ -418,9 +418,9 @@ public class TestHtmlNodeFilters extends LockssTestCase {
 
     mau.setLinkRewriterFactory("text/css", lrf);
 
-    HtmlNodeFilters.StyleTagXformDispatch xform =
-      new HtmlNodeFilters.StyleTagXformDispatch(mau, null,
-						base, linkXform);
+    HtmlNodeFilters.StyleXformDispatch xform =
+      new HtmlNodeFilters.StyleXformDispatch(mau, null,
+					     base, linkXform);
     NodeList nl = parse(src);
     assertEquals(0, nl.extractAllNodesThatMatch(xform).size());
     assertEquals(exp, nl.toHtml());
@@ -428,7 +428,7 @@ public class TestHtmlNodeFilters extends LockssTestCase {
 		lrf.getArgLists());
   }
 
-  public void testStyleTagWithSrcNoDispatch() throws Exception {
+  public void testStyleWithSrcNoDispatch() throws Exception {
     MockArchivalUnit mau = new MockArchivalUnit();
     MockLinkRewriterFactory lrf = new MockLinkRewriterFactory();    
     String src =
@@ -443,9 +443,9 @@ public class TestHtmlNodeFilters extends LockssTestCase {
 
     mau.setLinkRewriterFactory("text/css", lrf);
 
-    HtmlNodeFilters.StyleTagXformDispatch xform =
-      new HtmlNodeFilters.StyleTagXformDispatch(mau, null,
-						base, linkXform);
+    HtmlNodeFilters.StyleXformDispatch xform =
+      new HtmlNodeFilters.StyleXformDispatch(mau, null,
+					     base, linkXform);
     lrf.setLinkRewriter(new StringInputStream("shouldn't"));
     NodeList nl = parse(src);
     assertEquals(0, nl.extractAllNodesThatMatch(xform).size());
@@ -454,7 +454,7 @@ public class TestHtmlNodeFilters extends LockssTestCase {
 		lrf.getArgLists());
   }
 
-  public void testStyleTagDispatch(String charset) throws Exception {
+  public void testStyleDispatch(String charset) throws Exception {
     MockArchivalUnit mau = new MockArchivalUnit();
     MockLinkRewriterFactory lrf = new MockLinkRewriterFactory();    
     String src =
@@ -470,9 +470,9 @@ public class TestHtmlNodeFilters extends LockssTestCase {
 
     mau.setLinkRewriterFactory("text/css", lrf);
 
-    HtmlNodeFilters.StyleTagXformDispatch xform =
-      new HtmlNodeFilters.StyleTagXformDispatch(mau, charset,
-						base, linkXform);
+    HtmlNodeFilters.StyleXformDispatch xform =
+      new HtmlNodeFilters.StyleXformDispatch(mau, charset,
+					     base, linkXform);
     lrf.setLinkRewriter(new StringInputStream(res));
     NodeList nl = parse(src);
     assertEquals(0, nl.extractAllNodesThatMatch(xform).size());
@@ -486,44 +486,13 @@ public class TestHtmlNodeFilters extends LockssTestCase {
 		 args.get(3));
   }
 
-  public void testStyleTagDispatch() throws Exception {
-    testStyleTagDispatch("UTF-8");
+  public void testStyleDispatch() throws Exception {
+    testStyleDispatch("UTF-8");
   }
 
-  public void testStyleTagDispatchNoCharset() throws Exception {
-    testStyleTagDispatch(null);
+  public void testStyleDispatchNoCharset() throws Exception {
+    testStyleDispatch(null);
   }
-
-  public void testStyleAttrDispatch() throws Exception {
-    MockArchivalUnit mau = new MockArchivalUnit();
-    MockLinkRewriterFactory lrf = new MockLinkRewriterFactory();    
-    String src = "<span class=\"foo\" "
-      + "style=\"background: url('/backg.png') no-repeat 0px -64px;\" />";
-    String exp = "<span class=\"foo\" "
-      + "style=\"result string\" />";
-    String res = "result string";
-    String base = "http://example.com/base/";
-    ServletUtil.LinkTransform linkXform = new ServletUtil.LinkTransform() {
-	public String rewrite(String url) {
-	  return "rewritten";
-	}};
-
-    mau.setLinkRewriterFactory("text/css", lrf);
-
-    HtmlNodeFilters.StyleAttrXformDispatch xform =
-      new HtmlNodeFilters.StyleAttrXformDispatch(mau, null,
-						 base, linkXform);
-    lrf.setLinkRewriter(new StringInputStream(res));
-    NodeList nl = parse(src);
-    assertEquals(0, nl.extractAllNodesThatMatch(xform).size());
-    assertEquals(exp, nl.toHtml());
-    List args = lrf.getArgLists().get(0);
-    assertEquals("text/css", args.get(0));
-    assertEquals(mau, args.get(1));
-    assertEquals("background: url('/backg.png') no-repeat 0px -64px;",
-		 StringUtil.fromInputStream((InputStream)args.get(2)));
-  }
-
 
   public void testEmptyScriptDispatch() throws Exception {
     MockArchivalUnit mau = new MockArchivalUnit();

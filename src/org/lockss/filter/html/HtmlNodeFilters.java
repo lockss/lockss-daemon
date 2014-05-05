@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlNodeFilters.java,v 1.24 2014-04-23 20:44:31 tlipkis Exp $
+ * $Id: HtmlNodeFilters.java,v 1.23 2014-01-07 20:42:22 tlipkis Exp $
  */
 
 /*
@@ -658,10 +658,7 @@ public class HtmlNodeFilters {
   /**
    * This class rejects everything but applies a transform to
    * links is Style tags that match the regex.
-   * @deprecated Processes only @import; use {@link StyleTagXformDispatch}
-   * instead.
    */
-  @Deprecated
   public static class StyleRegexXform extends BaseRegexXform {
     /**
      * Creates a StyleRegexXform that rejects everything but applies
@@ -723,21 +720,22 @@ public class HtmlNodeFilters {
   }
 
   /**
-   * Base class for rewriting contents of style tag or attr
+   * Rejects everything and applies a CSS LinkRewriter to the text in
+   * style tags
    */
-  public static class BaseStyleDispatch {
+  public static class StyleXformDispatch implements NodeFilter {
 
-    protected ArchivalUnit au;
-    protected String charset;
-    protected String baseUrl;
-    protected ServletUtil.LinkTransform xform;
+    private ArchivalUnit au;
+    private String charset;
+    private String baseUrl;
+    private ServletUtil.LinkTransform xform;
 
-    protected LinkRewriterFactory lrf;
+    private LinkRewriterFactory lrf;
 
-    public BaseStyleDispatch(ArchivalUnit au,
-			     String charset,
-			     String baseUrl,
-			     ServletUtil.LinkTransform xform) {
+    public StyleXformDispatch(ArchivalUnit au,
+			      String charset,
+			      String baseUrl,
+			      ServletUtil.LinkTransform xform) {
       this.au = au;
       if (charset == null) {
 	this.charset = Constants.DEFAULT_ENCODING;
@@ -752,46 +750,7 @@ public class HtmlNodeFilters {
       baseUrl = newBase;
     }
 
-    protected static String DEFAULT_STYLE_MIME_TYPE = "text/css";
-  
-    protected String rewriteStyleDispatch(String text,
-					  LinkRewriterFactory lrf,
-					  String mime)
-	throws PluginException, IOException {
-      InputStream rewritten = null;
-      try {
-	rewritten =
-	  lrf.createLinkRewriter(mime,
-				 au,
-				 new ReaderInputStream(new StringReader(text),
-						       charset),
-				 charset,
-				 baseUrl,
-				 xform);
-	String res =
-	  StringUtil.fromReader(new InputStreamReader(rewritten, charset));
-	return res;
-      } finally {
-	IOUtil.safeClose(rewritten);
-
-      }
-    }
-  }
-
-  /**
-   * Rejects everything and applies a CSS LinkRewriter to the text in
-   * style tags
-   */
-  public static class StyleTagXformDispatch
-    extends BaseStyleDispatch implements NodeFilter
-  {
-
-    public StyleTagXformDispatch(ArchivalUnit au,
-				 String charset,
-				 String baseUrl,
-				 ServletUtil.LinkTransform xform) {
-      super(au, charset, baseUrl, xform);
-    }
+    static String DEFAULT_STYLE_MIME_TYPE = "text/css";
   
     public boolean accept(Node node) {
       if (node instanceof StyleTag) {
@@ -815,8 +774,19 @@ public class HtmlNodeFilters {
 		TextNode textChild = (TextNode)child;
 		String source = textChild.getText();
 		if (!StringUtil.isNullString(source)) {
+		  InputStream rewritten = null;
 		  try {
-		    String res = rewriteStyleDispatch(source, lrf, mime);
+		    rewritten =
+		      lrf.createLinkRewriter(mime,
+					     au,
+					     new ReaderInputStream(new StringReader(source),
+								   charset),
+					     charset,
+					     baseUrl,
+					     xform);
+		    String res =
+		      StringUtil.fromReader(new InputStreamReader(rewritten,
+								  charset));
 		    if (!res.equals(source)) {
 		      if (log.isDebug3()) log.debug3("Style rewritten " + res);
 		      textChild.setText(res);
@@ -825,79 +795,14 @@ public class HtmlNodeFilters {
 		    log.error("Can't create link rewriter, not rewriting", e);
 		  } catch (IOException e) {
 		    log.error("Can't create link rewriter, not rewriting", e);
+		  } finally {
+		    IOUtil.safeClose(rewritten);
 		  }
 		}
 	      }
 	    }
 	  } catch (ParserException ex) {
 	    log.error("Node " + node.toString() + " threw " + ex);
-	  }
-	}
-      }
-      return false;
-    }
-  }
-
-  /**
-   * @deprecated Here only to keep old class name used by
-   * taylorandfrancis.NodeFilterHtmlLinkRewriterFactory.  Should be removed
-   * once no references.
-   */
-  public static class StyleXformDispatch
-    extends StyleTagXformDispatch {
-
-    public StyleXformDispatch(ArchivalUnit au,
-			      String charset,
-			      String baseUrl,
-			      ServletUtil.LinkTransform xform) {
-      super(au, charset, baseUrl, xform);
-    }
-  }
-
-  /**
-   * Rejects everything and applies a CSS LinkRewriter to the text in
-   * style attributes
-   */
-  public static class StyleAttrXformDispatch
-    extends BaseStyleDispatch implements NodeFilter {
-
-    public StyleAttrXformDispatch(ArchivalUnit au,
-				  String charset,
-				  String baseUrl,
-				  ServletUtil.LinkTransform xform) {
-      super(au, charset, baseUrl, xform);
-    }
-  
-    public boolean accept(Node node) {
-      if (node instanceof TagNode &&
-	  !(node instanceof MetaTag)) {
-	TagNode tag = (TagNode)node;
-
-	// Check for style attribute
-	Attribute attribute = tag.getAttributeEx("style");
-	if (attribute != null) {
-	  String style = attribute.getValue();
-	  // style attr is very common, invoking css rewriter is expensive,
-	  // do only if evidence of URLs
-	  if (style != null
-	      && StringUtil.indexOfIgnoreCase(style, "url(") >= 0) {
-	    String mime = DEFAULT_STYLE_MIME_TYPE;
-	    LinkRewriterFactory lrf = au.getLinkRewriterFactory(mime);
-	    if (lrf != null) {
-	      try {
-		String res = rewriteStyleDispatch(style, lrf, mime);
-		if (!res.equals(style)) {
-//  		  res = BaseRegexFilter.urlEncode(res);
-		  attribute.setValue(res);
-		  tag.setAttributeEx(attribute);
-		  if (log.isDebug3()) log.debug3("new " + res);
-		}
-	      } catch (PluginException e) {
-		log.error("Can't create link rewriter, not rewriting", e);
-	      } catch (IOException e) {
-		log.error("Can't create link rewriter, not rewriting", e);
-	      }
-	    }
 	  }
 	}
       }
@@ -915,6 +820,8 @@ public class HtmlNodeFilters {
     private String charset;
     private String baseUrl;
     private ServletUtil.LinkTransform xform;
+
+    private LinkRewriterFactory lrf;
 
     public ScriptXformDispatch(ArchivalUnit au,
 			       String charset,

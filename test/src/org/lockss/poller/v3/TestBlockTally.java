@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockTally.java,v 1.19 2014-04-23 20:47:10 tlipkis Exp $
+ * $Id: TestBlockTally.java,v 1.18 2013-05-06 20:36:06 barry409 Exp $
  */
 
 /*
@@ -152,7 +152,6 @@ public class TestBlockTally extends LockssTestCase {
     tally.addAgreeVoter(testPeers[4]);
     tally.addAgreeVoter(testPeers[5]);
     assertEquals(BlockTally.Result.TOO_CLOSE, tally.getTallyResult());
-    assertFalse(tally.isVoterOnly());
     try {
       tally.getRepairVoters();
       fail("expected ShouldNotHappenException was not thrown.");
@@ -170,7 +169,6 @@ public class TestBlockTally extends LockssTestCase {
     tally.addDisagreeVoter(testPeers[4]);
     tally.addDisagreeVoter(testPeers[5]);
     assertEquals(BlockTally.Result.TOO_CLOSE, tally.getTallyResult());
-    assertFalse(tally.isVoterOnly());
     try {
       tally.getRepairVoters();
       fail("expected ShouldNotHappenException was not thrown.");
@@ -188,24 +186,6 @@ public class TestBlockTally extends LockssTestCase {
     tally.addDisagreeVoter(testPeers[4]);
     tally.addDisagreeVoter(testPeers[5]);
     assertEquals(BlockTally.Result.TOO_CLOSE, tally.getTallyResult());
-    assertFalse(tally.isVoterOnly());
-    try {
-      tally.getRepairVoters();
-      fail("expected ShouldNotHappenException was not thrown.");
-    } catch (ShouldNotHappenException ex) {
-      // Expected
-    }
-  }
-
-  public void testVoterOnlyNoQuorum() throws Exception {
-    BlockTally tally = new BlockTally(5, 75);
-    tally.addVoterOnlyVoter(testPeers[1]);
-    tally.addVoterOnlyVoter(testPeers[2]);
-    tally.addVoterOnlyVoter(testPeers[3]);
-    assertEquals(BlockTally.Result.NOQUORUM, tally.getTallyResult());
-    assertTrue(tally.isVoterOnly());
-    tally.addDisagreeVoter(testPeers[3]);
-    assertFalse(tally.isVoterOnly());
     try {
       tally.getRepairVoters();
       fail("expected ShouldNotHappenException was not thrown.");
@@ -238,7 +218,6 @@ public class TestBlockTally extends LockssTestCase {
     tally.addVoterOnlyVoter(testPeers[4]);
     assertEquals(BlockTally.Result.LOST_VOTER_ONLY_BLOCK,
 		 tally.getTallyResult());
-    assertTrue(tally.isVoterOnly());
     // NOTE: getRepairVoters contains nothing useful (since the
     // BlockTally's VersionCounts isn't being told about votes) but
     // does not throw.
@@ -255,7 +234,6 @@ public class TestBlockTally extends LockssTestCase {
     tally.addDisagreeVoter(testPeers[2]);
     tally.addDisagreeVoter(testPeers[3]);
     assertEquals(BlockTally.Result.LOST, tally.getTallyResult());
-    assertFalse(tally.isVoterOnly());
 
     // Note: the reparing peer will be drawn from all the voters,
     // including the one who doesn't have it. This is wrong.

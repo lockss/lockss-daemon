@@ -1,5 +1,5 @@
 /*
- * $Id: SilverchairHtmlHashFilterFactory.java,v 1.2 2014-04-29 15:07:05 thib_gc Exp $
+ * $Id: SilverchairHtmlHashFilterFactory.java,v 1.1 2014-04-15 19:10:29 thib_gc Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.plugin.silverchair;
 
 import java.io.*;
 
+import org.apache.commons.io.IOUtils;
 import org.htmlparser.*;
 import org.htmlparser.filters.*;
 import org.lockss.daemon.PluginException;
@@ -72,8 +73,11 @@ public class SilverchairHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("a", "class", "prev"),
         HtmlNodeFilters.tagWithAttributeRegex("a", "class", "next"),
         // Link back to issue TOC (to prune impact of potential overcrawl)
-        HtmlNodeFilters.tagWithAttribute("a", "id", "scm6MainContent_lnkFullIssueName"), // [ACCP, AMA, APA]
-        HtmlNodeFilters.tagWithAttribute("a", "id", "ctl00_scm6MainContent_lnkFullIssueName"), // [ACP]
+        HtmlNodeFilters.tagWithAttribute("a", "id", "scm6MainContent_lnkFullIssueName"), // (ACCP)
+        HtmlNodeFilters.tagWithAttribute("a", "id", "ctl00_scm6MainContent_lnkFullIssueName"), // (ACP)
+        // Right column portlets but not the portletTabMenu portlet that
+        // has links to the PDF and citation files (AMA, ACCP, ACP)
+        HtmlNodeFilters.tagWithAttribute("div", "class", "portletContentHolder"),
         // Letter links are article links (AMA)
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "letterSubmitForm"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "letterBody"), // Ideally, div that contains a such div as a child
@@ -85,22 +89,8 @@ public class SilverchairHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "scm6MainContent_divCorrections"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "scm6MainContent_divCorrectionLinkToParent"),
         // Cross links: "This article/letter/etc. relates to...", "This erratum
-        // concerns...", "See also...", [ACCP, ACP]
+        // concerns..." (ACCP, ACP)
         HtmlNodeFilters.tagWithAttribute("div", "class", "linkType"),
-        /*
-         * The right column ('portletColumn') is likely to reference articles
-         * (most read, related articles, most recent articles...), but it also
-         * contains the links to the main article views and citation files in
-         * a recognizable <div> ('scm6MainContent_ToolBox'). This node filter
-         * prunes the subtree under portletColumn so that it only contains the
-         * scm6MainContent_ToolBox subtree.
-         * ACCP, AMA, APA:
-         *     <div id="scm6MainContent_ToolBox"> inside <div class="portletColumn">
-         * ACP:
-         *     <div id="ctl00_scm6MainContent_ToolBox"> but not inside <div class="portletColumn">
-         */
-        new AllExceptSubtreeNodeFilter(HtmlNodeFilters.tagWithAttributeRegex("div", "class", "portletColumn"),
-                                    HtmlNodeFilters.tagWithAttribute("div", "id", "scm6MainContent_ToolBox")),
         /*
          * Broad area filtering 
          */
@@ -112,22 +102,20 @@ public class SilverchairHtmlHashFilterFactory implements FilterFactory {
         // Comments
         HtmlNodeFilters.comment(),
         // Header
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "bannerTop"), // [ACCP, ACP, AMA, APA]
-        HtmlNodeFilters.tagWithAttribute("div", "id", "globalHeader_dvMastHead"), // [ACCP, AMA]
-        HtmlNodeFilters.tagWithAttribute("div", "id", "ctl00_globalHeader_dvMastHead"), // [ACP]
-        HtmlNodeFilters.tagWithAttribute("div", "class", "journalHeader"), // [APA]
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "bannerTop"), // (AMA)
+        HtmlNodeFilters.tagWithAttribute("div", "id", "globalHeader_dvMastHead"), // (AMA)
+        HtmlNodeFilters.tagWithAttribute("div", "id", "ctl00_globalHeader_dvMastHead"), // (ACP)
+        HtmlNodeFilters.tagWithAttribute("div", "class", "journalHeader"), // (APA)
         // Right column
         // ...(see crawl filter section)
         // Footer
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "^footerWrap"), // [ACCP, ACP, AMA]
-        HtmlNodeFilters.tagWithAttribute("div", "class", "journalFooter"), // [ACCP, ACP, AMA, APA]
-        HtmlNodeFilters.tagWithAttribute("div", "class", "Footer"), // [ACCP, ACP, AMA, APA]
-        HtmlNodeFilters.tagWithAttribute("div", "class", "bannerBottom"), // [APA]
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "^footerWrap"), // (AMA)
+        HtmlNodeFilters.tagWithAttribute("div", "class", "journalFooter"), // (APA)
+        HtmlNodeFilters.tagWithAttribute("div", "class", "Footer"), // (APA)
+        HtmlNodeFilters.tagWithAttribute("div", "class", "bannerBottom"), // (APA)
         /*
          * Various 
          */
-        // Ad banner above header [ACCP]
-        HtmlNodeFilters.tagWithAttribute("div", "class", "addBanner"), // sic
         // ASP.NET state
         HtmlNodeFilters.tagWithAttribute("input", "type", "hidden"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "aspNetHidden"),
@@ -138,7 +126,7 @@ public class SilverchairHtmlHashFilterFactory implements FilterFactory {
         // TOC pages change gensyms used to group articles by type over time
         HtmlNodeFilters.tagWithAttribute("a", "id", "ancArticleTypeBookMark"),
         HtmlNodeFilters.tagWithAttributeRegex("a", "id", "^scm6MainContent_rptdisplayIssues_outer_ancArticleTypeBookMarkJump"),
-        // Web of Science number of citing articles [ACCP, AMA, APA]
+        // e.g. Web of Science number of citing articles (APA)
         HtmlNodeFilters.tagWithAttribute("div", "id", "citingArticles"),
     };
     
@@ -147,10 +135,10 @@ public class SilverchairHtmlHashFilterFactory implements FilterFactory {
                                      HtmlNodeFilterTransform.exclude(new OrFilter(nodeFilters)));
   }
 
-//  public static void main(String[] args) throws Exception {
-//    String file = "/tmp/p1/f1380160";
-//    IOUtils.copy(new SilverchairHtmlHashFilterFactory().createFilteredInputStream(null, new FileInputStream(file), "utf-8"),
-//                 new FileOutputStream(file + ".out"));
-//  }
+  public static void main(String[] args) throws Exception {
+    String file = "/tmp/p1/f1380160";
+    IOUtils.copy(new SilverchairHtmlHashFilterFactory().createFilteredInputStream(null, new FileInputStream(file), "utf-8"),
+                 new FileOutputStream(file + ".out"));
+  }
   
 }

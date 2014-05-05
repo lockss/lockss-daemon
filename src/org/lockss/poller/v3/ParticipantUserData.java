@@ -1,9 +1,9 @@
 /*
- * $Id: ParticipantUserData.java,v 1.35 2014-04-29 19:47:04 fergaloy-sf Exp $
+ * $Id: ParticipantUserData.java,v 1.34 2013-05-29 17:18:12 barry409 Exp $
  */
 
 /*
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -89,42 +89,6 @@ public class ParticipantUserData implements LockssSerializable {
       } else {
 	return 0.0f;
       }
-    }
-
-    /**
-     * Returns the count of agreed votes for this peer.
-     * 
-     * @return a long with the count of agreed votes.
-     */
-    public long getAgreedVotes() {
-      return agreedVotes;
-    }
-
-    /**
-     * Returns the count of disagreed votes for this peer.
-     * 
-     * @return a long with the count of disagreed votes.
-     */
-    public long getDisagreedVotes() {
-      return disagreedVotes;
-    }
-
-    /**
-     * Returns the count of poller-only votes for this peer.
-     * 
-     * @return a long with the count of poller-only votes.
-     */
-    public long getPollerOnlyVotes() {
-      return pollerOnlyVotes;
-    }
-
-    /**
-     * Returns the count of voter-only votes for this peer.
-     * 
-     * @return a long with the count of voter-only votes.
-     */
-    public long getVoterOnlyVotes() {
-      return voterOnlyVotes;
     }
 
     /**

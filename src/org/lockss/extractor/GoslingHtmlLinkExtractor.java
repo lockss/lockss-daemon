@@ -1,10 +1,10 @@
 /*
- * $Id: GoslingHtmlLinkExtractor.java,v 1.12 2014-04-23 20:43:42 tlipkis Exp $
+ * $Id: GoslingHtmlLinkExtractor.java,v 1.11 2013-07-15 19:41:02 clairegriffin Exp $
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -160,7 +160,7 @@ public class GoslingHtmlLinkExtractor implements LinkExtractor {
   private boolean malformedBaseUrl = false;
 
   private boolean lastTagWasScript = false;
-  private boolean hasBaseBeenSet = false;
+  private boolean isBaseSet = false;
 
   public GoslingHtmlLinkExtractor() {
     ringCapacity = CurrentConfig.getIntParam(PARAM_BUFFER_CAPACITY,
@@ -171,17 +171,11 @@ public class GoslingHtmlLinkExtractor implements LinkExtractor {
 
   private void init() {
     lastTagWasScript = false;
-    hasBaseBeenSet = false;
+    malformedBaseUrl = false;
+    isBaseSet = false;
     baseUrl = null;
     readerEof = false;
     ring = new CharRing(ringCapacity);
-    try {
-      baseUrl = new URL(srcUrl);
-      malformedBaseUrl = false;
-    } catch (MalformedURLException e) {
-      malformedBaseUrl = true;
-      logger.warning("Malformed srcUrl; shouldn't happen: " + srcUrl, e);
-    }
   }
 
   /**
@@ -405,32 +399,9 @@ public class GoslingHtmlLinkExtractor implements LinkExtractor {
     return false;
   }
 
-  /**
-   * Extract all links from tag.
-   */
-  protected String extractAllLinksFromTag(StringBuffer link, ArchivalUnit au,
-					  LinkExtractor.Callback cb)
-      throws IOException {
-    extractCommonLinksFromTag(link, au, cb);
-    return extractLinkFromTag(link, au, cb);
-  }
 
   /**
-   * Extract links common to all tags.
-   */
-  protected void extractCommonLinksFromTag(StringBuffer link,
-					   ArchivalUnit au,
-					   LinkExtractor.Callback cb)
-      throws IOException {
-    String style = getAttributeValue("style", link);
-    if (!StringUtil.isNullString(style)) {
-      processStyleText(au, cb, new StringReader(style), "attribute");
-    }
-  }
-
-  /**
-   * Perform tag-specfic link extraction.
-   * Method overridden in many plugin-specific subclasses; change with care
+   * Method overridden in some sub classes, so change with care
    */
   protected String extractLinkFromTag(StringBuffer link, ArchivalUnit au,
 				      LinkExtractor.Callback cb)
@@ -494,9 +465,23 @@ public class GoslingHtmlLinkExtractor implements LinkExtractor {
         if (beginsWithTag(link, BODYTAG)) {
           return (  getAttributeValue(BACKGROUNDSRC, link) );
         }
-        if (beginsWithTag(link, BASETAG)) {
-	  processBaseTag(link);
-	}
+        if (beginsWithTag(link, BASETAG)  && !isBaseSet) {
+          String newBase = getAttributeValue(HREF, link);
+          if (newBase != null && !"".equals(newBase)) {
+            if (UrlUtil.isMalformedUrl(newBase)) {
+              logger.debug3("base tag found, but has malformed URL: "+newBase);
+              malformedBaseUrl = true;
+            }  else {
+              malformedBaseUrl = false;
+              if (UrlUtil.isAbsoluteUrl(newBase)) {
+                logger.debug3("base tag found, setting srcUrl to: " + newBase);
+                srcUrl = newBase;
+                baseUrl = null;
+                isBaseSet = true;
+              }
+            }
+          }
+        }
         break;
       case 's': //<script src=blah.js> or <style type="text/css">...CSS...</style>
       case 'S':
@@ -532,32 +517,6 @@ public class GoslingHtmlLinkExtractor implements LinkExtractor {
     return null;
   }
 
-  protected void processBaseTag(StringBuffer link) {
-    if (hasBaseBeenSet) {
-      logger.siteWarning("Ignoring 2nd (or later) base tag: " + link);
-      return;
-    }
-    String newBase = getAttributeValue(HREF, link);
-    if (StringUtil.isNullString(newBase)) {
-      logger.siteWarning("Ignoring base tag with missing/empty href: " + link);
-      return;
-    }
-    if (!UrlUtil.isAbsoluteUrl(newBase)) {
-      logger.siteWarning("Ignoring base tag with relative URL: " + link);
-      return;
-    }
-    logger.debug3("Base tag found, setting baseUrl to: " + newBase);
-    try {
-      baseUrl = new URL(newBase);
-      malformedBaseUrl = false;
-      hasBaseBeenSet = true;
-    } catch (MalformedURLException e) {
-      malformedBaseUrl = true;
-      logger.siteWarning("Base tag has malformed URL: "+ newBase, e);
-      logger.siteWarning("Base is still: " + baseUrl);
-    }
-  }
-
   protected void parseStyleContentsFromRing(ArchivalUnit au,
 					    LinkExtractor.Callback cb) {
     Reader cssReader = new Reader() {
@@ -590,15 +549,7 @@ public class GoslingHtmlLinkExtractor implements LinkExtractor {
       }
     };
 
-    processStyleText(au, cb, cssReader, "tag");
-  }
-
-
-  private void processStyleText(ArchivalUnit au,
-				LinkExtractor.Callback cb,
-				Reader rdr,
-				String where) {
-    InputStream cssIn = new ReaderInputStream(rdr, encoding);
+    InputStream cssIn = new ReaderInputStream(cssReader, encoding);
     try {
       LinkExtractor cssExtractor = au.getLinkExtractor("text/css");
       logger.debug2("CSS extractor: " + cssExtractor + ", " + au);
@@ -608,8 +559,8 @@ public class GoslingHtmlLinkExtractor implements LinkExtractor {
     } catch (Exception e) {
       // Important to catch RuntimeExceptions here or a CSS error will
       // abort processing of the rest of the html on the page
-      logger.siteError("The CSS parser failed to parse a <style> " + where +
-		       " in " + srcUrl, e);
+      logger.siteError("The CSS parser failed to parse a <style> section in "
+		       + srcUrl, e);
       try {
 	readToEof(cssIn);
 	IOUtil.safeClose(cssIn);
@@ -650,51 +601,42 @@ public class GoslingHtmlLinkExtractor implements LinkExtractor {
   protected boolean parseLink(StringBuffer link, ArchivalUnit au,
 			      LinkExtractor.Callback cb)
       throws IOException, MalformedURLException {
-    String returnStr = extractAllLinksFromTag(link, au, cb);
+    String returnStr = extractLinkFromTag(link, au, cb);
+
     if (returnStr != null) {
-      resolveAndEmit(cb, returnStr);
-    }
-    return true;
-  }
-
-  /** Emit the URL after resolving it against the base URL if necessary
-   * @param cb the callback
-   * @param relOrAbsUrl the possibly-relative url extracted from the html
-   * @return true if a URL was omitted.  False if called with a relaitve
-   * URL when the last base tag was malformed.
-   */
-  protected boolean resolveAndEmit(LinkExtractor.Callback cb,
-				   String relOrAbsUrl)
-      throws IOException, MalformedURLException {
-
-    if (relOrAbsUrl == null) {
-      return false;
-    }
-    if (malformedBaseUrl) {
-      if (UrlUtil.isAbsoluteUrl(relOrAbsUrl)) {
-	emit(cb, relOrAbsUrl);
-	return true;
-      } else {
-	logger.debug2("Malformed base URL: " + baseUrl +
-		      ", not emitting relative link: " + relOrAbsUrl);
+      if (isTrace) {
+	logger.debug2("Generating url from: " + srcUrl + " and " + returnStr);
+      }
+      if (malformedBaseUrl) {
+	//if we have a malformed base URL, we can't interpret relative urls
+	//so we only will return absolute ones
+	logger.debug2("Malformed base URL: " + srcUrl +
+		      " checking if URL is abolute " + returnStr);
+	if (UrlUtil.isAbsoluteUrl(returnStr)) {
+          emit(cb, returnStr);
+          return true;
+        }
+        else {
+          return false;
+        }
+      }
+      try {
+	if (baseUrl == null) {
+	  logger.debug3("baseUrl is null, setting to srcUrl: "+srcUrl);
+	  baseUrl = new URL(srcUrl);
+	}
+	returnStr = resolveUri(baseUrl, returnStr);
+      } catch (MalformedURLException e) {
+	logger.debug("Couldn't resolve URL, base: \"" + srcUrl +
+		     "\", link: \"" + returnStr + "\": " + e);
 	return false;
       }
     }
-    if (isTrace) {
-      logger.debug2("Generating url from base: " + baseUrl + " and: " +
-		    relOrAbsUrl);
+    if (returnStr != null) {
+      emit(cb, returnStr);
+      return true;
     }
-    try {
-      String absUrl = resolveUri(baseUrl, relOrAbsUrl);
-      if (absUrl != null) {
-	emit(cb, absUrl);
-	return true;
-      } else {
-	return false;
-      }
-    } catch (MalformedURLException e) {
-      logger.siteWarning("Couldn't resolve URL, base: \"" + baseUrl +
-			 "\", link: \"" + relOrAbsUrl + "\": " + e);
+    else {
       return false;
     }
   }
@@ -740,11 +682,8 @@ public class GoslingHtmlLinkExtractor implements LinkExtractor {
 
   /** Return attribute value with any html entities decoded */
   protected String getAttributeValue(String attribute, String src) {
-    if (StringUtil.indexOfIgnoreCase(src, attribute) >= 0) {
-      String val = getEncodedAttributeValue(attribute, src);
-      return val == null ? null : Translate.decode(val);
-    }
-    return null;
+    String val = getEncodedAttributeValue(attribute, src);
+    return val == null ? null : Translate.decode(val);
   }
 
   /** Return attribute value as it literally appears in source html */

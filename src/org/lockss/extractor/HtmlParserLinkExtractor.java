@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2001-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2001-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -75,7 +71,6 @@ import org.lockss.util.UrlUtil;
  * options.
  *
  * @author vibhor
- * @deprecated use JsoupHtmlLinkExtractor instead
  */
 public class HtmlParserLinkExtractor implements LinkExtractor {
   public static final String PREFIX = Configuration.PREFIX + "extractor" +
@@ -486,8 +481,20 @@ public class HtmlParserLinkExtractor implements LinkExtractor {
       // GoslingHTmlLinkExtractor.
       if ("style".equalsIgnoreCase(tag.getTagName())) {
         StyleTag styleTag = (StyleTag) tag;
-	processStyleText(styleTag.getStyleCode());
+        InputStream in = new ReaderInputStream(new StringReader(
+            styleTag.getStyleCode()), m_encoding);
+        try {
+          m_au.getLinkExtractor("text/css").extractUrls(m_au, in,
+                                                        m_encoding, m_srcUrl,
+                                                        m_cb);
+          return;
+        }
+        catch (IOException e) {
+        }
+        catch (PluginException e) {
+        }
       }
+
       // Visited a base tag, update the page url. All the relative links that
       // follow base tag will need to be resolved to the new page url.
       if ("base".equalsIgnoreCase(tag.getTagName()) && !isBaseSet) {
@@ -512,34 +519,6 @@ public class HtmlParserLinkExtractor implements LinkExtractor {
         tle.extractLink(m_au, m_emit);
       }
 
-      // Check for style attribute
-      String style = tag.getAttribute("style");
-      // style attr is very common, creating css parser is expensive, do
-      // only if evidence of URLs
-      if (style != null && StringUtil.indexOfIgnoreCase(style, "url(") >= 0) {
-	processStyleText(style);
-      }
-    }
-
-    // Dispatch to CSS extractor
-    void processStyleText(String text) {
-      if (StringUtil.indexOfIgnoreCase(text, "url(") >= 0) {
-	InputStream in = new ReaderInputStream(new StringReader(text),
-					       m_encoding);
-	try {
-	  LinkExtractor cssExtractor = m_au.getLinkExtractor("text/css");
-	  if (cssExtractor != null) {
-	    cssExtractor.extractUrls(m_au, in, m_encoding, m_srcUrl, m_cb);
-	  }
-	  return;
-	}
-	catch (IOException e) {
-	  logger.debug3("IOException in CSS extractor", e);
-	}
-	catch (PluginException e) {
-	  logger.debug3("PluginException in CSS extractor", e);
-	}
-      }
     }
 
     /**

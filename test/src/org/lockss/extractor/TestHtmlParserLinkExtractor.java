@@ -218,12 +218,6 @@ public class TestHtmlParserLinkExtractor extends LockssTestCase {
 			"http://www.example.com/");
   }
 
-  public void testDoCrawlStyleAbsoluteShort() throws IOException {
-    performDoCrawlStyleShort("<style>", "http://www.example.com/",
-			     "http://www.example.com/");
-  }
-
-
   // ensure that scanning continues after a nested parser throws an error
   // XXX Need to cause an IOException while reading CSS from the stream
   public void xxxtestDoCrawlStyleError() throws IOException {
@@ -300,39 +294,6 @@ public class TestHtmlParserLinkExtractor extends LockssTestCase {
     assertEquals(SetUtil.set(expectedPrefix + url1, expectedPrefix + url2,
 			     expectedPrefix + url3, expectedPrefix + url4, expectedPrefix
 			     + url5, expectedPrefix + url6),
-		 parseSingleSource(source));
-  }
-
-  // style attr is conditioonal on "url(" in string; ensure <style> tag isn't.
-
-  // This test is currently ineffective because HtmlParserLinkExtractor
-  // also invokes GoslingHtmlLinkExtractor
-  protected void performDoCrawlStyleShort(String openingStyleTag,
-					  String givenPrefix,
-					  String expectedPrefix)
-      throws IOException {
-    String url3 = "foo3.css";
-
-    String source = "<html>\n" + " <head>\n" + "  <title>Test</title>\n"
-      + "  "
-      + openingStyleTag
-      + "\n"
-      + "<!--\n"
-      + "@import \'"
-      + givenPrefix
-      + url3
-      + "\';\n"
-      + "}\n"
-      + "/* Comment */"
-      + "-->\n"
-      + "  </style>\n"
-      + " </head>\n"
-      + " <body>\n"
-      + "  <p>Fake content</p>\n"
-      + " </body>\n"
-      + "</html>\n";
-
-    assertEquals(SetUtil.set(expectedPrefix + url3),
 		 parseSingleSource(source));
   }
 
@@ -514,21 +475,6 @@ public class TestHtmlParserLinkExtractor extends LockssTestCase {
     String source = "<html><head><title>Test</title></head><body>"
       + "<a href=>link3</a>";
     assertEquals(SetUtil.set(), parseSingleSource(source));
-  }
-
-  public void testStyleAttribute() throws Exception {
-    String url1 = "http://www.example.com/link3.html";
-    String url2 = "http://www.example.com/backg.png";
-
-    String source = "<html><head><title>Test</title></head><body>"
-      + "<span class=\"foo\" "
-      + "style=\"background: url('/backg.png') no-repeat 0px -64px;\" />";
-    assertEquals(SetUtil.set(url2), parseSingleSource(source));
-
-    String source2 = "<html><head><title>Test</title></head><body>"
-      + "<a href=\"http://www.example.com/link3.html\" " 
-      + "style=\"background: url('/backg.png');\">link3</a>";
-    assertEquals(SetUtil.set(url1, url2), parseSingleSource(source2));
   }
 
   // Extractor does not return urls for unknown protocols.

@@ -1,5 +1,5 @@
 /*
- * $Id: GeorgThiemeVerlagArticleIteratorFactory.java,v 1.8 2014-04-18 20:26:22 etenbrink Exp $
+ * $Id: GeorgThiemeVerlagArticleIteratorFactory.java,v 1.7 2014-02-28 20:08:13 etenbrink Exp $
  */
 
 /*
@@ -87,12 +87,12 @@ public class GeorgThiemeVerlagArticleIteratorFactory
     // NOTE - for the moment this also means it is considered a FULL_TEXT_CU
     // until this fulltext concept is deprecated
     builder.addAspect(
-        PDF_PATTERN, PDF_REPLACEMENT,
-        ArticleFiles.ROLE_FULL_TEXT_PDF);
-    
-    builder.addAspect(
         HTML_PATTERN, HTML_REPLACEMENT,
         ArticleFiles.ROLE_FULL_TEXT_HTML);
+    
+    builder.addAspect(
+        PDF_PATTERN, PDF_REPLACEMENT,
+        ArticleFiles.ROLE_FULL_TEXT_PDF);
     
     builder.addAspect(
         ABSTRACT_REPLACEMENT,
@@ -107,6 +107,12 @@ public class GeorgThiemeVerlagArticleIteratorFactory
         ArticleFiles.ROLE_ABSTRACT,
         ArticleFiles.ROLE_FULL_TEXT_HTML,
         ArticleFiles.ROLE_FULL_TEXT_PDF));
+    
+    // The order in which we want to define full_text_cu.
+    // First one that exists will get the job
+    builder.setFullTextFromRoles(
+        ArticleFiles.ROLE_FULL_TEXT_PDF,
+        ArticleFiles.ROLE_FULL_TEXT_HTML);
     
     return builder.getSubTreeArticleIterator();
   }
