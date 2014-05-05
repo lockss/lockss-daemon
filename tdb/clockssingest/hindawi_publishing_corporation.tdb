@@ -2873,17 +2873,17 @@
     au < exists ; exists ; 1994 ; HPB Surgery Volume 7-8 (1994) ; 1994 ; 7-8 >
     au < exists ; exists ; 1995 ; HPB Surgery Volume 8-9 (1995) ; 1995 ; 8-9 >
     au < exists ; exists ; 1996 ; HPB Surgery Volume 9-10 (1996) ; 1996 ; 9-10 >
-    au < exists ; exists ; 1997 ; HPB Surgery Volume 10 (1997) ; 1997 ; 10 >
-    au < exists ; exists ; 1998 ; HPB Surgery Volume 10-11 (1998) ; 1998 ; 10-11 >
-    au < exists ; exists ; 1999 ; HPB Surgery Volume 11 (1999) ; 1999 ; 11 >
-    au < exists ; exists ; 2000 ; HPB Surgery Volume 11 (2000) ; 2000 ; 11 >
-    au < exists ; exists ; 2008 ; HPB Surgery Volume 2008 ; 2008 ; 2008 >
-    au < exists ; exists ; 2009 ; HPB Surgery Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; HPB Surgery Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; HPB Surgery Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; HPB Surgery Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; HPB Surgery Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; HPB Surgery Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 1997 ; HPB Surgery Volume 10 (1997) ; 1997 ; 10 >
+    au < manifest ; exists ; 1998 ; HPB Surgery Volume 10-11 (1998) ; 1998 ; 10-11 >
+    au < manifest ; exists ; 1999 ; HPB Surgery Volume 11 (1999) ; 1999 ; 11 >
+    au < manifest ; exists ; 2000 ; HPB Surgery Volume 11 (2000) ; 2000 ; 11 >
+    au < manifest ; exists ; 2008 ; HPB Surgery Volume 2008 ; 2008 ; 2008 >
+    au < manifest ; exists ; 2009 ; HPB Surgery Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; HPB Surgery Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; HPB Surgery Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; HPB Surgery Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; HPB Surgery Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; HPB Surgery Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2896,8 +2896,8 @@
 
     param[journal_id] = ijms
 
-    au < exists ; exists ; 2013 ; Indian Journal of Materials Science Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Indian Journal of Materials Science Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2013 ; Indian Journal of Materials Science Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Indian Journal of Materials Science Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2911,28 +2911,28 @@
 
     param[journal_id] = idog
 
-    au < exists ; exists ; 1993 ; Infectious Diseases in Obstetrics and Gynecology Volume 1 (1993) ; 1993 ; 1 >
-    au < exists ; exists ; 1994 ; Infectious Diseases in Obstetrics and Gynecology Volume 2 (1994) ; 1994 ; 2 >
-    au < exists ; exists ; 1995 ; Infectious Diseases in Obstetrics and Gynecology Volume 3 (1995) ; 1995 ; 3 >
-    au < exists ; exists ; 1996 ; Infectious Diseases in Obstetrics and Gynecology Volume 4 (1996) ; 1996 ; 4 >
-    au < exists ; exists ; 1997 ; Infectious Diseases in Obstetrics and Gynecology Volume 5 (1997) ; 1997 ; 5 >
-    au < exists ; exists ; 1998 ; Infectious Diseases in Obstetrics and Gynecology Volume 6 (1998) ; 1998 ; 6 >
-    au < exists ; exists ; 1999 ; Infectious Diseases in Obstetrics and Gynecology Volume 7 (1999) ; 1999 ; 7 >
-    au < exists ; exists ; 2000 ; Infectious Diseases in Obstetrics and Gynecology Volume 8 (2000) ; 2000 ; 8 >
-    au < exists ; exists ; 2001 ; Infectious Diseases in Obstetrics and Gynecology Volume 9 (2001) ; 2001 ; 9 >
-    au < exists ; exists ; 2002 ; Infectious Diseases in Obstetrics and Gynecology Volume 10 (2002) ; 2002 ; 10 >
-    au < exists ; exists ; 2003 ; Infectious Diseases in Obstetrics and Gynecology Volume 11 (2003) ; 2003 ; 11 >
-    au < exists ; exists ; 2004 ; Infectious Diseases in Obstetrics and Gynecology Volume 12 (2004) ; 2004 ; 12 >
-    au < exists ; exists ; 2005 ; Infectious Diseases in Obstetrics and Gynecology Volume 13 (2005) ; 2005 ; 13 >
-    au < exists ; exists ; 2006 ; Infectious Diseases in Obstetrics and Gynecology Volume 2006 ; 2006 ; 2006 >
-    au < exists ; exists ; 2007 ; Infectious Diseases in Obstetrics and Gynecology Volume 2007 ; 2007 ; 2007 >
-    au < exists ; exists ; 2008 ; Infectious Diseases in Obstetrics and Gynecology Volume 2008 ; 2008 ; 2008 >
-    au < exists ; exists ; 2009 ; Infectious Diseases in Obstetrics and Gynecology Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; Infectious Diseases in Obstetrics and Gynecology Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; Infectious Diseases in Obstetrics and Gynecology Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Infectious Diseases in Obstetrics and Gynecology Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Infectious Diseases in Obstetrics and Gynecology Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Infectious Diseases in Obstetrics and Gynecology Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 1993 ; Infectious Diseases in Obstetrics and Gynecology Volume 1 (1993) ; 1993 ; 1 >
+    au < manifest ; exists ; 1994 ; Infectious Diseases in Obstetrics and Gynecology Volume 1-2 (1994) ; 1994 ; 1-2 >
+    au < manifest ; exists ; 1995 ; Infectious Diseases in Obstetrics and Gynecology Volume 2-3 (1995) ; 1995 ; 2-3 >
+    au < manifest ; exists ; 1996 ; Infectious Diseases in Obstetrics and Gynecology Volume 4 (1996) ; 1996 ; 4 >
+    au < manifest ; exists ; 1997 ; Infectious Diseases in Obstetrics and Gynecology Volume 5 (1997) ; 1997 ; 5 >
+    au < manifest ; exists ; 1998 ; Infectious Diseases in Obstetrics and Gynecology Volume 6 (1998) ; 1998 ; 6 >
+    au < manifest ; exists ; 1999 ; Infectious Diseases in Obstetrics and Gynecology Volume 7 (1999) ; 1999 ; 7 >
+    au < manifest ; exists ; 2000 ; Infectious Diseases in Obstetrics and Gynecology Volume 8 (2000) ; 2000 ; 8 >
+    au < manifest ; exists ; 2001 ; Infectious Diseases in Obstetrics and Gynecology Volume 9-10 (2001) ; 2001 ; 9-10 >
+    au < manifest ; exists ; 2002 ; Infectious Diseases in Obstetrics and Gynecology Volume 10 (2002) ; 2002 ; 10 >
+    au < manifest ; exists ; 2003 ; Infectious Diseases in Obstetrics and Gynecology Volume 11 (2003) ; 2003 ; 11 >
+    au < manifest ; exists ; 2004 ; Infectious Diseases in Obstetrics and Gynecology Volume 12 (2004) ; 2004 ; 12 >
+    au < manifest ; exists ; 2005 ; Infectious Diseases in Obstetrics and Gynecology Volume 13 (2005) ; 2005 ; 13 >
+    au < manifest ; exists ; 2006 ; Infectious Diseases in Obstetrics and Gynecology Volume 2006 ; 2006 ; 2006 >
+    au < manifest ; exists ; 2007 ; Infectious Diseases in Obstetrics and Gynecology Volume 2007 ; 2007 ; 2007 >
+    au < manifest ; exists ; 2008 ; Infectious Diseases in Obstetrics and Gynecology Volume 2008 ; 2008 ; 2008 >
+    au < manifest ; exists ; 2009 ; Infectious Diseases in Obstetrics and Gynecology Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; Infectious Diseases in Obstetrics and Gynecology Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; Infectious Diseases in Obstetrics and Gynecology Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Infectious Diseases in Obstetrics and Gynecology Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Infectious Diseases in Obstetrics and Gynecology Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Infectious Diseases in Obstetrics and Gynecology Volume 2014 ; 2014 ; 2014 >
 
   }
 
