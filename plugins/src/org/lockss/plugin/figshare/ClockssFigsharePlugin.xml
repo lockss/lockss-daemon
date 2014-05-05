@@ -147,7 +147,7 @@
     <string>org.lockss.plugin.figshare.FigshareArticleIteratorFactory</string>
   </entry>
   <entry>
-    <!-- this is to catch the 403 errors produced when trying to crawl 2012 --
+    <!-- this is to catch the 403 errors produced when trying to crawl 2012
          there have been some test files (I think) that use a link that is 
          403 (forbidden)
      -->
