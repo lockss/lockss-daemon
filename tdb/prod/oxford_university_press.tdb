@@ -18123,6 +18123,12 @@
     param[base_url] = http://ppar.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
+    au < HighWirePressH20Plugin ; exists ; 1998-1999 ; Public Policy & Aging Report Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; exists ; 1999-2000 ; Public Policy & Aging Report Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; exists ; 2000-2001 ; Public Policy & Aging Report Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; exists ; 2001-2002 ; Public Policy & Aging Report Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; Public Policy & Aging Report Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; manifest ; 2004 ; Public Policy & Aging Report Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; exists ; 2005 ; Public Policy & Aging Report Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; exists ; 2006 ; Public Policy & Aging Report Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; exists ; 2007 ; Public Policy & Aging Report Volume 17 ; 17 >
