@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>24</string>
+    <string>23</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -32,7 +32,7 @@
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>14</string>
+        <string>13</string>
       </entry>
     </map>
   </entry>
@@ -48,8 +48,7 @@
       <!-- now preserving these extraneous "backup" metadata, but not processing
       <string>2,"^%s%d/nsa_backfiles.*/", base_url, year</string>  
        -->   
-      <!-- <string>1,"^%s%d/", base_url, year</string> -->
-      <string>1,"^%s%d/2jan2013/", base_url, year</string>
+      <string>1,"^%s%d/", base_url, year</string>
     </list>
   </entry>
   <entry>

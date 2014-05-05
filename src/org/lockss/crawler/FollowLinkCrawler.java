@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.98 2014-04-23 20:42:46 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.97 2014-03-23 17:10:33 tlipkis Exp $
  */
 
 /*
@@ -130,7 +130,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 
   protected int hiDepth = 0;		// maximum depth seen
   protected int fqMaxLen = 0;		// maximum length of fetch queue
-  protected double fqSumLen = 0.0;      // sum of fetch queue length samples
+  protected int fqSumLen = 0;		// sum of  fetch queue length samples
   protected int fqSamples = 0;		// number of fetch queue len samples
 
   protected int defaultRetries = DEFAULT_DEFAULT_RETRY_COUNT;
@@ -373,7 +373,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 		  " bytes in " + crawlStatus.getNumFetched() + " files");
     }
     logger.debug("Max queue len: " + fqMaxLen + ", avg: "
-		 + Math.round((fqSumLen) / ((double)fqSamples)));
+		 + Math.round(((double)fqSumLen) / ((double)fqSamples)));
     if (crawlAborted) {
       return aborted();
     }

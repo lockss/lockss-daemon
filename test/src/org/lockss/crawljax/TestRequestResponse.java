@@ -8,7 +8,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import junit.framework.TestCase;
 
 /*
- * $Id: TestRequestResponse.java,v 1.2 2014-04-16 21:35:24 clairegriffin Exp $
+ * $Id: TestRequestResponse.java,v 1.1 2014-04-14 23:09:02 clairegriffin Exp $
  */
 
 /*
@@ -42,11 +42,15 @@ import org.apache.commons.io.FileUtils;
 import org.lockss.crawljax.AjaxRequestResponse.Header;
 import org.lockss.crawljax.AjaxRequestResponse.Request;
 import org.lockss.crawljax.AjaxRequestResponse.Response;
-import org.lockss.util.FileUtil;
 
 import java.io.*;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -93,8 +97,15 @@ public class TestRequestResponse  extends TestCase {
       headers.add(header);
     }
     resp.setHeaders(headers);
-    resp.setContent(makeMockFile().getBytes(Charset.forName("UTF8")));
+    URL url = getResource(DEF_TEST_CONTENT);
+    if(url != null) {
 
+      byte[] content = Files.readAllBytes(uriToPath(url.toURI()));
+      resp.setContent(content);
+    }
+    else {
+      resp.setContent(makeMockFile().getBytes(Charset.forName("UTF8")));
+    }
 
     mReqResp.setRequest(req);
     mReqResp.setResponse(resp);
@@ -103,7 +114,7 @@ public class TestRequestResponse  extends TestCase {
 
   public void tearDown() throws Exception
   {
-    FileUtil.emptyDir(tmpDir);
+    FileUtils.deleteDirectory(tmpDir);
     super.tearDown();
   }
 
@@ -212,6 +223,19 @@ public class TestRequestResponse  extends TestCase {
 
     //Last ditch attempt. Get the resource from the classpath.
     return ClassLoader.getSystemResource(resource);
+  }
+
+  static Path uriToPath(URI uri) {
+    String scheme = uri.getScheme();
+    try {
+      // only support legacy JAR URL syntax  jar:{uri}!/{entry} for now
+      String spec = uri.getRawSchemeSpecificPart();
+      int sep = spec.indexOf("!/");
+      if (sep != -1) spec = spec.substring(0, sep);
+      return Paths.get(new URI(spec)).toAbsolutePath();
+    } catch (URISyntaxException e) {
+      throw new IllegalArgumentException(e.getMessage(), e);
+    }
   }
 
 

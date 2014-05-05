@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireDrupalUrlNormalizer.java,v 1.5 2014-04-18 20:37:31 etenbrink Exp $
+ * $Id: HighWireDrupalUrlNormalizer.java,v 1.4 2014-02-20 20:56:45 etenbrink Exp $
  */
 
 /*
@@ -42,7 +42,6 @@ public class HighWireDrupalUrlNormalizer implements UrlNormalizer {
   protected static Logger log = Logger.getLogger(HighWireDrupalUrlNormalizer.class);
   protected static final String LARGE_JPG = ".large.jpg?";
   protected static final String JS_SUFFIX = ".js?";
-  protected static final String CSS_SUFFIX = ".css?";
   
   protected static final String PDF_HTML_VARIANT_SUFFIX = ".pdf%2Bhtml";
   protected static final String PDF_HTML_SUFFIX = ".pdf+html";
@@ -57,10 +56,6 @@ public class HighWireDrupalUrlNormalizer implements UrlNormalizer {
     // & http://ajpcell.physiology.org/content/ajpcell/303/1/C1/F1.large.jpg?download=true
     // to http://ajpcell.physiology.org/content/ajpcell/303/1/C1/F1.large.jpg
     // 
-    // http://ajplung.physiology.org/sites/default/files/color/jcore_1-15d49f53/colors.css?n3sdk7
-    // & http://ajplung.physiology.org/sites/default/files/color/jcore_1-15d49f53/colors.css?n3u6ya
-    // to http://ajplung.physiology.org/sites/default/files/color/jcore_1-15d49f53/colors.css
-    // 
     // http://ajpheart.physiology.org/content/ajpheart/304/2/H253.full-text.pdf
     // to http://ajpheart.physiology.org/content/ajpheart/304/2/H253.full.pdf
     // 
@@ -71,9 +66,7 @@ public class HighWireDrupalUrlNormalizer implements UrlNormalizer {
     // & http://ajpheart.physiology.org/content/304/2/H253.full.pdf%2Bhtml
     // to http://ajpheart.physiology.org/content/304/2/H253.full.pdf+html
     
-    if (url.contains(LARGE_JPG) ||
-        url.contains(JS_SUFFIX) ||
-        url.contains(CSS_SUFFIX)) {
+    if (url.contains(LARGE_JPG) || url.contains(JS_SUFFIX)) {
       url = url.replaceFirst("[?].+$", "");
     } else if (url.contains(PDF)) {
       if (url.endsWith(PDF_HTML_VARIANT_SUFFIX)) {

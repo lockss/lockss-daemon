@@ -1,36 +1,6 @@
-/*
- * $Id: TestJsoupHtmlLinkExtractor.java,v 1.5 2014-04-23 22:42:59 clairegriffin Exp $
- */
-
-/*
-
-Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-Except as contained in this notice, the name of Stanford University shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization from Stanford University.
-
-*/
 package org.lockss.extractor;
 
+import org.jsoup.Jsoup;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockArchivalUnit;
@@ -71,8 +41,7 @@ public class TestJsoupHtmlLinkExtractor extends LockssTestCase {
 
   }
 
-  // XXX Disabled.  Needs assertions and not to fetch from network
-  public void xxxtestCharsetChange() throws Exception {
+  public void testCharsetChange() throws Exception {
     String test = "http://www.pensoft.net/journals/neobiota/issue/11/";
     URL url = new URL(test);
     MyLinkExtractorCallback callback = new MyLinkExtractorCallback();
@@ -82,13 +51,8 @@ public class TestJsoupHtmlLinkExtractor extends LockssTestCase {
     for(String a_url : urls)
     {
       if(a_url.contains("article")) {
-        try {
-          UrlUtil.openInputStream(a_url);
-        }
-        catch(java.io.IOException ioe) {
-          fail("crawl of url: " + a_url + ":"+ ioe.getMessage());
-        }
-      }
+        UrlUtil.openInputStream(a_url);
+       }
     }
 
   }
@@ -254,7 +218,7 @@ public class TestJsoupHtmlLinkExtractor extends LockssTestCase {
 
   public void testDoCrawlStyleAbsolute() throws Exception {
     performDoCrawlStyle("<style>", "http://www.example.com/",
-                           "http://www.example.com/");
+                        "http://www.example.com/");
   }
 
   public void testDoCrawlStyleRelative() throws Exception {
@@ -269,11 +233,6 @@ public class TestJsoupHtmlLinkExtractor extends LockssTestCase {
   public void testDoCrawlStyleWithTypeAttributeRelative() throws Exception {
     performDoCrawlStyle("<style type=\"text/css\">", "",
                         "http://www.example.com/");
-  }
-
-  public void testDoCrawlStyleAbsoluteShort() throws Exception {
-    performDoCrawlStyleShort("<style>", "http://www.example.com/",
-			     "http://www.example.com/");
   }
 
   protected void performDoCrawlStyle(String openingStyleTag,
@@ -327,44 +286,9 @@ public class TestJsoupHtmlLinkExtractor extends LockssTestCase {
       + "</html>\n";
 
     assertEquals(SetUtil.set(expectedPrefix + url1, expectedPrefix + url2,
-                                expectedPrefix + url3, expectedPrefix + url4,
-                                expectedPrefix + url5, expectedPrefix + url6),
-                    parseSingleSource(source));
-  }
-
-  // style attr is conditioonal on "url(" in string; ensure <style> tag isn't.
-  protected void performDoCrawlStyleShort(String openingStyleTag,
-					  String givenPrefix,
-					  String expectedPrefix)
-      throws Exception {
-    String url1 = "foo1.css";
-    String url2 = "foo2.css";
-    String url3 = "foo3333.css";
-    String url4 = "foo4.css";
-    String url5 = "img5.gif";
-    String url6 = "img6.gif";
-
-    String source = "<html>\n" + " <head>\n" + "  <title>Test</title>\n"
-      + "  "
-      + openingStyleTag
-      + "\n"
-      + "<!--\n"
-      + "@import \'"
-      + givenPrefix
-      + url3
-      + "\';\n"
-      + "}\n"
-      + "/* Comment */"
-      + "-->\n"
-      + "  </style>\n"
-      + " </head>\n"
-      + " <body>\n"
-      + "  <p>Fake content</p>\n"
-      + " </body>\n"
-      + "</html>\n";
-
-    assertEquals(SetUtil.set(expectedPrefix + url3),
-		 parseSingleSource(source));
+                             expectedPrefix + url3, expectedPrefix + url4,
+                             expectedPrefix + url5, expectedPrefix + url6),
+                 parseSingleSource(source));
   }
 
   public void testDoCrawlBody() throws Exception {
@@ -527,21 +451,6 @@ public class TestJsoupHtmlLinkExtractor extends LockssTestCase {
     assertEquals(SetUtil.set(), parseSingleSource(source));
   }
 
-  public void testStyleAttribute() throws Exception {
-    String url1 = "http://www.example.com/link3.html";
-    String url2 = "http://www.example.com/backg.png";
-
-    String source = "<html><head><title>Test</title></head><body>"
-      + "<span class=\"foo\" "
-      + "style=\"background: url('/backg.png') no-repeat 0px -64px;\" />";
-    assertEquals(SetUtil.set(url2), parseSingleSource(source));
-
-    String source2 = "<html><head><title>Test</title></head><body>"
-      + "<a href=\"http://www.example.com/link3.html\" " 
-      + "style=\"background: url('/backg.png');\">link3</a>";
-    assertEquals(SetUtil.set(url1, url2), parseSingleSource(source2));
-  }
-
   public void testParseUnknownProtocol() throws Exception {
     String url = "badprotocol://www.example.com/link3.html";
     String source = "<html><head><title>Test</title></head><body>"
@@ -642,7 +551,7 @@ public class TestJsoupHtmlLinkExtractor extends LockssTestCase {
       + "Filler, with <b>bold</b> tags and<i>others</i>"
       + "<base href=http://www.example2.com>"
       + "<a href=link2.html>link2</a>"
-      + "<base href=http://www.example3.com>"
+      + "<base href=http://www.example.com>"
       + "<a href=link3.html>link3</a>";
     assertEquals(SetUtil.set(url1, url2, url3), parseSingleSource(source));
   }
@@ -667,7 +576,7 @@ public class TestJsoupHtmlLinkExtractor extends LockssTestCase {
       + "<base href=http://www.example3.com>"
       + "<a href=link3.html>link4</a>";
     assertIsomorphic(SetUtil.set(url1, url2, url3, url4),
-                        parseSingleSource(source));
+                     parseSingleSource(source));
   }
 
   public void testIgnoresNullHrefInBaseTag() throws Exception {

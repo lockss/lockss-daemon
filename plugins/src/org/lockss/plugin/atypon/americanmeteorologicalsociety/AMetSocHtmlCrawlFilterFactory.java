@@ -1,5 +1,5 @@
 /*
- * $Id: AMetSocHtmlCrawlFilterFactory.java,v 1.3 2014-04-17 21:25:08 alexandraohlson Exp $
+ * $Id: AMetSocHtmlCrawlFilterFactory.java,v 1.2 2013-08-06 21:09:32 aishizaki Exp $
  */
 
 /*
@@ -33,7 +33,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.atypon.americanmeteorologicalsociety;
 
 import java.io.InputStream;
-import java.util.regex.Pattern;
 
 import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
@@ -47,9 +46,7 @@ import org.lockss.plugin.*;
 import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
 
 public class AMetSocHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory {
-  
-  protected static final Pattern corrections = Pattern.compile("Original Article|Corrigendum|Correction|Errata|Erratum", Pattern.CASE_INSENSITIVE);
-  
+
   NodeFilter[] filters = new NodeFilter[] {
       // do not follow an "original article" link back to a previous volume
       // do not follow a "corrigendum" link ahead to a future volume
@@ -57,9 +54,11 @@ public class AMetSocHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFact
         @Override public boolean accept(Node node) {
           // on a TOC, class="ref" on an article page, class="errata"
           if (!(node instanceof LinkTag)) return false;
+          if ( (!("ref".equals(((CompositeTag)node).getAttribute("class")))) &&
+              (!("errata".equals(((CompositeTag)node).getAttribute("class")))) ) return false;
           String allText = ((CompositeTag)node).toPlainTextString();
-          // the "class" identifier isn't consistent. Just look at the text
-          return corrections.matcher(allText).find(); 
+          //using regex - the "i" is for case insensitivity; the "s" is for accepting newlines
+          return (allText.matches("(?is).*Original Article.*") || allText.matches("(?is).*Corrigendum.*") );
         }
       },
   };

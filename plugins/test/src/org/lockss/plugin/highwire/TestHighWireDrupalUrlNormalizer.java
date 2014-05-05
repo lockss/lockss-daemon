@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireDrupalUrlNormalizer.java,v 1.3 2014-04-18 21:52:54 etenbrink Exp $
+ * $Id: TestHighWireDrupalUrlNormalizer.java,v 1.2 2014-02-20 19:43:32 etenbrink Exp $
  */
 
 /*
@@ -59,8 +59,6 @@ public class TestHighWireDrupalUrlNormalizer extends LockssTestCase {
         normalizer.normalizeUrl("http://ajpcell.physiology.org/content/ajpcell/303/1/C1/F1.large.jpg?width=800&height=600", null));
     assertEquals("http://ajpcell.physiology.org/content/ajpcell/303/1/C1/F1.large.jpg",
         normalizer.normalizeUrl("http://ajpcell.physiology.org/content/ajpcell/303/1/C1/F1.large.jpg?download=true", null));
-    assertEquals("http://ajplung.physiology.org/sites/default/files/color/jcore_1-15d49f53/colors.css",
-        normalizer.normalizeUrl("http://ajplung.physiology.org/sites/default/files/color/jcore_1-15d49f53/colors.css?n3sdk7", null));
     assertEquals("http://ajpheart.physiology.org/content/ajpheart/304/2/H253.full.pdf",
         normalizer.normalizeUrl("http://ajpheart.physiology.org/content/ajpheart/304/2/H253.full-text.pdf", null));
     assertEquals("http://ajpheart.physiology.org/content/304/2/H253.full.pdf",

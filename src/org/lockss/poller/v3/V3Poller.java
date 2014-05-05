@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.176 2014-04-23 20:47:11 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.175 2014-03-23 17:10:11 tlipkis Exp $
  */
 
 /*
@@ -408,18 +408,10 @@ public class V3Poller extends BasePoll {
     PREFIX + "useVersionCounts";
   public static final boolean DEFAULT_USE_VERSION_COUNTS = false;
   
-  /** If true, too-close votes cause repair from publisher */
   public static final String PARAM_V3_REPAIR_FROM_PUBLISHER_WHEN_TOO_CLOSE =
     PREFIX + "repairFromPublisherWhenTooClose";
   public static final boolean DEFAULT_V3_REPAIR_FROM_PUBLISHER_WHEN_TOO_CLOSE =
     false;
-  
-  /** ULRs with fewer than quorum votes, which do not exist on the poller,
-   * may be repaired fromo a peer if the publisher is down and there are at
-   * least this many identical replicas (based on plain hash). */
-  public static final String PARAM_MIN_REPLICAS_FOR_NO_QUORUM_PEER_REPAIR =
-    PREFIX + "minReplicasForNoQuorumPeerRepair";
-  public static final int DEFAULT_MIN_REPLICAS_FOR_NO_QUORUM_PEER_REPAIR = -1;
   
   /**
    * The number of bytes to hash before saving poll status during hashing.
@@ -430,8 +422,7 @@ public class V3Poller extends BasePoll {
     100 * 1024 * 1024; // 100 MB
 
   /**
-   * If true, all versions of local file are rehashed after repair
-   * received.  Leave false.
+   * The number of bytes to hash before saving poll status during hashing.
    */
   public static final String PARAM_REPAIR_HASH_ALL_VERSIONS =
     PREFIX + "repairHashAllVersions";
@@ -578,9 +569,6 @@ public class V3Poller extends BasePoll {
 
   private boolean repairFromPublisherWhenTooClose =
     V3Poller.DEFAULT_V3_REPAIR_FROM_PUBLISHER_WHEN_TOO_CLOSE;
-
-  private int minReplicasForNoQuorumPeerRepair =
-    V3Poller.DEFAULT_MIN_REPLICAS_FOR_NO_QUORUM_PEER_REPAIR;
 
   // CR: Factor out common elements of the two constructors
   /**
@@ -753,9 +741,6 @@ public class V3Poller extends BasePoll {
     repairFromPublisherWhenTooClose =
       c.getBoolean(PARAM_V3_REPAIR_FROM_PUBLISHER_WHEN_TOO_CLOSE,
 		   DEFAULT_V3_REPAIR_FROM_PUBLISHER_WHEN_TOO_CLOSE);
-    minReplicasForNoQuorumPeerRepair =
-      c.getInt(PARAM_MIN_REPLICAS_FOR_NO_QUORUM_PEER_REPAIR,
-	       DEFAULT_MIN_REPLICAS_FOR_NO_QUORUM_PEER_REPAIR);
     logUniqueVersions = c.getBoolean(PARAM_LOG_UNIQUE_VERSIONS,
 				     DEFAULT_LOG_UNIQUE_VERSIONS);
     enableHashStats = c.getBoolean(PARAM_V3_ENABLE_HASH_STATS,
@@ -1894,21 +1879,11 @@ public class V3Poller extends BasePoll {
 	}
 	break;
       case NOQUORUM:
-	if (AuUtil.isPubDown(getAu()) && tally.isVoterOnly()) {
-	  int minReplicas = 
-	    AuUtil.minReplicasForNoQuorumPeerRepair(
-			getAu(),
-			minReplicasForNoQuorumPeerRepair);
-	  if (minReplicas > 0) {
-	    requestRepair(url, tally.getSortedRepairCandidates(minReplicas));
-	  }
-	}
 	break;
       case TOO_CLOSE:
 	if (AuUtil.isRepairFromPublisherWhenTooClose(
 	      getAu(),
-	      repairFromPublisherWhenTooClose) &&
-	    publisherAvailableForRepair()) {
+	      repairFromPublisherWhenTooClose)) {
 	  requestRepairFromPublisher(url);
 	}
 	break;

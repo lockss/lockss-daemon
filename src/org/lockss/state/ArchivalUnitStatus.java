@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.120 2014-04-23 20:48:03 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.119 2013-09-18 05:39:13 tlipkis Exp $
  */
 
 /*
@@ -1039,6 +1039,13 @@ public class ArchivalUnitStatus
 					  (AuUtil.isPubDown(au)
 					   ? "No" : "Yes")));
       SubstanceChecker.State subState = state.getSubstanceState();
+      boolean hasSubstancePatterns = false;
+      try {
+	hasSubstancePatterns = (au.makeSubstanceUrlPatterns() != null ||
+				au.makeNonSubstanceUrlPatterns() != null);
+      } catch (Exception e) {
+	// ignore
+      }
 
       String coverageDepth =
 	AuUtil.getTitleAttribute(au,
@@ -1049,7 +1056,7 @@ public class ArchivalUnitStatus
 					    coverageDepth));
       }
       if (debug) {
-	if (AuUtil.hasSubstancePatterns(au)) {
+	if (hasSubstancePatterns) {
 	  res.add(new StatusTable.SummaryInfo("Has Substance",
 					      ColumnDescriptor.TYPE_STRING,
 					      subState.toString()));
@@ -1226,21 +1233,6 @@ public class ArchivalUnitStatus
 			 PropUtil.fromArgs("type", "filesm",
 					   "auid", au.getAuId())));
       }
-      if (AuUtil.hasSubstancePatterns(au)) {
-	addLink(urlLinks,
-		new StatusTable
-		.SrvLink("Substance URLs",
-			 AdminServletManager.SERVLET_LIST_OBJECTS,
-			 PropUtil.fromArgs("type", "suburls",
-					   "auid", au.getAuId())));
-
-	addLink(urlLinks,
-		new StatusTable
-		.SrvLink("Substance Files",
-			 AdminServletManager.SERVLET_LIST_OBJECTS,
-			 PropUtil.fromArgs("type", "subfiles",
-					   "auid", au.getAuId())));
-      }
       res.add(new StatusTable.SummaryInfo(null,
 					  ColumnDescriptor.TYPE_STRING,
 					  urlLinks));
@@ -1373,31 +1365,7 @@ public class ArchivalUnitStatus
 	putTypeSort(row, key, au, plug);
 	rows.add(row);
       }
-      TdbAu tau = au.getTdbAu();
-      if (tau != null) {
-	Map<String,String> tdbother = new HashMap<String,String>();
-	tdbother.put("Name", tau.getName());
-	tdbother.put("Publisher", tau.getPublisherName());
-	addTdbRows(rows, tdbother, "Tdb", 10);
-	addTdbRows(rows, tau.getAttrs(), "TdbAttr", 11);
-	addTdbRows(rows, tau.getProperties(), "TdbProp", 12);
-      }
-
       return rows;
-    }
-
-    void addTdbRows(List rows, Map<String,String> tdbMap,
-		    String type, int sort) {
-      for (Map.Entry<String,String> ent : tdbMap.entrySet()) {
-	String key = ent.getKey();
-	String val = ent.getValue();
-	Map row = new HashMap();
-	row.put("key", key);
-	row.put("val", val);
-	row.put("type", type);
-	row.put("sort", sort);
-	rows.add(row);
-      }
     }
 
     void putTypeSort(Map row, String key, ArchivalUnit au, Plugin plug) {

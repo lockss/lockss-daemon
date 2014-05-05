@@ -1,41 +1,9 @@
-/*
- * $Id: TestHtmlFormExtractor.java,v 1.5 2014-04-23 22:42:59 clairegriffin Exp $
- */
-
-/*
-
-Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-Except as contained in this notice, the name of Stanford University shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization from Stanford University.
-
-*/
 package org.lockss.extractor;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.jsoup.nodes.FormElement;
 import org.jsoup.select.Elements;
-import org.lockss.extractor.HtmlFormExtractor.FormUrlGenerator;
+import org.lockss.extractor.HtmlFormExtractor.FormElementLinkExtractor;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockArchivalUnit;
 import org.lockss.test.MockCachedUrl;
@@ -75,16 +43,14 @@ public class TestHtmlFormExtractor extends LockssTestCase {
 
     HtmlFormExtractor formExtractor = new HtmlFormExtractor(m_mau,m_callback,
                                                             ENC, null, null);
-    List<FormElement> f_elems = null;
-    formExtractor.initProcessor(m_extractor, f_elems);
+    formExtractor.initProcessor(m_extractor, null);
 
     // check that the extractor for form tag extractor
     assertEquals(m_extractor.unregisterTagExtractor(HtmlFormExtractor.FORM_TAG),
-                 null);
+                 formExtractor.getFormLinkExtractor());
 
 
-    JsoupHtmlLinkExtractor.LinkExtractor tag_extractor =
-        formExtractor.getTagsLinkExtractor();
+    FormElementLinkExtractor tag_extractor = formExtractor.getTagsLinkExtractor();
     // check it for all known form elements
     for(String el_name : HtmlFormExtractor.FORM_TAG_ELEMENTS)
     {
@@ -119,16 +85,13 @@ public class TestHtmlFormExtractor extends LockssTestCase {
     builder.append(f2);
     String html = closeDoc(builder);
     Document doc = Jsoup.parse(html);
-    List<FormElement> forms = doc.select("form").forms();
-    assertEquals(2, forms.size());
-    HtmlFormExtractor formExtractor =
-        new HtmlFormExtractor(m_mau,m_callback, ENC, null, null);
+    Elements forms = doc.select("form[id]");
+    assertEquals(1, forms.size());
+    HtmlFormExtractor formExtractor = new HtmlFormExtractor(m_mau,m_callback,
+                                                            ENC, null, null);
     formExtractor.initProcessor(m_extractor, forms);
     assertNotNull(formExtractor.getForm("form1"));
     assertNull(formExtractor.getForm("form2"));
-    List<FormUrlGenerator> gens = formExtractor.getUrlGenerators();
-    assertNotNull(gens);
-    assertEquals(2,gens.size());
   }
 
   public void testAddForm() throws Exception {
@@ -161,13 +124,29 @@ public class TestHtmlFormExtractor extends LockssTestCase {
     // parse the document to generate elements
     Document doc = Jsoup.parse(html);
     Elements forms = doc.select("form");
-    List<FormElement> fform = doc.getAllElements().forms();
-    assertEquals(forms.size(), fform.size());
-    assertIsomorphic(forms.forms(), fform);
-    HtmlFormExtractor formExtractor =
-        new HtmlFormExtractor(m_mau,m_callback,ENC, null, null);
+
+    HtmlFormExtractor formExtractor = new HtmlFormExtractor(m_mau,m_callback,
+                                                            ENC, null, null);
     formExtractor.addForm(forms.first());
     assertNotNull(formExtractor.getForm("form1"));
+    try {
+      formExtractor.addForm(forms.last());
+      fail("attempt to add form without id should fail");
+    }
+    catch(Exception e) {
+    }
+    try {
+      formExtractor.addForm(forms.last());
+      fail("attempt to add form without id should fail");
+    }
+    catch(Exception e) {
+    }
+    try {
+      formExtractor.addForm(doc.getElementById("foo"));
+      fail("attempt to non form element should fail");
+    }
+    catch(Exception e) {
+    }
   }
 
   public void testElementsOutsideForm() throws Exception
@@ -1163,7 +1142,7 @@ public class TestHtmlFormExtractor extends LockssTestCase {
   private Set<String> parseSingleSource(String source)
       throws Exception {
     MockArchivalUnit m_mau = new MockArchivalUnit();
-    LinkExtractor ue = new JsoupHtmlLinkExtractor();
+    LinkExtractor ue = new RegexpCssLinkExtractor();
     m_mau.setLinkExtractor("text/css", ue);
     MockCachedUrl mcu =
       new org.lockss.test.MockCachedUrl("http://www.example.com", m_mau);

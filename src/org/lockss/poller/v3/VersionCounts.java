@@ -1,5 +1,5 @@
 /*
- * $Id: VersionCounts.java,v 1.3 2014-04-23 20:47:10 tlipkis Exp $
+ * $Id: VersionCounts.java,v 1.2 2013-06-26 04:44:34 tlipkis Exp $
  */
 
 /*
@@ -176,70 +176,6 @@ final class VersionCounts implements VoteBlockTallier.VoteCallback {
 	    headVersionMap.getCollection(headVersion);
 	  for (ParticipantUserData voter: headVoters) {
 	    repairCandidates.put(voter, headVersion);
-	  }
-	}
-      }
-    }
-    return repairCandidates;
-  }
-
-  /**
-   * @param landslideMinimum The minimum number of votes which would
-   * make a version "popular".
-   * @param excludedVersions A collection of plain hash values to be
-   * excluded from the result.
-   * @return A Map of ParticipantUserData to plain hash values,
-   * including only those with head versions which have at least the
-   * minimum support.
-   */
-  public List<ParticipantUserData>
-    getSortedRepairCandidates(int landslideMinimum) {
-    return getSortedRepairCandidates(landslideMinimum,
-				     Collections.EMPTY_SET);
-  }
-
-  public List<ParticipantUserData>
-    getSortedRepairCandidates(int landslideMinimum,
-			      Collection<HashResult> excludedHashes) {
-    Map<Integer, Collection<ParticipantUserData>> map =
-      getSortedRepairCandidatesMap(landslideMinimum, excludedHashes);
-    List<ParticipantUserData> res = new ArrayList<ParticipantUserData>();
-    for (Collection<ParticipantUserData> coll : map.values()) {
-      res.addAll(coll);
-    }
-    return res;
-  }
-
-  public Map<Integer, Collection<ParticipantUserData>>
-    getSortedRepairCandidatesMap(int landslideMinimum) {
-    return getSortedRepairCandidatesMap(landslideMinimum,
-					Collections.EMPTY_SET);
-  }
-
-  public Map<Integer, Collection<ParticipantUserData>>
-    getSortedRepairCandidatesMap(int landslideMinimum,
-			       Collection<HashResult> excludedHashes) {
-    Map<Integer, Collection<ParticipantUserData>> repairCandidates =
-      new TreeMap<Integer, Collection<ParticipantUserData>>(Collections.reverseOrder());
-    for (HashResult headVersion: 
-	   (Collection<HashResult>)headVersionMap.keySet()) {
-      if (! excludedHashes.contains(headVersion)) {
-	Collection<ParticipantUserData> voters =
-	  votedVersionMap.getCollection(headVersion);
-	// voters can't be null, since the plainHash is the head
-	// version for some voters.
-	int size = voters.size();
-	if (size >= landslideMinimum) {
-	  Collection<ParticipantUserData> countVoters =
-	    repairCandidates.get(size);
-	  if (countVoters == null) {
-	    countVoters = new HashSet<ParticipantUserData>();
-	    repairCandidates.put(size, countVoters);
-	  }
-	  Collection<ParticipantUserData> headVoters = 
-	    headVersionMap.getCollection(headVersion);
-	  for (ParticipantUserData voter : headVoters) {
-	    countVoters.add(voter);
 	  }
 	}
       }
