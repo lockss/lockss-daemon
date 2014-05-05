@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseAtyponUrlNormalizer.java,v 1.1 2013-07-31 21:43:56 alexandraohlson Exp $
+ * $Id: TestBaseAtyponUrlNormalizer.java,v 1.2 2014-05-05 19:07:29 alexandraohlson Exp $
  */
 
 /*
@@ -70,6 +70,33 @@ public class TestBaseAtyponUrlNormalizer extends LockssTestCase {
     // AMetSoc type citation download
     assertEquals("http://journals.ametsoc.org/action/downloadCitation?doi=10.1175%2FJCLI-D-11-00582.1&format=ris&include=cit",
         normalizer.normalizeUrl("http://journals.ametsoc.org/action/downloadCitation?direct=true&doi=10.1175%2FJCLI-D-11-00582.1&downloadFileName=ams_clim25_4476&include=cit&submit=Download+citation+data", null));  
+  }
+  
+  public void testCssArgumentNormalizer() throws Exception {
+    UrlNormalizer normalizer = new BaseAtyponUrlNormalizer();
+
+    // don't do anything to a normal url
+    assertEquals("http://www.baseatypon.com/pb/css/head_3_8.css",
+        normalizer.normalizeUrl("http://www.baseatypon.com/pb/css/head_3_8.css", null));
+    assertEquals("http://www.baseatypon.com/pb/js/blah.js",
+        normalizer.normalizeUrl("http://www.baseatypon.com/pb/js/blah.js", null));
+
+    // normalize off argument
+    assertEquals("http://www.baseatypon.com/pb/css/head_3_8.css",       
+        normalizer.normalizeUrl("http://www.baseatypon.com/pb/css/head_3_8.css?1397594718000", null));
+    assertEquals("http://www.baseatypon.com/pb/js/head_3_8.js",
+        normalizer.normalizeUrl("http://www.baseatypon.com/pb/js/head_3_8.js?1397594718000", null));
+    
+    // don't do anything if not actually css or js file
+    assertEquals("http://www.baseatypon.com/doi/abs/10.1111/blah.css.foo?argument",       
+        normalizer.normalizeUrl("http://www.baseatypon.com/doi/abs/10.1111/blah.css.foo?argument", null));
+    
+    // still remove cookieSet argument if there
+    assertEquals("http://www.baseatypon.com/pb/js/head_3_8.js",
+        normalizer.normalizeUrl("http://www.baseatypon.com/pb/js/head_3_8.js?cookieSet=1", null));
+    assertEquals("http://www.baseatypon.com/doi/abs/10.1111/blah.html",
+        normalizer.normalizeUrl("http://www.baseatypon.com/doi/abs/10.1111/blah.html?cookieSet=1", null));
+
   }
   
 }

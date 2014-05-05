@@ -1,21 +1,26 @@
 /*
- * $Id: TestAMetSocHtmlCrawlFilterFactory.java,v 1.2 2014-04-17 21:25:08 alexandraohlson Exp $
+ * $Id: TestAMetSocHtmlCrawlFilterFactory.java,v 1.3 2014-05-05 19:07:30 alexandraohlson Exp $
  */
 package org.lockss.plugin.atypon.americanmeteorologicalsociety;
 
 import java.io.*;
 import org.lockss.util.*;
+import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
 import org.lockss.test.*;
 
+/* AmetSoc no longer has a custom crawl filter but relies on BaseAtypon
+ * leave this test in place both the ensure against regression and in 
+ * case we ever need to customize
+ */
 public class TestAMetSocHtmlCrawlFilterFactory extends LockssTestCase {
   static String ENC = Constants.DEFAULT_ENCODING;
 
-  private AMetSocHtmlCrawlFilterFactory fact;
+  private BaseAtyponHtmlCrawlFilterFactory fact;
   private MockArchivalUnit mau;
 
   public void setUp() throws Exception {
     super.setUp();
-    fact = new AMetSocHtmlCrawlFilterFactory();
+    fact = new BaseAtyponHtmlCrawlFilterFactory();
     mau = new MockArchivalUnit();
   }
 

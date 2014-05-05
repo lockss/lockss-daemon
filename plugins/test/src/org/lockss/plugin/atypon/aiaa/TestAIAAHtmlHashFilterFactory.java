@@ -1,5 +1,5 @@
 /*
- * $Id: TestAIAAHtmlHashFilterFactory.java,v 1.4 2013-12-18 16:58:24 alexandraohlson Exp $
+ * $Id: TestAIAAHtmlHashFilterFactory.java,v 1.5 2014-05-05 19:07:30 alexandraohlson Exp $
  */
 /*
 
@@ -122,6 +122,36 @@ public class TestAIAAHtmlHashFilterFactory extends LockssTestCase {
       "<span class=\"title2\" >" +
       "A. Fitting the Johnson Distribution to Point Data</span> " +
       "<p>The Johnson distribution</p>";
+  
+  private static final String adHolderDiv = 
+      "<div " +
+          "id=\"widget-7132\" class=\"widget type-ad-placeholder ui-helper-clearfix\">" +
+          "<div class=\"view\">" +
+          "<div class=\"view-inner\">" +
+          "<!-- placeholder id=null, description=Admin Message -->" +
+          "</div>" +
+          "</div>" +
+          "</div>";
+  private static final String adHolderDivFiltered = 
+      "";
+  
+  private static final String listItemCitedBy =
+      "<ul> <li class=\"articleToolLi showPDFPlus\">" +
+          "<a href=\"/doi/pdfplus/10.2514/1.36414\" target=\"_blank\">" +
+          "PDF Plus (724 KB)" +
+          "</a>" +
+          "</li>" +
+          "<li>" +
+          "<a href=\"/doi/abs/10.2514/1.36414#citedBySection\">Cited By</a>" +
+          "</li>" +
+          "</ul>";
+  private static final String listItemCitedByFiltered =
+      "<ul> <li class=\"articleToolLi showPDFPlus\">" +
+          "<a href=\"/doi/pdfplus/10.2514/1.36414\" target=\"_blank\">" +
+          "PDF Plus (724 KB)" +
+          "</a>" +
+          "</li>" +
+          "</ul>";
       
   
   public void testFiltering() throws Exception {
@@ -143,6 +173,14 @@ public class TestAIAAHtmlHashFilterFactory extends LockssTestCase {
     inA = fact.createFilteredInputStream(mau, new StringInputStream(spanIdHtml),
         ENC);
     assertEquals(spanIdHtmlFiltered,StringUtil.fromInputStream(inA));
+    
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(adHolderDiv),
+        ENC);
+    assertEquals(adHolderDivFiltered,StringUtil.fromInputStream(inA));
+
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(listItemCitedBy),
+        ENC);
+    assertEquals(listItemCitedByFiltered,StringUtil.fromInputStream(inA));
  
   }
 }

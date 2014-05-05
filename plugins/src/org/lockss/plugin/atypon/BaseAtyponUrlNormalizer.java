@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponUrlNormalizer.java,v 1.5 2013-12-23 18:30:45 alexandraohlson Exp $
+ * $Id: BaseAtyponUrlNormalizer.java,v 1.6 2014-05-05 19:07:30 alexandraohlson Exp $
  */
 /*
  Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
@@ -26,6 +26,7 @@ package org.lockss.plugin.atypon;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Pattern;
 
 import org.apache.commons.lang.StringUtils;
 import org.lockss.daemon.PluginException;
@@ -42,6 +43,8 @@ public class BaseAtyponUrlNormalizer implements UrlNormalizer {
   protected static Logger log = 
       Logger.getLogger("BaseAtyponUrlNormalizer");
   protected static final String SUFFIX = "?cookieSet=1";
+  protected static final Pattern HASH_ARG_PATTERN = Pattern.compile("(\\.css|js)\\?\\d+$");
+  protected static final String  NO_ARG_REPLACEMENT = "";
   
   /* 
    * CITATION DOWNLOAD URL CLEANUP
@@ -119,7 +122,14 @@ public class BaseAtyponUrlNormalizer implements UrlNormalizer {
       log.debug3("normalized citation download url: " + new_url);
       return new_url.toString();
     }
-    
+    // some CSS/JS files have a hash argument that isn't needed
+    String returnString = HASH_ARG_PATTERN.matcher(url).replaceFirst("$1");
+    if (!returnString.equals(url)) {    
+      // if we were a normalized css/js, then we're done - return
+      log.debug3("normalized css url: " + returnString);
+      return returnString;
+    }
+
     // this wasn't a citation download URL (or it had malformed arguments so we can't normalize)
     return StringUtils.chomp(url, SUFFIX); /* standard non citation download specific URLS */
   }
