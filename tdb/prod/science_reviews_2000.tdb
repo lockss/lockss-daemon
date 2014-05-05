@@ -146,6 +146,8 @@
       eissn = 1878-6413 ;
       issnl = 0960-3409
     >
+    
+    comment[moving] = journal is moving to Maney as of start of 2014.
 
     param[journal_id] = maht
     param[journal_issn] = 0960-3409
@@ -165,7 +167,6 @@
     au < released ; 2011 ; Materials at High Temperatures Volume 28 ; 28 >
     au < released ; 2012 ; Materials at High Temperatures Volume 29 ; 29 >
     au < testing ; 2013 ; Materials at High Temperatures Volume 30 ; 30 >
-    au < expected ; 2014 ; Materials at High Temperatures Volume 31 ; 31 >
 
   }
 
