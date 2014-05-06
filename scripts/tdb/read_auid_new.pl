@@ -158,13 +158,13 @@ while (my $line = <>) {
     if ($resp->is_success) {
       my $man_contents = $resp->content;
       if (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) || ($man_contents =~ m/$oa_tag/))) {
-    if ($man_contents =~ m/<h1>(.*)<\/h1>/si) {
-        $vol_title = $1;
-        $vol_title =~ s/\s*\n\s*/ /g;
-        if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
-      $vol_title = "\"" . $vol_title . "\"";
-        }
-    } 
+        if ($man_contents =~ m/<h1>(.*)<\/h1>/si) {
+          $vol_title = $1;
+          if ($man_contents =~ m/<h2>(.*)<\/h2>/si) {
+            $vol_title = $vol_title . $1;
+          }
+          $vol_title =~ s/\s*\n\s*/ /g;
+        } 
     $result = "Manifest"
       } else {
     $result = "--"
