@@ -395,24 +395,28 @@
       param[home_url] = http://www.fossil-record.net/
       comment[0] = Abstract only from volume 1 to 16
 
-      au < manifest ; exists ; 1998 ; 1998 ; Fossil Record Reports Volume 1 [Abstract Only] ; 1 >
-      au < manifest ; exists ; 1999 ; 1999 ; Fossil Record Reports Volume 2 [Abstract Only] ; 2 >
-      au < manifest ; exists ; 2000 ; 2000 ; Fossil Record Reports Volume 3 [Abstract Only] ; 3 >
-      au < manifest ; exists ; 2001 ; 2001 ; Fossil Record Reports Volume 4 [Abstract Only] ; 4 >
-      au < manifest ; exists ; 2002 ; 2002 ; Fossil Record Reports Volume 5 [Abstract Only] ; 5 >
-      au < manifest ; exists ; 2003 ; 2003 ; Fossil Record Reports Volume 6 [Abstract Only] ; 6 >
-      au < manifest ; exists ; 2004 ; 2004 ; Fossil Record Reports Volume 7 [Abstract Only] ; 7 >
-      au < manifest ; exists ; 2005 ; 2005 ; Fossil Record Reports Volume 8 [Abstract Only] ; 8 >
-      au < manifest ; exists ; 2006 ; 2006 ; Fossil Record Reports Volume 9 [Abstract Only] ; 9 >
-      au < manifest ; exists ; 2007 ; 2007 ; Fossil Record Reports Volume 10 [Abstract Only] ; 10 >
-      au < manifest ; exists ; 2008 ; 2008 ; Fossil Record Reports Volume 11 [Abstract Only] ; 11 >
-      au < manifest ; exists ; 2009 ; 2009 ; Fossil Record Reports Volume 12 [Abstract Only] ; 12 >
-      au < manifest ; exists ; 2010 ; 2010 ; Fossil Record Reports Volume 13 [Abstract Only] ; 13 >
-      au < manifest ; exists ; 2011 ; 2011 ; Fossil Record Reports Volume 14 [Abstract Only] ; 14 >
-      au < ready ; exists ; 2012 ; 2012 ; Fossil Record Reports Volume 15 [Abstract Only] ; 15 >
-      au < manifest ; exists ; 2013 ; 2013 ; Fossil Record Reports Volume 16 [Abstract Only] ; 16 >
+      {
+      attr[au_coverage_depth] = abstracts
+      au < manifest ; exists ; 1998 ; 1998 ; Fossil Record Reports Volume 1 [abstract only] ; 1 >
+      au < manifest ; exists ; 1999 ; 1999 ; Fossil Record Reports Volume 2 [abstract only] ; 2 >
+      au < manifest ; exists ; 2000 ; 2000 ; Fossil Record Reports Volume 3 [abstract only] ; 3 >
+      au < manifest ; exists ; 2001 ; 2001 ; Fossil Record Reports Volume 4 [abstract only] ; 4 >
+      au < manifest ; exists ; 2002 ; 2002 ; Fossil Record Reports Volume 5 [abstract only] ; 5 >
+      au < manifest ; exists ; 2003 ; 2003 ; Fossil Record Reports Volume 6 [abstract only] ; 6 >
+      au < manifest ; exists ; 2004 ; 2004 ; Fossil Record Reports Volume 7 [abstract only] ; 7 >
+      au < manifest ; exists ; 2005 ; 2005 ; Fossil Record Reports Volume 8 [abstract only] ; 8 >
+      au < manifest ; exists ; 2006 ; 2006 ; Fossil Record Reports Volume 9 [abstract only] ; 9 >
+      au < manifest ; exists ; 2007 ; 2007 ; Fossil Record Reports Volume 10 [abstract only] ; 10 >
+      au < manifest ; exists ; 2008 ; 2008 ; Fossil Record Reports Volume 11 [abstract only] ; 11 >
+      au < manifest ; exists ; 2009 ; 2009 ; Fossil Record Reports Volume 12 [abstract only] ; 12 >
+      au < manifest ; exists ; 2010 ; 2010 ; Fossil Record Reports Volume 13 [abstract only] ; 13 >
+      au < testing ; exists ; 2011 ; 2011 ; Fossil Record Reports Volume 14 [abstract only] ; 14 >
+      au < manifest ; exists ; 2012 ; 2012 ; Fossil Record Reports Volume 15 [abstract only] ; 15 >
+      au < manifest ; exists ; 2013 ; 2013 ; Fossil Record Reports Volume 16 [abstract only] ; 16 >
+      }
+      
       au < manifest ; exists ; 2014 ; 2014 ; Fossil Record Reports Volume 17 ; 17 >
-    
+      
    }
     
   {
