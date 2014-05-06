@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.357 2014-04-23 21:06:47 clairegriffin Exp $
+ $Id: build.xml,v 1.358 2014-05-06 01:32:38 clairegriffin Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -335,8 +335,8 @@ Args:
   <property name="ext.javadoc"
                       value="http://documents.lockss.org/gamma-libs/" />
   <!-- Needed by ajax crawler -->
-  <property name="crawljax-core.jar" value="${lib}/crawljax-core-3.5.jar" />
-  <property name="crawloverview-plugin.jar" value="${lib}/crawloverview-plugin-3.5.jar" />
+  <property name="crawljax-core.jar" value="${lib}/crawljax-core-3.6-l.jar" />
+  <property name="crawloverview-plugin.jar" value="${lib}/crawloverview-plugin-3.6-l.jar" />
   <property name="httpclient.jar" value="${lib}/httpclient-4.3.1.jar" />
   <property name="slf4j-api.jar" value="${lib}/slf4j-api-1.7.6.jar" />
   <property name="logback-classic.jar" value="${lib}/logback-classic-1.1.1.jar" />
