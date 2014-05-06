@@ -17,7 +17,7 @@
 
     au < released ; 2011 ; 2011 ; BIBLIOS: Librarianship and Information Science Journal Volume 2011 ; 2011 >
     au < released ; 2012 ; 2012 ; BIBLIOS: Librarianship and Information Science Journal Volume 2012 ; 2012 >
-    au < manifest ; 2013 ; 2013 ; BIBLIOS: Librarianship and Information Science Journal Volume 2013 ; 2013 >
+    au < testing ; 2013 ; 2013 ; BIBLIOS: Librarianship and Information Science Journal Volume 2013 ; 2013 >
     au < expected ; 2014 ; 2014 ; BIBLIOS: Librarianship and Information Science Journal Volume 2014 ; 2014 >
 
   }
@@ -81,7 +81,7 @@
     au < released ; 2010 ; 2010 ; The Carl Beck Papers In Russian And East European Studies Volume 2010 ; 2010 >
     au < released ; 2011 ; 2011 ; The Carl Beck Papers In Russian And East European Studies Volume 2011 ; 2011 >
     au < released ; 2012 ; 2012 ; The Carl Beck Papers In Russian And East European Studies Volume 2012 ; 2012 >
-    au < manifest ; 2013 ; 2013 ; The Carl Beck Papers In Russian And East European Studies Volume 2013 ; 2013 >
+    au < testing ; 2013 ; 2013 ; The Carl Beck Papers In Russian And East European Studies Volume 2013 ; 2013 >
     au < manifest ; 2014 ; 2014 ; The Carl Beck Papers In Russian And East European Studies Volume 2014 ; 2014 >
 
   }
@@ -96,7 +96,7 @@
       param[base_url] = http://catedraltomada.pitt.edu/ojs/
       param[journal_id] = catedraltomada
 
-      au < manifest ; 2013 ; 2013 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 1 ; 1 >
+      au < testing ; 2013 ; 2013 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 1 ; 1 >
       au < expected ; 2014 ; 2014 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 2 ; 2 >
 
   }
@@ -129,7 +129,7 @@
 
     au < released ; 2011 ; 2011 ; CINEJ Cinema e-Journal Volume 1 ; 1 >
     au < released ; 2012 ; 2012 ; CINEJ Cinema e-Journal Volume 2 ; 2 >
-    au < manifest ; 2013 ; 2013 ; CINEJ Cinema e-Journal Volume 3 ; 3 >
+    au < testing ; 2013 ; 2013 ; CINEJ Cinema e-Journal Volume 3 ; 3 >
     au < expected ; 2014 ; 2014 ; CINEJ Cinema e-Journal Volume 4 ; 4 >
 
   }
@@ -160,7 +160,7 @@
     param[base_url] = http://dentistry3000.pitt.edu/ojs/
     param[journal_id] = dentistry3000
 
-    au < manifest ; 2013 ; 2013 ; Dentistry 3000 Volume 1 ; 1 >
+    au < testing ; 2013 ; 2013 ; Dentistry 3000 Volume 1 ; 1 >
     au < expected ; 2014 ; 2014 ; Dentistry 3000 Volume 2 ; 2 >
 
   }
@@ -175,7 +175,7 @@
       param[base_url] = http://dpj.pitt.edu/ojs/
       param[journal_id] = dpj1
 
-      au < manifest ; 2013 ; 2013 ; Dialogic Pedagogy: An International Online Journal Volume 1 ; 1 >
+      au < testing ; 2013 ; 2013 ; Dialogic Pedagogy: An International Online Journal Volume 1 ; 1 >
       au < manifest ; 2014 ; 2014 ; Dialogic Pedagogy: An International Online Journal Volume 2 ; 2 >
 
   }
@@ -192,7 +192,7 @@
 
     au < released ; 2011 ; 2011 ; EMAJ: Emerging Markets e-Journal of Management Volume 1 ; 1 >
     au < released ; 2012 ; 2012 ; EMAJ: Emerging Markets e-Journal of Management Volume 2 ; 2 >
-    au < manifest ; 2013 ; 2013 ; EMAJ: Emerging Markets e-Journal of Management Volume 3 (2013) ; 3 >
+    au < testing ; 2013 ; 2013 ; EMAJ: Emerging Markets e-Journal of Management Volume 3 (2013) ; 3 >
     au < manifest ; 2014 ; 2014 ; EMAJ: Emerging Markets e-Journal of Management Volume 3 (2014) ; 3 >
 
   }
@@ -226,7 +226,7 @@
     au < released ; 2010 ; 2010 ; Excellence in Higher Education Volume 1 ; 1 >
     au < released ; 2011 ; 2011 ; Excellence in Higher Education Volume 2 ; 2 >
     au < released ; 2012 ; 2012 ; Excellence in Higher Education Volume 3 ; 3 >
-    au < manifest ; 2013 ; 2013 ; Excellence in Higher Education Volume 4 ; 4 >
+    au < testing ; 2013 ; 2013 ; Excellence in Higher Education Volume 4 ; 4 >
     au < expected ; 2014 ; 2014 ; Excellence in Higher Education Volume 5 ; 5 >
 
   }
@@ -240,8 +240,8 @@
     param[base_url] = http://forbes5.pitt.edu/ojs/
     param[journal_id] = forbes5
 
-    au < manifest ; 2012 ; 2012 ; Forbes and Fifth Volume 1-2 ; 1-2 >
-    au < manifest ; 2013 ; 2013 ; Forbes and Fifth Volume 3-4 ; 3-4 >
+    au < testing ; 2012 ; 2012 ; Forbes and Fifth Volume 1-2 ; 1-2 >
+    au < testing ; 2013 ; 2013 ; Forbes and Fifth Volume 3-4 ; 3-4 >
     au < expected ; 2014 ; 2014 ; Forbes and Fifth Volume 5-6 ; 5-6 >
 
   }
@@ -257,7 +257,7 @@
 
     au < released ; 2011 ; 2011 ; Health, Culture, and Society Volume 1 ; 1 >
     au < released ; 2012 ; 2012 ; Health, Culture, and Society Volume 2-3 ; 2-3 >
-    au < manifest ; 2013 ; 2013 ; Health, Culture, and Society Volume 4 ; 4 >
+    au < testing ; 2013 ; 2013 ; Health, Culture, and Society Volume 4 ; 4 >
     au < expected ; 2014 ; 2014 ; Health, Culture, and Society Volume 5 ; 5 >
 
   }
@@ -273,7 +273,7 @@
 
     au < released ; 2011 ; 2011 ; IIOAB Letters Volume 1 ; 1 >
     au < released ; 2012 ; 2012 ; IIOAB Letters Volume 2 ; 2 >
-    au < manifest ; 2013 ; 2013 ; IIOAB Letters Volume 3 ; 3 >
+    au < testing ; 2013 ; 2013 ; IIOAB Letters Volume 3 ; 3 >
     au < expected ; 2014 ; 2014 ; IIOAB Letters Volume 4 ; 4 >
 
   }
@@ -291,7 +291,7 @@
     au < released ; 2010 ; 2010 ; International Journal of Telerehabilitation Volume 2 ; 2 >
     au < released ; 2011 ; 2011 ; International Journal of Telerehabilitation Volume 3 ; 3 >
     au < released ; 2012 ; 2012 ; International Journal of Telerehabilitation Volume 4 ; 4 >
-    au < manifest ; 2013 ; 2013 ; International Journal of Telerehabilitation Volume 5 ; 5 >
+    au < testing ; 2013 ; 2013 ; International Journal of Telerehabilitation Volume 5 ; 5 >
     au < expected ; 2014 ; 2014 ; International Journal of Telerehabilitation Volume 6 ; 6 >
 
   }
@@ -326,7 +326,7 @@
     au < released ; 2010 ; 2010 ; Journal of French and Francophone Philosophy Volume 18 ; 18 >
     au < released ; 2011 ; 2011 ; Journal of French and Francophone Philosophy Volume 19 ; 19 >
     au < released ; 2012 ; 2012 ; Journal of French and Francophone Philosophy Volume 20 ; 20 >
-    au < manifest ; 2013 ; 2013 ; Journal of French and Francophone Philosophy Volume 21 ; 21 >
+    au < testing ; 2013 ; 2013 ; Journal of French and Francophone Philosophy Volume 21 ; 21 >
     au < expected ; 2014 ; 2014 ; Journal of French and Francophone Philosophy Volume 22 ; 22 >
 
   }
@@ -347,7 +347,7 @@
       au < released ; 2010 ; 2010 ; Journal of Law and Commerce Volume 28-29 ; 28-29 >
       au < released ; 2011 ; 2011 ; Journal of Law and Commerce Volume 29 ; 29 >
       au < released ; 2012 ; 2012 ; Journal of Law and Commerce Volume 30 ; 30 >
-      au < manifest ; 2013 ; 2013 ; Journal of Law and Commerce Volume 31 ; 31 >
+      au < testing ; 2013 ; 2013 ; Journal of Law and Commerce Volume 31 ; 31 >
       au < expected ; 2014 ; 2014 ; Journal of Law and Commerce Volume 32 ; 32 >
 
   }
