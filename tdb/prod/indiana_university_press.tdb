@@ -329,6 +329,7 @@
       au < released ; 2011 ; Ethics & the Environment Volume 16 ; 16 >
       au < released ; 2012 ; Ethics & the Environment Volume 17 ; 17 >
       au < released ; 2013 ; Ethics & the Environment Volume 18 ; 18 >
+      au < doNotProcess ; 2014 ; Ethics & the Environment Volume 19 ; 19 >
 
     }
 
@@ -381,6 +382,7 @@
       au < released ; 2011 ; Film History: An International Journal Volume 23 ; 23 >
       au < released ; 2012 ; Film History: An International Journal Volume 24 ; 24 >
       au < released ; 2013 ; Film History: An International Journal Volume 25 ; 25 >
+      au < doNotProcess ; 2014 ; Film History: An International Journal Volume 26 ; 26 >
 
     }
 
@@ -424,6 +426,7 @@
       au < released ; 2011 ; The Global South Volume 5 ; 5 >
       au < released ; 2012 ; The Global South Volume 6 ; 6 >
       au < released ; 2013 ; The Global South Volume 7 ; 7 >
+      au < doNotProcess ; 2014 ; The Global South Volume 8 ; 8 >
       
     }
 
@@ -470,6 +473,7 @@
       attr[journal_id] = ham
       implicit < status ; year ; name ; param[volume] >
 
+      au < manifest ; 1998 ; History & Memory Volume 10 ; 10 >
       au < released ; 1999 ; History & Memory Volume 11 ; 11 >
       au < released ; 2000 ; History & Memory Volume 12 ; 12 >
       au < released ; 2001 ; History & Memory Volume 13 ; 13 >
@@ -485,6 +489,7 @@
       au < released ; 2011 ; History & Memory Volume 23 ; 23 >
       au < released ; 2012 ; History & Memory Volume 24 ; 24 >
       au < released ; 2013 ; History & Memory Volume 25 ; 25 >
+      au < doNotProcess ; 2014 ; History & Memory Volume 26 ; 26 >
 
     }
 
@@ -568,6 +573,7 @@
       au < released ; 2011 ; Indiana Journal of Global Legal Studies Volume 18 ; 18 >
       au < released ; 2012 ; Indiana Journal of Global Legal Studies Volume 19 ; 19 >
       au < released ; 2013 ; Indiana Journal of Global Legal Studies Volume 20 ; 20 >
+      au < doNotProcess ; 2014 ; Indiana Journal of Global Legal Studies Volume 21 ; 21 >
 
     }
 
@@ -608,6 +614,7 @@
       au < released ; 2011 ; International Journal of Feminist Approaches to Bioethics Volume 4 ; 4 >
       au < released ; 2012 ; International Journal of Feminist Approaches to Bioethics Volume 5 ; 5 >
       au < released ; 2013 ; International Journal of Feminist Approaches to Bioethics Volume 6 ; 6 >
+      au < doNotProcess ; 2014 ; International Journal of Feminist Approaches to Bioethics Volume 7 ; 7 >
 
     }
 
@@ -814,6 +821,7 @@
       au < released ; 2011 ; Journal of Feminist Studies in Religion Volume 27 ; 27 >
       au < released ; 2012 ; Journal of Feminist Studies in Religion Volume 28 ; 28 >
       au < released ; 2013 ; Journal of Feminist Studies in Religion Volume 29 ; 29 >
+      au < doNotProcess ; 2014 ; Journal of Feminist Studies in Religion Volume 30 ; 30 >
 
     }
 
@@ -867,6 +875,7 @@
       au < released ; 2011 ; Journal of Folklore Research Volume 48 ; 48 >
       au < released ; 2012 ; Journal of Folklore Research Volume 49 ; 49 >
       au < released ; 2013 ; Journal of Folklore Research Volume 50 ; 50 >
+      au < doNotProcess ; 2014 ; Journal of Folklore Research Volume 51 ; 51 >
 
     }
 
@@ -1162,6 +1171,7 @@
       au < released ; 2011 ; Philosophy of Music Education Review Volume 19 ; 19 >
       au < released ; 2012 ; Philosophy of Music Education Review Volume 20 ; 20 >
       au < released ; 2013 ; Philosophy of Music Education Review Volume 21 ; 21 >
+      au < doNotProcess ; 2014 ; Philosophy of Music Education Review Volume 22 ; 22 >
 
     }
 
