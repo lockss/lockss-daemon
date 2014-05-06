@@ -2946,11 +2946,11 @@
 
     param[journal_id] = irt
 
-    au < exists ; exists ; 2010 ; Influenza Research and Treatment Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; Influenza Research and Treatment Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Influenza Research and Treatment Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Influenza Research and Treatment Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Influenza Research and Treatment Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2010 ; Influenza Research and Treatment Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; Influenza Research and Treatment Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Influenza Research and Treatment Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Influenza Research and Treatment Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Influenza Research and Treatment Volume 2014 ; 2014 ; 2014 >
     
   }
 
@@ -2964,13 +2964,13 @@
 
     param[journal_id] = ipid
 
-    au < exists ; exists ; 2008 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2008 ; 2008 ; 2008 >
-    au < exists ; exists ; 2009 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2008 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2008 ; 2008 ; 2008 >
+    au < manifest ; exists ; 2009 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2984,13 +2984,13 @@
     
     param[journal_id] = ijae
 
-    au < exists ; exists ; 2008 ; International Journal of Aerospace Engineering Volume 2008 ; 2008 ; 2008 >
-    au < exists ; exists ; 2009 ; International Journal of Aerospace Engineering Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; International Journal of Aerospace Engineering Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Aerospace Engineering Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Aerospace Engineering Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Aerospace Engineering Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Aerospace Engineering Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2008 ; International Journal of Aerospace Engineering Volume 2008 ; 2008 ; 2008 >
+    au < manifest ; exists ; 2009 ; International Journal of Aerospace Engineering Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; International Journal of Aerospace Engineering Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; International Journal of Aerospace Engineering Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Aerospace Engineering Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Aerospace Engineering Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Aerospace Engineering Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3004,12 +3004,12 @@
 
     param[journal_id] = ija
 
-    au < exists ; exists ; 2009 ; International Journal of Agronomy Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; International Journal of Agronomy Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Agronomy Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Agronomy Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Agronomy Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Agronomy Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2009 ; International Journal of Agronomy Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; International Journal of Agronomy Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; International Journal of Agronomy Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Agronomy Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Agronomy Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Agronomy Volume 2014 ; 2014 ; 2014 >
 
   }
   
@@ -3022,12 +3022,12 @@
 
     param[journal_id] = ijad
 
-    au < exists ; exists ; 2009 ; International Journal of Alzheimer's Disease Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; International Journal of Alzheimer's Disease Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Alzheimer's Disease Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Alzheimer's Disease Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Alzheimer's Disease Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Alzheimer's Disease Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2009 ; International Journal of Alzheimer's Disease Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; International Journal of Alzheimer's Disease Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; International Journal of Alzheimer's Disease Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Alzheimer's Disease Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Alzheimer's Disease Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Alzheimer's Disease Volume 2014 ; 2014 ; 2014 >
     
   }
 
@@ -3041,8 +3041,8 @@
 
     param[journal_id] = ijanal
 
-    au < exists ; exists ; 2013 ; International Journal of Analysis Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Analysis Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2013 ; International Journal of Analysis Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Analysis Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3056,12 +3056,12 @@
 
     param[journal_id] = ijac
 
-    au < exists ; exists ; 2009 ; International Journal of Analytical Chemistry Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; International Journal of Analytical Chemistry Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Analytical Chemistry Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Analytical Chemistry Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Analytical Chemistry Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Analytical Chemistry Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2009 ; International Journal of Analytical Chemistry Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; International Journal of Analytical Chemistry Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; International Journal of Analytical Chemistry Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Analytical Chemistry Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Analytical Chemistry Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Analytical Chemistry Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3075,14 +3075,14 @@
 
     param[journal_id] = ijap
 
-    au < exists ; exists ; 2007 ; International Journal of Antennas and Propagation Volume 2007 ; 2007 ; 2007 >
-    au < exists ; exists ; 2008 ; International Journal of Antennas and Propagation Volume 2008 ; 2008 ; 2008 >
-    au < exists ; exists ; 2009 ; International Journal of Antennas and Propagation Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; International Journal of Antennas and Propagation Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Antennas and Propagation Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Antennas and Propagation Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Antennas and Propagation Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Antennas and Propagation Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2007 ; International Journal of Antennas and Propagation Volume 2007 ; 2007 ; 2007 >
+    au < manifest ; exists ; 2008 ; International Journal of Antennas and Propagation Volume 2008 ; 2008 ; 2008 >
+    au < manifest ; exists ; 2009 ; International Journal of Antennas and Propagation Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; International Journal of Antennas and Propagation Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; International Journal of Antennas and Propagation Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Antennas and Propagation Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Antennas and Propagation Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Antennas and Propagation Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3096,8 +3096,8 @@
 
     param[journal_id] = ijan
 
-    au < exists ; exists ; 2013 ; International Journal of Antibiotics Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Antibiotics Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2013 ; International Journal of Antibiotics Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Antibiotics Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3111,8 +3111,8 @@
 
     param[journal_id] = ijas
 
-    au < exists ; exists ; 2013 ; International Journal of Atmospheric Sciences Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Atmospheric Sciences Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2013 ; International Journal of Atmospheric Sciences Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Atmospheric Sciences Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3126,8 +3126,8 @@
 
     param[journal_id] = ijb
 
-    au < exists ; exists ; 2013 ; International Journal of Bacteriology Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Bacteriology Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2013 ; International Journal of Bacteriology Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Bacteriology Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3141,8 +3141,8 @@
 
     param[journal_id] = ijbd
 
-    au < exists ; exists ; 2013 ; International Journal of Biodiversity Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Biodiversity Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2013 ; International Journal of Biodiversity Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Biodiversity Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3156,12 +3156,12 @@
 
     param[journal_id] = ijbm
 
-    au < exists ; exists ; 2009 ; International Journal of Biomaterials Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; International Journal of Biomaterials Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Biomaterials Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Biomaterials Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Biomaterials Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Biomaterials Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2009 ; International Journal of Biomaterials Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; International Journal of Biomaterials Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; International Journal of Biomaterials Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Biomaterials Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Biomaterials Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Biomaterials Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3175,15 +3175,15 @@
 
     param[journal_id] = ijbi
 
-    au < exists ; exists ; 2006 ; International Journal of Biomedical Imaging Volume 2006 ; 2006 ; 2006 >
-    au < exists ; exists ; 2007 ; International Journal of Biomedical Imaging Volume 2007 ; 2007 ; 2007 >
-    au < exists ; exists ; 2008 ; International Journal of Biomedical Imaging Volume 2008 ; 2008 ; 2008 >
-    au < exists ; exists ; 2009 ; International Journal of Biomedical Imaging Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; International Journal of Biomedical Imaging Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Biomedical Imaging Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Biomedical Imaging Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Biomedical Imaging Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Biomedical Imaging Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2006 ; International Journal of Biomedical Imaging Volume 2006 ; 2006 ; 2006 >
+    au < manifest ; exists ; 2007 ; International Journal of Biomedical Imaging Volume 2007 ; 2007 ; 2007 >
+    au < manifest ; exists ; 2008 ; International Journal of Biomedical Imaging Volume 2008 ; 2008 ; 2008 >
+    au < manifest ; exists ; 2009 ; International Journal of Biomedical Imaging Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; International Journal of Biomedical Imaging Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; International Journal of Biomedical Imaging Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Biomedical Imaging Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Biomedical Imaging Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Biomedical Imaging Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3197,7 +3197,7 @@
 
     param[journal_id] = ijbs
 
-    au < exists ; exists ; 2014 ; International Journal of Brain Science Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2014 ; International Journal of Brain Science Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3211,10 +3211,10 @@
 
     param[journal_id] = ijbc
 
-    au < exists ; exists ; 2011 ; International Journal of Breast Cancer Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Breast Cancer Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Breast Cancer Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Breast Cancer Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2011 ; International Journal of Breast Cancer Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Breast Cancer Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Breast Cancer Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Breast Cancer Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3228,12 +3228,12 @@
 
     param[journal_id] = ijcc
 
-    au < exists ; exists ; 2009 ; International Journal of Carbohydrate Chemistry Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; International Journal of Carbohydrate Chemistry Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Carbohydrate Chemistry Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Carbohydrate Chemistry Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Carbohydrate Chemistry Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Carbohydrate Chemistry Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2009 ; International Journal of Carbohydrate Chemistry Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; International Journal of Carbohydrate Chemistry Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; International Journal of Carbohydrate Chemistry Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Carbohydrate Chemistry Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Carbohydrate Chemistry Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Carbohydrate Chemistry Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3247,12 +3247,12 @@
 
     param[journal_id] = ijcb
 
-    au < exists ; exists ; 2009 ; International Journal of Cell Biology Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; International Journal of Cell Biology Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Cell Biology Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Cell Biology Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Cell Biology Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Cell Biology Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2009 ; International Journal of Cell Biology Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; International Journal of Cell Biology Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; International Journal of Cell Biology Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Cell Biology Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Cell Biology Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Cell Biology Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3266,13 +3266,13 @@
 
     param[journal_id] = ijce
 
-    au < exists ; exists ; 2008 ; International Journal of Chemical Engineering Volume 2008 ; 2008 ; 2008 >
-    au < exists ; exists ; 2009 ; International Journal of Chemical Engineering Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; International Journal of Chemical Engineering Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Chemical Engineering Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Chemical Engineering Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Chemical Engineering Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Chemical Engineering Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2008 ; International Journal of Chemical Engineering Volume 2008 ; 2008 ; 2008 >
+    au < manifest ; exists ; 2009 ; International Journal of Chemical Engineering Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; International Journal of Chemical Engineering Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; International Journal of Chemical Engineering Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Chemical Engineering Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Chemical Engineering Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Chemical Engineering Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3286,7 +3286,7 @@
 
     param[journal_id] = ijcp
 
-    au < exists ; exists ; 2013 ; International Journal of Chemical Physics Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2013 ; International Journal of Chemical Physics Volume 2013 ; 2013 ; 2013 >
     au < expected ; exists ; 2014 ; International Journal of Chemical Physics Volume 2014 ; 2014 ; 2014 >
 
   }
@@ -3301,8 +3301,8 @@
 
     param[journal_id] = ijcd
 
-    au < exists ; exists ; 2013 ; International Journal of Chronic Diseases Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Chronic Diseases Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2013 ; International Journal of Chronic Diseases Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Chronic Diseases Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3316,12 +3316,12 @@
 
     param[journal_id] = ijcom
 
-    au < exists ; exists ; 2009 ; International Journal of Combinatorics Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; International Journal of Combinatorics Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Combinatorics Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Combinatorics Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Combinatorics Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Combinatorics Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2009 ; International Journal of Combinatorics Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; International Journal of Combinatorics Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; International Journal of Combinatorics Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Combinatorics Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Combinatorics Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Combinatorics Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3349,13 +3349,13 @@
 
     param[journal_id] = ijcgt
 
-    au < exists ; exists ; 2008 ; International Journal of Computer Games Technology Volume 2008 ; 2008 ; 2008 >
-    au < exists ; exists ; 2009 ; International Journal of Computer Games Technology Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; International Journal of Computer Games Technology Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Computer Games Technology Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Computer Games Technology Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Computer Games Technology Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Computer Games Technology Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2008 ; International Journal of Computer Games Technology Volume 2008 ; 2008 ; 2008 >
+    au < manifest ; exists ; 2009 ; International Journal of Computer Games Technology Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; International Journal of Computer Games Technology Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; International Journal of Computer Games Technology Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Computer Games Technology Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Computer Games Technology Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Computer Games Technology Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3369,11 +3369,11 @@
 
     param[journal_id] = ijc
 
-    au < exists ; exists ; 2010 ; International Journal of Corrosion Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Corrosion Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Corrosion Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Corrosion Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Corrosion Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2010 ; International Journal of Corrosion Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; International Journal of Corrosion Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Corrosion Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Corrosion Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Corrosion Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3387,12 +3387,12 @@
 
     param[journal_id] = ijd
 
-    au < exists ; exists ; 2009 ; International Journal of Dentistry Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; International Journal of Dentistry Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Dentistry Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Dentistry Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Dentistry Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Dentistry Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2009 ; International Journal of Dentistry Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; International Journal of Dentistry Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; International Journal of Dentistry Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Dentistry Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Dentistry Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Dentistry Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3406,15 +3406,15 @@
 
     param[journal_id] = ijde
 
-    au < exists ; exists ; 2006 ; Differential Equations and Nonlinear Mechanics Volume 2006 ; 2006 ; 2006 >
-    au < exists ; exists ; 2007 ; Differential Equations and Nonlinear Mechanics Volume 2007 ; 2007 ; 2007 >
-    au < exists ; exists ; 2008 ; Differential Equations and Nonlinear Mechanics Volume 2008 ; 2008 ; 2008 >
-    au < exists ; exists ; 2009 ; International Journal of Differential Equations Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; International Journal of Differential Equations Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Differential Equations Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Differential Equations Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Differential Equations Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Differential Equations Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2006 ; Differential Equations and Nonlinear Mechanics Volume 2006 ; 2006 ; 2006 >
+    au < manifest ; exists ; 2007 ; Differential Equations and Nonlinear Mechanics Volume 2007 ; 2007 ; 2007 >
+    au < manifest ; exists ; 2008 ; Differential Equations and Nonlinear Mechanics Volume 2008 ; 2008 ; 2008 >
+    au < manifest ; exists ; 2009 ; International Journal of Differential Equations Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; International Journal of Differential Equations Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; International Journal of Differential Equations Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Differential Equations Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Differential Equations Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Differential Equations Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3428,13 +3428,13 @@
 
     param[journal_id] = ijdmb
 
-    au < exists ; exists ; 2008 ; International Journal of Digital Multimedia Broadcasting Volume 2008 ; 2008 ; 2008 >
-    au < exists ; exists ; 2009 ; International Journal of Digital Multimedia Broadcasting Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; International Journal of Digital Multimedia Broadcasting Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Digital Multimedia Broadcasting Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Digital Multimedia Broadcasting Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Digital Multimedia Broadcasting Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Digital Multimedia Broadcasting Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2008 ; International Journal of Digital Multimedia Broadcasting Volume 2008 ; 2008 ; 2008 >
+    au < manifest ; exists ; 2009 ; International Journal of Digital Multimedia Broadcasting Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; International Journal of Digital Multimedia Broadcasting Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; International Journal of Digital Multimedia Broadcasting Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Digital Multimedia Broadcasting Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Digital Multimedia Broadcasting Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Digital Multimedia Broadcasting Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3448,16 +3448,16 @@
 
     param[journal_id] = ijdsn
 
-    au < exists ; exists ; 2005 ; International Journal of Distributed Sensor Networks Volume 1 (2005) ; 2005 ; 1 >
-    au < exists ; exists ; 2006 ; International Journal of Distributed Sensor Networks Volume 2 (2006) ; 2006 ; 2 >
-    au < exists ; exists ; 2007 ; International Journal of Distributed Sensor Networks Volume 3 (2007) ; 2007 ; 3 >
-    au < exists ; exists ; 2008 ; International Journal of Distributed Sensor Networks Volume 4 (2008) ; 2008 ; 4 >
-    au < exists ; exists ; 2009 ; International Journal of Distributed Sensor Networks Volume 5 (2009) ; 2009 ; 5 >
-    au < exists ; exists ; 2010 ; International Journal of Distributed Sensor Networks Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Distributed Sensor Networks Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Distributed Sensor Networks Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Distributed Sensor Networks Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Distributed Sensor Networks Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2005 ; International Journal of Distributed Sensor Networks Volume 1 (2005) ; 2005 ; 1 >
+    au < manifest ; exists ; 2006 ; International Journal of Distributed Sensor Networks Volume 2 (2006) ; 2006 ; 2 >
+    au < manifest ; exists ; 2007 ; International Journal of Distributed Sensor Networks Volume 3 (2007) ; 2007 ; 3 >
+    au < manifest ; exists ; 2008 ; International Journal of Distributed Sensor Networks Volume 4 (2008) ; 2008 ; 4 >
+    au < manifest ; exists ; 2009 ; International Journal of Distributed Sensor Networks Volume 5 (2009) ; 2009 ; 5 >
+    au < manifest ; exists ; 2010 ; International Journal of Distributed Sensor Networks Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; International Journal of Distributed Sensor Networks Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Distributed Sensor Networks Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Distributed Sensor Networks Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Distributed Sensor Networks Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3471,14 +3471,14 @@
 
     param[journal_id] = ijecol
 
-    au < exists ; exists ; 2007 ; Research Letters in Ecology Volume 2007 ; 2007 ; 2007 >
-    au < exists ; exists ; 2008 ; Research Letters in Ecology Volume 2008 ; 2008 ; 2008 >
-    au < exists ; exists ; 2009 ; International Journal of Ecology Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; International Journal of Ecology Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Ecology Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Ecology Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Ecology Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Ecology Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2007 ; Research Letters in Ecology Volume 2007 ; 2007 ; 2007 >
+    au < manifest ; exists ; 2008 ; Research Letters in Ecology Volume 2008 ; 2008 ; 2008 >
+    au < manifest ; exists ; 2009 ; International Journal of Ecology Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; International Journal of Ecology Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; International Journal of Ecology Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Ecology Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Ecology Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Ecology Volume 2014 ; 2014 ; 2014 >
     
   }
 
@@ -3491,10 +3491,10 @@
 
     param[journal_id] = ijelc
 
-    au < exists ; exists ; 2011 ; International Journal of Electrochemistry Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Electrochemistry Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Electrochemistry Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Electrochemistry Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2011 ; International Journal of Electrochemistry Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Electrochemistry Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Electrochemistry Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Electrochemistry Volume 2014 ; 2014 ; 2014 >
     
   }
   
@@ -3508,7 +3508,7 @@
 
     param[journal_id] = ijembry
 
-    au < exists ; exists ; 2014 ; International Journal of Embryology Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2014 ; International Journal of Embryology Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3522,12 +3522,12 @@
 
     param[journal_id] = ije
 
-    au < exists ; exists ; 2009 ; International Journal of Endocrinology Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; International Journal of Endocrinology Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Endocrinology Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Endocrinology Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Endocrinology Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Endocrinology Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2009 ; International Journal of Endocrinology Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; International Journal of Endocrinology Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; International Journal of Endocrinology Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Endocrinology Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Endocrinology Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Endocrinology Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3541,8 +3541,8 @@
 
     param[journal_id] = ijem
 
-    au < exists ; exists ; 2013 ; International Journal of Engineering Mathematics Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Engineering Mathematics Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2013 ; International Journal of Engineering Mathematics Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Engineering Mathematics Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3556,12 +3556,12 @@
 
     param[journal_id] = ijeb
 
-    au < exists ; exists ; 2009 ; International Journal of Evolutionary Biology Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; International Journal of Evolutionary Biology Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Evolutionary Biology Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Evolutionary Biology Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Evolutionary Biology Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Evolutionary Biology Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2009 ; International Journal of Evolutionary Biology Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; International Journal of Evolutionary Biology Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; International Journal of Evolutionary Biology Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Evolutionary Biology Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Evolutionary Biology Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Evolutionary Biology Volume 2014 ; 2014 ; 2014 >
     
   }
   
@@ -3575,11 +3575,11 @@
 
     param[journal_id] = ijfm
 
-    au < exists ; exists ; 2010 ; International Journal of Family Medicine Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Family Medicine Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Family Medicine Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Family Medicine Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Family Medicine Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2010 ; International Journal of Family Medicine Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; International Journal of Family Medicine Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Family Medicine Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Family Medicine Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Family Medicine Volume 2014 ; 2014 ; 2014 >
     
   }
 
@@ -3593,8 +3593,8 @@
 
     param[journal_id] = ijfs
 
-    au < exists ; exists ; 2013 ; International Journal of Food Science Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Food Science Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2013 ; International Journal of Food Science Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Food Science Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3608,12 +3608,12 @@
 
     param[journal_id] = ijfr
 
-    au < exists ; exists ; 2009 ; International Journal of Forestry Research Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; International Journal of Forestry Research Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Forestry Research Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Forestry Research Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Forestry Research Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Forestry Research Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2009 ; International Journal of Forestry Research Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; International Journal of Forestry Research Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; International Journal of Forestry Research Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Forestry Research Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Forestry Research Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Forestry Research Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3626,21 +3626,22 @@
     >
 
     param[journal_id] = ijg
+    comment[0] = no issue in 2006
 
-    au < exists ; exists ; 2001 ; Comparative and Functional Genomics Volume 1 (2001) ; 2001 ; 1 >
-    au < exists ; exists ; 2002 ; Comparative and Functional Genomics Volume 2 (2002) ; 2002 ; 2 >
-    au < exists ; exists ; 2003 ; Comparative and Functional Genomics Volume 3 (2003) ; 2003 ; 3 >
-    au < exists ; exists ; 2004 ; Comparative and Functional Genomics Volume 4 (2004) ; 2004 ; 4 >
-    au < exists ; exists ; 2005 ; Comparative and Functional Genomics Volume 5 (2005) ; 2005 ; 5 >
-    au < exists ; exists ; 2006 ; Comparative and Functional Genomics Volume 6 (2006) ; 2006 ; 6 >
-    au < exists ; exists ; 2007 ; Comparative and Functional Genomics Volume 2007 ; 2007 ; 2007 >
-    au < exists ; exists ; 2008 ; Comparative and Functional Genomics Volume 2008 ; 2008 ; 2008 >
-    au < exists ; exists ; 2009 ; Comparative and Functional Genomics Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; Comparative and Functional Genomics Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; Comparative and Functional Genomics Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Comparative and Functional Genomics Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Genomics Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Genomics Volume 2014 ; 2014 ; 2014 >
+    au < exists ; exists ; 2000 ; Comparative and Functional Genomics Volume 1 (2000) ; 2000 ; 1 >
+    au < manifest ; exists ; 2001 ; Comparative and Functional Genomics Volume 2 (2001) ; 2001 ; 2 >
+    au < manifest ; exists ; 2002 ; Comparative and Functional Genomics Volume 3 (2002) ; 2002 ; 3 >
+    au < manifest ; exists ; 2003 ; Comparative and Functional Genomics Volume 4 (2003) ; 2003 ; 4 >
+    au < manifest ; exists ; 2004 ; Comparative and Functional Genomics Volume 5 (2004) ; 2004 ; 5 >
+    au < manifest ; exists ; 2005 ; Comparative and Functional Genomics Volume 6 (2005) ; 2005 ; 6 >
+    au < manifest ; exists ; 2007 ; Comparative and Functional Genomics Volume 2007 ; 2007 ; 2007 >
+    au < manifest ; exists ; 2008 ; Comparative and Functional Genomics Volume 2008 ; 2008 ; 2008 >
+    au < manifest ; exists ; 2009 ; Comparative and Functional Genomics Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; Comparative and Functional Genomics Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; Comparative and Functional Genomics Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Comparative and Functional Genomics Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Genomics Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Genomics Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3654,12 +3655,12 @@
 
     param[journal_id] = ijge
 
-    au < exists ; exists ; 2009 ; International Journal of Geophysics Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; International Journal of Geophysics Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Geophysics Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Geophysics Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Geophysics Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Geophysics Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2009 ; International Journal of Geophysics Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; International Journal of Geophysics Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; International Journal of Geophysics Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Geophysics Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Geophysics Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Geophysics Volume 2014 ; 2014 ; 2014 >
     
   }
 
@@ -3673,10 +3674,10 @@
 
     param[journal_id] = ijh
 
-    au < exists ; exists ; 2011 ; International Journal of Hepatology Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Hepatology Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Hepatology Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Hepatology Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2011 ; International Journal of Hepatology Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Hepatology Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Hepatology Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Hepatology Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3690,11 +3691,11 @@
 
     param[journal_id] = ijhy
 
-    au < exists ; exists ; 2010 ; International Journal of Hypertension Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Hypertension Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Hypertension Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Hypertension Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Hypertension Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2010 ; International Journal of Hypertension Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; International Journal of Hypertension Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Hypertension Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Hypertension Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Hypertension Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3708,11 +3709,11 @@
 
     param[journal_id] = iji
 
-    au < exists ; exists ; 2010 ; International Journal of Inflammation Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Inflammation Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Inflammation Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Inflammation Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Inflammation Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2010 ; International Journal of Inflammation Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; International Journal of Inflammation Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Inflammation Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Inflammation Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Inflammation Volume 2014 ; 2014 ; 2014 >
     
   }
 
@@ -3726,13 +3727,13 @@
 
     param[journal_id] = ijic
 
-    au < exists ; exists ; 2008 ; Research Letters in Inorganic Chemistry Volume 2008 ; 2008 ; 2008 >
-    au < exists ; exists ; 2009 ; Research Letters in Inorganic Chemistry Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; International Journal of Inorganic Chemistry Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Inorganic Chemistry Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Inorganic Chemistry Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Inorganic Chemistry Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Inorganic Chemistry Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2008 ; Research Letters in Inorganic Chemistry Volume 2008 ; 2008 ; 2008 >
+    au < manifest ; exists ; 2009 ; Research Letters in Inorganic Chemistry Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; International Journal of Inorganic Chemistry Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; International Journal of Inorganic Chemistry Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Inorganic Chemistry Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Inorganic Chemistry Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Inorganic Chemistry Volume 2014 ; 2014 ; 2014 >
     
   }
 
@@ -3746,8 +3747,8 @@
 
     param[journal_id] = ijme
 
-    au < exists ; exists ; 2013 ; International Journal of Manufacturing Engineering Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Manufacturing Engineering Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2013 ; International Journal of Manufacturing Engineering Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Manufacturing Engineering Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3761,50 +3762,43 @@
 
     param[journal_id] = ijmms
 
-    au < exists ; exists ; 1971 ; International Journal of Mathematics and Mathematical Sciences Volume 1 (1971) ; 1971 ; 1 >
-    au < exists ; exists ; 1972 ; International Journal of Mathematics and Mathematical Sciences Volume 2 (1972) ; 1972 ; 2 >
-    au < exists ; exists ; 1973 ; International Journal of Mathematics and Mathematical Sciences Volume 3 (1973) ; 1973 ; 3 >
-    au < exists ; exists ; 1974 ; International Journal of Mathematics and Mathematical Sciences Volume 4 (1974) ; 1974 ; 4 >
-    au < exists ; exists ; 1975 ; International Journal of Mathematics and Mathematical Sciences Volume 5 (1975) ; 1975 ; 5 >
-    au < exists ; exists ; 1976 ; International Journal of Mathematics and Mathematical Sciences Volume 6 (1976) ; 1976 ; 6 >
-    au < exists ; exists ; 1977 ; International Journal of Mathematics and Mathematical Sciences Volume 7 (1977) ; 1977 ; 7 >
-    au < exists ; exists ; 1978 ; International Journal of Mathematics and Mathematical Sciences Volume 8 (1978) ; 1978 ; 8 >
-    au < exists ; exists ; 1979 ; International Journal of Mathematics and Mathematical Sciences Volume 9 (1979) ; 1979 ; 9 >
-    au < exists ; exists ; 1980 ; International Journal of Mathematics and Mathematical Sciences Volume 10 (1980) ; 1980 ; 10 >
-    au < exists ; exists ; 1981 ; International Journal of Mathematics and Mathematical Sciences Volume 11 (1981) ; 1981 ; 11 >
-    au < exists ; exists ; 1982 ; International Journal of Mathematics and Mathematical Sciences Volume 12 (1982) ; 1982 ; 12 >
-    au < exists ; exists ; 1983 ; International Journal of Mathematics and Mathematical Sciences Volume 13 (1983) ; 1983 ; 13 >
-    au < exists ; exists ; 1984 ; International Journal of Mathematics and Mathematical Sciences Volume 14 (1984) ; 1984 ; 14 >
-    au < exists ; exists ; 1985 ; International Journal of Mathematics and Mathematical Sciences Volume 15 (1985) ; 1985 ; 15 >
-    au < exists ; exists ; 1986 ; International Journal of Mathematics and Mathematical Sciences Volume 16 (1986) ; 1986 ; 16 >
-    au < exists ; exists ; 1987 ; International Journal of Mathematics and Mathematical Sciences Volume 17 (1987) ; 1987 ; 17 >
-    au < exists ; exists ; 1988 ; International Journal of Mathematics and Mathematical Sciences Volume 18 (1988) ; 1988 ; 18 >
-    au < exists ; exists ; 1989 ; International Journal of Mathematics and Mathematical Sciences Volume 19 (1989) ; 1989 ; 19 >
-    au < exists ; exists ; 1990 ; International Journal of Mathematics and Mathematical Sciences Volume 20 (1990) ; 1990 ; 20 >
-    au < exists ; exists ; 1991 ; International Journal of Mathematics and Mathematical Sciences Volume 21 (1991) ; 1991 ; 21 >
-    au < exists ; exists ; 1992 ; International Journal of Mathematics and Mathematical Sciences Volume 22 (1992) ; 1992 ; 22 >
-    au < exists ; exists ; 1993 ; International Journal of Mathematics and Mathematical Sciences Volume 23 (1993) ; 1993 ; 23 >
-    au < exists ; exists ; 1994 ; International Journal of Mathematics and Mathematical Sciences Volume 24 (1994) ; 1994 ; 24 >
-    au < exists ; exists ; 1995 ; International Journal of Mathematics and Mathematical Sciences Volume 25 (1995) ; 1995 ; 25 >
-    au < exists ; exists ; 1996 ; International Journal of Mathematics and Mathematical Sciences Volume 26 (1996) ; 1996 ; 26 >
-    au < exists ; exists ; 1997 ; International Journal of Mathematics and Mathematical Sciences Volume 27 (1997) ; 1997 ; 27 >
-    au < exists ; exists ; 1998 ; International Journal of Mathematics and Mathematical Sciences Volume 28 (1998) ; 1998 ; 28 >
-    au < exists ; exists ; 1999 ; International Journal of Mathematics and Mathematical Sciences Volume 29 (1999) ; 1999 ; 29 >
-    au < exists ; exists ; 2000 ; International Journal of Mathematics and Mathematical Sciences Volume 30 (2000) ; 2000 ; 30 >
-    au < exists ; exists ; 2001 ; International Journal of Mathematics and Mathematical Sciences Volume 31 (2001) ; 2001 ; 31 >
-    au < exists ; exists ; 2002 ; International Journal of Mathematics and Mathematical Sciences Volume 32 (2002) ; 2002 ; 32 >
-    au < exists ; exists ; 2003 ; International Journal of Mathematics and Mathematical Sciences Volume 2003 ; 2003 ; 2003 >
-    au < exists ; exists ; 2004 ; International Journal of Mathematics and Mathematical Sciences Volume 2004 ; 2004 ; 2004 >
-    au < exists ; exists ; 2005 ; International Journal of Mathematics and Mathematical Sciences Volume 2005 ; 2005 ; 2005 >
-    au < exists ; exists ; 2006 ; International Journal of Mathematics and Mathematical Sciences Volume 2006 ; 2006 ; 2006 >
-    au < exists ; exists ; 2007 ; International Journal of Mathematics and Mathematical Sciences Volume 2007 ; 2007 ; 2007 >
-    au < exists ; exists ; 2008 ; International Journal of Mathematics and Mathematical Sciences Volume 2008 ; 2008 ; 2008 >
-    au < exists ; exists ; 2009 ; International Journal of Mathematics and Mathematical Sciences Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; International Journal of Mathematics and Mathematical Sciences Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Mathematics and Mathematical Sciences Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Mathematics and Mathematical Sciences Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Mathematics and Mathematical Sciences Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Mathematics and Mathematical Sciences Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 1978 ; International Journal of Mathematics and Mathematical Sciences Volume 1 (1978) ; 1978 ; 1 >
+    au < manifest ; exists ; 1979 ; International Journal of Mathematics and Mathematical Sciences Volume 2 (1979) ; 1979 ; 2 >
+    au < manifest ; exists ; 1980 ; International Journal of Mathematics and Mathematical Sciences Volume 3 (1980) ; 1980 ; 3 >
+    au < manifest ; exists ; 1981 ; International Journal of Mathematics and Mathematical Sciences Volume 4 (1981) ; 1981 ; 4 >
+    au < manifest ; exists ; 1982 ; International Journal of Mathematics and Mathematical Sciences Volume 5 (1982) ; 1982 ; 5 >
+    au < manifest ; exists ; 1983 ; International Journal of Mathematics and Mathematical Sciences Volume 6 (1983) ; 1983 ; 6 >
+    au < manifest ; exists ; 1984 ; International Journal of Mathematics and Mathematical Sciences Volume 7 (1984) ; 1984 ; 7 >
+    au < manifest ; exists ; 1985 ; International Journal of Mathematics and Mathematical Sciences Volume 8 (1985) ; 1985 ; 8 >
+    au < manifest ; exists ; 1986 ; International Journal of Mathematics and Mathematical Sciences Volume 9 (1986) ; 1986 ; 9 >
+    au < manifest ; exists ; 1987 ; International Journal of Mathematics and Mathematical Sciences Volume 10 (1987) ; 1987 ; 10 >
+    au < manifest ; exists ; 1988 ; International Journal of Mathematics and Mathematical Sciences Volume 11 (1988) ; 1988 ; 11 >
+    au < manifest ; exists ; 1989 ; International Journal of Mathematics and Mathematical Sciences Volume 12 (1989) ; 1989 ; 12 >
+    au < manifest ; exists ; 1990 ; International Journal of Mathematics and Mathematical Sciences Volume 13 (1990) ; 1990 ; 13 >
+    au < manifest ; exists ; 1991 ; International Journal of Mathematics and Mathematical Sciences Volume 14 (1991) ; 1991 ; 14 >
+    au < manifest ; exists ; 1992 ; International Journal of Mathematics and Mathematical Sciences Volume 15 (1992) ; 1992 ; 15 >
+    au < manifest ; exists ; 1993 ; International Journal of Mathematics and Mathematical Sciences Volume 16 (1993) ; 1993 ; 16 >
+    au < manifest ; exists ; 1994 ; International Journal of Mathematics and Mathematical Sciences Volume 17 (1994) ; 1994 ; 17 >
+    au < manifest ; exists ; 1995 ; International Journal of Mathematics and Mathematical Sciences Volume 18 (1995) ; 1995 ; 18 >
+    au < manifest ; exists ; 1996 ; International Journal of Mathematics and Mathematical Sciences Volume 19 (1996) ; 1996 ; 19 >
+    au < manifest ; exists ; 1997 ; International Journal of Mathematics and Mathematical Sciences Volume 20 (1997) ; 1997 ; 20 >
+    au < manifest ; exists ; 1998 ; International Journal of Mathematics and Mathematical Sciences Volume 21 (1998) ; 1998 ; 21 >
+    au < manifest ; exists ; 1999 ; International Journal of Mathematics and Mathematical Sciences Volume 22 (1999) ; 1999 ; 22 >
+    au < manifest ; exists ; 2000 ; International Journal of Mathematics and Mathematical Sciences Volume 23-24 (2000) ; 2000 ; 23-24 >
+    au < manifest ; exists ; 2001 ; International Journal of Mathematics and Mathematical Sciences Volume 25-28 (2001) ; 2001 ; 25-28 >
+    au < manifest ; exists ; 2002 ; International Journal of Mathematics and Mathematical Sciences Volume 29-32 (2002) ; 2002 ; 29-32 >
+    au < manifest ; exists ; 2003 ; International Journal of Mathematics and Mathematical Sciences Volume 2003 ; 2003 ; 2003 >
+    au < manifest ; exists ; 2004 ; International Journal of Mathematics and Mathematical Sciences Volume 2004 ; 2004 ; 2004 >
+    au < manifest ; exists ; 2005 ; International Journal of Mathematics and Mathematical Sciences Volume 2005 ; 2005 ; 2005 >
+    au < manifest ; exists ; 2006 ; International Journal of Mathematics and Mathematical Sciences Volume 2006 ; 2006 ; 2006 >
+    au < manifest ; exists ; 2007 ; International Journal of Mathematics and Mathematical Sciences Volume 2007 ; 2007 ; 2007 >
+    au < manifest ; exists ; 2008 ; International Journal of Mathematics and Mathematical Sciences Volume 2008 ; 2008 ; 2008 >
+    au < manifest ; exists ; 2009 ; International Journal of Mathematics and Mathematical Sciences Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; International Journal of Mathematics and Mathematical Sciences Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; International Journal of Mathematics and Mathematical Sciences Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Mathematics and Mathematical Sciences Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Mathematics and Mathematical Sciences Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Mathematics and Mathematical Sciences Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3818,7 +3812,7 @@
 
     param[journal_id] = ijmg
 
-    au < exists ; exists ; 2014 ; International Journal of Medical Genetics Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2014 ; International Journal of Medical Genetics Volume 2014 ; 2014 ; 2014 >
 
   }
   
@@ -3832,10 +3826,10 @@
 
     param[journal_id] = ijmc
 
-    au < exists ; exists ; 2011 ; International Journal of Medicinal Chemistry Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Medicinal Chemistry Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Medicinal Chemistry Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Medicinal Chemistry Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2011 ; International Journal of Medicinal Chemistry Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Medicinal Chemistry Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Medicinal Chemistry Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Medicinal Chemistry Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3849,8 +3843,8 @@
 
     param[journal_id] = ijmet
 
-    au < exists ; exists ; 2013 ; International Journal of Metals Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Metals Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2013 ; International Journal of Metals Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Metals Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3864,12 +3858,12 @@
 
     param[journal_id] = ijmicro
 
-    au < exists ; exists ; 2009 ; International Journal of Microbiology Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; International Journal of Microbiology Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Microbiology Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Microbiology Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Microbiology Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Microbiology Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2009 ; International Journal of Microbiology Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; International Journal of Microbiology Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; International Journal of Microbiology Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Microbiology Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Microbiology Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Microbiology Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3883,14 +3877,14 @@
 
     param[journal_id] = ijmst
 
-    au < exists ; exists ; 2007 ; International Journal of Microwave Science and Technology Volume 2007 ; 2007 ; 2007 >
-    au < exists ; exists ; 2008 ; International Journal of Microwave Science and Technology Volume 2008 ; 2008 ; 2008 >
-    au < exists ; exists ; 2009 ; International Journal of Microwave Science and Technology Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; International Journal of Microwave Science and Technology Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Microwave Science and Technology Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Microwave Science and Technology Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Microwave Science and Technology Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Microwave Science and Technology Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2007 ; International Journal of Microwave Science and Technology Volume 2007 ; 2007 ; 2007 >
+    au < manifest ; exists ; 2008 ; International Journal of Microwave Science and Technology Volume 2008 ; 2008 ; 2008 >
+    au < manifest ; exists ; 2009 ; International Journal of Microwave Science and Technology Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; International Journal of Microwave Science and Technology Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; International Journal of Microwave Science and Technology Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Microwave Science and Technology Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Microwave Science and Technology Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Microwave Science and Technology Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3904,7 +3898,7 @@
 
     param[journal_id] = ijm
 
-    au < exists ; exists ; 2014 ; International Journal of Mineralogy Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2014 ; International Journal of Mineralogy Volume 2014 ; 2014 ; 2014 >
 
   }
   
@@ -3918,10 +3912,10 @@
 
     param[journal_id] = ijmi
 
-    au < exists ; exists ; 2011 ; International Journal of Molecular Imaging Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Molecular Imaging Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Molecular Imaging Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Jorunal of Molecular Imaging Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2011 ; International Journal of Molecular Imaging Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Molecular Imaging Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Molecular Imaging Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Jorunal of Molecular Imaging Volume 2014 ; 2014 ; 2014 >
 
   }
   
@@ -3935,13 +3929,13 @@
 
     param[journal_id] = ijno
 
-    au < exists ; exists ; 2008 ; International Journal of Navigation and Observation Volume 2008 ; 2008 ; 2008 >
-    au < exists ; exists ; 2009 ; International Journal of Navigation and Observation Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; International Journal of Navigation and Observation Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Navigation and Observation Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Navigation and Observation Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Navigation and Observation Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Navigation and Observation Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2008 ; International Journal of Navigation and Observation Volume 2008 ; 2008 ; 2008 >
+    au < manifest ; exists ; 2009 ; International Journal of Navigation and Observation Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; International Journal of Navigation and Observation Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; International Journal of Navigation and Observation Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Navigation and Observation Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Navigation and Observation Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Navigation and Observation Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3955,11 +3949,11 @@
 
     param[journal_id] = ijn
 
-    au < exists ; exists ; 2010 ; International Journal of Nephrology Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Nephrology Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Nephrology Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Nephrology Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Nephrology Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2010 ; International Journal of Nephrology Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; International Journal of Nephrology Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Nephrology Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Nephrology Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Nephrology Volume 2014 ; 2014 ; 2014 >
     
   }
   
@@ -3973,8 +3967,8 @@
 
     param[journal_id] = ijne
 
-    au < exists ; exists ; 2013 ; International Journal of Nuclear Energy Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Nuclear Energy Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2013 ; International Journal of Nuclear Energy Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Nuclear Energy Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3988,12 +3982,12 @@
 
     param[journal_id] = ijocean
 
-    au < exists ; exists ; 2009 ; International Journal of Oceanography Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; International Journal of Oceanography Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Oceanography Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Oceanography Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Oceanography Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Oceanography Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2009 ; International Journal of Oceanography Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; International Journal of Oceanography Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; International Journal of Oceanography Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Oceanography Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Oceanography Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Oceanography Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4007,13 +4001,13 @@
 
     param[journal_id] = ijo
 
-    au < exists ; exists ; 2008 ; International Journal of Optics Volume 2008 ; 2008 ; 2008 >
-    au < exists ; exists ; 2009 ; International Journal of Optics Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; International Journal of Optics Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Optics Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Optics Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Optics Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Optics Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2008 ; International Journal of Optics Volume 2008 ; 2008 ; 2008 >
+    au < manifest ; exists ; 2009 ; International Journal of Optics Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; International Journal of Optics Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; International Journal of Optics Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Optics Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Optics Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Optics Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4027,12 +4021,12 @@
 
     param[journal_id] = ijoto
    
-    au < exists ; exists ; 2009 ; International Journal of Otolaryngology Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; International Journal of Otolaryngology Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Otolaryngology Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Otolaryngology Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Otolaryngology Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Otolaryngology Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2009 ; International Journal of Otolaryngology Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; International Journal of Otolaryngology Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; International Journal of Otolaryngology Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Otolaryngology Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Otolaryngology Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Otolaryngology Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4046,7 +4040,7 @@
 
     param[journal_id] = ijpc
 
-    au < exists ; exists ; 2014 ; International Journal of Palliative Care Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2014 ; International Journal of Palliative Care Volume 2014 ; 2014 ; 2014 >
 
   }
   
@@ -4060,8 +4054,8 @@
 
     param[journal_id] = ijpde
 
-    au < exists ; exists ; 2013 ; International Journal of Partial Differential Equations Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Partial Differential Equations Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2013 ; International Journal of Partial Differential Equations Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Partial Differential Equations Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4075,12 +4069,12 @@
 
     param[journal_id] = ijpedi
 
-    au < exists ; exists ; 2009 ; International Journal of Pediatrics Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; International Journal of Pediatrics Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Pediatrics Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Pediatrics Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Pediatrics Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Pediatrics Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2009 ; International Journal of Pediatrics Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; International Journal of Pediatrics Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; International Journal of Pediatrics Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Pediatrics Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Pediatrics Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Pediatrics Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4094,12 +4088,12 @@
 
     param[journal_id] = ijpep
 
-    au < exists ; exists ; 2009 ; International Journal of Peptides Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; International Journal of Peptides Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Peptides Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Peptides Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Peptides Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Peptides Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2009 ; International Journal of Peptides Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; International Journal of Peptides Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; International Journal of Peptides Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Peptides Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Peptides Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Peptides Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4113,7 +4107,7 @@
 
     param[journal_id] = ijpho
 
-    au < exists ; exists ; 2014 ; International Journal of Photochemistry Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2014 ; International Journal of Photochemistry Volume 2014 ; 2014 ; 2014 >
 
   }
   
@@ -4127,22 +4121,22 @@
 
     param[journal_id] = ijp
 
-    au < exists ; exists ; 1999 ; International Journal of Photoenergy Volume 1 (1999) ; 1999 ; 1 >
-    au < exists ; exists ; 2000 ; International Journal of Photoenergy Volume 2 (2000) ; 2000 ; 2 >
-    au < exists ; exists ; 2001 ; International Journal of Photoenergy Volume 3 (2001) ; 2001 ; 3 >
-    au < exists ; exists ; 2002 ; International Journal of Photoenergy Volume 4 (2002) ; 2002 ; 4 >
-    au < exists ; exists ; 2003 ; International Journal of Photoenergy Volume 5 (2003) ; 2003 ; 5 >
-    au < exists ; exists ; 2004 ; International Journal of Photoenergy Volume 6 (2004) ; 2004 ; 6 >
-    au < exists ; exists ; 2005 ; International Journal of Photoenergy Volume 7 (2005) ; 2005 ; 7 >
-    au < exists ; exists ; 2006 ; International Journal of Photoenergy Volume 2006 ; 2006 ; 2006 >
-    au < exists ; exists ; 2007 ; International Journal of Photoenergy Volume 2007 ; 2007 ; 2007 >
-    au < exists ; exists ; 2008 ; International Journal of Photoenergy Volume 2008 ; 2008 ; 2008 >
-    au < exists ; exists ; 2009 ; International Journal of Photoenergy Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; International Journal of Photoenergy Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Photoenergy Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Photoenergy Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Photoenergy Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Photoenergy Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 1999 ; International Journal of Photoenergy Volume 1 (1999) ; 1999 ; 1 >
+    au < manifest ; exists ; 2000 ; International Journal of Photoenergy Volume 2 (2000) ; 2000 ; 2 >
+    au < manifest ; exists ; 2001 ; International Journal of Photoenergy Volume 3 (2001) ; 2001 ; 3 >
+    au < manifest ; exists ; 2002 ; International Journal of Photoenergy Volume 4 (2002) ; 2002 ; 4 >
+    au < manifest ; exists ; 2003 ; International Journal of Photoenergy Volume 5 (2003) ; 2003 ; 5 >
+    au < manifest ; exists ; 2004 ; International Journal of Photoenergy Volume 6 (2004) ; 2004 ; 6 >
+    au < manifest ; exists ; 2005 ; International Journal of Photoenergy Volume 7 (2005) ; 2005 ; 7 >
+    au < manifest ; exists ; 2006 ; International Journal of Photoenergy Volume 2006 ; 2006 ; 2006 >
+    au < manifest ; exists ; 2007 ; International Journal of Photoenergy Volume 2007 ; 2007 ; 2007 >
+    au < manifest ; exists ; 2008 ; International Journal of Photoenergy Volume 2008 ; 2008 ; 2008 >
+    au < manifest ; exists ; 2009 ; International Journal of Photoenergy Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; International Journal of Photoenergy Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; International Journal of Photoenergy Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Photoenergy Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Photoenergy Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Photoenergy Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4156,13 +4150,13 @@
 
     param[journal_id] = ijpg
 
-    au < exists ; exists ; 2007 ; International Journal of Plant Genomics Volume 2007 ; 2007 ; 2007 >
-    au < exists ; exists ; 2008 ; International Journal of Plant Genomics Volume 2008 ; 2008 ; 2008 >
-    au < exists ; exists ; 2009 ; International Journal of Plant Genomics Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; International Journal of Plant Genomics Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Plant Genomics Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Plant Genomics Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Plant Genomics Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2007 ; International Journal of Plant Genomics Volume 2007 ; 2007 ; 2007 >
+    au < manifest ; exists ; 2008 ; International Journal of Plant Genomics Volume 2008 ; 2008 ; 2008 >
+    au < manifest ; exists ; 2009 ; International Journal of Plant Genomics Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; International Journal of Plant Genomics Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; International Journal of Plant Genomics Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Plant Genomics Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Plant Genomics Volume 2013 ; 2013 ; 2013 >
     au < expected ; exists ; 2014 ; International Journal of Plant Genomics Volume 2014 ; 2014 ; 2014 >
 
   }
@@ -4177,12 +4171,12 @@
 
     param[journal_id] = ijps
 
-    au < exists ; exists ; 2009 ; International Journal of Polymer Science Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; International Journal of Polymer Science Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Polymer Science Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Polymer Science Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Polymer Science Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Polymer Science Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2009 ; International Journal of Polymer Science Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; International Journal of Polymer Science Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; International Journal of Polymer Science Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Polymer Science Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Polymer Science Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Polymer Science Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4196,10 +4190,10 @@
 
     param[journal_id] = ijpr
 
-    au < exists ; exists ; 2011 ; International Journal of Population Research Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Population Research Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Population Research Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Population Research Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2011 ; International Journal of Population Research Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Population Research Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Population Research Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Population Research Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4213,11 +4207,11 @@
 
     param[journal_id] = ijpro
 
-    au < exists ; exists ; 2010 ; International Journal of Proteomics Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Proteomics Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Proteomics Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Proteomics Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Proteomics Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2010 ; International Journal of Proteomics Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; International Journal of Proteomics Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Proteomics Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Proteomics Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Proteomics Volume 2014 ; 2014 ; 2014 >
     
   }
 
@@ -4231,13 +4225,13 @@
 
     param[journal_id] = ijrc
 
-    au < exists ; exists ; 2008 ; International Journal of Reconfigurable Computing Volume 2008 ; 2008 ; 2008 >
-    au < exists ; exists ; 2009 ; International Journal of Reconfigurable Computing Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; International Journal of Reconfigurable Computing Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Reconfigurable Computing Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Reconfigurable Computing Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Reconfigurable Computing Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Reconfigurable Computing Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2008 ; International Journal of Reconfigurable Computing Volume 2008 ; 2008 ; 2008 >
+    au < manifest ; exists ; 2009 ; International Journal of Reconfigurable Computing Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; International Journal of Reconfigurable Computing Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; International Journal of Reconfigurable Computing Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Reconfigurable Computing Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Reconfigurable Computing Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Reconfigurable Computing Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4251,8 +4245,8 @@
 
     param[journal_id] = ijrmed
 
-    au < exists ; exists ; 2013 ; International Journal of Reproductive Medicine Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Reproductive Medicine Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2013 ; International Journal of Reproductive Medicine Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Reproductive Medicine Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4266,12 +4260,12 @@
 
     param[journal_id] = ijr
 
-    au < exists ; exists ; 2009 ; International Journal of Rheumatology Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; International Journal of Rheumatology Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Rheumatology Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Rheumatology Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Rheumatology Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Rheumatology Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2009 ; International Journal of Rheumatology Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; International Journal of Rheumatology Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; International Journal of Rheumatology Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Rheumatology Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Rheumatology Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Rheumatology Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4285,26 +4279,26 @@
 
     param[journal_id] = ijrm
 
-    au < exists ; exists ; 1995 ; International Journal of Rotating Machinery Volume 1 (1995) ; 1995 ; 1 >
-    au < exists ; exists ; 1996 ; International Journal of Rotating Machinery Volume 2 (1996) ; 1996 ; 2 >
-    au < exists ; exists ; 1997 ; International Journal of Rotating Machinery Volume 3 (1997) ; 1997 ; 3 >
-    au < exists ; exists ; 1998 ; International Journal of Rotating Machinery Volume 4 (1998) ; 1998 ; 4 >
-    au < exists ; exists ; 1999 ; International Journal of Rotating Machinery Volume 5 (1999) ; 1999 ; 5 >
-    au < exists ; exists ; 2000 ; International Journal of Rotating Machinery Volume 6 (2000) ; 2000 ; 6 >
-    au < exists ; exists ; 2001 ; International Journal of Rotating Machinery Volume 7 (2001) ; 2001 ; 7 >
-    au < exists ; exists ; 2002 ; International Journal of Rotating Machinery Volume 8 (2002) ; 2002 ; 8 >
-    au < exists ; exists ; 2003 ; International Journal of Rotating Machinery Volume 9 (2003) ; 2003 ; 9 >
-    au < exists ; exists ; 2004 ; International Journal of Rotating Machinery Volume 10 (2004) ; 2004 ; 10 >
-    au < exists ; exists ; 2005 ; International Journal of Rotating Machinery Volume 2005 ; 2005 ; 2005 >
-    au < exists ; exists ; 2006 ; International Journal of Rotating Machinery Volume 2006 ; 2006 ; 2006 >
-    au < exists ; exists ; 2007 ; International Journal of Rotating Machinery Volume 2007 ; 2007 ; 2007 >
-    au < exists ; exists ; 2008 ; International Journal of Rotating Machinery Volume 2008 ; 2008 ; 2008 >
-    au < exists ; exists ; 2009 ; International Journal of Rotating Machinery Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; International Journal of Rotating Machinery Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Rotating Machinery Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Rotating Machinery Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Rotating Machinery Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Rotating Machinery Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 1995 ; International Journal of Rotating Machinery Volume 1-2 (1995) ; 1995 ; 1-2 >
+    au < manifest ; exists ; 1996 ; International Journal of Rotating Machinery Volume 2 (1996) ; 1996 ; 2 >
+    au < manifest ; exists ; 1997 ; International Journal of Rotating Machinery Volume 3 (1997) ; 1997 ; 3 >
+    au < manifest ; exists ; 1998 ; International Journal of Rotating Machinery Volume 4 (1998) ; 1998 ; 4 >
+    au < manifest ; exists ; 1999 ; International Journal of Rotating Machinery Volume 5 (1999) ; 1999 ; 5 >
+    au < manifest ; exists ; 2000 ; International Journal of Rotating Machinery Volume 6 (2000) ; 2000 ; 6 >
+    au < manifest ; exists ; 2001 ; International Journal of Rotating Machinery Volume 7 (2001) ; 2001 ; 7 >
+    au < manifest ; exists ; 2002 ; International Journal of Rotating Machinery Volume 8 (2002) ; 2002 ; 8 >
+    au < manifest ; exists ; 2003 ; International Journal of Rotating Machinery Volume 9 (2003) ; 2003 ; 9 >
+    au < manifest ; exists ; 2004 ; International Journal of Rotating Machinery Volume 10 (2004) ; 2004 ; 10 >
+    au < manifest ; exists ; 2005 ; International Journal of Rotating Machinery Volume 2005 ; 2005 ; 2005 >
+    au < manifest ; exists ; 2006 ; International Journal of Rotating Machinery Volume 2006 ; 2006 ; 2006 >
+    au < manifest ; exists ; 2007 ; International Journal of Rotating Machinery Volume 2007 ; 2007 ; 2007 >
+    au < manifest ; exists ; 2008 ; International Journal of Rotating Machinery Volume 2008 ; 2008 ; 2008 >
+    au < manifest ; exists ; 2009 ; International Journal of Rotating Machinery Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; International Journal of Rotating Machinery Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; International Journal of Rotating Machinery Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Rotating Machinery Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Rotating Machinery Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Rotating Machinery Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4318,12 +4312,12 @@
 
     param[journal_id] = ijs
 
-    au < exists ; exists ; 2009 ; International Journal of Spectroscopy Volume 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; 2010 ; International Journal of Spectroscopy Volume 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Spectroscopy Volume 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Spectroscopy Volume 2012 ; 2012 ; 2012 >
-    au < exists ; exists ; 2013 ; International Journal of Spectroscopy Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Spectroscopy Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2009 ; International Journal of Spectroscopy Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; International Journal of Spectroscopy Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; International Journal of Spectroscopy Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; International Journal of Spectroscopy Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; International Journal of Spectroscopy Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Spectroscopy Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4337,8 +4331,8 @@
 
     param[journal_id] = ijsm
 
-    au < exists ; exists ; 2013 ; International Journal of Statistical Mechanics Volume 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; 2014 ; International Journal of Statistical Mechanics Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2013 ; International Journal of Statistical Mechanics Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; International Journal of Statistical Mechanics Volume 2014 ; 2014 ; 2014 >
 
   }
 
