@@ -22,7 +22,10 @@
 
       param[journal_dir] = education_and_culture
       attr[journal_id] = eac
+      
+      comment[v21] = malformed manifest page. No content.
 
+      au < doNotProcess ; 2005 ; Education and Culture Volume 21 ; 21 >
       au < released ; 2006 ; Education and Culture Volume 22 ; 22 >
       au < released ; 2007 ; Education and Culture Volume 23 ; 23 >
       au < released ; 2008 ; Education and Culture Volume 24 ; 24 >
@@ -31,7 +34,7 @@
       au < released ; 2011 ; Education and Culture Volume 27 ; 27 >
       au < released ; 2012 ; Education and Culture Volume 28 ; 28 >
       au < ready ; 2013 ; Education and Culture Volume 29 ; 29 >
-      au < expected ; 2014 ; Education and Culture Volume 30 ; 30 >
+      au < doNotProcess ; 2014 ; Education and Culture Volume 30 ; 30 >
 
     }
 

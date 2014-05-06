@@ -36,6 +36,10 @@
     param[journal_dir] = dissent
     attr[journal_id] = dss
 
+    au < exists ; 2005 ; Dissent Volume 52 ; 52 >
+    au < exists ; 2006 ; Dissent Volume 53 ; 53 >
+    au < exists ; 2007 ; Dissent Volume 54 ; 54 >
+    au < manifest ; 2008 ; Dissent Volume 55 ; 55 >
     au < released ; 2009 ; Dissent Volume 56 ; 56 >
     au < released ; 2010 ; Dissent Volume 57 ; 57 >
     au < released ; 2011 ; Dissent Volume 58 ; 58 >
