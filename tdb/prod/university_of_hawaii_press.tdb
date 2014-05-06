@@ -618,7 +618,7 @@ comment[mn20] = URL with 403 Forbidden error
       param[journal_dir] = review_of_japanese_culture_and_society
       attr[journal_id] = roj
 
-      au < exists ; 2012 ; Review of Japanese Culture and Society Volume 24 ; 24 >
+      au < manifest ; 2012 ; Review of Japanese Culture and Society Volume 24 ; 24 >
     
     }
   }
