@@ -382,6 +382,9 @@
     param[journal_dir] = genocide_studies_and_prevention
     attr[journal_id] = gsp
 
+    au < exists ; 2006 ; Genocide Studies and Prevention Volume 1 ; 1 >
+    au < exists ; 2007 ; Genocide Studies and Prevention Volume 2 ; 2 >
+    au < manifest ; 2008 ; Genocide Studies and Prevention Volume 3 ; 3 >
     au < released ; 2009 ; Genocide Studies and Prevention Volume 4 ; 4 >
     au < released ; 2010 ; Genocide Studies and Prevention Volume 5 ; 5 >
     au < released ; 2011 ; Genocide Studies and Prevention Volume 6 ; 6 >
