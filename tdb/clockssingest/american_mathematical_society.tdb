@@ -9,6 +9,7 @@
   
   plugin = org.lockss.plugin.americanmathematicalsociety.ClockssAmericanMathematicalSocietyPlugin
   implicit < status ; status2 ; year ; name ; param[volume_name] >
+  param[base_url] = http://www.ams.org/
 
     
     {
@@ -19,7 +20,6 @@
       eissn = 1088-9485
     >
     
-    param[base_url] = http://www.ams.org/journals
     param[journal_id] = bull
       
     au < manifest ; exists ; 1891 ; Bulletin of the American Mathematical Society Volume 1 ; 1891 >
@@ -51,7 +51,7 @@
       name = Conformal Geometry Dynamics and An Electronic Journal of the AMS ; 
       issn = 1088-4173 
     >
-    param[base_url] = http://www.ams.org/journals
+    
     param[journal_id] = ecgd
     
     au < manifest ; exists ; 2007 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 11 ; 2007 >
@@ -72,7 +72,7 @@
       issn = 0894-0347 ;
       eissn = 1088-6834
     >
-    param[base_url] = http://www.ams.org/journals
+
     param[journal_id] = jams
     
     au < manifest ; exists ; 1988 ; Journal of the American Mathematical Society Volume 1 ; 1988 >
@@ -113,7 +113,6 @@
       eissn = 1088-6842
     >
     
-    param[base_url] = http://www.ams.org/journals
     param[journal_id] = mcom
     
     au < manifests ; exists ; 1943-1945 ; Mathematics of Computation Volume 1 ; 1943-1945 >
@@ -195,7 +194,6 @@
       issn = 0065-9266 ;
       eissn = 1947-6221
     >
-    param[base_url] = http://www.ams.org/jourcgi/jrnl_toolbar_nav/ 
     param[journal_id] = memo_all
 
     au < manifest ; exists ; 2009 ; Memoirs of the American Mathematical Society Volume 216 ; 2009 >
@@ -215,7 +213,6 @@
       eissn = 1088-9477
     >
     
-    param[base_url] = http://www.ams.org/
     param[journal_id] = notices
     
     au < manifest ; exists ; 1995 ; Notices of the American Mathematical Society Volume 42 ; 1995 >
@@ -249,7 +246,6 @@
       eissn = 1088-6826
     >
     
-    param[base_url] = http://www.ams.org/journals
     param[journal_id] = proc
       
     au < manifest ; exists ; 2007 ; Proceedings of the American Mathematical Society Volume 135 ; 2007 >
@@ -271,7 +267,6 @@
       
     >
     
-    param[base_url] = http://www.ams.org/journals
     param[journal_id] = ert
 
     au < manifest ; exists ; 1997 ; Representation Theory - An electronic journal of the AMS Volume 1 ; 1 >
@@ -303,7 +298,6 @@
       eissn = 1547-7371
     >
     
-    param[base_url] = http://www.ams.org/journals  
     param[journal_id] = spmj
 
     au < manifest ; exists ; 2004 ; St. Petersburg Mathematical Journal Volume 15 ; 2004 >
@@ -328,7 +322,6 @@
       eissn = 1547-7363
     >
     
-    param[base_url] = http://www.ams.org/journals
     param[journal_id] = tpms
     
     au < manifest ; exists ; 2004 ; Theory of Probability and Mathematical Statistics Volume 68-69 ; 2004 >
@@ -353,7 +346,6 @@
       eissn = 1088-6850
     >
     
-    param[base_url] = http://www.ams.org/journals
     param[journal_id] = tran
     
     au < manifest ; exists ; 2007 ; Transactions of the American Mathematical Society Volume 359 ; 2007 >
@@ -375,7 +367,6 @@
       eissn = 1088-6850
     >
     
-    param[base_url] = http://www.ams.org/journals
     param[journal_id] = btran
 
     au < expected ; exists ; 2014 ; Transactions of the American Mathematical Society B Volume 1 ; 2014 >
@@ -390,7 +381,6 @@
       eissn = 1547-738X
     >
     
-    param[base_url] = http://www.ams.org/journals
     param[journal_id] = mosc
     
     au < manifest ; exists ; 2004 ; Transactions of the Moscow Mathematical Society Volume 65 ; 2004 >
