@@ -61,7 +61,7 @@
     au < manifest ; exists ; 2011 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 15 ; 2011 >
     au < manifest ; exists ; 2012 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 16 ; 2012 >
     au < testing ; exists ; 2013 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 17 ; 2013 >
-    au < expected ; exists ; 2014 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 18 ; 2014 >
+    au < manifest ; exists ; 2014 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 18 ; 2014 >
 
     }    
     
@@ -101,7 +101,7 @@
     au < manifest ; exists ; 2011 ; Journal of the American Mathematical Society Volume 24 ; 2011 >
     au < manifest ; exists ; 2012 ; Journal of the American Mathematical Society Volume 25 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of the American Mathematical Society Volume 26 ; 2013 >
-    au < expected ; exists ; 2014 ; Journal of the American Mathematical Society Volume 27 ; 2014 >
+    au < manifest ; exists ; 2014 ; Journal of the American Mathematical Society Volume 27 ; 2014 >
       
    }
     
@@ -182,7 +182,7 @@
     au < manifest ; exists ; 2011 ; Mathematics of Computation Volume 80 ; 2011 >
     au < manifest ; exists ; 2012 ; Mathematics of Computation Volume 81 ; 2012 >
     au < manifest ; exists ; 2013 ; Mathematics of Computation Volume 82 ; 2013 >
-    au < expected ; exists ; 2014 ; Mathematics of Computation Volume 83 ; 2014 >
+    au < manifest ; exists ; 2014 ; Mathematics of Computation Volume 83 ; 2014 >
 
     }
     
@@ -195,12 +195,14 @@
       eissn = 1947-6221
     >
     param[journal_id] = memo_all
+    
+    comment[format] = this is a book?
 
-    au < manifest ; exists ; 2009 ; Memoirs of the American Mathematical Society Volume 216 ; 2009 >
-    au < manifest ; exists ; 2010 ; Memoirs of the American Mathematical Society Volume 217 ; 2010 >
-    au < manifest ; exists ; 2011 ; Memoirs of the American Mathematical Society Volume 218 ; 2011 >
-    au < manifest ; exists ; 2012 ; Memoirs of the American Mathematical Society Volume 219 ; 2012 >
-    au < manifest ; exists ; 2013 ; Memoirs of the American Mathematical Society Volume 220 ; 2013 >
+    au < exists ; exists ; 2009 ; Memoirs of the American Mathematical Society Volume 216 ; 2009 >
+    au < exists ; exists ; 2010 ; Memoirs of the American Mathematical Society Volume 217 ; 2010 >
+    au < exists ; exists ; 2011 ; Memoirs of the American Mathematical Society Volume 218 ; 2011 >
+    au < exists ; exists ; 2012 ; Memoirs of the American Mathematical Society Volume 219 ; 2012 >
+    au < exists ; exists ; 2013 ; Memoirs of the American Mathematical Society Volume 220 ; 2013 >
     au < expected ; exists ; 2014 ; Memoirs of the American Mathematical Society Volume 221 ; 2014 >
 
     }
@@ -215,25 +217,25 @@
     
     param[journal_id] = notices
     
-    au < manifest ; exists ; 1995 ; Notices of the American Mathematical Society Volume 42 ; 1995 >
-    au < manifest ; exists ; 1996 ; Notices of the American Mathematical Society Volume 43 ; 1996 >
-    au < manifest ; exists ; 1997 ; Notices of the American Mathematical Society Volume 44 ; 1997 >
-    au < manifest ; exists ; 1998 ; Notices of the American Mathematical Society Volume 45 ; 1998 >
-    au < manifest ; exists ; 1999 ; Notices of the American Mathematical Society Volume 46 ; 1999 >
-    au < manifest ; exists ; 2000 ; Notices of the American Mathematical Society Volume 47 ; 2000 >
-    au < manifest ; exists ; 2001 ; Notices of the American Mathematical Society Volume 48 ; 2001 >
-    au < manifest ; exists ; 2002 ; Notices of the American Mathematical Society Volume 49 ; 2002 >
-    au < manifest ; exists ; 2003 ; Notices of the American Mathematical Society Volume 50 ; 2003 >
-    au < manifest ; exists ; 2004 ; Notices of the American Mathematical Society Volume 51 ; 2004 >
-    au < manifest ; exists ; 2005 ; Notices of the American Mathematical Society Volume 52 ; 2005 >
-    au < manifest ; exists ; 2006 ; Notices of the American Mathematical Society Volume 53 ; 2006 >
-    au < manifest ; exists ; 2007 ; Notices of the American Mathematical Society Volume 54 ; 2007 >
-    au < manifest ; exists ; 2008 ; Notices of the American Mathematical Society Volume 55 ; 2008 >
-    au < manifest ; exists ; 2009 ; Notices of the American Mathematical Society Volume 56 ; 2009 >
-    au < manifest ; exists ; 2010 ; Notices of the American Mathematical Society Volume 57 ; 2010 >
-    au < manifest ; exists ; 2011 ; Notices of the American Mathematical Society Volume 58 ; 2011 >
-    au < manifest ; exists ; 2012 ; Notices of the American Mathematical Society Volume 59 ; 2012 >
-    au < manifest ; exists ; 2013 ; Notices of the American Mathematical Society Volume 60 ; 2013 >
+    au < exists ; exists ; 1995 ; Notices of the American Mathematical Society Volume 42 ; 1995 >
+    au < exists ; exists ; 1996 ; Notices of the American Mathematical Society Volume 43 ; 1996 >
+    au < exists ; exists ; 1997 ; Notices of the American Mathematical Society Volume 44 ; 1997 >
+    au < exists ; exists ; 1998 ; Notices of the American Mathematical Society Volume 45 ; 1998 >
+    au < exists ; exists ; 1999 ; Notices of the American Mathematical Society Volume 46 ; 1999 >
+    au < exists ; exists ; 2000 ; Notices of the American Mathematical Society Volume 47 ; 2000 >
+    au < exists ; exists ; 2001 ; Notices of the American Mathematical Society Volume 48 ; 2001 >
+    au < exists ; exists ; 2002 ; Notices of the American Mathematical Society Volume 49 ; 2002 >
+    au < exists ; exists ; 2003 ; Notices of the American Mathematical Society Volume 50 ; 2003 >
+    au < exists ; exists ; 2004 ; Notices of the American Mathematical Society Volume 51 ; 2004 >
+    au < exists ; exists ; 2005 ; Notices of the American Mathematical Society Volume 52 ; 2005 >
+    au < exists ; exists ; 2006 ; Notices of the American Mathematical Society Volume 53 ; 2006 >
+    au < exists ; exists ; 2007 ; Notices of the American Mathematical Society Volume 54 ; 2007 >
+    au < exists ; exists ; 2008 ; Notices of the American Mathematical Society Volume 55 ; 2008 >
+    au < exists ; exists ; 2009 ; Notices of the American Mathematical Society Volume 56 ; 2009 >
+    au < exists ; exists ; 2010 ; Notices of the American Mathematical Society Volume 57 ; 2010 >
+    au < exists ; exists ; 2011 ; Notices of the American Mathematical Society Volume 58 ; 2011 >
+    au < exists ; exists ; 2012 ; Notices of the American Mathematical Society Volume 59 ; 2012 >
+    au < exists ; exists ; 2013 ; Notices of the American Mathematical Society Volume 60 ; 2013 >
     au < expected ; exists ; 2014 ; Notices of the American Mathematical Society Volume 61 ; 2014 >
 
     }
@@ -255,7 +257,7 @@
     au < manifest ; exists ; 2011 ; Proceedings of the American Mathematical Society Volume 139 ; 2011 >
     au < manifest ; exists ; 2012 ; Proceedings of the American Mathematical Society Volume 140 ; 2012 >
     au < manifest ; exists ; 2013 ; Proceedings of the American Mathematical Society Volume 141 ; 2013 >
-    au < expected ; exists ; 2014 ; Proceedings of the American Mathematical Society Volume 142 ; 2014 >
+    au < manifest ; exists ; 2014 ; Proceedings of the American Mathematical Society Volume 142 ; 2014 >
 
     }
     
@@ -269,24 +271,24 @@
     
     param[journal_id] = ert
 
-    au < manifest ; exists ; 1997 ; Representation Theory - An electronic journal of the AMS Volume 1 ; 1 >
-    au < manifest ; exists ; 1998 ; Representation Theory - An electronic journal of the AMS Volume 2 ; 2 >
-    au < manifest ; exists ; 1999 ; Representation Theory - An electronic journal of the AMS Volume 3 ; 3 >
-    au < manifest ; exists ; 2000 ; Representation Theory - An electronic journal of the AMS Volume 4 ; 4 >
-    au < manifest ; exists ; 2001 ; Representation Theory - An electronic journal of the AMS Volume 5 ; 5 >
-    au < manifest ; exists ; 2002 ; Representation Theory - An electronic journal of the AMS Volume 6 ; 6 >
-    au < manifest ; exists ; 2003 ; Representation Theory - An electronic journal of the AMS Volume 7 ; 7 >
-    au < manifest ; exists ; 2004 ; Representation Theory - An electronic journal of the AMS Volume 8 ; 8 >
-    au < manifest ; exists ; 2005 ; Representation Theory - An electronic journal of the AMS Volume 9 ; 9 >
-    au < manifest ; exists ; 2006 ; Representation Theory - An electronic journal of the AMS Volume 10 ; 10 >
-    au < manifest ; exists ; 2007 ; Representation Theory - An electronic journal of the AMS Volume 11 ; 11 >
-    au < manifest ; exists ; 2008 ; Representation Theory - An electronic journal of the AMS Volume 12 ; 12 >
-    au < manifest ; exists ; 2009 ; Representation Theory - An electronic journal of the AMS Volume 13 ; 13 >
-    au < manifest ; exists ; 2010 ; Representation Theory - An electronic journal of the AMS Volume 14 ; 14 >
-    au < manifest ; exists ; 2011 ; Representation Theory - An electronic journal of the AMS Volume 15 ; 15 >
-    au < manifest ; exists ; 2012 ; Representation Theory - An electronic journal of the AMS Volume 16 ; 16 >
-    au < manifest ; exists ; 2013 ; Representation Theory - An electronic journal of the AMS Volume 17 ; 17 >
-    au < expected ; exists ; 2014 ; Representation Theory - An electronic journal of the AMS Volume 18 ; 18 >
+    au < manifest ; exists ; 1997 ; Representation Theory - An electronic journal of the AMS Volume 1 ; 1997 >
+    au < manifest ; exists ; 1998 ; Representation Theory - An electronic journal of the AMS Volume 2 ; 1998 >
+    au < manifest ; exists ; 1999 ; Representation Theory - An electronic journal of the AMS Volume 3 ; 1999 >
+    au < manifest ; exists ; 2000 ; Representation Theory - An electronic journal of the AMS Volume 4 ; 2000 >
+    au < manifest ; exists ; 2001 ; Representation Theory - An electronic journal of the AMS Volume 5 ; 2001 >
+    au < manifest ; exists ; 2002 ; Representation Theory - An electronic journal of the AMS Volume 6 ; 2002 >
+    au < manifest ; exists ; 2003 ; Representation Theory - An electronic journal of the AMS Volume 7 ; 2003 >
+    au < manifest ; exists ; 2004 ; Representation Theory - An electronic journal of the AMS Volume 8 ; 2004 >
+    au < manifest ; exists ; 2005 ; Representation Theory - An electronic journal of the AMS Volume 9 ; 2005 >
+    au < manifest ; exists ; 2006 ; Representation Theory - An electronic journal of the AMS Volume 10 ; 2006 >
+    au < manifest ; exists ; 2007 ; Representation Theory - An electronic journal of the AMS Volume 11 ; 2007 >
+    au < manifest ; exists ; 2008 ; Representation Theory - An electronic journal of the AMS Volume 12 ; 2008 >
+    au < manifest ; exists ; 2009 ; Representation Theory - An electronic journal of the AMS Volume 13 ; 2009 >
+    au < manifest ; exists ; 2010 ; Representation Theory - An electronic journal of the AMS Volume 14 ; 2010 >
+    au < manifest ; exists ; 2011 ; Representation Theory - An electronic journal of the AMS Volume 15 ; 2011 >
+    au < manifest ; exists ; 2012 ; Representation Theory - An electronic journal of the AMS Volume 16 ; 2012 >
+    au < manifest ; exists ; 2013 ; Representation Theory - An electronic journal of the AMS Volume 17 ; 2013 >
+    au < manifest ; exists ; 2014 ; Representation Theory - An electronic journal of the AMS Volume 18 ; 2014 >
 
     }
     
@@ -310,7 +312,7 @@
     au < manifest ; exists ; 2011 ; St. Petersburg Mathematical Journal Volume 22 ; 2011 >
     au < manifest ; exists ; 2012 ; St. Petersburg Mathematical Journal Volume 23 ; 2012 >
     au < manifest ; exists ; 2013 ; St. Petersburg Mathematical Journal Volume 24 ; 2013 >
-    au < expected ; exists ; 2014 ; St. Petersburg Mathematical Journal Volume 25 ; 2014 >
+    au < manifest ; exists ; 2014 ; St. Petersburg Mathematical Journal Volume 25 ; 2014 >
 
     }
     
@@ -355,7 +357,7 @@
     au < manifest ; exists ; 2011 ; Transactions of the American Mathematical Society Volume 363 ; 2011 >
     au < manifest ; exists ; 2012 ; Transactions of the American Mathematical Society Volume 364 ; 2012 >
     au < manifest ; exists ; 2013 ; Transactions of the American Mathematical Society Volume 365 ; 2013 >
-    au < expected ; exists ; 2014 ; Transactions of the American Mathematical Society Volume 366 ; 2014 >
+    au < manifest ; exists ; 2014 ; Transactions of the American Mathematical Society Volume 366 ; 2014 >
 
     }
     
@@ -369,7 +371,7 @@
     
     param[journal_id] = btran
 
-    au < expected ; exists ; 2014 ; Transactions of the American Mathematical Society B Volume 1 ; 2014 >
+    au < manifest ; exists ; 2014 ; Transactions of the American Mathematical Society B Volume 1 ; 2014 >
 
     }
    
