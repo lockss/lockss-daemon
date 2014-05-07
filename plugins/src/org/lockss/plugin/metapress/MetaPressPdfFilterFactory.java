@@ -1,5 +1,5 @@
 /*
- * $Id: MetaPressPdfFilterFactory.java,v 1.1 2014-05-05 23:13:32 etenbrink Exp $
+ * $Id: MetaPressPdfFilterFactory.java,v 1.2 2014-05-07 22:01:49 etenbrink Exp $
  */
 
 /*
@@ -199,7 +199,6 @@ public class MetaPressPdfFilterFactory implements FilterFactory {
         return papFiltFact.createFilteredInputStream(au, in, encoding);
         
       case UNKNOWN:
-        logger.warning("Unknown publisher ID");
       default:
         return in;
     }
