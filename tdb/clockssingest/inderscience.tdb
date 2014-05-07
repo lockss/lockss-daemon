@@ -2236,9 +2236,8 @@
 
       param[journal_issn] = 2049-0895
       
-      au < zapped ; finished ; 2012 ; International Journal of Diplomacy and Economy Volume 1 ; 1 >
-      au < expected ; exists ; 2013 ; International Journal of Diplomacy and Economy Volume 2 ; 2 >
-      au < expected ; exists ; 2014 ; International Journal of Diplomacy and Economy Volume 3 ; 3 >
+      au < zapped ; finished ; 2012-2013 ; International Journal of Diplomacy and Economy Volume 1 ; 1 >
+      au < manifest ; exists ; 2014 ; International Journal of Diplomacy and Economy Volume 2 ; 2 >
 
     }
 
@@ -6050,7 +6049,7 @@
       au < finished ; crawling ; 2011 ; International Journal of Power Electronics Volume 3 ; 3 >
       au < zapped ; finished ; 2012 ; International Journal of Power Electronics Volume 4 ; 4 >
       au < crawling ; exists ; 2013 ; International Journal of Power Electronics Volume 5 ; 5 >
-      au < expected ; exists ; 2014 ; International Journal of Power Electronics Volume 6 ; 6 >
+      au < manifest ; exists ; 2014 ; International Journal of Power Electronics Volume 6 ; 6 >
 
     }
 
@@ -6998,7 +6997,7 @@
       au < zapped ; finished ; 2011 ; International Journal of Space-Based and Situated Computing Volume 1 ; 1 >
       au < zapped ; finished ; 2012 ; International Journal of Space-Based and Situated Computing Volume 2 ; 2 >
       au < crawling ; exists ; 2013 ; International Journal of Space-Based and Situated Computing Volume 3 ; 3 >
-      au < expected ; exists ; 2014 ; International Journal of Space-Based and Situated Computing Volume 4 ; 4 >
+      au < manifest ; exists ; 2014 ; International Journal of Space-Based and Situated Computing Volume 4 ; 4 >
 
     }
 
@@ -7042,7 +7041,7 @@
       au < zapped ; finished ; 2012 ; International Journal of Sport Management and Marketing Volume 11 ; 11 >
       au < finished ; crawling ; 2012 ; International Journal of Sport Management and Marketing Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; International Journal of Sport Management and Marketing Volume 13 ; 13 >
-      au < expected ; exists ; 2013 ; International Journal of Sport Management and Marketing Volume 14 ; 14 >
+      au < manifest ; exists ; 2013 ; International Journal of Sport Management and Marketing Volume 14 ; 14 >
       au < expected ; exists ; 2014 ; International Journal of Sport Management and Marketing Volume 15 ; 15 >
       au < expected ; exists ; 2014 ; International Journal of Sport Management and Marketing Volume 16 ; 16 >
 
