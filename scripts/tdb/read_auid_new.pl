@@ -161,9 +161,10 @@ while (my $line = <>) {
         if ($man_contents =~ m/<h1>(.*)<\/h1>/si) {
           $vol_title = $1;
           if ($man_contents =~ m/<h2>(.*)<\/h2>/si) {
-            $vol_title = $vol_title . $1;
+            $vol_title = $vol_title . " " . $1;
           }
           $vol_title =~ s/\s*\n\s*/ /g;
+          $vol_title =~ s/,//;
         } 
     $result = "Manifest"
       } else {
