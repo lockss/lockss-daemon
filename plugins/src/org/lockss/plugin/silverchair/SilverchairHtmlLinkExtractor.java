@@ -1,5 +1,5 @@
 /*
- * $Id: SilverchairHtmlLinkExtractor.java,v 1.2 2014-05-07 14:14:43 thib_gc Exp $
+ * $Id: SilverchairHtmlLinkExtractor.java,v 1.3 2014-05-07 14:38:23 thib_gc Exp $
  */
 
 /*
@@ -62,6 +62,7 @@ public class SilverchairHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
                                       Callback cb)
       throws IOException {
     char ch = link.charAt(0);
+
     if ((ch == 'a' || ch == 'A') && beginsWithTag(link, ATAG)) {
       String href = getAttributeValue(HREF, link);
       if (href == null) {
@@ -93,9 +94,19 @@ public class SilverchairHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
         return super.extractLinkFromTag(link, au, cb);
       }
       
-      hrefMat = PATTERN_JQUERY.matcher(href);
-      if (hrefMat.find()) {
-        String jqueryVersion = hrefMat.group(1);
+    }
+
+    else if ((ch == 's' || ch == 'S') && beginsWithTag(link, SCRIPTTAG)) {
+      String src = getAttributeValue(SRC, link);
+      if (src == null) {
+        src = "";
+      }
+      Matcher srcMat = null;
+      
+      srcMat = PATTERN_JQUERY.matcher(src);
+      if (srcMat.find()) {
+        logger.debug3("Found target JQuery URL");
+        String jqueryVersion = srcMat.group(1);
         // Generate local JQuery URL
         String url = String.format("/JS/plugins/jquery-%s.min.js", jqueryVersion);
         logger.debug3(String.format("Generated %s", url));
@@ -105,6 +116,7 @@ public class SilverchairHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
       }
     }
 
+    
     return super.extractLinkFromTag(link, au, cb);
   }
 
