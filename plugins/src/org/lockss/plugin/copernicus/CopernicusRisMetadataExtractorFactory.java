@@ -1,10 +1,10 @@
 /*
- * $Id: CopernicusRisMetadataExtractorFactory.java,v 1.2 2014-05-08 18:42:58 alexandraohlson Exp $
+ * $Id: CopernicusRisMetadataExtractorFactory.java,v 1.3 2014-05-08 22:45:21 alexandraohlson Exp $
  */
 
 /*
 
- Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -74,7 +74,7 @@ import org.lockss.util.Logger;
  */
 public class CopernicusRisMetadataExtractorFactory
   implements FileMetadataExtractorFactory {
-  static Logger log = Logger.getLogger("BaseArchivalUnit");
+  static Logger log = Logger.getLogger(CopernicusRisMetadataExtractorFactory.class);
   
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
 							   String contentType)
@@ -99,7 +99,7 @@ public class CopernicusRisMetadataExtractorFactory
   public static class CopernicusRisMetadataExtractor
   extends RisMetadataExtractor {
     
-    Pattern RIS_FILENAME_PATTERN = Pattern.compile("\\/([^/]+)\\.ris$");
+    private final static Pattern RIS_FILENAME_PATTERN = Pattern.compile("\\/([^/]+)\\.ris$");
 
     // override this to verify access_url before emitting
     @Override

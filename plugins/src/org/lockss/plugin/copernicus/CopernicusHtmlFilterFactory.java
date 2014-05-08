@@ -1,10 +1,10 @@
 /*
-* $Id: CopernicusHtmlFilterFactory.java,v 1.8 2014-05-08 18:42:58 alexandraohlson Exp $
+* $Id: CopernicusHtmlFilterFactory.java,v 1.9 2014-05-08 22:45:21 alexandraohlson Exp $
 */
 
 /*
 
- Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
