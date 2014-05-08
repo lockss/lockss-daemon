@@ -24240,7 +24240,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       comment[tej_V1] = missing manifest. publisher contacted. AU already on ingest network.
 
-      au < manifest ; exists ; 2010 ; Journal of Tissue Engineering Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2010 ; Journal of Tissue Engineering Volume 1 ; 1 ; >
       au < finished ; crawling ; 2011 ; Journal of Tissue Engineering Volume 2 ; 2 ; >
       au < finished ; crawling ; 2012 ; Journal of Tissue Engineering Volume 3 ; 3 ; >
       au < crawling ; exists ; 2013 ; Journal of Tissue Engineering Volume 4 ; 4 ; >
