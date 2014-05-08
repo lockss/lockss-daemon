@@ -557,7 +557,7 @@
         param[journal_issn] = 2195-7045 
         comment[platform] = BioMedCentralPlugin
   
-        au < expected ; exists ; 2014 ; EPJ Techniques and Instrumentation Volume 1 ; 1 >
+        au < manifest ; exists ; 2014 ; EPJ Techniques and Instrumentation Volume 1 ; 1 >
   
     }
   
@@ -1383,7 +1383,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; exists ; 2013 ; Journal of Interaction Science Volume 1 ; 1 >
-        au < expected ; exists ; 2014 ; Journal of Interaction Science Volume 2 ; 2 >
+        au < manifest ; exists ; 2014 ; Journal of Interaction Science Volume 2 ; 2 >
   
     }
   
@@ -1830,7 +1830,7 @@
         au < manifest ; exists ; 2011 ; Psychology of Well-Being: Theory, Research and Practice Volume 1 ; 1 >
         au < manifest ; exists ; 2012 ; Psychology of Well-Being: Theory, Research and Practice Volume 2 ; 2 >
         au < manifest ; exists ; 2013 ; Psychology of Well-Being: Theory, Research and Practice Volume 3 ; 3 >
-        au < expected ; exists ; 2014 ; Psychology of Well-Being: Theory, Research and Practice Volume 4 ; 4 >
+        au < manifest ; exists ; 2014 ; Psychology of Well-Being: Theory, Research and Practice Volume 4 ; 4 >
   
     }
 
@@ -1961,8 +1961,8 @@
         param[journal_issn] = 1810-522X
         comment[platform] = BioMedCentralPlugin
 
-        au < exists ; exists ; 2013 ; Zoological Studies Volume 52 ; 52 >
-        au < exists ; exists ; 2014 ; Zoological Studies Volume 53 ; 53 >
+        au < manifest ; exists ; 2013 ; Zoological Studies Volume 52 ; 52 >
+        au < manifest ; exists ; 2014 ; Zoological Studies Volume 53 ; 53 >
 
     }
 
