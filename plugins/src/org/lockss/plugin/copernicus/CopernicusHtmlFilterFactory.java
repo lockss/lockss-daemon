@@ -1,5 +1,5 @@
 /*
-* $Id: CopernicusHtmlFilterFactory.java,v 1.7 2013-02-19 18:40:18 alexandraohlson Exp $
+* $Id: CopernicusHtmlFilterFactory.java,v 1.8 2014-05-08 18:42:58 alexandraohlson Exp $
 */
 
 /*
@@ -56,7 +56,7 @@ import org.lockss.util.ReaderInputStream;
 
 public class CopernicusHtmlFilterFactory implements FilterFactory {
 
-        Logger log = Logger.getLogger("CopernicusHtmlFilterFactoryy");
+        Logger log = Logger.getLogger(CopernicusHtmlFilterFactory.class);
         
   public static class FilteringException extends PluginException {
     public FilteringException() { super(); }
@@ -78,9 +78,14 @@ public class CopernicusHtmlFilterFactory implements FilterFactory {
          */
         new TagNameFilter("script"),
         new TagNameFilter("noscript"),
+        // top banner
+        HtmlNodeFilters.tagWithAttribute("div",  "id", "page_header"),
+        // left column on both TOC and article page - home/navigation, alert, contact, images
+        HtmlNodeFilters.tagWithAttribute("div",  "id", "page_colum_left"),
         // Right column contains search, news, and recent papers
+        // we must crawl links in this column, but can hash it out for comparison
         HtmlNodeFilters.tagWithAttribute("div", "id", "page_colum_right"),
-        // Journal metrics block - variable values
+        // the following are in page_column_left; in from before, but leave in to be safe
         HtmlNodeFilters.tagWithAttribute("div", "id", "journal_metrics"),
         HtmlNodeFilters.tagWithAttribute("iframe", "id", "co_auth_check_authiframecontainer"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "page_navigation_left"),    
