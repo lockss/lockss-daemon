@@ -45506,9 +45506,26 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; Menopause International Volume 17 ; 17 >
         au < HighWirePressH20Plugin ; exists ; 2012 ; Menopause International Volume 18 ; 18 >
         au < HighWirePressH20Plugin ; manifest ; 2013 ; Menopause International Volume 19 ; 19 >
-        au < HighWirePressH20Plugin ; expected ; 2014 ; Menopause International Volume 20 ; 20 >
   
       }
+  
+    }
+  
+    {
+    
+      title <
+        name = Post Reproductive Health ;
+        issn = 2053-3691 ;
+        eissn = 2053-3705 ;
+        issnl = 2053-3691
+      >
+  
+        plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+        implicit < status ; year ; name ; param[volume_name] >
+        param[base_url] = http://min.sagepub.com/
+        comment[continues] = 1754-0453
+  
+        au < exists ; 2014 ; Post Reproductive Health Volume 20 ; 20 >
   
     }
   
