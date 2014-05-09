@@ -114,7 +114,7 @@
       au < HighWirePressH20Plugin ; released ; 2011 ; American Literature Volume 83 ; 83 >
       au < HighWirePressH20Plugin ; released ; 2012 ; American Literature Volume 84 ; 84 >
       au < HighWirePressH20Plugin ; ready ; 2013 ; American Literature Volume 85 ; 85 >
-      au < HighWirePressH20Plugin ; expected ; 2014 ; American Literature Volume 86 ; 86 >
+      au < HighWirePressH20Plugin ; manifest ; 2014 ; American Literature Volume 86 ; 86 >
 
     }
     
@@ -436,7 +436,7 @@
       au < HighWirePressH20Plugin ; released ; 2011 ; Comparative Literature Volume 63 ; 63 >
       au < HighWirePressH20Plugin ; released ; 2012 ; Comparative Literature Volume 64 ; 64 >
       au < HighWirePressH20Plugin ; ready ; 2013 ; Comparative Literature Volume 65 ; 65 >
-      au < HighWirePressH20Plugin ; expected ; 2014 ; Comparative Literature Volume 66 ; 66 >
+      au < HighWirePressH20Plugin ; manifest ; 2014 ; Comparative Literature Volume 66 ; 66 >
 
     }
   
@@ -536,6 +536,7 @@
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = cultural_politics
       attr[journal_id] = cup
+      comment[2014] = manifest page up
 
       au < released ; 2012 ; Cultural Politics Volume 8 ; 8 >
       au < ready ; 2013 ; Cultural Politics Volume 9 ; 9 >
@@ -558,7 +559,7 @@
       au < HighWirePressH20Plugin ; released ; 2011 ; Cultural Politics Volume 7 ; 7 >
       au < HighWirePressH20Plugin ; released ; 2012 ; Cultural Politics Volume 8 ; 8 >
       au < HighWirePressH20Plugin ; ready ; 2013 ; Cultural Politics Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; expected ; 2014 ; Cultural Politics Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; manifest ; 2014 ; Cultural Politics Volume 10 ; 10 >
 
     }
     
@@ -609,7 +610,7 @@
       au < HighWirePressH20Plugin ; released ; 2011 ; differences: A Journal of Feminist Cultural Studies Volume 22 ; 22 >
       au < HighWirePressH20Plugin ; released ; 2012 ; differences: A Journal of Feminist Cultural Studies Volume 23 ; 23 >
       au < HighWirePressH20Plugin ; ready ; 2013 ; differences: A Journal of Feminist Cultural Studies Volume 24 ; 24 >
-      au < HighWirePressH20Plugin ; expected ; 2014 ; differences: A Journal of Feminist Cultural Studies Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; manifest ; 2014 ; differences: A Journal of Feminist Cultural Studies Volume 25 ; 25 >
 
     }
     
@@ -1037,7 +1038,7 @@
       au < released ; 2011 ; Genre: Forms of Discourse and Culture Volume 44 ; 44 >
       au < released ; 2012 ; Genre: Forms of Discourse and Culture Volume 45 ; 45 >
       au < ready ; 2013 ; Genre: Forms of Discourse and Culture Volume 46 ; 46 >
-      au < expected ; 2014 ; Genre: Forms of Discourse and Culture Volume 47 ; 47 >
+      au < manifest ; 2014 ; Genre: Forms of Discourse and Culture Volume 47 ; 47 >
       
     }
   }
@@ -1537,7 +1538,7 @@
      au < HighWirePressH20Plugin ; released ; 2011 ; Labor: Studies in Working-Class History of the Americas Volume 8 ; 8 >
      au < HighWirePressH20Plugin ; released ; 2012 ; Labor: Studies in Working-Class History of the Americas Volume 9 ; 9 >
      au < HighWirePressH20Plugin ; ready ; 2013 ; Labor: Studies in Working-Class History of the Americas Volume 10 ; 10 >
-     au < HighWirePressH20Plugin ; expected ; 2014 ; Labor: Studies in Working-Class History of the Americas Volume 11 ; 11 >
+     au < HighWirePressH20Plugin ; manifest ; 2014 ; Labor: Studies in Working-Class History of the Americas Volume 11 ; 11 >
 
     }
 
@@ -2829,7 +2830,7 @@
       au < HighWirePressH20Plugin ; released ; 2011-2012 ; Theater Volume 41 ; 41 >
       au < HighWirePressH20Plugin ; released ; 2012 ; Theater Volume 42 ; 42 >
       au < HighWirePressH20Plugin ; ready ; 2013 ; Theater Volume 43 ; 43 >
-      au < HighWirePressH20Plugin ; expected ; 2014 ; Theater Volume 44 ; 44 >
+      au < HighWirePressH20Plugin ; manifest ; 2014 ; Theater Volume 44 ; 44 >
 
     }
   
