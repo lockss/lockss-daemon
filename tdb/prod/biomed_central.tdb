@@ -1988,8 +1988,8 @@
       au < released ; 2010 ; Alzheimer's Research & Therapy Volume 2 ; 2 >
       au < released ; 2011 ; Alzheimer's Research & Therapy Volume 3 ; 3 >
       au < released ; 2012 ; Alzheimer's Research & Therapy Volume 4 ; 4 >
-      au < expected ; 2013 ; Alzheimer's Research & Therapy Volume 5 ; 5 >
-      au < expected ; 2014 ; Alzheimer's Research & Therapy Volume 6 ; 6 >
+      au < manifest ; 2013 ; Alzheimer's Research & Therapy Volume 5 ; 5 >
+      au < manifest ; 2014 ; Alzheimer's Research & Therapy Volume 6 ; 6 >
 
     }
 
@@ -2166,8 +2166,8 @@
       au < released ; 2010 ; Arthritis Research & Therapy Volume 12 ; 12 >
       au < released ; 2011 ; Arthritis Research & Therapy Volume 13 ; 13 >
       au < released ; 2012 ; Arthritis Research & Therapy Volume 14 ; 14 >
-      au < expected ; 2013 ; Arthritis Research & Therapy Volume 15 ; 15 >
-      au < expected ; 2014 ; Arthritis Research & Therapy Volume 16 ; 16 >
+      au < manifest ; 2013 ; Arthritis Research & Therapy Volume 15 ; 15 >
+      au < manifest ; 2014 ; Arthritis Research & Therapy Volume 16 ; 16 >
 
     }
 
@@ -2486,7 +2486,7 @@
       param[base_url] = http://www.bpded.com/
       param[journal_issn] = 2051-6673
 
-      au < exists ; 2014 ; Borderline Personality Disorder and Emotion Dysregulation Volume 1 ; 1 >
+      au < manifest ; 2014 ; Borderline Personality Disorder and Emotion Dysregulation Volume 1 ; 1 >
 
     }
 
@@ -2514,8 +2514,8 @@
       au < released ; 2010 ; Breast Cancer Research Volume 12 ; 12 >
       au < released ; 2011 ; Breast Cancer Research Volume 13 ; 13 >
       au < released ; 2012 ; Breast Cancer Research Volume 14 ; 14 >
-      au < expected ; 2013 ; Breast Cancer Research Volume 15 ; 15 >
-      au < expected ; 2014 ; Breast Cancer Research Volume 16 ; 16 >
+      au < manifest ; 2013 ; Breast Cancer Research Volume 15 ; 15 >
+      au < manifest ; 2014 ; Breast Cancer Research Volume 16 ; 16 >
 
     }
 
@@ -3131,8 +3131,8 @@
       au < released ; 2010 ; Critical Care Volume 14 ; 14 >
       au < released ; 2011 ; Critical Care Volume 15 ; 15 >
       au < manifest ; 2012 ; Critical Care Volume 16 ; 16 >
-      au < expected ; 2013 ; Critical Care Volume 17 ; 17 >
-      au < expected ; 2014 ; Critical Care Volume 18 ; 18 >
+      au < manifest ; 2013 ; Critical Care Volume 17 ; 17 >
+      au < manifest ; 2014 ; Critical Care Volume 18 ; 18 >
 
     }
     
@@ -3645,8 +3645,8 @@
       au < released ; 2010 ; Genome Biology Volume 11 ; 11 >
       au < released ; 2011 ; Genome Biology Volume 12 ; 12 >
       au < manifest ; 2012 ; Genome Biology Volume 13 ; 13 >
-      au < exists ; 2013 ; Genome Biology Volume 14 ; 14 >
-      au < expected ; 2014 ; Genome Biology Volume 15 ; 15 >
+      au < manifest ; 2013 ; Genome Biology Volume 14 ; 14 >
+      au < manifest ; 2014 ; Genome Biology Volume 15 ; 15 >
       
     }
 
@@ -6189,11 +6189,11 @@
       param[base_url] = http://stemcellres.com/
       param[journal_issn] = 1757-6512
 
-      au < exists ; 2010 ; Stem Cell Research & Therapy Volume 1 ; 1 >
-      au < exists ; 2011 ; Stem Cell Research & Therapy Volume 2 ; 2 >
-      au < exists ; 2012 ; Stem Cell Research & Therapy Volume 3 ; 3 >
-      au < exists ; 2013 ; Stem Cell Research & Therapy Volume 4 ; 4 >
-      au < expected ; 2014 ; Stem Cell Research & Therapy Volume 5 ; 5 >
+      au < manifest ; 2010 ; Stem Cell Research & Therapy Volume 1 ; 1 >
+      au < manifest ; 2011 ; Stem Cell Research & Therapy Volume 2 ; 2 >
+      au < manifest ; 2012 ; Stem Cell Research & Therapy Volume 3 ; 3 >
+      au < manifest ; 2013 ; Stem Cell Research & Therapy Volume 4 ; 4 >
+      au < manifest ; 2014 ; Stem Cell Research & Therapy Volume 5 ; 5 >
 
     }
 
