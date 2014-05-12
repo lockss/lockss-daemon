@@ -1486,6 +1486,10 @@
     param[journal_dir] = partial_answers
     attr[journal_id] = pan
 
+    au < exists ; 2003 ; Partial Answers: Journal of Literature and the History of Ideas Volume 1 ; 1 >
+    au < exists ; 2004 ; Partial Answers: Journal of Literature and the History of Ideas Volume 2 ; 2 >
+    au < exists ; 2005 ; Partial Answers: Journal of Literature and the History of Ideas Volume 3 ; 3 >
+    au < manifest ; 2006 ; Partial Answers: Journal of Literature and the History of Ideas Volume 4 ; 4 >
     au < released ; 2007 ; Partial Answers: Journal of Literature and the History of Ideas Volume 5 ; 5 >
     au < released ; 2008 ; Partial Answers: Journal of Literature and the History of Ideas Volume 6 ; 6 >
     au < released ; 2009 ; Partial Answers: Journal of Literature and the History of Ideas Volume 7 ; 7 >
