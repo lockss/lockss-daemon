@@ -272,6 +272,36 @@ public class TestHtmlFilterInputStream extends LockssTestCase {
     assertEquals(UTF8, et.getCharset());
   }
 
+  public void testKnowsEncodingChangeCharsetMeta() throws Exception {
+
+    String in1 = "<html><head>" +
+                     "<META charset=utf-8>" +
+                     "</head></body>" +
+                     "abc\u00e91234" +
+                     "</body></html>";
+    String exp1 = "<html><head>" +
+                      "<META charset=utf-8>" +
+                      "</head></body>" +
+                      "abc\u00e91234" +
+                      "</body></html>";
+
+    // With input encoded as UTF-8
+    InputStream in = new ReaderInputStream(new StringReader(in1), UTF8);
+    // And a file whose Content-Type is ISO-8859 and contains a charset
+    // change to UTF-8
+    InputStream filt =
+        new HtmlFilterInputStream(in, ISO, ISO, new IdentityXform());
+    // The filtered stream should know that its encoding is UTF-8 (*before*
+    // anything is read from it)
+    assertTrue(filt instanceof EncodedThing);
+    EncodedThing et = (EncodedThing)filt;
+    assertEquals(UTF8, et.getCharset());
+    // It should match the UTF-8 encoding of the string
+    assertInputStreamMatchesString(exp1, filt, UTF8);
+    // And should still know that its encoding is UTF-8
+    assertEquals(UTF8, et.getCharset());
+  }
+
   public void testChangeCharsetFailsIfNoMark() throws Exception {
     ConfigurationUtil.setFromArgs(HtmlFilterInputStream.PARAM_MARK_SIZE, "0");
     log.info("read(): exception following is expected");
