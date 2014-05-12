@@ -1140,6 +1140,8 @@
     param[journal_dir] = lesprit_createur
     attr[journal_id] = esp
 
+    au < exists ; 2004 ; L'Esprit Créateur Volume 44 ; 44 >
+    au < manifest ; 2005 ; L'Esprit Créateur Volume 45 ; 45 >
     au < released ; 2006 ; L'Esprit Créateur Volume 46 ; 46 >
     au < released ; 2007 ; L'Esprit Créateur Volume 47 ; 47 >
     au < released ; 2008 ; L'Esprit Créateur Volume 48 ; 48 >
