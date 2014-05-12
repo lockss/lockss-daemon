@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.77 2014-04-09 17:43:21 fergaloy-sf Exp $
+ * $Id: RemoteApi.java,v 1.78 2014-05-12 17:26:19 fergaloy-sf Exp $
  */
 
 /*
@@ -1723,5 +1723,137 @@ public class RemoteApi
   String sprintf(String fmt, Object[] args) {
     PrintfFormat pf = new PrintfFormat(fmt);
     return pf.sprintf(args);
+  }
+
+  /**
+   * Configures an archival unit without additional parameters.
+   *
+   * @param auId A String with the archival unit identifier.
+   * @return a BatchAuStatus with the result of the operation.
+   */
+  public BatchAuStatus addByAuId(String auId) {
+    return addByAuId(auId, null);
+  }
+
+  /**
+   * Configures an archival unit with additional parameters.
+   *
+   * @param auId A String with the archival unit identifier.
+   * @param addConfig A Configuration with additional parameters.
+   * @return a BatchAuStatus with the result of the operation.
+   */
+  public BatchAuStatus addByAuId(String auId, Configuration addConfig) {
+    final String DEBUG_HEADER = "addByAuId(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "auId = " + auId);
+      log.debug2(DEBUG_HEADER + "addConfig = " + addConfig);
+    }
+
+    // The status object to be returned.
+    BatchAuStatus status = new BatchAuStatus();
+    BatchAuStatus.Entry statusEntry = status.newEntry(auId);
+
+    // Check whether no archival unit identifier was passed.
+    if (StringUtil.isNullString(auId)) {
+      // Yes: Report the problem.
+      statusEntry.setName(auId);
+      statusEntry.setStatus("Not Configured", STATUS_ORDER_WARN);
+      statusEntry.setExplanation("AU identifier not supplied");
+      status.add(statusEntry);
+
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "status = " + status);
+      return status;
+    }
+
+    // Get the identified archival unit.
+    ArchivalUnit au = pluginMgr.getAuFromId(auId);
+
+    // Check whether the archival unit already exists.
+    if (au != null) {
+      // Yes: Report the problem.
+      statusEntry.setName(au.getName(), au.getPlugin());
+      statusEntry.setStatus("Configured", STATUS_ORDER_WARN);
+      statusEntry.setExplanation("AU already exists: " + au.getName());
+      status.add(statusEntry);
+
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "status = " + status);
+      return status;
+    }
+
+    // Get the title configuration of the archival unit.
+    TitleConfig tc = findTitleConfig(auId);
+
+    // Check whether no title configuration exists.
+    if (tc == null) {
+      // Yes: Report the problem.
+      statusEntry.setName(auId);
+      statusEntry.setStatus("Not Configured", STATUS_ORDER_WARN);
+      statusEntry.setExplanation("No matching AU definition found in title db: "
+	  + auId);
+      status.add(statusEntry);
+
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "status = " + status);
+      return status;
+    }
+
+    try {
+      // Get the plugin.
+      Plugin plugin =
+	pluginMgr.getPlugin(PluginManager.pluginKeyFromId(tc.getPluginName()));
+
+      // Get the archival unit configuration.
+      Configuration auConfig = tc.getConfig();
+
+      // Check whether there are additional parameters.
+      if (addConfig != null && !addConfig.isEmpty()) {
+	// Yes: Merge them.
+	auConfig = auConfig.copy();
+	auConfig.copyFrom(addConfig);
+      }
+
+      // Add the archival unit.
+      au = pluginMgr.createAndSaveAuConfiguration(plugin, auConfig);
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "Created Archival Unit " + au.getName());
+
+      statusEntry.setName(au.getName(), au.getPlugin());
+      statusEntry.setExplanation("Created Archival Unit:\n" + au.getName());
+      status.add(statusEntry);
+    } catch (ArchivalUnit.ConfigurationException ce) {
+      log.error("Couldn't create AU", ce);
+      statusEntry.setName(auId);
+      statusEntry.setStatus("Not Configured", STATUS_ORDER_WARN);
+      statusEntry.setExplanation("Error creating AU: " + ce.getMessage());
+      status.add(statusEntry);
+    } catch (IOException ioe) {
+      log.error("Couldn't create AU", ioe);
+      statusEntry.setName(auId);
+      statusEntry.setStatus("Not Configured", STATUS_ORDER_WARN);
+      statusEntry.setExplanation("Error creating AU: " + ioe.getMessage());
+      status.add(statusEntry);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "status = " + status);
+    return status;
+  }
+
+  /**
+   * Provides the title configuration of an archival unit.
+   *
+   * @param auId A String with the archival unit identifier.
+   * @return a TitleConfig with the title configuration of the archival unit.
+   */
+  private TitleConfig findTitleConfig(String auId) {
+    // Loop  through all the title configurations.
+    for (TitleConfig tc : pluginMgr.findAllTitleConfigs()) {
+      // Check whether this is the title configuration of the archival unit.
+      if (auId.equals(tc.getAuId(pluginMgr))) {
+	// Yes: Done.
+	return tc;
+      }
+    }
+
+    // No title configuration was found.
+    return null;
   }
 }
