@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -28,7 +28,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -145,11 +145,5 @@
   <entry>
     <string>au_def_pause_time</string>
     <long>3000</long>
-  </entry>
-  <entry>
-    <string>plugin_cache_result_list</string>
-    <list>
-      <string>403=org.lockss.util.urlconn.CacheException$UnretryableException</string>
-    </list>
   </entry>
 </map>
