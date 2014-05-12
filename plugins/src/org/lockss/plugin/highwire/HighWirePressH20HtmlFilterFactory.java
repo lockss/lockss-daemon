@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.55 2014-03-25 00:41:41 thib_gc Exp $
+ * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.56 2014-05-12 01:56:17 etenbrink Exp $
  */
 
 /*
@@ -187,6 +187,8 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         
         //parmrev.aspetjournals.org
         HtmlNodeFilters.tagWithAttribute("ul", "class", "toc-banner-ads"),
+        // Filter for <div class="slugline-ads">
+        HtmlNodeFilters.tagWithAttribute("div", "class", "slugline-ads"), 
         
         // The following four filters are needed on jultrasoundmed.org:
         // Empty and sporadic <div id="fragment-reference-display">
