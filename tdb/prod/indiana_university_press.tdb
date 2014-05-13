@@ -1021,8 +1021,8 @@
       attr[journal_id] = mer
       implicit < status ; year ; name ; param[volume] >
 
-      au < exists ; 2001 ; Meridians: feminism, race, transnationalism Volume 1 ; 1 >
-      au < exists ; 2001-2002 ; Meridians: feminism, race, transnationalism Volume 2 ; 2 >
+      au < manifest ; 2001 ; Meridians: feminism, race, transnationalism Volume 1 ; 1 >
+      au < manifest ; 2001-2002 ; Meridians: feminism, race, transnationalism Volume 2 ; 2 >
       au < manifest ; 2002-2003 ; Meridians: feminism, race, transnationalism Volume 3 ; 3 >
       au < released ; 2003-2004 ; Meridians: feminism, race, transnationalism Volume 4 ; 4 >
       au < released ; 2004-2005 ; Meridians: feminism, race, transnationalism Volume 5 ; 5 >
@@ -1067,7 +1067,6 @@
       implicit < status ; year ; name ; param[volume] >
 
       comment[nm15_16] = 500 errors
-      comment[2014] = manifest page found
 
       au < released ; 2003 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 6 ; 6 >
       au < released ; 2004 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 7 ; 7 >
