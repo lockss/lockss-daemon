@@ -85,7 +85,7 @@
 
     plugin = org.lockss.plugin.highwire.ClockssHighWireDrupalPlugin
     implicit < status ; status2 ; year ; name ; param[volume_name] >
-    param[base_url] = http://erm.ersjournals.com/
+    param[base_url] = http://erspublications.com/
     
     au < exists ; exists ; 2003 ; European Respiratory Monographs Volume 25 ; 25 >
     au < exists ; exists ; 2003 ; European Respiratory Monographs Volume 26 ; 26 >
