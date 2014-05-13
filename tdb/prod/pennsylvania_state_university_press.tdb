@@ -133,7 +133,7 @@
       param[journal_dir] = the_edgar_allan_poe_review
       attr[journal_id] = eap
 
-      au < manifest ; 2013 ; The Edgar Allan Poe Review Volume 14 ; 14 >
+      au < testing ; 2013 ; The Edgar Allan Poe Review Volume 14 ; 14 >
       au < doNotProcess ; 2014 ; The Edgar Allen Poe Review Volume 15 ; 15 >
 
     }
