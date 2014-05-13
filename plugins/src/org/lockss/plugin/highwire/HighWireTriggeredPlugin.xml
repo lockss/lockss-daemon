@@ -8,6 +8,10 @@
     <string>org.lockss.plugin.highwire.HighWireTriggeredPlugin</string>
   </entry>
   <entry>
+    <string>plugin_name</string>
+    <string>HighWire Press Plugin (H10c for CLOCKSS Triggered Content)</string>
+  </entry>
+  <entry>
     <string>plugin_version</string>
     <string>7</string>
   </entry>
@@ -17,11 +21,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>91</string>
-  </entry>
-  <entry>
-    <string>plugin_name</string>
-    <string>HighWire Press Plugin (H10c for CLOCKSS Triggered Content)</string>
+    <string>92</string>
   </entry>
   <entry>
     <string>au_name</string>
