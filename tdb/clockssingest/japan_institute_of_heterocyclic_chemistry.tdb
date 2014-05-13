@@ -17,6 +17,8 @@
       eissn = 1881-0942
     >
 
+    comment[notReady] = agreement 99% of different IP address and incomplete pdf
+    
     au < manifest ; exists ; 1973 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 1 ; 1 >
     au < manifest ; exists ; 1974 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 2 ; 2 >
     au < manifest ; exists ; 1975 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 3 ; 3 >
@@ -70,7 +72,7 @@
     au < manifest ; exists ; 2000 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 51 ; 51 >
     au < manifest ; exists ; 2000 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 52 ; 52 >
     au < manifest ; exists ; 2001 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 53 ; 53 >
-    au < manifest ; exists ; 2001 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 54 ; 54 >
+    au < ready ; exists ; 2001 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 54 ; 54 >
     au < manifest ; exists ; 2002 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 55 ; 55 >
     au < manifest ; exists ; 2002 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 56 ; 56 >
     au < manifest ; exists ; 2002 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 57 ; 57 >
@@ -81,7 +83,7 @@
     au < manifest ; exists ; 2004 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 62 ; 62 >
     au < manifest ; exists ; 2004 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 63 ; 63 >
     au < manifest ; exists ; 2005 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 64 ; 64 >
-    au < manifest ; exists ; 2005 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 65 ; 65 >
+    au < ready ; exists ; 2005 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 65 ; 65 >
     au < manifest ; exists ; 2006 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 66 ; 66 >
     au < manifest ; exists ; 2006 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 67 ; 67 >
     au < manifest ; exists ; 2006 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 68 ; 68 >
@@ -96,12 +98,12 @@
     au < manifest ; exists ; 2009 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 77 ; 77 >
     au < manifest ; exists ; 2009 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 78 ; 78 >
     au < manifest ; exists ; 2010 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 79 ; 79 >
-    au < manifest ; exists ; 2010 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 80 ; 80 >
-    au < testing; exists ; 2010 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 81 ; 81 >
+    au < notReady ; exists ; 2010 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 80 ; 80 >
+    au < manifest; exists ; 2010 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 81 ; 81 >
     au < ready ; exists ; 2011 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 82 ; 82 >
-    au < testing ; exists ; 2011 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 83 ; 83 >
+    au < manifest ; exists ; 2011 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 83 ; 83 >
     au < manifest ; exists ; 2012 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 84 ; 84 >
-    au < manifest ; exists ; 2012 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 85 ; 85 >
+    au < notReady ; exists ; 2012 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 85 ; 85 >
     au < ready ; exists ; 2012 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 86 ; 86 >
     au < manifest ; exists ; 2013 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 87 ; 87 >
     au < expected ; exists ; 2014 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 88 ; 88 >
