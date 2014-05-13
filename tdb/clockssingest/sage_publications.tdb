@@ -2347,7 +2347,7 @@
       au < manifest ; exists ; 2010 ; Annals of Pharmacotherapy Volume 44 ; 44 ; >
       au < exists ; exists ; 2011 ; Annals of Pharmacotherapy Volume 45 ; 45 ; >
       au < manifest ; exists ; 2012 ; Annals of Pharmacotherapy Volume 46 ; 46 ; >
-      au < manifest ; exists ; 2013 ; Annals of Pharmacotherapy Volume 47 ; 47 ; >
+      au < testing ; exists ; 2013 ; Annals of Pharmacotherapy Volume 47 ; 47 ; >
       au < manifest ; exists ; 2014 ; Annals of Pharmacotherapy Volume 48 ; 48 ; >
 
     }
@@ -2837,7 +2837,7 @@
         pluginSuffix = ClockssHighWirePressH20Plugin
 
         au < manifest ; exists ; 2012 ; Asia Pacific Media Educator Volume 22 ; 22 ; >
-        au < manifest ; exists ; 2013 ; Asia Pacific Media Educator Volume 23 ; 23 ; >
+        au < testing ; exists ; 2013 ; Asia Pacific Media Educator Volume 23 ; 23 ; >
         au < expected ; exists ; 2014 ; Asia Pacific Media Educator Volume 24 ; 24 ; >
 
       }
@@ -3825,7 +3825,7 @@
       au < zapped ; finished ; 2010 ; Bulletin of Science, Technology & Society Volume 30 ; 30 ; >
       au < finished ; crawling ; 2011 ; Bulletin of Science, Technology & Society Volume 31 ; 31 ; >
       au < finished ; crawling ; 2012 ; Bulletin of Science, Technology & Society Volume 32 ; 32 ; >
-      au < manifest ; exists ; 2013 ; Bulletin of Science, Technology & Society Volume 33 ; 33 ; >
+      au < testing ; exists ; 2013 ; Bulletin of Science, Technology & Society Volume 33 ; 33 ; >
       au < expected ; exists ; 2014 ; Bulletin of Science, Technology & Society Volume 34 ; 34 ; >
 
     }
@@ -9731,7 +9731,7 @@
     au < exists ; exists ; 2010 ; European Journal of Probation Volume 2 ; 2 ; >
     au < exists ; exists ; 2011 ; European Journal of Probation Volume 3 ; 3 ; >
     au < exists ; exists ; 2012 ; European Journal of Probation Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2013 ; European Journal of Probation Volume 5 ; 5 ; >
+    au < testing ; exists ; 2013 ; European Journal of Probation Volume 5 ; 5 ; >
     au < manifest ; exists ; 2014 ; European Journal of Probation Volume 6 ; 6 ; >
 
   }
@@ -11774,7 +11774,7 @@
       au < manifest ; exists ; 2010 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 47 ; 47 ; >
       au < manifest ; exists ; 2011 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 48 ; 48 ; >
       au < manifest ; exists ; 2012 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 49 ; 49 ; >
-      au < manifest ; exists ; 2013 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 50 ; 50 ; >
+      au < testing ; exists ; 2013 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 50 ; 50 ; >
 
     }
 
@@ -18135,7 +18135,7 @@
       au < finished ; crawling ; 2010 ; Journal of Creative Communications Volume 5 ; 5 ; >
       au < crawling ; exists ; 2011 ; Journal of Creative Communications Volume 6 ; 6 ; >
       au < crawling ; exists ; 2012 ; Journal of Creative Communications Volume 7 ; 7 ; >
-      au < manifest ; exists ; 2013 ; Journal of Creative Communications Volume 8 ; 8 ; >
+      au < testing ; exists ; 2013 ; Journal of Creative Communications Volume 8 ; 8 ; >
       au < manifest ; exists ; 2014 ; Journal of Creative Communications Volume 9 ; 9 ; >
 
     }
@@ -18272,7 +18272,7 @@
         au < zapped ; finished ; 2010 ; Journal of Dental Biomechanics Volume 1 ; 1 ; >
         au < zapped ; finished ; 2011 ; Journal of Dental Biomechanics Volume 2 ; 2 ; >
         au < finished ; crawling ; 2012 ; Journal of Dental Biomechanics Volume 3 ; 3 ; >
-        au < manifest ; exists ; 2013 ; Journal of Dental Biomechanics Volume 4 ; 4 ; >
+        au < testing ; exists ; 2013 ; Journal of Dental Biomechanics Volume 4 ; 4 ; >
         au < expected ; exists ; 2014 ; Journal of Dental Biomechanics Volume 5 ; 5 ; >
         
       }
@@ -18460,7 +18460,7 @@
         au < manifest ; exists ; 2010 ; Journal of Diabetes Science and Technology Volume 4 ; 4 ; >
         au < manifest ; exists ; 2011 ; Journal of Diabetes Science and Technology Volume 5 ; 5 ; >
         au < manifest ; exists ; 2012 ; Journal of Diabetes Science and Technology Volume 6 ; 6 ; >
-        au < manifest ; exists ; 2013 ; Journal of Diabetes Science and Technology Volume 7 ; 7 ; >
+        au < testing ; exists ; 2013 ; Journal of Diabetes Science and Technology Volume 7 ; 7 ; >
         au < manifest ; exists ; 2014 ; Journal of Diabetes Science and Technology Volume 8 ; 8 ; >
 
     }
@@ -28740,7 +28740,7 @@
       au < finished ; crawling ; 2010 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 22 ; 22 ; >
       au < finished ; crawling ; 2011 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 23 ; 23 ; >
       au < finished ; crawling ; 2012 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 24 ; 24 ; >
-      au < manifest ; exists ; 2013 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 25 ; 25 ; >
+      au < testing ; exists ; 2013 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 25 ; 25 ; >
 
     }
 
@@ -34716,7 +34716,7 @@
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://inp.sagepub.com/
 
-        au < manifest ; exists ; 2013 ; Studies in Indian Politics Volume 1 ; 1 ; >
+        au < testing ; exists ; 2013 ; Studies in Indian Politics Volume 1 ; 1 ; >
         au < expected ; exists ; 2014 ; Studies in Indian Politics Volume 2 ; 2 ; >
 
     }
@@ -34732,7 +34732,7 @@
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://mic.sagepub.com/
 
-        au < manifest ; exists ; 2013 ; Studies in Microeconomics Volume 1 ; 1 ; >
+        au < testing ; exists ; 2013 ; Studies in Microeconomics Volume 1 ; 1 ; >
         au < manifest ; exists ; 2014 ; Studies in Microeconomics Volume 2 ; 2 ; >
 
     }
@@ -36240,7 +36240,7 @@
       au < crawling ; exists ; 2013 ; Thesis Eleven Volume 116 ; 116 ; >
       au < crawling ; exists ; 2013 ; Thesis Eleven Volume 117 ; 117 ; >
       au < crawling ; exists ; 2013 ; Thesis Eleven Volume 118 ; 118 ; >
-      au < manifest ; exists ; 2013 ; Thesis Eleven Volume 119 ; 119 ; >
+      au < testing ; exists ; 2013 ; Thesis Eleven Volume 119 ; 119 ; >
       au < manifest ; exists ; 2014 ; Thesis Eleven Volume 120 ; 120 ; >
       au < manifest ; exists ; 2014 ; Thesis Eleven Volume 121 ; 121 ; >
       au < expected ; exists ; 2014 ; Thesis Eleven Volume 122 ; 122 ; >
@@ -36389,7 +36389,7 @@
       au < zapped ; finished ; 2010 ; Tourism and Hospitality Research Volume 10 ; 10 ; >
       au < finished ; crawling ; 2011 ; Tourism and Hospitality Research Volume 11 ; 11 ; >
       au < finished ; crawling ; 2012 ; Tourism and Hospitality Research Volume 12 ; 12 ; >
-      au < manifest ; exists ; 2013 ; Tourism and Hospitality Research Volume 13 ; 13 ; >
+      au < testing ; exists ; 2013 ; Tourism and Hospitality Research Volume 13 ; 13 ; >
       au < expected ; exists ; 2014 ; Tourism and Hospitality Research Volume 14 ; 14 ; >
 
     }
@@ -39259,7 +39259,7 @@
       au < crawling ; exists ; 2010 ; Vision: The Journal of Business Perspective Volume 14 ; 14 ; >
       au < manifest ; exists ; 2011 ; Vision: The Journal of Business Perspective Volume 15 ; 15 ; >
       au < manifest ; exists ; 2012 ; Vision: The Journal of Business Perspective Volume 16 ; 16 ; >
-      au < manifest ; exists ; 2013 ; Vision: The Journal of Business Perspective Volume 17 ; 17 ; >
+      au < testing ; exists ; 2013 ; Vision: The Journal of Business Perspective Volume 17 ; 17 ; >
       au < manifest ; exists ; 2014 ; Vision: The Journal of Business Perspective Volume 18 ; 18 ; >
   }
 
@@ -39637,7 +39637,7 @@
     au < manifest ; exists ; 2010 ; Canadian Journal of Occupational Therapy Volume 77 ; 77 ; >
     au < manifest ; exists ; 2011 ; Canadian Journal of Occupational Therapy Volume 78 ; 78 ; >
     au < manifest ; exists ; 2012 ; Canadian Journal of Occupational Therapy Volume 79 ; 79 ; >
-    au < manifest ; exists ; 2013 ; Canadian Journal of Occupational Therapy Volume 80 ; 80 ; >
+    au < testing ; exists ; 2013 ; Canadian Journal of Occupational Therapy Volume 80 ; 80 ; >
     au < manifest ; exists ; 2014 ; Canadian Journal of Occupational Therapy Volume 81 ; 81 ; >
 
     }
@@ -39956,7 +39956,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://sco.sagepub.com/
 
-    au < manifest ; exists ; 2013 ; SAGE Open Medical Case Reports Volume 1 ; 1 ; >
+    au < testing ; exists ; 2013 ; SAGE Open Medical Case Reports Volume 1 ; 1 ; >
     au < expected ; exists ; 2014 ; SAGE Open Medical Case Reports Volume 2 ; 2 ; >
 
     }
@@ -39984,7 +39984,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://smo.sagepub.com/
 
-    au < manifest ; exists ; 2013 ; SAGE Open Medicine Volume 1 ; 1 ; >
+    au < testing ; exists ; 2013 ; SAGE Open Medicine Volume 1 ; 1 ; >
     au < expected ; exists ; 2014 ; SAGE Open Medicine Volume 2 ; 2 ; >
 
     }
@@ -40824,7 +40824,7 @@
         au < manifest ; exists ; 2010 ; International Journal of Maritime History Volume 22 ; 22 ; >
         au < manifest ; exists ; 2011 ; International Journal of Maritime History Volume 23 ; 23 ; >
         au < manifest ; exists ; 2012 ; International Journal of Maritime History Volume 24 ; 24 ; >
-        au < manifest ; exists ; 2013 ; International Journal of Maritime History Volume 25 ; 25 ; >
+        au < testing ; exists ; 2013 ; International Journal of Maritime History Volume 25 ; 25 ; >
         au < manifest ; exists ; 2014 ; International Journal of Maritime History Volume 26 ; 26 ; >
 
   }
@@ -40887,7 +40887,7 @@
         au < crawling ; exists ; 2010 ; Journal of Health Services Research & Policy Volume 15 ; 15 ; >
         au < crawling ; exists ; 2011 ; Journal of Health Services Research & Policy Volume 16 ; 16 ; >
         au < finished ; crawling ; 2012 ; Journal of Health Services Research & Policy Volume 17 ; 17 ; >
-        au < manifest ; exists ; 2013 ; Journal of Health Services Research & Policy Volume 18 ; 18 ; >
+        au < testing ; exists ; 2013 ; Journal of Health Services Research & Policy Volume 18 ; 18 ; >
         au < manifest ; exists ; 2014 ; Journal of Health Services Research & Policy Volume 19 ; 19 ; >
   
     }
@@ -41517,7 +41517,7 @@
         au < exists ; exists ; 2010 ; Ultrasound Volume 18 ; 18 ; >
         au < exists ; exists ; 2011 ; Ultrasound Volume 19 ; 19 ; >
         au < exists ; exists ; 2012 ; Ultrasound Volume 20 ; 20 ; >
-        au < manifest ; exists ; 2013 ; Ultrasound Volume 21 ; 21 ; >
+        au < testing ; exists ; 2013 ; Ultrasound Volume 21 ; 21 ; >
         au < manifest ; exists ; 2014 ; Ultrasound Volume 22 ; 22 ; >
   
       }
