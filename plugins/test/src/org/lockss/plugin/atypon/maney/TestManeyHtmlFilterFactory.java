@@ -1,5 +1,5 @@
 /*
- * $Id: TestManeyHtmlFilterFactory.java,v 1.1 2014-05-09 20:27:51 alexandraohlson Exp $
+ * $Id: TestManeyHtmlFilterFactory.java,v 1.2 2014-05-13 19:44:42 alexandraohlson Exp $
  */
 
 /*
@@ -429,9 +429,18 @@ public class TestManeyHtmlFilterFactory extends LockssTestCase {
   "<span class=\"publicationRightLink\"> | " +
   "<div id=\"Abs1\" class=\"previewViewSection tocPreview\">" +
   "</div></div></td>";
-
-
-
+  
+  private static final String accessControlsList = 
+  "<div class=\"widget-body body body-none \"><ul class=\"horz-list float-right access-options\">" +
+  "<li>" +
+  "<img src=\"/templates/jsp/_style2/_maney/images/access_full.gif\">" +
+  "<span>Full access</span>" +
+  "</li><li><img src=\"/templates/jsp/_style2/_maney/images/openAccess.png\">" +
+  "<span>Open access</span>" +
+  "</li>" +
+  "</ul></div>";
+  private static final String accessControlsListFiltered = 
+  "<div class=\"widget-body body body-none \"></div>";
 
   /**
    * CRAWL FILTER VARIANT
@@ -519,6 +528,7 @@ public class TestManeyHtmlFilterFactory extends LockssTestCase {
           StringUtil.fromInputStream(fact.createFilteredInputStream(null,
               new StringInputStream(pageFooterHtml),
               Constants.DEFAULT_ENCODING)));
+ 
     }
     
     public void testTOCPageHash() throws Exception {
@@ -538,6 +548,10 @@ public class TestManeyHtmlFilterFactory extends LockssTestCase {
       assertEquals(logoHtmlFiltered,
           StringUtil.fromInputStream(fact.createFilteredInputStream(null,
               new StringInputStream(logoHtml),
+              Constants.DEFAULT_ENCODING)));
+      assertEquals(accessControlsListFiltered,
+          StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+              new StringInputStream(accessControlsList),
               Constants.DEFAULT_ENCODING)));
     }
 

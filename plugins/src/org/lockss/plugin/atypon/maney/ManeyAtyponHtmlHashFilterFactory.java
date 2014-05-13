@@ -1,5 +1,5 @@
 /*
- * $Id: ManeyAtyponHtmlHashFilterFactory.java,v 1.1 2014-05-09 20:27:51 alexandraohlson Exp $
+ * $Id: ManeyAtyponHtmlHashFilterFactory.java,v 1.2 2014-05-13 19:44:42 alexandraohlson Exp $
  */
 
 /*
@@ -86,10 +86,24 @@ public class ManeyAtyponHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFa
         HtmlNodeFilters.tagWithAttribute("td",  "class" ,"accessIconContainer"),
         //TOC - published on behalf of 
         HtmlNodeFilters.tagWithAttribute("div",  "id" ,"Society Logo"),
+        // For the next three - no uniquely named chunk to allow removal of tabs
+        // so just remove the contents within the tab blocks
+        // in bottom TOC tabs block - news & alerts
+        HtmlNodeFilters.tagWithAttribute("section",  "id", "migrated_news"),
+        // in bottom TOC tabs block - about this journal
+        HtmlNodeFilters.tagWithAttribute("section",  "id", "migrated_aims"),
+        // in bottom TOC tabs block - editors & editorial board
+        HtmlNodeFilters.tagWithAttribute("section",  "id", "migrated_editors"),
+        // just under TOC issue information, select all access icons
+        HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "access-options"),
+        // TOC - right column at the bottom - no identifiable way to remove
+        // header statement, but can remove list of subjects
+        HtmlNodeFilters.tagWithAttributeRegex("section",  "class",  "literatumSerialSubjects"),
+      
         
         // HASHING ONLY - NOT CRAWLING
         // right column, "Article Tools" - not this article's citation info 
-        HtmlNodeFilters.tagWithAttributeRegex("section",  "class",  "literatumArticleToolsWidget"),
+        HtmlNodeFilters.tagWithAttributeRegex("section", "class", "literatumArticleToolsWidget"),
 
     
     };
