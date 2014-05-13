@@ -148,8 +148,8 @@
     plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
     param[base_url] = http://hosppeds.aappublications.org/
 
-      au < ready ; exists ; 2011 ; Hospital Pediatrics Volume 1 ; 1 >
-      au < ready ; exists ; 2012 ; Hospital Pediatrics Volume 2 ; 2 >
+      au < crawling ; exists ; 2011 ; Hospital Pediatrics Volume 1 ; 1 >
+      au < crawling ; exists ; 2012 ; Hospital Pediatrics Volume 2 ; 2 >
       au < manifest ; exists ; 2013 ; Hospital Pediatrics Volume 3 ; 3 >
       au < manifest ; exists ; 2014 ; Hospital Pediatrics Volume 4 ; 4 >
 

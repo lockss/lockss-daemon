@@ -157,20 +157,20 @@
     au < manifest ; exists ; 1993 ; Development Volume 118 ; 118 >
     au < manifest ; exists ; 1993 ; Development Volume 119 ; 119 >
     au < manifest ; exists ; 1994 ; Development Volume 120 ; 120 >
-    au < ready ; exists ; 1995 ; Development Volume 121 ; 121 >
+    au < crawling ; exists ; 1995 ; Development Volume 121 ; 121 >
     au < testing ; exists ; 1996 ; Development Volume 122 ; 122 >
-    au < ready ; exists ; 1996 ; Development Volume 123 ; 123 >
+    au < crawling ; exists ; 1996 ; Development Volume 123 ; 123 >
     au < testing ; exists ; 1997 ; Development Volume 124 ; 124 >
-    au < ready ; exists ; 1998 ; Development Volume 125 ; 125 >
+    au < crawling ; exists ; 1998 ; Development Volume 125 ; 125 >
     au < testing ; exists ; 1999 ; Development Volume 126 ; 126 >
     au < testing ; exists ; 2000 ; Development Volume 127 ; 127 >
-    au < ready ; exists ; 2001 ; Development Volume 128 ; 128 >
-    au < ready ; exists ; 2002 ; Development Volume 129 ; 129 >
-    au < ready ; exists ; 2003 ; Development Volume 130 ; 130 >
-    au < ready ; exists ; 2004 ; Development Volume 131 ; 131 >
+    au < crawling ; exists ; 2001 ; Development Volume 128 ; 128 >
+    au < crawling ; exists ; 2002 ; Development Volume 129 ; 129 >
+    au < crawling ; exists ; 2003 ; Development Volume 130 ; 130 >
+    au < crawling ; exists ; 2004 ; Development Volume 131 ; 131 >
     au < testing ; exists ; 2005 ; Development Volume 132 ; 132 >
     au < testing ; exists ; 2006 ; Development Volume 133 ; 133 >
-    au < ready ; exists ; 2007 ; Development Volume 134 ; 134 >
+    au < crawling ; exists ; 2007 ; Development Volume 134 ; 134 >
     au < testing ; exists ; 2008 ; Development Volume 135 ; 135 >
     au < testing ; exists ; 2009 ; Development Volume 136 ; 136 >
     au < testing ; exists ; 2010 ; Development Volume 137 ; 137 >
@@ -325,7 +325,7 @@
     au < testing ; exists ; 1995 ; Journal of Cell Science Volume 108 ; 108 >
     au < testing ; exists ; 1996 ; Journal of Cell Science Volume 109 ; 109 >
     au < testing ; exists ; 1997 ; Journal of Cell Science Volume 110 ; 110 >
-    au < ready ; exists ; 1998 ; Journal of Cell Science Volume 111 ; 111 >
+    au < crawling ; exists ; 1998 ; Journal of Cell Science Volume 111 ; 111 >
     au < testing ; exists ; 1999 ; Journal of Cell Science Volume 112 ; 112 >
     au < testing ; exists ; 2000 ; Journal of Cell Science Volume 113 ; 113 >
     au < testing ; exists ; 2001 ; Journal of Cell Science Volume 114 ; 114 >
@@ -335,7 +335,7 @@
     au < testing ; exists ; 2005 ; Journal of Cell Science Volume 118 ; 118 >
     au < testing ; exists ; 2006 ; Journal of Cell Science Volume 119 ; 119 >
     au < testing ; exists ; 2007 ; Journal of Cell Science Volume 120 ; 120 >
-    au < ready ; exists ; 2008 ; Journal of Cell Science Volume 121 ; 121 >
+    au < crawling ; exists ; 2008 ; Journal of Cell Science Volume 121 ; 121 >
     au < testing ; exists ; 2009 ; Journal of Cell Science Volume 122 ; 122 >
     au < testing ; exists ; 2010 ; Journal of Cell Science Volume 123 ; 123 >
     au < finished ; crawling ; 2011 ; Journal of Cell Science Volume 124 ; 124 >
@@ -554,10 +554,10 @@
     au < manifest ; exists ; 1994 ; Journal of Experimental Biology Volume 196 ; 196 >
     au < manifest ; exists ; 1994 ; Journal of Experimental Biology Volume 197 ; 197 >
     au < testing ; exists ; 1995 ; Journal of Experimental Biology Volume 198 ; 198 >
-    au < ready ; exists ; 1996 ; Journal of Experimental Biology Volume 199 ; 199 >
+    au < crawling ; exists ; 1996 ; Journal of Experimental Biology Volume 199 ; 199 >
     au < testing ; exists ; 1997 ; Journal of Experimental Biology Volume 200 ; 200 >
     au < testing ; exists ; 1998 ; Journal of Experimental Biology Volume 201 ; 201 >
-    au < ready ; exists ; 1999 ; Journal of Experimental Biology Volume 202 ; 202 >
+    au < crawling ; exists ; 1999 ; Journal of Experimental Biology Volume 202 ; 202 >
     au < testing ; exists ; 2000 ; Journal of Experimental Biology Volume 203 ; 203 >
     au < testing ; exists ; 2001 ; Journal of Experimental Biology Volume 204 ; 204 >
     au < testing ; exists ; 2002 ; Journal of Experimental Biology Volume 205 ; 205 >
