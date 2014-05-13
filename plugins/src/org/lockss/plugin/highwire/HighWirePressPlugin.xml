@@ -74,6 +74,10 @@
         <string>"%s", base_url</string>
       </entry>
       <entry>
+        <string>au_volume</string>
+        <string>"%slockss-manifest/vol_%s_manifest.dtl", base_url, volume_name</string>
+      </entry>
+      <entry>
         <string>au_issue</string>
         <string>"%scontent/vol%s/issue%s", base_url, volume_name, issue</string>
       </entry>
