@@ -185,19 +185,19 @@
     param[journal_dir] = southeastern_geographer
     attr[journal_id] = sgo
 
-    au < exists ; 1990 ; Southeastern Geographer Volume 30 ; 30 >
-    au < exists ; 1991 ; Southeastern Geographer Volume 31 ; 31 >
-    au < exists ; 1992 ; Southeastern Geographer Volume 32 ; 32 >
-    au < exists ; 1993 ; Southeastern Geographer Volume 33 ; 33 >
-    au < exists ; 1994 ; Southeastern Geographer Volume 34 ; 34 >
-    au < exists ; 1995 ; Southeastern Geographer Volume 35 ; 35 >
-    au < exists ; 1996 ; Southeastern Geographer Volume 36 ; 36 >
-    au < exists ; 1997 ; Southeastern Geographer Volume 37 ; 37 >
-    au < exists ; 1998 ; Southeastern Geographer Volume 38 ; 38 >
-    au < exists ; 1999 ; Southeastern Geographer Volume 39 ; 39 >
-    au < exists ; 2000 ; Southeastern Geographer Volume 40 ; 40 >
-    au < exists ; 2001 ; Southeastern Geographer Volume 41 ; 41 >
-    au < exists ; 2002 ; Southeastern Geographer Volume 42 ; 42 >
+    au < manifest ; 1990 ; Southeastern Geographer Volume 30 ; 30 >
+    au < manifest ; 1991 ; Southeastern Geographer Volume 31 ; 31 >
+    au < manifest ; 1992 ; Southeastern Geographer Volume 32 ; 32 >
+    au < manifest ; 1993 ; Southeastern Geographer Volume 33 ; 33 >
+    au < manifest ; 1994 ; Southeastern Geographer Volume 34 ; 34 >
+    au < manifest ; 1995 ; Southeastern Geographer Volume 35 ; 35 >
+    au < manifest ; 1996 ; Southeastern Geographer Volume 36 ; 36 >
+    au < manifest ; 1997 ; Southeastern Geographer Volume 37 ; 37 >
+    au < manifest ; 1998 ; Southeastern Geographer Volume 38 ; 38 >
+    au < manifest ; 1999 ; Southeastern Geographer Volume 39 ; 39 >
+    au < manifest ; 2000 ; Southeastern Geographer Volume 40 ; 40 >
+    au < manifest ; 2001 ; Southeastern Geographer Volume 41 ; 41 >
+    au < manifest ; 2002 ; Southeastern Geographer Volume 42 ; 42 >
     au < manifest ; 2003 ; Southeastern Geographer Volume 43 ; 43 >
     au < released ; 2004 ; Southeastern Geographer Volume 44 ; 44 >
     au < released ; 2005 ; Southeastern Geographer Volume 45 ; 45 >
@@ -224,11 +224,11 @@
     param[journal_dir] = southern_cultures
     attr[journal_id] = scu
 
-    au < exists ; 1994 ; Southern Cultures Volume 0 ; 0 >
-    au < exists ; 1994-1995 ; Southern Cultures Volume 1 ; 1 >
-    au < exists ; 1996 ; Southern Cultures Volume 2 ; 2 >
-    au < exists ; 1997 ; Southern Cultures Volume 3 ; 3 >
-    au < exists ; 1998 ; Southern Cultures Volume 4 ; 4 >
+    au < manifest ; 1994 ; Southern Cultures Volume 0 ; 0 >
+    au < manifest ; 1994-1995 ; Southern Cultures Volume 1 ; 1 >
+    au < manifest ; 1996 ; Southern Cultures Volume 2 ; 2 >
+    au < manifest ; 1997 ; Southern Cultures Volume 3 ; 3 >
+    au < manifest ; 1998 ; Southern Cultures Volume 4 ; 4 >
     au < manifest ; 1999 ; Southern Cultures Volume 5 ; 5 >
     au < released ; 2000 ; Southern Cultures Volume 6 ; 6 >
     au < released ; 2001 ; Southern Cultures Volume 7 ; 7 >

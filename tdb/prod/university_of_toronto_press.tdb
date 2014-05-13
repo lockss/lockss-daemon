@@ -308,17 +308,17 @@
     param[journal_dir] = diaspora_a_journal_of_transnational_studies
     attr[journal_id] = dsp
 
-    au < exists ; 1991 ; Diaspora: A Journal of Transnational Studies Volume 1 ; 1 >
-    au < exists ; 1992-1993 ; Diaspora: A Journal of Transnational Studies Volume 2 ; 2 >
-    au < exists ; 1994 ; Diaspora: A Journal of Transnational Studies Volume 3 ; 3 >
-    au < exists ; 1995 ; Diaspora: A Journal of Transnational Studies Volume 4 ; 4 >
-    au < exists ; 1996 ; Diaspora: A Journal of Transnational Studies Volume 5 ; 5 >
-    au < exists ; 1997 ; Diaspora: A Journal of Transnational Studies Volume 6 ; 6 >
-    au < exists ; 1998 ; Diaspora: A Journal of Transnational Studies Volume 7 ; 7 >
-    au < exists ; 1999 ; Diaspora: A Journal of Transnational Studies Volume 8 ; 8 >
-    au < exists ; 2000 ; Diaspora: A Journal of Transnational Studies Volume 9 ; 9 >
-    au < exists ; 2001 ; Diaspora: A Journal of Transnational Studies Volume 10 ; 10 >
-    au < exists ; 2002 ; Diaspora: A Journal of Transnational Studies Volume 11 ; 11 >
+    au < manifest ; 1991 ; Diaspora: A Journal of Transnational Studies Volume 1 ; 1 >
+    au < manifest ; 1992-1993 ; Diaspora: A Journal of Transnational Studies Volume 2 ; 2 >
+    au < manifest ; 1994 ; Diaspora: A Journal of Transnational Studies Volume 3 ; 3 >
+    au < manifest ; 1995 ; Diaspora: A Journal of Transnational Studies Volume 4 ; 4 >
+    au < manifest ; 1996 ; Diaspora: A Journal of Transnational Studies Volume 5 ; 5 >
+    au < manifest ; 1997 ; Diaspora: A Journal of Transnational Studies Volume 6 ; 6 >
+    au < manifest ; 1998 ; Diaspora: A Journal of Transnational Studies Volume 7 ; 7 >
+    au < manifest ; 1999 ; Diaspora: A Journal of Transnational Studies Volume 8 ; 8 >
+    au < manifest ; 2000 ; Diaspora: A Journal of Transnational Studies Volume 9 ; 9 >
+    au < manifest ; 2001 ; Diaspora: A Journal of Transnational Studies Volume 10 ; 10 >
+    au < manifest ; 2002 ; Diaspora: A Journal of Transnational Studies Volume 11 ; 11 >
     au < testing ; 2003 ; Diaspora: A Journal of Transnational Studies Volume 12 ; 12 >
     au < released ; 2004 ; Diaspora: A Journal of Transnational Studies Volume 13 ; 13 >
     au < released ; 2005 ; Diaspora: A Journal of Transnational Studies Volume 14 ; 14 >
@@ -340,13 +340,13 @@
     param[journal_dir] = eighteenth_century_fiction
     attr[journal_id] = ecf
 
-    au < exists ; 1997-1998 ; Eighteenth-Century Fiction Volume 10 ; 10 >
-    au < exists ; 1998-1999 ; Eighteenth-Century Fiction Volume 11 ; 11 >
-    au < exists ; 1999-2000 ; Eighteenth-Century Fiction Volume 12 ; 12 >
-    au < exists ; 2000-2001 ; Eighteenth-Century Fiction Volume 13 ; 13 >
-    au < exists ; 2001-2002 ; Eighteenth-Century Fiction Volume 14 ; 14 >
-    au < exists ; 2002-2003 ; Eighteenth-Century Fiction Volume 15 ; 15 >
-    au < exists ; 2003-2004 ; Eighteenth-Century Fiction Volume 16 ; 16 >
+    au < manifest ; 1997-1998 ; Eighteenth-Century Fiction Volume 10 ; 10 >
+    au < manifest ; 1998-1999 ; Eighteenth-Century Fiction Volume 11 ; 11 >
+    au < manifest ; 1999-2000 ; Eighteenth-Century Fiction Volume 12 ; 12 >
+    au < manifest ; 2000-2001 ; Eighteenth-Century Fiction Volume 13 ; 13 >
+    au < manifest ; 2001-2002 ; Eighteenth-Century Fiction Volume 14 ; 14 >
+    au < manifest ; 2002-2003 ; Eighteenth-Century Fiction Volume 15 ; 15 >
+    au < manifest ; 2003-2004 ; Eighteenth-Century Fiction Volume 16 ; 16 >
     au < testing ; 2004-2005 ; Eighteenth-Century Fiction Volume 17 ; 17 >
     au < released ; 2005-2006 ; Eighteenth-Century Fiction Volume 18 ; 18 >
     au < released ; 2006-2007 ; Eighteenth-Century Fiction Volume 19 ; 19 >
@@ -502,7 +502,7 @@
     au < released ; 2010-2011 ; Journal of Scholarly Publishing Volume 42 ; 42 >
     au < released ; 2011-2012 ; Journal of Scholarly Publishing Volume 43 ; 43 >
     au < ready ; 2012-2013 ; Journal of Scholarly Publishing Volume 44 ; 44 >
-    au < expected ; 2013-2014 ; Journal of Scholarly Publishing Volume 45 ; 45 >
+    au < manifest ; 2013-2014 ; Journal of Scholarly Publishing Volume 45 ; 45 >
 
   }
 
