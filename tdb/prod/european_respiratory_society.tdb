@@ -81,9 +81,7 @@
     type = bookSeries
     plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
-    param[base_url] = http://erm.ersjournals.com/
-    
-    comment[manifest] = manifest page has permission statement for clockss.
+    param[base_url] = http://erspublications.com/
     
     au < exists ; 2003 ; European Respiratory Monographs Volume 25 ; 25 >
     au < exists ; 2003 ; European Respiratory Monographs Volume 26 ; 26 >
@@ -107,20 +105,20 @@
     au < exists ; 2009 ; European Respiratory Monographs Volume 44 ; 44 >
     au < exists ; 2009 ; European Respiratory Monographs Volume 45 ; 45 >
     au < exists ; 2009 ; European Respiratory Monographs Volume 46 ; 46 >
-    au < testing ; 2010 ; European Respiratory Monographs Volume 47 ; 47 >
+    au < exists ; 2010 ; European Respiratory Monographs Volume 47 ; 47 >
     au < exists ; 2010 ; European Respiratory Monographs Volume 48 ; 48 >
     au < exists ; 2010 ; European Respiratory Monographs Volume 49 ; 49 >
     au < exists ; 2010 ; European Respiratory Monographs Volume 50 ; 50 >
-    au < testing ; 2011 ; European Respiratory Monographs Volume 51 ; 51 >
+    au < exists ; 2011 ; European Respiratory Monographs Volume 51 ; 51 >
     au < exists ; 2011 ; European Respiratory Monographs Volume 52 ; 52 >
     au < exists ; 2011 ; European Respiratory Monographs Volume 53 ; 53 >
     au < exists ; 2011 ; European Respiratory Monographs Volume 54 ; 54 >
-    au < testing ; 2012 ; European Respiratory Monographs Volume 55 ; 55 >
+    au < exists ; 2012 ; European Respiratory Monographs Volume 55 ; 55 >
     au < exists ; 2012 ; European Respiratory Monographs Volume 56 ; 56 >
     au < exists ; 2012 ; European Respiratory Monographs Volume 57 ; 57 >
     au < exists ; 2012 ; European Respiratory Monographs Volume 58 ; 58 >
     au < exists ; 2013 ; European Respiratory Monographs Volume 59 ; 59 >
-    au < testing ; 2013 ; European Respiratory Monographs Volume 60 ; 60 >
+    au < exists ; 2013 ; European Respiratory Monographs Volume 60 ; 60 >
     au < exists ; 2013 ; European Respiratory Monographs Volume 61 ; 61 >
     au < expected ; 2013 ; European Respiratory Monographs Volume 62 ; 62 >
     au < expected ; 2014 ; European Respiratory Monographs Volume 63 ; 63 >
