@@ -2837,7 +2837,7 @@
         pluginSuffix = ClockssHighWirePressH20Plugin
 
         au < manifest ; exists ; 2012 ; Asia Pacific Media Educator Volume 22 ; 22 ; >
-        au < testing ; exists ; 2013 ; Asia Pacific Media Educator Volume 23 ; 23 ; >
+        au < exists ; exists ; 2013 ; Asia Pacific Media Educator Volume 23 ; 23 ; >
         au < expected ; exists ; 2014 ; Asia Pacific Media Educator Volume 24 ; 24 ; >
 
       }
