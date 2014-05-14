@@ -269,13 +269,13 @@
     au < released ; 2011 ; Canadian Theatre Review Issue 148 ; 148 >
     au < released ; 2012 ; Canadian Theatre Review Issue 149 ; 149 >
     au < ready ; 2012 ; Canadian Theatre Review Issue 150 ; 150 >
-    au < testing ; 2012 ; Canadian Theatre Review Issue 151 ; 151 >
-    au < testing ; 2012 ; Canadian Theatre Review Issue 152 ; 152 >
-    au < testing ; 2013 ; Canadian Theatre Review Issue 153 ; 153 >
-    au < testing ; 2013 ; Canadian Theatre Review Issue 154 ; 154 >
-    au < testing ; 2013 ; Canadian Theatre Review Issue 155 ; 155 >
-    au < testing ; 2013 ; Canadian Theatre Review Issue 156 ; 156 >
-    au < testing ; 2014 ; Canadian Theatre Review Issue 157 ; 157 >
+    au < ready ; 2012 ; Canadian Theatre Review Issue 151 ; 151 >
+    au < ready ; 2012 ; Canadian Theatre Review Issue 152 ; 152 >
+    au < ready ; 2013 ; Canadian Theatre Review Issue 153 ; 153 >
+    au < ready ; 2013 ; Canadian Theatre Review Issue 154 ; 154 >
+    au < ready ; 2013 ; Canadian Theatre Review Issue 155 ; 155 >
+    au < ready ; 2013 ; Canadian Theatre Review Issue 156 ; 156 >
+    au < ready ; 2014 ; Canadian Theatre Review Issue 157 ; 157 >
     au < doNotProcess ; 2014 ; Canadian Theatre Review Issue 158 ; 158 >
 
   }
@@ -319,12 +319,12 @@
     au < manifest ; 2000 ; Diaspora: A Journal of Transnational Studies Volume 9 ; 9 >
     au < manifest ; 2001 ; Diaspora: A Journal of Transnational Studies Volume 10 ; 10 >
     au < manifest ; 2002 ; Diaspora: A Journal of Transnational Studies Volume 11 ; 11 >
-    au < testing ; 2003 ; Diaspora: A Journal of Transnational Studies Volume 12 ; 12 >
+    au < ready ; 2003 ; Diaspora: A Journal of Transnational Studies Volume 12 ; 12 >
     au < released ; 2004 ; Diaspora: A Journal of Transnational Studies Volume 13 ; 13 >
     au < released ; 2005 ; Diaspora: A Journal of Transnational Studies Volume 14 ; 14 >
     au < released ; 2006 ; Diaspora: A Journal of Transnational Studies Volume 15 ; 15 >
-    au < testing ; 2007 ; Diaspora: A Journal of Transnational Studies Volume 16 ; 16 >
-    au < testing ; 2008 ; Diaspora: A Journal of Transnational Studies Volume 17 ; 17 >
+    au < ready ; 2007 ; Diaspora: A Journal of Transnational Studies Volume 16 ; 16 >
+    au < ready ; 2008 ; Diaspora: A Journal of Transnational Studies Volume 17 ; 17 >
 
   }
 
@@ -347,7 +347,7 @@
     au < manifest ; 2001-2002 ; Eighteenth-Century Fiction Volume 14 ; 14 >
     au < manifest ; 2002-2003 ; Eighteenth-Century Fiction Volume 15 ; 15 >
     au < manifest ; 2003-2004 ; Eighteenth-Century Fiction Volume 16 ; 16 >
-    au < testing ; 2004-2005 ; Eighteenth-Century Fiction Volume 17 ; 17 >
+    au < ready ; 2004-2005 ; Eighteenth-Century Fiction Volume 17 ; 17 >
     au < released ; 2005-2006 ; Eighteenth-Century Fiction Volume 18 ; 18 >
     au < released ; 2006-2007 ; Eighteenth-Century Fiction Volume 19 ; 19 >
     au < released ; 2007-2008 ; Eighteenth-Century Fiction Volume 20 ; 20 >
@@ -389,9 +389,9 @@
     param[journal_dir] = genocide_studies_and_prevention
     attr[journal_id] = gsp
 
-    au < testing ; 2006 ; Genocide Studies and Prevention Volume 1 ; 1 >
-    au < testing ; 2007 ; Genocide Studies and Prevention Volume 2 ; 2 >
-    au < testing ; 2008 ; Genocide Studies and Prevention Volume 3 ; 3 >
+    au < ready ; 2006 ; Genocide Studies and Prevention Volume 1 ; 1 >
+    au < ready ; 2007 ; Genocide Studies and Prevention Volume 2 ; 2 >
+    au < ready ; 2008 ; Genocide Studies and Prevention Volume 3 ; 3 >
     au < released ; 2009 ; Genocide Studies and Prevention Volume 4 ; 4 >
     au < released ; 2010 ; Genocide Studies and Prevention Volume 5 ; 5 >
     au < released ; 2011 ; Genocide Studies and Prevention Volume 6 ; 6 >
@@ -662,8 +662,8 @@
 
     au < released ; 2008 ; The Yearbook of Comparative Literature Volume 54 ; 54 >
     au < released ; 2009 ; The Yearbook of Comparative Literature Volume 55 ; 55 >
-    au < testing ; 2010 ; The Yearbook of Comparative Literature Volume 56 ; 56 >
-    au < testing ; 2011 ; The Yearbook of Comparative Literature Volume 57 ; 57 >
+    au < ready ; 2010 ; The Yearbook of Comparative Literature Volume 56 ; 56 >
+    au < ready ; 2011 ; The Yearbook of Comparative Literature Volume 57 ; 57 >
 
   }
 

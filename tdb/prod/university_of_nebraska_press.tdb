@@ -207,8 +207,8 @@
     param[journal_dir] = journal_of_austrian_studies
     attr[journal_id] = oas
 
-    au < testing ; 2012 ; Journal of Austrian Studies Volume 45 ; 45 >
-    au < testing ; 2013 ; Journal of Austrian Studies Volume 46 ; 46 >
+    au < ready ; 2012 ; Journal of Austrian Studies Volume 45 ; 45 >
+    au < ready ; 2013 ; Journal of Austrian Studies Volume 46 ; 46 >
     au < doNotProcess ; 2012 ; Journal of Austrian Studies Volume 47 ; 47 >
     
   }
@@ -331,7 +331,7 @@
     au < released ; 2010-2011 ; NINE: A Journal of Baseball History and Culture Volume 19 ; 19 >
     au < released ; 2011-2012 ; NINE: A Journal of Baseball History and Culture Volume 20 ; 20 >
     au < ready ; 2012-2013 ; NINE: A Journal of Baseball History and Culture Volume 21 ; 21 >
-    au < testing ; 2013-2014 ; NINE: A Journal of Baseball History and Culture Volume 22 ; 22 >
+    au < ready ; 2013-2014 ; NINE: A Journal of Baseball History and Culture Volume 22 ; 22 >
 
   }
 
@@ -426,7 +426,7 @@
     au < released ; 2010-2011 ; Qui Parle: Critical Humanities and Social Sciences Volume 19 ; 19 >
     au < released ; 2011-2012 ; Qui Parle: Critical Humanities and Social Sciences Volume 20 ; 20 >
     au < released ; 2012-2013 ; Qui Parle: Critical Humanities and Social Sciences Volume 21 ; 21 >
-    au < testing ; 2013-2014 ; Qui Parle: Critical Humanities and Social Sciences Volume 22 ; 22 >
+    au < ready ; 2013-2014 ; Qui Parle: Critical Humanities and Social Sciences Volume 22 ; 22 >
 
   }
 
