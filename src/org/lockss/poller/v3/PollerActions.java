@@ -1,5 +1,5 @@
 /*
- * $Id: PollerActions.java,v 1.35 2013-05-29 17:18:12 barry409 Exp $
+ * $Id: PollerActions.java,v 1.36 2014-05-14 04:11:33 tlipkis Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import org.lockss.plugin.base.BaseUrlCacher;
 import org.lockss.protocol.V3LcapMessage.PollNak;
 import org.lockss.protocol.psm.*;
 import org.lockss.protocol.*;
+import org.lockss.state.*;
 import org.lockss.util.*;
 
 public class PollerActions {
@@ -329,7 +330,9 @@ public class PollerActions {
     msg.setAgreementHint(ud.getPercentAgreement());
     msg.setExpiration(ud.getPoller().getPollExpiration());
     msg.setRetryMax(1);
-    if (ud.isSymmetricPoll())  {
+    if (ud.isSymmetricPoll() &&
+	(ud.getPoller().getAuState().getSubstanceState() !=
+	 SubstanceChecker.State.No))  {
       byte[] nonce2 = ud.getVoterNonce2();
       VoteBlocks symmetricVoteBlocks = ud.getSymmetricVoteBlocks();
       msg.setVoterNonce2(nonce2);
