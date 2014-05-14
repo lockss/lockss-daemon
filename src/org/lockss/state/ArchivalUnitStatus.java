@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.120 2014-04-23 20:48:03 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.121 2014-05-14 04:14:45 tlipkis Exp $
  */
 
 /*
@@ -267,8 +267,7 @@ public class ArchivalUnitStatus
 	  throw new StatusService.NoSuchTableException("Plugin not found: "
 						       + plugid);
 	}
-	table.setTitle(TABLE_TITLE + " for plugin " +
-		       StringUtil.shortName(onlyPlug.getPluginName()));
+	table.setTitle(TABLE_TITLE + " for plugin " + onlyPlug.getPluginName());
       }	
       boolean includeInternalAus =
 	table.getOptions().get(StatusTable.OPTION_DEBUG_USER);
