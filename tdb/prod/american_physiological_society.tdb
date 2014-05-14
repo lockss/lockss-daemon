@@ -1543,7 +1543,7 @@
       issnl = 1548-9221
     >
 
-    comment[current_plugin] = HighWirePressH20Plugin
+    comment[current_plugin] = HighWireDrupalPlugin
     param[base_url] = http://physiologyonline.physiology.org/
 
     {
@@ -1558,35 +1558,35 @@
 
     {
 
-      au < HighWirePressH20Plugin ; manifest ; 1986 ; Physiology Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; manifest ; 1987 ; Physiology Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; manifest ; 1988 ; Physiology Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; manifest ; 1989 ; Physiology Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; manifest ; 1990 ; Physiology Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; manifest ; 1991 ; Physiology Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; manifest ; 1992 ; Physiology Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; manifest ; 1993 ; Physiology Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; manifest ; 1994 ; Physiology Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; manifest ; 1995 ; Physiology Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; manifest ; 1996 ; Physiology Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; manifest ; 1997 ; Physiology Volume 12 ; 12 >
-      au < HighWirePressH20Plugin ; manifest ; 1998 ; Physiology Volume 13 ; 13 >
-      au < HighWirePressH20Plugin ; manifest ; 1999 ; Physiology Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; manifest ; 2000 ; Physiology Volume 15 ; 15 >
-      au < HighWirePressH20Plugin ; manifest ; 2001 ; Physiology Volume 16 ; 16 >
-      au < HighWirePressH20Plugin ; manifest ; 2002 ; Physiology Volume 17 ; 17 >
-      au < HighWirePressH20Plugin ; manifest ; 2003 ; Physiology Volume 18 ; 18 >
-      au < HighWirePressH20Plugin ; manifest ; 2004 ; Physiology Volume 19 ; 19 >
-      au < HighWirePressH20Plugin ; manifest ; 2005 ; Physiology Volume 20 ; 20 >
-      au < HighWirePressH20Plugin ; manifest ; 2006 ; Physiology Volume 21 ; 21 >
-      au < HighWirePressH20Plugin ; manifest ; 2007 ; Physiology Volume 22 ; 22 >
-      au < HighWirePressH20Plugin ; released ; 2008 ; Physiology Volume 23 ; 23 >
-      au < HighWirePressH20Plugin ; released ; 2009 ; Physiology Volume 24 ; 24 >
-      au < HighWirePressH20Plugin ; manifest ; 2010 ; Physiology Volume 25 ; 25 >
-      au < HighWirePressH20Plugin ; released ; 2011 ; Physiology Volume 26 ; 26 >
-      au < HighWirePressH20Plugin ; released ; 2012 ; Physiology Volume 27 ; 27 >
-      au < HighWirePressH20Plugin ; manifest ; 2013 ; Physiology Volume 28 ; 28 >
-      au < HighWirePressH20Plugin ; manifest ; 2014 ; Physiology Volume 29 ; 29 >
+      au < HighWireDrupalPlugin ; exists ; 1986 ; Physiology Volume 1 ; 1 >
+      au < HighWireDrupalPlugin ; exists ; 1987 ; Physiology Volume 2 ; 2 >
+      au < HighWireDrupalPlugin ; exists ; 1988 ; Physiology Volume 3 ; 3 >
+      au < HighWireDrupalPlugin ; exists ; 1989 ; Physiology Volume 4 ; 4 >
+      au < HighWireDrupalPlugin ; exists ; 1990 ; Physiology Volume 5 ; 5 >
+      au < HighWireDrupalPlugin ; exists ; 1991 ; Physiology Volume 6 ; 6 >
+      au < HighWireDrupalPlugin ; exists ; 1992 ; Physiology Volume 7 ; 7 >
+      au < HighWireDrupalPlugin ; exists ; 1993 ; Physiology Volume 8 ; 8 >
+      au < HighWireDrupalPlugin ; exists ; 1994 ; Physiology Volume 9 ; 9 >
+      au < HighWireDrupalPlugin ; exists ; 1995 ; Physiology Volume 10 ; 10 >
+      au < HighWireDrupalPlugin ; exists ; 1996 ; Physiology Volume 11 ; 11 >
+      au < HighWireDrupalPlugin ; exists ; 1997 ; Physiology Volume 12 ; 12 >
+      au < HighWireDrupalPlugin ; exists ; 1998 ; Physiology Volume 13 ; 13 >
+      au < HighWireDrupalPlugin ; exists ; 1999 ; Physiology Volume 14 ; 14 >
+      au < HighWireDrupalPlugin ; exists ; 2000 ; Physiology Volume 15 ; 15 >
+      au < HighWireDrupalPlugin ; exists ; 2001 ; Physiology Volume 16 ; 16 >
+      au < HighWireDrupalPlugin ; exists ; 2002 ; Physiology Volume 17 ; 17 >
+      au < HighWireDrupalPlugin ; exists ; 2003 ; Physiology Volume 18 ; 18 >
+      au < HighWireDrupalPlugin ; exists ; 2004 ; Physiology Volume 19 ; 19 >
+      au < HighWireDrupalPlugin ; exists ; 2005 ; Physiology Volume 20 ; 20 >
+      au < HighWireDrupalPlugin ; exists ; 2006 ; Physiology Volume 21 ; 21 >
+      au < HighWireDrupalPlugin ; exists ; 2007 ; Physiology Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; down ; 2008 ; Physiology Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; down ; 2009 ; Physiology Volume 24 ; 24 >
+      au < HighWireDrupalPlugin ; exists ; 2010 ; Physiology Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; down ; 2011 ; Physiology Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; down ; 2012 ; Physiology Volume 27 ; 27 >
+      au < HighWireDrupalPlugin ; exists ; 2013 ; Physiology Volume 28 ; 28 >
+      au < HighWireDrupalPlugin ; exists ; 2014 ; Physiology Volume 29 ; 29 >
 
     }
 
