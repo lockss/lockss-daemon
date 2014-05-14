@@ -1,5 +1,5 @@
 /*
- * $Id: ServletManager.java,v 1.40 2009-06-01 19:15:30 tlipkis Exp $
+ * $Id: ServletManager.java,v 1.41 2014-05-14 04:13:28 tlipkis Exp $
  */
 
 /*
@@ -77,4 +77,5 @@ public interface ServletManager extends LockssManager {
   public ServletDescr[] getServletDescrs();
   public ServletDescr findServletDescr(Object o);
   public Authenticator getAuthenticator();
+  public String getWarningMsg();
 }

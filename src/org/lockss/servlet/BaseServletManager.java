@@ -1,5 +1,5 @@
 /*
- * $Id: BaseServletManager.java,v 1.38 2013-03-22 04:47:31 fergaloy-sf Exp $
+ * $Id: BaseServletManager.java,v 1.39 2014-05-14 04:13:28 tlipkis Exp $
  */
 
 /*
@@ -172,6 +172,10 @@ public abstract class BaseServletManager
   /** Message to include in 403 response */
   public static final String PARAM_403MSG = DOC_PREFIX + SUFFIX_403_MSG;
 
+  public static final String SUFFIX_WARNING = "warning";
+  /** String to display in red on ui pages. */
+  public static final String PARAM_WARNING = DOC_PREFIX + SUFFIX_WARNING;
+
   public static final String SUFFIX_ENABLE_DEBUG_USER = "debugUser.enable";
   /** Enable the debug user on named server.  Daemon restart required. */
   public static final String PARAM_ENABLE_DEBUG_USER =
@@ -219,6 +223,7 @@ public abstract class BaseServletManager
   protected boolean enableDebugUser;
   protected boolean useSsl;
   protected boolean resolveRemoteHost;
+  protected String warningMsg;
   protected String sslKeystoreName;
   protected int sslRedirFromPort;
   protected AuthType authType = DEFAULT_AUTH_TYPE;
@@ -307,7 +312,7 @@ public abstract class BaseServletManager
       resolveRemoteHost = config.getBoolean(mi.prefix
 					    + SUFFIX_RESOLVE_REMOTE_HOST,
 					    mi.defaultResolveRemoteHost);
-
+      warningMsg = config.get(mi.prefix + SUFFIX_WARNING);
     }
     // Access control prefix not nec. related to prefix, don't nest inside
     // if (changedKeys.contains(prefix))
@@ -340,6 +345,10 @@ public abstract class BaseServletManager
 
   public Authenticator getAuthenticator() {
     return authenticator;
+  }
+
+  public String getWarningMsg() {
+    return warningMsg;
   }
 
   void startOrStop() {
