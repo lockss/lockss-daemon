@@ -101,7 +101,7 @@
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2010 ; Advances in Physiology Education Volume 34 ; 34 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2011 ; Advances in Physiology Education Volume 35 ; 35 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2012 ; Advances in Physiology Education Volume 36 ; 36 ; >
-      au < ClockssHighWirePressH20Plugin ; boost ; exists ; 2013 ; Advances in Physiology Education Volume 37 ; 37 ; >
+      au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2013 ; Advances in Physiology Education Volume 37 ; 37 ; >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2014 ; Advances in Physiology Education Volume 38 ; 38 ; >
 
     }
@@ -1979,8 +1979,8 @@
       au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2011 ; Journal of Applied Physiology Volume 111 ; 111 ; >
       au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2012 ; Journal of Applied Physiology Volume 112 ; 112 ; >
       au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2012 ; Journal of Applied Physiology Volume 113 ; 113 ; >
-      au < ClockssHighWirePressH20Plugin ; boost ; exists ; 2013 ; Journal of Applied Physiology Volume 114 ; 114 ; >
-      au < ClockssHighWirePressH20Plugin ; boost ; exists ; 2013 ; Journal of Applied Physiology Volume 115 ; 115 ; >
+      au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2013 ; Journal of Applied Physiology Volume 114 ; 114 ; >
+      au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2013 ; Journal of Applied Physiology Volume 115 ; 115 ; >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2014 ; Journal of Applied Physiology Volume 116 ; 116 ; >
       au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2014 ; Journal of Applied Physiology Volume 117 ; 117 ; >
 
@@ -2338,7 +2338,7 @@
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2010 ; Physiological Genomics Volume 42A ; 42A ; >
       au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2011 ; Physiological Genomics Volume 43 ; 43 ; >
       au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2012 ; Physiological Genomics Volume 44 ; 44 ; >
-      au < ClockssHighWirePressH20Plugin ; boost ; exists ; 2013 ; Physiological Genomics Volume 45 ; 45 ; >
+      au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2013 ; Physiological Genomics Volume 45 ; 45 ; >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2014 ; Physiological Genomics Volume 46 ; 46 ; >
 
     }
@@ -2626,7 +2626,7 @@
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2010 ; Physiology Volume 25 ; 25 ; >
       au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2011 ; Physiology Volume 26 ; 26 ; >
       au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2012 ; Physiology Volume 27 ; 27 ; >
-      au < ClockssHighWirePressH20Plugin ; boost ; exists ; 2013 ; Physiology Volume 28 ; 28 ; >
+      au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2013 ; Physiology Volume 28 ; 28 ; >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2014 ; Physiology Volume 29 ; 29 ; >
 
     }
