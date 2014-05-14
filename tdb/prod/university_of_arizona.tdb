@@ -26,14 +26,14 @@
     au < manifest ; 2002 ; Arizona Journal of Hispanic Cultural Studies Volume 6 ; 6 >
     au < manifest ; 2003 ; Arizona Journal of Hispanic Cultural Studies Volume 7 ; 7 >
     au < manifest ; 2004 ; Arizona Journal of Hispanic Cultural Studies Volume 8 ; 8 >
-    au < manifest ; 2005 ; Arizona Journal of Hispanic Cultural Studies Volume 9 ; 9 >
+    au < testing ; 2005 ; Arizona Journal of Hispanic Cultural Studies Volume 9 ; 9 >
     au < released ; 2006 ; Arizona Journal of Hispanic Cultural Studies Volume 10 ; 10 >
     au < released ; 2007 ; Arizona Journal of Hispanic Cultural Studies Volume 11 ; 11 >
     au < released ; 2008 ; Arizona Journal of Hispanic Cultural Studies Volume 12 ; 12 >
     au < released ; 2009 ; Arizona Journal of Hispanic Cultural Studies Volume 13 ; 13 >
     au < released ; 2010 ; Arizona Journal of Hispanic Cultural Studies Volume 14 ; 14 >
-    au < manifest ; 2011 ; Arizona Journal of Hispanic Cultural Studies Volume 15 ; 15 >
-    au < manifest ; 2012 ; Arizona Journal of Hispanic Cultural Studies Volume 16 ; 16 >
+    au < testing ; 2011 ; Arizona Journal of Hispanic Cultural Studies Volume 15 ; 15 >
+    au < testing ; 2012 ; Arizona Journal of Hispanic Cultural Studies Volume 16 ; 16 >
     au < expected ; 2013 ; Arizona Journal of Hispanic Cultural Studies Volume 17 ; 17 >
     au < doNotProcess ; 2014 ; Arizona Journal of Hispanic Cultural Studies Volume 18 ; 18 >
 
@@ -55,7 +55,7 @@
     au < manifest ; 2002 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 58 ; 58 >
     au < manifest ; 2003 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 59 ; 59 >
     au < manifest ; 2004 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 60 ; 60 >
-    au < manifest ; 2005 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 61 ; 61 >
+    au < testing ; 2005 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 61 ; 61 >
     au < released ; 2006 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 62 ; 62 >
     au < released ; 2007 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 63 ; 63 >
     au < released ; 2008 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 64 ; 64 >
@@ -79,10 +79,10 @@
     param[journal_dir] = journal_of_the_southwest
     attr[journal_id] = jsw
 
-    au < manifest ; 2007 ; Journal of the Southwest Volume 49 ; 49 >
-    au < manifest ; 2008 ; Journal of the Southwest Volume 50 ; 50 >
-    au < manifest ; 2009 ; Journal of the Southwest Volume 51 ; 51 >
-    au < manifest ; 2010 ; Journal of the Southwest Volume 52 ; 52 >
+    au < testing ; 2007 ; Journal of the Southwest Volume 49 ; 49 >
+    au < testing ; 2008 ; Journal of the Southwest Volume 50 ; 50 >
+    au < testing ; 2009 ; Journal of the Southwest Volume 51 ; 51 >
+    au < testing ; 2010 ; Journal of the Southwest Volume 52 ; 52 >
     au < released ; 2011 ; Journal of the Southwest Volume 53 ; 53 >
     au < released ; 2012 ; Journal of the Southwest Volume 54 ; 54 >
     au < ready ; 2013 ; Journal of the Southwest Volume 55 ; 55 >
