@@ -3,7 +3,7 @@
   publisher <
     name = Global Alliance Against Traffic in Women ;
     info[contract] = 2013 ;
-    info[tester] = 7
+    info[tester] = 8
   >
   
      plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
@@ -21,8 +21,8 @@
       param[base_url] = http://www.antitraffickingreview.org/
       param[journal_id] = atr
       
-      au < manifest ; exists ; 2013 ; Anti-Trafficking Review Number 1 ; 1 ; 2013 >
-      au < manifest ; exists ; 2014 ; Anti-Trafficking Review Number 2 ; 2 ; 2014 >
+      au < testing ; exists ; 2013 ; Anti-Trafficking Review Number 1 ; 1 ; 2013 >
+      au < testing ; exists ; 2014 ; Anti-Trafficking Review Number 2 ; 2 ; 2014 >
 
     }
 
