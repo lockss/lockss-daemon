@@ -20,6 +20,7 @@
       eissn = 1088-9485
     >
     
+    comment[type] = regular journal
     param[journal_id] = bull
       
     au < manifest ; exists ; 1891 ; Bulletin of the American Mathematical Society Volume 1 ; 1891 >
@@ -52,6 +53,7 @@
       issn = 1088-4173 
     >
     
+    comment[type] = ejournal only
     param[journal_id] = ecgd
     
     au < manifest ; exists ; 2007 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 11 ; 2007 >
@@ -73,6 +75,7 @@
       eissn = 1088-6834
     >
 
+    comment[type] = regular journal
     param[journal_id] = jams
     
     au < manifest ; exists ; 1988 ; Journal of the American Mathematical Society Volume 1 ; 1988 >
@@ -113,6 +116,7 @@
       eissn = 1088-6842
     >
     
+    comment[type] = regular journal
     param[journal_id] = mcom
     
     au < manifest ; exists ; 1943 ; Mathematics of Computation Volume 1 (1943) ; 1943 >
@@ -198,10 +202,9 @@
       issn = 0065-9266 ;
       eissn = 1947-6221
     >
+    comment[type] = bookSeries
     param[journal_id] = memo_all
     
-    comment[format] = this is a book?
-
     au < exists ; exists ; 2009 ; Memoirs of the American Mathematical Society Volume 216 ; 2009 >
     au < exists ; exists ; 2010 ; Memoirs of the American Mathematical Society Volume 217 ; 2010 >
     au < exists ; exists ; 2011 ; Memoirs of the American Mathematical Society Volume 218 ; 2011 >
@@ -219,6 +222,7 @@
       eissn = 1088-9477
     >
     
+    comment[type] = bookSeries
     param[journal_id] = notices
     
     au < exists ; exists ; 1995 ; Notices of the American Mathematical Society Volume 42 ; 1995 >
@@ -252,6 +256,7 @@
       eissn = 1088-6826
     >
     
+    comment[type] = regular journal
     param[journal_id] = proc
       
     au < manifest ; exists ; 2007 ; Proceedings of the American Mathematical Society Volume 135 ; 2007 >
@@ -273,6 +278,7 @@
       
     >
     
+    comment[type] = ejournal only
     param[journal_id] = ert
 
     au < manifest ; exists ; 1997 ; Representation Theory - An electronic journal of the AMS Volume 1 ; 1997 >
@@ -304,6 +310,7 @@
       eissn = 1547-7371
     >
     
+    comment[type] = regular journal?
     param[journal_id] = spmj
 
     au < manifest ; exists ; 2004 ; St. Petersburg Mathematical Journal Volume 15 ; 2004 >
@@ -328,6 +335,7 @@
       eissn = 1547-7363
     >
     
+    comment[type] = regular journal
     param[journal_id] = tpms
     
     au < manifest ; exists ; 2004 ; Theory of Probability and Mathematical Statistics Volume 68-69 ; 2004 >
@@ -352,6 +360,7 @@
       eissn = 1088-6850
     >
     
+    comment[type] = regular journal
     param[journal_id] = tran
     
     au < manifest ; exists ; 2007 ; Transactions of the American Mathematical Society Volume 359 ; 2007 >
@@ -373,6 +382,7 @@
       eissn = 1088-6850
     >
     
+    comment[type] = ejournal only
     param[journal_id] = btran
 
     au < manifest ; exists ; 2014 ; Transactions of the American Mathematical Society B Volume 1 ; 2014 >
