@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.64 2013-09-18 05:38:04 tlipkis Exp $
+ * $Id: TestV3Poller.java,v 1.65 2014-05-14 04:12:16 tlipkis Exp $
  */
 
 /*
@@ -58,7 +58,7 @@ public class TestV3Poller extends LockssTestCase {
   private PeerIdentity pollerId;
 
   private String tempDirPath;
-  private ArchivalUnit testau;
+  private MockArchivalUnit testau;
   private PollManager pollmanager;
   private HashService hashService;
   private PluginManager pluginMgr;
@@ -409,6 +409,27 @@ public class TestV3Poller extends LockssTestCase {
     assertTrue(symmetricParticipants.size() == numSym);
   }
 
+  public void testSubstanceChecker() throws Exception {
+    V3Poller v3Poller = makeInittedV3Poller("foo", 0, 0);
+    List<String> pats = ListUtil.list("foo");
+    testau.setSubstanceUrlPatterns(RegexpUtil.compileRegexps(pats));
+    SubstanceChecker sub = v3Poller.makeSubstanceChecker();
+    assertNull(sub);
+    MockPlugin mplug = (MockPlugin)testau.getPlugin();
+    mplug.setFeatureVersionMap(MapUtil.map(Plugin.Feature.Substance, "2"));
+    sub = v3Poller.makeSubstanceChecker();
+    assertNotNull(sub);
+    AuState aus = AuUtil.getAuState(testau);
+    assertEquals(SubstanceChecker.State.Unknown, aus.getSubstanceState());
+
+    v3Poller.updateSubstance(sub);
+    assertEquals(SubstanceChecker.State.No, aus.getSubstanceState());
+
+    sub.checkSubstance("http://foo");
+    v3Poller.updateSubstance(sub);
+    assertEquals(SubstanceChecker.State.Yes, aus.getSubstanceState());
+  }
+
   public void testMakeHasher() throws Exception {
     V3Poller v3Poller = makeInittedV3Poller("foo", 0, 0);
     BlockHasher hasher = v3Poller.makeHasher(testau.getAuCachedUrlSet(), -1,
@@ -508,14 +529,17 @@ public class TestV3Poller extends LockssTestCase {
     V3Poller v3Poller = makeInittedV3Poller("foo");
     doTestInitHasherDigests(v3Poller, initialPeers.size());
   }
+
   public void testInitHasherDigestsTwo() throws Exception {
     V3Poller v3Poller = makeInittedV3Poller("foo", 2);
     doTestInitHasherDigests(v3Poller, 2);
   }
+
   public void testInitHasherDigestsNone() throws Exception {
     V3Poller v3Poller = makeInittedV3Poller("foo", 0);
     doTestInitHasherDigests(v3Poller, 0);
   }
+
   public void doTestInitHasherDigests(V3Poller v3Poller,
 				      int numSym) throws Exception {
     Map<PeerIdentity,ParticipantUserData> innerCircle =
@@ -1957,7 +1981,10 @@ public class TestV3Poller extends LockssTestCase {
     theDaemon.getRouterManager().startService();
     theDaemon.getSystemMetrics().startService();
     theDaemon.getActivityRegulator(testau).startService();
-    theDaemon.setNodeManager(new MockNodeManager(), testau);
+    MockNodeManager nodeManager = new MockNodeManager();
+    theDaemon.setNodeManager(nodeManager, testau);
+    MockAuState aus = new MockAuState(testau);
+    nodeManager.setAuState(aus);
     pollmanager.startService();
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: SubstanceChecker.java,v 1.8 2013-02-25 08:51:47 tlipkis Exp $
+ * $Id: SubstanceChecker.java,v 1.9 2014-05-14 04:12:16 tlipkis Exp $
  */
 
 /*
@@ -59,6 +59,7 @@ public class SubstanceChecker {
 
   public static String CONTEXT_CRAWL = "Crawl";
   public static String CONTEXT_VOTE = "Vote";
+  public static String CONTEXT_POLL = "Poll";
   public static String CONTEXT_ALL = "All";
 
   /** Specifies whether and when detection of AUs with no meaningful
