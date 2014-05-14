@@ -42,7 +42,7 @@
         au < manifest ; exists ; 2010 ; Advances in Difference Equations Volume 2010 ; 2010 >
         au < manifest ; exists ; 2011 ; Advances in Difference Equations Volume 2011 ; 2011 >
         au < manifest ; exists ; 2012 ; Advances in Difference Equations Volume 2012 ; 2012 >
-        au < manifest ; exists ; 2013 ; Advances in Difference Equations Volume 2013 ; 2013 >
+        au < testing ; exists ; 2013 ; Advances in Difference Equations Volume 2013 ; 2013 >
         au < manifest ; exists ; 2014 ; Advances in Difference Equations Volume 2014 ; 2014 >
   
     }
@@ -58,7 +58,7 @@
         param[journal_issn] = 2193-7532 
         comment[platform] = BioMedCentralPlugin
   
-        au < manifest ; exists ; 2013 ; Agricultural and Food Economics Volume 1 ; 1 >
+        au < testing ; exists ; 2013 ; Agricultural and Food Economics Volume 1 ; 1 >
         au < manifest ; exists ; 2014 ; Agricultural and Food Economics Volume 2 ; 2 >
   
     }
@@ -76,7 +76,7 @@
   
         au < manifest ; exists ; 2011 ; AMB Express Volume 1 ; 1 >
         au < manifest ; exists ; 2012 ; AMB Express Volume 2 ; 2 >
-        au < manifest ; exists ; 2013 ; AMB Express Volume 3 ; 3 >
+        au < testing ; exists ; 2013 ; AMB Express Volume 3 ; 3 >
         au < manifest ; exists ; 2014 ; AMB Express Volume 4 ; 4 >
   
     }
@@ -94,7 +94,7 @@
   
         au < manifest ; exists ; 2011 ; Annals of Intensive Care Volume 1 ; 1 >
         au < manifest ; exists ; 2012 ; Annals of Intensive Care Volume 2 ; 2 >
-        au < manifest ; exists ; 2013 ; Annals of Intensive Care Volume 3 ; 3 >
+        au < testing ; exists ; 2013 ; Annals of Intensive Care Volume 3 ; 3 >
         au < manifest ; exists ; 2014 ; Annals of Intensive Care Volume 4 ; 4 >
   
     }
@@ -110,7 +110,7 @@
         param[journal_issn] = 2196-4351 
         comment[platform] = BioMedCentralPlugin
 
-        au < manifest ; exists ; 2013 ; Applied Adhesion Science Volume 1 ; 1 >
+        au < testing ; exists ; 2013 ; Applied Adhesion Science Volume 1 ; 1 >
         au < manifest ; exists ; 2014 ; Applied Adhesion Science Volume 2 ; 2 >
 
     }
@@ -126,7 +126,7 @@
         param[journal_issn] = 2195-3007 
         comment[platform] = BioMedCentralPlugin
   
-        au < manifest ; exists ; 2013 ; Asian Journal of Gambling Issues and Public Health Volume 3 ; 3 >
+        au < testing ; exists ; 2013 ; Asian Journal of Gambling Issues and Public Health Volume 3 ; 3 >
         au < manifest ; exists ; 2014 ; Asian Journal of Gambling Issues and Public Health Volume 4 ; 4 >
   
     }
@@ -142,7 +142,7 @@
         param[journal_issn] = 1559-4106 
         comment[platform] = BioMedCentralPlugin
   
-        au < manifest ; exists ; 2013 ; Biointerphases Volume 8 ; 8 >
+        au < testing ; exists ; 2013 ; Biointerphases Volume 8 ; 8 >
         au < expected ; exists ; 2014 ; Biointerphases Volume 9 ; 9 >
   
     }
@@ -158,7 +158,7 @@
         param[journal_issn] = 1999-3110 
         comment[platform] = BioMedCentralPlugin
   
-        au < manifest ; exists ; 2013 ; Botanical Studies Volume 54 ; 54 >
+        au < testing ; exists ; 2013 ; Botanical Studies Volume 54 ; 54 >
         au < manifest ; exists ; 2014 ; Botanical Studies Volume 55 ; 55 >
   
     }
@@ -184,7 +184,7 @@
         au < manifest ; exists ; 2010 ; Boundary Value Problems Volume 2010 ; 2010 >
         au < manifest ; exists ; 2011 ; Boundary Value Problems Volume 2011 ; 2011 >
         au < manifest ; exists ; 2012 ; Boundary Value Problems Volume 2012 ; 2012 >
-        au < manifest ; exists ; 2013 ; Boundary Value Problems Volume 2013 ; 2013 >
+        au < testing ; exists ; 2013 ; Boundary Value Problems Volume 2013 ; 2013 >
         au < manifest ; exists ; 2014 ; Boundary Value Problems Volume 2014 ; 2014 >
   
     }
@@ -246,7 +246,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; exists ; 2012 ; Clinical and Translational Medicine Volume 1 ; 1 >
-        au < manifest ; exists ; 2013 ; Clinical and Translational Medicine Volume 2 ; 2 >
+        au < testing ; exists ; 2013 ; Clinical and Translational Medicine Volume 2 ; 2 >
         au < manifest ; exists ; 2014 ; Clinical and Translational Medicine Volume 3 ; 3 >
   
     }
