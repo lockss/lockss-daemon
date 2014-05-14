@@ -22,7 +22,7 @@
   
     param[peerj_site] = archives
     
-    au < testing ; 2013 ; PeerJ Archives: 2013 ; 2013 > 
+    au < manifest ; 2013 ; PeerJ Archives: 2013 ; 2013 > 
     au < expected ; 2014 ; PeerJ Archives: 2014 ; 2014 > 
     
   }
@@ -36,7 +36,7 @@
 
     param[peerj_site] = archives-preprints
     
-    au < testing ; 2013 ; PeerJ PrePrint Archives: 2013 ; 2013 > 
+    au < manifest ; 2013 ; PeerJ PrePrint Archives: 2013 ; 2013 > 
     au < expected ; 2014 ; PeerJ PrePrint Archives: 2014 ; 2014 > 
 
   }
