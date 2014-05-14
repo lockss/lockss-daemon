@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.83 2014-01-14 04:29:46 tlipkis Exp $
+ * $Id: ServeContent.java,v 1.84 2014-05-14 04:14:32 tlipkis Exp $
  */
 
 /*
@@ -1781,7 +1781,8 @@ public class ServeContent extends LockssServlet {
    */
   protected Collection<ArchivalUnit> getCandidateAus(
       BibliographicItem bibliographicItem) {
-    Collection<ArchivalUnit> candidateAus = new ArrayList<ArchivalUnit>();
+    Collection<ArchivalUnit> candidateAus = 
+      new TreeSet<ArchivalUnit>(new AuOrderComparator());
 
     Tdb tdb = ConfigManager.getCurrentConfig().getTdb();
     String isbn = bibliographicItem.getIsbn();
