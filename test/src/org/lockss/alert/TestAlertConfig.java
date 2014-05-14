@@ -1,5 +1,5 @@
 /*
- * $Id: TestAlertConfig.java,v 1.5 2014-05-14 04:11:14 tlipkis Exp $
+ * $Id: TestAlertConfig.java,v 1.6 2014-05-14 13:26:18 tlipkis Exp $
  */
 
 /*
@@ -135,18 +135,4 @@ public class TestAlertConfig extends LockssTestCase {
     String str2 = org.apache.commons.lang.StringEscapeUtils.escapeXml(str);
     FileTestUtil.writeFile(file2, str2);
   }
-
-  public void testXmlConfig() throws Exception {
-    MockLockssDaemon daemon = getMockLockssDaemon();
-    AlertManagerImpl mgr = new AlertManagerImpl();
-    daemon.setAlertManager(mgr);
-    mgr.initService(daemon);
-    daemon.setDaemonInited(true);
-    mgr.startService();
-    File file = new File("/tmp/aaa");
-    assertTrue(file.exists());
-    AlertConfig cfg = (AlertConfig)mgr.loadAlertConfig(file);
-//     log.info("cfg: " + cfg);
-  }
-
 }
