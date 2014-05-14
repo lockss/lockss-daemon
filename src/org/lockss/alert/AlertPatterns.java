@@ -1,5 +1,5 @@
 /*
- * $Id: AlertPatterns.java,v 1.6 2012-07-17 02:33:26 thib_gc Exp $
+ * $Id: AlertPatterns.java,v 1.7 2014-05-14 04:11:14 tlipkis Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.alert;
 
 import java.util.*;
+import java.util.regex.*;
 
 import org.lockss.util.*;
 
@@ -119,6 +120,12 @@ public class AlertPatterns {
    * <code>attribute</code> is contained in <code>value</code> */
   public static AlertPattern CONTAINS(String attribute, Object value) {
     return new Predicate(attribute, Predicate.REL.CONTAINS, value);
+  }
+
+  /** Return a predicate that is true if the value of the alert's
+   * <code>attribute</code> matches the <code>regexp</code> */
+  public static AlertPattern MATCHES(String attribute, String regexp) {
+    return new Predicate(attribute, Predicate.REL.MATCHES, regexp);
   }
 
   public static class True implements AlertPattern, LockssSerializable {
@@ -243,17 +250,30 @@ public class AlertPatterns {
   }
 
   public static class Predicate implements AlertPattern, LockssSerializable {
-    static enum REL {EQ, NE, GT, GE, LT, LE, CONTAINS};
+    static enum REL {EQ, NE, GT, GE, LT, LE, CONTAINS, MATCHES};
 
     private String attribute;
     private REL relation;
     private Object value;
 
+    // used only for REL.MATCHES
+    transient Pattern pat;
 
-    public Predicate(String attribute, REL relation, Object value) {
+    public Predicate(String attribute, REL relation, Object value)
+	throws IllegalArgumentException {
       this.attribute = attribute;
       this.relation = relation;
       this.value = value;
+      switch (relation) {
+      case MATCHES:
+	try {
+	  pat = Pattern.compile((String)value);
+	} catch (PatternSyntaxException e) {
+	  // don't throw regex package-specific exception
+	  throw new IllegalArgumentException(e);
+	}
+	break;
+      }
     }
 
     public String getAttribute() {
@@ -293,6 +313,9 @@ public class AlertPatterns {
 	  }
 	  return false;
 	}
+	case MATCHES:
+	  Matcher m = pat.matcher((String)attr);
+	  return m.find();
 	default:
 	  int cmp = ((Comparable)attr).compareTo(value);
 	  switch (relation) {

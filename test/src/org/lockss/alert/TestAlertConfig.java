@@ -1,5 +1,5 @@
 /*
- * $Id: TestAlertConfig.java,v 1.4 2010-02-08 23:00:52 tlipkis Exp $
+ * $Id: TestAlertConfig.java,v 1.5 2014-05-14 04:11:14 tlipkis Exp $
  */
 
 /*
@@ -111,8 +111,16 @@ public class TestAlertConfig extends LockssTestCase {
 							   "devAlert2")),
 		      new AlertActionMail("devmail"));
 
+    List pats =
+      ListUtil.list(AlertPatterns.MATCHES(Alert.ATTR_TEXT, "foo[123]pat"),
+		    AlertPatterns.MATCHES(Alert.ATTR_TEXT, "foo[123]pat"));
+    AlertFilter matchFilt =
+      new AlertFilter(AlertPatterns.And(pats),
+		      new AlertActionMail("patmail"));
+
     AlertConfig conf =
-      new AlertConfig(ListUtil.list(passwdFilt, crawlExclFilt, devFilt));
+      new AlertConfig(ListUtil.list(passwdFilt, crawlExclFilt, devFilt,
+				    matchFilt));
 
     File file = FileTestUtil.tempFile("alertconf", ".xml");
     File file2 = FileTestUtil.tempFile("alertconf", ".asc");
@@ -121,8 +129,24 @@ public class TestAlertConfig extends LockssTestCase {
     Reader rdr =
       new org.lockss.filter.WhiteSpaceFilter(new BufferedReader(new FileReader(file)));
     String str = StringUtil.fromReader(rdr);
+    AlertConfig lconf = mgr.loadAlertConfig(str);
+    assertEquals(conf, lconf);
+
     String str2 = org.apache.commons.lang.StringEscapeUtils.escapeXml(str);
     FileTestUtil.writeFile(file2, str2);
+  }
+
+  public void testXmlConfig() throws Exception {
+    MockLockssDaemon daemon = getMockLockssDaemon();
+    AlertManagerImpl mgr = new AlertManagerImpl();
+    daemon.setAlertManager(mgr);
+    mgr.initService(daemon);
+    daemon.setDaemonInited(true);
+    mgr.startService();
+    File file = new File("/tmp/aaa");
+    assertTrue(file.exists());
+    AlertConfig cfg = (AlertConfig)mgr.loadAlertConfig(file);
+//     log.info("cfg: " + cfg);
   }
 
 }
