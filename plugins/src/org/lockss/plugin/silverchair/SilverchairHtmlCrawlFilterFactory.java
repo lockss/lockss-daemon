@@ -1,5 +1,5 @@
 /*
- * $Id: SilverchairHtmlCrawlFilterFactory.java,v 1.2 2014-04-29 15:07:05 thib_gc Exp $
+ * $Id: SilverchairHtmlCrawlFilterFactory.java,v 1.3 2014-05-14 18:50:38 thib_gc Exp $
  */
 
 /*
@@ -46,8 +46,6 @@ import org.lockss.util.*;
 
 public class SilverchairHtmlCrawlFilterFactory implements FilterFactory {
 
-  private static final Logger logger = Logger.getLogger(SilverchairHtmlCrawlFilterFactory.class);
-  
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
@@ -81,12 +79,16 @@ public class SilverchairHtmlCrawlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "refContainer"),
         // Comments may contain article links? (not in above commentFormContainer div) (AMA)
         HtmlNodeFilters.tagWithAttribute("div", "class", "commentBody"),
-        // Corrections create two-way link between articles (AMA)
-        HtmlNodeFilters.tagWithAttribute("div", "id", "scm6MainContent_divCorrections"),
-        HtmlNodeFilters.tagWithAttribute("div", "id", "scm6MainContent_divCorrectionLinkToParent"),
         // Cross links: "This article/letter/etc. relates to...", "This erratum
         // concerns...", "See also...", [ACCP, ACP]
         HtmlNodeFilters.tagWithAttribute("div", "class", "linkType"),
+        // Corrections create two-way link between articles (AMA)
+        HtmlNodeFilters.tagWithAttribute("div", "id", "scm6MainContent_divCorrections"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "scm6MainContent_divCorrectionLinkToParent"),
+        // Author disclosures box tends to reference older policy/guidelines documents
+        HtmlNodeFilters.tagWithAttribute("div", "id", "scm6MainContent_divDisclosures"),
+        // Erratum link from old to new article [APA]
+        HtmlNodeFilters.tagWithAttribute("div", "id", "scm6MainContent_divErratum"),
         /*
          * The right column ('portletColumn') is likely to reference articles
          * (most read, related articles, most recent articles...), but it also
@@ -100,7 +102,7 @@ public class SilverchairHtmlCrawlFilterFactory implements FilterFactory {
          *     <div id="ctl00_scm6MainContent_ToolBox"> but not inside <div class="portletColumn">
          */
         new AllExceptSubtreeNodeFilter(HtmlNodeFilters.tagWithAttributeRegex("div", "class", "portletColumn"),
-                                    HtmlNodeFilters.tagWithAttribute("div", "id", "scm6MainContent_ToolBox")),
+                                       HtmlNodeFilters.tagWithAttribute("div", "id", "scm6MainContent_ToolBox")),
     };
     return new HtmlFilterInputStream(in,
                                      encoding,
