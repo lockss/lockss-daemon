@@ -703,9 +703,9 @@
     param[journal_dir] = historically_speaking
     attr[journal_id] = hsp
     
-    au < exists ; 2004-2005 ; Historically Speaking Volume 6 ; 6 >
-    au < exists ; 2005-2006 ; Historically Speaking Volume 7 ; 7 >
-    au < exists ; 2006-2007 ; Historically Speaking Volume 8 ; 8 >
+    au < manifest ; 2004-2005 ; Historically Speaking Volume 6 ; 6 >
+    au < manifest ; 2005-2006 ; Historically Speaking Volume 7 ; 7 >
+    au < manifest ; 2006-2007 ; Historically Speaking Volume 8 ; 8 >
     au < manifest ; 2007-2008 ; Historically Speaking Volume 9 ; 9 >
     au < released ; 2009 ; Historically Speaking Volume 10 ; 10 >
     au < released ; 2010 ; Historically Speaking Volume 11 ; 11 >
