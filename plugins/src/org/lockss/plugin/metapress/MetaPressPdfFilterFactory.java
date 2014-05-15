@@ -1,5 +1,5 @@
 /*
- * $Id: MetaPressPdfFilterFactory.java,v 1.2 2014-05-07 22:01:49 etenbrink Exp $
+ * $Id: MetaPressPdfFilterFactory.java,v 1.3 2014-05-15 01:21:59 etenbrink Exp $
  */
 
 /*
@@ -61,7 +61,7 @@ public class MetaPressPdfFilterFactory implements FilterFactory {
     /** Manchester University Press */
     MANCHESTER,
     /** Multi-Science */
-    MULTI_SCIENCE,
+    MULTISCIENCE,
     /** Practical Action Publishing */
     PRACTICALACTION,
     /** United Kingdom Serials Group */
@@ -90,7 +90,6 @@ public class MetaPressPdfFilterFactory implements FilterFactory {
       protected int state;
       
       public MetaPressWorker() {
-        // super(Direction.BACKWARD);
       }
       
       @Override
@@ -187,11 +186,11 @@ public class MetaPressPdfFilterFactory implements FilterFactory {
       Matcher mat = JOURNAL_ID.matcher(config.get("base_url"));
       if (mat.matches()) {
         publisher_sd = mat.group(1).toUpperCase();
-        publisher_sd.replace("-", "_");
+        publisher_sd.replace("-", "");
         publisherId = PublisherId.valueOf(publisher_sd);
       }
     } catch (Exception e) {
-      logger.warning(String.format("Exception: %s", publisher_sd), e);
+      logger.debug(String.format("Exception: %s : %s", publisher_sd, e.toString()));
     }
     
     switch (publisherId) {

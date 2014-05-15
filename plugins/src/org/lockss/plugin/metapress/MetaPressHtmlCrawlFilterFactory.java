@@ -1,5 +1,5 @@
 /*
- * $Id: MetaPressHtmlCrawlFilterFactory.java,v 1.3 2014-05-05 23:14:59 etenbrink Exp $
+ * $Id: MetaPressHtmlCrawlFilterFactory.java,v 1.4 2014-05-15 01:21:59 etenbrink Exp $
  */
 
 /*
@@ -70,7 +70,7 @@ public class MetaPressHtmlCrawlFilterFactory implements FilterFactory {
           hfis.setEncodingMatchRange(Integer.parseInt(range));
           log.debug3("Set setEncodingMatchRange: " + range);
         }
-      } else {log.warning("tdbau was null");}
+      } else {log.debug("tdbau was null");}
     } else {log.warning("au was null");}
     return hfis;
   }
