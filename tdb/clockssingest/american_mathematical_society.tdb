@@ -62,7 +62,7 @@
     au < manifest ; exists ; 2010 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 14 ; 2010 >
     au < manifest ; exists ; 2011 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 15 ; 2011 >
     au < manifest ; exists ; 2012 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 16 ; 2012 >
-    au < notReady ; exists ; 2013 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 17 ; 2013 >
+    au < testing ; exists ; 2013 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 17 ; 2013 >
     au < manifest ; exists ; 2014 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 18 ; 2014 >
 
     }    
@@ -273,6 +273,20 @@
     {
   
     title < 
+      name = Proceedings of the American Mathematical Society B ;
+      eissn = 2330-1511
+    >
+    
+    comment[type] = ejournal only
+    param[journal_id] = bproc
+      
+    au < manifest ; exists ; 2014 ; Proceedings of the American Mathematical Society B Volume 1 ; 2014 >
+
+    }
+    
+    {
+  
+    title < 
       name = Representation Theory - An electronic journal of the AMS ;
       issn = 1088-4165 
       
@@ -297,7 +311,7 @@
     au < manifest ; exists ; 2010 ; Representation Theory - An electronic journal of the AMS Volume 14 ; 2010 >
     au < manifest ; exists ; 2011 ; Representation Theory - An electronic journal of the AMS Volume 15 ; 2011 >
     au < manifest ; exists ; 2012 ; Representation Theory - An electronic journal of the AMS Volume 16 ; 2012 >
-    au < manifest ; exists ; 2013 ; Representation Theory - An electronic journal of the AMS Volume 17 ; 2013 >
+    au < boost ; exists ; 2013 ; Representation Theory - An electronic journal of the AMS Volume 17 ; 2013 >
     au < manifest ; exists ; 2014 ; Representation Theory - An electronic journal of the AMS Volume 18 ; 2014 >
 
     }
@@ -378,8 +392,7 @@
   
     title < 
       name = Transactions of the American Mathematical Society B;
-      issn =  0002-9947 ;
-      eissn = 1088-6850
+      eissn =  2330-0000
     >
     
     comment[type] = ejournal only
