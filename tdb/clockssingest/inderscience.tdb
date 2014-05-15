@@ -2251,6 +2251,7 @@
       >
 
       param[journal_issn] = 1752-3591
+      attr[EncodingMatchRange]=200
       
       au < manifest ; exists ; 2007-2008 ;  International Journal of Dynamical Systems and Differential Equations Volume 1 ; 1 >
       au < manifest ; exists ; 2009 ;  International Journal of Dynamical Systems and Differential Equations Volume 2 ; 2 >
@@ -2804,6 +2805,7 @@
 
       param[journal_issn] = 1741-8054
       comment[doNotProcess] = wait for daemon 1.63 because of Unable to sync new encoding within range of +/- 100 chars
+      attr[EncodingMatchRange]=200
       
       au < manifest ; exists ; 2004 ; International Journal of Entrepreneurship and Small Business Volume 1 ; 1 >
       au < manifest ; exists ; 2005 ; International Journal of Entrepreneurship and Small Business Volume 2 ; 2 >
@@ -2824,7 +2826,7 @@
       au < finished ; crawling ; 2012 ; International Journal of Entrepreneurship and Small Business Volume 17 ; 17 >
       au < crawling ; exists ; 2013 ; International Journal of Entrepreneurship and Small Business Volume 18 ; 18 >
       au < crawling ; exists ; 2013 ; International Journal of Entrepreneurship and Small Business Volume 19 ; 19 >
-      au < doNotProcess ; exists ; 2013 ; International Journal of Entrepreneurship and Small Business Volume 20 ; 20 >
+      au < wanted ; exists ; 2013 ; International Journal of Entrepreneurship and Small Business Volume 20 ; 20 >
       au < manifest ; exists ; 2014 ; International Journal of Entrepreneurship and Small Business Volume 21 ; 21 >
       au < expected ; exists ; 2014 ; International Journal of Entrepreneurship and Small Business Volume 22 ; 22 >
       au < expected ; exists ; 2014 ; International Journal of Entrepreneurship and Small Business Volume 23 ; 23 >
@@ -5060,6 +5062,7 @@
       >
 
       param[journal_issn] = 1741-5209
+      attr[EncodingMatchRange]=200
       
       au < exists ; exists ; 1986 ; International Journal of Materials and Product Technology Volume 1 ; 1 >
       au < exists ; exists ; 1987 ; International Journal of Materials and Product Technology Volume 2 ; 2 >
@@ -5461,6 +5464,7 @@
       >
 
       param[journal_issn] = 1746-6180
+      attr[EncodingMatchRange]=200
       
       au < manifest ; exists ; 2006 ; International Journal of Modelling, Identification and Control Volume 1 ; 1 >
       au < manifest ; exists ; 2007 ; International Journal of Modelling, Identification and Control Volume 2 ; 2 >
@@ -6444,6 +6448,7 @@
       >
 
       param[journal_issn] = 1755-0564
+      attr[EncodingMatchRange]=200
       
       comment[vol5] = notReady multiple charsets on page. http://inderscience.metapress.com/content/e43jr3v2t0m6724t/fulltext.html 
       
@@ -6451,7 +6456,7 @@
       au < crawling ; exists ; 2010 ; International Journal of Reasoning-based Intelligent Systems Volume 2 ; 2 >
       au < zapped ; finished ; 2011 ; International Journal of Reasoning-based Intelligent Systems Volume 3 ; 3 >
       au < zapped ; finished ; 2012 ; International Journal of Reasoning-based Intelligent Systems Volume 4 ; 4 >
-      au < down ; exists ; 2013 ; International Journal of Reasoning-based Intelligent Systems Volume 5 ; 5 >
+      au < wanted ; exists ; 2013 ; International Journal of Reasoning-based Intelligent Systems Volume 5 ; 5 >
       au < expected ; exists ; 2014 ; International Journal of Reasoning-based Intelligent Systems Volume 6 ; 6 >
 
     }
