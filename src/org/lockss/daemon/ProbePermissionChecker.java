@@ -1,5 +1,5 @@
 /*
- * $Id: ProbePermissionChecker.java,v 1.22 2012-03-12 05:26:38 tlipkis Exp $
+ * $Id: ProbePermissionChecker.java,v 1.23 2014-05-15 23:27:32 etenbrink Exp $
  */
 
 /*
@@ -33,7 +33,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.daemon;
 
 import java.io.*;
-import java.util.*;
 
 import org.lockss.plugin.*;
 import org.lockss.util.*;
@@ -50,11 +49,11 @@ import org.lockss.extractor.*;
 
 public class ProbePermissionChecker implements PermissionChecker {
 
-  String probeUrl = null;
+  protected String probeUrl = null;
 
   private static Logger logger = Logger.getLogger("ProbePermissionChecker");
 
-  ArchivalUnit au;
+  protected ArchivalUnit au;
 
   public ProbePermissionChecker(ArchivalUnit au) {
     if (au == null) {
