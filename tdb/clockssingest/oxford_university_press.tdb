@@ -499,7 +499,7 @@
     au < finished ; crawling ; 2010 ; The American Historical Review Volume 115 ; 115 ; >
     au < finished ; crawling ; 2011 ; The American Historical Review Volume 116 ; 116 ; >
     au < finished ; crawling ; 2012 ; The American Historical Review Volume 117 ; 117 ; >
-    au < crawling ; exists ; 2013 ; The American Historical Review Volume 118 ; 118 ; >
+    au < testing ; exists ; 2013 ; The American Historical Review Volume 118 ; 118 ; >
     au < manifest ; exists ; 2014 ; The American Historical Review Volume 119 ; 119 ; >
     
     }
@@ -614,7 +614,7 @@
     au < finished ; crawling ; 2010 ; American Journal of Agricultural Economics Volume 92 ; 92 ; >
     au < finished ; crawling ; 2011 ; American Journal of Agricultural Economics Volume 93 ; 93 ; >
     au < finished ; crawling ; 2012 ; American Journal of Agricultural Economics Volume 94 ; 94 ; >
-    au < testing ; exists ; 2013 ; American Journal of Agricultural Economics Volume 95 ; 95 ; >
+    au < check ; exists ; 2013 ; American Journal of Agricultural Economics Volume 95 ; 95 ; >
     au < manifest ; exists ; 2014 ; American Journal of Agricultural Economics Volume 96 ; 96 ; >
 
     }
@@ -825,8 +825,8 @@
     au < finished ; crawling ; 2011 ; American Journal of Epidemiology [including Supplements] Volume 174 ; 174 ; >
     au < finished ; crawling ; 2012 ; American Journal of Epidemiology [including Supplements] Volume 175 ; 175 ; >
     au < finished ; crawling ; 2012 ; American Journal of Epidemiology Volume 176 ; 176 ; >
-    au < testing ; exists ; 2013 ; American Journal of Epidemiology Volume 177 ; 177 ; >
-    au < testing ; exists ; 2013 ; American Journal of Epidemiology Volume 178 ; 178 ; >
+    au < check ; exists ; 2013 ; American Journal of Epidemiology Volume 177 ; 177 ; >
+    au < check ; exists ; 2013 ; American Journal of Epidemiology Volume 178 ; 178 ; >
     au < manifest ; exists ; 2014 ; American Journal of Epidemiology Volume 179 ; 179 ; >
     au < expected ; exists ; 2014 ; American Journal of Epidemiology Volume 180 ; 180 ; >
 
@@ -873,7 +873,7 @@
     au < crawling ; exists ; 2010 ; American Journal of Hypertension Volume 23 ; 23 ; >
     au < crawling ; exists ; 2011 ; American Journal of Hypertension Volume 24 ; 24 ; >
     au < crawling ; exists ; 2012 ; American Journal of Hypertension Volume 25 ; 25 ; >
-    au < testing ; exists ; 2013 ; American Journal of Hypertension Volume 26 ; 26 ; >
+    au < check ; exists ; 2013 ; American Journal of Hypertension Volume 26 ; 26 ; >
     au < manifest ; exists ; 2014 ; American Journal of Hypertension Volume 27 ; 27 ; >
 
   }
@@ -947,7 +947,7 @@
     au < crawling ; exists ; 2010 ; The American Journal of Jurisprudence Volume 55 ; 55 ; >
     au < finished ; crawling ; 2011 ; The American Journal of Jurisprudence Volume 56 ; 56 ; >
     au < manifest ; exists ; 2012 ; The American Journal of Jurisprudence Volume 57 ; 57 ; >
-    au < crawling ; exists ; 2013 ; The American Journal of Jurisprudence Volume 58 ; 58 ; >
+    au < testing ; exists ; 2013 ; The American Journal of Jurisprudence Volume 58 ; 58 ; >
     au < expected ; exists ; 2014 ; The American Journal of Jurisprudence Volume 59 ; 59 ; >
     
   }
@@ -990,7 +990,7 @@
     au < zapped ; finished ; 2010 ; American Law and Economics Review Volume 12 ; 12 ; >
     au < finished ; crawling ; 2011 ; American Law and Economics Review Volume 13 ; 13 ; >
     au < finished ; crawling ; 2012 ; American Law and Economics Review Volume 14 ; 14 ; >
-    au < testing ; exists ; 2013 ; American Law and Economics Review Volume 15 ; 15 ; >
+    au < check ; exists ; 2013 ; American Law and Economics Review Volume 15 ; 15 ; >
     au < manifest ; exists ; 2014 ; American Law and Economics Review Volume 16 ; 16 ; >
 
     }
@@ -1044,7 +1044,7 @@
     au < finished ; crawling ; 2010 ; American Literary History Volume 22 ; 22 ; >
     au < finished ; crawling ; 2011 ; American Literary History Volume 23 ; 23 ; >
     au < finished ; crawling ; 2012 ; American Literary History Volume 24 ; 24 ; >
-    au < testing ; exists ; 2013 ; American Literary History Volume 25 ; 25 ; >
+    au < check ; exists ; 2013 ; American Literary History Volume 25 ; 25 ; >
     au < manifest ; exists ; 2014 ; American Literary History Volume 26 ; 26 ; >
 
     }
@@ -1147,7 +1147,7 @@
     au < finished ; crawling ; 2010 ; Analysis Volume 70 ; 70 ; >
     au < finished ; crawling ; 2011 ; Analysis Volume 71 ; 71 ; >
     au < finished ; crawling ; 2012 ; Analysis Volume 72 ; 72 ; >
-    au < testing ; exists ; 2013 ; Analysis Volume 73 ; 73 ; >
+    au < check ; exists ; 2013 ; Analysis Volume 73 ; 73 ; >
     au < manifest ; exists ; 2014 ; Analysis Volume 74 ; 74 ; >
 
     }
@@ -1340,8 +1340,8 @@
     au < finished ; crawling ; 2011 ; Annals of Botany Volume 108 ; 108 ; >
     au < finished ; crawling ; 2012 ; Annals of Botany Volume 109 ; 109 ; >
     au < finished ; crawling ; 2012 ; Annals of Botany Volume 110 ; 110 ; >
-    au < testing ; exists ; 2013 ; Annals of Botany Volume 111 ; 111 ; >
-    au < crawling ; exists ; 2013 ; Annals of Botany Volume 112 ; 112 ; >
+    au < check ; exists ; 2013 ; Annals of Botany Volume 111 ; 111 ; >
+    au < testing ; exists ; 2013 ; Annals of Botany Volume 112 ; 112 ; >
     au < manifest ; exists ; 2014 ; Annals of Botany Volume 113 ; 113 ; >
     au < expected ; exists ; 2014 ; Annals of Botany Volume 114 ; 114 ; >
 
@@ -1429,7 +1429,7 @@
     au < finished ; crawling ; 2010 ; The Annals of Occupational Hygiene Volume 54 ; 54 ; >
     au < finished ; crawling ; 2011 ; The Annals of Occupational Hygiene Volume 55 ; 55 ; >
     au < finished ; crawling ; 2012 ; The Annals of Occupational Hygiene Volume 56 ; 56 ; >
-    au < crawling ; exists ; 2013 ; The Annals of Occupational Hygiene Volume 57 ; 57 ; >
+    au < testing ; exists ; 2013 ; The Annals of Occupational Hygiene Volume 57 ; 57 ; >
     au < manifest ; exists ; 2014 ; The Annals of Occupational Hygiene Volume 58 ; 58 ; >
 
     }
@@ -1551,7 +1551,7 @@
     au < finished ; crawling ; 2010 ; Applied Economic Perspectives and Policy Volume 32 ; 32 ; >
     au < finished ; crawling ; 2011 ; Applied Economic Perspectives and Policy Volume 33 ; 33 ; >
     au < finished ; crawling ; 2012 ; Applied Economic Perspectives and Policy Volume 34 ; 34 ; >
-    au < crawling ; exists ; 2013 ; Applied Economic Perspectives and Policy Volume 35 ; 35 ; >
+    au < testing ; exists ; 2013 ; Applied Economic Perspectives and Policy Volume 35 ; 35 ; >
     au < manifest ; exists ; 2014 ; Applied Economic Perspectives and Policy Volume 36 ; 36 ; >
 
     }
@@ -1615,7 +1615,7 @@
     au < finished ; crawling ; 2010 ; Applied Linguistics Volume 31 ; 31 ; >
     au < finished ; crawling ; 2011 ; Applied Linguistics Volume 32 ; 32 ; >
     au < finished ; crawling ; 2012 ; Applied Linguistics Volume 33 ; 33 ; >
-    au < crawling ; exists ; 2013 ; Applied Linguistics Volume 34 ; 34 ; >
+    au < testing ; exists ; 2013 ; Applied Linguistics Volume 34 ; 34 ; >
     au < manifest ; exists ; 2014 ; Applied Linguistics Volume 35 ; 35 ; >
 
     }
@@ -1644,7 +1644,7 @@
     au < finished ; crawling ; 2010 ; Applied Mathematics Research eXpress (AMRX) Volume 2010 ; 2010 ; >
     au < finished ; crawling ; 2011 ; Applied Mathematics Research eXpress (AMRX) Volume 2011 ; 2011 ; >
     au < finished ; crawling ; 2012 ; Applied Mathematics Research eXpress (AMRX) Volume 2012 ; 2012 ; >
-    au < crawling ; exists ; 2013 ; Applied Mathematics Research eXpress (AMRX) Volume 2013 ; 2013 ; >
+    au < testing ; exists ; 2013 ; Applied Mathematics Research eXpress (AMRX) Volume 2013 ; 2013 ; >
     au < manifest ; exists ; 2014 ; Applied Mathematics Research eXpress (AMRX) Volume 2014 ; 2014 ; >
 
   }
@@ -1727,7 +1727,7 @@
     au < finished ; crawling ; 2010 ; Archives of Clinical Neuropsychology Volume 25 ; 25 ; >
     au < finished ; crawling ; 2011 ; Archives of Clinical Neuropsychology Volume 26 ; 26 ; >
     au < finished ; crawling ; 2012 ; Archives of Clinical Neuropsychology Volume 27 ; 27 ; >
-    au < crawling ; exists ; 2013 ; Archives of Clinical Neuropsychology Volume 28 ; 28 ; >
+    au < testing ; exists ; 2013 ; Archives of Clinical Neuropsychology Volume 28 ; 28 ; >
     au < manifest ; exists ; 2014 ; Archives of Clinical Neuropsychology Volume 29 ; 29 ; >
 
     }
@@ -1762,7 +1762,7 @@
     au < crawling ; exists ; 2010 ; Astronomy & Geophysics Volume 51 ; 51 ; >
     au < crawling ; exists ; 2011 ; Astronomy & Geophysics Volume 52 ; 52 ; >
     au < finished ; crawling ; 2012 ; Astronomy & Geophysics Volume 53 ; 53 ; >
-    au < crawling ; exists ; 2013 ; Astronomy & Geophysics Volume 54 ; 54 ; >
+    au < testing ; exists ; 2013 ; Astronomy & Geophysics Volume 54 ; 54 ; >
     au < manifest ; exists ; 2014 ; Astronomy & Geophysics Volume 55 ; 55 ; >
 
   }
@@ -1814,7 +1814,7 @@
     au < finished ; crawling ; 2010 ; Behavioral Ecology Volume 21 ; 21 ; >
     au < finished ; crawling ; 2011 ; Behavioral Ecology Volume 22 ; 22 ; >
     au < finished ; crawling ; 2012 ; Behavioral Ecology Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2013 ; Behavioral Ecology Volume 24 ; 24 ; >
+    au < testing ; exists ; 2013 ; Behavioral Ecology Volume 24 ; 24 ; >
     au < manifest ; exists ; 2014 ; Behavioral Ecology Volume 25 ; 25 ; >
 
     }
@@ -1873,7 +1873,7 @@
     au < finished ; crawling ; 2010 ; Bioinformatics Volume 26 ; 26 ; >
     au < finished ; crawling ; 2011 ; Bioinformatics Volume 27 ; 27 ; >
     au < finished ; crawling ; 2012 ; Bioinformatics Volume 28 ; 28 ; >
-    au < crawling ; exists ; 2013 ; Bioinformatics Volume 29 ; 29 ; >
+    au < testing ; exists ; 2013 ; Bioinformatics Volume 29 ; 29 ; >
     au < manifest ; exists ; 2014 ; Bioinformatics Volume 30 ; 30 ; >
 
     }
@@ -2003,7 +2003,7 @@
     au < finished ; crawling ; 2010 ; Biometrika Volume 97 ; 97 ; >
     au < finished ; crawling ; 2011 ; Biometrika Volume 98 ; 98 ; >
     au < finished ; crawling ; 2012 ; Biometrika Volume 99 ; 99 ; >
-    au < crawling ; exists ; 2013 ; Biometrika Volume 100 ; 100 ; >
+    au < testing ; exists ; 2013 ; Biometrika Volume 100 ; 100 ; >
     au < manifest ; exists ; 2014 ; Biometrika Volume 101 ; 101 ; >
 
     }
@@ -2082,7 +2082,7 @@
     au < finished ; crawling ; 2010 ; Biostatistics Volume 11 ; 11 ; >
     au < finished ; crawling ; 2011 ; Biostatistics Volume 12 ; 12 ; >
     au < finished ; crawling ; 2012 ; Biostatistics Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2013 ; Biostatistics Volume 14 ; 14 ; >
+    au < testing ; exists ; 2013 ; Biostatistics Volume 14 ; 14 ; >
     au < manifest ; exists ; 2014 ; Biostatistics Volume 15 ; 15 ; >
 
     }
@@ -2248,7 +2248,7 @@
     au < finished ; crawling ; 2010 ; Brain Volume 133 ; 133 ; >
     au < finished ; crawling ; 2011 ; Brain Volume 134 ; 134 ; >
     au < finished ; crawling ; 2012 ; Brain Volume 135 ; 135 ; >
-    au < crawling ; exists ; 2013 ; Brain Volume 136 ; 136 ; >
+    au < testing ; exists ; 2013 ; Brain Volume 136 ; 136 ; >
     au < manifest ; exists ; 2014 ; Brain Volume 137 ; 137 ; >
 
     }
@@ -2319,7 +2319,7 @@
     au < finished ; crawling ; 2010 ; Briefings in Bioinformatics Volume 11 ; 11 ; >
     au < finished ; crawling ; 2011 ; Briefings in Bioinformatics Volume 12 ; 12 ; >
     au < finished ; crawling ; 2012 ; Briefings in Bioinformatics Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2013 ; Briefings in Bioinformatics Volume 14 ; 14 ; >
+    au < testing ; exists ; 2013 ; Briefings in Bioinformatics Volume 14 ; 14 ; >
     au < manifest ; exists ; 2014 ; Briefings in Bioinformatics Volume 15 ; 15 ; >
 
     }
@@ -2391,7 +2391,7 @@
     au < finished ; crawling ; 2010 ; Briefings in Functional Genomics Volume 9 ; 9 ; >
     au < finished ; crawling ; 2011 ; Briefings in Functional Genomics Volume 10 ; 10 ; >
     au < finished ; crawling ; 2012 ; Briefings in Functional Genomics Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2013 ; Briefings in Functional Genomics Volume 12 ; 12 ; >
+    au < testing ; exists ; 2013 ; Briefings in Functional Genomics Volume 12 ; 12 ; >
     au < manifest ; exists ; 2014 ; Briefings in Functional Genomics Volume 13 ; 13 ; >
 
     }
@@ -2475,7 +2475,7 @@
     au < zapped ; finished ; 2010 ; The British Journal of Aesthetics Volume 50 ; 50 ; >
     au < finished ; crawling ; 2011 ; The British Journal of Aesthetics Volume 51 ; 51 ; >
     au < ingNotReady ; exists ; 2012 ; The British Journal of Aesthetics Volume 52 ; 52 ; >
-    au < crawling ; exists ; 2013 ; The British Journal of Aesthetics Volume 53 ; 53 ; >
+    au < testing ; exists ; 2013 ; The British Journal of Aesthetics Volume 53 ; 53 ; >
     au < manifest ; exists ; 2014 ; The British Journal of Aesthetics Volume 54 ; 54 ; >
 
     }
@@ -2616,8 +2616,8 @@
     au < finished ; crawling ; 2011 ; British Journal of Anaesthesia Volume 107 ; 107 ; >
     au < finished ; crawling ; 2012 ; British Journal of Anaesthesia Volume 108 ; 108 ; >
     au < finished ; crawling ; 2012 ; British Journal of Anaesthesia Volume 109 ; 109 ; >
-    au < crawling ; exists ; 2013 ; British Journal of Anaesthesia Volume 110 ; 110 ; >
-    au < crawling ; exists ; 2013 ; British Journal of Anaesthesia Volume 111 ; 111 ; >
+    au < testing ; exists ; 2013 ; British Journal of Anaesthesia Volume 110 ; 110 ; >
+    au < testing ; exists ; 2013 ; British Journal of Anaesthesia Volume 111 ; 111 ; >
     au < manifest ; exists ; 2014 ; British Journal of Anaesthesia Volume 112 ; 112 ; >
     au < expected ; exists ; 2014 ; British Journal of Anaesthesia Volume 113 ; 113 ; >
 
@@ -2701,7 +2701,7 @@
     au < zapped ; finished ; 2010 ; The British Journal of Criminology: An International Review of Crime and Society Volume 50 ; 50 ; >
     au < finished ; crawling ; 2011 ; The British Journal of Criminology: An International Review of Crime and Society Volume 51 ; 51 ; >
     au < finished ; crawling ; 2012 ; The British Journal of Criminology: An International Review of Crime and Society Volume 52 ; 52 ; >
-    au < crawling ; exists ; 2013 ; The British Journal of Criminology: An International Review of Crime and Society Volume 53 ; 53 ; >
+    au < testing ; exists ; 2013 ; The British Journal of Criminology: An International Review of Crime and Society Volume 53 ; 53 ; >
     au < manifest ; exists ; 2014 ; The British Journal of Criminology: An International Review of Crime and Society Volume 54 ; 54 ; >
 
     }
@@ -2795,7 +2795,7 @@
     au < finished ; crawling ; 2010 ; The British Journal for the Philosophy of Science Volume 61 ; 61 ; >
     au < finished ; crawling ; 2011 ; The British Journal for the Philosophy of Science Volume 62 ; 62 ; >
     au < finished ; crawling ; 2012 ; The British Journal for the Philosophy of Science Volume 63 ; 63 ; >
-    au < crawling ; exists ; 2013 ; The British Journal for the Philosophy of Science Volume 64 ; 64 ; >
+    au < testing ; exists ; 2013 ; The British Journal for the Philosophy of Science Volume 64 ; 64 ; >
     au < manifest ; exists ; 2014 ; The British Journal for the Philosophy of Science Volume 65 ; 65 ; >
 
     }
