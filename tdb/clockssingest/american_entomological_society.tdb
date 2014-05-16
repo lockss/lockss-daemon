@@ -3,7 +3,7 @@
   publisher <
     name = American Entomological Society ;
     info[contract] = 2014 ; 
-    info[tester] = 0
+    info[tester] = 7
   >
 
   implicit < status ; status2 ; year ; name ; param[volume_name] >
@@ -46,8 +46,8 @@
       au < manifest ; exists ; 2009 ; Transactions of the American Entomological Society Volume 135 ; 135 >
       au < manifest ; exists ; 2010 ; Transactions of the American Entomological Society Volume 136 ; 136 >
       au < manifest ; exists ; 2011 ; Transactions of the American Entomological Society Volume 137 ; 137 >
-      au < wanted ; exists ; 2012 ; Transactions of the American Entomological Society Volume 138 ; 138 >
-      au < wanted ; exists ; 2013 ; Transactions of the American Entomological Society Volume 139 ; 139 >
+      au < testing ; exists ; 2012 ; Transactions of the American Entomological Society Volume 138 ; 138 >
+      au < testing ; exists ; 2013 ; Transactions of the American Entomological Society Volume 139 ; 139 >
       au < expected ; exists ; 2014 ; Transactions of the American Entomological Society Volume 140 ; 140 >
 
     }
