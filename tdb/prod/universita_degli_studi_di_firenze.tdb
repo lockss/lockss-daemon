@@ -14,15 +14,31 @@
     
     rights = openaccess
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    param[base_url] = http://leo.cilea.it/
-    param[journal_id] = jlis
     implicit < status ; year ; name ; volume ; param[year] >
     
-    au < released ; 2010 ; JLIS.it Volume 1 ; 1 ; 2010 >
-    au < released ; 2011 ; JLIS.it Volume 2 ; 2 ; 2011 >
-    au < released ; 2012 ; JLIS.it Volume 3 ; 3 ; 2012 >
-    au < testing ; 2013 ; JLIS.it Volume 4 ; 4 ; 2013 >
-    au < expected ; 2014 ; JLIS.it Volume 5 ; 5 ; 2014 >
+    {
+    
+      param[base_url] = http://leo.cilea.it/
+      param[journal_id] = jlis
+    
+      au < down ; 2010 ; JLIS.it Volume 1 ; 1 ; 2010 >
+      au < down ; 2011 ; JLIS.it Volume 2 ; 2 ; 2011 >
+      au < down ; 2012 ; JLIS.it Volume 3 ; 3 ; 2012 >
+      
+    }
+    
+    {
+    
+      param[base_url] = http://leo.cineca.it/
+      param[journal_id] = jlis
+    
+      au < doNotProcess ; 2010 ; JLIS.it Volume 1 ; 1 ; 2010 >
+      au < doNotProcess ; 2011 ; JLIS.it Volume 2 ; 2 ; 2011 >
+      au < doNotProcess ; 2012 ; JLIS.it Volume 3 ; 3 ; 2012 >
+      au < testing ; 2013 ; JLIS.it Volume 4 ; 4 ; 2013 >
+      au < manifest ; 2014 ; JLIS.it Volume 5 ; 5 ; 2014 >
+
+    }
 
   }
   
