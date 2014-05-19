@@ -979,6 +979,29 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Costume Volume 47 ; 47 > 
 
   }
+  
+    {
+
+    title <
+      name = Costume ;
+      issn = 0590-8876 ;
+      eissn = 1749-6306 ;
+      issnl = 0590-8876 
+    >
+
+    plugin = org.lockss.plugin.atypon.maney.ClockssManeyAtyponPlugin
+    param[base_url] = http://www.maneyonline.com/
+    param[journal_id] = cos 
+    implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
+
+    au < testing ; exists ; 2010 ; Costume Volume 44 ; 44 > 
+    au < testing ; exists ; 2011 ; Costume Volume 45 ; 45 > 
+    au < testing ; exists ; 2012 ; Costume Volume 46 ; 46 > 
+    au < testing ; exists ; 2013 ; Costume Volume 47 ; 47 > 
+
+  }
+  
 
   {
 
@@ -1015,6 +1038,26 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Deafness & Education International Volume 13 ; 13 >  
     au < finished ; crawling ; 2012 ; Deafness & Education International Volume 14 ; 14 >
     au < doNotProcess ; doNotProcess ; 2013 ; Deafness & Education International Volume 15 ; 15 >
+
+  }
+  
+    {
+
+    title <
+      name = Deafness & Education International ;
+      issn = 1464-3154 ;
+      eissn = 1557-069X ;
+      issnl = 1464-3154
+    >
+
+    plugin = org.lockss.plugin.atypon.maney.ClockssManeyAtyponPlugin
+    param[base_url] = http://www.maneyonline.com/
+    param[journal_id] = dei 
+    implicit < status ; status2 ; year ; name ; param[volume_name] >
+
+    au < testing ; exists ; 2011 ; Deafness & Education International Volume 13 ; 13 >  
+    au < testing ; exists ; 2012 ; Deafness & Education International Volume 14 ; 14 >
+    au < testing ; exists ; 2013 ; Deafness & Education International Volume 15 ; 15 >
 
   }
 
@@ -3233,6 +3276,27 @@
     au < finished ; crawling ; 2011 ; Medieval Archaeology Volume 55 ; 55 > 
     au < finished ; crawling ; 2012 ; Medieval Archaeology Volume 56 ; 56 > 
     au < doNotProcess ; doNotProcess ; 2013 ; Medieval Archaeology Volume 57 ; 57 > 
+
+  }
+
+  {
+
+    title <
+      name = Medieval Archaeology ;
+      issn = 0076-6097 ;
+      eissn = 1745-817X ;
+      issnl = 0076-6097 
+    >
+
+    plugin = org.lockss.plugin.atypon.maney.ClockssManeyAtyponPlugin
+    param[base_url] = http://www.maneyonline.com/
+    param[journal_id] = med 
+    implicit < status ; status2 ; year ; name ; param[volume_name] >
+
+    au < testing ; exists ; 2010 ; Medieval Archaeology Volume 54 ; 54 > 
+    au < testing ; exists ; 2011 ; Medieval Archaeology Volume 55 ; 55 > 
+    au < testing ; exists ; 2012 ; Medieval Archaeology Volume 56 ; 56 > 
+    au < testing ; exists ; 2013 ; Medieval Archaeology Volume 57 ; 57 > 
 
   }
 
