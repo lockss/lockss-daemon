@@ -4115,6 +4115,7 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
+      comment[continued_by] = 2329-4906
 
       au < doesNotExist ; doesNotExist ; 0 ; Business Communication Quarterly Volume 31 ; 31 ; >
       au < manifest ; exists ; 1969 ; Business Communication Quarterly Volume 32 ; 32 ; >
@@ -4162,11 +4163,30 @@
       au < finished ; crawling ; 2011 ; Business Communication Quarterly Volume 74 ; 74 ; >
       au < zapped ; finished ; 2012 ; Business Communication Quarterly Volume 75 ; 75 ; >
       au < crawling ; exists ; 2013 ; Business Communication Quarterly Volume 76 ; 76 ; >
-      au < manifest ; exists ; 2014 ; Business Communication Quarterly Volume 77 ; 77 ; >
 
     }
 
   }
+
+    {
+
+      title <
+        name =  Business and Professional Communication Quarterly ;
+        issn = 2329-4906 ;
+        eissn =  2329-9492 ;
+        issnl = 2329-4906
+      >
+
+      {
+        pluginSuffix = ClockssHighWirePlugin
+        param[base_url] = http://bcq.sagepub.com/
+        comment[continues] = 1080-5699
+
+        au < exists ; exists ; 2014 ; Business and Professional Communication Quarterly Volume 77 ; 77 ; >
+
+      }
+
+    }
 
   {
   
@@ -34382,7 +34402,7 @@
   {
 
     title <
-      name = State Politics and Policy Quarterly ;
+      name = State Politics & Policy Quarterly ;
       issn = 1532-4400 ;
       eissn = 1946-1607 
     >
@@ -34393,20 +34413,20 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 2001 ; State Politics and Policy Quarterly Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2002 ; State Politics and Policy Quarterly Volume 2 ; 2 ; >
-      au < manifest ; exists ; 2003 ; State Politics and Policy Quarterly Volume 3 ; 3 ; >
-      au < manifest ; exists ; 2004 ; State Politics and Policy Quarterly Volume 4 ; 4 ; >
-      au < manifest ; exists ; 2005 ; State Politics and Policy Quarterly Volume 5 ; 5 ; >
-      au < manifest ; exists ; 2006 ; State Politics and Policy Quarterly Volume 6 ; 6 ; >
-      au < manifest ; exists ; 2007 ; State Politics and Policy Quarterly Volume 7 ; 7 ; >
-      au < zapped ; finished ; 2008 ; State Politics and Policy Quarterly Volume 8 ; 8 ; >
-      au < zapped ; finished ; 2009 ; State Politics and Policy Quarterly Volume 9 ; 9 ; >
-      au < finished ; crawling ; 2010 ; State Politics and Policy Quarterly Volume 10 ; 10 ; >
-      au < finished ; crawling ; 2011 ; State Politics and Policy Quarterly Volume 11 ; 11 ; >
-      au < finished ; crawling ; 2012 ; State Politics and Policy Quarterly Volume 12 ; 12 ; >
-      au < crawling ; exists ; 2013 ; State Politics and Policy Quarterly Volume 13 ; 13 ; >
-      au < manifest ; exists ; 2014 ; State Politics and Policy Quarterly Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2001 ; State Politics & Policy Quarterly Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2002 ; State Politics & Policy Quarterly Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2003 ; State Politics & Policy Quarterly Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2004 ; State Politics & Policy Quarterly Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2005 ; State Politics & Policy Quarterly Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2006 ; State Politics & Policy Quarterly Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2007 ; State Politics & Policy Quarterly Volume 7 ; 7 ; >
+      au < zapped ; finished ; 2008 ; State Politics & Policy Quarterly Volume 8 ; 8 ; >
+      au < zapped ; finished ; 2009 ; State Politics & Policy Quarterly Volume 9 ; 9 ; >
+      au < finished ; crawling ; 2010 ; State Politics & Policy Quarterly Volume 10 ; 10 ; >
+      au < finished ; crawling ; 2011 ; State Politics & Policy Quarterly Volume 11 ; 11 ; >
+      au < finished ; crawling ; 2012 ; State Politics & Policy Quarterly Volume 12 ; 12 ; >
+      au < crawling ; exists ; 2013 ; State Politics & Policy Quarterly Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2014 ; State Politics & Policy Quarterly Volume 14 ; 14 ; >
 
     }
 
@@ -39645,7 +39665,7 @@
     {
 
       title <
-        name = Canadian Pharmacists Journal  ;
+        name = Canadian Pharmacists Journal ;
         issn = 1715-1635 ;
         eissn = 1913-701X 
       >
@@ -39654,8 +39674,17 @@
     param[base_url] = http://cph.sagepub.com/
     implicit < status ; status2 ; year ; name ; param[volume_name] >
 
-    au < exists ; exists ; 2013 ; Canadian Pharmacists Journal Volume 1 ; 1 >
-    au < expected ; exists ; 2014 ; Canadian Pharmacists Journal Volume 2 ; 2 >
+    au < exists ; exists ; 2004 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 137 ; 137 >
+    au < exists ; exists ; 2005 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 138 ; 138 >
+    au < exists ; exists ; 2006 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 139 ; 139 >
+    au < exists ; exists ; 2007 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 140 ; 140 >
+    au < exists ; exists ; 2008 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 141 ; 141 >
+    au < exists ; exists ; 2009 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 142 ; 142 >
+    au < exists ; exists ; 2010 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 143 ; 143 >
+    au < exists ; exists ; 2011 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 144 ; 144 >
+    au < exists ; exists ; 2012 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 145 ; 145 >
+    au < exists ; exists ; 2013 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 146 ; 146 >
+    au < exists ; exists ; 2014 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 147 ; 147 >
 
     }
 
