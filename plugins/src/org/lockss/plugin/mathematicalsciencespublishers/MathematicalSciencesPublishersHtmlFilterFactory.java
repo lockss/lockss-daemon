@@ -1,10 +1,10 @@
 /*
- * $Id: MathematicalSciencesPublishersHtmlFilterFactory.java,v 1.2 2013-12-20 05:29:57 etenbrink Exp $
+ * $Id: MathematicalSciencesPublishersHtmlFilterFactory.java,v 1.3 2014-05-19 23:22:30 etenbrink Exp $
  */ 
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -52,14 +52,11 @@ public class MathematicalSciencesPublishersHtmlFilterFactory implements FilterFa
                                                String encoding)
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
-        // filter out script
+        // can have non-content changes, icons, copyright, etc
         new TagNameFilter("script"),
-        // filter out table id="masthead-area"
         HtmlNodeFilters.tagWithAttribute("table", "id", "masthead-area"),
-        // filter out table id="footer-area"
         HtmlNodeFilters.tagWithAttribute("table", "id", "footer-area"),
-        // filter out td id="activity-area"
-        // which encloses "Recent Issues & "The Journal" sections
+        // this encloses "Recent Issues & "The Journal" sections which change
         HtmlNodeFilters.tagWithAttribute("td", "id", "activity-area"),
     };
     
