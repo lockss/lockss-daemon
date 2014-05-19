@@ -1,5 +1,5 @@
 /*
- * $Id: TestDiskVoteBlocks.java,v 1.7 2008-07-22 07:17:58 tlipkis Exp $
+ * $Id: TestDiskVoteBlocks.java,v 1.8 2014-05-19 05:39:24 tlipkis Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.*;
 import java.util.*;
 
 import org.lockss.test.LockssTestCase;
+import org.lockss.util.*;
 
 
 public class TestDiskVoteBlocks extends LockssTestCase {
@@ -265,6 +266,22 @@ public class TestDiskVoteBlocks extends LockssTestCase {
       dvb.addVoteBlock(vb);
     }
     return dvb;
+  }
+
+  public void testToString() throws Exception {
+    DiskVoteBlocks dvb = new MyDiskVoteBlocks(tempDir);
+
+    List voteBlockList = V3TestUtils.makeVoteBlockList(3);
+    
+    dvb.addVoteBlock((VoteBlock)voteBlockList.get(0));
+    dvb.addVoteBlock((VoteBlock)voteBlockList.get(1));
+    dvb.addVoteBlock((VoteBlock)voteBlockList.get(2));
+    String str = dvb.toString();
+    assertMatchesRE("VoteBlock: Content, /test-0\\.html, 1 version\\(s\\)",
+		    str);
+    assertMatchesRE("VoteBlock: Content, /test-2\\.html, 1 version\\(s\\)",
+		    str);
+    assertEquals(3, StringUtil.countOccurences(str, "\n"));
   }
 
   class MyDiskVoteBlocks extends DiskVoteBlocks {
