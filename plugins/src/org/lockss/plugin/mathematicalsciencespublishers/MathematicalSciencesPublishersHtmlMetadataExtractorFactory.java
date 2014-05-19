@@ -1,5 +1,5 @@
 /*
- * $Id: MathematicalSciencesPublishersHtmlMetadataExtractorFactory.java,v 1.7 2014-03-07 00:03:46 etenbrink Exp $
+ * $Id: MathematicalSciencesPublishersHtmlMetadataExtractorFactory.java,v 1.8 2014-05-19 23:23:44 etenbrink Exp $
  */
 
 /*
@@ -73,17 +73,23 @@ public class MathematicalSciencesPublishersHtmlMetadataExtractorFactory
     extends JsoupTagExtractorFactory {
   static Logger log = Logger.getLogger(
       MathematicalSciencesPublishersHtmlMetadataExtractorFactory.class);
-
+  
+  static final String CITATION_DOI = "citation_doi";
+  static final String CITATION_TITLE = "citation_title";
+  
+  static final String SCRAPED_DOI = "scraped_doi";
+  static final String SCRAPED_TITLE = "scraped_title";
+  
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
         String contentType)
       throws PluginException {
     return new MathematicalSciencesPublishersHtmlMetadataExtractor(contentType);
   }
-
+  
   public static class MathematicalSciencesPublishersHtmlMetadataExtractor
     extends JsoupTagExtractor {
-
+    
     public MathematicalSciencesPublishersHtmlMetadataExtractor(String contentType) {
       // TODO  XXX  replace text/html with contentType parameter
       // XXX the JsoupTagExtractor only allows "text/html" || "text/xml" || "application/xml"
@@ -95,20 +101,20 @@ public class MathematicalSciencesPublishersHtmlMetadataExtractorFactory
     static {
       tagMap.put("citation_journal_title", MetadataField.FIELD_PUBLICATION_TITLE);
       tagMap.put("citation_publisher", MetadataField.FIELD_PUBLISHER);
-      tagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
+      tagMap.put(CITATION_TITLE, MetadataField.FIELD_ARTICLE_TITLE);
       tagMap.put("citation_volume", MetadataField.FIELD_VOLUME);
       tagMap.put("citation_issue", MetadataField.FIELD_ISSUE);
       tagMap.put("citation_firstpage", MetadataField.FIELD_START_PAGE);
       tagMap.put("citation_lastpage", MetadataField.FIELD_END_PAGE);
-      tagMap.put("citation_doi", MetadataField.FIELD_DOI);
+      tagMap.put(CITATION_DOI, MetadataField.FIELD_DOI);
       tagMap.put("citation_issn", MetadataField.FIELD_ISSN);
       tagMap.put("citation_publication_date", MetadataField.FIELD_DATE);
       tagMap.put("citation_author",
           new MetadataField(MetadataField.FIELD_AUTHOR,
                             MetadataField.splitAt(",")));
       tagMap.put("citation_pdf_url", MetadataField.FIELD_ACCESS_URL);
-      tagMap.put("scraped_doi", MetadataField.FIELD_DOI);
-      tagMap.put("scraped_title", MetadataField.FIELD_ARTICLE_TITLE);
+      tagMap.put(SCRAPED_DOI, MetadataField.FIELD_DOI);
+      tagMap.put(SCRAPED_TITLE, MetadataField.FIELD_ARTICLE_TITLE);
     }
     
     private static Pattern whiteSpacePat = Pattern.compile("\\s+");
@@ -118,7 +124,6 @@ public class MathematicalSciencesPublishersHtmlMetadataExtractorFactory
     private static Pattern patternTitleAuth = Pattern.compile(
         "<div class=\"title\">(.*?)</div>", 
         Pattern.CASE_INSENSITIVE);
-
     
     @Override
     public ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
@@ -126,8 +131,8 @@ public class MathematicalSciencesPublishersHtmlMetadataExtractorFactory
       ArticleMetadata am = super.extract(target, cu);
       
       // attempt to get doi. etc from xhtml file
-      if ((am.getRaw("citation_doi") == null) || 
-          (am.getRaw("citation_title") == null)) {
+      if ((am.getRaw(CITATION_DOI) == null) || 
+          (am.getRaw(CITATION_TITLE) == null)) {
         
         // TODO investigate using Jsoup to extract the DOI and title
         // rather than read the file
@@ -155,21 +160,21 @@ public class MathematicalSciencesPublishersHtmlMetadataExtractorFactory
           }
           
           // regexes to extract DOI, etc. from articles
-          if (am.getRaw("citation_doi") == null) {
+          if (am.getRaw(CITATION_DOI) == null) {
             // find DOI with optional anchor tag
             matcher = patternDoi.matcher(colContent);
             if (matcher.find()) {
-              putValue(am, "scraped_doi", matcher.group(1).trim());
+              putValue(am, SCRAPED_DOI, matcher.group(1).trim());
             }
             else {
               log.debug("No DOI found in content");
             }
           }
-          if (am.getRaw("citation_title") == null) {
+          if (am.getRaw(CITATION_TITLE) == null) {
             // find article title 
             matcher = patternTitleAuth.matcher(colContent);
             if (matcher.find()) {
-              putValue(am, "scraped_title", matcher.group(1).trim());
+              putValue(am, SCRAPED_TITLE, matcher.group(1).trim());
             }
             else {
               log.debug("No ARTICLE_TITLE found in content");
