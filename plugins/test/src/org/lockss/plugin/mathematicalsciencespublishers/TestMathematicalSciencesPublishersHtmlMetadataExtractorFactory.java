@@ -1,10 +1,10 @@
 /*
- * $Id: TestMathematicalSciencesPublishersHtmlMetadataExtractorFactory.java,v 1.6 2013-12-23 04:08:03 etenbrink Exp $
+ * $Id: TestMathematicalSciencesPublishersHtmlMetadataExtractorFactory.java,v 1.7 2014-05-19 23:17:58 etenbrink Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,10 +32,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.mathematicalsciencespublishers;
 
-import java.io.InputStream;
 import java.util.*;
 
-import org.apache.commons.io.IOUtils;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
