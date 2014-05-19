@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,11 +24,11 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>3</string>
+        <string>4</string>
       </entry>
       <entry>
         <string>Substance</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
     </map>
   </entry>
@@ -51,12 +51,21 @@
         <string>au_title</string>
         <string>"%s%s", base_url, journal_id</string>
       </entry>
+      <entry>
+        <string>au_issue</string>
+        <string>"%s%s/%s/%s-%s/index.xhtml", base_url, journal_id, year, volume_name, issue</string>
+      </entry>
+      <entry>
+        <string>au_article</string>
+        <string>"%s%s/%s/%s-%s/%s.xhtml", base_url, journal_id, year, volume_name, issue, page</string>
+      </entry>
     </map>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
       <string>1,"^%s.*[.](bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url</string>
+      <string>2,"^%s%s/%d/[^/]+/f[^/]+[.]xhtml", base_url, journal_id, year</string>
       <string>1,"^%s%s/%d/", base_url, journal_id, year</string>
     </list>
   </entry>
@@ -95,7 +104,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%s%s/%d/[^.]+[.](pdf|x?html?)$", base_url, journal_id, year</string>
+      <string>"^%s%s/%d/[^/]+/(?:[^/]+[.]pdf|[^bfi][^/]+[.]xhtml)$", base_url, journal_id, year</string>
     </list>
   </entry>
   <entry>
