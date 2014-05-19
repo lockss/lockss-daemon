@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.177 2014-05-14 04:12:16 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.177.2.1 2014-05-19 05:38:06 tlipkis Exp $
  */
 
 /*
@@ -1514,22 +1514,22 @@ public class V3Poller extends BasePoll {
    * Add any symmetric hash values to the corresponding VoteBlock.
    * See V3Voter.blockHashComplete.
    */
-  private void recordSymmetricHashes(HashBlock hashBlock) {
+  void recordSymmetricHashes(HashBlock hashBlock) {
     // XXX DSHR it would be good if this were a utility. Perhaps
     // XXX DSHR pass in the VoteBlocks object to which the VoteBlock
     // XXX DSHR should be added and the range of indices in the HashBlock
     // Add each hash block version to this vote block.
     if (symmetricPollSize() > 0) {
-      Iterator hashVersionIter = hashBlock.versionIterator();
-      while(hashVersionIter.hasNext()) {
-	HashBlock.Version ver = (HashBlock.Version)hashVersionIter.next();
-	HashResult plainDigest = getPlainHash(ver);
-	for (int i = 0; i < symmetricPollSize(); i++) {
-	  HashResult symmetricDigest = getSymmetricHash(ver, i);
+      for (int partIx = 0; partIx < symmetricPollSize(); partIx++) {
+	VoteBlock vb = new VoteBlock(hashBlock.getUrl());
+	for (Iterator hashVersionIter = hashBlock.versionIterator();
+	     hashVersionIter.hasNext() ; ) {
+	  HashBlock.Version ver = (HashBlock.Version)hashVersionIter.next();
+	  HashResult plainDigest = getPlainHash(ver);
+	  HashResult symmetricDigest = getSymmetricHash(ver, partIx);
 	  if (symmetricDigest == null) {
 	    throw new ShouldNotHappenException("null hash for symmetric poll");
 	  }
-	  VoteBlock vb = new VoteBlock(hashBlock.getUrl());
 	  vb.addVersion(ver.getFilteredOffset(),
 			ver.getFilteredLength(),
 			ver.getUnfilteredOffset(),
@@ -1537,20 +1537,20 @@ public class V3Poller extends BasePoll {
 			plainDigest.getBytes(),
 			symmetricDigest.getBytes(),
 			ver.getHashError() != null);
-	  // Find this voter's hash block container
-	  ParticipantUserData ud = symmetricParticipants.get(i);
-	  VoteBlocks blocks = ud.getSymmetricVoteBlocks();
-	  try {
-	    blocks.addVoteBlock(vb);
-	  } catch (IOException ex) {
-	    log.error("IO Exception trying to add vote block " +
-		      vb.getUrl() + " in poll " + getKey(), ex);
-	    if (++blockErrorCount > maxBlockErrorCount) {
-	      log.critical("Too many errors; aborting poll " + getKey());
-	      // XXX BH No idea which voters have caused the errors;
-	      // abort the whole poll.
-	      abortPoll(); // XXX DSHR not a good response - abort voter
-	    }
+	}
+	// Find this voter's hash block container
+	ParticipantUserData ud = symmetricParticipants.get(partIx);
+	VoteBlocks blocks = ud.getSymmetricVoteBlocks();
+	try {
+	  blocks.addVoteBlock(vb);
+	} catch (IOException ex) {
+	  log.error("IO Exception trying to add vote block " +
+		    vb.getUrl() + " in poll " + getKey(), ex);
+	  if (++blockErrorCount > maxBlockErrorCount) {
+	    log.critical("Too many errors; aborting poll " + getKey());
+	    // XXX BH No idea which voters have caused the errors;
+	    // abort the whole poll.
+	    abortPoll(); // XXX DSHR not a good response - abort voter
 	  }
 	}
       }
