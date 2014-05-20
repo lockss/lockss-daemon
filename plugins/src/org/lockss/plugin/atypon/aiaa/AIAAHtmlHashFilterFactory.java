@@ -1,5 +1,5 @@
 /*
- * $Id: AIAAHtmlHashFilterFactory.java,v 1.5 2014-05-05 19:07:30 alexandraohlson Exp $
+ * $Id: AIAAHtmlHashFilterFactory.java,v 1.6 2014-05-20 22:18:28 alexandraohlson Exp $
  */
 
 /*
@@ -70,6 +70,12 @@ public class AIAAHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
         // these mark out sections that may or may not get filled and we 
         // were caught by a system maintenance temporary message
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget type-ad-placeholder"),
+        // on a full text page, each section has pulldown  and prev/next arrows
+        //which adds CITATION once the article has citations
+        HtmlNodeFilters.tagWithAttribute("table", "class", "sectionHeading"),
+        // and at the top "sections:" pulldown there it is harder to identify
+        // seems to be <option value="#citart1"..>
+        HtmlNodeFilters.tagWithAttributeRegex("option", "value", "#citart"),
         
         // When the <li> item has the text "Cited By" then it should be removed 
         new NodeFilter() {
@@ -94,3 +100,9 @@ public class AIAAHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
 
 }
 
+// when initial citations are added, the drop down selection menu adds the option
+// it might stabilize over time, but might as well hash out
+//<option value="#_i33">Acknowledgments</option><option value="#_i34">References</option><option value="#citart1">CITING ARTICLES</option></select></form>
+
+// and there might be a link to the reference (prev/next section)
+//<a href="#citart1"><img src="/templates/jsp/images/arrow_down.gif" width="11" height="9" border="0" hspace="5" alt="Next section"></img></a></td>

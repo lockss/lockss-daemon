@@ -1,5 +1,5 @@
 /*
- * $Id: TestAIAAHtmlHashFilterFactory.java,v 1.5 2014-05-05 19:07:30 alexandraohlson Exp $
+ * $Id: TestAIAAHtmlHashFilterFactory.java,v 1.6 2014-05-20 22:18:28 alexandraohlson Exp $
  */
 /*
 
@@ -153,6 +153,48 @@ public class TestAIAAHtmlHashFilterFactory extends LockssTestCase {
           "</li>" +
           "</ul>";
       
+public static final String sectionsPulldown =  
+  "<table width=\"50%\" cellpadding=\"0\" cellspacing=\"0\"><tr>" +
+  "<td nowrap=\"\" height=\"16\" width=\"40\" align=\"left\">" +
+  "<span class=\"fulltext\">Sections:</span> </td>" +
+  "<td nowrap=\"\" height=\"16\" width=\"92\" align=\"left\" valign=\"middle\">" +
+  "<form style=\"margin-bottom:0\">" +
+  "<select name=\"select23\" class=\"fulltextdd\" onChange=\"GoTo(this, 'self')\">" +
+  "<option value=\"#\" selected=\"\">Choose</option>" +
+  "<option value=\"#_i16\">References</option>" +
+  "<option value=\"#citart1\">CITING ARTICLES</option></select></form>" +
+  "</td></tr></table>";
+public static final String sectionsPulldownFiltered =  
+"<table width=\"50%\" cellpadding=\"0\" cellspacing=\"0\"><tr>" +
+"<td nowrap=\"\" height=\"16\" width=\"40\" align=\"left\">" +
+"<span class=\"fulltext\">Sections:</span> </td>" +
+"<td nowrap=\"\" height=\"16\" width=\"92\" align=\"left\" valign=\"middle\">" +
+"<form style=\"margin-bottom:0\">" +
+"<select name=\"select23\" class=\"fulltextdd\" onChange=\"GoTo(this, 'self')\">" +
+"<option value=\"#\" selected=\"\">Choose</option>" +
+"<option value=\"#_i16\">References</option>" +
+"</select></form>" +
+"</td></tr></table>";
+
+public static final String sectionHeading =
+  "<div class=\"sectionHeadingContainer\"><div class=\"sectionHeadingContainer2\">" +
+  "<table class=\"sectionHeading\" width=\"100%\" cellpadding=\"0\" cellspacing=\"0\"><tr>" +
+  "<th align=\"left\" valign=\"middle\" width=\"95%\">I. Introduction</th>" +
+  "<td nowrap=\"\" class=\"sectionHeading\" align=\"right\">" +
+  "<form style=\"margin-bottom:0\">" +
+  "<select name=\"select23\" class=\"fulltextdd\" onChange=\"GoTo(this, 'self')\">" +
+  "<option value=\"\" selected=\"\">Choose</option>" +
+  "<option value=\"#\">Top of page</option>" +
+  "<option value=\"#_i16\">References</option>" +
+  "<option value=\"#citart1\">CITING ARTICLES</option></select></form></td>" +
+  "<td height=\"16\" width=\"16\" nowrap=\"\">" +
+  "<a href=\"#_i3\">" +
+  "<img src=\"/templates/jsp/images/arrow_down.gif\" alt=\"Next section\"></img>" +
+  "</a></td></tr></table></div></div>";
+public static final String sectionHeadingFiltered =
+"<div class=\"sectionHeadingContainer\"><div class=\"sectionHeadingContainer2\">" +
+"</div></div>";
+
   
   public void testFiltering() throws Exception {
     InputStream inA;
@@ -181,6 +223,14 @@ public class TestAIAAHtmlHashFilterFactory extends LockssTestCase {
     inA = fact.createFilteredInputStream(mau, new StringInputStream(listItemCitedBy),
         ENC);
     assertEquals(listItemCitedByFiltered,StringUtil.fromInputStream(inA));
+
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(sectionsPulldown),
+        ENC);
+    assertEquals(sectionsPulldownFiltered,StringUtil.fromInputStream(inA));
+
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(sectionHeading),
+        ENC);
+    assertEquals(sectionHeadingFiltered,StringUtil.fromInputStream(inA));
  
   }
 }
