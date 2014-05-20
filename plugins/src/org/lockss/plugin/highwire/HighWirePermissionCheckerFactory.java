@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePermissionCheckerFactory.java,v 1.3 2014-05-15 22:44:49 etenbrink Exp $
+ * $Id: HighWirePermissionCheckerFactory.java,v 1.4 2014-05-20 01:47:19 etenbrink Exp $
  */
 
 /*
@@ -70,7 +70,8 @@ public class HighWirePermissionCheckerFactory
       // FIXME super_checkPermission should be super.checkPermission when 
       // probeUrl and au are visible to child class
       boolean ret = super.checkPermission(pHelper, inputReader, permissionUrl);
-      if (ret) {
+      logger.debug3("returned: " + ret + " probeUrl:" + probeUrl);
+      if (ret && probeUrl != null) {
         Matcher urlMat = H10_PATTERN.matcher(probeUrl);
         if (!urlMat.matches()) {
           logger.siteError(" ");
