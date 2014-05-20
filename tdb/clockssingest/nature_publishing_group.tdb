@@ -29,7 +29,7 @@
     au < finished ; crawling ; 2010 ; Acta Pharmacologica Sinica Volume 31 ; 2010 ; 31 >
     au < finished ; crawling ; 2011 ; Acta Pharmacologica Sinica Volume 32 ; 2011 ; 32 >
     au < finished ; crawling ; 2012 ; Acta Pharmacologica Sinica Volume 33 ; 2012 ; 33 >
-    au < testing ; exists ; 2013 ; Acta Pharmacologica Sinica Volume 34 ; 2013 ; 34 >
+    au < crawling ; exists ; 2013 ; Acta Pharmacologica Sinica Volume 34 ; 2013 ; 34 >
     au < manifest ; exists ; 2014 ; Acta Pharmacologica Sinica Volume 35 ; 2014 ; 35 >
 
   }
@@ -62,7 +62,7 @@
     au < finished ; crawling ; 2011 ; American Journal of Gastroenterology Volume 106 ; 2011 ; 106 >
     au < finished ; crawling ; 2012 ; American Journal of Gastroenterology Volume 107 ; 2012 ; 107 >
     au < down ; exists ; 2013 ; American Journal of Gastroenterology Volume 107 [to delete] ; 2013 ; 107 >
-    au < testing ; exists ; 2013 ; American Journal of Gastroenterology Volume 108 ; 2013 ; 108 >
+    au < crawling ; exists ; 2013 ; American Journal of Gastroenterology Volume 108 ; 2013 ; 108 >
     au < manifest ; exists ; 2014 ; American Journal of Gastroenterology Volume 109 ; 2014 ; 109 >
 
   }
@@ -195,7 +195,7 @@
     au < zapped ; finished ; 2010 ; Bone Marrow Transplantation Volume 46 [superseded] ; 2010 ; 46 >
     au < finished ; crawling ; 2011 ; Bone Marrow Transplantation Volume 46 ; 2011 ; 46 >
     au < finished ; crawling ; 2012 ; Bone Marrow Transplantation Volume 47 ; 2012 ; 47 >
-    au < testing ; exists ; 2013 ; Bone Marrow Transplantation Volume 48 ; 2013 ; 48 >
+    au < crawling ; exists ; 2013 ; Bone Marrow Transplantation Volume 48 ; 2013 ; 48 >
     au < manifest ; exists ; 2014 ; Bone Marrow Transplantation Volume 49 ; 2014 ; 49 >
 
   }
@@ -321,7 +321,7 @@
     au < crawling ; exists ; 2011 ; British Dental Journal Volume 211 ; 2011 ; 211 >
     au < finished ; crawling ; 2012 ; British Dental Journal Volume 212 ; 2012 ; 212 >
     au < finished ; crawling ; 2012 ; British Dental Journal Volume 213 ; 2012 ; 213 >
-    au < testing ; exists ; 2013 ; British Dental Journal Volume 214 ; 2013 ; 214 >
+    au < crawling ; exists ; 2013 ; British Dental Journal Volume 214 ; 2013 ; 214 >
     au < expected ; exists ; 2014 ; British Dental Journal Volume 215 ; 2014 ; 215 >
 
   }
@@ -443,8 +443,8 @@
     au < finished ; crawling ; 2011 ; British Journal of Cancer Volume 105 ; 2011 ; 105 >
     au < finished ; crawling ; 2012 ; British Journal of Cancer Volume 106 ; 2012 ; 106 >
     au < finished ; crawling ; 2012 ; British Journal of Cancer Volume 107 ; 2012 ; 107 >
-    au < ready ; exists ; 2013 ; British Journal of Cancer Volume 108 ; 2013 ; 108 >
-    au < ready ; exists ; 2013 ; British Journal of Cancer Volume 109 ; 2013 ; 109 >
+    au < crawling ; exists ; 2013 ; British Journal of Cancer Volume 108 ; 2013 ; 108 >
+    au < crawling ; exists ; 2013 ; British Journal of Cancer Volume 109 ; 2013 ; 109 >
     au < manifest ; exists ; 2014 ; British Journal of Cancer Volume 110 ; 2014 ; 110 >
 
   }
@@ -475,7 +475,7 @@
     au < finished ; crawling ; 2011 ; Cancer Gene Therapy Volume 18 ; 2011 ; 18 >
     au < finished ; crawling ; 2012 ; Cancer Gene Therapy Volume 19 ; 2012 ; 19 >
     au < down ; exists ; 2013 ; Cancer Gene Therapy Volume 19 [to delete] ; 2013 ; 19 >
-    au < testing ; exists ; 2013 ; Cancer Gene Therapy Volume 20 ; 2013 ; 20 >
+    au < crawling ; exists ; 2013 ; Cancer Gene Therapy Volume 20 ; 2013 ; 20 >
     au < manifest ; exists ; 2014 ; Cancer Gene Therapy Volume 21 ; 2014 ; 21 >
 
   }
