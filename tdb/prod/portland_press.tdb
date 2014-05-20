@@ -811,7 +811,6 @@ comment[bj1] = no permission from publisher
     
     comment[notReady_V118] = 500 http://www.clinsci.org/cs/118/cs1180411.htm  
     comment[v123] = 401 not authorized on content15 http://www.clinsci.org/cs/ev/123/0073/cs1230073_evtext03.htm 
-    comment[v124] = variations for authors' names, esp special characters.
 
     au < released ; 1979 ; Clinical Science Volume 56 ; 056 >
     au < released ; 1979 ; Clinical Science Volume 57 ; 057 >
@@ -879,9 +878,9 @@ comment[bj1] = no permission from publisher
     au < released ; 2010 ; Clinical Science Volume 119 ; 119 >
     au < released ; 2011 ; Clinical Science Volume 120 ; 120 >
     au < released ; 2011 ; Clinical Science Volume 121 ; 121 >
-    au < testing ; 2012 ; Clinical Science Volume 122 ; 122 >
+    au < ready ; 2012 ; Clinical Science Volume 122 ; 122 >
     au < doNotProcess ; 2012 ; Clinical Science Volume 123 ; 123 >
-    au < notReady ; 2013 ; Clinical Science Volume 124 ; 124 >
+    au < ready ; 2013 ; Clinical Science Volume 124 ; 124 >
     au < ready ; 2013 ; Clinical Science Volume 125 ; 125 >
     au < doNotProcess ; 2014 ; Clinical Science Volume 126 ; 126 >
     au < doNotProcess ; 2014 ; Clinical Science Volume 127 ; 127 >
