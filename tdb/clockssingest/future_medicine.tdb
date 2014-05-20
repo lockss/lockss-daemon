@@ -27,7 +27,7 @@
     au < manifest ; exists ; 2010 ; Aging Health Volume 6 ; 6 >
     au < manifest ; exists ; 2011 ; Aging Health Volume 7 ; 7 >
     au < manifest ; exists ; 2012 ; Aging Health Volume 8 ; 8 >
-    au < testing ; exists ; 2013 ; Aging Health Volume 9 ; 9 >
+    au < crawling ; exists ; 2013 ; Aging Health Volume 9 ; 9 >
     au < expected ; exists ; 2014 ; Aging Health Volume 10 ; 10 >
     
   }
@@ -47,7 +47,7 @@
     au < manifest ; exists ; 2010 ; Biomarkers in Medicine Volume 4 ; 4 >
     au < manifest ; exists ; 2011 ; Biomarkers in Medicine Volume 5 ; 5 >
     au < manifest ; exists ; 2012 ; Biomarkers in Medicine Volume 6 ; 6 >
-    au < testing ; exists ; 2013 ; Biomarkers in Medicine Volume 7 ; 7 >
+    au < crawling ; exists ; 2013 ; Biomarkers in Medicine Volume 7 ; 7 >
     au < manifest ; exists ; 2014 ; Biomarkers in Medicine Volume 8 ; 8 >
    
   }
@@ -62,7 +62,7 @@
     param[journal_id] = bmt
 
     au < manifest ; exists ; 2012 ; Breast Cancer Management Volume 1 ; 1 >
-    au < testing ; exists ; 2013 ; Breast Cancer Management Volume 2 ; 2 >
+    au < crawling ; exists ; 2013 ; Breast Cancer Management Volume 2 ; 2 >
     au < manifest ; exists ; 2014 ; Breast Cancer Management Volume 3 ; 3 >
   
   }
@@ -97,7 +97,7 @@
     au < manifest ; exists ; 2010 ; Clinical Lipidology Volume 5 ; 5 >
     au < manifest ; exists ; 2011 ; Clinical Lipidology Volume 6 ; 6 >
     au < manifest ; exists ; 2012 ; Clinical Lipidology Volume 7 ; 7 >
-    au < testing ; exists ; 2013 ; Clinical Lipidology Volume 8 ; 8 >
+    au < crawling ; exists ; 2013 ; Clinical Lipidology Volume 8 ; 8 >
     au < manifest ; exists ; 2014 ; Clinical Lipidology Volume 9 ; 9 >
     
   }
@@ -134,7 +134,7 @@
     param[journal_id] = cpr
 
     au < manifest ; exists ; 2012 ; Clinical Practice Volume 9 ; 9 >
-    au < testing ; exists ; 2013 ; Clinical Practice Volume 10 ; 10 >
+    au < crawling ; exists ; 2013 ; Clinical Practice Volume 10 ; 10 >
     au < manifest ; exists ; 2014 ; Clinical Practice Volume 11 ; 11 >
     
   }
@@ -149,7 +149,7 @@
     param[journal_id] = cns
 
     au < manifest ; exists ; 2012 ; CNS Oncology Volume 1 ; 1 >
-    au < testing ; exists ; 2013 ; CNS Oncology Volume 2 ; 2 >
+    au < crawling ; exists ; 2013 ; CNS Oncology Volume 2 ; 2 >
     au < manifest ; exists ; 2014 ; CNS Oncology Volume 3 ; 3 >
     
   }
@@ -164,7 +164,7 @@
     param[journal_id] = crc
 
     au < manifest ; exists ; 2012 ; Colorectal Cancer Volume 1 ; 1 >
-    au < testing ; exists ; 2013 ; Colorectal Cancer Volume 2 ; 2 >
+    au < crawling ; exists ; 2013 ; Colorectal Cancer Volume 2 ; 2 >
     au < manifest ; exists ; 2014 ; Colorectal Cancer Volume 3 ; 3 >
     
   }
@@ -181,7 +181,7 @@
 
     au < manifest ; exists ; 2011 ; Diabetes Management Volume 1 ; 1 >
     au < manifest ; exists ; 2012 ; Diabetes Management Volume 2 ; 2 >
-    au < testing ; exists ; 2013 ; Diabetes Management Volume 3 ; 3 >
+    au < crawling ; exists ; 2013 ; Diabetes Management Volume 3 ; 3 >
     au < manifest ; exists ; 2014 ; Diabetes Management Volume 4 ; 4 >
   
   }
@@ -199,7 +199,7 @@
     au < manifest ; exists ; 2010 ; Epigenomics Volume 2 ; 2 >
     au < manifest ; exists ; 2011 ; Epigenomics Volume 3 ; 3 >
     au < crawling ; exists ; 2012 ; Epigenomics Volume 4 ; 4 >
-    au < testing ; exists ; 2013 ; Epigenomics Volume 5 ; 5 >
+    au < crawling ; exists ; 2013 ; Epigenomics Volume 5 ; 5 >
     au < manifest ; exists ; 2014 ; Epigenomics Volume 6 ; 6 >
      
   }
@@ -222,7 +222,7 @@
     au < manifest ; exists ; 2010 ; Future Cardiology Volume 6 ; 6 >
     au < manifest ; exists ; 2011 ; Future Cardiology Volume 7 ; 7 >
     au < crawling ; exists ; 2012 ; Future Cardiology Volume 8 ; 8 >
-    au < testing ; exists ; 2013 ; Future Cardiology Volume 9 ; 9 >
+    au < crawling ; exists ; 2013 ; Future Cardiology Volume 9 ; 9 >
     au < manifest ; exists ; 2014 ; Future Cardiology Volume 10 ; 10 >
     
   }
@@ -243,7 +243,7 @@
     au < manifest ; exists ; 2010 ; Future Microbiology Volume 5 ; 5 >
     au < manifest ; exists ; 2011 ; Future Microbiology Volume 6 ; 6 >
     au < crawling ; exists ; 2012 ; Future Microbiology Volume 7 ; 7 >
-    au < testing ; exists ; 2013 ; Future Microbiology Volume 8 ; 8 >
+    au < crawling ; exists ; 2013 ; Future Microbiology Volume 8 ; 8 >
     au < manifest ; exists ; 2014 ; Future Microbiology Volume 9 ; 9 >
     
   }
@@ -265,7 +265,7 @@
     au < manifest ; exists ; 2010 ; Future Neurology Volume 5 ; 5 >
     au < manifest ; exists ; 2011 ; Future Neurology Volume 6 ; 6 >
     au < manifest ; exists ; 2012 ; Future Neurology Volume 7 ; 7 >
-    au < testing ; exists ; 2013 ; Future Neurology Volume 8 ; 8 >
+    au < crawling ; exists ; 2013 ; Future Neurology Volume 8 ; 8 >
     au < manifest ; exists ; 2014 ; Future Neurology Volume 9 ; 9 >
     
   }
@@ -288,7 +288,7 @@
     au < manifest ; exists ; 2010 ; Future Oncology Volume 6 ; 6 >
     au < manifest ; exists ; 2011 ; Future Oncology Volume 7 ; 7 >
     au < manifest ; exists ; 2012 ; Future Oncology Volume 8 ; 8 >
-    au < testing ; exists ; 2013 ; Future Oncology Volume 9 ; 9 >
+    au < crawling ; exists ; 2013 ; Future Oncology Volume 9 ; 9 >
     au < manifest ; exists ; 2014 ; Future Oncology Volume 10 ; 10 >
     
   }
@@ -359,7 +359,7 @@
     au < manifest ; exists ; 2010 ; Imaging in Medicine Volume 2 ; 2 >
     au < manifest ; exists ; 2011 ; Imaging in Medicine Volume 3 ; 3 >
     au < manifest ; exists ; 2012 ; Imaging in Medicine Volume 4 ; 4 >
-    au < testing ; exists ; 2013 ; Imaging in Medicine Volume 5 ; 5 >
+    au < crawling ; exists ; 2013 ; Imaging in Medicine Volume 5 ; 5 >
     au < manifest ; exists ; 2014 ; Imaging in Medicine Volume 6 ; 6 >
     
   }
@@ -413,7 +413,7 @@
     au < manifest ; exists ; 2010 ; International Journal of Clinical Rheumatology Volume 5 ; 5 >
     au < manifest ; exists ; 2011 ; International Journal of Clinical Rheumatology Volume 6 ; 6 >
     au < manifest ; exists ; 2012 ; International Journal of Clinical Rheumatology Volume 7 ; 7 >
-    au < testing ; exists ; 2013 ; International Journal of Clinical Rheumatology Volume 8 ; 8 >
+    au < crawling ; exists ; 2013 ; International Journal of Clinical Rheumatology Volume 8 ; 8 >
     au < manifest ; exists ; 2014 ; International Journal of Clinical Rheumatology Volume 9 ; 9 >
     
   }
@@ -428,7 +428,7 @@
     param[journal_id] = ijh
 
     au < manifest ; exists ; 2012 ; International Journal of Hematologic Oncology Volume 1 ; 1 >
-    au < testing ; exists ; 2013 ; International Journal of Hematologic Oncology Volume 2 ; 2 >
+    au < crawling ; exists ; 2013 ; International Journal of Hematologic Oncology Volume 2 ; 2 >
     au < manifest ; exists ; 2014 ; International Journal of Hematologic Oncology Volume 3 ; 3 >
     
   }
@@ -447,7 +447,7 @@
     au < manifest ; exists ; 2010 ; Interventional Cardiology Volume 2 ; 2 >
     au < manifest ; exists ; 2011 ; Interventional Cardiology Volume 3 ; 3 >
     au < manifest ; exists ; 2012 ; Interventional Cardiology Volume 4 ; 4 >
-    au < testing ; exists ; 2013 ; Interventional Cardiology Volume 5 ; 5 >
+    au < crawling ; exists ; 2013 ; Interventional Cardiology Volume 5 ; 5 >
     au < manifest ; exists ; 2014 ; Interventional Cardiology Volume 6 ; 6 >
     
   }
@@ -462,7 +462,7 @@
     param[journal_id] = cer
 
     au < manifest ; exists ; 2012 ; Journal of Comparative Effectiveness Research Volume 1 ; 1 >
-    au < testing ; exists ; 2013 ; Journal of Comparative Effectiveness Research Volume 2 ; 2 >
+    au < crawling ; exists ; 2013 ; Journal of Comparative Effectiveness Research Volume 2 ; 2 >
     au < manifest ; exists ; 2014 ; Journal of Comparative Effectiveness Research Volume 3 ; 3 >
     
   }
@@ -477,7 +477,7 @@
     param[journal_id] = lmt
 
     au < manifest ; exists ; 2012 ; Lung Cancer Management Volume 1 ; 1 >
-    au < testing ; exists ; 2013 ; Lung Cancer Management Volume 2 ; 2 >
+    au < crawling ; exists ; 2013 ; Lung Cancer Management Volume 2 ; 2 >
     au < manifest ; exists ; 2014 ; Lung Cancer Management Volume 3 ; 3 >
     
   }
@@ -499,7 +499,7 @@
     au < manifest ; exists ; 2010 ; Nanomedicine Volume 5 ; 5 >
     au < manifest ; exists ; 2011 ; Nanomedicine Volume 6 ; 6 >
     au < manifest ; exists ; 2012 ; Nanomedicine Volume 7 ; 7 >
-    au < testing ; exists ; 2013 ; Nanomedicine Volume 8 ; 8 >
+    au < crawling ; exists ; 2013 ; Nanomedicine Volume 8 ; 8 >
     au < manifest ; exists ; 2014 ; Nanomedicine Volume 9 ; 9 >
     
   }
@@ -516,7 +516,7 @@
 
     au < manifest ; exists ; 2011 ; Neurodegenerative Disease Management Volume 1 ; 1 >
     au < manifest ; exists ; 2012 ; Neurodegenerative Disease Management Volume 2 ; 2 >
-    au < testing ; exists ; 2013 ; Neurodegenerative Disease Management Volume 3 ; 3 >
+    au < crawling ; exists ; 2013 ; Neurodegenerative Disease Management Volume 3 ; 3 >
     au < manifest ; exists ; 2014 ; Neurodegenerative Disease Management Volume 4 ; 4 >
 
   }
@@ -532,7 +532,7 @@
 
     au < manifest ; exists ; 2011 ; Neuropsychiatry Volume 1 ; 1 >
     au < manifest ; exists ; 2012 ; Neuropsychiatry Volume 2 ; 2 >
-    au < testing ; exists ; 2013 ; Neuropsychiatry Volume 3 ; 3 >
+    au < crawling ; exists ; 2013 ; Neuropsychiatry Volume 3 ; 3 >
     au < manifest ; exists ; 2014 ; Neuropsychiatry Volume 4 ; 4 >
     
   }
@@ -548,7 +548,7 @@
 
     au < manifest ; exists ; 2011 ; Pain Management Volume 1 ; 1 >
     au < manifest ; exists ; 2012 ; Pain Management Volume 2 ; 2 >
-    au < testing ; exists ; 2013 ; Pain Management Volume 3 ; 3 >
+    au < crawling ; exists ; 2013 ; Pain Management Volume 3 ; 3 >
     au < manifest ; exists ; 2014 ; Pain Management Volume 4 ; 4 >
     
   }
@@ -590,7 +590,7 @@
     au < manifest ; exists ; 2010 ; Personalized Medicine Volume 7 ; 7 >
     au < manifest ; exists ; 2011 ; Personalized Medicine Volume 8 ; 8 >
     au < manifest ; exists ; 2012 ; Personalized Medicine Volume 9 ; 9 >
-    au < testing ; exists ; 2013 ; Personalized Medicine Volume 10 ; 10 >
+    au < crawling ; exists ; 2013 ; Personalized Medicine Volume 10 ; 10 >
     au < manifest ; exists ; 2014 ; Personalized Medicine Volume 11 ; 11 >
     
   }
@@ -618,7 +618,7 @@
     au < manifest ; exists ; 2010 ; Pharmacogenomics Volume 11 ; 11 >
     au < manifest ; exists ; 2011 ; Pharmacogenomics Volume 12 ; 12 >
     au < manifest ; exists ; 2012 ; Pharmacogenomics Volume 13 ; 13 >
-    au < testing ; exists ; 2013 ; Pharmacogenomics Volume 14 ; 14 >
+    au < crawling ; exists ; 2013 ; Pharmacogenomics Volume 14 ; 14 >
     au < manifest ; exists ; 2014 ; Pharmacogenomics Volume 15 ; 15 >
     
   }
@@ -640,7 +640,7 @@
     au < manifest ; exists ; 2010 ; Regenerative Medicine Volume 5 ; 5 >
     au < manifest ; exists ; 2011 ; Regenerative Medicine Volume 6 ; 6 >
     au < manifest ; exists ; 2012 ; Regenerative Medicine Volume 7 ; 7 >
-    au < testing ; exists ; 2013 ; Regenerative Medicine Volume 8 ; 8 >
+    au < crawling ; exists ; 2013 ; Regenerative Medicine Volume 8 ; 8 >
     au < manifest ; exists ; 2014 ; Regenerative Medicine Volume 9 ; 9 >
     
   }
