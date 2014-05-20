@@ -703,10 +703,10 @@
     param[journal_dir] = historically_speaking
     attr[journal_id] = hsp
     
-    au < releasing ; 2004-2005 ; Historically Speaking Volume 6 ; 6 >
-    au < releasing ; 2005-2006 ; Historically Speaking Volume 7 ; 7 >
-    au < releasing ; 2006-2007 ; Historically Speaking Volume 8 ; 8 >
-    au < releasing ; 2007-2008 ; Historically Speaking Volume 9 ; 9 >
+    au < released ; 2004-2005 ; Historically Speaking Volume 6 ; 6 >
+    au < released ; 2005-2006 ; Historically Speaking Volume 7 ; 7 >
+    au < released ; 2006-2007 ; Historically Speaking Volume 8 ; 8 >
+    au < released ; 2007-2008 ; Historically Speaking Volume 9 ; 9 >
     au < released ; 2009 ; Historically Speaking Volume 10 ; 10 >
     au < released ; 2010 ; Historically Speaking Volume 11 ; 11 >
     au < released ; 2011 ; Historically Speaking Volume 12 ; 12 >
@@ -1028,12 +1028,12 @@
     param[journal_dir] = journal_of_the_history_of_childhood_and_youth
     attr[journal_id] = hcy
     
-    au < releasing ; 2008 ; The Journal of the History of Childhood and Youth Volume 1 ; 1 >
-    au < releasing ; 2009 ; The Journal of the History of Childhood and Youth Volume 2 ; 2 >
-    au < releasing ; 2010 ; The Journal of the History of Childhood and Youth Volume 3 ; 3 >
-    au < releasing ; 2011 ; The Journal of the History of Childhood and Youth Volume 4 ; 4 >
-    au < releasing ; 2012 ; The Journal of the History of Childhood and Youth Volume 5 ; 5 >
-    au < releasing ; 2013 ; The Journal of the History of Childhood and Youth Volume 6 ; 6 >
+    au < released ; 2008 ; The Journal of the History of Childhood and Youth Volume 1 ; 1 >
+    au < released ; 2009 ; The Journal of the History of Childhood and Youth Volume 2 ; 2 >
+    au < released ; 2010 ; The Journal of the History of Childhood and Youth Volume 3 ; 3 >
+    au < released ; 2011 ; The Journal of the History of Childhood and Youth Volume 4 ; 4 >
+    au < released ; 2012 ; The Journal of the History of Childhood and Youth Volume 5 ; 5 >
+    au < released ; 2013 ; The Journal of the History of Childhood and Youth Volume 6 ; 6 >
     }
   }
 
@@ -1141,7 +1141,7 @@
     attr[journal_id] = esp
 
     au < exists ; 2004 ; L'Esprit Créateur Volume 44 ; 44 >
-    au < releasing ; 2005 ; L'Esprit Créateur Volume 45 ; 45 >
+    au < released ; 2005 ; L'Esprit Créateur Volume 45 ; 45 >
     au < released ; 2006 ; L'Esprit Créateur Volume 46 ; 46 >
     au < released ; 2007 ; L'Esprit Créateur Volume 47 ; 47 >
     au < released ; 2008 ; L'Esprit Créateur Volume 48 ; 48 >
@@ -1489,7 +1489,7 @@
     au < exists ; 2003 ; Partial Answers: Journal of Literature and the History of Ideas Volume 1 ; 1 >
     au < exists ; 2004 ; Partial Answers: Journal of Literature and the History of Ideas Volume 2 ; 2 >
     au < exists ; 2005 ; Partial Answers: Journal of Literature and the History of Ideas Volume 3 ; 3 >
-    au < releasing ; 2006 ; Partial Answers: Journal of Literature and the History of Ideas Volume 4 ; 4 >
+    au < released ; 2006 ; Partial Answers: Journal of Literature and the History of Ideas Volume 4 ; 4 >
     au < released ; 2007 ; Partial Answers: Journal of Literature and the History of Ideas Volume 5 ; 5 >
     au < released ; 2008 ; Partial Answers: Journal of Literature and the History of Ideas Volume 6 ; 6 >
     au < released ; 2009 ; Partial Answers: Journal of Literature and the History of Ideas Volume 7 ; 7 >
@@ -1988,7 +1988,7 @@
     attr[journal_id] = sec
 
     au < exists ; 2005 ; Studies in Eighteenth-Century Culture Volume 34 ; 34 >
-    au < releasing ; 2006 ; Studies in Eighteenth-Century Culture Volume 35 ; 35 >
+    au < released ; 2006 ; Studies in Eighteenth-Century Culture Volume 35 ; 35 >
     au < released ; 2007 ; Studies in Eighteenth-Century Culture Volume 36 ; 36 >
     au < released ; 2008 ; Studies in Eighteenth-Century Culture Volume 37 ; 37 >
     au < released ; 2009 ; Studies in Eighteenth-Century Culture Volume 38 ; 38 >
