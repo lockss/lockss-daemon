@@ -1,11 +1,11 @@
 /*
- * $Id: TestSUPressOnix2XmlMetadataExtractor.java,v 1.1 2014-03-04 21:32:57 alexandraohlson Exp $
+ * $Id: TestSUPressOnix2XmlMetadataExtractor.java,v 1.2 2014-05-20 03:28:55 aishizaki Exp $
  */
 /*
 
 /*
 
- Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -190,7 +190,7 @@ public class TestSUPressOnix2XmlMetadataExtractor extends LockssTestCase {
       null, //no doi
       "[Writer, David]",
       "On Demand, A Subtitle to go with On Demand",
-      "20091203");
+      "2009-12-03");
 
   private static final String zipPdf2 = ZIP_BASE + "9780804741666.pdf";
   private static final ArrayList md2 = (ArrayList) ListUtil.list(
@@ -198,7 +198,7 @@ public class TestSUPressOnix2XmlMetadataExtractor extends LockssTestCase {
       null,// no doi
       "[Author, Good, Editor, Mark, Editor, Another, Translator, Lingua]",
       "The People, 1881 to 1941",
-      "20130109");
+      "2013-01");    // sends another valid address type
 
   private static final String zipPdf3 = ZIP_BASE + "9780804744888.pdf";
   private static final ArrayList md3 = (ArrayList) ListUtil.list(
@@ -206,7 +206,7 @@ public class TestSUPressOnix2XmlMetadataExtractor extends LockssTestCase {
       null,
       "[van Writer, Martin]",
       "Philip Whosit, Ideals in his World",
-      "20120523");
+      "2012");
   
   private static final String noContentisbn = "9780804741777"; //shouldn't have emitted
   
@@ -229,6 +229,7 @@ public class TestSUPressOnix2XmlMetadataExtractor extends LockssTestCase {
     assertNotNull(expected);
     assertEquals(AM.get(MetadataField.FIELD_DOI), expected.get(DOI_INDEX));
     assertEquals(AM.getList(MetadataField.FIELD_AUTHOR).toString(), expected.get(AUTHOR_INDEX));
-    
+    assertEquals(AM.get(MetadataField.FIELD_DATE),expected.get(ARTICLE_DATE));
   }
+  
 }

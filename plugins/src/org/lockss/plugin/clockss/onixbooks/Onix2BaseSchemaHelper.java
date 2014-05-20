@@ -1,5 +1,5 @@
 /*
- * $Id: Onix2BaseSchemaHelper.java,v 1.2 2014-01-28 23:52:56 alexandraohlson Exp $
+ * $Id: Onix2BaseSchemaHelper.java,v 1.3 2014-05-20 03:28:55 aishizaki Exp $
  */
 
 /*
@@ -152,7 +152,57 @@ implements SourceXmlSchemaHelper {
       }
     }
   };
+  /*
+   * PublicationDate  - pubdate for series of which the book is a part
+   * NODE=<SeriesIdentifier
+   *   SeriesIDType/
+   *   IDValue/
+   *   IDName/ (we don't care about this one)
+   */
+  private final NodeValue ONIX_PUBDATE_VALUE = new NodeValue() {
+    @Override
+    public String getValue(Node node) {
+      if (node == null) {
+        return null;
+      }
+      log.debug3("getValue of publication date");
+      // the TYPE has already been captured by xpath used to get here
+      String dateVal = null;
+      NodeList childNodes = node.getChildNodes();
+      // we know childNodes cannot be null due to xPath search term 
+      for (int m = 0; m < childNodes.getLength(); m++) {
+        Node infoNode = childNodes.item(m); 
+        if ("#text".equals(infoNode.getNodeName())) {
+          dateVal = infoNode.getTextContent();
+          break;
+        }
+      }
+      if (dateVal != null)  {
+        
+        dateVal = makeValidDate(dateVal);
 
+      } else {
+        log.debug3("no pubdate found");
+      }
+      return dateVal;
+    }
+  };
+  public static String makeValidDate(String dateStr) {
+    StringBuilder pubdate = new StringBuilder();
+
+    // if no '-', insert, or return year only
+    if (dateStr.length() >= 4) { // year
+      pubdate.append(dateStr.substring(0, 4));
+    } 
+    if (dateStr.length() >= 6) {
+      pubdate.append("-"+dateStr.substring(4,6));
+    }
+    if (dateStr.length() == 8) {
+      pubdate.append("-"+dateStr.substring(6,8));
+    }
+    return pubdate.toString();
+  }
+  
   /*
    * SeriesIdentifier  - issn for series of which the book is a part
    * NODE=<SeriesIdentifier
@@ -357,7 +407,8 @@ implements SourceXmlSchemaHelper {
       ONIX_articleMap.put(ONIX_product_series_issn, ONIX_SERIESID_VALUE);
       ONIX_articleMap.put(ONIX_product_contrib, ONIX_CONTRIBUTOR_VALUE);
       ONIX_articleMap.put(ONIX_pub_name, XmlDomMetadataExtractor.TEXT_VALUE);
-      ONIX_articleMap.put(ONIX_pub_date, XmlDomMetadataExtractor.TEXT_VALUE);
+      //ONIX_articleMap.put(ONIX_pub_date, XmlDomMetadataExtractor.TEXT_VALUE);
+      ONIX_articleMap.put(ONIX_pub_date, ONIX_PUBDATE_VALUE);
     }
 
     /* 2. Each item (book) has its own subNode */
