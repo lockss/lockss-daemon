@@ -508,18 +508,18 @@ comment[bj1] = no permission from publisher
     au < released ; 2012 ; Biochemical Journal Volume 442 ; 442 >
     au < released ; 2012 ; Biochemical Journal Volume 443 ; 443 >
     au < released ; 2012 ; Biochemical Journal Volume 444 ; 444 >
-    au < ready ; 2012 ; Biochemical Journal Volume 445 ; 445 >
-    au < ready ; 2012 ; Biochemical Journal Volume 446 ; 446 >
-    au < ready ; 2012 ; Biochemical Journal Volume 447 ; 447 >
-    au < ready ; 2012 ; Biochemical Journal Volume 448 ; 448 >
-    au < ready ; 2013 ; Biochemical Journal Volume 449 ; 449 >
-    au < ready ; 2013 ; Biochemical Journal Volume 450 ; 450 >
-    au < ready ; 2013 ; Biochemical Journal Volume 451 ; 451 >
-    au < ready ; 2013 ; Biochemical Journal Volume 452 ; 452 >
-    au < ready ; 2013 ; Biochemical Journal Volume 453 ; 453 >
-    au < ready ; 2013 ; Biochemical Journal Volume 454 ; 454 >
-    au < ready ; 2013 ; Biochemical Journal Volume 455 ; 455 >
-    au < ready ; 2013 ; Biochemical Journal Volume 456 ; 456 >
+    au < releasing ; 2012 ; Biochemical Journal Volume 445 ; 445 >
+    au < releasing ; 2012 ; Biochemical Journal Volume 446 ; 446 >
+    au < releasing ; 2012 ; Biochemical Journal Volume 447 ; 447 >
+    au < releasing ; 2012 ; Biochemical Journal Volume 448 ; 448 >
+    au < releasing ; 2013 ; Biochemical Journal Volume 449 ; 449 >
+    au < releasing ; 2013 ; Biochemical Journal Volume 450 ; 450 >
+    au < releasing ; 2013 ; Biochemical Journal Volume 451 ; 451 >
+    au < releasing ; 2013 ; Biochemical Journal Volume 452 ; 452 >
+    au < releasing ; 2013 ; Biochemical Journal Volume 453 ; 453 >
+    au < releasing ; 2013 ; Biochemical Journal Volume 454 ; 454 >
+    au < releasing ; 2013 ; Biochemical Journal Volume 455 ; 455 >
+    au < releasing ; 2013 ; Biochemical Journal Volume 456 ; 456 >
     au < doNotProcess ; 2014 ; Biochemical Journal Volume 457 ; 457 >
     au < doNotProcess ; 2014 ; Biochemical Journal Volume 458 ; 458 >
     au < doNotProcess ; 2014 ; Biochemical Journal Volume 459 ; 459 >
@@ -602,7 +602,7 @@ comment[bj1] = no permission from publisher
     au < released ; 2008 ; Biology of the Cell Volume 100 ; 100 >
     au < doNotProcess ; 2009 ; Biology of the Cell Volume 101 ; 101 >
     au < released ; 2010 ; Biology of the Cell Volume 102 ; 102 >
-    au < ready ; 2011 ; Biology of the Cell Volume 103 ; 103 >
+    au < releasing ; 2011 ; Biology of the Cell Volume 103 ; 103 >
     
   } 
   
@@ -665,8 +665,8 @@ comment[bj1] = no permission from publisher
     au < released ; 2009 ; Biochemical Society Transactions Volume 37 ; 037 >
     au < released ; 2010 ; Biochemical Society Transactions Volume 38 ; 038 >
     au < released ; 2011 ; Biochemical Society Transactions Volume 39 ; 039 >
-    au < ready ; 2012 ; Biochemical Society Transactions Volume 40 ; 040 >
-    au < ready ; 2013 ; Biochemical Society Transactions Volume 41 ; 041 >
+    au < releasing ; 2012 ; Biochemical Society Transactions Volume 40 ; 040 >
+    au < releasing ; 2013 ; Biochemical Society Transactions Volume 41 ; 041 >
     au < doNotProcess ; 2014 ; Biochemical Society Transactions Volume 42 ; 042 >
     
   }
@@ -725,8 +725,8 @@ comment[bj1] = no permission from publisher
     au < released ; 2009 ; Bioscience Reports Volume 29 ; 029 >
     au < released ; 2010 ; Bioscience Reports Volume 30 ; 030 >
     au < released ; 2011 ; Bioscience Reports Volume 31 ; 031 >
-    au < ready ; 2012 ; Bioscience Reports Volume 32 ; 032 >
-    au < ready ; 2013 ; Bioscience Reports Volume 33 ; 033 >
+    au < releasing ; 2012 ; Bioscience Reports Volume 32 ; 032 >
+    au < releasing ; 2013 ; Bioscience Reports Volume 33 ; 033 >
     au < doNotProcess ; 2014 ; Bioscience Reports Volume 34 ; 034 >
 
   }
@@ -873,15 +873,15 @@ comment[bj1] = no permission from publisher
     au < released ; 2008 ; Clinical Science Volume 114 ; 114 >
     au < released ; 2008 ; Clinical Science Volume 115 ; 115 >
     au < released ; 2009 ; Clinical Science Volume 116 ; 116 >
-    au < ready ; 2009 ; Clinical Science Volume 117 ; 117 >
+    au < releasing ; 2009 ; Clinical Science Volume 117 ; 117 >
     au < doNotProcess ; 2010 ; Clinical Science Volume 118 ; 118 >
     au < released ; 2010 ; Clinical Science Volume 119 ; 119 >
     au < released ; 2011 ; Clinical Science Volume 120 ; 120 >
     au < released ; 2011 ; Clinical Science Volume 121 ; 121 >
-    au < ready ; 2012 ; Clinical Science Volume 122 ; 122 >
+    au < releasing ; 2012 ; Clinical Science Volume 122 ; 122 >
     au < doNotProcess ; 2012 ; Clinical Science Volume 123 ; 123 >
-    au < ready ; 2013 ; Clinical Science Volume 124 ; 124 >
-    au < ready ; 2013 ; Clinical Science Volume 125 ; 125 >
+    au < releasing ; 2013 ; Clinical Science Volume 124 ; 124 >
+    au < releasing ; 2013 ; Clinical Science Volume 125 ; 125 >
     au < doNotProcess ; 2014 ; Clinical Science Volume 126 ; 126 >
     au < doNotProcess ; 2014 ; Clinical Science Volume 127 ; 127 >
         
@@ -916,12 +916,12 @@ comment[bj1] = no permission from publisher
     au < released ; 2010 ; Essays in Biochemistry Volume 47 ; 047 >
     au < released ; 2010 ; Essays in Biochemistry Volume 48 ; 048 >
     au < released ; 2011 ; Essays in Biochemistry Volume 49 ; 049 >
-    au < ready ; 2011 ; Essays in Biochemistry Volume 50 ; 050 >
-    au < ready ; 2011 ; Essays in Biochemistry Volume 51 ; 051 >
-    au < ready ; 2012 ; Essays in Biochemistry Volume 52 ; 052 >
-    au < ready ; 2012 ; Essays in Biochemistry Volume 53 ; 053 >
-    au < ready ; 2013 ; Essays in Biochemistry Volume 54 ; 054 >
-    au < ready ; 2013 ; Essays in Biochemistry Volume 55 ; 055 >
+    au < releasing ; 2011 ; Essays in Biochemistry Volume 50 ; 050 >
+    au < releasing ; 2011 ; Essays in Biochemistry Volume 51 ; 051 >
+    au < releasing ; 2012 ; Essays in Biochemistry Volume 52 ; 052 >
+    au < releasing ; 2012 ; Essays in Biochemistry Volume 53 ; 053 >
+    au < releasing ; 2013 ; Essays in Biochemistry Volume 54 ; 054 >
+    au < releasing ; 2013 ; Essays in Biochemistry Volume 55 ; 055 >
     au < doNotProcess ; 2014 ; Essays in Biochemistry Volume 56 ; 056 >
     au < doNotProcess ; 2014 ; Essays in Biochemistry Volume 57 ; 057 >
 

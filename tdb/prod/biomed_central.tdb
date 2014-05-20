@@ -2848,9 +2848,9 @@
       
       param[base_url] = http://www.chiromt.com/
 
-      au < ready ; 2011 ; Chiropractic & Manual Therapies Volume 19 ; 19 >
-      au < ready ; 2012 ; Chiropractic & Manual Therapies Volume 20 ; 20 >
-      au < ready ; 2013 ; Chiropractic & Manual Therapies Volume 21 ; 21 >
+      au < releasing ; 2011 ; Chiropractic & Manual Therapies Volume 19 ; 19 >
+      au < releasing ; 2012 ; Chiropractic & Manual Therapies Volume 20 ; 20 >
+      au < releasing ; 2013 ; Chiropractic & Manual Therapies Volume 21 ; 21 >
       au < manifest ; 2014 ; Chiropractic & Manual Therapies Volume 22 ; 22 >
       }
     }
@@ -2881,12 +2881,12 @@
       
         param[base_url] = http://www.chiromt.com/
         
-        au < ready ; 2005 ; Chiropractic & Osteopathy Volume 13 ; 13 >
-        au < ready ; 2006 ; Chiropractic & Osteopathy Volume 14 ; 14 >
-        au < ready ; 2007 ; Chiropractic & Osteopathy Volume 15 ; 15 >
-        au < ready ; 2008 ; Chiropractic & Osteopathy Volume 16 ; 16 >
-        au < ready ; 2009 ; Chiropractic & Osteopathy Volume 17 ; 17 >
-        au < ready ; 2010 ; Chiropractic & Osteopathy Volume 18 ; 18 >
+        au < releasing ; 2005 ; Chiropractic & Osteopathy Volume 13 ; 13 >
+        au < releasing ; 2006 ; Chiropractic & Osteopathy Volume 14 ; 14 >
+        au < releasing ; 2007 ; Chiropractic & Osteopathy Volume 15 ; 15 >
+        au < releasing ; 2008 ; Chiropractic & Osteopathy Volume 16 ; 16 >
+        au < releasing ; 2009 ; Chiropractic & Osteopathy Volume 17 ; 17 >
+        au < releasing ; 2010 ; Chiropractic & Osteopathy Volume 18 ; 18 >
       
       }
       
@@ -2903,8 +2903,8 @@
       param[base_url] = http://www.ciliajournal.com/
       param[journal_issn] = 2046-2530
 
-      au < ready ; 2012 ; Cilia Volume 1 ; 1 >
-      au < ready ; 2013 ; Cilia Volume 2 ; 2 >
+      au < releasing ; 2012 ; Cilia Volume 1 ; 1 >
+      au < releasing ; 2013 ; Cilia Volume 2 ; 2 >
       au < manifest ; 2014 ; Cilia Volume 3 ; 3 >
 
     }
@@ -2964,8 +2964,8 @@
       param[journal_issn] = 1868-7083
 
       au < exists ; 2011 ; Clinical Epigenetics Volume 2 ; 2 >
-      au < ready ; 2011 ; Clinical Epigenetics Volume 3 ; 3 >
-      au < ready ; 2012 ; Clinical Epigenetics Volume 4 ; 4 >
+      au < releasing ; 2011 ; Clinical Epigenetics Volume 3 ; 3 >
+      au < releasing ; 2012 ; Clinical Epigenetics Volume 4 ; 4 >
       au < manifest ; 2013 ; Clinical Epigenetics Volume 5 ; 5 >
       au < manifest ; 2014 ; Clinical Epigenetics Volume 6 ; 6 >
 
@@ -2987,7 +2987,7 @@
 
       au < released ; 2010 ; Clinical Proteomics Volume 7 ; 7 >
       au < notReady ; 2011 ; Clinical Proteomics Volume 8 ; 8 >
-      au < ready ; 2012 ; Clinical Proteomics Volume 9 ; 9 >
+      au < releasing ; 2012 ; Clinical Proteomics Volume 9 ; 9 >
       au < manifest ; 2013 ; Clinical Proteomics Volume 10 ; 10 >
       au < manifest ; 2014 ; Clinical Proteomics Volume 11 ; 11 >
 
@@ -3004,8 +3004,8 @@
       param[base_url] = http://www.clinicalsarcomaresearch.com/
       param[journal_issn] = 2045-3329
 
-      au < ready ; 2011 ; Clinical Sarcoma Research Volume 1 ; 1 >
-      au < ready ; 2012 ; Clinical Sarcoma Research Volume 2 ; 2 >
+      au < releasing ; 2011 ; Clinical Sarcoma Research Volume 1 ; 1 >
+      au < releasing ; 2012 ; Clinical Sarcoma Research Volume 2 ; 2 >
       au < manifest ; 2013 ; Clinical Sarcoma Research Volume 3 ; 3 >
       au < manifest ; 2014 ; Clinical Sarcoma Research Volume 4 ; 4 >
 
@@ -3148,7 +3148,7 @@
       param[base_url] = http://www.darujps.com/
       param[journal_issn] = 1560-8115
 
-      au < ready ; 2012 ; DARU Journal of Pharmaceutical Sciences Volume 20 ; 20 >
+      au < releasing ; 2012 ; DARU Journal of Pharmaceutical Sciences Volume 20 ; 20 >
       au < manifest ; 2013 ; DARU Journal of Pharmaceutical Sciences Volume 21 ; 21 >
       au < manifest ; 2014 ; DARU Journal of Pharmaceutical Sciences Volume 22 ; 22 >
 
@@ -3258,7 +3258,7 @@
       param[base_url] = http://www.environmentalevidencejournal.org/
       param[journal_issn] = 2047-2382
 
-      au < ready ; 2011-2012 ; Environmental Evidence Volume 1 ; 1 >
+      au < releasing ; 2011-2012 ; Environmental Evidence Volume 1 ; 1 >
       au < manifest ; 2013 ; Environmental Evidence Volume 2 ; 2 >
       au < manifest ; 2014 ; Environmental Evidence Volume 3 ; 3 >
 
@@ -3366,7 +3366,7 @@
       param[base_url] = http://www.epmajournal.com/
       param[journal_issn] = 1878-5085
 
-      au < ready ; 2012 ; The EPMA Journal Volume 3 ; 3 >
+      au < releasing ; 2012 ; The EPMA Journal Volume 3 ; 3 >
       au < manifest ; 2013 ; The EPMA Journal Volume 4 ; 4 >
       au < manifest ; 2014 ; The EPMA Journal Volume 5 ; 5 >
 
@@ -3401,9 +3401,9 @@
       param[base_url] = http://www.evodevojournal.com/
       param[journal_issn] = 2041-9139
 
-      au < ready ; 2010 ; EvoDevo Volume 1 ; 1 >
-      au < ready ; 2011 ; EvoDevo Volume 2 ; 2 >
-      au < ready ; 2012 ; EvoDevo Volume 3 ; 3 >
+      au < releasing ; 2010 ; EvoDevo Volume 1 ; 1 >
+      au < releasing ; 2011 ; EvoDevo Volume 2 ; 2 >
+      au < releasing ; 2012 ; EvoDevo Volume 3 ; 3 >
       au < manifest ; 2013 ; EvoDevo Volume 4 ; 4 >
       au < manifest ; 2014 ; EvoDevo Volume 5 ; 5 >
 
@@ -3419,10 +3419,10 @@
       param[base_url] = http://www.etsmjournal.com/
       param[journal_issn] = 2040-7378
 
-      au < ready ; 2009 ; Experimental & Translational Stroke Medicine Volume 1 ; 1 >
-      au < ready ; 2010 ; Experimental & Translational Stroke Medicine Volume 2 ; 2 >
-      au < ready ; 2011 ; Experimental & Translational Stroke Medicine Volume 3 ; 3 >
-      au < ready ; 2012 ; Experimental & Translational Stroke Medicine Volume 4 ; 4 >
+      au < releasing ; 2009 ; Experimental & Translational Stroke Medicine Volume 1 ; 1 >
+      au < releasing ; 2010 ; Experimental & Translational Stroke Medicine Volume 2 ; 2 >
+      au < releasing ; 2011 ; Experimental & Translational Stroke Medicine Volume 3 ; 3 >
+      au < releasing ; 2012 ; Experimental & Translational Stroke Medicine Volume 4 ; 4 >
       au < manifest ; 2013 ; Experimental & Translational Stroke Medicine Volume 5 ; 5 >
       au < manifest ; 2014 ; Experimental & Translational Stroke Medicine Volume 6 ; 6 >
 
@@ -3438,7 +3438,7 @@
       param[base_url] = http://www.ehoonline.org/
       param[journal_issn] = 2162-3619
 
-      au < ready ; 2012 ; Experimental Hematology & Oncology Volume 1 ; 1 >
+      au < releasing ; 2012 ; Experimental Hematology & Oncology Volume 1 ; 1 >
       au < manifest ; 2013 ; Experimental Hematology & Oncology Volume 2 ; 2 >
       au < manifest ; 2014 ; Experimental Hematology & Oncology Volume 3 ; 3 >
 
@@ -3454,7 +3454,7 @@
       param[base_url] = http://www.extremephysiolmed.com/
       param[journal_issn] = 2046-7648
 
-      au < ready ; 2012 ; Extreme Physiology & Medicine Volume 1 ; 1 >
+      au < releasing ; 2012 ; Extreme Physiology & Medicine Volume 1 ; 1 >
       au < manifest ; 2013 ; Extreme Physiology & Medicine Volume 2 ; 2 >
       au < manifest ; 2014 ; Extreme Physiology & Medicine Volume 3 ; 3 >
 
@@ -3470,11 +3470,11 @@
       param[base_url] = http://www.fibrogenesis.com/
       param[journal_issn] = 1755-1536
 
-      au < ready ; 2008 ; Fibrogenesis & Tissue Repair Volume 1 ; 1 >
-      au < ready ; 2009 ; Fibrogenesis & Tissue Repair Volume 2 ; 2 >
-      au < ready ; 2010 ; Fibrogenesis & Tissue Repair Volume 3 ; 3 >
-      au < ready ; 2011 ; Fibrogenesis & Tissue Repair Volume 4 ; 4 >
-      au < ready ; 2012 ; Fibrogenesis & Tissue Repair Volume 5 ; 5 >
+      au < releasing ; 2008 ; Fibrogenesis & Tissue Repair Volume 1 ; 1 >
+      au < releasing ; 2009 ; Fibrogenesis & Tissue Repair Volume 2 ; 2 >
+      au < releasing ; 2010 ; Fibrogenesis & Tissue Repair Volume 3 ; 3 >
+      au < releasing ; 2011 ; Fibrogenesis & Tissue Repair Volume 4 ; 4 >
+      au < releasing ; 2012 ; Fibrogenesis & Tissue Repair Volume 5 ; 5 >
       au < manifest ; 2013 ; Fibrogenesis & Tissue Repair Volume 6 ; 6 >
       au < manifest ; 2014 ; Fibrogenesis & Tissue Repair Volume 7 ; 7 >
 
@@ -3490,7 +3490,7 @@
       param[base_url] = http://www.flavourjournal.com/
       param[journal_issn] = 2044-7248
 
-      au < ready ; 2012 ; Flavour Volume 1 ; 1 >
+      au < releasing ; 2012 ; Flavour Volume 1 ; 1 >
       au < manifest ; 2013 ; Flavour Volume 2 ; 2 >
       au < manifest ; 2014 ; Flavour Volume 3 ; 3 >
 
@@ -3509,7 +3509,7 @@
       param[journal_issn] = 2045-8118
 
       au < released ; 2011 ; Fluids and Barriers of the CNS Volume 8 ; 8 >
-      au < ready ; 2012 ; Fluids and Barriers of the CNS Volume 9 ; 9 >
+      au < releasing ; 2012 ; Fluids and Barriers of the CNS Volume 9 ; 9 >
       au < manifest ; 2013 ; Fluids and Barriers of the CNS Volume 10 ; 10 >
       au < manifest ; 2014 ; Fluids and Barriers of the CNS Volume 11 ; 11 >
       
@@ -3533,7 +3533,7 @@
       au < released ; 2009 ; Frontiers in Zoology Volume 6 ; 6 >
       au < released ; 2010 ; Frontiers in Zoology Volume 7 ; 7 >
       au < released ; 2011 ; Frontiers in Zoology Volume 8 ; 8 >
-      au < ready ; 2012 ; Frontiers in Zoology Volume 9 ; 9 >
+      au < releasing ; 2012 ; Frontiers in Zoology Volume 9 ; 9 >
       au < manifest ; 2013 ; Frontiers in Zoology Volume 10 ; 10 >
       au < manifest ; 2014 ; Frontiers in Zoology Volume 11 ; 11 >
       
@@ -3559,7 +3559,7 @@
       au < released ; 2009 ; Genetic Vaccines and Therapy Volume 7 ; 7 >
       au < released ; 2010 ; Genetic Vaccines and Therapy Volume 8 ; 8 >
       au < released ; 2011 ; Genetic Vaccines and Therapy Volume 9 ; 9 >
-      au < ready ; 2012 ; Genetic Vaccines and Therapy Volume 10 ; 10 >
+      au < releasing ; 2012 ; Genetic Vaccines and Therapy Volume 10 ; 10 >
 
     }
 
@@ -3608,15 +3608,15 @@
       au < manifest ; 2001 ; Genetics Selection Evolution Volume 33 ; 33 >
       au < manifest ; 2002 ; Genetics Selection Evolution Volume 34 ; 34 >
       au < manifest ; 2003 ; Genetics Selection Evolution Volume 35 ; 35 >
-      au < ready ; 2004 ; Genetics Selection Evolution Volume 36 ; 36 >
-      au < ready ; 2005 ; Genetics Selection Evolution Volume 37 ; 37 >
-      au < ready ; 2006 ; Genetics Selection Evolution Volume 38 ; 38 >
-      au < ready ; 2007 ; Genetics Selection Evolution Volume 39 ; 39 >
-      au < ready ; 2008 ; Genetics Selection Evolution Volume 40 ; 40 >
-      au < ready ; 2009 ; Genetics Selection Evolution Volume 41 ; 41 >
-      au < ready ; 2010 ; Genetics Selection Evolution Volume 42 ; 42 >
-      au < ready ; 2011 ; Genetics Selection Evolution Volume 43 ; 43 >
-      au < ready ; 2012 ; Genetics Selection Evolution Volume 44 ; 44 >
+      au < releasing ; 2004 ; Genetics Selection Evolution Volume 36 ; 36 >
+      au < releasing ; 2005 ; Genetics Selection Evolution Volume 37 ; 37 >
+      au < releasing ; 2006 ; Genetics Selection Evolution Volume 38 ; 38 >
+      au < releasing ; 2007 ; Genetics Selection Evolution Volume 39 ; 39 >
+      au < releasing ; 2008 ; Genetics Selection Evolution Volume 40 ; 40 >
+      au < releasing ; 2009 ; Genetics Selection Evolution Volume 41 ; 41 >
+      au < releasing ; 2010 ; Genetics Selection Evolution Volume 42 ; 42 >
+      au < releasing ; 2011 ; Genetics Selection Evolution Volume 43 ; 43 >
+      au < releasing ; 2012 ; Genetics Selection Evolution Volume 44 ; 44 >
       au < manifest ; 2013 ; Genetics Selection Evolution Volume 45 ; 45 >
       au < manifest ; 2014 ; Genetics Selection Evolution Volume 46 ; 46 >
 
@@ -3662,7 +3662,7 @@
 
       au < released ; 2010 ; Genome Integrity Volume 1 ; 1 >
       au < released ; 2011 ; Genome Integrity Volume 2 ; 2 >
-      au < ready ; 2012 ; Genome Integrity Volume 3 ; 3 >
+      au < releasing ; 2012 ; Genome Integrity Volume 3 ; 3 >
       au < manifest ; 2013 ; Genome Integrity Volume 4 ; 4 >
       au < manifest ; 2014 ; Genome Integrity Volume 5 ; 5 >
       
@@ -3720,7 +3720,7 @@
       au < released ; 2009 ; Globalization and Health Volume 5 ; 5 >
       au < released ; 2010 ; Globalization and Health Volume 6 ; 6 >
       au < released ; 2011 ; Globalization and Health Volume 7 ; 7 >
-      au < ready ; 2012 ; Globalization and Health Volume 8 ; 8 >
+      au < releasing ; 2012 ; Globalization and Health Volume 8 ; 8 >
       au < manifest ; 2013 ; Globalization and Health Volume 9 ; 9 >
       au < manifest ; 2014 ; Globalization and Health Volume 10 ; 10 >
 
@@ -3739,7 +3739,7 @@
       au < manifest ; 2009 ; Gut Pathogens Volume 1 ; 1 >
       au < manifest ; 2010 ; Gut Pathogens Volume 2 ; 2 >
       au < manifest ; 2011 ; Gut Pathogens Volume 3 ; 3 >
-      au < ready ; 2012 ; Gut Pathogens Volume 4 ; 4 >
+      au < releasing ; 2012 ; Gut Pathogens Volume 4 ; 4 >
       au < manifest ; 2013 ; Gut Pathogens Volume 5 ; 5 >
       au < manifest ; 2014 ; Gut Pathogens Volume 6 ; 6 >
 
@@ -3763,7 +3763,7 @@
       au < released ; 2009 ; Harm Reduction Journal Volume 6 ; 6 >
       au < released ; 2010 ; Harm Reduction Journal Volume 7 ; 7 >
       au < released ; 2011 ; Harm Reduction Journal Volume 8 ; 8 >
-      au < ready ; 2012 ; Harm Reduction Journal Volume 9 ; 9 >
+      au < releasing ; 2012 ; Harm Reduction Journal Volume 9 ; 9 >
       au < manifest ; 2013 ; Harm Reduction Journal Volume 10 ; 10 >
       au < manifest ; 2014 ; Harm Reduction Journal Volume 11 ; 11 >
 
@@ -4032,7 +4032,7 @@
       au < released ; 2009 ; Infectious Agents and Cancer Volume 4 ; 4 >
       au < notReady ; 2010 ; Infectious Agents and Cancer Volume 5 ; 5 >
       au < released ; 2011 ; Infectious Agents and Cancer Volume 6 ; 6 >
-      au < ready ; 2012 ; Infectious Agents and Cancer Volume 7 ; 7 >
+      au < releasing ; 2012 ; Infectious Agents and Cancer Volume 7 ; 7 >
       au < manifest ; 2013 ; Infectious Agents and Cancer Volume 8 ; 8 >
       au < manifest ; 2014 ; Infectious Agents and Cancer Volume 9 ; 9 >
 
@@ -6420,7 +6420,7 @@
       param[base_url] = http://www.veterinaryresearch.org/
       param[journal_issn] = 1297-9716
 
-      au < ready ; 2011 ; Veterinary Research Volume 42 ; 42 >
+      au < releasing ; 2011 ; Veterinary Research Volume 42 ; 42 >
       au < manifest ; 2012 ; Veterinary Research Volume 43 ; 43 >
       au < manifest ; 2013 ; Veterinary Research Volume 44 ; 44 >
       au < manifest ; 2014 ; Veterinary Research Volume 45 ; 45 >

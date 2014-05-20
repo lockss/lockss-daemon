@@ -14,9 +14,9 @@
       param[base_url] = http://www.europeanjournaloftaxonomy.eu/
       param[journal_id] = ejt
 
-      au < ready ; 2011 ; European Journal of Taxonomy Volume 2011 ; 1-4 ; 2011 >
-      au < ready ; 2012 ; European Journal of Taxonomy Volume 2012 ; 5-34 ; 2012 >
-      au < ready ; 2013 ; European Journal of Taxonomy Volume 2013 ; 35-70 ; 2013 >
+      au < releasing ; 2011 ; European Journal of Taxonomy Volume 2011 ; 1-4 ; 2011 >
+      au < releasing ; 2012 ; European Journal of Taxonomy Volume 2012 ; 5-34 ; 2012 >
+      au < releasing ; 2013 ; European Journal of Taxonomy Volume 2013 ; 35-70 ; 2013 >
       au < manifest ; 2014 ; European Journal of Taxonomy Volume 2014 ; 71 ; 2014 >
 
   }

@@ -133,7 +133,7 @@
       param[journal_dir] = the_edgar_allan_poe_review
       attr[journal_id] = eap
 
-      au < ready ; 2013 ; The Edgar Allan Poe Review Volume 14 ; 14 >
+      au < releasing ; 2013 ; The Edgar Allan Poe Review Volume 14 ; 14 >
       au < doNotProcess ; 2014 ; The Edgar Allen Poe Review Volume 15 ; 15 >
 
     }
@@ -180,7 +180,7 @@
       param[journal_dir] = f_scott_fitzgerald_review
       attr[journal_id] = fsf
     
-      au < ready ; 2013 ; The F. Scott Fitzgerald Review Volume 11 ; 11 >
+      au < releasing ; 2013 ; The F. Scott Fitzgerald Review Volume 11 ; 11 >
       au < expected ; 2014 ; The F. Scott Fitzgerald Review Volume 12 ; 12 >
       
     }
@@ -703,7 +703,7 @@
       param[journal_dir] = reception_texts_readers_audiences_history
       attr[journal_id] = rtr
       
-      au < ready ; 2013 ; Reception: Texts, Readers, Audiences, History Volume 5 ; 5 >
+      au < releasing ; 2013 ; Reception: Texts, Readers, Audiences, History Volume 5 ; 5 >
       au < expected ; 2014 ; Reception: Texts, Readers, Audiences, History Volume 6 ; 6 >
 
     }

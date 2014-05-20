@@ -26,14 +26,14 @@
     au < manifest ; 2002 ; Arizona Journal of Hispanic Cultural Studies Volume 6 ; 6 >
     au < manifest ; 2003 ; Arizona Journal of Hispanic Cultural Studies Volume 7 ; 7 >
     au < manifest ; 2004 ; Arizona Journal of Hispanic Cultural Studies Volume 8 ; 8 >
-    au < ready ; 2005 ; Arizona Journal of Hispanic Cultural Studies Volume 9 ; 9 >
+    au < releasing ; 2005 ; Arizona Journal of Hispanic Cultural Studies Volume 9 ; 9 >
     au < released ; 2006 ; Arizona Journal of Hispanic Cultural Studies Volume 10 ; 10 >
     au < released ; 2007 ; Arizona Journal of Hispanic Cultural Studies Volume 11 ; 11 >
     au < released ; 2008 ; Arizona Journal of Hispanic Cultural Studies Volume 12 ; 12 >
     au < released ; 2009 ; Arizona Journal of Hispanic Cultural Studies Volume 13 ; 13 >
     au < released ; 2010 ; Arizona Journal of Hispanic Cultural Studies Volume 14 ; 14 >
-    au < ready ; 2011 ; Arizona Journal of Hispanic Cultural Studies Volume 15 ; 15 >
-    au < ready ; 2012 ; Arizona Journal of Hispanic Cultural Studies Volume 16 ; 16 >
+    au < releasing ; 2011 ; Arizona Journal of Hispanic Cultural Studies Volume 15 ; 15 >
+    au < releasing ; 2012 ; Arizona Journal of Hispanic Cultural Studies Volume 16 ; 16 >
     au < expected ; 2013 ; Arizona Journal of Hispanic Cultural Studies Volume 17 ; 17 >
     au < doNotProcess ; 2014 ; Arizona Journal of Hispanic Cultural Studies Volume 18 ; 18 >
 
@@ -55,7 +55,7 @@
     au < manifest ; 2002 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 58 ; 58 >
     au < manifest ; 2003 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 59 ; 59 >
     au < manifest ; 2004 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 60 ; 60 >
-    au < ready ; 2005 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 61 ; 61 >
+    au < releasing ; 2005 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 61 ; 61 >
     au < released ; 2006 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 62 ; 62 >
     au < released ; 2007 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 63 ; 63 >
     au < released ; 2008 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 64 ; 64 >
@@ -63,7 +63,7 @@
     au < released ; 2010 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 66 ; 66 >
     au < released ; 2011 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 67 ; 67 >
     au < released ; 2012 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 68 ; 68 >
-    au < ready ; 2013 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 69 ; 69 >
+    au < releasing ; 2013 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 69 ; 69 >
     au < doNotProcess ; 2014 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 70 ; 70 >
 
   }
@@ -79,13 +79,13 @@
     param[journal_dir] = journal_of_the_southwest
     attr[journal_id] = jsw
 
-    au < ready ; 2007 ; Journal of the Southwest Volume 49 ; 49 >
-    au < ready ; 2008 ; Journal of the Southwest Volume 50 ; 50 >
-    au < ready ; 2009 ; Journal of the Southwest Volume 51 ; 51 >
-    au < ready ; 2010 ; Journal of the Southwest Volume 52 ; 52 >
+    au < releasing ; 2007 ; Journal of the Southwest Volume 49 ; 49 >
+    au < releasing ; 2008 ; Journal of the Southwest Volume 50 ; 50 >
+    au < releasing ; 2009 ; Journal of the Southwest Volume 51 ; 51 >
+    au < releasing ; 2010 ; Journal of the Southwest Volume 52 ; 52 >
     au < released ; 2011 ; Journal of the Southwest Volume 53 ; 53 >
     au < released ; 2012 ; Journal of the Southwest Volume 54 ; 54 >
-    au < ready ; 2013 ; Journal of the Southwest Volume 55 ; 55 >
+    au < releasing ; 2013 ; Journal of the Southwest Volume 55 ; 55 >
     au < doNotProcess ; 2014 ; Journal of the Southwest Volume 56 ; 56 >
 
   }

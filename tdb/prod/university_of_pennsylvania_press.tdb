@@ -20,7 +20,7 @@
 
     au < released ; 2011 ; Change Over Time Volume 1 ; 1 >
     au < released ; 2012 ; Change Over Time Volume 2 ; 2 >
-    au < ready ; 2013 ; Change Over Time Volume 3 ; 3 >
+    au < releasing ; 2013 ; Change Over Time Volume 3 ; 3 >
     au < doNotProcess ; 2014 ; Change Over Time Volume 4 ; 4 >
 
   }
@@ -36,15 +36,15 @@
     param[journal_dir] = dissent
     attr[journal_id] = dss
 
-    au < ready ; 2005 ; Dissent Volume 52 ; 52 >
-    au < ready ; 2006 ; Dissent Volume 53 ; 53 >
-    au < ready ; 2007 ; Dissent Volume 54 ; 54 >
-    au < ready ; 2008 ; Dissent Volume 55 ; 55 >
+    au < releasing ; 2005 ; Dissent Volume 52 ; 52 >
+    au < releasing ; 2006 ; Dissent Volume 53 ; 53 >
+    au < releasing ; 2007 ; Dissent Volume 54 ; 54 >
+    au < releasing ; 2008 ; Dissent Volume 55 ; 55 >
     au < released ; 2009 ; Dissent Volume 56 ; 56 >
     au < released ; 2010 ; Dissent Volume 57 ; 57 >
     au < released ; 2011 ; Dissent Volume 58 ; 58 >
     au < released ; 2012 ; Dissent Volume 59 ; 59 >
-    au < ready ; 2013 ; Dissent Volume 60 ; 60 >
+    au < releasing ; 2013 ; Dissent Volume 60 ; 60 >
     au < doNotProcess ; 2014 ; Dissent Volume 61 ; 61 >
 
   }
@@ -70,7 +70,7 @@
     au < released ; 2010 ; Early American Studies: An Interdisciplinary Journal Volume 8 ; 8 >
     au < released ; 2011 ; Early American Studies: An Interdisciplinary Journal Volume 9 ; 9 >
     au < released ; 2012 ; Early American Studies: An Interdisciplinary Journal Volume 10 ; 10 >
-    au < ready ; 2013 ; Early American Studies: An Interdisciplinary Journal Volume 11 ; 11 >
+    au < releasing ; 2013 ; Early American Studies: An Interdisciplinary Journal Volume 11 ; 11 >
     au < doNotProcess ; 2014 ; Early American Studies: An Interdisciplinary Journal Volume 12 ; 12 >
 
   }
@@ -93,7 +93,7 @@
     au < released ; 2010 ; The Eighteenth Century Volume 51 ; 51 >
     au < released ; 2011 ; The Eighteenth Century Volume 52 ; 52 >
     au < released ; 2012 ; The Eighteenth Century Volume 53 ; 53 >
-    au < ready ; 2013 ; The Eighteenth Century Volume 54 ; 54 >
+    au < releasing ; 2013 ; The Eighteenth Century Volume 54 ; 54 >
     au < doNotProcess ; 2014 ; The Eighteenth Century Volume 55 ; 55 >
 
   }
@@ -117,7 +117,7 @@
     au < released ; 2010 ; Hispanic Review Volume 78 ; 78 >
     au < released ; 2011 ; Hispanic Review Volume 79 ; 79 >
     au < released ; 2012 ; Hispanic Review Volume 80 ; 80 >
-    au < ready ; 2013 ; Hispanic Review Volume 81 ; 81 >
+    au < releasing ; 2013 ; Hispanic Review Volume 81 ; 81 >
     au < doNotProcess ; 2014 ; Hispanic Review Volume 82 ; 82 >
 
   }
@@ -136,7 +136,7 @@
     au < released ; 2010 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 1 ; 1 >
     au < released ; 2011 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 2 ; 2 >
     au < released ; 2012 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 3 ; 3 >
-    au < ready ; 2013 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 4 ; 4 >
+    au < releasing ; 2013 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 4 ; 4 >
     au < doNotProcess ; 2014 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 5 ; 5 >
 
   }
@@ -153,7 +153,7 @@
     param[journal_dir] = the_journal_of_nineteenth_century_americanists
     attr[journal_id] = jnc
 
-    au < ready ; 2013 ; J19: The Journal of Nineteenth-Century Americanists Volume 1 ; 1 >
+    au < releasing ; 2013 ; J19: The Journal of Nineteenth-Century Americanists Volume 1 ; 1 >
     au < doNotProcess ; 2014 ; J19: The Journal of Nineteenth-Century Americanists Volume 2 ; 2 >
 
   }
@@ -177,7 +177,7 @@
     au < released ; 2010 ; Jewish Quarterly Review Volume 100 ; 100 >
     au < released ; 2011 ; Jewish Quarterly Review Volume 101 ; 101 >
     au < released ; 2012 ; Jewish Quarterly Review Volume 102 ; 102 >
-    au < ready ; 2013 ; Jewish Quarterly Review Volume 103 ; 103 >
+    au < releasing ; 2013 ; Jewish Quarterly Review Volume 103 ; 103 >
     au < doNotProcess ; 2014 ; Jewish Quarterly Review Volume 104 ; 104 >
 
   }
@@ -202,7 +202,7 @@
     au < released ; 2010 ; Journal for Early Modern Cultural Studies Volume 10 ; 10 >
     au < released ; 2011 ; Journal for Early Modern Cultural Studies Volume 11 ; 11 >
     au < released ; 2012 ; Journal for Early Modern Cultural Studies Volume 12 ; 12 >
-    au < ready ; 2013 ; Journal for Early Modern Cultural Studies Volume 13 ; 13 >
+    au < releasing ; 2013 ; Journal for Early Modern Cultural Studies Volume 13 ; 13 >
     au < doNotProcess ; 2014 ; Journal for Early Modern Cultural Studies Volume 14 ; 14 >
 
   }
@@ -226,7 +226,7 @@
     au < released ; 2010 ; Journal of the Early Republic Volume 30 ; 30 >
     au < released ; 2011 ; Journal of the Early Republic Volume 31 ; 31 >
     au < released ; 2012 ; Journal of the Early Republic Volume 32 ; 32 >
-    au < ready ; 2013 ; Journal of the Early Republic Volume 33 ; 33 >
+    au < releasing ; 2013 ; Journal of the Early Republic Volume 33 ; 33 >
     au < doNotProcess ; 2014 ; Journal of the Early Republic Volume 34 ; 34 >
 
   }
@@ -259,7 +259,7 @@
     au < released ; 2010 ; Journal of the History of Ideas Volume 71 ; 71 >
     au < released ; 2011 ; Journal of the History of Ideas Volume 72 ; 72 >
     au < released ; 2012 ; Journal of the History of Ideas Volume 73 ; 73 >
-    au < ready ; 2013 ; Journal of the History of Ideas Volume 74 ; 74 >
+    au < releasing ; 2013 ; Journal of the History of Ideas Volume 74 ; 74 >
     au < doNotProcess ; 2014 ; Journal of the History of Ideas Volume 75 ; 75 >
 
   }
@@ -282,7 +282,7 @@
     au < released ; 2010 ; Magic, Ritual, and Witchcraft Volume 5 ; 5 >
     au < released ; 2011 ; Magic, Ritual, and Witchcraft Volume 6 ; 6 >
     au < released ; 2012 ; Magic, Ritual, and Witchcraft Volume 7 ; 7 >
-    au < ready ; 2013 ; Magic, Ritual, and Witchcraft Volume 8 ; 8 >
+    au < releasing ; 2013 ; Magic, Ritual, and Witchcraft Volume 8 ; 8 >
     au < doNotProcess ; 2014 ; Magic, Ritual, and Witchcraft Volume 9 ; 9 >
 
   }
@@ -298,13 +298,13 @@
     param[journal_dir] = revista_hispanica_moderna
     attr[journal_id]= rhm
 
-    au < ready ; 2007 ; Revista Hispánica Moderna Volume 60 ; 60 >
-    au < ready ; 2008 ; Revista Hispánica Moderna Volume 61 ; 61 >
+    au < releasing ; 2007 ; Revista Hispánica Moderna Volume 60 ; 60 >
+    au < releasing ; 2008 ; Revista Hispánica Moderna Volume 61 ; 61 >
     au < released ; 2009 ; Revista Hispánica Moderna Volume 62 ; 62 >
     au < released ; 2010 ; Revista Hispánica Moderna Volume 63 ; 63 >
     au < released ; 2011 ; Revista Hispánica Moderna Volume 64 ; 64 >
     au < released ; 2012 ; Revista Hispánica Moderna Volume 65 ; 65 >
-    au < ready ; 2013 ; Revista Hispánica Moderna Volume 66 ; 66 >
+    au < releasing ; 2013 ; Revista Hispánica Moderna Volume 66 ; 66 >
     au < doNotProcess ; 2014 ; Revista Hispánica Moderna Volume 67 ; 67 >
 
   }

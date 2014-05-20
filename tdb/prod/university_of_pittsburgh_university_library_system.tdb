@@ -17,7 +17,7 @@
 
     au < released ; 2011 ; 2011 ; BIBLIOS: Librarianship and Information Science Journal Volume 2011 ; 2011 >
     au < released ; 2012 ; 2012 ; BIBLIOS: Librarianship and Information Science Journal Volume 2012 ; 2012 >
-    au < ready ; 2013 ; 2013 ; BIBLIOS: Librarianship and Information Science Journal Volume 2013 ; 2013 >
+    au < releasing ; 2013 ; 2013 ; BIBLIOS: Librarianship and Information Science Journal Volume 2013 ; 2013 >
     au < expected ; 2014 ; 2014 ; BIBLIOS: Librarianship and Information Science Journal Volume 2014 ; 2014 >
 
   }
@@ -81,7 +81,7 @@
     au < released ; 2010 ; 2010 ; The Carl Beck Papers In Russian And East European Studies Volume 2010 ; 2010 >
     au < released ; 2011 ; 2011 ; The Carl Beck Papers In Russian And East European Studies Volume 2011 ; 2011 >
     au < released ; 2012 ; 2012 ; The Carl Beck Papers In Russian And East European Studies Volume 2012 ; 2012 >
-    au < ready ; 2013 ; 2013 ; The Carl Beck Papers In Russian And East European Studies Volume 2013 ; 2013 >
+    au < releasing ; 2013 ; 2013 ; The Carl Beck Papers In Russian And East European Studies Volume 2013 ; 2013 >
     au < manifest ; 2014 ; 2014 ; The Carl Beck Papers In Russian And East European Studies Volume 2014 ; 2014 >
 
   }
@@ -96,7 +96,7 @@
       param[base_url] = http://catedraltomada.pitt.edu/ojs/
       param[journal_id] = catedraltomada
 
-      au < ready ; 2013 ; 2013 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 1 ; 1 >
+      au < releasing ; 2013 ; 2013 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 1 ; 1 >
       au < expected ; 2014 ; 2014 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 2 ; 2 >
 
   }
@@ -129,7 +129,7 @@
 
     au < released ; 2011 ; 2011 ; CINEJ Cinema e-Journal Volume 1 ; 1 >
     au < released ; 2012 ; 2012 ; CINEJ Cinema e-Journal Volume 2 ; 2 >
-    au < ready ; 2013 ; 2013 ; CINEJ Cinema e-Journal Volume 3 ; 3 >
+    au < releasing ; 2013 ; 2013 ; CINEJ Cinema e-Journal Volume 3 ; 3 >
     au < expected ; 2014 ; 2014 ; CINEJ Cinema e-Journal Volume 4 ; 4 >
 
   }
@@ -160,7 +160,7 @@
     param[base_url] = http://dentistry3000.pitt.edu/ojs/
     param[journal_id] = dentistry3000
 
-    au < ready ; 2013 ; 2013 ; Dentistry 3000 Volume 1 ; 1 >
+    au < releasing ; 2013 ; 2013 ; Dentistry 3000 Volume 1 ; 1 >
     au < expected ; 2014 ; 2014 ; Dentistry 3000 Volume 2 ; 2 >
 
   }
@@ -175,7 +175,7 @@
       param[base_url] = http://dpj.pitt.edu/ojs/
       param[journal_id] = dpj1
 
-      au < ready ; 2013 ; 2013 ; Dialogic Pedagogy: An International Online Journal Volume 1 ; 1 >
+      au < releasing ; 2013 ; 2013 ; Dialogic Pedagogy: An International Online Journal Volume 1 ; 1 >
       au < manifest ; 2014 ; 2014 ; Dialogic Pedagogy: An International Online Journal Volume 2 ; 2 >
 
   }
@@ -192,7 +192,7 @@
 
     au < released ; 2011 ; 2011 ; EMAJ: Emerging Markets e-Journal of Management Volume 1 ; 1 >
     au < released ; 2012 ; 2012 ; EMAJ: Emerging Markets e-Journal of Management Volume 2 ; 2 >
-    au < ready ; 2013 ; 2013 ; EMAJ: Emerging Markets e-Journal of Management Volume 3 (2013) ; 3 >
+    au < releasing ; 2013 ; 2013 ; EMAJ: Emerging Markets e-Journal of Management Volume 3 (2013) ; 3 >
     au < manifest ; 2014 ; 2014 ; EMAJ: Emerging Markets e-Journal of Management Volume 3 (2014) ; 3 >
 
   }
@@ -226,7 +226,7 @@
     au < released ; 2010 ; 2010 ; Excellence in Higher Education Volume 1 ; 1 >
     au < released ; 2011 ; 2011 ; Excellence in Higher Education Volume 2 ; 2 >
     au < released ; 2012 ; 2012 ; Excellence in Higher Education Volume 3 ; 3 >
-    au < ready ; 2013 ; 2013 ; Excellence in Higher Education Volume 4 ; 4 >
+    au < releasing ; 2013 ; 2013 ; Excellence in Higher Education Volume 4 ; 4 >
     au < expected ; 2014 ; 2014 ; Excellence in Higher Education Volume 5 ; 5 >
 
   }
@@ -240,8 +240,8 @@
     param[base_url] = http://forbes5.pitt.edu/ojs/
     param[journal_id] = forbes5
 
-    au < ready ; 2012 ; 2012 ; Forbes and Fifth Volume 1-2 ; 1-2 >
-    au < ready ; 2013 ; 2013 ; Forbes and Fifth Volume 3-4 ; 3-4 >
+    au < releasing ; 2012 ; 2012 ; Forbes and Fifth Volume 1-2 ; 1-2 >
+    au < releasing ; 2013 ; 2013 ; Forbes and Fifth Volume 3-4 ; 3-4 >
     au < manifest ; 2014 ; 2014 ; Forbes and Fifth Volume 5-6 ; 5-6 >
 
   }
@@ -257,7 +257,7 @@
 
     au < released ; 2011 ; 2011 ; Health, Culture, and Society Volume 1 ; 1 >
     au < released ; 2012 ; 2012 ; Health, Culture, and Society Volume 2-3 ; 2-3 >
-    au < ready ; 2013 ; 2013 ; Health, Culture, and Society Volume 4 ; 4 >
+    au < releasing ; 2013 ; 2013 ; Health, Culture, and Society Volume 4 ; 4 >
     au < expected ; 2014 ; 2014 ; Health, Culture, and Society Volume 5 ; 5 >
 
   }
@@ -273,7 +273,7 @@
 
     au < released ; 2011 ; 2011 ; IIOAB Letters Volume 1 ; 1 >
     au < released ; 2012 ; 2012 ; IIOAB Letters Volume 2 ; 2 >
-    au < ready ; 2013 ; 2013 ; IIOAB Letters Volume 3 ; 3 >
+    au < releasing ; 2013 ; 2013 ; IIOAB Letters Volume 3 ; 3 >
     au < expected ; 2014 ; 2014 ; IIOAB Letters Volume 4 ; 4 >
 
   }
@@ -291,7 +291,7 @@
     au < released ; 2010 ; 2010 ; International Journal of Telerehabilitation Volume 2 ; 2 >
     au < released ; 2011 ; 2011 ; International Journal of Telerehabilitation Volume 3 ; 3 >
     au < released ; 2012 ; 2012 ; International Journal of Telerehabilitation Volume 4 ; 4 >
-    au < ready ; 2013 ; 2013 ; International Journal of Telerehabilitation Volume 5 ; 5 >
+    au < releasing ; 2013 ; 2013 ; International Journal of Telerehabilitation Volume 5 ; 5 >
     au < expected ; 2014 ; 2014 ; International Journal of Telerehabilitation Volume 6 ; 6 >
 
   }
@@ -326,7 +326,7 @@
     au < released ; 2010 ; 2010 ; Journal of French and Francophone Philosophy Volume 18 ; 18 >
     au < released ; 2011 ; 2011 ; Journal of French and Francophone Philosophy Volume 19 ; 19 >
     au < released ; 2012 ; 2012 ; Journal of French and Francophone Philosophy Volume 20 ; 20 >
-    au < ready ; 2013 ; 2013 ; Journal of French and Francophone Philosophy Volume 21 ; 21 >
+    au < releasing ; 2013 ; 2013 ; Journal of French and Francophone Philosophy Volume 21 ; 21 >
     au < expected ; 2014 ; 2014 ; Journal of French and Francophone Philosophy Volume 22 ; 22 >
 
   }
@@ -347,7 +347,7 @@
       au < released ; 2010 ; 2010 ; Journal of Law and Commerce Volume 28-29 ; 28-29 >
       au < released ; 2011 ; 2011 ; Journal of Law and Commerce Volume 29 ; 29 >
       au < released ; 2012 ; 2012 ; Journal of Law and Commerce Volume 30 ; 30 >
-      au < ready ; 2013 ; 2013 ; Journal of Law and Commerce Volume 31 ; 31 >
+      au < releasing ; 2013 ; 2013 ; Journal of Law and Commerce Volume 31 ; 31 >
       au < expected ; 2014 ; 2014 ; Journal of Law and Commerce Volume 32 ; 32 >
 
   }
@@ -362,7 +362,7 @@
       param[base_url] = http://jwhi.pitt.edu/ojs/
       param[journal_id] = jwhi
 
-      au < ready ; 2013 ; 2013 ; Journal of World-Historical Information Volume 1 ; 1 >
+      au < releasing ; 2013 ; 2013 ; Journal of World-Historical Information Volume 1 ; 1 >
       au < expected ; 2014 ; 2014 ; Journal of World-Historical Information Volume 2 ; 2 >
 
   }
@@ -377,7 +377,7 @@
     param[base_url] = http://lesli-journal.org/ojs/
     param[journal_id] = lesli
 
-    au < ready ; 2013 ; 2013 ; Linguistic Evidence in Security, Law and Intelligence Volume 1 ; 1 >
+    au < releasing ; 2013 ; 2013 ; Linguistic Evidence in Security, Law and Intelligence Volume 1 ; 1 >
     au < manifest ; 2014 ; 2014 ; Linguistic Evidence in Security, Law and Intelligence Volume 2 ; 2 >
 
   }
@@ -393,7 +393,7 @@
       param[journal_id] = mitrip
 
       au < released ; 2012 ; 2012 ; Motivational Interviewing: Training, Research, Implementation, Practice Volume 1 (2012) ; 1 >
-      au < ready ; 2013 ; 2013 ; Motivational Interviewing: Training, Research, Implementation, Practice Volume 1 (2013) ; 1 >
+      au < releasing ; 2013 ; 2013 ; Motivational Interviewing: Training, Research, Implementation, Practice Volume 1 (2013) ; 1 >
       au < expected ; 2014 ; 2014 ; Motivational Interviewing: Training, Research, Implementation, Practice Volume 1 (2014) ; 1 >
 
   }
@@ -407,7 +407,7 @@
     param[base_url] = http://palrap.pitt.edu/ojs/
     param[journal_id] = palrap
 
-    au < ready ; 2013 ; 2013 ; Pennsylvania Libraries: Research and Practice Volume 1 ; 1 >
+    au < releasing ; 2013 ; 2013 ; Pennsylvania Libraries: Research and Practice Volume 1 ; 1 >
     au < expected ; 2014 ; 2014 ; Pennsylvania Libraries: Research and Practice Volume 2 ; 2 >
 
   }
@@ -444,7 +444,7 @@
       au < released ; 2010 ; 2010 ; Pittsburgh Journal of Environmental and Public Health Law Volume 4 ; 4 >
       au < released ; 2011 ; 2011 ; Pittsburgh Journal of Environmental and Public Health Law Volume 5 ; 5 >
       au < released ; 2012 ; 2012 ; Pittsburgh Journal of Environmental and Public Health Law Volume 6 ; 6 >
-      au < ready ; 2013 ; 2013 ; Pittsburgh Journal of Environmental and Public Health Law Volume 7 ; 7 >
+      au < releasing ; 2013 ; 2013 ; Pittsburgh Journal of Environmental and Public Health Law Volume 7 ; 7 >
       au < manifest ; 2014 ; 2014 ; Pittsburgh Journal of Environmental and Public Health Law Volume 8 ; 8 >
 
   }
@@ -472,7 +472,7 @@
       au < released ; 2010 ; 2010 ; Pittsburgh Journal of Technology Law and Policy Volume 10 ; 10 >
       au < released ; 2011 ; 2011 ; Pittsburgh Journal of Technology Law and Policy Volume 11 ; 11 >
       au < released ; 2012 ; 2012 ; Pittsburgh Journal of Technology Law and Policy Volume 12-13 ; 12-13 >
-      au < ready ; 2013 ; 2013 ; Pittsburgh Journal of Technology Law and Policy Volume 13 ; 13 >
+      au < releasing ; 2013 ; 2013 ; Pittsburgh Journal of Technology Law and Policy Volume 13 ; 13 >
       au < expected ; 2014 ; 2014 ; Pittsburgh Journal of Technology Law and Policy Volume 14 ; 14 >
 
   }
@@ -488,7 +488,7 @@
       param[journal_id] = pgheupapers
 
       au < released ; 2012 ; 2012 ; Pittsburgh Papers on the European Union Volume 1 ; 1 >
-      au < ready ; 2013 ; 2013 ; Pittsburgh Papers on the European Union Volume 2 ; 2 >
+      au < releasing ; 2013 ; 2013 ; Pittsburgh Papers on the European Union Volume 2 ; 2 >
       au < expected ; 2014 ; 2014 ; Pittsburgh Papers on the European Union Volume 3 ; 3 >
 
   }
@@ -503,8 +503,8 @@
     param[base_url] = http://taxreview.law.pitt.edu/ojs/
     param[journal_id] = taxreview
 
-    au < ready ; 2012 ; 2012 ; Pittsburgh Tax Review Volume 1 ; 1 >
-    au < ready ; 2013 ; 2013 ; Pittsburgh Tax Review Volume 2 ; 2 >
+    au < releasing ; 2012 ; 2012 ; Pittsburgh Tax Review Volume 1 ; 1 >
+    au < releasing ; 2013 ; 2013 ; Pittsburgh Tax Review Volume 2 ; 2 >
     au < expected ; 2014 ; 2014 ; Pittsburgh Tax Review Volume 3 ; 3 >
 
   }
@@ -519,7 +519,7 @@
     param[base_url] = http://radicalteacher.library.pitt.edu/ojs/
     param[journal_id] = radicalteacher
 
-    au < ready ; 2013 ; 2013 ; Radical Teacher Volume 1 ; 1 >
+    au < releasing ; 2013 ; 2013 ; Radical Teacher Volume 1 ; 1 >
     au < manifest ; 2014 ; 2014 ; Radical Teacher Volume 2 ; 2 >
 
   }
@@ -608,7 +608,7 @@
     au < released ; 2010 ; 2010 ; Revista Iberoamericana Volume LXXVI ; LXXVI >
     au < released ; 2011 ; 2011 ; Revista Iberoamericana Volume LXXVII ; LXXVII >
     au < released ; 2012 ; 2012 ; Revista Iberoamericana Volume LXXVIII ; LXXVIII >
-    au < ready ; 2013 ; 2013 ; Revista Iberoamericana Volume LXXIX ; LXXIX >
+    au < releasing ; 2013 ; 2013 ; Revista Iberoamericana Volume LXXIX ; LXXIX >
     au < expected ; 2014 ; 2014 ; Revista Iberoamericana Volume LXXX ; LXXX >
 
 
@@ -626,7 +626,7 @@
     au < released ; 2010 ; 2010 ; Ricoeur Studies Volume 1 ; 1 >
     au < released ; 2011 ; 2011 ; Ricoeur Studies Volume 2 ; 2 >
     au < released ; 2012 ; 2012 ; Ricoeur Studies Volume 3 ; 3 >
-    au < ready ; 2013 ; 2013 ; Ricoeur Studies Volume 4 ; 4 >
+    au < releasing ; 2013 ; 2013 ; Ricoeur Studies Volume 4 ; 4 >
     au < expected ; 2014 ; 2014 ; Ricoeur Studies Volume 5 ; 5 >
 
   }
@@ -642,7 +642,7 @@
       param[journal_id] = shashi
 
       au < released ; 2012 ; 2012 ; SHASHI: The Journal of Japanese Business and Company History Volume 1 ; 1 >
-      au < ready ; 2013 ; 2013 ; SHASHI: The Journal of Japanese Business and Company History Volume 2 ; 2 >
+      au < releasing ; 2013 ; 2013 ; SHASHI: The Journal of Japanese Business and Company History Volume 2 ; 2 >
       au < expected ; 2014 ; 2014 ; SHASHI: The Journal of Japanese Business and Company History Volume 3 ; 3 >
 
   }
@@ -657,7 +657,7 @@
       param[base_url] = http://timelyinterventions.pitt.edu/ojs/
       param[journal_id] = timely
 
-      au < ready ; 2013 ; 2013 ; Timely Interventions Volume 1 ; 1 >
+      au < releasing ; 2013 ; 2013 ; Timely Interventions Volume 1 ; 1 >
       au < expected ; 2014 ; 2014 ; Timely Interventions Volume 2 ; 2 >
 
   }
@@ -683,7 +683,7 @@
       au < released ; 2010 ; 2010 ; University of Pittsburgh Law Review Volume 72 ; 72 >
       au < released ; 2011 ; 2011 ; University of Pittsburgh Law Review Volume 72-73 ; 72-73 >
       au < released ; 2012 ; 2012 ; University of Pittsburgh Law Review Volume 73-74 ; 73-74 >
-      au < ready ; 2013 ; 2013 ; University of Pittsburgh Law Review Volume 75 ; 75 >
+      au < releasing ; 2013 ; 2013 ; University of Pittsburgh Law Review Volume 75 ; 75 >
       au < expected ; 2014 ; 2014 ; University of Pittsburgh Law Review Volume 76 ; 76 >
 
   }
