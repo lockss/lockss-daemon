@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdb.py,v 1.24 2014-04-07 21:19:10 thib_gc Exp $
+# $Id: tdb.py,v 1.25 2014-05-21 21:01:15 thib_gc Exp $
 
 __copyright__ = '''\
 Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
@@ -28,7 +28,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.4.6'
+__version__ = '0.4.7'
 
 import re
 
@@ -175,6 +175,7 @@ class AU(Map):
         NOT_READY = 'notReady'
         READY = 'ready'
         CRAWLING = 'crawling'
+        DEEP_CRAWL = 'deepCrawl'
         FROZEN = 'frozen'
         ING_NOT_READY = 'ingNotReady'
         RELEASING = 'releasing'
