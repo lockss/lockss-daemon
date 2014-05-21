@@ -21,8 +21,8 @@
       param[base_url] = http://www.antitraffickingreview.org/
       param[journal_id] = atrjournal
       
-      au < ready ; exists ; 2013 ; Anti-Trafficking Review Number 1 ; 1 ; 2013 >
-      au < ready ; exists ; 2014 ; Anti-Trafficking Review Number 2 ; 2 ; 2014 >
+      au < crawling ; exists ; 2013 ; Anti-Trafficking Review Number 1 ; 1 ; 2013 >
+      au < crawling ; exists ; 2014 ; Anti-Trafficking Review Number 2 ; 2 ; 2014 >
 
     }
 
