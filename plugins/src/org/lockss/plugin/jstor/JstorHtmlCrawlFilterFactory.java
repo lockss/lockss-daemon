@@ -51,6 +51,11 @@ public class JstorHtmlCrawlFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttribute("div", "id", "itemsCiting"),
     //right column 
     HtmlNodeFilters.tagWithAttribute("div", "class", "rightCol myYahoo"),
+
+    // we don't go to html pages but when we do, watch for corrigendum, errata which 
+    // can cross over issues.eg
+    // http://www.jstor.org/stable/10.1525/ncm.2011.34.issue-3
+    
     };
     return new HtmlFilterInputStream(in,
                                      encoding,

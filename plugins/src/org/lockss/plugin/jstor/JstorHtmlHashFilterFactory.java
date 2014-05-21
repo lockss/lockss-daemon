@@ -79,7 +79,14 @@ public class JstorHtmlHashFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttribute("div", "class", "rightCol myYahoo"),
       
       // Containing copyright
-      HtmlNodeFilters.tagWithAttribute("div", "class", "footer")
+      HtmlNodeFilters.tagWithAttribute("div", "class", "footer"),
+      // Containing copyright
+      HtmlNodeFilters.tagWithAttribute("div", "class", "foot"),
+      // Containing name information
+      HtmlNodeFilters.tagWithAttribute("div", "class", "banner"),
+      // Containing top head information 
+      HtmlNodeFilters.tagWithAttribute("div", "class", "head globalContainer")
+      
         
     };
     
