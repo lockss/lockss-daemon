@@ -2249,6 +2249,35 @@
     >
 
     comment[bt] = this journal has ceased publication
+
+    {
+
+    plugin = org.lockss.plugin.highwire.HighWirePlugin
+    param[base_url] = http://brief-treatment.oxfordjournals.org/
+    implicit < status ; year ; name ; param[volume] >
+
+    au < down ; 2005 ; Brief Treatment and Crisis Intervention Volume 5 ; 5 >
+
+    }
+    
+    {
+
+    pluginPrefix = org.lockss.plugin.highwire.
+    param[base_url] = http://brief-treatment.oxfordjournals.org/
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+    au < HighWireStrVolPlugin ; down ; 2001 ; Brief Treatment and Crisis Intervention Volume 1 ; 1 >
+    au < HighWireStrVolPlugin ; down ; 2002 ; Brief Treatment and Crisis Intervention Volume 2 ; 2 >
+    au < HighWireStrVolPlugin ; down ; 2003 ; Brief Treatment and Crisis Intervention Volume 3 ; 3 >
+    au < HighWireStrVolPlugin ; down ; 2004 ; Brief Treatment and Crisis Intervention Volume 4 ; 4 >
+    au < HighWireStrVolPlugin ; down ; 2006 ; Brief Treatment and Crisis Intervention Volume 6 ; 6 >
+    au < HighWireStrVolPlugin ; down ; 2007 ; Brief Treatment and Crisis Intervention Volume 7 ; 7 >
+    au < HighWireStrVolPlugin ; down ; 2008 ; Brief Treatment and Crisis Intervention Volume 8 ; 8 >
+
+    }
+
+  
+  
   {
   
     rights = openaccess
@@ -2268,7 +2297,6 @@
     au < released ; 2008 ; Brief Treatment and Crisis Intervention Volume 8 ; 8 ; reingest.lockss.org:80 >
 
     }
-
   }
 
   {
