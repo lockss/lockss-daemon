@@ -9099,11 +9099,12 @@
     param[base_url] = http://imrs.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
     comment[publication] = Volume 2007 was published in the year 2008
+    comment[v2008] = manifest page exists, but no content exists.
 
     au < manifest ; exists ; 2005 ; International Mathematics Research Surveys Volume 2005 ; 2005 ; >
     au < manifest ; exists ; 2006 ; International Mathematics Research Surveys Volume 2006 ; 2006 ; >
     au < manifest ; exists ; 2008 ; International Mathematics Research Surveys Volume 2007 ; 2007 ; >
-    au < doesNotExist ; doesNotExist ; 0 ; International Mathematics Research Surveys Volume 2008 ; 2008 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; International Mathematics Research Surveys Volume 2008 ; 2008 ; >
     
   }
 
