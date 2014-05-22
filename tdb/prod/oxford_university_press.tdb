@@ -16835,7 +16835,7 @@
 
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://omcr.oxfordjournals.org/
-    implicit < status ; year ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2014 ; Oxford Medical Case Reports Volume 2014 ; 2014 >
 
