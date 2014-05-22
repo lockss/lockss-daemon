@@ -17690,7 +17690,22 @@
     param[base_url] = http://ppar.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < expected ; exists ; 2014 ; Public Policy & Aging Report Volume 1 ; 1 ; >
+    au < exists ; exists ; 1998-1999 ; Public Policy & Aging Report Volume 9 ; 9 ; >
+    au < exists ; exists ; 1999-2000 ; Public Policy & Aging Report Volume 10 ; 10 ; >
+    au < exists ; exists ; 2000-2001 ; Public Policy & Aging Report Volume 11 ; 11 ; >
+    au < exists ; exists ; 2001-2002 ; Public Policy & Aging Report Volume 12 ; 12 ; >
+    au < exists ; exists ; 2003 ; Public Policy & Aging Report Volume 13 ; 13 ; >
+    au < exists ; exists ; 2004 ; Public Policy & Aging Report Volume 14 ; 14 ; >
+    au < exists ; exists ; 2005 ; Public Policy & Aging Report Volume 15 ; 15 ; >
+    au < exists ; exists ; 2006 ; Public Policy & Aging Report Volume 16 ; 16 ; >
+    au < exists ; exists ; 2007 ; Public Policy & Aging Report Volume 17 ; 17 ; >
+    au < exists ; exists ; 2008 ; Public Policy & Aging Report Volume 18 ; 18 ; >
+    au < exists ; exists ; 2009 ; Public Policy & Aging Report Volume 19 ; 19 ; >
+    au < exists ; exists ; 2010 ; Public Policy & Aging Report Volume 20 ; 20 ; >
+    au < exists ; exists ; 2011 ; Public Policy & Aging Report Volume 21 ; 21 ; >
+    au < exists ; exists ; 2012 ; Public Policy & Aging Report Volume 22 ; 22 ; >
+    au < exists ; exists ; 2013 ; Public Policy & Aging Report Volume 23 ; 23 ; >
+    au < exists ; exists ; 2014 ; Public Policy & Aging Report Volume 24 ; 24 ; >
 
   }
 
