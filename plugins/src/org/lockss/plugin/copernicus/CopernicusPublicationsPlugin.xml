@@ -13,14 +13,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -149,6 +149,15 @@
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.copernicus.CopernicusArticleIteratorFactory</string>
   </entry> 
+   <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.copernicus.CopernicusHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>  
   <entry>
   <string>application/x-research-info-systems_metadata_extractor_factory_map</string>
   <map> 
