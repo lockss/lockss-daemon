@@ -1,5 +1,5 @@
 /*
- * $Id: RSC2014PdfFilterFactory.java,v 1.1 2014-05-07 00:59:52 etenbrink Exp $
+ * $Id: RSC2014PdfFilterFactory.java,v 1.2 2014-05-23 20:55:26 etenbrink Exp $
  */
 
 /*
@@ -35,9 +35,12 @@ package org.lockss.plugin.royalsocietyofchemistry;
 import org.lockss.filter.pdf.*;
 import org.lockss.pdf.*;
 import org.lockss.plugin.*;
+import org.lockss.util.Logger;
 
 public class RSC2014PdfFilterFactory extends SimplePdfFilterFactory {
-
+  
+  static Logger log = Logger.getLogger(RSC2014PdfFilterFactory.class);
+  
   public RSC2014PdfFilterFactory() {
     super();
   }
@@ -45,8 +48,15 @@ public class RSC2014PdfFilterFactory extends SimplePdfFilterFactory {
   @Override
   public void transform(ArchivalUnit au, PdfDocument pdfDocument)
       throws PdfException {
-    PdfUtil.normalizeAllTokenStreams(pdfDocument);
+    // to catch Exception that was thrown, but when ignored did not seem to be a problem
+    try {
+      PdfUtil.normalizeAllTokenStreams(pdfDocument);
+    }
+    catch (Exception e) {
+      log.warning("caught/ignore", e);
+    }
     PdfUtil.normalizeTrailerId(pdfDocument);
+    log.warning("end " + pdfDocument.getTitle());
   }
   
 }
