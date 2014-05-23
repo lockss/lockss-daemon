@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Psychiatry Online Textbooks Plugin, Base URL %s, Resource ID %d&quot;, base_url, resource_id</string>
+    <string>"Psychiatry Online Textbooks Plugin, Base URL %s, Resource ID %d", base_url, resource_id</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -26,16 +26,16 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|js|jpe?g|png|tif?f)$&quot;, base_url_host</string>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%s(resourceToc|copyrightBooks)\.aspx\?resourceID=%d&quot;, base_url, resource_id</string>
-      <string>1,&quot;^%s(content|popup)\.aspx\?aID=[0-9]+&quot;, base_url</string>
-      <string>1,&quot;^%sbookInfo\.aspx\?file=.*%d\.html&quot;, base_url, resource_id</string>
+      <string>1,"^https?://%s/.*[.](bmp|css|gif|ico|js|jpe?g|png|tif?f)$", base_url_host</string>
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%s(resourceToc|copyrightBooks)[.]aspx[?]resourceID=%d", base_url, resource_id</string>
+      <string>1,"^%s(content|popup)[.]aspx[?]aID=[0-9]+", base_url</string>
+      <string>1,"^%sbookInfo[.]aspx[?]file=.*%d[.]html", base_url, resource_id</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%sresourceToc.aspx?resourceID=%d&quot;, base_url, resource_id</string>
+    <string>"%sresourceToc.aspx?resourceID=%d", base_url, resource_id</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -71,6 +71,23 @@
   <entry>
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.psychiatryonline.PsychiatryOnlineUrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.psychiatryonline.PsychiatryOnlineArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.psychiatryonline.PsychiatryOnlineArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.psychiatryonline.PsychiatryOnlineMetadataExtractorFactory</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>au_login_page_checker</string>
