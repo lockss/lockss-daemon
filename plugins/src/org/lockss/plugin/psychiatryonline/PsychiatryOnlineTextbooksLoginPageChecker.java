@@ -1,5 +1,5 @@
 /*
- * $Id: PsychiatryOnlineTextbooksLoginPageChecker.java,v 1.3 2009-03-17 00:29:01 thib_gc Exp $
+ * $Id: PsychiatryOnlineTextbooksLoginPageChecker.java,v 1.4 2014-05-23 21:34:00 etenbrink Exp $
  */
 
 /*
@@ -45,7 +45,8 @@ public class PsychiatryOnlineTextbooksLoginPageChecker implements LoginPageCheck
   public boolean isLoginPage(Properties props,
                              Reader reader)
       throws IOException, PluginException {
-    if ("text/html".equalsIgnoreCase(HeaderUtil.getMimeTypeFromContentType(props.getProperty("Content-Type")))) {
+    if ("text/html".equalsIgnoreCase(
+        HeaderUtil.getMimeTypeFromContentType(props.getProperty("Content-Type")))) {
       return StringUtil.containsString(reader, LOGIN_STRING);
     }
     return false;
