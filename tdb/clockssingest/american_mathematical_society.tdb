@@ -160,6 +160,16 @@
     comment[type] = ejournal only
     param[journal_id] = ecgd
     
+    au < exists ; exists ; 1997 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 1 ; 1997 >
+    au < exists ; exists ; 1998 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 2 ; 1998 >
+    au < exists ; exists ; 1999 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 3 ; 1999 >
+    au < exists ; exists ; 2000 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 4 ; 2000 >
+    au < exists ; exists ; 2001 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 5 ; 2001 >
+    au < exists ; exists ; 2002 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 6 ; 2002 >
+    au < exists ; exists ; 2003 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 7 ; 2003 >
+    au < exists ; exists ; 2004 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 8 ; 2004 >
+    au < exists ; exists ; 2005 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 9 ; 2005 >
+    au < exists ; exists ; 2006 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 10 ; 2006 >
     au < manifest ; exists ; 2007 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 11 ; 2007 >
     au < manifest ; exists ; 2008 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 12 ; 2008 >
     au < manifest ; exists ; 2009 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 13 ; 2009 >
@@ -308,7 +318,176 @@
     >
     comment[type] = bookSeries
     param[journal_id] = memo
+    comment[0] = needs.plugin
+    implicit < status ; status2 ; year ; name ; param[volume] >
     
+    au < exists ; exists ; 1950 ; Memoirs of the American Mathematical Society Volume 0001 ; 0001 >
+    au < exists ; exists ; 1951 ; Memoirs of the American Mathematical Society Volume 0002 ; 0002 >
+    au < exists ; exists ; 1951 ; Memoirs of the American Mathematical Society Volume 0003 ; 0003 >
+    au < exists ; exists ; 1951 ; Memoirs of the American Mathematical Society Volume 0004 ; 0004 >
+    au < exists ; exists ; 1951 ; Memoirs of the American Mathematical Society Volume 0005 ; 0005 >
+    au < exists ; exists ; 1951 ; Memoirs of the American Mathematical Society Volume 0006 ; 0006 >
+    au < exists ; exists ; 1951 ; Memoirs of the American Mathematical Society Volume 0007 ; 0007 >
+    au < exists ; exists ; 1951 ; Memoirs of the American Mathematical Society Volume 0008 ; 0008 >
+    au < exists ; exists ; 1951 ; Memoirs of the American Mathematical Society Volume 0009 ; 0009 >
+    au < exists ; exists ; 1952 ; Memoirs of the American Mathematical Society Volume 0010 ; 0010 >
+    au < exists ; exists ; 1952 ; Memoirs of the American Mathematical Society Volume 0011 ; 0011 >
+    au < exists ; exists ; 1953 ; Memoirs of the American Mathematical Society Volume 0012 ; 0012 >
+    au < exists ; exists ; 1954 ; Memoirs of the American Mathematical Society Volume 0013 ; 0013 >
+    au < exists ; exists ; 1955 ; Memoirs of the American Mathematical Society Volume 0014 ; 0014 >
+    au < exists ; exists ; 1955 ; Memoirs of the American Mathematical Society Volume 0015 ; 0015 >
+    au < exists ; exists ; 1955 ; Memoirs of the American Mathematical Society Volume 0016 ; 0016 >
+    au < exists ; exists ; 1955 ; Memoirs of the American Mathematical Society Volume 0017 ; 0017 >
+    au < exists ; exists ; 1955 ; Memoirs of the American Mathematical Society Volume 0018 ; 0018 >
+    au < exists ; exists ; 1956 ; Memoirs of the American Mathematical Society Volume 0019 ; 0019 >
+    au < exists ; exists ; 1956 ; Memoirs of the American Mathematical Society Volume 0020 ; 0020 >
+    au < exists ; exists ; 1956 ; Memoirs of the American Mathematical Society Volume 0021 ; 0021 >
+    au < exists ; exists ; 1957 ; Memoirs of the American Mathematical Society Volume 0022 ; 0022 >
+    au < exists ; exists ; 1957 ; Memoirs of the American Mathematical Society Volume 0023 ; 0023 >
+    au < exists ; exists ; 1957 ; Memoirs of the American Mathematical Society Volume 0024 ; 0024 >
+    au < exists ; exists ; 1957 ; Memoirs of the American Mathematical Society Volume 0025 ; 0025 >
+    au < exists ; exists ; 1957 ; Memoirs of the American Mathematical Society Volume 0026 ; 0026 >
+    au < exists ; exists ; 1957 ; Memoirs of the American Mathematical Society Volume 0027 ; 0027 >
+    au < exists ; exists ; 1957 ; Memoirs of the American Mathematical Society Volume 0028 ; 0028 >
+    au < exists ; exists ; 1958 ; Memoirs of the American Mathematical Society Volume 0029 ; 0029 >
+    au < exists ; exists ; 1959 ; Memoirs of the American Mathematical Society Volume 0030 ; 0030 >
+    au < exists ; exists ; 1959 ; Memoirs of the American Mathematical Society Volume 0031 ; 0031 >
+    au < exists ; exists ; 1959 ; Memoirs of the American Mathematical Society Volume 0032 ; 0032 >
+    au < exists ; exists ; 1959 ; Memoirs of the American Mathematical Society Volume 0033 ; 0033 >
+    au < exists ; exists ; 1959 ; Memoirs of the American Mathematical Society Volume 0034 ; 0034 >
+    au < exists ; exists ; 1959 ; Memoirs of the American Mathematical Society Volume 0035 ; 0035 >
+    au < exists ; exists ; 1960 ; Memoirs of the American Mathematical Society Volume 0036 ; 0036 >
+    au < exists ; exists ; 1961 ; Memoirs of the American Mathematical Society Volume 0037 ; 0037 >
+    au < exists ; exists ; 1961 ; Memoirs of the American Mathematical Society Volume 0038 ; 0038 >
+    au < exists ; exists ; 1961 ; Memoirs of the American Mathematical Society Volume 0039 ; 0039 >
+    au < exists ; exists ; 1961 ; Memoirs of the American Mathematical Society Volume 0040 ; 0040 >
+    au < exists ; exists ; 1961 ; Memoirs of the American Mathematical Society Volume 0041 ; 0041 >
+    au < exists ; exists ; 1962 ; Memoirs of the American Mathematical Society Volume 0042 ; 0042 >
+    au < exists ; exists ; 1962 ; Memoirs of the American Mathematical Society Volume 0044 ; 0044 >
+    au < exists ; exists ; 1963 ; Memoirs of the American Mathematical Society Volume 0043 ; 0043 >
+    au < exists ; exists ; 1963 ; Memoirs of the American Mathematical Society Volume 0045 ; 0045 >
+    au < exists ; exists ; 1963 ; Memoirs of the American Mathematical Society Volume 0046 ; 0046 >
+    au < exists ; exists ; 1964 ; Memoirs of the American Mathematical Society Volume 0047 ; 0047 >
+    au < exists ; exists ; 1964 ; Memoirs of the American Mathematical Society Volume 0048 ; 0048 >
+    au < exists ; exists ; 1964 ; Memoirs of the American Mathematical Society Volume 0049 ; 0049 >
+    au < exists ; exists ; 1964 ; Memoirs of the American Mathematical Society Volume 0050 ; 0050 >
+    au < exists ; exists ; 1964 ; Memoirs of the American Mathematical Society Volume 0051 ; 0051 >
+    au < exists ; exists ; 1965 ; Memoirs of the American Mathematical Society Volume 0052 ; 0052 >
+    au < exists ; exists ; 1965 ; Memoirs of the American Mathematical Society Volume 0053 ; 0053 >
+    au < exists ; exists ; 1965 ; Memoirs of the American Mathematical Society Volume 0054 ; 0054 >
+    au < exists ; exists ; 1965 ; Memoirs of the American Mathematical Society Volume 0055 ; 0055 >
+    au < exists ; exists ; 1965 ; Memoirs of the American Mathematical Society Volume 0056 ; 0056 >
+    au < exists ; exists ; 1965 ; Memoirs of the American Mathematical Society Volume 0057 ; 0057 >
+    au < exists ; exists ; 1965 ; Memoirs of the American Mathematical Society Volume 0058 ; 0058 >
+    au < exists ; exists ; 1965 ; Memoirs of the American Mathematical Society Volume 0059 ; 0059 >
+    au < exists ; exists ; 1966 ; Memoirs of the American Mathematical Society Volume 0060 ; 0060 >
+    au < exists ; exists ; 1966 ; Memoirs of the American Mathematical Society Volume 0061 ; 0061 >
+    au < exists ; exists ; 1966 ; Memoirs of the American Mathematical Society Volume 0062 ; 0062 >
+    au < exists ; exists ; 1966 ; Memoirs of the American Mathematical Society Volume 0063 ; 0063 >
+    au < exists ; exists ; 1966 ; Memoirs of the American Mathematical Society Volume 0064 ; 0064 >
+    au < exists ; exists ; 1966 ; Memoirs of the American Mathematical Society Volume 0065 ; 0065 >
+    au < exists ; exists ; 1966 ; Memoirs of the American Mathematical Society Volume 0066 ; 0066 >
+    au < exists ; exists ; 1966 ; Memoirs of the American Mathematical Society Volume 0067 ; 0067 >
+    au < exists ; exists ; 1966 ; Memoirs of the American Mathematical Society Volume 0068 ; 0068 >
+    au < exists ; exists ; 1967 ; Memoirs of the American Mathematical Society Volume 0069 ; 0069 >
+    au < exists ; exists ; 1967 ; Memoirs of the American Mathematical Society Volume 0070 ; 0070 >
+    au < exists ; exists ; 1967 ; Memoirs of the American Mathematical Society Volume 0071 ; 0071 >
+    au < exists ; exists ; 1967 ; Memoirs of the American Mathematical Society Volume 0072 ; 0072 >
+    au < exists ; exists ; 1967 ; Memoirs of the American Mathematical Society Volume 0073 ; 0073 >
+    au < exists ; exists ; 1967 ; Memoirs of the American Mathematical Society Volume 0074 ; 0074 >
+    au < exists ; exists ; 1967 ; Memoirs of the American Mathematical Society Volume 0075 ; 0075 >
+    au < exists ; exists ; 1967 ; Memoirs of the American Mathematical Society Volume 0076 ; 0076 >
+    au < exists ; exists ; 1967 ; Memoirs of the American Mathematical Society Volume 0077 ; 0077 >
+    au < exists ; exists ; 1968 ; Memoirs of the American Mathematical Society Volume 0078 ; 0078 >
+    au < exists ; exists ; 1968 ; Memoirs of the American Mathematical Society Volume 0079 ; 0079 >
+    au < exists ; exists ; 1968 ; Memoirs of the American Mathematical Society Volume 0080 ; 0080 >
+    au < exists ; exists ; 1968 ; Memoirs of the American Mathematical Society Volume 0081 ; 0081 >
+    au < exists ; exists ; 1968 ; Memoirs of the American Mathematical Society Volume 0082 ; 0082 >
+    au < exists ; exists ; 1968 ; Memoirs of the American Mathematical Society Volume 0083 ; 0083 >
+    au < exists ; exists ; 1968 ; Memoirs of the American Mathematical Society Volume 0084 ; 0084 >
+    au < exists ; exists ; 1969 ; Memoirs of the American Mathematical Society Volume 0085 ; 0085 >
+    au < exists ; exists ; 1969 ; Memoirs of the American Mathematical Society Volume 0086 ; 0086 >
+    au < exists ; exists ; 1969 ; Memoirs of the American Mathematical Society Volume 0087 ; 0087 >
+    au < exists ; exists ; 1969 ; Memoirs of the American Mathematical Society Volume 0088 ; 0088 >
+    au < exists ; exists ; 1969 ; Memoirs of the American Mathematical Society Volume 0089 ; 0089 >
+    au < exists ; exists ; 1969 ; Memoirs of the American Mathematical Society Volume 0090 ; 0090 >
+    au < exists ; exists ; 1969 ; Memoirs of the American Mathematical Society Volume 0092 ; 0092 >
+    au < exists ; exists ; 1969 ; Memoirs of the American Mathematical Society Volume 0093 ; 0093 >
+    au < exists ; exists ; 1969 ; Memoirs of the American Mathematical Society Volume 0094 ; 0094 >
+    au < exists ; exists ; 1970 ; Memoirs of the American Mathematical Society Volume 0091 ; 0091 >
+    au < exists ; exists ; 1970 ; Memoirs of the American Mathematical Society Volume 0096 ; 0096 >
+    au < exists ; exists ; 1970 ; Memoirs of the American Mathematical Society Volume 0097 ; 0097 >
+    au < exists ; exists ; 1970 ; Memoirs of the American Mathematical Society Volume 0098 ; 0098 >
+    au < exists ; exists ; 1970 ; Memoirs of the American Mathematical Society Volume 0099 ; 0099 >
+    au < exists ; exists ; 1970 ; Memoirs of the American Mathematical Society Volume 0100 ; 0100 >
+    au < exists ; exists ; 1970 ; Memoirs of the American Mathematical Society Volume 0101 ; 0101 >
+    au < exists ; exists ; 1970 ; Memoirs of the American Mathematical Society Volume 0102 ; 0102 >
+    au < exists ; exists ; 1970 ; Memoirs of the American Mathematical Society Volume 0103 ; 0103 >
+    au < exists ; exists ; 1970 ; Memoirs of the American Mathematical Society Volume 0104 ; 0104 >
+    au < exists ; exists ; 1970 ; Memoirs of the American Mathematical Society Volume 0105 ; 0105 >
+    au < exists ; exists ; 1971 ; Memoirs of the American Mathematical Society Volume 0095 ; 0095 >
+    au < exists ; exists ; 1971 ; Memoirs of the American Mathematical Society Volume 0106 ; 0106 >
+    au < exists ; exists ; 1971 ; Memoirs of the American Mathematical Society Volume 0107 ; 0107 >
+    au < exists ; exists ; 1971 ; Memoirs of the American Mathematical Society Volume 0108 ; 0108 >
+    au < exists ; exists ; 1971 ; Memoirs of the American Mathematical Society Volume 0109 ; 0109 >
+    au < exists ; exists ; 1971 ; Memoirs of the American Mathematical Society Volume 0110 ; 0110 >
+    au < exists ; exists ; 1971 ; Memoirs of the American Mathematical Society Volume 0111 ; 0111 >
+    au < exists ; exists ; 1971 ; Memoirs of the American Mathematical Society Volume 0112 ; 0112 >
+    au < exists ; exists ; 1971 ; Memoirs of the American Mathematical Society Volume 0113 ; 0113 >
+    au < exists ; exists ; 1971 ; Memoirs of the American Mathematical Society Volume 0114 ; 0114 >
+    au < exists ; exists ; 1971 ; Memoirs of the American Mathematical Society Volume 0115 ; 0115 >
+    au < exists ; exists ; 1972 ; Memoirs of the American Mathematical Society Volume 0116 ; 0116 >
+    au < exists ; exists ; 1972 ; Memoirs of the American Mathematical Society Volume 0117 ; 0117 >
+    au < exists ; exists ; 1972 ; Memoirs of the American Mathematical Society Volume 0118 ; 0118 >
+    au < exists ; exists ; 1972 ; Memoirs of the American Mathematical Society Volume 0119 ; 0119 >
+    au < exists ; exists ; 1972 ; Memoirs of the American Mathematical Society Volume 0120 ; 0120 >
+    au < exists ; exists ; 1972 ; Memoirs of the American Mathematical Society Volume 0121 ; 0121 >
+    au < exists ; exists ; 1972 ; Memoirs of the American Mathematical Society Volume 0122 ; 0122 >
+    au < exists ; exists ; 1972 ; Memoirs of the American Mathematical Society Volume 0123 ; 0123 >
+    au < exists ; exists ; 1972 ; Memoirs of the American Mathematical Society Volume 0124 ; 0124 >
+    au < exists ; exists ; 1972 ; Memoirs of the American Mathematical Society Volume 0125 ; 0125 >
+    au < exists ; exists ; 1972 ; Memoirs of the American Mathematical Society Volume 0126 ; 0126 >
+    au < exists ; exists ; 1972 ; Memoirs of the American Mathematical Society Volume 0127 ; 0127 >
+    au < exists ; exists ; 1972 ; Memoirs of the American Mathematical Society Volume 0128 ; 0128 >
+    au < exists ; exists ; 1972 ; Memoirs of the American Mathematical Society Volume 0129 ; 0129 >
+    au < exists ; exists ; 1972 ; Memoirs of the American Mathematical Society Volume 0130 ; 0130 >
+    au < exists ; exists ; 1973 ; Memoirs of the American Mathematical Society Volume 0032 ; 0032 >
+    au < exists ; exists ; 1974 ; Memoirs of the American Mathematical Society Volume 0033 ; 0033 >
+    au < exists ; exists ; 1975 ; Memoirs of the American Mathematical Society Volume 0034 ; 0034 >
+    au < exists ; exists ; 1976 ; Memoirs of the American Mathematical Society Volume 30 ; 1976 >
+    au < exists ; exists ; 1977 ; Memoirs of the American Mathematical Society Volume 31 ; 1977 >
+    au < exists ; exists ; 1978 ; Memoirs of the American Mathematical Society Volume 32 ; 1978 >
+    au < exists ; exists ; 1979 ; Memoirs of the American Mathematical Society Volume 33 ; 1979 >
+    au < exists ; exists ; 1980 ; Memoirs of the American Mathematical Society Volume 34-35 ; 1980 >
+    au < exists ; exists ; 1981 ; Memoirs of the American Mathematical Society Volume 36-37 ; 1981 >
+    au < exists ; exists ; 1982 ; Memoirs of the American Mathematical Society Volume 38-39 ; 1982 >
+    au < exists ; exists ; 1983 ; Memoirs of the American Mathematical Society Volume 40-41 ; 1983 >
+    au < exists ; exists ; 1984 ; Memoirs of the American Mathematical Society Volume 42-43 ; 1984 >
+    au < exists ; exists ; 1985 ; Memoirs of the American Mathematical Society Volume 44-45 ; 1985 >
+    au < exists ; exists ; 1986 ; Memoirs of the American Mathematical Society Volume 46-47 ; 1986 >
+    au < exists ; exists ; 1987 ; Memoirs of the American Mathematical Society Volume 48-49 ; 1987 >
+    au < exists ; exists ; 1988 ; Memoirs of the American Mathematical Society Volume 50-51 ; 1988 >
+    au < exists ; exists ; 1989 ; Memoirs of the American Mathematical Society Volume 52-53 ; 1989 >
+    au < exists ; exists ; 1990 ; Memoirs of the American Mathematical Society Volume 54-55 ; 1990 >
+    au < exists ; exists ; 1991 ; Memoirs of the American Mathematical Society Volume 56-57 ; 1991 >
+    au < exists ; exists ; 1992 ; Memoirs of the American Mathematical Society Volume 58-59 ; 1992 >
+    au < exists ; exists ; 1993 ; Memoirs of the American Mathematical Society Volume 60-61 ; 1993 >
+    au < exists ; exists ; 1994 ; Memoirs of the American Mathematical Society Volume 62-63 ; 1994 >
+    au < exists ; exists ; 1995 ; Memoirs of the American Mathematical Society Volume 64 ; 1995 >
+    au < exists ; exists ; 1996 ; Memoirs of the American Mathematical Society Volume 65 ; 1996 >
+    au < exists ; exists ; 1997 ; Memoirs of the American Mathematical Society Volume 66 ; 1997 >
+    au < exists ; exists ; 1998 ; Memoirs of the American Mathematical Society Volume 67 ; 1998 >
+    au < exists ; exists ; 1999 ; Memoirs of the American Mathematical Society Volume 68 ; 1999 >
+    au < exists ; exists ; 2000 ; Memoirs of the American Mathematical Society Volume 69 ; 2000 >
+    au < exists ; exists ; 2001 ; Memoirs of the American Mathematical Society Volume 70 ; 2001 >
+    au < exists ; exists ; 2002 ; Memoirs of the American Mathematical Society Volume 71 ; 2002 >
+    au < exists ; exists ; 2003 ; Memoirs of the American Mathematical Society Volume 72 ; 2003 >
+    au < exists ; exists ; 2004 ; Memoirs of the American Mathematical Society Volume 73 ; 2004 >
+    au < exists ; exists ; 2005 ; Memoirs of the American Mathematical Society Volume 74 ; 2005 >
+    au < exists ; exists ; 2006 ; Memoirs of the American Mathematical Society Volume 75 ; 2006 >
+    au < exists ; exists ; 2007 ; Memoirs of the American Mathematical Society Volume 76 ; 2007 >
+    au < exists ; exists ; 2008 ; Memoirs of the American Mathematical Society Volume 77 ; 2008 >
+    au < exists ; exists ; 2009 ; Memoirs of the American Mathematical Society Volume 78 ; 2009 >
     au < exists ; exists ; 2009 ; Memoirs of the American Mathematical Society Volume 216 ; 2009 >
     au < exists ; exists ; 2010 ; Memoirs of the American Mathematical Society Volume 217 ; 2010 >
     au < exists ; exists ; 2011 ; Memoirs of the American Mathematical Society Volume 218 ; 2011 >
@@ -328,6 +507,8 @@
     
     comment[type] = bookSeries
     param[journal_id] = notices
+    comment[0] = needs.plugin
+    implicit < status ; status2 ; year ; name ; param[volume] >
     
     au < exists ; exists ; 1995 ; Notices of the American Mathematical Society Volume 42 ; 1995 >
     au < exists ; exists ; 1996 ; Notices of the American Mathematical Society Volume 43 ; 1996 >
