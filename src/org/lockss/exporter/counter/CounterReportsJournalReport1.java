@@ -1,10 +1,10 @@
 /*
- * $Id: CounterReportsJournalReport1.java,v 1.8 2013-06-19 23:02:27 fergaloy-sf Exp $
+ * $Id: CounterReportsJournalReport1.java,v 1.9 2014-05-23 16:50:37 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -106,7 +106,8 @@ public class CounterReportsJournalReport1 extends CounterReportsJournalReport {
       + " and am." + AU_SEQ_COLUMN + " = au." + AU_SEQ_COLUMN
       + " and au." + PLUGIN_SEQ_COLUMN + " = pl." + PLUGIN_SEQ_COLUMN
       + " and pl." + PLATFORM_SEQ_COLUMN + " = pla." + PLATFORM_SEQ_COLUMN
-      + " order by n." + NAME_COLUMN + " asc";
+      + " order by n." + NAME_COLUMN + " asc"
+      + ", a." + PUBLICATION_SEQ_COLUMN + " asc";
 
   // Query to get the journal request counts to be included in the report.
   //
@@ -140,8 +141,9 @@ public class CounterReportsJournalReport1 extends CounterReportsJournalReport {
       + " and p." + MD_ITEM_SEQ_COLUMN + " = m1." + MD_ITEM_SEQ_COLUMN
       + " and n." + NAME_COLUMN + " != '" + ALL_JOURNALS_NAME + "'"
       + " and n." + NAME_TYPE_COLUMN + " = 'primary'"
-      + " order by n." + NAME_COLUMN
-      + ", a." + REQUEST_YEAR_COLUMN
+      + " order by n." + NAME_COLUMN + " asc"
+      + ", a." + PUBLICATION_SEQ_COLUMN + " asc"
+      + ", a." + REQUEST_YEAR_COLUMN + " asc"
       + ", a." + REQUEST_MONTH_COLUMN + " asc";
 
   // The count of months included in the report.
