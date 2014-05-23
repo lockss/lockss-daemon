@@ -1,10 +1,10 @@
 /*
- * $Id: BaseCounterReportsTitle.java,v 1.3 2012-12-07 07:27:05 fergaloy-sf Exp $
+ * $Id: BaseCounterReportsTitle.java,v 1.3.32.1 2014-05-23 15:25:54 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2012-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -184,5 +184,14 @@ public abstract class BaseCounterReportsTitle implements CounterReportsTitle {
   @Override
   public String getPublishingPlatform() {
     return publishingPlatform;
+  }
+
+  @Override
+  public String toString() {
+    return "BaseCounterReportsTitle [doi=" + doi + ", name=" + name
+	+ ", publisherName=" + publisherName + ", publishingPlatform="
+	+ publishingPlatform + ", proprietaryId=" + proprietaryId + ", isbn="
+	+ isbn + ", issn=" + issn + ", onlineIssn=" + onlineIssn
+	+ ", printIssn=" + printIssn + "]";
   }
 }

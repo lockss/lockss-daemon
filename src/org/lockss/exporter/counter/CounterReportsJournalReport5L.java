@@ -1,10 +1,10 @@
 /*
- * $Id: CounterReportsJournalReport5L.java,v 1.6 2013-06-19 17:39:52 fergaloy-sf Exp $
+ * $Id: CounterReportsJournalReport5L.java,v 1.6.14.1 2014-05-23 15:25:54 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -92,7 +92,8 @@ public class CounterReportsJournalReport5L
       + " and am." + AU_SEQ_COLUMN + " = au." + AU_SEQ_COLUMN
       + " and au." + PLUGIN_SEQ_COLUMN + " = pl." + PLUGIN_SEQ_COLUMN
       + " and pl." + PLATFORM_SEQ_COLUMN + " = pla." + PLATFORM_SEQ_COLUMN
-      + " order by n." + NAME_COLUMN + " asc";
+      + " order by n." + NAME_COLUMN + " asc"
+      + ", a." + PUBLICATION_SEQ_COLUMN + " asc";
 
   // Query to get the journal request counts to be included in the report.
   // This the same query used for Journal Report 5, except for the fact that in
@@ -125,7 +126,8 @@ public class CounterReportsJournalReport5L
       + " group by n." + NAME_COLUMN
       + ", a." + PUBLICATION_SEQ_COLUMN
       + ", a." + PUBLICATION_YEAR_COLUMN
-      + " order by n." + NAME_COLUMN
+      + " order by n." + NAME_COLUMN + " asc"
+      + ", a." + PUBLICATION_SEQ_COLUMN + " asc"
       + ", a." + PUBLICATION_YEAR_COLUMN + " desc";
 
   /**
