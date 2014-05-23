@@ -1,5 +1,5 @@
 /*
- * $Id: AuWsResult.java,v 1.1 2014-04-18 19:35:03 fergaloy-sf Exp $
+ * $Id: AuWsResult.java,v 1.1.4.1 2014-05-23 20:31:08 fergaloy-sf Exp $
  */
 
 /*
@@ -43,11 +43,14 @@ public class AuWsResult {
   private String name;
   private String volume;
   private String pluginName;
+  private Integer tdbYear;
   private String accessType;
+  private Long contentSize;
+  private Long diskUsage;
   private String repositoryPath;
   private Double recentPollAgreement;
   private String publishingPlatform;
-  private String publisher;
+  private String tdbPublisher;
   private Boolean availableFromPublisher;
   private String substanceState;
   private Long creationTime;
@@ -92,11 +95,29 @@ public class AuWsResult {
   public void setPluginName(String pluginName) {
     this.pluginName = pluginName;
   }
+  public Integer getTdbYear() {
+    return tdbYear;
+  }
+  public void setTdbYear(Integer tdbYear) {
+    this.tdbYear = tdbYear;
+  }
   public String getAccessType() {
     return accessType;
   }
   public void setAccessType(String accessType) {
     this.accessType = accessType;
+  }
+  public Long getContentSize() {
+    return contentSize;
+  }
+  public void setContentSize(Long contentSize) {
+    this.contentSize = contentSize;
+  }
+  public Long getDiskUsage() {
+    return diskUsage;
+  }
+  public void setDiskUsage(Long diskUsage) {
+    this.diskUsage = diskUsage;
   }
   public String getRepositoryPath() {
     return repositoryPath;
@@ -116,11 +137,11 @@ public class AuWsResult {
   public void setPublishingPlatform(String publishingPlatform) {
     this.publishingPlatform = publishingPlatform;
   }
-  public String getPublisher() {
-    return publisher;
+  public String getTdbPublisher() {
+    return tdbPublisher;
   }
-  public void setPublisher(String publisher) {
-    this.publisher = publisher;
+  public void setTdbPublisher(String tdbPublisher) {
+    this.tdbPublisher = tdbPublisher;
   }
   public Boolean getAvailableFromPublisher() {
     return availableFromPublisher;
@@ -240,20 +261,22 @@ public class AuWsResult {
   @Override
   public String toString() {
     return "AuWsResult [auId=" + auId + ", name=" + name + ", volume=" + volume
-	+ ", pluginName=" + pluginName + ", accessType=" + accessType
-	+ ", repositoryPath=" + repositoryPath + ", recentPollAgreement="
-	+ recentPollAgreement + ", publishingPlatform=" + publishingPlatform
-	+ ", publisher=" + publisher + ", availableFromPublisher="
-	+ availableFromPublisher + ", substanceState=" + substanceState
-	+ ", creationTime=" + creationTime + ", crawlProxy=" + crawlProxy
-	+ ", crawlWindow=" + crawlWindow + ", crawlPool=" + crawlPool
-	+ ", lastCompletedCrawl=" + lastCompletedCrawl + ", lastCrawl="
-	+ lastCrawl + ", lastCrawlResult=" + lastCrawlResult
-	+ ", lastCompletedPoll=" + lastCompletedPoll + ", lastPoll=" + lastPoll
-	+ ", lastPollResult=" + lastPollResult + ", currentlyCrawling="
-	+ currentlyCrawling + ", currentlyPolling=" + currentlyPolling
-	+ ", subscriptionStatus=" + subscriptionStatus + ", auConfiguration="
-	+ auConfiguration + ", newContentCrawlUrls=" + newContentCrawlUrls
-	+ ", urlStems=" + urlStems + ", isBulkContent=" + isBulkContent + "]";
+	+ ", pluginName=" + pluginName + ", tdbYear=" + tdbYear
+	+ ", accessType=" + accessType + ", contentSize=" + contentSize
+	+ ", diskUsage=" + diskUsage + ", repositoryPath=" + repositoryPath
+	+ ", recentPollAgreement=" + recentPollAgreement
+	+ ", publishingPlatform=" + publishingPlatform + ", tdbPublisher="
+	+ tdbPublisher + ", availableFromPublisher=" + availableFromPublisher
+	+ ", substanceState=" + substanceState + ", creationTime="
+	+ creationTime + ", crawlProxy=" + crawlProxy + ", crawlWindow="
+	+ crawlWindow + ", crawlPool=" + crawlPool + ", lastCompletedCrawl="
+	+ lastCompletedCrawl + ", lastCrawl=" + lastCrawl
+	+ ", lastCrawlResult=" + lastCrawlResult + ", lastCompletedPoll="
+	+ lastCompletedPoll + ", lastPoll=" + lastPoll + ", lastPollResult="
+	+ lastPollResult + ", currentlyCrawling=" + currentlyCrawling
+	+ ", currentlyPolling=" + currentlyPolling + ", subscriptionStatus="
+	+ subscriptionStatus + ", auConfiguration=" + auConfiguration
+	+ ", newContentCrawlUrls=" + newContentCrawlUrls + ", urlStems="
+	+ urlStems + ", isBulkContent=" + isBulkContent + "]";
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: AuHelper.java,v 1.1 2014-04-18 19:35:03 fergaloy-sf Exp $
+ * $Id: AuHelper.java,v 1.1.4.1 2014-05-23 20:31:08 fergaloy-sf Exp $
  */
 
 /*
@@ -81,11 +81,14 @@ public class AuHelper {
   static String NAME = "name";
   static String VOLUME = "volume";
   static String PLUGIN_NAME = "pluginName";
+  static String TDB_YEAR = "tdbYear";
   static String ACCESS_TYPE = "accessType";
+  static String CONTENT_SIZE = "contentSize";
+  static String DISK_USAGE = "diskUsage";
   static String REPOSITORY_PATH = "repositoryPath";
   static String RECENT_POLL_AGREEMENT = "recentPollAgreement";
   static String PUBLISHING_PLATFORM = "publishingPlatform";
-  static String PUBLISHER = "publisher";
+  static String TDB_PUBLISHER = "tdbPublisher";
   static String AVAILABLE_FROM_PUBLISHER = "availableFromPublisher";
   static String SUBSTANCE_STATE = "substanceState";
   static String CREATION_TIME = "creationTime";
@@ -116,11 +119,14 @@ public class AuHelper {
       add(NAME);
       add(VOLUME);
       add(PLUGIN_NAME);
+      add(TDB_YEAR);
       add(ACCESS_TYPE);
+      add(CONTENT_SIZE);
+      add(DISK_USAGE);
       add(REPOSITORY_PATH);
       add(RECENT_POLL_AGREEMENT);
       add(PUBLISHING_PLATFORM);
-      add(PUBLISHER);
+      add(TDB_PUBLISHER);
       add(AVAILABLE_FROM_PUBLISHER);
       add(SUBSTANCE_STATE);
       add(CREATION_TIME);
@@ -443,6 +449,16 @@ public class AuHelper {
       builder.append("pluginName=").append(result.getPluginName());
     }
 
+    if (result.getTdbYear() != null) {
+      if (!isFirst) {
+	builder.append(", ");
+      } else {
+	isFirst = false;
+      }
+
+      builder.append("tdbYear=").append(result.getTdbYear());
+    }
+
     if (result.getAccessType() != null) {
       if (!isFirst) {
 	builder.append(", ");
@@ -451,6 +467,26 @@ public class AuHelper {
       }
 
       builder.append("accessType=").append(result.getAccessType());
+    }
+
+    if (result.getContentSize() != null) {
+      if (!isFirst) {
+	builder.append(", ");
+      } else {
+	isFirst = false;
+      }
+
+      builder.append("contentSize=").append(result.getContentSize());
+    }
+
+    if (result.getDiskUsage() != null) {
+      if (!isFirst) {
+	builder.append(", ");
+      } else {
+	isFirst = false;
+      }
+
+      builder.append("diskUsage=").append(result.getDiskUsage());
     }
 
     if (result.getRepositoryPath() != null) {
@@ -485,14 +521,14 @@ public class AuHelper {
       .append(result.getPublishingPlatform());
     }
 
-    if (result.getPublisher() != null) {
+    if (result.getTdbPublisher() != null) {
       if (!isFirst) {
 	builder.append(", ");
       } else {
 	isFirst = false;
       }
 
-      builder.append("publisher=").append(result.getPublisher());
+      builder.append("tdbPublisher=").append(result.getTdbPublisher());
     }
 
     if (result.getAvailableFromPublisher() != null) {
