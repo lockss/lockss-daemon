@@ -1,5 +1,5 @@
 /*
- * $Id: AuWsSource.java,v 1.1 2014-04-18 19:35:03 fergaloy-sf Exp $
+ * $Id: AuWsSource.java,v 1.2 2014-05-23 22:07:10 fergaloy-sf Exp $
  */
 
 /*
@@ -50,23 +50,29 @@ import org.lockss.poller.Poll;
 import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.state.AuState;
 import org.lockss.state.NodeManager;
+import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 import org.lockss.util.TypedEntryMap;
 import org.lockss.ws.entities.AuConfigurationWsResult;
 import org.lockss.ws.entities.AuWsResult;
 
 public class AuWsSource extends AuWsResult {
+  private static Logger log = Logger.getLogger(AuWsSource.class);
+
   private ArchivalUnit au;
 
   private boolean auIdPopulated = false;
   private boolean namePopulated = false;
   private boolean volumePopulated = false;
   private boolean pluginNamePopulated = false;
+  private boolean tdbYearPopulated = false;
   private boolean accessTypePopulated = false;
+  private boolean contentSizePopulated = false;
+  private boolean diskUsagePopulated = false;
   private boolean repositoryPathPopulated = false;
   private boolean recentPollAgreementPopulated = false;
   private boolean publishingPlatformPopulated = false;
-  private boolean publisherPopulated = false;
+  private boolean tdbPublisherPopulated = false;
   private boolean availableFromPublisherPopulated = false;
   private boolean substanceStatePopulated = false;
   private boolean creationTimePopulated = false;
@@ -137,6 +143,28 @@ public class AuWsSource extends AuWsResult {
   }
 
   @Override
+  public Integer getTdbYear() {
+    if (!tdbYearPopulated) {
+      String yearAsString = null;
+
+      try {
+  	yearAsString = AuUtil.getTitleAttribute(au, "year");
+
+  	if (yearAsString != null) {
+  	  setTdbYear(Integer.valueOf(yearAsString));
+  	}
+      } catch (NumberFormatException nfe) {
+  	log.warning("Invalid year title attribute '" + yearAsString
+  	    + "' for auId '" + au.getAuId() + "'", nfe);
+      }
+
+      tdbYearPopulated = true;
+    }
+
+    return super.getTdbYear();
+  }
+
+  @Override
   public String getAccessType() {
     if (!accessTypePopulated) {
       AuState.AccessType atype = getState().getAccessType();
@@ -149,6 +177,36 @@ public class AuWsSource extends AuWsResult {
     }
 
     return super.getAccessType();
+  }
+
+  @Override
+  public Long getContentSize() {
+    if (!contentSizePopulated) {
+      long auContentSize = AuUtil.getAuContentSize(au, true);
+
+      if (auContentSize != -1) {
+  	setContentSize(Long.valueOf(auContentSize));
+      }
+
+      contentSizePopulated = true;
+    }
+
+    return super.getContentSize();
+  }
+
+  @Override
+  public Long getDiskUsage() {
+    if (!diskUsagePopulated) {
+      long auDiskUsage = AuUtil.getAuDiskUsage(au, true);
+
+      if (auDiskUsage != -1) {
+	setDiskUsage(Long.valueOf(auDiskUsage));
+      }
+
+      diskUsagePopulated = true;
+    }
+
+    return super.getDiskUsage();
   }
 
   @Override
@@ -197,18 +255,18 @@ public class AuWsSource extends AuWsResult {
   }
 
   @Override
-  public String getPublisher() {
-    if (!publisherPopulated) {
-      String pub = AuUtil.getTitleAttribute(au, "publisher");
+  public String getTdbPublisher() {
+    if (!tdbPublisherPopulated) {
+      String publisherName = AuUtil.getTitleAttribute(au, "publisher");
 
-      if (!StringUtil.isNullString(pub)) {
-	setPublisher(pub);
+      if (!StringUtil.isNullString(publisherName)) {
+	setTdbPublisher(publisherName);
       }
 
-      publisherPopulated = true;
+      tdbPublisherPopulated = true;
     }
 
-    return super.getPublisher();
+    return super.getTdbPublisher();
   }
 
   @Override
