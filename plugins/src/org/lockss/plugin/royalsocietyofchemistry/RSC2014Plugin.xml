@@ -49,10 +49,8 @@
       <list>
         <string>"%sen/journals/lockss?journalcode=%s&amp;volume=%s&amp;year=%d", base_url, journal_code, volume_name, year</string>
         <string>"%slockss.htm", resolver_url</string>
-        <!--
-        string>"%slockss.htm", graphics_url</string>
-        <string>"%slockss.htm", base_url2</string
-        -->
+        <string>"%slockss.htm", graphics_url</string>
+        <string>"%slockss.htm", base_url2</string>
       </list>
   </entry>
   <entry>
@@ -80,12 +78,10 @@
     <string>au_crawlrules</string>
     <list>
       <string>2,"^(?:%s)en/Error/", base_url</string>
-      <string>2,"^(?:%s|%s)", graphics_url, base_url2</string>
-      <string>1,"^https?://(?:%s|%s)/.*[.](?:bmp|css|ico|gif|jpe?g|js(?:[?]ver=[^&amp;]+)?|mol|png|tif?f)$", base_url_host, base_url2_host</string>
       <string>1,"^%s", graphics_url</string>
-      <string>4,"^(?:%s|%s|%s)", base_url, resolver_url, graphics_url</string>
+      <string>1,"^https?://(?:%s|%s)/.*[.](?:bmp|css|ico|gif|jpe?g|js(?:[?]ver=[^&amp;]+)?|mol|png|tif?f)$", base_url_host, base_url2_host</string>
+      <string>4,"^(?:%s|%s)", base_url, resolver_url</string>
       <string>2,"^(?:%sen/(?:account/|error/|content/openurl/|.*iscitedby=)|%s[?]doi=[^&amp;]+&amp;newsite=1)", base_url, resolver_url</string>
-      <!-- string>1,"^%s(?:services/images/|en/content/openurlimage/|en/journals/lockss[?]journalcode=%s&amp;volume=%s&amp;year=%d&amp;issue=(?:1$))", base_url, journal_code, volume_name, year</string -->
       <string>1,"^%s(?:services/images/|en/content/openurlimage/|en/journals/lockss[?]journalcode=%s&amp;volume=%s&amp;year=%d&amp;issue=)", base_url, journal_code, volume_name, year</string>
       <string>1,"^%s[?]doi=", resolver_url</string>
       <string>1,"^%sen/content/article(?:landing|pdf|html)/%d/%s/[^/?]+$", base_url, year, journal_code</string>
