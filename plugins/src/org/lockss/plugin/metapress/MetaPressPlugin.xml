@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>17</string>
+    <string>18</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -114,6 +114,12 @@ export.mpx line is for citation information; mode is ris, txt, etc.; dynamic-fil
   <entry>
     <string>au_def_new_content_crawl</string>
     <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <string>500=org.lockss.plugin.metapress.MetaPressHttpResponseHandler</string>
+    </list>
   </entry>
   <entry>
     <string>au_url_normalizer</string>
