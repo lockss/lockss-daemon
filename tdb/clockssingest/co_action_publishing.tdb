@@ -395,6 +395,8 @@
       eissn = 2000-6993 ;
       issnl = 2000-6993
     >
+    
+    comment[archived] = journal is being archived.
 
     param[base_url] = http://www.mechanicalcirculatorysupport.net/
     param[journal_id] = mcs
@@ -403,7 +405,6 @@
     au < finished ; crawling ; 2011 ; Mechanical Circulatory Support Volume 2 ; 2 ; 2011 >
     au < finished ; crawling ; 2012 ; Mechanical Circulatory Support Volume 3 ; 3 ; 2012 >
     au < manifest ; exists ; 2013 ; Mechanical Circulatory Support Volume 4 ; 4 ; 2013 >
-    au < expected ; exists ; 2014 ; Mechanical Circulatory Support Volume 5 ; 5 ; 2014 >
 
   }
 
