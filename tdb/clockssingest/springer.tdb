@@ -1,7 +1,9 @@
 {
 
   publisher <
-    name = Springer
+    name = Springer ;
+    info[contract] = ;
+    info[tester] = S
   >
   
   {
