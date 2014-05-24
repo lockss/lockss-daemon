@@ -1,12 +1,17 @@
 {
 
   publisher <
-    name = Soil Science Society of America
+    name = Soil Science Society of America ;
+    info[contract] = 2013 ;
+    info[tester] = 0
+    
   >
 
     plugin = needs.plugin
     implicit < status ; status2 ; year ; name ; param[volume_name] >
     comment[platform] = MarkLogic See Jira PD-48
+    
+    comment[facilitator] = American Society of Agronomy
 
   {
     title <
