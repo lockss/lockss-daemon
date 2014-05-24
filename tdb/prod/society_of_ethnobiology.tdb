@@ -16,6 +16,8 @@
     implicit < status ; year ; name ; param[volume_name] >
     param[base_url] = http://www.bioone.org/
     param[journal_id] = etbi
+    
+    comment[v33] = not ready html error 500 http://www.bioone.org/action/showFullPopup?doi=10.2993%2F0278-0771-33.1.168&id=i0278-0771-32-2-185-f01    
 
     au < released ; 2005 ; Journal of Ethnobiology Volume 25 ; 25 >
     au < released ; 2006 ; Journal of Ethnobiology Volume 26 ; 26 >
@@ -25,7 +27,7 @@
     au < released ; 2010 ; Journal of Ethnobiology Volume 30 ; 30 >
     au < released ; 2011 ; Journal of Ethnobiology Volume 31 ; 31 >
     au < released ; 2012 ; Journal of Ethnobiology Volume 32 ; 32 >
-    au < testing ; 2013 ; Journal of Ethnobiology Volume 33 ; 33 >
+    au < doNotProcess ; 2013 ; Journal of Ethnobiology Volume 33 ; 33 >
     au < manifest ; 2014 ; Journal of Ethnobiology Volume 34 ; 34 >
  
 
