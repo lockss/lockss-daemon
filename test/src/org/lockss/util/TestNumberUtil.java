@@ -1,5 +1,5 @@
 /*
- * $Id: TestNumberUtil.java,v 1.14 2013-09-18 11:36:14 easyonthemayo Exp $
+ * $Id: TestNumberUtil.java,v 1.15 2014-05-26 07:30:53 tlipkis Exp $
  */
 
 /*
@@ -883,6 +883,17 @@ public class TestNumberUtil extends LockssTestCase {
     // Test on Romans
     assertFalse(NumberUtil.isContiguousRange("I, III"));
 
+  }
+
+  public void testRoundToNDecimals() {
+    assertEquals(5.0, NumberUtil.roundToNDecimals(5.0, 1));
+    assertEquals(5.0, NumberUtil.roundToNDecimals(5.0, 3));
+    assertEquals(5.2, NumberUtil.roundToNDecimals(5.25, 1));
+    assertEquals(5.3, NumberUtil.roundToNDecimals(5.252, 1));
+    assertEquals(5.3, NumberUtil.roundToNDecimals(5.2529999, 1));
+    assertEquals(5.25, NumberUtil.roundToNDecimals(5.252, 2));
+    assertEquals(5.252, NumberUtil.roundToNDecimals(5.252, 3));
+    assertEquals(5.252, NumberUtil.roundToNDecimals(5.252, 4));
   }
 
 }
