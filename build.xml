@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.358 2014-05-06 01:32:38 clairegriffin Exp $
+ $Id: build.xml,v 1.359 2014-05-26 07:29:56 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -1845,7 +1845,7 @@ published on the Web. http://www.lockss.org
              use="${use}"
              author="${author}"
              version="${version}"
-	     access="protected"
+	     access="package"
              noqualifier="${noqualifier}"
              windowtitle="LOCKSS API"
              doctitle="LOCKSS"
