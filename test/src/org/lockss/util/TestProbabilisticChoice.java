@@ -1,5 +1,5 @@
 /*
- * $Id: TestProbabilisticChoice.java,v 1.4 2004-12-09 08:19:36 tlipkis Exp $
+ * $Id: TestProbabilisticChoice.java,v 1.5 2014-05-26 07:31:41 tlipkis Exp $
  */
 
 /*
@@ -64,9 +64,9 @@ public class TestProbabilisticChoice extends LockssTestCase {
     }
     double actual = (double)cnt/(double)REPEAT_EACH;
     NumberFormat f = new DecimalFormat("0.000");
-    System.out.println("target probability: " + f.format(prob) +
-		       ", actual: " + f.format(actual) +
-		       ", delta: " + f.format(Math.abs(prob - actual)));
+    log.debug("target probability: " + f.format(prob) +
+	      ", actual: " + f.format(actual) +
+	      ", delta: " + f.format(Math.abs(prob - actual)));
     assertEquals(prob, actual, ALLOWABLE_DELTA);
   }
 
