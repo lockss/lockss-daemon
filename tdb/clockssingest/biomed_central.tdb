@@ -4300,7 +4300,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.ijponline.net/
       param[journal_issn] = 1824-7288
 
-      au < testing ; exists ; 2008 ; Italian Journal of Pediatrics Volume 34 ; 34 >
+      au < ready ; exists ; 2008 ; Italian Journal of Pediatrics Volume 34 ; 34 >
       au < crawling ; exists ; 2009 ; Italian Journal of Pediatrics Volume 35 ; 35 >
       au < crawling ; exists ; 2010 ; Italian Journal of Pediatrics Volume 36 ; 36 >
       au < crawling ; exists ; 2011 ; Italian Journal of Pediatrics Volume 37 ; 37 >
