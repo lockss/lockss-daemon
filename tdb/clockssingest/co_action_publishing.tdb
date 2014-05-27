@@ -371,6 +371,22 @@
       issnl = 2000-2297
     >
 
+    param[base_url] = http://www.jmahp.net/
+    param[journal_id] = jmahp
+
+    au < exists ; exists ; 2013 ; Journal of Oral Microbiology Volume 1 ; 1 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Oral Microbiology Volume 2 ; 2 ; 2014 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Oral Microbiology ;
+      eissn = 2000-2297 ;
+      issnl = 2000-2297
+    >
+
     param[base_url] = http://www.journaloforalmicrobiology.net/
     param[journal_id] = jom
 
