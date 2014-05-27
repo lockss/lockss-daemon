@@ -3,7 +3,7 @@
   publisher <
     name = The Japan Institute of Heterocyclic Chemistry ;
     info[contract] = 2011 ;
-    info[tester] = 7
+    info[tester] = 5
   >
 
   plugin = org.lockss.plugin.heterocycles.ClockssHeterocyclesPlugin
@@ -104,7 +104,8 @@
     au < ready ; exists ; 2012 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 85 ; 85 >
     au < ready ; exists ; 2012 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 86 ; 86 >
     au < manifest ; exists ; 2013 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 87 ; 87 >
-    au < expected ; exists ; 2014 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 88 ; 88 >
+    au < exists ; exists ; 2014 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 88 ; 88 >
+    au < exists ; exists ; 2014 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 89 ; 89 >
     
   }
 
