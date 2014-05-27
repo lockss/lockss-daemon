@@ -20978,7 +20978,31 @@
       }
       
     }
-    
+
+  {
+  
+    title <
+      name = Journal of International Political Theory ;
+      issn = 1755-0882 ;
+      eissn = 1755-1722
+    >
+
+    param[base_url] = http://ipt.sagepub.com/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < exists ; exists ; 2005 ; Journal of International Political Theory Volume 1 ; 1 ; >
+    au < exists ; exists ; 2006 ; Journal of International Political Theory Volume 2 ; 2 ; >
+    au < exists ; exists ; 2007 ; Journal of International Political Theory Volume 3 ; 3 ; >
+    au < exists ; exists ; 2008 ; Journal of International Political Theory Volume 4 ; 4 ; >
+    au < exists ; exists ; 2009 ; Journal of International Political Theory Volume 5 ; 5 ; >
+    au < exists ; exists ; 2010 ; Journal of International Political Theory Volume 6 ; 6 ; >
+    au < exists ; exists ; 2011 ; Journal of International Political Theory Volume 7 ; 7 ; >
+    au < exists ; exists ; 2012 ; Journal of International Political Theory Volume 8 ; 8 ; >
+    au < exists ; exists ; 2013 ; Journal of International Political Theory Volume 9 ; 9 ; >
+    au < exists ; exists ; 2014 ; Journal of International Political Theory Volume 10 ; 10 ; >
+
+  }
+
   {
   
     title <
