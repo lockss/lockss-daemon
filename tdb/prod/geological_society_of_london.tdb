@@ -749,7 +749,7 @@
       eissn = 2052-9422 
     >
 
-    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
     param[base_url] = http://trngl.lyellcollection.org/
     implicit < status ; year ; name ; param[volume_name] >
 
