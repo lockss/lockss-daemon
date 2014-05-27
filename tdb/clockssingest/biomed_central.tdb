@@ -4560,19 +4560,21 @@ comment[bmr] = journal archive available, but no new volumes
 
       param[base_url] = http://www.jcircadianrhythms.com/
       param[journal_issn] = 1740-3391
+      
+      comment[moved] = moved to Ubiquity Press
 
-      au < manifest ; exists ; 2003 ; Journal of Circadian Rhythms Volume 1 ; 1 >
-      au < manifest ; exists ; 2004 ; Journal of Circadian Rhythms Volume 2 ; 2 >
-      au < manifest ; exists ; 2005 ; Journal of Circadian Rhythms Volume 3 ; 3 >
-      au < manifest ; exists ; 2006 ; Journal of Circadian Rhythms Volume 4 ; 4 >
-      au < manifest ; exists ; 2007 ; Journal of Circadian Rhythms Volume 5 ; 5 >
-      au < crawling ; exists ; 2008 ; Journal of Circadian Rhythms Volume 6 ; 6 >
-      au < crawling ; exists ; 2009 ; Journal of Circadian Rhythms Volume 7 ; 7 >
-      au < crawling ; exists ; 2010 ; Journal of Circadian Rhythms Volume 8 ; 8 >
-      au < crawling ; exists ; 2011 ; Journal of Circadian Rhythms Volume 9 ; 9 >
-      au < crawling ; exists ; 2012 ; Journal of Circadian Rhythms Volume 10 ; 10 >
-      au < crawling ; exists ; 2013 ; Journal of Circadian Rhythms Volume 11 ; 11 >
-      au < manifest ; exists ; 2014 ; Journal of Circadian Rhythms Volume 12 ; 12 >
+      au < doNotProcess ; doNotProcess ; 2003 ; Journal of Circadian Rhythms Volume 1 ; 1 >
+      au < doNotProcess ; doNotProcess ; 2004 ; Journal of Circadian Rhythms Volume 2 ; 2 >
+      au < doNotProcess ; doNotProcess ; 2005 ; Journal of Circadian Rhythms Volume 3 ; 3 >
+      au < doNotProcess ; doNotProcess ; 2006 ; Journal of Circadian Rhythms Volume 4 ; 4 >
+      au < doNotProcess ; doNotProcess ; 2007 ; Journal of Circadian Rhythms Volume 5 ; 5 >
+      au < superseded ; exists ; 2008 ; Journal of Circadian Rhythms Volume 6 [superseded] ; 6 >
+      au < superseded ; exists ; 2009 ; Journal of Circadian Rhythms Volume 7 [superseded] ; 7 >
+      au < superseded ; exists ; 2010 ; Journal of Circadian Rhythms Volume 8 [superseded] ; 8 >
+      au < superseded ; exists ; 2011 ; Journal of Circadian Rhythms Volume 9 [superseded] ; 9 >
+      au < superseded ; exists ; 2012 ; Journal of Circadian Rhythms Volume 10 [superseded] ; 10 >
+      au < superseded ; exists ; 2013 ; Journal of Circadian Rhythms Volume 11 [superseded] ; 11 >
+      au < doNotProcess ; doNotProcess ; 2014 ; Journal of Circadian Rhythms Volume 12 ; 12 >
       
     }
 
