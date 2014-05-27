@@ -96,6 +96,25 @@
   {
 
     title <
+      name = Education Inquiry ;
+      eissn = 2000-4508 ;
+      issnl = 2000-4508
+    >
+
+    param[base_url] = http://www.education-inquiry.net/
+    param[journal_id] = edui
+
+    au < exists ; 2010 ; Education Inquiry Volume 1 ; 1 ; 2010 >
+    au < exists ; 2011 ; Education Inquiry Volume 2 ; 2 ; 2011 >
+    au < exists ; 2012 ; Education Inquiry Volume 3 ; 3 ; 2012 >
+    au < exists ; 2013 ; Education Inquiry Volume 4 ; 4 ; 2013 >
+    au < exists ; 2014 ; Education Inquiry Volume 5 ; 5 ; 2014 >
+
+  }
+
+  {
+
+    title <
       name = Emerging Health Threats Journal ;
       eissn = 1752-8550 ;
       issnl = 1752-8550
