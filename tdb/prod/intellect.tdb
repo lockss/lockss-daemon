@@ -13,7 +13,7 @@
 
     {
       title <
-        name = Animation Practice, Production & Process ;
+        name = Animation Practice, Process & Production ;
         issn = 2042-7875 ;
         eissn = 2042-7883
       >
@@ -21,9 +21,9 @@
       param[journal_id] = ap3
       param[journal_issn] = 2042-7875
       
-      au < released ; 2011-2012 ; Animation Practice, Production & Process Volume 1 ; 1 >
-      au < released ; 2012-2013 ; Animation Practice, Production & Process Volume 2 ; 2 >
-      au < expected ; 2013-2014 ; Animation Practice, Production & Process Volume 3 ; 3 >
+      au < released ; 2011-2012 ; Animation Practice, Process & Production Volume 1 ; 1 >
+      au < released ; 2012 ; Animation Practice, Process & Production Volume 2 ; 2 >
+      au < manifest ; 2013-2014 ; Animation Practice, Process & Production Volume 3 ; 3 >
 
     }
 
@@ -720,7 +720,7 @@
       au < released ; 2011 ; International Journal of Technology Management & Sustainable Development Volume 10 ; 10 >
       au < released ; 2012 ; International Journal of Technology Management & Sustainable Development Volume 11 ; 11 >
       au < released ; 2013 ; International Journal of Technology Management & Sustainable Development Volume 12 ; 12 >
-      au < expected ; 2014 ; International Journal of Technology Management & Sustainable Development Volume 13 ; 13 >
+      au < manifest ; 2014 ; International Journal of Technology Management & Sustainable Development Volume 13 ; 13 >
 
     }
 
@@ -826,9 +826,10 @@
 
       au < released ; 2009-2011 ; Journal of Arts & Communities Volume 1 ; 1 >
       au < released ; 2011 ; Journal of Arts & Communities Volume 2 ; 2 >
-      au < released ; 2012 ; Journal of Arts & Communities Volume 3 ; 3 >
-      au < released ; 2013 ; Journal of Arts & Communities Volume 4 ; 4 >
-      au < expected ; 2014 ; Journal of Arts & Communities Volume 5 ; 5 >
+      au < released ; 2011 ; Journal of Arts & Communities Volume 3 ; 3 >
+      au < released ; 2012 ; Journal of Arts & Communities Volume 4 ; 4 >
+      au < manifest ; 2013 ; Journal of Arts & Communities Volume 5 ; 5 >
+      au < expected ; 2014 ; Journal of Arts & Communities Volume 6 ; 6 >
 
     }
 
@@ -1015,7 +1016,7 @@
       au < released ; 2011-2012 ; Journal of Music, Technology & Education Volume 4 ; 4 >
       au < released ; 2012-2013 ; Journal of Music, Technology & Education Volume 5 ; 5 >
       au < released ; 2013 ; Journal of Music, Technology & Education Volume 6 ; 6 >
-      au < expected ; 2014 ; Journal of Music, Technology & Education Volume 7 ; 7 >
+      au < manifest ; 2014 ; Journal of Music, Technology & Education Volume 7 ; 7 >
 
     }
 
@@ -1770,7 +1771,7 @@
       
       au < released ; 2011-2012 ; Visual Inquiry: Learning & Teaching Art Volume 1 ; 1 >
       au < released ; 2013 ; Visual Inquiry: Learning & Teaching Art Volume 2 ; 2 >
-      au < expected ; 2014 ; Visual Inquiry: Learning & Teaching Art Volume 3 ; 3 >
+      au < manifest ; 2014 ; Visual Inquiry: Learning & Teaching Art Volume 3 ; 3 >
 
     }
 
