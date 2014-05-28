@@ -638,21 +638,21 @@
       param[base_url] = http://www.uel.br/revistas/uel/
       param[journal_id] = signum
 
-      au < exists ; 1998 ; 1 ; Signum: Estudos da Linguagem Volume 1 ; 1998 >
-      au < exists ; 1999 ; 2 ; Signum: Estudos da Linguagem Volume 2 ; 1999 >
-      au < exists ; 2000 ; 3 ; Signum: Estudos da Linguagem Volume 3 ; 2000 >
-      au < exists ; 2001 ; 4 ; Signum: Estudos da Linguagem Volume 4 ; 2001 >
-      au < exists ; 2002 ; 5 ; Signum: Estudos da Linguagem Volume 5 ; 2002 >
-      au < exists ; 2003 ; 6 ; Signum: Estudos da Linguagem Volume 6 ; 2003 >
-      au < exists ; 2004 ; 7 ; Signum: Estudos da Linguagem Volume 7 ; 2004 >
-      au < exists ; 2005 ; 8 ; Signum: Estudos da Linguagem Volume 8 ; 2005 >
-      au < exists ; 2006 ; 9 ; Signum: Estudos da Linguagem Volume 9 ; 2006 >
-      au < exists ; 2007 ; 10 ; Signum: Estudos da Linguagem Volume 10 ; 2007 >
-      au < exists ; 2008 ; 11 ; Signum: Estudos da Linguagem Volume 11 ; 2008 >
-      au < exists ; 2009 ; 12 ; Signum: Estudos da Linguagem Volume 12 ; 2009 >
-      au < exists ; 2010 ; 13 ; Signum: Estudos da Linguagem Volume 13 ; 2010 >
-      au < exists ; 2011 ; 14 ; Signum: Estudos da Linguagem Volume 14 ; 2011 >
-      au < exists ; 2012 ; 15 ; Signum: Estudos da Linguagem Volume 15 ; 2012 >
+      au < manifest ; 1998 ; 1 ; Signum: Estudos da Linguagem Volume 1 ; 1998 >
+      au < manifest ; 1999 ; 2 ; Signum: Estudos da Linguagem Volume 2 ; 1999 >
+      au < manifest ; 2000 ; 3 ; Signum: Estudos da Linguagem Volume 3 ; 2000 >
+      au < manifest ; 2001 ; 4 ; Signum: Estudos da Linguagem Volume 4 ; 2001 >
+      au < manifest ; 2002 ; 5 ; Signum: Estudos da Linguagem Volume 5 ; 2002 >
+      au < manifest ; 2003 ; 6 ; Signum: Estudos da Linguagem Volume 6 ; 2003 >
+      au < manifest ; 2004 ; 7 ; Signum: Estudos da Linguagem Volume 7 ; 2004 >
+      au < manifest ; 2005 ; 8 ; Signum: Estudos da Linguagem Volume 8 ; 2005 >
+      au < manifest ; 2006 ; 9 ; Signum: Estudos da Linguagem Volume 9 ; 2006 >
+      au < manifest ; 2007 ; 10 ; Signum: Estudos da Linguagem Volume 10 ; 2007 >
+      au < manifest ; 2008 ; 11 ; Signum: Estudos da Linguagem Volume 11 ; 2008 >
+      au < manifest ; 2009 ; 12 ; Signum: Estudos da Linguagem Volume 12 ; 2009 >
+      au < manifest ; 2010 ; 13 ; Signum: Estudos da Linguagem Volume 13 ; 2010 >
+      au < manifest ; 2011 ; 14 ; Signum: Estudos da Linguagem Volume 14 ; 2011 >
+      au < manifest ; 2012 ; 15 ; Signum: Estudos da Linguagem Volume 15 ; 2012 >
       au < expected ; 2013 ; 16 ; Signum: Estudos da Linguagem Volume 16 ; 2013 >
 
   }
