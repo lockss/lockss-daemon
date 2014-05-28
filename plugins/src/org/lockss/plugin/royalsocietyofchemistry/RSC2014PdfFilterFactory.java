@@ -1,5 +1,5 @@
 /*
- * $Id: RSC2014PdfFilterFactory.java,v 1.4 2014-05-28 19:47:38 etenbrink Exp $
+ * $Id: RSC2014PdfFilterFactory.java,v 1.5 2014-05-28 20:48:48 etenbrink Exp $
  */
 
 /*
@@ -48,13 +48,13 @@ public class RSC2014PdfFilterFactory extends SimplePdfFilterFactory {
   @Override
   public void transform(ArchivalUnit au, PdfDocument pdfDocument)
       throws PdfException {
-    // to catch Exception that was thrown, but when ignored did not seem to be a problem
     try {
       PdfUtil.normalizeAllTokenStreams(pdfDocument);
     }
-    catch (Exception e) {
+    catch (NullPointerException e) {
+      // catch Exception that was thrown, but when ignored did not seem to be a problem
       // XXX talked thru with W, may need to revisit if problems appear, but for now no problems
-      log.debug(" caught/ignore", e);
+      log.warning("caught/ignore exception from pdf framework", e);
     }
     PdfUtil.normalizeTrailerId(pdfDocument);
   }
