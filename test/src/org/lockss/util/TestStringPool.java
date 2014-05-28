@@ -1,10 +1,10 @@
 /*
- * $Id: TestStringPool.java,v 1.2 2013-08-08 06:01:27 tlipkis Exp $
+ * $Id: TestStringPool.java,v 1.3 2014-05-28 00:16:27 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -74,5 +74,46 @@ public class TestStringPool extends LockssTestCase {
     String s5 = new String("strxxx");
     assertSame(s4, pool.intern(s4));
     assertSame(s5, pool.intern(s5));
+  }
+
+  public void testMapKeys1() {
+    StringPool pool = new StringPool("gene");
+    ConfigurationUtil.setFromArgs("org.lockss.stringPool.gene.mapKeys",
+				  "key1;key2");
+    String v1 = "val1";
+    String v2 = "val2";
+    assertSame(v1, pool.internMapValue("keyxyz", v1));
+    assertNotSame(v1, pool.internMapValue("keyxyz", new String(v1)));
+    assertSame(v2, pool.internMapValue("key2", v2));
+    assertSame(v2, pool.internMapValue("key2", new String(v2)));
+  }
+
+  // Same but create pool after config set, which is a different code path
+  // in StringPool
+  public void testMapKeys2() {
+    ConfigurationUtil.setFromArgs("org.lockss.stringPool.kiddie.mapKeys",
+				  "key1;key2");
+    StringPool pool = new StringPool("kiddie");
+    String v1 = "val1";
+    String v2 = "val2";
+    assertSame(v1, pool.internMapValue("keyxyz", v1));
+    assertNotSame(v1, pool.internMapValue("keyxyz", new String(v1)));
+    assertSame(v2, pool.internMapValue("key2", v2));
+    assertSame(v2, pool.internMapValue("key2", new String(v2)));
+  }
+
+  public void testMapKeys3() {
+    StringPool pool = StringPool.TDBAU_PROPS;
+    String v1 = "val1";
+    String v2 = "val2";
+    assertSame(v1, pool.internMapValue("keyxyz", v1));
+    assertNotSame(v1, pool.internMapValue("keyxyz", new String(v1)));
+    assertSame(v2, pool.internMapValue("type", v2));
+    assertSame(v2, pool.internMapValue("type", new String(v2)));
+
+    ConfigurationUtil.setFromArgs("org.lockss.stringPool.TdbAu props.mapKeys",
+				  "key1;key2");
+    assertSame(v2, pool.internMapValue("type", v2));
+    assertNotSame(v2, pool.internMapValue("type", new String(v2)));
   }
 }

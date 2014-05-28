@@ -1,10 +1,10 @@
 /*
- * $Id: MiscConfig.java,v 1.12 2014-01-14 04:26:28 tlipkis Exp $
+ * $Id: MiscConfig.java,v 1.13 2014-05-28 00:16:27 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2001-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2001-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -52,6 +52,7 @@ public class MiscConfig {
 					 Configuration.Differences diffs) {
 	  HttpClientUrlConnection.setConfig(config, oldConfig, diffs);
 	  UrlUtil.setConfig(config, oldConfig, diffs);
+	  StringPool.setConfig(config, oldConfig, diffs);
 	  PluginUtil.setConfig(config, oldConfig, diffs);
 	  ServletUtil.setConfig(config, oldConfig, diffs);
 	  ExpertConfig.setConfig(config, oldConfig, diffs);
