@@ -1,5 +1,5 @@
 /*
- * $Id: RSC2014PdfFilterFactory.java,v 1.3 2014-05-28 19:45:39 etenbrink Exp $
+ * $Id: RSC2014PdfFilterFactory.java,v 1.4 2014-05-28 19:47:38 etenbrink Exp $
  */
 
 /*
@@ -53,6 +53,7 @@ public class RSC2014PdfFilterFactory extends SimplePdfFilterFactory {
       PdfUtil.normalizeAllTokenStreams(pdfDocument);
     }
     catch (Exception e) {
+      // XXX talked thru with W, may need to revisit if problems appear, but for now no problems
       log.debug(" caught/ignore", e);
     }
     PdfUtil.normalizeTrailerId(pdfDocument);
