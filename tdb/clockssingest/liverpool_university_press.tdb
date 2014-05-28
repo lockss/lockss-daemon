@@ -315,6 +315,24 @@
   }
 
   {
+  
+    title <
+      name = Modern Languages Open 
+    >
+
+    {
+    plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
+    implicit < status ; status2 ; year ; name ; volume ; param[year] >
+    param[base_url] = http://mloa.cch.kcl.ac.uk/
+    param[journal_id] = mlo
+    comment[issn] = missing info
+    
+    au < expected ; exists ; 2014 ; Modern Languages Open Volume 1 ; 1 ; 2014 >
+    
+    }
+  }
+
+  {
 
     title <
       name = Music, Sound, and the Moving Image ;
