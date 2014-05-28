@@ -1,5 +1,5 @@
 /*
- * $Id: SystemMetrics.java,v 1.32 2008-11-02 21:11:52 tlipkis Exp $
+ * $Id: SystemMetrics.java,v 1.33 2014-05-28 00:16:44 tlipkis Exp $
  */
 
 /*
@@ -261,6 +261,9 @@ public class SystemMetrics
     logger.info("Memory Total: " + rt.totalMemory() +
 		", Free: " + rt.freeMemory() + ", " +
 		pluginMgr.getAllAus().size() + " AUs");
+    if (logger.isDebug2()) {
+      logger.debug2("String Pools:\n" + StringPool.allStats());
+    }
     schedMemLog();
   }
 }
