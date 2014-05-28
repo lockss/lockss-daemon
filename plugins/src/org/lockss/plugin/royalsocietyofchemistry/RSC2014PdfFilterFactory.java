@@ -1,5 +1,5 @@
 /*
- * $Id: RSC2014PdfFilterFactory.java,v 1.2 2014-05-23 20:55:26 etenbrink Exp $
+ * $Id: RSC2014PdfFilterFactory.java,v 1.3 2014-05-28 19:45:39 etenbrink Exp $
  */
 
 /*
@@ -53,10 +53,9 @@ public class RSC2014PdfFilterFactory extends SimplePdfFilterFactory {
       PdfUtil.normalizeAllTokenStreams(pdfDocument);
     }
     catch (Exception e) {
-      log.warning("caught/ignore", e);
+      log.debug(" caught/ignore", e);
     }
     PdfUtil.normalizeTrailerId(pdfDocument);
-    log.warning("end " + pdfDocument.getTitle());
   }
   
 }
