@@ -1,5 +1,5 @@
 /*
- * $Id: PropertyTree.java,v 1.6 2006-04-05 22:56:04 tlipkis Exp $
+ * $Id: PropertyTree.java,v 1.6.140.1 2014-05-28 00:12:41 tlipkis Exp $
  */
 
 /*
@@ -35,7 +35,7 @@ in this Software without prior written authorization from Stanford University.
 
 // ========================================================================
 // Copyright (c) 1999 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: PropertyTree.java,v 1.6 2006-04-05 22:56:04 tlipkis Exp $
+// $Id: PropertyTree.java,v 1.6.140.1 2014-05-28 00:12:41 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.util;
@@ -164,7 +164,11 @@ public class PropertyTree extends Properties
     if (parent!=null)
       v=parent.put(parentKey((String)key),value);
 
-    return super.put(key,value);
+    if (key instanceof String) {
+      return super.put(intern((String)key),value);
+    } else {
+      return super.put(key,value);
+    }
   }
 
   /* ------------------------------------------------------------ */
@@ -403,12 +407,19 @@ public class PropertyTree extends Properties
 	if (subNode==null)
 	  {
 	    subNode=new Node();
-	    node.put(tokens.elementAt(index),subNode);
+	    node.put(intern((String)tokens.elementAt(index)),subNode);
 	  }
 	node=subNode;
 	index++;
       }
     node.key=tokenKey;
+  }
+
+  /* ------------------------------------------------------------ */
+  private String intern(String key)
+  {
+//     return key;
+    return StringPool.PROPERTY_TREE.intern(key);
   }
 
   /* ------------------------------------------------------------ */
