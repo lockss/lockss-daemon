@@ -54,8 +54,8 @@
     param[journal_id] = apec
     comment[0] = no issue in 2005 & 2006
 
-    au < exists ; exists ; 1974 ; Active and Passive Electronic Components Volume 1 (1974) ; 1974 ; 1 >
-    au < exists ; exists ; 1975 ; Active and Passive Electronic Components Volume 2 (1975) ; 1975 ; 2 >
+    au < manifest ; exists ; 1974 ; Active and Passive Electronic Components Volume 1 (1974) ; 1974 ; 1 >
+    au < manifest ; exists ; 1975 ; Active and Passive Electronic Components Volume 2 (1975) ; 1975 ; 2 >
     au < exists ; exists ; 1976 ; Active and Passive Electronic Components Volume 2-3 (1976) ; 1976 ; 2-3 >
     au < exists ; exists ; 1977 ; Active and Passive Electronic Components Volume 3-4 (1977) ; 1977 ; 3-4 >
     au < exists ; exists ; 1978 ; Active and Passive Electronic Components Volume 5 (1978) ; 1978 ; 5 >
@@ -182,7 +182,7 @@
 
     param[journal_id] = aan
 
-    au < expected ; exists ; 2014 ; Advances in Anesthesiology Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2014 ; Advances in Anesthesiology Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -317,7 +317,7 @@
 
     param[journal_id] = ac
 
-    au < expected ; exists ; 2014 ; Advances in Chemistry Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2014 ; Advances in Chemistry Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -454,7 +454,7 @@
 
     param[journal_id] = ae
 
-    au < expected ; exists ; 2014 ; Advances in Ecology Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2014 ; Advances in Ecology Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2537,13 +2537,13 @@
     param[journal_id] = dte
     comment[0] = no issue from 2002 to 2007
     
-    au < exists ; exists ; 1994 ; Diagnostic and Therapeutic Endoscopy Volume 1 (1994) ; 1994 ; 1 >
+    au < manifest ; exists ; 1994 ; Diagnostic and Therapeutic Endoscopy Volume 1 (1994) ; 1994 ; 1 >
     au < exists ; exists ; 1995 ; Diagnostic and Therapeutic Endoscopy Volume 1-2 (1995) ; 1995 ; 1-2 >
-    au < exists ; exists ; 1996 ; Diagnostic and Therapeutic Endoscopy Volume 2-3 (1996) ; 1996 ; 2-3 >
+    au < manifest ; exists ; 1996 ; Diagnostic and Therapeutic Endoscopy Volume 2-3 (1996) ; 1996 ; 2-3 >
     au < exists ; exists ; 1997 ; Diagnostic and Therapeutic Endoscopy Volume 3-4 (1997) ; 1997 ; 3-4 >
-    au < exists ; exists ; 1998 ; Diagnostic and Therapeutic Endoscopy Volume 4-5 (1998) ; 1998 ; 4-5 >
-    au < exists ; exists ; 1999 ; Diagnostic and Therapeutic Endoscopy Volume 5-6 (1999) ; 1999 ; 5-6 >
-    au < exists ; exists ; 2000 ; Diagnostic and Therapeutic Endoscopy Volume 6-7 (2000) ; 2000 ; 6-7 >
+    au < manifest ; exists ; 1998 ; Diagnostic and Therapeutic Endoscopy Volume 4-5 (1998) ; 1998 ; 4-5 >
+    au < manifest ; exists ; 1999 ; Diagnostic and Therapeutic Endoscopy Volume 5-6 (1999) ; 1999 ; 5-6 >
+    au < manifest ; exists ; 2000 ; Diagnostic and Therapeutic Endoscopy Volume 6-7 (2000) ; 2000 ; 6-7 >
     au < manifest ; exists ; 2001 ; Diagnostic and Therapeutic Endoscopy Volume 7 (2001) ; 2001 ; 7 >
     au < manifest ; exists ; 2008 ; Diagnostic and Therapeutic Endoscopy Volume 2008 ; 2008 ; 2008 >
     au < manifest ; exists ; 2009 ; Diagnostic and Therapeutic Endoscopy Volume 2009 ; 2009 ; 2009 >
@@ -2864,15 +2864,15 @@
     param[journal_id] = hpb
     comment[0] = no issue from 2001 to 2007
 
-    au < exists ; exists ; 1988 ; HPB Surgery Volume 1 (1988) ; 1988 ; 1 >
-    au < exists ; exists ; 1989 ; HPB Surgery Volume 1 (1989) ; 1989 ; 1 >
+    au < manifest ; exists ; 1988 ; HPB Surgery Volume 1 (1988) ; 1988 ; 1 >
+    au < manifest ; exists ; 1989 ; HPB Surgery Volume 1 (1989) ; 1989 ; 1 >
     au < exists ; exists ; 1990 ; HPB Surgery Volume 2-3 (1990) ; 1990 ; 2-3 >
     au < exists ; exists ; 1991 ; HPB Surgery Volume 3-5 (1991) ; 1991 ; 3-5 >
     au < exists ; exists ; 1992 ; HPB Surgery Volume 5-6 (1992) ; 1992 ; 5-6 >
-    au < exists ; exists ; 1993 ; HPB Surgery Volume 6-7 (1993) ; 1993 ; 6-7 >
-    au < exists ; exists ; 1994 ; HPB Surgery Volume 7-8 (1994) ; 1994 ; 7-8 >
-    au < exists ; exists ; 1995 ; HPB Surgery Volume 8-9 (1995) ; 1995 ; 8-9 >
-    au < exists ; exists ; 1996 ; HPB Surgery Volume 9-10 (1996) ; 1996 ; 9-10 >
+    au < manifest ; exists ; 1993 ; HPB Surgery Volume 6-7 (1993) ; 1993 ; 6-7 >
+    au < manifest ; exists ; 1994 ; HPB Surgery Volume 7-8 (1994) ; 1994 ; 7-8 >
+    au < manifest ; exists ; 1995 ; HPB Surgery Volume 8-9 (1995) ; 1995 ; 8-9 >
+    au < manifest ; exists ; 1996 ; HPB Surgery Volume 9-10 (1996) ; 1996 ; 9-10 >
     au < manifest ; exists ; 1997 ; HPB Surgery Volume 10 (1997) ; 1997 ; 10 >
     au < manifest ; exists ; 1998 ; HPB Surgery Volume 10-11 (1998) ; 1998 ; 10-11 >
     au < manifest ; exists ; 1999 ; HPB Surgery Volume 11 (1999) ; 1999 ; 11 >
@@ -3628,7 +3628,7 @@
     param[journal_id] = ijg
     comment[0] = no issue in 2006
 
-    au < exists ; exists ; 2000 ; Comparative and Functional Genomics Volume 1 (2000) ; 2000 ; 1 >
+    au < manifest ; exists ; 2000 ; Comparative and Functional Genomics Volume 1 (2000) ; 2000 ; 1 >
     au < manifest ; exists ; 2001 ; Comparative and Functional Genomics Volume 2 (2001) ; 2001 ; 2 >
     au < manifest ; exists ; 2002 ; Comparative and Functional Genomics Volume 3 (2002) ; 2002 ; 3 >
     au < manifest ; exists ; 2003 ; Comparative and Functional Genomics Volume 4 (2003) ; 2003 ; 4 >
@@ -5308,7 +5308,7 @@
 
     param[journal_id] = jir
 
-    au < exists ; exists ; 1990 ; Clinical and Developmental Immunology Volume 1 (1990) ; 1990 ; 1 >
+    au < manifest ; exists ; 1990 ; Clinical and Developmental Immunology Volume 1 (1990) ; 1990 ; 1 >
     au < exists ; exists ; 1991 ; Clinical and Developmental Immunology Volume 1 (1991) ; 1991 ; 1 >
     au < exists ; exists ; 1992 ; Clinical and Developmental Immunology Volume 2-3 (1992) ; 1992 ; 2-3 >
     au < exists ; exists ; 1993 ; Clinical and Developmental Immunology Volume 3 (1993) ; 1993 ; 3 >
