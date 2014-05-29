@@ -1,10 +1,10 @@
 /*
- * $Id: StringUtil.java,v 1.119 2014-01-14 04:32:49 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.119.6.1 2014-05-29 01:26:25 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -49,7 +49,7 @@ import org.apache.commons.lang.StringUtils;
 
 public class StringUtil {
 
-  static Logger log = Logger.getLogger("StringUtil");
+  static Logger log = Logger.getLogger(StringUtil.class);
 
   /**
    * Find the longest common prefix of a pair of strings. Case sensitive.
@@ -2021,4 +2021,120 @@ public class StringUtil {
 
     return "";
   }
+  
+  /**
+   * <p>
+   * A regular expression that matches various Unicode quotation marks:
+   * </p>
+   * <ul>
+   * <li>U+0022 QUOTATION MARK</li>
+   * <li>U+201C LEFT DOUBLE QUOTATION MARK</li>
+   * <li>U+201D RIGHT DOUBLE QUOTATION MARK</li>
+   * <li>U+201F DOUBLE HIGH-REVERSED-9 QUOTATION MARK</li>
+   * </ul>
+   * 
+   * @since 1.65
+   * @see http://en.wikipedia.org/wiki/Quotation_mark_glyphs
+   */
+  public static final java.util.regex.Pattern QUOTATION_MARKS =
+      java.util.regex.Pattern.compile("\"|\u201c|\u201d|\u201f");
+
+  /**
+   * <p>
+   * The canonical quotation mark glyph ({@value #CANONICAL_QUOTATION_MARK}).
+   * </p>
+   * 
+   * @since 1.65
+   */
+  public static final String CANONICAL_QUOTATION_MARK = "\"";
+  
+  /**
+   * <p>
+   * Replaces all quotation marks that match {@link #QUOTATION_MARKS} with
+   * {@link #CANONICAL_QUOTATION_MARK}.
+   * </p>
+   * 
+   * @since 1.65
+   */
+  public static String normalizeQuotationMarks(String str) {
+    return QUOTATION_MARKS.matcher(str).replaceAll(CANONICAL_QUOTATION_MARK);
+  }
+  
+  /**
+   * <p>
+   * A regular expression that matches various Unicode apostrophes:
+   * </p>
+   * <ul>
+   * <li>U+0027 APOSTROPHE</li>
+   * <li>U+2018 LEFT SINGLE QUOTATION MARK</li>
+   * <li>U+2019 RIGHT SINGLE QUOTATION MARK</li>
+   * <li>U+201B SINGLE HIGH-REVERSED-9 QUOTATION MARK</li>
+   * </ul>
+   * 
+   * @since 1.65
+   * @see http://en.wikipedia.org/wiki/Quotation_mark_glyphs
+   */
+  public static final java.util.regex.Pattern APOSTROPHES =
+      java.util.regex.Pattern.compile("'|\u2018|\u2019|\u201b");
+
+  /**
+   * <p>
+   * The canonical apostrophe glyph ({@value #CANONICAL_APOSTROPHE}).
+   * </p>
+   * 
+   * @since 1.65
+   */
+  public static final String CANONICAL_APOSTROPHE = "'";
+  
+  /**
+   * <p>
+   * Replaces all apostrophes that match {@link #APOSTROPHES} with
+   * {@link #CANONICAL_APOSTROPHE}.
+   * </p>
+   * 
+   * @since 1.65
+   */
+  public static String normalizeApostrophes(String str) {
+    return APOSTROPHES.matcher(str).replaceAll(CANONICAL_APOSTROPHE);
+  }
+  
+  /**
+   * <p>
+   * A regular expression that matches various Unicode dashes:
+   * </p>
+   * <ul>
+   * <li>U+002D HYPHEN-MINUS</li>
+   * <li>U+2012 FIGURE DASH</li>
+   * <li>U+2013 EN DASH</li>
+   * <li>U+2014 EM DASH</li>
+   * <li>U+2015 HORIZONTAL BAR</li>
+   * </ul>
+   * 
+   * @since 1.65
+   * @see http://en.wikipedia.org/wiki/Dash
+   */
+  public static final java.util.regex.Pattern DASHES =
+      java.util.regex.Pattern.compile("-|\u2012|\u2013|\u2014|\u2015");
+
+  /**
+   * <p>
+   * The canonical dash glyph ({@value #CANONICAL_DASH}).
+   * </p>
+   * 
+   * @since 1.65
+   */
+  public static final String CANONICAL_DASH = "-";
+  
+  /**
+   * <p>
+   * Replaces all dashes that match {@link #DASHES} with
+   * {@link #CANONICAL_DASH}.
+   * </p>
+   * 
+   * @since 1.65
+   */
+  public static String normalizeDashes(String str) {
+    return DASHES.matcher(str).replaceAll(CANONICAL_DASH);
+  }
+
 }
