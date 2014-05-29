@@ -1,5 +1,5 @@
 /*
- * $Id: AuHelper.java,v 1.1.4.1 2014-05-23 20:31:08 fergaloy-sf Exp $
+ * $Id: AuHelper.java,v 1.1.4.2 2014-05-29 18:26:24 fergaloy-sf Exp $
  */
 
 /*
@@ -67,12 +67,12 @@ public class AuHelper {
    * The fully-qualified name of the class of the objects used as source in a
    * query.
    */
-  static String SOURCE_FQCN = "org.lockss.ws.status.AuWsSource";
+  static String SOURCE_FQCN = AuWsSource.class.getCanonicalName();
 
   /**
    * The fully-qualified name of the class of the objects returned by the query.
    */
-  static String RESULT_FQCN = "org.lockss.ws.entities.AuWsResult";
+  static String RESULT_FQCN = AuWsResult.class.getCanonicalName();
 
   //
   // Property names used in Archival Unit queries.

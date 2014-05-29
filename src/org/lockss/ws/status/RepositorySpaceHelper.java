@@ -1,5 +1,5 @@
 /*
- * $Id: RepositorySpaceHelper.java,v 1.1 2014-04-25 23:10:59 fergaloy-sf Exp $
+ * $Id: RepositorySpaceHelper.java,v 1.1.4.1 2014-05-29 18:26:24 fergaloy-sf Exp $
  */
 
 /*
@@ -51,12 +51,12 @@ public class RepositorySpaceHelper {
    * The fully-qualified name of the class of the objects used as source in a
    * query.
    */
-  static String SOURCE_FQCN = "org.lockss.ws.status.RepositorySpaceWsSource";
+  static String SOURCE_FQCN = RepositorySpaceWsSource.class.getCanonicalName();
 
   /**
    * The fully-qualified name of the class of the objects returned by the query.
    */
-  static String RESULT_FQCN = "org.lockss.ws.entities.RepositorySpaceWsResult";
+  static String RESULT_FQCN = RepositorySpaceWsResult.class.getCanonicalName();
 
   //
   // Property names used in repository space queries.
