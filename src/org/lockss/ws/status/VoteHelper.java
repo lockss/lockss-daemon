@@ -1,5 +1,5 @@
 /*
- * $Id: VoteHelper.java,v 1.1 2014-04-25 23:10:59 fergaloy-sf Exp $
+ * $Id: VoteHelper.java,v 1.2 2014-05-29 16:53:45 fergaloy-sf Exp $
  */
 
 /*
@@ -51,12 +51,12 @@ public class VoteHelper {
    * The fully-qualified name of the class of the objects used as source in a
    * query.
    */
-  static String SOURCE_FQCN = "org.lockss.ws.status.VoteWsSource";
+  static String SOURCE_FQCN = VoteWsSource.class.getCanonicalName();
 
   /**
    * The fully-qualified name of the class of the objects returned by the query.
    */
-  static String RESULT_FQCN = "org.lockss.ws.entities.VoteWsResult";
+  static String RESULT_FQCN = VoteWsResult.class.getCanonicalName();
 
   //
   // Property names used in vote queries.

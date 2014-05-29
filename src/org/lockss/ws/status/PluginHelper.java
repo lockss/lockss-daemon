@@ -1,5 +1,5 @@
 /*
- * $Id: PluginHelper.java,v 1.1 2014-04-04 22:00:45 fergaloy-sf Exp $
+ * $Id: PluginHelper.java,v 1.2 2014-05-29 16:53:45 fergaloy-sf Exp $
  */
 
 /*
@@ -51,12 +51,12 @@ public class PluginHelper {
    * The fully-qualified name of the class of the objects used as source in a
    * query.
    */
-  static String SOURCE_FQCN = "org.lockss.ws.status.PluginWsSource";
+  static String SOURCE_FQCN = PluginWsSource.class.getCanonicalName();
 
   /**
    * The fully-qualified name of the class of the objects returned by the query.
    */
-  static String RESULT_FQCN = "org.lockss.ws.entities.PluginWsResult";
+  static String RESULT_FQCN = PluginWsResult.class.getCanonicalName();
 
   //
   // Property names used in plugin queries.

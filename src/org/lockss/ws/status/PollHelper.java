@@ -1,5 +1,5 @@
 /*
- * $Id: PollHelper.java,v 1.1 2014-04-29 19:47:04 fergaloy-sf Exp $
+ * $Id: PollHelper.java,v 1.2 2014-05-29 16:53:45 fergaloy-sf Exp $
  */
 
 /*
@@ -52,12 +52,12 @@ public class PollHelper {
    * The fully-qualified name of the class of the objects used as source in a
    * query.
    */
-  static String SOURCE_FQCN = "org.lockss.ws.status.PollWsSource";
+  static String SOURCE_FQCN = PollWsSource.class.getCanonicalName();
 
   /**
    * The fully-qualified name of the class of the objects returned by the query.
    */
-  static String RESULT_FQCN = "org.lockss.ws.entities.PollWsResult";
+  static String RESULT_FQCN = PollWsResult.class.getCanonicalName();
 
   //
   // Property names used in poll queries.
