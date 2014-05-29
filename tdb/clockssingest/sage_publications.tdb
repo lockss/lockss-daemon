@@ -4163,31 +4163,31 @@
       au < finished ; crawling ; 2011 ; Business Communication Quarterly Volume 74 ; 74 ; >
       au < zapped ; finished ; 2012 ; Business Communication Quarterly Volume 75 ; 75 ; >
       au < crawling ; exists ; 2013 ; Business Communication Quarterly Volume 76 ; 76 ; >
-      au < manifest ; exists ; 2014 ; Business Communication Quarterly Volume 77 ; 77 ; >
 
     }
 
   }
 
+  {
+
+    title <
+      name =  Business and Professional Communication Quarterly ;
+      issn = 2329-4906 ;
+      eissn =  2329-9492 ;
+      issnl = 2329-4906
+    >
+
+    param[base_url] = http://bcq.sagepub.com/
+
     {
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      comment[continues] = 1080-5699
 
-      title <
-        name =  Business and Professional Communication Quarterly ;
-        issn = 2329-4906 ;
-        eissn =  2329-9492 ;
-        issnl = 2329-4906
-      >
-
-      {
-        pluginSuffix = ClockssHighWirePlugin
-        param[base_url] = http://bcq.sagepub.com/
-        comment[continues] = 1080-5699
-
-        au < exists ; exists ; 2014 ; Business and Professional Communication Quarterly Volume 77 ; 77 ; >
-
-      }
+      au < manifest ; exists ; 2014 ; Business and Professional Communication Quarterly Volume 77 ; 77 ; >
 
     }
+
+  }
 
   {
   
@@ -6465,7 +6465,7 @@
       au < finished ; crawling ; 2011 ; Counseling Outcome Research and Evaluation Volume 2 ; 2 ; >
       au < zapped ; finished ; 2012 ; Counseling Outcome Research and Evaluation Volume 3 ; 3 ; >
       au < crawling ; exists ; 2013 ; Counseling Outcome Research and Evaluation Volume 4 ; 4 ; >
-      au < expected ; exists ; 2014 ; Counseling Outcome Research and Evaluation Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2014 ; Counseling Outcome Research and Evaluation Volume 5 ; 5 ; >
 
     }
 
@@ -14007,7 +14007,7 @@
       au < finished ; crawling ; 2011 ; International Journal of Comparative Sociology Volume 52 ; 52 ; >
       au < finished ; crawling ; 2012 ; International Journal of Comparative Sociology Volume 53 ; 53 ; >
       au < crawling ; exists ; 2013 ; International Journal of Comparative Sociology Volume 54 ; 54 ; >
-      au < expected ; exists ; 2014 ; International Journal of Comparative Sociology Volume 55 ; 55 ; >
+      au < manifest ; exists ; 2014 ; International Journal of Comparative Sociology Volume 55 ; 55 ; >
 
     }
 
@@ -18593,7 +18593,7 @@
       au < finished ; crawling ; 2011 ; Journal of Disability Policy Studies Volume 22 ; 22 ; >
       au < finished ; crawling ; 2012 ; Journal of Disability Policy Studies Volume 23 ; 23 ; >
       au < crawling ; exists ; 2013 ; Journal of Disability Policy Studies Volume 24 ; 24 ; >
-      au < expected ; exists ; 2014 ; Journal of Disability Policy Studies Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2014 ; Journal of Disability Policy Studies Volume 25 ; 25 ; >
 
     }
 
@@ -20969,10 +20969,10 @@
 
       {
 
-        pluginSuffix = ClockssHighWirePressH20Plugin
+      pluginSuffix = ClockssHighWirePressH20Plugin
         
       au < testing ; exists ; 2012 ; Journal of Interdisciplinary Economics Volume 24 ; 24 ; >
-      au < expected ; exists ; 2013 ; Journal of Interdisciplinary Economics Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2013 ; Journal of Interdisciplinary Economics Volume 25 ; 25 ; >
       au < expected ; exists ; 2014 ; Journal of Interdisciplinary Economics Volume 26 ; 26 ; >
 
       }
@@ -22874,7 +22874,7 @@
       au < finished ; crawling ; 2011 ; Journal of Research in International Education Volume 10 ; 10 ; >
       au < finished ; crawling ; 2012 ; Journal of Research in International Education Volume 11 ; 11 ; >
       au < crawling ; exists ; 2013 ; Journal of Research in International Education Volume 12 ; 12 ; >
-      au < expected ; exists ; 2014 ; Journal of Research in International Education Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2014 ; Journal of Research in International Education Volume 13 ; 13 ; >
 
     }
 
@@ -31963,7 +31963,7 @@
       au < finished ; crawling ; 2011 ; Research Studies in Music Education Volume 33 ; 33 ; >
       au < finished ; crawling ; 2012 ; Research Studies in Music Education Volume 34 ; 34 ; >
       au < crawling ; exists ; 2013 ; Research Studies in Music Education Volume 35 ; 35 ; >
-      au < expected ; exists ; 2014 ; Research Studies in Music Education Volume 36 ; 36 ; >
+      au < manifest ; exists ; 2014 ; Research Studies in Music Education Volume 36 ; 36 ; >
 
     }
 
@@ -32112,7 +32112,7 @@
     au < exists ; exists ; 2011 ; Review & Expositor Volume 108 ; 108 ; >
     au < exists ; exists ; 2012 ; Review & Expositor Volume 109 ; 109 ; >
     au < exists ; exists ; 2013 ; Review & Expositor Volume 110 ; 110 ; >
-    au < exists ; exists ; 2014 ; Review & Expositor Volume 111 ; 111 ; >
+    au < manifest ; exists ; 2014 ; Review & Expositor Volume 111 ; 111 ; >
 
   }
 
@@ -32504,7 +32504,6 @@
           au < down ; crawling ; 2011 ; Sage Open Volume 1 ; 1 ; >
           au < down ; crawling ; 2012 ; Sage Open Volume 2 ; 2 ; >
           au < down ; exists ; 2013 ; Sage Open Volume 3 ; 3 ; >
-          au < expected ; exists ; 2014 ; Sage Open Volume 4 ; 4 ; >
         
         }
 
@@ -32512,9 +32511,9 @@
         
           pluginSuffix = ClockssHighWireDrupalPlugin
 
-          au < exists ; exists ; 2011 ; Sage Open Volume 1 ; 1 ; >
-          au < exists ; exists ; 2012 ; Sage Open Volume 2 ; 2 ; >
-          au < exists ; exists ; 2013 ; Sage Open Volume 3 ; 3 ; >
+          au < manifest ; exists ; 2011 ; Sage Open Volume 1 ; 1 ; >
+          au < manifest ; exists ; 2012 ; Sage Open Volume 2 ; 2 ; >
+          au < manifest ; exists ; 2013 ; Sage Open Volume 3 ; 3 ; >
           au < expected ; exists ; 2014 ; Sage Open Volume 4 ; 4 ; >
         
         }
@@ -33618,7 +33617,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2014 ; Social Currents Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2014 ; Social Currents Volume 1 ; 1 ; >
 
     }
 
@@ -34200,7 +34199,7 @@
 
       au < finished ; crawling ; 2012 ; South Asian Journal of Business and Management Cases Volume 1 ; 1 ; >
       au < crawling ; exists ; 2013 ; South Asian Journal of Business and Management Cases Volume 2 ; 2 ; >
-      au < expected ; exists ; 2014 ; South Asian Journal of Business and Management Cases Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2014 ; South Asian Journal of Business and Management Cases Volume 3 ; 3 ; >
 
     }
 
@@ -34744,7 +34743,7 @@
       au < finished ; crawling ; 2011 ; Studies in History Volume 27 ; 27 ; >
       au < finished ; crawling ; 2012 ; Studies in History Volume 28 ; 28 ; >
       au < crawling ; exists ; 2013 ; Studies in History Volume 29 ; 29 ; >
-      au < expected ; exists ; 2014 ; Studies in History Volume 30 ; 30 ; >
+      au < manifest ; exists ; 2014 ; Studies in History Volume 30 ; 30 ; >
       
     }
 
@@ -38749,7 +38748,7 @@
       au < finished ; crawling ; 2011 ; Political Science Volume 63 ; 63 ; >
       au < finished ; crawling ; 2012 ; Political Science Volume 64 ; 64 ; >
       au < crawling ; exists ; 2013 ; Political Science Volume 65 ; 65 ; >
-      au < expected ; exists ; 2014 ; Political Science Volume 66 ; 66 ; >
+      au < manifest ; exists ; 2014 ; Political Science Volume 66 ; 66 ; >
 
     }
 
@@ -39708,8 +39707,8 @@
     au < exists ; exists ; 2010 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 143 ; 143 >
     au < exists ; exists ; 2011 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 144 ; 144 >
     au < exists ; exists ; 2012 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 145 ; 145 >
-    au < exists ; exists ; 2013 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 146 ; 146 >
-    au < exists ; exists ; 2014 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 147 ; 147 >
+    au < manifest ; exists ; 2013 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 146 ; 146 >
+    au < manifest ; exists ; 2014 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 147 ; 147 >
 
     }
 
