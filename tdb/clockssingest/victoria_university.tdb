@@ -3,7 +3,7 @@
   publisher <
     name = Victoria University ;
     info[contract] = 2014 ;
-    info[tester] = 0
+    info[tester] = 7
   >
   
   param[base_url] = http://vulj.vu.edu.au/ 
@@ -37,7 +37,7 @@
       comment[name_change0] = Title changed name/issn from DICTUM - Victoria Law School Journal
       comment[name_change1] = Volumes 1-2 are available under issn 1838-6849
       
-      au < manifest ; exists ; 2013 ; Victoria University Law and Justice Journal Volume 3 ; 3 ; 2013 >
+      au < testing ; exists ; 2013 ; Victoria University Law and Justice Journal Volume 3 ; 3 ; 2013 >
       au < expected ; exists ; 2014 ; Victoria University Law and Justice Journal Volume 4 ; 4 ; 2014 >
 
   }
