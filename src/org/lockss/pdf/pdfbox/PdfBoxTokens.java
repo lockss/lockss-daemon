@@ -1,10 +1,10 @@
 /*
- * $Id: PdfBoxTokens.java,v 1.4 2012-07-19 08:01:55 thib_gc Exp $
+ * $Id: PdfBoxTokens.java,v 1.4.38.1 2014-05-29 01:26:52 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -1485,26 +1485,31 @@ public class PdfBoxTokens {
    * @since 1.56
    */
   protected static PdfToken makeOperator(PDFOperator operator) {
-    Token ret = cachedOperators.get(operator);
-    if (ret == null) {
-      Token newToken = new Token(operator);
-      /*
-       * IMPLEMENTATION NOTE
-       * 
-       * 'BI' and 'ID' operators are never cached by PDFBox because
-       * they contain their own image data, so we should not cache
-       * them either. (PDFBox 1.6.0: PDFOperator.getOperator() line
-       * 63).
-       */
-      if (!(   PdfOpcodes.BEGIN_IMAGE_OBJECT.equals(operator)
-            || PdfOpcodes.BEGIN_IMAGE_DATA.equals(operator))) {
-        ret = cachedOperators.putIfAbsent(operator, newToken);
-        if (ret == null) {
-          ret = newToken;
-        }
-      }
+    Token cachedToken = cachedOperators.get(operator);
+    if (cachedToken != null) {
+      // Operator already cached
+      return cachedToken;
     }
-    return ret;
+    Token newToken = new Token(operator);
+
+    /*
+     * IMPLEMENTATION NOTE
+     * 
+     * 'BI' and 'ID' operators are never cached by PDFBox because
+     * they contain their own image data, so we should not cache
+     * them either. (PDFBox 1.6.0: PDFOperator.getOperator() line
+     * 63).
+     */
+    String opcode = operator.getOperation();
+    if (   PdfOpcodes.BEGIN_IMAGE_OBJECT.equals(opcode)
+        || PdfOpcodes.BEGIN_IMAGE_DATA.equals(opcode)) {
+      // Don't cache 'BI' and 'ID' operators
+      return newToken;
+    }
+
+    // Operator not cached yet
+    cachedToken = cachedOperators.putIfAbsent(operator, newToken);
+    return (cachedToken == null) ? newToken : cachedToken;
   }
   
   /**
