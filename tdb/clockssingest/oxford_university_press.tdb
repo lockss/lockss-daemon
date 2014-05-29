@@ -79,7 +79,7 @@
     au < finished ; crawling ; 2011 ; Adaptation Volume 4 ; 4 ; >
     au < finished ; crawling ; 2012 ; Adaptation Volume 5 ; 5 ; >
     au < crawling ; exists ; 2013 ; Adaptation Volume 6 ; 6 ; >
-    au < expected ; exists ; 2014 ; Adaptation Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2014 ; Adaptation Volume 7 ; 7 ; >
 
     }
 
@@ -8973,7 +8973,7 @@
     au < finished ; crawling ; 2011 ; International Journal of Refugee Law Volume 23 ; 23 ; >
     au < finished ; crawling ; 2012 ; International Journal of Refugee Law Volume 24 ; 24 ; >
     au < crawling ; exists ; 2013 ; International Journal of Refugee Law Volume 25 ; 25 ; >
-    au < expected ; exists ; 2014 ; International Journal of Refugee Law Volume 26 ; 26 ; >
+    au < manifest ; exists ; 2014 ; International Journal of Refugee Law Volume 26 ; 26 ; >
 
     }
 
@@ -9609,7 +9609,7 @@
     au < finished ; crawling ; 2011 ; Journal of American History Volume 98 ; 98 ; >
     au < finished ; crawling ; 2012 ; Journal of American History Volume 99 ; 99 ; >
     au < crawling ; exists ; 2013 ; Journal of American History Volume 100 ; 100 ; >
-    au < expected ; exists ; 2014 ; Journal of American History Volume 101 ; 101 ; >
+    au < manifest ; exists ; 2014 ; Journal of American History Volume 101 ; 101 ; >
 
     }
 
@@ -14738,8 +14738,8 @@
     au < manifest ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 437 ; 437 ; >
     au < manifest ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 438 ; 438 ; >
     au < manifest ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 439 ; 439 ; >
-    au < expected ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 440 ; 440 ; >
-    au < expected ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 441 ; 441 ; >
+    au < manifest ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 440 ; 440 ; >
+    au < manifest ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 441 ; 441 ; >
     au < expected ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 442 ; 442 ; >
     au < expected ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 443 ; 443 ; >
     au < expected ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 444 ; 444 ; >
@@ -14866,7 +14866,7 @@
     au < finished ; crawling ; 2011 ; Music and Letters Volume 92 ; 92 ; >
     au < crawling ; exists ; 2012 ; Music and Letters Volume 93 ; 93 ; >
     au < crawling ; exists ; 2013 ; Music and Letters Volume 94 ; 94 ; >
-    au < expected ; exists ; 2014 ; Music and Letters Volume 95 ; 95 ; >
+    au < manifest ; exists ; 2014 ; Music and Letters Volume 95 ; 95 ; >
 
     }
 
@@ -15041,7 +15041,7 @@
     au < manifest ; exists ; 2011 ; Music Theory Spectrum Volume 33 ; 33 ; >
     au < manifest ; exists ; 2012 ; Music Theory Spectrum Volume 34 ; 34 ; >
     au < manifest ; exists ; 2013 ; Music Theory Spectrum Volume 35 ; 35 ; >
-    au < exists ; exists ; 2014 ; Music Theory Spectrum Volume 36 ; 36 ; >
+    au < manifest ; exists ; 2014 ; Music Theory Spectrum Volume 36 ; 36 ; >
 
     }
 
@@ -16058,7 +16058,7 @@
     au < finished ; crawling ; 2011 ; The Oral History Review Volume 38 ; 38 ; >
     au < finished ; crawling ; 2012 ; The Oral History Review Volume 39 ; 39 ; >
     au < crawling ; exists ; 2013 ; The Oral History Review Volume 40 ; 40 ; >
-    au < expected ; exists ; 2014 ; The Oral History Review Volume 41 ; 41 ; >
+    au < manifest ; exists ; 2014 ; The Oral History Review Volume 41 ; 41 ; >
 
     }
 
@@ -16390,7 +16390,7 @@
     au < finished ; crawling ; 2011 ; Oxford Review of Economic Policy Volume 27 ; 27 ; >
     au < finished ; crawling ; 2012 ; Oxford Review of Economic Policy Volume 28 ; 28 ; >
     au < crawling ; exists ; 2013 ; Oxford Review of Economic Policy Volume 29 ; 29 ; >
-    au < expected ; exists ; 2014 ; Oxford Review of Economic Policy Volume 30 ; 30 ; >
+    au < manifest ; exists ; 2014 ; Oxford Review of Economic Policy Volume 30 ; 30 ; >
 
     }
 
@@ -17690,22 +17690,22 @@
     param[base_url] = http://ppar.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < exists ; exists ; 1998-1999 ; Public Policy & Aging Report Volume 9 ; 9 ; >
-    au < exists ; exists ; 1999-2000 ; Public Policy & Aging Report Volume 10 ; 10 ; >
-    au < exists ; exists ; 2000-2001 ; Public Policy & Aging Report Volume 11 ; 11 ; >
-    au < exists ; exists ; 2001-2002 ; Public Policy & Aging Report Volume 12 ; 12 ; >
-    au < exists ; exists ; 2003 ; Public Policy & Aging Report Volume 13 ; 13 ; >
-    au < exists ; exists ; 2004 ; Public Policy & Aging Report Volume 14 ; 14 ; >
-    au < exists ; exists ; 2005 ; Public Policy & Aging Report Volume 15 ; 15 ; >
-    au < exists ; exists ; 2006 ; Public Policy & Aging Report Volume 16 ; 16 ; >
-    au < exists ; exists ; 2007 ; Public Policy & Aging Report Volume 17 ; 17 ; >
-    au < exists ; exists ; 2008 ; Public Policy & Aging Report Volume 18 ; 18 ; >
-    au < exists ; exists ; 2009 ; Public Policy & Aging Report Volume 19 ; 19 ; >
-    au < exists ; exists ; 2010 ; Public Policy & Aging Report Volume 20 ; 20 ; >
-    au < exists ; exists ; 2011 ; Public Policy & Aging Report Volume 21 ; 21 ; >
-    au < exists ; exists ; 2012 ; Public Policy & Aging Report Volume 22 ; 22 ; >
-    au < exists ; exists ; 2013 ; Public Policy & Aging Report Volume 23 ; 23 ; >
-    au < exists ; exists ; 2014 ; Public Policy & Aging Report Volume 24 ; 24 ; >
+    au < manifest ; exists ; 1998-1999 ; Public Policy & Aging Report Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1999-2000 ; Public Policy & Aging Report Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2000-2001 ; Public Policy & Aging Report Volume 11 ; 11 ; >
+    au < manifest ; exists ; 2001-2002 ; Public Policy & Aging Report Volume 12 ; 12 ; >
+    au < manifest ; exists ; 2003 ; Public Policy & Aging Report Volume 13 ; 13 ; >
+    au < manifest ; exists ; 2004 ; Public Policy & Aging Report Volume 14 ; 14 ; >
+    au < manifest ; exists ; 2005 ; Public Policy & Aging Report Volume 15 ; 15 ; >
+    au < manifest ; exists ; 2006 ; Public Policy & Aging Report Volume 16 ; 16 ; >
+    au < manifest ; exists ; 2007 ; Public Policy & Aging Report Volume 17 ; 17 ; >
+    au < manifest ; exists ; 2008 ; Public Policy & Aging Report Volume 18 ; 18 ; >
+    au < manifest ; exists ; 2009 ; Public Policy & Aging Report Volume 19 ; 19 ; >
+    au < manifest ; exists ; 2010 ; Public Policy & Aging Report Volume 20 ; 20 ; >
+    au < manifest ; exists ; 2011 ; Public Policy & Aging Report Volume 21 ; 21 ; >
+    au < manifest ; exists ; 2012 ; Public Policy & Aging Report Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2013 ; Public Policy & Aging Report Volume 23 ; 23 ; >
+    au < manifest ; exists ; 2014 ; Public Policy & Aging Report Volume 24 ; 24 ; >
 
   }
 
@@ -18565,7 +18565,7 @@
     au < zapped ; finished ; 2011 ; The Review of Asset Pricing Studies Volume 1 ; 1 ; >
     au < finished ; crawling ; 2012 ; The Review of Asset Pricing Studies Volume 2 ; 2 ; >
     au < crawling ; exists ; 2013 ; The Review of Asset Pricing Studies Volume 3 ; 3 ; >
-    au < expected ; exists ; 2014 ; The Review of Asset Pricing Studies Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2014 ; The Review of Asset Pricing Studies Volume 4 ; 4 ; >
 
   }
 
