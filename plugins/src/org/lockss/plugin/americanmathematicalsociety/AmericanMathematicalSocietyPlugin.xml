@@ -41,6 +41,7 @@
     <string>"American Mathematical Society Plugin, Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
   </entry>
   <entry>
+    <!-- Not really in use for the GLN, see the CLOCKSS version -->
     <string>au_start_url</string>
     <string>"%slockssdata/?p=%s&amp;y=%d", base_url, journal_id, year</string>
   </entry>
