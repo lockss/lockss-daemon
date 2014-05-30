@@ -225,8 +225,8 @@
 
     au < manifest ; exists ; 2009 ; Journal of European Psychology Students Volume 1 ; 1 ; 2009 >
     au < manifest ; exists ; 2010 ; Journal of European Psychology Students Volume 2 ; 2 ; 2010 >
-    au < ready ; exists ; 2012 ; Journal of European Psychology Students Volume 3 ; 3 ; 2012 >
-    au < ready ; exists ; 2013 ; Journal of European Psychology Students Volume 4 ; 4 ; 2013 >
+    au < crawling ; exists ; 2012 ; Journal of European Psychology Students Volume 3 ; 3 ; 2012 >
+    au < crawling ; exists ; 2013 ; Journal of European Psychology Students Volume 4 ; 4 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of European Psychology Students Volume 5 ; 5 ; 2014 >
     
   }
@@ -438,7 +438,7 @@
     param[base_url] = http://www.secularismandnonreligion.org/
     param[journal_id] = snr
     
-    au < ready ; exists ; 2012 ; Secularism and Nonreligion Volume 1 ; 1 ; 2012 >
+    au < crawling ; exists ; 2012 ; Secularism and Nonreligion Volume 1 ; 1 ; 2012 >
     au < crawling ; exists ; 2013 ; Secularism and Nonreligion Volume 2 ; 2 ; 2013 >
     au < manifest ; exists ; 2014 ; Secularism and Nonreligion Volume 3 ; 3 ; 2014 >
 
