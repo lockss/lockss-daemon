@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.98 2013-12-03 00:47:58 thib_gc Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.98.6.1 2014-05-30 07:13:51 tlipkis Exp $
  */
 
 /*
@@ -379,7 +379,8 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
       for (Map.Entry<String,?> ent : plugFeatureUrlMap.entrySet()) {
 	String featKey = ent.getKey();
 	Object val = ent.getValue();
-	res.put(featKey, convertFeatureUrlVal(val));
+	res.put(StringPool.TDBAU_ATTRS.intern(featKey),
+		convertFeatureUrlVal(val));
       }
       return res;
     }
