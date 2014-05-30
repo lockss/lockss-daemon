@@ -1,7 +1,24 @@
 <map>
   <entry>
     <string>plugin_version</string>
-    <string>8</string>
+    <string>9</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -32,6 +49,10 @@
       <string>1,"^%s(content|popup)[.]aspx[?]aID=[0-9]+", base_url</string>
       <string>1,"^%sbookInfo[.]aspx[?]file=.*%d[.]html", base_url, resource_id</string>
     </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <string>"%sresourceToc.aspx[?]resourceID=[0-9]+", base_url</string>
   </entry>
   <entry>
     <string>au_start_url</string>
