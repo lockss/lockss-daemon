@@ -1,5 +1,5 @@
 /*
- * $Id: TestJstorHtmlLinkExtractorFactory.java,v 1.2 2014-05-30 21:22:51 alexandraohlson Exp $
+ * $Id: TestJstorHtmlLinkExtractorFactory.java,v 1.3 2014-05-30 21:47:10 alexandraohlson Exp $
  */
 /*
 
@@ -64,7 +64,7 @@ public class TestJstorHtmlLinkExtractorFactory extends LockssTestCase {
   private final static String JSTOR_ARTICLE_ABSTRACT_URL = JSTOR_BASE_URL + 
       "stable/info/41495848";
 
-  private final String PLUGIN_NAME = "org.lockss.plugin.jstor.JStorPlugin";
+  private final String PLUGIN_NAME = "org.lockss.plugin.jstor.JstorPlugin";
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   static final String BASE_URL2_KEY = ConfigParamDescr.BASE_URL2.getKey();
   static final String JOURNAL_ID_KEY = ConfigParamDescr.JOURNAL_ID.getKey();
