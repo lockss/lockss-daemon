@@ -1,4 +1,4 @@
-/* $Id: PeerJRisMetadataExtractorFactory.java,v 1.2 2014-05-30 20:19:06 ldoan Exp $
+/* $Id: PeerJRisMetadataExtractorFactory.java,v 1.3 2014-05-30 20:55:23 thib_gc Exp $
  
  Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
@@ -73,7 +73,7 @@ import org.lockss.util.Logger;
         MetadataTarget target, String contentType) throws PluginException {
     
       log.debug3("Inside PeerJ RIS metadata extractor factory");
-      PeerJRisMetadataExtractor pRisMe = new PeerJRisMetadataExtractor();
+      RisMetadataExtractor pRisMe = new RisMetadataExtractor();
 
       pRisMe.addRisTag("TI", MetadataField.FIELD_ARTICLE_TITLE);
       pRisMe.addRisTag("A2", MetadataField.FIELD_AUTHOR);
@@ -83,18 +83,4 @@ import org.lockss.util.Logger;
     return pRisMe;
   }
     
-  public static class PeerJRisMetadataExtractor extends RisMetadataExtractor {
-
-    // override to synthesized metadata if not exist in raw metadata list
-    // PeerJ ris file is missing publisher field PB
-    @Override
-    public void extract(MetadataTarget target, CachedUrl cu, 
-        FileMetadataExtractor.Emitter emitter) throws IOException, 
-                                                      PluginException {
-
-      ArticleMetadata am = extract(target, cu); 
-      emitter.emitMetadata(cu, am);
-    }
-  }
-
 }
