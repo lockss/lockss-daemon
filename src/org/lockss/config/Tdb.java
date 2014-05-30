@@ -1,5 +1,5 @@
 /*
- * $Id: Tdb.java,v 1.25 2014-04-23 20:42:33 tlipkis Exp $
+ * $Id: Tdb.java,v 1.26 2014-05-30 07:17:39 tlipkis Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ import org.lockss.util.*;
  * a specified plugin ID. 
  *
  * @author  Philip Gust
- * @version $Id: Tdb.java,v 1.25 2014-04-23 20:42:33 tlipkis Exp $
+ * @version $Id: Tdb.java,v 1.26 2014-05-30 07:17:39 tlipkis Exp $
  */
 public class Tdb {
   /**
@@ -96,7 +96,7 @@ public class Tdb {
    * also handle this exception.
    * 
    * @author  Philip Gust
-   * @version $Id: Tdb.java,v 1.25 2014-04-23 20:42:33 tlipkis Exp $
+   * @version $Id: Tdb.java,v 1.26 2014-05-30 07:17:39 tlipkis Exp $
    */
   @SuppressWarnings("serial")
   static public class TdbException extends Exception {
@@ -294,15 +294,15 @@ public class Tdb {
     if (newTdb == null) {
       newTdb = new Tdb();
     }
-    if (oldTdb == null) {
-      oldTdb = new Tdb();
-    }
     return newTdb.computeDifferences(oldTdb);
   }
 
   Differences computeDifferences(Tdb oldTdb) {
-    Differences res = new Differences(this, oldTdb);
-    return res;
+    if (oldTdb == null) {
+      return new AllDifferences(this);
+    } else {
+      return new Differences(this, oldTdb);
+    }
   }
 
   /**
@@ -1402,5 +1402,66 @@ public class Tdb {
 	throw new UnsupportedOperationException("Can't modify unmodifiable Differences");
       }
     }
+  }
+
+  /** Implements Differences(tdb, null) efficiently */
+  public static class AllDifferences extends Differences  {
+    private Tdb tdb;
+    
+    public String toString() {
+      return "[Tdb.Diffa: all]";
+    }
+
+    AllDifferences(Tdb newTdb) {
+      tdb = newTdb;
+    }
+
+    /** Return the ID of every plugin that has at least one changed or
+     * added or removed AU */
+    Set<String> getPluginIdsForDifferences() {
+      return tdb.pluginIdTdbAuIdsMap.keySet();
+    }
+
+    /** Return the difference in number of AUs from old to new Tdb. */
+    public int getTdbAuDifferenceCount() {
+      return tdb.getTdbAuCount();
+    }
+
+    /** @return an Iterator over all the newly added TdbPublishers. */
+    public Iterator<TdbPublisher> newTdbPublisherIterator() {
+      return tdb.tdbPublisherIterator();
+    }
+
+    /** @return an Iterator over all the newly added TdbTitles, including
+     * those belonging to newly added TdbPublishers. */
+    public Iterator<TdbTitle> newTdbTitleIterator() {
+      return tdb.tdbTitleIterator();
+    }
+
+    /** @return an Iterator over all the newly added or changed TdbAus, */
+    public Iterator<TdbAu> newTdbAuIterator() {
+      return tdb.tdbAuIterator();
+    }
+
+    /** Return the {@link TdbPublisher}s that appear in the new Tdb and not
+     * the old. */
+    public List<TdbPublisher> rawNewTdbPublishers() {
+      return ListUtil.fromIterator(newTdbPublisherIterator());
+    }
+
+    /** Return the {@link TdbTitle}s that have been added to existing
+     * {@link TdbPublisher}s.  To get the entire set of new titles, use
+     * {@link #newTdbTitleIterator()}. */
+    public List<TdbTitle> rawNewTdbTitles() {
+      return Collections.EMPTY_LIST;
+    }
+
+    /** Return the {@link TdbAu}s that have been added to existing
+     * {@link TdbTitle}s.  To get the entire set of new AUs, use
+     * {@link #newTdbAuIterator()}. */
+    public List<TdbAu> rawNewTdbAus() {
+      return Collections.EMPTY_LIST;
+    }
+
   }
 }
