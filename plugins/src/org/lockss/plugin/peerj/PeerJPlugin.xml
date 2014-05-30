@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -24,7 +24,7 @@
     <map>
       <entry>
         <string>Metadata</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -108,14 +108,30 @@
     <string>au_feature_urls</string>
     <map>
       <entry>
+        <!-- https://peerj.com/ -->
+        <string>au_title</string>
+        <string>"%s", base_url</string>
+      </entry>
+      <entry>
+        <!-- https://peerj.com/archives/?year=2013 -->
+        <!-- https://peerj.com/archives-preprints/?year=2013 -->
         <string>au_volume</string>
-        <string>"%s%s/?year=%s", base_url, peerj_site, volume_name</string>
+        <string>"%s%s/?year=%s", base_url, peerj_site, volume</string>
+      </entry>
+      <entry>
+        <!-- https://peerj.com/articles/index.html?month=2013-02 -->
+        <string>au_issue</string>
+        <string>"%sarticles/index.html?month=%s-%s", base_url, volume, issue</string>
       </entry>
     </map>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.peerj.PeerJHtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>application/xml_filter_factory</string>
+    <string>org.lockss.plugin.peerj.PeerJXmlFilterFactory</string>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
