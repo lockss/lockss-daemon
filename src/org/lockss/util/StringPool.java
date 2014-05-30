@@ -1,5 +1,5 @@
 /*
- * $Id: StringPool.java,v 1.3.8.1 2014-05-28 00:13:09 tlipkis Exp $
+ * $Id: StringPool.java,v 1.3.8.2 2014-05-30 07:14:07 tlipkis Exp $
  */
 
 /*
@@ -56,7 +56,7 @@ public class StringPool {
   /** Pool for TdbAu props. */
   public static StringPool TDBAU_PROPS =
     new StringPool("TdbAu props").setMapKeys(ListUtil.list("type", "issn",
-							   "issn1"));
+							   "issn1", "eissn"));
   /** Pool for TdbAu attrs. */
   public static StringPool TDBAU_ATTRS =
     new StringPool("TdbAu attrs").setMapKeys(ListUtil.list("publisher",
