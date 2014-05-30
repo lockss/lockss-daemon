@@ -334,6 +334,10 @@ sfxlink javascript commands
 
 Anything else you think might need to be removed from hashing??
 
+----------------------XML HASH FILTERING---------------------------
+* PeerJ has timestamp in their .unixref files
+  https://peerj.com/articles/46.unixref
+
 -------------------HTML CRAWL FILTERING-----------------------------
 If the URL pattern for articles is non-deterministic (that is, it 
 doesn't contain volume name,  year, journal 
