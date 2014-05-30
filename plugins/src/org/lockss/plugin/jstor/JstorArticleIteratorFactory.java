@@ -1,5 +1,5 @@
 /*
- * $Id: JstorArticleIteratorFactory.java,v 1.2 2014-05-21 18:05:19 alexandraohlson Exp $
+ * $Id: JstorArticleIteratorFactory.java,v 1.3 2014-05-30 21:22:51 alexandraohlson Exp $
  */
 
 /*
@@ -55,20 +55,25 @@ public class JstorArticleIteratorFactory implements ArticleIteratorFactory, Arti
 
   protected static Logger log = Logger.getLogger(JstorArticleIteratorFactory.class);
   
-  //protected static final String ROOT_TEMPLATE = "\"%sstable/[\\.0-9]+\", base_url"; 
+  //protected static final String ROOT_TEMPLATE = "\"%sstable/[\\.0-9]+\", base_url
+  protected static final String ROOT_TEMPLATE = "\"%saction/\", base_url2";
   
-  protected static final String PATTERN_TEMPLATE = "\"^%saction/downloadSingleCitationSec?format=refman&doi=[.0-9]+/(.*)$\", base_url";
+    //  citations live under "https" which is base_url2
+    //https://www.jstor.org/action/downloadSingleCitationSec?format=refman&doi=10.2307/41827174
+    protected static final String PATTERN_TEMPLATE = "\"^%saction/downloadSingleCitationSec\\?format=refman&doi=\", base_url2";
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) throws PluginException {
     SubTreeArticleIteratorBuilder builder = localBuilderCreator(au);
-    
-    final Pattern RIS_PATTERN = Pattern.compile("&doi=([.0-9]+)/(.*)$", Pattern.CASE_INSENSITIVE);
-    final String RIS_REPLACEMENT = "&doi=([.0-9]+)/(.*)$"; //no replacement...just the one
+
+    //([.0-9]+)/([^?^&]+)$", Pattern.CASE_INSENSITIVE);
+    final Pattern RIS_PATTERN = Pattern.compile("&doi=([.0-9]+)/([^?^&]+)$", Pattern.CASE_INSENSITIVE);
+    final String RIS_REPLACEMENT = "&doi=$1/$2"; //no replacement...just the one
     
         // no need to limit to ROOT_TEMPLATE
     builder.setSpec(new SubTreeArticleIterator.Spec()
     .setTarget(target)
+    .setRootTemplate(ROOT_TEMPLATE)
     .setPatternTemplate(PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE));
     
     // NOTE - full_text_cu is set automatically to the url used for the articlefiles

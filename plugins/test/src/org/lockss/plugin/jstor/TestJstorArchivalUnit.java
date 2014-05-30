@@ -1,5 +1,5 @@
 /*
- * $Id: TestJstorArchivalUnit.java,v 1.1 2014-05-21 18:05:19 alexandraohlson Exp $
+ * $Id: TestJstorArchivalUnit.java,v 1.2 2014-05-30 21:22:51 alexandraohlson Exp $
  */
 
 /*
@@ -50,9 +50,11 @@ import org.lockss.util.*;
 public class TestJstorArchivalUnit extends LockssTestCase {
   private MockLockssDaemon theDaemon;
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
+  static final String BASE_URL2_KEY = ConfigParamDescr.BASE_URL2.getKey();
   static final String JID_KEY = ConfigParamDescr.JOURNAL_ID.getKey();
   static final String VOL_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
   static final String ROOT_URL = "http://www.jstor.org/"; 
+  static final String ROOT_URL2 = "https://www.jstor.org/"; 
   
   static Logger log = Logger.getLogger(TestJstorArchivalUnit.class);
   
@@ -70,14 +72,15 @@ public class TestJstorArchivalUnit extends LockssTestCase {
     super.tearDown();
   }
 
-  private DefinableArchivalUnit makeAu(URL url, int volume, String jid)
+  private DefinableArchivalUnit makeAu(Boolean valid, int volume, String jid)
       throws Exception {
 
     Properties props = new Properties();
     props.setProperty(VOL_KEY, Integer.toString(volume));
     props.setProperty(JID_KEY, jid);
-    if (url != null) {
-      props.setProperty(BASE_URL_KEY, url.toString());
+    if (valid == true) {
+      props.setProperty(BASE_URL_KEY, ROOT_URL);
+      props.setProperty(BASE_URL2_KEY, ROOT_URL2);
     }
     Configuration config = ConfigurationUtil.fromProps(props);
     
@@ -90,22 +93,26 @@ public class TestJstorArchivalUnit extends LockssTestCase {
 
   public void testConstructNullUrl() throws Exception {
     try {
-      makeAu(null, 1, "jmorahist");
+      makeAu(false, 1, "jmorahist");
       fail("Should have thrown ArchivalUnit.ConfigurationException");
     } catch (ArchivalUnit.ConfigurationException e) {
     }
+  }
+  
+  public void testGetUrlStems() throws Exception {
+    ArchivalUnit JSAu = makeAu(true, 123, "xxxx" );
+    assertEquals(ListUtil.list(ROOT_URL, ROOT_URL2), JSAu.getUrlStems());
   }
   
   //
   // Test the crawl rules
   //
   public void testShouldCacheProperPages() throws Exception {
-    URL base = new URL(ROOT_URL);
-    ArchivalUnit JSAu = makeAu(base, 123, "xxxx");
+    ArchivalUnit JSAu = makeAu(true, 123, "xxxx");
     theDaemon.getLockssRepository(JSAu);
     theDaemon.getNodeManager(JSAu);
     BaseCachedUrlSet cus = new BaseCachedUrlSet(JSAu,
-        new RangeCachedUrlSetSpec(base.toString()));
+        new RangeCachedUrlSetSpec(ROOT_URL));
     // Test for pages that should get crawled
     //manifest page
     shouldCacheTest(ROOT_URL+"lockss/xxxx/123", true, JSAu, cus);    
@@ -143,12 +150,12 @@ public class TestJstorArchivalUnit extends LockssTestCase {
     //http://www.jstor.org/stable/pdfplus/41827175.pdf?acceptTC=true
     shouldCacheTest(ROOT_URL+"stable/pdfplus/11.1111/1234-abc.12G?acceptTC=true", true, JSAu, cus);
     
-    // YES - citation download information
-    //http://www.jstor.org/action/downloadSingleCitationSec?format=refman&doi=10.5325/jmorahist.13.2.0158
-    //http://www.jstor.org/action/downloadSingleCitationSec?format=refman&doi=10.3764/aja.116.4.0751
-    //http://www.jstor.org/action/downloadSingleCitationSec?format=refman&doi=10.2307/41827175
-    shouldCacheTest(ROOT_URL+"action/downloadSingleCitationSec?format=refman&doi=11.1111/1234-abc.12G", true, JSAu, cus);
-    shouldCacheTest(ROOT_URL+"action/downloadSingleCitationSec?format=refman&doi=10.2307/41827175", true, JSAu, cus);
+    // YES - citation download information - under base_url2 (ROOT_URL2)
+    //https://www.jstor.org/action/downloadSingleCitationSec?format=refman&doi=10.5325/jmorahist.13.2.0158
+    //https://www.jstor.org/action/downloadSingleCitationSec?format=refman&doi=10.3764/aja.116.4.0751
+    //https://www.jstor.org/action/downloadSingleCitationSec?format=refman&doi=10.2307/41827175
+    shouldCacheTest(ROOT_URL2+"action/downloadSingleCitationSec?format=refman&doi=11.1111/1234-abc.12G", true, JSAu, cus);
+    shouldCacheTest(ROOT_URL2+"action/downloadSingleCitationSec?format=refman&doi=10.2307/41827175", true, JSAu, cus);
     
     // YES - support files
     //http://www.jstor.org/jawr/1105425977/bundles/jstorSiteCatalyst.js
@@ -156,7 +163,7 @@ public class TestJstorArchivalUnit extends LockssTestCase {
     //   jmorahist.13.1.issue-1/jmorahist.13.1.issue-1/20130523/jmorahist.13.1.issue-1.cover.jpg
     shouldCacheTest(ROOT_URL+"jawr/1105425977/bundles/jstorSiteCatalyst.js", true, JSAu, cus);
     shouldCacheTest(ROOT_URL+"literatum/publisher/jstor/journals/content/jmorahist/2013/jmorahist.13.1.issue-1/jmorahist.13.1.issue-1/20130523/jmorahist.13.1.issue-1.cover.jpg", true, JSAu, cus);
-    shouldCacheTest(ROOT_URL + "action/downloadSingleCitationSec?format=refman&doi=10.5325/jmorahist.13.2.0197", true, JSAu, cus);
+    shouldCacheTest(ROOT_URL2 + "action/downloadSingleCitationSec?format=refman&doi=10.5325/jmorahist.13.2.0197", true, JSAu, cus);
     
     // Now a couple that shouldn't get crawled
     // wrong volume
@@ -175,23 +182,21 @@ public class TestJstorArchivalUnit extends LockssTestCase {
   }
   
   public void testStartUrlConstruction() throws Exception {
-    URL url = new URL(ROOT_URL);
 
     // 4 digit
     String expected = ROOT_URL+"lockss/xxxx/123";
-    DefinableArchivalUnit JSAu = makeAu(url, 123, "xxxx");
+    DefinableArchivalUnit JSAu = makeAu(true, 123, "xxxx");
     assertEquals(ListUtil.list(expected), JSAu.getNewContentCrawlUrls());
   }
   
   public void testShouldNotCachePageFromOtherSite() throws Exception {
-    URL base = new URL("http://www.jstor.org/");
     int volume = 123;
     String jid = "xxxx";
-    ArchivalUnit JSAu = makeAu(base, volume, jid);
+    ArchivalUnit JSAu = makeAu(true, volume, jid);
 
     theDaemon.getLockssRepository(JSAu);
     theDaemon.getNodeManager(JSAu);
-    CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(base.toString());
+    CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(ROOT_URL);
     BaseCachedUrlSet cus = new BaseCachedUrlSet(JSAu, spec);
     UrlCacher uc = JSAu.makeUrlCacher("http://shadow2.stanford.edu/lockss/xxxx/123/index.html");
 
@@ -201,8 +206,8 @@ public class TestJstorArchivalUnit extends LockssTestCase {
 
   public void testgetName() throws Exception {
     DefinableArchivalUnit au =
-      makeAu(new URL("http://www.jstor.org/"), 33, "yyyy");
-    assertEquals(PluginName + ", Base URL http://www.jstor.org/, Journal ID yyyy, Volume 33", au.getName());
+      makeAu(true, 33, "yyyy");
+    assertEquals(PluginName + ", Base URL http://www.jstor.org/, Base URL 2 https://www.jstor.org/, Journal ID yyyy, Volume 33", au.getName());
   }
 
 }

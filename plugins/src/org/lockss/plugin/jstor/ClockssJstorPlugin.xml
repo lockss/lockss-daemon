@@ -25,10 +25,17 @@
   </entry>    
   <entry>
     <string>au_name</string>
-    <string>"JSTOR Plugin (CLOCKSS), Base URL %s, Journal ID %s, Volume Name %s", base_url, journal_id, volume_name</string>
+    <string>"JSTOR Plugin (CLOCKSS), Base URL %s, Base URL 2 %s, Journal ID %s, Volume Name %s", base_url, base_url2, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>
     <string>"%sclockss/%s/%s", base_url, journal_id, volume_name</string>
   </entry>
+  <entry>
+  <string>au_manifest</string>
+    <list>
+      <string>"%sclockss/%s/%s", base_url, journal_id, volume_name</string>
+      <string>"%sclockss/%s/%s", base_url2, journal_id, volume_name</string>
+    </list>
+  </entry>   
 </map>

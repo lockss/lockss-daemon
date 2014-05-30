@@ -30,14 +30,19 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.jstor;
 
 import java.io.InputStream;
+import java.util.regex.Pattern;
 
+import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.OrFilter;
+import org.htmlparser.tags.CompositeTag;
+import org.htmlparser.tags.LinkTag;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 
 public class JstorHtmlCrawlFilterFactory implements FilterFactory {
+  protected static final Pattern corrections = Pattern.compile("Original Article|Corrigendum|Correction|Errata|Erratum", Pattern.CASE_INSENSITIVE);
 
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
@@ -55,6 +60,15 @@ public class JstorHtmlCrawlFilterFactory implements FilterFactory {
     // we don't go to html pages but when we do, watch for corrigendum, errata which 
     // can cross over issues.eg
     // http://www.jstor.org/stable/10.1525/ncm.2011.34.issue-3
+    // Not all Atypon plugins necessarily need this but MANY do and it is
+    // an insidious source of over crawling
+    new NodeFilter() {
+      @Override public boolean accept(Node node) {
+        if (!(node instanceof LinkTag)) return false;
+        String allText = ((CompositeTag)node).toPlainTextString();
+        return corrections.matcher(allText).find();
+      }
+    },
     
     };
     return new HtmlFilterInputStream(in,

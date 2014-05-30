@@ -1,5 +1,5 @@
 /*
- * $Id: TestJstorMetadataExtractor.java,v 1.2 2014-05-21 18:33:34 alexandraohlson Exp $
+ * $Id: TestJstorMetadataExtractor.java,v 1.3 2014-05-30 21:22:51 alexandraohlson Exp $
  */
 /*
 
@@ -48,6 +48,8 @@ public class TestJstorMetadataExtractor extends LockssTestCase {
 
   private MockArchivalUnit mau;
   private static String BASE_URL = "http://www.jstor.org/";
+  //this is funky but true
+  private static String BASE_URL2 = "https://www.jstor.org/";
   private CIProperties pdfHeader = new CIProperties();    
   private CIProperties textHeader = new CIProperties();    
   
@@ -74,6 +76,7 @@ public class TestJstorMetadataExtractor extends LockssTestCase {
   Configuration auConfig() {
     Configuration conf = ConfigManager.newConfiguration();
     conf.put("base_url", BASE_URL);
+    conf.put("base_url2", BASE_URL2);
     conf.put("journal_id", "xxxx");
     conf.put("volume_name","123");
     return conf;
@@ -95,7 +98,7 @@ public class TestJstorMetadataExtractor extends LockssTestCase {
   String goodIssn = "00027685";
   String goodURL = "http://www.jstor.org/stable/" + goodDOI;
 
-  private static String RIS_URL = BASE_URL + "action/downloadSingleCitationSec" +
+  private static String RIS_URL = BASE_URL2 + "action/downloadSingleCitationSec" +
       "?format=refman&doi=" + goodDOI;
   private static String PDFPLUS_URL = BASE_URL + "stable/pdfplus/" + goodDOI + ".pdf";
 

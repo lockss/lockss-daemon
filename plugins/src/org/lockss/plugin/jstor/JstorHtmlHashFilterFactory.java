@@ -75,6 +75,8 @@ public class JstorHtmlHashFilterFactory implements FilterFactory {
        */
       // Contains ad-specific cookies
       new TagNameFilter("script"),
+      //filter out comments
+      HtmlNodeFilters.commentWithRegex(".*"),
       // Right column containing related article and ads
       HtmlNodeFilters.tagWithAttribute("div", "class", "rightCol myYahoo"),
       
@@ -85,8 +87,12 @@ public class JstorHtmlHashFilterFactory implements FilterFactory {
       // Containing name information
       HtmlNodeFilters.tagWithAttribute("div", "class", "banner"),
       // Containing top head information 
-      HtmlNodeFilters.tagWithAttribute("div", "class", "head globalContainer")
+      HtmlNodeFilters.tagWithAttribute("div", "class", "head globalContainer"),
       
+      HtmlNodeFilters.tagWithAttribute("div", "class", "marketingLinks"),
+      HtmlNodeFilters.tagWithAttribute("div", "id", "journalLinks"),
+      HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "issueTools"),
+      HtmlNodeFilters.tagWithAttribute("div", "class", "subCite"),
         
     };
     

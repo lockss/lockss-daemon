@@ -34,12 +34,19 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"JSTOR Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"JSTOR Plugin, Base URL %s, Base URL 2 %s, Journal ID %s, Volume %s", base_url, base_url2, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>
     <string>"%slockss/%s/%s", base_url, journal_id, volume_name</string>
   </entry>
+  <entry>
+  <string>au_manifest</string>
+    <list>
+      <string>"%slockss/%s/%s", base_url, journal_id, volume_name</string>
+      <string>"%slockss/%s/%s", base_url2, journal_id, volume_name</string>
+    </list>
+  </entry>  
   <entry>
     <string>au_crawlrules</string>
     <list>
@@ -66,8 +73,9 @@
       <!-- the media could lead to figures but only get there from "full" --> 
       <!-- the select leads to thumbnails but normalize off arguments -->
       <!--  oddly, these do not redirect -->
-      <!--  RIS citation files: we generate these in a link extractor but must allow -->
-      <string>1,"^%saction/downloadSingleCitationSec\?format=refman&amp;doi=[.0-9]+/.+", base_url</string>
+      <!--  RIS citation files: we generate these in a link extractor but must allow, they redirect to https -->
+      <!-- https://www.jstor.org/action/downloadSingleCitationSec?format=refman&doi=10.2307/41827174 -->
+      <string>1,"^%saction/downloadSingleCitationSec\?format=refman&amp;doi=", base_url2</string>
       <!-- http://www.jstor.org/action/showPopup?citid=citart1&id=abt.2013.75.6.7-f01&doi=10.1525%2Fabt.2013.75.6.7 -->
       <string>1,"^%saction/(showImage|showFullPopup|showPopup)\?([^=]+=[^&amp;]*&amp;)*doi=", base_url</string>
     </list>
@@ -84,6 +92,15 @@
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url2</key>
+        <displayName>Base URL 2</displayName>
+        <description>Secondary Base URL</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>      
       <org.lockss.daemon.ConfigParamDescr>
         <key>journal_id</key>
         <displayName>Journal ID</displayName>

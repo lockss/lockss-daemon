@@ -1,5 +1,5 @@
 /*
- * $Id: JstorRisMetadataExtractorFactory.java,v 1.1 2014-05-21 18:05:19 alexandraohlson Exp $
+ * $Id: JstorRisMetadataExtractorFactory.java,v 1.2 2014-05-30 21:22:51 alexandraohlson Exp $
  */
 
 /*
@@ -109,8 +109,10 @@ public class JstorRisMetadataExtractorFactory implements FileMetadataExtractorFa
     JstorRisMetadataExtractor jris = new JstorRisMetadataExtractor();
 
     jris.addRisTag("JO", MetadataField.FIELD_PUBLICATION_TITLE);
-    jris.addRisTag("UR", MetadataField.FIELD_ACCESS_URL);
+    // UR will point to a stable URL that we won't have, don't cook this
+    //jris.addRisTag("UR", MetadataField.FIELD_ACCESS_URL);
     jris.addRisTag("Y1", MetadataField.FIELD_DATE);
+    jris.addRisTag("TI", MetadataField.FIELD_ARTICLE_TITLE); // weird, but true in some cases
     return jris;
   }
 
@@ -152,7 +154,8 @@ public class JstorRisMetadataExtractorFactory implements FileMetadataExtractorFa
          */
 
         /* Get the filename from the UR field in the metadata */
-        String full_UR = am.get(MetadataField.FIELD_ACCESS_URL);
+//        String full_UR = am.get(MetadataField.FIELD_ACCESS_URL);
+        String full_UR = am.getRaw("ur");
         if ((full_UR != null)) {
           Matcher accessUrlMat = FILE_PATTERN.matcher(full_UR);
           if (accessUrlMat.matches()) {
@@ -182,21 +185,21 @@ public class JstorRisMetadataExtractorFactory implements FileMetadataExtractorFa
       newUrl = base + "pdfplus/" + filename + ".pdf";
       fileCu = jau.makeCachedUrl(newUrl);
       if (fileCu != null && (fileCu.hasContent())) {
-        am.put(MetadataField.FIELD_ACCESS_URL, newUrl); // will this replace???
+        am.put(MetadataField.FIELD_ACCESS_URL, newUrl);
         return true;
       }
       //2. pdf
       newUrl = base + "pdf/" + filename + ".pdf";
       fileCu = jau.makeCachedUrl(newUrl);
       if (fileCu != null && (fileCu.hasContent())) {
-        am.put(MetadataField.FIELD_ACCESS_URL, newUrl); // will this replace???
+        am.put(MetadataField.FIELD_ACCESS_URL, newUrl); 
         return true;
       }
       //3. full html?
       newUrl = base + "full/" + filename; // no suffix
       fileCu = jau.makeCachedUrl(newUrl);
       if (fileCu != null && (fileCu.hasContent())) {
-        am.put(MetadataField.FIELD_ACCESS_URL, newUrl); // will this replace???
+        am.put(MetadataField.FIELD_ACCESS_URL, newUrl); 
         return true;
       }
       return false;

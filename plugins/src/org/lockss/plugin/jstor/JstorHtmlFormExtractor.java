@@ -1,5 +1,5 @@
 /*
- * $Id: JstorHtmlFormExtractor.java,v 1.1 2014-05-21 18:05:19 alexandraohlson Exp $
+ * $Id: JstorHtmlFormExtractor.java,v 1.2 2014-05-30 21:22:51 alexandraohlson Exp $
  */
 
 /*
@@ -54,7 +54,7 @@ import org.lockss.util.Logger;
  * TOC items have with each listing:
  *     <input type="checkbox" name="doi" class="checkBox" value="10.2307/4436967" id="cite4436967" />
  * for each one, generate the url:
- *     <base_url>action/downloadSingleCitationSec?format=refman&doi=<doi>
+ *     <base_url2>action/downloadSingleCitationSec?format=refman&doi=<doi>
  *    
  */
 
@@ -80,7 +80,7 @@ public class JstorHtmlFormExtractor extends HtmlFormExtractor {
 
     protected Pattern DOI_URL_PATTERN = Pattern.compile("([.0-9]+)/(.*)$");
     // baseURL for table of contents when arrived at from manifest page  
-    protected Pattern BASE_URL_PATTERN = Pattern.compile("^(https?://.*/)(action/showToc\\?)(.*)$");
+    protected Pattern BASE_URL_PATTERN = Pattern.compile("^(http://.*/)(action/showToc\\?)(.*)$");
     private static final String CITATION_URL_START = "action/downloadSingleCitationSec?format=refman&doi=";
 
     private static Logger log = Logger.getLogger(JstorFormElementLinkExtractor.class);
@@ -101,8 +101,10 @@ public class JstorHtmlFormExtractor extends HtmlFormExtractor {
           if (doiMat.find() && baseMat.find()) {
             String doi1 = doiMat.group(1);
             String doi2 = doiMat.group(2);
+            // ris citation uses https, not http
+            String new_base = au.getConfiguration().get("base_url2");
 //            String newUrl = baseMat.group(1) + CITATION_URL_START + doi1 + "%2F" + doi2;
-            String newUrl = baseMat.group(1) + CITATION_URL_START + doi1 + "/" + doi2;
+            String newUrl = new_base + CITATION_URL_START + doi1 + "/" + doi2;
             log.debug3("Generating a new link: " + newUrl);
             cb.foundLink(newUrl);
           }
