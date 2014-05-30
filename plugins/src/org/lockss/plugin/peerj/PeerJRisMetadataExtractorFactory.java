@@ -1,4 +1,4 @@
-/* $Id: PeerJRisMetadataExtractorFactory.java,v 1.1 2013-10-07 05:53:44 ldoan Exp $
+/* $Id: PeerJRisMetadataExtractorFactory.java,v 1.2 2014-05-30 20:19:06 ldoan Exp $
  
  Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
@@ -75,12 +75,10 @@ import org.lockss.util.Logger;
       log.debug3("Inside PeerJ RIS metadata extractor factory");
       PeerJRisMetadataExtractor pRisMe = new PeerJRisMetadataExtractor();
 
-      pRisMe.addRisTag("UR", MetadataField.FIELD_ACCESS_URL);
       pRisMe.addRisTag("TI", MetadataField.FIELD_ARTICLE_TITLE);
       pRisMe.addRisTag("A2", MetadataField.FIELD_AUTHOR);
       pRisMe.addRisTag("KW", MetadataField.FIELD_KEYWORDS);
       pRisMe.addRisTag("AB", MetadataField.FIELD_ABSTRACT);
-      pRisMe.addRisTag("JO", MetadataField.FIELD_JOURNAL_TITLE);
 
     return pRisMe;
   }
@@ -95,11 +93,6 @@ import org.lockss.util.Logger;
                                                       PluginException {
 
       ArticleMetadata am = extract(target, cu); 
-
-      // if the cooked data isn't complete, we could try to pick up from secondary tags in raw data */
-      if (am.get(MetadataField.FIELD_PUBLISHER) == null) {
-        am.put(MetadataField.FIELD_PUBLISHER, "PeerJ");
-      } 
       emitter.emitMetadata(cu, am);
     }
   }
