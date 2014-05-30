@@ -1,5 +1,5 @@
 /*
- * $Id: AmericanMathematicalSocietyArticleIteratorFactory.java,v 1.2 2014-03-28 19:15:59 etenbrink Exp $
+ * $Id: AmericanMathematicalSocietyArticleIteratorFactory.java,v 1.3 2014-05-30 21:15:33 etenbrink Exp $
  */
 
 /*
@@ -88,18 +88,18 @@ http://www.ams.org/journals/jams/2013-26-01/S0894-0347-2012-00742-5/S0894-0347-2
         ROOT_TEMPLATE, PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
     
     // The order in which we want to define full_text_cu.
-    // First one that exists will get the job PDF then html
-    
-    // set up PDF to be an aspect that will trigger an ArticleFiles
-    builder.addAspect(
-        PDF_PATTERN, PDF_REPLACEMENT,
-        ArticleFiles.ROLE_FULL_TEXT_PDF);
+    // First one that exists will get the job, html then PDF
     
     // set up html to be an aspect that will trigger an ArticleFiles
     builder.addAspect(
         HTML_PATTERN, HTML_REPLACEMENT,
         ArticleFiles.ROLE_FULL_TEXT_HTML,
         ArticleFiles.ROLE_ARTICLE_METADATA);
+    
+    // set up PDF to be an aspect that will trigger an ArticleFiles
+    builder.addAspect(
+        PDF_PATTERN, PDF_REPLACEMENT,
+        ArticleFiles.ROLE_FULL_TEXT_PDF);
     
     return builder.getSubTreeArticleIterator();
   }
