@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatusService.java,v 1.5 2014-04-29 19:47:04 fergaloy-sf Exp $
+ * $Id: DaemonStatusService.java,v 1.6 2014-05-30 21:45:27 fergaloy-sf Exp $
  */
 
 /*
@@ -46,6 +46,7 @@ import org.lockss.ws.entities.CrawlWsResult;
 import org.lockss.ws.entities.IdNamePair;
 import org.lockss.ws.entities.LockssWebServicesFault;
 import org.lockss.ws.entities.PeerWsResult;
+import org.lockss.ws.entities.PlatformConfigurationWsResult;
 import org.lockss.ws.entities.PluginWsResult;
 import org.lockss.ws.entities.PollWsResult;
 import org.lockss.ws.entities.RepositorySpaceWsResult;
@@ -188,11 +189,21 @@ public interface DaemonStatusService {
    * @param query
    *          A String with the query used to specify what properties to
    *          retrieve from which polls.
-   * @return a List<PolllWsResult> with the results.
+   * @return a List<PollWsResult> with the results.
    * @throws LockssWebServicesFault
    */
   @WebMethod
   List<PollWsResult> queryPolls(
       @WebParam(name = "pollQuery") String pollQuery)
 	  throws LockssWebServicesFault;
+
+  /**
+   * Provides the platform configuration.
+   * 
+   * @return a PlatformConfigurationWsResult with the platform configuration.
+   * @throws LockssWebServicesFault
+   */
+  @WebMethod
+  PlatformConfigurationWsResult getPlatformConfiguration()
+      throws LockssWebServicesFault;
 }

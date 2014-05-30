@@ -1,5 +1,5 @@
 /*
- * $Id: TestDaemonStatusService.java,v 1.4 2014-04-25 23:11:00 fergaloy-sf Exp $
+ * $Id: TestDaemonStatusService.java,v 1.5 2014-05-30 21:45:27 fergaloy-sf Exp $
  */
 
 /*
@@ -532,6 +532,15 @@ public class TestDaemonStatusService extends LockssTestCase {
     assertEquals(0, repositories.size());
   }
 
+  /**
+   * Tests the parsing of the build timestamp.
+   * 
+   * @throws Exception
+   */
+  public void testGetBuildTimestamp() throws Exception {
+    assertNotNull(service.getBuildTimestamp());
+  }
+
   private Configuration simAuConfig(String rootPath) {
     Configuration conf = ConfigManager.newConfiguration();
     conf.put("root", rootPath);
@@ -544,7 +553,7 @@ public class TestDaemonStatusService extends LockssTestCase {
     return conf;
   }
 
-  public static class MySubTreeArticleIteratorFactory
+  private static class MySubTreeArticleIteratorFactory
       implements ArticleIteratorFactory {
     String pat;
     public MySubTreeArticleIteratorFactory(String pat) {

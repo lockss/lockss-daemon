@@ -1,10 +1,10 @@
 /*
- * $Id: ConfigManager.java,v 1.95 2013-05-30 14:00:18 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.96 2014-05-30 21:45:27 fergaloy-sf Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -196,8 +196,8 @@ public class ConfigManager implements LockssManager {
   static final String PARAM_PLATFORM_LOG_DIR = PLATFORM + "logdirectory";
   static final String PARAM_PLATFORM_LOG_FILE = PLATFORM + "logfile";
 
-  static final String PARAM_PLATFORM_SMTP_HOST = PLATFORM + "smtphost";
-  static final String PARAM_PLATFORM_SMTP_PORT = PLATFORM + "smtpport";
+  public static final String PARAM_PLATFORM_SMTP_HOST = PLATFORM + "smtphost";
+  public static final String PARAM_PLATFORM_SMTP_PORT = PLATFORM + "smtpport";
   static final String PARAM_PLATFORM_PIDFILE = PLATFORM + "pidfile";
 
   public static final String CONFIG_FILE_UI_IP_ACCESS = "ui_ip_access.txt";
