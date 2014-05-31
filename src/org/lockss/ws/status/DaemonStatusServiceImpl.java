@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatusServiceImpl.java,v 1.7 2014-04-29 19:47:04 fergaloy-sf Exp $
+ * $Id: DaemonStatusServiceImpl.java,v 1.7.4.1 2014-05-31 01:26:08 fergaloy-sf Exp $
  */
 
 /*
@@ -35,6 +35,19 @@
  */
 package org.lockss.ws.status;
 
+import static org.lockss.config.ConfigManager.PARAM_PLATFORM_ADMIN_EMAIL;
+import static org.lockss.config.ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST;
+import static org.lockss.config.ConfigManager.PARAM_PLATFORM_FQDN;
+import static org.lockss.config.ConfigManager.PARAM_PLATFORM_IP_ADDRESS;
+import static org.lockss.config.ConfigManager.PARAM_PLATFORM_LOCAL_V3_IDENTITY;
+import static org.lockss.config.ConfigManager.PARAM_PLATFORM_PROJECT;
+import static org.lockss.config.ConfigManager.PARAM_PLATFORM_SECOND_IP_ADDRESS;
+import static org.lockss.config.ConfigManager.PARAM_PLATFORM_SMTP_HOST;
+import static org.lockss.config.ConfigManager.PARAM_PLATFORM_SMTP_PORT;
+import static org.lockss.util.BuildInfo.BUILD_HOST;
+import static org.lockss.util.BuildInfo.BUILD_TIMESTAMP;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
@@ -46,17 +59,27 @@ import org.josql.QueryExecutionException;
 import org.josql.QueryParseException;
 import org.josql.QueryResults;
 import org.lockss.app.LockssDaemon;
+import org.lockss.config.ConfigManager;
+import org.lockss.config.Configuration;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.PluginManager;
+import org.lockss.util.BuildInfo;
+import org.lockss.util.DaemonVersion;
 import org.lockss.util.Logger;
+import org.lockss.util.PlatformUtil;
+import org.lockss.util.PlatformVersion;
 import org.lockss.util.StringUtil;
+import org.lockss.util.TimeBase;
 import org.lockss.ws.entities.AuStatus;
 import org.lockss.ws.entities.AuWsResult;
 import org.lockss.ws.entities.CrawlWsResult;
+import org.lockss.ws.entities.DaemonVersionWsResult;
 import org.lockss.ws.entities.IdNamePair;
 import org.lockss.ws.entities.LockssWebServicesFault;
 import org.lockss.ws.entities.LockssWebServicesFaultInfo;
 import org.lockss.ws.entities.PeerWsResult;
+import org.lockss.ws.entities.PlatformConfigurationWsResult;
+import org.lockss.ws.entities.PlatformWsResult;
 import org.lockss.ws.entities.PluginWsResult;
 import org.lockss.ws.entities.PollWsResult;
 import org.lockss.ws.entities.RepositorySpaceWsResult;
@@ -66,6 +89,7 @@ import org.lockss.ws.status.DaemonStatusService;
 
 @WebService
 public class DaemonStatusServiceImpl implements DaemonStatusService {
+  public static String BUILD_TIMESTAMP_FORMAT = "dd-MMM-yy HH:mm:ss zzz";
   private static Logger log = Logger.getLogger(DaemonStatusServiceImpl.class);
 
   /**
@@ -631,13 +655,89 @@ public class DaemonStatusServiceImpl implements DaemonStatusService {
   }
 
   /**
+   * Provides the platform configuration.
+   * 
+   * @return a PlatformConfigurationWsResult with the platform configuration.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public PlatformConfigurationWsResult getPlatformConfiguration()
+      throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "getPlatformConfiguration(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    PlatformConfigurationWsResult result = new PlatformConfigurationWsResult();
+    LockssDaemon theDaemon = LockssDaemon.getLockssDaemon();
+    Configuration config = ConfigManager.getCurrentConfig();
+
+    result.setHostName(config.get(PARAM_PLATFORM_FQDN));
+
+    result.setIpAddress(config.get(PARAM_PLATFORM_IP_ADDRESS));
+
+    if (theDaemon.isClockss()) {
+      result.setIpAddress(config.get(PARAM_PLATFORM_SECOND_IP_ADDRESS));
+    }
+
+    result.setGroups((List<String>)(config.getPlatformGroupList()));
+    result.setProject(config.get(PARAM_PLATFORM_PROJECT));
+    result.setV3Identity(config.get(PARAM_PLATFORM_LOCAL_V3_IDENTITY));
+
+    String smtpHost = config.get(PARAM_PLATFORM_SMTP_HOST);
+
+    if (smtpHost != null) {
+      int smtpPort =
+	  config.getInt(PARAM_PLATFORM_SMTP_PORT,
+			org.lockss.mail.SmtpMailService.DEFAULT_SMTPPORT);
+      result.setMailRelay(smtpHost + ":" + smtpPort);
+    }
+
+    result.setAdminEmail(config.get(PARAM_PLATFORM_ADMIN_EMAIL));
+    result.setDisks((List<String>)
+	(config.getList(PARAM_PLATFORM_DISK_SPACE_LIST)));
+
+    result.setCurrentTime(TimeBase.nowMs());
+    result.setUptime(TimeBase.msSince(theDaemon.getStartDate().getTime()));
+
+    DaemonVersion daemonVersion = ConfigManager.getDaemonVersion();
+    DaemonVersionWsResult daemonVersionResult = new DaemonVersionWsResult();
+
+    daemonVersionResult.setFullVersion(daemonVersion.displayString());
+    daemonVersionResult.setMajorVersion(daemonVersion.getMajorVersion());
+    daemonVersionResult.setMinorVersion(daemonVersion.getMinorVersion());
+    daemonVersionResult.setBuildVersion(daemonVersion.getBuildVersion());
+
+    result.setDaemonVersion(daemonVersionResult);
+
+    PlatformVersion platformVersion = Configuration.getPlatformVersion();
+    PlatformWsResult platform = new PlatformWsResult();
+
+    if (platformVersion != null) {
+      platform.setName(platformVersion.getName());
+      platform.setVersion(platformVersion.getVersion());
+      platform.setSuffix(platformVersion.getSuffix());
+      result.setPlatform(platform);
+    }
+
+    result.setCurrentWorkingDirectory(PlatformUtil.getCwd());
+
+    result.setProperties((List<String>)
+	(ConfigManager.getConfigManager().getConfigUrlList()));
+
+    result.setBuildHost(BuildInfo.getBuildProperty(BUILD_HOST));
+    result.setBuildTimestamp(getBuildTimestamp());
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+    return result;
+  }
+
+  /**
    * Provides the full query that is equivalent to the simplified query for a
    * given class.
    * 
    * A full query looks like
    * SELECT new org.lockss.ws.entities.SomeWsResult()
    * {propertyName -> propertyName, ...}
-   * FROM org.lockss.ws.entities.SomeWsResult
+   * FROM org.lockss.ws.entities.SomeWsSource
    * WHERE ...
    * 
    * @param originalQuery
@@ -913,5 +1013,31 @@ public class DaemonStatusServiceImpl implements DaemonStatusService {
     if (log.isDebug2())
       log.debug2(DEBUG_HEADER + "whereClause = " + whereClause);
     return whereClause;
+  }
+
+  /**
+   * Provides the build timestamp.
+   * 
+   * @return A long with the build timestamp.
+   * @throws LockssWebServicesFault
+   */
+  protected long getBuildTimestamp() throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "getBuildTimestamp(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    try {
+      long timestamp = (new SimpleDateFormat(BUILD_TIMESTAMP_FORMAT))
+	  .parse(BuildInfo.getBuildProperty(BUILD_TIMESTAMP)).getTime();
+
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "timestamp = " + timestamp);
+      return timestamp;
+    } catch (ParseException pe) {
+      log.error("Caught ParseException", pe);
+      log.error("BuildInfo.getBuildProperty(BUILD_TIMESTAMP)) = '"
+	  + BuildInfo.getBuildProperty(BUILD_TIMESTAMP) + "'");
+      throw new LockssWebServicesFault(pe,
+	  new LockssWebServicesFaultInfo("BUILD_TIMESTAMP = "
+	      + BuildInfo.getBuildProperty(BUILD_TIMESTAMP)));
+    }
   }
 }

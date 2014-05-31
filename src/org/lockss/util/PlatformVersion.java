@@ -1,9 +1,9 @@
 /*
- * $Id: PlatformVersion.java,v 1.4 2005-10-06 08:21:55 tlipkis Exp $
+ * $Id: PlatformVersion.java,v 1.4.148.1 2014-05-31 01:26:09 fergaloy-sf Exp $
  */
 
 /*
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -111,6 +111,11 @@ public class PlatformVersion implements Version {
   /** Return the platform name */
   public String getName() {
     return m_name;
+  }
+
+  /** Return the platform version */
+  public String getVersion() {
+    return m_ver;
   }
 
   /** Return the optional suffix */
