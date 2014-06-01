@@ -147,25 +147,25 @@
       issnl = 0960-3409
     >
     
-    comment[moving] = journal is moving to Maney as of start of 2014. Other content is online, however, manifest pages are down.
+    comment[moving] = journal moved to Maney start of 2014.
 
     param[journal_id] = maht
     param[journal_issn] = 0960-3409
 
-    au < released ; 1999 ; Materials at High Temperatures Volume 16 ; 16 >
-    au < released ; 2000 ; Materials at High Temperatures Volume 17 ; 17 >
-    au < released ; 2001 ; Materials at High Temperatures Volume 18 ; 18 >
-    au < released ; 2002 ; Materials at High Temperatures Volume 19 ; 19 >
-    au < released ; 2003 ; Materials at High Temperatures Volume 20 ; 20 >
-    au < released ; 2004 ; Materials at High Temperatures Volume 21 ; 21 >
-    au < released ; 2005 ; Materials at High Temperatures Volume 22 ; 22 >
-    au < released ; 2006 ; Materials at High Temperatures Volume 23 ; 23 >
-    au < released ; 2007 ; Materials at High Temperatures Volume 24 ; 24 >
-    au < released ; 2008 ; Materials at High Temperatures Volume 25 ; 25 >
-    au < released ; 2009 ; Materials at High Temperatures Volume 26 ; 26 >
-    au < released ; 2010 ; Materials at High Temperatures Volume 27 ; 27 >
-    au < released ; 2011 ; Materials at High Temperatures Volume 28 ; 28 >
-    au < released ; 2012 ; Materials at High Temperatures Volume 29 ; 29 >
+    au < down ; 1999 ; Materials at High Temperatures Volume 16 ; 16 >
+    au < down ; 2000 ; Materials at High Temperatures Volume 17 ; 17 >
+    au < down ; 2001 ; Materials at High Temperatures Volume 18 ; 18 >
+    au < down ; 2002 ; Materials at High Temperatures Volume 19 ; 19 >
+    au < down ; 2003 ; Materials at High Temperatures Volume 20 ; 20 >
+    au < down ; 2004 ; Materials at High Temperatures Volume 21 ; 21 >
+    au < down ; 2005 ; Materials at High Temperatures Volume 22 ; 22 >
+    au < down ; 2006 ; Materials at High Temperatures Volume 23 ; 23 >
+    au < down ; 2007 ; Materials at High Temperatures Volume 24 ; 24 >
+    au < down ; 2008 ; Materials at High Temperatures Volume 25 ; 25 >
+    au < down ; 2009 ; Materials at High Temperatures Volume 26 ; 26 >
+    au < down ; 2010 ; Materials at High Temperatures Volume 27 ; 27 >
+    au < down ; 2011 ; Materials at High Temperatures Volume 28 ; 28 >
+    au < down ; 2012 ; Materials at High Temperatures Volume 29 ; 29 >
     au < doNotProcess ; 2013 ; Materials at High Temperatures Volume 30 ; 30 >
 
   }
