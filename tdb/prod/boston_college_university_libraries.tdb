@@ -19,28 +19,58 @@
         issn = 1097-9638 ;
         eissn = 2164-0246
       >
-    
-      param[journal_id] = catholic
-      comment[notReady] = OJS2 pattern manifest page redirects to new url: http://digitalcommons.lmu.edu/ce/?year=2013 AU Test can't find permission page
+      {
+      
+        param[journal_id] = catholic
+        comment[notReady] = journal moved to http://digitalcommons.lmu.edu/ce
 
-      au < released ; 1997 ; Catholic Education Volume 1 (1997) ; 1 ; 1997 >   
-      au < released ; 1998 ; Catholic Education Volume 1-2 (1998) ; 1-2 ; 1998 > 
-      au < released ; 1999 ; Catholic Education Volume 2-3 (1999) ; 2-3 ; 1999 > 
-      au < released ; 2000 ; Catholic Education Volume 3-4 (2000) ; 3-4 ; 2000 > 
-      au < released ; 2001 ; Catholic Education Volume 4-5 (2001) ; 4-5 ; 2001 > 
-      au < released ; 2002 ; Catholic Education Volume 5-6 (2002) ; 5-6 ; 2002 > 
-      au < released ; 2003 ; Catholic Education Volume 6-7 (2003) ; 6-7 ; 2003 > 
-      au < released ; 2004 ; Catholic Education Volume 7-8 (2004) ; 7-8 ; 2004 > 
-      au < released ; 2005 ; Catholic Education Volume 8-9 (2005) ; 8-9 ; 2005 > 
-      au < released ; 2006 ; Catholic Education Volume 9-10 (2006) ; 9-10 ; 2006 > 
-      au < released ; 2007 ; Catholic Education Volume 10-11 (2007) ; 10-11 ; 2007 > 
-      au < released ; 2008 ; Catholic Education Volume 11-12 (2008) ; 11-12 ; 2008 > 
-      au < released ; 2009 ; Catholic Education Volume 12-13 (2009) ; 12-13 ; 2009 > 
-      au < released ; 2010 ; Catholic Education Volume 13-14 (2010) ; 13-14 ; 2010 >
-      au < released ; 2011 ; Catholic Education Volume 14-15 (2011) ; 14-15 ; 2011 >
-      au < released ; 2012 ; Catholic Education Volume 15-16 (2012) ; 15-16 ; 2012 >
-      au < notReady ; 2013 ; Catholic Education Volume 16-17 (2013) ; 16-17 ; 2013 >
-      au < expected ; 2014 ; Catholic Education Volume 17-18 (2014) ; 17-18 ; 2014 >
+        au < down ; 1997 ; Catholic Education Volume 1 (1997) ; 1 ; 1997 >   
+        au < down ; 1998 ; Catholic Education Volume 1-2 (1998) ; 1-2 ; 1998 > 
+        au < down ; 1999 ; Catholic Education Volume 2-3 (1999) ; 2-3 ; 1999 > 
+        au < down ; 2000 ; Catholic Education Volume 3-4 (2000) ; 3-4 ; 2000 > 
+        au < down ; 2001 ; Catholic Education Volume 4-5 (2001) ; 4-5 ; 2001 > 
+        au < down ; 2002 ; Catholic Education Volume 5-6 (2002) ; 5-6 ; 2002 > 
+        au < down ; 2003 ; Catholic Education Volume 6-7 (2003) ; 6-7 ; 2003 > 
+        au < down ; 2004 ; Catholic Education Volume 7-8 (2004) ; 7-8 ; 2004 > 
+        au < down ; 2005 ; Catholic Education Volume 8-9 (2005) ; 8-9 ; 2005 > 
+        au < down ; 2006 ; Catholic Education Volume 9-10 (2006) ; 9-10 ; 2006 > 
+        au < down ; 2007 ; Catholic Education Volume 10-11 (2007) ; 10-11 ; 2007 > 
+        au < down ; 2008 ; Catholic Education Volume 11-12 (2008) ; 11-12 ; 2008 > 
+        au < down ; 2009 ; Catholic Education Volume 12-13 (2009) ; 12-13 ; 2009 > 
+        au < down ; 2010 ; Catholic Education Volume 13-14 (2010) ; 13-14 ; 2010 >
+        au < down ; 2011 ; Catholic Education Volume 14-15 (2011) ; 14-15 ; 2011 >
+        au < down ; 2012 ; Catholic Education Volume 15-16 (2012) ; 15-16 ; 2012 >
+        au < doNotProcess ; 2013 ; Catholic Education Volume 16-17 (2013) ; 16-17 ; 2013 >
+        
+      }
+    
+      {
+      
+        param[base_url] = http://digitalcommons.lmu.edu/
+        plugin = org.lockss.plugin.bepress.BePressPlugin
+        implicit < status ; year ; name ; param[volume] >
+        param[journal_abbr] = ce
+
+        au < doNotProcess ; 1997-1998 ; Catholic Education Volume 1 ; 1 >
+        au < doNotProcess ; 1998-1999 ; Catholic Education Volume 2 ; 2 >
+        au < doNotProcess ; 1999-2000 ; Catholic Education Volume 3 ; 3 >
+        au < doNotProcess ; 2000-2001 ; Catholic Education Volume 4 ; 4 >
+        au < doNotProcess ; 2001-2002 ; Catholic Education Volume 5 ; 5 >
+        au < doNotProcess ; 2002-2003 ; Catholic Education Volume 6 ; 6 >
+        au < doNotProcess ; 2003-2004 ; Catholic Education Volume 7 ; 7 >
+        au < doNotProcess ; 2004-2005 ; Catholic Education Volume 8 ; 8 >
+        au < doNotProcess ; 2005-2006 ; Catholic Education Volume 9 ; 9 >
+        au < doNotProcess ; 2006-2007 ; Catholic Education Volume 10 ; 10 >
+        au < doNotProcess ; 2007-2008 ; Catholic Education Volume 11 ; 11 >
+        au < doNotProcess ; 2008-2009 ; Catholic Education Volume 12 ; 12 >
+        au < doNotProcess ; 2009-2010 ; Catholic Education Volume 13 ; 13 >
+        au < doNotProcess ; 2010-2011 ; Catholic Education Volume 14 ; 14 >
+        au < doNotProcess ; 2011-2012 ; Catholic Education Volume 15 ; 15 >
+        au < exists ; 2012-2013 ; Catholic Education Volume 16 ; 16 >
+        au < exists ; 2013-2014 ; Catholic Education Volume 17 ; 17 >
+        au < expected ; 2014-2015 ; Catholic Education Volume 18 ; 18 >
+        
+      }
     
     }
     
