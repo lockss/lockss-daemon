@@ -301,18 +301,17 @@
       attr[journal_code] = bmcchembiol
       comment[0] = BMC Chemical Biology has now been fused with BMC Biochemistry, no publication after 2012
       
-      au < released ; 2001 ; BMC Chemical Biology Volume 1 ; 1 >
-      au < released ; 2002 ; BMC Chemical Biology Volume 2 ; 2 >
-      au < released ; 2003 ; BMC Chemical Biology Volume 3 ; 3 >
-      au < released ; 2004 ; BMC Chemical Biology Volume 4 ; 4 >
-      au < released ; 2005 ; BMC Chemical Biology Volume 5 ; 5 >
-      au < released ; 2006 ; BMC Chemical Biology Volume 6 ; 6 >
-      au < released ; 2007 ; BMC Chemical Biology Volume 7 ; 7 >
-      au < released ; 2008 ; BMC Chemical Biology Volume 8 ; 8 >
-      au < released ; 2009 ; BMC Chemical Biology Volume 9 ; 9 >
-      au < released ; 2010 ; BMC Chemical Biology Volume 10 ; 10 >
-      au < released ; 2011 ; BMC Chemical Biology Volume 11 ; 11 >
-      au < manifest ; 2012 ; BMC Chemical Biology Volume 12 ; 12 >
+      au < down ; 2001 ; BMC Chemical Biology Volume 1 ; 1 >
+      au < down ; 2002 ; BMC Chemical Biology Volume 2 ; 2 >
+      au < down ; 2003 ; BMC Chemical Biology Volume 3 ; 3 >
+      au < down ; 2004 ; BMC Chemical Biology Volume 4 ; 4 >
+      au < down ; 2005 ; BMC Chemical Biology Volume 5 ; 5 >
+      au < down ; 2006 ; BMC Chemical Biology Volume 6 ; 6 >
+      au < down ; 2007 ; BMC Chemical Biology Volume 7 ; 7 >
+      au < down ; 2008 ; BMC Chemical Biology Volume 8 ; 8 >
+      au < down ; 2009 ; BMC Chemical Biology Volume 9 ; 9 >
+      au < down ; 2010 ; BMC Chemical Biology Volume 10 ; 10 >
+      au < down ; 2011 ; BMC Chemical Biology Volume 11 ; 11 >
 
     }
 
