@@ -137,7 +137,7 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = hbio
       
-      comment[notReady] = volume 85 500 error http://www.bioone.org/action/showFullPopup?doi=10.3378%2F027.085.0319&id=f01
+      comment[doNotProcess] = volume 85 500 error http://www.bioone.org/action/showFullPopup?doi=10.3378%2F027.085.0319&id=f01
 
       au < released ; 2006 ; Human Biology Volume 78 ; 78 >
       au < released ; 2007 ; Human Biology Volume 79 ; 79 >
@@ -146,7 +146,7 @@
       au < released ; 2010 ; Human Biology Volume 82 ; 82 >
       au < released ; 2011 ; Human Biology Volume 83 ; 83 >
       au < released ; 2012 ; Human Biology Volume 84 ; 84 >
-      au < testing ; 2013 ; Human Biology Volume 85 ; 85 >
+      au < doNotProcess ; 2013 ; Human Biology Volume 85 ; 85 >
       au < expected ; 2014 ; Human Biology Volume 86 ; 86 >
 
     }
