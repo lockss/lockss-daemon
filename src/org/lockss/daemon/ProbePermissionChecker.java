@@ -1,10 +1,10 @@
 /*
- * $Id: ProbePermissionChecker.java,v 1.23 2014-05-15 23:27:32 etenbrink Exp $
+ * $Id: ProbePermissionChecker.java,v 1.24 2014-06-02 22:24:30 etenbrink Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -51,7 +51,7 @@ public class ProbePermissionChecker implements PermissionChecker {
 
   protected String probeUrl = null;
 
-  private static Logger logger = Logger.getLogger("ProbePermissionChecker");
+  private static Logger logger = Logger.getLogger(ProbePermissionChecker.class);
 
   protected ArchivalUnit au;
 
