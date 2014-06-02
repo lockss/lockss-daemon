@@ -982,22 +982,6 @@
 
     }
   
-    {
-
-
-    plugin = org.lockss.plugin.atypon.maney.ClockssManeyAtyponPlugin
-    param[base_url] = http://www.maneyonline.com/
-    param[journal_id] = cos 
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
-    
-
-    au < testing ; exists ; 2010 ; Costume Volume 44 ; 44 > 
-    au < testing ; exists ; 2011 ; Costume Volume 45 ; 45 > 
-    au < testing ; exists ; 2012 ; Costume Volume 46 ; 46 > 
-    au < testing ; exists ; 2013 ; Costume Volume 47 ; 47 > 
-
-    }
-  
   }  
   
 
@@ -1041,19 +1025,6 @@
 
     }
   
-    {
-
-    plugin = org.lockss.plugin.atypon.maney.ClockssManeyAtyponPlugin
-    param[base_url] = http://www.maneyonline.com/
-    param[journal_id] = dei 
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
-
-    au < testing ; exists ; 2011 ; Deafness & Education International Volume 13 ; 13 >  
-    au < testing ; exists ; 2012 ; Deafness & Education International Volume 14 ; 14 >
-    au < testing ; exists ; 2013 ; Deafness & Education International Volume 15 ; 15 >
-    
-    }
-
   }
 
   {
@@ -3276,20 +3247,6 @@
 
     }
 
-    {
-
-    plugin = org.lockss.plugin.atypon.maney.ClockssManeyAtyponPlugin
-    param[base_url] = http://www.maneyonline.com/
-    param[journal_id] = med 
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
-
-    au < testing ; exists ; 2010 ; Medieval Archaeology Volume 54 ; 54 > 
-    au < testing ; exists ; 2011 ; Medieval Archaeology Volume 55 ; 55 > 
-    au < testing ; exists ; 2012 ; Medieval Archaeology Volume 56 ; 56 > 
-    au < testing ; exists ; 2013 ; Medieval Archaeology Volume 57 ; 57 > 
-
-    }
-    
   }
 
   {
