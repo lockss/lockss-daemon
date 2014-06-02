@@ -24,7 +24,7 @@
     param[journal_id] = aac 
     
     comment[continues] = 0967-9782
-    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = released for old plugin
 
     au < exists ; exists ; 2005 ; Advances in Applied Ceramics Volume 104 ; 104 > 
     au < exists ; exists ; 2006 ; Advances in Applied Ceramics Volume 105 ; 105 > 
@@ -212,7 +212,6 @@
     >
 
     param[journal_id] = bjdd 
-    
     comment[continued_by] = 2047-3877
     
     au < doNotProcess ; doNotProcess ; 2011 ; The British Journal of Development Disabilities Volume 57 ; 57 >
@@ -279,7 +278,7 @@
     >
 
     param[journal_id] = bub 
-    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = released for old plugin
 
     au < exists ; exists ; 2009 ; Bubble Science, Engineering and Technology Volume 1 ; 1 > 
     au < doNotProcess ; doNotProcess ; 2010 ; Bubble Science, Engineering and Technology Volume 2 ; 2 > 
@@ -372,7 +371,7 @@
     >
 
     param[journal_id] = cmq  
-    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = released for old plugin
 
     au < exists ; exists ; 1962 ; Canadian Metallurgical Quarterly Volume 1 ; 1 >
     au < exists ; exists ; 1963 ; Canadian Metallurgical Quarterly Volume 2 ; 2 >
@@ -422,7 +421,7 @@
     au < exists ; exists ; 2007 ; Canadian Metallurgical Quarterly Volume 46 ; 46 >
     au < exists ; exists ; 2008 ; Canadian Metallurgical Quarterly Volume 47 ; 47 >
     au < exists ; exists ; 2009 ; Canadian Metallurgical Quarterly Volume 48 ; 48 >
-    au < exists ; exists ; 2010 ; Canadian Metallurgical Quarterly Volume 49 ; 49 >
+    au < testing ; exists ; 2010 ; Canadian Metallurgical Quarterly Volume 49 ; 49 >
     au < exists ; exists ; 2011 ; Canadian Metallurgical Quarterly Volume 50 ; 50 >
     au < doNotProcess ; doNotProcess ; 2012 ; Canadian Metallurgical Quarterly Volume 51 ; 51 >
     au < exists ; exists ; 2013 ; Canadian Metallurgical Quarterly Volume 52 ; 52 >
@@ -439,7 +438,7 @@
     >
 
     param[journal_id] = caj 
-    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = released for old plugin
     
     au < exists ; exists ; 1964 ; The Cartographic Journal Volume 1 ; 1 > 
     au < exists ; exists ; 1965 ; The Cartographic Journal Volume 2 ; 2 > 
@@ -488,7 +487,7 @@
     au < exists ; exists ; 2008 ; The Cartographic Journal Volume 45 ; 45 > 
     au < exists ; exists ; 2009 ; The Cartographic Journal Volume 46 ; 46 > 
     au < exists ; exists ; 2010 ; The Cartographic Journal Volume 47 ; 47 > 
-    au < exists ; exists ; 2011 ; The Cartographic Journal Volume 48 ; 48 > 
+    au < testing ; exists ; 2011 ; The Cartographic Journal Volume 48 ; 48 > 
     au < doNotProcess ; doNotProcess ; 2012 ; The Cartographic Journal Volume 49 ; 49 > 
     au < exists ; exists ; 2013 ; The Cartographic Journal Volume 50 ; 50 > 
 
@@ -545,7 +544,7 @@
     >
 
     param[journal_id] = cii 
-    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = released for old plugin
 
     au < exists ; exists ; 2000 ; Cochlear Implants International Volume 1 ; 1 > 
     au < exists ; exists ; 2001 ; Cochlear Implants International Volume 2 ; 2 > 
@@ -557,7 +556,7 @@
     au < exists ; exists ; 2007 ; Cochlear Implants International Volume 8 ; 8 > 
     au < exists ; exists ; 2008 ; Cochlear Implants International Volume 9 ; 9 > 
     au < exists ; exists ; 2009 ; Cochlear Implants International Volume 10 ; 10 > 
-    au < exists ; exists ; 2010 ; Cochlear Implants International Volume 11 ; 11 > 
+    au < testing ; exists ; 2010 ; Cochlear Implants International Volume 11 ; 11 > 
     au < exists ; exists ; 2011 ; Cochlear Implants International Volume 12 ; 12 > 
     au < doNotProcess ; doNotProcess ; 2012 ; Cochlear Implants International Volume 13 ; 13 > 
     au < exists ; exists ; 2013 ; Cochlear Implants International Volume 14 ; 14 > 
@@ -683,7 +682,6 @@
     {
 
     param[journal_id] = cos 
-    
     comment[2011] = year 2011 has been used as volume #
 
     au < exists ; exists ; 1965-1967 ; Costume Volume 1 ; 1 > 
@@ -751,7 +749,7 @@
     {
 
     param[journal_id] = dei 
-    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = released for old plugin
 
     au < exists ; exists ; 1999 ; Deafness & Education International Volume 1 ; 1 > 
     au < exists ; exists ; 2000 ; Deafness & Education International Volume 2 ; 2 > 
@@ -1075,7 +1073,7 @@
     >
 
     param[journal_id] = hem 
-    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = released for old plugin
 
     au < exists ; exists ; 2002 ; Hematology Volume 7 ; 7 > 
     au < exists ; exists ; 2003 ; Hematology Volume 8 ; 8 > 
@@ -1148,7 +1146,7 @@
     >
 
     param[journal_id] = isj 
-    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = released for old plugin
 
     au < exists ; exists ; 2004 ; The Imaging Science Journal Volume 52 ; 52 > 
     au < exists ; exists ; 2005 ; The Imaging Science Journal Volume 53 ; 53 > 
@@ -1222,7 +1220,7 @@
     >
 
     param[journal_id] = isr 
-    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = released for old plugin
 
     au < exists ; exists ; 1976 ; Interdisciplinary Science Reviews Volume 1 ; 1 > 
     au < exists ; exists ; 1977 ; Interdisciplinary Science Reviews Volume 2 ; 2 > 
@@ -1275,7 +1273,7 @@
     >
 
     param[journal_id] = iht 
-    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = released for old plugin
 
     au < exists ; exists ; 2007 ; International Heat Treatment & Surface Engineering Volume 1 ; 1 > 
     au < exists ; exists ; 2008 ; International Heat Treatment & Surface Engineering Volume 2 ; 2 > 
@@ -1317,7 +1315,7 @@
     >
 
     param[journal_id] = ijcmr 
-    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = released for old plugin
 
     au < exists ; exists ; 2004 ; International Journal of Cast Metals Research Volume 17 ; 17 > 
     au < exists ; exists ; 2005 ; International Journal of Cast Metals Research Volume 18 ; 18 > 
@@ -1341,7 +1339,6 @@
     >
 
     param[journal_id] = jdd
-    
     comment[continues] = 0969-7950
     
     au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Developmental Disabilities Volume 58 ; 58 > 
@@ -1358,7 +1355,6 @@
     >
 
     param[journal_id] = ihm
-    
     comment[continues] = 1753-3031
     
     au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Healthcare Management Volume 5 ; 5 > 
@@ -1376,8 +1372,7 @@
     >
 
     param[journal_id] = imr 
-    
-    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = released for old plugin
     comment[continues] = 0308-4590
     comment[historical_titles] = see 0076-6690 for vols 1-16, 0367-9020 for vols 17-20, 0308-4590 for vols 21-31 and 0950-6608 for vols 32 onwards
     
@@ -1440,8 +1435,6 @@
     >
 
     param[journal_id] = imtr 
-    param[journal_issn] = 0308-4590 
-    
     comment[continues] = 0367-9020
     comment[continued_by] = 0950-6608 
     comment[historical_titles] = see 0076-6690 for vols 1-16, 0367-9020 for vols 17-20, 0308-4590 for vols 21-31 and 0950-6608 for vols 32 onwards
@@ -1469,8 +1462,7 @@
     >
 
     param[journal_id] = imm 
-    
-    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = released for old plugin
 
     au < exists ; exists ; 2008 ; International Musculoskeletal Medicine Volume 30 ; 30 > 
     au < exists ; exists ; 2009 ; International Musculoskeletal Medicine Volume 31 ; 31 > 
@@ -1490,9 +1482,8 @@
     >
 
     param[journal_id] = iwp 
-    
     comment[continues] = 0020-3203
-    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = released for old plugin
     
     au < exists ; exists ; 2010 ; International Wood Products Journal Volume 1 ; 1 > 
     au < exists ; exists ; 2011 ; International Wood Products Journal Volume 2 ; 2 > 
@@ -1510,8 +1501,7 @@
     >
 
     param[journal_id] = ias 
-    
-    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = released for old plugin
     
     au < exists ; exists ; 1999 ; Ironmaking & Steelmaking Volume 26 ; 26 > 
     au < exists ; exists ; 2000 ; Ironmaking & Steelmaking Volume 27 ; 27 > 
@@ -1685,8 +1675,7 @@
     >
 
     param[journal_id] = jbr 
-    
-    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = released for old plugin
     
     au < exists ; exists ; 2002 ; Journal of Bryology Volume 24 ; 24 > 
     au < exists ; exists ; 2003 ; Journal of Bryology Volume 25 ; 25 > 
@@ -1712,7 +1701,7 @@
     >
 
     param[journal_id] = csm 
-    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = released for old plugin
     
     au < exists ; exists ; 2006-2007 ; Journal of Care Services Management Volume 1 ; 1 > 
     au < exists ; exists ; 2007-2008 ; Journal of Care Services Management Volume 2 ; 2 > 
@@ -1733,7 +1722,6 @@
     >
 
     param[journal_id] = joc 
-    
     comment[dnp] = wait for moving to Atypon
     
     au < exists ; exists ; 1995 ; Journal of Chemotherapy Volume 7 ; 7 > 
@@ -1767,8 +1755,7 @@
     >
 
     param[journal_id] = cih 
-    
-    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = released for old plugin
     
     au < exists ; exists ; 2008 ; Journal of Communication in Healthcare Volume 1 ; 1 > 
     au < exists ; exists ; 2009 ; Journal of Communication in Healthcare Volume 2 ; 2 > 
@@ -1860,8 +1847,7 @@
     >
 
     param[journal_id] = his 
-    
-    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = released for old plugin
 
     au < exists ; exists ; 1977-1978 ; Journal of Histotechnology Volume 1 ; 1 > 
     au < exists ; exists ; 1979 ; Journal of Histotechnology Volume 2 ; 2 > 
@@ -1911,8 +1897,7 @@
     >
 
     param[journal_id] = mmh 
-    
-    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = released for old plugin
     comment[continued_by] = 2047-9700
     
     au < exists ; exists ; 2007-2008 ; Journal of Management & Marketing in Healthcare Volume 1 ; 1 > 
@@ -1931,8 +1916,7 @@
     >
 
     param[journal_id] = jmt 
-    
-    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = released for old plugin
     
     au < exists ; exists ; 1993 ; Journal of Manual & Manipulative Therapy Volume 1 ; 1 > 
     au < exists ; exists ; 1994 ; Journal of Manual & Manipulative Therapy Volume 2 ; 2 > 
@@ -1998,7 +1982,6 @@
     >
 
     param[journal_id] = scm 
-    
     comment[notReady] = low agreement
 
     au < down ; exists ; 2011 ; Journal of Spinal Cord Medicine Volume 34 ; 34 > 
@@ -2065,8 +2048,7 @@
     >
 
     param[journal_id] = eni 
-    
-    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = released for old plugin
     
     au < exists ; exists ; 2005 ; Journal of the Energy Institute Volume 78 ; 78 > 
     au < exists ; exists ; 2006 ; Journal of the Energy Institute Volume 79 ; 79 > 
@@ -2090,7 +2072,6 @@
     >
 
     param[journal_id] = wsc 
-    
     comment[continued_by] = 2042-6445
 
     au < exists ; exists ; 2005-2008 ; Journal of the Institute of Wood Science Volume 17 ; 17 > 
@@ -2127,7 +2108,6 @@
     >
 
     param[journal_id] = lhr 
-
     comment[0] = ceased publication 2011
     
     au < exists ; exists ; 2005 ; Labour History Review Volume 70 ; 70 > 
@@ -2169,7 +2149,6 @@
     >
 
     param[journal_id] = lev 
-    
     comment[notReady] = low agreement
 
     au < exists ; exists ; 1969 ; Levant Volume 1 ; 1 > 
@@ -2228,7 +2207,6 @@
     >
 
     param[journal_id] = lbh 
-    
     comment[continued_by] = 1758-3489
 
     au < exists ; exists ; 2005 ; Library History Volume 21 ; 21 > 
@@ -2248,7 +2226,6 @@
     >
 
     param[journal_id] = lih 
-    
     comment[continues] = 0024-2306
 
     au < exists ; exists ; 2009 ; Library & Information History Volume 25 ; 25 > 
@@ -2321,8 +2298,7 @@
     >
 
     param[journal_id] = mri 
-    
-    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = released for old plugin
     
     au < exists ; exists ; 2006 ; Materials Research Innovations Volume 10 ; 10 > 
     au < exists ; exists ; 2007 ; Materials Research Innovations Volume 11 ; 11 > 
@@ -2345,9 +2321,8 @@
     >
 
     param[journal_id] = mst 
-    
     comment[continues] = 0306-3453
-    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = released for old plugin
     
     au < exists ; exists ; 1985 ; Materials Science and Technology Volume 1 ; 1 > 
     au < exists ; exists ; 1986 ; Materials Science and Technology Volume 2 ; 2 > 
@@ -2391,8 +2366,7 @@
     >
 
     param[journal_id] = mte 
-    
-    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = released for old plugin
 
     au < exists ; exists ; 2006 ; Materials Technology: Advanced Performance Materials Volume 21 ; 21 > 
     au < exists ; exists ; 2007 ; Materials Technology: Advanced Performance Materials Volume 22 ; 22 > 
@@ -2415,8 +2389,6 @@
     >
 
     param[journal_id] = mew 
-
-    comment[dnp] = wait for moving to Atypon
 
     au < exists ; exists ; 2012 ; Medical Writing Volume 21 ; 21 > 
     au < exists ; exists ; 2013 ; Medical Writing Volume 22 ; 22 > 
@@ -2485,7 +2457,6 @@
     >
 
     param[journal_id] = msc 
-    
     comment[merged_into] = 0267-0836
 
     au < exists ; exists ; 1967 ; Metal Science Volume 1 ; 1 > 
@@ -2517,7 +2488,6 @@
     >
 
     param[journal_id] = mtlr 
-    
     comment[continued_by] = 0367-9020
     comment[historical_titles] = see 0076-6690 for vols 1-16, 0367-9020 for vols 17-20, 0308-4590 for vols 21-31 and 0950-6608 for vols 32 onwards
     
@@ -2603,8 +2573,7 @@
     >
 
     param[journal_id] = mpem 
-    
-    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = released for old plugin
     
     au < exists ; exists ; 2000 ; Mineral Processing and Extractive Metallurgy Volume 109 ; 109 > 
     au < exists ; exists ; 2001 ; Mineral Processing and Extractive Metallurgy Volume 110 ; 110 > 
@@ -2686,8 +2655,7 @@
     >
 
     param[journal_id] = mint 
-    
-    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = released for old plugin
     
     au < exists ; exists ; 2000 ; Mining Technology Volume 109 ; 109 > 
     au < exists ; exists ; 2001 ; Mining Technology Volume 110 ; 110 > 
@@ -2736,8 +2704,7 @@
     >
 
     param[journal_id] = nres 
-    
-    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = released for old plugin
     
     au < exists ; exists ; 2001 ; Neurological Research Volume 23 ; 23 > 
     au < exists ; exists ; 2002 ; Neurological Research Volume 24 ; 24 > 
@@ -2763,8 +2730,7 @@
     >
 
     param[journal_id] = njb
-    
-    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = released for old plugin
 
     au < exists ; exists ; 2011 ; New Journal of Botany Volume 1 ; 1 > 
     au < doNotProcess ; doNotProcess ; 2012 ; New Journal of Botany Volume 2 ; 2 > 
@@ -2846,8 +2812,7 @@
     >
 
     param[journal_id] = nns 
-    
-    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = released for old plugin
     
     au < exists ; exists ; 2002 ; Nutritional Neuroscience Volume 5 ; 5 > 
     au < exists ; exists ; 2003 ; Nutritional Neuroscience Volume 6 ; 6 > 
@@ -2930,8 +2895,7 @@
     >
 
     param[journal_id] = ptssrm 
-    
-    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = released for old plugin
     
     au < exists ; exists ; 2004 ; Packaging, Transport, Storage and Security of Radioactive Material Volume 15 ; 15 > 
     au < exists ; exists ; 2005 ; Packaging, Transport, Storage and Security of Radioactive Material Volume 16 ; 16 > 
@@ -2954,7 +2918,6 @@
     >
 
     param[journal_id] = pch 
-    
     comment[continues] = 0272-4936 
     
     au < down ; exists ; 2012 ; Paediatrics and International Child Health Volume 32 ; 32 >
@@ -2972,7 +2935,6 @@
     >
 
     param[journal_id] = tpc 
-    
     comment[0] = publication ceased in 2007
         
     au < exists ; exists ; 2000 ; The Pain Clinic Volume 12 ; 12 > 
@@ -3021,7 +2983,6 @@
     >
 
     param[journal_id] = pvr 
-    
     comment[0] = ceased publication in 2005
 
     au < exists ; exists ; 2003 ; Papillomavirus Report Volume 14 ; 14 > 
@@ -3038,7 +2999,6 @@
     >
 
     param[journal_id] = pgh
-    
     comment[continues] = 0003-4983
     
     au < down ; exists ; 2012 ; Pathogens and Global Health Volume 106 ; 106 >
@@ -3056,7 +3016,6 @@
     >
 
     param[journal_id] = pha 
-
     comment[0] = ceased publication 2012
 
     au < exists ; exists ; 2008 ; Pharmaceutical Programming Volume 1 ; 1 > 
@@ -3077,8 +3036,7 @@
     >
 
     param[journal_id] = ptr 
-    
-    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = released for old plugin
     
     au < exists ; exists ; 1996 ; Physical Therapy Reviews Volume 1 ; 1 > 
     au < exists ; exists ; 1997 ; Physical Therapy Reviews Volume 2 ; 2 > 
@@ -3111,8 +3069,7 @@
     >
 
     param[journal_id] = prc 
-    
-    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = released for old plugin
 
     au < exists ; exists ; 1999 ; Plastics, Rubber and Composites Volume 28 ; 28 > 
     au < exists ; exists ; 2000 ; Plastics, Rubber and Composites Volume 29 ; 29 > 
@@ -3165,8 +3122,7 @@
     >
 
     param[journal_id] = pm 
-    
-    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = released for old plugin
     
     au < exists ; exists ; 1999 ; Powder Metallurgy Volume 42 ; 42 > 
     au < exists ; exists ; 2000 ; Powder Metallurgy Volume 43 ; 43 > 
@@ -3196,8 +3152,7 @@
     >
 
     param[journal_id] = ppc 
-    
-    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = released for old plugin
     
     au < exists ; exists ; 2003 ; Progress in Palliative Care Volume 11 ; 11 > 
     au < exists ; exists ; 2004 ; Progress in Palliative Care Volume 12 ; 12 > 
@@ -3271,8 +3226,7 @@
     >
 
     param[journal_id] = rer 
-    
-    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = released for old plugin
 
     au < exists ; exists ; 1999 ; Redox Report Volume 4 ; 4 > 
     au < exists ; exists ; 2000 ; Redox Report Volume 5 ; 5 > 
@@ -3300,7 +3254,6 @@
     >
 
     param[journal_id] = repc
-    
     comment[continued_by] = 1521-5385 
 
     au < exists ; exists ; 1994-1995 ; Republican China Volume 20 ; 20 > 
@@ -3364,8 +3317,7 @@
     >
 
     param[journal_id] = stwj 
-    
-    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = released for old plugin
     
     au < exists ; exists ; 1996 ; Science and Technology of Welding & Joining Volume 1 ; 1 > 
     au < exists ; exists ; 1997 ; Science and Technology of Welding & Joining Volume 2 ; 2 > 
@@ -3497,8 +3449,7 @@
     >
 
     param[journal_id] = se 
-    
-    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = released for old plugin
 
     au < exists ; exists ; 1999 ; Surface Engineering Volume 15 ; 15 > 
     au < exists ; exists ; 2000 ; Surface Engineering Volume 16 ; 16 > 
@@ -3797,8 +3748,7 @@
     >
 
     param[journal_id] = imf 
-    
-    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = released for old plugin
     
     au < exists ; exists ; 2005 ; Transactions of the Institute of Metal Finishing Volume 83 ; 83 > 
     au < exists ; exists ; 2006 ; Transactions of the Institute of Metal Finishing Volume 84 ; 84 > 
@@ -3822,7 +3772,6 @@
     >
 
     param[journal_id] = tns 
-    
     comment[continued_by] = 1758-1206
 
     au < exists ; exists ; 2006 ; Transactions of the Newcomen Society Volume 76 ; 76 > 
@@ -3842,8 +3791,7 @@
     >
 
     param[journal_id] = trb 
-    
-    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = released for old plugin
     
     au < exists ; exists ; 2007 ; Tribology - Materials, Surfaces & Interfaces Volume 1 ; 1 > 
     au < exists ; exists ; 2008 ; Tribology - Materials, Surfaces & Interfaces Volume 2 ; 2 > 
@@ -3865,7 +3813,6 @@
     >
 
     param[journal_id] = tcc 
-    
     comment[continues] = 0893-2344 
 
     au < exists ; exists ; 1997-1998 ; Twentieth-Century China Volume 23 ; 23 > 
@@ -3889,10 +3836,6 @@
 
   {
 
-  }
-
-  {
-
     title <
       name = Usus Antiquior ;
       issn = 1757-8949 ;
@@ -3901,7 +3844,6 @@
     >
 
     param[journal_id] = usu 
-
     comment[0] = publication ceased December 31, 2012
     
     au < doNotProcess ; doNotProcess ; 2010 ; Usus Antiquior Volume 1 ; 1 > 
@@ -4023,7 +3965,6 @@
     >
 
     param[journal_id] = yaj 
-
 
     au < doNotProcess ; doNotProcess ; 2010 ; Yorkshire Archaeological Journal Volume 82 ; 82 >
     au < doNotProcess ; doNotProcess ; 2011 ; Yorkshire Archaeological Journal Volume 83 ; 83 >
