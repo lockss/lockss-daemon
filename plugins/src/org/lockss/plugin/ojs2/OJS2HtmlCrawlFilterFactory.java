@@ -1,10 +1,10 @@
 /*
- * $Id: OJS2HtmlCrawlFilterFactory.java,v 1.1 2012-12-23 21:05:58 ldoan Exp $
+ * $Id: OJS2HtmlCrawlFilterFactory.java,v 1.2 2014-06-02 21:54:49 etenbrink Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -49,17 +49,17 @@ public class OJS2HtmlCrawlFilterFactory implements FilterFactory {
                                                String encoding)
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
-
-	// <div id="navbar">
-	HtmlNodeFilters.tagWithAttribute("div", "id", "navbar"),
-
-	// <div id="breadcrumb">
-	HtmlNodeFilters.tagWithAttribute("div", "id", "breadcrumb"),
-
+        
+        // do not get links from navbar
+        HtmlNodeFilters.tagWithAttribute("div", "id", "navbar"),
+        
+        // nor breadcrumbs
+        HtmlNodeFilters.tagWithAttribute("div", "id", "breadcrumb"),
+        
     };
     return new HtmlFilterInputStream(in,
                                      encoding,
                                      HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
   }
-
+  
 }
