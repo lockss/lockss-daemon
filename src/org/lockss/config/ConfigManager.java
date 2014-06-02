@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.96 2014-05-30 21:45:27 fergaloy-sf Exp $
+ * $Id: ConfigManager.java,v 1.97 2014-06-02 00:44:52 tlipkis Exp $
  */
 
 /*
@@ -1412,6 +1412,9 @@ public class ConfigManager implements LockssManager {
 		       firstSpace);
       platformOverride(config, IdentityManager.PARAM_IDDB_DIR,
 		       new File(firstSpace, "iddb").toString());
+      platformOverride(config,
+		       org.lockss.truezip.TrueZipManager.PARAM_CACHE_DIR,
+		       new File(firstSpace, "tfile").toString());
     }
   }
 
@@ -1487,6 +1490,9 @@ public class ConfigManager implements LockssManager {
     }
     if (elided > 0) log.debug(elided + " keys elided");
     log.debug("New TdbAus: " + diffs.getTdbAuDifferenceCount());
+    if (log.isDebug3()) {
+      log.debug3("TdbDiffs: " + diffs.getTdbDifferences());
+    }
 
     if (log.isDebug2()) {
       Tdb tdb = config.getTdb();

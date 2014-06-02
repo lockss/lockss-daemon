@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.45 2013-05-30 14:00:18 tlipkis Exp $
+ * $Id: TestConfigManager.java,v 1.46 2014-06-02 00:44:52 tlipkis Exp $
  */
 
 /*
@@ -495,6 +495,8 @@ public class TestConfigManager extends LockssTestCase {
     assertEquals(tmpdir1, config.get("org.lockss.history.location"));
     assertEquals(FileUtil.sysDepPath(new File(tmpdir1, "iddb").toString()),
 		 config.get("org.lockss.id.database.dir"));
+    assertEquals(tmpdir1 + "/tfile",
+		 config.get(org.lockss.truezip.TrueZipManager.PARAM_CACHE_DIR));
   }
 
   public void testPlatformSmtp() throws Exception {
