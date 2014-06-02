@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20PermissionCheckerFactory.java,v 1.1 2014-02-19 23:22:19 etenbrink Exp $
+ * $Id: HighWirePressH20PermissionCheckerFactory.java,v 1.2 2014-06-02 22:40:24 etenbrink Exp $
  */
 
 /*
@@ -32,16 +32,177 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.highwire;
 
+import java.io.BufferedInputStream;
+import java.io.IOException;
+import java.io.Reader;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import org.lockss.config.ConfigManager;
+import org.lockss.config.Configuration;
+import org.lockss.crawler.BaseCrawler;
+import org.lockss.crawler.BaseCrawler.StorePermissionScheme;
 import org.lockss.daemon.*;
+import org.lockss.daemon.Crawler.PermissionHelper;
+import org.lockss.extractor.GoslingHtmlLinkExtractor;
+import org.lockss.extractor.LinkExtractor;
 import org.lockss.plugin.*;
+import org.lockss.util.IOUtil;
+import org.lockss.util.Logger;
+import org.lockss.util.ReaderInputStream;
+import org.lockss.util.StringUtil;
 
 public class HighWirePressH20PermissionCheckerFactory
-  implements PermissionCheckerFactory {
+  implements PermissionCheckerFactory{
   
-  public List<ProbePermissionChecker> createPermissionCheckers(ArchivalUnit au) {
-    List<ProbePermissionChecker> list = new ArrayList<ProbePermissionChecker>(1);
-    list.add(new ProbePermissionChecker(new HighWirePressH20LoginPageChecker(), au));
+  protected static final Pattern H20_PATTERN = Pattern.compile("/content/.+[.]long$");
+  
+  public class H20ProbePermissionChecker extends ProbePermissionChecker {
+    
+    private final Logger logger = Logger.getLogger(H20ProbePermissionChecker.class);
+    protected ArchivalUnit au;
+    protected String probeUrl;
+    
+    @Override
+    public boolean checkPermission(PermissionHelper pHelper, Reader inputReader,
+        String permissionUrl) {
+      
+      // FIXME super_checkPermission should be super.checkPermission when 
+      // probeUrl and au are visible to child class
+      boolean ret = super_checkPermission(pHelper, inputReader, permissionUrl);
+      if (ret) {
+        try {
+          // inputReader.reset();
+          ret = !StringUtil.containsString(inputReader, "platform = DRUPAL", true);
+        } catch (Exception e) {
+          logger.warning("drupal flag", e);
+        }
+      }
+      if (ret && probeUrl != null) {
+        Matcher urlMat = H20_PATTERN.matcher(probeUrl);
+        if (!urlMat.find()) {
+          logger.siteError(" ");
+          logger.siteError("       ===============        ");
+          logger.siteError(" ");
+          logger.siteError(probeUrl + " was not an H20 form url ");
+          logger.siteError("     " + au.getUrlStems() + "content/<vol>/<iss>/<pg>.long) on ");
+          logger.siteError(permissionUrl);
+          logger.siteError(" ");
+          logger.siteError("       ===============        ");
+          logger.siteError(" ");
+          ret = false;
+        }
+      }
+      return ret;
+    }
+    
+    public H20ProbePermissionChecker(LoginPageChecker checker, ArchivalUnit au) {
+      super(checker, au);
+      this.au = au;
+    }
+    
+    public H20ProbePermissionChecker(ArchivalUnit au) {
+      super(au);
+      this.au = au;
+    }
+    
+    // FIXME remove super_checkPermission when probeUrl and au are visible to child class
+    protected boolean super_checkPermission(Crawler.PermissionHelper pHelper,
+        Reader inputReader, String permissionUrl) {
+      probeUrl = null;
+      CustomHtmlLinkExtractor extractor = new CustomHtmlLinkExtractor();
+      logger.debug3("Checking permission on "+permissionUrl);
+      try {
+        extractor.extractUrls(au, new ReaderInputStream(inputReader), null,
+            permissionUrl, new MyLinkExtractorCallback());
+      } catch (IOException ex) {
+        logger.error("Exception trying to parse permission url "+permissionUrl,
+            ex);
+        return false;
+      }
+      if (probeUrl != null) {
+        logger.debug3("Found probeUrl "+probeUrl);
+        BufferedInputStream is = null;
+        try {
+          UrlCacher uc = pHelper.makePermissionUrlCacher(probeUrl);
+          is = new BufferedInputStream(uc.getUncachedInputStream());
+          logger.debug3("Non-login page: " + probeUrl);
+          
+          // Retain compatibility with legacy behavior of not storing probe
+          // permission pages.
+          Configuration config = ConfigManager.getCurrentConfig();
+          StorePermissionScheme sps =
+              (StorePermissionScheme)config.getEnum(StorePermissionScheme.class,
+                  BaseCrawler.PARAM_STORE_PERMISSION_SCHEME,
+                  BaseCrawler.DEFAULT_STORE_PERMISSION_SCHEME);
+          if (StorePermissionScheme.Legacy != sps) {
+            pHelper.storePermissionPage(uc, is);
+          }
+          return true;
+        } catch (org.lockss.util.urlconn.CacheException.PermissionException ex) {
+          logger.debug3("Found a login page");
+          return false;
+        } catch (IOException ex) {
+          logger.error("Exception trying to check for login page "+probeUrl, ex);
+          return false;
+        } finally {
+          IOUtil.safeClose(is);
+        } 
+      } else {
+        logger.warning("Didn't find a probe URL on "+permissionUrl);
+      }
+      return false;
+    }
+    
+    // FIXME remove CustomHtmlLinkExtractor when probeUrl and au are visible to child class
+    private class CustomHtmlLinkExtractor
+    extends GoslingHtmlLinkExtractor {
+      
+      private static final String LOCKSSPROBE = "lockss-probe";
+      
+      protected String extractLinkFromTag(StringBuffer link, ArchivalUnit au,
+          LinkExtractor.Callback cb) {
+        String returnStr = null;
+        
+        switch (link.charAt(0)) {
+          case 'l': //<link href=blah.css>
+          case 'L':
+            logger.debug3("Looking for probe in "+link);
+            if (beginsWithTag(link, LINKTAG)) {
+              returnStr = getAttributeValue(HREF, link);
+              String probeStr = getAttributeValue(LOCKSSPROBE, link);
+              if (!"true".equalsIgnoreCase(probeStr)) {
+                returnStr = null;
+              }
+            }
+            break;
+          default:
+            return null;
+        }
+        return returnStr;
+      }
+    }
+    
+    // FIXME remove MyLinkExtractorCallback when probeUrl and au are visible to child class
+    private class MyLinkExtractorCallback implements LinkExtractor.Callback {
+      public MyLinkExtractorCallback() {
+      }
+      
+      public void foundLink(String url) {
+        if (probeUrl != null) {
+          logger.warning("Multiple probe URLs found on manifest page.  " +
+              "Old: "+probeUrl+" New: "+url);
+        }
+        probeUrl = url;
+      }
+    }
+  }
+  
+  public List<H20ProbePermissionChecker> createPermissionCheckers(ArchivalUnit au) {
+    List<H20ProbePermissionChecker> list = new ArrayList<H20ProbePermissionChecker>(1);
+    list.add(new H20ProbePermissionChecker(new HighWirePressH20LoginPageChecker(), au));
     return list;
   }
 }
+
