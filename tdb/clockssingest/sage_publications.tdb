@@ -2836,7 +2836,7 @@
 
         pluginSuffix = ClockssHighWirePressH20Plugin
 
-        au < testing ; exists ; 2012 ; Asia Pacific Media Educator Volume 22 ; 22 ; >
+        au < ready ; exists ; 2012 ; Asia Pacific Media Educator Volume 22 ; 22 ; >
         au < exists ; exists ; 2013 ; Asia Pacific Media Educator Volume 23 ; 23 ; >
         au < expected ; exists ; 2014 ; Asia Pacific Media Educator Volume 24 ; 24 ; >
 
@@ -8261,7 +8261,7 @@
         au < manifest ; exists ; 2009 ; The Economic and Labour Relations Review Volume 20 ; 20 >
         au < manifest ; exists ; 2010 ; The Economic and Labour Relations Review Volume 21 ; 21 >
         au < manifest ; exists ; 2011 ; The Economic and Labour Relations Review Volume 22 ; 22 >
-        au < testing ; exists ; 2012 ; The Economic and Labour Relations Review Volume 23 ; 23 >
+        au < ready ; exists ; 2012 ; The Economic and Labour Relations Review Volume 23 ; 23 >
         au < crawling ; exists ; 2013 ; The Economic and Labour Relations Review Volume 24 ; 24 >
         au < manifest ; exists ; 2014 ; The Economic and Labour Relations Review Volume 25 ; 25 >
 
@@ -20971,7 +20971,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
         
-      au < testing ; exists ; 2012 ; Journal of Interdisciplinary Economics Volume 24 ; 24 ; >
+      au < ready ; exists ; 2012 ; Journal of Interdisciplinary Economics Volume 24 ; 24 ; >
       au < manifest ; exists ; 2013 ; Journal of Interdisciplinary Economics Volume 25 ; 25 ; >
       au < expected ; exists ; 2014 ; Journal of Interdisciplinary Economics Volume 26 ; 26 ; >
 
@@ -40876,7 +40876,7 @@
         au < manifest ; exists ; 2009 ; International Journal of Maritime History Volume 21 ; 21 ; >
         au < manifest ; exists ; 2010 ; International Journal of Maritime History Volume 22 ; 22 ; >
         au < manifest ; exists ; 2011 ; International Journal of Maritime History Volume 23 ; 23 ; >
-        au < testing ; exists ; 2012 ; International Journal of Maritime History Volume 24 ; 24 ; >
+        au < ready ; exists ; 2012 ; International Journal of Maritime History Volume 24 ; 24 ; >
         au < crawling ; exists ; 2013 ; International Journal of Maritime History Volume 25 ; 25 ; >
         au < manifest ; exists ; 2014 ; International Journal of Maritime History Volume 26 ; 26 ; >
 
@@ -41416,7 +41416,7 @@
         au < exists ; exists ; 2009 ; Menopause International Volume 15 ; 15 ; >
         au < exists ; exists ; 2010 ; Menopause International Volume 16 ; 16 ; >
         au < exists ; exists ; 2011 ; Menopause International Volume 17 ; 17 ; >
-        au < testing ; exists ; 2012 ; Menopause International Volume 18 ; 18 ; >
+        au < ready ; exists ; 2012 ; Menopause International Volume 18 ; 18 ; >
         au < crawling ; exists ; 2013 ; Menopause International Volume 19 ; 19 ; >
   
     }
