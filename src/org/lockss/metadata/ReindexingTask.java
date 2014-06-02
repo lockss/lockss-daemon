@@ -1,5 +1,5 @@
 /*
- * $Id: ReindexingTask.java,v 1.14 2014-01-29 22:30:38 pgust Exp $
+ * $Id: ReindexingTask.java,v 1.15 2014-06-02 00:45:22 tlipkis Exp $
  */
 
 /*
@@ -33,7 +33,7 @@ package org.lockss.metadata;
 
 import static org.lockss.metadata.MetadataManager.NEVER_EXTRACTED_EXTRACTION_TIME;
 
-import java.io.IOException;
+import java.io.*;
 import java.lang.management.*;
 import java.sql.*;
 import java.util.*;
@@ -736,7 +736,8 @@ public class ReindexingTask extends StepTask {
       }
 
       try {
-        articleMetadataInfoBuffer = new ArticleMetadataBuffer();
+        articleMetadataInfoBuffer =
+	  new ArticleMetadataBuffer(new File(PlatformUtil.getSystemTempDir()));
         mdManager.notifyStartReindexingAu(au);
       } catch (IOException ioe) {
         log.error("Failed to set up pending AU '" + au.getName()

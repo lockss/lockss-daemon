@@ -1,5 +1,5 @@
 /*
- * $Id: ArticleMetadataBuffer.java,v 1.3 2013-12-17 17:57:46 fergaloy-sf Exp $
+ * $Id: ArticleMetadataBuffer.java,v 1.4 2014-06-02 00:45:22 tlipkis Exp $
  */
 
 /*
@@ -312,15 +312,13 @@ class ArticleMetadataBuffer {
     }
   }
 
-  public ArticleMetadataBuffer() throws IOException {
-    if (outstream == null) {
-      collectedMetadataFile = 
-          FileUtil.createTempFile("MetadataManager", "md");
-      outstream =
-          new ObjectOutputStream(
-              new BufferedOutputStream(
-                  new FileOutputStream(collectedMetadataFile)));
-    }
+  public ArticleMetadataBuffer(File tmpdir) throws IOException {
+    collectedMetadataFile = 
+      FileUtil.createTempFile("MetadataManager", "md", tmpdir);
+    outstream =
+	new ObjectOutputStream(
+	    new BufferedOutputStream(
+		new FileOutputStream(collectedMetadataFile)));
   }
 
   /** 
