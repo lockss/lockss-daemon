@@ -1,5 +1,5 @@
 /*
- * $Id: TestRunKbartReport.java,v 1.9 2014-04-02 22:30:30 pgust Exp $
+ * $Id: TestRunKbartReport.java,v 1.10 2014-06-02 00:47:53 tlipkis Exp $
  */
 
 /*
@@ -101,7 +101,7 @@ public class TestRunKbartReport extends LockssTestCase {
    * @throws Exception
    */
   public void testMain() throws Exception {
-    outputFile = File.createTempFile("TestRunKbartReport", ".csv");
+    outputFile = getTempFile("TestRunKbartReport", ".csv");
     System.err.println("Saving report to temp file "+outputFile);
     for (boolean b : new boolean[]{true, false}) {
       hideEmptyColumns = b;
