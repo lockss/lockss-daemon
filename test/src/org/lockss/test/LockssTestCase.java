@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.114 2014-01-07 20:43:30 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.115 2014-06-02 00:46:22 tlipkis Exp $
  */
 
 /*
@@ -131,6 +131,27 @@ public class LockssTestCase extends TestCase {
       tmpDirs.add(tmpdir);
     }
     return tmpdir;
+  }
+
+  /**
+   * Create and return the name of a temp file.  The file is created within
+   * the default temp dir.
+   * It will be deleted following the test, by tearDown().  (So if you
+   * override tearDown(), be sure to call <code>super.tearDown()</code>.)
+   * @param prefix the prefix of the name of the file
+   * @param suffis the suffix of the name of the file
+   * @return The newly created file
+   * @throws IOException
+   */
+  public File getTempFile(String prefix, String suffis) throws IOException {
+    File tmpfile = FileUtil.createTempFile(prefix, suffis);
+    if (tmpfile != null) {
+      if (tmpDirs == null) {
+	tmpDirs = new LinkedList();
+      }
+      tmpDirs.add(tmpfile);
+    }
+    return tmpfile;
   }
 
   /**
