@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.97 2014-06-02 00:44:52 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.98 2014-06-02 02:07:09 tlipkis Exp $
  */
 
 /*
@@ -1412,9 +1412,9 @@ public class ConfigManager implements LockssManager {
 		       firstSpace);
       platformOverride(config, IdentityManager.PARAM_IDDB_DIR,
 		       new File(firstSpace, "iddb").toString());
-      platformOverride(config,
-		       org.lockss.truezip.TrueZipManager.PARAM_CACHE_DIR,
-		       new File(firstSpace, "tfile").toString());
+      platformDefault(config,
+		      org.lockss.truezip.TrueZipManager.PARAM_CACHE_DIR,
+		      new File(firstSpace, "tfile").toString());
     }
   }
 
@@ -1432,6 +1432,7 @@ public class ConfigManager implements LockssManager {
     }
   }
 
+  /** Override current config value with val */
   private void platformOverride(Configuration config, String key, String val) {
     String oldval = config.get(key);
     if (oldval != null && !StringUtil.equalStrings(oldval, val)) {
@@ -1441,6 +1442,14 @@ public class ConfigManager implements LockssManager {
     config.put(key, val);
   }
 
+  /** Store val in config iff key currently not set */
+  private void platformDefault(Configuration config, String key, String val) {
+    if (!config.containsKey(key)) {
+      platformOverride(config, key, val);
+    }
+  }
+
+  /** Copy value of platformKey in config iff key currently not set */
   private void conditionalPlatformOverride(Configuration config,
 					   String platformKey, String key) {
     String value = config.get(platformKey);
