@@ -1,14 +1,5 @@
-package org.lockss.crawljax;
-
-import com.fasterxml.jackson.core.JsonEncoding;
-import com.fasterxml.jackson.core.JsonFactory;
-import com.fasterxml.jackson.core.JsonGenerator;
-import com.fasterxml.jackson.core.JsonParser;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import junit.framework.TestCase;
-
 /*
- * $Id: TestRequestResponse.java,v 1.2 2014-04-16 21:35:24 clairegriffin Exp $
+ * $Id: TestRequestResponse.java,v 1.3 2014-06-02 00:46:07 tlipkis Exp $
  */
 
 /*
@@ -38,10 +29,21 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
 */
+
+package org.lockss.crawljax;
+
+import com.fasterxml.jackson.core.JsonEncoding;
+import com.fasterxml.jackson.core.JsonFactory;
+import com.fasterxml.jackson.core.JsonGenerator;
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import junit.framework.TestCase;
+
 import org.apache.commons.io.FileUtils;
 import org.lockss.crawljax.AjaxRequestResponse.Header;
 import org.lockss.crawljax.AjaxRequestResponse.Request;
 import org.lockss.crawljax.AjaxRequestResponse.Response;
+import org.lockss.test.*;
 import org.lockss.util.FileUtil;
 
 import java.io.*;
@@ -50,7 +52,7 @@ import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TestRequestResponse  extends TestCase {
+public class TestRequestResponse  extends LockssTestCase {
   static final String DEF_METHOD = "GET";
   static final String DEF_URL = "http://www.example.com";
   static final String DEF_VERSION = "HTTP/1.0";
@@ -63,11 +65,7 @@ public class TestRequestResponse  extends TestCase {
   private File tmpDir;
 
   public void setUp() throws Exception {
-    tmpDir = new File(FileUtils.getTempDirectory(), "lockss_test");
-    tmpDir = new File(FileUtils.getTempDirectory(), "testproxy");
-    if (!tmpDir.exists()) {
-      tmpDir.mkdirs();
-    }
+    tmpDir = getTempDir("testproxy");
 
     mReqResp = new AjaxRequestResponse();
     Request req = new Request();
@@ -188,7 +186,8 @@ public class TestRequestResponse  extends TestCase {
     return sb.toString();
   }
 
-  private URL getResource(String resource){
+  // unused, name conflicts with LockssTestCase
+  private URL getResource0(String resource){
 
     URL url ;
 

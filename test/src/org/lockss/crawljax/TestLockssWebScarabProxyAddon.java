@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssWebScarabProxyAddon.java,v 1.1 2014-04-14 23:09:02 clairegriffin Exp $
+ * $Id: TestLockssWebScarabProxyAddon.java,v 1.2 2014-06-02 00:46:07 tlipkis Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import junit.framework.TestCase;
 
 import org.apache.commons.io.FileUtils;
 
+import org.lockss.test.*;
 import org.lockss.crawljax.AjaxRequestResponse.IndexEntry;
 
 import org.owasp.webscarab.httpclient.HTTPClient;
@@ -55,7 +56,7 @@ import java.util.List;
  * Test class for LockssWebScarabProxyAddon
  * Created by claire on 3/18/14.
  */
-public class TestLockssWebScarabProxyAddon extends TestCase {
+public class TestLockssWebScarabProxyAddon extends LockssTestCase {
   static final String DEF_METHOD = "GET";
   static final String DEF_URL = "http://www.example.com";
   static final String DEF_VERSION = "HTTP/1.0";
@@ -66,10 +67,7 @@ public class TestLockssWebScarabProxyAddon extends TestCase {
   File m_cacheDir;
 
   public void setUp() throws Exception {
-    m_cacheDir = new File(FileUtils.getTempDirectory(), "testproxy");
-    if (!m_cacheDir.exists()) {
-      m_cacheDir.mkdirs();
-    }
+    m_cacheDir = getTempDir("testproxy");
     m_scarabProxyAddon = new LockssWebScarabProxyAddon(m_cacheDir.getAbsolutePath());
   }
 
