@@ -57,9 +57,10 @@
 
   {
 
-    comment[platform] = org.lockss.plugin.jstor.ClockssJSTORPlugin
-    plugin = needs.plugin
+    comment[platform] = JSTOR
+    plugin = org.lockss.plugin.jstor.ClockssJstorPlugin
     param[base_url] = http://www.jstor.org/
+    param[base_url2] = https://www.jstor.org/
 
     {
       title <
@@ -69,15 +70,15 @@
         issnl = 0002-8320
       >
 
-      param[journal_code] = tranamerentosoc3
+      param[journal_id] = tranamerentosoc3
 
       au < exists ; exists ; 2006 ; Transactions of the American Entomological Society Volume 132 ; 132 >
       au < exists ; exists ; 2007 ; Transactions of the American Entomological Society Volume 133 ; 133 >
       au < exists ; exists ; 2008 ; Transactions of the American Entomological Society Volume 134 ; 134 >
       au < exists ; exists ; 2009 ; Transactions of the American Entomological Society Volume 135 ; 135 >
       au < exists ; exists ; 2010 ; Transactions of the American Entomological Society Volume 136 ; 136 >
-      au < exists ; exists ; 2011 ; Transactions of the American Entomological Society Volume 137 ; 137 >
-      au < exists ; exists ; 2012 ; Transactions of the American Entomological Society Volume 138 ; 138 >
+      au < testing ; exists ; 2011 ; Transactions of the American Entomological Society Volume 137 ; 137 >
+      au < testing ; exists ; 2012 ; Transactions of the American Entomological Society Volume 138 ; 138 >
 
     }
 

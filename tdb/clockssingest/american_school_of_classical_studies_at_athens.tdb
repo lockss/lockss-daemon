@@ -6,6 +6,12 @@
     info[tester] = 0
   >
   
+  comment[platform] = JSTOR
+  plugin = org.lockss.plugin.jstor.ClockssJstorPlugin
+  param[base_url] = http://www.jstor.org/
+  param[base_url2] = https://www.jstor.org/
+  implicit < status ; status2 ; year ; name ; param[volume_name] >
+  
   {
   
     title <
@@ -14,10 +20,7 @@
       eissn = 1553-5622
     >
     
-    plugin = needs.plugin
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
-    comment[platform] = JSTOR
-    param[journal_code] = hesperia
+      param[journal_id] = hesperia
 
       au < exists ; exists ; 1932 ; Hesperia Volume 1 ; 1 >
       au < exists ; exists ; 1933 ; Hesperia Volume 2 ; 2 >
@@ -99,8 +102,8 @@
       au < exists ; exists ; 2009 ; Hesperia Volume 78 ; 78 >
       au < exists ; exists ; 2010 ; Hesperia Volume 79 ; 79 >
       au < exists ; exists ; 2011 ; Hesperia Volume 80 ; 80 >
-      au < exists ; exists ; 2012 ; Hesperia Volume 81 ; 81 >
-      au < exists ; exists ; 2013 ; Hesperia Volume 82 ; 82 >
+      au < testing ; exists ; 2012 ; Hesperia Volume 81 ; 81 >
+      au < testing ; exists ; 2013 ; Hesperia Volume 82 ; 82 >
       au < exists ; exists ; 2014 ; Hesperia Volume 83 ; 83 >
 
   }
