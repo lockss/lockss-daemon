@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20HttpResponseHandler.java,v 1.5 2014-03-03 21:41:04 etenbrink Exp $
+ * $Id: HighWirePressH20HttpResponseHandler.java,v 1.6 2014-06-02 22:26:29 etenbrink Exp $
  */
 
 /*
@@ -63,6 +63,9 @@ public class HighWirePressH20HttpResponseHandler implements CacheResultHandler {
         else {
           return new CacheException.NoRetryDeadLinkException("500 Internal Server Error (non-fatal)");
         }
+      case 509:
+        logger.debug2("509");
+        return new CacheException.RetrySameUrlException("509 Bandwidth Limit Exceeded");
       default:
         logger.debug2("default");
         throw new UnsupportedOperationException();
