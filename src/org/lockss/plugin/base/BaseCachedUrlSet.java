@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrlSet.java,v 1.35 2013-12-09 22:59:46 fergaloy-sf Exp $
+ * $Id: BaseCachedUrlSet.java,v 1.36 2014-06-02 00:45:38 tlipkis Exp $
  */
 
 /*
@@ -60,7 +60,6 @@ public class BaseCachedUrlSet implements CachedUrlSet {
   private LockssDaemon theDaemon;
   private LockssRepository repository;
   private NodeManager nodeManager;
-  private HashService hashService;
   private TrueZipManager trueZipManager;
   protected static Logger logger = Logger.getLogger("CachedUrlSet");
 
@@ -83,8 +82,6 @@ public class BaseCachedUrlSet implements CachedUrlSet {
     theDaemon = plugin.getDaemon();
     repository = theDaemon.getLockssRepository(owner);
     nodeManager = theDaemon.getNodeManager(owner);
-    hashService = theDaemon.getHashService();
-    trueZipManager = theDaemon.getTrueZipManager();
   }
 
   /**
@@ -265,7 +262,7 @@ public class BaseCachedUrlSet implements CachedUrlSet {
   }
 
   public long estimatedHashDuration() {
-    return hashService.padHashEstimate(makeHashEstimate());
+    return theDaemon.getHashService().padHashEstimate(makeHashEstimate());
   }
 
   private long makeHashEstimate() {
@@ -630,7 +627,7 @@ public class BaseCachedUrlSet implements CachedUrlSet {
 	      TFile tf;
 	      try {
 		CachedUrl tFileCu = au.makeCachedUrl(cu.getUrl());
-		tf = trueZipManager.getCachedTFile(tFileCu);
+		tf = getTrueZipManager().getCachedTFile(tFileCu);
 		if (!tf.isDirectory()) {
 		  logger.error("isDirectory(" + tf +
 			       ") = false, including in iterator");
@@ -641,7 +638,7 @@ public class BaseCachedUrlSet implements CachedUrlSet {
 		  logger.debug3("Found archive: " + tf + " in " + cu);
 		}
 		// Mark the TFile only as flushable if it is unmounted.
-		trueZipManager.setFlushAfterUnmountOnly(tFileCu);
+		getTrueZipManager().setFlushAfterUnmountOnly(tFileCu);
 		// Push a new TFile and its iterator and CU onto the stack.
 		arcIterStack.addFirst(new TFileIterator(tf, tFileCu));
 		curArcCu = cu;
@@ -714,7 +711,8 @@ public class BaseCachedUrlSet implements CachedUrlSet {
      */
     private void freeTFile(TFileIterator tfIterator) {
       try {
-	trueZipManager.freeTFile(tfIterator.tFile, tfIterator.tFileCacheCu);
+	getTrueZipManager().freeTFile(tfIterator.tFile,
+				      tfIterator.tFileCacheCu);
       } catch (Throwable t) {
 	logger.warning("Error freeing TFile: " + tfIterator.tFile, t);
       }
@@ -743,7 +741,7 @@ public class BaseCachedUrlSet implements CachedUrlSet {
      */
     private void markArchiveAsFlushable(TFileIterator tfIterator) {
       try {
-	trueZipManager.markArchiveAsFlushable(tfIterator.tFile,
+	getTrueZipManager().markArchiveAsFlushable(tfIterator.tFile,
 	    tfIterator.tFileCacheCu);
       } catch (Throwable t) {
 	logger.warning("Error freeing TFile: " + tfIterator.tFile, t);
@@ -782,5 +780,13 @@ public class BaseCachedUrlSet implements CachedUrlSet {
         return tfiles;
       }
     }
+
+    private TrueZipManager getTrueZipManager() {
+      if (trueZipManager == null) {
+	trueZipManager = theDaemon.getTrueZipManager();
+      }
+      return trueZipManager;
+    }    
+
   }
 }
