@@ -1,5 +1,5 @@
 /*
- * $Id: OJS2ArticleIteratorFactory.java,v 1.11 2014-06-02 17:38:50 etenbrink Exp $
+ * $Id: OJS2ArticleIteratorFactory.java,v 1.12 2014-06-02 18:37:34 etenbrink Exp $
  */
 
 /*
@@ -84,11 +84,10 @@ public class OJS2ArticleIteratorFactory
       Pattern.compile("^[0-9]+[.] \\[pdf\\]$");
   
   // params from tdb file corresponding to AU
-  protected static final String ROOT_TEMPLATE =
-      "\"%sindex.php/%s/\", base_url, journal_id";
+  protected static final String ROOT_TEMPLATE = "\"%s\", base_url";
   
   protected static final String PATTERN_TEMPLATE =
-      "\"^%s(index.php/)?%s/article/viewFile/[^/]+/[^/]+$\", base_url, journal_id";
+      "\"^%s(index[.]php/)?(%s/)?article/viewFile/[^/]+/[^/]+$\", base_url, journal_id";
   
   protected static final Pattern PDF_PATTERN = Pattern.compile(
       "/article/viewFile/([^/]+)/([^/]+)$",
