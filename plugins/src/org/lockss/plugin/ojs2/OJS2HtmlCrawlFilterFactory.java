@@ -1,5 +1,5 @@
 /*
- * $Id: OJS2HtmlCrawlFilterFactory.java,v 1.2 2014-06-02 21:54:49 etenbrink Exp $
+ * $Id: OJS2HtmlCrawlFilterFactory.java,v 1.3 2014-06-02 21:56:34 etenbrink Exp $
  */
 
 /*
@@ -56,6 +56,8 @@ public class OJS2HtmlCrawlFilterFactory implements FilterFactory {
         // nor breadcrumbs
         HtmlNodeFilters.tagWithAttribute("div", "id", "breadcrumb"),
         
+        // do not get links from references section
+        HtmlNodeFilters.tagWithAttribute("div", "id", "articleCitations"),
     };
     return new HtmlFilterInputStream(in,
                                      encoding,
