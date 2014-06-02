@@ -1,5 +1,5 @@
 /*
- * $Id: OJS2ArticleIteratorFactory.java,v 1.10 2013-10-18 17:34:17 etenbrink Exp $
+ * $Id: OJS2ArticleIteratorFactory.java,v 1.11 2014-06-02 17:38:50 etenbrink Exp $
  */
 
 /*
@@ -69,13 +69,34 @@ import org.lockss.util.*;
 public class OJS2ArticleIteratorFactory
     implements ArticleIteratorFactory,
                ArticleMetadataExtractorFactory {
-
+  
   public static class Role {
     public static final String FULL_TEXT_EPUB = "FullTextEpub";
     public static final String SOURCE_XML = "SourceXml";
   }
- 
+  
   protected static Logger log = Logger.getLogger(OJS2ArticleIteratorFactory.class);
+  protected static Pattern SHOW_TOC_PATTERN =
+      Pattern.compile("/issue/view/([^/]+)/showToc$", Pattern.CASE_INSENSITIVE);
+  protected static Pattern PLAIN_TOC_PATTERN =
+      Pattern.compile("/issue/view/([^/]+)$", Pattern.CASE_INSENSITIVE);
+  protected static Pattern JLA_PDF_LABEL_PATTERN =
+      Pattern.compile("^[0-9]+[.] \\[pdf\\]$");
+  
+  // params from tdb file corresponding to AU
+  protected static final String ROOT_TEMPLATE =
+      "\"%sindex.php/%s/\", base_url, journal_id";
+  
+  protected static final String PATTERN_TEMPLATE =
+      "\"^%s(index.php/)?%s/article/viewFile/[^/]+/[^/]+$\", base_url, journal_id";
+  
+  protected static final Pattern PDF_PATTERN = Pattern.compile(
+      "/article/viewFile/([^/]+)/([^/]+)$",
+      Pattern.CASE_INSENSITIVE);
+  
+  // how to change from one form (aspect) of article to another
+  protected static final String PDF_REPLACEMENT = "/article/viewFile/$1/$2";
+  protected static final String ABSTRACT_REPLACEMENT = "/article/view/$1";
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -105,23 +126,38 @@ public class OJS2ArticleIteratorFactory
       roots.add(String.format("%s%s/issue/view", base_url, journal_id.toUpperCase()));
     }
     
-    return new OJS2ArticleIterator(au,
-                                   new SubTreeArticleIterator.Spec()
-                                       .setTarget(target)
-                                       .setRoots(roots),
-                                       target);
+    Iterator<ArticleFiles> ai = new OJS2ArticleIterator(au,
+        new SubTreeArticleIterator.Spec().setTarget(target).setRoots(roots),
+        target);
+    if (ai.hasNext()) {
+      return ai;
+    }
     
+    // otherwise try SubTreeArticleIteratorBuilder 
+    SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
+    
+    builder.setSpec(target,
+        ROOT_TEMPLATE, PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
+    
+    // set up pdf to be an aspect that will trigger an ArticleFiles
+    builder.addAspect(
+        PDF_PATTERN, PDF_REPLACEMENT,
+        ArticleFiles.ROLE_FULL_TEXT_PDF);
+    
+    // set up abstract to be an aspect 
+    builder.addAspect(
+        ABSTRACT_REPLACEMENT,
+        ArticleFiles.ROLE_ABSTRACT, ArticleFiles.ROLE_ARTICLE_METADATA);
+    
+    return builder.getSubTreeArticleIterator();
   } // createArticleIterator
-
   
   protected static class OJS2ArticleIterator extends SubTreeArticleIterator {
-
-    protected Pattern SHOW_TOC_PATTERN = Pattern.compile("/issue/view/([^/]+)/showToc$", Pattern.CASE_INSENSITIVE);
-    protected Pattern PLAIN_TOC_PATTERN = Pattern.compile("/issue/view/([^/]+)$", Pattern.CASE_INSENSITIVE);
-    protected Pattern JLA_PDF_LABEL_PATTERN = Pattern.compile("^[0-9]+[.] \\[pdf\\]$");
     
     protected MetadataTarget target;
     protected Set<String> alreadyEmitted;
+    protected ArticleFiles nextAF = null;
+    protected boolean checkedOnce = false;
     
     // Constructor
     public OJS2ArticleIterator(ArchivalUnit au,
@@ -132,6 +168,37 @@ public class OJS2ArticleIteratorFactory
       this.alreadyEmitted = new HashSet<String>();
     }
     
+    @Override
+    public boolean hasNext() {
+      if (checkedOnce) {
+        return super.hasNext();
+      }
+      checkedOnce = true;
+      ArticleFiles tmp = null;
+      try {
+        tmp = super.next();
+      }
+      catch (NoSuchElementException nse) {
+        // do nothing
+      }
+      if(tmp == null){
+        return false;
+      } else {
+        nextAF = tmp;
+        return true;
+      }
+    }
+    
+    @Override
+    public ArticleFiles next() {
+      if (nextAF != null) {
+        ArticleFiles tmp = nextAF;
+        nextAF = null;
+        return tmp;
+      }
+      return super.next();
+    }
+
     @Override
     protected ArticleFiles createArticleFiles(CachedUrl cu) {
       String url = cu.getUrl();
