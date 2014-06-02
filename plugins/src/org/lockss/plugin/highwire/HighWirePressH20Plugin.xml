@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>92</string>
+    <string>93</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,11 +24,11 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>21</string>
+        <string>22</string>
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>8</string>
+        <string>9</string>
       </entry>
     </map>
   </entry>
@@ -95,10 +95,10 @@
         </map>
       </entry>
     </map>
-  </entry>  
+  </entry>
   <entry>
     <string>au_permission_checker_factory</string>
-    <string>org.lockss.plugin.highwire.HighWirePermissionCheckerFactory</string>
+    <string>org.lockss.plugin.highwire.HighWirePressH20PermissionCheckerFactory</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
@@ -153,6 +153,7 @@
     <string>plugin_cache_result_list</string>
     <list>
       <string>500=org.lockss.plugin.highwire.HighWirePressH20HttpResponseHandler</string>
+      <string>509=org.lockss.plugin.highwire.HighWirePressH20HttpResponseHandler</string>
     </list>
   </entry>
   <entry>
