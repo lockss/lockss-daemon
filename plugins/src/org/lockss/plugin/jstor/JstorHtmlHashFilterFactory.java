@@ -93,6 +93,8 @@ public class JstorHtmlHashFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttribute("div", "id", "journalLinks"),
       HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "issueTools"),
       HtmlNodeFilters.tagWithAttribute("div", "class", "subCite"),
+      //<div id="marketing-survey" class="hide">
+      HtmlNodeFilters.tagWithAttribute("div", "id", "marketing-survey"),
         
     };
     
