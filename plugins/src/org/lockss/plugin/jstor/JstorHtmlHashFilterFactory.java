@@ -95,7 +95,10 @@ public class JstorHtmlHashFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttribute("div", "class", "subCite"),
       //<div id="marketing-survey" class="hide">
       HtmlNodeFilters.tagWithAttribute("div", "id", "marketing-survey"),
-        
+      //<div id="SCDataSiteWide" data-institution="Stanford University" ...
+      //information about who/how connecting to site for scripts
+      HtmlNodeFilters.tagWithAttribute("div", "id", "SCDataSiteWide"),
+      
     };
     
     return new HtmlFilterInputStream(in, HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
