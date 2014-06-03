@@ -67,11 +67,11 @@
 
     title <
       name = The Edgar Allen Poe Review ;
-      issn = 1040-9483 ;
-      eissn = 2161-4318 ;
-      issnl = 1040-9483
+      issn = 2150-0428 ;
+      eissn = 2166-2932 ;
+      issnl = 2150-0428
     >
-      param[journal_id] = eugeoneirevi
+      param[journal_id] = edgallpoerev
 
       au < manifest ; exists ; 2010 ; The Eugene O'Neill Review Volume 11 ; 11 >
       au < manifest ; exists ; 2011 ; The Eugene O'Neill Review Volume 12 ; 12 >
@@ -91,7 +91,11 @@
     >
       param[journal_id] = eugeoneirevi
 
+      au < manifest ; exists ; 2010 ; The Eugene O'Neill Review Volume 31 ; 31 >
+      au < doesNotExist ; doesNotExist ; 0 ; The Eugene O'Neill Review Volume 32 ; 32 >
+      au < manifest ; exists ; 2012 ; The Eugene O'Neill Review Volume 33 ; 33 >
       au < manifest ; exists ; 2013 ; The Eugene O'Neill Review Volume 34 ; 34 >
+      au < manifest ; exists ; 2014 ; The Eugene O'Neill Review Volume 35 ; 35 >
       
   }
 
@@ -106,7 +110,11 @@
 
       param[journal_id] = fscotfitzrevi
 
+      au < manifest ; exists ; 2010 ; The F. Scott Fitzgerald Review Volume 8 ; 8 >
+      au < manifest ; exists ; 2011 ; The F. Scott Fitzgerald Review Volume 9 ; 9 >
+      au < manifest ; exists ; 2012 ; The F. Scott Fitzgerald Review Volume 10 ; 10 >
       au < manifest ; exists ; 2013 ; The F. Scott Fitzgerald Review Volume 11 ; 11 >
+      au < expected ; exists ; 2014 ; The F. Scott Fitzgerald Review Volume 12 ; 12 >
       
   }
 
@@ -121,7 +129,11 @@
 
       param[journal_id] = goodsociety
 
+      au < manifest ; exists ; 2010 ; The Good Society Volume 19 ; 19 >
+      au < manifest ; exists ; 2011 ; The Good Society Volume 20 ; 20 >
+      au < manifest ; exists ; 2012 ; The Good Society Volume 21 ; 21 >
       au < manifest ; exists ; 2013 ; The Good Society Volume 22 ; 22 >
+      au < expected ; exists ; 2014 ; The Good Society Volume 23 ; 23 >
       
   }
 
@@ -136,7 +148,28 @@
 
       param[journal_id] = intelitestud
 
+      au < manifest ; exists ; 2009-2010 ; Interdisciplinary Literary Studies Volume 11 ; 11 >
+      au < manifest ; exists ; 2010-2011 ; Interdisciplinary Literary Studies Volume 12 ; 12 >
+      au < manifest ; exists ; 2011 ; Interdisciplinary Literary Studies Volume 13 ; 13 >
+      au < manifest ; exists ; 2012 ; Interdisciplinary Literary Studies Volume 14 ; 14 >
       au < manifest ; exists ; 2013 ; Interdisciplinary Literary Studies Volume 15 ; 15 >
+      au < manifest ; exists ; 2014 ; Interdisciplinary Literary Studies Volume 16 ; 16 >
+      
+  }
+
+  {
+
+    title <
+      name = Journal of Africana Religions ;
+      issn = 2165-5405 ;
+      eissn = 2165-5413 ;
+      issnl = 2165-5405
+    >
+
+      param[journal_id] = jafrireli
+
+      au < manifest ; exists ; 2013 ; Journal of Africana Religions Volume 1 ; 1 >
+      au < manifest ; exists ; 2013 ; Journal of Africana Religions Volume 2 ; 2 >
       
   }
 
@@ -151,7 +184,10 @@
 
       param[journal_id] = jasseinsteffe
 
+      au < manifest ; exists ; 2010 ; Journal of Assessment and Institutional Effectiveness Volume 1 ; 1 >
+      au < manifest ; exists ; 2012 ; Journal of Assessment and Institutional Effectiveness Volume 2 ; 2 >
       au < manifest ; exists ; 2013 ; Journal of Assessment and Institutional Effectiveness Volume 3 ; 3 >
+      au < expected ; exists ; 2014 ; Journal of Assessment and Institutional Effectiveness Volume 4 ; 4 >
       
   }
 
