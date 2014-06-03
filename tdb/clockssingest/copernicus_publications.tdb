@@ -410,9 +410,9 @@
       au < manifest ; exists ; 2008 ; 2008 ; Fossil Record Reports Volume 11 [abstract only] ; 11 >
       au < manifest ; exists ; 2009 ; 2009 ; Fossil Record Reports Volume 12 [abstract only] ; 12 >
       au < manifest ; exists ; 2010 ; 2010 ; Fossil Record Reports Volume 13 [abstract only] ; 13 >
-      au < testing ; exists ; 2011 ; 2011 ; Fossil Record Reports Volume 14 [abstract only] ; 14 >
-      au < testing ; exists ; 2012 ; 2012 ; Fossil Record Reports Volume 15 [abstract only] ; 15 >
-      au < manifest ; exists ; 2013 ; 2013 ; Fossil Record Reports Volume 16 [abstract only] ; 16 >
+      au < ready ; exists ; 2011 ; 2011 ; Fossil Record Reports Volume 14 [abstract only] ; 14 >
+      au < ready ; exists ; 2012 ; 2012 ; Fossil Record Reports Volume 15 [abstract only] ; 15 >
+      au < testing ; exists ; 2013 ; 2013 ; Fossil Record Reports Volume 16 [abstract only] ; 16 >
       }
       
       au < manifest ; exists ; 2014 ; 2014 ; Fossil Record Reports Volume 17 ; 17 >
@@ -787,10 +787,10 @@
       au < manifest ; exists ; 2010 ; 2010 ; Scientific Drilling Volume 10 ; 10 >
       au < manifest ; exists ; 2011 ; 2011 ; Scientific Drilling Volume 11 ; 11 >
       au < manifest ; exists ; 2011 ; 2011 ; Scientific Drilling Volume 12 ; 12 >
-      au < notReady ; exists ; 2012 ; 2012 ; Scientific Drilling Volume 13 ; 13 >
-      au < notReady ; exists ; 2012 ; 2012 ; Scientific Drilling Volume 14 ; 14 >
+      au < ready ; exists ; 2012 ; 2012 ; Scientific Drilling Volume 13 ; 13 >
+      au < ready ; exists ; 2012 ; 2012 ; Scientific Drilling Volume 14 ; 14 >
       au < ready ; exists ; 2013 ; 2013 ; Scientific Drilling Volume 15 ; 15 >
-      au < notReady ; exists ; 2013 ; 2013 ; Scientific Drilling Volume 16 ; 16 >
+      au < ready ; exists ; 2013 ; 2013 ; Scientific Drilling Volume 16 ; 16 >
       au < manifest ; exists ; 2014 ; 2014 ; Scientific Drilling Volume 17 ; 17 >
       au < expected ; exists ; 2014 ; 2014 ; Scientific Drilling Volume 18 ; 18 >
     
