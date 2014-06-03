@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20PermissionCheckerFactory.java,v 1.2 2014-06-02 22:40:24 etenbrink Exp $
+ * $Id: HighWirePressH20PermissionCheckerFactory.java,v 1.3 2014-06-03 01:05:29 etenbrink Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.highwire;
 
 import java.io.BufferedInputStream;
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.Reader;
 import java.util.*;
@@ -68,14 +69,15 @@ public class HighWirePressH20PermissionCheckerFactory
     public boolean checkPermission(PermissionHelper pHelper, Reader inputReader,
         String permissionUrl) {
       
+      BufferedReader in = new BufferedReader(inputReader);
       // FIXME super_checkPermission should be super.checkPermission when 
       // probeUrl and au are visible to child class
-      boolean ret = super_checkPermission(pHelper, inputReader, permissionUrl);
+      boolean ret = super_checkPermission(pHelper, in, permissionUrl);
       if (ret) {
         try {
-          // inputReader.reset();
-          ret = !StringUtil.containsString(inputReader, "platform = DRUPAL", true);
-        } catch (Exception e) {
+          in.reset();
+          ret = !StringUtil.containsString(in, "platform = DRUPAL", true);
+        } catch (IOException e) {
           logger.warning("drupal flag", e);
         }
       }
