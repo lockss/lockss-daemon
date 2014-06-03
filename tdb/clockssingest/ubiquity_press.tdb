@@ -127,11 +127,13 @@
     
     param[base_url] = http://www.comicsgrid.com/
     param[journal_id] = cg
+    
+    comment[back] = publisher says V1 and V2 will be online soon.
 
     au < expected ; exists ; 2011 ; The Comics Grid: Journal of Comics Scholarship Volume 1 ; 1 ; 2011 >
     au < expected ; exists ; 2012 ; The Comics Grid: Journal of Comics Scholarship Volume 2 ; 2 ; 2012 >
     au < exists ; exists ; 2013 ; The Comics Grid: Journal of Comics Scholarship Volume 3 ; 3 ; 2013 >
-    au < expected ; exists ; 2014 ; The Comics Grid: Journal of Comics Scholarship Volume 4 ; 4 ; 2014 >
+    au < exists ; exists ; 2014 ; The Comics Grid: Journal of Comics Scholarship Volume 4 ; 4 ; 2014 >
     
   }
 
@@ -142,7 +144,7 @@
       eissn = 2053-4825
     >
     
-    param[base_url] = hhttp://www.govafricajournal.org/
+    param[base_url] = http://www.govafricajournal.org/
     param[journal_id] = unknown
 
   }
@@ -150,7 +152,7 @@
   {
   
     title < 
-      name = The Journal of Conservation and Museum Studies ;
+      name = Journal of Conservation and Museum Studies ;
       eissn = 1364-0429 
     >
     
@@ -159,20 +161,20 @@
     {
        plugin = org.lockss.plugin.ubiquitypress.ClockssUbiquityPressPlugin
        comment[zapped] = Released under plugin that is obsolete: replaced by ClockssOJS2Plugin
-       au < superseded ; down ; 2011 ; The Journal of Conservation and Museum Studies Volume 9 [to delete] ; 9 ; 2011 >
-       au < superseded ; down ; 2012 ; The Journal of Conservation and Museum Studies Volume 10 [to delete] ; 10 ; 2012 >
+       au < superseded ; down ; 2011 ; Journal of Conservation and Museum Studies Volume 9 [to delete] ; 9 ; 2011 >
+       au < superseded ; down ; 2012 ; Journal of Conservation and Museum Studies Volume 10 [to delete] ; 10 ; 2012 >
     }
     
-    au < manifest ; exists ; 1996 ; The Journal of Conservation and Museum Studies Volume 1 ; 1 ; 1996 >
-    au < manifest ; exists ; 1997 ; The Journal of Conservation and Museum Studies Volume 2-3 ; 2-3 ; 1997 >
-    au < manifest ; exists ; 1998 ; The Journal of Conservation and Museum Studies Volume 4-5 ; 4-5 ; 1998 >
-    au < manifest ; exists ; 1999 ; The Journal of Conservation and Museum Studies Volume 6 ; 6 ; 1999 >
-    au < manifest ; exists ; 2001 ; The Journal of Conservation and Museum Studies Volume 7 ; 7 ; 2001 >
-    au < manifest ; exists ; 2002 ; The Journal of Conservation and Museum Studies Volume 8 ; 8 ; 2002 >
-    au < finished ; crawling ; 2011 ; The Journal of Conservation and Museum Studies Volume 9 ; 9 ; 2011 >
-    au < finished ; crawling ; 2012 ; The Journal of Conservation and Museum Studies Volume 10 ; 10 ; 2012 >
-    au < crawling ; exists ; 2013 ; The Journal of Conservation and Museum Studies Volume 11 ; 11 ; 2013 >
-    au < manifest ; exists ; 2014 ; The Journal of Conservation and Museum Studies Volume 12 ; 12 ; 2014 >
+    au < manifest ; exists ; 1996 ; Journal of Conservation and Museum Studies Volume 1 ; 1 ; 1996 >
+    au < manifest ; exists ; 1997 ; Journal of Conservation and Museum Studies Volume 2-3 ; 2-3 ; 1997 >
+    au < manifest ; exists ; 1998 ; Journal of Conservation and Museum Studies Volume 4-5 ; 4-5 ; 1998 >
+    au < manifest ; exists ; 1999 ; Journal of Conservation and Museum Studies Volume 6 ; 6 ; 1999 >
+    au < manifest ; exists ; 2001 ; Journal of Conservation and Museum Studies Volume 7 ; 7 ; 2001 >
+    au < manifest ; exists ; 2002 ; Journal of Conservation and Museum Studies Volume 8 ; 8 ; 2002 >
+    au < finished ; crawling ; 2011 ; Journal of Conservation and Museum Studies Volume 9 ; 9 ; 2011 >
+    au < finished ; crawling ; 2012 ; Journal of Conservation and Museum Studies Volume 10 ; 10 ; 2012 >
+    au < crawling ; exists ; 2013 ; Journal of Conservation and Museum Studies Volume 11 ; 11 ; 2013 >
+    au < manifest ; exists ; 2014 ; Journal of Conservation and Museum Studies Volume 12 ; 12 ; 2014 >
     
   }
 
@@ -186,15 +188,15 @@
     param[base_url] = http://www.jcircadianrhythms.com/
     param[journal_id] = unknown
 
-    au < exists ; exists ; 2003 ; Journal of Circadian Rhythms Volume 1 ; 1 ; 2003>
-    au < exists ; exists ; 2004 ; Journal of Circadian Rhythms Volume 2 ; 2 ; 2004>
-    au < exists ; exists ; 2005 ; Journal of Circadian Rhythms Volume 3 ; 3 ; 2005>
-    au < exists ; exists ; 2006 ; Journal of Circadian Rhythms Volume 4 ; 4 ; 2006>
-    au < exists ; exists ; 2007 ; Journal of Circadian Rhythms Volume 5 ; 5 ; 2007>
-    au < exists ; exists ; 2008 ; Journal of Circadian Rhythms Volume 6 ; 6 ; 2008>
-    au < exists ; exists ; 2009 ; Journal of Circadian Rhythms Volume 7 ; 7 ; 2009>
-    au < exists ; exists ; 2010 ; Journal of Circadian Rhythms Volume 8 ; 8 ; 2010>
-    au < exists ; exists ; 2011 ; Journal of Circadian Rhythms Volume 9 ; 9 ; 2011>
+    au < exists ; exists ; 2003 ; Journal of Circadian Rhythms Volume 1 ; 1 ; 2003 >
+    au < exists ; exists ; 2004 ; Journal of Circadian Rhythms Volume 2 ; 2 ; 2004 >
+    au < exists ; exists ; 2005 ; Journal of Circadian Rhythms Volume 3 ; 3 ; 2005 >
+    au < exists ; exists ; 2006 ; Journal of Circadian Rhythms Volume 4 ; 4 ; 2006 >
+    au < exists ; exists ; 2007 ; Journal of Circadian Rhythms Volume 5 ; 5 ; 2007 >
+    au < exists ; exists ; 2008 ; Journal of Circadian Rhythms Volume 6 ; 6 ; 2008 >
+    au < exists ; exists ; 2009 ; Journal of Circadian Rhythms Volume 7 ; 7 ; 2009 >
+    au < exists ; exists ; 2010 ; Journal of Circadian Rhythms Volume 8 ; 8 ; 2010 >
+    au < exists ; exists ; 2011 ; Journal of Circadian Rhythms Volume 9 ; 9 ; 2011 >
     au < exists ; exists ; 2012 ; Journal of Circadian Rhythms Volume 10 ; 10 ; 2012 >
     au < exists ; exists ; 2013 ; Journal of Circadian Rhythms Volume 11 ; 11 ; 2013 >
     au < exists ; exists ; 2014 ; Journal of Circadian Rhythms Volume 12 ; 12 ; 2014 >
@@ -234,16 +236,16 @@
   {
   
     title < 
-      name = The Journal of Open Archaeology Data ;
+      name = Journal of Open Archaeology Data ;
       eissn = 2049-1565 
     >
     
     param[base_url] = http://openarchaeologydata.metajnl.com/
     param[journal_id] = joad
 
-    au < exists ; exists ; 2012 ; The Journal of Open Archaeology Data Volume 1 ; 1 ; 2012 >
-    au < exists ; exists ; 2013 ; The Journal of Open Archaeology Data Volume 2 ; 2 ; 2013 >
-    au < expected ; exists ; 2014 ; The Journal of Open Archaeology Data Volume 3 ; 3 ; 2014 >
+    au < exists ; exists ; 2012 ; Journal of Open Archaeology Data Volume 1 ; 1 ; 2012 >
+    au < exists ; exists ; 2013 ; Journal of Open Archaeology Data Volume 2 ; 2 ; 2013 >
+    au < expected ; exists ; 2014 ; Journal of Open Archaeology Data Volume 3 ; 3 ; 2014 >
 
   }
   
@@ -280,7 +282,7 @@
   {
   
     title < 
-      name = The Journal of Open Research Software ;
+      name = Journal of Open Research Software ;
       eissn = 2049-9647 
     >
     
@@ -289,8 +291,8 @@
     
     comment[doNotProcess] = This journal does not have an editorial policies page: http://openresearchsoftware.metajnl.com/index.php/jors/about/editorialPolicies
     
-    au < doNotProcess ; exists ; 2013 ; The Journal of Open Research Software Volume 1 ; 1 ; 2013 >
-    au < doNotProcess ; exists ; 2014 ; The Journal of Open Research Software Volume 2 ; 2 ; 2014 >
+    au < doNotProcess ; exists ; 2013 ; Journal of Open Research Software Volume 1 ; 1 ; 2013 >
+    au < doNotProcess ; exists ; 2014 ; Journal of Open Research Software Volume 2 ; 2 ; 2014 >
 
   }
   
