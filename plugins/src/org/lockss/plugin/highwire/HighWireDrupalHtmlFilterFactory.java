@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireDrupalHtmlFilterFactory.java,v 1.4 2014-05-12 01:57:25 etenbrink Exp $
+ * $Id: HighWireDrupalHtmlFilterFactory.java,v 1.5 2014-06-03 01:00:14 etenbrink Exp $
  */
 
 /*
@@ -74,7 +74,6 @@ public class HighWireDrupalHtmlFilterFactory implements FilterFactory {
         // citation reference extras, right sidebar, prev/next pager can change
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "cit-extra"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-right-wrapper"),
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-wrapper"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pane-highwire-node-pager"),
         // most scripts are in head, however, if any are in the body they are filtered
         new TagNameFilter("script"),
