@@ -2213,7 +2213,7 @@
       param[base_url] = http://www.apfmj.com/
       param[journal_issn] = 1447-056X
 
-      au < ready ; exists ; 2008 ; Asia Pacific Family Medicine Volume 7 ; 7 >
+      au < crawling ; exists ; 2008 ; Asia Pacific Family Medicine Volume 7 ; 7 >
       au < crawling ; exists ; 2009 ; Asia Pacific Family Medicine Volume 8 ; 8 >
       au < crawling ; exists ; 2010 ; Asia Pacific Family Medicine Volume 9 ; 9 >
       au < finished ; crawling ; 2011 ; Asia Pacific Family Medicine Volume 10 ; 10 >
@@ -2294,7 +2294,7 @@
       param[base_url] = http://www.biodatamining.org/
       param[journal_issn] = 1756-0381
 
-      au < ready ; exists ; 2008 ; BioData Mining Volume 1 ; 1 >
+      au < crawling ; exists ; 2008 ; BioData Mining Volume 1 ; 1 >
       au < crawling ; exists ; 2009 ; BioData Mining Volume 2 ; 2 >
       au < crawling ; exists ; 2010 ; BioData Mining Volume 3 ; 3 >
       au < finished ; crawling ; 2011 ; BioData Mining Volume 4 ; 4 >
@@ -2879,7 +2879,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; Chiropractic & Osteopathy Volume 13 ; 13 >
       au < manifest ; exists ; 2006 ; Chiropractic & Osteopathy Volume 14 ; 14 >
       au < manifest ; exists ; 2007 ; Chiropractic & Osteopathy Volume 15 ; 15 >
-      au < ready ; exists ; 2008 ; Chiropractic & Osteopathy Volume 16 ; 16 >
+      au < crawling ; exists ; 2008 ; Chiropractic & Osteopathy Volume 16 ; 16 >
       au < crawling ; exists ; 2009 ; Chiropractic & Osteopathy Volume 17 ; 17 >
       au < crawling ; exists ; 2010 ; Chiropractic & Osteopathy Volume 18 ; 18 >
       }
@@ -3018,7 +3018,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; Comparative Hepatology Volume 4 ; 4 >
       au < manifest ; exists ; 2006 ; Comparative Hepatology Volume 5 ; 5 >
       au < manifest ; exists ; 2007 ; Comparative Hepatology Volume 6 ; 6 >
-      au < ready ; exists ; 2008 ; Comparative Hepatology Volume 7 ; 7 >
+      au < crawling ; exists ; 2008 ; Comparative Hepatology Volume 7 ; 7 >
       au < crawling ; exists ; 2009 ; Comparative Hepatology Volume 8 ; 8 >
       au < crawling ; exists ; 2010 ; Comparative Hepatology Volume 9 ; 9 >
       au < crawling ; exists ; 2011 ; Comparative Hepatology Volume 10 ; 10 >
@@ -3037,7 +3037,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 1752-1505
 
       au < manifest ; exists ; 2007 ; Conflict and Health Volume 1 ; 1 >
-      au < ready ; exists ; 2008 ; Conflict and Health Volume 2 ; 2 >
+      au < crawling ; exists ; 2008 ; Conflict and Health Volume 2 ; 2 >
       au < crawling ; exists ; 2009 ; Conflict and Health Volume 3 ; 3 >
       au < crawling ; exists ; 2010 ; Conflict and Health Volume 4 ; 4 >
       au < crawling ; exists ; 2011 ; Conflict and Health Volume 5 ; 5 >
@@ -3062,7 +3062,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; Cost Effectiveness and Resource Allocation Volume 3 ; 3 >
       au < manifest ; exists ; 2006 ; Cost Effectiveness and Resource Allocation Volume 4 ; 4 >
       au < manifest ; exists ; 2007 ; Cost Effectiveness and Resource Allocation Volume 5 ; 5 >
-      au < ready ; exists ; 2008 ; Cost Effectiveness and Resource Allocation Volume 6 ; 6 >
+      au < crawling ; exists ; 2008 ; Cost Effectiveness and Resource Allocation Volume 6 ; 6 >
       au < crawling ; exists ; 2009 ; Cost Effectiveness and Resource Allocation Volume 7 ; 7 >
       au < crawling ; exists ; 2010 ; Cost Effectiveness and Resource Allocation Volume 8 ; 8 >
       au < crawling ; exists ; 2011 ; Cost Effectiveness and Resource Allocation Volume 9 ; 9 >
@@ -3324,7 +3324,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.epigeneticsandchromatin.com/
       param[journal_issn] = 1756-8935
 
-      au < ready ; exists ; 2008 ; Epigenetics & Chromatin Volume 1 ; 1 >
+      au < crawling ; exists ; 2008 ; Epigenetics & Chromatin Volume 1 ; 1 >
       au < crawling ; exists ; 2009 ; Epigenetics & Chromatin Volume 2 ; 2 >
       au < crawling ; exists ; 2010 ; Epigenetics & Chromatin Volume 3 ; 3 >
       au < crawling ; exists ; 2011 ; Epigenetics & Chromatin Volume 4 ; 4 >
@@ -3448,7 +3448,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.fibrogenesis.com/
       param[journal_issn] = 1755-1536
 
-      au < ready ; exists ; 2008 ; Fibrogenesis & Tissue Repair Volume 1 ; 1 >
+      au < crawling ; exists ; 2008 ; Fibrogenesis & Tissue Repair Volume 1 ; 1 >
       au < crawling ; exists ; 2009 ; Fibrogenesis & Tissue Repair Volume 2 ; 2 >
       au < crawling ; exists ; 2010 ; Fibrogenesis & Tissue Repair Volume 3 ; 3 >
       au < crawling ; exists ; 2011 ; Fibrogenesis & Tissue Repair Volume 4 ; 4 >
@@ -3589,7 +3589,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; Genetics Selection Evolution Volume 37 ; 37 >
       au < manifest ; exists ; 2006 ; Genetics Selection Evolution Volume 38 ; 38 >
       au < manifest ; exists ; 2007 ; Genetics Selection Evolution Volume 39 ; 39 >
-      au < ready ; exists ; 2008 ; Genetics Selection Evolution Volume 40 ; 40 >
+      au < crawling ; exists ; 2008 ; Genetics Selection Evolution Volume 40 ; 40 >
       au < crawling ; exists ; 2009 ; Genetics Selection Evolution Volume 41 ; 41 >
       au < crawling ; exists ; 2010 ; Genetics Selection Evolution Volume 42 ; 42 >
       au < crawling ; exists ; 2011 ; Genetics Selection Evolution Volume 43 ; 43 >
@@ -3851,7 +3851,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; Hereditary Cancer in Clinical Practice Volume 3 ; 3 >
       au < manifest ; exists ; 2006 ; Hereditary Cancer in Clinical Practice Volume 4 ; 4 >
       au < manifest ; exists ; 2007 ; Hereditary Cancer in Clinical Practice Volume 5 ; 5 >
-      au < ready ; exists ; 2008 ; Hereditary Cancer in Clinical Practice Volume 6 ; 6 >
+      au < crawling ; exists ; 2008 ; Hereditary Cancer in Clinical Practice Volume 6 ; 6 >
       au < crawling ; exists ; 2009 ; Hereditary Cancer in Clinical Practice Volume 7 ; 7 >
       au < crawling ; exists ; 2010 ; Hereditary Cancer in Clinical Practice Volume 8 ; 8 >
       au < crawling ; exists ; 2011 ; Hereditary Cancer in Clinical Practice Volume 9 ; 9 >
@@ -3891,7 +3891,7 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < manifest ; exists ; 2003-2004 ; Human Genomics Volume 1 ; 1 >
       au < manifest ; exists ; 2005-2006 ; Human Genomics Volume 2 ; 2 >
-      au < ready ; exists ; 2008-2009 ; Human Genomics Volume 3 ; 3 >
+      au < crawling ; exists ; 2008-2009 ; Human Genomics Volume 3 ; 3 >
       au < crawling ; exists ; 2009-2010 ; Human Genomics Volume 4 ; 4 >
       au < crawling ; exists ; 2010-2011 ; Human Genomics Volume 5 ; 5 >
       au < crawling ; exists ; 2012 ; Human Genomics Volume 6 ; 6 >
@@ -3963,7 +3963,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; Immunome Research Volume 1 ; 1 >
       au < manifest ; exists ; 2006 ; Immunome Research Volume 2 ; 2 >
       au < manifest ; exists ; 2007 ; Immunome Research Volume 3 ; 3 >
-      au < ready ; exists ; 2008 ; Immunome Research Volume 4 ; 4 >
+      au < crawling ; exists ; 2008 ; Immunome Research Volume 4 ; 4 >
       au < manifest ; exists ; 2009 ; Immunome Research Volume 5 ; 5 >
       au < crawling ; exists ; 2010 ; Immunome Research Volume 6 ; 6 >
 
@@ -4300,7 +4300,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.ijponline.net/
       param[journal_issn] = 1824-7288
 
-      au < ready ; exists ; 2008 ; Italian Journal of Pediatrics Volume 34 ; 34 >
+      au < crawling ; exists ; 2008 ; Italian Journal of Pediatrics Volume 34 ; 34 >
       au < crawling ; exists ; 2009 ; Italian Journal of Pediatrics Volume 35 ; 35 >
       au < crawling ; exists ; 2010 ; Italian Journal of Pediatrics Volume 36 ; 36 >
       au < crawling ; exists ; 2011 ; Italian Journal of Pediatrics Volume 37 ; 37 >
@@ -5015,7 +5015,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.ovarianresearch.com/
       param[journal_issn] = 1757-2215
 
-      au < ready ; exists ; 2008 ; Journal of Ovarian Research Volume 1 ; 1 >
+      au < crawling ; exists ; 2008 ; Journal of Ovarian Research Volume 1 ; 1 >
       au < crawling ; exists ; 2009 ; Journal of Ovarian Research Volume 2 ; 2 >
       au < crawling ; exists ; 2010 ; Journal of Ovarian Research Volume 3 ; 3 >
       au < crawling ; exists ; 2011 ; Journal of Ovarian Research Volume 4 ; 4 >
@@ -6028,7 +6028,7 @@ comment[bmr] = journal archive available, but no new volumes
         au < manifest ; exists ; 2005 ; Saline Systems Volume 1 ; 1 >
         au < manifest ; exists ; 2006 ; Saline Systems Volume 2 ; 2 >
         au < manifest ; exists ; 2007 ; Saline Systems Volume 3 ; 3 >
-        au < ready ; exists ; 2008 ; Saline Systems Volume 4 ; 4 >
+        au < crawling ; exists ; 2008 ; Saline Systems Volume 4 ; 4 >
         au < crawling ; exists ; 2009 ; Saline Systems Volume 5 ; 5 >
         au < crawling ; exists ; 2010 ; Saline Systems Volume 6 ; 6 >
         au < crawling ; exists ; 2011 ; Saline Systems Volume 7 ; 7 >
@@ -6047,7 +6047,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.sjtrem.com/
       param[journal_issn] = 1757-7241
 
-      au < ready ; exists ; 2008 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 16 ; 16 >
+      au < crawling ; exists ; 2008 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 16 ; 16 >
       au < crawling ; exists ; 2009 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 17 ; 17 >
       au < crawling ; exists ; 2010 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 18 ; 18 >
       au < crawling ; exists ; 2011 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 19 ; 19 >
@@ -6252,7 +6252,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.thyroidresearchjournal.com/
       param[journal_issn] = 1756-6614
 
-      au < ready ; exists ; 2008 ; Thyroid Research Volume 1 ; 1 >
+      au < crawling ; exists ; 2008 ; Thyroid Research Volume 1 ; 1 >
       au < crawling ; exists ; 2009 ; Thyroid Research Volume 2 ; 2 >
       au < crawling ; exists ; 2010 ; Thyroid Research Volume 3 ; 3 >
       au < crawling ; exists ; 2011 ; Thyroid Research Volume 4 ; 4 >
@@ -6275,7 +6275,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2002-2003 ; Tobacco Induced Diseases Volume 1 ; 1 >
       au < manifest ; exists ; 2004 ; Tobacco Induced Diseases Volume 2 ; 2 >
       au < manifest ; exists ; 2005-2007 ; Tobacco Induced Diseases Volume 3 ; 3 >
-      au < ready ; exists ; 2008 ; Tobacco Induced Diseases Volume 4 ; 4 >
+      au < crawling ; exists ; 2008 ; Tobacco Induced Diseases Volume 4 ; 4 >
       au < crawling ; exists ; 2009 ; Tobacco Induced Diseases Volume 5 ; 5 >
       au < doesNotExist ; doesNotExist ; 0 ; Tobacco Induced Diseases Volume 6 ; 6 >
       au < doesNotExist ; doesNotExist ; 0 ; Tobacco Induced Diseases Volume 7 ; 7 >
@@ -6453,7 +6453,7 @@ comment[bmr] = journal archive available, but no new volumes
         param[base_url] = http://www.waojournal.org/
         param[journal_issn] = 1939-4551
 
-        au < ready ; exists ; 2008 ; World Allergy Organization Journal Volume 1 ; 1 >
+        au < crawling ; exists ; 2008 ; World Allergy Organization Journal Volume 1 ; 1 >
         au < manifest ; exists ; 2009 ; World Allergy Organization Journal Volume 2 ; 2 >
         au < manifest ; exists ; 2010 ; World Allergy Organization Journal Volume 3 ; 3 >
         au < manifest ; exists ; 2011 ; World Allergy Organization Journal Volume 4 ; 4 >
