@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuthorizationInterceptor.java,v 1.1.2.1 2014-06-02 18:04:50 fergaloy-sf Exp $
+ * $Id: TestAuthorizationInterceptor.java,v 1.1.2.2 2014-06-03 21:24:33 fergaloy-sf Exp $
  */
 
 /*
@@ -37,28 +37,19 @@
  */
 package org.lockss.ws.cxf;
 
-import java.util.Properties;
 import org.lockss.account.AccountManager;
 import org.lockss.account.UserAccount;
-import org.lockss.config.ConfigManager;
 import org.lockss.servlet.LockssServlet;
-import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
 
 public class TestAuthorizationInterceptor extends LockssTestCase {
-
   AccountManager accountManager;
   MyAuthorizationInterceptor interceptor = new MyAuthorizationInterceptor();
 
   public void setUp() throws Exception {
     super.setUp();
 
-    String tempDirPath = getTempDir().getAbsolutePath();
-
-    Properties props = new Properties();
-    props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
-		      tempDirPath);
-    ConfigurationUtil.setCurrentConfigFromProps(props);
+    setUpDiskSpace();
 
     accountManager = new AccountManager();
     getMockLockssDaemon().setAccountManager(accountManager);
