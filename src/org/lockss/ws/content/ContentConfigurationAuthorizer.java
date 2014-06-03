@@ -1,5 +1,5 @@
 /*
- * $Id: AddAuByIdClient.java,v 1.2 2014-06-03 22:45:53 fergaloy-sf Exp $
+ * $Id: ContentConfigurationAuthorizer.java,v 1.2 2014-06-03 22:45:53 fergaloy-sf Exp $
  */
 
 /*
@@ -31,27 +31,22 @@
  */
 
 /**
- * A client for the ContentConfigurationService.addAuById() web service
- * operation.
+ * The authorization interceptor for the ContentConfiguration web service.
  */
-package org.lockss.ws.content.client;
+package org.lockss.ws.content;
 
-import org.lockss.ws.content.ContentConfigurationService;
-import org.lockss.ws.entities.ContentConfigurationResult;
+import org.lockss.servlet.LockssServlet;
+import org.lockss.ws.cxf.AuthorizationInterceptor;
 
-public class AddAuByIdClient extends ContentConfigurationServiceBaseClient {
+public class ContentConfigurationAuthorizer extends AuthorizationInterceptor {
   /**
-   * The main method.
+   * Provides the name of the role required for the user to be able to execute
+   * operations of this web service.
    * 
-   * @param args
-   *          A String[] with the command line arguments.
-   * @throws Exception
+   * @return a String with the required role.
    */
-  public static void main(String args[]) throws Exception {
-    ContentConfigurationService proxy = new AddAuByIdClient().getProxy();
-
-    ContentConfigurationResult result =
-	proxy.addAuById("org|lockss|plugin|emerald|EmeraldPlugin&base_url~http%3A%2F%2Fwww%2Eemeraldinsight%2Ecom%2F&journal_issn~0951-3574&volume_name~4");
-    System.out.println("result = " + result);
+  @Override
+  protected String getRequiredRole() {
+    return LockssServlet.ROLE_AU_ADMIN;
   }
 }
