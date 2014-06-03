@@ -1,5 +1,5 @@
 /*
- * $Id: SilverchairHtmlLinkExtractor.java,v 1.3 2014-05-07 14:38:23 thib_gc Exp $
+ * $Id: SilverchairHtmlLinkExtractor.java,v 1.4 2014-06-03 00:49:48 thib_gc Exp $
  */
 
 /*
@@ -96,6 +96,13 @@ public class SilverchairHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
       
     }
 
+    else if ((ch == 'i' || ch == 'I') && beginsWithTag(link, IMGTAG)) {
+      String dataOriginal = getAttributeValue("data-original", link);
+      if (baseUrl == null) { baseUrl = new URL(srcUrl); } // Copycat of parseLink()
+      emit(cb, resolveUri(baseUrl, dataOriginal));
+      return super.extractLinkFromTag(link, au, cb);
+    }
+    
     else if ((ch == 's' || ch == 'S') && beginsWithTag(link, SCRIPTTAG)) {
       String src = getAttributeValue(SRC, link);
       if (src == null) {
