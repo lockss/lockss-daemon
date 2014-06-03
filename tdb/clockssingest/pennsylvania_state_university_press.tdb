@@ -7,13 +7,13 @@
   >
 
   plugin = org.lockss.plugin.jstor.ClockssJstorPlugin
-  
+
   param[base_url] = http://www.jstor.org/
   param[base_url2] = https://www.jstor.org/
   implicit < status ; status2 ; year ; name ; param[volume_name] >
-  
+
   {
-  
+
     title <
       name = 14th Century English Mystics Newsletter ;
       issn = 0737-5840 ;
@@ -21,28 +21,32 @@
     >
 
       param[journal_id] = 14centengmystnew
-
-      au < testing ; exists ; 1982 ; 14th Century English Mystics Newsletter Volume 8 ; 8 >
-      au < testing ; exists ; 2006 ; 14th Century English Mystics Newsletter Volume 32 ; 32 >
+      comment[years] = 1974-1983. Outside of contract years.
+      comment[continued_by] = Mystics Quarterly 0742-5503
+      
   }
 
   {
-  
+
     title <
       name = The Chaucer Review ;
       issn = 0009-2002 ;
       eissn = 1528-4204 ;
       issnl = 0009-2002
     >
-    
+
       param[journal_id] = chaucerrev
 
-      au < testing ; exists ; 2010 ; The Chaucer Review Volume 44  ; 44 >    
-      au < testing ; exists ; 2013 ; The Chaucer Review Volume 47 ; 47 >
+      au < manifest ; exists ; 2009-2010 ; The Chaucer Review Volume 44 ; 44 >
+      au < manifest ; exists ; 2010-2011 ; The Chaucer Review Volume 45 ; 45 >
+      au < manifest ; exists ; 2011-2012 ; The Chaucer Review Volume 46 ; 46 >
+      au < manifest ; exists ; 2012-2013 ; The Chaucer Review Volume 47 ; 47 >
+      au < manifest ; exists ; 2013-2014 ; The Chaucer Review Volume 48 ; 48 >
+      
   }
 
   {
-  
+
     title <
       name = Comparative Literature Studies ;
       issn = 0010-4132 ;
@@ -51,122 +55,158 @@
     >
       param[journal_id] = complitstudies
 
-      au < testing ; exists ; 2013 ; Comparative Literature Studies Volume 50 ; 50 >
+      au < manifest ; exists ; 2010 ; Comparative Literature Studies Volume 47 ; 47 >
+      au < manifest ; exists ; 2011 ; Comparative Literature Studies Volume 48 ; 48 >
+      au < manifest ; exists ; 2012 ; Comparative Literature Studies Volume 49 ; 49 >
+      au < manifest ; exists ; 2013 ; Comparative Literature Studies Volume 50 ; 50 >
+      au < manifest ; exists ; 2014 ; Comparative Literature Studies Volume 51 ; 51 >
+      
   }
 
   {
-  
+
+    title <
+      name = The Edgar Allen Poe Review ;
+      issn = 1040-9483 ;
+      eissn = 2161-4318 ;
+      issnl = 1040-9483
+    >
+      param[journal_id] = eugeoneirevi
+
+      au < manifest ; exists ; 2010 ; The Eugene O'Neill Review Volume 11 ; 11 >
+      au < manifest ; exists ; 2011 ; The Eugene O'Neill Review Volume 12 ; 12 >
+      au < manifest ; exists ; 2012 ; The Eugene O'Neill Review Volume 13 ; 13 >
+      au < manifest ; exists ; 2013 ; The Eugene O'Neill Review Volume 14 ; 14 >
+      au < manifest ; exists ; 2014 ; The Eugene O'Neill Review Volume 15 ; 15 >
+      
+  }
+
+  {
+
     title <
       name = The Eugene O'Neill Review ;
       issn = 1040-9483 ;
       eissn = 2161-4318 ;
-      issnl = 1040-9483 
+      issnl = 1040-9483
     >
       param[journal_id] = eugeoneirevi
 
-      au < testing ; exists ; 2013 ; The Eugene O'Neill Review Volume 34 ; 34 >    
+      au < manifest ; exists ; 2013 ; The Eugene O'Neill Review Volume 34 ; 34 >
+      
   }
 
   {
-  
+
     title <
       name = The F. Scott Fitzgerald Review ;
       issn = 1543-3951 ;
       eissn = 1755-6333 ;
-      issnl = 1543-3951 
+      issnl = 1543-3951
     >
-    
+
       param[journal_id] = fscotfitzrevi
 
-      au < testing ; exists ; 2013 ; The F. Scott Fitzgerald Review Volume 11 ; 11 >      
+      au < manifest ; exists ; 2013 ; The F. Scott Fitzgerald Review Volume 11 ; 11 >
+      
   }
-  
+
   {
-  
+
     title <
       name = The Good Society ;
       issn = 1089-0017 ;
       eissn = 1538-9731 ;
       issnl = 1089-0017
     >
-    
+
       param[journal_id] = goodsociety
 
-      au < testing ; exists ; 2013 ; The Good Society Volume 22 ; 22 > 
+      au < manifest ; exists ; 2013 ; The Good Society Volume 22 ; 22 >
+      
   }
-  
+
   {
-  
+
     title <
       name = Interdisciplinary Literary Studies ;
       issn = 1524-8429 ;
       eissn = 2161-427X ;
       issnl = 1524-8429
     >
-    
+
       param[journal_id] = intelitestud
 
-      au < testing ; exists ; 2013 ; Interdisciplinary Literary Studies Volume 15 ; 15 >     
+      au < manifest ; exists ; 2013 ; Interdisciplinary Literary Studies Volume 15 ; 15 >
+      
   }
-  
+
   {
-  
+
     title <
       name = Journal of Assessment and Institutional Effectiveness ;
       issn = 2160-6765 ;
       eissn = 2160-6757 ;
-      issnl = 2160-6757 
+      issnl = 2160-6757
     >
-    
+
       param[journal_id] = jasseinsteffe
 
-      au < testing ; exists ; 2013 ; Journal of Assessment and Institutional Effectiveness Volume 3 ; 3 >     
+      au < manifest ; exists ; 2013 ; Journal of Assessment and Institutional Effectiveness Volume 3 ; 3 >
+      
   }
 
   {
-  
+
     title <
       name = The Journal of General Education ;
       issn = 0021-3667 ;
       eissn = 1527-2060 ;
       issnl = 0021-3667
     >
-    
+
       param[journal_id] = jgeneeduc
 
-      au < testing ; exists ; 2013 ; The Journal of General Education Volume 62 ; 62 > 
+      au < manifest ; exists ; 2013 ; The Journal of General Education Volume 62 ; 62 >
+      
   }
 
   {
-  
+
     title <
       name = Journal of Medieval Religious Cultures ;
       issn = 1947-6566 ;
       eissn = 2153-9650 ;
       issnl = 1947-6566
     >
-    
-      param[journal_id] = jmedirelicult
 
-      au < testing ; exists ; 2013 ; Journal of Medieval Religious Cultures Volume 39 ; 39 >     
+      param[journal_id] = jmedirelicult
+      comment[continues] = Mystics Quarterly 0742-5503
+
+      au < manifest ; exists ; 2010 ; Journal of Medieval Religious Cultures Volume 36 ; 36 >
+      au < manifest ; exists ; 2011 ; Journal of Medieval Religious Cultures Volume 37 ; 37 >
+      au < manifest ; exists ; 2012 ; Journal of Medieval Religious Cultures Volume 38 ; 38 >
+      au < manifest ; exists ; 2013 ; Journal of Medieval Religious Cultures Volume 39 ; 39 >
+      au < manifest ; exists ; 2014 ; Journal of Medieval Religious Cultures Volume 40 ; 40 >
+      
   }
 
   {
-  
+
     title <
       name = Journal of Modern Periodical Studies ;
       issn = 1947-6574 ;
       eissn = 2152-9272 ;
       issnl = 1947-6574
     >
-    
+
       param[journal_id] = jmodeperistud
 
-      au < testing ; exists ; 2013 ; Journal of Modern Periodical Studies Volume 4 ; 4 >     
+      au < manifest ; exists ; 2013 ; Journal of Modern Periodical Studies Volume 4 ; 4 >
+      
   }
 
   {
-  
+
     title <
       name = Journal of Moravian History ;
       issn = 1933-6632 ;
@@ -175,63 +215,69 @@
     >
       param[journal_id] = jmorahist
 
-      au < testing ; exists ; 2013 ; Journal of Moravian History Volume 13 ; 13 >
-    
+      au < manifest ; exists ; 2013 ; Journal of Moravian History Volume 13 ; 13 >
+      
+
   }
 
   {
-  
+
     title <
       name = The Journal of Nietzsche Studies ;
       issn = 1538-4594 ;
       eissn = 0968-8005 ;
       issnl = 0968-8005
     >
-    
+
       param[journal_id] = jnietstud
 
-      au < testing ; exists ; 2013 ; The Journal of Nietzsche Studies Volume 44 ; 44 > 
+      au < manifest ; exists ; 2013 ; The Journal of Nietzsche Studies Volume 44 ; 44 >
+      
   }
 
   {
-  
+
     title <
       name = The Journal of Speculative Philosophy ;
       issn = 0891-625X ;
       eissn = 1527-9383 ;
       issnl = 0891-625X
     >
-    
+
       param[journal_id] = jspecphil
 
-      au < testing ; exists ; 2013 ; The Journal of Speculative Philosophy Volume 27 ; 27 > 
+      au < manifest ; exists ; 2013 ; The Journal of Speculative Philosophy Volume 27 ; 27 >
+      
   }
 
   {
-  
+
     title <
       name = Mediterranean Studies ;
       issn = 1074-164X ;
       eissn = 2161-4741 ;
       issnl = 1074-164X
     >
-    
+
       param[journal_id] = mediterraneanstu
 
-      au < testing ; exists ; 2013 ; Mediterranean Studies Volume 21 ; 21 >     
+      au < manifest ; exists ; 2013 ; Mediterranean Studies Volume 21 ; 21 >
+      
   }
 
   {
-  
+
     title <
       name = Mystics Quarterly ;
       issn = 0742-5503 ;
       issnl = 0742-5503
     >
-    
-      param[journal_id] = mysticsquarterly
 
-      au < testing ; exists ; 2009 ; Mystics Quarterly Volume 35 ; 35 >     
+      param[journal_id] = mysticsquarterly
+      comment[years] = 1984-2009. Outside of contract years.
+      comment[continues] = 14th Century English Mystics Newsletter 0737-5840
+      comment[continued_by] = Journal of Medieval Religious Cultures 1947-6566
+      
   }
 
   {
@@ -241,42 +287,45 @@
       eissn = 2153-2109 ;
       issnl = 0031-4528
     >
-    
+
       param[journal_id] = pennhistory
 
-      au < testing ; exists ; 2013 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 80 ; 80 > 
+      au < manifest ; exists ; 2013 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 80 ; 80 >
+      
   }
 
   {
-  
+
     title <
       name = Philosophy and Rhetoric ;
       issn = 1527-2079 ;
       eissn = 0031-8213 ;
       issnl = 0031-8213
     >
-    
+
       param[journal_id] = philrhet
 
-      au < testing ; exists ; 2013 ; Philosophy and Rhetoric Volume 46 ; 46 > 
+      au < manifest ; exists ; 2013 ; Philosophy and Rhetoric Volume 46 ; 46 >
+      
   }
 
   {
-  
+
     title <
       name = Preternature: Critical and Historical Studies on the Preternatural ;
       issn = 2161-2196 ;
       eissn = 2161-2188 ;
-      issnl = 2161-2188 
+      issnl = 2161-2188
     >
-    
+
       param[journal_id] = preternature
 
-      au < testing ; exists ; 2013 ; Preternature: Critical and Historical Studies on the Preternatural Volume 2 ; 2 >     
+      au < manifest ; exists ; 2013 ; Preternature: Critical and Historical Studies on the Preternatural Volume 2 ; 2 >
+      
   }
 
   {
-  
+
     title <
       name = Resources for American Literary Study ;
       issn = 1529-1502 ;
@@ -287,73 +336,78 @@
   }
 
   {
-  
+
     title <
       name = SHAW The Annual of Bernard Shaw Studies ;
       issn = 0741-5842 ;
       eissn = 1529-1480 ;
       issnl = 0741-5842
     >
-    
+
       param[journal_id] = shaw
 
-      au < testing ; exists ; 2013 ; SHAW The Annual of Bernard Shaw Studies Volume 33 ; 33 > 
+      au < manifest ; exists ; 2013 ; SHAW The Annual of Bernard Shaw Studies Volume 33 ; 33 >
+      
   }
 
   {
-  
+
     title <
       name = Soundings: An Interdisciplinary Journal ;
       issn = 0038-1861 ;
       eissn = 2161-6302 ;
-      issnl = 0038-1861 
+      issnl = 0038-1861
     >
-    
+
       param[journal_id] = soundings
 
-      au < testing ; exists ; 2013 ; Soundings: An Interdisciplinary Journal Volume 96 ; 96 >     
+      au < manifest ; exists ; 2013 ; Soundings: An Interdisciplinary Journal Volume 96 ; 96 >
+      
   }
 
   {
-  
+
     title <
       name = Studies in American Jewish Literature ;
       issn = 0271-9274 ;
       eissn = 1948-5077 ;
-      issnl = 0271-9274 
+      issnl = 0271-9274
     >
-    
+
       param[journal_id] = studamerjewilite
 
-      au < testing ; exists ; 2013 ; Studies in American Jewish Literature Volume 32 ; 32 >     
+      au < manifest ; exists ; 2013 ; Studies in American Jewish Literature Volume 32 ; 32 >
+      
   }
 
   {
-  
+
     title <
       name = Transportation Journal ;
       issn = 0041-1612 ;
       eissn = 2157-328X ;
-      issnl = 0041-1612 
+      issnl = 0041-1612
     >
-    
+
       param[journal_id] = transportationj
 
-      au < testing ; exists ; 2013 ; Transportation Journal Volume 52 ; 52 >     
+      au < manifest ; exists ; 2013 ; Transportation Journal Volume 52 ; 52 >
+      
   }
 
   {
-  
+
     title <
       name = Utopian Studies ;
       issn = 1045-991X ;
       eissn = 2154-9648 ;
-      issnl = 1045-991X 
+      issnl = 1045-991X
     >
-    
+
       param[journal_id] = utopianstudies
 
-      au < testing ; exists ; 2013 ; Utopian Studies Volume 24 ; 24 >     
+      au < manifest ; exists ; 2013 ; Utopian Studies Volume 24 ; 24 >
+      
   }
 
 }
