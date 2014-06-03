@@ -26,7 +26,7 @@
       plugin = needs.plugin
       implicit < status ; year ; name ; param[volume_name] >
       comment[platform] = JSTOR
-      param[journal_code] = hesperia
+      param[journal_id] = hesperia
 
       au < exists ; 1932 ; Hesperia Volume 1 ; 1 >
       au < exists ; 1933 ; Hesperia Volume 2 ; 2 >
