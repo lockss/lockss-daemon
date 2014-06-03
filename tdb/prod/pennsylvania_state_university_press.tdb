@@ -16,6 +16,15 @@
       plugin = org.lockss.plugin.jstor.JSTORPlugin
       comment[needs_plugin] = years 1974-1983 on JSTOR/PSU Press
       comment[continued_by] = 0742-5503
+      param[base_url] = http://www.jstor.org/
+      param[base_url2] = https://www.jstor.org/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      param[journal_id] = 14centengmystnew
+
+      au < exists ; 1982 ; 14th Century English Mystics Newsletter Volume 8 ; 8 >
+      au < exists ; 2006 ; 14th Century English Mystics Newsletter Volume 32 ; 32 >
+
     }
     
   }
@@ -428,6 +437,13 @@
       plugin = org.lockss.plugin.jstor.JSTORPlugin
       comment[needs_plugin] = years 2006-2012 on JSTOR/PSU Press.
       comment[continues] = 0886-1730 JSTOR/Moravian Historical Society? years 1857-2000
+      param[base_url] = http://www.jstor.org/
+      param[base_url2] = https://www.jstor.org/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      param[journal_id] = jmorahist
+
+      au < exists ; 2013 ; Journal of Moravian History Volume 13 ; 13 >
       
     }
     
