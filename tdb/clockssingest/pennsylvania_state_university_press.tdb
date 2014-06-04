@@ -194,6 +194,40 @@
   {
 
     title <
+      name = The Journal of Ayn Rand Studies ;
+      issn = 1526-1018 ;
+      eissn = 2169-7132 ;
+      issnl = 1526-1018
+    >
+
+      param[journal_id] = jaynrandstud
+
+      au < manifest ; exists ; 2011 ; The Journal of Ayn Rand Studies Volume 11 ; 11 >
+      au < manifest ; exists ; 2012 ; The Journal of Ayn Rand Studies Volume 12 ; 12 >
+      au < manifest ; exists ; 2013 ; The Journal of Ayn Rand Studies Volume 13 ; 13 >
+      au < expected ; exists ; 2014 ; The Journal of Ayn Rand Studies Volume 14 ; 14 >
+      
+  }
+
+  {
+
+    title <
+      name = Journal of Eastern Mediterranean Archaeology & Heritage Studies ;
+      issn = 2166-3548 ;
+      eissn = 2166-3556 ;
+      issnl = 2166-3548
+    >
+
+      param[journal_id] = jeasmedarcherstu
+
+      au < manifest ; exists ; 2013 ; The Journal of Ayn Rand Studies Volume 1 ; 1 >
+      au < manifest ; exists ; 2014 ; The Journal of Ayn Rand Studies Volume 2 ; 2 >
+      
+  }
+
+  {
+
+    title <
       name = The Journal of General Education ;
       issn = 0021-3667 ;
       eissn = 1527-2060 ;
@@ -202,7 +236,11 @@
 
       param[journal_id] = jgeneeduc
 
+      au < manifest ; exists ; 2010 ; The Journal of General Education Volume 59 ; 59 >
+      au < manifest ; exists ; 2011 ; The Journal of General Education Volume 60 ; 60 >
+      au < manifest ; exists ; 2012 ; The Journal of General Education Volume 61 ; 61 >
       au < manifest ; exists ; 2013 ; The Journal of General Education Volume 62 ; 62 >
+      au < manifest ; exists ; 2014 ; The Journal of General Education Volume 63 ; 63 >
       
   }
 
@@ -237,7 +275,10 @@
 
       param[journal_id] = jmodeperistud
 
-      au < manifest ; exists ; 2013 ; Journal of Modern Periodical Studies Volume 4 ; 4 >
+      au < manifest ; exists ; 2010 ; Journal of Modern Periodical Studies Volume 1 ; 1 >
+      au < manifest ; exists ; 2011 ; Journal of Modern Periodical Studies Volume 2 ; 2 >
+      au < manifest ; exists ; 2012 ; Journal of Modern Periodical Studies Volume 3 ; 3 >
+      au < manifest ; exists ; 2013-2014 ; Journal of Modern Periodical Studies Volume 4 ; 4 >
       
   }
 
@@ -251,7 +292,13 @@
     >
       param[journal_id] = jmorahist
 
+      au < manifest ; exists ; 2010 ; Journal of Moravian History Volume 8 ; 8 >
+      au < manifest ; exists ; 2010 ; Journal of Moravian History Volume 9 ; 9 >
+      au < manifest ; exists ; 2011 ; Journal of Moravian History Volume 10 ; 10 >
+      au < manifest ; exists ; 2011 ; Journal of Moravian History Volume 11 ; 11 >
+      au < manifest ; exists ; 2012 ; Journal of Moravian History Volume 12 ; 12 >
       au < manifest ; exists ; 2013 ; Journal of Moravian History Volume 13 ; 13 >
+      au < manifest ; exists ; 2014 ; Journal of Moravian History Volume 14 ; 14 >
       
 
   }
@@ -267,7 +314,13 @@
 
       param[journal_id] = jnietstud
 
+      au < manifest ; exists ; 2010 ; The Journal of Nietzsche Studies Volume 39 ; 39 >
+      au < manifest ; exists ; 2010 ; The Journal of Nietzsche Studies Volume 40 ; 40 >
+      au < manifest ; exists ; 2011 ; The Journal of Nietzsche Studies Volume 41 ; 41 >
+      au < manifest ; exists ; 2011 ; The Journal of Nietzsche Studies Volume 42 ; 42 >
+      au < manifest ; exists ; 2012 ; The Journal of Nietzsche Studies Volume 43 ; 43 >
       au < manifest ; exists ; 2013 ; The Journal of Nietzsche Studies Volume 44 ; 44 >
+      au < manifest ; exists ; 2014 ; The Journal of Nietzsche Studies Volume 45 ; 45 >
       
   }
 
@@ -282,7 +335,30 @@
 
       param[journal_id] = jspecphil
 
+      au < manifest ; exists ; 2010 ; The Journal of Speculative Philosophy Volume 24 ; 24 >
+      au < manifest ; exists ; 2011 ; The Journal of Speculative Philosophy Volume 25 ; 25 >
+      au < manifest ; exists ; 2012 ; The Journal of Speculative Philosophy Volume 26 ; 26 >
       au < manifest ; exists ; 2013 ; The Journal of Speculative Philosophy Volume 27 ; 27 >
+      au < manifest ; exists ; 2014 ; The Journal of Speculative Philosophy Volume 28 ; 28 >
+      
+  }
+
+  {
+
+    title <
+      name = The Mark Twain Annual ;
+      issn = 1553-0981 ;
+      eissn = 1756-2597 ;
+      issnl = 1553-0981
+    >
+
+      param[journal_id] = marktwaij
+
+      au < manifest ; exists ; 2010 ; The Mark Twain Annual Volume 8 ; 8 >
+      au < manifest ; exists ; 2011 ; The Mark Twain Annual Volume 9 ; 9 >
+      au < manifest ; exists ; 2012 ; The Mark Twain Annual Volume 10 ; 10 >
+      au < manifest ; exists ; 2013 ; The Mark Twain Annual Volume 11 ; 11 >
+      au < expected ; exists ; 2014 ; The Mark Twain Annual Volume 12 ; 12 >
       
   }
 
