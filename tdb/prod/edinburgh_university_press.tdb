@@ -439,16 +439,16 @@
       param[journal_id] = epi
       implicit < status ; year ; name ; param[volume_name] >
       
-      comment[moved] = moved to Cambridge U Press as of 2012. Previous issues still online.
+      comment[moved] = moved to Cambridge U Press as of 2012.
 
-      au < released ; 2004-2005 ; Episteme Volume 1 ; 1 >
-      au < released ; 2005-2006 ; Episteme Volume 2 ; 2 >
-      au < released ; 2006 ; Episteme Volume 3 ; 3 >
-      au < released ; 2007 ; Episteme Volume 4 ; 4 >
-      au < released ; 2008 ; Episteme Volume 5 ; 5 >
-      au < released ; 2009 ; Episteme Volume 6 ; 6 >
-      au < released ; 2010 ; Episteme Volume 7 ; 7 >
-      au < released ; 2011 ; Episteme Volume 8 ; 8 >
+      au < down ; 2004-2005 ; Episteme Volume 1 ; 1 >
+      au < down ; 2005-2006 ; Episteme Volume 2 ; 2 >
+      au < down ; 2006 ; Episteme Volume 3 ; 3 >
+      au < down ; 2007 ; Episteme Volume 4 ; 4 >
+      au < down ; 2008 ; Episteme Volume 5 ; 5 >
+      au < down ; 2009 ; Episteme Volume 6 ; 6 >
+      au < down ; 2010 ; Episteme Volume 7 ; 7 >
+      au < down ; 2011 ; Episteme Volume 8 ; 8 >
 
     }
 
