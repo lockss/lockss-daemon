@@ -280,7 +280,7 @@
   {
 
     title <
-      name = Interiors: Design, Architecture and Culture ;
+      name = Interiors ;
       issn = 2041-9112 ;
       eissn = 2041-9120
     >
@@ -288,11 +288,11 @@
     param[journal_id] = idacj
     param[journal_issn] = 2041-9112
 
-    au < doNotProcess ; 2010 ; Interiors: Design, Architecture and Culture Volume 1 ; 1 >
-    au < doNotProcess ; 2011 ; Interiors: Design, Architecture and Culture Volume 2 ; 2 >
-    au < doNotProcess ; 2012 ; Interiors: Design, Architecture and Culture Volume 3 ; 3 >
-    au < released ; 2013 ; Interiors: Design, Architecture and Culture Volume 4 ; 4 >
-    au < manifest ; 2014 ; Interiors: Design, Architecture and Culture Volume 5 ; 5 >
+    au < doNotProcess ; 2010 ; Interiors Volume 1 ; 1 >
+    au < doNotProcess ; 2011 ; Interiors Volume 2 ; 2 >
+    au < doNotProcess ; 2012 ; Interiors Volume 3 ; 3 >
+    au < released ; 2013 ; Interiors Volume 4 ; 4 >
+    au < manifest ; 2014 ; Interiors Volume 5 ; 5 >
 
   }
 
