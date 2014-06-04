@@ -373,7 +373,10 @@
 
       param[journal_id] = mediterraneanstu
 
+      au < manifest ; exists ; 2010 ; Mediterranean Studies Volume 19 ; 19 >
+      au < manifest ; exists ; 2012 ; Mediterranean Studies Volume 20 ; 20 >
       au < manifest ; exists ; 2013 ; Mediterranean Studies Volume 21 ; 21 >
+      au < expected ; exists ; 2014 ; Mediterranean Studies Volume 22 ; 22 >
       
   }
 
@@ -394,6 +397,23 @@
 
   {
     title <
+      name = Pacific Coast Philology ;
+      issn = 0078-7469 ;
+      issnl = 0078-7469
+    >
+
+      param[journal_id] = pacicoasphil
+
+      au < manifest ; exists ; 2013 ; Pacific Coast Philology Volume 45 ; 45 >
+      au < manifest ; exists ; 2013 ; Pacific Coast Philology Volume 46 ; 46 >
+      au < manifest ; exists ; 2013 ; Pacific Coast Philology Volume 47 ; 47 >
+      au < manifest ; exists ; 2013 ; Pacific Coast Philology Volume 48 ; 48 >
+      au < manifest ; exists ; 2014 ; Pacific Coast Philology Volume 49 ; 49 >
+      
+  }
+
+  {
+    title <
       name = Pennsylvania History: A Journal of Mid-Atlantic Studies ;
       issn = 0031-4528 ;
       eissn = 2153-2109 ;
@@ -402,7 +422,11 @@
 
       param[journal_id] = pennhistory
 
+      au < manifest ; exists ; 2013 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 77 ; 77 >
+      au < manifest ; exists ; 2013 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 78 ; 78 >
+      au < manifest ; exists ; 2013 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 79 ; 79 >
       au < manifest ; exists ; 2013 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 80 ; 80 >
+      au < manifest ; exists ; 2014 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 81 ; 81 >
       
   }
 
@@ -417,7 +441,11 @@
 
       param[journal_id] = philrhet
 
+      au < manifest ; exists ; 2010 ; Philosophy and Rhetoric Volume 43 ; 43 >
+      au < manifest ; exists ; 2011 ; Philosophy and Rhetoric Volume 44 ; 44 >
+      au < manifest ; exists ; 2012 ; Philosophy and Rhetoric Volume 45 ; 45 >
       au < manifest ; exists ; 2013 ; Philosophy and Rhetoric Volume 46 ; 46 >
+      au < manifest ; exists ; 2014 ; Philosophy and Rhetoric Volume 47 ; 47 >
       
   }
 
@@ -432,25 +460,35 @@
 
       param[journal_id] = preternature
 
+      au < manifest ; exists ; 2012 ; Preternature: Critical and Historical Studies on the Preternatural Volume 1 ; 1 >
       au < manifest ; exists ; 2013 ; Preternature: Critical and Historical Studies on the Preternatural Volume 2 ; 2 >
+      au < manifest ; exists ; 2014 ; Preternature: Critical and Historical Studies on the Preternatural Volume 3 ; 3 >
       
   }
 
   {
 
     title <
-      name = Resources for American Literary Study ;
-      issn = 1529-1502 ;
-      eissn = 0048-7384 ;
-      issnl = 0048-7384
+      name = Reception: Texts, Readers, Audiences, History ;
+      issn = 2168-0604 ;
+      eissn = 2155-7888 ;
+      issnl = 2168-0604
     >
+    
+      param[journal_id] = reception
+
+      au < manifest ; exists ; 2010 ; Reception: Texts, Readers, Audiences, History Volume 2 ; 2 >
+      au < manifest ; exists ; 2011 ; Reception: Texts, Readers, Audiences, History Volume 3 ; 3 >
+      au < manifest ; exists ; 2012 ; Reception: Texts, Readers, Audiences, History Volume 4 ; 4 >
+      au < manifest ; exists ; 2013 ; Reception: Texts, Readers, Audiences, History Volume 5 ; 5 >
+      au < expected ; exists ; 2014 ; Reception: Texts, Readers, Audiences, History Volume 6 ; 6 >
 
   }
 
   {
 
     title <
-      name = SHAW The Annual of Bernard Shaw Studies ;
+      name = SHAW ;
       issn = 0741-5842 ;
       eissn = 1529-1480 ;
       issnl = 0741-5842
@@ -458,7 +496,11 @@
 
       param[journal_id] = shaw
 
-      au < manifest ; exists ; 2013 ; SHAW The Annual of Bernard Shaw Studies Volume 33 ; 33 >
+      au < manifest ; exists ; 2010 ; SHAW Volume 30 ; 30 >
+      au < manifest ; exists ; 2011 ; SHAW Volume 31 ; 31 >
+      au < manifest ; exists ; 2012 ; SHAW Volume 32 ; 32 >
+      au < manifest ; exists ; 2013 ; SHAW Volume 33 ; 33 >
+      au < expected ; exists ; 2014 ; SHAW Volume 34 ; 34 >
       
   }
 
@@ -473,7 +515,26 @@
 
       param[journal_id] = soundings
 
+      au < manifest ; exists ; 2010 ; Soundings: An Interdisciplinary Journal Volume 93 ; 93 >
+      au < manifest ; exists ; 2011 ; Soundings: An Interdisciplinary Journal Volume 94 ; 94 >
+      au < manifest ; exists ; 2012 ; Soundings: An Interdisciplinary Journal Volume 95 ; 95 >
       au < manifest ; exists ; 2013 ; Soundings: An Interdisciplinary Journal Volume 96 ; 96 >
+      au < manifest ; exists ; 2014 ; Soundings: An Interdisciplinary Journal Volume 97 ; 97 >
+      
+  }
+
+  {
+
+    title <
+      name = The Steinbeck Review ;
+      issn = 1546-007X ;
+      eissn = 1754-6087 ;
+      issnl = 1546-007X
+    >
+
+      param[journal_id] = steinbeckreview
+
+      au < manifest ; exists ; 2013 ; The Steinbeck Review Volume 10 ; 10 >
       
   }
 
