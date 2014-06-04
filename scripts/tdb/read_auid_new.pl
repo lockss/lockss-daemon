@@ -364,7 +364,7 @@ while (my $line = <>) {
     if ($resp->is_success) {
       my $man_contents = $resp->content;
       #JSTOR plugin links are like ?journalCode=chaucerrev&amp;issue=2&amp;volume=44
-      if (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) && (($man_contents =~ m/$param{journal_id}\/$param{volume_name}/) || ($man_contents =~ m/$param{journal_id}\S*\&volume=$param{volume_name}/)))) {
+      if (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) && (($man_contents =~ m/$param{journal_id}\/$param{volume_name}/) || ($man_contents =~ m/$param{journal_id}\S*volume=$param{volume_name}/)))) {
     if ($man_contents =~ m/<title>(.*) LOCKSS Manifest Page<\/title>/si) {
         $vol_title = $1;
         $vol_title =~ s/\s*\n\s*/ /g;
@@ -400,7 +400,7 @@ while (my $line = <>) {
     if ($resp->is_success) {
       my $man_contents = $resp->content;
       #JSTOR plugin links are like ?journalCode=chaucerrev&amp;issue=2&amp;volume=44
-      if (defined($man_contents) && (($man_contents =~ m/$clockss_tag/) && (($man_contents =~ m/$param{journal_id}\/$param{volume_name}/) || ($man_contents =~ m/$param{journal_id}\S*\&volume=$param{volume_name}/)))) {
+      if (defined($man_contents) && (($man_contents =~ m/$clockss_tag/) && (($man_contents =~ m/$param{journal_id}\/$param{volume_name}/) || ($man_contents =~ m/$param{journal_id}\S*volume=$param{volume_name}/)))) {
     if ($man_contents =~ m/<title>(.*) CLOCKSS Manifest Page<\/title>/si) {
         $vol_title = $1;
         $vol_title =~ s/\s*\n\s*/ /g;
