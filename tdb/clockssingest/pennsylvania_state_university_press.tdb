@@ -109,10 +109,10 @@
     >
 
       param[journal_id] = fscotfitzrevi
-      comment[v10] = no substance. Url on manifest page is dead.
+      comment[notReady] = V8-10, no substance. Url on manifest page is dead.
 
-      au < testing ; exists ; 2010 ; The F. Scott Fitzgerald Review Volume 8 ; 8 >
-      au < testing ; exists ; 2011 ; The F. Scott Fitzgerald Review Volume 9 ; 9 >
+      au < notReady ; exists ; 2010 ; The F. Scott Fitzgerald Review Volume 8 ; 8 >
+      au < notReady ; exists ; 2011 ; The F. Scott Fitzgerald Review Volume 9 ; 9 >
       au < notReady ; exists ; 2012 ; The F. Scott Fitzgerald Review Volume 10 ; 10 >
       au < testing ; exists ; 2013 ; The F. Scott Fitzgerald Review Volume 11 ; 11 >
       au < expected ; exists ; 2014 ; The F. Scott Fitzgerald Review Volume 12 ; 12 >
