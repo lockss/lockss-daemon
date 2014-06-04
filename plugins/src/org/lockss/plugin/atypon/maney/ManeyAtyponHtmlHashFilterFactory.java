@@ -1,5 +1,5 @@
 /*
- * $Id: ManeyAtyponHtmlHashFilterFactory.java,v 1.2 2014-05-13 19:44:42 alexandraohlson Exp $
+ * $Id: ManeyAtyponHtmlHashFilterFactory.java,v 1.3 2014-06-04 19:37:40 alexandraohlson Exp $
  */
 
 /*
@@ -51,7 +51,7 @@ import org.lockss.util.ReaderInputStream;
 public class ManeyAtyponHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
 
   Logger log = Logger.getLogger(ManeyAtyponHtmlHashFilterFactory.class);
-
+  
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
       InputStream in,
@@ -77,6 +77,11 @@ public class ManeyAtyponHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFa
         HtmlNodeFilters.tagWithAttribute("section",  "id", "migrated_forauthors"),
         // right column, "Related Content Search"
         HtmlNodeFilters.tagWithAttributeRegex("section",  "class", "literatumRelatedContentSearch"),
+        // right column, tabs - most read, most cited, editor's choice
+        // leave the tabs and header (no unique identifier), just remove contents
+        HtmlNodeFilters.tagWithAttributeRegex("section", "class", "literatumMostReadWidget"),
+        HtmlNodeFilters.tagWithAttributeRegex("section", "class", "literatumMostCitedWidget"),
+        HtmlNodeFilters.tagWithAttributeRegex("section", "class", "publicationListWidget"),
 
         //TOC - journal section with current
         HtmlNodeFilters.tagWithAttribute("div",  "id", "Journal Header"),

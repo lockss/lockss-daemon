@@ -1,5 +1,5 @@
 /*
- * $Id: TestManeyHtmlFilterFactory.java,v 1.2 2014-05-13 19:44:42 alexandraohlson Exp $
+ * $Id: TestManeyHtmlFilterFactory.java,v 1.3 2014-06-04 19:37:40 alexandraohlson Exp $
  */
 
 /*
@@ -441,6 +441,97 @@ public class TestManeyHtmlFilterFactory extends LockssTestCase {
   "</ul></div>";
   private static final String accessControlsListFiltered = 
   "<div class=\"widget-body body body-none \"></div>";
+  
+  private static final String tabsHtml =
+      "<section class=\"widget layout-tabs none  widget-none\" id=\"b4b69001-859b-4295-bc9a-b4dac496fa36\">" +
+          "  <div class=\"\" data-pb-dropzone=\"tab-58132d06-cf2f-4e31-a696-f4f2aa0cdd9a\" data-pb-dropzone-name=\"Most &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />read\">" +
+          "  <section class=\"widget general-rich-text   widget-none\" id=\"d13c3a52-1150-4806-af2e-9e897bf1c5c2\">" +
+          "    <div class=\"widget-body body body-none \">" +
+          "    <p>The most frequently downloaded articles</p>" +
+          "    </div>" +
+          "  </section>" +
+          "  <section class=\"widget literatumMostReadWidget none  widget-none\" id=\"14bb26fc-aa97-437b-a0b6-0d97b9b45396\">" +
+          "  <a href=\"/action/showMostReadArticles?journalCode=dei\">See more ></a>" +
+          "  </section>" +
+          "  </div>" +
+          "  <div class=\"\" data-pb-dropzone=\"tab-b6de7b7c-de82-45a5-9538-313dd15c6659\" data-pb-dropzone-name=\"Most &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />cited\">" +
+          "  <section class=\"widget general-rich-text   widget-none\" id=\"40d3ff66-4e32-4c86-b82c-cc5b0842c50e\">" +
+          "    <div class=\"widget-body body body-none \">" +
+          "    <p>The most frequently cited articles</p>" +
+          "    </div>" +
+          "  </section>" +
+          "  <section class=\"widget literatumMostCitedWidget none  widget-none\" id=\"9510437b-5508-4e80-91ec-1b7b8c604584\">" +
+          "  <a href=\"/action/showMostCitedArticles?journalCode=dei\">See more ></a>" +
+          "  </section>" +
+          "  </div>" +
+          "  <div class=\"\" data-pb-dropzone=\"tab-bf403da7-9e3a-4c20-8d3f-d0fa90626a9b\" data-pb-dropzone-name=\"Editors'<br />Choice &nbsp; \">" +
+          "  <section class=\"widget general-rich-text   widget-none\" id=\"da318547-57d8-4836-8b08-fdeabe57ec80\">" +
+          "    <div class=\"widget-body body body-none \">" +
+          "    <p>The Editors' selection</p>" +
+          "    </div>" +
+          "  </section>" +
+          "  <section class=\"widget publicationListWidget none  widget-none  widget-compact\" id=\"071e3c44-fb81-4464-bc66-69cc7bc444fa\">" +
+          "    <div>" +
+          "    Foo" +
+          "    </div>" +
+          "  </section>" +
+          "  </div>" +
+          "</section>";
+
+  private static final String tabsHtmlFiltered = 
+      "<section class=\"widget layout-tabs none widget-none\" id=\"b4b69001-859b-4295-bc9a-b4dac496fa36\">" +
+         " <div class=\"\" data-pb-dropzone=\"tab-58132d06-cf2f-4e31-a696-f4f2aa0cdd9a\" data-pb-dropzone-name=\"Most &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />read\">" +
+          " <section class=\"widget general-rich-text widget-none\" id=\"d13c3a52-1150-4806-af2e-9e897bf1c5c2\">" +
+          " <div class=\"widget-body body body-none \">" +
+          " <p>The most frequently downloaded articles</p>" +
+          " </div>" +
+          " </section>" +
+          " </div>" +
+          " <div class=\"\" data-pb-dropzone=\"tab-b6de7b7c-de82-45a5-9538-313dd15c6659\" data-pb-dropzone-name=\"Most &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />cited\">" +
+          " <section class=\"widget general-rich-text widget-none\" id=\"40d3ff66-4e32-4c86-b82c-cc5b0842c50e\">" +
+          " <div class=\"widget-body body body-none \">" +
+          " <p>The most frequently cited articles</p>" +
+          " </div>" +
+          " </section>" +
+          " </div>" +
+          " <div class=\"\" data-pb-dropzone=\"tab-bf403da7-9e3a-4c20-8d3f-d0fa90626a9b\" data-pb-dropzone-name=\"Editors'<br />Choice &nbsp; \">" +
+          " <section class=\"widget general-rich-text widget-none\" id=\"da318547-57d8-4836-8b08-fdeabe57ec80\">" +
+          " <div class=\"widget-body body body-none \">" +
+          " <p>The Editors' selection</p>" +
+          " </div>" +
+          " </section>" +
+          " </div>" +
+          "</section>";
+  
+  private static final String tabsHtmlCrawlFiltered = 
+      "<section class=\"widget layout-tabs none  widget-none\" id=\"b4b69001-859b-4295-bc9a-b4dac496fa36\">" +
+          "  <div class=\"\" data-pb-dropzone=\"tab-58132d06-cf2f-4e31-a696-f4f2aa0cdd9a\" data-pb-dropzone-name=\"Most &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />read\">" +
+          "  <section class=\"widget general-rich-text   widget-none\" id=\"d13c3a52-1150-4806-af2e-9e897bf1c5c2\">" +
+          "    <div class=\"widget-body body body-none \">" +
+          "    <p>The most frequently downloaded articles</p>" +
+          "    </div>" +
+          "  </section>" +
+          "  " +
+          "  </div>" +
+          "  <div class=\"\" data-pb-dropzone=\"tab-b6de7b7c-de82-45a5-9538-313dd15c6659\" data-pb-dropzone-name=\"Most &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />cited\">" +
+          "  <section class=\"widget general-rich-text   widget-none\" id=\"40d3ff66-4e32-4c86-b82c-cc5b0842c50e\">" +
+          "    <div class=\"widget-body body body-none \">" +
+          "    <p>The most frequently cited articles</p>" +
+          "    </div>" +
+          "  </section>" +
+          "  " +
+          "  </div>" +
+          "  <div class=\"\" data-pb-dropzone=\"tab-bf403da7-9e3a-4c20-8d3f-d0fa90626a9b\" data-pb-dropzone-name=\"Editors'<br />Choice &nbsp; \">" +
+          "  <section class=\"widget general-rich-text   widget-none\" id=\"da318547-57d8-4836-8b08-fdeabe57ec80\">" +
+          "    <div class=\"widget-body body body-none \">" +
+          "    <p>The Editors' selection</p>" +
+          "    </div>" +
+          "  </section>" +
+          "  " +
+          "  </div>" +
+          "</section>";
+
+
 
   /**
    * CRAWL FILTER VARIANT
@@ -470,6 +561,10 @@ public class TestManeyHtmlFilterFactory extends LockssTestCase {
       assertEquals(art_LinkFiltered,
           StringUtil.fromInputStream(fact.createFilteredInputStream(null,
               new StringInputStream(art_Original),
+              Constants.DEFAULT_ENCODING)));
+      assertEquals(tabsHtmlCrawlFiltered,
+          StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+              new StringInputStream(tabsHtml),
               Constants.DEFAULT_ENCODING)));
       
       /* and make sure we *don't* crawl filter out citation link */
@@ -527,6 +622,10 @@ public class TestManeyHtmlFilterFactory extends LockssTestCase {
       assertEquals(pageFooterHtmlFiltered,
           StringUtil.fromInputStream(fact.createFilteredInputStream(null,
               new StringInputStream(pageFooterHtml),
+              Constants.DEFAULT_ENCODING)));
+      assertEquals(tabsHtmlFiltered,
+          StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+              new StringInputStream(tabsHtml),
               Constants.DEFAULT_ENCODING)));
  
     }

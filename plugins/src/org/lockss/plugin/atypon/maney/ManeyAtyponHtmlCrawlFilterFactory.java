@@ -1,5 +1,5 @@
 /*
- * $Id: ManeyAtyponHtmlCrawlFilterFactory.java,v 1.1 2014-05-09 20:27:51 alexandraohlson Exp $
+ * $Id: ManeyAtyponHtmlCrawlFilterFactory.java,v 1.2 2014-06-04 19:37:40 alexandraohlson Exp $
  */
 
 /*
@@ -55,6 +55,10 @@ public class ManeyAtyponHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilter
       // Corrigendum/Errata/OriginalArticle  -- article page
       // use regex because class name has other stuff in it
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "correctionLink"),
+      // sidebar has hard to isolate "most read", "most cited" "editors choice"
+      HtmlNodeFilters.tagWithAttributeRegex("section", "class", "literatumMostReadWidget"),
+      HtmlNodeFilters.tagWithAttributeRegex("section", "class", "literatumMostCitedWidget"),
+      HtmlNodeFilters.tagWithAttributeRegex("section", "class", "publicationListWidget"),
 
   };
   @Override
