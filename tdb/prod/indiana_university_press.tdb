@@ -863,7 +863,7 @@
       attr[journal_id] = jfr
       implicit < status ; year ; name ; param[volume] >
 
-      au < released ; 2002 ; Journal of Folklore Research Volume 39 ; 39 >
+      au < down ; 2002 ; Journal of Folklore Research Volume 39 [malformed] ; 39 >
       au < released ; 2003 ; Journal of Folklore Research Volume 40 ; 40 >
       au < released ; 2004 ; Journal of Folklore Research Volume 41 ; 41 >
       au < released ; 2005 ; Journal of Folklore Research Volume 42 ; 42 >
