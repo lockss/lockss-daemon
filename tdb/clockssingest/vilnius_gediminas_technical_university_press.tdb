@@ -13,7 +13,8 @@
       eissn = 1822-4288 ;
       issnl = 1822-427X
     >
-
+    
+    comment[status] = needs contract.
     plugin = needs.new.plugin
     param[base_url] = http://www.bjrbe.vgtu.lt/
     
