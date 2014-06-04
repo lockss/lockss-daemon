@@ -10988,6 +10988,25 @@
     }
 
   }
+  
+  {
+
+    title <
+      name = Journal of Hip Preservation Surgery ;
+      eissn = 2054-8397
+      
+    >
+    
+    {
+
+    param[base_url] = http://jhps.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < expected ; exists ; 2014 ; Journal of Hip Preservation Surgery Volume 1 ; 1 ; >
+
+    }
+
+  }
 
   {
 

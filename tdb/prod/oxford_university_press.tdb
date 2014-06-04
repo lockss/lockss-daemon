@@ -11321,6 +11321,25 @@
   {
 
     title <
+      name = Journal of Hip Preservation Surgery ;
+      issn = 2054-8397 
+    >
+
+    {
+
+    pluginPrefix = org.lockss.plugin.highwire.
+    param[base_url] = http://jhps.oxfordjournals.org/
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+    au < HighWirePressH20Plugin ; expected ; 2014 ; Journal of Hip Preservation Surgery Volume 1 ; 1 >
+
+    }
+
+  }
+  
+  {
+
+    title <
       name = Journal of the History of Collections ;
       issn = 0954-6650 ;
       eissn = 1477-8564 ;
