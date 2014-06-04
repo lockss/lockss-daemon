@@ -1,5 +1,5 @@
 /*
- * $Id: IlliesiaArticleIteratorFactory.java,v 1.1 2014-02-01 19:06:44 ldoan Exp $
+ * $Id: IlliesiaArticleIteratorFactory.java,v 1.2 2014-06-04 22:15:36 ldoan Exp $
  */
 
 /*
@@ -56,11 +56,15 @@ public class IlliesiaArticleIteratorFactory
   protected static Logger log = 
       Logger.getLogger(IlliesiaArticleIteratorFactory.class);
 
+  // Thib suggests to add /papers to ROOT_TEMPLATE and remove
+  // from PATTERN_TEMPLATE
   protected static final String ROOT_TEMPLATE = "\"%s\", base_url";
   
   protected static final String PATTERN_TEMPLATE =
       "\"^%spapers/Illiesia[0-9]+-[0-9]+\\.pdf$\", base_url";
   
+  // Thib recommends adding '/' at the beginning of of the pattern
+  // as "/(.+\\.pdf)$" and replacement would be "/$1"
   private Pattern PDF_PATTERN = 
       Pattern.compile("(.+\\.pdf)$", Pattern.CASE_INSENSITIVE);
 

@@ -1,5 +1,5 @@
 /*
- * $Id: IlliesiaMetadataExtractorFactory.java,v 1.2 2014-02-11 22:38:43 ldoan Exp $
+ * $Id: IlliesiaMetadataExtractorFactory.java,v 1.3 2014-06-04 22:16:09 ldoan Exp $
  */
 
 /*
@@ -84,6 +84,7 @@ public class IlliesiaMetadataExtractorFactory
     implements FileMetadataExtractor {
 
     // get article number from pdf url
+    // Thib suggests putting "\\.pdf" instead of ".pdf"
     private Pattern ARTICLE_NUM_PATTERN = 
       Pattern.compile("/papers/Illiesia[0-9]+-([0-9]+).pdf$");      
 
