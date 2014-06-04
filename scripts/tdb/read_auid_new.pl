@@ -354,6 +354,7 @@ while (my $line = <>) {
            ($plugin eq "AIAAPlugin") || 
            ($plugin eq "AMetSocPlugin") || 
            ($plugin eq "ManeyAtyponPlugin") || 
+           ($plugin eq "JstorPlugin") || 
            ($plugin eq "FutureSciencePlugin")) {
         $url = sprintf("%slockss/%s/%s/index.html", 
             $param{base_url}, $param{journal_id}, $param{volume_name});
@@ -388,6 +389,7 @@ while (my $line = <>) {
            ($plugin eq "ClockssAmmonsScientificPlugin") || 
            ($plugin eq "ClockssAMetSocPlugin") || 
            ($plugin eq "ClockssManeyAtyponPlugin") || 
+           ($plugin eq "ClockssJstorPlugin") || 
            ($plugin eq "ClockssFutureSciencePlugin")) {
         $url = sprintf("%sclockss/%s/%s/index.html", 
             $param{base_url}, $param{journal_id}, $param{volume_name});
