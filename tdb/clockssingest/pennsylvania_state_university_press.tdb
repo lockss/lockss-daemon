@@ -37,7 +37,7 @@
 
       param[journal_id] = chaucerrev
 
-      au < manifest ; exists ; 2009-2010 ; The Chaucer Review Volume 44 ; 44 >
+      au < testing ; exists ; 2009-2010 ; The Chaucer Review Volume 44 ; 44 >
       au < manifest ; exists ; 2010-2011 ; The Chaucer Review Volume 45 ; 45 >
       au < manifest ; exists ; 2011-2012 ; The Chaucer Review Volume 46 ; 46 >
       au < manifest ; exists ; 2012-2013 ; The Chaucer Review Volume 47 ; 47 >
@@ -73,11 +73,11 @@
     >
       param[journal_id] = edgallpoerev
 
-      au < manifest ; exists ; 2010 ; The Eugene O'Neill Review Volume 11 ; 11 >
-      au < manifest ; exists ; 2011 ; The Eugene O'Neill Review Volume 12 ; 12 >
-      au < manifest ; exists ; 2012 ; The Eugene O'Neill Review Volume 13 ; 13 >
-      au < manifest ; exists ; 2013 ; The Eugene O'Neill Review Volume 14 ; 14 >
-      au < manifest ; exists ; 2014 ; The Eugene O'Neill Review Volume 15 ; 15 >
+      au < manifest ; exists ; 2010 ; The Edgar Allen Poe Review Volume 11 ; 11 >
+      au < testing ; exists ; 2011 ; The Edgar Allen Poe Review Volume 12 ; 12 >
+      au < manifest ; exists ; 2012 ; The Edgar Allen Poe Review Volume 13 ; 13 >
+      au < manifest ; exists ; 2013 ; The Edgar Allen Poe Review Volume 14 ; 14 >
+      au < manifest ; exists ; 2014 ; The Edgar Allen Poe Review Volume 15 ; 15 >
       
   }
 
@@ -112,7 +112,7 @@
 
       au < manifest ; exists ; 2010 ; The F. Scott Fitzgerald Review Volume 8 ; 8 >
       au < manifest ; exists ; 2011 ; The F. Scott Fitzgerald Review Volume 9 ; 9 >
-      au < manifest ; exists ; 2012 ; The F. Scott Fitzgerald Review Volume 10 ; 10 >
+      au < testing ; exists ; 2012 ; The F. Scott Fitzgerald Review Volume 10 ; 10 >
       au < manifest ; exists ; 2013 ; The F. Scott Fitzgerald Review Volume 11 ; 11 >
       au < expected ; exists ; 2014 ; The F. Scott Fitzgerald Review Volume 12 ; 12 >
       
@@ -152,7 +152,7 @@
       au < manifest ; exists ; 2010-2011 ; Interdisciplinary Literary Studies Volume 12 ; 12 >
       au < manifest ; exists ; 2011 ; Interdisciplinary Literary Studies Volume 13 ; 13 >
       au < manifest ; exists ; 2012 ; Interdisciplinary Literary Studies Volume 14 ; 14 >
-      au < manifest ; exists ; 2013 ; Interdisciplinary Literary Studies Volume 15 ; 15 >
+      au < testing ; exists ; 2013 ; Interdisciplinary Literary Studies Volume 15 ; 15 >
       au < manifest ; exists ; 2014 ; Interdisciplinary Literary Studies Volume 16 ; 16 >
       
   }
