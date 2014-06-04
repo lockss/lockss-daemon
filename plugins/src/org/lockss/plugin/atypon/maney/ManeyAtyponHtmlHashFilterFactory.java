@@ -1,5 +1,5 @@
 /*
- * $Id: ManeyAtyponHtmlHashFilterFactory.java,v 1.3 2014-06-04 19:37:40 alexandraohlson Exp $
+ * $Id: ManeyAtyponHtmlHashFilterFactory.java,v 1.4 2014-06-04 21:05:37 alexandraohlson Exp $
  */
 
 /*
@@ -82,6 +82,8 @@ public class ManeyAtyponHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFa
         HtmlNodeFilters.tagWithAttributeRegex("section", "class", "literatumMostReadWidget"),
         HtmlNodeFilters.tagWithAttributeRegex("section", "class", "literatumMostCitedWidget"),
         HtmlNodeFilters.tagWithAttributeRegex("section", "class", "publicationListWidget"),
+        // ad placement
+        HtmlNodeFilters.tagWithAttributeRegex("section", "class", "literatumAd"),
 
         //TOC - journal section with current
         HtmlNodeFilters.tagWithAttribute("div",  "id", "Journal Header"),
