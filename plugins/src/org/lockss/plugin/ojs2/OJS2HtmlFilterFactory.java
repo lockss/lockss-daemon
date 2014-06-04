@@ -1,10 +1,10 @@
 /*
- * $Id: OJS2HtmlFilterFactory.java,v 1.9 2013-10-14 19:55:19 etenbrink Exp $
+ * $Id: OJS2HtmlFilterFactory.java,v 1.10 2014-06-04 16:06:04 etenbrink Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -68,7 +68,9 @@ public class OJS2HtmlFilterFactory implements FilterFactory {
             // For Ubiquity Press
             HtmlNodeFilters.tagWithAttribute("div", "id", "rightSidebar"),
             // For JLIS.it: landing pages contain user view count
-            HtmlNodeFilters.tagWithAttribute("span", "class", "ArticleViews")
+            HtmlNodeFilters.tagWithAttribute("span", "class", "ArticleViews"),
+            // For ibictpln: PHP Query Profiler
+            HtmlNodeFilters.tagWithAttribute("div", "id", "pqp-container"),
         };
         return new HtmlFilterInputStream(in,
                                          encoding,
