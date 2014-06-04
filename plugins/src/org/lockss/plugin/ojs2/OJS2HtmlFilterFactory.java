@@ -1,5 +1,5 @@
 /*
- * $Id: OJS2HtmlFilterFactory.java,v 1.10 2014-06-04 16:06:04 etenbrink Exp $
+ * $Id: OJS2HtmlFilterFactory.java,v 1.11 2014-06-04 22:46:29 etenbrink Exp $
  */
 
 /*
@@ -36,15 +36,38 @@ import java.io.InputStream;
 
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.*;
+import org.htmlparser.tags.CompositeTag;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 
 public class OJS2HtmlFilterFactory implements FilterFactory {
-
-    public InputStream createFilteredInputStream(ArchivalUnit au,
-                                                 InputStream in,
-                                                 String encoding) {
-        NodeFilter[] filters = new NodeFilter[] {
+  
+  /**
+   * A B(old) tag.  Registered with PrototypicalNodeFactory to cause B
+   * to be a CompositeTag.  See code samples in org.htmlparser.tags.
+   * @see HtmlFilterInputStream#makeParser()
+   */
+  public static class bTag extends CompositeTag {
+    
+    /**
+     * The set of names handled by this tag.
+     */
+    private static final String[] mIds = new String[] {"b"};
+    
+    /**
+     * Return the set of names handled by this tag.
+     * @return The names to be matched that create tags of this type.
+     */
+    public String[] getIds() {
+      return mIds;
+    }
+    
+  }
+  
+  public InputStream createFilteredInputStream(ArchivalUnit au,
+                                               InputStream in,
+                                               String encoding) {
+    NodeFilter[] filters = new NodeFilter[] {
             // Some OJS sites have a tag cloud
             HtmlNodeFilters.tagWithAttribute("div", "id", "sidebarKeywordCloud"),
             // Some OJS sites have a subscription status area
@@ -71,10 +94,12 @@ public class OJS2HtmlFilterFactory implements FilterFactory {
             HtmlNodeFilters.tagWithAttribute("span", "class", "ArticleViews"),
             // For ibictpln: PHP Query Profiler
             HtmlNodeFilters.tagWithAttribute("div", "id", "pqp-container"),
-        };
-        return new HtmlFilterInputStream(in,
-                                         encoding,
-                                         HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
-    }
-    
+            // Total de acessos: keeps changing, there is no 'good' tag wrapped around text
+            HtmlNodeFilters.tagWithTextRegex("b", "^ *total de acesso( dos artigo)?s: +[0-9]+ *$", true),
+    };
+    return new HtmlFilterInputStream(in, encoding,
+          HtmlNodeFilterTransform.exclude(new OrFilter(filters))).
+          registerTag(new bTag());
+  }
+  
 }
