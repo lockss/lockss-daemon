@@ -140,7 +140,20 @@ public class TestOJS2HtmlFilterFactory extends LockssTestCase {
   private static final String viewsHtmlFiltered =
       "<div id=\"header\"></div>";
   
-
+  private static final String pqpHtml =
+      "<div style=\"display: block;\" class=\"pQp hideDetails\" id=\"pqp-container\">\n" + 
+      "<div class=\"console\" id=\"pQp\">\n" + 
+      "some other stuff\n" + 
+      "</div>\n" + 
+      "</div>\n";
+  private static final String pqpHtmlFiltered =
+      "\n";
+  
+  private static final String accessHtml =
+      "<br>\n" + 
+      "<b>Total de acessos: 455</b>\n";
+  private static final String accessHtmlFiltered =
+      "<br>\n\n";
   
   public void testSidebarKeywordCloudFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
@@ -222,6 +235,18 @@ public class TestOJS2HtmlFilterFactory extends LockssTestCase {
         Constants.DEFAULT_ENCODING);
     
     assertEquals(viewsHtmlFiltered, StringUtil.fromInputStream(actIn));
+    
+    actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(pqpHtml),
+        Constants.DEFAULT_ENCODING);
+    
+    assertEquals(pqpHtmlFiltered, StringUtil.fromInputStream(actIn));
+    
+    actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(accessHtml),
+        Constants.DEFAULT_ENCODING);
+    
+    assertEquals(accessHtmlFiltered, StringUtil.fromInputStream(actIn));
     
   }
 
