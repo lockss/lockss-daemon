@@ -141,8 +141,9 @@
         param[base_url] = http://www.biointerphases.com/
         param[journal_issn] = 1559-4106 
         comment[platform] = BioMedCentralPlugin
+        comment[notReady] = URL appears to be down? 
   
-        au < testing ; exists ; 2013 ; Biointerphases Volume 8 ; 8 >
+        au < notReady ; exists ; 2013 ; Biointerphases Volume 8 ; 8 >
         au < expected ; exists ; 2014 ; Biointerphases Volume 9 ; 9 >
   
     }
