@@ -23,7 +23,7 @@
     }
     
     {
-      plugin = needs.plugin
+      plugin = org.lockss.plugin.jstor.JstorPlugin
       implicit < status ; year ; name ; param[volume_name] >
       comment[platform] = JSTOR
       param[journal_id] = hesperia
