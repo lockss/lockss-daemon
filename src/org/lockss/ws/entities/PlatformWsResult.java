@@ -1,5 +1,5 @@
 /*
- * $Id: PlatformWsResult.java,v 1.1.2.2 2014-05-31 01:26:08 fergaloy-sf Exp $
+ * $Id: PlatformWsResult.java,v 1.1.2.3 2014-06-05 03:45:50 fergaloy-sf Exp $
  */
 
 /*
@@ -29,29 +29,45 @@
  in this Software without prior written authorization from Stanford University.
 
  */
+package org.lockss.ws.entities;
 
 /**
  * The daemon platform information.
  */
-package org.lockss.ws.entities;
-
 public class PlatformWsResult {
   private String name;
   private String version;
   private String suffix;
 
+  /**
+   * Provides the name.
+   * 
+   * @return a String with the name.
+   */
   public String getName() {
     return name;
   }
   public void setName(String name) {
     this.name = name;
   }
+
+  /**
+   * Provides the version.
+   * 
+   * @return a String with the version.
+   */
   public String getVersion() {
     return version;
   }
   public void setVersion(String version) {
     this.version = version;
   }
+
+  /**
+   * Provides the suffix.
+   * 
+   * @return a String with the suffix.
+   */
   public String getSuffix() {
     return suffix;
   }

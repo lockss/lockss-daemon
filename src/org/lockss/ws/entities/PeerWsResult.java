@@ -1,5 +1,5 @@
 /*
- * $Id: PeerWsResult.java,v 1.1 2014-04-25 23:10:59 fergaloy-sf Exp $
+ * $Id: PeerWsResult.java,v 1.1.4.1 2014-06-05 03:45:50 fergaloy-sf Exp $
  */
 
 /*
@@ -29,15 +29,14 @@
  in this Software without prior written authorization from Stanford University.
 
  */
+package org.lockss.ws.entities;
+
+import java.util.List;
 
 /**
  * Container for the information related to a peer that is the result of a
  * query.
  */
-package org.lockss.ws.entities;
-
-import java.util.List;
-
 public class PeerWsResult {
   private String peerId;
   private Long lastMessage;
@@ -54,84 +53,171 @@ public class PeerWsResult {
   private List<String> groups;
   private Boolean platformGroupMatch;
 
+  /**
+   * Provides the peer identifier.
+   * 
+   * @return a String with the identifier.
+   */
   public String getPeerId() {
     return peerId;
   }
   public void setPeerId(String peerId) {
     this.peerId = peerId;
   }
+
+  /**
+   * Provides the timestamp of the last message.
+   * 
+   * @return a Long with the timestamp as the number of milliseconds since the
+   *         beginning of 1970.
+   */
   public Long getLastMessage() {
     return lastMessage;
   }
   public void setLastMessage(Long lastMessage) {
     this.lastMessage = lastMessage;
   }
+
+  /**
+   * Provides the message type.
+   * 
+   * @return a String with the message type.
+   */
   public String getMessageType() {
     return messageType;
   }
   public void setMessageType(String messageType) {
     this.messageType = messageType;
   }
+
+  /**
+   * Provides the message count.
+   * 
+   * @return a Long with the count.
+   */
   public Long getMessageCount() {
     return messageCount;
   }
   public void setMessageCount(Long messageCount) {
     this.messageCount = messageCount;
   }
+
+  /**
+   * Provides the timestamp of the last poll.
+   * 
+   * @return a Long with the timestamp as the number of milliseconds since the
+   *         beginning of 1970.
+   */
   public Long getLastPoll() {
     return lastPoll;
   }
   public void setLastPoll(Long lastPoll) {
     this.lastPoll = lastPoll;
   }
+
+  /**
+   * Provides the timestamp of the last vote.
+   * 
+   * @return a Long with the timestamp as the number of milliseconds since the
+   *         beginning of 1970.
+   */
   public Long getLastVote() {
     return lastVote;
   }
   public void setLastVote(Long lastVote) {
     this.lastVote = lastVote;
   }
+
+  /**
+   * Provides the timestamp of the last invitation.
+   * 
+   * @return a Long with the timestamp as the number of milliseconds since the
+   *         beginning of 1970.
+   */
   public Long getLastInvitation() {
     return lastInvitation;
   }
   public void setLastInvitation(Long lastInvitation) {
     this.lastInvitation = lastInvitation;
   }
+
+  /**
+   * Provides the invitation count.
+   * 
+   * @return a Long with the count.
+   */
   public Long getInvitationCount() {
     return invitationCount;
   }
   public void setInvitationCount(Long invitationCount) {
     this.invitationCount = invitationCount;
   }
+
+  /**
+   * Provides the count of polls called.
+   * 
+   * @return a Long with the count.
+   */
   public Long getPollsCalled() {
     return pollsCalled;
   }
   public void setPollsCalled(Long pollsCalled) {
     this.pollsCalled = pollsCalled;
   }
+
+  /**
+   * Provides the count of votes cast.
+   * 
+   * @return a Long with the count.
+   */
   public Long getVotesCast() {
     return votesCast;
   }
   public void setVotesCast(Long votesCast) {
     this.votesCast = votesCast;
   }
+
+  /**
+   * Provides the count of polls rejected.
+   * 
+   * @return a Long with the count.
+   */
   public Long getPollsRejected() {
     return pollsRejected;
   }
   public void setPollsRejected(Long pollsRejected) {
     this.pollsRejected = pollsRejected;
   }
+
+  /**
+   * Provides the reason for a NAK message.
+   * 
+   * @return a String with the reason.
+   */
   public String getNakReason() {
     return nakReason;
   }
   public void setNakReason(String nakReason) {
     this.nakReason = nakReason;
   }
+
+  /**
+   * Provides the groups.
+   * 
+   * @return a List<String> with the groups.
+   */
   public List<String> getGroups() {
     return groups;
   }
   public void setGroups(List<String> groups) {
     this.groups = groups;
   }
+
+  /**
+   * Provides an indication of whether there is a platform group match.
+   * 
+   * @return a Boolean with the indication.
+   */
   public Boolean getPlatformGroupMatch() {
     return platformGroupMatch;
   }

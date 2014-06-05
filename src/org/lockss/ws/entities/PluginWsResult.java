@@ -1,5 +1,5 @@
 /*
- * $Id: PluginWsResult.java,v 1.1 2014-04-04 22:00:46 fergaloy-sf Exp $
+ * $Id: PluginWsResult.java,v 1.1.4.1 2014-06-05 03:45:50 fergaloy-sf Exp $
  */
 
 /*
@@ -29,15 +29,14 @@
  in this Software without prior written authorization from Stanford University.
 
  */
+package org.lockss.ws.entities;
+
+import java.util.Map;
 
 /**
  * Container for the information related to a plugin that is the result of a
  * query.
  */
-package org.lockss.ws.entities;
-
-import java.util.Map;
-
 public class PluginWsResult {
   private String pluginId;
   private String name;
@@ -49,54 +48,107 @@ public class PluginWsResult {
   private Integer auCount;
   private String publishingPlatform;
 
+  /**
+   * Provides the plugin identifier.
+   * 
+   * @return A String with the identifier.
+   */
   public String getPluginId() {
     return pluginId;
   }
   public void setPluginId(String pluginId) {
     this.pluginId = pluginId;
   }
+
+  /**
+   * Provides the plugin name.
+   * 
+   * @return A String with the name.
+   */
   public String getName() {
     return name;
   }
   public void setName(String name) {
     this.name = name;
   }
+
+  /**
+   * Provides the plugin version.
+   * 
+   * @return A String with the version.
+   */
   public String getVersion() {
     return version;
   }
   public void setVersion(String version) {
     this.version = version;
   }
+
+  /**
+   * Provides the plugin type.
+   * 
+   * @return A String with the type.
+   */
   public String getType() {
     return type;
   }
   public void setType(String type) {
     this.type = type;
   }
+
+  /**
+   * Provides the plugin definition properties.
+   * 
+   * @return A Map<String, String> with the properties.
+   */
   public Map<String, String> getDefinition() {
     return definition;
   }
   public void setDefinition(Map<String, String> definition) {
     this.definition = definition;
   }
+
+  /**
+   * Provides the plugin registry name.
+   * 
+   * @return A String with the registry name.
+   */
   public String getRegistry() {
     return registry;
   }
   public void setRegistry(String registry) {
     this.registry = registry;
   }
+
+  /**
+   * Provides the plugin URL.
+   * 
+   * @return A String with the URL.
+   */
   public String getUrl() {
     return url;
   }
   public void setUrl(String url) {
     this.url = url;
   }
+
+  /**
+   * Provides the count of Archival Units configured with this plugin.
+   * 
+   * @return An Integer with the count.
+   */
   public Integer getAuCount() {
     return auCount;
   }
   public void setAuCount(Integer auCount) {
     this.auCount = auCount;
   }
+
+  /**
+   * Provides the plugin publishing platform name.
+   * 
+   * @return a String with the publishing platform name.
+   */
   public String getPublishingPlatform() {
     return publishingPlatform;
   }

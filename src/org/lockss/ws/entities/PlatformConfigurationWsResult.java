@@ -1,5 +1,5 @@
 /*
- * $Id: PlatformConfigurationWsResult.java,v 1.1.2.2 2014-05-31 01:26:08 fergaloy-sf Exp $
+ * $Id: PlatformConfigurationWsResult.java,v 1.1.2.3 2014-06-05 03:45:50 fergaloy-sf Exp $
  */
 
 /*
@@ -29,14 +29,13 @@
  in this Software without prior written authorization from Stanford University.
 
  */
-
-/**
- * The daemon platform configuration information.
- */
 package org.lockss.ws.entities;
 
 import java.util.List;
 
+/**
+ * The daemon platform configuration information.
+ */
 public class PlatformConfigurationWsResult {
 
   private String hostName;
@@ -56,96 +55,193 @@ public class PlatformConfigurationWsResult {
   private String buildHost;
   private long buildTimestamp;
 
+  /**
+   * Provides the host name.
+   * 
+   * @return a String with the host name.
+   */
   public String getHostName() {
     return hostName;
   }
   public void setHostName(String hostName) {
     this.hostName = hostName;
   }
+
+  /**
+   * Provides the IP address.
+   * 
+   * @return a String with the IP address.
+   */
   public String getIpAddress() {
     return ipAddress;
   }
   public void setIpAddress(String ipAddress) {
     this.ipAddress = ipAddress;
   }
+
+  /**
+   * Provides the groups.
+   * 
+   * @return a List<String> with the groups.
+   */
   public List<String> getGroups() {
     return groups;
   }
   public void setGroups(List<String> groups) {
     this.groups = groups;
   }
+
+  /**
+   * Provides the project name.
+   * 
+   * @return a String with the project name.
+   */
   public String getProject() {
     return project;
   }
   public void setProject(String project) {
     this.project = project;
   }
+
+  /**
+   * Provides the V3 identity.
+   * 
+   * @return a String with the V3 identity.
+   */
   public String getV3Identity() {
     return v3Identity;
   }
   public void setV3Identity(String v3Identity) {
     this.v3Identity = v3Identity;
   }
+
+  /**
+   * Provides the name of the mail relay.
+   * 
+   * @return a String with the mail relay name.
+   */
   public String getMailRelay() {
     return mailRelay;
   }
   public void setMailRelay(String mailRelay) {
     this.mailRelay = mailRelay;
   }
+
+  /**
+   * Provides the administrative email account name.
+   * 
+   * @return a String with the administrative email account name.
+   */
   public String getAdminEmail() {
     return adminEmail;
   }
   public void setAdminEmail(String adminEmail) {
     this.adminEmail = adminEmail;
   }
+
+  /**
+   * Provides the disk labels.
+   * 
+   * @return a List<String> with the disks labels.
+   */
   public List<String> getDisks() {
     return disks;
   }
   public void setDisks(List<String> disks) {
     this.disks = disks;
   }
+
+  /**
+   * Provides the current timestamp.
+   * 
+   * @return a long with the timestamp as the number of milliseconds since the
+   *         beginning of 1970.
+   */
   public long getCurrentTime() {
     return currentTime;
   }
   public void setCurrentTime(long currentTime) {
     this.currentTime = currentTime;
   }
+
+  /**
+   * Provides the server uptime.
+   * 
+   * @return a long with the uptime in millisecons.
+   */
   public long getUptime() {
     return uptime;
   }
   public void setUptime(long uptime) {
     this.uptime = uptime;
   }
+
+  /**
+   * Provides the daemon version information.
+   * 
+   * @return a DaemonVersionWsResult with the daemon version.
+   */
   public DaemonVersionWsResult getDaemonVersion() {
     return daemonVersion;
   }
   public void setDaemonVersion(DaemonVersionWsResult daemonVersion) {
     this.daemonVersion = daemonVersion;
   }
+
+  /**
+   * Provides the platform information.
+   * 
+   * @return a PlatformWsResult with the platform information.
+   */
   public PlatformWsResult getPlatform() {
     return platform;
   }
   public void setPlatform(PlatformWsResult platform) {
     this.platform = platform;
   }
+
+  /**
+   * Provides the current working directory.
+   * 
+   * @return a String with the current working directory.
+   */
   public String getCurrentWorkingDirectory() {
     return currentWorkingDirectory;
   }
   public void setCurrentWorkingDirectory(String currentWorkingDirectory) {
     this.currentWorkingDirectory = currentWorkingDirectory;
   }
+
+  /**
+   * Provides the daemon properties.
+   * 
+   * @return a List<String> with the properties.
+   */
   public List<String> getProperties() {
     return properties;
   }
   public void setProperties(List<String> properties) {
     this.properties = properties;
   }
+
+  /**
+   * Provides the build host name.
+   * 
+   * @return a String with the build host name.
+   */
   public String getBuildHost() {
     return buildHost;
   }
   public void setBuildHost(String buildHost) {
     this.buildHost = buildHost;
   }
+
+  /**
+   * Provides the build timestamp.
+   * 
+   * @return a long with the timestamp as the number of milliseconds since the
+   *         beginning of 1970.
+   */
   public long getBuildTimestamp() {
     return buildTimestamp;
   }
@@ -165,5 +261,4 @@ public class PlatformConfigurationWsResult {
 	+ ", properties=" + properties + ", buildHost=" + buildHost
 	+ ", buildTimestamp=" + buildTimestamp + "]";
   }
-  
 }

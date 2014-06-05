@@ -1,10 +1,10 @@
 /*
- * $Id: IdNamePair.java,v 1.1 2013-03-22 04:47:32 fergaloy-sf Exp $
+ * $Id: IdNamePair.java,v 1.1.20.1 2014-06-05 03:45:50 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,28 +29,48 @@
  in this Software without prior written authorization from Stanford University.
 
  */
+package org.lockss.ws.entities;
 
 /**
  * A generic identifier/name pair.
  */
-package org.lockss.ws.entities;
-
 public class IdNamePair {
   private String id;
   private String name;
 
+  /**
+   * Default constructor.
+   */
   public IdNamePair() {
   }
 
+  /**
+   * Constructor.
+   * 
+   * @param id
+   *          A String with the identifier.
+   * @param name
+   *          A String with the name.
+   */
   public IdNamePair(String id, String name) {
     this.id = id;
     this.name = name;
   }
 
+  /**
+   * Provides the identifier of the pair.
+   * 
+   * @return a String with the identifier.
+   */
   public String getId() {
     return id;
   }
 
+  /**
+   * Provides the name of the pair.
+   * 
+   * @return a String with the name.
+   */
   public String getName() {
     return name;
   }

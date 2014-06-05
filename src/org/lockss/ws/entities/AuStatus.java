@@ -1,10 +1,10 @@
 /*
- * $Id: AuStatus.java,v 1.1 2013-03-22 04:47:32 fergaloy-sf Exp $
+ * $Id: AuStatus.java,v 1.1.20.1 2014-06-05 03:45:50 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,12 +29,11 @@
  in this Software without prior written authorization from Stanford University.
 
  */
-
-/**
- * The status information of an archival unit.
- */
 package org.lockss.ws.entities;
 
+/**
+ * The status information of an Archival Unit.
+ */
 public class AuStatus {
   private String volume;
   private String journalTitle;
@@ -64,110 +63,253 @@ public class AuStatus {
   private Boolean currentlyPolling;
   private String subscriptionStatus;
 
+  /**
+   * Provides the Archival Unit volume name.
+   * 
+   * @return a String with the volume name.
+   */
   public String getVolume() {
     return volume;
   }
 
+  /**
+   * Provides the Archival Unit journal title.
+   * 
+   * @return a String with the journal title.
+   */
   public String getJournalTitle() {
     return journalTitle;
   }
 
+  /**
+   * Provides the Archival Unit plugin name.
+   * 
+   * @return a String with the plugin name.
+   */
   public String getPluginName() {
     return pluginName;
   }
 
+  /**
+   * Provides the Archival Unit publication year.
+   * 
+   * @return an Integer with the publication year.
+   */
   public Integer getYear() {
     return year;
   }
 
+  /**
+   * Provides the Archival Unit access type.
+   * 
+   * @return a String with the access type.
+   */
   public String getAccessType() {
     return accessType;
   }
 
+  /**
+   * Provides the size of the Archival Unit.
+   * 
+   * @return a Long with the size in bytes.
+   */
   public Long getContentSize() {
     return contentSize;
   }
 
+  /**
+   * Provides the space occupied on disk by the Archival Unit.
+   * 
+   * @return a Long with the occupied space in bytes.
+   */
   public Long getDiskUsage() {
     return diskUsage;
   }
 
+  /**
+   * Provides the Archival Unit repository name.
+   * 
+   * @return a String with the repository name.
+   */
   public String getRepository() {
     return repository;
   }
 
+  /**
+   * Provides the Archival Unit status.
+   * 
+   * @return a String with the status.
+   */
   public String getStatus() {
     return status;
   }
 
+  /**
+   * Provides the Archival Unit most recent poll agreement percentage.
+   * 
+   * @return a Double with the most recent poll agreement percentage.
+   */
   public Double getRecentPollAgreement() {
     return recentPollAgreement;
   }
 
+  /**
+   * Provides the Archival Unit publishing platform name.
+   * 
+   * @return a String with the publishing platform name.
+   */
   public String getPublishingPlatform() {
     return publishingPlatform;
   }
 
+  /**
+   * Provides the Archival Unit publisher name.
+   * 
+   * @return a String with the publisher name.
+   */
   public String getPublisher() {
     return publisher;
   }
 
+  /**
+   * Provides an indication of whether the Archival Unit is available from the
+   * publisher website.
+   * 
+   * @return a Boolean with the indication.
+   */
   public Boolean isAvailableFromPublisher() {
     return availableFromPublisher;
   }
 
+  /**
+   * Provides the Archival Unit substance state.
+   * 
+   * @return a String with the substance state.
+   */
   public String getSubstanceState() {
     return substanceState;
   }
 
+  /**
+   * Provides the Archival Unit creation timestamp.
+   * 
+   * @return a Long with the timestamp as the number of milliseconds since the
+   *         beginning of 1970.
+   */
   public Long getCreationTime() {
     return creationTime;
   }
 
+  /**
+   * Provides the Archival Unit crawl proxy name.
+   * 
+   * @return a String with the crawl proxy name.
+   */
   public String getCrawlProxy() {
     return crawlProxy;
   }
 
+  /**
+   * Provides the Archival Unit crawl window.
+   * 
+   * @return a String with the crawl window.
+   */
   public String getCrawlWindow() {
     return crawlWindow;
   }
 
+  /**
+   * Provides the Archival Unit crawl pool name.
+   * 
+   * @return a String with the crawl pool name.
+   */
   public String getCrawlPool() {
     return crawlPool;
   }
 
+  /**
+   * Provides the timestamp of the last completed crawl of the Archival Unit.
+   * 
+   * @return a Long with the timestamp as the number of milliseconds since the
+   *         beginning of 1970.
+   */
   public Long getLastCompletedCrawl() {
     return lastCompletedCrawl;
   }
 
+  /**
+   * Provides the timestamp of the last crawl of the Archival Unit.
+   * 
+   * @return a Long with the timestamp as the number of milliseconds since the
+   *         beginning of 1970.
+   */
   public Long getLastCrawl() {
     return lastCrawl;
   }
 
+  /**
+   * Provides the result of the last crawl of the Archival Unit.
+   * 
+   * @return a String with the last crawl result.
+   */
   public String getLastCrawlResult() {
     return lastCrawlResult;
   }
 
+  /**
+   * Provides the timestamp of the last completed poll of the Archival Unit.
+   * 
+   * @return a Long with the timestamp as the number of milliseconds since the
+   *         beginning of 1970.
+   */
   public Long getLastCompletedPoll() {
     return lastCompletedPoll;
   }
 
+  /**
+   * Provides the timestamp of the last poll of the Archival Unit.
+   * 
+   * @return a Long with the timestamp as the number of milliseconds since the
+   *         beginning of 1970.
+   */
   public Long getLastPoll() {
     return lastPoll;
   }
 
+  /**
+   * Provides the result of the last poll of the Archival Unit.
+   * 
+   * @return a String with the last poll result.
+   */
   public String getLastPollResult() {
     return lastPollResult;
   }
 
+  /**
+   * Provides an indication of whether the Archival Unit is currently in the
+   * process of crawling.
+   * 
+   * @return a Boolean with the indication.
+   */
   public Boolean isCurrentlyCrawling() {
     return currentlyCrawling;
   }
 
+  /**
+   * Provides an indication of whether the Archival Unit is currently in the
+   * process of polling.
+   * 
+   * @return a Boolean with the indication.
+   */
   public Boolean isCurrentlyPolling() {
     return currentlyPolling;
   }
 
+  /**
+   * Provides the Archival Unit subscription status.
+   * 
+   * @return a String with the subscription status.
+   */
   public String getSubscriptionStatus() {
     return subscriptionStatus;
   }
