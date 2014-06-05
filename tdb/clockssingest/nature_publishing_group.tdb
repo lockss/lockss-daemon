@@ -124,7 +124,7 @@
       issnl = 1008-682X
     >
     
-    comment[moved] = journal moved to http://www.ajandrology.com/, Medknow
+    comment[moved] = journal moved to http://www.ajandrology.com/, Medknow in 2013
 
     param[journal_id] = aja
 
@@ -134,7 +134,6 @@
     au < finished ; crawling ; 2011 ; Asian Journal of Andrology Volume 13 ; 2011 ; 13 >
     au < finished ; crawling ; 2012 ; Asian Journal of Andrology Volume 14 ; 2012 ; 14 >
     au < frozen ; exists ; 2013 ; Asian Journal of Andrology Volume 15 ; 2013 ; 15 >
-    au < expected ; exists ; 2014 ; Asian Journal of Andrology Volume 16 ; 2014 ; 16 >
 
   }
 
@@ -322,7 +321,7 @@
     au < finished ; crawling ; 2012 ; British Dental Journal Volume 212 ; 2012 ; 212 >
     au < finished ; crawling ; 2012 ; British Dental Journal Volume 213 ; 2012 ; 213 >
     au < crawling ; exists ; 2013 ; British Dental Journal Volume 214 ; 2013 ; 214 >
-    au < expected ; exists ; 2014 ; British Dental Journal Volume 215 ; 2014 ; 215 >
+    au < manifest ; exists ; 2014 ; British Dental Journal Volume 215 ; 2014 ; 215 >
 
   }
   {
@@ -1388,6 +1387,7 @@
 
     param[journal_id] = ijosup
     comment[notReady] = no substance (404 error) as of 6/10/13
+    comment[ingNotReady] = volume 3 (2013) has a manifest page up now, need to change status
 
     au < ingNotReady ; exists ; 2011 ; International Journal of Obesity Volume 1 ; 2011 ; 1 >
     au < finished ; crawling ; 2012 ; International Journal of Obesity Volume 2 ; 2012 ; 2 >
@@ -2895,7 +2895,7 @@
     au < crawling ; exists ; 2011 ; Nature Climate Change Volume 1 ; 2011 ; 1 >
     au < crawling ; exists ; 2012 ; Nature Climate Change Volume 2 ; 2012 ; 2 >
     au < crawling ; exists ; 2013 ; Nature Climate Change Volume 3 ; 2013 ; 3 >
-    au < expected ; exists ; 2014 ; Nature Climate Change Volume 4 ; 2014 ; 4 >
+    au < manifest ; exists ; 2014 ; Nature Climate Change Volume 4 ; 2014 ; 4 >
 
   }
 
@@ -2934,7 +2934,7 @@
     au < zapped ; finished ; 2011 ; Nature Digest Volume 8 ; 2011 ; 8 >
     au < crawling ; exists ; 2012 ; Nature Digest Volume 9 ; 2012 ; 9 >
     au < crawling ; exists ; 2013 ; Nature Digest Volume 10 ; 2013 ; 10 >
-    au < expected ; exists ; 2014 ; Nature Digest Volume 11 ; 2014 ; 11 >
+    au < manifest ; exists ; 2014 ; Nature Digest Volume 11 ; 2014 ; 11 >
 
   }
 
