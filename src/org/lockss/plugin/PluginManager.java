@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.249 2014-04-23 20:45:09 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.250 2014-06-05 20:18:09 tlipkis Exp $
  */
 
 /*
@@ -1666,6 +1666,8 @@ public class PluginManager
       log.error("Can't load plugin: " + pluginName, e);
     } catch (PluginException.IncompatibleDaemonVersion e) {
       log.error("Incompatible Plugin: " + e.getMessage());
+    } catch (PluginException.InvalidDefinition e) {
+      log.error("Error in plugin: " + e.getMessage());
     } catch (Exception e) {
       log.error("Can't load plugin: " + pluginName, e);
     }

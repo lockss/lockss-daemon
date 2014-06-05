@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.77 2014-04-23 20:47:11 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.78 2014-06-05 20:18:08 tlipkis Exp $
  */
 
 /*
@@ -198,7 +198,16 @@ public class DefinablePlugin extends BasePlugin {
       }
       // load into map
       ExternalizableMap oneMap = new ExternalizableMap();
-      oneMap.loadMapFromResource(mapFile, loader);
+      try {
+	oneMap.loadMapFromResource(mapFile, loader);
+      } catch (FileNotFoundException e) {
+	if (next != extMapName) {
+	  throw new
+	    PluginException.ParentNotFoundException("Parent of " + extMapName +
+						    " not found: " + next);
+	}
+	throw e;
+      }
       urls.add(url.toString());
       // apply overrides one plugin at a time in inheritance chain
       processOverrides(oneMap);
