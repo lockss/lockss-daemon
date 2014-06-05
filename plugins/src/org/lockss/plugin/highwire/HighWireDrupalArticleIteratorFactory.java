@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireDrupalArticleIteratorFactory.java,v 1.2 2014-02-19 22:50:30 etenbrink Exp $
+ * $Id: HighWireDrupalArticleIteratorFactory.java,v 1.3 2014-06-05 20:34:12 etenbrink Exp $
  */
 
 /*
@@ -74,7 +74,6 @@ public class HighWireDrupalArticleIteratorFactory
   protected static final String LANDING_REPLACEMENT = "/$1";
   protected static final String HTML_REPLACEMENT = "/$1.full";
   protected static final String PDF_REPLACEMENT = "/$1.full.pdf";
-  protected static final String PDF_REPLACEMENT2 = "/$1.full-text.pdf";
   protected static final String PDF_LANDING_REPLACEMENT = "/$1.full.pdf+html";
   protected static final String ABSTRACT_REPLACEMENT = "/$1.abstract";
   protected static final String EXTRACT_REPLACEMENT = "/$1.extract";
@@ -100,8 +99,8 @@ public class HighWireDrupalArticleIteratorFactory
         HTML_REPLACEMENT,
         ArticleFiles.ROLE_FULL_TEXT_HTML);
     
-    builder.addAspect(Arrays.asList(
-        PDF_REPLACEMENT,PDF_REPLACEMENT2),
+    builder.addAspect(
+        PDF_REPLACEMENT,
         ArticleFiles.ROLE_FULL_TEXT_PDF);
     
     // set up pdf landing page to be an aspect
@@ -127,10 +126,10 @@ public class HighWireDrupalArticleIteratorFactory
     // The order in which we want to define full_text_cu.
     // First one that exists will get the job
     builder.setFullTextFromRoles(
-        ArticleFiles.ROLE_FULL_TEXT_PDF, 
         ArticleFiles.ROLE_FULL_TEXT_HTML, 
-        ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE,
         ArticleFiles.ROLE_FULL_TEXT_HTML_LANDING_PAGE,
+        ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE,
+        ArticleFiles.ROLE_FULL_TEXT_PDF, 
         ArticleFiles.ROLE_ABSTRACT);
     
     return builder.getSubTreeArticleIterator();
