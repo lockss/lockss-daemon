@@ -3800,7 +3800,6 @@
     >
 
     param[journal_id] = onc
-    comment[notReady] = low agreement see RU 4761
     comment[extras] = volume 1 and 2 created in error.
 
     au < down ; exists ; 2012 ; Oncogenesis Volume 1 [to delete] ; 2012 ; 1 >
@@ -3821,9 +3820,9 @@
     au < manifest ; exists ; 2007 ; Oncogene Volume 26 ; 2007 ; 26 >
     au < finished ; crawling ; 2008 ; Oncogene Volume 27 ; 2008 ; 27 >
     au < finished ; crawling ; 2009 ; Oncogene Volume 28 ; 2009 ; 28 >
-    au < ingNotReady ; exists ; 2010 ; Oncogene Volume 29 ; 2010 ; 29 >
+    au < crawling ; exists ; 2010 ; Oncogene Volume 29 ; 2010 ; 29 >
     au < finished ; crawling ; 2011 ; Oncogene Volume 30 ; 2011 ; 30 >
-    au < ingNotReady ; exists ; 2012 ; Oncogene Volume 31 ; 2012 ; 31 >
+    au < manifest ; exists ; 2012 ; Oncogene Volume 31 ; 2012 ; 31 >
     au < crawling ; exists ; 2013 ; Oncogene Volume 32 ; 2013 ; 32 >
     au < manifest ; exists ; 2014 ; Oncogene Volume 33 ; 2014 ; 33 >
 
