@@ -1,10 +1,10 @@
 /*
- * $Id: FetchTimeExporter.java,v 1.8 2014-03-14 21:31:19 fergaloy-sf Exp $
+ * $Id: FetchTimeExporter.java,v 1.8.4.1 2014-06-05 22:57:02 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -28,12 +28,6 @@
  be used in advertising or otherwise to promote the sale, use or other dealings
  in this Software without prior written authorization from Stanford University.
 
- */
-
-/**
- * Periodically exports fetch times of recently added metadata items.
- * 
- * @version 1.0
  */
 package org.lockss.exporter;
 
@@ -65,6 +59,11 @@ import org.lockss.util.NumberUtil;
 import org.lockss.util.StringUtil;
 import org.lockss.util.TimeBase;
 
+/**
+ * Periodically exports fetch times of recently added metadata items.
+ * 
+ * @version 1.0
+ */
 public class FetchTimeExporter {
   /**
    * Prefix for the export configuration entries.
@@ -164,6 +163,9 @@ public class FetchTimeExporter {
       + ", min2." + NAME_COLUMN + " as ITEM_TITLE"
       + ", mi2." + DATE_COLUMN
       + ", mi2." + FETCH_TIME_COLUMN
+      + ", b." + VOLUME_COLUMN
+      + ", b." + ISSUE_COLUMN
+      + ", b." + START_PAGE_COLUMN
       + ", a." + AU_KEY_COLUMN
       + ", u." + URL_COLUMN
       + ", d." + DOI_COLUMN
@@ -175,12 +177,14 @@ public class FetchTimeExporter {
       + "," + PLUGIN_TABLE + " pl"
       + "," + PUBLICATION_TABLE + " pn"
       + "," + MD_ITEM_NAME_TABLE + " min1"
-      + "," + MD_ITEM_NAME_TABLE + " min2"
       + "," + MD_ITEM_TYPE_TABLE + " mit"
+      + "," + BIB_ITEM_TABLE + " b"
       + "," + AU_MD_TABLE + " am"
       + "," + AU_TABLE + " a"
-      + "," + URL_TABLE + " u"
       + "," + MD_ITEM_TABLE + " mi2"
+      + " left outer join " + MD_ITEM_NAME_TABLE + " min2"
+      + " on mi2." + MD_ITEM_SEQ_COLUMN + " = min2." + MD_ITEM_SEQ_COLUMN
+      + " and min2." + NAME_TYPE_COLUMN + " = 'primary'"
       + " left outer join " + DOI_TABLE + " d"
       + " on mi2." + MD_ITEM_SEQ_COLUMN + " = d." + MD_ITEM_SEQ_COLUMN
       + " left outer join " + ISSN_TABLE + " is1"
@@ -195,18 +199,20 @@ public class FetchTimeExporter {
       + " left outer join " + ISBN_TABLE + " ib2"
       + " on mi2." + PARENT_SEQ_COLUMN + " = ib2." + MD_ITEM_SEQ_COLUMN
       + " and ib2." + ISBN_TYPE_COLUMN + " = '" + E_ISBN_TYPE + "'"
+      + " left outer join " + URL_TABLE + " u"
+      + " on mi2." + MD_ITEM_SEQ_COLUMN + " = u." + MD_ITEM_SEQ_COLUMN
+      + " and u." + FEATURE_COLUMN + " = '"
+      + MetadataManager.ACCESS_URL_FEATURE + "'"
       + " where pr." + PUBLISHER_SEQ_COLUMN + " = pn." + PUBLISHER_SEQ_COLUMN
       + " and pn." + MD_ITEM_SEQ_COLUMN + " = min1." + MD_ITEM_SEQ_COLUMN
+      + " and min1." + NAME_TYPE_COLUMN + " = 'primary'"
       + " and pn." + MD_ITEM_SEQ_COLUMN + " = mi2." + PARENT_SEQ_COLUMN
-      + " and mi2." + MD_ITEM_SEQ_COLUMN + " = min2." + MD_ITEM_SEQ_COLUMN
       + " and mi2." + MD_ITEM_TYPE_SEQ_COLUMN
       + " = mit." + MD_ITEM_TYPE_SEQ_COLUMN
+      + " and mi2." + MD_ITEM_SEQ_COLUMN + " = b." + MD_ITEM_SEQ_COLUMN
       + " and mi2." + AU_MD_SEQ_COLUMN + " = am." + AU_MD_SEQ_COLUMN
       + " and am." + AU_SEQ_COLUMN + " = a." + AU_SEQ_COLUMN
       + " and a." + PLUGIN_SEQ_COLUMN + " = pl." + PLUGIN_SEQ_COLUMN
-      + " and mi2." + MD_ITEM_SEQ_COLUMN + " = u." + MD_ITEM_SEQ_COLUMN
-      + " and u." + FEATURE_COLUMN + " = '"
-      + MetadataManager.ACCESS_URL_FEATURE + "'"
       + " and " + "mi2." + MD_ITEM_SEQ_COLUMN + " > ?"
       + " order by mi2." + MD_ITEM_SEQ_COLUMN;
 
@@ -242,7 +248,7 @@ public class FetchTimeExporter {
       DEFAULT_MAX_NUMBER_OF_EXPORTED_ITEMS_PER_FILE;
 
   // The version of the export file format.
-  private int exportVersion = 2;
+  private int exportVersion = 3;
 
   /**
    * Constructor.
@@ -696,6 +702,16 @@ public class FetchTimeExporter {
 	  String eIsbn = results.getString(E_ISBN_TYPE);
 	  if (log.isDebug3()) log.debug3(DEBUG_HEADER + "eIsbn = " + eIsbn);
 
+	  String volume = results.getString(VOLUME_COLUMN);
+	  if (log.isDebug3()) log.debug3(DEBUG_HEADER + "volume = " + volume);
+
+	  String issue = results.getString(ISSUE_COLUMN);
+	  if (log.isDebug3()) log.debug3(DEBUG_HEADER + "issue = " + issue);
+
+	  String startPage = results.getString(START_PAGE_COLUMN);
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "startPage = " + startPage);
+
 	  // Create the line to be written to the output file.
 	  StringBuilder sb = new StringBuilder();
 
@@ -717,7 +733,10 @@ public class FetchTimeExporter {
 	  .append(StringUtil.blankOutNlsAndTabs(pIssn)).append(SEPARATOR)
 	  .append(StringUtil.blankOutNlsAndTabs(eIssn)).append(SEPARATOR)
 	  .append(StringUtil.blankOutNlsAndTabs(pIsbn)).append(SEPARATOR)
-	  .append(StringUtil.blankOutNlsAndTabs(eIsbn));
+	  .append(StringUtil.blankOutNlsAndTabs(eIsbn)).append(SEPARATOR)
+	  .append(StringUtil.blankOutNlsAndTabs(volume)).append(SEPARATOR)
+	  .append(StringUtil.blankOutNlsAndTabs(issue)).append(SEPARATOR)
+	  .append(StringUtil.blankOutNlsAndTabs(startPage));
 
 	  // Write the line to the export output file.
 	  writer.println(sb.toString());
