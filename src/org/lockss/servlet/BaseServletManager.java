@@ -1,5 +1,5 @@
 /*
- * $Id: BaseServletManager.java,v 1.39 2014-05-14 04:13:28 tlipkis Exp $
+ * $Id: BaseServletManager.java,v 1.40 2014-06-05 20:17:36 tlipkis Exp $
  */
 
 /*
@@ -353,7 +353,8 @@ public abstract class BaseServletManager
 
   void startOrStop() {
     if (start) {
-      if (getDaemon().isDaemonInited()) {
+//       if (getDaemon().isDaemonInited()) {
+      if (isInited()) {
 	startServlets();
       }
     } else if (isServerRunning()) {

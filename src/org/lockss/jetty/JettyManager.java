@@ -1,5 +1,5 @@
 /*
- * $Id: JettyManager.java,v 1.32 2014-01-29 05:22:06 tlipkis Exp $
+ * $Id: JettyManager.java,v 1.33 2014-06-05 20:17:37 tlipkis Exp $
  */
 
 /*
@@ -145,6 +145,7 @@ public abstract class JettyManager
   protected boolean startServer(HttpServer server, int port, int sslPort,
 				String serverName) {
     try {
+      if (!isInited()) return false;
       if (resourceMgr != null) {
 	if (!resourceMgr.reserveTcpPort(port, serverName)) {
 	  log.warning(serverName + " not started; port " + port + " is in use");
