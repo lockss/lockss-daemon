@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireDrupalArticleIteratorFactory.java,v 1.1 2014-02-19 22:37:23 etenbrink Exp $
+ * $Id: TestHighWireDrupalArticleIteratorFactory.java,v 1.2 2014-06-05 20:35:29 etenbrink Exp $
  */
 
 /*
@@ -304,19 +304,19 @@ public class TestHighWireDrupalArticleIteratorFactory extends ArticleIteratorTes
     
     Stack<String[]> expStack = new Stack<String[]>();
     String [] af1 = {
-        BASE_URL + "content/1/1/C1.full.pdf",
+        BASE_URL + "content/1/1/C1",
         BASE_URL + "content/1/1/C1.full.pdf+html",
         BASE_URL + "content/1/1/C1.full.pdf",
         BASE_URL + "content/1/1/C1"};
     
     String [] af2 = {
-        BASE_URL + "content/1/1/C10.full.pdf",
+        BASE_URL + "content/1/1/C10",
         BASE_URL + "content/1/1/C10.full.pdf+html",
         BASE_URL + "content/1/1/C10.full.pdf",
         BASE_URL + "content/1/1/C10"};
     
     String [] af3 = {
-        BASE_URL + "content/1/1/C100.full.pdf+html",
+        BASE_URL + "content/1/1/C100",
         BASE_URL + "content/1/1/C100.full.pdf+html",
         null,
         BASE_URL + "content/1/1/C100"};
@@ -328,7 +328,7 @@ public class TestHighWireDrupalArticleIteratorFactory extends ArticleIteratorTes
         BASE_URL + "content/1/1/C3"};
     
     String [] af5 = {
-        BASE_URL + "content/1/1/C4.full.pdf",
+        BASE_URL + "content/1/1/C4",
         null,
         BASE_URL + "content/1/1/C4.full.pdf",
         BASE_URL + "content/1/1/C4"};
