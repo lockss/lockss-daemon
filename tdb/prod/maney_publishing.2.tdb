@@ -12,6 +12,7 @@
   {
     comment[publisher_list] = http://www.maney.co.uk/index.php/online/journals_available_online/
     comment[Highwire]= only 1, exclude others listed above, see http://www.maney.co.uk/index.php/online_journals/  
+    comment[dnp] = released for old plugin
   }
  
   {
@@ -36,6 +37,7 @@
     au < doNotProcess ; 2011 ; Advances in Applied Ceramics Volume 110 ; 110 > 
     au < doNotProcess ; 2012 ; Advances in Applied Ceramics Volume 111 ; 111 > 
     au < exists ; 2013 ; Advances in Applied Ceramics Volume 112 ; 112 > 
+    au < exists ; 2014 ; Advances in Applied Ceramics Volume 113 ; 113 > 
 
   }
 
@@ -110,6 +112,7 @@
     au < doNotProcess ; 2011 ; Ambix Volume 58 ; 58 >
     au < doNotProcess ; 2012 ; Ambix Volume 59 ; 59 >
     au < exists ; 2013 ; Ambix Volume 60 ; 60 >
+    au < exists ; 2014 ; Ambix Volume 61 ; 61 >
 
   }
 
@@ -136,7 +139,6 @@
     au < exists ; 2010 ; Annals of Tropical Medicine and Parasitology Volume 104 ; 104 > 
     au < exists ; 2011 ; Annals of Tropical Medicine and Parasitology Volume 105 ; 105 > 
 
-
   }
 
   {
@@ -160,7 +162,7 @@
     au < exists ; 2008 ; Annals of Tropical Paediatrics: International Child Health Volume 28 ; 28 > 
     au < exists ; 2009 ; Annals of Tropical Paediatrics: International Child Health Volume 29 ; 29 > 
     au < exists ; 2010 ; Annals of Tropical Paediatrics: International Child Health Volume 30 ; 30 > 
-    au < exists ; 2011 ; Annals of Tropical Paediatrics: International Child Health Volume 31 ; 31 >  
+    au < exists ; 2011 ; Annals of Tropical Paediatrics: International Child Health Volume 31 ; 31 > 
 
   }
 
@@ -188,7 +190,7 @@
     au < doNotProcess ; 2010 ; Applied Earth Science: IMM Transactions section B Volume 119 ; 119 > 
     au < doNotProcess ; 2011 ; Applied Earth Science: IMM Transactions section B Volume 120 ; 120 > 
     au < doNotProcess ; 2012 ; Applied Earth Science: IMM Transactions section B Volume 121 ; 121 > 
-    au < exists ; 2013 ; Applied Earth Science: IMM Transactions section B Volume 122 ; 122 >
+    au < exists ; 2013-2014 ; Applied Earth Science: IMM Transactions section B Volume 122 ; 122 >
 
   }
 
@@ -213,6 +215,7 @@
     au < doNotProcess ; 2011 ; Arms & Armour Volume 8 ; 8 > 
     au < doNotProcess ; 2012 ; Arms & Armour Volume 9 ; 9 > 
     au < exists ; 2013 ; Arms & Armour Volume 10 ; 10 > 
+    au < exists ; 2014 ; Arms & Armour Volume 11 ; 11 > 
 
   }
 
@@ -315,6 +318,7 @@
     au < doNotProcess ; 2011 ; Bronte Studies Volume 36 ; 36 > 
     au < doNotProcess ; 2012 ; Bronte Studies Volume 37 ; 37 > 
     au < exists ; 2013 ; Bronte Studies Volume 38 ; 38 > 
+    au < exists ; 2014 ; Bronte Studies Volume 39 ; 39 > 
 
   }
 
@@ -333,7 +337,6 @@
     au < exists ; 2010 ; Bubble Science, Engineering and Technology Volume 2 ; 2 > 
     au < doNotProcess ; 2011 ; Bubble Science, Engineering and Technology Volume 3 ; 3 > 
     au < doNotProcess ; 2012 ; Bubble Science, Engineering and Technology Volume 4 ; 4 > 
-    au < exists ; 2013 ; Bubble Science, Engineering and Technology Volume 5 ; 5 > 
 
   }
 
@@ -346,7 +349,8 @@
       issnl = 1752-7260 
     >
 
-    param[journal_id] = brl 
+    param[journal_id] = cbrl 
+    comment[journal_id] = both brl & cbrl point to same title
 
     au < doNotProcess ; 2006 ; Bulletin of the Council for British Research in the Levant Volume 1 ; 1 > 
     au < doNotProcess ; 2007 ; Bulletin of the Council for British Research in the Levant Volume 2 ; 2 > 
@@ -356,6 +360,7 @@
     au < doNotProcess ; 2011 ; Bulletin of the Council for British Research in the Levant Volume 6 ; 6 > 
     au < doNotProcess ; 2012 ; Bulletin of the Council for British Research in the Levant Volume 7 ; 7 > 
     au < exists ; 2013 ; Bulletin of the Council for British Research in the Levant Volume 8 ; 8 > 
+    au < exists ; 2014 ; Bulletin of the Council for British Research in the Levant Volume 9 ; 9 > 
 
   }
 
@@ -407,6 +412,7 @@
     au < doNotProcess ; 2011 ; Byzantine and Modern Greek Studies Volume 35 ; 35 >
     au < doNotProcess ; 2012 ; Byzantine and Modern Greek Studies Volume 36 ; 36 >
     au < exists ; 2013 ; Byzantine and Modern Greek Studies Volume 37 ; 37 >
+    au < exists ; 2014 ; Byzantine and Modern Greek Studies Volume 38 ; 38 >
 
   }
 
@@ -473,6 +479,7 @@
     au < doNotProcess ; 2011 ; Canadian Metallurgical Quarterly Volume 50 ; 50 >
     au < doNotProcess ; 2012 ; Canadian Metallurgical Quarterly Volume 51 ; 51 >
     au < exists ; 2013 ; Canadian Metallurgical Quarterly Volume 52 ; 52 >
+    au < exists ; 2014 ; Canadian Metallurgical Quarterly Volume 53 ; 53 >
 
   }
 
@@ -537,6 +544,7 @@
     au < exists ; 2011 ; The Cartographic Journal Volume 48 ; 48 > 
     au < doNotProcess ; 2012 ; The Cartographic Journal Volume 49 ; 49 > 
     au < exists ; 2013 ; The Cartographic Journal Volume 50 ; 50 > 
+    au < exists ; 2014 ; The Cartographic Journal Volume 51 ; 51 > 
 
   }
 
@@ -562,6 +570,7 @@
     au < doNotProcess ; 2011 ; Central Europe Volume 9 ; 9 > 
     au < doNotProcess ; 2012 ; Central Europe Volume 10 ; 10 > 
     au < exists ; 2013 ; Central Europe Volume 11 ; 11 > 
+    au < expected ; 2014 ; Central Europe Volume 12 ; 12 > 
 
   }
 
@@ -576,9 +585,14 @@
 
     param[journal_id] = tcr
    
-    au < doNotProcess ; 2011 ; The Chinese Historical Review Volume 18 ; 18 >    
-    au < doNotProcess ; 2012 ; The Chinese Historical Review Volume 19 ; 19 >  
-    au < exists ; 2013 ; The Chinese Historical Review Volume 20 ; 20 >  
+    au < exists ; 2007 ; The Chinese Historical Review Volume 14 ; 14 >
+    au < exists ; 2008 ; The Chinese Historical Review Volume 15 ; 15 >
+    au < exists ; 2009 ; The Chinese Historical Review Volume 16 ; 16 >
+    au < exists ; 2010 ; The Chinese Historical Review Volume 17 ; 17 >
+    au < doNotProcess ; 2011 ; The Chinese Historical Review Volume 18 ; 18 >
+    au < doNotProcess ; 2012 ; The Chinese Historical Review Volume 19 ; 19 >
+    au < exists ; 2013 ; The Chinese Historical Review Volume 20 ; 20 >
+    au < exists ; 2014 ; The Chinese Historical Review Volume 21 ; 21 >
     
   }
 
@@ -587,10 +601,13 @@
     title <
       name = Cochlear Implants International ;
       issn = 1467-0100 ;
-      eissn = 1754-7628
+      eissn = 1754-7628 ;
+      issnl = 1467-0100
     >
 
-    param[journal_id] = cii 
+    param[journal_id] = cim 
+    comment[journal_id] = both cii & cim point to same title
+    
 
     au < exists ; 2000 ; Cochlear Implants International Volume 1 ; 1 > 
     au < exists ; 2001 ; Cochlear Implants International Volume 2 ; 2 > 
@@ -606,6 +623,7 @@
     au < exists ; 2011 ; Cochlear Implants International Volume 12 ; 12 > 
     au < doNotProcess ; 2012 ; Cochlear Implants International Volume 13 ; 13 > 
     au < exists ; 2013 ; Cochlear Implants International Volume 14 ; 14 > 
+    au < exists ; 2014 ; Cochlear Implants International Volume 15 ; 15 > 
 
   }
 
@@ -631,6 +649,7 @@
     au < doNotProcess ; 2011 ; Comparative American Studies Volume 9 ; 9 > 
     au < doNotProcess ; 2012 ; Comparative American Studies Volume 10 ; 10 > 
     au < exists ; 2013 ; Comparative American Studies Volume 11 ; 11 > 
+    au < expected ; 2014 ; Comparative American Studies Volume 12 ; 12 > 
     
   }
 
@@ -657,6 +676,7 @@
     au < doNotProcess ; 2011 ; Competition & Change Volume 15 ; 15 > 
     au < doNotProcess ; 2012 ; Competition & Change Volume 16 ; 16 > 
     au < exists ; 2013 ; Competition & Change Volume 17 ; 17 > 
+    au < exists ; 2014 ; Competition & Change Volume 18 ; 18 > 
 
   }
 
@@ -686,6 +706,7 @@
     au < doNotProcess ; 2011 ; Conservation and Management of Archaeological Sites Volume 13 ; 13 > 
     au < exists ; 2012 ; Conservation and Management of Archaeological Sites Volume 14 ; 14 > 
     au < exists ; 2013 ; Conservation and Management of Archaeological Sites Volume 15 ; 15 > 
+    au < expected ; 2014 ; Conservation and Management of Archaeological Sites Volume 16 ; 16 > 
 
   }
 
@@ -699,6 +720,7 @@
     >
 
     param[journal_id] = cest 
+    comment[jounral_id] = both cest & cst point to same title
     comment[continues] = 0007-0599
 
     au < exists ; 2003 ; Corrosion Engineering, Science and Technology Volume 38 ; 38 > 
@@ -712,6 +734,7 @@
     au < exists ; 2011 ; Corrosion Engineering, Science and Technology Volume 46 ; 46 > 
     au < doNotProcess ; 2012 ; Corrosion Engineering, Science and Technology Volume 47 ; 47 > 
     au < exists ; 2013 ; Corrosion Engineering, Science and Technology Volume 48 ; 48 > 
+    au < exists ; 2014 ; Corrosion Engineering, Science and Technology Volume 49 ; 49 > 
 
   }
 
@@ -770,9 +793,10 @@
     au < exists ; 2008 ; Costume Volume 42 ; 42 > 
     au < exists ; 2009 ; Costume Volume 43 ; 43 > 
     au < doNotProcess ; 2010 ; Costume Volume 44 ; 44 > 
-    au < doNotProcess ; 2011 ; Costume Volume 45 ; 2011 > 
+    au < doNotProcess ; 2011 ; Costume Volume 45 ; 45 > 
     au < doNotProcess ; 2012 ; Costume Volume 46 ; 46 > 
     au < exists ; 2013 ; Costume Volume 47 ; 47 > 
+    au < exists ; 2014 ; Costume Volume 48 ; 48 > 
 
   }
 
@@ -802,6 +826,7 @@
     au < exists ; 2011 ; Deafness & Education International Volume 13 ; 13 > 
     au < doNotProcess ; 2012 ; Deafness & Education International Volume 14 ; 14 > 
     au < exists ; 2013 ; Deafness & Education International Volume 15 ; 15 > 
+    au < exists ; 2014 ; Deafness & Education International Volume 16 ; 16 > 
 
   }
 
@@ -832,6 +857,7 @@
     au < doNotProcess ; 2011 ; Dix-Neuf Volume 15 ; 15 > 
     au < doNotProcess ; 2012 ; Dix-Neuf Volume 16 ; 16 > 
     au < exists ; 2013 ; Dix-Neuf Volume 17 ; 17 > 
+    au < exists ; 2014 ; Dix-Neuf Volume 18 ; 18 > 
 
   }
 
@@ -846,10 +872,46 @@
 
     param[journal_id] = dre 
 
-    au < doNotProcess ; 2010 ; Dress Volume 36 ; 36 > 
-    au < doNotProcess ; 2011 ; Dress Volume 37 ; 37 > 
-    au < doNotProcess ; 2012 ; Dress Volume 38 ; 38 > 
-    au < exists ; 2013 ; Dress Volume 39 ; 39 > 
+    au < exists ; 1975 ; Dress Volume 1 ; 1 >
+    au < exists ; 1976 ; Dress Volume 2 ; 2 >
+    au < exists ; 1977 ; Dress Volume 3 ; 3 >
+    au < exists ; 1978 ; Dress Volume 4 ; 4 >
+    au < exists ; 1979 ; Dress Volume 5 ; 5 >
+    au < exists ; 1980 ; Dress Volume 6 ; 6 >
+    au < exists ; 1981 ; Dress Volume 7 ; 7 >
+    au < exists ; 1982 ; Dress Volume 8 ; 8 >
+    au < exists ; 1983 ; Dress Volume 9 ; 9 >
+    au < exists ; 1984 ; Dress Volume 10 ; 10 >
+    au < exists ; 1985 ; Dress Volume 11 ; 11 >
+    au < exists ; 1986 ; Dress Volume 12 ; 12 >
+    au < exists ; 1987 ; Dress Volume 13 ; 13 >
+    au < exists ; 1988 ; Dress Volume 14 ; 14 >
+    au < exists ; 1989 ; Dress Volume 15 ; 15 >
+    au < exists ; 1990 ; Dress Volume 16 ; 16 >
+    au < exists ; 1991 ; Dress Volume 17 ; 17 >
+    au < exists ; 1992 ; Dress Volume 18 ; 18 >
+    au < exists ; 1993 ; Dress Volume 19 ; 19 >
+    au < exists ; 1994 ; Dress Volume 20 ; 20 >
+    au < exists ; 1995 ; Dress Volume 21 ; 21 >
+    au < exists ; 1996 ; Dress Volume 22 ; 22 >
+    au < exists ; 1997 ; Dress Volume 23 ; 23 >
+    au < exists ; 1998 ; Dress Volume 24 ; 24 >
+    au < exists ; 1999 ; Dress Volume 25 ; 25 >
+    au < exists ; 2000 ; Dress Volume 26 ; 26 >
+    au < exists ; 2001 ; Dress Volume 27 ; 27 >
+    au < exists ; 2002 ; Dress Volume 28 ; 28 >
+    au < exists ; 2003 ; Dress Volume 29 ; 29 >
+    au < exists ; 2004 ; Dress Volume 30 ; 30 >
+    au < exists ; 2005 ; Dress Volume 31 ; 31 >
+    au < exists ; 2006 ; Dress Volume 32 ; 32 >
+    au < exists ; 2007 ; Dress Volume 33 ; 33 >
+    au < exists ; 2008 ; Dress Volume 34 ; 34 >
+    au < exists ; 2009 ; Dress Volume 35 ; 35 >
+    au < doNotProcess ; 2010 ; Dress Volume 36 ; 36 >
+    au < doNotProcess ; 2011 ; Dress Volume 37 ; 37 >
+    au < doNotProcess ; 2012 ; Dress Volume 38 ; 38 >
+    au < exists ; 2013 ; Dress Volume 39 ; 39 >
+    au < exists ; 2014 ; Dress Volume 40 ; 40 >
 
   }
 
@@ -869,6 +931,7 @@
     au < doNotProcess ; 2011 ; Dutch Crossing: Journal of Low Countries Studies Volume 35 ; 35 > 
     au < doNotProcess ; 2012 ; Dutch Crossing: Journal of Low Countries Studies Volume 36 ; 36 > 
     au < exists ; 2013 ; Dutch Crossing: Journal of Low Countries Studies Volume 37 ; 37 > 
+    au < exists ; 2014 ; Dutch Crossing: Journal of Low Countries Studies Volume 38 ; 38 > 
 
   }
 
@@ -902,7 +965,8 @@
     au < doNotProcess ; 2010 ; Early Medieval China Volume 2010 ; 2010 > 
     au < doNotProcess ; 2011 ; Early Medieval China Volume 2011 ; 2011 > 
     au < doNotProcess ; 2012 ; Early Medieval China Volume 2012 ; 2012 > 
-    au < exists ; 2013 ; Early Medieval China Volume 2013 ; 2013 > 
+    au < exists ; 2013 ; Early Medieval China Volume 19 ; 19 > 
+    au < expected ; 2014 ; Early Medieval China Volume 20 ; 20 > 
 
   }
 
@@ -977,6 +1041,7 @@
     au < doNotProcess ; 2011 ; Environmental Archaeology Volume 16 ; 16 > 
     au < doNotProcess ; 2012 ; Environmental Archaeology Volume 17 ; 17 > 
     au < exists ; 2013 ; Environmental Archaeology Volume 18 ; 18 > 
+    au < exists ; 2014 ; Environmental Archaeology Volume 19 ; 19 > 
 
   }
 
@@ -990,11 +1055,45 @@
     >
 
     param[journal_id] =  eja
+    comment[continues] = 0965-7665
 
+    au < exists ; 1998 ; European Journal of Archaeology Volume 1 ; 1 > 
+    au < exists ; 1999 ; European Journal of Archaeology Volume 2 ; 2 > 
+    au < exists ; 2000 ; European Journal of Archaeology Volume 3 ; 3 > 
+    au < exists ; 2001 ; European Journal of Archaeology Volume 4 ; 4 > 
+    au < exists ; 2002 ; European Journal of Archaeology Volume 5 ; 5 > 
+    au < exists ; 2003 ; European Journal of Archaeology Volume 6 ; 6 > 
+    au < exists ; 2004 ; European Journal of Archaeology Volume 7 ; 7 > 
+    au < exists ; 2005 ; European Journal of Archaeology Volume 8 ; 8 > 
+    au < exists ; 2006 ; European Journal of Archaeology Volume 9 ; 9 > 
+    au < exists ; 2007 ; European Journal of Archaeology Volume 10 ; 10 > 
+    au < exists ; 2008 ; European Journal of Archaeology Volume 11 ; 11 > 
+    au < exists ; 2009 ; European Journal of Archaeology Volume 12 ; 12 > 
+    au < exists ; 2010 ; European Journal of Archaeology Volume 13 ; 13 > 
     au < doNotProcess ; 2011 ; European Journal of Archaeology Volume 14 ; 14 > 
     au < doNotProcess ; 2012 ; European Journal of Archaeology Volume 15 ; 15 > 
     au < exists ; 2013 ; European Journal of Archaeology Volume 16 ; 16 > 
+    au < exists ; 2014 ; European Journal of Archaeology Volume 17 ; 17 > 
     
+  }
+
+  {
+
+    title <
+      name = Journal of European Archaeology ;
+      issn = 0965-7665 ;
+      issnl = 0965-7665
+    >
+
+    param[journal_id] =  jea
+    comment[continued_by] = 1461-9571
+
+    au < exists ; 1993 ; Journal of European Archaeology Volume 1 ; 1 > 
+    au < exists ; 1994 ; Journal of European Archaeology Volume 2 ; 2 > 
+    au < exists ; 1995 ; Journal of European Archaeology Volume 3 ; 3 > 
+    au < exists ; 1996 ; Journal of European Archaeology Volume 4 ; 4 > 
+    au < exists ; 1997 ; Journal of European Archaeology Volume 5 ; 5 > 
+ 
   }
 
   {
@@ -1033,6 +1132,7 @@
     au < doNotProcess ; 2011 ; Exemplaria Volume 23 ; 23 > 
     au < doNotProcess ; 2012 ; Exemplaria Volume 24 ; 24 > 
     au < exists ; 2013 ; Exemplaria Volume 25 ; 25 > 
+    au < exists ; 2014 ; Exemplaria Volume 26 ; 26 > 
 
   }
 
@@ -1055,6 +1155,7 @@
     au < doNotProcess ; 2011 ; Family & Community History Volume 14 ; 14 > 
     au < doNotProcess ; 2012 ; Family & Community History Volume 15 ; 15 > 
     au < exists ; 2013 ; Family & Community History Volume 16 ; 16 > 
+    au < exists ; 2014 ; Family & Community History Volume 17 ; 17 > 
 
   }
 
@@ -1068,12 +1169,77 @@
     >
 
     param[journal_id] = flk 
+    comment[continues] = 0434-9725
 
+    au < exists ; 1963 ; Folk Life: Journal of Ethnological Studies Volume 1 ; 1 > 
+    au < exists ; 1964 ; Folk Life: Journal of Ethnological Studies Volume 2 ; 2 > 
+    au < exists ; 1965 ; Folk Life: Journal of Ethnological Studies Volume 3 ; 3 > 
+    au < exists ; 1966 ; Folk Life: Journal of Ethnological Studies Volume 4 ; 4 > 
+    au < exists ; 1967 ; Folk Life: Journal of Ethnological Studies Volume 5 ; 5 > 
+    au < exists ; 1968 ; Folk Life: Journal of Ethnological Studies Volume 6 ; 6 > 
+    au < exists ; 1969 ; Folk Life: Journal of Ethnological Studies Volume 7 ; 7 > 
+    au < exists ; 1970 ; Folk Life: Journal of Ethnological Studies Volume 8 ; 8 > 
+    au < exists ; 1971 ; Folk Life: Journal of Ethnological Studies Volume 9 ; 9 > 
+    au < exists ; 1972 ; Folk Life: Journal of Ethnological Studies Volume 10 ; 10 > 
+    au < exists ; 1973 ; Folk Life: Journal of Ethnological Studies Volume 11 ; 11 > 
+    au < exists ; 1974 ; Folk Life: Journal of Ethnological Studies Volume 12 ; 12 > 
+    au < exists ; 1975 ; Folk Life: Journal of Ethnological Studies Volume 13 ; 13 > 
+    au < exists ; 1976 ; Folk Life: Journal of Ethnological Studies Volume 14 ; 14 > 
+    au < exists ; 1977 ; Folk Life: Journal of Ethnological Studies Volume 15 ; 15 > 
+    au < exists ; 1978 ; Folk Life: Journal of Ethnological Studies Volume 16 ; 16 > 
+    au < exists ; 1979 ; Folk Life: Journal of Ethnological Studies Volume 17 ; 17 > 
+    au < exists ; 1980 ; Folk Life: Journal of Ethnological Studies Volume 18 ; 18 > 
+    au < exists ; 1981 ; Folk Life: Journal of Ethnological Studies Volume 19 ; 19 > 
+    au < exists ; 1982 ; Folk Life: Journal of Ethnological Studies Volume 20 ; 20 > 
+    au < exists ; 1983 ; Folk Life: Journal of Ethnological Studies Volume 21 ; 21 > 
+    au < exists ; 1984 ; Folk Life: Journal of Ethnological Studies Volume 22 ; 22 > 
+    au < exists ; 1985 ; Folk Life: Journal of Ethnological Studies Volume 23 ; 23 > 
+    au < exists ; 1986 ; Folk Life: Journal of Ethnological Studies Volume 24 ; 24 > 
+    au < exists ; 1987 ; Folk Life: Journal of Ethnological Studies Volume 25 ; 25 > 
+    au < exists ; 1988 ; Folk Life: Journal of Ethnological Studies Volume 26 ; 26 > 
+    au < exists ; 1989 ; Folk Life: Journal of Ethnological Studies Volume 27 ; 27 > 
+    au < exists ; 1990 ; Folk Life: Journal of Ethnological Studies Volume 28 ; 28 > 
+    au < exists ; 1991 ; Folk Life: Journal of Ethnological Studies Volume 29 ; 29 > 
+    au < exists ; 1992 ; Folk Life: Journal of Ethnological Studies Volume 30 ; 30 > 
+    au < exists ; 1993 ; Folk Life: Journal of Ethnological Studies Volume 31 ; 31 > 
+    au < exists ; 1994 ; Folk Life: Journal of Ethnological Studies Volume 32 ; 32 > 
+    au < exists ; 1995 ; Folk Life: Journal of Ethnological Studies Volume 33 ; 33 > 
+    au < exists ; 1996 ; Folk Life: Journal of Ethnological Studies Volume 34 ; 34 > 
+    au < exists ; 1997 ; Folk Life: Journal of Ethnological Studies Volume 35 ; 35 > 
+    au < exists ; 1998 ; Folk Life: Journal of Ethnological Studies Volume 36 ; 36 > 
+    au < exists ; 1999 ; Folk Life: Journal of Ethnological Studies Volume 37 ; 37 > 
+    au < exists ; 2000 ; Folk Life: Journal of Ethnological Studies Volume 38 ; 38 > 
+    au < exists ; 2001 ; Folk Life: Journal of Ethnological Studies Volume 39 ; 39 > 
+    au < exists ; 2002 ; Folk Life: Journal of Ethnological Studies Volume 20 ; 20 > 
+    au < exists ; 2003 ; Folk Life: Journal of Ethnological Studies Volume 41 ; 41 > 
+    au < exists ; 2004 ; Folk Life: Journal of Ethnological Studies Volume 42 ; 42 > 
+    au < exists ; 2005 ; Folk Life: Journal of Ethnological Studies Volume 43 ; 43 > 
+    au < exists ; 2006 ; Folk Life: Journal of Ethnological Studies Volume 44 ; 44 > 
+    au < exists ; 2007 ; Folk Life: Journal of Ethnological Studies Volume 45 ; 45 > 
+    au < exists ; 2008 ; Folk Life: Journal of Ethnological Studies Volume 46 ; 46 > 
     au < exists ; 2009 ; Folk Life: Journal of Ethnological Studies Volume 47 ; 47 > 
     au < doNotProcess ; 2010 ; Folk Life: Journal of Ethnological Studies Volume 48 ; 48 > 
     au < doNotProcess ; 2011 ; Folk Life: Journal of Ethnological Studies Volume 49 ; 49 > 
     au < doNotProcess ; 2012 ; Folk Life: Journal of Ethnological Studies Volume 50 ; 50 > 
     au < exists ; 2013 ; Folk Life: Journal of Ethnological Studies Volume 51 ; 51 > 
+    au < exists ; 2014 ; Folk Life: Journal of Ethnological Studies Volume 52 ; 52 > 
+
+  }
+
+  {
+
+    title <
+      name = Gwerin: A Half-Yearly Journal of Folk Life  ;
+      issn = 0434-9725 ;
+      issnl = 0434-9725 
+    >
+
+    param[journal_id] = gwr 
+    comment[continued_by] = 0430-8778
+
+    au < exists ; 1956-1957 ; Gwerin: A Half-Yearly Journal of Folk Life Volume 1 ; 1 > 
+    au < exists ; 1958-1959 ; Gwerin: A Half-Yearly Journal of Folk Life Volume 2 ; 2 > 
+    au < exists ; 1960-1962 ; Gwerin: A Half-Yearly Journal of Folk Life Volume 3 ; 3 > 
 
   }
 
@@ -2927,6 +3093,7 @@
     
     au < exists ; 2012 ; Paediatrics and International Child Health Volume 32 ; 32 > 
     au < exists ; 2013 ; Paediatrics and International Child Health Volume 33 ; 33 > 
+    au < exists ; 2014 ; Paediatrics and International Child Health Volume 34 ; 34 > 
     
   }
 
@@ -3008,6 +3175,7 @@
     
     au < exists ; 2012 ; Pathogens and Global Health Volume 106 ; 106 >
     au < exists ; 2013 ; Pathogens and Global Health Volume 107 ; 107 >
+    au < exists ; 2014 ; Pathogens and Global Health Volume 108 ; 108 >
     
   }
 
