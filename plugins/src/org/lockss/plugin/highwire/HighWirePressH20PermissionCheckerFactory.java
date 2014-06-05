@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20PermissionCheckerFactory.java,v 1.3 2014-06-03 01:05:29 etenbrink Exp $
+ * $Id: HighWirePressH20PermissionCheckerFactory.java,v 1.4 2014-06-05 20:16:01 tlipkis Exp $
  */
 
 /*
@@ -203,7 +203,7 @@ public class HighWirePressH20PermissionCheckerFactory
   
   public List<H20ProbePermissionChecker> createPermissionCheckers(ArchivalUnit au) {
     List<H20ProbePermissionChecker> list = new ArrayList<H20ProbePermissionChecker>(1);
-    list.add(new H20ProbePermissionChecker(new HighWirePressH20LoginPageChecker(), au));
+    list.add(new H20ProbePermissionChecker(au));
     return list;
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePermissionCheckerFactory.java,v 1.4 2014-05-20 01:47:19 etenbrink Exp $
+ * $Id: HighWirePermissionCheckerFactory.java,v 1.5 2014-06-05 20:16:01 tlipkis Exp $
  */
 
 /*
@@ -87,11 +87,6 @@ public class HighWirePermissionCheckerFactory
         }
       }
       return ret;
-    }
-    
-    public H10ProbePermissionChecker(LoginPageChecker checker, ArchivalUnit au) {
-      super(checker, au);
-      this.au = au;
     }
     
     public H10ProbePermissionChecker(ArchivalUnit au) {
@@ -193,7 +188,7 @@ public class HighWirePermissionCheckerFactory
   
   public List<?> createPermissionCheckers(ArchivalUnit au) {
     List<PermissionChecker> list = new ArrayList<PermissionChecker>(1);
-    list.add(new H10ProbePermissionChecker(new HighWireLoginPageChecker(), au));
+    list.add(new H10ProbePermissionChecker(au));
     return list;
   }
 }
