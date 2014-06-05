@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.178 2014-05-19 05:39:12 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.179 2014-06-05 20:18:51 tlipkis Exp $
  */
 
 /*
@@ -3363,7 +3363,11 @@ public class V3Poller extends BasePoll {
       if (e != null) {
         log.warning("Poll hash failed", e);
 	// CR: too extreme.  what if pending repairs?
-        stopPoll(POLLER_STATUS_ERROR);
+        if (e instanceof SchedService.Timeout) {
+	  stopPoll(POLLER_STATUS_EXPIRED);
+	} else {
+	  stopPoll(POLLER_STATUS_ERROR);
+	}
       } else {
 	updateSubstance(subChecker);
 	if (hasher instanceof BlockHasher) {
