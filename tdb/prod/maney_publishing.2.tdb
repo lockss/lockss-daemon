@@ -174,7 +174,6 @@
     >
 
     param[journal_id] = aes 
-    param[journal_issn] = 0371-7453
 
     au < doNotProcess ; 2000 ; Applied Earth Science: IMM Transactions section B Volume 109 ; 109 > 
     au < doNotProcess ; 2001 ; Applied Earth Science: IMM Transactions section B Volume 110 ; 110 > 
@@ -203,7 +202,6 @@
     >
 
     param[journal_id] = aaa 
-    param[journal_issn] = 1741-6124
 
     au < doNotProcess ; 2004 ; Arms & Armour Volume 1 ; 1 > 
     au < doNotProcess ; 2005 ; Arms & Armour Volume 2 ; 2 > 
@@ -1832,14 +1830,7 @@
       eissn = 1574-0781
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
     param[journal_id] = jca 
-    param[journal_issn] = 1574-0773
-    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2005 ; Journal of Conflict Archaeology Volume 1 ; 1 > 
     au < exists ; 2006 ; Journal of Conflict Archaeology Volume 2 ; 2 > 
