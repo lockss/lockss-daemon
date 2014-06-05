@@ -1,5 +1,5 @@
 /*
- * $Id: ProbePermissionChecker.java,v 1.24 2014-06-02 22:24:30 etenbrink Exp $
+ * $Id: ProbePermissionChecker.java,v 1.25 2014-06-05 20:17:12 tlipkis Exp $
  */
 
 /*
@@ -64,6 +64,7 @@ public class ProbePermissionChecker implements PermissionChecker {
 
   // For compatibility with plugins that supply a LoginPageChecker (which
   // is not used)
+  /** @deprecated use the single arg version */
   public ProbePermissionChecker(LoginPageChecker checker, ArchivalUnit au) {
     this(au);
   }
