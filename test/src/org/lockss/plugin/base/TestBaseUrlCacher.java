@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.70 2013-01-06 02:54:49 tlipkis Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.71 2014-06-05 20:18:29 tlipkis Exp $
  */
 
 /*
@@ -770,7 +770,9 @@ public class TestBaseUrlCacher extends LockssTestCase {
       InputStream is = muc.getUncachedInputStream();
       fail("Should have thrown RedirectOutsideCrawlSpecException");
     } catch (CacheException.RedirectOutsideCrawlSpecException e) {
-      assertEquals(redTo, e.getMessage());
+      assertEquals((  "Redirected to excluded URL: " + redTo +
+		      " redirected from: " + TEST_URL),
+		   e.getMessage());
       CIProperties p = muc.getUncachedProperties();
       assertEquals(redTo, p.getProperty("location"));
     }
@@ -818,7 +820,9 @@ public class TestBaseUrlCacher extends LockssTestCase {
       InputStream is = muc.getUncachedInputStream();
       fail("Should have thrown RedirectOutsideCrawlSpecException");
     } catch (CacheException.RedirectOutsideCrawlSpecException e) {
-      assertEquals(redToUnNorm, e.getMessage());
+      assertEquals((  "Redirected to excluded URL: " + redToUnNorm +
+		      " redirected from: " + TEST_URL),
+		   e.getMessage());
       CIProperties p = muc.getUncachedProperties();
       assertEquals(redToUnNorm, p.getProperty("location"));
     }
