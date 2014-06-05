@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfigurationWsResult.java,v 1.1 2014-04-18 19:35:03 fergaloy-sf Exp $
+ * $Id: AuConfigurationWsResult.java,v 1.2 2014-06-05 05:48:47 fergaloy-sf Exp $
  */
 
 /*
@@ -29,26 +29,37 @@
  in this Software without prior written authorization from Stanford University.
 
  */
+package org.lockss.ws.entities;
+
+import java.util.Map;
 
 /**
  * Container for the information related to the configuration of an Archival
  * Unit that is the result of a query.
  */
-package org.lockss.ws.entities;
-
-import java.util.Map;
-
 public class AuConfigurationWsResult {
 
   private Map<String, String> defParams;
   private Map<String, String> nonDefParams;
 
+  /**
+   * Provides the definitional parameters of the Archival Unit configuration.
+   * 
+   * @return a Map<String, String> with the definitional parameters.
+   */
   public Map<String, String> getDefParams() {
     return defParams;
   }
   public void setDefParams(Map<String, String> defParams) {
     this.defParams = defParams;
   }
+
+  /**
+   * Provides the non-definitional parameters of the Archival Unit
+   * configuration.
+   * 
+   * @return a Map<String, String> with the non-definitional parameters.
+   */
   public Map<String, String> getNonDefParams() {
     return nonDefParams;
   }

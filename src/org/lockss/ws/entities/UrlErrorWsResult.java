@@ -1,5 +1,5 @@
 /*
- * $Id: UrlErrorWsResult.java,v 1.1 2014-04-25 23:11:00 fergaloy-sf Exp $
+ * $Id: UrlErrorWsResult.java,v 1.2 2014-06-05 05:48:47 fergaloy-sf Exp $
  */
 
 /*
@@ -29,31 +29,47 @@
  in this Software without prior written authorization from Stanford University.
 
  */
+package org.lockss.ws.entities;
 
 /**
  * Container for the information related to a URL error that is the result of a
  * query.
  */
-package org.lockss.ws.entities;
-
 public class UrlErrorWsResult {
 
   private String url;
   private String severity;
   private String message;
 
+  /**
+   * Provides the URL.
+   * 
+   * @return a String with the URL.
+   */
   public String getUrl() {
     return url;
   }
   public void setUrl(String url) {
     this.url = url;
   }
+
+  /**
+   * Provides the error severity.
+   * 
+   * @return a String with the error severity.
+   */
   public String getSeverity() {
     return severity;
   }
   public void setSeverity(String severity) {
     this.severity = severity;
   }
+
+  /**
+   * Provides the error message.
+   * 
+   * @return a String with the error message.
+   */
   public String getMessage() {
     return message;
   }

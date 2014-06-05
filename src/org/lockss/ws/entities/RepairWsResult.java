@@ -1,5 +1,5 @@
 /*
- * $Id: RepairWsResult.java,v 1.1 2014-04-29 19:47:04 fergaloy-sf Exp $
+ * $Id: RepairWsResult.java,v 1.2 2014-06-05 05:48:47 fergaloy-sf Exp $
  */
 
 /*
@@ -29,23 +29,32 @@
  in this Software without prior written authorization from Stanford University.
 
  */
+package org.lockss.ws.entities;
 
 /**
  * Container for the information related to a repair that is the result of a
  * query.
  */
-package org.lockss.ws.entities;
-
 public class RepairWsResult {
   private String url;
   private String peerId;
 
+  /**
+   * Provides the URL.
+   * 
+   * @return a String with the URL.
+   */
   public String getUrl() {
     return url;
   }
   public void setUrl(String url) {
     this.url = url;
   }
+  /**
+   * Provides the peer identifier.
+   * 
+   * @return a String with the peer identifier.
+   */
   public String getPeerId() {
     return peerId;
   }

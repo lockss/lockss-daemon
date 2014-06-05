@@ -1,5 +1,5 @@
 /*
- * $Id: ContentConfigurationResult.java,v 1.1 2014-05-12 17:26:19 fergaloy-sf Exp $
+ * $Id: ContentConfigurationResult.java,v 1.2 2014-06-05 05:48:47 fergaloy-sf Exp $
  */
 
 /*
@@ -29,22 +29,38 @@
  in this Software without prior written authorization from Stanford University.
 
  */
+package org.lockss.ws.entities;
 
 /**
  * A wrapper for the result of a Content Configuration web service operation
- * over an archival unit.
+ * over an Archival Unit.
  */
-package org.lockss.ws.entities;
-
 public class ContentConfigurationResult {
   private String id;
   private String name;
   private Boolean isSuccess;
   private String message;
 
+  /**
+   * Default constructor.
+   */
   public ContentConfigurationResult() {
   }
 
+  /**
+   * Constructor.
+   * 
+   * @param id
+   *          A String with the Archival Unit identifier.
+   * @param name
+   *          A String with the Archival Unit name.
+   * @param isSuccess
+   *          A Boolean with the indication of whether the operation was
+   *          successful.
+   * @param message
+   *          A String with a descriptive message of the result of the
+   *          operation.
+   */
   public ContentConfigurationResult(String id, String name, Boolean isSuccess,
       String message) {
     this.id = id;
@@ -53,24 +69,47 @@ public class ContentConfigurationResult {
     this.message = message;
   }
 
+  /**
+   * Provides the Archival Unit identifier.
+   * 
+   * @return a String with the identifier.
+   */
   public String getId() {
     return id;
   }
   public void setId(String id) {
     this.id = id;
   }
+
+  /**
+   * Provides the Archival Unit name.
+   * 
+   * @return a String with the name.
+   */
   public String getName() {
     return name;
   }
   public void setName(String name) {
     this.name = name;
   }
+
+  /**
+   * Provides an indication of whether the operation was successful.
+   * 
+   * @return a Boolean with the indication.
+   */
   public Boolean getIsSuccess() {
     return isSuccess;
   }
   public void setIsSuccess(Boolean isSuccess) {
     this.isSuccess = isSuccess;
   }
+
+  /**
+   * Provides a descriptive message of the result of the operation.
+   * 
+   * @return a String with the message.
+   */
   public String getMessage() {
     return message;
   }

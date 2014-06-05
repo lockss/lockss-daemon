@@ -1,10 +1,10 @@
 /*
- * $Id: CounterReportResult.java,v 1.1 2013-03-22 04:47:32 fergaloy-sf Exp $
+ * $Id: CounterReportResult.java,v 1.2 2014-06-05 05:48:47 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,22 +29,31 @@
  in this Software without prior written authorization from Stanford University.
 
  */
-
-/**
- * A wrapper for a COUNTER report provided by the server.
- */
 package org.lockss.ws.entities;
 
 import javax.activation.DataHandler;
 
+/**
+ * A wrapper for a COUNTER report provided by the server.
+ */
 public class CounterReportResult {
   private String fileName;
   private DataHandler dataHandler;
 
+  /**
+   * Provides the name of the file with the requested report.
+   *
+   * @return a String with the name of the file.
+   */
   public String getFileName() {
     return fileName;
   }
 
+  /**
+   * Provides the content of the requested report.
+   *
+   * @return a DataHandler through which to obtain the content of the report.
+   */
   public DataHandler getDataHandler() {
     return dataHandler;
   }

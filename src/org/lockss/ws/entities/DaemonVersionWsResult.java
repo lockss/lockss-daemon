@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonVersionWsResult.java,v 1.1 2014-05-30 21:45:27 fergaloy-sf Exp $
+ * $Id: DaemonVersionWsResult.java,v 1.2 2014-06-05 05:48:47 fergaloy-sf Exp $
  */
 
 /*
@@ -29,36 +29,58 @@
  in this Software without prior written authorization from Stanford University.
 
  */
+package org.lockss.ws.entities;
 
 /**
  * The version information of the daemon.
  */
-package org.lockss.ws.entities;
-
 public class DaemonVersionWsResult {
   private String fullVersion;
   private int majorVersion;
   private int minorVersion;
   private int buildVersion;
 
+  /**
+   * Provides the full version of the daemon.
+   * 
+   * @return a String with the full version.
+   */
   public String getFullVersion() {
     return fullVersion;
   }
   public void setFullVersion(String fullVersion) {
     this.fullVersion = fullVersion;
   }
+
+  /**
+   * Provides the major version of the daemon.
+   * 
+   * @return an int with the major version.
+   */
   public int getMajorVersion() {
     return majorVersion;
   }
   public void setMajorVersion(int majorVersion) {
     this.majorVersion = majorVersion;
   }
+
+  /**
+   * Provides the minor version of the daemon.
+   * 
+   * @return an int with the minor version.
+   */
   public int getMinorVersion() {
     return minorVersion;
   }
   public void setMinorVersion(int minorVersion) {
     this.minorVersion = minorVersion;
   }
+
+  /**
+   * Provides the build version of the daemon.
+   * 
+   * @return an int with the build version.
+   */
   public int getBuildVersion() {
     return buildVersion;
   }
