@@ -14,8 +14,8 @@
       >
 
       comment[publisher] = Associação Nacional de Pesquisa e Pós-Graduação em Turismo
-      param[base_url] = http://www.revistas.univerciencia.org/
-      param[journal_id] = turismo
+      param[base_url] = http://www.revistas.univerciencia.org/turismo/
+      param[journal_id] = rbtur
 
       au < exists ; 2007 ; 1 ; RBTur: Revista Brasileira de Pesquisa em Turismo Volume 2007 ; 2007 >
       au < exists ; 2008 ; 2 ; RBTur: Revista Brasileira de Pesquisa em Turismo Volume 2008 ; 2008 >
