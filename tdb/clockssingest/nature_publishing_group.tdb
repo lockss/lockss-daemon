@@ -1386,12 +1386,11 @@
     >
 
     param[journal_id] = ijosup
-    comment[notReady] = no substance (404 error) as of 6/10/13
-    comment[ingNotReady] = volume 3 (2013) has a manifest page up now, need to change status
+    comment[0] = Returns a 404 error from 2011 manifest page link
 
     au < ingNotReady ; exists ; 2011 ; International Journal of Obesity Volume 1 ; 2011 ; 1 >
     au < finished ; crawling ; 2012 ; International Journal of Obesity Volume 2 ; 2012 ; 2 >
-    au < ingNotReady ; exists ; 2013 ; International Journal of Obesity Volume 3 ; 2013 ; 3 >
+    au < crawling ; exists ; 2013 ; International Journal of Obesity Volume 3 ; 2013 ; 3 >
     au < expected ; exists ; 2014 ; International Journal of Obesity Volume 4 ; 2014 ; 4 >
 
   }
