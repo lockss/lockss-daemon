@@ -1,5 +1,5 @@
 /*
- * $Id: AuthorizationInterceptor.java,v 1.1.2.1 2014-06-02 18:04:49 fergaloy-sf Exp $
+ * $Id: AuthorizationInterceptor.java,v 1.1.2.2 2014-06-06 04:09:52 fergaloy-sf Exp $
  */
 
 /*
@@ -29,33 +29,27 @@
  in this Software without prior written authorization from Stanford University.
 
  */
+package org.lockss.ws.cxf;
+
+import org.apache.cxf.binding.soap.interceptor.SoapHeaderInterceptor;
+import org.apache.cxf.configuration.security.AuthorizationPolicy;
+import org.apache.cxf.interceptor.Fault;
+import org.apache.cxf.message.Message;
+import org.lockss.account.UserAccount;
+import org.lockss.app.LockssDaemon;
+import org.lockss.servlet.LockssServlet;
+import org.lockss.util.Logger;
+import org.lockss.ws.entities.LockssWebServicesFault;
+import org.lockss.ws.entities.LockssWebServicesFaultInfo;
 
 /**
  * The common code of the authorization interceptors for the various web
  * services.
  */
-package org.lockss.ws.cxf;
-
-import java.io.IOException;
-import java.io.OutputStream;
-import java.net.HttpURLConnection;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-import org.apache.cxf.binding.soap.interceptor.SoapHeaderInterceptor;
-import org.apache.cxf.configuration.security.AuthorizationPolicy;
-import org.apache.cxf.endpoint.Endpoint;
-import org.apache.cxf.interceptor.Fault;
-import org.apache.cxf.message.Exchange;
-import org.apache.cxf.message.Message;
-import org.apache.cxf.transport.Conduit;
-import org.apache.cxf.ws.addressing.EndpointReferenceType;
-import org.lockss.account.UserAccount;
-import org.lockss.app.LockssDaemon;
-import org.lockss.servlet.LockssServlet;
-import org.lockss.util.Logger;
-
 public abstract class AuthorizationInterceptor extends SoapHeaderInterceptor {
+  public static String NO_REQUIRED_ROLE =
+      "User does not have the required role.";
+
   private static Logger log = Logger.getLogger(AuthorizationInterceptor.class);
 
   /**
@@ -86,10 +80,11 @@ public abstract class AuthorizationInterceptor extends SoapHeaderInterceptor {
       // and it should never have reached this point.
       // Nevertheless, send back to the client a 401 error indicating that
       // authentication is required.
-      log.error("No credentials were received.");
+      String errorMessage = "No credentials were received.";
+      log.error(errorMessage);
 
-      sendUnauthorizedErrorResponse(message);
-      return;
+      throw new Fault(new LockssWebServicesFault(errorMessage,
+	  new LockssWebServicesFaultInfo("401")));
     }
 
     // Get the name of the authenticated user.
@@ -119,9 +114,11 @@ public abstract class AuthorizationInterceptor extends SoapHeaderInterceptor {
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "Authorized.");
     } else {
       // No: Report back the problem.
-      log.info("User does not have the required role.");
+      log.info(NO_REQUIRED_ROLE);
+      log.info("userName = " + userName);
 
-      sendUnauthorizedErrorResponse(message);
+      throw new Fault(new LockssWebServicesFault(NO_REQUIRED_ROLE,
+	  new LockssWebServicesFaultInfo("401")));
     }
   }
 
@@ -141,68 +138,5 @@ public abstract class AuthorizationInterceptor extends SoapHeaderInterceptor {
     return (userAccount != null
 	&& (userAccount.isUserInRole(requiredRole)
 	    || userAccount.isUserInRole(LockssServlet.ROLE_USER_ADMIN)));
-  }
-
-  /**
-   * Sends an "unauthorized user" error response.
-   * 
-   * @param message
-   *          A Message with the message in the inbound chain.
-   */
-  private void sendUnauthorizedErrorResponse(Message message) {
-    Message outMessage = getOutMessage(message);
-    outMessage.put(Message.RESPONSE_CODE, HttpURLConnection.HTTP_UNAUTHORIZED);
-
-    // Set the response headers
-    Map<String, List<String>> responseHeaders =
-	(Map<String, List<String>>) message.get(Message.PROTOCOL_HEADERS);
-
-    if (responseHeaders != null) {
-      responseHeaders.put("WWW-Authenticate",
-	  Arrays.asList(new String[] {"Basic realm=realm"}));
-      responseHeaders
-	  .put("Content-Length", Arrays.asList(new String[] {"0"}));
-    }
-
-    // Stop the inbound chain.
-    message.getInterceptorChain().abort();
-
-    try {
-      Exchange exchange = message.getExchange();
-      EndpointReferenceType eprt = exchange.get(EndpointReferenceType.class);
-
-      Conduit conduit =
-	  exchange.getDestination().getBackChannel(message, null, eprt);
-
-      exchange.setConduit(conduit);
-      conduit.prepare(outMessage);
-
-      OutputStream os = outMessage.getContent(OutputStream.class);
-      os.flush();
-      os.close();
-    } catch (IOException e) {
-      log.warning(e.getMessage(), e);
-    }
-  }
-
-  /**
-   * Provides the outbound message.
-   * 
-   * @param inMessage
-   *          A Message with the message in the inbound chain.
-   * @return a Message with the message in the outbound chain.
-   */
-  private Message getOutMessage(Message inMessage) {
-    Exchange exchange = inMessage.getExchange();
-    Message outMessage = exchange.getOutMessage();
-
-    if (outMessage == null) {
-      Endpoint endpoint = exchange.get(Endpoint.class);
-      outMessage = endpoint.getBinding().createMessage();
-      exchange.setOutMessage(outMessage);
-    }
-
-    outMessage.putAll(inMessage);
-    return outMessage;
   }
 }
