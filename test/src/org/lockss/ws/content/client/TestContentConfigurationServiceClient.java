@@ -1,5 +1,5 @@
 /*
- * $Id: TestContentConfigurationServiceClient.java,v 1.3 2014-06-05 20:19:03 tlipkis Exp $
+ * $Id: TestContentConfigurationServiceClient.java,v 1.4 2014-06-06 06:03:51 fergaloy-sf Exp $
  */
 
 /*
@@ -29,200 +29,16 @@
  in this Software without prior written authorization from Stanford University.
 
  */
-
 package org.lockss.ws.content.client;
 
-import java.net.Authenticator;
-import java.net.PasswordAuthentication;
-import java.net.URL;
-import java.util.*;
-import javax.xml.namespace.QName;
-import javax.xml.ws.Service;
-import org.lockss.account.AccountManager;
-import org.lockss.account.UserAccount;
-import org.lockss.config.*;
-import org.lockss.daemon.*;
-import org.lockss.plugin.*;
-import org.lockss.protocol.MockIdentityManager;
-import org.lockss.servlet.AdminServletManager;
-import org.lockss.servlet.LockssServlet;
-import org.lockss.servlet.ServletManager;
-import org.lockss.test.*;
-import org.lockss.util.*;
-import org.lockss.ws.content.ContentConfigurationService;
-import org.lockss.ws.entities.ContentConfigurationResult;
+import org.lockss.test.LockssTestCase;
 
 /**
- * Test class for org.lockss.ws.content.ContentConfigurationService
+ * OBSOLETE - Replaced by org.lockss.ws.content.FuncContentConfigurationService.
  * 
  * @author Fernando Garcia-Loygorri
  */
 public class TestContentConfigurationServiceClient extends LockssTestCase {
-  private static final String BASE_URL = "http://www.example.com/foo/";
-
-  private static final String USER_NAME = "lockss-u";
-  private static final String PASSWORD = "lockss-p";
-  private static final String PASSWORD_SHA1 =
-      "SHA1:ac4fc8fa9930a24c8d002d541c37ca993e1bc40f";
-  private static final String TARGET_NAMESPACE =
-      "http://content.ws.lockss.org/";
-  private static final String SERVICE_NAME =
-      "ContentConfigurationServiceImplService";
-
-  PluginManager pluginMgr;
-  MockPlugin plugin;
-  private AccountManager accountManager;
-
-  private ContentConfigurationService proxy;
-
-  public void setUp() throws Exception {
-    super.setUp();
-
-    setUpDiskSpace();
-
-    int port = TcpTestUtil.findUnboundTcpPort();
-    ConfigurationUtil.addFromArgs(AdminServletManager.PARAM_PORT, "" + port,
-	ServletManager.PARAM_PLATFORM_USERNAME, USER_NAME,
-	ServletManager.PARAM_PLATFORM_PASSWORD, PASSWORD_SHA1);
-
-    MockLockssDaemon theDaemon = getMockLockssDaemon();
-
-    accountManager = theDaemon.getAccountManager();
-    accountManager.startService();
-
-    MockIdentityManager idMgr = new MockIdentityManager();
-    theDaemon.setIdentityManager(idMgr);
-    idMgr.initService(theDaemon);
-
-    pluginMgr = theDaemon.getPluginManager();
-    pluginMgr.setLoadablePluginsReady(true);
-    theDaemon.setDaemonInited(true);
-    theDaemon.getRemoteApi().startService();
-    theDaemon.getServletManager().startService();
-    pluginMgr.startService();
-
-    String key =
-      PluginManager.pluginKeyFromName(MyMockPlugin.class.getName());
-    pluginMgr.ensurePluginLoaded(key);
-    plugin = (MockPlugin)pluginMgr.getPlugin(key);
-
-    theDaemon.setAusStarted(true);
-
-    // The client authentication.
-    Authenticator.setDefault(new Authenticator() {
-      @Override
-      protected PasswordAuthentication getPasswordAuthentication() {
-	return new PasswordAuthentication(USER_NAME, PASSWORD.toCharArray());
-      }
-    });
-
-    String addressLocation = "http://localhost:" + port
-	+ "/ws/ContentConfigurationService?wsdl";
-
-    Service service = Service.create(new URL(addressLocation), new QName(
-	TARGET_NAMESPACE, SERVICE_NAME));
-
-    proxy = service.getPort(ContentConfigurationService.class);
-  }
-
-  /**
-   * Tests role authorization.
-   */
-  public void testRoleAuthorization() throws Exception {
-    TitleConfig tcs[] = {
-      makeTitleConfig("123"),
-      makeTitleConfig("124"),
-      makeTitleConfig("125"),
-      makeTitleConfig("126"),
-      makeTitleConfig("666"),
-    };
-    Tdb tdb = new Tdb();
-    for (TitleConfig tc : tcs) {
-      tdb.addTdbAuFromProperties(tc.toProperties());
-    }
-    ConfigurationUtil.setTdb(tdb);
-    pluginMgr.resetTitles();		// XXX Shouldn't be needed?
-
-    String auId0 = tcs[0].getAuId(pluginMgr);
-    String auId1 = tcs[1].getAuId(pluginMgr);
-    String auId2 = tcs[2].getAuId(pluginMgr);
-    String auId3 = tcs[3].getAuId(pluginMgr);
-    String auId4 = tcs[4].getAuId(pluginMgr);
-
-    UserAccount userAccount = accountManager.getUser(USER_NAME);
-
-    // User "userAdminRole" should succeed.
-    userAccount.setRoles(LockssServlet.ROLE_USER_ADMIN);
-
-    ContentConfigurationResult result = proxy.addAuById(auId0);
-    assertTrue(result.getIsSuccess());
-    assertEquals(auId0, result.getId());
-    assertNotNull(pluginMgr.getAuFromId(auId0));
-
-    // User "contentAdminRole" should fail.
-    userAccount.setRoles(LockssServlet.ROLE_CONTENT_ADMIN);
-    try {
-      result = proxy.addAuById(auId1);
-      fail("Test should have failed for role "
-	   + LockssServlet.ROLE_CONTENT_ADMIN);
-    } catch (Exception e) {
-      // Expected authorization failure.
-      Throwable cause = e.getCause();
-      assertMatchesRE("HTTP response.*401", cause.getMessage());
-    }
-
-    // User "auAdminRole" should succeed.
-    userAccount.setRoles(LockssServlet.ROLE_AU_ADMIN);
-
-    result = proxy.addAuById(auId2);
-    assertTrue(result.getIsSuccess());
-    assertEquals(auId2, result.getId());
-    assertNotNull(pluginMgr.getAuFromId(auId0));
-
-    // User "accessContentRole" should fail.
-    userAccount.setRoles(LockssServlet.ROLE_CONTENT_ACCESS);
-    try {
-
-      result = proxy.addAuById(auId3);
-      fail("Test should have failed for role "
-	  + LockssServlet.ROLE_CONTENT_ACCESS);
-    } catch (Exception e) {
-      // Expected authorization failure.
-      Throwable cause = e.getCause();
-      assertMatchesRE("HTTP response.*401", cause.getMessage());
-    }
-
-    // Once more with an AU that can't be configured
-    userAccount.setRoles(LockssServlet.ROLE_AU_ADMIN);
-
-    result = proxy.addAuById(auId4);
-    assertFalse(result.getIsSuccess());
-    assertEquals("Error creating AU: bad config value", result.getMessage());
-    assertNull(pluginMgr.getAuFromId(auId4));
-  }
-
-
-  TitleConfig makeTitleConfig(String vol) {
-    ConfigParamDescr d1 = new ConfigParamDescr("base_url");
-    ConfigParamDescr d2 = new ConfigParamDescr("volume");
-    ConfigParamAssignment a1 = new ConfigParamAssignment(d1, BASE_URL);
-    ConfigParamAssignment a2 = new ConfigParamAssignment(d2, vol);
-    a1.setEditable(false);
-    a2.setEditable(false);
-    TitleConfig tc1 = new TitleConfig("a" + vol, plugin.getPluginId());
-    tc1.setParams(ListUtil.list(a1, a2));
-    tc1.setJournalTitle("jt");
-    return tc1;
-  }
-
-  public static class MyMockPlugin extends MockPlugin {
-    @Override
-    protected ArchivalUnit createAu0(Configuration auConfig)
-	throws ArchivalUnit.ConfigurationException {
-      if ("666".equals(auConfig.get("volume"))) {
-	throw new ArchivalUnit.ConfigurationException("bad config value");
-      }
-      return super.createAu0(auConfig);
-    }
+  public void testNothing() throws Exception {
   }
 }
