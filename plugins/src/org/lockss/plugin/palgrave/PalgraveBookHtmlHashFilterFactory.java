@@ -1,4 +1,4 @@
-/* $Id: PalgraveBookHtmlHashFilterFactory.java,v 1.1 2013-05-02 17:14:07 ldoan Exp $
+/* $Id: PalgraveBookHtmlHashFilterFactory.java,v 1.2 2014-06-06 17:33:41 aishizaki Exp $
  
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -40,14 +40,17 @@ public class PalgraveBookHtmlHashFilterFactory implements FilterFactory {
   public InputStream createFilteredInputStream(ArchivalUnit au,
       InputStream in, String encoding) {
     NodeFilter[] filters = new NodeFilter[] {
-        // instutional logo
-        // <div class="hdr-ct6-b">
-	// <p id="$logoName" name="$logoStatus">Access is brought to you by:</p>
-	// <p>Stanford University</p>
-        // </div>
 	// http://www.palgraveconnect.com/pc/doifinder/10.1057/9780230597655
-	HtmlNodeFilters.tagWithAttribute("div", "class", "pnl1a related"),
+	//HtmlNodeFilters.tagWithAttribute("div", "class", "pnl1a related"),
 	new TagNameFilter("script"),
+	// added by audrey: Extreme Hashing
+	// header, footer in http://www.palgraveconnect.com/pc/doifinder/10.1057/9781137283351
+        // institutional info in the constrain-header
+	HtmlNodeFilters.tagWithAttribute("div", "id", "constrain-header"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "constrain-footer"),
+        // right sidebar
+        HtmlNodeFilters.tagWithAttribute("div", "class", "column-width-sidebar column-r"),
+        // only keeping stuff in the left sidebar
     };
     return new HtmlFilterInputStream(in, encoding,
         HtmlNodeFilterTransform.exclude(new OrFilter(filters)));

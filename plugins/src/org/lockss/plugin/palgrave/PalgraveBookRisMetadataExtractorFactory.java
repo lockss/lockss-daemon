@@ -1,4 +1,4 @@
-/* $Id: PalgraveBookRisMetadataExtractorFactory.java,v 1.1 2013-05-02 17:14:07 ldoan Exp $
+/* $Id: PalgraveBookRisMetadataExtractorFactory.java,v 1.2 2014-06-06 17:33:41 aishizaki Exp $
  
  Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
@@ -41,7 +41,7 @@ import org.lockss.util.Logger;
   // PB  - Palgrave Macmillan
   // CY  - Basingstoke
   // SN  - 9781137024497
-  // ID  - 10.1057/9781137024497
+  // DO  - 10.1057/9781137024497
   // UR  - http://dx.doi.org/10.1057/9781137024497
   // L1  - http://www.palgraveconnect.com/pc/busman2013/browse/inside/download/9781137024497.pdf
   // ER  -
@@ -62,7 +62,7 @@ import org.lockss.util.Logger;
       ris.addRisTag("PY", MetadataField.FIELD_DATE);
       ris.addRisTag("TI", MetadataField.FIELD_JOURNAL_TITLE);
       ris.addRisTag("SN", MetadataField.FIELD_EISBN);
-      ris.addRisTag("ID", MetadataField.FIELD_DOI);
+      ris.addRisTag("DO", MetadataField.FIELD_DOI);
       ris.addRisTag("L1", MetadataField.FIELD_ACCESS_URL);
     
     return ris;

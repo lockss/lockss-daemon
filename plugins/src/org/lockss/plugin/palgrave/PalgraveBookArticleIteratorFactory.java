@@ -1,4 +1,4 @@
-/* $Id: PalgraveBookArticleIteratorFactory.java,v 1.1 2013-05-02 17:14:07 ldoan Exp $
+/* $Id: PalgraveBookArticleIteratorFactory.java,v 1.2 2014-06-06 17:33:41 aishizaki Exp $
  
 Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -45,10 +45,12 @@ import org.lockss.util.Logger;
  * html (view pdf): http://www.palgraveconnect.com/pc/econfin2012/browse/inside/9781137283351.html
  * pdf (download pdf): http://www.palgraveconnect.com/pc/econfin2012/browse/inside/download/9781137283351.pdf
  * epub (download epub): http://www.palgraveconnect.com/pc/econfin2012/browse/inside/epub/9781137283351.epub
- * citation export: http://www.palgraveconnect.com/pc/browse/citationExport?isbn=9781137024497&WT.cg_n=eBooks&WT.cg_s=Citation%20Export
+ * citation export: http://www.palgraveconnect.com/pc/browse/citationExport?doi=10.1057/9781137024497&WT.cg_n=eBooks&WT.cg_s=Citation%20Export
  *                  http://www.palgraveconnect.com/pc/browse/citationExport?isbn=9780230288393&WT.cg_n=eBooks&WT.cg_s=Citation%20Export
  * Metadata found in citation export ris file.
+ * 
  */
+
 public class PalgraveBookArticleIteratorFactory
   implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
@@ -67,9 +69,9 @@ public class PalgraveBookArticleIteratorFactory
   protected Pattern EPUB_PATTERN = Pattern.compile("/pc/(.+)/browse/inside/epub/([0-9]+)\\.epub$", Pattern.CASE_INSENSITIVE);
     
   protected static String PDF_LANDING_REPLACEMENT = "/pc/$1/browse/inside/$2.html";
-    protected static String PDF_REPLACEMENT = "/pc/$1/browse/inside/download/$2.pdf";
+  protected static String PDF_REPLACEMENT = "/pc/$1/browse/inside/download/$2.pdf";
   protected static String EPUB_REPLACEMENT = "/pc/$1/browse/inside/epub/$2.epub";
-  protected static String CITATION_RIS_REPLACEMENT = "/pc/browse/citationExport?isbn=$2&WT.cg_n=eBooks&WT.cg_s=Citation%20Export";
+  protected static String CITATION_RIS_REPLACEMENT = "/pc/browse/citationExport?doi=10.1057/$2&WT.cg_n=eBooks&WT.cg_s=Citation%20Export";
   
    
   // Create PalgraveBookArticleIterator with the new object of 
