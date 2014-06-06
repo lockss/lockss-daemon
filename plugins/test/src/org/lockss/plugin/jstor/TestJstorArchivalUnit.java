@@ -1,5 +1,5 @@
 /*
- * $Id: TestJstorArchivalUnit.java,v 1.2 2014-05-30 21:22:51 alexandraohlson Exp $
+ * $Id: TestJstorArchivalUnit.java,v 1.3 2014-06-06 18:37:37 alexandraohlson Exp $
  */
 
 /*
@@ -115,7 +115,7 @@ public class TestJstorArchivalUnit extends LockssTestCase {
         new RangeCachedUrlSetSpec(ROOT_URL));
     // Test for pages that should get crawled
     //manifest page
-    shouldCacheTest(ROOT_URL+"lockss/xxxx/123", true, JSAu, cus);    
+    shouldCacheTest(ROOT_URL+"lockss/xxxx/123/index.html", true, JSAu, cus);    
 
     // YES: toc page reached off a manifest page
     //http://www.jstor.org/action/showToc?journalCode=jmorahist&issue=1%2F2&volume=13
@@ -184,7 +184,7 @@ public class TestJstorArchivalUnit extends LockssTestCase {
   public void testStartUrlConstruction() throws Exception {
 
     // 4 digit
-    String expected = ROOT_URL+"lockss/xxxx/123";
+    String expected = ROOT_URL+"lockss/xxxx/123/index.html";
     DefinableArchivalUnit JSAu = makeAu(true, 123, "xxxx");
     assertEquals(ListUtil.list(expected), JSAu.getNewContentCrawlUrls());
   }

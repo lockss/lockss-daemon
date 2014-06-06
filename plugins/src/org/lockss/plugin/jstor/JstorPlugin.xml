@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -46,13 +46,13 @@
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%slockss/%s/%s", base_url, journal_id, volume_name</string>
+    <string>"%slockss/%s/%s/index.html", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
   <string>au_manifest</string>
     <list>
-      <string>"%slockss/%s/%s", base_url, journal_id, volume_name</string>
-      <string>"%slockss/%s/%s", base_url2, journal_id, volume_name</string>
+      <string>"%slockss/%s/%s/index.html", base_url, journal_id, volume_name</string>
+      <string>"%slockss/%s/%s/index.html", base_url2, journal_id, volume_name</string>
     </list>
   </entry>  
   <entry>
@@ -144,6 +144,10 @@
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.jstor.JstorHtmlCrawlFilterFactory</string>
   </entry>
+  <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.jstor.JstorPdfFilterFactory</string>
+  </entry>  
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.jstor.JstorArticleIteratorFactory</string>
