@@ -1,5 +1,5 @@
 /*
- * $Id: SilverchairHtmlCrawlFilterFactory.java,v 1.3 2014-05-14 18:50:38 thib_gc Exp $
+ * $Id: SilverchairHtmlCrawlFilterFactory.java,v 1.4 2014-06-06 22:21:39 thib_gc Exp $
  */
 
 /*
@@ -33,11 +33,13 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 package org.lockss.plugin.silverchair;
 
 import java.io.*;
+import java.util.*;
 
 import org.apache.commons.io.IOUtils;
 import org.htmlparser.*;
 import org.htmlparser.filters.*;
 import org.lockss.daemon.PluginException;
+import org.lockss.extractor.LinkExtractor.Callback;
 import org.lockss.filter.HtmlTagFilter;
 import org.lockss.filter.HtmlTagFilter.TagPair;
 import org.lockss.filter.html.*;
@@ -57,9 +59,15 @@ public class SilverchairHtmlCrawlFilterFactory implements FilterFactory {
      * unclosed <script> tags.
      */
     try {
-      in = new BufferedInputStream(new ReaderInputStream(new HtmlTagFilter(new InputStreamReader(in, encoding),
-                                                                           new TagPair("<script", "</script>", true, false)),
-                                                                           encoding));
+      Reader inputStreamReader = new InputStreamReader(in, encoding);
+      List<TagPair> tagPairs = Arrays.asList(new TagPair("<script>", "</script>", true, false),
+                                             new TagPair("<script language=\"javascript\">", "</script>", true, false),
+                                             new TagPair("<script type=\"text/javascript\">", "</script>", true, false),
+                                             new TagPair("<script language=\"javascript\" type=\"text/javascript\">", "</script>", true, false),
+                                             new TagPair("<script type=\"text/javascript\" language=\"javascript\">", "</script>", true, false),
+                                             new TagPair("<script type=\"text/javascript\" language= \"javascript\">", "</script>", true, false));
+      Reader tagFilter = HtmlTagFilter.makeNestedFilter(inputStreamReader, tagPairs);
+      in = new BufferedInputStream(new ReaderInputStream(tagFilter, encoding));
     }
     catch (UnsupportedEncodingException uee) {
       throw new PluginException(uee);
@@ -110,10 +118,4 @@ public class SilverchairHtmlCrawlFilterFactory implements FilterFactory {
                                      HtmlNodeFilterTransform.exclude(new OrFilter(nodeFilters)));
   }
 
-  public static void main(String[] args) throws Exception {
-    String file = "/tmp/foo2/f3";
-    IOUtils.copy(new SilverchairHtmlCrawlFilterFactory().createFilteredInputStream(null, new FileInputStream(file), "utf-8"),
-                 new FileOutputStream(file + ".out"));
-  }
-  
 }
