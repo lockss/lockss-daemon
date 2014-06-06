@@ -1,5 +1,5 @@
 /*
- * $Id: DbManager.java,v 1.34 2014-03-27 19:47:08 fergaloy-sf Exp $
+ * $Id: DbManager.java,v 1.35 2014-06-06 01:06:52 fergaloy-sf Exp $
  */
 
 /*
@@ -29,12 +29,6 @@
  in this Software without prior written authorization from Stanford University.
 
  */
-
-/**
- * Database manager.
- * 
- * @author Fernando Garcia-Loygorri
- */
 package org.lockss.db;
 
 import java.io.File;
@@ -55,11 +49,17 @@ import org.apache.derby.drda.NetworkServerControl;
 import org.apache.derby.jdbc.ClientDataSource;
 import org.lockss.app.*;
 import org.lockss.config.*;
+import org.lockss.exporter.FetchTimeExporter;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.PluginManager;
 import org.lockss.util.*;
 
+/**
+ * Database manager.
+ * 
+ * @author Fernando Garcia-Loygorri
+ */
 public class DbManager extends BaseLockssDaemonManager
   implements ConfigurableManager {
   private static final Logger log = Logger.getLogger(DbManager.class);
@@ -2409,6 +2409,12 @@ public class DbManager extends BaseLockssDaemonManager
   private static final String CREATE_DATABASE_QUERY_MYSQL = "create database "
       + "--databaseName-- character set utf8 collate utf8_general_ci";
 
+  // Query to zero out a value in the table of last run items.
+  private static final String ZERO_LAST_RUN_VALUE_QUERY = "update "
+      + LAST_RUN_TABLE
+      + " set " + LAST_VALUE_COLUMN + " = '0'"
+      + " where " + LABEL_COLUMN + " = ?";
+
   // Derby SQL state of exception thrown on successful database shutdown.
   private static final String SHUTDOWN_SUCCESS_STATE_CODE = "08006";
 
@@ -2444,7 +2450,7 @@ public class DbManager extends BaseLockssDaemonManager
   // After this service has started successfully, this is the version of the
   // database that will be in place, as long as the database version prior to
   // starting the service was not higher already.
-  private int targetDatabaseVersion = 12;
+  private int targetDatabaseVersion = 13;
 
   // The maximum number of retries to be attempted when encountering transient
   // SQL exceptions.
@@ -2944,6 +2950,8 @@ public class DbManager extends BaseLockssDaemonManager
 	  updateDatabaseFrom10To11(conn);
 	} else if (from == 11) {
 	  updateDatabaseFrom11To12(conn);
+	} else if (from == 12) {
+	  updateDatabaseFrom12To13(conn);
 	} else {
 	  throw new DbException("Non-existent method to update the database "
 	      + "from version " + from + ".");
@@ -7145,6 +7153,51 @@ public class DbManager extends BaseLockssDaemonManager
       log.debug3(DEBUG_HEADER + "sql = " + sql);
 
     executeDdlQuery(conn, sql);
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Updates the database from version 12 to version 13.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws DbException
+   *           if any problem occurred updating the database.
+   */
+  private void updateDatabaseFrom12To13(Connection conn) throws DbException {
+    final String DEBUG_HEADER = "updateDatabaseFrom12To13(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    if (conn == null) {
+      throw new DbException("Null connection");
+    }
+
+    // Get the label of the identifier of the last metadata item for which the
+    // fetch time has been exported.
+    String lastMdItemSeqLabel = ConfigManager.getCurrentConfig()
+	.get(FetchTimeExporter.PARAM_FETCH_TIME_EXPORT_LAST_ITEM_LABEL,
+	    FetchTimeExporter.DEFAULT_FETCH_TIME_EXPORT_LAST_ITEM_LABEL);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "lastMdItemSeqLabel = '"
+	+ lastMdItemSeqLabel + "'.");
+
+    PreparedStatement statement = null;
+
+    try {
+      statement = prepareStatementBeforeReady(conn, ZERO_LAST_RUN_VALUE_QUERY);
+      statement.setString(1, lastMdItemSeqLabel);
+
+      int count = executeUpdateBeforeReady(statement);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count + ".");
+    } catch (SQLException sqle) {
+      String message = "Cannot update the last metadata item identifier";
+      log.error(message, sqle);
+      log.error("SQL = '" + ZERO_LAST_RUN_VALUE_QUERY + "'.");
+      log.error("lastMdItemSeqLabel = '" + lastMdItemSeqLabel + "'.");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseStatement(statement);
+    }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
