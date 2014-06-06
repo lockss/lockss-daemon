@@ -1446,8 +1446,9 @@
       issnl = 1087-0024
     >
 
-    comment[1] = There is no volume published in 2010, 2011 is the last issue as of 1/18/13
+    comment[1] = 2010 does not exist, 2011 is the last issue as of 1/18/13
     param[journal_id] = jidsp
+
 
     au < exists ; exists ; 1997 ; JID Symposium Proceedings Volume 2 ; 1997 ; 2 >
     au < exists ; exists ; 1998 ; JID Symposium Proceedings Volume 3 ; 1998 ; 3 >
@@ -1462,7 +1463,10 @@
     au < exists ; exists ; 2007 ; JID Symposium Proceedings Volume 12 ; 2007 ; 12 >
     au < finished ; crawling ; 2008 ; JID Symposium Proceedings Volume 13 ; 2008 ; 13 >
     au < finished ; crawling ; 2009 ; JID Symposium Proceedings Volume 14 ; 2009 ; 14 >
-    au < finished ; crawling ; 2010 ; JID Symposium Proceedings Volume 15 ; 2010 ; 15 >
+    au < superseded ; down ; 2010 ; JID Symposium Proceedings Volume 15 [superseded] ; 2010 ; 15 >
+    au < finished ; crawling ; 2011 ; JID Symposium Proceedings Volume 15 ; 2011 ; 15 >
+    au < exists ; exists ; 2013 ; JID Symposium Proceedings Volume 16 ; 2010 ; 16 >
+    
 
   }
 
