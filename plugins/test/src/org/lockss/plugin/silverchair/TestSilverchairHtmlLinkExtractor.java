@@ -1,5 +1,5 @@
 /*
- * $Id: TestSilverchairHtmlLinkExtractor.java,v 1.1 2014-06-03 00:49:48 thib_gc Exp $
+ * $Id: TestSilverchairHtmlLinkExtractor.java,v 1.2 2014-06-06 18:46:37 thib_gc Exp $
  */
 
 /*
@@ -43,7 +43,9 @@ public class TestSilverchairHtmlLinkExtractor extends LockssTestCase {
   public void testImg() throws Exception {
     String input =
         "<img src=\"foosrc.jpg\" data-original=\"foodo.jpg\" />\n" +
-        "<img data-original=\"bardo.jpg\" src=\"barsrc.jpg\" />\n";
+        "<img data-original=\"bardo.jpg\" src=\"barsrc.jpg\" />\n" +
+        "<img src=\"bazsrc.jpg\" />\n" +
+        "<img data-original=\"quxdo.jpg\" />\n";
     String srcUrl = "http://www.example.com/";
     LinkExtractor le = new SilverchairHtmlLinkExtractorFactory().createLinkExtractor(Constants.MIME_TYPE_HTML);
     final Set<String> emitted = new HashSet<String>();
@@ -57,11 +59,13 @@ public class TestSilverchairHtmlLinkExtractor extends LockssTestCase {
                          emitted.add(url);
                        }
                    });
-    assertEquals(4, emitted.size());
+    assertEquals(6, emitted.size());
     assertContains(emitted, srcUrl + "foosrc.jpg");
     assertContains(emitted, srcUrl + "foodo.jpg");
     assertContains(emitted, srcUrl + "barsrc.jpg");
     assertContains(emitted, srcUrl + "bardo.jpg");
+    assertContains(emitted, srcUrl + "bazsrc.jpg");
+    assertContains(emitted, srcUrl + "quxdo.jpg");
   }
   
 }

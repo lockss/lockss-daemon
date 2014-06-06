@@ -1,5 +1,5 @@
 /*
- * $Id: SilverchairHtmlLinkExtractor.java,v 1.4 2014-06-03 00:49:48 thib_gc Exp $
+ * $Id: SilverchairHtmlLinkExtractor.java,v 1.5 2014-06-06 18:46:37 thib_gc Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import java.util.regex.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.Logger;
+import org.lockss.util.StringUtil;
 
 public class SilverchairHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
 
@@ -89,7 +90,9 @@ public class SilverchairHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
           }
           logger.debug3(String.format("Generated %s", url));
           if (baseUrl == null) { baseUrl = new URL(srcUrl); } // Copycat of parseLink()
-          emit(cb, resolveUri(baseUrl, url));
+          if (!StringUtil.isNullString(url)) {
+            emit(cb, resolveUri(baseUrl, url));
+          }
         }
         return super.extractLinkFromTag(link, au, cb);
       }
@@ -99,7 +102,9 @@ public class SilverchairHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
     else if ((ch == 'i' || ch == 'I') && beginsWithTag(link, IMGTAG)) {
       String dataOriginal = getAttributeValue("data-original", link);
       if (baseUrl == null) { baseUrl = new URL(srcUrl); } // Copycat of parseLink()
-      emit(cb, resolveUri(baseUrl, dataOriginal));
+      if (!StringUtil.isNullString(dataOriginal)) {
+        emit(cb, resolveUri(baseUrl, dataOriginal));
+      }
       return super.extractLinkFromTag(link, au, cb);
     }
     
