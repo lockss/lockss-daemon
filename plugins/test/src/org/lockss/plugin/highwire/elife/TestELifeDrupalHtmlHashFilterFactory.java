@@ -1,5 +1,5 @@
 /*
- * $Id: TestELifeDrupalHtmlHashFilterFactory.java,v 1.1 2014-06-07 02:32:51 etenbrink Exp $
+ * $Id: TestELifeDrupalHtmlHashFilterFactory.java,v 1.2 2014-06-07 03:21:49 etenbrink Exp $
  */
 
 /*
@@ -40,12 +40,12 @@ import org.lockss.test.*;
 public class TestELifeDrupalHtmlHashFilterFactory extends LockssTestCase {
   static String ENC = Constants.DEFAULT_ENCODING;
   
-  private ELifeDrupalHtmlFilterFactory fact;
+  private ELifeDrupalHtmlHashFilterFactory fact;
   private MockArchivalUnit mau;
   
   public void setUp() throws Exception {
     super.setUp();
-    fact = new ELifeDrupalHtmlFilterFactory();
+    fact = new ELifeDrupalHtmlHashFilterFactory();
     mau = new MockArchivalUnit();
   }
   
