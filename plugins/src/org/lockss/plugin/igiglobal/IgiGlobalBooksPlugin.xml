@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -136,11 +136,15 @@
   </entry>
   <entry>
     <string>au_def_pause_time</string>
-    <long>6000</long>
+    <long>18000</long>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
     <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_fetch_rate_limiter_source</string>
+    <string>key:IGI Global</string>
   </entry>
 </map>
   
