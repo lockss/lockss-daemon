@@ -2946,7 +2946,8 @@
       issnl = 0371-9553 
     >
 
-    param[journal_id] = mpem 
+    param[journal_id] = mpm 
+    comment[journal_id] = both mpem and mpm point to same title
     
     au < exists ; 2000 ; Mineral Processing and Extractive Metallurgy Volume 109 ; 109 > 
     au < exists ; 2001 ; Mineral Processing and Extractive Metallurgy Volume 110 ; 110 > 
@@ -2962,6 +2963,7 @@
     au < exists ; 2011 ; Mineral Processing and Extractive Metallurgy Volume 120 ; 120 > 
     au < doNotProcess ; 2012 ; Mineral Processing and Extractive Metallurgy Volume 121 ; 121 > 
     au < exists ; 2013 ; Mineral Processing and Extractive Metallurgy Volume 122 ; 122 > 
+    au < exists ; 2014 ; Mineral Processing and Extractive Metallurgy Volume 123 ; 123 > 
 
   }
 
@@ -3014,7 +3016,9 @@
     au < doNotProcess ; 2010 ; Ming Studies Volume 2010 ; 2010 > 
     au < doNotProcess ; 2011 ; Ming Studies Volume 2011 ; 2011 > 
     au < doNotProcess ; 2012 ; Ming Studies Volume 2012 ; 2012 > 
+    au < exists ; 2013 ; Ming Studies Volume 67 ; 67 > 
     au < exists ; 2013 ; Ming Studies Volume 2013 ; 2013 > 
+    au < exists ; 2014 ; Ming Studies Volume 69 ; 69 > 
 
   }
 
@@ -3027,7 +3031,8 @@
       issnl = 1474-9009 
     >
 
-    param[journal_id] = mint 
+    param[journal_id] = mnt 
+    comment[journal_id] = both mnt and mint both point to same title
     
     au < exists ; 2000 ; Mining Technology Volume 109 ; 109 > 
     au < exists ; 2001 ; Mining Technology Volume 110 ; 110 > 
@@ -3043,6 +3048,7 @@
     au < exists ; 2011 ; Mining Technology Volume 120 ; 120 > 
     au < doNotProcess ; 2012 ; Mining Technology Volume 121 ; 121 > 
     au < exists ; 2013 ; Mining Technology Volume 122 ; 122 > 
+    au < exists ; 2014 ; Mining Technology Volume 123 ; 123 > 
 
   }
 
@@ -3057,12 +3063,68 @@
 
     param[journal_id] = nam 
 
+    au < exists ; 1953 ; Names: A Journal of Onomastics Volume 1 ; 1 >
+    au < exists ; 1954 ; Names: A Journal of Onomastics Volume 2 ; 2 >
+    au < exists ; 1955 ; Names: A Journal of Onomastics Volume 3 ; 3 >
+    au < exists ; 1956 ; Names: A Journal of Onomastics Volume 4 ; 4 >
+    au < exists ; 1957 ; Names: A Journal of Onomastics Volume 5 ; 5 >
+    au < exists ; 1958 ; Names: A Journal of Onomastics Volume 6 ; 6 >
+    au < exists ; 1959 ; Names: A Journal of Onomastics Volume 7 ; 7 >
+    au < exists ; 1960 ; Names: A Journal of Onomastics Volume 8 ; 8 >
+    au < exists ; 1961 ; Names: A Journal of Onomastics Volume 9 ; 9 >
+    au < exists ; 1962 ; Names: A Journal of Onomastics Volume 10 ; 10 >
+    au < exists ; 1963 ; Names: A Journal of Onomastics Volume 11 ; 11 >
+    au < exists ; 1964 ; Names: A Journal of Onomastics Volume 12 ; 12 >
+    au < exists ; 1965 ; Names: A Journal of Onomastics Volume 13 ; 13 >
+    au < exists ; 1966 ; Names: A Journal of Onomastics Volume 14 ; 14 >
+    au < exists ; 1967 ; Names: A Journal of Onomastics Volume 15 ; 15 >
+    au < exists ; 1968 ; Names: A Journal of Onomastics Volume 16 ; 16 >
+    au < exists ; 1969 ; Names: A Journal of Onomastics Volume 17 ; 17 >
+    au < exists ; 1970 ; Names: A Journal of Onomastics Volume 18 ; 18 >
+    au < exists ; 1971 ; Names: A Journal of Onomastics Volume 19 ; 19 >
+    au < exists ; 1972 ; Names: A Journal of Onomastics Volume 20 ; 20 >
+    au < exists ; 1973 ; Names: A Journal of Onomastics Volume 21 ; 21 >
+    au < exists ; 1974 ; Names: A Journal of Onomastics Volume 22 ; 22 >
+    au < exists ; 1975 ; Names: A Journal of Onomastics Volume 23 ; 23 >
+    au < exists ; 1976 ; Names: A Journal of Onomastics Volume 24 ; 24 >
+    au < exists ; 1977 ; Names: A Journal of Onomastics Volume 25 ; 25 >
+    au < exists ; 1978 ; Names: A Journal of Onomastics Volume 26 ; 26 >
+    au < exists ; 1979 ; Names: A Journal of Onomastics Volume 27 ; 27 >
+    au < exists ; 1980 ; Names: A Journal of Onomastics Volume 28 ; 28 >
+    au < exists ; 1981 ; Names: A Journal of Onomastics Volume 29 ; 29 >
+    au < exists ; 1982 ; Names: A Journal of Onomastics Volume 30 ; 30 >
+    au < exists ; 1983 ; Names: A Journal of Onomastics Volume 31 ; 31 >
+    au < exists ; 1984 ; Names: A Journal of Onomastics Volume 32 ; 32 >
+    au < exists ; 1985 ; Names: A Journal of Onomastics Volume 33 ; 33 >
+    au < exists ; 1986 ; Names: A Journal of Onomastics Volume 34 ; 34 >
+    au < exists ; 1987 ; Names: A Journal of Onomastics Volume 35 ; 35 >
+    au < exists ; 1988 ; Names: A Journal of Onomastics Volume 36 ; 36 >
+    au < exists ; 1989 ; Names: A Journal of Onomastics Volume 37 ; 37 >
+    au < exists ; 1990 ; Names: A Journal of Onomastics Volume 38 ; 38 >
+    au < exists ; 1991 ; Names: A Journal of Onomastics Volume 39 ; 39 >
+    au < exists ; 1992 ; Names: A Journal of Onomastics Volume 40 ; 40 >
+    au < exists ; 1993 ; Names: A Journal of Onomastics Volume 41 ; 41 >
+    au < exists ; 1994 ; Names: A Journal of Onomastics Volume 42 ; 42 >
+    au < exists ; 1995 ; Names: A Journal of Onomastics Volume 43 ; 43 >
+    au < exists ; 1996 ; Names: A Journal of Onomastics Volume 44 ; 44 >
+    au < exists ; 1997 ; Names: A Journal of Onomastics Volume 45 ; 45 >
+    au < exists ; 1998 ; Names: A Journal of Onomastics Volume 46 ; 46 >
+    au < exists ; 1999 ; Names: A Journal of Onomastics Volume 47 ; 47 >
+    au < exists ; 2000 ; Names: A Journal of Onomastics Volume 48 ; 48 >
+    au < exists ; 2001 ; Names: A Journal of Onomastics Volume 49 ; 49 >
+    au < exists ; 2002 ; Names: A Journal of Onomastics Volume 50 ; 50 >
+    au < exists ; 2003 ; Names: A Journal of Onomastics Volume 51 ; 51 >
+    au < exists ; 2004 ; Names: A Journal of Onomastics Volume 52 ; 52 >
+    au < exists ; 2005 ; Names: A Journal of Onomastics Volume 53 ; 53 >
+    au < exists ; 2006 ; Names: A Journal of Onomastics Volume 54 ; 54 >
+    au < exists ; 2007 ; Names: A Journal of Onomastics Volume 55 ; 55 >
     au < exists ; 2008 ; Names: A Journal of Onomastics Volume 56 ; 56 > 
     au < exists ; 2009 ; Names: A Journal of Onomastics Volume 57 ; 57 > 
     au < doNotProcess ; 2010 ; Names: A Journal of Onomastics Volume 58 ; 58 > 
     au < doNotProcess ; 2011 ; Names: A Journal of Onomastics Volume 59 ; 59 > 
     au < doNotProcess ; 2012 ; Names: A Journal of Onomastics Volume 60 ; 60 > 
     au < exists ; 2013 ; Names: A Journal of Onomastics Volume 61 ; 61 > 
+    au < exists ; 2014 ; Names: A Journal of Onomastics Volume 62 ; 62 > 
 
   }
 
@@ -3075,7 +3137,8 @@
       issnl = 0161-6412 
     >
 
-    param[journal_id] = nres 
+    param[journal_id] = ner 
+    comment[journal_id] = both nres and ner point to same title
     
     au < exists ; 2001 ; Neurological Research Volume 23 ; 23 > 
     au < exists ; 2002 ; Neurological Research Volume 24 ; 24 > 
@@ -3090,6 +3153,7 @@
     au < exists ; 2011 ; Neurological Research Volume 33 ; 33 > 
     au < doNotProcess ; 2012 ; Neurological Research Volume 34 ; 34 > 
     au < exists ; 2013 ; Neurological Research Volume 35 ; 35 > 
+    au < exists ; 2014 ; Neurological Research Volume 36 ; 36 > 
 
   }
 
@@ -3105,6 +3169,7 @@
     au < exists ; 2011 ; New Journal of Botany Volume 1 ; 1 > 
     au < doNotProcess ; 2012 ; New Journal of Botany Volume 2 ; 2 > 
     au < exists ; 2013 ; New Journal of Botany Volume 3 ; 3 > 
+    au < exists ; 2014 ; New Journal of Botany Volume 4 ; 4 > 
 
   }
 
@@ -3169,6 +3234,7 @@
     au < doNotProcess ; 2011 ; Northern History Volume 48 ; 48 > 
     au < doNotProcess ; 2012 ; Northern History Volume 49 ; 49 > 
     au < exists ; 2013 ; Northern History Volume 50 ; 50 > 
+    au < exists ; 2014 ; Northern History Volume 51 ; 51 > 
 
   }
 
@@ -3195,6 +3261,7 @@
     au < exists ; 2011 ; Nutritional Neuroscience Volume 14 ; 14 > 
     au < doNotProcess ; 2012 ; Nutritional Neuroscience Volume 15 ; 15 > 
     au < exists ; 2013 ; Nutritional Neuroscience Volume 16 ; 16 > 
+    au < exists ; 2014 ; Nutritional Neuroscience Volume 17 ; 17 > 
 
   }
 
@@ -3251,6 +3318,7 @@
     au < doNotProcess ; 2011 ; Oxford German Studies Volume 40 ; 40 > 
     au < doNotProcess ; 2012 ; Oxford German Studies Volume 41 ; 41 > 
     au < exists ; 2013 ; Oxford German Studies Volume 42 ; 42 > 
+    au < exists ; 2014 ; Oxford German Studies Volume 43 ; 43 > 
 
   }
 
@@ -3263,7 +3331,8 @@
       issnl = 1746-5095 
     >
 
-    param[journal_id] = ptssrm 
+    param[journal_id] = prm 
+    comment[journal_id] = both ptssrm and prm point to same title
     
     au < exists ; 2004 ; Packaging, Transport, Storage and Security of Radioactive Material Volume 15 ; 15 > 
     au < exists ; 2005 ; Packaging, Transport, Storage and Security of Radioactive Material Volume 16 ; 16 > 
@@ -3275,6 +3344,7 @@
     au < doNotProcess ; 2011 ; Packaging, Transport, Storage and Security of Radioactive Material Volume 22 ; 22 > 
     au < doNotProcess ; 2012 ; Packaging, Transport, Storage and Security of Radioactive Material Volume 23 ; 23 >
     au < exists ; 2013 ; Packaging, Transport, Storage and Security of Radioactive Material Volume 24 ; 24 >
+    au < expected ; 2014 ; Packaging, Transport, Storage and Security of Radioactive Material Volume 25 ; 25 >
 
   }
 
@@ -3339,6 +3409,7 @@
     au < doNotProcess ; 2011 ; Palestine Exploration Quarterly Volume 143 ; 143 > 
     au < doNotProcess ; 2012 ; Palestine Exploration Quarterly Volume 144 ; 144 > 
     au < exists ; 2013 ; Palestine Exploration Quarterly Volume 145 ; 145 > 
+    au < exists ; 2014 ; Palestine Exploration Quarterly Volume 146 ; 146 > 
 
   }
 
@@ -3425,6 +3496,7 @@
     au < exists ; 2011 ; Physical Therapy Reviews Volume 16 ; 16 > 
     au < doNotProcess ; 2012 ; Physical Therapy Reviews Volume 17 ; 17 > 
     au < exists ; 2013 ; Physical Therapy Reviews Volume 18 ; 18 > 
+    au < exists ; 2014 ; Physical Therapy Reviews Volume 19 ; 19 > 
 
   }
 
@@ -3454,6 +3526,7 @@
     au < exists ; 2011 ; Plastics, Rubber and Composites Volume 40 ; 40 > 
     au < doNotProcess ; 2012 ; Plastics, Rubber and Composites Volume 41 ; 41 > 
     au < exists ; 2013 ; Plastics, Rubber and Composites Volume 42 ; 42 > 
+    au < exists ; 2014 ; Plastics, Rubber and Composites Volume 43 ; 43 > 
 
   }
 
@@ -3477,6 +3550,7 @@
     au < doNotProcess ; 2011 ; Post-Medieval Archaeology Volume 45 ; 45 > 
     au < doNotProcess ; 2012 ; Post-Medieval Archaeology Volume 46 ; 46 > 
     au < exists ; 2013 ; Post-Medieval Archaeology Volume 47 ; 47 > 
+    au < expected ; 2014 ; Post-Medieval Archaeology Volume 48 ; 48 > 
 
   }
 
@@ -3489,7 +3563,8 @@
       issnl = 0032-5899 
     >
 
-    param[journal_id] = pm 
+    param[journal_id] = pom 
+    comment[journal_id] = both pm and pom point to same title
     
     au < exists ; 1999 ; Powder Metallurgy Volume 42 ; 42 > 
     au < exists ; 2000 ; Powder Metallurgy Volume 43 ; 43 > 
@@ -3506,6 +3581,7 @@
     au < exists ; 2011 ; Powder Metallurgy Volume 54 ; 54 > 
     au < doNotProcess ; 2012 ; Powder Metallurgy Volume 55 ; 55 > 
     au < exists ; 2013 ; Powder Metallurgy Volume 56 ; 56 > 
+    au < exists ; 2014 ; Powder Metallurgy Volume 57 ; 57 > 
 
   }
 
@@ -3531,6 +3607,7 @@
     au < exists ; 2011 ; Progress in Palliative Care Volume 19 ; 19 > 
     au < doNotProcess ; 2012 ; Progress in Palliative Care Volume 20 ; 20 > 
     au < exists ; 2013 ; Progress in Palliative Care Volume 21 ; 21 > 
+    au < exists ; 2014 ; Progress in Palliative Care Volume 22 ; 22 > 
 
   }
 
@@ -3557,6 +3634,7 @@
     au < doNotProcess ; 2011 ; Public Archaeology Volume 10 ; 10 > 
     au < doNotProcess ; 2012 ; Public Archaeology Volume 11 ; 11 > 
     au < exists ; 2013 ; Public Archaeology Volume 12 ; 12 > 
+    au < exists ; 2014 ; Public Archaeology Volume 13 ; 13 > 
 
   }
 
@@ -3579,6 +3657,7 @@
     au < doNotProcess ; 2011 ; Publications of the English Goethe Society Volume 80 ; 80 > 
     au < doNotProcess ; 2012 ; Publications of the English Goethe Society Volume 81 ; 81 > 
     au < exists ; 2013 ; Publications of the English Goethe Society Volume 82 ; 82 > 
+    au < exists ; 2014 ; Publications of the English Goethe Society Volume 83 ; 83 > 
 
   }
 
@@ -3608,6 +3687,7 @@
     au < exists ; 2011 ; Redox Report Volume 16 ; 16 > 
     au < doNotProcess ; 2012 ; Redox Report Volume 17 ; 17 > 
     au < exists ; 2013 ; Redox Report Volume 18 ; 18 > 
+    au < exists ; 2014 ; Redox Report Volume 19 ; 19 > 
 
   }
 
@@ -3669,6 +3749,7 @@
     au < doNotProcess ; 2011 ; Romance Studies Volume 29 ; 29 > 
     au < doNotProcess ; 2012 ; Romance Studies Volume 30 ; 30 > 
     au < exists ; 2013 ; Romance Studies Volume 31 ; 31 > 
+    au < exists ; 2014 ; Romance Studies Volume 32 ; 32 > 
 
   }
 
@@ -3681,7 +3762,8 @@
       issnl = 1362-1718 
     >
 
-    param[journal_id] = stwj 
+    param[journal_id] = stw 
+    comment[journal_id] = both stwj and stw point to both title
     
     au < exists ; 1996 ; Science and Technology of Welding & Joining Volume 1 ; 1 > 
     au < exists ; 1997 ; Science and Technology of Welding & Joining Volume 2 ; 2 > 
@@ -3701,6 +3783,7 @@
     au < exists ; 2011 ; Science and Technology of Welding & Joining Volume 16 ; 16 > 
     au < doNotProcess ; 2012 ; Science and Technology of Welding & Joining Volume 17 ; 17 > 
     au < exists ; 2013 ; Science and Technology of Welding & Joining Volume 18 ; 18 > 
+    au < exists ; 2014 ; Science and Technology of Welding & Joining Volume 19 ; 19 > 
 
   }
 
@@ -3713,7 +3796,8 @@
       issnl = 0265-1068 
     >
 
-    param[journal_id] = c17 
+    param[journal_id] = sfs 
+    comment[journal_id] = both c17 and sfs point to same title
 
     au < exists ; 1979 ; Seventeenth-Century French Studies Volume 1 ; 1 > 
     au < exists ; 1980 ; Seventeenth-Century French Studies Volume 2 ; 2 > 
@@ -3750,6 +3834,7 @@
     au < doNotProcess ; 2011 ; Seventeenth-Century French Studies Volume 33 ; 33 > 
     au < doNotProcess ; 2012 ; Seventeenth-Century French Studies Volume 34 ; 34 >
     au < exists ; 2013 ; Seventeenth-Century French Studies Volume 35 ; 35 >
+    au < expected ; 2014 ; Seventeenth-Century French Studies Volume 36 ; 36 >
 
   }
 
@@ -3783,6 +3868,7 @@
     au < doNotProcess ; 2011 ; Slavonica Volume 17 ; 17 > 
     au < doNotProcess ; 2012 ; Slavonica Volume 18 ; 18 > 
     au < exists ; 2013 ; Slavonica Volume 19 ; 19 > 
+    au < expected ; 2014 ; Slavonica Volume 20 ; 20 > 
 
   }
 
@@ -3796,9 +3882,65 @@
 
     param[journal_id] = sic 
  
+    au < exists ; 1952-1954 ; Studies in Conservation Volume 1 ; 1 >
+    au < exists ; 1955-1956 ; Studies in Conservation Volume 2 ; 2 >
+    au < exists ; 1957-1958 ; Studies in Conservation Volume 3 ; 3 >
+    au < exists ; 1959 ; Studies in Conservation Volume 4 ; 4 >
+    au < exists ; 1960 ; Studies in Conservation Volume 5 ; 5 >
+    au < exists ; 1961 ; Studies in Conservation Volume 6 ; 6 >
+    au < exists ; 1962 ; Studies in Conservation Volume 7 ; 7 >
+    au < exists ; 1963 ; Studies in Conservation Volume 8 ; 8 >
+    au < exists ; 1964 ; Studies in Conservation Volume 9 ; 9 >
+    au < exists ; 1965 ; Studies in Conservation Volume 10 ; 10 >
+    au < exists ; 1966 ; Studies in Conservation Volume 11 ; 11 >
+    au < exists ; 1967 ; Studies in Conservation Volume 12 ; 12 >
+    au < exists ; 1968 ; Studies in Conservation Volume 13 ; 13 >
+    au < exists ; 1969 ; Studies in Conservation Volume 14 ; 14 >
+    au < exists ; 1970 ; Studies in Conservation Volume 15 ; 15 >
+    au < exists ; 1971 ; Studies in Conservation Volume 16 ; 16 >
+    au < exists ; 1972 ; Studies in Conservation Volume 17 ; 17 >
+    au < exists ; 1973 ; Studies in Conservation Volume 18 ; 18 >
+    au < exists ; 1974 ; Studies in Conservation Volume 19 ; 19 >
+    au < exists ; 1975 ; Studies in Conservation Volume 20 ; 20 >
+    au < exists ; 1976 ; Studies in Conservation Volume 21 ; 21 >
+    au < exists ; 1977 ; Studies in Conservation Volume 22 ; 22 >
+    au < exists ; 1978 ; Studies in Conservation Volume 23 ; 23 >
+    au < exists ; 1979 ; Studies in Conservation Volume 24 ; 24 >
+    au < exists ; 1980 ; Studies in Conservation Volume 25 ; 25 >
+    au < exists ; 1981 ; Studies in Conservation Volume 26 ; 26 >
+    au < exists ; 1982 ; Studies in Conservation Volume 27 ; 27 >
+    au < exists ; 1983 ; Studies in Conservation Volume 28 ; 28 >
+    au < exists ; 1984 ; Studies in Conservation Volume 29 ; 29 >
+    au < exists ; 1985 ; Studies in Conservation Volume 30 ; 30 >
+    au < exists ; 1986 ; Studies in Conservation Volume 31 ; 31 >
+    au < exists ; 1987 ; Studies in Conservation Volume 32 ; 32 >
+    au < exists ; 1988 ; Studies in Conservation Volume 33 ; 33 >
+    au < exists ; 1989 ; Studies in Conservation Volume 34 ; 34 >
+    au < exists ; 1990 ; Studies in Conservation Volume 35 ; 35 >
+    au < exists ; 1991 ; Studies in Conservation Volume 36 ; 36 >
+    au < exists ; 1992 ; Studies in Conservation Volume 37 ; 37 >
+    au < exists ; 1993 ; Studies in Conservation Volume 38 ; 38 >
+    au < exists ; 1994 ; Studies in Conservation Volume 39 ; 39 >
+    au < exists ; 1995 ; Studies in Conservation Volume 40 ; 40 >
+    au < exists ; 1996 ; Studies in Conservation Volume 41 ; 41 >
+    au < exists ; 1997 ; Studies in Conservation Volume 42 ; 42 >
+    au < exists ; 1998 ; Studies in Conservation Volume 43 ; 43 >
+    au < exists ; 1999 ; Studies in Conservation Volume 44 ; 44 >
+    au < exists ; 2000 ; Studies in Conservation Volume 45 ; 45 >
+    au < exists ; 2001 ; Studies in Conservation Volume 46 ; 46 >
+    au < exists ; 2002 ; Studies in Conservation Volume 47 ; 47 >
+    au < exists ; 2003 ; Studies in Conservation Volume 48 ; 48 >
+    au < exists ; 2004 ; Studies in Conservation Volume 49 ; 49 >
+    au < exists ; 2005 ; Studies in Conservation Volume 50 ; 50 >
+    au < exists ; 2006 ; Studies in Conservation Volume 51 ; 51 >
+    au < exists ; 2007 ; Studies in Conservation Volume 52 ; 52 >
+    au < exists ; 2008 ; Studies in Conservation Volume 53 ; 53 >
+    au < exists ; 2009 ; Studies in Conservation Volume 54 ; 54 >
+    au < exists ; 2010 ; Studies in Conservation Volume 55 ; 55 >
    au < doNotProcess ; 2011 ; Studies in Conservation Volume 56 ; 56 > 
    au < doNotProcess ; 2012 ; Studies in Conservation Volume 57 ; 57 > 
    au < exists ; 2013 ; Studies in Conservation Volume 58 ; 58 > 
+   au < exists ; 2014 ; Studies in Conservation Volume 59 ; 59 > 
     
   }
 
@@ -3811,8 +3953,23 @@
       issnl = 0267-0844 
     >
 
-    param[journal_id] = se 
+    param[journal_id] = sur 
+    comment[journal_id] = both se and sur point to same title 
 
+    au < exists ; 1985 ; Surface Engineering Volume 1 ; 1 >
+    au < exists ; 1986 ; Surface Engineering Volume 2 ; 2 >
+    au < exists ; 1987 ; Surface Engineering Volume 3 ; 3 >
+    au < exists ; 1988 ; Surface Engineering Volume 4 ; 4 >
+    au < exists ; 1989 ; Surface Engineering Volume 5 ; 5 >
+    au < exists ; 1990 ; Surface Engineering Volume 6 ; 6 >
+    au < exists ; 1991 ; Surface Engineering Volume 7 ; 7 >
+    au < exists ; 1992 ; Surface Engineering Volume 8 ; 8 >
+    au < exists ; 1993 ; Surface Engineering Volume 9 ; 9 >
+    au < exists ; 1994 ; Surface Engineering Volume 10 ; 10 >
+    au < exists ; 1995 ; Surface Engineering Volume 11 ; 11 >
+    au < exists ; 1996 ; Surface Engineering Volume 12 ; 12 >
+    au < exists ; 1997 ; Surface Engineering Volume 13 ; 13 >
+    au < exists ; 1998 ; Surface Engineering Volume 14 ; 14 >
     au < exists ; 1999 ; Surface Engineering Volume 15 ; 15 > 
     au < exists ; 2000 ; Surface Engineering Volume 16 ; 16 > 
     au < exists ; 2001 ; Surface Engineering Volume 17 ; 17 > 
@@ -3828,6 +3985,7 @@
     au < exists ; 2011 ; Surface Engineering Volume 27 ; 27 > 
     au < doNotProcess ; 2012 ; Surface Engineering Volume 28 ; 28 > 
     au < exists ; 2013 ; Surface Engineering Volume 29 ; 29 > 
+    au < exists ; 2014 ; Surface Engineering Volume 30 ; 30 > 
 
   }
 
@@ -3887,6 +4045,7 @@
     au < doNotProcess ; 2011 ; Survey Review Volume 43 ; 43 > 
     au < doNotProcess ; 2012 ; Survey Review Volume 44 ; 44 > 
     au < exists ; 2013 ; Survey Review Volume 45 ; 45 > 
+    au < exists ; 2014 ; Survey Review Volume 46 ; 46 > 
 
   }
 
@@ -3899,26 +4058,27 @@
       issnl = 0737-5034 
     >
 
-    param[journal_id] = tang 
+    param[journal_id] = tng 
+    comment[journal_id] = both tng and tang point to same title 
 
-    au < exists ; 1982-1983 ; T'ang Studies Volume 1982 ; 1982 > 
+    au < exists ; 1982 ; T'ang Studies Volume 1982 ; 1982 > 
     au < exists ; 1984 ; T'ang Studies Volume 1984 ; 1984 > 
     au < exists ; 1985 ; T'ang Studies Volume 1985 ; 1985 > 
     au < exists ; 1986 ; T'ang Studies Volume 1986 ; 1986 > 
     au < exists ; 1987 ; T'ang Studies Volume 1987 ; 1987 > 
     au < exists ; 1988 ; T'ang Studies Volume 1988 ; 1988 > 
     au < exists ; 1989 ; T'ang Studies Volume 1989 ; 1989 > 
-    au < exists ; 1990-1991 ; T'ang Studies Volume 1990 ; 1990 > 
-    au < exists ; 1992-1993 ; T'ang Studies Volume 1992 ; 1992 > 
+    au < exists ; 1990 ; T'ang Studies Volume 1990 ; 1990 > 
+    au < exists ; 1992 ; T'ang Studies Volume 1992 ; 1992 > 
     au < exists ; 1994 ; T'ang Studies Volume 1994 ; 1994 > 
     au < exists ; 1995 ; T'ang Studies Volume 1995 ; 1995 > 
     au < exists ; 1996 ; T'ang Studies Volume 1996 ; 1996 > 
-    au < exists ; 1997-1998 ; T'ang Studies Volume 1997 ; 1997 > 
+    au < exists ; 1997 ; T'ang Studies Volume 1997 ; 1997 > 
     au < exists ; 1999 ; T'ang Studies Volume 1999 ; 1999 > 
-    au < exists ; 2000-2001 ; T'ang Studies Volume 2000 ; 2000 > 
-    au < exists ; 2002-2003 ; T'ang Studies Volume 2002 ; 2002 > 
+    au < exists ; 2000 ; T'ang Studies Volume 2000 ; 2000 > 
+    au < exists ; 2002 ; T'ang Studies Volume 2002 ; 2002 > 
     au < exists ; 2004 ; T'ang Studies Volume 2004 ; 2004 > 
-    au < exists ; 2005-2006 ; T'ang Studies Volume 2005 ; 2005 > 
+    au < exists ; 2005 ; T'ang Studies Volume 2005 ; 2005 > 
     au < exists ; 2007 ; T'ang Studies Volume 2007 ; 2007 > 
     au < exists ; 2008 ; T'ang Studies Volume 2008 ; 2008 > 
     au < exists ; 2009 ; T'ang Studies Volume 27 ; 27 > 
@@ -3926,6 +4086,7 @@
     au < doNotProcess ; 2011 ; T'ang Studies Volume 2011 ; 2011 > 
     au < doNotProcess ; 2012 ; T'ang Studies Volume 2012 ; 2012 > 
     au < exists ; 2013 ; T'ang Studies Volume 2013 ; 2013 > 
+    au < expected ; 2014 ; T'ang Studies Volume 2014 ; 2014 > 
 
   }
 
@@ -3987,9 +4148,10 @@
     au < exists ; 2009 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 37 ; 37 >
     au < doNotProcess ; 2011 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 38 ; 38 >
-	au < doNotProcess ; 2012 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 39 ; 39 >
-	au < exists ; 2013 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 40 ; 40 >
-	
+    au < doNotProcess ; 2012 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 39 ; 39 >
+    au < exists ; 2013 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 40 ; 40 >
+    au < exists ; 2014 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 41 ; 41 >
+    
   }
 
   {
@@ -4048,6 +4210,7 @@
     au < doNotProcess ; 2011 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 43 ; 43 > 
     au < doNotProcess ; 2012 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 44 ; 44 > 
     au < exists ; 2013 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 45 ; 45 > 
+    au < exists ; 2014 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 46 ; 46 > 
 
   }
 
@@ -4106,6 +4269,7 @@
     au < doNotProcess ; 2011 ; Textile History Volume 42 ; 42 > 
     au < doNotProcess ; 2012 ; Textile History Volume 43 ; 43 > 
     au < exists ; 2013 ; Textile History Volume 44 ; 44 > 
+    au < exists ; 2014 ; Textile History Volume 45 ; 45 > 
 
   }
 
@@ -4129,6 +4293,7 @@
     au < doNotProcess ; 2011 ; Transactions of the Institute of Metal Finishing Volume 89 ; 89 > 
     au < doNotProcess ; 2012 ; Transactions of the Institute of Metal Finishing Volume 90 ; 90 > 
     au < exists ; 2013 ; Transactions of the Institute of Metal Finishing Volume 91 ; 91 > 
+    au < exists ; 2014 ; Transactions of the Institute of Metal Finishing Volume 92 ; 92 > 
 
   }
 
@@ -4243,6 +4408,8 @@
     au < doNotProcess ; 2011 ; Tribology - Materials, Surfaces & Interfaces Volume 5 ; 5 > 
     au < doNotProcess ; 2012 ; Tribology - Materials, Surfaces & Interfaces Volume 6 ; 6 > 
     au < exists ; 2013 ; Tribology - Materials, Surfaces & Interfaces Volume 7 ; 7 >
+    au < exists ; 2014 ; Tribology - Materials, Surfaces & Interfaces Volume 8 ; 8 >
+
   }
 
   {
@@ -4273,6 +4440,7 @@
     au < doNotProcess ; 2011 ; Twentieth-Century China Volume 36 ; 36 > 
     au < doNotProcess ; 2012 ; Twentieth-Century China Volume 37 ; 37 > 
     au < exists ; 2013 ; Twentieth-Century China Volume 38 ; 38 > 
+    au < exists ; 2014 ; Twentieth-Century China Volume 39 ; 39 > 
 
   }
 
@@ -4349,6 +4517,7 @@
     au < doNotProcess ; 2011 ; Vernacular Architecture Volume 42 ; 42 > 
     au < doNotProcess ; 2012 ; Vernacular Architecture Volume 43 ; 43 > 
     au < exists ; 2013 ; Vernacular Architecture Volume 44 ; 44 > 
+    au < expected ; 2014 ; Vernacular Architecture Volume 45 ; 45 > 
 
   }
 
@@ -4395,6 +4564,7 @@
     au < doNotProcess ; 2011 ; War & Society Volume 30 ; 30 > 
     au < doNotProcess ; 2012 ; War & Society Volume 31 ; 31 > 
     au < exists ; 2013 ; War & Society Volume 32 ; 32 > 
+    au < exists ; 2014 ; War & Society Volume 33 ; 33 > 
 
   }
 
@@ -4412,6 +4582,7 @@
     au < doNotProcess ; 2011 ; Yorkshire Archaeological Journal Volume 83 ; 83 >
     au < doNotProcess ; 2012 ; Yorkshire Archaeological Journal Volume 84 ; 84 >
     au < exists ; 2013 ; Yorkshire Archaeological Journal Volume 85 ; 85 >
+    au < expected ; 2014 ; Yorkshire Archaeological Journal Volume 86 ; 86 >
 
   }
 
