@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlerStatus.java,v 1.12 2013-10-17 07:49:01 tlipkis Exp $
+ * $Id: TestCrawlerStatus.java,v 1.13 2014-06-09 07:29:33 tlipkis Exp $
  */
 
 /*
@@ -701,6 +701,41 @@ public class TestCrawlerStatus extends LockssTestCase {
     // Documenting its current list sementics, but a set implementation
     // would be ok.
     assertEquals(ListUtil.list(ref1, ref2, ref1), cs.getReferrers(url1));
+  }
+
+  public void testReferrersSeal(CrawlerStatus cs) {
+    assertTrue(cs.hasReferrers());
+
+    cs.signalReferrer(url1, ref1, ReferrerType.Included);
+    cs.signalReferrer(url2, ref1, ReferrerType.Included);
+    cs.signalReferrer(url3, ref1, ReferrerType.Included);
+    cs.signalUrlFetched(url1);
+    cs.signalUrlFetched(url2);
+    cs.signalErrorForUrl(url3, "foo");
+
+    cs.sealCounters();
+    return;
+  }
+
+  public void testReferrersSeal1() {
+    ConfigurationUtil.setFromArgs(CrawlerStatus.PARAM_RECORD_REFERRERS_MODE,
+				  "All");
+    CrawlerStatus cs = new CrawlerStatus(mau, null, "Type 42");
+    testReferrersSeal(cs);
+    assertEmpty(cs.getReferrers(url1));
+    assertEmpty(cs.getReferrers(url2));
+    assertEquals(ListUtil.list(ref1), cs.getReferrers(url3));
+  }
+
+  public void testReferrersSeal2() {
+    ConfigurationUtil.setFromArgs(CrawlerStatus.PARAM_RECORD_REFERRERS_MODE,
+				  "All",
+				  CrawlerStatus.PARAM_KEEP_URLS, "all");
+    CrawlerStatus cs = new CrawlerStatus(mau, null, "Type 42");
+    testReferrersSeal(cs);
+    assertEquals(ListUtil.list(ref1), cs.getReferrers(url1));
+    assertEquals(ListUtil.list(ref1), cs.getReferrers(url2));
+    assertEquals(ListUtil.list(ref1), cs.getReferrers(url3));
   }
 
   public void testReferrersIncluded() {

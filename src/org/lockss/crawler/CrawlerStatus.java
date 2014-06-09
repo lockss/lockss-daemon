@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerStatus.java,v 1.16 2013-10-17 07:49:01 tlipkis Exp $
+ * $Id: CrawlerStatus.java,v 1.17 2014-06-09 07:29:33 tlipkis Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.*;
 import org.apache.commons.lang.mutable.MutableInt;
 import org.apache.commons.collections.set.ListOrderedSet;
 import org.apache.commons.collections.map.LinkedMap;
+import org.apache.commons.collections.iterators.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.CacheException;
 import org.lockss.app.*;
@@ -272,11 +273,30 @@ public class CrawlerStatus {
     sources = sources.seal(isType("sources", keepUrls));
     pending = pending.seal(isType("pending", keepUrls));
     errors = errors.seal(isType("errors", keepUrls));
-    referrers = referrers.seal(isType("referrers", keepUrls));
+    // referrers must be last as seal() looks to see what's left in other
+    // lists.
+    referrers = referrers.seal(isType("referrers", keepUrls),
+			       isAllUrls(keepUrls),
+			       retainedUrlsIterator());
     boolean keepMime = isType("mime", keepUrls);
     for (Map.Entry<String,UrlCount> ent : mimeCounts.entrySet()) {
       ent.setValue((ent.getValue()).seal(keepMime));
     }
+  }
+
+  /** Return an iterator over all the URLs contained in any UrlCount */
+  private Iterator retainedUrlsIterator() {
+    IteratorChain res = new IteratorChain();
+    UrlCount[] urlcs = new UrlCount[] {
+      fetched, excluded, notModified,
+      parsed, pending, errors};
+    
+    for (UrlCount urlc : urlcs) {
+      if (urlc.hasCollection() && urlc.getCollSize() > 0) {
+	res.addIterator(urlc.getUrlIterator());
+      }
+    }
+    return res;
   }
 
   private static synchronized String nextIdx() {
@@ -286,9 +306,14 @@ public class CrawlerStatus {
   /** Return true if we should record URLs of type <code>type</code>,
    * according to the param value in <code>recordTypes</code> */
   static boolean isType(String type, String urlTypes) {
-    return (ALL_URLS.equalsIgnoreCase(urlTypes) ||
+    return (isAllUrls(urlTypes) ||
 	    StringUtil.indexOfIgnoreCase(urlTypes, type) >= 0);
   }
+
+  static boolean isAllUrls(String urlTypes) {
+    return ALL_URLS.equalsIgnoreCase(urlTypes);
+  }
+
 
   /** Make a list counter, with a list if specified by config */
   static UrlCount newListCounter(String type, String recordTypes) {
@@ -968,6 +993,10 @@ public class CrawlerStatus {
       return 0;
     }
 
+    Iterator<String> getUrlIterator() {
+      return CollectionUtil.EMPTY_ITERATOR;
+    }
+
     public UrlCount seal(boolean keepColl) {
       if (!isSealed()) {
 	cnt = -1 - cnt;
@@ -1034,7 +1063,11 @@ public class CrawlerStatus {
     }
 
     int getCollSize() {
-      return lst.size();
+      return (lst == null) ? 0 : lst.size();
+    }
+
+    Iterator<String> getUrlIterator() {
+      return lst.iterator();
     }
 
     public UrlCount seal(boolean keepColl) {
@@ -1093,7 +1126,11 @@ public class CrawlerStatus {
     }
 
     int getCollSize() {
-      return set.size();
+      return (set == null) ? 0 : set.size();
+    }
+
+    Iterator<String> getUrlIterator() {
+      return set.iterator();
     }
 
     public UrlCount seal(boolean keepColl) {
@@ -1136,7 +1173,11 @@ public class CrawlerStatus {
     }
 
     int getCollSize() {
-      return map.size();
+      return (map == null) ? 0 : map.size();
+    }
+
+    Iterator<String> getUrlIterator() {
+      return map.keySet().iterator();
     }
 
     public UrlCount seal(boolean keepColl) {
@@ -1183,7 +1224,8 @@ public class CrawlerStatus {
     }
 
     public boolean hasReferrersOfType(ReferrerType rt) {
-      if (recordMode == RecordReferrersMode.None) {
+      if (recordMode == RecordReferrersMode.None  ||
+	  (isSealed && map == null)) {
 	return false;
       }
       switch (rt) {
@@ -1254,9 +1296,25 @@ public class CrawlerStatus {
       }
     }
 
-    public ReferrerMap seal(boolean keepColl) {
-      if (!keepColl) {
+    /** Remove from the referrers map any URLs that are no longer
+     * referenced by any UrlCount.  In the common case where referrers are
+     * recorded but only the error list is kept after the crawl ends, this
+     * saves lots of memory.  Must be called after the other UrlCount
+     * objects have been sealed. */ 
+    public ReferrerMap seal(boolean keepAny, boolean keepAll,
+			    Iterator<String> retainedUrlsIter) {
+      if (!keepAny || !retainedUrlsIter.hasNext()) {
 	map = null;
+      } else if (!keepAll) {
+	HashMap newmap = new HashMap();
+	while (retainedUrlsIter.hasNext()) {
+	  String url = retainedUrlsIter.next();
+	  Object refs = map.get(url);
+	  if (refs != null) {
+	    newmap.put(url, refs);
+	  }
+	}
+	map = newmap;
       }
       isSealed = true;
       return this;
