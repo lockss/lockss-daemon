@@ -17,7 +17,7 @@
       comment[publisher] = Universidade Estadual de Campinas, Instituto d Geociências
       param[base_url] = http://www.ige.unicamp.br/ojs/
       param[journal_id] = rbi
-      comment[notReady] = fetch error
+      comment[notReady] = fetch error. 403 forbidden http://www.ige.unicamp.br/phpmyvisites/phpmyvisites.js
 
       au < notReady ; 2002 ; 1 ; Revista Brasileira de Inovação Volume 2002 ; 2002 >
       au < notReady ; 2003 ; 2 ; Revista Brasileira de Inovação Volume 2003 ; 2003 >
