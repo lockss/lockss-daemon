@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlWindows.java,v 1.8 2013-04-01 02:51:11 tlipkis Exp $
+ * $Id: TestCrawlWindows.java,v 1.9 2014-06-09 23:53:28 tlipkis Exp $
  */
 
 /*
@@ -480,6 +480,22 @@ public class TestCrawlWindows extends LockssTestCase {
     assertTrue(win.canCrawl(new Date("1/1/1 01:00 GMT")));
     assertTrue(win.canCrawl(new Date("1/1/1 04:59 GMT")));
     assertFalse(win.canCrawl(new Date("1/1/1 05:01 GMT")));
+
+    // Open from 10:00pm to 6:00am GMT
+    win = new CrawlWindows.Daily("22:00", "6:00", "GMT");
+    assertEquals("Daily from 22:00 to 6:00, GMT", win.toString());
+    assertFalse(win.canCrawl(new Date("1/1/1 21:59 GMT")));
+    assertFalse(win.canCrawl(new Date("1/1/2 21:59 GMT")));
+    assertFalse(win.canCrawl(new Date("1/1/4 21:59 GMT")));
+    assertFalse(win.canCrawl(new Date("1/1/7 21:59 GMT")));
+    assertTrue(win.canCrawl(new Date("1/1/1 22:00 GMT")));
+    assertTrue(win.canCrawl(new Date("1/1/1 22:01 GMT")));
+    assertTrue(win.canCrawl(new Date("1/1/1 23:00 GMT")));
+    assertTrue(win.canCrawl(new Date("1/1/1 23:59 GMT")));
+    assertTrue(win.canCrawl(new Date("1/1/1 00:00 GMT")));
+    assertTrue(win.canCrawl(new Date("1/1/1 01:00 GMT")));
+    assertTrue(win.canCrawl(new Date("1/1/1 05:59 GMT")));
+    assertFalse(win.canCrawl(new Date("1/1/1 06:01 GMT")));
   }
 
   static final String SUNDAY = "March 3, 2013";
