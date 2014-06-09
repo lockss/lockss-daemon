@@ -1,6 +1,6 @@
-/* $Id: PalgraveBookArticleIteratorFactory.java,v 1.2 2014-06-06 17:33:41 aishizaki Exp $
+/* $Id: PalgraveBookArticleIteratorFactory.java,v 1.3 2014-06-09 15:32:00 aishizaki Exp $
  
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -46,7 +46,6 @@ import org.lockss.util.Logger;
  * pdf (download pdf): http://www.palgraveconnect.com/pc/econfin2012/browse/inside/download/9781137283351.pdf
  * epub (download epub): http://www.palgraveconnect.com/pc/econfin2012/browse/inside/epub/9781137283351.epub
  * citation export: http://www.palgraveconnect.com/pc/browse/citationExport?doi=10.1057/9781137024497&WT.cg_n=eBooks&WT.cg_s=Citation%20Export
- *                  http://www.palgraveconnect.com/pc/browse/citationExport?isbn=9780230288393&WT.cg_n=eBooks&WT.cg_s=Citation%20Export
  * Metadata found in citation export ris file.
  * 
  */
@@ -54,24 +53,28 @@ import org.lockss.util.Logger;
 public class PalgraveBookArticleIteratorFactory
   implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
-  protected static Logger log = Logger.getLogger(PalgraveBookArticleIteratorFactory.class);
+  private static Logger log = Logger.getLogger(PalgraveBookArticleIteratorFactory.class);
   
   // ROOT_TEMPLATE AND PATTERN_TEMPLATE required by SubTreeArticleIterator.
   // SubTreeArticleIterator returns only the URLs under ROOT_TEMPLATE, that
   // match PATTERN_TEMPLATE.
   // root: http://www.palgraveconnect.com
   protected static final String ROOT_TEMPLATE = "\"%spc/\", base_url";
-  //protected static final String PATTERN_TEMPLATE = "\"%spc/.+/browse/inside/(download|epub)?/[0-9]+\\.(html|pdf|epub)$\", base_url";
-  protected static final String PATTERN_TEMPLATE = "\"%spc/.+/browse/inside(/download|/epub)?/[0-9]+\\.(html|pdf|epub)$\", base_url";
+  protected static final String PATTERN_TEMPLATE = 
+    "\"%spc/.+/browse/inside(/download|/epub)?/[0-9]+\\.(html|pdf|epub)$\", base_url";
   
-  protected Pattern PDF_LANDING_PATTERN = Pattern.compile("/pc/(.+)/browse/inside/([0-9]+)\\.html$", Pattern.CASE_INSENSITIVE);
-  protected Pattern PDF_PATTERN = Pattern.compile("/pc/(.+)/browse/inside/download/([0-9]+)\\.pdf$", Pattern.CASE_INSENSITIVE);
-  protected Pattern EPUB_PATTERN = Pattern.compile("/pc/(.+)/browse/inside/epub/([0-9]+)\\.epub$", Pattern.CASE_INSENSITIVE);
+  protected Pattern PDF_LANDING_PATTERN = 
+    Pattern.compile("/pc/(.+)/browse/inside/([0-9]+)\\.html$", Pattern.CASE_INSENSITIVE);
+  protected Pattern PDF_PATTERN = 
+    Pattern.compile("/pc/(.+)/browse/inside/download/([0-9]+)\\.pdf$", Pattern.CASE_INSENSITIVE);
+  protected Pattern EPUB_PATTERN = 
+    Pattern.compile("/pc/(.+)/browse/inside/epub/([0-9]+)\\.epub$", Pattern.CASE_INSENSITIVE);
     
   protected static String PDF_LANDING_REPLACEMENT = "/pc/$1/browse/inside/$2.html";
   protected static String PDF_REPLACEMENT = "/pc/$1/browse/inside/download/$2.pdf";
   protected static String EPUB_REPLACEMENT = "/pc/$1/browse/inside/epub/$2.epub";
-  protected static String CITATION_RIS_REPLACEMENT = "/pc/browse/citationExport?doi=10.1057/$2&WT.cg_n=eBooks&WT.cg_s=Citation%20Export";
+  protected static String CITATION_RIS_REPLACEMENT = 
+    "/pc/browse/citationExport?doi=10.1057/$2&WT.cg_n=eBooks&WT.cg_s=Citation%20Export";
   
    
   // Create PalgraveBookArticleIterator with the new object of 

@@ -16,7 +16,7 @@
     <map>
       <entry>
         <string>Metadata</string>
-	      <string>1</string>
+        <string>1</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -74,6 +74,7 @@
       <string>4,"^%s", base_url</string>
       <string>1,"^%s.+/browse/inside/.*", base_url</string>
       <string>1,"^%s.+/browse/citationExport.*", base_url</string>
+      <string>1,"^%s.+/10\.1057/%s\.\d+$", base_url, book_isbn</string>
     </list>
   </entry>
   <entry>
@@ -106,12 +107,6 @@
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.palgrave.PalgraveBookArticleIteratorFactory</string>
   </entry>
-<!--
-   <entry>
-    <string>application/pdf_filter_factory</string>
-    <string>org.lockss.plugin.palgrave.PalgraveBookPdfFilterFactory</string>
-  </entry>
--->
   <entry>
     <string>application/x-research-info-systems_metadata_extractor_factory_map</string>
     <map>

@@ -1,6 +1,6 @@
-/* $Id: PalgraveBookRisMetadataExtractorFactory.java,v 1.2 2014-06-06 17:33:41 aishizaki Exp $
+/* $Id: PalgraveBookRisMetadataExtractorFactory.java,v 1.3 2014-06-09 15:32:00 aishizaki Exp $
  
- Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -58,7 +58,6 @@ import org.lockss.util.Logger;
       
       RisMetadataExtractor ris = new RisMetadataExtractor();
       log.debug3("ris: " + ris.toString());
-      log.info("ris: " + ris.toString());
       ris.addRisTag("PY", MetadataField.FIELD_DATE);
       ris.addRisTag("TI", MetadataField.FIELD_JOURNAL_TITLE);
       ris.addRisTag("SN", MetadataField.FIELD_EISBN);
