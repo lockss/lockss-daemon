@@ -1,5 +1,5 @@
 /*
- * $Id: AuWsResult.java,v 1.3 2014-06-05 05:48:47 fergaloy-sf Exp $
+ * $Id: AuWsResult.java,v 1.4 2014-06-09 07:11:22 fergaloy-sf Exp $
  */
 
 /*
@@ -69,6 +69,7 @@ public class AuWsResult {
   private List<String> newContentCrawlUrls;
   private List<String> urlStems;
   private Boolean isBulkContent;
+  private List<PeerAgreementsWsResult> peerAgreements;
 
   /**
    * Provides the Archival Unit identifier.
@@ -450,6 +451,18 @@ public class AuWsResult {
     this.isBulkContent = isBulkContent;
   }
 
+  /**
+   * Provides the Archival Unit peer agreements.
+   * 
+   * @return a List<PeerAgreementsWsResult> with the peer agreements.
+   */
+  public List<PeerAgreementsWsResult> getPeerAgreements() {
+    return peerAgreements;
+  }
+  public void setPeerAgreements(List<PeerAgreementsWsResult> peerAgreements) {
+    this.peerAgreements = peerAgreements;
+  }
+
   @Override
   public String toString() {
     return "AuWsResult [auId=" + auId + ", name=" + name + ", volume=" + volume
@@ -469,6 +482,7 @@ public class AuWsResult {
 	+ ", currentlyPolling=" + currentlyPolling + ", subscriptionStatus="
 	+ subscriptionStatus + ", auConfiguration=" + auConfiguration
 	+ ", newContentCrawlUrls=" + newContentCrawlUrls + ", urlStems="
-	+ urlStems + ", isBulkContent=" + isBulkContent + "]";
+	+ urlStems + ", isBulkContent=" + isBulkContent + ", peerAgreements="
+	+ peerAgreements + "]";
   }
 }
