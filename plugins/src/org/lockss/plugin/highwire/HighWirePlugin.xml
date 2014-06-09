@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>93</string>
+    <string>94</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -121,10 +121,6 @@
     <long>1209600000</long>
   </entry>
   <entry>
-    <string>au_crawlwindow</string>
-    <string>org.lockss.plugin.highwire.HighWirePressCrawlWindow</string>
-  </entry>
-  <entry>
     <string>plugin_cache_result_list</string>
     <list>
       <string>404=org.lockss.plugin.highwire.HighWirePressHttpResponseHandler</string>
@@ -177,7 +173,7 @@
   </entry>
   <entry>
     <string>au_def_pause_time</string>
-    <long>1250</long>
+    <long>3000</long>
   </entry>
   <entry>
     <string>au_mime_rate_limiter_map</string>
@@ -185,15 +181,6 @@
       <entry>
         <string>application/pdf,text/html,application/vnd.ms-powerpoint</string>
         <string>1/3000</string>
-      </entry>
-    </map>
-  </entry>
-  <entry>
-    <string>content-testing_override</string>
-    <map>
-      <entry>
-        <string>au_crawlwindow</string>
-        <string>org.lockss.plugin.highwire.HighWirePressContentTestingCrawlWindow</string>
       </entry>
     </map>
   </entry>

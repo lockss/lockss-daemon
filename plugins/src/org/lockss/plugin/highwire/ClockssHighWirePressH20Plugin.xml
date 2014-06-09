@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>93</string>
+    <string>94</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -21,7 +21,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>93</string>
+    <string>94</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -32,19 +32,15 @@
     <string>"%sclockss-manifest/vol_%s_manifest.dtl", base_url, volume_name</string>
   </entry>
   <entry>
-    <string>au_crawlwindow</string>
-    <string>org.lockss.plugin.highwire.HighWirePressContentTestingCrawlWindow</string>
-  </entry>
-  <entry>
     <string>au_def_pause_time</string>
-    <long>500</long>
+    <long>3000</long>
   </entry>
   <entry>
     <string>au_mime_rate_limiter_map</string>
     <map>
       <entry>
         <string>application/pdf,text/html,application/vnd.ms-powerpoint</string>
-        <string>1/1000</string>
+        <string>1/3000</string>
       </entry>
     </map>
   </entry>
