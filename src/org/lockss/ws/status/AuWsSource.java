@@ -1,5 +1,5 @@
 /*
- * $Id: AuWsSource.java,v 1.3 2014-06-09 07:11:21 fergaloy-sf Exp $
+ * $Id: AuWsSource.java,v 1.4 2014-06-09 23:28:12 fergaloy-sf Exp $
  */
 
 /*
@@ -32,7 +32,6 @@
 package org.lockss.ws.status;
 
 import java.util.ArrayList;
-import java.util.EnumMap;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -643,8 +642,7 @@ public class AuWsSource extends AuWsResult {
 	// Save the result for this peer identifier.
 	PeerAgreementsWsResult result = new PeerAgreementsWsResult();
 	result.setPeerId(pidid);
-	result.setAgreements(new EnumMap<AgreementTypeWsResult,
-	    PeerAgreementWsResult>(resultAgreements));
+	result.setAgreements(resultAgreements);
 	results.add(result);
       }
 

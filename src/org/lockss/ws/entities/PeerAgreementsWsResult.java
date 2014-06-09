@@ -1,5 +1,5 @@
 /*
- * $Id: PeerAgreementsWsResult.java,v 1.1 2014-06-09 07:11:21 fergaloy-sf Exp $
+ * $Id: PeerAgreementsWsResult.java,v 1.2 2014-06-09 23:28:12 fergaloy-sf Exp $
  */
 
 /*
@@ -31,7 +31,7 @@
  */
 package org.lockss.ws.entities;
 
-import java.util.EnumMap;
+import java.util.Map;
 
 /**
  * Container for the information related to an archival unit poll agreements
@@ -39,7 +39,7 @@ import java.util.EnumMap;
  */
 public class PeerAgreementsWsResult {
   private String peerId;
-  private EnumMap<AgreementTypeWsResult, PeerAgreementWsResult> agreements;
+  private Map<AgreementTypeWsResult, PeerAgreementWsResult> agreements;
 
   /**
    * Provides the identifier of the other peer in the agreement.
@@ -56,14 +56,14 @@ public class PeerAgreementsWsResult {
   /**
    * Provides the data about the agreements with the other peer.
    * 
-   * @return a EnumMap<AgreementTypeWsResult, PeerAgreementWsResult> with the
+   * @return a Map<AgreementTypeWsResult, PeerAgreementWsResult> with the
    *         agreements data.
    */
-  public EnumMap<AgreementTypeWsResult, PeerAgreementWsResult> getAgreements() {
+  public Map<AgreementTypeWsResult, PeerAgreementWsResult> getAgreements() {
     return agreements;
   }
   public void setAgreements(
-      EnumMap<AgreementTypeWsResult, PeerAgreementWsResult> agreements) {
+      Map<AgreementTypeWsResult, PeerAgreementWsResult> agreements) {
     this.agreements = agreements;
   }
 

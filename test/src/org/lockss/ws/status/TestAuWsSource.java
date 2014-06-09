@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuWsSource.java,v 1.1 2014-06-09 07:11:22 fergaloy-sf Exp $
+ * $Id: TestAuWsSource.java,v 1.2 2014-06-09 23:28:13 fergaloy-sf Exp $
  */
 
 /*
@@ -31,7 +31,6 @@
  */
 package org.lockss.ws.status;
 
-import java.util.EnumMap;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -77,7 +76,7 @@ public class TestAuWsSource extends LockssTestCase {
 
   private void validate(PeerAgreementsWsResult result) {
     String peerId = result.getPeerId();
-    EnumMap<AgreementTypeWsResult, PeerAgreementWsResult> agreements =
+    Map<AgreementTypeWsResult, PeerAgreementWsResult> agreements =
 	result.getAgreements();
 
     if ("tcp:[1.2.3.4]:12".equals(peerId)) {
