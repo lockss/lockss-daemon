@@ -104,6 +104,7 @@
   <entry>
     <string>au_rate_limiter_info</string>
     <org.lockss.plugin.RateLimiterInfo>
+      <!-- This very next rate is there only for the plugin to be well-formed, it does not actually have any effect -->
       <rate>1/6s</rate>
       <cond>
         <entry>
