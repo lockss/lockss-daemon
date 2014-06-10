@@ -232,12 +232,11 @@
       comment[publisher] = Universidade Federal do Rio Grande do Sul
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = CadernosdoAplicacao
-      comment[notReady] = can't fetch permission page
 
       au < released ; 2008 ; 1 ; Cadernos do Aplicação Volume 2008 ; 2008 >
-      au < notReady ; 2009 ; 2 ; Cadernos do Aplicação Volume 2009 ; 2009 >
-      au < notReady ; 2010 ; 3 ; Cadernos do Aplicação Volume 2010 ; 2010 >
-      au < notReady ; 2011 ; 4 ; Cadernos do Aplicação Volume 2011 ; 2011 >
+      au < ready ; 2009 ; 2 ; Cadernos do Aplicação Volume 2009 ; 2009 >
+      au < ready ; 2010 ; 3 ; Cadernos do Aplicação Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 4 ; Cadernos do Aplicação Volume 2011 ; 2011 >
       au < expected ; 2012 ; 5 ; Cadernos do Aplicação Volume 2012 ; 2012 >
       au < expected ; 2013 ; 6 ; Cadernos do Aplicação Volume 2013 ; 2013 >
       au < expected ; 2014 ; 7 ; Cadernos do Aplicação Volume 2014 ; 2014 >
