@@ -1,9 +1,9 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.121 2014-05-14 04:14:45 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.121.2.1 2014-06-10 08:38:07 tlipkis Exp $
  */
 
 /*
- Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
@@ -80,6 +80,7 @@ public class ArchivalUnitStatus
   public static final String NO_AU_PEERS_TABLE_NAME = "NoAuPeers";
   public static final String PEERS_VOTE_TABLE_NAME = "PeerVoteSummary";
   public static final String PEERS_REPAIR_TABLE_NAME = "PeerRepair";
+  public static final String PEER_AGREEMENT_TABLE_NAME = "PeerAgreement";
   public static final String FILE_VERSIONS_TABLE_NAME = "FileVersions";
   public static final String SUSPECT_VERSIONS_TABLE_NAME = "SuspectVersions";
   public static final String AU_DEFINITION_TABLE_NAME = "AuConfiguration";
@@ -125,6 +126,8 @@ public class ArchivalUnitStatus
                                       new PeerVoteSummary(theDaemon));
     statusServ.registerStatusAccessor(PEERS_REPAIR_TABLE_NAME,
                                       new PeerRepair(theDaemon));
+    statusServ.registerStatusAccessor(PEER_AGREEMENT_TABLE_NAME,
+                                      new RawPeerAgreement(theDaemon));
     statusServ.registerStatusAccessor(FILE_VERSIONS_TABLE_NAME,
                                       new FileVersions(theDaemon));
     statusServ.registerStatusAccessor(SUSPECT_VERSIONS_TABLE_NAME,
@@ -1177,11 +1180,16 @@ public class ArchivalUnitStatus
 					  audef));
 
 
-      Object peers = PeerRepair.makeAuRef("Repair candidates",
-					      au.getAuId());
+      List peerLinks = new ArrayList();
+      peerLinks.add(PeerRepair.makeAuRef("Repair candidates", au.getAuId()));
+      if (debug) {
+	peerLinks.add(", ");
+	peerLinks.add(RawPeerAgreement.makeAuRef("Peer agreements",
+						 au.getAuId()));
+      }
       res.add(new StatusTable.SummaryInfo(null,
 					  ColumnDescriptor.TYPE_STRING,
-					  peers));
+					  peerLinks));
 
       if (AuUtil.hasSuspectUrlVersions(au)) {
 	StatusTable.Reference suspectRef =
@@ -1652,29 +1660,31 @@ public class ArchivalUnitStatus
     }
   }
 
-  abstract static class PeersAgreement extends PerAuTable {
+  abstract static class BaseAgreementTable extends PerAuTable {
     protected static final List sortRules =
       ListUtil.list(new StatusTable.SortRule("Box", true));
 
-    PeersAgreement(LockssDaemon theDaemon) {
+    BaseAgreementTable(LockssDaemon theDaemon) {
       super(theDaemon);
     }
 
-    protected Map makeRow(CacheStats stats) {
+    protected Map makeRow(PeerIdentity peerId) {
       Map rowMap = new HashMap();
 
-      PeerIdentity peer = stats.peer;
-      Object id = peer.getIdString();
-      if (peer.isLocalIdentity()) {
+      Object str = peerId.getIdString();
+      if (peerId.isLocalIdentity()) {
 	StatusTable.DisplayedValue val =
-	  new StatusTable.DisplayedValue(id);
+	  new StatusTable.DisplayedValue(str);
 	val.setBold(true);
-	id = val;
+	str = val;
       }
-      rowMap.put("Box", id);
+      rowMap.put("Box", str);
       return rowMap;
     }
 
+    protected Map makeRow(CacheStats stats) {
+      return makeRow(stats.peer);
+    }
 
     class CacheStats {
       PeerIdentity peer;
@@ -1704,7 +1714,8 @@ public class ArchivalUnitStatus
     }
   }
 
-  static class PeerVoteSummary extends PeersAgreement {
+  // Obsolete - V1 only
+  static class PeerVoteSummary extends BaseAgreementTable {
     private static final List columnDescriptors = ListUtil.list(
       new ColumnDescriptor("Box", "Box",
                            ColumnDescriptor.TYPE_STRING),
@@ -1824,7 +1835,7 @@ public class ArchivalUnitStatus
     }
   }
 
-  static class PeerRepair extends PeersAgreement {
+  static class PeerRepair extends BaseAgreementTable {
     private static final List columnDescriptors = ListUtil.list(
       new ColumnDescriptor("Box", "Box",
                            ColumnDescriptor.TYPE_STRING),
@@ -1848,7 +1859,12 @@ public class ArchivalUnitStatus
       super(theDaemon);
     }
 
-    protected String getTitle(ArchivalUnit au) {
+    protected String getTitle(StatusTable table, ArchivalUnit au) {
+      String polltype = getStringProp(table, "polltype");
+      if (!StringUtil.isNullString(polltype)) {
+	return getAgreementType(polltype).toString() +
+	  " agreements for AU: " + au.getName();
+      }
       return "Repair candidates for AU: " + au.getName();
     }
     private static final String FOOT_TITLE =
@@ -1862,13 +1878,17 @@ public class ArchivalUnitStatus
     protected void populateTable(StatusTable table, ArchivalUnit au)
         throws StatusService.NoSuchTableException {
       IdentityManager idMgr = theDaemon.getIdentityManager();
-      table.setTitle(getTitle(au));
+      table.setTitle(getTitle(table, au));
       table.setTitleFootnote(FOOT_TITLE);
       int totalPeers = 0;
       if (!table.getOptions().get(StatusTable.OPTION_NO_ROWS)) {
 	table.setColumnDescriptors(columnDescriptors);
 	table.setDefaultSortRules(sortRules);
-	Map statsMap = buildCacheStats(au, idMgr);
+
+	String agmntName = getStringProp(table, "agreementType");
+	AgreementType type = getAgreementType(agmntName);
+	AgreementType hintType = AgreementType.getHintType(type);
+	Map statsMap = buildCacheStats(au, idMgr, type, hintType);
 	List rowL = new ArrayList();
 	for (Iterator iter = statsMap.entrySet().iterator(); iter.hasNext();) {
 	  Map.Entry entry = (Map.Entry)iter.next();
@@ -1885,12 +1905,27 @@ public class ArchivalUnitStatus
       table.setSummaryInfo(getSummaryInfo(au, totalPeers));
     }
 
-    public Map buildCacheStats(ArchivalUnit au, IdentityManager idMgr) {
+    AgreementType getAgreementType(String agmntName) {
+      if ("pop".equalsIgnoreCase(agmntName)) {
+	return AgreementType.POP;
+      } else if ("por".equalsIgnoreCase(agmntName)) {
+	return AgreementType.POR;
+      } else if ("symmetric_por".equalsIgnoreCase(agmntName)) {
+	return AgreementType.SYMMETRIC_POR;
+      } else if ("symmetric_pop".equalsIgnoreCase(agmntName)) {
+	return AgreementType.SYMMETRIC_POP;
+      } else {
+	return AgreementType.POR;
+      }
+    }
+
+    public Map buildCacheStats(ArchivalUnit au, IdentityManager idMgr,
+			       AgreementType type, AgreementType hintType) {
       Map statsMap = new HashMap();
       Map<PeerIdentity, PeerAgreement> porMap =
-	idMgr.getAgreements(au, AgreementType.POR);
+	idMgr.getAgreements(au, type);
       Map<PeerIdentity, PeerAgreement> porHintMap =
-	idMgr.getAgreements(au, AgreementType.POR_HINT);
+	idMgr.getAgreements(au, hintType);
 
       // Create the union of the keys.
       Set<PeerIdentity> pids = new HashSet();
@@ -1956,6 +1991,121 @@ public class ArchivalUnitStatus
 						  String key) {
       return new StatusTable.Reference(value, PEERS_REPAIR_TABLE_NAME,
 				       key);
+    }
+  }
+
+  static class RawPeerAgreement extends BaseAgreementTable {
+    private static final List columnDescriptors = ListUtil.list(
+      new ColumnDescriptor("Box", "Peer", ColumnDescriptor.TYPE_STRING),
+      new ColumnDescriptor("Type", "Type", ColumnDescriptor.TYPE_STRING),
+      new ColumnDescriptor("Last", "Last",
+			   ColumnDescriptor.TYPE_AGREEMENT),
+      new ColumnDescriptor("LastDate", "Last Date",
+			   ColumnDescriptor.TYPE_DATE),
+      new ColumnDescriptor("Highest", "Highest",
+			   ColumnDescriptor.TYPE_AGREEMENT),
+      new ColumnDescriptor("HighestDate", "Highest Date",
+			   ColumnDescriptor.TYPE_DATE),
+      new ColumnDescriptor("LastHint", "Last Hint",
+			   ColumnDescriptor.TYPE_AGREEMENT),
+      new ColumnDescriptor("LastHintDate", "Last Hint Date",
+			   ColumnDescriptor.TYPE_DATE),
+      new ColumnDescriptor("HighestHint", "Highest Hint",
+			   ColumnDescriptor.TYPE_AGREEMENT),
+      new ColumnDescriptor("HighestHintDate", "Highest Hint Date",
+			   ColumnDescriptor.TYPE_DATE)
+      );
+
+    RawPeerAgreement(LockssDaemon theDaemon) {
+      super(theDaemon);
+    }
+
+    protected String getTitle(ArchivalUnit au) {
+      return "Peer Agreements for AU: " + au.getName();
+    }
+    protected void populateTable(StatusTable table, ArchivalUnit au)
+        throws StatusService.NoSuchTableException {
+      IdentityManager idMgr = theDaemon.getIdentityManager();
+      table.setTitle(getTitle(au));
+      int totalPeers = 0;
+      if (!table.getOptions().get(StatusTable.OPTION_NO_ROWS)) {
+	table.setColumnDescriptors(columnDescriptors);
+	table.setDefaultSortRules(ListUtil.list(new StatusTable.SortRule("Box",
+									 true),
+						new StatusTable.SortRule("Type",
+									 true)));
+	List rowL = new ArrayList();
+	for (Map.Entry<PeerIdentity,Map<AgreementType,PeerAgreement>> ent :
+	       buildCacheStats(au, idMgr).entrySet()) {
+	  PeerIdentity peer = ent.getKey();
+	  for (AgreementType type : AgreementType.primaryTypes()) {
+	    Map<AgreementType,PeerAgreement> typeMap = ent.getValue();
+	    PeerAgreement pa = typeMap.get(type);
+	    PeerAgreement pahint = typeMap.get(AgreementType.getHintType(type));
+	    if (pa != null || pahint != null) {
+	      rowL.add(makeRow(peer, type, pa, pahint));
+	    }
+	  }
+	}
+	table.setRows(rowL);
+      }
+    }
+
+    public Map<PeerIdentity,Map<AgreementType,PeerAgreement>>
+	  buildCacheStats(ArchivalUnit au, IdentityManager idMgr) {
+
+      Map<PeerIdentity,Map<AgreementType,PeerAgreement>> res =
+	new HashMap<PeerIdentity,Map<AgreementType,PeerAgreement>>();
+      for (AgreementType type : AgreementType.allTypes()) {
+	Map<PeerIdentity, PeerAgreement> peerMap =
+	  idMgr.getAgreements(au, type);
+	if (peerMap != null) {
+	  for (Map.Entry<PeerIdentity,PeerAgreement> ent : peerMap.entrySet()) {
+	    Map<AgreementType,PeerAgreement> typeMap = res.get(ent.getKey());
+	    if (typeMap == null) {
+	      typeMap =
+		new EnumMap<AgreementType,PeerAgreement>(AgreementType.class);
+	      res.put(ent.getKey(), typeMap);
+	    }
+	    typeMap.put(type, ent.getValue());
+	  }
+	}
+      }
+      return res;
+    }
+
+    public Map makeRow(PeerIdentity peerId, AgreementType type,
+		       PeerAgreement pa, PeerAgreement pahint) {
+      Map row = super.makeRow(peerId);
+      row.put("Type", type.toString());
+      if (pa != null) {
+	if (pa.getPercentAgreement() >= 0.0) {
+	  row.put("Last", new Float(pa.getPercentAgreement()));
+	  row.put("LastDate", pa.getPercentAgreementTime());
+	}
+	if (pa.getHighestPercentAgreement() >= 0.0) {
+	  row.put("Highest", new Float(pa.getHighestPercentAgreement()));
+	  row.put("HighestDate", pa.getHighestPercentAgreementTime());
+	}
+      }
+      if (pahint != null) {
+	if (pahint.getPercentAgreement() >= 0.0) {
+	  row.put("LastHint", new Float(pahint.getPercentAgreement()));
+	  row.put("LastHintDate", pahint.getPercentAgreementTime());
+	}
+	if (pahint.getHighestPercentAgreement() >= 0.0) {
+	  row.put("HighestHint",
+		  new Float(pahint.getHighestPercentAgreement()));
+	  row.put("HighestHintDate",
+		  pahint.getHighestPercentAgreementTime());
+	}
+      }
+      return row;
+    }
+
+    // utility method for making a Reference
+    public static StatusTable.Reference makeAuRef(Object value, String key) {
+      return new StatusTable.Reference(value, PEER_AGREEMENT_TABLE_NAME, key);
     }
   }
 
