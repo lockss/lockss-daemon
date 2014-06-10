@@ -181,20 +181,19 @@
       comment[publisher] = Universidade Estadual de Campinas
       param[base_url] = http://www.rbhe.sbhe.org.br/
       param[journal_id] = rbhe
-      comment[notReady] = can't fetch permission page
 
-      au < notReady ; 2001 ; 1 ; Revista Brasileira de História da Educação - RBHE Volume 2001 ; 2001 >
-      au < notReady ; 2002 ; 2 ; Revista Brasileira de História da Educação - RBHE Volume 2002 ; 2002 >
-      au < notReady ; 2003 ; 3 ; Revista Brasileira de História da Educação - RBHE Volume 2003 ; 2003 >
-      au < notReady ; 2004 ; 4 ; Revista Brasileira de História da Educação - RBHE Volume 2004 ; 2004 >
-      au < notReady ; 2005 ; 5 ; Revista Brasileira de História da Educação - RBHE Volume 2005 ; 2005 >
-      au < notReady ; 2006 ; 6 ; Revista Brasileira de História da Educação - RBHE Volume 2006 ; 2006 >
-      au < notReady ; 2007 ; 7 ; Revista Brasileira de História da Educação - RBHE Volume 2007 ; 2007 >
-      au < notReady ; 2008 ; 8 ; Revista Brasileira de História da Educação - RBHE Volume 2008 ; 2008 >
-      au < notReady ; 2009 ; 9 ; Revista Brasileira de História da Educação - RBHE Volume 2009 ; 2009 >
-      au < notReady ; 2010 ; 10 ; Revista Brasileira de História da Educação - RBHE Volume 2010 ; 2010 >
-      au < notReady ; 2011 ; 11 ; Revista Brasileira de História da Educação - RBHE Volume 2011 ; 2011 >
-      au < notReady ; 2012 ; 12 ; Revista Brasileira de História da Educação - RBHE Volume 2012 ; 2012 >
+      au < manifest ; 2001 ; 1 ; Revista Brasileira de História da Educação - RBHE Volume 2001 ; 2001 >
+      au < manifest ; 2002 ; 2 ; Revista Brasileira de História da Educação - RBHE Volume 2002 ; 2002 >
+      au < manifest ; 2003 ; 3 ; Revista Brasileira de História da Educação - RBHE Volume 2003 ; 2003 >
+      au < manifest ; 2004 ; 4 ; Revista Brasileira de História da Educação - RBHE Volume 2004 ; 2004 >
+      au < manifest ; 2005 ; 5 ; Revista Brasileira de História da Educação - RBHE Volume 2005 ; 2005 >
+      au < manifest ; 2006 ; 6 ; Revista Brasileira de História da Educação - RBHE Volume 2006 ; 2006 >
+      au < manifest ; 2007 ; 7 ; Revista Brasileira de História da Educação - RBHE Volume 2007 ; 2007 >
+      au < manifest ; 2008 ; 8 ; Revista Brasileira de História da Educação - RBHE Volume 2008 ; 2008 >
+      au < manifest ; 2009 ; 9 ; Revista Brasileira de História da Educação - RBHE Volume 2009 ; 2009 >
+      au < manifest ; 2010 ; 10 ; Revista Brasileira de História da Educação - RBHE Volume 2010 ; 2010 >
+      au < manifest ; 2011 ; 11 ; Revista Brasileira de História da Educação - RBHE Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 12 ; Revista Brasileira de História da Educação - RBHE Volume 2012 ; 2012 >
       au < expected ; 2013 ; 13 ; Revista Brasileira de História da Educação - RBHE Volume 2013 ; 2013 >
       au < expected ; 2014 ; 14 ; Revista Brasileira de História da Educação - RBHE Volume 2014 ; 2014 >
 
