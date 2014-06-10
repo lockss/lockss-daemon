@@ -1001,7 +1001,13 @@ class SimpleV3SymmetricTestCase( V3TestCases ):
         self.local_configuration = { "org.lockss.poll.v3.allSymmetricPolls": True }
         self.simulated_AU_parameters = { 'numFiles': 3 }
         self.symmetric = True
-        self.expected_voter_agreement = '100.00'
+
+        # XXX Symmetric agreement is reported separately.  This used to not
+        # fail only because _verify_voter_agreements succeeds vacuously if
+        # there are no entries in the POR agreement table.  Now that POR
+        # hints are recorded correctly, the POR table is no longer empty,
+        # but has only a hint.  Need to extends this to check the
+        # self.expected_voter_agreement = '100.00'
 
     def _damage_AU( self ):
         return [ ]
