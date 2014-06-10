@@ -1,5 +1,5 @@
 /*
- * $Id: JstorPdfFilterFactory.java,v 1.1 2014-06-06 18:37:37 alexandraohlson Exp $
+ * $Id: JstorPdfFilterFactory.java,v 1.2 2014-06-10 20:29:06 thib_gc Exp $
  */
 
 /*
@@ -32,12 +32,15 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.jstor;
 
+import java.util.List;
+
 import org.lockss.filter.pdf.*;
 import org.lockss.pdf.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.Logger;
 
 public class JstorPdfFilterFactory extends ExtractingPdfFilterFactory {
+  
   private static final Logger logger = Logger.getLogger(JstorPdfFilterFactory.class);
 
 /*
@@ -60,42 +63,78 @@ public class JstorPdfFilterFactory extends ExtractingPdfFilterFactory {
  *6545    [operator:Tj]
  *6546    [operator:ET]
  */
-  public static class SimpleDownloadedFromWorkerTransform
-      extends PdfTokenStreamWorker
-      implements PdfTransform<PdfTokenStream> {
+  public static class SimpleDownloadedFromWorkerTransform extends PdfTokenStreamWorker {
 
     public static final String DOWNLOADED_FROM = "This content downloaded from ";
 
     private boolean result;
+    
+    private int beginIndex;
+    
+    private int endIndex;
+    
+    private int state;
     
     public SimpleDownloadedFromWorkerTransform() {
       super(Direction.BACKWARD);
     }
     
     @Override
-    public void operatorCallback()
-        throws PdfException {
-      // FIXME 1.60
-      if (   PdfOpcodes.SHOW_TEXT.equals(getOpcode())
-          && getTokens().get(getIndex() - 1).getString().startsWith(DOWNLOADED_FROM)) {
-        result = true;
-        stop();
-        getTokens().subList(getIndex() - 1, getIndex() + 1).clear();
+    public void operatorCallback() throws PdfException {
+      if (logger.isDebug3()) {
+        logger.debug3("SimpleDownloadedFromWorkerTransform: initial: " + state);
+        logger.debug3("SimpleDownloadedFromWorkerTransform: index: " + getIndex());
+        logger.debug3("SimpleDownloadedFromWorkerTransform: operator: " + getOpcode());
       }
+
+      switch (state) {
+
+        case 0: {
+          if (isEndTextObject()) {
+            endIndex = getIndex();
+            ++state;
+          }
+          else {
+            stop();
+          }
+        } break;
+        
+        case 1: {
+          if (isShowTextStartsWith(DOWNLOADED_FROM)) {
+            ++state;
+          }
+          else if (isBeginTextObject()) {
+            stop();
+          }
+        } break;
+        
+        case 2: {
+          if (isBeginTextObject()) {
+            beginIndex = getIndex();
+            result = true;
+            stop();
+          }
+        } break;
+        
+        default: {
+          throw new PdfException("Invalid state in SimpleDownloadedFromWorkerTransform: " + state);
+        }
+        
+      }
+      
+      if (logger.isDebug3()) {
+        logger.debug3("SimpleDownloadedFromWorkerTransform: final: " + state);
+        logger.debug3("SimpleDownloadedFromWorkerTransform: result: " + result);
+      }
+      
     }
     
     @Override
     public void setUp() throws PdfException {
       super.setUp();
       result = false;
+      state = 0;
     }
-    
-    @Override
-    public void transform(ArchivalUnit au, PdfTokenStream pdfTokenStream) throws PdfException {
-      if (result) {
-        pdfTokenStream.setTokens(getTokens());
-      }
-    }  
     
   }  
 
@@ -103,22 +142,25 @@ public class JstorPdfFilterFactory extends ExtractingPdfFilterFactory {
   public void transform(ArchivalUnit au,
                         PdfDocument pdfDocument)
       throws PdfException {
+    pdfDocument.unsetModificationDate();
+    pdfDocument.unsetMetadata();
+    PdfUtil.normalizeTrailerId(pdfDocument);
+
     SimpleDownloadedFromWorkerTransform worker = new SimpleDownloadedFromWorkerTransform();
     boolean firstPage = true;
     for (PdfPage pdfPage : pdfDocument.getPages()) {
       PdfTokenStream pdfTokenStream = pdfPage.getPageTokenStream();
       worker.process(pdfTokenStream);
       if (firstPage && !worker.result) {
-        return; // This PDF needs no processing
+        return; // This PDF needs no further processing
       }
       if (worker.result) {
-        worker.transform(au, pdfTokenStream);
+        List<PdfToken> tokens = pdfTokenStream.getTokens();
+        tokens.subList(worker.beginIndex, worker.endIndex + 1).clear(); // The +1 is normal substring/sublist indexing (upper bound is exclusive)
+        pdfTokenStream.setTokens(tokens);
       }
       firstPage = false;
     }
-    pdfDocument.unsetModificationDate();
-    pdfDocument.unsetMetadata();
-    PdfUtil.normalizeTrailerId(pdfDocument);
   }
 
 }
