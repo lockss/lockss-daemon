@@ -1,5 +1,5 @@
 /*
- * $Id: AuHelper.java,v 1.1.4.2 2014-05-29 18:26:24 fergaloy-sf Exp $
+ * $Id: AuHelper.java,v 1.1.4.3 2014-06-10 00:52:51 fergaloy-sf Exp $
  */
 
 /*
@@ -29,11 +29,6 @@
  in this Software without prior written authorization from Stanford University.
 
  */
-
-/**
- * Helper of the DaemonStatus web service implementation of Archival Unit
- * queries.
- */
 package org.lockss.ws.status;
 
 import java.text.DecimalFormat;
@@ -62,6 +57,10 @@ import org.lockss.ws.entities.AuWsResult;
 import org.lockss.ws.entities.LockssWebServicesFault;
 import org.lockss.ws.entities.LockssWebServicesFaultInfo;
 
+/**
+ * Helper of the DaemonStatus web service implementation of Archival Unit
+ * queries.
+ */
 public class AuHelper {
   /**
    * The fully-qualified name of the class of the objects used as source in a
@@ -108,6 +107,7 @@ public class AuHelper {
   static String NEW_CONTENT_CRAWL_URLS = "newContentCrawlUrls";
   static String URL_STEMS = "urlStems";
   static String IS_BULK_CONTENT = "isBulkContent";
+  static String PEER_AGREEMENTS = "peerAgreements";
 
   /**
    * All the property names used in Archival Unit queries.
@@ -146,6 +146,7 @@ public class AuHelper {
       add(NEW_CONTENT_CRAWL_URLS);
       add(URL_STEMS);
       add(IS_BULK_CONTENT);
+      add(PEER_AGREEMENTS);
     }
   };
 
@@ -725,6 +726,16 @@ public class AuHelper {
       }
 
       builder.append("isBulkContent=").append(result.getIsBulkContent());
+    }
+
+    if (result.getPeerAgreements() != null) {
+      if (!isFirst) {
+	builder.append(", ");
+      } else {
+	isFirst = false;
+      }
+
+      builder.append("peerAgreements=").append(result.getPeerAgreements());
     }
 
     return builder.append("]").toString();
