@@ -1,5 +1,5 @@
 /*
- * $Id: AgreementType.java,v 1.1.12.1 2014-06-10 00:52:51 fergaloy-sf Exp $
+ * $Id: AgreementType.java,v 1.1.12.2 2014-06-10 08:37:29 tlipkis Exp $
  */
 
 /*
@@ -73,5 +73,24 @@ public enum AgreementType {
   SYMMETRIC_POR_HINT,
   /** The hint given a poller by a voter after a symmetric POP
    * poll. Recorded by poller. */
-  SYMMETRIC_POP_HINT
+  SYMMETRIC_POP_HINT;
+
+  public static AgreementType[] allTypes() {
+    return AgreementType.values();
+  }
+
+  public static AgreementType[] primaryTypes() {
+    return new AgreementType[] { POR, POP, SYMMETRIC_POR, SYMMETRIC_POP };
+  }
+
+  public static AgreementType getHintType(AgreementType type) {
+    switch (type) {
+    case POR: return AgreementType.POR_HINT;
+    case POP: return AgreementType.POP_HINT;
+    case SYMMETRIC_POR: return AgreementType.SYMMETRIC_POR_HINT;
+    case SYMMETRIC_POP: return AgreementType.SYMMETRIC_POP_HINT;
+    }
+    return type;
+  }
+
 }
