@@ -86,10 +86,9 @@
       comment[publisher] = Centro Universitário Lasalle Canoas-RS
       param[base_url] = http://www.revistas.unilasalle.edu.br/
       param[journal_id] = Educacao
-      comment[notReady] = no substance
 
       au < released ; 2007 ; 12 ; Educação, Ciência e Cultura Volume 12 ; 2007 ; >
-      au < notReady ; 2008 ; 13 ; Educação, Ciência e Cultura Volume 13 ; 2008 ; >
+      au < notReady ; 2008 ; 13 ; Educação, Ciência e Cultura Volume 13 ; 2008 ; no articles >
       au < released ; 2009 ; 14 ; Educação, Ciência e Cultura Volume 14 ; 2009 ; >
       au < released ; 2010 ; 15 ; Educação, Ciência e Cultura Volume 15 ; 2010 ; >
       au < released ; 2011 ; 16 ; Educação, Ciência e Cultura Volume 16 ; 2011 ; >
