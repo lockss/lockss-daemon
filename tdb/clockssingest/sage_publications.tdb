@@ -39474,6 +39474,25 @@
 
     }
 
+  {
+  
+    title <
+      name = ASN NEURO ;
+      eissn = 1759-0914 
+    >
+
+    pluginSuffix = ClockssHighWirePressH20Plugin
+    param[base_url] = http://asn.sagepub.com/
+
+    au < exists ; exists ; 2009 ; ASN NEURO Volume 1 ; 1 ; >
+    au < exists ; exists ; 2010 ; ASN NEURO Volume 2 ; 2 ; >
+    au < exists ; exists ; 2011 ; ASN NEURO Volume 3 ; 3 ; >
+    au < exists ; exists ; 2012 ; ASN NEURO Volume 4 ; 4 ; >
+    au < exists ; exists ; 2013 ; ASN NEURO Volume 5 ; 5 ; >
+    au < expected ; exists ; 2014 ; ASN NEURO Volume 6 ; 6 ; >
+    
+    }
+    
     {
 
       title <
