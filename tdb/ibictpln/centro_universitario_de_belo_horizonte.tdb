@@ -36,12 +36,11 @@
       comment[publisher] = Centro Universitário de Belo Horizonte
       param[base_url] = http://revistas.unibh.br/
       param[journal_id] = dcet
-      comment[notReady] = One machine missed a few pages
 
       au < released ; 2008 ; 1 ; e-Xacta Volume 2008 ; 2008 >
       au < released ; 2009 ; 2 ; e-Xacta Volume 2009 ; 2009 >
       au < released ; 2010 ; 3 ; e-Xacta Volume 2010 ; 2010 >
-      au < notReady ; 2011 ; 4 ; e-Xacta Volume 2011 ; 2011 >
+      au < ready ; 2011 ; 4 ; e-Xacta Volume 2011 ; 2011 >
       au < released ; 2012 ; 5 ; e-Xacta Volume 2012 ; 2012 >
       au < manifest ; 2013 ; 6 ; e-Xacta Volume 2013 ; 2013 >
 
@@ -77,13 +76,12 @@
       comment[publisher] = Centro Universitário de Belo Horizonte
       param[base_url] = http://revistas.unibh.br/
       param[journal_id] = dcjpg
-      comment[notReady] = One machine missed a few pages and some whitespace issues perhaps
 
       au < released ; 2008 ; 1 ; e-Cevitas Volume 2008 ; 2008 >
       au < released ; 2009 ; 2 ; e-Cevitas Volume 2009 ; 2009 >
       au < released ; 2010 ; 3 ; e-Cevitas Volume 2010 ; 2010 >
       au < released ; 2011 ; 4 ; e-Cevitas Volume 2011 ; 2011 >
-      au < notReady ; 2012 ; 5 ; e-Cevitas Volume 2012 ; 2012 >
+      au < ready ; 2012 ; 5 ; e-Cevitas Volume 2012 ; 2012 >
       au < manifest ; 2013 ; 6 ; e-Cevitas Volume 2013 ; 2013 >
 
   }
