@@ -42948,6 +42948,26 @@ comment[mpj] = now published by Brill
     }
 
     {
+  
+      title <
+        name = ASN NEURO ;
+        eissn = 1759-0914 
+      >
+
+      pluginSuffix = HighWirePressH20Plugin
+      param[base_url] = http://asn.sagepub.com/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2009 ; ASN NEURO Volume 1 ; 001 >
+      au < exists ; 2010 ; ASN NEURO Volume 2 ; 002 >
+      au < exists ; 2011 ; ASN NEURO Volume 3 ; 003 >
+      au < exists ; 2012 ; ASN NEURO Volume 4 ; 004 >
+      au < exists ; 2013 ; ASN NEURO Volume 5 ; 005 >
+      au < expected ; 2014 ; ASN NEURO Volume 6 ; 006 >
+    
+    }
+    
+    {
 
       title <
         name = Australian Journal of Career Development ;

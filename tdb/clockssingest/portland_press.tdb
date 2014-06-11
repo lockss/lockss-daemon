@@ -11,25 +11,6 @@
   
   comment[platform] = moving to HighWire Open in mid-2015
 
-  {
-  
-    title <
-      name = ASN NEURO ;
-      eissn = 1759-0914 
-    >
-
-    param[base_url] = http://www.asnneuro.org/
-    param[journal_id] = an
-
-    au < exists ; exists ; 2009 ; ASN NEURO Volume 1 ; 001 >
-    au < exists ; exists ; 2010 ; ASN NEURO Volume 2 ; 002 >
-    au < exists ; exists ; 2011 ; ASN NEURO Volume 3 ; 003 >
-    au < exists ; exists ; 2012 ; ASN NEURO Volume 4 ; 004 >
-    au < exists ; exists ; 2013 ; ASN NEURO Volume 5 ; 005 >
-    au < expected ; exists ; 2014 ; ASN NEURO Volume 6 ; 006 >
-    
-    }
-    
     {
   
     title <
