@@ -55,12 +55,12 @@
       param[journal_id] = sistema
       comment[notReady] = fetch error
 
-      au < notReady ; 1976 ; 1 ; Revista Caatinga Volume 1976 ; 1976 >
-      au < notReady ; 1977 ; 2 ; Revista Caatinga Volume 1977 ; 1977 >
+      au < ready ; 1976 ; 1 ; Revista Caatinga Volume 1976 ; 1976 >
+      au < ready ; 1977 ; 2 ; Revista Caatinga Volume 1977 ; 1977 >
       au < released ; 1978 ; 3 ; Revista Caatinga Volume 1978 ; 1978 >
-      au < notReady ; 1984 ; 9 ; Revista Caatinga Volume 1984 ; 1984 >
-      au < notReady ; 1985 ; 10 ; Revista Caatinga Volume 1985 ; 1985 >
-      au < notReady ; 1989 ; 14 ; Revista Caatinga Volume 1989 ; 1989 >
+      au < ready ; 1984 ; 9 ; Revista Caatinga Volume 1984 ; 1984 >
+      au < ready ; 1985 ; 10 ; Revista Caatinga Volume 1985 ; 1985 >
+      au < ready ; 1989 ; 14 ; Revista Caatinga Volume 1989 ; 1989 >
       au < released ; 1990 ; 15 ; Revista Caatinga Volume 1990 ; 1990 >
       au < notReady ; 1994 ; 19 ; Revista Caatinga Volume 1994 ; 1994 >
       au < notReady ; 1996 ; 21 ; Revista Caatinga Volume 1996 ; 1996 >
