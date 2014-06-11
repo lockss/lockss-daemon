@@ -20,7 +20,7 @@
       comment[issn] = missing
     
       au < testing ; exists ; 2013 ; Challenges in Sustainability Volume 1 ; 1 ; 2013 >
-      au < testing ; exists ; 2014 ; Challenges in Sustainability Volume 2 ; 2 ; 2014 >
+      au < manifest ; exists ; 2014 ; Challenges in Sustainability Volume 2 ; 2 ; 2014 >
     
   }
 
@@ -32,7 +32,7 @@
 
       param[journal_id] = journalofhumansecurity
 
-      au < manifest ; exists ; 2013 ; Journal of Human Security Volume 9 ; 9 ; 2013 >
+      au < testing ; exists ; 2013 ; Journal of Human Security Volume 9 ; 9 ; 2013 >
       au < manifest ; exists ; 2014 ; Journal of Human Security Volume 10 ; 10 ; 2014 >
 
   }
@@ -58,7 +58,7 @@
       comment[issn] = missing
       comment[publisher] = as of 2014 moved to another publisher
 
-      au < manifest ; exists ; 2013 ; Media and Communication Volume 1 ; 1 ; 2013 >
+      au < testing ; exists ; 2013 ; Media and Communication Volume 1 ; 1 ; 2013 >
 
   }
 
@@ -71,7 +71,7 @@
       comment[issn] = missing
       comment[publisher] = as of 2014 moved to another publisher
 
-      au < manifest ; exists ; 2013 ; Politics and Governance Volume 1 ; 1 ; 2013 >
+      au < testing ; exists ; 2013 ; Politics and Governance Volume 1 ; 1 ; 2013 >
 
   }
 
@@ -84,7 +84,7 @@
       comment[issn] = missing
       comment[publisher] = as of 2014 moved to another publisher
 
-      au < manifest ; exists ; 2013 ; Social Inclusion Volume 1 ; 1 ; 2013 >
+      au < testing ; exists ; 2013 ; Social Inclusion Volume 1 ; 1 ; 2013 >
 
   }
 }
