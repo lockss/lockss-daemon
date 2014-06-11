@@ -175,7 +175,7 @@
       param[base_url] = http://periodicos.uesb.br/
       param[journal_id] = rbba
 
-      au < ready ; 2012 ; 1 ; Revista Binacional Brasil-Argentina Volume 1 ; 2012 >
+      au < releasing ; 2012 ; 1 ; Revista Binacional Brasil-Argentina Volume 1 ; 2012 >
       au < expected ; 2013 ; 2 ; Revista Binacional Brasil-Argentina Volume 2 ; 2013 >
 
   }
