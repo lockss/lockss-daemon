@@ -1,5 +1,5 @@
 /*
- * $Id: TestSilverchairHtmlLinkExtractor.java,v 1.2 2014-06-06 18:46:37 thib_gc Exp $
+ * $Id: TestSilverchairHtmlLinkExtractor.java,v 1.3 2014-06-11 17:37:03 thib_gc Exp $
  */
 
 /*
@@ -48,7 +48,7 @@ public class TestSilverchairHtmlLinkExtractor extends LockssTestCase {
         "<img data-original=\"quxdo.jpg\" />\n";
     String srcUrl = "http://www.example.com/";
     LinkExtractor le = new SilverchairHtmlLinkExtractorFactory().createLinkExtractor(Constants.MIME_TYPE_HTML);
-    final Set<String> emitted = new HashSet<String>();
+    final List<String> emitted = new ArrayList<String>();
     le.extractUrls(null,
                    new StringInputStream(input),
                    Constants.ENCODING_UTF_8,
@@ -66,6 +66,30 @@ public class TestSilverchairHtmlLinkExtractor extends LockssTestCase {
     assertContains(emitted, srcUrl + "bardo.jpg");
     assertContains(emitted, srcUrl + "bazsrc.jpg");
     assertContains(emitted, srcUrl + "quxdo.jpg");
+  }
+  
+  public void testCombres() throws Exception {
+    String input =
+        "<link href=\"//example.com/combres.axd/issue-css/123333/\" />\n" +
+        "<script src=\"//example.com/combres.axd/ga-custom-js/456666/\" />\n";
+    String srcUrl = "http://journal.example.com/";
+    LinkExtractor le = new SilverchairHtmlLinkExtractorFactory().createLinkExtractor(Constants.MIME_TYPE_HTML);
+    final List<String> emitted = new ArrayList<String>();
+    le.extractUrls(null,
+                   new StringInputStream(input),
+                   Constants.ENCODING_UTF_8,
+                   srcUrl,
+                   new LinkExtractor.Callback() {
+                       @Override
+                       public void foundLink(String url) {
+                         emitted.add(url);
+                       }
+                   });
+    assertEquals(4, emitted.size());
+    assertContains(emitted, srcUrl + "combres.axd/issue-css/123333/");
+    assertContains(emitted, "http://example.com/" + "combres.axd/issue-css/123333/");
+    assertContains(emitted, srcUrl + "combres.axd/ga-custom-js/456666/");
+    assertContains(emitted, "http://example.com/" + "combres.axd/ga-custom-js/456666/");
   }
   
 }

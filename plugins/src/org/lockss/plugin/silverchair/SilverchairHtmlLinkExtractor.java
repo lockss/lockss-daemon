@@ -1,5 +1,5 @@
 /*
- * $Id: SilverchairHtmlLinkExtractor.java,v 1.5 2014-06-06 18:46:37 thib_gc Exp $
+ * $Id: SilverchairHtmlLinkExtractor.java,v 1.6 2014-06-11 17:37:03 thib_gc Exp $
  */
 
 /*
@@ -53,8 +53,12 @@ public class SilverchairHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
       Pattern.compile("/downloadCitation\\.aspx\\?(format=[^&]+)?$",
                       Pattern.CASE_INSENSITIVE);
   
+  protected static final Pattern PATTERN_COMBRES =
+      Pattern.compile("//[^/]+(/combres\\.axd/.*)$",
+                      Pattern.CASE_INSENSITIVE);
+  
   protected static final Pattern PATTERN_JQUERY =
-      Pattern.compile("ajax\\.googleapis\\.com/ajax/libs/jquery/([^/]+)/jquery\\.min\\.js$",
+      Pattern.compile("//ajax\\.googleapis\\.com/ajax/libs/jquery/([^/]+)/jquery\\.min\\.js$",
                       Pattern.CASE_INSENSITIVE);
   
   @Override
@@ -108,6 +112,23 @@ public class SilverchairHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
       return super.extractLinkFromTag(link, au, cb);
     }
     
+    else if ((ch == 'l' || ch == 'L') && beginsWithTag(link, LINKTAG)) {
+      String href = getAttributeValue(HREF, link);
+      if (href == null) {
+        href = "";
+      }
+      Matcher hrefMat = PATTERN_COMBRES.matcher(href);
+      if (hrefMat.find()) {
+        logger.debug3("Found target Combres stylesheet URL");
+        String url = hrefMat.group(1);
+        logger.debug3(String.format("Generated %s", url));
+        if (baseUrl == null) { baseUrl = new URL(srcUrl); } // Copycat of parseLink()
+        emit(cb, resolveUri(baseUrl, hrefMat.group(1)));
+      }
+
+      return super.extractLinkFromTag(link, au, cb);
+    }
+    
     else if ((ch == 's' || ch == 'S') && beginsWithTag(link, SCRIPTTAG)) {
       String src = getAttributeValue(SRC, link);
       if (src == null) {
@@ -115,6 +136,16 @@ public class SilverchairHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
       }
       Matcher srcMat = null;
       
+      srcMat = PATTERN_COMBRES.matcher(src);
+      if (srcMat.find()) {
+        logger.debug3("Found target Combres script URL");
+        String url = srcMat.group(1);
+        logger.debug3(String.format("Generated %s", url));
+        if (baseUrl == null) { baseUrl = new URL(srcUrl); } // Copycat of parseLink()
+        emit(cb, resolveUri(baseUrl, srcMat.group(1)));
+        return super.extractLinkFromTag(link, au, cb);
+      }
+
       srcMat = PATTERN_JQUERY.matcher(src);
       if (srcMat.find()) {
         logger.debug3("Found target JQuery URL");
