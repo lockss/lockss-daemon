@@ -1002,12 +1002,7 @@ class SimpleV3SymmetricTestCase( V3TestCases ):
         self.simulated_AU_parameters = { 'numFiles': 3 }
         self.symmetric = True
 
-        # XXX Symmetric agreement is reported separately.  This used to not
-        # fail only because _verify_voter_agreements succeeds vacuously if
-        # there are no entries in the POR agreement table.  Now that POR
-        # hints are recorded correctly, the POR table is no longer empty,
-        # but has only a hint.  Need to extends this to check the
-        # self.expected_voter_agreement = '100.00'
+        self.expected_voter_agreement = '100.00'
 
     def _damage_AU( self ):
         return [ ]
@@ -1019,6 +1014,8 @@ class NoQuorumSymmetricV3TestCase( SimpleV3SymmetricTestCase ):
         SimpleV3SymmetricTestCase.__init__( self, methodName )
         self.local_configuration[ 'org.lockss.poll.v3.quorum' ] = 30
         self.expected_agreement = '100.00'
+        # Even though no quorum, voters will tally symmetric vote
+        self.expected_voter_agreement = '100.00'
 
     def _await_repair( self, nodes ):
         log.info( 'Waiting for V3 poll to report no quorum...' )
