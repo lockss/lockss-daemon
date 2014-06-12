@@ -50,14 +50,18 @@ public class JstorHtmlCrawlFilterFactory implements FilterFactory {
                                                String encoding)
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
-    // References
-    HtmlNodeFilters.tagWithAttribute("div", "id", "references"),
     // Articles referencing this article
     HtmlNodeFilters.tagWithAttribute("div", "id", "itemsCiting"),
     //right column 
     HtmlNodeFilters.tagWithAttribute("div", "class", "rightCol myYahoo"),
+    // next/prev can redirect if a "full" format points to one without "full" option
+    HtmlNodeFilters.tagWithAttribute("div", "id", "issueNav"),
+    // References
+    HtmlNodeFilters.tagWithAttribute("div", "id", "references"),
+    //  list of references - crawl filter only 
+    HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "citeList"),
 
-    // we don't go to html pages but when we do, watch for corrigendum, errata which 
+    // In limited cases we go to  html pages - watch for corrigendum, errata which 
     // can cross over issues.eg
     // http://www.jstor.org/stable/10.1525/ncm.2011.34.issue-3
     // Not all Atypon plugins necessarily need this but MANY do and it is

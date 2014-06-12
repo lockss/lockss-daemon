@@ -1,7 +1,7 @@
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -69,7 +69,11 @@ public class JstorHtmlHashFilterFactory implements FilterFactory {
        */
       // Articles referencing this article
       HtmlNodeFilters.tagWithAttribute("div", "id", "itemsCiting"),
-      
+      // Right column containing related article and ads
+      HtmlNodeFilters.tagWithAttribute("div", "class", "rightCol myYahoo"),
+      // these links look acceptable but can redirect (eg, if "full" doesn't exist of all articles)
+      HtmlNodeFilters.tagWithAttribute("div", "id", "issueNav"),
+     
       /*
        * Hash filter
        */
@@ -77,18 +81,22 @@ public class JstorHtmlHashFilterFactory implements FilterFactory {
       new TagNameFilter("script"),
       //filter out comments
       HtmlNodeFilters.commentWithRegex(".*"),
-      // Right column containing related article and ads
-      HtmlNodeFilters.tagWithAttribute("div", "class", "rightCol myYahoo"),
-      
+      // Document header
+      new TagNameFilter("head"),
+      // Header of toc page
+      HtmlNodeFilters.tagWithAttribute("div", "class", "head globalContainer"),
       // Containing copyright
       HtmlNodeFilters.tagWithAttribute("div", "class", "footer"),
       // Containing copyright
       HtmlNodeFilters.tagWithAttribute("div", "class", "foot"),
       // Containing name information
       HtmlNodeFilters.tagWithAttribute("div", "class", "banner"),
-      // Containing top head information 
-      HtmlNodeFilters.tagWithAttribute("div", "class", "head globalContainer"),
+      HtmlNodeFilters.tagWithAttribute("div",  "class", "infoBox"),
+      // author info may get global update after the article
+      HtmlNodeFilters.tagWithAttribute("div",  "class", "articleBody_author"),
+      HtmlNodeFilters.tagWithAttribute("div", "id", "articleFoot"),
       
+      new TagNameFilter("noscript"),
       HtmlNodeFilters.tagWithAttribute("div", "class", "marketingLinks"),
       HtmlNodeFilters.tagWithAttribute("div", "id", "journalLinks"),
       HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "issueTools"),
@@ -101,7 +109,32 @@ public class JstorHtmlHashFilterFactory implements FilterFactory {
       
     };
     
-    return new HtmlFilterInputStream(in, HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    HtmlTransform xform = new HtmlTransform() {
+      //; The "id" attribute of <span> tags can have a gensym
+        @Override
+        public NodeList transform(NodeList nodeList) throws IOException {
+          try {
+            nodeList.visitAllNodesWith(new NodeVisitor() {
+              @Override
+              //the "rel" attribute on link tags are using variable named values
+              public void visitTag(Tag tag) {
+                if (tag instanceof LinkTag && tag.getAttribute("rel") != null) {
+                  tag.removeAttribute("rel");
+                }
+              }
+            });
+          } catch (ParserException pe) {
+            IOException ioe = new IOException();
+            ioe.initCause(pe);
+            throw ioe;
+          }
+          return nodeList;
+        }
+    };   
+    
+    //return new HtmlFilterInputStream(in, HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    return new HtmlFilterInputStream(in, encoding,
+        new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters)), xform));
   }
   
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: JstorPdfFilterFactory.java,v 1.2 2014-06-10 20:29:06 thib_gc Exp $
+ * $Id: JstorPdfFilterFactory.java,v 1.3 2014-06-12 21:00:50 alexandraohlson Exp $
  */
 
 /*
@@ -62,6 +62,11 @@ public class JstorPdfFilterFactory extends ExtractingPdfFilterFactory {
  *6544    [string:"This content downloaded from 171.66.236.16 on Tue, 3 Jun 2014 14:34:21 PM"]
  *6545    [operator:Tj]
  *6546    [operator:ET]
+ *  may or may not be the final BT-ET chunk, eg may have
+ *....two additional similar chunks for "All use subject to " and "JSTOR terms and conditions"
+ *...and page ends with...
+ *6599    [operator:Q]
+ *6600    [operator:Q]
  */
   public static class SimpleDownloadedFromWorkerTransform extends PdfTokenStreamWorker {
 
@@ -75,6 +80,7 @@ public class JstorPdfFilterFactory extends ExtractingPdfFilterFactory {
     
     private int state;
     
+    // The footer is close to the bottom of each page
     public SimpleDownloadedFromWorkerTransform() {
       super(Direction.BACKWARD);
     }
@@ -82,9 +88,9 @@ public class JstorPdfFilterFactory extends ExtractingPdfFilterFactory {
     @Override
     public void operatorCallback() throws PdfException {
       if (logger.isDebug3()) {
-        logger.debug3("SimpleDownloadedFromWorkerTransform: initial: " + state);
-        logger.debug3("SimpleDownloadedFromWorkerTransform: index: " + getIndex());
-        logger.debug3("SimpleDownloadedFromWorkerTransform: operator: " + getOpcode());
+        logger.debug3("JSWorker: initial: " + state);
+        logger.debug3("JSWorker: index: " + getIndex());
+        logger.debug3("JSWorker: operator: " + getOpcode());
       }
 
       switch (state) {
@@ -93,38 +99,36 @@ public class JstorPdfFilterFactory extends ExtractingPdfFilterFactory {
           if (isEndTextObject()) {
             endIndex = getIndex();
             ++state;
-          }
-          else {
-            stop();
-          }
+          } //If not, just continue looking until you find one.
         } break;
         
-        case 1: {
+        case 1: { // We have found an ET object
           if (isShowTextStartsWith(DOWNLOADED_FROM)) {
-            ++state;
+            ++state; // It's the one we want
           }
-          else if (isBeginTextObject()) {
-            stop();
+          else if (isBeginTextObject()) { // not the BT-ET we were looking for
+             --state; //reset search; keep looking
           }
         } break;
         
         case 2: {
-          if (isBeginTextObject()) {
+          if (isBeginTextObject()) {  // we need to remove this BT-ET chunk
             beginIndex = getIndex();
             result = true;
-            stop();
+            stop(); // found what we needed, stop processing this page
+          } else {
           }
         } break;
         
         default: {
-          throw new PdfException("Invalid state in SimpleDownloadedFromWorkerTransform: " + state);
+          throw new PdfException("Invalid state in JSWorker: " + state);
         }
         
       }
       
       if (logger.isDebug3()) {
-        logger.debug3("SimpleDownloadedFromWorkerTransform: final: " + state);
-        logger.debug3("SimpleDownloadedFromWorkerTransform: result: " + result);
+        logger.debug3("JSWorker: final: " + state);
+        logger.debug3("JSWorker: result: " + result);
       }
       
     }
@@ -156,6 +160,7 @@ public class JstorPdfFilterFactory extends ExtractingPdfFilterFactory {
       }
       if (worker.result) {
         List<PdfToken> tokens = pdfTokenStream.getTokens();
+        logger.debug3("REMOVE FROM: " + worker.beginIndex + " TO: " + worker.endIndex);
         tokens.subList(worker.beginIndex, worker.endIndex + 1).clear(); // The +1 is normal substring/sublist indexing (upper bound is exclusive)
         pdfTokenStream.setTokens(tokens);
       }
