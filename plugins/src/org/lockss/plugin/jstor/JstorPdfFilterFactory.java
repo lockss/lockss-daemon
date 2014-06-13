@@ -1,5 +1,5 @@
 /*
- * $Id: JstorPdfFilterFactory.java,v 1.4 2014-06-13 17:55:08 alexandraohlson Exp $
+ * $Id: JstorPdfFilterFactory.java,v 1.5 2014-06-13 18:01:34 alexandraohlson Exp $
  */
 
 /*
@@ -68,7 +68,7 @@ public class JstorPdfFilterFactory extends ExtractingPdfFilterFactory {
  *6599    [operator:Q]
  *6600    [operator:Q]
  */
-  public static class SimpleDownloadedFromWorkerTransform extends PdfTokenStreamWorker {
+  public static class JstorDownloadedFromWorker extends PdfTokenStreamWorker {
 
     public static final String DOWNLOADED_FROM = "This content downloaded from ";
 
@@ -81,16 +81,16 @@ public class JstorPdfFilterFactory extends ExtractingPdfFilterFactory {
     private int state;
     
     // The footer is close to the bottom of each page
-    public SimpleDownloadedFromWorkerTransform() {
+    public JstorDownloadedFromWorker() {
       super(Direction.BACKWARD);
     }
     
     @Override
     public void operatorCallback() throws PdfException {
       if (logger.isDebug3()) {
-        logger.debug3("Jstor WorkerTransform: initial: " + state);
-        logger.debug3("Jstor WorkerTransform: index: " + getIndex());
-        logger.debug3("Jstor WorkerTransform: operator: " + getOpcode());
+        logger.debug3("Jstor Worker: initial: " + state);
+        logger.debug3("Jstor Worker: index: " + getIndex());
+        logger.debug3("Jstor Worker: operator: " + getOpcode());
       }
 
       switch (state) {
@@ -120,14 +120,14 @@ public class JstorPdfFilterFactory extends ExtractingPdfFilterFactory {
         } break;
         
         default: {
-          throw new PdfException("Invalid state in Jstor WorkerTransform: " + state);
+          throw new PdfException("Invalid state in Jstor Worker: " + state);
         }
         
       }
       
       if (logger.isDebug3()) {
-        logger.debug3("Jstor WorkerTransform: final: " + state);
-        logger.debug3("Jstor WorkerTransform: result: " + result);
+        logger.debug3("Jstor Worker: final: " + state);
+        logger.debug3("Jstor Worker: result: " + result);
       }
       
     }
@@ -149,7 +149,7 @@ public class JstorPdfFilterFactory extends ExtractingPdfFilterFactory {
     pdfDocument.unsetMetadata();
     PdfUtil.normalizeTrailerId(pdfDocument);
 
-    SimpleDownloadedFromWorkerTransform worker = new SimpleDownloadedFromWorkerTransform();
+    JstorDownloadedFromWorker worker = new JstorDownloadedFromWorker();
     boolean firstPage = true;
     for (PdfPage pdfPage : pdfDocument.getPages()) {
       PdfTokenStream pdfTokenStream = pdfPage.getPageTokenStream();
