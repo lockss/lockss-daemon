@@ -462,7 +462,6 @@
       comment[publisher] = Universidade Federal do Rio Grande do Sul
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = debatesdoner
-      comment[notReady] = can't fetch permission pages
 
       au < ready ; 1997 ; 1 ; Debates do NER Volume 1997 ; 1997 ; >
       au < released ; 2001 ; 5 ; Debates do NER Volume 2001 ; 2001 ; >
