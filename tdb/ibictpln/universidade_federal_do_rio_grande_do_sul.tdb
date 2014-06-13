@@ -5,6 +5,8 @@
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
     implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
+    
+    comment[bandwidth] = this publisher has a narrow bandwidth. If AU has "no permission", recrawl.
 
   {
 
@@ -294,10 +296,9 @@
       comment[publisher] = Universidade Federal do Rio Grande do Sul
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = cena
-      comment[notReady] = can't fetch permission pages
 
-      au < notReady ; 2006 ; 1 ; Cena Volume 2006 ; 2006 ; >
-      au < notReady ; 2008 ; 3 ; Cena Volume 2008 ; 2008 ; >
+      au < ready ; 2006 ; 1 ; Cena Volume 2006 ; 2006 ; >
+      au < ready ; 2008 ; 3 ; Cena Volume 2008 ; 2008 ; >
       au < released ; 2009 ; 4 ; Cena Volume 2009 ; 2009 ; >
       au < released ; 2010 ; 5 ; Cena Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 6 ; Cena Volume 2011 ; 2011 ; >
@@ -386,20 +387,19 @@
       comment[publisher] = Universidade Federal do Rio Grande do Sul
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = ConTexto
-      comment[notReady] = can't fetch permission page
 
       au < released ; 2001 ; 1 ; ConTexto Volume 2001 ; 2001 ; >
       au < released ; 2002 ; 2 ; ConTexto Volume 2002 ; 2002 ; >
-      au < notReady ; 2003 ; 3 ; ConTexto Volume 2003 ; 2003 ; >
+      au < ready ; 2003 ; 3 ; ConTexto Volume 2003 ; 2003 ; >
       au < released ; 2004 ; 4 ; ConTexto Volume 2004 ; 2004 ; >
       au < released ; 2005 ; 5 ; ConTexto Volume 2005 ; 2005 ; >
       au < released ; 2006 ; 6 ; ConTexto Volume 2006 ; 2006 ; >
-      au < notReady ; 2007 ; 7 ; ConTexto Volume 2007 ; 2007 ; >
-      au < notReady ; 2008 ; 8 ; ConTexto Volume 2008 ; 2008 ; >
+      au < ready ; 2007 ; 7 ; ConTexto Volume 2007 ; 2007 ; >
+      au < ready ; 2008 ; 8 ; ConTexto Volume 2008 ; 2008 ; >
       au < released ; 2009 ; 9 ; ConTexto Volume 2009 ; 2009 ; >
-      au < notReady ; 2010 ; 10 ; ConTexto Volume 2010 ; 2010 ; >
+      au < ready ; 2010 ; 10 ; ConTexto Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 11 ; ConTexto Volume 2011 ; 2011 ; >
-      au < notReady ; 2012 ; 12 ; ConTexto Volume 2012 ; 2012 ; >
+      au < ready ; 2012 ; 12 ; ConTexto Volume 2012 ; 2012 ; >
       au < expected ; 2013 ; 13 ; ConTexto Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 14 ; ConTexto Volume 2014 ; 2014 ; >
 
@@ -418,11 +418,11 @@
       comment[notReady] = can't fetch permission page
 
       au < released ; 2006 ; 1 ; Contingentia Volume 2006 ; 2006 ; >
-      au < notReady ; 2007 ; 2 ; Contingentia Volume 2007 ; 2007 ; >
-      au < notReady ; 2008 ; 3 ; Contingentia Volume 2008 ; 2008 ; >
+      au < ready ; 2007 ; 2 ; Contingentia Volume 2007 ; 2007 ; >
+      au < ready ; 2008 ; 3 ; Contingentia Volume 2008 ; 2008 ; >
       au < released ; 2009 ; 4 ; Contingentia Volume 2009 ; 2009 ; >
       au < released ; 2010 ; 5 ; Contingentia Volume 2010 ; 2010 ; >
-      au < notReady ; 2011 ; 6 ; Contingentia Volume 2011 ; 2011 ; >
+      au < ready ; 2011 ; 6 ; Contingentia Volume 2011 ; 2011 ; >
       au < expected ; 2012 ; 7 ; Contingentia Volume 2012 ; 2012 ; >
       au < expected ; 2013 ; 8 ; Contingentia Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 9 ; Contingentia Volume 2014 ; 2014 ; >
@@ -578,14 +578,13 @@
       comment[publisher] = Universidade Federal do Rio Grande do Sul
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = EspacoAmerindio
-      comment[notReady] = can't fetch permission pages
 
       au < released ; 2007 ; 1 ; Espaço Ameríndio Volume 2007 ; 2007 ; >
-      au < notReady ; 2008 ; 2 ; Espaço Ameríndio Volume 2008 ; 2008 ; >
+      au < ready ; 2008 ; 2 ; Espaço Ameríndio Volume 2008 ; 2008 ; >
       au < released ; 2009 ; 3 ; Espaço Ameríndio Volume 2009 ; 2009 ; >
       au < released ; 2010 ; 4 ; Espaço Ameríndio Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 5 ; Espaço Ameríndio Volume 2011 ; 2011 ; >
-      au < notReady ; 2012 ; 6 ; Espaço Ameríndio Volume 2012 ; 2012 ; >
+      au < ready ; 2012 ; 6 ; Espaço Ameríndio Volume 2012 ; 2012 ; >
       au < expected ; 2013 ; 7 ; Espaço Ameríndio Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 8 ; Espaço Ameríndio Volume 2014 ; 2014 ; >
 
