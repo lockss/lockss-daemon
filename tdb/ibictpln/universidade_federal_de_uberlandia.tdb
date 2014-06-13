@@ -628,17 +628,16 @@
       comment[publisher] = Universidade Federal de Uberlândia
       param[base_url] = http://www.seer.ufu.br/
       param[journal_id] = sociedadenatureza
-      comment[notReady] = no permission/low agreement
 
       au < released ; 2004 ; 1 ; Revista Sociedade & Natureza Volume 2004 ; 2004 ; >
-      au < notReady ; 2005 ; 2 ; Revista Sociedade & Natureza Volume 2005 ; 2005 ; >
-      au < notReady ; 2006 ; 3 ; Revista Sociedade & Natureza Volume 2006 ; 2006 ; >
-      au < notReady ; 2007 ; 4 ; Revista Sociedade & Natureza Volume 2007 ; 2007 ; >
-      au < notReady ; 2008 ; 5 ; Revista Sociedade & Natureza Volume 2008 ; 2008 ; >
-      au < notReady ; 2009 ; 6 ; Revista Sociedade & Natureza Volume 2009 ; 2009 ; >
-      au < notReady ; 2010 ; 7 ; Revista Sociedade & Natureza Volume 2010 ; 2010 ; >
-      au < notReady ; 2011 ; 8 ; Revista Sociedade & Natureza Volume 2011 ; 2011 ; >
-      au < notReady ; 2012 ; 9 ; Revista Sociedade & Natureza Volume 2012 ; 2012 ; >
+      au < ready ; 2005 ; 2 ; Revista Sociedade & Natureza Volume 2005 ; 2005 ; >
+      au < ready ; 2006 ; 3 ; Revista Sociedade & Natureza Volume 2006 ; 2006 ; >
+      au < ready ; 2007 ; 4 ; Revista Sociedade & Natureza Volume 2007 ; 2007 ; >
+      au < ready ; 2008 ; 5 ; Revista Sociedade & Natureza Volume 2008 ; 2008 ; >
+      au < ready ; 2009 ; 6 ; Revista Sociedade & Natureza Volume 2009 ; 2009 ; >
+      au < ready ; 2010 ; 7 ; Revista Sociedade & Natureza Volume 2010 ; 2010 ; >
+      au < ready ; 2011 ; 8 ; Revista Sociedade & Natureza Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 9 ; Revista Sociedade & Natureza Volume 2012 ; 2012 ; >
       au < expected ; 2013 ; 10 ; Revista Sociedade & Natureza Volume 2013 ; 2013 ; >
 
   }
