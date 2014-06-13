@@ -4,8 +4,8 @@
   >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; volume ; name ; param[year] >
-    comment[notReady] = can't fetch permission pages
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
+    comment[notReady] = manifest/permission page url sends 301 moved permanently error. Can this redirect?
 
   {
 
@@ -19,32 +19,32 @@
       param[base_url] = http://www.seer.furg.br/
       param[journal_id] = biblos
 
-      au < notReady ; 1985 ; 1 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 1985 ; 1985 >
-      au < notReady ; 1987 ; 3 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 1987 ; 1987 >
-      au < notReady ; 1990 ; 6 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 1990 ; 1990 >
-      au < notReady ; 1992 ; 8 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 1992 ; 1992 >
-      au < notReady ; 1993 ; 9 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 1993 ; 1993 >
-      au < notReady ; 1994 ; 10 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 1994 ; 1994 >
-      au < notReady ; 1995 ; 11 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 1995 ; 1995 >
-      au < notReady ; 1996 ; 12 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 1996 ; 1996 >
-      au < notReady ; 1997 ; 13 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 1997 ; 1997 >
-      au < notReady ; 1998 ; 14 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 1998 ; 1998 >
-      au < notReady ; 1999 ; 15 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 1999 ; 1999 >
-      au < notReady ; 2000 ; 16 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2000 ; 2000 >
-      au < notReady ; 2001 ; 17 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2001 ; 2001 >
-      au < notReady ; 2002 ; 18 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2002 ; 2002 >
-      au < notReady ; 2003 ; 19 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2003 ; 2003 >
-      au < notReady ; 2004 ; 20 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2004 ; 2004 >
-      au < notReady ; 2005 ; 21 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2005 ; 2005 >
-      au < notReady ; 2006 ; 22 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2006 ; 2006 >
-      au < notReady ; 2007 ; 23 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2007 ; 2007 >
-      au < notReady ; 2008 ; 24 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2008 ; 2008 >
-      au < notReady ; 2009 ; 25 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2009 ; 2009 >
-      au < notReady ; 2010 ; 26 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2010 ; 2010 >
-      au < notReady ; 2011 ; 27 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2011 ; 2011 >
-      au < notReady ; 2012 ; 28 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 29 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 30 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2014 ; 2014 >
+      au < notReady ; 1985 ; 1 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 1985 ; 1985 ; manifest page has 301 error >
+      au < notReady ; 1987 ; 3 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 1987 ; 1987 ; manifest page has 301 error >
+      au < notReady ; 1990 ; 6 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 1990 ; 1990 ; manifest page has 301 error >
+      au < notReady ; 1992 ; 8 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 1992 ; 1992 ; manifest page has 301 error >
+      au < notReady ; 1993 ; 9 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 1993 ; 1993 ; manifest page has 301 error >
+      au < notReady ; 1994 ; 10 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 1994 ; 1994 ; manifest page has 301 error >
+      au < notReady ; 1995 ; 11 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 1995 ; 1995 ; manifest page has 301 error >
+      au < notReady ; 1996 ; 12 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 1996 ; 1996 ; manifest page has 301 error >
+      au < notReady ; 1997 ; 13 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 1997 ; 1997 ; manifest page has 301 error >
+      au < notReady ; 1998 ; 14 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 1998 ; 1998 ; manifest page has 301 error >
+      au < notReady ; 1999 ; 15 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 1999 ; 1999 ; manifest page has 301 error >
+      au < notReady ; 2000 ; 16 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2000 ; 2000 ; manifest page has 301 error >
+      au < notReady ; 2001 ; 17 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2001 ; 2001 ; manifest page has 301 error >
+      au < notReady ; 2002 ; 18 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2002 ; 2002 ; manifest page has 301 error >
+      au < notReady ; 2003 ; 19 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2003 ; 2003 ; manifest page has 301 error >
+      au < notReady ; 2004 ; 20 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2004 ; 2004 ; manifest page has 301 error >
+      au < notReady ; 2005 ; 21 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2005 ; 2005 ; manifest page has 301 error >
+      au < notReady ; 2006 ; 22 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2006 ; 2006 ; manifest page has 301 error >
+      au < notReady ; 2007 ; 23 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2007 ; 2007 ; manifest page has 301 error >
+      au < notReady ; 2008 ; 24 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2008 ; 2008 ; manifest page has 301 error >
+      au < notReady ; 2009 ; 25 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2009 ; 2009 ; manifest page has 301 error >
+      au < notReady ; 2010 ; 26 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2010 ; 2010 ; manifest page has 301 error >
+      au < notReady ; 2011 ; 27 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2011 ; 2011 ; manifest page has 301 error >
+      au < notReady ; 2012 ; 28 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2012 ; 2012 ; manifest page has 301 error >
+      au < expected ; 2013 ; 29 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 30 ; BIBLOS-Revista do Instituto de Ciências Humanas e da Informação Volume 2014 ; 2014 ; >
 
   }
 
@@ -60,11 +60,11 @@
       param[base_url] = http://www.seer.furg.br/
       param[journal_id] = hist
 
-      au < exists ; 2010 ; 1 ; Historiæ Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 2 ; Historiæ Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 3 ; Historiæ Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 4 ; Historiæ Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 5 ; Historiæ Volume 2014 ; 2014 >
+      au < exists ; 2010 ; 1 ; Historiæ Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 2 ; Historiæ Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 3 ; Historiæ Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 4 ; Historiæ Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 5 ; Historiæ Volume 2014 ; 2014 ; >
 
   }
 
@@ -79,15 +79,15 @@
       param[base_url] = http://www.seer.furg.br/
       param[journal_id] = juris
 
-      au < notReady ; 2005 ; 1 ; JURIS-Revista da Faculdade de Direito Volume 2005 ; 2005 >
-      au < notReady ; 2006 ; 2 ; JURIS-Revista da Faculdade de Direito Volume 2006 ; 2006 >
-      au < notReady ; 2008 ; 4 ; JURIS-Revista da Faculdade de Direito Volume 2008 ; 2008 >
-      au < notReady ; 2009 ; 5 ; JURIS-Revista da Faculdade de Direito Volume 2009 ; 2009 >
-      au < notReady ; 2010 ; 6 ; JURIS-Revista da Faculdade de Direito Volume 2010 ; 2010 >
-      au < notReady ; 2011 ; 7 ; JURIS-Revista da Faculdade de Direito Volume 2011 ; 2011 >
-      au < notReady ; 2012 ; 8 ; JURIS-Revista da Faculdade de Direito Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 9 ; JURIS-Revista da Faculdade de Direito Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 10 ; JURIS-Revista da Faculdade de Direito Volume 2014 ; 2014 >
+      au < notReady ; 2005 ; 1 ; JURIS-Revista da Faculdade de Direito Volume 2005 ; 2005 ; manifest page has 301 error >
+      au < notReady ; 2006 ; 2 ; JURIS-Revista da Faculdade de Direito Volume 2006 ; 2006 ; manifest page has 301 error >
+      au < notReady ; 2008 ; 4 ; JURIS-Revista da Faculdade de Direito Volume 2008 ; 2008 ; manifest page has 301 error >
+      au < notReady ; 2009 ; 5 ; JURIS-Revista da Faculdade de Direito Volume 2009 ; 2009 ; manifest page has 301 error >
+      au < notReady ; 2010 ; 6 ; JURIS-Revista da Faculdade de Direito Volume 2010 ; 2010 ; manifest page has 301 error >
+      au < notReady ; 2011 ; 7 ; JURIS-Revista da Faculdade de Direito Volume 2011 ; 2011 ; manifest page has 301 error >
+      au < notReady ; 2012 ; 8 ; JURIS-Revista da Faculdade de Direito Volume 2012 ; 2012 ; manifest page has 301 error >
+      au < expected ; 2013 ; 9 ; JURIS-Revista da Faculdade de Direito Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 10 ; JURIS-Revista da Faculdade de Direito Volume 2014 ; 2014 ; >
 
   }
 
@@ -103,12 +103,12 @@
       param[base_url] = http://www.seer.furg.br/
       param[journal_id] = momento
 
-      au < exists ; 2005 ; 1 ; Momento-Diálogos em Educação Volume 2005 ; 2005 >
-      au < exists ; 2007 ; 3 ; Momento-Diálogos em Educação Volume 2007 ; 2007 >
-      au < exists ; 2010 ; 6 ; Momento-Diálogos em Educação Volume 2010 ; 2010 >
-      au < exists ; 2012 ; 8 ; Momento-Diálogos em Educação Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 9 ; Momento-Diálogos em Educação Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 10 ; Momento-Diálogos em Educação Volume 2014 ; 2014 >
+      au < exists ; 2005 ; 1 ; Momento-Diálogos em Educação Volume 2005 ; 2005 ; >
+      au < exists ; 2007 ; 3 ; Momento-Diálogos em Educação Volume 2007 ; 2007 ; >
+      au < exists ; 2010 ; 6 ; Momento-Diálogos em Educação Volume 2010 ; 2010 ; >
+      au < exists ; 2012 ; 8 ; Momento-Diálogos em Educação Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 9 ; Momento-Diálogos em Educação Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 10 ; Momento-Diálogos em Educação Volume 2014 ; 2014 ; >
 
   }
 
@@ -124,24 +124,24 @@
       param[base_url] = http://www.seer.furg.br/
       param[journal_id] = ambeduc
 
-      au < notReady ; 1996 ; 1 ; Revista Ambiente & Educação Volume 1996 ; 1996 >
-      au < notReady ; 1997 ; 2 ; Revista Ambiente & Educação Volume 1997 ; 1997 >
-      au < notReady ; 1998 ; 3 ; Revista Ambiente & Educação Volume 1998 ; 1998 >
-      au < notReady ; 1999 ; 4 ; Revista Ambiente & Educação Volume 1999 ; 1999 >
-      au < notReady ; 2000 ; 5 ; Revista Ambiente & Educação Volume 2000 ; 2000 >
-      au < notReady ; 2002 ; 7 ; Revista Ambiente & Educação Volume 2002 ; 2002 >
-      au < notReady ; 2003 ; 8 ; Revista Ambiente & Educação Volume 2003 ; 2003 >
-      au < notReady ; 2004 ; 9 ; Revista Ambiente & Educação Volume 2004 ; 2004 >
-      au < notReady ; 2005 ; 10 ; Revista Ambiente & Educação Volume 2005 ; 2005 >
-      au < notReady ; 2006 ; 11 ; Revista Ambiente & Educação Volume 2006 ; 2006 >
-      au < notReady ; 2007 ; 12 ; Revista Ambiente & Educação Volume 2007 ; 2007 >
-      au < notReady ; 2008 ; 13 ; Revista Ambiente & Educação Volume 2008 ; 2008 >
-      au < notReady ; 2009 ; 14 ; Revista Ambiente & Educação Volume 2009 ; 2009 >
-      au < notReady ; 2010 ; 15 ; Revista Ambiente & Educação Volume 2010 ; 2010 >
-      au < notReady ; 2011 ; 16 ; Revista Ambiente & Educação Volume 2011 ; 2011 >
-      au < notReady ; 2012 ; 17 ; Revista Ambiente & Educação Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 18 ; Revista Ambiente & Educação Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 19 ; Revista Ambiente & Educação Volume 2014 ; 2014 >
+      au < notReady ; 1996 ; 1 ; Revista Ambiente & Educação Volume 1996 ; 1996 ; manifest page has 301 error >
+      au < notReady ; 1997 ; 2 ; Revista Ambiente & Educação Volume 1997 ; 1997 ; manifest page has 301 error >
+      au < notReady ; 1998 ; 3 ; Revista Ambiente & Educação Volume 1998 ; 1998 ; manifest page has 301 error >
+      au < notReady ; 1999 ; 4 ; Revista Ambiente & Educação Volume 1999 ; 1999 ; manifest page has 301 error >
+      au < notReady ; 2000 ; 5 ; Revista Ambiente & Educação Volume 2000 ; 2000 ; manifest page has 301 error >
+      au < notReady ; 2002 ; 7 ; Revista Ambiente & Educação Volume 2002 ; 2002 ; manifest page has 301 error >
+      au < notReady ; 2003 ; 8 ; Revista Ambiente & Educação Volume 2003 ; 2003 ; manifest page has 301 error >
+      au < notReady ; 2004 ; 9 ; Revista Ambiente & Educação Volume 2004 ; 2004 ; manifest page has 301 error >
+      au < notReady ; 2005 ; 10 ; Revista Ambiente & Educação Volume 2005 ; 2005 ; manifest page has 301 error >
+      au < notReady ; 2006 ; 11 ; Revista Ambiente & Educação Volume 2006 ; 2006 ; manifest page has 301 error >
+      au < notReady ; 2007 ; 12 ; Revista Ambiente & Educação Volume 2007 ; 2007 ; manifest page has 301 error >
+      au < notReady ; 2008 ; 13 ; Revista Ambiente & Educação Volume 2008 ; 2008 ; manifest page has 301 error >
+      au < notReady ; 2009 ; 14 ; Revista Ambiente & Educação Volume 2009 ; 2009 ; manifest page has 301 error >
+      au < notReady ; 2010 ; 15 ; Revista Ambiente & Educação Volume 2010 ; 2010 ; manifest page has 301 error >
+      au < notReady ; 2011 ; 16 ; Revista Ambiente & Educação Volume 2011 ; 2011 ; manifest page has 301 error >
+      au < notReady ; 2012 ; 17 ; Revista Ambiente & Educação Volume 2012 ; 2012 ; manifest page has 301 error >
+      au < expected ; 2013 ; 18 ; Revista Ambiente & Educação Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 19 ; Revista Ambiente & Educação Volume 2014 ; 2014 ; >
 
   }
 
@@ -157,41 +157,41 @@
       param[base_url] = http://www.seer.furg.br/
       param[journal_id] = atlantica
 
-      au < notReady ; 1977 ; 1 ; Revista Atlântica Volume 1977 ; 1977 >
-      au < notReady ; 1978 ; 2 ; Revista Atlântica Volume 1978 ; 1978 >
-      au < notReady ; 1980 ; 4 ; Revista Atlântica Volume 1980 ; 1980 >
-      au < notReady ; 1982 ; 6 ; Revista Atlântica Volume 1982 ; 1982 >
-      au < notReady ; 1983 ; 7 ; Revista Atlântica Volume 1983 ; 1983 >
-      au < notReady ; 1984 ; 8 ; Revista Atlântica Volume 1984 ; 1984 >
-      au < notReady ; 1986 ; 10 ; Revista Atlântica Volume 1986 ; 1986 >
-      au < notReady ; 1987 ; 11 ; Revista Atlântica Volume 1987 ; 1987 >
-      au < notReady ; 1988 ; 12 ; Revista Atlântica Volume 1988 ; 1988 >
-      au < notReady ; 1989 ; 13 ; Revista Atlântica Volume 1989 ; 1989 >
-      au < notReady ; 1990 ; 14 ; Revista Atlântica Volume 1990 ; 1990 >
-      au < notReady ; 1991 ; 15 ; Revista Atlântica Volume 1991 ; 1991 >
-      au < notReady ; 1992 ; 16 ; Revista Atlântica Volume 1992 ; 1992 >
-      au < notReady ; 1993 ; 17 ; Revista Atlântica Volume 1993 ; 1993 >
-      au < notReady ; 1994 ; 18 ; Revista Atlântica Volume 1994 ; 1994 >
-      au < notReady ; 1995 ; 19 ; Revista Atlântica Volume 1995 ; 1995 >
-      au < notReady ; 1996 ; 20 ; Revista Atlântica Volume 1996 ; 1996 >
-      au < notReady ; 1997 ; 21 ; Revista Atlântica Volume 1997 ; 1997 >
-      au < notReady ; 1998 ; 22 ; Revista Atlântica Volume 1998 ; 1998 >
-      au < notReady ; 1999 ; 23 ; Revista Atlântica Volume 1999 ; 1999 >
-      au < notReady ; 2000 ; 24 ; Revista Atlântica Volume 2000 ; 2000 >
-      au < notReady ; 2001 ; 25 ; Revista Atlântica Volume 2001 ; 2001 >
-      au < notReady ; 2002 ; 26 ; Revista Atlântica Volume 2002 ; 2002 >
-      au < notReady ; 2003 ; 27 ; Revista Atlântica Volume 2003 ; 2003 >
-      au < notReady ; 2004 ; 28 ; Revista Atlântica Volume 2004 ; 2004 >
-      au < notReady ; 2005 ; 29 ; Revista Atlântica Volume 2005 ; 2005 >
-      au < notReady ; 2006 ; 30 ; Revista Atlântica Volume 2006 ; 2006 >
-      au < notReady ; 2007 ; 31 ; Revista Atlântica Volume 2007 ; 2007 >
-      au < notReady ; 2008 ; 32 ; Revista Atlântica Volume 2008 ; 2008 >
-      au < notReady ; 2009 ; 33 ; Revista Atlântica Volume 2009 ; 2009 >
-      au < notReady ; 2010 ; 34 ; Revista Atlântica Volume 2010 ; 2010 >
-      au < notReady ; 2011 ; 35 ; Revista Atlântica Volume 2011 ; 2011 >
-      au < notReady ; 2012 ; 36 ; Revista Atlântica Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 37 ; Revista Atlântica Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 38 ; Revista Atlântica Volume 2014 ; 2014 >
+      au < notReady ; 1977 ; 1 ; Revista Atlântica Volume 1977 ; 1977 ; manifest page has 301 error >
+      au < notReady ; 1978 ; 2 ; Revista Atlântica Volume 1978 ; 1978 ; manifest page has 301 error >
+      au < notReady ; 1980 ; 4 ; Revista Atlântica Volume 1980 ; 1980 ; manifest page has 301 error >
+      au < notReady ; 1982 ; 6 ; Revista Atlântica Volume 1982 ; 1982 ; manifest page has 301 error >
+      au < notReady ; 1983 ; 7 ; Revista Atlântica Volume 1983 ; 1983 ; manifest page has 301 error >
+      au < notReady ; 1984 ; 8 ; Revista Atlântica Volume 1984 ; 1984 ; manifest page has 301 error >
+      au < notReady ; 1986 ; 10 ; Revista Atlântica Volume 1986 ; 1986 ; manifest page has 301 error >
+      au < notReady ; 1987 ; 11 ; Revista Atlântica Volume 1987 ; 1987 ; manifest page has 301 error >
+      au < notReady ; 1988 ; 12 ; Revista Atlântica Volume 1988 ; 1988 ; manifest page has 301 error >
+      au < notReady ; 1989 ; 13 ; Revista Atlântica Volume 1989 ; 1989 ; manifest page has 301 error >
+      au < notReady ; 1990 ; 14 ; Revista Atlântica Volume 1990 ; 1990 ; manifest page has 301 error >
+      au < notReady ; 1991 ; 15 ; Revista Atlântica Volume 1991 ; 1991 ; manifest page has 301 error >
+      au < notReady ; 1992 ; 16 ; Revista Atlântica Volume 1992 ; 1992 ; manifest page has 301 error >
+      au < notReady ; 1993 ; 17 ; Revista Atlântica Volume 1993 ; 1993 ; manifest page has 301 error >
+      au < notReady ; 1994 ; 18 ; Revista Atlântica Volume 1994 ; 1994 ; manifest page has 301 error >
+      au < notReady ; 1995 ; 19 ; Revista Atlântica Volume 1995 ; 1995 ; manifest page has 301 error >
+      au < notReady ; 1996 ; 20 ; Revista Atlântica Volume 1996 ; 1996 ; manifest page has 301 error >
+      au < notReady ; 1997 ; 21 ; Revista Atlântica Volume 1997 ; 1997 ; manifest page has 301 error >
+      au < notReady ; 1998 ; 22 ; Revista Atlântica Volume 1998 ; 1998 ; manifest page has 301 error >
+      au < notReady ; 1999 ; 23 ; Revista Atlântica Volume 1999 ; 1999 ; manifest page has 301 error >
+      au < notReady ; 2000 ; 24 ; Revista Atlântica Volume 2000 ; 2000 ; manifest page has 301 error >
+      au < notReady ; 2001 ; 25 ; Revista Atlântica Volume 2001 ; 2001 ; manifest page has 301 error >
+      au < notReady ; 2002 ; 26 ; Revista Atlântica Volume 2002 ; 2002 ; manifest page has 301 error >
+      au < notReady ; 2003 ; 27 ; Revista Atlântica Volume 2003 ; 2003 ; manifest page has 301 error >
+      au < notReady ; 2004 ; 28 ; Revista Atlântica Volume 2004 ; 2004 ; manifest page has 301 error >
+      au < notReady ; 2005 ; 29 ; Revista Atlântica Volume 2005 ; 2005 ; manifest page has 301 error >
+      au < notReady ; 2006 ; 30 ; Revista Atlântica Volume 2006 ; 2006 ; manifest page has 301 error >
+      au < notReady ; 2007 ; 31 ; Revista Atlântica Volume 2007 ; 2007 ; manifest page has 301 error >
+      au < notReady ; 2008 ; 32 ; Revista Atlântica Volume 2008 ; 2008 ; manifest page has 301 error >
+      au < notReady ; 2009 ; 33 ; Revista Atlântica Volume 2009 ; 2009 ; manifest page has 301 error >
+      au < notReady ; 2010 ; 34 ; Revista Atlântica Volume 2010 ; 2010 ; manifest page has 301 error >
+      au < notReady ; 2011 ; 35 ; Revista Atlântica Volume 2011 ; 2011 ; manifest page has 301 error >
+      au < notReady ; 2012 ; 36 ; Revista Atlântica Volume 2012 ; 2012 ; manifest page has 301 error >
+      au < expected ; 2013 ; 37 ; Revista Atlântica Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 38 ; Revista Atlântica Volume 2014 ; 2014 ; >
 
   }
 
@@ -206,11 +206,11 @@
       param[base_url] = http://www.seer.furg.br/
       param[journal_id] = revbea
 
-      au < notReady ; 2010 ; 1 ; Revista Brasileira de Educação Ambiental (REVBEA) Volume 2010 ; 2010 >
-      au < notReady ; 2011 ; 2 ; Revista Brasileira de Educação Ambiental (REVBEA) Volume 2011 ; 2011 >
-      au < notReady ; 2012 ; 3 ; Revista Brasileira de Educação Ambiental (REVBEA) Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 4 ; Revista Brasileira de Educação Ambiental (REVBEA) Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 5 ; Revista Brasileira de Educação Ambiental (REVBEA) Volume 2014 ; 2014 >
+      au < notReady ; 2010 ; 1 ; Revista Brasileira de Educação Ambiental (REVBEA) Volume 2010 ; 2010 ; manifest page has 301 error >
+      au < notReady ; 2011 ; 2 ; Revista Brasileira de Educação Ambiental (REVBEA) Volume 2011 ; 2011 ; manifest page has 301 error >
+      au < notReady ; 2012 ; 3 ; Revista Brasileira de Educação Ambiental (REVBEA) Volume 2012 ; 2012 ; manifest page has 301 error >
+      au < expected ; 2013 ; 4 ; Revista Brasileira de Educação Ambiental (REVBEA) Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 5 ; Revista Brasileira de Educação Ambiental (REVBEA) Volume 2014 ; 2014 ; >
 
   }
 
@@ -225,16 +225,16 @@
       param[base_url] = http://www.seer.furg.br/
       param[journal_id] = redsis
 
-      au < notReady ; 2005 ; 1 ; Revista Didática Sistêmica Volume 2005 ; 2005 >
-      au < notReady ; 2006 ; 2 ; Revista Didática Sistêmica Volume 2006 ; 2006 >
-      au < notReady ; 2007 ; 3 ; Revista Didática Sistêmica Volume 2007 ; 2007 >
-      au < notReady ; 2008 ; 4 ; Revista Didática Sistêmica Volume 2008 ; 2008 >
-      au < notReady ; 2009 ; 5 ; Revista Didática Sistêmica Volume 2009 ; 2009 >
-      au < notReady ; 2010 ; 6 ; Revista Didática Sistêmica Volume 2010 ; 2010 >
-      au < notReady ; 2011 ; 7 ; Revista Didática Sistêmica Volume 2011 ; 2011 >
-      au < notReady ; 2012 ; 8 ; Revista Didática Sistêmica Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 9 ; Revista Didática Sistêmica Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 10 ; Revista Didática Sistêmica Volume 2014 ; 2014 >
+      au < notReady ; 2005 ; 1 ; Revista Didática Sistêmica Volume 2005 ; 2005 ; manifest page has 301 error >
+      au < notReady ; 2006 ; 2 ; Revista Didática Sistêmica Volume 2006 ; 2006 ; manifest page has 301 error >
+      au < notReady ; 2007 ; 3 ; Revista Didática Sistêmica Volume 2007 ; 2007 ; manifest page has 301 error >
+      au < notReady ; 2008 ; 4 ; Revista Didática Sistêmica Volume 2008 ; 2008 ; manifest page has 301 error >
+      au < notReady ; 2009 ; 5 ; Revista Didática Sistêmica Volume 2009 ; 2009 ; manifest page has 301 error >
+      au < notReady ; 2010 ; 6 ; Revista Didática Sistêmica Volume 2010 ; 2010 ; manifest page has 301 error >
+      au < notReady ; 2011 ; 7 ; Revista Didática Sistêmica Volume 2011 ; 2011 ; manifest page has 301 error >
+      au < notReady ; 2012 ; 8 ; Revista Didática Sistêmica Volume 2012 ; 2012 ; manifest page has 301 error >
+      au < expected ; 2013 ; 9 ; Revista Didática Sistêmica Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 10 ; Revista Didática Sistêmica Volume 2014 ; 2014 ; >
 
   }
 
@@ -249,17 +249,17 @@
       param[base_url] = http://www.seer.furg.br/
       param[journal_id] = remea
 
-      au < exists ; 2004 ; 1 ; Revista Eletrônica do Programa de Pós-Graduação em Educação Ambiental (EA) Volume 2004 ; 2004 >
-      au < exists ; 2005 ; 2 ; Revista Eletrônica do Programa de Pós-Graduação em Educação Ambiental (EA) Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 3 ; Revista Eletrônica do Programa de Pós-Graduação em Educação Ambiental (EA) Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 4 ; Revista Eletrônica do Programa de Pós-Graduação em Educação Ambiental (EA) Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 5 ; Revista Eletrônica do Programa de Pós-Graduação em Educação Ambiental (EA) Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 6 ; Revista Eletrônica do Programa de Pós-Graduação em Educação Ambiental (EA) Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 7 ; Revista Eletrônica do Programa de Pós-Graduação em Educação Ambiental (EA) Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 8 ; Revista Eletrônica do Programa de Pós-Graduação em Educação Ambiental (EA) Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 9 ; Revista Eletrônica do Programa de Pós-Graduação em Educação Ambiental (EA) Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 10 ; Revista Eletrônica do Programa de Pós-Graduação em Educação Ambiental (EA) Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 11 ; Revista Eletrônica do Programa de Pós-Graduação em Educação Ambiental (EA) Volume 2014 ; 2014 >
+      au < exists ; 2004 ; 1 ; Revista Eletrônica do Programa de Pós-Graduação em Educação Ambiental (EA) Volume 2004 ; 2004 ; >
+      au < exists ; 2005 ; 2 ; Revista Eletrônica do Programa de Pós-Graduação em Educação Ambiental (EA) Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 3 ; Revista Eletrônica do Programa de Pós-Graduação em Educação Ambiental (EA) Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 4 ; Revista Eletrônica do Programa de Pós-Graduação em Educação Ambiental (EA) Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 5 ; Revista Eletrônica do Programa de Pós-Graduação em Educação Ambiental (EA) Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 6 ; Revista Eletrônica do Programa de Pós-Graduação em Educação Ambiental (EA) Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 7 ; Revista Eletrônica do Programa de Pós-Graduação em Educação Ambiental (EA) Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 8 ; Revista Eletrônica do Programa de Pós-Graduação em Educação Ambiental (EA) Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 9 ; Revista Eletrônica do Programa de Pós-Graduação em Educação Ambiental (EA) Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 10 ; Revista Eletrônica do Programa de Pós-Graduação em Educação Ambiental (EA) Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 11 ; Revista Eletrônica do Programa de Pós-Graduação em Educação Ambiental (EA) Volume 2014 ; 2014 ; >
 
   }
 
@@ -275,19 +275,19 @@
       param[base_url] = http://www.seer.furg.br/
       param[journal_id] = sinergia
 
-      au < notReady ; 1985 ; 1 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 1985 ; 1985 >
-      au < notReady ; 1988 ; 4 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 1988 ; 1988 >
-      au < notReady ; 1992 ; 8 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 1992 ; 1992 >
-      au < notReady ; 1993 ; 9 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 1993 ; 1993 >
-      au < notReady ; 1994 ; 10 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 1994 ; 1994 >
-      au < notReady ; 1995 ; 11 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 1995 ; 1995 >
-      au < notReady ; 1996 ; 12 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 1996 ; 1996 >
-      au < notReady ; 1997 ; 13 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 1997 ; 1997 >
-      au < notReady ; 1998 ; 14 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 1998 ; 1998 >
-      au < notReady ; 2007 ; 23 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 2007 ; 2007 >
-      au < notReady ; 2012 ; 28 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 29 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 30 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 2014 ; 2014 >
+      au < notReady ; 1985 ; 1 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 1985 ; 1985 ; manifest page has 301 error >
+      au < notReady ; 1988 ; 4 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 1988 ; 1988 ; manifest page has 301 error >
+      au < notReady ; 1992 ; 8 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 1992 ; 1992 ; manifest page has 301 error >
+      au < notReady ; 1993 ; 9 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 1993 ; 1993 ; manifest page has 301 error >
+      au < notReady ; 1994 ; 10 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 1994 ; 1994 ; manifest page has 301 error >
+      au < notReady ; 1995 ; 11 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 1995 ; 1995 ; manifest page has 301 error >
+      au < notReady ; 1996 ; 12 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 1996 ; 1996 ; manifest page has 301 error >
+      au < notReady ; 1997 ; 13 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 1997 ; 1997 ; manifest page has 301 error >
+      au < notReady ; 1998 ; 14 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 1998 ; 1998 ; manifest page has 301 error >
+      au < notReady ; 2007 ; 23 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 2007 ; 2007 ; manifest page has 301 error >
+      au < notReady ; 2012 ; 28 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 2012 ; 2012 ; manifest page has 301 error >
+      au < expected ; 2013 ; 29 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 30 ; SINERGIA-Revista do Instituto de Ciências Econômicas, Administrativas e Contábeis Volume 2014 ; 2014 ; >
 
   }
 
@@ -302,30 +302,30 @@
       param[base_url] = http://www.seer.furg.br/
       param[journal_id] = vetor
 
-      au < notReady ; 1986 ; 1 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 1986 ; 1986 >
-      au < notReady ; 1988 ; 3 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 1988 ; 1988 >
-      au < notReady ; 1993 ; 8 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 1993 ; 1993 >
-      au < notReady ; 1994 ; 9 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 1994 ; 1994 >
-      au < notReady ; 1995 ; 10 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 1995 ; 1995 >
-      au < notReady ; 1996 ; 11 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 1996 ; 1996 >
-      au < notReady ; 1997 ; 12 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 1997 ; 1997 >
-      au < notReady ; 1998 ; 13 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 1998 ; 1998 >
-      au < notReady ; 1999 ; 14 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 1999 ; 1999 >
-      au < notReady ; 2000 ; 15 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2000 ; 2000 >
-      au < notReady ; 2001 ; 16 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2001 ; 2001 >
-      au < notReady ; 2002 ; 17 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2002 ; 2002 >
-      au < notReady ; 2003 ; 18 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2003 ; 2003 >
-      au < notReady ; 2004 ; 19 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2004 ; 2004 >
-      au < notReady ; 2005 ; 20 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2005 ; 2005 >
-      au < notReady ; 2006 ; 21 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2006 ; 2006 >
-      au < notReady ; 2007 ; 22 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2007 ; 2007 >
-      au < notReady ; 2008 ; 23 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2008 ; 2008 >
-      au < notReady ; 2009 ; 24 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2009 ; 2009 >
-      au < notReady ; 2010 ; 25 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2010 ; 2010 >
-      au < notReady ; 2011 ; 26 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2011 ; 2011 >
-      au < notReady ; 2012 ; 27 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 28 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 29 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2014 ; 2014 >
+      au < notReady ; 1986 ; 1 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 1986 ; 1986 ; manifest page has 301 error >
+      au < notReady ; 1988 ; 3 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 1988 ; 1988 ; manifest page has 301 error >
+      au < notReady ; 1993 ; 8 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 1993 ; 1993 ; manifest page has 301 error >
+      au < notReady ; 1994 ; 9 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 1994 ; 1994 ; manifest page has 301 error >
+      au < notReady ; 1995 ; 10 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 1995 ; 1995 ; manifest page has 301 error >
+      au < notReady ; 1996 ; 11 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 1996 ; 1996 ; manifest page has 301 error >
+      au < notReady ; 1997 ; 12 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 1997 ; 1997 ; manifest page has 301 error >
+      au < notReady ; 1998 ; 13 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 1998 ; 1998 ; manifest page has 301 error >
+      au < notReady ; 1999 ; 14 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 1999 ; 1999 ; manifest page has 301 error >
+      au < notReady ; 2000 ; 15 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2000 ; 2000 ; manifest page has 301 error >
+      au < notReady ; 2001 ; 16 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2001 ; 2001 ; manifest page has 301 error >
+      au < notReady ; 2002 ; 17 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2002 ; 2002 ; manifest page has 301 error >
+      au < notReady ; 2003 ; 18 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2003 ; 2003 ; manifest page has 301 error >
+      au < notReady ; 2004 ; 19 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2004 ; 2004 ; manifest page has 301 error >
+      au < notReady ; 2005 ; 20 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2005 ; 2005 ; manifest page has 301 error >
+      au < notReady ; 2006 ; 21 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2006 ; 2006 ; manifest page has 301 error >
+      au < notReady ; 2007 ; 22 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2007 ; 2007 ; manifest page has 301 error >
+      au < notReady ; 2008 ; 23 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2008 ; 2008 ; manifest page has 301 error >
+      au < notReady ; 2009 ; 24 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2009 ; 2009 ; manifest page has 301 error >
+      au < notReady ; 2010 ; 25 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2010 ; 2010 ; manifest page has 301 error >
+      au < notReady ; 2011 ; 26 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2011 ; 2011 ; manifest page has 301 error >
+      au < notReady ; 2012 ; 27 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2012 ; 2012 ; manifest page has 301 error >
+      au < expected ; 2013 ; 28 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 29 ; VETOR-Revista de Ciências Exatas e Engenharias Volume 2014 ; 2014 ; >
 
   }
 
@@ -341,14 +341,14 @@
       param[base_url] = http://www.seer.furg.br/
       param[journal_id] = vitalle
 
-      au < exists ; 2007 ; 1 ; VITTALLE-Revista de Ciências da Saúde Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 2 ; VITTALLE-Revista de Ciências da Saúde Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 3 ; VITTALLE-Revista de Ciências da Saúde Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 4 ; VITTALLE-Revista de Ciências da Saúde Volume 2010 ; 2010 >
-      au < expected ; 2011 ; 5 ; VITTALLE-Revista de Ciências da Saúde Volume 2011 ; 2011 >
-      au < expected ; 2012 ; 6 ; VITTALLE-Revista de Ciências da Saúde Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 7 ; VITTALLE-Revista de Ciências da Saúde Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 8 ; VITTALLE-Revista de Ciências da Saúde Volume 2014 ; 2014 >
+      au < exists ; 2007 ; 1 ; VITTALLE-Revista de Ciências da Saúde Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 2 ; VITTALLE-Revista de Ciências da Saúde Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 3 ; VITTALLE-Revista de Ciências da Saúde Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 4 ; VITTALLE-Revista de Ciências da Saúde Volume 2010 ; 2010 ; >
+      au < expected ; 2011 ; 5 ; VITTALLE-Revista de Ciências da Saúde Volume 2011 ; 2011 ; >
+      au < expected ; 2012 ; 6 ; VITTALLE-Revista de Ciências da Saúde Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 7 ; VITTALLE-Revista de Ciências da Saúde Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 8 ; VITTALLE-Revista de Ciências da Saúde Volume 2014 ; 2014 ; >
 
   }
 
