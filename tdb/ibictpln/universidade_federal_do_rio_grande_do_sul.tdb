@@ -253,14 +253,13 @@
       comment[publisher] = Universidade Federal do Rio Grande do Sul
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = cadernosdoil
-      comment[notReady] = can't fetch permission pages
 
-      au < notReady ; 2007 ; 1 ; Cadernos do IL Volume 2007 ; 2007 ; >
-      au < notReady ; 2008 ; 2 ; Cadernos do IL Volume 2008 ; 2008 ; >
-      au < notReady ; 2009 ; 3 ; Cadernos do IL Volume 2009 ; 2009 ; >
-      au < notReady ; 2010 ; 4 ; Cadernos do IL Volume 2010 ; 2010 ; >
+      au < ready ; 2007 ; 1 ; Cadernos do IL Volume 2007 ; 2007 ; >
+      au < ready ; 2008 ; 2 ; Cadernos do IL Volume 2008 ; 2008 ; >
+      au < ready ; 2009 ; 3 ; Cadernos do IL Volume 2009 ; 2009 ; >
+      au < ready ; 2010 ; 4 ; Cadernos do IL Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 5 ; Cadernos do IL Volume 2011 ; 2011 ; >
-      au < notReady ; 2012 ; 6 ; Cadernos do IL Volume 2012 ; 2012 ; >
+      au < ready ; 2012 ; 6 ; Cadernos do IL Volume 2012 ; 2012 ; >
       au < expected ; 2013 ; 7 ; Cadernos do IL Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 8 ; Cadernos do IL Volume 2014 ; 2014 ; >
 
