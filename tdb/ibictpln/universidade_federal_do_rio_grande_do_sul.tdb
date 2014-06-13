@@ -16,7 +16,6 @@
       comment[publisher] = Universidade Federal do Rio Grande do Sul
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = ActaScientiaeVeterinariae
-      comment[notReady] = These AUs have no articles.
 
       au < notReady ; 1973 ; 1 ; Acta Scientiae Veterinariae Volume 1973 ; 1973 ; no articles >
       au < notReady ; 1982 ; 10 ; Acta Scientiae Veterinariae Volume 1982 ; 1982 ; no articles >
