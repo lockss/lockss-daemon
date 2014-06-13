@@ -14,14 +14,14 @@
       >
 
       comment[publisher] = Universidade Federal do Rio Grande do Norte
-      param[base_url] = http://www.atena.org.br/revista/ojs-2.2.3-06/
+      param[base_url] = http://ufrn.emnuvens.com.br/
       param[journal_id] = Ambiente
 
-      au < doNotProcess ; 2009 ; 1 ; Revista Ambiente Contábil Volume 1 ; 2009 >
-      au < doNotProcess ; 2010 ; 2 ; Revista Ambiente Contábil Volume 2 ; 2010 >
-      au < doNotProcess ; 2011 ; 3 ; Revista Ambiente Contábil Volume 3 ; 2011 >
-      au < doNotProcess ; 2012 ; 4 ; Revista Ambiente Contábil Volume 4 ; 2012 >
-      au < doNotProcess ; 2013 ; 5 ; Revista Ambiente Contábil Volume 5 ; 2013 >
+      au < exists ; 2009 ; 1 ; Revista Ambiente Contábil Volume 1 ; 2009 >
+      au < exists ; 2010 ; 2 ; Revista Ambiente Contábil Volume 2 ; 2010 >
+      au < exists ; 2011 ; 3 ; Revista Ambiente Contábil Volume 3 ; 2011 >
+      au < exists ; 2012 ; 4 ; Revista Ambiente Contábil Volume 4 ; 2012 >
+      au < exists ; 2013 ; 5 ; Revista Ambiente Contábil Volume 5 ; 2013 >
 
   }
 
@@ -341,7 +341,7 @@
       >
 
       comment[publisher] = Universidade Federal do Rio Grande do Norte
-      param[base_url] = http://periodicos.ufrn.br/
+      param[base_url] = http://ufrn.emnuvens.com.br/
       param[journal_id] = constituicaoegarantiadedireitos
 
       au < exists ; 2007 ; 1 ; Revista Constituição e Garantia de Direitos Volume 2007 ; 2007 >
@@ -362,12 +362,11 @@
       >
 
       comment[publisher] = Universidade Federal do Rio Grande do Norte
-      param[base_url] = http://periodicos.ufrn.br/
+      param[base_url] = http://ufrn.emnuvens.com.br/
       param[journal_id] = direitoenergia
-      comment[notReady] = can't fetch permission page
 
-      au < notReady ; 2009 ; 1 ; Revista Direito E-nergia Volume 2009 ; 2009 >
-      au < notReady ; 2010 ; 2 ; Revista Direito E-nergia Volume 2010 ; 2010 >
+      au < exists ; 2009 ; 1 ; Revista Direito E-nergia Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 2 ; Revista Direito E-nergia Volume 2010 ; 2010 >
       au < expected ; 2011 ; 3 ; Revista Direito E-nergia Volume 2011 ; 2011 >
       au < expected ; 2012 ; 4 ; Revista Direito E-nergia Volume 2012 ; 2012 >
       au < expected ; 2013 ; 5 ; Revista Direito E-nergia Volume 2013 ; 2013 >
@@ -383,7 +382,7 @@
       >
 
       comment[publisher] = Universidade Federal do Rio Grande do Norte
-      param[base_url] = http://periodicos.ufrn.br/
+      param[base_url] = http://ufrn.emnuvens.com.br/
       param[journal_id] = interlegere
 
       au < exists ; 2007 ; 1 ; Revista Inter-Legere Volume 2007 ; 2007 >
@@ -405,12 +404,11 @@
       >
 
       comment[publisher] = Universidade Federal do Rio Grande do Norte
-      param[base_url] = http://periodicos.ufrn.br/
+      param[base_url] = http://ufrn.emnuvens.com.br/
       param[journal_id] = porto
-      comment[notReady] = can't fetch permission page
 
-      au < notReady ; 2011 ; 1 ; Revista Porto Volume 2011 ; 2011 >
-      au < notReady ; 2012 ; 2 ; Revista Porto Volume 2012 ; 2012 >
+      au < exists ; 2011 ; 1 ; Revista Porto Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 2 ; Revista Porto Volume 2012 ; 2012 >
       au < expected ; 2013 ; 3 ; Revista Porto Volume 2013 ; 2013 >
       au < expected ; 2014 ; 4 ; Revista Porto Volume 2014 ; 2014 >
 
@@ -424,15 +422,14 @@
       >
 
       comment[publisher] = Universidade Federal do Rio Grande do Norte
-      param[base_url] = http://periodicos.ufrn.br/
+      param[base_url] = http://ufrn.emnuvens.com.br/
       param[journal_id] = saberes
-      comment[notReady] = can't fetch permission page
 
-      au < notReady ; 2008 ; 1 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2008 ; 2008 >
-      au < notReady ; 2009 ; 2 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2009 ; 2009 >
-      au < notReady ; 2010 ; 3 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2010 ; 2010 >
-      au < notReady ; 2011 ; 4 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2011 ; 2011 >
-      au < notReady ; 2012 ; 5 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2012 ; 2012 >
+      au < exists ; 2008 ; 1 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 2 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 3 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 4 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 5 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2012 ; 2012 >
       au < expected ; 2013 ; 6 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2013 ; 2013 >
       au < expected ; 2014 ; 7 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2014 ; 2014 >
 
