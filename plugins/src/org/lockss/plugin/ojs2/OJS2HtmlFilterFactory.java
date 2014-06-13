@@ -1,5 +1,5 @@
 /*
- * $Id: OJS2HtmlFilterFactory.java,v 1.11 2014-06-04 22:46:29 etenbrink Exp $
+ * $Id: OJS2HtmlFilterFactory.java,v 1.12 2014-06-13 16:52:07 etenbrink Exp $
  */
 
 /*
@@ -93,9 +93,17 @@ public class OJS2HtmlFilterFactory implements FilterFactory {
             // For JLIS.it: landing pages contain user view count
             HtmlNodeFilters.tagWithAttribute("span", "class", "ArticleViews"),
             // For ibictpln: PHP Query Profiler
+            // e.g. http://seer.bce.unb.br/index.php/Musica/article/view/915
             HtmlNodeFilters.tagWithAttribute("div", "id", "pqp-container"),
             // Total de acessos: keeps changing, there is no 'good' tag wrapped around text
+            // e.g. https://www.revistas.unijui.edu.br/index.php/desenvolvimentoemquestao/issue/view/18
             HtmlNodeFilters.tagWithTextRegex("b", "^ *total de acesso( dos artigo)?s: +[0-9]+ *$", true),
+            // For Librello: download and view counts
+            // e.g. http://www.librelloph.com/challengesinsustainability/issue/view/10
+            HtmlNodeFilters.tagWithTextRegex("a", "^(HTML|PDF|Views)$", true),
+            new AndFilter(
+                HtmlNodeFilters.tagWithAttribute("span", "class", "badge"),
+                HtmlNodeFilters.tagWithTextRegex("span", "^[0-9]*$")),
     };
     return new HtmlFilterInputStream(in, encoding,
           HtmlNodeFilterTransform.exclude(new OrFilter(filters))).
