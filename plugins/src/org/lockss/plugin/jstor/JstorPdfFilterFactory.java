@@ -1,5 +1,5 @@
 /*
- * $Id: JstorPdfFilterFactory.java,v 1.3 2014-06-12 21:00:50 alexandraohlson Exp $
+ * $Id: JstorPdfFilterFactory.java,v 1.4 2014-06-13 17:55:08 alexandraohlson Exp $
  */
 
 /*
@@ -88,9 +88,9 @@ public class JstorPdfFilterFactory extends ExtractingPdfFilterFactory {
     @Override
     public void operatorCallback() throws PdfException {
       if (logger.isDebug3()) {
-        logger.debug3("JSWorker: initial: " + state);
-        logger.debug3("JSWorker: index: " + getIndex());
-        logger.debug3("JSWorker: operator: " + getOpcode());
+        logger.debug3("Jstor WorkerTransform: initial: " + state);
+        logger.debug3("Jstor WorkerTransform: index: " + getIndex());
+        logger.debug3("Jstor WorkerTransform: operator: " + getOpcode());
       }
 
       switch (state) {
@@ -116,19 +116,18 @@ public class JstorPdfFilterFactory extends ExtractingPdfFilterFactory {
             beginIndex = getIndex();
             result = true;
             stop(); // found what we needed, stop processing this page
-          } else {
           }
         } break;
         
         default: {
-          throw new PdfException("Invalid state in JSWorker: " + state);
+          throw new PdfException("Invalid state in Jstor WorkerTransform: " + state);
         }
         
       }
       
       if (logger.isDebug3()) {
-        logger.debug3("JSWorker: final: " + state);
-        logger.debug3("JSWorker: result: " + result);
+        logger.debug3("Jstor WorkerTransform: final: " + state);
+        logger.debug3("Jstor WorkerTransform: result: " + result);
       }
       
     }
