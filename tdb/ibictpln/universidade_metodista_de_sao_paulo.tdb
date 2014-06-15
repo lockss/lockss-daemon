@@ -4,7 +4,7 @@
   >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; volume ; name ; param[year] >
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
 
   {
 
@@ -17,13 +17,13 @@
       param[base_url] = https://www.metodista.br/revistas/revistas-metodista/
       param[journal_id] = AUM
 
-      au < exists ; 2007 ; 1 ; Anuário Unesco/Metodista de Comunicação Regional Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 2 ; Anuário Unesco/Metodista de Comunicação Regional Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 3 ; Anuário Unesco/Metodista de Comunicação Regional Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 4 ; Anuário Unesco/Metodista de Comunicação Regional Volume 2010 ; 2010 >
-      au < expected ; 2011 ; 5 ; Anuário Unesco/Metodista de Comunicação Regional Volume 2011 ; 2011 >
-      au < expected ; 2012 ; 6 ; Anuário Unesco/Metodista de Comunicação Regional Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 7 ; Anuário Unesco/Metodista de Comunicação Regional Volume 2013 ; 2013 >
+      au < exists ; 2007 ; 1 ; Anuário Unesco/Metodista de Comunicação Regional Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 2 ; Anuário Unesco/Metodista de Comunicação Regional Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 3 ; Anuário Unesco/Metodista de Comunicação Regional Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 4 ; Anuário Unesco/Metodista de Comunicação Regional Volume 2010 ; 2010 ; >
+      au < expected ; 2011 ; 5 ; Anuário Unesco/Metodista de Comunicação Regional Volume 2011 ; 2011 ; >
+      au < expected ; 2012 ; 6 ; Anuário Unesco/Metodista de Comunicação Regional Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 7 ; Anuário Unesco/Metodista de Comunicação Regional Volume 2013 ; 2013 ; >
 
   }
 
@@ -38,26 +38,27 @@
       comment[publisher] = Universidade Metodista de São Paulo
       param[base_url] = https://www.metodista.br/revistas/revistas-metodista/
       param[journal_id] = CA
+      comment[v1982] = error on this page: https://www.metodista.br/revistas/revistas-metodista/index.php/CA/rt/metadata/1504
 
-      au < exists ; 1982 ; 1 ; Caminhando Volume 1982 ; 1982 >
-      au < exists ; 1984 ; 3 ; Caminhando Volume 1984 ; 1984 >
-      au < exists ; 1986 ; 5 ; Caminhando Volume 1986 ; 1986 >
-      au < exists ; 1992 ; 11 ; Caminhando Volume 1992 ; 1992 >
-      au < exists ; 1993 ; 12 ; Caminhando Volume 1993 ; 1993 >
-      au < exists ; 1994 ; 13 ; Caminhando Volume 1994 ; 1994 >
-      au < exists ; 2001 ; 20 ; Caminhando Volume 2001 ; 2001 >
-      au < exists ; 2002 ; 21 ; Caminhando Volume 2002 ; 2002 >
-      au < exists ; 2003 ; 22 ; Caminhando Volume 2003 ; 2003 >
-      au < exists ; 2004 ; 23 ; Caminhando Volume 2004 ; 2004 >
-      au < exists ; 2005 ; 24 ; Caminhando Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 25 ; Caminhando Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 26 ; Caminhando Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 27 ; Caminhando Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 28 ; Caminhando Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 29 ; Caminhando Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 30 ; Caminhando Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 31 ; Caminhando Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 32 ; Caminhando Volume 2013 ; 2013 >
+      au < notReady ; 1982 ; 1 ; Caminhando Volume 1982 ; 1982 ; url with no http on metadata page for article 1504 >
+      au < exists ; 1984 ; 3 ; Caminhando Volume 1984 ; 1984 ; >
+      au < exists ; 1986 ; 5 ; Caminhando Volume 1986 ; 1986 ; >
+      au < exists ; 1992 ; 11 ; Caminhando Volume 1992 ; 1992 ; >
+      au < exists ; 1993 ; 12 ; Caminhando Volume 1993 ; 1993 ; >
+      au < exists ; 1994 ; 13 ; Caminhando Volume 1994 ; 1994 ; >
+      au < exists ; 2001 ; 20 ; Caminhando Volume 2001 ; 2001 ; >
+      au < exists ; 2002 ; 21 ; Caminhando Volume 2002 ; 2002 ; >
+      au < exists ; 2003 ; 22 ; Caminhando Volume 2003 ; 2003 ; >
+      au < exists ; 2004 ; 23 ; Caminhando Volume 2004 ; 2004 ; >
+      au < exists ; 2005 ; 24 ; Caminhando Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 25 ; Caminhando Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 26 ; Caminhando Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 27 ; Caminhando Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 28 ; Caminhando Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 29 ; Caminhando Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 30 ; Caminhando Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 31 ; Caminhando Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 32 ; Caminhando Volume 2013 ; 2013 ; >
 
   }
 
@@ -72,18 +73,18 @@
       param[base_url] = https://www.metodista.br/revistas/revistas-metodista/
       param[journal_id] = COR
 
-      au < exists ; 2002 ; 1 ; Correlatio  Volume 2002 ; 2002 >
-      au < exists ; 2003 ; 2 ; Correlatio  Volume 2003 ; 2003 >
-      au < exists ; 2004 ; 3 ; Correlatio  Volume 2004 ; 2004 >
-      au < exists ; 2005 ; 4 ; Correlatio  Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 5 ; Correlatio  Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 6 ; Correlatio  Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 7 ; Correlatio  Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 8 ; Correlatio  Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 9 ; Correlatio  Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 10 ; Correlatio  Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 11 ; Correlatio  Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 12 ; Correlatio  Volume 2013 ; 2013 >
+      au < exists ; 2002 ; 1 ; Correlatio  Volume 2002 ; 2002 ; >
+      au < exists ; 2003 ; 2 ; Correlatio  Volume 2003 ; 2003 ; >
+      au < exists ; 2004 ; 3 ; Correlatio  Volume 2004 ; 2004 ; >
+      au < exists ; 2005 ; 4 ; Correlatio  Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 5 ; Correlatio  Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 6 ; Correlatio  Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 7 ; Correlatio  Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 8 ; Correlatio  Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 9 ; Correlatio  Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 10 ; Correlatio  Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 11 ; Correlatio  Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 12 ; Correlatio  Volume 2013 ; 2013 ; >
 
   }
 
@@ -98,18 +99,18 @@
       param[base_url] = https://www.metodista.br/revistas/revistas-metodista/
       param[journal_id] = CSO
 
-      au < exists ; 2002 ; 1 ; Comunicação & Sociedade Volume 2002 ; 2002 >
-      au < exists ; 2003 ; 2 ; Comunicação & Sociedade Volume 2003 ; 2003 >
-      au < exists ; 2004 ; 3 ; Comunicação & Sociedade Volume 2004 ; 2004 >
-      au < exists ; 2005 ; 4 ; Comunicação & Sociedade Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 5 ; Comunicação & Sociedade Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 6 ; Comunicação & Sociedade Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 7 ; Comunicação & Sociedade Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 8 ; Comunicação & Sociedade Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 9 ; Comunicação & Sociedade Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 10 ; Comunicação & Sociedade Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 11 ; Comunicação & Sociedade Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 12 ; Comunicação & Sociedade Volume 2013 ; 2013 >
+      au < exists ; 2002 ; 1 ; Comunicação & Sociedade Volume 2002 ; 2002 ; >
+      au < exists ; 2003 ; 2 ; Comunicação & Sociedade Volume 2003 ; 2003 ; >
+      au < exists ; 2004 ; 3 ; Comunicação & Sociedade Volume 2004 ; 2004 ; >
+      au < exists ; 2005 ; 4 ; Comunicação & Sociedade Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 5 ; Comunicação & Sociedade Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 6 ; Comunicação & Sociedade Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 7 ; Comunicação & Sociedade Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 8 ; Comunicação & Sociedade Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 9 ; Comunicação & Sociedade Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 10 ; Comunicação & Sociedade Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 11 ; Comunicação & Sociedade Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 12 ; Comunicação & Sociedade Volume 2013 ; 2013 ; >
 
   }
 
@@ -124,13 +125,13 @@
       param[base_url] = https://www.metodista.br/revistas/revistas-metodista/
       param[journal_id] = EL
 
-      au < exists ; 2007 ; 1 ; Educação & Linguagem Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 2 ; Educação & Linguagem Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 3 ; Educação & Linguagem Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 4 ; Educação & Linguagem Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 5 ; Educação & Linguagem Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 6 ; Educação & Linguagem Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 7 ; Educação & Linguagem Volume 2013 ; 2013 >
+      au < exists ; 2007 ; 1 ; Educação & Linguagem Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 2 ; Educação & Linguagem Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 3 ; Educação & Linguagem Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 4 ; Educação & Linguagem Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 5 ; Educação & Linguagem Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 6 ; Educação & Linguagem Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 7 ; Educação & Linguagem Volume 2013 ; 2013 ; >
 
   }
 
@@ -145,12 +146,12 @@
       param[base_url] = https://www.metodista.br/revistas/revistas-metodista/
       param[journal_id] = MA
 
-      au < exists ; 2008 ; 1 ; Mandrágora Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 2 ; Mandrágora Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 3 ; Mandrágora Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 4 ; Mandrágora Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 5 ; Mandrágora Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 6 ; Mandrágora Volume 2013 ; 2013 >
+      au < exists ; 2008 ; 1 ; Mandrágora Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 2 ; Mandrágora Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 3 ; Mandrágora Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 4 ; Mandrágora Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 5 ; Mandrágora Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 6 ; Mandrágora Volume 2013 ; 2013 ; >
 
   }
 
@@ -165,12 +166,12 @@
       param[base_url] = https://www.metodista.br/revistas/revistas-metodista/
       param[journal_id] = ML
 
-      au < exists ; 2008 ; 1 ; Múltiplas Leituras Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 2 ; Múltiplas Leituras Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 3 ; Múltiplas Leituras Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 4 ; Múltiplas Leituras Volume 2011 ; 2011 >
-      au < expected ; 2012 ; 5 ; Múltiplas Leituras Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 6 ; Múltiplas Leituras Volume 2013 ; 2013 >
+      au < exists ; 2008 ; 1 ; Múltiplas Leituras Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 2 ; Múltiplas Leituras Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 3 ; Múltiplas Leituras Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 4 ; Múltiplas Leituras Volume 2011 ; 2011 ; >
+      au < expected ; 2012 ; 5 ; Múltiplas Leituras Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 6 ; Múltiplas Leituras Volume 2013 ; 2013 ; >
 
   }
 
@@ -185,15 +186,15 @@
       param[base_url] = https://www.metodista.br/revistas/revistas-metodista/
       param[journal_id] = MUD
 
-      au < exists ; 2005 ; 1 ; Mudanças: Psicologia da Saúde Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 2 ; Mudanças: Psicologia da Saúde Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 3 ; Mudanças: Psicologia da Saúde Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 4 ; Mudanças: Psicologia da Saúde Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 5 ; Mudanças: Psicologia da Saúde Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 6 ; Mudanças: Psicologia da Saúde Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 7 ; Mudanças: Psicologia da Saúde Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 8 ; Mudanças: Psicologia da Saúde Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 9 ; Mudanças: Psicologia da Saúde Volume 2013 ; 2013 >
+      au < exists ; 2005 ; 1 ; Mudanças: Psicologia da Saúde Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 2 ; Mudanças: Psicologia da Saúde Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 3 ; Mudanças: Psicologia da Saúde Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 4 ; Mudanças: Psicologia da Saúde Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 5 ; Mudanças: Psicologia da Saúde Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 6 ; Mudanças: Psicologia da Saúde Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 7 ; Mudanças: Psicologia da Saúde Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 8 ; Mudanças: Psicologia da Saúde Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 9 ; Mudanças: Psicologia da Saúde Volume 2013 ; 2013 ; >
 
   }
 
@@ -208,13 +209,13 @@
       param[base_url] = https://www.metodista.br/revistas/revistas-metodista/
       param[journal_id] = O1
 
-      au < exists ; 2007 ; 1 ; Odonto Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 2 ; Odonto Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 3 ; Odonto Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 4 ; Odonto Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 5 ; Odonto Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 6 ; Odonto Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 7 ; Odonto Volume 2013 ; 2013 >
+      au < exists ; 2007 ; 1 ; Odonto Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 2 ; Odonto Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 3 ; Odonto Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 4 ; Odonto Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 5 ; Odonto Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 6 ; Odonto Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 7 ; Odonto Volume 2013 ; 2013 ; >
 
   }
 
@@ -230,15 +231,15 @@
       param[base_url] = https://www.metodista.br/revistas/revistas-metodista/
       param[journal_id] = OC
 
-      au < exists ; 2005 ; 1 ; Organizações em Contexto  Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 2 ; Organizações em Contexto  Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 3 ; Organizações em Contexto  Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 4 ; Organizações em Contexto  Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 5 ; Organizações em Contexto  Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 6 ; Organizações em Contexto  Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 7 ; Organizações em Contexto  Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 8 ; Organizações em Contexto  Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 9 ; Organizações em Contexto  Volume 2013 ; 2013 >
+      au < exists ; 2005 ; 1 ; Organizações em Contexto  Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 2 ; Organizações em Contexto  Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 3 ; Organizações em Contexto  Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 4 ; Organizações em Contexto  Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 5 ; Organizações em Contexto  Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 6 ; Organizações em Contexto  Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 7 ; Organizações em Contexto  Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 8 ; Organizações em Contexto  Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 9 ; Organizações em Contexto  Volume 2013 ; 2013 ; >
 
   }
 
@@ -253,11 +254,11 @@
       param[base_url] = https://www.metodista.br/revistas/revistas-metodista/
       param[journal_id] = PF
 
-      au < exists ; 2009 ; 1 ; Páginas de Filosofia Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 2 ; Páginas de Filosofia Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 3 ; Páginas de Filosofia Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 4 ; Páginas de Filosofia Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 5 ; Páginas de Filosofia Volume 2013 ; 2013 >
+      au < exists ; 2009 ; 1 ; Páginas de Filosofia Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 2 ; Páginas de Filosofia Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 3 ; Páginas de Filosofia Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 4 ; Páginas de Filosofia Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 5 ; Páginas de Filosofia Volume 2013 ; 2013 ; >
 
   }
 
@@ -272,14 +273,14 @@
       param[base_url] = https://www.metodista.br/revistas/revistas-metodista/
       param[journal_id] = PINFOR
 
-      au < exists ; 2006 ; 1 ; Psicólogo inFormação Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 2 ; Psicólogo inFormação Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 3 ; Psicólogo inFormação Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 4 ; Psicólogo inFormação Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 5 ; Psicólogo inFormação Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 6 ; Psicólogo inFormação Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 7 ; Psicólogo inFormação Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 8 ; Psicólogo inFormação Volume 2013 ; 2013 >
+      au < exists ; 2006 ; 1 ; Psicólogo inFormação Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 2 ; Psicólogo inFormação Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 3 ; Psicólogo inFormação Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 4 ; Psicólogo inFormação Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 5 ; Psicólogo inFormação Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 6 ; Psicólogo inFormação Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 7 ; Psicólogo inFormação Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 8 ; Psicólogo inFormação Volume 2013 ; 2013 ; >
 
   }
 
@@ -294,11 +295,11 @@
       param[base_url] = https://www.metodista.br/revistas/revistas-metodista/
       param[journal_id] = ReFAE
 
-      au < exists ; 2009 ; 1 ; Revista da Faculdade de Administração e Economia Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 2 ; Revista da Faculdade de Administração e Economia Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 3 ; Revista da Faculdade de Administração e Economia Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 4 ; Revista da Faculdade de Administração e Economia Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 5 ; Revista da Faculdade de Administração e Economia Volume 2013 ; 2013 >
+      au < exists ; 2009 ; 1 ; Revista da Faculdade de Administração e Economia Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 2 ; Revista da Faculdade de Administração e Economia Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 3 ; Revista da Faculdade de Administração e Economia Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 4 ; Revista da Faculdade de Administração e Economia Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 5 ; Revista da Faculdade de Administração e Economia Volume 2013 ; 2013 ; >
 
   }
 
@@ -313,10 +314,10 @@
       param[base_url] = https://www.metodista.br/revistas/revistas-metodista/
       param[journal_id] = REGS
 
-      au < exists ; 2010 ; 1 ; Revista Eletrônica Gestão e Serviços Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 2 ; Revista Eletrônica Gestão e Serviços Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 3 ; Revista Eletrônica Gestão e Serviços Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 4 ; Revista Eletrônica Gestão e Serviços Volume 2013 ; 2013 >
+      au < exists ; 2010 ; 1 ; Revista Eletrônica Gestão e Serviços Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 2 ; Revista Eletrônica Gestão e Serviços Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 3 ; Revista Eletrônica Gestão e Serviços Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 4 ; Revista Eletrônica Gestão e Serviços Volume 2013 ; 2013 ; >
 
   }
 
@@ -331,16 +332,16 @@
       param[base_url] = https://www.metodista.br/revistas/revistas-metodista/
       param[journal_id] = RFD
 
-      au < exists ; 2004 ; 1 ; Revista do Curso de Direito Volume 2004 [issn 2176-1094] ; 2004 >
-      au < exists ; 2005 ; 2 ; Revista do Curso de Direito Volume 2005 [issn 2176-1094] ; 2005 >
-      au < exists ; 2006 ; 3 ; Revista do Curso de Direito Volume 2006 [issn 2176-1094] ; 2006 >
-      au < exists ; 2007 ; 4 ; Revista do Curso de Direito Volume 2007 [issn 2176-1094] ; 2007 >
-      au < exists ; 2008 ; 5 ; Revista do Curso de Direito Volume 2008 [issn 2176-1094] ; 2008 >
-      au < exists ; 2009 ; 6 ; Revista do Curso de Direito Volume 2009 [issn 2176-1094] ; 2009 >
-      au < exists ; 2010 ; 7 ; Revista do Curso de Direito Volume 2010 [issn 2176-1094] ; 2010 >
-      au < exists ; 2011 ; 8 ; Revista do Curso de Direito Volume 2011 [issn 2176-1094] ; 2011 >
-      au < exists ; 2012 ; 9 ; Revista do Curso de Direito Volume 2012 [issn 2176-1094] ; 2012 >
-      au < expected ; 2013 ; 10 ; Revista do Curso de Direito Volume 2013 [issn 2176-1094] ; 2013 >
+      au < exists ; 2004 ; 1 ; Revista do Curso de Direito Volume 2004 [issn 2176-1094] ; 2004 ; >
+      au < exists ; 2005 ; 2 ; Revista do Curso de Direito Volume 2005 [issn 2176-1094] ; 2005 ; >
+      au < exists ; 2006 ; 3 ; Revista do Curso de Direito Volume 2006 [issn 2176-1094] ; 2006 ; >
+      au < exists ; 2007 ; 4 ; Revista do Curso de Direito Volume 2007 [issn 2176-1094] ; 2007 ; >
+      au < exists ; 2008 ; 5 ; Revista do Curso de Direito Volume 2008 [issn 2176-1094] ; 2008 ; >
+      au < exists ; 2009 ; 6 ; Revista do Curso de Direito Volume 2009 [issn 2176-1094] ; 2009 ; >
+      au < exists ; 2010 ; 7 ; Revista do Curso de Direito Volume 2010 [issn 2176-1094] ; 2010 ; >
+      au < exists ; 2011 ; 8 ; Revista do Curso de Direito Volume 2011 [issn 2176-1094] ; 2011 ; >
+      au < exists ; 2012 ; 9 ; Revista do Curso de Direito Volume 2012 [issn 2176-1094] ; 2012 ; >
+      au < expected ; 2013 ; 10 ; Revista do Curso de Direito Volume 2013 [issn 2176-1094] ; 2013 ; >
 
   }
 
