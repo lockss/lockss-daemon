@@ -1507,7 +1507,7 @@
     au < finished ; crawling ; 2010 ; AoB PLANTS Volume 2010 ; 2010 ; >
     au < finished ; crawling ; 2011 ; AoB PLANTS Volume 2011 ; 2011 ; >
     au < finished ; crawling ; 2012 ; AoB PLANTS Volume 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; AoB PLANTS Volume 5 ; 5 ; >
+    au < testing ; exists ; 2013 ; AoB PLANTS Volume 5 ; 5 ; >
     au < expected ; exists ; 2014 ; AoB PLANTS Volume 6 ; 6 ; >
 
   }
@@ -2038,7 +2038,7 @@
     au < finished ; crawling ; 2010 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 3 ; 3 ; >
     au < finished ; crawling ; 2011 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 4 ; 4 ; >
     au < zapped ; finished ; 2012 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2013 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 6 ; 6 ; >
+    au < testing ; exists ; 2013 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 6 ; 6 ; >
     au < expected ; exists ; 2014 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 7 ; 7 ; >
 
     }
@@ -3006,7 +3006,7 @@
     au < crawling ; exists ; 2013 ; British Medical Bulletin Volume 105 ; 105 ; >
     au < crawling ; exists ; 2013 ; British Medical Bulletin Volume 106 ; 106 ; >
     au < crawling ; exists ; 2013 ; British Medical Bulletin Volume 107 ; 107 ; >
-    au < manifest ; exists ; 2013 ; British Medical Bulletin Volume 108 ; 108 ; >
+    au < testing ; exists ; 2013 ; British Medical Bulletin Volume 108 ; 108 ; >
     au < manifest ; exists ; 2014 ; British Medical Bulletin Volume 109 ; 109 ; >
     au < expected ; exists ; 2014 ; British Medical Bulletin Volume 110 ; 110 ; >
     au < expected ; exists ; 2014 ; British Medical Bulletin Volume 111 ; 111 ; >
@@ -9292,7 +9292,7 @@
     au < finished ; crawling ; 2012 ; Jerusalem Review of Legal Studies Volume 5 ; 5 ; >
     au < finished ; crawling ; 2012 ; Jerusalem Review of Legal Studies Volume 6 ; 6 ; >
     au < crawling ; exists ; 2013 ; Jerusalem Review of Legal Studies Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2013 ; Jerusalem Review of Legal Studies Volume 8 ; 8 ; >
+    au < testing ; exists ; 2013 ; Jerusalem Review of Legal Studies Volume 8 ; 8 ; >
     au < exists ; exists ; 2014 ; Jerusalem Review of Legal Studies Volume 9 ; 9 ; >
     au < expected ; exists ; 2014 ; Jerusalem Review of Legal Studies Volume 10 ; 10 ; >
 
@@ -9705,7 +9705,7 @@
     au < manifest ; exists ; 2010 ; The Journal of Applied Poultry Research Volume 19 ; 19 ; >
     au < manifest ; exists ; 2011 ; The Journal of Applied Poultry Research Volume 20 ; 20 ; >
     au < manifest ; exists ; 2012 ; The Journal of Applied Poultry Research Volume 21 ; 21 ; >
-    au < manifest ; exists ; 2013 ; The Journal of Applied Poultry Research Volume 22 ; 22 ; >
+    au < testing ; exists ; 2013 ; The Journal of Applied Poultry Research Volume 22 ; 22 ; >
     au < manifest ; exists ; 2014 ; The Journal of Applied Poultry Research Volume 23 ; 23 ; >
 
     }
@@ -13999,7 +13999,7 @@
     au < manifest ; exists ; 2010 ; Medical Mycology Volume 48 ; 48 ; >
     au < manifest ; exists ; 2011 ; Medical Mycology Volume 49 ; 49 ; >
     au < manifest ; exists ; 2012 ; Medical Mycology Volume 50 ; 50 ; >
-    au < manifest ; exists ; 2013 ; Medical Mycology Volume 51 ; 51 ; >
+    au < testing ; exists ; 2013 ; Medical Mycology Volume 51 ; 51 ; >
     au < manifest ; exists ; 2014 ; Medical Mycology Volume 52 ; 52 ; >
 
   }
@@ -14955,7 +14955,7 @@
     au < manifest ; exists ; 2010 ; Journal of Music Therapy Volume 47 ; 47 ; >
     au < manifest ; exists ; 2011 ; Journal of Music Therapy Volume 48 ; 48 ; >
     au < manifest ; exists ; 2012 ; Journal of Music Therapy Volume 49 ; 49 ; >
-    au < manifest ; exists ; 2013 ; Journal of Music Therapy Volume 50 ; 50 ; >
+    au < testing ; exists ; 2013 ; Journal of Music Therapy Volume 50 ; 50 ; >
     au < expected ; exists ; 2014 ; Journal of Music Therapy Volume 51 ; 51 ; >
 
     }
