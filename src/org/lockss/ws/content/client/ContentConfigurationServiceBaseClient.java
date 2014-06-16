@@ -1,5 +1,5 @@
 /*
- * $Id: ContentConfigurationServiceBaseClient.java,v 1.1 2014-05-12 17:26:18 fergaloy-sf Exp $
+ * $Id: ContentConfigurationServiceBaseClient.java,v 1.2 2014-06-16 23:36:05 fergaloy-sf Exp $
  */
 
 /*
@@ -50,6 +50,12 @@ public abstract class ContentConfigurationServiceBaseClient extends
   private static final String SERVICE_NAME =
       "ContentConfigurationServiceImplService";
 
+  private static final String TIMEOUT_KEY =
+      "com.sun.xml.internal.ws.request.timeout";
+
+  // The length of the client connection timeout in seconds.
+  private static final int TIMEOUT_VALUE = 600;
+
   /**
    * Executes the client code common to all the operations.
    * 
@@ -60,6 +66,13 @@ public abstract class ContentConfigurationServiceBaseClient extends
     Service service = Service.create(new URL(ADDRESS_LOCATION), new QName(
 	TARGET_NAMESPACE, SERVICE_NAME));
 
-    return service.getPort(ContentConfigurationService.class);
+    ContentConfigurationService port =
+	service.getPort(ContentConfigurationService.class);
+
+    // Set the client connection timeout.
+    ((javax.xml.ws.BindingProvider) port).getRequestContext().put(TIMEOUT_KEY,
+	new Integer(TIMEOUT_VALUE*1000));
+
+    return port;
   }
 }

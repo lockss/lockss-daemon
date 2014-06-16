@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsServiceBaseClient.java,v 1.2 2013-06-19 18:23:45 fergaloy-sf Exp $
+ * $Id: CounterReportsServiceBaseClient.java,v 1.3 2014-06-16 23:36:05 fergaloy-sf Exp $
  */
 
 /*
@@ -49,6 +49,12 @@ public abstract class CounterReportsServiceBaseClient extends
       "http://reports.ws.lockss.org/";
   private static final String SERVICE_NAME = "CounterReportsServiceImplService";
 
+  private static final String TIMEOUT_KEY =
+      "com.sun.xml.internal.ws.request.timeout";
+
+  // The length of the client connection timeout in seconds.
+  private static final int TIMEOUT_VALUE = 600;
+
   /**
    * Executes the client code common to all the operations.
    * 
@@ -59,6 +65,12 @@ public abstract class CounterReportsServiceBaseClient extends
     Service service = Service.create(new URL(ADDRESS_LOCATION), new QName(
 	TARGET_NAMESPACE, SERVICE_NAME));
 
-    return service.getPort(CounterReportsService.class);
+    CounterReportsService port = service.getPort(CounterReportsService.class);
+
+    // Set the client connection timeout.
+    ((javax.xml.ws.BindingProvider) port).getRequestContext().put(TIMEOUT_KEY,
+	new Integer(TIMEOUT_VALUE*1000));
+
+    return port;
   }
 }
