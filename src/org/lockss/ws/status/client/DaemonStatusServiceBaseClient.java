@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatusServiceBaseClient.java,v 1.1 2013-03-22 04:47:31 fergaloy-sf Exp $
+ * $Id: DaemonStatusServiceBaseClient.java,v 1.1.20.1 2014-06-16 20:50:22 fergaloy-sf Exp $
  */
 
 /*
@@ -48,6 +48,12 @@ public abstract class DaemonStatusServiceBaseClient extends
   private static final String TARGET_NAMESPACE = "http://status.ws.lockss.org/";
   private static final String SERVICE_NAME = "DaemonStatusServiceImplService";
 
+  private static final String TIMEOUT_KEY =
+      "com.sun.xml.internal.ws.request.timeout";
+
+  // The length of the client connection timeout in seconds.
+  private static final int TIMEOUT_VALUE = 600;
+
   /**
    * Executes the client code common to all the operations.
    * 
@@ -60,6 +66,12 @@ public abstract class DaemonStatusServiceBaseClient extends
     Service service = Service.create(new URL(ADDRESS_LOCATION), new QName(
 	TARGET_NAMESPACE, SERVICE_NAME));
 
-    return service.getPort(DaemonStatusService.class);
+    DaemonStatusService port = service.getPort(DaemonStatusService.class);
+
+    // Set the client connection timeout.
+    ((javax.xml.ws.BindingProvider) port).getRequestContext().put(TIMEOUT_KEY,
+	new Integer(TIMEOUT_VALUE*1000));
+
+    return port;
   }
 }
