@@ -1,5 +1,5 @@
 /*
- * $Id: ContentConfigurationServiceImpl.java,v 1.1 2014-05-12 17:26:19 fergaloy-sf Exp $
+ * $Id: ContentConfigurationServiceImpl.java,v 1.1.2.1 2014-06-16 23:22:58 fergaloy-sf Exp $
  */
 
 /*
@@ -52,7 +52,9 @@ public class ContentConfigurationServiceImpl implements
    * Configures the archival unit defined by its identifier.
    * 
    * @param auId
-   *          A String with the identifier of the archival unit.
+   *          A String with the identifier of the archival unit. The
+   *          archival unit to be added must already be in the title db that's
+   *          loaded into the daemon.
    * @return a ContentConfigurationResult with the result of the operation.
    * @throws LockssWebServicesFault
    */
