@@ -22,7 +22,8 @@
       {
       
         param[journal_id] = catholic
-        comment[notReady] = journal moved to http://digitalcommons.lmu.edu/ce
+        comment[moved_platform] = journal moved to http://digitalcommons.lmu.edu/ce
+        comment[moved_publisher] = moved to Loyala Marymount University
 
         au < down ; 1997 ; Catholic Education Volume 1 (1997) ; 1 ; 1997 >   
         au < down ; 1998 ; Catholic Education Volume 1-2 (1998) ; 1-2 ; 1998 > 
