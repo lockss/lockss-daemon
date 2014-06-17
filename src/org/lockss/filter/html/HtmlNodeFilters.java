@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlNodeFilters.java,v 1.25 2014-06-17 02:07:53 thib_gc Exp $
+ * $Id: HtmlNodeFilters.java,v 1.26 2014-06-17 04:30:43 tlipkis Exp $
  */
 
 /*
@@ -345,6 +345,16 @@ public class HtmlNodeFilters {
 	.setNegateFilter(true);
     }
     return new OrFilter(filters);
+  }
+
+  /** Create a NodeFilter that matches all parts of a subtree except for a
+   * subtree contained within it.  This is useful for removing a section of
+   * a document except for one or more of its subsections.  See {@link
+   * AllExceptSubtreeNodeFilter}.
+   */
+  public static NodeFilter allExceptSubtree(NodeFilter rootNodeFilter,
+					    NodeFilter subtreeNodeFilter) {
+    return new AllExceptSubtreeNodeFilter(rootNodeFilter, subtreeNodeFilter);
   }
 
   static String getCompositeStringText(CompositeTag node) {

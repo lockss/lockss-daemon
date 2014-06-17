@@ -1,5 +1,5 @@
 /*
- * $Id: TestHtmlNodeFilters.java,v 1.14 2014-06-17 02:07:53 thib_gc Exp $
+ * $Id: TestHtmlNodeFilters.java,v 1.15 2014-06-17 04:30:43 tlipkis Exp $
  */
 
 /*
@@ -712,7 +712,7 @@ public class TestHtmlNodeFilters extends LockssTestCase {
     SimpleNodeIterator iter;
     
     ret = new NodeList();
-    nf = new AllExceptSubtreeNodeFilter(
+    nf = HtmlNodeFilters.allExceptSubtree(
              HtmlNodeFilters.tagWithAttribute("div", "id", "a12"),
              HtmlNodeFilters.tagWithAttribute("div", "id", "a122"));
     nl.elementAt(0).collectInto(ret, nf);
@@ -726,7 +726,7 @@ public class TestHtmlNodeFilters extends LockssTestCase {
     }
     
     ret = new NodeList();
-    nf = new AllExceptSubtreeNodeFilter(
+    nf = HtmlNodeFilters.allExceptSubtree(
              HtmlNodeFilters.tagWithAttribute("div", "id", "a12"),
              HtmlNodeFilters.tagWithAttribute("div", "id", "a99"));
     nl.elementAt(0).collectInto(ret, nf);
@@ -740,7 +740,7 @@ public class TestHtmlNodeFilters extends LockssTestCase {
     }
     
     ret = new NodeList();
-    nf = new AllExceptSubtreeNodeFilter(
+    nf = HtmlNodeFilters.allExceptSubtree(
              HtmlNodeFilters.tagWithAttribute("div", "id", "a99"),
              HtmlNodeFilters.tagWithAttribute("div", "id", "a122"));
     nl.elementAt(0).collectInto(ret, nf);
