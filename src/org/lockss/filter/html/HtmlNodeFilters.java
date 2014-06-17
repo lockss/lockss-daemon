@@ -1,10 +1,10 @@
 /*
- * $Id: HtmlNodeFilters.java,v 1.24 2014-04-23 20:44:31 tlipkis Exp $
+ * $Id: HtmlNodeFilters.java,v 1.25 2014-06-17 02:07:53 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,7 +35,6 @@ package org.lockss.filter.html;
 import java.io.*;
 import java.util.*;
 
-import org.apache.commons.lang.ArrayUtils;
 import org.htmlparser.*;
 import org.htmlparser.nodes.*;
 import org.htmlparser.tags.*;
@@ -1179,4 +1178,156 @@ public class HtmlNodeFilters {
       return false;
     }
   }
+  
+  /**
+   * <p>
+   * This node filter selects all nodes in a target tree (characterized by a
+   * target root node filter), except for the nodes in a designated subtree
+   * (characterized by a designated subtree node filter) and all nodes on the
+   * direct path from the target root to the designated subtree.
+   * </p>
+   * <p>
+   * If used as the underlying node filter of an
+   * {@link HtmlNodeFilterTransform#exclude(NodeFilter)} transform, everything
+   * in the target tree will be excluded except for the designated subtree and
+   * the direct path to it from the target root (just enough to retain the
+   * original structure).
+   * </p>
+   * <p>
+   * Sample document:
+   * </p>
+<pre>
+&lt;div id="a1"&gt;
+  &lt;div id="a11"&gt;
+    &lt;div id="a111"&gt;...&lt;/div&gt;
+    &lt;div id="a112"&gt;...&lt;/div&gt;
+    &lt;div id="a113"&gt;...&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div id="a12"&gt;
+    &lt;div id="a121"&gt;
+      &lt;div id="a1211"&gt;...&lt;/div&gt;
+      &lt;div id="a1212"&gt;...&lt;/div&gt;
+      &lt;div id="a1213"&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div id="a122"&gt;
+      &lt;div id="a1221"&gt;...&lt;/div&gt;
+      &lt;div id="a1222"&gt;...&lt;/div&gt;
+      &lt;div id="a1223"&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div id="a123"&gt;
+      &lt;div id="a1231"&gt;...&lt;/div&gt;
+      &lt;div id="a1232"&gt;...&lt;/div&gt;
+      &lt;div id="a1233"&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div id="a13"&gt;
+    &lt;div id="a131"&gt;...&lt;/div&gt;
+    &lt;div id="a132"&gt;...&lt;/div&gt;
+    &lt;div id="a133"&gt;...&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+   * <p>
+   * This code will focus its attention on the tree rooted at a12 but will
+   * protect the subtree rooted at a122, by selecting a121, a1211, a1212, a1213,
+   * a123, a1231, a1232, a1233, but not a122, a1221, a1222, a1223, nor a12, nor
+   * anything higher than a12 (like a11 and all its contents and a13 and all its
+   * contents):
+   * </p>
+<pre>
+      NodeFilter nf =
+          new AllExceptSubtreeNodeFilter(
+              HtmlNodeFilters.tagWithAttribute("div", "id", "a12"),
+              HtmlNodeFilters.tagWithAttribute("div", "id", "a122"));
+</pre>
+   * <p>
+   * This code will select absolutely everything in the tree rooted at a12,
+   * because there is no subtree "a99" to protect, nor a path to it:
+   * </p>
+<pre>
+      NodeFilter nf =
+          new AllExceptSubtreeNodeFilter(
+              HtmlNodeFilters.tagWithAttribute("div", "id", "a12"),
+              HtmlNodeFilters.tagWithAttribute("div", "id", "a99"));
+</pre>
+   * <p>
+   * This code will select absolutely nothing, because there is no target tree
+   * "a99" to flag:
+   * </p>
+<pre>
+      NodeFilter nf =
+          new AllExceptSubtreeNodeFilter(
+              HtmlNodeFilters.tagWithAttribute("div", "id", "a99"),
+              HtmlNodeFilters.tagWithAttribute("div", "id", "a122"));
+</pre>
+   * 
+   * @since 1.65.4
+   */
+  public static class AllExceptSubtreeNodeFilter implements NodeFilter {
+
+    /**
+     * <p>
+     * A node filter characterizing the target root.
+     * </p>
+     */
+    protected NodeFilter rootNodeFilter;
+    
+    /**
+     * <p>
+     * A node filter characterizing the designated subtree.
+     * </p>
+     */
+    protected NodeFilter subtreeNodeFilter;
+
+    /**
+     * <p>
+     * Builds a node filter that will select all nodes in the target tree
+     * (rooted at the node characterized by the target root node filter), except
+     * for the nodes in the designated subtree characterized by the subtree node
+     * filter and any nodes in the direct path from the target root node to the
+     * designated subtree.
+     * </p>
+     * 
+     * @param rootNodeFilter
+     *          A node filter characterizing the target root.
+     * @param subtreeNodeFilter
+     *          A node filter characterizing the designated subtree.
+     */
+    public AllExceptSubtreeNodeFilter(NodeFilter rootNodeFilter,
+                                      NodeFilter subtreeNodeFilter) {
+      this.rootNodeFilter = rootNodeFilter;
+      this.subtreeNodeFilter = subtreeNodeFilter;
+    }
+    
+    @Override
+    public boolean accept(Node node) {
+      // Inspect the node's ancestors
+      for (Node current = node ; current != null ; current = current.getParent()) {
+        if (subtreeNodeFilter.accept(current)) {
+          // The node is in the designated subtree: don't select it (meaning,
+          // return false).
+          return false;
+        }
+        if (rootNodeFilter.accept(current)) {
+          // The node is in the target tree. Selecting it or not depends on
+          // whether it is on the path from the target root to the designated
+          // subtree or not.
+          NodeList nl = new NodeList();
+          node.collectInto(nl, subtreeNodeFilter);
+          // If the node list is empty, the node is not on the path from the
+          // target root to the designated subtree: select it (meaning, return
+          // true). If the node list is non-empty, the node is on the path from
+          // the target root to the designated subtree: don't select it
+          // (meaning, return false). In other words, return the result of
+          // asking if the node list is empty.
+          return nl.size() == 0;
+        }
+      }
+      // The node is not under the target root: don't select it (meaning,
+      // return false).
+      return false;
+    }
+    
+  }
+  
 }
