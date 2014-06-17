@@ -357,9 +357,9 @@
     param[base_url] = http://www.jecme.eu/
     param[journal_id] = jecme
 
-    au < exists ; exists ; 2012 ; Journal of European Continuing Medical Education Volume 1 ; 1 ; 2012 >
-    au < exists ; exists ; 2013 ; Journal of European Continuing Medical Education Volume 2 ; 2 ; 2013 >
-    au < exists ; exists ; 2014 ; Journal of European Continuing Medical Education Volume 3 ; 3 ; 2014 >
+    au < manifest ; exists ; 2012 ; Journal of European Continuing Medical Education Volume 1 ; 1 ; 2012 >
+    au < manifest ; exists ; 2013 ; Journal of European Continuing Medical Education Volume 2 ; 2 ; 2013 >
+    au < manifest ; exists ; 2014 ; Journal of European Continuing Medical Education Volume 3 ; 3 ; 2014 >
 
   }
 
