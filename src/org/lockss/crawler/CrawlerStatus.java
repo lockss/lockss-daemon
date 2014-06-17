@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerStatus.java,v 1.17 2014-06-09 07:29:33 tlipkis Exp $
+ * $Id: CrawlerStatus.java,v 1.18 2014-06-17 01:48:27 tlipkis Exp $
  */
 
 /*
@@ -1305,7 +1305,7 @@ public class CrawlerStatus {
 			    Iterator<String> retainedUrlsIter) {
       if (!keepAny || !retainedUrlsIter.hasNext()) {
 	map = null;
-      } else if (!keepAll) {
+      } else if (!keepAll && map != null) {
 	HashMap newmap = new HashMap();
 	while (retainedUrlsIter.hasNext()) {
 	  String url = retainedUrlsIter.next();
