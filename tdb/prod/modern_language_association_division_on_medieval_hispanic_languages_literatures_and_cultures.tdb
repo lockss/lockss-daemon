@@ -20,10 +20,10 @@
     param[journal_dir] = la_coronica
     attr[journal_id] = cor
 
-    au < exists ; 2000 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 29 ; 29 >
-    au < exists ; 2001-2002 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 30 ; 30 >
-    au < exists ; 2002-2003 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 31 ; 31 >
-    au < exists ; 2003-2004 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 32 ; 32 >
+    au < manifest ; 2000 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 29 ; 29 >
+    au < manifest ; 2001-2002 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 30 ; 30 >
+    au < manifest ; 2002-2003 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 31 ; 31 >
+    au < manifest ; 2003-2004 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 32 ; 32 >
     au < manifest ; 2004-2005 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 33 ; 33 >
     au < manifest ; 2005-2006 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 34 ; 34 >
     au < manifest ; 2006-2007 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 35 ; 35 >
