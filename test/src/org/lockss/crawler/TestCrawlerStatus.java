@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlerStatus.java,v 1.12.8.1 2014-06-09 07:27:07 tlipkis Exp $
+ * $Id: TestCrawlerStatus.java,v 1.12.8.2 2014-06-17 01:47:42 tlipkis Exp $
  */
 
 /*
@@ -701,6 +701,17 @@ public class TestCrawlerStatus extends LockssTestCase {
     // Documenting its current list sementics, but a set implementation
     // would be ok.
     assertEquals(ListUtil.list(ref1, ref2, ref1), cs.getReferrers(url1));
+  }
+
+  // Ensure referrers.seal() doesn't throw NPE if map not created yet.
+  public void testReferrersSealEmpty() {
+    ConfigurationUtil.setFromArgs(CrawlerStatus.PARAM_RECORD_REFERRERS_MODE,
+				  "All");
+    CrawlerStatus cs = new CrawlerStatus(mau, null, "Type 42");
+    assertTrue(cs.hasReferrers());
+    cs.signalErrorForUrl(url1, "err 1");
+    cs.sealCounters();
+    assertEmpty(cs.getReferrers(url1));
   }
 
   public void testReferrersSeal(CrawlerStatus cs) {
