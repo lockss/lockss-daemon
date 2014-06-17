@@ -45,7 +45,7 @@
       comment[issn] = missing
       param[journal_id] = organicfarming
 
-      au < exists ; exists ; 2014 ; Journal of Human Security Volume 1 ; 1 ; 2014 >
+      au < manifest ; exists ; 2014 ; Journal of Human Security Volume 1 ; 1 ; 2014 >
 
   }
 

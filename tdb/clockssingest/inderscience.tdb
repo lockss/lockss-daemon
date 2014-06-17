@@ -40,7 +40,7 @@
       
       au < finished ; crawling ; 2012 ; African Journal of Economic and Sustainable Development Volume 1 ; 1 >
       au < crawling ; exists ; 2013 ; African Journal of Economic and Sustainable Development Volume 2 ; 2 >
-      au < expected ; exists ; 2014 ; African Journal of Economic and Sustainable Development Volume 3 ; 3 >
+      au < manifest ; exists ; 2014 ; African Journal of Economic and Sustainable Development Volume 3 ; 3 >
 
     }
 
@@ -323,7 +323,7 @@
       au < crawling ; exists ; 2013 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 13 ; 13 >
       au < crawling ; exists ; 2013 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 14 ; 14 >
       au < manifest ; exists ; 2014 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 15 ; 15 >
-      au < expected ; exists ; 2014 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 16 ; 16 >
+      au < manifest ; exists ; 2014 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 16 ; 16 >
       au < expected ; exists ; 2014 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 17 ; 17 >
 
     }
@@ -522,7 +522,7 @@
       au < manifest ; exists ; 2008 ; International Journal of Agricultural Resources, Governance and Ecology Volume 7 ; 7 >
       au < manifest ; exists ; 2009 ; International Journal of Agricultural Resources, Governance and Ecology Volume 8 ; 8 >
       au < finished ; crawling ; 2011-2012 ; International Journal of Agricultural Resources, Governance and Ecology Volume 9 ; 9 >
-      au < expected ; exists ; 2013 ; International Journal of Agricultural Resources, Governance and Ecology Volume 10 ; 10 >
+      au < manifest ; exists ; 2013 ; International Journal of Agricultural Resources, Governance and Ecology Volume 10 ; 10 >
       au < expected ; exists ; 2014 ; International Journal of Agricultural Resources, Governance and Ecology Volume 11 ; 11 >
       
     }
@@ -746,7 +746,7 @@
       au < zapped ; finished ; 2011 ; International Journal of Automation and Control Volume 5 ; 5 >
       au < zapped ; finished ; 2012 ; International Journal of Automation and Control Volume 6 ; 6 >
       au < crawling ; exists ; 2013 ; International Journal of Automation and Control Volume 7 ; 7 >
-      au < expected ; exists ; 2014 ; International Journal of Automation and Control Volume 8 ; 8 >
+      au < manifest ; exists ; 2014 ; International Journal of Automation and Control Volume 8 ; 8 >
 
     }
 
@@ -1007,7 +1007,7 @@
       au < crawling ; exists ; 2013 ; International Journal of Biomedical Engineering and Technology Volume 12 ; 12 >
       au < testing ; exists ; 2013 ; International Journal of Biomedical Engineering and Technology Volume 13 ; 13 >
       au < manifest ; exists ; 2014 ; International Journal of Biomedical Engineering and Technology Volume 14 ; 14 >
-      au < expected ; exists ; 2014 ; International Journal of Biomedical Engineering and Technology Volume 15 ; 15 >
+      au < manifest ; exists ; 2014 ; International Journal of Biomedical Engineering and Technology Volume 15 ; 15 >
       au < expected ; exists ; 2014 ; International Journal of Biomedical Engineering and Technology Volume 16 ; 16 >
 
     }
@@ -1970,7 +1970,7 @@
       au < zapped ; finished ; 2010-2011 ; International Journal of Corporate Governance Volume 2 ; 2 >
       au < zapped ; finished ; 2012 ; International Journal of Corporate Governance Volume 3 ; 3 >
       au < crawling ; exists ; 2013 ; International Journal of Corporate Governance Volume 4 ; 4 >
-      au < expected ; exists ; 2014 ; International Journal of Corporate Governance Volume 5 ; 5 >
+      au < manifest ; exists ; 2014 ; International Journal of Corporate Governance Volume 5 ; 5 >
 
     }
 
@@ -2632,7 +2632,7 @@
       au < crawling ; exists ; 2010 ; International Journal of Emergency Management Volume 7 ; 7 >
       au < zapped ; finished ; 2011-2012 ; International Journal of Emergency Management Volume 8 ; 8 >
       au < crawling ; exists ; 2013 ; International Journal of Emergency Management Volume 9 ; 9 >
-      au < expected ; exists ; 2014 ; International Journal of Emergency Management Volume 10 ; 10 >
+      au < manifest ; exists ; 2014 ; International Journal of Emergency Management Volume 10 ; 10 >
 
     }
 
@@ -2840,7 +2840,7 @@
       au < crawling ; exists ; 2013 ; International Journal of Entrepreneurship and Small Business Volume 19 ; 19 >
       au < wanted ; exists ; 2013 ; International Journal of Entrepreneurship and Small Business Volume 20 ; 20 >
       au < manifest ; exists ; 2014 ; International Journal of Entrepreneurship and Small Business Volume 21 ; 21 >
-      au < expected ; exists ; 2014 ; International Journal of Entrepreneurship and Small Business Volume 22 ; 22 >
+      au < manifest ; exists ; 2014 ; International Journal of Entrepreneurship and Small Business Volume 22 ; 22 >
       au < expected ; exists ; 2014 ; International Journal of Entrepreneurship and Small Business Volume 23 ; 23 >
 
     }
@@ -3191,7 +3191,7 @@
       au < crawling ; exists ; 2009-2010 ; International Journal of Financial Services Management Volume 4 ; 4 >
       au < zapped ; finished ; 2011-2012 ; International Journal of Financial Services Management Volume 5 ; 5 >
       au < crawling ; exists ; 2013 ; International Journal of Financial Services Management Volume 6 ; 6 >
-      au < expected ; exists ; 2014 ; International Journal of Financial Services Management Volume 7 ; 7 >
+      au < manifest ; exists ; 2014 ; International Journal of Financial Services Management Volume 7 ; 7 >
 
     }
 
@@ -3601,7 +3601,7 @@
       
       au < finished ; crawling ; 2012 ; International Journal of Human Factors and Ergonomics Volume 1 ; 1 >
       au < crawling ; exists ; 2013 ; International Journal of Human Factors and Ergonomics Volume 2 ; 2 >
-      au < expected ; exists ; 2014 ; International Journal of Human Factors and Ergonomics Volume 3 ; 3 >
+      au < manifest ; exists ; 2014 ; International Journal of Human Factors and Ergonomics Volume 3 ; 3 >
 
     }
 
@@ -3922,9 +3922,8 @@
       >
 
       param[journal_issn] = 1751-3235
-      comment[0] = title is not yet published on 9/20/2013
       
-      au < expected ; exists ; 2014 ; International Journal of Information Systems and Management Volume 1 ; 1 >
+      au < manifest ; exists ; 2014 ; International Journal of Information Systems and Management Volume 1 ; 1 >
 
     }
 
@@ -4532,9 +4531,8 @@
       >
 
       param[journal_issn] = 1754-2308
-      comment[0] = title is not yet published on 4/11/2013
       
-      au < expected ; exists ; 2014 ; International Journal of Lean Enterprise Research Volume 1 ; 1 >
+      au < manifest ; exists ; 2014 ; International Journal of Lean Enterprise Research Volume 1 ; 1 >
 
     }
 
@@ -4604,7 +4602,7 @@
       au < zapped ; finished ; 2011 ; International Journal of Learning Technology Volume 6 ; 6 >
       au < zapped ; finished ; 2012 ; International Journal of Learning Technology Volume 7 ; 7 >
       au < crawling ; exists ; 2013 ; International Journal of Learning Technology Volume 8 ; 8 >
-      au < expected ; exists ; 2014 ; International Journal of Learning Technology Volume 9 ; 9 >
+      au < manifest ; exists ; 2014 ; International Journal of Learning Technology Volume 9 ; 9 >
 
     }
 
@@ -4728,7 +4726,7 @@
       au < crawling ; exists ; 2013 ; International Journal of Logistics Systems and Management Volume 15 ; 15 >
       au < crawling ; exists ; 2013 ; International Journal of Logistics Systems and Management Volume 16 ; 16 >
       au < manifest ; exists ; 2014 ; International Journal of Logistics Systems and Management Volume 17 ; 17 >
-      au < expected ; exists ; 2014 ; International Journal of Logistics Systems and Management Volume 18 ; 18 >
+      au < manifest ; exists ; 2014 ; International Journal of Logistics Systems and Management Volume 18 ; 18 >
       au < expected ; exists ; 2014 ; International Journal of Logistics Systems and Management Volume 19 ; 19 >
 
     }
@@ -5342,7 +5340,7 @@
       au < zapped ; finished ; 2011 ; International Journal of Microstructure and Materials Properties Volume 6 ; 6 >
       au < zapped ; finished ; 2012 ; International Journal of Microstructure and Materials Properties Volume 7 ; 7 >
       au < crawling ; exists ; 2013 ; International Journal of Microstructure and Materials Properties Volume 8 ; 8 >
-      au < expected ; exists ; 2014 ; International Journal of Microstructure and Materials Properties Volume 9 ; 9 >
+      au < manifest ; exists ; 2014 ; International Journal of Microstructure and Materials Properties Volume 9 ; 9 >
 
     }
 
