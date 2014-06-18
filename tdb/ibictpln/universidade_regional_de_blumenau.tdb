@@ -17,9 +17,9 @@
       param[base_url] = http://proxy.furb.br/ojs/
       param[journal_id] = atosdepesquisa
       
-      comment[notReady0] = Vol 2008. 500 warnings like http://proxy.furb.br/ojs/index.php/atosdepesquisa/article/view/944/715
-      comment[notReady1] = Vol 2009. 500 warnings like http://proxy.furb.br/ojs/index.php/atosdepesquisa/article/view/1716
-      comment[notReady2] = Vol 2010. 500 warnings like  http://proxy.furb.br/ojs/index.php/atosdepesquisa/article/view/1958
+      comment[v2008] = Vol 2008. 500 warnings like http://proxy.furb.br/ojs/index.php/atosdepesquisa/article/view/944/715
+      comment[v2009] = Vol 2009. 500 warnings like http://proxy.furb.br/ojs/index.php/atosdepesquisa/article/view/1716
+      comment[v2010] = Vol 2010. 500 warnings like  http://proxy.furb.br/ojs/index.php/atosdepesquisa/article/view/1958
 
       au < released ; 2006 ; 1 ; Atos de Pesquisa em Educação Volume 1 ; 2006 >
       au < released ; 2007 ; 2 ; Atos de Pesquisa em Educação Volume 2 ; 2007 >
