@@ -441,13 +441,12 @@
       comment[publisher] = Pontifícia Universidade Católica de São Paulo
       param[base_url] = http://revistas.pucsp.br/
       param[journal_id] = fronteiraz
-      comment[notReady] = Language xml issues.
 
       au < released ; 2008 ; 1 ; FronteiraZ Volume 2008 ; 2008 ; >
       au < released ; 2009 ; 2 ; FronteiraZ Volume 2009 ; 2009 ; >
       au < released ; 2010 ; 3 ; FronteiraZ Volume 2010 ; 2010 ; >
-      au < notReady ; 2011 ; 4 ; FronteiraZ Volume 2011 ; 2011 ; >
-      au < notReady ; 2012 ; 5 ; FronteiraZ Volume 2012 ; 2012 ; >
+      au < ready ; 2011 ; 4 ; FronteiraZ Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 5 ; FronteiraZ Volume 2012 ; 2012 ; >
       au < manifest ; 2013 ; 6 ; FronteiraZ Volume 2013 ; 2013 ; >
 
   }
@@ -472,9 +471,9 @@
       au < released ; 2006 ; 6 ; Galáxia Volume 2006 ; 2006 ; >
       au < released ; 2007 ; 7 ; Galáxia Volume 2007 ; 2007 ; >
       au < released ; 2008 ; 8 ; Galáxia Volume 2008 ; 2008 ; >
-      au < notReady ; 2009 ; 9 ; Galáxia Volume 2009 ; 2009 ; >
-      au < notReady ; 2010 ; 10 ; Galáxia Volume 2010 ; 2010 ; >
-      au < notReady ; 2011 ; 11 ; Galáxia Volume 2011 ; 2011 ; >
+      au < ready ; 2009 ; 9 ; Galáxia Volume 2009 ; 2009 ; >
+      au < ready ; 2010 ; 10 ; Galáxia Volume 2010 ; 2010 ; >
+      au < ready ; 2011 ; 11 ; Galáxia Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 12 ; Galáxia Volume 2012 ; 2012 ; >
       au < manifest ; 2013 ; 13 ; Galáxia Volume 2013 ; 2013 ; >
 
