@@ -6897,6 +6897,64 @@
 
   {
     title <
+      name = Journal of Quantum Chemistry ;
+      issn = 2356-7597 ;
+      eissn = 2314-6982 ;
+      issnl = 2356-7597
+    >
+
+    param[journal_id] = jqc
+
+    au < exists ; 2014 ; Journal of Quantum Chemistry Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Radiotherapy ;
+      issn = 2356-7600 ;
+      eissn = 2314-8349 ;
+      issnl = 2356-7600
+    >
+
+    param[journal_id] = jra
+
+    au < exists ; 2014 ; Journal of Radiotherapy Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Renewable Energy ;
+      issn = 2314-4386 ;
+      eissn = 2314-4394 ;
+      issnl = 2314-4386
+    >
+
+    param[journal_id] = jre
+
+    au < exists ; 2013 ; Journal of Renewable Energy Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; Journal of Renewable Energy Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Respiratory Medicine ;
+      issn = 2356-7619 ;
+      eissn = 2314-6958 ;
+      issnl = 2356-7619
+    >
+
+    param[journal_id] = jrm
+
+    au < exists ; 2013 ; Journal of Respiratory Medicine Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; Journal of Respiratory Medicine Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
       name = Journal of Robotics ;
       issn = 1687-9600 ;
       eissn = 1687-9619 ;
@@ -6935,6 +6993,21 @@
 
   {
     title <
+      name = Journal of Sexually Transmitted Diseases ;
+      issn = 2090-7893 ;
+      eissn = 2090-7958 ;
+      issnl = 2090-7893
+    >
+
+    param[journal_id] = jstd
+
+    au < exists ; 2013 ; Journal of Sexually Transmitted Diseases Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; Journal of Sexually Transmitted Diseases Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
       name = Journal of Signal Transduction ;
       issn = 2090-1739 ;
       eissn = 2090-1747 ;
@@ -6965,6 +7038,36 @@
     au < manifest ; 2012 ; Journal of Skin Cancer Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Journal of Skin Cancer Volume 2013 ; 2013 ; 2013 >
     au < manifest ; 2014 ; Journal of Skin Cancer Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Soft Matter ;
+      issn = 2356-7627 ;
+      eissn = 2314-6818 ;
+      issnl = 2356-7627
+    >
+
+    param[journal_id] = jsmat
+
+    au < exists ; 2013 ; Journal of Soft Matter Volume 2013 ; 2013 ; 2013 >
+    au < expected ; 2014 ; Journal of Soft Matter Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Solar Energy ;
+      issn = 2356-7635 ;
+      eissn = 2314-6230 ;
+      issnl = 2356-7635
+    >
+
+    param[journal_id] = jse
+
+    au < exists ; 2013 ; Journal of Solar Energy Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; Journal of Solar Energy Volume 2014 ; 2014 ; 2014 >
 
   }
 
