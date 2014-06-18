@@ -230,13 +230,12 @@
       comment[publisher] = Pontifícia Universidade Católica do Rio Grande do Sul
       param[base_url] = http://revistaseletronicas.pucrs.br/ojs/
       param[journal_id] = intuitio
-      comment[notReady] = repository error
 
-      au < notReady ; 2008 ; 1 ; intuitio Volume 2008 ; 2008 >
-      au < notReady ; 2009 ; 2 ; intuitio Volume 2009 ; 2009 >
-      au < notReady ; 2010 ; 3 ; intuitio Volume 2010 ; 2010 >
-      au < notReady ; 2011 ; 4 ; intuitio Volume 2011 ; 2011 >
-      au < notReady ; 2012 ; 5 ; intuitio Volume 2012 ; 2012 >
+      au < ready ; 2008 ; 1 ; intuitio Volume 2008 ; 2008 >
+      au < ready ; 2009 ; 2 ; intuitio Volume 2009 ; 2009 >
+      au < ready ; 2010 ; 3 ; intuitio Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 4 ; intuitio Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 5 ; intuitio Volume 2012 ; 2012 >
       au < manifest ; 2013 ; 6 ; intuitio Volume 2013 ; 2013 >
       au < expected ; 2014 ; 7 ; intuitio Volume 2014 ; 2014 >
 
