@@ -9,9 +9,9 @@ containing a SQL-like query used to determine the results to be returned.
 <p />The result of executing such a query is always a List of objects. The kind
 of objects populating the result List is specific to the web service operation
 being performed.
-<br />For example, the Daemon Status web service operation
-<a href="DaemonStatusService.html#queryPlugins(java.lang.String)">queryPlugins</a>
-returns a List of <a href="../entities/PluginWsResult.html">PluginWsResult</a>
+<br />For example, the Daemon Status web service operation {@link
+org.lockss.ws.status.DaemonStatusService#queryPlugins(java.lang.String)
+queryPlugins} returns a List of {@link org.lockss.ws.entities.PluginWsResult}
 objects.
 <p />The query may have up to three clauses, each of them allowing the user to
 control a different aspect of the results. Each clause is separated from the
@@ -26,7 +26,10 @@ other by at least one space.
   property names or an asterisk (<code>*</code>):
   <ul>
     <li>If a list of property names is included, the names in the list must
-    correspond to properties of the objects being returned.
+    correspond to properties of the objects being returned. The property names
+    may be obtained from the get* accessor method names by removing the leading
+    "get" and changing the capitalization of the resulting first letter to
+    lower case.
     <li>The asterisk (<code>*</code>) is a shorthand way of specifying all the
     property names.
   </ul>
