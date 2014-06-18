@@ -18,12 +18,7 @@
       param[base_url] = http://www.esmarn.tjrn.jus.br/revistas/
       param[journal_id] = revista_da_esmarn
 
-      au < exists ; 2008 ; 1 ; Revista da ESMARN Volume 2008 ; 2008 >
-      au < expected ; 2009 ; 2 ; Revista da ESMARN Volume 2009 ; 2009 >
-      au < expected ; 2010 ; 3 ; Revista da ESMARN Volume 2010 ; 2010 >
-      au < expected ; 2011 ; 4 ; Revista da ESMARN Volume 2011 ; 2011 >
-      au < expected ; 2012 ; 5 ; Revista da ESMARN Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 6 ; Revista da ESMARN Volume 2013 ; 2013 >
+      au < exists ; 2008 ; 7 ; Revista da ESMARN Volume 2008 ; 2008 >
 
   }
 
@@ -48,6 +43,7 @@
       au < exists ; ; 13 ; Revista Direito e Liberdade Volume 7 ; 0007 >
       au < exists ; ; 14 ; Revista Direito e Liberdade Volume 8 ; 0008 >
       au < exists ; ; 15 ; Revista Direito e Liberdade Volume 9 ; 0009 >
+      au < exists ; ; 16 ; Revista Direito e Liberdade Volume 10 ; 0010 >
 
   }
 
