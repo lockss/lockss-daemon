@@ -4451,14 +4451,14 @@
     param[journal_id] = trb 
     comment[dnp] = released for old plugin
     
-    au < exists ; exists ; 2007 ; Tribology - Materials, Surfaces & Interfaces Volume 1 ; 1 > 
-    au < exists ; exists ; 2008 ; Tribology - Materials, Surfaces & Interfaces Volume 2 ; 2 > 
-    au < exists ; exists ; 2009 ; Tribology - Materials, Surfaces & Interfaces Volume 3 ; 3 > 
+    au < manifest ; exists ; 2007 ; Tribology - Materials, Surfaces & Interfaces Volume 1 ; 1 > 
+    au < manifest ; exists ; 2008 ; Tribology - Materials, Surfaces & Interfaces Volume 2 ; 2 > 
+    au < manifest ; exists ; 2009 ; Tribology - Materials, Surfaces & Interfaces Volume 3 ; 3 > 
     au < doNotProcess ; doNotProcess ; 2010 ; Tribology - Materials, Surfaces & Interfaces Volume 4 ; 4 > 
     au < doNotProcess ; doNotProcess ; 2011 ; Tribology - Materials, Surfaces & Interfaces Volume 5 ; 5 > 
     au < doNotProcess ; doNotProcess ; 2012 ; Tribology - Materials, Surfaces & Interfaces Volume 6 ; 6 > 
-    au < exists ; exists ; 2013 ; Tribology - Materials, Surfaces & Interfaces Volume 7 ; 7 > 
-    au < exists ; exists ; 2014 ; Tribology - Materials, Surfaces & Interfaces Volume 8 ; 8 >
+    au < manifest ; exists ; 2013 ; Tribology - Materials, Surfaces & Interfaces Volume 7 ; 7 > 
+    au < manifest ; exists ; 2014 ; Tribology - Materials, Surfaces & Interfaces Volume 8 ; 8 >
 
   }
 
@@ -4474,23 +4474,23 @@
     param[journal_id] = tcc 
     comment[continues] = 0893-2344 
 
-    au < exists ; exists ; 1997-1998 ; Twentieth-Century China Volume 23 ; 23 > 
-    au < exists ; exists ; 1998-1999 ; Twentieth-Century China Volume 24 ; 24 > 
-    au < exists ; exists ; 1999-2000 ; Twentieth-Century China Volume 25 ; 25 > 
-    au < exists ; exists ; 2000-2001 ; Twentieth-Century China Volume 26 ; 26 > 
-    au < exists ; exists ; 2001-2002 ; Twentieth-Century China Volume 27 ; 27 > 
-    au < exists ; exists ; 2002-2003 ; Twentieth-Century China Volume 28 ; 28 > 
-    au < exists ; exists ; 2003-2004 ; Twentieth-Century China Volume 29 ; 29 > 
-    au < exists ; exists ; 2004-2005 ; Twentieth-Century China Volume 30 ; 30 > 
-    au < exists ; exists ; 2006 ; Twentieth-Century China Volume 31 ; 31 > 
-    au < exists ; exists ; 2007 ; Twentieth-Century China Volume 32 ; 32 > 
-    au < exists ; exists ; 2008 ; Twentieth-Century China Volume 33 ; 33 > 
-    au < exists ; exists ; 2009 ; Twentieth-Century China Volume 34 ; 34 > 
+    au < manifest ; exists ; 1997-1998 ; Twentieth-Century China Volume 23 ; 23 > 
+    au < manifest ; exists ; 1998-1999 ; Twentieth-Century China Volume 24 ; 24 > 
+    au < manifest ; exists ; 1999-2000 ; Twentieth-Century China Volume 25 ; 25 > 
+    au < manifest ; exists ; 2000-2001 ; Twentieth-Century China Volume 26 ; 26 > 
+    au < manifest ; exists ; 2001-2002 ; Twentieth-Century China Volume 27 ; 27 > 
+    au < manifest ; exists ; 2002-2003 ; Twentieth-Century China Volume 28 ; 28 > 
+    au < manifest ; exists ; 2003-2004 ; Twentieth-Century China Volume 29 ; 29 > 
+    au < manifest ; exists ; 2004-2005 ; Twentieth-Century China Volume 30 ; 30 > 
+    au < manifest ; exists ; 2006 ; Twentieth-Century China Volume 31 ; 31 > 
+    au < manifest ; exists ; 2007 ; Twentieth-Century China Volume 32 ; 32 > 
+    au < manifest ; exists ; 2008 ; Twentieth-Century China Volume 33 ; 33 > 
+    au < manifest ; exists ; 2009 ; Twentieth-Century China Volume 34 ; 34 > 
     au < doNotProcess ; doNotProcess ; 2010 ; Twentieth-Century China Volume 35 ; 35 > 
     au < doNotProcess ; doNotProcess ; 2011 ; Twentieth-Century China Volume 36 ; 36 > 
     au < doNotProcess ; doNotProcess ; 2012 ; Twentieth-Century China Volume 37 ; 37 > 
-    au < exists ; exists ; 2013 ; Twentieth-Century China Volume 38 ; 38 > 
-    au < exists ; exists ; 2014 ; Twentieth-Century China Volume 39 ; 39 > 
+    au < manifest ; exists ; 2013 ; Twentieth-Century China Volume 38 ; 38 > 
+    au < manifest ; exists ; 2014 ; Twentieth-Century China Volume 39 ; 39 > 
 
   }
 
@@ -4523,50 +4523,50 @@
 
     param[journal_id] = vea 
 
-    au < exists ; exists ; 1971 ; Vernacular Architecture Volume 1 ; 1 > 
+    au < manifest ; exists ; 1971 ; Vernacular Architecture Volume 1 ; 1 > 
     au < doesNotExist ; doesNotExist ; 0 ; Vernacular Architecture Volume 2 ; 2 > 
-    au < exists ; exists ; 1972 ; Vernacular Architecture Volume 3 ; 3 > 
-    au < exists ; exists ; 1973 ; Vernacular Architecture Volume 4 ; 4 > 
-    au < exists ; exists ; 1974 ; Vernacular Architecture Volume 5 ; 5 > 
-    au < exists ; exists ; 1975 ; Vernacular Architecture Volume 6 ; 6 > 
-    au < exists ; exists ; 1976 ; Vernacular Architecture Volume 7 ; 7 > 
-    au < exists ; exists ; 1977 ; Vernacular Architecture Volume 8 ; 8 > 
-    au < exists ; exists ; 1978 ; Vernacular Architecture Volume 9 ; 9 > 
-    au < exists ; exists ; 1979 ; Vernacular Architecture Volume 10 ; 10 > 
-    au < exists ; exists ; 1980 ; Vernacular Architecture Volume 11 ; 11 > 
-    au < exists ; exists ; 1981 ; Vernacular Architecture Volume 12 ; 12 > 
-    au < exists ; exists ; 1982 ; Vernacular Architecture Volume 13 ; 13 > 
-    au < exists ; exists ; 1983 ; Vernacular Architecture Volume 14 ; 14 > 
-    au < exists ; exists ; 1984 ; Vernacular Architecture Volume 15 ; 15 > 
-    au < exists ; exists ; 1985 ; Vernacular Architecture Volume 16 ; 16 > 
-    au < exists ; exists ; 1986 ; Vernacular Architecture Volume 17 ; 17 > 
-    au < exists ; exists ; 1987 ; Vernacular Architecture Volume 18 ; 18 > 
-    au < exists ; exists ; 1988 ; Vernacular Architecture Volume 19 ; 19 > 
-    au < exists ; exists ; 1989 ; Vernacular Architecture Volume 20 ; 20 > 
-    au < exists ; exists ; 1990 ; Vernacular Architecture Volume 21 ; 21 > 
-    au < exists ; exists ; 1991 ; Vernacular Architecture Volume 22 ; 22 > 
-    au < exists ; exists ; 1992 ; Vernacular Architecture Volume 23 ; 23 > 
-    au < exists ; exists ; 1993 ; Vernacular Architecture Volume 24 ; 24 > 
-    au < exists ; exists ; 1994 ; Vernacular Architecture Volume 25 ; 25 > 
-    au < exists ; exists ; 1995 ; Vernacular Architecture Volume 26 ; 26 > 
-    au < exists ; exists ; 1996 ; Vernacular Architecture Volume 27 ; 27 > 
-    au < exists ; exists ; 1997 ; Vernacular Architecture Volume 28 ; 28 > 
-    au < exists ; exists ; 1998 ; Vernacular Architecture Volume 29 ; 29 > 
-    au < exists ; exists ; 1999 ; Vernacular Architecture Volume 30 ; 30 > 
-    au < exists ; exists ; 2000 ; Vernacular Architecture Volume 31 ; 31 > 
-    au < exists ; exists ; 2001 ; Vernacular Architecture Volume 32 ; 32 > 
-    au < exists ; exists ; 2002 ; Vernacular Architecture Volume 33 ; 33 > 
-    au < exists ; exists ; 2003 ; Vernacular Architecture Volume 34 ; 34 > 
-    au < exists ; exists ; 2004 ; Vernacular Architecture Volume 35 ; 35 > 
-    au < exists ; exists ; 2005 ; Vernacular Architecture Volume 36 ; 36 > 
-    au < exists ; exists ; 2006 ; Vernacular Architecture Volume 37 ; 37 > 
-    au < exists ; exists ; 2007 ; Vernacular Architecture Volume 38 ; 38 > 
-    au < exists ; exists ; 2008 ; Vernacular Architecture Volume 39 ; 39 > 
-    au < exists ; exists ; 2009 ; Vernacular Architecture Volume 40 ; 40 > 
+    au < manifest ; exists ; 1972 ; Vernacular Architecture Volume 3 ; 3 > 
+    au < manifest ; exists ; 1973 ; Vernacular Architecture Volume 4 ; 4 > 
+    au < manifest ; exists ; 1974 ; Vernacular Architecture Volume 5 ; 5 > 
+    au < manifest ; exists ; 1975 ; Vernacular Architecture Volume 6 ; 6 > 
+    au < manifest ; exists ; 1976 ; Vernacular Architecture Volume 7 ; 7 > 
+    au < manifest ; exists ; 1977 ; Vernacular Architecture Volume 8 ; 8 > 
+    au < manifest ; exists ; 1978 ; Vernacular Architecture Volume 9 ; 9 > 
+    au < manifest ; exists ; 1979 ; Vernacular Architecture Volume 10 ; 10 > 
+    au < manifest ; exists ; 1980 ; Vernacular Architecture Volume 11 ; 11 > 
+    au < manifest ; exists ; 1981 ; Vernacular Architecture Volume 12 ; 12 > 
+    au < manifest ; exists ; 1982 ; Vernacular Architecture Volume 13 ; 13 > 
+    au < manifest ; exists ; 1983 ; Vernacular Architecture Volume 14 ; 14 > 
+    au < manifest ; exists ; 1984 ; Vernacular Architecture Volume 15 ; 15 > 
+    au < manifest ; exists ; 1985 ; Vernacular Architecture Volume 16 ; 16 > 
+    au < manifest ; exists ; 1986 ; Vernacular Architecture Volume 17 ; 17 > 
+    au < manifest ; exists ; 1987 ; Vernacular Architecture Volume 18 ; 18 > 
+    au < manifest ; exists ; 1988 ; Vernacular Architecture Volume 19 ; 19 > 
+    au < manifest ; exists ; 1989 ; Vernacular Architecture Volume 20 ; 20 > 
+    au < manifest ; exists ; 1990 ; Vernacular Architecture Volume 21 ; 21 > 
+    au < manifest ; exists ; 1991 ; Vernacular Architecture Volume 22 ; 22 > 
+    au < manifest ; exists ; 1992 ; Vernacular Architecture Volume 23 ; 23 > 
+    au < manifest ; exists ; 1993 ; Vernacular Architecture Volume 24 ; 24 > 
+    au < manifest ; exists ; 1994 ; Vernacular Architecture Volume 25 ; 25 > 
+    au < manifest ; exists ; 1995 ; Vernacular Architecture Volume 26 ; 26 > 
+    au < manifest ; exists ; 1996 ; Vernacular Architecture Volume 27 ; 27 > 
+    au < manifest ; exists ; 1997 ; Vernacular Architecture Volume 28 ; 28 > 
+    au < manifest ; exists ; 1998 ; Vernacular Architecture Volume 29 ; 29 > 
+    au < manifest ; exists ; 1999 ; Vernacular Architecture Volume 30 ; 30 > 
+    au < manifest ; exists ; 2000 ; Vernacular Architecture Volume 31 ; 31 > 
+    au < manifest ; exists ; 2001 ; Vernacular Architecture Volume 32 ; 32 > 
+    au < manifest ; exists ; 2002 ; Vernacular Architecture Volume 33 ; 33 > 
+    au < manifest ; exists ; 2003 ; Vernacular Architecture Volume 34 ; 34 > 
+    au < manifest ; exists ; 2004 ; Vernacular Architecture Volume 35 ; 35 > 
+    au < manifest ; exists ; 2005 ; Vernacular Architecture Volume 36 ; 36 > 
+    au < manifest ; exists ; 2006 ; Vernacular Architecture Volume 37 ; 37 > 
+    au < manifest ; exists ; 2007 ; Vernacular Architecture Volume 38 ; 38 > 
+    au < manifest ; exists ; 2008 ; Vernacular Architecture Volume 39 ; 39 > 
+    au < manifest ; exists ; 2009 ; Vernacular Architecture Volume 40 ; 40 > 
     au < doNotProcess ; doNotProcess ; 2010 ; Vernacular Architecture Volume 41 ; 41 > 
     au < doNotProcess ; doNotProcess ; 2011 ; Vernacular Architecture Volume 42 ; 42 > 
     au < doNotProcess ; doNotProcess ; 2012 ; Vernacular Architecture Volume 43 ; 43 >
-    au < exists ; exists ; 2013 ; Vernacular Architecture Volume 44 ; 44 >
+    au < manifest ; exists ; 2013 ; Vernacular Architecture Volume 44 ; 44 >
     au < expected ; exists ; 2014 ; Vernacular Architecture Volume 45 ; 45 > 
 
   }
@@ -4582,39 +4582,39 @@
 
     param[journal_id] = war 
 
-    au < exists ; exists ; 1983 ; War & Society Volume 1 ; 1 > 
-    au < exists ; exists ; 1984 ; War & Society Volume 2 ; 2 > 
-    au < exists ; exists ; 1985 ; War & Society Volume 3 ; 3 > 
-    au < exists ; exists ; 1986 ; War & Society Volume 4 ; 4 > 
-    au < exists ; exists ; 1987 ; War & Society Volume 5 ; 5 > 
-    au < exists ; exists ; 1988 ; War & Society Volume 6 ; 6 > 
-    au < exists ; exists ; 1989 ; War & Society Volume 7 ; 7 > 
-    au < exists ; exists ; 1990 ; War & Society Volume 8 ; 8 > 
-    au < exists ; exists ; 1991 ; War & Society Volume 9 ; 9 > 
-    au < exists ; exists ; 1992 ; War & Society Volume 10 ; 10 > 
-    au < exists ; exists ; 1993 ; War & Society Volume 11 ; 11 > 
-    au < exists ; exists ; 1994 ; War & Society Volume 12 ; 12 > 
-    au < exists ; exists ; 1995 ; War & Society Volume 13 ; 13 > 
-    au < exists ; exists ; 1996 ; War & Society Volume 14 ; 14 > 
-    au < exists ; exists ; 1997 ; War & Society Volume 15 ; 15 > 
-    au < exists ; exists ; 1998 ; War & Society Volume 16 ; 16 > 
-    au < exists ; exists ; 1999 ; War & Society Volume 17 ; 17 > 
-    au < exists ; exists ; 2000 ; War & Society Volume 18 ; 18 > 
-    au < exists ; exists ; 2001 ; War & Society Volume 19 ; 19 > 
-    au < exists ; exists ; 2002 ; War & Society Volume 20 ; 20 > 
-    au < exists ; exists ; 2003 ; War & Society Volume 21 ; 21 > 
-    au < exists ; exists ; 2004 ; War & Society Volume 22 ; 22 > 
-    au < exists ; exists ; 2005 ; War & Society Volume 23 ; 23 > 
-    au < exists ; exists ; 2005 ; War & Society Volume 24 ; 24 > 
-    au < exists ; exists ; 2006 ; War & Society Volume 25 ; 25 > 
-    au < exists ; exists ; 2007 ; War & Society Volume 26 ; 26 > 
-    au < exists ; exists ; 2008 ; War & Society Volume 27 ; 27 > 
-    au < exists ; exists ; 2009 ; War & Society Volume 28 ; 28 > 
+    au < manifest ; exists ; 1983 ; War & Society Volume 1 ; 1 > 
+    au < manifest ; exists ; 1984 ; War & Society Volume 2 ; 2 > 
+    au < manifest ; exists ; 1985 ; War & Society Volume 3 ; 3 > 
+    au < manifest ; exists ; 1986 ; War & Society Volume 4 ; 4 > 
+    au < manifest ; exists ; 1987 ; War & Society Volume 5 ; 5 > 
+    au < manifest ; exists ; 1988 ; War & Society Volume 6 ; 6 > 
+    au < manifest ; exists ; 1989 ; War & Society Volume 7 ; 7 > 
+    au < manifest ; exists ; 1990 ; War & Society Volume 8 ; 8 > 
+    au < manifest ; exists ; 1991 ; War & Society Volume 9 ; 9 > 
+    au < manifest ; exists ; 1992 ; War & Society Volume 10 ; 10 > 
+    au < manifest ; exists ; 1993 ; War & Society Volume 11 ; 11 > 
+    au < manifest ; exists ; 1994 ; War & Society Volume 12 ; 12 > 
+    au < manifest ; exists ; 1995 ; War & Society Volume 13 ; 13 > 
+    au < manifest ; exists ; 1996 ; War & Society Volume 14 ; 14 > 
+    au < manifest ; exists ; 1997 ; War & Society Volume 15 ; 15 > 
+    au < manifest ; exists ; 1998 ; War & Society Volume 16 ; 16 > 
+    au < manifest ; exists ; 1999 ; War & Society Volume 17 ; 17 > 
+    au < manifest ; exists ; 2000 ; War & Society Volume 18 ; 18 > 
+    au < manifest ; exists ; 2001 ; War & Society Volume 19 ; 19 > 
+    au < manifest ; exists ; 2002 ; War & Society Volume 20 ; 20 > 
+    au < manifest ; exists ; 2003 ; War & Society Volume 21 ; 21 > 
+    au < manifest ; exists ; 2004 ; War & Society Volume 22 ; 22 > 
+    au < manifest ; exists ; 2005 ; War & Society Volume 23 ; 23 > 
+    au < manifest ; exists ; 2005 ; War & Society Volume 24 ; 24 > 
+    au < manifest ; exists ; 2006 ; War & Society Volume 25 ; 25 > 
+    au < manifest ; exists ; 2007 ; War & Society Volume 26 ; 26 > 
+    au < manifest ; exists ; 2008 ; War & Society Volume 27 ; 27 > 
+    au < manifest ; exists ; 2009 ; War & Society Volume 28 ; 28 > 
     au < doNotProcess ; doNotProcess ; 2010 ; War & Society Volume 29 ; 29 > 
     au < doNotProcess ; doNotProcess ; 2011 ; War & Society Volume 30 ; 30 > 
     au < doNotProcess ; doNotProcess ; 2012 ; War & Society Volume 31 ; 31 > 
-    au < exists ; exists ; 2013 ; War & Society Volume 32 ; 32 > 
-    au < exists ; exists ; 2014 ; War & Society Volume 33 ; 33 > 
+    au < manifest ; exists ; 2013 ; War & Society Volume 32 ; 32 > 
+    au < manifest ; exists ; 2014 ; War & Society Volume 33 ; 33 > 
 
   }
 
@@ -4631,7 +4631,7 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Yorkshire Archaeological Journal Volume 82 ; 82 >
     au < doNotProcess ; doNotProcess ; 2011 ; Yorkshire Archaeological Journal Volume 83 ; 83 >
     au < doNotProcess ; doNotProcess ; 2012 ; Yorkshire Archaeological Journal Volume 84 ; 84 >
-    au < exists ; exists ; 2013 ; Yorkshire Archaeological Journal Volume 85 ; 85 >
+    au < manifest ; exists ; 2013 ; Yorkshire Archaeological Journal Volume 85 ; 85 >
     au < expected ; exists ; 2014 ; Yorkshire Archaeological Journal Volume 86 ; 86 >
 
   }
