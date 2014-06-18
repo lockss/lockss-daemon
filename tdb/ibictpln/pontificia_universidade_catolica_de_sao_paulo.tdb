@@ -547,7 +547,6 @@
       comment[publisher] = Pontifícia Universidade Católica de São Paulo
       param[base_url] = http://revistas.pucsp.br/
       param[journal_id] = intercambio
-      comment[notReady] = XML language issues
 
       au < released ; 1996 ; 1 ; Intercâmbio Volume 1996 ; 1996 ; >
       au < released ; 1997 ; 2 ; Intercâmbio Volume 1997 ; 1997 ; >
@@ -560,7 +559,7 @@
       au < released ; 2008 ; 9 ; Intercâmbio Volume 2008 ; 2008 ; >
       au < released ; 2009 ; 10 ; Intercâmbio Volume 2009 ; 2009 ; >
       au < released ; 2010 ; 11 ; Intercâmbio Volume 2010 ; 2010 ; >
-      au < notReady ; 2011 ; 12 ; Intercâmbio Volume 2011 ; 2011 ; >
+      au < ready ; 2011 ; 12 ; Intercâmbio Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 13 ; Intercâmbio Volume 2012 ; 2012 ; >
       au < manifest ; 2013 ; 14 ; Intercâmbio Volume 2013 ; 2013 ; >
 
@@ -576,14 +575,13 @@
       comment[publisher] = Pontifícia Universidade Católica de São Paulo
       param[base_url] = http://revistas.pucsp.br/
       param[journal_id] = kairos
-      comment[notReady] = Some PDF issues, mostly DC language xml problems
 
       au < released ; 2007 ; 1 ; Kairós Volume 2007 ; 2007 ; >
       au < released ; 2008 ; 2 ; Kairós Volume 2008 ; 2008 ; >
-      au < notReady ; 2009 ; 3 ; Kairós Volume 2009 ; 2009 ; >
-      au < notReady ; 2010 ; 4 ; Kairós Volume 2010 ; 2010 ; >
-      au < notReady ; 2011 ; 5 ; Kairós Volume 2011 ; 2011 ; >
-      au < notReady ; 2012 ; 6 ; Kairós Volume 2012 ; 2012 ; >
+      au < ready ; 2009 ; 3 ; Kairós Volume 2009 ; 2009 ; >
+      au < notReady ; 2010 ; 4 ; Kairós Volume 2010 ; 2010 ; pdf variations >
+      au < ready ; 2011 ; 5 ; Kairós Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 6 ; Kairós Volume 2012 ; 2012 ; >
       au < manifest ; 2013 ; 7 ; Kairós Volume 2013 ; 2013 ; >
 
   }
@@ -598,13 +596,12 @@
       comment[publisher] = Pontifícia Universidade Católica de São Paulo
       param[base_url] = http://revistas.pucsp.br/
       param[journal_id] = kaliope
-      comment[notReady] = PDF issues
 
       au < released ; 2005 ; 1 ; Kalíope Volume 2005 ; 2005 ; >
       au < released ; 2006 ; 2 ; Kalíope Volume 2006 ; 2006 ; >
       au < released ; 2007 ; 3 ; Kalíope Volume 2007 ; 2007 ; >
-      au < notReady ; 2008 ; 4 ; Kalíope Volume 2008 ; 2008 ; >
-      au < notReady ; 2009 ; 5 ; Kalíope Volume 2009 ; 2009 ; >
+      au < ready ; 2008 ; 4 ; Kalíope Volume 2008 ; 2008 ; >
+      au < ready ; 2009 ; 5 ; Kalíope Volume 2009 ; 2009 ; >
       au < released ; 2010 ; 6 ; Kalíope Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 7 ; Kalíope Volume 2011 ; 2011 ; >
       au < expected ; 2012 ; 8 ; Kalíope Volume 2012 ; 2012 ; >
@@ -622,12 +619,11 @@
       comment[publisher] = Pontifícia Universidade Católica de São Paulo
       param[base_url] = http://revistas.pucsp.br/
       param[journal_id] = leituraflutuante
-      comment[notReady] = Language XML issues
 
       au < released ; 2009 ; 1 ; Leitura Flutuante Volume 2009 ; 2009 ; >
       au < released ; 2010 ; 2 ; Leitura Flutuante Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 3 ; Leitura Flutuante Volume 2011 ; 2011 ; >
-      au < notReady ; 2012 ; 4 ; Leitura Flutuante Volume 2012 ; 2012 ; >
+      au < ready ; 2012 ; 4 ; Leitura Flutuante Volume 2012 ; 2012 ; >
       au < manifest ; 2013 ; 5 ; Leitura Flutuante Volume 2013 ; 2013 ; >
 
   }
@@ -648,17 +644,17 @@
       au < released ; 1999 ; 1 ; Cadernos Metrópole Volume 1999 ; 1999 ; >
       au < released ; 2000 ; 2 ; Cadernos Metrópole Volume 2000 ; 2000 ; >
       au < released ; 2001 ; 3 ; Cadernos Metrópole Volume 2001 ; 2001 ; >
-      au < notReady ; 2002 ; 4 ; Cadernos Metrópole Volume 2002 ; 2002 ; >
+      au < ready ; 2002 ; 4 ; Cadernos Metrópole Volume 2002 ; 2002 ; >
       au < released ; 2003 ; 5 ; Cadernos Metrópole Volume 2003 ; 2003 ; >
-      au < notReady ; 2004 ; 6 ; Cadernos Metrópole Volume 2004 ; 2004 ; >
+      au < ready ; 2004 ; 6 ; Cadernos Metrópole Volume 2004 ; 2004 ; >
       au < released ; 2005 ; 7 ; Cadernos Metrópole Volume 2005 ; 2005 ; >
       au < released ; 2006 ; 8 ; Cadernos Metrópole Volume 2006 ; 2006 ; >
       au < released ; 2007 ; 9 ; Cadernos Metrópole Volume 2007 ; 2007 ; >
       au < released ; 2008 ; 10 ; Cadernos Metrópole Volume 2008 ; 2008 ; >
       au < released ; 2009 ; 11 ; Cadernos Metrópole Volume 2009 ; 2009 ; >
-      au < notReady ; 2010 ; 12 ; Cadernos Metrópole Volume 2010 ; 2010 ; >
+      au < ready ; 2010 ; 12 ; Cadernos Metrópole Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 13 ; Cadernos Metrópole Volume 2011 ; 2011 ; >
-      au < notReady ; 2012 ; 14 ; Cadernos Metrópole Volume 2012 ; 2012 ; >
+      au < ready ; 2012 ; 14 ; Cadernos Metrópole Volume 2012 ; 2012 ; >
       au < manifest ; 2013 ; 15 ; Cadernos Metrópole Volume 2013 ; 2013 ; >
 
   }
@@ -829,13 +825,12 @@
       comment[publisher] = Pontifícia Universidade Católica de São Paulo
       param[base_url] = http://revistas.pucsp.br/
       param[journal_id] = reb
-      comment[notReady] = Fetch error
 
-      au < notReady ; 2008 ; 1 ; REB: Revista Eletrônica de Biologia Volume 2008 ; 2008 ; >
-      au < notReady ; 2009 ; 2 ; REB: Revista Eletrônica de Biologia Volume 2009 ; 2009 ; >
-      au < notReady ; 2010 ; 3 ; REB: Revista Eletrônica de Biologia Volume 2010 ; 2010 ; >
-      au < notReady ; 2011 ; 4 ; REB: Revista Eletrônica de Biologia Volume 2011 ; 2011 ; >
-      au < notReady ; 2012 ; 5 ; REB: Revista Eletrônica de Biologia Volume 2012 ; 2012 ; >
+      au < ready ; 2008 ; 1 ; REB: Revista Eletrônica de Biologia Volume 2008 ; 2008 ; >
+      au < ready ; 2009 ; 2 ; REB: Revista Eletrônica de Biologia Volume 2009 ; 2009 ; >
+      au < ready ; 2010 ; 3 ; REB: Revista Eletrônica de Biologia Volume 2010 ; 2010 ; >
+      au < ready ; 2011 ; 4 ; REB: Revista Eletrônica de Biologia Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 5 ; REB: Revista Eletrônica de Biologia Volume 2012 ; 2012 ; >
       au < manifest ; 2013 ; 6 ; REB: Revista Eletrônica de Biologia Volume 2013 ; 2013 ; >
 
   }
@@ -927,10 +922,9 @@
       comment[publisher] = Pontifícia Universidade Católica de São Paulo
       param[base_url] = http://revistas.pucsp.br/
       param[journal_id] = rever
-      comment[notReady] = XML language issues
 
       au < released ; 2011 ; 1 ; Rever: Revista de Estudos da Religião Volume 2011 ; 2011 ; >
-      au < notReady ; 2012 ; 2 ; Rever: Revista de Estudos da Religião Volume 2012 ; 2012 ; >
+      au < ready ; 2012 ; 2 ; Rever: Revista de Estudos da Religião Volume 2012 ; 2012 ; >
       au < manifest ; 2013 ; 3 ; Rever: Revista de Estudos da Religião Volume 2013 ; 2013 ; >
 
   }
@@ -964,7 +958,6 @@
       comment[publisher] = Pontifícia Universidade Católica de São Paulo
       param[base_url] = http://revistas.pucsp.br/
       param[journal_id] = revph
-      comment[notReady] = language XML issues
 
       au < released ; 1981 ; 1 ; Projeto História Volume 1981 ; 1981 ; >
       au < released ; 1982 ; 2 ; Projeto História Volume 1982 ; 1982 ; >
@@ -989,9 +982,9 @@
       au < released ; 2006 ; 21 ; Projeto História Volume 2006 ; 2006 ; >
       au < released ; 2007 ; 22 ; Projeto História Volume 2007 ; 2007 ; >
       au < released ; 2008 ; 23 ; Projeto História Volume 2008 ; 2008 ; >
-      au < notReady ; 2009 ; 24 ; Projeto História Volume 2009 ; 2009 ; >
-      au < notReady ; 2010 ; 25 ; Projeto História Volume 2010 ; 2010 ; >
-      au < notReady ; 2011 ; 26 ; Projeto História Volume 2011 ; 2011 ; >
+      au < ready ; 2009 ; 24 ; Projeto História Volume 2009 ; 2009 ; >
+      au < ready ; 2010 ; 25 ; Projeto História Volume 2010 ; 2010 ; >
+      au < ready ; 2011 ; 26 ; Projeto História Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 27 ; Projeto História Volume 2012 ; 2012 ; >
       au < manifest ; 2013 ; 28 ; Projeto História Volume 2013 ; 2013 ; >
 
@@ -1037,11 +1030,10 @@
       comment[publisher] = Pontifícia Universidade Católica de São Paulo
       param[base_url] = http://revistas.pucsp.br/
       param[journal_id] = risus
-      comment[notReady] = XML language issues
 
-      au < notReady ; 2010 ; 1 ; RISUS: Revista de Inovação e Sustentabilidade Volume 2010 ; 2010 ; >
-      au < notReady ; 2011 ; 2 ; RISUS: Revista de Inovação e Sustentabilidade Volume 2011 ; 2011 ; >
-      au < notReady ; 2012 ; 3 ; RISUS: Revista de Inovação e Sustentabilidade Volume 2012 ; 2012 ; >
+      au < ready ; 2010 ; 1 ; RISUS: Revista de Inovação e Sustentabilidade Volume 2010 ; 2010 ; >
+      au < ready ; 2011 ; 2 ; RISUS: Revista de Inovação e Sustentabilidade Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 3 ; RISUS: Revista de Inovação e Sustentabilidade Volume 2012 ; 2012 ; >
       au < manifest ; 2013 ; 4 ; RISUS: Revista de Inovação e Sustentabilidade Volume 2013 ; 2013 ; >
 
   }
@@ -1056,7 +1048,6 @@
       comment[publisher] = Pontifícia Universidade Católica de São Paulo
       param[base_url] = http://revistas.pucsp.br/
       param[journal_id] = rpe
-      comment[notReady] = XML language issues
 
       au < released ; 1998 ; 1 ; Pesquisa & Debate Volume 1998 ; 1998 ; >
       au < released ; 1999 ; 2 ; Pesquisa & Debate Volume 1999 ; 1999 ; >
@@ -1072,7 +1063,7 @@
       au < released ; 2009 ; 12 ; Pesquisa & Debate Volume 2009 ; 2009 ; >
       au < released ; 2010 ; 13 ; Pesquisa & Debate Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 14 ; Pesquisa & Debate Volume 2011 ; 2011 ; >
-      au < notReady ; 2012 ; 15 ; Pesquisa & Debate Volume 2012 ; 2012 ; >
+      au < ready ; 2012 ; 15 ; Pesquisa & Debate Volume 2012 ; 2012 ; >
       au < manifest ; 2013 ; 16 ; Pesquisa & Debate Volume 2013 ; 2013 ; >
 
   }
@@ -1105,9 +1096,8 @@
       comment[publisher] = Pontifícia Universidade Católica de São Paulo
       param[base_url] = http://revistas.pucsp.br/
       param[journal_id] = tessituras
-      comment[notReady] = PDF issues
 
-      au < notReady ; 2011 ; 1 ; Tessituras & Criação Volume 2011 ; 2011 ; >
+      au < ready ; 2011 ; 1 ; Tessituras & Criação Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 2 ; Tessituras & Criação Volume 2012 ; 2012 ; >
       au < expected ; 2013 ; 3 ; Tessituras & Criação Volume 2013 ; 2013 ; >
 
