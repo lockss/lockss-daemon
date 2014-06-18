@@ -4,7 +4,9 @@
   >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; volume ; name ; param[year] >
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
+    
+    comment[down] = university website down. http://www.facec.edu.br/seer/
 
   {
 
@@ -16,9 +18,8 @@
       comment[publisher] = Faculdade Central de Cristalina-FACEC
       param[base_url] = http://www.facec.edu.br/seer/
       param[journal_id] = docenciaepesquisaemadministracao
-      comment[notReady] = no permission page
 
-      au < exists ; 2009 ; 1 ; Revista Brasileira de Docência, Ensino e Pesquisa em Administração Volume 1 ; 2009 >
+      au < notReady ; 2009 ; 1 ; Revista Brasileira de Docência, Ensino e Pesquisa em Administração Volume 1 ; 2009 ; website offline >
 
   }
 
@@ -33,8 +34,8 @@
       param[base_url] = http://www.facec.edu.br/seer/
       param[journal_id] = docenciaepesquisaeducacaofisica
 
-      au < exists ; 2009 ; 1 ; Revista Brasileira de Docência, Ensino e Pesquisa em Educação Física Volume 1 ; 2009 >
-      au < exists ; 2010 ; 2 ; Revista Brasileira de Docência, Ensino e Pesquisa em Educação Física Volume 2 ; 2010 >
+      au < notReady ; 2009 ; 1 ; Revista Brasileira de Docência, Ensino e Pesquisa em Educação Física Volume 1 ; 2009 ; website offline >
+      au < notReady ; 2010 ; 2 ; Revista Brasileira de Docência, Ensino e Pesquisa em Educação Física Volume 2 ; 2010 ; website offline >
 
   }
 
@@ -49,7 +50,7 @@
       param[base_url] = http://www.facec.edu.br/seer/
       param[journal_id] = enfermagem
 
-      au < exists ; 2009 ; 1 ; Revista Brasileira de Docência, Ensino e Pesquisa em Enfermagem Volume 1 ; 2009 >
+      au < notReady ; 2009 ; 1 ; Revista Brasileira de Docência, Ensino e Pesquisa em Enfermagem Volume 1 ; 2009 ; website offline >
 
   }
 
@@ -63,9 +64,8 @@
       comment[publisher] = Faculdade Central de Cristalina-FACEC
       param[base_url] = http://www.facec.edu.br/seer/
       param[journal_id] = docenciaensinoepesquisaemturismo
-      comment[notReady] = no permission page. uni website offline temporarily.
 
-      au < exists ; 2009 ; 1 ; Revista Brasileira de Docência, Ensino e Pesquisa em Turismo Volume 1 ; 2009 >
+      au < notReady ; 2009 ; 1 ; Revista Brasileira de Docência, Ensino e Pesquisa em Turismo Volume 1 ; 2009 ; website offline >
 
   }
 
@@ -79,9 +79,8 @@
       comment[publisher] = Faculdade Central de Cristalina-FACEC
       param[base_url] = http://www.facec.edu.br/seer/
       param[journal_id] = formacaodeprofessores
-      comment[notReady] = no permission page
 
-      au < exists ; 2009 ; 1 ; Revista Brasileira de Formação de Professores Volume 1 ; 2009 >
+      au < notReady ; 2009 ; 1 ; Revista Brasileira de Formação de Professores Volume 1 ; 2009 ; website offline >
 
   }
 
