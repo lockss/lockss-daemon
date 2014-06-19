@@ -113,7 +113,7 @@
       au < ready ; 2008 ; 8 ; Civitas: Revista de Ciências Sociais Volume 2008 ; 2008 >
       au < ready ; 2009 ; 9 ; Civitas: Revista de Ciências Sociais Volume 2009 ; 2009 >
       au < ready ; 2010 ; 10 ; Civitas: Revista de Ciências Sociais Volume 2010 ; 2010 >
-      au < notReady ; 2011 ; 11 ; Civitas: Revista de Ciências Sociais Volume 2011 ; 2011 >
+      au < ready ; 2011 ; 11 ; Civitas: Revista de Ciências Sociais Volume 2011 ; 2011 >
       au < ready ; 2012 ; 12 ; Civitas: Revista de Ciências Sociais Volume 2012 ; 2012 >
       au < manifest ; 2013 ; 13 ; Civitas: Revista de Ciências Sociais Volume 2013 ; 2013 >
       au < manifest ; 2014 ; 14 ; Civitas: Revista de Ciências Sociais Volume 2014 ; 2014 >
@@ -130,10 +130,9 @@
       comment[publisher] = Pontifícia Universidade Católica do Rio Grande do Sul
       param[base_url] = http://revistaseletronicas.pucrs.br/ojs/
       param[journal_id] = conversasecontroversias
-      comment[notReady] = repository error
 
       au < ready ; 2010 ; 1 ; Conversas & Controvérsias Volume 2010 ; 2010 >
-      au < notReady ; 2011 ; 2 ; Conversas & Controvérsias Volume 2011 ; 2011 >
+      au < ready ; 2011 ; 2 ; Conversas & Controvérsias Volume 2011 ; 2011 >
       au < expected ; 2012 ; 3 ; Conversas & Controvérsias Volume 2012 ; 2012 >
       au < expected ; 2013 ; 4 ; Conversas & Controvérsias Volume 2013 ; 2013 >
       au < expected ; 2014 ; 5 ; Conversas & Controvérsias Volume 2014 ; 2014 >
@@ -153,14 +152,14 @@
       param[journal_id] = fadir
       comment[notReady] = fetch error
 
-      au < notReady ; 2005 ; 1 ; Direito & Justiça: Revista de Direito da PUCRS Volume 2005 ; 2005 >
-      au < notReady ; 2006 ; 2 ; Direito & Justiça: Revista de Direito da PUCRS Volume 2006 ; 2006 >
-      au < notReady ; 2007 ; 3 ; Direito & Justiça: Revista de Direito da PUCRS Volume 2007 ; 2007 >
-      au < notReady ; 2008 ; 4 ; Direito & Justiça: Revista de Direito da PUCRS Volume 2008 ; 2008 >
-      au < notReady ; 2009 ; 5 ; Direito & Justiça: Revista de Direito da PUCRS Volume 2009 ; 2009 >
-      au < notReady ; 2010 ; 6 ; Direito & Justiça: Revista de Direito da PUCRS Volume 2010 ; 2010 >
-      au < notReady ; 2011 ; 7 ; Direito & Justiça: Revista de Direito da PUCRS Volume 2011 ; 2011 >
-      au < notReady ; 2012 ; 8 ; Direito & Justiça: Revista de Direito da PUCRS Volume 2012 ; 2012 >
+      au < ready ; 2005 ; 1 ; Direito & Justiça: Revista de Direito da PUCRS Volume 2005 ; 2005 >
+      au < ready ; 2006 ; 2 ; Direito & Justiça: Revista de Direito da PUCRS Volume 2006 ; 2006 >
+      au < ready ; 2007 ; 3 ; Direito & Justiça: Revista de Direito da PUCRS Volume 2007 ; 2007 >
+      au < ready ; 2008 ; 4 ; Direito & Justiça: Revista de Direito da PUCRS Volume 2008 ; 2008 >
+      au < ready ; 2009 ; 5 ; Direito & Justiça: Revista de Direito da PUCRS Volume 2009 ; 2009 >
+      au < ready ; 2010 ; 6 ; Direito & Justiça: Revista de Direito da PUCRS Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 7 ; Direito & Justiça: Revista de Direito da PUCRS Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 8 ; Direito & Justiça: Revista de Direito da PUCRS Volume 2012 ; 2012 >
       au < manifest ; 2013 ; 9 ; Direito & Justiça: Revista de Direito da PUCRS Volume 2013 ; 2013 >
       au < manifest ; 2014 ; 10 ; Direito & Justiça: Revista de Direito da PUCRS Volume 2014 ; 2014 >
 
@@ -179,15 +178,15 @@
       param[journal_id] = faced
       comment[notReady] = fetch error
 
-      au < notReady ; 2004 ; 1 ; Educação Volume 2004 ; 2004 >
-      au < notReady ; 2005 ; 2 ; Educação Volume 2005 ; 2005 >
-      au < notReady ; 2006 ; 3 ; Educação Volume 2006 ; 2006 >
-      au < notReady ; 2007 ; 4 ; Educação Volume 2007 ; 2007 >
-      au < notReady ; 2008 ; 5 ; Educação Volume 2008 ; 2008 >
-      au < notReady ; 2009 ; 6 ; Educação Volume 2009 ; 2009 >
-      au < notReady ; 2010 ; 7 ; Educação Volume 2010 ; 2010 >
-      au < notReady ; 2011 ; 8 ; Educação Volume 2011 ; 2011 >
-      au < notReady ; 2012 ; 9 ; Educação Volume 2012 ; 2012 >
+      au < ready ; 2004 ; 1 ; Educação Volume 2004 ; 2004 >
+      au < ready ; 2005 ; 2 ; Educação Volume 2005 ; 2005 >
+      au < ready ; 2006 ; 3 ; Educação Volume 2006 ; 2006 >
+      au < ready ; 2007 ; 4 ; Educação Volume 2007 ; 2007 >
+      au < ready ; 2008 ; 5 ; Educação Volume 2008 ; 2008 >
+      au < ready ; 2009 ; 6 ; Educação Volume 2009 ; 2009 >
+      au < ready ; 2010 ; 7 ; Educação Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 8 ; Educação Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 9 ; Educação Volume 2012 ; 2012 >
       au < manifest ; 2013 ; 10 ; Educação Volume 2013 ; 2013 >
       au < manifest ; 2014 ; 11 ; Educação Volume 2014 ; 2014 >
 
@@ -206,15 +205,15 @@
       param[journal_id] = iberoamericana
       comment[notReady] = repository error
 
-      au < notReady ; 2004 ; 1 ; Estudos Ibero-Americanos Volume 2004 ; 2004 >
-      au < notReady ; 2005 ; 2 ; Estudos Ibero-Americanos Volume 2005 ; 2005 >
-      au < notReady ; 2006 ; 3 ; Estudos Ibero-Americanos Volume 2006 ; 2006 >
-      au < notReady ; 2007 ; 4 ; Estudos Ibero-Americanos Volume 2007 ; 2007 >
-      au < notReady ; 2008 ; 5 ; Estudos Ibero-Americanos Volume 2008 ; 2008 >
-      au < notReady ; 2009 ; 6 ; Estudos Ibero-Americanos Volume 2009 ; 2009 >
-      au < notReady ; 2010 ; 7 ; Estudos Ibero-Americanos Volume 2010 ; 2010 >
-      au < notReady ; 2011 ; 8 ; Estudos Ibero-Americanos Volume 2011 ; 2011 >
-      au < notReady ; 2012 ; 9 ; Estudos Ibero-Americanos Volume 2012 ; 2012 >
+      au < ready ; 2004 ; 1 ; Estudos Ibero-Americanos Volume 2004 ; 2004 >
+      au < ready ; 2005 ; 2 ; Estudos Ibero-Americanos Volume 2005 ; 2005 >
+      au < ready ; 2006 ; 3 ; Estudos Ibero-Americanos Volume 2006 ; 2006 >
+      au < ready ; 2007 ; 4 ; Estudos Ibero-Americanos Volume 2007 ; 2007 >
+      au < ready ; 2008 ; 5 ; Estudos Ibero-Americanos Volume 2008 ; 2008 >
+      au < ready ; 2009 ; 6 ; Estudos Ibero-Americanos Volume 2009 ; 2009 >
+      au < ready ; 2010 ; 7 ; Estudos Ibero-Americanos Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 8 ; Estudos Ibero-Americanos Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 9 ; Estudos Ibero-Americanos Volume 2012 ; 2012 >
       au < manifest ; 2013 ; 10 ; Estudos Ibero-Americanos Volume 2013 ; 2013 >
       au < expected ; 2014 ; 11 ; Estudos Ibero-Americanos Volume 2014 ; 2014 >
 
@@ -289,11 +288,11 @@
       param[journal_id] = letronica
       comment[notReady] = repository error
 
-      au < notReady ; 2008 ; 1 ; Letrônica: Revista Digital do PPGL Volume 2008 ; 2008 >
-      au < notReady ; 2009 ; 2 ; Letrônica: Revista Digital do PPGL Volume 2009 ; 2009 >
-      au < notReady ; 2010 ; 3 ; Letrônica: Revista Digital do PPGL Volume 2010 ; 2010 >
-      au < notReady ; 2011 ; 4 ; Letrônica: Revista Digital do PPGL Volume 2011 ; 2011 >
-      au < notReady ; 2012 ; 5 ; Letrônica: Revista Digital do PPGL Volume 2012 ; 2012 >
+      au < ready ; 2008 ; 1 ; Letrônica: Revista Digital do PPGL Volume 2008 ; 2008 >
+      au < ready ; 2009 ; 2 ; Letrônica: Revista Digital do PPGL Volume 2009 ; 2009 >
+      au < ready ; 2010 ; 3 ; Letrônica: Revista Digital do PPGL Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 4 ; Letrônica: Revista Digital do PPGL Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 5 ; Letrônica: Revista Digital do PPGL Volume 2012 ; 2012 >
       au < manifest ; 2013 ; 6 ; Letrônica: Revista Digital do PPGL Volume 2013 ; 2013 >
       au < expected ; 2014 ; 7 ; Letrônica: Revista Digital do PPGL Volume 2014 ; 2014 >
 
@@ -312,11 +311,11 @@
       param[journal_id] = navegacoes
       comment[notReady] = repository error
 
-      au < notReady ; 2008 ; 1 ; Navegações: Revista de Cultura e Literaturas de Língua Portuguesa Volume 2008 ; 2008 >
-      au < notReady ; 2009 ; 2 ; Navegações: Revista de Cultura e Literaturas de Língua Portuguesa Volume 2009 ; 2009 >
-      au < notReady ; 2010 ; 3 ; Navegações: Revista de Cultura e Literaturas de Língua Portuguesa Volume 2010 ; 2010 >
-      au < notReady ; 2011 ; 4 ; Navegações: Revista de Cultura e Literaturas de Língua Portuguesa Volume 2011 ; 2011 >
-      au < notReady ; 2012 ; 5 ; Navegações: Revista de Cultura e Literaturas de Língua Portuguesa Volume 2012 ; 2012 >
+      au < ready ; 2008 ; 1 ; Navegações: Revista de Cultura e Literaturas de Língua Portuguesa Volume 2008 ; 2008 >
+      au < ready ; 2009 ; 2 ; Navegações: Revista de Cultura e Literaturas de Língua Portuguesa Volume 2009 ; 2009 >
+      au < ready ; 2010 ; 3 ; Navegações: Revista de Cultura e Literaturas de Língua Portuguesa Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 4 ; Navegações: Revista de Cultura e Literaturas de Língua Portuguesa Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 5 ; Navegações: Revista de Cultura e Literaturas de Língua Portuguesa Volume 2012 ; 2012 >
       au < manifest ; 2013 ; 6 ; Navegações: Revista de Cultura e Literaturas de Língua Portuguesa Volume 2013 ; 2013 >
       au < expected ; 2014 ; 7 ; Navegações: Revista de Cultura e Literaturas de Língua Portuguesa Volume 2014 ; 2014 >
 
@@ -334,9 +333,9 @@
       param[journal_id] = oficinadohistoriador
       comment[notReady] = repository error
 
-      au < notReady ; 2010 ; 1 ; Oficina do Historiador Volume 2010 ; 2010 >
-      au < notReady ; 2011 ; 2 ; Oficina do Historiador Volume 2011 ; 2011 >
-      au < notReady ; 2012 ; 3 ; Oficina do Historiador Volume 2012 ; 2012 >
+      au < ready ; 2010 ; 1 ; Oficina do Historiador Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 2 ; Oficina do Historiador Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 3 ; Oficina do Historiador Volume 2012 ; 2012 >
       au < manifest ; 2013 ; 4 ; Oficina do Historiador Volume 2013 ; 2013 >
       au < expected ; 2014 ; 5 ; Oficina do Historiador Volume 2014 ; 2014 >
 
@@ -381,24 +380,24 @@
       param[journal_id] = fzva
       comment[notReady] = fetch error
 
-      au < notReady ; 1994 ; 1 ; Revista da FZVA Volume 1994 ; 1994 >
-      au < notReady ; 1995 ; 2 ; Revista da FZVA Volume 1995 ; 1995 >
-      au < notReady ; 1996 ; 3 ; Revista da FZVA Volume 1996 ; 1996 >
-      au < notReady ; 1997 ; 4 ; Revista da FZVA Volume 1997 ; 1997 >
-      au < notReady ; 1998 ; 5 ; Revista da FZVA Volume 1998 ; 1998 >
-      au < notReady ; 1999 ; 6 ; Revista da FZVA Volume 1999 ; 1999 >
-      au < notReady ; 2000 ; 7 ; Revista da FZVA Volume 2000 ; 2000 >
-      au < notReady ; 2001 ; 8 ; Revista da FZVA Volume 2001 ; 2001 >
-      au < notReady ; 2002 ; 9 ; Revista da FZVA Volume 2002 ; 2002 >
-      au < notReady ; 2003 ; 10 ; Revista da FZVA Volume 2003 ; 2003 >
-      au < notReady ; 2004 ; 11 ; Revista da FZVA Volume 2004 ; 2004 >
-      au < notReady ; 2005 ; 12 ; Revista da FZVA Volume 2005 ; 2005 >
-      au < notReady ; 2006 ; 13 ; Revista da FZVA Volume 2006 ; 2006 >
-      au < notReady ; 2007 ; 14 ; Revista da FZVA Volume 2007 ; 2007 >
-      au < notReady ; 2008 ; 15 ; Revista da FZVA Volume 2008 ; 2008 >
-      au < notReady ; 2009 ; 16 ; Revista da FZVA Volume 2009 ; 2009 >
-      au < notReady ; 2010 ; 17 ; Revista da FZVA Volume 2010 ; 2010 >
-      au < notReady ; 2011 ; 18 ; Revista da FZVA Volume 2011 ; 2011 >
+      au < ready ; 1994 ; 1 ; Revista da FZVA Volume 1994 ; 1994 >
+      au < ready ; 1995 ; 2 ; Revista da FZVA Volume 1995 ; 1995 >
+      au < ready ; 1996 ; 3 ; Revista da FZVA Volume 1996 ; 1996 >
+      au < ready ; 1997 ; 4 ; Revista da FZVA Volume 1997 ; 1997 >
+      au < ready ; 1998 ; 5 ; Revista da FZVA Volume 1998 ; 1998 >
+      au < ready ; 1999 ; 6 ; Revista da FZVA Volume 1999 ; 1999 >
+      au < ready ; 2000 ; 7 ; Revista da FZVA Volume 2000 ; 2000 >
+      au < ready ; 2001 ; 8 ; Revista da FZVA Volume 2001 ; 2001 >
+      au < ready ; 2002 ; 9 ; Revista da FZVA Volume 2002 ; 2002 >
+      au < ready ; 2003 ; 10 ; Revista da FZVA Volume 2003 ; 2003 >
+      au < ready ; 2004 ; 11 ; Revista da FZVA Volume 2004 ; 2004 >
+      au < ready ; 2005 ; 12 ; Revista da FZVA Volume 2005 ; 2005 >
+      au < ready ; 2006 ; 13 ; Revista da FZVA Volume 2006 ; 2006 >
+      au < ready ; 2007 ; 14 ; Revista da FZVA Volume 2007 ; 2007 >
+      au < ready ; 2008 ; 15 ; Revista da FZVA Volume 2008 ; 2008 >
+      au < ready ; 2009 ; 16 ; Revista da FZVA Volume 2009 ; 2009 >
+      au < ready ; 2010 ; 17 ; Revista da FZVA Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 18 ; Revista da FZVA Volume 2011 ; 2011 >
       au < expected ; 2012 ; 19 ; Revista da FZVA Volume 2012 ; 2012 >
       au < manifest ; 2013 ; 20 ; Revista da FZVA Volume 2013 ; 2013 >
       au < expected ; 2014 ; 21 ; Revista da FZVA Volume 2014 ; 2014 >
@@ -417,11 +416,11 @@
       param[journal_id] = graduacao
       comment[notReady] = repository error
 
-      au < notReady ; 2008 ; 1 ; Revista da Graduação Volume 2008 ; 2008 >
-      au < notReady ; 2009 ; 2 ; Revista da Graduação Volume 2009 ; 2009 >
-      au < notReady ; 2010 ; 3 ; Revista da Graduação Volume 2010 ; 2010 >
-      au < notReady ; 2011 ; 4 ; Revista da Graduação Volume 2011 ; 2011 >
-      au < notReady ; 2012 ; 5 ; Revista da Graduação Volume 2012 ; 2012 >
+      au < ready ; 2008 ; 1 ; Revista da Graduação Volume 2008 ; 2008 >
+      au < ready ; 2009 ; 2 ; Revista da Graduação Volume 2009 ; 2009 >
+      au < ready ; 2010 ; 3 ; Revista da Graduação Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 4 ; Revista da Graduação Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 5 ; Revista da Graduação Volume 2012 ; 2012 >
       au < manifest ; 2013 ; 6 ; Revista da Graduação Volume 2013 ; 2013 >
       au < expected ; 2014 ; 7 ; Revista da Graduação Volume 2014 ; 2014 >
 
@@ -439,9 +438,9 @@
       param[journal_id] = porescrito
       comment[notReady] = repository error
 
-      au < notReady ; 2010 ; 1 ; Revista Educação Por Escrito Volume 2010 ; 2010 >
-      au < notReady ; 2011 ; 2 ; Revista Educação Por Escrito Volume 2011 ; 2011 >
-      au < notReady ; 2012 ; 3 ; Revista Educação Por Escrito Volume 2012 ; 2012 >
+      au < ready ; 2010 ; 1 ; Revista Educação Por Escrito Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 2 ; Revista Educação Por Escrito Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 3 ; Revista Educação Por Escrito Volume 2012 ; 2012 >
       au < manifest ; 2013 ; 4 ; Revista Educação Por Escrito Volume 2013 ; 2013 >
       au < expected ; 2014 ; 5 ; Revista Educação Por Escrito Volume 2014 ; 2014 >
 
@@ -460,25 +459,25 @@
       param[journal_id] = revistafamecos
       comment[notReady] = repository error
 
-      au < notReady ; 1994 ; 1 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 1994 ; 1994 >
-      au < notReady ; 1995 ; 2 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 1995 ; 1995 >
-      au < notReady ; 1996 ; 3 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 1996 ; 1996 >
-      au < notReady ; 1997 ; 4 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 1997 ; 1997 >
-      au < notReady ; 1998 ; 5 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 1998 ; 1998 >
-      au < notReady ; 1999 ; 6 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 1999 ; 1999 >
-      au < notReady ; 2000 ; 7 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2000 ; 2000 >
-      au < notReady ; 2001 ; 8 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2001 ; 2001 >
-      au < notReady ; 2002 ; 9 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2002 ; 2002 >
-      au < notReady ; 2003 ; 10 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2003 ; 2003 >
-      au < notReady ; 2004 ; 11 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2004 ; 2004 >
-      au < notReady ; 2005 ; 12 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2005 ; 2005 >
-      au < notReady ; 2006 ; 13 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2006 ; 2006 >
-      au < notReady ; 2007 ; 14 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2007 ; 2007 >
-      au < notReady ; 2008 ; 15 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2008 ; 2008 >
-      au < notReady ; 2009 ; 16 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2009 ; 2009 >
-      au < notReady ; 2010 ; 17 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2010 ; 2010 >
-      au < notReady ; 2011 ; 18 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2011 ; 2011 >
-      au < notReady ; 2012 ; 19 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2012 ; 2012 >
+      au < ready ; 1994 ; 1 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 1994 ; 1994 >
+      au < ready ; 1995 ; 2 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 1995 ; 1995 >
+      au < ready ; 1996 ; 3 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 1996 ; 1996 >
+      au < ready ; 1997 ; 4 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 1997 ; 1997 >
+      au < ready ; 1998 ; 5 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 1998 ; 1998 >
+      au < ready ; 1999 ; 6 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 1999 ; 1999 >
+      au < ready ; 2000 ; 7 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2000 ; 2000 >
+      au < ready ; 2001 ; 8 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2001 ; 2001 >
+      au < ready ; 2002 ; 9 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2002 ; 2002 >
+      au < ready ; 2003 ; 10 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2003 ; 2003 >
+      au < ready ; 2004 ; 11 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2004 ; 2004 >
+      au < ready ; 2005 ; 12 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2005 ; 2005 >
+      au < ready ; 2006 ; 13 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2006 ; 2006 >
+      au < ready ; 2007 ; 14 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2007 ; 2007 >
+      au < ready ; 2008 ; 15 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2008 ; 2008 >
+      au < ready ; 2009 ; 16 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2009 ; 2009 >
+      au < ready ; 2010 ; 17 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 18 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 19 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2012 ; 2012 >
       au < manifest ; 2013 ; 20 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2013 ; 2013 >
       au < manifest ; 2014 ; 21 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2014 ; 2014 >
 
@@ -497,14 +496,14 @@
       param[journal_id] = fo
       comment[notReady] = repository error
 
-      au < notReady ; 2005 ; 1 ; Revista Odonto Ciência Volume 2005 ; 2005 >
-      au < notReady ; 2006 ; 2 ; Revista Odonto Ciência Volume 2006 ; 2006 >
-      au < notReady ; 2007 ; 3 ; Revista Odonto Ciência Volume 2007 ; 2007 >
-      au < notReady ; 2008 ; 4 ; Revista Odonto Ciência Volume 2008 ; 2008 >
-      au < notReady ; 2009 ; 5 ; Revista Odonto Ciência Volume 2009 ; 2009 >
-      au < notReady ; 2010 ; 6 ; Revista Odonto Ciência Volume 2010 ; 2010 >
-      au < notReady ; 2011 ; 7 ; Revista Odonto Ciência Volume 2011 ; 2011 >
-      au < notReady ; 2012 ; 8 ; Revista Odonto Ciência Volume 2012 ; 2012 >
+      au < ready ; 2005 ; 1 ; Revista Odonto Ciência Volume 2005 ; 2005 >
+      au < ready ; 2006 ; 2 ; Revista Odonto Ciência Volume 2006 ; 2006 >
+      au < ready ; 2007 ; 3 ; Revista Odonto Ciência Volume 2007 ; 2007 >
+      au < ready ; 2008 ; 4 ; Revista Odonto Ciência Volume 2008 ; 2008 >
+      au < ready ; 2009 ; 5 ; Revista Odonto Ciência Volume 2009 ; 2009 >
+      au < ready ; 2010 ; 6 ; Revista Odonto Ciência Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 7 ; Revista Odonto Ciência Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 8 ; Revista Odonto Ciência Volume 2012 ; 2012 >
       au < expected ; 2013 ; 9 ; Revista Odonto Ciência Volume 2013 ; 2013 >
       au < expected ; 2014 ; 10 ; Revista Odonto Ciência Volume 2014 ; 2014 >
 
@@ -630,17 +629,17 @@
       param[journal_id] = fass
       comment[notReady] = repository and fetch errors
 
-      au < notReady ; 2002 ; 1 ; Textos & Contextos: Porto Alegre Volume 2002 ; 2002 >
-      au < notReady ; 2003 ; 2 ; Textos & Contextos: Porto Alegre Volume 2003 ; 2003 >
-      au < notReady ; 2004 ; 3 ; Textos & Contextos: Porto Alegre Volume 2004 ; 2004 >
-      au < notReady ; 2005 ; 4 ; Textos & Contextos: Porto Alegre Volume 2005 ; 2005 >
-      au < notReady ; 2006 ; 5 ; Textos & Contextos: Porto Alegre Volume 2006 ; 2006 >
-      au < notReady ; 2007 ; 6 ; Textos & Contextos: Porto Alegre Volume 2007 ; 2007 >
-      au < notReady ; 2008 ; 7 ; Textos & Contextos: Porto Alegre Volume 2008 ; 2008 >
-      au < notReady ; 2009 ; 8 ; Textos & Contextos: Porto Alegre Volume 2009 ; 2009 >
-      au < notReady ; 2010 ; 9 ; Textos & Contextos: Porto Alegre Volume 2010 ; 2010 >
-      au < notReady ; 2011 ; 10 ; Textos & Contextos: Porto Alegre Volume 2011 ; 2011 >
-      au < notReady ; 2012 ; 11 ; Textos & Contextos: Porto Alegre Volume 2012 ; 2012 >
+      au < ready ; 2002 ; 1 ; Textos & Contextos: Porto Alegre Volume 2002 ; 2002 >
+      au < ready ; 2003 ; 2 ; Textos & Contextos: Porto Alegre Volume 2003 ; 2003 >
+      au < ready ; 2004 ; 3 ; Textos & Contextos: Porto Alegre Volume 2004 ; 2004 >
+      au < ready ; 2005 ; 4 ; Textos & Contextos: Porto Alegre Volume 2005 ; 2005 >
+      au < ready ; 2006 ; 5 ; Textos & Contextos: Porto Alegre Volume 2006 ; 2006 >
+      au < ready ; 2007 ; 6 ; Textos & Contextos: Porto Alegre Volume 2007 ; 2007 >
+      au < ready ; 2008 ; 7 ; Textos & Contextos: Porto Alegre Volume 2008 ; 2008 >
+      au < ready ; 2009 ; 8 ; Textos & Contextos: Porto Alegre Volume 2009 ; 2009 >
+      au < ready ; 2010 ; 9 ; Textos & Contextos: Porto Alegre Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 10 ; Textos & Contextos: Porto Alegre Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 11 ; Textos & Contextos: Porto Alegre Volume 2012 ; 2012 >
       au < manifest ; 2013 ; 12 ; Textos & Contextos: Porto Alegre Volume 2013 ; 2013 >
       au < expected ; 2014 ; 13 ; Textos & Contextos: Porto Alegre Volume 2014 ; 2014 >
 
