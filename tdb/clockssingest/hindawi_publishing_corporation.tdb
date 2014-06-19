@@ -6122,4 +6122,701 @@
     
   }
 
+  {
+    title <
+      name = Neuroscience Journal ;
+      issn = 2314-4262 ;
+      eissn = 2314-4270 ;
+      issnl = 2314-4262
+    >
+
+    param[journal_id] = neuroscience
+
+    au < exists ; exists ; 2013 ; Neuroscience Journal Volume 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; 2014 ; Neuroscience Journal Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = New Journal of Science ;
+      issn = 2356-7740 ;
+      eissn = 2090-8520 ;
+      issnl = 2356-7740
+    >
+
+    param[journal_id] = njos
+
+    au < exists ; exists ; 2014 ; New Journal of Science Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Nursing Research and Practice ;
+      issn = 2090-1429 ;
+      eissn = 2090-1437 ;
+      issnl = 2090-1429
+    >
+
+    param[journal_id] = nrp
+
+    au < exists ; exists ; 2010 ; Nursing Research and Practice Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Nursing Research and Practice Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Nursing Research and Practice Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Nursing Research and Practice Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Nursing Research and Practice Volume 2014 ; 2014 ; 2014 >
+    
+  }
+
+  {
+    title <
+      name = Obstetrics and Gynecology International ;
+      issn = 1687-9589 ;
+      eissn = 1687-9597 ;
+      issnl = 1687-9597
+    >
+
+    param[journal_id] = ogi
+
+    au < exists ; exists ; 2009 ; Obstetrics and Gynecology International Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; Obstetrics and Gynecology International Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Obstetrics and Gynecology International Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Obstetrics and Gynecology International Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Obstetrics and Gynecology International Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Obstetrics and Gynecology International Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Organic Chemistry International ;
+      issn = 2090-200X ;
+      eissn = 2090-2018 ;
+      issnl = 2090-200X
+    >
+
+    param[journal_id] = oci
+
+    au < exists ; exists ; 2008 ; Research Letters in Organic Chemistry Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; Research Letters in Organic Chemistry Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; Research Letters in Organic Chemistry Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Organic Chemistry International Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Organic Chemistry International Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Organic Chemistry International Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Organic Chemistry International Volume 2014 ; 2014 ; 2014 >
+    
+  }
+
+  {
+    title <
+      name = Oxidative Medicine and Cellular Longevity ;
+      issn = 1942-0900 ;
+      eissn = 1942-0994 ;
+      issnl = 1942-0900
+    >
+
+    param[journal_id] = omcl
+
+    au < exists ; exists ; 2008 ; Oxidative Medicine and Cellular Longevity Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; Oxidative Medicine and Cellular Longevity Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; Oxidative Medicine and Cellular Longevity Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Oxidative Medicine and Cellular Longevity Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Oxidative Medicine and Cellular Longevity Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Oxidative Medicine and Cellular Longevity Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Oxidative Medicine and Cellular Longevity Volume 2014 ; 2014 ; 2014 >
+    
+  }
+
+  {
+    title <
+      name = Pain Research and Treatment ;
+      issn = 2090-1542 ;
+      eissn = 2090-1550 ;
+      issnl = 2090-1542
+    >
+
+    param[journal_id] = prt
+
+    au < exists ; exists ; 2010 ; Pain Research and Treatment Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Pain Research and Treatment Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Pain Research and Treatment Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Pain Research and Treatment Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Pain Research and Treatment Volume 2014 ; 2014 ; 2014 >
+    
+  }
+
+  {
+    title <
+      name = Paleontology Journal ;
+      issn = 2314-4289 ;
+      eissn = 2314-4297 ;
+      issnl = 2314-4289
+    >
+
+    param[journal_id] = paleontology
+
+    au < exists ; exists ; 2013 ; Paleontology Journal Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Paleontology Journal Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Parkinson's Disease ;
+      issn = 2042-0080 ;
+      issnl = 2042-0080
+    >
+
+    param[journal_id] = pd
+
+    au < exists ; exists ; 2010 ; Parkinson's Disease Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Parkinson's Disease Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Parkinson's Disease Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Parkinson's Disease Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Parkinson's Disease Volume 2014 ; 2014 ; 2014 >
+    
+  }
+
+  {
+    title <
+      name = Pathology Research International ;
+      issn = 2042-003X ;
+      issnl = 2042-003X
+    >
+
+    param[journal_id] = pri
+
+    au < exists ; exists ; 2010 ; Pathology Research International Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Pathology Research International Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Pathology Research International Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Pathology Research International Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Pathology Research International Volume 2014 ; 2014 ; 2014 >
+    
+  }
+
+  {
+    title <
+      name = Physics Research International ;
+      issn = 2090-2220 ;
+      eissn = 2090-2239 ;
+      issnl = 2090-2220
+    >
+
+    param[journal_id] = physri
+
+    au < exists ; exists ; 2008 ; Research Letters in Physics Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; Research Letters in Physics Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; Physics Research International Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Physics Research International Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Physics Research International Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Physics Research International Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Physics Research International Volume 2014 ; 2014 ; 2014 >
+    
+  }
+
+  {
+    title <
+      name = Physiology Journal ;
+      issn = 2314-4300 ;
+      eissn = 2314-4319 ;
+      issnl = 2314-4300
+    >
+
+    param[journal_id] = physiology
+
+    au < exists ; exists ; 2013 ; Physiology Journal Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Physiology Journal Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Plastic Surgery International ;
+      issn = 2090-1461 ;
+      eissn = 2090-147X ;
+      issnl = 2090-1461
+    >
+
+    param[journal_id] = psi
+
+    au < exists ; exists ; 2010 ; Plastic Surgery International Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Plastic Surgery International Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Plastic Surgery International Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Plastic Surgery International Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Plastic Surgery International Volume 2014 ; 2014 ; 2014 >
+    
+  }
+
+  {
+    title <
+      name = PPAR Research ;
+      issn = 1687-4757 ;
+      eissn = 1687-4765 ;
+      issnl = 1687-4757
+    >
+
+    param[journal_id] = ppar
+
+    au < exists ; exists ; 2006 ; PPAR Research Volume 2006 ; 2006 ; 2006 >
+    au < exists ; exists ; 2007 ; PPAR Research Volume 2007 ; 2007 ; 2007 >
+    au < exists ; exists ; 2008 ; PPAR Research Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; PPAR Research Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; PPAR Research Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; PPAR Research Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; PPAR Research Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; PPAR Research Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; PPAR Research Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Prostate Cancer ;
+      issn = 2090-3111 ;
+      eissn = 2090-312X ;
+      issnl = 2090-3111
+    >
+
+    param[journal_id] = pc
+
+    au < exists ; exists ; 2011 ; Prostate Cancer Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Prostate Cancer Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Prostate Cancer Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Prostate Cancer Volume 2014 ; 2014 ; 2014 >
+    
+  }
+
+  {
+    title <
+      name = Psyche: A Journal of Entomology ;
+      issn = 0033-2615 ;
+      eissn = 1687-7438 ;
+      issnl = 0033-2615
+    >
+
+    param[journal_id] = psyche
+    comment[volume_order] = volume order is wrong, goes back to 1974
+
+    au < exists ; exists ; 1874 ; Psyche Volume 1 (1874) ; 1874 ; 1 >
+    au < exists ; exists ; 1875 ; Psyche Volume 1 (1875) ; 1875 ; 1 >
+    au < exists ; exists ; 1876 ; Psyche Volume 1 (1876) ; 1876 ; 1 >
+    au < exists ; exists ; 1877 ; Psyche Volume 2 (1877) ; 1877 ; 2 >
+    au < exists ; exists ; 1878 ; Psyche Volume 2 (1878) ; 1878 ; 2 >
+    au < exists ; exists ; 1879 ; Psyche Volume 2 (1879) ; 1879 ; 2 >
+    au < exists ; exists ; 1880 ; Psyche Volume 3 (1880) ; 1880 ; 3 >
+    au < exists ; exists ; 1881 ; Psyche Volume 3 (1881) ; 1881 ; 3 >
+    au < exists ; exists ; 1882 ; Psyche Volume 3 (1882) ; 1882 ; 3 >
+    au < exists ; exists ; 1883 ; Psyche Volume 4 (1883) ; 1883 ; 4 >
+    au < exists ; exists ; 1884 ; Psyche Volume 4 (1884) ; 1884 ; 4 >
+    au < exists ; exists ; 1885 ; Psyche Volume 4 (1885) ; 1885 ; 4 >
+    au < exists ; exists ; 1888 ; Psyche Volume 5 (1888) ; 1888 ; 5 >
+    au < exists ; exists ; 1889 ; Psyche Volume 5 (1889) ; 1889 ; 5 >
+    au < exists ; exists ; 1890 ; Psyche Volume 5 (1890) ; 1890 ; 5 >
+    au < exists ; exists ; 1891 ; Psyche Volume 6 (1891) ; 1891 ; 6 >
+    au < exists ; exists ; 1892 ; Psyche Volume 6 (1892) ; 1892 ; 6 >
+    au < exists ; exists ; 1893 ; Psyche Volume 6 (1893) ; 1893 ; 6 >
+    au < exists ; exists ; 1894 ; Psyche Volume 7 (1894) ; 1894 ; 7 >
+    au < exists ; exists ; 1895 ; Psyche Volume 7 (1895) ; 1895 ; 7 >
+    au < exists ; exists ; 1896 ; Psyche Volume 7 (1896) ; 1896 ; 7 >
+    au < exists ; exists ; 1897 ; Psyche Volume 8 (1897) ; 1897 ; 8 >
+    au < exists ; exists ; 1898 ; Psyche Volume 8 (1898) ; 1898 ; 8 >
+    au < exists ; exists ; 1899 ; Psyche Volume 8 (1899) ; 1899 ; 8 >
+    au < exists ; exists ; 1900 ; Psyche Volume 9 (1900) ; 1900 ; 9 >
+    au < exists ; exists ; 1901 ; Psyche Volume 9 (1901) ; 1901 ; 9 >
+    au < exists ; exists ; 1902 ; Psyche Volume 9 (1902) ; 1902 ; 9 >
+    au < exists ; exists ; 1903 ; Psyche Volume 10 (1903) ; 1903 ; 10 >
+    au < exists ; exists ; 1904 ; Psyche Volume 11 (1904) ; 1904 ; 11 >
+    au < exists ; exists ; 1905 ; Psyche Volume 12 (1905) ; 1905 ; 12 >
+    au < exists ; exists ; 1906 ; Psyche Volume 13 (1906) ; 1906 ; 13 >
+    au < exists ; exists ; 1907 ; Psyche Volume 14 (1907) ; 1907 ; 14 >
+    au < exists ; exists ; 1908 ; Psyche Volume 15 (1908) ; 1908 ; 15 >
+    au < exists ; exists ; 1909 ; Psyche Volume 16 (1909) ; 1909 ; 16 >
+    au < exists ; exists ; 1910 ; Psyche Volume 17 (1910) ; 1910 ; 17 >
+    au < exists ; exists ; 1912 ; Psyche Volume 19 (1912) ; 1912 ; 19 >
+    au < exists ; exists ; 1913 ; Psyche Volume 20 (1913) ; 1913 ; 20 >
+    au < exists ; exists ; 1914 ; Psyche Volume 21 (1914) ; 1914 ; 21 >
+    au < exists ; exists ; 1915 ; Psyche Volume 22 (1915) ; 1915 ; 22 >
+    au < exists ; exists ; 1916 ; Psyche Volume 23 (1916) ; 1916 ; 23 >
+    au < exists ; exists ; 1917 ; Psyche Volume 24 (1917) ; 1917 ; 24 >
+    au < exists ; exists ; 1918 ; Psyche Volume 25 (1918) ; 1918 ; 25 >
+    au < exists ; exists ; 1919 ; Psyche Volume 26 (1919) ; 1919 ; 26 >
+    au < exists ; exists ; 1920 ; Psyche Volume 27 (1920) ; 1920 ; 27 >
+    au < exists ; exists ; 1921 ; Psyche Volume 28 (1921) ; 1921 ; 28 >
+    au < exists ; exists ; 1922 ; Psyche Volume 29 (1922) ; 1922 ; 29 >
+    au < exists ; exists ; 1923 ; Psyche Volume 30 (1923) ; 1923 ; 30 >
+    au < exists ; exists ; 1924 ; Psyche Volume 31 (1924) ; 1924 ; 31 >
+    au < exists ; exists ; 1925 ; Psyche Volume 32 (1925) ; 1925 ; 32 >
+    au < exists ; exists ; 1926 ; Psyche Volume 33 (1926) ; 1926 ; 33 >
+    au < exists ; exists ; 1927 ; Psyche Volume 34 (1927) ; 1927 ; 34 >
+    au < exists ; exists ; 1928 ; Psyche Volume 35 (1928) ; 1928 ; 35 >
+    au < exists ; exists ; 1929 ; Psyche Volume 36 (1929) ; 1929 ; 36 >
+    au < exists ; exists ; 1930 ; Psyche Volume 37 (1930) ; 1930 ; 37 >
+    au < exists ; exists ; 1931 ; Psyche Volume 38 (1931) ; 1931 ; 38 >
+    au < exists ; exists ; 1932 ; Psyche Volume 39 (1932) ; 1932 ; 39 >
+    au < exists ; exists ; 1933 ; Psyche Volume 40 (1933) ; 1933 ; 40 >
+    au < exists ; exists ; 1934 ; Psyche Volume 41 (1934) ; 1934 ; 41 >
+    au < exists ; exists ; 1935 ; Psyche Volume 42 (1935) ; 1935 ; 42 >
+    au < exists ; exists ; 1936 ; Psyche Volume 43 (1936) ; 1936 ; 43 >
+    au < exists ; exists ; 1937 ; Psyche Volume 44 (1937) ; 1937 ; 44 >
+    au < exists ; exists ; 1938 ; Psyche Volume 45 (1938) ; 1938 ; 45 >
+    au < exists ; exists ; 1939 ; Psyche Volume 46 (1939) ; 1939 ; 46 >
+    au < exists ; exists ; 1940 ; Psyche Volume 47 (1940) ; 1940 ; 47 >
+    au < exists ; exists ; 1941 ; Psyche Volume 48 (1941) ; 1941 ; 48 >
+    au < exists ; exists ; 1942 ; Psyche Volume 49 (1942) ; 1942 ; 49 >
+    au < exists ; exists ; 1943 ; Psyche Volume 50 (1943) ; 1943 ; 50 >
+    au < exists ; exists ; 1944 ; Psyche Volume 51 (1944) ; 1944 ; 51 >
+    au < exists ; exists ; 1945 ; Psyche Volume 52 (1945) ; 1945 ; 52 >
+    au < exists ; exists ; 1946 ; Psyche Volume 53 (1946) ; 1946 ; 53 >
+    au < exists ; exists ; 1947 ; Psyche Volume 54 (1947) ; 1947 ; 54 >
+    au < exists ; exists ; 1948 ; Psyche Volume 55 (1948) ; 1948 ; 55 >
+    au < exists ; exists ; 1949 ; Psyche Volume 56 (1949) ; 1949 ; 56 >
+    au < exists ; exists ; 1950 ; Psyche Volume 57 (1950) ; 1950 ; 57 >
+    au < exists ; exists ; 1951 ; Psyche Volume 58 (1951) ; 1951 ; 58 >
+    au < exists ; exists ; 1952 ; Psyche Volume 59 (1952) ; 1952 ; 59 >
+    au < exists ; exists ; 1953 ; Psyche Volume 60 (1953) ; 1953 ; 60 >
+    au < exists ; exists ; 1954 ; Psyche Volume 61 (1954) ; 1954 ; 61 >
+    au < exists ; exists ; 1955 ; Psyche Volume 62 (1955) ; 1955 ; 62 >
+    au < exists ; exists ; 1956 ; Psyche Volume 63 (1956) ; 1956 ; 63 >
+    au < exists ; exists ; 1957 ; Psyche Volume 64 (1957) ; 1957 ; 64 >
+    au < exists ; exists ; 1958 ; Psyche Volume 65 (1958) ; 1958 ; 65 >
+    au < exists ; exists ; 1959 ; Psyche Volume 66 (1959) ; 1959 ; 66 >
+    au < exists ; exists ; 1960 ; Psyche Volume 67 (1960) ; 1960 ; 67 >
+    au < exists ; exists ; 1961 ; Psyche Volume 68 (1961) ; 1961 ; 68 >
+    au < exists ; exists ; 1962 ; Psyche Volume 69 (1962) ; 1962 ; 69 >
+    au < exists ; exists ; 1963 ; Psyche Volume 70 (1963) ; 1963 ; 70 >
+    au < exists ; exists ; 1964 ; Psyche Volume 71 (1964) ; 1964 ; 71 >
+    au < exists ; exists ; 1965 ; Psyche Volume 72 (1965) ; 1965 ; 72 >
+    au < exists ; exists ; 1966 ; Psyche Volume 73 (1966) ; 1966 ; 73 >
+    au < exists ; exists ; 1967 ; Psyche Volume 74 (1967) ; 1967 ; 74 >
+    au < exists ; exists ; 1968 ; Psyche Volume 75 (1968) ; 1968 ; 75 >
+    au < exists ; exists ; 1969 ; Psyche Volume 76 (1969) ; 1969 ; 76 >
+    au < exists ; exists ; 1970 ; Psyche Volume 77 (1970) ; 1970 ; 77 >
+    au < exists ; exists ; 1971 ; Psyche Volume 78 (1971) ; 1971 ; 78 >
+    au < exists ; exists ; 1972 ; Psyche Volume 79 (1972) ; 1972 ; 79 >
+    au < exists ; exists ; 1973 ; Psyche Volume 80 (1973) ; 1973 ; 80 >
+    au < exists ; exists ; 1974 ; Psyche Volume 81 (1974) ; 1974 ; 81 >
+    au < exists ; exists ; 1975 ; Psyche Volume 82 (1975) ; 1975 ; 82 >
+    au < exists ; exists ; 1976 ; Psyche Volume 83 (1976) ; 1976 ; 83 >
+    au < exists ; exists ; 1977 ; Psyche Volume 84 (1977) ; 1977 ; 84 >
+    au < exists ; exists ; 1978 ; Psyche Volume 85 (1978) ; 1978 ; 85 >
+    au < exists ; exists ; 1979 ; Psyche Volume 86 (1979) ; 1979 ; 86 >
+    au < exists ; exists ; 1980 ; Psyche Volume 87 (1980) ; 1980 ; 87 >
+    au < exists ; exists ; 1981 ; Psyche Volume 88 (1981) ; 1981 ; 88 >
+    au < exists ; exists ; 1982 ; Psyche Volume 89 (1982) ; 1982 ; 89 >
+    au < exists ; exists ; 1983 ; Psyche Volume 90 (1983) ; 1983 ; 90 >
+    au < exists ; exists ; 1984 ; Psyche Volume 91 (1984) ; 1984 ; 91 >
+    au < exists ; exists ; 1985 ; Psyche Volume 92 (1985) ; 1985 ; 92 >
+    au < exists ; exists ; 1986 ; Psyche Volume 93 (1986) ; 1986 ; 93 >
+    au < exists ; exists ; 1987 ; Psyche Volume 94 (1987) ; 1987 ; 94 >
+    au < exists ; exists ; 1988 ; Psyche Volume 95 (1988) ; 1988 ; 95 >
+    au < exists ; exists ; 1989 ; Psyche Volume 96 (1989) ; 1989 ; 96 >
+    au < exists ; exists ; 1990 ; Psyche Volume 97 (1990) ; 1990 ; 97 >
+    au < exists ; exists ; 1991 ; Psyche Volume 98 (1991) ; 1991 ; 98 >
+    au < exists ; exists ; 1992 ; Psyche Volume 99 (1992) ; 1992 ; 99 >
+    au < exists ; exists ; 1993 ; Psyche Volume 100 (1993) ; 1993 ; 100 >
+    au < exists ; exists ; 1994 ; Psyche Volume 101 (1994) ; 1994 ; 101 >
+    au < exists ; exists ; 1995 ; Psyche Volume 102 (1995) ; 1995 ; 102 >
+    au < exists ; exists ; 2000 ; Psyche Volume 103 (2000) ; 2000 ; 103 >
+    au < doesNotExist ; doesNotExist ; 2001 ; Psyche Volume 2001 ; 2001 ; 2001 >
+    au < doesNotExist ; doesNotExist ; 2002 ; Psyche Volume 2002 ; 2002 ; 2002 >
+    au < doesNotExist ; doesNotExist ; 2003 ; Psyche Volume 2003 ; 2003 ; 2003 >
+    au < doesNotExist ; doesNotExist ; 2004 ; Psyche Volume 2004 ; 2004 ; 2004 >
+    au < doesNotExist ; doesNotExist ; 2005 ; Psyche Volume 2005 ; 2005 ; 2005 >
+    au < doesNotExist ; doesNotExist ; 2006 ; Psyche Volume 2006 ; 2006 ; 2006 >
+    au < doesNotExist ; doesNotExist ; 2007 ; Psyche Volume 2007 ; 2007 ; 2007 >
+    au < doesNotExist ; doesNotExist ; 2008 ; Psyche Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; Psyche Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; Psyche Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Psyche Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Psyche Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Psyche Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Psyche Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Psychiatry Journal ;
+      issn = 2314-4327 ;
+      eissn = 2314-4335 ;
+      issnl = 2314-4327
+    >
+
+    param[journal_id] = psychiatry
+
+    au < exists ; exists ; 2013 ; Psychiatry Journal Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Psychiatry Journal Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Pulmonary Medicine ;
+      issn = 2090-1836 ;
+      eissn = 2090-1844 ;
+      issnl = 2090-1836
+    >
+
+    param[journal_id] = pm
+
+    au < exists ; exists ; 2010 ; Pulmonary Medicine Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Pulmonary Medicine Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Pulmonary Medicine Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Pulmonary Medicine Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Pulmonary Medicine Volume 2014 ; 2014 ; 2014 >
+    
+  }
+
+  {
+    title <
+      name = Radiology Research and Practice ;
+      issn = 2090-1941 ;
+      eissn = 2090-195X ;
+      issnl = 2090-1941
+    >
+
+    param[journal_id] = rrp
+
+    au < exists ; exists ; 2011 ; Radiology Research and Practice Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Radiology Research and Practice Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Radiology Research and Practice Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Radiology Research and Practice Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Rehabilitation Research and Practice ;
+      issn = 2090-2867 ;
+      eissn = 2090-2875 ;
+      issnl = 2090-2867
+    >
+
+    param[journal_id] = rerp
+
+    au < exists ; exists ; 2010 ; Rehabilitation Research and Practice Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Rehabilitation Research and Practice Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Rehabilitation Research and Practice Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Rehabilitation Research and Practice Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Rehabilitation Research and Practice Volume 2014 ; 2014 ; 2014 >
+    
+  }
+
+  {
+    title <
+      name = Sarcoma ;
+      issn = 1357-714X ;
+      eissn = 1369-1643 ;
+      issnl = 1357-714X
+    >
+
+    param[journal_id] = sarcoma
+
+    au < exists ; exists ; 1997 ; Sarcoma Volume 1 (1997) ; 1997 ; 1 >
+    au < exists ; exists ; 1998 ; Sarcoma Volume 2 (1998) ; 1998 ; 2 >
+    au < exists ; exists ; 1999 ; Sarcoma Volume 3 (1999) ; 1999 ; 3 >
+    au < exists ; exists ; 2000 ; Sarcoma Volume 4 (2000) ; 2000 ; 4 >
+    au < exists ; exists ; 2001 ; Sarcoma Volume 5 (2001) ; 2001 ; 5 >
+    au < exists ; exists ; 2002 ; Sarcoma Volume 6 (2002) ; 2002 ; 6 >
+    au < exists ; exists ; 2003 ; Sarcoma Volume 7 (2003) ; 2003 ; 7 >
+    au < exists ; exists ; 2004 ; Sarcoma Volume 8 (2004) ; 2004 ; 8 >
+    au < exists ; exists ; 2005 ; Sarcoma Volume 9 (2005) ; 2005 ; 9 >
+    au < exists ; exists ; 2006 ; Sarcoma Volume 2006 ; 2006 ; 2006 >
+    au < exists ; exists ; 2007 ; Sarcoma Volume 2007 ; 2007 ; 2007 >
+    au < exists ; exists ; 2008 ; Sarcoma Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; Sarcoma Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; Sarcoma Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Sarcoma Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Sarcoma Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Sarcoma Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Sarcoma Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Schizophrenia Research and Treatment ;
+      issn = 2090-2085 ;
+      eissn = 2090-2093 ;
+      issnl = 2090-2085
+    >
+
+    param[journal_id] = schizort
+
+    au < exists ; exists ; 2011 ; Schizophrenia Research and Treatment Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Schizophrenia Research and Treatment Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Schizophrenia Research and Treatment Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Schizophrenia Research and Treatment Volume 2014 ; 2014 ; 2014 >
+
+  }
+  
+  {
+    title <
+      name = Science and Technology of Nuclear Installations ;
+      issn = 1687-6075 ;
+      eissn = 1687-6083 ;
+      issnl = 1687-6075
+    >
+
+    param[journal_id] = stni
+
+    au < exists ; exists ; 2007 ; Science and Technology of Nuclear Installations Volume 2007 ; 2007 ; 2007 >
+    au < exists ; exists ; 2008 ; Science and Technology of Nuclear Installations Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; Science and Technology of Nuclear Installations Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; Science and Technology of Nuclear Installations Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Science and Technology of Nuclear Installations Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Science and Technology of Nuclear Installations Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Science and Technology of Nuclear Installations Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Science and Technology of Nuclear Installations Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Scientifica ;
+      eissn = 2090-908X ;
+      issnl = 2090-908X
+    >
+
+    param[journal_id] = scientifica
+
+    au < exists ; exists ; 2012 ; Scientifica Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Scientifica Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Scientifica Volume 2014 ; 2014 ; 2014 >
+
+  }
+  
+  {
+    title <
+      name = Shock and Vibration ;
+      issn = 0792-8483 ;
+      eissn = 1687-5443 ;
+      issnl = 0792-8483
+    >
+
+    param[journal_id] = sv
+
+    au < exists ; exists ; 1993 ; Shock and Vibration Volume 1 (1993) ; 1993 ; 1 >
+    au < exists ; exists ; 1994 ; Shock and Vibration Volume 1 (1994) ; 1994 ; 1 >
+    au < exists ; exists ; 1995 ; Shock and Vibration Volume 2 (1995) ; 1995 ; 2 >
+    au < exists ; exists ; 1996 ; Shock and Vibration Volume 3 (1996) ; 1996 ; 3 >
+    au < exists ; exists ; 1997 ; Shock and Vibration Volume 4 (1997) ; 1997 ; 4 >
+    au < exists ; exists ; 1998 ; Shock and Vibration Volume 5 (1998) ; 1998 ; 5 >
+    au < exists ; exists ; 1999 ; Shock and Vibration Volume 6 (1999) ; 1999 ; 6 >
+    au < exists ; exists ; 2000 ; Shock and Vibration Volume 7 (2000) ; 2000 ; 7 >
+    au < exists ; exists ; 2001 ; Shock and Vibration Volume 8 (2001) ; 2001 ; 8 >
+    au < exists ; exists ; 2002 ; Shock and Vibration Volume 9 (2002) ; 2002 ; 9 >
+    au < exists ; exists ; 2003 ; Shock and Vibration Volume 10 (2003) ; 2003 ; 10 >
+    au < exists ; exists ; 2004 ; Shock and Vibration Volume 11 (2004) ; 2004 ; 11 >
+    au < exists ; exists ; 2005 ; Shock and Vibration Volume 12 (2005) ; 2005 ; 12 >
+    au < exists ; exists ; 2006 ; Shock and Vibration Volume 13 (2006) ; 2006 ; 13 >
+    au < exists ; exists ; 2007 ; Shock and Vibration Volume 14 (2007) ; 2007 ; 14 >
+    au < exists ; exists ; 2008 ; Shock and Vibration Volume 15 (2008) ; 2008 ; 15 >
+    au < exists ; exists ; 2009 ; Shock and Vibration Volume 16 (2009) ; 2009 ; 16 >
+    au < exists ; exists ; 2010 ; Shock and Vibration Volume 17 (2010) ; 2010 ; 17 >
+    au < exists ; exists ; 2011 ; Shock and Vibration Volume 18 (2011) ; 2011 ; 18 >
+    au < exists ; exists ; 2012 ; Shock and Vibration Volume 19 (2012) ; 2012 ; 19 >
+    au < exists ; exists ; 2013 ; Shock and Vibration Volume 20 (2013) ; 2013 ; 20 >
+    au < exists ; exists ; 2014 ; Shock and Vibration Volume 2014 ; 2014 ; 2014 >
+
+  }
+  
+  {
+    title <
+      name = Sleep Disorders ;
+      issn = 2090-3545 ;
+      eissn = 2090-3553 ;
+      issnl = 2090-3545
+    >
+
+    param[journal_id] = sd
+
+    au < exists ; exists ; 2011 ; Sleep Disorders Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Sleep Disorders Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Sleep Disorders Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Sleep Disorders Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Smart Materials Research ;
+      issn = 2090-3561 ;
+      eissn = 2090-357X ;
+      issnl = 2090-3561
+    >
+
+    param[journal_id] = smr
+
+    au < exists ; exists ; 2011 ; Smart Materials Research Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Smart Materials Research Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Smart Materials Research Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Smart Materials Research Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Stem Cells International ;
+      issn = 1687-9678 ;
+      issnl = 1687-9678
+    >
+
+    param[journal_id] = sci
+
+    au < exists ; exists ; 2010 ; Stem Cells International Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Stem Cells International Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Stem Cells International Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Stem Cells International Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Stem Cells International Volume 2014 ; 2014 ; 2014 >
+    
+  }
+
+  {
+    title <
+      name = Stroke Research and Treatment ;
+      issn = 2090-8105 ;
+      eissn = 2042-0056 ;
+      issnl = 2090-8105 
+    >
+
+    param[journal_id] = srt
+
+    au < exists ; exists ; 2010 ; Stroke Research and Treatment Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Stroke Research and Treatment Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Stroke Research and Treatment Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Stroke Research and Treatment Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Stroke Research and Treatment Volume 2014 ; 2014 ; 2014 >
+    
+  }
+  
+  {
+    title <
+      name = Structural Biology ;
+      issn = 2314-4343 ;
+      eissn = 2314-4351 ;
+      issnl = 2314-4343
+    >
+
+    param[journal_id] = sb
+
+    au < exists ; exists ; 2013 ; Structural Biology Volume 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; 2014 ; Structural Biology Volume 2014 ; 2014 ; 2014 >
+
+  }
+  {
+    title <
+      name = Surgery Research and Practice ;
+      issn = 2356-7759 ;
+      eissn = 2356-6124 ;
+      issnl = 2356-7759
+    >
+
+    param[journal_id] = srp
+
+    au < exists ; exists ; 2014 ; Surgery Research and Practice Volume 2014 ; 2014 ; 2014 >
+
+  }
+
 }
