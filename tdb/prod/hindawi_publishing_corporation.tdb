@@ -7073,21 +7073,166 @@
 
   {
     title <
+      name = Journal of Solid State Physics ;
+      issn = 2356-7643 ;
+      eissn = 2314-6842 ;
+      issnl = 2356-7643
+    >
+
+    param[journal_id] = jssp
+
+    au < exists ; 2013 ; Journal of Solid State Physics Volume 2013 ; 2013 ; 2013 >
+    au < expected ; 2014 ; Journal of Solid State Physics Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Spectroscopy ;
+      issn = 2314-4920 ;
+      eissn = 2314-4939 ;
+      issnl = 2314-4920
+    >
+
+    param[journal_id] = jspec
+
+    au < exists ; 1997 ; Spectroscopy Volume 13 (1997) ; 1997 ; 13 >
+    au < exists ; 1998 ; Spectroscopy Volume 14 (1998) ; 1998 ; 14 >
+    au < exists ; 1999 ; Spectroscopy Volume 14 (1999) ; 1999 ; 14 >
+    au < exists ; 2000 ; Spectroscopy Volume 14 (2000) ; 2000 ; 14 >
+    au < exists ; 2001 ; Spectroscopy Volume 15 (2001) ; 2001 ; 15 >
+    au < exists ; 2002 ; Spectroscopy Volume 16 (2002) ; 2002 ; 16 >
+    au < exists ; 2003 ; Spectroscopy Volume 17 (2003) ; 2003 ; 17 >
+    au < exists ; 2004 ; Spectroscopy Volume 18 (2004) ; 2004 ; 18 >
+    au < exists ; 2005 ; Spectroscopy Volume 19 (2005) ; 2005 ; 19 >
+    au < exists ; 2006 ; Spectroscopy Volume 20 (2006) ; 2006 ; 20 >
+    au < exists ; 2007 ; Spectroscopy Volume 21 (2007) ; 2007 ; 21 >
+    au < exists ; 2008 ; Spectroscopy Volume 22 (2008) ; 2008 ; 22 >
+    au < exists ; 2009 ; Spectroscopy Volume 23 (2009) ; 2009 ; 23 >
+    au < exists ; 2010 ; Spectroscopy Volume 24 (2010) ; 2010 ; 24 >
+    au < exists ; 2011 ; Spectroscopy Volume 25-26 (2011) ; 2011 ; 25-26 >
+    au < exists ; 2012 ; Spectroscopy: An International Journal Volume 27 (2012) ; 2012 ; 27 >
+    au < exists ; 2013 ; Journal of Spectroscopy Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; Journal of Spectroscopy Volume 2014 ; 2014 ; 2014 >
+  }
+
+  {
+    title <
+      name = Journal of Sports Medicine ;
+      issn = 2356-7651 ;
+      eissn = 2314-6176 ;
+      issnl = 2356-7651
+    >
+
+    param[journal_id] = jsm
+
+    au < exists ; 2013 ; Journal of Sports Medicine Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; Journal of Sports Medicine Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Stochastics ;
+      issn = 2356-7988 ;
+      eissn = 2314-8365 ;
+      issnl = 2356-7988
+    >
+
+    param[journal_id] = jsto
+
+    au < expected ; 2014 ; Journal of Stochastics Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Structures ;
+      issn = 2356-766X ;
+      eissn = 2314-6494 ;
+      issnl = 2356-766X
+    >
+
+    param[journal_id] = jstruc
+
+    au < exists ; 2013 ; Journal of Structures Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; Journal of Structures Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Synthetic Biology ;
+      issn = 2314-5145 ;
+      eissn = 2314-5153 ;
+      issnl = 2314-5145
+    >
+
+    param[journal_id] = jsb
+
+    au < expected ; 2014 ; Journal of Synthetic Biology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Textiles ;
+      issn = 2356-7678 ;
+      eissn = 2314-6044 ;
+      issnl = 2356-7678
+    >
+
+    param[journal_id] = jtex
+
+    au < exists ; 2013 ; Journal of Textiles Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; Journal of Textiles Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Theoretical Chemistry ;
+      issn = 2356-7686 ;
+      eissn = 2314-6184 ;
+      issnl = 2356-7686	
+    >
+
+    param[journal_id] = jtc
+
+    au < exists ; 2013 ; Journal of Theoretical Chemistry Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; Journal of Theoretical Chemistry Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
       name = Journal of Thermodynamics ;
       issn = 1687-9244 ;
       eissn = 1687-9252 ;
       issnl = 1687-9244
     >
 
+    {
     param[journal_id] = jtd
 
-    au < released ; 2009 ; Journal of Thermodynamics Volume 2009 ; 2009 ; 2009 >
-    au < released ; 2010 ; Journal of Thermodynamics Volume 2010 ; 2010 ; 2010 >
-    au < released ; 2011 ; Journal of Thermodynamics Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Journal of Thermodynamics Volume 2012 ; 2012 ; 2012 >
-    au < manifest ; 2013 ; Journal of Thermodynamics Volume 2013 ; 2013 ; 2013 >
-    au < expected ; 2014 ; Journal of Thermodynamics Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2009 ; Journal of Thermodynamics Volume 2009 [superseded] ; 2009 ; 2009 >
+    au < down ; 2010 ; Journal of Thermodynamics Volume 2010 [superseded] ; 2010 ; 2010 >
+    au < down ; 2011 ; Journal of Thermodynamics Volume 2011 [superseded] ; 2011 ; 2011 >
 
+    }
+
+    {
+    param[journal_id] = jther
+
+    au < exists ; 2009 ; Journal of Thermodynamics Volume 2009 ; 2009 ; 2009 >
+    au < exists ; 2010 ; Journal of Thermodynamics Volume 2010 ; 2010 ; 2010 >
+    au < exists ; 2011 ; Journal of Thermodynamics Volume 2011 ; 2011 ; 2011 >
+    au < exists ; 2012 ; Journal of Thermodynamics Volume 2012 ; 2012 ; 2012 >
+    au < exists ; 2013 ; Journal of Thermodynamics Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; Journal of Thermodynamics Volume 2014 ; 2014 ; 2014 >
+
+    }
+    
   }
 
   {
@@ -7128,6 +7273,21 @@
 
   {
     title <
+      name = Journal of Toxins ;
+      issn = 2314-5048 ;
+      eissn = 2314-5056 ;
+      issnl = 2314-5048
+    >
+
+    param[journal_id] = jtox
+
+    au < exists ; 2013 ; Journal of Toxins Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; Journal of Toxins Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
       name = Journal of Transfusion ;
       issn = 2090-3073 ;
       eissn = 2090-3081 ;
@@ -7149,14 +7309,24 @@
       issnl = 2090-0007
     >
 
+    {
     param[journal_id] = jtran
 
-    au < released ; 2009 ; Journal of Transplantation Volume 2009 ; 2009 ; 2009 >
-    au < released ; 2010 ; Journal of Transplantation Volume 2010 ; 2010 ; 2010 >
-    au < released ; 2011 ; Journal of Transplantation Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Journal of Transplantation Volume 2012 ; 2012 ; 2012 >
-    au < manifest ; 2013 ; Journal of Transplantation Volume 2013 ; 2013 ; 2013 >
-    au < expected ; 2014 ; Journal of Transplantation Volume 2014 ; 2014 ; 2014 >
+    au < released ; 2009 ; Journal of Transplantation Volume 2009 [superseded] ; 2009 ; 2009 >
+    au < released ; 2010 ; Journal of Transplantation Volume 2010 [superseded] ; 2010 ; 2010 >
+    au < released ; 2011 ; Journal of Transplantation Volume 2011 [superseded] ; 2011 ; 2011 >
+    }
+
+    {
+    param[journal_id] = jtrans
+
+    au < exists ; 2009 ; Journal of Transplantation Volume 2009 ; 2009 ; 2009 >
+    au < exists ; 2010 ; Journal of Transplantation Volume 2010 ; 2010 ; 2010 >
+    au < exists ; 2011 ; Journal of Transplantation Volume 2011 ; 2011 ; 2011 >
+    au < exists ; 2012 ; Journal of Transplantation Volume 2012 ; 2012 ; 2012 >
+    au < exists ; 2013 ; Journal of Transplantation Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; Journal of Transplantation Volume 2014 ; 2014 ; 2014 >
+    }
 
   }
 
@@ -7176,6 +7346,95 @@
     au < manifest ; 2012 ; Journal of Tropical Medicine Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Journal of Tropical Medicine Volume 2013 ; 2013 ; 2013 >
     au < manifest ; 2014 ; Journal of Tropical Medicine Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Vaccines ;
+      issn = 2090-7974 ;
+      eissn = 2090-7990 ;
+      issnl = 2090-7974
+    >
+
+    param[journal_id] = jv
+
+    au < exists ; 2013 ; Journal of Vaccines Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; Journal of Vaccines Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Venereology ;
+      issn = 2356-7694 ;
+      eissn = 2314-8268 ;
+      issnl = 2356-7694
+    >
+
+    param[journal_id] = jve
+
+    au < exists ; 2013 ; Journal of Venereology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; Journal of Venereology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Veterinary Medicine ;
+      issn = 2356-7708 ;
+      eissn = 2314-6966 ;
+      issnl = 2356-7708
+    >
+
+    param[journal_id] = jvm
+
+    au < exists ; 2013 ; Journal of Veterinary Medicine Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; Journal of Veterinary Medicine Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Viruses ;
+      issn = 2356-7716 ;
+      eissn = 2314-646X ;
+      issnl = 2356-7716
+    >
+
+    param[journal_id] = jvi
+
+    au < exists ; 2014 ; Journal of Viruses Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Waste Management ;
+      issn = 2356-7724 ;
+      eissn = 2314-6052 ;
+      issnl = 2356-7724
+    >
+
+    param[journal_id] = jwm
+
+    au < exists ; 2013 ; Journal of Waste Management Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; Journal of Waste Management Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Wind Energy ;
+      issn = 2356-7732 ;
+      eissn = 2314-6249 ;
+      issnl = 2356-7732
+    >
+
+    param[journal_id] = jwe
+
+    au < exists ; 2013 ; Journal of Wind Energy Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; Journal of Wind Energy Volume 2014 ; 2014 ; 2014 >
 
   }
 
