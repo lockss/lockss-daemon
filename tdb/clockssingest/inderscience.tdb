@@ -6325,7 +6325,14 @@
         eissn = 1740-0619 ;
         issnl = 1740-0600
       >
-
+      
+      {
+      param[journal_issn] = 1740-0600
+      
+      au < superseded ; exists ; 2013 ; International Journal of Public Policy Volume 9 [superseded] ; 9 >
+      }
+      
+      {
       param[journal_issn] = 1740-0619
       
       au < manifest ; exists ; 2005-2006 ; International Journal of Public Policy Volume 1 ; 1 >
@@ -6338,7 +6345,9 @@
       au < finished ; crawling ; 2012 ; International Journal of Public Policy Volume 8 ; 8 >
       au < crawling ; exists ; 2013 ; International Journal of Public Policy Volume 9 ; 9 >
       au < manifest ; exists ; 2014 ; International Journal of Public Policy Volume 10 ; 10 >
-
+      
+      }
+      
     }
 
     {
