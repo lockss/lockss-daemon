@@ -1,0 +1,171 @@
+<book>
+<record_id>10001</record_id>
+  <title>Advanced Stuff for Future Wizards, Gremlins, and Physicists:</title>
+  <author>Arthur P. Somebody, University of California at Hogwarts, Organized by the National Research Council and the Office of the Dark Arts</author>
+  <page_count>20</page_count>
+  <approx>off</approx>
+  <alt_title></alt_title>
+  <subtitle>Seventh Lecture International Dark Arts Series</subtitle>
+  <flat_isbn>0111111110</flat_isbn>
+  <forthcoming>off</forthcoming>
+  <pdf_avail>off</pdf_avail>
+  <for_sale>on</for_sale>
+  <footnote></footnote>
+  <master_pub></master_pub>
+  <size>8.5 x 11</size>
+  <copyright>2000</copyright>
+  <delivery_date>2000-11-28</delivery_date>
+  <bulk_pricing>off</bulk_pricing>
+  <press_release>on</press_release>
+  <warning></warning>
+  <jhp_press_release>off</jhp_press_release>
+  <no_show>off</no_show>
+  <has_cd>off</has_cd>
+  <urls></urls>
+  <track>C</track>
+<display_date>
+	<year>2000</year>
+	<month>11</month>
+	<day>28</day>
+	<epoch>975387600</epoch>
+</display_date>
+  <alt_title></alt_title>
+<display_openbook>1</display_openbook>
+
+<topics>
+ <topic>
+  <topic_name>Physics</topic_name>
+  <id>411</id>
+  <parent_id>290</parent_id>
+  <parent_name>Math, Chemistry and Physics</parent_name>
+ </topic>
+ <topic>
+  <topic_name>Weapons and Technology</topic_name>
+  <id>329</id>
+  <parent_id>280</parent_id>
+  <parent_name>Conflict and Security Issues</parent_name>
+ </topic>
+<id_list>411 290 329 280</id_list>
+</topics>
+
+<rr_data>
+ <format form="openbook">
+  <path>http://www.nap.edu/books/foo/html/</path>
+ </format>
+ <format form="xopenb">
+  <path>http://www.nap.edu/books/foo/html/</path>
+ </format>
+</rr_data>
+
+<orgs>
+ <authorg org="CPSMA">
+  <word>Commission on Physical Sciences, Mathematics, and Applications</word>
+  <url>http://sites.nationalacademies.org/deps</url> </authorg>
+</orgs>
+
+<divisions>
+ <division code="DEPS">
+  <word>Engineering and Physical Sciences</word>
+  <url>http://www.nationalacademies.org/deps</url>
+ </division>
+</divisions>
+
+<product>
+<item>
+<type>print</type>
+<binding>P</binding>
+<isbn>0-XXX-07265-4</isbn>
+<isbn13>XXX-0-309-07265-6</isbn13>
+<productID>10001-0-309-XXXXX-4</productID>
+<price>15.00</price>
+<for_sale>on</for_sale>
+<word>paperback</word>
+<catalog_word>PAPERBACK</catalog_word>
+<bind_type>print</bind_type>
+
+
+</item>
+<item>
+<type>pdf_book</type>
+<isbn>0-XXX-51287-5</isbn>
+<isbn13>XXX-0-309-51287-9</isbn13>
+<price>11.50</price>
+<binding>pdfb</binding>
+<productID>10001-0-309-XXXXX-5</productID>
+<for_sale>on</for_sale>
+<free>on</free>
+<free_start_date>2005-02-24</free_start_date>
+<free_end_date></free_end_date>
+<word>PDF Full Book</word>
+<catalog_word>PDF BOOK</catalog_word>
+<bind_type>electronic</bind_type>
+
+</item>
+<item>
+<for_sale>on</for_sale>
+<free>on</free>
+<free_start_date>2005-02-24</free_start_date>
+<free_end_date></free_end_date>
+<isbn>0-XXX-51288-3</isbn>
+<isbn13>XXX-0-309-51288-6</isbn13>
+<pdf_book_price>11.50</pdf_book_price>
+
+<type>pdf_chapter</type>
+<binding>pdfc</binding>
+ <price>6.30</price>
+ <word>PDF By Chapter</word>
+<catalog_word>PDF CHAPTERS</catalog_word>
+<bind_type>electronic</bind_type>
+
+<chapter sequence="1">
+	<file_name>R1-8.pdf</file_name>
+	<title>Front Matter</title>
+	<page_range>R1-8</page_range>
+	<free>Y</free>
+	</chapter>
+<chapter sequence="2">
+	<file_name>1-2.pdf</file_name>
+	<title>Abstract</title>
+	<page_range>1-2</page_range>
+	<free>N</free>
+	</chapter>
+<chapter sequence="3">
+	<file_name>3-11.pdf</file_name>
+	<title>Advanced Stuff for Future Wizards, Gremlins, and Physicists:</title>
+	<page_range>3-11</page_range>
+	<free>N</free>
+	</chapter>
+</item></product>
+<blurbs>
+<blurb>
+ <blurb_type>copy</blurb_type>
+ <text>[lt]p[gt]The future development of stuff.[lt]/p[gt]</text> 
+</blurb>
+</blurbs>
+
+<series>
+</series>
+
+<authoring>
+ <authors>
+	<author>Somebody, Arthur P.</author>
+ </authors>
+</authoring>
+
+<e_inventory>
+<item>
+<type>pdf_native</type>
+<book>1</book>
+<chapters>1</chapters>
+</item>
+<item>
+<type>pdf_xml</type>
+<book>0</book>
+<chapters>0</chapters>
+</item>
+<item>
+<type>pdf_image</type>
+<chapters>0</chapters>
+</item>
+</e_inventory>
+</book>
