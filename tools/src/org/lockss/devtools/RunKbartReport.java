@@ -1,5 +1,5 @@
 /*
- * $Id: RunKbartReport.java,v 1.10 2014-06-20 21:49:18 pgust Exp $
+ * $Id: RunKbartReport.java,v 1.11 2014-06-20 22:31:18 pgust Exp $
  */
 
 /*
@@ -179,12 +179,6 @@ public class RunKbartReport {
       die("Could not read CSV file. "+e.getMessage(), e);
     }
     System.err.println(titles.size()+" KbartTitles for export");
-
-    // Return if there are no titles
-    if (titles.isEmpty()) {
-      System.err.println("No titles for export.");
-      return null;
-    }
 
     // Create a filter
     KbartExportFilter filter = new KbartExportFilter(titles, columnOrdering,
