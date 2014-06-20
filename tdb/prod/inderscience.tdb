@@ -40,7 +40,7 @@
       
       au < released ; 2012 ; African Journal of Economic and Sustainable Development Volume 1 ; 1 >
       au < doNotProcess ; 2013 ; African Journal of Economic and Sustainable Development Volume 2 ; 2 >
-      au < expected ; 2014 ; African Journal of Economic and Sustainable Development Volume 3 ; 3 >
+      au < doNotProcess ; 2014 ; African Journal of Economic and Sustainable Development Volume 3 ; 3 >
 
     }
 
@@ -522,8 +522,7 @@
       au < released ; 2008 ; International Journal of Agricultural Resources, Governance and Ecology Volume 7 ; 7 >
       au < released ; 2009 ; International Journal of Agricultural Resources, Governance and Ecology Volume 8 ; 8 >
       au < released ; 2011-2012 ; International Journal of Agricultural Resources, Governance and Ecology Volume 9 ; 9 >
-      au < expected ; 2013 ; International Journal of Agricultural Resources, Governance and Ecology Volume 10 ; 10 >
-      au < expected ; 2014 ; International Journal of Agricultural Resources, Governance and Ecology Volume 11 ; 11 >
+      au < doNotProcess ; 2014 ; International Journal of Agricultural Resources, Governance and Ecology Volume 10 ; 10 >
       
     }
 
@@ -746,7 +745,7 @@
       au < released ; 2011 ; International Journal of Automation and Control Volume 5 ; 5 >
       au < released ; 2012 ; International Journal of Automation and Control Volume 6 ; 6 >
       au < doNotProcess ; 2013 ; International Journal of Automation and Control Volume 7 ; 7 >
-      au < expected ; 2014 ; International Journal of Automation and Control Volume 8 ; 8 >
+      au < doNotProcess ; 2014 ; International Journal of Automation and Control Volume 8 ; 8 >
 
     }
 
@@ -1008,7 +1007,7 @@
       au < doNotProcess ; 2013 ; International Journal of Biomedical Engineering and Technology Volume 12 ; 12 >
       au < doNotProcess ; 2013 ; International Journal of Biomedical Engineering and Technology Volume 13 ; 13 >
       au < doNotProcess ; 2014 ; International Journal of Biomedical Engineering and Technology Volume 14 ; 14 >
-      au < expected ; 2014 ; International Journal of Biomedical Engineering and Technology Volume 15 ; 15 >
+      au < doNotProcess ; 2014 ; International Journal of Biomedical Engineering and Technology Volume 15 ; 15 >
       au < expected ; 2014 ; International Journal of Biomedical Engineering and Technology Volume 16 ; 16 >
 
     }
@@ -1959,7 +1958,7 @@
       au < released ; 2010-2011 ; International Journal of Corporate Governance Volume 2 ; 2 >
       au < released ; 2012 ; International Journal of Corporate Governance Volume 3 ; 3 >
       au < doNotProcess ; 2013 ; International Journal of Corporate Governance Volume 4 ; 4 >
-      au < expected ; 2014 ; International Journal of Corporate Governance Volume 5 ; 5 >
+      au < doNotProcess ; 2014 ; International Journal of Corporate Governance Volume 5 ; 5 >
 
     }
 
@@ -2622,7 +2621,7 @@
       au < released ; 2010 ; International Journal of Emergency Management Volume 7 ; 7 >
       au < released ; 2011-2012 ; International Journal of Emergency Management Volume 8 ; 8 >
       au < doNotProcess ; 2013 ; International Journal of Emergency Management Volume 9 ; 9 >
-      au < expected ; 2014 ; International Journal of Emergency Management Volume 10 ; 10 >
+      au < doNotProcess ; 2014 ; International Journal of Emergency Management Volume 10 ; 10 >
 
     }
 
@@ -2829,7 +2828,7 @@
       au < doNotProcess ; 2013 ; International Journal of Entrepreneurship and Small Business Volume 19 ; 19 >
       au < testing ; 2013 ; International Journal of Entrepreneurship and Small Business Volume 20 ; 20 >
       au < doNotProcess ; 2014 ; International Journal of Entrepreneurship and Small Business Volume 21 ; 21 >
-      au < expected ; 2014 ; International Journal of Entrepreneurship and Small Business Volume 22 ; 22 >
+      au < doNotProcess ; 2014 ; International Journal of Entrepreneurship and Small Business Volume 22 ; 22 >
       au < expected ; 2014 ; International Journal of Entrepreneurship and Small Business Volume 23 ; 23 >
 
     }
@@ -3180,7 +3179,7 @@
       au < released ; 2009-2010 ; International Journal of Financial Services Management Volume 4 ; 4 >
       au < released ; 2011-2012 ; International Journal of Financial Services Management Volume 5 ; 5 >
       au < doNotProcess ; 2013 ; International Journal of Financial Services Management Volume 6 ; 6 >
-      au < expected ; 2014 ; International Journal of Financial Services Management Volume 7 ; 7 >
+      au < doNotProcess ; 2014 ; International Journal of Financial Services Management Volume 7 ; 7 >
 
     }
 
@@ -3912,9 +3911,8 @@
       >
 
       param[journal_issn] = 1751-3235
-      comment[0] = title is not yet published on 9/20/2013
       
-      au  < expected ; 2014 ; International Journal of Information Systems and Management Volume 1 ; 1 >
+      au  < doNotProcess ; 2014 ; International Journal of Information Systems and Management Volume 1 ; 1 >
 
     }
 
@@ -4522,9 +4520,8 @@
       >
 
       param[journal_issn] = 1754-2308
-      comment[0] = title is not yet published on 4/11/2013
       
-      au < expected ; 2014 ; International Journal of Lean Enterprise Research Volume 1 ; 1 >
+      au < doNotProcess ; 2014 ; International Journal of Lean Enterprise Research Volume 1 ; 1 >
 
     }
 
@@ -4594,7 +4591,7 @@
       au < released ; 2011 ; International Journal of Learning Technology Volume 6 ; 6 >
       au < released ; 2012 ; International Journal of Learning Technology Volume 7 ; 7 >
       au < doNotProcess ; 2013 ; International Journal of Learning Technology Volume 8 ; 8 >
-      au < expected ; 2014 ; International Journal of Learning Technology Volume 9 ; 9 >
+      au < doNotProcess ; 2014 ; International Journal of Learning Technology Volume 9 ; 9 >
 
     }
 
@@ -4718,7 +4715,7 @@
       au < doNotProcess ; 2013 ; International Journal of Logistics Systems and Management Volume 15 ; 15 >
       au < doNotProcess ; 2013 ; International Journal of Logistics Systems and Management Volume 16 ; 16 >
       au < doNotProcess ; 2014 ; International Journal of Logistics Systems and Management Volume 17 ; 17 >
-      au < expected ; 2014 ; International Journal of Logistics Systems and Management Volume 18 ; 18 >
+      au < doNotProcess ; 2014 ; International Journal of Logistics Systems and Management Volume 18 ; 18 >
       au < expected ; 2014 ; International Journal of Logistics Systems and Management Volume 19 ; 19 >
 
     }
@@ -5333,7 +5330,7 @@
       au < released ; 2011 ; International Journal of Microstructure and Materials Properties Volume 6 ; 6 >
       au < released ; 2012 ; International Journal of Microstructure and Materials Properties Volume 7 ; 7 >
       au < doNotProcess ; 2013 ; International Journal of Microstructure and Materials Properties Volume 8 ; 8 >
-      au < expected ; 2014 ; International Journal of Microstructure and Materials Properties Volume 9 ; 9 >
+      au < doNotProcess ; 2014 ; International Journal of Microstructure and Materials Properties Volume 9 ; 9 >
 
     }
 
@@ -5585,8 +5582,7 @@
       au < released ; 2009 ; International Journal of Nano and Biomaterials Volume 2 ; 2 >
       au < released ; 2010-2011 ; International Journal of Nano and Biomaterials Volume 3 ; 3 >
       au < released ; 2012 ; International Journal of Nano and Biomaterials Volume 4 ; 4 >
-      au < expected ; 2013 ; International Journal of Nano and Biomaterials Volume 5 ; 5 >
-      au < expected ; 2014 ; International Journal of Nano and Biomaterials Volume 6 ; 6 >
+      au < doNotProcess ; 2014 ; International Journal of Nano and Biomaterials Volume 5 ; 5 >
 
     }
 
@@ -5631,7 +5627,7 @@
       au < released ; 2011 ; International Journal of Nanoparticles Volume 4 ; 4 >
       au < released ; 2012 ; International Journal of Nanoparticles Volume 5 ; 5 >
       au < doNotProcess ; 2013 ; International Journal of Nanoparticles Volume 6 ; 6 >
-      au < expected ; 2014 ; International Journal of Nanoparticles Volume 7 ; 7 >
+      au < doNotProcess ; 2014 ; International Journal of Nanoparticles Volume 7 ; 7 >
 
     }
 
@@ -5980,7 +5976,7 @@
       au < released ; 2011 ; International Journal of Pluralism and Economics Education Volume 2 ; 2 >
       au < released ; 2012 ; International Journal of Pluralism and Economics Education Volume 3 ; 3 >
       au < doNotProcess ; 2013 ; International Journal of Pluralism and Economics Education Volume 4 ; 4 >
-      au < expected ; 2014 ; International Journal of Pluralism and Economics Education Volume 5 ; 5 >
+      au < doNotProcess ; 2014 ; International Journal of Pluralism and Economics Education Volume 5 ; 5 >
 
     }
 
@@ -6397,7 +6393,7 @@
       param[journal_issn] = 2049-5994
       
       au < doNotProcess ; 2013 ; International Journal of Quantitative Research in Education Volume 1 ; 1 >
-      au < expected ; 2014 ; International Journal of Quantitative Research in Education Volume 2 ; 2 >
+      au < doNotProcess ; 2014 ; International Journal of Quantitative Research in Education Volume 2 ; 2 >
 
     }
 
@@ -6434,7 +6430,7 @@
       au < released ; 2009-2010 ; International Journal of Rapid Manufacturing Volume 1 ; 1 >
       au < released ; 2011 ; International Journal of Rapid Manufacturing Volume 2 ; 2 >
       au < released ; 2012-2013 ; International Journal of Rapid Manufacturing Volume 3 ; 3 >
-      au < expected ; 2014 ; International Journal of Rapid Manufacturing Volume 4 ; 4 >
+      au < doNotProcess ; 2014 ; International Journal of Rapid Manufacturing Volume 4 ; 4 >
 
     }
 
@@ -6707,9 +6703,8 @@
       au < released ; 2009 ; International Journal of Services and Standards Volume 5 ; 5 >
       au < released ; 2010 ; International Journal of Services and Standards Volume 6 ; 6 >
       au < released ; 2011 ; International Journal of Services and Standards Volume 7 ; 7 >
-      au < released ; 2012 ; International Journal of Services and Standards Volume 8 ; 8 >
-      au < expected ; 2013 ; International Journal of Services and Standards Volume 9 ; 9 >
-      au < expected ; 2014 ; International Journal of Services and Standards Volume 10 ; 10 >
+      au < released ; 2012-2013 ; International Journal of Services and Standards Volume 8 ; 8 >
+      au < doNotProcess ; 2014 ; International Journal of Services and Standards Volume 9 ; 9 >
 
     }
 
@@ -6872,7 +6867,7 @@
       au < released ; 2010-2011 ; International Journal of Simulation and Process Modelling Volume 6 ; 6 >
       au < released ; 2012 ; International Journal of Simulation and Process Modelling Volume 7 ; 7 >
       au < doNotProcess ; 2013 ; International Journal of Simulation and Process Modelling Volume 8 ; 8 >
-      au < expected ; 2014 ; International Journal of Simulation and Process Modelling Volume 9 ; 9 >
+      au < doNotProcess ; 2014 ; International Journal of Simulation and Process Modelling Volume 9 ; 9 >
 
     }
 
@@ -7821,8 +7816,7 @@
       
       au < released ; 2009-2010 ; International Journal of Ultra Wideband Communications and Systems Volume 1 ; 1 >
       au < released ; 2011-2012 ; International Journal of Ultra Wideband Communications and Systems Volume 2 ; 2 > 
-      au < expected ; 2013 ; International Journal of Ultra Wideband Communications and Systems Volume 3 ; 3 >
-      au < expected ; 2014 ; International Journal of Ultra Wideband Communications and Systems Volume 4 ; 4 >
+      au < doNotProcess ; 2014 ; International Journal of Ultra Wideband Communications and Systems Volume 3 ; 3 >
 
     }
 
@@ -8236,7 +8230,7 @@
       au < released ; 2011 ; Interdisciplinary Environmental Review Volume 12 ; 12 >
       au < released ; 2012 ; Interdisciplinary Environmental Review Volume 13 ; 13 >
       au < doNotProcess ; 2013 ; Interdisciplinary Environmental Review Volume 14 ; 14 >
-      au < expected ; 2014 ; Interdisciplinary Environmental Review Volume 15 ; 15 >
+      au < doNotProcess ; 2014 ; Interdisciplinary Environmental Review Volume 15 ; 15 >
 
     }
 
@@ -8455,7 +8449,7 @@
       au < released ; 2010-2011 ; World Review of Science, Technology and Sustainable Development Volume 8 ; 8 >
       au < released ; 2012 ; World Review of Science, Technology and Sustainable Development Volume 9 ; 9 >
       au < doNotProcess ; 2013 ; World Review of Science, Technology and Sustainable Development Volume 10 ; 10 >
-      au < expected ; 2014 ; World Review of Science, Technology and Sustainable Development Volume 11 ; 11 >
+      au < doNotProcess ; 2014 ; World Review of Science, Technology and Sustainable Development Volume 11 ; 11 >
 
     }
 
