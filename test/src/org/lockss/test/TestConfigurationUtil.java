@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigurationUtil.java,v 1.5 2013-06-06 06:34:26 tlipkis Exp $
+ * $Id: TestConfigurationUtil.java,v 1.6 2014-06-20 22:20:06 tlipkis Exp $
  */
 
 /*
@@ -119,6 +119,14 @@ public class TestConfigurationUtil extends LockssTestCase {
     check();
   }
 
+  public void testAddFromResource()
+      throws IOException, Configuration.InvalidParam {
+    ConfigurationUtil.setFromArgs("prop1", "xxx");
+    File file = FileTestUtil.writeTempFile("config", "prop1=12\nprop2=true\n");
+    ConfigurationUtil.addFromFile(file.toString());
+    check();
+  }
+
   private String xmlSample =
     "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
     "<lockss-config>\n" +
@@ -140,6 +148,54 @@ public class TestConfigurationUtil extends LockssTestCase {
     File file = FileTestUtil.writeTempFile("config", ".xml", xmlSample);
     ConfigurationUtil.addFromUrl(FileTestUtil.urlOfFile(file.toString()));
     check();
+  }
+
+  public void testRemove()
+      throws IOException, Configuration.InvalidParam {
+    final List<Set> keysets = new ArrayList<Set>();
+    ConfigManager.getConfigManager().registerConfigurationCallback(new Configuration.Callback() {
+	public void configurationChanged(Configuration config,
+					 Configuration oldConfig,
+					 Configuration.Differences diffs) {
+	  HashSet<String> set = new HashSet<String>();
+	  for (String s : (List<String>)ListUtil.list("p1", "p2", "p3", "p4")) {
+	    if (config.containsKey(s)) {
+	      set.add(s);
+	    }
+	  }
+	  keysets.add(set);
+	};
+      });
+
+    ConfigurationUtil.addFromArgs("p1", "x", "p2", "y", "p3", "z", "p4", "0");
+    Configuration config = ConfigManager.getCurrentConfig();
+    assertEquals("x", config.get("p1", "def1"));
+    assertEquals("y", config.get("p2", "def2"));
+    assertEquals("z", config.get("p3", "def3"));
+    assertEquals("0", config.get("p4", "def4"));
+
+    assertEquals(1, keysets.size());
+    assertEquals(SetUtil.set("p1", "p2", "p3", "p4"), keysets.get(0));
+
+    ConfigurationUtil.removeKey("p1");
+    config = ConfigManager.getCurrentConfig();
+    assertEquals("def1", config.get("p1", "def1"));
+    assertEquals("y", config.get("p2", "def2"));
+    assertEquals("z", config.get("p3", "def3"));
+    assertEquals("0", config.get("p4", "def4"));
+
+    assertEquals(2, keysets.size());
+    assertEquals(SetUtil.set("p2", "p3", "p4"), keysets.get(1));
+
+    ConfigurationUtil.removeKeys(ListUtil.list("p2", "p3"));
+    config = ConfigManager.getCurrentConfig();
+    assertEquals("def1", config.get("p1", "def1"));
+    assertEquals("def2", config.get("p2", "def2"));
+    assertEquals("def3", config.get("p3", "def3"));
+    assertEquals("0", config.get("p4", "def4"));
+
+    assertEquals(3, keysets.size());
+    assertEquals(SetUtil.set("p4"), keysets.get(2));
   }
 
 }

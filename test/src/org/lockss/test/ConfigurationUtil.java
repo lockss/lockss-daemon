@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurationUtil.java,v 1.25 2014-04-23 20:48:50 tlipkis Exp $
+ * $Id: ConfigurationUtil.java,v 1.26 2014-06-20 22:20:06 tlipkis Exp $
  */
 
 /*
@@ -257,12 +257,23 @@ public class ConfigurationUtil {
                                fromUrlList(ListUtil.list(url))));
   }
 
-  /** Add the contents of the URL to the current config.
-   * @param url URL of a config file.
+  /** Remove a param from the current Configuration
+   * @param key the name of the param to remove
    */
   public static boolean removeKey(String key) {
     Configuration cur = CurrentConfig.getCurrentConfig().copy();
     cur.remove(key);
+    return installConfig(cur);
+  }
+
+  /** Remove a collection of params from the current Configuration
+   * @param keys Collection of names of params to remove
+   */
+  public static boolean removeKeys(Collection<String> keys) {
+    Configuration cur = CurrentConfig.getCurrentConfig().copy();
+    for (String key : keys) {
+      cur.remove(key);
+    }
     return installConfig(cur);
   }
 
