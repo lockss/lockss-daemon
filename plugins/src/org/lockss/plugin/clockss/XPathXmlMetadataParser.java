@@ -1,5 +1,5 @@
 /*
- * $Id: XPathXmlMetadataParser.java,v 1.7 2014-03-05 19:38:47 alexandraohlson Exp $
+ * $Id: XPathXmlMetadataParser.java,v 1.8 2014-06-20 18:24:11 alexandraohlson Exp $
  */
 
 /*
@@ -255,6 +255,7 @@ public class XPathXmlMetadataParser  {
             Node articleNode = nodeList.item(j);
             log.debug3("Article node");
             if (articleNode == null) {
+              log.debug3("NULL article node");
               continue;
             } else {
               ArticleMetadata singleAM = extractDataFromNode(articleNode, aXPathList);
@@ -287,9 +288,11 @@ public class XPathXmlMetadataParser  {
     NumberFormat format = NumberFormat.getInstance();
 
     for (int i = 0; i < xPathList.length; i++) { 
+      log.debug3("evaluate xpath: " + xPathList[i].xKey.toString());
       QName definedType = xPathList[i].xVal.getType();
       Object itemResult = xPathList[i].xExpr.evaluate(startNode, XPathConstants.NODESET);
       NodeList resultNodeList = (NodeList)itemResult;
+      log.debug3(resultNodeList.getLength() + " results for this xKey");
       for (int p = 0; p < resultNodeList.getLength(); p++) {
         Node resultNode = resultNodeList.item(p);
         if (resultNode == null) {
