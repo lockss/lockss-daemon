@@ -1,5 +1,5 @@
 /*
- * $Id: RunKbartReport.java,v 1.9 2014-04-02 22:30:54 pgust Exp $
+ * $Id: RunKbartReport.java,v 1.10 2014-06-20 21:49:18 pgust Exp $
  */
 
 /*
@@ -221,7 +221,9 @@ public class RunKbartReport {
         InputStream inputStream, PubType publicationType)
         throws IOException, IllegalArgumentException {
       this.recordIterator = new KbartCsvIterator(inputStream, publicationType);
-      this.nextItem = recordIterator.next();
+      if (recordIterator.hasNext()) {
+        this.nextItem = recordIterator.next();
+      }
     }
 
     public boolean hasNext() {
@@ -694,8 +696,8 @@ public class RunKbartReport {
 
     
     PubType pubType = null;
-    if (cl.hasOption("J")) pubType = PubType.journal;
-    if (cl.hasOption("B")) pubType = PubType.book;
+    if (cl.hasOption(FOR_JOURNALS)) pubType = PubType.journal;
+    if (cl.hasOption(FOR_BOOKS)) pubType = PubType.book;
     
     // Create an instance
     try {
