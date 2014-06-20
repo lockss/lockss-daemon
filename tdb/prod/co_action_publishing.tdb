@@ -104,11 +104,11 @@
     param[base_url] = http://www.education-inquiry.net/
     param[journal_id] = edui
 
-    au < exists ; 2010 ; Education Inquiry Volume 1 ; 1 ; 2010 >
-    au < exists ; 2011 ; Education Inquiry Volume 2 ; 2 ; 2011 >
-    au < exists ; 2012 ; Education Inquiry Volume 3 ; 3 ; 2012 >
-    au < exists ; 2013 ; Education Inquiry Volume 4 ; 4 ; 2013 >
-    au < exists ; 2014 ; Education Inquiry Volume 5 ; 5 ; 2014 >
+    au < manifest ; 2010 ; Education Inquiry Volume 1 ; 1 ; 2010 >
+    au < manifest ; 2011 ; Education Inquiry Volume 2 ; 2 ; 2011 >
+    au < manifest ; 2012 ; Education Inquiry Volume 3 ; 3 ; 2012 >
+    au < manifest ; 2013 ; Education Inquiry Volume 4 ; 4 ; 2013 >
+    au < manifest ; 2014 ; Education Inquiry Volume 5 ; 5 ; 2014 >
 
   }
 
@@ -343,9 +343,9 @@
     param[base_url] = http://www.jecme.eu/
     param[journal_id] = jecme
 
-    au < exists ; 2012 ; Journal of European Continuing Medical Education Volume 1 ; 1 ; 2012 >
-    au < exists ; 2013 ; Journal of European Continuing Medical Education Volume 2 ; 2 ; 2013 >
-    au < exists ; 2014 ; Journal of European Continuing Medical Education Volume 3 ; 3 ; 2014 >
+    au < manifest ; 2012 ; Journal of European Continuing Medical Education Volume 1 ; 1 ; 2012 >
+    au < manifest ; 2013 ; Journal of European Continuing Medical Education Volume 2 ; 2 ; 2013 >
+    au < manifest ; 2014 ; Journal of European Continuing Medical Education Volume 3 ; 3 ; 2014 >
 
   }
 
@@ -360,8 +360,8 @@
     param[base_url] = http://www.jmahp.net/
     param[journal_id] = jmahp
 
-    au < exists ; 2013 ; Journal of Market Access & Health Policy Volume 1 ; 1 ; 2013 >
-    au < exists ; 2014 ; Journal of Market Access & Health Policy Volume 2 ; 2 ; 2014 >
+    au < manifest ; 2013 ; Journal of Market Access & Health Policy Volume 1 ; 1 ; 2013 >
+    au < manifest ; 2014 ; Journal of Market Access & Health Policy Volume 2 ; 2 ; 2014 >
 
   }
 
@@ -879,7 +879,7 @@
       au < released ; 2011 ; Vulnerable Groups & Inclusion Volume 2 ; 2 ; 2011 >
       au < released ; 2012 ; Vulnerable Groups & Inclusion Volume 3 ; 3 ; 2012 >
       au < manifest ; 2013 ; Vulnerable Groups & Inclusion Volume 4 ; 4 ; 2013 >
-      au < expected ; 2014 ; Vulnerable Groups & Inclusion Volume 5 ; 5 ; 2014 >
+      au < manifest ; 2014 ; Vulnerable Groups & Inclusion Volume 5 ; 5 ; 2014 >
   }
 
 }

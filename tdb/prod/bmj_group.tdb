@@ -414,25 +414,25 @@
     au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; BMJ Volume 327 ; 327 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2004 ; BMJ Volume 328 ; 328 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2004 ; BMJ Volume 329 ; 329 >
-    au < HighWireDrupalPlugin ; exists ; 2005 ; BMJ Volume 330 ; 330 >
-    au < HighWireDrupalPlugin ; exists ; 2005 ; BMJ Volume 331 ; 331 >
-    au < HighWireDrupalPlugin ; exists ; 2006 ; BMJ Volume 332 ; 332 >
-    au < HighWireDrupalPlugin ; exists ; 2006 ; BMJ Volume 333 ; 333 >
-    au < HighWireDrupalPlugin ; exists ; 2007 ; BMJ Volume 334 ; 334 >
-    au < HighWireDrupalPlugin ; exists ; 2007 ; BMJ Volume 335 ; 335 >
-    au < HighWireDrupalPlugin ; exists ; 2008 ; BMJ Volume 336 ; 336 >
-    au < HighWireDrupalPlugin ; exists ; 2008 ; BMJ Volume 337 ; 337 >
-    au < HighWireDrupalPlugin ; exists ; 2009 ; BMJ Volume 338 ; 338 >
-    au < HighWireDrupalPlugin ; exists ; 2009 ; BMJ Volume 339 ; 339 >
+    au < HighWireDrupalPlugin ; manifest ; 2005 ; BMJ Volume 330 ; 330 >
+    au < HighWireDrupalPlugin ; manifest ; 2005 ; BMJ Volume 331 ; 331 >
+    au < HighWireDrupalPlugin ; manifest ; 2006 ; BMJ Volume 332 ; 332 >
+    au < HighWireDrupalPlugin ; manifest ; 2006 ; BMJ Volume 333 ; 333 >
+    au < HighWireDrupalPlugin ; manifest ; 2007 ; BMJ Volume 334 ; 334 >
+    au < HighWireDrupalPlugin ; manifest ; 2007 ; BMJ Volume 335 ; 335 >
+    au < HighWireDrupalPlugin ; manifest ; 2008 ; BMJ Volume 336 ; 336 >
+    au < HighWireDrupalPlugin ; manifest ; 2008 ; BMJ Volume 337 ; 337 >
+    au < HighWireDrupalPlugin ; manifest ; 2009 ; BMJ Volume 338 ; 338 >
+    au < HighWireDrupalPlugin ; manifest ; 2009 ; BMJ Volume 339 ; 339 >
     au < HighWirePressH20Plugin ; down ; 2010 ; BMJ Volume 340 ; 340 >
     au < HighWirePressH20Plugin ; down ; 2010 ; BMJ Volume 341 ; 341 >
-    au < HighWireDrupalPlugin ; exists ; 2011 ; BMJ Volume 342 ; 342 >
-    au < HighWireDrupalPlugin ; exists ; 2011 ; BMJ Volume 343 ; 343 >
-    au < HighWireDrupalPlugin ; exists ; 2012 ; BMJ Volume 344 ; 344 >
-    au < HighWireDrupalPlugin ; exists ; 2012 ; BMJ Volume 345 ; 345 >
-    au < HighWireDrupalPlugin ; exists ; 2013 ; BMJ Volume 346 ; 346 >
-    au < HighWireDrupalPlugin ; exists ; 2014 ; BMJ Volume 347 ; 347 >
-    au < HighWireDrupalPlugin ; exists ; 2014 ; BMJ Volume 348 ; 348 >
+    au < HighWireDrupalPlugin ; manifest ; 2011 ; BMJ Volume 342 ; 342 >
+    au < HighWireDrupalPlugin ; manifest ; 2011 ; BMJ Volume 343 ; 343 >
+    au < HighWireDrupalPlugin ; manifest ; 2012 ; BMJ Volume 344 ; 344 >
+    au < HighWireDrupalPlugin ; manifest ; 2012 ; BMJ Volume 345 ; 345 >
+    au < HighWireDrupalPlugin ; manifest ; 2013 ; BMJ Volume 346 ; 346 >
+    au < HighWireDrupalPlugin ; manifest ; 2014 ; BMJ Volume 347 ; 347 >
+    au < HighWireDrupalPlugin ; manifest ; 2014 ; BMJ Volume 348 ; 348 >
 
   }
 
