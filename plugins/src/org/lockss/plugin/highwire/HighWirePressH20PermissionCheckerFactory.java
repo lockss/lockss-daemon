@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20PermissionCheckerFactory.java,v 1.5 2014-06-19 20:26:30 aishizaki Exp $
+ * $Id: HighWirePressH20PermissionCheckerFactory.java,v 1.6 2014-06-20 20:37:20 alexandraohlson Exp $
  */
 
 /*
@@ -51,7 +51,6 @@ import org.lockss.extractor.LinkExtractor;
 import org.lockss.plugin.*;
 import org.lockss.util.IOUtil;
 import org.lockss.util.Logger;
-import org.lockss.util.MonitoringReader;
 import org.lockss.util.ReaderInputStream;
 import org.lockss.util.StringUtil;
 
@@ -70,10 +69,7 @@ public class HighWirePressH20PermissionCheckerFactory
     public boolean checkPermission(PermissionHelper pHelper, Reader inputReader,
         String permissionUrl) {
       
-      //BufferedReader in = new BufferedReader(inputReader); 
-      // as per Tom's instruction for PD-1088
-      MonitoringReader in = new MonitoringReader(new BufferedReader(inputReader), "H20ProbePermissionChecker", true);
-
+      BufferedReader in = new BufferedReader(inputReader); 
       // FIXME super_checkPermission should be super.checkPermission when 
       // probeUrl and au are visible to child class
       boolean ret = super_checkPermission(pHelper, in, permissionUrl);
