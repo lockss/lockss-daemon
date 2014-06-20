@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuHealthMetric.java,v 1.5 2011-09-01 06:09:25 tlipkis Exp $
+ * $Id: TestAuHealthMetric.java,v 1.6 2014-06-20 22:20:19 tlipkis Exp $
  */
 
 /*
@@ -53,6 +53,13 @@ public class TestAuHealthMetric extends LockssTestCase {
   protected void setUp() throws Exception {
     super.setUp();
     daemon = getMockLockssDaemon(); 
+
+    // These values are held in statics in AuHealthMetric.  Ensure each
+    // test starts with the default values.
+    ConfigurationUtil.removeKeys(ListUtil.list(AuHealthMetric.PARAM_SCRIPT_LANGUAGE,
+					       AuHealthMetric.PARAM_HEALTH_EXPR, 
+					       AuHealthMetric.PARAM_INCLUSION_THRESHOLD));
+
     idm = new MockIdentityManager();
     daemon.setIdentityManager(idm);
     au1 = MockArchivalUnit.newInited(daemon);
