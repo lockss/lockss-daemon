@@ -7521,7 +7521,12 @@
         eissn = 1741-5276 ;
         issnl = 0267-5730
       >
-
+      {
+         param[journal_issn] = 0267-5730
+      
+         au < superseded ; exists ; 2012 ; International Journal of Technology Management Volume 59 [superseded] ; 59 >
+      }
+      {
       param[journal_issn] = 1741-5276
       
       au < exists ; exists ; 1986 ; International Journal of Technology Management Volume 1 ; 1 >
@@ -7582,7 +7587,7 @@
       au < zapped ; finished ; 2011 ; International Journal of Technology Management Volume 56 ; 56 >
       au < finished ; crawling ; 2012 ; International Journal of Technology Management Volume 57 ; 57 >
       au < finished ; crawling ; 2012 ; International Journal of Technology Management Volume 58 ; 58 >
-      au < finished ; crawling ; 2012 ; International Journal of Technology Management Volume 59 ; 59 >
+      au < finished ; manifest ; 2012 ; International Journal of Technology Management Volume 59 ; 59 >
       au < finished ; crawling ; 2012 ; International Journal of Technology Management Volume 60 ; 60 >
       au < crawling ; exists ; 2013 ; International Journal of Technology Management Volume 61 ; 61 >
       au < crawling ; exists ; 2013 ; International Journal of Technology Management Volume 62 ; 62 >
@@ -7592,7 +7597,7 @@
       au < expected ; exists ; 2014 ; International Journal of Technology Management Volume 66 ; 66 >
       au < expected ; exists ; 2014 ; International Journal of Technology Management Volume 67 ; 67 >
       au < expected ; exists ; 2014 ; International Journal of Technology Management Volume 68 ; 68 >
-
+      }
     }
 
     {
