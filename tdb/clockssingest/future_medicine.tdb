@@ -46,7 +46,7 @@
     au < manifest ; exists ; 2009 ; Biomarkers in Medicine Volume 3 ; 3 >
     au < manifest ; exists ; 2010 ; Biomarkers in Medicine Volume 4 ; 4 >
     au < manifest ; exists ; 2011 ; Biomarkers in Medicine Volume 5 ; 5 >
-    au < testing ; exists ; 2012 ; Biomarkers in Medicine Volume 6 ; 6 >
+    au < ready ; exists ; 2012 ; Biomarkers in Medicine Volume 6 ; 6 >
     au < crawling ; exists ; 2013 ; Biomarkers in Medicine Volume 7 ; 7 >
     au < manifest ; exists ; 2014 ; Biomarkers in Medicine Volume 8 ; 8 >
    
@@ -96,7 +96,7 @@
     au < manifest ; exists ; 2009 ; Clinical Lipidology Volume 4 ; 4 >
     au < manifest ; exists ; 2010 ; Clinical Lipidology Volume 5 ; 5 >
     au < manifest ; exists ; 2011 ; Clinical Lipidology Volume 6 ; 6 >
-    au < testing ; exists ; 2012 ; Clinical Lipidology Volume 7 ; 7 >
+    au < ready ; exists ; 2012 ; Clinical Lipidology Volume 7 ; 7 >
     au < crawling ; exists ; 2013 ; Clinical Lipidology Volume 8 ; 8 >
     au < manifest ; exists ; 2014 ; Clinical Lipidology Volume 9 ; 9 >
     
@@ -163,7 +163,7 @@
     
     param[journal_id] = crc
 
-    au < testing ; exists ; 2012 ; Colorectal Cancer Volume 1 ; 1 >
+    au < ready ; exists ; 2012 ; Colorectal Cancer Volume 1 ; 1 >
     au < crawling ; exists ; 2013 ; Colorectal Cancer Volume 2 ; 2 >
     au < manifest ; exists ; 2014 ; Colorectal Cancer Volume 3 ; 3 >
     
@@ -180,7 +180,7 @@
     param[journal_id] = dmt
 
     au < manifest ; exists ; 2011 ; Diabetes Management Volume 1 ; 1 >
-    au < testing ; exists ; 2012 ; Diabetes Management Volume 2 ; 2 >
+    au < ready ; exists ; 2012 ; Diabetes Management Volume 2 ; 2 >
     au < crawling ; exists ; 2013 ; Diabetes Management Volume 3 ; 3 >
     au < manifest ; exists ; 2014 ; Diabetes Management Volume 4 ; 4 >
   
@@ -358,7 +358,7 @@
     au < manifest ; exists ; 2009 ; Imaging in Medicine Volume 1 ; 1 >
     au < manifest ; exists ; 2010 ; Imaging in Medicine Volume 2 ; 2 >
     au < manifest ; exists ; 2011 ; Imaging in Medicine Volume 3 ; 3 >
-    au < testing ; exists ; 2012 ; Imaging in Medicine Volume 4 ; 4 >
+    au < ready ; exists ; 2012 ; Imaging in Medicine Volume 4 ; 4 >
     au < crawling ; exists ; 2013 ; Imaging in Medicine Volume 5 ; 5 >
     au < manifest ; exists ; 2014 ; Imaging in Medicine Volume 6 ; 6 >
     
@@ -377,7 +377,7 @@
     au < manifest ; exists ; 2009 ; Immunotherapy Volume 1 ; 1 >
     au < manifest ; exists ; 2010 ; Immunotherapy Volume 2 ; 2 >
     au < manifest ; exists ; 2011 ; Immunotherapy Volume 3 ; 3 >
-    au < testing ; exists ; 2012 ; Immunotherapy Volume 4 ; 4 >
+    au < ready ; exists ; 2012 ; Immunotherapy Volume 4 ; 4 >
     au < ingNotReady ; exists ; 2013 ; Immunotherapy Volume 5 ; 5 >
     au < manifest ; exists ; 2014 ; Immunotherapy Volume 6 ; 6 >
     
@@ -427,7 +427,7 @@
     
     param[journal_id] = ijh
 
-    au < testing ; exists ; 2012 ; International Journal of Hematologic Oncology Volume 1 ; 1 >
+    au < ready ; exists ; 2012 ; International Journal of Hematologic Oncology Volume 1 ; 1 >
     au < crawling ; exists ; 2013 ; International Journal of Hematologic Oncology Volume 2 ; 2 >
     au < manifest ; exists ; 2014 ; International Journal of Hematologic Oncology Volume 3 ; 3 >
     
@@ -476,7 +476,7 @@
     
     param[journal_id] = lmt
 
-    au < testing ; exists ; 2012 ; Lung Cancer Management Volume 1 ; 1 >
+    au < ready ; exists ; 2012 ; Lung Cancer Management Volume 1 ; 1 >
     au < crawling ; exists ; 2013 ; Lung Cancer Management Volume 2 ; 2 >
     au < manifest ; exists ; 2014 ; Lung Cancer Management Volume 3 ; 3 >
     
@@ -498,7 +498,7 @@
     au < manifest ; exists ; 2009 ; Nanomedicine Volume 4 ; 4 >
     au < manifest ; exists ; 2010 ; Nanomedicine Volume 5 ; 5 >
     au < manifest ; exists ; 2011 ; Nanomedicine Volume 6 ; 6 >
-    au < testing ; exists ; 2012 ; Nanomedicine Volume 7 ; 7 >
+    au < ready ; exists ; 2012 ; Nanomedicine Volume 7 ; 7 >
     au < crawling ; exists ; 2013 ; Nanomedicine Volume 8 ; 8 >
     au < manifest ; exists ; 2014 ; Nanomedicine Volume 9 ; 9 >
     
@@ -531,7 +531,7 @@
     param[journal_id] = npy
 
     au < manifest ; exists ; 2011 ; Neuropsychiatry Volume 1 ; 1 >
-    au < testing ; exists ; 2012 ; Neuropsychiatry Volume 2 ; 2 >
+    au < ready ; exists ; 2012 ; Neuropsychiatry Volume 2 ; 2 >
     au < crawling ; exists ; 2013 ; Neuropsychiatry Volume 3 ; 3 >
     au < manifest ; exists ; 2014 ; Neuropsychiatry Volume 4 ; 4 >
     
@@ -661,7 +661,7 @@
     au < manifest ; exists ; 2009 ; Women's Health Volume 5 ; 5 >
     au < manifest ; exists ; 2010 ; Women's Health Volume 6 ; 6 >
     au < manifest ; exists ; 2011 ; Women's Health Volume 7 ; 7 >
-    au < testing ; exists ; 2012 ; Women's Health Volume 8 ; 8 >
+    au < ready ; exists ; 2012 ; Women's Health Volume 8 ; 8 >
     au < ingNotReady ; exists ; 2013 ; Women's Health Volume 9 ; 9 >
     au < manifest ; exists ; 2014 ; Women's Health Volume 10 ; 10 >
     
