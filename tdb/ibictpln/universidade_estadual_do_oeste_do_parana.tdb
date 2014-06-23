@@ -232,18 +232,21 @@
       comment[publisher] = Universidade Estadual do Oeste do Paraná
       param[base_url] = http://e-revista.unioeste.br/
       param[journal_id] = gepec
-      comment[notReady] = fetch error / Repository error
+      comment[v2008] = http://e-revista.unioeste.br/index.php/gepec/rt/bio/2185 has www.ige.unicamp.br, no http
+      comment[v2009] = http://e-revista.unioeste.br/index.php/gepec/rt/bio/2681 has www.ige.unicamp.br, no http
+      comment[v2010] = http://e-revista.unioeste.br/index.php/gepec/rt/bio/3825 has www.pessoal.utfpr.edu.br, no http
+      comment[v2012] = http://e-revista.unioeste.br/index.php/gepec/rt/bio/5581 has www.utfpr.edu.br, no http
 
       au < released ; 2003 ; 1 ; Informe GEPEC Volume 2003 ; 2003 ; >
       au < released ; 2004 ; 2 ; Informe GEPEC Volume 2004 ; 2004 ; >
       au < released ; 2005 ; 3 ; Informe GEPEC Volume 2005 ; 2005 ; >
       au < released ; 2006 ; 4 ; Informe GEPEC Volume 2006 ; 2006 ; >
       au < released ; 2007 ; 5 ; Informe GEPEC Volume 2007 ; 2007 ; >
-      au < notReady ; 2008 ; 6 ; Informe GEPEC Volume 2008 ; 2008 ; >
-      au < notReady ; 2009 ; 7 ; Informe GEPEC Volume 2009 ; 2009 ; >
-      au < notReady ; 2010 ; 8 ; Informe GEPEC Volume 2010 ; 2010 ; >
+      au < notReady ; 2008 ; 6 ; Informe GEPEC Volume 2008 ; 2008 ; url with no http on bio 2185 >
+      au < notReady ; 2009 ; 7 ; Informe GEPEC Volume 2009 ; 2009 ; url with no http on bio 2681 >
+      au < notReady ; 2010 ; 8 ; Informe GEPEC Volume 2010 ; 2010 ; url with no http on bio 3825 >
       au < released ; 2011 ; 9 ; Informe GEPEC Volume 2011 ; 2011 ; >
-      au < notReady ; 2012 ; 10 ; Informe GEPEC Volume 2012 ; 2012 ; >
+      au < notReady ; 2012 ; 10 ; Informe GEPEC Volume 2012 ; 2012 ; url with no http on bio 5581 >
       au < manifest ; 2013 ; 11 ; Informe GEPEC Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 12 ; Informe GEPEC Volume 2014 ; 2014 ; >
 
