@@ -210,16 +210,15 @@
       comment[publisher] = Universidade do Estado do Rio de Janeiro
       param[base_url] = http://www.e-publicacoes.uerj.br/
       param[journal_id] = geouerj
-      comment[notReady] = no substance
 
-      au < notReady ; 1997 ; 1 ; Geo UERJ Volume 1997 ; 1997 ; >
-      au < notReady ; 1998 ; 2 ; Geo UERJ Volume 1998 ; 1998 ; >
-      au < notReady ; 1999 ; 3 ; Geo UERJ Volume 1999 ; 1999 ; >
-      au < notReady ; 2000 ; 4 ; Geo UERJ Volume 2000 ; 2000 ; >
-      au < notReady ; 2001 ; 5 ; Geo UERJ Volume 2001 ; 2001 ; >
-      au < notReady ; 2002 ; 6 ; Geo UERJ Volume 2002 ; 2002 ; >
-      au < notReady ; 2003 ; 7 ; Geo UERJ Volume 2003 ; 2003 ; >
-      au < notReady ; 2004 ; 8 ; Geo UERJ Volume 2004 ; 2004 ; >
+      au < notReady ; 1997 ; 1 ; Geo UERJ Volume 1997 ; 1997 ; no articles >
+      au < notReady ; 1998 ; 2 ; Geo UERJ Volume 1998 ; 1998 ; no articles >
+      au < notReady ; 1999 ; 3 ; Geo UERJ Volume 1999 ; 1999 ; no articles >
+      au < notReady ; 2000 ; 4 ; Geo UERJ Volume 2000 ; 2000 ; no articles >
+      au < notReady ; 2001 ; 5 ; Geo UERJ Volume 2001 ; 2001 ; no articles >
+      au < notReady ; 2002 ; 6 ; Geo UERJ Volume 2002 ; 2002 ; no articles >
+      au < notReady ; 2003 ; 7 ; Geo UERJ Volume 2003 ; 2003 ; no articles >
+      au < notReady ; 2004 ; 8 ; Geo UERJ Volume 2004 ; 2004 ; no articles >
       au < released ; 2007 ; 9 ; Geo UERJ Volume 2007 ; 2007 ; >
       au < released ; 2008 ; 10 ; Geo UERJ Volume 2008 ; 2008 ; >
       au < released ; 2009 ; 11 ; Geo UERJ Volume 2009 ; 2009 ; >
