@@ -221,9 +221,9 @@
 
       param[journal_id] = jeasmedarcherstu
 
-      au < testing ; exists ; 2013 ; The Journal of Ayn Rand Studies Volume 1 ; 1 >
-      au < manifest ; exists ; 2014 ; The Journal of Ayn Rand Studies Volume 2 ; 2 >
-      
+      au < testing ; exists ; 2013 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 1 ; 1 >
+      au < manifest ; exists ; 2014 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 2 ; 2 >
+
   }
 
   {
@@ -405,9 +405,9 @@
 
       param[journal_id] = pacicoasphil
 
-      au < testing ; exists ; 2013 ; Pacific Coast Philology Volume 45 ; 45 >
-      au < testing ; exists ; 2013 ; Pacific Coast Philology Volume 46 ; 46 >
-      au < testing ; exists ; 2013 ; Pacific Coast Philology Volume 47 ; 47 >
+      au < testing ; exists ; 2010 ; Pacific Coast Philology Volume 45 ; 45 >
+      au < testing ; exists ; 2011 ; Pacific Coast Philology Volume 46 ; 46 >
+      au < testing ; exists ; 2012 ; Pacific Coast Philology Volume 47 ; 47 >
       au < testing ; exists ; 2013 ; Pacific Coast Philology Volume 48 ; 48 >
       au < manifest ; exists ; 2014 ; Pacific Coast Philology Volume 49 ; 49 >
       
@@ -423,9 +423,9 @@
 
       param[journal_id] = pennhistory
 
-      au < testing ; exists ; 2013 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 77 ; 77 >
-      au < testing ; exists ; 2013 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 78 ; 78 >
-      au < testing ; exists ; 2013 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 79 ; 79 >
+      au < testing ; exists ; 2010 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 77 ; 77 >
+      au < testing ; exists ; 2011 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 78 ; 78 >
+      au < testing ; exists ; 2012 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 79 ; 79 >
       au < testing ; exists ; 2013 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 80 ; 80 >
       au < manifest ; exists ; 2014 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 81 ; 81 >
       
@@ -558,7 +558,7 @@
       au < manifest ; exists ; 2011 ; Studies in American Jewish Literature Volume 30 ; 30 >
       au < manifest ; exists ; 2012 ; Studies in American Jewish Literature Volume 31 ; 31 >
       au < testing ; exists ; 2013 ; Studies in American Jewish Literature Volume 32 ; 32 >
-      au < expected ; exists ; 2014 ; Studies in American Jewish Literature Volume 33 ; 33 >
+      au < exists ; exists ; 2014 ; Studies in American Jewish Literature Volume 33 ; 33 >
       
   }
 
