@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.123 2014-06-12 06:16:05 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.124 2014-06-23 22:51:48 tlipkis Exp $
  */
 
 /*
@@ -1841,6 +1841,12 @@ public class ArchivalUnitStatus
   }
 
   static class PeerRepair extends BaseAgreementTable {
+
+    /** query arg specifies poll type: {pop, por, symmetric_por,
+     * symmetric_pop}.  If unspecified or other, table includes all poll
+     * types */
+    public static final String POLL_TYPE = "polltype";
+
     private static final List columnDescriptors = ListUtil.list(
       new ColumnDescriptor("Box", "Box",
                            ColumnDescriptor.TYPE_STRING),
@@ -1868,7 +1874,7 @@ public class ArchivalUnitStatus
     }
 
     protected String getTitle(StatusTable table, ArchivalUnit au) {
-      String polltype = getStringProp(table, "polltype");
+      String polltype = getStringProp(table, POLL_TYPE);
       AgreementType at = getAgreementType(polltype);
       if (at != null) {
 	return at.toString() + " agreements for AU: " + au.getName();
@@ -1893,7 +1899,7 @@ public class ArchivalUnitStatus
 	table.setColumnDescriptors(columnDescriptors);
 	table.setDefaultSortRules(sortRules);
 
-	String agmntName = getStringProp(table, "agreementType");
+	String agmntName = getStringProp(table, POLL_TYPE);
 	AgreementType type = getAgreementType(agmntName);
 	AgreementType[] types;
 	if (type != null) {
