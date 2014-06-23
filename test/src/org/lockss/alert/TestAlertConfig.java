@@ -1,5 +1,5 @@
 /*
- * $Id: TestAlertConfig.java,v 1.6 2014-05-14 13:26:18 tlipkis Exp $
+ * $Id: TestAlertConfig.java,v 1.7 2014-06-23 22:41:00 tlipkis Exp $
  */
 
 /*
@@ -116,7 +116,7 @@ public class TestAlertConfig extends LockssTestCase {
 		    AlertPatterns.MATCHES(Alert.ATTR_TEXT, "foo[123]pat"));
     AlertFilter matchFilt =
       new AlertFilter(AlertPatterns.And(pats),
-		      new AlertActionMail("patmail"));
+		      new AlertActionMail("regexpmail"));
 
     AlertConfig conf =
       new AlertConfig(ListUtil.list(passwdFilt, crawlExclFilt, devFilt,
@@ -134,5 +134,14 @@ public class TestAlertConfig extends LockssTestCase {
 
     String str2 = org.apache.commons.lang.StringEscapeUtils.escapeXml(str);
     FileTestUtil.writeFile(file2, str2);
+
+    // Ensure that the MATCHES predicate is processed correction when
+    // deserialized.
+    Alert alert = Alert.auAlert(Alert.CRAWL_FINISHED, new MockArchivalUnit());
+    alert.setAttribute(Alert.ATTR_TEXT, "foo2pat");
+    Collection foo = mgr.findMatchingActions(alert, lconf.getFilters());
+    assertEquals("Didn't find MATCHES pattern. ", 1, foo.size());
+    AlertAction act = (AlertAction)CollectionUtil.getAnElement(foo);
+    assertEquals("regexpmail", ((AlertActionMail)act).getRecipients(alert));
   }
 }

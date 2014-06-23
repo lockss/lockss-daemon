@@ -1,5 +1,5 @@
 /*
- * $Id: AlertPatterns.java,v 1.7 2014-05-14 04:11:14 tlipkis Exp $
+ * $Id: AlertPatterns.java,v 1.8 2014-06-23 22:41:00 tlipkis Exp $
  */
 
 /*
@@ -259,21 +259,26 @@ public class AlertPatterns {
     // used only for REL.MATCHES
     transient Pattern pat;
 
+    // do NOT add any logic here - deserialization doesn't run constructor
     public Predicate(String attribute, REL relation, Object value)
 	throws IllegalArgumentException {
       this.attribute = attribute;
       this.relation = relation;
       this.value = value;
+
       switch (relation) {
       case MATCHES:
+	// This is here only to check the pattern when the constructor is
+	// run.  Deserialized instances may still have an invalid pattern.
 	try {
-	  pat = Pattern.compile((String)value);
+	  Pattern.compile((String)value);
 	} catch (PatternSyntaxException e) {
 	  // don't throw regex package-specific exception
 	  throw new IllegalArgumentException(e);
 	}
 	break;
       }
+
     }
 
     public String getAttribute() {
@@ -314,7 +319,7 @@ public class AlertPatterns {
 	  return false;
 	}
 	case MATCHES:
-	  Matcher m = pat.matcher((String)attr);
+	  Matcher m = getPattern().matcher((String)attr);
 	  return m.find();
 	default:
 	  int cmp = ((Comparable)attr).compareTo(value);
@@ -330,6 +335,22 @@ public class AlertPatterns {
 	log.warning("AlertPredicate.isMatch", e);
 	return false;
       }
+    }
+
+    private Pattern getPattern() {
+      if (pat == null) {
+	try {
+	  pat = Pattern.compile((String)value);
+	} catch (PatternSyntaxException e) {
+	  log.error("Illegal Alert pattern: " + (String)value, e);
+	  pat = Pattern.compile("UnlikelyToMatchAnything");
+	} catch (ClassCastException e) {
+	  log.error("Illegal Alert pattern; value must be a String: "
+		    + value.getClass());
+	  pat = Pattern.compile("UnlikelyToMatchAnything");
+	}
+      }
+      return pat;
     }
 
     private static boolean equalObjects(Object a, Object b) {
