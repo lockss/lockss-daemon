@@ -301,9 +301,9 @@
       param[journal_id] = logos
       comment[notReady] = 2008- no permission, 2010- fetch error
 
-      au < notReady ; 2008 ; 1 ; Logos: Comunicação e Universidade Volume 2008 ; 2008 ; >
+      au < ready ; 2008 ; 1 ; Logos: Comunicação e Universidade Volume 2008 ; 2008 ; >
       au < released ; 2009 ; 2 ; Logos: Comunicação e Universidade Volume 2009 ; 2009 ; >
-      au < notReady ; 2010 ; 3 ; Logos: Comunicação e Universidade Volume 2010 ; 2010 ; >
+      au < ready ; 2010 ; 3 ; Logos: Comunicação e Universidade Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 4 ; Logos: Comunicação e Universidade Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 5 ; Logos: Comunicação e Universidade Volume 2012 ; 2012 ; >
       au < manifest ; 2013 ; 6 ; Logos: Comunicação e Universidade Volume 2013 ; 2013 ; >
