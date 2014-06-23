@@ -4,7 +4,7 @@
   >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; volume ; name ; param[year] >
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
 
   {
 
@@ -18,12 +18,12 @@
       param[base_url] = http://www.revistas2.uepg.br/
       param[journal_id] = lumiar
 
-      au < exists ; 2007 ; 1 ; Lumiar: Revista de Ciências Jurídicas Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 2 ; Lumiar: Revista de Ciências Jurídicas Volume 2008 ; 2008 >
-      au < exists ; 2011 ; 5 ; Lumiar: Revista de Ciências Jurídicas Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 6 ; Lumiar: Revista de Ciências Jurídicas Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 7 ; Lumiar: Revista de Ciências Jurídicas Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 8 ; Lumiar: Revista de Ciências Jurídicas Volume 2014 ; 2014 >
+      au < exists ; 2007 ; 1 ; Lumiar: Revista de Ciências Jurídicas Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 2 ; Lumiar: Revista de Ciências Jurídicas Volume 2008 ; 2008 ; >
+      au < exists ; 2011 ; 5 ; Lumiar: Revista de Ciências Jurídicas Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 6 ; Lumiar: Revista de Ciências Jurídicas Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 7 ; Lumiar: Revista de Ciências Jurídicas Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 8 ; Lumiar: Revista de Ciências Jurídicas Volume 2014 ; 2014 ; >
 
   }
 
@@ -39,9 +39,9 @@
       param[base_url] = http://www.revistas2.uepg.br/
       param[journal_id] = muitasvozes
 
-      au < exists ; 2012 ; 1 ; Muitas Vozes Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 2 ; Muitas Vozes Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 3 ; Muitas Vozes Volume 2014 ; 2014 >
+      au < exists ; 2012 ; 1 ; Muitas Vozes Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 2 ; Muitas Vozes Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 3 ; Muitas Vozes Volume 2014 ; 2014 ; >
 
   }
 
@@ -58,23 +58,23 @@
       param[journal_id] = olhardeprofessor
       comment[notReady] = repository error
 
-      au < notReady ; 1998 ; 1 ; Olhar de Professor Volume 1998 ; 1998 >
-      au < notReady ; 1999 ; 2 ; Olhar de Professor Volume 1999 ; 1999 >
-      au < notReady ; 2000 ; 3 ; Olhar de Professor Volume 2000 ; 2000 >
-      au < notReady ; 2001 ; 4 ; Olhar de Professor Volume 2001 ; 2001 >
-      au < notReady ; 2002 ; 5 ; Olhar de Professor Volume 2002 ; 2002 >
-      au < notReady ; 2003 ; 6 ; Olhar de Professor Volume 2003 ; 2003 >
-      au < notReady ; 2004 ; 7 ; Olhar de Professor Volume 2004 ; 2004 >
-      au < notReady ; 2005 ; 8 ; Olhar de Professor Volume 2005 ; 2005 >
-      au < notReady ; 2006 ; 9 ; Olhar de Professor Volume 2006 ; 2006 >
-      au < notReady ; 2007 ; 10 ; Olhar de Professor Volume 2007 ; 2007 >
-      au < notReady ; 2008 ; 11 ; Olhar de Professor Volume 2008 ; 2008 >
-      au < notReady ; 2009 ; 12 ; Olhar de Professor Volume 2009 ; 2009 >
-      au < notReady ; 2010 ; 13 ; Olhar de Professor Volume 2010 ; 2010 >
-      au < notReady ; 2011 ; 14 ; Olhar de Professor Volume 2011 ; 2011 >
-      au < notReady ; 2012 ; 15 ; Olhar de Professor Volume 2012 ; 2012 >
-      au < manifest ; 2013 ; 16 ; Olhar de Professor Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 17 ; Olhar de Professor Volume 2014 ; 2014 >
+      au < notReady ; 1998 ; 1 ; Olhar de Professor Volume 1998 ; 1998 ; >
+      au < notReady ; 1999 ; 2 ; Olhar de Professor Volume 1999 ; 1999 ; >
+      au < notReady ; 2000 ; 3 ; Olhar de Professor Volume 2000 ; 2000 ; >
+      au < notReady ; 2001 ; 4 ; Olhar de Professor Volume 2001 ; 2001 ; >
+      au < notReady ; 2002 ; 5 ; Olhar de Professor Volume 2002 ; 2002 ; >
+      au < notReady ; 2003 ; 6 ; Olhar de Professor Volume 2003 ; 2003 ; >
+      au < notReady ; 2004 ; 7 ; Olhar de Professor Volume 2004 ; 2004 ; >
+      au < notReady ; 2005 ; 8 ; Olhar de Professor Volume 2005 ; 2005 ; >
+      au < notReady ; 2006 ; 9 ; Olhar de Professor Volume 2006 ; 2006 ; >
+      au < notReady ; 2007 ; 10 ; Olhar de Professor Volume 2007 ; 2007 ; >
+      au < notReady ; 2008 ; 11 ; Olhar de Professor Volume 2008 ; 2008 ; >
+      au < notReady ; 2009 ; 12 ; Olhar de Professor Volume 2009 ; 2009 ; >
+      au < notReady ; 2010 ; 13 ; Olhar de Professor Volume 2010 ; 2010 ; >
+      au < notReady ; 2011 ; 14 ; Olhar de Professor Volume 2011 ; 2011 ; >
+      au < notReady ; 2012 ; 15 ; Olhar de Professor Volume 2012 ; 2012 ; >
+      au < manifest ; 2013 ; 16 ; Olhar de Professor Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 17 ; Olhar de Professor Volume 2014 ; 2014 ; >
 
   }
 
@@ -90,15 +90,15 @@
       param[base_url] = http://www.revistas2.uepg.br/
       param[journal_id] = praxiseducativa
 
-      au < released ; 2006 ; 1 ; Práxis Educativa Volume 2006 ; 2006 >
-      au < released ; 2007 ; 2 ; Práxis Educativa Volume 2007 ; 2007 >
-      au < released ; 2008 ; 3 ; Práxis Educativa Volume 2008 ; 2008 >
-      au < released ; 2009 ; 4 ; Práxis Educativa Volume 2009 ; 2009 >
-      au < released ; 2010 ; 5 ; Práxis Educativa Volume 2010 ; 2010 >
-      au < released ; 2011 ; 6 ; Práxis Educativa Volume 2011 ; 2011 >
-      au < released ; 2012 ; 7 ; Práxis Educativa Volume 2012 ; 2012 >
-      au < manifest ; 2013 ; 8 ; Práxis Educativa Volume 2013 ; 2013 >
-      au < manifest ; 2014 ; 9 ; Práxis Educativa Volume 2014 ; 2014 >
+      au < released ; 2006 ; 1 ; Práxis Educativa Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 2 ; Práxis Educativa Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 3 ; Práxis Educativa Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 4 ; Práxis Educativa Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 5 ; Práxis Educativa Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 6 ; Práxis Educativa Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 7 ; Práxis Educativa Volume 2012 ; 2012 ; >
+      au < manifest ; 2013 ; 8 ; Práxis Educativa Volume 2013 ; 2013 ; >
+      au < manifest ; 2014 ; 9 ; Práxis Educativa Volume 2014 ; 2014 ; >
 
   }
 
@@ -114,21 +114,21 @@
       param[base_url] = http://www.revistas2.uepg.br/
       param[journal_id] = biologica
 
-      au < exists ; 2000 ; 1 ; Publicatio UEPG: Ciências Biológicas e da Saúde Volume 2000 ; 2000 >
-      au < exists ; 2001 ; 2 ; Publicatio UEPG: Ciências Biológicas e da Saúde Volume 2001 ; 2001 >
-      au < exists ; 2002 ; 3 ; Publicatio UEPG: Ciências Biológicas e da Saúde Volume 2002 ; 2002 >
-      au < exists ; 2003 ; 4 ; Publicatio UEPG: Ciências Biológicas e da Saúde Volume 2003 ; 2003 >
-      au < exists ; 2004 ; 5 ; Publicatio UEPG: Ciências Biológicas e da Saúde Volume 2004 ; 2004 >
-      au < exists ; 2005 ; 6 ; Publicatio UEPG: Ciências Biológicas e da Saúde Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 7 ; Publicatio UEPG: Ciências Biológicas e da Saúde Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 8 ; Publicatio UEPG: Ciências Biológicas e da Saúde Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 9 ; Publicatio UEPG: Ciências Biológicas e da Saúde Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 10 ; Publicatio UEPG: Ciências Biológicas e da Saúde Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 11 ; Publicatio UEPG: Ciências Biológicas e da Saúde Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 12 ; Publicatio UEPG: Ciências Biológicas e da Saúde Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 13 ; Publicatio UEPG: Ciências Biológicas e da Saúde Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 14 ; Publicatio UEPG: Ciências Biológicas e da Saúde Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 15 ; Publicatio UEPG: Ciências Biológicas e da Saúde Volume 2014 ; 2014 >
+      au < exists ; 2000 ; 1 ; Publicatio UEPG: Ciências Biológicas e da Saúde Volume 2000 ; 2000 ; >
+      au < exists ; 2001 ; 2 ; Publicatio UEPG: Ciências Biológicas e da Saúde Volume 2001 ; 2001 ; >
+      au < exists ; 2002 ; 3 ; Publicatio UEPG: Ciências Biológicas e da Saúde Volume 2002 ; 2002 ; >
+      au < exists ; 2003 ; 4 ; Publicatio UEPG: Ciências Biológicas e da Saúde Volume 2003 ; 2003 ; >
+      au < exists ; 2004 ; 5 ; Publicatio UEPG: Ciências Biológicas e da Saúde Volume 2004 ; 2004 ; >
+      au < exists ; 2005 ; 6 ; Publicatio UEPG: Ciências Biológicas e da Saúde Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 7 ; Publicatio UEPG: Ciências Biológicas e da Saúde Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 8 ; Publicatio UEPG: Ciências Biológicas e da Saúde Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 9 ; Publicatio UEPG: Ciências Biológicas e da Saúde Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 10 ; Publicatio UEPG: Ciências Biológicas e da Saúde Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 11 ; Publicatio UEPG: Ciências Biológicas e da Saúde Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 12 ; Publicatio UEPG: Ciências Biológicas e da Saúde Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 13 ; Publicatio UEPG: Ciências Biológicas e da Saúde Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 14 ; Publicatio UEPG: Ciências Biológicas e da Saúde Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 15 ; Publicatio UEPG: Ciências Biológicas e da Saúde Volume 2014 ; 2014 ; >
 
   }
 
@@ -144,21 +144,21 @@
       param[base_url] = http://www.revistas2.uepg.br/
       param[journal_id] = exatas
 
-      au < exists ; 2000 ; 1 ; Publicatio UEPG: Ciências Exatas e da Terra, Agrárias e Engenharias Volume 2000 ; 2000 >
-      au < exists ; 2001 ; 2 ; Publicatio UEPG: Ciências Exatas e da Terra, Agrárias e Engenharias Volume 2001 ; 2001 >
-      au < exists ; 2002 ; 3 ; Publicatio UEPG: Ciências Exatas e da Terra, Agrárias e Engenharias Volume 2002 ; 2002 >
-      au < exists ; 2003 ; 4 ; Publicatio UEPG: Ciências Exatas e da Terra, Agrárias e Engenharias Volume 2003 ; 2003 >
-      au < exists ; 2004 ; 5 ; Publicatio UEPG: Ciências Exatas e da Terra, Agrárias e Engenharias Volume 2004 ; 2004 >
-      au < exists ; 2005 ; 6 ; Publicatio UEPG: Ciências Exatas e da Terra, Agrárias e Engenharias Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 7 ; Publicatio UEPG: Ciências Exatas e da Terra, Agrárias e Engenharias Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 8 ; Publicatio UEPG: Ciências Exatas e da Terra, Agrárias e Engenharias Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 9 ; Publicatio UEPG: Ciências Exatas e da Terra, Agrárias e Engenharias Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 10 ; Publicatio UEPG: Ciências Exatas e da Terra, Agrárias e Engenharias Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 11 ; Publicatio UEPG: Ciências Exatas e da Terra, Agrárias e Engenharias Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 12 ; Publicatio UEPG: Ciências Exatas e da Terra, Agrárias e Engenharias Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 13 ; Publicatio UEPG: Ciências Exatas e da Terra, Agrárias e Engenharias Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 14 ; Publicatio UEPG: Ciências Exatas e da Terra, Agrárias e Engenharias Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 15 ; Publicatio UEPG: Ciências Exatas e da Terra, Agrárias e Engenharias Volume 2014 ; 2014 >
+      au < exists ; 2000 ; 1 ; Publicatio UEPG: Ciências Exatas e da Terra, Agrárias e Engenharias Volume 2000 ; 2000 ; >
+      au < exists ; 2001 ; 2 ; Publicatio UEPG: Ciências Exatas e da Terra, Agrárias e Engenharias Volume 2001 ; 2001 ; >
+      au < exists ; 2002 ; 3 ; Publicatio UEPG: Ciências Exatas e da Terra, Agrárias e Engenharias Volume 2002 ; 2002 ; >
+      au < exists ; 2003 ; 4 ; Publicatio UEPG: Ciências Exatas e da Terra, Agrárias e Engenharias Volume 2003 ; 2003 ; >
+      au < exists ; 2004 ; 5 ; Publicatio UEPG: Ciências Exatas e da Terra, Agrárias e Engenharias Volume 2004 ; 2004 ; >
+      au < exists ; 2005 ; 6 ; Publicatio UEPG: Ciências Exatas e da Terra, Agrárias e Engenharias Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 7 ; Publicatio UEPG: Ciências Exatas e da Terra, Agrárias e Engenharias Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 8 ; Publicatio UEPG: Ciências Exatas e da Terra, Agrárias e Engenharias Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 9 ; Publicatio UEPG: Ciências Exatas e da Terra, Agrárias e Engenharias Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 10 ; Publicatio UEPG: Ciências Exatas e da Terra, Agrárias e Engenharias Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 11 ; Publicatio UEPG: Ciências Exatas e da Terra, Agrárias e Engenharias Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 12 ; Publicatio UEPG: Ciências Exatas e da Terra, Agrárias e Engenharias Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 13 ; Publicatio UEPG: Ciências Exatas e da Terra, Agrárias e Engenharias Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 14 ; Publicatio UEPG: Ciências Exatas e da Terra, Agrárias e Engenharias Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 15 ; Publicatio UEPG: Ciências Exatas e da Terra, Agrárias e Engenharias Volume 2014 ; 2014 ; >
 
   }
 
@@ -174,21 +174,21 @@
       param[base_url] = http://www.revistas2.uepg.br/
       param[journal_id] = humanas
 
-      au < released ; 2000 ; 1 ; Publicatio UEPG: Ciências Humanas, Linguística, Letras e Artes Volume 2000 ; 2000 >
-      au < exists ; 2001 ; 2 ; Publicatio UEPG: Ciências Humanas, Linguística, Letras e Artes Volume 2001 ; 2001 >
-      au < released ; 2002 ; 3 ; Publicatio UEPG: Ciências Humanas, Linguística, Letras e Artes Volume 2002 ; 2002 >
-      au < released ; 2003 ; 4 ; Publicatio UEPG: Ciências Humanas, Linguística, Letras e Artes Volume 2003 ; 2003 >
-      au < released ; 2004 ; 5 ; Publicatio UEPG: Ciências Humanas, Linguística, Letras e Artes Volume 2004 ; 2004 >
-      au < released ; 2005 ; 6 ; Publicatio UEPG: Ciências Humanas, Linguística, Letras e Artes Volume 2005 ; 2005 >
-      au < released ; 2006 ; 7 ; Publicatio UEPG: Ciências Humanas, Linguística, Letras e Artes Volume 2006 ; 2006 >
-      au < released ; 2007 ; 8 ; Publicatio UEPG: Ciências Humanas, Linguística, Letras e Artes Volume 2007 ; 2007 >
-      au < released ; 2008 ; 9 ; Publicatio UEPG: Ciências Humanas, Linguística, Letras e Artes Volume 2008 ; 2008 >
-      au < released ; 2009 ; 10 ; Publicatio UEPG: Ciências Humanas, Linguística, Letras e Artes Volume 2009 ; 2009 >
-      au < released ; 2010 ; 11 ; Publicatio UEPG: Ciências Humanas, Linguística, Letras e Artes Volume 2010 ; 2010 >
-      au < released ; 2011 ; 12 ; Publicatio UEPG: Ciências Humanas, Linguística, Letras e Artes Volume 2011 ; 2011 >
-      au < released ; 2012 ; 13 ; Publicatio UEPG: Ciências Humanas, Linguística, Letras e Artes Volume 2012 ; 2012 >
-      au < manifest ; 2013 ; 14 ; Publicatio UEPG: Ciências Humanas, Linguística, Letras e Artes Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 15 ; Publicatio UEPG: Ciências Humanas, Linguística, Letras e Artes Volume 2014 ; 2014 >
+      au < released ; 2000 ; 1 ; Publicatio UEPG: Ciências Humanas, Linguística, Letras e Artes Volume 2000 ; 2000 ; >
+      au < exists ; 2001 ; 2 ; Publicatio UEPG: Ciências Humanas, Linguística, Letras e Artes Volume 2001 ; 2001 ; >
+      au < released ; 2002 ; 3 ; Publicatio UEPG: Ciências Humanas, Linguística, Letras e Artes Volume 2002 ; 2002 ; >
+      au < released ; 2003 ; 4 ; Publicatio UEPG: Ciências Humanas, Linguística, Letras e Artes Volume 2003 ; 2003 ; >
+      au < released ; 2004 ; 5 ; Publicatio UEPG: Ciências Humanas, Linguística, Letras e Artes Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 6 ; Publicatio UEPG: Ciências Humanas, Linguística, Letras e Artes Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 7 ; Publicatio UEPG: Ciências Humanas, Linguística, Letras e Artes Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 8 ; Publicatio UEPG: Ciências Humanas, Linguística, Letras e Artes Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 9 ; Publicatio UEPG: Ciências Humanas, Linguística, Letras e Artes Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 10 ; Publicatio UEPG: Ciências Humanas, Linguística, Letras e Artes Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 11 ; Publicatio UEPG: Ciências Humanas, Linguística, Letras e Artes Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 12 ; Publicatio UEPG: Ciências Humanas, Linguística, Letras e Artes Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 13 ; Publicatio UEPG: Ciências Humanas, Linguística, Letras e Artes Volume 2012 ; 2012 ; >
+      au < manifest ; 2013 ; 14 ; Publicatio UEPG: Ciências Humanas, Linguística, Letras e Artes Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 15 ; Publicatio UEPG: Ciências Humanas, Linguística, Letras e Artes Volume 2014 ; 2014 ; >
 
   }
 
@@ -204,20 +204,20 @@
       param[base_url] = http://www.revistas2.uepg.br/
       param[journal_id] = sociais
 
-      au < released ; 2000 ; 1 ; Publicatio UEPG: Ciências Sociais Aplicadas Volume 2000 ; 2000 >
-      au < released ; 2002 ; 3 ; Publicatio UEPG: Ciências Sociais Aplicadas Volume 2002 ; 2002 >
-      au < released ; 2003 ; 4 ; Publicatio UEPG: Ciências Sociais Aplicadas Volume 2003 ; 2003 >
-      au < released ; 2004 ; 5 ; Publicatio UEPG: Ciências Sociais Aplicadas Volume 2004 ; 2004 >
-      au < released ; 2005 ; 6 ; Publicatio UEPG: Ciências Sociais Aplicadas Volume 2005 ; 2005 >
-      au < released ; 2006 ; 7 ; Publicatio UEPG: Ciências Sociais Aplicadas Volume 2006 ; 2006 >
-      au < released ; 2007 ; 8 ; Publicatio UEPG: Ciências Sociais Aplicadas Volume 2007 ; 2007 >
-      au < released ; 2008 ; 9 ; Publicatio UEPG: Ciências Sociais Aplicadas Volume 2008 ; 2008 >
-      au < released ; 2009 ; 10 ; Publicatio UEPG: Ciências Sociais Aplicadas Volume 2009 ; 2009 >
-      au < released ; 2010 ; 11 ; Publicatio UEPG: Ciências Sociais Aplicadas Volume 2010 ; 2010 >
-      au < released ; 2011 ; 12 ; Publicatio UEPG: Ciências Sociais Aplicadas Volume 2011 ; 2011 >
-      au < released ; 2012 ; 13 ; Publicatio UEPG: Ciências Sociais Aplicadas Volume 2012 ; 2012 >
-      au < manifest ; 2013 ; 14 ; Publicatio UEPG: Ciências Sociais Aplicadas Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 15 ; Publicatio UEPG: Ciências Sociais Aplicadas Volume 2014 ; 2014 >
+      au < released ; 2000 ; 1 ; Publicatio UEPG: Ciências Sociais Aplicadas Volume 2000 ; 2000 ; >
+      au < released ; 2002 ; 3 ; Publicatio UEPG: Ciências Sociais Aplicadas Volume 2002 ; 2002 ; >
+      au < released ; 2003 ; 4 ; Publicatio UEPG: Ciências Sociais Aplicadas Volume 2003 ; 2003 ; >
+      au < released ; 2004 ; 5 ; Publicatio UEPG: Ciências Sociais Aplicadas Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 6 ; Publicatio UEPG: Ciências Sociais Aplicadas Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 7 ; Publicatio UEPG: Ciências Sociais Aplicadas Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 8 ; Publicatio UEPG: Ciências Sociais Aplicadas Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 9 ; Publicatio UEPG: Ciências Sociais Aplicadas Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 10 ; Publicatio UEPG: Ciências Sociais Aplicadas Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 11 ; Publicatio UEPG: Ciências Sociais Aplicadas Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 12 ; Publicatio UEPG: Ciências Sociais Aplicadas Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 13 ; Publicatio UEPG: Ciências Sociais Aplicadas Volume 2012 ; 2012 ; >
+      au < manifest ; 2013 ; 14 ; Publicatio UEPG: Ciências Sociais Aplicadas Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 15 ; Publicatio UEPG: Ciências Sociais Aplicadas Volume 2014 ; 2014 ; >
 
   }
 
@@ -233,15 +233,15 @@
       param[base_url] = http://www.revistas2.uepg.br/
       param[journal_id] = conexao
 
-      au < exists ; 2005 ; 1 ; Revista Conexão UEPG Volume 2005 ; 2005 >
-      au < exists ; 2007 ; 3 ; Revista Conexão UEPG Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 4 ; Revista Conexão UEPG Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 5 ; Revista Conexão UEPG Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 6 ; Revista Conexão UEPG Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 7 ; Revista Conexão UEPG Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 8 ; Revista Conexão UEPG Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 9 ; Revista Conexão UEPG Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 10 ; Revista Conexão UEPG Volume 2014 ; 2014 >
+      au < exists ; 2005 ; 1 ; Revista Conexão UEPG Volume 2005 ; 2005 ; >
+      au < exists ; 2007 ; 3 ; Revista Conexão UEPG Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 4 ; Revista Conexão UEPG Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 5 ; Revista Conexão UEPG Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 6 ; Revista Conexão UEPG Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 7 ; Revista Conexão UEPG Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 8 ; Revista Conexão UEPG Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 9 ; Revista Conexão UEPG Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 10 ; Revista Conexão UEPG Volume 2014 ; 2014 ; >
 
   }
 
@@ -256,25 +256,25 @@
       param[base_url] = http://www.revistas2.uepg.br/
       param[journal_id] = rhr
 
-      au < released ; 1996 ; 1 ; Revista de História Regional Volume 1996 ; 1996 >
-      au < released ; 1997 ; 2 ; Revista de História Regional Volume 1997 ; 1997 >
-      au < released ; 1998 ; 3 ; Revista de História Regional Volume 1998 ; 1998 >
-      au < released ; 1999 ; 4 ; Revista de História Regional Volume 1999 ; 1999 >
-      au < released ; 2000 ; 5 ; Revista de História Regional Volume 2000 ; 2000 >
-      au < released ; 2001 ; 6 ; Revista de História Regional Volume 2001 ; 2001 >
-      au < released ; 2002 ; 7 ; Revista de História Regional Volume 2002 ; 2002 >
-      au < released ; 2003 ; 8 ; Revista de História Regional Volume 2003 ; 2003 >
-      au < released ; 2004 ; 9 ; Revista de História Regional Volume 2004 ; 2004 >
-      au < released ; 2005 ; 10 ; Revista de História Regional Volume 2005 ; 2005 >
-      au < released ; 2006 ; 11 ; Revista de História Regional Volume 2006 ; 2006 >
-      au < released ; 2007 ; 12 ; Revista de História Regional Volume 2007 ; 2007 >
-      au < released ; 2008 ; 13 ; Revista de História Regional Volume 2008 ; 2008 >
-      au < released ; 2009 ; 14 ; Revista de História Regional Volume 2009 ; 2009 >
-      au < released ; 2010 ; 15 ; Revista de História Regional Volume 2010 ; 2010 >
-      au < released ; 2011 ; 16 ; Revista de História Regional Volume 2011 ; 2011 >
-      au < released ; 2012 ; 17 ; Revista de História Regional Volume 2012 ; 2012 >
-      au < manifest ; 2013 ; 18 ; Revista de História Regional Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 19 ; Revista de História Regional Volume 2014 ; 2014 >
+      au < released ; 1996 ; 1 ; Revista de História Regional Volume 1996 ; 1996 ; >
+      au < released ; 1997 ; 2 ; Revista de História Regional Volume 1997 ; 1997 ; >
+      au < released ; 1998 ; 3 ; Revista de História Regional Volume 1998 ; 1998 ; >
+      au < released ; 1999 ; 4 ; Revista de História Regional Volume 1999 ; 1999 ; >
+      au < released ; 2000 ; 5 ; Revista de História Regional Volume 2000 ; 2000 ; >
+      au < released ; 2001 ; 6 ; Revista de História Regional Volume 2001 ; 2001 ; >
+      au < released ; 2002 ; 7 ; Revista de História Regional Volume 2002 ; 2002 ; >
+      au < released ; 2003 ; 8 ; Revista de História Regional Volume 2003 ; 2003 ; >
+      au < released ; 2004 ; 9 ; Revista de História Regional Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 10 ; Revista de História Regional Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 11 ; Revista de História Regional Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 12 ; Revista de História Regional Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 13 ; Revista de História Regional Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 14 ; Revista de História Regional Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 15 ; Revista de História Regional Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 16 ; Revista de História Regional Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 17 ; Revista de História Regional Volume 2012 ; 2012 ; >
+      au < manifest ; 2013 ; 18 ; Revista de História Regional Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 19 ; Revista de História Regional Volume 2014 ; 2014 ; >
 
   }
 
@@ -289,20 +289,20 @@
       param[base_url] = http://www.revistas2.uepg.br/
       param[journal_id] = emancipacao
 
-      au < exists ; 2001 ; 1 ; Revista Emancipação Volume 2001 ; 2001 >
-      au < exists ; 2002 ; 2 ; Revista Emancipação Volume 2002 ; 2002 >
-      au < exists ; 2003 ; 3 ; Revista Emancipação Volume 2003 ; 2003 >
-      au < exists ; 2004 ; 4 ; Revista Emancipação Volume 2004 ; 2004 >
-      au < exists ; 2005 ; 5 ; Revista Emancipação Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 6 ; Revista Emancipação Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 7 ; Revista Emancipação Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 8 ; Revista Emancipação Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 9 ; Revista Emancipação Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 10 ; Revista Emancipação Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 11 ; Revista Emancipação Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 12 ; Revista Emancipação Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 13 ; Revista Emancipação Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 14 ; Revista Emancipação Volume 2014 ; 2014 >
+      au < exists ; 2001 ; 1 ; Revista Emancipação Volume 2001 ; 2001 ; >
+      au < exists ; 2002 ; 2 ; Revista Emancipação Volume 2002 ; 2002 ; >
+      au < exists ; 2003 ; 3 ; Revista Emancipação Volume 2003 ; 2003 ; >
+      au < exists ; 2004 ; 4 ; Revista Emancipação Volume 2004 ; 2004 ; >
+      au < exists ; 2005 ; 5 ; Revista Emancipação Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 6 ; Revista Emancipação Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 7 ; Revista Emancipação Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 8 ; Revista Emancipação Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 9 ; Revista Emancipação Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 10 ; Revista Emancipação Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 11 ; Revista Emancipação Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 12 ; Revista Emancipação Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 13 ; Revista Emancipação Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 14 ; Revista Emancipação Volume 2014 ; 2014 ; >
 
   }
 
@@ -317,11 +317,11 @@
       param[base_url] = http://www.revistas2.uepg.br/
       param[journal_id] = rlagg
 
-      au < exists ; 2010 ; 1 ; Revista Latino-Americana de Geografia e Gênero Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 2 ; Revista Latino-Americana de Geografia e Gênero Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 3 ; Revista Latino-Americana de Geografia e Gênero Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 4 ; Revista Latino-Americana de Geografia e Gênero Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 5 ; Revista Latino-Americana de Geografia e Gênero Volume 2014 ; 2014 >
+      au < exists ; 2010 ; 1 ; Revista Latino-Americana de Geografia e Gênero Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 2 ; Revista Latino-Americana de Geografia e Gênero Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 3 ; Revista Latino-Americana de Geografia e Gênero Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 4 ; Revista Latino-Americana de Geografia e Gênero Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 5 ; Revista Latino-Americana de Geografia e Gênero Volume 2014 ; 2014 ; >
 
   }
 
@@ -336,14 +336,14 @@
       param[base_url] = http://www.revistas2.uepg.br/
       param[journal_id] = tp
 
-      au < exists ; 2007 ; 1 ; Terr@Plural Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 2 ; Terr@Plural Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 3 ; Terr@Plural Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 4 ; Terr@Plural Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 5 ; Terr@Plural Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 6 ; Terr@Plural Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 7 ; Terr@Plural Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 8 ; Terr@Plural Volume 2014 ; 2014 >
+      au < exists ; 2007 ; 1 ; Terr@Plural Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 2 ; Terr@Plural Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 3 ; Terr@Plural Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 4 ; Terr@Plural Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 5 ; Terr@Plural Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 6 ; Terr@Plural Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 7 ; Terr@Plural Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 8 ; Terr@Plural Volume 2014 ; 2014 ; >
 
   }
 
@@ -359,20 +359,20 @@
       param[base_url] = http://www.revistas2.uepg.br/
       param[journal_id] = uniletras
 
-      au < released ; 2000 ; 1 ; UniLetras Volume 2000 ; 2000 >
-      au < released ; 2001 ; 2 ; UniLetras Volume 2001 ; 2001 >
-      au < released ; 2002 ; 3 ; UniLetras Volume 2002 ; 2002 >
-      au < released ; 2003 ; 4 ; UniLetras Volume 2003 ; 2003 >
-      au < released ; 2004 ; 5 ; UniLetras Volume 2004 ; 2004 >
-      au < released ; 2006 ; 7 ; UniLetras Volume 2006 ; 2006 >
-      au < released ; 2007 ; 8 ; UniLetras Volume 2007 ; 2007 >
-      au < released ; 2008 ; 9 ; UniLetras Volume 2008 ; 2008 >
-      au < released ; 2009 ; 10 ; UniLetras Volume 2009 ; 2009 >
-      au < released ; 2010 ; 11 ; UniLetras Volume 2010 ; 2010 >
-      au < released ; 2011 ; 12 ; UniLetras Volume 2011 ; 2011 >
-      au < released ; 2012 ; 13 ; UniLetras Volume 2012 ; 2012 >
-      au < manifest ; 2013 ; 14 ; UniLetras Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 15 ; UniLetras Volume 2014 ; 2014 >
+      au < released ; 2000 ; 1 ; UniLetras Volume 2000 ; 2000 ; >
+      au < released ; 2001 ; 2 ; UniLetras Volume 2001 ; 2001 ; >
+      au < released ; 2002 ; 3 ; UniLetras Volume 2002 ; 2002 ; >
+      au < released ; 2003 ; 4 ; UniLetras Volume 2003 ; 2003 ; >
+      au < released ; 2004 ; 5 ; UniLetras Volume 2004 ; 2004 ; >
+      au < released ; 2006 ; 7 ; UniLetras Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 8 ; UniLetras Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 9 ; UniLetras Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 10 ; UniLetras Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 11 ; UniLetras Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 12 ; UniLetras Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 13 ; UniLetras Volume 2012 ; 2012 ; >
+      au < manifest ; 2013 ; 14 ; UniLetras Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 15 ; UniLetras Volume 2014 ; 2014 ; >
 
   }
 
