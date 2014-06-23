@@ -535,9 +535,9 @@
 
       param[journal_id] = steinbeckreview
 
-      au < exists ; exists ; 2010 ; The Steinbeck Review Volume 7 ; 7 >
-      au < exists ; exists ; 2011 ; The Steinbeck Review Volume 8 ; 8 >
-      au < exists ; exists ; 2012 ; The Steinbeck Review Volume 9 ; 9 >
+      au < manifest ; exists ; 2010 ; The Steinbeck Review Volume 7 ; 7 >
+      au < manifest ; exists ; 2011 ; The Steinbeck Review Volume 8 ; 8 >
+      au < manifest ; exists ; 2012 ; The Steinbeck Review Volume 9 ; 9 >
       au < testing ; exists ; 2013 ; The Steinbeck Review Volume 10 ; 10 >
       au < expected ; exists ; 2014 ; The Steinbeck Review Volume 11 ; 11 >
       
@@ -554,9 +554,9 @@
 
       param[journal_id] = studamerjewilite
 
-      au < exists ; exists ; 2010 ; Studies in American Jewish Literature Volume 29 ; 29 >
-      au < exists ; exists ; 2011 ; Studies in American Jewish Literature Volume 30 ; 30 >
-      au < exists ; exists ; 2012 ; Studies in American Jewish Literature Volume 31 ; 31 >
+      au < manifest ; exists ; 2010 ; Studies in American Jewish Literature Volume 29 ; 29 >
+      au < manifest ; exists ; 2011 ; Studies in American Jewish Literature Volume 30 ; 30 >
+      au < manifest ; exists ; 2012 ; Studies in American Jewish Literature Volume 31 ; 31 >
       au < testing ; exists ; 2013 ; Studies in American Jewish Literature Volume 32 ; 32 >
       au < expected ; exists ; 2014 ; Studies in American Jewish Literature Volume 33 ; 33 >
       
@@ -573,11 +573,11 @@
 
       param[journal_id] = transportationj
 
-      au < exists ; exists ; 2010 ; Transportation Journal Volume 49 ; 49 >
-      au < exists ; exists ; 2011 ; Transportation Journal Volume 50 ; 50 >
-      au < exists ; exists ; 2012 ; Transportation Journal Volume 51 ; 51 >
+      au < manifest ; exists ; 2010 ; Transportation Journal Volume 49 ; 49 >
+      au < manifest ; exists ; 2011 ; Transportation Journal Volume 50 ; 50 >
+      au < manifest ; exists ; 2012 ; Transportation Journal Volume 51 ; 51 >
       au < testing ; exists ; 2013 ; Transportation Journal Volume 52 ; 52 >
-      au < expected ; exists ; 2014 ; Transportation Journal Volume 53 ; 53 >
+      au < manifest ; exists ; 2014 ; Transportation Journal Volume 53 ; 53 >
       
   }
 
@@ -592,11 +592,11 @@
 
       param[journal_id] = utopianstudies
 
-      au < exists ; exists ; 2010 ; Utopian Studies Volume 21 ; 21 >
-      au < exists ; exists ; 2011 ; Utopian Studies Volume 22 ; 22 >
-      au < exists ; exists ; 2012 ; Utopian Studies Volume 23 ; 23 >
+      au < manifest ; exists ; 2010 ; Utopian Studies Volume 21 ; 21 >
+      au < manifest ; exists ; 2011 ; Utopian Studies Volume 22 ; 22 >
+      au < manifest ; exists ; 2012 ; Utopian Studies Volume 23 ; 23 >
       au < testing ; exists ; 2013 ; Utopian Studies Volume 24 ; 24 >
-      au < expected ; exists ; 2014 ; Utopian Studies Volume 25 ; 25 >
+      au < manifest ; exists ; 2014 ; Utopian Studies Volume 25 ; 25 >
       
   }
 
