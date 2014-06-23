@@ -1644,6 +1644,75 @@
   {
   
     title <
+      name = The Shaw Review ;
+      issn = 0037-3354 ;
+      issnl = 0037-3354
+    >
+    
+    {
+      plugin = org.lockss.plugin.jstor.JstorPlugin
+      param[base_url] = http://www.jstor.org/
+      param[base_url2] = https://www.jstor.org/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      param[journal_id] = shawreview
+      comment[continues] = 2156-8928
+      comment[continued_by] = 0741-5842
+
+      au < exists ; 1959 ; The Shaw Review Volume 2 ; 2 >
+      au < exists ; 1960 ; The Shaw Review Volume 3 ; 3 >
+      au < exists ; 1961 ; The Shaw Review Volume 4 ; 4 >
+      au < exists ; 1962 ; The Shaw Review Volume 5 ; 5 >
+      au < exists ; 1963 ; The Shaw Review Volume 6 ; 6 >
+      au < exists ; 1964 ; The Shaw Review Volume 7 ; 7 >
+      au < exists ; 1965 ; The Shaw Review Volume 8 ; 8 >
+      au < exists ; 1966 ; The Shaw Review Volume 9 ; 9 >
+      au < exists ; 1967 ; The Shaw Review Volume 10 ; 10 >
+      au < exists ; 1968 ; The Shaw Review Volume 11 ; 11 >
+      au < exists ; 1969 ; The Shaw Review Volume 12 ; 12 >
+      au < exists ; 1970 ; The Shaw Review Volume 13 ; 13 >
+      au < exists ; 1971 ; The Shaw Review Volume 14 ; 14 >
+      au < exists ; 1972 ; The Shaw Review Volume 15 ; 15 >
+      au < exists ; 1973 ; The Shaw Review Volume 16 ; 16 >
+      au < exists ; 1974 ; The Shaw Review Volume 17 ; 17 >
+      au < exists ; 1975 ; The Shaw Review Volume 18 ; 18 >
+      au < exists ; 1976 ; The Shaw Review Volume 19 ; 19 >
+      au < exists ; 1977 ; The Shaw Review Volume 20 ; 20 >
+      au < exists ; 1978 ; The Shaw Review Volume 21 ; 21 >
+      au < exists ; 1979 ; The Shaw Review Volume 22 ; 22 >
+      au < exists ; 1980 ; The Shaw Review Volume 23 ; 23 >
+
+    }
+
+  }
+
+  {
+  
+    title <
+      name = Bulletin (Shaw Society of America) ;
+      issn = 2156-8928 ;
+      issnl = 2156-8928
+    >
+    
+    {
+      plugin = org.lockss.plugin.jstor.JstorPlugin
+      param[base_url] = http://www.jstor.org/
+      param[base_url2] = https://www.jstor.org/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      param[journal_id] = bullshawsociamer
+      comment[continued_by] = 0037-3354
+
+      au < exists ; 1951-1956 ; Bulletin (Shaw Society of America) Volume 1 ; 1 >
+      au < exists ; 1957-1958 ; Bulletin (Shaw Society of America) Volume 2 ; 2 >
+
+    }
+
+  }
+
+  {
+  
+    title <
       name = Soundings: An Interdisciplinary Journal ;
       issn = 0038-1861 ;
       eissn = 2161-6302 ;
@@ -1698,7 +1767,11 @@
 
       param[journal_id] = studamerjewilite
 
+      au < exists ; 2010 ; Studies in American Jewish Literature Volume 29 ; 29 >
+      au < exists ; 2011 ; Studies in American Jewish Literature Volume 30 ; 30 >
+      au < exists ; 2012 ; Studies in American Jewish Literature Volume 31 ; 31 >
       au < exists ; 2013 ; Studies in American Jewish Literature Volume 32 ; 32 >
+      au < exists ; 2014 ; Studies in American Jewish Literature Volume 33 ; 33 >
       
     }
 
@@ -1738,7 +1811,11 @@
 
       param[journal_id] = transportationj
 
+      au < exists ; 2010 ; Transportation Journal Volume 49 ; 49 >
+      au < exists ; 2011 ; Transportation Journal Volume 50 ; 50 >
+      au < exists ; 2012 ; Transportation Journal Volume 51 ; 51 >
       au < exists ; 2013 ; Transportation Journal Volume 52 ; 52 >
+      au < exists ; 2014 ; Transportation Journal Volume 53 ; 53 >
       
     }
 
@@ -1774,7 +1851,11 @@
 
       param[journal_id] = utopianstudies
 
+      au < exists ; 2010 ; Utopian Studies Volume 21 ; 21 >
+      au < exists ; 2011 ; Utopian Studies Volume 22 ; 22 >
+      au < exists ; 2012 ; Utopian Studies Volume 23 ; 23 >
       au < exists ; 2013 ; Utopian Studies Volume 24 ; 24 >
+      au < exists ; 2014 ; Utopian Studies Volume 25 ; 25 >
       
     }
 
