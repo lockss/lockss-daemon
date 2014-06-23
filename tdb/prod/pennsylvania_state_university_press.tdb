@@ -601,6 +601,28 @@
   }
   
   {
+
+    title <
+      name = The Journal of Ayn Rand Studies ;
+      issn = 1526-1018 ;
+      eissn = 2169-7132 ;
+      issnl = 1526-1018
+    >
+
+      plugin = org.lockss.plugin.jstor.JstorPlugin
+      param[base_url] = http://www.jstor.org/
+      param[base_url2] = https://www.jstor.org/
+      implicit < status ; year ; name ; param[volume_name] >
+      param[journal_id] = jaynrandstud
+
+      au < exists ; 2011 ; The Journal of Ayn Rand Studies Volume 11 ; 11 >
+      au < exists ; 2012 ; The Journal of Ayn Rand Studies Volume 12 ; 12 >
+      au < exists ; 2013 ; The Journal of Ayn Rand Studies Volume 13 ; 13 >
+      au < expected ; 2014 ; The Journal of Ayn Rand Studies Volume 14 ; 14 >
+      
+  }
+
+  {
   
     title <
       name = Journal of Eastern Mediterranean Archaeology and Heritage Studies ;
@@ -617,8 +639,8 @@
 
       param[journal_id] = jeasmedarcherstu
 
-      au < exists ; 2013 ; The Journal of Ayn Rand Studies Volume 1 ; 1 >
-      au < exists ; 2014 ; The Journal of Ayn Rand Studies Volume 2 ; 2 >
+      au < exists ; 2013 ; Journal of Eastern Mediterranean Archaeology and Heritage Studies Volume 1 ; 1 >
+      au < exists ; 2014 ; Journal of Eastern Mediterranean Archaeology and Heritage Studies Volume 2 ; 2 >
       
     }
 
@@ -1247,6 +1269,27 @@
 
   {
     title <
+      name = Pacific Coast Philology ;
+      issn = 0078-7469 ;
+      issnl = 0078-7469
+    >
+
+      plugin = org.lockss.plugin.jstor.JstorPlugin
+      param[base_url] = http://www.jstor.org/
+      param[base_url2] = https://www.jstor.org/
+      implicit < status ; year ; name ; param[volume_name] >
+      param[journal_id] = pacicoasphil
+
+      au < exists ; 2010 ; Pacific Coast Philology Volume 45 ; 45 >
+      au < exists ; 2011 ; Pacific Coast Philology Volume 46 ; 46 >
+      au < exists ; 2012 ; Pacific Coast Philology Volume 47 ; 47 >
+      au < exists ; 2013 ; Pacific Coast Philology Volume 48 ; 48 >
+      au < exists ; 2014 ; Pacific Coast Philology Volume 49 ; 49 >
+      
+  }
+
+  {
+    title <
       name = Pennsylvania History: A Journal of Mid-Atlantic Studies ;
       issn = 0031-4528 ;
       eissn = 2153-2109 ;
@@ -1748,6 +1791,29 @@
       
     }
 
+  }
+
+  {
+
+    title <
+      name = The Steinbeck Review ;
+      issn = 1546-007X ;
+      eissn = 1754-6087 ;
+      issnl = 1546-007X
+    >
+
+      plugin = org.lockss.plugin.jstor.JstorPlugin
+      param[base_url] = http://www.jstor.org/
+      param[base_url2] = https://www.jstor.org/
+      implicit < status ; year ; name ; param[volume_name] >
+      param[journal_id] = steinbeckreview
+
+      au < exists ; 2010 ; The Steinbeck Review Volume 7 ; 7 >
+      au < exists ; 2011 ; The Steinbeck Review Volume 8 ; 8 >
+      au < exists ; 2012 ; The Steinbeck Review Volume 9 ; 9 >
+      au < exists ; 2013 ; The Steinbeck Review Volume 10 ; 10 >
+      au < expected ; 2014 ; The Steinbeck Review Volume 11 ; 11 >
+      
   }
 
   {
