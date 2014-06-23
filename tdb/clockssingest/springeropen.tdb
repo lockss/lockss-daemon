@@ -891,7 +891,7 @@
   
         au < manifest ; exists ; 2012 ; HUGO Journal Volume 6 ; 6 >
         au < manifest ; exists ; 2013 ; HUGO Journal Volume 7 ; 7 >
-        au < expected ; exists ; 2014 ; HUGO Journal Volume 8 ; 8 >
+        au < manifest ; exists ; 2014 ; HUGO Journal Volume 8 ; 8 >
   
     }
   
@@ -925,7 +925,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; exists ; 2013 ; In Silico Pharmacology Volume 1 ; 1 >
-        au < expected ; exists ; 2014 ; In Silico Pharmacology Volume 2 ; 2 >
+        au < manifest ; exists ; 2014 ; In Silico Pharmacology Volume 2 ; 2 >
   
     }
 
@@ -1438,7 +1438,7 @@
         au < manifest ; exists ; 2011 ; Journal of Mathematics in Industry Volume 1 ; 1 >
         au < manifest ; exists ; 2012 ; Journal of Mathematics in Industry Volume 2 ; 2 >
         au < manifest ; exists ; 2013 ; Journal of Mathematics in Industry Volume 3 ; 3 >
-        au < expected ; exists ; 2014 ; Journal of Mathematics in Industry Volume 4 ; 4 >
+        au < manifest ; exists ; 2014 ; Journal of Mathematics in Industry Volume 4 ; 4 >
   
     }
   
@@ -1519,7 +1519,7 @@
         param[journal_issn] = 2195-5832 
         comment[platform] = BioMedCentralPlugin
   
-        au < expected ; exists ; 2014 ; Journal of Statistical Distributions and Applications Volume 1 ; 1 >
+        au < manifest ; exists ; 2014 ; Journal of Statistical Distributions and Applications Volume 1 ; 1 >
   
     }
   
@@ -1636,7 +1636,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; exists ; 2013 ; Micro and Nano Systems Letters Volume 1 ; 1 >
-        au < expected ; exists ; 2014 ; Micro and Nano Systems Letters Volume 2 ; 2 >
+        au < manifest ; exists ; 2014 ; Micro and Nano Systems Letters Volume 2 ; 2 >
   
     }
   
