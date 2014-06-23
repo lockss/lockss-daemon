@@ -1,5 +1,5 @@
 /*
- * $Id: RSC2014ArticleIteratorFactory.java,v 1.1 2014-05-07 00:59:52 etenbrink Exp $
+ * $Id: RSC2014ArticleIteratorFactory.java,v 1.2 2014-06-23 16:06:50 etenbrink Exp $
  */
 
 /*
@@ -52,35 +52,35 @@ public class RSC2014ArticleIteratorFactory
       "\"^%sen/content/article(?:landing|html|pdf)/%d/%s/\", " +
       "base_url, year, journal_code";
   
+  /*
+   * various aspects of an article
+   * http://pubs.rsc.org/en/content/articlelanding/2009/gc/b906831g
+   * http://pubs.rsc.org/en/content/articlehtml/2009/gc/b906831g
+   * http://pubs.rsc.org/en/content/articlepdf/2009/gc/b906831g
+   */
+  
+  // Identify groups in the pattern "/article(landing|html|pdf)/(<year>/<journalcode>)/(<doi>).*
+  static final Pattern ABSTRACT_PATTERN = Pattern.compile(
+      "/articlelanding/([0-9]{4}/[^/]+)/([^/?&]+)$",
+      Pattern.CASE_INSENSITIVE);
+  
+  static final Pattern HTML_PATTERN = Pattern.compile(
+      "/articlehtml/([0-9]{4}/[^/]+)/([^/?&]+)$",
+      Pattern.CASE_INSENSITIVE);
+  
+  static final Pattern PDF_PATTERN = Pattern.compile(
+      "/articlepdf/([0-9]{4}/[^/]+)/([^/?&]+)$",
+      Pattern.CASE_INSENSITIVE);
+  
+  // how to change from one form (aspect) of article to another
+  static final String ABSTRACT_REPLACEMENT = "/articlelanding/$1/$2";
+  static final String HTML_REPLACEMENT = "/articlehtml/$1/$2";
+  static final String PDF_REPLACEMENT = "/articlepdf/$1/$2";
+  
   public Iterator<ArticleFiles> createArticleIterator(
       ArchivalUnit au, MetadataTarget target) throws PluginException {
     
     SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
-    
-    /*
-     * various aspects of an article
-     * http://pubs.rsc.org/en/content/articlelanding/2009/gc/b906831g
-     * http://pubs.rsc.org/en/content/articlehtml/2009/gc/b906831g
-     * http://pubs.rsc.org/en/content/articlepdf/2009/gc/b906831g
-     */
-    
-    // Identify groups in the pattern "/article(landing|html|pdf)/(<year>/<journalcode>)/(<doi>).*
-    final Pattern ABSTRACT_PATTERN = Pattern.compile(
-        "/articlelanding/([0-9]{4}/[^/]+)/([^/?&]+)$",
-        Pattern.CASE_INSENSITIVE);
-    
-    final Pattern HTML_PATTERN = Pattern.compile(
-        "/articlehtml/([0-9]{4}/[^/]+)/([^/?&]+)$",
-        Pattern.CASE_INSENSITIVE);
-    
-    final Pattern PDF_PATTERN = Pattern.compile(
-        "/articlepdf/([0-9]{4}/[^/]+)/([^/?&]+)$",
-        Pattern.CASE_INSENSITIVE);
-    
-    // how to change from one form (aspect) of article to another
-    final String ABSTRACT_REPLACEMENT = "/articlelanding/$1/$2";
-    final String HTML_REPLACEMENT = "/articlehtml/$1/$2";
-    final String PDF_REPLACEMENT = "/articlepdf/$1/$2";
     
     builder.setSpec(target,
         ROOT_TEMPLATE, PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
