@@ -1061,15 +1061,15 @@
 
     param[journal_id] = ema 
     
-    au < exists ; exists ; 2006 ; Energy Materials: Materials Science and Engineering for Energy Systems Volume 1 ; 1 >
-    au < exists ; exists ; 2007 ; Energy Materials: Materials Science and Engineering for Energy Systems Volume 2 ; 2 >
-    au < exists ; exists ; 2008 ; Energy Materials: Materials Science and Engineering for Energy Systems Volume 3 ; 3 >
-    au < exists ; exists ; 2009 ; Energy Materials: Materials Science and Engineering for Energy Systems Volume 4 ; 4 >
-    au < exists ; exists ; 2010 ; Energy Materials: Materials Science and Engineering for Energy Systems Volume 5 ; 5 >
-    au < exists ; exists ; 2011 ; Energy Materials: Materials Science and Engineering for Energy Systems Volume 6 ; 6 >
-    au < exists ; exists ; 2012 ; Energy Materials: Materials Science and Engineering for Energy Systems Volume 7 ; 7 >
-    au < exists ; exists ; 2013 ; Energy Materials: Materials Science and Engineering for Energy Systems Volume 8 ; 8 >
-    au < exists ; exists ; 2014 ; Energy Materials: Materials Science and Engineering for Energy Systems Volume 9 ; 9 >
+    au < manifest ; exists ; 2006 ; Energy Materials: Materials Science and Engineering for Energy Systems Volume 1 ; 1 >
+    au < manifest ; exists ; 2007 ; Energy Materials: Materials Science and Engineering for Energy Systems Volume 2 ; 2 >
+    au < manifest ; exists ; 2008 ; Energy Materials: Materials Science and Engineering for Energy Systems Volume 3 ; 3 >
+    au < manifest ; exists ; 2009 ; Energy Materials: Materials Science and Engineering for Energy Systems Volume 4 ; 4 >
+    au < manifest ; exists ; 2010 ; Energy Materials: Materials Science and Engineering for Energy Systems Volume 5 ; 5 >
+    au < manifest ; exists ; 2011 ; Energy Materials: Materials Science and Engineering for Energy Systems Volume 6 ; 6 >
+    au < manifest ; exists ; 2012 ; Energy Materials: Materials Science and Engineering for Energy Systems Volume 7 ; 7 >
+    au < manifest ; exists ; 2013 ; Energy Materials: Materials Science and Engineering for Energy Systems Volume 8 ; 8 >
+    au < manifest ; exists ; 2014 ; Energy Materials: Materials Science and Engineering for Energy Systems Volume 9 ; 9 >
 
   }
 
@@ -2428,15 +2428,15 @@
     param[journal_id] = eni 
     comment[dnp] = released for old plugin
     
-    au < exists ; exists ; 2005 ; Journal of the Energy Institute Volume 78 ; 78 > 
-    au < exists ; exists ; 2006 ; Journal of the Energy Institute Volume 79 ; 79 > 
-    au < exists ; exists ; 2007 ; Journal of the Energy Institute Volume 80 ; 80 > 
-    au < exists ; exists ; 2008 ; Journal of the Energy Institute Volume 81 ; 81 > 
-    au < exists ; exists ; 2009 ; Journal of the Energy Institute Volume 82 ; 82 > 
-    au < exists ; exists ; 2010 ; Journal of the Energy Institute Volume 83 ; 83 > 
-    au < exists ; exists ; 2011 ; Journal of the Energy Institute Volume 84 ; 84 > 
+    au < manifest ; exists ; 2005 ; Journal of the Energy Institute Volume 78 ; 78 > 
+    au < manifest ; exists ; 2006 ; Journal of the Energy Institute Volume 79 ; 79 > 
+    au < manifest ; exists ; 2007 ; Journal of the Energy Institute Volume 80 ; 80 > 
+    au < manifest ; exists ; 2008 ; Journal of the Energy Institute Volume 81 ; 81 > 
+    au < manifest ; exists ; 2009 ; Journal of the Energy Institute Volume 82 ; 82 > 
+    au < manifest ; exists ; 2010 ; Journal of the Energy Institute Volume 83 ; 83 > 
+    au < manifest ; exists ; 2011 ; Journal of the Energy Institute Volume 84 ; 84 > 
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of the Energy Institute Volume 85 ; 85 > 
-    au < exists ; exists ; 2013 ; Journal of the Energy Institute Volume 86 ; 86 > 
+    au < manifest ; exists ; 2013 ; Journal of the Energy Institute Volume 86 ; 86 > 
     au < expected ; exists ; 2014 ; Journal of the Energy Institute Volume 87 ; 87 > 
 
   }
@@ -3500,8 +3500,8 @@
     param[journal_id] = pha 
     comment[0] = ceased publication 2012
 
-    au < exists ; exists ; 2008 ; Pharmaceutical Programming Volume 1 ; 1 > 
-    au < exists ; exists ; 2009 ; Pharmaceutical Programming Volume 2 ; 2 > 
+    au < manifest ; exists ; 2008 ; Pharmaceutical Programming Volume 1 ; 1 > 
+    au < manifest ; exists ; 2009 ; Pharmaceutical Programming Volume 2 ; 2 > 
     au < doNotProcess ; doNotProcess ; 2010 ; Pharmaceutical Programming Volume 3 ; 3 >  
     au < doNotProcess ; doNotProcess ; 2011 ; Pharmaceutical Programming Volume 4 ; 4 > 
     au < doNotProcess ; doNotProcess ; 2012 ; Pharmaceutical Programming Volume 5 ; 5 >
