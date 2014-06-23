@@ -109,9 +109,8 @@
       comment[publisher] = Universidade do Sul de Santa Catarina
       param[base_url] = http://portaldeperiodicos.unisul.br/
       param[journal_id] = EeN
-      comment[notReady] = low agreement
 
-      au < notReady ; 2008 ; 1 ; REEN: Revista Eletrônica de Estratégia e Negócios Volume 2008 ; 2008 >
+      au < ready ; 2008 ; 1 ; REEN: Revista Eletrônica de Estratégia e Negócios Volume 2008 ; 2008 >
       au < released ; 2009 ; 2 ; REEN: Revista Eletrônica de Estratégia e Negócios Volume 2009 ; 2009 >
       au < released ; 2010 ; 3 ; REEN: Revista Eletrônica de Estratégia e Negócios Volume 2010 ; 2010 >
       au < released ; 2011 ; 4 ; REEN: Revista Eletrônica de Estratégia e Negócios Volume 2011 ; 2011 >

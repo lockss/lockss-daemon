@@ -287,9 +287,8 @@
       comment[publisher] = Universidade Estadual do Oeste do Paraná
       param[base_url] = http://e-revista.unioeste.br/
       param[journal_id] = rlhm
-      comment[notReady] = no substance
 
-      au < notReady ; 2005 ; 1 ; Literatura, História e Memória Volume 2005 ; 2005 ; >
+      au < notReady ; 2005 ; 1 ; Literatura, História e Memória Volume 2005 ; 2005 ; no articles >
       au < released ; 2006 ; 2 ; Literatura, História e Memória Volume 2006 ; 2006 ; >
       au < released ; 2007 ; 3 ; Literatura, História e Memória Volume 2007 ; 2007 ; >
       au < released ; 2008 ; 4 ; Literatura, História e Memória Volume 2008 ; 2008 ; >
