@@ -313,12 +313,13 @@
       comment[publisher] = Universidade Estadual do Oeste do Paraná
       param[base_url] = http://e-revista.unioeste.br/
       param[journal_id] = pgeografica
-      comment[notReady] = fetch error and repository error
+      comment[v2005] = http://e-revista.unioeste.br/index.php/pgeografica/rt/bio/4 has www.prudente.unesp.br, no http
+      comment[v2008] = http://e-revista.unioeste.br/index.php/pgeografica/rt/bio/3631 - 42 has www.unioeste.br, no http
 
-      au < notReady ; 2005 ; 1 ; Perspectiva Geográfica Volume 2005 ; 2005 ; >
+      au < notReady ; 2005 ; 1 ; Perspectiva Geográfica Volume 2005 ; 2005 ; url with no http on bio 4 >
       au < released ; 2006 ; 2 ; Perspectiva Geográfica Volume 2006 ; 2006 ; >
       au < released ; 2007 ; 3 ; Perspectiva Geográfica Volume 2007 ; 2007 ; >
-      au < notReady ; 2008 ; 4 ; Perspectiva Geográfica Volume 2008 ; 2008 ; >
+      au < notReady ; 2008 ; 4 ; Perspectiva Geográfica Volume 2008 ; 2008 ; url with no http on bio 3631-42>
       au < released ; 2009 ; 5 ; Perspectiva Geográfica Volume 2009 ; 2009 ; >
       au < released ; 2010 ; 6 ; Perspectiva Geográfica Volume 2010 ; 2010 ; >
       au < manifest ; 2011 ; 7 ; Perspectiva Geográfica Volume 2011 ; 2011 ; >
