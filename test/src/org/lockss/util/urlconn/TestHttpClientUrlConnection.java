@@ -1,5 +1,5 @@
 /*
- * $Id: TestHttpClientUrlConnection.java,v 1.23 2014-02-26 08:09:26 tlipkis Exp $
+ * $Id: TestHttpClientUrlConnection.java,v 1.24 2014-06-24 06:49:07 tlipkis Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import org.lockss.test.*;
 import org.lockss.util.*;
 import org.apache.commons.httpclient.*;
 import org.apache.commons.httpclient.cookie.CookiePolicy;
+import org.apache.commons.httpclient.protocol.*;
 
 /**
  * Test class for org.lockss.util.urlconn.HttpClientUrlConnection
@@ -197,16 +198,53 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
 
   }
 
-  public void testProtocolSocketFactory() throws Exception {
+  public void testServerTrustLevelDefault() throws Exception {
     client.setRes(201);
     conn.execute();
     assertTrue(conn.isExecuted());
-    assertEquals(201, conn.getResponseCode());
-    Header hdr;
-    hdr = method.getRequestHeader("connection");
-    assertEquals("keep-alive", hdr.getValue());
-    hdr = method.getRequestHeader("accept");
-    assertEquals(HttpClientUrlConnection.ACCEPT_STRING, hdr.getValue());
+    assertClass(PermissiveSSLProtocolSocketFactory.class,
+		conn.getDefaultSocketFactory());
+  }
+
+  public void testServerTrustLevelTrusted() throws Exception {
+    ConfigurationUtil.setFromArgs(HttpClientUrlConnection.
+				  PARAM_SERVER_TRUST_LEVEL, "Trusted");
+    client.setRes(201);
+    conn.execute();
+    assertTrue(conn.isExecuted());
+    assertClass(SSLProtocolSocketFactory.class,
+		conn.getDefaultSocketFactory());
+  }
+
+  public void testServerTrustLevelSelfSigned() throws Exception {
+    ConfigurationUtil.setFromArgs(HttpClientUrlConnection.
+				  PARAM_SERVER_TRUST_LEVEL, "SelfSigned");
+    client.setRes(201);
+    conn.execute();
+    assertTrue(conn.isExecuted());
+    assertClass(EasySSLProtocolSocketFactory.class,
+		conn.getDefaultSocketFactory());
+  }
+
+  public void testServerTrustLevelUntrusted() throws Exception {
+    ConfigurationUtil.setFromArgs(HttpClientUrlConnection.
+				  PARAM_SERVER_TRUST_LEVEL, "Untrusted");
+    client.setRes(201);
+    conn.execute();
+    assertTrue(conn.isExecuted());
+    assertClass(PermissiveSSLProtocolSocketFactory.class,
+		conn.getDefaultSocketFactory());
+  }
+
+  public void testServerTrustLevelCustom() throws Exception {
+    LockssSecureSocketFactory secureSockFact =
+      new LockssSecureSocketFactory(null, null);
+    client.setRes(201);
+    conn.setSecureSocketFactory(secureSockFact);
+    conn.execute();
+    assertTrue(conn.isExecuted());
+    assertClass(AuthSSLProtocolSocketFactory.class,
+		conn.getDefaultSocketFactory());
   }
 
   public void testResponseStream() throws Exception {
@@ -607,5 +645,17 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     void addMethod(HttpMethod nextMethod) {
       methods.add(nextMethod);
     }
+
+    SecureProtocolSocketFactory getDefaultSocketFactory() {
+      String host = url.getHost();
+      int port = url.getPort();
+      if (port <= 0) {
+	port = UrlUtil.getDefaultPort(url.getProtocol().toLowerCase());
+      }
+
+      return DISP_FACT.getFactory(host, port);
+    }
+
   }
+
 }
