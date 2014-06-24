@@ -2,7 +2,7 @@
 
   publisher <
     name = Multi-Science ;
-    info[back] = 2009 ;
+    info[back] = 2011 ;
     info[contract] = 2012 ;
     info[tester] = 8
   >
@@ -321,7 +321,7 @@
     au < finished ; crawling ; 2010 ; International Journal of Micro-Nano Scale Transport Volume 1 ; 1 >
     au < finished ; crawling ; 2011 ; International Journal of Micro-Nano Scale Transport Volume 2 ; 2 >
     au < crawling ; exists ; 2012 ; International Journal of Micro-Nano Scale Transport Volume 3 ; 3 >
-    au < manifest ; exists ; 2013 ; International Journal of Micro-Nano Scale Transport Volume 4 ; 4 >
+    au < testing ; exists ; 2013 ; International Journal of Micro-Nano Scale Transport Volume 4 ; 4 >
     au < expected ; exists ; 2014 ; International Journal of Micro-Nano Scale Transport Volume 5 ; 5 >
 
   }
