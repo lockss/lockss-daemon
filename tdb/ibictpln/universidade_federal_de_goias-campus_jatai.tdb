@@ -4,7 +4,7 @@
   >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; volume ; name ; param[year] >
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
 
   {
 
@@ -17,14 +17,12 @@
       param[base_url] = http://revistas.jatai.ufg.br/
       param[journal_id] = acp
 
-      au < exists ; 2005 ; 4 ; Anais dos Congressos de Pedagogia Volume 4 ; 2005 >
-      au < exists ; 2006 ; 5 ; Anais dos Congressos de Pedagogia Volume 5 ; 2006 >
-      au < exists ; 2007 ; 23 ; Anais dos Congressos de Pedagogia Volume 23 ; 2007 >
-      au < exists ; 2008 ; 24 ; Anais dos Congressos de Pedagogia Volume 24 ; 2008 >
-      au < exists ; 2009 ; 25 ; Anais dos Congressos de Pedagogia Volume 25 ; 2009 >
-      au < exists ; 2011 ; 26 ; Anais dos Congressos de Pedagogia Volume 26 ; 2011 >
-      au < expected ; 2012 ; 27 ; Anais dos Congressos de Pedagogia Volume 27 ; 2012 >
-      au < expected ; 2013 ; 28 ; Anais dos Congressos de Pedagogia Volume 28 ; 2013 >
+      au < doesNotExist ; 2005 ; 4 ; Anais dos Congressos de Pedagogia Volume 4 ; 2005 ; moved? >
+      au < doesNotExist ; 2006 ; 5 ; Anais dos Congressos de Pedagogia Volume 5 ; 2006 ; moved? >
+      au < doesNotExist ; 2007 ; 23 ; Anais dos Congressos de Pedagogia Volume 23 ; 2007 ; moved? >
+      au < doesNotExist ; 2008 ; 24 ; Anais dos Congressos de Pedagogia Volume 24 ; 2008 ; moved? >
+      au < doesNotExist ; 2009 ; 25 ; Anais dos Congressos de Pedagogia Volume 25 ; 2009 ; moved? >
+      au < doesNotExist ; 2011 ; 26 ; Anais dos Congressos de Pedagogia Volume 26 ; 2011 ; moved? >
 
   }
 
@@ -39,17 +37,16 @@
       param[base_url] = http://revistas.jatai.ufg.br/
       param[journal_id] = geoambiente
 
-      au < exists ; 2003 ; 1 ; Geoambiente on-line Volume 1 ; 2003 >
-      au < exists ; 2004 ; 2-3 ; Geoambiente on-line Volume 2-3 ; 2004 >
-      au < exists ; 2005 ; 4-5 ; Geoambiente on-line Volume 4-5 ; 2005 >
-      au < exists ; 2006 ; 6-7 ; Geoambiente on-line Volume 6-7 ; 2006 >
-      au < exists ; 2007 ; 8-9 ; Geoambiente on-line Volume 8-9 ; 2007 >
-      au < exists ; 2008 ; 10-11 ; Geoambiente on-line Volume 10-11 ; 2008 >
-      au < exists ; 2009 ; 12-13 ; Geoambiente on-line Volume 12-13 ; 2009 >
-      au < exists ; 2010 ; 14-15 ; Geoambiente on-line Volume 14-15 ; 2010 >
-      au < exists ; 2011 ; 16-17 ; Geoambiente on-line Volume 16-17 ; 2011 >
-      au < exists ; 2012 ; 18-19 ; Geoambiente on-line Volume 18-19 ; 2012 >
-      au < expected ; 2013 ; 20-21 ; Geoambiente on-line Volume 20-21 ; 2013 >
+      au < doesNotExist ; 2003 ; 1 ; Geoambiente on-line Volume 1 ; 2003 ; moved? >
+      au < doesNotExist ; 2004 ; 2-3 ; Geoambiente on-line Volume 2-3 ; 2004 ; moved? >
+      au < doesNotExist ; 2005 ; 4-5 ; Geoambiente on-line Volume 4-5 ; 2005 ; moved? >
+      au < doesNotExist ; 2006 ; 6-7 ; Geoambiente on-line Volume 6-7 ; 2006 ; moved? >
+      au < doesNotExist ; 2007 ; 8-9 ; Geoambiente on-line Volume 8-9 ; 2007 ; moved? >
+      au < doesNotExist ; 2008 ; 10-11 ; Geoambiente on-line Volume 10-11 ; 2008 ; moved? >
+      au < doesNotExist ; 2009 ; 12-13 ; Geoambiente on-line Volume 12-13 ; 2009 ; moved? >
+      au < doesNotExist ; 2010 ; 14-15 ; Geoambiente on-line Volume 14-15 ; 2010 ; moved? >
+      au < doesNotExist ; 2011 ; 16-17 ; Geoambiente on-line Volume 16-17 ; 2011 ; moved? >
+      au < doesNotExist ; 2012 ; 18-19 ; Geoambiente on-line Volume 18-19 ; 2012 ; moved? >
 
   }
 
@@ -63,11 +60,11 @@
       comment[publisher] = Universidade Federal de Goiás-Campus Jataí
       param[base_url] = http://revistas.jatai.ufg.br/
       param[journal_id] = matematica
-      comment[notReady] = no permission
+      comment[journal] = deleted?
 
-      au < notReady ; 2009 ; 1 ; Revista Eletrônica de Matemática Volume 1 ; 2009 >
-      au < notReady ; 2010 ; 2 ; Revista Eletrônica de Matemática Volume 2 ; 2010 >
-      au < notReady ; 2013 ; 3 ; Revista Eletrônica de Matemática Volume 3 ; 2013 >
+      au < doesNotExist ; 2009 ; 1 ; Revista Eletrônica de Matemática Volume 1 ; 2009 ; moved? >
+      au < doesNotExist ; 2010 ; 2 ; Revista Eletrônica de Matemática Volume 2 ; 2010 ; moved? >
+      au < doesNotExist ; 2013 ; 3 ; Revista Eletrônica de Matemática Volume 3 ; 2013 ; moved? >
 
   }
 
@@ -82,8 +79,8 @@
       param[base_url] = http://revistas.jatai.ufg.br/
       param[journal_id] = revlet
 
-      au < exists ; 2009 ; 1 ; RevLet – Revista Virtual de Letras Volume 1 ; 2009 >
-      au < exists ; 2010 ; 2 ; RevLet – Revista Virtual de Letras Volume 2 ; 2010 >
+      au < doesNotExist ; 2009 ; 1 ; RevLet – Revista Virtual de Letras Volume 1 ; 2009 ; moved? >
+      au < doesNotExist ; 2010 ; 2 ; RevLet – Revista Virtual de Letras Volume 2 ; 2010 ; moved? >
 
   }
 
