@@ -1,5 +1,5 @@
 /*
- * $Id: TestSilverchairHtmlLinkExtractor.java,v 1.3 2014-06-11 17:37:03 thib_gc Exp $
+ * $Id: TestSilverchairHtmlLinkExtractor.java,v 1.4 2014-06-24 23:08:44 thib_gc Exp $
  */
 
 /*
@@ -59,12 +59,9 @@ public class TestSilverchairHtmlLinkExtractor extends LockssTestCase {
                          emitted.add(url);
                        }
                    });
-    assertEquals(6, emitted.size());
-    assertContains(emitted, srcUrl + "foosrc.jpg");
+    assertEquals(6, emitted.size()); // 3 x "src" + 3 x "data-original"
     assertContains(emitted, srcUrl + "foodo.jpg");
-    assertContains(emitted, srcUrl + "barsrc.jpg");
     assertContains(emitted, srcUrl + "bardo.jpg");
-    assertContains(emitted, srcUrl + "bazsrc.jpg");
     assertContains(emitted, srcUrl + "quxdo.jpg");
   }
   
@@ -85,11 +82,54 @@ public class TestSilverchairHtmlLinkExtractor extends LockssTestCase {
                          emitted.add(url);
                        }
                    });
-    assertEquals(4, emitted.size());
+    assertEquals(4, emitted.size()); // 2 x "http://example.com/" + 2 x "http://journal.example.com/"
     assertContains(emitted, srcUrl + "combres.axd/issue-css/123333/");
-    assertContains(emitted, "http://example.com/" + "combres.axd/issue-css/123333/");
     assertContains(emitted, srcUrl + "combres.axd/ga-custom-js/456666/");
-    assertContains(emitted, "http://example.com/" + "combres.axd/ga-custom-js/456666/");
+  }
+  
+  public void testDownloadFile() throws Exception {
+    String input =
+        "<a onclick=\"javascript:downloadFile('/data/Journals/JOURN/12345/journ_11_222_edboard.pdf')\">Foo</a>\n";
+    String srcUrl = "http://www.example.com/";
+    LinkExtractor le = new SilverchairHtmlLinkExtractorFactory().createLinkExtractor(Constants.MIME_TYPE_HTML);
+    final List<String> emitted = new ArrayList<String>();
+    le.extractUrls(null,
+                   new StringInputStream(input),
+                   Constants.ENCODING_UTF_8,
+                   srcUrl,
+                   new LinkExtractor.Callback() {
+                       @Override
+                       public void foundLink(String url) {
+                         emitted.add(url);
+                       }
+                   });
+    assertEquals(1, emitted.size());
+    assertContains(emitted, srcUrl + "data/Journals/JOURN/12345/journ_11_222_edboard.pdf");
+  }
+  
+  // This applies only when the citation URL doesn't have the article ID in it
+  public void testCitation() throws Exception {
+    String input =
+        "<a target=\"_blank\" onclick=\"detailsHandler(this.href); return false;\" href=\"../downloadCitation.aspx?format=ris\">RIS</a>\n" +
+        "<a target=\"_blank\" onclick=\"detailsHandler(this.href); return false;\" href=\"../downloadCitation.aspx?\">RefWorks</a>\n";
+    String baseUrl = "http://www.example.com/";
+    String srcUrl = baseUrl + "article.aspx?articleid=1234567";
+    LinkExtractor le = new SilverchairHtmlLinkExtractorFactory().createLinkExtractor(Constants.MIME_TYPE_HTML);
+    final List<String> emitted = new ArrayList<String>();
+    le.extractUrls(null,
+                   new StringInputStream(input),
+                   Constants.ENCODING_UTF_8,
+                   srcUrl,
+                   new LinkExtractor.Callback() {
+                       @Override
+                       public void foundLink(String url) {
+                         emitted.add(url);
+                       }
+                   });
+    System.out.println(emitted);
+    assertEquals(4, emitted.size()); // 2 x without "articleid" + 2 x with "articleid"
+    assertContains(emitted, baseUrl + "downloadCitation.aspx?format=ris&articleid=1234567");
+    assertContains(emitted, baseUrl + "downloadCitation.aspx?articleid=1234567");
   }
   
 }

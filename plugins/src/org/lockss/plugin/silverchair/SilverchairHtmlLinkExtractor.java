@@ -1,5 +1,5 @@
 /*
- * $Id: SilverchairHtmlLinkExtractor.java,v 1.6 2014-06-11 17:37:03 thib_gc Exp $
+ * $Id: SilverchairHtmlLinkExtractor.java,v 1.7 2014-06-24 23:08:44 thib_gc Exp $
  */
 
 /*
@@ -57,6 +57,10 @@ public class SilverchairHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
       Pattern.compile("//[^/]+(/combres\\.axd/.*)$",
                       Pattern.CASE_INSENSITIVE);
   
+  protected static final Pattern PATTERN_DOWNLOAD_FILE =
+      Pattern.compile("javascript:downloadFile\\('([^']+)'\\)",
+                      Pattern.CASE_INSENSITIVE);
+  
   protected static final Pattern PATTERN_JQUERY =
       Pattern.compile("//ajax\\.googleapis\\.com/ajax/libs/jquery/([^/]+)/jquery\\.min\\.js$",
                       Pattern.CASE_INSENSITIVE);
@@ -68,13 +72,33 @@ public class SilverchairHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
       throws IOException {
     char ch = link.charAt(0);
 
+    // <a>
     if ((ch == 'a' || ch == 'A') && beginsWithTag(link, ATAG)) {
+      // <a onclick="...">
+      String onclick = getAttributeValue("onclick", link);
+      if (onclick == null) {
+        onclick = "";
+      }
+      
+      Matcher onclickMat = null;
+      onclickMat = PATTERN_DOWNLOAD_FILE.matcher(onclick);
+      if (onclickMat.find()) {
+        logger.debug3("Found target onclick URL");
+        String url = onclickMat.group(1);
+        logger.debug3(String.format("Generated %s", url));
+        if (baseUrl == null) { baseUrl = new URL(srcUrl); } // Copycat of parseLink()
+        if (!StringUtil.isNullString(url)) {
+          emit(cb, resolveUri(baseUrl, url));
+        }
+      }
+      
+      // <a href="...">
       String href = getAttributeValue(HREF, link);
       if (href == null) {
         href = "";
       }
-      Matcher hrefMat = null;
 
+      Matcher hrefMat = null;
       hrefMat = PATTERN_CITATION.matcher(href);
       if (hrefMat.find()) {
         logger.debug3("Found target citation URL");
@@ -98,11 +122,12 @@ public class SilverchairHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
             emit(cb, resolveUri(baseUrl, url));
           }
         }
-        return super.extractLinkFromTag(link, au, cb);
       }
       
+      return super.extractLinkFromTag(link, au, cb);
     }
 
+    // <img>
     else if ((ch == 'i' || ch == 'I') && beginsWithTag(link, IMGTAG)) {
       String dataOriginal = getAttributeValue("data-original", link);
       if (baseUrl == null) { baseUrl = new URL(srcUrl); } // Copycat of parseLink()
@@ -112,6 +137,7 @@ public class SilverchairHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
       return super.extractLinkFromTag(link, au, cb);
     }
     
+    // <link>
     else if ((ch == 'l' || ch == 'L') && beginsWithTag(link, LINKTAG)) {
       String href = getAttributeValue(HREF, link);
       if (href == null) {
@@ -125,15 +151,16 @@ public class SilverchairHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
         if (baseUrl == null) { baseUrl = new URL(srcUrl); } // Copycat of parseLink()
         emit(cb, resolveUri(baseUrl, hrefMat.group(1)));
       }
-
       return super.extractLinkFromTag(link, au, cb);
     }
     
+    // <script>
     else if ((ch == 's' || ch == 'S') && beginsWithTag(link, SCRIPTTAG)) {
       String src = getAttributeValue(SRC, link);
       if (src == null) {
         src = "";
       }
+      
       Matcher srcMat = null;
       
       srcMat = PATTERN_COMBRES.matcher(src);
@@ -159,7 +186,6 @@ public class SilverchairHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
       }
     }
 
-    
     return super.extractLinkFromTag(link, au, cb);
   }
 
