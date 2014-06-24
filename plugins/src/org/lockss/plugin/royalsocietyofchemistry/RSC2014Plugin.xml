@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -59,20 +59,20 @@
   </entry>
   <entry>
     <string>au_feature_urls</string>
-  	<map>
-	  <entry>
-      <string>au_title</string>
-      <string>"%sen/journals/lockss?journalcode=%s", base_url, journal_code</string>
-    </entry>
-    <entry>
-      <string>au_volume</string>
-      <string>"%sen/journals/lockss?journalcode=%s&amp;volume=%s&amp;year=%d", base_url, journal_code, volume_name, year</string>
-    </entry>
-    <entry>
-      <string>au_issue</string>
-      <string>"%sen/journals/lockss?journalcode=%s&amp;volume=%s&amp;year=%d&amp;issue=%s", base_url, journal_code, volume_name, year, issue</string>
-    </entry>
-  	</map>
+    <map>
+      <entry>
+        <string>au_title</string>
+        <string>"%sen/journals/lockss?journalcode=%s", base_url, journal_code</string>
+      </entry>
+      <entry>
+        <string>au_volume</string>
+        <string>"%sen/journals/lockss?journalcode=%s&amp;volume=%s&amp;year=%d", base_url, journal_code, volume_name, year</string>
+      </entry>
+      <entry>
+        <string>au_issue</string>
+        <string>"%sen/journals/lockss?journalcode=%s&amp;volume=%s&amp;year=%d&amp;issue=%s", base_url, journal_code, volume_name, year, issue</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>au_crawlrules</string>
@@ -178,6 +178,10 @@
   <entry>
     <string>application/pdf_filter_factory</string>
     <string>org.lockss.plugin.royalsocietyofchemistry.RSC2014PdfFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.royalsocietyofchemistry.RSC2014HtmlCrawlFilterFactory</string>
   </entry>
   <entry>
     <string>au_url_normalizer</string>
