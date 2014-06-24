@@ -73,10 +73,10 @@
       param[base_url] = http://revistas.pucsp.br/
       param[journal_id] = bakhtiniana
 
-      au < releasing ; 2009 ; 1 ; Bakhitiniana Volume 2009 ; 2009 ; >
+      au < released ; 2009 ; 1 ; Bakhitiniana Volume 2009 ; 2009 ; >
       au < released ; 2010 ; 2 ; Bakhitiniana Volume 2010 ; 2010 ; >
-      au < releasing ; 2011 ; 3 ; Bakhitiniana Volume 2011 ; 2011 ; >
-      au < releasing ; 2012 ; 4 ; Bakhitiniana Volume 2012 ; 2012 ; >
+      au < released ; 2011 ; 3 ; Bakhitiniana Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 4 ; Bakhitiniana Volume 2012 ; 2012 ; >
       au < manifest ; 2013 ; 5 ; Bakhitiniana Volume 2013 ; 2013 ; >
 
   }
@@ -445,8 +445,8 @@
       au < released ; 2008 ; 1 ; FronteiraZ Volume 2008 ; 2008 ; >
       au < released ; 2009 ; 2 ; FronteiraZ Volume 2009 ; 2009 ; >
       au < released ; 2010 ; 3 ; FronteiraZ Volume 2010 ; 2010 ; >
-      au < releasing ; 2011 ; 4 ; FronteiraZ Volume 2011 ; 2011 ; >
-      au < releasing ; 2012 ; 5 ; FronteiraZ Volume 2012 ; 2012 ; >
+      au < released ; 2011 ; 4 ; FronteiraZ Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 5 ; FronteiraZ Volume 2012 ; 2012 ; >
       au < manifest ; 2013 ; 6 ; FronteiraZ Volume 2013 ; 2013 ; >
 
   }
@@ -470,9 +470,9 @@
       au < released ; 2006 ; 6 ; Galáxia Volume 2006 ; 2006 ; >
       au < released ; 2007 ; 7 ; Galáxia Volume 2007 ; 2007 ; >
       au < released ; 2008 ; 8 ; Galáxia Volume 2008 ; 2008 ; >
-      au < releasing ; 2009 ; 9 ; Galáxia Volume 2009 ; 2009 ; >
-      au < releasing ; 2010 ; 10 ; Galáxia Volume 2010 ; 2010 ; >
-      au < releasing ; 2011 ; 11 ; Galáxia Volume 2011 ; 2011 ; >
+      au < released ; 2009 ; 9 ; Galáxia Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 10 ; Galáxia Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 11 ; Galáxia Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 12 ; Galáxia Volume 2012 ; 2012 ; >
       au < manifest ; 2013 ; 13 ; Galáxia Volume 2013 ; 2013 ; >
 
@@ -558,7 +558,7 @@
       au < released ; 2008 ; 9 ; Intercâmbio Volume 2008 ; 2008 ; >
       au < released ; 2009 ; 10 ; Intercâmbio Volume 2009 ; 2009 ; >
       au < released ; 2010 ; 11 ; Intercâmbio Volume 2010 ; 2010 ; >
-      au < releasing ; 2011 ; 12 ; Intercâmbio Volume 2011 ; 2011 ; >
+      au < released ; 2011 ; 12 ; Intercâmbio Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 13 ; Intercâmbio Volume 2012 ; 2012 ; >
       au < manifest ; 2013 ; 14 ; Intercâmbio Volume 2013 ; 2013 ; >
 
@@ -577,10 +577,10 @@
 
       au < released ; 2007 ; 1 ; Kairós Volume 2007 ; 2007 ; >
       au < released ; 2008 ; 2 ; Kairós Volume 2008 ; 2008 ; >
-      au < releasing ; 2009 ; 3 ; Kairós Volume 2009 ; 2009 ; >
+      au < released ; 2009 ; 3 ; Kairós Volume 2009 ; 2009 ; >
       au < notReady ; 2010 ; 4 ; Kairós Volume 2010 ; 2010 ; pdf variations >
-      au < releasing ; 2011 ; 5 ; Kairós Volume 2011 ; 2011 ; >
-      au < releasing ; 2012 ; 6 ; Kairós Volume 2012 ; 2012 ; >
+      au < released ; 2011 ; 5 ; Kairós Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 6 ; Kairós Volume 2012 ; 2012 ; >
       au < manifest ; 2013 ; 7 ; Kairós Volume 2013 ; 2013 ; >
 
   }
@@ -599,8 +599,8 @@
       au < released ; 2005 ; 1 ; Kalíope Volume 2005 ; 2005 ; >
       au < released ; 2006 ; 2 ; Kalíope Volume 2006 ; 2006 ; >
       au < released ; 2007 ; 3 ; Kalíope Volume 2007 ; 2007 ; >
-      au < releasing ; 2008 ; 4 ; Kalíope Volume 2008 ; 2008 ; >
-      au < releasing ; 2009 ; 5 ; Kalíope Volume 2009 ; 2009 ; >
+      au < released ; 2008 ; 4 ; Kalíope Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 5 ; Kalíope Volume 2009 ; 2009 ; >
       au < released ; 2010 ; 6 ; Kalíope Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 7 ; Kalíope Volume 2011 ; 2011 ; >
       au < expected ; 2012 ; 8 ; Kalíope Volume 2012 ; 2012 ; >
@@ -622,7 +622,7 @@
       au < released ; 2009 ; 1 ; Leitura Flutuante Volume 2009 ; 2009 ; >
       au < released ; 2010 ; 2 ; Leitura Flutuante Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 3 ; Leitura Flutuante Volume 2011 ; 2011 ; >
-      au < releasing ; 2012 ; 4 ; Leitura Flutuante Volume 2012 ; 2012 ; >
+      au < released ; 2012 ; 4 ; Leitura Flutuante Volume 2012 ; 2012 ; >
       au < manifest ; 2013 ; 5 ; Leitura Flutuante Volume 2013 ; 2013 ; >
 
   }
@@ -643,17 +643,17 @@
       au < released ; 1999 ; 1 ; Cadernos Metrópole Volume 1999 ; 1999 ; >
       au < released ; 2000 ; 2 ; Cadernos Metrópole Volume 2000 ; 2000 ; >
       au < released ; 2001 ; 3 ; Cadernos Metrópole Volume 2001 ; 2001 ; >
-      au < releasing ; 2002 ; 4 ; Cadernos Metrópole Volume 2002 ; 2002 ; >
+      au < released ; 2002 ; 4 ; Cadernos Metrópole Volume 2002 ; 2002 ; >
       au < released ; 2003 ; 5 ; Cadernos Metrópole Volume 2003 ; 2003 ; >
-      au < releasing ; 2004 ; 6 ; Cadernos Metrópole Volume 2004 ; 2004 ; >
+      au < released ; 2004 ; 6 ; Cadernos Metrópole Volume 2004 ; 2004 ; >
       au < released ; 2005 ; 7 ; Cadernos Metrópole Volume 2005 ; 2005 ; >
       au < released ; 2006 ; 8 ; Cadernos Metrópole Volume 2006 ; 2006 ; >
       au < released ; 2007 ; 9 ; Cadernos Metrópole Volume 2007 ; 2007 ; >
       au < released ; 2008 ; 10 ; Cadernos Metrópole Volume 2008 ; 2008 ; >
       au < released ; 2009 ; 11 ; Cadernos Metrópole Volume 2009 ; 2009 ; >
-      au < releasing ; 2010 ; 12 ; Cadernos Metrópole Volume 2010 ; 2010 ; >
+      au < released ; 2010 ; 12 ; Cadernos Metrópole Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 13 ; Cadernos Metrópole Volume 2011 ; 2011 ; >
-      au < releasing ; 2012 ; 14 ; Cadernos Metrópole Volume 2012 ; 2012 ; >
+      au < released ; 2012 ; 14 ; Cadernos Metrópole Volume 2012 ; 2012 ; >
       au < manifest ; 2013 ; 15 ; Cadernos Metrópole Volume 2013 ; 2013 ; >
 
   }
@@ -825,11 +825,11 @@
       param[base_url] = http://revistas.pucsp.br/
       param[journal_id] = reb
 
-      au < releasing ; 2008 ; 1 ; REB: Revista Eletrônica de Biologia Volume 2008 ; 2008 ; >
-      au < releasing ; 2009 ; 2 ; REB: Revista Eletrônica de Biologia Volume 2009 ; 2009 ; >
-      au < releasing ; 2010 ; 3 ; REB: Revista Eletrônica de Biologia Volume 2010 ; 2010 ; >
-      au < releasing ; 2011 ; 4 ; REB: Revista Eletrônica de Biologia Volume 2011 ; 2011 ; >
-      au < releasing ; 2012 ; 5 ; REB: Revista Eletrônica de Biologia Volume 2012 ; 2012 ; >
+      au < released ; 2008 ; 1 ; REB: Revista Eletrônica de Biologia Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 2 ; REB: Revista Eletrônica de Biologia Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 3 ; REB: Revista Eletrônica de Biologia Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 4 ; REB: Revista Eletrônica de Biologia Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 5 ; REB: Revista Eletrônica de Biologia Volume 2012 ; 2012 ; >
       au < manifest ; 2013 ; 6 ; REB: Revista Eletrônica de Biologia Volume 2013 ; 2013 ; >
 
   }
@@ -923,7 +923,7 @@
       param[journal_id] = rever
 
       au < released ; 2011 ; 1 ; Rever: Revista de Estudos da Religião Volume 2011 ; 2011 ; >
-      au < releasing ; 2012 ; 2 ; Rever: Revista de Estudos da Religião Volume 2012 ; 2012 ; >
+      au < released ; 2012 ; 2 ; Rever: Revista de Estudos da Religião Volume 2012 ; 2012 ; >
       au < manifest ; 2013 ; 3 ; Rever: Revista de Estudos da Religião Volume 2013 ; 2013 ; >
 
   }
@@ -981,9 +981,9 @@
       au < released ; 2006 ; 21 ; Projeto História Volume 2006 ; 2006 ; >
       au < released ; 2007 ; 22 ; Projeto História Volume 2007 ; 2007 ; >
       au < released ; 2008 ; 23 ; Projeto História Volume 2008 ; 2008 ; >
-      au < releasing ; 2009 ; 24 ; Projeto História Volume 2009 ; 2009 ; >
-      au < releasing ; 2010 ; 25 ; Projeto História Volume 2010 ; 2010 ; >
-      au < releasing ; 2011 ; 26 ; Projeto História Volume 2011 ; 2011 ; >
+      au < released ; 2009 ; 24 ; Projeto História Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 25 ; Projeto História Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 26 ; Projeto História Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 27 ; Projeto História Volume 2012 ; 2012 ; >
       au < manifest ; 2013 ; 28 ; Projeto História Volume 2013 ; 2013 ; >
 
@@ -1030,9 +1030,9 @@
       param[base_url] = http://revistas.pucsp.br/
       param[journal_id] = risus
 
-      au < releasing ; 2010 ; 1 ; RISUS: Revista de Inovação e Sustentabilidade Volume 2010 ; 2010 ; >
-      au < releasing ; 2011 ; 2 ; RISUS: Revista de Inovação e Sustentabilidade Volume 2011 ; 2011 ; >
-      au < releasing ; 2012 ; 3 ; RISUS: Revista de Inovação e Sustentabilidade Volume 2012 ; 2012 ; >
+      au < released ; 2010 ; 1 ; RISUS: Revista de Inovação e Sustentabilidade Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 2 ; RISUS: Revista de Inovação e Sustentabilidade Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 3 ; RISUS: Revista de Inovação e Sustentabilidade Volume 2012 ; 2012 ; >
       au < manifest ; 2013 ; 4 ; RISUS: Revista de Inovação e Sustentabilidade Volume 2013 ; 2013 ; >
 
   }
@@ -1062,7 +1062,7 @@
       au < released ; 2009 ; 12 ; Pesquisa & Debate Volume 2009 ; 2009 ; >
       au < released ; 2010 ; 13 ; Pesquisa & Debate Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 14 ; Pesquisa & Debate Volume 2011 ; 2011 ; >
-      au < releasing ; 2012 ; 15 ; Pesquisa & Debate Volume 2012 ; 2012 ; >
+      au < released ; 2012 ; 15 ; Pesquisa & Debate Volume 2012 ; 2012 ; >
       au < manifest ; 2013 ; 16 ; Pesquisa & Debate Volume 2013 ; 2013 ; >
 
   }
@@ -1096,7 +1096,7 @@
       param[base_url] = http://revistas.pucsp.br/
       param[journal_id] = tessituras
 
-      au < releasing ; 2011 ; 1 ; Tessituras & Criação Volume 2011 ; 2011 ; >
+      au < released ; 2011 ; 1 ; Tessituras & Criação Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 2 ; Tessituras & Criação Volume 2012 ; 2012 ; >
       au < expected ; 2013 ; 3 ; Tessituras & Criação Volume 2013 ; 2013 ; >
 
