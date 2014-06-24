@@ -1,5 +1,5 @@
 /*
- * $Id: RSC2014HtmlCrawlFilterFactory.java,v 1.1 2014-06-23 16:07:23 etenbrink Exp $
+ * $Id: RSC2014HtmlCrawlFilterFactory.java,v 1.2 2014-06-24 00:47:59 etenbrink Exp $
  */
 
 /*
@@ -39,9 +39,12 @@ import org.htmlparser.filters.*;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.util.Logger;
 
 public class RSC2014HtmlCrawlFilterFactory implements FilterFactory {
-
+  
+  Logger log = Logger.getLogger(RSC2014HtmlCrawlFilterFactory.class);
+  
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
