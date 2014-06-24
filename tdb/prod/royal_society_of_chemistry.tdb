@@ -522,11 +522,12 @@
       param[resolver_url] = http://xlink.rsc.org/
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
+      comment[notReady] = All manifest pages link to same content
       
-      au < testing ; 2010 ; Energy & Environmental Science Volume 3 ; 3 ; 2010 >
-      au < testing ; 2011 ; Energy & Environmental Science Volume 4 ; 4 ; 2011 >
-      au < testing ; 2012 ; Energy & Environmental Science Volume 5 ; 5 ; 2012 >
-      au < testing ; 2013 ; Energy & Environmental Science Volume 6 ; 6 ; 2013 >
+      au < notReady ; 2010 ; Energy & Environmental Science Volume 3 ; 3 ; 2010 >
+      au < notReady ; 2011 ; Energy & Environmental Science Volume 4 ; 4 ; 2011 >
+      au < notReady ; 2012 ; Energy & Environmental Science Volume 5 ; 5 ; 2012 >
+      au < notReady ; 2013 ; Energy & Environmental Science Volume 6 ; 6 ; 2013 >
       au < manifest ; 2014 ; Energy & Environmental Science Volume 7 ; 7 ; 2014 >
     }
   }
