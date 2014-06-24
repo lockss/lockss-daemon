@@ -1,5 +1,5 @@
 /*
- * $Id: RSC2014HtmlFilterFactory.java,v 1.1 2014-05-07 00:59:52 etenbrink Exp $
+ * $Id: RSC2014HtmlFilterFactory.java,v 1.2 2014-06-24 01:16:52 etenbrink Exp $
  */
 
 /*
@@ -60,6 +60,8 @@ public class RSC2014HtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "footer"),
         // Changeable scripts
         HtmlNodeFilters.tag("script"),
+        // remove ALL comments, for JS version number
+        HtmlNodeFilters.comment(),
     };
     
     // HTML transform to html attributes that are moving around
