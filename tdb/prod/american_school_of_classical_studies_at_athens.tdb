@@ -24,8 +24,9 @@
     
     {
       plugin = org.lockss.plugin.jstor.JstorPlugin
+      param[base_url] = http://www.jstor.org/
+      param[base_url2] = https://www.jstor.org/
       implicit < status ; year ; name ; param[volume_name] >
-      comment[platform] = JSTOR
       param[journal_id] = hesperia
 
       au < exists ; 1932 ; Hesperia Volume 1 ; 1 >
