@@ -5249,6 +5249,453 @@
 
   {
     title <
+      name = Journal of Aging Research ;
+      issn = 2090-2212 ;
+      issnl = 2090-2212
+    >
+
+    param[journal_id] = jar
+
+    au < exists ; exists ; 2010 ; Journal of Aging Research Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Journal of Aging Research Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Aging Research Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Journal of Aging Research Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Aging Research Volume 2014 ; 2014 ; 2014 >
+    
+  }
+
+  {
+    title <
+      name = Journal of Allergy ;
+      issn = 1687-9783 ;
+      eissn = 1687-9791 ;
+      issnl = 1687-9783
+    >
+
+    param[journal_id] = ja
+
+    au < exists ; exists ; 2009 ; Journal of Allergy Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; Journal of Allergy Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Journal of Allergy Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Allergy Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Journal of Allergy Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Allergy Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Amino Acids ;
+      issn = 2090-0112 ;
+      issnl = 2090-0112
+    >
+
+    param[journal_id] = jaa
+
+    au < exists ; exists ; 2010 ; Journal of Amino Acids Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Journal of Amino Acids Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Amino Acids Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Journal of Amino Acids Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Amino Acids Volume 2014 ; 2014 ; 2014 >
+    
+  }
+
+  {
+    title <
+      name = Journal of Analytical Methods in Chemistry ;
+      issn = 2090-8865 ;
+      eissn = 2090-8873 ;
+      issnl = 2090-8873
+    >
+
+    param[journal_id] = jamc
+
+    au < exists ; exists ; 1980 ; Journal of Analytical Methods in Chemistry Volume 1 (1980) ; 1980 ; 1 >
+    au < exists ; exists ; 1981 ; Journal of Analytical Methods in Chemistry Volume 2 (1981) ; 1981 ; 2 >
+    au < exists ; exists ; 1982 ; Journal of Analytical Methods in Chemistry Volume 3 (1982) ; 1982 ; 3 >
+    au < exists ; exists ; 1983 ; Journal of Analytical Methods in Chemistry Volume 4 (1983) ; 1983 ; 4 >
+    au < exists ; exists ; 1984 ; Journal of Analytical Methods in Chemistry Volume 5 (1984) ; 1984 ; 5 >
+    au < exists ; exists ; 1985 ; Journal of Analytical Methods in Chemistry Volume 6 (1985) ; 1985 ; 6 >
+    au < exists ; exists ; 1986 ; Journal of Analytical Methods in Chemistry Volume 7 (1986) ; 1986 ; 7 >
+    au < exists ; exists ; 1987 ; Journal of Analytical Methods in Chemistry Volume 8 (1987) ; 1987 ; 8 >
+    au < exists ; exists ; 1988 ; Journal of Analytical Methods in Chemistry Volume 9 (1988) ; 1988 ; 9 >
+    au < exists ; exists ; 1989 ; Journal of Analytical Methods in Chemistry Volume 10 (1989) ; 1989 ; 10 >
+    au < exists ; exists ; 1990 ; Journal of Analytical Methods in Chemistry Volume 11 (1990) ; 1990 ; 11 >
+    au < exists ; exists ; 1991 ; Journal of Analytical Methods in Chemistry Volume 12 (1991) ; 1991 ; 12 >
+    au < exists ; exists ; 1992 ; Journal of Analytical Methods in Chemistry Volume 13 (1992) ; 1992 ; 13 >
+    au < exists ; exists ; 1993 ; Journal of Analytical Methods in Chemistry Volume 14 (1993) ; 1993 ; 14 >
+    au < exists ; exists ; 1994 ; Journal of Analytical Methods in Chemistry Volume 15 (1994) ; 1994 ; 15 >
+    au < exists ; exists ; 1995 ; Journal of Analytical Methods in Chemistry Volume 16 (1995) ; 1995 ; 16 >
+    au < exists ; exists ; 1996 ; Journal of Analytical Methods in Chemistry Volume 17 (1996) ; 1996 ; 17 >
+    au < exists ; exists ; 1997 ; Journal of Analytical Methods in Chemistry Volume 18 (1997) ; 1997 ; 18 >
+    au < exists ; exists ; 1998 ; Journal of Analytical Methods in Chemistry Volume 19 (1998) ; 1998 ; 19 >
+    au < exists ; exists ; 1999 ; Journal of Analytical Methods in Chemistry Volume 20 (1999) ; 1999 ; 20 >
+    au < exists ; exists ; 2000 ; Journal of Analytical Methods in Chemistry Volume 21 (2000) ; 2000 ; 21 >
+    au < exists ; exists ; 2001 ; Journal of Analytical Methods in Chemistry Volume 22 (2001) ; 2001 ; 22 >
+    au < exists ; exists ; 2002 ; Journal of Analytical Methods in Chemistry Volume 23 (2002) ; 2002 ; 23 >
+    au < exists ; exists ; 2003 ; Journal of Analytical Methods in Chemistry Volume 24 (2003) ; 2003 ; 24 >
+    au < exists ; exists ; 2004 ; Journal of Analytical Methods in Chemistry Volume 25 (2004) ; 2004 ; 25 >
+    au < exists ; exists ; 2005 ; Journal of Analytical Methods in Chemistry Volume 2005 ; 2005 ; 2005 >
+    au < exists ; exists ; 2006 ; Journal of Analytical Methods in Chemistry Volume 2006 ; 2006 ; 2006 >
+    au < exists ; exists ; 2007 ; Journal of Analytical Methods in Chemistry Volume 2007 ; 2007 ; 2007 >
+    au < exists ; exists ; 2008 ; Journal of Analytical Methods in Chemistry Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; Journal of Analytical Methods in Chemistry Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; Journal of Analytical Methods in Chemistry Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Journal of Analytical Methods in Chemistry Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Analytical Methods in Chemistry Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Journal of Analytical Methods in Chemistry Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Analytical Methods in Chemistry Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Anesthesiology ;
+      issn = 2356-7147 ;
+      eissn = 2314-6974 ;
+      issnl = 2356-7147
+    >
+
+    param[journal_id] = jan
+    
+    au < exists ; exists ; 2014 ; Journal of Anesthesiology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Angiology ;
+      issn = 2356-7155 ;
+      eissn = 2314-694X ;
+      issnl = 2356-7155
+    >
+
+    param[journal_id] = jangi
+    
+    au < exists ; exists ; 2013 ; Journal of Angiology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Angiology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Animals ;
+      issn = 2356-7163 ;
+      eissn = 2314-825X ;
+      issnl = 2356-7163
+    >
+
+    param[journal_id] = jani
+    
+    au < exists ; exists ; 2014 ; Journal of Animals Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Anthropology ;
+      issn = 2090-4045 ;
+      eissn = 2090-4053 ;
+      issnl = 2090-4045
+    >
+
+    param[journal_id] = janthro
+
+    au < exists ; exists ; 2011 ; Journal of Anthropology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Anthropology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Journal of Anthropology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Anthropology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Applied Chemistry ;
+      issn = 2356-7171 ;
+      eissn = 2314-6923 ;
+      issnl = 2356-7171
+    >
+
+    param[journal_id] = jac
+    
+    au < exists ; exists ; 2013 ; Journal of Applied Chemistry Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Applied Chemistry Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Applied Mathematics ;
+      issn = 1110-757X ;
+      eissn = 1687-0042 ;
+      issnl = 1110-757X
+    >
+
+    param[journal_id] = jam
+
+    au < exists ; exists ; 2001 ; Journal of Applied Mathematics Volume 1 (2001) ; 2001 ; 1 >
+    au < exists ; exists ; 2002 ; Journal of Applied Mathematics Volume 2 (2002) ; 2002 ; 2 >
+    au < exists ; exists ; 2003 ; Journal of Applied Mathematics Volume 2003 ; 2003 ; 2003 >
+    au < exists ; exists ; 2004 ; Journal of Applied Mathematics Volume 2004 ; 2004 ; 2004 >
+    au < exists ; exists ; 2005 ; Journal of Applied Mathematics Volume 2005 ; 2005 ; 2005 >
+    au < exists ; exists ; 2006 ; Journal of Applied Mathematics Volume 2006 ; 2006 ; 2006 >
+    au < exists ; exists ; 2007 ; Journal of Applied Mathematics Volume 2007 ; 2007 ; 2007 >
+    au < exists ; exists ; 2008 ; Journal of Applied Mathematics Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; Journal of Applied Mathematics Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; Journal of Applied Mathematics Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Journal of Applied Mathematics Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Applied Mathematics Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Journal of Applied Mathematics Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Applied Mathematics Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Archaeology ;
+      issn = 2090-4061 ;
+      eissn = 2090-407X ;
+      issnl = 2090-4061
+    >
+
+    param[journal_id] = jarchae
+    
+    au < exists ; exists ; 2013 ; Journal of Archaeology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Archaeology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Astrophysics ;
+      issn = 2356-718X ;
+      eissn = 2314-6192 ;
+      issnl = 2356-718X
+    >
+
+    param[journal_id] = jas
+    
+    au < exists ; exists ; 2013 ; Journal of Astrophysics Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Astrophysics Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Atomic and Molecular Physics ;
+      issn = 2314-8039 ;
+      eissn = 2314-8020 ;
+      issnl = 2314-8039
+    >
+
+    param[journal_id] = jamp
+
+    au < exists ; exists ; 2009 ; Journal of Atomic, Molecular, and Optical Physics Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; Journal of Atomic, Molecular, and Optical Physics Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Journal of Atomic, Molecular, and Optical Physics Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Atomic, Molecular, and Optical Physics Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Journal of Atomic and Molecular Physics Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Atomic and Molecular Physics Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Biomarkers ;
+      issn = 2090-8660 ;
+      eissn = 2090-7699 ;
+      issnl = 2090-8660
+    >
+
+    param[journal_id] = jbm
+    
+    au < exists ; exists ; 2013 ; Journal of Biomarkers Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Biomarkers Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Biomedical Education ;
+      issn = 2314-5021 ;
+      eissn = 2314-503X ;
+      issnl = 2314-5021
+    >
+
+    param[journal_id] = jbe
+    
+    au < exists ; exists ; 2013 ; Journal of Biomedical Education Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Biomedical Education Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Biophysics ;
+      issn = 1687-8000 ;
+      eissn = 1687-8019 ;
+      issnl = 1687-8000
+    >
+
+    param[journal_id] = jbp
+
+    au < exists ; exists ; 2008 ; Journal of Biophysics Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; Journal of Biophysics Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; Journal of Biophysics Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Journal of Biophysics Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Biophysics Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Journal of Biophysics Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Biophysics Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Blood Transfusion ;
+      issn = 2090-9187 ;
+      eissn = 2090-9195 ;
+      issnl = 2090-9187
+    >
+
+    param[journal_id] = jbt
+
+    au < exists ; exists ; 2011 ; Journal of Blood Transfusion Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Blood Transfusion Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Journal of Blood Transfusion Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Blood Transfusion Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Botany ;
+      issn = 2090-0120 ;
+      eissn = 2090-0139 ;
+      issnl = 2090-0120
+    >
+
+    param[journal_id] = jb
+
+    au < exists ; exists ; 2009 ; Journal of Botany Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; Journal of Botany Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Journal of Botany Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Botany Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Journal of Botany Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Botany Volume 2014 ; 2014 ; 2014 >
+    
+  }
+  
+  {
+    title <
+      name = Journal of Calculus of Variations ;
+      issn = 2356-7198 ;
+      eissn = 2314-6613 ;
+      issnl = 2356-7198
+    >
+
+    param[journal_id] = jcv
+    
+    au < exists ; exists ; 2013 ; Journal of Calculus of Variations Volume 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; 2014 ; Journal of Calculus of Variations Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Cancer Epidemiology ;
+      issn = 1687-8558 ;
+      eissn = 1687-8566 ;
+      issnl = 1687-8558
+    >
+
+    param[journal_id] = jce
+
+    au < exists ; exists ; 2008 ; Journal of Cancer Epidemiology Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; Journal of Cancer Epidemiology Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; Journal of Cancer Epidemiology Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Journal of Cancer Epidemiology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Cancer Epidemiology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Journal of Cancer Epidemiology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Cancer Epidemiology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Cancer Research ;
+      issn = 2356-7201 ;
+      eissn = 2314-6915 ;
+      issnl = 2356-7201
+    >
+
+    param[journal_id] = jcr
+    
+    au < exists ; exists ; 2013 ; Journal of Cancer Research Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Cancer Research Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Catalysts ;
+      issn = 2314-5102 ;
+      eissn = 2314-5110 ;
+      issnl = 2314-5102
+    >
+
+    param[journal_id] = jcat
+    
+    au < exists ; exists ; 2013 ; Journal of Catalysts Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Catalysts Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Cell Adhesion ;
+      issn = 2356-721X ;
+      eissn = 2314-8411 ;
+      issnl = 2356-721X
+    >
+
+    param[journal_id] = jcad
+    
+    au < exists ; exists ; 2014 ; Journal of Cell Adhesion Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Ceramics ;
+      issn = 2090-8628 ;
+      eissn = 2090-8644 ;
+      issnl = 2090-8628
+    >
+
+    param[journal_id] = jceram
+    
+    au < exists ; exists ; 2013 ; Journal of Ceramics Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Ceramics Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Chaos ;
+      issn = 2356-7228 ;
+      eissn = 2314-6605 ;
+      issnl = 2356-7228
+    >
+
+    param[journal_id] = jcha
+    
+    au < exists ; exists ; 2013 ; Journal of Chaos Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Chaos Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
       name = Journal of Chemistry ;
       issn = 2090-9063 ;
       eissn = 2090-9071 ;
@@ -5269,6 +5716,274 @@
     au < manifest ; exists ; 2013 ; Journal of Chemistry Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Chemistry Volume 2014 ; 2014 ; 2014 >
     
+  }
+
+  {
+    title <
+      name = Journal of Climatology ;
+      issn = 2356-6361 ;
+      eissn = 2314-6214 ;
+      issnl = 2356-6361
+    >
+
+    param[journal_id] = jcli
+    
+    au < exists ; exists ; 2013 ; Journal of Climatology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Climatology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Coatings ;
+      issn = 2356-7236 ;
+      eissn = 2314-6508 ;
+      issnl = 2356-7236
+    >
+
+    param[journal_id] = jcoat
+    
+    au < exists ; exists ; 2013 ; Journal of Coatings Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Coatings Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Combustion ;
+      issn = 2090-1968 ;
+      eissn = 2090-1976 ;
+      issnl = 2090-1968
+    >
+
+    param[journal_id] = jc
+
+    au < exists ; exists ; 2008 ; International Journal of Reacting Systems Volume 2008 ; 2008 ; 2008 >
+    au < doesNotExist ; doesNotExist ; 2009 ; Journal of Combustion Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; Journal of Combustion Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Journal of Combustion Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Combustion Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Journal of Combustion Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Combustion Volume 2014 ; 2014 ; 2014 >
+    
+  }
+  
+  {
+    title <
+      name = Journal of Complex Analysis ;
+      issn = 2314-4963 ;
+      eissn = 2314-4971 ;
+      issnl = 2314-4963
+    >
+
+    param[journal_id] = jca
+    
+    au < exists ; exists ; 2013 ; Journal of Complex Analysis Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Complex Analysis Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Complex Systems ;
+      issn = 2356-7244 ;
+      eissn = 2314-6540 ;
+      issnl = 2356-7244
+    >
+
+    param[journal_id] = jcs
+    
+    au < exists ; exists ; 2013 ; Journal of Complex Systems Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Complex Systems Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Composites ;
+      issn = 2356-7252 ;
+      eissn = 2314-5978 ;
+      issnl = 2356-7252
+    >
+
+    param[journal_id] = jcomp
+    
+    au < exists ; exists ; 2013 ; Journal of Composites Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Composites Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Computational Engineering ;
+      issn = 2356-7260 ;
+      eissn = 2314-6443 ;
+      issnl = 2356-7260
+    >
+
+    param[journal_id] = jcengi
+    
+    au < exists ; exists ; 2013 ; Journal of Computational Engineering Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Computational Engineering Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Computational Environmental Sciences ;
+      issn = 2356-7279 ;
+      eissn = 2314-8292 ;
+      issnl = 2356-7279
+    >
+
+    param[journal_id] = jces
+    
+    au < exists ; exists ; 2014 ; Journal of Computational Environmental Sciences Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Computational Medicine ;
+      issn = 2314-5080 ;
+      eissn = 2314-5099 ;
+      issnl = 2314-5080
+    >
+
+    param[journal_id] = jcm
+    
+    au < exists ; exists ; 2013 ; Journal of Computational Medicine Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Computational Medicine Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Computational Methods in Physics ;
+      issn = 2356-7287 ;
+      eissn = 2314-6834 ;
+      issnl = 2356-7287
+    >
+
+    param[journal_id] = jcmp
+    
+    au < exists ; exists ; 2013 ; Journal of Computational Methods in Physics Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Computational Methods in Physics Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Computer Networks and Communications ;
+      issn = 2090-7141 ;
+      eissn = 2090-715X ;
+      issnl = 2090-7141
+    >
+
+    param[journal_id] = jcnc
+
+    au < exists ; exists ; 2008 ; Journal of Computer Systems, Networks, and Communications Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; Journal of Computer Systems, Networks, and Communications Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; Journal of Computer Systems, Networks, and Communications Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Journal of Computer Networks and Communications Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Computer Networks and Communications Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Journal of Computer Networks and Communications Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Computer Networks and Communications Volume 2014 ; 2014 ; 2014 >
+    
+  }
+
+  {
+    title <
+      name = Journal of Construction Engineering ;
+      issn = 2356-7295 ;
+      eissn = 2314-5986 ;
+      issnl = 2356-7295
+    >
+
+    param[journal_id] = jcen
+    
+    au < exists ; exists ; 2013 ; Journal of Construction Engineering Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Construction Engineering Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Control Science and Engineering ;
+      issn = 1687-5249 ;
+      eissn = 1687-5257 ;
+      issnl = 1687-5249
+    >
+
+    param[journal_id] = jcse
+
+    au < exists ; exists ; 2007 ; Journal of Control Science and Engineering Volume 2007 ; 2007 ; 2007 >
+    au < exists ; exists ; 2008 ; Journal of Control Science and Engineering Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; Journal of Control Science and Engineering Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; Journal of Control Science and Engineering Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Journal of Control Science and Engineering Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Control Science and Engineering Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Journal of Control Science and Engineering Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Control Science and Engineering Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Criminology ;
+      issn = 2090-7753 ;
+      eissn = 2090-777X ;
+      issnl = 2090-7753
+    >
+
+    param[journal_id] = jcrim
+    
+    au < exists ; exists ; 2013 ; Journal of Criminology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Criminology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Critical Care Medicine ;
+      issn = 2356-7309 ;
+      eissn = 2314-6990 ;
+      issnl = 2356-7309
+    >
+
+    param[journal_id] = jccm
+    
+    au < exists ; exists ; 2014 ; Journal of Critical Care Medicine Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Crystallography ;
+      issn = 2356-7317 ;
+      eissn = 2314-5994 ;
+      issnl = 2356-7317
+    >
+
+    param[journal_id] = jcrys
+    
+    au < exists ; exists ; 2013 ; Journal of Crystallography Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Crystallography Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Dental Surgery ;
+      issn = 2356-7325 ;
+      eissn = 2314-6583 ;
+      issnl = 2356-7325
+    >
+
+    param[journal_id] = jds
+    
+    au < exists ; exists ; 2014 ; Journal of Dental Surgery Volume 2014 ; 2014 ; 2014 >
+
   }
 
   {
@@ -5295,6 +6010,52 @@
     au < manifest ; exists ; 2012 ; Experimental Diabetes Research Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Diabetes Research Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Diabetes Research Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Difference Equations ;
+      issn = 2356-7856 ;
+      eissn = 2356-7848 ;
+      issnl = 2356-7856
+    >
+
+    param[journal_id] = jde
+    
+    au < expected ; exists ; 2014 ; Journal of Difference Equationsy Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Discrete Mathematics ;
+      issn = 2090-9837 ;
+      eissn = 2090-9845 ;
+      issnl = 2090-9837
+    >
+
+    param[journal_id] = jdm
+    
+    au < exists ; exists ; 2013 ; Journal of Discrete Mathematics Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Discrete Mathematics Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Drug Delivery ;
+      issn = 2090-3014 ;
+      eissn = 2090-3022 ;
+      issnl = 2090-3014
+    >
+
+    param[journal_id] = jdd
+    
+    au < exists ; exists ; 2011 ; Journal of Drug Delivery Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Drug Delivery Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Journal of Drug Delivery Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Drug Delivery Volume 2014 ; 2014 ; 2014 >
 
   }
 
