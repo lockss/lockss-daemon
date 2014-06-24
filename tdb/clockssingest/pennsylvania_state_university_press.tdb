@@ -322,7 +322,7 @@
       au < manifest ; exists ; 2011 ; The Journal of Nietzsche Studies Volume 41 ; 41 >
       au < manifest ; exists ; 2011 ; The Journal of Nietzsche Studies Volume 42 ; 42 >
       au < manifest ; exists ; 2012 ; The Journal of Nietzsche Studies Volume 43 ; 43 >
-      au < testing ; exists ; 2013 ; The Journal of Nietzsche Studies Volume 44 ; 44 >
+      au < ready ; exists ; 2013 ; The Journal of Nietzsche Studies Volume 44 ; 44 >
       au < manifest ; exists ; 2014 ; The Journal of Nietzsche Studies Volume 45 ; 45 >
       
   }
@@ -341,7 +341,7 @@
       au < manifest ; exists ; 2010 ; The Journal of Speculative Philosophy Volume 24 ; 24 >
       au < manifest ; exists ; 2011 ; The Journal of Speculative Philosophy Volume 25 ; 25 >
       au < manifest ; exists ; 2012 ; The Journal of Speculative Philosophy Volume 26 ; 26 >
-      au < testing ; exists ; 2013 ; The Journal of Speculative Philosophy Volume 27 ; 27 >
+      au < ready ; exists ; 2013 ; The Journal of Speculative Philosophy Volume 27 ; 27 >
       au < manifest ; exists ; 2014 ; The Journal of Speculative Philosophy Volume 28 ; 28 >
       
   }
@@ -360,7 +360,7 @@
       au < manifest ; exists ; 2010 ; The Mark Twain Annual Volume 8 ; 8 >
       au < manifest ; exists ; 2011 ; The Mark Twain Annual Volume 9 ; 9 >
       au < manifest ; exists ; 2012 ; The Mark Twain Annual Volume 10 ; 10 >
-      au < testing ; exists ; 2013 ; The Mark Twain Annual Volume 11 ; 11 >
+      au < ready ; exists ; 2013 ; The Mark Twain Annual Volume 11 ; 11 >
       au < expected ; exists ; 2014 ; The Mark Twain Annual Volume 12 ; 12 >
       
   }
@@ -378,7 +378,7 @@
 
       au < manifest ; exists ; 2010 ; Mediterranean Studies Volume 19 ; 19 >
       au < manifest ; exists ; 2012 ; Mediterranean Studies Volume 20 ; 20 >
-      au < testing ; exists ; 2013 ; Mediterranean Studies Volume 21 ; 21 >
+      au < ready ; exists ; 2013 ; Mediterranean Studies Volume 21 ; 21 >
       au < manifest ; exists ; 2014 ; Mediterranean Studies Volume 22 ; 22 >
       
   }
@@ -426,10 +426,10 @@
 
       param[journal_id] = pennhistory
 
-      au < testing ; exists ; 2010 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 77 ; 77 >
-      au < testing ; exists ; 2011 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 78 ; 78 >
-      au < testing ; exists ; 2012 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 79 ; 79 >
-      au < testing ; exists ; 2013 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 80 ; 80 >
+      au < ready ; exists ; 2010 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 77 ; 77 >
+      au < ready ; exists ; 2011 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 78 ; 78 >
+      au < ready ; exists ; 2012 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 79 ; 79 >
+      au < ready ; exists ; 2013 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 80 ; 80 >
       au < manifest ; exists ; 2014 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 81 ; 81 >
       
   }
@@ -448,7 +448,7 @@
       au < manifest ; exists ; 2010 ; Philosophy and Rhetoric Volume 43 ; 43 >
       au < manifest ; exists ; 2011 ; Philosophy and Rhetoric Volume 44 ; 44 >
       au < manifest ; exists ; 2012 ; Philosophy and Rhetoric Volume 45 ; 45 >
-      au < testing ; exists ; 2013 ; Philosophy and Rhetoric Volume 46 ; 46 >
+      au < ready ; exists ; 2013 ; Philosophy and Rhetoric Volume 46 ; 46 >
       au < manifest ; exists ; 2014 ; Philosophy and Rhetoric Volume 47 ; 47 >
       
   }
