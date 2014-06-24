@@ -7,6 +7,7 @@
   >
 
   plugin = org.lockss.plugin.jstor.ClockssJstorPlugin
+  comment[platform] = process Jstor only for CLOCKSS
 
   param[base_url] = http://www.jstor.org/
   param[base_url2] = https://www.jstor.org/
