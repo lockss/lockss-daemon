@@ -42,11 +42,11 @@
       param[base_url] = http://revistas.unicentro.br/
       param[journal_id] = analecta
 
-      au < ready ; 2006 ; 1 ; Analecta Volume 2006 ; 2006 >
-      au < ready ; 2007 ; 2 ; Analecta Volume 2007 ; 2007 >
-      au < ready ; 2008 ; 3 ; Analecta Volume 2008 ; 2008 >
-      au < ready ; 2009 ; 4 ; Analecta Volume 2009 ; 2009 >
-      au < ready ; 2010 ; 5 ; Analecta Volume 2010 ; 2010 >
+      au < releasing ; 2006 ; 1 ; Analecta Volume 2006 ; 2006 >
+      au < releasing ; 2007 ; 2 ; Analecta Volume 2007 ; 2007 >
+      au < releasing ; 2008 ; 3 ; Analecta Volume 2008 ; 2008 >
+      au < releasing ; 2009 ; 4 ; Analecta Volume 2009 ; 2009 >
+      au < releasing ; 2010 ; 5 ; Analecta Volume 2010 ; 2010 >
       au < expected ; 2011 ; 6 ; Analecta Volume 2011 ; 2011 >
       au < expected ; 2012 ; 7 ; Analecta Volume 2012 ; 2012 >
       au < expected ; 2013 ; 8 ; Analecta Volume 2013 ; 2013 >
@@ -66,11 +66,11 @@
       param[base_url] = http://revistas.unicentro.br/
       param[journal_id] = repaa
 
-      au < ready ; 2008 ; 1 ; Revista Brasileira de Tecnologia Aplicada nas Ciências Agrárias Volume 2008 ; 2008 >
-      au < ready ; 2009 ; 2 ; Revista Brasileira de Tecnologia Aplicada nas Ciências Agrárias Volume 2009 ; 2009 >
-      au < ready ; 2010 ; 3 ; Revista Brasileira de Tecnologia Aplicada nas Ciências Agrárias Volume 2010 ; 2010 >
-      au < ready ; 2011 ; 4 ; Revista Brasileira de Tecnologia Aplicada nas Ciências Agrárias Volume 2011 ; 2011 >
-      au < ready ; 2012 ; 5 ; Revista Brasileira de Tecnologia Aplicada nas Ciências Agrárias Volume 2012 ; 2012 >
+      au < releasing ; 2008 ; 1 ; Revista Brasileira de Tecnologia Aplicada nas Ciências Agrárias Volume 2008 ; 2008 >
+      au < releasing ; 2009 ; 2 ; Revista Brasileira de Tecnologia Aplicada nas Ciências Agrárias Volume 2009 ; 2009 >
+      au < releasing ; 2010 ; 3 ; Revista Brasileira de Tecnologia Aplicada nas Ciências Agrárias Volume 2010 ; 2010 >
+      au < releasing ; 2011 ; 4 ; Revista Brasileira de Tecnologia Aplicada nas Ciências Agrárias Volume 2011 ; 2011 >
+      au < releasing ; 2012 ; 5 ; Revista Brasileira de Tecnologia Aplicada nas Ciências Agrárias Volume 2012 ; 2012 >
       au < manifest ; 2013 ; 6 ; Revista Brasileira de Tecnologia Aplicada nas Ciências Agrárias Volume 2013 ; 2013 >
       au < expected ; 2014 ; 7 ; Revista Brasileira de Tecnologia Aplicada nas Ciências Agrárias Volume 2014 ; 2014 >
 
@@ -139,9 +139,9 @@
       param[base_url] = http://revistas.unicentro.br/
       param[journal_id] = revista_interfaces
 
-      au < ready ; 2010 ; 1 ; Revista Interfaces Volume 2010 ; 2010 >
-      au < ready ; 2011 ; 2 ; Revista Interfaces Volume 2011 ; 2011 >
-      au < ready ; 2012 ; 3 ; Revista Interfaces Volume 2012 ; 2012 >
+      au < releasing ; 2010 ; 1 ; Revista Interfaces Volume 2010 ; 2010 >
+      au < releasing ; 2011 ; 2 ; Revista Interfaces Volume 2011 ; 2011 >
+      au < releasing ; 2012 ; 3 ; Revista Interfaces Volume 2012 ; 2012 >
       au < manifest ; 2013 ; 4 ; Revista Interfaces Volume 2013 ; 2013 >
       au < expected ; 2014 ; 5 ; Revista Interfaces Volume 2014 ; 2014 >
 
@@ -158,10 +158,10 @@
       param[base_url] = http://revistas.unicentro.br/
       param[journal_id] = salus
 
-      au < ready ; 2007 ; 1 ; Revista Salus: Setor de Ciências da Saúde Volume 2007 ; 2007 >
-      au < ready ; 2008 ; 2 ; Revista Salus: Setor de Ciências da Saúde Volume 2008 ; 2008 >
-      au < ready ; 2009 ; 3 ; Revista Salus: Setor de Ciências da Saúde Volume 2009 ; 2009 >
-      au < ready ; 2010 ; 4 ; Revista Salus: Setor de Ciências da Saúde Volume 2010 ; 2010 >
+      au < releasing ; 2007 ; 1 ; Revista Salus: Setor de Ciências da Saúde Volume 2007 ; 2007 >
+      au < releasing ; 2008 ; 2 ; Revista Salus: Setor de Ciências da Saúde Volume 2008 ; 2008 >
+      au < releasing ; 2009 ; 3 ; Revista Salus: Setor de Ciências da Saúde Volume 2009 ; 2009 >
+      au < releasing ; 2010 ; 4 ; Revista Salus: Setor de Ciências da Saúde Volume 2010 ; 2010 >
       au < expected ; 2011 ; 5 ; Revista Salus: Setor de Ciências da Saúde Volume 2011 ; 2011 >
       au < expected ; 2012 ; 6 ; Revista Salus: Setor de Ciências da Saúde Volume 2012 ; 2012 >
       au < expected ; 2013 ; 7 ; Revista Salus: Setor de Ciências da Saúde Volume 2013 ; 2013 >

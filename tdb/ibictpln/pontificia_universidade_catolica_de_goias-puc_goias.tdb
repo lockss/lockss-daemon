@@ -17,13 +17,13 @@
       param[base_url] = http://seer.ucg.br/
       param[journal_id] = fragmentos
 
-      au < ready ; 2006 ; 16 ; Fragmentos de Cultura Volume 16 ; 2006 >
-      au < ready ; 2007 ; 17 ; Fragmentos de Cultura Volume 17 ; 2007 >
-      au < ready ; 2008 ; 18 ; Fragmentos de Cultura Volume 18 ; 2008 >
-      au < ready ; 2009 ; 19 ; Fragmentos de Cultura Volume 19 ; 2009 >
-      au < ready ; 2010 ; 20 ; Fragmentos de Cultura Volume 20 ; 2010 >
-      au < ready ; 2011 ; 21 ; Fragmentos de Cultura Volume 21 ; 2011 >
-      au < ready ; 2012 ; 22 ; Fragmentos de Cultura Volume 22 ; 2012 >
+      au < releasing ; 2006 ; 16 ; Fragmentos de Cultura Volume 16 ; 2006 >
+      au < releasing ; 2007 ; 17 ; Fragmentos de Cultura Volume 17 ; 2007 >
+      au < releasing ; 2008 ; 18 ; Fragmentos de Cultura Volume 18 ; 2008 >
+      au < releasing ; 2009 ; 19 ; Fragmentos de Cultura Volume 19 ; 2009 >
+      au < releasing ; 2010 ; 20 ; Fragmentos de Cultura Volume 20 ; 2010 >
+      au < releasing ; 2011 ; 21 ; Fragmentos de Cultura Volume 21 ; 2011 >
+      au < releasing ; 2012 ; 22 ; Fragmentos de Cultura Volume 22 ; 2012 >
       au < manifest ; 2013 ; 23 ; Fragmentos de Cultura Volume 23 ; 2013 >
       au < manifest ; 2014 ; 24 ; Fragmentos de Cultura Volume 24 ; 2014 >
 
