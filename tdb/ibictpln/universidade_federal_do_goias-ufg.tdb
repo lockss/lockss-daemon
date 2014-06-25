@@ -579,7 +579,6 @@
       comment[publisher] = Universidade Federal do Goiás-UFG
       param[base_url] = http://www.revistas.ufg.br/
       param[journal_id] = vet
-      comment[notReady] = fetch error/low agreement
 
       au < released ; 2000 ; 1 ; Ciência Animal Brasileira Volume 2000 ; 2000 ; >
       au < released ; 2001 ; 2 ; Ciência Animal Brasileira Volume 2001 ; 2001 ; >
@@ -590,7 +589,7 @@
       au < released ; 2006 ; 7 ; Ciência Animal Brasileira Volume 2006 ; 2006 ; >
       au < released ; 2007 ; 8 ; Ciência Animal Brasileira Volume 2007 ; 2007 ; >
       au < released ; 2008 ; 9 ; Ciência Animal Brasileira Volume 2008 ; 2008 ; >
-      au < notReady ; 2009 ; 10 ; Ciência Animal Brasileira Volume 2009 ; 2009 ; >
+      au < ready ; 2009 ; 10 ; Ciência Animal Brasileira Volume 2009 ; 2009 ; >
       au < notReady ; 2010 ; 11 ; Ciência Animal Brasileira Volume 2010 ; 2010 ; >
       au < notReady ; 2011 ; 12 ; Ciência Animal Brasileira Volume 2011 ; 2011 ; error with images for article 7452/9261 >
       au < released ; 2012 ; 13 ; Ciência Animal Brasileira Volume 2012 ; 2012 ; >
