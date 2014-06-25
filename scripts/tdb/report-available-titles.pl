@@ -217,6 +217,7 @@ my $showKbartWarnings = 0; # Hide them by default
 my $clockss = 0; # Do not generate CLOCKSS by default
 # Generate data for gln files
 my $gln = 0; # Generate GLN by default
+my $networkname = ""; 
 # Show help
 my $help = 0;
 
@@ -233,16 +234,33 @@ my $ret = GetOptions ("daemon-home=s"     => \$daemonHome, # LOCKSS Daemon home 
             "show-kbart-warnings" => \$showKbartWarnings, # Show the warning messages from the KBART converter
             "clockss" => \$clockss,
             "gln" => \$gln,
+            "network=s" => \$networkname, # name of network
             "help|?"            => \$help
     );
 
-if (($clockss == 0) && ($gln == 0)) {
-    $gln = 1;
+if ($networkname eq "") {
+  if ($clockss == 1) {
+    $networkname = "clockssingest";
+  } elsif ($gln == 1) {
+    $networkname = "prod"
+  }
+} elsif ($gln == 1 || $clockss == 1) {
+  usage();
+} elsif ($networkname eq "clockss") {
+  # force to 'clockssingest' for compatibility with --clockss switch
+  $networkname = "clockssingest"
+} elsif ($networkname eq "gln") {
+  # force to "gln for compatibibility with --gln switch
+  $networkname = "prod"
+}
+
+if ($networkname ne "") {
+    $networkname = "prod"
 }
     
 # Show help if needed
 #usage() if $help;
-if (($ret != 1) || $help || ($clockss == $gln)) {
+if (($ret != 1) || $help) {
 	  usage();
 }
 
@@ -252,12 +270,15 @@ my $tdbout = "$daemonHome/scripts/tdb/tdbout.py";
 # List of all the TDB files
 my $tdbs_clockss = "$daemonHome/tdb/clockssingest/*.tdb";
 my $tdbs_gln = "$daemonHome/tdb/prod*/*.tdb"; #including UK
-my $tdbs = $tdbs_gln;
-if ($clockss) {
-    $tdbs = $tdbs_clockss;
+my $tdbs = "$daemonHome/tdb/" . $networkname . "/*.tdb";
+if ($networkname eq "clockssingest") {
     print STDERR "****CLOCKSS Report****\n";
-} else {
+} elsif ($networkname eq "prod") {
     print STDERR "****GLN Report****\n";
+} else {
+    print STDERR "****";
+    print STDERR uc $networkname;
+    print STDERR " Report****\n";
 }
 
 
@@ -594,6 +615,9 @@ sub usage {
                                   (default, do not use with --clockss)
       --clockss                  Generate data from the CLOCKSS Ingest Network,
                                   (not default, do not use with --gln)
+      --network <networkname>    Generate data from the network specified by networkname;
+                                  gln->prod, clockss->clockssingest
+                                  (not default, do not use with --gln or --clockss)
       --generate-tdb-metadata    Generate fresh CSV metadata from TDBs 
                                   (time-consuming but necessary on first run)
       --show-kbart-warnings      Show the warning messages from the KBART converter
