@@ -204,7 +204,7 @@
       au < notReady ; 2006 ; 5 ; Cadernos PPG-AU Volume 2006 ; 2006 ; needs filter >
       au < notReady ; 2007 ; 6 ; Cadernos PPG-AU Volume 2007 ; 2007 ; needs filter >
       au < notReady ; 2008 ; 7 ; Cadernos PPG-AU Volume 2008 ; 2008 ; needs filter >
-      au < notReady ; 2009 ; 8 ; Cadernos PPG-AU Volume 2009 ; 2009 ; needs filter >
+      au < notReady ; 2009 ; 8 ; Cadernos PPG-AU Volume 2009 ; 2009 ; no articles >
       au < notReady ; 2010 ; 9 ; Cadernos PPG-AU Volume 2010 ; 2010 ; needs filter >
       au < expected ; 2011 ; 10 ; Cadernos PPG-AU Volume 2011 ; 2011 ; >
       au < expected ; 2012 ; 11 ; Cadernos PPG-AU Volume 2012 ; 2012 ; >
@@ -335,9 +335,10 @@
       comment[publisher] = Universidade Federal da Bahia
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = revistaici
+      comment[v2008] = bio has url with no http.  http://www.portalseer.ufba.br/index.php/revistaici/rt/bio/1779
 
       au < notReady ; 2007 ; 1 ; Ponto de Acesso Volume 2007 ; 2007 ; needs filter >
-      au < notReady ; 2008 ; 2 ; Ponto de Acesso Volume 2008 ; 2008 ; needs filter >
+      au < notReady ; 2008 ; 2 ; Ponto de Acesso Volume 2008 ; 2008 ; url with no http on bio 1779 >
       au < notReady ; 2009 ; 3 ; Ponto de Acesso Volume 2009 ; 2009 ; needs filter >
       au < notReady ; 2010 ; 4 ; Ponto de Acesso Volume 2010 ; 2010 ; needs filter >
       au < notReady ; 2011 ; 5 ; Ponto de Acesso Volume 2011 ; 2011 ; needs filter >
