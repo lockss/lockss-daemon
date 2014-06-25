@@ -35,7 +35,7 @@
     >
 
     param[base_url] = http://www.ajcn.org/
-    comment[notReady] = Can't fetch permission page even though it's actually there; 301 error?
+    comment[notReady] = Can't fetch permission page even though it's actually there. 301 error?
     
     au < HighWirePressH20Plugin ; manifest ; 1952-1953 ; American Journal of Clinical Nutrition Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 1954 ; American Journal of Clinical Nutrition Volume 2 ; 2 >
