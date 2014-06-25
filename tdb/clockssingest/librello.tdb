@@ -58,7 +58,7 @@
       comment[issn] = missing
       comment[publisher] = as of 2014 moved to another publisher
 
-      au < testing ; exists ; 2013 ; Media and Communication Volume 1 ; 1 ; 2013 >
+      au < ready ; exists ; 2013 ; Media and Communication Volume 1 ; 1 ; 2013 >
 
   }
 
@@ -71,7 +71,7 @@
       comment[issn] = missing
       comment[publisher] = as of 2014 moved to another publisher
 
-      au < testing ; exists ; 2013 ; Politics and Governance Volume 1 ; 1 ; 2013 >
+      au < ready ; exists ; 2013 ; Politics and Governance Volume 1 ; 1 ; 2013 >
 
   }
 
@@ -84,7 +84,7 @@
       comment[issn] = missing
       comment[publisher] = as of 2014 moved to another publisher
 
-      au < testing ; exists ; 2013 ; Social Inclusion Volume 1 ; 1 ; 2013 >
+      au < ready ; exists ; 2013 ; Social Inclusion Volume 1 ; 1 ; 2013 >
 
   }
 }
