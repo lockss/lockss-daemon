@@ -57,7 +57,7 @@
     au < released ; 2011 ; Anthropology in Action Volume 18 ; 18 >
     au < released ; 2012 ; Anthropology in Action Volume 19 ; 19 >
     au < manifest ; 2013 ; Anthropology in Action Volume 20 ; 20 >
-    au < expected ; 2014 ; Anthropology in Action Volume 21 ; 21 >
+    au < manifest ; 2014 ; Anthropology in Action Volume 21 ; 21 >
     
   }
 
@@ -298,7 +298,7 @@
     param[journal_id] = fpcs
     param[journal_issn] = 1537-6370
 
-    au < exists ; 1999 ; French Politics, Culture & Society Volume 17 ; 17 >
+    au < manifest ; 1999 ; French Politics, Culture & Society Volume 17 ; 17 >
     au < released ; 2000 ; French Politics, Culture & Society Volume 18 ; 18 >
     au < released ; 2001 ; French Politics, Culture & Society Volume 19 ; 19 >
     au < released ; 2002 ; French Politics, Culture & Society Volume 20 ; 20 >
