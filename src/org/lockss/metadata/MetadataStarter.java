@@ -1,10 +1,10 @@
 /*
- * $Id: MetadataStarter.java,v 1.7 2014-01-29 22:33:11 pgust Exp $
+ * $Id: MetadataStarter.java,v 1.8 2014-06-25 19:44:29 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -185,6 +185,10 @@ public class MetadataStarter extends LockssRunnable {
 
       try {
         conn = dbManager.getConnection();
+
+        // Remove the AU from the table of unconfigured AUs.
+        mdManager.removeFromUnconfiguredAus(conn, au.getAuId());
+
         insertPendingAuBatchStatement =
             mdManager.getInsertPendingAuBatchStatement(conn);
 
@@ -212,7 +216,7 @@ public class MetadataStarter extends LockssRunnable {
   	    // schedule it to be added to the metadata database now. Otherwise
   	    // it will be added through auContentChanged() once the crawl has
   	    // been completed.
-  	    if (AuUtil.hasCrawled(au)) {
+  	    if (AuUtil.getAuState(au) != null && AuUtil.hasCrawled(au)) {
   	      mdManager.enableAndAddAuToReindex(au, conn,
   		  insertPendingAuBatchStatement, event.isInBatch());
   	    }
@@ -245,10 +249,13 @@ public class MetadataStarter extends LockssRunnable {
       final String DEBUG_HEADER = "auDeleted(): ";
       switch (event.getType()) {
 	case Delete:
+	  // This case occurs when the AU is being deleted.
 	  log.debug2(DEBUG_HEADER + "Delete for au: " + au);
 
-	  // This case occurs when the AU is being deleted, so delete its
-	  // metadata.
+	  // Insert the AU in the table of unconfigured AUs.
+	  mdManager.persistUnconfiguredAu(au);
+
+	  // Delete the AU metadata.
 	  mdManager.deleteAuAndReindex(au);
 	  break;
 	case RestartDelete:

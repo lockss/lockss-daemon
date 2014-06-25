@@ -1,5 +1,5 @@
 /*
- * $Id: DbManager.java,v 1.35 2014-06-06 01:06:52 fergaloy-sf Exp $
+ * $Id: DbManager.java,v 1.36 2014-06-25 19:44:29 fergaloy-sf Exp $
  */
 
 /*
@@ -5697,7 +5697,7 @@ public class DbManager extends BaseLockssDaemonManager
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  private Long addPlatform(Connection conn, String platformName)
+  public Long addPlatform(Connection conn, String platformName)
       throws DbException {
     final String DEBUG_HEADER = "addPlatform(): ";
     if (log.isDebug2())

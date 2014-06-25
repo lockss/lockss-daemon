@@ -1,5 +1,5 @@
 /*
- * $Id: SubscriptionManager.java,v 1.15 2014-04-09 17:43:21 fergaloy-sf Exp $
+ * $Id: SubscriptionManager.java,v 1.16 2014-06-25 19:44:29 fergaloy-sf Exp $
  */
 
 /*
@@ -75,6 +75,8 @@ import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
 import org.lockss.metadata.MetadataManager;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.AuEvent;
+import org.lockss.plugin.AuEventHandler;
 import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.Plugin;
 import org.lockss.plugin.PluginManager;
@@ -117,31 +119,6 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
   public static final String PARAM_REPOSITORY_AVAIL_SPACE_THRESHOLD =
       PREFIX + "repositoryAvailSpaceThreshold";
   public static final int DEFAULT_REPOSITORY_AVAIL_SPACE_THRESHOLD = 0;
-
-  // Query to count recorded unconfigured archival units.
-  private static final String UNCONFIGURED_AU_COUNT_QUERY = "select "
-      + "count(*)"
-      + " from " + UNCONFIGURED_AU_TABLE;
-  
-  // Query to find if an archival unit is in the UNCONFIGURED_AU table.
-  private static final String FIND_UNCONFIGURED_AU_COUNT_QUERY = "select "
-      + "count(*)"
-      + " from " + UNCONFIGURED_AU_TABLE
-      + " where " + PLUGIN_ID_COLUMN + " = ?"
-      + " and " + AU_KEY_COLUMN + " = ?";
-
-  // Query to add an archival unit to the UNCONFIGURED_AU table.
-  private static final String INSERT_UNCONFIGURED_AU_QUERY = "insert into "
-      + UNCONFIGURED_AU_TABLE
-      + "(" + PLUGIN_ID_COLUMN
-      + "," + AU_KEY_COLUMN
-      + ") values (?,?)";
-
-  // Query to remove an archival unit from the UNCONFIGURED_AU table.
-  private static final String DELETE_UNCONFIGURED_AU_QUERY = "delete from "
-      + UNCONFIGURED_AU_TABLE
-      + " where " + PLUGIN_ID_COLUMN + " = ?"
-      + " and " + AU_KEY_COLUMN + " = ?";
 
   // Query to find a subscription by its publication and platform.
   private static final String FIND_SUBSCRIPTION_QUERY = "select "
@@ -315,6 +292,13 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       + ",n." + NAME_COLUMN
       + ",pl." + PLATFORM_NAME_COLUMN;
 
+  // Query to update the type of a subscription range.
+  private static final String UPDATE_SUBSCRIPTION_RANGE_TYPE_QUERY = "update "
+      + SUBSCRIPTION_RANGE_TABLE
+      + " set " + SUBSCRIBED_COLUMN + " = ?"
+      + " where " + SUBSCRIPTION_SEQ_COLUMN + " = ?"
+      + " and " + SUBSCRIPTION_RANGE_COLUMN + " = ?";
+
   // The field separator in the subscription backup file.
   private static final String BACKUP_FIELD_SEPARATOR = "\t";
 
@@ -351,6 +335,9 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 
   // The index of the next repository to  be used when configuring AUs.
   private int repositoryIndex = 0;
+
+  // The handler for Archival Unit events.
+  private AuEventHandler auEventHandler;
 
   // Sorter of publications.
   private static Comparator<SerialPublication> PUBLICATION_COMPARATOR =
@@ -414,6 +401,44 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     pluginManager = getDaemon().getPluginManager();
     mdManager = getDaemon().getMetadataManager();
     remoteApi = getDaemon().getRemoteApi();
+
+    // Register the event handler to receive Archival Unit removal notifications
+    // and to be able to unsubscribe such Archival Units, if necessary.
+    auEventHandler = new AuEventHandler.Base() {
+      @Override
+      public void auDeleted(AuEvent event, ArchivalUnit au) {
+	Connection conn = null;
+
+	try {
+	  // Get a connection to the database.
+	  conn = dbManager.getConnection();
+	} catch (DbException dbe) {
+	  log.error(CANNOT_CONNECT_TO_DB_ERROR_MESSAGE, dbe);
+	  return;
+	}
+
+	try {
+	  // Unsubscribe the Archival Unit, if necessary and possible.
+	  try {
+	    unsubscribeAu(conn, au);
+	    DbManager.commitOrRollback(conn, log);
+	  } catch (DbException dbe) {
+	    log.error("Error unsubscribing deleted AU " + au, dbe);
+	  } finally {
+	    try {
+	      DbManager.rollback(conn, log);
+	    } catch (DbException dbe2) {
+	      log.error("Error rolling back unsubscribing deleted AU " + au
+		  + " transaction", dbe2);
+	    }
+	  }
+	} finally {
+	  DbManager.safeRollbackAndClose(conn);
+	}
+      }
+    };
+
+    pluginManager.registerAuEventHandler(auEventHandler);
     ready = true;
 
     if (log.isDebug()) log.debug(DEBUG_HEADER
@@ -504,7 +529,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       message = CANNOT_CHECK_FIRST_RUN_ERROR_MESSAGE;
 
       // Determine whether this is the first run of the subscription manager.
-      isFirstRun = countUnconfiguredAus(conn) == 0;
+      isFirstRun = mdManager.countUnconfiguredAus(conn) == 0;
       if (log.isDebug3())
 	log.debug3(DEBUG_HEADER + "isFirstRun = " + isFirstRun);
     } catch (DbException dbe) {
@@ -562,43 +587,6 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
   }
 
   /**
-   * Provides the count of recorded unconfigured archival units.
-   * 
-   * @param conn
-   *          A Connection with the database connection to be used.
-   * @return a long with the count of recorded unconfigured archival units.
-   * @throws DbException
-   *           if any problem occurred accessing the database.
-   */
-  private long countUnconfiguredAus(Connection conn) throws DbException {
-    final String DEBUG_HEADER = "countUnconfiguredAus(): ";
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
-
-    long rowCount = -1;
-    ResultSet results = null;
-    PreparedStatement unconfiguredAu =
-	dbManager.prepareStatement(conn, UNCONFIGURED_AU_COUNT_QUERY);
-
-    try {
-      // Count the rows in the table.
-      results = dbManager.executeQuery(unconfiguredAu);
-      results.next();
-      rowCount = results.getLong(1);
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "rowCount = " + rowCount);
-    } catch (SQLException sqle) {
-      log.error("Cannot count unconfigured archival units", sqle);
-      log.error("SQL = '" + UNCONFIGURED_AU_COUNT_QUERY + "'.");
-      throw new DbException("Cannot count unconfigured archival units", sqle);
-    } finally {
-      DbManager.safeCloseResultSet(results);
-      DbManager.safeCloseStatement(unconfiguredAu);
-    }
-
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "rowCount = " + rowCount);
-    return rowCount;
-  }
-
-  /**
    * Performs the necessary processing for an archival unit that appears in the
    * configuration changeset.
    * 
@@ -650,14 +638,14 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     // Check whether this is the first run of the subscription manager.
     if (isFirstRun) {
       // Yes: Add the archival unit to the table of unconfigured archival units.
-      persistUnconfiguredAu(conn, auId);
+      mdManager.persistUnconfiguredAu(conn, auId);
       if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
       return;
     }
 
     // Nothing to do if the archival unit is in the table of unconfigured
     // archival units already.
-    if (isAuInUnconfiguredAuTable(conn, auId)) {
+    if (mdManager.isAuInUnconfiguredAuTable(conn, auId)) {
       if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
       return;
     }
@@ -694,69 +682,13 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     if (currentCoveredTdbAus.contains(tdbAu)) {
       // Yes: Add the archival unit configuration to those to be configured.
       config = addAuConfiguration(tdbAu, auId, config);
-
-      // Delete the AU from the unconfigured AU table, if it is there.
-      removeFromUnconfiguredAus(conn, auId);
     } else {
       // No: Add it to the table of unconfigured archival units.
-      persistUnconfiguredAu(conn, auId);
+      mdManager.persistUnconfiguredAu(conn, auId);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
     return;
-  }
-
-  /**
-   * Provides an indication of whether an Archival Unit is in the
-   * UNCONFIGURED_AU table.
-   * 
-   * @param conn
-   *          A Connection with the database connection to be used.
-   * @param auId
-   *          A String with the Archival Unit identifier.
-   * @return a boolean with <code>true</code> if the Archival Unit is in the
-   *         UNCONFIGURED_AU table, <code>false</code> otherwise.
-   * @throws DbException
-   *           if any problem occurred accessing the database.
-   */
-  private boolean isAuInUnconfiguredAuTable(Connection conn, String auId)
-      throws DbException {
-    final String DEBUG_HEADER = "isAuInUnconfiguredAuTable(): ";
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auId = " + auId);
-
-    long rowCount = -1;
-    ResultSet results = null;
-    PreparedStatement unconfiguredAu =
-	dbManager.prepareStatement(conn, FIND_UNCONFIGURED_AU_COUNT_QUERY);
-
-    try {
-      String pluginId = PluginManager.pluginIdFromAuId(auId);
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pluginId = " + pluginId);
-      String auKey = PluginManager.auKeyFromAuId(auId);
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auKey = " + auKey);
-
-      unconfiguredAu.setString(1, pluginId);
-      unconfiguredAu.setString(2, auKey);
-
-      // Find the archival unit in the table.
-      results = dbManager.executeQuery(unconfiguredAu);
-      results.next();
-      rowCount = results.getLong(1);
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "rowCount = " + rowCount);
-    } catch (SQLException sqle) {
-      log.error("Cannot find archival unit in unconfigured table", sqle);
-      log.error("SQL = '" + FIND_UNCONFIGURED_AU_COUNT_QUERY + "'.");
-      log.error("auId = " + auId);
-      throw new DbException("Cannot find archival unit in unconfigured table",
-	  sqle);
-    } finally {
-      DbManager.safeCloseResultSet(results);
-      DbManager.safeCloseStatement(unconfiguredAu);
-    }
-
-    boolean result = rowCount > 0;
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
-    return result;
   }
 
   /**
@@ -772,11 +704,13 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    * @param unsubscribedRanges
    *          A List<BibliographicPeriod> to be populated with the title
    *          unsubscribed ranges, if any.
+   * @return a Set<Long> with the database subscription identifiers to which the
+   *         populated ranges belong.
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  private void populateTitleSubscriptionRanges(Connection conn, TdbTitle title,
-      List<BibliographicPeriod> subscribedRanges,
+  private Set<Long> populateTitleSubscriptionRanges(Connection conn,
+      TdbTitle title, List<BibliographicPeriod> subscribedRanges,
       List<BibliographicPeriod> unsubscribedRanges) throws DbException {
     final String DEBUG_HEADER = "populateTitleSubscriptionRanges(): ";
     if (log.isDebug2()) {
@@ -802,7 +736,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     if (publisherSeq == null) {
       // Yes: There are no title subscription definitions.
       if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
-      return;
+      return null;
     }
 
     // Get the title name.
@@ -829,11 +763,12 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     if (publicationSeq == null) {
       // Yes: There are no title subscription definitions.
       if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
-      return;
+      return null;
     }
 
+    Set<Long> result = new HashSet<Long>();
     Long platformSeq;
-    Long subscriptionSeq;
+    Long subscriptionSeq = null;
     
     // Loop through all the title platforms.
     for (String platform : getTitlePlatforms(title)) {
@@ -861,11 +796,16 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	  // results.
 	  unsubscribedRanges
 	  	.addAll(findSubscriptionRanges(conn, subscriptionSeq, false));
+
+	  // Add this platform identifier/subscription identifier pai to the
+	  // results.
+	  result.add(subscriptionSeq);
 	}
       }
     }
 
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+    return result;
   }
 
   /**
@@ -983,6 +923,12 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 
     // Loop through all the passed archival units.
     for (TdbAu tdbAu : tdbAus) {
+      if (log.isDebug3()) {
+	log.debug3(DEBUG_HEADER + "tdbAu = " + tdbAu);
+	log.debug3(DEBUG_HEADER + "tdbAu.getPublicationRanges() = "
+	    + tdbAu.getPublicationRanges());
+      }
+
       // Check whether the range matches any of the publication ranges of the
       // archival unit.
       if (range.matches(tdbAu.getPublicationRanges())) {
@@ -1110,96 +1056,6 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
   }
 
   /**
-   * Removes an AU from the table of unconfigured AUs.
-   * 
-   * @param conn
-   *          A Connection with the database connection to be used.
-   * @param auId
-   *          A String with the AU identifier.
-   * @throws DbException
-   *           if any problem occurred accessing the database.
-   */
-  private void removeFromUnconfiguredAus(Connection conn, String auId)
-      throws DbException {
-    final String DEBUG_HEADER = "removeFromUnconfiguredAus(): ";
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auId = " + auId);
-    PreparedStatement deleteUnconfiguredAu =
-	dbManager.prepareStatement(conn, DELETE_UNCONFIGURED_AU_QUERY);
-
-    try {
-      String pluginId = PluginManager.pluginIdFromAuId(auId);
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pluginId = " + pluginId);
-      String auKey = PluginManager.auKeyFromAuId(auId);
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auKey = " + auKey);
-
-      deleteUnconfiguredAu.setString(1, pluginId);
-      deleteUnconfiguredAu.setString(2, auKey);
-      int count = dbManager.executeUpdate(deleteUnconfiguredAu);
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
-    } catch (SQLException sqle) {
-      log.error("Cannot remove AU from unconfigured table", sqle);
-      log.error("SQL = '" + DELETE_UNCONFIGURED_AU_QUERY + "'.");
-      log.error("auId = '" + auId + "'.");
-      throw new DbException("Cannot remove AU from unconfigured table", sqle);
-    } finally {
-      DbManager.safeCloseStatement(deleteUnconfiguredAu);
-    }
-
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
-  }
-
-  /**
-   * Adds an archival unit to the UNCONFIGURED_AU table.
-   * 
-   * @param conn
-   *          A Connection with the database connection to be used.
-   * @param auId
-   *          A String with the Archival Unit identifier.
-   * @throws DbException
-   *           if any problem occurred accessing the database.
-   */
-  public void persistUnconfiguredAu(Connection conn, String auId)
-      throws DbException {
-    final String DEBUG_HEADER = "persistUnconfiguredAu(): ";
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auId = " + auId);
-    PreparedStatement insertUnconfiguredAu = null;
-    String pluginId = null;
-    String auKey = null;
-
-    try {
-      insertUnconfiguredAu =
-	  dbManager.prepareStatement(conn, INSERT_UNCONFIGURED_AU_QUERY);
-
-      pluginId = PluginManager.pluginIdFromAuId(auId);
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pluginId = " + pluginId);
-      auKey = PluginManager.auKeyFromAuId(auId);
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auKey = " + auKey);
-
-      insertUnconfiguredAu.setString(1, pluginId);
-      insertUnconfiguredAu.setString(2, auKey);
-      int count = dbManager.executeUpdate(insertUnconfiguredAu);
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
-    } catch (SQLException sqle) {
-      log.error("Cannot insert archival unit in unconfigured table", sqle);
-      log.error("SQL = '" + INSERT_UNCONFIGURED_AU_QUERY + "'.");
-      log.error("auId = " + auId);
-      throw new DbException("Cannot insert archival unit in unconfigured table",
-	  sqle);
-    } catch (DbException dbe) {
-      log.error("Cannot insert archival unit in unconfigured table", dbe);
-      log.error("SQL = '" + INSERT_UNCONFIGURED_AU_QUERY + "'.");
-      log.error("auId = " + auId);
-      log.error("pluginId = " + pluginId);
-      log.error("auKey = " + auKey);
-      throw dbe;
-    } finally {
-      DbManager.safeCloseStatement(insertUnconfiguredAu);
-    }
-
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
-  }
-
-  /**
    * Provides the platforms of a title.
    * 
    * @param title
@@ -1308,7 +1164,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  private List<BibliographicPeriod> findSubscriptionRanges(Connection conn,
+  List<BibliographicPeriod> findSubscriptionRanges(Connection conn,
       Long subscriptionSeq, boolean subscribed) throws DbException {
     final String DEBUG_HEADER = "findSubscriptionsRanges(): ";
     if (log.isDebug2()) {
@@ -1832,8 +1688,8 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  private int deleteSubscriptionTypeRanges(Connection conn,
-      Long subscriptionSeq, boolean subscribed) throws DbException {
+  int deleteSubscriptionTypeRanges(Connection conn, Long subscriptionSeq,
+      boolean subscribed) throws DbException {
     final String DEBUG_HEADER = "deleteSubscriptionTypeRanges(): ";
     if (log.isDebug2()) {
       log.debug2(DEBUG_HEADER + "subscriptionSeq = " + subscriptionSeq);
@@ -1877,7 +1733,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  private Long persistSubscription(Connection conn, Long publicationSeq,
+  Long persistSubscription(Connection conn, Long publicationSeq,
       Long platformSeq) throws DbException {
     final String DEBUG_HEADER = "persistSubscription(): ";
     if (log.isDebug2()) {
@@ -2868,7 +2724,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  private int persistSubscribedRanges(Connection conn, Long subscriptionSeq,
+  int persistSubscribedRanges(Connection conn, Long subscriptionSeq,
       List<BibliographicPeriod> subscribedRanges) throws DbException {
     int count = 0;
 
@@ -2903,7 +2759,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  private int persistUnsubscribedRanges(Connection conn, Long subscriptionSeq,
+  int persistUnsubscribedRanges(Connection conn, Long subscriptionSeq,
       List<BibliographicPeriod> unsubscribedRanges) throws DbException {
     int count = 0;
 
@@ -2986,7 +2842,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "config = " + config);
 
 	// Delete the AU from the unconfigured AU table, if it is there.
-	removeFromUnconfiguredAus(conn, auId);
+	//removeFromUnconfiguredAus(conn, auId);
       } else {
 	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "TdbAu '" + tdbAu
 	    + "' is already configured.");
@@ -3487,8 +3343,6 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
   /**
    * Provides the SQL statement used to insert a subscription range.
    * 
-   * @param conn
-   *          A Connection with the database connection to be used.
    * @return a String with the SQL statement used to insert a subscription
    *         range.
    */
@@ -3950,5 +3804,206 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     if (log.isDebug2())
       log.debug2(DEBUG_HEADER + "subscription = " + subscription);
     return subscription;
+  }
+
+  /**
+   * Unsubscribes an archival unit.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param au
+   *          An ArchivalUnit with the archival unit to be unsubscribed.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  void unsubscribeAu(Connection conn, ArchivalUnit au) throws DbException {
+    final String DEBUG_HEADER = "unsubscribeAu(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "au = " + au);
+
+    // Get the archival unit title.
+    TdbAu tdbAu = au.getTdbAu();
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "tdbAu = " + tdbAu);
+    if (tdbAu == null) {
+      return;
+    }
+
+    TdbTitle title = tdbAu.getTdbTitle();
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "title = " + title);
+    if (title == null) {
+      return;
+    }
+
+    // Get the platform identifiers and the subscription identifiers and ranges
+    // for the archival unit title.
+    List<BibliographicPeriod> subscribedRanges =
+	new ArrayList<BibliographicPeriod>();
+    List<BibliographicPeriod> unsubscribedRanges =
+	new ArrayList<BibliographicPeriod>();
+
+    //try {
+      Set<Long> subscriptionSeqs = populateTitleSubscriptionRanges(conn, title,
+	  subscribedRanges, unsubscribedRanges);
+      if (log.isDebug3()) {
+	log.debug3(DEBUG_HEADER + "subscriptionSeqs = " + subscriptionSeqs);
+	log.debug3(DEBUG_HEADER + "subscribedRanges = " + subscribedRanges);
+	log.debug3(DEBUG_HEADER + "unsubscribedRanges = " + unsubscribedRanges);
+      }
+
+      // Nothing to do if the publication is not covered by any subscription at
+      // all.
+      if (subscriptionSeqs == null || subscriptionSeqs.size() == 0
+	  || subscribedRanges == null || subscribedRanges.size() == 0) {
+	return;
+      }
+
+      // Determine whether the archival unit is currently covered by a
+      // subscribed range.
+      List<TdbAu> tdbAus = new ArrayList<TdbAu>(1);
+      tdbAus.add(tdbAu);
+
+      boolean isSubscribed = false;
+
+      // Loop through all the subscribed ranges.
+      for (BibliographicPeriod range : subscribedRanges) {
+	if (getRangeCoveredTdbAus(range, tdbAus).size() > 0) {
+	  isSubscribed = true;
+	  break;
+	}
+      }
+
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "isSubscribed = " + isSubscribed);
+
+      // Nothing to do if the archival unit is not currently covered by a
+      // subscribed range.
+      if (!isSubscribed) {
+	return;
+      }
+    
+      // Determine whether the archival unit is currently covered by an
+      // unsubscribed range, even though it is also covered by a subscribed
+      // range.
+      boolean isUnsubscribed = false;
+    
+      // Check whether there are unsubscribed ranges.
+      if (unsubscribedRanges != null && unsubscribedRanges.size() > 0) {
+	// Yes: Loop through all the unsubscribed ranges.
+	for (BibliographicPeriod range : unsubscribedRanges) {
+	  if (getRangeCoveredTdbAus(range, tdbAus).size() > 0) {
+	    isUnsubscribed = true;
+	    break;
+	  }
+	}
+      }
+
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "isUnsubscribed = " + isUnsubscribed);
+
+      // Nothing to do if the archival unit is currently covered by an
+      // unsubscribed range.
+      if (isUnsubscribed) {
+	return;
+      }
+
+      // Get the archival unit publication ranges.
+      List<BibliographicPeriod> ranges = tdbAu.getPublicationRanges();
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "ranges = " + ranges);
+
+      // Loop through all the archival unit publication ranges to be
+      // unsubscribed.
+      for (BibliographicPeriod range : ranges) {
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "range = " + range);
+
+	// Loop through all the publication subscriptions in the database.
+	for (Long subscriptionSeq : subscriptionSeqs) {
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "subscriptionSeq = " + subscriptionSeq);
+
+	  // Find the existing subscribed ranges for the subscription.
+	  List<BibliographicPeriod> existingRanges =
+	      findSubscriptionRanges(conn, subscriptionSeq, true);
+
+	  // Check whether the range to be unsubscribed is subscribed.
+	  if (existingRanges.contains(range)) {
+	    // Yes: Switch the range from subscribed to unsubscribed.
+	    int count = updateSubscriptionRangeType(conn, subscriptionSeq,
+		range, false);
+	    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
+
+	    if (count > 0) continue;
+	  }
+
+	  // Find the existing unsubscribed ranges for the subscription.
+	  existingRanges = findSubscriptionRanges(conn, subscriptionSeq, false);
+
+	  // Check whether the range to be persisted does not exist already.
+	  if (!existingRanges.contains(range)) {
+	    // Yes: Persist the unsubscribed range.
+	    int count =
+		persistSubscriptionRange(conn, subscriptionSeq, range, false);
+	    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
+	  }
+	}
+      }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Updates the type of a subscription range.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param subscriptionSeq
+   *          A Long with the identifier of the subscription.
+   * @param range
+   *          A BibliographicPeriod with the subscription range.
+   * @param subscribed
+   *          A boolean with the indication of whether the LOCKSS installation
+   *          is subscribed to the publication range or not.
+   * @return an int with the count of rows updated in the database.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  private int updateSubscriptionRangeType(Connection conn, Long subscriptionSeq,
+      BibliographicPeriod range, boolean subscribed) throws DbException {
+    final String DEBUG_HEADER = "updateSubscriptionRangeType(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "subscriptionSeq = " + subscriptionSeq);
+      log.debug2(DEBUG_HEADER + "range = " + range);
+      log.debug2(DEBUG_HEADER + "subscribed = " + subscribed);
+    }
+
+    int count = 0;
+
+    // Skip an empty range that does not accomplish anything.
+    if (range.isEmpty()) {
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "count = " + count);
+      return count;
+    }
+
+    PreparedStatement updateSubscriptionRange =
+	dbManager.prepareStatement(conn, UPDATE_SUBSCRIPTION_RANGE_TYPE_QUERY);
+
+    try {
+      updateSubscriptionRange.setBoolean(1, subscribed);
+      updateSubscriptionRange.setLong(2, subscriptionSeq);
+      updateSubscriptionRange.setString(3, range.toDisplayableString());
+
+      count = dbManager.executeUpdate(updateSubscriptionRange);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
+    } catch (SQLException sqle) {
+      log.error("Cannot update subscription range", sqle);
+      log.error("SQL = '" + UPDATE_SUBSCRIPTION_RANGE_TYPE_QUERY + "'.");
+      log.error("subscriptionSeq = " + subscriptionSeq);
+      log.error("range = " + range);
+      log.error("subscribed = " + subscribed);
+      throw new DbException("Cannot update subscription range", sqle);
+    } finally {
+      DbManager.safeCloseStatement(updateSubscriptionRange);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "count = " + count);
+    return count;
   }
 }

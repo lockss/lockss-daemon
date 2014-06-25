@@ -1,10 +1,10 @@
 /*
- * $Id: TestSubscriptionManager.java,v 1.7 2013-11-20 17:23:46 fergaloy-sf Exp $
+ * $Id: TestSubscriptionManager.java,v 1.8 2014-06-25 19:44:29 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,18 +29,12 @@
  in this Software without prior written authorization from Stanford University.
 
  */
-
-/**
- * Test class for org.lockss.subscription.SubscriptionManager.
- * 
- * @author Fernando Garcia-Loygorri
- * @version 1.0
- */
 package org.lockss.subscription;
 
 import java.io.File;
 import java.io.IOException;
 import java.sql.Connection;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
@@ -48,6 +42,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
+import org.lockss.app.LockssDaemon;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.config.Tdb;
@@ -55,6 +50,9 @@ import org.lockss.config.TdbAu;
 import org.lockss.config.TdbTestUtil;
 import org.lockss.config.TdbTitle;
 import org.lockss.config.Tdb.TdbException;
+import org.lockss.daemon.ConfigParamAssignment;
+import org.lockss.daemon.ConfigParamDescr;
+import org.lockss.daemon.TitleConfig;
 import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
 import org.lockss.metadata.MetadataManager;
@@ -67,16 +65,29 @@ import org.lockss.remote.RemoteApi;
 import org.lockss.remote.RemoteApi.BatchAuStatus;
 import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
+import org.lockss.test.MockArchivalUnit;
 import org.lockss.test.MockLockssDaemon;
+import org.lockss.test.MockPlugin;
+import org.lockss.util.ListUtil;
+import org.lockss.util.Logger;
 import org.lockss.util.PlatformUtil;
 
+/**
+ * Test class for org.lockss.subscription.SubscriptionManager.
+ * 
+ * @author Fernando Garcia-Loygorri
+ */
 public class TestSubscriptionManager extends LockssTestCase {
+  private static final String BASE_URL = "http://www.example.com/foo/";
+
   private String tempDirPath;
   private MockLockssDaemon theDaemon;
   private PluginManager pluginManager;
   private RemoteApi remoteApi;
   private SubscriptionManager subManager;
   private DbManager dbManager;
+  private MetadataManager metadataManager;
+  private MockPlugin plugin;
 
   @Override
   public void setUp() throws Exception {
@@ -103,6 +114,12 @@ public class TestSubscriptionManager extends LockssTestCase {
     theDaemon.setDaemonInited(true);
     pluginManager.startService();
 
+    String key = PluginManager.pluginKeyFromName(MockPlugin.class.getName());
+    pluginManager.ensurePluginLoaded(key);
+    plugin = (MockPlugin)pluginManager.getPlugin(key);
+
+    theDaemon.setAusStarted(true);
+
     PluginTestUtil.createAndStartSimAu(SimulatedPlugin.class,
 	simAuConfig(tempDirPath + "/0"));
 
@@ -116,6 +133,11 @@ public class TestSubscriptionManager extends LockssTestCase {
     theDaemon.setDbManager(dbManager);
     dbManager.initService(theDaemon);
     dbManager.startService();
+
+    metadataManager = new MetadataManager();
+    theDaemon.setMetadataManager(metadataManager);
+    metadataManager.initService(theDaemon);
+    metadataManager.startService();
 
     subManager = new SubscriptionManager();
     theDaemon.setSubscriptionManager(subManager);
@@ -1286,5 +1308,287 @@ public class TestSubscriptionManager extends LockssTestCase {
     return subManager.getCoveredTdbAus(tdbTitle,
 	BibliographicPeriod.createList(subscribedRanges),
 	BibliographicPeriod.createList(unsubscribedRanges));
+  }
+
+  /**
+   * Check the behavior of unsubscribeAu().
+   */
+  public final void testUnsubscribeAu() throws Exception {
+    // Create the TDB.
+    Tdb tdb = new Tdb();
+    tdb.addTdbAuFromProperties(makeTitleConfig("123").toProperties());
+    ConfigurationUtil.setTdb(tdb);
+
+    TitleConfig tc =
+	new TitleConfig(tdb.getTdbAusLikeName("vol123").get(0), plugin);
+    String auId = tc.getAuId(pluginManager);
+
+    // Add the archival unit.
+    BatchAuStatus status =
+	LockssDaemon.getLockssDaemon().getRemoteApi().addByAuId(auId);
+    assertEquals(0, status.getOkCnt());
+
+    MockArchivalUnit au = (MockArchivalUnit)pluginManager.getAuFromId(auId);
+    au.setTitleConfig(tc);
+
+    List<BibliographicPeriod> publicationRanges =
+	new ArrayList<BibliographicPeriod>();
+    publicationRanges.add(new BibliographicPeriod("1954"));
+    au.getTdbAu().setPublicationRanges(publicationRanges);
+
+    Connection conn = dbManager.getConnection();
+
+    // Create the publisher.
+    Long publisherSeq =
+	metadataManager.addPublisher(conn, "Publisher of [Title of [vol123]]");
+
+    // Create the publication.
+    Long publicationSeq = metadataManager.addPublication(conn, null,
+	DbManager.MD_ITEM_TYPE_JOURNAL, "Title of [vol123]", "id:11171508429",
+	publisherSeq);
+
+    // Create the publishing platform.
+    Long platformSeq = dbManager.addPlatform(conn, DbManager.NO_PLATFORM);
+
+    // Create the subscription.
+    Long subscriptionSeq =
+	subManager.persistSubscription(conn, publicationSeq, platformSeq);
+
+    DbManager.commitOrRollback(conn, log);
+
+    // Handle a subscription with no ranges.
+    subManager.unsubscribeAu(conn, au);
+    DbManager.commitOrRollback(conn, log);
+
+    assertEquals(0,
+	subManager.findSubscriptionRanges(conn, subscriptionSeq, true).size());
+
+    assertEquals(0,
+	subManager.findSubscriptionRanges(conn, subscriptionSeq, false).size());
+
+    // Handle a subscription with a null collection of subscribed ranges.
+    int count = subManager.persistSubscribedRanges(conn, subscriptionSeq, null);
+    DbManager.commitOrRollback(conn, log);
+
+    assertEquals(0, count);
+
+    subManager.unsubscribeAu(conn, au);
+    DbManager.commitOrRollback(conn, log);
+
+    assertEquals(0,
+	subManager.findSubscriptionRanges(conn, subscriptionSeq, true).size());
+
+    assertEquals(0,
+	subManager.findSubscriptionRanges(conn, subscriptionSeq, false).size());
+
+    // Handle a subscription with a null collection of unsubscribed ranges.
+    count = subManager.persistUnsubscribedRanges(conn, subscriptionSeq, null);
+    DbManager.commitOrRollback(conn, log);
+
+    assertEquals(0, count);
+
+    subManager.unsubscribeAu(conn, au);
+    DbManager.commitOrRollback(conn, log);
+
+    assertEquals(0,
+	subManager.findSubscriptionRanges(conn, subscriptionSeq, true).size());
+
+    assertEquals(0,
+	subManager.findSubscriptionRanges(conn, subscriptionSeq, false).size());
+
+    // Handle a subscription with an empty collection of subscribed ranges.
+    List<BibliographicPeriod> subscribedRanges =
+	new ArrayList<BibliographicPeriod>();
+
+    count = subManager.persistSubscribedRanges(conn, subscriptionSeq,
+	subscribedRanges);
+    DbManager.commitOrRollback(conn, log);
+
+    assertEquals(0, count);
+
+    subManager.unsubscribeAu(conn, au);
+    DbManager.commitOrRollback(conn, log);
+
+    assertEquals(0,
+	subManager.findSubscriptionRanges(conn, subscriptionSeq, true).size());
+
+    assertEquals(0,
+	subManager.findSubscriptionRanges(conn, subscriptionSeq, false).size());
+
+    // Handle a subscription with an empty collection of unsubscribed ranges.
+    List<BibliographicPeriod> unsubscribedRanges =
+	new ArrayList<BibliographicPeriod>();
+
+    count = subManager.persistUnsubscribedRanges(conn, subscriptionSeq,
+	unsubscribedRanges);
+    DbManager.commitOrRollback(conn, log);
+
+    assertEquals(0, count);
+
+    subManager.unsubscribeAu(conn, au);
+    DbManager.commitOrRollback(conn, log);
+
+    assertEquals(0,
+	subManager.findSubscriptionRanges(conn, subscriptionSeq, true).size());
+
+    assertEquals(0,
+	subManager.findSubscriptionRanges(conn, subscriptionSeq, false).size());
+
+    // Handle a subscription with a non-overlapping subscribed range.
+    subscribedRanges.add(new BibliographicPeriod("1900-1953"));
+
+    count = subManager.persistSubscribedRanges(conn, subscriptionSeq,
+	subscribedRanges);
+    DbManager.commitOrRollback(conn, log);
+
+    assertEquals(1, count);
+
+    subManager.unsubscribeAu(conn, au);
+    DbManager.commitOrRollback(conn, log);
+
+    subscribedRanges =
+	subManager.findSubscriptionRanges(conn, subscriptionSeq, true);
+    assertEquals(1, subscribedRanges.size());
+    assertEquals("1900-1953", subscribedRanges.get(0).toDisplayableString());
+
+    assertEquals(0,
+	subManager.findSubscriptionRanges(conn, subscriptionSeq, false).size());
+
+    // Handle a subscription with an exactly matching subscribed range.
+    subscribedRanges = new ArrayList<BibliographicPeriod>();
+    subscribedRanges.add(new BibliographicPeriod("1954"));
+
+    count = subManager.persistSubscribedRanges(conn, subscriptionSeq,
+	subscribedRanges);
+    DbManager.commitOrRollback(conn, log);
+
+    assertEquals(1, count);
+
+    subManager.unsubscribeAu(conn, au);
+    DbManager.commitOrRollback(conn, log);
+
+    subscribedRanges =
+	subManager.findSubscriptionRanges(conn, subscriptionSeq, true);
+    assertEquals(1, subscribedRanges.size());
+    assertEquals("1900-1953", subscribedRanges.get(0).toDisplayableString());
+
+    unsubscribedRanges =
+	subManager.findSubscriptionRanges(conn, subscriptionSeq, false);
+    assertEquals(1, unsubscribedRanges.size());
+    assertEquals("1954", unsubscribedRanges.get(0).toDisplayableString());
+
+    // Handle a subscription with an overlapping subscribed range.
+    clearSubscriptionRanges(conn, subscriptionSeq, 1, 1);
+
+    subscribedRanges = new ArrayList<BibliographicPeriod>();
+    subscribedRanges.add(new BibliographicPeriod("1900-2000"));
+
+    count = subManager.persistSubscribedRanges(conn, subscriptionSeq,
+	subscribedRanges);
+    DbManager.commitOrRollback(conn, log);
+
+    assertEquals(1, count);
+
+    subManager.unsubscribeAu(conn, au);
+    DbManager.commitOrRollback(conn, log);
+
+    subscribedRanges =
+	subManager.findSubscriptionRanges(conn, subscriptionSeq, true);
+    assertEquals(1, subscribedRanges.size());
+    assertEquals("1900-2000", subscribedRanges.get(0).toDisplayableString());
+
+    unsubscribedRanges =
+	subManager.findSubscriptionRanges(conn, subscriptionSeq, false);
+    assertEquals(1, unsubscribedRanges.size());
+    assertEquals("1954", unsubscribedRanges.get(0).toDisplayableString());
+
+    // Handle a subscription with an overlapping subscribed range second edge.
+    clearSubscriptionRanges(conn, subscriptionSeq, 1, 1);
+
+    subscribedRanges = new ArrayList<BibliographicPeriod>();
+    subscribedRanges.add(new BibliographicPeriod("1900-1954"));
+
+    count = subManager.persistSubscribedRanges(conn, subscriptionSeq,
+	subscribedRanges);
+    DbManager.commitOrRollback(conn, log);
+
+    assertEquals(1, count);
+
+    subManager.unsubscribeAu(conn, au);
+    DbManager.commitOrRollback(conn, log);
+
+    subscribedRanges =
+	subManager.findSubscriptionRanges(conn, subscriptionSeq, true);
+    assertEquals(1, subscribedRanges.size());
+    assertEquals("1900-1954", subscribedRanges.get(0).toDisplayableString());
+
+    unsubscribedRanges =
+	subManager.findSubscriptionRanges(conn, subscriptionSeq, false);
+    assertEquals(1, unsubscribedRanges.size());
+    assertEquals("1954", unsubscribedRanges.get(0).toDisplayableString());
+
+    // Handle a subscription with an overlapping subscribed range first edge.
+    clearSubscriptionRanges(conn, subscriptionSeq, 1, 1);
+
+    subscribedRanges = new ArrayList<BibliographicPeriod>();
+    subscribedRanges.add(new BibliographicPeriod("1954-2000"));
+
+    count = subManager.persistSubscribedRanges(conn, subscriptionSeq,
+	subscribedRanges);
+    DbManager.commitOrRollback(conn, log);
+
+    assertEquals(1, count);
+
+    subManager.unsubscribeAu(conn, au);
+    DbManager.commitOrRollback(conn, log);
+
+    subscribedRanges =
+	subManager.findSubscriptionRanges(conn, subscriptionSeq, true);
+    assertEquals(1, subscribedRanges.size());
+    assertEquals("1954-2000", subscribedRanges.get(0).toDisplayableString());
+
+    unsubscribedRanges =
+	subManager.findSubscriptionRanges(conn, subscriptionSeq, false);
+    assertEquals(1, unsubscribedRanges.size());
+    assertEquals("1954", unsubscribedRanges.get(0).toDisplayableString());
+
+    subManager.unsubscribeAu(conn, au);
+    DbManager.commitOrRollback(conn, log);
+
+    // Handle a subscription with an already unsubscribed range.
+    subscribedRanges =
+	subManager.findSubscriptionRanges(conn, subscriptionSeq, true);
+    assertEquals(1, subscribedRanges.size());
+    assertEquals("1954-2000", subscribedRanges.get(0).toDisplayableString());
+
+    unsubscribedRanges =
+	subManager.findSubscriptionRanges(conn, subscriptionSeq, false);
+    assertEquals(1, unsubscribedRanges.size());
+    assertEquals("1954", unsubscribedRanges.get(0).toDisplayableString());
+  }
+
+  private TitleConfig makeTitleConfig(String vol) {
+    ConfigParamDescr d1 = new ConfigParamDescr("base_url");
+    ConfigParamDescr d2 = new ConfigParamDescr("volume");
+    ConfigParamAssignment a1 = new ConfigParamAssignment(d1, BASE_URL);
+    ConfigParamAssignment a2 = new ConfigParamAssignment(d2, vol);
+    a1.setEditable(false);
+    a2.setEditable(false);
+    TitleConfig tc1 = new TitleConfig("vol" + vol, plugin.getPluginId());
+    tc1.setParams(ListUtil.list(a1, a2));
+    return tc1;
+  }
+
+  private void clearSubscriptionRanges(Connection conn, Long subscriptionSeq,
+      int subscribedCount, int unsubscribedCount) throws DbException {
+    // Delete all the subscribed ranges.
+    int count =
+	subManager.deleteSubscriptionTypeRanges(conn, subscriptionSeq, true);
+    assertEquals(subscribedCount, count);
+
+    // Delete all the unsubscribed ranges.
+    count =
+	subManager.deleteSubscriptionTypeRanges(conn, subscriptionSeq, false);
+    assertEquals(unsubscribedCount, count);
   }
 }
