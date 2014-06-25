@@ -6090,6 +6090,252 @@
 
   {
     title <
+      name = Journal of Electrical and Computer Engineering ;
+      issn = 2090-0147 ;
+      eissn = 2090-0155 ;
+      issnl = 2090-0147
+    >
+
+    param[journal_id] = jece
+    comment[merge0] = Research Letters in Communications 2007–2009 (Merged)
+    comment[merge1] = Research Letters in Electronics 2009–2009 (Merged)
+    comment[merge2] = Research Letters in Signal Processing 2007–2009 (Merged)
+
+    au < exists ; exists ; 2007 ; Journal of Electrical and Computer Engineering Volume 2007 ; 2007 ; 2007 >
+    au < exists ; exists ; 2008 ; Journal of Electrical and Computer Engineering Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; Journal of Electrical and Computer Engineering Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; Journal of Electrical and Computer Engineering Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Journal of Electrical and Computer Engineering Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Electrical and Computer Engineering Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Journal of Electrical and Computer Engineering Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Electrical and Computer Engineering Volume 2014 ; 2014 ; 2014 >
+    
+  }
+
+  {
+    title <
+      name = Journal of Energy ;
+      issn = 2356-735X ;
+      eissn = 2314-615X ;
+      issnl = 2356-735X
+    >
+
+    param[journal_id] = jen
+    
+    au < exists ; exists ; 2013 ; Journal of Energy Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Energy Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Engineering ;
+      issn = 2314-4904 ;
+      eissn = 2314-4912 ;
+      issnl = 2314-4904
+    >
+
+    param[journal_id] = je
+    
+    au < exists ; exists ; 2013 ; Journal of Engineering Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Engineering Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Environmental and Public Health ;
+      issn = 1687-9805 ;
+      eissn = 1687-9813 ;
+      issnl = 1687-9805
+    >
+
+    param[journal_id] = jeph
+
+    au < exists ; exists ; 2009 ; Journal of Environmental and Public Health Volume 2009 ; 2009 ; 2009 > 
+    au < exists ; exists ; 2010 ; Journal of Environmental and Public Health Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2012 ; Journal of Environmental and Public Health Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Journal of Environmental and Public Health Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Environmental and Public Health Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Experimental Physics ;
+      issn = 2356-7368 ;
+      eissn = 2314-7849 ;
+      issnl = 2356-7368
+    >
+
+    param[journal_id] = jep
+    
+    au < exists ; exists ; 2014 ; Journal of Experimental Physics Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Fluids ;
+      issn = 2356-7376 ;
+      eissn = 2314-6826 ;
+      issnl = 2356-7376
+    >
+
+    param[journal_id] = fluids
+    
+    au < exists ; exists ; 2013 ; Journal of Fluids Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Fluids Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Food Processing ;
+      issn = 2356-7384 ;
+      eissn = 2314-839X ;
+      issnl = 2356-7384
+    >
+
+    param[journal_id] = jfp
+    
+    au < exists ; exists ; 2014 ; Journal of Food Processing Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Fuels ;
+      issn = 2356-7392 ;
+      eissn = 2314-601X ;
+      issnl = 2356-7392
+    >
+
+    param[journal_id] = jfu
+    
+    au < exists ; exists ; 2014 ; Journal of Fuels Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Function Spaces ;
+      issn = 2314-8896 ;
+      eissn = 2314-8888 ;
+      issnl = 2314-8896
+    >
+
+    param[journal_id] = jfs
+
+    au < exists ; exists ; 2003 ; Journal of Function Spaces and Applications Volume 2003 ; 2003 ; 2003 >
+    au < exists ; exists ; 2004 ; Journal of Function Spaces and Applications Volume 2004 ; 2004 ; 2004 >
+    au < exists ; exists ; 2005 ; Journal of Function Spaces and Applications Volume 2005 ; 2005 ; 2005 >
+    au < exists ; exists ; 2006 ; Journal of Function Spaces and Applications Volume 2006 ; 2006 ; 2006 >
+    au < exists ; exists ; 2007 ; Journal of Function Spaces and Applications Volume 2007 ; 2007 ; 2007 >
+    au < exists ; exists ; 2008 ; Journal of Function Spaces and Applications Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; Journal of Function Spaces and Applications Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; Journal of Function Spaces and Applications Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Journal of Function Spaces and Applications Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Function Spaces and Applications Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Journal of Function Spaces and Applications Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Function Spaces Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Geochemistry ;
+      issn = 2356-7406 ;
+      eissn = 2314-5803 ;
+      issnl = 2356-7406
+    >
+
+    param[journal_id] = jg
+    
+    au < exists ; exists ; 2014 ; Journal of Geochemistry Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Geological Research ;
+      issn = 1687-8833 ;
+      eissn = 1687-8841 ;
+      issnl = 1687-8833
+    >
+
+    param[journal_id] = jgr
+
+    au < exists ; exists ; 2009 ; Journal of Geological Research Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; Journal of Geological Research Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Journal of Geological Research Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Geological Research Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Journal of Geological Research Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Geological Research Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Geriatrics ;
+      issn = 2356-7414 ;
+      eissn = 2314-7121 ;
+      issnl = 2356-7414
+    >
+
+    param[journal_id] = jger
+    
+    au < exists ; exists ; 2014 ; Journal of Geriatrics Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Gravity ;
+      issn = 2356-7422 ;
+      eissn = 2314-6907 ;
+      issnl = 2356-7422
+    >
+
+    param[journal_id] = jgrav
+    
+    au < exists ; exists ; 2013 ; Journal of Gravity Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Gravity Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Histology ;
+      issn = 2356-7430 ;
+      eissn = 2314-6028 ;
+      issnl = 2356-7430
+    >
+
+    param[journal_id] = jh
+    
+    au < exists ; exists ; 2013 ; Journal of Histology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Histology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Hormones ;
+      issn = 2356-7449 ;
+      eissn = 2314-6222 ;
+      issnl = 2356-7449
+    >
+
+    param[journal_id] = jhor
+    
+    au < exists ; exists ; 2013 ; Journal of Hormones Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Hormones Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
       name = Journal of Immunology Research ;
       issn = 2314-8861 ;
       eissn = 2314-7156 ;
@@ -6123,6 +6369,218 @@
     au < manifest ; exists ; 2012 ; Clinical and Developmental Immunology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Clinical and Developmental Immunology Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Immunology Research Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Industrial Engineering ;
+      issn = 2314-4882 ;
+      eissn = 2314-4890 ;
+      issnl = 2314-4882
+    >
+
+    param[journal_id] = jie
+    
+    au < exists ; exists ; 2013 ; Journal of Industrial Engineering Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Industrial Engineering Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Industrial Mathematics ;
+      issn = 2314-8853 ;
+      eissn = 2314-6117 ;
+      issnl = 2314-8853
+    >
+
+    param[journal_id] = jim
+    
+    au < exists ; exists ; 2013 ; Journal of Industrial Mathematics Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Industrial Mathematics Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Inorganic Chemistry ;
+      issn = 2356-7457 ;
+      eissn = 2314-713X ;
+      issnl = 2356-7457
+    >
+
+    param[journal_id] = jic
+    
+    au < exists ; exists ; 2013 ; Journal of Inorganic Chemistry Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Inorganic Chemistry Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Insects ;
+      issn = 2356-7465 ;
+      eissn = 2314-6478 ;
+      issnl = 2356-7465
+    >
+
+    param[journal_id] = insects
+    
+    au < exists ; exists ; 2013 ; Journal of Insects Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Insects Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Lipids ;
+      issn = 2090-3030 ;
+      eissn = 2090-3049 ;
+      issnl = 2090-3030
+    >
+
+    param[journal_id] = jl
+
+    au < exists ; exists ; 2011 ; Journal of Lipids Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Lipids Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Journal of Lipids Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Lipids Volume 2014 ; 2014 ; 2014 >
+
+  }
+  
+  {
+    title <
+      name = Journal of Marine Biology ;
+      issn = 1687-9481 ;
+      eissn = 1687-949X ;
+      issnl = 1687-9481
+    >
+
+    param[journal_id] = jmb
+
+    au < exists ; exists ; 2009 ; Journal of Marine Biology Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; Journal of Marine Biology Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Journal of Marine Biology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Marine Biology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Journal of Marine Biology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Marine Biology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Materials ;
+      issn = 2314-4866 ;
+      eissn = 2314-4874 ;
+      issnl = 2314-4866
+    >
+
+    param[journal_id] = jma
+    
+    au < exists ; exists ; 2013 ; Journal of Materials Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Materials Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Mathematics ;
+      issn = 2314-4629 ;
+      eissn = 2314-4785 ;
+      issnl = 2314-4629
+    >
+
+    param[journal_id] = jmath
+    
+    au < exists ; exists ; 2013 ; Journal of Mathematics Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Mathematics Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Medical Engineering ;
+      issn = 2314-5129 ;
+      eissn = 2314-5137 ;
+      issnl = 2314-5129
+    >
+
+    param[journal_id] = jme
+    
+    au < exists ; exists ; 2013 ; Journal of Medical Engineering Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Medical Engineering Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Metallurgy ;
+      issn = 1687-9465 ;
+      eissn = 1687-9473 ;
+      issnl = 1687-9465
+    >
+
+    param[journal_id] = jm
+
+    au < exists ; exists ; 2009 ; Journal of Metallurgy Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; Journal of Metallurgy Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Journal of Metallurgy Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Metallurgy Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Journal of Metallurgy Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Metallurgy Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Mining ;
+      issn = 2356-7473 ;
+      eissn = 2314-6532 ;
+      issnl = 2356-7473
+    >
+
+    param[journal_id] = jmin
+    
+    au < exists ; exists ; 2013 ; Journal of Mining Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Mining Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Mycology ;
+      issn = 2356-7481 ;
+      eissn = 2314-6168 ;
+      issnl = 2356-7481
+    >
+
+    param[journal_id] = jmy
+    
+    au < exists ; exists ; 2013 ; Journal of Mycology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Mycology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Nanomaterials ;
+      issn = 1687-4110 ;
+      eissn = 1687-4129 ;
+      issnl = 1687-4110
+    >
+
+    param[journal_id] = jnm
+
+    au < exists ; exists ; 2006 ; Journal of Nanomaterials Volume 2006 ; 2006 ; 2006 >
+    au < exists ; exists ; 2007 ; Journal of Nanomaterials Volume 2007 ; 2007 ; 2007 >
+    au < exists ; exists ; 2008 ; Journal of Nanomaterials Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; Journal of Nanomaterials Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; Journal of Nanomaterials Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Journal of Nanomaterials Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Nanomaterials Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Journal of Nanomaterials Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Nanomaterials Volume 2014 ; 2014 ; 2014 >
 
   }
 
