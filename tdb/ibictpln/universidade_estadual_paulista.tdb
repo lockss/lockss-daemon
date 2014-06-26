@@ -549,15 +549,14 @@
       comment[publisher] = Universidade Estadual Paulista
       param[base_url] = http://serv-bib.fcfar.unesp.br/seer/
       param[journal_id] = Cien_Farm
-      comment[notReady] = permission issues, agreement issues
 
       au < released ; 2005 ; 1 ; Revista de Ciências Farmacêuticas Básica e Aplicada Volume 2005 ; 2005 >
       au < released ; 2006 ; 2 ; Revista de Ciências Farmacêuticas Básica e Aplicada Volume 2006 ; 2006 >
       au < released ; 2007 ; 3 ; Revista de Ciências Farmacêuticas Básica e Aplicada Volume 2007 ; 2007 >
-      au < notReady ; 2008 ; 4 ; Revista de Ciências Farmacêuticas Básica e Aplicada Volume 2008 ; 2008 >
+      au < ready ; 2008 ; 4 ; Revista de Ciências Farmacêuticas Básica e Aplicada Volume 2008 ; 2008 >
       au < released ; 2009 ; 5 ; Revista de Ciências Farmacêuticas Básica e Aplicada Volume 2009 ; 2009 >
       au < released ; 2010 ; 6 ; Revista de Ciências Farmacêuticas Básica e Aplicada Volume 2010 ; 2010 >
-      au < notReady ; 2011 ; 7 ; Revista de Ciências Farmacêuticas Básica e Aplicada Volume 2011 ; 2011 >
+      au < ready ; 2011 ; 7 ; Revista de Ciências Farmacêuticas Básica e Aplicada Volume 2011 ; 2011 >
       au < released ; 2012 ; 8 ; Revista de Ciências Farmacêuticas Básica e Aplicada Volume 2012 ; 2012 >
       au < manifest ; 2013 ; 9 ; Revista de Ciências Farmacêuticas Básica e Aplicada Volume 2013 ; 2013 >
 
