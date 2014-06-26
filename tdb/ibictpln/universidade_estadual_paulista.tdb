@@ -125,10 +125,9 @@
       comment[publisher] = Universidade Estadual Paulista
       param[base_url] = http://periodicos.franca.unesp.br/
       param[journal_id] = SSR
-      comment[notReady] = no permission
 
       au < released ; 2007 ; 1 ; Serviço Social & Realidade Volume 2007 ; 2007 >
-      au < notReady ; 2008 ; 2 ; Serviço Social & Realidade Volume 2008 ; 2008 >
+      au < ready ; 2008 ; 2 ; Serviço Social & Realidade Volume 2008 ; 2008 >
       au < released ; 2009 ; 3 ; Serviço Social & Realidade Volume 2009 ; 2009 >
       au < released ; 2010 ; 4 ; Serviço Social & Realidade Volume 2010 ; 2010 >
       au < expected ; 2011 ; 5 ; Serviço Social & Realidade Volume 2011 ; 2011 >
