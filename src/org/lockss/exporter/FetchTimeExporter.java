@@ -1,5 +1,5 @@
 /*
- * $Id: FetchTimeExporter.java,v 1.9 2014-06-06 01:06:52 fergaloy-sf Exp $
+ * $Id: FetchTimeExporter.java,v 1.10 2014-06-26 17:17:59 fergaloy-sf Exp $
  */
 
 /*
@@ -716,19 +716,19 @@ public class FetchTimeExporter {
 	  StringBuilder sb = new StringBuilder();
 
 	  sb.append(exportVersion).append(SEPARATOR)
-	  .append(serverName).append(SEPARATOR)
+	  .append(StringUtil.blankOutNlsAndTabs(serverName)).append(SEPARATOR)
 	  .append(StringUtil.blankOutNlsAndTabs(publisherName))
 	  .append(SEPARATOR)
-	  .append(pluginId).append(SEPARATOR)
-	  .append(auKey).append(SEPARATOR)
+	  .append(StringUtil.blankOutNlsAndTabs(pluginId)).append(SEPARATOR)
+	  .append(StringUtil.blankOutNlsAndTabs(auKey)).append(SEPARATOR)
 	  .append(isBulkContent).append(SEPARATOR)
 	  .append(StringUtil.blankOutNlsAndTabs(publicationName))
 	  .append(SEPARATOR)
 	  .append(typeName).append(SEPARATOR)
 	  .append(StringUtil.blankOutNlsAndTabs(itemTitle)).append(SEPARATOR)
-	  .append(date).append(SEPARATOR)
+	  .append(StringUtil.blankOutNlsAndTabs(date)).append(SEPARATOR)
 	  .append(fetchTime).append(SEPARATOR)
-	  .append(accessUrl).append(SEPARATOR)
+	  .append(StringUtil.blankOutNlsAndTabs(accessUrl)).append(SEPARATOR)
 	  .append(StringUtil.blankOutNlsAndTabs(doi)).append(SEPARATOR)
 	  .append(StringUtil.blankOutNlsAndTabs(pIssn)).append(SEPARATOR)
 	  .append(StringUtil.blankOutNlsAndTabs(eIssn)).append(SEPARATOR)
