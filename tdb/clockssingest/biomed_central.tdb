@@ -2591,6 +2591,34 @@ comment[bmr] = journal archive available, but no new volumes
 
     {
       title <
+        name = Cancer Imaging ;
+        eissn = 1470-7330 ;
+        issnl = 1470-7330
+      >
+
+      param[base_url] = http://www.cancerimagingjournal.com/
+      param[journal_issn] = 1470-7330
+
+      au < exists ; exists ; 2014 ; Cancer Imaging Volume 14 ; 14 >
+      
+    }
+
+    {
+      title <
+        name = Canine Genetics and Epidemiology ;
+        eissn = 2052-6687 ;
+        issnl = 2052-6687
+      >
+
+      param[base_url] = http://www.cgejournal.org/
+      param[journal_issn] = 2052-6687
+
+      au < exists ; exists ; 2014 ; Canine Genetics and Epidemiology Volume 1 ; 1 >
+      
+    }
+
+    {
+      title <
         name = Carbon Balance and Management ;
         issn = 1750-0680 ;
         issnl = 1750-0680
@@ -4384,6 +4412,21 @@ comment[bmr] = journal archive available, but no new volumes
 
     {
       title <
+        name = Journal of Biological Research-Thessaloniki ;
+        issn = 1790-045X ;
+        eissn = 2241-5793 ;
+        issnl = 2241-5793
+      >
+
+      param[base_url] = http://www.jbiolres.com/
+      param[journal_issn] = 2241-5793
+
+      au < exists ; exists ; 2014 ; Journal of Biological Research-Thessaloniki Volume 21 ; 21 >
+
+    }
+
+    {
+      title <
         name = Journal of Biology ;
         issn = 1475-4924 ;
         issnl = 1475-4924
@@ -5285,7 +5328,7 @@ comment[bmr] = journal archive available, but no new volumes
     {
       title <
         name = Microbiome ;
-        issn = 2049-2618 ;
+        eissn = 2049-2618 ;
         issnl = 2049-2618
       >
 
@@ -5294,6 +5337,20 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < crawling ; exists ; 2013 ; Microbiome Volume 1 ; 1 >
       au < manifest ; exists ; 2014 ; Microbiome Volume 2 ; 2 >
+
+    }
+
+    {
+      title <
+        name = Military Medical Research ;
+        eissn = 2054-9369 ;
+        issnl = 2054-9369
+      >
+
+      param[base_url] = http://www.mmrjournal.org/
+      param[journal_issn] = 2054-9369
+
+      au < exists ; exists ; 2014 ; Military Medical Research Volume 1 ; 1 >
 
     }
 
