@@ -414,7 +414,6 @@
       comment[publisher] = Universidade Federal do Rio Grande do Sul
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = contingentia
-      comment[notReady] = can't fetch permission page
 
       au < released ; 2006 ; 1 ; Contingentia Volume 2006 ; 2006 ; >
       au < released ; 2007 ; 2 ; Contingentia Volume 2007 ; 2007 ; >
@@ -642,7 +641,6 @@
       comment[publisher] = Universidade Federal do Rio Grande do Sul
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = fineduca
-      comment[notReady] = can't fetch permission pages
 
       au < released ; 2011 ; 1 ; FINEDUCA-Revista de Financiamento da Educação Volume 2011 ; 2011 ; >
       au < manifest ; 2012 ; 2 ; FINEDUCA-Revista de Financiamento da Educação Volume 2012 ; 2012 ; >
@@ -766,7 +764,6 @@
       comment[publisher] = Universidade Federal do Rio Grande do Sul
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = Movimento
-      comment[notReady] = fetch error
 
       au < notReady ; 1998 ; 1 ; Movimento (ESEF/UFRGS) Volume 1998 ; 1998 ; login for img barra_indexadores_parceiros_rodape.jpg on manifest page >
       au < notReady ; 1999 ; 2 ; Movimento (ESEF/UFRGS) Volume 1999 ; 1999 ; login for img barra_indexadores_parceiros_rodape.jpg on manifest page >
@@ -1214,7 +1211,6 @@
       comment[publisher] = Universidade Federal do Rio Grande do Sul
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = RevistaGauchadeEnfermagem
-      comment[notReady] = no substance
 
       au < notReady ; 1983 ; 1 ; Revista Gaúcha de Enfermagem Volume 1983 ; 1983 ; no articles >
       au < notReady ; 1984 ; 2 ; Revista Gaúcha de Enfermagem Volume 1984 ; 1984 ; no articles >

@@ -111,7 +111,6 @@
       comment[publisher] = Universidade Federal do Goiás-UFG
       param[base_url] = http://www.revistas.ufg.br/
       param[journal_id] = fchf
-      comment[notReady] = no substance
 
       au < released ; 1998 ; 1 ; Sociedade e Cultura Volume 1998 ; 1998 ; >
       au < notReady ; 1999 ; 2 ; Sociedade e Cultura Volume 1999 ; 1999 ; no articles >
@@ -236,7 +235,6 @@
       comment[publisher] = Universidade Federal do Goiás-UFG
       param[base_url] = http://www.revistas.ufg.br/
       param[journal_id] = musica
-      comment[notReady] = repository error
 
       au < released ; 2001 ; 1 ; Música Hodie Volume 2001 ; 2001 ; >
       au < released ; 2002 ; 2 ; Música Hodie Volume 2002 ; 2002 ; >
@@ -403,7 +401,6 @@
       comment[publisher] = Universidade Federal do Goiás-UFG
       param[base_url] = http://www.revistas.ufg.br/
       param[journal_id] = RBN
-      comment[notReady] = no substance
 
       au < notReady ; 2004 ; 1 ; Revista de Biologia Neotropical Volume 2004 ; 2004 ; no articles >
       au < notReady ; 2005 ; 2 ; Revista de Biologia Neotropical Volume 2005 ; 2005 ; no articles >
@@ -534,7 +531,6 @@
       comment[publisher] = Universidade Federal do Goiás-UFG
       param[base_url] = http://www.revistas.ufg.br/
       param[journal_id] = sv
-      comment[notReady] = no substance
 
       au < released ; 2002 ; 1 ; Polyphonía/Solta a voz Volume 2002 ; 2002 ; >
       au < notReady ; 2003 ; 2 ; Polyphonía/Solta a voz Volume 2003 ; 2003 ; no articles >

@@ -6,6 +6,8 @@
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
     implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
 
+    comment[notReady] = no permission. Unmapped exception: javax.net.ssl.SSLHandshakeException: java.security.cert.CertificateException: Untrusted Server Certificate Chain
+
   {
 
       title <
@@ -16,7 +18,6 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = literatura
-      comment[notReady] = no permission. Unmapped exception: javax.net.ssl.SSLHandshakeException: java.security.cert.CertificateException: Untrusted Server Certificate Chain
 
       au < notReady ; 1993 ; 1 ; Anuário de Literatura Volume 1993 ; 1993 ; Untrusted Server Certificate Chain >
       au < notReady ; 1994 ; 2 ; Anuário de Literatura Volume 1994 ; 1994 ; Untrusted Server Certificate Chain >
@@ -50,7 +51,6 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = biotemas
-      comment[notReady] = no permission
 
       au < notReady ; 1988 ; 1 ; Biotemas Volume 1988 ; 1988 ; Untrusted Server Certificate Chain >
       au < notReady ; 1989 ; 2 ; Biotemas Volume 1989 ; 1989 ; Untrusted Server Certificate Chain >
@@ -92,7 +92,6 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = nelic
-      comment[notReady] = no permission
 
       au < notReady ; 1997 ; 1 ; Boletim de Pesquisa NELIC Volume 1997 ; 1997 ; Untrusted Server Certificate Chain >
       au < notReady ; 1998 ; 2 ; Boletim de Pesquisa NELIC Volume 1998 ; 1998 ; Untrusted Server Certificate Chain >
@@ -123,7 +122,6 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = rbcdh
-      comment[notReady] = no permission
 
       au < notReady ; 1999 ; 1 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 1999 ; 1999 ; Untrusted Server Certificate Chain >
       au < notReady ; 2000 ; 2 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2000 ; 2000 ; Untrusted Server Certificate Chain >
@@ -154,7 +152,6 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = fisica
-      comment[notReady] = no permission
 
       au < notReady ; 1984 ; 1 ; Caderno Brasileiro de Ensino de Física Volume 1984 ; 1984 ; Untrusted Server Certificate Chain >
       au < notReady ; 1985 ; 2 ; Caderno Brasileiro de Ensino de Física Volume 1985 ; 1985 ; Untrusted Server Certificate Chain >
@@ -200,7 +197,6 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = emtese
-      comment[notReady] = no permission
 
       au < notReady ; 2003 ; 1 ; Em Tese [1806-5023] Volume 2003 ; 2003 ; Untrusted Server Certificate Chain >
       au < notReady ; 2004 ; 2 ; Em Tese [1806-5023] Volume 2004 ; 2004 ; Untrusted Server Certificate Chain >
@@ -227,7 +223,6 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = jornalismo
-      comment[notReady] = no permission
 
       au < notReady ; 2004 ; 1 ; Estudos em Jornalismo e Mídia Volume 2004 ; 2004 ; Untrusted Server Certificate Chain >
       au < notReady ; 2005 ; 2 ; Estudos em Jornalismo e Mídia Volume 2005 ; 2005 ; Untrusted Server Certificate Chain >
@@ -253,7 +248,6 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = ref
-      comment[notReady] = no permission
 
       au < notReady ; 1992 ; 1 ; Estudos Feministas Volume 1992 ; 1992 ; Untrusted Server Certificate Chain >
       au < notReady ; 1993 ; 2 ; Estudos Feministas Volume 1993 ; 1993 ; Untrusted Server Certificate Chain >
@@ -318,7 +312,6 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = forum
-      comment[notReady] = no permission
 
       au < notReady ; 1998 ; 1 ; Fórum Linguístico Volume 1998 ; 1998 ; Untrusted Server Certificate Chain >
       au < notReady ; 1999 ; 2 ; Fórum Linguístico Volume 1999 ; 1999 ; Untrusted Server Certificate Chain >
@@ -344,7 +337,6 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = ilha
-      comment[notReady] = no permission
 
       au < notReady ; 1999 ; 1 ; ILHA-Revista de Antropologia Volume 1999 ; 1999 ; Untrusted Server Certificate Chain >
       au < notReady ; 2000 ; 2 ; ILHA-Revista de Antropologia Volume 2000 ; 2000 ; Untrusted Server Certificate Chain >
@@ -376,7 +368,6 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = insula
-      comment[notReady] = no permission
 
       au < notReady ; 1969 ; 1 ; INSULA Revista de Botânica Volume 1969 ; 1969 ; Untrusted Server Certificate Chain >
       au < notReady ; 1970 ; 2 ; INSULA Revista de Botânica Volume 1970 ; 1970 ; Untrusted Server Certificate Chain >
@@ -431,7 +422,6 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = motrivivencia
-      comment[notReady] = no permission
 
       au < notReady ; 1988 ; 1 ; Motrivivência Volume 1988 ; 1988 ; Untrusted Server Certificate Chain >
       au < notReady ; 1989 ; 2 ; Motrivivência Volume 1989 ; 1989 ; Untrusted Server Certificate Chain >
@@ -470,7 +460,6 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = Outra
-      comment[notReady] = no permission
 
       au < notReady ; 2003 ; 1 ; Outra travessia Volume 2003 ; 2003 ; Untrusted Server Certificate Chain >
       au < notReady ; 2007 ; 5 ; Outra travessia Volume 2007 ; 2007 ; Untrusted Server Certificate Chain >
@@ -494,7 +483,6 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = politica
-      comment[notReady] = no permission
 
       au < notReady ; 2002 ; 1 ; Política & Sociedade Volume 2002 ; 2002 ; Untrusted Server Certificate Chain >
       au < notReady ; 2003 ; 2 ; Política & Sociedade Volume 2003 ; 2003 ; Untrusted Server Certificate Chain >
@@ -522,7 +510,6 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = principia
-      comment[notReady] = no permission
 
       au < notReady ; 1997 ; 1 ; Principia: an international journal of epistemology Volume 1997 ; 1997 ; Untrusted Server Certificate Chain >
       au < notReady ; 1998 ; 2 ; Principia: an international journal of epistemology Volume 1998 ; 1998 ; Untrusted Server Certificate Chain >
@@ -555,7 +542,6 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = revemat
-      comment[notReady] = no permission
 
       au < notReady ; 2006 ; 1 ; Revemat: revista eletrônica de educação matemática Volume 2006 ; 2006 ; Untrusted Server Certificate Chain >
       au < notReady ; 2007 ; 2 ; Revemat: revista eletrônica de educação matemática Volume 2007 ; 2007 ; Untrusted Server Certificate Chain >
@@ -579,7 +565,6 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = cadernosdepesquisa
-      comment[notReady] = no permission
 
       au < notReady ; 2000 ; 1 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2000 ; 2000 ; Untrusted Server Certificate Chain >
       au < notReady ; 2001 ; 2 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2001 ; 2001 ; Untrusted Server Certificate Chain >
@@ -609,7 +594,6 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = traducao
-      comment[notReady] = no permission
 
       au < notReady ; 1996 ; 1 ; Revista Cadernos de Tradução Volume 1996 ; 1996 ; Untrusted Server Certificate Chain >
       au < notReady ; 1997 ; 2 ; Revista Cadernos de Tradução Volume 1997 ; 1997 ; Untrusted Server Certificate Chain >
@@ -644,7 +628,6 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = contabilidade
-      comment[notReady] = no permission
 
       au < notReady ; 2005 ; 1 ; Revista Contemporânea de Contabilidade Volume 2005 ; 2005 ; Untrusted Server Certificate Chain >
       au < notReady ; 2006 ; 2 ; Revista Contemporânea de Contabilidade Volume 2006 ; 2006 ; Untrusted Server Certificate Chain >
@@ -670,7 +653,6 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = adm
-      comment[notReady] = no permission
 
       au < notReady ; 1998 ; 1 ; Revista de Ciências da Administração Volume 1998 ; 1998 ; Untrusted Server Certificate Chain >
       au < notReady ; 1999 ; 2 ; Revista de Ciências da Administração Volume 1999 ; 1999 ; Untrusted Server Certificate Chain >
@@ -703,7 +685,6 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = revistacfh
-      comment[notReady] = no permission
 
       au < notReady ; 1982 ; 1 ; Revista de Ciências Humanas [issn 0101-9589] Volume 1982 ; 1982 ; Untrusted Server Certificate Chain >
       au < notReady ; 1983 ; 2 ; Revista de Ciências Humanas [issn 0101-9589] Volume 1983 ; 1983 ; Untrusted Server Certificate Chain >
@@ -748,7 +729,6 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = eb
-      comment[notReady] = no permission
 
       au < notReady ; 1996 ; 1 ; revista eletrônica de biblioteconomia e ciência da informação Volume 1996 ; 1996 ; Untrusted Server Certificate Chain >
       au < notReady ; 1997 ; 2 ; revista eletrônica de biblioteconomia e ciência da informação Volume 1997 ; 1997 ; Untrusted Server Certificate Chain >
@@ -782,7 +762,6 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = emdebate
-      comment[notReady] = no permission
 
       au < notReady ; 1999 ; 1 ; Revista EM DEBATE Volume 1999 ; 1999 ; Untrusted Server Certificate Chain >
       au < notReady ; 2006 ; 8 ; Revista EM DEBATE Volume 2006 ; 2006 ; Untrusted Server Certificate Chain >
@@ -806,7 +785,6 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = esbocos
-      comment[notReady] = no permission
 
       au < notReady ; 1994 ; 1 ; Revista Esboços Volume 1994 ; 1994 ; Untrusted Server Certificate Chain >
       au < notReady ; 1995 ; 2 ; Revista Esboços Volume 1995 ; 1995 ; Untrusted Server Certificate Chain >
@@ -841,7 +819,6 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = extensio
-      comment[notReady] = no permission
 
       au < notReady ; 2004 ; 1 ; Revista Extensio Volume 2004 ; 2004 ; Untrusted Server Certificate Chain >
       au < notReady ; 2005 ; 2 ; Revista Extensio Volume 2005 ; 2005 ; Untrusted Server Certificate Chain >
@@ -867,7 +844,6 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = fragmentos
-      comment[notReady] = no permission
 
       au < notReady ; 1986 ; 1 ; Revista Fragmentos Volume 1986 ; 1986 ; Untrusted Server Certificate Chain >
       au < notReady ; 1987 ; 2 ; Revista Fragmentos Volume 1987 ; 1987 ; Untrusted Server Certificate Chain >
@@ -907,7 +883,6 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = geosul
-      comment[notReady] = no permission
 
       au < notReady ; 1986 ; 1 ; Revista GEOSUL Volume 1986 ; 1986 ; Untrusted Server Certificate Chain >
       au < notReady ; 1987 ; 2 ; Revista GEOSUL Volume 1987 ; 1987 ; Untrusted Server Certificate Chain >
@@ -951,7 +926,6 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = gual
-      comment[notReady] = no permission
 
       au < notReady ; 2007 ; 1 ; Revista Gestão Universitária na América Latina Volume 2007 ; 2007 ; Untrusted Server Certificate Chain >
       au < notReady ; 2009 ; 3 ; Revista Gestão Universitária na América Latina Volume 2009 ; 2009 ; Untrusted Server Certificate Chain >
@@ -974,7 +948,6 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = desterro
-      comment[notReady] = no permission
 
       au < notReady ; 1979 ; 1 ; Revista Ilha do Desterro Volume 1979 ; 1979 ; Untrusted Server Certificate Chain >
       au < notReady ; 1980 ; 2 ; Revista Ilha do Desterro Volume 1980 ; 1980 ; Untrusted Server Certificate Chain >
@@ -1023,7 +996,6 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = interthesis
-      comment[notReady] = no permission
 
       au < notReady ; 2004 ; 1 ; Revista Internacional Interdisciplinar INTERthesis Volume 2004 ; 2004 ; Untrusted Server Certificate Chain >
       au < notReady ; 2005 ; 2 ; Revista Internacional Interdisciplinar INTERthesis Volume 2005 ; 2005 ; Untrusted Server Certificate Chain >
@@ -1049,7 +1021,6 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = katalysis
-      comment[notReady] = no permission
 
       au < notReady ; 1997 ; 1 ; Revista Katálysis Volume 1997 ; 1997 ; Untrusted Server Certificate Chain >
       au < notReady ; 1998 ; 2 ; Revista Katálysis Volume 1998 ; 1998 ; Untrusted Server Certificate Chain >
@@ -1082,7 +1053,6 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = mundosdotrabalho
-      comment[notReady] = no permission
 
       au < notReady ; 2009 ; 1 ; Revista Mundos do Trabalho Volume 2009 ; 2009 ; Untrusted Server Certificate Chain >
       au < notReady ; 2010 ; 2 ; Revista Mundos do Trabalho Volume 2010 ; 2010 ; Untrusted Server Certificate Chain >
@@ -1103,7 +1073,6 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = pontodevista
-      comment[notReady] = no permission
 
       au < notReady ; 1999 ; 1 ; Revista Ponto de Vista Volume 1999 ; 1999 ; Untrusted Server Certificate Chain >
       au < notReady ; 2000 ; 2 ; Revista Ponto de Vista Volume 2000 ; 2000 ; Untrusted Server Certificate Chain >
@@ -1126,7 +1095,6 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = rpot
-      comment[notReady] = no permission
 
       au < notReady ; 2001 ; 1 ; Revista Psicologia: Organizações e Trabalho Volume 2001 ; 2001 ; Untrusted Server Certificate Chain >
       au < notReady ; 2002 ; 2 ; Revista Psicologia: Organizações e Trabalho Volume 2002 ; 2002 ; Untrusted Server Certificate Chain >
@@ -1155,7 +1123,6 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = zeroseis
-      comment[notReady] = no permission
 
       au < notReady ; 1999 ; 1 ; Revista Zero-a-seis Volume 1999 ; 1999 ; Untrusted Server Certificate Chain >
       au < notReady ; 2000 ; 2 ; Revista Zero-a-seis Volume 2000 ; 2000 ; Untrusted Server Certificate Chain >
@@ -1186,7 +1153,6 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = textodigital
-      comment[notReady] = no permission
 
       au < notReady ; 2004 ; 1 ; Revista Texto Digital Volume 2004 ; 2004 ; Untrusted Server Certificate Chain >
       au < notReady ; 2006 ; 3 ; Revista Texto Digital Volume 2006 ; 2006 ; Untrusted Server Certificate Chain >
@@ -1211,7 +1177,6 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = scientia
-      comment[notReady] = no permission
 
       au < notReady ; 2005 ; 1 ; Scientia Traductionis Volume 2005 ; 2005 ; Untrusted Server Certificate Chain >
       au < notReady ; 2006 ; 2 ; Scientia Traductionis Volume 2006 ; 2006 ; Untrusted Server Certificate Chain >
@@ -1234,7 +1199,6 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = sequencia
-      comment[notReady] = no permission
 
       au < notReady ; 1980 ; 1 ; Seqüência: Estudos Jurídicos e Políticos Volume 1980 ; 1980 ; Untrusted Server Certificate Chain >
       au < notReady ; 1981 ; 2 ; Seqüência: Estudos Jurídicos e Políticos Volume 1981 ; 1981 ; Untrusted Server Certificate Chain >
@@ -1284,7 +1248,6 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = economia
-      comment[notReady] = no permission
 
       au < notReady ; 1986 ; 1 ; Textos de Economia Volume 1986 ; 1986 ; Untrusted Server Certificate Chain >
       au < notReady ; 1987 ; 2 ; Textos de Economia Volume 1987 ; 1987 ; Untrusted Server Certificate Chain >
@@ -1315,7 +1278,6 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = travessia
-      comment[notReady] = no permission
 
       au < notReady ; 1980 ; 1 ; Travessia Volume 1980 ; 1980 ; Untrusted Server Certificate Chain >
       au < notReady ; 1981 ; 2 ; Travessia Volume 1981 ; 1981 ; Untrusted Server Certificate Chain >
@@ -1349,7 +1311,6 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = workingpapers
-      comment[notReady] = no permission
 
       au < notReady ; 1997 ; 1 ; Working Papers em Lingüística Volume 1997 ; 1997 ; Untrusted Server Certificate Chain >
       au < notReady ; 1998 ; 2 ; Working Papers em Lingüística Volume 1998 ; 1998 ; Untrusted Server Certificate Chain >
