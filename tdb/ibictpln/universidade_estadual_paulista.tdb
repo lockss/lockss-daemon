@@ -508,7 +508,6 @@
       comment[publisher] = Universidade Estadual Paulista
       param[base_url] = http://serv-bib.fcfar.unesp.br/seer/
       param[journal_id] = alimentos
-      comment[notReady] = low agreement
 
       au < released ; 1989 ; 1 ; Alimentos e Nutrição Araraquara Volume 1989 ; 1989 >
       au < released ; 1990 ; 2 ; Alimentos e Nutrição Araraquara Volume 1990 ; 1990 >
@@ -524,15 +523,15 @@
       au < released ; 2001 ; 12 ; Alimentos e Nutrição Araraquara Volume 2001 ; 2001 >
       au < released ; 2002 ; 13 ; Alimentos e Nutrição Araraquara Volume 2002 ; 2002 >
       au < released ; 2003 ; 14 ; Alimentos e Nutrição Araraquara Volume 2003 ; 2003 >
-      au < notReady ; 2004 ; 15 ; Alimentos e Nutrição Araraquara Volume 2004 ; 2004 >
+      au < ready ; 2004 ; 15 ; Alimentos e Nutrição Araraquara Volume 2004 ; 2004 >
       au < released ; 2005 ; 16 ; Alimentos e Nutrição Araraquara Volume 2005 ; 2005 >
       au < released ; 2006 ; 17 ; Alimentos e Nutrição Araraquara Volume 2006 ; 2006 >
       au < released ; 2007 ; 18 ; Alimentos e Nutrição Araraquara Volume 2007 ; 2007 >
       au < released ; 2008 ; 19 ; Alimentos e Nutrição Araraquara Volume 2008 ; 2008 >
       au < released ; 2009 ; 20 ; Alimentos e Nutrição Araraquara Volume 2009 ; 2009 >
       au < released ; 2010 ; 21 ; Alimentos e Nutrição Araraquara Volume 2010 ; 2010 >
-      au < notReady ; 2011 ; 22 ; Alimentos e Nutrição Araraquara Volume 2011 ; 2011 >
-      au < notReady ; 2012 ; 23 ; Alimentos e Nutrição Araraquara Volume 2012 ; 2012 >
+      au < ready ; 2011 ; 22 ; Alimentos e Nutrição Araraquara Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 23 ; Alimentos e Nutrição Araraquara Volume 2012 ; 2012 >
       au < manifest ; 2013 ; 24 ; Alimentos e Nutrição Araraquara Volume 2013 ; 2013 >
 
   }
