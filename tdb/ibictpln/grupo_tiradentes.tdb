@@ -48,7 +48,6 @@
       comment[publisher] = Grupo Tiradentes
       param[base_url] = https://periodicos.set.edu.br/
       param[journal_id] = humanas
-      comment[notReady] = fetch error
 
       au < released ; 2012 ; 2012 ; Revista Interfaces Científicas-Humanas e Sociais Volume 2012 ; 2012 >
       au < expected ; 2013 ; 2013 ; Revista Interfaces Científicas-Humanas e Sociais Volume 2013 ; 2013 >
@@ -65,7 +64,6 @@
       comment[publisher] = Grupo Tiradentes
       param[base_url] = https://periodicos.set.edu.br/
       param[journal_id] = saude
-      comment[notReady] = fetch error
 
       au < released ; 2012 ; 2012 ; Revista Interfaces Científicas – Saúde e Ambiente Volume 2012 ; 2012 >
       au < expected ; 2013 ; 2013 ; Revista Interfaces Científicas – Saúde e Ambiente Volume 2013 ; 2013 >

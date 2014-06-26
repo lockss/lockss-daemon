@@ -162,13 +162,12 @@
       comment[publisher] = Universidade Federal da Paraíba
       param[base_url] = http://periodicos.ufpb.br/ojs2/
       param[journal_id] = gaia
-      comment[notReady] = no substance
 
-      au < notReady ; 2007 ; 1 ; Gaia Scientia Volume 2007 ; 2007 ; toc has dead links >
+      au < notReady ; 2007 ; 1 ; Gaia Scientia Volume 2007 ; 2007 ; no articles >
       au < released ; 2008 ; 2 ; Gaia Scientia Volume 2008 ; 2008 ; >
       au < released ; 2009 ; 3 ; Gaia Scientia Volume 2009 ; 2009 ; >
       au < released ; 2010 ; 4 ; Gaia Scientia Volume 2010 ; 2010 ; >
-      au < notReady ; 2011 ; 5 ; Gaia Scientia Volume 2011 ; 2011 ; no toc >
+      au < notReady ; 2011 ; 5 ; Gaia Scientia Volume 2011 ; 2011 ; no articles >
       au < released ; 2012 ; 6 ; Gaia Scientia Volume 2012 ; 2012 ; >
       au < manifest ; 2013 ; 7 ; Gaia Scientia Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 8 ; Gaia Scientia Volume 2014 ; 2014 ; >
@@ -355,7 +354,7 @@
       comment[publisher] = Universidade Federal da Paraíba
       param[base_url] = http://periodicos.ufpb.br/ojs2/
       param[journal_id] = rle
-      comment[notReady] = repository error. Image for "Periodicos ufpb" is missing http:// in link
+      comment[v2011_12] = repository error. Image for "Periodicos ufpb" is missing http:// in link
 
       au < notReady ; 2011 ; 1 ; Revista Lugares de Educação Volume 2011 ; 2011 ; url missing http >
       au < notReady ; 2012 ; 2 ; Revista Lugares de Educação Volume 2012 ; 2012 ; url missing http >
@@ -375,7 +374,6 @@
       comment[publisher] = Universidade Federal da Paraíba
       param[base_url] = http://periodicos.ufpb.br/ojs2/
       param[journal_id] = revnebio
-      comment[notReady] = no substance
 
       au < released ; 1978 ; 1 ; Revista Nordestina de Biologia Volume 1978 ; 1978 ; >
       au < released ; 1979 ; 2 ; Revista Nordestina de Biologia Volume 1979 ; 1979 ; >
