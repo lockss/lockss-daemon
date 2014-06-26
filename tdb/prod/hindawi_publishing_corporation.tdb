@@ -6997,20 +6997,6 @@
 
   {
     title <
-      name = Journal of Experimental Physics ;
-      issn = 2356-7368 ;
-      eissn = 2314-7849 ;
-      issnl = 2356-7368
-    >
-
-    param[journal_id] = jep
-    
-    au < exists ; 2014 ; Journal of Experimental Physics Volume 2014 ; 2014 ; 2014 >
-
-  }
-
-  {
-    title <
       name = Journal of Fluids ;
       issn = 2356-7376 ;
       eissn = 2314-6826 ;
@@ -9920,9 +9906,9 @@
   {
     title <
       name = The Scientific World Journal ;
-      issn = 2090-1488 ;
-      eissn = 2090-1496 ;
-      issnl = 2090-1488
+      issn = 2356-6140 ;
+      eissn = 1537-744X ;
+      issnl = 2356-6140
     >
 
     param[journal_id] = tswj
