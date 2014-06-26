@@ -6097,9 +6097,9 @@
     >
 
     param[journal_id] = jece
-    comment[merge0] = Research Letters in Communications 2007–2009 (Merged)
-    comment[merge1] = Research Letters in Electronics 2009–2009 (Merged)
-    comment[merge2] = Research Letters in Signal Processing 2007–2009 (Merged)
+    comment[merged0] = Research Letters in Communications 2007–2009 (Merged)
+    comment[merged1] = Research Letters in Electronics 2009–2009 (Merged)
+    comment[merged2] = Research Letters in Signal Processing 2007–2009 (Merged)
 
     au < exists ; exists ; 2007 ; Journal of Electrical and Computer Engineering Volume 2007 ; 2007 ; 2007 >
     au < exists ; exists ; 2008 ; Journal of Electrical and Computer Engineering Volume 2008 ; 2008 ; 2008 >
@@ -6581,6 +6581,462 @@
     au < exists ; exists ; 2012 ; Journal of Nanomaterials Volume 2012 ; 2012 ; 2012 >
     au < exists ; exists ; 2013 ; Journal of Nanomaterials Volume 2013 ; 2013 ; 2013 >
     au < exists ; exists ; 2014 ; Journal of Nanomaterials Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Nanoparticles ;
+      issn = 2314-484X ;
+      eissn = 2314-4858 ;
+      issnl = 2314-484X
+    >
+
+    param[journal_id] = jnp
+    
+    au < exists ; exists ; 2013 ; Journal of Nanoparticles Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Nanoparticles Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Nanoscience ;
+      issn = 2356-749X ;
+      eissn = 2314-6931 ;
+      issnl = 2356-749X
+    >
+
+    param[journal_id] = jns
+    
+    au < exists ; exists ; 2013 ; Journal of Nanoscience Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Nanoscience Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Nanotechnology ;
+      issn = 1687-9503 ;
+      eissn = 1687-9511 ;
+      issnl = 1687-9503
+    >
+
+    param[journal_id] = jnt
+    comment[merged] = Research Letters in Nanotechnology 2008–2009 (Merged)
+
+    au < exists ; exists ; 2008 ; Research Letters in Nanotechnology Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; Research Letters in Nanotechnology Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; Journal of Nanotechnology Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Journal of Nanotechnology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Nanotechnology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Journal of Nanotechnology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Nanotechnology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Neurodegenerative Diseases ;
+      issn = 2090-858X ;
+      eissn = 2090-8601 ;
+      issnl = 2090-858X
+    >
+
+    param[journal_id] = jnd
+    
+    au < exists ; exists ; 2013 ; Journal of Neurodegenerative Diseases Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Neurodegenerative Diseases Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Nonlinear Dynamics ;
+      issn = 2356-7503 ;
+      eissn = 2314-6893 ;
+      issnl = 2356-7503
+    >
+
+    param[journal_id] = jndy
+    
+    au < exists ; exists ; 2013 ; Journal of Nonlinear Dynamics Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Nonlinear Dynamics Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Nuclear Chemistry ;
+      issn = 2314-4955 ;
+      eissn = 2314-4831 ;
+      issnl = 2314-4955
+    >
+
+    param[journal_id] = jnc
+    
+    au < exists ; exists ; 2013 ; Journal of Nuclear Chemistry Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Nuclear Chemistry Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Nucleic Acids ;
+      issn = 2090-0201 ;
+      eissn = 2090-021X ;
+      issnl = 2090-0201
+    >
+
+    param[journal_id] = jna
+
+    au < exists ; exists ; 2010 ; Journal of Nucleic Acids Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Journal of Nucleic Acids Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Nucleic Acids Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Journal of Nucleic Acids Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Nucleic Acids Volume 2014 ; 2014 ; 2014 >
+    
+  }
+  
+  {
+    title <
+      name = Journal of Numbers ;
+      issn = 2356-7511 ;
+      eissn = 2314-842X ;
+      issnl = 2356-7511
+    >
+
+    param[journal_id] = jn
+    
+    au < exists ; exists ; 2014 ; Journal of Numbers Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Nutrition and Metabolism ;
+      issn = 2090-0724 ;
+      eissn = 2090-0732 ;
+      issnl = 2090-0724
+    >
+
+    param[journal_id] = jnme
+
+    au < exists ; exists ; 2010 ; Journal of Nutrition and Metabolism Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Journal of Nutrition and Metabolism Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Nutrition and Metabolism Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Journal of Nutrition and Metabolism Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Nutrition and Metabolism Volume 2014 ; 2014 ; 2014 >
+    
+  }
+  
+  {
+    title <
+      name = Journal of Obesity ;
+      issn = 2090-0708 ;
+      eissn = 2090-0716 ;
+      issnl = 2090-0708
+    >
+
+    param[journal_id] = jobe
+   
+    au < exists ; exists ; 2010 ; Journal of Obesity Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Journal of Obesity Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Obesity Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Journal of Obesity Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Obesity Volume 2014 ; 2014 ; 2014 >
+    
+  }
+
+  {
+    title <
+      name = Journal of Oncology ;
+      issn = 1687-8450 ;
+      eissn = 1687-8469 ;
+      issnl = 1687-8450
+    >
+
+    param[journal_id] = jo
+
+    au < exists ; exists ; 2008 ; Journal of Oncology Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; Journal of Oncology Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; Journal of Oncology Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Journal of Oncology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Oncology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Journal of Oncology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Oncology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Operators ;
+      issn = 2314-5064 ;
+      eissn = 2314-5072 ;
+      issnl = 2314-5064
+    >
+
+    param[journal_id] = joper
+    
+    au < exists ; exists ; 2013 ; Journal of Operators Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Operators Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Ophthalmology ;
+      issn = 2090-004X ;
+      eissn = 2090-0058 ;
+      issnl = 2090-004X
+    >
+
+    param[journal_id] = joph
+
+    au < exists ; exists ; 2009 ; Journal of Ophthalmology Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; Journal of Ophthalmology Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Journal of Ophthalmology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Ophthalmology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Journal of Ophthalmology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Ophthalmology Volume 2014 ; 2014 ; 2014 >
+    
+  }
+
+  {
+    title <
+      name = Journal of Optimization ;
+      issn = 2356-752X ;
+      eissn = 2314-6486 ;
+      issnl = 2356-752X
+    >
+
+    param[journal_id] = jopti
+    
+    au < exists ; exists ; 2013 ; Journal of Optimization Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Optimization Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Oral Diseases ;
+      issn = 2356-7538 ;
+      eissn = 2314-6516 ;
+      issnl = 2356-7538
+    >
+
+    param[journal_id] = jod
+    
+    au < exists ; exists ; 2013 ; Journal of Oral Diseases Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Oral Diseases Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Oral Implants ;
+      issn = 2356-7546 ;
+      eissn = 2314-6575 ;
+      issnl = 2356-7546
+    >
+
+    param[journal_id] = joi
+    
+    au < exists ; exists ; 2014 ; Journal of Oral Implants Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Oral Oncology ;
+      issn = 2356-7554 ;
+      eissn = 2314-6591 ;
+      issnl = 2356-7554
+    >
+
+    param[journal_id] = joo
+    
+    au < exists ; exists ; 2013 ; Journal of Oral Oncology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Oral Oncology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Osteoporosis ;
+      issn = 2090-8059 ;
+      eissn = 2042-0064 ;
+      issnl = 2090-8059
+    >
+
+    param[journal_id] = jos
+
+    au < exists ; exists ; 2010 ; Journal of Osteoporosis Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Journal of Osteoporosis Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Osteoporosis Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Journal of Osteoporosis Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Osteoporosis Volume 2014 ; 2014 ; 2014 >
+    
+  }
+
+  {
+    title <
+      name = Journal of Parasitology Research ;
+      issn = 2090-0023 ;
+      eissn = 2090-0031 ;
+      issnl = 2090-0023
+    >
+
+    param[journal_id] = jpr
+
+    au < exists ; exists ; 2009 ; Journal of Parasitology Research Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; Journal of Parasitology Research Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Journal of Parasitology Research Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Parasitology Research Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Journal of Parasitology Research Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Parasitology Research Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Pathogens ;
+      issn = 2090-3057 ;
+      eissn = 2090-3065 ;
+      issnl = 2090-3057
+    >
+
+    param[journal_id] = jpath
+
+    au < exists ; exists ; 2011 ; Journal of Pathogens Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Pathogens Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Journal of Pathogens Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Pathogens Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Petroleum Engineering ;
+      issn = 2314-5005 ;
+      eissn = 2314-5013 ;
+      issnl = 2314-5005
+    >
+
+    param[journal_id] = jpe
+    
+    au < exists ; exists ; 2013 ; Journal of Petroleum Engineering Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Petroleum Engineering Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Pharmaceutics ;
+      issn = 2090-9918 ;
+      eissn = 2090-7818 ;
+      issnl = 2090-9918
+    >
+
+    param[journal_id] = jphar
+    
+    au < exists ; exists ; 2013 ; Journal of Pharmaceutics Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Pharmaceutics Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Photonics ;
+      issn = 2356-7562 ;
+      eissn = 2314-6451 ;
+      issnl = 2356-7562
+    >
+
+    param[journal_id] = jpho
+    
+    au < exists ; exists ; 2013 ; Journal of Photonics Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Photonics Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Polymers ;
+      issn = 2356-7570 ;
+      eissn = 2314-6877 ;
+      issnl = 2356-7570
+    >
+
+    param[journal_id] = jpol
+    
+    au < exists ; exists ; 2013 ; Journal of Polymers Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Polymers Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Powder Technology ;
+      issn = 2090-7710 ;
+      eissn = 2090-7737 ;
+      issnl = 2090-7710
+    >
+
+    param[journal_id] = jpt
+    
+    au < exists ; exists ; 2013 ; Journal of Powder Technology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Powder Technology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Pregnancy ;
+      issn = 2090-2727 ;
+      eissn = 2090-2735 ;
+      issnl = 2090-2727
+    >
+
+    param[journal_id] = jp
+
+    au < exists ; exists ; 2010 ; Journal of Pregnancy Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Journal of Pregnancy Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Pregnancy Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Journal of Pregnancy Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Pregnancy Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Probability ;
+      issn = 2356-7589 ;
+      eissn = 2314-8373 ;
+      issnl = 2356-7589
+    >
+
+    param[journal_id] = jprob
+    
+    au < exists ; exists ; 2014 ; Journal of Probability Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Probability and Statistics ;
+      issn = 1687-952X ;
+      eissn = 1687-9538 ;
+      issnl = 1687-952X
+    >
+
+    param[journal_id] = jps
+
+    au < exists ; exists ; 2009 ; Journal of Probability and Statistics Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; Journal of Probability and Statistics Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2012 ; Journal of Probability and Statistics Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Journal of Probability and Statistics Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Probability and Statistics Volume 2014 ; 2014 ; 2014 >
 
   }
 
