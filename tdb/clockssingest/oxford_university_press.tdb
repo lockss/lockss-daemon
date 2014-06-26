@@ -11002,7 +11002,7 @@
     param[base_url] = http://jhps.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < expected ; exists ; 2014 ; Journal of Hip Preservation Surgery Volume 1 ; 1 ; >
+    au < exists ; exists ; 2014 ; Journal of Hip Preservation Surgery Volume 1 ; 1 ; >
 
     }
 
@@ -15347,7 +15347,6 @@
 
     param[base_url] = http://neuro-oncology.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
-    comment [notReady] = 404 and 503 fetch error see RU 4388
 
     au < manifest ; exists ; 1999 ; Neuro-Oncology Volume 1 ; 1 ; >
     au < manifest ; exists ; 2000 ; Neuro-Oncology Volume 2 ; 2 ; >
@@ -15365,6 +15364,22 @@
     au < finished ; crawling ; 2012 ; Neuro-Oncology Volume 14 ; 14 ; >
     au < crawling ; exists ; 2013 ; Neuro-Oncology Volume 15 ; 15 ; >
     au < manifest ; exists ; 2014 ; Neuro-Oncology Volume 16 ; 16 ; >
+
+  }
+
+  {
+
+    title <
+      name = Neuro-Oncology Practice ;
+      issn = 2054-2577 ;
+      eissn = 2054-2585 ;
+      issnl = 2054-2577
+    >
+
+    pluginSuffix = ClockssHighWirePressH20Plugin
+    param[base_url] = http://nop.oxfordjournals.org/
+
+    au < exists ; exists ; 2014 ; Neuro-Oncology Practice Volume 1 ; 1 ; >
 
   }
 
@@ -20168,6 +20183,21 @@
     au < expected ; exists ; 2014 ; Toxicological Sciences Volume 142 ; 142 ; >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = Transactions of the London Mathematical Society ;
+      eissn = 2052-4986 ;
+      issnl = 2052-4986
+    >
+
+    param[base_url] = http://tlms.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < exists ; exists ; 2014 ; Transactions of the London Mathematical Society Volume 1 ; 1 ; >
 
   }
 

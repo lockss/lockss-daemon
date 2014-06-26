@@ -11331,7 +11331,7 @@
     param[base_url] = http://jhps.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; expected ; 2014 ; Journal of Hip Preservation Surgery Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 2014 ; Journal of Hip Preservation Surgery Volume 1 ; 1 >
 
     }
 
@@ -15823,6 +15823,23 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Neuro-Oncology Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Neuro-Oncology Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Neuro-Oncology Volume 16 ; 16 >
+
+  }
+
+  {
+
+    title <
+      name = Neuro-Oncology Practice ;
+      issn = 2054-2577 ;
+      eissn = 2054-2585 ;
+      issnl = 2054-2577
+    >
+
+    pluginPrefix = org.lockss.plugin.highwire.
+    param[base_url] = http://nop.oxfordjournals.org/
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+    au < HighWirePressH20Plugin ; exists ; 2014 ; Neuro-Oncology Practice Volume 1 ; 1 >
 
   }
 
@@ -20649,6 +20666,22 @@
     au < HighWirePressH20Plugin ; expected ; 2014 ; Toxicological Sciences Volume 142 ; 142 >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = Transactions of the London Mathematical Society ;
+      eissn = 2052-4986 ;
+      issnl = 2052-4986
+    >
+
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    implicit < status ; year ; name ; param[volume_name] >
+    param[base_url] = http://tlms.oxfordjournals.org/
+
+    au < exists ; 2014 ; Transactions of the London Mathematical Society Volume 1 ; 1 >
 
   }
 
