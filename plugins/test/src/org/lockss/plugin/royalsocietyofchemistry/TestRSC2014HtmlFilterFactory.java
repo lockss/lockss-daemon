@@ -1,5 +1,5 @@
 /*
- * $Id: TestRSC2014HtmlFilterFactory.java,v 1.2 2014-06-24 01:16:04 etenbrink Exp $
+ * $Id: TestRSC2014HtmlFilterFactory.java,v 1.3 2014-06-27 22:21:39 etenbrink Exp $
  */
 
 /*
@@ -49,17 +49,19 @@ public class TestRSC2014HtmlFilterFactory extends LockssTestCase {
     mau = new MockArchivalUnit();
   }
 
-  private static final String withScript = "<head>" +
+  private static final String withScript = "<html>" +
+      "  	<head>" +
       "<script type=\"text/javascript\">\n" + 
       "  var _gaq = _gaq || [];\n" + 
       "</script>" +
       "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>" +
       "</head>\n" +
-      "<script type=\"text/javascript\" src=\"/camcos/etc/cover.js\"></script>";
+      "<script type=\"text/javascript\" src=\"/camcos/etc/cover.js\"></script>" +
+      "</html>";
   
-  private static final String withoutScript = "<head>" +
-      "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>" +
-      "</head>\n";
+  private static final String withoutScript = "<html>" +
+      " " +
+      "</html>";
   
   private static final String withStuff = "" +
       "<html lang=\"en\" xml:lang=\"en\" xmlns:rsc=\"urn:rsc.org\" xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:content=\"http://purl.org/rss/1.0/modules/content/\" xmlns:art=\"http://www.rsc.org/schema/rscart38\" xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\" xmlns:epub=\"http://www.idpf.org/2007/ops\">" +
@@ -77,7 +79,6 @@ public class TestRSC2014HtmlFilterFactory extends LockssTestCase {
   
   private static final String withoutStuff = "" +
       "<html>" +
-      "<head></head>" +
       "<body>" +
       "</body>" +
       "</html>";
@@ -87,14 +88,15 @@ public class TestRSC2014HtmlFilterFactory extends LockssTestCase {
     assertFilterToSame(withStuff, withoutStuff);
   }
   
-  private void assertFilterToSame(String str1, String Str2) throws Exception {
+  private void assertFilterToSame(String str1, String str2) throws Exception {
     InputStream inA = fact.createFilteredInputStream(mau, new StringInputStream(str1),
         Constants.DEFAULT_ENCODING);
-    InputStream inB = fact.createFilteredInputStream(mau, new StringInputStream(Str2),
+    InputStream inB = fact.createFilteredInputStream(mau, new StringInputStream(str2),
         Constants.DEFAULT_ENCODING);
     String a = StringUtil.fromInputStream(inA);
     String b = StringUtil.fromInputStream(inB);
     assertEquals(a, b);
+    assertEquals(a, str2);
   }
   
 }
