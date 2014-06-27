@@ -18,10 +18,6 @@
       param[journal_id] = alcance
 
       au < exists ; 2010 ; 1 ; AlcanCead Volume 2010 ; 2010 >
-      au < expected ; 2011 ; 2 ; AlcanCead Volume 2011 ; 2011 >
-      au < expected ; 2012 ; 3 ; AlcanCead Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 4 ; AlcanCead Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 5 ; AlcanCead Volume 2014 ; 2014 >
 
   }
 
@@ -103,10 +99,8 @@
       au < released ; 2008 ; 1 ; Itinerarium Volume 2008 ; 2008 >
       au < released ; 2009 ; 2 ; Itinerarium Volume 2009 ; 2009 >
       au < released ; 2010 ; 3 ; Itinerarium Volume 2010 ; 2010 >
-      au < expected ; 2011 ; 4 ; Itinerarium Volume 2011 ; 2011 >
-      au < expected ; 2012 ; 5 ; Itinerarium Volume 2012 ; 2012 >
-      au < manifest ; 2013 ; 6 ; Itinerarium Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 7 ; Itinerarium Volume 2014 ; 2014 >
+      au < manifest ; 2013 ; 4 ; Itinerarium Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 5 ; Itinerarium Volume 2014 ; 2014 >
 
   }
 
