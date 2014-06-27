@@ -1,5 +1,5 @@
 /*
- * $Id: TestOnix3LongXmlMetadataExtractor.java,v 1.2 2014-01-28 21:49:44 alexandraohlson Exp $
+ * $Id: TestOnix3LongXmlMetadataExtractor.java,v 1.3 2014-06-27 18:21:35 alexandraohlson Exp $
  */
 /*
 
@@ -48,7 +48,7 @@ public class TestOnix3LongXmlMetadataExtractor extends LockssTestCase {
 
   static Logger log = Logger.getLogger(TestOnix3LongXmlMetadataExtractor.class);
 
-  private MockLockssDaemon theDaemon;
+ // private MockLockssDaemon theDaemon;
   private MockArchivalUnit mau;
 
   private static String PLUGIN_NAME = "org.lockss.plugin.clockss.onixbooks.ClockssOnix3BooksSourcePlugin";
@@ -56,29 +56,13 @@ public class TestOnix3LongXmlMetadataExtractor extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    setUpDiskSpace(); // you need this to have startService work properly...
 
-    theDaemon = getMockLockssDaemon();
     mau = new MockArchivalUnit();
-
-    theDaemon.getAlertManager();
-    theDaemon.getPluginManager().setLoadablePluginsReady(true);
-    theDaemon.setDaemonInited(true);
-    theDaemon.getPluginManager().startService();
-    theDaemon.getCrawlManager();
     mau.setConfiguration(auConfig());
 
-    /* must set up plugin to get helper name */
-    /*
-    DefinablePlugin ap = new DefinablePlugin();
-    ap.initPlugin(getMockLockssDaemon(),
-        PLUGIN_NAME);
-    mau.setPlugin(ap);
-    */
   }
 
   public void tearDown() throws Exception {
-    theDaemon.stopDaemon();
     super.tearDown();
   }
 
@@ -197,7 +181,7 @@ public class TestOnix3LongXmlMetadataExtractor extends LockssTestCase {
      mdRecord = (ArticleMetadata) mdIt.next();
      
      //Check snippet item you want to verify
-     assertEquals(mdRecord.get(MetadataField.FIELD_JOURNAL_TITLE), "The 1911/12 Book Title");
+     assertEquals(mdRecord.get(MetadataField.FIELD_PUBLICATION_TITLE), "The 1911/12 Book Title");
  }
 
  private static final String realXMLFile = "Onix3BooksSourceTest.xml";
