@@ -1,5 +1,5 @@
 /*
- * $Id: RSC2014HtmlFilterFactory.java,v 1.2 2014-06-24 01:16:52 etenbrink Exp $
+ * $Id: RSC2014HtmlFilterFactory.java,v 1.3 2014-06-27 22:06:44 etenbrink Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.plugin.royalsocietyofchemistry;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.Reader;
 import java.util.Vector;
 
 import org.htmlparser.Attribute;
@@ -44,9 +45,12 @@ import org.htmlparser.util.NodeList;
 import org.htmlparser.util.ParserException;
 import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.daemon.PluginException;
+import org.lockss.filter.FilterUtil;
+import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
+import org.lockss.util.ReaderInputStream;
 
 public class RSC2014HtmlFilterFactory implements FilterFactory {
   
@@ -60,8 +64,8 @@ public class RSC2014HtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "footer"),
         // Changeable scripts
         HtmlNodeFilters.tag("script"),
-        // remove ALL comments, for JS version number
-        HtmlNodeFilters.comment(),
+        // remove head for metadata changes and JS/CSS version number
+        HtmlNodeFilters.tag("head"),
     };
     
     // HTML transform to html attributes that are moving around
@@ -96,8 +100,10 @@ public class RSC2014HtmlFilterFactory implements FilterFactory {
       }
     };
     
-    return new HtmlFilterInputStream(in, encoding, new HtmlCompoundTransform(
-        HtmlNodeFilterTransform.exclude(new OrFilter(filters)), xform));
+    InputStream filtered =  new HtmlFilterInputStream(in, encoding,
+        new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters)), xform));
+    Reader filteredReader = FilterUtil.getReader(filtered, encoding);
+    return new ReaderInputStream(new WhiteSpaceFilter(filteredReader));
   }
   
 }
