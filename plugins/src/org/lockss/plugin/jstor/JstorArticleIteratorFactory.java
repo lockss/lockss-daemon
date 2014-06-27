@@ -1,5 +1,5 @@
 /*
- * $Id: JstorArticleIteratorFactory.java,v 1.3 2014-05-30 21:22:51 alexandraohlson Exp $
+ * $Id: JstorArticleIteratorFactory.java,v 1.4 2014-06-27 18:16:46 alexandraohlson Exp $
  */
 
 /*
@@ -28,7 +28,7 @@ Except as contained in this notice, the name of Stanford University shall not
 be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
-*/
+ */
 
 package org.lockss.plugin.jstor;
 
@@ -54,28 +54,25 @@ import org.lockss.util.Logger;
 public class JstorArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
   protected static Logger log = Logger.getLogger(JstorArticleIteratorFactory.class);
-  
-  //protected static final String ROOT_TEMPLATE = "\"%sstable/[\\.0-9]+\", base_url
+
   protected static final String ROOT_TEMPLATE = "\"%saction/\", base_url2";
-  
-    //  citations live under "https" which is base_url2
-    //https://www.jstor.org/action/downloadSingleCitationSec?format=refman&doi=10.2307/41827174
-    protected static final String PATTERN_TEMPLATE = "\"^%saction/downloadSingleCitationSec\\?format=refman&doi=\", base_url2";
-  
+
+  //  citations live under "https" which is base_url2
+  //https://www.jstor.org/action/downloadSingleCitationSec?format=refman&doi=10.2307/41827174
+  protected static final String PATTERN_TEMPLATE = "\"^%saction/downloadSingleCitationSec\\?format=refman&doi=\", base_url2";
+
+  private final Pattern RIS_PATTERN = Pattern.compile("&doi=([.0-9]+)/([^?&]+)$", Pattern.CASE_INSENSITIVE);
+  private final String RIS_REPLACEMENT = "&doi=$1/$2"; //no replacement...just the one
+
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) throws PluginException {
     SubTreeArticleIteratorBuilder builder = localBuilderCreator(au);
 
-    //([.0-9]+)/([^?^&]+)$", Pattern.CASE_INSENSITIVE);
-    final Pattern RIS_PATTERN = Pattern.compile("&doi=([.0-9]+)/([^?^&]+)$", Pattern.CASE_INSENSITIVE);
-    final String RIS_REPLACEMENT = "&doi=$1/$2"; //no replacement...just the one
-    
-        // no need to limit to ROOT_TEMPLATE
     builder.setSpec(new SubTreeArticleIterator.Spec()
     .setTarget(target)
     .setRootTemplate(ROOT_TEMPLATE)
     .setPatternTemplate(PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE));
-    
+
     // NOTE - full_text_cu is set automatically to the url used for the articlefiles
     // ultimately the metadata extractor needs to set the entire facet map 
 
@@ -86,16 +83,16 @@ public class JstorArticleIteratorFactory implements ArticleIteratorFactory, Arti
 
     return builder.getSubTreeArticleIterator();
   }
-  
+
   // Enclose the method that creates the builder to allow a child to do additional processing
   protected SubTreeArticleIteratorBuilder localBuilderCreator(ArchivalUnit au) { 
-   return new SubTreeArticleIteratorBuilder(au);
+    return new SubTreeArticleIteratorBuilder(au);
   }
-  
-  
+
+
   @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
-    throws PluginException {
+      throws PluginException {
     return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
   }
 }

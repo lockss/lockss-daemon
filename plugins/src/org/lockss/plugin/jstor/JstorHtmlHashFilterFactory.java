@@ -38,11 +38,9 @@ import org.htmlparser.util.NodeList;
 import org.htmlparser.util.ParserException;
 import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.daemon.PluginException;
-import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
-import org.lockss.util.ReaderInputStream;
 
 public class JstorHtmlHashFilterFactory implements FilterFactory {
 
@@ -110,7 +108,6 @@ public class JstorHtmlHashFilterFactory implements FilterFactory {
     };
     
     HtmlTransform xform = new HtmlTransform() {
-      //; The "id" attribute of <span> tags can have a gensym
         @Override
         public NodeList transform(NodeList nodeList) throws IOException {
           try {

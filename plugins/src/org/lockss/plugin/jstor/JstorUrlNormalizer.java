@@ -1,4 +1,8 @@
 /*
+ * $Id: JstorUrlNormalizer.java,v 1.3 2014-06-27 18:16:46 alexandraohlson Exp $
+ */
+
+/*
 
 Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -53,18 +57,25 @@ import org.lockss.plugin.*;
 public class JstorUrlNormalizer implements UrlNormalizer {
 
   protected static final String SEQ_SUFFIX = "?seq=1";
-  protected static final String ACCEPT_SUFFIX = "?&amp;acceptTC";
-  protected static final String OTHER_ACCEPT_SUFFIX = "?acceptTC=true";
+  protected static final String ACCEPT_SUFFIX = "?acceptTC=true";
+  protected static final String OTHER_ACCEPT_SUFFIX = "?&amp;acceptTC";
 
   public String normalizeUrl(String url,
       ArchivalUnit au)
           throws PluginException {
-    if ( url.contains(SEQ_SUFFIX)) {
-      return StringUtils.substringBeforeLast(url, SEQ_SUFFIX);
-    } else if ( url.contains(ACCEPT_SUFFIX)) {
-      return StringUtils.substringBeforeLast(url, ACCEPT_SUFFIX);
-    } else if ( url.contains(OTHER_ACCEPT_SUFFIX)) {
-      return StringUtils.substringBeforeLast(url, OTHER_ACCEPT_SUFFIX);
+
+    // only try to cleanup if we have an argument list 
+    if ( url.contains("?")) {
+
+      /*
+       *  This is slightly inefficient because we will only have one of the three,
+       *  but calling substringBeforeLast just returns the orig if the substring
+       *  isn't found. And this avoids doing additional comparisons just to see
+       *  if the substring is there first - which is net better.
+       */
+      url = StringUtils.substringBeforeLast(url, SEQ_SUFFIX);
+      url = StringUtils.substringBeforeLast(url, ACCEPT_SUFFIX);
+      url = StringUtils.substringBeforeLast(url, OTHER_ACCEPT_SUFFIX);
     }
     return url;
   }

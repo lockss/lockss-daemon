@@ -1,5 +1,5 @@
 /*
- * $Id: JstorRisMetadataExtractorFactory.java,v 1.2 2014-05-30 21:22:51 alexandraohlson Exp $
+ * $Id: JstorRisMetadataExtractorFactory.java,v 1.3 2014-06-27 18:16:46 alexandraohlson Exp $
  */
 
 /*
@@ -36,8 +36,6 @@ import java.io.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.apache.cxf.common.util.StringUtils;
-
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
@@ -48,7 +46,7 @@ import org.lockss.plugin.*;
  * the ROLE_METADATA is a RIS citation file
  * But before collecting and emitting, make sure the corresponding pdf or 
  * full text html is in the AU
- * because the RIS url was generated from a listed DOI
+ * because the RIS url was generated from a DOI on the TOC page
  * The RIS file will exist even for a bogus DOI, it's just that the contents
  * will be blank. So do a validation check on the RIS file.
  */
@@ -76,9 +74,6 @@ ER  -
  * Provider: JSTOR http://www.jstor.org
 Database: JSTOR
 Content: text/plain
-
-
-
 TY  - JOUR
 JO  - 
 TI  - 
@@ -93,8 +88,8 @@ Y1  -
 SP  - 
 M1  - ArticleType:  / Full publication date:  / 
 ER  - 
-
  */
+
 public class JstorRisMetadataExtractorFactory implements FileMetadataExtractorFactory {
   static Logger log = Logger.getLogger(JstorRisMetadataExtractorFactory.class);
 
@@ -103,16 +98,33 @@ public class JstorRisMetadataExtractorFactory implements FileMetadataExtractorFa
   // to check that we have full content version of the same name
   final static Pattern FILE_PATTERN = Pattern.compile("(.*)/stable/(view/|info/)?(.*)$", Pattern.CASE_INSENSITIVE);
 
+  
+  /*
+   * The base RisMetadataExtractor defines the following set tags, but Jstor
+   * uses a different set.
+   * BASE:
+   *  T1-FIELD_ARTICLE_TITLE, AU-FIELD_AUTHOR, JF-FIELD_JOURNAL_TITLE, DO-FIELD_DOI,
+   *  PB-FIELD_PUBLISHER,VL-FIELD_VOLUME, IS-FIELD_ISSUE, SP-FIELD_START_PAGE, 
+   *  EP-FIELD_END_PAGE,DA-FIELD_DATE
+   *  
+   *  In Jstor, the 
+   *      FIELD_DATE is Y1 and not DA
+   *      FIELD_ARTICLE_TITLE is TI and not T1
+   *      FIELD_PUBLICATION_TITLE is JO
+   *  we are assuming they won't also use the other tags as well
+   *       
+   */
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
       String contentType)
           throws PluginException {
     JstorRisMetadataExtractor jris = new JstorRisMetadataExtractor();
 
     jris.addRisTag("JO", MetadataField.FIELD_PUBLICATION_TITLE);
-    // UR will point to a stable URL that we won't have, don't cook this
-    //jris.addRisTag("UR", MetadataField.FIELD_ACCESS_URL);
     jris.addRisTag("Y1", MetadataField.FIELD_DATE);
     jris.addRisTag("TI", MetadataField.FIELD_ARTICLE_TITLE); // weird, but true in some cases
+    // UR will point to a stable URL that we won't have, don't cook this
+    // so that we can put in a correct value
+    // jris.addRisTag("UR", MetadataField.FIELD_ACCESS_URL);
     return jris;
   }
 
@@ -135,9 +147,6 @@ public class JstorRisMetadataExtractorFactory implements FileMetadataExtractorFa
     @Override
     public void extract(MetadataTarget target, CachedUrl cu, FileMetadataExtractor.Emitter emitter) 
         throws IOException, PluginException {
-      String doi_prefix = null;
-      String doi_suffix = null;
-
       ArticleMetadata am = super.extract(target, cu); //extracts and cooks
       // we have metadata to emit
       if (am != null) {
@@ -160,8 +169,8 @@ public class JstorRisMetadataExtractorFactory implements FileMetadataExtractorFa
           Matcher accessUrlMat = FILE_PATTERN.matcher(full_UR);
           if (accessUrlMat.matches()) {
             String filename = accessUrlMat.group(3);
-            String base = cu.getArchivalUnit().getConfiguration().get("base_url") + "stable/";
-            if (aFullFormExists(base, filename, cu, am)) {
+            String base = cu.getArchivalUnit().getConfiguration().get(ConfigParamDescr.BASE_URL.getKey()) + "stable/";
+            if (setFullForm(base, filename, cu, am)) {
               emitter.emitMetadata(cu,  am);
             }
           }
@@ -174,13 +183,14 @@ public class JstorRisMetadataExtractorFactory implements FileMetadataExtractorFa
 
     // build up several possible full form file urls and check if they exist
     // in the AU. If they do, set the FIELD_ACCESS_URL and return
-    private static boolean aFullFormExists(String base, String filename, 
+    private static boolean setFullForm(String base, String filename, 
         CachedUrl cu,
         ArticleMetadata am) {
       String newUrl;
       ArchivalUnit jau = cu.getArchivalUnit();
       CachedUrl fileCu;
 
+      // Okay to use am.put because nothing was cooked in to field during extract
       //1. pdfplus?
       newUrl = base + "pdfplus/" + filename + ".pdf";
       fileCu = jau.makeCachedUrl(newUrl);

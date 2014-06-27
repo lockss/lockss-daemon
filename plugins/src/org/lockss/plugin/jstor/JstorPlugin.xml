@@ -13,22 +13,22 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Poll</string>
-        <string>4</string>
+        <string>5</string>
       </entry>
       <entry>
         <string>Substance</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
     </map>
   </entry>
@@ -73,15 +73,15 @@
       <!-- <base>/stable/info/746318 or <base>/stable/view/746318-->
       <string>2,"^%sstable/((view|info)/)?[.0-9]+/.+", base_url, volume_name</string> 
       <string>2,"^%sstable/((view|info)/)?[i0-9]+$", base_url</string>
-      <!--  spider trap if it's like other Atypon -->
-      <string>2,"^%sstable/(pdf|pdfplus|full|media|select)/[0-9.]+/[-.9]+$", base_url</string>
+      <!--  spider trap if it's like other Atypon; doesn't matter what the intermed dir is-->
+      <string>2,"^%sstable/[^/]+/[0-9.]+/[-.9]+$", base_url</string>
       <!--  Do get pdfplus and full, if it exists with either both parts of doi or just second part -->
-      <string>1,"^%sstable/(pdfplus|full|pdf|media|select)/[.0-9]+/.+", base_url,  volume_name</string>
+      <string>1,"^%sstable/(pdfplus|full|pdf|media|select)/[.0-9]+/.+", base_url</string>
+      <!--  when the article ID is just the doi 2nd part, it is only numbers -->
       <string>1,"^%sstable/(pdfplus|full|pdf|media|select)/[0-9]+(\.pdf)?$", base_url</string>
       <!-- the media could lead to figures but only get there from "full" --> 
       <!-- the select leads to thumbnails but normalize off arguments -->
-      <!--  oddly, these do not redirect -->
-      <!--  RIS citation files: we generate these in a link extractor but must allow, they redirect to https -->
+      <!--  RIS citation files: we generate these in a link extractor but must allow, they use https -->
       <!-- https://www.jstor.org/action/downloadSingleCitationSec?format=refman&doi=10.2307/41827174 -->
       <string>1,"^%saction/downloadSingleCitationSec\?format=refman&amp;doi=", base_url2</string>
       <!-- http://www.jstor.org/action/showPopup?citid=citart1&id=abt.2013.75.6.7-f01&doi=10.1525%2Fabt.2013.75.6.7 -->
@@ -132,7 +132,8 @@
   <entry>
      <string>au_substance_url_pattern</string>
      <list>
-        <string>"^%sstable/(pdfplus|full|pdf)/[.0-9]+/[^\?^&amp;]+$", base_url</string>
+        <string>"^%sstable/(pdfplus|full|pdf)/[.0-9]+/[^\?&amp;]+$", base_url</string>
+        <!-- older uses just 2nd part of doi and it is just numbers -->
         <string>"^%sstable/(pdfplus|full|pdf)/[0-9]+(\.pdf)?$", base_url</string>        
     </list>
   </entry>
@@ -175,7 +176,7 @@
   </entry>  
   <entry>
     <string>au_def_pause_time</string>
-    <long>6000</long>
+    <long>3000</long>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>

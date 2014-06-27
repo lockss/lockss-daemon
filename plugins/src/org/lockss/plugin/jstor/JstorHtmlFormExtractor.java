@@ -1,5 +1,5 @@
 /*
- * $Id: JstorHtmlFormExtractor.java,v 1.2 2014-05-30 21:22:51 alexandraohlson Exp $
+ * $Id: JstorHtmlFormExtractor.java,v 1.3 2014-06-27 18:16:46 alexandraohlson Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.util.regex.Pattern;
 
 import org.jsoup.nodes.Node;
 import org.lockss.config.CurrentConfig;
+import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.extractor.HtmlFormExtractor;
 import org.lockss.extractor.HtmlFormExtractor.FormElementLinkExtractor;
 import org.lockss.extractor.LinkExtractor.Callback;
@@ -102,7 +103,7 @@ public class JstorHtmlFormExtractor extends HtmlFormExtractor {
             String doi1 = doiMat.group(1);
             String doi2 = doiMat.group(2);
             // ris citation uses https, not http
-            String new_base = au.getConfiguration().get("base_url2");
+            String new_base = au.getConfiguration().get(ConfigParamDescr.BASE_URL2.getKey());
 //            String newUrl = baseMat.group(1) + CITATION_URL_START + doi1 + "%2F" + doi2;
             String newUrl = new_base + CITATION_URL_START + doi1 + "/" + doi2;
             log.debug3("Generating a new link: " + newUrl);

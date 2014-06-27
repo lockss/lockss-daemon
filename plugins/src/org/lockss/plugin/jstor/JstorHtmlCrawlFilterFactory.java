@@ -51,12 +51,16 @@ public class JstorHtmlCrawlFilterFactory implements FilterFactory {
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
     // Articles referencing this article
+    // TODO - find an example of this
     HtmlNodeFilters.tagWithAttribute("div", "id", "itemsCiting"),
-    //right column 
+    //right column
+    // any full article or TOC
     HtmlNodeFilters.tagWithAttribute("div", "class", "rightCol myYahoo"),
     // next/prev can redirect if a "full" format points to one without "full" option
+    //ex. http://www.jstor.org/stable/full/10.5325/chaucerrev.47.3.0223 (prev) 
     HtmlNodeFilters.tagWithAttribute("div", "id", "issueNav"),
     // References
+    //TODO - find an example of this
     HtmlNodeFilters.tagWithAttribute("div", "id", "references"),
     //  list of references - crawl filter only 
     HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "citeList"),
