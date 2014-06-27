@@ -1,5 +1,5 @@
 /*
- * $Id: RunKbartReport.java,v 1.11 2014-06-20 22:31:18 pgust Exp $
+ * $Id: RunKbartReport.java,v 1.12 2014-06-27 03:02:54 pgust Exp $
  */
 
 /*
@@ -695,12 +695,15 @@ public class RunKbartReport {
     
     // Create an instance
     try {
+      // input from named file or stdin if "-" specified
+      String f = cl.getOptionValue(SOPT_FILE);
+      InputStream in = "-".equals(f) ? System.in : new FileInputStream(f);
       new RunKbartReport(
           pubType,
           cl.hasOption(SOPT_HIDE_EMPTY_COLS),
           cl.hasOption(SOPT_SHOW_STATUS),
           ordering,
-          new FileInputStream(cl.getOptionValue(SOPT_FILE)),
+          in,
           System.out
       );
     } catch (Exception e) {
