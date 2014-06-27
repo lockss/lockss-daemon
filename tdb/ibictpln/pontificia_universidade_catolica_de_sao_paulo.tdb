@@ -35,9 +35,6 @@
 
       au < exists ; 2009 ; 1 ; A Peste: Revista de Psicanálise e Sociedade e Filosofia Volume 2009 ; 2009 ; >
       au < exists ; 2010 ; 2 ; A Peste: Revista de Psicanálise e Sociedade e Filosofia Volume 2010 ; 2010 ; >
-      au < expected ; 2011 ; 3 ; A Peste: Revista de Psicanálise e Sociedade e Filosofia Volume 2011 ; 2011 ; >
-      au < expected ; 2012 ; 4 ; A Peste: Revista de Psicanálise e Sociedade e Filosofia Volume 2012 ; 2012 ; >
-      au < expected ; 2013 ; 5 ; A Peste: Revista de Psicanálise e Sociedade e Filosofia Volume 2013 ; 2013 ; >
 
   }
 
@@ -863,9 +860,6 @@
 
       au < exists ; 2009 ; 1 ; Revista de Computação e Tecnologia Volume 2009 ; 2009 ; >
       au < exists ; 2010 ; 2 ; Revista de Computação e Tecnologia Volume 2010 ; 2010 ; >
-      au < expected ; 2011 ; 3 ; Revista de Computação e Tecnologia Volume 2011 ; 2011 ; >
-      au < expected ; 2012 ; 4 ; Revista de Computação e Tecnologia Volume 2012 ; 2012 ; >
-      au < expected ; 2013 ; 5 ; Revista de Computação e Tecnologia Volume 2013 ; 2013 ; >
 
   }
 
@@ -880,12 +874,9 @@
       param[base_url] = http://revistas.pucsp.br/
       param[journal_id] = red
 
-      au < exists ; 2008 ; 1 ; Revista Eletrônica da Faculdade de Direito Volume 2008 ; 2008 ; >
-      au < exists ; 2009 ; 2 ; Revista Eletrônica da Faculdade de Direito Volume 2009 ; 2009 ; >
+      au < exists ; 2008 ; 1 ; Revista Eletrônica da Faculdade de Direito Volume 2008 ; 0001 ; >
+      au < exists ; 2009 ; 2 ; Revista Eletrônica da Faculdade de Direito Volume 2009 ; 0002 ; >
       au < released ; 2010 ; 3 ; Revista Eletrônica da Faculdade de Direito Volume 2010 ; 2010 ; >
-      au < expected ; 2011 ; 4 ; Revista Eletrônica da Faculdade de Direito Volume 2011 ; 2011 ; >
-      au < expected ; 2012 ; 5 ; Revista Eletrônica da Faculdade de Direito Volume 2012 ; 2012 ; >
-      au < expected ; 2013 ; 6 ; Revista Eletrônica da Faculdade de Direito Volume 2013 ; 2013 ; >
 
   }
 

@@ -79,11 +79,8 @@
       param[base_url] = http://periodicos.pucminas.br/
       param[journal_id] = cadernoscespuc
 
-      au < released ; 2009 ; 1 ; Cadernos CESPUC de Pesquisa Volume 2009 ; 2009 ; >
-      au < released ; 2010 ; 2 ; Cadernos CESPUC de Pesquisa Volume 2010 ; 2010 ; >
-      au < expected ; 2011 ; 3 ; Cadernos CESPUC de Pesquisa Volume 2011 ; 2011 ; >
-      au < expected ; 2012 ; 4 ; Cadernos CESPUC de Pesquisa Volume 2012 ; 2012 ; >
-      au < expected ; 2013 ; 5 ; Cadernos CESPUC de Pesquisa Volume 2013 ; 2013 ; >
+      au < released ; 2009 ; 18 ; Cadernos CESPUC de Pesquisa Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 19-20 ; Cadernos CESPUC de Pesquisa Volume 2010 ; 2010 ; >
 
   }
 
@@ -268,18 +265,15 @@
       param[journal_id] = fronteira
 
       au < released ; 2001 ; 1 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2001 ; 2001 ; >
-      au < released ; 2002 ; 2 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2002 ; 2002 ; >
-      au < released ; 2003 ; 3 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2003 ; 2003 ; >
-      au < released ; 2004 ; 4 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2004 ; 2004 ; >
-      au < released ; 2005 ; 5 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2005 ; 2005 ; >
-      au < released ; 2006 ; 6 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2006 ; 2006 ; >
-      au < released ; 2007 ; 7 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2007 ; 2007 ; >
-      au < released ; 2008 ; 8 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2008 ; 2008 ; >
-      au < released ; 2009 ; 9 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2009 ; 2009 ; >
-      au < released ; 2010 ; 10 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2010 ; 2010 ; >
-      au < expected ; 2011 ; 11 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2011 ; 2011 ; >
-      au < expected ; 2012 ; 12 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2012 ; 2012 ; >
-      au < expected ; 2013 ; 13 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2013 ; 2013 ; >
+      au < released ; 2002 ; 1 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2002 ; 2002 ; >
+      au < released ; 2003 ; 2 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2003 ; 2003 ; >
+      au < released ; 2004 ; 3 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 4 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 5 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 6 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 7 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 8 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 9 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2010 ; 2010 ; >
 
   }
 
