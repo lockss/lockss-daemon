@@ -1,5 +1,5 @@
 /*
- * $Id: TestRSC2014HtmlFilterFactory.java,v 1.3 2014-06-27 22:21:39 etenbrink Exp $
+ * $Id: TestRSC2014HtmlHashFilterFactory.java,v 1.1 2014-06-27 22:37:48 etenbrink Exp $
  */
 
 /*
@@ -37,15 +37,15 @@ import java.io.InputStream;
 import org.lockss.util.*;
 import org.lockss.test.*;
 
-public class TestRSC2014HtmlFilterFactory extends LockssTestCase {
+public class TestRSC2014HtmlHashFilterFactory extends LockssTestCase {
   static String ENC = Constants.DEFAULT_ENCODING;
 
-  private RSC2014HtmlFilterFactory fact;
+  private RSC2014HtmlHashFilterFactory fact;
   private MockArchivalUnit mau;
 
   public void setUp() throws Exception {
     super.setUp();
-    fact = new RSC2014HtmlFilterFactory();
+    fact = new RSC2014HtmlHashFilterFactory();
     mau = new MockArchivalUnit();
   }
 
