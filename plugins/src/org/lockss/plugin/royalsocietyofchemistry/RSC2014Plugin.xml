@@ -173,7 +173,7 @@
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.royalsocietyofchemistry.RSC2014HtmlFilterFactory</string>
+    <string>org.lockss.plugin.royalsocietyofchemistry.RSC2014HtmlHashFilterFactory</string>
   </entry>
   <entry>
     <string>application/pdf_filter_factory</string>

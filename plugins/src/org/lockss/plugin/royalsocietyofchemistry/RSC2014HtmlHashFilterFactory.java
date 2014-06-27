@@ -1,5 +1,5 @@
 /*
- * $Id: RSC2014HtmlFilterFactory.java,v 1.3 2014-06-27 22:06:44 etenbrink Exp $
+ * $Id: RSC2014HtmlHashFilterFactory.java,v 1.1 2014-06-27 22:38:38 etenbrink Exp $
  */
 
 /*
@@ -52,9 +52,9 @@ import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 import org.lockss.util.ReaderInputStream;
 
-public class RSC2014HtmlFilterFactory implements FilterFactory {
+public class RSC2014HtmlHashFilterFactory implements FilterFactory {
   
-  Logger log = Logger.getLogger(RSC2014HtmlFilterFactory.class);
+  Logger log = Logger.getLogger(RSC2014HtmlHashFilterFactory.class);
   
   public InputStream createFilteredInputStream(ArchivalUnit au, InputStream in,
                                                String encoding)
