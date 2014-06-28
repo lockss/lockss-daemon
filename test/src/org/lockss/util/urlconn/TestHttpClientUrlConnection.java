@@ -1,10 +1,10 @@
 /*
- * $Id: TestHttpClientUrlConnection.java,v 1.24 2014-06-24 06:49:07 tlipkis Exp $
+ * $Id: TestHttpClientUrlConnection.java,v 1.25 2014-06-28 17:01:22 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -199,6 +199,8 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
   }
 
   public void testServerTrustLevelDefault() throws Exception {
+    // ensure default config
+    ConfigurationUtil.setFromArgs("a", "1");
     client.setRes(201);
     conn.execute();
     assertTrue(conn.isExecuted());
