@@ -511,7 +511,7 @@
       >
 
       param[journal_issn] = 1741-5004
-      comment[0] = no issue in 2010
+      comment[0] = no issue in 2010, 2013
       
       au < manifest ; exists ; 2000-2001 ; International Journal of Agricultural Resources, Governance and Ecology Volume 1 ; 1 >
       au < manifest ; exists ; 2002-2003 ; International Journal of Agricultural Resources, Governance and Ecology Volume 2 ; 2 >
@@ -522,8 +522,7 @@
       au < manifest ; exists ; 2008 ; International Journal of Agricultural Resources, Governance and Ecology Volume 7 ; 7 >
       au < manifest ; exists ; 2009 ; International Journal of Agricultural Resources, Governance and Ecology Volume 8 ; 8 >
       au < finished ; crawling ; 2011-2012 ; International Journal of Agricultural Resources, Governance and Ecology Volume 9 ; 9 >
-      au < manifest ; exists ; 2013 ; International Journal of Agricultural Resources, Governance and Ecology Volume 10 ; 10 >
-      au < expected ; exists ; 2014 ; International Journal of Agricultural Resources, Governance and Ecology Volume 11 ; 11 >
+      au < manifest ; exists ; 2014 ; International Journal of Agricultural Resources, Governance and Ecology Volume 10 ; 10 >
       
     }
 
@@ -5591,8 +5590,7 @@
       au < manifest ; exists ; 2009 ; International Journal of Nano and Biomaterials Volume 2 ; 2 >
       au < zapped ; finished ; 2010-2011 ; International Journal of Nano and Biomaterials Volume 3 ; 3 >
       au < finished ; crawling ; 2012 ; International Journal of Nano and Biomaterials Volume 4 ; 4 >
-      au < manifest ; exists ; 2013 ; International Journal of Nano and Biomaterials Volume 5 ; 5 >
-      au < expected ; exists ; 2014 ; International Journal of Nano and Biomaterials Volume 6 ; 6 >
+      au < manifest ; exists ; 2014 ; International Journal of Nano and Biomaterials Volume 5 ; 5 >
 
     }
 
@@ -6728,9 +6726,8 @@
       au < manifest ; exists ; 2009 ; International Journal of Services and Standards Volume 5 ; 5 >
       au < finished ; crawling ; 2010 ; International Journal of Services and Standards Volume 6 ; 6 >
       au < zapped ; finished ; 2011 ; International Journal of Services and Standards Volume 7 ; 7 >
-      au < finished ; crawling ; 2012 ; International Journal of Services and Standards Volume 8 ; 8 >
-      au < manifest ; exists ; 2013 ; International Journal of Services and Standards Volume 9 ; 9 >
-      au < expected ; exists ; 2014 ; International Journal of Services and Standards Volume 10 ; 10 >
+      au < finished ; crawling ; 2012-2013 ; International Journal of Services and Standards Volume 8 ; 8 >
+      au < manifest ; exists ; 2014 ; International Journal of Services and Standards Volume 9 ; 9 >
 
     }
 
@@ -7846,8 +7843,7 @@
       
       au < finished ; crawling ; 2009-2010 ; International Journal of Ultra Wideband Communications and Systems Volume 1 ; 1 >
       au < zapped ; finished ; 2011-2012 ; International Journal of Ultra Wideband Communications and Systems Volume 2 ; 2 >
-      au < manifest ; exists ; 2013 ; International Journal of Ultra Wideband Communications and Systems Volume 3 ; 3 >
-      au < expected ; exists ; 2014 ; International Journal of Ultra Wideband Communications and Systems Volume 4 ; 4 >
+      au < manifest ; exists ; 2014 ; International Journal of Ultra Wideband Communications and Systems Volume 3 ; 3 >
 
     }
 
