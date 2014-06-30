@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>down -- initial development</string>
+    <string>testing -- initial development</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -12,8 +12,9 @@
     <string>1</string>
   </entry>
   <entry>
-    <string>required_daemon_version</string>
-    <string>1.59.2</string>
+    <!-- for Builder -->
+    <string>required_daemon_version</string> 
+    <string>1.62.0</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -21,7 +22,20 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>5</string>
+    <string>7</string>
+  </entry>
+    <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>au_name</string>
@@ -31,4 +45,51 @@
     <string>plugin_name</string>
     <string>Tangram Edizioni Scientifiche  Source Plugin (CLOCKSS)</string>
   </entry>
-</map>    
+    <entry>  <!-- From ClockssSourcePlugin; check for any changes!  -->
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%s%d/", base_url, year</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <!-- http://clockss-ingest.lockss.org/sourcefiles/tangram-released/2012/TES.xlsx -->
+      <string>"^%s%d/.+\.xlsx$", base_url, year</string>
+    </list>
+  </entry>
+  
+    <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.clockss.tangram.TangramSourceArticleIteratorFactory</string>
+  </entry>
+  <!--
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.associationforcomputingmachinery.ACMSourceArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/xml_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.associationforcomputingmachinery.ACMSourceXmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>application/xml_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.associationforcomputingmachinery.ACMSourceXmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>text/html_link_extractor_factory</string>
+    <string>org.lockss.plugin.clockss.ClockssSourceHtmlLinkExtractorFactory</string>
+  </entry
+-->
+</map>
