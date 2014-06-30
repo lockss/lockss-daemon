@@ -2599,7 +2599,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.cancerimagingjournal.com/
       param[journal_issn] = 1470-7330
 
-      au < exists ; exists ; 2014 ; Cancer Imaging Volume 14 ; 14 >
+      au < manifest ; exists ; 2014 ; Cancer Imaging Volume 14 ; 14 >
       
     }
 
@@ -2613,7 +2613,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.cgejournal.org/
       param[journal_issn] = 2052-6687
 
-      au < exists ; exists ; 2014 ; Canine Genetics and Epidemiology Volume 1 ; 1 >
+      au < manifest ; exists ; 2014 ; Canine Genetics and Epidemiology Volume 1 ; 1 >
       
     }
 
@@ -4421,7 +4421,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.jbiolres.com/
       param[journal_issn] = 2241-5793
 
-      au < exists ; exists ; 2014 ; Journal of Biological Research-Thessaloniki Volume 21 ; 21 >
+      au < manifest ; exists ; 2014 ; Journal of Biological Research-Thessaloniki Volume 21 ; 21 >
 
     }
 
@@ -5350,7 +5350,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.mmrjournal.org/
       param[journal_issn] = 2054-9369
 
-      au < exists ; exists ; 2014 ; Military Medical Research Volume 1 ; 1 >
+      au < manifest ; exists ; 2014 ; Military Medical Research Volume 1 ; 1 >
 
     }
 
