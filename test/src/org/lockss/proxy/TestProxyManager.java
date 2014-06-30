@@ -1,10 +1,10 @@
 /*
- * $Id: TestProxyManager.java,v 1.8 2014-01-18 20:45:39 tlipkis Exp $
+ * $Id: TestProxyManager.java,v 1.9 2014-06-30 04:58:14 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -134,8 +134,8 @@ public class TestProxyManager extends LockssTestCase {
       ConfigurationUtil.setFromArgs(ProxyManager.PARAM_NO_MANIFEST_INDEX_RESPONSES,
 				    val);
     } else {
-      // used to remove exiting config
-      ConfigurationUtil.setFromArgs("borkborkbork", "1");
+      // remove exiting config
+      ConfigurationUtil.resetConfig();
     }
   }
 

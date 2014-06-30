@@ -1,10 +1,10 @@
 /*
- * $Id: TestPrintStreamTarget.java,v 1.8 2012-10-30 00:12:52 tlipkis Exp $
+ * $Id: TestPrintStreamTarget.java,v 1.9 2014-06-30 04:58:14 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -44,7 +44,7 @@ public class TestPrintStreamTarget extends LockssTestCase {
     super.setUp();
     // DateFormat is stored in a static in Logger; ensure it has the
     // default value
-    ConfigurationUtil.setFromArgs("dummy", "");
+    ConfigurationUtil.resetConfig();
   }
 
   public void testOutputStringFormat1() {

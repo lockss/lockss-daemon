@@ -1,10 +1,10 @@
 /*
- * $Id: ConfigurationUtil.java,v 1.26 2014-06-20 22:20:06 tlipkis Exp $
+ * $Id: ConfigurationUtil.java,v 1.27 2014-06-30 04:58:14 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -149,6 +149,12 @@ public class ConfigurationUtil {
     props.put(prop3, val3);
     props.put(prop4, val4);
     return fromProps(props);
+  }
+
+  /** Reset the current configuration so all params have their default
+   * value */
+  public static void resetConfig() {
+    setCurrentConfigFromProps(new Properties());
   }
 
   /** Create a Configuration from the supplied property list and install

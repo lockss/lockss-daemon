@@ -1,10 +1,10 @@
 /*
- * $Id: TestConfigurationUtil.java,v 1.6 2014-06-20 22:20:06 tlipkis Exp $
+ * $Id: TestConfigurationUtil.java,v 1.7 2014-06-30 04:58:14 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -125,6 +125,19 @@ public class TestConfigurationUtil extends LockssTestCase {
     File file = FileTestUtil.writeTempFile("config", "prop1=12\nprop2=true\n");
     ConfigurationUtil.addFromFile(file.toString());
     check();
+  }
+
+  public void testResetConfig()
+      throws IOException, Configuration.InvalidParam {
+    ConfigurationUtil.setFromArgs("prop1", "12");
+    ConfigurationUtil.addFromArgs("prop2", "true");
+    Configuration config = ConfigManager.getCurrentConfig();
+    assertEquals("12", config.get("prop1"));
+    assertEquals(true, config.getBoolean("prop2"));
+    ConfigurationUtil.resetConfig();
+    config = ConfigManager.getCurrentConfig();
+    assertNull(config.get("prop1"));
+    assertNull(config.get("prop2"));
   }
 
   private String xmlSample =
