@@ -28,11 +28,12 @@
     <string>Royal Society of Chemistry 2014 Plugin (CLOCKSS)</string>
   </entry>
   <entry>
-    <string>au_def_pause_time</string>
-    <long>100</long>
-  </entry>
-  <entry>
-    <string>plugin_notes</string>
-    <string>Previous version had notes to the effect that it is NOT allowed to preserve the full-text HTML view of articles (plain or enhanced).</string>
+    <string>clockss_override</string>
+    <map>
+     <entry>
+        <string>au_def_pause_time</string>
+        <long>100</long>
+     </entry>
+    </map>
   </entry>
 </map>
