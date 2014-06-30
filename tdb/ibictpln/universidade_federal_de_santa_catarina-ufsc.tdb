@@ -78,7 +78,7 @@
       au < notReady ; 2011 ; 24 ; Biotemas Volume 2011 ; 2011 ; Untrusted Server Certificate Chain >
       au < notReady ; 2012 ; 25 ; Biotemas Volume 2012 ; 2012 ; Untrusted Server Certificate Chain >
       au < manifest ; 2013 ; 26 ; Biotemas Volume 2013 ; 2013 ; >
-      au < expected ; 2014 ; 27 ; Biotemas Volume 2014 ; 2014 ; >
+      au < manifest ; 2014 ; 27 ; Biotemas Volume 2014 ; 2014 ; >
 
   }
 
@@ -106,7 +106,7 @@
       au < notReady ; 2010 ; 14 ; Boletim de Pesquisa NELIC Volume 2010 ; 2010 ; Untrusted Server Certificate Chain >
       au < notReady ; 2011 ; 15 ; Boletim de Pesquisa NELIC Volume 2011 ; 2011 ; Untrusted Server Certificate Chain >
       au < notReady ; 2012 ; 16 ; Boletim de Pesquisa NELIC Volume 2012 ; 2012 ; Untrusted Server Certificate Chain >
-      au < expected ; 2013 ; 17 ; Boletim de Pesquisa NELIC Volume 2013 ; 2013 ; >
+      au < manifest ; 2013 ; 17 ; Boletim de Pesquisa NELIC Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 18 ; Boletim de Pesquisa NELIC Volume 2014 ; 2014 ; >
 
   }
@@ -183,7 +183,7 @@
       au < notReady ; 2011 ; 28 ; Caderno Brasileiro de Ensino de Física Volume 2011 ; 2011 ; Untrusted Server Certificate Chain >
       au < notReady ; 2012 ; 29 ; Caderno Brasileiro de Ensino de Física Volume 2012 ; 2012 ; Untrusted Server Certificate Chain >
       au < expected ; 2013 ; 30 ; Caderno Brasileiro de Ensino de Física Volume 2013 ; 2013 ; >
-      au < expected ; 2014 ; 31 ; Caderno Brasileiro de Ensino de Física Volume 2014 ; 2014 ; >
+      au < manifest ; 2014 ; 31 ; Caderno Brasileiro de Ensino de Física Volume 2014 ; 2014 ; >
 
   }
 
@@ -447,7 +447,7 @@
       au < notReady ; 2011 ; 24 ; Motrivivência Volume 2011 ; 2011 ; Untrusted Server Certificate Chain >
       au < notReady ; 2012 ; 25 ; Motrivivência Volume 2012 ; 2012 ; Untrusted Server Certificate Chain >
       au < manifest ; 2013 ; 26 ; Motrivivência Volume 2013 ; 2013 ; >
-      au < expected ; 2014 ; 27 ; Motrivivência Volume 2014 ; 2014 ; >
+      au < manifest ; 2014 ; 27 ; Motrivivência Volume 2014 ; 2014 ; >
 
   }
 
@@ -468,7 +468,7 @@
       au < notReady ; 2010 ; 8 ; Outra travessia Volume 2010 ; 2010 ; Untrusted Server Certificate Chain >
       au < notReady ; 2011 ; 9 ; Outra travessia Volume 2011 ; 2011 ; Untrusted Server Certificate Chain >
       au < notReady ; 2012 ; 10 ; Outra travessia Volume 2012 ; 2012 ; Untrusted Server Certificate Chain >
-      au < expected ; 2013 ; 11 ; Outra travessia Volume 2013 ; 2013 ; >
+      au < manifest ; 2013 ; 11 ; Outra travessia Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 12 ; Outra travessia Volume 2014 ; 2014 ; >
 
   }
@@ -496,7 +496,7 @@
       au < notReady ; 2011 ; 10 ; Política & Sociedade Volume 2011 ; 2011 ; Untrusted Server Certificate Chain >
       au < notReady ; 2012 ; 11 ; Política & Sociedade Volume 2012 ; 2012 ; Untrusted Server Certificate Chain >
       au < manifest ; 2013 ; 12 ; Política & Sociedade Volume 2013 ; 2013 ; >
-      au < expected ; 2014 ; 13 ; Política & Sociedade Volume 2014 ; 2014 ; >
+      au < manifest ; 2014 ; 13 ; Política & Sociedade Volume 2014 ; 2014 ; >
 
   }
 
@@ -1234,7 +1234,7 @@
       au < notReady ; 2011 ; 32 ; Seqüência: Estudos Jurídicos e Políticos Volume 2011 ; 2011 ; Untrusted Server Certificate Chain >
       au < notReady ; 2012 ; 33 ; Seqüência: Estudos Jurídicos e Políticos Volume 2012 ; 2012 ; Untrusted Server Certificate Chain >
       au < manifest ; 2013 ; 34 ; Seqüência: Estudos Jurídicos e Políticos Volume 2013 ; 2013 ; >
-      au < expected ; 2014 ; 35 ; Seqüência: Estudos Jurídicos e Políticos Volume 2014 ; 2014 ; >
+      au < manifest ; 2014 ; 35 ; Seqüência: Estudos Jurídicos e Políticos Volume 2014 ; 2014 ; >
 
   }
 
