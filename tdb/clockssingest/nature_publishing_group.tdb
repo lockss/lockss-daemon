@@ -312,10 +312,10 @@
     au < manifest ; exists ; 2007 ; British Dental Journal Volume 203 ; 2007 ; 203 >
     au < manifest ; exists ; 2008 ; British Dental Journal Volume 204 ; 2008 ; 204 >
     au < manifest ; exists ; 2008 ; British Dental Journal Volume 205 ; 2008 ; 205 >
-    au < manifest ; exists ; 2009 ; British Dental Journal Volume 206 ; 2009 ; 206 >
-    au < manifest ; exists ; 2009 ; British Dental Journal Volume 207 ; 2009 ; 207 >
-    au < manifest ; exists ; 2010 ; British Dental Journal Volume 208 ; 2010 ; 208 >
-    au < manifest ; exists ; 2010 ; British Dental Journal Volume 209 ; 2010 ; 209 >
+    au < testing ; exists ; 2009 ; British Dental Journal Volume 206 ; 2009 ; 206 >
+    au < testing ; exists ; 2009 ; British Dental Journal Volume 207 ; 2009 ; 207 >
+    au < testing ; exists ; 2010 ; British Dental Journal Volume 208 ; 2010 ; 208 >
+    au < testing ; exists ; 2010 ; British Dental Journal Volume 209 ; 2010 ; 209 >
     au < crawling ; exists ; 2011 ; British Dental Journal Volume 210 ; 2011 ; 210 >
     au < crawling ; exists ; 2011 ; British Dental Journal Volume 211 ; 2011 ; 211 >
     au < finished ; crawling ; 2012 ; British Dental Journal Volume 212 ; 2012 ; 212 >
@@ -3839,7 +3839,7 @@
     >
     param[journal_id] = oncsis
     
-    au < manifest ; exists ; 2012 ; Oncogenesis Volume 1 ; 2012 ; 1 >
+    au < testing ; exists ; 2012 ; Oncogenesis Volume 1 ; 2012 ; 1 >
     au < testing ; exists ; 2013 ; Oncogenesis Volume 2 ; 2013 ; 2 >
     au < manifest ; exists ; 2014 ; Oncogenesis Volume 3 ; 2014 ; 3 >
 
