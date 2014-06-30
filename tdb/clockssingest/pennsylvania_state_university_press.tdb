@@ -406,13 +406,17 @@
       eissn = 2326-067X ;
       issnl = 0078-7469
     >
+    
+      comment[v45] = no substance. Link on manifest page has errors. http://www.jstor.org/clockss/pacicoasphil/45/index.html
+      comment[v46] = only collected articles for the special issue 2. http://www.jstor.org/clockss/pacicoasphil/46/index.html
+      comment[v47] = no substance. Links on manifest page have errors.
 
       param[journal_id] = pacicoasphil
 
-      au < testing ; exists ; 2010 ; Pacific Coast Philology Volume 45 ; 45 >
-      au < testing ; exists ; 2011 ; Pacific Coast Philology Volume 46 ; 46 >
-      au < testing ; exists ; 2012 ; Pacific Coast Philology Volume 47 ; 47 >
-      au < testing ; exists ; 2013 ; Pacific Coast Philology Volume 48 ; 48 >
+      au < notReady ; exists ; 2010 ; Pacific Coast Philology Volume 45 ; 45 >
+      au < notReady ; exists ; 2011 ; Pacific Coast Philology Volume 46 ; 46 >
+      au < notReady ; exists ; 2012 ; Pacific Coast Philology Volume 47 ; 47 >
+      au < ready ; exists ; 2013 ; Pacific Coast Philology Volume 48 ; 48 >
       au < manifest ; exists ; 2014 ; Pacific Coast Philology Volume 49 ; 49 >
       
   }
