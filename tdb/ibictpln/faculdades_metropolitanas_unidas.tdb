@@ -5,6 +5,7 @@
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
     implicit < status ; year ; volume ; name ; param[year] >
+    comment[notReady] = No permission statement on manifest page.
 
   {
 
@@ -37,8 +38,8 @@
       au < exists ; 2009 ; 23 ; Revista FMU Direito Volume 23 ; 2009 >
       au < exists ; 2010 ; 24 ; Revista FMU Direito Volume 24 ; 2010 >
       au < exists ; 2011 ; 25 ; Revista FMU Direito Volume 25 ; 2011 >
-      au < testing ; 2012 ; 26 ; Revista FMU Direito Volume 26 ; 2012 >
-      au < testing ; 2013 ; 27 ; Revista FMU Direito Volume 27 ; 2013 >
+      au < notReady ; 2012 ; 26 ; Revista FMU Direito Volume 26 ; 2012 >
+      au < notReady ; 2013 ; 27 ; Revista FMU Direito Volume 27 ; 2013 >
 
   }
 
