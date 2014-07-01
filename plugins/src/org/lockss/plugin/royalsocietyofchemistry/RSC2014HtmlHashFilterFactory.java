@@ -1,5 +1,5 @@
 /*
- * $Id: RSC2014HtmlHashFilterFactory.java,v 1.1 2014-06-27 22:38:38 etenbrink Exp $
+ * $Id: RSC2014HtmlHashFilterFactory.java,v 1.2 2014-07-01 18:23:01 etenbrink Exp $
  */
 
 /*
@@ -62,6 +62,8 @@ public class RSC2014HtmlHashFilterFactory implements FilterFactory {
     NodeFilter[] filters = new NodeFilter[] {
         // Contains the current year.
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "footer"),
+        // remove header for minor changes in nav & breadcrumbs
+        HtmlNodeFilters.tagWithAttribute("div", "class", "header"),
         // Changeable scripts
         HtmlNodeFilters.tag("script"),
         // remove head for metadata changes and JS/CSS version number
