@@ -1,5 +1,5 @@
 /*
- * $Id: TestHttpClientUrlConnection.java,v 1.25 2014-06-28 17:01:22 tlipkis Exp $
+ * $Id: TestHttpClientUrlConnection.java,v 1.26 2014-07-01 18:04:24 tlipkis Exp $
  */
 
 /*
@@ -200,7 +200,7 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
 
   public void testServerTrustLevelDefault() throws Exception {
     // ensure default config
-    ConfigurationUtil.setFromArgs("a", "1");
+    ConfigurationUtil.resetConfig();
     client.setRes(201);
     conn.execute();
     assertTrue(conn.isExecuted());
@@ -239,6 +239,12 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
   }
 
   public void testServerTrustLevelCustom() throws Exception {
+    // HttpClientUrlConnection associates factory with host:port in static
+    // DispatchingSSLProtocolSocketFactory, so must use a unique host for
+    // this test
+    conn = newConn("http://another.host/");
+    method = conn.getMockMethod();
+
     LockssSecureSocketFactory secureSockFact =
       new LockssSecureSocketFactory(null, null);
     client.setRes(201);
