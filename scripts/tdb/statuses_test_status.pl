@@ -9,7 +9,7 @@ my $sub_fname = shift(@ARGV);
 open(IFILE, "<$sub_fname") ||
     die("Could not open substitution file '$sub_fname'!\n");
 while (my $line = <IFILE>) {
-    if ($line =~ m/(\S+)\t+(\S+)/) {
+    if ($line =~ m/([^\t]+)\t([^\t\n]+)/) {
         $new_text{$1} = $2;
     }
 }
