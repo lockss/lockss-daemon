@@ -1,5 +1,5 @@
 /*
- * $Id: TestRSC2014HtmlHashFilterFactory.java,v 1.1 2014-06-27 22:37:48 etenbrink Exp $
+ * $Id: TestRSC2014HtmlHashFilterFactory.java,v 1.2 2014-07-01 18:21:30 etenbrink Exp $
  */
 
 /*
@@ -67,6 +67,9 @@ public class TestRSC2014HtmlHashFilterFactory extends LockssTestCase {
       "<html lang=\"en\" xml:lang=\"en\" xmlns:rsc=\"urn:rsc.org\" xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:content=\"http://purl.org/rss/1.0/modules/content/\" xmlns:art=\"http://www.rsc.org/schema/rscart38\" xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\" xmlns:epub=\"http://www.idpf.org/2007/ops\">" +
       "<head><!--v5_4_9--></head>" +
       "<body>" +
+      "<div class=\"header\">" +
+      " <div class=\"state_version\"> Lite Version<br> </div>" +
+      "</div> " +
       "<div class=\"footer\">\n" + 
       "        <div class=\"links\">\n" + 
       "            <a title=\"Login to RSC Publishing\" tabindex=\"5\" href=\"/en/account/logon?returnurl=http%3A%2F%2Fpubs.rsc.org%2Fen%2FContent%2FArticleLanding%2F2008%2FGC%2FB710041H\" accesskey=\"l\">Login</a> \n" + 
@@ -79,7 +82,7 @@ public class TestRSC2014HtmlHashFilterFactory extends LockssTestCase {
   
   private static final String withoutStuff = "" +
       "<html>" +
-      "<body>" +
+      "<body> " +
       "</body>" +
       "</html>";
   
