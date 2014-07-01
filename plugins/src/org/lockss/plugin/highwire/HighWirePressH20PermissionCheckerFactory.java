@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20PermissionCheckerFactory.java,v 1.6 2014-06-20 20:37:20 alexandraohlson Exp $
+ * $Id: HighWirePressH20PermissionCheckerFactory.java,v 1.7 2014-07-01 19:21:10 etenbrink Exp $
  */
 
 /*
@@ -57,7 +57,8 @@ import org.lockss.util.StringUtil;
 public class HighWirePressH20PermissionCheckerFactory
   implements PermissionCheckerFactory{
   
-  protected static final Pattern H20_PATTERN = Pattern.compile("/content/.+[.]long$");
+  protected static final Pattern H20_PATTERN = Pattern.compile(
+      "((?!cgi)/content/.+[.]long$|[.]biologists[.]org/content/)");
   
   public class H20ProbePermissionChecker extends ProbePermissionChecker {
     
@@ -70,16 +71,20 @@ public class HighWirePressH20PermissionCheckerFactory
         String permissionUrl) {
       
       BufferedReader in = new BufferedReader(inputReader); 
+      boolean ret = true;
+      try {
+        in.mark(10240);
+        if (StringUtil.containsString(in, "platform = DRUPAL", true)) {
+          ret = false;
+        }
+        in.reset();
+      } catch (IOException e) {
+        logger.warning("IOException checking drupal flag", e);
+      }
       // FIXME super_checkPermission should be super.checkPermission when 
       // probeUrl and au are visible to child class
-      boolean ret = super_checkPermission(pHelper, in, permissionUrl);
       if (ret) {
-        try {
-          in.reset();
-          ret = !StringUtil.containsString(in, "platform = DRUPAL", true);
-        } catch (IOException e) {
-          logger.warning("drupal flag", e);
-        }
+        ret = super_checkPermission(pHelper, in, permissionUrl);
       }
       if (ret && probeUrl != null) {
         Matcher urlMat = H20_PATTERN.matcher(probeUrl);
