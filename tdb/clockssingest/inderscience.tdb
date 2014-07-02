@@ -1349,7 +1349,7 @@
       au < zapped ; finished ; 2011 ; International Journal of Business Intelligence and Data Mining Volume 6 ; 6 >
       au < finished ; frozen ; 2012 ; International Journal of Business Intelligence and Data Mining Volume 7 ; 7 >
       au < crawling ; exists ; 2013 ; International Journal of Business Intelligence and Data Mining Volume 8 ; 8 >
-      au < expected ; exists ; 2014 ; International Journal of Business Intelligence and Data Mining Volume 9 ; 9 >
+      au < manifest ; exists ; 2014 ; International Journal of Business Intelligence and Data Mining Volume 9 ; 9 >
 
     }
 
@@ -3866,7 +3866,7 @@
       param[journal_issn] = 1741-850X
       
       au < zapped ; finished ; 2011-2012 ; International Journal of Information Privacy, Security and Integrity Volume 1 ; 1 >
-      au < expected ; exists ; 2013 ; International Journal of Information Privacy, Security and Integrity Volume 2 ; 2 >
+      au < manifest ; exists ; 2013 ; International Journal of Information Privacy, Security and Integrity Volume 2 ; 2 >
       au < expected ; exists ; 2014 ; International Journal of Information Privacy, Security and Integrity Volume 3 ; 3 >
 
     }
@@ -6890,7 +6890,7 @@
       au < finished ; frozen ; 2010-2011 ; International Journal of Simulation and Process Modelling Volume 6 ; 6 >
       au < zapped ; finished ; 2012 ; International Journal of Simulation and Process Modelling Volume 7 ; 7 >
       au < crawling ; exists ; 2013 ; International Journal of Simulation and Process Modelling Volume 8 ; 8 >
-      au < expected ; exists ; 2014 ; International Journal of Simulation and Process Modelling Volume 9 ; 9 >
+      au < manifest ; exists ; 2014 ; International Journal of Simulation and Process Modelling Volume 9 ; 9 >
 
     }
 

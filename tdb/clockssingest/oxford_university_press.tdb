@@ -828,7 +828,7 @@
     au < crawling ; exists ; 2013 ; American Journal of Epidemiology Volume 177 ; 177 ; >
     au < crawling ; exists ; 2013 ; American Journal of Epidemiology Volume 178 ; 178 ; >
     au < manifest ; exists ; 2014 ; American Journal of Epidemiology Volume 179 ; 179 ; >
-    au < expected ; exists ; 2014 ; American Journal of Epidemiology Volume 180 ; 180 ; >
+    au < manifest ; exists ; 2014 ; American Journal of Epidemiology Volume 180 ; 180 ; >
 
     }
 
@@ -1343,7 +1343,7 @@
     au < crawling ; exists ; 2013 ; Annals of Botany Volume 111 ; 111 ; >
     au < crawling ; exists ; 2013 ; Annals of Botany Volume 112 ; 112 ; >
     au < manifest ; exists ; 2014 ; Annals of Botany Volume 113 ; 113 ; >
-    au < expected ; exists ; 2014 ; Annals of Botany Volume 114 ; 114 ; >
+    au < manifest ; exists ; 2014 ; Annals of Botany Volume 114 ; 114 ; >
 
     }
 
@@ -9993,7 +9993,7 @@
     au < crawling ; exists ; 2013 ; The Journal of Biochemistry Volume 153 ; 153 ; >
     au < crawling ; exists ; 2013 ; The Journal of Biochemistry Volume 154 ; 154 ; >
     au < manifest ; exists ; 2014 ; The Journal of Biochemistry Volume 155 ; 155 ; >
-    au < expected ; exists ; 2014 ; The Journal of Biochemistry Volume 156 ; 156 ; >
+    au < manifest ; exists ; 2014 ; The Journal of Biochemistry Volume 156 ; 156 ; >
 
     }
 
@@ -14277,7 +14277,7 @@
     au < finished ; crawling ; 2011 ; Mind Volume 120 ; 120 ; >
     au < finished ; frozen ; 2012 ; Mind Volume 121 ; 121 ; >
     au < crawling ; exists ; 2013 ; Mind Volume 122 ; 122 ; >
-    au < expected ; exists ; 2014 ; Mind Volume 123 ; 123 ; >
+    au < manifest ; exists ; 2014 ; Mind Volume 123 ; 123 ; >
 
     }
 
@@ -18410,7 +18410,7 @@
     au < crawling ; exists ; 2013 ; Radiation Protection Dosimetry Volume 156 ; 156 ; >
     au < crawling ; exists ; 2013 ; Radiation Protection Dosimetry Volume 157 ; 157 ; >
     au < manifest ; exists ; 2014 ; Radiation Protection Dosimetry Volume 158 ; 158 ; >
-    au < expected ; exists ; 2014 ; Radiation Protection Dosimetry Volume 159 ; 159 ; >
+    au < manifest ; exists ; 2014 ; Radiation Protection Dosimetry Volume 159 ; 159 ; >
     au < expected ; exists ; 2014 ; Radiation Protection Dosimetry Volume 160 ; 160 ; >
     au < expected ; exists ; 2014 ; Radiation Protection Dosimetry Volume 161 ; 161 ; >
     au < expected ; exists ; 2014 ; Radiation Protection Dosimetry Volume 162 ; 162 ; >
@@ -20178,7 +20178,7 @@
     au < manifest ; exists ; 2014 ; Toxicological Sciences Volume 137 ; 137 ; >
     au < manifest ; exists ; 2014 ; Toxicological Sciences Volume 138 ; 138 ; >
     au < manifest ; exists ; 2014 ; Toxicological Sciences Volume 139 ; 139 ; >
-    au < expected ; exists ; 2014 ; Toxicological Sciences Volume 140 ; 140 ; >
+    au < manifest ; exists ; 2014 ; Toxicological Sciences Volume 140 ; 140 ; >
     au < expected ; exists ; 2014 ; Toxicological Sciences Volume 141 ; 141 ; >
     au < expected ; exists ; 2014 ; Toxicological Sciences Volume 142 ; 142 ; >
 
@@ -20197,7 +20197,7 @@
     param[base_url] = http://tlms.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < exists ; exists ; 2014 ; Transactions of the London Mathematical Society Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2014 ; Transactions of the London Mathematical Society Volume 1 ; 1 ; >
 
   }
 
