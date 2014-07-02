@@ -1825,11 +1825,11 @@
       implicit < status ; year ; name ; param[volume_name] >
       param[journal_id] = steinbeckreview
 
-      au < exists ; 2010 ; The Steinbeck Review Volume 7 ; 7 >
-      au < exists ; 2011 ; The Steinbeck Review Volume 8 ; 8 >
-      au < exists ; 2012 ; The Steinbeck Review Volume 9 ; 9 >
-      au < exists ; 2013 ; The Steinbeck Review Volume 10 ; 10 >
-      au < expected ; 2014 ; The Steinbeck Review Volume 11 ; 11 >
+      au < exists ; 2010 ; Steinbeck Review Volume 7 ; 7 >
+      au < exists ; 2011 ; Steinbeck Review Volume 8 ; 8 >
+      au < exists ; 2012 ; Steinbeck Review Volume 9 ; 9 >
+      au < exists ; 2013 ; Steinbeck Review Volume 10 ; 10 >
+      au < expected ; 2014 ; Steinbeck Review Volume 11 ; 11 >
       
   }
 
