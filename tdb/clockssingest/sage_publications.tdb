@@ -32511,8 +32511,8 @@
         
           pluginSuffix = ClockssHighWireDrupalPlugin
 
-          au < manifest ; exists ; 2011 ; Sage Open Volume 1 ; 1 ; >
-          au < manifest ; exists ; 2012 ; Sage Open Volume 2 ; 2 ; >
+          au < doNotProcess ; exists ; 2011 ; Sage Open Volume 1 ; 1 ; >
+          au < doNotProcess ; exists ; 2012 ; Sage Open Volume 2 ; 2 ; >
           au < manifest ; exists ; 2013 ; Sage Open Volume 3 ; 3 ; >
           au < manifest ; exists ; 2014 ; Sage Open Volume 4 ; 4 ; >
         
