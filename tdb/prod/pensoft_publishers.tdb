@@ -13,7 +13,8 @@
    {
      title <
       name = Biodiversity Data Journal ;
-      eissn = 1314-2828 
+      eissn = 1314-2828 ;
+      comment[0] = This journal is at a different url http://biodiversitydatajournal.com
      >
 
    }
@@ -57,6 +58,17 @@
 
    }
 
+   {
+     title <
+      name = Deutsche Entomologische Zeitschrift ;
+      issn = 1435-1951 ;
+      eissn = 1860-1324
+     >
+     
+     param[journal_name] = dez
+
+   }
+   
    {
 
     title <
@@ -147,6 +159,17 @@
    {
 
     title <
+      name = Nota Lepidopterologica ;
+      issn = 0342-7536
+    >
+    
+    param[journal_name] = nl
+    
+   }
+
+   {
+
+    title <
       name = PhytoKeys ;
       issn = 1314-2011 ;
       eissn = 1314-2003 ;
@@ -201,6 +224,18 @@
     au < manifest ; 2014 ; 2014 ; ZooKeys Issues 343-430 ; 343-430 >
 
    }
+   
+   {
+
+    title <
+      name = Zoosystematics and Evolution ;
+      issn = 1435-1935 ;
+      eissn = 1860-0743
+    >
+
+    param[journal_name] = zse
+
+    }
 
   }
 
