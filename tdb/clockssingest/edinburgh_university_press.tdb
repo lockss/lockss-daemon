@@ -23,13 +23,13 @@
     comment[2011] = from 2011 published by Cambridge University Press
     comment[proxy] = reingest2.clockss.org:8085
 
-    au < down ; crawling ; 2000 ; Africa: The Journal of the International African Institute Volume 70 ; 70 >
-    au < down ; crawling ; 2001 ; Africa: The Journal of the International African Institute Volume 71 ; 71 >
+    au < down ; frozen ; 2000 ; Africa: The Journal of the International African Institute Volume 70 ; 70 >
+    au < down ; frozen ; 2001 ; Africa: The Journal of the International African Institute Volume 71 ; 71 >
     au < down ; crawling ; 2002 ; Africa: The Journal of the International African Institute Volume 72 ; 72 >
     au < down ; crawling ; 2003 ; Africa: The Journal of the International African Institute Volume 73 ; 73 >
     au < down ; crawling ; 2004 ; Africa: The Journal of the International African Institute Volume 74 ; 74 >
     au < down ; crawling ; 2005 ; Africa: The Journal of the International African Institute Volume 75 ; 75 >
-    au < down ; crawling ; 2006 ; Africa: The Journal of the International African Institute Volume 76 ; 76 >
+    au < down ; frozen ; 2006 ; Africa: The Journal of the International African Institute Volume 76 ; 76 >
     au < down ; crawling ; 2007 ; Africa: The Journal of the International African Institute Volume 77 ; 77 >
     au < down ; crawling ; 2008 ; Africa: The Journal of the International African Institute Volume 78 ; 78 >
     au < down ; crawling ; 2009 ; Africa: The Journal of the International African Institute Volume 79 ; 79 >
@@ -53,9 +53,9 @@
     au < down ; crawling ; 2004 ; Africa Bibliography Volume 2004 ; 2004 >
     au < down ; crawling ; 2005 ; Africa Bibliography Volume 2005 ; 2005 >
     au < down ; crawling ; 2006 ; Africa Bibliography Volume 2006 ; 2006 >
-    au < down ; crawling ; 2008 ; Africa Bibliography Volume 2007 (2008) ; 2007 >
+    au < down ; frozen ; 2008 ; Africa Bibliography Volume 2007 (2008) ; 2007 >
     au < down ; crawling ; 2009 ; Africa Bibliography Volume 2008 (2009) ; 2008 >
-    au < down ; crawling ; 2010 ; Africa Bibliography Volume 2009 (2010) ; 2009 >
+    au < down ; frozen ; 2010 ; Africa Bibliography Volume 2009 (2010) ; 2009 >
 
   }
 
@@ -72,9 +72,9 @@
 
     au < finished ; crawling ; 2005 ; African Journal of International and Comparative Law Volume 13 ; 13 >
     au < finished ; crawling ; 2006 ; African Journal of International and Comparative Law Volume 14 ; 14 >
-    au < finished ; crawling ; 2007 ; African Journal of International and Comparative Law Volume 15 ; 15 >
-    au < finished ; crawling ; 2008 ; African Journal of International and Comparative Law Volume 16 ; 16 >
-    au < finished ; crawling ; 2009 ; African Journal of International and Comparative Law Volume 17 ; 17 >
+    au < finished ; frozen ; 2007 ; African Journal of International and Comparative Law Volume 15 ; 15 >
+    au < finished ; frozen ; 2008 ; African Journal of International and Comparative Law Volume 16 ; 16 >
+    au < finished ; frozen ; 2009 ; African Journal of International and Comparative Law Volume 17 ; 17 >
     au < finished ; crawling ; 2010 ; African Journal of International and Comparative Law Volume 18 ; 18 >
     au < finished ; crawling ; 2011 ; African Journal of International and Comparative Law Volume 19 ; 19 >
     au < finished ; crawling ; 2012 ; African Journal of International and Comparative Law Volume 20 ; 20 >
@@ -96,8 +96,8 @@
     param[journal_id] = arch
     comment[0] = Volumes 19 and 20 are currently represented as Arabic numerals on the website.
 
-    au < finished ; crawling ; 2003 ; Architectural Heritage Volume 14 ; 14 >
-    au < finished ; crawling ; 2004 ; Architectural Heritage Volume 15 ; 15 >
+    au < finished ; frozen ; 2003 ; Architectural Heritage Volume 14 ; 14 >
+    au < finished ; frozen ; 2004 ; Architectural Heritage Volume 15 ; 15 >
     au < finished ; crawling ; 2005 ; Architectural Heritage Volume 16 ; 16 >
     au < finished ; crawling ; 2006 ; Architectural Heritage Volume 17 ; 17 >
     au < finished ; crawling ; 2007 ; Architectural Heritage Volume 18 ; 18 >
@@ -125,13 +125,13 @@
     param[journal_id] = anh
 
     au < finished ; crawling ; 2003 ; Archives of Natural History Volume 30 ; 30 >
-    au < finished ; crawling ; 2004 ; Archives of Natural History Volume 31 ; 31 >
-    au < finished ; crawling ; 2005 ; Archives of Natural History Volume 32 ; 32 >
+    au < finished ; frozen ; 2004 ; Archives of Natural History Volume 31 ; 31 >
+    au < finished ; frozen ; 2005 ; Archives of Natural History Volume 32 ; 32 >
     au < finished ; crawling ; 2006 ; Archives of Natural History Volume 33 ; 33 >
     au < finished ; crawling ; 2007 ; Archives of Natural History Volume 34 ; 34 >
-    au < finished ; crawling ; 2008 ; Archives of Natural History Volume 35 ; 35 >
-    au < finished ; crawling ; 2009 ; Archives of Natural History Volume 36 ; 36 >
-    au < finished ; crawling ; 2010 ; Archives of Natural History Volume 37 ; 37 >
+    au < finished ; frozen ; 2008 ; Archives of Natural History Volume 35 ; 35 >
+    au < finished ; frozen ; 2009 ; Archives of Natural History Volume 36 ; 36 >
+    au < finished ; frozen ; 2010 ; Archives of Natural History Volume 37 ; 37 >
     au < finished ; crawling ; 2011 ; Archives of Natural History Volume 38 ; 38 >
     au < finished ; crawling ; 2012 ; Archives of Natural History Volume 39 ; 39 >
     au < crawling ; exists ; 2013 ; Archives of Natural History Volume 40 ; 40 >
@@ -153,7 +153,7 @@
     au < finished ; crawling ; 2007 ; Ben Jonson Journal Volume 14 ; 14 >
     au < finished ; crawling ; 2008 ; Ben Jonson Journal Volume 15 ; 15 >
     au < finished ; crawling ; 2009 ; Ben Jonson Journal Volume 16 ; 16 >
-    au < finished ; crawling ; 2010 ; Ben Jonson Journal Volume 17 ; 17 >
+    au < finished ; frozen ; 2010 ; Ben Jonson Journal Volume 17 ; 17 >
     au < finished ; crawling ; 2011 ; Ben Jonson Journal Volume 18 ; 18 >
     au < finished ; crawling ; 2012 ; Ben Jonson Journal Volume 19 ; 19 >
     au < crawling ; exists ; 2013 ; Ben Jonson Journal Volume 20 ; 20 >
@@ -219,12 +219,12 @@
     param[journal_id] = cor
 
     au < finished ; crawling ; 2006 ; Corpora Volume 1 ; 1 >
-    au < finished ; crawling ; 2007 ; Corpora Volume 2 ; 2 >
-    au < finished ; crawling ; 2008 ; Corpora Volume 3 ; 3 >
-    au < finished ; crawling ; 2009 ; Corpora Volume 4 ; 4 >
+    au < finished ; frozen ; 2007 ; Corpora Volume 2 ; 2 >
+    au < finished ; frozen ; 2008 ; Corpora Volume 3 ; 3 >
+    au < finished ; frozen ; 2009 ; Corpora Volume 4 ; 4 >
     au < finished ; crawling ; 2010 ; Corpora Volume 5 ; 5 >
     au < finished ; crawling ; 2011 ; Corpora Volume 6 ; 6 >
-    au < finished ; crawling ; 2012 ; Corpora Volume 7 ; 7 >
+    au < finished ; frozen ; 2012 ; Corpora Volume 7 ; 7 >
     au < crawling ; exists ; 2013 ; Corpora Volume 8 ; 8 >
     au < manifest ; exists ; 2014 ; Corpora Volume 9 ; 9 >
 
@@ -271,11 +271,11 @@
     param[journal_id] = dls
 
     au < finished ; crawling ; 2007 ; Deleuze Studies Volume 1 ; 1 >
-    au < finished ; crawling ; 2008 ; Deleuze Studies Volume 2 ; 2 >
+    au < finished ; frozen ; 2008 ; Deleuze Studies Volume 2 ; 2 >
     au < finished ; crawling ; 2009 ; Deleuze Studies Volume 3 ; 3 >
     au < finished ; crawling ; 2010 ; Deleuze Studies Volume 4 ; 4 >
     au < finished ; crawling ; 2011 ; Deleuze Studies Volume 5 ; 5 >
-    au < finished ; crawling ; 2012 ; Deleuze Studies Volume 6 ; 6 >
+    au < finished ; frozen ; 2012 ; Deleuze Studies Volume 6 ; 6 >
     au < crawling ; exists ; 2013 ; Deleuze Studies Volume 7 ; 7 >
     au < manifest ; exists ; 2014 ; Deleuze Studies Volume 8 ; 8 >
 
@@ -293,7 +293,7 @@
     param[journal_id] = drt
 
     au < finished ; crawling ; 2008 ; Derrida Today Volume 1 ; 1 >
-    au < finished ; crawling ; 2009 ; Derrida Today Volume 2 ; 2 >
+    au < finished ; frozen ; 2009 ; Derrida Today Volume 2 ; 2 >
     au < finished ; crawling ; 2010 ; Derrida Today Volume 3 ; 3 >
     au < finished ; crawling ; 2011 ; Derrida Today Volume 4 ; 4 >
     au < finished ; crawling ; 2012 ; Derrida Today Volume 5 ; 5 >
@@ -313,15 +313,15 @@
 
     param[journal_id] = elr
 
-    au < finished ; crawling ; 2004 ; Edinburgh Law Review Volume 8 ; 8 >
-    au < finished ; crawling ; 2005 ; Edinburgh Law Review Volume 9 ; 9 >
+    au < finished ; frozen ; 2004 ; Edinburgh Law Review Volume 8 ; 8 >
+    au < finished ; frozen ; 2005 ; Edinburgh Law Review Volume 9 ; 9 >
     au < finished ; crawling ; 2006 ; Edinburgh Law Review Volume 10 ; 10 >
-    au < finished ; crawling ; 2007 ; Edinburgh Law Review Volume 11 ; 11 >
-    au < finished ; crawling ; 2008 ; Edinburgh Law Review Volume 12 ; 12 >
-    au < finished ; crawling ; 2009 ; Edinburgh Law Review Volume 13 ; 13 >
+    au < finished ; frozen ; 2007 ; Edinburgh Law Review Volume 11 ; 11 >
+    au < finished ; frozen ; 2008 ; Edinburgh Law Review Volume 12 ; 12 >
+    au < finished ; frozen ; 2009 ; Edinburgh Law Review Volume 13 ; 13 >
     au < finished ; crawling ; 2010 ; Edinburgh Law Review Volume 14 ; 14 >
     au < finished ; crawling ; 2011 ; Edinburgh Law Review Volume 15 ; 15 >
-    au < finished ; crawling ; 2012 ; Edinburgh Law Review Volume 16 ; 16 >
+    au < finished ; frozen ; 2012 ; Edinburgh Law Review Volume 16 ; 16 >
     au < crawling ; exists ; 2013 ; Edinburgh Law Review Volume 17 ; 17 >
     au < manifest ; exists ; 2014 ; Edinburgh Law Review Volume 18 ; 18 >
 
@@ -344,7 +344,7 @@
     au < down ; crawling ; 2006 ; Episteme Volume 3 ; 3 >
     au < down ; crawling ; 2007 ; Episteme Volume 4 ; 4 >
     au < down ; crawling ; 2008 ; Episteme Volume 5 ; 5 >
-    au < down ; crawling ; 2009 ; Episteme Volume 6 ; 6 >
+    au < down ; frozen ; 2009 ; Episteme Volume 6 ; 6 >
     au < down ; crawling ; 2010 ; Episteme Volume 7 ; 7 >
     au < down ; crawling ; 2011 ; Episteme Volume 8 ; 8 >
 
@@ -362,12 +362,12 @@
     param[journal_id] = hls
 
     au < finished ; crawling ; 2004 ; Holy Land Studies Volume 3 ; 3 >
-    au < finished ; crawling ; 2005 ; Holy Land Studies Volume 4 ; 4 >
+    au < finished ; frozen ; 2005 ; Holy Land Studies Volume 4 ; 4 >
     au < finished ; crawling ; 2006 ; Holy Land Studies Volume 5 ; 5 >
-    au < finished ; crawling ; 2007 ; Holy Land Studies Volume 6 ; 6 >
+    au < finished ; frozen ; 2007 ; Holy Land Studies Volume 6 ; 6 >
     au < finished ; crawling ; 2008 ; Holy Land Studies Volume 7 ; 7 >
-    au < finished ; crawling ; 2009 ; Holy Land Studies Volume 8 ; 8 >
-    au < finished ; crawling ; 2010 ; Holy Land Studies Volume 9 ; 9 >
+    au < finished ; frozen ; 2009 ; Holy Land Studies Volume 8 ; 8 >
+    au < finished ; frozen ; 2010 ; Holy Land Studies Volume 9 ; 9 >
     au < finished ; crawling ; 2011 ; Holy Land Studies Volume 10 ; 10 >
     au < finished ; crawling ; 2012 ; Holy Land Studies Volume 11 ; 11 >
     au < crawling ; exists ; 2013 ; Holy Land Studies Volume 12 ; 12 >
@@ -388,7 +388,7 @@
 
     au < finished ; crawling ; 2004 ; The Innes Review Volume 55 ; 55 >
     au < finished ; crawling ; 2005 ; The Innes Review Volume 56 ; 56 >
-    au < finished ; crawling ; 2006 ; The Innes Review Volume 57 ; 57 >
+    au < finished ; frozen ; 2006 ; The Innes Review Volume 57 ; 57 >
     au < finished ; crawling ; 2007 ; The Innes Review Volume 58 ; 58 >
     au < finished ; crawling ; 2008 ; The Innes Review Volume 59 ; 59 >
     au < finished ; crawling ; 2009 ; The Innes Review Volume 60 ; 60 >
@@ -475,11 +475,11 @@
 
     param[journal_id] = ircl
 
-    au < finished ; crawling ; 2008 ; International Research in Children's Literature Volume 1 ; 1 >
-    au < finished ; crawling ; 2009 ; International Research in Children's Literature Volume 2 ; 2 >
-    au < finished ; crawling ; 2010 ; International Research in Children's Literature Volume 3 ; 3 >
+    au < finished ; frozen ; 2008 ; International Research in Children's Literature Volume 1 ; 1 >
+    au < finished ; frozen ; 2009 ; International Research in Children's Literature Volume 2 ; 2 >
+    au < finished ; frozen ; 2010 ; International Research in Children's Literature Volume 3 ; 3 >
     au < finished ; crawling ; 2011 ; International Research in Children's Literature Volume 4 ; 4 >
-    au < finished ; crawling ; 2012 ; International Research in Children's Literature Volume 5 ; 5 >
+    au < finished ; frozen ; 2012 ; International Research in Children's Literature Volume 5 ; 5 >
     au < crawling ; exists ; 2013 ; International Research in Children's Literature Volume 6 ; 6 >
     au < manifest ; exists ; 2014 ; International Research in Children's Literature Volume 7 ; 7 >
 
@@ -517,8 +517,8 @@
 
     param[journal_id] = jobs
 
-    au < finished ; crawling ; 2008 ; Journal of Beckett Studies Volume 17 ; 17 >
-    au < finished ; crawling ; 2009 ; Journal of Beckett Studies Volume 18 ; 18 >
+    au < finished ; frozen ; 2008 ; Journal of Beckett Studies Volume 17 ; 17 >
+    au < finished ; frozen ; 2009 ; Journal of Beckett Studies Volume 18 ; 18 >
     au < finished ; crawling ; 2010 ; Journal of Beckett Studies Volume 19 ; 19 >
     au < finished ; crawling ; 2011 ; Journal of Beckett Studies Volume 20 ; 20 >
     au < finished ; crawling ; 2012 ; Journal of Beckett Studies Volume 21 ; 21 >
@@ -568,7 +568,7 @@
     au < finished ; crawling ; 2007 ; Journal of International Political Theory Volume 3 ; 3 >
     au < finished ; crawling ; 2008 ; Journal of International Political Theory Volume 4 ; 4 >
     au < finished ; crawling ; 2009 ; Journal of International Political Theory Volume 5 ; 5 >
-    au < finished ; crawling ; 2010 ; Journal of International Political Theory Volume 6 ; 6 >
+    au < finished ; frozen ; 2010 ; Journal of International Political Theory Volume 6 ; 6 >
     au < finished ; crawling ; 2011 ; Journal of International Political Theory Volume 7 ; 7 >
     au < crawling ; exists ; 2012 ; Journal of International Political Theory Volume 8 ; 8 >
     au < crawling ; exists ; 2013 ; Journal of International Political Theory Volume 9 ; 9 >
@@ -589,7 +589,7 @@
 
     au < finished ; crawling ; 2005 ; Journal of Qur'anic Studies Volume 7 ; 7 >
     au < finished ; crawling ; 2006 ; Journal of Qur'anic Studies Volume 8 ; 8 >
-    au < finished ; crawling ; 2007 ; Journal of Qur'anic Studies Volume 9 ; 9 >
+    au < finished ; frozen ; 2007 ; Journal of Qur'anic Studies Volume 9 ; 9 >
     au < finished ; crawling ; 2008 ; Journal of Qur'anic Studies Volume 10 ; 10 >
     au < finished ; crawling ; 2009 ; Journal of Qur'anic Studies Volume 11 ; 11 >
     au < finished ; crawling ; 2010 ; Journal of Qur'anic Studies Volume 12 ; 12 >
@@ -652,7 +652,7 @@
     au < finished ; crawling ; 2006 ; Journal of Scottish Historical Studies Volume 26 ; 26 >
     au < finished ; crawling ; 2007 ; Journal of Scottish Historical Studies Volume 27 ; 27 >
     au < finished ; crawling ; 2008 ; Journal of Scottish Historical Studies Volume 28 ; 28 >
-    au < finished ; crawling ; 2009 ; Journal of Scottish Historical Studies Volume 29 ; 29 >
+    au < finished ; frozen ; 2009 ; Journal of Scottish Historical Studies Volume 29 ; 29 >
     au < finished ; crawling ; 2010 ; Journal of Scottish Historical Studies Volume 30 ; 30 >
     au < finished ; crawling ; 2011 ; Journal of Scottish Historical Studies Volume 31 ; 31 >
     au < finished ; crawling ; 2012 ; Journal of Scottish Historical Studies Volume 32 ; 32 >
@@ -678,7 +678,7 @@
     au < finished ; crawling ; 2006 ; Journal of Scottish Philosophy Volume 4 ; 4 >
     au < finished ; crawling ; 2007 ; Journal of Scottish Philosophy Volume 5 ; 5 >
     au < finished ; crawling ; 2008 ; Journal of Scottish Philosophy Volume 6 ; 6 >
-    au < finished ; crawling ; 2009 ; Journal of Scottish Philosophy Volume 7 ; 7 >
+    au < finished ; frozen ; 2009 ; Journal of Scottish Philosophy Volume 7 ; 7 >
     au < finished ; crawling ; 2010 ; Journal of Scottish Philosophy Volume 8 ; 8 >
     au < finished ; crawling ; 2011 ; Journal of Scottish Philosophy Volume 9 ; 9 >
     au < finished ; crawling ; 2012 ; Journal of Scottish Philosophy Volume 10 ; 10 >
@@ -701,10 +701,10 @@
     comment[continued_by] = 9780748669097
     comment[0] = From 2013, this journal is available as an annual book publication
 
-    au < finished ; crawling ; 2009 ; Katherine Mansfield Studies Volume 1 ; 1 >
-    au < finished ; crawling ; 2010 ; Katherine Mansfield Studies Volume 2 ; 2 >
-    au < finished ; crawling ; 2011 ; Katherine Mansfield Studies Volume 3 ; 3 >
-    au < finished ; crawling ; 2012 ; Katherine Mansfield Studies Volume 4 ; 4 >
+    au < finished ; frozen ; 2009 ; Katherine Mansfield Studies Volume 1 ; 1 >
+    au < finished ; frozen ; 2010 ; Katherine Mansfield Studies Volume 2 ; 2 >
+    au < finished ; frozen ; 2011 ; Katherine Mansfield Studies Volume 3 ; 3 >
+    au < finished ; frozen ; 2012 ; Katherine Mansfield Studies Volume 4 ; 4 >
 
   }
 
@@ -738,13 +738,13 @@
 
     param[journal_id] = mod
 
-    au < finished ; crawling ; 2005 ; Modernist Cultures Volume 1 ; 1 >
-    au < finished ; crawling ; 2006 ; Modernist Cultures Volume 2 ; 2 >
+    au < finished ; frozen ; 2005 ; Modernist Cultures Volume 1 ; 1 >
+    au < finished ; frozen ; 2006 ; Modernist Cultures Volume 2 ; 2 >
     au < finished ; crawling ; 2007-2008 ; Modernist Cultures Volume 3 ; 3 >
-    au < finished ; crawling ; 2009 ; Modernist Cultures Volume 4 ; 4 >
-    au < finished ; crawling ; 2010 ; Modernist Cultures Volume 5 ; 5 >
+    au < finished ; frozen ; 2009 ; Modernist Cultures Volume 4 ; 4 >
+    au < finished ; frozen ; 2010 ; Modernist Cultures Volume 5 ; 5 >
     au < finished ; crawling ; 2011 ; Modernist Cultures Volume 6 ; 6 >
-    au < finished ; crawling ; 2012 ; Modernist Cultures Volume 7 ; 7 >
+    au < finished ; frozen ; 2012 ; Modernist Cultures Volume 7 ; 7 >
     au < crawling ; exists ; 2013 ; Modernist Cultures Volume 8 ; 8 >
     au < manifest ; exists ; 2014 ; Modernist Cultures Volume 9 ; 9 >
 
@@ -763,7 +763,7 @@
     param[journal_id] = sound
 
     au < finished ; crawling ; 2011 ; The New Soundtrack Volume 1 ; 1 >
-    au < finished ; crawling ; 2012 ; The New Soundtrack Volume 2 ; 2 >
+    au < finished ; frozen ; 2012 ; The New Soundtrack Volume 2 ; 2 >
     au < crawling ; exists ; 2013 ; The New Soundtrack Volume 3 ; 3 >
     au < manifest ; exists ; 2014 ; The New Soundtrack Volume 4 ; 4 >
 
@@ -781,8 +781,8 @@
     param[journal_id] = nor
 
     au < finished ; crawling ; 2010 ; Northern Scotland Volume 1 ; 1 >
-    au < finished ; crawling ; 2011 ; Northern Scotland Volume 2 ; 2 >
-    au < finished ; crawling ; 2012 ; Northern Scotland Volume 3 ; 3 >
+    au < finished ; frozen ; 2011 ; Northern Scotland Volume 2 ; 2 >
+    au < finished ; frozen ; 2012 ; Northern Scotland Volume 3 ; 3 >
     au < crawling ; exists ; 2013 ; Northern Scotland Volume 4 ; 4 >
     au < manifest ; exists ; 2014 ; Northern Scotland Volume 5 ; 5 >
 
@@ -875,7 +875,7 @@
     au < finished ; crawling ; 2009 ; Oxford Literary Review Volume 31 ; 31 >
     au < finished ; crawling ; 2010 ; Oxford Literary Review Volume 32 ; 32 >
     au < finished ; crawling ; 2011 ; Oxford Literary Review Volume 33 ; 33 >
-    au < finished ; crawling ; 2012 ; Oxford Literary Review Volume 34 ; 34 >
+    au < finished ; frozen ; 2012 ; Oxford Literary Review Volume 34 ; 34 >
     au < crawling ; exists ; 2013 ; Oxford Literary Review Volume 35 ; 35 >
     au < manifest ; exists ; 2014 ; Oxford Literary Review Volume 36 ; 36 >
  
@@ -893,7 +893,7 @@
     param[journal_id] = para
 
     au < finished ; crawling ; 2001 ; Paragraph Volume 24 ; 24 >
-    au < finished ; crawling ; 2002 ; Paragraph Volume 25 ; 25 >
+    au < finished ; frozen ; 2002 ; Paragraph Volume 25 ; 25 >
     au < finished ; crawling ; 2003 ; Paragraph Volume 26 ; 26 >
     au < finished ; crawling ; 2004 ; Paragraph Volume 27 ; 27 >
     au < finished ; crawling ; 2005 ; Paragraph Volume 28 ; 28 >
@@ -1048,13 +1048,13 @@
     au < finished ; crawling ; 2000 ; Scottish Archaeological Journal Volume 22 ; 22 >
     au < finished ; crawling ; 2001 ; Scottish Archaeological Journal Volume 23 ; 23 >
     au < finished ; crawling ; 2002 ; Scottish Archaeological Journal Volume 24 ; 24 >
-    au < finished ; crawling ; 2003 ; Scottish Archaeological Journal Volume 25 ; 25 >
-    au < finished ; crawling ; 2004 ; Scottish Archaeological Journal Volume 26 ; 26 >
+    au < finished ; frozen ; 2003 ; Scottish Archaeological Journal Volume 25 ; 25 >
+    au < finished ; frozen ; 2004 ; Scottish Archaeological Journal Volume 26 ; 26 >
     au < finished ; crawling ; 2005 ; Scottish Archaeological Journal Volume 27 ; 27 >
-    au < finished ; crawling ; 2006 ; Scottish Archaeological Journal Volume 28 ; 28 >
+    au < finished ; frozen ; 2006 ; Scottish Archaeological Journal Volume 28 ; 28 >
     au < finished ; crawling ; 2007 ; Scottish Archaeological Journal Volume 29 ; 29 >
-    au < finished ; crawling ; 2008 ; Scottish Archaeological Journal Volume 30 ; 30 >
-    au < finished ; crawling ; 2009 ; Scottish Archaeological Journal Volume 31 ; 31 >
+    au < finished ; frozen ; 2008 ; Scottish Archaeological Journal Volume 30 ; 30 >
+    au < finished ; frozen ; 2009 ; Scottish Archaeological Journal Volume 31 ; 31 >
     au < finished ; crawling ; 2010 ; Scottish Archaeological Journal Volume 32 ; 32 >
   }
   }
@@ -1071,10 +1071,10 @@
     param[journal_id] = shr
 
     au < finished ; crawling ; 2000 ; Scottish Historical Review Volume 79 ; 79 >
-    au < finished ; crawling ; 2001 ; Scottish Historical Review Volume 80 ; 80 >
-    au < finished ; crawling ; 2002 ; Scottish Historical Review Volume 81 ; 81 >
+    au < finished ; frozen ; 2001 ; Scottish Historical Review Volume 80 ; 80 >
+    au < finished ; frozen ; 2002 ; Scottish Historical Review Volume 81 ; 81 >
     au < finished ; crawling ; 2003 ; Scottish Historical Review Volume 82 ; 82 >
-    au < finished ; crawling ; 2004 ; Scottish Historical Review Volume 83 ; 83 >
+    au < finished ; frozen ; 2004 ; Scottish Historical Review Volume 83 ; 83 >
     au < finished ; crawling ; 2005 ; Scottish Historical Review Volume 84 ; 84 >
     au < finished ; crawling ; 2006 ; Scottish Historical Review Volume 85 ; 85 >
     au < finished ; crawling ; 2007 ; Scottish Historical Review Volume 86 ; 86 >
@@ -1099,15 +1099,15 @@
 
     param[journal_id] = swc
 
-    au < finished ; crawling ; 2001 ; Studies in World Christianity Volume 7 ; 7 >
-    au < finished ; crawling ; 2002 ; Studies in World Christianity Volume 8 ; 8 >
+    au < finished ; frozen ; 2001 ; Studies in World Christianity Volume 7 ; 7 >
+    au < finished ; frozen ; 2002 ; Studies in World Christianity Volume 8 ; 8 >
     au < finished ; crawling ; 2003 ; Studies in World Christianity Volume 9 ; 9 >
-    au < finished ; crawling ; 2004 ; Studies in World Christianity Volume 10 ; 10 >
+    au < finished ; frozen ; 2004 ; Studies in World Christianity Volume 10 ; 10 >
     au < finished ; crawling ; 2005 ; Studies in World Christianity Volume 11 ; 11 >
-    au < finished ; crawling ; 2006 ; Studies in World Christianity Volume 12 ; 12 >
-    au < finished ; crawling ; 2007 ; Studies in World Christianity Volume 13 ; 13 >
-    au < finished ; crawling ; 2008 ; Studies in World Christianity Volume 14 ; 14 >
-    au < finished ; crawling ; 2009 ; Studies in World Christianity Volume 15 ; 15 >
+    au < finished ; frozen ; 2006 ; Studies in World Christianity Volume 12 ; 12 >
+    au < finished ; frozen ; 2007 ; Studies in World Christianity Volume 13 ; 13 >
+    au < finished ; frozen ; 2008 ; Studies in World Christianity Volume 14 ; 14 >
+    au < finished ; frozen ; 2009 ; Studies in World Christianity Volume 15 ; 15 >
     au < finished ; crawling ; 2010 ; Studies in World Christianity Volume 16 ; 16 >
     au < finished ; crawling ; 2011 ; Studies in World Christianity Volume 17 ; 17 >
     au < finished ; crawling ; 2012 ; Studies in World Christianity Volume 18 ; 18 >
@@ -1127,15 +1127,15 @@
 
     param[journal_id] = tal
 
-    au < finished ; crawling ; 2002 ; Translation and Literature Volume 11 ; 11 >
-    au < finished ; crawling ; 2003 ; Translation and Literature Volume 12 ; 12 >
-    au < finished ; crawling ; 2004 ; Translation and Literature Volume 13 ; 13 >
-    au < finished ; crawling ; 2005 ; Translation and Literature Volume 14 ; 14 >
-    au < finished ; crawling ; 2006 ; Translation and Literature Volume 15 ; 15 >
-    au < finished ; crawling ; 2007 ; Translation and Literature Volume 16 ; 16 >
-    au < finished ; crawling ; 2008 ; Translation and Literature Volume 17 ; 17 >
-    au < finished ; crawling ; 2009 ; Translation and Literature Volume 18 ; 18 >
-    au < finished ; crawling ; 2010 ; Translation and Literature Volume 19 ; 19 >
+    au < finished ; frozen ; 2002 ; Translation and Literature Volume 11 ; 11 >
+    au < finished ; frozen ; 2003 ; Translation and Literature Volume 12 ; 12 >
+    au < finished ; frozen ; 2004 ; Translation and Literature Volume 13 ; 13 >
+    au < finished ; frozen ; 2005 ; Translation and Literature Volume 14 ; 14 >
+    au < finished ; frozen ; 2006 ; Translation and Literature Volume 15 ; 15 >
+    au < finished ; frozen ; 2007 ; Translation and Literature Volume 16 ; 16 >
+    au < finished ; frozen ; 2008 ; Translation and Literature Volume 17 ; 17 >
+    au < finished ; frozen ; 2009 ; Translation and Literature Volume 18 ; 18 >
+    au < finished ; frozen ; 2010 ; Translation and Literature Volume 19 ; 19 >
     au < finished ; crawling ; 2011 ; Translation and Literature Volume 20 ; 20 >
     au < finished ; crawling ; 2012 ; Translation and Literature Volume 21 ; 21 >
     au < crawling ; exists ; 2013 ; Translation and Literature Volume 22 ; 22 >

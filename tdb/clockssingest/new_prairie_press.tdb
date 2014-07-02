@@ -23,7 +23,7 @@
       param[journal_id] = baltic
       comment[0] = no volume published in 2011
 
-      au < down ; crawling ; 2012 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 7 ; 7 ; 2012 >
+      au < down ; frozen ; 2012 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 7 ; 7 ; 2012 >
 
     }
     
@@ -131,8 +131,8 @@
       param[base_url] = http://jhaponline.org/journals/
       param[journal_id] = jhap
 
-      au < down ; crawling ; 2011 ; Journal for the History of Analytical Philosophy Volume 1 (2011) ; 1 ; 2011 >
-      au < down ; crawling ; 2012 ; Journal for the History of Analytical Philosophy Volume 1 (2012) ; 1 ; 2012 >
+      au < down ; frozen ; 2011 ; Journal for the History of Analytical Philosophy Volume 1 (2011) ; 1 ; 2011 >
+      au < down ; frozen ; 2012 ; Journal for the History of Analytical Philosophy Volume 1 (2012) ; 1 ; 2012 >
 
     }
     {
@@ -163,7 +163,7 @@
       param[base_url] = http://jftonline.org/journals/
       param[journal_id] = jft
 
-      au < down ; crawling ; 2012 ; Journal of Financial Therapy Volume 3 ; 3 ; 2012 >
+      au < down ; frozen ; 2012 ; Journal of Financial Therapy Volume 3 ; 3 ; 2012 >
 
     }
     {
@@ -199,7 +199,7 @@
       
       comment[moved] = Moved to American Psychological Association
 
-      au < down ; crawling ; 2012 ; Journal of Rural Mental Health Volume 36 ; 36 ; 2012 >
+      au < down ; frozen ; 2012 ; Journal of Rural Mental Health Volume 36 ; 36 ; 2012 >
 
     }
   }
@@ -219,7 +219,7 @@
       param[base_url] = http://newprairiepress.org/journals/
       param[journal_id] = CULS
 
-      au < down ; crawling ; 2012 ; Kansas Library Association College and University Libraries Section Proceedings Volume 2 ; 2 ; 2012 >
+      au < down ; frozen ; 2012 ; Kansas Library Association College and University Libraries Section Proceedings Volume 2 ; 2 ; 2012 >
 
     }
     {
@@ -252,7 +252,7 @@
       param[base_url] = http://ojrrp.org/journals/
       param[journal_id] = ojrrp
 
-      au < down ; crawling ; 2012 ; Online Journal of Rural Research & Policy Volume 7 ; 7 ; 2012 >
+      au < down ; frozen ; 2012 ; Online Journal of Rural Research & Policy Volume 7 ; 7 ; 2012 >
 
     }
     {
