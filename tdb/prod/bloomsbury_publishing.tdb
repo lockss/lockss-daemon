@@ -443,6 +443,8 @@
       eissn = 1751-6978 ;
       issnl = 1751-696X
     >
+    comment[moved] = moved to T&F
+    
     param[publisher_id] = bloomsbury
     param[journal_id] = tmdj
     param[journal_issn] = 1751-696X
@@ -453,7 +455,6 @@
     au < doNotProcess ; 2011 ; Time & Mind Volume 4 ; 4 >
     au < doNotProcess ; 2012 ; Time & Mind Volume 5 ; 5 >
     au < released ; 2013 ; Time & Mind Volume 6 ; 6 >
-    au < expected ; 2014 ; Time & Mind Volume 7 ; 7 >
 
   }
 
