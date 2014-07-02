@@ -1,5 +1,5 @@
 /*
- * $Id: DbManager.java,v 1.36 2014-06-25 19:44:29 fergaloy-sf Exp $
+ * $Id: DbManager.java,v 1.37 2014-07-02 21:31:55 fergaloy-sf Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.SQLTransientException;
 import java.sql.Statement;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -552,6 +553,9 @@ public class DbManager extends BaseLockssDaemonManager
 
   /** Subscription range column. */
   public static final String SUBSCRIPTION_RANGE_COLUMN = "subscription_range";
+
+  /** Archival Unit active indication column */
+  public static final String ACTIVE_COLUMN = "active";
 
   //
   // Maximum lengths of variable text length database columns.
@@ -2415,6 +2419,35 @@ public class DbManager extends BaseLockssDaemonManager
       + " set " + LAST_VALUE_COLUMN + " = '0'"
       + " where " + LABEL_COLUMN + " = ?";
 
+  // The SQL code used to add the necessary version 14 database table columns.
+  private static final String[] VERSION_14_COLUMN_ADD_QUERIES = new String[] {
+    "alter table " + AU_TABLE
+    + " add column " + ACTIVE_COLUMN + " boolean not null default true"
+  };
+
+  // Query to update the active flag of an Archival Unit.
+  private static final String UPDATE_AU_ACTIVE_QUERY = "update "
+      + AU_TABLE
+      + " set " + ACTIVE_COLUMN + " = ?"
+      + " where " + AU_SEQ_COLUMN
+      + " = (select a." + AU_SEQ_COLUMN
+      + " from " + AU_TABLE + " a," + PLUGIN_TABLE + " p"
+      + " where a." + AU_KEY_COLUMN + " = ?"
+      + " and a." + PLUGIN_SEQ_COLUMN + " = p." + PLUGIN_SEQ_COLUMN
+      + " and p." + PLUGIN_ID_COLUMN + " = ?)";
+
+  // Query to update the active flag of an Archival Unit in MySQL.
+  private static final String UPDATE_AU_ACTIVE_QUERY_MYSQL = "update "
+      + AU_TABLE
+      + " set " + ACTIVE_COLUMN + " = ?"
+      + " where " + AU_SEQ_COLUMN
+      + " = (select " + AU_TABLE + "." + AU_SEQ_COLUMN
+      + " from " + PLUGIN_TABLE + " p"
+      + " where " + AU_TABLE + "." + AU_KEY_COLUMN + " = ?"
+      + " and " + AU_TABLE + "." + PLUGIN_SEQ_COLUMN
+      + " = p." + PLUGIN_SEQ_COLUMN
+      + " and p." + PLUGIN_ID_COLUMN + " = ?)";
+
   // Derby SQL state of exception thrown on successful database shutdown.
   private static final String SHUTDOWN_SUCCESS_STATE_CODE = "08006";
 
@@ -2450,7 +2483,7 @@ public class DbManager extends BaseLockssDaemonManager
   // After this service has started successfully, this is the version of the
   // database that will be in place, as long as the database version prior to
   // starting the service was not higher already.
-  private int targetDatabaseVersion = 13;
+  private int targetDatabaseVersion = 14;
 
   // The maximum number of retries to be attempted when encountering transient
   // SQL exceptions.
@@ -2952,6 +2985,8 @@ public class DbManager extends BaseLockssDaemonManager
 	  updateDatabaseFrom11To12(conn);
 	} else if (from == 12) {
 	  updateDatabaseFrom12To13(conn);
+	} else if (from == 13) {
+	  updateDatabaseFrom13To14(conn);
 	} else {
 	  throw new DbException("Non-existent method to update the database "
 	      + "from version " + from + ".");
@@ -2966,7 +3001,7 @@ public class DbManager extends BaseLockssDaemonManager
 	    // Yes: Check whether the last update does not involve an
 	    // asynchronous process that will update the database version in the
 	    // database when it finishes. 
-	    if (from != 9) {
+	    if (from != 9 && from != 13) {
 	      // Yes: Record the current database version in the database.
 	      recordDbVersion(conn, from + 1);
 	    }
@@ -7200,5 +7235,139 @@ public class DbManager extends BaseLockssDaemonManager
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Updates the database from version 13 to version 14.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws DbException
+   *           if any problem occurred updating the database.
+   */
+  private void updateDatabaseFrom13To14(Connection conn) throws DbException {
+    final String DEBUG_HEADER = "updateDatabaseFrom13To14(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    if (conn == null) {
+      throw new DbException("Null connection");
+    }
+
+    // Add the new columns.
+    executeDdlQueries(conn, VERSION_14_COLUMN_ADD_QUERIES);
+
+    // Populate in a separate thread the ArchivalUnit active flag for inactive
+    // Archival Units.
+    DbVersion13To14Migrator migrator = new DbVersion13To14Migrator();
+    new Thread(migrator).start();
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Migrates the contents of the database from version 13 to version 14.
+   */
+  void migrateDatabaseFrom13To14() {
+    final String DEBUG_HEADER = "migrateDatabaseFrom13To14(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    Connection conn = null;
+
+    try {
+      // Get a connection to the database.
+      conn = getConnectionBeforeReady();
+
+      // Loop through all the Archival Units inactive in the daemon.
+      for (String auId :
+        (Collection<String>)getDaemon().getPluginManager().getInactiveAuIds()) {
+        if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auId = " + auId);
+
+        // Mark this Archival Unit as inactive in the database.
+        updateAuActiveFlag(conn, auId, false);
+      }
+
+      // Record the current database version in the database.
+      recordDbVersion(conn, 14);
+      commitOrRollback(conn, log);
+    } catch (DbException dbe) {
+      log.error("Cannot migrate the database from version 13 to 14", dbe);
+    } finally {
+      DbManager.safeRollbackAndClose(conn);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Updates the active flag of an Archival Unit.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param auId
+   *          A String with the identifier of the Archival Unit.
+   * @param isActive
+   *          A boolean with the indication of whether the ArchivalUnit is
+   *          active.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public void updateAuActiveFlag(Connection conn, String auId, boolean isActive)
+      throws DbException {
+    final String DEBUG_HEADER = "updateAuActiveFlag(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "auId = " + auId);
+      log.debug2(DEBUG_HEADER + "isActive = " + isActive);
+    }
+
+    PreparedStatement statement = null;
+    String auKey = null;
+    String pluginId = null;
+    String sql = getUpdateAuActiveFlagSql();
+    if (log.isDebug3())	log.debug3(DEBUG_HEADER + "SQL = '" + sql + "'.");
+
+    try {
+      statement = prepareStatementBeforeReady(conn, sql);
+      statement.setBoolean(1, isActive);
+
+      auKey = PluginManager.auKeyFromAuId(auId);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auKey = " + auKey);
+
+      statement.setString(2, auKey);
+
+      pluginId = PluginManager.pluginIdFromAuId(auId);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pluginId = " + pluginId);
+
+      statement.setString(3, pluginId);
+
+      int count = executeUpdateBeforeReady(statement);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count + ".");
+    } catch (SQLException sqle) {
+      String message = "Cannot update AU active flag";
+      log.error(message, sqle);
+      log.error("isActive = '" + isActive + "'.");
+      log.error("auId = " + auId);
+      log.error("auKey = " + auKey);
+      log.error("pluginId = " + pluginId);
+      log.error("SQL = '" + sql + "'.");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseStatement(statement);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Provides the text of the query used to update the active flag of an
+   * Archival Unit.
+   * 
+   * @return a String with the text of the query used to update the active flag
+   *         of an Archival Unit.
+   */
+  private String getUpdateAuActiveFlagSql() {
+    if (isTypeMysql()) {
+      return UPDATE_AU_ACTIVE_QUERY_MYSQL;
+    }
+
+    return UPDATE_AU_ACTIVE_QUERY;
   }
 }

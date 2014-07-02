@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataStarter.java,v 1.8 2014-06-25 19:44:29 fergaloy-sf Exp $
+ * $Id: MetadataStarter.java,v 1.9 2014-07-02 21:31:56 fergaloy-sf Exp $
  */
 
 /*
@@ -186,6 +186,10 @@ public class MetadataStarter extends LockssRunnable {
       try {
         conn = dbManager.getConnection();
 
+        // Mark the AU as active.
+        dbManager.updateAuActiveFlag(conn, au.getAuId(), true);
+        DbManager.commitOrRollback(conn, log);
+
         // Remove the AU from the table of unconfigured AUs.
         mdManager.removeFromUnconfiguredAus(conn, au.getAuId());
 
@@ -211,7 +215,8 @@ public class MetadataStarter extends LockssRunnable {
   	  case Create:
   	    log.debug2(DEBUG_HEADER + "Create for au: " + au);
 
-  	    // This case occurs when the user has added an AU through the GUI.
+  	    // This case occurs when the user has added or reactivated an AU
+  	    // through the GUI.
   	    // If this restores an existing AU that has already crawled, we
   	    // schedule it to be added to the metadata database now. Otherwise
   	    // it will be added through auContentChanged() once the crawl has
@@ -262,6 +267,26 @@ public class MetadataStarter extends LockssRunnable {
 	  // This case occurs when the plugin is about to restart. There is
 	  // nothing to do in this case but wait for the plugin to be
 	  // reactivated and see whether anything needs to be done.
+	  break;
+	case Deactivate:
+	  // This case occurs when the AU is being deactivated.
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "Deactivate for au: " + au);
+
+	  Connection conn = null;
+
+	  try {
+	    conn = dbManager.getConnection();
+
+	    // Mark the AU as inactive in the database.
+	    dbManager.updateAuActiveFlag(conn, au.getAuId(), false);
+	    DbManager.commitOrRollback(conn, log);
+	  } catch (DbException dbe) {
+	    log.error("Cannot deactivate AU " + au.getName(), dbe);
+	  } finally {
+	    DbManager.safeRollbackAndClose(conn);
+	  }
+
 	  break;
       }
     }
