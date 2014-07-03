@@ -1,5 +1,5 @@
 /*
- * $Id: AddAuByIdClient.java,v 1.3 2014-07-03 19:49:03 fergaloy-sf Exp $
+ * $Id: DeleteAuByIdClient.java,v 1.1 2014-07-03 19:49:03 fergaloy-sf Exp $
  */
 
 /*
@@ -35,10 +35,10 @@ import org.lockss.ws.content.ContentConfigurationService;
 import org.lockss.ws.entities.ContentConfigurationResult;
 
 /**
- * A client for the ContentConfigurationService.addAuById() web service
+ * A client for the ContentConfigurationService.deleteAuById() web service
  * operation.
  */
-public class AddAuByIdClient extends ContentConfigurationServiceBaseClient {
+public class DeleteAuByIdClient extends ContentConfigurationServiceBaseClient {
   /**
    * The main method.
    * 
@@ -47,9 +47,9 @@ public class AddAuByIdClient extends ContentConfigurationServiceBaseClient {
    * @throws Exception
    */
   public static void main(String args[]) throws Exception {
-    ContentConfigurationService proxy = new AddAuByIdClient().getProxy();
+    ContentConfigurationService proxy = new DeleteAuByIdClient().getProxy();
 
-    ContentConfigurationResult result =	proxy.addAuById(args[0]);
+    ContentConfigurationResult result = proxy.deleteAuById(args[0]);
     System.out.println("result = " + result);
   }
 }

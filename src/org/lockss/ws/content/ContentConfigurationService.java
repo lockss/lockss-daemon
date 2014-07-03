@@ -1,5 +1,5 @@
 /*
- * $Id: ContentConfigurationService.java,v 1.1 2014-05-12 17:26:20 fergaloy-sf Exp $
+ * $Id: ContentConfigurationService.java,v 1.2 2014-07-03 19:49:03 fergaloy-sf Exp $
  */
 
 /*
@@ -29,29 +29,73 @@
  in this Software without prior written authorization from Stanford University.
 
  */
-
-/**
- * The ContentConfiguration web service interface.
- */
 package org.lockss.ws.content;
 
+import java.util.List;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebService;
 import org.lockss.ws.entities.ContentConfigurationResult;
 import org.lockss.ws.entities.LockssWebServicesFault;
 
+/**
+ * The ContentConfiguration web service interface.
+ */
 @WebService
 public interface ContentConfigurationService {
   /**
    * Configures the archival unit defined by its identifier.
    * 
    * @param auId
-   *          A String with the identifier of the archival unit.
+   *          A String with the identifier (auid) of the archival unit. The
+   *          archival unit to be added must already be in the title db that's
+   *          loaded into the daemon.
    * @return a ContentConfigurationResult with the result of the operation.
    * @throws LockssWebServicesFault
    */
   @WebMethod
   ContentConfigurationResult addAuById(@WebParam(name = "auId") String auId)
+      throws LockssWebServicesFault;
+
+  /**
+   * Configures the archival units defined by a list with their identifiers.
+   * 
+   * @param auIds
+   *          A List<String> with the identifiers (auids) of the archival units.
+   *          The archival units to be added must already be in the title db
+   *          that's loaded into the daemon.
+   * @return a List<ContentConfigurationResult> with the results of the
+   *         operation.
+   * @throws LockssWebServicesFault
+   */
+  @WebMethod
+  List<ContentConfigurationResult> addAusByIdList(
+      @WebParam(name = "auIds") List<String> auIds)
+      throws LockssWebServicesFault;
+
+  /**
+   * Unconfigures the archival unit defined by its identifier.
+   * 
+   * @param auId
+   *          A String with the identifier (auid) of the archival unit.
+   * @return a ContentConfigurationResult with the result of the operation.
+   * @throws LockssWebServicesFault
+   */
+  @WebMethod
+  ContentConfigurationResult deleteAuById(@WebParam(name = "auId") String auId)
+      throws LockssWebServicesFault;
+
+  /**
+   * Unconfigures the archival units defined by a list with their identifiers.
+   * 
+   * @param auIds
+   *          A List<String> with the identifiers (auids) of the archival units.
+   * @return a List<ContentConfigurationResult> with the results of the
+   *         operation.
+   * @throws LockssWebServicesFault
+   */
+  @WebMethod
+  List<ContentConfigurationResult> deleteAusByIdList(
+      @WebParam(name = "auIds") List<String> auIds)
       throws LockssWebServicesFault;
 }

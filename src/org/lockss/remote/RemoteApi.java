@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.78 2014-05-12 17:26:19 fergaloy-sf Exp $
+ * $Id: RemoteApi.java,v 1.79 2014-07-03 19:49:03 fergaloy-sf Exp $
  */
 
 /*
@@ -1298,6 +1298,10 @@ public class RemoteApi
 
     public BackupInfo getBackupInfo() {
       return bi;
+    }
+
+    public List<BatchAuStatus.Entry> getUnsortedStatusList() {
+      return statusList;
     }
 
     public List<BatchAuStatus.Entry> getStatusList() {

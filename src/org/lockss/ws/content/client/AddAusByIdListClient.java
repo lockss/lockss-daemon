@@ -1,5 +1,5 @@
 /*
- * $Id: AddAuByIdClient.java,v 1.3 2014-07-03 19:49:03 fergaloy-sf Exp $
+ * $Id: AddAusByIdListClient.java,v 1.1 2014-07-03 19:49:03 fergaloy-sf Exp $
  */
 
 /*
@@ -31,14 +31,17 @@
  */
 package org.lockss.ws.content.client;
 
+import java.util.Arrays;
+import java.util.List;
 import org.lockss.ws.content.ContentConfigurationService;
 import org.lockss.ws.entities.ContentConfigurationResult;
 
 /**
- * A client for the ContentConfigurationService.addAuById() web service
+ * A client for the ContentConfigurationService.addAusByIdList() web service
  * operation.
  */
-public class AddAuByIdClient extends ContentConfigurationServiceBaseClient {
+public class AddAusByIdListClient extends ContentConfigurationServiceBaseClient
+{
   /**
    * The main method.
    * 
@@ -47,9 +50,10 @@ public class AddAuByIdClient extends ContentConfigurationServiceBaseClient {
    * @throws Exception
    */
   public static void main(String args[]) throws Exception {
-    ContentConfigurationService proxy = new AddAuByIdClient().getProxy();
+    ContentConfigurationService proxy = new AddAusByIdListClient().getProxy();
 
-    ContentConfigurationResult result =	proxy.addAuById(args[0]);
+    List<ContentConfigurationResult> result =
+	proxy.addAusByIdList(Arrays.asList(args));
     System.out.println("result = " + result);
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: ContentConfigurationServiceImpl.java,v 1.1 2014-05-12 17:26:19 fergaloy-sf Exp $
+ * $Id: ContentConfigurationServiceImpl.java,v 1.2 2014-07-03 19:49:03 fergaloy-sf Exp $
  */
 
 /*
@@ -29,19 +29,21 @@
  in this Software without prior written authorization from Stanford University.
 
  */
-
-/**
- * The ContentConfiguration web service implementation.
- */
 package org.lockss.ws.content;
 
+import java.util.ArrayList;
+import java.util.List;
 import javax.jws.WebService;
 import org.lockss.app.LockssDaemon;
 import org.lockss.remote.RemoteApi.BatchAuStatus;
 import org.lockss.util.Logger;
+import org.lockss.util.StringUtil;
 import org.lockss.ws.entities.ContentConfigurationResult;
 import org.lockss.ws.entities.LockssWebServicesFault;
 
+/**
+ * The ContentConfiguration web service implementation.
+ */
 @WebService
 public class ContentConfigurationServiceImpl implements
     ContentConfigurationService {
@@ -52,7 +54,9 @@ public class ContentConfigurationServiceImpl implements
    * Configures the archival unit defined by its identifier.
    * 
    * @param auId
-   *          A String with the identifier of the archival unit.
+   *          A String with the identifier (auid) of the archival unit. The
+   *          archival unit to be added must already be in the title db that's
+   *          loaded into the daemon.
    * @return a ContentConfigurationResult with the result of the operation.
    * @throws LockssWebServicesFault
    */
@@ -86,5 +90,117 @@ public class ContentConfigurationServiceImpl implements
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
     return result;
+  }
+
+  /**
+   * Configures the archival units defined by a list of their identifiers.
+   * 
+   * @param auIds
+   *          A List<String> with the identifiers (auids) of the archival units.
+   *          The archival units to be added must already be in the title db
+   *          that's loaded into the daemon.
+   * @return a List<ContentConfigurationResult> with the results of the
+   *         operation.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public List<ContentConfigurationResult> addAusByIdList(List<String> auIds)
+      throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "addAusByIdList(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auIds = " + auIds);
+
+    List<ContentConfigurationResult> results =
+	new ArrayList<ContentConfigurationResult>(auIds.size());
+
+    // Loop  through all the Archival Unit identifiers.
+    for (String auId : auIds) {
+      results.add(addAuById(auId));
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "results = " + results);
+    return results;
+  }
+
+  /**
+   * Unconfigures the archival unit defined by its identifier.
+   * 
+   * @param auId
+   *          A String with the identifier (auid) of the archival unit.
+   * @return a ContentConfigurationResult with the result of the operation.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public ContentConfigurationResult deleteAuById(String auId)
+      throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "deleteAuById(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auId = " + auId);
+
+    List<String> auIds = new ArrayList<String>(1);
+    auIds.add(auId);
+
+    // Delete the archival unit.
+    ContentConfigurationResult result = deleteAusByIdList(auIds).get(0);
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+    return result;
+  }
+
+  /**
+   * Unconfigures the archival units defined by a list with their identifiers.
+   * 
+   * @param auIds
+   *          A List<String> with the identifiers (auids) of the archival units.
+   * @return a List<ContentConfigurationResult> with the results of the
+   *         operation.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public List<ContentConfigurationResult> deleteAusByIdList(List<String> auIds)
+      throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "deleteAusByIdList(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auIds = " + auIds);
+
+    List<ContentConfigurationResult> results =
+	new ArrayList<ContentConfigurationResult>(auIds.size());
+
+    // Delete the archival units.
+    BatchAuStatus status =
+	LockssDaemon.getLockssDaemon().getRemoteApi().deleteAus(auIds);
+
+    // Loop through all the results.
+    for (int i = 0; i < status.getUnsortedStatusList().size(); i++) {
+      // Get the original Archival Unit identifier.
+      String auId = auIds.get(i);
+
+      // Handle the result.
+      BatchAuStatus.Entry statusEntry = status.getUnsortedStatusList().get(i);
+
+      if (statusEntry.isOk() || "Deleted".equals(statusEntry.getStatus())) {
+	if (log.isDebug()) log.debug("Success unconfiguring AU '"
+	    + statusEntry.getName() + "': " + statusEntry.getExplanation());
+
+	String explanation = statusEntry.getExplanation();
+	if (StringUtil.isNullString(explanation)) {
+	  explanation = "Deleted Archival Unit '" + auId + "'";
+	}
+
+	results.add(new ContentConfigurationResult(auId, statusEntry.getName(),
+	    Boolean.TRUE, statusEntry.getExplanation()));
+      } else {
+	log.error("Error unconfiguring AU '" + statusEntry.getName() + "': "
+	    + statusEntry.getExplanation());
+
+	String explanation = statusEntry.getExplanation();
+	if (StringUtil.isNullString(explanation)) {
+	  explanation = statusEntry.getStatus();
+	}
+
+	results.add(new ContentConfigurationResult(auId, statusEntry.getName(),
+	  Boolean.FALSE, explanation));
+      }
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "results = " + results);
+    return results;
   }
 }
