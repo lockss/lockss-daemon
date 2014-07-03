@@ -446,7 +446,7 @@
     au < manifest ; exists ; 2009 ; Interventional Cardiology Volume 1 ; 1 >
     au < manifest ; exists ; 2010 ; Interventional Cardiology Volume 2 ; 2 >
     au < manifest ; exists ; 2011 ; Interventional Cardiology Volume 3 ; 3 >
-    au < testing ; exists ; 2012 ; Interventional Cardiology Volume 4 ; 4 >
+    au < ready ; exists ; 2012 ; Interventional Cardiology Volume 4 ; 4 >
     au < crawling ; exists ; 2013 ; Interventional Cardiology Volume 5 ; 5 >
     au < manifest ; exists ; 2014 ; Interventional Cardiology Volume 6 ; 6 >
     
@@ -515,7 +515,7 @@
     param[journal_id] = nmt
 
     au < manifest ; exists ; 2011 ; Neurodegenerative Disease Management Volume 1 ; 1 >
-    au < testing ; exists ; 2012 ; Neurodegenerative Disease Management Volume 2 ; 2 >
+    au < ready ; exists ; 2012 ; Neurodegenerative Disease Management Volume 2 ; 2 >
     au < crawling ; exists ; 2013 ; Neurodegenerative Disease Management Volume 3 ; 3 >
     au < manifest ; exists ; 2014 ; Neurodegenerative Disease Management Volume 4 ; 4 >
 
@@ -547,7 +547,7 @@
     param[journal_id] = pmt
 
     au < manifest ; exists ; 2011 ; Pain Management Volume 1 ; 1 >
-    au < testing ; exists ; 2012 ; Pain Management Volume 2 ; 2 >
+    au < ready ; exists ; 2012 ; Pain Management Volume 2 ; 2 >
     au < crawling ; exists ; 2013 ; Pain Management Volume 3 ; 3 >
     au < manifest ; exists ; 2014 ; Pain Management Volume 4 ; 4 >
     
