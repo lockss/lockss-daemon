@@ -323,7 +323,7 @@
       au < doNotProcess ; 2013 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 13 ; 13 >
       au < doNotProcess ; 2013 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 14 ; 14 >
       au < doNotProcess ; 2014 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 15 ; 15 >
-      au < expected ; 2014 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 16 ; 16 >
+      au < doNotProcess ; 2014 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 16 ; 16 >
       au < expected ; 2014 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 17 ; 17 >
 
     }
@@ -1274,7 +1274,7 @@
       au < released ; 2011 ; International Journal of Business Governance and Ethics Volume 6 ; 6 >
       au < released ; 2012 ; International Journal of Business Governance and Ethics Volume 7 ; 7 >
       au < doNotProcess ; 2013 ; International Journal of Business Governance and Ethics Volume 8 ; 8 >
-      au < expected ; 2014 ; International Journal of Business Governance and Ethics Volume 9 ; 9 >
+      au < doNotProcess ; 2014 ; International Journal of Business Governance and Ethics Volume 9 ; 9 >
 
     }
 
@@ -1350,7 +1350,7 @@
       au < released ; 2011 ; International Journal of Business Intelligence and Data Mining Volume 6 ; 6 >
       au < released ; 2012 ; International Journal of Business Intelligence and Data Mining Volume 7 ; 7 >
       au < doNotProcess ; 2013 ; International Journal of Business Intelligence and Data Mining Volume 8 ; 8 >
-      au < expected ; 2014 ; International Journal of Business Intelligence and Data Mining Volume 9 ; 9 >
+      au < doNotProcess ; 2014 ; International Journal of Business Intelligence and Data Mining Volume 9 ; 9 >
 
     }
 
@@ -2360,7 +2360,7 @@
       au < released ; 2011 ; International Journal of Electric and Hybrid Vehicles Volume 3 ; 3 >
       au < released ; 2012 ; International Journal of Electric and Hybrid Vehicles Volume 4 ; 4 >
       au < doNotProcess ; 2013 ; International Journal of Electric and Hybrid Vehicles Volume 5 ; 5 >
-      au < expected ; 2014 ; International Journal of Electric and Hybrid Vehicles Volume 6 ; 6 >
+      au < doNotProcess ; 2014 ; International Journal of Electric and Hybrid Vehicles Volume 6 ; 6 >
 
     }
 
@@ -2789,7 +2789,7 @@
       au < released ; 2012 ; International Journal of Entrepreneurship and Innovation Management Volume 15 ; 15 >
       au < released ; 2012 ; International Journal of Entrepreneurship and Innovation Management Volume 16 ; 16 >
       au < doNotProcess ; 2013 ; International Journal of Entrepreneurship and Innovation Management Volume 17 ; 17 >
-      au < expected ; 2013 ; International Journal of Entrepreneurship and Innovation Management Volume 18 ; 18 >
+      au < doNotProcess ; 2014 ; International Journal of Entrepreneurship and Innovation Management Volume 18 ; 18 >
       au < expected ; 2014 ; International Journal of Entrepreneurship and Innovation Management Volume 19 ; 19 >
       au < expected ; 2014 ; International Journal of Entrepreneurship and Innovation Management Volume 20 ; 20 >
 
@@ -3590,7 +3590,7 @@
       
       au < released ; 2012 ; International Journal of Human Factors and Ergonomics Volume 1 ; 1 >
       au < doNotProcess ; 2013 ; International Journal of Human Factors and Ergonomics Volume 2 ; 2 >
-      au < expected ; 2014 ; International Journal of Human Factors and Ergonomics Volume 3 ; 3 >
+      au < doNotProcess ; 2014 ; International Journal of Human Factors and Ergonomics Volume 3 ; 3 >
 
     }
 
@@ -3856,8 +3856,7 @@
       param[journal_issn] = 1741-850X
       
       au < released ; 2011-2012 ; International Journal of Information Privacy, Security and Integrity Volume 1 ; 1 >
-      au < expected ; 2013 ; International Journal of Information Privacy, Security and Integrity Volume 2 ; 2 >
-      au < expected ; 2014 ; International Journal of Information Privacy, Security and Integrity Volume 3 ; 3 >
+      au < doNotProcess ; 2014 ; International Journal of Information Privacy, Security and Integrity Volume 2 ; 2 >
 
     }
 
@@ -4127,7 +4126,7 @@
       au < released ; 2010-2011 ; International Journal of Intellectual Property Management Volume 4 ; 4 >
       au < released ; 2012 ; International Journal of Intellectual Property Management Volume 5 ; 5 >
       au < doNotProcess ; 2013 ; International Journal of Intellectual Property Management Volume 6 ; 6 >
-      au < expected ; 2014 ; International Journal of Intellectual Property Management Volume 7 ; 7 >
+      au < doNotProcess ; 2014 ; International Journal of Intellectual Property Management Volume 7 ; 7 >
 
     }
 
@@ -5247,7 +5246,7 @@
       au < released ; 2011 ; International Journal of Mechatronics and Manufacturing Systems Volume 4 ; 4 >
       au < released ; 2012 ; International Journal of Mechatronics and Manufacturing Systems Volume 5 ; 5 >
       au < doNotProcess ; 2013 ; International Journal of Mechatronics and Manufacturing Systems Volume 6 ; 6 >
-      au < expected ; 2014 ; International Journal of Mechatronics and Manufacturing Systems Volume 7 ; 7 >
+      au < doNotProcess ; 2014 ; International Journal of Mechatronics and Manufacturing Systems Volume 7 ; 7 >
 
     }
 
@@ -6473,7 +6472,7 @@
       au < released ; 2011 ; International Journal of Reliability and Safety Volume 5 ; 5 >
       au < released ; 2012 ; International Journal of Reliability and Safety Volume 6 ; 6 >
       au < doNotProcess ; 2013 ; International Journal of Reliability and Safety Volume 7 ; 7 >
-      au < expected ; 2014 ; International Journal of Reliability and Safety Volume 8 ; 8 >
+      au < doNotProcess ; 2014 ; International Journal of Reliability and Safety Volume 8 ; 8 >
 
     }
 
@@ -7369,7 +7368,7 @@
       au < released ; 2011 ; International Journal of Systems, Control and Communications Volume 3 ; 3 >
       au < released ; 2012 ; International Journal of Systems, Control and Communications Volume 4 ; 4 >
       au < doNotProcess ; 2013 ; International Journal of Systems, Control and Communications Volume 5 ; 5 >
-      au < expected ; 2014 ; International Journal of Systems, Control and Communications Volume 6 ; 6 >
+      au < doNotProcess ; 2014 ; International Journal of Systems, Control and Communications Volume 6 ; 6 >
 
     }
 
