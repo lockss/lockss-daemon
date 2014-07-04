@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireDrupalUrlNormalizer.java,v 1.5 2014-04-18 20:37:31 etenbrink Exp $
+ * $Id: HighWireDrupalUrlNormalizer.java,v 1.6 2014-07-04 04:06:47 etenbrink Exp $
  */
 
 /*
@@ -32,6 +32,9 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.highwire;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
@@ -40,6 +43,9 @@ import org.lockss.util.StringUtil;
 public class HighWireDrupalUrlNormalizer implements UrlNormalizer {
   
   protected static Logger log = Logger.getLogger(HighWireDrupalUrlNormalizer.class);
+  protected static final String WEB_VIEWER =
+      "/sites/all/libraries/pdfjs/web/viewer.html?file=/";
+  protected static final Pattern URL_PAT = Pattern.compile("/content/[^/0-9]+/");
   protected static final String LARGE_JPG = ".large.jpg?";
   protected static final String JS_SUFFIX = ".js?";
   protected static final String CSS_SUFFIX = ".css?";
@@ -70,6 +76,16 @@ public class HighWireDrupalUrlNormalizer implements UrlNormalizer {
     // http://ajpheart.physiology.org/content/304/2/H253.full-text.pdf+html
     // & http://ajpheart.physiology.org/content/304/2/H253.full.pdf%2Bhtml
     // to http://ajpheart.physiology.org/content/304/2/H253.full.pdf+html
+    // 
+    // http://ajprenal.physiology.org/sites/all/libraries/pdfjs/web/viewer.html
+    //  ?file=/content/ajprenal/304/1/F33.full.pdf
+    // to http://ajprenal.physiology.org/content/304/1/F33.full.pdf
+    
+    if (url.contains(WEB_VIEWER)) { 
+      url = url.replace(WEB_VIEWER, "/");
+      Matcher  mat = URL_PAT.matcher(url);
+      url = mat.replaceFirst("/content/");
+    }
     
     if (url.contains(LARGE_JPG) ||
         url.contains(JS_SUFFIX) ||
