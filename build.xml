@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.362 2014-06-18 01:02:19 tlipkis Exp $
+ $Id: build.xml,v 1.363 2014-07-05 21:43:03 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -734,33 +734,66 @@ Test results in ${test.results}
   <!-- ==================================================================== -->
   <!--  Setup tasks -->
   <!-- ==================================================================== -->
-  <target name="prepare">
+  <target name="prepare" depends="check.contrib">
     <mkdir dir="${classes}" />
 
-    <condition property="is-java-1.6">
+    <!-- Ant does not always set ant.java.version correctly.  (E.g., Ant
+	 1.7.1 w/ Java 1.7 sets it to 1.6).  Obtain it from java.version
+	 System property if possible. -->
+
+    <propertyregex property="my.ant.java.version"
+		   input="${java.version}"
+		   regexp="^([0-9]+\.[0-9]+).*"
+		   replace="\1"
+		   defaultValue="${ant.java.version}"
+		   />
+
+    <condition property="is-java-ge-1.6">
      <or>
-      <equals arg1="1.6" arg2="${ant.java.version}"/>
-      <equals arg1="1.7" arg2="${ant.java.version}"/>
+      <equals arg1="1.6" arg2="${my.ant.java.version}"/>
+      <equals arg1="1.7" arg2="${my.ant.java.version}"/>
+      <equals arg1="1.8" arg2="${my.ant.java.version}"/>
      </or>
     </condition>
 
-    <condition property="is-java-1.7">
+    <condition property="is-java-le-1.6">
      <or>
-      <equals arg1="1.7" arg2="${ant.java.version}"/>
+      <equals arg1="1.6" arg2="${my.ant.java.version}"/>
+     </or>
+    </condition>
+
+    <condition property="is-java-ge-1.7">
+     <or>
+      <equals arg1="1.7" arg2="${my.ant.java.version}"/>
+      <equals arg1="1.8" arg2="${my.ant.java.version}"/>
+     </or>
+    </condition>
+
+    <condition property="is-java-ge-1.8">
+     <or>
+      <equals arg1="1.8" arg2="${my.ant.java.version}"/>
      </or>
     </condition>
 
     <!-- Require at least Java 1.6, but allow builds if force is set -->
-    <condition property="is-sufficient-java-version">
+    <condition property="is-satisfy-java-min-version">
      <or>
-      <istrue value="${is-java-1.6}" />
+      <istrue value="${is-java-ge-1.6}" />
       <istrue value="${force}" />
      </or>
     </condition>
 
-    <fail unless="is-sufficient-java-version">
-Java ${ant.java.version} found, 1.6 required
+    <fail unless="is-satisfy-java-min-version">
+Java ${my.ant.java.version} found, 1.6 required
     </fail>
+
+    <!-- Determine whether java version is compatible with release
+	 requirements -->
+    <condition property="is-satisfy-java-max-version">
+     <or>
+      <istrue value="${is-java-le-1.6}" />
+     </or>
+    </condition>
 
     <condition property="detected.os" value="unix">
       <os family="unix"/>
@@ -768,6 +801,11 @@ Java ${ant.java.version} found, 1.6 required
     <condition property="detected.os" value="windows">
       <os family="dos"/>
     </condition>
+  </target>
+
+  <target name="require.release.java.version" depends="prepare">
+    <fail unless="is-satisfy-java-max-version"
+          message="This target must be run with Java 1.6; you are using Java ${my.ant.java.version}"/>
   </target>
 
   <!-- ==================================================================== -->
@@ -797,7 +835,7 @@ Java ${ant.java.version} found, 1.6 required
   </target>
 
   <target name="-check-if-1.7" depends="prepare" >
-    <fail unless="is-java-1.7">
+    <fail unless="is-java-ge-1.7">
 The target you have selected requires compiling under JDK 1.7.
     </fail>
   </target>
@@ -974,7 +1012,7 @@ The target you have selected requires compiling under JDK 1.7.
              cpid="test.compile.classpath" >
      <javacelem>
        <include name="**/*.java"/>
-       <excludesfile name="${requires-1.7}" unless="is-java-1.7" />
+       <excludesfile name="${requires-1.7}" unless="is-java-ge-1.7" />
      </javacelem>
     </dojavac>
 
@@ -2173,7 +2211,7 @@ published on the Web. http://www.lockss.org
           <include name="${unit.include}" />
           <exclude name="${exclude}" />
           <excludesfile name="${excludesfile}" if="excludesfile" />
-          <excludesfile name="${requires-1.7}" unless="is-java-1.7" />
+          <excludesfile name="${requires-1.7}" unless="is-java-ge-1.7" />
         </fileset>
       </batchtest>
      </junitelem>
@@ -2195,7 +2233,7 @@ published on the Web. http://www.lockss.org
           <include name="${func.include}" />
           <exclude name="${exclude}" />
           <excludesfile name="${excludesfile}" if="excludesfile" />
-          <excludesfile name="${requires-1.7}" unless="is-java-1.7" />
+          <excludesfile name="${requires-1.7}" unless="is-java-ge-1.7" />
         </fileset>
       </batchtest>
      </junitelem>
@@ -2217,7 +2255,7 @@ published on the Web. http://www.lockss.org
           <include name="${plug.include}" />
           <exclude name="${exclude}" />
           <excludesfile name="${excludesfile}" if="excludesfile" />
-          <excludesfile name="${requires-1.7}" unless="is-java-1.7" />
+          <excludesfile name="${requires-1.7}" unless="is-java-ge-1.7" />
         </fileset>
       </batchtest>
      </junitelem>
@@ -2287,12 +2325,12 @@ Test results in ${test.results}
       <fileset id="test.one.filesetid" dir="${test.src}">
 	 <include name="**/${class}.java" />
          <excludesfile name="${excludesfile}" if="excludesfile" />
-         <excludesfile name="${requires-1.7}" unless="is-java-1.7" />
+         <excludesfile name="${requires-1.7}" unless="is-java-ge-1.7" />
       </fileset>
       <fileset id="test.one.plugin.filesetid" dir="${plugins.test.src}">
 	 <include name="**/${class}.java" />
          <excludesfile name="${excludesfile}" if="excludesfile" />
-         <excludesfile name="${requires-1.7}" unless="is-java-1.7" />
+         <excludesfile name="${requires-1.7}" unless="is-java-ge-1.7" />
       </fileset>
       <!-- test whether fileset is empty by converting it to a string -->
       <pathconvert refid="test.one.filesetid" property="test.one.files"
@@ -2329,7 +2367,7 @@ Test results in ${test.results}
           <include name="**/Test*.java" />
 	  <include name="**/Func*.java"/>
           <excludesfile name="${excludesfile}" if="excludesfile" />
-          <excludesfile name="${requires-1.7}" unless="is-java-1.7" />
+          <excludesfile name="${requires-1.7}" unless="is-java-ge-1.7" />
        </fileset>
       </batchtest>
      </junitelem>
@@ -2584,7 +2622,7 @@ Test results in ${test.results}
 
   <!-- ==================================================================== -->
   <target name="checkout-and-build"
-     depends="check.contrib,get.cvs.tag"
+     depends="require.release.java.version,check.contrib,get.cvs.tag"
      description="Checkout current cvs into temp dir, build and test all." >
    <property name="cvstag" value="" />
    <property name="target" value="test-all" />
@@ -2697,6 +2735,7 @@ Test results in ${test.results}
 	   inheritAll="false">
        <property name="ant-contrib.loaded" value="${ant-contrib.loaded}" />
        <property name="halt" value="${halt}" />
+       <property name="loglevel" value="${loglevel}" />
 <!--        <property name="excludesfile" value="${excludesfile} if=excludesfile" /> -->
        <property name="build.compiler" value="modern" />
      </ant>
