@@ -1,5 +1,5 @@
 /*
- * $Id: SystemMetrics.java,v 1.34 2014-06-17 18:12:55 tlipkis Exp $
+ * $Id: SystemMetrics.java,v 1.35 2014-07-05 21:43:19 tlipkis Exp $
  */
 
 /*
@@ -267,7 +267,8 @@ public class SystemMetrics
 		", Free: " + K(free) +
 		", Total: " + K(tot) +
 		", Max: " + K(max) +
-		", " + pluginMgr.getAllAus().size() + " AUs");
+		( (pluginMgr == null) ? "" :
+		  (", " + pluginMgr.getAllAus().size() + " AUs")));
     if (logger.isDebug2()) {
       logger.debug2("String Pools:\n" + StringPool.allStats());
     }
