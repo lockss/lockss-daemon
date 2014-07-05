@@ -1,5 +1,5 @@
 /*
- * $Id: TestRewritingReader.java,v 1.2 2014-07-05 21:51:51 tlipkis Exp $
+ * $Id: TestRewritingReader.java,v 1.3 2014-07-05 21:55:32 tlipkis Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.nio.CharBuffer;
 
 import org.apache.commons.io.IOUtils;
 import org.lockss.test.LockssTestCase;
+import org.lockss.util.Constants;
 
 public class TestRewritingReader extends LockssTestCase {
 

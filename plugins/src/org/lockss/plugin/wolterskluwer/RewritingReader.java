@@ -1,5 +1,5 @@
 /*
- * $Id: RewritingReader.java,v 1.2 2014-07-05 21:51:51 tlipkis Exp $
+ * $Id: RewritingReader.java,v 1.3 2014-07-05 21:55:32 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.plugin.wolterskluwer;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.Reader;
+import org.lockss.util.Constants;
 
 /*
  * This is a copy of org.lockss.util.RewritingReader to be used in 1.65.
