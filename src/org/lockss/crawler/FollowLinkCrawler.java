@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.98 2014-04-23 20:42:46 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.99 2014-07-05 21:43:34 tlipkis Exp $
  */
 
 /*
@@ -465,8 +465,13 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
   protected void appendAlertInfo(StringBuilder sb) {
     sb.append(String.format("\n\nRefetch Depth: %d\nMax Depth: %d\nActual Depth: %d",
 			    getRefetchDepth(), maxDepth, crawlStatus.getDepth()));
+    if (proxyHost != null) {
+      sb.append("\nProxy: ");
+      sb.append(proxyHost);
+      sb.append(":");
+      sb.append(proxyPort);
+    }
   }				
-// 	ab.append(String.format("\n\nFetched: %d\nWarnings" %d|nError
 
   /** Separate method for easy overridability in unit tests, where
    * necessary environment may not be set up */
