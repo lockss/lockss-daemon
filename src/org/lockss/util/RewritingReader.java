@@ -1,5 +1,5 @@
 /*
- * $Id: RewritingReader.java,v 1.1 2014-07-03 23:37:42 thib_gc Exp $
+ * $Id: RewritingReader.java,v 1.2 2014-07-05 21:44:08 tlipkis Exp $
  */
 
 /*
@@ -46,7 +46,8 @@ import java.io.Reader;
  * <p>
  * A {@link BufferedReader} is used to read from the underlying {@link Reader},
  * which trims line terminators. This class re-injects line terminators using
- * {@link System#lineSeparator()}, which may not mimic the incoming data's line
+ * the system-dependent line separater (value of <tt>line.separator</tt>
+ * System property}, which may not mimic the incoming data's line
  * terminators, and will definitely end the last line with a linte terminator.
  * </p>
  * 
@@ -257,10 +258,10 @@ public abstract class RewritingReader extends Reader {
         }
         String rewritten = rewriteLine(currentLine);
         if (rewritten == null) {
-          currentLine = System.lineSeparator();
+          currentLine = Constants.EOL;
         }
         else {
-          currentLine = rewritten + System.lineSeparator();
+          currentLine = rewritten + Constants.EOL;
         }
       }
     }
@@ -280,8 +281,8 @@ public abstract class RewritingReader extends Reader {
    * @param line
    *          The incoming line of character data from the underlying
    *          {@link Reader}, without its line terminator
-   * @return A rewritten line of data, to which a line terminator will be
-   *         appended using {@link System#lineSeparator()}.
+   * @return A rewritten line of data, to which the system-dependent line
+   *         terminator will be appended.
    * @since 1.66
    */
   public abstract String rewriteLine(String line);

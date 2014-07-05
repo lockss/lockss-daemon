@@ -1,5 +1,5 @@
 /*
- * $Id: TestRewritingReader.java,v 1.1 2014-07-03 23:37:43 thib_gc Exp $
+ * $Id: TestRewritingReader.java,v 1.2 2014-07-05 21:44:08 tlipkis Exp $
  */
 
 /*
@@ -121,7 +121,7 @@ public class TestRewritingReader extends LockssTestCase {
   }
   
   public void testLineTerminators() throws Exception {
-    String thisPlatform = System.lineSeparator();
+    String thisPlatform = Constants.EOL;
     String otherPlatform = "\r".equals(thisPlatform) ? "\n" : "\r";
     RewritingReader rr = new StringRewritingReader(String.format("abc%sdef%s", otherPlatform, otherPlatform));
     
@@ -140,9 +140,9 @@ public class TestRewritingReader extends LockssTestCase {
         return null;
       }
     };
-    char[] buf = new char[System.lineSeparator().length()];
+    char[] buf = new char[Constants.EOL.length()];
     assertEquals(buf.length, rr.read(buf));
-    assertEquals(System.lineSeparator(), String.valueOf(buf));
+    assertEquals(Constants.EOL, String.valueOf(buf));
     assertEquals(-1, rr.read(buf));
     assertEquals(-1, rr.read(buf));
   }
