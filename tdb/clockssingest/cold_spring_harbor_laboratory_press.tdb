@@ -10,26 +10,6 @@
   {
 
     title <
-      name = bioRxiv 
-    >
-
-    {
-
-      plugin = needs.plugin
-      comment[0] = no issn/eissn info
-      param[base_url] = http://biorxiv.org/
-      implicit < status ; status2 ; year ; name ; param[volume_name] >
-
-      au < exists ; exists ; 2013 ; bioRxiv Volume 2013 ; 2013 >
-      au < exists ; exists ; 2014 ; bioRxiv Volume 2014 ; 2014 >
-      
-    }
-    
-  }
-  
-  {
-
-    title <
       name = Cold Spring Harbor Protocols ;
       issn = 1940-3402 ;
       eissn = 1559-6095 ;
