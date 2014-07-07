@@ -192,8 +192,9 @@
     >
 
     param[base_url] = http://dmm.biologists.org/
+    comment[notReady] = No permission statement on manifest page
 
-    au < testing ; exists ; 2008 ; Disease Models & Mechanisms Volume 1 ; 1 >
+    au < notReady ; exists ; 2008 ; Disease Models & Mechanisms Volume 1 ; 1 >
     au < testing ; exists ; 2009 ; Disease Models & Mechanisms Volume 2 ; 2 >
     au < testing ; exists ; 2010 ; Disease Models & Mechanisms Volume 3 ; 3 >
     au < finished ; frozen ; 2011 ; Disease Models & Mechanisms Volume 4 ; 4 >
@@ -215,6 +216,7 @@
     comment[legacy] = 1853-1965 under a different name, with three series of synthetic volume names
 
     param[base_url] = http://jcs.biologists.org/
+    comment[notReady] = No permission statement on manifest page
 
     au < manifest ; exists ; 1966 ; Journal of Cell Science Volume 1 ; 1 >
     au < manifest ; exists ; 1967 ; Journal of Cell Science Volume 2 ; 2 >
@@ -330,7 +332,7 @@
     au < testing ; exists ; 1999 ; Journal of Cell Science Volume 112 ; 112 >
     au < testing ; exists ; 2000 ; Journal of Cell Science Volume 113 ; 113 >
     au < testing ; exists ; 2001 ; Journal of Cell Science Volume 114 ; 114 >
-    au < testing ; exists ; 2002 ; Journal of Cell Science Volume 115 ; 115 >
+    au < notReady ; exists ; 2002 ; Journal of Cell Science Volume 115 ; 115 >
     au < testing ; exists ; 2003 ; Journal of Cell Science Volume 116 ; 116 >
     au < testing ; exists ; 2004 ; Journal of Cell Science Volume 117 ; 117 >
     au < testing ; exists ; 2005 ; Journal of Cell Science Volume 118 ; 118 >
