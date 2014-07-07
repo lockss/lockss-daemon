@@ -146,7 +146,8 @@
 
   {
     title <
-      name = SMPTE Conference Proceedings 
+      name = SMPTE Conference Proceedings ;
+      type = bookSeries
     >
 
     {
@@ -208,16 +209,14 @@
   
   {
     title <
-      name = SMPTE Standards 
+      name = SMPTE Standards ;
+      type = bookSeries
     >
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-      param[base_url] = http://standards.smpte.org/
-      implicit < status ; year ; name ; param[volume_name] >
-
-      au < exists ; 1969 ; SMPTE Standards Volume 33 ; 33 >
+      comment[base_url] = http://standards.smpte.org/
+      comment[database] = this is not a journal or a book. It is a set of standards.
 
     }
 

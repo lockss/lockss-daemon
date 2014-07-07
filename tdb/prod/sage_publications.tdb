@@ -43310,7 +43310,8 @@ comment[mpj] = now published by Brill
     {
 
       title <
-        name = Drug Science, Policy and Law
+        name = Drug Science, Policy and Law ;
+        eissn = 2050-3245
       >
 
     pluginSuffix = HighWirePressH20Plugin
@@ -43669,10 +43670,10 @@ comment[mpj] = now published by Brill
     {
 
       title <
-        name = SAGE Open Medical Case Reports
+        name = SAGE Open Medical Case Reports ;
+        eissn = 2050-313X
       >
 
-    comment[upcoming] = online 2013
     pluginSuffix = HighWirePressH20Plugin
     param[base_url] = http://sco.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
@@ -43692,15 +43693,15 @@ comment[mpj] = now published by Brill
     param[base_url] = http://seo.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2013 ; SAGE Open Engineering Volume 1 ; 1 >
-    au < expected ; 2014 ; SAGE Open Engineering Volume 2 ; 2 >
+    au < expected ; 2014 ; SAGE Open Engineering Volume 1 ; 1 >
 
     }
 
     {
 
       title <
-        name = SAGE Open Medicine
+        name = SAGE Open Medicine ;
+        eissn = 2050-3121
       >
 
     pluginSuffix = HighWirePressH20Plugin
