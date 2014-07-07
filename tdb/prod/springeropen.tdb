@@ -114,6 +114,21 @@
     {
   
         title <
+          name = Asia Pacific Journal on Computational Engineering ;
+          eissn = 2196-1166
+        >
+  
+        param[base_url] = http://www.apjcen.com/
+        param[journal_issn] = 2196-1166
+        comment[platform] = BioMedCentralPlugin
+  
+        au < exists ; 2014 ; Asia Pacific Journal on Computational Engineering Volume 1 ; 1 >
+  
+    }
+
+    {
+  
+        title <
           name = Asian Journal of Gambling Issues and Public Health ;
           issn = 2195-3007 
         >
@@ -404,6 +419,21 @@
         au < manifest ; 2012 ; Ecological Processes Volume 1 ; 1 >
         au < manifest ; 2013 ; Ecological Processes Volume 2 ; 2 >
         au < manifest ; 2014 ; Ecological Processes Volume 3 ; 3 >
+  
+    }
+  
+    {
+  
+        title <
+          name = EJNMMI Physics ;
+          eissn = 2197-7364
+        >
+  
+        param[base_url] = http://www.ejnmmiphys.com/
+        param[journal_issn] = 2197-7364
+        comment[platform] = BioMedCentralPlugin
+  
+        au < exists ; 2014 ; EJNMMI Physics Volume 1 ; 1 >
   
     }
   
@@ -1506,6 +1536,21 @@
     {
   
         title <
+          name = Journal of Solid State Lighting ;
+          eissn = 2196-1107
+        >
+  
+        param[base_url] = http://www.journalofsolidstatelighting.com/
+        param[journal_issn] = 2196-1107
+        comment[platform] = BioMedCentralPlugin
+  
+        au < exists ; 2014 ; Journal of Solid State Lighting Volume 1 ; 1 >
+  
+    }
+
+    {
+  
+        title <
           name = Journal of Statistical Distributions and Applications ;
           issn = 2195-5832 
         >
@@ -1793,6 +1838,21 @@
         au < manifest ; 2012 ; Progress in Biomaterials Volume 1 ; 1 >
         au < manifest ; 2013 ; Progress in Biomaterials Volume 2 ; 2 >
         au < expected ; 2014 ; Progress in Biomaterials Volume 3 ; 3 >
+  
+    }
+  
+    {
+  
+        title <
+          name = Progress in Earth and Planetary Science ;
+          eissn = 2197-4284
+        >
+  
+        param[base_url] = http://www.progearthplanetsci.com/
+        param[journal_issn] = 2197-4284
+        comment[platform] = BioMedCentralPlugin
+  
+        au < exists ; 2014 ; Progress in Earth and Planetary Science Volume 1 ; 1 >
   
     }
   
