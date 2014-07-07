@@ -6794,6 +6794,22 @@
     {
 
       title <
+        name = Contemporary Review of the Middle East ;
+        issn = 2347-7989 ;
+        eissn = 2349-0055 
+      >
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://cme.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 2014 ; Contemporary Review of the Middle East Volume 1 ; 1 >
+
+    }
+
+    {
+
+      title <
         name = Contemporary Sociology: A Journal of Reviews ;
         issn = 0094-3061 ;
         eissn = 1939-8638 

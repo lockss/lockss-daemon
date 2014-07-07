@@ -6097,6 +6097,21 @@
 
   }
 
+    {
+
+      title <
+        name = Contemporary Review of the Middle East ;
+        issn = 2347-7989 ;
+        eissn = 2349-0055 
+      >
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      param[base_url] = http://cme.sagepub.com/
+
+      au < exists ; exists ; 2014 ; Contemporary Review of the Middle East Volume 1 ; 1 ; >
+
+    }
+
   {
 
     title <
