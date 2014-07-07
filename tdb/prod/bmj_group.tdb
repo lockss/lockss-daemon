@@ -462,29 +462,20 @@
 
       plugin = needs.plugin
       param[base_url] = http://diabetesrc.bmj.com/
+      comment[base_url] = what is the correct base_url. What about http://drc.bmj.com/
       implicit < status ; year ; name ; param[volume_name] >
 
       au < exists ; 2013 ; BMJ Open Diabetes Research & Care Volume 1 ; 1 >
+      au < exists ; 2014 ; BMJ Open Diabetes Research & Care Volume 2 ; 2 >
 
     }
-
-  }
-
-  {
-    title <
-      name = BMJ Open Diabetes Research & Care
-    >
-
-    param[base_url] = http://drc.bmj.com/
-
-    au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; BMJ Open Diabetes Research & Care Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; exists ; 2014 ; BMJ Open Diabetes Research & Care Volume 2 ; 2 >
 
   }
   
   {
     title <
-      name = BMJ Open Respiratory Research
+      name = BMJ Open Respiratory Research ;
+      eissn = 2052-4439
     >
 
     param[base_url] = http://bmjopenrespres.bmj.com/
@@ -847,7 +838,8 @@
 
   {
     title <
-      name = OpenHeart
+      name = OpenHeart ;
+      eissn = 2053-3624
       >
     
     rights = openaccess
