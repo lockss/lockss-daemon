@@ -1,5 +1,5 @@
 /*
- * $Id: WoltersKluwerSgmlAdapter.java,v 1.1 2014-07-03 23:45:03 thib_gc Exp $
+ * $Id: WoltersKluwerSgmlAdapter.java,v 1.2 2014-07-07 21:12:16 aishizaki Exp $
  */
 
 /*
@@ -32,13 +32,16 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.wolterskluwer;
 
+import java.io.FileReader;
 import java.io.Reader;
 import java.util.regex.Pattern;
+
+import org.apache.commons.io.IOUtils;
 
 public class WoltersKluwerSgmlAdapter extends RewritingReader {
 
   public static final Pattern UNCLOSED_SGML_TAGS =
-      Pattern.compile("<((COVER|TGP|XUI) [^>]+)>", Pattern.CASE_INSENSITIVE);
+      Pattern.compile("<((COVER|SPP|TGP|XUI) [^>]+)>", Pattern.CASE_INSENSITIVE);
   
   public static final String UNCLOSED_SGML_TAGS_REPLACEMENT = "<$1 />";
   
@@ -50,5 +53,8 @@ public class WoltersKluwerSgmlAdapter extends RewritingReader {
   public String rewriteLine(String line) {
     return UNCLOSED_SGML_TAGS.matcher(line).replaceAll(UNCLOSED_SGML_TAGS_REPLACEMENT);
   }
-
+   public static void main(String[] args) throws Exception {
+       IOUtils.copy(new WoltersKluwerSgmlAdapter(new FileReader(args[0])), System.out);
+       System.out.flush();
+     }
 }
