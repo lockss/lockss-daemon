@@ -9,10 +9,12 @@
   param[base_url] = http://web2.msue.msu.edu/
   implicit < status ; year; name ; param[year] >
 
+  comment[progress] = still crawling successfully on delta machines 20140707
 
   {
     title <
-      name = Michigan State University Extension Bulletins
+      name = Michigan State University Extension Bulletins ;
+      type = bookSeries
     >
   
     au < released ; 1917 ; Michigan State University Extension Bulletins 1917 ; 1917 >
