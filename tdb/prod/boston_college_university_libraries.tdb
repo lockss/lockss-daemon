@@ -64,7 +64,8 @@
    {
   
     title < 
-      name = Information Technology and Libraries 
+      name = Information Technology and Libraries ;
+      eissn = 2163-5226
   
       >
       param[journal_id] = ital
@@ -101,7 +102,8 @@
 
     {
       title <
-        name = Levantine Review
+        name = Levantine Review ;
+        eissn = 2164-6678 
         
         >
       param[journal_id] = levantine
@@ -114,7 +116,8 @@
           
      {
        title <
-         name = Lumen et Vita
+         name = Lumen et Vita ;
+         eissn = 2329-1087 
          
          >
       param[journal_id] = lumenetvita
@@ -128,7 +131,8 @@
      
      {
        title <
-         name = Proceedings of the Catholic Theological Society of America
+         name = Proceedings of the Catholic Theological Society of America ;
+         eissn = 2328-9902 
          
          >
       param[journal_id] = ctsa
