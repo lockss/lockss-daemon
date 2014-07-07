@@ -1291,7 +1291,7 @@
 
     param[journal_id] = az
 
-    au < expected ; exists ; 2014 ; Advances in Zoology Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2014 ; Advances in Zoology Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2522,7 +2522,7 @@
     param[journal_id] = dbj
 
     au < manifest ; exists ; 2013 ; Developmental Biology Journal Volume 2013 ; 2013 ; 2013 >
-    au < expected ; exists ; 2014 ; Developmental Biology Journal Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2014 ; Developmental Biology Journal Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -5967,7 +5967,7 @@
 
     param[journal_id] = jcrys
     
-    au < exists ; exists ; 2013 ; Journal of Crystallography Volume 2013 ; 2013 ; 2013 >
+    au < manifest ; exists ; 2013 ; Journal of Crystallography Volume 2013 ; 2013 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Crystallography Volume 2014 ; 2014 ; 2014 >
 
   }
