@@ -1,5 +1,5 @@
 /*
- * $Id: NAPXmlSchemaHelper.java,v 1.1 2014-06-20 16:05:05 alexandraohlson Exp $
+ * $Id: NAPXmlSchemaHelper.java,v 1.2 2014-07-07 17:42:49 alexandraohlson Exp $
  */
 
 /*
@@ -190,8 +190,6 @@ implements SourceXmlSchemaHelper {
   /* 2. Each item (article) has its own XML file */
   static private final String NAP_articleNode = NAP_book; 
 
-  /* 3. in JATS there is no global information because one file/article */
-  static private final Map<String,XPathValue> NAP_globalMap = null;
 
   /*
    * The emitter will need a map to know how to cook ONIX raw values
@@ -213,7 +211,8 @@ implements SourceXmlSchemaHelper {
    */
   @Override
   public Map<String, XPathValue> getGlobalMetaMap() {
-    return NAP_globalMap;
+    
+    return null;
   }
 
   /**
