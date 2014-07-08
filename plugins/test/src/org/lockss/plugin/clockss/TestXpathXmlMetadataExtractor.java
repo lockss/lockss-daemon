@@ -1,64 +1,48 @@
 /*
- * $Id: TestXpathXmlMetadataExtractor.java,v 1.1 2014-03-05 19:38:47 alexandraohlson Exp $
+ * $Id: TestXpathXmlMetadataExtractor.java,v 1.2 2014-07-08 01:41:13 thib_gc Exp $
  */
 
 /*
 
-  Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
-  all rights reserved.
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+all rights reserved.
 
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
 
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-  STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-  WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-  IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-  Except as contained in this notice, the name of Stanford University shall not
-  be used in advertising or otherwise to promote the sale, use or other dealings
-  in this Software without prior written authorization from Stanford University.
+Except as contained in this notice, the name of Stanford University shall not
+be used in advertising or otherwise to promote the sale, use or other dealings
+in this Software without prior written authorization from Stanford University.
 
- */
+*/
 
 package org.lockss.plugin.clockss;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.*;
+import java.util.regex.*;
 
 import org.apache.commons.collections.map.MultiValueMap;
-import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.CachedUrl;
-import org.lockss.plugin.PluginTestUtil;
-import org.lockss.plugin.atypon.BaseAtyponHtmlMetadataExtractorFactory;
-import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory.SourceXmlMetadataExtractor;
-import org.lockss.plugin.taylorandfrancis.TaylorAndFrancisSourceTFDocXmlSchemaHelper;
-import org.lockss.plugin.taylorandfrancis.TaylorAndFrancisSourceXmlSchemaHelper;
-import org.lockss.test.*;
-import org.lockss.util.*;
-import org.lockss.config.ConfigManager;
-import org.lockss.config.Configuration;
-import org.lockss.extractor.ArticleMetadata;
-import org.lockss.extractor.FileMetadataExtractor;
-import org.lockss.extractor.FileMetadataListExtractor;
-import org.lockss.extractor.MetadataField;
-import org.lockss.extractor.MetadataTarget;
-import org.lockss.extractor.XmlDomMetadataExtractor;
+import org.lockss.config.*;
+import org.lockss.extractor.*;
 import org.lockss.extractor.XmlDomMetadataExtractor.XPathValue;
+import org.lockss.plugin.*;
+import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory.SourceXmlMetadataExtractor;
+import org.lockss.test.*;
+import org.lockss.util.Logger;
 
 
 /*
@@ -72,7 +56,8 @@ import org.lockss.extractor.XmlDomMetadataExtractor.XPathValue;
  */
 public class TestXpathXmlMetadataExtractor
 extends LockssTestCase {
-  static Logger log = Logger.getLogger(TestXpathXmlMetadataExtractor.class);
+  
+  private static Logger log = Logger.getLogger(TestXpathXmlMetadataExtractor.class);
 
   private MockLockssDaemon theDaemon;
   private ArchivalUnit cau;

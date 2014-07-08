@@ -1,10 +1,10 @@
 /*
- * $Id: XPathXmlMetadataParser.java,v 1.8 2014-06-20 18:24:11 alexandraohlson Exp $
+ * $Id: XPathXmlMetadataParser.java,v 1.9 2014-07-08 01:41:13 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,33 +33,19 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.clockss;
 
 import java.io.*;
-import java.text.NumberFormat;
-import java.text.ParseException;
+import java.text.*;
 import java.util.*;
 
 import javax.xml.namespace.QName;
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.xpath.XPath;
-import javax.xml.xpath.XPathConstants;
-import javax.xml.xpath.XPathExpression;
-import javax.xml.xpath.XPathExpressionException;
-import javax.xml.xpath.XPathFactory;
+import javax.xml.parsers.*;
+import javax.xml.xpath.*;
 
-import org.lockss.extractor.ArticleMetadata;
-import org.lockss.extractor.MetadataTarget;
+import org.lockss.extractor.*;
 import org.lockss.extractor.XmlDomMetadataExtractor.XPathValue;
-import org.lockss.plugin.AuUtil;
-import org.lockss.plugin.CachedUrl;
-import org.lockss.util.Constants;
-import org.lockss.util.Logger;
-import org.lockss.util.StringUtil;
-import org.w3c.dom.Document;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-import org.xml.sax.InputSource;
-import org.xml.sax.SAXException;
+import org.lockss.plugin.*;
+import org.lockss.util.*;
+import org.w3c.dom.*;
+import org.xml.sax.*;
 
 /**
  * This class extracts values from the XML specified by a CachedUrl
@@ -86,7 +72,8 @@ import org.xml.sax.SAXException;
  *
  */
 public class XPathXmlMetadataParser  {
-  static Logger log = Logger.getLogger(XPathXmlMetadataParser.class);
+  
+  private static Logger log = Logger.getLogger(XPathXmlMetadataParser.class);
 
 
   /**
@@ -98,11 +85,14 @@ public class XPathXmlMetadataParser  {
    *
    */
   protected class XPathInfo {
+    
     String xKey;
     XPathExpression xExpr;
     XPathValue xVal;
 
-    public XPathInfo(String keyVal, XPathExpression exprVal, XPathValue evalVal) {
+    public XPathInfo(String keyVal,
+                     XPathExpression exprVal,
+                     XPathValue evalVal) {
       xKey = keyVal;
       xExpr = exprVal;
       xVal = evalVal;
@@ -110,18 +100,13 @@ public class XPathXmlMetadataParser  {
 
   }
 
-  final protected XPathInfo[] gXPathList;
-  final protected XPathInfo[] aXPathList;
+  protected final XPathInfo[] gXPathList;
+  
+  protected final XPathInfo[] aXPathList;
+  
   protected XPathExpression articlePath;
+  
   protected boolean doXmlFiltering;
-
-  protected XPathXmlMetadataParser(int gSize, int aSize) {
-    gXPathList = new XPathInfo[gSize];
-    aXPathList = new XPathInfo[aSize];
-    articlePath = null;
-    doXmlFiltering = false; // default behavior
-  }
-
 
   /**
    *  Create an XPath based XML parser that will extract the textContent of
@@ -144,57 +129,79 @@ public class XPathXmlMetadataParser  {
    * @throws XPathExpressionException
    */
   public XPathXmlMetadataParser(Map<String, XPathValue> globalMap, 
-      String articleNode, 
-      Map<String, XPathValue> articleMap)
-          throws XPathExpressionException {
-    this(getMapSize(globalMap), getMapSize(articleMap));
+                                String articleNode, 
+                                Map<String, XPathValue> articleMap)
+      throws XPathExpressionException {
+    gXPathList = new XPathInfo[getMapSize(globalMap)];
+    aXPathList = new XPathInfo[getMapSize(articleMap)];
+    articlePath = null;
+    doXmlFiltering = false; // default behavior
 
     XPath xpath = XPathFactory.newInstance().newXPath();
     if (globalMap != null) {
       int i = 0;
-      for (Map.Entry<String,XPathValue> entry : globalMap.entrySet()) {
+      for (Map.Entry<String, XPathValue> entry : globalMap.entrySet()) {
         gXPathList[i] = new XPathInfo(entry.getKey(), 
-            xpath.compile(entry.getKey()), entry.getValue());
+                                      xpath.compile(entry.getKey()),
+                                      entry.getValue());
         i++;
       }
     }
 
     if (articleMap != null) {
       int i = 0;
-      for (Map.Entry<String,XPathValue> entry : articleMap.entrySet()) {
+      for (Map.Entry<String, XPathValue> entry : articleMap.entrySet()) {
         aXPathList[i] = new XPathInfo(entry.getKey(), 
-            xpath.compile(entry.getKey()), entry.getValue());
+                                      xpath.compile(entry.getKey()),
+                                      entry.getValue());
         i++;
       }
     }
+    
     if (articleNode != null) {
       articlePath = xpath.compile(articleNode);
     }
-
-  }
-
-  /*
-   * getter/setter for the switch to do xml filtering of input stream
-   */
-
-  public boolean getDoXmlFiltering() {
-    return doXmlFiltering;
-  }
-
-  public void setDoXmlFiltering(boolean setVal) {
-    doXmlFiltering = setVal;
   }
 
   /*
    *  A constructor that allows for the xml filtering of the input stream
    */
   public XPathXmlMetadataParser(Map<String, XPathValue> globalMap, 
-      String articleNode, 
-      Map<String, XPathValue> articleMap, boolean doFiltering)
-          throws XPathExpressionException {
-
+                                String articleNode, 
+                                Map<String, XPathValue> articleMap,
+                                boolean doXmlFiltering)
+      throws XPathExpressionException {
     this(globalMap, articleNode, articleMap);
-    doXmlFiltering = doFiltering;
+    setDoXmlFiltering(doXmlFiltering);
+  }
+
+  /*
+   * getter/setter for the switch to do xml filtering of input stream
+   */
+
+  /**
+   * <p>
+   * Determines if XML pre-filtering with {@link XmlFilteringInputStream} has
+   * been requested for this instance.
+   * </p>
+   * 
+   * @return True if XML pre-filtering has been requested.
+   * @since 1.66
+   */
+  public boolean isDoXmlFiltering() {
+    return doXmlFiltering;
+  }
+  
+  /**
+   * @deprecated Use {@link #isDoXmlFiltering()} instead.
+   */
+  @Deprecated
+  public boolean getDoXmlFiltering() {
+    return isDoXmlFiltering();
+  }
+
+  public void setDoXmlFiltering(boolean doXmlFiltering) {
+    this.doXmlFiltering = doXmlFiltering;
   }
 
   /* a convenience to ensure we don't dereference null - used by 
@@ -360,43 +367,130 @@ public class XPathXmlMetadataParser  {
   }
 
   /**
+   * <p>
+   * Subclasses can override this method to create and configure a
+   * {@link DocumentBuilderFactory} instance.
+   * </p>
+   * <p>
+   * By default, this class uses {@link DocumentBuilderFactory#newInstance()}
+   * and sets all the following to <code>false</code>:
+   * </p>
+   * <ul>
+   * <li>{@link DocumentBuilderFactory#setValidating(boolean)}</li>
+   * <li><code>http://xml.org/sax/features/namespaces</code></li>
+   * <li><code>http://xml.org/sax/features/validation</code></li>
+   * <li><code>http://apache.org/xml/features/nonvalidating/load-dtd-grammar</code></li>
+   * <li><code>http://apache.org/xml/features/nonvalidating/load-external-dtd</code></li>
+   * <li><code>http://apache.org/xml/features/dom/defer-node-expansion</code></li>
+   * </ul>
+   * 
+   * @throws ParserConfigurationException
+   *           if an error arises while configuring the document builder
+   *           factory.
+   * @since 1.66
+   */
+  protected DocumentBuilderFactory makeDocumentBuilderFactory()
+      throws ParserConfigurationException {
+    DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+    dbf.setValidating(false);
+    dbf.setFeature("http://xml.org/sax/features/namespaces", false);
+    dbf.setFeature("http://xml.org/sax/features/validation", false);
+    dbf.setFeature("http://apache.org/xml/features/nonvalidating/load-dtd-grammar", false);
+    dbf.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false); 
+    // The following feature keeps some XML files (see T&Fsource) from causing DB.parse
+    // null pointer exception
+    dbf.setFeature("http://apache.org/xml/features/dom/defer-node-expansion", false);
+    return dbf;
+  }
+  
+  /**
+   * <p>
+   * Subclasses can override this method to make and configure a
+   * {@link DocumentBuilder} instance from the given
+   * {@link DocumentBuilderFactory} instance.
+   * </p>
+   * <p>
+   * By default, this simply calls
+   * {@link DocumentBuilderFactory#newDocumentBuilder()} on the
+   * {@link DocumentBuilderFactory} instance.
+   * </p>
+   * 
+   * @param db
+   *          A document builder.
+   * @throws ParserConfigurationException
+   *           if an error arises while configuring the document builder
+   *           factory.
+   * @since 1.66
+   */
+  protected DocumentBuilder makeDocumentBuilder(DocumentBuilderFactory dbf)
+      throws ParserConfigurationException {
+    return dbf.newDocumentBuilder();
+  }
+  
+  /**
+   * <p>
+   * Subclasses can override this method to make an {@link InputSource} from the
+   * given {@link CachedUrl}.
+   * </p>
+   * <p>
+   * By default, this class uses the cached URL's
+   * {@link CachedUrl#getUnfilteredInputStream()} method and, if
+   * {@link #isDoXmlFiltering()} return true, wraps it in a
+   * {@link XmlFilteringInputStream}, setting the encoding of the input source
+   * to {@link CachedUrl#getEncoding()}.
+   * </p>
+   * 
+   * @param cu
+   *          A cached URL.
+   * @return An input source for the cached URL's data stream.
+   * @throws IOException
+   *           if an I/O exception occurs.
+   * @since 1.66
+   */
+  protected InputSource makeInputSource(CachedUrl cu) throws IOException {
+    InputSource is = new InputSource(getInputStreamFromCU(cu));
+    is.setEncoding(cu.getEncoding());
+    return is;
+  }
+  
+  /**
    *  Given a CU for an XML file, load and return the XML as a Document "tree". 
    * @param cu to the XML file
    * @return Document for the loaded XML file
    */
   protected Document createDocumentTree(CachedUrl cu) throws SAXException, IOException {
-
-    DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-    DocumentBuilder builder;
+    DocumentBuilderFactory dbf = null;
+    DocumentBuilder builder = null;
     try {
-      dbf.setValidating(false);
-      dbf.setFeature("http://xml.org/sax/features/namespaces", false);
-      dbf.setFeature("http://xml.org/sax/features/validation", false);
-      dbf.setFeature("http://apache.org/xml/features/nonvalidating/load-dtd-grammar", false);
-      dbf.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false); 
-      // The following feature keeps some XML files (see T&Fsource) from causing DB.parse
-      // null pointer exception
-      dbf.setFeature("http://apache.org/xml/features/dom/defer-node-expansion", false);
-      builder = dbf.newDocumentBuilder();
-    } catch (ParserConfigurationException ex) {
-      log.warning("Cannot setup document build for XML file -", ex);
+      dbf = makeDocumentBuilderFactory();
+      builder = makeDocumentBuilder(dbf);
+    }
+    catch (ParserConfigurationException pce) {
+      log.warning("Cannot setup document builder for XML file: " + cu.getUrl(), pce);
       return null;
     }
 
-    InputSource iSource = new InputSource(getInputStreamFromCU(cu));
-    iSource.setEncoding(cu.getEncoding());
-    Document doc;
+    Document doc = null;
     try {
+      InputSource iSource = makeInputSource(cu);
       doc = builder.parse(iSource);
       return doc;
-    } finally {
+    }
+    catch (SAXException se) {
+      log.debug("SAXException while parsing XML file: " + cu.getUrl(), se);
+      throw se;
+    }
+    catch (IOException ioe) {
+      log.debug("IOException while parsing XML file: " + cu.getUrl(), ioe);
+      throw ioe;
+    }
+    finally {
       AuUtil.safeRelease(cu);
     }
   }
 
   protected InputStream getInputStreamFromCU(CachedUrl cu) {
-
-    if (doXmlFiltering) {
+    if (isDoXmlFiltering()) {
       if (!(Constants.ENCODING_ISO_8859_1.equalsIgnoreCase(cu.getEncoding()))) {
         log.error("Filtering XML that is not ISO-8859-1 which may or may not work");
       }
