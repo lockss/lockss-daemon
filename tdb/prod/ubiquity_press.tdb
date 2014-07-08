@@ -113,8 +113,8 @@
     param[base_url] = http://www.comicsgrid.com/
     param[journal_id] = cg
 
-    au < exists ; 2013 ; The Comics Grid: Journal of Comics Scholarship Volume 3 ; 3 ; 2013 >
-    au < exists ; 2014 ; The Comics Grid: Journal of Comics Scholarship Volume 4 ; 4 ; 2014 >
+    au < manifest ; 2013 ; The Comics Grid: Journal of Comics Scholarship Volume 3 ; 3 ; 2013 >
+    au < manifest ; 2014 ; The Comics Grid: Journal of Comics Scholarship Volume 4 ; 4 ; 2014 >
     
   }
 
@@ -218,9 +218,9 @@
     param[base_url] = http://openarchaeologydata.metajnl.com/
     param[journal_id] = joad
     
-    au < exists ; 2012 ; Journal of Open Archaeology Data Volume 1 ; 1 ; 2012 >
-    au < exists ; 2013 ; Journal of Open Archaeology Data Volume 2 ; 2 ; 2013 >
-    au < expected ; 2014 ; Journal of Open Archaeology Data Volume 3 ; 3 ; 2014 >
+    au < manifest ; 2012 ; Journal of Open Archaeology Data Volume 1 ; 1 ; 2012 >
+    au < manifest ; 2013 ; Journal of Open Archaeology Data Volume 2 ; 2 ; 2013 >
+    au < manifest ; 2014 ; Journal of Open Archaeology Data Volume 3 ; 3 ; 2014 >
 
   }
   
@@ -234,7 +234,7 @@
     param[base_url] = http://openpublichealthdata.metajnl.com/
     param[journal_id] = jophd
     
-    au < exists ; 2013 ; Journal of Open Public Health Data Volume 1 ; 1 ; 2013 >
+    au < manifest ; 2013 ; Journal of Open Public Health Data Volume 1 ; 1 ; 2013 >
     au < expected ; 2014 ; Journal of Open Public Health Data Volume 2 ; 2 ; 2014 >
 
   }
@@ -249,8 +249,8 @@
     param[base_url] = http://openpsychologydata.metajnl.com/
     param[journal_id] = jopd
     
-    au < exists ; 2013 ; Journal of Open Psychology Data Volume 1 ; 1 ; 2013 >
-    au < expected ; 2014 ; Journal of Open Psychology Data Volume 2 ; 2 ; 2014 >
+    au < manifest ; 2013 ; Journal of Open Psychology Data Volume 1 ; 1 ; 2013 >
+    au < manifest ; 2014 ; Journal of Open Psychology Data Volume 2 ; 2 ; 2014 >
 
   }
   
@@ -264,8 +264,8 @@
     param[base_url] = http://openresearchsoftware.metajnl.com/
     param[journal_id] = jors
 
-    au < exists ; 2013 ; Journal of Open Research Software Volume 1 ; 1 ; 2013 >
-    au < expected ; 2014 ; Journal of Open Research Software Volume 2 ; 2 ; 2014 >
+    au < manifest ; 2013 ; Journal of Open Research Software Volume 1 ; 1 ; 2013 >
+    au < manifest ; 2014 ; Journal of Open Research Software Volume 2 ; 2 ; 2014 >
     
   }
   
@@ -375,16 +375,16 @@
     param[base_url] = http://www.psychologicabelgica.com/
     param[journal_id] = pb
 
-    au < exists ; 2005 ; Psychologica Belgica Volume 45 ; 45 ; 2005 >
-    au < exists ; 2006 ; Psychologica Belgica Volume 46 ; 46 ; 2006 >
-    au < exists ; 2007 ; Psychologica Belgica Volume 47 ; 47 ; 2007 >
-    au < exists ; 2008 ; Psychologica Belgica Volume 48 ; 48 ; 2008 >
-    au < exists ; 2009 ; Psychologica Belgica Volume 49 ; 49 ; 2009 >
-    au < exists ; 2010 ; Psychologica Belgica Volume 50 ; 50 ; 2010 >
-    au < exists ; 2011 ; Psychologica Belgica Volume 51 ; 51 ; 2011 >
-    au < exists ; 2012 ; Psychologica Belgica Volume 52 ; 52 ; 2012 >
-    au < exists ; 2013 ; Psychologica Belgica Volume 53 ; 53 ; 2013 >
-    au < exists ; 2014 ; Psychologica Belgica Volume 54 ; 54 ; 2014 >
+    au < manifest ; 2005 ; Psychologica Belgica Volume 45 ; 45 ; 2005 >
+    au < manifest ; 2006 ; Psychologica Belgica Volume 46 ; 46 ; 2006 >
+    au < manifest ; 2007 ; Psychologica Belgica Volume 47 ; 47 ; 2007 >
+    au < manifest ; 2008 ; Psychologica Belgica Volume 48 ; 48 ; 2008 >
+    au < manifest ; 2009 ; Psychologica Belgica Volume 49 ; 49 ; 2009 >
+    au < manifest ; 2010 ; Psychologica Belgica Volume 50 ; 50 ; 2010 >
+    au < manifest ; 2011 ; Psychologica Belgica Volume 51 ; 51 ; 2011 >
+    au < manifest ; 2012 ; Psychologica Belgica Volume 52 ; 52 ; 2012 >
+    au < manifest ; 2013 ; Psychologica Belgica Volume 53 ; 53 ; 2013 >
+    au < manifest ; 2014 ; Psychologica Belgica Volume 54 ; 54 ; 2014 >
 
   }
 
