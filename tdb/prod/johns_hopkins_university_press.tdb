@@ -430,7 +430,7 @@
     param[journal_dir] = childrens_literature_association_quarterly
     attr[journal_id] = chq
 
-    au < manifest ; 2004 ; Children's Literature Association Quarterly Volume 29 ; 29 >
+    au < testing ; 2004 ; Children's Literature Association Quarterly Volume 29 ; 29 >
     au < released ; 2005 ; Children's Literature Association Quarterly Volume 30 ; 30 >
     au < released ; 2006 ; Children's Literature Association Quarterly Volume 31 ; 31 >
     au < released ; 2007 ; Children's Literature Association Quarterly Volume 32 ; 32 >
@@ -1140,15 +1140,15 @@
     param[journal_dir] = lesprit_createur
     attr[journal_id] = esp
 
-    au < manifest ; 1996 ; L'Esprit Créateur Volume 36 ; 36 >
-    au < manifest ; 1997 ; L'Esprit Créateur Volume 37 ; 37 >
-    au < manifest ; 1998 ; L'Esprit Créateur Volume 38 ; 38 >
-    au < manifest ; 1999 ; L'Esprit Créateur Volume 39 ; 39 >
-    au < manifest ; 2000 ; L'Esprit Créateur Volume 40 ; 40 >
-    au < manifest ; 2001 ; L'Esprit Créateur Volume 41 ; 41 >
-    au < manifest ; 2002 ; L'Esprit Créateur Volume 42 ; 42 >
-    au < manifest ; 2003 ; L'Esprit Créateur Volume 43 ; 43 >
-    au < manifest ; 2004 ; L'Esprit Créateur Volume 44 ; 44 >
+    au < testing ; 1996 ; L'Esprit Créateur Volume 36 ; 36 >
+    au < testing ; 1997 ; L'Esprit Créateur Volume 37 ; 37 >
+    au < testing ; 1998 ; L'Esprit Créateur Volume 38 ; 38 >
+    au < testing ; 1999 ; L'Esprit Créateur Volume 39 ; 39 >
+    au < testing ; 2000 ; L'Esprit Créateur Volume 40 ; 40 >
+    au < testing ; 2001 ; L'Esprit Créateur Volume 41 ; 41 >
+    au < testing ; 2002 ; L'Esprit Créateur Volume 42 ; 42 >
+    au < testing ; 2003 ; L'Esprit Créateur Volume 43 ; 43 >
+    au < testing ; 2004 ; L'Esprit Créateur Volume 44 ; 44 >
     au < released ; 2005 ; L'Esprit Créateur Volume 45 ; 45 >
     au < released ; 2006 ; L'Esprit Créateur Volume 46 ; 46 >
     au < released ; 2007 ; L'Esprit Créateur Volume 47 ; 47 >
@@ -1494,9 +1494,9 @@
     param[journal_dir] = partial_answers
     attr[journal_id] = pan
 
-    au < manifest ; 2003 ; Partial Answers: Journal of Literature and the History of Ideas Volume 1 ; 1 >
-    au < manifest ; 2004 ; Partial Answers: Journal of Literature and the History of Ideas Volume 2 ; 2 >
-    au < manifest ; 2005 ; Partial Answers: Journal of Literature and the History of Ideas Volume 3 ; 3 >
+    au < testing ; 2003 ; Partial Answers: Journal of Literature and the History of Ideas Volume 1 ; 1 >
+    au < testing ; 2004 ; Partial Answers: Journal of Literature and the History of Ideas Volume 2 ; 2 >
+    au < testing ; 2005 ; Partial Answers: Journal of Literature and the History of Ideas Volume 3 ; 3 >
     au < released ; 2006 ; Partial Answers: Journal of Literature and the History of Ideas Volume 4 ; 4 >
     au < released ; 2007 ; Partial Answers: Journal of Literature and the History of Ideas Volume 5 ; 5 >
     au < released ; 2008 ; Partial Answers: Journal of Literature and the History of Ideas Volume 6 ; 6 >
@@ -1616,10 +1616,10 @@
     param[journal_dir] = poe_studies
     attr[journal_id] = poe
     
-    au < manifest ; 2001 ; Poe Studies Volume 34 ; 34 >
-    au < manifest ; 2002 ; Poe Studies Volume 35 ; 35 >
-    au < manifest ; 2003 ; Poe Studies Volume 36 ; 36 >
-    au < manifest ; 2004 ; Poe Studies Volume 37 ; 37 >
+    au < testing ; 2001 ; Poe Studies Volume 34 ; 34 >
+    au < testing ; 2002 ; Poe Studies Volume 35 ; 35 >
+    au < testing ; 2003 ; Poe Studies Volume 36 ; 36 >
+    au < testing ; 2004 ; Poe Studies Volume 37 ; 37 >
     au < released ; 2005 ; Poe Studies Volume 38 ; 38 >
     au < released ; 2006 ; Poe Studies Volume 39 ; 39 >
     au < exists ; 2007 ; Poe Studies Volume 40 ; 40 >
@@ -1995,21 +1995,21 @@
     param[journal_dir] = studies_in_eighteenth_century_culture
     attr[journal_id] = sec
 
-    au < manifest ; 1991 ; Studies in Eighteenth-Century Culture Volume 20 ; 20 >
-    au < manifest ; 1992 ; Studies in Eighteenth-Century Culture Volume 21 ; 21 >
-    au < manifest ; 1993 ; Studies in Eighteenth-Century Culture Volume 22 ; 22 >
-    au < manifest ; 1994 ; Studies in Eighteenth-Century Culture Volume 23 ; 23 >
-    au < manifest ; 1995 ; Studies in Eighteenth-Century Culture Volume 24 ; 24 >
-    au < manifest ; 1996 ; Studies in Eighteenth-Century Culture Volume 25 ; 25 >
-    au < manifest ; 1997 ; Studies in Eighteenth-Century Culture Volume 26 ; 26 >
-    au < manifest ; 1998 ; Studies in Eighteenth-Century Culture Volume 27 ; 27 >
-    au < manifest ; 1999 ; Studies in Eighteenth-Century Culture Volume 28 ; 28 >
-    au < manifest ; 2000 ; Studies in Eighteenth-Century Culture Volume 29 ; 29 >
-    au < manifest ; 2001 ; Studies in Eighteenth-Century Culture Volume 30 ; 30 >
-    au < manifest ; 2002 ; Studies in Eighteenth-Century Culture Volume 31 ; 31 >
-    au < manifest ; 2003 ; Studies in Eighteenth-Century Culture Volume 32 ; 32 >
-    au < manifest ; 2004 ; Studies in Eighteenth-Century Culture Volume 33 ; 33 >
-    au < manifest ; 2005 ; Studies in Eighteenth-Century Culture Volume 34 ; 34 >
+    au < testing ; 1991 ; Studies in Eighteenth-Century Culture Volume 20 ; 20 >
+    au < testing ; 1992 ; Studies in Eighteenth-Century Culture Volume 21 ; 21 >
+    au < testing ; 1993 ; Studies in Eighteenth-Century Culture Volume 22 ; 22 >
+    au < testing ; 1994 ; Studies in Eighteenth-Century Culture Volume 23 ; 23 >
+    au < testing ; 1995 ; Studies in Eighteenth-Century Culture Volume 24 ; 24 >
+    au < testing ; 1996 ; Studies in Eighteenth-Century Culture Volume 25 ; 25 >
+    au < testing ; 1997 ; Studies in Eighteenth-Century Culture Volume 26 ; 26 >
+    au < testing ; 1998 ; Studies in Eighteenth-Century Culture Volume 27 ; 27 >
+    au < testing ; 1999 ; Studies in Eighteenth-Century Culture Volume 28 ; 28 >
+    au < testing ; 2000 ; Studies in Eighteenth-Century Culture Volume 29 ; 29 >
+    au < testing ; 2001 ; Studies in Eighteenth-Century Culture Volume 30 ; 30 >
+    au < testing ; 2002 ; Studies in Eighteenth-Century Culture Volume 31 ; 31 >
+    au < testing ; 2003 ; Studies in Eighteenth-Century Culture Volume 32 ; 32 >
+    au < testing ; 2004 ; Studies in Eighteenth-Century Culture Volume 33 ; 33 >
+    au < testing ; 2005 ; Studies in Eighteenth-Century Culture Volume 34 ; 34 >
     au < released ; 2006 ; Studies in Eighteenth-Century Culture Volume 35 ; 35 >
     au < released ; 2007 ; Studies in Eighteenth-Century Culture Volume 36 ; 36 >
     au < released ; 2008 ; Studies in Eighteenth-Century Culture Volume 37 ; 37 >
