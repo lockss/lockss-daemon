@@ -1635,8 +1635,9 @@
 
     param[journal_issn] = 1742-6596
     comment[param] = eissn preferred
-    comment[notReady170] = crawl failure
-    comment[notReady] = low agreement
+    comment[ingNotReady170] = crawl failure
+    comment[ingNotReady] = low agreement
+    comment[notReady] = PD-1111, hash filter for metrics tag
 
     au < manifest ; exists ; 2004 ; Journal of Physics: Conference Series Volume 1 ; 1 >
     au < manifest ; exists ; 2004 ; Journal of Physics: Conference Series Volume 2 ; 2 >
@@ -2111,9 +2112,9 @@
     au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 471 ; 471 >
     au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 472 ; 472 >
     au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 473 ; 473 >
-    au < testing ; exists ; 2013 ; Journal of Physics: Conference Series Volume 474 ; 474 >
+    au < notReady ; exists ; 2013 ; Journal of Physics: Conference Series Volume 474 ; 474 >
     au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 475 ; 475 >
-    au < testing ; exists ; 2013 ; Journal of Physics: Conference Series Volume 476 ; 476 >
+    au < notReady ; exists ; 2013 ; Journal of Physics: Conference Series Volume 476 ; 476 >
     au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 477 ; 477 >
     au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 478 ; 478 >
     au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 479 ; 479 >
