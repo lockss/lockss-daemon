@@ -40,6 +40,12 @@ foreach my $issn (sort(keys(%issn_eissn))) {
             (@{$issn_eissn{$issn}}->[0]->[3] eq @{$issn_eissn{$issn}}->[1]->[3])) {
             $print_this = 0;
         }
+#            ($issn_eissn{$issn}[0]->[0] ne $issn_eissn{$issn}[1]->[0]) &&
+#            ($issn_eissn{$issn}[0]->[1] eq $issn_eissn{$issn}[1]->[1]) &&
+#            ($issn_eissn{$issn}[0]->[2] eq $issn_eissn{$issn}[1]->[2]) &&
+#            ($issn_eissn{$issn}[0]->[3] eq $issn_eissn{$issn}[1]->[3])) {
+#            $print_this = 0;
+#        }
 
 	# Suppress printing if:
 	#  Publisher is "Taylor & Francis" for all records.
