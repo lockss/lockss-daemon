@@ -6447,7 +6447,8 @@
   {
 
     title <
-      name = Gastroenterology Report 
+      name = Gastroenterology Report ;
+      eissn = 2052-0034
       
     >
       
@@ -8199,7 +8200,9 @@
   {
 
     title <
-      name = Information and Inference: A Journal of the IMA
+      name = Information and Inference: A Journal of the IMA ;
+      issn = 2049-8764 ;
+      eissn = 2049-8772
     >
 
     param[base_url] = http://imaiai.oxfordjournals.org/
@@ -21015,7 +21018,9 @@
   {
 
     title <
-      name = Journal of Survey Statistics and Methodology 
+      name = Journal of Survey Statistics and Methodology ;
+      issn = 2325-0984 ;
+      eissn = 2325-0992
     >
 
     param[base_url] = http://jssam.oxfordjournals.org/
@@ -21438,7 +21443,8 @@
   {
 
     title <
-      name = Conservation Physiology 
+      name = Conservation Physiology ;
+      eissn = 2051-1434 
     >
 
     param[base_url] = http://conphys.oxfordjournals.org/
@@ -21457,7 +21463,8 @@
   {
 
     title <
-      name = Evolution, Medicine, and Public Health 
+      name = Evolution, Medicine, and Public Health ;
+      eissn = 2050-6201
     >
 
     param[base_url] = http://emph.oxfordjournals.org/
