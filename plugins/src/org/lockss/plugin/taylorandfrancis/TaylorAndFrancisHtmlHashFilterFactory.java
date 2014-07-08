@@ -1,5 +1,5 @@
 /*
- * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.16 2014-03-11 19:38:39 thib_gc Exp $
+ * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.17 2014-07-08 17:30:27 alexandraohlson Exp $
  */
 
 /*
@@ -287,7 +287,9 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
         new TagPair("<li><strong>Citations:", "</li>"),
         new TagPair("<li><strong><a href=\"/doi/citedby/", "</li>"),
         // Added to some articles later
-        new TagPair("<li><strong>Citation information:", "</li>")
+        new TagPair("<li><strong>Citation information:", "</li>"),
+        // toc/rama20/7/1 - new wording 
+        new TagPair("<li><div><strong>Citing Articles:", "</li>")
     ));
     Reader stringFilter = tagFilter;
     // Wording change

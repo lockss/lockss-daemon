@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponArticleIteratorFactory.java,v 1.6 2013-12-23 18:30:45 alexandraohlson Exp $
+ * $Id: BaseAtyponArticleIteratorFactory.java,v 1.7 2014-07-08 17:30:28 alexandraohlson Exp $
  */
 
 /*
@@ -79,10 +79,10 @@ implements ArticleIteratorFactory,
     
     // various aspects of an article
     // DOI's can have "/"s in the suffix
-    final Pattern PDF_PATTERN = Pattern.compile("/doi/pdf/([.0-9]+)/([^?^&]+)$", Pattern.CASE_INSENSITIVE);
-    final Pattern ABSTRACT_PATTERN = Pattern.compile("/doi/abs/([.0-9]+)/([^?^&]+)$", Pattern.CASE_INSENSITIVE);
-    final Pattern HTML_PATTERN = Pattern.compile("/doi/full/([.0-9]+)/([^?^&]+)$", Pattern.CASE_INSENSITIVE);
-    final Pattern PDFPLUS_PATTERN = Pattern.compile("/doi/pdfplus/([.0-9]+)/([^?^&]+)$", Pattern.CASE_INSENSITIVE);
+    final Pattern PDF_PATTERN = Pattern.compile("/doi/pdf/([.0-9]+)/([^?&]+)$", Pattern.CASE_INSENSITIVE);
+    final Pattern ABSTRACT_PATTERN = Pattern.compile("/doi/abs/([.0-9]+)/([^?&]+)$", Pattern.CASE_INSENSITIVE);
+    final Pattern HTML_PATTERN = Pattern.compile("/doi/full/([.0-9]+)/([^?&]+)$", Pattern.CASE_INSENSITIVE);
+    final Pattern PDFPLUS_PATTERN = Pattern.compile("/doi/pdfplus/([.0-9]+)/([^?&]+)$", Pattern.CASE_INSENSITIVE);
 
     // how to change from one form (aspect) of article to another
     final String HTML_REPLACEMENT = "/doi/full/$1/$2";

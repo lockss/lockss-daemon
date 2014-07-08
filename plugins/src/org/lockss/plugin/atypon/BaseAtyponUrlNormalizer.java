@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponUrlNormalizer.java,v 1.6 2014-05-05 19:07:30 alexandraohlson Exp $
+ * $Id: BaseAtyponUrlNormalizer.java,v 1.7 2014-07-08 17:30:28 alexandraohlson Exp $
  */
 /*
  Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
@@ -43,6 +43,7 @@ public class BaseAtyponUrlNormalizer implements UrlNormalizer {
   protected static Logger log = 
       Logger.getLogger("BaseAtyponUrlNormalizer");
   protected static final String SUFFIX = "?cookieSet=1";
+  protected static final String BEAN_SUFFIX = "?queryID=%24%7BresultBean.queryID%7D";
   protected static final Pattern HASH_ARG_PATTERN = Pattern.compile("(\\.css|js)\\?\\d+$");
   protected static final String  NO_ARG_REPLACEMENT = "";
   
@@ -55,8 +56,6 @@ public class BaseAtyponUrlNormalizer implements UrlNormalizer {
   private final String DOI_ARG = "doi";
   private final String FORMAT_ARG = "format";
   private final String INCLUDE_ARG = "include";
-  //These are the things that we need to end up with, in this order
-  private final String[] NEEDED_ARGUMENTS = {DOI_ARG, FORMAT_ARG, INCLUDE_ARG}; 
 
   public String normalizeUrl(String url, ArchivalUnit au)
       throws PluginException {
@@ -130,7 +129,13 @@ public class BaseAtyponUrlNormalizer implements UrlNormalizer {
       return returnString;
     }
 
-    // this wasn't a citation download URL (or it had malformed arguments so we can't normalize)
-    return StringUtils.chomp(url, SUFFIX); /* standard non citation download specific URLS */
+    // just remove any undesired suffixes
+    // if the suffix doesn't exist the url doesn't change, no sense wasting
+    // cycles checking if it exists before trying to remove
+    if (qmark >= 0) {
+      url = StringUtils.substringBeforeLast(url, BEAN_SUFFIX);
+      url = StringUtils.substringBeforeLast(url, SUFFIX);
+    }
+    return url;
   }
 }

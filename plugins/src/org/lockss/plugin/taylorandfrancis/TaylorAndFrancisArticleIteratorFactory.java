@@ -1,5 +1,5 @@
 /*
- * $Id: TaylorAndFrancisArticleIteratorFactory.java,v 1.9 2014-03-28 18:36:19 alexandraohlson Exp $
+ * $Id: TaylorAndFrancisArticleIteratorFactory.java,v 1.10 2014-07-08 17:30:28 alexandraohlson Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ public class TaylorAndFrancisArticleIteratorFactory
 extends BaseAtyponArticleIteratorFactory {
 
   protected static Logger log = Logger.getLogger("TaylorAndFrancisArticleIteratorFactory");
-  private static final Pattern URL_UACP_HTML_PATTERN = Pattern.compile("/doi/full/([.0-9]+)/([^?^&]+)_HTML/");
+  private static final Pattern URL_UACP_HTML_PATTERN = Pattern.compile("/doi/full/([.0-9]+)/([^?&]+)_HTML/");
 
   // Override creation of builder to allow override of underlying createArticleFiles
   // to solve a T&F bug that was generating bogus URLS that looked like article files...

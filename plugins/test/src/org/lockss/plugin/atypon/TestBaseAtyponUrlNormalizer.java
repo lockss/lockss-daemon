@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseAtyponUrlNormalizer.java,v 1.2 2014-05-05 19:07:29 alexandraohlson Exp $
+ * $Id: TestBaseAtyponUrlNormalizer.java,v 1.3 2014-07-08 17:30:29 alexandraohlson Exp $
  */
 
 /*
@@ -47,6 +47,10 @@ public class TestBaseAtyponUrlNormalizer extends LockssTestCase {
     // remove cookie at end of url
     assertEquals("http://www.baseatypon.com/doi/pdf/11.1111/12345",
         normalizer.normalizeUrl("http://www.baseatypon.com/doi/pdf/11.1111/12345?cookieSet=1", null));
+    
+    // remove resultBean stuff - so far seen in BIR and T&F, probably spreading
+    assertEquals("http://www.baseatypon.com/doi/abs/10.1080/19416520.2013.759433",
+        normalizer.normalizeUrl("http://www.baseatypon.com/doi/abs/10.1080/19416520.2013.759433?queryID=%24%7BresultBean.queryID%7D", null));
 
     /* 
      * citation download stuff : each child has a slightly different starting URL
