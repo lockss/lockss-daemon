@@ -609,11 +609,11 @@
       param[base_url] = http://www.rsc.org/
       param[resolver_url] = http://xlink.rsc.org/
       
-    au < down ; 2000 ; Geochemical Transactions Volume 1 ; 1 ; 2000 >
-    au < down ; 2001 ; Geochemical Transactions Volume 2 (2001) ; 2 ; 2001 >
-    au < down ; 2002 ; Geochemical Transactions Volume 2 (2002) ; 2 ; 2002 >
-    au < down ; 2002 ; Geochemical Transactions Volume 3 ; 3 ; 2002 >
-    au < down ; 2003 ; Geochemical Transactions Volume 4 ; 4 ; 2003 >
+    au < superseded ; 2000 ; Geochemical Transactions Volume 1 [superseded] ; 1 ; 2000 >
+    au < superseded ; 2001 ; Geochemical Transactions Volume 2 (2001) [superseded] ; 2 ; 2001 >
+    au < superseded ; 2002 ; Geochemical Transactions Volume 2 (2002) [superseded] ; 2 ; 2002 >
+    au < superseded ; 2002 ; Geochemical Transactions Volume 3 [superseded] ; 3 ; 2002 >
+    au < superseded ; 2003 ; Geochemical Transactions Volume 4 [superseded] ; 4 ; 2003 >
     }
   }
 
