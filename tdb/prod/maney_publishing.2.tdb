@@ -2397,15 +2397,15 @@
 
     param[journal_id] = eni 
     
-    au < exists ; 2005 ; Journal of the Energy Institute Volume 78 ; 78 > 
-    au < exists ; 2006 ; Journal of the Energy Institute Volume 79 ; 79 > 
-    au < exists ; 2007 ; Journal of the Energy Institute Volume 80 ; 80 > 
-    au < exists ; 2008 ; Journal of the Energy Institute Volume 81 ; 81 > 
-    au < exists ; 2009 ; Journal of the Energy Institute Volume 82 ; 82 > 
-    au < exists ; 2010 ; Journal of the Energy Institute Volume 83 ; 83 > 
-    au < exists ; 2011 ; Journal of the Energy Institute Volume 84 ; 84 > 
+    au < manifest ; 2005 ; Journal of the Energy Institute Volume 78 ; 78 > 
+    au < manifest ; 2006 ; Journal of the Energy Institute Volume 79 ; 79 > 
+    au < manifest ; 2007 ; Journal of the Energy Institute Volume 80 ; 80 > 
+    au < manifest ; 2008 ; Journal of the Energy Institute Volume 81 ; 81 > 
+    au < manifest ; 2009 ; Journal of the Energy Institute Volume 82 ; 82 > 
+    au < manifest ; 2010 ; Journal of the Energy Institute Volume 83 ; 83 > 
+    au < manifest ; 2011 ; Journal of the Energy Institute Volume 84 ; 84 > 
     au < doNotProcess ; 2012 ; Journal of the Energy Institute Volume 85 ; 85 > 
-    au < exists ; 2013 ; Journal of the Energy Institute Volume 86 ; 86 > 
+    au < manifest ; 2013 ; Journal of the Energy Institute Volume 86 ; 86 > 
     au < expected ; 2014 ; Journal of the Energy Institute Volume 87 ; 87 > 
 
   }
@@ -3459,8 +3459,8 @@
     param[journal_id] = pha 
     comment[0] = ceased publication 2012
 
-    au < exists ; 2008 ; Pharmaceutical Programming Volume 1 ; 1 > 
-    au < exists ; 2009 ; Pharmaceutical Programming Volume 2 ; 2 > 
+    au < manifest ; 2008 ; Pharmaceutical Programming Volume 1 ; 1 > 
+    au < manifest ; 2009 ; Pharmaceutical Programming Volume 2 ; 2 > 
     au < doNotProcess ; 2010 ; Pharmaceutical Programming Volume 3 ; 3 > 
     au < doNotProcess ; 2011 ; Pharmaceutical Programming Volume 4 ; 4 > 
     au < doNotProcess ; 2012 ; Pharmaceutical Programming Volume 5 ; 5 > 
