@@ -21,13 +21,13 @@
     param[journal_id] = mmsubt
 
     au < manifest ; exists ; 2003 ; Multiscale Modeling and Simulation Volume 1 ; 1 >
-    au < manifest ; exists ; 2003 ; Multiscale Modeling and Simulation Volume 2 ; 2 >
-    au < manifest ; exists ; 2004 ; Multiscale Modeling and Simulation Volume 3 ; 3 >
+    au < manifest ; exists ; 2003-2004 ; Multiscale Modeling and Simulation Volume 2 ; 2 >
+    au < manifest ; exists ; 2005 ; Multiscale Modeling and Simulation Volume 3 ; 3 >
     au < manifest ; exists ; 2005 ; Multiscale Modeling and Simulation Volume 4 ; 4 >
     au < manifest ; exists ; 2006 ; Multiscale Modeling and Simulation Volume 5 ; 5 >
-    au < manifest ; exists ; 2007 ; Multiscale Modeling and Simulation Volume 6 ; 6 >
-    au < manifest ; exists ; 2008 ; Multiscale Modeling and Simulation Volume 7 ; 7 >
-    au < manifest ; exists ; 2009 ; Multiscale Modeling and Simulation Volume 8 ; 8 >
+    au < manifest ; exists ; 2007-2008 ; Multiscale Modeling and Simulation Volume 6 ; 6 >
+    au < manifest ; exists ; 2008-2009 ; Multiscale Modeling and Simulation Volume 7 ; 7 >
+    au < manifest ; exists ; 2009-2010 ; Multiscale Modeling and Simulation Volume 8 ; 8 >
     au < crawling ; exists ; 2011 ; Multiscale Modeling and Simulation Volume 9 ; 9 >
     au < finished ; crawling ; 2012 ; Multiscale Modeling and Simulation Volume 10 ; 10 >
     au < crawling ; exists ; 2013 ; Multiscale Modeling and Simulation Volume 11 ; 11 >
@@ -266,13 +266,13 @@
 
     param[journal_id] = sjmaah
 
-    au < manifest ; exists ; 2003 ; Journal on Mathematical Analysis Volume 35 ; 35 >
-    au < manifest ; exists ; 2004 ; Journal on Mathematical Analysis Volume 36 ; 36 >
-    au < manifest ; exists ; 2005 ; Journal on Mathematical Analysis Volume 37 ; 37 >
-    au < manifest ; exists ; 2006 ; Journal on Mathematical Analysis Volume 38 ; 38 >
-    au < manifest ; exists ; 2007 ; Journal on Mathematical Analysis Volume 39 ; 39 >
-    au < manifest ; exists ; 2008 ; Journal on Mathematical Analysis Volume 40 ; 40 >
-    au < manifest ; exists ; 2009 ; Journal on Mathematical Analysis Volume 41 ; 41 >
+    au < manifest ; exists ; 2003-2004 ; Journal on Mathematical Analysis Volume 35 ; 35 >
+    au < manifest ; exists ; 2004-2005 ; Journal on Mathematical Analysis Volume 36 ; 36 >
+    au < manifest ; exists ; 2005-2006 ; Journal on Mathematical Analysis Volume 37 ; 37 >
+    au < manifest ; exists ; 2006-2007 ; Journal on Mathematical Analysis Volume 38 ; 38 >
+    au < manifest ; exists ; 2007-2008 ; Journal on Mathematical Analysis Volume 39 ; 39 >
+    au < manifest ; exists ; 2008-2009 ; Journal on Mathematical Analysis Volume 40 ; 40 >
+    au < manifest ; exists ; 2009-2010 ; Journal on Mathematical Analysis Volume 41 ; 41 >
     au < manifest ; exists ; 2010 ; Journal on Mathematical Analysis Volume 42 ; 42 >
     au < crawling ; exists ; 2011 ; Journal on Mathematical Analysis Volume 43 ; 43 >
     au < ready ; exists ; 2012 ; Journal on Mathematical Analysis Volume 44 ; 44 >
