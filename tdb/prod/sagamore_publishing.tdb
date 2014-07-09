@@ -17,19 +17,17 @@
     >
 
     param[journal_id] = ajess
-    
-    comment[subscription] = awaiting subscription see RT 5681
 
-    au < manifest ; 2004 ; 1 ; Asian Journal of Exercise and Sports Science Volume 1 ; 2004 >
-    au < manifest ; 2005 ; 2 ; Asian Journal of Exercise and Sports Science Volume 2 ; 2005 >
-    au < manifest ; 2006 ; 3 ; Asian Journal of Exercise and Sports Science Volume 3 ; 2006 >
-    au < manifest ; 2007 ; 4 ; Asian Journal of Exercise and Sports Science Volume 4 ; 2007 >
-    au < manifest ; 2008 ; 5 ; Asian Journal of Exercise and Sports Science Volume 5 ; 2008 >
-    au < manifest ; 2009 ; 6 ; Asian Journal of Exercise and Sports Science Volume 6 ; 2009 >
-    au < manifest ; 2010 ; 7 ; Asian Journal of Exercise and Sports Science Volume 7 ; 2010 >
-    au < manifest ; 2011 ; 8 ; Asian Journal of Exercise and Sports Science Volume 8 ; 2011 >
-    au < manifest ; 2012 ; 9 ; Asian Journal of Exercise and Sports Science Volume 9 ; 2012 >
-    au < manifest ; 2013 ; 10 ; Asian Journal of Exercise and Sports Science Volume 10 ; 2013 >
+    au < testing ; 2004 ; 1 ; Asian Journal of Exercise and Sports Science Volume 1 ; 2004 >
+    au < testing ; 2005 ; 2 ; Asian Journal of Exercise and Sports Science Volume 2 ; 2005 >
+    au < testing ; 2006 ; 3 ; Asian Journal of Exercise and Sports Science Volume 3 ; 2006 >
+    au < testing ; 2007 ; 4 ; Asian Journal of Exercise and Sports Science Volume 4 ; 2007 >
+    au < testing ; 2008 ; 5 ; Asian Journal of Exercise and Sports Science Volume 5 ; 2008 >
+    au < testing ; 2009 ; 6 ; Asian Journal of Exercise and Sports Science Volume 6 ; 2009 >
+    au < testing ; 2010 ; 7 ; Asian Journal of Exercise and Sports Science Volume 7 ; 2010 >
+    au < testing ; 2011 ; 8 ; Asian Journal of Exercise and Sports Science Volume 8 ; 2011 >
+    au < testing ; 2012 ; 9 ; Asian Journal of Exercise and Sports Science Volume 9 ; 2012 >
+    au < testing ; 2013 ; 10 ; Asian Journal of Exercise and Sports Science Volume 10 ; 2013 >
     au < manifest ; 2014 ; 11 ; Asian Journal of Exercise and Sports Science Volume 11 ; 2014 >
   }
 
