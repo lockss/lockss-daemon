@@ -13,7 +13,7 @@
   </entry>  
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -21,7 +21,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>13</string>
+    <string>14</string>
   </entry>  
   <entry>
     <string>plugin_publishing_platform</string>
@@ -50,6 +50,6 @@
   </entry>
   <entry>
     <string>plugin_au_config_user_msg</string>
-    <string>&quot;Atypon Systems host this Bloomsbury Qatar archival unit (AU) and may require you to register the IP address of your LOCKSS box. To ensure continued access through your LOCKSS box, send IP addresses to Paul Coyne &lt;pcoyne@qf.org.qa&gt; before allowing your LOCKSS box to collect this content.&quot;</string>
+    <string>Atypon Systems hosts this archival unit (AU) and may require you to register the IP address of this LOCKSS box as a crawler, by sending e-mail to &lt;a href=&apos;mailto:pcoyne@qf.org.qa&apos;&gt;Paul Coyne&lt;/a&gt;. Failure to comply with this publisher requirement may trigger crawler traps on the Atypon Systems platform, and your LOCKSS box or your entire institution may be temporarily banned from accessing the site. You only need to register the IP address of your LOCKSS box once for all AUs published by Bloomsbury Qatar.</string>
   </entry>  
 </map>    

@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>13</string>
+    <string>14</string>
   </entry>
 <!--  updating out of sync with parent, must have own feature_version_map -->  
   <entry>
@@ -39,7 +39,7 @@
   </entry>
     <entry>
     <string>plugin_parent_version</string>
-    <string>13</string>
+    <string>14</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -78,5 +78,14 @@
   <entry>
     <string>application/pdf_filter_factory</string>
     <org.lockss.util.Default />
+  </entry>
+  <entry>
+    <string>clockss_override</string>
+    <map>
+      <entry>
+        <string>au_def_pause_time</string>
+        <long>100</long>
+      </entry>
+    </map>
   </entry>
 </map>    

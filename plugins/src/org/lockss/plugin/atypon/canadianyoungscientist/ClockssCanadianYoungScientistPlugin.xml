@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -21,7 +21,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>13</string>
+    <string>14</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -55,6 +55,15 @@
   <entry>
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.atypon.canadianyoungscientist.CanadianYoungScientistHtmlCrawlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>clockss_override</string>
+    <map>
+      <entry>
+        <string>au_def_pause_time</string>
+        <long>100</long>
+      </entry>
+    </map>
   </entry>
 </map>    
 

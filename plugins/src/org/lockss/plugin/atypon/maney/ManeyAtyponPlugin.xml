@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>  
   <entry>
     <string>plugin_name</string>
@@ -21,7 +21,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>13</string>
+    <string>14</string>
   </entry>    
    <entry>
     <string>plugin_publishing_platform</string>
@@ -57,4 +57,5 @@
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.atypon.maney.ManeyAtyponHtmlCrawlFilterFactory</string>
   </entry>
+  <!-- add plugin_au_config_user_msg -->
 </map>

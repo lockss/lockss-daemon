@@ -17,7 +17,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>13</string>
+    <string>14</string>
   </entry>
    <entry>
     <string>plugin_publishing_platform</string>
@@ -146,10 +146,6 @@
     <string>plugin_substance_predicate_factory</string>
     <string>org.lockss.plugin.atypon.BaseAtyponSubstancePredicateFactory</string>
   </entry>  
-  <entry>
-    <string>plugin_au_config_user_msg</string>
-    <string>"Atypon Systems hosts this archival unit (AU) and require that you &lt;a href=&apos;%saction/institutionLockssIpChange&apos;&gt;register the IP address of this LOCKSS box in your institutional account&lt;/a&gt; before allowing your LOCKSS box to harvest the AU. Failure to comply with this publisher requirement may trigger crawler traps, and your LOCKSS box or your entire institution may be temporarily banned from accessing the site. You only need to register the IP address of your LOCKSS box once for all AUs.", base_url</string>
-  </entry>
 <!--  Children will probably need to extend these and then use their own crawl/hash filters -->  
   <entry>
     <string>text/html_filter_factory</string>
@@ -216,4 +212,10 @@
    </entry>
   </map>
   </entry>  
+  <!--
+    GLN children need to have a plugin_au_config_user_msg, which is a plain
+    string, not a printf string. CLOCKSS children that are children of a GLN
+    plugin then need to revert with Default. Direct CLOCKSS children don't need
+    plugin_au_config_user_msg. 
+  -->
 </map>

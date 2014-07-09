@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>10</string>
+    <string>11</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -38,7 +38,7 @@
   </entry>
     <entry>
     <string>plugin_parent_version</string>
-    <string>13</string>
+    <string>14</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -75,6 +75,15 @@
       <entry>
         <string>*</string>
         <string>org.lockss.plugin.atypon.ammonsscientific.ClockssAmmonsScientificHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>clockss_override</string>
+    <map>
+      <entry>
+        <string>au_def_pause_time</string>
+        <long>100</long>
       </entry>
     </map>
   </entry>

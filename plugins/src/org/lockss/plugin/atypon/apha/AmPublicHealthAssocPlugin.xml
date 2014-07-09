@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>8</string>
+    <string>9</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -21,7 +21,7 @@
   </entry>
    <entry>
     <string>plugin_parent_version</string>
-    <string>13</string>
+    <string>14</string>
   </entry>
  <entry>
     <string>plugin_publishing_platform</string>
@@ -41,4 +41,5 @@
     <string>org.lockss.plugin.atypon.apha.AmPublicHealthAssocHtmlCrawlFilterFactory</string>
   </entry>  
   <!--  The base plugin DOES provide ArticleIterator, htmlMetadataExtractor, PdfFilter and UrlNormalizer - remove those you don't want. -->
+  <!-- add plugin_au_config_user_msg -->
  </map>
