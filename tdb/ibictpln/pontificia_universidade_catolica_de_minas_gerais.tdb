@@ -18,7 +18,7 @@
       param[journal_id] = abakos
 
       au < released ; 2012 ; 1 ; Abakós Volume 2012 ; 2012 ; >
-      au < manifest ; 2013 ; 2 ; Abakós Volume 2013 ; 2013 ; >
+      au < testing ; 2013 ; 2 ; Abakós Volume 2013 ; 2013 ; >
 
   }
 
@@ -42,8 +42,8 @@
       au < released ; 2009 ; 7 ; Cadernos de Arquitetura e Urbanismo Volume 2009 ; 2009 ; >
       au < released ; 2010 ; 8 ; Cadernos de Arquitetura e Urbanismo Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 9 ; Cadernos de Arquitetura e Urbanismo Volume 2011 ; 2011 ; >
-      au < manifest ; 2012 ; 10 ; Cadernos de Arquitetura e Urbanismo Volume 2012 ; 2012 ; >
-      au < manifest ; 2013 ; 11 ; Cadernos de Arquitetura e Urbanismo Volume 2013 ; 2013 ; >
+      au < testing ; 2012 ; 10 ; Cadernos de Arquitetura e Urbanismo Volume 2012 ; 2012 ; >
+      au < testing ; 2013 ; 11 ; Cadernos de Arquitetura e Urbanismo Volume 2013 ; 2013 ; >
 
   }
 
@@ -63,8 +63,8 @@
       au < released ; 2009 ; 3 ; Arquivo Brasileiro de Odontologia Volume 2009 ; 2009 ; >
       au < released ; 2010 ; 4 ; Arquivo Brasileiro de Odontologia Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 5 ; Arquivo Brasileiro de Odontologia Volume 2011 ; 2011 ; >
-      au < manifest ; 2012 ; 6 ; Arquivo Brasileiro de Odontologia Volume 2012 ; 2012 ; >
-      au < manifest ; 2013 ; 7 ; Arquivo Brasileiro de Odontologia Volume 2013 ; 2013 ; >
+      au < testing ; 2012 ; 6 ; Arquivo Brasileiro de Odontologia Volume 2012 ; 2012 ; >
+      au < testing ; 2013 ; 7 ; Arquivo Brasileiro de Odontologia Volume 2013 ; 2013 ; >
 
   }
 
@@ -108,7 +108,7 @@
       au < released ; 2010 ; 11 ; Cadernos de História Volume 2010 [issn 2237-8871] ; 2010 ; >
       au < released ; 2011 ; 12 ; Cadernos de História Volume 2011 [issn 2237-8871] ; 2011 ; >
       au < released ; 2012 ; 13 ; Cadernos de História Volume 2012 [issn 2237-8871] ; 2012 ; >
-      au < manifest ; 2013 ; 14 ; Cadernos de História Volume 2013 [issn 2237-8871] ; 2013 ; >
+      au < testing ; 2013 ; 14 ; Cadernos de História Volume 2013 [issn 2237-8871] ; 2013 ; >
 
   }
 
@@ -124,7 +124,7 @@
       param[journal_id] = conjuntura
 
       au < released ; 2012 ; 1 ; Conjuntura Internacional Volume 2012 ; 2012 ; >
-      au < manifest ; 2013 ; 2 ; Conjuntura Internacional Volume 2013 ; 2013 ; >
+      au < testing ; 2013 ; 2 ; Conjuntura Internacional Volume 2013 ; 2013 ; >
 
   }
 
@@ -141,7 +141,7 @@
 
       au < released ; 2011 ; 1 ; ContraPonto Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 2 ; ContraPonto Volume 2012 ; 2012 ; >
-      au < manifest ; 2013 ; 3 ; ContraPonto Volume 2013 ; 2013 ; >
+      au < testing ; 2013 ; 3 ; ContraPonto Volume 2013 ; 2013 ; >
 
   }
 
@@ -160,7 +160,7 @@
       au < released ; 2010 ; 2 ; Revista da Faculdade Mineira de Direito Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 3 ; Revista da Faculdade Mineira de Direito Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 4 ; Revista da Faculdade Mineira de Direito Volume 2012 ; 2012 ; >
-      au < manifest ; 2013 ; 5 ; Revista da Faculdade Mineira de Direito Volume 2013 ; 2013 ; >
+      au < testing ; 2013 ; 5 ; Revista da Faculdade Mineira de Direito Volume 2013 ; 2013 ; >
 
   }
 
@@ -194,7 +194,7 @@
       param[journal_id] = dispositiva
 
       au < released ; 2012 ; 1 ; Dispositiva Volume 2012 ; 2012 ; >
-      au < manifest ; 2013 ; 2 ; Dispositiva Volume 2013 ; 2013 ; >
+      au < testing ; 2013 ; 2 ; Dispositiva Volume 2013 ; 2013 ; >
 
   }
 
@@ -218,7 +218,7 @@
       au < released ; 2010 ; 7 ; Revista Economia & Gestão Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 8 ; Revista Economia & Gestão Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 9 ; Revista Economia & Gestão Volume 2012 ; 2012 ; >
-      au < manifest ; 2013 ; 10 ; Revista Economia & Gestão Volume 2013 ; 2013 ; >
+      au < testing ; 2013 ; 10 ; Revista Economia & Gestão Volume 2013 ; 2013 ; >
 
   }
 
@@ -234,7 +234,7 @@
       param[journal_id] = enfermagemrevista
 
       au < released ; 2012 ; 1 ; Enfermagem Revista Volume 2012 ; 2012 ; >
-      au < manifest ; 2013 ; 2 ; Enfermagem Revista Volume 2013 ; 2013 ; >
+      au < testing ; 2013 ; 2 ; Enfermagem Revista Volume 2013 ; 2013 ; >
 
   }
 
@@ -249,7 +249,7 @@
       param[base_url] = http://periodicos.pucminas.br/
       param[journal_id] = estudosinternacionais
 
-      au < manifest ; 2013 ; 1 ; Estudos Internacionais: Revista de Relações Internacionais da PUC Minas Volume 2013 ; 2013 ; >
+      au < testing ; 2013 ; 1 ; Estudos Internacionais: Revista de Relações Internacionais da PUC Minas Volume 2013 ; 2013 ; >
 
   }
 
@@ -294,7 +294,7 @@
       au < released ; 2010 ; 4 ; Caderno de Geografia Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 5 ; Caderno de Geografia Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 6 ; Caderno de Geografia Volume 2012 ; 2012 ; >
-      au < manifest ; 2013 ; 7 ; Caderno de Geografia Volume 2013 ; 2013 ; >
+      au < testing ; 2013 ; 7 ; Caderno de Geografia Volume 2013 ; 2013 ; >
 
   }
 
@@ -311,7 +311,7 @@
 
       au < released ; 2009 ; 1 ; História em Curso Volume 2009 ; 2009 ; >
       au < released ; 2012 ; 2 ; História em Curso Volume 2012 ; 2012 ; >
-      au < manifest ; 2013 ; 3 ; História em Curso Volume 2013 ; 2013 ; >
+      au < testing ; 2013 ; 3 ; História em Curso Volume 2013 ; 2013 ; >
 
   }
 
@@ -337,7 +337,7 @@
       au < released ; 2010 ; 9 ; Horizonte Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 10 ; Horizonte Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 11 ; Horizonte Volume 2012 ; 2012 ; >
-      au < manifest ; 2013 ; 12 ; Horizonte Volume 2013 ; 2013 ; >
+      au < testing ; 2013 ; 12 ; Horizonte Volume 2013 ; 2013 ; >
 
   }
 
@@ -355,7 +355,7 @@
       au < released ; 2009 ; 1 ; Pedagogia em Ação Volume 2009 ; 2009 ; >
       au < released ; 2010 ; 2 ; Pedagogia em Ação Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 3 ; Pedagogia em Ação Volume 2011 ; 2011 ; >
-      au < manifest ; 2012 ; 4 ; Pedagogia em Ação Volume 2012 ; 2012 ; >
+      au < testing ; 2012 ; 4 ; Pedagogia em Ação Volume 2012 ; 2012 ; >
       au < expected ; 2013 ; 5 ; Pedagogia em Ação Volume 2013 ; 2013 ; >
 
   }
@@ -373,7 +373,7 @@
 
       au < released ; 2011 ; 1 ; Percurso Acadêmico Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 2 ; Percurso Acadêmico Volume 2012 ; 2012 ; >
-      au < manifest ; 2013 ; 3 ; Percurso Acadêmico Volume 2013 ; 2013 ; >
+      au < testing ; 2013 ; 3 ; Percurso Acadêmico Volume 2013 ; 2013 ; >
 
   }
 
@@ -399,7 +399,7 @@
       au < released ; 2010 ; 9 ; Psicologia em Revista Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 10 ; Psicologia em Revista Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 11 ; Psicologia em Revista Volume 2012 ; 2012 ; >
-      au < manifest ; 2013 ; 12 ; Psicologia em Revista Volume 2013 ; 2013 ; >
+      au < testing ; 2013 ; 12 ; Psicologia em Revista Volume 2013 ; 2013 ; >
 
   }
 
@@ -417,7 +417,7 @@
       au < released ; 2010 ; 1 ; Sapere Aude Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 2 ; Sapere Aude Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 3 ; Sapere Aude Volume 2012 ; 2012 ; >
-      au < manifest ; 2013 ; 4 ; Sapere Aude Volume 2013 ; 2013 ; >
+      au < testing ; 2013 ; 4 ; Sapere Aude Volume 2013 ; 2013 ; >
 
   }
 
@@ -453,7 +453,7 @@
       param[journal_id] = sinapsemultipla
 
       au < released ; 2012 ; 1 ; Sinapse Múltipla Volume 2012 ; 2012 ; >
-      au < manifest ; 2013 ; 2 ; Sinapse Múltipla Volume 2013 ; 2013 ; >
+      au < testing ; 2013 ; 2 ; Sinapse Múltipla Volume 2013 ; 2013 ; >
 
   }
 
