@@ -35,7 +35,11 @@ BEGIN {
       n[pn] = lp2
   #    n[pn] = $2
       t[pn] = $3
-      k[pn] = $7
+      if ($7 == "") {
+        k[pn] = ".."
+      } else {
+        k[pn] = $7
+      }
       d[pn] = $4
       r[pn] = $5
       pn++
@@ -97,8 +101,8 @@ END {
     for (j = 0 ; j < sn ; j++) {
       if (x[s[j]] > 0){
       if (c[p[i],n[i],d[i],s[j]] == 0) {
-      printf "\t.." 
-    } else {
+        printf "\t.." 
+      } else {
         printf "\t%d", c[p[i],n[i],d[i],s[j]]
       }
     }
