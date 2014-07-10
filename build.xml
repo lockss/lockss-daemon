@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.363 2014-07-05 21:43:03 tlipkis Exp $
+ $Id: build.xml,v 1.364 2014-07-10 20:05:48 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -360,6 +360,7 @@ Args:
   <!--  Files -->
   <property name="default.releasename.file" value="${src}/defaultreleasename"/>
   <property name="test.classpath.file" value="${test}/test-classpath"/>
+  <property name="test.param.classpath.file" value="${test}/test-p-classpath"/>
   <property name="run.classpath.file" value="${test}/run-classpath"/>
   <property name="openbsd.classpath.file" value="${lib}/run-classpath"/>
   <property name="openbsd.packinglist.file" value="${lib}/packing-list"/>
@@ -886,6 +887,7 @@ The target you have selected requires compiling under JDK 1.7.
     <delete file="${lockss.ant.jar}" quiet="true"/>
     <delete file="${lockss.platform.jar}" quiet="true"/>
     <delete file="${test.classpath.file}" quiet="true"/>
+    <delete file="${test.param.classpath.file}" quiet="true"/>
     <delete file="${run.classpath.file}" quiet="true"/>
     <delete file="${openbsd.classpath.file}" quiet="true"/>
     <delete file="${openbsd.packinglist.file}" quiet="true"/>
@@ -1401,6 +1403,12 @@ Must specify output dir with -Doutdir=dir
     <pathconvert refid="tools.test.run.classpath" property="tmp.test.clspth"
       targetos="${detected.os}" />
     <echo message="${tmp.test.clspth}" file="${test.classpath.file}"/>
+    <!-- Make a parameterized version -->
+    <pathconvert refid="tools.test.run.classpath" property="tmp.param.test.clspth"
+      targetos="${detected.os}" >
+      <map from="${lib}" to="$${LIB_DIR}" />
+    </pathconvert>
+    <echo message="${tmp.param.test.clspth}" file="${test.param.classpath.file}"/>
   </target>
 
   <!-- ==================================================================== -->
