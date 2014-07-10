@@ -39,8 +39,8 @@
 
     param[journal_id] = gjhpep
 
-    au < manifest ; 2012 ; 1 ; The Global Journal of Health and Physical Education Pedagogy Volume 1 ; 2012 >
-    au < manifest ; 2013 ; 2 ; The Global Journal of Health and Physical Education Pedagogy Volume 2 ; 2013 >
+    au < testing ; 2012 ; 1 ; The Global Journal of Health and Physical Education Pedagogy Volume 1 ; 2012 >
+    au < testing ; 2013 ; 2 ; The Global Journal of Health and Physical Education Pedagogy Volume 2 ; 2013 >
     au < manifest ; 2014 ; 3 ; The Global Journal of Health and Physical Education Pedagogy Volume 3 ; 2014 >
   }
 
@@ -59,14 +59,14 @@
     au < manifest ; 2002 ; 5 ; Global Journal of Health Education and Promotion Volume 5 ; 2002 >
     au < manifest ; 2003 ; 6 ; Global Journal of Health Education and Promotion Volume 6 ; 2003 >
     au < manifest ; 2004 ; 7 ; Global Journal of Health Education and Promotion Volume 7 ; 2004 >
-    au < manifest ; 2005 ; 8 ; Global Journal of Health Education and Promotion Volume 8 ; 2005 >
-    au < manifest ; 2006 ; 9 ; Global Journal of Health Education and Promotion Volume 9 ; 2006 >
-    au < manifest ; 2007 ; 10 ; Global Journal of Health Education and Promotion Volume 10 ; 2007 >
-    au < manifest ; 2008 ; 11 ; Global Journal of Health Education and Promotion Volume 11 ; 2008 >
-    au < manifest ; 2009 ; 12 ; Global Journal of Health Education and Promotion Volume 12 ; 2009 >
-    au < manifest ; 2010 ; 13 ; Global Journal of Health Education and Promotion Volume 13 ; 2010 >
-    au < manifest ; 2011 ; 14 ; Global Journal of Health Education and Promotion Volume 14 ; 2011 >
-    au < manifest ; 2012 ; 15 ; Global Journal of Health Education and Promotion Volume 15 ; 2012 >
+    au < testing ; 2005 ; 8 ; Global Journal of Health Education and Promotion Volume 8 ; 2005 >
+    au < testing ; 2006 ; 9 ; Global Journal of Health Education and Promotion Volume 9 ; 2006 >
+    au < testing ; 2007 ; 10 ; Global Journal of Health Education and Promotion Volume 10 ; 2007 >
+    au < testing ; 2008 ; 11 ; Global Journal of Health Education and Promotion Volume 11 ; 2008 >
+    au < testing ; 2009 ; 12 ; Global Journal of Health Education and Promotion Volume 12 ; 2009 >
+    au < testing ; 2010 ; 13 ; Global Journal of Health Education and Promotion Volume 13 ; 2010 >
+    au < testing ; 2011 ; 14 ; Global Journal of Health Education and Promotion Volume 14 ; 2011 >
+    au < testing ; 2012 ; 15 ; Global Journal of Health Education and Promotion Volume 15 ; 2012 >
     au < expected ; 2013 ; 16 ; Global Journal of Health Education and Promotion Volumd 16 ; 2013 >
   }
 
