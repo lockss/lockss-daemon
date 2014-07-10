@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseAtyponArchivalUnit.java,v 1.1 2013-04-19 22:49:44 alexandraohlson Exp $
+ * $Id: TestBaseAtyponArchivalUnit.java,v 1.2 2014-07-10 17:17:39 alexandraohlson Exp $
  */
 
 /*
@@ -213,6 +213,34 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     DefinableArchivalUnit au1 =
       makeAu(new URL("http://www.apha.com/"), 24, "apha");
     assertEquals(PluginName + ", Base URL http://www.apha.com/, Journal ID apha, Volume 24", au1.getName());
+  }
+  
+  private static final String gln_user_msg = 
+      "Atypon Systems hosts this archival unit (AU) " +
+          "and requires that you <a " +
+          "href=\'http://journals.ametsoc.org/action/institutionLockssIpChange\'>" +
+          "register the IP address of this LOCKSS box in your institutional account as" +
+          " a crawler</a> before allowing your LOCKSS box to harvest this AU." +
+          " Failure to comply with this publisher requirement may trigger crawler traps" + 
+          " on the Atypon Systems platform, and your LOCKSS box or your entire institution" +
+          " may be temporarily banned from accessing the site. You only need to register the IP " +
+          "address of this LOCKSS box once for all AUs published by the American Meteorological Society.";
+  
+  public void testSpecificUserMsg() throws Exception {
+    // set up a specific BaseAtypon child - in this case American Meteorological Society
+    Properties props = new Properties();
+    props.setProperty(VOL_KEY, Integer.toString(17));
+    props.setProperty(JID_KEY, "eint");
+    props.setProperty(BASE_URL_KEY, "http://journals.ametsoc.org/");
+    Configuration config = ConfigurationUtil.fromProps(props);
+    
+    DefinablePlugin ap = new DefinablePlugin();
+    ap.initPlugin(getMockLockssDaemon(),
+        "org.lockss.plugin.atypon.americanmeteorologicalsociety.AMetSocPlugin");
+    DefinableArchivalUnit AMetSocAU = (DefinableArchivalUnit)ap.createAu(config);
+    
+    log.debug3("testing GLN user message");
+    assertEquals(gln_user_msg, AMetSocAU.getProperties().getString(DefinableArchivalUnit.KEY_AU_CONFIG_USER_MSG, null));
   }
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaylorAndFrancisArchivalUnit.java,v 1.8 2013-08-15 19:25:27 alexandraohlson Exp $
+ * $Id: TestTaylorAndFrancisArchivalUnit.java,v 1.9 2014-07-10 17:17:39 alexandraohlson Exp $
  */
 
 /*
@@ -139,9 +139,30 @@ public class TestTaylorAndFrancisArchivalUnit extends LockssTestCase {
     return au;
   }
   
-  public void testConfig() throws Exception {
- /* let's see if we can figure out what configuration stuff is happening */
-    
+  
+  private static final String gln_user_msg = 
+      "Atypon Systems hosts this archival unit (AU) " +
+          "and requires that you <a " +
+          "href=\'http://www.tandfonline.com/action/institutionLockssIpChange\'>" +
+          "register the IP address of this LOCKSS box in your institutional account as" +
+          " a crawler</a> before allowing your LOCKSS box to harvest this AU." +
+          " Failure to comply with this publisher requirement may trigger crawler traps" + 
+          " on the Atypon Systems platform, and your LOCKSS box or your entire institution" +
+          " may be temporarily banned from accessing the site. You only need to register the IP " +
+          "address of your LOCKSS box once for all AUs published by Taylor & Francis.";
+
+
+  
+  public void testConfigUsrMsg() throws Exception {
+     URL base = new URL(ROOT_URL);
+    ArchivalUnit tfAu = makeAu(base, 39, "rabr20");
+    if (keyword == "lockss") {
+      log.debug3("testing GLN user message");
+      assertEquals(gln_user_msg, tfAu.getProperties().getString(DefinableArchivalUnit.KEY_AU_CONFIG_USER_MSG, null));
+    } else {
+      log.debug3("testing CLOCKSS, no user message");
+      assertEquals(null, tfAu.getProperties().getString(DefinableArchivalUnit.KEY_AU_CONFIG_USER_MSG, null));
+    }
   }
 
   public void testConstructNullUrl() throws Exception {
