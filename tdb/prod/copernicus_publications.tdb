@@ -151,6 +151,20 @@
     
   {
     title <
+      name = ASTRA Proceedings ;
+      issn = 2199-3955 ;
+      eissn = 2199-3963 
+    >
+      attr[journal_id] = ap
+      param[base_url] = http://www.astra-proc.net/
+      param[home_url] = http://www.astra-proceedings.net/
+
+      au < exists ; 2014 ; 2014 ; ASTRA Proceedings Volume 1 ; 1 >
+
+   }
+    
+  {
+    title <
       name = Astrophysics and Space Sciences Transactions ;
       issn = 1810-6528 ;
       eissn = 1810-6536
@@ -606,8 +620,8 @@
       eissn = 2194-9050
     >
       attr[journal_id] = isprsannals
-      param[base_url] = http://www.isprs.org/Default.aspx
-      param[home_url] = http://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/
+      param[base_url] = http://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/
+      param[home_url] = http://www.isprs.org/Default.aspx
 
       au < exists ; 2012 ; 2012 ; ISPRS Annals Volume I-2 ; I-2 >
       au < exists ; 2012 ; 2012 ; ISPRS Annals Volume I-3 ; I-3 >
@@ -632,9 +646,45 @@
       issn = 1682-1750 ;
       eissn = 2194-9034
     >
+    {
+      attr[journal_id] = 
+      param[base_url] = http://www.isprs.org/proceedings/
+      param[home_url] = http://www.isprs.org/Default.aspx
+
+      au < expected ; 1978 ; 1978 ; ISPRS Archives Volume XXII ; XXII >
+      au < exists ; 1980 ; 1980 ; ISPRS Archives Volume XXIII ; XXIII >
+      au < expected ; 1982 ; 1982 ; ISPRS Archives Volume XXIV ; XXIV >
+      au < exists ; 1984 ; 1984 ; ISPRS Archives Volume XXV ; XXV >
+      au < exists ; 1986 ; 1986 ; ISPRS Archives Volume XXVI ; XXVI >
+      au < exists ; 1988 ; 1988 ; ISPRS Archives Volume XXVII ; XXVII >
+      au < expected ; 1990 ; 1990 ; ISPRS Archives Volume XXVIII ; XXVIII >
+      au < exists ; 1992 ; 1992 ; ISPRS Archives Volume XXIX ; XXIX >
+      au < expected ; 1994 ; 1994 ; ISPRS Archives Volume XXX ; XXX >
+      au < expected ; 1995 ; 1995 ; ISPRS Archives Volume XXX ; XXX >
+      au < exists ; 1996 ; 1996 ; ISPRS Archives Volume XXXI ; XXXI >
+      au < expected ; 1997 ; 1997 ; ISPRS Archives Volume XXXII (1997) ; XXXII >
+      au < exists ; 1998 ; 1998 ; ISPRS Archives Volume XXXII (1998) ; XXXII >
+      au < exists ; 1999 ; 1999 ; ISPRS Archives Volume XXXII (1999) ; XXXII >
+      au < exists ; 2000 ; 2000 ; ISPRS Archives Volume XXXIII ; XXXIII >
+      au < exists ; 2001 ; 2001 ; ISPRS Archives Volume XXXIV (2001) ; XXXIV >
+      au < exists ; 2002 ; 2002 ; ISPRS Archives Volume XXXIV (2002) ; XXXIV >
+      au < exists ; 2003 ; 2003 ; ISPRS Archives Volume XXXIV (2003) ; XXXIV >
+      au < exists ; 2004 ; 2004 ; ISPRS Archives Volume XXXIV (2004) ; XXXIV >
+      au < exists ; 2004 ; 2004 ; ISPRS Archives Volume XXXV ; XXXV >
+      au < exists ; 2004 ; 2004 ; ISPRS Archives Volume XXXVI (2004) ; XXXVI >
+      au < exists ; 2005 ; 2005 ; ISPRS Archives Volume XXXVI (2005) ; XXXVI >
+      au < exists ; 2006 ; 2006 ; ISPRS Archives Volume XXXVI (2006) ; XXXVI >
+      au < exists ; 2007 ; 2007 ; ISPRS Archives Volume XXXVI (2007) ; XXXVI >
+      au < exists ; 2008 ; 2008 ; ISPRS Archives Volume XXXVII ; XXXVII >
+      au < exists ; 2008 ; 2008 ; ISPRS Archives Volume XXXVIII (2008) ; XXXVIII >
+      au < exists ; 2009 ; 2009 ; ISPRS Archives Volume XXXVIII (2009) ; XXXVIII >
+      au < exists ; 2010 ; 2010 ; ISPRS Archives Volume XXXVIII (2010) ; XXXVIII >
+    }
+    
+    {
       attr[journal_id] = isprsarchives
-      param[base_url] = http://www.isprs.org/Default.aspx
-      param[home_url] = http://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/
+      param[base_url] = http://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/
+      param[home_url] = http://www.isprs.org/Default.aspx
 
       au < exists ; 2011 ; 2011 ; ISPRS Archives Volume XXXVIII-5/W16 ; XXXVIII-5-W16 >
       au < exists ; 2011 ; 2011 ; ISPRS Archives Volume XXXVIII-4/W19 ; XXXVIII-4-W19 >
@@ -672,7 +722,7 @@
       au < exists ; 2014 ; 2014 ; ISPRS Archives Volume XL-4 ; XL-4 >
       au < exists ; 2014 ; 2014 ; ISPRS Archives Volume XL-6 ; XL-6 >
       au < exists ; 2014 ; 2014 ; ISPRS Archives Volume XL-5 ; XL-5 >
-    
+     }
    }
 
   {
@@ -887,6 +937,19 @@
       au < expected ; 2013 ; 2013 ; Social Geography Volume 8 ; 8 >
       au < expected ; 2014 ; 2014 ; Social Geography Volume 9 ; 9 >
     
+   }
+    
+  {
+    title <
+      name = SOIL Discussions ;
+      eissn = 2199-3998
+    >
+      attr[journal_id] = soild 
+      param[base_url] = http://www.soil-discuss.net/
+      param[home_url] = http://www.soil-discuss.net/
+
+      au < exists ; 2014 ; 2014 ; SOIL Discussions Volume 1 ; 1 >
+
    }
     
   {
