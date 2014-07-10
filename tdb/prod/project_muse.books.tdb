@@ -9,7 +9,7 @@
   implicit < status ; year ; isbn ; eisbn ; name ; param[eisbn] >
   
   comment[9781587294488] = hash errors for pdfs like http://muse.jhu.edu/books/9781587294488/9781587294488-1.pdf
-  comment[doNotProcess] = Publisher moving to new platform.
+  comment[doNotProcess] = Publisher not moving to new platform. Can these be fixed?
   
   {
 
@@ -3286,6 +3286,365 @@
       au < released ; 2013 ; 9780295984414 ; 9780295803920 ; The Jewish Life Cycle: rites of passage from biblical to modern times ; 9780295803920 >
       au < released ; 2013 ; 9780813117676 ; 9780813143590 ; The Shadow of Death: The Holocaust in Lithuania ; 9780813143590 >
       au < released ; 2013 ; 9780813118024 ; 9780813144146 ; Voices From the Holocaust ; 9780813144146 >
+
+  }
+  
+  {
+
+      title <
+        name = 2013 Literature Collection ;
+        type = bookSeries
+      >
+
+      au < exists ; 2013 ; 9781421409580 ; 9781421409597 ; Lure of the Arcane: The Literature of Cult and Conspiracy ; 9781421409597 >
+      au < exists ; 2013 ; 9780824836290 ; 9780824837761 ; An Edo Anthology: Literature from Japan's Mega-City, 1750-1850 ; 9780824837761 >
+      au < exists ; 2013 ; 9781609381844 ; 9781609382049 ; A Brighter Word Than Bright: Keats at Work ; 9781609382049 >
+      au < exists ; 2013 ; 9780817313821 ; 9780817387037 ; Eclipse of Empires: World History in Nineteenth-Century U.S. Literature and Culture ; 9780817387037 >
+      au < exists ; 2013 ; 9780819565129 ; 9780819573629 ; Travel Scholarships ; 9780819573629 >
+      au < exists ; 2013 ; 9781557536440 ; 9781612492674 ; Knowing Subjects: Cognitive Cultural Studies and Early Modern Spanish Literature ; 9781612492674 >
+      au < exists ; 2013 ; 9780814212189 ; 9780814270226 ; Victorian Art Criticism and the Woman Writer ; 9780814270226 >
+      au < exists ; 2013 ; 9781580441735 ; 9781580441858 ; Renaissance Retrospections: Tudor Views of the Middle Ages ; 9781580441858 >
+      au < exists ; 2013 ; 9780979085888 ; 9781940729015 ; Eco-Critical Literature: Regreening African Landscapes ; 9781940729015 >
+      au < exists ; 2013 ; 9781617038112 ; 9781621039600 ; Reading Like a Girl: Narrative Intimacy in Contemporary American Young Adult Literature ; 9781621039600 >
+      au < exists ; 2013 ; 9781617037832 ; 9781621039464 ; Desegregating Desire: Race and Sexuality in Cold War American Literature ; 9781621039464 >
+      au < exists ; 2013 ; 9780810129139 ; 9780810166639 ; Womb Fantasies: Subjective Architectures in Postmodern Literature, Cinema, and Art ; 9780810166639 >
+      au < exists ; 2013 ; 9781438448213 ; 9781438448220 ; Indigenous Bodies: Reviewing, Relocating, Reclaiming ; 9781438448220 >
+      au < exists ; 2013 ; 9780268026165 ; 9780268077815 ; The Quest of the Absolute: Birth and Decline of European Romanticism ; 9780268077815 >
+      au < exists ; 2013 ; 9781421410593 ; 9781421410609 ; Black Soundscapes White Stages: The Meaning of Francophone Sound in the Black Atlantic ; 9781421410609 >
+      au < exists ; 2013 ; 9780812245493 ; 9780812208696 ; Blind Impressions: Methods and Mythologies in Book History ; 9780812208696 >
+      au < exists ; 2013 ;  ; 9780804040563 ; Cases of Circumstantial Evidence ; 9780804040563 >
+      au < exists ; 2013 ; 9780813560946 ; 9780813560960 ; Domestic Negotiations: Gender, Nation, and Self-Fashioning in US Mexicana and Chicana Literature and Art ; 9780813560960 >
+      au < exists ; 2013 ; 9781617037856 ; 9781621039471 ; Conversations with Andre Dubus ; 9781621039471 >
+      au < exists ; 2013 ; 9780801451577 ; 9780801469589 ; Nobody’s Business: Twenty-First Century Avant-Garde Poetics ; 9780801469589 >
+      au < exists ; 2013 ; 9780810128651 ; 9780810166356 ; Toxic Voices: The Villain from Early Soviet Literature to Socialist Realism ; 9780810166356 >
+      au < exists ; 2013 ; 9781937378417 ; 9781937378455 ; The Poet Resigns: Essays on Poetry in a Difficult Time ; 9781937378455 >
+      au < exists ; 2013 ; 9781617038044 ; 9781621039556 ; Comics and Language: Reimagining Critical Discourse on the Form ; 9781621039556 >
+      au < exists ; 2013 ; 9781557536419 ; 9781612492612 ; Romantic Revisions in Novels from the Americas ; 9781612492612 >
+      au < exists ; 2013 ; 9781602587823 ; 9781602587847 ; George MacDonald: Divine Carelessness and Fairytale Levity ; 9781602587847 >
+      au < exists ; 2013 ; 9781617037306 ; 9781621039235 ; Long, Long Tales from the Russian North ; 9781621039235 >
+      au < exists ; 2013 ; 9780875806976 ; 9781609090951 ; Beautiful Twentysomethings ; 9781609090951 >
+      au < exists ; 2013 ; 9781611684223 ; 9781611684124 ; Sacramental Shopping: Louisa May Alcott, Edith Wharton, and the Spirit of Modern Consumerism ; 9781611684124 >
+      au < exists ; 2013 ; 9781554588282 ; 9781554588527 ; Writing Surfaces: Selected Fiction of John Riddell ; 9781554588527 >
+      au < exists ; 2013 ; 9781611172553 ; 9781611172560 ; Understanding Marcel Proust ; 9781611172560 >
+      au < exists ; 2013 ; 9780824835958 ; 9780824837808 ; Literary Remains: Death, Trauma, and Lu Xun's Refusal to Mourn ; 9780824837808 >
+      au < exists ; 2013 ; 9780814759486 ; 9780814789360 ; Difficult Diasporas: The Transnational Feminist Aesthetic of the Black Atlantic ; 9780814789360 >
+      au < exists ; 2013 ; 9780893573713 ; 9780893578718 ; Tjutchev: Euphony and Beyond ; 9780893578718 >
+      au < exists ; 2013 ; 9780814212172 ; 9780814270196 ; The Body of Writing: An Erotics of Contemporary American Fiction ; 9780814270196 >
+      au < exists ; 2013 ; 9781611684612 ; 9781611684636 ; Shock and Awe: American Exceptionalism and the Imperatives of the Spectacle in Mark Twain’s A Connecticut Yankee in King Arthur’s Court ; 9781611684636 >
+      au < exists ; 2013 ; 9780801451782 ; 9780801466014 ; The Topography of Modernity: Karl Philipp Moritz and the Space of Autonomy ; 9780801466014 >
+      au < exists ; 2013 ; 9780812245257 ; 9780812208382 ; Parrots and Nightingales: Troubadour Quotations and the Development of European Poetry ; 9780812208382 >
+      au < exists ; 2013 ; 9781617038068 ; 9781621039549 ; The Superhero Reader ; 9781621039549 >
+      au < exists ; 2013 ; 9781554588947 ; 9781554588954 ; The Newfoundland Diaspora: Mapping the Literature of Out-Migration ; 9781554588954 >
+      au < exists ; 2013 ; 9781617037702 ; 9781621039396 ; Comics and Narration ; 9781621039396 >
+      au < exists ; 2013 ; 9780803245105 ; 9780803248427 ; Herta Müller: Politics and Aesthetics ; 9780803248427 >
+      au < exists ; 2013 ; 9780810128668 ; 9780810166387 ; The Novel Map: Space and Subjectivity in Nineteenth-Century French Fiction ; 9780810166387 >
+      au < exists ; 2013 ; 9781563685576 ; 9781563685583 ; Mrs. Sigourney of Hartford: Poems and Prose on the Early American Deaf Community ; 9781563685583 >
+      au < exists ; 2013 ; 9780813935256 ; 9780813935270 ; Exodus Politics: Civil Rights and Leadership in African American Literature and Culture ; 9780813935270 >
+      au < exists ; 2013 ; 9780813935126 ; 9780813935140 ; The Poetics of Ethnography in Martinican Narratives: Exploring the Self and the Environment ; 9780813935140 >
+      au < exists ; 2013 ; 9780817317959 ; 9780817386726 ; Frank Norris Remembered ; 9780817386726 >
+      au < exists ; 2013 ; 9781554583553 ; 9781554586394 ; Producing Canadian Literature: Authors Speak on the Literary Marketplace ; 9781554586394 >
+      au < exists ; 2013 ; 9780819573704 ; 9780819573711 ; The Original 1939 Notebook of a Return to the Native Land: Bilingual Edition ; 9780819573711 >
+      au < exists ; 2013 ; 9780803264748 ; 9780803264892 ; Dirty Words in Deadwood: Literature and the Postwestern ; 9780803264892 >
+      au < exists ; 2013 ; 9781935978732 ; 9781935978756 ; Writing Under: Selections From the Internet Text ; 9781935978756 >
+      au < exists ; 2013 ; 9781421408163 ; 9781421408170 ; The Practice of Satire in England, 1658–1770 ; 9781421408170 >
+      au < exists ; 2013 ; 9781439908105 ; 9781439908129 ; Pimping Fictions: African American Crime Literature and the Untold Story of Black Pulp Publishing ; 9781439908129 >
+      au < exists ; 2013 ; 9781438447377 ; 9781438447384 ; Grasp That Reaches beyond the Grave, The: The Ancestral Call in Black Women's Texts ; 9781438447384 >
+      au < exists ; 2013 ; 9781557536372 ; 9781612492476 ; Kundera and Modernity ; 9781612492476 >
+      au < exists ; 2013 ; 9781557536259 ; 9781612492438 ; Género, nación y literatura: Emilia Pardo Bazán en la literatura gallega y española ; 9781612492438 >
+      au < exists ; 2013 ; 9780813932859 ; 9780813932873 ; Quirks of the Quantum: Postmodernism and Contemporary American Fiction ; 9780813932873 >
+      au < exists ; 2013 ; 9780824836832 ; 9780824839116 ; Situated Testimonies: Dread and Enchantment in an Indonesian Literary Archive ; 9780824839116 >
+      au < exists ; 2013 ; 9781625340153 ; 9781613762714 ; Reimagining To Kill a Mockingbird: Family, Community, and the Possibility of Equal Justice under Law ; 9781613762714 >
+      au < exists ; 2013 ; 9780813933122 ; 9780813933146 ; Neobaroque in the Americas: Alternative Modernities in Literature, Visual Art, and Film ; 9780813933146 >
+      au < exists ; 2013 ; 9780820343235 ; 9780820343259 ; Empowering Words: Outsiders and Authorship in Early America ; 9780820343259 >
+      au < exists ; 2013 ; 9780295992051 ; 9780295804439 ; Women’s Poetry of Late Imperial China: Transforming the Inner Chambers ; 9780295804439 >
+      au < exists ; 2013 ; 9781421405162 ; 9781421408606 ; Literature, Religion, and the Evolution of Culture, 1660–1780 ; 9781421408606 >
+      au < exists ; 2013 ; 9780812245059 ; 9780812208726 ; Jeremiah's Scribes: Creating Sermon Literature in Puritan New England ; 9780812208726 >
+      au < exists ; 2013 ; 9780803226593 ; 9780803246027 ; Surrealist Ghostliness ; 9780803246027 >
+      au < exists ; 2013 ; 9780813142029 ; 9780813142043 ; A Political Companion to John Steinbeck ; 9780813142043 >
+      au < exists ; 2013 ; 9781572338678 ; 9781572339255 ; E.D.E.N. Southworth: Recovering a Nineteenth-Century Popular Novelist ; 9781572339255 >
+      au < exists ; 2013 ; 9781611684247 ; 9781611684148 ; Transatlantic Traffic and (Mis)Translations ; 9781611684148 >
+      au < exists ; 2013 ; 9780823253784 ; 9780823254880 ; Lessons in Secular Criticism ; 9780823254880 >
+      au < exists ; 2013 ; 9780299293949 ; 9780299293932 ; Worse than the Devil: Anarchists, Clarence Darrow, and Justice in a Time of Terror ; 9780299293932 >
+      au < exists ; 2013 ; 9780823251322 ; 9780823251346 ; Private Lives, Public Deaths: Antigone and the Invention of Individuality ; 9780823251346 >
+      au < exists ; 2013 ;  ; 9780823254347 ; The Underside of Politics: Global Fictions in the Fog of the Cold War ; 9780823254347 >
+      au < exists ; 2013 ; 9780823251278 ; 9780823251292 ; The Melancholy Assemblage: Affect and Epistemology in the English Renaissance ; 9780823251292 >
+      au < exists ; 2013 ; 9780823254774 ; 9780823254804 ; Quiet Testimony: A Theory of Witnessing from Nineteenth-Century American Literature ; 9780823254804 >
+      au < exists ; 2013 ; 9780823251742 ; 9780823251759 ; Hollow Men: Writing, Objects, and Public Image in Renaissance Italy ; 9780823251759 >
+      au < exists ; 2013 ; 9780813933672 ; 9780813933696 ; Artistic Ambassadors: Literary and International Representation of the New Negro Era ; 9780813933696 >
+      au < exists ; 2013 ; 9780819567154 ; 9780819574244 ; About Writing: Seven Essays, Four Letters, & Five Interviews ; 9780819574244 >
+      au < exists ; 2013 ; 9780271058931 ; 9780271061016 ; Chaucer, Gower, and the Vernacular Rising: Poetry and the Problem of the Populace After 1381 ; 9780271061016 >
+      au < exists ; 2013 ; 9780253006271 ; 9780253008107 ; Free and French in the Caribbean: Toussaint Louverture, Aimé Césaire, and Narratives of Loyal Opposition ; 9780253008107 >
+      au < exists ; 2013 ; 9780820345239 ; 9780820345871 ; Walking in the Land of Many Gods: Remembering Sacred Reason in Contemporary Environmental Literature ; 9780820345871 >
+      au < exists ; 2013 ; 9780820332864 ; 9780820345710 ; Fallen Forests: Emotion, Embodiment, and Ethics in American Women's Environmental Writing, 1781-1924 ; 9780820345710 >
+      au < exists ; 2013 ; 9780813933344 ; 9780813933368 ; Reclaiming Nostalgia: Longing for Nature in American Literature ; 9780813933368 >
+      au < exists ; 2013 ; 9780807150344 ; 9780807150351 ; Storytelling, History, and the Postmodern South ; 9780807150351 >
+      au < exists ; 2013 ; 9780813933412 ; 9780813933429 ; Be It Ever So Humble: Poverty, Fiction, and the Invention of the Middle-Class Home ; 9780813933429 >
+      au < exists ; 2013 ; 9780813044187 ; 9780813045078 ; Ogling Ladies: Scopophilia in Medieval German Literature ; 9780813045078 >
+      au < exists ; 2013 ; 9780807150665 ; 9780807150672 ; The Radical Fiction of Ann Petry ; 9780807150672 >
+      au < exists ; 2013 ; 9780268033873 ; 9780268085704 ; Transforming Work: Early Modern Pastoral and Late Medieval Poetry ; 9780268085704 >
+      au < exists ; 2013 ; 9780253006813 ; 9780253007094 ; An Ode to Salonika: The Ladino Verses of Bouena Sarfatty ; 9780253007094 >
+      au < exists ; 2013 ; 9780814722992 ; 9780814724002 ; Suffer the Little Children: Uses of the Past in Jewish and African American Children's Literature ; 9780814724002 >
+      au < exists ; 2013 ; 9780817357320 ; 9780817386436 ; Fieldworks: From Place to Site in Postwar Poetics ; 9780817386436 >
+      au < exists ; 2013 ; 9780812244823 ; 9780812208191 ; Fictions of Conversion: Jews, Christians, and Cultures of Change in Early Modern England ; 9780812208191 >
+      au < exists ; 2013 ; 9780299290849 ; 9780299290832 ; Antigone ; 9780299290832 >
+      au < exists ; 2013 ; 9780810128781 ; 9780810166455 ; Poems ; 9780810166455 >
+      au < exists ; 2013 ; 9781611860436 ; 9781609173272 ; The Poetry of the American Civil War ; 9781609173272 >
+      au < exists ; 2013 ; 9789956728299 ; 9789956790500 ; Perspectives on Written Cameroon Literature in English ; 9789956790500 >
+      au < exists ; 2013 ; 9780812245073 ; 9780812208160 ; Bound to Read: Compilations, Collections, and the Making of Renaissance Literature ; 9780812208160 >
+      au < exists ; 2013 ; 9780813933993 ; 9780813934006 ; Drawing the Line: The Father Reimagined in Faulkner, Wright, O'Connor, and Morrison ; 9780813934006 >
+      au < exists ; 2013 ; 9780822962335 ; 9780822978541 ; Speculative Fictions: Chilean Culture, Economics, and the Neoliberal Transition ; 9780822978541 >
+      au < exists ; 2013 ; 9780813934488 ; 9780813934495 ; Women's Work: Nationalism and Contemporary African American Women's Novels ; 9780813934495 >
+      au < exists ; 2013 ; 9781421408545 ; 9781421408552 ; Sounding Imperial: Poetic Voice and the Politics of Empire, 1730–1820 ; 9781421408552 >
+      au < exists ; 2013 ; 9780813933931 ; 9780813933955 ; Migrant Modernism: Postwar London and the West Indian Novel ; 9780813933955 >
+      au < exists ; 2013 ; 9780813934051 ; 9780813934068 ; Upon Provincialism: Southern Literature and National Periodical Culture, 1870–1900 ; 9780813934068 >
+      au < exists ; 2013 ; 9780812245165 ; 9780812208221 ; Of Bondage: Debt, Property, and Personhood in Early Modern England ; 9780812208221 >
+      au < exists ; 2013 ; 9781609381585 ; 9781609381592 ; James Weldon Johnson's Modern Soundscapes ; 9781609381592 >
+      au < exists ; 2013 ; 9780814717400 ; 9780814717424 ; Tomorrow's Parties: Sex and the Untimely in Nineteenth-Century America ; 9780814717424 >
+      au < exists ; 2013 ; 9780812244885 ; 9780812208078 ; International Bohemia: Scenes of Nineteenth-Century Life ; 9780812208078 >
+      au < exists ; 2013 ; 9780813141855 ; 9780813141879 ; A Political Companion to Saul Bellow ; 9780813141879 >
+      au < exists ; 2013 ; 9780814212066 ; 9780814270059 ; Art after Philosophy: Boris Pasternak's Early Prose ; 9780814270059 >
+      au < exists ; 2013 ; 9780814212141 ; 9780814270127 ; The Ethics of Swagger: Prizewinning African American Novels, 1977-1993 ; 9780814270127 >
+      au < exists ; 2013 ; 9780814212165 ; 9780814270141 ; Rhetorics of Literacy: The Cultivation of American Dialect Poetry ; 9780814270141 >
+      au < exists ; 2013 ; 9781617037818 ; 9781621039457 ; Dave Sim: Conversations ; 9781621039457 >
+      au < exists ; 2013 ; 9780814211960 ; 9780814270301 ; The Madwoman and the Blindman: Jayne Eyre, Discourse, Disability ; 9780814270301 >
+      au < exists ; 2013 ; 9781621039808 ; 9781617038891 ; The Souls of White Folk: African American Writers Theorize Whiteness ; 9781617038891 >
+      au < exists ; 2013 ; 9780816679904 ; 9781452939445 ; Each Hour Redeem: Time and Justice in African American Literature ; 9781452939445 >
+      au < exists ; 2013 ; 9780814212059 ; 9780814270042 ; Preaching and the Rise of the American Novel ; 9780814270042 >
+      au < exists ; 2013 ; 9780271059815 ; 9780271061047 ; Chaim Potok: Confronting Modernity Through the Lens of Tradition ; 9780271061047 >
+      au < exists ; 2013 ; 9780822354178 ; 9780822391913 ; Writing in the Air: Heterogeneity and the Persistence of Oral Tradition in Andean Literatures ; 9780822391913 >
+      au < exists ; 2013 ; 9780810129269 ; 9780810167230 ; The Novel in the Age of Disintegration: Dostoevsky and the Problem of Genre in the 1870s ; 9780810167230 >
+      au < exists ; 2013 ; 9781621039891 ; 9781617039034 ; Plotting Apocalypse: Reading, Agency, and Identity in the Left Behind Series ; 9781617039034 >
+      au < exists ; 2013 ; 9780253008633 ; 9780253008732 ; The Female Face of Shame ; 9780253008732 >
+      au < exists ; 2013 ; 9780813935058 ; 9780813935072 ; Disturbers of the Peace: Representations of Madness in Anglophone Caribbean Literature ; 9780813935072 >
+      au < exists ; 2013 ; 9780812244854 ; 9780812207798 ; True Relations: Reading, Literature, and Evidence in Seventeenth-Century England ; 9780812207798 >
+      au < exists ; 2013 ; 9781558499799 ; 9781613762226 ; Creating a World on Paper: Harry Fenn's Career in Art ; 9781613762226 >
+      au < exists ; 2013 ; 9780815633037 ; 9780815651970 ; From Our Springtime: Literary Memoirs and Portraits of Yiddish New York ; 9780815651970 >
+      au < exists ; 2013 ; 9780823245246 ; 9780823250486 ; Untouchable Fictions: Literary Realism and the Crisis of Caste: Literary Realism and the Crisis of Caste  ; 9780823250486 >
+      au < exists ; 2013 ; 9780893573874 ; 9780893578879 ; The Petersburg Tradition: Essays in Honor of Nina Perlina ; 9780893578879 >
+      au < exists ; 2013 ; 9780813042459 ; 9780813042671 ; Renascent Joyce ; 9780813042671 >
+      au < exists ; 2013 ; 9781421408262 ; 9781421408279 ; The Poetics of Consent: Collective Decision Making and the Iliad ; 9781421408279 >
+      au < exists ; 2013 ; 9781421408422 ; 9781421408897 ; Elizabeth Singer Rowe and the Development of the English Novel ; 9781421408897 >
+      au < exists ; 2013 ; 9781602586826 ; 9781602586840 ; The Novel as Church: Preaching to Readers in Contemporary Fiction ; 9781602586840 >
+      au < exists ; 2013 ; 9781611683578 ; 9781611683592 ; Holocaust Literature: A History and Guide ; 9781611683592 >
+      au < exists ; 2013 ; 9780813042473 ; 9780813042688 ; Before Daybreak: "After the Race" and the Origins of Joyce's Art ; 9780813042688 >
+      au < exists ; 2013 ; 9780817357481 ; 9780817386719 ; Stubborn Poetries: Poetic Facticity and the Avant-Garde ; 9780817386719 >
+      au < exists ; 2013 ; 9780823251711 ; 9780823251735 ; Trials of Arab Modernity: Literary Affects and the New Political ; 9780823251735 >
+      au < exists ; 2013 ; 9781606351833 ; 9781612777191 ; C. S. Lewis’s Perelandra: Reshaping the Image of the Cosmos ; 9781612777191 >
+      au < exists ; 2013 ; 9780812244755 ; 9780812207767 ; The Poetics of Piracy: Emulating Spain in English Literature ; 9780812207767 >
+      au < exists ; 2013 ; 9780252037528 ; 9780252094767 ; Macroanalysis: Digital Methods and Literary History ; 9780252094767 >
+      au < exists ; 2013 ; 9780823245444 ; 9780823250462 ; Empire's Wake: Postcolonial Irish Writing and the Politics of Modern Literary Form ; 9780823250462 >
+      au < exists ; 2013 ; 9780823245482 ; 9780823250332 ; Cinepoetry: Imaginary Cinemas in French Poetry: Imaginary Cinemas in French Poetry  ; 9780823250332 >
+      au < exists ; 2013 ; 9781421408064 ; 9781421409061 ; Blake's Agitation: Criticism and the Emotions ; 9781421409061 >
+      au < exists ; 2013 ; 9780472051861 ; 9780472028764 ; Are We There Yet?: Virtual Travel and Victorian Realism ; 9780472028764 >
+      au < exists ; 2013 ; 9780824836672 ; 9780824837907 ; The Crab Cannery Ship: and Other Novels of Struggle ; 9780824837907 >
+      au < exists ; 2013 ; 9781421408408 ; 9781421408415 ; Bloody Murder: The Homicide Tradition in Children's Literature ; 9781421408415 >
+      au < exists ; 2013 ; 9780807150948 ; 9780807150955 ; Horse People: Stories ; 9780807150955 >
+      au < exists ; 2013 ; 9780813044170 ; 9780813045085 ; Samuel Roth, Infamous Modernist ; 9780813045085 >
+      au < exists ; 2013 ; 9780893573935 ; 9780893578930 ; The Paths of Folklore: Essays in Honor of Natalie Kononenko ; 9780893578930 >
+      au < exists ; 2013 ; 9780803243828 ; 9780803248434 ; Upton Sinclair: California Socialist, Celebrity Intellectual ; 9780803248434 >
+      au < exists ; 2013 ; 9780812244519 ; 9780812207477 ; Poetics of the Incarnation: Middle English Writing and the Leap of Love ; 9780812207477 >
+      au < exists ; 2013 ; 9781609381516 ; 9781609381523 ; Wm & H'ry: Literature, Love, and the Letters between Wiliam and Henry James ; 9781609381523 >
+      au < exists ; 2013 ; 9780809331017 ; 9780809331024 ; Evolutionary Rhetoric: Sex, Science, and Free Love in Nineteenth-Century Feminism ; 9780809331024 >
+      au < exists ; 2013 ; 9780810128484 ; 9780810166271 ; Wages of Evil: Dostoevsky and Punishment ; 9780810166271 >
+      au < exists ; 2013 ; 9780821420485 ; 9780821444603 ; Ingrid Jonker: Poet under Apartheid ; 9780821444603 >
+      au < exists ; 2013 ; 9780814770276 ; 9780814745113 ; Classical Arabic Literature: A Library of Arabic Literature Anthology ; 9780814745113 >
+      au < exists ; 2013 ; 9780824835651 ; 9780824837853 ; Rewriting Medieval Japanese Women: Politics, Personality, and Literary Production in the Life of Nun Abutsu ; 9780824837853 >
+      au < exists ; 2013 ; 9780815632986 ; 9780815651796 ; Selections From The Art of Party Crashing in Medieval Iraq ; 9780815651796 >
+      au < exists ; 2013 ; 9780812244427 ; 9780812207187 ; Exquisite Mixture: The Virtues of Impurity in Early Modern England ; 9780812207187 >
+      au < exists ; 2013 ; 9780810128675 ; 9780810166394 ; Prosaic Conditions: Heinrich Heine and the Spaces of Zionist Literature ; 9780810166394 >
+      au < exists ; 2013 ; 9781859184981 ; 9781909005730 ; The Female Figure in Eiléan Ní Chuilleanáin’s Poetry ; 9781909005730 >
+      au < exists ; 2013 ; 9781609381134 ; 9781609381448 ; American Literature and Culture in an Age of Cold War: A Critical Reassessment ; 9781609381448 >
+      au < exists ; 2013 ; 9780823251254 ; 9780823251261 ; Shakespeare and Donne: Generic Hybrids and the Cultural Imaginary ; 9780823251261 >
+      au < exists ; 2013 ; 9781438445830 ; 9781438445854 ; Better Story, The: Queer Affects from the Middle East ; 9781438445854 >
+      au < exists ; 2013 ; 9781609381165 ; 9781609381349 ; Reading Duncan Reading: Robert Duncan and the Poetics of Derivation ; 9781609381349 >
+      au < exists ; 2013 ; 9780824836337 ; 9780824837273 ; Strange Tale of Panorama Island ; 9780824837273 >
+      au < exists ; 2013 ; 9781617037368 ; 9781621039266 ; Conversations with Paul Auster ; 9781621039266 >
+      au < exists ; 2013 ; 9780472118618 ; 9780472028900 ; Dividing Lines: Class Anxiety and Postbellum Black Fiction ; 9780472028900 >
+      au < exists ; 2013 ; 9781609381622 ; 9781609381745 ; Garland in His Own Time: A Biographical Chronicle of His Life, Drawn from Recollections, Interviews, and Memoirs by Family, Friends, and Associates ; 9781609381745 >
+      au < exists ; 2013 ; 9780472118632 ; 9780472028924 ; Publishing Blackness: Textual Constructions of Race Since 1850 ; 9780472028924 >
+      au < exists ; 2013 ; 9781617036804 ; 9781621039174 ; Visionary Women Writers of Chicago's Black Arts Movement ; 9781621039174 >
+      au < exists ; 2013 ; 9781572338586 ; 9781572339804 ; Spectrality in the Novels of Toni Morrison ; 9781572339804 >
+      au < exists ; 2013 ; 9780823239153 ; 9780823246557 ; Toni Morrison: An Ethical Poetics: An Ethical Poetics  ; 9780823246557 >
+      au < exists ; 2013 ; 9780299289409 ; 9780299289430 ; Who’s Yer Daddy?: Gay Writers Celebrate Their Mentors and Forerunners ; 9780299289430 >
+      au < exists ; 2013 ; 9781421408910 ; 9781421408927 ; Thrill of the Chaste: The Allure of Amish Romance Novels ; 9781421408927 >
+      au < exists ; 2013 ; 9780299295103 ; 9780299295134 ; It’s All a Kind of Magic: The Young Ken Kesey ; 9780299295134 >
+      au < exists ; 2013 ; 9780299290443 ; 9780299290436 ; The Poetics of Impudence and Intimacy in the Age of Pushkin ; 9780299290436 >
+      au < exists ; 2013 ; 9780295992181 ; 9780295804422 ; Subversive Seduction: Darwin, Sexual Selection, and the Spanish Novel ; 9780295804422 >
+      au < exists ; 2013 ; 9780893573928 ; 9780893578923 ; Chekhov for the 21st Century ; 9780893578923 >
+      au < exists ; 2013 ; 9781421408040 ; 9781421408057 ; Cut These Words into My Stone: Ancient Greek Epitaphs ; 9781421408057 >
+      au < exists ; 2013 ; 9780268022358 ; 9780268075682 ; The Gospel according to Shakespeare ; 9780268075682 >
+      au < exists ; 2013 ; 9780299290641 ; 9780299290634 ; Faithful Passages: American Catholicism in Literary Culture, 1844–1931 ; 9780299290634 >
+      au < exists ; 2013 ; 9781611683455 ; 9781611683479 ; Margaret Fuller and Her Circles ; 9781611683479 >
+      au < exists ; 2013 ; 9781439908167 ; 9781439908181 ; Kongo Graphic Writing and Other Narratives of the Sign ; 9781439908181 >
+      au < exists ; 2013 ; 9780803240193 ; 9780803245594 ; Reading for Liberalism: The Overland Monthly and the Writing of the Modern American West ; 9780803245594 >
+      au < exists ; 2013 ; 9780810128460 ; 9780810166257 ; The Kingdom of Insignificance: Miron Bialoszewski and the Quotidian, the Queer, and the Traumatic ; 9780810166257 >
+      au < exists ; 2013 ; 9781609381479 ; 9781609381486 ; Violet America: Regional Cosmopolitanism in U.S. Fiction ; 9781609381486 >
+      au < exists ; 2013 ; 9780803244818 ; 9780803246423 ; Stories and Minds: Cognitive Approaches to Literary Narrative ; 9780803246423 >
+      au < exists ; 2013 ; 9780823249961 ; 9780823250271 ; Time Travel: The Popular Philosophy of Narrative ; 9780823250271 >
+      au < exists ; 2013 ; 9780810128941 ; 9780810166523 ; Wonderlands of the Avant-Garde: Technology and the Arts in Russia of the 1920s ; 9780810166523 >
+      au < exists ; 2013 ; 9780813933245 ; 9780813933252 ; Characters of Blood: Black Heroism in the Transatlantic Imagination ; 9780813933252 >
+      au < exists ; 2013 ; 9780813933818 ; 9780813933832 ; Scarecrows of Chivalry: English Masculinities after Empire ; 9780813933832 >
+      au < exists ; 2013 ; 9780944318546 ; 9780944318553 ; Rudyard Kipling: Life, Love, and Art ; 9780944318553 >
+      au < exists ; 2013 ; 9780817317829 ; 9780817386498 ; South by Southwest: Katherine Anne Porter and the Burden of Texas History ; 9780817386498 >
+      au < exists ; 2013 ; 9781606351468 ; 9781612776552 ; Under the Shadow: The Atomic Bomb and Cold War Narratives ; 9781612776552 >
+      au < exists ; 2013 ; 9780813934075 ; 9780813934099 ; The New Death: American Modernism and World War I ; 9780813934099 >
+      au < exists ; 2013 ; 9780819573223 ; 9780819573247 ; Here Be Dragons: Exploring Fantasy Maps and Settings ; 9780819573247 >
+      au < exists ; 2013 ; 9780253008053 ; 9780253008121 ; Elie Wiesel: Jewish, Literary, and Moral Perspectives ; 9780253008121 >
+      au < exists ; 2013 ; 9780268038397 ; 9780268089726 ; Savoring Power, Consuming the Times: The Metaphors of Food in Medieval and Renaissance Italian Literature ; 9780268089726 >
+      au < exists ; 2013 ; 9780823251780 ; 9780823251797 ; After Translation: The Transfer and Circulation of Modern Poetics Across the Atlantic ; 9780823251797 >
+      au < exists ; 2013 ; 9780816678273 ; 9780816684649 ; Happy Times in Norway ; 9780816684649 >
+      au < exists ; 2013 ; 9780817317997 ; 9780817386771 ; Fighting Words: Polemics and Social Change in Literary Naturalism ; 9780817386771 >
+      au < exists ; 2013 ; 9781617037344 ; 9781621039259 ; Searching for the New Black Man: Black Masculinity and Women's Bodies ; 9781621039259 >
+      au < exists ; 2013 ; 9780813141886 ; 9780813141893 ; A Political Companion to Walker Percy ; 9780813141893 >
+      au < exists ; 2013 ; 9781609381776 ; 9781609381783 ; Slavery in American Children's Literature, 1790-2010 ; 9781609381783 >
+      au < exists ; 2013 ; 9781611860832 ; 9781609173708 ; William James and the Art of Popular Statement ; 9781609173708 >
+      au < exists ; 2013 ; 9781611860672 ; 9781609173531 ; Centering Anishinaabeg Studies: Understanding the World through Stories ; 9781609173531 >
+      au < exists ; 2013 ; 9780812244588 ; 9780812206302 ; Animal Encounters: Contacts and Concepts in Medieval Britain ; 9780812206302 >
+      au < exists ; 2013 ; 9781611683547 ; 9781611683561 ; Poetics of Trauma: The Work of Dahlia Ravikovitch ; 9781611683561 >
+      au < exists ; 2013 ; 9780812244694 ; 9780812206555 ; Baroque Sovereignty: Carlos de Siguenza y Gongora and the Creole Archive of Colonial Mexico ; 9780812206555 >
+      au < exists ; 2013 ; 9781617036828 ; 9781621039181 ; Perspectives on Percival Everett ; 9781621039181 >
+      au < exists ; 2013 ; 9781617036736 ; 9781621039143 ; Eudora Welty and Surrealism ; 9781621039143 >
+      au < exists ; 2013 ; 9781617036842 ; 9781621039204 ; On the Gulf ; 9781621039204 >
+      au < exists ; 2013 ; 9780814334812 ; 9780814338100 ; Transgressive Tales: Queering the Grimms ; 9780814338100 >
+      au < exists ; 2013 ; 9780814334447 ; 9780814337998 ; Choosing Yiddish: New Frontiers of Language and Culture ; 9780814337998 >
+      au < exists ; 2013 ; 9780252037337 ; 9780252094514 ; John Brunner ; 9780252094514 >
+      au < exists ; 2013 ; 9781421407371 ; 9781421407982 ; Monstrous Motherhood: Eighteenth-Century Culture and the Ideology of Domesticity ; 9781421407982 >
+      au < exists ; 2013 ; 9780821420164 ; 9780821444351 ; A Room of His Own: A Literary-Cultural Study of Victorian Clubland ; 9780821444351 >
+      au < exists ; 2013 ; 9781617036491 ; 9781621030539 ; Civil Rights in the White Literary Imagination: Innocence by Association ; 9781621030539 >
+      au < exists ; 2013 ; 9780807147429 ; 9780807147436 ; The Hemingway Short Story: A Study in Craft for Writers and Readers ; 9780807147436 >
+      au < exists ; 2013 ; 9780807147290 ; 9780807147306 ; The Motherless Child in the Novels of Pauline Hopkins ; 9780807147306 >
+      au < exists ; 2013 ; 9780807150269 ; 9780807150276 ; Poe and the Remapping of Antebellum Print Culture ; 9780807150276 >
+      au < exists ; 2013 ; 9780809331482 ; 9780809331499 ; Thomas De Quincey: British Rhetoric's Romantic Turn ; 9780809331499 >
+      au < exists ; 2013 ; 9780810128491 ; 9780810166288 ; The Poetics of Unremembered Acts: Reading, Lyric, Pedagogy ; 9780810166288 >
+      au < exists ; 2013 ; 9781859184899 ; 9781909005075 ; JG Farrell: The Making of a Writer  ; 9781909005075 >
+      au < exists ; 2013 ; 9781421407173 ; 9781421408644 ; Portraiture and British Gothic Fiction: The Rise of Picture Identification, 1764–1835 ; 9781421408644 >
+      au < exists ; 2013 ; 9781421407227 ; 9781421408002 ; Literature and Architecture in Early Modern England ; 9781421408002 >
+      au < exists ; 2013 ; 9780819573339 ; 9780819573353 ; We Modern People: Science Fiction and the Making of Russian Modernity ; 9780819573353 >
+      au < exists ; 2013 ; 9780268026127 ; 9780268077785 ; The English Martyr from Reformation to Revolution ; 9780268077785 >
+      au < exists ; 2013 ; 9780817357337 ; 9780817386429 ; The Darkness of the Present: Poetics, Anachronism, and the Anomaly ; 9780817386429 >
+      au < exists ; 2013 ; 9780807147603 ; 9780807147610 ; Writing beyond Prophecy: Emerson, Hawthorne, and Melville after the American Renaissance ; 9780807147610 >
+      au < exists ; 2013 ; 9780803245037 ; 9780803245303 ; Under Postcolonial Eyes: Figuring the "jew" in Contemporary British Writing ; 9780803245303 >
+      au < exists ; 2013 ; 9780803240919 ; 9780803244870 ; Tragically Speaking: On the Use and Abuse of Theory for Life ; 9780803244870 >
+      au < exists ; 2013 ; 9780803215757 ; 9780803240865 ; Inside Dazzling Mountains: Southwest Native Verbal Arts ; 9780803240865 >
+      au < exists ; 2013 ; 9780813554624 ; 9780813554648 ; The Romance of Race: Incest, Miscegenation, and Multiculturalism in the United States, 1880-1930 ; 9780813554648 >
+      au < exists ; 2013 ; 9781421407210 ; 9781421408071 ; Imaginary Citizens: Child Readers and the Limits of American Independence, 1640–1868 ; 9781421408071 >
+      au < exists ; 2013 ; 9781611860634 ; 9781609173494 ; Flesh Becomes Word: A Lexicography of the Scapegoat or, the History of an Idea ; 9781609173494 >
+      au < exists ; 2013 ; 9780812244717 ; 9780812207613 ; Conversion and Narrative: Reading and Religious Authority in Medieval Polemic ; 9780812207613 >
+      au < exists ; 2013 ; 9781558499720 ; 9781613762196 ; Constituting Old Age in Early Modern English Literature, from Queen Elizabeth to King Lear ; 9781613762196 >
+      au < exists ; 2013 ; 9780813042404 ; 9780813042565 ; Joyce and Militarism ; 9780813042565 >
+      au < exists ; 2013 ; 9781557536266 ; 9781612492452 ; Miradas transatlánticas: El periodismo literario de Elena Poniatowska y Rosa Montero ; 9781612492452 >
+      au < exists ; 2013 ; 9780812218237 ; 9780812208061 ; Mortal Remains: Death in Early America ; 9780812208061 >
+      au < exists ; 2013 ; 9781617035968 ; 9781621039433 ; Baba Yaga: The Wild Witch of the East in Russian Fairy Tales ; 9781621039433 >
+      au < exists ; 2013 ; 9780776607870 ; 9780776620343 ; They Divided the Sky: A Novel by Christa Wolf ; 9780776620343 >
+      au < exists ; 2013 ; 9781621039693 ; 9781617038686 ; Chester Brown: Conversations ; 9781617038686 >
+      au < exists ; 2013 ; 9780810129207 ; 9780810167209 ; Silence and the Rest: Verbal Skepticism in Russian Poetry ; 9780810167209 >
+      au < exists ; 2013 ; 9780823255153 ; 9780823255184 ; Common Things: Romance and the Aesthetics of Belonging in Atlantic Modernity ; 9780823255184 >
+      au < exists ; 2013 ; 9781617031878 ; 9781621039587 ; Tell about Night Flowers: Eudora Welty's Gardening Letters, 1940-1949 ; 9781621039587 >
+      au < exists ; 2013 ; 9780820344287 ; 9780820344782 ; Thoreauvian Modernities: Transatlantic Conversations on an American Icon ; 9780820344782 >
+      au < exists ; 2013 ; 9780299295646 ; 9780299295639 ; Our Deep Gossip: Conversations with Gay Writers on Poetry and Desire ; 9780299295639 >
+      au < exists ; 2013 ; 9780252037801 ; 9780252095085 ; William Gibson ; 9780252095085 >
+      au < exists ; 2013 ; 9780814212134 ; 9780814270110 ; Dreaming America: Popular Front Ideals and Aethetics in Children's Plays of the Federal Theatre Project ; 9780814270110 >
+      au < exists ; 2013 ; 9780810128637 ; 9780810166370 ; Anti-Nazi Modernism: The Challenges of Resistance in 1930s Fiction ; 9780810166370 >
+      au < exists ; 2013 ; 9780824836627 ; 9780824838027 ; Three-Dimensional Reading: Stories of Time and Space in Japanese Modernist Fiction, 1911–1932 ; 9780824838027 >
+      au < exists ; 2013 ; 9780814339558 ; 9780814339565 ; Religious Diversity and Early Modern English Texts: Catholic, Judaic, Feminist, and Secular Dimensions ; 9780814339565 >
+      au < exists ; 2013 ; 9780874179309 ; 9780874179316 ; Carol and John Steinbeck: Portrait of a Marriage ; 9780874179316 >
+      au < exists ; 2013 ; 9789956790814 ; 9789956790715 ; Critical Perspectives on Cameroon Writing ; 9789956790715 >
+      au < exists ; 2013 ; 9780268022365 ; 9780268075866 ; Prophets of the Posthuman: American Fiction, Biotechnology, and the Ethics of Personhood ; 9780268075866 >
+      au < exists ; 2013 ; 9780816679140 ; 9781452939216 ; Middlebrow Queer: Christopher Isherwood in America ; 9781452939216 >
+      au < exists ; 2013 ; 9781609381509 ; 9781609381714 ; Among Friends: Engendering the Social Site of Poetry ; 9781609381714 >
+      au < exists ; 2013 ; 9780817317980 ; 9780817386764 ; Sounding Real: Musicality and American Fiction at the Turn of the Twentieth Century ; 9780817386764 >
+      au < exists ; 2013 ; 9781935978701 ; 9781935978862 ; The Book of Emperors: A Translation of the Middle High German Kaiserchronik ; 9781935978862 >
+      au < exists ; 2013 ; 9780814212233 ; 9780814270189 ; Fictions of Evidence: Witnessing, Literature, and Community in the Late Middle Ages ; 9780814270189 >
+      au < exists ; 2013 ; 9781621039754 ; 9781617038792 ; Conversations with Natasha Trethewey ; 9781617038792 >
+      au < exists ; 2013 ; 9789888139972 ; 9789888180967 ; Scribes of Gastronomy: Representations of Food and Drink in Imperial Chinese Literature ; 9789888180967 >
+      au < exists ; 2013 ; 9780820346304 ; 9780820346304 ; Jim Crow, Literature, and the Legacy of Sutton E. Griggs ; 9780820346304 >
+      au < exists ; 2013 ; 9780813934884 ; 9780813934907 ; Race, Romance, and Rebellion: Literatures of the Americas in the Nineteenth Century ; 9780813934907 >
+      au < exists ; 2013 ; 9780814212158 ; 9780814270134 ; Recovering Disability in Early Modern England ; 9780814270134 >
+      au < exists ; 2013 ; 9781580441759 ; 9781580441841 ; Malory and Christianity: Essays on Sir Thomas Malory's Morte Darthur ; 9781580441841 >
+      au < exists ; 2013 ; 9780812245233 ; 9780812209105 ; The Traveler, the Tower, and the Worm: The Reader as Metaphor ; 9780812209105 >
+      au < exists ; 2013 ; 9780299293543 ; 9780299293536 ; Challenging the Bard: Dostoevsky and Pushkin, a Study of Literary Relationship ; 9780299293536 >
+      au < exists ; 2013 ; 9780819563989 ; 9780819574541 ; Critical Theory and Science Fiction ; 9780819574541 >
+      au < exists ; 2013 ; 9780820342139 ; 9780820342139 ; Sacral Grooves, Limbo Gateways: Travels in Deep Southern Time, Circum-Caribbean Space, Afro-creole Authority ; 9780820342139 >
+      au < exists ; 2013 ; 9780299292942 ; 9780299292935 ; True Songs of Freedom: Uncle Tom’s Cabin in Russian Culture and Society ; 9780299292935 >
+      au < exists ; 2013 ; 9780813044248 ; 9780813048352 ; Introduction to Geoffrey Chaucer ; 9780813048352 >
+      au < exists ; 2013 ; 9780295992778 ; 9780295804668 ; Letters and Epistolary Culture in Early Medieval China ; 9780295804668 >
+      au < exists ; 2013 ; 9780299291747 ; 9780299291730 ; Aeschylus’s Suppliant Women: The Tragedy of Immigration ; 9780299291730 >
+      au < exists ; 2013 ; 9780826353917 ; 9780826353924 ; Amiri Baraka and Edward Dorn: The Collected Letters ; 9780826353924 >
+      au < exists ; 2013 ; 9780814212202 ; 9780814270233 ; Redrawing French Empire Comics ; 9780814270233 >
+      au < exists ; 2013 ; 9780816675760 ; 9780816689033 ; Summa Technologiae ; 9780816689033 >
+      au < exists ; 2013 ; 9780816677290 ; 9780816688845 ; On Writing with Photography ; 9780816688845 >
+      au < exists ; 2013 ; 9780801451850 ; 9780801468094 ; Dominion Undeserved: Milton and the Perils of Creation ; 9780801468094 >
+      au < exists ; 2013 ; 9780814212226 ; 9780814270172 ; The Queer Limit of Black Memory: Black Lesbian Literature and Irresolution ; 9780814270172 >
+      au < exists ; 2013 ; 9780814212097 ; 9780814270097 ; Narrative Discourse: Authors and Narrators in Literature, Film and Art ; 9780814270097 >
+      au < exists ; 2013 ; 9780875804705 ; 9781609090852 ; Yankees in Petrograd, Bolsheviks in New York: America and Americans in Russian Literary Perception ; 9781609090852 >
+      au < exists ; 2013 ; 9781421410159 ; 9781421410166 ; Being Cool: The Work of Elmore Leonard ; 9781421410166 >
+      au < exists ; 2013 ; 9780813559667 ; 9780813559681 ; Unbecoming Americans: Writing Race and Nation from the Shadows of Citizenship, 1945-1960 ; 9780813559681 >
+      au < exists ; 2013 ; 9780823255061 ; 9780823255092 ; Modernist Form and the Myth of Jewification ; 9780823255092 >
+      au < exists ; 2013 ; 9780813934839 ; 9780813934853 ; Composing Cultures: Modernism, American Literary Studies, and the Problem of Culture ; 9780813934853 >
+      au < exists ; 2013 ; 9780253006257 ; 9780253006974 ; Contemporary African American Literature: The Living Canon ; 9780253006974 >
+      au < exists ; 2013 ; 9780823255450 ; 9780823255481 ; The Politics of Irony in American Modernism ; 9780823255481 >
+      au < exists ; 2013 ; 9781611172775 ; 9781611173369 ; A City of Marble: The Rhetoric of Augustan Rome ; 9781611173369 >
+      au < exists ; 2013 ; 9789058679161 ; 9789461660664 ; De rationibus quibus homines docti artem Latine colloquendi et ex tempore dicendi seculis XVI et XVII coluerunt ; 9789461660664 >
+      au < exists ; 2013 ; 9780814212219 ; 9780814270165 ; Translating Troy: Provincial Politics in Alliterative Romance ; 9780814270165 >
+      au < exists ; 2013 ; 9780810129085 ; 9780810166585 ; Zora Neale Hurston, Haiti, and Their Eyes Were Watching God ; 9780810166585 >
+      au < exists ; 2013 ; 9789971696979 ; 9789971697631 ; Isan Writers, Thai Literature: Writing and Regionalism in Modern Thailand ; 9789971697631 >
+      au < exists ; 2013 ; 9789629964672 ; 9789629969172 ; The Southern Garden Poetry Society: Literary Culture and Social Memory in Guangdong ; 9789629969172 >
+      au < exists ; 2013 ; 9780816679287 ; 9780816684311 ; Corridor: Media Architectures in American Fiction ; 9780816684311 >
+      au < exists ; 2013 ; 9780814212196 ; 9780814270158 ; Witches, Goddesses, and Angry Spirits: The Politics of Spiritual Liberation in African Diaspora Women's Fiction ; 9780814270158 >
+      au < exists ; 2013 ; 9789956790166 ; 9789956790456 ; Outward Evil Inward Battle: Human Memory in Literature ; 9789956790456 >
+      au < exists ; 2013 ; 9780823251308 ; 9780823251315 ; The Tears of Sovereignty: Perspectives of Power in Renaissance Drama ; 9780823251315 >
+      au < exists ; 2013 ; 9781421409986 ; 9781421410715 ; Literary Advertising and the Shaping of British Romanticism ; 9781421410715 >
+      au < exists ; 2013 ; 9780810129078 ; 9780810166578 ; Selected Poems ; 9780810166578 >
+      au < exists ; 2013 ; 9781602587793 ; 9781602587816 ; Redemption in Poetry and Philosophy: Wordsworth, Kant, and the Making of the Post-Christian Imagination ; 9781602587816 >
+      au < exists ; 2013 ; 9781421410029 ; 9781421410036 ; How Literature Plays with the Brain: The Neuroscience of Reading and Art ; 9781421410036 >
+      au < exists ; 2013 ; 9780985932527 ; 9780985932534 ; Coming Close: Forty Essays on Philip Levine ; 9780985932534 >
+      au < exists ; 2013 ; 9780814212080 ; 9780814270080 ; Hard Sayings: The Rhetorics of Christian Orthodoxy in Late Modern Fiction ; 9780814270080 >
+      au < exists ; 2013 ; 9780816679843 ; 9781452939308 ; The Tropics Bite Back: Culinary Coups in Caribbean Literature ; 9781452939308 >
+      au < exists ; 2013 ; 9781603448048 ; 9781603449502 ; Telling Border Life Stories: Four Mexican American Women Writers ; 9781603449502 >
+      au < exists ; 2013 ; 9781602587656 ; 9781602583993 ; Flannery O'Connor: Writing a Theology of Disabled Humanity ; 9781602583993 >
+      au < exists ; 2013 ; 9780803246379 ; 9780803248502 ; Contemporary Comics Storytelling ; 9780803248502 >
+      au < exists ; 2013 ; 9780814212110 ; 9780814270103 ; George Eliot in Society: Travels Abroad and Sundays at the Priory ; 9780814270103 >
+      au < exists ; 2013 ; 9780814212073 ; 9780814270066 ; Answerable Style: The Idea of the Literary in Medieval England ; 9780814270066 >
+      au < exists ; 2013 ; 9781554589395 ; 9781554589401 ; Boom!: Manufacturing Memoir for the Popular Market ; 9781554589401 >
+      au < exists ; 2013 ; 9781421407791 ; 9781421410043 ; Paris, Capital of the Black Atlantic: Literature, Modernity, and Diaspora ; 9781421410043 >
+      au < exists ; 2013 ; 9780803246362 ; 9780803248618 ; From Francophonie to World Literature in French: Ethics, Poetics, and Politics ; 9780803248618 >
+      au < exists ; 2013 ; 9780819571205 ; 9780819571229 ; A Guide to Poetics Journal: Writing in the Expanded Field, 1982–1998 ; 9780819571229 >
+      au < exists ; 2013 ; 9780813044989 ; 9780813048550 ; Shaw's Settings: Gardens and Libraries ; 9780813048550 >
+      au < exists ; 2013 ; 9780816678280 ; 9780816684809 ; True and Untrue and Other Norse Tales ; 9780816684809 >
+      au < exists ; 2013 ; 9781611860887 ; 9781609173784 ; A Refuge of Lies: Reflections on Faith and Fiction ; 9781609173784 >
+      au < exists ; 2013 ; 9789888139231 ; 9789888268054 ; Humour in Chinese Life and Culture: Resistance and Control in Modern Times ; 9789888268054 >
+      au < exists ; 2013 ; 9781554586301 ; 9781554586479 ; Ornithologies of Desire: Ecocritical Essays, Avian Poetics, and Don McKay ; 9781554586479 >
+      au < exists ; 2013 ; 9781438447698 ; 9781438447704 ; Fifties Ethnicities: The Ethnic Novel and Mass Culture at Midcentury ; 9781438447704 >
+      au < exists ; 2013 ; 9780813561189 ; 9780813561196 ; Troubling Nationhood in U.S. Latina Literature: Explorations of Place and Belonging ; 9780813561196 >
+      au < exists ; 2013 ; 9781421409825 ; 9781421410746 ; The Fairy Way of Writing: Shakespeare to Tolkien ; 9781421410746 >
+      au < exists ; 2013 ; 9780253010476 ; 9780253010520 ; Mr. Penrose: The Journal of Penrose, Seaman ; 9780253010520 >
+      au < exists ; 2013 ; 9780819573667 ; 9780819573681 ; Parabolas of Science Fiction ; 9780819573681 >
+      au < exists ; 2013 ; 9780816678266 ; 9780816684755 ; Sigurd and His Brave Companions: A Tale of Medieval Norway ; 9780816684755 >
+      au < exists ; 2013 ; 9780776608037 ; 9780776620909 ; Yoko Tawada's Portrait of a Tongue: An Experimental Translation by Chantal Wright ; 9780776620909 >
+      au < exists ; 2013 ; 9781438448275 ; 9781438448282 ; Kristeva's Fiction ; 9781438448282 >
+      au < exists ; 2013 ; 9780823254972 ; 9780823255009 ; Realizing Capital: Financial and Psychic Economies in Victorian Form ; 9780823255009 >
+      au < exists ; 2013 ; 9780815633129 ; 9780815652083 ; Utopian Negotiation: Aphra Behn and Margaret Cavendish ; 9780815652083 >
+      au < exists ; 2013 ; 9780814212257 ; 9780814271063 ; Primitive Minds: Evolution and Spiritual Experience in the Victorian Novel ; 9780814271063 >
+      au < exists ; 2013 ; 9780814212318 ; 9780814271087 ; The Treacherous Imagination: Intimacy, Ethics, and Autobiographical Fiction ; 9780814271087 >
+      au < exists ; 2013 ; 9780814212288 ; 9780814271049 ; A Poetics of Unnatural Narrative ; 9780814271049 >
+      au < exists ; 2013 ; 9780814212295 ; 9780814271056 ; Trading Tongues: Merchants, Multilingualism, and Medieval Literature ; 9780814271056 >
+      au < exists ; 2013 ; 9781621039907 ; 9781617039058 ; Drawing from Life: Memory and Subjectivity in Comic Art ; 9781617039058 >
+      au < exists ; 2013 ; 9781421411644 ; 9781421411651 ; From Little London to Little Bengal: Religion, Print, and Modernity in Early British India, 1793-1835 ; 9781421411651 >
+      au < exists ; 2013 ; 9780814212240 ; 9780814271070 ; The Court of Comedy: Aristophanes, Rhetoric, and Democracy in Fifth-Century Athens ; 9780814271070 >
+      au < exists ; 2013 ; 9781421410487 ; 9781421410494 ; Stanley Cavell and the Claim of Literature ; 9781421410494 >
+      au < exists ; 2013 ; 9780814212271 ; 9780814271094 ; Lake Methodism: Polite Literature and Popular Religion in England, 1780–1830 ; 9780814271094 >
+      au < exists ; 2013 ; 9780814212264 ; 9780814271117 ; Victorian Sacrifice: Ethics and Economics in Mid-Century Novels ; 9780814271117 >
+      au < exists ; 2013 ; 9782760537163 ; 9782760537170 ; loi du Nord, La ; 9782760537170 >
+      au < exists ; 2013 ; 9780814729144 ; 9780814729250 ; A Treasury of Virtues: Sayings, Sermons, and Teachings of Ali, with the One Hundred Proverbs, attributed to al-Jahiz ; 9780814729250 >
+      au < exists ; 2013 ; 9780816680634 ; 9781452940038 ; The Stray Bullet: William S. Burroughs in Mexico ; 9781452940038 >
+      au < exists ; 2013 ; 9780803240421 ; 9780803248298 ; Against Autobiography: Albert Memmi and the Production of Theory ; 9780803248298 >
+      au < exists ; 2013 ; 9780816530298 ; 9780816599578 ; Broken Souths: Latina/o Poetic Responses to Neoliberalism and Globalization ; 9780816599578 >
+      au < exists ; 2013 ; 9781421410883 ; 9781421410890 ; Experimental Life: Vitalism in Romantic Science and Literature ; 9781421410890 >
+      au < exists ; 2013 ; 9781438447810 ; 9781438447827 ; Redeeming Words: Language and the Promise of Happiness in the Stories of Döblin and Sebald ; 9781438447827 >
+      au < exists ; 2013 ; 9780814212301 ; 9780814271100 ; National Consciousness and Literary Cosmopolitics: Postcolonial Literature in a Global Moment ; 9780814271100 >
+      au < exists ; 2013 ; 9781621039938 ; 9781617039102 ; Louisiana Creole Literature: A Historical Study ; 9781617039102 >
+      au < exists ; 2013 ; 9780815633112 ; 9780815652045 ; Carmilla: A Critical Edition ; 9780815652045 >
+      au < exists ; 2013 ; 9781439910559 ; 9781439910573 ; Serial Fu Manchu: The Chinese Supervillain and the Spread of Yellow Peril Ideology ; 9781439910573 >
 
   }
 
