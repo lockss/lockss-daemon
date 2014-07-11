@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.84 2014-05-14 04:14:32 tlipkis Exp $
+ * $Id: ServeContent.java,v 1.85 2014-07-11 22:43:33 pgust Exp $
  */
 
 /*
@@ -486,28 +486,20 @@ public class ServeContent extends LockssServlet {
     // perform special handling for an OpenUrl
     try {
       OpenUrlInfo resolved = OpenUrlResolver.noOpenUrlInfo;
-      String doi = getParameter("doi");
-      if (!StringUtil.isNullString(doi)) {
-        // transform convenience representation of doi to OpenURL form
-        // (ignore other parameters)
-        if (log.isDebug3()) log.debug3("Resolving DOI: " + doi);
-        resolved = openUrlResolver.resolveFromDOI(doi);
-        requestType = AccessLogType.Doi;
-      } else {
-        // If any params, pass them all to OpenUrl resolver
-        Map<String,String> pmap = getParamsAsMap();
-        if (!pmap.isEmpty()) {
-          if (log.isDebug3()) log.debug3("Resolving OpenUrl: " + pmap);
-          resolved = openUrlResolver.resolveOpenUrl(pmap);
-          requestType = AccessLogType.OpenUrl;
-        }
+
+      // If any params, pass them all to OpenUrl resolver
+      Map<String,String> pmap = getParamsAsMap();
+      if (!pmap.isEmpty()) {
+        if (log.isDebug3()) log.debug3("Resolving OpenUrl: " + pmap);
+        resolved = openUrlResolver.resolveOpenUrl(pmap);
+        requestType = AccessLogType.OpenUrl;
       }
 
-      url = null;
-      if (resolved.getResolvedTo() != ResolvedTo.NONE) {
+      url = resolved.getResolvedUrl();
+      if (   (url != null)
+          || (resolved.getResolvedTo() != ResolvedTo.NONE)) { 
         // record type of access for logging
         accessLogInfo = resolved.getResolvedTo().toString();
-        url = resolved.getResolvedUrl();
         handleOpenUrlInfo(resolved);
         return;
       }
