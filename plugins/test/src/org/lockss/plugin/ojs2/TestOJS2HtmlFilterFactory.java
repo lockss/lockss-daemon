@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -155,6 +155,25 @@ public class TestOJS2HtmlFilterFactory extends LockssTestCase {
   private static final String accessHtmlFiltered =
       "<br>\n\n";
   
+  /*
+   */
+  private static final String footerHtml =
+      "<body>\n" +
+      "<div id=\"footer\">\n" + 
+      "<div id=\"footerContent\">\n" + 
+      "<div class=\"debugStats\">\n" + 
+      "Página gerada em: 0,2359s<br />\n" + 
+      "Número de requisições ao bancos de dados: 165<br/>\n" + 
+      "Uso de Memória:: 6825496<br/>\n" + 
+      "</div>\n" + 
+      "</div><!-- footerContent -->\n" + 
+      "</div><!-- footer -->\n" + 
+      "</body>";
+  private static final String footerHtmlFiltered =
+      "<body>\n" +
+      "<!-- footer -->\n" +
+      "</body>";
+  
   public void testSidebarKeywordCloudFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(sidebarKeywordCloudHtml),
@@ -247,6 +266,12 @@ public class TestOJS2HtmlFilterFactory extends LockssTestCase {
         Constants.DEFAULT_ENCODING);
     
     assertEquals(accessHtmlFiltered, StringUtil.fromInputStream(actIn));
+    
+    actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(footerHtml),
+        Constants.DEFAULT_ENCODING);
+    
+    assertEquals(footerHtmlFiltered, StringUtil.fromInputStream(actIn));
     
   }
 
