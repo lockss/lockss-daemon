@@ -1,5 +1,5 @@
 /*
- * $Id: OJS2ArticleIteratorFactory.java,v 1.12 2014-06-02 18:37:34 etenbrink Exp $
+ * $Id: OJS2ArticleIteratorFactory.java,v 1.13 2014-07-11 19:00:38 etenbrink Exp $
  */
 
 /*
@@ -87,14 +87,20 @@ public class OJS2ArticleIteratorFactory
   protected static final String ROOT_TEMPLATE = "\"%s\", base_url";
   
   protected static final String PATTERN_TEMPLATE =
-      "\"^%s(index[.]php/)?(%s/)?article/viewFile/[^/]+/[^/]+$\", base_url, journal_id";
+      "\"^%s(index[.]php/)?(%s/)?article/(viewFile|download)/[^/]+/[^/]+$\", base_url, journal_id";
   
   protected static final Pattern PDF_PATTERN = Pattern.compile(
-      "/article/viewFile/([^/]+)/([^/]+)$",
+      "/article/(?:viewFile|download)/([^/]+)/([^/]+)$",
       Pattern.CASE_INSENSITIVE);
   
   // how to change from one form (aspect) of article to another
-  protected static final String PDF_REPLACEMENT = "/article/viewFile/$1/$2";
+  protected static final String PDF_REPLACEMENT1 = "/article/viewFile/$1/$2";
+  protected static final String PDF_REPLACEMENT2 = "/article/download/$1/$2";
+  // NOTE: 
+  // http://e-revista.unioeste.br/index.php/ccsaemperspectiva/article/view/5545/5248
+  // was not a fulltext view, but just a PDF instruction page
+  // so if that form of URL is needed, then that could mean a problem
+  // XXX protected static final String PDF_REPLACEMENT3 = "/article/view/$1/$2";
   protected static final String ABSTRACT_REPLACEMENT = "/article/view/$1";
   
   @Override
@@ -133,6 +139,7 @@ public class OJS2ArticleIteratorFactory
     }
     
     // otherwise try SubTreeArticleIteratorBuilder 
+    log.info("Using SubTreeArticleIteratorBuilder");
     SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
     
     builder.setSpec(target,
@@ -140,7 +147,7 @@ public class OJS2ArticleIteratorFactory
     
     // set up pdf to be an aspect that will trigger an ArticleFiles
     builder.addAspect(
-        PDF_PATTERN, PDF_REPLACEMENT,
+        PDF_PATTERN, Arrays.asList(PDF_REPLACEMENT1, PDF_REPLACEMENT2),
         ArticleFiles.ROLE_FULL_TEXT_PDF);
     
     // set up abstract to be an aspect 
