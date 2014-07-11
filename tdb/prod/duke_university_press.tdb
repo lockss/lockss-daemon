@@ -2876,4 +2876,23 @@
     
     }
     
+  {
+    title <
+      name = Transgender Studies Quarterly ;
+      issn = 2328-9252 ;
+      eissn = 2328-9260 ;
+      issnl = 2328-9252
+    >
+    
+    {
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://tsq.dukejournals.org/
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
+      
+      au < HighWirePressH20Plugin ; exists ; 2014 ; Tikkun Volume 1 ; 1 >
+
+    }
+    
+  }
+    
 }
