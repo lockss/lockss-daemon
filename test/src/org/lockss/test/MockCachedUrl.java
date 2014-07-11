@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrl.java,v 1.53 2013-10-31 03:07:26 fergaloy-sf Exp $
+ * $Id: MockCachedUrl.java,v 1.54 2014-07-11 23:35:24 tlipkis Exp $
  */
 
 /*
@@ -259,6 +259,9 @@ public class MockCachedUrl implements CachedUrl {
   public long getContentSize() {
     if (contentSize != -1) {
       return contentSize;
+    }
+    if (content != null) {
+      return content.length();
     }
     if (cachedFile != null) {
       if (isResource) {
