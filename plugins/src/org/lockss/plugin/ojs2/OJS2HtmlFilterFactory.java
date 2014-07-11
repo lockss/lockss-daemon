@@ -1,5 +1,5 @@
 /*
- * $Id: OJS2HtmlFilterFactory.java,v 1.12 2014-06-13 16:52:07 etenbrink Exp $
+ * $Id: OJS2HtmlFilterFactory.java,v 1.13 2014-07-11 19:01:04 etenbrink Exp $
  */
 
 /*
@@ -98,6 +98,9 @@ public class OJS2HtmlFilterFactory implements FilterFactory {
             // Total de acessos: keeps changing, there is no 'good' tag wrapped around text
             // e.g. https://www.revistas.unijui.edu.br/index.php/desenvolvimentoemquestao/issue/view/18
             HtmlNodeFilters.tagWithTextRegex("b", "^ *total de acesso( dos artigo)?s: +[0-9]+ *$", true),
+            // Footer contains changing non-content, debug etc.
+            // http://www.portalseer.ufba.br/index.php/cmbio/article/viewArticle/4093
+            HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
             // For Librello: download and view counts
             // e.g. http://www.librelloph.com/challengesinsustainability/issue/view/10
             HtmlNodeFilters.tagWithTextRegex("a", "^(HTML|PDF|Views)$", true),
