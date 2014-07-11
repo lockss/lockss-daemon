@@ -1,5 +1,5 @@
 /*
- * $Id: TestJstorArchivalUnit.java,v 1.3 2014-06-06 18:37:37 alexandraohlson Exp $
+ * $Id: TestJstorArchivalUnit.java,v 1.4 2014-07-11 12:00:30 alexandraohlson Exp $
  */
 
 /*
@@ -59,6 +59,7 @@ public class TestJstorArchivalUnit extends LockssTestCase {
   static Logger log = Logger.getLogger(TestJstorArchivalUnit.class);
   
   static final String PLUGIN_ID = "org.lockss.plugin.jstor.JstorPlugin";
+  static final String CLOCKSS_PLUGIN_ID = "org.lockss.plugin.jstor.ClockssJstorPlugin";
   static final String PluginName = "JSTOR Plugin";
   
   public void setUp() throws Exception {
@@ -71,8 +72,15 @@ public class TestJstorArchivalUnit extends LockssTestCase {
   public void tearDown() throws Exception {
     super.tearDown();
   }
+  
+  // backward compatible - make AU based on lockss version of plugin
+  private DefinableArchivalUnit makeAu(Boolean valid, int volume, String jid) 
+    throws Exception {
+      return makeAu(valid, volume, jid, false);
+  }
 
-  private DefinableArchivalUnit makeAu(Boolean valid, int volume, String jid)
+  // A more flexible version of the makeAU routine that allows choice of plugin
+  private DefinableArchivalUnit makeAu(Boolean valid, int volume, String jid, Boolean isClockss)
       throws Exception {
 
     Properties props = new Properties();
@@ -85,8 +93,11 @@ public class TestJstorArchivalUnit extends LockssTestCase {
     Configuration config = ConfigurationUtil.fromProps(props);
     
     DefinablePlugin ap = new DefinablePlugin();
-    ap.initPlugin(getMockLockssDaemon(),
-        PLUGIN_ID);
+    if (isClockss == false) {
+      ap.initPlugin(getMockLockssDaemon(),PLUGIN_ID);
+    } else {
+      ap.initPlugin(getMockLockssDaemon(),CLOCKSS_PLUGIN_ID);
+    }
     DefinableArchivalUnit au = (DefinableArchivalUnit)ap.createAu(config);
     return au;
   }
@@ -208,6 +219,26 @@ public class TestJstorArchivalUnit extends LockssTestCase {
     DefinableArchivalUnit au =
       makeAu(true, 33, "yyyy");
     assertEquals(PluginName + ", Base URL http://www.jstor.org/, Base URL 2 https://www.jstor.org/, Journal ID yyyy, Volume 33", au.getName());
+  }
+  
+  private static final String gln_message = 
+      "Atypon Systems hosts this archival unit (AU) " +
+          "and requires that you <a " +
+          "href=\'http://www.jstor.org/action/institutionLockssIpChange\'>" +
+          "register the IP address of this LOCKSS box in your institutional account as" +
+          " a crawler</a> before allowing your LOCKSS box to harvest this AU." +
+          " Failure to comply with this publisher requirement may trigger crawler traps" + 
+          " on the Atypon Systems platform, and your LOCKSS box or your entire institution" +
+          " may be temporarily banned from accessing the site. You only need to register the IP " +
+          "address of your LOCKSS box once for all AUs published by JSTOR.";
+  
+  public void testConfigUsrMsg() throws Exception {
+    // a clockssAU
+    ArchivalUnit jsClockssAu = makeAu(true, 137, "tranamerentosoc3", true);
+    assertEquals(null, jsClockssAu.getProperties().getString(DefinableArchivalUnit.KEY_AU_CONFIG_USER_MSG, null));
+
+    ArchivalUnit jsGLNAu = makeAu(true, 137, "tranamerentosoc3", false);
+    assertEquals(gln_message, jsGLNAu.getProperties().getString(DefinableArchivalUnit.KEY_AU_CONFIG_USER_MSG, null));
   }
 
 }
