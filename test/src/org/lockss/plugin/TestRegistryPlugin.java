@@ -1,5 +1,5 @@
 /*
- * $Id: TestRegistryPlugin.java,v 1.8 2011-06-20 07:12:45 tlipkis Exp $
+ * $Id: TestRegistryPlugin.java,v 1.9 2014-07-11 23:34:25 tlipkis Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
+import org.lockss.util.urlconn.*;
 
 /**
  * Test class for org.lockss.plugin.RegistryPlugin
@@ -78,6 +79,17 @@ public class TestRegistryPlugin extends LockssTestCase {
     List descrs = m_plugin.getLocalAuConfigDescrs();
     assertEquals(1, descrs.size());
     assertEquals(ConfigParamDescr.BASE_URL, descrs.get(0));
+  }
+
+  public void testResultMap() throws Exception {
+    CacheResultMap crm = m_plugin.getCacheResultMap();
+    assertClass(CacheException.NoRetryDeadLinkException.class,
+		crm.mapException(null, null, 404, null));
+    assertNull(crm.mapException(null, null, 200, null));
+    assertEquals(null,
+		 crm.mapException(null, null,
+				  new ContentValidationException.EmptyFile(),
+				  null));
   }
 
   public void testCreateAu() throws Exception {

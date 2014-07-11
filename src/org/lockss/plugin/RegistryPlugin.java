@@ -1,5 +1,5 @@
 /*
- * $Id: RegistryPlugin.java,v 1.12 2010-04-05 16:37:22 pgust Exp $
+ * $Id: RegistryPlugin.java,v 1.13 2014-07-11 23:34:25 tlipkis Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.base.BasePlugin;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.*;
+import org.lockss.util.urlconn.*;
 
 /**
  * <p>RegistryPlugin: A plugin that archives other plugins.</p>
@@ -119,5 +120,13 @@ public class RegistryPlugin extends BasePlugin {
    */
   public List<ConfigParamDescr> getLocalAuConfigDescrs() {
     return m_auConfigDescrs;
+  }
+
+  protected void initResultMap() {
+    // Empty files are used to retract plugins; don't warn when collected.
+    HttpResultMap hResultMap = new HttpResultMap();
+    hResultMap.storeMapEntry(ContentValidationException.EmptyFile.class,
+			     CacheSuccess.class);
+    resultMap = hResultMap;
   }
 }
