@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.48 2013-12-09 21:12:06 pgust Exp $
+ * $Id: OpenUrlResolver.java,v 1.49 2014-07-11 22:49:22 pgust Exp $
  */
 
 /*
@@ -62,11 +62,14 @@ import org.lockss.exporter.biblio.BibliographicItem;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.AuUtil.AuProxyInfo;
+import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.Plugin;
 import org.lockss.plugin.PluginManager;
 import org.lockss.plugin.PrintfConverter;
+import org.lockss.plugin.PluginManager.CuContentReq;
 import org.lockss.plugin.PrintfConverter.UrlListConverter;
 import org.lockss.plugin.definable.DefinableArchivalUnit;
+import org.lockss.proxy.ProxyManager;
 import org.lockss.util.ExternalizableMap;
 import org.lockss.util.IOUtil;
 import org.lockss.util.Logger;
@@ -135,6 +138,10 @@ public class OpenUrlResolver {
 
   /** the LOCKSS daemon */
   private final LockssDaemon daemon;
+  /** the PluginManager */
+  private final PluginManager pluginMgr;
+  /** the ProxyManager */
+  private final ProxyManager proxyMgr;
   
   /** maximum redirects for looking up DOI url */
   private static final int MAX_REDIRECTS = 10;
@@ -201,14 +208,14 @@ public class OpenUrlResolver {
    */
   public static class OpenUrlInfo {
     static public enum ResolvedTo {
-      PUBLISHER,
-      TITLE,
-      VOLUME,
-      ISSUE,
-      CHAPTER,
-      ARTICLE,
-      OTHER,
-      NONE,
+      PUBLISHER, // resolved to a publisher
+      TITLE,     // resolved to a pubication
+      VOLUME,    // resolved to a volume of a pubication
+      ISSUE,     // resolved to an issue of a serial or other publication
+      CHAPTER,   // resolved to a chapter of a book or other publication
+      ARTICLE,   // resolved to an article of a serial or other pubication
+      OTHER,     // resolved to an element of a publication
+      NONE,      // not resolved if URL is null, or not in cache if has URL
     };
     
     private String resolvedUrl;
@@ -226,7 +233,7 @@ public class OpenUrlResolver {
 
     protected static OpenUrlInfo newInstance(
         String resolvedUrl, String proxySpec, ResolvedTo resolvedTo) {
-      return ((resolvedTo == ResolvedTo.NONE) || (resolvedUrl == null)) 
+      return ((resolvedTo == ResolvedTo.NONE) && (resolvedUrl == null)) 
           ? OpenUrlResolver.noOpenUrlInfo
           : new OpenUrlInfo(resolvedUrl, proxySpec, resolvedTo);
     }
@@ -284,6 +291,8 @@ public class OpenUrlResolver {
       throw new IllegalArgumentException("LOCKSS daemon not specified");
     }
     this.daemon = daemon;
+    this.pluginMgr = daemon.getPluginManager();
+    this.proxyMgr = daemon.getProxyManager();
   }
   
   /**
@@ -450,20 +459,22 @@ public class OpenUrlResolver {
    */
   public OpenUrlInfo resolveOpenUrl(Map<String,String> params) {
     log.debug3("params = " + params);
+
+    OpenUrlInfo resolvedDirectly = noOpenUrlInfo;
     if (params.containsKey("rft_id")) {
       String rft_id = params.get("rft_id");
       // handle rft_id that is an HTTP or HTTPS URL
       if (UrlUtil.isHttpUrl(rft_id)) {
-        OpenUrlInfo resolved = resolveFromUrl(rft_id);
-        if (resolved.resolvedTo != OpenUrlInfo.ResolvedTo.NONE) {
-          return resolved;
+        resolvedDirectly = resolveFromUrl(rft_id);
+        if (resolvedDirectly.resolvedTo != OpenUrlInfo.ResolvedTo.NONE) {
+          return resolvedDirectly;
         }
         log.debug3("Failed to resolve from URL: " + rft_id);
       } else if (rft_id.startsWith("info:doi/")) {
         String doi = rft_id.substring("info:doi/".length());
-        OpenUrlInfo resolved = resolveFromDOI(doi); 
-        if (resolved.resolvedTo != OpenUrlInfo.ResolvedTo.NONE) {
-          return resolved;
+        resolvedDirectly = resolveFromDOI(doi); 
+        if (resolvedDirectly.resolvedTo != OpenUrlInfo.ResolvedTo.NONE) {
+          return resolvedDirectly;
         }
         log.debug3("Failed to resolve from DOI: " + doi);
       }
@@ -474,13 +485,22 @@ public class OpenUrlResolver {
       String id = params.get("id");
       if (id.startsWith("doi:")) {
         String doi = id.substring("doi:".length());
-        OpenUrlInfo resolved = resolveFromDOI(doi);
-        if (resolved.resolvedTo != OpenUrlInfo.ResolvedTo.NONE) {
-          return resolved;
+        resolvedDirectly = resolveFromDOI(doi);
+        if (resolvedDirectly.resolvedTo != OpenUrlInfo.ResolvedTo.NONE) {
+          return resolvedDirectly;
         }
         log.debug3("Failed to resolve from DOI: " + doi);
       }
     }
+
+    if (params.containsKey("doi")) {
+      String doi = params.get("doi");
+      resolvedDirectly = resolveFromDOI(doi);
+      if (resolvedDirectly.resolvedTo != OpenUrlInfo.ResolvedTo.NONE) {
+        return resolvedDirectly;
+      }
+      log.debug3("Failed to resolve from DOI: " + doi);
+    }      
 
     String spage = getRftStartPage(params);
     String author = getRftParam(params, "au");
@@ -687,7 +707,7 @@ public class OpenUrlResolver {
       log.debug3("Failed to resolve from title: \"" + title + "\"");
     }
 
-    return noOpenUrlInfo;
+    return resolvedDirectly;
   }
 
   /**
@@ -888,20 +908,26 @@ public class OpenUrlResolver {
    * @return a resolved URL
    */
   public OpenUrlInfo resolveFromUrl(String aUrl) {
-    String url = resolveUrl(aUrl, null); // no proxy specified
-    return OpenUrlInfo.newInstance(url);
+    return resolveFromUrl(aUrl, null); // no proxy specified
   }
 
   /**
-   * Resolves from a url.
+   * Resolves from a url. If URL is not in cache, returned OpenUrlInfo
+   * resolvedTo indicator is ResolvedTo.NONE.
    *  
    * @param aUrl the URL
    * @param proxySpec a proxy string of the form "host:port"
-   * @return a resolved URL
+   * @return OpenURLInfo with resolved URL
    */
   public OpenUrlInfo resolveFromUrl(String aUrl, String proxySpec) {
     String url = resolveUrl(aUrl, proxySpec);
-    return OpenUrlInfo.newInstance(url);
+    if (url != null) {
+      CachedUrl cu = pluginMgr.findCachedUrl(url, CuContentReq.PreferContent);
+      if (cu == null) {
+        return OpenUrlInfo.newInstance(url, proxySpec, OpenUrlInfo.ResolvedTo.NONE);
+      }
+    }
+    return OpenUrlInfo.newInstance(url, proxySpec);
   }
   
   
@@ -916,9 +942,8 @@ public class OpenUrlResolver {
   String resolveUrl(String aUrl, String auProxySpec) { // protected for testing
     String url = aUrl;
     try {
-      final PluginManager pluginMgr = daemon.getPluginManager();
       final LockssUrlConnectionPool connectionPool =
-        daemon.getProxyManager().getQuickConnectionPool();
+        proxyMgr.getQuickConnectionPool();
       
       // get proxy host and port for the proxy spec or the current config
       AuProxyInfo proxyInfo = AuUtil.getAuProxyInfo(auProxySpec);
@@ -1040,7 +1065,7 @@ public class OpenUrlResolver {
       // corresponding to the AU with a SpiderCrawlSpec; 
       // by convention, the first URL is the manifest page 
       // (not for OAICrawlSpec or other types of CrawlSpec)
-      ArchivalUnit au = daemon.getPluginManager().getAuFromId(auid);
+      ArchivalUnit au = pluginMgr.getAuFromId(auid);
       if (au != null) {
         CrawlSpec spec = au.getCrawlSpec();
         if (spec instanceof SpiderCrawlSpec) {
@@ -1390,7 +1415,6 @@ public class OpenUrlResolver {
       foundTdbAuList.add(tdbAu);
     }
 
-    final PluginManager pluginMgr = daemon.getPluginManager();
     // look for URL that is cached from list of matching AUs
     for (TdbAu tdbau : foundTdbAuList) {
       String aYear = year;
@@ -1539,7 +1563,6 @@ public class OpenUrlResolver {
    */
   private OpenUrlInfo getBookUrl(
 	  TdbAu tdbau, String year, String volumeName, String edition, String spage) {
-    PluginManager pluginMgr = daemon.getPluginManager();
     String pluginKey = PluginManager.pluginKeyFromId(tdbau.getPluginId());
     Plugin plugin = pluginMgr.getPlugin(pluginKey);
 
@@ -1635,7 +1658,6 @@ public class OpenUrlResolver {
    */
   private OpenUrlInfo getJournalUrl(
 	  TdbAu tdbau, String year, String volumeName, String issue, String spage) {
-    PluginManager pluginMgr = daemon.getPluginManager();
     String pluginKey = PluginManager.pluginKeyFromId(tdbau.getPluginId());
     Plugin plugin = pluginMgr.getPlugin(pluginKey);
 
@@ -1882,8 +1904,6 @@ public class OpenUrlResolver {
       foundTdbAuList.add(tdbAu);
     }
     
-    final PluginManager pluginMgr = daemon.getPluginManager();
-
     // look for URL that is cached from list of matching AUs
     for (TdbAu tdbau : foundTdbAuList) {
       String aYear = year;
