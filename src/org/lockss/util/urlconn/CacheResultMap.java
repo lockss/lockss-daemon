@@ -1,5 +1,5 @@
 /*
- * $Id: CacheResultMap.java,v 1.5 2010-02-11 10:05:40 tlipkis Exp $
+ * $Id: CacheResultMap.java,v 1.6 2014-07-11 23:32:59 tlipkis Exp $
  */
 
 /*
@@ -52,5 +52,10 @@ public interface CacheResultMap {
   public CacheException mapException(ArchivalUnit au,
 				     LockssUrlConnection connection,
 				     Exception fetchException,
+				     String message);
+
+  public CacheException mapException(ArchivalUnit au,
+				     LockssUrlConnection connection,
+				     int responseCode,
 				     String message);
 }

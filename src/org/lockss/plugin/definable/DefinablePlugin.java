@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.78 2014-06-05 20:18:08 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.79 2014-07-11 23:32:59 tlipkis Exp $
  */
 
 /*
@@ -626,11 +626,8 @@ public class DefinablePlugin extends BasePlugin {
 
   protected void initResultMap() throws PluginException.InvalidDefinition {
     HttpResultMap hResultMap = new HttpResultMap();
-    // XXX Currently this only allows a CacheResultHandler class to
-    // initialize the result map.  Instead, don't use a CacheResultMap
-    // directly, use either the plugin's CacheResultHandler, if specified,
-    // or a default one that wraps the CacheResultMap
 
+    // Allow a handler to initialize the result map.  (Currently unused?)
     String handler_class = null;
     handler_class = definitionMap.getString(KEY_EXCEPTION_HANDLER, null);
     if (handler_class != null) {
@@ -696,26 +693,31 @@ public class DefinablePlugin extends BasePlugin {
 	    // If parseable as an integer, it's a result code.
 	    hResultMap.storeMapEntry(code, val);
 	  } catch (NumberFormatException e) {
-	    try {
-	      Class eClass = Class.forName(first);
-	      // If a class name, it should be an exception class
-	      if (Exception.class.isAssignableFrom(eClass)) {
-		hResultMap.storeMapEntry(eClass, val);
-	      } else {
+	    if ("EmptyFile".equalsIgnoreCase(first)) {
+	      hResultMap.storeMapEntry(ContentValidationException.EmptyFile.class,
+				       val);
+	    } else {
+	      try {
+		Class eClass = Class.forName(first);
+		// If a class name, it should be an exception class
+		if (Exception.class.isAssignableFrom(eClass)) {
+		  hResultMap.storeMapEntry(eClass, val);
+		} else {
+		  throw new
+		    PluginException.InvalidDefinition("First arg not an " +
+						      "Exception class: " +
+						      entry + ", in " + mapName);
+		}		  
+	      } catch (Exception ex) {
 		throw new
-		  PluginException.InvalidDefinition("First arg not an " +
-						    "Exception class: " +
+		  PluginException.InvalidDefinition("First arg not a " +
+						    "number or class: " +
 						    entry + ", in " + mapName);
-	      }		  
-	    } catch (Exception ex) {
-	      throw new
-		PluginException.InvalidDefinition("First arg not a " +
-						  "number or class: " +
-						  entry + ", in " + mapName);
-	    } catch (LinkageError le) {
-	      throw new PluginException.InvalidDefinition("Can't load " +
-							  first,
-							  le);
+	      } catch (LinkageError le) {
+		throw new PluginException.InvalidDefinition("Can't load " +
+							    first,
+							    le);
+	      }
 	    }
 	  }
 	}

@@ -1,5 +1,5 @@
 /*
- * $Id: CacheException.java,v 1.19 2011-05-09 02:34:01 tlipkis Exp $
+ * $Id: CacheException.java,v 1.20 2014-07-11 23:32:59 tlipkis Exp $
  */
 
 /*
@@ -855,6 +855,19 @@ public class CacheException
     protected void setAttributes() {
       attributeBits.clear(ATTRIBUTE_RETRY);
       attributeBits.clear(ATTRIBUTE_FAIL);
+    }
+  }
+
+  /** Marker class returned from UrlCacher to indicate successful fetch
+   * that should record a warning */
+  public static class WarningOnly
+      extends CacheException {
+    public WarningOnly() {
+      super();
+    }
+
+    public WarningOnly(String message) {
+      super(message);
     }
   }
 }

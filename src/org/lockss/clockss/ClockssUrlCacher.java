@@ -1,10 +1,10 @@
 /*
- * $Id: ClockssUrlCacher.java,v 1.11 2014-02-25 07:50:38 tlipkis Exp $
+ * $Id: ClockssUrlCacher.java,v 1.12 2014-07-11 23:33:00 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -202,6 +202,10 @@ public class ClockssUrlCacher implements UrlCacher {
     if (probe != null) {
       probe.reset();
     }
+  }
+
+  public CacheException getInfoException() {
+    return uc.getInfoException();
   }
 
   public void setPermissionMapSource(PermissionMapSource pmSource) {

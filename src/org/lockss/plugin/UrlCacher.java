@@ -1,5 +1,5 @@
 /*
- * $Id: UrlCacher.java,v 1.31 2012-01-18 03:40:42 tlipkis Exp $
+ * $Id: UrlCacher.java,v 1.32 2014-07-11 23:32:59 tlipkis Exp $
  */
 
 /*
@@ -215,6 +215,12 @@ public interface UrlCacher {
    * reopened.
    */
   public void reset();
+
+  /**
+   * Return an exception with info to be reported in the crawl status along
+   * with the URL (presumably produced by a validator), or null.
+   */
+  public CacheException getInfoException();
 
   public void setPermissionMapSource(PermissionMapSource permissionMapSource);
 

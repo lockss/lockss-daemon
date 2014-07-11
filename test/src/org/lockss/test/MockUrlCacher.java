@@ -1,5 +1,5 @@
 /*
- * $Id: MockUrlCacher.java,v 1.41 2014-04-23 20:48:59 tlipkis Exp $
+ * $Id: MockUrlCacher.java,v 1.42 2014-07-11 23:32:58 tlipkis Exp $
  */
 
 /*
@@ -65,6 +65,7 @@ public class MockUrlCacher implements UrlCacher {
   private byte[] storedContent;
   private CrawlRateLimiter crl;
   private RedirectScheme redirScheme;
+  private CacheException infoException;
 
   public MockUrlCacher(String url, MockArchivalUnit au){
     this.url = url;
@@ -296,6 +297,14 @@ public class MockUrlCacher implements UrlCacher {
 
   public void setUncachedProperties(CIProperties prop){
     uncachedProp = prop;
+  }
+
+  public CacheException getInfoException() {
+    return infoException;
+  }
+
+  public void setInfoException(CacheException e) {
+    infoException = e;
   }
 
   public String toString() {

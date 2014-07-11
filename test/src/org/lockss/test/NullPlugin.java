@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.122 2013-10-31 03:07:26 fergaloy-sf Exp $
+ * $Id: NullPlugin.java,v 1.123 2014-07-11 23:32:58 tlipkis Exp $
  */
 
 /*
@@ -134,6 +134,10 @@ public class NullPlugin {
 
     public Object newAuxClass(String className, Class expectedType) {
       return null;
+    }
+
+    public CacheResultMap getCacheResultMap() {
+      return new HttpResultMap();
     }
 
     public String getDefaultArticleMimeType() {
@@ -358,6 +362,10 @@ public class NullPlugin {
     }
 
     public void setProxy(String proxyHost, int proxyPort) {
+      throw new UnsupportedOperationException();
+    }
+
+    public CacheException getInfoException() {
       throw new UnsupportedOperationException();
     }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.71 2014-06-05 20:18:29 tlipkis Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.72 2014-07-11 23:32:59 tlipkis Exp $
  */
 
 /*
@@ -131,6 +131,37 @@ public class TestBaseUrlCacher extends LockssTestCase {
     assertEquals(UrlCacher.CACHE_RESULT_FETCHED, cacher.cache());
     assertTrue(cacher.wasStored);
     assertEquals(1, pauseBeforeFetchCounter);
+    assertNull(cacher.getInfoException());
+  }
+
+  public void testCacheEmpty() throws IOException {
+    pauseBeforeFetchCounter = 0;
+
+    cacher._input = new StringInputStream("");
+    cacher._headers = new CIProperties();
+    // should cache
+    assertEquals(UrlCacher.CACHE_RESULT_FETCHED, cacher.cache());
+    assertTrue(cacher.wasStored);
+    assertEquals(1, pauseBeforeFetchCounter);
+    assertClass(CacheException.WarningOnly.class,
+		cacher.getInfoException());
+    assertEquals("Empty file stored",
+		 cacher.getInfoException().getMessage());
+  }
+
+  public void testCacheEmptyPluginDoesntCare() throws IOException {
+    HttpResultMap resultMap = (HttpResultMap)plugin.getCacheResultMap();
+    resultMap.storeMapEntry(ContentValidationException.EmptyFile.class,
+			    CacheSuccess.class);
+    pauseBeforeFetchCounter = 0;
+
+    cacher._input = new StringInputStream("");
+    cacher._headers = new CIProperties();
+    // should cache
+    assertEquals(UrlCacher.CACHE_RESULT_FETCHED, cacher.cache());
+    assertTrue(cacher.wasStored);
+    assertEquals(1, pauseBeforeFetchCounter);
+    assertNull(cacher.getInfoException());
   }
 
   public void testReCacheWCookie() throws IOException {

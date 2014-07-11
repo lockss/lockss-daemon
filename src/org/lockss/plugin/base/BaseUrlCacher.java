@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.96 2014-06-05 20:18:29 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.97 2014-07-11 23:32:59 tlipkis Exp $
  */
 
 /*
@@ -44,6 +44,7 @@ import org.lockss.app.*;
 import org.lockss.state.*;
 import org.lockss.config.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.definable.*;
 import org.lockss.repository.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
@@ -114,7 +115,7 @@ public class BaseUrlCacher implements UrlCacher {
     repository = plugin.getDaemon().getLockssRepository(au);
     nodeMgr = plugin.getDaemon().getNodeManager(au);
     logger.debug3("Node manager "+nodeMgr);
-    resultMap = ((BasePlugin)plugin).getCacheResultMap();
+    resultMap = plugin.getCacheResultMap();
   }
 
   /**
@@ -293,6 +294,7 @@ public class BaseUrlCacher implements UrlCacher {
     fetchUrl = origUrl;
     otherNames = null;
     uncachedProperties = null;
+    infoException = null;
   }
 
   /**
@@ -458,6 +460,7 @@ public class BaseUrlCacher implements UrlCacher {
 	  }
 	}
 	os.close();
+	infoException = validate(bytes);
 	headers.setProperty(CachedUrl.PROPERTY_NODE_URL, url);
 	if (checksumProducer != null) {
 	  byte bdigest[] = checksumProducer.digest();
@@ -882,5 +885,27 @@ public class BaseUrlCacher implements UrlCacher {
     return null;
   }
 
+  //  Beginnings of validation framework.
+
+  protected CacheException infoException;
+
+  public CacheException getInfoException() {
+    return infoException;
+  }
+
+  // XXX need to make it possible for validator to access CU before seal(),
+  // so it can prevent file from being committed.
+  protected CacheException validate(long size) throws CacheException {
+//     try {
+      if (size == 0) {
+	Exception ex =
+	  new ContentValidationException.EmptyFile("Empty file stored");
+	return resultMap.mapException(au, conn, ex, null);
+      }
+      return null;
+//     } catch (Exception e) {
+//       throw resultMap.mapException(au, conn, e, null);
+//     }
+  }
 
 }

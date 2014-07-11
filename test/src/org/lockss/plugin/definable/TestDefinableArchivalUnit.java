@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.65 2013-08-10 20:49:46 tlipkis Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.66 2014-07-11 23:32:58 tlipkis Exp $
  */
 
 /*
@@ -829,7 +829,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   public void testGetCrawlRuleThrowsOnBadClass() throws LockssRegexpException {
     setupAu();
     defMap.putString(DefinableArchivalUnit.KEY_AU_CRAWL_RULES,
-		  "org.lockss.bogus.FakeClass");
+		  "org.lockss.bogus.ExpectedClassNotFound");
 
     try {
       CrawlRule rules = cau.makeRules();
@@ -1310,6 +1310,10 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertClass(CacheException.RetryableNetworkException_5_30S.class,
 		getHttpResultMap(defplug).mapException(null, null,
 						       new IOException("foo"),
+						       null));
+    assertClass(CacheException.NoRetryHostException.class,
+		getHttpResultMap(defplug).mapException(null, null,
+						       new ContentValidationException.EmptyFile("empty"),
 						       null));
     CacheException ex =
       getHttpResultMap(defplug).mapException(null, null, 522, null);
