@@ -1,5 +1,5 @@
 /*
- * $Id: AuHelper.java,v 1.4 2014-06-09 07:11:21 fergaloy-sf Exp $
+ * $Id: AuHelper.java,v 1.5 2014-07-11 21:11:53 fergaloy-sf Exp $
  */
 
 /*
@@ -335,7 +335,7 @@ public class AuHelper {
    * Provides the universe of Archival Unit-related query objects used as the
    * source for a query.
    * 
-   * @return a List<AuWsProxy> with the universe.
+   * @return a List<AuWsSource> with the universe.
    */
   List<AuWsSource> createUniverse() {
     final String DEBUG_HEADER = "createUniverse(): ";
