@@ -11,6 +11,22 @@
   {
   
     title <
+      name = Anthropologica ;
+      issn = 0003-5459 ;
+      eissn = 2292-3586 ;
+      issnl = 0003-5459
+    >
+
+    param[journal_dir] = anthropologica
+    attr[journal_id] = ant
+
+    au < exists ; 2014 ; Anthropologica Volume 56 ; 56 >
+    
+  }
+
+  {
+  
+    title <
       name = The Canadian Historical Review ;
       issn = 0008-3755 ;
       eissn = 1710-1093 ;
@@ -56,6 +72,22 @@
     au < released ; 2013 ; Canadian Journal of Criminology and Criminal Justice Volume 55 ; 55 >
     au < doNotProcess ; 2014 ; Canadian Journal of Criminology and Criminal Justice Volume 56 ; 56 >
 
+  }
+
+  {
+  
+    title <
+      name = The Canadian Journal of Human Sexuality ;
+      issn = 1188-4517 ;
+      eissn = 2291-7063 ;
+      issnl = 1188-4517
+    >
+
+    param[journal_dir] = the_canadian_journal_of_human_sexuality
+    attr[journal_id] = cjh
+
+    au < exists ; 2014 ; The Canadian Journal of Human Sexuality Volume 23 ; 23 >
+    
   }
 
   {
