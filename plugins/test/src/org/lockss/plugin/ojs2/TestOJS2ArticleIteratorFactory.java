@@ -1,4 +1,4 @@
-/* $Id: TestOJS2ArticleIteratorFactory.java,v 1.5 2014-06-02 17:29:04 etenbrink Exp $
+/* $Id: TestOJS2ArticleIteratorFactory.java,v 1.6 2014-07-11 18:56:15 etenbrink Exp $
 
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -62,7 +62,7 @@ public class TestOJS2ArticleIteratorFactory extends ArticleIteratorTestCase {
   private final String JOURNAL_ID = "lq";
   private final String YEAR = "2012";
   
-  // expected urls for artile 1
+  // expected urls for article 1
   private final String EXPECTED_ABS_URL_1 =
     "http://www.ojs2articleiteratortest.com/index.php/lq/article/view/8110";
   private final String EXPECTED_ARTICLE_METADATA_URL_1 =
