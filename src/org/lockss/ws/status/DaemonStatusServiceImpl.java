@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatusServiceImpl.java,v 1.9 2014-06-17 21:53:34 fergaloy-sf Exp $
+ * $Id: DaemonStatusServiceImpl.java,v 1.10 2014-07-11 20:08:57 fergaloy-sf Exp $
  */
 
 /*
@@ -84,6 +84,9 @@ import org.lockss.ws.entities.PluginWsResult;
 import org.lockss.ws.entities.PollWsResult;
 import org.lockss.ws.entities.RepositorySpaceWsResult;
 import org.lockss.ws.entities.RepositoryWsResult;
+import org.lockss.ws.entities.TdbAuWsResult;
+import org.lockss.ws.entities.TdbPublisherWsResult;
+import org.lockss.ws.entities.TdbTitleWsResult;
 import org.lockss.ws.entities.VoteWsResult;
 import org.lockss.ws.status.DaemonStatusService;
 
@@ -739,6 +742,198 @@ public class DaemonStatusServiceImpl implements DaemonStatusService {
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
     return result;
+  }
+
+  /**
+   * Provides the selected properties of selected title database publishers.
+   * 
+   * @param tdbPublisherQuery
+   *          A String with the
+   *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
+   *          used to specify what properties to retrieve from which title
+   *          database publishers.
+   * @return a List<TdbPublisherWsResult> with the results.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public List<TdbPublisherWsResult> queryTdbPublishers(String tdbPublisherQuery)
+      throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "queryTdbPublishers(): ";
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "tdbPublisherQuery = " + tdbPublisherQuery);
+
+    TdbPublisherHelper tdbPublisherHelper = new TdbPublisherHelper();
+    List<TdbPublisherWsResult> results = null;
+
+    // Create the full query.
+    String fullQuery = createFullQuery(tdbPublisherQuery,
+	TdbPublisherHelper.SOURCE_FQCN, TdbPublisherHelper.PROPERTY_NAMES,
+	TdbPublisherHelper.RESULT_FQCN);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "fullQuery = " + fullQuery);
+
+    // Create a new JoSQL query.
+    Query q = new Query();
+
+    try {
+      // Parse the SQL-like query.
+      q.parse(fullQuery);
+
+      try {
+	// Execute the query.
+	QueryResults qr = q.execute(tdbPublisherHelper.createUniverse());
+
+	// Get the query results.
+	results = (List<TdbPublisherWsResult>)qr.getResults();
+	if (log.isDebug3()) {
+	  log.debug3(DEBUG_HEADER + "results.size() = " + results.size());
+	  log.debug3(DEBUG_HEADER + "results = "
+	      + tdbPublisherHelper.nonDefaultToString(results));
+	}
+      } catch (QueryExecutionException qee) {
+	log.error("Caught QueryExecuteException", qee);
+	log.error("fullQuery = '" + fullQuery + "'");
+	throw new LockssWebServicesFault(qee,
+	    new LockssWebServicesFaultInfo("tdbPublisherQuery = "
+		+ tdbPublisherQuery));
+      }
+    } catch (QueryParseException qpe) {
+      log.error("Caught QueryParseException", qpe);
+      log.error("fullQuery = '" + fullQuery + "'");
+	throw new LockssWebServicesFault(qpe,
+	    new LockssWebServicesFaultInfo("tdbPublisherQuery = "
+		+ tdbPublisherQuery));
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "results = "
+	+ tdbPublisherHelper.nonDefaultToString(results));
+    return results;
+  }
+
+  /**
+   * Provides the selected properties of selected title database titles.
+   * 
+   * @param tdbTitleQuery
+   *          A String with the
+   *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
+   *          used to specify what properties to retrieve from which title
+   *          database titles.
+   * @return a List<TdbTitleWsResult> with the results.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public List<TdbTitleWsResult> queryTdbTitles(String tdbTitleQuery)
+      throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "queryTdbTitles(): ";
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "tdbTitleQuery = " + tdbTitleQuery);
+
+    TdbTitleHelper tdbTitleHelper = new TdbTitleHelper();
+    List<TdbTitleWsResult> results = null;
+
+    // Create the full query.
+    String fullQuery = createFullQuery(tdbTitleQuery,
+	TdbTitleHelper.SOURCE_FQCN, TdbTitleHelper.PROPERTY_NAMES,
+	TdbTitleHelper.RESULT_FQCN);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "fullQuery = " + fullQuery);
+
+    // Create a new JoSQL query.
+    Query q = new Query();
+
+    try {
+      // Parse the SQL-like query.
+      q.parse(fullQuery);
+
+      try {
+	// Execute the query.
+	QueryResults qr = q.execute(tdbTitleHelper.createUniverse());
+
+	// Get the query results.
+	results = (List<TdbTitleWsResult>)qr.getResults();
+	if (log.isDebug3()) {
+	  log.debug3(DEBUG_HEADER + "results.size() = " + results.size());
+	  log.debug3(DEBUG_HEADER + "results = "
+	      + tdbTitleHelper.nonDefaultToString(results));
+	}
+      } catch (QueryExecutionException qee) {
+	log.error("Caught QueryExecuteException", qee);
+	log.error("fullQuery = '" + fullQuery + "'");
+	throw new LockssWebServicesFault(qee,
+	    new LockssWebServicesFaultInfo("tdbTitleQuery = "
+		+ tdbTitleQuery));
+      }
+    } catch (QueryParseException qpe) {
+      log.error("Caught QueryParseException", qpe);
+      log.error("fullQuery = '" + fullQuery + "'");
+	throw new LockssWebServicesFault(qpe,
+	    new LockssWebServicesFaultInfo("tdbTitleQuery = "
+		+ tdbTitleQuery));
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "results = "
+	+ tdbTitleHelper.nonDefaultToString(results));
+    return results;
+  }
+
+  /**
+   * Provides the selected properties of selected title database archival units.
+   * 
+   * @param tdbAuQuery
+   *          A String with the
+   *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
+   *          used to specify what properties to retrieve from which title
+   *          database archival units.
+   * @return a List<TdbAuWsResult> with the results.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public List<TdbAuWsResult> queryTdbAus(String tdbAuQuery)
+      throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "queryTdbAus(): ";
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "tdbAuQuery = " + tdbAuQuery);
+
+    TdbAuHelper tdbAuHelper = new TdbAuHelper();
+    List<TdbAuWsResult> results = null;
+
+    // Create the full query.
+    String fullQuery = createFullQuery(tdbAuQuery, TdbAuHelper.SOURCE_FQCN,
+	TdbAuHelper.PROPERTY_NAMES, TdbAuHelper.RESULT_FQCN);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "fullQuery = " + fullQuery);
+
+    // Create a new JoSQL query.
+    Query q = new Query();
+
+    try {
+      // Parse the SQL-like query.
+      q.parse(fullQuery);
+
+      try {
+	// Execute the query.
+	QueryResults qr = q.execute(tdbAuHelper.createUniverse());
+
+	// Get the query results.
+	results = (List<TdbAuWsResult>)qr.getResults();
+	if (log.isDebug3()) {
+	  log.debug3(DEBUG_HEADER + "results.size() = " + results.size());
+	  log.debug3(DEBUG_HEADER + "results = "
+	      + tdbAuHelper.nonDefaultToString(results));
+	}
+      } catch (QueryExecutionException qee) {
+	log.error("Caught QueryExecuteException", qee);
+	log.error("fullQuery = '" + fullQuery + "'");
+	throw new LockssWebServicesFault(qee,
+	    new LockssWebServicesFaultInfo("tdbAuQuery = " + tdbAuQuery));
+      }
+    } catch (QueryParseException qpe) {
+      log.error("Caught QueryParseException", qpe);
+      log.error("fullQuery = '" + fullQuery + "'");
+	throw new LockssWebServicesFault(qpe,
+	    new LockssWebServicesFaultInfo("tdbAuQuery = " + tdbAuQuery));
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "results = "
+	+ tdbAuHelper.nonDefaultToString(results));
+    return results;
   }
 
   /**

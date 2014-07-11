@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatusService.java,v 1.7 2014-06-17 21:53:34 fergaloy-sf Exp $
+ * $Id: DaemonStatusService.java,v 1.8 2014-07-11 20:08:57 fergaloy-sf Exp $
  */
 
 /*
@@ -29,10 +29,6 @@
  in this Software without prior written authorization from Stanford University.
 
  */
-
-/**
- * The DaemonStatus web service interface.
- */
 package org.lockss.ws.status;
 
 import java.util.Collection;
@@ -51,8 +47,14 @@ import org.lockss.ws.entities.PluginWsResult;
 import org.lockss.ws.entities.PollWsResult;
 import org.lockss.ws.entities.RepositorySpaceWsResult;
 import org.lockss.ws.entities.RepositoryWsResult;
+import org.lockss.ws.entities.TdbAuWsResult;
+import org.lockss.ws.entities.TdbPublisherWsResult;
+import org.lockss.ws.entities.TdbTitleWsResult;
 import org.lockss.ws.entities.VoteWsResult;
 
+/**
+ * The DaemonStatus web service interface.
+ */
 @WebService
 public interface DaemonStatusService {
   /**
@@ -215,4 +217,52 @@ public interface DaemonStatusService {
   @WebMethod
   PlatformConfigurationWsResult getPlatformConfiguration()
       throws LockssWebServicesFault;
+
+  /**
+   * Provides the selected properties of selected title database publishers.
+   * 
+   * @param tdbPublisherQuery
+   *          A String with the
+   *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
+   *          used to specify what properties to retrieve from which title
+   *          database publishers.
+   * @return a List<TdbPublisherWsResult> with the results.
+   * @throws LockssWebServicesFault
+   */
+  @WebMethod
+  List<TdbPublisherWsResult> queryTdbPublishers(
+      @WebParam(name = "tdbPublisherQuery") String tdbPublisherQuery)
+	  throws LockssWebServicesFault;
+
+  /**
+   * Provides the selected properties of selected title database titles.
+   * 
+   * @param tdbTitleQuery
+   *          A String with the
+   *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
+   *          used to specify what properties to retrieve from which title
+   *          database titles.
+   * @return a List<TdbTitleWsResult> with the results.
+   * @throws LockssWebServicesFault
+   */
+  @WebMethod
+  List<TdbTitleWsResult> queryTdbTitles(
+      @WebParam(name = "tdbTitleQuery") String tdbTitleQuery)
+	  throws LockssWebServicesFault;
+
+  /**
+   * Provides the selected properties of selected title database archival units.
+   * 
+   * @param tdbAuQuery
+   *          A String with the
+   *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
+   *          used to specify what properties to retrieve from which title
+   *          database archival units.
+   * @return a List<TdbAuWsResult> with the results.
+   * @throws LockssWebServicesFault
+   */
+  @WebMethod
+  List<TdbAuWsResult> queryTdbAus(
+      @WebParam(name = "tdbAuQuery") String tdbAuQuery)
+	  throws LockssWebServicesFault;
 }
