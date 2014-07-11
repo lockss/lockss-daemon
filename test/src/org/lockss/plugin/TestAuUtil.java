@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuUtil.java,v 1.24 2014-04-23 20:44:45 tlipkis Exp $
+ * $Id: TestAuUtil.java,v 1.25 2014-07-11 23:33:13 tlipkis Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin;
 
 import java.io.*;
+import java.net.*;
 import java.util.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
@@ -41,6 +42,7 @@ import org.lockss.state.*;
 import org.lockss.test.*;
 import org.lockss.plugin.base.*;
 import org.lockss.util.*;
+import org.lockss.util.urlconn.*;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 import org.lockss.plugin.exploded.*;
 import org.lockss.plugin.definable.*;
@@ -163,6 +165,18 @@ public class TestAuUtil extends LockssTestCase {
 
     plug = new MockPlugin();
     assertEquals(0, AuUtil.getPluginDefinition(plug).size());
+  }
+
+  public void testMapException() {
+    LocalMockArchivalUnit mau = new LocalMockArchivalUnit(mbp);
+    assertClass(CacheException.RetryableNetworkException_2.class,
+		AuUtil.mapException(mau, null,
+				    new UnknownHostException(),
+				    "foo"));
+    assertClass(CacheException.UnknownExceptionException.class,
+		AuUtil.mapException(mau, null,
+				    new RuntimeException(),
+				    "foo"));
   }
 
   public void testGetPluginList() throws IOException {
