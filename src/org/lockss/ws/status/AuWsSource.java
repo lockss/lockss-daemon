@@ -1,5 +1,5 @@
 /*
- * $Id: AuWsSource.java,v 1.4 2014-06-09 23:28:12 fergaloy-sf Exp $
+ * $Id: AuWsSource.java,v 1.5 2014-07-12 01:10:01 fergaloy-sf Exp $
  */
 
 /*
@@ -514,7 +514,12 @@ public class AuWsSource extends AuWsResult {
 	for (Map.Entry entry : auProperties.entrySet()) {
 	  // Get the key and value of this property.
 	  String key = (String)entry.getKey();
-	  String val = entry.getValue().toString();
+	  String val = null;
+
+	  // Handle only non-null values.
+	  if (entry.getValue() != null) {
+	    val = entry.getValue().toString();
+	  }
 
 	  // Find the property type from the Archival Unit configuration.
 	  ConfigParamDescr descr = getPlugin().findAuConfigDescr(key);
