@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlerStatus.java,v 1.14 2014-06-17 01:48:27 tlipkis Exp $
+ * $Id: TestCrawlerStatus.java,v 1.15 2014-07-13 04:16:28 tlipkis Exp $
  */
 
 /*
@@ -356,12 +356,12 @@ public class TestCrawlerStatus extends LockssTestCase {
     assertTrue(u1.hasMap());
     Map map = u1.getMap();
     assertEquals(MapUtil.map("foo", "1", "bar", "2"), map);
-    assertEmpty(u1.getList());
+    assertEquals(ListUtil.list("foo", "bar"), u1.getList());
 
     UrlCount u2 = u1.seal(true);
     assertFalse(u1.hasList());
     assertTrue(u1.hasMap());
-    assertEmpty(u1.getList());
+    assertEquals(ListUtil.list("foo", "bar"), u1.getList());
     assertEquals(map, u2.getMap());
 
     UrlCount u3 = new CrawlerStatus.UrlCountWithMap().seal(true);

@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlUrlsStatusAccessor.java,v 1.10 2012-07-17 08:48:25 tlipkis Exp $
+ * $Id: CrawlUrlsStatusAccessor.java,v 1.11 2014-07-13 04:16:28 tlipkis Exp $
  */
 
 /*
@@ -47,6 +47,7 @@ public class CrawlUrlsStatusAccessor implements StatusAccessor {
   private static final String CRAWL_ERROR = "crawl_error";
   private static final String CRAWL_SEVERITY = "crawl_severity";
   private static final String REFERRER = "referrer";
+  private static final String REASON = "reason";
 
   private static final String FETCHED_TABLE_NAME = "fetched";
   private static final String ERROR_TABLE_NAME = "error";
@@ -85,6 +86,11 @@ public class CrawlUrlsStatusAccessor implements StatusAccessor {
     ListUtil.list(new ColumnDescriptor(URL, "URL Excluded",
 				       ColumnDescriptor.TYPE_STRING));
 
+  private static List colDescsExcludedWithReason =
+    ListUtil.list(new ColumnDescriptor(URL, "URL Excluded",
+				       ColumnDescriptor.TYPE_STRING),
+		  new ColumnDescriptor(REASON, "Reason",
+				       ColumnDescriptor.TYPE_STRING));
 
   private static ColumnDescriptor REFERRER_FIRST_COLDESC =
     new ColumnDescriptor(REFERRER, "First Referrer",
@@ -196,7 +202,11 @@ public class CrawlUrlsStatusAccessor implements StatusAccessor {
     } else if (PENDING_TABLE_NAME.equals(tableStr)) {
       return colDescsPending;
     } else if (EXCLUDED_TABLE_NAME.equals(tableStr)) {
-      return colDescsExcluded;
+      if (status.anyExcludedWithReason()) {
+	  return colDescsExcludedWithReason;
+	} else {
+	  return colDescsExcluded;
+	}
     } else if (MIMETYPES_TABLE_NAME.equals(getMtTableStr(tableStr))) {    
       return
 	ListUtil.list(new ColumnDescriptor(URL, 
@@ -220,15 +230,20 @@ public class CrawlUrlsStatusAccessor implements StatusAccessor {
     } else if (PENDING_TABLE_NAME.equals(tableStr)) {
       rows = urlSetToRows(status.getUrlsPending(), status, includeReferrers);
     } else if (EXCLUDED_TABLE_NAME.equals(tableStr)) {
-      rows = urlSetToRows(status.getUrlsExcluded(), status, includeReferrers);
+      Map<String,String> map = status.getUrlsExcludedMap();
+      rows = new ArrayList(map.size());
+      int ix = 1;
+      for (Map.Entry<String,String> ent : map.entrySet()) {
+ 	rows.add(makeExcludedRow(ent.getKey(), ix++, ent.getValue(),
+				 status, includeReferrers));
+      }
     } else if (ERROR_TABLE_NAME.equals(tableStr)) {
       Map<String,UrlErrorInfo> errorMap = status.getUrlsErrorMap();
-      Set errorUrls = errorMap.keySet();
-      rows = new ArrayList(errorUrls.size());
+      rows = new ArrayList(errorMap.size());
       int ix = 1;
       for (Map.Entry<String,UrlErrorInfo> ent : errorMap.entrySet()) {
- 	rows.add(makeRow(ent.getKey(), ix++, ent.getValue(),
-			    status, includeReferrers));
+ 	rows.add(makeErrorRow(ent.getKey(), ix++, ent.getValue(),
+			      status, includeReferrers));
       }
     } else if (MIMETYPES_TABLE_NAME.equals(getMtTableStr(tableStr))) {
       rows = urlSetToRows(status.getUrlsOfMimeType(getMimeTypeStr(tableStr)),
@@ -263,7 +278,7 @@ public class CrawlUrlsStatusAccessor implements StatusAccessor {
 		      CrawlerStatus status, boolean includeReferrers) {
     Map row = new HashMap();
     row.put(URL, url);
-    row.put(IX, new Integer(ix));
+    row.put(IX, ix);
     if (includeReferrers) {
       Collection refs = status.getReferrers(url);
       if (refs.size() > 1) {
@@ -277,11 +292,20 @@ public class CrawlUrlsStatusAccessor implements StatusAccessor {
     return row;
   }
 
-  private Map makeRow(String url, int ix, CrawlerStatus.UrlErrorInfo ui,
-			    CrawlerStatus status, boolean includeReferrers) {
+  private Map makeErrorRow(String url, int ix, CrawlerStatus.UrlErrorInfo ui,
+			   CrawlerStatus status, boolean includeReferrers) {
     Map row = makeRow(url, ix, status, includeReferrers);
     row.put(CRAWL_ERROR, ui.getMessage());
     row.put(CRAWL_SEVERITY, ui.getSeverity().toString());
+    return row;
+  }
+
+  private Map makeExcludedRow(String url, int ix, String reason,
+			      CrawlerStatus status, boolean includeReferrers) {
+    Map row = makeRow(url, ix, status, includeReferrers);
+    if (!StringUtil.isNullString(reason)) {
+      row.put(REASON, reason);
+    }
     return row;
   }
 

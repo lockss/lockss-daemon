@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerStatus.java,v 1.18 2014-06-17 01:48:27 tlipkis Exp $
+ * $Id: CrawlerStatus.java,v 1.19 2014-07-13 04:16:28 tlipkis Exp $
  */
 
 /*
@@ -240,7 +240,7 @@ public class CrawlerStatus {
     }
     if (paramRecordUrls == null || !paramRecordUrls.equals(recordUrls)) {
       fetched = newListCounter("fetched", recordUrls);
-      excluded = newSetCounter("excluded", recordUrls);
+      excluded = newMapCounter("excluded", recordUrls);
       notModified = newListCounter("notModified", recordUrls);
       parsed = newListCounter("parsed", recordUrls);
       sources = newSetCounter("source", recordUrls);
@@ -551,19 +551,32 @@ public class CrawlerStatus {
 
   // Excluded
 
+  private boolean anyExcludedWithReason = false;
+
   public synchronized void signalUrlExcluded(String url) {
-    if (excluded.hasList() && isOffHost(url)) {
+    signalUrlExcluded(url, null);
+  }
+
+  public synchronized void signalUrlExcluded(String url, String reason) {
+    if (excluded.hasMap() && isOffHost(url)) {
       if (includedExcludes >= paramKeepOffHostExcludes) {
 	excludedExcludes++;
       } else {
 	int cnt = excluded.getCount();
-	excluded.addToList(url);
+	addExcluded0(url, reason);
 	if (cnt != excluded.getCount()) {
 	  includedExcludes++;
 	}
       }
     } else {
-      excluded.addToList(url);
+      addExcluded0(url, reason);
+    }
+  }
+
+  private void addExcluded0(String url, String reason) {
+    excluded.addToMap(url, reason);
+    if (!StringUtil.isNullString(reason)) {
+      anyExcludedWithReason = true;
     }
   }
 
@@ -609,6 +622,14 @@ public class CrawlerStatus {
 
   public synchronized List getUrlsExcluded() {
     return excluded.getList();
+  }
+
+  public synchronized Map<String,String> getUrlsExcludedMap() {
+    return excluded.getMap();
+  }
+
+  public boolean anyExcludedWithReason() {
+    return anyExcludedWithReason;
   }
 
   // Not Modified
@@ -1166,6 +1187,13 @@ public class CrawlerStatus {
 	return map;
       }
       return new LinkedMap(map);
+    }
+
+    public List getList() {
+      if (map == null) {
+	return Collections.EMPTY_LIST;
+      }
+      return new ArrayList(map.keySet());
     }
 
     Object getCollection() {
