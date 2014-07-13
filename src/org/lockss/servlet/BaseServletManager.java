@@ -1,5 +1,5 @@
 /*
- * $Id: BaseServletManager.java,v 1.40 2014-06-05 20:17:36 tlipkis Exp $
+ * $Id: BaseServletManager.java,v 1.41 2014-07-13 23:56:24 tlipkis Exp $
  */
 
 /*
@@ -96,6 +96,12 @@ public abstract class BaseServletManager
    * port, given by the <tt>port</tt> parameter.  Changing this requires
    * daemon restart. */
   public static final String PARAM_BIND_ADDRS = DOC_PREFIX + SUFFIX_BIND_ADDRS;
+
+  public static final String SUFFIX_TCP_KEEPALIVE = "keepAlive";
+  /** Enable TCP keepalive if true. */
+  public static final String PARAM_TCP_KEEPALIVE =
+    DOC_PREFIX + SUFFIX_TCP_KEEPALIVE;
+  public static final boolean DEFAULT_TCP_KEEPALIVE = false;
 
   // IP access list tree below org.lockss.<server>.access.ip
   public static final String SUFFIX_IP_ACCESS_PREFIX = "access.ip.";
@@ -214,6 +220,7 @@ public abstract class BaseServletManager
   ManagerInfo mi;
   protected int port;
   protected List<String> bindAddrs;
+  protected boolean enableKeepAlive;
   protected UserRealm realm;
   private boolean start;
   private String includeIps;
@@ -285,6 +292,8 @@ public abstract class BaseServletManager
       port = config.getInt(prefix + SUFFIX_PORT, mi.defaultPort);
       bindAddrs = config.getList(prefix + SUFFIX_BIND_ADDRS,
 				 Collections.EMPTY_LIST);
+      enableKeepAlive = config.getBoolean(prefix + SUFFIX_TCP_KEEPALIVE,
+					  DEFAULT_TCP_KEEPALIVE);
       start = config.getBoolean(prefix + SUFFIX_START, mi.defaultStart);
       _403Msg = config.get(prefix + SUFFIX_403_MSG, mi.default403Msg);
       enableDebugUser = config.getBoolean(prefix + SUFFIX_ENABLE_DEBUG_USER,
@@ -469,7 +478,15 @@ public abstract class BaseServletManager
     // Create a port listener
     if (useSsl) {
       LockssSslListener lsl =
-	new LockssSslListener(new org.mortbay.util.InetAddrPort(host, port));
+	new LockssSslListener(new org.mortbay.util.InetAddrPort(host, port)) {
+	  @Override
+	  public void handleConnection(Socket socket) throws IOException {
+	    if (enableKeepAlive) {
+	      log.critical(mi.serverName + ": enable keepalive");
+	      socket.setKeepAlive(true);
+	    }
+	    super.handleConnection(socket);
+	  }};
       lsl.setKeyManagerFactory(kmf);
       listener = lsl;
 
@@ -485,7 +502,16 @@ public abstract class BaseServletManager
       }
     } else {
       listener =
-	new SocketListener(new org.mortbay.util.InetAddrPort(host,port));
+	new SocketListener(new org.mortbay.util.InetAddrPort(host,port)) {
+	  @Override
+	  public void handleConnection(Socket socket) throws IOException {
+	    log.critical(mi.prefix + ": " + enableKeepAlive);
+	    if (enableKeepAlive) {
+	      log.critical(mi.serverName + ": enable keepalive");
+	      socket.setKeepAlive(true);
+	    }
+	    super.handleConnection(socket);
+	  }};
     }
     server.addListener(listener);
   }
