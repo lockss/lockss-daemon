@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.97 2014-07-11 23:32:59 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.98 2014-07-13 04:17:14 tlipkis Exp $
  */
 
 /*
@@ -800,9 +800,8 @@ public class BaseUrlCacher implements UrlCacher {
       }
       if (isRedirectOption(REDIRECT_OPTION_IF_CRAWL_SPEC)) {
 	if (!au.shouldBeCached(newUrlString)) {
-	  String msg = "Redirected to excluded URL: " +
-	    newUrlString + " redirected from: " + origUrl;
-	  logger.warning(msg);
+	  String msg = "Redirected to excluded URL: " + newUrlString;
+	  logger.warning(msg + " redirected from: " + origUrl);
  	  throw new CacheException.RedirectOutsideCrawlSpecException(msg);
 	}
       }

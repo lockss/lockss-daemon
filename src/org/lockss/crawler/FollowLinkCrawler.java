@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.100 2014-07-11 23:32:59 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.101 2014-07-13 04:17:14 tlipkis Exp $
  */
 
 /*
@@ -578,7 +578,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 				      Crawler.STATUS_REPO_ERR);
       } catch (CacheException.RedirectOutsideCrawlSpecException ex) {
 	// Count this as an excluded URL
-	crawlStatus.signalUrlExcluded(uc.getUrl());
+	crawlStatus.signalUrlExcluded(uc.getUrl(), ex.getMessage());
 	// and claim success, because false causes crawl to fail
 	return true;
       } catch (CacheException ex) {
