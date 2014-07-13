@@ -1,5 +1,5 @@
 /*
- * $Id: DebugPanel.java,v 1.40 2014-03-23 17:11:02 tlipkis Exp $
+ * $Id: DebugPanel.java,v 1.41 2014-07-13 23:57:01 tlipkis Exp $
  */
 
 /*
@@ -79,6 +79,7 @@ public class DebugPanel extends LockssServlet {
   static final String KEY_AUID = "auid";
   static final String KEY_URL = "url";
   static final String KEY_REFETCH_DEPTH = "depth";
+  static final String KEY_TIME = "time";
 
   static final String ACTION_MAIL_BACKUP = "Mail Backup File";
   static final String ACTION_THROW_IOEXCEPTION = "Throw IOException";
@@ -94,6 +95,7 @@ public class DebugPanel extends LockssServlet {
   static final String ACTION_FORCE_START_DEEP_CRAWL = "Force Deep Crawl";
   static final String ACTION_CRAWL_PLUGINS = "Crawl Plugins";
   static final String ACTION_RELOAD_CONFIG = "Reload Config";
+  static final String ACTION_SLEEP = "Sleep";
   static final String ACTION_DISABLE_METADATA_INDEXING = "Disable Indexing";
 
   /** Set of actions for which audit alerts shouldn't be generated */
@@ -173,6 +175,9 @@ public class DebugPanel extends LockssServlet {
     if (ACTION_RELOAD_CONFIG.equals(action)) {
       doReloadConfig();
     }
+    if (ACTION_SLEEP.equals(action)) {
+      doSleep();
+    }
     if (ACTION_THROW_IOEXCEPTION.equals(action)) {
       doThrow();
     }
@@ -229,6 +234,19 @@ public class DebugPanel extends LockssServlet {
   private void doThrow() throws IOException {
     String msg = getParameter(KEY_MSG);
     throw new IOException(msg != null ? msg : "Test message");
+  }
+
+  private void doSleep() throws IOException {
+    String timestr = getParameter(KEY_TIME);
+    try {
+      long time = StringUtil.parseTimeInterval(timestr);
+      Deadline.in(time).sleep();
+      statusMsg = "Slept for " + StringUtil.timeIntervalToString(time);
+    } catch (NumberFormatException e) {
+      errMsg = "Illegal duration: " + e;
+    } catch (InterruptedException e) {
+      errMsg = "Interrupted: " + e;
+    }
   }
 
   private void doReindexMetadata() {
