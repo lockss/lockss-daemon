@@ -1,5 +1,5 @@
 /*
- * $Id: BaseServletManager.java,v 1.41 2014-07-13 23:56:24 tlipkis Exp $
+ * $Id: BaseServletManager.java,v 1.42 2014-07-14 00:53:21 tlipkis Exp $
  */
 
 /*
@@ -482,7 +482,6 @@ public abstract class BaseServletManager
 	  @Override
 	  public void handleConnection(Socket socket) throws IOException {
 	    if (enableKeepAlive) {
-	      log.critical(mi.serverName + ": enable keepalive");
 	      socket.setKeepAlive(true);
 	    }
 	    super.handleConnection(socket);
@@ -505,9 +504,7 @@ public abstract class BaseServletManager
 	new SocketListener(new org.mortbay.util.InetAddrPort(host,port)) {
 	  @Override
 	  public void handleConnection(Socket socket) throws IOException {
-	    log.critical(mi.prefix + ": " + enableKeepAlive);
 	    if (enableKeepAlive) {
-	      log.critical(mi.serverName + ": enable keepalive");
 	      socket.setKeepAlive(true);
 	    }
 	    super.handleConnection(socket);
