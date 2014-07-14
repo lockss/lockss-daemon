@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.85 2014-07-11 22:43:33 pgust Exp $
+ * $Id: ServeContent.java,v 1.86 2014-07-14 23:20:55 pgust Exp $
  */
 
 /*
@@ -1450,7 +1450,9 @@ public class ServeContent extends LockssServlet {
           block.add("<h2>Found requested publisher</h2>");
         } else {
           block.add("<h2>");
+          block.add("Publisher: '");
           block.add(bibliographicItem.getPublisherName());
+          block.add("'");
           block.add("</h2>");
         }
 
@@ -1467,7 +1469,9 @@ public class ServeContent extends LockssServlet {
           block.add("<h2>Found requested title</h2>");
         } else {
           block.add("<h2>");
+          block.add("Publication: '");
           block.add(bibliographicItem.getPublicationTitle());
+          block.add("'");
           block.add("</h2>");
 
           addPublisher(table, bibliographicItem);
@@ -1487,7 +1491,9 @@ public class ServeContent extends LockssServlet {
           block.add("<h2>Found requested volume</h2>");
         } else {
           block.add("<h2>");
+          block.add("Volume: '");
           block.add(bibliographicItem.getName());
+          block.add("'");
           block.add("</h2>");
 
           addPublisher(table, bibliographicItem);
@@ -1510,7 +1516,9 @@ public class ServeContent extends LockssServlet {
           block.add("<h2>Found requested issue</h2>");
         } else {
           block.add("<h2>");
+          block.add("Issue: '");
           block.add(bibliographicItem.getName());
+          block.add("'");
           block.add("</h2>");
 
           addPublisher(table, bibliographicItem);
@@ -1540,7 +1548,9 @@ public class ServeContent extends LockssServlet {
           block.add("<h2>Found requested chapter</h2>");
         } else {
           block.add("<h2>");
+          block.add("Chapter: '");
           block.add(bibliographicItem.getName());
+          block.add("'");
           block.add("</h2>");
 
           addPublisher(table, bibliographicItem);
@@ -1571,7 +1581,9 @@ public class ServeContent extends LockssServlet {
           block.add("<h2>Found requested article</h2>");
         } else {
           block.add("<h2>");
+          block.add("Article: '");
           block.add(bibliographicItem.getName());
+          block.add("'");
           block.add("</h2>");
 
           addPublisher(table, bibliographicItem);
@@ -1597,10 +1609,10 @@ public class ServeContent extends LockssServlet {
 
       default:
         // display other page for ResolvedTo.OTHER
-        block.add("<h2>Found requested page</h2>");
+        block.add("<h2>Found requested item</h2>");
 
         addLink(table,
-            "Article is available at the publisher" + proxyMsg,
+            "Item is available at the publisher" + proxyMsg,
             "Selecting link takes you away from this LOCKSS box.");
 
 
@@ -1793,16 +1805,29 @@ public class ServeContent extends LockssServlet {
       }
 
     } else {
-      // get TdbAus by publisher and title
+      // get TdbAus by publisher and/or title
       String title = bibliographicItem.getPublicationTitle();
       String publisher = bibliographicItem.getPublisherName();
       TdbPublisher tdbpublisher = tdb.getTdbPublisher(publisher);
-      if (tdbpublisher != null) {
-        Collection<TdbTitle> tdbtitles =
-            tdbpublisher.getTdbTitlesByName(title);
+      if (title != null) {
+        // get AUs for specified title
+        Collection<TdbTitle> tdbtitles;
+        if (tdbpublisher != null) {
+          tdbtitles = tdbpublisher.getTdbTitlesByName(title);
+        } else {
+          tdbtitles = tdb.getTdbTitlesByName(title);
+        }
         tdbaus = new ArrayList<TdbAu>();
         for (TdbTitle tdbtitle : tdbtitles) {
           tdbaus.addAll(tdbtitle.getTdbAus());
+        }
+      } else if (tdbpublisher != null) {
+        // get AUs for specified publisher
+        Iterator<TdbAu> tdbAuItr = tdbpublisher.tdbAuIterator();
+        tdbaus = new ArrayList<TdbAu>();
+        while (tdbAuItr.hasNext()) {
+          TdbAu tdbau = tdbAuItr.next();
+          tdbaus.add(tdbau);
         }
       }
     }
