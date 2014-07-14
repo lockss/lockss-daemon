@@ -1,5 +1,5 @@
 /*
- * $Id: BePressHtmlFilterFactory.java,v 1.4 2014-04-09 13:56:04 aishizaki Exp $
+ * $Id: BePressHtmlFilterFactory.java,v 1.5 2014-07-14 21:51:18 aishizaki Exp $
  */
 
 /*
@@ -56,7 +56,9 @@ public class BePressHtmlFilterFactory implements FilterFactory {
         // this contains changing download numbers and date - only
         // on articles at http://docs.lib.purdue.edu/clcweb/ (so far)
         HtmlNodeFilters.tagWithAttribute("div", "id", "custom-fields"),
-        // also removing an "AltMetric box" which indicates "buzz" on an article
+        HtmlNodeFilters.tagWithAttribute("div", "id", "recommended_citation"),
+        // also removing right sidebar wi/an "AltMetric box" which indicates "buzz" on an article
+        HtmlNodeFilters.tagWithAttribute("div", "id", "beta_7-3"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "doi"),
 
     };
