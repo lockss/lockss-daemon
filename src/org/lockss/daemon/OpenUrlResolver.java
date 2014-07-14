@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.49 2014-07-11 22:49:22 pgust Exp $
+ * $Id: OpenUrlResolver.java,v 1.50 2014-07-14 23:19:39 pgust Exp $
  */
 
 /*
@@ -59,6 +59,7 @@ import org.lockss.daemon.ConfigParamDescr.InvalidFormatException;
 import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
 import org.lockss.exporter.biblio.BibliographicItem;
+import org.lockss.exporter.biblio.BibliographicItemAdapter;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.AuUtil.AuProxyInfo;
@@ -601,13 +602,14 @@ public class OpenUrlResolver {
     if (title == null) {
       title = params.get("rft.jtitle");
     }
+
+    Tdb tdb = ConfigManager.getCurrentConfig().getTdb();
+    String pub = getRftParam(params, "pub");
+    // only search the named publisher
+    TdbPublisher tdbPub = (pub == null) ? null : tdb.getTdbPublisher(pub);
+    
     if (title != null) {
-      Tdb tdb = ConfigManager.getCurrentConfig().getTdb();
       if (tdb != null) {
-        String pub = getRftParam(params, "pub");
-        // only search the named publisher
-        TdbPublisher tdbPub = (pub == null) ? null : tdb.getTdbPublisher(pub);
-        
         if (isbook) {
           // search as though it is a book title
           Collection<TdbAu> tdbAus;
@@ -657,9 +659,19 @@ public class OpenUrlResolver {
           // search as though it is a journal title
           Collection<TdbTitle> tdbTitles;
           if (tdbPub != null) {
-            tdbTitles = tdbPub.getTdbTitlesLikeName(title);
+            // find title from specified publisher
+            tdbTitles = tdbPub.getTdbTitlesByName(title);
+            // find "like" titles if no exact matches
+            if (tdbTitles.isEmpty()) {
+              tdbTitles = tdbPub.getTdbTitlesLikeName(title);
+            }
           } else {
-            tdbTitles = tdb.getTdbTitlesLikeName(title);
+            // find title from any publisher
+            tdbTitles = tdb.getTdbTitlesByName(title);
+            // find "like" titles if no exact matches
+            if (tdbTitles.isEmpty()) {
+              tdbTitles = tdb.getTdbTitlesLikeName(title);
+            }
           }
           
           Collection<TdbTitle> noTdbTitles = new ArrayList<TdbTitle>();
@@ -705,6 +717,16 @@ public class OpenUrlResolver {
         }
       }
       log.debug3("Failed to resolve from title: \"" + title + "\"");
+      
+    } else  if (tdbPub != null) {
+      OpenUrlInfo resolved = OpenUrlInfo.newInstance(
+          null, null, OpenUrlInfo.ResolvedTo.PUBLISHER);
+      
+      // create bibliographic item with only publisher properties
+      resolved.resolvedBibliographicItem =  
+        new BibliographicItemAdapter() {}
+          .setPublisherName(tdbPub.getName());
+      return resolved;
     }
 
     return resolvedDirectly;
@@ -1147,13 +1169,27 @@ public class OpenUrlResolver {
     } catch (IllegalArgumentException ex) {
       // intentionally ignore input error
     }
-    if (resolved.resolvedUrl == null) {
+    if (resolved.resolvedTo == OpenUrlInfo.ResolvedTo.NONE) {
       // resolve title, volume, AU, or issue TOC from TDB
       if (title == null) {
         log.debug3("No TdbTitle for issn " + issn);
       } else {
-    	resolved = resolveJournalFromTdbAus(
-    	    title.getTdbAus(), date, volume, issue, spage);
+        Collection<TdbAu> tdbAus = title.getTdbAus();
+        resolved = resolveJournalFromTdbAus(tdbAus, date, volume, issue, spage);
+    	if (resolved.resolvedTo.equals(OpenUrlInfo.ResolvedTo.NONE)) {
+          resolved = OpenUrlInfo.newInstance(
+              null,null, OpenUrlInfo.ResolvedTo.TITLE);
+          // create bibliographic item with only title properties
+          resolved.resolvedBibliographicItem =  
+            new BibliographicItemAdapter() {}
+              .setPublisherName(title.getTdbPublisher().getName())
+              .setPublicationTitle(title.getName())
+              .setProprietaryId(title.getProprietaryId())
+              .setCoverageDepth(title.getCoverageDepth())
+              .setPrintIssn(title.getPrintIssn())
+              .setEissn(title.getEissn())
+              .setIssnL(title.getIssnL());
+    	}
       }
     }
     return resolved;
@@ -1311,7 +1347,10 @@ public class OpenUrlResolver {
       String url =
 	  resolveFromQuery(conn, query.toString() + " from " + from.toString()
 	      + " where " + where.toString(), args);
-      return OpenUrlInfo.newInstance(url, null, OpenUrlInfo.ResolvedTo.ARTICLE);
+      OpenUrlInfo.ResolvedTo resolvedTo = 
+          (url != null) ? OpenUrlInfo.ResolvedTo.ARTICLE 
+                        : OpenUrlInfo.ResolvedTo.NONE;
+      return OpenUrlInfo.newInstance(url, null, resolvedTo);
     } catch (DbException dbe) {
       log.error("Getting ISSNs:" + Arrays.toString(issns), dbe);
     } finally {
