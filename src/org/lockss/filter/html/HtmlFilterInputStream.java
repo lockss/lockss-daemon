@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlFilterInputStream.java,v 1.21 2014-03-31 23:48:24 thib_gc Exp $
+ * $Id: HtmlFilterInputStream.java,v 1.22 2014-07-14 23:22:22 etenbrink Exp $
  */
 
 /*
@@ -375,6 +375,16 @@ public class HtmlFilterInputStream
     factory.registerTag(new HtmlTags.Footer()); // added in 1.65
     factory.registerTag(new HtmlTags.Section()); // added in 1.65
     factory.registerTag(new HtmlTags.Aside()); // added in 1.65
+    factory.registerTag(new HtmlTags.Datalist()); // added in 1.66
+    factory.registerTag(new HtmlTags.Details()); // added in 1.66
+    factory.registerTag(new HtmlTags.Dialog()); // added in 1.66
+    factory.registerTag(new HtmlTags.Menu()); // added in 1.66
+    factory.registerTag(new HtmlTags.Menuitem()); // added in 1.66
+    factory.registerTag(new HtmlTags.Meter()); // added in 1.66
+    factory.registerTag(new HtmlTags.Nav()); // added in 1.66
+    factory.registerTag(new HtmlTags.Progress()); // added in 1.66
+    factory.registerTag(new HtmlTags.Summary()); // added in 1.66
+    factory.registerTag(new HtmlTags.Time()); // added in 1.66
     return factory;
   }
 
