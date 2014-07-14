@@ -11474,7 +11474,7 @@
         au < released ; 2011 ; Evaluation Review Volume 35 ; 35 >
         au < released ; 2012 ; Evaluation Review Volume 36 ; 36 >
         au < manifest ; 2013 ; Evaluation Review Volume 37 ; 37 >
-        au < expected ; 2014 ; Evaluation Review Volume 38 ; 38 >
+        au < manifest ; 2014 ; Evaluation Review Volume 38 ; 38 >
 
       }
 
@@ -15216,7 +15216,7 @@
         au < released ; 2011 ; Indian Historical Review Volume 38 ; 38 >
         au < released ; 2012 ; Indian Historical Review Volume 39 ; 39 >
         au < manifest ; 2013 ; Indian Historical Review Volume 40 ; 40 >
-        au < expected ; 2014 ; Indian Historical Review Volume 41 ; 41 >
+        au < manifest ; 2014 ; Indian Historical Review Volume 41 ; 41 >
 
       }
 
@@ -21366,7 +21366,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2011 ; Journal of Education for Sustainable Development Volume 5 ; 5 >
         au < released ; 2012 ; Journal of Education for Sustainable Development Volume 6 ; 6 >
         au < manifest ; 2013 ; Journal of Education for Sustainable Development Volume 7 ; 7 >
-        au < expected ; 2014 ; Journal of Education for Sustainable Development Volume 8 ; 8 >
+        au < manifest ; 2014 ; Journal of Education for Sustainable Development Volume 8 ; 8 >
 
       }
 
@@ -29903,7 +29903,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; The Medieval History Journal Volume 14 ; 14 >
         au < released ; 2012 ; The Medieval History Journal Volume 15 ; 15 >
         au < manifest ; 2013 ; The Medieval History Journal Volume 16 ; 16 >
-        au < expected ; 2014 ; The Medieval History Journal Volume 17 ; 17 >
+        au < manifest ; 2014 ; The Medieval History Journal Volume 17 ; 17 >
 
       }
 
@@ -32270,7 +32270,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Policy, Politics, & Nursing Practice Volume 12 ; 12 >
         au < released ; 2012 ; Policy, Politics, & Nursing Practice Volume 13 ; 13 >
         au < manifest ; 2013 ; Policy, Politics, & Nursing Practice Volume 14 ; 14 >
-        au < expected ; 2014 ; Policy, Politics, & Nursing Practice Volume 15 ; 15 >
+        au < manifest ; 2014 ; Policy, Politics, & Nursing Practice Volume 15 ; 15 >
 
       }
 
@@ -35063,7 +35063,7 @@ comment[mpj] = now published by Brill
         param[base_url] = http://rap.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
   
-        au < exists ; 2014 ; Research & Politics Volume 1 ; 1 >
+        au < manifest ; 2014 ; Research & Politics Volume 1 ; 1 >
   
     }
 

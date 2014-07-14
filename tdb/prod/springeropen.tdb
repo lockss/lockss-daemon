@@ -122,7 +122,7 @@
         param[journal_issn] = 2196-1166
         comment[platform] = BioMedCentralPlugin
   
-        au < exists ; 2014 ; Asia Pacific Journal on Computational Engineering Volume 1 ; 1 >
+        au < manifest ; 2014 ; Asia Pacific Journal on Computational Engineering Volume 1 ; 1 >
   
     }
 
@@ -433,7 +433,7 @@
         param[journal_issn] = 2197-7364
         comment[platform] = BioMedCentralPlugin
   
-        au < exists ; 2014 ; EJNMMI Physics Volume 1 ; 1 >
+        au < manifest ; 2014 ; EJNMMI Physics Volume 1 ; 1 >
   
     }
   
@@ -1544,7 +1544,7 @@
         param[journal_issn] = 2196-1107
         comment[platform] = BioMedCentralPlugin
   
-        au < exists ; 2014 ; Journal of Solid State Lighting Volume 1 ; 1 >
+        au < manifest ; 2014 ; Journal of Solid State Lighting Volume 1 ; 1 >
   
     }
 
@@ -1694,7 +1694,7 @@
         au < manifest ; 2011 ; Multilingual Education Volume 1 ; 1 >
         au < manifest ; 2012 ; Multilingual Education Volume 2 ; 2 >
         au < manifest ; 2013 ; Multilingual Education Volume 3 ; 3 >
-        au < expected ; 2014 ; Multilingual Education Volume 4 ; 4 >
+        au < manifest ; 2014 ; Multilingual Education Volume 4 ; 4 >
   
     }
 
@@ -1852,7 +1852,7 @@
         param[journal_issn] = 2197-4284
         comment[platform] = BioMedCentralPlugin
   
-        au < exists ; 2014 ; Progress in Earth and Planetary Science Volume 1 ; 1 >
+        au < manifest ; 2014 ; Progress in Earth and Planetary Science Volume 1 ; 1 >
   
     }
   
