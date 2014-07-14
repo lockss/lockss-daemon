@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlTags.java,v 1.8 2014-01-09 22:51:37 thib_gc Exp $
+ * $Id: HtmlTags.java,v 1.9 2014-07-14 23:20:27 etenbrink Exp $
  */
 
 /*
@@ -117,6 +117,226 @@ public class HtmlTags {
      * The set of names handled by this tag.
      */
     private static final String[] mIds = new String[] {"aside"};
+    
+    /**
+     * Return the set of names handled by this tag.
+     * @return The names to be matched that create tags of this type.
+     */
+    public String[] getIds() {
+      return mIds;
+    }
+    
+  }
+  
+  /**
+   * A datalist tag.  Can be registered with registerTag() to cause datalist
+   * to be a CompositeTag.
+   * @since 1.66
+   */
+  public static class Datalist extends CompositeTag {
+    
+    /**
+     * The set of names handled by this tag.
+     */
+    private static final String[] mIds = new String[] {"datalist"};
+    
+    /**
+     * Return the set of names handled by this tag.
+     * @return The names to be matched that create tags of this type.
+     */
+    public String[] getIds() {
+      return mIds;
+    }
+    
+  }
+  
+  /**
+   * A details tag.  Can be registered with registerTag() to cause details
+   * to be a CompositeTag.
+   * @since 1.66
+   */
+  public static class Details extends CompositeTag {
+    
+    /**
+     * The set of names handled by this tag.
+     */
+    private static final String[] mIds = new String[] {"details"};
+    
+    /**
+     * Return the set of names handled by this tag.
+     * @return The names to be matched that create tags of this type.
+     */
+    public String[] getIds() {
+      return mIds;
+    }
+    
+  }
+  
+  /**
+   * A dialog tag.  Can be registered with registerTag() to cause dialog
+   * to be a CompositeTag.
+   * @since 1.66
+   */
+  public static class Dialog extends CompositeTag {
+    
+    /**
+     * The set of names handled by this tag.
+     */
+    private static final String[] mIds = new String[] {"dialog"};
+    
+    /**
+     * Return the set of names handled by this tag.
+     * @return The names to be matched that create tags of this type.
+     */
+    public String[] getIds() {
+      return mIds;
+    }
+    
+  }
+  
+  /**
+   * A menu tag.  Can be registered with registerTag() to cause menu
+   * to be a CompositeTag.
+   * @since 1.66
+   */
+  public static class Menu extends CompositeTag {
+    
+    /**
+     * The set of names handled by this tag.
+     */
+    private static final String[] mIds = new String[] {"menu"};
+    
+    /**
+     * Return the set of names handled by this tag.
+     * @return The names to be matched that create tags of this type.
+     */
+    public String[] getIds() {
+      return mIds;
+    }
+    
+  }
+  
+  /**
+   * A menuitem tag.  Can be registered with registerTag() to cause menuitem
+   * to be a CompositeTag.
+   * @since 1.66
+   */
+  public static class Menuitem extends CompositeTag {
+    
+    /**
+     * The set of names handled by this tag.
+     */
+    private static final String[] mIds = new String[] {"menuitem"};
+    
+    /**
+     * Return the set of names handled by this tag.
+     * @return The names to be matched that create tags of this type.
+     */
+    public String[] getIds() {
+      return mIds;
+    }
+    
+  }
+  
+  /**
+   * A meter tag.  Can be registered with registerTag() to cause meter
+   * to be a CompositeTag.
+   * @since 1.66
+   */
+  public static class Meter extends CompositeTag {
+    
+    /**
+     * The set of names handled by this tag.
+     */
+    private static final String[] mIds = new String[] {"meter"};
+    
+    /**
+     * Return the set of names handled by this tag.
+     * @return The names to be matched that create tags of this type.
+     */
+    public String[] getIds() {
+      return mIds;
+    }
+    
+  }
+  
+  /**
+   * A nav tag.  Can be registered with registerTag() to cause nav
+   * to be a CompositeTag.
+   * @since 1.66
+   */
+  public static class Nav extends CompositeTag {
+    
+    /**
+     * The set of names handled by this tag.
+     */
+    private static final String[] mIds = new String[] {"nav"};
+    
+    /**
+     * Return the set of names handled by this tag.
+     * @return The names to be matched that create tags of this type.
+     */
+    public String[] getIds() {
+      return mIds;
+    }
+    
+  }
+  
+  /**
+   * A progress tag.  Can be registered with registerTag() to cause progress
+   * to be a CompositeTag.
+   * @since 1.66
+   */
+  public static class Progress extends CompositeTag {
+    
+    /**
+     * The set of names handled by this tag.
+     */
+    private static final String[] mIds = new String[] {"progress"};
+    
+    /**
+     * Return the set of names handled by this tag.
+     * @return The names to be matched that create tags of this type.
+     */
+    public String[] getIds() {
+      return mIds;
+    }
+    
+  }
+  
+  /**
+   * A summary tag.  Can be registered with registerTag() to cause summary
+   * to be a CompositeTag.
+   * @since 1.66
+   */
+  public static class Summary extends CompositeTag {
+    
+    /**
+     * The set of names handled by this tag.
+     */
+    private static final String[] mIds = new String[] {"summary"};
+    
+    /**
+     * Return the set of names handled by this tag.
+     * @return The names to be matched that create tags of this type.
+     */
+    public String[] getIds() {
+      return mIds;
+    }
+    
+  }
+  
+  /**
+   * A time tag.  Can be registered with registerTag() to cause time
+   * to be a CompositeTag.
+   * @since 1.66
+   */
+  public static class Time extends CompositeTag {
+    
+    /**
+     * The set of names handled by this tag.
+     */
+    private static final String[] mIds = new String[] {"time"};
     
     /**
      * Return the set of names handled by this tag.
