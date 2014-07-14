@@ -20,7 +20,7 @@
     param[journal_dir] = anthropologica
     attr[journal_id] = ant
 
-    au < exists ; 2014 ; Anthropologica Volume 56 ; 56 >
+    au < manifest ; 2014 ; Anthropologica Volume 56 ; 56 >
     
   }
 
@@ -86,7 +86,7 @@
     param[journal_dir] = the_canadian_journal_of_human_sexuality
     attr[journal_id] = cjh
 
-    au < exists ; 2014 ; The Canadian Journal of Human Sexuality Volume 23 ; 23 >
+    au < manifest ; 2014 ; The Canadian Journal of Human Sexuality Volume 23 ; 23 >
     
   }
 

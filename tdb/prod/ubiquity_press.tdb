@@ -231,11 +231,11 @@
       eissn = 2053-2407 
     >
     
-    param[base_url] = http://openpublichealthdata.metajnl.com/
+    param[base_url] = http://openhealthdata.metajnl.com/
     param[journal_id] = jophd
     
     au < manifest ; 2013 ; Journal of Open Public Health Data Volume 1 ; 1 ; 2013 >
-    au < expected ; 2014 ; Journal of Open Public Health Data Volume 2 ; 2 ; 2014 >
+    au < manifest ; 2014 ; Journal of Open Public Health Data Volume 2 ; 2 ; 2014 >
 
   }
   
