@@ -138,7 +138,7 @@
       au < released ; 2011 ; Electronic Government, an International Journal Volume 8 ; 8 >
       au < released ; 2012 ; Electronic Government, an International Journal Volume 9 ; 9 >
       au < doNotProcess ; 2013 ; Electronic Government, an International Journal Volume 10 ; 10 >
-      au < expected ; 2014 ; Electronic Government, an International Journal Volume 11 ; 11 >
+      au < doNotProcess ; 2014 ; Electronic Government, an International Journal Volume 11 ; 11 >
 
     }
 
@@ -6261,7 +6261,7 @@
       au < doNotProcess ; 2013 ; International Journal of Productivity and Quality Management Volume 11 ; 11 >
       au < doNotProcess ; 2013 ; International Journal of Productivity and Quality Management Volume 12 ; 12 >
       au < doNotProcess ; 2014 ; International Journal of Productivity and Quality Management Volume 13 ; 13 >
-      au < expected ; 2014 ; International Journal of Productivity and Quality Management Volume 14 ; 14 >
+      au < doNotProcess ; 2014 ; International Journal of Productivity and Quality Management Volume 14 ; 14 >
 
     }
 
@@ -7798,7 +7798,7 @@
       param[journal_issn] = 2048-8386
       
       au < released ; 2013 ; International Journal of Trust Management in Computing and Communications Volume 1 ; 1 >
-      au < expected ; 2014 ; International Journal of Trust Management in Computing and Communications Volume 2 ; 2 >
+      au < doNotProcess ; 2014 ; International Journal of Trust Management in Computing and Communications Volume 2 ; 2 >
 
     }
 
