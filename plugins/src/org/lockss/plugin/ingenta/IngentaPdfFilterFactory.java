@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaPdfFilterFactory.java,v 1.13 2014-01-01 03:11:50 etenbrink Exp $
+ * $Id: IngentaPdfFilterFactory.java,v 1.14 2014-07-15 00:47:10 etenbrink Exp $
  */ 
 
 /*
@@ -49,6 +49,9 @@ public class IngentaPdfFilterFactory implements FilterFactory {
   protected enum PublisherId {
     /** Unknown */
     UNKNOWN,
+    // alpsp
+    /** Association of Learned and Professional Society Publishers */
+    ALPSP,
     /** Hodder Arnold */
     ARN,
     /** Bergahn Journals */
@@ -401,7 +404,7 @@ public class IngentaPdfFilterFactory implements FilterFactory {
       case ARN: case LSE: case IGSOC:
         return normExtractFiltFact.createFilteredInputStream(au, in, encoding);
         
-      case BERGHAHN: case MANUP: case WAB: case UNKNOWN:
+      case ALPSP: case BERGHAHN: case MANUP: case WAB: case UNKNOWN:
         return normFiltFact.createFilteredInputStream(au, in, encoding);
         
       case MANEY:
