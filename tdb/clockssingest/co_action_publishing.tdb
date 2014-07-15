@@ -12,6 +12,21 @@
   
   comment[permissionStatement] = This publisher has a Creative Commons license on the start pages, unlike other CLOCKSS OJS publishers, so no separate CLOCKSS permission sentence is needed
 
+   {
+
+    title <
+      name = Advances in Regenerative Biology ;
+      eissn = 2001-8517 ;
+      issnl = 2001-8517
+    >
+
+    param[base_url] = http://www.regenerativebiology.net/
+    param[journal_id] = arb
+
+    au < expected ; exists ; 2014 ; Advances in Regenerative Biology Volume 1 ; 1 ; 2014 >
+
+  }
+
   {
 
     title <
