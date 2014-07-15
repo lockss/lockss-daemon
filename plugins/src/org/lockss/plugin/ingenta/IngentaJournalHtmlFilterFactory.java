@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaJournalHtmlFilterFactory.java,v 1.29 2014-03-07 21:11:48 etenbrink Exp $
+ * $Id: IngentaJournalHtmlFilterFactory.java,v 1.30 2014-07-15 00:49:47 etenbrink Exp $
  */ 
 
 /*
@@ -51,7 +51,26 @@ import org.lockss.plugin.*;
 import org.lockss.util.*;
 
 public class IngentaJournalHtmlFilterFactory implements FilterFactory {
-	Logger log = Logger.getLogger(IngentaJournalHtmlFilterFactory.class);
+  Logger log = Logger.getLogger(IngentaJournalHtmlFilterFactory.class);
+  
+  // XXX remove after 1.66 release
+  private static class NavTag extends CompositeTag {
+    
+    /**
+     * The set of names handled by this tag.
+     */
+    private static final String[] mIds = new String[] {"nav"};
+    
+    /**
+     * Return the set of names handled by this tag.
+     * @return The names to be matched that create tags of this type.
+     */
+    public String[] getIds() {
+      return mIds;
+    }
+    
+  }
+  
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding)
@@ -77,6 +96,10 @@ public class IngentaJournalHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "moredetails"),
         // Filter out <div id="moreLikeThis">...</div>
         HtmlNodeFilters.tagWithAttribute("div", "id", "moreLikeThis"),
+        // PD-1113 Hash Filter needed for shopping cart (filter entire nav tag)
+        //  http://www.ingentaconnect.com/content/intellect/ac/2001/00000012/00000001
+        new TagNameFilter("footer"),
+        new TagNameFilter("nav"),
         // filter out <link rel="stylesheet" href="..."> because Ingenta has
         // bad habit of adding a version number to the CSS file name
         HtmlNodeFilters.tagWithAttribute("link", "rel", "stylesheet"),
@@ -87,7 +110,7 @@ public class IngentaJournalHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "class", "heading"),
         // filter out <div class="advertisingbanner[ clear]"> that encloses 
         // GA_googleFillSlot("TopLeaderboard") & GA_googleFillSlot("Horizontal_banner")
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "advertisingbanner[^\"]*"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "advertisingbanner"),
         // filter out <li class="data"> that encloses a reference for the
         // article: reference links won't be the same because not all 
         // the referenced articles are available at a given institution.
@@ -214,7 +237,8 @@ public class IngentaJournalHtmlFilterFactory implements FilterFactory {
     };
     
     InputStream filteredStream =  new HtmlFilterInputStream(in, encoding,
-        new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters)),xform));
+        new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters)),xform))
+    .registerTag(new NavTag()); // XXX remove after 1.66 release
     
     Reader filteredReader = FilterUtil.getReader(filteredStream, encoding);
     Reader tagFilter = HtmlTagFilter.makeNestedFilter(filteredReader,
