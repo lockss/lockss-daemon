@@ -8,6 +8,8 @@
   param[base_url] = http://www.ccsenet.org/journal/
   implicit < status ; year ; name ; volume ; param[year] >
   
+  comment[doNotProcess] = Do not process any further content. 
+  
   {
   
     title <
