@@ -178,6 +178,21 @@
     
   }
     
+   {
+
+    title <
+      name = European Clinical Respiratory Journal ;
+      eissn = 2001-8525 ;
+      issnl = 2001-8525
+    >
+
+    param[base_url] = http://www.ecrj.net/
+    param[journal_id] = ecrj
+
+    au < exists ; exists ; 2014 ; European Clinical Respiratory Journal Volume 1 ; 1 ; 2014 >
+
+  }
+
   {
 
     title <
