@@ -62,7 +62,8 @@
      title <
       name = Deutsche Entomologische Zeitschrift ;
       issn = 1435-1951 ;
-      eissn = 1860-1324
+      eissn = 1860-1324 ;
+      issnl = 1435-1951
      >
      
      param[journal_name] = dez
@@ -162,10 +163,14 @@
 
     title <
       name = Nota Lepidopterologica ;
-      issn = 0342-7536
+      issn = 0342-7536 ;
+      eissn = 2367-5365 ;
+      issnl = 0342-7536
     >
     
     param[journal_name] = nl
+
+    au < exists ; 2014 ; 2014 ; Nota Lepidopterologica Issues 37 ; 37 >
     
    }
 
@@ -232,10 +237,13 @@
     title <
       name = Zoosystematics and Evolution ;
       issn = 1435-1935 ;
-      eissn = 1860-0743
+      eissn = 1860-0743 ;
+      issnl = 1435-1935 
     >
 
     param[journal_name] = zse
+
+    au < exists ; 2014 ; 2014 ; Zoosystematics and Evolution Issues 90 ; 90 >
 
     }
 
