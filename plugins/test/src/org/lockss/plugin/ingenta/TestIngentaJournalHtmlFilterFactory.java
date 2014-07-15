@@ -1,5 +1,5 @@
 /*
- * $Id: TestIngentaJournalHtmlFilterFactory.java,v 1.15 2014-03-07 20:59:16 etenbrink Exp $
+ * $Id: TestIngentaJournalHtmlFilterFactory.java,v 1.16 2014-07-15 00:28:21 etenbrink Exp $
  */
 
 /*
@@ -345,6 +345,29 @@ public class TestIngentaJournalHtmlFilterFactory extends LockssTestCase {
         Constants.DEFAULT_ENCODING);
     
     assertEquals(ScriptHtmlFiltered,StringUtil.fromInputStream(inA));
+  }
+  
+  //test nav with explicit test
+  private static final String NavHtml =
+      "<p>The chickens were decidedly cold.</p>" +
+          "<nav role=\"navigation\" class=\"navbar navbar\"> " +
+          "<button data-target=\"#about-section-nav\" data-toggle=\"collapse\"" +
+          " class=\"navbar-toggle\" type=\"button\"> " +
+          "<span><i class=\"fa fa-ellipsis-h\"></i></span> </button>" +
+          "<form action=\"/cart?exitTargetId=1404984884181\" class=\"cartButtonRWD\"> " +
+          "<input type=\"submit\" value=\"\" class=\"navbar-toggle\"> </form> " +
+          "</nav>";
+  
+  private static final String NavHtmlFiltered =
+      "<p>The chickens were decidedly cold.</p>";
+  
+  public void testNavScript() throws Exception {
+    InputStream inA;
+    
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(NavHtml),
+        Constants.DEFAULT_ENCODING);
+    
+    assertEquals(NavHtmlFiltered,StringUtil.fromInputStream(inA));
   }
   
 }
