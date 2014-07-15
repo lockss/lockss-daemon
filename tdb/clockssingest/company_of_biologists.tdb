@@ -37,6 +37,7 @@
     >
 
     param[base_url] = http://dev.biologists.org/
+    comment[notReady] = 404, 503 and 500 errors
 
     au < manifest ; exists ; 1953 ; Development Volume 1 ; 1 >
     au < manifest ; exists ; 1954 ; Development Volume 2 ; 2 >
@@ -159,7 +160,7 @@
     au < manifest ; exists ; 1993 ; Development Volume 119 ; 119 >
     au < manifest ; exists ; 1994 ; Development Volume 120 ; 120 >
     au < crawling ; exists ; 1995 ; Development Volume 121 ; 121 >
-    au < testing ; exists ; 1996 ; Development Volume 122 ; 122 >
+    au < notReady ; exists ; 1996 ; Development Volume 122 ; 122 >
     au < crawling ; exists ; 1996 ; Development Volume 123 ; 123 >
     au < ready ; exists ; 1997 ; Development Volume 124 ; 124 >
     au < crawling ; exists ; 1998 ; Development Volume 125 ; 125 >
