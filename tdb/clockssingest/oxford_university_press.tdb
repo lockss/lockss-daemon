@@ -5,7 +5,7 @@
     info[contract] = 2009 ;
     info[tester] = 7
   >
-
+    comment[notReady] = until HighWire issues are resolved
     pluginPrefix = org.lockss.plugin.highwire.
     implicit < status ; status2 ; year ; name ; param[volume_name] ; comment[proxy] >
 
@@ -1507,7 +1507,7 @@
     au < finished ; crawling ; 2010 ; AoB PLANTS Volume 2010 ; 2010 ; >
     au < finished ; crawling ; 2011 ; AoB PLANTS Volume 2011 ; 2011 ; >
     au < finished ; frozen ; 2012 ; AoB PLANTS Volume 2012 ; 2012 ; >
-    au < testing ; exists ; 2013 ; AoB PLANTS Volume 5 ; 5 ; >
+    au < notReady ; exists ; 2013 ; AoB PLANTS Volume 5 ; 5 ; >
     au < expected ; exists ; 2014 ; AoB PLANTS Volume 6 ; 6 ; >
 
   }
@@ -9706,9 +9706,9 @@
     au < manifest ; exists ; 2008 ; The Journal of Applied Poultry Research Volume 17 ; 17 ; >
     au < manifest ; exists ; 2009 ; The Journal of Applied Poultry Research Volume 18 ; 18 ; >
     au < manifest ; exists ; 2010 ; The Journal of Applied Poultry Research Volume 19 ; 19 ; >
-    au < testing ; exists ; 2011 ; The Journal of Applied Poultry Research Volume 20 ; 20 ; >
-    au < testing ; exists ; 2012 ; The Journal of Applied Poultry Research Volume 21 ; 21 ; >
-    au < testing ; exists ; 2013 ; The Journal of Applied Poultry Research Volume 22 ; 22 ; >
+    au < notReady ; exists ; 2011 ; The Journal of Applied Poultry Research Volume 20 ; 20 ; >
+    au < notReady ; exists ; 2012 ; The Journal of Applied Poultry Research Volume 21 ; 21 ; >
+    au < notReady ; exists ; 2013 ; The Journal of Applied Poultry Research Volume 22 ; 22 ; >
     au < manifest ; exists ; 2014 ; The Journal of Applied Poultry Research Volume 23 ; 23 ; >
 
     }
@@ -14000,9 +14000,9 @@
     au < manifest ; exists ; 2008 ; Medical Mycology Volume 46 ; 46 ; >
     au < manifest ; exists ; 2009 ; Medical Mycology Volume 47 ; 47 ; >
     au < manifest ; exists ; 2010 ; Medical Mycology Volume 48 ; 48 ; >
-    au < testing ; exists ; 2011 ; Medical Mycology Volume 49 ; 49 ; >
+    au < notReady ; exists ; 2011 ; Medical Mycology Volume 49 ; 49 ; >
     au < ready ; exists ; 2012 ; Medical Mycology Volume 50 ; 50 ; >
-    au < testing ; exists ; 2013 ; Medical Mycology Volume 51 ; 51 ; >
+    au < notReady ; exists ; 2013 ; Medical Mycology Volume 51 ; 51 ; >
     au < manifest ; exists ; 2014 ; Medical Mycology Volume 52 ; 52 ; >
 
   }
@@ -14956,8 +14956,8 @@
     au < manifest ; exists ; 2008 ; Journal of Music Therapy Volume 45 ; 45 ; >
     au < manifest ; exists ; 2009 ; Journal of Music Therapy Volume 46 ; 46 ; >
     au < manifest ; exists ; 2010 ; Journal of Music Therapy Volume 47 ; 47 ; >
-    au < testing ; exists ; 2011 ; Journal of Music Therapy Volume 48 ; 48 ; >
-    au < testing ; exists ; 2012 ; Journal of Music Therapy Volume 49 ; 49 ; >
+    au < notReady ; exists ; 2011 ; Journal of Music Therapy Volume 48 ; 48 ; >
+    au < notReady ; exists ; 2012 ; Journal of Music Therapy Volume 49 ; 49 ; >
     au < ready ; exists ; 2013 ; Journal of Music Therapy Volume 50 ; 50 ; >
     au < manifest ; exists ; 2014 ; Journal of Music Therapy Volume 51 ; 51 ; >
 
@@ -15007,8 +15007,8 @@
     au < manifest ; exists ; 2008 ; Music Therapy Perspectives Volume 26 ; 26 ; >
     au < manifest ; exists ; 2009 ; Music Therapy Perspectives Volume 27 ; 27 ; >
     au < manifest ; exists ; 2010 ; Music Therapy Perspectives Volume 28 ; 28 ; >
-    au < testing ; exists ; 2011 ; Music Therapy Perspectives Volume 29 ; 29 ; >
-    au < testing ; exists ; 2012 ; Music Therapy Perspectives Volume 30 ; 30 ; >
+    au < notReady ; exists ; 2011 ; Music Therapy Perspectives Volume 29 ; 29 ; >
+    au < notReady ; exists ; 2012 ; Music Therapy Perspectives Volume 30 ; 30 ; >
     au < exists ; exists ; 2013 ; Music Therapy Perspectives Volume 31 ; 31 ; >
     au < expected ; exists ; 2014 ; Music Therapy Perspectives Volume 32 ; 32 ; >
 
@@ -15062,9 +15062,9 @@
     au < manifest ; exists ; 2008 ; Music Theory Spectrum Volume 30 ; 30 ; >
     au < manifest ; exists ; 2009 ; Music Theory Spectrum Volume 31 ; 31 ; >
     au < manifest ; exists ; 2010 ; Music Theory Spectrum Volume 32 ; 32 ; >
-    au < testing ; exists ; 2011 ; Music Theory Spectrum Volume 33 ; 33 ; >
-    au < testing ; exists ; 2012 ; Music Theory Spectrum Volume 34 ; 34 ; >
-    au < testing ; exists ; 2013 ; Music Theory Spectrum Volume 35 ; 35 ; >
+    au < notReady ; exists ; 2011 ; Music Theory Spectrum Volume 33 ; 33 ; >
+    au < notReady ; exists ; 2012 ; Music Theory Spectrum Volume 34 ; 34 ; >
+    au < notReady ; exists ; 2013 ; Music Theory Spectrum Volume 35 ; 35 ; >
     au < manifest ; exists ; 2014 ; Music Theory Spectrum Volume 36 ; 36 ; >
 
     }
@@ -16026,7 +16026,7 @@
     au < finished ; crawling ; 2010 ; The Opera Quarterly Volume 26 ; 26 ; >
     au < finished ; crawling ; 2011 ; The Opera Quarterly Volume 27 ; 27 ; >
     au < finished ; frozen ; 2012 ; The Opera Quarterly Volume 28 ; 28 ; >
-    au < testing ; exists ; 2013 ; The Opera Quarterly Volume 29 ; 29 ; >
+    au < notReady ; exists ; 2013 ; The Opera Quarterly Volume 29 ; 29 ; >
     au < expected ; exists ; 2014 ; The Opera Quarterly Volume 30 ; 30 ; >
 
     }
@@ -16935,9 +16935,9 @@
     au < manifest ; exists ; 2008 ; The Philosophical Quarterly Volume 58 ; 58 ; >
     au < manifest ; exists ; 2009 ; The Philosophical Quarterly Volume 59 ; 59 ; >
     au < manifest ; exists ; 2010 ; The Philosophical Quarterly Volume 60 ; 60 ; >
-    au < testing ; exists ; 2011 ; The Philosophical Quarterly Volume 61 ; 61 ; >
-    au < testing ; exists ; 2012 ; The Philosophical Quarterly Volume 62 ; 62 ; >
-    au < testing ; exists ; 2013 ; The Philosophical Quarterly Volume 63 ; 63 ; >
+    au < notReady ; exists ; 2011 ; The Philosophical Quarterly Volume 61 ; 61 ; >
+    au < notReady ; exists ; 2012 ; The Philosophical Quarterly Volume 62 ; 62 ; >
+    au < notReady ; exists ; 2013 ; The Philosophical Quarterly Volume 63 ; 63 ; >
     au < manifest ; exists ; 2014 ; The Philosophical Quarterly Volume 64 ; 64 ; >
 
   }
@@ -17741,9 +17741,9 @@
     au < manifest ; exists ; 2008 ; Public Policy & Aging Report Volume 18 ; 18 ; >
     au < manifest ; exists ; 2009 ; Public Policy & Aging Report Volume 19 ; 19 ; >
     au < manifest ; exists ; 2010 ; Public Policy & Aging Report Volume 20 ; 20 ; >
-    au < testing ; exists ; 2011 ; Public Policy & Aging Report Volume 21 ; 21 ; >
-    au < testing ; exists ; 2012 ; Public Policy & Aging Report Volume 22 ; 22 ; >
-    au < testing ; exists ; 2013 ; Public Policy & Aging Report Volume 23 ; 23 ; >
+    au < notReady ; exists ; 2011 ; Public Policy & Aging Report Volume 21 ; 21 ; >
+    au < notReady ; exists ; 2012 ; Public Policy & Aging Report Volume 22 ; 22 ; >
+    au < notReady ; exists ; 2013 ; Public Policy & Aging Report Volume 23 ; 23 ; >
     au < manifest ; exists ; 2014 ; Public Policy & Aging Report Volume 24 ; 24 ; >
 
   }
@@ -17775,9 +17775,9 @@
     au < manifest ; exists ; 2008 ; Publications of the Astronomical Society of Japan Volume 60 ; 60 ; >
     au < manifest ; exists ; 2009 ; Publications of the Astronomical Society of Japan Volume 61 ; 61 ; >
     au < manifest ; exists ; 2010 ; Publications of the Astronomical Society of Japan Volume 62 ; 62 ; >
-    au < testing ; exists ; 2011 ; Publications of the Astronomical Society of Japan Volume 63 ; 63 ; >
-    au < testing ; exists ; 2012 ; Publications of the Astronomical Society of Japan Volume 64 ; 64 ; >
-    au < testing ; exists ; 2013 ; Publications of the Astronomical Society of Japan Volume 65 ; 65 ; >
+    au < notReady ; exists ; 2011 ; Publications of the Astronomical Society of Japan Volume 63 ; 63 ; >
+    au < notReady ; exists ; 2012 ; Publications of the Astronomical Society of Japan Volume 64 ; 64 ; >
+    au < notReady ; exists ; 2013 ; Publications of the Astronomical Society of Japan Volume 65 ; 65 ; >
     au < manifest ; exists ; 2014 ; Publications of the Astronomical Society of Japan Volume 66 ; 66 ; >
 
   }
@@ -20177,7 +20177,7 @@
     au < crawling ; exists ; 2013 ; Toxicological Sciences Volume 133 ; 133 ; >
     au < crawling ; exists ; 2013 ; Toxicological Sciences Volume 134 ; 134 ; >
     au < crawling ; exists ; 2013 ; Toxicological Sciences Volume 135 ; 135 ; >
-    au < testing ; exists ; 2013 ; Toxicological Sciences Volume 136 ; 136 ; >
+    au < notReady ; exists ; 2013 ; Toxicological Sciences Volume 136 ; 136 ; >
     au < manifest ; exists ; 2014 ; Toxicological Sciences Volume 137 ; 137 ; >
     au < manifest ; exists ; 2014 ; Toxicological Sciences Volume 138 ; 138 ; >
     au < manifest ; exists ; 2014 ; Toxicological Sciences Volume 139 ; 139 ; >
@@ -20751,7 +20751,7 @@
     au < finished ; frozen ; 2010 ; Yearbook of International Environmental Law Volume 20 ; 20 ; >
     au < finished ; crawling ; 2010 ; Yearbook of International Environmental Law Volume 21 ; 21 ; >
     au < finished ; frozen ; 2011 ; Yearbook of International Environmental Law Volume 22 ; 22 ; >
-    au < testing ; exists ; 2012 ; Yearbook of International Environmental Law Volume 23 ; 23 ; >
+    au < notReady ; exists ; 2012 ; Yearbook of International Environmental Law Volume 23 ; 23 ; >
 
   }
 
@@ -21276,16 +21276,16 @@
     au < manifest ; exists ; 2010 ; Progress of Theoretical Physics Supplement Volume 184 ; 184 ; >
     au < manifest ; exists ; 2010 ; Progress of Theoretical Physics Supplement Volume 185 ; 185 ; >
     au < manifest ; exists ; 2010 ; Progress of Theoretical Physics Supplement Volume 186 ; 186 ; >
-    au < testing ; exists ; 2011 ; Progress of Theoretical Physics Supplement Volume 187 ; 187 ; >
+    au < notReady ; exists ; 2011 ; Progress of Theoretical Physics Supplement Volume 187 ; 187 ; >
     au < ready ; exists ; 2011 ; Progress of Theoretical Physics Supplement Volume 188 ; 188 ; >
     au < ready ; exists ; 2011 ; Progress of Theoretical Physics Supplement Volume 189 ; 189 ; >
-    au < testing ; exists ; 2011 ; Progress of Theoretical Physics Supplement Volume 190 ; 190 ; >
+    au < notReady ; exists ; 2011 ; Progress of Theoretical Physics Supplement Volume 190 ; 190 ; >
     au < ready ; exists ; 2011 ; Progress of Theoretical Physics Supplement Volume 191 ; 191 ; >
     au < ready ; exists ; 2012 ; Progress of Theoretical Physics Supplement Volume 192 ; 192 ; >
     au < ready ; exists ; 2012 ; Progress of Theoretical Physics Supplement Volume 193 ; 193 ; >
     au < ready ; exists ; 2012 ; Progress of Theoretical Physics Supplement Volume 194 ; 194 ; >
     au < ready ; exists ; 2012 ; Progress of Theoretical Physics Supplement Volume 195 ; 195 ; >
-    au < testing ; exists ; 2012 ; Progress of Theoretical Physics Supplement Volume 196 ; 196 ; >
+    au < notReady ; exists ; 2012 ; Progress of Theoretical Physics Supplement Volume 196 ; 196 ; >
     au < ready ; exists ; 2012 ; Progress of Theoretical Physics Supplement Volume 197 ; 197 ; >
 
     }
@@ -21623,7 +21623,7 @@
     au < exists ; exists ; 2008 ; BioScience Volume 58 ; 58 ; >
     au < exists ; exists ; 2009 ; BioScience Volume 59 ; 59 ; >
     au < exists ; exists ; 2010 ; BioScience Volume 60 ; 60 ; >
-    au < testing ; exists ; 2011 ; BioScience Volume 61 ; 61 ; >
+    au < notReady ; exists ; 2011 ; BioScience Volume 61 ; 61 ; >
     au < exists ; exists ; 2012 ; BioScience Volume 62 ; 62 ; >
     au < exists ; exists ; 2013 ; BioScience Volume 63 ; 63 ; >
     au < manifest ; exists ; 2014 ; BioScience Volume 64 ; 64 ; >
