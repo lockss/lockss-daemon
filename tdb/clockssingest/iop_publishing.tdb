@@ -188,6 +188,8 @@
       name = Chinese Journal of Chemical Physics ;
       issn = 1674-0068
     >
+    
+    comment[moved] = As of start 2013 published by AIP.
 
     param[journal_issn] = 1674-0068
     comment[continues] = 1003-7713
@@ -197,8 +199,6 @@
     au < finished ; crawling ; 2010 ; Chinese Journal of Chemical Physics Volume 23 ; 23 > 
     au < finished ; crawling ; 2011 ; Chinese Journal of Chemical Physics Volume 24 ; 24 > 
     au < finished ; crawling ; 2012 ; Chinese Journal of Chemical Physics Volume 25 ; 25 > 
-    au < expected ; exists ; 2013 ; Chinese Journal of Chemical Physics Volume 26 ; 26 > 
-    au < expected ; exists ; 2014 ; Chinese Journal of Chemical Physics Volume 27 ; 27 > 
 
   }
 
