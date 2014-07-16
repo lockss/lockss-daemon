@@ -1,5 +1,5 @@
 /*
- * $Id: PdfBoxDocumentFactory.java,v 1.3 2012-10-03 00:50:15 thib_gc Exp $
+ * $Id: PdfBoxDocumentFactory.java,v 1.4 2014-07-16 20:15:46 thib_gc Exp $
  */
 
 /*
@@ -61,7 +61,7 @@ public class PdfBoxDocumentFactory implements PdfDocumentFactory {
       pdfParser.parse(); // Probably closes the input stream
       PDDocument pdDocument = pdfParser.getPDDocument();
     
-      // Trivial decryption if encrypted without a password
+      pdDocument.setAllSecurityToBeRemoved(true);
       if (pdDocument.isEncrypted()) {
         pdDocument.decrypt("");
       }
