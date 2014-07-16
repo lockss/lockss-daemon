@@ -22766,7 +22766,7 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
-      comment [notReady] = consistent low poll
+      comment[notReady] = consistent low poll
 
       au < manifest ; exists ; 2000 ; Journal of the Renin-Angiotensin-Aldosterone System Volume 1 ; 1 ; >
       au < manifest ; exists ; 2001 ; Journal of the Renin-Angiotensin-Aldosterone System Volume 2 ; 2 ; >
@@ -26920,7 +26920,7 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
-      comment [notReady] = consistent low poll
+      comment[notReady] = consistent low poll
 
       au < manifest ; exists ; 1914 ; Music Educators Journal Volume 1 ; 1 ; >
       au < manifest ; exists ; 1915 ; Music Educators Journal Volume 2 ; 2 ; >
@@ -27079,7 +27079,7 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
-      comment [notReady] = consistent low poll
+      comment[notReady] = consistent low poll
 
       au < manifest ; exists ; 2001 ; NASN School Nurse Volume 16 ; 16 ; >
       au < manifest ; exists ; 2002 ; NASN School Nurse Volume 17 ; 17 ; >
@@ -27123,7 +27123,7 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
-      comment [notReady] = consistent low poll
+      comment[notReady] = consistent low poll
 
       au < manifest ; exists ; 1917 ; NASSP Bulletin Volume 1 ; 1 ; >
       au < manifest ; exists ; 1918 ; NASSP Bulletin Volume 2 ; 2 ; >
@@ -29074,7 +29074,7 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
-      comment [notReady] = consistent low poll
+      comment[notReady] = consistent low poll
 
       au < manifest ; exists ; 2000 ; Policy, Politics, & Nursing Practice Volume 1 ; 1 ; >
       au < manifest ; exists ; 2001 ; Policy, Politics, & Nursing Practice Volume 2 ; 2 ; >
@@ -29286,7 +29286,7 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
-      comment [notReady] = consistent low poll
+      comment[notReady] = consistent low poll
 
       au < manifest ; exists ; 1970 ; Politics & Society Volume 1 ; 1 ; >
       au < manifest ; exists ; 1971 ; Politics & Society Volume 2 ; 2 ; >
@@ -29400,7 +29400,7 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
-      comment [notReady] = consistent low poll
+      comment[notReady] = consistent low poll
 
       au < manifest ; exists ; 1921 ; The Prison Journal Volume 1 ; 1 ; >
       au < manifest ; exists ; 1922 ; The Prison Journal Volume 2 ; 2 ; >
