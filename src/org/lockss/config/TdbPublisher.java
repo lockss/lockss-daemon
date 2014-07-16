@@ -1,5 +1,5 @@
 /*
- * $Id: TdbPublisher.java,v 1.16 2014-01-14 08:56:10 tlipkis Exp $
+ * $Id: TdbPublisher.java,v 1.17 2014-07-16 20:10:30 pgust Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ package org.lockss.config;
 
 import java.io.*;
 import java.util.*;
+
 import org.apache.commons.collections.iterators .*;
 
 import org.lockss.config.Tdb.TdbException;
@@ -42,7 +43,7 @@ import org.lockss.util.*;
  * This class represents a title database publisher.
  *
  * @author  Philip Gust
- * @version $Id: TdbPublisher.java,v 1.16 2014-01-14 08:56:10 tlipkis Exp $
+ * @version $Id: TdbPublisher.java,v 1.17 2014-07-16 20:10:30 pgust Exp $
  */
 public class TdbPublisher {
   /**
@@ -265,24 +266,62 @@ public class TdbPublisher {
   
   /**
    * Returns a TdbTitle with the specified ISSN as its ISSN-L,
-   * eISSN, or print ISSN.
+   * eISSN, or print ISSN. Only returns the first one found.
+   * There could be several if the publisher changes the name
+   * of the title without changing the ISSN -- it happens!
    * 
    * @param issn the ISSN
    * @return the TdbTitle or <code>null</code> if not found
    */
   public TdbTitle getTdbTitleByIssn(String issn) {
-    for (TdbTitle title : titlesById.values()) {
-      if (issn.equals(title.getIssnL())) {
-        return title;
-      }
-      if (issn.equals(title.getEissn())) {
-        return title;
-      }
-      if (issn.equals(title.getPrintIssn())) {
-        return title;
+    if (issn != null) {
+      for (TdbTitle title : titlesById.values()) {
+        if (issn.equals(title.getIssnL())) {
+          return title;
+        }
+        if (issn.equals(title.getEissn())) {
+          return title;
+        }
+        if (issn.equals(title.getPrintIssn())) {
+          return title;
+        }
       }
     }
     return null;
+  }
+  
+  /**
+   * Return a collection of TdbTitles that match the ISSN.
+   * @param issn the ISSN
+   * @return a colleciton of TdbTitles that match the ISSN
+   */
+  public Collection<TdbTitle> getTdbTitlesByIssn(String issn) {
+    Collection<TdbTitle> tdbTitles = new ArrayList<TdbTitle>();
+    getTdbTitlesByIssn(issn, tdbTitles);
+    return tdbTitles;
+  }
+  
+  /**
+   * Add a collection of TdbTitles that match the ISBN.
+   * @param issn the ISSN
+   * @param matchingTdbTitles the collection of TdbTitles
+   * @return <code>true</code> if titles were added, else <code>false</code>
+   */
+  public boolean getTdbTitlesByIssn(String issn, 
+                                    Collection<TdbTitle> matchingTdbTitles) {
+    boolean added = false;
+    if (issn != null) {
+      for (TdbTitle title : titlesById.values()) {
+        if (issn.equals(title.getIssnL())) {
+          added |= matchingTdbTitles.add(title);
+        } else if (issn.equals(title.getEissn())) {
+          added |= matchingTdbTitles.add(title);
+        } else if (issn.equals(title.getPrintIssn())) {
+          added |= matchingTdbTitles.add(title);
+        }
+      }
+    }    
+    return added;
   }
   
   /**
