@@ -1,5 +1,5 @@
 /*
- * $Id: Tdb.java,v 1.26 2014-05-30 07:17:39 tlipkis Exp $
+ * $Id: Tdb.java,v 1.27 2014-07-16 20:12:46 pgust Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ import org.lockss.util.*;
  * a specified plugin ID. 
  *
  * @author  Philip Gust
- * @version $Id: Tdb.java,v 1.26 2014-05-30 07:17:39 tlipkis Exp $
+ * @version $Id: Tdb.java,v 1.27 2014-07-16 20:12:46 pgust Exp $
  */
 public class Tdb {
   /**
@@ -96,7 +96,7 @@ public class Tdb {
    * also handle this exception.
    * 
    * @author  Philip Gust
-   * @version $Id: Tdb.java,v 1.26 2014-05-30 07:17:39 tlipkis Exp $
+   * @version $Id: Tdb.java,v 1.27 2014-07-16 20:12:46 pgust Exp $
    */
   @SuppressWarnings("serial")
   static public class TdbException extends Exception {
@@ -983,7 +983,8 @@ public class Tdb {
   }
   
   /**
-   * Get the title for the specified titleId.
+   * Get the title for the specified titleId. Only the first matchine 
+   * title is returned.
    *  
    * @param titleId the titleID
    * @return the title for the titleId or <code>null</code. if not found
@@ -1002,7 +1003,41 @@ public class Tdb {
   }
   
   /**
-   * Get a title for the specified issn.
+   * Get the TdbTitles with the specified titleid.
+   * @param titleId the title ID
+   * @return a collection of matching titleids
+   */
+  public Collection<TdbTitle> getTdbTitlesById(String titleId) {
+    Collection<TdbTitle> tdbTitles = new ArrayList<TdbTitle>();
+    getTdbTitlesById(titleId, tdbTitles);
+    return tdbTitles;
+  }
+  
+  
+  /**
+   * Add the TdbTitles with the specified titleid to the collection.
+   * @param titleId the title ID
+   * @param matchingTdbTitles the collection of matching TdbTitles
+   * @return <code>true</code> if items were added, else <code>false></code>
+   */
+  public boolean getTdbTitlesById(String titleId, 
+                                  Collection<TdbTitle> matchingTdbTitles) {
+    boolean added = false;
+    if (titleId != null) {
+      for (TdbPublisher publisher : tdbPublisherMap.values()) {
+        // titleId constrained to be unique for a given publisher
+        TdbTitle title = publisher.getTdbTitleById(titleId);
+        if (title != null) {
+          added |= matchingTdbTitles.add(title);
+        }
+      }
+    }
+    return added;
+  }
+  
+  /**
+   * Get a title for the specified issn. Only the first matching title 
+   * is returned.
    *  
    * @param issn the issn
    * @return the title for the titleId or <code>null</code. if not found
@@ -1019,11 +1054,39 @@ public class Tdb {
     }
     return null;
   }
+
+  /**
+   * Return a collection of TdbTitles for this TDB that match the ISSN.
+   * @param issn the ISSN
+   * @return a colleciton of TdbTitles that match the ISSN
+   */
+  public Collection<TdbTitle> getTdbTitlesByIssn(String issn) {
+    Collection<TdbTitle> tdbTitles = new ArrayList<TdbTitle>();
+    getTdbTitlesByIssn(issn, tdbTitles);
+    return tdbTitles;
+  }
+  
+  /**
+   * Add a collection of TdbTitles for this TDB that match the ISBN.
+   * @param issn the ISSN
+   * @param matchingTdbTitles the collection of TdbTitles
+   * @return <code>true</code> if titles were added, else <code>false</code>
+   */
+  public boolean getTdbTitlesByIssn(String issn, 
+                                    Collection<TdbTitle> matchingTdbTitles) {
+    boolean added = false;
+    if (issn != null) {
+      for (TdbPublisher publisher : tdbPublisherMap.values()) {
+        added |= publisher.getTdbTitlesByIssn(issn, matchingTdbTitles);
+      }
+    }    
+    return added;
+  }
   
   /**
    * Return a collection of TdbAus for this TDB that match the ISBN.
    * 
-   * @return a colleciton of TdbAus for this publisher that match the ISBN
+   * @return a colleciton of TdbAus that match the ISBN
    */
   public Collection<TdbAu> getTdbAusByIsbn(String isbn) {
     Collection<TdbAu> tdbAus = new ArrayList<TdbAu>();
@@ -1033,6 +1096,8 @@ public class Tdb {
   
   /**
    * Add to a collection of TdbAus for this TDB that match the ISBN.
+   * @param isbn the ISSN
+   * @param matchingTdbAus
    */
   public boolean getTdbAusByIsbn(String isbn, 
                                  Collection<TdbAu> matchingTdbAus) {
@@ -1119,7 +1184,7 @@ public class Tdb {
    * @param tdbAuName the name of the AU to select
    * @return all TdbAus with the specified name
    */
-  public List<TdbAu> getTdbAusByName(String tdbAuName) {
+  public Collection<TdbAu> getTdbAusByName(String tdbAuName) {
     ArrayList<TdbAu> aus = new ArrayList<TdbAu>();
     getTdbAusByName(tdbAuName, aus);
     return aus;
