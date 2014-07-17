@@ -1,10 +1,10 @@
 /*
-/    * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.23 2014-03-25 00:41:41 thib_gc Exp $
+/    * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.24 2014-07-17 15:27:39 etenbrink Exp $
  */
 
 /*
 
- Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -48,12 +48,12 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
     fact = new HighWirePressH20HtmlFilterFactory();
     mau = new MockArchivalUnit();
   }
-
+  
   private static final String inst1 = "<div class=\"leaderboard-ads leaderboard-ads-two\"</div>"
       + "<ul>Fill in SOMETHING SOMETHING</ul>";
-
+  
   private static final String inst2 = "<ul>Fill in SOMETHING SOMETHING</ul>";
-
+  
   private static final String withAds = "<div id=\"footer\">"
       + "<div class=\"block-1\">"
       + "<div class=\"leaderboard-ads-ft\">"
@@ -71,18 +71,9 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
       + "<li><span>Online ISSN: </span>"
       + "<span class=\"issn\">1499-2752</span></li>" + "</ul>" + "</div>"
       + "<div class=\"block-2 sb-div\"></div>" + "</div>\"";
-
-  private static final String withoutAds = "<div id=\"footer\">"
-      + "<div class=\"block-1\">"
-      + "<p class=\"disclaimer\">The content of this site is intended for health care professionals</p>"
-      + "<p class=\"copyright\">Copyright © 2012 by "
-      + "The Journal of Rheumatology" + "</p>" + "<ul class=\"issns\">"
-      + "<li><span>Print ISSN: </span>"
-      + "<span class=\"issn\">0315-162X</span></li>"
-      + "<li><span>Online ISSN: </span>"
-      + "<span class=\"issn\">1499-2752</span></li>" + "</ul>" + "</div>"
-      + "<div class=\"block-2 sb-div\"></div>" + "</div>\"";
-
+  
+  private static final String withoutAds = "\""; // div id=footer is now filtered
+  
   private static final String withCol4SquareAds = "<div id=\"footer\">"
       + "<div class=\"block-1\">"
       + "<ul class=\"col4-square\">"
@@ -93,12 +84,10 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
       + "5602385865303331/plantphysiol/squarepp.jpg?ad=35597&amp;adview=true\" "
       + "alt=\"PlantPhysFacebook\" /></a></li>"
       + "</ul>"
-      + "<div class=\"block-2 sb-div\"></div>" + "</div>\"";
-
-  private static final String withoutCol4SquareAds = "<div id=\"footer\">"
-      + "<div class=\"block-1\">"
-      + "<div class=\"block-2 sb-div\"></div>" + "</div>\"";
-
+      + "<div class=\"block-2 sb-div\"></div>" + "</div>";
+  
+  private static final String withoutCol4SquareAds = ""; // div id=footer is now filtered
+  
   private static final String withCol4TowerAds = "<div id=\"footer\">"
       + "<div class=\"block-1\">"
       + "<ul class=\"col4-tower\">"
@@ -107,21 +96,19 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
       "src=\"http://www.plantphysiol.org/adsystem/graphics/06456092319841111/plantphysiol/" +
       "vertauthors.jpg?ad=35598&amp;adview=true alt=\"10pdfPromo\" /></a></li>"
       + "</ul>"
-      + "<div class=\"block-2 sb-div\"></div>" + "</div>\"";
+      + "<div class=\"block-2 sb-div\"></div>" + "</div>";
 
-  private static final String withoutCol4TowerAds = "<div id=\"footer\">"
-      + "<div class=\"block-1\">"
-      + "<div class=\"block-2 sb-div\"></div>" + "</div>\"";
-
+  private static final String withoutCol4TowerAds = ""; // div id=footer is now filtered
+  
   private static final String withSageAnchors = "<div id=\"test\">" +
       "<a href=\"/cgi/openurl?query=rft.jtitle%3DPlast+Reconstr\">" +
       "<a href=\"/openurl?query=rft.jtitle%3DPlast+Reconstr\">" +
       "<a href=\"/external-ref?access_num=19469&displayid=767\">Order article</a>" +
       "</div>\"";
-
-  private static final String withoutSageAnchors = "<div id=\"test\">" +
+  
+  private static final String withoutSageAnchors = "<div>" + // div attributes are removed
       "</div>\"";
-
+  
   private static final String withCopyright = "<div id=\"footer\">"
       + "<div class=\"block-1\">"
       + "<p class=\"disclaimer\">The content of this site is intended for health care professionals</p>"
@@ -132,16 +119,9 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
       + "<li><span>Online ISSN: </span>"
       + "<span class=\"issn\">1499-2752</span></li>" + "</ul>" + "</div>"
       + "<div class=\"block-2 sb-div\"></div>" + "</div>\"";
-
-  private static final String withoutCopyright = "<div id=\"footer\">"
-      + "<div class=\"block-1\">"
-      + "<p class=\"disclaimer\">The content of this site is intended for health care professionals</p>"
-      + "<ul class=\"issns\">" + "<li><span>Print ISSN: </span>"
-      + "<span class=\"issn\">0315-162X</span></li>"
-      + "<li><span>Online ISSN: </span>"
-      + "<span class=\"issn\">1499-2752</span></li>" + "</ul>" + "</div>"
-      + "<div class=\"block-2 sb-div\"></div>" + "</div>\"";
-
+  
+  private static final String withoutCopyright = "\""; // div id=footer is now filtered
+  
   private static final String withCurrentIssue = "<div class=\"col-3-top sb-div\"></div>"
       + "<div class=\"content-box\" id=\"sidebar-current-issue\">"
       + "<div class=\"cb-contents\">"
@@ -162,51 +142,46 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
       + "<ol>"
       + "<li><a href=\"/cgi/alerts/etoc\">Alert me to new issues of The Journal"
       + "</a></li>" + "</ol>" + "</div>" + "</div>" + "</div>";
-  private static final String withoutCurrentIssue = "<div class=\"col-3-top sb-div\"></div>";
-
+  private static final String withoutCurrentIssue = "<div></div>"; // div attributes are removed
+  
   private static final String headHtml = "<html><head>Title</head></HTML>";
   private static final String headHtmlFiltered = "<html></HTML>";
-
+  
   private static final String withSporadicDivs =
       "<div><div id=\"fragment-reference-display\"></div>" +
           "<div class=\"cit-extra\">stuff</div></div";
   private static final String withoutSporadicDivs =
       "<div></div>";
-
+  
   private static final String withCmeCredit =
       "<ol><li><a href=\"/content/28/7/911/suppl/DC1\" rel=\"supplemental-data\"" +
           "class=\"dslink-earn-free-cme-credit\">Earn FREE CME Credit</a></li></ol>";
   private static final String withoutCmeCredit = 
       "<ol></ol>";
-
+  
   private static final String withCbSection =
       "<div><div class=\"cb-section collapsible default-closed\" id=\"cb-art-gs\">Content" +
           "<h4></h4><ol><li></li></ol></div></div>";
   private static final String withoutCbSection =
       "<div></div>";
-
+  
   private static final String withHwGenPage =
       "<div class=\"hw-gen-page pagetype-content hw-pub-id-article\" " +
           "id=\"pageid-content\" itemscope=\"itemscope\" " +
           "itemtype=\"http://schema.org/ScholarlyArticle\">content</div>";
-  private static final String withoutHwGenPage =
-      "<div class=\"hw-gen-page pagetype-content hw-pub-id-article\" " +
-          "id=\"pageid-content\">content</div>";
-
+  private static final String withoutHwGenPage = // div attributes are removed
+      "<div>content</div>";
+  
   private static final String withNavCurrentIssue =
       "<li id=\"nav_current_issue\" title=\"Current\">" +
           "<a href=\"/content/current\">" +
           "<span>View Current Issue (Volume 175 Issue 12 June 15, 2012)" +
           "</span></a></li>";
-
-  private static final String withoutNavCurrentIssue =
-      "<li id=\"nav_current_issue\" title=\"Current\">" +
-          "<a href=\"/content/current\">" +
-          "<span>View Current Issue (Volume 174 Issue 12 December 15, 2011)" +
-          "</span>>/a></li>";
-
+  
+  private static final String withoutNavCurrentIssue = ""; 
+  
   private static final String withNavArticle =
-      "<div id=\"col-2\">" +
+      "<div id=\"col-x\">" +
           "<div class=\"article-nav\">\nfoo</div>" + 
           "<div class=\"article-nav sidebar-nav\">\n" + 
           "<a class=\"previous\" title=\"Previous article\" " +
@@ -217,8 +192,8 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
           "<span class=\"toc-link\">\n" + 
           "</div></div>";
   
-  private static final String withoutNavArticle =
-      "<div id=\"col-2\"></div>";
+  private static final String withoutNavArticle = // div attributes are removed
+      "<div></div>";
   
   private static final String withRelatedURLs =
       "<div><span id=\"related-urls\"" +
@@ -249,10 +224,10 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
           "<h2 id=\"KEEP THIS\"><span>KEEP THIS BIT</span></h2>" +
           "</div>" +
           "</div>";
-  private static final String textIndexFactorFiltered =
-      "<div id=\"second\">" +
+  private static final String textIndexFactorFiltered = // div attributes are removed
+      "<div>" +
           "<h2 id=\"read_this_journal\" title=\"Read This Journal\"><span>Read This Journal</span></h2>" +
-          "<div class=\"features\">" +
+          "<div>" +
           "<h2 id=\"KEEP THIS\"><span>KEEP THIS BIT</span></h2>" +
           "</div>" +
           "</div>";
@@ -277,7 +252,7 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
           "<p> " +                        
           "</p>" +
           "</form>";
-
+  
   private static final String accessCheckHtml =
       "     <div class=\"cb-section cb-views\">" +
           "<ol>" +
@@ -293,9 +268,9 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
           "Full Text (PDF)</a><span class=\"viewspecificaccesscheck gsclaymin;47/1/1 reprint\"></span></li>" +
           "</ol>" +
           "</div>";
- 
+  
   private static final String accessCheckFiltered=
-      " <div class=\"cb-section cb-views\">" +
+      " <div>" +
           "<ol>" +
           "<li class=\"abstract-view-link primary\"></li>" +
           "<li><a href=\"/content/47/1/1.figures-only\" rel=\"view-figures-only\">Figures Only</a></li>" +
@@ -314,9 +289,9 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
       "</a>" +
       "<div id=\"something-nav\">";
   
-  private static final String institutionLogoFiltered = 
-      " <div id=\"something-nav\">";
-
+  private static final String institutionLogoFiltered = // div attributes are removed
+      " <div>";
+  
   private static final String sidebarGlobalNavHtml =
       " <div id=\"sidebar-global-nav\">" +
       "<ul class=\"button-list pub-links\"> " +
@@ -326,9 +301,9 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
       "</div>" +
       "<div id=\"something-nav\">";
   
-  private static final String sidebarGlobalNavFiltered = 
-      " <div id=\"something-nav\">";
-
+  private static final String sidebarGlobalNavFiltered = // div attributes are removed
+      " <div>";
+  
   private static final String col3Html =
       " <div id=\"generic\" class=\"hw-gen-page pagetype-content\">" +
       "<div id=\"col-3\" style=\"height: 1616px;\">" +
@@ -338,8 +313,8 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
       "<ul class=\"tower-ads\"><li class=\"no-ad tower\"><span>  </span></li></ul>" +
       "</div><script type=\"text/javascript\"></script></div>";
   
-  private static final String col3Filtered = 
-      " <div id=\"generic\" class=\"hw-gen-page pagetype-content\">" +
+  private static final String col3Filtered = // div attributes are removed
+      " <div>" +
         "</div>";
 
   private static final String tocBannerAdHtml =
@@ -356,10 +331,10 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
       "</ul> " +
       " <div id=\"toc-header\">   " +
       " <h1>Table of Contents</h1><cite>";
-  private static final String tocBannerAdFiltered =
-      " <div id=\"content-block\">" +
-      " <div id=\"toc-header\">" +
-      " <h1 itemprop=\"itemprop\">Table of Contents</h1><cite>";
+  private static final String tocBannerAdFiltered = // div attributes are removed
+      " <div>" +
+      " <div>" +
+      " <h1>Table of Contents</h1><cite>";
   
   private static final String viewingDate =
       "<ul class=\"button-list header-buttons\">" +
@@ -395,11 +370,7 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
       "<h1><a id=\"logo\" href=\"/\"><span>Rocky Geology</span></a></h1>\n" + 
       "</div>";
   
-  private static final String gswHeaderFiltered =
-      "<div id=\"header\">\n" +
-      "<div id=\"gsw-top-container\"> </div>\n" +
-      "<h1 itemprop=\"itemprop\"><a id=\"logo\" href=\"/\"><span>Rocky Geology</span></a></h1>\n" +
-      "</div>";
+  private static final String gswHeaderFiltered = ""; // div id=header is now filtered
   
   private static final String relatedHtml =
       "<div id=\"header\">\n" +
@@ -412,8 +383,7 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
       "</div>\n" + 
       "</div>";
   
-  private static final String relatedHtmlFiltered =
-      "<div id=\"header\">\n</div>";
+  private static final String relatedHtmlFiltered = ""; // div id=header is now filtered
   
   private static final String citedHtml =
       "<div id=\"header\">\n" +
@@ -425,8 +395,7 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
       "</div>" +
       "</div>";
   
-  private static final String citedHtmlFiltered =
-      "<div id=\"header\">\n</div>";
+  private static final String citedHtmlFiltered = ""; // div id=header is now filtered
   
   private static final String socialHtml =
       "<div id=\"header\">\n" +
@@ -437,8 +406,7 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
       "</div>" +
       "</div>";
   
-  private static final String socialHtmlFiltered =
-      "<div id=\"header\">\n</div>";
+  private static final String socialHtmlFiltered = ""; // div id=header is now filtered
   
   private static final String adfootHtml =
       "<body>\n" +
@@ -538,7 +506,7 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
       "</div>" +
       "</body>";
   
-  private static final String col2HtmlFiltered =
+  private static final String col2HtmlFiltered = // div id=header is now filtered
       "<body>\n" +
       "</body>";
   
