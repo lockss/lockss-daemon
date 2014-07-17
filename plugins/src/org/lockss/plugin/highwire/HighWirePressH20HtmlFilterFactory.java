@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.56 2014-05-12 01:56:17 etenbrink Exp $
+ * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.57 2014-07-17 14:05:57 etenbrink Exp $
  */
 
 /*
@@ -35,7 +35,9 @@ package org.lockss.plugin.highwire;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.Reader;
+import java.util.Vector;
 
+import org.htmlparser.Attribute;
 import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.Tag;
@@ -236,42 +238,20 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
             public void visitTag(Tag tag) {
               String tagName = tag.getTagName().toLowerCase();
               try {
-                if (  "div".equals(tagName)
-                    && tag.getAttribute("id") != null
-                    && tag.getAttribute("id").trim().startsWith("pageid-content")) {
-                  if (tag.getAttribute("itemscope") != null) {
-                    tag.setAttribute("itemscope", "itemscope");
-                  }
-                  else {
-                    tag.setAttribute("itemscope", "\"itemscope\"");
-                  }
-                  if (tag.getAttribute("itemtype") != null) {
-                    tag.setAttribute("itemtype", "http://schema.org/ScholarlyArticle");
-                  }
-                  else {
-                    tag.setAttribute("itemtype", "\"http://schema.org/ScholarlyArticle\"");
-                  }
-                  // don't return: need to go to next 'div' clause
+                if ("body".equals(tagName) ||
+                    "div".equals(tagName) ||
+                    "h1".equals(tagName)) {
+                  Attribute a = tag.getAttributeEx(tagName);
+                  Vector<Attribute> v = new Vector<Attribute>();
+                  v.add(a);
+                  tag.setAttributesEx(v);
                 }
-                if (   "h1".equals(tagName)
-                    || (   "div".equals(tagName)
-                        && tag.getAttribute("class") != null
-                        && (   tag.getAttribute("class").trim().endsWith("abstract")
-                            || tag.getAttribute("class").trim().endsWith("abstract-view")))) {
-                  if (tag.getAttribute("itemprop") != null) {
-                    tag.setAttribute("itemprop", "itemprop");
-                  }
-                  else {
-                    tag.setAttribute("itemprop", "\"itemprop\"");
-                  }
-                  return; // done
-                }
-                // Otherwise
-                super.visitTag(tag);
               }
               catch (Exception exc) {
                 log.debug2("Internal error (visitor)", exc); // Ignore this tag and move on
               }
+              // Always
+              super.visitTag(tag);
             }
           });
         }
