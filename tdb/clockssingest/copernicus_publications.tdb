@@ -56,7 +56,7 @@
       au < crawling ; exists ; 2013 ; 2013 ; Advances in Geosciences Volume 34 ; 34 >
       au < crawling ; exists ; 2013 ; 2013 ; Advances in Geosciences Volume 35 ; 35 >
       au < crawling ; exists ; 2013 ; 2013 ; Advances in Geosciences Volume 36 ; 36 >
-      au < testing ; exists ; 2014 ; 2014 ; Advances in Geosciences Volume 37 ; 37 >
+      au < ready ; exists ; 2014 ; 2014 ; Advances in Geosciences Volume 37 ; 37 >
       au < manifest ; exists ; 2014 ; 2014 ; Advances in Geosciences Volume 38 ; 38 >
     
    }
@@ -106,7 +106,7 @@
       au < finished ; crawling ; 2012 ; 2012 ; Advances in Science and Research Volume 8 ; 8 >
       au < doesNotExist ; doesNotExist ; 2012 ; 0 ; Advances in Science and Research Volume 9 ; 0 >
       au < crawling ; exists ; 2013 ; 2013 ; Advances in Science and Research Volume 10 ; 10 >
-      au < testing ; exists ; 2014 ; 2014 ; Advances in Science and Research Volume 11 ; 11 >
+      au < ready ; exists ; 2014 ; 2014 ; Advances in Science and Research Volume 11 ; 11 >
       au < expected ; exists ; 2014 ; 2014 ; Advances in Science and Research Volume 12 ; 12 >
     
    }
@@ -159,7 +159,7 @@
       param[base_url] = http://www.astra-proc.net/
       param[home_url] = http://www.astra-proceedings.net/
 
-      au < testing ; exists ; 2014 ; 2014 ; ASTRA Proceedings Volume 1 ; 1 >
+      au < ready ; exists ; 2014 ; 2014 ; ASTRA Proceedings Volume 1 ; 1 >
 
    }
     
