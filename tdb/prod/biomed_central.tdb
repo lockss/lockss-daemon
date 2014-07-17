@@ -2406,6 +2406,20 @@
 
     {
       title <
+        name = Biomaterials Research ;
+        eissn = 2055-7124 ;
+        issnl = 2055-7124
+      >
+      
+      param[base_url] = http://www.biomaterialsres.com/
+      param[journal_issn] = 2055-7124
+
+      au < exists ; 2014 ; Biomaterials Research Volume 18 ; 18 >
+      
+    }
+
+    {
+      title <
         name = BioMedical Engineering OnLine ;
         eissn = 1475-925X ;
         issnl = 1475-925X
@@ -2768,6 +2782,20 @@
       au < manifest ; 2013 ; Cell Regeneration Volume 2 ; 2 >
       au < manifest ; 2014 ; Cell Regeneration Volume 3 ; 3 >
 
+    }
+
+    {
+      title <
+        name = Cerebellum & Ataxias ;
+        eissn = 2053-8871 ;
+        issnl = 2053-8871
+      >
+      
+      param[journal_issn] = 2053-8871
+      param[base_url] = http://www.cerebellumandataxias.com/
+
+      au < exists ; 2014 ; Cerebellum & Ataxias Volume 1 ; 1 >
+      
     }
 
     {
@@ -4387,6 +4415,20 @@
       au < manifest ; 2012 ; Journal of Animal Science and Biotechnology Volume 3 ; 3 >
       au < manifest ; 2013 ; Journal of Animal Science and Biotechnology Volume 4 ; 4 >
       au < manifest ; 2014 ; Journal of Animal Science and Biotechnology Volume 5 ; 5 >
+
+    }
+
+    {
+      title <
+        name = Journal of Animal Science and Technology ;
+        eissn = 2055-0391 ;
+        issnl = 2055-0391
+      >
+
+      param[base_url] = http://www.janimscitechnol.com/
+      param[journal_issn] = 2055-0391
+
+      au < exists ; 2014 ; Journal of Animal Science and Technology Volume 56 ; 56 >
 
     }
 
