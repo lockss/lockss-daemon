@@ -3404,6 +3404,20 @@
   }
 
   {
+
+    title <
+      name = Big Data and Society ;
+      eissn = 2053-9517 ;
+      issnl = 2053-9517
+    >
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      param[base_url] = http://bds.sagepub.com/
+
+      au < exists ; exists ; 2014 ; Big Data and Society Volume 1 ; 1 ; >
+
+  }
+
+  {
   
     title <
       name = Biological Research For Nursing ;
@@ -11538,6 +11552,20 @@
   }
 
   {
+
+    title <
+      name = Global Qualitative Nursing Research ;
+      eissn = 2333-3936 ;
+      issnl = 2333-3936
+    >
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      param[base_url] = http://gqn.sagepub.com/
+
+      au < exists ; exists ; 2014 ; Global Qualitative Nursing Research Volume 1 ; 1 ; >
+  }
+
+  {
   
     title <
       name = Global Social Policy ;
@@ -12077,6 +12105,20 @@
 
     }
 
+  }
+
+  {
+
+    title <
+      name = Health Services Research and Managerial Epidemiology ;
+      issn = 2333-3928 ;
+      eissn = 2333-3392 ;
+      issnl = 2333-3928
+    >
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      param[base_url] = http://hme.sagepub.com/
+
+      au < exists ; exists ; 2014 ; Health Services Research and Managerial Epidemiology Volume 1 ; 1 ; >
   }
 
   {
