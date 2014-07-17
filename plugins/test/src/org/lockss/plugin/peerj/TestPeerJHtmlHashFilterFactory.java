@@ -1,6 +1,10 @@
 /*
+* $Id: TestPeerJHtmlHashFilterFactory.java,v 1.3 2014-07-17 02:42:09 ldoan Exp $
+*/
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+/*
+
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -97,7 +101,7 @@ public class TestPeerJHtmlHashFilterFactory extends LockssTestCase {
         + "<a href=\"/\" class=\"brand item-top-navbar-brand\""
         + "<span class=\"item-top-navbar-social\">"
         + "<a class=\"pj-socialism tw-soc\""
-        + "href=\"http://twitter.com/share?url=https://xxxxx.com/articles/46/"
+        + "href=\"http://twitter.com/share?url=https://xxxxx.com/9999/"
         + "&amp;via=thexxxx&amp;text=yyyyyyy\"</a>"
         + "</span>"
         + "</div></div>"
@@ -105,22 +109,97 @@ public class TestPeerJHtmlHashFilterFactory extends LockssTestCase {
   private static final String withoutTopNavbarInner = 
       "<div class=\"block\"></div>";
   
-  private static final String withAlertWarning =
+  private static final String withInstitutionAlert =
       "<div class=\"block\">"
-        + "<div class=\"alert alert-warning\""
-        + "style=\"font-size:12px;background: #FAC362;color: #333;\">"
-        + "<i class=\"icon-large icon-pencil\"></i> <strong>PREPRINT</strong>" 
+        + "<div id=\"instit-alert\" "
+        + "class=\"well paper-well announcement-fixed\" "
+        + "style=\"display: block;\">"
+        + "<i class=\"icon-remove announce-close\"></i>"
+        + "<h2>Stanford University</h2>"
+        + "Your institution has a plan for publish Open Access."
+        + "<a id=\"instit-href\" class=\"open\" "
+        + "href=\"/institutions/26/stanford-university/\">"
+        + "See if you qualify <i class=\"icon-share-alt\"></i></a>"
         + "</div>"
         + "</div>";
-  private static final String withoutAlertWarning = 
+    private static final String withoutInstitutionAlert = 
       "<div class=\"block\"></div>";
+    
+      private static final String withAllLeftColumnExceptDownloadAs =
+      "<div class=\"block\">"
+        + "<div class=\"article-item-leftbar\">" 
+        + "<div class=\"btn-group notification-actions-btn\">" 
+        + "<span>Subscribe</span>" 
+        + "<span>Follow</span></span>" 
+        + "<div class=\"btn-group\">" 
+        + "<a href=\"#\">Download as</a>" 
+        + "<ul class=\"dropdown-menu\">" 
+        + "<li><a href=\"/9999.pdf\">PDF</a></li>" 
+        + "<li><a href=\"/9999.xml\">XML</a></li>" 
+        + "<li><a href=\"/9999.ris\">RIS</a></li>" 
+        + "<li><a href=\"/9999.bib\">BibTeX</a></li>" 
+        + "<li><a href=\"http://www.mendeley.com/import/xxxx.9999\">"
+        + "Save to Mendeley</a></li>" 
+        + "<li><a href=\"http://www.readcube.com/xxxx.9999\">"
+        + "Read in ReadCube</a></li>" 
+        + "</ul>" 
+        + "</div>" 
+        + "<nav class=\"article-sidebar-block\">" 
+        + "<div class=\"article-navigation\">" 
+        + "<ul class=\"nav nav-list\">" 
+        + "<li class=\"article-anchor\"><a href=\"#intro\">"
+        + "Introduction</a></li>" 
+        + "</ul>" 
+        + "</div>" 
+        + "</nav>" 
+        + "<nav class=\"article-sidebar-block\">" 
+        + "<ul class=\"nav nav-list\">" 
+        + "<li><a href=\"/9999/citations/\">Articles citing this paper" 
+        + "<span>4</span></a></li>" 
+        + "</ul>" 
+        + "</nav>" 
+        + "</div>" 
+        + "<nav class=\"article-sidebar-block\">" 
+        + "<div class=\"subjects-navigation\">" 
+        + "<ul class=\"nav nav-list\">" 
+        + "<li class=\"article-anchor\">" 
+        + "<a href=\"/search/?subject=Biochemistry\">Biochemistry</a></li>" 
+        + "</ul>" 
+        + "</div>" 
+        + "</nav>" 
+        + "<div id=\"article-item-metrics-container\" " 
+        + "<div data-count=\"visitors\">995</div>" 
+        + "<div class=\"article-item-metrics-label\">Visitors</div>" 
+        + "</div>" 
+        + "</div>" 
+        + "</div>" 
+        + "</div>" 
+        + "</div>" 
+        + "</div>";
+    private static final String withoutAllLeftColumnExceptDownloadAs = 
+        "<div class=\"block\">"
+          + "<div class=\"article-item-leftbar\">"
+          + "<div class=\"btn-group notification-actions-btn\">"
+          + "<div class=\"btn-group\">"
+          + "<ul class=\"dropdown-menu\">"
+          + "<li><a href=\"/9999.pdf\">PDF</a></li>"
+          + "<li><a href=\"/9999.xml\">XML</a></li>"
+          + "<li><a href=\"/9999.ris\">RIS</a></li>"
+          + "<li><a href=\"/9999.bib\">BibTeX</a></li>"
+          + "<li><a href=\"http://www.mendeley.com/import/xxxx.9999\">"
+          + "Save to Mendeley</a></li>"
+          + "<li><a href=\"http://www.readcube.com/xxxx.9999\">"
+          + "Read in ReadCube</a></li>"
+          + "</ul>"
+          + "</div></div></div></div></div></div>"
+          + "</div>";
   
   private static final String withRightbarWrap =
       "<div class=\"block\">"
         + "<div class=\"span2 article-item-rightbar-wrap article-sidebar\""
         + "style=\"height: 21136px;\">"
         + "<div style=\"margin-bottom:12px;\">"
-        + "<form action=\"/follow/publication/46/0/\" method=\"post\">"
+        + "<form action=\"/follow/publication/9999/0/\" method=\"post\">"
         + "<button class=\"btn btn-success\">Sign up for content alerts"
         + "<i class=\"icon-large icon-chevron-right icon-white\"></i>"
         + "</button></form>"   
@@ -193,10 +272,46 @@ private static final String withFlagModal =
         + "<div class=\"article-share-item\">"
         + "<a href=\"https://twitter.com/share\""
         + "class=\"twitter-share-button\""
-        + "data-url=\"https://xxxx.com/articles/46/\">Tweet</a>"
+        + "data-url=\"https://xxxx.com/9999/\">Tweet</a>"
         + "</div></div></div></div>"
         + "</div>";
   private static final String withoutShareModal = 
+      "<div class=\"block\"></div>";
+  
+  private static final String withCitingModal =
+      "<div class=\"block\">"
+        + "<div id=\"citing-modal\" class=\"modal hide\">"
+        + "<div class=\"modal-header\">"
+        + "<button type=\"button\" class=\"close\" data-dismiss=\"modal\""
+        + "aria-hidden=\"true\">zz</button>"
+        + "<h2 class=\"slim\"><i class=\"icon-copy\"></i>"
+        + "Citing information</h2>"
+        + "</div>"
+        + "<div class=\"modal-body\">Loading citing information ... "
+        + "<i class=\"icon icon-spinner icon-spin\"></i></div>"
+        + "</div>"
+        + "</div>";
+  private static final String withoutCitingModal = 
+      "<div class=\"block\"></div>";
+  
+  private static final String withArticleLinksModal =
+      "<div class=\"block\">"
+        + "<div class=\"modal hide fade\" id=\"article-links-modal\">"
+        + "<div class=\"modal-header\">"
+        + "<a data-dismiss=\"modal\" aria-hidden=\"true\" "
+        + "class=\"close\">yy</a>"
+        + "<h3 class=\"modal-title\">Link titles</h3>"
+        + "</div>"
+        + "<div class=\"modal-body\"></div>"
+        + "<div class=\"modal-footer\">"
+        + "<a href=\"/yyy\" "
+        + "class=\"btn btn-primary\">adding link</a>"
+        + "<button class=\"btn follow-close-btn\" data-dismiss=\"modal\""
+        + "aria-hidden=\"true\">Close</button>"
+        + "</div>"
+        + "</div>"
+        + "</div>";
+  private static final String withoutArticleLinksModal = 
       "<div class=\"block\"></div>";
   
   private static final String withFoot =
@@ -263,7 +378,8 @@ private static final String withFlagModal =
 
   public void testTopNavbarInverseFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
-        new StringInputStream(withTopNavbarInverse), Constants.DEFAULT_ENCODING);
+        new StringInputStream(withTopNavbarInverse),
+          Constants.DEFAULT_ENCODING);
     assertEquals(withoutTopNavbarInverse, StringUtil.fromInputStream(actIn));
   }
   
@@ -309,12 +425,34 @@ private static final String withFlagModal =
     assertEquals(withoutMetricsModal, StringUtil.fromInputStream(actIn));
   }
   
-  public void testAlertWarningFiltering() throws Exception {
+  public void testCitingModalFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
-        new StringInputStream(withAlertWarning), Constants.DEFAULT_ENCODING);
-    assertEquals(withoutAlertWarning, StringUtil.fromInputStream(actIn));
+        new StringInputStream(withCitingModal), Constants.DEFAULT_ENCODING);
+    assertEquals(withoutCitingModal, StringUtil.fromInputStream(actIn));
   }
   
+  public void testArticleLinksModalFiltering() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(withArticleLinksModal), 
+        Constants.DEFAULT_ENCODING);
+    assertEquals(withoutArticleLinksModal, StringUtil.fromInputStream(actIn));
+  }
+    
+  public void testInstitutionAlertFiltering() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(withInstitutionAlert), 
+        Constants.DEFAULT_ENCODING);
+    assertEquals(withoutInstitutionAlert, StringUtil.fromInputStream(actIn));
+  }
+  
+  public void testAllLeftColumnExceptDownloadAsFiltering() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(withAllLeftColumnExceptDownloadAs), 
+        Constants.DEFAULT_ENCODING);
+    assertEquals(withoutAllLeftColumnExceptDownloadAs, 
+        StringUtil.fromInputStream(actIn));
+  }
+    
   public void testFootFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(withFoot), Constants.DEFAULT_ENCODING);
