@@ -4,7 +4,7 @@
   >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; volume ; name ; param[year] >
+    implicit < status ; year ; volume ; name ; param[year] ; comment[notReady]>
 
   {
 
@@ -17,15 +17,15 @@
       param[base_url] = http://www.revistas.univerciencia.org/
       param[journal_id] = hospitalidade
 
-      au < exists ; 2005 ; 1 ; Revista Hospitalidade Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 2 ; Revista Hospitalidade Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 3 ; Revista Hospitalidade Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 4 ; Revista Hospitalidade Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 5 ; Revista Hospitalidade Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 6 ; Revista Hospitalidade Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 7 ; Revista Hospitalidade Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 8 ; Revista Hospitalidade Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 9 ; Revista Hospitalidade Volume 2013 ; 2013 >
+      au < exists ; 2005 ; 1 ; Revista Hospitalidade Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 2 ; Revista Hospitalidade Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 3 ; Revista Hospitalidade Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 4 ; Revista Hospitalidade Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 5 ; Revista Hospitalidade Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 6 ; Revista Hospitalidade Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 7 ; Revista Hospitalidade Volume 2011 ; 2011 ; >
+      au < notReady ; 2012 ; 8 ; Revista Hospitalidade Volume 2012 ; 2012 ; no substance >
+      au < expected ; 2013 ; 9 ; Revista Hospitalidade Volume 2013 ; 2013 ; >
 
   }
 
