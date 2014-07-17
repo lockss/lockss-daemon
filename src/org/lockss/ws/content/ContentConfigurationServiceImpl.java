@@ -1,5 +1,5 @@
 /*
- * $Id: ContentConfigurationServiceImpl.java,v 1.2 2014-07-03 19:49:03 fergaloy-sf Exp $
+ * $Id: ContentConfigurationServiceImpl.java,v 1.3 2014-07-17 19:18:34 fergaloy-sf Exp $
  */
 
 /*
@@ -188,6 +188,172 @@ public class ContentConfigurationServiceImpl implements
 	    Boolean.TRUE, statusEntry.getExplanation()));
       } else {
 	log.error("Error unconfiguring AU '" + statusEntry.getName() + "': "
+	    + statusEntry.getExplanation());
+
+	String explanation = statusEntry.getExplanation();
+	if (StringUtil.isNullString(explanation)) {
+	  explanation = statusEntry.getStatus();
+	}
+
+	results.add(new ContentConfigurationResult(auId, statusEntry.getName(),
+	  Boolean.FALSE, explanation));
+      }
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "results = " + results);
+    return results;
+  }
+
+  /**
+   * Reactivates the archival unit defined by its identifier.
+   * 
+   * @param auId
+   *          A String with the identifier (auid) of the archival unit.
+   * @return a ContentConfigurationResult with the result of the operation.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public ContentConfigurationResult reactivateAuById(String auId)
+      throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "reactivateAuById(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auId = " + auId);
+
+    List<String> auIds = new ArrayList<String>(1);
+    auIds.add(auId);
+
+    // Reactivate the archival unit.
+    ContentConfigurationResult result = reactivateAusByIdList(auIds).get(0);
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+    return result;
+  }
+
+  /**
+   * reactivates the archival units defined by a list with their identifiers.
+   * 
+   * @param auIds
+   *          A List<String> with the identifiers (auids) of the archival units.
+   * @return a List<ContentConfigurationResult> with the results of the
+   *         operation.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public List<ContentConfigurationResult> reactivateAusByIdList(
+      List<String> auIds) throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "reactivateAusByIdList(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auIds = " + auIds);
+
+    List<ContentConfigurationResult> results =
+	new ArrayList<ContentConfigurationResult>(auIds.size());
+
+    // Reactivate the archival units.
+    BatchAuStatus status =
+	LockssDaemon.getLockssDaemon().getRemoteApi().reactivateAus(auIds);
+
+    // Loop through all the results.
+    for (int i = 0; i < status.getUnsortedStatusList().size(); i++) {
+      // Get the original Archival Unit identifier.
+      String auId = auIds.get(i);
+
+      // Handle the result.
+      BatchAuStatus.Entry statusEntry = status.getUnsortedStatusList().get(i);
+
+      if (statusEntry.isOk() || "Added".equals(statusEntry.getStatus())) {
+	if (log.isDebug()) log.debug("Success reactivating AU '"
+	    + statusEntry.getName() + "': " + statusEntry.getExplanation());
+
+	String explanation = statusEntry.getExplanation();
+	if (StringUtil.isNullString(explanation)) {
+	  explanation = "Reactivated Archival Unit '" + auId + "'";
+	}
+
+	results.add(new ContentConfigurationResult(auId, statusEntry.getName(),
+	    Boolean.TRUE, statusEntry.getExplanation()));
+      } else {
+	log.error("Error reactivating AU '" + statusEntry.getName() + "': "
+	    + statusEntry.getExplanation());
+
+	String explanation = statusEntry.getExplanation();
+	if (StringUtil.isNullString(explanation)) {
+	  explanation = statusEntry.getStatus();
+	}
+
+	results.add(new ContentConfigurationResult(auId, statusEntry.getName(),
+	  Boolean.FALSE, explanation));
+      }
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "results = " + results);
+    return results;
+  }
+
+  /**
+   * Deactivates the archival unit defined by its identifier.
+   * 
+   * @param auId
+   *          A String with the identifier (auid) of the archival unit.
+   * @return a ContentConfigurationResult with the result of the operation.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public ContentConfigurationResult deactivateAuById(String auId)
+      throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "deactivateAuById(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auId = " + auId);
+
+    List<String> auIds = new ArrayList<String>(1);
+    auIds.add(auId);
+
+    // Deactivate the archival unit.
+    ContentConfigurationResult result = deactivateAusByIdList(auIds).get(0);
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+    return result;
+  }
+
+  /**
+   * Deactivates the archival units defined by a list with their identifiers.
+   * 
+   * @param auIds
+   *          A List<String> with the identifiers (auids) of the archival units.
+   * @return a List<ContentConfigurationResult> with the results of the
+   *         operation.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public List<ContentConfigurationResult> deactivateAusByIdList(
+      List<String> auIds) throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "deactivateAusByIdList(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auIds = " + auIds);
+
+    List<ContentConfigurationResult> results =
+	new ArrayList<ContentConfigurationResult>(auIds.size());
+
+    // Deactivate the archival units.
+    BatchAuStatus status =
+	LockssDaemon.getLockssDaemon().getRemoteApi().deactivateAus(auIds);
+
+    // Loop through all the results.
+    for (int i = 0; i < status.getUnsortedStatusList().size(); i++) {
+      // Get the original Archival Unit identifier.
+      String auId = auIds.get(i);
+
+      // Handle the result.
+      BatchAuStatus.Entry statusEntry = status.getUnsortedStatusList().get(i);
+
+      if (statusEntry.isOk() || "Deactivated".equals(statusEntry.getStatus())) {
+	if (log.isDebug()) log.debug("Success deactivating AU '"
+	    + statusEntry.getName() + "': " + statusEntry.getExplanation());
+
+	String explanation = statusEntry.getExplanation();
+	if (StringUtil.isNullString(explanation)) {
+	  explanation = "Deactivated Archival Unit '" + auId + "'";
+	}
+
+	results.add(new ContentConfigurationResult(auId, statusEntry.getName(),
+	    Boolean.TRUE, statusEntry.getExplanation()));
+      } else {
+	log.error("Error deactivating AU '" + statusEntry.getName() + "': "
 	    + statusEntry.getExplanation());
 
 	String explanation = statusEntry.getExplanation();

@@ -1,5 +1,5 @@
 /*
- * $Id: ContentConfigurationService.java,v 1.2 2014-07-03 19:49:03 fergaloy-sf Exp $
+ * $Id: ContentConfigurationService.java,v 1.3 2014-07-17 19:18:34 fergaloy-sf Exp $
  */
 
 /*
@@ -96,6 +96,58 @@ public interface ContentConfigurationService {
    */
   @WebMethod
   List<ContentConfigurationResult> deleteAusByIdList(
+      @WebParam(name = "auIds") List<String> auIds)
+      throws LockssWebServicesFault;
+
+  /**
+   * Reactivates the archival unit defined by its identifier.
+   * 
+   * @param auId
+   *          A String with the identifier (auid) of the archival unit.
+   * @return a ContentConfigurationResult with the result of the operation.
+   * @throws LockssWebServicesFault
+   */
+  @WebMethod
+  ContentConfigurationResult reactivateAuById(
+      @WebParam(name = "auId") String auId) throws LockssWebServicesFault;
+
+  /**
+   * Reactivates the archival units defined by a list with their identifiers.
+   * 
+   * @param auIds
+   *          A List<String> with the identifiers (auids) of the archival units.
+   * @return a List<ContentConfigurationResult> with the results of the
+   *         operation.
+   * @throws LockssWebServicesFault
+   */
+  @WebMethod
+  List<ContentConfigurationResult> reactivateAusByIdList(
+      @WebParam(name = "auIds") List<String> auIds)
+      throws LockssWebServicesFault;
+
+  /**
+   * Deactivates the archival unit defined by its identifier.
+   * 
+   * @param auId
+   *          A String with the identifier (auid) of the archival unit.
+   * @return a ContentConfigurationResult with the result of the operation.
+   * @throws LockssWebServicesFault
+   */
+  @WebMethod
+  ContentConfigurationResult deactivateAuById(
+      @WebParam(name = "auId") String auId) throws LockssWebServicesFault;
+
+  /**
+   * Deactivates the archival units defined by a list with their identifiers.
+   * 
+   * @param auIds
+   *          A List<String> with the identifiers (auids) of the archival units.
+   * @return a List<ContentConfigurationResult> with the results of the
+   *         operation.
+   * @throws LockssWebServicesFault
+   */
+  @WebMethod
+  List<ContentConfigurationResult> deactivateAusByIdList(
       @WebParam(name = "auIds") List<String> auIds)
       throws LockssWebServicesFault;
 }

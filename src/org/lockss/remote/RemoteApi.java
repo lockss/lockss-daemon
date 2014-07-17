@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.79 2014-07-03 19:49:03 fergaloy-sf Exp $
+ * $Id: RemoteApi.java,v 1.80 2014-07-17 19:18:34 fergaloy-sf Exp $
  */
 
 /*
@@ -52,6 +52,7 @@ import org.lockss.util.*;
 import org.lockss.util.CloseCallbackInputStream.DeleteFileOnCloseInputStream;
 import org.lockss.mail.*;
 import org.lockss.servlet.ServletUtil;
+import org.apache.commons.collections.map.LinkedMap;
 import org.apache.commons.collections.map.ReferenceMap;
 
 /**
@@ -796,8 +797,7 @@ public class RemoteApi
    */
   public BatchAuStatus batchAddAus(int addOp,
 				   Configuration allAuConfig,
-				   BackupInfo bi)
-      throws IOException {
+				   BackupInfo bi) {
     return batchProcessAus(true, addOp, allAuConfig, bi);
   }
 
@@ -967,6 +967,15 @@ public class RemoteApi
 					String auid,
 					Configuration auConfig,
 					BackupInfo bi) {
+    final String DEBUG_HEADER = "batchProcessOneAu(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "doCreate = " + doCreate);
+      log.debug2(DEBUG_HEADER + "addOp = " + addOp);
+      log.debug2(DEBUG_HEADER + "auid = " + auid);
+      log.debug2(DEBUG_HEADER + "auConfig = " + auConfig);
+      log.debug2(DEBUG_HEADER + "bi = " + bi);
+    }
+
     BatchAuStatus.Entry stat = new BatchAuStatus.Entry(auid);
     stat.setRepoNames(repoMgr.findExistingRepositoriesFor(auid));
     Configuration oldConfig = pluginMgr.getStoredAuConfiguration(auid);
@@ -983,10 +992,37 @@ public class RemoteApi
       stat.setStatus("Error", STATUS_ORDER_ERROR);
       stat.setExplanation("Plugin not found: " +
 			  PluginManager.pluginNameFromAuId(auid));
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "stat = " + stat);
       return stat;
     }
+
     if (addOp == BATCH_ADD_REACTIVATE) {
-      // make it look like we are just adding a new one
+      // Get the indication of whether the archival unit is inactive.
+      boolean isDisabled =
+	  oldConfig.getBoolean(PluginManager.AU_PARAM_DISABLED, false);
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "isDisabled = " + isDisabled);
+
+      // Check whether the archival unit is already active.
+      if (!isDisabled) {
+	// Yes: Nothing more to do besides reporting the problem.
+	ArchivalUnit au = getAuFromId(auid);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "au = " + au);
+
+	if (au != null) {
+	  stat.setStatus("Active", STATUS_ORDER_WARN);
+	  stat.setExplanation("AU not inactive: " + au.getName());
+	  stat.setConfig(au.getConfiguration());
+	} else {
+	  stat.setStatus("Error", STATUS_ORDER_ERROR);
+	  stat.setExplanation("AU already active but not found: " + auid);
+	}
+
+	if (log.isDebug2()) log.debug2(DEBUG_HEADER + "stat = " + stat);
+	return stat;
+      }
+
+      // No: Make it look like we are just adding a new one.
       auConfig = oldConfig;
       if (auConfig.isSealed()) {
 	auConfig = auConfig.copy();
@@ -994,6 +1030,7 @@ public class RemoteApi
       auConfig.put(PluginManager.AU_PARAM_DISABLED, "false");
       oldConfig = null;
     }
+
     if (oldConfig != null && !oldConfig.isEmpty()) {
       // have current config, check for disagreement, never create
       stat.setConfig(oldConfig);
@@ -1086,6 +1123,8 @@ public class RemoteApi
     if (stat.getName() == null) {
       stat.setName("Unknown");
     }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "stat = " + stat);
     return stat;
   }
 
@@ -1859,5 +1898,159 @@ public class RemoteApi
 
     // No title configuration was found.
     return null;
+  }
+
+  /**
+   * Adds or reactivates archival units.
+   * 
+   * @param addOp
+   *          An int with the operation to be performed.
+   * @param auIds
+   *          A String[] with the identifiers of the archival units.
+   * @param repoMap
+   *          A LinkedMap with the repositories.
+   * @param defaultRepoIndex
+   *          A String with the index of the default repository.
+   * @param auConfigs
+   *          A Map<String, Configuration> with the configurations of the
+   *          archival units.
+   * @param auRepoIndices
+   *          A Map<String, String> with the repository indices of the archival
+   *          units.
+   * @param bi
+   *          A BackupInfo with the backup information.
+   * @return a BatchAuStatus object describing the results.
+   */
+  public BatchAuStatus batchAddAus(int addOp, String[] auIds, LinkedMap repoMap,
+      String defaultRepoIndex, Map<String, Configuration> auConfigs,
+      Map<String, String> auRepoIndices, BackupInfo bi) {
+    final String DEBUG_HEADER = "batchAddAus(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "addOp = " + addOp);
+      log.debug2(DEBUG_HEADER + "auIds = " + Arrays.asList(auIds));
+      log.debug2(DEBUG_HEADER + "repoMap = " + repoMap);
+      log.debug2(DEBUG_HEADER + "defaultRepoIndex = " + defaultRepoIndex);
+      log.debug2(DEBUG_HEADER + "auConfigs = " + auConfigs);
+      log.debug2(DEBUG_HEADER + "auRepoIndices = " + auRepoIndices);
+      log.debug2(DEBUG_HEADER + "bi = " + bi);
+    }
+
+    // The default repository, used for those archival units that do not have
+    // their own repository defined.
+    String defaultRepo = null;
+
+    // Check whether no default repository index was passed.
+    if (StringUtil.isNullString(defaultRepoIndex)) {
+      // Yes: Use the repository least full as the default one.
+      defaultRepo = findLeastFullRepository(getRepositoryMap());
+      // No: Check whether a repostory map was passed.
+    } else if (repoMap != null) {
+      // Yes: Get the default repository by the passed index.
+      try {
+	int n = Integer.parseInt(defaultRepoIndex);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "n = " + n);
+
+	defaultRepo = (String)repoMap.get(n - 1);
+      } catch (NumberFormatException e) {
+	log.warning("Invalid default repository index: " + defaultRepoIndex, e);
+      } catch (IndexOutOfBoundsException e) {
+	log.warning("Illegal default repository index: " + defaultRepoIndex, e);
+      }
+    }
+
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "defaultRepo = " + defaultRepo);
+
+    // Initialize the configuration of the archival units to be processed.
+    Configuration createConfig = ConfigManager.newConfiguration();
+
+    // Loop through all the archival units.
+    for (int i = 0; i < auIds.length; i++) {
+      String auId = auIds[i];
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auId = " + auId);
+
+      Configuration tcConfig = (Configuration)auConfigs.get(auId);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auRepository = "
+	  + tcConfig.get(PluginManager.AU_PARAM_REPOSITORY));
+
+      // Remove the repository from the archival unit configuration.
+      tcConfig.remove(PluginManager.AU_PARAM_REPOSITORY);
+
+      // Try to use the passed repository.
+      String repoIndex = auRepoIndices.get(auId);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "repoIndex = " + repoIndex);
+
+      if (!StringUtil.isNullString(repoIndex) && repoMap != null) {
+	try {
+	  int n = Integer.parseInt(repoIndex);
+	  if (log.isDebug3()) log.debug3(DEBUG_HEADER + "n = " + n);
+
+	  tcConfig.put(PluginManager.AU_PARAM_REPOSITORY,
+	      (String)repoMap.get(n - 1));
+	} catch (NumberFormatException e) {
+	  log.warning("Invalid AU repository index: " + repoIndex, e);
+	} catch (IndexOutOfBoundsException e) {
+	  log.warning("Illegal AU repository index: " + repoIndex, e);
+	}
+      }
+
+      // If the passed repository could not be used, use the default one.
+      if (defaultRepo != null &&
+	  !tcConfig.containsKey(PluginManager.AU_PARAM_REPOSITORY)) {
+	tcConfig.put(PluginManager.AU_PARAM_REPOSITORY, defaultRepo);
+      }
+
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auRepository = "
+	  + tcConfig.get(PluginManager.AU_PARAM_REPOSITORY));
+
+      // Add the archival unit configuration to the overall configuration.
+      String prefix = PluginManager.auConfigPrefix(auId);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "prefix = " + prefix);
+
+      createConfig.addAsSubTree(tcConfig, prefix);
+    }
+
+    if (log.isDebug3()) log.debug3("createConfig: " + createConfig);
+
+    // Add or reactivate the archival units.
+    BatchAuStatus bas = batchAddAus(addOp, createConfig, bi);
+    if (log.isDebug2()) log.debug2("bas = " + bas);
+
+    return bas;
+  }
+
+  /**
+   * Reactivates archival units.
+   * 
+   * @param auIds
+   *          A List<String> with the identifiers of the archival units.
+   * @return a BatchAuStatus object describing the results.
+   */
+  public BatchAuStatus reactivateAus(List<String> auIds) {
+    final String DEBUG_HEADER = "reactivateAus(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auIds = " + auIds);
+
+    Map<String, Configuration> auConfigs = new HashMap<String, Configuration>();
+
+    // Loop through all the identifiers of the archival units to be reactivated.
+    for (String auId : auIds) {
+      // Store the archival unit configuration in the map.
+      Configuration auConfig = pluginMgr.getStoredAuConfiguration(auId);
+
+      if (auConfig.isSealed()) {
+	auConfig = auConfig.copy();
+      }
+
+      auConfig.put(PluginManager.AU_PARAM_DISABLED, "false");
+      auConfigs.put(auId, auConfig);
+    }
+
+    // Reactivate the archival units.
+    BatchAuStatus bas = batchAddAus(BATCH_ADD_REACTIVATE,
+	auIds.toArray(new String[auIds.size()]), null, null, auConfigs,
+	new HashMap<String, String>(), null);
+
+    if (log.isDebug2()) log.debug2("bas = " + bas);
+    return bas;
   }
 }
