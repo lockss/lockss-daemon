@@ -1583,6 +1583,21 @@
     {
   
         title <
+          name = Journal of Trust Management ;
+          issn = 2196-064X 
+        >
+  
+        param[base_url] = http://www.journaloftrustmanagement.com/
+        param[journal_issn] = 2196-064X 
+        comment[platform] = BioMedCentralPlugin
+  
+        au < exists ; 2014 ; Journal of Trust Management Volume 1 ; 1 >
+  
+    }
+  
+    {
+  
+        title <
           name = Journal of Uncertainty Analysis and Applications ;
           issn = 2195-5468 
         >
@@ -1893,9 +1908,23 @@
     {
   
         title <
+          name = Research in the Mathematical Sciences ;
+          eissn = 2197-9847
+        >
+  
+        param[base_url] = http://www.resmathsci.com/
+        param[journal_issn] = 2197-9847
+        comment[platform] = BioMedCentralPlugin
+
+        au < exists ; 2014 ; Research in the Mathematical Sciences Volume 1 ; 1 >
+
+    }
+
+    {
+  
+        title <
           name = Revista Chilena de Historia Natural ;
-          eissn = 0717-6317 ;
-          issnl = 0717-6317
+          eissn = 0717-6317
         >
   
         param[base_url] = http://www.revchilhistnat.com/
