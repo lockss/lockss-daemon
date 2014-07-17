@@ -115,13 +115,13 @@
       param[journal_id] = entretextos
 
       au < released ; 2006 ; 1 ; Entretextos Volume 1 ; 2006 >
-      au < manifest ; 2007 ; 2 ; Entretextos Volume 2 ; 2007 >
+      au < testing ; 2007 ; 2 ; Entretextos Volume 2 ; 2007 >
       au < doesNotExist ; 2008 ; 3 ; Entretextos Volume 3 ; 2008 >
       au < doesNotExist ; 2009 ; 4 ; Entretextos Volume 4 ; 2009 >
       au < released ; 2010 ; 5 ; Entretextos Volume 5 ; 2010 >
       au < released ; 2011 ; 6 ; Entretextos Volume 6 ; 2011 >
       au < released ; 2012 ; 7 ; Entretextos Volume 7 ; 2012 >
-      au < manifest ; 2013 ; 8 ; Entretextos Volume 8 ; 2013 >
+      au < testing ; 2013 ; 8 ; Entretextos Volume 8 ; 2013 >
       au < expected ; 2014 ; 9 ; Entretextos Volume 9 ; 2014 >
 
   }
@@ -140,7 +140,7 @@
       au < released ; 2010 ; 11-12 ; Espaço para a Saúde Volume 11-12 (2010) ; 2010 >
       au < released ; 2011 ; 12-13 ; Espaço para a Saúde Volume 12-13 (2011) ; 2011 >
       au < released ; 2012 ; 13 ; Espaço para a Saúde Volume 13 (2012) ; 2012 >
-      au < manifest ; 2013 ; 14 ; Espaço para a Saúde Volume 14 ; 2013 >
+      au < testing ; 2013 ; 14 ; Espaço para a Saúde Volume 14 ; 2013 >
       au < manifest ; 2014 ; 15 ; Espaço para a Saúde Volume 15 ; 2014 >
 
   }
@@ -321,7 +321,7 @@
       au < released ; 2010 ; 15 ; Mediações Volume 15 ; 2010 >
       au < released ; 2011 ; 16 ; Mediações Volume 16 ; 2011 >
       au < released ; 2012 ; 17 ; Mediações Volume 17 ; 2012 >
-      au < manifest ; 2013 ; 18 ; Mediações Volume 18 ; 2013 >
+      au < testing ; 2013 ; 18 ; Mediações Volume 18 ; 2013 >
       au < expected ; 2014 ; 19 ; Mediações Volume 19 ; 2014 >
 
   }
@@ -357,7 +357,7 @@
       au < released ; 2010 ; 1 ; Projetica Volume 1 ; 2010 >
       au < released ; 2011 ; 2 ; Projetica Volume 2 ; 2011 >
       au < released ; 2012 ; 3 ; Projetica Volume 3 ; 2012 >
-      au < manifest ; 2013 ; 4 ; Projetica Volume 4 ; 2013 >
+      au < testing ; 2013 ; 4 ; Projetica Volume 4 ; 2013 >
       au < expected ; 2014 ; 5 ; Projetica Volume 5 ; 2014 >
 
   }
@@ -428,7 +428,7 @@
       au < released ; 2010 ; 14 ; Scientia Iuris Volume 14 ; 2010 >
       au < released ; 2011 ; 15 ; Scientia Iuris Volume 15 ; 2011 >
       au < released ; 2012 ; 16 ; Scientia Iuris Volume 16 ; 2012 >
-      au < manifest ; 2013 ; 17 ; Scientia Iuris Volume 17 ; 2013 >
+      au < testing ; 2013 ; 17 ; Scientia Iuris Volume 17 ; 2013 >
       au < expected ; 2014 ; 18 ; Scientia Iuris Volume 18 ; 2014 >
 
   }
@@ -480,7 +480,7 @@
       au < released ; 2010 ; 31 ; Semina: Ciências Agrárias Volume 31 ; 2010 >
       au < released ; 2011 ; 32 ; Semina: Ciências Agrárias Volume 32 ; 2011 >
       au < released ; 2012 ; 33 ; Semina: Ciências Agrárias Volume 33 ; 2012 >
-      au < manifest ; 2013 ; 34 ; Semina: Ciências Agrárias Volume 34 ; 2013 >
+      au < testing ; 2013 ; 34 ; Semina: Ciências Agrárias Volume 34 ; 2013 >
       au < manifest ; 2014 ; 35 ; Semina: Ciências Agrárias Volume 35 ; 2014 >
 
   }
@@ -529,7 +529,7 @@
       au < released ; 2010 ; 31 ; Semina: Ciências Biológicas e da Saúde Volume 31 ; 2010 >
       au < released ; 2011 ; 32 ; Semina: Ciências Biológicas e da Saúde Volume 32 ; 2011 >
       au < released ; 2012 ; 33 ; Semina: Ciências Biológicas e da Saúde Volume 33 ; 2012 >
-      au < manifest ; 2013 ; 34 ; Semina: Ciências Biológicas e da Saúde Volume 34 ; 2013 >
+      au < testing ; 2013 ; 34 ; Semina: Ciências Biológicas e da Saúde Volume 34 ; 2013 >
       au < expected ; 2014 ; 35 ; Semina: Ciências Biológicas e da Saúde Volume 35 ; 2014 >
 
   }
@@ -577,7 +577,7 @@
       au < released ; 2010 ; 31 ; Semina: Ciências Exatas e Tecnológicas Volume 31 ; 2010 >
       au < released ; 2011 ; 32 ; Semina: Ciências Exatas e Tecnológicas Volume 32 ; 2011 >
       au < released ; 2012 ; 33 ; Semina: Ciências Exatas e Tecnológicas Volume 33 ; 2012 >
-      au < manifest ; 2013 ; 34 ; Semina: Ciências Exatas e Tecnológicas Volume 34 ; 2013 >
+      au < testing ; 2013 ; 34 ; Semina: Ciências Exatas e Tecnológicas Volume 34 ; 2013 >
       au < manifest ; 2014 ; 35 ; Semina: Ciências Exatas e Tecnológicas Volume 35 ; 2014 >
 
   }
@@ -613,7 +613,7 @@
       au < released ; 2010 ; 31 ; Semina: Ciências Sociais e Humanas Volume 31 ; 2010 >
       au < released ; 2011 ; 32 ; Semina: Ciências Sociais e Humanas Volume 32 ; 2011 >
       au < released ; 2012 ; 33 ; Semina: Ciências Sociais e Humanas Volume 33 ; 2012 >
-      au < manifest ; 2013 ; 34 ; Semina: Ciências Sociais e Humanas Volume 34 ; 2013 >
+      au < testing ; 2013 ; 34 ; Semina: Ciências Sociais e Humanas Volume 34 ; 2013 >
       au < expected ; 2014 ; 35 ; Semina: Ciências Sociais e Humanas Volume 35 ; 2014 >
 
   }
@@ -633,7 +633,7 @@
       au < released ; 2010 ; 13 ; Serviço Social em Revista Volume 13 ; 2010 >
       au < released ; 2011 ; 14 ; Serviço Social em Revista Volume 14 ; 2011 >
       au < released ; 2012 ; 15 ; Serviço Social em Revista Volume 15 ; 2012 >
-      au < manifest ; 2013 ; 16 ; Serviço Social em Revista Volume 16 ; 2013 >
+      au < testing ; 2013 ; 16 ; Serviço Social em Revista Volume 16 ; 2013 >
       au < expected ; 2014 ; 17 ; Serviço Social em Revista Volume 17 ; 2014 >
 
   }
@@ -650,22 +650,22 @@
       param[base_url] = http://www.uel.br/revistas/uel/
       param[journal_id] = signum
 
-      au < manifest ; 1998 ; 1 ; Signum: Estudos da Linguagem Volume 1 ; 1998 >
-      au < manifest ; 1999 ; 2 ; Signum: Estudos da Linguagem Volume 2 ; 1999 >
-      au < manifest ; 2000 ; 3 ; Signum: Estudos da Linguagem Volume 3 ; 2000 >
-      au < manifest ; 2001 ; 4 ; Signum: Estudos da Linguagem Volume 4 ; 2001 >
-      au < manifest ; 2002 ; 5 ; Signum: Estudos da Linguagem Volume 5 ; 2002 >
-      au < manifest ; 2003 ; 6 ; Signum: Estudos da Linguagem Volume 6 ; 2003 >
-      au < manifest ; 2004 ; 7 ; Signum: Estudos da Linguagem Volume 7 ; 2004 >
-      au < manifest ; 2005 ; 8 ; Signum: Estudos da Linguagem Volume 8 ; 2005 >
-      au < manifest ; 2006 ; 9 ; Signum: Estudos da Linguagem Volume 9 ; 2006 >
-      au < manifest ; 2007 ; 10 ; Signum: Estudos da Linguagem Volume 10 ; 2007 >
-      au < manifest ; 2008 ; 11 ; Signum: Estudos da Linguagem Volume 11 ; 2008 >
-      au < manifest ; 2009 ; 12 ; Signum: Estudos da Linguagem Volume 12 ; 2009 >
-      au < manifest ; 2010 ; 13 ; Signum: Estudos da Linguagem Volume 13 ; 2010 >
-      au < manifest ; 2011 ; 14 ; Signum: Estudos da Linguagem Volume 14 ; 2011 >
-      au < manifest ; 2012 ; 15 ; Signum: Estudos da Linguagem Volume 15 ; 2012 >
-      au < manifest ; 2013 ; 16 ; Signum: Estudos da Linguagem Volume 16 ; 2013 >
+      au < testing ; 1998 ; 1 ; Signum: Estudos da Linguagem Volume 1 ; 1998 >
+      au < testing ; 1999 ; 2 ; Signum: Estudos da Linguagem Volume 2 ; 1999 >
+      au < testing ; 2000 ; 3 ; Signum: Estudos da Linguagem Volume 3 ; 2000 >
+      au < testing ; 2001 ; 4 ; Signum: Estudos da Linguagem Volume 4 ; 2001 >
+      au < testing ; 2002 ; 5 ; Signum: Estudos da Linguagem Volume 5 ; 2002 >
+      au < testing ; 2003 ; 6 ; Signum: Estudos da Linguagem Volume 6 ; 2003 >
+      au < testing ; 2004 ; 7 ; Signum: Estudos da Linguagem Volume 7 ; 2004 >
+      au < testing ; 2005 ; 8 ; Signum: Estudos da Linguagem Volume 8 ; 2005 >
+      au < testing ; 2006 ; 9 ; Signum: Estudos da Linguagem Volume 9 ; 2006 >
+      au < testing ; 2007 ; 10 ; Signum: Estudos da Linguagem Volume 10 ; 2007 >
+      au < testing ; 2008 ; 11 ; Signum: Estudos da Linguagem Volume 11 ; 2008 >
+      au < testing ; 2009 ; 12 ; Signum: Estudos da Linguagem Volume 12 ; 2009 >
+      au < testing ; 2010 ; 13 ; Signum: Estudos da Linguagem Volume 13 ; 2010 >
+      au < testing ; 2011 ; 14 ; Signum: Estudos da Linguagem Volume 14 ; 2011 >
+      au < testing ; 2012 ; 15 ; Signum: Estudos da Linguagem Volume 15 ; 2012 >
+      au < testing ; 2013 ; 16 ; Signum: Estudos da Linguagem Volume 16 ; 2013 >
       au < expected ; 2014 ; 17 ; Signum: Estudos da Linguagem Volume 17 ; 2014 >
 
   }
