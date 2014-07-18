@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.65.6.2 2014-07-18 15:49:51 wkwilson Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.65.6.3 2014-07-18 16:32:18 wkwilson Exp $
  */
 
 /*
@@ -45,7 +45,6 @@ import org.lockss.util.*;
 import org.lockss.util.Constants.RegexpContext;
 import org.lockss.util.urlconn.*;
 import org.lockss.crawler.*;
-import org.lockss.oai.*;
 import org.lockss.rewriter.*;
 import org.lockss.extractor.*;
 
@@ -1463,49 +1462,6 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertEquals(ListUtil.list(nonSubstPat),
 		 getPatterns(au4.makeNonSubstanceUrlPatterns()));
 
-  }
-
-  public void testOaiDefaultDC() throws Exception {
-    MyPluginManager pmgr = new MyPluginManager();
-    getMockLockssDaemon().setPluginManager(pmgr);
-    pmgr.initService(getMockLockssDaemon());
-
-    // Load an OAI plugin definition
-    String pname = "org.lockss.plugin.definable.OaiTestPlugin1";
-    String key = PluginManager.pluginKeyFromId(pname);
-    assertTrue("Plugin was not successfully loaded",
-	       pmgr.ensurePluginLoaded(key));
-    Plugin plug = pmgr.getPlugin(key);
-    assertTrue(plug.toString() + " not a DefinablePlugin",
-	       plug instanceof DefinablePlugin);
-    MyDefinablePlugin defplug = (MyDefinablePlugin)plug;
-
-    // Configure and create an AU
-    Properties p = new Properties();
-    p.put("base_url", "http://base.foo/base_path/");
-    p.put("resolver_url", "http://resolv.er/path/");
-    p.put("oai_request_url", "http://oai.meta/path/");
-    p.put("journal_code", "J47");
-    p.put("year", "1984");
-    p.put("issue_set", "1,2,3,3a");
-    p.put("num_issue_range", "3-7");
-    p.put("oai_spec", "http://oai.spec/specspec");
-    Configuration auConfig = ConfigManager.fromProperties(p);
-    DefinableArchivalUnit au = (DefinableArchivalUnit)plug.createAu(auConfig);
-
-    assertSame(plug, au.getPlugin());
-
-    assertTrue(au.getCrawlSpec() instanceof OaiCrawlSpec);
-    OaiCrawlSpec cspec = (OaiCrawlSpec)au.getCrawlSpec();
-    OaiRequestData reqdata = cspec.getOaiRequestData();
-    assertEquals("http://oai.meta/path/", reqdata.getOaiRequestHandlerUrl());
-    assertEquals("http://purl.org/dc/elements/1.1/", reqdata.getMetadataNamespaceUrl());
-    assertEquals("identifier", reqdata.getUrlContainerTagName());
-    assertEquals("http://oai.spec/specspec", reqdata.getAuSetSpec());
-    assertEquals("oai_dc", reqdata.getMetadataPrefix());
-
-    // XXX more tests when OaiRequestData and handler creation driven by
-    // plugin.
   }
 
   HttpResultMap getHttpResultMap(DefinablePlugin plugin) {
