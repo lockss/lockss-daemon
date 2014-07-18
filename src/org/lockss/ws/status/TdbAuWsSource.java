@@ -1,5 +1,5 @@
 /*
- * $Id: TdbAuWsSource.java,v 1.1 2014-07-11 20:08:57 fergaloy-sf Exp $
+ * $Id: TdbAuWsSource.java,v 1.2 2014-07-18 16:51:49 fergaloy-sf Exp $
  */
 
 /*
@@ -144,13 +144,7 @@ public class TdbAuWsSource extends TdbAuWsResult {
       if (auId == null) {
 	setActive(false);
       } else {
-	ArchivalUnit au = getPluginManager().getAuFromId(auId);
-
-	if (au == null) {
-	  setActive(false);
-	} else {
-	  setActive(getPluginManager().isActiveAu(au));
-	}
+	setActive(null != getPluginManager().getAuFromId(auId));
       }
 
       activePopulated = true;
