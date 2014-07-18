@@ -1,10 +1,10 @@
 /*
- * $Id: Logger.java,v 1.59 2013-06-19 22:56:48 fergaloy-sf Exp $
+ * $Id: Logger.java,v 1.59.12.1 2014-07-18 15:59:07 wkwilson Exp $
  */
 
 /*
 
-Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,6 +36,7 @@ import java.sql.SQLException;
 import java.text.Format;
 
 import org.apache.commons.collections.map.ReferenceMap;
+import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.time.FastDateFormat;
 
 import org.lockss.config.*;
@@ -628,7 +629,8 @@ public class Logger {
    */
   public void log(int level, String msg, Throwable e) {
     if (isLevel(level)) {
-      StringBuffer sb = new StringBuffer();
+      StringBuilder sb = new StringBuilder();
+      msg = StringUtils.stripEnd(msg, null);
       if (idThread) {
 	sb.append(getThreadId(Thread.currentThread()));
 	sb.append("-");

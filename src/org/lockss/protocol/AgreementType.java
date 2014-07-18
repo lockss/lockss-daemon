@@ -1,10 +1,10 @@
 /*
- * $Id: AgreementType.java,v 1.1 2013-08-19 22:33:16 barry409 Exp $
+ * $Id: AgreementType.java,v 1.1.10.1 2014-07-18 15:59:11 wkwilson Exp $
  */
 
 /*
 
-  Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+  Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
   all rights reserved.
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -43,7 +43,11 @@ package org.lockss.protocol;
  * recorded percent agreement, the calculated percent agreements are
  * used to decide if a repair request should be honored, and hints
  * are used to try to find willing repairers likely to honor repair
- * requests. */
+ * requests.
+ * 
+ * The enumerated values in this class need to be match those in class
+ * {@link org.lockss.ws.entities.AgreementTypeWs}.
+ */
 public enum AgreementType {
   /** A poll with all content hashed and tallied. Recorded by
    * poller. 
@@ -69,5 +73,24 @@ public enum AgreementType {
   SYMMETRIC_POR_HINT,
   /** The hint given a poller by a voter after a symmetric POP
    * poll. Recorded by poller. */
-  SYMMETRIC_POP_HINT
+  SYMMETRIC_POP_HINT;
+
+  public static AgreementType[] allTypes() {
+    return AgreementType.values();
+  }
+
+  public static AgreementType[] primaryTypes() {
+    return new AgreementType[] { POR, POP, SYMMETRIC_POR, SYMMETRIC_POP };
+  }
+
+  public static AgreementType getHintType(AgreementType type) {
+    switch (type) {
+    case POR: return AgreementType.POR_HINT;
+    case POP: return AgreementType.POP_HINT;
+    case SYMMETRIC_POR: return AgreementType.SYMMETRIC_POR_HINT;
+    case SYMMETRIC_POP: return AgreementType.SYMMETRIC_POP_HINT;
+    }
+    return type;
+  }
+
 }

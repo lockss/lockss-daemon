@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.83 2014-01-14 04:29:46 tlipkis Exp $
+ * $Id: ServeContent.java,v 1.83.4.1 2014-07-18 15:59:04 wkwilson Exp $
  */
 
 /*
@@ -486,28 +486,20 @@ public class ServeContent extends LockssServlet {
     // perform special handling for an OpenUrl
     try {
       OpenUrlInfo resolved = OpenUrlResolver.noOpenUrlInfo;
-      String doi = getParameter("doi");
-      if (!StringUtil.isNullString(doi)) {
-        // transform convenience representation of doi to OpenURL form
-        // (ignore other parameters)
-        if (log.isDebug3()) log.debug3("Resolving DOI: " + doi);
-        resolved = openUrlResolver.resolveFromDOI(doi);
-        requestType = AccessLogType.Doi;
-      } else {
-        // If any params, pass them all to OpenUrl resolver
-        Map<String,String> pmap = getParamsAsMap();
-        if (!pmap.isEmpty()) {
-          if (log.isDebug3()) log.debug3("Resolving OpenUrl: " + pmap);
-          resolved = openUrlResolver.resolveOpenUrl(pmap);
-          requestType = AccessLogType.OpenUrl;
-        }
+
+      // If any params, pass them all to OpenUrl resolver
+      Map<String,String> pmap = getParamsAsMap();
+      if (!pmap.isEmpty()) {
+        if (log.isDebug3()) log.debug3("Resolving OpenUrl: " + pmap);
+        resolved = openUrlResolver.resolveOpenUrl(pmap);
+        requestType = AccessLogType.OpenUrl;
       }
 
-      url = null;
-      if (resolved.getResolvedTo() != ResolvedTo.NONE) {
+      url = resolved.getResolvedUrl();
+      if (   (url != null)
+          || (resolved.getResolvedTo() != ResolvedTo.NONE)) { 
         // record type of access for logging
         accessLogInfo = resolved.getResolvedTo().toString();
-        url = resolved.getResolvedUrl();
         handleOpenUrlInfo(resolved);
         return;
       }
@@ -1458,7 +1450,9 @@ public class ServeContent extends LockssServlet {
           block.add("<h2>Found requested publisher</h2>");
         } else {
           block.add("<h2>");
+          block.add("Publisher: '");
           block.add(bibliographicItem.getPublisherName());
+          block.add("'");
           block.add("</h2>");
         }
 
@@ -1475,7 +1469,9 @@ public class ServeContent extends LockssServlet {
           block.add("<h2>Found requested title</h2>");
         } else {
           block.add("<h2>");
+          block.add("Publication: '");
           block.add(bibliographicItem.getPublicationTitle());
+          block.add("'");
           block.add("</h2>");
 
           addPublisher(table, bibliographicItem);
@@ -1495,7 +1491,9 @@ public class ServeContent extends LockssServlet {
           block.add("<h2>Found requested volume</h2>");
         } else {
           block.add("<h2>");
+          block.add("Volume: '");
           block.add(bibliographicItem.getName());
+          block.add("'");
           block.add("</h2>");
 
           addPublisher(table, bibliographicItem);
@@ -1518,7 +1516,9 @@ public class ServeContent extends LockssServlet {
           block.add("<h2>Found requested issue</h2>");
         } else {
           block.add("<h2>");
+          block.add("Issue: '");
           block.add(bibliographicItem.getName());
+          block.add("'");
           block.add("</h2>");
 
           addPublisher(table, bibliographicItem);
@@ -1548,7 +1548,9 @@ public class ServeContent extends LockssServlet {
           block.add("<h2>Found requested chapter</h2>");
         } else {
           block.add("<h2>");
+          block.add("Chapter: '");
           block.add(bibliographicItem.getName());
+          block.add("'");
           block.add("</h2>");
 
           addPublisher(table, bibliographicItem);
@@ -1579,7 +1581,9 @@ public class ServeContent extends LockssServlet {
           block.add("<h2>Found requested article</h2>");
         } else {
           block.add("<h2>");
+          block.add("Article: '");
           block.add(bibliographicItem.getName());
+          block.add("'");
           block.add("</h2>");
 
           addPublisher(table, bibliographicItem);
@@ -1605,10 +1609,10 @@ public class ServeContent extends LockssServlet {
 
       default:
         // display other page for ResolvedTo.OTHER
-        block.add("<h2>Found requested page</h2>");
+        block.add("<h2>Found requested item</h2>");
 
         addLink(table,
-            "Article is available at the publisher" + proxyMsg,
+            "Item is available at the publisher" + proxyMsg,
             "Selecting link takes you away from this LOCKSS box.");
 
 
@@ -1781,7 +1785,8 @@ public class ServeContent extends LockssServlet {
    */
   protected Collection<ArchivalUnit> getCandidateAus(
       BibliographicItem bibliographicItem) {
-    Collection<ArchivalUnit> candidateAus = new ArrayList<ArchivalUnit>();
+    Collection<ArchivalUnit> candidateAus = 
+      new TreeSet<ArchivalUnit>(new AuOrderComparator());
 
     Tdb tdb = ConfigManager.getCurrentConfig().getTdb();
     String isbn = bibliographicItem.getIsbn();
@@ -1800,16 +1805,29 @@ public class ServeContent extends LockssServlet {
       }
 
     } else {
-      // get TdbAus by publisher and title
+      // get TdbAus by publisher and/or title
       String title = bibliographicItem.getPublicationTitle();
       String publisher = bibliographicItem.getPublisherName();
       TdbPublisher tdbpublisher = tdb.getTdbPublisher(publisher);
-      if (tdbpublisher != null) {
-        Collection<TdbTitle> tdbtitles =
-            tdbpublisher.getTdbTitlesByName(title);
+      if (title != null) {
+        // get AUs for specified title
+        Collection<TdbTitle> tdbtitles;
+        if (tdbpublisher != null) {
+          tdbtitles = tdbpublisher.getTdbTitlesByName(title);
+        } else {
+          tdbtitles = tdb.getTdbTitlesByName(title);
+        }
         tdbaus = new ArrayList<TdbAu>();
         for (TdbTitle tdbtitle : tdbtitles) {
           tdbaus.addAll(tdbtitle.getTdbAus());
+        }
+      } else if (tdbpublisher != null) {
+        // get AUs for specified publisher
+        Iterator<TdbAu> tdbAuItr = tdbpublisher.tdbAuIterator();
+        tdbaus = new ArrayList<TdbAu>();
+        while (tdbAuItr.hasNext()) {
+          TdbAu tdbau = tdbAuItr.next();
+          tdbaus.add(tdbau);
         }
       }
     }

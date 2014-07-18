@@ -1,5 +1,5 @@
 /*
- * $Id: DublinCoreLinkExtractor.java,v 1.2 2010-04-02 23:19:15 pgust Exp $
+ * $Id: DublinCoreLinkExtractor.java,v 1.2.66.1 2014-07-18 15:59:00 wkwilson Exp $
  */
 
 /*
@@ -33,12 +33,11 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.extractor;
 
 import java.io.*;
-import java.util.Enumeration;
+import java.util.*;
 
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit;
-import org.lockss.util.Logger;
-import org.lockss.util.StringUtil;
+import org.lockss.util.*;
 import org.w3c.rdf.model.*;
 import org.w3c.rdf.syntax.RDFParser;
 import org.w3c.rdf.util.*;
@@ -60,6 +59,19 @@ public class DublinCoreLinkExtractor implements LinkExtractor {
   
   private static final Logger log = Logger.getLogger("DublinCoreLinkExtractor");
 
+  /** Resource name of local copy of expected DTD */
+  static final String DTD_RESOURCE = "dcmes-xml-20000714.dtd";
+
+  /** Map known DTD URLs to their local resource name */
+  private static final Map<String,String> LOCAL_DTD_NAMES = 
+    MapUtil.map("http://dublincore.org/schemas/dcmes-xml-20000714.dtd",
+		DTD_RESOURCE,
+		"http://purl.org/dc/schemas/dcmes-xml-20000714.dtd",
+		DTD_RESOURCE);
+
+  private static Map<String,String> LOCAL_DTDS = new HashMap<String,String>();
+
+
   public void extractUrls(ArchivalUnit au, InputStream in, String encoding,
                           String srcUrl, Callback cb)
           throws IOException, PluginException {
@@ -72,12 +84,27 @@ public class DublinCoreLinkExtractor implements LinkExtractor {
 
     RDFFactory f = new RDFFactoryImpl();
     Model m = f.createModel();
+
+    // Create a parser with a custom EntityResolver, which returns a local
+    // copy of the expected DTD.  (SiRPAC implements EntityResolver)
+
     RDFParser parser = 
-      new org.w3c.rdf.implementation.syntax.sirpac.SiRPAC();
+      new org.w3c.rdf.implementation.syntax.sirpac.SiRPAC() {
+	@Override
+	public InputSource resolveEntity(String publicID, String systemID)
+	    throws SAXException {
+	  String dtdstr = getDtd(systemID);
+	  if (dtdstr != null) {
+	    log.debug3("Substituting local DTD for " + systemID);
+	    return new InputSource(new StringReader(dtdstr));
+	  }
+	  log.debug2("Using original DTD: " + publicID + ", " + systemID);
+	  return super.resolveEntity(publicID, systemID);
+	}
+      };
     
     try {
-      log.info("*** Creating DublinCoreLinkExtractor with source URL " 
-               + srcUrl);
+      log.debug("Parsing source URL " + srcUrl);
 
       // Pass in the original source URL
       m.setSourceURI(srcUrl);
@@ -96,7 +123,7 @@ public class DublinCoreLinkExtractor implements LinkExtractor {
         // We're only looking at the statements whose predicates are named
         // 'identifier', of which there should be only one per statement.
         if ("identifier".equals(predicate.getLocalName())) {
-          log.info("*** Found link: " + subject.getURI());
+          log.debug2("Found link: " + subject.getURI());
           // the RDF spec says that this may be an absolute or relative URL.
           cb.foundLink(subject.getURI());
         }
@@ -111,6 +138,30 @@ public class DublinCoreLinkExtractor implements LinkExtractor {
     }
   }
   
+  String getDtd(String url) {
+    synchronized (LOCAL_DTDS) {
+      String str = LOCAL_DTDS.get(url);
+      if (str == null) {
+	String resname = LOCAL_DTD_NAMES.get(url);
+	if (resname != null) {
+	  InputStream in = null;
+	  try {
+	    in = this.getClass().getResourceAsStream(resname);
+	    str = StringUtil.fromInputStream(in);
+	  } catch (IOException e) {
+	    log.warning("Couldn't load Dublin Core rdf DTD, using empty DTD",
+			e);
+	    str = "";
+	  } finally {
+	    IOUtil.safeClose(in);
+	  }
+	  LOCAL_DTDS.put(url, str);
+	}
+      }
+      return str;
+    }
+  }
+
   public static class Factory implements LinkExtractorFactory {
     public LinkExtractor createLinkExtractor(String mimeType) {
       return new DublinCoreLinkExtractor();

@@ -13,38 +13,42 @@ CLASSPATH=`cat test/test-classpath`
 export CLASSPATH
 
 args=""
+quiet=""
 
 while true ; do
   case "$1" in
+    "-q" )
+      quiet=1  
+      shift; continue;;
     "-classpath" )
       if [ -z "$CLASSPATH" ] ; then
 	CLASSPATH="$2"
       else
 	CLASSPATH="$CLASSPATH":"$2"
       fi
-      echo "CLASSPATH=$CLASSPATH"
+      [ -z "$quiet" ] && echo "CLASSPATH=$CLASSPATH"
       shift; shift; continue;;
-    "-1.4" )
-      if [ -z "$JAVA_14_HOME" ] ; then
-	echo "-1.4 option requires JAVA_14_HOME to point to 1.4 install dir"
+    "-1.7" )
+      if [ -z "$JAVA_17_HOME" ] ; then
+	echo "-1.7 option requires JAVA_17_HOME to point to 1.7 install dir" >&2
 	exit 1;
       fi
-      JAVA_HOME="${JAVA_14_HOME}"
+      JAVA_HOME="${JAVA_17_HOME}"
       export JAVA_HOME
       PATH="$JAVA_HOME/bin:$PATH"
       export PATH
-      echo JAVA_HOME="$JAVA_HOME"
+      [ -z "$quiet" ] && echo JAVA_HOME="$JAVA_HOME"
       shift; continue;;
-    "-1.5" )
-      if [ -z "$JAVA_15_HOME" ] ; then
-	echo "-1.5 option requires JAVA_15_HOME to point to 1.5 install dir"
+    "-1.8" )
+      if [ -z "$JAVA_18_HOME" ] ; then
+	echo "-1.8 option requires JAVA_18_HOME to point to 1.8 install dir" >&2
 	exit 1;
       fi
-      JAVA_HOME="${JAVA_15_HOME}"
+      JAVA_HOME="${JAVA_18_HOME}"
       export JAVA_HOME
       PATH="$JAVA_HOME/bin:$PATH"
       export PATH
-      echo JAVA_HOME="$JAVA_HOME"
+      [ -z "$quiet" ] && echo JAVA_HOME="$JAVA_HOME"
       shift; continue;;
     "-*" )
       args="$args $1"

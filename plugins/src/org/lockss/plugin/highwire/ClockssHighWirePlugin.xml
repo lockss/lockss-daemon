@@ -13,15 +13,15 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>92</string>
+    <string>96</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
     <string>org.lockss.plugin.highwire.HighWirePressPlugin</string>
   </entry>
-   <entry>
+  <entry>
     <string>plugin_parent_version</string>
-    <string>92</string>
+    <string>96</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -33,14 +33,14 @@
   </entry>
   <entry>
     <string>au_def_pause_time</string>
-    <long>500</long>
+    <long>6000</long>
   </entry>
   <entry>
     <string>au_mime_rate_limiter_map</string>
     <map>
       <entry>
         <string>application/pdf,text/html,application/vnd.ms-powerpoint</string>
-        <string>1/1000</string>
+        <string>1/6000</string>
       </entry>
     </map>
   </entry>

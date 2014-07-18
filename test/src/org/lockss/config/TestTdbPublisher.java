@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdbPublisher.java,v 1.8 2013-03-06 08:06:21 tlipkis Exp $
+ * $Id: TestTdbPublisher.java,v 1.8.22.1 2014-07-18 15:49:47 wkwilson Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import java.util.*;
  * Test class for <code>org.lockss.config.TdbPublisher</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdbPublisher.java,v 1.8 2013-03-06 08:06:21 tlipkis Exp $
+ * @version $Id: TestTdbPublisher.java,v 1.8.22.1 2014-07-18 15:49:47 wkwilson Exp $
  */
 
 public class TestTdbPublisher extends LockssTestCase {
@@ -118,18 +118,35 @@ public class TestTdbPublisher extends LockssTestCase {
    */
   public void testIssns() throws TdbException {
     TdbPublisher publisher = new TdbPublisher("Test Publisher");
-    TdbTitle title = new TdbTitle("Test Title", "0000-0000");
-    publisher.addTdbTitle(title);
-    TdbAu au = new TdbAu("Test AU", "pluginA");
-    title.addTdbAu(au);
-    au.setPropertyByName("issn", "1234-5678");
-    au.setPropertyByName("eissn", "2468-1357");
-    au.setPropertyByName("issnl", "8765-4321");
-    au.setAttr("isbn", "1234567890");
-    assertEquals(title, publisher.getTdbTitleByIssn("1234-5678"));
-    assertEquals(title, publisher.getTdbTitleByIssn("2468-1357"));
-    assertEquals(title, publisher.getTdbTitleByIssn("8765-4321"));
-    assertEquals(1, publisher.getTdbAusByIsbn("1234567890").size());
+    TdbTitle title1 = new TdbTitle("Test Title 1", "TestTitle1");
+    publisher.addTdbTitle(title1);
+    TdbAu au1 = new TdbAu("Test AU 1", "pluginA");
+    title1.addTdbAu(au1);
+    au1.setPropertyByName("issn", "1234-5678");
+    au1.setPropertyByName("eissn", "2468-1357");
+    au1.setPropertyByName("issnl", "8765-4321");
+    au1.setAttr("isbn", "1234567890");
+    assertEquals(title1, publisher.getTdbTitleByIssn("1234-5678"));
+    assertEquals(title1, publisher.getTdbTitleByIssn("2468-1357"));
+    assertEquals(title1, publisher.getTdbTitleByIssn("8765-4321"));
+    assertSameElements(new TdbAu[] {au1}, 
+                       publisher.getTdbAusByIsbn("1234567890"));
+    assertSameElements(new TdbTitle[] {title1}, 
+                       publisher.getTdbTitlesByIssn("1234-5678"));
+    
+    // add second title with same elements
+    TdbTitle title2 = new TdbTitle("Test Title 2", "TestTitle2");
+    publisher.addTdbTitle(title2);
+    TdbAu au2 = new TdbAu("Test AU 2", "pluginB");
+    title2.addTdbAu(au2);
+    au2.setPropertyByName("issn", "1234-5678");
+    au2.setPropertyByName("eissn", "2468-1357");
+    au2.setPropertyByName("issnl", "8765-4321");
+    au2.setAttr("isbn", "1234567890");
+    assertSameElements(new TdbAu[] {au1, au2},
+                       publisher.getTdbAusByIsbn("1234567890"));
+    assertSameElements(new TdbTitle[] {title1, title2},
+                       publisher.getTdbTitlesByIssn("1234-5678"));
   }
   
   

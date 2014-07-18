@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdbparse.py,v 1.20.22.1 2014-05-05 17:32:34 wkwilson Exp $
+# $Id: tdbparse.py,v 1.20.22.2 2014-07-18 15:49:43 wkwilson Exp $
 
 __copyright__ = '''\
 Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,

@@ -1,10 +1,10 @@
 /*
- * $Id: TestPensoftHtmlHashFilterFactory.java,v 1.5 2014-04-02 21:35:46 aishizaki Exp $
+ * $Id: TestPensoftHtmlHashFilterFactory.java,v 1.5.2.1 2014-07-18 15:49:43 wkwilson Exp $
  */
 
 /*
 
- Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,10 +33,17 @@
 package org.lockss.plugin.pensoft;
 
 import java.io.*;
+import java.util.Iterator;
+import java.util.List;
 
 import org.lockss.util.*;
 import org.lockss.daemon.PluginException;
+import org.lockss.extractor.ArticleMetadata;
+import org.lockss.extractor.FileMetadataExtractor;
+import org.lockss.extractor.FileMetadataListExtractor;
 import org.lockss.extractor.MetadataField;
+import org.lockss.extractor.MetadataTarget;
+import org.lockss.plugin.CachedUrl;
 import org.lockss.test.*;
 
 public class TestPensoftHtmlHashFilterFactory extends LockssTestCase {
@@ -115,25 +122,24 @@ public class TestPensoftHtmlHashFilterFactory extends LockssTestCase {
     "Not Included"+"</td>Hello World";
   private static final String HtmlHashL = "<table width=\"186\">"+
     "Not Included"+"</table>Hello World";
-  private static final String HtmlHashM = "<div id=newscont>"+
-    "Not Included"+"</div>Hello World";
-  private static final String HtmlHashN = "<td width=\"165\" class=\"green\">Viewed by : <span class=more3 >3434</span></td>"+
-    "Random Stuff"+
+
+  private static final String HtmlHashN = 
     "<td class=\"green2\" valign=\"top\"><b>doi: "+
     "</b>10.3897/biorisk.7.1969<br><b>Published:</b> 17.10.2012"+
     "<br /><br /><b>Viewed by: </b>3424"+
     "<td class=\"more3\">Hello World </td>";
-  private static final String HtmlHashNFiltered = "Random Stuff<td class=\"more3\">Hello World </td>";
+  private static final String HtmlHashNFiltered = "<td class=\"more3\">Hello World </td>";
   private static final String HtmlHashO = "<td align=center><a href=\"journals/zookeys/issue/341/\" class=more3>Current Issue</a></td>"+
     "Hello World";
   private static final String HtmlHashP = "<td align=\"left\" class=\"texttah11\" width=\"200px\"></td>"+
         "<td align=\"left\" class=\"texttah11\">Pages:&nbsp;1-20&nbsp;| Viewed by:&nbsp;2128</td>";
   private static final String HtmlHashPFiltered = "<td align=\"left\" class=\"texttah11\" width=\"200px\"></td>";
-  
+
+
   public void testFilterA() throws Exception {
     InputStream inA;
 
-    /* viewed-by test  */ 
+    // viewed-by test 
     inA = fact.createFilteredInputStream(mau, 
           new StringInputStream(HtmlHashA), ENC);
     String filtStrA = StringUtil.fromInputStream(inA);
@@ -205,10 +211,6 @@ public class TestPensoftHtmlHashFilterFactory extends LockssTestCase {
     filtStr = StringUtil.fromInputStream(in);
     assertEquals(HtmlHashEFiltered, filtStr);
     in = fact.createFilteredInputStream(mau, 
-        new StringInputStream(HtmlHashM), ENC);    
-    filtStr = StringUtil.fromInputStream(in);
-    assertEquals(HtmlHashEFiltered, filtStr);
-    in = fact.createFilteredInputStream(mau, 
         new StringInputStream(HtmlHashO), ENC);    
     filtStr = StringUtil.fromInputStream(in);
     assertEquals(HtmlHashEFiltered, filtStr);
@@ -217,16 +219,20 @@ public class TestPensoftHtmlHashFilterFactory extends LockssTestCase {
 
   public void testFilterViewedBy() throws Exception {
     InputStream in;
+    String filtStr = null;
+    
     in = fact.createFilteredInputStream(mau, 
         new StringInputStream(HtmlHashN), ENC);    
-    String filtStr = StringUtil.fromInputStream(in);
+    filtStr = StringUtil.fromInputStream(in);
     assertEquals(HtmlHashNFiltered, filtStr);
+    
     in = fact.createFilteredInputStream(mau, 
         new StringInputStream(HtmlHashP), ENC);    
     filtStr = StringUtil.fromInputStream(in);
     assertEquals(HtmlHashPFiltered, filtStr);
 
   }
+  
 /*
   static final String input_1 = 
       "org/lockss/plugin/pensoft/orig.html";
@@ -259,6 +265,93 @@ public class TestPensoftHtmlHashFilterFactory extends LockssTestCase {
       IOUtil.safeClose(filtered2);
     }
   }
-  */
+*/
+/*  
+  String realTOCFile = "test_TOC.html";
+  String realABSFile = "test_viewedby.html";
+  String realFullFile = "test_Full.html";
+  String TOCFilteredFile = "org/lockss/plugin/pensoft/TOC_filtered.html";
+  String ABSFilteredFile = "org/lockss/plugin/pensoft/ABS_filtered.html";
+  String FullFilteredFile = "org/lockss/plugin/pensoft/Full_filtered.html";
 
+  String BASE_URL = "http://pensoft.net/";
+  public void testTOCFile() throws Exception {
+    //CIProperties xmlHeader = new CIProperties();
+    InputStream file_input = null;
+    PrintStream filtered_output = null;
+    try {
+      file_input = getResourceAsStream(realTOCFile);
+      String string_input = StringUtil.fromInputStream(file_input);
+      IOUtil.safeClose(file_input);
+
+      InputStream inA;
+
+      // viewed-by visual test for issue/TOC 
+      inA = fact.createFilteredInputStream(mau, 
+            new StringInputStream(string_input), ENC);
+      String filtStrA = StringUtil.fromInputStream(inA);
+      OutputStream outS = new FileOutputStream(TOCFilteredFile);
+      filtered_output = new PrintStream(outS);
+      filtered_output.print(filtStrA);
+      IOUtil.safeClose(filtered_output);
+      
+    }finally {
+      IOUtil.safeClose(file_input);
+      IOUtil.safeClose(filtered_output);
+    }
+
+  }
+  public void testABSFile() throws Exception {
+    //CIProperties xmlHeader = new CIProperties();
+    InputStream file_input = null;
+    PrintStream filtered_output = null;
+    try {
+      file_input = getResourceAsStream(realABSFile);
+      String string_input = StringUtil.fromInputStream(file_input);
+      IOUtil.safeClose(file_input);
+
+      InputStream inA;
+
+      // viewed-by visual test for abstract 
+      inA = fact.createFilteredInputStream(mau, 
+            new StringInputStream(string_input), ENC);
+      String filtStrA = StringUtil.fromInputStream(inA);
+      OutputStream outS = new FileOutputStream(ABSFilteredFile);
+      filtered_output = new PrintStream(outS);
+      filtered_output.print(filtStrA);
+      IOUtil.safeClose(filtered_output);
+      
+    }finally {
+      IOUtil.safeClose(file_input);
+      IOUtil.safeClose(filtered_output);
+    }
+
+  }
+  public void testFullFile() throws Exception {
+    //CIProperties xmlHeader = new CIProperties();
+    InputStream file_input = null;
+    PrintStream filtered_output = null;
+    try {
+      file_input = getResourceAsStream(realFullFile);
+      String string_input = StringUtil.fromInputStream(file_input);
+      IOUtil.safeClose(file_input);
+
+      InputStream inA;
+
+      // viewed-by test for full html  
+      inA = fact.createFilteredInputStream(mau, 
+            new StringInputStream(string_input), ENC);
+      String filtStrA = StringUtil.fromInputStream(inA);
+      OutputStream outS = new FileOutputStream(FullFilteredFile);
+      filtered_output = new PrintStream(outS);
+      filtered_output.print(filtStrA);
+      IOUtil.safeClose(filtered_output);
+      
+    }finally {
+      IOUtil.safeClose(file_input);
+      IOUtil.safeClose(filtered_output);
+    }
+
+  }
+  */
 }

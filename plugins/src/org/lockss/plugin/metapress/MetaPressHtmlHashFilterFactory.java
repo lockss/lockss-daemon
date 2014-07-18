@@ -1,10 +1,10 @@
 /*
- * $Id: MetaPressHtmlHashFilterFactory.java,v 1.7 2013-07-22 21:54:15 etenbrink Exp $
+ * $Id: MetaPressHtmlHashFilterFactory.java,v 1.7.6.1 2014-07-18 15:54:37 wkwilson Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,19 +34,22 @@ package org.lockss.plugin.metapress;
 
 import java.io.*;
 
-import org.apache.commons.io.IOUtils;
 import org.htmlparser.*;
 import org.htmlparser.filters.*;
 import org.htmlparser.nodes.TextNode;
 import org.htmlparser.tags.*;
 import org.htmlparser.util.SimpleNodeIterator;
+import org.lockss.config.TdbAu;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.util.Logger;
 
 
 public class MetaPressHtmlHashFilterFactory implements FilterFactory {
-
+  
+  protected static Logger log = Logger.getLogger(MetaPressHtmlHashFilterFactory.class);
+  
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
@@ -67,7 +70,11 @@ public class MetaPressHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("input", "id", "__EVENTVALIDATION"),
         HtmlNodeFilters.tagWithAttribute("input", "id", "__VIEWSTATE"),
         // Institution name and similar data
+        HtmlNodeFilters.tagWithAttribute("td", "class", "pageLeft"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "ctl00_SidebarRecognitionPanel"),
+        // search and other fields that change
+        HtmlNodeFilters.tagWithAttribute("td", "class", "sidebar"),
+        HtmlNodeFilters.tagWithAttributeRegex("td", "class", "secondarylinks", true),
         /*
          * SFX-related: find a <tr> tag, that has a single <td> child
          * whose 'class' attribute is set to 'labelValue', whose sole
@@ -104,10 +111,10 @@ public class MetaPressHtmlHashFilterFactory implements FilterFactory {
             return false;
           }
         },
-        // Copyright year but also session information
-        HtmlNodeFilters.tagWithAttribute("div", "class", "pageFooter"),
+        // Copyright year but also session information; match new pageFooterMP tag
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pageFooter"),
         // Dynamic URLs
-        HtmlNodeFilters.tagWithAttributeRegex("link", "href", "^/dynamic-file\\.axd"),
+        HtmlNodeFilters.tagWithAttributeRegex("link", "href", "^/dynamic-file[.]axd"),
         /*
          * This isn't satisfactory. We should be "rewriting" links so
          * that they are sanitized by the URL normalizer. This is a
@@ -123,9 +130,24 @@ public class MetaPressHtmlHashFilterFactory implements FilterFactory {
         // User Detail information (IP, Server, and user agent)
         HtmlNodeFilters.tagWithAttribute("div", "class", "FooterUserDetailContainer"),
     };
-    return new HtmlFilterInputStream(in,
-                                     encoding,
-                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    
+    HtmlFilterInputStream hfis = new HtmlFilterInputStream(in, encoding,
+        HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    // to handle errors like java.io.IOException: org.htmlparser.util.EncodingChangeException:
+    // Unable to sync new encoding within range of +/- 100 chars
+    // Allows the default of 100 to be overridden in tdb
+    if (au != null) {
+      TdbAu tdbau = au.getTdbAu();
+      if (tdbau != null) {
+        String range = tdbau.getAttr("EncodingMatchRange");
+        if (range != null && !range.isEmpty()) {
+          hfis.setEncodingMatchRange(Integer.parseInt(range));
+          log.debug3("Set setEncodingMatchRange: " + range);
+        }
+      } else {log.debug("tdbau was null");}
+    } else {log.warning("au was null");}
+    
+    return hfis;
   }
   
 }

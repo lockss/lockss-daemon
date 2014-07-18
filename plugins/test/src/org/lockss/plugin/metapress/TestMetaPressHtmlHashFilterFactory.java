@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetaPressHtmlHashFilterFactory.java,v 1.7 2013-07-29 16:52:33 alexandraohlson Exp $
+ * $Id: TestMetaPressHtmlHashFilterFactory.java,v 1.7.6.1 2014-07-18 15:49:49 wkwilson Exp $
  */
 
 /*
@@ -35,7 +35,6 @@ package org.lockss.plugin.metapress;
 import java.io.*;
 
 import org.lockss.util.*;
-import org.lockss.daemon.PluginException;
 import org.lockss.test.*;
 
 public class TestMetaPressHtmlHashFilterFactory extends LockssTestCase {
@@ -59,7 +58,7 @@ public class TestMetaPressHtmlHashFilterFactory extends LockssTestCase {
     "Indiana University, Bloomington <nobr>(641-02-015)</nobr></div>";
  
   private static final String footerInfoHtml =
-      "      <div class=\"pageFooterMP\">" +
+      "    <div class=\"pageFooterMP\">" +
           "<div class=\"MetaPress_Products_Reader_Web_UI_Controls_FooterControl\">" + 
           "<div id=\"SitePrivacyPolicy\" align=\"center\" class=\"MetaPress_Products_Reader_Web_UI_Controls_FooterControlUserDetails\">" +
           "<a style=\"padding:0.6em;\" href=\"http://public.metapress.com/download/common/MetaPress_Privacy.pdf\" target=\"_blank\">Metapress Privacy Policy</a>" +
@@ -70,10 +69,7 @@ public class TestMetaPressHtmlHashFilterFactory extends LockssTestCase {
           "</div>" +
           "</div>";
   private static final String footerInfoFiltered =
-      "      <div class=\"pageFooterMP\">" +
-          "<div class=\"MetaPress_Products_Reader_Web_UI_Controls_FooterControl\">" + 
-          "</div>" +
-          "</div>";
+      "    ";
   
   private static final String personalMenuHtml =
       "<td class=\"pageLeft\"> " +    
@@ -119,9 +115,7 @@ public class TestMetaPressHtmlHashFilterFactory extends LockssTestCase {
           "<br /><br /><img src=\"../images/common/spacer.gif\" style=\"height:1px;width:176;\" />" +           
           "</td>";
   private static final String personalMenuFiltered =
-      "<td class=\"pageLeft\"> " +    
-          "<br /><br /><img src=\"../images/common/spacer.gif\" style=\"height:1px;width:176;\" />" +           
-          "</td>";
+      "";
 
   // and this string meets the criteria for FooterUserDetailContainer
   static final String footerInfo2Html =
@@ -211,10 +205,7 @@ public class TestMetaPressHtmlHashFilterFactory extends LockssTestCase {
           "</tr><tr>" +
           "<td class=\"labelName\">ISSN</td><td class=\"labelValue\">1362-xxxx (Print)<br/>2050-xxxx (Online)</td>" +
           "</tr>" +
-          "</table></td><td valign=\"top\" class=\"MPReader_Content_PrimitiveHeadingControlSecondaryLinks\"><div>" +
-          "<a href=\"/personalization/save-item.mpx?code=Q433X32487\">Add to saved items</a>" +
-          "</div><div>" +
-          "</div></td>" +
+          "</table></td>" +
           "</tr><tr>" +
           "<td></td>" +
           "</tr>" +

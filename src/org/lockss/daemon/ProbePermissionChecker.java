@@ -1,10 +1,10 @@
 /*
- * $Id: ProbePermissionChecker.java,v 1.22 2012-03-12 05:26:38 tlipkis Exp $
+ * $Id: ProbePermissionChecker.java,v 1.22.42.1 2014-07-18 15:59:08 wkwilson Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,7 +33,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.daemon;
 
 import java.io.*;
-import java.util.*;
 
 import org.lockss.plugin.*;
 import org.lockss.util.*;
@@ -50,11 +49,11 @@ import org.lockss.extractor.*;
 
 public class ProbePermissionChecker implements PermissionChecker {
 
-  String probeUrl = null;
+  protected String probeUrl = null;
 
-  private static Logger logger = Logger.getLogger("ProbePermissionChecker");
+  private static Logger logger = Logger.getLogger(ProbePermissionChecker.class);
 
-  ArchivalUnit au;
+  protected ArchivalUnit au;
 
   public ProbePermissionChecker(ArchivalUnit au) {
     if (au == null) {
@@ -65,6 +64,7 @@ public class ProbePermissionChecker implements PermissionChecker {
 
   // For compatibility with plugins that supply a LoginPageChecker (which
   // is not used)
+  /** @deprecated use the single arg version */
   public ProbePermissionChecker(LoginPageChecker checker, ArchivalUnit au) {
     this(au);
   }

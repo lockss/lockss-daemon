@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireArchivalUnit.java,v 1.14 2012-08-08 07:19:52 tlipkis Exp $
+ * $Id: TestHighWireArchivalUnit.java,v 1.14.36.1 2014-07-18 15:49:50 wkwilson Exp $
  */
 
 /*
@@ -237,7 +237,7 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
     DefinableArchivalUnit au =
       makeAu(new URL("http://shadow1.stanford.edu/"), 42);
     CrawlWindow window = au.getCrawlSpec().getCrawlWindow();
-    assertNotNull(window);
+    assertNull(window); // currently the case
   }
 
   public static void main(String[] argv) {

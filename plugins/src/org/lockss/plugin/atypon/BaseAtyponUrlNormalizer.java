@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponUrlNormalizer.java,v 1.5 2013-12-23 18:30:45 alexandraohlson Exp $
+ * $Id: BaseAtyponUrlNormalizer.java,v 1.5.4.1 2014-07-18 15:54:34 wkwilson Exp $
  */
 /*
  Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
@@ -26,6 +26,7 @@ package org.lockss.plugin.atypon;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Pattern;
 
 import org.apache.commons.lang.StringUtils;
 import org.lockss.daemon.PluginException;
@@ -42,6 +43,9 @@ public class BaseAtyponUrlNormalizer implements UrlNormalizer {
   protected static Logger log = 
       Logger.getLogger("BaseAtyponUrlNormalizer");
   protected static final String SUFFIX = "?cookieSet=1";
+  protected static final String BEAN_SUFFIX = "?queryID=%24%7BresultBean.queryID%7D";
+  protected static final Pattern HASH_ARG_PATTERN = Pattern.compile("(\\.css|js)\\?\\d+$");
+  protected static final String  NO_ARG_REPLACEMENT = "";
   
   /* 
    * CITATION DOWNLOAD URL CLEANUP
@@ -52,8 +56,6 @@ public class BaseAtyponUrlNormalizer implements UrlNormalizer {
   private final String DOI_ARG = "doi";
   private final String FORMAT_ARG = "format";
   private final String INCLUDE_ARG = "include";
-  //These are the things that we need to end up with, in this order
-  private final String[] NEEDED_ARGUMENTS = {DOI_ARG, FORMAT_ARG, INCLUDE_ARG}; 
 
   public String normalizeUrl(String url, ArchivalUnit au)
       throws PluginException {
@@ -119,8 +121,21 @@ public class BaseAtyponUrlNormalizer implements UrlNormalizer {
       log.debug3("normalized citation download url: " + new_url);
       return new_url.toString();
     }
-    
-    // this wasn't a citation download URL (or it had malformed arguments so we can't normalize)
-    return StringUtils.chomp(url, SUFFIX); /* standard non citation download specific URLS */
+    // some CSS/JS files have a hash argument that isn't needed
+    String returnString = HASH_ARG_PATTERN.matcher(url).replaceFirst("$1");
+    if (!returnString.equals(url)) {    
+      // if we were a normalized css/js, then we're done - return
+      log.debug3("normalized css url: " + returnString);
+      return returnString;
+    }
+
+    // just remove any undesired suffixes
+    // if the suffix doesn't exist the url doesn't change, no sense wasting
+    // cycles checking if it exists before trying to remove
+    if (qmark >= 0) {
+      url = StringUtils.substringBeforeLast(url, BEAN_SUFFIX);
+      url = StringUtils.substringBeforeLast(url, SUFFIX);
+    }
+    return url;
   }
 }

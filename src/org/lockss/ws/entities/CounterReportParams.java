@@ -1,10 +1,10 @@
 /*
- * $Id: CounterReportParams.java,v 1.1 2013-03-22 04:47:32 fergaloy-sf Exp $
+ * $Id: CounterReportParams.java,v 1.1.18.1 2014-07-18 15:58:58 wkwilson Exp $
  */
 
 /*
 
- Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,12 +29,11 @@
  in this Software without prior written authorization from Stanford University.
 
  */
+package org.lockss.ws.entities;
 
 /**
  * A wrapper for the parameters used to request a COUNTER report.
  */
-package org.lockss.ws.entities;
-
 public class CounterReportParams {
   private String id;
   private Integer startMonth;
@@ -44,30 +43,65 @@ public class CounterReportParams {
   private String type;
   private String format;
 
+  /**
+   * Provides the identifier of the requested report.
+   * 
+   * @return a String with the identifier.
+   */
   public String getId() {
     return id;
   }
 
+  /**
+   * Provides the month at the start of the requested report period.
+   * 
+   * @return an Integer with the month (January = 1, December = 12).
+   */
   public Integer getStartMonth() {
     return startMonth;
   }
 
+  /**
+   * Provides the year at the start of the requested report period.
+   * 
+   * @return an Integer with the year.
+   */
   public Integer getStartYear() {
     return startYear;
   }
 
+  /**
+   * Provides the month at the end of the requested report period.
+   * 
+   * @return an Integer with the month (January = 1, December = 12).
+   */
   public Integer getEndMonth() {
     return endMonth;
   }
 
+  /**
+   * Provides the year at the end of the requested report period.
+   * 
+   * @return an Integer with the year.
+   */
   public Integer getEndYear() {
     return endYear;
   }
 
+  /**
+   * Provides the type of the requested report.
+   * 
+   * @return a String with the type (book or journal).
+   */
   public String getType() {
     return type;
   }
 
+  /**
+   * Provides the format of the requested report.
+   * 
+   * @return a String with the format (CSV or TSV).
+   */
   public String getFormat() {
     return format;
   }

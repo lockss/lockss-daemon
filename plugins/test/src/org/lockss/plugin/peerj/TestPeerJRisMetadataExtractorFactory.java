@@ -1,4 +1,4 @@
-/* $Id: TestPeerJRisMetadataExtractorFactory.java,v 1.1 2013-10-07 05:56:14 ldoan Exp $
+/* $Id: TestPeerJRisMetadataExtractorFactory.java,v 1.1.6.1 2014-07-18 15:49:52 wkwilson Exp $
 
  Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
@@ -110,7 +110,6 @@ public class TestPeerJRisMetadataExtractorFactory extends LockssTestCase {
 
   // the metadata that should be extracted
   String goodDoi = "10.1111/example.173";
-  String goodAccessUrl = "http://dx.doi.org//" + goodDoi;
   String goodAuthor1 = "A, Author1";
   String goodAuthor2 = "B, Author2";
   String goodSecondaryAuthor = "C, SecondaryAuthor";
@@ -124,13 +123,10 @@ public class TestPeerJRisMetadataExtractorFactory extends LockssTestCase {
   String goodStartPage = "Article start page";
   String goodJournalTitle = "Journal Title";
   String goodIssn = "1111-2222";
-  String goodPublisher = "PeerJ";
   
   private String createGoodContent() {
     StringBuilder sb = new StringBuilder();
     sb.append("TY  - JOUR");
-    sb.append("\nUR  - ");
-    sb.append(goodAccessUrl);
     sb.append("\nDO  - ");
     sb.append(goodDoi);
     sb.append("\nTI  - ");
@@ -196,10 +192,8 @@ public class TestPeerJRisMetadataExtractorFactory extends LockssTestCase {
     assertEquals(goodAbstract, md.get(MetadataField.FIELD_ABSTRACT));
     assertEquals(goodVolume, md.get(MetadataField.FIELD_VOLUME));
     assertEquals(goodStartPage, md.get(MetadataField.FIELD_START_PAGE));
-    assertEquals(goodJournalTitle, md.get(MetadataField.FIELD_JOURNAL_TITLE));
     assertEquals(goodIssn, md.get(MetadataField.FIELD_ISSN));
-    assertEquals(goodPublisher, md.get(MetadataField.FIELD_PUBLISHER));
-    assertEquals(goodAccessUrl, md.get(MetadataField.FIELD_ACCESS_URL));
+
   }
   
 }

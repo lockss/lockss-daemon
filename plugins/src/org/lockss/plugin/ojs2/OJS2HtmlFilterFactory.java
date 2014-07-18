@@ -1,10 +1,10 @@
 /*
- * $Id: OJS2HtmlFilterFactory.java,v 1.9 2013-10-14 19:55:19 etenbrink Exp $
+ * $Id: OJS2HtmlFilterFactory.java,v 1.9.6.1 2014-07-18 15:56:30 wkwilson Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,15 +36,38 @@ import java.io.InputStream;
 
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.*;
+import org.htmlparser.tags.CompositeTag;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 
 public class OJS2HtmlFilterFactory implements FilterFactory {
-
-    public InputStream createFilteredInputStream(ArchivalUnit au,
-                                                 InputStream in,
-                                                 String encoding) {
-        NodeFilter[] filters = new NodeFilter[] {
+  
+  /**
+   * A B(old) tag.  Registered with PrototypicalNodeFactory to cause B
+   * to be a CompositeTag.  See code samples in org.htmlparser.tags.
+   * @see HtmlFilterInputStream#makeParser()
+   */
+  public static class bTag extends CompositeTag {
+    
+    /**
+     * The set of names handled by this tag.
+     */
+    private static final String[] mIds = new String[] {"b"};
+    
+    /**
+     * Return the set of names handled by this tag.
+     * @return The names to be matched that create tags of this type.
+     */
+    public String[] getIds() {
+      return mIds;
+    }
+    
+  }
+  
+  public InputStream createFilteredInputStream(ArchivalUnit au,
+                                               InputStream in,
+                                               String encoding) {
+    NodeFilter[] filters = new NodeFilter[] {
             // Some OJS sites have a tag cloud
             HtmlNodeFilters.tagWithAttribute("div", "id", "sidebarKeywordCloud"),
             // Some OJS sites have a subscription status area
@@ -68,11 +91,26 @@ public class OJS2HtmlFilterFactory implements FilterFactory {
             // For Ubiquity Press
             HtmlNodeFilters.tagWithAttribute("div", "id", "rightSidebar"),
             // For JLIS.it: landing pages contain user view count
-            HtmlNodeFilters.tagWithAttribute("span", "class", "ArticleViews")
-        };
-        return new HtmlFilterInputStream(in,
-                                         encoding,
-                                         HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
-    }
-    
+            HtmlNodeFilters.tagWithAttribute("span", "class", "ArticleViews"),
+            // For ibictpln: PHP Query Profiler
+            // e.g. http://seer.bce.unb.br/index.php/Musica/article/view/915
+            HtmlNodeFilters.tagWithAttribute("div", "id", "pqp-container"),
+            // Total de acessos: keeps changing, there is no 'good' tag wrapped around text
+            // e.g. https://www.revistas.unijui.edu.br/index.php/desenvolvimentoemquestao/issue/view/18
+            HtmlNodeFilters.tagWithTextRegex("b", "^ *total de acesso( dos artigo)?s: +[0-9]+ *$", true),
+            // Footer contains changing non-content, debug etc.
+            // http://www.portalseer.ufba.br/index.php/cmbio/article/viewArticle/4093
+            HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
+            // For Librello: download and view counts
+            // e.g. http://www.librelloph.com/challengesinsustainability/issue/view/10
+            HtmlNodeFilters.tagWithTextRegex("a", "^(HTML|PDF|Views)$", true),
+            new AndFilter(
+                HtmlNodeFilters.tagWithAttribute("span", "class", "badge"),
+                HtmlNodeFilters.tagWithTextRegex("span", "^[0-9]*$")),
+    };
+    return new HtmlFilterInputStream(in, encoding,
+          HtmlNodeFilterTransform.exclude(new OrFilter(filters))).
+          registerTag(new bTag());
+  }
+  
 }

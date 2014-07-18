@@ -1,5 +1,5 @@
 /*
- * $Id: PluginException.java,v 1.2 2008-08-26 06:49:41 tlipkis Exp $
+ * $Id: PluginException.java,v 1.2.92.1 2014-07-18 15:59:08 wkwilson Exp $
  */
 
 /*
@@ -157,5 +157,25 @@ public class PluginException extends Exception {
     }
   }
 
-}
+  /** Parent plugin not found. */
+  public static class ParentNotFoundException extends InvalidDefinition {
+    private Throwable causeException;
 
+    public ParentNotFoundException() {
+      super();
+    }
+
+    public ParentNotFoundException(String msg) {
+      super(msg);
+    }
+
+    public ParentNotFoundException(Throwable cause) {
+      super(cause);
+    }
+
+    public ParentNotFoundException(String msg, Throwable cause) {
+      super(msg, cause);
+    }
+  }
+
+}

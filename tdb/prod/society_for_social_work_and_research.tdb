@@ -4,8 +4,9 @@
     name = Society for Social Work and Research
   >
 
-  comment[0] = RU issue3674
-  plugin = org.lockss.plugin.scholarlyexchange.ScholarlyExchangeOJS2Plugin
+  comment[0] = RU issue3674 and RT5317
+  comment[plugin] = org.lockss.plugin.scholarlyexchange.ScholarlyExchangeOJS2Plugin
+  plugin = org.lockss.plugin.ojs2.OJS2Plugin
   implicit < status ; year ; name ; volume ;  param[year] >
   
   {
@@ -20,10 +21,10 @@
 
     comment[notReady] = waiting on them to fix their site so that we do not need a specialized plugin unnecessarily RT5317
     
-    au < notReady ; 2010 ; Journal of the Society for Social Work and Research Volume 1 ; 1 ; 2010 >
-    au < notReady ; 2011 ; Journal of the Society for Social Work and Research Volume 2 ; 2 ; 2011 >
-    au < notReady ; 2012 ; Journal of the Society for Social Work and Research Volume 3 ; 3 ; 2012 >
-    au < manifest ; 2013 ; Journal of the Society for Social Work and Research Volume 4 ; 4 ; 2013 >
+    au < doNotProcess ; 2010 ; Journal of the Society for Social Work and Research Volume 1 ; 1 ; 2010 >
+    au < doNotProcess ; 2011 ; Journal of the Society for Social Work and Research Volume 2 ; 2 ; 2011 >
+    au < doNotProcess ; 2012 ; Journal of the Society for Social Work and Research Volume 3 ; 3 ; 2012 >
+    au < doNotProcess ; 2013 ; Journal of the Society for Social Work and Research Volume 4 ; 4 ; 2013 >
     au < expected ; 2014 ; Journal of the Society for Social Work and Research Volume 5 ; 5 ; 2014 >
     
   }

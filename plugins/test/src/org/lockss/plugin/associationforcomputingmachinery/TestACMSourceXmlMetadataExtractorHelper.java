@@ -1,4 +1,4 @@
-/* $Id: TestACMSourceXmlMetadataExtractorHelper.java,v 1.6.2.1 2014-05-05 17:32:37 wkwilson Exp $
+/* $Id: TestACMSourceXmlMetadataExtractorHelper.java,v 1.6.2.2 2014-07-18 15:49:54 wkwilson Exp $
 
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.

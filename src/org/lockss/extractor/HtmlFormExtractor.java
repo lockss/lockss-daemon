@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlFormExtractor.java,v 1.7.4.1 2014-05-05 17:32:30 wkwilson Exp $
+ * $Id: HtmlFormExtractor.java,v 1.7.4.2 2014-07-18 15:58:59 wkwilson Exp $
  */
 
 /*
@@ -245,8 +245,17 @@ public class HtmlFormExtractor {
    */
   public void initProcessor(JsoupHtmlLinkExtractor docExtractor,
                             List<FormElement> forms) {
-    m_formExtractor = getFormLinkExtractor();
-    m_formElementLinkExtractor = getTagsLinkExtractor();
+
+    if (m_formExtractor == null) {
+      m_formExtractor = newFormLinkExtractor();
+      m_formExtractor.setExtractor(this);
+    }
+
+    if (m_formElementLinkExtractor == null) {
+      m_formElementLinkExtractor = newTagsLinkExtractor();
+      m_formElementLinkExtractor.setExtractor(this);
+    }
+
     for (String el_name : FORM_TAG_ELEMENTS) {
       docExtractor.registerTagExtractor(el_name, m_formElementLinkExtractor);
     }
@@ -427,15 +436,8 @@ public class HtmlFormExtractor {
    *
    * @return the FormTagLinkExtractor for this form processor
    */
-  public FormTagLinkExtractor getFormLinkExtractor() {
-    if (m_formExtractor == null) {
-      String className = CurrentConfig.getParam(PARAM_FORM_TAG_CLASS,
-                                                DEFAULT_FORM_TAG_CLASS);
-      m_formExtractor =
-          ClassUtil.instantiate(className, FormTagLinkExtractor.class);
-      m_formExtractor.setExtractor(this);
-    }
-    return m_formExtractor;
+  public FormTagLinkExtractor newFormLinkExtractor() {
+    return new FormTagLinkExtractor();
   }
 
   /**
@@ -446,20 +448,20 @@ public class HtmlFormExtractor {
    *
    * @return the FormElementLinkExtractor for this form processor
    */
-  public FormElementLinkExtractor getTagsLinkExtractor() {
-    if (m_formElementLinkExtractor == null) {
-      String className = CurrentConfig.getParam(PARAM_FORM_ELEMENT_TAG_CLASS,
-                                                DEFAULT_FORM_ELEMENT_TAG_CLASS);
-      m_formElementLinkExtractor =
-          ClassUtil.instantiate(className, FormElementLinkExtractor.class);
-      m_formElementLinkExtractor.setExtractor(this);
+  public FormElementLinkExtractor newTagsLinkExtractor() {
+    return new FormElementLinkExtractor();
+  }
 
-    }
-    return m_formElementLinkExtractor;
+  public FormTagLinkExtractor getFormExtractor() {
+    return m_formExtractor;
   }
 
   public void setFormExtractor(FormTagLinkExtractor formExtractor) {
     m_formExtractor = formExtractor;
+  }
+
+  public FormElementLinkExtractor getTagsLinkExtractor() {
+    return m_formElementLinkExtractor;
   }
 
   public void setTagsLinkExtractor(FormElementLinkExtractor tagExtractor) {

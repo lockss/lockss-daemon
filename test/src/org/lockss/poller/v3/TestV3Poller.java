@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.64 2013-09-18 05:38:04 tlipkis Exp $
+ * $Id: TestV3Poller.java,v 1.64.6.1 2014-07-18 15:49:44 wkwilson Exp $
  */
 
 /*
@@ -58,7 +58,7 @@ public class TestV3Poller extends LockssTestCase {
   private PeerIdentity pollerId;
 
   private String tempDirPath;
-  private ArchivalUnit testau;
+  private MockArchivalUnit testau;
   private PollManager pollmanager;
   private HashService hashService;
   private PluginManager pluginMgr;
@@ -409,6 +409,27 @@ public class TestV3Poller extends LockssTestCase {
     assertTrue(symmetricParticipants.size() == numSym);
   }
 
+  public void testSubstanceChecker() throws Exception {
+    V3Poller v3Poller = makeInittedV3Poller("foo", 0, 0);
+    List<String> pats = ListUtil.list("foo");
+    testau.setSubstanceUrlPatterns(RegexpUtil.compileRegexps(pats));
+    SubstanceChecker sub = v3Poller.makeSubstanceChecker();
+    assertNull(sub);
+    MockPlugin mplug = (MockPlugin)testau.getPlugin();
+    mplug.setFeatureVersionMap(MapUtil.map(Plugin.Feature.Substance, "2"));
+    sub = v3Poller.makeSubstanceChecker();
+    assertNotNull(sub);
+    AuState aus = AuUtil.getAuState(testau);
+    assertEquals(SubstanceChecker.State.Unknown, aus.getSubstanceState());
+
+    v3Poller.updateSubstance(sub);
+    assertEquals(SubstanceChecker.State.No, aus.getSubstanceState());
+
+    sub.checkSubstance("http://foo");
+    v3Poller.updateSubstance(sub);
+    assertEquals(SubstanceChecker.State.Yes, aus.getSubstanceState());
+  }
+
   public void testMakeHasher() throws Exception {
     V3Poller v3Poller = makeInittedV3Poller("foo", 0, 0);
     BlockHasher hasher = v3Poller.makeHasher(testau.getAuCachedUrlSet(), -1,
@@ -508,14 +529,17 @@ public class TestV3Poller extends LockssTestCase {
     V3Poller v3Poller = makeInittedV3Poller("foo");
     doTestInitHasherDigests(v3Poller, initialPeers.size());
   }
+
   public void testInitHasherDigestsTwo() throws Exception {
     V3Poller v3Poller = makeInittedV3Poller("foo", 2);
     doTestInitHasherDigests(v3Poller, 2);
   }
+
   public void testInitHasherDigestsNone() throws Exception {
     V3Poller v3Poller = makeInittedV3Poller("foo", 0);
     doTestInitHasherDigests(v3Poller, 0);
   }
+
   public void doTestInitHasherDigests(V3Poller v3Poller,
 				      int numSym) throws Exception {
     Map<PeerIdentity,ParticipantUserData> innerCircle =
@@ -541,31 +565,30 @@ public class TestV3Poller extends LockssTestCase {
   
   private HashBlock makeHashBlock(String url, String content)
       throws Exception {
+    return makeHashBlock(url, content, 5);
+  }
+
+  private HashBlock makeHashBlock(String url, String content, int nHashes)
+      throws Exception {
     MockCachedUrl cu = new MockCachedUrl(url);
     HashBlock hb = new HashBlock(cu);
-    addVersion(hb, content);
+    addVersion(hb, content, nHashes);
     return hb;
   }
 
   private static int hbVersionNum = 1;
+
   private void addVersion(HashBlock block, String content) throws Exception {
-    MessageDigest[] digests = new MessageDigest[5];  // 4 voters plus plain hash
-    // fake "Nonced Hash" for voter 0
-    digests[0] = MessageDigest.getInstance("SHA1");
-    digests[0].update(content.getBytes());
-    // fake "Nonced Hash" for voter 1
-    digests[1] = MessageDigest.getInstance("SHA1");
-    digests[1].update(content.getBytes());
-    // fake "Nonced Hash" for voter 2
-    digests[2] = MessageDigest.getInstance("SHA1");
-    digests[2].update(content.getBytes());
-    // fake "Nonced Hash" for voter 3
-    digests[3] = MessageDigest.getInstance("SHA1");
-    digests[3].update(content.getBytes());
-    // fake "Plain Hash" last
-    digests[4] = MessageDigest.getInstance("SHA1");
-    digests[4].update(content.getBytes());
-    
+    addVersion(block, content, 5);  // 4 voters plus plain hash
+  }
+
+  private void addVersion(HashBlock block, String content, int nHashes)
+      throws Exception {
+    MessageDigest[] digests = new MessageDigest[nHashes];
+    for (int ix = 0; ix < nHashes; ix++) {
+      digests[ix] = MessageDigest.getInstance("SHA1");
+      digests[ix].update(content.getBytes());
+    }
     block.addVersion(0, content.length(), 
                      0, content.length(), 
                      digests.length * content.length(), // total bytes hashed
@@ -1808,6 +1831,59 @@ public class TestV3Poller extends LockssTestCase {
     assertEquals(155, participant.getBytesRead());
   }
 
+  public void testRecordSymmetricHashes() throws Exception {
+
+    V3Poller v3Poller = makeInittedV3Poller("testing poll key");
+    
+    int nh = 6+6+1;
+
+    PeerIdentity id1 = findPeerIdentity("TCP:[127.0.0.1]:8990");
+    PeerIdentity id2 = findPeerIdentity("TCP:[127.0.0.1]:8991");
+    PeerIdentity id3 = findPeerIdentity("TCP:[127.0.0.1]:8992");
+    PeerIdentity id4 = findPeerIdentity("TCP:[127.0.0.1]:8994");
+    
+    HashBlock [] hashblocks = {
+      makeHashBlock("http://test.com/foo1", "content for foo1", nh),
+      makeHashBlock("http://test.com/foo2", "content for foo2", nh),
+      makeHashBlock("http://test.com/foo3", "content for foo3", nh),
+      makeHashBlock("http://test.com/foo4", "content for foo4", nh)
+    };
+
+    addVersion(hashblocks[0], "abc", nh);
+    addVersion(hashblocks[0], "defg", nh);
+
+    addVersion(hashblocks[2], "1111", nh);
+    addVersion(hashblocks[2], "22222", nh);
+    addVersion(hashblocks[2], "4444444", nh);
+    
+    List<ParticipantUserData> parts = symmetricParticipants(v3Poller);
+    VoteBlocks b0 = parts.get(0).getSymmetricVoteBlocks();
+    assertEquals(0, b0.size());
+
+    v3Poller.recordSymmetricHashes(hashblocks[0]);
+    b0 = parts.get(0).getSymmetricVoteBlocks();
+    assertEquals(1, b0.size());
+    VoteBlock vb = b0.iterator().next();
+    assertEquals(3, vb.size());
+
+    v3Poller.recordSymmetricHashes(hashblocks[1]);
+    v3Poller.recordSymmetricHashes(hashblocks[2]);
+    v3Poller.recordSymmetricHashes(hashblocks[3]);
+
+    b0 = parts.get(0).getSymmetricVoteBlocks();
+    assertEquals(4, b0.size());
+
+    List<VoteBlock> vbs = new ArrayList<VoteBlock>();
+    for (VoteBlocksIterator iter = b0.iterator(); iter.hasNext();) {
+      vbs.add(iter.next());
+    }
+
+    assertEquals(3, vbs.get(0).size());
+    assertEquals(1, vbs.get(1).size());
+    assertEquals(4, vbs.get(2).size());
+    assertEquals(1, vbs.get(3).size());
+  }
+
   private MySizedV3Poller makeSizedV3Poller(String key, int pollSize)
       throws Exception {
     PollSpec ps = new MockPollSpec(testau.getAuCachedUrlSet(), null, null,
@@ -1957,7 +2033,10 @@ public class TestV3Poller extends LockssTestCase {
     theDaemon.getRouterManager().startService();
     theDaemon.getSystemMetrics().startService();
     theDaemon.getActivityRegulator(testau).startService();
-    theDaemon.setNodeManager(new MockNodeManager(), testau);
+    MockNodeManager nodeManager = new MockNodeManager();
+    theDaemon.setNodeManager(nodeManager, testau);
+    MockAuState aus = new MockAuState(testau);
+    nodeManager.setAuState(aus);
     pollmanager.startService();
   }
 

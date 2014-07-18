@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlHelper.java,v 1.1 2014-04-25 23:10:59 fergaloy-sf Exp $
+ * $Id: CrawlHelper.java,v 1.1.2.1 2014-07-18 15:59:00 wkwilson Exp $
  */
 
 /*
@@ -53,12 +53,12 @@ public class CrawlHelper {
    * The fully-qualified name of the class of the objects used as source in a
    * query.
    */
-  static String SOURCE_FQCN = "org.lockss.ws.status.CrawlWsSource";
+  static String SOURCE_FQCN = CrawlWsSource.class.getCanonicalName();
 
   /**
    * The fully-qualified name of the class of the objects returned by the query.
    */
-  static String RESULT_FQCN = "org.lockss.ws.entities.CrawlWsResult";
+  static String RESULT_FQCN = CrawlWsResult.class.getCanonicalName();
 
   //
   // Property names used in peer queries.

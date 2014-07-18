@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>17</string>
+    <string>18</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -21,10 +21,19 @@
   </entry>
    <entry>
     <string>plugin_parent_version</string>
-    <string>17</string>
+    <string>18</string>
   </entry>
   <entry>
     <string>au_name</string>
     <string>"IGI Global Plugin (CLOCKSS), Base URL %s, Journal ISSN %s, Volume %s", base_url, journal_issn, volume</string>
+  </entry>
+  <entry>
+    <string>clockss_override</string>
+    <map>
+     <entry>
+        <string>au_def_pause_time</string>
+        <long>100</long>
+     </entry>
+    </map>
   </entry>
 </map>

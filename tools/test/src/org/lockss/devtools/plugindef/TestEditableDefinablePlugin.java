@@ -1,5 +1,5 @@
 /*
- * $Id: TestEditableDefinablePlugin.java,v 1.40 2013-08-10 20:49:46 tlipkis Exp $
+ * $Id: TestEditableDefinablePlugin.java,v 1.40.6.1 2014-07-18 15:49:53 wkwilson Exp $
  */
 
 /*
@@ -202,6 +202,7 @@ public class TestEditableDefinablePlugin
     "RetryableNetworkException_5_30S",
     "RetryableNetworkException_5_60S",
     "RetryableNetworkException_5_5M",
+    "WarningOnly",
   };
 
   public void testGetKnownCacheExceptions() {

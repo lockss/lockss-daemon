@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.25 2014-03-26 19:13:36 fergaloy-sf Exp $
+ * $Id: MetadataManager.java,v 1.25.2.1 2014-07-18 15:59:12 wkwilson Exp $
  */
 
 /*
@@ -751,6 +751,31 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       + " set " + NAME_COLUMN + " = ?"
       + " where " + MD_ITEM_SEQ_COLUMN + " = ?"
       + " and " + NAME_TYPE_COLUMN + " = '" + PRIMARY_NAME_TYPE + "'";
+
+  // Query to add an archival unit to the UNCONFIGURED_AU table.
+  private static final String INSERT_UNCONFIGURED_AU_QUERY = "insert into "
+      + UNCONFIGURED_AU_TABLE
+      + "(" + PLUGIN_ID_COLUMN
+      + "," + AU_KEY_COLUMN
+      + ") values (?,?)";
+
+  // Query to remove an archival unit from the UNCONFIGURED_AU table.
+  private static final String DELETE_UNCONFIGURED_AU_QUERY = "delete from "
+      + UNCONFIGURED_AU_TABLE
+      + " where " + PLUGIN_ID_COLUMN + " = ?"
+      + " and " + AU_KEY_COLUMN + " = ?";
+
+  // Query to count recorded unconfigured archival units.
+  private static final String UNCONFIGURED_AU_COUNT_QUERY = "select "
+      + "count(*)"
+      + " from " + UNCONFIGURED_AU_TABLE;
+  
+  // Query to find if an archival unit is in the UNCONFIGURED_AU table.
+  private static final String FIND_UNCONFIGURED_AU_COUNT_QUERY = "select "
+      + "count(*)"
+      + " from " + UNCONFIGURED_AU_TABLE
+      + " where " + PLUGIN_ID_COLUMN + " = ?"
+      + " and " + AU_KEY_COLUMN + " = ?";
 
   /**
    * Map of running reindexing tasks keyed by their AuIds
@@ -2304,7 +2329,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  Long addPublisher(Connection conn, String publisher) throws DbException {
+  public Long addPublisher(Connection conn, String publisher)
+      throws DbException {
     final String DEBUG_HEADER = "addPublisher(): ";
     Long publisherSeq = null;
     ResultSet resultSet = null;
@@ -2848,8 +2874,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  private Long addPublication(Connection conn, Long parentSeq,
-      String mdItemType, String title, String proprietaryId, Long publisherSeq)
+  public Long addPublication(Connection conn, Long parentSeq, String mdItemType,
+      String title, String proprietaryId, Long publisherSeq)
       throws DbException {
     final String DEBUG_HEADER = "addPublication(): ";
     if (log.isDebug2()) {
@@ -6562,5 +6588,234 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     } finally {
       DbManager.safeCloseStatement(updatePrimaryName);
     }
+  }
+
+  /**
+   * Adds an Archival Unit to the table of unconfigured Archival Units.
+   * 
+   * @param au
+   *          An ArchivalUnit with the Archival Unit.
+   */
+  void persistUnconfiguredAu(ArchivalUnit au) {
+    final String DEBUG_HEADER = "persistUnconfiguredAu(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "au = " + au);
+
+    Connection conn = null;
+    String auId = null;
+
+    try {
+      conn = dbManager.getConnection();
+
+      if (conn == null) {
+	log.error("Cannot connect to database - Cannot insert archival unit "
+	    + au + " in unconfigured table");
+	return;
+      }
+
+      auId = au.getAuId();
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auId = " + auId);
+
+      if (!isAuInUnconfiguredAuTable(conn, auId)) {
+	persistUnconfiguredAu(conn, auId);
+	DbManager.commitOrRollback(conn, log);
+      }
+    } catch (DbException dbe) {
+      log.error("Cannot insert archival unit in unconfigured table", dbe);
+      log.error("auId = " + auId);
+    } finally {
+      DbManager.safeRollbackAndClose(conn);
+    }
+  }
+
+  /**
+   * Adds an Archival Unit to the table of unconfigured Archival Units.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param auId
+   *          A String with the Archival Unit identifier.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public void persistUnconfiguredAu(Connection conn, String auId)
+      throws DbException {
+    final String DEBUG_HEADER = "persistUnconfiguredAu(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auId = " + auId);
+    PreparedStatement insertUnconfiguredAu = null;
+    String pluginId = null;
+    String auKey = null;
+
+    try {
+      insertUnconfiguredAu =
+	  dbManager.prepareStatement(conn, INSERT_UNCONFIGURED_AU_QUERY);
+
+      pluginId = PluginManager.pluginIdFromAuId(auId);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pluginId = " + pluginId);
+      auKey = PluginManager.auKeyFromAuId(auId);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auKey = " + auKey);
+
+      insertUnconfiguredAu.setString(1, pluginId);
+      insertUnconfiguredAu.setString(2, auKey);
+      int count = dbManager.executeUpdate(insertUnconfiguredAu);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
+    } catch (SQLException sqle) {
+      log.error("Cannot insert archival unit in unconfigured table", sqle);
+      log.error("SQL = '" + INSERT_UNCONFIGURED_AU_QUERY + "'.");
+      log.error("auId = " + auId);
+      throw new DbException("Cannot insert archival unit in unconfigured table",
+	  sqle);
+    } catch (DbException dbe) {
+      log.error("Cannot insert archival unit in unconfigured table", dbe);
+      log.error("SQL = '" + INSERT_UNCONFIGURED_AU_QUERY + "'.");
+      log.error("auId = " + auId);
+      log.error("pluginId = " + pluginId);
+      log.error("auKey = " + auKey);
+      throw dbe;
+    } finally {
+      DbManager.safeCloseStatement(insertUnconfiguredAu);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Removes an Archival Unit from the table of unconfigured Archival Units.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param auId
+   *          A String with the AU identifier.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  void removeFromUnconfiguredAus(Connection conn, String auId) {
+    final String DEBUG_HEADER = "removeFromUnconfiguredAus(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auId = " + auId);
+
+    PreparedStatement deleteUnconfiguredAu = null;
+    String pluginId = null;
+    String auKey = null;
+
+    try {
+      if (isAuInUnconfiguredAuTable(conn, auId)) {
+	deleteUnconfiguredAu =
+	    dbManager.prepareStatement(conn, DELETE_UNCONFIGURED_AU_QUERY);
+
+	pluginId = PluginManager.pluginIdFromAuId(auId);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pluginId = " + pluginId);
+	auKey = PluginManager.auKeyFromAuId(auId);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auKey = " + auKey);
+
+	deleteUnconfiguredAu.setString(1, pluginId);
+	deleteUnconfiguredAu.setString(2, auKey);
+	int count = dbManager.executeUpdate(deleteUnconfiguredAu);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
+	DbManager.commitOrRollback(conn, log);
+      }
+    } catch (SQLException sqle) {
+      log.error("Cannot delete archival unit from unconfigured table", sqle);
+      log.error("SQL = '" + DELETE_UNCONFIGURED_AU_QUERY + "'.");
+      log.error("auId = " + auId);
+    } catch (DbException dbe) {
+      log.error("Cannot delete archival unit from unconfigured table", dbe);
+      log.error("SQL = '" + DELETE_UNCONFIGURED_AU_QUERY + "'.");
+      log.error("auId = " + auId);
+      log.error("pluginId = " + pluginId);
+      log.error("auKey = " + auKey);
+    } finally {
+      DbManager.safeCloseStatement(deleteUnconfiguredAu);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Provides the count of recorded unconfigured archival units.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @return a long with the count of recorded unconfigured archival units.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public long countUnconfiguredAus(Connection conn) throws DbException {
+    final String DEBUG_HEADER = "countUnconfiguredAus(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    long rowCount = -1;
+    ResultSet results = null;
+    PreparedStatement unconfiguredAu =
+	dbManager.prepareStatement(conn, UNCONFIGURED_AU_COUNT_QUERY);
+
+    try {
+      // Count the rows in the table.
+      results = dbManager.executeQuery(unconfiguredAu);
+      results.next();
+      rowCount = results.getLong(1);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "rowCount = " + rowCount);
+    } catch (SQLException sqle) {
+      log.error("Cannot count unconfigured archival units", sqle);
+      log.error("SQL = '" + UNCONFIGURED_AU_COUNT_QUERY + "'.");
+      throw new DbException("Cannot count unconfigured archival units", sqle);
+    } finally {
+      DbManager.safeCloseResultSet(results);
+      DbManager.safeCloseStatement(unconfiguredAu);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "rowCount = " + rowCount);
+    return rowCount;
+  }
+
+  /**
+   * Provides an indication of whether an Archival Unit is in the table of
+   * unconfigured Archival Units.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param auId
+   *          A String with the Archival Unit identifier.
+   * @return a boolean with <code>true</code> if the Archival Unit is in the
+   *         UNCONFIGURED_AU table, <code>false</code> otherwise.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public boolean isAuInUnconfiguredAuTable(Connection conn, String auId)
+      throws DbException {
+    final String DEBUG_HEADER = "isAuInUnconfiguredAuTable(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auId = " + auId);
+
+    long rowCount = -1;
+    ResultSet results = null;
+    PreparedStatement unconfiguredAu =
+	dbManager.prepareStatement(conn, FIND_UNCONFIGURED_AU_COUNT_QUERY);
+
+    try {
+      String pluginId = PluginManager.pluginIdFromAuId(auId);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pluginId = " + pluginId);
+      String auKey = PluginManager.auKeyFromAuId(auId);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auKey = " + auKey);
+
+      unconfiguredAu.setString(1, pluginId);
+      unconfiguredAu.setString(2, auKey);
+
+      // Find the archival unit in the table.
+      results = dbManager.executeQuery(unconfiguredAu);
+      results.next();
+      rowCount = results.getLong(1);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "rowCount = " + rowCount);
+    } catch (SQLException sqle) {
+      log.error("Cannot find archival unit in unconfigured table", sqle);
+      log.error("SQL = '" + FIND_UNCONFIGURED_AU_COUNT_QUERY + "'.");
+      log.error("auId = " + auId);
+      throw new DbException("Cannot find archival unit in unconfigured table",
+	  sqle);
+    } finally {
+      DbManager.safeCloseResultSet(results);
+      DbManager.safeCloseStatement(unconfiguredAu);
+    }
+
+    boolean result = rowCount > 0;
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+    return result;
   }
 }

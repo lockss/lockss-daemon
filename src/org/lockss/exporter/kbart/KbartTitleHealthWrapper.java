@@ -1,5 +1,5 @@
 /*
- * $Id: KbartTitleHealthWrapper.java,v 1.2 2011-08-23 16:16:48 easyonthemayo Exp $
+ * $Id: KbartTitleHealthWrapper.java,v 1.2.52.1 2014-07-18 15:59:11 wkwilson Exp $
  */
 
 /*
@@ -32,9 +32,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.exporter.kbart;
 
-import java.text.DecimalFormat;
 import java.util.List;
-import org.lockss.util.Logger;
+import org.lockss.util.*;
 
 /**
  * A simple wrapper to decorate a KbartTitle with a health value based on the
@@ -54,8 +53,7 @@ public class KbartTitleHealthWrapper extends KbartTitle {
   
   public KbartTitleHealthWrapper(KbartTitle kbt, double health) {
     super(kbt);
-    DecimalFormat df = new DecimalFormat("#.##");
-    this.health = Double.valueOf(df.format(health));
+    this.health = NumberUtil.roundToNDecimals(health, 2);
   }
   
   public double getHealth() { return health; }

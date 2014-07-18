@@ -89,7 +89,7 @@
       au < released ; 2009 ; BMC Bioinformatics Volume 10 ; 10 >
       au < released ; 2010 ; BMC Bioinformatics Volume 11 ; 11 >
       au < released ; 2011 ; BMC Bioinformatics Volume 12 ; 12 >
-      au < testing ; 2012 ; BMC Bioinformatics Volume 13 ; 13 >
+      au < manifest ; 2012 ; BMC Bioinformatics Volume 13 ; 13 >
       au < manifest ; 2013 ; BMC Bioinformatics Volume 14 ; 14 >
       au < manifest ; 2014 ; BMC Bioinformatics Volume 15 ; 15 >
 
@@ -114,7 +114,7 @@
       au < released ; 2009 ; BMC Biology Volume 7 ; 7 >
       au < released ; 2010 ; BMC Biology Volume 8 ; 8 >
       au < released ; 2011 ; BMC Biology Volume 9 ; 9 >
-      au < testing ; 2012 ; BMC Biology Volume 10 ; 10 >
+      au < manifest ; 2012 ; BMC Biology Volume 10 ; 10 >
       au < manifest ; 2013 ; BMC Biology Volume 11 ; 11 >
       au < manifest ; 2014 ; BMC Biology Volume 12 ; 12 >
 
@@ -228,7 +228,7 @@
       au < released ; 2009 ; BMC Cancer Volume 9 ; 9 >
       au < released ; 2010 ; BMC Cancer Volume 10 ; 10 >
       au < released ; 2011 ; BMC Cancer Volume 11 ; 11 >
-      au < testing ; 2012 ; BMC Cancer Volume 12 ; 12 >
+      au < manifest ; 2012 ; BMC Cancer Volume 12 ; 12 >
       au < manifest ; 2013 ; BMC Cancer Volume 13 ; 13 >
       au < manifest ; 2014 ; BMC Cancer Volume 14 ; 14 >
 
@@ -256,7 +256,7 @@
       au < released ; 2009 ; BMC Cardiovascular Disorders Volume 9 ; 9 >
       au < released ; 2010 ; BMC Cardiovascular Disorders Volume 10 ; 10 >
       au < released ; 2011 ; BMC Cardiovascular Disorders Volume 11 ; 11 >
-      au < testing ; 2012 ; BMC Cardiovascular Disorders Volume 12 ; 12 >
+      au < manifest ; 2012 ; BMC Cardiovascular Disorders Volume 12 ; 12 >
       au < manifest ; 2013 ; BMC Cardiovascular Disorders Volume 13 ; 13 >
       au < manifest ; 2014 ; BMC Cardiovascular Disorders Volume 14 ; 14 >
 
@@ -301,18 +301,17 @@
       attr[journal_code] = bmcchembiol
       comment[0] = BMC Chemical Biology has now been fused with BMC Biochemistry, no publication after 2012
       
-      au < released ; 2001 ; BMC Chemical Biology Volume 1 ; 1 >
-      au < released ; 2002 ; BMC Chemical Biology Volume 2 ; 2 >
-      au < released ; 2003 ; BMC Chemical Biology Volume 3 ; 3 >
-      au < released ; 2004 ; BMC Chemical Biology Volume 4 ; 4 >
-      au < released ; 2005 ; BMC Chemical Biology Volume 5 ; 5 >
-      au < released ; 2006 ; BMC Chemical Biology Volume 6 ; 6 >
-      au < released ; 2007 ; BMC Chemical Biology Volume 7 ; 7 >
-      au < released ; 2008 ; BMC Chemical Biology Volume 8 ; 8 >
-      au < released ; 2009 ; BMC Chemical Biology Volume 9 ; 9 >
-      au < released ; 2010 ; BMC Chemical Biology Volume 10 ; 10 >
-      au < released ; 2011 ; BMC Chemical Biology Volume 11 ; 11 >
-      au < manifest ; 2012 ; BMC Chemical Biology Volume 12 ; 12 >
+      au < down ; 2001 ; BMC Chemical Biology Volume 1 ; 1 >
+      au < down ; 2002 ; BMC Chemical Biology Volume 2 ; 2 >
+      au < down ; 2003 ; BMC Chemical Biology Volume 3 ; 3 >
+      au < down ; 2004 ; BMC Chemical Biology Volume 4 ; 4 >
+      au < down ; 2005 ; BMC Chemical Biology Volume 5 ; 5 >
+      au < down ; 2006 ; BMC Chemical Biology Volume 6 ; 6 >
+      au < down ; 2007 ; BMC Chemical Biology Volume 7 ; 7 >
+      au < down ; 2008 ; BMC Chemical Biology Volume 8 ; 8 >
+      au < down ; 2009 ; BMC Chemical Biology Volume 9 ; 9 >
+      au < down ; 2010 ; BMC Chemical Biology Volume 10 ; 10 >
+      au < down ; 2011 ; BMC Chemical Biology Volume 11 ; 11 >
 
     }
 
@@ -1988,8 +1987,8 @@
       au < released ; 2010 ; Alzheimer's Research & Therapy Volume 2 ; 2 >
       au < released ; 2011 ; Alzheimer's Research & Therapy Volume 3 ; 3 >
       au < released ; 2012 ; Alzheimer's Research & Therapy Volume 4 ; 4 >
-      au < expected ; 2013 ; Alzheimer's Research & Therapy Volume 5 ; 5 >
-      au < expected ; 2014 ; Alzheimer's Research & Therapy Volume 6 ; 6 >
+      au < manifest ; 2013 ; Alzheimer's Research & Therapy Volume 5 ; 5 >
+      au < manifest ; 2014 ; Alzheimer's Research & Therapy Volume 6 ; 6 >
 
     }
 
@@ -2166,8 +2165,8 @@
       au < released ; 2010 ; Arthritis Research & Therapy Volume 12 ; 12 >
       au < released ; 2011 ; Arthritis Research & Therapy Volume 13 ; 13 >
       au < released ; 2012 ; Arthritis Research & Therapy Volume 14 ; 14 >
-      au < expected ; 2013 ; Arthritis Research & Therapy Volume 15 ; 15 >
-      au < expected ; 2014 ; Arthritis Research & Therapy Volume 16 ; 16 >
+      au < manifest ; 2013 ; Arthritis Research & Therapy Volume 15 ; 15 >
+      au < manifest ; 2014 ; Arthritis Research & Therapy Volume 16 ; 16 >
 
     }
 
@@ -2407,6 +2406,20 @@
 
     {
       title <
+        name = Biomaterials Research ;
+        eissn = 2055-7124 ;
+        issnl = 2055-7124
+      >
+      
+      param[base_url] = http://www.biomaterialsres.com/
+      param[journal_issn] = 2055-7124
+
+      au < exists ; 2014 ; Biomaterials Research Volume 18 ; 18 >
+      
+    }
+
+    {
+      title <
         name = BioMedical Engineering OnLine ;
         eissn = 1475-925X ;
         issnl = 1475-925X
@@ -2486,7 +2499,7 @@
       param[base_url] = http://www.bpded.com/
       param[journal_issn] = 2051-6673
 
-      au < exists ; 2014 ; Borderline Personality Disorder and Emotion Dysregulation Volume 1 ; 1 >
+      au < manifest ; 2014 ; Borderline Personality Disorder and Emotion Dysregulation Volume 1 ; 1 >
 
     }
 
@@ -2514,8 +2527,8 @@
       au < released ; 2010 ; Breast Cancer Research Volume 12 ; 12 >
       au < released ; 2011 ; Breast Cancer Research Volume 13 ; 13 >
       au < released ; 2012 ; Breast Cancer Research Volume 14 ; 14 >
-      au < expected ; 2013 ; Breast Cancer Research Volume 15 ; 15 >
-      au < expected ; 2014 ; Breast Cancer Research Volume 16 ; 16 >
+      au < manifest ; 2013 ; Breast Cancer Research Volume 15 ; 15 >
+      au < manifest ; 2014 ; Breast Cancer Research Volume 16 ; 16 >
 
     }
 
@@ -2559,6 +2572,34 @@
       au < manifest ; 2013 ; Cancer Cell International Volume 13 ; 13 >
       au < manifest ; 2014 ; Cancer Cell International Volume 14 ; 14 >
 
+    }
+
+    {
+      title <
+        name = Cancer Imaging ;
+        eissn = 1470-7330 ;
+        issnl = 1470-7330
+      >
+
+      param[base_url] = http://www.cancerimagingjournal.com/
+      param[journal_issn] = 1470-7330
+
+      au < manifest ; 2014 ; Cancer Imaging Volume 14 ; 14 >
+      
+    }
+
+    {
+      title <
+        name = Canine Genetics and Epidemiology ;
+        eissn = 2052-6687 ;
+        issnl = 2052-6687
+      >
+
+      param[base_url] = http://www.cgejournal.org/
+      param[journal_issn] = 2052-6687
+
+      au < manifest ; 2014 ; Canine Genetics and Epidemiology Volume 1 ; 1 >
+      
     }
 
     {
@@ -2722,7 +2763,7 @@
       au < released ; 2011 ; Cell Division Volume 6 ; 6 >
       au < released ; 2012 ; Cell Division Volume 7 ; 7 >
       au < manifest ; 2013 ; Cell Division Volume 8 ; 8 >
-      au < expected ; 2014 ; Cell Division Volume 9 ; 9 >
+      au < manifest ; 2014 ; Cell Division Volume 9 ; 9 >
 
     }
 
@@ -2741,6 +2782,20 @@
       au < manifest ; 2013 ; Cell Regeneration Volume 2 ; 2 >
       au < manifest ; 2014 ; Cell Regeneration Volume 3 ; 3 >
 
+    }
+
+    {
+      title <
+        name = Cerebellum & Ataxias ;
+        eissn = 2053-8871 ;
+        issnl = 2053-8871
+      >
+      
+      param[journal_issn] = 2053-8871
+      param[base_url] = http://www.cerebellumandataxias.com/
+
+      au < exists ; 2014 ; Cerebellum & Ataxias Volume 1 ; 1 >
+      
     }
 
     {
@@ -2821,7 +2876,7 @@
       au < released ; 2010 ; Chinese Medicine Volume 5 ; 5 >
       au < released ; 2011 ; Chinese Medicine Volume 6 ; 6 >
       au < released ; 2012 ; Chinese Medicine Volume 7 ; 7 >
-      au < testing ; 2013 ; Chinese Medicine Volume 8 ; 8 >
+      au < manifest ; 2013 ; Chinese Medicine Volume 8 ; 8 >
       au < manifest ; 2014 ; Chinese Medicine Volume 9 ; 9 >
 
     }
@@ -2848,9 +2903,9 @@
       
       param[base_url] = http://www.chiromt.com/
 
-      au < ready ; 2011 ; Chiropractic & Manual Therapies Volume 19 ; 19 >
-      au < ready ; 2012 ; Chiropractic & Manual Therapies Volume 20 ; 20 >
-      au < ready ; 2013 ; Chiropractic & Manual Therapies Volume 21 ; 21 >
+      au < released ; 2011 ; Chiropractic & Manual Therapies Volume 19 ; 19 >
+      au < released ; 2012 ; Chiropractic & Manual Therapies Volume 20 ; 20 >
+      au < released ; 2013 ; Chiropractic & Manual Therapies Volume 21 ; 21 >
       au < manifest ; 2014 ; Chiropractic & Manual Therapies Volume 22 ; 22 >
       }
     }
@@ -2881,12 +2936,12 @@
       
         param[base_url] = http://www.chiromt.com/
         
-        au < ready ; 2005 ; Chiropractic & Osteopathy Volume 13 ; 13 >
-        au < ready ; 2006 ; Chiropractic & Osteopathy Volume 14 ; 14 >
-        au < ready ; 2007 ; Chiropractic & Osteopathy Volume 15 ; 15 >
-        au < ready ; 2008 ; Chiropractic & Osteopathy Volume 16 ; 16 >
-        au < ready ; 2009 ; Chiropractic & Osteopathy Volume 17 ; 17 >
-        au < ready ; 2010 ; Chiropractic & Osteopathy Volume 18 ; 18 >
+        au < released ; 2005 ; Chiropractic & Osteopathy Volume 13 ; 13 >
+        au < released ; 2006 ; Chiropractic & Osteopathy Volume 14 ; 14 >
+        au < released ; 2007 ; Chiropractic & Osteopathy Volume 15 ; 15 >
+        au < released ; 2008 ; Chiropractic & Osteopathy Volume 16 ; 16 >
+        au < released ; 2009 ; Chiropractic & Osteopathy Volume 17 ; 17 >
+        au < released ; 2010 ; Chiropractic & Osteopathy Volume 18 ; 18 >
       
       }
       
@@ -2903,8 +2958,8 @@
       param[base_url] = http://www.ciliajournal.com/
       param[journal_issn] = 2046-2530
 
-      au < ready ; 2012 ; Cilia Volume 1 ; 1 >
-      au < ready ; 2013 ; Cilia Volume 2 ; 2 >
+      au < released ; 2012 ; Cilia Volume 1 ; 1 >
+      au < released ; 2013 ; Cilia Volume 2 ; 2 >
       au < manifest ; 2014 ; Cilia Volume 3 ; 3 >
 
     }
@@ -2929,7 +2984,7 @@
       au < released ; 2010 ; Clinical and Molecular Allergy Volume 8 ; 8 >
       au < released ; 2011 ; Clinical and Molecular Allergy Volume 9 ; 9 >
       au < released ; 2012 ; Clinical and Molecular Allergy Volume 10 ; 10 >
-      au < testing ; 2013 ; Clinical and Molecular Allergy Volume 11 ; 11 >
+      au < manifest ; 2013 ; Clinical and Molecular Allergy Volume 11 ; 11 >
       au < expected ; 2014 ; Clinical and Molecular Allergy Volume 12 ; 12 >
       
     }
@@ -2964,8 +3019,8 @@
       param[journal_issn] = 1868-7083
 
       au < exists ; 2011 ; Clinical Epigenetics Volume 2 ; 2 >
-      au < ready ; 2011 ; Clinical Epigenetics Volume 3 ; 3 >
-      au < ready ; 2012 ; Clinical Epigenetics Volume 4 ; 4 >
+      au < released ; 2011 ; Clinical Epigenetics Volume 3 ; 3 >
+      au < released ; 2012 ; Clinical Epigenetics Volume 4 ; 4 >
       au < manifest ; 2013 ; Clinical Epigenetics Volume 5 ; 5 >
       au < manifest ; 2014 ; Clinical Epigenetics Volume 6 ; 6 >
 
@@ -2987,7 +3042,7 @@
 
       au < released ; 2010 ; Clinical Proteomics Volume 7 ; 7 >
       au < notReady ; 2011 ; Clinical Proteomics Volume 8 ; 8 >
-      au < ready ; 2012 ; Clinical Proteomics Volume 9 ; 9 >
+      au < released ; 2012 ; Clinical Proteomics Volume 9 ; 9 >
       au < manifest ; 2013 ; Clinical Proteomics Volume 10 ; 10 >
       au < manifest ; 2014 ; Clinical Proteomics Volume 11 ; 11 >
 
@@ -3004,8 +3059,8 @@
       param[base_url] = http://www.clinicalsarcomaresearch.com/
       param[journal_issn] = 2045-3329
 
-      au < ready ; 2011 ; Clinical Sarcoma Research Volume 1 ; 1 >
-      au < ready ; 2012 ; Clinical Sarcoma Research Volume 2 ; 2 >
+      au < released ; 2011 ; Clinical Sarcoma Research Volume 1 ; 1 >
+      au < released ; 2012 ; Clinical Sarcoma Research Volume 2 ; 2 >
       au < manifest ; 2013 ; Clinical Sarcoma Research Volume 3 ; 3 >
       au < manifest ; 2014 ; Clinical Sarcoma Research Volume 4 ; 4 >
 
@@ -3131,8 +3186,8 @@
       au < released ; 2010 ; Critical Care Volume 14 ; 14 >
       au < released ; 2011 ; Critical Care Volume 15 ; 15 >
       au < manifest ; 2012 ; Critical Care Volume 16 ; 16 >
-      au < expected ; 2013 ; Critical Care Volume 17 ; 17 >
-      au < expected ; 2014 ; Critical Care Volume 18 ; 18 >
+      au < manifest ; 2013 ; Critical Care Volume 17 ; 17 >
+      au < manifest ; 2014 ; Critical Care Volume 18 ; 18 >
 
     }
     
@@ -3148,7 +3203,7 @@
       param[base_url] = http://www.darujps.com/
       param[journal_issn] = 1560-8115
 
-      au < ready ; 2012 ; DARU Journal of Pharmaceutical Sciences Volume 20 ; 20 >
+      au < released ; 2012 ; DARU Journal of Pharmaceutical Sciences Volume 20 ; 20 >
       au < manifest ; 2013 ; DARU Journal of Pharmaceutical Sciences Volume 21 ; 21 >
       au < manifest ; 2014 ; DARU Journal of Pharmaceutical Sciences Volume 22 ; 22 >
 
@@ -3258,7 +3313,7 @@
       param[base_url] = http://www.environmentalevidencejournal.org/
       param[journal_issn] = 2047-2382
 
-      au < ready ; 2011-2012 ; Environmental Evidence Volume 1 ; 1 >
+      au < released ; 2011-2012 ; Environmental Evidence Volume 1 ; 1 >
       au < manifest ; 2013 ; Environmental Evidence Volume 2 ; 2 >
       au < manifest ; 2014 ; Environmental Evidence Volume 3 ; 3 >
 
@@ -3366,7 +3421,7 @@
       param[base_url] = http://www.epmajournal.com/
       param[journal_issn] = 1878-5085
 
-      au < ready ; 2012 ; The EPMA Journal Volume 3 ; 3 >
+      au < released ; 2012 ; The EPMA Journal Volume 3 ; 3 >
       au < manifest ; 2013 ; The EPMA Journal Volume 4 ; 4 >
       au < manifest ; 2014 ; The EPMA Journal Volume 5 ; 5 >
 
@@ -3401,9 +3456,9 @@
       param[base_url] = http://www.evodevojournal.com/
       param[journal_issn] = 2041-9139
 
-      au < ready ; 2010 ; EvoDevo Volume 1 ; 1 >
-      au < ready ; 2011 ; EvoDevo Volume 2 ; 2 >
-      au < ready ; 2012 ; EvoDevo Volume 3 ; 3 >
+      au < released ; 2010 ; EvoDevo Volume 1 ; 1 >
+      au < released ; 2011 ; EvoDevo Volume 2 ; 2 >
+      au < released ; 2012 ; EvoDevo Volume 3 ; 3 >
       au < manifest ; 2013 ; EvoDevo Volume 4 ; 4 >
       au < manifest ; 2014 ; EvoDevo Volume 5 ; 5 >
 
@@ -3419,10 +3474,10 @@
       param[base_url] = http://www.etsmjournal.com/
       param[journal_issn] = 2040-7378
 
-      au < ready ; 2009 ; Experimental & Translational Stroke Medicine Volume 1 ; 1 >
-      au < ready ; 2010 ; Experimental & Translational Stroke Medicine Volume 2 ; 2 >
-      au < ready ; 2011 ; Experimental & Translational Stroke Medicine Volume 3 ; 3 >
-      au < ready ; 2012 ; Experimental & Translational Stroke Medicine Volume 4 ; 4 >
+      au < released ; 2009 ; Experimental & Translational Stroke Medicine Volume 1 ; 1 >
+      au < released ; 2010 ; Experimental & Translational Stroke Medicine Volume 2 ; 2 >
+      au < released ; 2011 ; Experimental & Translational Stroke Medicine Volume 3 ; 3 >
+      au < released ; 2012 ; Experimental & Translational Stroke Medicine Volume 4 ; 4 >
       au < manifest ; 2013 ; Experimental & Translational Stroke Medicine Volume 5 ; 5 >
       au < manifest ; 2014 ; Experimental & Translational Stroke Medicine Volume 6 ; 6 >
 
@@ -3438,7 +3493,7 @@
       param[base_url] = http://www.ehoonline.org/
       param[journal_issn] = 2162-3619
 
-      au < ready ; 2012 ; Experimental Hematology & Oncology Volume 1 ; 1 >
+      au < released ; 2012 ; Experimental Hematology & Oncology Volume 1 ; 1 >
       au < manifest ; 2013 ; Experimental Hematology & Oncology Volume 2 ; 2 >
       au < manifest ; 2014 ; Experimental Hematology & Oncology Volume 3 ; 3 >
 
@@ -3454,7 +3509,7 @@
       param[base_url] = http://www.extremephysiolmed.com/
       param[journal_issn] = 2046-7648
 
-      au < ready ; 2012 ; Extreme Physiology & Medicine Volume 1 ; 1 >
+      au < released ; 2012 ; Extreme Physiology & Medicine Volume 1 ; 1 >
       au < manifest ; 2013 ; Extreme Physiology & Medicine Volume 2 ; 2 >
       au < manifest ; 2014 ; Extreme Physiology & Medicine Volume 3 ; 3 >
 
@@ -3470,11 +3525,11 @@
       param[base_url] = http://www.fibrogenesis.com/
       param[journal_issn] = 1755-1536
 
-      au < ready ; 2008 ; Fibrogenesis & Tissue Repair Volume 1 ; 1 >
-      au < ready ; 2009 ; Fibrogenesis & Tissue Repair Volume 2 ; 2 >
-      au < ready ; 2010 ; Fibrogenesis & Tissue Repair Volume 3 ; 3 >
-      au < ready ; 2011 ; Fibrogenesis & Tissue Repair Volume 4 ; 4 >
-      au < ready ; 2012 ; Fibrogenesis & Tissue Repair Volume 5 ; 5 >
+      au < released ; 2008 ; Fibrogenesis & Tissue Repair Volume 1 ; 1 >
+      au < released ; 2009 ; Fibrogenesis & Tissue Repair Volume 2 ; 2 >
+      au < released ; 2010 ; Fibrogenesis & Tissue Repair Volume 3 ; 3 >
+      au < released ; 2011 ; Fibrogenesis & Tissue Repair Volume 4 ; 4 >
+      au < released ; 2012 ; Fibrogenesis & Tissue Repair Volume 5 ; 5 >
       au < manifest ; 2013 ; Fibrogenesis & Tissue Repair Volume 6 ; 6 >
       au < manifest ; 2014 ; Fibrogenesis & Tissue Repair Volume 7 ; 7 >
 
@@ -3490,7 +3545,7 @@
       param[base_url] = http://www.flavourjournal.com/
       param[journal_issn] = 2044-7248
 
-      au < ready ; 2012 ; Flavour Volume 1 ; 1 >
+      au < released ; 2012 ; Flavour Volume 1 ; 1 >
       au < manifest ; 2013 ; Flavour Volume 2 ; 2 >
       au < manifest ; 2014 ; Flavour Volume 3 ; 3 >
 
@@ -3509,7 +3564,7 @@
       param[journal_issn] = 2045-8118
 
       au < released ; 2011 ; Fluids and Barriers of the CNS Volume 8 ; 8 >
-      au < ready ; 2012 ; Fluids and Barriers of the CNS Volume 9 ; 9 >
+      au < released ; 2012 ; Fluids and Barriers of the CNS Volume 9 ; 9 >
       au < manifest ; 2013 ; Fluids and Barriers of the CNS Volume 10 ; 10 >
       au < manifest ; 2014 ; Fluids and Barriers of the CNS Volume 11 ; 11 >
       
@@ -3533,7 +3588,7 @@
       au < released ; 2009 ; Frontiers in Zoology Volume 6 ; 6 >
       au < released ; 2010 ; Frontiers in Zoology Volume 7 ; 7 >
       au < released ; 2011 ; Frontiers in Zoology Volume 8 ; 8 >
-      au < ready ; 2012 ; Frontiers in Zoology Volume 9 ; 9 >
+      au < released ; 2012 ; Frontiers in Zoology Volume 9 ; 9 >
       au < manifest ; 2013 ; Frontiers in Zoology Volume 10 ; 10 >
       au < manifest ; 2014 ; Frontiers in Zoology Volume 11 ; 11 >
       
@@ -3559,7 +3614,7 @@
       au < released ; 2009 ; Genetic Vaccines and Therapy Volume 7 ; 7 >
       au < released ; 2010 ; Genetic Vaccines and Therapy Volume 8 ; 8 >
       au < released ; 2011 ; Genetic Vaccines and Therapy Volume 9 ; 9 >
-      au < ready ; 2012 ; Genetic Vaccines and Therapy Volume 10 ; 10 >
+      au < released ; 2012 ; Genetic Vaccines and Therapy Volume 10 ; 10 >
 
     }
 
@@ -3608,15 +3663,15 @@
       au < manifest ; 2001 ; Genetics Selection Evolution Volume 33 ; 33 >
       au < manifest ; 2002 ; Genetics Selection Evolution Volume 34 ; 34 >
       au < manifest ; 2003 ; Genetics Selection Evolution Volume 35 ; 35 >
-      au < ready ; 2004 ; Genetics Selection Evolution Volume 36 ; 36 >
-      au < ready ; 2005 ; Genetics Selection Evolution Volume 37 ; 37 >
-      au < ready ; 2006 ; Genetics Selection Evolution Volume 38 ; 38 >
-      au < ready ; 2007 ; Genetics Selection Evolution Volume 39 ; 39 >
-      au < ready ; 2008 ; Genetics Selection Evolution Volume 40 ; 40 >
-      au < ready ; 2009 ; Genetics Selection Evolution Volume 41 ; 41 >
-      au < ready ; 2010 ; Genetics Selection Evolution Volume 42 ; 42 >
-      au < ready ; 2011 ; Genetics Selection Evolution Volume 43 ; 43 >
-      au < ready ; 2012 ; Genetics Selection Evolution Volume 44 ; 44 >
+      au < released ; 2004 ; Genetics Selection Evolution Volume 36 ; 36 >
+      au < released ; 2005 ; Genetics Selection Evolution Volume 37 ; 37 >
+      au < released ; 2006 ; Genetics Selection Evolution Volume 38 ; 38 >
+      au < released ; 2007 ; Genetics Selection Evolution Volume 39 ; 39 >
+      au < released ; 2008 ; Genetics Selection Evolution Volume 40 ; 40 >
+      au < released ; 2009 ; Genetics Selection Evolution Volume 41 ; 41 >
+      au < released ; 2010 ; Genetics Selection Evolution Volume 42 ; 42 >
+      au < released ; 2011 ; Genetics Selection Evolution Volume 43 ; 43 >
+      au < released ; 2012 ; Genetics Selection Evolution Volume 44 ; 44 >
       au < manifest ; 2013 ; Genetics Selection Evolution Volume 45 ; 45 >
       au < manifest ; 2014 ; Genetics Selection Evolution Volume 46 ; 46 >
 
@@ -3645,8 +3700,8 @@
       au < released ; 2010 ; Genome Biology Volume 11 ; 11 >
       au < released ; 2011 ; Genome Biology Volume 12 ; 12 >
       au < manifest ; 2012 ; Genome Biology Volume 13 ; 13 >
-      au < exists ; 2013 ; Genome Biology Volume 14 ; 14 >
-      au < expected ; 2014 ; Genome Biology Volume 15 ; 15 >
+      au < manifest ; 2013 ; Genome Biology Volume 14 ; 14 >
+      au < manifest ; 2014 ; Genome Biology Volume 15 ; 15 >
       
     }
 
@@ -3662,7 +3717,7 @@
 
       au < released ; 2010 ; Genome Integrity Volume 1 ; 1 >
       au < released ; 2011 ; Genome Integrity Volume 2 ; 2 >
-      au < ready ; 2012 ; Genome Integrity Volume 3 ; 3 >
+      au < released ; 2012 ; Genome Integrity Volume 3 ; 3 >
       au < manifest ; 2013 ; Genome Integrity Volume 4 ; 4 >
       au < manifest ; 2014 ; Genome Integrity Volume 5 ; 5 >
       
@@ -3720,7 +3775,7 @@
       au < released ; 2009 ; Globalization and Health Volume 5 ; 5 >
       au < released ; 2010 ; Globalization and Health Volume 6 ; 6 >
       au < released ; 2011 ; Globalization and Health Volume 7 ; 7 >
-      au < ready ; 2012 ; Globalization and Health Volume 8 ; 8 >
+      au < released ; 2012 ; Globalization and Health Volume 8 ; 8 >
       au < manifest ; 2013 ; Globalization and Health Volume 9 ; 9 >
       au < manifest ; 2014 ; Globalization and Health Volume 10 ; 10 >
 
@@ -3739,7 +3794,7 @@
       au < manifest ; 2009 ; Gut Pathogens Volume 1 ; 1 >
       au < manifest ; 2010 ; Gut Pathogens Volume 2 ; 2 >
       au < manifest ; 2011 ; Gut Pathogens Volume 3 ; 3 >
-      au < ready ; 2012 ; Gut Pathogens Volume 4 ; 4 >
+      au < released ; 2012 ; Gut Pathogens Volume 4 ; 4 >
       au < manifest ; 2013 ; Gut Pathogens Volume 5 ; 5 >
       au < manifest ; 2014 ; Gut Pathogens Volume 6 ; 6 >
 
@@ -3763,7 +3818,7 @@
       au < released ; 2009 ; Harm Reduction Journal Volume 6 ; 6 >
       au < released ; 2010 ; Harm Reduction Journal Volume 7 ; 7 >
       au < released ; 2011 ; Harm Reduction Journal Volume 8 ; 8 >
-      au < ready ; 2012 ; Harm Reduction Journal Volume 9 ; 9 >
+      au < released ; 2012 ; Harm Reduction Journal Volume 9 ; 9 >
       au < manifest ; 2013 ; Harm Reduction Journal Volume 10 ; 10 >
       au < manifest ; 2014 ; Harm Reduction Journal Volume 11 ; 11 >
 
@@ -4032,7 +4087,7 @@
       au < released ; 2009 ; Infectious Agents and Cancer Volume 4 ; 4 >
       au < notReady ; 2010 ; Infectious Agents and Cancer Volume 5 ; 5 >
       au < released ; 2011 ; Infectious Agents and Cancer Volume 6 ; 6 >
-      au < ready ; 2012 ; Infectious Agents and Cancer Volume 7 ; 7 >
+      au < released ; 2012 ; Infectious Agents and Cancer Volume 7 ; 7 >
       au < manifest ; 2013 ; Infectious Agents and Cancer Volume 8 ; 8 >
       au < manifest ; 2014 ; Infectious Agents and Cancer Volume 9 ; 9 >
 
@@ -4365,6 +4420,20 @@
 
     {
       title <
+        name = Journal of Animal Science and Technology ;
+        eissn = 2055-0391 ;
+        issnl = 2055-0391
+      >
+
+      param[base_url] = http://www.janimscitechnol.com/
+      param[journal_issn] = 2055-0391
+
+      au < exists ; 2014 ; Journal of Animal Science and Technology Volume 56 ; 56 >
+
+    }
+
+    {
+      title <
         name = Journal of Autoimmune Diseases ;
         eissn = 1740-2557 ;
         issnl = 1740-2557
@@ -4400,6 +4469,21 @@
       au < manifest ; 2012 ; Journal of Biological Engineering Volume 6 ; 6 >
       au < manifest ; 2013 ; Journal of Biological Engineering Volume 7 ; 7 >
       au < manifest ; 2014 ; Journal of Biological Engineering Volume 8 ; 8 >
+
+    }
+
+    {
+      title <
+        name = Journal of Biological Research-Thessaloniki ;
+        issn = 1790-045X ;
+        eissn = 2241-5793 ;
+        issnl = 2241-5793
+      >
+
+      param[base_url] = http://www.jbiolres.com/
+      param[journal_issn] = 2241-5793
+
+      au < manifest ; 2014 ; Journal of Biological Research-Thessaloniki Volume 21 ; 21 >
 
     }
 
@@ -5326,7 +5410,7 @@
     {
       title <
         name = Microbiome ;
-        issn = 2049-2618 ;
+        eissn = 2049-2618 ;
         issnl = 2049-2618
       >
 
@@ -5335,6 +5419,20 @@
 
       au < manifest ; 2013 ; Microbiome Volume 1 ; 1 >
       au < manifest ; 2014 ; Microbiome Volume 2 ; 2 >
+
+    }
+
+    {
+      title <
+        name = Military Medical Research ;
+        eissn = 2054-9369 ;
+        issnl = 2054-9369
+      >
+
+      param[base_url] = http://www.mmrjournal.org/
+      param[journal_issn] = 2054-9369
+
+      au < manifest ; 2014 ; Military Medical Research Volume 1 ; 1 >
 
     }
 
@@ -6189,11 +6287,11 @@
       param[base_url] = http://stemcellres.com/
       param[journal_issn] = 1757-6512
 
-      au < exists ; 2010 ; Stem Cell Research & Therapy Volume 1 ; 1 >
-      au < exists ; 2011 ; Stem Cell Research & Therapy Volume 2 ; 2 >
-      au < exists ; 2012 ; Stem Cell Research & Therapy Volume 3 ; 3 >
-      au < exists ; 2013 ; Stem Cell Research & Therapy Volume 4 ; 4 >
-      au < expected ; 2014 ; Stem Cell Research & Therapy Volume 5 ; 5 >
+      au < manifest ; 2010 ; Stem Cell Research & Therapy Volume 1 ; 1 >
+      au < manifest ; 2011 ; Stem Cell Research & Therapy Volume 2 ; 2 >
+      au < manifest ; 2012 ; Stem Cell Research & Therapy Volume 3 ; 3 >
+      au < manifest ; 2013 ; Stem Cell Research & Therapy Volume 4 ; 4 >
+      au < manifest ; 2014 ; Stem Cell Research & Therapy Volume 5 ; 5 >
 
     }
 
@@ -6420,7 +6518,7 @@
       param[base_url] = http://www.veterinaryresearch.org/
       param[journal_issn] = 1297-9716
 
-      au < ready ; 2011 ; Veterinary Research Volume 42 ; 42 >
+      au < released ; 2011 ; Veterinary Research Volume 42 ; 42 >
       au < manifest ; 2012 ; Veterinary Research Volume 43 ; 43 >
       au < manifest ; 2013 ; Veterinary Research Volume 44 ; 44 >
       au < manifest ; 2014 ; Veterinary Research Volume 45 ; 45 >

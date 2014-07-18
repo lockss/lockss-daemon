@@ -1,5 +1,5 @@
 /*
- * $Id: BasicUserAccount.java,v 1.4 2012-01-18 03:37:52 tlipkis Exp $
+ * $Id: BasicUserAccount.java,v 1.4.46.1 2014-07-18 15:59:10 wkwilson Exp $
  */
 
 /*
@@ -88,14 +88,11 @@ public class BasicUserAccount extends UserAccount {
     PREFIX + "failedAttemptResetInterval";
   static final long DEFAULT_FAILED_ATTEMPT_RESET_INTERVAL = -1;
 
-  private transient Configuration config;
-
   public BasicUserAccount(String name) {
     super(name);
   }
 
   protected void commonInit(AccountManager acctMgr, Configuration config) {
-    this.config = config;
     super.commonInit(acctMgr, config);
   }
 
@@ -103,53 +100,57 @@ public class BasicUserAccount extends UserAccount {
     return "Basic";
   }
 
+  protected Configuration getConfig() {
+    return CurrentConfig.getCurrentConfig();
+  }
+
   protected int getMinPasswordLength() {
-    return config.getInt(PARAM_MIN_PASSWORD_LENGTH,
-			 DEFAULT_MIN_PASSWORD_LENGTH);
+    return getConfig().getInt(PARAM_MIN_PASSWORD_LENGTH,
+			      DEFAULT_MIN_PASSWORD_LENGTH);
   }
 
   protected int getHistorySize() {
-    return config.getInt(PARAM_PASSWORD_HISTORY_SIZE,
-			 DEFAULT_PASSWORD_HISTORY_SIZE);
+    return getConfig().getInt(PARAM_PASSWORD_HISTORY_SIZE,
+			      DEFAULT_PASSWORD_HISTORY_SIZE);
   }
 
   protected long getMinPasswordChangeInterval() {
-    return config.getTimeInterval(PARAM_MIN_PASSWORD_CHANGE_INTERVAL,
-				  DEFAULT_MIN_PASSWORD_CHANGE_INTERVAL);
+    return getConfig().getTimeInterval(PARAM_MIN_PASSWORD_CHANGE_INTERVAL,
+				       DEFAULT_MIN_PASSWORD_CHANGE_INTERVAL);
   }
 
   protected long getMaxPasswordChangeInterval() {
-    return config.getTimeInterval(PARAM_MAX_PASSWORD_CHANGE_INTERVAL,
-				  DEFAULT_MAX_PASSWORD_CHANGE_INTERVAL);
+    return getConfig().getTimeInterval(PARAM_MAX_PASSWORD_CHANGE_INTERVAL,
+				       DEFAULT_MAX_PASSWORD_CHANGE_INTERVAL);
   }
 
   protected long getPasswordChangeReminderInterval() {
-    return config.getTimeInterval(PARAM_PASSWORD_CHANGE_REMINDER_INTERVAL,
-				  DEFAULT_PASSWORD_CHANGE_REMINDER_INTERVAL);
+    return getConfig().getTimeInterval(PARAM_PASSWORD_CHANGE_REMINDER_INTERVAL,
+				       DEFAULT_PASSWORD_CHANGE_REMINDER_INTERVAL);
   }
 
   public long getInactivityLogout() {
-    return config.getTimeInterval(PARAM_INACTIVITY_LOGOUT,
-				  DEFAULT_INACTIVITY_LOGOUT);
+    return getConfig().getTimeInterval(PARAM_INACTIVITY_LOGOUT,
+				       DEFAULT_INACTIVITY_LOGOUT);
   }
 
   protected int getMaxFailedAttempts() {
-    return config.getInt(PARAM_MAX_FAILED_ATTEMPTS,
-			 DEFAULT_MAX_FAILED_ATTEMPTS);
+    return getConfig().getInt(PARAM_MAX_FAILED_ATTEMPTS,
+			      DEFAULT_MAX_FAILED_ATTEMPTS);
   }
 
   protected long getFailedAttemptWindow() {
-    return config.getTimeInterval(PARAM_FAILED_ATTEMPT_WINDOW,
-				  DEFAULT_FAILED_ATTEMPT_WINDOW);
+    return getConfig().getTimeInterval(PARAM_FAILED_ATTEMPT_WINDOW,
+				       DEFAULT_FAILED_ATTEMPT_WINDOW);
   }
 
   protected long getFailedAttemptResetInterval() {
-    return config.getTimeInterval(PARAM_FAILED_ATTEMPT_RESET_INTERVAL,
-				  DEFAULT_FAILED_ATTEMPT_RESET_INTERVAL);
+    return getConfig().getTimeInterval(PARAM_FAILED_ATTEMPT_RESET_INTERVAL,
+				       DEFAULT_FAILED_ATTEMPT_RESET_INTERVAL);
   }
 
   protected String getDefaultHashAlgorithm() {
-    return config.get(PARAM_HASH_ALGORITHM, DEFAULT_HASH_ALGORITHM);
+    return getConfig().get(PARAM_HASH_ALGORITHM, DEFAULT_HASH_ALGORITHM);
   }
 
 

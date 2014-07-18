@@ -4,7 +4,7 @@
   >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; volume ; name ; param[year] >
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
 
   {
 
@@ -17,9 +17,9 @@
       param[base_url] = http://e-revista.unioeste.br/
       param[journal_id] = actaiguazu
 
-      au < exists ; 2012 ; 1 ; Acta Iguazu Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 2 ; Acta Iguazu Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 3 ; Acta Iguazu Volume 2014 ; 2014 >
+      au < exists ; 2012 ; 1 ; Acta Iguazu Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 2 ; Acta Iguazu Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 3 ; Acta Iguazu Volume 2014 ; 2014 ; >
 
   }
 
@@ -34,15 +34,7 @@
       param[base_url] = http://e-revista.unioeste.br/
       param[journal_id] = alamedas
 
-      au < released ; 2006 ; 1 ; Alamedas Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 2 ; Alamedas Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 3 ; Alamedas Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 4 ; Alamedas Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 5 ; Alamedas Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 6 ; Alamedas Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 7 ; Alamedas Volume 2012 ; 2012 >
-      au < exists ; 2013 ; 8 ; Alamedas Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 9 ; Alamedas Volume 2014 ; 2014 >
+      au < released ; 2006 ; 1 ; Alamedas Volume 2006 ; 2006 ; >
 
   }
 
@@ -58,19 +50,19 @@
       param[base_url] = http://e-revista.unioeste.br/
       param[journal_id] = cadernoedfisica
 
-      au < released ; 1999 ; 1 ; Caderno de Educação Física e Esporte Volume 1999 ; 1999 >
-      au < released ; 2000 ; 2 ; Caderno de Educação Física e Esporte Volume 2000 ; 2000 >
-      au < released ; 2001 ; 3 ; Caderno de Educação Física e Esporte Volume 2001 ; 2001 >
-      au < released ; 2002 ; 4 ; Caderno de Educação Física e Esporte Volume 2002 ; 2002 >
-      au < released ; 2003 ; 5 ; Caderno de Educação Física e Esporte Volume 2003 ; 2003 >
-      au < released ; 2004 ; 6 ; Caderno de Educação Física e Esporte Volume 2004 ; 2004 >
-      au < released ; 2008 ; 10 ; Caderno de Educação Física e Esporte Volume 2008 ; 2008 >
-      au < released ; 2009 ; 11 ; Caderno de Educação Física e Esporte Volume 2009 ; 2009 >
-      au < released ; 2010 ; 12 ; Caderno de Educação Física e Esporte Volume 2010 ; 2010 >
-      au < released ; 2011 ; 13 ; Caderno de Educação Física e Esporte Volume 2011 ; 2011 >
-      au < expected ; 2012 ; 14 ; Caderno de Educação Física e Esporte Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 15 ; Caderno de Educação Física e Esporte Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 16 ; Caderno de Educação Física e Esporte Volume 2014 ; 2014 >
+      au < released ; 1999 ; 1 ; Caderno de Educação Física e Esporte Volume 1999 ; 1999 ; >
+      au < released ; 2000 ; 2 ; Caderno de Educação Física e Esporte Volume 2000 ; 2000 ; >
+      au < released ; 2001 ; 3 ; Caderno de Educação Física e Esporte Volume 2001 ; 2001 ; >
+      au < released ; 2002 ; 4 ; Caderno de Educação Física e Esporte Volume 2002 ; 2002 ; >
+      au < released ; 2003 ; 5 ; Caderno de Educação Física e Esporte Volume 2003 ; 2003 ; >
+      au < released ; 2004 ; 6 ; Caderno de Educação Física e Esporte Volume 2004 ; 2004 ; >
+      au < released ; 2008 ; 10 ; Caderno de Educação Física e Esporte Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 11 ; Caderno de Educação Física e Esporte Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 12 ; Caderno de Educação Física e Esporte Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 13 ; Caderno de Educação Física e Esporte Volume 2011 ; 2011 ; >
+      au < expected ; 2012 ; 14 ; Caderno de Educação Física e Esporte Volume 2012 ; 2012 ; >
+      au < manifest ; 2013 ; 15 ; Caderno de Educação Física e Esporte Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 16 ; Caderno de Educação Física e Esporte Volume 2014 ; 2014 ; >
 
   }
 
@@ -85,17 +77,16 @@
       comment[publisher] = Universidade Estadual do Oeste do Paraná
       param[base_url] = http://e-revista.unioeste.br/
       param[journal_id] = csaemrevista
-      comment[notReady] = low agreement/no substance 2010
 
-      au < notReady ; 2006 ; 1 ; Ciências Sociais Aplicadas em Revista Volume 2006 ; 2006 >
-      au < notReady ; 2007 ; 2 ; Ciências Sociais Aplicadas em Revista Volume 2007 ; 2007 >
-      au < notReady ; 2008 ; 3 ; Ciências Sociais Aplicadas em Revista Volume 2008 ; 2008 >
-      au < notReady ; 2009 ; 4 ; Ciências Sociais Aplicadas em Revista Volume 2009 ; 2009 >
-      au < notReady ; 2010 ; 5 ; Ciências Sociais Aplicadas em Revista Volume 2010 ; 2010 >
-      au < notReady ; 2011 ; 6 ; Ciências Sociais Aplicadas em Revista Volume 2011 ; 2011 >
-      au < released ; 2012 ; 7 ; Ciências Sociais Aplicadas em Revista Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 8 ; Ciências Sociais Aplicadas em Revista Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 9 ; Ciências Sociais Aplicadas em Revista Volume 2014 ; 2014 >
+      au < released ; 2006 ; 1 ; Ciências Sociais Aplicadas em Revista Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 2 ; Ciências Sociais Aplicadas em Revista Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 3 ; Ciências Sociais Aplicadas em Revista Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 4 ; Ciências Sociais Aplicadas em Revista Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 5 ; Ciências Sociais Aplicadas em Revista Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 6 ; Ciências Sociais Aplicadas em Revista Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 7 ; Ciências Sociais Aplicadas em Revista Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 8 ; Ciências Sociais Aplicadas em Revista Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 9 ; Ciências Sociais Aplicadas em Revista Volume 2014 ; 2014 ; >
 
   }
 
@@ -110,17 +101,16 @@
       comment[publisher] = Universidade Estadual do Oeste do Paraná
       param[base_url] = http://e-revista.unioeste.br/
       param[journal_id] = ccsaemperspectiva
-      comment[notReady] = no substance
 
-      au < released ; 2006 ; 1 ; Ciências Sociais em Perspectiva Volume 2006 ; 2006 >
-      au < released ; 2007 ; 2 ; Ciências Sociais em Perspectiva Volume 2007 ; 2007 >
-      au < released ; 2008 ; 3 ; Ciências Sociais em Perspectiva Volume 2008 ; 2008 >
-      au < released ; 2009 ; 4 ; Ciências Sociais em Perspectiva Volume 2009 ; 2009 >
-      au < released ; 2010 ; 5 ; Ciências Sociais em Perspectiva Volume 2010 ; 2010 >
-      au < released ; 2011 ; 6 ; Ciências Sociais em Perspectiva Volume 2011 ; 2011 >
-      au < notReady ; 2012 ; 7 ; Ciências Sociais em Perspectiva Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 8 ; Ciências Sociais em Perspectiva Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 9 ; Ciências Sociais em Perspectiva Volume 2014 ; 2014 >
+      au < released ; 2006 ; 1 ; Ciências Sociais em Perspectiva Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 2 ; Ciências Sociais em Perspectiva Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 3 ; Ciências Sociais em Perspectiva Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 4 ; Ciências Sociais em Perspectiva Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 5 ; Ciências Sociais em Perspectiva Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 6 ; Ciências Sociais em Perspectiva Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 7 ; Ciências Sociais em Perspectiva Volume 2012 ; 2012 ; >
+      au < manifest ; 2013 ; 8 ; Ciências Sociais em Perspectiva Volume 2013 ; 2013 ; >
+      au < manifest ; 2014 ; 9 ; Ciências Sociais em Perspectiva Volume 2014 ; 2014 ; >
 
   }
 
@@ -136,15 +126,15 @@
       param[base_url] = http://e-revista.unioeste.br/
       param[journal_id] = educereeteducare
 
-      au < released ; 2006 ; 1 ; Educere et Educare Volume 2006 ; 2006 >
-      au < released ; 2007 ; 2 ; Educere et Educare Volume 2007 ; 2007 >
-      au < released ; 2008 ; 3 ; Educere et Educare Volume 2008 ; 2008 >
-      au < released ; 2009 ; 4 ; Educere et Educare Volume 2009 ; 2009 >
-      au < released ; 2010 ; 5 ; Educere et Educare Volume 2010 ; 2010 >
-      au < released ; 2011 ; 6 ; Educere et Educare Volume 2011 ; 2011 >
-      au < expected ; 2012 ; 7 ; Educere et Educare Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 8 ; Educere et Educare Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 9 ; Educere et Educare Volume 2014 ; 2014 >
+      au < released ; 2006 ; 1 ; Educere et Educare Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 2 ; Educere et Educare Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 3 ; Educere et Educare Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 4 ; Educere et Educare Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 5 ; Educere et Educare Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 6 ; Educere et Educare Volume 2011 ; 2011 ; >
+      au < manifest ; 2012 ; 7 ; Educere et Educare Volume 2012 ; 2012 ; >
+      au < manifest ; 2013 ; 8 ; Educere et Educare Volume 2013 ; 2013 ; >
+      au < manifest ; 2014 ; 9 ; Educere et Educare Volume 2014 ; 2014 ; >
 
   }
 
@@ -160,18 +150,18 @@
       param[base_url] = http://e-revista.unioeste.br/
       param[journal_id] = espacoplural
 
-      au < released ; 2003 ; 1 ; Espaço Plural Volume 2003 ; 2003 >
-      au < released ; 2004 ; 2 ; Espaço Plural Volume 2004 ; 2004 >
-      au < released ; 2005 ; 3 ; Espaço Plural Volume 2005 ; 2005 >
-      au < released ; 2006 ; 4 ; Espaço Plural Volume 2006 ; 2006 >
-      au < released ; 2007 ; 5 ; Espaço Plural Volume 2007 ; 2007 >
-      au < released ; 2008 ; 6 ; Espaço Plural Volume 2008 ; 2008 >
-      au < released ; 2009 ; 7 ; Espaço Plural Volume 2009 ; 2009 >
-      au < released ; 2010 ; 8 ; Espaço Plural Volume 2010 ; 2010 >
-      au < released ; 2011 ; 9 ; Espaço Plural Volume 2011 ; 2011 >
-      au < expected ; 2012 ; 10 ; Espaço Plural Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 11 ; Espaço Plural Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 12 ; Espaço Plural Volume 2014 ; 2014 >
+      au < released ; 2003 ; 1 ; Espaço Plural Volume 2003 ; 2003 ; >
+      au < released ; 2004 ; 2 ; Espaço Plural Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 3 ; Espaço Plural Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 4 ; Espaço Plural Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 5 ; Espaço Plural Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 6 ; Espaço Plural Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 7 ; Espaço Plural Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 8 ; Espaço Plural Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 9 ; Espaço Plural Volume 2011 ; 2011 ; >
+      au < manifest ; 2012 ; 10 ; Espaço Plural Volume 2012 ; 2012 ; >
+      au < manifest ; 2013 ; 11 ; Espaço Plural Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 12 ; Espaço Plural Volume 2014 ; 2014 ; >
 
   }
 
@@ -186,12 +176,12 @@
       param[base_url] = http://e-revista.unioeste.br/
       param[journal_id] = geoemquestao
 
-      au < released ; 2009 ; 1 ; Geografia em Questão Volume 2009 ; 2009 >
-      au < released ; 2010 ; 2 ; Geografia em Questão Volume 2010 ; 2010 >
-      au < released ; 2011 ; 3 ; Geografia em Questão Volume 2011 ; 2011 >
-      au < released ; 2012 ; 4 ; Geografia em Questão Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 5 ; Geografia em Questão Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 6 ; Geografia em Questão Volume 2014 ; 2014 >
+      au < released ; 2009 ; 1 ; Geografia em Questão Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 2 ; Geografia em Questão Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 3 ; Geografia em Questão Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 4 ; Geografia em Questão Volume 2012 ; 2012 ; >
+      au < manifest ; 2013 ; 5 ; Geografia em Questão Volume 2013 ; 2013 ; >
+      au < manifest ; 2014 ; 6 ; Geografia em Questão Volume 2014 ; 2014 ; >
 
   }
 
@@ -206,20 +196,20 @@
       comment[publisher] = Universidade Estadual do Oeste do Paraná
       param[base_url] = http://e-revista.unioeste.br/
       param[journal_id] = ideacao
-      comment[notReady] = fetch error
+      comment[v2012] = http://e-revista.unioeste.br/index.php/ideacao/rt/bio/6054, bad url with no colon
 
-      au < released ; 2003 ; 1 ; Ideação Volume 2003 ; 2003 >
-      au < released ; 2004 ; 2 ; Ideação Volume 2004 ; 2004 >
-      au < released ; 2005 ; 3 ; Ideação Volume 2005 ; 2005 >
-      au < released ; 2006 ; 4 ; Ideação Volume 2006 ; 2006 >
-      au < released ; 2007 ; 5 ; Ideação Volume 2007 ; 2007 >
-      au < released ; 2008 ; 6 ; Ideação Volume 2008 ; 2008 >
-      au < released ; 2009 ; 7 ; Ideação Volume 2009 ; 2009 >
-      au < released ; 2010 ; 8 ; Ideação Volume 2010 ; 2010 >
-      au < released ; 2011 ; 9 ; Ideação Volume 2011 ; 2011 >
-      au < notReady ; 2012 ; 10 ; Ideação Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 11 ; Ideação Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 12 ; Ideação Volume 2014 ; 2014 >
+      au < released ; 2003 ; 1 ; Ideação Volume 2003 ; 2003 ; >
+      au < released ; 2004 ; 2 ; Ideação Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 3 ; Ideação Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 4 ; Ideação Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 5 ; Ideação Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 6 ; Ideação Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 7 ; Ideação Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 8 ; Ideação Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 9 ; Ideação Volume 2011 ; 2011 ; >
+      au < notReady ; 2012 ; 10 ; Ideação Volume 2012 ; 2012 ; no colon on url on bio 6054>
+      au < manifest ; 2013 ; 11 ; Ideação Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 12 ; Ideação Volume 2014 ; 2014 ; >
 
   }
 
@@ -234,20 +224,23 @@
       comment[publisher] = Universidade Estadual do Oeste do Paraná
       param[base_url] = http://e-revista.unioeste.br/
       param[journal_id] = gepec
-      comment[notReady] = fetch error / Repository error
+      comment[v2008] = http://e-revista.unioeste.br/index.php/gepec/rt/bio/2185 has www.ige.unicamp.br, no http
+      comment[v2009] = http://e-revista.unioeste.br/index.php/gepec/rt/bio/2681 has www.ige.unicamp.br, no http
+      comment[v2010] = http://e-revista.unioeste.br/index.php/gepec/rt/bio/3825 has www.pessoal.utfpr.edu.br, no http
+      comment[v2012] = http://e-revista.unioeste.br/index.php/gepec/rt/bio/5581 has www.utfpr.edu.br, no http
 
-      au < released ; 2003 ; 1 ; Informe GEPEC Volume 2003 ; 2003 >
-      au < released ; 2004 ; 2 ; Informe GEPEC Volume 2004 ; 2004 >
-      au < released ; 2005 ; 3 ; Informe GEPEC Volume 2005 ; 2005 >
-      au < released ; 2006 ; 4 ; Informe GEPEC Volume 2006 ; 2006 >
-      au < released ; 2007 ; 5 ; Informe GEPEC Volume 2007 ; 2007 >
-      au < notReady ; 2008 ; 6 ; Informe GEPEC Volume 2008 ; 2008 >
-      au < notReady ; 2009 ; 7 ; Informe GEPEC Volume 2009 ; 2009 >
-      au < notReady ; 2010 ; 8 ; Informe GEPEC Volume 2010 ; 2010 >
-      au < released ; 2011 ; 9 ; Informe GEPEC Volume 2011 ; 2011 >
-      au < notReady ; 2012 ; 10 ; Informe GEPEC Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 11 ; Informe GEPEC Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 12 ; Informe GEPEC Volume 2014 ; 2014 >
+      au < released ; 2003 ; 1 ; Informe GEPEC Volume 2003 ; 2003 ; >
+      au < released ; 2004 ; 2 ; Informe GEPEC Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 3 ; Informe GEPEC Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 4 ; Informe GEPEC Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 5 ; Informe GEPEC Volume 2007 ; 2007 ; >
+      au < notReady ; 2008 ; 6 ; Informe GEPEC Volume 2008 ; 2008 ; url with no http on bio 2185 >
+      au < notReady ; 2009 ; 7 ; Informe GEPEC Volume 2009 ; 2009 ; url with no http on bio 2681 >
+      au < notReady ; 2010 ; 8 ; Informe GEPEC Volume 2010 ; 2010 ; url with no http on bio 3825 >
+      au < released ; 2011 ; 9 ; Informe GEPEC Volume 2011 ; 2011 ; >
+      au < notReady ; 2012 ; 10 ; Informe GEPEC Volume 2012 ; 2012 ; url with no http on bio 5581 >
+      au < manifest ; 2013 ; 11 ; Informe GEPEC Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 12 ; Informe GEPEC Volume 2014 ; 2014 ; >
 
   }
 
@@ -262,18 +255,17 @@
       comment[publisher] = Universidade Estadual do Oeste do Paraná
       param[base_url] = http://e-revista.unioeste.br/
       param[journal_id] = linguaseletras
-      comment[notReady] = low agreement
 
-      au < notReady ; 2005 ; 1 ; Línguas & Letras Volume 2005 ; 2005 >
-      au < notReady ; 2006 ; 2 ; Línguas & Letras Volume 2006 ; 2006 >
-      au < notReady ; 2007 ; 3 ; Línguas & Letras Volume 2007 ; 2007 >
-      au < notReady ; 2008 ; 4 ; Línguas & Letras Volume 2008 ; 2008 >
-      au < notReady ; 2009 ; 5 ; Línguas & Letras Volume 2009 ; 2009 >
-      au < notReady ; 2010 ; 6 ; Línguas & Letras Volume 2010 ; 2010 >
-      au < notReady ; 2011 ; 7 ; Línguas & Letras Volume 2011 ; 2011 >
-      au < notReady ; 2012 ; 8 ; Línguas & Letras Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 9 ; Línguas & Letras Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 10 ; Línguas & Letras Volume 2014 ; 2014 >
+      au < notReady ; 2005 ; 1 ; Línguas & Letras Volume 2005 ; 2005 ; low agreement >
+      au < released ; 2006 ; 2 ; Línguas & Letras Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 3 ; Línguas & Letras Volume 2007 ; 2007 ; >
+      au < notReady ; 2008 ; 4 ; Línguas & Letras Volume 2008 ; 2008 ; low agreement >
+      au < released ; 2009 ; 5 ; Línguas & Letras Volume 2009 ; 2009 ; >
+      au < notReady ; 2010 ; 6 ; Línguas & Letras Volume 2010 ; 2010 ; low agreement >
+      au < notReady ; 2011 ; 7 ; Línguas & Letras Volume 2011 ; 2011 ; low agreement >
+      au < notReady ; 2012 ; 8 ; Línguas & Letras Volume 2012 ; 2012 ; low agreement >
+      au < manifest ; 2013 ; 9 ; Línguas & Letras Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 10 ; Línguas & Letras Volume 2014 ; 2014 ; >
 
   }
 
@@ -287,18 +279,17 @@
       comment[publisher] = Universidade Estadual do Oeste do Paraná
       param[base_url] = http://e-revista.unioeste.br/
       param[journal_id] = rlhm
-      comment[notReady] = no substance
 
-      au < notReady ; 2005 ; 1 ; Literatura, História e Memória Volume 2005 ; 2005 >
-      au < released ; 2006 ; 2 ; Literatura, História e Memória Volume 2006 ; 2006 >
-      au < released ; 2007 ; 3 ; Literatura, História e Memória Volume 2007 ; 2007 >
-      au < released ; 2008 ; 4 ; Literatura, História e Memória Volume 2008 ; 2008 >
-      au < released ; 2009 ; 5 ; Literatura, História e Memória Volume 2009 ; 2009 >
-      au < released ; 2010 ; 6 ; Literatura, História e Memória Volume 2010 ; 2010 >
-      au < released ; 2011 ; 7 ; Literatura, História e Memória Volume 2011 ; 2011 >
-      au < released ; 2012 ; 8 ; Literatura, História e Memória Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 9 ; Literatura, História e Memória Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 10 ; Literatura, História e Memória Volume 2014 ; 2014 >
+      au < notReady ; 2005 ; 1 ; Literatura, História e Memória Volume 2005 ; 2005 ; no articles >
+      au < released ; 2006 ; 2 ; Literatura, História e Memória Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 3 ; Literatura, História e Memória Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 4 ; Literatura, História e Memória Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 5 ; Literatura, História e Memória Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 6 ; Literatura, História e Memória Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 7 ; Literatura, História e Memória Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 8 ; Literatura, História e Memória Volume 2012 ; 2012 ; >
+      au < manifest ; 2013 ; 9 ; Literatura, História e Memória Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 10 ; Literatura, História e Memória Volume 2014 ; 2014 ; >
 
   }
 
@@ -313,18 +304,19 @@
       comment[publisher] = Universidade Estadual do Oeste do Paraná
       param[base_url] = http://e-revista.unioeste.br/
       param[journal_id] = pgeografica
-      comment[notReady] = fetch error and repository error
+      comment[v2005] = http://e-revista.unioeste.br/index.php/pgeografica/rt/bio/4 has www.prudente.unesp.br, no http
+      comment[v2008] = http://e-revista.unioeste.br/index.php/pgeografica/rt/bio/3631 - 42 has www.unioeste.br, no http
 
-      au < notReady ; 2005 ; 1 ; Perspectiva Geográfica Volume 2005 ; 2005 >
-      au < released ; 2006 ; 2 ; Perspectiva Geográfica Volume 2006 ; 2006 >
-      au < released ; 2007 ; 3 ; Perspectiva Geográfica Volume 2007 ; 2007 >
-      au < notReady ; 2008 ; 4 ; Perspectiva Geográfica Volume 2008 ; 2008 >
-      au < released ; 2009 ; 5 ; Perspectiva Geográfica Volume 2009 ; 2009 >
-      au < released ; 2010 ; 6 ; Perspectiva Geográfica Volume 2010 ; 2010 >
-      au < expected ; 2011 ; 7 ; Perspectiva Geográfica Volume 2011 ; 2011 >
-      au < expected ; 2012 ; 8 ; Perspectiva Geográfica Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 9 ; Perspectiva Geográfica Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 10 ; Perspectiva Geográfica Volume 2014 ; 2014 >
+      au < notReady ; 2005 ; 1 ; Perspectiva Geográfica Volume 2005 ; 2005 ; url with no http on bio 4 >
+      au < released ; 2006 ; 2 ; Perspectiva Geográfica Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 3 ; Perspectiva Geográfica Volume 2007 ; 2007 ; >
+      au < notReady ; 2008 ; 4 ; Perspectiva Geográfica Volume 2008 ; 2008 ; url with no http on bio 3631-42>
+      au < released ; 2009 ; 5 ; Perspectiva Geográfica Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 6 ; Perspectiva Geográfica Volume 2010 ; 2010 ; >
+      au < manifest ; 2011 ; 7 ; Perspectiva Geográfica Volume 2011 ; 2011 ; >
+      au < manifest ; 2012 ; 8 ; Perspectiva Geográfica Volume 2012 ; 2012 ; >
+      au < manifest ; 2013 ; 9 ; Perspectiva Geográfica Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 10 ; Perspectiva Geográfica Volume 2014 ; 2014 ; >
 
   }
 
@@ -340,19 +332,19 @@
       param[base_url] = http://e-revista.unioeste.br/
       param[journal_id] = expectativa
 
-      au < released ; 2001 ; 1 ; Revista Expectativa Volume 2001 ; 2001 >
-      au < released ; 2003 ; 3 ; Revista Expectativa Volume 2003 ; 2003 >
-      au < released ; 2004 ; 4 ; Revista Expectativa Volume 2004 ; 2004 >
-      au < released ; 2005 ; 5 ; Revista Expectativa Volume 2005 ; 2005 >
-      au < released ; 2006 ; 6 ; Revista Expectativa Volume 2006 ; 2006 >
-      au < released ; 2007 ; 7 ; Revista Expectativa Volume 2007 ; 2007 >
-      au < released ; 2008 ; 8 ; Revista Expectativa Volume 2008 ; 2008 >
-      au < released ; 2009 ; 9 ; Revista Expectativa Volume 2009 ; 2009 >
-      au < released ; 2010 ; 10 ; Revista Expectativa Volume 2010 ; 2010 >
-      au < released ; 2011 ; 11 ; Revista Expectativa Volume 2011 ; 2011 >
-      au < released ; 2012 ; 12 ; Revista Expectativa Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 13 ; Revista Expectativa Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 14 ; Revista Expectativa Volume 2014 ; 2014 >
+      au < released ; 2001 ; 1 ; Revista Expectativa Volume 2001 ; 2001 ; >
+      au < released ; 2003 ; 3 ; Revista Expectativa Volume 2003 ; 2003 ; >
+      au < released ; 2004 ; 4 ; Revista Expectativa Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 5 ; Revista Expectativa Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 6 ; Revista Expectativa Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 7 ; Revista Expectativa Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 8 ; Revista Expectativa Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 9 ; Revista Expectativa Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 10 ; Revista Expectativa Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 11 ; Revista Expectativa Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 12 ; Revista Expectativa Volume 2012 ; 2012 ; >
+      au < manifest ; 2013 ; 13 ; Revista Expectativa Volume 2013 ; 2013 ; >
+      au < manifest ; 2014 ; 14 ; Revista Expectativa Volume 2014 ; 2014 ; >
 
   }
 
@@ -368,22 +360,22 @@
       param[base_url] = http://e-revista.unioeste.br/
       param[journal_id] = fazciencia
 
-      au < released ; 1997 ; 1 ; Revista Faz Ciência Volume 1997 ; 1997 >
-      au < released ; 1998 ; 2 ; Revista Faz Ciência Volume 1998 ; 1998 >
-      au < released ; 1999 ; 3 ; Revista Faz Ciência Volume 1999 ; 1999 >
-      au < released ; 2002 ; 6 ; Revista Faz Ciência Volume 2002 ; 2002 >
-      au < released ; 2003 ; 7 ; Revista Faz Ciência Volume 2003 ; 2003 >
-      au < released ; 2004 ; 8 ; Revista Faz Ciência Volume 2004 ; 2004 >
-      au < released ; 2005 ; 9 ; Revista Faz Ciência Volume 2005 ; 2005 >
-      au < released ; 2006 ; 10 ; Revista Faz Ciência Volume 2006 ; 2006 >
-      au < released ; 2007 ; 11 ; Revista Faz Ciência Volume 2007 ; 2007 >
-      au < released ; 2008 ; 12 ; Revista Faz Ciência Volume 2008 ; 2008 >
-      au < released ; 2009 ; 13 ; Revista Faz Ciência Volume 2009 ; 2009 >
-      au < released ; 2010 ; 14 ; Revista Faz Ciência Volume 2010 ; 2010 >
-      au < released ; 2011 ; 15 ; Revista Faz Ciência Volume 2011 ; 2011 >
-      au < released ; 2012 ; 16 ; Revista Faz Ciência Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 17 ; Revista Faz Ciência Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 18 ; Revista Faz Ciência Volume 2014 ; 2014 >
+      au < released ; 1997 ; 1 ; Revista Faz Ciência Volume 1997 ; 1997 ; >
+      au < released ; 1998 ; 2 ; Revista Faz Ciência Volume 1998 ; 1998 ; >
+      au < released ; 1999 ; 3 ; Revista Faz Ciência Volume 1999 ; 1999 ; >
+      au < released ; 2002 ; 6 ; Revista Faz Ciência Volume 2002 ; 2002 ; >
+      au < released ; 2003 ; 7 ; Revista Faz Ciência Volume 2003 ; 2003 ; >
+      au < released ; 2004 ; 8 ; Revista Faz Ciência Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 9 ; Revista Faz Ciência Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 10 ; Revista Faz Ciência Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 11 ; Revista Faz Ciência Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 12 ; Revista Faz Ciência Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 13 ; Revista Faz Ciência Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 14 ; Revista Faz Ciência Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 15 ; Revista Faz Ciência Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 16 ; Revista Faz Ciência Volume 2012 ; 2012 ; >
+      au < manifest ; 2013 ; 17 ; Revista Faz Ciência Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 18 ; Revista Faz Ciência Volume 2014 ; 2014 ; >
 
   }
 
@@ -399,16 +391,16 @@
       param[base_url] = http://e-revista.unioeste.br/
       param[journal_id] = scientiaagraria
 
-      au < released ; 2004 ; 1 ; Scientia Agraria Paranaensis Volume 2004 ; 2004 >
-      au < released ; 2006 ; 3 ; Scientia Agraria Paranaensis Volume 2006 ; 2006 >
-      au < released ; 2007 ; 4 ; Scientia Agraria Paranaensis Volume 2007 ; 2007 >
-      au < released ; 2008 ; 5 ; Scientia Agraria Paranaensis Volume 2008 ; 2008 >
-      au < released ; 2009 ; 6 ; Scientia Agraria Paranaensis Volume 2009 ; 2009 >
-      au < released ; 2010 ; 7 ; Scientia Agraria Paranaensis Volume 2010 ; 2010 >
-      au < released ; 2011 ; 8 ; Scientia Agraria Paranaensis Volume 2011 ; 2011 >
-      au < released ; 2012 ; 9 ; Scientia Agraria Paranaensis Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 10 ; Scientia Agraria Paranaensis Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 11 ; Scientia Agraria Paranaensis Volume 2014 ; 2014 >
+      au < released ; 2004 ; 1 ; Scientia Agraria Paranaensis Volume 2004 ; 2004 ; >
+      au < released ; 2006 ; 3 ; Scientia Agraria Paranaensis Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 4 ; Scientia Agraria Paranaensis Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 5 ; Scientia Agraria Paranaensis Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 6 ; Scientia Agraria Paranaensis Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 7 ; Scientia Agraria Paranaensis Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 8 ; Scientia Agraria Paranaensis Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 9 ; Scientia Agraria Paranaensis Volume 2012 ; 2012 ; >
+      au < manifest ; 2013 ; 10 ; Scientia Agraria Paranaensis Volume 2013 ; 2013 ; >
+      au < manifest ; 2014 ; 11 ; Scientia Agraria Paranaensis Volume 2014 ; 2014 ; >
 
   }
 
@@ -424,17 +416,17 @@
       param[base_url] = http://e-revista.unioeste.br/
       param[journal_id] = temasematizes
 
-      au < released ; 2004 ; 1 ; Temas & Matizes Volume 2004 ; 2004 >
-      au < released ; 2005 ; 2 ; Temas & Matizes Volume 2005 ; 2005 >
-      au < released ; 2006 ; 3 ; Temas & Matizes Volume 2006 ; 2006 >
-      au < released ; 2007 ; 4 ; Temas & Matizes Volume 2007 ; 2007 >
-      au < released ; 2008 ; 5 ; Temas & Matizes Volume 2008 ; 2008 >
-      au < released ; 2009 ; 6 ; Temas & Matizes Volume 2009 ; 2009 >
-      au < released ; 2010 ; 7 ; Temas & Matizes Volume 2010 ; 2010 >
-      au < released ; 2011 ; 8 ; Temas & Matizes Volume 2011 ; 2011 >
-      au < expected ; 2012 ; 9 ; Temas & Matizes Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 10 ; Temas & Matizes Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 11 ; Temas & Matizes Volume 2014 ; 2014 >
+      au < released ; 2004 ; 1 ; Temas & Matizes Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 2 ; Temas & Matizes Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 3 ; Temas & Matizes Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 4 ; Temas & Matizes Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 5 ; Temas & Matizes Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 6 ; Temas & Matizes Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 7 ; Temas & Matizes Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 8 ; Temas & Matizes Volume 2011 ; 2011 ; >
+      au < expected ; 2012 ; 9 ; Temas & Matizes Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 10 ; Temas & Matizes Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 11 ; Temas & Matizes Volume 2014 ; 2014 ; >
 
   }
 
@@ -450,17 +442,17 @@
       param[base_url] = http://e-revista.unioeste.br/
       param[journal_id] = tempodaciencia
 
-      au < released ; 2004 ; 1 ; Tempo da Ciência Volume 2004 ; 2004 >
-      au < released ; 2005 ; 2 ; Tempo da Ciência Volume 2005 ; 2005 >
-      au < released ; 2006 ; 3 ; Tempo da Ciência Volume 2006 ; 2006 >
-      au < released ; 2007 ; 4 ; Tempo da Ciência Volume 2007 ; 2007 >
-      au < released ; 2008 ; 5 ; Tempo da Ciência Volume 2008 ; 2008 >
-      au < released ; 2009 ; 6 ; Tempo da Ciência Volume 2009 ; 2009 >
-      au < released ; 2010 ; 7 ; Tempo da Ciência Volume 2010 ; 2010 >
-      au < released ; 2011 ; 8 ; Tempo da Ciência Volume 2011 ; 2011 >
-      au < released ; 2012 ; 9 ; Tempo da Ciência Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 10 ; Tempo da Ciência Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 11 ; Tempo da Ciência Volume 2014 ; 2014 >
+      au < released ; 2004 ; 1 ; Tempo da Ciência Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 2 ; Tempo da Ciência Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 3 ; Tempo da Ciência Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 4 ; Tempo da Ciência Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 5 ; Tempo da Ciência Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 6 ; Tempo da Ciência Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 7 ; Tempo da Ciência Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 8 ; Tempo da Ciência Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 9 ; Tempo da Ciência Volume 2012 ; 2012 ; >
+      au < manifest ; 2013 ; 10 ; Tempo da Ciência Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 11 ; Tempo da Ciência Volume 2014 ; 2014 ; >
 
   }
 
@@ -476,20 +468,20 @@
       param[base_url] = http://e-revista.unioeste.br/
       param[journal_id] = temposhistoricos
 
-      au < released ; 1999 ; 1 ; Tempos Históricos Volume 1999 ; 1999 >
-      au < released ; 2000 ; 2 ; Tempos Históricos Volume 2000 ; 2000 >
-      au < released ; 2001 ; 3 ; Tempos Históricos Volume 2001 ; 2001 >
-      au < released ; 2002 ; 4 ; Tempos Históricos Volume 2002 ; 2002 >
-      au < released ; 2003 ; 5 ; Tempos Históricos Volume 2003 ; 2003 >
-      au < released ; 2006 ; 8 ; Tempos Históricos Volume 2006 ; 2006 >
-      au < released ; 2007 ; 9 ; Tempos Históricos Volume 2007 ; 2007 >
-      au < released ; 2008 ; 10 ; Tempos Históricos Volume 2008 ; 2008 >
-      au < released ; 2009 ; 11 ; Tempos Históricos Volume 2009 ; 2009 >
-      au < released ; 2010 ; 12 ; Tempos Históricos Volume 2010 ; 2010 >
-      au < released ; 2011 ; 13 ; Tempos Históricos Volume 2011 ; 2011 >
-      au < released ; 2012 ; 14 ; Tempos Históricos Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 15 ; Tempos Históricos Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 16 ; Tempos Históricos Volume 2014 ; 2014 >
+      au < released ; 1999 ; 1 ; Tempos Históricos Volume 1999 ; 1999 ; >
+      au < released ; 2000 ; 2 ; Tempos Históricos Volume 2000 ; 2000 ; >
+      au < released ; 2001 ; 3 ; Tempos Históricos Volume 2001 ; 2001 ; >
+      au < released ; 2002 ; 4 ; Tempos Históricos Volume 2002 ; 2002 ; >
+      au < released ; 2003 ; 5 ; Tempos Históricos Volume 2003 ; 2003 ; >
+      au < released ; 2006 ; 8 ; Tempos Históricos Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 9 ; Tempos Históricos Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 10 ; Tempos Históricos Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 11 ; Tempos Históricos Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 12 ; Tempos Históricos Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 13 ; Tempos Históricos Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 14 ; Tempos Históricos Volume 2012 ; 2012 ; >
+      au < manifest ; 2013 ; 15 ; Tempos Históricos Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 16 ; Tempos Históricos Volume 2014 ; 2014 ; >
 
   }
 
@@ -505,16 +497,16 @@
       param[base_url] = http://e-revista.unioeste.br/
       param[journal_id] = trama
 
-      au < exists ; 2005 ; 1 ; Trama Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 2 ; Trama Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 3 ; Trama Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 4 ; Trama Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 5 ; Trama Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 6 ; Trama Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 7 ; Trama Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 8 ; Trama Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 9 ; Trama Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 10 ; Trama Volume 2014 ; 2014 >
+      au < exists ; 2005 ; 1 ; Trama Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 2 ; Trama Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 3 ; Trama Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 4 ; Trama Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 5 ; Trama Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 6 ; Trama Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 7 ; Trama Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 8 ; Trama Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 9 ; Trama Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 10 ; Trama Volume 2014 ; 2014 ; >
 
   }
 
@@ -529,14 +521,14 @@
       param[base_url] = http://e-revista.unioeste.br/
       param[journal_id] = travessias
 
-      au < released ; 2007 ; 1 ; Travessias Volume 2007 ; 2007 >
-      au < released ; 2008 ; 2 ; Travessias Volume 2008 ; 2008 >
-      au < released ; 2009 ; 3 ; Travessias Volume 2009 ; 2009 >
-      au < released ; 2010 ; 4 ; Travessias Volume 2010 ; 2010 >
-      au < released ; 2011 ; 5 ; Travessias Volume 2011 ; 2011 >
-      au < released ; 2012 ; 6 ; Travessias Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 7 ; Travessias Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 8 ; Travessias Volume 2014 ; 2014 >
+      au < released ; 2007 ; 1 ; Travessias Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 2 ; Travessias Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 3 ; Travessias Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 4 ; Travessias Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 5 ; Travessias Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 6 ; Travessias Volume 2012 ; 2012 ; >
+      au < manifest ; 2013 ; 7 ; Travessias Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 8 ; Travessias Volume 2014 ; 2014 ; >
 
   }
 
@@ -552,19 +544,15 @@
       param[base_url] = http://e-revista.unioeste.br/
       param[journal_id] = variascientia
 
-      au < released ; 2001 ; 1 ; Varia Scientia Volume 2001 ; 2001 >
-      au < released ; 2002 ; 2 ; Varia Scientia Volume 2002 ; 2002 >
-      au < released ; 2004 ; 4 ; Varia Scientia Volume 2004 ; 2004 >
-      au < released ; 2005 ; 5 ; Varia Scientia Volume 2005 ; 2005 >
-      au < released ; 2006 ; 6 ; Varia Scientia Volume 2006 ; 2006 >
-      au < released ; 2007 ; 7 ; Varia Scientia Volume 2007 ; 2007 >
-      au < released ; 2008 ; 8 ; Varia Scientia Volume 2008 ; 2008 >
-      au < released ; 2009 ; 9 ; Varia Scientia Volume 2009 ; 2009 >
-      au < released ; 2010 ; 10 ; Varia Scientia Volume 2010 ; 2010 >
-      au < expected ; 2011 ; 11 ; Varia Scientia Volume 2011 ; 2011 >
-      au < expected ; 2012 ; 12 ; Varia Scientia Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 13 ; Varia Scientia Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 14 ; Varia Scientia Volume 2014 ; 2014 >
+      au < released ; 2001 ; 1 ; Varia Scientia Volume 2001 ; 2001 ; >
+      au < released ; 2002 ; 2 ; Varia Scientia Volume 2002 ; 2002 ; >
+      au < released ; 2004 ; 4 ; Varia Scientia Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 5 ; Varia Scientia Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 6 ; Varia Scientia Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 7 ; Varia Scientia Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 8 ; Varia Scientia Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 9 ; Varia Scientia Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 10 ; Varia Scientia Volume 2010 ; 2010 ; >
 
   }
 
@@ -580,11 +568,11 @@
       param[base_url] = http://e-revista.unioeste.br/
       param[journal_id] = variascientiaagraria
 
-      au < released ; 2010 ; 1 ; Varia Scientia Agrárias Volume 2010 ; 2010 >
-      au < released ; 2011 ; 2 ; Varia Scientia Agrárias Volume 2011 ; 2011 >
-      au < expected ; 2012 ; 3 ; Varia Scientia Agrárias Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 4 ; Varia Scientia Agrárias Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 5 ; Varia Scientia Agrárias Volume 2014 ; 2014 >
+      au < released ; 2010 ; 1 ; Varia Scientia Agrárias Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 2 ; Varia Scientia Agrárias Volume 2011 ; 2011 ; >
+      au < expected ; 2012 ; 3 ; Varia Scientia Agrárias Volume 2012 ; 2012 ; >
+      au < manifest ; 2013 ; 4 ; Varia Scientia Agrárias Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 5 ; Varia Scientia Agrárias Volume 2014 ; 2014 ; >
 
   }
 

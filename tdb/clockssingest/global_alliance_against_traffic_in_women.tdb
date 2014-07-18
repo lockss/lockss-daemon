@@ -15,14 +15,14 @@
     title < 
       name = Anti-Trafficking Review ;
       issn = 2286-7511 ;
-      eissn = 2287-0113	
+      eissn = 2287-0113
     >
       
       param[base_url] = http://www.antitraffickingreview.org/
-      param[journal_id] = atr
+      param[journal_id] = atrjournal
       
-      au < manifest ; exists ; 2013 ; Anti-Trafficking Review Number 1 ; 1 ; 2013 >
-      au < manifest ; exists ; 2014 ; Anti-Trafficking Review Number 2 ; 2 ; 2014 >
+      au < crawling ; exists ; 2013 ; Anti-Trafficking Review Number 1 ; 1 ; 2013 >
+      au < crawling ; exists ; 2014 ; Anti-Trafficking Review Number 2 ; 2 ; 2014 >
 
     }
 

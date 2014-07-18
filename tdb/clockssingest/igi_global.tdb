@@ -47,7 +47,7 @@
     au < finished ; crawling ; 2011 ; Information Resources Management Journal (IRMJ) Volume 24 ; 24 > 
     au < finished ; crawling ; 2012 ; Information Resources Management Journal (IRMJ) Volume 25 ; 25 > 
     au < crawling ; exists ; 2013 ; Information Resources Management Journal (IRMJ) Volume 26 ; 26 > 
-    au < expected ; exists ; 2014 ; Information Resources Management Journal (IRMJ) Volume 27 ; 27 > 
+    au < manifest ; exists ; 2014 ; Information Resources Management Journal (IRMJ) Volume 27 ; 27 > 
 
   }
 
@@ -99,7 +99,7 @@
 
     au < finished ; crawling ; 2012 ; International Journal of 3-D Information Modeling (IJ3DIM) Volume 1 ; 1 > 
     au < crawling ; exists ; 2013 ; International Journal of 3-D Information Modeling (IJ3DIM) Volume 2 ; 2 > 
-    au < expected ; exists ; 2014 ; International Journal of 3-D Information Modeling (IJ3DIM) Volume 3 ; 3 > 
+    au < manifest ; exists ; 2014 ; International Journal of 3-D Information Modeling (IJ3DIM) Volume 3 ; 3 > 
 
   }
 
@@ -118,7 +118,7 @@
     au < finished ; crawling ; 2011 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 3 ; 3 > 
     au < finished ; crawling ; 2012 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 4 ; 4 > 
     au < crawling ; exists ; 2013 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 5 ; 5 > 
-    au < expected ; exists ; 2014 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 6 ; 6 > 
+    au < manifest ; exists ; 2014 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 6 ; 6 > 
 
   }
 
@@ -154,7 +154,7 @@
     au < finished ; crawling ; 2011 ; International Journal of Adult Vocational Education and Technology (IJAVET) Volume 2 ; 2 > 
     au < finished ; crawling ; 2012 ; International Journal of Adult Vocational Education and Technology (IJAVET) Volume 3 ; 3 > 
     au < crawling ; exists ; 2013 ; International Journal of Adult Vocational Education and Technology (IJAVET) Volume 4 ; 4 > 
-    au < expected ; exists ; 2014 ; International Journal of Adult Vocational Education and Technology (IJAVET) Volume 5 ; 5 > 
+    au < manifest ; exists ; 2014 ; International Journal of Adult Vocational Education and Technology (IJAVET) Volume 5 ; 5 > 
 
   }
 
@@ -192,7 +192,7 @@
     au < finished ; crawling ; 2011 ; International Journal of Agent Technologies and Systems (IJATS) Volume 3 ; 3 > 
     au < finished ; crawling ; 2012 ; International Journal of Agent Technologies and Systems (IJATS) Volume 4 ; 4 > 
     au < crawling ; exists ; 2013 ; International Journal of Agent Technologies and Systems (IJATS) Volume 5 ; 5 > 
-    au < expected ; exists ; 2014 ; International Journal of Agent Technologies and Systems (IJATS) Volume 6 ; 6 > 
+    au < manifest ; exists ; 2014 ; International Journal of Agent Technologies and Systems (IJATS) Volume 6 ; 6 > 
 
   }
 
@@ -229,7 +229,7 @@
     au < finished ; crawling ; 2011 ; International Journal of Ambient Computing and Intelligence (IJACI) Volume 3 ; 3 > 
     au < finished ; crawling ; 2012 ; International Journal of Ambient Computing and Intelligence (IJACI) Volume 4 ; 4 > 
     au < crawling ; exists ; 2013 ; International Journal of Ambient Computing and Intelligence (IJACI) Volume 5 ; 5 > 
-    au < expected ; exists ; 2014 ; International Journal of Ambient Computing and Intelligence (IJACI) Volume 6 ; 6 > 
+    au < manifest ; exists ; 2014 ; International Journal of Ambient Computing and Intelligence (IJACI) Volume 6 ; 6 > 
 
   }
 
@@ -245,7 +245,7 @@
 
     au < finished ; crawling ; 2012 ; International Journal of Applied Behavioral Economics (IJABE) Volume 1 ; 1 > 
     au < crawling ; exists ; 2013 ; International Journal of Applied Behavioral Economics (IJABE) Volume 2 ; 2 > 
-    au < expected ; exists ; 2014 ; International Journal of Applied Behavioral Economics (IJABE) Volume 3 ; 3 > 
+    au < manifest ; exists ; 2014 ; International Journal of Applied Behavioral Economics (IJABE) Volume 3 ; 3 > 
 
   }
 
@@ -263,7 +263,7 @@
     au < finished ; crawling ; 2011 ; International Journal of Applied Evolutionary Computation (IJAEC) Volume 2 ; 2 > 
     au < finished ; crawling ; 2012 ; International Journal of Applied Evolutionary Computation (IJAEC) Volume 3 ; 3 > 
     au < crawling ; exists ; 2013 ; International Journal of Applied Evolutionary Computation (IJAEC) Volume 4 ; 4 > 
-    au < expected ; exists ; 2014 ; International Journal of Applied Evolutionary Computation (IJAEC) Volume 5 ; 5 > 
+    au < manifest ; exists ; 2014 ; International Journal of Applied Evolutionary Computation (IJAEC) Volume 5 ; 5 > 
 
   }
 
@@ -281,7 +281,7 @@
     au < finished ; crawling ; 2011 ; International Journal of Applied Geospatial Research (IJAGR) Volume 2 ; 2 > 
     au < finished ; crawling ; 2012 ; International Journal of Applied Geospatial Research (IJAGR) Volume 3 ; 3 > 
     au < crawling ; exists ; 2013 ; International Journal of Applied Geospatial Research (IJAGR) Volume 4 ; 4 > 
-    au < expected ; exists ; 2014 ; International Journal of Applied Geospatial Research (IJAGR) Volume 5 ; 5 > 
+    au < manifest ; exists ; 2014 ; International Journal of Applied Geospatial Research (IJAGR) Volume 5 ; 5 > 
 
   }
 
@@ -436,7 +436,7 @@
     param[journal_issn] = 2161-1610
     
     au < crawling ; exists ; 2012 ; International Journal of Biomedical and Clinical Engineering (IJBCE) Volume 1 ; 1 > 
-    au < manifest ; exists ; 2013 ; International Journal of Biomedical and Clinical Engineering (IJBCE) Volume 2 ; 2 > 
+    au < crawling ; exists ; 2013 ; International Journal of Biomedical and Clinical Engineering (IJBCE) Volume 2 ; 2 > 
     au < expected ; exists ; 2014 ; International Journal of Biomedical and Clinical Engineering (IJBCE) Volume 3 ; 3 > 
     
   }
@@ -478,7 +478,7 @@
     au < finished ; crawling ; 2011 ; International Journal of Business Intelligence Research (IJBIR) Volume 2 ; 2 > 
     au < finished ; crawling ; 2012 ; International Journal of Business Intelligence Research (IJBIR) Volume 3 ; 3 > 
     au < crawling ; exists ; 2013 ; International Journal of Business Intelligence Research (IJBIR) Volume 4 ; 4 > 
-    au < expected ; exists ; 2014 ; International Journal of Business Intelligence Research (IJBIR) Volume 5 ; 5 > 
+    au < manifest ; exists ; 2014 ; International Journal of Business Intelligence Research (IJBIR) Volume 5 ; 5 > 
 
   }
 
@@ -602,7 +602,7 @@
     au < finished ; crawling ; 2011 ; International Journal of Computer-Assisted Language Learning and Teaching (IJCALLT) Volume 1 ; 1 > 
     au < finished ; crawling ; 2012 ; International Journal of Computer-Assisted Language Learning and Teaching (IJCALLT) Volume 2 ; 2 > 
     au < crawling ; exists ; 2013 ; International Journal of Computer-Assisted Language Learning and Teaching (IJCALLT) Volume 3 ; 3 > 
-    au < expected ; exists ; 2014 ; International Journal of Computer-Assisted Language Learning and Teaching (IJCALLT) Volume 4 ; 4 > 
+    au < manifest ; exists ; 2014 ; International Journal of Computer-Assisted Language Learning and Teaching (IJCALLT) Volume 4 ; 4 > 
 
   }
 
@@ -726,7 +726,7 @@
     au < finished ; crawling ; 2011 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 7 ; 7 > 
     au < finished ; crawling ; 2012 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 8 ; 8 > 
     au < crawling ; exists ; 2013 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 9 ; 9 > 
-    au < expected ; exists ; 2014 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 10 ; 10 > 
+    au < manifest ; exists ; 2014 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 10 ; 10 > 
 
   }
 
@@ -782,7 +782,7 @@
     au < finished ; crawling ; 2011 ; International Journal of Digital Crime and Forensics (IJDCF) Volume 3 ; 3 > 
     au < finished ; crawling ; 2012 ; International Journal of Digital Crime and Forensics (IJDCF) Volume 4 ; 4 > 
     au < crawling ; exists ; 2013 ; International Journal of Digital Crime and Forensics (IJDCF) Volume 5 ; 5 > 
-    au < expected ; exists ; 2014 ; International Journal of Digital Crime and Forensics (IJDCF) Volume 6 ; 6 > 
+    au < manifest ; exists ; 2014 ; International Journal of Digital Crime and Forensics (IJDCF) Volume 6 ; 6 > 
 
   }
 
@@ -961,7 +961,7 @@
     au < finished ; crawling ; 2011 ; International Journal of E-Health and Medical Communications (IJEHMC) Volume 2 ; 2 > 
     au < finished ; crawling ; 2012 ; International Journal of E-Health and Medical Communications (IJEHMC) Volume 3 ; 3 > 
     au < crawling ; exists ; 2013 ; International Journal of E-Health and Medical Communications (IJEHMC) Volume 4 ; 4 > 
-    au < expected ; exists ; 2014 ; International Journal of E-Health and Medical Communications (IJEHMC) Volume 5 ; 5 > 
+    au < manifest ; exists ; 2014 ; International Journal of E-Health and Medical Communications (IJEHMC) Volume 5 ; 5 > 
 
   }
 
@@ -1018,7 +1018,7 @@
 
     au < finished ; crawling ; 2012 ; International Journal of Energy Optimization and Engineering (IJEOE) Volume 1 ; 1 > 
     au < crawling ; exists ; 2013 ; International Journal of Energy Optimization and Engineering (IJEOE) Volume 2 ; 2 > 
-    au < expected ; exists ; 2014 ; International Journal of Energy Optimization and Engineering (IJEOE) Volume 3 ; 3 > 
+    au < manifest ; exists ; 2014 ; International Journal of Energy Optimization and Engineering (IJEOE) Volume 3 ; 3 > 
 
   }
 
@@ -1057,7 +1057,7 @@
 
     au < finished ; crawling ; 2012 ; International Journal of E-Planning Research (IJEPR) Volume 1 ; 1 > 
     au < crawling ; exists ; 2013 ; International Journal of E-Planning Research (IJEPR) Volume 2 ; 2 > 
-    au < expected ; exists ; 2014 ; International Journal of E-Planning Research (IJEPR) Volume 3 ; 3 > 
+    au < manifest ; exists ; 2014 ; International Journal of E-Planning Research (IJEPR) Volume 3 ; 3 > 
 
   }
 
@@ -1261,7 +1261,7 @@
     au < finished ; crawling ; 2011 ; International Journal of Healthcare Information Systems and Informatics (IJHISI) Volume 6 ; 6 > 
     au < finished ; crawling ; 2012 ; International Journal of Healthcare Information Systems and Informatics (IJHISI) Volume 7 ; 7 > 
     au < crawling ; exists ; 2013 ; International Journal of Healthcare Information Systems and Informatics (IJHISI) Volume 8 ; 8 > 
-    au < expected ; exists ; 2014 ; International Journal of Healthcare Information Systems and Informatics (IJHISI) Volume 9 ; 9 > 
+    au < manifest ; exists ; 2014 ; International Journal of Healthcare Information Systems and Informatics (IJHISI) Volume 9 ; 9 > 
 
   }
 
@@ -1339,7 +1339,7 @@
     au < finished ; crawling ; 2011 ; International Journal of Information Communication Technologies and Human Development (IJICTHD) Volume 3 ; 3 > 
     au < finished ; crawling ; 2012 ; International Journal of Information Communication Technologies and Human Development (IJICTHD) Volume 4 ; 4 > 
     au < crawling ; exists ; 2013 ; International Journal of Information Communication Technologies and Human Development (IJICTHD) Volume 5 ; 5 > 
-    au < expected ; exists ; 2014 ; International Journal of Information Communication Technologies and Human Development (IJICTHD) Volume 6 ; 6 > 
+    au < manifest ; exists ; 2014 ; International Journal of Information Communication Technologies and Human Development (IJICTHD) Volume 6 ; 6 > 
 
   }
 
@@ -1395,7 +1395,7 @@
     au < finished ; crawling ; 2011 ; International Journal of Information System Modeling and Design (IJISMD) Volume 2 ; 2 > 
     au < finished ; crawling ; 2012 ; International Journal of Information System Modeling and Design (IJISMD) Volume 3 ; 3 > 
     au < crawling ; exists ; 2013 ; International Journal of Information System Modeling and Design (IJISMD) Volume 4 ; 4 > 
-    au < expected ; exists ; 2014 ; International Journal of Information System Modeling and Design (IJISMD) Volume 5 ; 5 > 
+    au < manifest ; exists ; 2014 ; International Journal of Information System Modeling and Design (IJISMD) Volume 5 ; 5 > 
 
   }
 
@@ -1413,7 +1413,7 @@
     au < finished ; crawling ; 2011 ; International Journal of Information Systems and Social Change (IJISSC) Volume 2 ; 2 > 
     au < finished ; crawling ; 2012 ; International Journal of Information Systems and Social Change (IJISSC) Volume 3 ; 3 > 
     au < crawling ; exists ; 2013 ; International Journal of Information Systems and Social Change (IJISSC) Volume 4 ; 4 > 
-    au < expected ; exists ; 2014 ; International Journal of Information Systems and Social Change (IJISSC) Volume 5 ; 5 > 
+    au < manifest ; exists ; 2014 ; International Journal of Information Systems and Social Change (IJISSC) Volume 5 ; 5 > 
 
   }
 
@@ -1433,7 +1433,7 @@
     au < finished ; crawling ; 2011 ; International Journal of Information Systems and Supply Chain Management (IJISSCM) Volume 4 ; 4 > 
     au < finished ; crawling ; 2012 ; International Journal of Information Systems and Supply Chain Management (IJISSCM) Volume 5 ; 5 > 
     au < crawling ; exists ; 2013 ; International Journal of Information Systems and Supply Chain Management (IJISSCM) Volume 6 ; 6 > 
-    au < expected ; exists ; 2014 ; International Journal of Information Systems and Supply Chain Management (IJISSCM) Volume 7 ; 7 > 
+    au < manifest ; exists ; 2014 ; International Journal of Information Systems and Supply Chain Management (IJISSCM) Volume 7 ; 7 > 
 
   }
 
@@ -1471,7 +1471,7 @@
     au < finished ; crawling ; 2011 ; International Journal of Information Systems in the Service Sector (IJISSS) Volume 3 ; 3 > 
     au < finished ; crawling ; 2012 ; International Journal of Information Systems in the Service Sector (IJISSS) Volume 4 ; 4 > 
     au < crawling ; exists ; 2013 ; International Journal of Information Systems in the Service Sector (IJISSS) Volume 5 ; 5 > 
-    au < expected ; exists ; 2014 ; International Journal of Information Systems in the Service Sector (IJISSS) Volume 6 ; 6 > 
+    au < manifest ; exists ; 2014 ; International Journal of Information Systems in the Service Sector (IJISSS) Volume 6 ; 6 > 
 
   }
 
@@ -1491,7 +1491,7 @@
     au < finished ; crawling ; 2011 ; International Journal of Information Technologies and Systems Approach (IJITSA) Volume 4 ; 4 > 
     au < finished ; crawling ; 2012 ; International Journal of Information Technologies and Systems Approach (IJITSA) Volume 5 ; 5 > 
     au < crawling ; exists ; 2013 ; International Journal of Information Technologies and Systems Approach (IJITSA) Volume 6 ; 6 > 
-    au < expected ; exists ; 2014 ; International Journal of Information Technologies and Systems Approach (IJITSA) Volume 7 ; 7 > 
+    au < manifest ; exists ; 2014 ; International Journal of Information Technologies and Systems Approach (IJITSA) Volume 7 ; 7 > 
 
   }
 
@@ -1549,7 +1549,7 @@
     au < finished ; crawling ; 2011 ; International Journal of Innovation in the Digital Economy (IJIDE) Volume 2 ; 2 > 
     au < finished ; crawling ; 2012 ; International Journal of Innovation in the Digital Economy (IJIDE) Volume 3 ; 3 > 
     au < crawling ; exists ; 2013 ; International Journal of Innovation in the Digital Economy (IJIDE) Volume 4 ; 4 > 
-    au < expected ; exists ; 2014 ; International Journal of Innovation in the Digital Economy (IJIDE) Volume 5 ; 5 > 
+    au < manifest ; exists ; 2014 ; International Journal of Innovation in the Digital Economy (IJIDE) Volume 5 ; 5 > 
 
   }
 
@@ -1761,7 +1761,7 @@
     au < finished ; crawling ; 2011 ; International Journal of Knowledge-Based Organizations (IJKBO) Volume 1 ; 1 > 
     au < finished ; crawling ; 2012 ; International Journal of Knowledge-Based Organizations (IJKBO) Volume 2 ; 2 > 
     au < crawling ; exists ; 2013 ; International Journal of Knowledge-Based Organizations (IJKBO) Volume 3 ; 3 > 
-    au < expected ; exists ; 2014 ; International Journal of Knowledge-Based Organizations (IJKBO) Volume 4 ; 4 > 
+    au < manifest ; exists ; 2014 ; International Journal of Knowledge-Based Organizations (IJKBO) Volume 4 ; 4 > 
 
   }
 
@@ -1814,7 +1814,7 @@
     au < finished ; crawling ; 2011 ; International Journal of Mobile and Blended Learning (IJMBL) Volume 3 ; 3 > 
     au < finished ; crawling ; 2012 ; International Journal of Mobile and Blended Learning (IJMBL) Volume 4 ; 4 > 
     au < crawling ; exists ; 2013 ; International Journal of Mobile and Blended Learning (IJMBL) Volume 5 ; 5 > 
-    au < expected ; exists ; 2014 ; International Journal of Mobile and Blended Learning (IJMBL) Volume 6 ; 6 > 
+    au < manifest ; exists ; 2014 ; International Journal of Mobile and Blended Learning (IJMBL) Volume 6 ; 6 > 
 
   }
 
@@ -1852,7 +1852,7 @@
     au < finished ; crawling ; 2011 ; International Journal of Mobile Human Computer Interaction (IJMHCI) Volume 3 ; 3 > 
     au < finished ; crawling ; 2012 ; International Journal of Mobile Human Computer Interaction (IJMHCI) Volume 4 ; 4 > 
     au < crawling ; exists ; 2013 ; International Journal of Mobile Human Computer Interaction (IJMHCI) Volume 5 ; 5 > 
-    au < expected ; exists ; 2014 ; International Journal of Mobile Human Computer Interaction (IJMHCI) Volume 6 ; 6 > 
+    au < manifest ; exists ; 2014 ; International Journal of Mobile Human Computer Interaction (IJMHCI) Volume 6 ; 6 > 
 
   }
 
@@ -1885,7 +1885,7 @@
     au < finished ; crawling ; 2011 ; International Journal of Multimedia Data Engineering and Management (IJMDEM) Volume 2 ; 2 > 
     au < finished ; crawling ; 2012 ; International Journal of Multimedia Data Engineering and Management (IJMDEM) Volume 3 ; 3 > 
     au < crawling ; exists ; 2013 ; International Journal of Multimedia Data Engineering and Management (IJMDEM) Volume 4 ; 4 > 
-    au < expected ; exists ; 2014 ; International Journal of Multimedia Data Engineering and Management (IJMDEM) Volume 5 ; 5 > 
+    au < manifest ; exists ; 2014 ; International Journal of Multimedia Data Engineering and Management (IJMDEM) Volume 5 ; 5 > 
 
   }
 
@@ -1938,7 +1938,7 @@
     au < finished ; crawling ; 2011 ; International Journal of Online Marketing (IJOM) Volume 1 ; 1 > 
     au < finished ; crawling ; 2012 ; International Journal of Online Marketing (IJOM) Volume 2 ; 2 > 
     au < crawling ; exists ; 2013 ; International Journal of Online Marketing (IJOM) Volume 3 ; 3 > 
-    au < expected ; exists ; 2014 ; International Journal of Online Marketing (IJOM) Volume 4 ; 4 > 
+    au < manifest ; exists ; 2014 ; International Journal of Online Marketing (IJOM) Volume 4 ; 4 > 
 
   }
 
@@ -1955,7 +1955,7 @@
     au < finished ; crawling ; 2011 ; International Journal of Online Pedagogy and Course Design (IJOPCD) Volume 1 ; 1 > 
     au < finished ; crawling ; 2012 ; International Journal of Online Pedagogy and Course Design (IJOPCD) Volume 2 ; 2 > 
     au < crawling ; exists ; 2013 ; International Journal of Online Pedagogy and Course Design (IJOPCD) Volume 3 ; 3 > 
-    au < expected ; exists ; 2014 ; International Journal of Online Pedagogy and Course Design (IJOPCD) Volume 4 ; 4 > 
+    au < manifest ; exists ; 2014 ; International Journal of Online Pedagogy and Course Design (IJOPCD) Volume 4 ; 4 > 
 
   }
 
@@ -1991,7 +1991,7 @@
     au < finished ; crawling ; 2011 ; International Journal of Operations Research and Information Systems (IJORIS) Volume 2 ; 2 > 
     au < finished ; crawling ; 2012 ; International Journal of Operations Research and Information Systems (IJORIS) Volume 3 ; 3 > 
     au < crawling ; exists ; 2013 ; International Journal of Operations Research and Information Systems (IJORIS) Volume 4 ; 4 > 
-    au < expected ; exists ; 2014 ; International Journal of Operations Research and Information Systems (IJORIS) Volume 5 ; 5 > 
+    au < manifest ; exists ; 2014 ; International Journal of Operations Research and Information Systems (IJORIS) Volume 5 ; 5 > 
 
   }
 
@@ -2151,7 +2151,7 @@
     
     param[journal_issn] = 2166-7195
 
-    au < manifest ; exists ; 2013 ; International Journal of Robotics Applications and Technologies (IJRAT) Volume 1 ; 1 > 
+    au < crawling ; exists ; 2013 ; International Journal of Robotics Applications and Technologies (IJRAT) Volume 1 ; 1 > 
     au < expected ; exists ; 2014 ; International Journal of Robotics Applications and Technologies (IJRAT) Volume 2 ; 2 > 
    
   }
@@ -2170,7 +2170,7 @@
     au < finished ; crawling ; 2011 ; International Journal of Secure Software Engineering (IJSSE) Volume 2 ; 2 > 
     au < finished ; crawling ; 2012 ; International Journal of Secure Software Engineering (IJSSE) Volume 3 ; 3 > 
     au < crawling ; exists ; 2013 ; International Journal of Secure Software Engineering (IJSSE) Volume 4 ; 4 > 
-    au < expected ; exists ; 2014 ; International Journal of Secure Software Engineering (IJSSE) Volume 5 ; 5 > 
+    au < manifest ; exists ; 2014 ; International Journal of Secure Software Engineering (IJSSE) Volume 5 ; 5 > 
 
   }
 
@@ -2362,7 +2362,7 @@
 
     au < finished ; crawling ; 2012 ; International Journal of Sustainable Economies Management (IJSEM) Volume 1 ; 1 > 
     au < crawling ; exists ; 2013 ; International Journal of Sustainable Economies Management (IJSEM) Volume 2 ; 2 > 
-    au < expected ; exists ; 2014 ; International Journal of Sustainable Economies Management (IJSEM) Volume 3 ; 3 > 
+    au < manifest ; exists ; 2014 ; International Journal of Sustainable Economies Management (IJSEM) Volume 3 ; 3 > 
 
   }
 
@@ -2414,7 +2414,7 @@
 
     au < finished ; crawling ; 2012 ; International Journal of System Dynamics Applications (IJSDA) Volume 1 ; 1 > 
     au < crawling ; exists ; 2013 ; International Journal of System Dynamics Applications (IJSDA) Volume 2 ; 2 > 
-    au < expected ; exists ; 2014 ; International Journal of System Dynamics Applications (IJSDA) Volume 3 ; 3 > 
+    au < manifest ; exists ; 2014 ; International Journal of System Dynamics Applications (IJSDA) Volume 3 ; 3 > 
 
   }
 
@@ -2465,7 +2465,7 @@
     au < finished ; crawling ; 2011 ; International Journal of Technoethics (IJT) Volume 2 ; 2 > 
     au < finished ; crawling ; 2012 ; International Journal of Technoethics (IJT) Volume 3 ; 3 > 
     au < crawling ; exists ; 2013 ; International Journal of Technoethics (IJT) Volume 4 ; 4 > 
-    au < expected ; exists ; 2014 ; International Journal of Technoethics (IJT) Volume 5 ; 5 > 
+    au < manifest ; exists ; 2014 ; International Journal of Technoethics (IJT) Volume 5 ; 5 > 
 
   }
 
@@ -2481,8 +2481,8 @@
 
     au < finished ; crawling ; 2011 ; International Journal of Technology and Educational Marketing (IJTEM) Volume 1 ; 1 > 
     au < finished ; crawling ; 2012 ; International Journal of Technology and Educational Marketing (IJTEM) Volume 2 ; 2 > 
-    au < expected ; exists ; 2013 ; International Journal of Technology and Educational Marketing (IJTEM) Volume 4 ; 4 > 
-    au < expected ; exists ; 2014 ; International Journal of Technology and Educational Marketing (IJTEM) Volume 5 ; 5 > 
+    au < crawling ; exists ; 2013 ; International Journal of Technology and Educational Marketing (IJTEM) Volume 4 ; 4 > 
+    au < manifest ; exists ; 2014 ; International Journal of Technology and Educational Marketing (IJTEM) Volume 5 ; 5 > 
 
   }
 
@@ -2523,7 +2523,7 @@
     au < finished ; crawling ; 2011 ; International Journal of Technology Diffusion (IJTD) Volume 2 ; 2 > 
     au < finished ; crawling ; 2012 ; International Journal of Technology Diffusion (IJTD) Volume 3 ; 3 > 
     au < crawling ; exists ; 2013 ; International Journal of Technology Diffusion (IJTD) Volume 4 ; 4 > 
-    au < expected ; exists ; 2014 ; International Journal of Technology Diffusion (IJTD) Volume 5 ; 5 > 
+    au < manifest ; exists ; 2014 ; International Journal of Technology Diffusion (IJTD) Volume 5 ; 5 > 
 
   }
 
@@ -2575,7 +2575,7 @@
     au < finished ; crawling ; 2011 ; International Journal of Virtual and Personal Learning Environments (IJVPLE) Volume 2 ; 2 > 
     au < finished ; crawling ; 2012 ; International Journal of Virtual and Personal Learning Environments (IJVPLE) Volume 3 ; 3 > 
     au < crawling ; exists ; 2013 ; International Journal of Virtual and Personal Learning Environments (IJVPLE) Volume 4 ; 4 > 
-    au < expected ; exists ; 2014 ; International Journal of Virtual and Personal Learning Environments (IJVPLE) Volume 5 ; 5 > 
+    au < manifest ; exists ; 2014 ; International Journal of Virtual and Personal Learning Environments (IJVPLE) Volume 5 ; 5 > 
 
   }
 
@@ -2659,7 +2659,7 @@
     au < finished ; crawling ; 2011 ; International Journal of Web-Based Learning and Teaching Technologies (IJWLTT) Volume 6 ; 6 > 
     au < finished ; crawling ; 2012 ; International Journal of Web-Based Learning and Teaching Technologies (IJWLTT) Volume 7 ; 7 > 
     au < crawling ; exists ; 2013 ; International Journal of Web-Based Learning and Teaching Technologies (IJWLTT) Volume 8 ; 8 > 
-    au < expected ; exists ; 2014 ; International Journal of Web-Based Learning and Teaching Technologies (IJWLTT) Volume 9 ; 9 > 
+    au < manifest ; exists ; 2014 ; International Journal of Web-Based Learning and Teaching Technologies (IJWLTT) Volume 9 ; 9 > 
 
   }
 
@@ -2727,7 +2727,7 @@
     au < finished ; crawling ; 2011 ; Journal of Cases on Information Technology (JCIT) Volume 13 ; 13 > 
     au < finished ; crawling ; 2012 ; Journal of Cases on Information Technology (JCIT) Volume 14 ; 14 > 
     au < crawling ; exists ; 2013 ; Journal of Cases on Information Technology (JCIT) Volume 15 ; 15 > 
-    au < expected ; exists ; 2014 ; Journal of Cases on Information Technology (JCIT) Volume 16 ; 16 > 
+    au < manifest ; exists ; 2014 ; Journal of Cases on Information Technology (JCIT) Volume 16 ; 16 > 
 
   }
 
@@ -2765,7 +2765,7 @@
     au < finished ; crawling ; 2011 ; Journal of Database Management (JDM) Volume 22 ; 22 > 
     au < finished ; crawling ; 2012 ; Journal of Database Management (JDM) Volume 23 ; 23 > 
     au < crawling ; exists ; 2013 ; Journal of Database Management (JDM) Volume 24 ; 24 > 
-    au < expected ; exists ; 2014 ; Journal of Database Management (JDM) Volume 25 ; 25 > 
+    au < manifest ; exists ; 2014 ; Journal of Database Management (JDM) Volume 25 ; 25 > 
 
   }
 
@@ -2790,7 +2790,7 @@
     au < finished ; crawling ; 2011 ; Journal of Electronic Commerce in Organizations (JECO) Volume 9 ; 9 > 
     au < finished ; crawling ; 2012 ; Journal of Electronic Commerce in Organizations (JECO) Volume 10 ; 10 > 
     au < crawling ; exists ; 2013 ; Journal of Electronic Commerce in Organizations (JECO) Volume 11 ; 11 > 
-    au < expected ; exists ; 2014 ; Journal of Electronic Commerce in Organizations (JECO) Volume 12 ; 12 > 
+    au < manifest ; exists ; 2014 ; Journal of Electronic Commerce in Organizations (JECO) Volume 12 ; 12 > 
 
   }
 
@@ -2884,7 +2884,7 @@
     au < finished ; crawling ; 2011 ; Journal of Organizational and End User Computing (JOEUC) Volume 23 ; 23 > 
     au < finished ; crawling ; 2012 ; Journal of Organizational and End User Computing (JOEUC) Volume 24 ; 24 > 
     au < crawling ; exists ; 2013 ; Journal of Organizational and End User Computing (JOEUC) Volume 25 ; 25 > 
-    au < expected ; exists ; 2014 ; Journal of Organizational and End User Computing (JOEUC) Volume 26 ; 26 > 
+    au < manifest ; exists ; 2014 ; Journal of Organizational and End User Computing (JOEUC) Volume 26 ; 26 > 
 
   }
 

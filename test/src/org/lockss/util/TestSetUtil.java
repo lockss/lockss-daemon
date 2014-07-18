@@ -1,10 +1,10 @@
 /*
- * $Id: TestSetUtil.java,v 1.6 2004-01-03 06:30:42 tlipkis Exp $
+ * $Id: TestSetUtil.java,v 1.6.180.1 2014-07-18 15:49:44 wkwilson Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -60,6 +60,11 @@ public class TestSetUtil extends LockssTestCase {
 
   public void testArgs() {
     assertEquals(s1, SetUtil.set("1", "2", "4"));
+  }
+
+  public void testEmpty() {
+    assertEquals(Collections.EMPTY_SET, SetUtil.set());
+    assertEquals(Collections.EMPTY_SET, SetUtil.theSet(Collections.EMPTY_LIST));
   }
 
   public void testFromArray() {

@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.136 2013-10-17 07:48:18 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.136.6.1 2014-07-18 15:59:04 wkwilson Exp $
  */
 
 /*
@@ -821,7 +821,7 @@ public abstract class LockssServlet extends HttpServlet
                              getMachineIpAddr(),
                              getLockssApp().getStartDate(),
                              inNavIterator);
-    String warnMsg = CurrentConfig.getParam(PARAM_UI_WARNING);
+    String warnMsg = servletMgr.getWarningMsg();
     if (warnMsg != null) {
       Composite warning = new Composite();
       warning.add("<center><font color=red size=+1>");

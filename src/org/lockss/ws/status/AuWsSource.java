@@ -1,5 +1,5 @@
 /*
- * $Id: AuWsSource.java,v 1.1 2014-04-18 19:35:03 fergaloy-sf Exp $
+ * $Id: AuWsSource.java,v 1.1.2.1 2014-07-18 15:59:00 wkwilson Exp $
  */
 
 /*
@@ -29,13 +29,9 @@
  in this Software without prior written authorization from Stanford University.
 
  */
-
-/**
- * Container for the information that is used as the source for a query related
- * to Archival Units.
- */
 package org.lockss.ws.status;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -47,26 +43,43 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.Plugin;
 import org.lockss.poller.Poll;
+import org.lockss.protocol.AgreementType;
+import org.lockss.protocol.IdentityManager;
+import org.lockss.protocol.PeerAgreement;
+import org.lockss.protocol.PeerIdentity;
 import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.state.AuState;
 import org.lockss.state.NodeManager;
+import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 import org.lockss.util.TypedEntryMap;
+import org.lockss.ws.entities.AgreementTypeWsResult;
 import org.lockss.ws.entities.AuConfigurationWsResult;
 import org.lockss.ws.entities.AuWsResult;
+import org.lockss.ws.entities.PeerAgreementWsResult;
+import org.lockss.ws.entities.PeerAgreementsWsResult;
 
+/**
+ * Container for the information that is used as the source for a query related
+ * to Archival Units.
+ */
 public class AuWsSource extends AuWsResult {
+  private static Logger log = Logger.getLogger(AuWsSource.class);
+
   private ArchivalUnit au;
 
   private boolean auIdPopulated = false;
   private boolean namePopulated = false;
   private boolean volumePopulated = false;
   private boolean pluginNamePopulated = false;
+  private boolean tdbYearPopulated = false;
   private boolean accessTypePopulated = false;
+  private boolean contentSizePopulated = false;
+  private boolean diskUsagePopulated = false;
   private boolean repositoryPathPopulated = false;
   private boolean recentPollAgreementPopulated = false;
   private boolean publishingPlatformPopulated = false;
-  private boolean publisherPopulated = false;
+  private boolean tdbPublisherPopulated = false;
   private boolean availableFromPublisherPopulated = false;
   private boolean substanceStatePopulated = false;
   private boolean creationTimePopulated = false;
@@ -86,6 +99,7 @@ public class AuWsSource extends AuWsResult {
   private boolean newContentCrawlUrlsPopulated = false;
   private boolean urlStemsPopulated = false;
   private boolean isBulkContentPopulated = false;
+  private boolean peerAgreementsPopulated = false;
 
   private LockssDaemon theDaemon = null;
   private Plugin plugin = null;
@@ -137,6 +151,28 @@ public class AuWsSource extends AuWsResult {
   }
 
   @Override
+  public Integer getTdbYear() {
+    if (!tdbYearPopulated) {
+      String yearAsString = null;
+
+      try {
+  	yearAsString = AuUtil.getTitleAttribute(au, "year");
+
+  	if (yearAsString != null) {
+  	  setTdbYear(Integer.valueOf(yearAsString));
+  	}
+      } catch (NumberFormatException nfe) {
+  	log.warning("Invalid year title attribute '" + yearAsString
+  	    + "' for auId '" + au.getAuId() + "'", nfe);
+      }
+
+      tdbYearPopulated = true;
+    }
+
+    return super.getTdbYear();
+  }
+
+  @Override
   public String getAccessType() {
     if (!accessTypePopulated) {
       AuState.AccessType atype = getState().getAccessType();
@@ -149,6 +185,36 @@ public class AuWsSource extends AuWsResult {
     }
 
     return super.getAccessType();
+  }
+
+  @Override
+  public Long getContentSize() {
+    if (!contentSizePopulated) {
+      long auContentSize = AuUtil.getAuContentSize(au, true);
+
+      if (auContentSize != -1) {
+  	setContentSize(Long.valueOf(auContentSize));
+      }
+
+      contentSizePopulated = true;
+    }
+
+    return super.getContentSize();
+  }
+
+  @Override
+  public Long getDiskUsage() {
+    if (!diskUsagePopulated) {
+      long auDiskUsage = AuUtil.getAuDiskUsage(au, true);
+
+      if (auDiskUsage != -1) {
+	setDiskUsage(Long.valueOf(auDiskUsage));
+      }
+
+      diskUsagePopulated = true;
+    }
+
+    return super.getDiskUsage();
   }
 
   @Override
@@ -197,18 +263,18 @@ public class AuWsSource extends AuWsResult {
   }
 
   @Override
-  public String getPublisher() {
-    if (!publisherPopulated) {
-      String pub = AuUtil.getTitleAttribute(au, "publisher");
+  public String getTdbPublisher() {
+    if (!tdbPublisherPopulated) {
+      String publisherName = AuUtil.getTitleAttribute(au, "publisher");
 
-      if (!StringUtil.isNullString(pub)) {
-	setPublisher(pub);
+      if (!StringUtil.isNullString(publisherName)) {
+	setTdbPublisher(publisherName);
       }
 
-      publisherPopulated = true;
+      tdbPublisherPopulated = true;
     }
 
-    return super.getPublisher();
+    return super.getTdbPublisher();
   }
 
   @Override
@@ -448,7 +514,12 @@ public class AuWsSource extends AuWsResult {
 	for (Map.Entry entry : auProperties.entrySet()) {
 	  // Get the key and value of this property.
 	  String key = (String)entry.getKey();
-	  String val = entry.getValue().toString();
+	  String val = null;
+
+	  // Handle only non-null values.
+	  if (entry.getValue() != null) {
+	    val = entry.getValue().toString();
+	  }
 
 	  // Find the property type from the Archival Unit configuration.
 	  ConfigParamDescr descr = getPlugin().findAuConfigDescr(key);
@@ -503,6 +574,88 @@ public class AuWsSource extends AuWsResult {
     }
 
     return super.getIsBulkContent();
+  }
+
+  @Override
+  public List<PeerAgreementsWsResult> getPeerAgreements() {
+    if (!peerAgreementsPopulated) {
+      IdentityManager idManager = getTheDaemon().getIdentityManager();
+
+      // Initialize the the map of agreements by type by peer.
+      Map<String, Map<AgreementType, PeerAgreement>>
+      allAgreementsByPeer =
+	  new HashMap<String, Map<AgreementType, PeerAgreement>>();
+
+      // Loop through all the types of agreements.
+      for (AgreementType type : AgreementType.values()) {
+	// Get the agreements for this type.
+	Map<PeerIdentity, PeerAgreement> agreementsByPeer =
+	    idManager.getAgreements(au, type);
+
+	// Loop through the peers for the agreements.
+	for (PeerIdentity pid : agreementsByPeer.keySet()) {
+	  // Get the agreement of this type for this peer.
+	  PeerAgreement agreement = agreementsByPeer.get(pid);
+	  // Check whether there has been an agreement at some point in the
+	  // past.
+	  if (agreement != null
+	      && agreement.getHighestPercentAgreement() >= 0.0) {
+	    // Yes: Create the map of agreements for this peer in the map of
+	    // agreements by type by peer if it does not exist already.
+	    if (!allAgreementsByPeer.containsKey(pid.getIdString())) {
+	      allAgreementsByPeer.put(pid.getIdString(),
+		  new HashMap<AgreementType, PeerAgreement>());
+	    }
+
+	    // Add this type of agreement to the map of agreements for this peer
+	    // in the map of by type by peer.
+	    allAgreementsByPeer.get(pid.getIdString()).put(type, agreement);
+	  }
+	}
+      }
+
+      // Initialize the results.
+      List<PeerAgreementsWsResult> results =
+	  new ArrayList<PeerAgreementsWsResult>();
+
+      // Loop through all the peer identifiers.
+      for (String pidid : allAgreementsByPeer.keySet()) {
+	// Create the result agreements by type for this peer identifier.
+	Map<AgreementTypeWsResult, PeerAgreementWsResult> resultAgreements =
+	    new HashMap<AgreementTypeWsResult, PeerAgreementWsResult>();
+
+	// Loop through all the types for this peer identifier.
+	for (AgreementType type : allAgreementsByPeer.get(pidid).keySet()) {
+	  // Get the corresponding result type.
+	  AgreementTypeWsResult resultType =
+	      AgreementTypeWsResult.values()[type.ordinal()];
+
+	  // Get the agreement for this type for this peer identifier.
+	  PeerAgreement agreement = allAgreementsByPeer.get(pidid).get(type);
+
+	  // Get the corresponding result agreement.
+	  PeerAgreementWsResult resultAgreement = new PeerAgreementWsResult(
+		Float.valueOf(agreement.getPercentAgreement()),
+		Long.valueOf(agreement.getPercentAgreementTime()),
+		Float.valueOf(agreement.getHighestPercentAgreement()),
+		Long.valueOf(agreement.getHighestPercentAgreementTime()));
+
+	  // Save this type/agreement pair for this peer identifier.
+	  resultAgreements.put(resultType, resultAgreement);
+	}
+
+	// Save the result for this peer identifier.
+	PeerAgreementsWsResult result = new PeerAgreementsWsResult();
+	result.setPeerId(pidid);
+	result.setAgreements(resultAgreements);
+	results.add(result);
+      }
+
+      setPeerAgreements(results);
+      peerAgreementsPopulated = true;
+    }
+
+    return super.getPeerAgreements();
   }
 
   /**

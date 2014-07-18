@@ -1,10 +1,10 @@
 /*
- * $Id: TestCreativeCommonsPermissionChecker.java,v 1.11 2014-01-14 04:27:59 tlipkis Exp $
+ * $Id: TestCreativeCommonsPermissionChecker.java,v 1.11.4.1 2014-07-18 15:49:56 wkwilson Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -122,10 +122,9 @@ public class TestCreativeCommonsPermissionChecker
     testValidPermissions(new String[] {"abc", "ddd"},
 			 new String[] {"1.2", "3.0"});
 
-    // CreativeCommonsPermissionChecker stores config in static fields,
-    // must remove it (restore to default) to avoid impacting other tests.
-    ConfigurationUtil.setFromArgs(CreativeCommonsPermissionChecker.PREFIX + "a",
-				  "123");
+    // CreativeCommonsPermissionChecker stores config in static fields;
+    // restore default config to avoid impacting other tests.
+    ConfigurationUtil.resetConfig();
   }
 
   public void testCase() {

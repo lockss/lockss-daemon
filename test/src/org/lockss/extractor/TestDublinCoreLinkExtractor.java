@@ -1,5 +1,5 @@
 /*
- * $Id: TestDublinCoreLinkExtractor.java,v 1.4 2010-04-02 23:38:11 pgust Exp $
+ * $Id: TestDublinCoreLinkExtractor.java,v 1.4.66.1 2014-07-18 15:49:50 wkwilson Exp $
  */
 
 /*
@@ -55,27 +55,40 @@ public class TestDublinCoreLinkExtractor extends LinkExtractorTestCase {
   }
 
   /** This is an error for Dublin Core; supress this test */
+  @Override
   public void testEmptyFileReturnsNoLinks() throws Exception {
+  }
+
+  public void testGetDtd() {
+    testGetDtd("http://purl.org/dc/schemas/dcmes-xml-20000714.dtd");
+    testGetDtd("http://dublincore.org/schemas/dcmes-xml-20000714.dtd");
+  }
+
+  public void testGetDtd(String url) {
+    assertClass(DublinCoreLinkExtractor.class, extractor);
+    DublinCoreLinkExtractor dcle = (DublinCoreLinkExtractor)extractor;
+    String dtd = dcle.getDtd(url);
+    assertSame(dtd, dcle.getDtd(url));
+    assertMatchesRE("<!ENTITY ", dtd);
+    assertMatchesRE("<!ELEMENT rdf:Description ", dtd);
   }
 
   /**
    * Test that a single links is found.
    */
   public void testOneUrl() throws Exception {
-try {    
-    if (isSkipNetworkTests()) return;
-    Set urls = SetUtil.set("http://www.foo.com/blah.jpg");
-    assertEquals(urls, extractUrls(constructValidRDF(urls)));
-} catch (Throwable ex) {
-  fail("", ex);
-}
+    try {    
+      Set urls = SetUtil.set("http://www.foo.com/blah.jpg");
+      assertEquals(urls, extractUrls(constructValidRDF(urls)));
+    } catch (Throwable ex) {
+      fail("", ex);
+    }
   }
   
   /**
    * Test that multiple links are found.
    */
   public void testMultipleUrls() throws Exception {
-    if (isSkipNetworkTests()) return;
     Set urls = SetUtil.set("http://www.foo.com/blah.jpg",
 			   "http://www.foo.com/blatch.jpg",
 			   "http://www.foo.com/burble.jpg");
@@ -89,7 +102,6 @@ try {
    * @throws Exception
    */
   public void testNoUrls() throws Exception {
-    if (isSkipNetworkTests()) return;
     assertEmpty(extractUrls(constructValidRDF(Collections.EMPTY_SET)));
   }
   
@@ -98,7 +110,6 @@ try {
    * source RDF.  If these aren't there, it shouldn't find any links.
    */
   public void testNoIdentifiersMeansNoLinks() throws Exception {
-    if (isSkipNetworkTests()) return;
     Set urls = SetUtil.set("http://www.foo.com/blah.jpg",
 			   "http://www.foo.com/blatch.jpg",
 			   "http://www.foo.com/burble.jpg");

@@ -1,11 +1,11 @@
 /*
 
- * $Id: OJS2HtmlMetadataExtractorFactory.java,v 1.7 2013-10-23 22:49:20 etenbrink Exp $
+ * $Id: OJS2HtmlMetadataExtractorFactory.java,v 1.7.4.1 2014-07-18 15:56:31 wkwilson Exp $
  */
 
 /*
 
- Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,15 +34,12 @@
 package org.lockss.plugin.ojs2;
 
 import java.io.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
-import org.lockss.extractor.MetadataField.Cardinality;
 import org.lockss.plugin.*;
 
 /*
@@ -62,27 +59,7 @@ public class OJS2HtmlMetadataExtractorFactory implements
 
   public static class OJS2HtmlMetadataExtractor 
     extends SimpleHtmlMetaTagMetadataExtractor {
-
-    private static Pattern OJS_DOI_PAT = Pattern.compile("10[.][0-9a-z]{4,6}/.*");
-
-    // TODO: Remove if this is updated in MetadataUtil
-    /*
-     * The representation of a DOI has key "citation_doi"
-     */
-    protected static final MetadataField OJS_DOI =
-        new MetadataField("doi", Cardinality.Single) {
-      @Override
-      public String validate(ArticleMetadata am, String val)
-          throws MetadataException.ValidationException {
-
-        Matcher m = OJS_DOI_PAT.matcher(val);
-        if(!m.matches()){
-          throw new MetadataException.ValidationException("Illegal DOI: " + val);
-        }
-        return val;
-      }
-    };
-
+    
     // Map OJS2-specific HTML meta tag names to cooked metadata fields
     private static MultiMap tagMap = new MultiValueMap();
     
@@ -96,7 +73,7 @@ public class OJS2HtmlMetadataExtractorFactory implements
       tagMap.put("DC.Publisher", MetadataField.DC_FIELD_PUBLISHER);
       tagMap.put("DC.Publisher", MetadataField.FIELD_PUBLISHER);
       tagMap.put("DC.Contributor", MetadataField.DC_FIELD_CONTRIBUTOR);
-      tagMap.put("citation_journal_title", MetadataField.FIELD_JOURNAL_TITLE);
+      tagMap.put("citation_journal_title", MetadataField.FIELD_PUBLICATION_TITLE);
       tagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
       tagMap.put("citation_date", MetadataField.FIELD_DATE);
       tagMap.put("citation_author", MetadataField.FIELD_AUTHOR);
@@ -110,13 +87,11 @@ public class OJS2HtmlMetadataExtractorFactory implements
       tagMap.put("citation_issue", MetadataField.DC_FIELD_CITATION_ISSUE);
       tagMap.put("citation_firstpage", MetadataField.FIELD_START_PAGE);
       tagMap.put("citation_lastpage", MetadataField.FIELD_END_PAGE);
-      //tagMap.put("citation_firstpage", MetadataField.DC_FIELD_CITATION_SPAGE);
-      //tagMap.put("citation_lastpage", MetadataField.DC_FIELD_CITATION_EPAGE);
-      tagMap.put("citation_doi", OJS_DOI);
+      tagMap.put("citation_doi", MetadataField.FIELD_DOI);
       tagMap.put("citation_public_url", MetadataField.FIELD_ACCESS_URL);
-            
+      
     } // static
-
+    
     @Override
     public ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
       throws IOException {

@@ -1,5 +1,5 @@
 /*
- * $Id: PsychiatryOnlineHtmlFilterFactory.java,v 1.4 2014-03-10 18:40:17 etenbrink Exp $
+ * $Id: PsychiatryOnlineHtmlFilterFactory.java,v 1.4.2.1 2014-07-18 15:56:31 wkwilson Exp $
  */
 
 /*
@@ -56,9 +56,11 @@ public class PsychiatryOnlineHtmlFilterFactory implements FilterFactory {
     // First remove "<META http-equiv="Content-Type" content="text/html; charset=utf-16">"
     try {
       InputStreamReader unfilteredReader = new InputStreamReader(in, encoding);
-      StringFilter filteredReader = new StringFilter(unfilteredReader, FILTERED_CHARSET_STRING);
-      filteredReader.setIgnoreCase(true);
-      in = new ReaderInputStream(filteredReader); 
+      // Create a StringFilter and set ingore case, BufferedReader allows set mark()
+      StringFilter ifr = new StringFilter(unfilteredReader, FILTERED_CHARSET_STRING);
+      ifr.setIgnoreCase(true);
+      BufferedReader filteredReader = new BufferedReader(ifr);
+      in = new ReaderInputStream(filteredReader, encoding);
     }
     catch (UnsupportedEncodingException uee) {
       // Leave in unchanged but log a message

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseServletManager.java,v 1.38 2013-03-22 04:47:31 fergaloy-sf Exp $
+ * $Id: BaseServletManager.java,v 1.38.14.1 2014-07-18 15:59:03 wkwilson Exp $
  */
 
 /*
@@ -97,6 +97,12 @@ public abstract class BaseServletManager
    * daemon restart. */
   public static final String PARAM_BIND_ADDRS = DOC_PREFIX + SUFFIX_BIND_ADDRS;
 
+  public static final String SUFFIX_TCP_KEEPALIVE = "keepAlive";
+  /** Enable TCP keepalive if true. */
+  public static final String PARAM_TCP_KEEPALIVE =
+    DOC_PREFIX + SUFFIX_TCP_KEEPALIVE;
+  public static final boolean DEFAULT_TCP_KEEPALIVE = false;
+
   // IP access list tree below org.lockss.<server>.access.ip
   public static final String SUFFIX_IP_ACCESS_PREFIX = "access.ip.";
   public static final String DOC_ACCESS_PREFIX =
@@ -172,6 +178,10 @@ public abstract class BaseServletManager
   /** Message to include in 403 response */
   public static final String PARAM_403MSG = DOC_PREFIX + SUFFIX_403_MSG;
 
+  public static final String SUFFIX_WARNING = "warning";
+  /** String to display in red on ui pages. */
+  public static final String PARAM_WARNING = DOC_PREFIX + SUFFIX_WARNING;
+
   public static final String SUFFIX_ENABLE_DEBUG_USER = "debugUser.enable";
   /** Enable the debug user on named server.  Daemon restart required. */
   public static final String PARAM_ENABLE_DEBUG_USER =
@@ -210,6 +220,7 @@ public abstract class BaseServletManager
   ManagerInfo mi;
   protected int port;
   protected List<String> bindAddrs;
+  protected boolean enableKeepAlive;
   protected UserRealm realm;
   private boolean start;
   private String includeIps;
@@ -219,6 +230,7 @@ public abstract class BaseServletManager
   protected boolean enableDebugUser;
   protected boolean useSsl;
   protected boolean resolveRemoteHost;
+  protected String warningMsg;
   protected String sslKeystoreName;
   protected int sslRedirFromPort;
   protected AuthType authType = DEFAULT_AUTH_TYPE;
@@ -280,6 +292,8 @@ public abstract class BaseServletManager
       port = config.getInt(prefix + SUFFIX_PORT, mi.defaultPort);
       bindAddrs = config.getList(prefix + SUFFIX_BIND_ADDRS,
 				 Collections.EMPTY_LIST);
+      enableKeepAlive = config.getBoolean(prefix + SUFFIX_TCP_KEEPALIVE,
+					  DEFAULT_TCP_KEEPALIVE);
       start = config.getBoolean(prefix + SUFFIX_START, mi.defaultStart);
       _403Msg = config.get(prefix + SUFFIX_403_MSG, mi.default403Msg);
       enableDebugUser = config.getBoolean(prefix + SUFFIX_ENABLE_DEBUG_USER,
@@ -307,7 +321,7 @@ public abstract class BaseServletManager
       resolveRemoteHost = config.getBoolean(mi.prefix
 					    + SUFFIX_RESOLVE_REMOTE_HOST,
 					    mi.defaultResolveRemoteHost);
-
+      warningMsg = config.get(mi.prefix + SUFFIX_WARNING);
     }
     // Access control prefix not nec. related to prefix, don't nest inside
     // if (changedKeys.contains(prefix))
@@ -342,9 +356,14 @@ public abstract class BaseServletManager
     return authenticator;
   }
 
+  public String getWarningMsg() {
+    return warningMsg;
+  }
+
   void startOrStop() {
     if (start) {
-      if (getDaemon().isDaemonInited()) {
+//       if (getDaemon().isDaemonInited()) {
+      if (isInited()) {
 	startServlets();
       }
     } else if (isServerRunning()) {
@@ -459,7 +478,14 @@ public abstract class BaseServletManager
     // Create a port listener
     if (useSsl) {
       LockssSslListener lsl =
-	new LockssSslListener(new org.mortbay.util.InetAddrPort(host, port));
+	new LockssSslListener(new org.mortbay.util.InetAddrPort(host, port)) {
+	  @Override
+	  public void handleConnection(Socket socket) throws IOException {
+	    if (enableKeepAlive) {
+	      socket.setKeepAlive(true);
+	    }
+	    super.handleConnection(socket);
+	  }};
       lsl.setKeyManagerFactory(kmf);
       listener = lsl;
 
@@ -475,7 +501,14 @@ public abstract class BaseServletManager
       }
     } else {
       listener =
-	new SocketListener(new org.mortbay.util.InetAddrPort(host,port));
+	new SocketListener(new org.mortbay.util.InetAddrPort(host,port)) {
+	  @Override
+	  public void handleConnection(Socket socket) throws IOException {
+	    if (enableKeepAlive) {
+	      socket.setKeepAlive(true);
+	    }
+	    super.handleConnection(socket);
+	  }};
     }
     server.addListener(listener);
   }

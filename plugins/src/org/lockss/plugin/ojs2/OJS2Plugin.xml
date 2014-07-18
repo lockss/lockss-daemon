@@ -12,45 +12,47 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Open Journals System Plugin (OJS 2.x)</string>
+    <string>Open Journal Systems Plugin (OJS 2.x)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>33</string>
+    <string>36</string>
   </entry>
   <!--  This is a list of OJS2 Child plugins - be sure to update
         the child's plugin_parent_version number to match, then
         update the child's plugin_version number:
         ClockssOJS2Plugin.xml
-        ScholarlyExchangeOSJ2Plugin.xml
         CoActionPublishingPlugin.xml
         ClockssCoActionPublishingPlugin.xml
-        ClockssUniversityOfAlbertaPlugin.xml
-        ClockssBiologicInstitutePlugin.xml
-        UbiquityPressPlugin.xml
-        ClockssUbiquityPressPlugin.xml
-        JournalOfResearchPracticePlugin.xml
+        JournalOfResearchPracticePlugin.xml      (ca.athabascau.plugin.jrp.)
+        ScholarlyExchangeOSJ2Plugin.xml          (defunct?)
+        ClockssUniversityOfAlbertaPlugin.xml     (defunct)
+        ClockssBiologicInstitutePlugin.xml       (defunct)
+        UbiquityPressPlugin.xml                  (defunct?)
+        ClockssUbiquityPressPlugin.xml           (defunct?)
+        
+        Note: push plugin to coppulpln, ibictpln, synergiespln; as well as c/lockss
    -->
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>11</string>
+        <string>14</string>
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>7</string>
+        <string>8</string>
       </entry>
       <entry>
         <string>Substance</string>
-        <string>4</string>
+        <string>6</string>
       </entry>
     </map>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Open Journals System Plugin (OJS 2.x), Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
+    <string>"Open Journal Systems Plugin (OJS 2.x), Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
   </entry>
   <entry>
     <string>au_start_url</string>

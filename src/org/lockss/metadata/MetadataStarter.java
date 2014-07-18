@@ -1,10 +1,10 @@
 /*
- * $Id: MetadataStarter.java,v 1.7 2014-01-29 22:33:11 pgust Exp $
+ * $Id: MetadataStarter.java,v 1.7.2.1 2014-07-18 15:59:13 wkwilson Exp $
  */
 
 /*
 
- Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -185,6 +185,14 @@ public class MetadataStarter extends LockssRunnable {
 
       try {
         conn = dbManager.getConnection();
+
+        // Mark the AU as active.
+        dbManager.updateAuActiveFlag(conn, au.getAuId(), true);
+        DbManager.commitOrRollback(conn, log);
+
+        // Remove the AU from the table of unconfigured AUs.
+        mdManager.removeFromUnconfiguredAus(conn, au.getAuId());
+
         insertPendingAuBatchStatement =
             mdManager.getInsertPendingAuBatchStatement(conn);
 
@@ -207,12 +215,13 @@ public class MetadataStarter extends LockssRunnable {
   	  case Create:
   	    log.debug2(DEBUG_HEADER + "Create for au: " + au);
 
-  	    // This case occurs when the user has added an AU through the GUI.
+  	    // This case occurs when the user has added or reactivated an AU
+  	    // through the GUI.
   	    // If this restores an existing AU that has already crawled, we
   	    // schedule it to be added to the metadata database now. Otherwise
   	    // it will be added through auContentChanged() once the crawl has
   	    // been completed.
-  	    if (AuUtil.hasCrawled(au)) {
+  	    if (AuUtil.getAuState(au) != null && AuUtil.hasCrawled(au)) {
   	      mdManager.enableAndAddAuToReindex(au, conn,
   		  insertPendingAuBatchStatement, event.isInBatch());
   	    }
@@ -245,16 +254,39 @@ public class MetadataStarter extends LockssRunnable {
       final String DEBUG_HEADER = "auDeleted(): ";
       switch (event.getType()) {
 	case Delete:
+	  // This case occurs when the AU is being deleted.
 	  log.debug2(DEBUG_HEADER + "Delete for au: " + au);
 
-	  // This case occurs when the AU is being deleted, so delete its
-	  // metadata.
+	  // Insert the AU in the table of unconfigured AUs.
+	  mdManager.persistUnconfiguredAu(au);
+
+	  // Delete the AU metadata.
 	  mdManager.deleteAuAndReindex(au);
 	  break;
 	case RestartDelete:
 	  // This case occurs when the plugin is about to restart. There is
 	  // nothing to do in this case but wait for the plugin to be
 	  // reactivated and see whether anything needs to be done.
+	  break;
+	case Deactivate:
+	  // This case occurs when the AU is being deactivated.
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "Deactivate for au: " + au);
+
+	  Connection conn = null;
+
+	  try {
+	    conn = dbManager.getConnection();
+
+	    // Mark the AU as inactive in the database.
+	    dbManager.updateAuActiveFlag(conn, au.getAuId(), false);
+	    DbManager.commitOrRollback(conn, log);
+	  } catch (DbException dbe) {
+	    log.error("Cannot deactivate AU " + au.getName(), dbe);
+	  } finally {
+	    DbManager.safeRollbackAndClose(conn);
+	  }
+
 	  break;
       }
     }

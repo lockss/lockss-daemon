@@ -4,6 +4,46 @@
     name = European Respiratory Society
   >
 
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    implicit < status ; year ; name ; param[volume_name] >
+
+  {
+
+    title <
+      name = Breathe ;
+      issn = 1810-6838 ;
+      eissn = 2073-4735 ;
+      issnl = 1810-6838
+    >
+
+    param[base_url] = http://breathe.ersjournals.com/
+
+    au < manifest ; 2007-2008 ; Breathe Volume 4 ; 4 >
+    au < manifest ; 2008-2009 ; Breathe Volume 5 ; 5 >
+    au < manifest ; 2009-2010 ; Breathe Volume 6 ; 6 >
+    au < manifest ; 2010-2011 ; Breathe Volume 7 ; 7 >
+    au < manifest ; 2011-2012 ; Breathe Volume 8 ; 8 >
+    au < manifest ; 2012-2013 ; Breathe Volume 9 ; 9 >
+    au < exists ; 2014 ; Breathe Volume 10 ; 10 >
+    
+  }
+
+  {
+
+    title <
+      name = ERJ Open Research ;
+      eissn = 2312-0541 ;
+      issnl = 2312-0541
+    >
+
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    implicit < status ; year ; name ; param[volume_name] >
+    param[base_url] = http://ERJopenres.ersjournals.com/
+
+    au < expected ; 2014 ; ERJ Open Research Volume 1 ; 1 >
+    
+  }
+
   {
 
     title <
@@ -13,8 +53,6 @@
       issnl = 0903-1936
     >
 
-    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-    implicit < status ; year ; name ; param[volume_name] >
     param[base_url] = http://erj.ersjournals.com/
     
     {
@@ -65,69 +103,7 @@
     au < manifest ; 2013 ; European Respiratory Journal Volume 41 ; 41 >
     au < manifest ; 2013 ; European Respiratory Journal Volume 42 ; 42 >
     au < manifest ; 2014 ; European Respiratory Journal Volume 43 ; 43 >
-    au < expected ; 2014 ; European respiratory Journal Volume 44 ; 44 >
-    
-  }
-
-  {
-
-    title <
-      name = European Respiratory Monographs ;
-      issn = 1025-448X ;
-      eissn = 2075-6674 ;
-      issnl = 1025-448X
-    >
-
-    type = bookSeries
-    plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
-    implicit < status ; year ; name ; param[volume_name] >
-    param[base_url] = http://erm.ersjournals.com/
-    
-    comment[manifest] = manifest page has permission statement for clockss.
-    
-    au < exists ; 2003 ; European Respiratory Monographs Volume 25 ; 25 >
-    au < exists ; 2003 ; European Respiratory Monographs Volume 26 ; 26 >
-    au < exists ; 2004 ; European Respiratory Monographs Volume 27 ; 27 >
-    au < exists ; 2004 ; European Respiratory Monographs Volume 28 ; 28 >
-    au < exists ; 2004 ; European Respiratory Monographs Volume 29 ; 29 >
-    au < exists ; 2004 ; European Respiratory Monographs Volume 30 ; 30 >
-    au < exists ; 2005 ; European Respiratory Monographs Volume 31 ; 31 >
-    au < exists ; 2005 ; European Respiratory Monographs Volume 32 ; 32 >
-    au < exists ; 2005 ; European Respiratory Monographs Volume 33 ; 33 >
-    au < exists ; 2005 ; European Respiratory Monographs Volume 34 ; 34 >
-    au < exists ; 2006 ; European Respiratory Monographs Volume 35 ; 35 >
-    au < exists ; 2006 ; European Respiratory Monographs Volume 36 ; 36 >
-    au < exists ; 2006 ; European Respiratory Monographs Volume 37 ; 37 >
-    au < exists ; 2006 ; European Respiratory Monographs Volume 38 ; 38 >
-    au < exists ; 2007 ; European Respiratory Monographs Volume 39 ; 39 >
-    au < exists ; 2007 ; European Respiratory Monographs Volume 40 ; 40 >
-    au < exists ; 2008 ; European Respiratory Monographs Volume 41 ; 41 >
-    au < exists ; 2008 ; European Respiratory Monographs Volume 42 ; 42 >
-    au < exists ; 2009 ; European Respiratory Monographs Volume 43 ; 43 >
-    au < exists ; 2009 ; European Respiratory Monographs Volume 44 ; 44 >
-    au < exists ; 2009 ; European Respiratory Monographs Volume 45 ; 45 >
-    au < exists ; 2009 ; European Respiratory Monographs Volume 46 ; 46 >
-    au < testing ; 2010 ; European Respiratory Monographs Volume 47 ; 47 >
-    au < exists ; 2010 ; European Respiratory Monographs Volume 48 ; 48 >
-    au < exists ; 2010 ; European Respiratory Monographs Volume 49 ; 49 >
-    au < exists ; 2010 ; European Respiratory Monographs Volume 50 ; 50 >
-    au < testing ; 2011 ; European Respiratory Monographs Volume 51 ; 51 >
-    au < exists ; 2011 ; European Respiratory Monographs Volume 52 ; 52 >
-    au < exists ; 2011 ; European Respiratory Monographs Volume 53 ; 53 >
-    au < exists ; 2011 ; European Respiratory Monographs Volume 54 ; 54 >
-    au < testing ; 2012 ; European Respiratory Monographs Volume 55 ; 55 >
-    au < exists ; 2012 ; European Respiratory Monographs Volume 56 ; 56 >
-    au < exists ; 2012 ; European Respiratory Monographs Volume 57 ; 57 >
-    au < exists ; 2012 ; European Respiratory Monographs Volume 58 ; 58 >
-    au < exists ; 2013 ; European Respiratory Monographs Volume 59 ; 59 >
-    au < testing ; 2013 ; European Respiratory Monographs Volume 60 ; 60 >
-    au < exists ; 2013 ; European Respiratory Monographs Volume 61 ; 61 >
-    au < expected ; 2013 ; European Respiratory Monographs Volume 62 ; 62 >
-    au < expected ; 2014 ; European Respiratory Monographs Volume 63 ; 63 >
-    au < expected ; 2014 ; European Respiratory Monographs Volume 64 ; 64 >
-    au < expected ; 2014 ; European Respiratory Monographs Volume 65 ; 65 >
-    au < expected ; 2014 ; European Respiratory Monographs Volume 66 ; 66 >
-
+    au < manifest ; 2014 ; European respiratory Journal Volume 44 ; 44 >
     
   }
 
@@ -140,8 +116,6 @@
       issnl = 0905-9180
     >
 
-    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-    implicit < status ; year ; name ; param[volume_name] >
     param[base_url] = http://err.ersjournals.com/
       
     au < released ; 2005 ; European Respiratory Review Volume 14 ; 14 >

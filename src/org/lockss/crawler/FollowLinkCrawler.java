@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.97.2.1 2014-05-05 17:32:31 wkwilson Exp $
+ * $Id: FollowLinkCrawler.java,v 1.97.2.2 2014-07-18 15:59:57 wkwilson Exp $
  */
 
 /*
@@ -122,6 +122,12 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     PREFIX + "crawlEndReportHashAlg";
   public static final String DEFAULT_CRAWL_END_REPORT_HASH_ALG = "SHA-1";
 
+  /** If true, empty files will be refetched independent of depth unless
+   * the plugin declares that empty files shouldn't be reported. */
+  public static final String PARAM_REFETCH_EMPTY_FILES =
+    PREFIX + "refetchEmptyFiles";
+  public static final boolean DEFAULT_REFETCH_EMPTY_FILES = false;
+
   private boolean alwaysReparse = DEFAULT_REPARSE_ALL;
   private boolean usePersistantList = DEFAULT_PERSIST_CRAWL_LIST;
   private boolean parseUseCharset = DEFAULT_PARSE_USE_CHARSET;
@@ -154,6 +160,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
   protected SubstanceChecker subChecker;
   protected boolean isAbbreviatedCrawlTest = false;
   protected boolean crawlTerminated = false;
+  protected boolean isRefetchEmptyFiles = false;
 
   // Cache recent negative results from au.shouldBeCached().  This is set
   // to an LRUMsp when crawl is initialzed, it's initialized here to a
@@ -236,6 +243,13 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 				     DEFAULT_CRAWL_END_REPORT_EMAIL);
     crawlEndReportHashAlg = config.get(PARAM_CRAWL_END_REPORT_HASH_ALG,
 				       DEFAULT_CRAWL_END_REPORT_HASH_ALG);
+
+    isRefetchEmptyFiles =
+      config.getBoolean(PARAM_REFETCH_EMPTY_FILES, DEFAULT_REFETCH_EMPTY_FILES)
+      && !isIgnoredException(AuUtil.mapException(au,
+						 null,
+						 new ContentValidationException.EmptyFile(),
+						 null));
   }
 
   protected boolean doCrawl0() {
@@ -465,8 +479,13 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
   protected void appendAlertInfo(StringBuilder sb) {
     sb.append(String.format("\n\nRefetch Depth: %d\nMax Depth: %d\nActual Depth: %d",
 			    getRefetchDepth(), maxDepth, crawlStatus.getDepth()));
+    if (proxyHost != null) {
+      sb.append("\nProxy: ");
+      sb.append(proxyHost);
+      sb.append(":");
+      sb.append(proxyPort);
+    }
   }				
-// 	ab.append(String.format("\n\nFetched: %d\nWarnings" %d|nError
 
   /** Separate method for easy overridability in unit tests, where
    * necessary environment may not be set up */
@@ -520,8 +539,10 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 
     // Fetch URL if it has no content already or its depth is within the
     // refetch depth
+    CachedUrl cu0;
     if (curl.getDepth() <= getRefetchDepth()
-	|| !uc.getCachedUrl().hasContent()) {
+	|| !(cu0 = uc.getCachedUrl()).hasContent()
+	|| (isRefetchEmptyFiles && cu0.getContentSize() == 0)) {
       try {
 	if (failedUrls.contains(uc.getUrl())) {
 	  //skip if it's already failed
@@ -557,7 +578,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 				      Crawler.STATUS_REPO_ERR);
       } catch (CacheException.RedirectOutsideCrawlSpecException ex) {
 	// Count this as an excluded URL
-	crawlStatus.signalUrlExcluded(uc.getUrl());
+	crawlStatus.signalUrlExcluded(uc.getUrl(), ex.getMessage());
 	// and claim success, because false causes crawl to fail
 	return true;
       } catch (CacheException ex) {
@@ -721,6 +742,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	pokeWDog();
 	updateCacheStats(uc.cache(), uc);
 	// success
+	reportInfoException(uc);
 	return;
       } catch (CacheException e) {
 	if (!e.isAttributeSet(CacheException.ATTRIBUTE_RETRY)) {

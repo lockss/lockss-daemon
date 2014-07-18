@@ -13,14 +13,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>16</string>
+    <string>18</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>9</string>
+        <string>10</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -87,23 +87,24 @@
     	<string>"%sopenurl.asp?genre=volume&amp;eissn=%s&amp;volume=%s", base_url, journal_issn, volume_name</string>
 	  </entry>
   	</map>
-  </entry>  
+  </entry>
   <entry>
     <string>au_crawlrules</string>
 <!-- 
-do not crawl out the arguments that are handled by the URL normalizer (mark, p, pi, p_o, sw) so that ServeContent works correctly (RU #4626)
+do not crawl out the arguments that are handled by the URL normalizer (mark, p, pi, p_o, sw) 
+so that ServeContent works correctly (RU #4626)
 currently not excluding print views (things that have the ?print=true or &print=true) in their arguments 
 basic content line ends with / on purpose. After normalization of arguments, the / is there and collected
-export.mpx line is for citation information; mode is ris, txt, etc.
+export.mpx line is for citation information; mode is ris, txt, etc.; dynamic-file.axd appear to be CSS
  -->
     <list>
-      <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
+      <string>1,"^https?://%s/.*[.](bmp|css|gif|ico|jpe?g|js|png|tif?f|ashx)$", base_url_host</string>
       <string>4,"^%s", base_url</string>
-      <string>1,"^%sopenurl\.asp\?genre=volume&amp;eissn=%s&amp;volume=%s$", base_url, journal_issn, volume_name</string>
-      <string>2,"^%scontent/[a-z0-9]{10,16}/(offerings/|fulltext\.pdf\?page=)", base_url</string>
-      <string>2,"^%scontent/[a-z0-9]{10,16}/.*[?&amp;](sortorder)=", base_url</string>
+      <string>1,"^%sopenurl[.]asp[?]genre=volume&amp;eissn=%s&amp;volume=%s$", base_url, journal_issn, volume_name</string>
+      <string>2,"^%scontent/[a-z0-9]{10,16}/(?:offerings/|fulltext[.]pdf[?]page=)", base_url</string>
+      <string>2,"^%scontent/[a-z0-9]{10,16}/.*[?&amp;]sortorder=(?!.*[&amp;]p_o=[1-9])", base_url</string>
       <string>1,"^%scontent/[a-z0-9]{10,16}/", base_url</string>
-      <string>1,"^%sexport.mpx\?code=[^&amp;]+&amp;mode=", base_url</string>
+      <string>1,"^%s(?:export[.]mpx[?]code=[^&amp;]+&amp;mode=|dynamic-file[.]axd[?]id=)", base_url</string>
     </list>
   </entry>
   <entry>
@@ -113,6 +114,12 @@ export.mpx line is for citation information; mode is ris, txt, etc.
   <entry>
     <string>au_def_new_content_crawl</string>
     <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <string>500=org.lockss.plugin.metapress.MetaPressHttpResponseHandler</string>
+    </list>
   </entry>
   <entry>
     <string>au_url_normalizer</string>
@@ -135,9 +142,13 @@ export.mpx line is for citation information; mode is ris, txt, etc.
     <string>org.lockss.plugin.metapress.MetaPressHtmlCrawlFilterFactory</string>
   </entry>
   <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.metapress.MetaPressPdfFilterFactory</string>
+  </entry>
+  <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%scontent/[A-Za-z0-9]{16}/fulltext\.pdf$", base_url, volume_name</string>
+      <string>"^%scontent/[A-Za-z0-9]{16}/fulltext[.]pdf$", base_url, volume_name</string>
     </list>
   </entry>
   <entry>

@@ -24,6 +24,7 @@
       au < exists ; 2011 ; 4 ; Universitas: Arquitetura e Comunicação Social Volume 2011 ; 2011 >
       au < exists ; 2012 ; 5 ; Universitas: Arquitetura e Comunicação Social Volume 2012 ; 2012 >
       au < expected ; 2013 ; 6 ; Universitas: Arquitetura e Comunicação Social Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 7 ; Universitas: Arquitetura e Comunicação Social Volume 2014 ; 2014 >
 
   }
 
@@ -50,6 +51,7 @@
       au < exists ; 2011 ; 9 ; Universitas: Ciências da Saúde Volume 2011 ; 2011 >
       au < exists ; 2012 ; 10 ; Universitas: Ciências da Saúde Volume 2012 ; 2012 >
       au < expected ; 2013 ; 11 ; Universitas: Ciências da Saúde Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 12 ; Universitas: Ciências da Saúde Volume 2014 ; 2014 >
 
   }
 
@@ -68,6 +70,7 @@
       au < exists ; 2011 ; 1 ; Universitas: Gestão e TI Volume 2011 ; 2011 >
       au < exists ; 2012 ; 2 ; Universitas: Gestão e TI Volume 2012 ; 2012 >
       au < expected ; 2013 ; 3 ; Universitas: Gestão e TI Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 4 ; Universitas: Gestão e TI Volume 2014 ; 2014 >
 
   }
 
@@ -90,6 +93,7 @@
       au < exists ; 2011 ; 5 ; Universitas Jus (UniCEUB Law Journal) Volume 2011 ; 2011 >
       au < exists ; 2012 ; 6 ; Universitas Jus (UniCEUB Law Journal) Volume 2012 ; 2012 >
       au < expected ; 2013 ; 7 ; Universitas Jus (UniCEUB Law Journal) Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 8 ; Universitas Jus (UniCEUB Law Journal) Volume 2014 ; 2014 >
 
   }
 
@@ -109,9 +113,6 @@
       au < exists ; 2008 ; 3 ; Padê: Estudos em filosofia, raça, gênero e direitos humanos (encerrada) Volume 2008 ; 2008 >
       au < exists ; 2009 ; 4 ; Padê: Estudos em filosofia, raça, gênero e direitos humanos (encerrada) Volume 2009 ; 2009 >
       au < exists ; 2010 ; 5 ; Padê: Estudos em filosofia, raça, gênero e direitos humanos (encerrada) Volume 2010 ; 2010 >
-      au < expected ; 2011 ; 6 ; Padê: Estudos em filosofia, raça, gênero e direitos humanos (encerrada) Volume 2011 ; 2011 >
-      au < expected ; 2012 ; 7 ; Padê: Estudos em filosofia, raça, gênero e direitos humanos (encerrada) Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 8 ; Padê: Estudos em filosofia, raça, gênero e direitos humanos (encerrada) Volume 2013 ; 2013 >
 
   }
 
@@ -128,16 +129,17 @@
       param[journal_id] = prisma
       comment[0] = No permission from publisher
 
-      au < notReady ; 2004 ; 1 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2004 ; 2004 >
-      au < notReady ; 2005 ; 2 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2005 ; 2005 >
-      au < notReady ; 2006 ; 3 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2006 ; 2006 >
-      au < notReady ; 2007 ; 4 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2007 ; 2007 >
-      au < notReady ; 2008 ; 5 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2008 ; 2008 >
-      au < notReady ; 2009 ; 6 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2009 ; 2009 >
-      au < notReady ; 2010 ; 7 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2010 ; 2010 >
-      au < notReady ; 2011 ; 8 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2011 ; 2011 >
-      au < notReady ; 2012 ; 9 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2012 ; 2012 >
+      au < exists ; 2004 ; 1 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 2 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 3 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 4 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 5 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 6 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 7 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 8 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 9 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2012 ; 2012 >
       au < expected ; 2013 ; 10 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 11 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2014 ; 2014 >
 
   }
 
@@ -155,7 +157,8 @@
 
       au < released ; 2011 ; 1 ; Revista Brasileira de Políticas Públicas (Brazilian Journal of Law and Public Policy) Volume 2011 ; 2011 >
       au < released ; 2012 ; 2 ; Revista Brasileira de Políticas Públicas (Brazilian Journal of Law and Public Policy) Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 3 ; Revista Brasileira de Políticas Públicas (Brazilian Journal of Law and Public Policy) Volume 2013 ; 2013 >
+      au < ready ; 2013 ; 3 ; Revista Brasileira de Políticas Públicas (Brazilian Journal of Law and Public Policy) Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 4 ; Revista Brasileira de Políticas Públicas (Brazilian Journal of Law and Public Policy) Volume 2014 ; 2014 >
 
   }
 
@@ -174,6 +177,7 @@
       au < exists ; 2011 ; 1 ; Revista de Direito Internacional (Brazilian Journal of International Law) Volume 2011 ; 2011 >
       au < exists ; 2012 ; 2 ; Revista de Direito Internacional (Brazilian Journal of International Law) Volume 2012 ; 2012 >
       au < expected ; 2013 ; 3 ; Revista de Direito Internacional (Brazilian Journal of International Law) Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 4 ; Revista de Direito Internacional (Brazilian Journal of International Law) Volume 2014 ; 2014 >
 
   }
 
@@ -195,6 +199,7 @@
       au < exists ; 2011 ; 4 ; Universitas Humanas Volume 2011 ; 2011 >
       au < exists ; 2012 ; 5 ; Universitas Humanas Volume 2012 ; 2012 >
       au < expected ; 2013 ; 6 ; Universitas Humanas Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 7 ; Universitas Humanas Volume 2014 ; 2014 >
 
   }
 

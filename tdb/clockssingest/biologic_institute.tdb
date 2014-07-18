@@ -22,10 +22,10 @@
       plugin = org.lockss.plugin.biologicinstitute.ClockssBiologicInstitutePlugin
       param[journal_id] = main
 
-      au < down ; crawling ; 2010 ; BIO-Complexity Volume 2010 ; 2010 ; 2010 >
-      au < down ; crawling ; 2011 ; BIO-Complexity Volume 2011 ; 2011 ; 2011 >
-      au < down ; crawling ; 2012 ; BIO-Complexity Volume 2012 ; 2012 ; 2012 >
-      au < crawling ; exists ; 2013 ; BIO-Complexity Volume 2013 ; 2013 ; 2013 >
+      au < superseded ; frozen ; 2010 ; BIO-Complexity Volume 2010 [superseded] ; 2010 ; 2010 >
+      au < superseded ; frozen ; 2011 ; BIO-Complexity Volume 2011 [superseded] ; 2011 ; 2011 >
+      au < superseded ; frozen ; 2012 ; BIO-Complexity Volume 2012 [superseded] ; 2012 ; 2012 >
+      au < down ; exists ; 2013 ; BIO-Complexity Volume 2013 [to delete] ; 2013 ; 2013 >
 
     }
     
@@ -34,10 +34,10 @@
       plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
       param[journal_id] = main
 
-      au < doNotProcess ; exists ; 2010 ; BIO-Complexity Volume 2010 ; 2010 ; 2010 >
-      au < doNotProcess ; exists ; 2011 ; BIO-Complexity Volume 2011 ; 2011 ; 2011 >
-      au < doNotProcess ; exists ; 2012 ; BIO-Complexity Volume 2012 ; 2012 ; 2012 >
-      au < ready ; exists ; 2013 ; BIO-Complexity Volume 2013 ; 2013 ; 2013 >
+      au < crawling ; exists ; 2010 ; BIO-Complexity Volume 2010 ; 2010 ; 2010 >
+      au < crawling ; exists ; 2011 ; BIO-Complexity Volume 2011 ; 2011 ; 2011 >
+      au < crawling ; exists ; 2012 ; BIO-Complexity Volume 2012 ; 2012 ; 2012 >
+      au < crawling ; exists ; 2013 ; BIO-Complexity Volume 2013 ; 2013 ; 2013 >
       au < manifest ; exists ; 2014 ; BIO-Complexity Volume 2014 ; 2014 ; 2014 >
 
     }

@@ -3,7 +3,7 @@
   publisher <
     name = American Medical Association ;
     info[contract] = 2008 ;
-    info[tester] = 8 ;
+    info[tester] = 2 ;
     comment[platform] = Silverchair
   >
 
@@ -141,7 +141,7 @@
         au < zapped ; finished ; 1962 ; Archives of Dermatology Volume 85 ; 85 ; reingest3.clockss.org:8083 >
         au < zapped ; finished ; 1962 ; Archives of Dermatology Volume 86 ; 86 ; reingest3.clockss.org:8083 >
         au < zapped ; finished ; 1963 ; Archives of Dermatology Volume 87 ; 87 ; reingest4.clockss.org:8082 >
-        au < down ; crawling ; 1963 ; Archives of Dermatology Volume 88 ; 88 ; reingest4.clockss.org:8082 >
+        au < down ; frozen ; 1963 ; Archives of Dermatology Volume 88 ; 88 ; reingest4.clockss.org:8082 >
         au < zapped ; finished ; 1964 ; Archives of Dermatology Volume 89 ; 89 ; reingest1.clockss.org:8082 >
         au < zapped ; finished ; 1964 ; Archives of Dermatology Volume 90 ; 90 ; reingest1.clockss.org:8082 >
         au < zapped ; finished ; 1965 ; Archives of Dermatology Volume 91 ; 91 ; reingest2.clockss.org:8085 >
@@ -204,6 +204,21 @@
         au < down ; exists ; 2012 ; Archives of Dermatology Volume 148 ; 148 ; >
 
       }
+      
+      {
+    
+        pluginPrefix = org.lockss.plugin.silverchair.
+        implicit < status ; status2 ; year ; name ; param[year] >
+
+        pluginSuffix = ClockssSilverchairJournalsPlugin
+        param[base_url] = http://archderm.jamanetwork.com/
+        param[resource_id] = 68
+        
+        comment[smoketest] = created one au for testing
+    
+        au < testing ; exists ; 2013 ; Archives of Dermatology Volume 149 ; 2013 >    
+    
+      }
 
     }
 
@@ -252,11 +267,26 @@
         au < zapped ; finished ; 2006 ; Archives of Facial Plastic Surgery Volume 8 ; 8 ; reingest3.clockss.org:8083 >
         au < zapped ; finished ; 2007 ; Archives of Facial Plastic Surgery Volume 9 ; 9 ; reingest4.clockss.org:8082 >
         au < zapped ; finished ; 2008 ; Archives of Facial Plastic Surgery Volume 10 ; 10 ; >
-        au < down ; crawling ; 2009 ; Archives of Facial Plastic Surgery Volume 11 ; 11 ; >
+        au < down ; frozen ; 2009 ; Archives of Facial Plastic Surgery Volume 11 ; 11 ; >
         au < down ; crawling ; 2010 ; Archives of Facial Plastic Surgery Volume 12 ; 12 ; >
-        au < down ; crawling ; 2011 ; Archives of Facial Plastic Surgery Volume 13 ; 13 ; >
+        au < down ; frozen ; 2011 ; Archives of Facial Plastic Surgery Volume 13 ; 13 ; >
         au < down ; exists ; 2012 ; Archives of Facial Plastic Surgery Volume 14 ; 14 ; >
 
+      }
+      
+      {
+    
+        pluginPrefix = org.lockss.plugin.silverchair.
+        implicit < status ; status2 ; year ; name ; param[year] >
+
+        pluginSuffix = ClockssSilverchairJournalsPlugin
+        param[base_url] = http://archfaci.jamanetwork.com/
+        param[resource_id] = 69
+        
+        comment[smoketest] = created one au for testing
+    
+        au < testing ; exists ; 2013 ; Archives of Facial Plastic Surgery Volume 15 ; 2013 >    
+    
       }
 
     }
@@ -282,7 +312,7 @@
       au < zapped ; finished ; 2006 ; JAMA Français Volume 296 ; 296 ; >
       au < zapped ; finished ; 2007 ; JAMA Français Volume 297 ; 297 ; >
       au < zapped ; finished ; 2007 ; JAMA Français Volume 298 ; 298 ; >
-      au < down ; crawling ; 2008 ; JAMA Français Volume 299 ; 299 ; >
+      au < down ; frozen ; 2008 ; JAMA Français Volume 299 ; 299 ; >
       au < zapped ; finished ; 2008 ; JAMA Français Volume 300 ; 300 ; >
           
     }
@@ -370,7 +400,7 @@
         au < down ; crawling ; 2008 ; Archives of General Psychiatry Volume 65 ; 65 ; >
         au < down ; crawling ; 2009 ; Archives of General Psychiatry Volume 66 ; 66 ; >
         au < down ; crawling ; 2010 ; Archives of General Psychiatry Volume 67 ; 67 ; >
-        au < down ; crawling ; 2011 ; Archives of General Psychiatry Volume 68 ; 68 ; >
+        au < down ; frozen ; 2011 ; Archives of General Psychiatry Volume 68 ; 68 ; >
         au < down ; exists ; 2012 ; Archives of General Psychiatry Volume 69 ; 69 ; >
 
       }
@@ -668,9 +698,24 @@
         au < down ; crawling ; 2008 ; Archives of Neurology Volume 65 ; 65 ; >
         au < down ; crawling ; 2009 ; Archives of Neurology Volume 66 ; 66 ; >
         au < down ; crawling ; 2010 ; Archives of Neurology Volume 67 ; 67 ; >
-        au < down ; crawling ; 2011 ; Archives of Neurology Volume 68 ; 68 ; >
+        au < down ; frozen ; 2011 ; Archives of Neurology Volume 68 ; 68 ; >
         au < down ; exists ; 2012 ; Archives of Neurology Volume 69 ; 69 ; >
 
+      }
+      
+      {
+    
+        pluginPrefix = org.lockss.plugin.silverchair.
+        implicit < status ; status2 ; year ; name ; param[year] >
+
+        pluginSuffix = ClockssSilverchairJournalsPlugin
+        param[base_url] =  http://archneur.jamanetwork.com/
+        param[resource_id] = 72
+        
+        comment[smoketest] = created one au for testing
+    
+        au < testing ; exists ; 2013 ; Archives of Neurology Volume 70 ; 2013 >    
+    
       }
 
     }
@@ -922,6 +967,21 @@
         au < down ; exists ; 2012 ; Archives of Ophthalmology Volume 130 ; 130 ; >
 
       }
+      
+     {
+    
+        pluginPrefix = org.lockss.plugin.silverchair.
+        implicit < status ; status2 ; year ; name ; param[year] >
+
+        pluginSuffix = ClockssSilverchairJournalsPlugin
+        param[base_url] =  http://archopht.jamanetwork.com/
+        param[resource_id] = 73
+        
+        comment[smoketest] = created one au for testing
+    
+        au < testing ; exists ; 2013 ; Archives of Ophthalmology Volume 131 ; 2013 >    
+    
+      }
 
     }
 
@@ -1150,7 +1210,7 @@
         au < zapped ; finished ; 1934 ; American Journal of Diseases of Children Volume 48 ; 48 ; reingest3.clockss.org:8083 >
         au < zapped ; finished ; 1935 ; American Journal of Diseases of Children Volume 49 ; 49 ; reingest4.clockss.org:8082 >
         au < zapped ; finished ; 1935 ; American Journal of Diseases of Children Volume 50 ; 50 ; reingest4.clockss.org:8082 >
-        au < down ; crawling ; 1936 ; American Journal of Diseases of Children Volume 51 ; 51 ; reingest1.clockss.org:8082 >
+        au < down ; frozen ; 1936 ; American Journal of Diseases of Children Volume 51 ; 51 ; reingest1.clockss.org:8082 >
         au < zapped ; finished ; 1936 ; American Journal of Diseases of Children Volume 52 ; 52 ; reingest1.clockss.org:8082 >
         au < zapped ; finished ; 1937 ; American Journal of Diseases of Children Volume 53 ; 53 ; reingest2.clockss.org:8085 >
         au < zapped ; finished ; 1937 ; American Journal of Diseases of Children Volume 54 ; 54 ; reingest2.clockss.org:8085 >
@@ -1264,7 +1324,7 @@
         au < down ; crawling ; 2008 ; Archives of Pediatrics & Adolescent Medicine Volume 162 ; 162 ; >
         au < down ; crawling ; 2009 ; Archives of Pediatrics & Adolescent Medicine Volume 163 ; 163 ; >
         au < down ; crawling ; 2010 ; Archives of Pediatrics & Adolescent Medicine Volume 164 ; 164 ; >
-        au < down ; crawling ; 2011 ; Archives of Pediatrics & Adolescent Medicine Volume 165 ; 165 ; >
+        au < down ; frozen ; 2011 ; Archives of Pediatrics & Adolescent Medicine Volume 165 ; 165 ; >
         au < down ; exists ; 2012 ; Archives of Pediatrics & Adolescent Medicine Volume 166 ; 166 ; >
 
       }
@@ -1485,7 +1545,7 @@
       au < zapped ; finished ; 2008 ; Disaster Medicine and Public Health Preparedness Volume 2 ; 2 ; >
       au < zapped ; finished ; 2009 ; Disaster Medicine and Public Health Preparedness Volume 3 ; 3 ; >
       au < zapped ; finished ; 2010 ; Disaster Medicine and Public Health Preparedness Volume 4 ; 4 ; >
-      au < down ; crawling ; 2011 ; Disaster Medicine and Public Health Preparedness Volume 5 ; 5 ; >
+      au < down ; frozen ; 2011 ; Disaster Medicine and Public Health Preparedness Volume 5 ; 5 ; >
 
     }
 
@@ -1561,7 +1621,7 @@
         au < zapped ; finished ; 1909 ; Journal of the American Medical Association Volume LII ; LII ; reingest2.clockss.org:8085 >
         au < zapped ; finished ; 1909 ; Journal of the American Medical Association Volume LIII ; LIII ; reingest2.clockss.org:8085 >
         au < zapped ; finished ; 1910 ; Journal of the American Medical Association Volume LIV ; LIV ; reingest3.clockss.org:8083 >
-        au < down ; frozen ; 1910 ; Journal of the American Medical Association Volume LV [superseded] ; LV ; reingest3.clockss.org:8083 >
+        au < down ; down ; 1910 ; Journal of the American Medical Association Volume LV [superseded] ; LV ; reingest3.clockss.org:8083 >
         au < zapped ; finished ; 1910 ; Journal of the American Medical Association Volume 55 ; 55 ; reingest3.clockss.org:8083 >
         au < zapped ; finished ; 1911 ; Journal of the American Medical Association Volume LVI ; LVI ; reingest4.clockss.org:8082 >
         au < zapped ; finished ; 1911 ; Journal of the American Medical Association Volume LVII ; LVII ; reingest4.clockss.org:8082 >
@@ -1838,6 +1898,7 @@
         
         comment[smoketest] = created one au for testing
     
+        au < testing ; exists ; 2011 ; JAMA: The Journal of the American Medical Association Volume 305-306 ; 2011 >
         au < testing ; exists ; 2013 ; JAMA: The Journal of the American Medical Association Volume 309-310 ; 2013 >    
     
       }

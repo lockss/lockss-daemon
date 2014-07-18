@@ -32,7 +32,7 @@
       name = Mediaevalia ;
       issn = 0361-946X ;
       eissn = 2161-8046 ;
-      issnl = 361-946X
+      issnl = 0361-946X
     >
 
     param[journal_dir] = mediaevalia
@@ -58,8 +58,8 @@
     attr[journal_id] = pal
 
     au < released ; 2012 ; Palimpsest: A Journal on Women, Gender, and the Black International Volume 1 ; 1 >
-    au < manifest ; 2013 ; Palimpsest: A Journal on Women, Gender, and the Black International Volume 2 ; 2 >
-    au < expected ; 2014 ; Palimpsest: A Journal on Women, Gender, and the Black International Volume 3 ; 3 >
+    au < released ; 2013 ; Palimpsest: A Journal on Women, Gender, and the Black International Volume 2 ; 2 >
+    au < doNotProcess ; 2014 ; Palimpsest: A Journal on Women, Gender, and the Black International Volume 3 ; 3 >
 
   }
 
@@ -77,8 +77,8 @@
 
     au < released ; 2011 ; philoSOPHIA Volume 1 ; 1 >
     au < released ; 2012 ; philoSOPHIA Volume 2 ; 2 >
-    au < manifest ; 2013 ; philoSOPHIA Volume 3 ; 3 >
-    au < expected ; 2014 ; philoSOPHIA Volume 4 ; 4 >
+    au < released ; 2013 ; philoSOPHIA Volume 3 ; 3 >
+    au < manifest ; 2014 ; philoSOPHIA Volume 4 ; 4 >
 
   }
 

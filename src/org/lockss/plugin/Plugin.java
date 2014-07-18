@@ -1,5 +1,5 @@
 /*
- * $Id: Plugin.java,v 1.39 2013-10-11 22:43:21 fergaloy-sf Exp $
+ * $Id: Plugin.java,v 1.39.6.1 2014-07-18 15:59:03 wkwilson Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.*;
 import org.lockss.app.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
+import org.lockss.util.urlconn.*;
 import org.lockss.extractor.*;
 
 /**
@@ -173,6 +174,12 @@ public interface Plugin {
    * @param expectedType Type (class or interface) of expected rexult
    */
   public <T> T newAuxClass(String className, Class<T> expectedType);
+
+  /** Return the Exception map for fetch results & errors.
+   * @param au the AU
+   * @return the plugin's CacheResultMap
+   */
+  public CacheResultMap getCacheResultMap();
 
   /**
    * Return an {@link ArticleMetadataExtractor} that knows how to interpret

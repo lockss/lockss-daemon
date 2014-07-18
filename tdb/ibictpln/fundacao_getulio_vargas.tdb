@@ -35,7 +35,6 @@
       comment[publisher] = Fundação Getúlio Vargas
       param[base_url] = http://bibliotecadigital.fgv.br/ojs/
       param[journal_id] = rbfin
-      comment[notReady] = Metadata switching issue
 
       au < released ; 2003 ; 1 ; Brazilian Review of Finance  Volume 1 ; 2003 >
       au < released ; 2004 ; 2 ; Brazilian Review of Finance  Volume 2 ; 2004 >
@@ -45,9 +44,9 @@
       au < released ; 2008 ; 6 ; Brazilian Review of Finance  Volume 6 ; 2008 >
       au < released ; 2009 ; 7 ; Brazilian Review of Finance  Volume 7 ; 2009 >
       au < released ; 2010 ; 8 ; Brazilian Review of Finance  Volume 8 ; 2010 >
-      au < notReady ; 2011 ; 9 ; Brazilian Review of Finance  Volume 9 ; 2011 >
-      au < notReady ; 2012 ; 10 ; Brazilian Review of Finance  Volume 10 ; 2012 >
-      au < expected ; 2013 ; 11 ; Brazilian Review of Finance  Volume 11 ; 2013 >
+      au < released ; 2011 ; 9 ; Brazilian Review of Finance  Volume 9 ; 2011 >
+      au < released ; 2012 ; 10 ; Brazilian Review of Finance  Volume 10 ; 2012 >
+      au < ready ; 2013 ; 11 ; Brazilian Review of Finance  Volume 11 ; 2013 >
 
   }
 

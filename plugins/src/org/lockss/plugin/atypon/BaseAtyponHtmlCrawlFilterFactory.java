@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponHtmlCrawlFilterFactory.java,v 1.1 2013-08-06 21:09:32 aishizaki Exp $
+ * $Id: BaseAtyponHtmlCrawlFilterFactory.java,v 1.1.6.1 2014-07-18 15:54:34 wkwilson Exp $
  */
 
 /*
@@ -34,8 +34,13 @@ package org.lockss.plugin.atypon;
 
 import java.io.InputStream;
 import java.util.Arrays;
+import java.util.regex.Pattern;
+
+import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.*;
+import org.htmlparser.tags.CompositeTag;
+import org.htmlparser.tags.LinkTag;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
@@ -50,8 +55,20 @@ import org.lockss.plugin.*;
  */
 
 public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
+  protected static final Pattern corrections = Pattern.compile("Original Article|Corrigendum|Correction|Errata|Erratum", Pattern.CASE_INSENSITIVE);
   protected static NodeFilter[] baseAtyponFilters = new NodeFilter[] {
+    
     HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
+ 
+    // Not all Atypon plugins necessarily need this but MANY do and it is
+    // an insidious source of over crawling
+    new NodeFilter() {
+      @Override public boolean accept(Node node) {
+        if (!(node instanceof LinkTag)) return false;
+        String allText = ((CompositeTag)node).toPlainTextString();
+        return corrections.matcher(allText).find();
+      }
+    },
   };
 
   /** Create an array of NodeFilters that combines the atyponBaseFilters with

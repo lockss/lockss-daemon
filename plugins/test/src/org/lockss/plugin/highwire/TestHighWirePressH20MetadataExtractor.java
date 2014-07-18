@@ -182,7 +182,7 @@ public class TestHighWirePressH20MetadataExtractor extends LockssTestCase {
     assertEquals(goodFormat, md.get(MetadataField.FIELD_FORMAT));
     assertEquals(goodLanguage, md.get(MetadataField.FIELD_LANGUAGE));
     assertEquals(goodPublisher, md.get(MetadataField.FIELD_PUBLISHER));
-    assertEquals(goodJournalTitle, md.get(MetadataField.FIELD_JOURNAL_TITLE));
+    assertEquals(goodJournalTitle, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
     assertEquals(Arrays.asList(goodAuthors), md.getList(MetadataField.FIELD_AUTHOR));
     assertEquals(goodArticleTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
     assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
@@ -190,7 +190,7 @@ public class TestHighWirePressH20MetadataExtractor extends LockssTestCase {
     assertEquals(goodIssue, md.get(MetadataField.FIELD_ISSUE));
     assertEquals(goodStartPage, md.get(MetadataField.FIELD_START_PAGE));
     assertEquals(goodDOI, md.get(MetadataField.FIELD_DOI));
-    assertEquals(goodURL, md.get(MetadataField.FIELD_ACCESS_URL));
+    assertEquals(url, md.get(MetadataField.FIELD_ACCESS_URL));
     assertEquals(goodPropId, md.get(MetadataField.FIELD_PROPRIETARY_IDENTIFIER));
   }
 

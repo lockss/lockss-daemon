@@ -1,5 +1,5 @@
 /*
- * $Id: TestHttpResultMap.java,v 1.13 2012-09-25 23:02:25 tlipkis Exp $
+ * $Id: TestHttpResultMap.java,v 1.13.34.1 2014-07-18 15:49:40 wkwilson Exp $
  */
 
 /*
@@ -190,6 +190,10 @@ public class TestHttpResultMap extends LockssTestCase {
     assertTrue(exception instanceof
 	       CacheException.RetryableNetworkException_3_30S);
 
+    exception = resultMap.mapException(null, null,
+				       new ContentValidationException.EmptyFile("Empty File 42"),
+				       "foo");
+    assertTrue(exception instanceof CacheException.WarningOnly);
   }
 
   public void testInitExceptionTable() {
@@ -330,7 +334,10 @@ public class TestHttpResultMap extends LockssTestCase {
     for(int ic =0; ic < handledCodes.length; ic++) {
       result_code = handledCodes[ic];
       exception = resultMap.mapException(null, null, result_code, "foo");
-      assertTrue("code:" + result_code, exception instanceof CacheException);
+      assertClass("code:" + result_code,
+		  CacheException.class, exception);
+      assertNotClass("code:" + result_code,
+		     CacheException.UnknownCodeException.class, exception);
     }
   }
 
@@ -426,9 +433,10 @@ public class TestHttpResultMap extends LockssTestCase {
     public void init(CacheResultMap crmap) {
       HttpResultMap map = (HttpResultMap)crmap;
       if (m_returnCodes != null) {
-        map.storeArrayEntries(m_returnCodes, this.getClass());
+        map.storeArrayEntries(m_returnCodes, this);
       }
     }
+
     void setHandledCodes(int[] returnCodes) {
       m_returnCodes = returnCodes;
     }

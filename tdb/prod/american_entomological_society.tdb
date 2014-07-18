@@ -4,9 +4,6 @@
     name = American Entomological Society
   >
 
-  plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
-  implicit < status ; year ; name ; param[volume_name] >
-  param[base_url] = http://www.bioone.org/
 
   {
     title <
@@ -15,6 +12,9 @@
       issnl = 0013-872X
     >
     
+    plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+    implicit < status ; year ; name ; param[volume_name] >
+    param[base_url] = http://www.bioone.org/
     param[journal_id] = entn
   
     au < released ; 2006 ; Entomological News Volume 117 ; 117 >
@@ -33,6 +33,9 @@
       issnl = 0002-8320
     >
     
+    plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+    implicit < status ; year ; name ; param[volume_name] >
+    param[base_url] = http://www.bioone.org/
     param[journal_id] = taes
   
     au < released ; 2006 ; Transactions of the American Entomological Society Volume 132 ; 132 >
@@ -46,4 +49,33 @@
 
   }
   
+  {
+
+      title <
+        name = Transactions of the American Entomological Society ;
+        issn = 0002-8320 ;
+        eissn = 0886-1145 ;
+        issnl = 0002-8320
+      >
+
+      param[journal_id] = tranamerentosoc3
+      implicit < status ; year ; name ; param[volume_name] >
+      comment[platform] = JSTOR
+      plugin = org.lockss.plugin.jstor.JstorPlugin
+      param[base_url] = http://www.jstor.org/
+      param[base_url2] = https://www.jstor.org/
+
+      comment[journals] = This journal_id covers 1890-2012. tranamerentosoc2 and tranamerentosoci cover older volumes.
+
+      au < manifest ; 2005 ; Transactions of the American Entomological Society Volume 131 ; 131 >
+      au < manifest ; 2006 ; Transactions of the American Entomological Society Volume 132 ; 132 >
+      au < manifest ; 2007 ; Transactions of the American Entomological Society Volume 133 ; 133 >
+      au < manifest ; 2008 ; Transactions of the American Entomological Society Volume 134 ; 134 >
+      au < manifest ; 2009 ; Transactions of the American Entomological Society Volume 135 ; 135 >
+      au < manifest ; 2010 ; Transactions of the American Entomological Society Volume 136 ; 136 >
+      au < manifest ; 2011 ; Transactions of the American Entomological Society Volume 137 ; 137 >
+      au < manifest ; 2012 ; Transactions of the American Entomological Society Volume 138 ; 138 >
+
+  }
+
 }

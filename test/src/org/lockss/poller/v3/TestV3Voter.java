@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Voter.java,v 1.20 2013-07-24 19:02:18 tlipkis Exp $
+ * $Id: TestV3Voter.java,v 1.20.6.1 2014-07-18 15:49:44 wkwilson Exp $
  */
 
 /*
@@ -98,7 +98,7 @@ public class TestV3Voter extends LockssTestCase {
 
     lockssDaemon.setLockssRepository(repo, au);
 
-    aus = new MockAuState();
+    aus = new MockAuState(au);
     MockNodeManager nodeManager = new MockNodeManager();
     getMockLockssDaemon().setNodeManager(nodeManager, au);
     nodeManager.setAuState(aus);
@@ -170,6 +170,31 @@ public class TestV3Voter extends LockssTestCase {
 				  "[1w,1.0],[20w,.1]");
     assertEquals(1.0, nominateWeight(1*WEEK, 0), .01);
     assertEquals(0.1, nominateWeight(20*WEEK, 0), .01);
+  }
+
+  public void testSubstanceChecker() throws Exception {
+    List<String> pats = ListUtil.list("foo");
+    au.setSubstanceUrlPatterns(RegexpUtil.compileRegexps(pats));
+    AuState aus = AuUtil.getAuState(au);
+    aus.setSubstanceState(SubstanceChecker.State.Unknown);
+    SubstanceChecker sub = voter.makeSubstanceChecker();
+    assertNotNull(sub);
+    aus.setSubstanceState(SubstanceChecker.State.Yes);
+    sub = voter.makeSubstanceChecker();
+    assertNull(sub);
+
+    MockPlugin mplug = (MockPlugin)au.getPlugin();
+    mplug.setFeatureVersionMap(MapUtil.map(Plugin.Feature.Substance, "2"));
+    sub = voter.makeSubstanceChecker();
+    assertNotNull(sub);
+    aus.setSubstanceState(SubstanceChecker.State.Unknown);
+
+    voter.updateSubstance(sub);
+    assertEquals(SubstanceChecker.State.No, aus.getSubstanceState());
+
+    sub.checkSubstance("http://foo");
+    voter.updateSubstance(sub);
+    assertEquals(SubstanceChecker.State.Yes, aus.getSubstanceState());
   }
 
   public void testMakeHasher() throws Exception {

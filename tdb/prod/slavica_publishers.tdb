@@ -25,8 +25,8 @@
     au < released ; 2010 ; Journal of Slavic Linguistics Volume 18 ; 18 >
     au < released ; 2011 ; Journal of Slavic Linguistics Volume 19 ; 19 >
     au < released ; 2012 ; Journal of Slavic Linguistics Volume 20 ; 20 >
-    au < testing ; 2013 ; Journal of Slavic Linguistics Volume 21 ; 21 >
-    au < expected ; 2014 ; Journal of Slavic Linguistics Volume 22 ; 22 >
+    au < released ; 2013 ; Journal of Slavic Linguistics Volume 21 ; 21 >
+    au < manifest ; 2014 ; Journal of Slavic Linguistics Volume 22 ; 22 >
 
   }
 
@@ -55,8 +55,8 @@
     au < released ; 2010 ; Kritika: Explorations in Russian and Eurasian History Volume 11 ; 11 >
     au < released ; 2011 ; Kritika: Explorations in Russian and Eurasian History Volume 12 ; 12 >
     au < released ; 2012 ; Kritika: Explorations in Russian and Eurasian History Volume 13 ; 13 >
-    au < testing ; 2013 ; Kritika: Explorations in Russian and Eurasian History Volume 14 ; 14 >
-    au < manifest ; 2014 ; Kritika: Explorations in Russian and Eurasian History Volume 15 ; 15 >
+    au < released ; 2013 ; Kritika: Explorations in Russian and Eurasian History Volume 14 ; 14 >
+    au < doNotProcess ; 2014 ; Kritika: Explorations in Russian and Eurasian History Volume 15 ; 15 >
 
   }
 
@@ -72,7 +72,7 @@
     attr[journal_id] = pnr
     
     au < released ; 2012 ; Pushkin Review Volume 14 ; 14 >
-    au < testing ; 2013 ; Pushkin Review Volume 15 ; 15 >
+    au < released ; 2013 ; Pushkin Review Volume 15 ; 15 >
     au < expected ; 2014 ; Pushkin Review Volume 16 ; 16 >
 
   }
@@ -90,8 +90,8 @@
     attr[journal_id] = reg
 
     au < released ; 2012 ; Region: Regional Studies of Russia, Eastern Europe, and Central Asia Volume 1 ; 1 >
-    au < testing ; 2013 ; Region: Regional Studies of Russia, Eastern Europe, and Central Asia Volume 2 ; 2 >
-    au < expected ; 2014 ; Region: Regional Studies of Russia, Eastern Europe, and Central Asia Volume 3 ; 3 >
+    au < released ; 2013 ; Region: Regional Studies of Russia, Eastern Europe, and Central Asia Volume 2 ; 2 >
+    au < doNotProcess ; 2014 ; Region: Regional Studies of Russia, Eastern Europe, and Central Asia Volume 3 ; 3 >
 
   }
 
@@ -111,8 +111,8 @@
     au < released ; 2007 ; Serbian Studies: Journal of the North American Society for Serbian Studies Volume 21 ; 21 >
     au < released ; 2008 ; Serbian Studies: Journal of the North American Society for Serbian Studies Volume 22 ; 22 >
     au < released ; 2009 ; Serbian Studies: Journal of the North American Society for Serbian Studies Volume 23 ; 23 >
-    au < exists ; 2010 ; Serbian Studies: Journal of the North American Society for Serbian Studies Volume 24 ; 24 >
-    au < exists ; 2011 ; Serbian Studies: Journal of the North American Society for Serbian Studies Volume 25 ; 25 >
+    au < released ; 2010 ; Serbian Studies: Journal of the North American Society for Serbian Studies Volume 24 ; 24 >
+    au < released ; 2011 ; Serbian Studies: Journal of the North American Society for Serbian Studies Volume 25 ; 25 >
 
 
   }

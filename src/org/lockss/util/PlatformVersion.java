@@ -1,5 +1,5 @@
 /*
- * $Id: PlatformVersion.java,v 1.4 2005-10-06 08:21:55 tlipkis Exp $
+ * $Id: PlatformVersion.java,v 1.4.146.1 2014-07-18 15:59:07 wkwilson Exp $
  */
 
 /*
@@ -111,6 +111,11 @@ public class PlatformVersion implements Version {
   /** Return the platform name */
   public String getName() {
     return m_name;
+  }
+
+  /** Return the platform version */
+  public String getVersion() {
+    return m_ver;
   }
 
   /** Return the optional suffix */

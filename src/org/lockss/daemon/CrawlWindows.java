@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlWindows.java,v 1.14 2013-04-01 00:43:11 tlipkis Exp $
+ * $Id: CrawlWindows.java,v 1.14.14.1 2014-07-18 15:59:08 wkwilson Exp $
  */
 
 /*
@@ -303,8 +303,8 @@ public class CrawlWindows {
    * numerically; 1=Sunday, 7=Saturday).
    * <br><br>This window is open every night from 6:00PM until 8:00AM PST:<pre>
    *  &lt;org.lockss.daemon.CrawlWindows-Daily&gt;
-   *    &lt;from&gt;8:00&lt;/from&gt;
-   *    &lt;to&gt;22:00&lt;/to&gt;
+   *    &lt;from&gt;18:00&lt;/from&gt;
+   *    &lt;to&gt;8:00&lt;/to&gt;
    *    &lt;timeZoneId&gt;America/Los_Angeles&lt;/timeZoneId&gt;
    *  &lt;/org.lockss.daemon.CrawlWindows-Daily&gt;
    * </pre>

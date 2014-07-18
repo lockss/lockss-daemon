@@ -9,6 +9,22 @@
 
   {
     title <
+      name = Bulletin of Medieval Canon Law ;
+      issn = 0146-2989 ;
+      eissn = 2372-2509 ;
+      issnl = 0146-2989
+    >
+
+    param[journal_dir] = bulletin_of_medieval_canon_law
+    attr[journal_id] = bmc
+
+    au < ready ; 2013 ; Bulletin of Medieval Canon Law Volume 30 ; 30 >
+    au < expected ; 2014 ; Bulletin of Medieval Canon Law Volume 31 ; 31 >
+
+  }
+  
+  {
+    title <
       name = The Catholic Historical Review ;
       issn = 0008-8080 ;
       eissn = 1534-0708 ;
@@ -32,7 +48,7 @@
     au < released ; 2011 ; The Catholic Historical Review Volume 97 ; 97 >
     au < released ; 2012 ; The Catholic Historical Review Volume 98 ; 98 >
     au < released ; 2013 ; The Catholic Historical Review Volume 99 ; 99 >
-    au < manifest ; 2014 ; The Catholic Historical Review Volume 100 ; 100 >
+    au < doNotProcess ; 2014 ; The Catholic Historical Review Volume 100 ; 100 >
 
   }
 
@@ -47,12 +63,14 @@
     param[journal_dir] = us_catholic_historian
     attr[journal_id] = cht
 
+    au < released ; 2007 ; U.S. Catholic Historian Volume 25 ; 25 >
+    au < released ; 2008 ; U.S. Catholic Historian Volume 26 ; 26 >
     au < released ; 2009 ; U.S. Catholic Historian Volume 27 ; 27 >
     au < released ; 2010 ; U.S. Catholic Historian Volume 28 ; 28 >
     au < released ; 2011 ; U.S. Catholic Historian Volume 29 ; 29 >
     au < released ; 2012 ; U.S. Catholic Historian Volume 30 ; 30 >
     au < released ; 2013 ; U.S. Catholic Historian Volume 31 ; 31 >
-    au < expected ; 2014 ; U.S. Catholic Historian Volume 32 ; 32 >
+    au < doNotProcess ; 2014 ; U.S. Catholic Historian Volume 32 ; 32 >
 
   }
 
@@ -68,7 +86,7 @@
     
     au < released ; 2012 ; The Jurist: Studies in Church Law and Ministry Volume 72 ; 72 >
     au < released ; 2013 ; The Jurist: Studies in Church Law and Ministry Volume 73 ; 73 >
-    au < expected ; 2014 ; The Jurist: Studies in Church Law and Ministry Volume 74 ; 74 >
+    au < doNotProcess ; 2014 ; The Jurist: Studies in Church Law and Ministry Volume 74 ; 74 >
 
   }
 

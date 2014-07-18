@@ -158,13 +158,14 @@ while (my $line = <>) {
     if ($resp->is_success) {
       my $man_contents = $resp->content;
       if (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) || ($man_contents =~ m/$oa_tag/))) {
-    if ($man_contents =~ m/<title>Project MUSE -\s*(.*)<\/title>/si) {
-        $vol_title = $1;
-        $vol_title =~ s/\s*\n\s*/ /g;
-        if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
-      $vol_title = "\"" . $vol_title . "\"";
-        }
-    } 
+        if ($man_contents =~ m/<h1>(.*)<\/h1>/si) {
+          $vol_title = $1;
+          if ($man_contents =~ m/<h2>(.*)<\/h2>/si) {
+            $vol_title = $vol_title . " " . $1;
+          }
+          $vol_title =~ s/\s*\n\s*/ /g;
+          $vol_title =~ s/,//;
+        } 
     $result = "Manifest"
       } else {
     $result = "--"
@@ -352,6 +353,8 @@ while (my $line = <>) {
            ($plugin eq "SiamPlugin") || 
            ($plugin eq "AIAAPlugin") || 
            ($plugin eq "AMetSocPlugin") || 
+           ($plugin eq "ManeyAtyponPlugin") || 
+           ($plugin eq "JstorPlugin") || 
            ($plugin eq "FutureSciencePlugin")) {
         $url = sprintf("%slockss/%s/%s/index.html", 
             $param{base_url}, $param{journal_id}, $param{volume_name});
@@ -360,8 +363,9 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) && ($man_contents =~ m/$param{journal_id}\/$param{volume_name}/))) {
-    if ($man_contents =~ m/<title>(.*) LOCKSS Manifest Page<\/title>/si) {
+      #JSTOR plugin links are like ?journalCode=chaucerrev&amp;issue=2&amp;volume=44
+      if (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) && (($man_contents =~ m/$param{journal_id}\/$param{volume_name}/) || ($man_contents =~ m/$param{journal_id}\S*volume=$param{volume_name}/)))) {
+    if ($man_contents =~ m/<title>\s*(.*) LOCKSS Manifest Page\s*<\/title>/si) {
         $vol_title = $1;
         $vol_title =~ s/\s*\n\s*/ /g;
         $vol_title =~ s/2013/Volume $param{volume_name}/g;
@@ -385,6 +389,8 @@ while (my $line = <>) {
            ($plugin eq "ClockssSiamPlugin") || 
            ($plugin eq "ClockssAmmonsScientificPlugin") || 
            ($plugin eq "ClockssAMetSocPlugin") || 
+           ($plugin eq "ClockssManeyAtyponPlugin") || 
+           ($plugin eq "ClockssJstorPlugin") || 
            ($plugin eq "ClockssFutureSciencePlugin")) {
         $url = sprintf("%sclockss/%s/%s/index.html", 
             $param{base_url}, $param{journal_id}, $param{volume_name});
@@ -393,8 +399,9 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && (($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/$param{journal_id}\/$param{volume_name}/))) {
-    if ($man_contents =~ m/<title>(.*) CLOCKSS Manifest Page<\/title>/si) {
+      #JSTOR plugin links are like ?journalCode=chaucerrev&amp;issue=2&amp;volume=44
+      if (defined($man_contents) && (($man_contents =~ m/$clockss_tag/) && (($man_contents =~ m/$param{journal_id}\/$param{volume_name}/) || ($man_contents =~ m/$param{journal_id}\S*volume=$param{volume_name}/)))) {
+    if ($man_contents =~ m/<title>\s*(.*) CLOCKSS Manifest Page\s*<\/title>/si) {
         $vol_title = $1;
         $vol_title =~ s/\s*\n\s*/ /g;
         $vol_title =~ s/2013/Volume $param{volume_name}/g;

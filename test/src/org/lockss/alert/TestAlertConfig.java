@@ -1,5 +1,5 @@
 /*
- * $Id: TestAlertConfig.java,v 1.4 2010-02-08 23:00:52 tlipkis Exp $
+ * $Id: TestAlertConfig.java,v 1.4.68.1 2014-07-18 15:49:52 wkwilson Exp $
  */
 
 /*
@@ -111,8 +111,16 @@ public class TestAlertConfig extends LockssTestCase {
 							   "devAlert2")),
 		      new AlertActionMail("devmail"));
 
+    List pats =
+      ListUtil.list(AlertPatterns.MATCHES(Alert.ATTR_TEXT, "foo[123]pat"),
+		    AlertPatterns.MATCHES(Alert.ATTR_TEXT, "foo[123]pat"));
+    AlertFilter matchFilt =
+      new AlertFilter(AlertPatterns.And(pats),
+		      new AlertActionMail("regexpmail"));
+
     AlertConfig conf =
-      new AlertConfig(ListUtil.list(passwdFilt, crawlExclFilt, devFilt));
+      new AlertConfig(ListUtil.list(passwdFilt, crawlExclFilt, devFilt,
+				    matchFilt));
 
     File file = FileTestUtil.tempFile("alertconf", ".xml");
     File file2 = FileTestUtil.tempFile("alertconf", ".asc");
@@ -121,8 +129,19 @@ public class TestAlertConfig extends LockssTestCase {
     Reader rdr =
       new org.lockss.filter.WhiteSpaceFilter(new BufferedReader(new FileReader(file)));
     String str = StringUtil.fromReader(rdr);
+    AlertConfig lconf = mgr.loadAlertConfig(str);
+    assertEquals(conf, lconf);
+
     String str2 = org.apache.commons.lang.StringEscapeUtils.escapeXml(str);
     FileTestUtil.writeFile(file2, str2);
-  }
 
+    // Ensure that the MATCHES predicate is processed correction when
+    // deserialized.
+    Alert alert = Alert.auAlert(Alert.CRAWL_FINISHED, new MockArchivalUnit());
+    alert.setAttribute(Alert.ATTR_TEXT, "foo2pat");
+    Collection foo = mgr.findMatchingActions(alert, lconf.getFilters());
+    assertEquals("Didn't find MATCHES pattern. ", 1, foo.size());
+    AlertAction act = (AlertAction)CollectionUtil.getAnElement(foo);
+    assertEquals("regexpmail", ((AlertActionMail)act).getRecipients(alert));
+  }
 }

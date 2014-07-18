@@ -1,5 +1,5 @@
 /*
- * $Id: TestFollowLinkCrawler.java,v 1.42 2012-07-09 07:50:14 tlipkis Exp $
+ * $Id: TestFollowLinkCrawler.java,v 1.42.38.1 2014-07-18 15:48:31 wkwilson Exp $
  */
 
 /*
@@ -50,6 +50,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 
   private MockLockssDaemon theDaemon;
   private CrawlManagerImpl crawlMgr;
+  private MockPlugin plug;
   private MyMockArchivalUnit mau = null;
   private MockCachedUrlSet mcus = null;
   private CrawlSpec spec = null;
@@ -77,7 +78,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 
     theDaemon.getAlertManager();
 
-    MockPlugin plug = new MockPlugin(getMockLockssDaemon());
+    plug = new MockPlugin(getMockLockssDaemon());
     plug.initPlugin(getMockLockssDaemon());
     mau = new MyMockArchivalUnit();
     mau.setPlugin(plug);
@@ -277,6 +278,63 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 
     Set expected = SetUtil.set(startUrl);
     assertEquals(expected, cus.getCachedUrls());
+  }
+
+  public void testRefetchEmptyFileFalse() {
+    String url1="http://www.example.com/blah.html";
+    String url2="http://www.example.com/halb.html";
+
+    crawler.setUrlsToFollow(ListUtil.list(url1, url2));
+
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    mau.addUrl(startUrl, true, true);
+    mau.addUrl(url1, "non-empty");
+    mau.addUrl(url2, true, true);
+
+    assertTrue(crawler.doCrawl());
+    assertEquals(SetUtil.set(startUrl), cus.getCachedUrls());
+  }
+
+  public void testRefetchEmptyFileTrue() {
+    ConfigurationUtil.addFromArgs(FollowLinkCrawler.PARAM_REFETCH_EMPTY_FILES,
+				  "true");
+    String url1="http://www.example.com/blah.html";
+    String url2="http://www.example.com/halb.html";
+
+    crawler.setUrlsToFollow(ListUtil.list(url1, url2));
+
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    mau.addUrl(startUrl, true, true);
+    mau.addUrl(url1, "non-empty");
+    mau.addUrl(url2, true, true);
+    MyMockUrlCacher mmuc = (MyMockUrlCacher)mau.makeUrlCacher(url2);
+    mmuc.setInfoException(new CacheException.WarningOnly("vacuum"));
+
+    assertTrue(crawler.doCrawl());
+    assertEquals(SetUtil.set(startUrl, url2), cus.getCachedUrls());
+    CrawlerStatus cs = crawler.getStatus();
+    assertEquals("vacuum", cs.getErrorForUrl(url2));
+  }
+
+  public void testRefetchEmptyFileTruePluginIgnores() {
+    ConfigurationUtil.addFromArgs(FollowLinkCrawler.PARAM_REFETCH_EMPTY_FILES,
+				  "true");
+    HttpResultMap hResultMap = (HttpResultMap)plug.getCacheResultMap();
+    hResultMap.storeMapEntry(ContentValidationException.EmptyFile.class,
+			     CacheSuccess.class);
+
+    String url1="http://www.example.com/blah.html";
+    String url2="http://www.example.com/halb.html";
+
+    crawler.setUrlsToFollow(ListUtil.list(url1, url2));
+
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    mau.addUrl(startUrl, true, true);
+    mau.addUrl(url1, "non-empty");
+    mau.addUrl(url2, true, true);
+
+    assertTrue(crawler.doCrawl());
+    assertEquals(SetUtil.set(startUrl), cus.getCachedUrls());
   }
 
   public void testHandlesRedirects() {

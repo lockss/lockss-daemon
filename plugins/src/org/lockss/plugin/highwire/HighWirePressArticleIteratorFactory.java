@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressArticleIteratorFactory.java,v 1.16 2014-01-08 20:23:46 etenbrink Exp $
+ * $Id: HighWirePressArticleIteratorFactory.java,v 1.16.4.1 2014-07-18 15:54:39 wkwilson Exp $
  */
 
 /*
@@ -75,8 +75,8 @@ public class HighWirePressArticleIteratorFactory
       "/cgi/reprint/([^/]+;)?([^/]+/[^/]+/[^/]+)[.]pdf$",
       Pattern.CASE_INSENSITIVE);
   
-  protected static Pattern PDF_LANDING_PATTERN = Pattern.compile(
-      "/cgi/(?:reprintframed|framedreprint|reprint)/([^/]+;)?([^/]+/[^/]+/[^/]+)$",
+  protected static final Pattern ABSTRACT_PATTERN = Pattern.compile(
+      "/cgi/content/(?:abstract|summary)/([^/]+;)?([^/]+/[^/]+/[^/]+)$",
       Pattern.CASE_INSENSITIVE);
   
   // how to change from one form (aspect) of article to another
@@ -84,12 +84,12 @@ public class HighWirePressArticleIteratorFactory
   protected static final String HTML_REPLACEMENT2 = "/cgi/content/full/$1$2";
   protected static final String PDF_REPLACEMENT1 = "/cgi/reprint/$2.pdf";
   protected static final String PDF_REPLACEMENT2 = "/cgi/reprint/$1$2.pdf";
-  protected static final String PDF_LANDING_REPLACEMENT1 = "/cgi/reprintframed/$2";
-  protected static final String PDF_LANDING_REPLACEMENT2 = "/cgi/reprintframed/$1$2";
-  protected static final String PDF_LANDING_REPLACEMENT3 = "/cgi/framedreprint/$2";
-  protected static final String PDF_LANDING_REPLACEMENT4 = "/cgi/framedreprint/$1$2";
-  protected static final String PDF_LANDING_REPLACEMENT5 = "/cgi/reprint/$2";
-  protected static final String PDF_LANDING_REPLACEMENT6 = "/cgi/reprint/$1$2";
+  protected static final String PDF_LANDING_REPLACEMENT1 = "/cgi/reprint/$2";
+  protected static final String PDF_LANDING_REPLACEMENT2 = "/cgi/reprint/$1$2";
+  protected static final String PDF_LANDING_REPLACEMENT3 = "/cgi/reprintframed/$2";
+  protected static final String PDF_LANDING_REPLACEMENT4 = "/cgi/reprintframed/$1$2";
+  protected static final String PDF_LANDING_REPLACEMENT5 = "/cgi/framedreprint/$2";
+  protected static final String PDF_LANDING_REPLACEMENT6 = "/cgi/framedreprint/$1$2";
   protected static final String ABSTRACT_REPLACEMENT1 = "/cgi/content/abstract/$2";
   protected static final String ABSTRACT_REPLACEMENT2 = "/cgi/content/abstract/$1$2";
   protected static final String SUMMARY_REPLACEMENT = "/cgi/content/summary/$2";
@@ -130,8 +130,13 @@ public class HighWirePressArticleIteratorFactory
         PDF_REPLACEMENT1, PDF_REPLACEMENT2),
         ArticleFiles.ROLE_FULL_TEXT_PDF);
     
+    // set up abstract/summary to be an aspect
+    builder.addAspect(ABSTRACT_PATTERN, Arrays.asList(
+        ABSTRACT_REPLACEMENT1, ABSTRACT_REPLACEMENT2, SUMMARY_REPLACEMENT),
+        ArticleFiles.ROLE_ABSTRACT);
+    
     // set up pdf landing page to be an aspect
-    builder.addAspect(PDF_LANDING_PATTERN, Arrays.asList(
+    builder.addAspect(Arrays.asList(
         PDF_LANDING_REPLACEMENT1,
         PDF_LANDING_REPLACEMENT2,
         PDF_LANDING_REPLACEMENT3,
@@ -139,11 +144,6 @@ public class HighWirePressArticleIteratorFactory
         PDF_LANDING_REPLACEMENT5,
         PDF_LANDING_REPLACEMENT6),
         ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE);
-    
-    // set up abstract/summary to be an aspect
-    builder.addAspect(Arrays.asList(
-        ABSTRACT_REPLACEMENT1, ABSTRACT_REPLACEMENT2, SUMMARY_REPLACEMENT),
-        ArticleFiles.ROLE_ABSTRACT);
     
     // set up references to be an aspect
     builder.addAspect(
@@ -160,8 +160,8 @@ public class HighWirePressArticleIteratorFactory
     // First one that exists will get the job
     builder.setFullTextFromRoles(Arrays.asList(
         ArticleFiles.ROLE_FULL_TEXT_HTML,
-        ArticleFiles.ROLE_FULL_TEXT_PDF,
         ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE,
+        ArticleFiles.ROLE_FULL_TEXT_PDF,
         ArticleFiles.ROLE_ABSTRACT));
     
     return builder.getSubTreeArticleIterator();

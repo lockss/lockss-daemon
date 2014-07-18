@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.175.2.1 2014-05-05 17:32:33 wkwilson Exp $
+ * $Id: V3Poller.java,v 1.175.2.2 2014-07-18 15:59:09 wkwilson Exp $
  */
 
 /*
@@ -563,6 +563,7 @@ public class V3Poller extends BasePoll {
 
   private long tallyEnd;
   private LocalHashResult lhr = null;
+  private SubstanceChecker subChecker;
 
 
   // Probability of repairing from another cache.  A number between
@@ -781,7 +782,7 @@ public class V3Poller extends BasePoll {
     // Poll is PoR unless conditions fulfilled
     PollVariant ret = PollVariant.PoR;
     ArchivalUnit au = spec.getCachedUrlSet().getArchivalUnit();
-    AuState aus = AuUtil.getAuState(au);
+    AuState aus = getAuState(au);
     long lastCrawlTime = aus.getLastContentChange();
     int lastCrawlResult = aus.getLastCrawlResult();
     int lastCrawlUrls = aus.getCrawlUrls().size();
@@ -1063,7 +1064,7 @@ public class V3Poller extends BasePoll {
 
       // XXX Should be in PollManager
       if (!resumedPoll) {
-	AuState auState = theDaemon.getNodeManager(getAu()).getAuState();
+	AuState auState = getAuState();
 	auState.pollStarted();
       }
     } else {
@@ -1133,7 +1134,7 @@ public class V3Poller extends BasePoll {
              V3Poller.POLLER_STATUS_STRINGS[status]);
     setStatus(status);
     pollManager.countPollEndEvent(status);
-    AuState auState = theDaemon.getNodeManager(getAu()).getAuState();
+    AuState auState = getAuState();
     auState.pollFinished(status, getPollVariant());
 
     raisePollEndAlert();
@@ -1513,22 +1514,22 @@ public class V3Poller extends BasePoll {
    * Add any symmetric hash values to the corresponding VoteBlock.
    * See V3Voter.blockHashComplete.
    */
-  private void recordSymmetricHashes(HashBlock hashBlock) {
+  void recordSymmetricHashes(HashBlock hashBlock) {
     // XXX DSHR it would be good if this were a utility. Perhaps
     // XXX DSHR pass in the VoteBlocks object to which the VoteBlock
     // XXX DSHR should be added and the range of indices in the HashBlock
     // Add each hash block version to this vote block.
     if (symmetricPollSize() > 0) {
-      Iterator hashVersionIter = hashBlock.versionIterator();
-      while(hashVersionIter.hasNext()) {
-	HashBlock.Version ver = (HashBlock.Version)hashVersionIter.next();
-	HashResult plainDigest = getPlainHash(ver);
-	for (int i = 0; i < symmetricPollSize(); i++) {
-	  HashResult symmetricDigest = getSymmetricHash(ver, i);
+      for (int partIx = 0; partIx < symmetricPollSize(); partIx++) {
+	VoteBlock vb = new VoteBlock(hashBlock.getUrl());
+	for (Iterator hashVersionIter = hashBlock.versionIterator();
+	     hashVersionIter.hasNext() ; ) {
+	  HashBlock.Version ver = (HashBlock.Version)hashVersionIter.next();
+	  HashResult plainDigest = getPlainHash(ver);
+	  HashResult symmetricDigest = getSymmetricHash(ver, partIx);
 	  if (symmetricDigest == null) {
 	    throw new ShouldNotHappenException("null hash for symmetric poll");
 	  }
-	  VoteBlock vb = new VoteBlock(hashBlock.getUrl());
 	  vb.addVersion(ver.getFilteredOffset(),
 			ver.getFilteredLength(),
 			ver.getUnfilteredOffset(),
@@ -1536,20 +1537,20 @@ public class V3Poller extends BasePoll {
 			plainDigest.getBytes(),
 			symmetricDigest.getBytes(),
 			ver.getHashError() != null);
-	  // Find this voter's hash block container
-	  ParticipantUserData ud = symmetricParticipants.get(i);
-	  VoteBlocks blocks = ud.getSymmetricVoteBlocks();
-	  try {
-	    blocks.addVoteBlock(vb);
-	  } catch (IOException ex) {
-	    log.error("IO Exception trying to add vote block " +
-		      vb.getUrl() + " in poll " + getKey(), ex);
-	    if (++blockErrorCount > maxBlockErrorCount) {
-	      log.critical("Too many errors; aborting poll " + getKey());
-	      // XXX BH No idea which voters have caused the errors;
-	      // abort the whole poll.
-	      abortPoll(); // XXX DSHR not a good response - abort voter
-	    }
+	}
+	// Find this voter's hash block container
+	ParticipantUserData ud = symmetricParticipants.get(partIx);
+	VoteBlocks blocks = ud.getSymmetricVoteBlocks();
+	try {
+	  blocks.addVoteBlock(vb);
+	} catch (IOException ex) {
+	  log.error("IO Exception trying to add vote block " +
+		    vb.getUrl() + " in poll " + getKey(), ex);
+	  if (++blockErrorCount > maxBlockErrorCount) {
+	    log.critical("Too many errors; aborting poll " + getKey());
+	    // XXX BH No idea which voters have caused the errors;
+	    // abort the whole poll.
+	    abortPoll(); // XXX DSHR not a good response - abort voter
 	  }
 	}
       }
@@ -2002,7 +2003,30 @@ public class V3Poller extends BasePoll {
 				      DEFAULT_V3_EXCLUDE_SUSPECT_VERSIONS)) {
       hasher.setExcludeSuspectVersions(true);
     }
+    if (subChecker != null) {
+      hasher.setSubstanceChecker(subChecker);
+    }
     return hasher;
+  }
+
+  SubstanceChecker makeSubstanceChecker() {
+    // Set up substance checker
+    SubstanceChecker res = new SubstanceChecker(getAu());
+    if (res.isEnabledFor(SubstanceChecker.CONTEXT_POLL)) {
+      // check only if feature version has changed
+      if (AuUtil.isCurrentFeatureVersion(getAu(), Plugin.Feature.Substance)) {
+	return null;
+      } else {
+	log.debug2("Enabling substance checking");
+// 	SubstanceChecker.State state = pollerState.getSubstanceCheckerState();
+// 	if (state != null) {
+// 	  res.setHasSubstance(state);
+// 	}
+      }
+      return res;
+    } else {
+      return null;
+    }
   }
 
   /**
@@ -2457,7 +2481,7 @@ public class V3Poller extends BasePoll {
       stats.setLastPollTime(auId, TimeBase.nowMs());
       stats.incrementNumPolls(auId);
       // Update the AU's agreement if PoR poll
-      AuState auState = theDaemon.getNodeManager(getAu()).getAuState();
+      AuState auState = getAuState();
       if (getPollVariant() == PollVariant.PoR) {
 	auState.setV3Agreement(getPercentAgreement());
       }
@@ -2682,6 +2706,9 @@ public class V3Poller extends BasePoll {
   private void checkpointPoll() {
     if (serializer != null) {
       try {
+// 	if (subChecker != null) {
+// 	  pollerState.setSubstanceCheckerState(subChecker.hasSubstance());
+// 	}
         serializer.savePollerState(pollerState);
         bytesHashedSinceLastCheckpoint = 0;
       } catch (PollSerializerException ex) {
@@ -3249,6 +3276,8 @@ public class V3Poller extends BasePoll {
       CachedUrlSet cus = pollerState.getCachedUrlSet();
       // At this point theParticipants is fixed, and should not be changed.
       lockParticipants();
+      // enable substance checker if appropriate
+      subChecker = makeSubstanceChecker();
       if (!scheduleHash(cus,
 			false,
 			Deadline.at(tallyEnd),
@@ -3334,8 +3363,13 @@ public class V3Poller extends BasePoll {
       if (e != null) {
         log.warning("Poll hash failed", e);
 	// CR: too extreme.  what if pending repairs?
-        stopPoll(POLLER_STATUS_ERROR);
+        if (e instanceof SchedService.Timeout) {
+	  stopPoll(POLLER_STATUS_EXPIRED);
+	} else {
+	  stopPoll(POLLER_STATUS_ERROR);
+	}
       } else {
+	updateSubstance(subChecker);
 	if (hasher instanceof BlockHasher) {
 	  lhr = ((BlockHasher)hasher).getLocalHashResult();
 	}
@@ -3344,6 +3378,33 @@ public class V3Poller extends BasePoll {
 	} else {
 	  voteComplete();
 	}
+      }
+    }
+  }
+
+  void updateSubstance(SubstanceChecker sc) {
+    if (sc != null) {
+      AuState aus = AuUtil.getAuState(getAu());
+      SubstanceChecker.State newSub = sc.hasSubstance();
+      SubstanceChecker.State oldSub = aus.getSubstanceState();
+      if (newSub != oldSub) {
+	log.debug2("Change substance state: " + oldSub + " => " + newSub);
+	aus.setSubstanceState(newSub);
+	aus.storeAuState();
+      }
+      switch (sc.hasSubstance()) {
+      case No:
+	if (oldSub != SubstanceChecker.State.No) {
+	  // Alert only on transition to no substance from other than no
+	  // substance.
+	  String msg =
+	    "Poll found no files containing substantial content.";
+	  pollManager.raiseAlert(Alert.auAlert(Alert.CRAWL_NO_SUBSTANCE,
+					       getAu()),
+				 msg);
+	}
+	log.warning("No files containing substantial content found during poll hash");
+	break;
       }
     }
   }
@@ -3398,6 +3459,14 @@ public class V3Poller extends BasePoll {
       return serializer.pollDir;
     }
     return null;
+  }
+
+  public AuState getAuState() {
+    return getAuState(getAu());
+  }
+
+  public AuState getAuState(ArchivalUnit au) {
+    return AuUtil.getAuState(au);
   }
 
   public boolean isEnableHashStats() {

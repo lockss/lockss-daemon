@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.65.6.1 2014-05-05 17:32:36 wkwilson Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.65.6.2 2014-07-18 15:49:51 wkwilson Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ import org.lockss.util.*;
 import org.lockss.util.Constants.RegexpContext;
 import org.lockss.util.urlconn.*;
 import org.lockss.crawler.*;
+import org.lockss.oai.*;
 import org.lockss.rewriter.*;
 import org.lockss.extractor.*;
 
@@ -828,7 +829,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   public void testGetCrawlRuleThrowsOnBadClass() throws LockssRegexpException {
     setupAu();
     defMap.putString(DefinableArchivalUnit.KEY_AU_CRAWL_RULES,
-		  "org.lockss.bogus.FakeClass");
+		  "org.lockss.bogus.ExpectedClassNotFound");
 
     try {
       CrawlRule rules = cau.makeRules();
@@ -1310,6 +1311,10 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 		getHttpResultMap(defplug).mapException(null, null,
 						       new IOException("foo"),
 						       null));
+    assertClass(CacheException.NoRetryHostException.class,
+		getHttpResultMap(defplug).mapException(null, null,
+						       new ContentValidationException.EmptyFile("empty"),
+						       null));
     CacheException ex =
       getHttpResultMap(defplug).mapException(null, null, 522, null);
     assertClass(CacheException.RetryDeadLinkException.class, ex);
@@ -1458,6 +1463,49 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertEquals(ListUtil.list(nonSubstPat),
 		 getPatterns(au4.makeNonSubstanceUrlPatterns()));
 
+  }
+
+  public void testOaiDefaultDC() throws Exception {
+    MyPluginManager pmgr = new MyPluginManager();
+    getMockLockssDaemon().setPluginManager(pmgr);
+    pmgr.initService(getMockLockssDaemon());
+
+    // Load an OAI plugin definition
+    String pname = "org.lockss.plugin.definable.OaiTestPlugin1";
+    String key = PluginManager.pluginKeyFromId(pname);
+    assertTrue("Plugin was not successfully loaded",
+	       pmgr.ensurePluginLoaded(key));
+    Plugin plug = pmgr.getPlugin(key);
+    assertTrue(plug.toString() + " not a DefinablePlugin",
+	       plug instanceof DefinablePlugin);
+    MyDefinablePlugin defplug = (MyDefinablePlugin)plug;
+
+    // Configure and create an AU
+    Properties p = new Properties();
+    p.put("base_url", "http://base.foo/base_path/");
+    p.put("resolver_url", "http://resolv.er/path/");
+    p.put("oai_request_url", "http://oai.meta/path/");
+    p.put("journal_code", "J47");
+    p.put("year", "1984");
+    p.put("issue_set", "1,2,3,3a");
+    p.put("num_issue_range", "3-7");
+    p.put("oai_spec", "http://oai.spec/specspec");
+    Configuration auConfig = ConfigManager.fromProperties(p);
+    DefinableArchivalUnit au = (DefinableArchivalUnit)plug.createAu(auConfig);
+
+    assertSame(plug, au.getPlugin());
+
+    assertTrue(au.getCrawlSpec() instanceof OaiCrawlSpec);
+    OaiCrawlSpec cspec = (OaiCrawlSpec)au.getCrawlSpec();
+    OaiRequestData reqdata = cspec.getOaiRequestData();
+    assertEquals("http://oai.meta/path/", reqdata.getOaiRequestHandlerUrl());
+    assertEquals("http://purl.org/dc/elements/1.1/", reqdata.getMetadataNamespaceUrl());
+    assertEquals("identifier", reqdata.getUrlContainerTagName());
+    assertEquals("http://oai.spec/specspec", reqdata.getAuSetSpec());
+    assertEquals("oai_dc", reqdata.getMetadataPrefix());
+
+    // XXX more tests when OaiRequestData and handler creation driven by
+    // plugin.
   }
 
   HttpResultMap getHttpResultMap(DefinablePlugin plugin) {

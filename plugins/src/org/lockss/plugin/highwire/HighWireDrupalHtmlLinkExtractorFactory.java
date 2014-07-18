@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireDrupalHtmlLinkExtractorFactory.java,v 1.1.2.1 2014-05-05 17:32:32 wkwilson Exp $
+ * $Id: HighWireDrupalHtmlLinkExtractorFactory.java,v 1.1.2.2 2014-07-18 15:54:38 wkwilson Exp $
  */
 
 /*

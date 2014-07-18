@@ -1,5 +1,5 @@
 /*
- * $Id: TestHashResult.java,v 1.9 2013-07-16 04:58:31 tlipkis Exp $
+ * $Id: TestHashResult.java,v 1.9.8.1 2014-07-18 15:49:54 wkwilson Exp $
  */
 
 /*
@@ -146,7 +146,7 @@ public class TestHashResult extends LockssTestCase {
 
   // Return the serialized representation of the object
   String ser(LockssSerializable o) throws Exception {
-    File tf = File.createTempFile("ser", ".xml");
+    File tf = getTempFile("ser", ".xml");
     new XStreamSerializer().serialize(tf, o);
     return StringUtil.fromFile(tf);
   }

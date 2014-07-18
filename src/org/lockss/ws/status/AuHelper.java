@@ -1,5 +1,5 @@
 /*
- * $Id: AuHelper.java,v 1.1 2014-04-18 19:35:03 fergaloy-sf Exp $
+ * $Id: AuHelper.java,v 1.1.2.1 2014-07-18 15:59:01 wkwilson Exp $
  */
 
 /*
@@ -29,11 +29,6 @@
  in this Software without prior written authorization from Stanford University.
 
  */
-
-/**
- * Helper of the DaemonStatus web service implementation of Archival Unit
- * queries.
- */
 package org.lockss.ws.status;
 
 import java.text.DecimalFormat;
@@ -62,17 +57,21 @@ import org.lockss.ws.entities.AuWsResult;
 import org.lockss.ws.entities.LockssWebServicesFault;
 import org.lockss.ws.entities.LockssWebServicesFaultInfo;
 
+/**
+ * Helper of the DaemonStatus web service implementation of Archival Unit
+ * queries.
+ */
 public class AuHelper {
   /**
    * The fully-qualified name of the class of the objects used as source in a
    * query.
    */
-  static String SOURCE_FQCN = "org.lockss.ws.status.AuWsSource";
+  static String SOURCE_FQCN = AuWsSource.class.getCanonicalName();
 
   /**
    * The fully-qualified name of the class of the objects returned by the query.
    */
-  static String RESULT_FQCN = "org.lockss.ws.entities.AuWsResult";
+  static String RESULT_FQCN = AuWsResult.class.getCanonicalName();
 
   //
   // Property names used in Archival Unit queries.
@@ -81,11 +80,14 @@ public class AuHelper {
   static String NAME = "name";
   static String VOLUME = "volume";
   static String PLUGIN_NAME = "pluginName";
+  static String TDB_YEAR = "tdbYear";
   static String ACCESS_TYPE = "accessType";
+  static String CONTENT_SIZE = "contentSize";
+  static String DISK_USAGE = "diskUsage";
   static String REPOSITORY_PATH = "repositoryPath";
   static String RECENT_POLL_AGREEMENT = "recentPollAgreement";
   static String PUBLISHING_PLATFORM = "publishingPlatform";
-  static String PUBLISHER = "publisher";
+  static String TDB_PUBLISHER = "tdbPublisher";
   static String AVAILABLE_FROM_PUBLISHER = "availableFromPublisher";
   static String SUBSTANCE_STATE = "substanceState";
   static String CREATION_TIME = "creationTime";
@@ -105,6 +107,7 @@ public class AuHelper {
   static String NEW_CONTENT_CRAWL_URLS = "newContentCrawlUrls";
   static String URL_STEMS = "urlStems";
   static String IS_BULK_CONTENT = "isBulkContent";
+  static String PEER_AGREEMENTS = "peerAgreements";
 
   /**
    * All the property names used in Archival Unit queries.
@@ -116,11 +119,14 @@ public class AuHelper {
       add(NAME);
       add(VOLUME);
       add(PLUGIN_NAME);
+      add(TDB_YEAR);
       add(ACCESS_TYPE);
+      add(CONTENT_SIZE);
+      add(DISK_USAGE);
       add(REPOSITORY_PATH);
       add(RECENT_POLL_AGREEMENT);
       add(PUBLISHING_PLATFORM);
-      add(PUBLISHER);
+      add(TDB_PUBLISHER);
       add(AVAILABLE_FROM_PUBLISHER);
       add(SUBSTANCE_STATE);
       add(CREATION_TIME);
@@ -140,6 +146,7 @@ public class AuHelper {
       add(NEW_CONTENT_CRAWL_URLS);
       add(URL_STEMS);
       add(IS_BULK_CONTENT);
+      add(PEER_AGREEMENTS);
     }
   };
 
@@ -328,7 +335,7 @@ public class AuHelper {
    * Provides the universe of Archival Unit-related query objects used as the
    * source for a query.
    * 
-   * @return a List<AuWsProxy> with the universe.
+   * @return a List<AuWsSource> with the universe.
    */
   List<AuWsSource> createUniverse() {
     final String DEBUG_HEADER = "createUniverse(): ";
@@ -443,6 +450,16 @@ public class AuHelper {
       builder.append("pluginName=").append(result.getPluginName());
     }
 
+    if (result.getTdbYear() != null) {
+      if (!isFirst) {
+	builder.append(", ");
+      } else {
+	isFirst = false;
+      }
+
+      builder.append("tdbYear=").append(result.getTdbYear());
+    }
+
     if (result.getAccessType() != null) {
       if (!isFirst) {
 	builder.append(", ");
@@ -451,6 +468,26 @@ public class AuHelper {
       }
 
       builder.append("accessType=").append(result.getAccessType());
+    }
+
+    if (result.getContentSize() != null) {
+      if (!isFirst) {
+	builder.append(", ");
+      } else {
+	isFirst = false;
+      }
+
+      builder.append("contentSize=").append(result.getContentSize());
+    }
+
+    if (result.getDiskUsage() != null) {
+      if (!isFirst) {
+	builder.append(", ");
+      } else {
+	isFirst = false;
+      }
+
+      builder.append("diskUsage=").append(result.getDiskUsage());
     }
 
     if (result.getRepositoryPath() != null) {
@@ -485,14 +522,14 @@ public class AuHelper {
       .append(result.getPublishingPlatform());
     }
 
-    if (result.getPublisher() != null) {
+    if (result.getTdbPublisher() != null) {
       if (!isFirst) {
 	builder.append(", ");
       } else {
 	isFirst = false;
       }
 
-      builder.append("publisher=").append(result.getPublisher());
+      builder.append("tdbPublisher=").append(result.getTdbPublisher());
     }
 
     if (result.getAvailableFromPublisher() != null) {
@@ -689,6 +726,16 @@ public class AuHelper {
       }
 
       builder.append("isBulkContent=").append(result.getIsBulkContent());
+    }
+
+    if (result.getPeerAgreements() != null) {
+      if (!isFirst) {
+	builder.append(", ");
+      } else {
+	isFirst = false;
+      }
+
+      builder.append("peerAgreements=").append(result.getPeerAgreements());
     }
 
     return builder.append("]").toString();

@@ -1,5 +1,5 @@
 /*
- * $Id: AmmonsScientificHtmlCrawlFilterFactory.java,v 1.1.2.1 2014-05-05 17:32:36 wkwilson Exp $
+ * $Id: AmmonsScientificHtmlCrawlFilterFactory.java,v 1.1.2.2 2014-07-18 15:54:41 wkwilson Exp $
  */
 
 /*

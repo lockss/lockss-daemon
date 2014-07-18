@@ -17,20 +17,19 @@
       comment[publisher] = Universidade Regional do Noroeste do Estado do Rio Grande do Sul
       param[base_url] = https://www.revistas.unijui.edu.br/
       param[journal_id] = desenvolvimentoemquestao
-      comment[notReady] = all AUs either can't fetch permissions page or tracks number of times article accessed
 
-      au < notReady ; 2003 ; 1 ; Desenvolvimento em Questão Volume 2003 ; 2003 >
-      au < notReady ; 2004 ; 2 ; Desenvolvimento em Questão Volume 2004 ; 2004 >
-      au < notReady ; 2005 ; 3 ; Desenvolvimento em Questão Volume 2005 ; 2005 >
-      au < notReady ; 2006 ; 4 ; Desenvolvimento em Questão Volume 2006 ; 2006 >
-      au < notReady ; 2007 ; 5 ; Desenvolvimento em Questão Volume 2007 ; 2007 >
-      au < notReady ; 2008 ; 6 ; Desenvolvimento em Questão Volume 2008 ; 2008 >
-      au < notReady ; 2009 ; 7 ; Desenvolvimento em Questão Volume 2009 ; 2009 >
-      au < notReady ; 2010 ; 8 ; Desenvolvimento em Questão Volume 2010 ; 2010 >
-      au < notReady ; 2011 ; 9 ; Desenvolvimento em Questão Volume 2011 ; 2011 >
-      au < notReady ; 2012 ; 10 ; Desenvolvimento em Questão Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 11 ; Desenvolvimento em Questão Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 12 ; Desenvolvimento em Questão Volume 2014 ; 2014 >
+      au < released ; 2003 ; 1 ; Desenvolvimento em Questão Volume 2003 ; 2003 >
+      au < released ; 2004 ; 2 ; Desenvolvimento em Questão Volume 2004 ; 2004 >
+      au < released ; 2005 ; 3 ; Desenvolvimento em Questão Volume 2005 ; 2005 >
+      au < released ; 2006 ; 4 ; Desenvolvimento em Questão Volume 2006 ; 2006 >
+      au < released ; 2007 ; 5 ; Desenvolvimento em Questão Volume 2007 ; 2007 >
+      au < released ; 2008 ; 6 ; Desenvolvimento em Questão Volume 2008 ; 2008 >
+      au < released ; 2009 ; 7 ; Desenvolvimento em Questão Volume 2009 ; 2009 >
+      au < released ; 2010 ; 8 ; Desenvolvimento em Questão Volume 2010 ; 2010 >
+      au < released ; 2011 ; 9 ; Desenvolvimento em Questão Volume 2011 ; 2011 >
+      au < released ; 2012 ; 10 ; Desenvolvimento em Questão Volume 2012 ; 2012 >
+      au < manifest ; 2013 ; 11 ; Desenvolvimento em Questão Volume 2013 ; 2013 >
+      au < manifest ; 2014 ; 12 ; Desenvolvimento em Questão Volume 2014 ; 2014 >
 
   }
 
@@ -91,31 +90,30 @@
       comment[publisher] = Universidade Regional do Noroeste do Estado do Rio Grande do Sul
       param[base_url] = https://www.revistas.unijui.edu.br/
       param[journal_id] = revistadireitoemdebate
-      comment[notReady] = all AUs either can't fetch permissions page or tracks number of times article accessed
 
-      au < notReady ; 1991 ; 1 ; Revista Direito em Debate Volume 1991 ; 1991 >
-      au < notReady ; 1992 ; 2 ; Revista Direito em Debate Volume 1992 ; 1992 >
-      au < notReady ; 1993 ; 3 ; Revista Direito em Debate Volume 1993 ; 1993 >
-      au < notReady ; 1994 ; 4 ; Revista Direito em Debate Volume 1994 ; 1994 >
-      au < notReady ; 1995 ; 5 ; Revista Direito em Debate Volume 1995 ; 1995 >
-      au < notReady ; 1996 ; 6 ; Revista Direito em Debate Volume 1996 ; 1996 >
-      au < notReady ; 1997 ; 7 ; Revista Direito em Debate Volume 1997 ; 1997 >
-      au < notReady ; 1998 ; 8 ; Revista Direito em Debate Volume 1998 ; 1998 >
-      au < notReady ; 1999 ; 9 ; Revista Direito em Debate Volume 1999 ; 1999 >
-      au < notReady ; 2000 ; 10 ; Revista Direito em Debate Volume 2000 ; 2000 >
-      au < notReady ; 2001 ; 11 ; Revista Direito em Debate Volume 2001 ; 2001 >
-      au < notReady ; 2002 ; 12 ; Revista Direito em Debate Volume 2002 ; 2002 >
-      au < notReady ; 2003 ; 13 ; Revista Direito em Debate Volume 2003 ; 2003 >
-      au < notReady ; 2004 ; 14 ; Revista Direito em Debate Volume 2004 ; 2004 >
-      au < notReady ; 2005 ; 15 ; Revista Direito em Debate Volume 2005 ; 2005 >
-      au < notReady ; 2006 ; 16 ; Revista Direito em Debate Volume 2006 ; 2006 >
-      au < notReady ; 2007 ; 17 ; Revista Direito em Debate Volume 2007 ; 2007 >
-      au < notReady ; 2008 ; 18 ; Revista Direito em Debate Volume 2008 ; 2008 >
-      au < notReady ; 2009 ; 19 ; Revista Direito em Debate Volume 2009 ; 2009 >
-      au < notReady ; 2010 ; 20 ; Revista Direito em Debate Volume 2010 ; 2010 >
-      au < notReady ; 2011 ; 21 ; Revista Direito em Debate Volume 2011 ; 2011 >
-      au < notReady ; 2012 ; 22 ; Revista Direito em Debate Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 23 ; Revista Direito em Debate Volume 2013 ; 2013 >
+      au < released ; 1991 ; 1 ; Revista Direito em Debate Volume 1991 ; 1991 >
+      au < released ; 1992 ; 2 ; Revista Direito em Debate Volume 1992 ; 1992 >
+      au < released ; 1993 ; 3 ; Revista Direito em Debate Volume 1993 ; 1993 >
+      au < released ; 1994 ; 4 ; Revista Direito em Debate Volume 1994 ; 1994 >
+      au < released ; 1995 ; 5 ; Revista Direito em Debate Volume 1995 ; 1995 >
+      au < released ; 1996 ; 6 ; Revista Direito em Debate Volume 1996 ; 1996 >
+      au < released ; 1997 ; 7 ; Revista Direito em Debate Volume 1997 ; 1997 >
+      au < released ; 1998 ; 8 ; Revista Direito em Debate Volume 1998 ; 1998 >
+      au < released ; 1999 ; 9 ; Revista Direito em Debate Volume 1999 ; 1999 >
+      au < released ; 2000 ; 10 ; Revista Direito em Debate Volume 2000 ; 2000 >
+      au < released ; 2001 ; 11 ; Revista Direito em Debate Volume 2001 ; 2001 >
+      au < released ; 2002 ; 12 ; Revista Direito em Debate Volume 2002 ; 2002 >
+      au < released ; 2003 ; 13 ; Revista Direito em Debate Volume 2003 ; 2003 >
+      au < released ; 2004 ; 14 ; Revista Direito em Debate Volume 2004 ; 2004 >
+      au < released ; 2005 ; 15 ; Revista Direito em Debate Volume 2005 ; 2005 >
+      au < released ; 2006 ; 16 ; Revista Direito em Debate Volume 2006 ; 2006 >
+      au < released ; 2007 ; 17 ; Revista Direito em Debate Volume 2007 ; 2007 >
+      au < released ; 2008 ; 18 ; Revista Direito em Debate Volume 2008 ; 2008 >
+      au < released ; 2009 ; 19 ; Revista Direito em Debate Volume 2009 ; 2009 >
+      au < released ; 2010 ; 20 ; Revista Direito em Debate Volume 2010 ; 2010 >
+      au < released ; 2011 ; 21 ; Revista Direito em Debate Volume 2011 ; 2011 >
+      au < released ; 2012 ; 22 ; Revista Direito em Debate Volume 2012 ; 2012 >
+      au < manifest ; 2013 ; 23 ; Revista Direito em Debate Volume 2013 ; 2013 >
       au < expected ; 2014 ; 24 ; Revista Direito em Debate Volume 2014 ; 2014 >
 
   }

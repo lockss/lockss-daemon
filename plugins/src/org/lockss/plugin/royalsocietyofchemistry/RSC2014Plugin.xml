@@ -1,0 +1,207 @@
+<map>
+  <entry>
+   <string>plugin_status</string>
+   <string>testing - Evan/Collin</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.royalsocietyofchemistry.RSC2014Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Royal Society of Chemistry 2014 Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>3</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>3</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+    <string>1.63.0</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Royal Society of Chemistry 2014 Plugin, Base URL %s, Resolver URL %s, Journal Code %s, Volume %s, Year %d", base_url, resolver_url, journal_code, volume_name, year</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%sen/journals/lockss?journalcode=%s&amp;volume=%s&amp;year=%d", base_url, journal_code, volume_name, year</string>
+  </entry>
+  <entry>
+    <string>au_permission_url</string>
+      <list>
+        <string>"%sen/journals/lockss?journalcode=%s&amp;volume=%s&amp;year=%d", base_url, journal_code, volume_name, year</string>
+        <string>"%slockss.htm", resolver_url</string>
+        <string>"%slockss.htm", graphics_url</string>
+        <string>"%slockss.htm", base_url2</string>
+      </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <string>"^%sen/content/article(?:pdf|html)/%d/%s/[a-z0-9]+$", base_url, year, journal_code</string>
+  </entry>
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+        <string>au_title</string>
+        <string>"%sen/journals/lockss?journalcode=%s", base_url, journal_code</string>
+      </entry>
+      <entry>
+        <string>au_volume</string>
+        <string>"%sen/journals/lockss?journalcode=%s&amp;volume=%s&amp;year=%d", base_url, journal_code, volume_name, year</string>
+      </entry>
+      <entry>
+        <string>au_issue</string>
+        <string>"%sen/journals/lockss?journalcode=%s&amp;volume=%s&amp;year=%d&amp;issue=%s", base_url, journal_code, volume_name, year, issue</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>2,"^(?:%s)en/Error/", base_url</string>
+      <string>1,"^%s", graphics_url</string>
+      <string>1,"^https?://(?:%s|%s)/.*[.](?:bmp|css|ico|gif|jpe?g|js(?:[?]ver=[^&amp;]+)?|mol|png|tif?f)$", base_url_host, base_url2_host</string>
+      <string>4,"^(?:%s|%s)", base_url, resolver_url</string>
+      <string>2,"^(?:%sen/(?:account/|error/|content/openurl/|.*iscitedby=)|%s[?]doi=[^&amp;]+&amp;newsite=1)", base_url, resolver_url</string>
+      <string>1,"^%s(?:services/images/|en/content/openurlimage/|en/journals/lockss[?]journalcode=%s&amp;volume=%s&amp;year=%d&amp;issue=)", base_url, journal_code, volume_name, year</string>
+      <string>1,"^%s[?]doi=", resolver_url</string>
+      <string>1,"^%sen/content/article(?:landing|pdf|html)/%d/%s/[^/?]+$", base_url, year, journal_code</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>resolver_url</key>
+        <displayName>Resolver Url</displayName>
+        <description>Resolver for xlink.rsc.org</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>graphics_url</key>
+        <displayName>Graphics URL</displayName>
+        <description>Shared graphics, css, etc. on  http://sod-a.rsc-cdn.org/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url2</key>
+        <displayName>Second Graphics URL</displayName>
+        <description>Shared graphics on  http://www.rsc.org/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_code</key>
+        <displayName>Journal Code</displayName>
+        <description>The journal&apos;s short journal code</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description></description>
+        <type>2</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume_name</key>
+        <displayName>Volume Name</displayName>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.royalsocietyofchemistry.RSC2014ArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.royalsocietyofchemistry.RSC2014ArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.royalsocietyofchemistry.RSC2014HtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.royalsocietyofchemistry.RSC2014HtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.royalsocietyofchemistry.RSC2014PdfFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.royalsocietyofchemistry.RSC2014HtmlCrawlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.royalsocietyofchemistry.RSC2014UrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>au_crawl_depth</string>
+    <int>2</int>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_notes</string>
+    <string>Previous version had notes to the effect that it is NOT allowed to preserve the full-text HTML view of articles (plain or enhanced).</string>
+    <string>Testing what can be gathered without publisher changes</string>
+  </entry>
+</map>

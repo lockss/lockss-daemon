@@ -1,5 +1,5 @@
 /*
- * $Id: RunKbartReport.java,v 1.9 2014-04-02 22:30:54 pgust Exp $
+ * $Id: RunKbartReport.java,v 1.9.2.1 2014-07-18 15:49:45 wkwilson Exp $
  */
 
 /*
@@ -180,12 +180,6 @@ public class RunKbartReport {
     }
     System.err.println(titles.size()+" KbartTitles for export");
 
-    // Return if there are no titles
-    if (titles.isEmpty()) {
-      System.err.println("No titles for export.");
-      return null;
-    }
-
     // Create a filter
     KbartExportFilter filter = new KbartExportFilter(titles, columnOrdering,
         hideEmptyColumns, false, false);
@@ -221,7 +215,9 @@ public class RunKbartReport {
         InputStream inputStream, PubType publicationType)
         throws IOException, IllegalArgumentException {
       this.recordIterator = new KbartCsvIterator(inputStream, publicationType);
-      this.nextItem = recordIterator.next();
+      if (recordIterator.hasNext()) {
+        this.nextItem = recordIterator.next();
+      }
     }
 
     public boolean hasNext() {
@@ -694,17 +690,20 @@ public class RunKbartReport {
 
     
     PubType pubType = null;
-    if (cl.hasOption("J")) pubType = PubType.journal;
-    if (cl.hasOption("B")) pubType = PubType.book;
+    if (cl.hasOption(FOR_JOURNALS)) pubType = PubType.journal;
+    if (cl.hasOption(FOR_BOOKS)) pubType = PubType.book;
     
     // Create an instance
     try {
+      // input from named file or stdin if "-" specified
+      String f = cl.getOptionValue(SOPT_FILE);
+      InputStream in = "-".equals(f) ? System.in : new FileInputStream(f);
       new RunKbartReport(
           pubType,
           cl.hasOption(SOPT_HIDE_EMPTY_COLS),
           cl.hasOption(SOPT_SHOW_STATUS),
           ordering,
-          new FileInputStream(cl.getOptionValue(SOPT_FILE)),
+          in,
           System.out
       );
     } catch (Exception e) {

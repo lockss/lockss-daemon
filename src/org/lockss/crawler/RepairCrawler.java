@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.75 2013-08-19 22:33:16 barry409 Exp $
+ * $Id: RepairCrawler.java,v 1.75.6.1 2014-07-18 15:59:57 wkwilson Exp $
  */
 
 /*
@@ -423,6 +423,7 @@ public class RepairCrawler extends BaseCrawler {
       } else {
 	headers.setProperty(CachedUrl.PROPERTY_REPAIR_FROM, id);
 	uc.storeContent(input, headers);
+	reportInfoException(uc);
 	return UrlCacher.CACHE_RESULT_FETCHED;
       }
     } finally {
@@ -456,6 +457,7 @@ public class RepairCrawler extends BaseCrawler {
     }
     updateCacheStats(uc.cache(), uc);
     crawlStatus.addSource("Publisher");
+    reportInfoException(uc);
   }
 
   private IdentityManager getIdentityManager() {

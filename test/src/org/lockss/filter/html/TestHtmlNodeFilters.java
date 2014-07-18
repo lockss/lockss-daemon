@@ -1,10 +1,10 @@
 /*
- * $Id: TestHtmlNodeFilters.java,v 1.12.4.1 2014-05-05 17:32:36 wkwilson Exp $
+ * $Id: TestHtmlNodeFilters.java,v 1.12.4.2 2014-07-18 15:49:49 wkwilson Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -40,10 +40,12 @@ import org.htmlparser.util.*;
 
 import org.lockss.util.*;
 import org.lockss.test.*;
+import org.lockss.filter.html.HtmlNodeFilters.AllExceptSubtreeNodeFilter;
 import org.lockss.servlet.ServletUtil;
 
 public class TestHtmlNodeFilters extends LockssTestCase {
-  static Logger log = Logger.getLogger("TestHtmlNodeFilters");
+  
+  static Logger log = Logger.getLogger(TestHtmlNodeFilters.class);
 
   public void testAssumptions() throws Exception {
     NodeList nl = parse("<option value=\"val1\">blue 13</option>");
@@ -665,6 +667,85 @@ public class TestHtmlNodeFilters extends LockssTestCase {
     Tag tag = (Tag)tagClass.newInstance();
     tag.setAttribute(attr, val);
     return tag;
+  }
+
+  /*
+   * This test follows the three examples from the Javadoc of AllExceptSubtreeNodeFilter.
+   */
+  public void testAllExceptSubtreeNodeFilter() throws Exception {
+    final String inputStr =
+        "<div id=\"a1\">" +
+        "  <div id=\"a11\">" +
+        "    <div id=\"a111\">...</div>" +
+        "    <div id=\"a112\">...</div>" +
+        "    <div id=\"a113\">...</div>" +
+        "  </div>" +
+        "  <div id=\"a12\">" +
+        "    <div id=\"a121\">" +
+        "      <div id=\"a1211\">...</div>" +
+        "      <div id=\"a1212\">...</div>" +
+        "      <div id=\"a1213\">...</div>" +
+        "    </div>" +
+        "    <div id=\"a122\">" +
+        "      <div id=\"a1221\">...</div>" +
+        "      <div id=\"a1222\">...</div>" +
+        "      <div id=\"a1223\">...</div>" +
+        "    </div>" +
+        "    <div id=\"a123\">" +
+        "      <div id=\"a1231\">...</div>" +
+        "      <div id=\"a1232\">...</div>" +
+        "      <div id=\"a1233\">...</div>" +
+        "    </div>" +
+        "  </div>" +
+        "  <div id=\"a13\">" +
+        "    <div id=\"a131\">...</div>" +
+        "    <div id=\"a132\">...</div>" +
+        "    <div id=\"a133\">...</div>" +
+        "  </div>" +
+        "</div>";
+    
+    NodeList nl = parse(inputStr);
+    
+    NodeList ret;
+    NodeFilter nf;
+    String[] expected;
+    SimpleNodeIterator iter;
+    
+    ret = new NodeList();
+    nf = HtmlNodeFilters.allExceptSubtree(
+             HtmlNodeFilters.tagWithAttribute("div", "id", "a12"),
+             HtmlNodeFilters.tagWithAttribute("div", "id", "a122"));
+    nl.elementAt(0).collectInto(ret, nf);
+    ret.keepAllNodesThatMatch(HtmlNodeFilters.tagWithAttribute("div", "id"));
+    expected = new String[] {"a121", "a1211", "a1212", "a1213", "a123", "a1231",
+        "a1232", "a1233"};
+    assertEquals(expected.length, ret.size());
+    iter = ret.elements();
+    for (int i = 0 ; iter.hasMoreNodes() ; ++i) {
+      assertEquals(expected[i], ((Tag)iter.nextNode()).getAttribute("id"));
+    }
+    
+    ret = new NodeList();
+    nf = HtmlNodeFilters.allExceptSubtree(
+             HtmlNodeFilters.tagWithAttribute("div", "id", "a12"),
+             HtmlNodeFilters.tagWithAttribute("div", "id", "a99"));
+    nl.elementAt(0).collectInto(ret, nf);
+    ret.keepAllNodesThatMatch(HtmlNodeFilters.tagWithAttribute("div", "id"));
+    expected = new String[] {"a12", "a121", "a1211", "a1212", "a1213", "a122",
+        "a1221", "a1222", "a1223", "a123", "a1231", "a1232", "a1233"};
+    assertEquals(expected.length, ret.size());
+    iter = ret.elements();
+    for (int i = 0 ; iter.hasMoreNodes() ; ++i) {
+      assertEquals(expected[i], ((Tag)iter.nextNode()).getAttribute("id"));
+    }
+    
+    ret = new NodeList();
+    nf = HtmlNodeFilters.allExceptSubtree(
+             HtmlNodeFilters.tagWithAttribute("div", "id", "a99"),
+             HtmlNodeFilters.tagWithAttribute("div", "id", "a122"));
+    nl.elementAt(0).collectInto(ret, nf);
+    ret.keepAllNodesThatMatch(HtmlNodeFilters.tagWithAttribute("div", "id"));
+    assertEquals(0, ret.size());
   }
 
 }

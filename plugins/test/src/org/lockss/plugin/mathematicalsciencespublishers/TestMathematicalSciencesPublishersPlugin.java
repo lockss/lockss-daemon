@@ -1,10 +1,10 @@
 /*
- * $Id: TestMathematicalSciencesPublishersPlugin.java,v 1.3 2014-03-07 00:09:13 etenbrink Exp $
+ * $Id: TestMathematicalSciencesPublishersPlugin.java,v 1.3.2.1 2014-07-18 15:49:52 wkwilson Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -49,21 +49,24 @@ public class TestMathematicalSciencesPublishersPlugin extends LockssTestCase {
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   static final String JOURNAL_ID_KEY = ConfigParamDescr.JOURNAL_ID.getKey();
   static final String YEAR_KEY = ConfigParamDescr.YEAR.getKey();
-
+  
+  private MockLockssDaemon theDaemon;
   private DefinablePlugin plugin;
-
+  
   public TestMathematicalSciencesPublishersPlugin(String msg) {
     super(msg);
   }
-
+  
   public void setUp() throws Exception {
     super.setUp();
+    setUpDiskSpace();
+    theDaemon = getMockLockssDaemon();
     plugin = new DefinablePlugin();
     plugin.initPlugin(getMockLockssDaemon(),
-                      "org.lockss.plugin.mathematicalsciencespublishers." +
-                      "ClockssMathematicalSciencesPublishersPlugin");
+        "org.lockss.plugin.mathematicalsciencespublishers." +
+        "ClockssMathematicalSciencesPublishersPlugin");
   }
-
+  
   public void testGetAuNullConfig()
       throws ArchivalUnit.ConfigurationException {
     try {
@@ -85,54 +88,54 @@ public class TestMathematicalSciencesPublishersPlugin extends LockssTestCase {
     }
     au.getName();
   }
-
+  
   private DefinableArchivalUnit makeAuFromProps(Properties props)
       throws ArchivalUnit.ConfigurationException {
     Configuration config = ConfigurationUtil.fromProps(props);
     return (DefinableArchivalUnit)plugin.configureAu(config, null);
   }
-
+  
   public void testGetAuHandlesBadUrl()
       throws ArchivalUnit.ConfigurationException, MalformedURLException {
     Properties props = new Properties();
     props.setProperty(BASE_URL_KEY, "blah");
     props.setProperty(JOURNAL_ID_KEY, "322");
     props.setProperty(YEAR_KEY, "2001");
-
+    
     try {
-      DefinableArchivalUnit au = makeAuFromProps(props);
+      makeAuFromProps(props);
       fail ("Didn't throw InstantiationException when given a bad url");
     } catch (ArchivalUnit.ConfigurationException auie) {
       assertNotNull(auie.getCause());
     }
   }
-
+  
   public void testGetAuConstructsProperAu()
       throws ArchivalUnit.ConfigurationException, MalformedURLException {
     Properties props = new Properties();
     props.setProperty(BASE_URL_KEY, "http://www.example.com/");
     props.setProperty(JOURNAL_ID_KEY, "j_id");
     props.setProperty(YEAR_KEY, "2004");
-
+    
     DefinableArchivalUnit au = makeAuFromProps(props);
     assertEquals("Mathematical Sciences Publishers Plugin (CLOCKSS), " +
         "Base URL http://www.example.com/, " +
         "Journal ID j_id, Year 2004", au.getName());
   }
-
+  
   public void testGetPluginId() {
     assertEquals("org.lockss.plugin.mathematicalsciencespublishers." +
         "ClockssMathematicalSciencesPublishersPlugin",
         plugin.getPluginId());
   }
-
+  
   public void testGetAuConfigProperties() {
     assertEquals(ListUtil.list(ConfigParamDescr.BASE_URL,
-                               ConfigParamDescr.JOURNAL_ID,
-                               ConfigParamDescr.YEAR),
-                 plugin.getLocalAuConfigDescrs());
+        ConfigParamDescr.JOURNAL_ID,
+        ConfigParamDescr.YEAR),
+        plugin.getLocalAuConfigDescrs());
   }
-
+  
   public void testGetArticleMetadataExtractor() {
     Properties props = new Properties();
     props.setProperty(BASE_URL_KEY, "http://www.example.com/");
@@ -162,5 +165,44 @@ public class TestMathematicalSciencesPublishersPlugin extends LockssTestCase {
     assertTrue(WrapperUtil.unwrap(plugin.getArticleIteratorFactory())
         instanceof org.lockss.plugin.mathematicalsciencespublishers.MathematicalSciencesPublishersArticleIteratorFactory);
   }
-
+  
+  
+  // Test the crawl rules for AmericanMathematicalSocietyPlugin
+  public void testShouldCacheProperPages() throws Exception {
+    String ROOT_URL = "http://www.example.com/";
+    Properties props = new Properties();
+    props.setProperty(BASE_URL_KEY, ROOT_URL);
+    props.setProperty(JOURNAL_ID_KEY, "asdf");
+    props.setProperty(YEAR_KEY, "2004");
+    DefinableArchivalUnit au = null;
+    try {
+      au = makeAuFromProps(props);
+    }
+    catch (ConfigurationException ex) {
+    }
+    theDaemon.getLockssRepository(au);
+    
+    // Test for pages that should get crawled
+    // permission page/start url
+    shouldCacheTest(ROOT_URL + "asdf/2004/manifest", true, au);
+    // toc page for an issue
+    shouldCacheTest(ROOT_URL + "asdf/2004/82/index.xhtml", true, au);
+    // article files
+    shouldCacheTest(ROOT_URL + "asdf/2004/82/p01.xhtml", true, au);
+    shouldCacheTest(ROOT_URL + "asdf/2004/any/awful/stuff", true, au);
+    // and not forward citations
+    shouldCacheTest(ROOT_URL + "asdf/2004/04/f054.xhtml", false, au);
+    // should not get crawled - wrong journal/year
+    shouldCacheTest(ROOT_URL + "ecgd/2004/82/p01.xhtml", false, au);
+    shouldCacheTest(ROOT_URL + "asdf/2013/82/p01.xhtml", false, au);
+    // should not get crawled - LOCKSS
+    shouldCacheTest("http://lockss.stanford.edu", false, au);
+  }
+  
+  private void shouldCacheTest(String url, boolean shouldCache, ArchivalUnit au) {
+    log.info ("shouldCacheTest url: " + url);
+    UrlCacher uc = au.makeUrlCacher(url);
+    assertEquals(shouldCache, uc.shouldBeCached());
+  }
+  
 }

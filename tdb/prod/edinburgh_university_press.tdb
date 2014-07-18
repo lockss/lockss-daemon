@@ -43,7 +43,7 @@
       au < released ; 2010 ; Africa: The Journal of the International African Institute Volume 80 ; 80 >
       au < released ; 2011 ; Africa: The Journal of the International African Institute Volume 81 ; 81 >
       au < released ; 2012 ; Africa: The Journal of the International African Institute Volume 82 ; 82 >
-      au < manifest ; 2013 ; Africa: The Journal of the International African Institute Volume 83 ; 83 >
+      au < released ; 2013 ; Africa: The Journal of the International African Institute Volume 83 ; 83 >
       au < manifest ; 2014 ; Africa: The Journal of the International African Institute Volume 84 ; 84 >
 
     }
@@ -74,7 +74,7 @@
       au < released ; 2010 ; African Journal of International and Comparative Law Volume 18 ; 18 >
       au < released ; 2011 ; African Journal of International and Comparative Law Volume 19 ; 19 >
       au < released ; 2012 ; African Journal of International and Comparative Law Volume 20 ; 20 >
-      au < manifest ; 2013 ; African Journal of International and Comparative Law Volume 21 ; 21 >
+      au < ready ; 2013 ; African Journal of International and Comparative Law Volume 21 ; 21 >
       au < manifest ; 2014 ; African Journal of International and Comparative Law Volume 22 ; 22 >
     
     }
@@ -108,8 +108,8 @@
       au < manifest ; 2009 ; Architectural Heritage Volume 20 ; 20 >
       au < released ; 2010 ; Architectural Heritage Volume 21 ; 21 >
       au < released ; 2011 ; Architectural Heritage Volume 22 ; 22 >
-      au < manifest ; 2012 ; Architectural Heritage Volume 23 ; 23 >
-      au < manifest ; 2013 ; Architectural Heritage Volume 24 ; 24 >
+      au < ready ; 2012 ; Architectural Heritage Volume 23 ; 23 >
+      au < ready ; 2013 ; Architectural Heritage Volume 24 ; 24 >
       au < expected ; 2014 ; Architectural Heritage Volume 25 ; 25 >
 
     }
@@ -131,6 +131,7 @@
       param[base_url] = http://www.euppublishing.com/
       param[journal_id] = anh
       implicit < status ; year ; name ; param[volume_name] >
+      comment[notReady] = 500 internal server error
 
       au < released ; 2003 ; Archives of Natural History Volume 30 ; 30 >
       au < released ; 2004 ; Archives of Natural History Volume 31 ; 31 >
@@ -142,7 +143,7 @@
       au < released ; 2010 ; Archives of Natural History Volume 37 ; 37 >
       au < released ; 2011 ; Archives of Natural History Volume 38 ; 38 >
       au < released ; 2012 ; Archives of Natural History Volume 39 ; 39 >
-      au < manifest ; 2013 ; Archives of Natural History Volume 40 ; 40 >
+      au < notReady ; 2013 ; Archives of Natural History Volume 40 ; 40 >
       au < manifest ; 2014 ; Archives of Natural History Volume 41 ; 41 >
 
     }
@@ -171,8 +172,8 @@
       au < released ; 2010 ; Ben Jonson Journal Volume 17 ; 17 >
       au < released ; 2011 ; Ben Jonson Journal Volume 18 ; 18 >
       au < released ; 2012 ; Ben Jonson Journal Volume 19 ; 19 >
-      au < manifest ; 2013 ; Ben Jonson Journal Volume 20 ; 20 >
-      au < expected ; 2014 ; Ben Jonson Journal Volume 21 ; 21 >
+      au < ready ; 2013 ; Ben Jonson Journal Volume 20 ; 20 >
+      au < manifest ; 2014 ; Ben Jonson Journal Volume 21 ; 21 >
 
     }
 
@@ -199,7 +200,7 @@
       au < released ; 2010 ; Britain and the World Volume 3 ; 3 >
       au < released ; 2011 ; Britain and the World Volume 4 ; 4 >
       au < released ; 2012 ; Britain and the World Volume 5 ; 5 >
-      au < manifest ; 2013 ; Britain and the World Volume 6 ; 6 >
+      au < ready ; 2013 ; Britain and the World Volume 6 ; 6 >
       au < manifest ; 2014 ; Britain and the World Volume 7 ; 7 >
 
     }
@@ -221,6 +222,7 @@
       param[base_url] = http://www.euppublishing.com/
       param[journal_id] = ccs
       implicit < status ; year ; name ; param[volume_name] >
+      comment[notReady] = 500 internal server error
 
       au < released ; 2004 ; Comparative Critical Studies Volume 1 ; 1 >
       au < released ; 2005 ; Comparative Critical Studies Volume 2 ; 2 >
@@ -231,7 +233,7 @@
       au < released ; 2010 ; Comparative Critical Studies Volume 7 ; 7 >
       au < released ; 2011 ; Comparative Critical Studies Volume 8 ; 8 >
       au < released ; 2012 ; Comparative Critical Studies Volume 9 ; 9 >
-      au < manifest ; 2013 ; Comparative Critical Studies Volume 10 ; 10 >
+      au < notReady ; 2013 ; Comparative Critical Studies Volume 10 ; 10 >
       au < manifest ; 2014 ; Comparative Critical Studies Volume 11 ; 11 >
     
     }
@@ -276,8 +278,8 @@
       au < released ; 2010 ; Corpora Volume 5 ; 5 >
       au < released ; 2011 ; Corpora Volume 6 ; 6 >
       au < released ; 2012 ; Corpora Volume 7 ; 7 >
-      au < manifest ; 2013 ; Corpora Volume 8 ; 8 >
-      au < expected ; 2014 ; Corpora Volume 9 ; 9 >
+      au < ready ; 2013 ; Corpora Volume 8 ; 8 >
+      au < manifest ; 2014 ; Corpora Volume 9 ; 9 >
     
     }
     
@@ -312,8 +314,8 @@
       au < released ; 2010 ; Dance Research Volume 28 ; 28 >
       au < released ; 2011 ; Dance Research Volume 29 ; 29 >
       au < released ; 2012 ; Dance Research Volume 30 ; 30 >
-      au < manifest ; 2013 ; Dance Research Volume 31 ; 31 >
-      au < expected ; 2014 ; Dance Research Volume 32 ; 32 >
+      au < ready ; 2013 ; Dance Research Volume 31 ; 31 >
+      au < manifest ; 2014 ; Dance Research Volume 32 ; 32 >
 
     }
 
@@ -356,7 +358,7 @@
       au < released ; 2010 ; Deleuze Studies Volume 4 ; 4 >
       au < released ; 2011 ; Deleuze Studies Volume 5 ; 5 >
       au < released ; 2012 ; Deleuze Studies Volume 6 ; 6 >
-      au < manifest ; 2013 ; Deleuze Studies Volume 7 ; 7 >
+      au < ready ; 2013 ; Deleuze Studies Volume 7 ; 7 >
       au < manifest ; 2014 ; Deleuze Studies Volume 8 ; 8 >
     
     }
@@ -384,8 +386,8 @@
       au < released ; 2010 ; Derrida Today Volume 3 ; 3 >
       au < released ; 2011 ; Derrida Today Volume 4 ; 4 >
       au < released ; 2012 ; Derrida Today Volume 5 ; 5 >
-      au < manifest ; 2013 ; Derrida Today Volume 6 ; 6 >
-      au < expected ; 2014 ; Derrida Today Volume 7 ; 7 >
+      au < ready ; 2013 ; Derrida Today Volume 6 ; 6 >
+      au < manifest ; 2014 ; Derrida Today Volume 7 ; 7 >
 
     }
     
@@ -416,7 +418,7 @@
       au < released ; 2010 ; Edinburgh Law Review Volume 14 ; 14 >
       au < released ; 2011 ; Edinburgh Law Review Volume 15 ; 15 >
       au < released ; 2012 ; Edinburgh Law Review Volume 16 ; 16 >
-      au < manifest ; 2013 ; Edinburgh Law Review Volume 17 ; 17 >
+      au < ready ; 2013 ; Edinburgh Law Review Volume 17 ; 17 >
       au < manifest ; 2014 ; Edinburgh Law Review Volume 18 ; 18 >
     
     }
@@ -439,16 +441,16 @@
       param[journal_id] = epi
       implicit < status ; year ; name ; param[volume_name] >
       
-      comment[moved] = moved to Cambridge U Press as of 2012. Previous issues still online.
+      comment[moved] = moved to Cambridge U Press as of 2012.
 
-      au < released ; 2004-2005 ; Episteme Volume 1 ; 1 >
-      au < released ; 2005-2006 ; Episteme Volume 2 ; 2 >
-      au < released ; 2006 ; Episteme Volume 3 ; 3 >
-      au < released ; 2007 ; Episteme Volume 4 ; 4 >
-      au < released ; 2008 ; Episteme Volume 5 ; 5 >
-      au < released ; 2009 ; Episteme Volume 6 ; 6 >
-      au < released ; 2010 ; Episteme Volume 7 ; 7 >
-      au < released ; 2011 ; Episteme Volume 8 ; 8 >
+      au < down ; 2004-2005 ; Episteme Volume 1 ; 1 >
+      au < down ; 2005-2006 ; Episteme Volume 2 ; 2 >
+      au < down ; 2006 ; Episteme Volume 3 ; 3 >
+      au < down ; 2007 ; Episteme Volume 4 ; 4 >
+      au < down ; 2008 ; Episteme Volume 5 ; 5 >
+      au < down ; 2009 ; Episteme Volume 6 ; 6 >
+      au < down ; 2010 ; Episteme Volume 7 ; 7 >
+      au < down ; 2011 ; Episteme Volume 8 ; 8 >
 
     }
 
@@ -494,8 +496,8 @@
       au < released ; 2010 ; Holy Land Studies Volume 9 ; 9 >
       au < released ; 2011 ; Holy Land Studies Volume 10 ; 10 >
       au < released ; 2012 ; Holy Land Studies Volume 11 ; 11 >
-      au < manifest ; 2013 ; Holy Land Studies Volume 12 ; 12 >
-      au < expected ; 2014 ; Holy Land Studies Volume 13 ; 13 >
+      au < ready ; 2013 ; Holy Land Studies Volume 12 ; 12 >
+      au < manifest ; 2014 ; Holy Land Studies Volume 13 ; 13 >
 
     }
 
@@ -541,8 +543,8 @@
       au < released ; 2010 ; The Innes Review Volume 61 ; 61 >
       au < released ; 2011 ; The Innes Review Volume 62 ; 62 >
       au < released ; 2012 ; The Innes Review Volume 63 ; 63 >
-      au < manifest ; 2013 ; The Innes Review Volume 64 ; 64 >
-      au < expected ; 2014 ; The Innes Review Volume 65 ; 65 >
+      au < ready ; 2013 ; The Innes Review Volume 64 ; 64 >
+      au < manifest ; 2014 ; The Innes Review Volume 65 ; 65 >
     
     }
 
@@ -619,7 +621,7 @@
       au < released ; 2010 ; International Journal of Humanities and Arts Computing Volume 4 (2010) ; 4 >
       au < released ; 2011 ; International Journal of Humanities and Arts Computing Volume 5 (2011) ; 5 >
       au < released ; 2012 ; International Journal of Humanities and Arts Computing Volume 6 (2012) ; 6 >
-      au < manifest ; 2013 ; International Journal of Humanities and Arts Computing Volume 7 (2013) ; 7 >
+      au < ready ; 2013 ; International Journal of Humanities and Arts Computing Volume 7 (2013) ; 7 >
       au < manifest ; 2014 ; International Journal of Humanities and Arts Computing Volume 8 (2014) ; 8 >
 
     }
@@ -647,8 +649,8 @@
       au < released ; 2010 ; International Research in Children's Literature Volume 3 ; 3 >
       au < released ; 2011 ; International Research in Children's Literature Volume 4 ; 4 >
       au < released ; 2012 ; International Research in Children's Literature Volume 5 ; 5 >
-      au < manifest ; 2013 ; International Research in Children's Literature Volume 6 ; 6 >
-      au < expected ; 2014 ; International Research in Children's Literature Volume 7 ; 7 >
+      au < ready ; 2013 ; International Research in Children's Literature Volume 6 ; 6 >
+      au < manifest ; 2014 ; International Research in Children's Literature Volume 7 ; 7 >
     
     }
     
@@ -671,8 +673,8 @@
       implicit < status ; year ; name ; param[volume_name] >
       
       au < released ; 2012 ; Irish University Review Volume 42 ; 42 >
-      au < manifest ; 2013 ; Irish University Review Volume 43 ; 43 >
-      au < expected ; 2014 ; Irish University Review Volume 44 ; 44 >
+      au < ready ; 2013 ; Irish University Review Volume 43 ; 43 >
+      au < manifest ; 2014 ; Irish University Review Volume 44 ; 44 >
   
     }
   
@@ -699,7 +701,7 @@
       au < released ; 2010 ; Journal of Beckett Studies Volume 19 ; 19 >
       au < released ; 2011 ; Journal of Beckett Studies Volume 20 ; 20 >
       au < released ; 2012 ; Journal of Beckett Studies Volume 21 ; 21 >
-      au < manifest ; 2013 ; Journal of Beckett Studies Volume 22 ; 22 >
+      au < ready ; 2013 ; Journal of Beckett Studies Volume 22 ; 22 >
       au < manifest ; 2014 ; Journal of Beckett Studies Volume 23 ; 23 >
     
     }
@@ -731,7 +733,7 @@
       au < released ; 2010 ; Journal of British Cinema and Television Volume 7 ; 7 >
       au < released ; 2011 ; Journal of British Cinema and Television Volume 8 ; 8 >
       au < released ; 2012 ; Journal of British Cinema and Television Volume 9 ; 9 >
-      au < manifest ; 2013 ; Journal of British Cinema and Television Volume 10 ; 10 >
+      au < ready ; 2013 ; Journal of British Cinema and Television Volume 10 ; 10 >
       au < manifest ; 2014 ; Journal of British Cinema and Television Volume 11 ; 11 >
     
     }
@@ -762,7 +764,7 @@
       au < released ; 2010 ; Journal of International Political Theory Volume 6 ; 6 >
       au < released ; 2011 ; Journal of International Political Theory Volume 7 ; 7 >
       au < released ; 2012 ; Journal of International Political Theory Volume 8 ; 8 >
-      au < manifest ; 2013 ; Journal of International Political Theory Volume 9 ; 9 >
+      au < ready ; 2013 ; Journal of International Political Theory Volume 9 ; 9 >
       au < expected ; 2014 ; Journal of International Political Theory Volume 10 ; 10 >
 
     }
@@ -793,7 +795,7 @@
       au < released ; 2010 ; Journal of Qur'anic Studies Volume 12 ; 12 >
       au < released ; 2011 ; Journal of Qur'anic Studies Volume 13 ; 13 >
       au < released ; 2012 ; Journal of Qur'anic Studies Volume 14 ; 14 >
-      au < manifest ; 2013 ; Journal of Qur'anic Studies Volume 15 ; 15 >
+      au < ready ; 2013 ; Journal of Qur'anic Studies Volume 15 ; 15 >
       au < manifest ; 2014 ; Journal of Qur'anic Studies Volume 16 ; 16 >
     
     }
@@ -866,8 +868,8 @@
       au < released ; 2010 ; Journal of Scottish Historical Studies Volume 30 ; 30 >
       au < released ; 2011 ; Journal of Scottish Historical Studies Volume 31 ; 31 >
       au < released ; 2012 ; Journal of Scottish Historical Studies Volume 32 ; 32 >
-      au < manifest ; 2013 ; Journal of Scottish Historical Studies Volume 33 ; 33 >
-      au < expected ; 2014 ; Journal of Scottish Historical Studies Volume 34 ; 34 >
+      au < ready ; 2013 ; Journal of Scottish Historical Studies Volume 33 ; 33 >
+      au < manifest ; 2014 ; Journal of Scottish Historical Studies Volume 34 ; 34 >
     
     }
     
@@ -899,7 +901,7 @@
       au < released ; 2010 ; Journal of Scottish Philosophy Volume 8 ; 8 >
       au < released ; 2011 ; Journal of Scottish Philosophy Volume 9 ; 9 >
       au < released ; 2012 ; Journal of Scottish Philosophy Volume 10 ; 10 >
-      au < manifest ; 2013 ; Journal of Scottish Philosophy Volume 11 ; 11 >
+      au < ready ; 2013 ; Journal of Scottish Philosophy Volume 11 ; 11 >
       au < manifest ; 2014 ; Journal of Scottish Philosophy Volume 12 ; 12 >
     
     }
@@ -1001,8 +1003,8 @@
       au < released ; 2010 ; Modernist Cultures Volume 5 ; 5 >
       au < released ; 2011 ; Modernist Cultures Volume 6 ; 6 >
       au < released ; 2012 ; Modernist Cultures Volume 7 ; 7 >
-      au < manifest ; 2013 ; Modernist Cultures Volume 8 ; 8 >
-      au < expected ; 2014 ; Modernist Cultures Volume 9 ; 9 >
+      au < ready ; 2013 ; Modernist Cultures Volume 8 ; 8 >
+      au < manifest ; 2014 ; Modernist Cultures Volume 9 ; 9 >
     
     }
 
@@ -1026,7 +1028,7 @@
 
       au < released ; 2011 ; The New Soundtrack Volume 1 ; 1 >
       au < released ; 2012 ; The New Soundtrack Volume 2 ; 2 >
-      au < manifest ; 2013 ; The New Soundtrack Volume 3 ; 3 >
+      au < ready ; 2013 ; The New Soundtrack Volume 3 ; 3 >
       au < manifest ; 2014 ; The New Soundtrack Volume 4 ; 4 >
 
     }
@@ -1052,8 +1054,8 @@
       au < released ; 2010 ; Northern Scotland Volume 1 ; 1 >
       au < released ; 2011 ; Northern Scotland Volume 2 ; 2 >
       au < released ; 2012 ; Northern Scotland Volume 3 ; 3 >
-      au < manifest ; 2013 ; Northern Scotland Volume 4 ; 4 >
-      au < expected ; 2014 ; Northern Scotland Volume 5 ; 5 >
+      au < ready ; 2013 ; Northern Scotland Volume 4 ; 4 >
+      au < manifest ; 2014 ; Northern Scotland Volume 5 ; 5 >
 
     }
 
@@ -1125,8 +1127,8 @@
       au < manifest ; 2009 ; Nottingham French Studies Volume 48 ; 48 >
       au < manifest ; 2010 ; Nottingham French Studies Volume 49 ; 49 >
       au < released ; 2011 ; Nottingham French Studies Volume 50 ; 50 >
-      au < manifest ; 2012 ; Nottingham French Studies Volume 51 ; 51 >
-      au < manifest ; 2013 ; Nottingham French Studies Volume 52 ; 52 >
+      au < ready ; 2012 ; Nottingham French Studies Volume 51 ; 51 >
+      au < ready ; 2013 ; Nottingham French Studies Volume 52 ; 52 >
       au < manifest ; 2014 ; Nottingham French Studies Volume 53 ; 53 >
   
     }
@@ -1155,8 +1157,8 @@
       au < released ; 2010 ; Oxford Literary Review Volume 32 ; 32 >
       au < released ; 2011 ; Oxford Literary Review Volume 33 ; 33 >
       au < released ; 2012 ; Oxford Literary Review Volume 34 ; 34 >
-      au < manifest ; 2013 ; Oxford Literary Review Volume 35 ; 35 >
-      au < expected ; 2014 ; Oxford Literary Review Volume 36 ; 36 >
+      au < ready ; 2013 ; Oxford Literary Review Volume 35 ; 35 >
+      au < manifest ; 2014 ; Oxford Literary Review Volume 36 ; 36 >
     
     }
     
@@ -1190,7 +1192,7 @@
       au < released ; 2010 ; Paragraph Volume 33 ; 33 >
       au < released ; 2011 ; Paragraph Volume 34 ; 34 >
       au < released ; 2012 ; Paragraph Volume 35 ; 35 >
-      au < manifest ; 2013 ; Paragraph Volume 36 ; 36 >
+      au < ready ; 2013 ; Paragraph Volume 36 ; 36 >
       au < manifest ; 2014 ; Paragraph Volume 37 ; 37 >
 
     }
@@ -1267,7 +1269,7 @@
       au < released ; 2010 ; Psychoanalysis and History Volume 12 ; 12 >
       au < released ; 2011 ; Psychoanalysis and History Volume 13 ; 13 >
       au < released ; 2012 ; Psychoanalysis and History Volume 14 ; 14 >
-      au < manifest ; 2013 ; Psychoanalysis and History Volume 15 ; 15 >
+      au < ready ; 2013 ; Psychoanalysis and History Volume 15 ; 15 >
       au < manifest ; 2014 ; Psychoanalysis and History Volume 16 ; 16 >
     
     }
@@ -1302,7 +1304,7 @@
       au < released ; 2010 ; Romanticism Volume 16 ; 16 >
       au < released ; 2011 ; Romanticism Volume 17 ; 17 >
       au < released ; 2012 ; Romanticism Volume 18 ; 18 >
-      au < manifest ; 2013 ; Romanticism Volume 19 ; 19 >
+      au < ready ; 2013 ; Romanticism Volume 19 ; 19 >
       au < manifest ; 2014 ; Romanticism Volume 20 ; 20 >
     
     }
@@ -1359,27 +1361,27 @@
       param[journal_id] = gas
       comment[0] = Journal changes to Scottish Archaeological Journal at Volume 22 with new journal id saj
       
-      au < ready ; 1969 ; Glasgow Archaeological Journal Volume 1 ; 1 >
-      au < ready ; 1971 ; Glasgow Archaeological Journal Volume 2 ; 2 >
-      au < ready ; 1974 ; Glasgow Archaeological Journal Volume 3 ; 3 >
-      au < ready ; 1976 ; Glasgow Archaeological Journal Volume 4 ; 4 >
-      au < ready ; 1978 ; Glasgow Archaeological Journal Volume 5 ; 5 >
-      au < ready ; 1979 ; Glasgow Archaeological Journal Volume 6 ; 6 >
-      au < ready ; 1980 ; Glasgow Archaeological Journal Volume 7 ; 7 >
-      au < ready ; 1981 ; Glasgow Archaeological Journal Volume 8 ; 8 >
-      au < ready ; 1982 ; Glasgow Archaeological Journal Volume 9 ; 9 >
-      au < ready ; 1983 ; Glasgow Archaeological Journal Volume 10 ; 10 >
-      au < ready ; 1984 ; Glasgow Archaeological Journal Volume 11 ; 11 >
-      au < ready ; 1985 ; Glasgow Archaeological Journal Volume 12 ; 12 >
-      au < ready ; 1986 ; Glasgow Archaeological Journal Volume 13 ; 13 >
-      au < ready ; 1987 ; Glasgow Archaeological Journal Volume 14 ; 14 >
-      au < ready ; 1988 ; Glasgow Archaeological Journal Volume 15 ; 15 >
-      au < ready ; 1989 ; Glasgow Archaeological Journal Volume 16 ; 16 >
-      au < ready ; 1991 ; Glasgow Archaeological Journal Volume 17 ; 17 >
-      au < ready ; 1993 ; Glasgow Archaeological Journal Volume 18 ; 18 >
-      au < ready ; 1994 ; Glasgow Archaeological Journal Volume 19 ; 19 >
-      au < ready ; 1996 ; Glasgow Archaeological Journal Volume 20 ; 20 >
-      au < ready ; 1998 ; Glasgow Archaeological Journal Volume 21 ; 21 >
+      au < released ; 1969 ; Glasgow Archaeological Journal Volume 1 ; 1 >
+      au < released ; 1971 ; Glasgow Archaeological Journal Volume 2 ; 2 >
+      au < released ; 1974 ; Glasgow Archaeological Journal Volume 3 ; 3 >
+      au < released ; 1976 ; Glasgow Archaeological Journal Volume 4 ; 4 >
+      au < released ; 1978 ; Glasgow Archaeological Journal Volume 5 ; 5 >
+      au < released ; 1979 ; Glasgow Archaeological Journal Volume 6 ; 6 >
+      au < released ; 1980 ; Glasgow Archaeological Journal Volume 7 ; 7 >
+      au < released ; 1981 ; Glasgow Archaeological Journal Volume 8 ; 8 >
+      au < released ; 1982 ; Glasgow Archaeological Journal Volume 9 ; 9 >
+      au < released ; 1983 ; Glasgow Archaeological Journal Volume 10 ; 10 >
+      au < released ; 1984 ; Glasgow Archaeological Journal Volume 11 ; 11 >
+      au < released ; 1985 ; Glasgow Archaeological Journal Volume 12 ; 12 >
+      au < released ; 1986 ; Glasgow Archaeological Journal Volume 13 ; 13 >
+      au < released ; 1987 ; Glasgow Archaeological Journal Volume 14 ; 14 >
+      au < released ; 1988 ; Glasgow Archaeological Journal Volume 15 ; 15 >
+      au < released ; 1989 ; Glasgow Archaeological Journal Volume 16 ; 16 >
+      au < released ; 1991 ; Glasgow Archaeological Journal Volume 17 ; 17 >
+      au < released ; 1993 ; Glasgow Archaeological Journal Volume 18 ; 18 >
+      au < released ; 1994 ; Glasgow Archaeological Journal Volume 19 ; 19 >
+      au < released ; 1996 ; Glasgow Archaeological Journal Volume 20 ; 20 >
+      au < released ; 1998 ; Glasgow Archaeological Journal Volume 21 ; 21 >
     
     }
     
@@ -1456,7 +1458,7 @@
       au < released ; 2010 ; Scottish Historical Review Volume 89 ; 89 >
       au < released ; 2011 ; Scottish Historical Review Volume 90 ; 90 >
       au < released ; 2012 ; Scottish Historical Review Volume 91 ; 91 >
-      au < manifest ; 2013 ; Scottish Historical Review Volume 92 ; 92 >
+      au < ready ; 2013 ; Scottish Historical Review Volume 92 ; 92 >
       au < manifest ; 2014 ; Scottish Historical Review Volume 93 ; 93 >
 
     }
@@ -1506,7 +1508,7 @@
       au < released ; 2010 ; Studies in World Christianity Volume 16 ; 16 >
       au < released ; 2011 ; Studies in World Christianity Volume 17 ; 17 >
       au < released ; 2012 ; Studies in World Christianity Volume 18 ; 18 >
-      au < manifest ; 2013 ; Studies in World Christianity Volume 19 ; 19 >
+      au < ready ; 2013 ; Studies in World Christianity Volume 19 ; 19 >
       au < manifest ; 2014 ; Studies in World Christianity Volume 20 ; 20 >
     
     }
@@ -1555,7 +1557,7 @@
       au < released ; 2010 ; Translation and Literature Volume 19 ; 19 >
       au < released ; 2011 ; Translation and Literature Volume 20 ; 20 >
       au < released ; 2012 ; Translation and Literature Volume 21 ; 21 >
-      au < manifest ; 2013 ; Translation and Literature Volume 22 ; 22 >
+      au < ready ; 2013 ; Translation and Literature Volume 22 ; 22 >
       au < manifest ; 2014 ; Translation and Literature Volume 23 ; 23 >
     
     }
@@ -1598,7 +1600,7 @@
       au < released ; 2010 ; Word Structure Volume 3 ; 3 >
       au < released ; 2011 ; Word Structure Volume 4 ; 4 >
       au < released ; 2012 ; Word Structure Volume 5 ; 5 >
-      au < manifest ; 2013 ; Word Structure Volume 6 ; 6 >
+      au < ready ; 2013 ; Word Structure Volume 6 ; 6 >
       au < manifest ; 2014 ; Word Structure Volume 7 ; 7 >
     
     }

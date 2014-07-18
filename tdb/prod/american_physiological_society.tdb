@@ -2,7 +2,7 @@
 
   publisher <
     name = American Physiological Society ;
-    info[tester] = 5
+    info[tester] = 2
   >
 
   pluginPrefix = org.lockss.plugin.highwire.
@@ -36,45 +36,45 @@
 
     {
 
-      au < HighWirePressH20Plugin ; released ; 1989 ; Advances in Physiology Education Volume 256 (1989) ; 256 >
-      au < HighWirePressH20Plugin ; released ; 1989 ; Advances in Physiology Education Volume 257 (1989) ; 257 >
-      au < HighWirePressH20Plugin ; released ; 1990 ; Advances in Physiology Education Volume 258 (1990) ; 258 >
-      au < HighWirePressH20Plugin ; released ; 1990 ; Advances in Physiology Education Volume 259 (1990) ; 259 >
-      au < HighWirePressH20Plugin ; released ; 1991 ; Advances in Physiology Education Volume 260 (1991) ; 260 >
-      au < HighWirePressH20Plugin ; released ; 1991 ; Advances in Physiology Education Volume 261 (1991) ; 261 >
-      au < HighWirePressH20Plugin ; released ; 1992 ; Advances in Physiology Education Volume 262 (1992) ; 262 >
-      au < HighWirePressH20Plugin ; released ; 1992 ; Advances in Physiology Education Volume 263 (1992) ; 263 >
-      au < HighWirePressH20Plugin ; released ; 1993 ; Advances in Physiology Education Volume 264 (1993) ; 264 >
-      au < HighWirePressH20Plugin ; released ; 1993 ; Advances in Physiology Education Volume 265 (1993) ; 265 >
-      au < HighWirePressH20Plugin ; released ; 1994 ; Advances in Physiology Education Volume 266 (1994) ; 266 >
-      au < HighWirePressH20Plugin ; released ; 1994 ; Advances in Physiology Education Volume 267 (1994) ; 267 >
-      au < HighWirePressH20Plugin ; released ; 1995 ; Advances in Physiology Education Volume 268 (1995) ; 268 >
-      au < HighWirePressH20Plugin ; released ; 1995 ; Advances in Physiology Education Volume 269 (1995) ; 269 >
-      au < HighWirePressH20Plugin ; released ; 1996 ; Advances in Physiology Education Volume 270 (1996) ; 270 >
-      au < HighWirePressH20Plugin ; released ; 1996 ; Advances in Physiology Education Volume 271 (1996) ; 271 >
-      au < HighWirePressH20Plugin ; released ; 1997 ; Advances in Physiology Education Volume 272 (1997) ; 272 >
-      au < HighWirePressH20Plugin ; released ; 1997 ; Advances in Physiology Education Volume 273 (1997) ; 273 >
-      au < HighWirePressH20Plugin ; released ; 1998 ; Advances in Physiology Education Volume 274 (1998) ; 274 >
-      au < HighWirePressH20Plugin ; released ; 1998 ; Advances in Physiology Education Volume 275 (1998) ; 275 >
-      au < HighWirePressH20Plugin ; released ; 1999 ; Advances in Physiology Education Volume 276 (1999) ; 276 >
-      au < HighWirePressH20Plugin ; released ; 1999 ; Advances in Physiology Education Volume 277 (1999) ; 277 >
-      au < HighWirePressH20Plugin ; released ; 2000 ; Advances in Physiology Education Volume 23 ; 23 >
-      au < HighWirePressH20Plugin ; released ; 2000 ; Advances in Physiology Education Volume 24 ; 24 >
-      au < HighWirePressH20Plugin ; released ; 2001 ; Advances in Physiology Education Volume 25 ; 25 >
-      au < HighWirePressH20Plugin ; released ; 2002 ; Advances in Physiology Education Volume 26 ; 26 >
-      au < HighWirePressH20Plugin ; released ; 2003 ; Advances in Physiology Education Volume 27 ; 27 >
-      au < HighWirePressH20Plugin ; released ; 2004 ; Advances in Physiology Education Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; down ; 1989 ; Advances in Physiology Education Volume 256 (1989) ; 256 >
+      au < HighWirePressH20Plugin ; down ; 1989 ; Advances in Physiology Education Volume 257 (1989) ; 257 >
+      au < HighWirePressH20Plugin ; down ; 1990 ; Advances in Physiology Education Volume 258 (1990) ; 258 >
+      au < HighWirePressH20Plugin ; down ; 1990 ; Advances in Physiology Education Volume 259 (1990) ; 259 >
+      au < HighWirePressH20Plugin ; down ; 1991 ; Advances in Physiology Education Volume 260 (1991) ; 260 >
+      au < HighWirePressH20Plugin ; down ; 1991 ; Advances in Physiology Education Volume 261 (1991) ; 261 >
+      au < HighWirePressH20Plugin ; down ; 1992 ; Advances in Physiology Education Volume 262 (1992) ; 262 >
+      au < HighWirePressH20Plugin ; down ; 1992 ; Advances in Physiology Education Volume 263 (1992) ; 263 >
+      au < HighWirePressH20Plugin ; down ; 1993 ; Advances in Physiology Education Volume 264 (1993) ; 264 >
+      au < HighWirePressH20Plugin ; down ; 1993 ; Advances in Physiology Education Volume 265 (1993) ; 265 >
+      au < HighWirePressH20Plugin ; down ; 1994 ; Advances in Physiology Education Volume 266 (1994) ; 266 >
+      au < HighWirePressH20Plugin ; down ; 1994 ; Advances in Physiology Education Volume 267 (1994) ; 267 >
+      au < HighWirePressH20Plugin ; down ; 1995 ; Advances in Physiology Education Volume 268 (1995) ; 268 >
+      au < HighWirePressH20Plugin ; down ; 1995 ; Advances in Physiology Education Volume 269 (1995) ; 269 >
+      au < HighWirePressH20Plugin ; down ; 1996 ; Advances in Physiology Education Volume 270 (1996) ; 270 >
+      au < HighWirePressH20Plugin ; down ; 1996 ; Advances in Physiology Education Volume 271 (1996) ; 271 >
+      au < HighWirePressH20Plugin ; down ; 1997 ; Advances in Physiology Education Volume 272 (1997) ; 272 >
+      au < HighWirePressH20Plugin ; down ; 1997 ; Advances in Physiology Education Volume 273 (1997) ; 273 >
+      au < HighWirePressH20Plugin ; down ; 1998 ; Advances in Physiology Education Volume 274 (1998) ; 274 >
+      au < HighWirePressH20Plugin ; down ; 1998 ; Advances in Physiology Education Volume 275 (1998) ; 275 >
+      au < HighWirePressH20Plugin ; down ; 1999 ; Advances in Physiology Education Volume 276 (1999) ; 276 >
+      au < HighWirePressH20Plugin ; down ; 1999 ; Advances in Physiology Education Volume 277 (1999) ; 277 >
+      au < HighWirePressH20Plugin ; down ; 2000 ; Advances in Physiology Education Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; down ; 2000 ; Advances in Physiology Education Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; down ; 2001 ; Advances in Physiology Education Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; down ; 2002 ; Advances in Physiology Education Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; down ; 2003 ; Advances in Physiology Education Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; down ; 2004 ; Advances in Physiology Education Volume 28 ; 28 >
       au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Advances in Physiology Education Volume 29 ; 29 >
       au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Advances in Physiology Education Volume 30 ; 30 >
       au < HighWirePressH20Plugin ; doNotProcess ; 2007 ; Advances in Physiology Education Volume 31 ; 31 >
-      au < HighWirePressH20Plugin ; released ; 2008 ; Advances in Physiology Education Volume 32 ; 32 >
-      au < HighWirePressH20Plugin ; released ; 2009 ; Advances in Physiology Education Volume 33 ; 33 >
-      au < HighWirePressH20Plugin ; released ; 2010 ; Advances in Physiology Education Volume 34 ; 34 >
-      au < HighWirePressH20Plugin ; released ; 2011 ; Advances in Physiology Education Volume 35 ; 35 >
-      au < HighWirePressH20Plugin ; released ; 2012 ; Advances in Physiology Education Volume 36 ; 36 >
-      au < HighWirePressH20Plugin ; manifest ; 2013 ; Advances in Physiology Education Volume 37 ; 37 >
-      au < HighWirePressH20Plugin ; manifest ; 2014 ; Advances in Physiology Education Volume 38 ; 38 >
-
+      au < HighWirePressH20Plugin ; down ; 2008 ; Advances in Physiology Education Volume 32 ; 32 >
+      au < HighWirePressH20Plugin ; down ; 2009 ; Advances in Physiology Education Volume 33 ; 33 >
+      au < HighWirePressH20Plugin ; down ; 2010 ; Advances in Physiology Education Volume 34 ; 34 >
+      au < HighWirePressH20Plugin ; down ; 2011 ; Advances in Physiology Education Volume 35 ; 35 >
+      au < HighWirePressH20Plugin ; down ; 2012 ; Advances in Physiology Education Volume 36 ; 36 >
+      au < HighWireDrupalPlugin ; exists ; 2013 ; Advances in Physiology Education Volume 37 ; 37 >
+      au < HighWireDrupalPlugin ; exists ; 2014 ; Advances in Physiology Education Volume 38 ; 38 >
+    
     }
 
   }
@@ -90,237 +90,237 @@
     comment[current_plugin] = HighWirePressH20Plugin
     param[base_url] = http://ajplegacy.physiology.org/
     
-    au < HighWirePressH20Plugin ; released ; 1898 ; American Journal of Physiology Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; released ; 1898-1899 ; American Journal of Physiology Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; released ; 1899-1900 ; American Journal of Physiology Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; released ; 1900-1901 ; American Journal of Physiology Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; released ; 1901 ; American Journal of Physiology Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; released ; 1901-1902 ; American Journal of Physiology Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; released ; 1902 ; American Journal of Physiology Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; released ; 1902-1903 ; American Journal of Physiology Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; released ; 1903 ; American Journal of Physiology Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; released ; 1903-1904 ; American Journal of Physiology Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; released ; 1904 ; American Journal of Physiology Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; released ; 1904-1905 ; American Journal of Physiology Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; released ; 1905 ; American Journal of Physiology Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; released ; 1905 ; American Journal of Physiology Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; released ; 1905-1906 ; American Journal of Physiology Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; released ; 1906 ; American Journal of Physiology Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; released ; 1906-1907 ; American Journal of Physiology Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; released ; 1907 ; American Journal of Physiology Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; released ; 1907 ; American Journal of Physiology Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; released ; 1907-1908 ; American Journal of Physiology Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; released ; 1908 ; American Journal of Physiology Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; released ; 1908 ; American Journal of Physiology Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; released ; 1908-1909 ; American Journal of Physiology Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; released ; 1909 ; American Journal of Physiology Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; released ; 1909-1910 ; American Journal of Physiology Volume 25 ; 25 >
-    au < HighWirePressH20Plugin ; released ; 1910 ; American Journal of Physiology Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; released ; 1910-1911 ; American Journal of Physiology Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; released ; 1911 ; American Journal of Physiology Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; released ; 1911-1912 ; American Journal of Physiology Volume 29 ; 29 >
-    au < HighWirePressH20Plugin ; released ; 1912 ; American Journal of Physiology Volume 30 ; 30 >
-    au < HighWirePressH20Plugin ; released ; 1912-1913 ; American Journal of Physiology Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; released ; 1913 ; American Journal of Physiology Volume 32 ; 32 >
-    au < HighWirePressH20Plugin ; released ; 1914 ; American Journal of Physiology Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; released ; 1914 ; American Journal of Physiology Volume 34 ; 34 >
-    au < HighWirePressH20Plugin ; released ; 1914 ; American Journal of Physiology Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; released ; 1914-1915 ; American Journal of Physiology Volume 36 ; 36 >
-    au < HighWirePressH20Plugin ; released ; 1915 ; American Journal of Physiology Volume 37 ; 37 >
-    au < HighWirePressH20Plugin ; released ; 1915 ; American Journal of Physiology Volume 38 ; 38 >
-    au < HighWirePressH20Plugin ; released ; 1915-1916 ; American Journal of Physiology Volume 39 ; 39 >
-    au < HighWirePressH20Plugin ; released ; 1916 ; American Journal of Physiology Volume 40 ; 40 >
-    au < HighWirePressH20Plugin ; released ; 1916 ; American Journal of Physiology Volume 41 ; 41 >
-    au < HighWirePressH20Plugin ; released ; 1916-1917 ; American Journal of Physiology Volume 42 ; 42 >
-    au < HighWirePressH20Plugin ; released ; 1917 ; American Journal of Physiology Volume 43 ; 43 >
-    au < HighWirePressH20Plugin ; released ; 1917 ; American Journal of Physiology Volume 44 ; 44 >
-    au < HighWirePressH20Plugin ; released ; 1917-1918 ; American Journal of Physiology Volume 45 ; 45 >
-    au < HighWirePressH20Plugin ; released ; 1918 ; American Journal of Physiology Volume 46 ; 46 >
-    au < HighWirePressH20Plugin ; released ; 1918-1919 ; American Journal of Physiology Volume 47 ; 47 >
-    au < HighWirePressH20Plugin ; released ; 1919 ; American Journal of Physiology Volume 48 ; 48 >
-    au < HighWirePressH20Plugin ; released ; 1919 ; American Journal of Physiology Volume 49 ; 49 >
-    au < HighWirePressH20Plugin ; released ; 1919-1920 ; American Journal of Physiology Volume 50 ; 50 >
-    au < HighWirePressH20Plugin ; released ; 1920 ; American Journal of Physiology Volume 51 ; 51 >
-    au < HighWirePressH20Plugin ; released ; 1920 ; American Journal of Physiology Volume 52 ; 52 >
-    au < HighWirePressH20Plugin ; released ; 1920 ; American Journal of Physiology Volume 53 ; 53 >
-    au < HighWirePressH20Plugin ; released ; 1920-1921 ; American Journal of Physiology Volume 54 ; 54 >
-    au < HighWirePressH20Plugin ; released ; 1921 ; American Journal of Physiology Volume 55 ; 55 >
-    au < HighWirePressH20Plugin ; released ; 1921 ; American Journal of Physiology Volume 56 ; 56 >
-    au < HighWirePressH20Plugin ; released ; 1921 ; American Journal of Physiology Volume 57 ; 57 >
-    au < HighWirePressH20Plugin ; released ; 1921-1922 ; American Journal of Physiology Volume 58 ; 58 >
-    au < HighWirePressH20Plugin ; released ; 1922 ; American Journal of Physiology Volume 59 ; 59 >
-    au < HighWirePressH20Plugin ; released ; 1922 ; American Journal of Physiology Volume 60 ; 60 >
-    au < HighWirePressH20Plugin ; released ; 1922 ; American Journal of Physiology Volume 61 ; 61 >
-    au < HighWirePressH20Plugin ; released ; 1922 ; American Journal of Physiology Volume 62 ; 62 >
-    au < HighWirePressH20Plugin ; released ; 1922-1923 ; American Journal of Physiology Volume 63 ; 63 >
-    au < HighWirePressH20Plugin ; released ; 1923 ; American Journal of Physiology Volume 64 ; 64 >
-    au < HighWirePressH20Plugin ; released ; 1923 ; American Journal of Physiology Volume 65 ; 65 >
-    au < HighWirePressH20Plugin ; released ; 1923 ; American Journal of Physiology Volume 66 ; 66 >
-    au < HighWirePressH20Plugin ; released ; 1923-1924 ; American Journal of Physiology Volume 67 ; 67 >
-    au < HighWirePressH20Plugin ; released ; 1924 ; American Journal of Physiology Volume 68 ; 68 >
-    au < HighWirePressH20Plugin ; released ; 1924 ; American Journal of Physiology Volume 69 ; 69 >
-    au < HighWirePressH20Plugin ; released ; 1924 ; American Journal of Physiology Volume 70 ; 70 >
-    au < HighWirePressH20Plugin ; released ; 1924-1925 ; American Journal of Physiology Volume 71 ; 71 >
-    au < HighWirePressH20Plugin ; released ; 1925 ; American Journal of Physiology Volume 72 ; 72 >
-    au < HighWirePressH20Plugin ; released ; 1925 ; American Journal of Physiology Volume 73 ; 73 >
-    au < HighWirePressH20Plugin ; released ; 1925 ; American Journal of Physiology Volume 74 ; 74 >
-    au < HighWirePressH20Plugin ; released ; 1925-1926 ; American Journal of Physiology Volume 75 ; 75 >
-    au < HighWirePressH20Plugin ; released ; 1926 ; American Journal of Physiology Volume 76 ; 76 >
-    au < HighWirePressH20Plugin ; released ; 1926 ; American Journal of Physiology Volume 77 ; 77 >
-    au < HighWirePressH20Plugin ; released ; 1926 ; American Journal of Physiology Volume 78 ; 78 >
-    au < HighWirePressH20Plugin ; released ; 1926-1927 ; American Journal of Physiology Volume 79 ; 79 >
-    au < HighWirePressH20Plugin ; released ; 1927 ; American Journal of Physiology Volume 80 ; 80 >
-    au < HighWirePressH20Plugin ; released ; 1927 ; American Journal of Physiology Volume 81 ; 81 >
-    au < HighWirePressH20Plugin ; released ; 1927 ; American Journal of Physiology Volume 82 ; 82 >
-    au < HighWirePressH20Plugin ; released ; 1927-1928 ; American Journal of Physiology Volume 83 ; 83 >
-    au < HighWirePressH20Plugin ; released ; 1928 ; American Journal of Physiology Volume 84 ; 84 >
-    au < HighWirePressH20Plugin ; released ; 1928 ; American Journal of Physiology Volume 85 ; 85 >
-    au < HighWirePressH20Plugin ; released ; 1928 ; American Journal of Physiology Volume 86 ; 86 >
-    au < HighWirePressH20Plugin ; released ; 1928-1929 ; American Journal of Physiology Volume 87 ; 87 >
-    au < HighWirePressH20Plugin ; released ; 1929 ; American Journal of Physiology Volume 88 ; 88 >
-    au < HighWirePressH20Plugin ; released ; 1929 ; American Journal of Physiology Volume 89 ; 89 >
-    au < HighWirePressH20Plugin ; released ; 1929 ; American Journal of Physiology Volume 90 ; 90 >
-    au < HighWirePressH20Plugin ; released ; 1929-1930 ; American Journal of Physiology Volume 91 ; 91 >
-    au < HighWirePressH20Plugin ; released ; 1930 ; American Journal of Physiology Volume 92 ; 92 >
-    au < HighWirePressH20Plugin ; released ; 1930 ; American Journal of Physiology Volume 93 ; 93 >
-    au < HighWirePressH20Plugin ; released ; 1930 ; American Journal of Physiology Volume 94 ; 94 >
-    au < HighWirePressH20Plugin ; released ; 1930 ; American Journal of Physiology Volume 95 ; 95 >
-    au < HighWirePressH20Plugin ; released ; 1931 ; American Journal of Physiology Volume 96 ; 96 >
-    au < HighWirePressH20Plugin ; released ; 1931 ; American Journal of Physiology Volume 97 ; 97 >
-    au < HighWirePressH20Plugin ; released ; 1931 ; American Journal of Physiology Volume 98 ; 98 >
-    au < HighWirePressH20Plugin ; released ; 1931-1932 ; American Journal of Physiology Volume 99 ; 99 >
-    au < HighWirePressH20Plugin ; released ; 1932 ; American Journal of Physiology Volume 100 ; 100 >
-    au < HighWirePressH20Plugin ; released ; 1932 ; American Journal of Physiology Volume 101 ; 101 >
-    au < HighWirePressH20Plugin ; released ; 1932 ; American Journal of Physiology Volume 102 ; 102 >
-    au < HighWirePressH20Plugin ; released ; 1932-1933 ; American Journal of Physiology Volume 103 ; 103 >
-    au < HighWirePressH20Plugin ; released ; 1933 ; American Journal of Physiology Volume 104 ; 104 >
-    au < HighWirePressH20Plugin ; released ; 1933 ; American Journal of Physiology Volume 105 ; 105 >
-    au < HighWirePressH20Plugin ; released ; 1933 ; American Journal of Physiology Volume 106 ; 106 >
-    au < HighWirePressH20Plugin ; released ; 1933-1934 ; American Journal of Physiology Volume 107 ; 107 >
-    au < HighWirePressH20Plugin ; released ; 1934 ; American Journal of Physiology Volume 108 ; 108 >
-    au < HighWirePressH20Plugin ; released ; 1934 ; American Journal of Physiology Volume 109 ; 109 >
-    au < HighWirePressH20Plugin ; released ; 1934 ; American Journal of Physiology Volume 110 ; 110 >
-    au < HighWirePressH20Plugin ; released ; 1935 ; American Journal of Physiology Volume 111 ; 111 >
-    au < HighWirePressH20Plugin ; released ; 1935 ; American Journal of Physiology Volume 112 ; 112 >
-    au < HighWirePressH20Plugin ; released ; 1935 ; American Journal of Physiology Volume 113 ; 113 >
-    au < HighWirePressH20Plugin ; released ; 1935-1936 ; American Journal of Physiology Volume 114 ; 114 >
-    au < HighWirePressH20Plugin ; released ; 1936 ; American Journal of Physiology Volume 115 ; 115 >
-    au < HighWirePressH20Plugin ; released ; 1936 ; American Journal of Physiology Volume 116 ; 116 >
-    au < HighWirePressH20Plugin ; released ; 1936 ; American Journal of Physiology Volume 117 ; 117 >
-    au < HighWirePressH20Plugin ; released ; 1936-1937 ; American Journal of Physiology Volume 118 ; 118 >
-    au < HighWirePressH20Plugin ; released ; 1937 ; American Journal of Physiology Volume 119 ; 119 >
-    au < HighWirePressH20Plugin ; released ; 1937 ; American Journal of Physiology Volume 120 ; 120 >
-    au < HighWirePressH20Plugin ; released ; 1937-1938 ; American Journal of Physiology Volume 121 ; 121 >
-    au < HighWirePressH20Plugin ; released ; 1938 ; American Journal of Physiology Volume 122 ; 122 >
-    au < HighWirePressH20Plugin ; released ; 1938 ; American Journal of Physiology Volume 123 ; 123 >
-    au < HighWirePressH20Plugin ; released ; 1938 ; American Journal of Physiology Volume 124 ; 124 >
-    au < HighWirePressH20Plugin ; released ; 1938-1939 ; American Journal of Physiology Volume 125 ; 125 >
-    au < HighWirePressH20Plugin ; released ; 1939 ; American Journal of Physiology Volume 126 ; 126 >
-    au < HighWirePressH20Plugin ; released ; 1939 ; American Journal of Physiology Volume 127 ; 127 >
-    au < HighWirePressH20Plugin ; released ; 1939-1940 ; American Journal of Physiology Volume 128 ; 128 >
-    au < HighWirePressH20Plugin ; released ; 1940 ; American Journal of Physiology Volume 129 ; 129 >
-    au < HighWirePressH20Plugin ; released ; 1940 ; American Journal of Physiology Volume 130 ; 130 >
-    au < HighWirePressH20Plugin ; released ; 1940 ; American Journal of Physiology Volume 131 ; 131 >
-    au < HighWirePressH20Plugin ; released ; 1941 ; American Journal of Physiology Volume 132 ; 132 >
-    au < HighWirePressH20Plugin ; released ; 1941 ; American Journal of Physiology Volume 133 ; 133 >
-    au < HighWirePressH20Plugin ; released ; 1941 ; American Journal of Physiology Volume 134 ; 134 >
-    au < HighWirePressH20Plugin ; released ; 1941-1942 ; American Journal of Physiology Volume 135 ; 135 >
-    au < HighWirePressH20Plugin ; released ; 1942 ; American Journal of Physiology Volume 136 ; 136 >
-    au < HighWirePressH20Plugin ; released ; 1942 ; American Journal of Physiology Volume 137 ; 137 >
-    au < HighWirePressH20Plugin ; released ; 1942-1943 ; American Journal of Physiology Volume 138 ; 138 >
-    au < HighWirePressH20Plugin ; released ; 1943 ; American Journal of Physiology Volume 139 ; 139 >
-    au < HighWirePressH20Plugin ; released ; 1943-1944 ; American Journal of Physiology Volume 140 ; 140 >
-    au < HighWirePressH20Plugin ; released ; 1944 ; American Journal of Physiology Volume 141 ; 141 >
-    au < HighWirePressH20Plugin ; released ; 1944 ; American Journal of Physiology Volume 142 ; 142 >
-    au < HighWirePressH20Plugin ; released ; 1945 ; American Journal of Physiology Volume 143 ; 143 >
-    au < HighWirePressH20Plugin ; released ; 1945 ; American Journal of Physiology Volume 144 ; 144 >
-    au < HighWirePressH20Plugin ; released ; 1945-1946 ; American Journal of Physiology Volume 145 ; 145 >
-    au < HighWirePressH20Plugin ; released ; 1946 ; American Journal of Physiology Volume 146 ; 146 >
-    au < HighWirePressH20Plugin ; released ; 1946 ; American Journal of Physiology Volume 147 ; 147 >
-    au < HighWirePressH20Plugin ; released ; 1947 ; American Journal of Physiology Volume 148 ; 148 >
-    au < HighWirePressH20Plugin ; released ; 1947 ; American Journal of Physiology Volume 149 ; 149 >
-    au < HighWirePressH20Plugin ; manifest ; 1947 ; American Journal of Physiology Volume 150 ; 150 >
-    au < HighWirePressH20Plugin ; manifest ; 1947 ; American Journal of Physiology Volume 151 ; 151 >
-    au < HighWirePressH20Plugin ; manifest ; 1947-1948 ; American Journal of Physiology Volume 152 ; 152 >
-    au < HighWirePressH20Plugin ; manifest ; 1948 ; American Journal of Physiology Volume 153 ; 153 >
-    au < HighWirePressH20Plugin ; manifest ; 1948 ; American Journal of Physiology Volume 154 ; 154 >
-    au < HighWirePressH20Plugin ; manifest ; 1948 ; American Journal of Physiology Volume 155 ; 155 >
-    au < HighWirePressH20Plugin ; manifest ; 1949 ; American Journal of Physiology Volume 156 ; 156 >
-    au < HighWirePressH20Plugin ; manifest ; 1949 ; American Journal of Physiology Volume 157 ; 157 >
-    au < HighWirePressH20Plugin ; manifest ; 1949 ; American Journal of Physiology Volume 158 ; 158 >
-    au < HighWirePressH20Plugin ; manifest ; 1949 ; American Journal of Physiology Volume 159 ; 159 >
-    au < HighWirePressH20Plugin ; manifest ; 1949-1950 ; American Journal of Physiology Volume 160 ; 160 >
-    au < HighWirePressH20Plugin ; manifest ; 1950 ; American Journal of Physiology Volume 161 ; 161 >
-    au < HighWirePressH20Plugin ; manifest ; 1950 ; American Journal of Physiology Volume 162 ; 162 >
-    au < HighWirePressH20Plugin ; manifest ; 1950 ; American Journal of Physiology Volume 163 ; 163 >
-    au < HighWirePressH20Plugin ; manifest ; 1950-1951 ; American Journal of Physiology Volume 164 ; 164 >
-    au < HighWirePressH20Plugin ; manifest ; 1951 ; American Journal of Physiology Volume 165 ; 165 >
-    au < HighWirePressH20Plugin ; manifest ; 1951 ; American Journal of Physiology Volume 166 ; 166 >
-    au < HighWirePressH20Plugin ; manifest ; 1951 ; American Journal of Physiology Volume 167 ; 167 >
-    au < HighWirePressH20Plugin ; manifest ; 1951-1952 ; American Journal of Physiology Volume 168 ; 168 >
-    au < HighWirePressH20Plugin ; manifest ; 1952 ; American Journal of Physiology Volume 169 ; 169 >
-    au < HighWirePressH20Plugin ; manifest ; 1952 ; American Journal of Physiology Volume 170 ; 170 >
-    au < HighWirePressH20Plugin ; manifest ; 1952 ; American Journal of Physiology Volume 171 ; 171 >
-    au < HighWirePressH20Plugin ; manifest ; 1952-1953 ; American Journal of Physiology Volume 172 ; 172 >
-    au < HighWirePressH20Plugin ; manifest ; 1953 ; American Journal of Physiology Volume 173 ; 173 >
-    au < HighWirePressH20Plugin ; manifest ; 1953 ; American Journal of Physiology Volume 174 ; 174 >
-    au < HighWirePressH20Plugin ; manifest ; 1953 ; American Journal of Physiology Volume 175 ; 175 >
-    au < HighWirePressH20Plugin ; manifest ; 1953-1954 ; American Journal of Physiology Volume 176 ; 176 >
-    au < HighWirePressH20Plugin ; manifest ; 1954 ; American Journal of Physiology Volume 177 ; 177 >
-    au < HighWirePressH20Plugin ; manifest ; 1954 ; American Journal of Physiology Volume 178 ; 178 >
-    au < HighWirePressH20Plugin ; manifest ; 1954 ; American Journal of Physiology Volume 179 ; 179 >
-    au < HighWirePressH20Plugin ; manifest ; 1954-1955 ; American Journal of Physiology Volume 180 ; 180 >
-    au < HighWirePressH20Plugin ; manifest ; 1955 ; American Journal of Physiology Volume 181 ; 181 >
-    au < HighWirePressH20Plugin ; manifest ; 1955 ; American Journal of Physiology Volume 182 ; 182 >
-    au < HighWirePressH20Plugin ; manifest ; 1955 ; American Journal of Physiology Volume 183 ; 183 >
-    au < HighWirePressH20Plugin ; manifest ; 1955-1956 ; American Journal of Physiology Volume 184 ; 184 >
-    au < HighWirePressH20Plugin ; manifest ; 1956 ; American Journal of Physiology Volume 185 ; 185 >
-    au < HighWirePressH20Plugin ; manifest ; 1956 ; American Journal of Physiology Volume 186 ; 186 >
-    au < HighWirePressH20Plugin ; manifest ; 1956 ; American Journal of Physiology Volume 187 ; 187 >
-    au < HighWirePressH20Plugin ; manifest ; 1956-1957 ; American Journal of Physiology Volume 188 ; 188 >
-    au < HighWirePressH20Plugin ; manifest ; 1957 ; American Journal of Physiology Volume 189 ; 189 >
-    au < HighWirePressH20Plugin ; manifest ; 1957 ; American Journal of Physiology Volume 190 ; 190 >
-    au < HighWirePressH20Plugin ; manifest ; 1957 ; American Journal of Physiology Volume 191 ; 191 >
-    au < HighWirePressH20Plugin ; manifest ; 1957-1958 ; American Journal of Physiology Volume 192 ; 192 >
-    au < HighWirePressH20Plugin ; manifest ; 1958 ; American Journal of Physiology Volume 193 ; 193 >
-    au < HighWirePressH20Plugin ; manifest ; 1958 ; American Journal of Physiology Volume 194 ; 194 >
-    au < HighWirePressH20Plugin ; manifest ; 1958 ; American Journal of Physiology Volume 195 ; 195 >
-    au < HighWirePressH20Plugin ; manifest ; 1958-1959 ; American Journal of Physiology Volume 196 ; 196 >
-    au < HighWirePressH20Plugin ; manifest ; 1959 ; American Journal of Physiology Volume 197 ; 197 >
-    au < HighWirePressH20Plugin ; manifest ; 1960 ; American Journal of Physiology Volume 198 ; 198 >
-    au < HighWirePressH20Plugin ; manifest ; 1960 ; American Journal of Physiology Volume 199 ; 199 >
-    au < HighWirePressH20Plugin ; manifest ; 1961 ; American Journal of Physiology Volume 200 ; 200 >
-    au < HighWirePressH20Plugin ; manifest ; 1961 ; American Journal of Physiology Volume 201 ; 201 >
-    au < HighWirePressH20Plugin ; manifest ; 1962 ; American Journal of Physiology Volume 202 ; 202 >
-    au < HighWirePressH20Plugin ; manifest ; 1962 ; American Journal of Physiology Volume 203 ; 203 >
-    au < HighWirePressH20Plugin ; manifest ; 1963 ; American Journal of Physiology Volume 204 ; 204 >
-    au < HighWirePressH20Plugin ; manifest ; 1963 ; American Journal of Physiology Volume 205 ; 205 >
-    au < HighWirePressH20Plugin ; manifest ; 1964 ; American Journal of Physiology Volume 206 ; 206 >
-    au < HighWirePressH20Plugin ; manifest ; 1964 ; American Journal of Physiology Volume 207 ; 207 >
-    au < HighWirePressH20Plugin ; released ; 1965 ; American Journal of Physiology Volume 208 ; 208 >
-    au < HighWirePressH20Plugin ; released ; 1965 ; American Journal of Physiology Volume 209 ; 209 >
-    au < HighWirePressH20Plugin ; manifest ; 1966 ; American Journal of Physiology Volume 210 ; 210 >
-    au < HighWirePressH20Plugin ; manifest ; 1966 ; American Journal of Physiology Volume 211 ; 211 >
-    au < HighWirePressH20Plugin ; manifest ; 1967 ; American Journal of Physiology Volume 212 ; 212 >
-    au < HighWirePressH20Plugin ; manifest ; 1967 ; American Journal of Physiology Volume 213 ; 213 >
-    au < HighWirePressH20Plugin ; manifest ; 1968 ; American Journal of Physiology Volume 214 ; 214 >
-    au < HighWirePressH20Plugin ; manifest ; 1968 ; American Journal of Physiology Volume 215 ; 215 >
-    au < HighWirePressH20Plugin ; released ; 1969 ; American Journal of Physiology Volume 216 ; 216 >
-    au < HighWirePressH20Plugin ; released ; 1969 ; American Journal of Physiology Volume 217 ; 217 >
-    au < HighWirePressH20Plugin ; manifest ; 1970 ; American Journal of Physiology Volume 218 ; 218 >
-    au < HighWirePressH20Plugin ; manifest ; 1970 ; American Journal of Physiology Volume 219 ; 219 >
-    au < HighWirePressH20Plugin ; manifest ; 1971 ; American Journal of Physiology Volume 220 ; 220 >
-    au < HighWirePressH20Plugin ; manifest ; 1971 ; American Journal of Physiology Volume 221 ; 221 >
-    au < HighWirePressH20Plugin ; manifest ; 1972 ; American Journal of Physiology Volume 222 ; 222 >
-    au < HighWirePressH20Plugin ; manifest ; 1972 ; American Journal of Physiology Volume 223 ; 223 >
-    au < HighWirePressH20Plugin ; manifest ; 1973 ; American Journal of Physiology Volume 224 ; 224 >
-    au < HighWirePressH20Plugin ; manifest ; 1973 ; American Journal of Physiology Volume 225 ; 225 >
-    au < HighWirePressH20Plugin ; manifest ; 1974 ; American Journal of Physiology Volume 226 ; 226 >
-    au < HighWirePressH20Plugin ; manifest ; 1974 ; American Journal of Physiology Volume 227 ; 227 >
-    au < HighWirePressH20Plugin ; manifest ; 1975 ; American Journal of Physiology Volume 228 ; 228 >
-    au < HighWirePressH20Plugin ; manifest ; 1975 ; American Journal of Physiology Volume 229 ; 229 >
-    au < HighWirePressH20Plugin ; manifest ; 1976 ; American Journal of Physiology Volume 230 ; 230 >
-    au < HighWirePressH20Plugin ; manifest ; 1976 ; American Journal of Physiology Volume 231 ; 231 >
+    au < HighWirePressH20Plugin ; down ; 1898 ; American Journal of Physiology Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; down ; 1898-1899 ; American Journal of Physiology Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; down ; 1899-1900 ; American Journal of Physiology Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; down ; 1900-1901 ; American Journal of Physiology Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; down ; 1901 ; American Journal of Physiology Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; down ; 1901-1902 ; American Journal of Physiology Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; down ; 1902 ; American Journal of Physiology Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; down ; 1902-1903 ; American Journal of Physiology Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; down ; 1903 ; American Journal of Physiology Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; down ; 1903-1904 ; American Journal of Physiology Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; down ; 1904 ; American Journal of Physiology Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; down ; 1904-1905 ; American Journal of Physiology Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; down ; 1905 ; American Journal of Physiology Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; down ; 1905 ; American Journal of Physiology Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; down ; 1905-1906 ; American Journal of Physiology Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; down ; 1906 ; American Journal of Physiology Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; down ; 1906-1907 ; American Journal of Physiology Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; down ; 1907 ; American Journal of Physiology Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; down ; 1907 ; American Journal of Physiology Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; down ; 1907-1908 ; American Journal of Physiology Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; down ; 1908 ; American Journal of Physiology Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; down ; 1908 ; American Journal of Physiology Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; down ; 1908-1909 ; American Journal of Physiology Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; down ; 1909 ; American Journal of Physiology Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; down ; 1909-1910 ; American Journal of Physiology Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; down ; 1910 ; American Journal of Physiology Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; down ; 1910-1911 ; American Journal of Physiology Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; down ; 1911 ; American Journal of Physiology Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; down ; 1911-1912 ; American Journal of Physiology Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; down ; 1912 ; American Journal of Physiology Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; down ; 1912-1913 ; American Journal of Physiology Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; down ; 1913 ; American Journal of Physiology Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; down ; 1914 ; American Journal of Physiology Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; down ; 1914 ; American Journal of Physiology Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; down ; 1914 ; American Journal of Physiology Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; down ; 1914-1915 ; American Journal of Physiology Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; down ; 1915 ; American Journal of Physiology Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; down ; 1915 ; American Journal of Physiology Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; down ; 1915-1916 ; American Journal of Physiology Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; down ; 1916 ; American Journal of Physiology Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; down ; 1916 ; American Journal of Physiology Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; down ; 1916-1917 ; American Journal of Physiology Volume 42 ; 42 >
+    au < HighWirePressH20Plugin ; down ; 1917 ; American Journal of Physiology Volume 43 ; 43 >
+    au < HighWirePressH20Plugin ; down ; 1917 ; American Journal of Physiology Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; down ; 1917-1918 ; American Journal of Physiology Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; down ; 1918 ; American Journal of Physiology Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; down ; 1918-1919 ; American Journal of Physiology Volume 47 ; 47 >
+    au < HighWirePressH20Plugin ; down ; 1919 ; American Journal of Physiology Volume 48 ; 48 >
+    au < HighWirePressH20Plugin ; down ; 1919 ; American Journal of Physiology Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; down ; 1919-1920 ; American Journal of Physiology Volume 50 ; 50 >
+    au < HighWirePressH20Plugin ; down ; 1920 ; American Journal of Physiology Volume 51 ; 51 >
+    au < HighWirePressH20Plugin ; down ; 1920 ; American Journal of Physiology Volume 52 ; 52 >
+    au < HighWirePressH20Plugin ; down ; 1920 ; American Journal of Physiology Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; down ; 1920-1921 ; American Journal of Physiology Volume 54 ; 54 >
+    au < HighWirePressH20Plugin ; down ; 1921 ; American Journal of Physiology Volume 55 ; 55 >
+    au < HighWirePressH20Plugin ; down ; 1921 ; American Journal of Physiology Volume 56 ; 56 >
+    au < HighWirePressH20Plugin ; down ; 1921 ; American Journal of Physiology Volume 57 ; 57 >
+    au < HighWirePressH20Plugin ; down ; 1921-1922 ; American Journal of Physiology Volume 58 ; 58 >
+    au < HighWirePressH20Plugin ; down ; 1922 ; American Journal of Physiology Volume 59 ; 59 >
+    au < HighWirePressH20Plugin ; down ; 1922 ; American Journal of Physiology Volume 60 ; 60 >
+    au < HighWirePressH20Plugin ; down ; 1922 ; American Journal of Physiology Volume 61 ; 61 >
+    au < HighWirePressH20Plugin ; down ; 1922 ; American Journal of Physiology Volume 62 ; 62 >
+    au < HighWirePressH20Plugin ; down ; 1922-1923 ; American Journal of Physiology Volume 63 ; 63 >
+    au < HighWirePressH20Plugin ; down ; 1923 ; American Journal of Physiology Volume 64 ; 64 >
+    au < HighWirePressH20Plugin ; down ; 1923 ; American Journal of Physiology Volume 65 ; 65 >
+    au < HighWirePressH20Plugin ; down ; 1923 ; American Journal of Physiology Volume 66 ; 66 >
+    au < HighWirePressH20Plugin ; down ; 1923-1924 ; American Journal of Physiology Volume 67 ; 67 >
+    au < HighWirePressH20Plugin ; down ; 1924 ; American Journal of Physiology Volume 68 ; 68 >
+    au < HighWirePressH20Plugin ; down ; 1924 ; American Journal of Physiology Volume 69 ; 69 >
+    au < HighWirePressH20Plugin ; down ; 1924 ; American Journal of Physiology Volume 70 ; 70 >
+    au < HighWirePressH20Plugin ; down ; 1924-1925 ; American Journal of Physiology Volume 71 ; 71 >
+    au < HighWirePressH20Plugin ; down ; 1925 ; American Journal of Physiology Volume 72 ; 72 >
+    au < HighWirePressH20Plugin ; down ; 1925 ; American Journal of Physiology Volume 73 ; 73 >
+    au < HighWirePressH20Plugin ; down ; 1925 ; American Journal of Physiology Volume 74 ; 74 >
+    au < HighWirePressH20Plugin ; down ; 1925-1926 ; American Journal of Physiology Volume 75 ; 75 >
+    au < HighWirePressH20Plugin ; down ; 1926 ; American Journal of Physiology Volume 76 ; 76 >
+    au < HighWirePressH20Plugin ; down ; 1926 ; American Journal of Physiology Volume 77 ; 77 >
+    au < HighWirePressH20Plugin ; down ; 1926 ; American Journal of Physiology Volume 78 ; 78 >
+    au < HighWirePressH20Plugin ; down ; 1926-1927 ; American Journal of Physiology Volume 79 ; 79 >
+    au < HighWirePressH20Plugin ; down ; 1927 ; American Journal of Physiology Volume 80 ; 80 >
+    au < HighWirePressH20Plugin ; down ; 1927 ; American Journal of Physiology Volume 81 ; 81 >
+    au < HighWirePressH20Plugin ; down ; 1927 ; American Journal of Physiology Volume 82 ; 82 >
+    au < HighWirePressH20Plugin ; down ; 1927-1928 ; American Journal of Physiology Volume 83 ; 83 >
+    au < HighWirePressH20Plugin ; down ; 1928 ; American Journal of Physiology Volume 84 ; 84 >
+    au < HighWirePressH20Plugin ; down ; 1928 ; American Journal of Physiology Volume 85 ; 85 >
+    au < HighWirePressH20Plugin ; down ; 1928 ; American Journal of Physiology Volume 86 ; 86 >
+    au < HighWirePressH20Plugin ; down ; 1928-1929 ; American Journal of Physiology Volume 87 ; 87 >
+    au < HighWirePressH20Plugin ; down ; 1929 ; American Journal of Physiology Volume 88 ; 88 >
+    au < HighWirePressH20Plugin ; down ; 1929 ; American Journal of Physiology Volume 89 ; 89 >
+    au < HighWirePressH20Plugin ; down ; 1929 ; American Journal of Physiology Volume 90 ; 90 >
+    au < HighWirePressH20Plugin ; down ; 1929-1930 ; American Journal of Physiology Volume 91 ; 91 >
+    au < HighWirePressH20Plugin ; down ; 1930 ; American Journal of Physiology Volume 92 ; 92 >
+    au < HighWirePressH20Plugin ; down ; 1930 ; American Journal of Physiology Volume 93 ; 93 >
+    au < HighWirePressH20Plugin ; down ; 1930 ; American Journal of Physiology Volume 94 ; 94 >
+    au < HighWirePressH20Plugin ; down ; 1930 ; American Journal of Physiology Volume 95 ; 95 >
+    au < HighWirePressH20Plugin ; down ; 1931 ; American Journal of Physiology Volume 96 ; 96 >
+    au < HighWirePressH20Plugin ; down ; 1931 ; American Journal of Physiology Volume 97 ; 97 >
+    au < HighWirePressH20Plugin ; down ; 1931 ; American Journal of Physiology Volume 98 ; 98 >
+    au < HighWirePressH20Plugin ; down ; 1931-1932 ; American Journal of Physiology Volume 99 ; 99 >
+    au < HighWirePressH20Plugin ; down ; 1932 ; American Journal of Physiology Volume 100 ; 100 >
+    au < HighWirePressH20Plugin ; down ; 1932 ; American Journal of Physiology Volume 101 ; 101 >
+    au < HighWirePressH20Plugin ; down ; 1932 ; American Journal of Physiology Volume 102 ; 102 >
+    au < HighWirePressH20Plugin ; down ; 1932-1933 ; American Journal of Physiology Volume 103 ; 103 >
+    au < HighWirePressH20Plugin ; down ; 1933 ; American Journal of Physiology Volume 104 ; 104 >
+    au < HighWirePressH20Plugin ; down ; 1933 ; American Journal of Physiology Volume 105 ; 105 >
+    au < HighWirePressH20Plugin ; down ; 1933 ; American Journal of Physiology Volume 106 ; 106 >
+    au < HighWirePressH20Plugin ; down ; 1933-1934 ; American Journal of Physiology Volume 107 ; 107 >
+    au < HighWirePressH20Plugin ; down ; 1934 ; American Journal of Physiology Volume 108 ; 108 >
+    au < HighWirePressH20Plugin ; down ; 1934 ; American Journal of Physiology Volume 109 ; 109 >
+    au < HighWirePressH20Plugin ; down ; 1934 ; American Journal of Physiology Volume 110 ; 110 >
+    au < HighWirePressH20Plugin ; down ; 1935 ; American Journal of Physiology Volume 111 ; 111 >
+    au < HighWirePressH20Plugin ; down ; 1935 ; American Journal of Physiology Volume 112 ; 112 >
+    au < HighWirePressH20Plugin ; down ; 1935 ; American Journal of Physiology Volume 113 ; 113 >
+    au < HighWirePressH20Plugin ; down ; 1935-1936 ; American Journal of Physiology Volume 114 ; 114 >
+    au < HighWirePressH20Plugin ; down ; 1936 ; American Journal of Physiology Volume 115 ; 115 >
+    au < HighWirePressH20Plugin ; down ; 1936 ; American Journal of Physiology Volume 116 ; 116 >
+    au < HighWirePressH20Plugin ; down ; 1936 ; American Journal of Physiology Volume 117 ; 117 >
+    au < HighWirePressH20Plugin ; down ; 1936-1937 ; American Journal of Physiology Volume 118 ; 118 >
+    au < HighWirePressH20Plugin ; down ; 1937 ; American Journal of Physiology Volume 119 ; 119 >
+    au < HighWirePressH20Plugin ; down ; 1937 ; American Journal of Physiology Volume 120 ; 120 >
+    au < HighWirePressH20Plugin ; down ; 1937-1938 ; American Journal of Physiology Volume 121 ; 121 >
+    au < HighWirePressH20Plugin ; down ; 1938 ; American Journal of Physiology Volume 122 ; 122 >
+    au < HighWirePressH20Plugin ; down ; 1938 ; American Journal of Physiology Volume 123 ; 123 >
+    au < HighWirePressH20Plugin ; down ; 1938 ; American Journal of Physiology Volume 124 ; 124 >
+    au < HighWirePressH20Plugin ; down ; 1938-1939 ; American Journal of Physiology Volume 125 ; 125 >
+    au < HighWirePressH20Plugin ; down ; 1939 ; American Journal of Physiology Volume 126 ; 126 >
+    au < HighWirePressH20Plugin ; down ; 1939 ; American Journal of Physiology Volume 127 ; 127 >
+    au < HighWirePressH20Plugin ; down ; 1939-1940 ; American Journal of Physiology Volume 128 ; 128 >
+    au < HighWirePressH20Plugin ; down ; 1940 ; American Journal of Physiology Volume 129 ; 129 >
+    au < HighWirePressH20Plugin ; down ; 1940 ; American Journal of Physiology Volume 130 ; 130 >
+    au < HighWirePressH20Plugin ; down ; 1940 ; American Journal of Physiology Volume 131 ; 131 >
+    au < HighWirePressH20Plugin ; down ; 1941 ; American Journal of Physiology Volume 132 ; 132 >
+    au < HighWirePressH20Plugin ; down ; 1941 ; American Journal of Physiology Volume 133 ; 133 >
+    au < HighWirePressH20Plugin ; down ; 1941 ; American Journal of Physiology Volume 134 ; 134 >
+    au < HighWirePressH20Plugin ; down ; 1941-1942 ; American Journal of Physiology Volume 135 ; 135 >
+    au < HighWirePressH20Plugin ; down ; 1942 ; American Journal of Physiology Volume 136 ; 136 >
+    au < HighWirePressH20Plugin ; down ; 1942 ; American Journal of Physiology Volume 137 ; 137 >
+    au < HighWirePressH20Plugin ; down ; 1942-1943 ; American Journal of Physiology Volume 138 ; 138 >
+    au < HighWirePressH20Plugin ; down ; 1943 ; American Journal of Physiology Volume 139 ; 139 >
+    au < HighWirePressH20Plugin ; down ; 1943-1944 ; American Journal of Physiology Volume 140 ; 140 >
+    au < HighWirePressH20Plugin ; down ; 1944 ; American Journal of Physiology Volume 141 ; 141 >
+    au < HighWirePressH20Plugin ; down ; 1944 ; American Journal of Physiology Volume 142 ; 142 >
+    au < HighWirePressH20Plugin ; down ; 1945 ; American Journal of Physiology Volume 143 ; 143 >
+    au < HighWirePressH20Plugin ; down ; 1945 ; American Journal of Physiology Volume 144 ; 144 >
+    au < HighWirePressH20Plugin ; down ; 1945-1946 ; American Journal of Physiology Volume 145 ; 145 >
+    au < HighWirePressH20Plugin ; down ; 1946 ; American Journal of Physiology Volume 146 ; 146 >
+    au < HighWirePressH20Plugin ; down ; 1946 ; American Journal of Physiology Volume 147 ; 147 >
+    au < HighWirePressH20Plugin ; down ; 1947 ; American Journal of Physiology Volume 148 ; 148 >
+    au < HighWirePressH20Plugin ; down ; 1947 ; American Journal of Physiology Volume 149 ; 149 >
+    au < HighWireDrupalPlugin ; exists ; 1947 ; American Journal of Physiology Volume 150 ; 150 >
+    au < HighWireDrupalPlugin ; exists ; 1947 ; American Journal of Physiology Volume 151 ; 151 >
+    au < HighWireDrupalPlugin ; exists ; 1947-1948 ; American Journal of Physiology Volume 152 ; 152 >
+    au < HighWireDrupalPlugin ; exists ; 1948 ; American Journal of Physiology Volume 153 ; 153 >
+    au < HighWireDrupalPlugin ; exists ; 1948 ; American Journal of Physiology Volume 154 ; 154 >
+    au < HighWireDrupalPlugin ; exists ; 1948 ; American Journal of Physiology Volume 155 ; 155 >
+    au < HighWireDrupalPlugin ; exists ; 1949 ; American Journal of Physiology Volume 156 ; 156 >
+    au < HighWireDrupalPlugin ; exists ; 1949 ; American Journal of Physiology Volume 157 ; 157 >
+    au < HighWireDrupalPlugin ; exists ; 1949 ; American Journal of Physiology Volume 158 ; 158 >
+    au < HighWireDrupalPlugin ; exists ; 1949 ; American Journal of Physiology Volume 159 ; 159 >
+    au < HighWireDrupalPlugin ; exists ; 1949-1950 ; American Journal of Physiology Volume 160 ; 160 >
+    au < HighWireDrupalPlugin ; exists ; 1950 ; American Journal of Physiology Volume 161 ; 161 >
+    au < HighWireDrupalPlugin ; exists ; 1950 ; American Journal of Physiology Volume 162 ; 162 >
+    au < HighWireDrupalPlugin ; exists ; 1950 ; American Journal of Physiology Volume 163 ; 163 >
+    au < HighWireDrupalPlugin ; exists ; 1950-1951 ; American Journal of Physiology Volume 164 ; 164 >
+    au < HighWireDrupalPlugin ; exists ; 1951 ; American Journal of Physiology Volume 165 ; 165 >
+    au < HighWireDrupalPlugin ; exists ; 1951 ; American Journal of Physiology Volume 166 ; 166 >
+    au < HighWireDrupalPlugin ; exists ; 1951 ; American Journal of Physiology Volume 167 ; 167 >
+    au < HighWireDrupalPlugin ; exists ; 1951-1952 ; American Journal of Physiology Volume 168 ; 168 >
+    au < HighWireDrupalPlugin ; exists ; 1952 ; American Journal of Physiology Volume 169 ; 169 >
+    au < HighWireDrupalPlugin ; exists ; 1952 ; American Journal of Physiology Volume 170 ; 170 >
+    au < HighWireDrupalPlugin ; exists ; 1952 ; American Journal of Physiology Volume 171 ; 171 >
+    au < HighWireDrupalPlugin ; exists ; 1952-1953 ; American Journal of Physiology Volume 172 ; 172 >
+    au < HighWireDrupalPlugin ; exists ; 1953 ; American Journal of Physiology Volume 173 ; 173 >
+    au < HighWireDrupalPlugin ; exists ; 1953 ; American Journal of Physiology Volume 174 ; 174 >
+    au < HighWireDrupalPlugin ; exists ; 1953 ; American Journal of Physiology Volume 175 ; 175 >
+    au < HighWireDrupalPlugin ; exists ; 1953-1954 ; American Journal of Physiology Volume 176 ; 176 >
+    au < HighWireDrupalPlugin ; exists ; 1954 ; American Journal of Physiology Volume 177 ; 177 >
+    au < HighWireDrupalPlugin ; exists ; 1954 ; American Journal of Physiology Volume 178 ; 178 >
+    au < HighWireDrupalPlugin ; exists ; 1954 ; American Journal of Physiology Volume 179 ; 179 >
+    au < HighWireDrupalPlugin ; exists ; 1954-1955 ; American Journal of Physiology Volume 180 ; 180 >
+    au < HighWireDrupalPlugin ; exists ; 1955 ; American Journal of Physiology Volume 181 ; 181 >
+    au < HighWireDrupalPlugin ; exists ; 1955 ; American Journal of Physiology Volume 182 ; 182 >
+    au < HighWireDrupalPlugin ; exists ; 1955 ; American Journal of Physiology Volume 183 ; 183 >
+    au < HighWireDrupalPlugin ; exists ; 1955-1956 ; American Journal of Physiology Volume 184 ; 184 >
+    au < HighWireDrupalPlugin ; exists ; 1956 ; American Journal of Physiology Volume 185 ; 185 >
+    au < HighWireDrupalPlugin ; exists ; 1956 ; American Journal of Physiology Volume 186 ; 186 >
+    au < HighWireDrupalPlugin ; exists ; 1956 ; American Journal of Physiology Volume 187 ; 187 >
+    au < HighWireDrupalPlugin ; exists ; 1956-1957 ; American Journal of Physiology Volume 188 ; 188 >
+    au < HighWireDrupalPlugin ; exists ; 1957 ; American Journal of Physiology Volume 189 ; 189 >
+    au < HighWireDrupalPlugin ; exists ; 1957 ; American Journal of Physiology Volume 190 ; 190 >
+    au < HighWireDrupalPlugin ; exists ; 1957 ; American Journal of Physiology Volume 191 ; 191 >
+    au < HighWireDrupalPlugin ; exists ; 1957-1958 ; American Journal of Physiology Volume 192 ; 192 >
+    au < HighWireDrupalPlugin ; exists ; 1958 ; American Journal of Physiology Volume 193 ; 193 >
+    au < HighWireDrupalPlugin ; exists ; 1958 ; American Journal of Physiology Volume 194 ; 194 >
+    au < HighWireDrupalPlugin ; exists ; 1958 ; American Journal of Physiology Volume 195 ; 195 >
+    au < HighWireDrupalPlugin ; exists ; 1958-1959 ; American Journal of Physiology Volume 196 ; 196 >
+    au < HighWireDrupalPlugin ; exists ; 1959 ; American Journal of Physiology Volume 197 ; 197 >
+    au < HighWireDrupalPlugin ; exists ; 1960 ; American Journal of Physiology Volume 198 ; 198 >
+    au < HighWireDrupalPlugin ; exists ; 1960 ; American Journal of Physiology Volume 199 ; 199 >
+    au < HighWireDrupalPlugin ; exists ; 1961 ; American Journal of Physiology Volume 200 ; 200 >
+    au < HighWireDrupalPlugin ; exists ; 1961 ; American Journal of Physiology Volume 201 ; 201 >
+    au < HighWireDrupalPlugin ; exists ; 1962 ; American Journal of Physiology Volume 202 ; 202 >
+    au < HighWireDrupalPlugin ; exists ; 1962 ; American Journal of Physiology Volume 203 ; 203 >
+    au < HighWireDrupalPlugin ; exists ; 1963 ; American Journal of Physiology Volume 204 ; 204 >
+    au < HighWireDrupalPlugin ; exists ; 1963 ; American Journal of Physiology Volume 205 ; 205 >
+    au < HighWireDrupalPlugin ; exists ; 1964 ; American Journal of Physiology Volume 206 ; 206 >
+    au < HighWireDrupalPlugin ; exists ; 1964 ; American Journal of Physiology Volume 207 ; 207 >
+    au < HighWirePressH20Plugin ; down ; 1965 ; American Journal of Physiology Volume 208 ; 208 >
+    au < HighWirePressH20Plugin ; down ; 1965 ; American Journal of Physiology Volume 209 ; 209 >
+    au < HighWireDrupalPlugin ; exists ; 1966 ; American Journal of Physiology Volume 210 ; 210 >
+    au < HighWireDrupalPlugin ; exists ; 1966 ; American Journal of Physiology Volume 211 ; 211 >
+    au < HighWireDrupalPlugin ; exists ; 1967 ; American Journal of Physiology Volume 212 ; 212 >
+    au < HighWireDrupalPlugin ; exists ; 1967 ; American Journal of Physiology Volume 213 ; 213 >
+    au < HighWireDrupalPlugin ; exists ; 1968 ; American Journal of Physiology Volume 214 ; 214 >
+    au < HighWireDrupalPlugin ; exists ; 1968 ; American Journal of Physiology Volume 215 ; 215 >
+    au < HighWirePressH20Plugin ; down ; 1969 ; American Journal of Physiology Volume 216 ; 216 >
+    au < HighWirePressH20Plugin ; down ; 1969 ; American Journal of Physiology Volume 217 ; 217 >
+    au < HighWireDrupalPlugin ; exists ; 1970 ; American Journal of Physiology Volume 218 ; 218 >
+    au < HighWireDrupalPlugin ; exists ; 1970 ; American Journal of Physiology Volume 219 ; 219 >
+    au < HighWireDrupalPlugin ; exists ; 1971 ; American Journal of Physiology Volume 220 ; 220 >
+    au < HighWireDrupalPlugin ; exists ; 1971 ; American Journal of Physiology Volume 221 ; 221 >
+    au < HighWireDrupalPlugin ; exists ; 1972 ; American Journal of Physiology Volume 222 ; 222 >
+    au < HighWireDrupalPlugin ; exists ; 1972 ; American Journal of Physiology Volume 223 ; 223 >
+    au < HighWireDrupalPlugin ; exists ; 1973 ; American Journal of Physiology Volume 224 ; 224 >
+    au < HighWireDrupalPlugin ; exists ; 1973 ; American Journal of Physiology Volume 225 ; 225 >
+    au < HighWireDrupalPlugin ; exists ; 1974 ; American Journal of Physiology Volume 226 ; 226 >
+    au < HighWireDrupalPlugin ; exists ; 1974 ; American Journal of Physiology Volume 227 ; 227 >
+    au < HighWireDrupalPlugin ; exists ; 1975 ; American Journal of Physiology Volume 228 ; 228 >
+    au < HighWireDrupalPlugin ; exists ; 1975 ; American Journal of Physiology Volume 229 ; 229 >
+    au < HighWireDrupalPlugin ; exists ; 1976 ; American Journal of Physiology Volume 230 ; 230 >
+    au < HighWireDrupalPlugin ; exists ; 1976 ; American Journal of Physiology Volume 231 ; 231 >
 
   }
 
@@ -415,7 +415,7 @@
       au < HighWireDrupalPlugin ; manifest ; 2013 ; American Journal of Physiology - Cell Physiology Volume 304 ; 304 >
       au < HighWireDrupalPlugin ; testing ; 2013 ; American Journal of Physiology - Cell Physiology Volume 305 ; 305 >
       au < HighWireDrupalPlugin ; notReady ; 2014 ; American Journal of Physiology - Cell Physiology Volume 306 ; 306 >
-      au < HighWireDrupalPlugin ; expected ; 2014 ; American Journal of Physiology - Cell Physiology Volume 307 ; 307 >
+      au < HighWireDrupalPlugin ; manifest ; 2014 ; American Journal of Physiology - Cell Physiology Volume 307 ; 307 >
     
     }
 
@@ -522,7 +522,7 @@
       au < HighWireDrupalPlugin ; testing ; 2013 ; American Journal of Physiology - Endocrinology and Metabolism Volume 304 ; 304 >
       au < HighWireDrupalPlugin ; testing ; 2013 ; American Journal of Physiology - Endocrinology and Metabolism Volume 305 ; 305 >
       au < HighWireDrupalPlugin ; manifest ; 2014 ; American Journal of Physiology - Endocrinology and Metabolism Volume 306 ; 306 >
-      au < HighWireDrupalPlugin ; expected ; 2014 ; American Journal of Physiology - Endocrinology and Metabolism Volume 307 ; 307 >
+      au < HighWireDrupalPlugin ; manifest ; 2014 ; American Journal of Physiology - Endocrinology and Metabolism Volume 307 ; 307 >
 
     }
 
@@ -629,7 +629,7 @@
       au < HighWireDrupalPlugin ; testing ; 2013 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 304 ; 304 >
       au < HighWireDrupalPlugin ; testing ; 2013 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 305 ; 305 >
       au < HighWireDrupalPlugin ; manifest ; 2014 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 306 ; 306 >
-      au < HighWireDrupalPlugin ; exists ; 2014 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 307 ; 307 >
+      au < HighWireDrupalPlugin ; manifest ; 2014 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 307 ; 307 >
 
     }
 
@@ -736,7 +736,7 @@
       au < HighWireDrupalPlugin ; testing ; 2013 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 304 ; 304 >
       au < HighWireDrupalPlugin ; manifest ; 2013 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 305 ; 305 >
       au < HighWireDrupalPlugin ; manifest ; 2014 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 306 ; 306 >
-      au < HighWireDrupalPlugin ; expected ; 2014 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 307 ; 307 >
+      au < HighWireDrupalPlugin ; manifest ; 2014 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 307 ; 307 >
 
     }
 
@@ -818,7 +818,7 @@
       au < HighWireDrupalPlugin ; testing ; 2013 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 304 ; 304 >
       au < HighWireDrupalPlugin ; testing ; 2013 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 305 ; 305 >
       au < HighWireDrupalPlugin ; manifest ; 2014 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 306 ; 306 >
-      au < HighWireDrupalPlugin ; expected ; 2014 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 307 ; 307 >
+      au < HighWireDrupalPlugin ; manifest ; 2014 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 307 ; 307 >
 
     }
 
@@ -925,7 +925,7 @@
       au < HighWireDrupalPlugin ; testing ; 2013 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 304 ; 304 >
       au < HighWireDrupalPlugin ; testing ; 2013 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 305 ; 305 >
       au < HighWireDrupalPlugin ; manifest ; 2014 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 306 ; 306 >
-      au < HighWireDrupalPlugin ; expected ; 2014 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 307 ; 307 >
+      au < HighWireDrupalPlugin ; manifest ; 2014 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 307 ; 307 >
 
     }
 
@@ -1031,7 +1031,7 @@
       au < HighWireDrupalPlugin ; testing ; 2013 ; American Journal of Physiology - Renal Physiology Volume 304 ; 304 >
       au < HighWireDrupalPlugin ; manifest ; 2013 ; American Journal of Physiology - Renal Physiology Volume 305 ; 305 >
       au < HighWireDrupalPlugin ; manifest ; 2014 ; American Journal of Physiology - Renal Physiology Volume 306 ; 306 >
-      au < HighWireDrupalPlugin ; expected ; 2014 ; American Journal of Physiology - Renal Physiology Volume 307 ; 307 >
+      au < HighWireDrupalPlugin ; manifest ; 2014 ; American Journal of Physiology - Renal Physiology Volume 307 ; 307 >
 
     }
 
@@ -1063,123 +1063,123 @@
 
     {
 
-      au < HighWirePressH20Plugin ; manifest ; 1948-1949 ; Journal of Applied Physiology Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; manifest ; 1949-1950 ; Journal of Applied Physiology Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; manifest ; 1950-1951 ; Journal of Applied Physiology Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; manifest ; 1951-1952 ; Journal of Applied Physiology Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; manifest ; 1952-1953 ; Journal of Applied Physiology Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; manifest ; 1953-1954 ; Journal of Applied Physiology Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; manifest ; 1954-1955 ; Journal of Applied Physiology Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; manifest ; 1955-1956 ; Journal of Applied Physiology Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; manifest ; 1956 ; Journal of Applied Physiology Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; manifest ; 1957 ; Journal of Applied Physiology Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; manifest ; 1957 ; Journal of Applied Physiology Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; manifest ; 1958 ; Journal of Applied Physiology Volume 12 ; 12 >
-      au < HighWirePressH20Plugin ; manifest ; 1958 ; Journal of Applied Physiology Volume 13 ; 13 >
-      au < HighWirePressH20Plugin ; manifest ; 1959 ; Journal of Applied Physiology Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; manifest ; 1960 ; Journal of Applied Physiology Volume 15 ; 15 >
-      au < HighWirePressH20Plugin ; manifest ; 1961 ; Journal of Applied Physiology Volume 16 ; 16 >
-      au < HighWirePressH20Plugin ; manifest ; 1962 ; Journal of Applied Physiology Volume 17 ; 17 >
-      au < HighWirePressH20Plugin ; manifest ; 1963 ; Journal of Applied Physiology Volume 18 ; 18 >
-      au < HighWirePressH20Plugin ; manifest ; 1964 ; Journal of Applied Physiology Volume 19 ; 19 >
-      au < HighWirePressH20Plugin ; manifest ; 1965 ; Journal of Applied Physiology Volume 20 ; 20 >
-      au < HighWirePressH20Plugin ; manifest ; 1966 ; Journal of Applied Physiology Volume 21 ; 21 >
-      au < HighWirePressH20Plugin ; manifest ; 1967 ; Journal of Applied Physiology Volume 22 ; 22 >
-      au < HighWirePressH20Plugin ; manifest ; 1967 ; Journal of Applied Physiology Volume 23 ; 23 >
-      au < HighWirePressH20Plugin ; manifest ; 1968 ; Journal of Applied Physiology Volume 24 ; 24 >
-      au < HighWirePressH20Plugin ; manifest ; 1968 ; Journal of Applied Physiology Volume 25 ; 25 >
-      au < HighWirePressH20Plugin ; manifest ; 1969 ; Journal of Applied Physiology Volume 26 ; 26 >
-      au < HighWirePressH20Plugin ; manifest ; 1969 ; Journal of Applied Physiology Volume 27 ; 27 >
-      au < HighWirePressH20Plugin ; manifest ; 1970 ; Journal of Applied Physiology Volume 28 ; 28 >
-      au < HighWirePressH20Plugin ; manifest ; 1970 ; Journal of Applied Physiology Volume 29 ; 29 >
-      au < HighWirePressH20Plugin ; manifest ; 1971 ; Journal of Applied Physiology Volume 30 ; 30 >
-      au < HighWirePressH20Plugin ; manifest ; 1971 ; Journal of Applied Physiology Volume 31 ; 31 >
-      au < HighWirePressH20Plugin ; manifest ; 1972 ; Journal of Applied Physiology Volume 32 ; 32 >
-      au < HighWirePressH20Plugin ; manifest ; 1972 ; Journal of Applied Physiology Volume 33 ; 33 >
-      au < HighWirePressH20Plugin ; manifest ; 1973 ; Journal of Applied Physiology Volume 34 ; 34 >
-      au < HighWirePressH20Plugin ; manifest ; 1973 ; Journal of Applied Physiology Volume 35 ; 35 >
-      au < HighWirePressH20Plugin ; manifest ; 1974 ; Journal of Applied Physiology Volume 36 ; 36 >
-      au < HighWirePressH20Plugin ; manifest ; 1974 ; Journal of Applied Physiology Volume 37 ; 37 >
-      au < HighWirePressH20Plugin ; manifest ; 1975 ; Journal of Applied Physiology Volume 38 ; 38 >
-      au < HighWirePressH20Plugin ; manifest ; 1975 ; Journal of Applied Physiology Volume 39 ; 39 >
-      au < HighWirePressH20Plugin ; manifest ; 1976 ; Journal of Applied Physiology Volume 40 ; 40 >
-      au < HighWirePressH20Plugin ; manifest ; 1976 ; Journal of Applied Physiology Volume 41 ; 41 >
-      au < HighWirePressH20Plugin ; manifest ; 1977 ; Journal of Applied Physiology Volume 42 ; 42 >
-      au < HighWirePressH20Plugin ; manifest ; 1977 ; Journal of Applied Physiology Volume 43 ; 43 >
-      au < HighWirePressH20Plugin ; manifest ; 1978 ; Journal of Applied Physiology Volume 44 ; 44 >
-      au < HighWirePressH20Plugin ; manifest ; 1978 ; Journal of Applied Physiology Volume 45 ; 45 >
-      au < HighWirePressH20Plugin ; manifest ; 1979 ; Journal of Applied Physiology Volume 46 ; 46 >
-      au < HighWirePressH20Plugin ; manifest ; 1979 ; Journal of Applied Physiology Volume 47 ; 47 >
-      au < HighWirePressH20Plugin ; manifest ; 1980 ; Journal of Applied Physiology Volume 48 ; 48 >
-      au < HighWirePressH20Plugin ; manifest ; 1980 ; Journal of Applied Physiology Volume 49 ; 49 >
-      au < HighWirePressH20Plugin ; manifest ; 1981 ; Journal of Applied Physiology Volume 50 ; 50 >
-      au < HighWirePressH20Plugin ; manifest ; 1981 ; Journal of Applied Physiology Volume 51 ; 51 >
-      au < HighWirePressH20Plugin ; manifest ; 1982 ; Journal of Applied Physiology Volume 52 ; 52 >
-      au < HighWirePressH20Plugin ; manifest ; 1982 ; Journal of Applied Physiology Volume 53 ; 53 >
-      au < HighWirePressH20Plugin ; manifest ; 1983 ; Journal of Applied Physiology Volume 54 ; 54 >
-      au < HighWirePressH20Plugin ; manifest ; 1983 ; Journal of Applied Physiology Volume 55 ; 55 >
-      au < HighWirePressH20Plugin ; manifest ; 1984 ; Journal of Applied Physiology Volume 56 ; 56 >
-      au < HighWirePressH20Plugin ; manifest ; 1984 ; Journal of Applied Physiology Volume 57 ; 57 >
-      au < HighWirePressH20Plugin ; manifest ; 1985 ; Journal of Applied Physiology Volume 58 ; 58 >
-      au < HighWirePressH20Plugin ; manifest ; 1985 ; Journal of Applied Physiology Volume 59 ; 59 >
-      au < HighWirePressH20Plugin ; manifest ; 1986 ; Journal of Applied Physiology Volume 60 ; 60 >
-      au < HighWirePressH20Plugin ; manifest ; 1986 ; Journal of Applied Physiology Volume 61 ; 61 >
-      au < HighWirePressH20Plugin ; manifest ; 1987 ; Journal of Applied Physiology Volume 62 ; 62 >
-      au < HighWirePressH20Plugin ; manifest ; 1987 ; Journal of Applied Physiology Volume 63 ; 63 >
-      au < HighWirePressH20Plugin ; manifest ; 1988 ; Journal of Applied Physiology Volume 64 ; 64 >
-      au < HighWirePressH20Plugin ; manifest ; 1988 ; Journal of Applied Physiology Volume 65 ; 65 >
-      au < HighWirePressH20Plugin ; manifest ; 1989 ; Journal of Applied Physiology Volume 66 ; 66 >
-      au < HighWirePressH20Plugin ; manifest ; 1989 ; Journal of Applied Physiology Volume 67 ; 67 >
-      au < HighWirePressH20Plugin ; manifest ; 1990 ; Journal of Applied Physiology Volume 68 ; 68 >
-      au < HighWirePressH20Plugin ; manifest ; 1990 ; Journal of Applied Physiology Volume 69 ; 69 >
-      au < HighWirePressH20Plugin ; manifest ; 1991 ; Journal of Applied Physiology Volume 70 ; 70 >
-      au < HighWirePressH20Plugin ; manifest ; 1991 ; Journal of Applied Physiology Volume 71 ; 71 >
-      au < HighWirePressH20Plugin ; manifest ; 1992 ; Journal of Applied Physiology Volume 72 ; 72 >
-      au < HighWirePressH20Plugin ; manifest ; 1992 ; Journal of Applied Physiology Volume 73 ; 73 >
-      au < HighWirePressH20Plugin ; manifest ; 1993 ; Journal of Applied Physiology Volume 74 ; 74 >
-      au < HighWirePressH20Plugin ; manifest ; 1993 ; Journal of Applied Physiology Volume 75 ; 75 >
-      au < HighWirePressH20Plugin ; manifest ; 1994 ; Journal of Applied Physiology Volume 76 ; 76 >
-      au < HighWirePressH20Plugin ; manifest ; 1994 ; Journal of Applied Physiology Volume 77 ; 77 >
-      au < HighWirePressH20Plugin ; manifest ; 1995 ; Journal of Applied Physiology Volume 78 ; 78 >
-      au < HighWirePressH20Plugin ; manifest ; 1995 ; Journal of Applied Physiology Volume 79 ; 79 >
-      au < HighWirePressH20Plugin ; manifest ; 1996 ; Journal of Applied Physiology Volume 80 ; 80 >
-      au < HighWirePressH20Plugin ; manifest ; 1996 ; Journal of Applied Physiology Volume 81 ; 81 >
-      au < HighWirePressH20Plugin ; manifest ; 1997 ; Journal of Applied Physiology Volume 82 ; 82 >
-      au < HighWirePressH20Plugin ; manifest ; 1997 ; Journal of Applied Physiology Volume 83 ; 83 >
-      au < HighWirePressH20Plugin ; manifest ; 1998 ; Journal of Applied Physiology Volume 84 ; 84 >
-      au < HighWirePressH20Plugin ; manifest ; 1998 ; Journal of Applied Physiology Volume 85 ; 85 >
-      au < HighWirePressH20Plugin ; manifest ; 1999 ; Journal of Applied Physiology Volume 86 ; 86 >
-      au < HighWirePressH20Plugin ; manifest ; 1999 ; Journal of Applied Physiology Volume 87 ; 87 >
-      au < HighWirePressH20Plugin ; manifest ; 2000 ; Journal of Applied Physiology Volume 88 ; 88 >
-      au < HighWirePressH20Plugin ; manifest ; 2000 ; Journal of Applied Physiology Volume 89 ; 89 >
-      au < HighWirePressH20Plugin ; manifest ; 2001 ; Journal of Applied Physiology Volume 90 ; 90 >
-      au < HighWirePressH20Plugin ; manifest ; 2001 ; Journal of Applied Physiology Volume 91 ; 91 >
-      au < HighWirePressH20Plugin ; manifest ; 2002 ; Journal of Applied Physiology Volume 92 ; 92 >
-      au < HighWirePressH20Plugin ; manifest ; 2002 ; Journal of Applied Physiology Volume 93 ; 93 >
-      au < HighWirePressH20Plugin ; manifest ; 2003 ; Journal of Applied Physiology Volume 94 ; 94 >
-      au < HighWirePressH20Plugin ; manifest ; 2003 ; Journal of Applied Physiology Volume 95 ; 95 >
-      au < HighWirePressH20Plugin ; manifest ; 2004 ; Journal of Applied Physiology Volume 96 ; 96 >
-      au < HighWirePressH20Plugin ; manifest ; 2004 ; Journal of Applied Physiology Volume 97 ; 97 >
+      au < HighWirePressH20Plugin ; down ; 1948-1949 ; Journal of Applied Physiology Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; down ; 1949-1950 ; Journal of Applied Physiology Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; down ; 1950-1951 ; Journal of Applied Physiology Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; down ; 1951-1952 ; Journal of Applied Physiology Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; down ; 1952-1953 ; Journal of Applied Physiology Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; down ; 1953-1954 ; Journal of Applied Physiology Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; down ; 1954-1955 ; Journal of Applied Physiology Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; down ; 1955-1956 ; Journal of Applied Physiology Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; down ; 1956 ; Journal of Applied Physiology Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; down ; 1957 ; Journal of Applied Physiology Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; down ; 1957 ; Journal of Applied Physiology Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; down ; 1958 ; Journal of Applied Physiology Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; down ; 1958 ; Journal of Applied Physiology Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; down ; 1959 ; Journal of Applied Physiology Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; down ; 1960 ; Journal of Applied Physiology Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; down ; 1961 ; Journal of Applied Physiology Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; down ; 1962 ; Journal of Applied Physiology Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; down ; 1963 ; Journal of Applied Physiology Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; down ; 1964 ; Journal of Applied Physiology Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; down ; 1965 ; Journal of Applied Physiology Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; down ; 1966 ; Journal of Applied Physiology Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; down ; 1967 ; Journal of Applied Physiology Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; down ; 1967 ; Journal of Applied Physiology Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; down ; 1968 ; Journal of Applied Physiology Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; down ; 1968 ; Journal of Applied Physiology Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; down ; 1969 ; Journal of Applied Physiology Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; down ; 1969 ; Journal of Applied Physiology Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; down ; 1970 ; Journal of Applied Physiology Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; down ; 1970 ; Journal of Applied Physiology Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; down ; 1971 ; Journal of Applied Physiology Volume 30 ; 30 >
+      au < HighWirePressH20Plugin ; down ; 1971 ; Journal of Applied Physiology Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; down ; 1972 ; Journal of Applied Physiology Volume 32 ; 32 >
+      au < HighWirePressH20Plugin ; down ; 1972 ; Journal of Applied Physiology Volume 33 ; 33 >
+      au < HighWirePressH20Plugin ; down ; 1973 ; Journal of Applied Physiology Volume 34 ; 34 >
+      au < HighWirePressH20Plugin ; down ; 1973 ; Journal of Applied Physiology Volume 35 ; 35 >
+      au < HighWirePressH20Plugin ; down ; 1974 ; Journal of Applied Physiology Volume 36 ; 36 >
+      au < HighWirePressH20Plugin ; down ; 1974 ; Journal of Applied Physiology Volume 37 ; 37 >
+      au < HighWirePressH20Plugin ; down ; 1975 ; Journal of Applied Physiology Volume 38 ; 38 >
+      au < HighWirePressH20Plugin ; down ; 1975 ; Journal of Applied Physiology Volume 39 ; 39 >
+      au < HighWirePressH20Plugin ; down ; 1976 ; Journal of Applied Physiology Volume 40 ; 40 >
+      au < HighWirePressH20Plugin ; down ; 1976 ; Journal of Applied Physiology Volume 41 ; 41 >
+      au < HighWirePressH20Plugin ; down ; 1977 ; Journal of Applied Physiology Volume 42 ; 42 >
+      au < HighWirePressH20Plugin ; down ; 1977 ; Journal of Applied Physiology Volume 43 ; 43 >
+      au < HighWirePressH20Plugin ; down ; 1978 ; Journal of Applied Physiology Volume 44 ; 44 >
+      au < HighWirePressH20Plugin ; down ; 1978 ; Journal of Applied Physiology Volume 45 ; 45 >
+      au < HighWirePressH20Plugin ; down ; 1979 ; Journal of Applied Physiology Volume 46 ; 46 >
+      au < HighWirePressH20Plugin ; down ; 1979 ; Journal of Applied Physiology Volume 47 ; 47 >
+      au < HighWirePressH20Plugin ; down ; 1980 ; Journal of Applied Physiology Volume 48 ; 48 >
+      au < HighWirePressH20Plugin ; down ; 1980 ; Journal of Applied Physiology Volume 49 ; 49 >
+      au < HighWirePressH20Plugin ; down ; 1981 ; Journal of Applied Physiology Volume 50 ; 50 >
+      au < HighWirePressH20Plugin ; down ; 1981 ; Journal of Applied Physiology Volume 51 ; 51 >
+      au < HighWirePressH20Plugin ; down ; 1982 ; Journal of Applied Physiology Volume 52 ; 52 >
+      au < HighWirePressH20Plugin ; down ; 1982 ; Journal of Applied Physiology Volume 53 ; 53 >
+      au < HighWirePressH20Plugin ; down ; 1983 ; Journal of Applied Physiology Volume 54 ; 54 >
+      au < HighWirePressH20Plugin ; down ; 1983 ; Journal of Applied Physiology Volume 55 ; 55 >
+      au < HighWirePressH20Plugin ; down ; 1984 ; Journal of Applied Physiology Volume 56 ; 56 >
+      au < HighWirePressH20Plugin ; down ; 1984 ; Journal of Applied Physiology Volume 57 ; 57 >
+      au < HighWirePressH20Plugin ; down ; 1985 ; Journal of Applied Physiology Volume 58 ; 58 >
+      au < HighWirePressH20Plugin ; down ; 1985 ; Journal of Applied Physiology Volume 59 ; 59 >
+      au < HighWirePressH20Plugin ; down ; 1986 ; Journal of Applied Physiology Volume 60 ; 60 >
+      au < HighWirePressH20Plugin ; down ; 1986 ; Journal of Applied Physiology Volume 61 ; 61 >
+      au < HighWirePressH20Plugin ; down ; 1987 ; Journal of Applied Physiology Volume 62 ; 62 >
+      au < HighWirePressH20Plugin ; down ; 1987 ; Journal of Applied Physiology Volume 63 ; 63 >
+      au < HighWirePressH20Plugin ; down ; 1988 ; Journal of Applied Physiology Volume 64 ; 64 >
+      au < HighWirePressH20Plugin ; down ; 1988 ; Journal of Applied Physiology Volume 65 ; 65 >
+      au < HighWirePressH20Plugin ; down ; 1989 ; Journal of Applied Physiology Volume 66 ; 66 >
+      au < HighWirePressH20Plugin ; down ; 1989 ; Journal of Applied Physiology Volume 67 ; 67 >
+      au < HighWirePressH20Plugin ; down ; 1990 ; Journal of Applied Physiology Volume 68 ; 68 >
+      au < HighWirePressH20Plugin ; down ; 1990 ; Journal of Applied Physiology Volume 69 ; 69 >
+      au < HighWirePressH20Plugin ; down ; 1991 ; Journal of Applied Physiology Volume 70 ; 70 >
+      au < HighWirePressH20Plugin ; down ; 1991 ; Journal of Applied Physiology Volume 71 ; 71 >
+      au < HighWirePressH20Plugin ; down ; 1992 ; Journal of Applied Physiology Volume 72 ; 72 >
+      au < HighWirePressH20Plugin ; down ; 1992 ; Journal of Applied Physiology Volume 73 ; 73 >
+      au < HighWirePressH20Plugin ; down ; 1993 ; Journal of Applied Physiology Volume 74 ; 74 >
+      au < HighWirePressH20Plugin ; down ; 1993 ; Journal of Applied Physiology Volume 75 ; 75 >
+      au < HighWirePressH20Plugin ; down ; 1994 ; Journal of Applied Physiology Volume 76 ; 76 >
+      au < HighWirePressH20Plugin ; down ; 1994 ; Journal of Applied Physiology Volume 77 ; 77 >
+      au < HighWirePressH20Plugin ; down ; 1995 ; Journal of Applied Physiology Volume 78 ; 78 >
+      au < HighWirePressH20Plugin ; down ; 1995 ; Journal of Applied Physiology Volume 79 ; 79 >
+      au < HighWirePressH20Plugin ; down ; 1996 ; Journal of Applied Physiology Volume 80 ; 80 >
+      au < HighWirePressH20Plugin ; down ; 1996 ; Journal of Applied Physiology Volume 81 ; 81 >
+      au < HighWirePressH20Plugin ; down ; 1997 ; Journal of Applied Physiology Volume 82 ; 82 >
+      au < HighWirePressH20Plugin ; down ; 1997 ; Journal of Applied Physiology Volume 83 ; 83 >
+      au < HighWirePressH20Plugin ; down ; 1998 ; Journal of Applied Physiology Volume 84 ; 84 >
+      au < HighWirePressH20Plugin ; down ; 1998 ; Journal of Applied Physiology Volume 85 ; 85 >
+      au < HighWirePressH20Plugin ; down ; 1999 ; Journal of Applied Physiology Volume 86 ; 86 >
+      au < HighWirePressH20Plugin ; down ; 1999 ; Journal of Applied Physiology Volume 87 ; 87 >
+      au < HighWirePressH20Plugin ; down ; 2000 ; Journal of Applied Physiology Volume 88 ; 88 >
+      au < HighWirePressH20Plugin ; down ; 2000 ; Journal of Applied Physiology Volume 89 ; 89 >
+      au < HighWirePressH20Plugin ; down ; 2001 ; Journal of Applied Physiology Volume 90 ; 90 >
+      au < HighWirePressH20Plugin ; down ; 2001 ; Journal of Applied Physiology Volume 91 ; 91 >
+      au < HighWirePressH20Plugin ; down ; 2002 ; Journal of Applied Physiology Volume 92 ; 92 >
+      au < HighWirePressH20Plugin ; down ; 2002 ; Journal of Applied Physiology Volume 93 ; 93 >
+      au < HighWirePressH20Plugin ; down ; 2003 ; Journal of Applied Physiology Volume 94 ; 94 >
+      au < HighWirePressH20Plugin ; down ; 2003 ; Journal of Applied Physiology Volume 95 ; 95 >
+      au < HighWirePressH20Plugin ; down ; 2004 ; Journal of Applied Physiology Volume 96 ; 96 >
+      au < HighWirePressH20Plugin ; down ; 2004 ; Journal of Applied Physiology Volume 97 ; 97 >
       au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Journal of Applied Physiology Volume 98 ; 98 >
       au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Journal of Applied Physiology Volume 99 ; 99 >
       au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Journal of Applied Physiology Volume 100 ; 100 >
       au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Journal of Applied Physiology Volume 101 ; 101 >
       au < HighWirePressH20Plugin ; doNotProcess ; 2007 ; Journal of Applied Physiology Volume 102 ; 102 >
-      au < HighWirePressH20Plugin ; released ; 2007 ; Journal of Applied Physiology Volume 103 ; 103 >
-      au < HighWirePressH20Plugin ; released ; 2008 ; Journal of Applied Physiology Volume 104 ; 104 >
-      au < HighWirePressH20Plugin ; released ; 2008 ; Journal of Applied Physiology Volume 105 ; 105 >
-      au < HighWirePressH20Plugin ; released ; 2009 ; Journal of Applied Physiology Volume 106 ; 106 >
-      au < HighWirePressH20Plugin ; released ; 2009 ; Journal of Applied Physiology Volume 107 ; 107 >
-      au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Applied Physiology Volume 108 ; 108 >
-      au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Applied Physiology Volume 109 ; 109 >
-      au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Applied Physiology Volume 110 ; 110 >
-      au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Applied Physiology Volume 111 ; 111 >
-      au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Applied Physiology Volume 112 ; 112 >
-      au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Applied Physiology Volume 113 ; 113 >
-      au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Applied Physiology Volume 114 ; 114 >
-      au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Applied Physiology Volume 115 ; 115 >
-      au < HighWirePressH20Plugin ; manifest ; 2014 ; Journal of Applied Physiology Volume 116 ; 116 >
-      au < HighWirePressH20Plugin ; expected ; 2014 ; Journal of Applied Physiology Volume 117 ; 117 >
+      au < HighWirePressH20Plugin ; down ; 2007 ; Journal of Applied Physiology Volume 103 ; 103 >
+      au < HighWirePressH20Plugin ; down ; 2008 ; Journal of Applied Physiology Volume 104 ; 104 >
+      au < HighWirePressH20Plugin ; down ; 2008 ; Journal of Applied Physiology Volume 105 ; 105 >
+      au < HighWirePressH20Plugin ; down ; 2009 ; Journal of Applied Physiology Volume 106 ; 106 >
+      au < HighWirePressH20Plugin ; down ; 2009 ; Journal of Applied Physiology Volume 107 ; 107 >
+      au < HighWirePressH20Plugin ; down ; 2010 ; Journal of Applied Physiology Volume 108 ; 108 >
+      au < HighWirePressH20Plugin ; down ; 2010 ; Journal of Applied Physiology Volume 109 ; 109 >
+      au < HighWirePressH20Plugin ; down ; 2011 ; Journal of Applied Physiology Volume 110 ; 110 >
+      au < HighWirePressH20Plugin ; down ; 2011 ; Journal of Applied Physiology Volume 111 ; 111 >
+      au < HighWirePressH20Plugin ; down ; 2012 ; Journal of Applied Physiology Volume 112 ; 112 >
+      au < HighWirePressH20Plugin ; down ; 2012 ; Journal of Applied Physiology Volume 113 ; 113 >
+      au < HighWireDrupalPlugin ; exists ; 2013 ; Journal of Applied Physiology Volume 114 ; 114 >
+      au < HighWireDrupalPlugin ; exists ; 2013 ; Journal of Applied Physiology Volume 115 ; 115 >
+      au < HighWireDrupalPlugin ; exists ; 2014 ; Journal of Applied Physiology Volume 116 ; 116 >
+      au < HighWireDrupalPlugin ; expected ; 2014 ; Journal of Applied Physiology Volume 117 ; 117 >
 
     }
 
@@ -1314,7 +1314,7 @@
       au < HighWireDrupalPlugin ; exists ; 2009 ; Journal of Neurophysiology Volume 101 ; 101 >
       au < HighWireDrupalPlugin ; exists ; 2009 ; Journal of Neurophysiology Volume 102 ; 102 >
       au < HighWireDrupalPlugin ; exists ; 2010 ; Journal of Neurophysiology Volume 103 ; 103 >
-      au < HighWireDrupalPlugin ; testing ; 2010 ; Journal of Neurophysiology Volume 104 ; 104 >
+      au < HighWireDrupalPlugin ; exists ; 2010 ; Journal of Neurophysiology Volume 104 ; 104 >
       au < HighWirePressH20Plugin ; down ; 2011 ; Journal of Neurophysiology Volume 105 ; 105 >
       au < HighWirePressH20Plugin ; down ; 2011 ; Journal of Neurophysiology Volume 106 ; 106 >
       au < HighWirePressH20Plugin ; down ; 2012 ; Journal of Neurophysiology Volume 107 ; 107 >
@@ -1359,25 +1359,25 @@
 
     {
 
-      au < HighWirePressH20Plugin ; manifest ; 1999 ; Physiological Genomics Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; manifest ; 2000 ; Physiological Genomics Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; manifest ; 2000 ; Physiological Genomics Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; manifest ; 2000-2001 ; Physiological Genomics Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; manifest ; 2001 ; Physiological Genomics Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; manifest ; 2001 ; Physiological Genomics Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; manifest ; 2001 ; Physiological Genomics Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; manifest ; 2002 ; Physiological Genomics Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; manifest ; 2002 ; Physiological Genomics Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; manifest ; 2002 ; Physiological Genomics Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; manifest ; 2002 ; Physiological Genomics Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; manifest ; 2002-2003 ; Physiological Genomics Volume 12 ; 12 >
-      au < HighWirePressH20Plugin ; manifest ; 2003 ; Physiological Genomics Volume 13 ; 13 >
-      au < HighWirePressH20Plugin ; manifest ; 2003 ; Physiological Genomics Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; manifest ; 2003 ; Physiological Genomics Volume 15 ; 15 >
-      au < HighWirePressH20Plugin ; manifest ; 2003-2004 ; Physiological Genomics Volume 16 ; 16 >
-      au < HighWirePressH20Plugin ; manifest ; 2004 ; Physiological Genomics Volume 17 ; 17 >
-      au < HighWirePressH20Plugin ; manifest ; 2004 ; Physiological Genomics Volume 18 ; 18 >
-      au < HighWirePressH20Plugin ; manifest ; 2004 ; Physiological Genomics Volume 19 ; 19 >
+      au < HighWireDrupalPlugin ; exists ; 1999 ; Physiological Genomics Volume 1 ; 1 >
+      au < HighWireDrupalPlugin ; exists ; 2000 ; Physiological Genomics Volume 2 ; 2 >
+      au < HighWireDrupalPlugin ; exists ; 2000 ; Physiological Genomics Volume 3 ; 3 >
+      au < HighWireDrupalPlugin ; exists ; 2000-2001 ; Physiological Genomics Volume 4 ; 4 >
+      au < HighWireDrupalPlugin ; exists ; 2001 ; Physiological Genomics Volume 5 ; 5 >
+      au < HighWireDrupalPlugin ; exists ; 2001 ; Physiological Genomics Volume 6 ; 6 >
+      au < HighWireDrupalPlugin ; exists ; 2001 ; Physiological Genomics Volume 7 ; 7 >
+      au < HighWireDrupalPlugin ; exists ; 2002 ; Physiological Genomics Volume 8 ; 8 >
+      au < HighWireDrupalPlugin ; exists ; 2002 ; Physiological Genomics Volume 9 ; 9 >
+      au < HighWireDrupalPlugin ; exists ; 2002 ; Physiological Genomics Volume 10 ; 10 >
+      au < HighWireDrupalPlugin ; exists ; 2002 ; Physiological Genomics Volume 11 ; 11 >
+      au < HighWireDrupalPlugin ; exists ; 2002-2003 ; Physiological Genomics Volume 12 ; 12 >
+      au < HighWireDrupalPlugin ; exists ; 2003 ; Physiological Genomics Volume 13 ; 13 >
+      au < HighWireDrupalPlugin ; exists ; 2003 ; Physiological Genomics Volume 14 ; 14 >
+      au < HighWireDrupalPlugin ; exists ; 2003 ; Physiological Genomics Volume 15 ; 15 >
+      au < HighWireDrupalPlugin ; exists ; 2003-2004 ; Physiological Genomics Volume 16 ; 16 >
+      au < HighWireDrupalPlugin ; exists ; 2004 ; Physiological Genomics Volume 17 ; 17 >
+      au < HighWireDrupalPlugin ; exists ; 2004 ; Physiological Genomics Volume 18 ; 18 >
+      au < HighWireDrupalPlugin ; exists ; 2004 ; Physiological Genomics Volume 19 ; 19 >
       au < HighWirePressH20Plugin ; doNotProcess ; 2004-2005 ; Physiological Genomics Volume 20 ; 20 >
       au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Physiological Genomics Volume 21 ; 21 >
       au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Physiological Genomics Volume 22 ; 22 >
@@ -1388,24 +1388,24 @@
       au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Physiological Genomics Volume 27 ; 27 >
       au < HighWirePressH20Plugin ; doNotProcess ; 2006-2007 ; Physiological Genomics Volume 28 ; 28 >
       au < HighWirePressH20Plugin ; doNotProcess ; 2007 ; Physiological Genomics Volume 29 ; 29 >
-      au < HighWirePressH20Plugin ; manifest ; 2007 ; Physiological Genomics Volume 30 ; 30 >
-      au < HighWirePressH20Plugin ; manifest ; 2007 ; Physiological Genomics Volume 31 ; 31 >
-      au < HighWirePressH20Plugin ; manifest ; 2007-2008 ; Physiological Genomics Volume 32 ; 32 >
-      au < HighWirePressH20Plugin ; manifest ; 2008 ; Physiological Genomics Volume 33 ; 33 >
-      au < HighWirePressH20Plugin ; manifest ; 2008 ; Physiological Genomics Volume 34 ; 34 >
-      au < HighWirePressH20Plugin ; manifest ; 2008 ; Physiological Genomics Volume 35 ; 35 >
-      au < HighWirePressH20Plugin ; manifest ; 2008-2009 ; Physiological Genomics Volume 36 ; 36 >
-      au < HighWirePressH20Plugin ; manifest ; 2009 ; Physiological Genomics Volume 37 ; 37 >
-      au < HighWirePressH20Plugin ; manifest ; 2009 ; Physiological Genomics Volume 38 ; 38 >
-      au < HighWirePressH20Plugin ; manifest ; 2009 ; Physiological Genomics Volume 39 ; 39 >
-      au < HighWirePressH20Plugin ; manifest ; 2009-2010 ; Physiological Genomics Volume 40 ; 40 >
-      au < HighWirePressH20Plugin ; manifest ; 2010 ; Physiological Genomics Volume 41 ; 41 >
-      au < HighWirePressH20Plugin ; manifest ; 2010 ; Physiological Genomics Volume 42 ; 42 >
-      au < HighWirePressH20Plugin ; manifest ; 2010 ; Physiological Genomics Volume 42A ; 42A >
-      au < HighWirePressH20Plugin ; released ; 2011 ; Physiological Genomics Volume 43 ; 43 >
-      au < HighWirePressH20Plugin ; released ; 2012 ; Physiological Genomics Volume 44 ; 44 >
-      au < HighWirePressH20Plugin ; manifest ; 2013 ; Physiological Genomics Volume 45 ; 45 >
-      au < HighWirePressH20Plugin ; manifest ; 2014 ; Physiological Genomics Volume 46 ; 46 >
+      au < HighWireDrupalPlugin ; exists ; 2007 ; Physiological Genomics Volume 30 ; 30 >
+      au < HighWireDrupalPlugin ; exists ; 2007 ; Physiological Genomics Volume 31 ; 31 >
+      au < HighWireDrupalPlugin ; exists ; 2007-2008 ; Physiological Genomics Volume 32 ; 32 >
+      au < HighWireDrupalPlugin ; exists ; 2008 ; Physiological Genomics Volume 33 ; 33 >
+      au < HighWireDrupalPlugin ; exists ; 2008 ; Physiological Genomics Volume 34 ; 34 >
+      au < HighWireDrupalPlugin ; exists ; 2008 ; Physiological Genomics Volume 35 ; 35 >
+      au < HighWireDrupalPlugin ; exists ; 2008-2009 ; Physiological Genomics Volume 36 ; 36 >
+      au < HighWireDrupalPlugin ; exists ; 2009 ; Physiological Genomics Volume 37 ; 37 >
+      au < HighWireDrupalPlugin ; exists ; 2009 ; Physiological Genomics Volume 38 ; 38 >
+      au < HighWireDrupalPlugin ; exists ; 2009 ; Physiological Genomics Volume 39 ; 39 >
+      au < HighWireDrupalPlugin ; exists ; 2009-2010 ; Physiological Genomics Volume 40 ; 40 >
+      au < HighWireDrupalPlugin ; exists ; 2010 ; Physiological Genomics Volume 41 ; 41 >
+      au < HighWireDrupalPlugin ; exists ; 2010 ; Physiological Genomics Volume 42 ; 42 >
+      au < HighWireDrupalPlugin ; exists ; 2010 ; Physiological Genomics Volume 42A ; 42A >
+      au < HighWirePressH20Plugin ; down ; 2011 ; Physiological Genomics Volume 43 ; 43 >
+      au < HighWirePressH20Plugin ; down ; 2012 ; Physiological Genomics Volume 44 ; 44 >
+      au < HighWireDrupalPlugin ; exists ; 2013 ; Physiological Genomics Volume 45 ; 45 >
+      au < HighWireDrupalPlugin ; exists ; 2014 ; Physiological Genomics Volume 46 ; 46 >
 
     }
 
@@ -1528,7 +1528,7 @@
       au < HighWirePressH20Plugin ; down ; 2011 ; Physiological Reviews Volume 91 ; 91 >
       au < HighWirePressH20Plugin ; down ; 2012 ; Physiological Reviews Volume 92 ; 92 >
       au < HighWireDrupalPlugin ; exists ; 2013 ; Physiological Reviews Volume 93 ; 93 >
-      au < HighWireDrupalPlugin ; testing ; 2014 ; Physiological Reviews Volume 94 ; 94 >
+      au < HighWireDrupalPlugin ; exists ; 2014 ; Physiological Reviews Volume 94 ; 94 >
 
     }
 
@@ -1543,7 +1543,7 @@
       issnl = 1548-9221
     >
 
-    comment[current_plugin] = HighWirePressH20Plugin
+    comment[current_plugin] = HighWireDrupalPlugin
     param[base_url] = http://physiologyonline.physiology.org/
 
     {
@@ -1558,35 +1558,35 @@
 
     {
 
-      au < HighWirePressH20Plugin ; manifest ; 1986 ; Physiology Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; manifest ; 1987 ; Physiology Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; manifest ; 1988 ; Physiology Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; manifest ; 1989 ; Physiology Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; manifest ; 1990 ; Physiology Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; manifest ; 1991 ; Physiology Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; manifest ; 1992 ; Physiology Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; manifest ; 1993 ; Physiology Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; manifest ; 1994 ; Physiology Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; manifest ; 1995 ; Physiology Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; manifest ; 1996 ; Physiology Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; manifest ; 1997 ; Physiology Volume 12 ; 12 >
-      au < HighWirePressH20Plugin ; manifest ; 1998 ; Physiology Volume 13 ; 13 >
-      au < HighWirePressH20Plugin ; manifest ; 1999 ; Physiology Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; manifest ; 2000 ; Physiology Volume 15 ; 15 >
-      au < HighWirePressH20Plugin ; manifest ; 2001 ; Physiology Volume 16 ; 16 >
-      au < HighWirePressH20Plugin ; manifest ; 2002 ; Physiology Volume 17 ; 17 >
-      au < HighWirePressH20Plugin ; manifest ; 2003 ; Physiology Volume 18 ; 18 >
-      au < HighWirePressH20Plugin ; manifest ; 2004 ; Physiology Volume 19 ; 19 >
-      au < HighWirePressH20Plugin ; manifest ; 2005 ; Physiology Volume 20 ; 20 >
-      au < HighWirePressH20Plugin ; manifest ; 2006 ; Physiology Volume 21 ; 21 >
-      au < HighWirePressH20Plugin ; manifest ; 2007 ; Physiology Volume 22 ; 22 >
-      au < HighWirePressH20Plugin ; released ; 2008 ; Physiology Volume 23 ; 23 >
-      au < HighWirePressH20Plugin ; released ; 2009 ; Physiology Volume 24 ; 24 >
-      au < HighWirePressH20Plugin ; manifest ; 2010 ; Physiology Volume 25 ; 25 >
-      au < HighWirePressH20Plugin ; released ; 2011 ; Physiology Volume 26 ; 26 >
-      au < HighWirePressH20Plugin ; released ; 2012 ; Physiology Volume 27 ; 27 >
-      au < HighWirePressH20Plugin ; manifest ; 2013 ; Physiology Volume 28 ; 28 >
-      au < HighWirePressH20Plugin ; manifest ; 2014 ; Physiology Volume 29 ; 29 >
+      au < HighWireDrupalPlugin ; exists ; 1986 ; Physiology Volume 1 ; 1 >
+      au < HighWireDrupalPlugin ; exists ; 1987 ; Physiology Volume 2 ; 2 >
+      au < HighWireDrupalPlugin ; exists ; 1988 ; Physiology Volume 3 ; 3 >
+      au < HighWireDrupalPlugin ; exists ; 1989 ; Physiology Volume 4 ; 4 >
+      au < HighWireDrupalPlugin ; exists ; 1990 ; Physiology Volume 5 ; 5 >
+      au < HighWireDrupalPlugin ; exists ; 1991 ; Physiology Volume 6 ; 6 >
+      au < HighWireDrupalPlugin ; exists ; 1992 ; Physiology Volume 7 ; 7 >
+      au < HighWireDrupalPlugin ; exists ; 1993 ; Physiology Volume 8 ; 8 >
+      au < HighWireDrupalPlugin ; exists ; 1994 ; Physiology Volume 9 ; 9 >
+      au < HighWireDrupalPlugin ; exists ; 1995 ; Physiology Volume 10 ; 10 >
+      au < HighWireDrupalPlugin ; exists ; 1996 ; Physiology Volume 11 ; 11 >
+      au < HighWireDrupalPlugin ; exists ; 1997 ; Physiology Volume 12 ; 12 >
+      au < HighWireDrupalPlugin ; exists ; 1998 ; Physiology Volume 13 ; 13 >
+      au < HighWireDrupalPlugin ; exists ; 1999 ; Physiology Volume 14 ; 14 >
+      au < HighWireDrupalPlugin ; exists ; 2000 ; Physiology Volume 15 ; 15 >
+      au < HighWireDrupalPlugin ; exists ; 2001 ; Physiology Volume 16 ; 16 >
+      au < HighWireDrupalPlugin ; exists ; 2002 ; Physiology Volume 17 ; 17 >
+      au < HighWireDrupalPlugin ; exists ; 2003 ; Physiology Volume 18 ; 18 >
+      au < HighWireDrupalPlugin ; exists ; 2004 ; Physiology Volume 19 ; 19 >
+      au < HighWireDrupalPlugin ; exists ; 2005 ; Physiology Volume 20 ; 20 >
+      au < HighWireDrupalPlugin ; exists ; 2006 ; Physiology Volume 21 ; 21 >
+      au < HighWireDrupalPlugin ; exists ; 2007 ; Physiology Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; down ; 2008 ; Physiology Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; down ; 2009 ; Physiology Volume 24 ; 24 >
+      au < HighWireDrupalPlugin ; exists ; 2010 ; Physiology Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; down ; 2011 ; Physiology Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; down ; 2012 ; Physiology Volume 27 ; 27 >
+      au < HighWireDrupalPlugin ; exists ; 2013 ; Physiology Volume 28 ; 28 >
+      au < HighWireDrupalPlugin ; exists ; 2014 ; Physiology Volume 29 ; 29 >
 
     }
 

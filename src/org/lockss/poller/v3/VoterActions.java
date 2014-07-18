@@ -1,10 +1,10 @@
 /*
- * $Id: VoterActions.java,v 1.35 2013-08-19 22:33:16 barry409 Exp $
+ * $Id: VoterActions.java,v 1.35.6.1 2014-07-18 15:59:08 wkwilson Exp $
  */
 
 /*
 
- Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -294,8 +294,8 @@ public class VoterActions {
     IdentityManager idmgr = ud.getVoter().getIdentityManager();
     ArchivalUnit au = ud.getVoter().getAu();
     idmgr.signalPartialAgreement((ud.getVoter().isSampledPoll()
-				  ? AgreementType.SYMMETRIC_POP_HINT
-				  : AgreementType.SYMMETRIC_POR_HINT),
+				  ? AgreementType.POP_HINT
+				  : AgreementType.POR_HINT),
 				 poller, au, (float) agreementHint);
     if (! ud.isSymmetricPoll()) {
       if (msg.getVoterNonce2() != null) {

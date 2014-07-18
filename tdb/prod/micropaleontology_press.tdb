@@ -30,7 +30,7 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = mipa
   
-      au < wanted ; 2002 ; Micropaleontology Volume 48 ; 48 >
+      au < doNotProcess ; 2002 ; Micropaleontology Volume 48 ; 48 >
       au < released ; 2003 ; Micropaleontology Volume 49 ; 49 >
       au < released ; 2004 ; Micropaleontology Volume 50 ; 50 >
       au < released ; 2005 ; Micropaleontology Volume 51 ; 51 >

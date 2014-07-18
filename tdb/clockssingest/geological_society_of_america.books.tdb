@@ -226,11 +226,11 @@
     au < manifest ; exists ; 2009 ;  ; 978-0-8137-1204-8 ; Geological Society of America Memoirs Volume 204 ; 204 >
     au < manifest ; exists ; 2010 ;  ; 978-0-8137-1205-5 ; Geological Society of America Memoirs Volume 205 ; 205 >
     au < manifest ; exists ; 2010 ; 10.1130/978-0-8137-1206-2 ; 978-0-8137-1206-2 ; Geological Society of America Memoirs Volume 206 ; 206 >
-    au < finished ; crawling ; 2011 ; 10.1130/9780813712079 ; 978-0-8137-1207-9 ; Geological Society of America Memoirs Volume 207 ; 207 >
-    au < finished ; crawling ; 2012 ; 10.1130/9780813712086 ; 978-0-8137-1208-6 ; Geological Society of America Memoirs Volume 208 ; 208 >
+    au < finished ; frozen ; 2011 ; 10.1130/9780813712079 ; 978-0-8137-1207-9 ; Geological Society of America Memoirs Volume 207 ; 207 >
+    au < finished ; frozen ; 2012 ; 10.1130/9780813712086 ; 978-0-8137-1208-6 ; Geological Society of America Memoirs Volume 208 ; 208 >
     au < crawling ; exists ; 2012 ; 10.1130/9780813712093 ; 978-0-8137-1209-3 ; Geological Society of America Memoirs Volume 209 ; 209 >
     au < crawling ; exists ; 2013 ; 10.1130/9780813712109 ; 978-0-8137-1210-9 ; Geological Society of America Memoirs Volume 210 ; 210 >
-    au < manifest ; exists ; 2013 ; 10.1130/9780813712116 ; 978-0-8137-1211-6 ; Geological Society of America Memoirs Volume 211 ; 211 >
+    au < ready ; exists ; 2013 ; 10.1130/9780813712116 ; 978-0-8137-1211-6 ; Geological Society of America Memoirs Volume 211 ; 211 >
     au < expected ; exists ; 2014 ;  ;  ; Geological Society of America Memoirs Volume 212 ; 212 >
     au < expected ; exists ; 2014 ;  ;  ; Geological Society of America Memoirs Volume 213 ; 213 >
       
@@ -744,13 +744,13 @@
     au < crawling ; exists ; 2013 ; 10.1130/9780813724959 ; 978-0-8137-2495-9 ; Geological Society of America Special Papers Volume 495 ; 495 >
     au < crawling ; exists ; 2013 ; 10.1130/9780813724966 ; 978-0-8137-2496-6 ; Geological Society of America Special Papers Volume 496 ; 496 >
     au < crawling ; exists ; 2013 ; 10.1130/9780813724973 ; 978-0-8137-2497-3 ; Geological Society of America Special Papers Volume 497 ; 497 >
-    au < manifest ; exists ; 2013 ; 10.1130/9780813724980 ; 978-0-8137-2498-0 ; Geological Society of America Special Papers Volume 498 ; 498 >
+    au < ready ; exists ; 2013 ; 10.1130/9780813724980 ; 978-0-8137-2498-0 ; Geological Society of America Special Papers Volume 498 ; 498 >
     au < crawling ; exists ; 2013 ; 10.1130/9780813724997 ; 978-0-8137-2499-7 ; Geological Society of America Special Papers Volume 499 ; 499 >
     au < crawling ; exists ; 2013 ; 10.1130/9780813725000 ; 978-0-8137-2500-0 ; Geological Society of America Special Papers Volume 500 ; 500 >
     au < crawling ; exists ; 2013 ; 10.1130/9780813725017 ; 978-0-8137-2501-7 ; Geological Society of America Special Papers Volume 501 ; 501 >
     au < crawling ; exists ; 2013 ; 10.1130/9780813725024 ; 978-0-8137-2502-4 ; Geological Society of America Special Papers Volume 502 ; 502 >
     au < manifest ; exists ; 2014 ; 10.1130/9780813725031 ; 978-0-8137-2503-1 ; Geological Society of America Special Papers Volume 503 ; 503 >
-    au < expected ; exists ; 2014 ;  ;  ; Geological Society of America Special Papers Volume 504 ; 504 >
+    au < manifest ; exists ; 2014 ; 10.1130/9780813725048 ; 978-0-8137-2504-8 ; Geological Society of America Special Papers Volume 504 ; 504 >
     au < expected ; exists ; 2014 ;  ;  ; Geological Society of America Special Papers Volume 505 ; 505 >
     au < expected ; exists ; 2014 ;  ;  ; Geological Society of America Special Papers Volume 506 ; 506 >
     au < expected ; exists ; 2014 ;  ;  ; Geological Society of America Special Papers Volume 507 ; 507 >
@@ -799,13 +799,13 @@
     au < manifest ; exists ; 2010 ; 978-0-8137-0018-2 ; GSA Field Guides Volume 18 ; 18 >
     au < zapped ; finished ; 2011 ; 978-0-8137-0019-9 ; GSA Field Guides Volume 19 ; 19 >
     au < finished ; crawling ; 2011 ; 978-0-8137-0020-5 ; GSA Field Guides Volume 20 ; 20 >
-    au < finished ; crawling ; 2011 ; 978-0-8137-0021-2 ; GSA Field Guides Volume 21 ; 21 >
-    au < finished ; crawling ; 2011 ; 978-0-8137-0022-9 ; GSA Field Guides Volume 22 ; 22 >
+    au < finished ; frozen ; 2011 ; 978-0-8137-0021-2 ; GSA Field Guides Volume 21 ; 21 >
+    au < finished ; frozen ; 2011 ; 978-0-8137-0022-9 ; GSA Field Guides Volume 22 ; 22 >
     au < zapped ; finished ; 2011 ; 978-0-8137-0023-6 ; GSA Field Guides Volume 23 ; 23 >
     au < zapped ; finished ; 2011 ; 978-0-8137-0024-3 ; GSA Field Guides Volume 24 ; 24 >
-    au < finished ; crawling ; 2012 ; 978-0-8137-0025-0 ; GSA Field Guides Volume 25 ; 25 >
-    au < finished ; crawling ; 2012 ; 978-0-8137-0026-7 ; GSA Field Guides Volume 26 ; 26 >
-    au < finished ; crawling ; 2012 ; 978-0-8137-0027-4 ; GSA Field Guides Volume 27 ; 27 >
+    au < finished ; frozen ; 2012 ; 978-0-8137-0025-0 ; GSA Field Guides Volume 25 ; 25 >
+    au < finished ; frozen ; 2012 ; 978-0-8137-0026-7 ; GSA Field Guides Volume 26 ; 26 >
+    au < finished ; frozen ; 2012 ; 978-0-8137-0027-4 ; GSA Field Guides Volume 27 ; 27 >
     au < crawling ; exists ; 2012 ; 978-0-8137-0028-1 ; GSA Field Guides Volume 28 ; 28 >
     au < crawling ; exists ; 2012 ; 978-0-8137-0029-8 ; GSA Field Guides Volume 29 ; 29 >
     au < crawling ; exists ; 2013 ; 978-0-8137-0030-4 ; GSA Field Guides Volume 30 ; 30 >
@@ -815,7 +815,7 @@
     au < manifest ; exists ; 2014 ; 978-0-8137-0034-2 ; GSA Field Guides Volume 34 ; 34 >
     au < manifest ; exists ; 2014 ; 978-0-8137-0035-9 ; GSA Field Guides Volume 35 ; 35 >
     au < manifest ; exists ; 2014 ; 978-0-8137-0036-6 ; GSA Field Guides Volume 36 ; 36 >
-    au < expected ; exists ; 2014 ;  ; GSA Field Guides Volume 37 ; 37 >
+    au < manifest ; exists ; 2014 ; 978-0-8137-0037-3 ; GSA Field Guides Volume 37 ; 37 >
     au < expected ; exists ; 2014 ;  ; GSA Field Guides Volume 38 ; 38 >
     au < expected ; exists ; 2014 ;  ; GSA Field Guides Volume 39 ; 39 >
     au < expected ; exists ; 2014 ;  ; GSA Field Guides Volume 40 ; 40 >

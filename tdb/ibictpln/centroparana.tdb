@@ -21,6 +21,7 @@
       au < exists ; 2011 ; 1 ; Acta Brasileira do Movimento Humano Volume 1 (2011) ; 2011 >
       au < exists ; 2012 ; 2 ; Acta Brasileira do Movimento Humano Volume 2 ; 2012 >
       au < expected ; 2013 ; 3 ; Acta Brasileira do Movimento Humano Volume 3 ; 2013 >
+      au < expected ; 2014 ; 4 ; Acta Brasileira do Movimento Humano Volume 4 ; 2014 >
 
   }
 
@@ -36,9 +37,10 @@
       param[journal_id] = ciencia
 
       au < exists ; 2010 ; 1 ; Ciência & Consciência Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 1 ; Ciência & Consciência Volume 2011 ; 2011 >
-      au < expected ; 2012 ; 1 ; Ciência & Consciência Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 1 ; Ciência & Consciência Volume 2013 ; 2013 >
+      au < exists ; 2011 ; 2 ; Ciência & Consciência Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 3 ; Ciência & Consciência Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 4 ; Ciência & Consciência Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 5 ; Ciência & Consciência Volume 2014 ; 2014 >
 
   }
 
@@ -60,6 +62,7 @@
       au < released ; 2011 ; 5 ; Jus Societas Volume 5 ; 2011 >
       au < released ; 2012 ; 6 ; Jus Societas Volume 6 ; 2012 >
       au < expected ; 2013 ; 7 ; Jus Societas Volume 7 ; 2013 >
+      au < expected ; 2014 ; 8 ; Jus Societas Volume 8 ; 2014 >
 
   }
 
@@ -77,6 +80,7 @@
       au < exists ; 2011 ; 1 ; Revista Eletrônica Saber Contábil Volume 1 ; 2011 >
       au < exists ; 2012 ; 2 ; Revista Eletrônica Saber Contábil Volume 2 ; 2012 >
       au < expected ; 2013 ; 3 ; Revista Eletrônica Saber Contábil Volume 3 ; 2013 >
+      au < expected ; 2014 ; 4 ; Revista Eletrônica Saber Contábil Volume 4 ; 2014 >
 
   }
 
@@ -91,7 +95,7 @@
       param[base_url] = http://revista.ulbrajp.edu.br/ojs/
       param[journal_id] = salao
 
-      au < expected ; 2013 ; 1 ; Salão de Iniciação Científica CEULJI/ULBRA Volume 1 ; 2013 >
+      au < expected ; 2014 ; 1 ; Salão de Iniciação Científica CEULJI/ULBRA Volume 1 ; 2014 >
 
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestSingleCrawlStatus.java,v 1.14 2011-05-11 08:41:10 tlipkis Exp $
+ * $Id: TestSingleCrawlStatus.java,v 1.14.56.1 2014-07-18 15:48:31 wkwilson Exp $
  */
 
 /*
@@ -72,6 +72,11 @@ public class TestSingleCrawlStatus extends LockssTestCase {
     ListUtil.list(new ColumnDescriptor(URL, "URL Excluded",
 				       ColumnDescriptor.TYPE_STRING));
 
+  private static List expectedColDescsExcludedWithReason =
+    ListUtil.list(new ColumnDescriptor(URL, "URL Excluded",
+				       ColumnDescriptor.TYPE_STRING),
+		  new ColumnDescriptor("reason", "Reason",
+				       ColumnDescriptor.TYPE_STRING));
 
   public void setUp() throws Exception {
     super.setUp();
@@ -261,6 +266,40 @@ public class TestSingleCrawlStatus extends LockssTestCase {
     assertEquals(ListUtil.list("http://www.example.com",
 			       "http://www.example.com/blah.html"),
 		 rowUrls(rows));
+  }
+
+  public void testCrawlStatusExcludedWithReason() throws Exception {
+    MockArchivalUnit au = new MockArchivalUnit();
+
+    mcStatus.setStartTime(1);
+    mcStatus.setEndTime(2);
+    mcStatus.setUrlsExcluded(MapUtil.map("http://www.example.com",
+					 "example reason",
+					 "http://www.example.com/blah.html",
+					 null));
+    mcStatus.setNumParsed(4);
+    mcStatus.setAu(au);
+
+    addCrawlStatus(mcStatus);
+
+    StatusTable table = new StatusTable("test", mcStatus.getKey()+".excluded");
+
+    cStatus.populateTable(table);
+    assertEquals(expectedColDescsExcludedWithReason,
+		 table.getColumnDescriptors());
+    assertEquals("URLs excluded during crawl of MockAU",
+		 table.getTitle());
+
+    List<Map> rows = table.getSortedRows();
+    assertEquals(2, rows.size());
+
+    List<Map> exp =
+      ListUtil.list(MapUtil.map("url", "http://www.example.com",
+				"reason", "example reason",
+				"ix", 1),
+		    MapUtil.map("url", "http://www.example.com/blah.html",
+				"ix", 2));
+    assertEquals(exp, rows);
   }
 
   public void testCrawlStatusParsedUrls() throws Exception {

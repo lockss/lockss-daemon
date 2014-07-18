@@ -1,10 +1,10 @@
 /*
- * $Id: ConfigurationUtil.java,v 1.25 2014-04-23 20:48:50 tlipkis Exp $
+ * $Id: ConfigurationUtil.java,v 1.25.2.1 2014-07-18 15:49:42 wkwilson Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -151,6 +151,12 @@ public class ConfigurationUtil {
     return fromProps(props);
   }
 
+  /** Reset the current configuration so all params have their default
+   * value */
+  public static void resetConfig() {
+    setCurrentConfigFromProps(new Properties());
+  }
+
   /** Create a Configuration from the supplied property list and install
    * it as the current configuration.
    */
@@ -257,12 +263,23 @@ public class ConfigurationUtil {
                                fromUrlList(ListUtil.list(url))));
   }
 
-  /** Add the contents of the URL to the current config.
-   * @param url URL of a config file.
+  /** Remove a param from the current Configuration
+   * @param key the name of the param to remove
    */
   public static boolean removeKey(String key) {
     Configuration cur = CurrentConfig.getCurrentConfig().copy();
     cur.remove(key);
+    return installConfig(cur);
+  }
+
+  /** Remove a collection of params from the current Configuration
+   * @param keys Collection of names of params to remove
+   */
+  public static boolean removeKeys(Collection<String> keys) {
+    Configuration cur = CurrentConfig.getCurrentConfig().copy();
+    for (String key : keys) {
+      cur.remove(key);
+    }
     return installConfig(cur);
   }
 

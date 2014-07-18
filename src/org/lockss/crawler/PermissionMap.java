@@ -1,5 +1,5 @@
 /*
- * $Id: PermissionMap.java,v 1.33 2013-03-14 06:38:03 tlipkis Exp $
+ * $Id: PermissionMap.java,v 1.33.22.1 2014-07-18 15:59:57 wkwilson Exp $
  */
 
 /*
@@ -475,7 +475,7 @@ public class PermissionMap {
         if (checker.checkPermission(pHelper, reader, pUrl)) {
           logger.debug3("Found permission on "+checker);
           foundPermission = true;
-          break; //we just need one permission to be sucessful here
+          break; //we just need one permission to be successful here
         } else {
           logger.debug3("Didn't find permission on "+checker);
 	  // reset stream only if another permission checker will be run.

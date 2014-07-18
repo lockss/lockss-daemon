@@ -28,7 +28,9 @@
   {
 
     title <
-      name = Milton Studies
+      name = Milton Studies ;
+      issn = 0076-8820 ;
+      eissn = 2330-796X
     >
 
     param[journal_dir] = milton_studies

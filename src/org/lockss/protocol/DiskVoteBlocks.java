@@ -1,5 +1,5 @@
 /*
- * $Id: DiskVoteBlocks.java,v 1.21 2012-01-31 06:04:17 tlipkis Exp $
+ * $Id: DiskVoteBlocks.java,v 1.21.44.1 2014-07-18 15:59:11 wkwilson Exp $
  */
 
 /*
@@ -182,6 +182,29 @@ public class DiskVoteBlocks implements VoteBlocks {
     return is;
   }
   
+  public String toString() {
+    StringBuffer sb = new StringBuffer("[DiskVoteBlocks:");
+    VoteBlocksIterator iter = null;
+    try {
+      iter = iterator();
+      if (iter.hasNext()) {
+	while (iter.hasNext()) {
+	  VoteBlock vb = iter.next();
+	  sb.append("\n");
+	  sb.append(vb.toString());
+	}
+      } else {
+	sb.append("(empty)");
+      }
+      sb.append("]");
+    } catch (Exception e) {
+      log.warning("toString() error", e);
+    } finally {
+      if (iter != null) iter.release();
+    }
+    return sb.toString();
+}
+
   class Iterator implements VoteBlocksIterator {
     private RandomAccessFile m_raf;
     private VoteBlock m_nextVB;  // Next block to be returned by next(), peek()

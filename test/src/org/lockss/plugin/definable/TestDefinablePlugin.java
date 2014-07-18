@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinablePlugin.java,v 1.48 2013-10-23 04:20:17 tlipkis Exp $
+ * $Id: TestDefinablePlugin.java,v 1.48.6.1 2014-07-18 15:49:51 wkwilson Exp $
  */
 
 /*
@@ -423,7 +423,7 @@ public class TestDefinablePlugin extends LockssTestCase {
     try {
       definablePlugin.initPlugin(daemon, extMapName);
       fail("initPlugin() of child with nonexistent parent should throw");
-    } catch (FileNotFoundException e) {
+    } catch (PluginException.ParentNotFoundException e) {
     }
   }
 

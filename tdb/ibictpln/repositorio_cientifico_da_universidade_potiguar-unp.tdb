@@ -4,7 +4,7 @@
   >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; volume ; name ; param[year] >
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
 
   {
 
@@ -17,9 +17,9 @@
       param[base_url] = http://repositorio.unp.br/
       param[journal_id] = catussaba
 
-      au < exists ; 2011 ; 1 ; Revista CATUSSABA Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 2 ; Revista CATUSSABA Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 3 ; Revista CATUSSABA Volume 2013 ; 2013 >
+      au < exists ; 2011 ; 1 ; Revista CATUSSABA Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 2 ; Revista CATUSSABA Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 3 ; Revista CATUSSABA Volume 2013 ; 2013 ; >
 
   }
 
@@ -34,9 +34,9 @@
       param[base_url] = http://repositorio.unp.br/
       param[journal_id] = connexio
 
-      au < released ; 2011 ; 1 ; Revista CONNEXIO Volume 2011 ; 2011 >
-      au < released ; 2012 ; 2 ; Revista CONNEXIO Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 3 ; Revista CONNEXIO Volume 2013 ; 2013 >
+      au < released ; 2011 ; 1 ; Revista CONNEXIO Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 2 ; Revista CONNEXIO Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 3 ; Revista CONNEXIO Volume 2013 ; 2013 ; >
 
   }
 
@@ -51,9 +51,9 @@
       param[base_url] = http://repositorio.unp.br/
       param[journal_id] = juris
 
-      au < exists ; 2011 ; 1 ; Revista Juris Rationis Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 2 ; Revista Juris Rationis Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 3 ; Revista Juris Rationis Volume 2013 ; 2013 >
+      au < exists ; 2011 ; 1 ; Revista Juris Rationis Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 2 ; Revista Juris Rationis Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 3 ; Revista Juris Rationis Volume 2013 ; 2013 ; >
 
   }
 
@@ -68,9 +68,9 @@
       param[base_url] = http://repositorio.unp.br/
       param[journal_id] = quipus
 
-      au < released ; 2011 ; 1 ; Revista QUIPUS Volume 2011 ; 2011 >
-      au < released ; 2012 ; 2 ; Revista QUIPUS Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 3 ; Revista QUIPUS Volume 2013 ; 2013 >
+      au < released ; 2011 ; 1 ; Revista QUIPUS Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 2 ; Revista QUIPUS Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 3 ; Revista QUIPUS Volume 2013 ; 2013 ; >
 
   }
 
@@ -84,14 +84,13 @@
       comment[publisher] = Repositório Científico da Universidade Potiguar-UnP
       param[base_url] = http://repositorio.unp.br/
       param[journal_id] = raunp
-      comment[notReady] = no substance
 
-      au < notReady ; 2008 ; 1 ; Revista Eletrônica do Mestrado em Administração Volume 2008 ; 2008 >
-      au < notReady ; 2009 ; 2 ; Revista Eletrônica do Mestrado em Administração Volume 2009 ; 2009 >
-      au < released ; 2010 ; 3 ; Revista Eletrônica do Mestrado em Administração Volume 2010 ; 2010 >
-      au < released ; 2011 ; 4 ; Revista Eletrônica do Mestrado em Administração Volume 2011 ; 2011 >
-      au < released ; 2012 ; 5 ; Revista Eletrônica do Mestrado em Administração Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 6 ; Revista Eletrônica do Mestrado em Administração Volume 2013 ; 2013 >
+      au < notReady ; 2008 ; 1 ; Revista Eletrônica do Mestrado em Administração Volume 2008 ; 2008 ; no articles >
+      au < notReady ; 2009 ; 2 ; Revista Eletrônica do Mestrado em Administração Volume 2009 ; 2009 ; no articles >
+      au < released ; 2010 ; 3 ; Revista Eletrônica do Mestrado em Administração Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 4 ; Revista Eletrônica do Mestrado em Administração Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 5 ; Revista Eletrônica do Mestrado em Administração Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 6 ; Revista Eletrônica do Mestrado em Administração Volume 2013 ; 2013 ; >
 
   }
 
@@ -106,8 +105,8 @@
       param[base_url] = http://repositorio.unp.br/
       param[journal_id] = runpetro
 
-      au < exists ; 2012 ; 1 ; Revista RUnPetro Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 2 ; Revista RUnPetro Volume 2013 ; 2013 >
+      au < exists ; 2012 ; 1 ; Revista RUnPetro Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 2 ; Revista RUnPetro Volume 2013 ; 2013 ; >
 
   }
 

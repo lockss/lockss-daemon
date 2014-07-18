@@ -1,5 +1,5 @@
 /*
- * $Id: BatchAuConfig.java,v 1.53 2013-06-19 23:08:26 fergaloy-sf Exp $
+ * $Id: BatchAuConfig.java,v 1.53.12.1 2014-07-18 15:59:04 wkwilson Exp $
  */
 
 /*
@@ -46,6 +46,7 @@ import org.lockss.daemon.TitleSet;
 import org.lockss.db.DbException;
 import org.lockss.plugin.PluginManager;
 import org.lockss.remote.RemoteApi;
+import org.lockss.remote.RemoteApi.BackupInfo;
 import org.lockss.remote.RemoteApi.BatchAuStatus;
 import org.lockss.servlet.ServletUtil.LinkWithExplanation;
 import org.lockss.subscription.SubscriptionManager;
@@ -502,62 +503,49 @@ public class BatchAuConfig extends LockssServlet {
       return;
     }
 
+    // Get the HTTP session.
     HttpSession session = getSession();
+
+    // Get the backup information stored in the session.
     RemoteApi.BackupInfo bi =
       (RemoteApi.BackupInfo)session.getAttribute(SESSION_KEY_BACKUP_INFO);
+
+    // Get the repositories stored in the session.
     LinkedMap repoMap = (LinkedMap)session.getAttribute(SESSION_KEY_REPO_MAP);
+
+    // Get the archival unit identifiers specified in the form.
     String[] auids = req.getParameterValues(KEY_AUID);
-    String defaultRepo = null;
-    String defRepoId = getParameter(KEY_DEFAULT_REPO);
-    if (StringUtil.isNullString(defRepoId)) {
-      defaultRepo =
-	remoteApi.findLeastFullRepository(remoteApi.getRepositoryMap());
-    } else if (repoMap != null) {
-      try {
-	int n = Integer.parseInt(defRepoId);
-	defaultRepo = (String)repoMap.get(n - 1);
-      } catch (NumberFormatException e) {
-	log.warning("Illegal default repoId: " + defRepoId, e);
-      } catch (IndexOutOfBoundsException e) {
-	log.warning("Illegal default repoId: " + defRepoId, e);
-      }
-    }
+
+    // Check whether no archival unit identifiers were specified in the form.
     if (auids == null || auids.length == 0) {
+      // Yes: Report the problem.
       errMsg = "No AUs were selected";
       displayMenu();
       return;
     }
-    Configuration createConfig = ConfigManager.newConfiguration();
-    Map auConfs = (Map)session.getAttribute(SESSION_KEY_AUID_MAP);
-    for (int ix = 0; ix < auids.length; ix++) {
-      String auid = auids[ix];
-      Configuration tcConfig = (Configuration)auConfs.get(auid);
-      tcConfig.remove(PluginManager.AU_PARAM_REPOSITORY);
-      String repoId = getParameter(KEY_REPO + "_" + auid);
-      if (!StringUtil.isNullString(repoId) && repoMap != null) {
-	try {
-	  int repoIx = Integer.parseInt(repoId);
-	  if (!StringUtil.isNullString(repoId)) {
-	    tcConfig.put(PluginManager.AU_PARAM_REPOSITORY,
-			 (String)repoMap.get(repoIx - 1));
-	  }
-	} catch (NumberFormatException e) {
-	  log.warning("Illegal repoId: " + repoId, e);
-	} catch (IndexOutOfBoundsException e) {
-	  log.warning("Illegal repoId: " + repoId, e);
-	}
-      }
-      if (defaultRepo != null &&
-	  !tcConfig.containsKey(PluginManager.AU_PARAM_REPOSITORY)) {
-	tcConfig.put(PluginManager.AU_PARAM_REPOSITORY, defaultRepo);
-      }
-      String prefix = PluginManager.auConfigPrefix(auid);
-      createConfig.addAsSubTree(tcConfig, prefix);
-    }
-    if (log.isDebug2()) log.debug2("createConfig: " + createConfig);
 
-    BatchAuStatus bas =
-      remoteApi.batchAddAus(addOp, createConfig, bi);
+    // Get the default repository index from the form.
+    String defRepoId = getParameter(KEY_DEFAULT_REPO);
+
+    // Get the archival unit configurations stored in the session.
+    Map<String, Configuration> auConfs =
+	(Map<String, Configuration>)session.getAttribute(SESSION_KEY_AUID_MAP);
+
+    // The archival unit repository indices.
+    Map<String, String> auRepoIds = new HashMap<String, String>();
+
+    // Loop through all the archival unit identifiers.
+    for (int ix = 0; ix < auids.length; ix++) {
+      // Populate the repository for the archival unit in the map.
+      String auid = auids[ix];
+      String repoId = getParameter(KEY_REPO + "_" + auid);
+      auRepoIds.put(auid, repoId);
+    }
+
+    // Perform the operation.
+    BatchAuStatus bas = remoteApi.batchAddAus(addOp, auids, repoMap, defRepoId,
+	auConfs, auRepoIds, bi);
+
     displayBatchAuStatus(bas);
   }
 

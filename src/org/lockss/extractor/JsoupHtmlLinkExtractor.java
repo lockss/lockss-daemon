@@ -1,5 +1,5 @@
 /*
- * $Id: JsoupHtmlLinkExtractor.java,v 1.5.6.1 2014-05-05 17:32:30 wkwilson Exp $
+ * $Id: JsoupHtmlLinkExtractor.java,v 1.5.6.2 2014-07-18 15:58:59 wkwilson Exp $
  */
 
 /*
@@ -260,13 +260,13 @@ public class JsoupHtmlLinkExtractor implements LinkExtractor {
 
     HtmlFormExtractor formExtractor = null;
     if (m_processForms) {
+      Elements els = doc.select("form");
       // create a form processor
       formExtractor = getFormExtractor(au, encoding, cb);
       // To allow for HTML 5 forms which allow free form getFieldIterator we
       // grab all
       // forms. When we encounter an input elements with the 'form'
       // attribute we'll add it to the correct form.
-      Elements els = doc.select("form");
       formExtractor.initProcessor(this, els.forms());
     }
     // Now we walk the document as usual and process found urls

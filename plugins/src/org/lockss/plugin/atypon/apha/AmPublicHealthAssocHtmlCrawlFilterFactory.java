@@ -1,5 +1,5 @@
 /*
- * $Id: AmPublicHealthAssocHtmlCrawlFilterFactory.java,v 1.2 2013-09-10 16:09:30 alexandraohlson Exp $
+ * $Id: AmPublicHealthAssocHtmlCrawlFilterFactory.java,v 1.2.6.1 2014-07-18 15:54:33 wkwilson Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.atypon.apha;
 
 import java.io.InputStream;
+import java.util.regex.Pattern;
 
 import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
@@ -44,8 +45,12 @@ import org.lockss.plugin.*;
 import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
 
 public class AmPublicHealthAssocHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory {
-  
+  protected static final Pattern corrections = Pattern.compile("Original Article|Original|Corrigendum|Correction|Errata|Erratum", Pattern.CASE_INSENSITIVE);
+
   NodeFilter[] filters = new NodeFilter[] {
+    //Leave in this specific filter even though something similar is in BaseAtypon
+    // This one checks the very ambigous text "Original" and we like the additional
+    // context checks to be more careful  
       // Avoid following links between Errata <--> Original articles on either a TOC or article page
       // The links are only differentiated by the title they are given which varies 
       // depending on location
@@ -76,8 +81,7 @@ public class AmPublicHealthAssocHtmlCrawlFilterFactory extends BaseAtyponHtmlCra
           //using regex - the "i" is for case insensitivity; the "s" is for accepting newlines
           //On a TOC page it is "Erratum" or "Original Article" on an article page it can be "Original"
           if (testText) {
-          return (allText.matches("(?is).*Original Article.*") || allText.matches("(?is).*Erratum.*") 
-              || allText.matches("(?is).*Errata.*") || allText.matches("(?is).*Original.*") );
+            return corrections.matcher(allText).find();
           }
           return false; // neither case
         }

@@ -1,5 +1,5 @@
 /*
- * $Id: WileyXmlSchemaHelper.java,v 1.1 2014-02-06 21:06:52 alexandraohlson Exp $
+ * $Id: WileyXmlSchemaHelper.java,v 1.1.2.1 2014-07-18 15:56:32 wkwilson Exp $
  */
 
 /*
@@ -176,7 +176,9 @@ implements SourceXmlSchemaHelper {
     WML_articleMap.put(XPATH_START_PAGE, XmlDomMetadataExtractor.TEXT_VALUE);
     WML_articleMap.put(XPATH_END_PAGE, XmlDomMetadataExtractor.TEXT_VALUE);
     WML_articleMap.put(XPATH_DOI, XmlDomMetadataExtractor.TEXT_VALUE);
-    WML_articleMap.put(XPATH_KEYWORDS, XmlDomMetadataExtractor.TEXT_VALUE);
+    // wiley provides super long keyword phrases that truncate and cause
+    // warnings from the database. Since we don't need them just don't pick up
+    //WML_articleMap.put(XPATH_KEYWORDS, XmlDomMetadataExtractor.TEXT_VALUE);
     WML_articleMap.put(XPATH_AUTHOR, AUTHOR_VALUE);
       // name of PDF file relative to path of XML file
     WML_articleMap.put(XPATH_PDF_FILE_NAME, XmlDomMetadataExtractor.TEXT_VALUE);
@@ -207,7 +209,9 @@ implements SourceXmlSchemaHelper {
       cookMap.put(XPATH_START_PAGE, MetadataField.FIELD_START_PAGE);
       cookMap.put(XPATH_END_PAGE, MetadataField.FIELD_END_PAGE);
       cookMap.put(XPATH_DOI, MetadataField.FIELD_DOI);
-      cookMap.put(XPATH_KEYWORDS, MetadataField.FIELD_KEYWORDS);
+      // wiley provides super long keyword phrases that truncate and cause
+      // warnings from the database. Since we don't need them just don't pick up
+      //cookMap.put(XPATH_KEYWORDS, MetadataField.FIELD_KEYWORDS);
       cookMap.put(XPATH_AUTHOR, MetadataField.FIELD_AUTHOR);
       cookMap.put(XPATH_PUBLISHER, MetadataField.FIELD_PUBLISHER);
     }

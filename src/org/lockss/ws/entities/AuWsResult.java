@@ -1,5 +1,5 @@
 /*
- * $Id: AuWsResult.java,v 1.1.2.2 2014-05-05 17:32:30 wkwilson Exp $
+ * $Id: AuWsResult.java,v 1.1.2.3 2014-07-18 15:58:59 wkwilson Exp $
  */
 
 /*
@@ -29,25 +29,27 @@
  in this Software without prior written authorization from Stanford University.
 
  */
+package org.lockss.ws.entities;
+
+import java.util.List;
 
 /**
  * Container for the information related to an archival unit that is the result
  * of a query.
  */
-package org.lockss.ws.entities;
-
-import java.util.List;
-
 public class AuWsResult {
   private String auId;
   private String name;
   private String volume;
   private String pluginName;
+  private Integer tdbYear;
   private String accessType;
+  private Long contentSize;
+  private Long diskUsage;
   private String repositoryPath;
   private Double recentPollAgreement;
   private String publishingPlatform;
-  private String publisher;
+  private String tdbPublisher;
   private Boolean availableFromPublisher;
   private String substanceState;
   private Long creationTime;
@@ -67,169 +69,381 @@ public class AuWsResult {
   private List<String> newContentCrawlUrls;
   private List<String> urlStems;
   private Boolean isBulkContent;
+  private List<PeerAgreementsWsResult> peerAgreements;
 
+  /**
+   * Provides the Archival Unit identifier.
+   * 
+   * @return a String with the identifier.
+   */
   public String getAuId() {
     return auId;
   }
   public void setAuId(String auId) {
     this.auId = auId;
   }
+
+  /**
+   * Provides the Archival Unit name.
+   * 
+   * @return a String with the name.
+   */
   public String getName() {
     return name;
   }
   public void setName(String name) {
     this.name = name;
   }
+
+  /**
+   * Provides the Archival Unit volume name.
+   * 
+   * @return a String with the volume name.
+   */
   public String getVolume() {
     return volume;
   }
   public void setVolume(String volume) {
     this.volume = volume;
   }
+
+  /**
+   * Provides the Archival Unit plugin name.
+   * 
+   * @return a String with the plugin name.
+   */
   public String getPluginName() {
     return pluginName;
   }
   public void setPluginName(String pluginName) {
     this.pluginName = pluginName;
   }
+
+  /**
+   * Provides the Archival Unit publication year from the TDB.
+   * 
+   * @return an Integer with the publication year from the TDB.
+   */
+  public Integer getTdbYear() {
+    return tdbYear;
+  }
+  public void setTdbYear(Integer tdbYear) {
+    this.tdbYear = tdbYear;
+  }
+
+  /**
+   * Provides the Archival Unit access type.
+   * 
+   * @return a String with the access type.
+   */
   public String getAccessType() {
     return accessType;
   }
   public void setAccessType(String accessType) {
     this.accessType = accessType;
   }
+
+  /**
+   * Provides the size of the Archival Unit.
+   * 
+   * @return a Long with the size in bytes.
+   */
+  public Long getContentSize() {
+    return contentSize;
+  }
+  public void setContentSize(Long contentSize) {
+    this.contentSize = contentSize;
+  }
+
+  /**
+   * Provides the space occupied on disk by the Archival Unit.
+   * 
+   * @return a Long with the occupied space in bytes.
+   */
+  public Long getDiskUsage() {
+    return diskUsage;
+  }
+  public void setDiskUsage(Long diskUsage) {
+    this.diskUsage = diskUsage;
+  }
+
+  /**
+   * Provides the Archival Unit repository path.
+   * 
+   * @return a String with the repository path.
+   */
   public String getRepositoryPath() {
     return repositoryPath;
   }
   public void setRepositoryPath(String repositoryPath) {
     this.repositoryPath = repositoryPath;
   }
+
+  /**
+   * Provides the Archival Unit most recent poll agreement percentage.
+   * 
+   * @return a Double with the most recent poll agreement percentage.
+   */
   public Double getRecentPollAgreement() {
     return recentPollAgreement;
   }
   public void setRecentPollAgreement(Double recentPollAgreement) {
     this.recentPollAgreement = recentPollAgreement;
   }
+
+  /**
+   * Provides the Archival Unit publishing platform name.
+   * 
+   * @return a String with the publishing platform name.
+   */
   public String getPublishingPlatform() {
     return publishingPlatform;
   }
   public void setPublishingPlatform(String publishingPlatform) {
     this.publishingPlatform = publishingPlatform;
   }
-  public String getPublisher() {
-    return publisher;
+
+  /**
+   * Provides the Archival Unit publisher name from the TDB.
+   * 
+   * @return a String with the publisher name from the TDB.
+   */
+  public String getTdbPublisher() {
+    return tdbPublisher;
   }
-  public void setPublisher(String publisher) {
-    this.publisher = publisher;
+  public void setTdbPublisher(String tdbPublisher) {
+    this.tdbPublisher = tdbPublisher;
   }
+
+  /**
+   * Provides an indication of whether the Archival Unit is available from the
+   * publisher website.
+   * 
+   * @return a Boolean with the indication.
+   */
   public Boolean getAvailableFromPublisher() {
     return availableFromPublisher;
   }
   public void setAvailableFromPublisher(Boolean availableFromPublisher) {
     this.availableFromPublisher = availableFromPublisher;
   }
+
+  /**
+   * Provides the Archival Unit substance state.
+   * 
+   * @return a String with the substance state.
+   */
   public String getSubstanceState() {
     return substanceState;
   }
   public void setSubstanceState(String substanceState) {
     this.substanceState = substanceState;
   }
+
+  /**
+   * Provides the Archival Unit creation timestamp.
+   * 
+   * @return a Long with the timestamp as the number of milliseconds since the
+   *         beginning of 1970.
+   */
   public Long getCreationTime() {
     return creationTime;
   }
   public void setCreationTime(Long creationTime) {
     this.creationTime = creationTime;
   }
+
+  /**
+   * Provides the Archival Unit crawl proxy name.
+   * 
+   * @return a String with the crawl proxy name.
+   */
   public String getCrawlProxy() {
     return crawlProxy;
   }
   public void setCrawlProxy(String crawlProxy) {
     this.crawlProxy = crawlProxy;
   }
+
+  /**
+   * Provides the Archival Unit crawl window.
+   * 
+   * @return a String with the crawl window.
+   */
   public String getCrawlWindow() {
     return crawlWindow;
   }
   public void setCrawlWindow(String crawlWindow) {
     this.crawlWindow = crawlWindow;
   }
+
+  /**
+   * Provides the Archival Unit crawl pool name.
+   * 
+   * @return a String with the crawl pool name.
+   */
   public String getCrawlPool() {
     return crawlPool;
   }
   public void setCrawlPool(String crawlPool) {
     this.crawlPool = crawlPool;
   }
+  /**
+   * Provides the timestamp of the last completed crawl of the Archival Unit.
+   * 
+   * @return a Long with the timestamp as the number of milliseconds since the
+   *         beginning of 1970.
+   */
   public Long getLastCompletedCrawl() {
     return lastCompletedCrawl;
   }
   public void setLastCompletedCrawl(Long lastCompletedCrawl) {
     this.lastCompletedCrawl = lastCompletedCrawl;
   }
+
+  /**
+   * Provides the timestamp of the last crawl of the Archival Unit.
+   * 
+   * @return a Long with the timestamp as the number of milliseconds since the
+   *         beginning of 1970.
+   */
   public Long getLastCrawl() {
     return lastCrawl;
   }
   public void setLastCrawl(Long lastCrawl) {
     this.lastCrawl = lastCrawl;
   }
+
+  /**
+   * Provides the result of the last crawl of the Archival Unit.
+   * 
+   * @return a String with the last crawl result.
+   */
   public String getLastCrawlResult() {
     return lastCrawlResult;
   }
   public void setLastCrawlResult(String lastCrawlResult) {
     this.lastCrawlResult = lastCrawlResult;
   }
+
+  /**
+   * Provides the timestamp of the last completed poll of the Archival Unit.
+   * 
+   * @return a Long with the timestamp as the number of milliseconds since the
+   *         beginning of 1970.
+   */
   public Long getLastCompletedPoll() {
     return lastCompletedPoll;
   }
   public void setLastCompletedPoll(Long lastCompletedPoll) {
     this.lastCompletedPoll = lastCompletedPoll;
   }
+
+  /**
+   * Provides the timestamp of the last poll of the Archival Unit.
+   * 
+   * @return a Long with the timestamp as the number of milliseconds since the
+   *         beginning of 1970.
+   */
   public Long getLastPoll() {
     return lastPoll;
   }
   public void setLastPoll(Long lastPoll) {
     this.lastPoll = lastPoll;
   }
+
+  /**
+   * Provides the result of the last poll of the Archival Unit.
+   * 
+   * @return a String with the last poll result.
+   */
   public String getLastPollResult() {
     return lastPollResult;
   }
   public void setLastPollResult(String lastPollResult) {
     this.lastPollResult = lastPollResult;
   }
+
+  /**
+   * Provides an indication of whether the Archival Unit is currently in the
+   * process of crawling.
+   * 
+   * @return a Boolean with the indication.
+   */
   public Boolean getCurrentlyCrawling() {
     return currentlyCrawling;
   }
   public void setCurrentlyCrawling(Boolean currentlyCrawling) {
     this.currentlyCrawling = currentlyCrawling;
   }
+
+  /**
+   * Provides an indication of whether the Archival Unit is currently in the
+   * process of polling.
+   * 
+   * @return a Boolean with the indication.
+   */
   public Boolean getCurrentlyPolling() {
     return currentlyPolling;
   }
   public void setCurrentlyPolling(Boolean currentlyPolling) {
     this.currentlyPolling = currentlyPolling;
   }
+
+  /**
+   * Provides the Archival Unit subscription status.
+   * 
+   * @return a String with the subscription status.
+   */
   public String getSubscriptionStatus() {
     return subscriptionStatus;
   }
   public void setSubscriptionStatus(String subscriptionStatus) {
     this.subscriptionStatus = subscriptionStatus;
   }
+
+  /**
+   * Provides the Archival Unit configuration.
+   * 
+   * @return a AuConfigurationWsResult with the configuration.
+   */
   public AuConfigurationWsResult getAuConfiguration() {
     return auConfiguration;
   }
   public void setAuConfiguration(AuConfigurationWsResult auConfiguration) {
     this.auConfiguration = auConfiguration;
   }
+
+  /**
+   * Provides the Archival Unit URLs to crawl new content.
+   * 
+   * @return a List<String> with the URLs to crawl new content.
+   */
   public List<String> getNewContentCrawlUrls() {
     return newContentCrawlUrls;
   }
   public void setNewContentCrawlUrls(List<String> newContentCrawlUrls) {
     this.newContentCrawlUrls = newContentCrawlUrls;
   }
+
+  /**
+   * Provides the Archival Unit URL stems.
+   * 
+   * @return a List<String> with the URL stems.
+   */
   public List<String> getUrlStems() {
     return urlStems;
   }
   public void setUrlStems(List<String> urlStems) {
     this.urlStems = urlStems;
   }
+
+  /**
+   * Provides an indication of whether the Archival Unit contains bulk content,
+   * as opposed to harvested content.
+   * 
+   * @return a Boolean with the indication.
+   */
   public Boolean getIsBulkContent() {
     return isBulkContent;
   }
@@ -237,23 +451,38 @@ public class AuWsResult {
     this.isBulkContent = isBulkContent;
   }
 
+  /**
+   * Provides the Archival Unit peer agreements.
+   * 
+   * @return a List<PeerAgreementsWsResult> with the peer agreements.
+   */
+  public List<PeerAgreementsWsResult> getPeerAgreements() {
+    return peerAgreements;
+  }
+  public void setPeerAgreements(List<PeerAgreementsWsResult> peerAgreements) {
+    this.peerAgreements = peerAgreements;
+  }
+
   @Override
   public String toString() {
     return "AuWsResult [auId=" + auId + ", name=" + name + ", volume=" + volume
-	+ ", pluginName=" + pluginName + ", accessType=" + accessType
-	+ ", repositoryPath=" + repositoryPath + ", recentPollAgreement="
-	+ recentPollAgreement + ", publishingPlatform=" + publishingPlatform
-	+ ", publisher=" + publisher + ", availableFromPublisher="
-	+ availableFromPublisher + ", substanceState=" + substanceState
-	+ ", creationTime=" + creationTime + ", crawlProxy=" + crawlProxy
-	+ ", crawlWindow=" + crawlWindow + ", crawlPool=" + crawlPool
-	+ ", lastCompletedCrawl=" + lastCompletedCrawl + ", lastCrawl="
-	+ lastCrawl + ", lastCrawlResult=" + lastCrawlResult
-	+ ", lastCompletedPoll=" + lastCompletedPoll + ", lastPoll=" + lastPoll
-	+ ", lastPollResult=" + lastPollResult + ", currentlyCrawling="
-	+ currentlyCrawling + ", currentlyPolling=" + currentlyPolling
-	+ ", subscriptionStatus=" + subscriptionStatus + ", auConfiguration="
-	+ auConfiguration + ", newContentCrawlUrls=" + newContentCrawlUrls
-	+ ", urlStems=" + urlStems + ", isBulkContent=" + isBulkContent + "]";
+	+ ", pluginName=" + pluginName + ", tdbYear=" + tdbYear
+	+ ", accessType=" + accessType + ", contentSize=" + contentSize
+	+ ", diskUsage=" + diskUsage + ", repositoryPath=" + repositoryPath
+	+ ", recentPollAgreement=" + recentPollAgreement
+	+ ", publishingPlatform=" + publishingPlatform + ", tdbPublisher="
+	+ tdbPublisher + ", availableFromPublisher=" + availableFromPublisher
+	+ ", substanceState=" + substanceState + ", creationTime="
+	+ creationTime + ", crawlProxy=" + crawlProxy + ", crawlWindow="
+	+ crawlWindow + ", crawlPool=" + crawlPool + ", lastCompletedCrawl="
+	+ lastCompletedCrawl + ", lastCrawl=" + lastCrawl
+	+ ", lastCrawlResult=" + lastCrawlResult + ", lastCompletedPoll="
+	+ lastCompletedPoll + ", lastPoll=" + lastPoll + ", lastPollResult="
+	+ lastPollResult + ", currentlyCrawling=" + currentlyCrawling
+	+ ", currentlyPolling=" + currentlyPolling + ", subscriptionStatus="
+	+ subscriptionStatus + ", auConfiguration=" + auConfiguration
+	+ ", newContentCrawlUrls=" + newContentCrawlUrls + ", urlStems="
+	+ urlStems + ", isBulkContent=" + isBulkContent + ", peerAgreements="
+	+ peerAgreements + "]";
   }
 }

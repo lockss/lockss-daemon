@@ -3,30 +3,10 @@
   publisher <
     name = Cold Spring Harbor Laboratory Press ;
     info[contract] = 2014 ;
-    info[tester] = 0
+    info[tester] = 4
     
   >
 
-  {
-
-    title <
-      name = bioRxiv 
-    >
-
-    {
-
-      plugin = needs.plugin
-      comment[0] = no issn/eissn info
-      param[base_url] = http://biorxiv.org/
-      implicit < status ; status2 ; year ; name ; param[volume_name] >
-
-      au < exists ; exists ; 2013 ; bioRxiv Volume 2013 ; 2013 >
-      au < exists ; exists ; 2014 ; bioRxiv Volume 2014 ; 2014 >
-      
-    }
-    
-  }
-  
   {
 
     title <

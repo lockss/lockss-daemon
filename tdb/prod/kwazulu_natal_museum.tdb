@@ -20,8 +20,8 @@
       plugin = org.lockss.plugin.ojs2.OJS2Plugin
       param[journal_id] = AI
  
-      au < ready ; 2012 ; African Invertebrates Volume 2012 ; 2012 >
-      au < ready ; 2013 ; African Invertebrates Volume 2013 ; 2013 >
+      au < released ; 2012 ; African Invertebrates Volume 2012 ; 2012 >
+      au < released ; 2013 ; African Invertebrates Volume 2013 ; 2013 >
       au < manifest ; 2014 ; African Invertebrates Volume 2014 ; 2014 >
 
     }

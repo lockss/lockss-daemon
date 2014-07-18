@@ -1,5 +1,5 @@
 /*
- * $Id: ParticipantUserData.java,v 1.34.12.1 2014-05-05 17:32:33 wkwilson Exp $
+ * $Id: ParticipantUserData.java,v 1.34.12.2 2014-07-18 15:59:08 wkwilson Exp $
  */
 
 /*

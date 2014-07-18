@@ -1,10 +1,10 @@
 /*
- * $Id: AuConfig.java,v 1.72 2012-07-10 04:36:22 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.72.38.1 2014-07-18 15:59:05 wkwilson Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -43,6 +43,7 @@ import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.remote.*;
+import org.lockss.remote.RemoteApi.BatchAuStatus;
 import org.lockss.util.*;
 import org.mortbay.html.*;
 
@@ -674,48 +675,21 @@ public class AuConfig extends LockssServlet {
   }
 
   private void doAddByAuid() throws IOException {
-    Page page = newPage();
-    String auid = getParameter("auid");
-    if (StringUtil.isNullString(auid)) {
-      errMsg = "Auid must be supplied.";
-      displayAddResult();
-      return;
+    // Add the archival unit.
+    BatchAuStatus status =
+	remoteApi.addByAuId(getParameter("auid"), getAdditionalAuConfig());
+
+    // Handle the result.
+    BatchAuStatus.Entry statusEntry = status.getStatusList().get(0);
+    if (!statusEntry.isOk() && statusEntry.getExplanation() != null) {
+      log.error("Error configuring AU '" + statusEntry.getName() + "': "
+	  + statusEntry.getExplanation());
+      errMsg = encodeText(statusEntry.getExplanation());
     }
-    ArchivalUnit au = pluginMgr.getAuFromId(auid);
-    if (au != null) {
-      errMsg = "Au already exists: " + au.getName();
-      displayAddResult();
-      return;
-    }
-    TitleConfig tc = findTitleConfig(auid);
-    if (tc == null) {
-      errMsg = "No matching AU definition found in title db: " + auid;
-      displayAddResult();
-      return;
-    }
-    try {
-      Plugin plugin =
-	pluginMgr.getPlugin(PluginManager.pluginKeyFromId(tc.getPluginName()));
-      Configuration auConfig = tc.getConfig();
-      Configuration addConfig = getAdditionalAuConfig();
-      if (!addConfig.isEmpty()) {
-	auConfig = auConfig.copy();
-	auConfig.copyFrom(addConfig);
-      }
-      au = pluginMgr.createAndSaveAuConfiguration(plugin, auConfig);
-      statusMsg = "Created Archival Unit:<br>" + encodeText(au.getName());
-      displayAddResult();
-    } catch (ArchivalUnit.ConfigurationException e) {
-      log.error("Couldn't create AU", e);
-      errMsg = "Error creating AU:<br>" + encodeText(e.getMessage());
-      displayAddResult();
-    } catch (IOException e) {
-      log.error("Couldn't create AU", e);
-      errMsg = "Error creating AU:<br>" + encodeText(e.getMessage());
-      displayAddResult();
-    }
+
+    displayAddResult();
   }
-      
+
   public static final String AU_PARAM_PREFIX = "auparam_";
 
   private Configuration getAdditionalAuConfig() {
@@ -736,15 +710,6 @@ public class AuConfig extends LockssServlet {
     addJavaScript(page);
     layoutErrorBlock(page);
     endPage(page);
-  }
-
-  TitleConfig findTitleConfig(String auid) {
-    for (TitleConfig tc : pluginMgr.findAllTitleConfigs()) {
-      if (auid.equals(tc.getAuId(pluginMgr))) {
-	return tc;
-      }
-    }
-    return null;
   }
 
   /** Display the Confirm Delete  page */

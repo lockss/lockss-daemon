@@ -1,5 +1,5 @@
 /*
- * $Id: TestArticleMetadataBuffer.java,v 1.1 2012-12-07 07:16:06 fergaloy-sf Exp $
+ * $Id: TestArticleMetadataBuffer.java,v 1.1.30.1 2014-07-18 15:49:50 wkwilson Exp $
  */
 
 /*
@@ -47,8 +47,11 @@ import org.lockss.test.*;
 public class TestArticleMetadataBuffer extends LockssTestCase {
   static Logger log = Logger.getLogger(TestArticleMetadataBuffer.class);
 
+  ArticleMetadataBuffer amBuffer;
+
   public void setUp() throws Exception {
     super.setUp();
+    amBuffer = new ArticleMetadataBuffer(getTempDir());
   }
 
   public void tearDown() throws Exception {
@@ -56,7 +59,6 @@ public class TestArticleMetadataBuffer extends LockssTestCase {
   }
 
   public void testArticleMetadtataBuffer() throws Exception {
-    ArticleMetadataBuffer amBuffer = new ArticleMetadataBuffer();
     for (int i = 1; i < 10; i++) {
       ArticleMetadata am = new ArticleMetadata();
       am.put(MetadataField.FIELD_JOURNAL_TITLE, "Journal Title" + i);
@@ -95,7 +97,6 @@ public class TestArticleMetadataBuffer extends LockssTestCase {
   }
   
   public void testEmptyArticleMetadtataBuffer() throws Exception {
-    ArticleMetadataBuffer amBuffer = new ArticleMetadataBuffer();
     Iterator<ArticleMetadataInfo> amitr = amBuffer.iterator();
     assertFalse(amitr.hasNext());
     try {
@@ -113,7 +114,6 @@ public class TestArticleMetadataBuffer extends LockssTestCase {
   }
 
   public void testClosedArticleMetadtataBuffer() throws Exception {
-    ArticleMetadataBuffer amBuffer = new ArticleMetadataBuffer();
     amBuffer.close();
     try {
       // cannot add after closing

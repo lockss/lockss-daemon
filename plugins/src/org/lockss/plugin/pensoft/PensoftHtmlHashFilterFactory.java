@@ -1,4 +1,4 @@
-/* $Id: PensoftHtmlHashFilterFactory.java,v 1.9 2014-04-08 23:14:33 aishizaki Exp $ */
+/* $Id: PensoftHtmlHashFilterFactory.java,v 1.9.2.1 2014-07-18 15:56:32 wkwilson Exp $ */
 /*
 
 Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
@@ -31,7 +31,14 @@ package org.lockss.plugin.pensoft;
 
 import java.io.*;
 
-import org.htmlparser.*;
+import org.htmlparser.Node;
+import org.htmlparser.NodeFilter;
+import org.htmlparser.Node;
+import org.htmlparser.tags.Div;
+import org.htmlparser.tags.TableColumn;
+import org.htmlparser.tags.Span;
+
+
 import org.htmlparser.filters.*;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
@@ -59,16 +66,13 @@ public class PensoftHtmlHashFilterFactory implements FilterFactory {
         /* Do not be alarmed when checking hashes of article pages
          * (not abstract or TOC) - the content is dynamically inserted!
          * so after the hash on an article page, content is not there.
-         * On the other hand, do check for content on abstract/TOC pages-
-         * there's an issue where that content disappears after certain
-         * types of hashes, as their html may have a problem...
+         * On the other hand, do check for content on abstract/TOC pages
          */
+      
          HtmlNodeFilters.commentWithString("Load time", true),
-         // filters out the left columns
+         
+         // extreme hashing: filters out the left columns
          HtmlNodeFilters.tagWithAttribute("td", "class", "textver10"),
-         HtmlNodeFilters.tagWithAttribute("div", "id", "newscont"),
-         // this should pick up all the right columns
-         HtmlNodeFilters.tagWithAttribute("table", "width", "186"),
 
          // remove all script tags
          HtmlNodeFilters.tag("script"), 
@@ -84,20 +88,27 @@ public class PensoftHtmlHashFilterFactory implements FilterFactory {
 
          HtmlNodeFilters.commentWithString("SESID", true),
 
-         // filters out the tag with a changing Viewed By counter on article page
-         HtmlNodeFilters.tagWithAttribute("td", "class", "green2"),        
-         HtmlNodeFilters.tagWithAttribute("td", "class", "green"),
+         // extreme hashing:  right column
+         HtmlNodeFilters.tagWithAttribute("table", "width", "186"),
          // filters out the tag with a changing Viewed By counter on issue page
          HtmlNodeFilters.tagWithTextRegex("td", "^Pages", true),
 
+         // removes top center menu items
+         HtmlNodeFilters.tagWithAttribute("table", "width", "781"),
          // this will catch the "Current Issue" in the top center, which changes 
          // when the new issue changes, plus another center menu
          HtmlNodeFilters.tagWithAttribute("td", "align", "center"),
-         
-         // while the following should work, removes most content (TOC/abstract)!
-         //HtmlNodeFilters.tagWithTextRegex("td", "Current Issue", true),    
-         //HtmlNodeFilters.tagWithTextRegex("td", "Viewed by", true), 
-
+         // removes a potentially changing "Impact Factor" number on TOC
+         HtmlNodeFilters.tagWithAttribute("span", "style", "color: rgb(128,0,0)"),
+         // removes footer stuff
+         HtmlNodeFilters.tagWithAttribute("table", "width", "500"),
+        
+         // filters out the tag with a changing Viewed By counter on abstract page
+         // (also filtering out doi and pub date - not ideal, but..
+         HtmlNodeFilters.tagWithAttribute("td", "class", "green2"), 
+         // the following still removes too much ... 
+         //HtmlNodeFilters.tagWithTextRegex("td", "Viewed by:", true),
+        
     };
 
     OrFilter oFilter = new OrFilter(filters);

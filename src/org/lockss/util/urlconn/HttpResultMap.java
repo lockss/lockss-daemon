@@ -1,5 +1,5 @@
 /*
- * $Id: HttpResultMap.java,v 1.14 2010-12-01 01:43:16 tlipkis Exp $
+ * $Id: HttpResultMap.java,v 1.14.58.1 2014-07-18 15:58:57 wkwilson Exp $
  */
 
 /*
@@ -194,6 +194,10 @@ public class HttpResultMap implements CacheResultMap {
 	  throws PluginException {
 	return evt.invokeHandler(handler, au, connection);
       }
+
+      public String toString() {
+	return "[EIH: " + handler + "]";
+      }
     }
 
     /** Wraps a CacheException class */
@@ -217,6 +221,10 @@ public class HttpResultMap implements CacheResultMap {
         exception.initMessage(fmtMsg(evt.getResultString(),
 				     evt.getMessage()));
 	return exception;
+      }
+
+      public String toString() {
+	return "[EIC: " + ex + "]";
       }
     }
   }
@@ -270,11 +278,21 @@ public class HttpResultMap implements CacheResultMap {
  		  CacheException.RetryableNetworkException_3_30S.class);
     storeMapEntry(java.nio.channels.ClosedChannelException.class,
  		  CacheException.RetryableNetworkException_3_30S.class);
+
+    storeMapEntry(org.lockss.plugin.ContentValidationException.EmptyFile.class,
+		  CacheException.WarningOnly.class);
   }
 
   public void storeArrayEntries(int[] codeArray, Class exceptionClass) {
     for (int i=0; i< codeArray.length; i++) {
       storeMapEntry(codeArray[i], exceptionClass);
+    }
+  }
+
+  // For unit tests
+  void storeArrayEntries(int[] codeArray, CacheResultHandler handler) {
+    for (int i=0; i< codeArray.length; i++) {
+      storeMapEntry(codeArray[i], handler);
     }
   }
 
@@ -449,5 +467,9 @@ public class HttpResultMap implements CacheResultMap {
 	     && ((exClass = exClass.getSuperclass()) != null
 		 && exClass != Exception.class));
     return resultEi;
+  }
+
+  public String toString() {
+    return "[HRM: " + exceptionTable + "]";
   }
 }

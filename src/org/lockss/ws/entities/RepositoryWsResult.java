@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryWsResult.java,v 1.1.2.2 2014-05-05 17:32:30 wkwilson Exp $
+ * $Id: RepositoryWsResult.java,v 1.1.2.3 2014-07-18 15:58:58 wkwilson Exp $
  */
 
 /*
@@ -29,15 +29,14 @@
  in this Software without prior written authorization from Stanford University.
 
  */
+package org.lockss.ws.entities;
+
+import java.util.Map;
 
 /**
  * Container for the information related to a repository that is the result of a
  * query.
  */
-package org.lockss.ws.entities;
-
-import java.util.Map;
-
 public class RepositoryWsResult {
   private String repositorySpaceId;
   private String directoryName;
@@ -48,48 +47,95 @@ public class RepositoryWsResult {
   private String pluginName;
   private Map<String, String> params;
 
+  /**
+   * Provides the repository space identifier.
+   * 
+   * @return a String with the identifier.
+   */
   public String getRepositorySpaceId() {
     return repositorySpaceId;
   }
   public void setRepositorySpaceId(String repositorySpaceId) {
     this.repositorySpaceId = repositorySpaceId;
   }
+
+  /**
+   * Provides the repository directory name.
+   * 
+   * @return a String with the directory name.
+   */
   public String getDirectoryName() {
     return directoryName;
   }
   public void setDirectoryName(String directoryName) {
     this.directoryName = directoryName;
   }
+
+  /**
+   * Provides the Archival Unit name.
+   * 
+   * @return a String with the name.
+   */
   public String getAuName() {
     return auName;
   }
   public void setAuName(String auName) {
     this.auName = auName;
   }
+
+  /**
+   * Provides an indication of whether the repository is internal.
+   * 
+   * @return a Boolean with the indication.
+   */
   public Boolean getInternal() {
     return internal;
   }
   public void setInternal(Boolean internal) {
     this.internal = internal;
   }
+
+  /**
+   * Provides the repository status.
+   * 
+   * @return a String with the status.
+   */
   public String getStatus() {
     return status;
   }
   public void setStatus(String status) {
     this.status = status;
   }
+
+  /**
+   * Provides the space occupied on disk by the repository.
+   * 
+   * @return a Long with the occupied space in bytes.
+   */
   public Long getDiskUsage() {
     return diskUsage;
   }
   public void setDiskUsage(Long diskUsage) {
     this.diskUsage = diskUsage;
   }
+
+  /**
+   * Provides the Archival Unit plugin name.
+   * 
+   * @return a String with the plugin name.
+   */
   public String getPluginName() {
     return pluginName;
   }
   public void setPluginName(String pluginName) {
     this.pluginName = pluginName;
   }
+
+  /**
+   * Provides the Archival Unit configuration parameters.
+   * 
+   * @return a Map<String, String> with the parameters.
+   */
   public Map<String, String> getParams() {
     return params;
   }

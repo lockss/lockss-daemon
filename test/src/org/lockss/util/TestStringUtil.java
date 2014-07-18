@@ -1,10 +1,10 @@
 /*
- * $Id: TestStringUtil.java,v 1.101 2014-01-14 04:32:49 tlipkis Exp $
+ * $Id: TestStringUtil.java,v 1.101.4.1 2014-07-18 15:49:44 wkwilson Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -1406,4 +1406,23 @@ public class TestStringUtil extends LockssTestCase {
     assertEquals("a b\r cd\r ",
 	StringUtil.blankOutNlsAndTabs("a\n\tb\r\ncd\r\n"));
   }
+  
+  public void testNormalizeQuotationMarks() throws Exception {
+    assertEquals("\"foo\"", StringUtil.normalizeQuotationMarks("\u201cfoo\u201d"));
+    assertEquals("\"foo\"", StringUtil.normalizeQuotationMarks("\u201ffoo\u201d"));
+  }
+  
+  public void testNormalizeApostrophes() throws Exception {
+    assertEquals("'foo'", StringUtil.normalizeApostrophes("\u2018foo\u2019"));
+    assertEquals("'foo'", StringUtil.normalizeApostrophes("\u201bfoo\u2019"));
+  }
+  
+  public void testNormalizeDashes() throws Exception {
+    assertEquals("a-z", StringUtil.normalizeDashes("a-z"));
+    assertEquals("a-z", StringUtil.normalizeDashes("a\u2012z"));
+    assertEquals("a-z", StringUtil.normalizeDashes("a\u2013z"));
+    assertEquals("a-z", StringUtil.normalizeDashes("a\u2014z"));
+    assertEquals("a-z", StringUtil.normalizeDashes("a\u2015z"));
+  }
+  
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatusServiceImpl.java,v 1.7 2014-04-29 19:47:04 fergaloy-sf Exp $
+ * $Id: DaemonStatusServiceImpl.java,v 1.7.2.1 2014-07-18 15:59:00 wkwilson Exp $
  */
 
 /*
@@ -35,6 +35,19 @@
  */
 package org.lockss.ws.status;
 
+import static org.lockss.config.ConfigManager.PARAM_PLATFORM_ADMIN_EMAIL;
+import static org.lockss.config.ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST;
+import static org.lockss.config.ConfigManager.PARAM_PLATFORM_FQDN;
+import static org.lockss.config.ConfigManager.PARAM_PLATFORM_IP_ADDRESS;
+import static org.lockss.config.ConfigManager.PARAM_PLATFORM_LOCAL_V3_IDENTITY;
+import static org.lockss.config.ConfigManager.PARAM_PLATFORM_PROJECT;
+import static org.lockss.config.ConfigManager.PARAM_PLATFORM_SECOND_IP_ADDRESS;
+import static org.lockss.config.ConfigManager.PARAM_PLATFORM_SMTP_HOST;
+import static org.lockss.config.ConfigManager.PARAM_PLATFORM_SMTP_PORT;
+import static org.lockss.util.BuildInfo.BUILD_HOST;
+import static org.lockss.util.BuildInfo.BUILD_TIMESTAMP;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
@@ -46,26 +59,40 @@ import org.josql.QueryExecutionException;
 import org.josql.QueryParseException;
 import org.josql.QueryResults;
 import org.lockss.app.LockssDaemon;
+import org.lockss.config.ConfigManager;
+import org.lockss.config.Configuration;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.PluginManager;
+import org.lockss.util.BuildInfo;
+import org.lockss.util.DaemonVersion;
 import org.lockss.util.Logger;
+import org.lockss.util.PlatformUtil;
+import org.lockss.util.PlatformVersion;
 import org.lockss.util.StringUtil;
+import org.lockss.util.TimeBase;
 import org.lockss.ws.entities.AuStatus;
 import org.lockss.ws.entities.AuWsResult;
 import org.lockss.ws.entities.CrawlWsResult;
+import org.lockss.ws.entities.DaemonVersionWsResult;
 import org.lockss.ws.entities.IdNamePair;
 import org.lockss.ws.entities.LockssWebServicesFault;
 import org.lockss.ws.entities.LockssWebServicesFaultInfo;
 import org.lockss.ws.entities.PeerWsResult;
+import org.lockss.ws.entities.PlatformConfigurationWsResult;
+import org.lockss.ws.entities.PlatformWsResult;
 import org.lockss.ws.entities.PluginWsResult;
 import org.lockss.ws.entities.PollWsResult;
 import org.lockss.ws.entities.RepositorySpaceWsResult;
 import org.lockss.ws.entities.RepositoryWsResult;
+import org.lockss.ws.entities.TdbAuWsResult;
+import org.lockss.ws.entities.TdbPublisherWsResult;
+import org.lockss.ws.entities.TdbTitleWsResult;
 import org.lockss.ws.entities.VoteWsResult;
 import org.lockss.ws.status.DaemonStatusService;
 
 @WebService
 public class DaemonStatusServiceImpl implements DaemonStatusService {
+  public static String BUILD_TIMESTAMP_FORMAT = "dd-MMM-yy HH:mm:ss zzz";
   private static Logger log = Logger.getLogger(DaemonStatusServiceImpl.class);
 
   /**
@@ -151,9 +178,10 @@ public class DaemonStatusServiceImpl implements DaemonStatusService {
   /**
    * Provides the selected properties of selected plugins in the system.
    * 
-   * @param query
-   *          A String with the query used to specify what properties to
-   *          retrieve from which plugins.
+   * @param pluginQuery
+   *          A String with the
+   *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
+   *          used to specify what properties to retrieve from which plugins.
    * @return a List<PluginWsResult> with the results.
    * @throws LockssWebServicesFault
    */
@@ -211,9 +239,11 @@ public class DaemonStatusServiceImpl implements DaemonStatusService {
   /**
    * Provides the selected properties of selected archival units in the system.
    * 
-   * @param query
-   *          A String with the query used to specify what properties to
-   *          retrieve from which archival units.
+   * @param auQuery
+   *          A String with the
+   *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
+   *          used to specify what properties to retrieve from which archival
+   *          units.
    * @return a List<AuWsResult> with the results.
    * @throws LockssWebServicesFault
    */
@@ -270,9 +300,10 @@ public class DaemonStatusServiceImpl implements DaemonStatusService {
   /**
    * Provides the selected properties of selected peers in the system.
    * 
-   * @param query
-   *          A String with the query used to specify what properties to
-   *          retrieve from which peers.
+   * @param peerQuery
+   *          A String with the
+   *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
+   *          used to specify what properties to retrieve from which peers.
    * @return a List<PeerWsResult> with the results.
    * @throws LockssWebServicesFault
    */
@@ -329,9 +360,10 @@ public class DaemonStatusServiceImpl implements DaemonStatusService {
   /**
    * Provides the selected properties of selected votes in the system.
    * 
-   * @param query
-   *          A String with the query used to specify what properties to
-   *          retrieve from which votes.
+   * @param voteQuery
+   *          A String with the
+   *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
+   *          used to specify what properties to retrieve from which votes.
    * @return a List<VoteWsResult> with the results.
    * @throws LockssWebServicesFault
    */
@@ -389,9 +421,11 @@ public class DaemonStatusServiceImpl implements DaemonStatusService {
    * Provides the selected properties of selected repository spaces in the
    * system.
    * 
-   * @param query
-   *          A String with the query used to specify what properties to
-   *          retrieve from which repository spaces.
+   * @param repositorySpaceQuery
+   *          A String with the
+   *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
+   *          used to specify what properties to retrieve from which repository
+   *          spaces.
    * @return a List<RepositorySpaceWsResult> with the results.
    * @throws LockssWebServicesFault
    */
@@ -452,15 +486,17 @@ public class DaemonStatusServiceImpl implements DaemonStatusService {
   /**
    * Provides the selected properties of selected repositories in the system.
    * 
-   * @param query
-   *          A String with the query used to specify what properties to
-   *          retrieve from which repositories.
+   * @param repositoryQuery
+   *          A String with the
+   *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
+   *          used to specify what properties to retrieve from which
+   *          repositories.
    * @return a List<RepositoryWsResult> with the results.
    * @throws LockssWebServicesFault
    */
   @Override
-  public List<RepositoryWsResult> queryRepositories(
-      String repositoryQuery) throws LockssWebServicesFault {
+  public List<RepositoryWsResult> queryRepositories(String repositoryQuery)
+      throws LockssWebServicesFault {
     final String DEBUG_HEADER = "queryRepositories(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "repositoryQuery = "
 	+ repositoryQuery);
@@ -515,9 +551,10 @@ public class DaemonStatusServiceImpl implements DaemonStatusService {
   /**
    * Provides the selected properties of selected crawls in the system.
    * 
-   * @param query
-   *          A String with the query used to specify what properties to
-   *          retrieve from which crawls.
+   * @param crawlQuery
+   *          A String with the
+   *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
+   *          used to specify what properties to retrieve from which crawls.
    * @return a List<CrawlWsResult> with the results.
    * @throws LockssWebServicesFault
    */
@@ -574,9 +611,10 @@ public class DaemonStatusServiceImpl implements DaemonStatusService {
   /**
    * Provides the selected properties of selected polls in the system.
    * 
-   * @param query
-   *          A String with the query used to specify what properties to
-   *          retrieve from which polls.
+   * @param pollQuery
+   *          A String with the
+   *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
+   *          used to specify what properties to retrieve from which polls.
    * @return a List<PollWsResult> with the results.
    * @throws LockssWebServicesFault
    */
@@ -631,13 +669,281 @@ public class DaemonStatusServiceImpl implements DaemonStatusService {
   }
 
   /**
+   * Provides the platform configuration.
+   * 
+   * @return a PlatformConfigurationWsResult with the platform configuration.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public PlatformConfigurationWsResult getPlatformConfiguration()
+      throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "getPlatformConfiguration(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    PlatformConfigurationWsResult result = new PlatformConfigurationWsResult();
+    LockssDaemon theDaemon = LockssDaemon.getLockssDaemon();
+    Configuration config = ConfigManager.getCurrentConfig();
+
+    result.setHostName(config.get(PARAM_PLATFORM_FQDN));
+
+    result.setIpAddress(config.get(PARAM_PLATFORM_IP_ADDRESS));
+
+    if (theDaemon.isClockss()) {
+      result.setIpAddress(config.get(PARAM_PLATFORM_SECOND_IP_ADDRESS));
+    }
+
+    result.setGroups((List<String>)(config.getPlatformGroupList()));
+    result.setProject(config.get(PARAM_PLATFORM_PROJECT));
+    result.setV3Identity(config.get(PARAM_PLATFORM_LOCAL_V3_IDENTITY));
+
+    String smtpHost = config.get(PARAM_PLATFORM_SMTP_HOST);
+
+    if (smtpHost != null) {
+      int smtpPort =
+	  config.getInt(PARAM_PLATFORM_SMTP_PORT,
+			org.lockss.mail.SmtpMailService.DEFAULT_SMTPPORT);
+      result.setMailRelay(smtpHost + ":" + smtpPort);
+    }
+
+    result.setAdminEmail(config.get(PARAM_PLATFORM_ADMIN_EMAIL));
+    result.setDisks((List<String>)
+	(config.getList(PARAM_PLATFORM_DISK_SPACE_LIST)));
+
+    result.setCurrentTime(TimeBase.nowMs());
+    result.setUptime(TimeBase.msSince(theDaemon.getStartDate().getTime()));
+
+    DaemonVersion daemonVersion = ConfigManager.getDaemonVersion();
+    DaemonVersionWsResult daemonVersionResult = new DaemonVersionWsResult();
+
+    daemonVersionResult.setFullVersion(daemonVersion.displayString());
+    daemonVersionResult.setMajorVersion(daemonVersion.getMajorVersion());
+    daemonVersionResult.setMinorVersion(daemonVersion.getMinorVersion());
+    daemonVersionResult.setBuildVersion(daemonVersion.getBuildVersion());
+
+    result.setDaemonVersion(daemonVersionResult);
+
+    PlatformVersion platformVersion = Configuration.getPlatformVersion();
+    PlatformWsResult platform = new PlatformWsResult();
+
+    if (platformVersion != null) {
+      platform.setName(platformVersion.getName());
+      platform.setVersion(platformVersion.getVersion());
+      platform.setSuffix(platformVersion.getSuffix());
+      result.setPlatform(platform);
+    }
+
+    result.setCurrentWorkingDirectory(PlatformUtil.getCwd());
+
+    result.setProperties((List<String>)
+	(ConfigManager.getConfigManager().getConfigUrlList()));
+
+    result.setBuildHost(BuildInfo.getBuildProperty(BUILD_HOST));
+    result.setBuildTimestamp(getBuildTimestamp());
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+    return result;
+  }
+
+  /**
+   * Provides the selected properties of selected title database publishers.
+   * 
+   * @param tdbPublisherQuery
+   *          A String with the
+   *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
+   *          used to specify what properties to retrieve from which title
+   *          database publishers.
+   * @return a List<TdbPublisherWsResult> with the results.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public List<TdbPublisherWsResult> queryTdbPublishers(String tdbPublisherQuery)
+      throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "queryTdbPublishers(): ";
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "tdbPublisherQuery = " + tdbPublisherQuery);
+
+    TdbPublisherHelper tdbPublisherHelper = new TdbPublisherHelper();
+    List<TdbPublisherWsResult> results = null;
+
+    // Create the full query.
+    String fullQuery = createFullQuery(tdbPublisherQuery,
+	TdbPublisherHelper.SOURCE_FQCN, TdbPublisherHelper.PROPERTY_NAMES,
+	TdbPublisherHelper.RESULT_FQCN);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "fullQuery = " + fullQuery);
+
+    // Create a new JoSQL query.
+    Query q = new Query();
+
+    try {
+      // Parse the SQL-like query.
+      q.parse(fullQuery);
+
+      try {
+	// Execute the query.
+	QueryResults qr = q.execute(tdbPublisherHelper.createUniverse());
+
+	// Get the query results.
+	results = (List<TdbPublisherWsResult>)qr.getResults();
+	if (log.isDebug3()) {
+	  log.debug3(DEBUG_HEADER + "results.size() = " + results.size());
+	  log.debug3(DEBUG_HEADER + "results = "
+	      + tdbPublisherHelper.nonDefaultToString(results));
+	}
+      } catch (QueryExecutionException qee) {
+	log.error("Caught QueryExecuteException", qee);
+	log.error("fullQuery = '" + fullQuery + "'");
+	throw new LockssWebServicesFault(qee,
+	    new LockssWebServicesFaultInfo("tdbPublisherQuery = "
+		+ tdbPublisherQuery));
+      }
+    } catch (QueryParseException qpe) {
+      log.error("Caught QueryParseException", qpe);
+      log.error("fullQuery = '" + fullQuery + "'");
+	throw new LockssWebServicesFault(qpe,
+	    new LockssWebServicesFaultInfo("tdbPublisherQuery = "
+		+ tdbPublisherQuery));
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "results = "
+	+ tdbPublisherHelper.nonDefaultToString(results));
+    return results;
+  }
+
+  /**
+   * Provides the selected properties of selected title database titles.
+   * 
+   * @param tdbTitleQuery
+   *          A String with the
+   *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
+   *          used to specify what properties to retrieve from which title
+   *          database titles.
+   * @return a List<TdbTitleWsResult> with the results.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public List<TdbTitleWsResult> queryTdbTitles(String tdbTitleQuery)
+      throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "queryTdbTitles(): ";
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "tdbTitleQuery = " + tdbTitleQuery);
+
+    TdbTitleHelper tdbTitleHelper = new TdbTitleHelper();
+    List<TdbTitleWsResult> results = null;
+
+    // Create the full query.
+    String fullQuery = createFullQuery(tdbTitleQuery,
+	TdbTitleHelper.SOURCE_FQCN, TdbTitleHelper.PROPERTY_NAMES,
+	TdbTitleHelper.RESULT_FQCN);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "fullQuery = " + fullQuery);
+
+    // Create a new JoSQL query.
+    Query q = new Query();
+
+    try {
+      // Parse the SQL-like query.
+      q.parse(fullQuery);
+
+      try {
+	// Execute the query.
+	QueryResults qr = q.execute(tdbTitleHelper.createUniverse());
+
+	// Get the query results.
+	results = (List<TdbTitleWsResult>)qr.getResults();
+	if (log.isDebug3()) {
+	  log.debug3(DEBUG_HEADER + "results.size() = " + results.size());
+	  log.debug3(DEBUG_HEADER + "results = "
+	      + tdbTitleHelper.nonDefaultToString(results));
+	}
+      } catch (QueryExecutionException qee) {
+	log.error("Caught QueryExecuteException", qee);
+	log.error("fullQuery = '" + fullQuery + "'");
+	throw new LockssWebServicesFault(qee,
+	    new LockssWebServicesFaultInfo("tdbTitleQuery = "
+		+ tdbTitleQuery));
+      }
+    } catch (QueryParseException qpe) {
+      log.error("Caught QueryParseException", qpe);
+      log.error("fullQuery = '" + fullQuery + "'");
+	throw new LockssWebServicesFault(qpe,
+	    new LockssWebServicesFaultInfo("tdbTitleQuery = "
+		+ tdbTitleQuery));
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "results = "
+	+ tdbTitleHelper.nonDefaultToString(results));
+    return results;
+  }
+
+  /**
+   * Provides the selected properties of selected title database archival units.
+   * 
+   * @param tdbAuQuery
+   *          A String with the
+   *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
+   *          used to specify what properties to retrieve from which title
+   *          database archival units.
+   * @return a List<TdbAuWsResult> with the results.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public List<TdbAuWsResult> queryTdbAus(String tdbAuQuery)
+      throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "queryTdbAus(): ";
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "tdbAuQuery = " + tdbAuQuery);
+
+    TdbAuHelper tdbAuHelper = new TdbAuHelper();
+    List<TdbAuWsResult> results = null;
+
+    // Create the full query.
+    String fullQuery = createFullQuery(tdbAuQuery, TdbAuHelper.SOURCE_FQCN,
+	TdbAuHelper.PROPERTY_NAMES, TdbAuHelper.RESULT_FQCN);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "fullQuery = " + fullQuery);
+
+    // Create a new JoSQL query.
+    Query q = new Query();
+
+    try {
+      // Parse the SQL-like query.
+      q.parse(fullQuery);
+
+      try {
+	// Execute the query.
+	QueryResults qr = q.execute(tdbAuHelper.createUniverse());
+
+	// Get the query results.
+	results = (List<TdbAuWsResult>)qr.getResults();
+	if (log.isDebug3()) {
+	  log.debug3(DEBUG_HEADER + "results.size() = " + results.size());
+	  log.debug3(DEBUG_HEADER + "results = "
+	      + tdbAuHelper.nonDefaultToString(results));
+	}
+      } catch (QueryExecutionException qee) {
+	log.error("Caught QueryExecuteException", qee);
+	log.error("fullQuery = '" + fullQuery + "'");
+	throw new LockssWebServicesFault(qee,
+	    new LockssWebServicesFaultInfo("tdbAuQuery = " + tdbAuQuery));
+      }
+    } catch (QueryParseException qpe) {
+      log.error("Caught QueryParseException", qpe);
+      log.error("fullQuery = '" + fullQuery + "'");
+	throw new LockssWebServicesFault(qpe,
+	    new LockssWebServicesFaultInfo("tdbAuQuery = " + tdbAuQuery));
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "results = "
+	+ tdbAuHelper.nonDefaultToString(results));
+    return results;
+  }
+
+  /**
    * Provides the full query that is equivalent to the simplified query for a
    * given class.
    * 
    * A full query looks like
    * SELECT new org.lockss.ws.entities.SomeWsResult()
    * {propertyName -> propertyName, ...}
-   * FROM org.lockss.ws.entities.SomeWsResult
+   * FROM org.lockss.ws.entities.SomeWsSource
    * WHERE ...
    * 
    * @param originalQuery
@@ -913,5 +1219,31 @@ public class DaemonStatusServiceImpl implements DaemonStatusService {
     if (log.isDebug2())
       log.debug2(DEBUG_HEADER + "whereClause = " + whereClause);
     return whereClause;
+  }
+
+  /**
+   * Provides the build timestamp.
+   * 
+   * @return A long with the build timestamp.
+   * @throws LockssWebServicesFault
+   */
+  protected long getBuildTimestamp() throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "getBuildTimestamp(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    try {
+      long timestamp = (new SimpleDateFormat(BUILD_TIMESTAMP_FORMAT))
+	  .parse(BuildInfo.getBuildProperty(BUILD_TIMESTAMP)).getTime();
+
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "timestamp = " + timestamp);
+      return timestamp;
+    } catch (ParseException pe) {
+      log.error("Caught ParseException", pe);
+      log.error("BuildInfo.getBuildProperty(BUILD_TIMESTAMP)) = '"
+	  + BuildInfo.getBuildProperty(BUILD_TIMESTAMP) + "'");
+      throw new LockssWebServicesFault(pe,
+	  new LockssWebServicesFaultInfo("BUILD_TIMESTAMP = "
+	      + BuildInfo.getBuildProperty(BUILD_TIMESTAMP)));
+    }
   }
 }

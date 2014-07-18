@@ -1,5 +1,5 @@
 /*
- * $Id: NumberUtil.java,v 1.19 2013-09-18 11:36:14 easyonthemayo Exp $
+ * $Id: NumberUtil.java,v 1.19.6.1 2014-07-18 15:59:07 wkwilson Exp $
  */
 
 /*
@@ -31,13 +31,14 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.util;
 
+import java.util.*;
+import java.math.BigDecimal;
+
 import org.apache.commons.lang.math.NumberUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.oro.text.regex.Pattern;
 import org.lockss.exporter.biblio.BibliographicOrderScorer;
 import org.lockss.exporter.biblio.BibliographicUtil;
-
-import java.util.*;
 
 
 /**
@@ -1279,6 +1280,19 @@ public class NumberUtil {
       }
     }
     return s;
+  }
+
+  /**
+   * Round to given number of digits after decimal point
+   * 
+   * @param d
+   * @param decimalPlace
+   * @return argument rounded to 
+   */
+  public static double roundToNDecimals(double d, int decimalPlaces) {
+    BigDecimal bd = new BigDecimal(d);
+    bd = bd.setScale(decimalPlaces, BigDecimal.ROUND_HALF_EVEN);
+    return bd.doubleValue();
   }
 
   /**

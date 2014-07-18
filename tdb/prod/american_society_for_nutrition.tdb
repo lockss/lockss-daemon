@@ -35,6 +35,7 @@
     >
 
     param[base_url] = http://www.ajcn.org/
+    comment[notReady] = Can't fetch permission page even though it's actually there. 301 error?
     
     au < HighWirePressH20Plugin ; manifest ; 1952-1953 ; American Journal of Clinical Nutrition Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 1954 ; American Journal of Clinical Nutrition Volume 2 ; 2 >
@@ -129,13 +130,13 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; American Journal of Clinical Nutrition Volume 91 ; 91 >
     au < HighWirePressH20Plugin ; released ; 2010 ; American Journal of Clinical Nutrition Volume 92 ; 92 >
     au < HighWirePressH20Plugin ; released ; 2011 ; American Journal of Clinical Nutrition Volume 93 ; 93 >
-    au < HighWirePressH20Plugin ; testing ; 2011 ; American Journal of Clinical Nutrition Volume 94 ; 94 >
-    au < HighWirePressH20Plugin ; testing ; 2012 ; American Journal of Clinical Nutrition Volume 95 ; 95 >
-    au < HighWirePressH20Plugin ; testing ; 2012 ; American Journal of Clinical Nutrition Volume 96 ; 96 >
-    au < HighWirePressH20Plugin ; testing ; 2013 ; American Journal of Clinical Nutrition Volume 97 ; 97 >
-    au < HighWirePressH20Plugin ; testing ; 2013 ; American Journal of Clinical Nutrition Volume 98 ; 98 >
+    au < HighWirePressH20Plugin ; notReady ; 2011 ; American Journal of Clinical Nutrition Volume 94 ; 94 >
+    au < HighWirePressH20Plugin ; notReady ; 2012 ; American Journal of Clinical Nutrition Volume 95 ; 95 >
+    au < HighWirePressH20Plugin ; notReady ; 2012 ; American Journal of Clinical Nutrition Volume 96 ; 96 >
+    au < HighWirePressH20Plugin ; notReady ; 2013 ; American Journal of Clinical Nutrition Volume 97 ; 97 >
+    au < HighWirePressH20Plugin ; notReady ; 2013 ; American Journal of Clinical Nutrition Volume 98 ; 98 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; American Journal of Clinical Nutrition Volume 99 ; 99 >
-    au < HighWirePressH20Plugin ; expected ; 2014 ; American Journal of Clinical Nutrition Volume 100 ; 100 >
+    au < HighWirePressH20Plugin ; manifest ; 2014 ; American Journal of Clinical Nutrition Volume 100 ; 100 >
 
   }
 

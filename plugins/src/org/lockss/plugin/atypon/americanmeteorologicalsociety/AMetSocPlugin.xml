@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>testing</string>
+    <string>testing - Alex/Collin</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>8</string>
+    <string>11</string>
   </entry>  
 <!--  updating out of sync with parent, must have own feature_version_map -->  
   <entry>
@@ -21,11 +21,11 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>12</string>
+        <string>14</string>
       </entry>
       <entry>
         <string>Substance</string>
-        <string>5</string>
+        <string>6</string>
       </entry>
     </map>
   </entry>
@@ -39,7 +39,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>11</string>
+    <string>14</string>
   </entry>    
    <entry>
     <string>plugin_publishing_platform</string>
@@ -54,7 +54,7 @@
     <string>org.lockss.plugin.atypon.americanmeteorologicalsociety.AMetSocHtmlHashFilterFactory</string>
   </entry>
   <entry>
-    <string>text/html_crawl_filter_factory</string>
-    <string>org.lockss.plugin.atypon.americanmeteorologicalsociety.AMetSocHtmlCrawlFilterFactory</string>
+    <string>plugin_au_config_user_msg</string>
+    <string>Atypon Systems hosts this archival unit (AU) and requires that you &lt;a href=&apos;http://journals.ametsoc.org/action/institutionLockssIpChange&apos;&gt;register the IP address of this LOCKSS box in your institutional account as a crawler&lt;/a&gt; before allowing your LOCKSS box to harvest this AU. Failure to comply with this publisher requirement may trigger crawler traps on the Atypon Systems platform, and your LOCKSS box or your entire institution may be temporarily banned from accessing the site. You only need to register the IP address of this LOCKSS box once for all AUs published by the American Meteorological Society.</string>
   </entry>
 </map>

@@ -1,5 +1,5 @@
 /*
- * $Id: TaylorAndFrancisHtmlCrawlFilterFactory.java,v 1.6.2.1 2014-05-05 17:32:32 wkwilson Exp $
+ * $Id: TaylorAndFrancisHtmlCrawlFilterFactory.java,v 1.6.2.2 2014-07-18 15:56:30 wkwilson Exp $
  */
 
 /*
@@ -73,6 +73,8 @@ public class TaylorAndFrancisHtmlCrawlFilterFactory implements FilterFactory {
         //example: http://www.tandfonline.com/doi/full/10.1080/09064702.2012.670665#.U0weNlXC02c
         // reference #20
         HtmlNodeFilters.tagWithAttribute("ul",  "class", "references"),     
+        // if has "doi/mlt" will crawl filter out - but remove in case it doesn't
+        HtmlNodeFilters.tagWithAttribute("li",  "class", "relatedArticleLink"),     
         
         // on a Corrigendum abstract or full text page, there will be a link to "Original Article"
         // and on the Original Article page there will be a link back to the "Corrigendum"

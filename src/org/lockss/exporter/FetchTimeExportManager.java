@@ -1,10 +1,10 @@
 /*
- * $Id: FetchTimeExportManager.java,v 1.2 2013-12-12 21:57:12 fergaloy-sf Exp $
+ * $Id: FetchTimeExportManager.java,v 1.2.4.1 2014-07-18 15:59:13 wkwilson Exp $
  */
 
 /*
 
- Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,22 +29,22 @@
  in this Software without prior written authorization from Stanford University.
 
  */
-
-/**
- * Service used to manage the export of metadata item fetch times.
- * 
- * @version 1.0
- */
 package org.lockss.exporter;
 
 import java.io.File;
 import org.lockss.app.BaseLockssDaemonManager;
 import org.lockss.app.ConfigurableManager;
 import org.lockss.app.LockssDaemon;
+import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.Cron;
 import org.lockss.util.Logger;
 
+/**
+ * Service used to manage the export of metadata item fetch times.
+ * 
+ * @version 1.0
+ */
 public class FetchTimeExportManager extends BaseLockssDaemonManager implements
     ConfigurableManager {
   /**
@@ -90,6 +90,23 @@ public class FetchTimeExportManager extends BaseLockssDaemonManager implements
   public static final String DEFAULT_EXPORT_BASEDIR_PATH = "<tmpdir>/"
       + DEFAULT_EXPORT_BASEDIR;
 
+  /**
+   * Indication of whether the fetch time exporter should be run for the first
+   * time on startup, independently of the Cron task.
+   * <p />
+   * Defaults to false.
+   */
+  public static final String PARAM_FETCH_TIME_EXPORT_RUN_ON_STARTUP =
+      PREFIX + "fetchTimeExportRunOnStartup";
+
+  /**
+   * Default value of the fetch time exporter run on startup configuration
+   * parameter.
+   * <p />
+   * <code>false</code> to disable, <code>true</code> to enable.
+   */
+  public static final boolean DEFAULT_FETCH_TIME_EXPORT_RUN_ON_STARTUP = false;
+
   private static final Logger log =
       Logger.getLogger(FetchTimeExportManager.class);
 
@@ -112,6 +129,13 @@ public class FetchTimeExportManager extends BaseLockssDaemonManager implements
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
     super.startService();
     resetConfig();
+
+    if (ready && ConfigManager.getCurrentConfig()
+	.getBoolean(PARAM_FETCH_TIME_EXPORT_RUN_ON_STARTUP,
+	    DEFAULT_FETCH_TIME_EXPORT_RUN_ON_STARTUP)) {
+      new FetchTimeExporter(getDaemon()).getCronTask().execute();
+    }
+
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "ready = " + ready);
   }
 

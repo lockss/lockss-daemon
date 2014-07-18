@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetaPressUrlNormalizer.java,v 1.1 2011-10-04 10:44:11 thib_gc Exp $
+ * $Id: TestMetaPressUrlNormalizer.java,v 1.1.50.1 2014-07-18 15:49:49 wkwilson Exp $
  */
 
 /*
@@ -48,31 +48,37 @@ public class TestMetaPressUrlNormalizer extends LockssTestCase {
                  MetaPressUrlNormalizer.normalizeQuery("ok1=good1"));
     assertEquals("ok1=good1&ok2=good2",
                  MetaPressUrlNormalizer.normalizeQuery("ok1=good1&ok2=good2"));
-    // Queries beginning with sortorder=... are all disqualified
+    // Queries beginning with sortorder=... are usually all disqualified and sortorder is removed
     assertEquals("",
                  MetaPressUrlNormalizer.normalizeQuery("sortorder=something"));
     assertEquals("",
                  MetaPressUrlNormalizer.normalizeQuery("sortorder=something&ok1=good1"));
-    assertEquals("ok1=good1&sortorder=something",
+    assertEquals("",
+        MetaPressUrlNormalizer.normalizeQuery("sortorder=something&p_o=0"));
+    assertEquals("p_o=10",
+        MetaPressUrlNormalizer.normalizeQuery("sortorder=something&p_o=10"));
+    assertEquals("ok1=good1",
                  MetaPressUrlNormalizer.normalizeQuery("ok1=good1&sortorder=something"));
-    // Removal of p=..., pi=..., p_o=..., mark=..., sw=...
+    // Removal of p=..., pi=..., p_o=0..., mark=..., sw=...
     // is expected, in any order or combination
     assertEquals("",
                  MetaPressUrlNormalizer.normalizeQuery("p=badp"));
     assertEquals("",
                  MetaPressUrlNormalizer.normalizeQuery("pi=badpi"));
     assertEquals("",
-                 MetaPressUrlNormalizer.normalizeQuery("p_o=badp_o"));
+                 MetaPressUrlNormalizer.normalizeQuery("p_o=0"));
+    assertEquals("p_o=okayp_o",
+                 MetaPressUrlNormalizer.normalizeQuery("p_o=okayp_o"));
     assertEquals("",
                  MetaPressUrlNormalizer.normalizeQuery("mark=badmark"));
     assertEquals("",
                  MetaPressUrlNormalizer.normalizeQuery("sw=badsw"));
     assertEquals("",
-                 MetaPressUrlNormalizer.normalizeQuery("p=badp&pi=badpi&p_o=badp_o&mark=badmark&sw=badsw"));
+                 MetaPressUrlNormalizer.normalizeQuery("p=badp&pi=badpi&p_o=0&mark=badmark&sw=badsw"));
     assertEquals("",
-                 MetaPressUrlNormalizer.normalizeQuery("sw=badsw&mark=badmark&p_o=badp_o&pi=badpi&p=badp"));
+                 MetaPressUrlNormalizer.normalizeQuery("sw=badsw&mark=badmark&p_o=0&pi=badpi&p=badp"));
     assertEquals("ok1=good1&ok2=good2&ok3=good3&ok4=good4&ok5=good5&ok6=good6",
-                 MetaPressUrlNormalizer.normalizeQuery("ok1=good1&p=badp&ok2=good2&pi=badpi&ok3=good3&p_o=badp_o&ok4=good4&mark=badmark&ok5=good5&sw=badsw&ok6=good6"));
+                 MetaPressUrlNormalizer.normalizeQuery("ok1=good1&p=badp&ok2=good2&pi=badpi&ok3=good3&p_o=0&ok4=good4&mark=badmark&ok5=good5&sw=badsw&ok6=good6"));
     // Pathological
     assertEquals("",
                  MetaPressUrlNormalizer.normalizeQuery("p="));
@@ -94,10 +100,12 @@ public class TestMetaPressUrlNormalizer extends LockssTestCase {
                  normalizer.normalizeUrl("http://www.example.com/foo?", null));
     assertEquals("http://www.example.com/foo?ok1=good1",
                  normalizer.normalizeUrl("http://www.example.com/foo?ok1=good1", null));
+    assertEquals("http://www.example.com/foo?p_o=ok_p_o",
+        normalizer.normalizeUrl("http://www.example.com/foo?p=badp&pi=badpi&p_o=ok_p_o&mark=badmark&sw=badsw", null));
     assertEquals("http://www.example.com/foo",
-                 normalizer.normalizeUrl("http://www.example.com/foo?p=badp&pi=badpi&p_o=badp_o&mark=badmark&sw=badsw", null));
+                 normalizer.normalizeUrl("http://www.example.com/foo?p=badp&pi=badpi&mark=badmark&sw=badsw", null));
     assertEquals("http://www.example.com/foo?ok1=good1&ok2=good2&ok3=good3&ok4=good4&ok5=good5&ok6=good6",
-                 normalizer.normalizeUrl("http://www.example.com/foo?ok1=good1&p=badp&ok2=good2&pi=badpi&ok3=good3&p_o=badp_o&ok4=good4&mark=badmark&ok5=good5&sw=badsw&ok6=good6", null));
+                 normalizer.normalizeUrl("http://www.example.com/foo?ok1=good1&p=badp&ok2=good2&pi=badpi&ok3=good3&ok4=good4&mark=badmark&ok5=good5&sw=badsw&ok6=good6", null));
   }
   
 }

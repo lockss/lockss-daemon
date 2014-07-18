@@ -10,7 +10,7 @@
   {
 
     title <
-      name = Geochemistry Perspectives ;
+      name = Geochemical Perspectives ;
       issn = 2223-7755 ;
       eissn = 2224-2759 ;
       issnl = 2223-7755
@@ -18,9 +18,9 @@
 
     param[base_url] = http://perspectives.geoscienceworld.org/
     
-    au < ready ; 2012 ; Geochemistry Perspectives Volume 1 ; 1 >
-    au < ready ; 2013 ; Geochemistry Perspectives Volume 2 ; 2 >
-    au < expected ; 2014 ; Geochemistry Perspectives Volume 3 ; 3 >
+    au < released ; 2012 ; Geochemical Perspectives Volume 1 ; 1 >
+    au < released ; 2013 ; Geochemical Perspectives Volume 2 ; 2 >
+    au < manifest ; 2014 ; Geochemical Perspectives Volume 3 ; 3 >
     
   }
 

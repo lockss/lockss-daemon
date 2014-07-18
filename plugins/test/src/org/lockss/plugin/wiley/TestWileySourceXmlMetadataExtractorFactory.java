@@ -116,6 +116,10 @@ public class TestWileySourceXmlMetadataExtractorFactory extends LockssTestCase {
   String urlVolumeBaseA = "27";      
   String urlIssueBaseA = "14"; 
   
+
+  // wiley puts in long keyword phrases which cause a warning from the 
+  // database as it truncates them. We don't need them, so just cease to 
+  // pick them up (and therefore, don't test any longer)
   ArrayList<String> goodKeywords = new ArrayList<String>();
   {
     goodKeywords.add("organic organic");
@@ -416,7 +420,8 @@ public class TestWileySourceXmlMetadataExtractorFactory extends LockssTestCase {
     assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
     assertEquals(goodIssue, md.get(MetadataField.FIELD_ISSUE));
     assertEquals(goodDoi, md.get(MetadataField.FIELD_DOI));
-    assertEquals(goodKeywords, md.getList(MetadataField.FIELD_KEYWORDS));
+    // we no longer pick up keywords
+    //assertEquals(goodKeywords, md.getList(MetadataField.FIELD_KEYWORDS));
     assertEquals(goodJTitle, md.get(MetadataField.FIELD_JOURNAL_TITLE));
     assertEquals(goodPropId, 
                  md.get(MetadataField.FIELD_PROPRIETARY_IDENTIFIER));
@@ -453,7 +458,8 @@ public class TestWileySourceXmlMetadataExtractorFactory extends LockssTestCase {
     assertEquals(goodEissn, md.get(MetadataField.FIELD_EISSN));
     assertEquals(goodDoi, md.get(MetadataField.FIELD_DOI));
     assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
-    assertEquals(goodKeywords, md.getList(MetadataField.FIELD_KEYWORDS));
+    // we no longer pick up keywords
+    //assertEquals(goodKeywords, md.getList(MetadataField.FIELD_KEYWORDS));
     // get journal id, volume, and issue from xml url path
     assertEquals(urlVolumeBaseA, md.get(MetadataField.FIELD_VOLUME));
     assertEquals(urlIssueBaseA, md.get(MetadataField.FIELD_ISSUE));
@@ -492,7 +498,8 @@ public class TestWileySourceXmlMetadataExtractorFactory extends LockssTestCase {
     assertEquals(goodEissn, md.get(MetadataField.FIELD_EISSN));
     assertEquals(goodDoi, md.get(MetadataField.FIELD_DOI));
     assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
-    assertEquals(goodKeywords, md.getList(MetadataField.FIELD_KEYWORDS));
+    // we no longer pick up keywords
+    //assertEquals(goodKeywords, md.getList(MetadataField.FIELD_KEYWORDS));
     assertEquals(hardwiredPublisher, md.get(MetadataField.FIELD_PUBLISHER));
     // journal id, volume and issue can be extracted from url .../11111.1.zip
     // can not get these values from the zip file name.
@@ -595,7 +602,8 @@ public class TestWileySourceXmlMetadataExtractorFactory extends LockssTestCase {
     assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
     assertEquals(goodIssue, md.get(MetadataField.FIELD_ISSUE));
     assertEquals(goodDoi, md.get(MetadataField.FIELD_DOI));
-    assertEquals(goodKeywords, md.getList(MetadataField.FIELD_KEYWORDS));
+    // we no longer pick up keywords
+    //assertEquals(goodKeywords, md.getList(MetadataField.FIELD_KEYWORDS));
     assertEquals(goodJTitle, md.get(MetadataField.FIELD_JOURNAL_TITLE));
     assertEquals(goodPropId, 
                  md.get(MetadataField.FIELD_PROPRIETARY_IDENTIFIER));

@@ -11,6 +11,22 @@
   {
   
     title <
+      name = Anthropologica ;
+      issn = 0003-5459 ;
+      eissn = 2292-3586 ;
+      issnl = 0003-5459
+    >
+
+    param[journal_dir] = anthropologica
+    attr[journal_id] = ant
+
+    au < manifest ; 2014 ; Anthropologica Volume 56 ; 56 >
+    
+  }
+
+  {
+  
+    title <
       name = The Canadian Historical Review ;
       issn = 0008-3755 ;
       eissn = 1710-1093 ;
@@ -29,7 +45,8 @@
     au < released ; 2010 ; The Canadian Historical Review Volume 91 ; 91 >
     au < released ; 2011 ; The Canadian Historical Review Volume 92 ; 92 >
     au < released ; 2012 ; The Canadian Historical Review Volume 93 ; 93 >
-    au < ready ; 2013 ; The Canadian Historical Review Volume 94 ; 94 >
+    au < released ; 2013 ; The Canadian Historical Review Volume 94 ; 94 >
+    au < doNotProcess ; 2014 ; The Canadian Historical Review Volume 95 ; 95 >
 
   }
 
@@ -52,8 +69,25 @@
     au < released ; 2010 ; Canadian Journal of Criminology and Criminal Justice Volume 52 ; 52 >
     au < released ; 2011 ; Canadian Journal of Criminology and Criminal Justice Volume 53 ; 53 >
     au < released ; 2012 ; Canadian Journal of Criminology and Criminal Justice Volume 54 ; 54 >
-    au < ready ; 2013 ; Canadian Journal of Criminology and Criminal Justice Volume 55 ; 55 >
+    au < released ; 2013 ; Canadian Journal of Criminology and Criminal Justice Volume 55 ; 55 >
+    au < doNotProcess ; 2014 ; Canadian Journal of Criminology and Criminal Justice Volume 56 ; 56 >
 
+  }
+
+  {
+  
+    title <
+      name = The Canadian Journal of Human Sexuality ;
+      issn = 1188-4517 ;
+      eissn = 2291-7063 ;
+      issnl = 1188-4517
+    >
+
+    param[journal_dir] = the_canadian_journal_of_human_sexuality
+    attr[journal_id] = cjh
+
+    au < manifest ; 2014 ; The Canadian Journal of Human Sexuality Volume 23 ; 23 >
+    
   }
 
   {
@@ -71,7 +105,8 @@
     au < released ; 2010 ; Canadian Journal of Information and Library Science Volume 34 ; 34 >
     au < released ; 2011 ; Canadian Journal of Information and Library Science Volume 35 ; 35 >
     au < released ; 2012 ; Canadian Journal of Information and Library Science Volume 36 ; 36 >
-    au < ready ; 2013 ; Canadian Journal of Information and Library Science Volume 37 ; 37 >
+    au < released ; 2013 ; Canadian Journal of Information and Library Science Volume 37 ; 37 >
+    au < doNotProcess ; 2014 ; Canadian Journal of Information and Library Science Volume 38 ; 38 >
 
   }
   
@@ -95,7 +130,8 @@
     au < released ; 2010 ; Canadian Journal of Law and Society Volume 25 ; 25 >
     au < released ; 2011 ; Canadian Journal of Law and Society Volume 26 ; 26 >
     au < released ; 2012 ; Canadian Journal of Law and Society Volume 27 ; 27 >
-    au < ready ; 2013 ; Canadian Journal of Law and Society Volume 28 ; 28 >
+    au < released ; 2013 ; Canadian Journal of Law and Society Volume 28 ; 28 >
+    au < doNotProcess ; 2014 ; Canadian Journal of Law and Society Volume 29 ; 29 >
 
   }
 
@@ -121,7 +157,8 @@
     au < released ; 2010 ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 55 ; 55 >
     au < released ; 2011 ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 56 ; 56 >
     au < released ; 2012 ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 57 ; 57 >
-    au < ready ; 2013 ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 58 ; 58 >
+    au < released ; 2013 ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 58 ; 58 >
+    au < doNotProcess ; 2014 ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 59 ; 59 >
 
 
   }
@@ -165,7 +202,8 @@
     au < released ; 2010 ; Canadian Journal of Women and the Law Volume 22 ; 22 >
     au < released ; 2011 ; Canadian Journal of Women and the Law Volume 23 ; 23 >
     au < released ; 2012 ; Canadian Journal of Women and the Law Volume 24 ; 24 >
-    au < ready ; 2013 ; Canadian Journal of Women and the Law Volume 25 ; 25 >
+    au < released ; 2013 ; Canadian Journal of Women and the Law Volume 25 ; 25 >
+    au < doNotProcess ; 2014 ; Canadian Journal of Women and the Law Volume 26 ; 26 >
 
   }
 
@@ -189,7 +227,8 @@
     au < released ; 2009-2010 ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 66 ; 66 >
     au < released ; 2011 ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 67 ; 67 >
     au < released ; 2012 ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 68 ; 68 >
-    au < ready ; 2013 ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 69 ; 69 >
+    au < released ; 2013 ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 69 ; 69 >
+    au < doNotProcess ; 2014 ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 70 ; 70 >
 
   }
 
@@ -209,7 +248,8 @@
     au < released ; 2010 ; Canadian Public Policy Volume 36 ; 36 >
     au < released ; 2011 ; Canadian Public Policy Volume 37 ; 37 >
     au < released ; 2012 ; Canadian Public Policy Volume 38 ; 38 >
-    au < ready ; 2013 ; Canadian Public Policy Volume 39 ; 39 >
+    au < released ; 2013 ; Canadian Public Policy Volume 39 ; 39 >
+    au < doNotProcess ; 2014 ; Canadian Public Policy Volume 40 ; 40 >
 
   }
 
@@ -234,7 +274,8 @@
     au < released ; 2010 ; Canadian Review of American Studies Volume 40 ; 40 >
     au < released ; 2011 ; Canadian Review of American Studies Volume 41 ; 41 >
     au < released ; 2012 ; Canadian Review of American Studies Volume 42 ; 42 >
-    au < ready ; 2013 ; Canadian Review of American Sutdies Volume 43 ; 43 >
+    au < released ; 2013 ; Canadian Review of American Sutdies Volume 43 ; 43 >
+    au < doNotProcess ; 2014 ; Canadian Review of American Sutdies Volume 44 ; 44 >
 
   }
 
@@ -259,7 +300,15 @@
     au < released ; 2011 ; Canadian Theatre Review Issue 147 ; 147 >
     au < released ; 2011 ; Canadian Theatre Review Issue 148 ; 148 >
     au < released ; 2012 ; Canadian Theatre Review Issue 149 ; 149 >
-    au < ready ; 2013 ; Canadian Theatre Review Issue 150 ; 150 >
+    au < released ; 2012 ; Canadian Theatre Review Issue 150 ; 150 >
+    au < released ; 2012 ; Canadian Theatre Review Issue 151 ; 151 >
+    au < released ; 2012 ; Canadian Theatre Review Issue 152 ; 152 >
+    au < released ; 2013 ; Canadian Theatre Review Issue 153 ; 153 >
+    au < released ; 2013 ; Canadian Theatre Review Issue 154 ; 154 >
+    au < released ; 2013 ; Canadian Theatre Review Issue 155 ; 155 >
+    au < released ; 2013 ; Canadian Theatre Review Issue 156 ; 156 >
+    au < released ; 2014 ; Canadian Theatre Review Issue 157 ; 157 >
+    au < doNotProcess ; 2014 ; Canadian Theatre Review Issue 158 ; 158 >
 
   }
 
@@ -274,7 +323,8 @@
     param[journal_dir] = cartographica
     attr[journal_id] = car
 
-    au < ready ; 2013 ; Cartographica: The International Journal for Geographic Information and Geovisualization Volume 48 ; 48 >
+    au < released ; 2013 ; Cartographica: The International Journal for Geographic Information and Geovisualization Volume 48 ; 48 >
+    au < doNotProcess ; 2014 ; Cartographica: The International Journal for Geographic Information and Geovisualization Volume 49 ; 49 >
 
   }
 
@@ -290,9 +340,23 @@
     param[journal_dir] = diaspora_a_journal_of_transnational_studies
     attr[journal_id] = dsp
 
+    au < manifest ; 1991 ; Diaspora: A Journal of Transnational Studies Volume 1 ; 1 >
+    au < manifest ; 1992-1993 ; Diaspora: A Journal of Transnational Studies Volume 2 ; 2 >
+    au < manifest ; 1994 ; Diaspora: A Journal of Transnational Studies Volume 3 ; 3 >
+    au < manifest ; 1995 ; Diaspora: A Journal of Transnational Studies Volume 4 ; 4 >
+    au < manifest ; 1996 ; Diaspora: A Journal of Transnational Studies Volume 5 ; 5 >
+    au < manifest ; 1997 ; Diaspora: A Journal of Transnational Studies Volume 6 ; 6 >
+    au < manifest ; 1998 ; Diaspora: A Journal of Transnational Studies Volume 7 ; 7 >
+    au < manifest ; 1999 ; Diaspora: A Journal of Transnational Studies Volume 8 ; 8 >
+    au < manifest ; 2000 ; Diaspora: A Journal of Transnational Studies Volume 9 ; 9 >
+    au < manifest ; 2001 ; Diaspora: A Journal of Transnational Studies Volume 10 ; 10 >
+    au < manifest ; 2002 ; Diaspora: A Journal of Transnational Studies Volume 11 ; 11 >
+    au < released ; 2003 ; Diaspora: A Journal of Transnational Studies Volume 12 ; 12 >
     au < released ; 2004 ; Diaspora: A Journal of Transnational Studies Volume 13 ; 13 >
     au < released ; 2005 ; Diaspora: A Journal of Transnational Studies Volume 14 ; 14 >
     au < released ; 2006 ; Diaspora: A Journal of Transnational Studies Volume 15 ; 15 >
+    au < released ; 2007 ; Diaspora: A Journal of Transnational Studies Volume 16 ; 16 >
+    au < released ; 2008 ; Diaspora: A Journal of Transnational Studies Volume 17 ; 17 >
 
   }
 
@@ -308,6 +372,14 @@
     param[journal_dir] = eighteenth_century_fiction
     attr[journal_id] = ecf
 
+    au < manifest ; 1997-1998 ; Eighteenth-Century Fiction Volume 10 ; 10 >
+    au < manifest ; 1998-1999 ; Eighteenth-Century Fiction Volume 11 ; 11 >
+    au < manifest ; 1999-2000 ; Eighteenth-Century Fiction Volume 12 ; 12 >
+    au < manifest ; 2000-2001 ; Eighteenth-Century Fiction Volume 13 ; 13 >
+    au < manifest ; 2001-2002 ; Eighteenth-Century Fiction Volume 14 ; 14 >
+    au < manifest ; 2002-2003 ; Eighteenth-Century Fiction Volume 15 ; 15 >
+    au < manifest ; 2003-2004 ; Eighteenth-Century Fiction Volume 16 ; 16 >
+    au < released ; 2004-2005 ; Eighteenth-Century Fiction Volume 17 ; 17 >
     au < released ; 2005-2006 ; Eighteenth-Century Fiction Volume 18 ; 18 >
     au < released ; 2006-2007 ; Eighteenth-Century Fiction Volume 19 ; 19 >
     au < released ; 2007-2008 ; Eighteenth-Century Fiction Volume 20 ; 20 >
@@ -315,7 +387,8 @@
     au < released ; 2009-2010 ; Eighteenth-Century Fiction Volume 22 ; 22 >
     au < released ; 2010-2011 ; Eighteenth-Century Fiction Volume 23 ; 23 >
     au < released ; 2011-2012 ; Eighteenth-Century Fiction Volume 24 ; 24 >
-    au < ready ; 2012-2013 ; Eighteenth-Century Fiction Volume 25 ; 25 >
+    au < released ; 2012-2013 ; Eighteenth-Century Fiction Volume 25 ; 25 >
+    au < doNotProcess ; 2013-2014 ; Eighteenth-Century Fiction Volume 26 ; 26 >
 
   }
 
@@ -348,11 +421,15 @@
     param[journal_dir] = genocide_studies_and_prevention
     attr[journal_id] = gsp
 
+    au < released ; 2006 ; Genocide Studies and Prevention Volume 1 ; 1 >
+    au < released ; 2007 ; Genocide Studies and Prevention Volume 2 ; 2 >
+    au < released ; 2008 ; Genocide Studies and Prevention Volume 3 ; 3 >
     au < released ; 2009 ; Genocide Studies and Prevention Volume 4 ; 4 >
     au < released ; 2010 ; Genocide Studies and Prevention Volume 5 ; 5 >
     au < released ; 2011 ; Genocide Studies and Prevention Volume 6 ; 6 >
     au < released ; 2012 ; Genocide Studies and Prevention Volume 7 ; 7 >
-    au < ready ; 2013 ; Genocide Studies and Prevention Volume 8 ; 8 >
+    au < released ; 2013 ; Genocide Studies and Prevention Volume 8 ; 8 >
+    au < doNotProcess ; 2014 ; Genocide Studies and Prevention Volume 9 ; 9 >
 
   }
 
@@ -372,7 +449,8 @@
     au < released ; 2010 ; Histoire sociale / Social History Volume 43 ; 43 >
     au < released ; 2011 ; Histoire sociale / Social History Volume 44 ; 44 >
     au < released ; 2012 ; Histoire sociale / Social History Volume 45 ; 45 >
-    au < ready ; 2013 ; Histoire sociale / Social History Volume 46 ; 46 >
+    au < released ; 2013 ; Histoire sociale / Social History Volume 46 ; 46 >
+    au < doNotProcess ; 2014 ; Histoire sociale / Social History Volume 47 ; 47 >
 
   }
 
@@ -388,7 +466,8 @@
     param[journal_dir] = international_journal_of_canadian_studies
     attr[journal_id] = ijc
 
-    au < ready ; 2013 ; International Journal of Canadian Studies Volume 47 ; 47 >
+    au < released ; 2013 ; International Journal of Canadian Studies Volume 47 ; 47 >
+    au < doNotProcess ; 2014 ; International Journal of Canadian Studies Volume 48 ; 48 >
 
   }
 
@@ -412,7 +491,8 @@
     au < released ; 2010 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 44 ; 44 >
     au < released ; 2011 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 45 ; 45 >
     au < released ; 2012 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 46 ; 46 >
-    au < ready ; 2013 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 47 ; 47 >
+    au < released ; 2013 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 47 ; 47 >
+    au < doNotProcess ; 2014 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 48 ; 48 >
 
   }
 
@@ -427,7 +507,7 @@
     attr[journal_id] = rpc
 
     au < released ; 2012 ; Journal of Religion and Popular Culture Volume 24 ; 24 >
-    au < ready ; 2013 ; Journal of Religion and Popular Culture Volume 25 ; 25 >
+    au < released ; 2013 ; Journal of Religion and Popular Culture Volume 25 ; 25 >
     au < doNotProcess ; 2014 ; Journal of Religion and Popular Culture Volume 26 ; 26 >
 
   }
@@ -453,7 +533,8 @@
     au < released ; 2009-2010 ; Journal of Scholarly Publishing Volume 41 ; 41 >
     au < released ; 2010-2011 ; Journal of Scholarly Publishing Volume 42 ; 42 >
     au < released ; 2011-2012 ; Journal of Scholarly Publishing Volume 43 ; 43 >
-    au < ready ; 2012-2013 ; Journal of Scholarly Publishing Volume 44 ; 44 >
+    au < released ; 2012-2013 ; Journal of Scholarly Publishing Volume 44 ; 44 >
+    au < manifest ; 2013-2014 ; Journal of Scholarly Publishing Volume 45 ; 45 >
 
   }
 
@@ -477,7 +558,8 @@
     au < released ; 2010 ; Modern Drama Volume 53 ; 53 >
     au < released ; 2011 ; Modern Drama Volume 54 ; 54 >
     au < released ; 2012 ; Modern Drama Volume 55 ; 55 >
-    au < ready ; 2013 ; Modern Drama Volume 56 ; 56 >
+    au < released ; 2013 ; Modern Drama Volume 56 ; 56 >
+    au < doNotProcess ; 2014 ; Modern Drama Volume 57 ; 57 >
 
   }
 
@@ -500,7 +582,8 @@
     au < released ; 2010 ; Seminar: A Journal of Germanic Studies Volume 46 ; 46 >
     au < released ; 2011 ; Seminar: A Journal of Germanic Studies Volume 47 ; 47 >
     au < released ; 2012 ; Seminar: A Journal of Germanic Studies Volume 48 ; 48 >
-    au < ready ; 2013 ; Seminar: A Journal of Germanic Studies Volume 49 ; 49 >
+    au < released ; 2013 ; Seminar: A Journal of Germanic Studies Volume 49 ; 49 >
+    au < doNotProcess ; 2014 ; Seminar: A Journal of Germanic Studies Volume 50 ; 50 >
 
   }
 
@@ -520,7 +603,8 @@
     au < released ; 2010 ; The Tocqueville Review/La revue Tocqueville Volume 31 ; 31 >
     au < released ; 2011 ; The Tocqueville Review/La revue Tocqueville Volume 32 ; 32 >
     au < released ; 2012 ; The Tocqueville Review/La revue Tocqueville Volume 33 ; 33 >
-    au < ready ; 2013 ; The Tocqueville Review/La revue Tocqueville Volume 34 ; 34 >
+    au < released ; 2013 ; The Tocqueville Review/La revue Tocqueville Volume 34 ; 34 >
+    au < doNotProcess ; 2014 ; The Tocqueville Review/La revue Tocqueville Volume 35 ; 35 >
 
   }
 
@@ -538,7 +622,8 @@
 
     au < released ; 2011 ; Toronto Journal of Theology Volume 27 ; 27 >
     au < released ; 2012 ; Toronto Journal of Theology Volume 28 ; 28 >
-    au < ready ; 2013 ; Toronto Journal of Theology Volume 29 ; 29 >
+    au < released ; 2013 ; Toronto Journal of Theology Volume 29 ; 29 >
+    au < doNotProcess ; 2014 ; Toronto Journal of Theology Volume 30 ; 30 >
 
   }
 
@@ -563,7 +648,8 @@
     au < released ; 2010 ; University of Toronto Law Journal Volume 60 ; 60 >
     au < released ; 2011 ; University of Toronto Law Journal Volume 61 ; 61 >
     au < released ; 2012 ; University of Toronto Law Journal Volume 62 ; 62 >
-    au < ready ; 2013 ; University of Toronto Law Journal Volume 63 ; 63 >
+    au < released ; 2013 ; University of Toronto Law Journal Volume 63 ; 63 >
+    au < doNotProcess ; 2014 ; University of Toronto Law Journal Volume 64 ; 64 >
 
   }
 
@@ -578,8 +664,9 @@
 
     param[journal_dir] = university_of_toronto_quarterly
     attr[journal_id] = utq
-    comment[au_81]= hash compare failure, to be fixed. (as of 06/13/2012)
+    comment[v73] = malformed manifest page. No content.
 
+    au < doNotProcess ; 2004 ; University of Toronto Quarterly Volume 73 ; 73 >
     au < released ; 2005 ; University of Toronto Quarterly Volume 74 ; 74 >
     au < released ; 2006 ; University of Toronto Quarterly Volume 75 ; 75 >
     au < released ; 2007 ; University of Toronto Quarterly Volume 76 ; 76 >
@@ -588,7 +675,8 @@
     au < released ; 2010 ; University of Toronto Quarterly Volume 79 ; 79 >
     au < released ; 2011 ; University of Toronto Quarterly Volume 80 ; 80 >
     au < released ; 2012 ; University of Toronto Quarterly Volume 81 ; 81 >
-    au < ready ; 2013 ; University of Toronto Quarterly Volume 82 ; 82 >
+    au < released ; 2013 ; University of Toronto Quarterly Volume 82 ; 82 >
+    au < doNotProcess ; 2014 ; University of Toronto Quarterly Volume 83 ; 83 >
 
   }
 
@@ -606,6 +694,8 @@
 
     au < released ; 2008 ; The Yearbook of Comparative Literature Volume 54 ; 54 >
     au < released ; 2009 ; The Yearbook of Comparative Literature Volume 55 ; 55 >
+    au < released ; 2010 ; The Yearbook of Comparative Literature Volume 56 ; 56 >
+    au < released ; 2011 ; The Yearbook of Comparative Literature Volume 57 ; 57 >
 
   }
 

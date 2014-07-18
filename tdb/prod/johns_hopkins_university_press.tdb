@@ -39,7 +39,7 @@
     au < released ; 2011 ; American Imago Volume 68 ; 68 >
     au < released ; 2012 ; American Imago Volume 69 ; 69 >
     au < released ; 2013 ; American Imago Volume 70 ; 70 >
-    au < manifest ; 2014 ; American Imago Volume 71 ; 71 >
+    au < doNotProcess ; 2014 ; American Imago Volume 71 ; 71 >
     
   }
   
@@ -69,7 +69,7 @@
     au < released ; 2009 ; American Jewish History Volume 95 ; 95 >
     au < released ; 2010 ; American Jewish History Volume 96 ; 96 >
     au < released ; 2013 ; American Jewish History Volume 97 ; 97 >
-    au < manifest ; 2014 ; American Jewish History Volume 98 ; 98 >
+    au < doNotProcess ; 2014 ; American Jewish History Volume 98 ; 98 >
     
   }
 
@@ -102,7 +102,7 @@
     au < released ; 2011 ; American Journal of Mathematics Volume 133 ; 133 >
     au < released ; 2012 ; American Journal of Mathematics Volume 134 ; 134 >
     au < released ; 2013 ; American Journal of Mathematics Volume 135 ; 135 >
-    au < manifest ; 2014 ; American Journal of Mathematics Volume 136 ; 136 >
+    au < doNotProcess ; 2014 ; American Journal of Mathematics Volume 136 ; 136 >
     
   }
 
@@ -135,7 +135,7 @@
     au < released ; 2011 ; American Journal of Philology Volume Volume 132 ; 132 >
     au < released ; 2012 ; American Journal of Philology Volume Volume 133 ; 133 >
     au < released ; 2013 ; American Journal of Philology Volume Volume 134 ; 134 >
-    au < manifest ; 2014 ; American Journal of Philology Volume Volume 135 ; 135 >
+    au < doNotProcess ; 2014 ; American Journal of Philology Volume Volume 135 ; 135 >
     
   }
 
@@ -168,7 +168,7 @@
     au < released ; 2011 ; American Quarterly Volume 63 ; 63 >
     au < released ; 2012 ; American Quarterly Volume 64 ; 64 >
     au < released ; 2013 ; American Quarterly Volume 65 ; 65 >
-    au < manifest ; 2014 ; American Quarterly Volume 66 ; 66 >
+    au < doNotProcess ; 2014 ; American Quarterly Volume 66 ; 66 >
 
   }
 
@@ -201,7 +201,7 @@
     au < released ; 2011 ; Arethusa Volume 44 ; 44 >
     au < released ; 2012 ; Arethusa Volume 45 ; 45 >
     au < released ; 2013 ; Arethusa Volume 46 ; 46 >
-    au < manifest ; 2014 ; Arethusa Volume 47 ; 47 >
+    au < doNotProcess ; 2014 ; Arethusa Volume 47 ; 47 >
     
   }
 
@@ -232,7 +232,7 @@
     au < released ; 2011 ; Book History Volume 14 ; 14 >
     au < released ; 2012 ; Book History Volume 15 ; 15 >
     au < released ; 2013 ; Book History Volume 16 ; 16 >
-    au < expected ; 2014 ; Book History Volume 17 ; 17 >
+    au < doNotProcess ; 2014 ; Book History Volume 17 ; 17 >
     
   }
 
@@ -254,7 +254,7 @@
     au < released ; 2011 ; Bookbird: A Journal of International Children's Literature Volume 49 ; 49 >
     au < released ; 2012 ; Bookbird: A Journal of International Children's Literature Volume 50 ; 50 >
     au < released ; 2013 ; Bookbird: A Journal of International Children's Literature Volume 51 ; 51 >
-    au < manifest ; 2014 ; Bookbird: A Journal of International Children's Literature Volume 52 ; 52 >
+    au < doNotProcess ; 2014 ; Bookbird: A Journal of International Children's Literature Volume 52 ; 52 >
 
   }
 
@@ -277,7 +277,7 @@
     au < released ; 2010-2012 ; Bulletin of the Center for Children's Books Volume 64 ; 64 >
     au < released ; 2011-2012 ; Bulletin of the Center for Children's Books Volume 65 ; 65 >
     au < released ; 2012-2013 ; Bulletin of the Center for Children's Books Volume 66 ; 66 >
-    au < manifest ; 2013-2014 ; Bulletin of the Center for Children's Books Volume 67 ; 67 >
+    au < released ; 2013-2014 ; Bulletin of the Center for Children's Books Volume 67 ; 67 >
     
   }
 
@@ -310,7 +310,7 @@
     au < released ; 2011 ; Bulletin of the History of Medicine Volume 85 ; 85 >
     au < released ; 2012 ; Bulletin of the History of Medicine Volume 86 ; 86 >
     au < released ; 2013 ; Bulletin of the History of Medicine Volume 87 ; 87 >
-    au < manifest ; 2014 ; Bulletin of the History of Medicine Volume 88 ; 88 >
+    au < doNotProcess ; 2014 ; Bulletin of the History of Medicine Volume 88 ; 88 >
     
   }
   
@@ -344,7 +344,7 @@
     au < released ; 2011 ; Callaloo Volume 34 ; 34 >
     au < released ; 2012 ; Callaloo Volume 35 ; 35 >
     au < released ; 2013 ; Callaloo Volume 36 ; 36 >
-    au < manifest ; 2014 ; Callaloo Volume 37 ; 37 >
+    au < doNotProcess ; 2014 ; Callaloo Volume 37 ; 37 >
     
   }
 
@@ -359,7 +359,7 @@
     attr[journal_id] = cea
 
     au < released ; 2013 ; CEA Critic Volume 75 ; 75 >
-    au < manifest ; 2014 ; CEA Critic Volume 76 ; 76 >
+    au < doNotProcess ; 2014 ; CEA Critic Volume 76 ; 76 >
 
   }
 
@@ -415,7 +415,7 @@
     au < released ; 2011 ; Children's Literature Volume 39 ; 39 >
     au < released ; 2012 ; Children's Literature Volume 40 ; 40 >
     au < released ; 2013 ; Children's Literature Volume 41 ; 41 >
-    au < expected ; 2014 ; Children's Literature Volume 42 ; 42 >
+    au < doNotProcess ; 2014 ; Children's Literature Volume 42 ; 42 >
     
   }
 
@@ -430,6 +430,7 @@
     param[journal_dir] = childrens_literature_association_quarterly
     attr[journal_id] = chq
 
+    au < ready ; 2004 ; Children's Literature Association Quarterly Volume 29 ; 29 >
     au < released ; 2005 ; Children's Literature Association Quarterly Volume 30 ; 30 >
     au < released ; 2006 ; Children's Literature Association Quarterly Volume 31 ; 31 >
     au < released ; 2007 ; Children's Literature Association Quarterly Volume 32 ; 32 >
@@ -439,7 +440,7 @@
     au < released ; 2011 ; Children's Literature Association Quarterly Volume 36 ; 36 >
     au < released ; 2012 ; Children's Literature Association Quarterly Volume 37 ; 37 >
     au < released ; 2013 ; Children's Literature Association Quarterly Volume 38 ; 38 >
-    au < manifest ; 2014 ; Children's Literature Association Quarterly Volume 39 ; 39 >
+    au < doNotProcess ; 2014 ; Children's Literature Association Quarterly Volume 39 ; 39 >
 
   }
 
@@ -497,7 +498,7 @@
     au < released ; 2011 ; Configurations Volume 19 ; 19 >
     au < released ; 2012 ; Configurations Volume 20 ; 20 >
     au < released ; 2013 ; Configurations Volume 21 ; 21 >
-    au < expected ; 2014 ; Configurations Volume 22 ; 22 >
+    au < doNotProcess ; 2014 ; Configurations Volume 22 ; 22 >
     
   }
 
@@ -528,7 +529,7 @@
     au < released ; 2009 ; diacritics Volume 39 ; 39 >
     au < released ; 2012 ; diacritics Volume 40 ; 40 >
     au < released ; 2013 ; diacritics Volume 41 ; 41 >
-    au < expected ; 2014 ; diacritics Volume 42 ; 42 >
+    au < doNotProcess ; 2014 ; diacritics Volume 42 ; 42 >
     
   }
 
@@ -545,7 +546,7 @@
 
     au < released ; 2012 ; Digital Philology: A Journal of Medieval Cultures Volume 1 ; 1 >
     au < released ; 2013 ; Digital Philology: A Journal of Medieval Cultures Volume 2 ; 2 >
-    au < expected ; 2014 ; Digital Philology: A Journal of Medieval Cultures Volume 3 ; 3 >
+    au < doNotProcess ; 2014 ; Digital Philology: A Journal of Medieval Cultures Volume 3 ; 3 >
     
   }
   
@@ -578,7 +579,7 @@
     au < released ; 2010-2011 ; Eighteenth-Century Studies Volume 44 ; 44 >
     au < released ; 2011-2012 ; Eighteenth-Century Studies Volume 45 ; 45 >
     au < released ; 2012-2013 ; Eighteenth-Century Studies Volume 46 ; 46 >
-    au < manifest ; 2013-2014 ; Eighteenth-Century Studies Volume 47 ; 47 >
+    au < released ; 2013-2014 ; Eighteenth-Century Studies Volume 47 ; 47 >
     
   }
 
@@ -614,7 +615,7 @@
     au < released ; 2011 ; ELH Volume 78 ; 78 >
     au < released ; 2012 ; ELH Volume 79 ; 79 >
     au < released ; 2013 ; ELH Volume 80 ; 80 >
-    au < manifest ; 2014 ; ELH Volume 81 ; 81 >
+    au < doNotProcess ; 2014 ; ELH Volume 81 ; 81 >
 
   }
 
@@ -632,11 +633,22 @@
     param[journal_dir] = feminist_formations
     attr[journal_id] = ff
     
+    au < doNotProcess ; 1999 ; Feminist Formations Volume 11 ; 11 >
+    au < doNotProcess ; 2000 ; Feminist Formations Volume 12 ; 12 >
+    au < doNotProcess ; 2001 ; Feminist Formations Volume 13 ; 13 >
+    au < doNotProcess ; 2002 ; Feminist Formations Volume 14 ; 14 >
+    au < doNotProcess ; 2003 ; Feminist Formations Volume 15 ; 15 >
+    au < doNotProcess ; 2004 ; Feminist Formations Volume 16 ; 16 >
+    au < doNotProcess ; 2005 ; Feminist Formations Volume 17 ; 17 >
+    au < doNotProcess ; 2006 ; Feminist Formations Volume 18 ; 18 >
+    au < doNotProcess ; 2007 ; Feminist Formations Volume 19 ; 19 >
+    au < doNotProcess ; 2008 ; Feminist Formations Volume 20 ; 20 >
+    au < doNotProcess ; 2009 ; Feminist Formations Volume 21 ; 21 >
     au < released ; 2010 ; Feminist Formations Volume 22 ; 22 >
     au < released ; 2011 ; Feminist Formations Volume 23 ; 23 >
     au < released ; 2012 ; Feminist Formations Volume 24 ; 24 >
     au < released ; 2013 ; Feminist Formations Volume 25 ; 25 >
-    au < manifest ; 2014 ; Feminist Formations Volume 26 ; 26 >
+    au < doNotProcess ; 2014 ; Feminist Formations Volume 26 ; 26 >
 
   }
 
@@ -655,7 +667,7 @@
     
     au < released ; 2012 ; German Studies Review Volume 35 ; 35 >
     au < released ; 2013 ; German Studies Review Volume 36 ; 36 >
-    au < manifest ; 2014 ; German Studies Review Volume 37 ; 37 >
+    au < doNotProcess ; 2014 ; German Studies Review Volume 37 ; 37 >
 
   }
   
@@ -675,7 +687,7 @@
     au < released ; 2011 ; Hispania Volume 94 ; 94 >
     au < released ; 2012 ; Hispania Volume 95 ; 95 >
     au < released ; 2013 ; Hispania Volume 96 ; 96 >
-    au < manifest ; 2014 ; Hispania Volume 97 ; 97 >
+    au < doNotProcess ; 2014 ; Hispania Volume 97 ; 97 >
 
   }
 
@@ -691,12 +703,16 @@
     param[journal_dir] = historically_speaking
     attr[journal_id] = hsp
     
+    au < released ; 2004-2005 ; Historically Speaking Volume 6 ; 6 >
+    au < released ; 2005-2006 ; Historically Speaking Volume 7 ; 7 >
+    au < released ; 2006-2007 ; Historically Speaking Volume 8 ; 8 >
+    au < released ; 2007-2008 ; Historically Speaking Volume 9 ; 9 >
     au < released ; 2009 ; Historically Speaking Volume 10 ; 10 >
     au < released ; 2010 ; Historically Speaking Volume 11 ; 11 >
     au < released ; 2011 ; Historically Speaking Volume 12 ; 12 >
     au < released ; 2012 ; Historically Speaking Volume 13 ; 13 >
     au < released ; 2013 ; Historically Speaking Volume 14 ; 14 >
-    au < expected ; 2014 ; Historically Speaking Volume 15 ; 15 >
+    au < doNotProcess ; 2014 ; Historically Speaking Volume 15 ; 15 >
 
   }
 
@@ -718,7 +734,7 @@
     au < released ; 2011 ; The Hopkins Review Volume 4 ; 4 >
     au < released ; 2012 ; The Hopkins Review Volume 5 ; 5 >
     au < released ; 2013 ; The Hopkins Review Volume 6 ; 6 >
-    au < manifest ; 2014 ; The Hopkins Review Volume 7 ; 7 >
+    au < doNotProcess ; 2014 ; The Hopkins Review Volume 7 ; 7 >
 
   }
   
@@ -752,7 +768,7 @@
     au < released ; 2011 ; Human Rights Quarterly Volume 33 ; 33 >
     au < released ; 2012 ; Human Rights Quarterly Volume 34 ; 34 >
     au < released ; 2013 ; Human Rights Quarterly Volume 35 ; 35 >
-    au < manifest ; 2014 ; Human Rights Quarterly Volume 36 ; 36 >
+    au < doNotProcess ; 2014 ; Human Rights Quarterly Volume 36 ; 36 >
 
   }
 
@@ -783,7 +799,7 @@
     au < released ; 2011 ; Journal of Asian American Studies Volume 14 ; 14 >
     au < released ; 2012 ; Journal of Asian American Studies Volume 15 ; 15 >
     au < released ; 2013 ; Journal of Asian American Studies Volume 16 ; 16 >
-    au < manifest ; 2014 ; Journal of Asian American Studies Volume 17 ; 17 >
+    au < doNotProcess ; 2014 ; Journal of Asian American Studies Volume 17 ; 17 >
 
   }
 
@@ -809,7 +825,7 @@
     au < released ; 2011 ; Journal of College Student Development Volume 52 ; 52 >
     au < released ; 2012 ; Journal of College Student Development Volume 53 ; 53 >
     au < released ; 2013 ; Journal of College Student Development Volume 54 ; 54 >
-    au < manifest ; 2014 ; Journal of College Student Development Volume 55 ; 55 >
+    au < doNotProcess ; 2014 ; Journal of College Student Development Volume 55 ; 55 >
 
   }
 
@@ -836,7 +852,7 @@
     au < released ; 2011 ; Journal of Colonialism and Colonial History Volume 12 ; 12 >
     au < released ; 2012 ; Journal of Colonialism and Colonial History Volume 13 ; 13 >
     au < released ; 2013 ; Journal of Colonialism and Colonial History Volume 14 ; 14 >
-    au < manifest ; 2014 ; Journal of Colonialism and Colonial History Volume 15 ; 15 >
+    au < doNotProcess ; 2014 ; Journal of Colonialism and Colonial History Volume 15 ; 15 >
 
   }
 
@@ -870,7 +886,7 @@
     au < released ; 2011 ; Journal of Democracy Volume 22 ; 22 >
     au < released ; 2012 ; Journal of Democracy Volume 23 ; 23 >
     au < released ; 2013 ; Journal of Democracy Volume 24 ; 24 >
-    au < manifest ; 2014 ; Journal of Democracy Volume 25 ; 25 >
+    au < doNotProcess ; 2014 ; Journal of Democracy Volume 25 ; 25 >
     
   }
 
@@ -903,7 +919,7 @@
     au < released ; 2011 ; Journal of Early Christian Studies Volume 19 ; 19 >
     au < released ; 2012 ; Journal of Early Christian Studies Volume 20 ; 20 >
     au < released ; 2013 ; Journal of Early Christian Studies Volume 21 ; 21 >
-    au < manifest ; 2014 ; Journal of Early Christian Studies Volume 22 ; 22 >
+    au < doNotProcess ; 2014 ; Journal of Early Christian Studies Volume 22 ; 22 >
 
   }
 
@@ -928,7 +944,7 @@
     au < released ; 2011 ; Journal of Health Care for the Poor and Underserved Volume 22 ; 22 >
     au < released ; 2012 ; Journal of Health Care for the Poor and Underserved Volume 23 ; 23 >
     au < released ; 2013 ; Journal of Health Care for the Poor and Underserved Volume 24 ; 24 >
-    au < manifest ; 2014 ; Journal of Health Care for the Poor and Underserved Volume 25 ; 25 >
+    au < doNotProcess ; 2014 ; Journal of Health Care for the Poor and Underserved Volume 25 ; 25 >
 
   }
 
@@ -950,7 +966,7 @@
     au < released ; 2011 ; Journal of Late Antiquity Volume 4 ; 4 >
     au < released ; 2012 ; Journal of Late Antiquity Volume 5 ; 5 >
     au < released ; 2013 ; Journal of Late Antiquity Volume 6 ; 6 >
-    au < expected ; 2014 ; Journal of Late Antiquity Volume 7 ; 7 >
+    au < doNotProcess ; 2014 ; Journal of Late Antiquity Volume 7 ; 7 >
 
   }
 
@@ -983,7 +999,7 @@
     au < released ; 2011 ; Journal of Modern Greek Studies Volume 29 ; 29 >
     au < released ; 2012 ; Journal of Modern Greek Studies Volume 30 ; 30 >
     au < released ; 2013 ; Journal of Modern Greek Studies Volume 31 ; 31 >
-    au < expected ; 2014 ; Journal of Modern Greek Studies Volume 32 ; 32 >
+    au < doNotProcess ; 2014 ; Journal of Modern Greek Studies Volume 32 ; 32 >
 
   }
 
@@ -1012,12 +1028,12 @@
     param[journal_dir] = journal_of_the_history_of_childhood_and_youth
     attr[journal_id] = hcy
     
-    au < ready ; 2008 ; The Journal of the History of Childhood and Youth Volume 1 ; 1 >
-    au < ready ; 2009 ; The Journal of the History of Childhood and Youth Volume 2 ; 2 >
-    au < ready ; 2010 ; The Journal of the History of Childhood and Youth Volume 3 ; 3 >
-    au < ready ; 2011 ; The Journal of the History of Childhood and Youth Volume 4 ; 4 >
-    au < ready ; 2012 ; The Journal of the History of Childhood and Youth Volume 5 ; 5 >
-    au < ready ; 2013 ; The Journal of the History of Childhood and Youth Volume 6 ; 6 >
+    au < released ; 2008 ; The Journal of the History of Childhood and Youth Volume 1 ; 1 >
+    au < released ; 2009 ; The Journal of the History of Childhood and Youth Volume 2 ; 2 >
+    au < released ; 2010 ; The Journal of the History of Childhood and Youth Volume 3 ; 3 >
+    au < released ; 2011 ; The Journal of the History of Childhood and Youth Volume 4 ; 4 >
+    au < released ; 2012 ; The Journal of the History of Childhood and Youth Volume 5 ; 5 >
+    au < released ; 2013 ; The Journal of the History of Childhood and Youth Volume 6 ; 6 >
     }
   }
 
@@ -1046,7 +1062,7 @@
     au < released ; 2011 ; Journal of the History of Philosophy Volume 49 ; 49 >
     au < released ; 2012 ; Journal of the History of Philosophy Volume 50 ; 50 >
     au < released ; 2013 ; Journal of the History of Philosophy Volume 51 ; 51 >
-    au < manifest ; 2014 ; Journal of the History of Philosophy Volume 52 ; 52 >
+    au < doNotProcess ; 2014 ; Journal of the History of Philosophy Volume 52 ; 52 >
     
   }
 
@@ -1076,7 +1092,7 @@
     au < released ; 2011 ; Journal of Women's History Volume 23 ; 23 >
     au < released ; 2012 ; Journal of Women's History Volume 24 ; 24 >
     au < released ; 2013 ; Journal of Women's History Volume 25 ; 25 >
-    au < manifest ; 2014 ; Journal of Women's History Volume 26 ; 26 >
+    au < doNotProcess ; 2014 ; Journal of Women's History Volume 26 ; 26 >
 
   }
 
@@ -1109,7 +1125,7 @@
     au < released ; 2011 ; Kennedy Institute of Ethics Journal Volume 21 ; 21 >
     au < released ; 2012 ; Kennedy Institute of Ethics Journal Volume 22 ; 22 >
     au < released ; 2013 ; Kennedy Institute of Ethics Journal Volume 23 ; 23 >
-    au < manifest ; 2014 ; Kennedy Institute of Ethics Journal Volume 24 ; 24 >
+    au < doNotProcess ; 2014 ; Kennedy Institute of Ethics Journal Volume 24 ; 24 >
 
   }
 
@@ -1124,6 +1140,16 @@
     param[journal_dir] = lesprit_createur
     attr[journal_id] = esp
 
+    au < ready ; 1996 ; L'Esprit Créateur Volume 36 ; 36 >
+    au < ready ; 1997 ; L'Esprit Créateur Volume 37 ; 37 >
+    au < ready ; 1998 ; L'Esprit Créateur Volume 38 ; 38 >
+    au < ready ; 1999 ; L'Esprit Créateur Volume 39 ; 39 >
+    au < ready ; 2000 ; L'Esprit Créateur Volume 40 ; 40 >
+    au < ready ; 2001 ; L'Esprit Créateur Volume 41 ; 41 >
+    au < ready ; 2002 ; L'Esprit Créateur Volume 42 ; 42 >
+    au < ready ; 2003 ; L'Esprit Créateur Volume 43 ; 43 >
+    au < ready ; 2004 ; L'Esprit Créateur Volume 44 ; 44 >
+    au < released ; 2005 ; L'Esprit Créateur Volume 45 ; 45 >
     au < released ; 2006 ; L'Esprit Créateur Volume 46 ; 46 >
     au < released ; 2007 ; L'Esprit Créateur Volume 47 ; 47 >
     au < released ; 2008 ; L'Esprit Créateur Volume 48 ; 48 >
@@ -1132,7 +1158,7 @@
     au < released ; 2011 ; L'Esprit Créateur Volume 51 ; 51 >
     au < released ; 2012 ; L'Esprit Créateur Volume 52 ; 52 >
     au < released ; 2013 ; L'Esprit Créateur Volume 53 ; 53 >
-    au < manifest ; 2014 ; L'Esprit Créateur Volume 54 ; 54 >
+    au < doNotProcess ; 2014 ; L'Esprit Créateur Volume 54 ; 54 >
 
   }
 
@@ -1165,7 +1191,7 @@
     au < released ; 2011 ; Late Imperial China Volume 32 ; 32 >
     au < released ; 2012 ; Late Imperial China Volume 33 ; 33 >
     au < released ; 2013 ; Late Imperial China Volume 34 ; 34 >
-    au < expected ; 2014 ; Late Imperial China Volume 35 ; 35 >
+    au < doNotProcess ; 2014 ; Late Imperial China Volume 35 ; 35 >
 
   }
 
@@ -1195,7 +1221,7 @@
     au < released ; 2011 ; Leviathan Volume 13 ; 13 >
     au < released ; 2012 ; Leviathan Volume 14 ; 14 >
     au < released ; 2013 ; Leviathan Volume 15 ; 15 >
-    au < expected ; 2014 ; Leviathan Volume 16 ; 16 >
+    au < doNotProcess ; 2014 ; Leviathan Volume 16 ; 16 >
 
   }
 
@@ -1218,7 +1244,7 @@
     au < released ; 2010 ; Library Trends Volume 59 ; 59 >
     au < released ; 2011-2012 ; Library Trends Volume 60 ; 60 >
     au < released ; 2012-2013 ; Library Trends Volume 61 ; 61 >
-    au < manifest ; 2013-2014 ; Library Trends Volume 62 ; 62 >
+    au < released ; 2013-2014 ; Library Trends Volume 62 ; 62 >
 
   }
 
@@ -1251,7 +1277,7 @@
     au < released ; 2011 ; Literature and Medicine Volume 29 ; 29 >
     au < released ; 2012 ; Literature and Medicine Volume 30 ; 30 >
     au < released ; 2013 ; Literature and Medicine Volume 31 ; 31 >
-    au < expected ; 2014 ; Literature and Medicine Volume 32 ; 32 >
+    au < doNotProcess ; 2014 ; Literature and Medicine Volume 32 ; 32 >
 
   }
 
@@ -1286,7 +1312,7 @@
     au < released ; 2011 ; MFS Modern Fiction Studies Volume 57 ; 57 >
     au < released ; 2012 ; MFS Modern Fiction Studies Volume 58 ; 58 >
     au < released ; 2013 ; MFS Modern Fiction Studies Volume 59 ; 59 >
-    au < manifest ; 2014 ; MFS Modern Fiction Studies Volume 60 ; 60 >
+    au < doNotProcess ; 2014 ; MFS Modern Fiction Studies Volume 60 ; 60 >
 
   }
 
@@ -1339,7 +1365,7 @@
     au < released ; 2011 ; MLN Volume 126 ; 126 >
     au < released ; 2012 ; MLN Volume 127 ; 127 >
     au < released ; 2013 ; MLN Volume 128 ; 128 >
-    au < manifest ; 2014 ; MLN Volume 129 ; 129 >
+    au < doNotProcess ; 2014 ; MLN Volume 129 ; 129 >
 
   }
 
@@ -1374,7 +1400,7 @@
     au < released ; 2011 ; Modernism/modernity Volume 18 ; 18 >
     au < released ; 2012 ; Modernism/modernity Volume 19 ; 19 >
     au < released ; 2013 ; Modernism/modernity Volume 20 ; 20 >
-    au < manifest ; 2014 ; Modernism/modernity Volume 21 ; 21 >
+    au < doNotProcess ; 2014 ; Modernism/modernity Volume 21 ; 21 >
 
   }
   
@@ -1392,7 +1418,7 @@
       au < released ; 2011 ; Narrative Inquiry in Bioethics Volume 1 ; 1 >
       au < released ; 2012 ; Narrative Inquiry in Bioethics Volume 2 ; 2 >
       au < released ; 2013 ; Narrative Inquiry in Bioethics Volume 3 ; 3 >
-      au < manifest ; 2014 ; Narrative Inquiry in Bioethics Volume 4 ; 4 >
+      au < doNotProcess ; 2014 ; Narrative Inquiry in Bioethics Volume 4 ; 4 >
       
   }
       
@@ -1426,7 +1452,7 @@
     au < released ; 2011 ; New Literary History Volume 42 ; 42 >
     au < released ; 2012 ; New Literary History Volume 43 ; 43 >
     au < released ; 2013 ; New Literary History Volume 44 ; 44 >
-    au < manifest ; 2014 ; New Literary History Volume 45 ; 45 >
+    au < doNotProcess ; 2014 ; New Literary History Volume 45 ; 45 >
 
   }
 
@@ -1468,6 +1494,10 @@
     param[journal_dir] = partial_answers
     attr[journal_id] = pan
 
+    au < ready ; 2003 ; Partial Answers: Journal of Literature and the History of Ideas Volume 1 ; 1 >
+    au < ready ; 2004 ; Partial Answers: Journal of Literature and the History of Ideas Volume 2 ; 2 >
+    au < ready ; 2005 ; Partial Answers: Journal of Literature and the History of Ideas Volume 3 ; 3 >
+    au < released ; 2006 ; Partial Answers: Journal of Literature and the History of Ideas Volume 4 ; 4 >
     au < released ; 2007 ; Partial Answers: Journal of Literature and the History of Ideas Volume 5 ; 5 >
     au < released ; 2008 ; Partial Answers: Journal of Literature and the History of Ideas Volume 6 ; 6 >
     au < released ; 2009 ; Partial Answers: Journal of Literature and the History of Ideas Volume 7 ; 7 >
@@ -1475,7 +1505,7 @@
     au < released ; 2011 ; Partial Answers: Journal of Literature and the History of Ideas Volume 9 ; 9 >
     au < released ; 2012 ; Partial Answers: Journal of Literature and the History of Ideas Volume 10 ; 10 >
     au < released ; 2013 ; Partial Answers: Journal of Literature and the History of Ideas Volume 11 ; 11 >
-    au < manifest ; 2014 ; Partial Answers: Journal of Literature and the History of Ideas Volume 12 ; 12 >
+    au < doNotProcess ; 2014 ; Partial Answers: Journal of Literature and the History of Ideas Volume 12 ; 12 >
 
   }
 
@@ -1504,7 +1534,7 @@
     au < released ; 2011 ; Perspectives in Biology and Medicine Volume 54 ; 54 >
     au < released ; 2012 ; Perspectives in Biology and Medicine Volume 55 ; 55 >
     au < released ; 2013 ; Perspectives in Biology and Medicine Volume 56 ; 56 >
-    au < expected ; 2014 ; Perspectives in Biology and Medicine Volume 57 ; 57 >
+    au < doNotProcess ; 2014 ; Perspectives in Biology and Medicine Volume 57 ; 57 >
 
   }
 
@@ -1538,7 +1568,7 @@
     au < released ; 2011 ; Philosophy and Literature Volume 35 ; 35 >
     au < released ; 2012 ; Philosophy and Literature Volume 36 ; 36 >
     au < released ; 2013 ; Philosophy and Literature Volume 37 ; 37 >
-    au < expected ; 2014 ; Philosophy and Literature Volume 38 ; 38 >
+    au < doNotProcess ; 2014 ; Philosophy and Literature Volume 38 ; 38 >
 
   }
 
@@ -1571,7 +1601,7 @@
     au < released ; 2011 ; Philosophy, Psychiatry, & Psychology Volume 18 ; 18 >
     au < released ; 2012 ; Philosophy, Psychiatry, & Psychology Volume 19 ; 19 >
     au < released ; 2013 ; Philosophy, Psychiatry, & Psychology Volume 20 ; 20 >
-    au < expected ; 2014 ; Philosophy, Psychiatry, & Psychology Volume 21 ; 21 >
+    au < doNotProcess ; 2014 ; Philosophy, Psychiatry, & Psychology Volume 21 ; 21 >
 
   }
 
@@ -1586,10 +1616,10 @@
     param[journal_dir] = poe_studies
     attr[journal_id] = poe
     
-    au < manifest ; 2001 ; Poe Studies Volume 34 ; 34 >
-    au < manifest ; 2002 ; Poe Studies Volume 35 ; 35 >
-    au < manifest ; 2003 ; Poe Studies Volume 36 ; 36 >
-    au < manifest ; 2004 ; Poe Studies Volume 37 ; 37 >
+    au < ready ; 2001 ; Poe Studies Volume 34 ; 34 >
+    au < ready ; 2002 ; Poe Studies Volume 35 ; 35 >
+    au < ready ; 2003 ; Poe Studies Volume 36 ; 36 >
+    au < ready ; 2004 ; Poe Studies Volume 37 ; 37 >
     au < released ; 2005 ; Poe Studies Volume 38 ; 38 >
     au < released ; 2006 ; Poe Studies Volume 39 ; 39 >
     au < exists ; 2007 ; Poe Studies Volume 40 ; 40 >
@@ -1599,7 +1629,7 @@
     au < released ; 2011 ; Poe Studies Volume 44 ; 44 >
     au < released ; 2012 ; Poe Studies Volume 45 ; 45 >
     au < released ; 2013 ; Poe Studies Volume 46 ; 46 >
-    au < expected ; 2014 ; Poe Studies Volume 47 ; 47 >
+    au < doNotProcess ; 2014 ; Poe Studies Volume 47 ; 47 >
 
   }
 
@@ -1627,7 +1657,7 @@
     au < released ; 2011 ; portal: Libraries and the Academy Volume 11 ; 11 >
     au < released ; 2012 ; portal: Libraries and the Academy Volume 12 ; 12 >
     au < released ; 2013 ; portal: Libraries and the Academy Volume 13 ; 13 >
-    au < manifest ; 2014 ; portal: Libraries and the Academy Volume 14 ; 14 >
+    au < doNotProcess ; 2014 ; portal: Libraries and the Academy Volume 14 ; 14 >
 
   }
 
@@ -1685,7 +1715,7 @@
     au < released ; 2011 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 5 ; 5 >
     au < released ; 2012 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 6 ; 6 >
     au < released ; 2013 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 7 ; 7 >
-    au < expected ; 2014 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 8 ; 8 >
+    au < doNotProcess ; 2014 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 8 ; 8 >
 
   }
     
@@ -1719,7 +1749,7 @@
     au < released ; 2011 ; Reviews in American History Volume 39 ; 39 >
     au < released ; 2012 ; Reviews in American History Volume 40 ; 40 >
     au < released ; 2013 ; Reviews in American History Volume 41 ; 41 >
-    au < manifest ; 2014 ; Reviews in American History Volume 42 ; 42 >
+    au < doNotProcess ; 2014 ; Reviews in American History Volume 42 ; 42 >
 
   }
 
@@ -1752,7 +1782,7 @@
     au < released ; 2011 ; SAIS Review Volume 31 ; 31 >
     au < released ; 2012 ; SAIS Review Volume 32 ; 32 >
     au < released ; 2013 ; SAIS Review Volume 33 ; 33 >
-    au < expected ; 2014 ; SAIS Review Volume 34 ; 34 >
+    au < doNotProcess ; 2014 ; SAIS Review Volume 34 ; 34 >
 
   }
 
@@ -1782,7 +1812,7 @@
     au < released ; 2011 ; SEL Studies in English Literature 1500-1900 Volume 51 ; 51 >
     au < released ; 2012 ; SEL Studies in English Literature 1500-1900 Volume 52 ; 52 >
     au < released ; 2013 ; SEL Studies in English Literature 1500-1900 Volume 53 ; 53 >
-    au < manifest ; 2014 ; SEL Studies in English Literature 1500-1900 Volume 54 ; 54 >
+    au < doNotProcess ; 2014 ; SEL Studies in English Literature 1500-1900 Volume 54 ; 54 >
 
   }
 
@@ -1804,7 +1834,7 @@
     au < released ; 2011 ; Sewanee Review Volume 119 ; 119 >
     au < released ; 2012 ; Sewanee Review Volume 120 ; 120 >
     au < released ; 2013 ; Sewanee Review Volume 121 ; 121 >
-    au < manifest ; 2014 ; Sewanee Review Volume 122 ; 122 >
+    au < doNotProcess ; 2014 ; Sewanee Review Volume 122 ; 122 >
     
   }
 
@@ -1827,7 +1857,7 @@
     au < released ; 2011 ; Shakespeare Bulletin Volume 29 ; 29 >
     au < released ; 2012 ; Shakespeare Bulletin Volume 30 ; 30 >
     au < released ; 2013 ; Shakespeare Bulletin Volume 31 ; 31 >
-    au < manifest ; 2014 ; Shakespeare Bulletin Volume 32 ; 32 >
+    au < doNotProcess ; 2014 ; Shakespeare Bulletin Volume 32 ; 32 >
 
   }
 
@@ -1855,7 +1885,7 @@
     au < released ; 2011 ; Shakespeare Quarterly Volume 62 ; 62 >
     au < released ; 2012 ; Shakespeare Quarterly Volume 63 ; 63 >
     au < released ; 2013 ; Shakespeare Quarterly Volume 64 ; 64 >
-    au < expected ; 2014 ; Shakespeare Quarterly Volume 65 ; 65 >
+    au < doNotProcess ; 2014 ; Shakespeare Quarterly Volume 65 ; 65 >
     
 
   }
@@ -1903,7 +1933,7 @@
     au < released ; 2011 ; South Central Review Volume 28 ; 28 >
     au < released ; 2012 ; South Central Review Volume 29 ; 29 >
     au < released ; 2013 ; South Central Review Volume 30 ; 30 >
-    au < manifest ; 2014 ; South Central Review Volume 31 ; 31 >
+    au < doNotProcess ; 2014 ; South Central Review Volume 31 ; 31 >
     
   }
 
@@ -1931,7 +1961,7 @@
     au < released ; 2011 ; Spiritus: A Journal of Christian Spirituality Volume 11 ; 11 >
     au < released ; 2012 ; Spiritus: A Journal of Christian Spirituality Volume 12 ; 12 >
     au < released ; 2013 ; Spiritus: A Journal of Christian Spirituality Volume 13 ; 13 >
-    au < expected ; 2014 ; Spiritus: A Journal of Christian Spirituality Volume 14 ; 14 >
+    au < doNotProcess ; 2014 ; Spiritus: A Journal of Christian Spirituality Volume 14 ; 14 >
 
   }
 
@@ -1949,7 +1979,7 @@
     au < released ; 2011 ; Studies in American Fiction Volume 38 ; 38 >
     au < released ; 2012 ; Studies in American Fiction Volume 39 ; 39 >
     au < released ; 2013 ; Studies in American Fiction Volume 40 ; 40 >
-    au < expected ; 2014 ; Studies in American Fiction Volume 41 ; 41 >
+    au < doNotProcess ; 2014 ; Studies in American Fiction Volume 41 ; 41 >
      
      
   }
@@ -1965,6 +1995,22 @@
     param[journal_dir] = studies_in_eighteenth_century_culture
     attr[journal_id] = sec
 
+    au < ready ; 1991 ; Studies in Eighteenth-Century Culture Volume 20 ; 20 >
+    au < ready ; 1992 ; Studies in Eighteenth-Century Culture Volume 21 ; 21 >
+    au < ready ; 1993 ; Studies in Eighteenth-Century Culture Volume 22 ; 22 >
+    au < ready ; 1994 ; Studies in Eighteenth-Century Culture Volume 23 ; 23 >
+    au < ready ; 1995 ; Studies in Eighteenth-Century Culture Volume 24 ; 24 >
+    au < ready ; 1996 ; Studies in Eighteenth-Century Culture Volume 25 ; 25 >
+    au < ready ; 1997 ; Studies in Eighteenth-Century Culture Volume 26 ; 26 >
+    au < ready ; 1998 ; Studies in Eighteenth-Century Culture Volume 27 ; 27 >
+    au < ready ; 1999 ; Studies in Eighteenth-Century Culture Volume 28 ; 28 >
+    au < ready ; 2000 ; Studies in Eighteenth-Century Culture Volume 29 ; 29 >
+    au < ready ; 2001 ; Studies in Eighteenth-Century Culture Volume 30 ; 30 >
+    au < ready ; 2002 ; Studies in Eighteenth-Century Culture Volume 31 ; 31 >
+    au < ready ; 2003 ; Studies in Eighteenth-Century Culture Volume 32 ; 32 >
+    au < ready ; 2004 ; Studies in Eighteenth-Century Culture Volume 33 ; 33 >
+    au < ready ; 2005 ; Studies in Eighteenth-Century Culture Volume 34 ; 34 >
+    au < released ; 2006 ; Studies in Eighteenth-Century Culture Volume 35 ; 35 >
     au < released ; 2007 ; Studies in Eighteenth-Century Culture Volume 36 ; 36 >
     au < released ; 2008 ; Studies in Eighteenth-Century Culture Volume 37 ; 37 >
     au < released ; 2009 ; Studies in Eighteenth-Century Culture Volume 38 ; 38 >
@@ -1972,7 +2018,7 @@
     au < released ; 2011 ; Studies in Eighteenth-Century Culture Volume 40 ; 40 >
     au < released ; 2012 ; Studies in Eighteenth-Century Culture Volume 41 ; 41 >
     au < released ; 2013 ; Studies in Eighteenth-Century Culture Volume 42 ; 42 >
-    au < manifest ; 2014 ; Studies in Eighteenth-Century Culture Volume 43 ; 43 >
+    au < doNotProcess ; 2014 ; Studies in Eighteenth-Century Culture Volume 43 ; 43 >
 
   }
   
@@ -2003,7 +2049,7 @@
     au < released ; 2011 ; Technology and Culture Volume 52 ; 52 >
     au < released ; 2012 ; Technology and Culture Volume 53 ; 53 >
     au < released ; 2013 ; Technology and Culture Volume 54 ; 54 >
-    au < manifest ; 2014 ; Technology and Culture Volume 55 ; 55 >
+    au < doNotProcess ; 2014 ; Technology and Culture Volume 55 ; 55 >
 
   }
 
@@ -2040,7 +2086,7 @@
     au < released ; 2011 ; The Emily Dickinson Journal Volume 20 ; 20 >
     au < released ; 2012 ; The Emily Dickinson Journal Volume 21 ; 21 >
     au < released ; 2013 ; The Emily Dickinson Journal Volume 22 ; 22 >
-    au < manifest ; 2014 ; The Emily Dickinson Journal Volume 23 ; 23 >
+    au < doNotProcess ; 2014 ; The Emily Dickinson Journal Volume 23 ; 23 >
 
   }
 
@@ -2074,7 +2120,7 @@
     au < released ; 2011 ; The Henry James Review Volume 32 ; 32 >
     au < released ; 2012 ; The Henry James Review Volume 33 ; 33 >
     au < released ; 2013 ; The Henry James Review Volume 34 ; 34 >
-    au < manifest ; 2014 ; The Henry James Review Volume 35 ; 35 >
+    au < doNotProcess ; 2014 ; The Henry James Review Volume 35 ; 35 >
 
   }
 
@@ -2108,7 +2154,7 @@
     au < released ; 2011 ; The Lion and the Unicorn Volume 35 ; 35 >
     au < released ; 2012 ; The Lion and the Unicorn Volume 36 ; 36 >
     au < released ; 2013 ; The Lion and the Unicorn Volume 37 ; 37 >
-    au < expected ; 2014 ; The Lion and the Unicorn Volume 38 ; 38 >
+    au < doNotProcess ; 2014 ; The Lion and the Unicorn Volume 38 ; 38 >
 
   }
 
@@ -2140,7 +2186,7 @@
     au < released ; 2010-2011 ; The Review of Higher Education Volume 34 ; 34 >
     au < released ; 2011-2012 ; The Review of Higher Education Volume 35 ; 35 >
     au < released ; 2012-2013 ; The Review of Higher Education Volume 36 ; 36 >
-    au < manifest ; 2013-2014 ; The Review of Higher Education Volume 37 ; 37 >
+    au < released ; 2013-2014 ; The Review of Higher Education Volume 37 ; 37 >
     
   }
 
@@ -2198,7 +2244,7 @@
     au < released ; 2011 ; Theatre Journal Volume 63 ; 63 >
     au < released ; 2012 ; Theatre Journal Volume 64 ; 64 >
     au < released ; 2013 ; Theatre Journal Volume 65 ; 65 >
-    au < manifest ; 2014 ; Theatre Journal Volume 66 ; 66 >
+    au < doNotProcess ; 2014 ; Theatre Journal Volume 66 ; 66 >
 
   }
 
@@ -2231,7 +2277,7 @@
     au < released ; 2011 ; Theatre Topics Volume 21 ; 21 >
     au < released ; 2012 ; Theatre Topics Volume 22 ; 22 >
     au < released ; 2013 ; Theatre Topics Volume 23 ; 23 >
-    au < manifest ; 2014 ; Theatre Topics Volume 24 ; 24 >
+    au < doNotProcess ; 2014 ; Theatre Topics Volume 24 ; 24 >
 
   }
 
@@ -2261,7 +2307,7 @@
     au < released ; 2011 ; Theory & Event Volume 14 ; 14 >
     au < released ; 2012 ; Theory & Event Volume 15 ; 15 >
     au < released ; 2013 ; Theory & Event Volume 16 ; 16 >
-    au < manifest ; 2014 ; Theory & Event Volume 17 ; 17 >
+    au < doNotProcess ; 2014 ; Theory & Event Volume 17 ; 17 >
 
   }
 
@@ -2290,7 +2336,7 @@
     au < released ; 2011 ; Transactions of the American Philological Association Volume 141 ; 141 >
     au < released ; 2012 ; Transactions of the American Philological Association Volume 142 ; 142 >
     au < released ; 2013 ; Transactions of the American Philological Association Volume 143 ; 143 >
-    au < expected ; 2014 ; Transactions of the American Philological Association Volume 144 ; 144 >
+    au < doNotProcess ; 2014 ; Transactions of the American Philological Association Volume 144 ; 144 >
 
   }
   
@@ -2314,7 +2360,7 @@
     au < released ; 2011 ; Victorian Periodicals Review Volume 44 ; 44 >
     au < released ; 2012 ; Victorian Periodicals Review Volume 45 ; 45 >
     au < released ; 2013 ; Victorian Periodicals Review Volume 46 ; 46 >
-    au < manifest ; 2014 ; Victorian Periodicals Review Volume 47 ; 47 >
+    au < doNotProcess ; 2014 ; Victorian Periodicals Review Volume 47 ; 47 >
 
   }
   
@@ -2332,7 +2378,7 @@
     au < released ; 2011 ; Wallace Stevens Journal Volume 35 ; 35 >
     au < released ; 2012 ; Wallace Stevens Journal Volume 36 ; 36 >
     au < released ; 2013 ; Wallace Stevens Journal Volume 37 ; 37 >
-    au < manifest ; 2014 ; Wallace Stevens Journal Volume 38 ; 38 >
+    au < doNotProcess ; 2014 ; Wallace Stevens Journal Volume 38 ; 38 >
 
   }  
   

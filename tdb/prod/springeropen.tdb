@@ -114,6 +114,21 @@
     {
   
         title <
+          name = Asia Pacific Journal on Computational Engineering ;
+          eissn = 2196-1166
+        >
+  
+        param[base_url] = http://www.apjcen.com/
+        param[journal_issn] = 2196-1166
+        comment[platform] = BioMedCentralPlugin
+  
+        au < manifest ; 2014 ; Asia Pacific Journal on Computational Engineering Volume 1 ; 1 >
+  
+    }
+
+    {
+  
+        title <
           name = Asian Journal of Gambling Issues and Public Health ;
           issn = 2195-3007 
         >
@@ -226,7 +241,7 @@
         param[journal_issn] = 2195-2701 
         comment[platform] = BioMedCentralPlugin
   
-        au < expected ; 2014 ; City, Territory and Architecture Volume 1 ; 1 >
+        au < manifest ; 2014 ; City, Territory and Architecture Volume 1 ; 1 >
   
     }
   
@@ -410,6 +425,21 @@
     {
   
         title <
+          name = EJNMMI Physics ;
+          eissn = 2197-7364
+        >
+  
+        param[base_url] = http://www.ejnmmiphys.com/
+        param[journal_issn] = 2197-7364
+        comment[platform] = BioMedCentralPlugin
+  
+        au < manifest ; 2014 ; EJNMMI Physics Volume 1 ; 1 >
+  
+    }
+  
+    {
+  
+        title <
           name = EJNMMI Research ;
           eissn = 2191-219X 
         >
@@ -553,7 +583,7 @@
         param[journal_issn] = 2195-7045 
         comment[platform] = BioMedCentralPlugin
   
-        au < expected ; 2014 ; EPJ Techniques and Instrumentation Volume 1 ; 1 >
+        au < manifest ; 2014 ; EPJ Techniques and Instrumentation Volume 1 ; 1 >
   
     }
   
@@ -644,7 +674,7 @@
         au < manifest ; 2011 ; EURASIP Journal on Embedded Systems Volume 2011 ; 2011 >
         au < manifest ; 2012 ; EURASIP Journal on Embedded Systems Volume 2012 ; 2012 >
         au < manifest ; 2013 ; EURASIP Journal on Embedded Systems Volume 2013 ; 2013 >
-        au < expected ; 2014 ; EURASIP Journal on Embedded Systems Volume 2014 ; 2014 >
+        au < manifest ; 2014 ; EURASIP Journal on Embedded Systems Volume 2014 ; 2014 >
   
     }
   
@@ -886,7 +916,7 @@
   
         au < manifest ; 2012 ; HUGO Journal Volume 6 ; 6 >
         au < manifest ; 2013 ; HUGO Journal Volume 7 ; 7 >
-        au < expected ; 2014 ; HUGO Journal Volume 8 ; 8 >
+        au < manifest ; 2014 ; HUGO Journal Volume 8 ; 8 >
   
     }
   
@@ -920,7 +950,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; 2013 ; In Silico Pharmacology Volume 1 ; 1 >
-        au < expected ; 2014 ; In Silico Pharmacology Volume 2 ; 2 >
+        au < manifest ; 2014 ; In Silico Pharmacology Volume 2 ; 2 >
   
     }
 
@@ -1237,7 +1267,7 @@
         param[journal_issn] = 2196-1115 
         comment[platform] = BioMedCentralPlugin
   
-        au < expected ; 2014 ; Journal Of Big Data Volume 1 ; 1 >
+        au < manifest ; 2014 ; Journal Of Big Data Volume 1 ; 1 >
   
     }
   
@@ -1379,7 +1409,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; 2013 ; Journal of Interaction Science Volume 1 ; 1 >
-        au < expected ; 2014 ; Journal of Interaction Science Volume 2 ; 2 >
+        au < manifest ; 2014 ; Journal of Interaction Science Volume 2 ; 2 >
   
     }
   
@@ -1433,7 +1463,7 @@
         au < manifest ; 2011 ; Journal of Mathematics in Industry Volume 1 ; 1 >
         au < manifest ; 2012 ; Journal of Mathematics in Industry Volume 2 ; 2 >
         au < manifest ; 2013 ; Journal of Mathematics in Industry Volume 3 ; 3 >
-        au < expected ; 2014 ; Journal of Mathematics in Industry Volume 4 ; 4 >
+        au < manifest ; 2014 ; Journal of Mathematics in Industry Volume 4 ; 4 >
   
     }
   
@@ -1506,6 +1536,21 @@
     {
   
         title <
+          name = Journal of Solid State Lighting ;
+          eissn = 2196-1107
+        >
+  
+        param[base_url] = http://www.journalofsolidstatelighting.com/
+        param[journal_issn] = 2196-1107
+        comment[platform] = BioMedCentralPlugin
+  
+        au < manifest ; 2014 ; Journal of Solid State Lighting Volume 1 ; 1 >
+  
+    }
+
+    {
+  
+        title <
           name = Journal of Statistical Distributions and Applications ;
           issn = 2195-5832 
         >
@@ -1514,7 +1559,7 @@
         param[journal_issn] = 2195-5832 
         comment[platform] = BioMedCentralPlugin
   
-        au < expected ; 2014 ; Journal of Statistical Distributions and Applications Volume 1 ; 1 >
+        au < manifest ; 2014 ; Journal of Statistical Distributions and Applications Volume 1 ; 1 >
   
     }
   
@@ -1532,6 +1577,21 @@
         au < manifest ; 2012 ; Journal of Theoretical and Applied Physics Volume 6 ; 6 >
         au < manifest ; 2013 ; Journal of Theoretical and Applied Physics Volume 7 ; 7 >
         au < manifest ; 2014 ; Journal of Theoretical and Applied Physics Volume 8 ; 8 >
+  
+    }
+  
+    {
+  
+        title <
+          name = Journal of Trust Management ;
+          issn = 2196-064X 
+        >
+  
+        param[base_url] = http://www.journaloftrustmanagement.com/
+        param[journal_issn] = 2196-064X 
+        comment[platform] = BioMedCentralPlugin
+  
+        au < exists ; 2014 ; Journal of Trust Management Volume 1 ; 1 >
   
     }
   
@@ -1631,7 +1691,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; 2013 ; Micro and Nano Systems Letters Volume 1 ; 1 >
-        au < expected ; 2014 ; Micro and Nano Systems Letters Volume 2 ; 2 >
+        au < manifest ; 2014 ; Micro and Nano Systems Letters Volume 2 ; 2 >
   
     }
   
@@ -1649,7 +1709,7 @@
         au < manifest ; 2011 ; Multilingual Education Volume 1 ; 1 >
         au < manifest ; 2012 ; Multilingual Education Volume 2 ; 2 >
         au < manifest ; 2013 ; Multilingual Education Volume 3 ; 3 >
-        au < expected ; 2014 ; Multilingual Education Volume 4 ; 4 >
+        au < manifest ; 2014 ; Multilingual Education Volume 4 ; 4 >
   
     }
 
@@ -1799,6 +1859,21 @@
     {
   
         title <
+          name = Progress in Earth and Planetary Science ;
+          eissn = 2197-4284
+        >
+  
+        param[base_url] = http://www.progearthplanetsci.com/
+        param[journal_issn] = 2197-4284
+        comment[platform] = BioMedCentralPlugin
+  
+        au < manifest ; 2014 ; Progress in Earth and Planetary Science Volume 1 ; 1 >
+  
+    }
+  
+    {
+  
+        title <
           name = Progress in Orthodontics ;
           issn = 1723-7785
         >
@@ -1826,16 +1901,30 @@
         au < manifest ; 2011 ; Psychology of Well-Being: Theory, Research and Practice Volume 1 ; 1 >
         au < manifest ; 2012 ; Psychology of Well-Being: Theory, Research and Practice Volume 2 ; 2 >
         au < manifest ; 2013 ; Psychology of Well-Being: Theory, Research and Practice Volume 3 ; 3 >
-        au < expected ; 2014 ; Psychology of Well-Being: Theory, Research and Practice Volume 4 ; 4 >
+        au < manifest ; 2014 ; Psychology of Well-Being: Theory, Research and Practice Volume 4 ; 4 >
   
     }
 
     {
   
         title <
+          name = Research in the Mathematical Sciences ;
+          eissn = 2197-9847
+        >
+  
+        param[base_url] = http://www.resmathsci.com/
+        param[journal_issn] = 2197-9847
+        comment[platform] = BioMedCentralPlugin
+
+        au < exists ; 2014 ; Research in the Mathematical Sciences Volume 1 ; 1 >
+
+    }
+
+    {
+  
+        title <
           name = Revista Chilena de Historia Natural ;
-          eissn = 0717-6317 ;
-          issnl = 0717-6317
+          eissn = 0717-6317
         >
   
         param[base_url] = http://www.revchilhistnat.com/
@@ -1957,8 +2046,8 @@
         param[journal_issn] = 1810-522X
         comment[platform] = BioMedCentralPlugin
 
-        au < exists ; 2013 ; Zoological Studies Volume 52 ; 52 >
-        au < exists ; 2014 ; Zoological Studies Volume 53 ; 53 >
+        au < manifest ; 2013 ; Zoological Studies Volume 52 ; 52 >
+        au < manifest ; 2014 ; Zoological Studies Volume 53 ; 53 >
 
     }
 

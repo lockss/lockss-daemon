@@ -333,7 +333,7 @@
       issnl = 0959-535X
     >
     
-    comment[bmj_down] = The BMJ site is brand-new and requires changes to the HighWire plugin. Suspending these AUs for now.
+    comment[bmj_down] = The BMJ site moved to Drupal.
 
     param[base_url] = http://www.bmj.com/
 
@@ -414,23 +414,25 @@
     au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; BMJ Volume 327 ; 327 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2004 ; BMJ Volume 328 ; 328 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2004 ; BMJ Volume 329 ; 329 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; BMJ Volume 330 ; 330 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; BMJ Volume 331 ; 331 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; BMJ Volume 332 ; 332 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; BMJ Volume 333 ; 333 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2007 ; BMJ Volume 334 ; 334 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2007 ; BMJ Volume 335 ; 335 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; BMJ Volume 336 ; 336 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; BMJ Volume 337 ; 337 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; BMJ Volume 338 ; 338 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; BMJ Volume 339 ; 339 >
+    au < HighWireDrupalPlugin ; manifest ; 2005 ; BMJ Volume 330 ; 330 >
+    au < HighWireDrupalPlugin ; manifest ; 2005 ; BMJ Volume 331 ; 331 >
+    au < HighWireDrupalPlugin ; manifest ; 2006 ; BMJ Volume 332 ; 332 >
+    au < HighWireDrupalPlugin ; manifest ; 2006 ; BMJ Volume 333 ; 333 >
+    au < HighWireDrupalPlugin ; manifest ; 2007 ; BMJ Volume 334 ; 334 >
+    au < HighWireDrupalPlugin ; manifest ; 2007 ; BMJ Volume 335 ; 335 >
+    au < HighWireDrupalPlugin ; manifest ; 2008 ; BMJ Volume 336 ; 336 >
+    au < HighWireDrupalPlugin ; manifest ; 2008 ; BMJ Volume 337 ; 337 >
+    au < HighWireDrupalPlugin ; manifest ; 2009 ; BMJ Volume 338 ; 338 >
+    au < HighWireDrupalPlugin ; manifest ; 2009 ; BMJ Volume 339 ; 339 >
     au < HighWirePressH20Plugin ; down ; 2010 ; BMJ Volume 340 ; 340 >
     au < HighWirePressH20Plugin ; down ; 2010 ; BMJ Volume 341 ; 341 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; BMJ Volume 342 ; 342 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; BMJ Volume 343 ; 343 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2012 ; BMJ Volume 344 ; 344 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2012 ; BMJ Volume 345 ; 345 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; BMJ Volume 346 ; 346 >
+    au < HighWireDrupalPlugin ; manifest ; 2011 ; BMJ Volume 342 ; 342 >
+    au < HighWireDrupalPlugin ; manifest ; 2011 ; BMJ Volume 343 ; 343 >
+    au < HighWireDrupalPlugin ; manifest ; 2012 ; BMJ Volume 344 ; 344 >
+    au < HighWireDrupalPlugin ; manifest ; 2012 ; BMJ Volume 345 ; 345 >
+    au < HighWireDrupalPlugin ; manifest ; 2013 ; BMJ Volume 346 ; 346 >
+    au < HighWireDrupalPlugin ; manifest ; 2014 ; BMJ Volume 347 ; 347 >
+    au < HighWireDrupalPlugin ; manifest ; 2014 ; BMJ Volume 348 ; 348 >
 
   }
 
@@ -460,29 +462,20 @@
 
       plugin = needs.plugin
       param[base_url] = http://diabetesrc.bmj.com/
+      comment[base_url] = what is the correct base_url. What about http://drc.bmj.com/
       implicit < status ; year ; name ; param[volume_name] >
 
       au < exists ; 2013 ; BMJ Open Diabetes Research & Care Volume 1 ; 1 >
+      au < exists ; 2014 ; BMJ Open Diabetes Research & Care Volume 2 ; 2 >
 
     }
-
-  }
-
-  {
-    title <
-      name = BMJ Open Diabetes Research & Care
-    >
-
-    param[base_url] = http://drc.bmj.com/
-
-    au < HighWirePressH20Plugin ; expected ; 2013 ; BMJ Open Diabetes Research & Care Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; expected ; 2014 ; BMJ Open Diabetes Research & Care Volume 2 ; 2 >
 
   }
   
   {
     title <
-      name = BMJ Open Respiratory Research
+      name = BMJ Open Respiratory Research ;
+      eissn = 2052-4439
     >
 
     param[base_url] = http://bmjopenrespres.bmj.com/
@@ -517,8 +510,8 @@
     
     comment[notReady] = Found a logon page for V1. Low agreement for V2
 
-    au < HighWirePressH20Plugin ; notReady ; 2011 ; BMJ Supportive & Palliative Care Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; notReady ; 2012 ; BMJ Supportive & Palliative Care Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; BMJ Supportive & Palliative Care Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2012 ; BMJ Supportive & Palliative Care Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; BMJ Supportive & Palliative Care Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; BMJ Supportive & Palliative Care Volume 4 ; 4 >
 
@@ -619,18 +612,18 @@
     au < HighWirePressH20Plugin ; manifest ; 1997 ; British Journal of Ophthalmology Volume 81 ; 81 >
     au < HighWirePressH20Plugin ; manifest ; 1998 ; British Journal of Ophthalmology Volume 82 ; 82 >
     au < HighWirePressH20Plugin ; manifest ; 1999 ; British Journal of Ophthalmology Volume 83 ; 83 >
-    au < HighWirePressH20Plugin ; notReady ; 2000 ; British Journal of Ophthalmology Volume 84 ; 84 >
-    au < HighWirePressH20Plugin ; notReady ; 2001 ; British Journal of Ophthalmology Volume 85 ; 85 >
-    au < HighWirePressH20Plugin ; notReady ; 2002 ; British Journal of Ophthalmology Volume 86 ; 86 >
-    au < HighWirePressH20Plugin ; notReady ; 2003 ; British Journal of Ophthalmology Volume 87 ; 87 >
-    au < HighWirePressH20Plugin ; notReady ; 2004 ; British Journal of Ophthalmology Volume 88 ; 88 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2000 ; British Journal of Ophthalmology Volume 84 ; 84 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; British Journal of Ophthalmology Volume 85 ; 85 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; British Journal of Ophthalmology Volume 86 ; 86 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; British Journal of Ophthalmology Volume 87 ; 87 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2004 ; British Journal of Ophthalmology Volume 88 ; 88 >
     au < HighWirePressH20Plugin ; released ; 2005 ; British Journal of Ophthalmology Volume 89 ; 89 >
     au < HighWirePressH20Plugin ; released ; 2006 ; British Journal of Ophthalmology Volume 90 ; 90 >
     au < HighWirePressH20Plugin ; released ; 2007 ; British Journal of Ophthalmology Volume 91 ; 91 >
     au < HighWirePressH20Plugin ; released ; 2008 ; British Journal of Ophthalmology Volume 92 ; 92 >
     au < HighWirePressH20Plugin ; released ; 2009 ; British Journal of Ophthalmology Volume 93 ; 93 >
     au < HighWirePressH20Plugin ; released ; 2010 ; British Journal of Ophthalmology Volume 94 ; 94 >
-    au < HighWirePressH20Plugin ; notReady ; 2011 ; British Journal of Ophthalmology Volume 95 ; 95 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; British Journal of Ophthalmology Volume 95 ; 95 >
     au < HighWirePressH20Plugin ; released ; 2012 ; British Journal of Ophthalmology Volume 96 ; 96 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; British Journal of Ophthalmology Volume 97 ; 97 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; British Journal of Ophthalmology Volume 98 ; 98 >
@@ -692,7 +685,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; British Journal of Sports Medicine Volume 43 ; 43 >
     au < HighWirePressH20Plugin ; released ; 2010 ; British Journal of Sports Medicine Volume 44 ; 44 >
     au < HighWirePressH20Plugin ; released ; 2011 ; British Journal of Sports Medicine Volume 45 ; 45 >
-    au < HighWirePressH20Plugin ; notReady ; 2012 ; British Journal of Sports Medicine Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2012 ; British Journal of Sports Medicine Volume 46 ; 46 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; British Journal of Sports Medicine Volume 47 ; 47 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; British Journal of Sports Medicine Volume 48 ; 48 >
 
@@ -760,7 +753,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; Drug and Therapeutics Bulletin Volume 47 ; 47 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Drug and Therapeutics Bulletin Volume 48 ; 48 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Drug and Therapeutics Bulletin Volume 49 ; 49 >
-    au < HighWirePressH20Plugin ; notReady ; 2012 ; Drug and Therapeutics Bulletin Volume 50 ; 50 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2012 ; Drug and Therapeutics Bulletin Volume 50 ; 50 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; Drug and Therapeutics Bulletin Volume 51 ; 51 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; Drug and Therapeutics Bulletin Volume 52 ; 52 >
 
@@ -776,17 +769,17 @@
 
     param[base_url] = http://emj.bmj.com/
     
-    comment[notReady] = tested multiple times to low agreement.
+    comment[notReady] = tested multiple times to low agreement: V6, v9.
 
     au < HighWirePressH20Plugin ; released ; 1984 ; Emergency Medicine Journal Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; released ; 1985 ; Emergency Medicine Journal Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; released ; 1986 ; Emergency Medicine Journal Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; released ; 1987 ; Emergency Medicine Journal Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; released ; 1988 ; Emergency Medicine Journal Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; notReady ; 1989 ; Emergency Medicine Journal Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1989 ; Emergency Medicine Journal Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; released ; 1990 ; Emergency Medicine Journal Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; released ; 1991 ; Emergency Medicine Journal Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; notReady ; 1992 ; Emergency Medicine Journal Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1992 ; Emergency Medicine Journal Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; released ; 1993 ; Emergency Medicine Journal Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; released ; 1994 ; Emergency Medicine Journal Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; released ; 1995 ; Emergency Medicine Journal Volume 12 ; 12 >
@@ -845,7 +838,8 @@
 
   {
     title <
-      name = OpenHeart
+      name = OpenHeart ;
+      eissn = 2053-3624
       >
     
     rights = openaccess
@@ -913,7 +907,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWireStrVolPlugin ; down ; 2005 ; Evidence-Based Medicine Volume 10 ; 10 >
     au < HighWireStrVolPlugin ; down ; 2006 ; Evidence-Based Medicine Volume 11 ; 11 >
     au < HighWireStrVolPlugin ; down ; 2007 ; Evidence-Based Medicine Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; notReady ; 2008 ; Evidence-Based Medicine Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; Evidence-Based Medicine Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; released ; 2009 ; Evidence-Based Medicine Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Evidence-Based Medicine Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Evidence-Based Medicine Volume 16 ; 16 >
@@ -1196,7 +1190,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       au < HighWirePressH20Plugin ; released ; 1997 ; Injury Prevention Volume 3 ; 3 >
       au < HighWirePressH20Plugin ; released ; 1998 ; Injury Prevention Volume 4 ; 4 >
       au < HighWirePressH20Plugin ; released ; 1999 ; Injury Prevention Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; notReady ; 2000 ; Injury Prevention Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2000 ; Injury Prevention Volume 6 ; 6 >
       au < HighWirePressH20Plugin ; released ; 2001 ; Injury Prevention Volume 7 ; 7 >
       au < HighWirePressH20Plugin ; released ; 2002 ; Injury Prevention Volume 8 ; 8 >
       au < HighWirePressH20Plugin ; released ; 2003 ; Injury Prevention Volume 9 ; 9 >
@@ -1403,7 +1397,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2008 ; Journal of Epidemiology & Community Health Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; released ; 2009 ; Journal of Epidemiology & Community Health Volume 63 ; 63 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Epidemiology & Community Health Volume 64 ; 64 >
-    au < HighWirePressH20Plugin ; notReady ; 2011 ; Journal of Epidemiology & Community Health Volume 65 ; 65 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; Journal of Epidemiology & Community Health Volume 65 ; 65 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Epidemiology & Community Health Volume 66 ; 66 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; Journal of Epidemiology & Community Health Volume 67 ; 67 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; Journal of Epidemiology & Community Health Volume 68 ; 68 >
@@ -1897,7 +1891,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2011 ; Medical Humanities Volume 37 ; 37 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Medical Humanities Volume 38 ; 38 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; Medical Humanities Volume 39 ; 39 >
-    au < HighWirePressH20Plugin ; expected ; 2014 ; Medical Humanities Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; manifest ; 2014 ; Medical Humanities Volume 40 ; 40 >
 
   }
 
@@ -2178,9 +2172,9 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       au < HighWireStrVolPlugin ; down ; 2007 ; Quality and Safety in Health Care Volume 16 ; 16 >
       au < HighWirePressH20Plugin ; released ; 2008 ; Quality and Safety in Health Care Volume 17 ; 17 >
       au < HighWirePressH20Plugin ; released ; 2009 ; Quality and Safety in Health Care Volume 18 ; 18 >
-      au < HighWirePressH20Plugin ; notReady ; 2010 ; Quality and Safety in Health Care Volume 19 ; 19 >
-      au < HighWirePressH20Plugin ; notReady ; 2011 ; Quality and Safety in Health Care Volume 20 ; 20 >
-      au < HighWirePressH20Plugin ; notReady ; 2012 ; Quality and Safety in Health Care Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; Quality and Safety in Health Care Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; Quality and Safety in Health Care Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2012 ; Quality and Safety in Health Care Volume 21 ; 21 >
       au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; Quality and Safety in Health Care Volume 22 ; 22 >
       au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; Quality and Safety in Health Care Volume 23 ; 23 >
       
@@ -2414,7 +2408,7 @@ comment[tc15] = recursive URL structure
       au < HighWirePressH20Plugin ; manifest ; 2003 ; Tobacco Control Volume 12 ; 12 >
       au < HighWirePressH20Plugin ; manifest ; 2004 ; Tobacco Control Volume 13 ; 13 >
       au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Tobacco Control Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; notReady ; 2006 ; Tobacco Control Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Tobacco Control Volume 15 ; 15 >
       au < HighWirePressH20Plugin ; released ; 2007 ; Tobacco Control Volume 16 ; 16 >
       au < HighWirePressH20Plugin ; released ; 2008 ; Tobacco Control Volume 17 ; 17 >
       au < HighWirePressH20Plugin ; released ; 2009 ; Tobacco Control Volume 18 ; 18 >

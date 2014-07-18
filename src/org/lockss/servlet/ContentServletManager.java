@@ -1,5 +1,5 @@
 /*
- * $Id: ContentServletManager.java,v 1.9 2012-06-25 14:14:55 easyonthemayo Exp $
+ * $Id: ContentServletManager.java,v 1.9.38.1 2014-07-18 15:59:03 wkwilson Exp $
  */
 
 /*
@@ -108,6 +108,10 @@ public class ContentServletManager
   public static final String PARAM_REDIRECT_ROOT = PREFIX + "redirectRoot";
   public static final String DEFAULT_REDIRECT_ROOT = "ServeContent";
 
+  /** Display only the ServeContent servlet  */
+  public static final String PARAM_CONTENT_ONLY = PREFIX + "contentOnly";
+  public static final boolean DEFAULT_CONTENT_ONLY = false;
+
   static final String COMPRESSOR_PREFIX = PREFIX + "compressor.";
 
   public static final String PARAM_COMPRESSOR_ENABLED =
@@ -126,8 +130,14 @@ public class ContentServletManager
 			    "text/html,text/xml,text/plain");
   }
 
-
   // Descriptors for all content servlets.
+
+  // ServeContent with no nav table
+  public static final ServletDescr SERVLET_SERVE_CONTENT_NO_NAV =
+    new ServletDescr("ServeContent",
+		     ServeContent.class,
+                     "Serve Content",
+                     ServletDescr.NO_NAV_TABLE);
 
   public static final ServletDescr SERVLET_SERVE_CONTENT =
     new ServletDescr("ServeContent",
@@ -177,6 +187,11 @@ public class ContentServletManager
     return "mailto:" + addr;
   }
 
+  // 
+  static final ServletDescr servletDescrsNoNav[] = {
+    SERVLET_SERVE_CONTENT_NO_NAV,
+  };
+
   // All servlets must be listed here (even if not in nav table).
   // Order of descrs determines order in nav table.
   static final ServletDescr servletDescrs[] = {
@@ -188,7 +203,12 @@ public class ContentServletManager
   };
 
   public ServletDescr[] getServletDescrs() {
-    return servletDescrs;
+    if (CurrentConfig.getBooleanParam(PARAM_CONTENT_ONLY,
+				      DEFAULT_CONTENT_ONLY)) {
+      return servletDescrsNoNav;
+    } else {
+      return servletDescrs;
+    }
   }
 
   private String redirectRootTo = DEFAULT_REDIRECT_ROOT;

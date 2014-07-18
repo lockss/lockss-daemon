@@ -13,7 +13,7 @@
 
     {
       title <
-        name = Animation Practice, Production & Process ;
+        name = Animation Practice, Process & Production ;
         issn = 2042-7875 ;
         eissn = 2042-7883
       >
@@ -21,9 +21,9 @@
       param[journal_id] = ap3
       param[journal_issn] = 2042-7875
       
-      au < released ; 2011-2012 ; Animation Practice, Production & Process Volume 1 ; 1 >
-      au < released ; 2012-2013 ; Animation Practice, Production & Process Volume 2 ; 2 >
-      au < expected ; 2013-2014 ; Animation Practice, Production & Process Volume 3 ; 3 >
+      au < released ; 2011-2012 ; Animation Practice, Process & Production Volume 1 ; 1 >
+      au < released ; 2012 ; Animation Practice, Process & Production Volume 2 ; 2 >
+      au < manifest ; 2013-2014 ; Animation Practice, Process & Production Volume 3 ; 3 >
 
     }
 
@@ -79,7 +79,7 @@
       au < released ; 2010 ; Art, Design & Communication in Higher Education Volume 9 ; 9 >
       au < released ; 2012 ; Art, Design & Communication in Higher Education Volume 10 ; 10 >
       au < released ; 2012 ; Art, Design & Communication in Higher Education Volume 11 ; 11 >
-      au < manifest ; 2013 ; Art, Design & Communication in Higher Education Volume 12 ; 12 >
+      au < released ; 2013 ; Art, Design & Communication in Higher Education Volume 12 ; 12 >
       au < expected ; 2014 ; Art, Design & Communication in Higher Education Volume 13 ; 13 >
 
     }
@@ -93,18 +93,19 @@
 
       param[journal_id] = ac
       param[journal_issn] = 1059-440X
+      comment[notReady] = PD-1113, hash filter needed
       
-      au < manifest ; 1993 ; Asian Cinema Volume 5 ; 5 >
-      au < manifest ; 1993 ; Asian Cinema Volume 6 ; 6 >
-      au < manifest ; 1995 ; Asian Cinema Volume 7 ; 7 >
-      au < manifest ; 1996 ; Asian Cinema Volume 8 ; 8 >
-      au < manifest ; 1997-1998 ; Asian Cinema Volume 9 ; 9 >
-      au < manifest ; 1998-1999 ; Asian Cinema Volume 10 ; 10 >
-      au < manifest ; 2000 ; Asian Cinema Volume 11 ; 11 >
-      au < manifest ; 2001 ; Asian Cinema Volume 12 ; 12 >
-      au < manifest ; 2002 ; Asian Cinema Volume 13 ; 13 >
-      au < manifest ; 2003 ; Asian Cinema Volume 14 ; 14 >
-      au < manifest ; 2004 ; Asian Cinema Volume 15 ; 15 >
+      au < notReady ; 1993 ; Asian Cinema Volume 5 ; 5 >
+      au < notReady ; 1993 ; Asian Cinema Volume 6 ; 6 >
+      au < notReady ; 1995 ; Asian Cinema Volume 7 ; 7 >
+      au < notReady ; 1996 ; Asian Cinema Volume 8 ; 8 >
+      au < notReady ; 1997-1998 ; Asian Cinema Volume 9 ; 9 >
+      au < notReady ; 1998-1999 ; Asian Cinema Volume 10 ; 10 >
+      au < notReady ; 2000 ; Asian Cinema Volume 11 ; 11 >
+      au < notReady ; 2001 ; Asian Cinema Volume 12 ; 12 >
+      au < notReady ; 2002 ; Asian Cinema Volume 13 ; 13 >
+      au < notReady ; 2003 ; Asian Cinema Volume 14 ; 14 >
+      au < notReady ; 2004 ; Asian Cinema Volume 15 ; 15 >
       au < released ; 2005 ; Asian Cinema Volume 16 ; 16 >
       au < released ; 2006 ; Asian Cinema Volume 17 ; 17 >
       au < released ; 2007 ; Asian Cinema Volume 18 ; 18 >
@@ -114,7 +115,7 @@
       au < released ; 2012 ; Asian Cinema Volume 22 ; 22 >
       au < released ; 2012 ; Asian Cinema Volume 23 ; 23 >
       au < released ; 2013 ; Asian Cinema Volume 24 ; 24 >
-      au < expected ; 2014 ; Asian Cinema Volume 25 ; 25 >
+      au < manifest ; 2014 ; Asian Cinema Volume 25 ; 25 >
 
     }
 
@@ -185,7 +186,7 @@
       au < released ; 2011 ; Catalan Journal of Communication & Cultural Studies Volume 3 ; 3 >
       au < released ; 2012 ; Catalan Journal of Communication & Cultural Studies Volume 4 ; 4 >
       au < released ; 2013 ; Catalan Journal of Communication & Cultural Studies Volume 5 ; 5 >
-      au < expected ; 2014 ; Catalan Journal of Communication & Cultural Studies Volume 6 ; 6 >
+      au < manifest ; 2014 ; Catalan Journal of Communication & Cultural Studies Volume 6 ; 6 >
 
     }
 
@@ -313,7 +314,7 @@
       au < released ; 2011 ; Crossings: Journal of Migration & Culture Volume 2 ; 2 >
       au < released ; 2012 ; Crossings: Journal of Migration & Culture Volume 3 ; 3 >
       au < released ; 2013 ; Crossings: Journal of Migration & Culture Volume 4 ; 4 >
-      au < expected ; 2014 ; Crozzings: Journal of Migration & Culture Volume 5 ; 5 >
+      au < manifest ; 2014 ; Crozzings: Journal of Migration & Culture Volume 5 ; 5 >
 
     }
 
@@ -326,10 +327,11 @@
       
       param[journal_id] = des
       param[journal_issn] = 2043-068X
+      comment[notReady] = PD-1113, hash filter needed
       
       au < released ; 2011 ; Design Ecologies Volume 1 ; 1 >
       au < released ; 2012 ; Design Ecologies Volume 2 ; 2 >
-      au < expected ; 2013 ; Design Ecologies Volume 3 ; 3 >
+      au < notReady ; 2013 ; Design Ecologies Volume 3 ; 3 >
       au < expected ; 2014 ; Design Ecologies Volume 4 ; 4 >
 
     }
@@ -375,7 +377,7 @@
       au < released ; 2011-2012 ; European Journal of American Culture Volume 30 ; 30 >
       au < released ; 2012 ; European Journal of American Culture Volume 31 ; 31 >
       au < released ; 2013 ; European Journal of American Culture Volume 32 ; 32 >
-      au < expected ; 2014 ; European Journal of American Culture Volume 33 ; 33 >
+      au < manifest ; 2014 ; European Journal of American Culture Volume 33 ; 33 >
 
     }
     
@@ -396,7 +398,7 @@
       au < released ; 2011 ; Explorations in Media Ecology Volume 10 ; 10 >
       au < released ; 2012 ; Explorations in Media Ecology Volume 11 ; 11 >
       au < released ; 2013 ; Explorations in Media Ecology Volume 12 ; 12 >
-      au < expected ; 2014 ; Explorations in Media Ecology Volume 13 ; 13 >
+      au < manifest ; 2014 ; Explorations in Media Ecology Volume 13 ; 13 >
 
     }
     
@@ -421,7 +423,7 @@
       au < released ; 2011 ; Film International Volume 9 ; 9 >
       au < released ; 2012 ; Film International Volume 10 ; 10 >
       au < released ; 2013 ; Film International Volume 11 ; 11 >
-      au < expected ; 2014 ; Film International Volume 12 ; 12 >
+      au < manifest ; 2014 ; Film International Volume 12 ; 12 >
 
     }
 
@@ -488,7 +490,7 @@
       au < released ; 2011-2012 ; Hospitality & Society Volume 1 ; 1 >
       au < released ; 2012 ; Hospitality & Society Volume 2 ; 2 >
       au < released ; 2013 ; Hospitality & Society Volume 3 ; 3 >
-      au < expected ; 2014 ; Hospitality & Society Volume 4 ; 4 >
+      au < manifest ; 2014 ; Hospitality & Society Volume 4 ; 4 >
 
     }
 
@@ -505,7 +507,7 @@
       au < released ; 2012 ; Interactions: Studies in Communication & Culture Volume 2 ; 2 >
       au < released ; 2012 ; Interactions: Studies in Communication & Culture Volume 3 ; 3 >
       au < released ; 2013 ; Interactions: Studies in Communication & Culture Volume 4 ; 4 >
-      au < expected ; 2014 ; Interactions: Studies in Communication & Culture Volume 5 ; 5 >
+      au < manifest ; 2014 ; Interactions: Studies in Communication & Culture Volume 5 ; 5 >
  
     }
 
@@ -524,7 +526,7 @@
       au < released ; 2011 ; International Journal of Community Music Volume 4 ; 4 >
       au < released ; 2012 ; International Journal of Community Music Volume 5 ; 5 >
       au < released ; 2013 ; International Journal of Community Music Volume 6 ; 6 >
-      au < expected ; 2014 ; International Journal of Community Music Volume 7 ; 7 >
+      au < manifest ; 2014 ; International Journal of Community Music Volume 7 ; 7 >
 
     }
 
@@ -544,7 +546,7 @@
       au < released ; 2011 ; International Journal of Contemporary Iraqi Studies Volume 5 ; 5 >
       au < released ; 2012 ; International Journal of Contemporary Iraqi Studies Volume 6 ; 6 >
       au < released ; 2013 ; International Journal of Contemporary Iraqi Studies Volume 7 ; 7 >
-      au < expected ; 2014 ; International Journal of Contemporary Iraqi Studies Volume 8 ; 8 >
+      au < manifest ; 2014 ; International Journal of Contemporary Iraqi Studies Volume 8 ; 8 >
 
     }
 
@@ -635,7 +637,7 @@
       au < released ; 2011-2012 ; International Journal of Iberian Studies Volume 24 ; 24 >
       au < released ; 2012 ; International Journal of Iberian Studies Volume 25 ; 25 >
       au < released ; 2013 ; International Journal of Iberian Studies Volume 26 ; 26 >
-      au < expected ; 2014 ; International Journal of Iberian Studies Volume 27 ; 27 >
+      au < manifest ; 2014 ; International Journal of Iberian Studies Volume 27 ; 27 >
 
     }
     
@@ -673,7 +675,7 @@
       au < released ; 2011 ; International Journal of Media & Cultural Politics Volume 7 ; 7 >
       au < released ; 2012 ; International Journal of Media & Cultural Politics Volume 8 ; 8 >
       au < released ; 2013 ; International Journal of Media & Cultural Politics Volume 9 ; 9 >
-      au < expected ; 2014 ; International Journal of Media & Cultural Politics Volume 10 ; 10 >
+      au < manifest ; 2014 ; International Journal of Media & Cultural Politics Volume 10 ; 10 >
 
     }
 
@@ -720,7 +722,7 @@
       au < released ; 2011 ; International Journal of Technology Management & Sustainable Development Volume 10 ; 10 >
       au < released ; 2012 ; International Journal of Technology Management & Sustainable Development Volume 11 ; 11 >
       au < released ; 2013 ; International Journal of Technology Management & Sustainable Development Volume 12 ; 12 >
-      au < expected ; 2014 ; International Journal of Technology Management & Sustainable Development Volume 13 ; 13 >
+      au < manifest ; 2014 ; International Journal of Technology Management & Sustainable Development Volume 13 ; 13 >
 
     }
 
@@ -775,7 +777,7 @@
       au < released ; 2011 ; Journal of African Media Studies Volume 3 ; 3 >
       au < released ; 2012 ; Journal of African Media Studies Volume 4 ; 4 >
       au < released ; 2013 ; Journal of African Media Studies Volume 5 ; 5 >
-      au < expected ; 2014 ; Journal of African Media Studies Volume 6 ; 6 >
+      au < manifest ; 2014 ; Journal of African Media Studies Volume 6 ; 6 >
 
     }
 
@@ -792,7 +794,7 @@
       au < released ; 2011 ; Journal of Applied Arts & Health Volume 2 ; 2 >
       au < released ; 2012 ; Journal of Applied Arts & Health Volume 3 ; 3 >
       au < released ; 2013 ; Journal of Applied Arts & Health Volume 4 ; 4 >
-      au < expected ; 2014 ; Journal of Applied Arts & Health Volume 5 ; 5 >
+      au < manifest ; 2014 ; Journal of Applied Arts & Health Volume 5 ; 5 >
 
     }
 
@@ -826,9 +828,10 @@
 
       au < released ; 2009-2011 ; Journal of Arts & Communities Volume 1 ; 1 >
       au < released ; 2011 ; Journal of Arts & Communities Volume 2 ; 2 >
-      au < released ; 2012 ; Journal of Arts & Communities Volume 3 ; 3 >
-      au < released ; 2013 ; Journal of Arts & Communities Volume 4 ; 4 >
-      au < expected ; 2014 ; Journal of Arts & Communities Volume 5 ; 5 >
+      au < released ; 2011 ; Journal of Arts & Communities Volume 3 ; 3 >
+      au < released ; 2012 ; Journal of Arts & Communities Volume 4 ; 4 >
+      au < released ; 2013 ; Journal of Arts & Communities Volume 5 ; 5 >
+      au < expected ; 2014 ; Journal of Arts & Communities Volume 6 ; 6 >
 
     }
 
@@ -863,7 +866,7 @@
 
       au < released ; 2012 ; Journal of Curatorial Studies Volume 1 ; 1 >
       au < released ; 2013 ; Journal of Curatorial Studies Volume 2 ; 2 >
-      au < expected ; 2014 ; Journal of Curatorial Studies Volume 3 ; 3 >
+      au < manifest ; 2014 ; Journal of Curatorial Studies Volume 3 ; 3 >
 
     }
 
@@ -881,7 +884,7 @@
       au < released ; 2011 ; Journal of Dance & Somatic Practices Volume 3 ; 3 >
       au < released ; 2012 ; Journal of Dance & Somatic Practices Volume 4 ; 4 >
       au < released ; 2013 ; Journal of Dance & Somatic Practices Volume 5 ; 5 >
-      au < expected ; 2014 ; Journal of Dance & Somatic Practices Volume 6 ; 6 >
+      au < manifest ; 2014 ; Journal of Dance & Somatic Practices Volume 6 ; 6 >
 
     }
 
@@ -899,7 +902,7 @@
       au < released ; 2011 ; Journal of European Popular Culture Volume 2 ; 2 >
       au < released ; 2012 ; Journal of European Popular Culture Volume 3 ; 3 >
       au < released ; 2013 ; Journal of European Popular Culture Volume 4 ; 4 >
-      au < expected ; 2014 ; Journal of European Popular Culture Volume 5 ; 5 >
+      au < manifest ; 2014 ; Journal of European Popular Culture Volume 5 ; 5 >
 
     }
 
@@ -933,7 +936,7 @@
       au < released ; 2011 ; Journal of Gaming & Virtual Worlds Volume 3 ; 3 >
       au < released ; 2012 ; Journal of Gaming & Virtual Worlds Volume 4 ; 4 >
       au < released ; 2013 ; Journal of Gaming & Virtual Worlds Volume 5 ; 5 >
-      au < expected ; 2014 ; Journal of Gaming & Virtual Worlds Volume 6 ; 6 >
+      au < manifest ; 2014 ; Journal of Gaming & Virtual Worlds Volume 6 ; 6 >
 
     }
 
@@ -967,7 +970,7 @@
       au < released ; 2010-2011 ; Journal of Japanese and Korean Cinema Volume 2 ; 2 >
       au < released ; 2012 ; Journal of Japanese and Korean Cinema Volume 3 ; 3 >
       au < released ; 2012 ; Journal of Japanese and Korean Cinema Volume 4 ; 4 >
-      au < manifest ; 2013 ; Journal of Japanese and Korean Cinema Volume 5 ; 5 >
+      au < released ; 2013 ; Journal of Japanese and Korean Cinema Volume 5 ; 5 >
       au < expected ; 2014 ; Journal of Japanese and Korean Cinema Volume 6 ; 6 >
 
     }
@@ -1015,7 +1018,7 @@
       au < released ; 2011-2012 ; Journal of Music, Technology & Education Volume 4 ; 4 >
       au < released ; 2012-2013 ; Journal of Music, Technology & Education Volume 5 ; 5 >
       au < released ; 2013 ; Journal of Music, Technology & Education Volume 6 ; 6 >
-      au < expected ; 2014 ; Journal of Music, Technology & Education Volume 7 ; 7 >
+      au < manifest ; 2014 ; Journal of Music, Technology & Education Volume 7 ; 7 >
 
     }
 
@@ -1029,7 +1032,7 @@
       param[journal_issn] = 2050-4039 
 
       au < released ; 2013 ; Journal of New Zealand & Pacific Studies Volume 1 ; 1 >
-      au < expected ; 2014 ; Journal of New Zealand & Pacific Studies Volume 2 ; 2 >
+      au < manifest ; 2014 ; Journal of New Zealand & Pacific Studies Volume 2 ; 2 >
 
     }
 
@@ -1181,10 +1184,11 @@
       
       param[journal_id] = mecr
       param[journal_issn] = 2040-3550
+      comment[notReady] = PD-1113, hash filter needed
 
       au < released ; 2010-2011 ; Metaverse Creativity Volume 1 ; 1 >
       au < released ; 2012 ; Metaverse Creativity Volume 2 ; 2 >
-      au < expected ; 2013 ; Metaverse Creativity Volume 3 ; 3 >
+      au < notReady ; 2013 ; Metaverse Creativity Volume 3 ; 3 >
       au < expected ; 2014 ; Metaverse Creativity Volume 4 ; 4 >
 
     }
@@ -1224,7 +1228,7 @@
       au < released ; 2010-2011 ; New Cinemas: Journal of Contemporary Film Volume 8 ; 8 >
       au < released ; 2011-2012 ; New Cinemas: Journal of Contemporary Film Volume 9 ; 9 >
       au < released ; 2012-2013 ; New Cinemas: Journal of Contemporary Film Volume 10 ; 10 >
-      au < expected ; 2013-2014 ; New Cinemas: Journal of Contemporary Film Volume 11 ; 11 >
+      au < manifest ; 2013-2014 ; New Cinemas: Journal of Contemporary Film Volume 11 ; 11 >
 
     }
 
@@ -1320,7 +1324,7 @@
       au < released ; 2011 ; Portuguese Journal of Social Science Volume 10 ; 10 >
       au < released ; 2012 ; Portuguese Journal of Social Science Volume 11 ; 11 >
       au < released ; 2013 ; Portuguese Journal of Social Science Volume 12 ; 12 >
-      au < expected ; 2014 ; Portuguese Journal of Social Science Volume 13 ; 13 >
+      au < manifest ; 2014 ; Portuguese Journal of Social Science Volume 13 ; 13 >
 
     }
 
@@ -1352,7 +1356,7 @@
 
       au < released ; 2012 ; PUBLIC: Art, Culture, Ideas Volume 23 ; 23 >
       au < released ; 2013 ; PUBLIC: Art, Culture, Ideas Volume 24 ; 24 >
-      au < expected ; 2014 ; PUBLIC: Art, Culture, Ideas Volume 25 ; 25 >
+      au < manifest ; 2014 ; PUBLIC: Art, Culture, Ideas Volume 25 ; 25 >
       
     }
     
@@ -1753,7 +1757,7 @@
       param[journal_issn] = 2045-6271
       
       au < released ; 2012 ; Ubiquity: The Journal of Pervasive Media Volume 1 ; 1 >
-      au < expected ; 2013 ; Ubiquity: The Journal of Pervasive Media Volume 2 ; 2 >
+      au < released ; 2013 ; Ubiquity: The Journal of Pervasive Media Volume 2 ; 2 >
       au < expected ; 2014 ; Ubiquity: The Journal of Pervasive Media Volume 3 ; 3 >
 
     }
@@ -1770,7 +1774,7 @@
       
       au < released ; 2011-2012 ; Visual Inquiry: Learning & Teaching Art Volume 1 ; 1 >
       au < released ; 2013 ; Visual Inquiry: Learning & Teaching Art Volume 2 ; 2 >
-      au < expected ; 2014 ; Visual Inquiry: Learning & Teaching Art Volume 3 ; 3 >
+      au < manifest ; 2014 ; Visual Inquiry: Learning & Teaching Art Volume 3 ; 3 >
 
     }
 

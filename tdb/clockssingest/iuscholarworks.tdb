@@ -21,13 +21,15 @@
       
       au < manifest ; exists ; 2007 ; 2007 ; Artifact Volume 1 ; 1 >
       au < manifest ; exists ; 2008 ; 2008 ; Artifact Volume 2 ; 2 >
+      au < ready ; exists ; 2013 ; 2013 ; Artifact Volume 3 (2013) ; 3 >
+      au < manifest ; exists ; 2014 ; 2014 ; Artifact Volume 3 (2014) ; 3 >
 
   }
 
   {
     title <
       name = Anthropology of East Europe Review ;
-      issn = 1054-4720
+      eissn = 1054-4720
     >
 
       param[journal_id] = aeer
@@ -63,7 +65,7 @@
       au < manifest ; exists ; 2011 ; 2011 ; Anthropology of East Europe Review Volume 29 ; 29 >
       au < manifest ; exists ; 2012 ; 2012 ; Anthropology of East Europe Review Volume 30 ; 30 >
       au < crawling ; exists ; 2013 ; 2013 ; Anthropology of East Europe Review Volume 31 ; 31 >
-      au < expected ; exists ; 2014 ; 2014 ; Anthropology of East Europe Review Volume 32 ; 32 >
+      au < manifest ; exists ; 2014 ; 2014 ; Anthropology of East Europe Review Volume 32 ; 32 >
 
   }
 
@@ -86,8 +88,22 @@
 
   {
     title <
+      name = Hindsight: Journal of Optometry History ;
+      eissn = 1948-4984 
+    >
+
+      param[journal_id] = hindsight
+
+      au < manifest ; exists ; 2009 ; 2009 ; Hindsight: Journal of Optemetry History Volume 40 ; 40 >
+      au < manifest ; exists ; 2010 ; 2010 ; Hindsight: Journal of Optemetry History Volume 41 ; 41 >
+      au < manifest ; exists ; 2011 ; 2011 ; Hindsight: Journal of Optemetry History Volume 42 ; 42 >
+
+  }
+
+  {
+    title <
       name = Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies ;
-      issn = 2158-9089 
+      eissn = 2158-9089 
     >
 
       param[journal_id] = illuminare
@@ -102,11 +118,11 @@
   {
     title <
       name = Indiana University Bookman ;
-      issn = 0019-6800
+      eissn = 0019-6800
     >
 
       param[journal_id] = bookman
-      comment[0] = issue in 1959
+      comment[0] = published from 1956 to 1988
 
       au < manifest ; exists ; 1956 ; 1956 ; Indiana University Bookman Volume 1 ; 1 >
       au < manifest ; exists ; 1957 ; 1957 ; Indiana University Bookman Volume 2 ; 2 >
@@ -124,15 +140,13 @@
       au < manifest ; exists ; 1983 ; 1983 ; Indiana University Bookman Volume 15 ; 15 >
       au < manifest ; exists ; 1987 ; 1987 ; Indiana University Bookman Volume 16 ; 16 >
       au < manifest ; exists ; 1988 ; 1988 ; Indiana University Bookman Volume 17 ; 17 >
-      au < expected ; exists ; 2013 ; 2013 ; Indiana University Bookman Volume 18 ; 18 >
-      au < expected ; exists ; 2014 ; 2014 ; Indiana University Bookman Volume 19 ; 19 >
 
   }
 
   {
     title <
       name = Inter-American Journal of Education for Democracy ;
-      issn = 1941-7799
+      eissn = 1941-7799
     >
 
       param[journal_id] = ried
@@ -143,13 +157,15 @@
       au < manifest ; exists ; 2009 ; 2009 ; Inter-American Journal of Education for Democracy Volume 2 ; 2 >
       au < manifest ; exists ; 2010 ; 2010 ; Inter-American Journal of Education for Democracy Volume 3 ; 3 >
       au < manifest ; exists ; 2012 ; 2012 ; Inter-American Journal of Education for Democracy Volume 4 ; 4 >
+      au < manifest ; exists ; 2013 ; 2013 ; Inter-American Journal of Education for Democracy Volume 5 ; 5 >
+      au < expected ; exists ; 2014 ; 2014 ; Inter-American Journal of Education for Democracy Volume 6 ; 6 >
 
   }
 
   {
     title <
       name = International Journal of Designs for Learning ;
-      issn = 2159-449X
+      eissn = 2159-449X
     >
 
       param[journal_id] = ijdl
@@ -158,7 +174,7 @@
       au < manifest ; exists ; 2011 ; 2011 ; International Journal of Designs for Learning Volume 2 ; 2 >
       au < manifest ; exists ; 2012 ; 2012 ; International Journal of Designs for Learning Volume 3 ; 3 >
       au < crawling ; exists ; 2013 ; 2013 ; International Journal of Designs for Learning Volume 4 ; 4 >
-      au < exists ; exists ; 2014 ; 2014 ; International Journal of Designs for Learning Volume 5 ; 5 >
+      au < manifest ; exists ; 2014 ; 2014 ; International Journal of Designs for Learning Volume 5 ; 5 >
 
   }
 
@@ -184,13 +200,15 @@
       au < manifest ; exists ; 2010 ; 2010 ; InULA Notes: Indiana University Librarians Association Volume 22 ; 22 >
       au < manifest ; exists ; 2011 ; 2011 ; InULA Notes: Indiana University Librarians Association Volume 23 ; 23 >
       au < manifest ; exists ; 2012 ; 2012 ; InULA Notes: Indiana University Librarians Association Volume 24 ; 24 >
+      au < ready ; exists ; 2013 ; 2013 ; InULA Notes: Indiana University Librarians Association Volume 25 ; 25 >
+      au < manifest ; exists ; 2014 ; 2014 ; InULA Notes: Indiana University Librarians Association Volume 26 ; 26 >
 
   }
 
   {
     title <
       name = Journal of Teaching and Learning with Technology ;
-      issn = 2165-2554
+      eissn = 2165-2554
     >
 
       comment[notReady] = permission page and content are at different urls.
@@ -214,7 +232,7 @@
       au < manifest ; exists ; 2011 ; 2011 ; Journal of the Indiana University Student Personnel Association Volume 2011 ; 2011 >
       au < manifest ; exists ; 2012 ; 2012 ; Journal of the Indiana University Student Personnel Association Volume 2012 ; 2012 >
       au < crawling ; exists ; 2013 ; 2013 ; Journal of the Indiana University Student Personnel Association Volume 2013 ; 2013 >
-      au < expected ; exists ; 2014 ; 2014 ; Journal of the Indiana University Student Personnel Association Volume 2014 ; 2014 >
+      au < manifest ; exists ; 2014 ; 2014 ; Journal of the Indiana University Student Personnel Association Volume 2014 ; 2014 >
 
   }
 
@@ -254,7 +272,7 @@
   {
     title <
       name = Museum Anthropology Review ;
-      issn = 1938-5145
+      eissn = 1938-5145
     >
 
       param[journal_id] = mar
@@ -271,7 +289,7 @@
   {
     title <
       name = New Directions in Folklore ;
-      issn = 2161-9964
+      eissn = 2161-9964
     >
 
       param[journal_id] = ndif
@@ -287,10 +305,11 @@
   {
     title <
       name = Palaeontologica Electronica ;
-      issn = 1094-8074
+      eissn = 1094-8074
     >
     
     plugin = needs.plugin
+    param[base_url] = http://palaeo-electronica.org/
 
   }
 

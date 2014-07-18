@@ -1,5 +1,5 @@
 /*
- * $Id: NewContentCrawler.java,v 1.61.34.1 2014-05-05 17:32:31 wkwilson Exp $
+ * $Id: NewContentCrawler.java,v 1.61.34.2 2014-07-18 15:59:56 wkwilson Exp $
  */
 
 /*
@@ -33,7 +33,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.crawler;
 
 import java.util.*;
-
 import org.lockss.util.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
@@ -47,15 +46,14 @@ public class NewContentCrawler extends FollowLinkCrawler {
 
   private SpiderCrawlSpec spec;
   private int refetchDepth = -1;
-  private CrawlInitializer crawlInitializer = null;
+  private CrawlInitializer crawlInitializer;
   
   public NewContentCrawler(ArchivalUnit au, CrawlSpec crawlSpec, AuState aus) {
     super(au, crawlSpec, aus);
     spec = (SpiderCrawlSpec) crawlSpec;
-    try {
-    	crawlInitializer = ((DefinableArchivalUnit) au).makeCrawlInitializer(spec);
-    } catch (Exception e) {
-      e.printStackTrace();
+    crawlInitializer = ((DefinableArchivalUnit) au).makeCrawlInitializer(spec);
+    if(crawlInitializer == null) {
+    	crawlInitializer = new UrlListCrawlInitializer(spec.getStartingUrls());
     }
     crawlStatus = new CrawlerStatus(au, spec.getStartingUrls(),
 				    getTypeString());
@@ -94,11 +92,7 @@ public class NewContentCrawler extends FollowLinkCrawler {
    * Return start URLs from crawl spec
    */
   protected Collection<String> getUrlsToFollow(){
-	if(crawlInitializer == null) {
-	  return spec.getStartingUrls();  
-	} else {
-	  return crawlInitializer.getUrlList();
-	}
+	return crawlInitializer.getUrlList();
   }
 
   protected boolean shouldFollowLink(){

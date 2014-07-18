@@ -1,3 +1,4 @@
+
 {
 
   publisher <
@@ -183,7 +184,7 @@
     au < released ; 2011 ; Biomedical Engineering and Computational Biology Volume 3 ; 3 ; 2011 >
     au < released ; 2012 ; Biomedical Engineering and Computational Biology Volume 4 ; 4 ; 2012 >
     au < manifest ; 2013 ; Biomedical Engineering and Computational Biology Volume 5 ; 5 ; 2013 >
-    au < expected ; 2014 ; Biomedical Engineering and Computational Biology Volume 6 ; 6 ; 2014 >
+    au < manifest ; 2014 ; Biomedical Engineering and Computational Biology Volume 6 ; 6 ; 2014 >
 
   }
 
@@ -307,7 +308,7 @@
     au < released ; 2010 ; Cell & Tissue Transplantation & Therapy Volume 3 ; 3 ; 2010 >
     au < released ; 2012 ; Cell & Tissue Transplantation & Therapy Volume 4 ; 4 ; 2012 >
     au < manifest ; 2013 ; Cell & Tissue Transplantation & Therapy Volume 5 ; 5 ; 2013 >
-    au < expected ; 2014 ; Cell & Tissue Transplantation & Therapy Volume 6 ; 6 ; 2014 >
+    au < manifest ; 2014 ; Cell & Tissue Transplantation & Therapy Volume 6 ; 6 ; 2014 >
 
   }
 
@@ -535,7 +536,7 @@
     >
 
     param[journal_id] = 73
-    comment [0] = skips year 2012
+    comment[0] = skips year 2012
 
     au < released ; 2008 ; Clinical Medicine Insights: Geriatrics Volume 1-2 ; 1-2 ; 2008 >
     au < released ; 2009 ; Clinical Medicine Insights: Geriatrics Volume 3 ; 3 ; 2009 >
@@ -621,7 +622,7 @@
     au < released ; 2009 ; Clinical Medicine Insights: Psychiatry Volume 2 ; 2 ; 2009 >
     au < released ; 2011 ; Clinical Medicine Insights: Psychiatry Volume 3 ; 3 ; 2011 >
     au < released ; 2012 ; Clinical Medicine Insights: Psychiatry Volume 4 ; 4 ; 2012 >
-    au < expected ; 2014 ; Clinical Medicine Insights: Psychiatry Volume 5 ; 5 ; 2014 >
+    au < manifest ; 2014 ; Clinical Medicine Insights: Psychiatry Volume 5 ; 5 ; 2014 >
 
   }
 
@@ -908,7 +909,7 @@
     au < manifest ; 2009 ; Gene Expression to Genetical Genomics Volume 2 ; 2 ; 2009 >
     au < manifest ; 2010 ; Gene Expression to Genetical Genomics Volume 3 ; 3 ; 2010 >
     au < manifest ; 2013 ; Gene Expression to Genetical Genomics Volume 6 ; 6 ; 2013 >
-    au < expected ; 2014 ; Gene Expression to Genetical Genomics Volume 7 ; 7 ; 2014 >
+    au < manifest ; 2014 ; Gene Expression to Genetical Genomics Volume 7 ; 7 ; 2014 >
 
   }
 
@@ -969,7 +970,7 @@
     au < released ; 2011 ; Genomics Insights Volume 4 ; 4 ; 2011 >
     au < released ; 2012 ; Genomics Insights Volume 5 ; 5 ; 2012 >
     au < manifest ; 2013 ; Genomics Insights Volume 6 ; 6 ; 2013 >
-    au < expected ; 2014 ; Genomics Insights Volume 7 ; 7 ; 2014 >
+    au < manifest ; 2014 ; Genomics Insights Volume 7 ; 7 ; 2014 >
 
   }
 
@@ -986,7 +987,7 @@
     au < manifest ; 2009 ; Glycobiology Insights Volume 1 ; 1 ; 2009 >
     au < manifest ; 2010 ; Glycobiology Insights Volume 2 ; 2 ; 2010 >
     au < released ; 2012 ; Glycobiology Insights Volume 3 ; 3 ; 2012 >
-    au < expected ; 2014 ; Glycobiology Insights Volume 4 ; 4 ; 2014 >
+    au < manifest ; 2014 ; Glycobiology Insights Volume 4 ; 4 ; 2014 >
 
   }
 
@@ -1044,7 +1045,7 @@
     au < manifest ; 2010 ; Human Parasitic Diseases Volume 2 ; 2 ; 2010 >
     au < released ; 2011 ; Human Parasitic Diseases Volume 3 ; 3 ; 2011 >
     au < manifest ; 2013 ; Human Parasitic Diseases Volume 5 ; 5 ; 2013 >
-    au < expected ; 2014 ; Human Parasitic Diseases Volume 6 ; 6 ; 2014 >
+    au < manifest ; 2014 ; Human Parasitic Diseases Volume 6 ; 6 ; 2014 >
 
   }
 
@@ -1180,7 +1181,7 @@
     au < released ; 2011 ; International Journal of Tryptophan Research Volume 4 ; 4 ; 2011 >
     au < released ; 2012 ; International Journal of Tryptophan Research Volume 5 ; 5 ; 2012 >
     au < manifest ; 2013 ; International Journal of Tryptophan Research Volume 6 ; 6 ; 2013 >
-    au < expected ; 2014 ; International Journal of Tryptophan Research Volume 7 ; 7 ; 2014 >
+    au < manifest ; 2014 ; International Journal of Tryptophan Research Volume 7 ; 7 ; 2014 >
 
   }
 
@@ -1278,6 +1279,21 @@
     au < manifest ; 2014 ; Journal of Genomes and Exomes Volume 5 ; 5 ; 2014 >
 
   }
+  
+  {
+
+    title <
+      name = Journal of Medical Education and Curricular Development ;
+      comment[0] = issn/eissn pending
+      
+    >
+
+    param[journal_id] = 174
+    
+    au < manifest ; 2014 ; Journal of Medical Education and Curricular Development Volume 1 ; 1 ; 2014 >
+  
+
+  }  
 
   {
 
@@ -1294,7 +1310,7 @@
     au < released ; 2011 ; Lipid Insights Volume 4 ; 4 ; 2011 >
     au < released ; 2012 ; Lipid Insights Volume 5 ; 5 ; 2012 >
     au < manifest ; 2013 ; Lipid Insights Volume 6 ; 6 ; 2013 >
-    au < expected ; 2014 ; Lipid Insights Volume 7 ; 7 ; 2014 >
+    au < manifest ; 2014 ; Lipid Insights Volume 7 ; 7 ; 2014 >
 
   }
 
@@ -1519,7 +1535,7 @@
     >
 
     param[journal_id] = 135
-    comment[0]= no 2011, 2013 as of 4/25/13
+    comment[0]= no 2013 as of 4/25/13
 
     au < manifest ; 2009 ; Primary Prevention Insights Volume 1 ; 1 ; 2009 >
     au < manifest ; 2010 ; Primary Prevention Insights Volume 2 ; 2 ; 2010 >

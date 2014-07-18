@@ -1,6 +1,10 @@
 /*
+ * $Id: JstorUrlNormalizer.java,v 1.1.30.1 2014-07-18 15:54:37 wkwilson Exp $
+ */
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+/*
+
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -24,7 +28,7 @@ Except as contained in this notice, the name of Stanford University shall not
 be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
-*/
+ */
 
 package org.lockss.plugin.jstor;
 
@@ -33,18 +37,47 @@ import org.lockss.daemon.PluginException;
 import org.lockss.plugin.*;
 
 /*
- * Trims this http://www.jstor.org/stable/info/10.1525/abt.2010.72.9.fm?seq=1
- * to this http://www.jstor.org/stable/info/10.1525/abt.2010.72.9.fm to avoid duplicate pages
+ * JSTOR limited plugin
+ * We only collect a TOC of the form provided by a manifest page
+ * and PDF files (and in the rare cases that they exist a "full" version)
+ * as well as the engineered RIS citation pages.
+ * 
+ *1) In the rare cases that a "full" version of the article exists, we might
+ * also get access to a "media" or "select" page. These need normalizing.
+ *   http://www.jstor.org/stable/select/4436970?seq=1&thumbView=thumbs&thumbPager=one
+ * should become:
+ *   http://www.jstor.org/stable/select/4436970
+ *
+ *2) In a few journals (American Biology Teacher)
+ *   http://www.jstor.org/stable/pdfplus/10.1525/abt.2013.75.6.4.pdf?&acceptTC=true&jpdConfirm=true
+ * should become:
+ *   http://www.jstor.org/stable/pdfplus/10.1525/abt.2013.75.6.4.pdf
  */
 
 public class JstorUrlNormalizer implements UrlNormalizer {
 
-  protected static final String SUFFIX = "?seq=1";
+  protected static final String SEQ_SUFFIX = "?seq=1";
+  protected static final String ACCEPT_SUFFIX = "?acceptTC=true";
+  protected static final String OTHER_ACCEPT_SUFFIX = "?&amp;acceptTC";
 
   public String normalizeUrl(String url,
-                             ArchivalUnit au)
-      throws PluginException {
-    return StringUtils.substringBeforeLast(url, SUFFIX);
+      ArchivalUnit au)
+          throws PluginException {
+
+    // only try to cleanup if we have an argument list 
+    if ( url.contains("?")) {
+
+      /*
+       *  This is slightly inefficient because we will only have one of the three,
+       *  but calling substringBeforeLast just returns the orig if the substring
+       *  isn't found. And this avoids doing additional comparisons just to see
+       *  if the substring is there first - which is net better.
+       */
+      url = StringUtils.substringBeforeLast(url, SEQ_SUFFIX);
+      url = StringUtils.substringBeforeLast(url, ACCEPT_SUFFIX);
+      url = StringUtils.substringBeforeLast(url, OTHER_ACCEPT_SUFFIX);
+    }
+    return url;
   }
 
 }

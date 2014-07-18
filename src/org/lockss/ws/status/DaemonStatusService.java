@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatusService.java,v 1.5 2014-04-29 19:47:04 fergaloy-sf Exp $
+ * $Id: DaemonStatusService.java,v 1.5.2.1 2014-07-18 15:59:00 wkwilson Exp $
  */
 
 /*
@@ -29,10 +29,6 @@
  in this Software without prior written authorization from Stanford University.
 
  */
-
-/**
- * The DaemonStatus web service interface.
- */
 package org.lockss.ws.status;
 
 import java.util.Collection;
@@ -46,12 +42,19 @@ import org.lockss.ws.entities.CrawlWsResult;
 import org.lockss.ws.entities.IdNamePair;
 import org.lockss.ws.entities.LockssWebServicesFault;
 import org.lockss.ws.entities.PeerWsResult;
+import org.lockss.ws.entities.PlatformConfigurationWsResult;
 import org.lockss.ws.entities.PluginWsResult;
 import org.lockss.ws.entities.PollWsResult;
 import org.lockss.ws.entities.RepositorySpaceWsResult;
 import org.lockss.ws.entities.RepositoryWsResult;
+import org.lockss.ws.entities.TdbAuWsResult;
+import org.lockss.ws.entities.TdbPublisherWsResult;
+import org.lockss.ws.entities.TdbTitleWsResult;
 import org.lockss.ws.entities.VoteWsResult;
 
+/**
+ * The DaemonStatus web service interface.
+ */
 @WebService
 public interface DaemonStatusService {
   /**
@@ -89,9 +92,10 @@ public interface DaemonStatusService {
   /**
    * Provides the selected properties of selected plugins in the system.
    * 
-   * @param query
-   *          A String with the query used to specify what properties to
-   *          retrieve from which plugins.
+   * @param pluginQuery
+   *          A String with the
+   *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
+   *          used to specify what properties to retrieve from which plugins.
    * @return a List<PluginWsResult> with the results.
    * @throws LockssWebServicesFault
    */
@@ -102,9 +106,11 @@ public interface DaemonStatusService {
   /**
    * Provides the selected properties of selected archival units in the system.
    * 
-   * @param query
-   *          A String with the query used to specify what properties to
-   *          retrieve from which archival units.
+   * @param auQuery
+   *          A String with the
+   *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
+   *          used to specify what properties to retrieve from which archival
+   *          units.
    * @return a List<AuWsResult> with the results.
    * @throws LockssWebServicesFault
    */
@@ -115,9 +121,10 @@ public interface DaemonStatusService {
   /**
    * Provides the selected properties of selected peers in the system.
    * 
-   * @param query
-   *          A String with the query used to specify what properties to
-   *          retrieve from which peers.
+   * @param peerQuery
+   *          A String with the
+   *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
+   *          used to specify what properties to retrieve from which peers.
    * @return a List<PeerWsResult> with the results.
    * @throws LockssWebServicesFault
    */
@@ -128,24 +135,26 @@ public interface DaemonStatusService {
   /**
    * Provides the selected properties of selected votes in the system.
    * 
-   * @param query
-   *          A String with the query used to specify what properties to
-   *          retrieve from which votes.
+   * @param voteQuery
+   *          A String with the
+   *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
+   *          used to specify what properties to retrieve from which votes.
    * @return a List<VotelWsResult> with the results.
    * @throws LockssWebServicesFault
    */
   @WebMethod
-  List<VoteWsResult> queryVotes(
-      @WebParam(name = "voteQuery") String voteQuery)
-	  throws LockssWebServicesFault;
+  List<VoteWsResult> queryVotes(@WebParam(name = "voteQuery") String voteQuery)
+      throws LockssWebServicesFault;
 
   /**
    * Provides the selected properties of selected repository spaces in the
    * system.
    * 
-   * @param query
-   *          A String with the query used to specify what properties to
-   *          retrieve from which repository spaces.
+   * @param repositorySpaceQuery
+   *          A String with the
+   *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
+   *          used to specify what properties to retrieve from which repository
+   *          spaces.
    * @return a List<RepositorySpaceWsResult> with the results.
    * @throws LockssWebServicesFault
    */
@@ -157,9 +166,11 @@ public interface DaemonStatusService {
   /**
    * Provides the selected properties of selected repositories in the system.
    * 
-   * @param query
-   *          A String with the query used to specify what properties to
-   *          retrieve from which repositories.
+   * @param repositoryQuery
+   *          A String with the
+   *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
+   *          used to specify what properties to retrieve from which
+   *          repositories.
    * @return a List<RepositoryWsResult> with the results.
    * @throws LockssWebServicesFault
    */
@@ -171,9 +182,10 @@ public interface DaemonStatusService {
   /**
    * Provides the selected properties of selected crawls in the system.
    * 
-   * @param query
-   *          A String with the query used to specify what properties to
-   *          retrieve from which crawls.
+   * @param crawlQuery
+   *          A String with the
+   *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
+   *          used to specify what properties to retrieve from which crawls.
    * @return a List<CrawlWsResult> with the results.
    * @throws LockssWebServicesFault
    */
@@ -185,14 +197,72 @@ public interface DaemonStatusService {
   /**
    * Provides the selected properties of selected polls in the system.
    * 
-   * @param query
-   *          A String with the query used to specify what properties to
-   *          retrieve from which polls.
-   * @return a List<PolllWsResult> with the results.
+   * @param pollQuery
+   *          A String with the
+   *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
+   *          used to specify what properties to retrieve from which polls.
+   * @return a List<PollWsResult> with the results.
    * @throws LockssWebServicesFault
    */
   @WebMethod
-  List<PollWsResult> queryPolls(
-      @WebParam(name = "pollQuery") String pollQuery)
+  List<PollWsResult> queryPolls(@WebParam(name = "pollQuery") String pollQuery)
+      throws LockssWebServicesFault;
+
+  /**
+   * Provides the platform configuration.
+   * 
+   * @return a PlatformConfigurationWsResult with the platform configuration.
+   * @throws LockssWebServicesFault
+   */
+  @WebMethod
+  PlatformConfigurationWsResult getPlatformConfiguration()
+      throws LockssWebServicesFault;
+
+  /**
+   * Provides the selected properties of selected title database publishers.
+   * 
+   * @param tdbPublisherQuery
+   *          A String with the
+   *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
+   *          used to specify what properties to retrieve from which title
+   *          database publishers.
+   * @return a List<TdbPublisherWsResult> with the results.
+   * @throws LockssWebServicesFault
+   */
+  @WebMethod
+  List<TdbPublisherWsResult> queryTdbPublishers(
+      @WebParam(name = "tdbPublisherQuery") String tdbPublisherQuery)
+	  throws LockssWebServicesFault;
+
+  /**
+   * Provides the selected properties of selected title database titles.
+   * 
+   * @param tdbTitleQuery
+   *          A String with the
+   *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
+   *          used to specify what properties to retrieve from which title
+   *          database titles.
+   * @return a List<TdbTitleWsResult> with the results.
+   * @throws LockssWebServicesFault
+   */
+  @WebMethod
+  List<TdbTitleWsResult> queryTdbTitles(
+      @WebParam(name = "tdbTitleQuery") String tdbTitleQuery)
+	  throws LockssWebServicesFault;
+
+  /**
+   * Provides the selected properties of selected title database archival units.
+   * 
+   * @param tdbAuQuery
+   *          A String with the
+   *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
+   *          used to specify what properties to retrieve from which title
+   *          database archival units.
+   * @return a List<TdbAuWsResult> with the results.
+   * @throws LockssWebServicesFault
+   */
+  @WebMethod
+  List<TdbAuWsResult> queryTdbAus(
+      @WebParam(name = "tdbAuQuery") String tdbAuQuery)
 	  throws LockssWebServicesFault;
 }

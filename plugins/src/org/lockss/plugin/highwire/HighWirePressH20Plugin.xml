@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>down - platform issue</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>92</string>
+    <string>97</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,11 +24,11 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>21</string>
+        <string>24</string>
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>8</string>
+        <string>9</string>
       </entry>
     </map>
   </entry>
@@ -95,10 +95,10 @@
         </map>
       </entry>
     </map>
-  </entry>  
+  </entry>
   <entry>
     <string>au_permission_checker_factory</string>
-    <string>org.lockss.plugin.highwire.HighWirePermissionCheckerFactory</string>
+    <string>org.lockss.plugin.highwire.HighWirePressH20PermissionCheckerFactory</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
@@ -138,10 +138,6 @@
     <long>1209600000</long>
   </entry>
   <entry>
-    <string>au_crawlwindow</string>
-    <string>org.lockss.plugin.highwire.HighWirePressCrawlWindow</string>
-  </entry>
-  <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.highwire.HighWirePressH20HtmlFilterFactory</string>
   </entry>
@@ -153,6 +149,7 @@
     <string>plugin_cache_result_list</string>
     <list>
       <string>500=org.lockss.plugin.highwire.HighWirePressH20HttpResponseHandler</string>
+      <string>509=org.lockss.plugin.highwire.HighWirePressH20HttpResponseHandler</string>
     </list>
   </entry>
   <entry>
@@ -188,23 +185,14 @@
   </entry>
   <entry>
     <string>au_def_pause_time</string>
-    <long>1250</long>
+    <long>6000</long>
   </entry>
   <entry>
     <string>au_mime_rate_limiter_map</string>
     <map>
       <entry>
         <string>application/pdf,text/html,application/vnd.ms-powerpoint</string>
-        <string>1/3000</string>
-      </entry>
-    </map>
-  </entry>
-  <entry>
-    <string>content-testing_override</string>
-    <map>
-      <entry>
-        <string>au_crawlwindow</string>
-        <org.lockss.util.Default />
+        <string>1/6000</string>
       </entry>
     </map>
   </entry>

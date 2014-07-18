@@ -1,5 +1,5 @@
 /*
- * $Id: JstorArticleIteratorFactory.java,v 1.1 2012-11-14 23:03:59 wkwilson Exp $
+ * $Id: JstorArticleIteratorFactory.java,v 1.1.30.1 2014-07-18 15:54:36 wkwilson Exp $
  */
 
 /*
@@ -28,7 +28,7 @@ Except as contained in this notice, the name of Stanford University shall not
 be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
-*/
+ */
 
 package org.lockss.plugin.jstor;
 
@@ -38,94 +38,62 @@ import java.util.regex.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
-import org.lockss.util.Constants;
 import org.lockss.util.Logger;
 
 /*
- * PDF Full Text: http://www.igi-global.com/article/full-text-pdf/56564
- * HTML Abstract: http://www.igi-global.com/article/56564
+ * JSTOR limited plugin
+ * This is a plugin that collects a limited set of content due to redirection.
+ * We only pick up TOC and pdf (and in rare cases, full, media, select)
+ * Based on information on the TOC page, we also engineer the RIS citation page
+ * which is what we'll be using for metadata extraction and is therefore 
+ * what we will iterate on.
+ * Do a sanity check to make sure the actually have a content file associated 
+ * with the engineered RIS url 
  */
 
-public class JstorArticleIteratorFactory
-    implements ArticleIteratorFactory,
-               ArticleMetadataExtractorFactory {
+public class JstorArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
-  protected static Logger log = Logger.getLogger("IgiArticleIteratorFactory");
-  
-  protected static final String ROOT_TEMPLATE = "\"%sstable/[\\.0-9]+\", base_url"; 
-  
-  protected static final String PATTERN_TEMPLATE = "\"^%sstable/[\\.0-9]+(/)?(.+\\.[0-9]{4}\\.[0-9]+.[0-9]+)?$\", base_url";
+  protected static Logger log = Logger.getLogger(JstorArticleIteratorFactory.class);
 
-  
+  protected static final String ROOT_TEMPLATE = "\"%saction/\", base_url2";
+
+  //  citations live under "https" which is base_url2
+  //https://www.jstor.org/action/downloadSingleCitationSec?format=refman&doi=10.2307/41827174
+  protected static final String PATTERN_TEMPLATE = "\"^%saction/downloadSingleCitationSec\\?format=refman&doi=\", base_url2";
+
+  private final Pattern RIS_PATTERN = Pattern.compile("&doi=([.0-9]+)/([^?&]+)$", Pattern.CASE_INSENSITIVE);
+  private final String RIS_REPLACEMENT = "&doi=$1/$2"; //no replacement...just the one
+
   @Override
-  public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
-                                                      MetadataTarget target)
-      throws PluginException {
-    return new JstorArticleIterator(au,
-                                    new SubTreeArticleIterator.Spec()
-                                      .setTarget(target)
-                                      .setRootTemplate(ROOT_TEMPLATE)
-                                      .setPatternTemplate(PATTERN_TEMPLATE));
+  public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) throws PluginException {
+    SubTreeArticleIteratorBuilder builder = localBuilderCreator(au);
+
+    builder.setSpec(new SubTreeArticleIterator.Spec()
+    .setTarget(target)
+    .setRootTemplate(ROOT_TEMPLATE)
+    .setPatternTemplate(PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE));
+
+    // NOTE - full_text_cu is set automatically to the url used for the articlefiles
+    // ultimately the metadata extractor needs to set the entire facet map 
+
+    // set up RIS to be an aspect that will trigger an ArticleFiles to feed the metadata extractor
+    builder.addAspect(RIS_PATTERN,
+        RIS_REPLACEMENT,
+        ArticleFiles.ROLE_ARTICLE_METADATA);
+
+    return builder.getSubTreeArticleIterator();
   }
 
-  protected static class JstorArticleIterator extends SubTreeArticleIterator {
-
-    protected Pattern ARTICLE_PATTERN_1 = Pattern.compile("(stable)/([0-9]+(/)?)$", Pattern.CASE_INSENSITIVE);
-    
-    protected Pattern ARTICLE_PATTERN_2 = Pattern.compile("(stable)/([\\.0-9]+/.+\\.[0-9]{4}\\.[0-9]+.[0-9]+)$", Pattern.CASE_INSENSITIVE);
-    
-    public JstorArticleIterator(ArchivalUnit au,
-                                     SubTreeArticleIterator.Spec spec) {
-      super(au, spec);
-    }
-    
-    @Override
-    protected ArticleFiles createArticleFiles(CachedUrl cu) {
-      String url = cu.getUrl();
-      Matcher mat;
-      mat = ARTICLE_PATTERN_1.matcher(url);
-      if (mat.find()) {
-        return processArticle(cu, mat);
-      }
-      mat = ARTICLE_PATTERN_2.matcher(url);
-      if (mat.find()) {
-        return processArticle(cu, mat);
-      }
-
-      log.warning("Mismatch between article iterator factory and article iterator: " + url);
-      return null;
-    }
-    
-
-    protected ArticleFiles processArticle(CachedUrl landingCu, Matcher articleMat) {
-      ArticleFiles af = new ArticleFiles();
-      af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML_LANDING_PAGE, landingCu);
-
-      if (spec.getTarget().isArticle()) {
-	guessRole(af, articleMat, "view info", ArticleFiles.ROLE_ARTICLE_METADATA);
-        guessRole(af, articleMat, "pdfplus pdf", ArticleFiles.ROLE_FULL_TEXT_PDF);
-        guessRole(af, articleMat, "full", ArticleFiles.ROLE_FULL_TEXT_HTML);
-      }
-      return af;
-    }
-    
-    protected void guessRole(ArticleFiles af, Matcher mat, String tryList, String roleKey) {
-      for(String replace : tryList.split(" ")) {
-        String guess = mat.replaceFirst("$1/" + replace + "/$2");
-        
-        CachedUrl absCu = au.makeCachedUrl(guess);
-        if (absCu != null && absCu.hasContent()) {
-      	af.setRoleCu(roleKey, absCu);
-        }
-      }
-    }
-    
+  // Enclose the method that creates the builder to allow a child to do additional processing
+  protected SubTreeArticleIteratorBuilder localBuilderCreator(ArchivalUnit au) { 
+    return new SubTreeArticleIteratorBuilder(au);
   }
-  
+
+
   @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
       throws PluginException {
     return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
   }
-
 }
+

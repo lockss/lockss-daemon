@@ -1,5 +1,5 @@
 /*
- * $Id: HttpClientUrlConnection.java,v 1.37 2014-02-26 08:09:26 tlipkis Exp $
+ * $Id: HttpClientUrlConnection.java,v 1.37.2.1 2014-07-18 15:58:58 wkwilson Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -62,6 +62,24 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
   static final String PARAM_USE_PREEMPTIVE_AUTH = PREFIX + "usePreemptiveAuth";
   static final boolean DEFAULT_USE_PREEMPTIVE_AUTH = true;
 
+  /** Choices for trustworthiness required of server. */
+  public enum ServerTrustLevel {Trusted, SelfSigned, Untrusted};
+
+  /** Determines the required trustworthiness of HTTPS server certificates.
+   *
+   * <dl><lh>Set to one of:</lh>
+   *
+   * <dt>Trusted</dt><dd>Server certificate must be signed by a known CA.</dd>
+   *
+   * <dt>SeflSigned</dt><dd>Server certificate must be self-signed or signed by a known CA.</dd>
+   *
+   * <dt>Untrusted</dt><dd>Any server certificate will be accepted.</dd>
+   * </dl>
+   */
+  static final String PARAM_SERVER_TRUST_LEVEL = PREFIX + "serverTrustLevel";
+  public static final ServerTrustLevel DEFAULT_SERVER_TRUST_LEVEL =
+    ServerTrustLevel.Untrusted;
+
   // Set up a flexible SSL protocol factory.  It doesn't work to set the
   // Protocol in the HostConfiguration - HttpClient.executeMethod()
   // overwrites it.  So we must communicate the per-host policies to a
@@ -72,18 +90,30 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     Protocol proto = new Protocol("https", DISP_FACT, 443);
     Protocol.registerProtocol("https", proto);
 
-    SecureProtocolSocketFactory easyFact = new EasySSLProtocolSocketFactory();
-    DISP_FACT.setDefaultFactory(easyFact);
+    DISP_FACT.setDefaultFactory(getDefaultSocketFactory(DEFAULT_SERVER_TRUST_LEVEL));
   }
 
+  private static ServerTrustLevel serverTrustLevel;
+
+  private static SecureProtocolSocketFactory
+    getDefaultSocketFactory(ServerTrustLevel stl) {
+    switch (stl) {
+    case Trusted:
+      return new SSLProtocolSocketFactory();
+    case SelfSigned:
+      return new EasySSLProtocolSocketFactory();
+    case Untrusted:
+    default:
+      return new PermissiveSSLProtocolSocketFactory();
+    }
+  }
 
   /** Called by org.lockss.config.MiscConfig
    */
   public static void setConfig(Configuration config,
 			       Configuration oldConfig,
 			       Configuration.Differences diffs) {
-    if (diffs.contains(PARAM_COOKIE_POLICY) ||
-	diffs.contains(PARAM_SINGLE_COOKIE_HEADER)) {
+    if (diffs.contains(PREFIX)) {
       HttpParams params = DefaultHttpParams.getDefaultParams();
       if (diffs.contains(PARAM_COOKIE_POLICY)) {
 	String policy = config.get(PARAM_COOKIE_POLICY, DEFAULT_COOKIE_POLICY);
@@ -96,6 +126,11 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
 	params.setBooleanParameter(HttpMethodParams.SINGLE_COOKIE_HEADER,
 				   val);
       }
+      ServerTrustLevel stl =
+	(ServerTrustLevel)config.getEnum(ServerTrustLevel.class,
+					 PARAM_SERVER_TRUST_LEVEL,
+					 DEFAULT_SERVER_TRUST_LEVEL);
+      DISP_FACT.setDefaultFactory(getDefaultSocketFactory(stl));
     }
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: MetaPressArticleIteratorFactory.java,v 1.6 2013-10-14 19:38:49 etenbrink Exp $
+ * $Id: MetaPressArticleIteratorFactory.java,v 1.6.6.1 2014-07-18 15:54:38 wkwilson Exp $
  */
 
 /*
@@ -49,7 +49,8 @@ public class MetaPressArticleIteratorFactory
   
   protected static final String ROOT_TEMPLATE = "\"%scontent\", base_url";
   
-  protected static final String PATTERN_TEMPLATE = "\"^%scontent/[A-Za-z0-9]{16}/fulltext\\.pdf$\", base_url";
+  protected static final String PATTERN_TEMPLATE =
+      "\"^%scontent/[A-Za-z0-9]{16}/fulltext\\.pdf$\", base_url";
 
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -65,7 +66,8 @@ public class MetaPressArticleIteratorFactory
 
   protected static class MetaPressArticleIterator extends SubTreeArticleIterator {
 
-    protected Pattern PATTERN = Pattern.compile("/content/([a-z0-9]{16})/fulltext\\.pdf$", Pattern.CASE_INSENSITIVE);
+    protected Pattern PATTERN = Pattern.compile("/content/([a-z0-9]{16})/fulltext\\.pdf$",
+        Pattern.CASE_INSENSITIVE);
     
     protected MetadataTarget target;
     
@@ -133,7 +135,8 @@ public class MetaPressArticleIteratorFactory
       log.debug3("citStr (1): " + citStr);
       CachedUrl citCu = au.makeCachedUrl(citStr);
       if (citCu == null || !citCu.hasContent()) {
-        citStr = mat.replaceFirst(String.format("/export.mpx?code=%s&mode=ris", mat.group(1).toUpperCase()));
+        citStr = mat.replaceFirst(String.format("/export.mpx?code=%s&mode=ris", 
+            mat.group(1).toUpperCase()));
         log.debug3("citStr (2): " + citStr);
         citCu = au.makeCachedUrl(citStr);
       }

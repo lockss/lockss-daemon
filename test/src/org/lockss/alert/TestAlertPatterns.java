@@ -1,5 +1,5 @@
 /*
- * $Id: TestAlertPatterns.java,v 1.2 2009-06-09 06:11:53 tlipkis Exp $
+ * $Id: TestAlertPatterns.java,v 1.2.78.1 2014-07-18 15:49:52 wkwilson Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ package org.lockss.alert;
 
 import java.io.*;
 import java.util.*;
+import java.util.regex.*;
 import java.net.*;
 import java.text.*;
 import org.lockss.test.*;
@@ -50,6 +51,7 @@ import org.lockss.plugin.*;
 public class TestAlertPatterns extends LockssTestCase {
   static String ATTR1 = "attr1";
   static String ATTR2 = "attr2";
+  static String ATTR3 = "attr3";
 
   Alert a1;
   AlertPattern pat1;
@@ -59,6 +61,7 @@ public class TestAlertPatterns extends LockssTestCase {
     a1 = new Alert("alert1");
     a1.setAttribute(ATTR1, "test text");
     a1.setAttribute(ATTR2, 7);
+    a1.setAttribute(ATTR3, "multi line 1\nline 2\nline 3\n");
   }
 
   void assertMatch(AlertPattern pat) {
@@ -67,6 +70,14 @@ public class TestAlertPatterns extends LockssTestCase {
 
   void assertNoMatch(AlertPattern pat) {
     assertFalse(pat.isMatch(a1));
+  }
+
+  public void testIll() {
+    try {
+      AlertPatterns.MATCHES(ATTR1, "[ab");
+      fail("Illegal pattern should throw");
+    } catch (IllegalArgumentException e) {
+    }
   }
 
   public void testPred() {
@@ -93,6 +104,16 @@ public class TestAlertPatterns extends LockssTestCase {
 							    "test text")));
     assertNoMatch(AlertPatterns.CONTAINS(ATTR1, ListUtil.list("four",
 							      "testing 123")));
+    assertMatch(AlertPatterns.MATCHES(ATTR1, "text"));
+    assertMatch(AlertPatterns.MATCHES(ATTR1, ".*es.*ex"));
+    assertNoMatch(AlertPatterns.MATCHES(ATTR1, "text1"));
+    assertNoMatch(AlertPatterns.MATCHES(ATTR1, ".*ex.*es"));
+
+    // multi-line
+    assertMatch(AlertPatterns.MATCHES(ATTR3, "line 1"));
+    assertMatch(AlertPatterns.MATCHES(ATTR3, "line 2"));
+    assertMatch(AlertPatterns.MATCHES(ATTR3, "line 1\nline 2"));
+    assertNoMatch(AlertPatterns.MATCHES(ATTR3, "line 2\nline 1"));
   }
 
   public void testBool() {

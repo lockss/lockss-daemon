@@ -50,8 +50,9 @@
     au < manifest ; exists ; 2007-2008 ; Archaeology International Volume 11 ; 11 ; 2007 >
     au < manifest ; exists ; 2008-2009 ; Archaeology International Volume 12 ; 12 ; 2008 >
     au < crawling ; exists ; 2009-2011 ; Archaeology International Volume 13/14 ; 13/14 ; 2009 >
-    au < crawling ; exists ; 2011-2012 ; Archaeology International Volume 15 ; 15 ; 2011 >
-    au < manifest ; exists ; 2012-2013 ; Archaeology International Volume 16 ; 16 ; 2013 >
+    au < down ; exists ; 2011-2012 ; Archaeology International Volume 15 [to delete] ; 15 ; 2011 >
+    au < manifest ; exists ; 2011-2012 ; Archaeology International Volume 15 ; 15 ; 2012 >
+    au < testing ; exists ; 2012-2013 ; Archaeology International Volume 16 ; 16 ; 2013 >
     au < expected ; exists ; 2013-2014 ; Archaeology International Volume 17 ; 17 ; 2014 >
   
   }
@@ -112,7 +113,7 @@
     au < manifest ; exists ; 2009 ; The Bulletin of the History of Archaeology Volume 19 ; 19 ; 2009 >
     au < manifest ; exists ; 2010 ; The Bulletin of the History of Archaeology Volume 20 ; 20 ; 2010 >
     au < ingNotReady ; exists ; 2011 ; The Bulletin of the History of Archaeology Volume 21 ; 21 ; 2011 >
-    au < manifest ; exists ; 2012 ; The Bulletin of the History of Archaeology Volume 22 ; 22 ; 2012 >
+    au < ready ; exists ; 2012 ; The Bulletin of the History of Archaeology Volume 22 ; 22 ; 2012 >
     au < crawling ; exists ; 2013 ; The Bulletin of the History of Archaeology Volume 23 ; 23 ; 2013 >
     au < manifest ; exists ; 2014 ; The Bulletin of the History of Archaeology Volume 24 ; 24 ; 2014 >
     
@@ -127,11 +128,13 @@
     
     param[base_url] = http://www.comicsgrid.com/
     param[journal_id] = cg
+    
+    comment[back] = publisher says V1 and V2 will be online soon.
 
     au < expected ; exists ; 2011 ; The Comics Grid: Journal of Comics Scholarship Volume 1 ; 1 ; 2011 >
     au < expected ; exists ; 2012 ; The Comics Grid: Journal of Comics Scholarship Volume 2 ; 2 ; 2012 >
-    au < exists ; exists ; 2013 ; The Comics Grid: Journal of Comics Scholarship Volume 3 ; 3 ; 2013 >
-    au < expected ; exists ; 2014 ; The Comics Grid: Journal of Comics Scholarship Volume 4 ; 4 ; 2014 >
+    au < manifest ; exists ; 2013 ; The Comics Grid: Journal of Comics Scholarship Volume 3 ; 3 ; 2013 >
+    au < manifest ; exists ; 2014 ; The Comics Grid: Journal of Comics Scholarship Volume 4 ; 4 ; 2014 >
     
   }
 
@@ -142,7 +145,7 @@
       eissn = 2053-4825
     >
     
-    param[base_url] = hhttp://www.govafricajournal.org/
+    param[base_url] = http://www.govafricajournal.org/
     param[journal_id] = unknown
 
   }
@@ -150,7 +153,7 @@
   {
   
     title < 
-      name = The Journal of Conservation and Museum Studies ;
+      name = Journal of Conservation and Museum Studies ;
       eissn = 1364-0429 
     >
     
@@ -159,21 +162,46 @@
     {
        plugin = org.lockss.plugin.ubiquitypress.ClockssUbiquityPressPlugin
        comment[zapped] = Released under plugin that is obsolete: replaced by ClockssOJS2Plugin
-       au < superseded ; down ; 2011 ; The Journal of Conservation and Museum Studies Volume 9 [to delete] ; 9 ; 2011 >
-       au < superseded ; down ; 2012 ; The Journal of Conservation and Museum Studies Volume 10 [to delete] ; 10 ; 2012 >
+       au < superseded ; down ; 2011 ; Journal of Conservation and Museum Studies Volume 9 [to delete] ; 9 ; 2011 >
+       au < superseded ; down ; 2012 ; Journal of Conservation and Museum Studies Volume 10 [to delete] ; 10 ; 2012 >
     }
     
-    au < manifest ; exists ; 1996 ; The Journal of Conservation and Museum Studies Volume 1 ; 1 ; 1996 >
-    au < manifest ; exists ; 1997 ; The Journal of Conservation and Museum Studies Volume 2-3 ; 2-3 ; 1997 >
-    au < manifest ; exists ; 1998 ; The Journal of Conservation and Museum Studies Volume 4-5 ; 4-5 ; 1998 >
-    au < manifest ; exists ; 1999 ; The Journal of Conservation and Museum Studies Volume 6 ; 6 ; 1999 >
-    au < manifest ; exists ; 2001 ; The Journal of Conservation and Museum Studies Volume 7 ; 7 ; 2001 >
-    au < manifest ; exists ; 2002 ; The Journal of Conservation and Museum Studies Volume 8 ; 8 ; 2002 >
-    au < finished ; crawling ; 2011 ; The Journal of Conservation and Museum Studies Volume 9 ; 9 ; 2011 >
-    au < finished ; crawling ; 2012 ; The Journal of Conservation and Museum Studies Volume 10 ; 10 ; 2012 >
-    au < crawling ; exists ; 2013 ; The Journal of Conservation and Museum Studies Volume 11 ; 11 ; 2013 >
-    au < manifest ; exists ; 2014 ; The Journal of Conservation and Museum Studies Volume 12 ; 12 ; 2014 >
+    au < manifest ; exists ; 1996 ; Journal of Conservation and Museum Studies Volume 1 ; 1 ; 1996 >
+    au < manifest ; exists ; 1997 ; Journal of Conservation and Museum Studies Volume 2-3 ; 2-3 ; 1997 >
+    au < manifest ; exists ; 1998 ; Journal of Conservation and Museum Studies Volume 4-5 ; 4-5 ; 1998 >
+    au < manifest ; exists ; 1999 ; Journal of Conservation and Museum Studies Volume 6 ; 6 ; 1999 >
+    au < manifest ; exists ; 2001 ; Journal of Conservation and Museum Studies Volume 7 ; 7 ; 2001 >
+    au < manifest ; exists ; 2002 ; Journal of Conservation and Museum Studies Volume 8 ; 8 ; 2002 >
+    au < finished ; crawling ; 2011 ; Journal of Conservation and Museum Studies Volume 9 ; 9 ; 2011 >
+    au < finished ; crawling ; 2012 ; Journal of Conservation and Museum Studies Volume 10 ; 10 ; 2012 >
+    au < crawling ; exists ; 2013 ; Journal of Conservation and Museum Studies Volume 11 ; 11 ; 2013 >
+    au < manifest ; exists ; 2014 ; Journal of Conservation and Museum Studies Volume 12 ; 12 ; 2014 >
     
+  }
+
+  {
+  
+    title < 
+      name = Journal of Circadian Rhythms ;
+      eissn = 1740-3391
+    >
+    
+    param[base_url] = http://www.jcircadianrhythms.com/
+    param[journal_id] = unknown
+
+    au < exists ; exists ; 2003 ; Journal of Circadian Rhythms Volume 1 ; 1 ; 2003 >
+    au < exists ; exists ; 2004 ; Journal of Circadian Rhythms Volume 2 ; 2 ; 2004 >
+    au < exists ; exists ; 2005 ; Journal of Circadian Rhythms Volume 3 ; 3 ; 2005 >
+    au < exists ; exists ; 2006 ; Journal of Circadian Rhythms Volume 4 ; 4 ; 2006 >
+    au < exists ; exists ; 2007 ; Journal of Circadian Rhythms Volume 5 ; 5 ; 2007 >
+    au < exists ; exists ; 2008 ; Journal of Circadian Rhythms Volume 6 ; 6 ; 2008 >
+    au < exists ; exists ; 2009 ; Journal of Circadian Rhythms Volume 7 ; 7 ; 2009 >
+    au < exists ; exists ; 2010 ; Journal of Circadian Rhythms Volume 8 ; 8 ; 2010 >
+    au < exists ; exists ; 2011 ; Journal of Circadian Rhythms Volume 9 ; 9 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Circadian Rhythms Volume 10 ; 10 ; 2012 >
+    au < exists ; exists ; 2013 ; Journal of Circadian Rhythms Volume 11 ; 11 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Circadian Rhythms Volume 12 ; 12 ; 2014 >
+
   }
 
   {
@@ -200,8 +228,8 @@
 
     au < manifest ; exists ; 2009 ; Journal of European Psychology Students Volume 1 ; 1 ; 2009 >
     au < manifest ; exists ; 2010 ; Journal of European Psychology Students Volume 2 ; 2 ; 2010 >
-    au < manifest ; exists ; 2012 ; Journal of European Psychology Students Volume 3 ; 3 ; 2012 >
-    au < manifest ; exists ; 2013 ; Journal of European Psychology Students Volume 4 ; 4 ; 2013 >
+    au < crawling ; exists ; 2012 ; Journal of European Psychology Students Volume 3 ; 3 ; 2012 >
+    au < crawling ; exists ; 2013 ; Journal of European Psychology Students Volume 4 ; 4 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of European Psychology Students Volume 5 ; 5 ; 2014 >
     
   }
@@ -209,16 +237,16 @@
   {
   
     title < 
-      name = The Journal of Open Archaeology Data ;
+      name = Journal of Open Archaeology Data ;
       eissn = 2049-1565 
     >
     
     param[base_url] = http://openarchaeologydata.metajnl.com/
     param[journal_id] = joad
 
-    au < exists ; exists ; 2012 ; The Journal of Open Archaeology Data Volume 1 ; 1 ; 2012 >
-    au < exists ; exists ; 2013 ; The Journal of Open Archaeology Data Volume 2 ; 2 ; 2013 >
-    au < expected ; exists ; 2014 ; The Journal of Open Archaeology Data Volume 3 ; 3 ; 2014 >
+    au < manifest ; exists ; 2012 ; Journal of Open Archaeology Data Volume 1 ; 1 ; 2012 >
+    au < manifest ; exists ; 2013 ; Journal of Open Archaeology Data Volume 2 ; 2 ; 2013 >
+    au < manifest ; exists ; 2014 ; Journal of Open Archaeology Data Volume 3 ; 3 ; 2014 >
 
   }
   
@@ -229,10 +257,10 @@
       eissn = 2053-2407 
     >
     
-    param[base_url] = http://openpublichealthdata.metajnl.com/
+    param[base_url] = http://openhealthdata.metajnl.com/
     param[journal_id] = jophd
     
-    au < exists ; exists ; 2013 ; Journal of Open Public Health Data Volume 1 ; 1 ; 2013 >
+    au < manifest ; exists ; 2013 ; Journal of Open Public Health Data Volume 1 ; 1 ; 2013 >
     au < expected ; exists ; 2014 ; Journal of Open Public Health Data Volume 2 ; 2 ; 2014 >
 
   }
@@ -247,15 +275,15 @@
     param[base_url] = http://openpsychologydata.metajnl.com/
     param[journal_id] = jopd
     
-    au < exists ; exists ; 2013 ; Journal of Open Psychology Data Volume 1 ; 1 ; 2013 >
-    au < expected ; exists ; 2014 ; Journal of Open Psychology Data Volume 2 ; 2 ; 2014 >
+    au < manifest ; exists ; 2013 ; Journal of Open Psychology Data Volume 1 ; 1 ; 2013 >
+    au < manifest ; exists ; 2014 ; Journal of Open Psychology Data Volume 2 ; 2 ; 2014 >
 
   }
   
   {
   
     title < 
-      name = The Journal of Open Research Software ;
+      name = Journal of Open Research Software ;
       eissn = 2049-9647 
     >
     
@@ -264,8 +292,8 @@
     
     comment[doNotProcess] = This journal does not have an editorial policies page: http://openresearchsoftware.metajnl.com/index.php/jors/about/editorialPolicies
     
-    au < doNotProcess ; exists ; 2013 ; The Journal of Open Research Software Volume 1 ; 1 ; 2013 >
-    au < doNotProcess ; exists ; 2014 ; The Journal of Open Research Software Volume 2 ; 2 ; 2014 >
+    au < doNotProcess ; exists ; 2013 ; Journal of Open Research Software Volume 1 ; 1 ; 2013 >
+    au < doNotProcess ; exists ; 2014 ; Journal of Open Research Software Volume 2 ; 2 ; 2014 >
 
   }
   
@@ -348,7 +376,7 @@
     au < manifest ; exists ; 2009 ; Papers from the Institute of Archaeology Volume 19 ; 19 ; 2009 >
     au < manifest ; exists ; 2010 ; Papers from the Institute of Archaeology Volume 20 ; 20 ; 2010 >
     au < finished ; crawling ; 2011 ; Papers from the Institute of Archaeology Volume 21 ; 21 ; 2011 >
-    au < manifest ; exists ; 2012 ; Papers from the Institute of Archaeology Volume 22 ; 22 ; 2012 >
+    au < ready ; exists ; 2012 ; Papers from the Institute of Archaeology Volume 22 ; 22 ; 2012 >
     au < crawling ; exists ; 2013 ; Papers from the Institute of Archaeology Volume 23 ; 23 ; 2013 >
     au < manifest ; exists ; 2014 ; Papers from the Institute of Archaeology Volume 24 ; 24 ; 2014 >
     
@@ -376,7 +404,7 @@
     au < finished ; crawling ; 2011 ; Present Pasts Volume 3 ; 3 ; 2011 >
     au < finished ; crawling ; 2012 ; Present Pasts Volume 4 ; 4 ; 2012 >
     au < crawling ; exists ; 2013 ; Present Pasts Volume 5 ; 5 ; 2013 >
-    au < expected ; exists ; 2014 ; Present Pasts Volume 6 ; 6 ; 2014 >
+    au < manifest ; exists ; 2014 ; Present Pasts Volume 6 ; 6 ; 2014 >
     
   }
 
@@ -390,16 +418,17 @@
     param[base_url] = http://www.psychologicabelgica.com/
     param[journal_id] = pb
 
-    au < exists ; exists ; 2005 ; Psychologica Belgica Volume 45 ; 45 ; 2005 >
-    au < exists ; exists ; 2006 ; Psychologica Belgica Volume 46 ; 46 ; 2006 >
-    au < exists ; exists ; 2007 ; Psychologica Belgica Volume 47 ; 47 ; 2007 >
-    au < exists ; exists ; 2008 ; Psychologica Belgica Volume 48 ; 48 ; 2008 >
-    au < exists ; exists ; 2009 ; Psychologica Belgica Volume 49 ; 49 ; 2009 >
-    au < exists ; exists ; 2010 ; Psychologica Belgica Volume 50 ; 50 ; 2010 >
-    au < exists ; exists ; 2011 ; Psychologica Belgica Volume 51 ; 51 ; 2011 >
-    au < exists ; exists ; 2012 ; Psychologica Belgica Volume 52 ; 52 ; 2012 >
-    au < exists ; exists ; 2013 ; Psychologica Belgica Volume 53 ; 53 ; 2013 >
-    au < exists ; exists ; 2014 ; Psychologica Belgica Volume 54 ; 54 ; 2014 >
+    au < manifest ; exists ; 2004 ; Psychologica Belgica Volume 44 ; 44 ; 2004 >
+    au < manifest ; exists ; 2005 ; Psychologica Belgica Volume 45 ; 45 ; 2005 >
+    au < manifest ; exists ; 2006 ; Psychologica Belgica Volume 46 ; 46 ; 2006 >
+    au < manifest ; exists ; 2007 ; Psychologica Belgica Volume 47 ; 47 ; 2007 >
+    au < manifest ; exists ; 2008 ; Psychologica Belgica Volume 48 ; 48 ; 2008 >
+    au < manifest ; exists ; 2009 ; Psychologica Belgica Volume 49 ; 49 ; 2009 >
+    au < manifest ; exists ; 2010 ; Psychologica Belgica Volume 50 ; 50 ; 2010 >
+    au < manifest ; exists ; 2011 ; Psychologica Belgica Volume 51 ; 51 ; 2011 >
+    au < manifest ; exists ; 2012 ; Psychologica Belgica Volume 52 ; 52 ; 2012 >
+    au < manifest ; exists ; 2013 ; Psychologica Belgica Volume 53 ; 53 ; 2013 >
+    au < manifest ; exists ; 2014 ; Psychologica Belgica Volume 54 ; 54 ; 2014 >
 
   }
 
@@ -413,7 +442,7 @@
     param[base_url] = http://www.secularismandnonreligion.org/
     param[journal_id] = snr
     
-    au < manifest ; exists ; 2012 ; Secularism and Nonreligion Volume 1 ; 1 ; 2012 >
+    au < crawling ; exists ; 2012 ; Secularism and Nonreligion Volume 1 ; 1 ; 2012 >
     au < crawling ; exists ; 2013 ; Secularism and Nonreligion Volume 2 ; 2 ; 2013 >
     au < manifest ; exists ; 2014 ; Secularism and Nonreligion Volume 3 ; 3 ; 2014 >
 

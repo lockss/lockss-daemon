@@ -35,7 +35,11 @@ BEGIN {
       n[pn] = lp2
   #    n[pn] = $2
       t[pn] = $3
-      k[pn] = $7
+      if ($7 == "") {
+        k[pn] = ".."
+      } else {
+        k[pn] = $7
+      }
       d[pn] = $4
       r[pn] = $5
       pn++
@@ -52,29 +56,35 @@ END {
   s[1] = "exists"
   s[2] = "manifest"
   s[3] = "wanted"
-  s[4] = "crawling"
-  s[5] = "testing"
-  s[6] = "notReady"
-  s[7] = "released"
-  s[8] = "down"
-  s[9] = "superseded"
-  s[10] = "zapped"
-  s[11] = "doNotProcess"
-  sn = 12
+  s[4] = "testing"
+  s[5] = "notReady"
+  s[6] = "ready"
+  s[7] = "crawling"
+  s[8] = "frozen"
+  s[9] = "ingNotReady"
+  s[10] = "finished"
+  s[11] = "down"
+  s[12] = "superseded"
+  s[13] = "zapped"
+  s[14] = "doNotProcess"
+  sn = 15
   
   sc[0] = "expe"
   sc[1] = "exis"
   sc[2] = "mani"
   sc[3] = "want"
-  sc[4] = "craw"
-  sc[5] = "test"
-  sc[6] = "notR"
-  sc[7] = "rele"
-  sc[8] = "down"
-  sc[9] = "supe"
-  sc[10] = "zapp"
-  sc[11] = "doNP"
-  scn = 12
+  sc[4] = "test"
+  sc[5] = "notR"
+  sc[6] = "read"
+  sc[7] = "craw"
+  sc[8] = "froz"
+  sc[9] = "ingN"
+  sc[10] = "fini"
+  sc[11] = "down"
+  sc[12] = "supe"
+  sc[13] = "zapp"
+  sc[14] = "doNP"
+  scn = 15
 
   #print out header
   printf "Publisher\tPlugin\tContr\tBack\tYear\tT\tTotal"
@@ -91,8 +101,8 @@ END {
     for (j = 0 ; j < sn ; j++) {
       if (x[s[j]] > 0){
       if (c[p[i],n[i],d[i],s[j]] == 0) {
-      printf "\t.." 
-    } else {
+        printf "\t.." 
+      } else {
         printf "\t%d", c[p[i],n[i],d[i],s[j]]
       }
     }

@@ -1,5 +1,5 @@
 /*
- * $Id: SilverchairJournalsArticleIteratorFactory.java,v 1.1.2.2 2014-05-05 17:32:31 wkwilson Exp $
+ * $Id: SilverchairJournalsArticleIteratorFactory.java,v 1.1.2.3 2014-07-18 15:56:32 wkwilson Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 
 package org.lockss.plugin.silverchair;
 
-import java.util.Iterator;
+import java.util.*;
 import java.util.regex.Pattern;
 
 import org.lockss.daemon.PluginException;
@@ -51,7 +51,8 @@ public class SilverchairJournalsArticleIteratorFactory
   private static final String HTML_REPLACEMENT = "/article.aspx?articleid=$1";
 
   private static final String RIS_REPLACEMENT = "/downloadCitation.aspx?format=ris&articleid=$1";
-  private static final String BIBTEX_REPLACEMENT = "/downloadCitation.aspx?format=bibtex&articleid=$1";
+  private static final String BIBTEX_REPLACEMENT_BIB = "/downloadCitation.aspx?format=bib&articleid=$1";
+  private static final String BIBTEX_REPLACEMENT_BIBTEX = "/downloadCitation.aspx?format=bibtex&articleid=$1";
   private static final String MEDLARS_REPLACEMENT = "/downloadCitation.aspx?format=txt&articleid=$1";
   private static final String REFWORKS_REPLACEMENT = "/downloadCitation.aspx?articleid=$1";
 
@@ -68,13 +69,14 @@ public class SilverchairJournalsArticleIteratorFactory
                       ArticleFiles.ROLE_FULL_TEXT_HTML);
     builder.addAspect(RIS_REPLACEMENT,
                       ArticleFiles.ROLE_CITATION_RIS);
-    builder.addAspect(BIBTEX_REPLACEMENT,
+    builder.addAspect(Arrays.asList(BIBTEX_REPLACEMENT_BIB,
+                                    BIBTEX_REPLACEMENT_BIBTEX),
                       ArticleFiles.ROLE_CITATION_BIBTEX);
     builder.addAspect(MEDLARS_REPLACEMENT, 
                       ROLE_CITATION_MEDLARS);
     builder.addAspect(REFWORKS_REPLACEMENT, 
                       ROLE_CITATION_REFWORKS);
-    builder.setRoleFromOtherRoles(ArticleFiles.ROLE_CITATION,
+    builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA,
                                   ArticleFiles.ROLE_CITATION_RIS,
                                   ArticleFiles.ROLE_FULL_TEXT_HTML);
     return builder.getSubTreeArticleIterator();
@@ -83,7 +85,7 @@ public class SilverchairJournalsArticleIteratorFactory
   @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
       throws PluginException {
-    return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_CITATION);
+    return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
   }
   
 }

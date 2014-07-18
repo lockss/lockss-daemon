@@ -1,10 +1,10 @@
 /*
- * $Id: TestMathematicalSciencesPublishersArticleIteratorFactory.java,v 1.2 2013-10-04 01:44:45 etenbrink Exp $
+ * $Id: TestMathematicalSciencesPublishersArticleIteratorFactory.java,v 1.2.6.1 2014-07-18 15:49:52 wkwilson Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -46,9 +46,9 @@ import org.lockss.test.*;
 import org.lockss.util.ListUtil;
 
 public class TestMathematicalSciencesPublishersArticleIteratorFactory extends ArticleIteratorTestCase {
-
+  
   private SimulatedArchivalUnit sau;	// Simulated AU to generate content
-
+  
   private final String PLUGIN_NAME =
       "org.lockss.plugin.mathematicalsciencespublishers.ClockssMathematicalSciencesPublishersPlugin";
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
@@ -62,33 +62,33 @@ public class TestMathematicalSciencesPublishersArticleIteratorFactory extends Ar
       JOURNAL_ID_KEY, JOURNAL_ID,
       YEAR_KEY, YEAR);
   private static final int DEFAULT_FILESIZE = 3000;
-
+  
   protected String cuRole = null;
   ArticleMetadataExtractor.Emitter emitter;
   protected boolean emitDefaultIfNone = false;
   FileMetadataExtractor me = null;
   MetadataTarget target;
-
+  
   @Override
   public void setUp() throws Exception {
     super.setUp();
     String tempDirPath = setUpDiskSpace();
-
+    
     au = createAu();
     sau = PluginTestUtil.createAndStartSimAu(simAuConfig(tempDirPath));
   }
-
+  
   @Override
   public void tearDown() throws Exception {
     sau.deleteContentTree();
     super.tearDown();
   }
-
+  
   protected ArchivalUnit createAu() throws ArchivalUnit.ConfigurationException {
     return
         PluginTestUtil.createAndStartAu(PLUGIN_NAME,  AU_CONFIG);
   }
-
+  
   Configuration simAuConfig(String rootPath) {
     Configuration conf = ConfigManager.newConfiguration();
     conf.put("root", rootPath);
@@ -104,19 +104,19 @@ public class TestMathematicalSciencesPublishersArticleIteratorFactory extends Ar
     conf.put("binFileSize", ""+DEFAULT_FILESIZE);
     return conf;
   }
-
-
+  
+  
   public void testRoots() throws Exception {
     SubTreeArticleIterator artIter = createSubTreeIter();
     assertEquals(ListUtil.list(BASE_URL + "jid/2008/"),
         getRootUrls(artIter));
   }
-
-
+  
+  
   //
   // We are set up to match any of <journal_id>/<year>/p.*
   //
-
+  
   public void testUrls() throws Exception {
     SubTreeArticleIterator artIter = createSubTreeIter();
     Pattern pat = getPattern(artIter);
@@ -128,11 +128,12 @@ public class TestMathematicalSciencesPublishersArticleIteratorFactory extends Ar
     assertNotMatchesRE(pat, "http://msp.org/camcos/2008/3-1/camcos-v3-n1-p01-p.pdf");
     assertNotMatchesRE(pat, "http://msp.org/camcos/2008/3-1/index.xhtml");
     assertNotMatchesRE(pat, "http://msp.org/jid/2008/3-1/p01.jpg");
-
+    assertNotMatchesRE(pat, "http://msp.org/jid/2008/3-1/b01.xhtml");
+    
     // wrong base url
     assertNotMatchesRE(pat, "http://ametsoc.org/jid/2008/3-1/p01.xhtml");
   }
-
+  
   //
   // simAU was created with only one depth
   // 3 filetypes (html & pdf & txt) and 4 files of each type
@@ -141,7 +142,7 @@ public class TestMathematicalSciencesPublishersArticleIteratorFactory extends Ar
   //
   public void testCreateArticleFiles() throws Exception {
     PluginTestUtil.crawlSimAu(sau);
-
+    
     /*
      *  Go through the simulated content you just crawled and modify the results to emulate
      *  what you would find in a "real" crawl with MathematicalSciencesPublishers:
@@ -150,24 +151,24 @@ public class TestMathematicalSciencesPublishersArticleIteratorFactory extends Ar
      *  http://msp.org/ant/2011/5-2/pC1.xhtml
      *  http://msp.org/pjm/2007/229-2/pjm-v229-n2-p10-s.pdf
      */
-
-    String pat1 = "(\\d+)file\\.xhtml";
+    
+    String pat1 = "(\\d+)file[.]xhtml";
     // turn xxfile.xhtml into abstracts
     String repAbs = JOURNAL_ID + "/" + YEAR + "/31-9/p$1.xhtml";
-    PluginTestUtil.copyAu(sau, au, ".*\\.xhtml$", pat1, repAbs);
+    PluginTestUtil.copyAu(sau, au, ".*[.]xhtml$", pat1, repAbs);
     // turn xxfile.pdf into fulltext pdfs
-    String pat2 = "(\\d+)file\\.pdf";
+    String pat2 = "(\\d+)file[.]pdf";
     String repPdf = JOURNAL_ID + "/" + YEAR + "/31-9/" + JOURNAL_ID + 
         "-v31-n9-p$1.pdf";
-    PluginTestUtil.copyAu(sau, au, ".*\\.pdf$", pat2, repPdf);
+    PluginTestUtil.copyAu(sau, au, ".*[.]pdf$", pat2, repPdf);
 
-    String pat3 = "branch(\\d+)/(\\d+)file\\.xhtml";
-    String pat4 = "branch(\\d+)/(\\d+)file\\.pdf";
+    String pat3 = "branch(\\d+)/(\\d+)file[.]xhtml";
+    String pat4 = "branch(\\d+)/(\\d+)file[.]pdf";
     String repAbs2 = JOURNAL_ID + "/" + YEAR + "/32-$1/p$2.xhtml";
     String repPdf2 = JOURNAL_ID + "/" + YEAR + "/32-$1/" + JOURNAL_ID + 
         "-v32-n$1-p$2.pdf";
-    PluginTestUtil.copyAu(sau, au, ".*\\.xhtml$", pat3, repAbs2);
-    PluginTestUtil.copyAu(sau, au, ".*\\.pdf$", pat4, repPdf2);
+    PluginTestUtil.copyAu(sau, au, ".*[.]xhtml$", pat3, repAbs2);
+    PluginTestUtil.copyAu(sau, au, ".*[.]pdf$", pat4, repPdf2);
     
     // At this point we have 10 sets of 2 types of articles
     // Remove some of the URLs just created to make test more robust

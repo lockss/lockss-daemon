@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.357.2.1 2014-05-05 17:32:35 wkwilson Exp $
+ $Id: build.xml,v 1.357.2.2 2014-07-18 15:49:55 wkwilson Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -244,7 +244,7 @@ Args:
   <property name="commons.codec.jar"
   				  value="${lib}/commons-codec-1.9.jar"/>
   <property name="commons.compress.jar"
-  				  value="${lib}/commons-compress-1.8.jar"/>
+  				  value="${lib}/commons-compress-1.8.1.jar"/>
   <property name="commons.httpclient.jar"
   			value="${lib}/commons-httpclient-3.0-rc4.jar"/>
   <property name="commons.io.jar"
@@ -252,7 +252,7 @@ Args:
   <property name="commons.jxpath.jar"
 				  value="${lib}/commons-jxpath-1.3.jar"/>
   <property name="commons.beanutils.jar"
-				  value="${lib}/commons-beanutils-1.9.1.jar"/>
+				  value="${lib}/commons-beanutils-1.9.2.jar"/>
     <property name="commons.validator.jar"
               value="${lib}/commons-validator-1.4.0.jar"/>
   <!-- gettext jars, for i18n -->
@@ -303,7 +303,7 @@ Args:
   <property name="ant-contrib.jar"      value="${lib}/ant-contrib-0.6.jar"/>
 
   <!-- PDFBox -->
-  <property name="pdfbox.version" value="1.8.3" />
+  <property name="pdfbox.version" value="1.8.5" />
   <property name="pdfbox.jar" value="${lib}/pdfbox-${pdfbox.version}.jar" />
   <!-- Next 9 JARs needed by PDFBox: -->
   <property name="fontbox.jar" value="${lib}/fontbox-${pdfbox.version}.jar" />
@@ -312,7 +312,7 @@ Args:
   <property name="bouncycastle.version" value="jdk15on-150" />
   <property name="bouncycastle-provider.jar" value="${lib}/bcprov-${bouncycastle.version}.jar" />
   <property name="bouncycastle-mail.jar" value="${lib}/bcmail-${bouncycastle.version}.jar" />
-  <property name="icu4j.version" value="52_1" />
+  <property name="icu4j.version" value="53_1" />
   <property name="icu4j.jar" value="${lib}/icu4j-${icu4j.version}.jar" />
   <property name="icu4j-charset.jar" value="${lib}/icu4j-charset-${icu4j.version}.jar" />
   <property name="icu4j-localespi.jar" value="${lib}/icu4j-localespi-${icu4j.version}.jar" />
@@ -335,8 +335,8 @@ Args:
   <property name="ext.javadoc"
                       value="http://documents.lockss.org/gamma-libs/" />
   <!-- Needed by ajax crawler -->
-  <property name="crawljax-core.jar" value="${lib}/crawljax-core-3.5.jar" />
-  <property name="crawloverview-plugin.jar" value="${lib}/crawloverview-plugin-3.5.jar" />
+  <property name="crawljax-core.jar" value="${lib}/crawljax-core-3.6-l.jar" />
+  <property name="crawloverview-plugin.jar" value="${lib}/crawloverview-plugin-3.6-l.jar" />
   <property name="httpclient.jar" value="${lib}/httpclient-4.3.1.jar" />
   <property name="slf4j-api.jar" value="${lib}/slf4j-api-1.7.6.jar" />
   <property name="logback-classic.jar" value="${lib}/logback-classic-1.1.1.jar" />
@@ -360,6 +360,7 @@ Args:
   <!--  Files -->
   <property name="default.releasename.file" value="${src}/defaultreleasename"/>
   <property name="test.classpath.file" value="${test}/test-classpath"/>
+  <property name="test.param.classpath.file" value="${test}/test-p-classpath"/>
   <property name="run.classpath.file" value="${test}/run-classpath"/>
   <property name="openbsd.classpath.file" value="${lib}/run-classpath"/>
   <property name="openbsd.packinglist.file" value="${lib}/packing-list"/>
@@ -402,17 +403,7 @@ Args:
   <property name="xmlschema-core.jar" value="${lib}/xmlschema-core-2.0.3.jar" />
   <property name="JoSQL.jar" value="${lib}/JoSQL-2.2.jar" />
   <property name="gentlyWEB-utils.jar" value="${lib}/gentlyWEB-utils-1.1.jar" />
-	
-  <!-- Needed by OAI -->
-  <property name="xoai-common.jar" value="${lib}/xoai-common-4.0.0.jar" />
-  <property name="xoai-service-provider.jar" value="${lib}/xoai-service-provider-4.0.0.jar" />
-  <property name="xml-io.jar" value="${lib}/xml-io-1.0.3.jar" />
-  <property name="httpcore.jar" value="${lib}/httpcore-4.3.2.jar" />
-  <property name="commons.lang3.jar" value="${lib}/commons-lang3-3.3.2.jar"/>
-  <property name="hamcrest-all.jar" value="${lib}/hamcrest-all-1.3.jar"/>
-  <property name="stax2-api.jar" value="${lib}/stax2-api-3.0.4.jar"/>
-  <property name="test-support.jar" value="${lib}/test-support-1.0.4.jar"/>
-  
+
   <!--  Compiler options -->
   <property name="javac.debug"             value="on" />
   <property name="javac.optimize"          value="off" />
@@ -523,7 +514,7 @@ Args:
     <!-- Needed by AJAX crawler-->
     <pathelement path="${crawljax-core.jar}" />
     <pathelement path="${crawloverview-plugin.jar}" />
-    <pathelement path="${jackson-annotations.jar}" />
+      <pathelement path="${jackson-annotations.jar}" />
     <pathelement path="${jackson-core.jar}" />
     <pathelement path="${jackson-databind.jar}" />
     <pathelement path="${webscarab.jar}" />
@@ -532,16 +523,6 @@ Args:
     <pathelement path="${logback-core.jar}" />
     <pathelement path="${logback-classic.jar}" />
     <pathelement path="${slf4j-api.jar}" />
-    <!-- Needed by OAI -->
-  	<pathelement path="${xoai-common.jar}" />
-  	<pathelement path="${xoai-service-provider.jar}" />
-  	<pathelement path="${xml-io.jar}" />
-    <pathelement path="${httpcore.jar}" />
-    <pathelement path="${commons.lang3.jar}" />
-    <pathelement path="${hamcrest-all.jar}" />
-    <pathelement path="${stax2-api.jar}" />
-    <pathelement path="${test-support.jar}" />
-    
   </path>
 
   <path id="run.classpath">
@@ -754,33 +735,66 @@ Test results in ${test.results}
   <!-- ==================================================================== -->
   <!--  Setup tasks -->
   <!-- ==================================================================== -->
-  <target name="prepare">
+  <target name="prepare" depends="check.contrib">
     <mkdir dir="${classes}" />
 
-    <condition property="is-java-1.6">
+    <!-- Ant does not always set ant.java.version correctly.  (E.g., Ant
+	 1.7.1 w/ Java 1.7 sets it to 1.6).  Obtain it from java.version
+	 System property if possible. -->
+
+    <propertyregex property="my.ant.java.version"
+		   input="${java.version}"
+		   regexp="^([0-9]+\.[0-9]+).*"
+		   replace="\1"
+		   defaultValue="${ant.java.version}"
+		   />
+
+    <condition property="is-java-ge-1.6">
      <or>
-      <equals arg1="1.6" arg2="${ant.java.version}"/>
-      <equals arg1="1.7" arg2="${ant.java.version}"/>
+      <equals arg1="1.6" arg2="${my.ant.java.version}"/>
+      <equals arg1="1.7" arg2="${my.ant.java.version}"/>
+      <equals arg1="1.8" arg2="${my.ant.java.version}"/>
      </or>
     </condition>
 
-    <condition property="is-java-1.7">
+    <condition property="is-java-le-1.6">
      <or>
-      <equals arg1="1.7" arg2="${ant.java.version}"/>
+      <equals arg1="1.6" arg2="${my.ant.java.version}"/>
+     </or>
+    </condition>
+
+    <condition property="is-java-ge-1.7">
+     <or>
+      <equals arg1="1.7" arg2="${my.ant.java.version}"/>
+      <equals arg1="1.8" arg2="${my.ant.java.version}"/>
+     </or>
+    </condition>
+
+    <condition property="is-java-ge-1.8">
+     <or>
+      <equals arg1="1.8" arg2="${my.ant.java.version}"/>
      </or>
     </condition>
 
     <!-- Require at least Java 1.6, but allow builds if force is set -->
-    <condition property="is-sufficient-java-version">
+    <condition property="is-satisfy-java-min-version">
      <or>
-      <istrue value="${is-java-1.6}" />
+      <istrue value="${is-java-ge-1.6}" />
       <istrue value="${force}" />
      </or>
     </condition>
 
-    <fail unless="is-sufficient-java-version">
-Java ${ant.java.version} found, 1.6 required
+    <fail unless="is-satisfy-java-min-version">
+Java ${my.ant.java.version} found, 1.6 required
     </fail>
+
+    <!-- Determine whether java version is compatible with release
+	 requirements -->
+    <condition property="is-satisfy-java-max-version">
+     <or>
+      <istrue value="${is-java-le-1.6}" />
+     </or>
+    </condition>
 
     <condition property="detected.os" value="unix">
       <os family="unix"/>
@@ -788,6 +802,11 @@ Java ${ant.java.version} found, 1.6 required
     <condition property="detected.os" value="windows">
       <os family="dos"/>
     </condition>
+  </target>
+
+  <target name="require.release.java.version" depends="prepare">
+    <fail unless="is-satisfy-java-max-version"
+          message="This target must be run with Java 1.6; you are using Java ${my.ant.java.version}"/>
   </target>
 
   <!-- ==================================================================== -->
@@ -817,7 +836,7 @@ Java ${ant.java.version} found, 1.6 required
   </target>
 
   <target name="-check-if-1.7" depends="prepare" >
-    <fail unless="is-java-1.7">
+    <fail unless="is-java-ge-1.7">
 The target you have selected requires compiling under JDK 1.7.
     </fail>
   </target>
@@ -868,6 +887,7 @@ The target you have selected requires compiling under JDK 1.7.
     <delete file="${lockss.ant.jar}" quiet="true"/>
     <delete file="${lockss.platform.jar}" quiet="true"/>
     <delete file="${test.classpath.file}" quiet="true"/>
+    <delete file="${test.param.classpath.file}" quiet="true"/>
     <delete file="${run.classpath.file}" quiet="true"/>
     <delete file="${openbsd.classpath.file}" quiet="true"/>
     <delete file="${openbsd.packinglist.file}" quiet="true"/>
@@ -969,6 +989,7 @@ The target you have selected requires compiling under JDK 1.7.
     <copy todir="${classes}" >
        <fileset dir="${src}" >
           <include name="**/*.xml"/>   <!-- mapping files in various dirs -->
+          <include name="**/*.dtd"/>
           <include name="**/*.props"/>
           <include name="**/*.keystore"/>
           <include name="commons-logging.properties"/>
@@ -993,7 +1014,7 @@ The target you have selected requires compiling under JDK 1.7.
              cpid="test.compile.classpath" >
      <javacelem>
        <include name="**/*.java"/>
-       <excludesfile name="${requires-1.7}" unless="is-java-1.7" />
+       <excludesfile name="${requires-1.7}" unless="is-java-ge-1.7" />
      </javacelem>
     </dojavac>
 
@@ -1146,7 +1167,7 @@ The target you have selected requires compiling under JDK 1.7.
              value="now"/>
       <entry key="build.timestamp"
 	     type="date"
-	     pattern="dd-MMM-yy' 'HH:mm:ss"
+	     pattern="dd-MMM-yy' 'HH:mm:ss' 'zzz"
 	     value="now"/>
       <entry key="build.user.name" value="${user.name}"/>
       <entry key="build.host" value="${hostname}"/>
@@ -1382,6 +1403,12 @@ Must specify output dir with -Doutdir=dir
     <pathconvert refid="tools.test.run.classpath" property="tmp.test.clspth"
       targetos="${detected.os}" />
     <echo message="${tmp.test.clspth}" file="${test.classpath.file}"/>
+    <!-- Make a parameterized version -->
+    <pathconvert refid="tools.test.run.classpath" property="tmp.param.test.clspth"
+      targetos="${detected.os}" >
+      <map from="${lib}" to="$${LIB_DIR}" />
+    </pathconvert>
+    <echo message="${tmp.param.test.clspth}" file="${test.param.classpath.file}"/>
   </target>
 
   <!-- ==================================================================== -->
@@ -1865,7 +1892,7 @@ published on the Web. http://www.lockss.org
              use="${use}"
              author="${author}"
              version="${version}"
-	     access="protected"
+	     access="package"
              noqualifier="${noqualifier}"
              windowtitle="LOCKSS API"
              doctitle="LOCKSS"
@@ -2192,7 +2219,7 @@ published on the Web. http://www.lockss.org
           <include name="${unit.include}" />
           <exclude name="${exclude}" />
           <excludesfile name="${excludesfile}" if="excludesfile" />
-          <excludesfile name="${requires-1.7}" unless="is-java-1.7" />
+          <excludesfile name="${requires-1.7}" unless="is-java-ge-1.7" />
         </fileset>
       </batchtest>
      </junitelem>
@@ -2214,7 +2241,7 @@ published on the Web. http://www.lockss.org
           <include name="${func.include}" />
           <exclude name="${exclude}" />
           <excludesfile name="${excludesfile}" if="excludesfile" />
-          <excludesfile name="${requires-1.7}" unless="is-java-1.7" />
+          <excludesfile name="${requires-1.7}" unless="is-java-ge-1.7" />
         </fileset>
       </batchtest>
      </junitelem>
@@ -2236,7 +2263,7 @@ published on the Web. http://www.lockss.org
           <include name="${plug.include}" />
           <exclude name="${exclude}" />
           <excludesfile name="${excludesfile}" if="excludesfile" />
-          <excludesfile name="${requires-1.7}" unless="is-java-1.7" />
+          <excludesfile name="${requires-1.7}" unless="is-java-ge-1.7" />
         </fileset>
       </batchtest>
      </junitelem>
@@ -2306,12 +2333,12 @@ Test results in ${test.results}
       <fileset id="test.one.filesetid" dir="${test.src}">
 	 <include name="**/${class}.java" />
          <excludesfile name="${excludesfile}" if="excludesfile" />
-         <excludesfile name="${requires-1.7}" unless="is-java-1.7" />
+         <excludesfile name="${requires-1.7}" unless="is-java-ge-1.7" />
       </fileset>
       <fileset id="test.one.plugin.filesetid" dir="${plugins.test.src}">
 	 <include name="**/${class}.java" />
          <excludesfile name="${excludesfile}" if="excludesfile" />
-         <excludesfile name="${requires-1.7}" unless="is-java-1.7" />
+         <excludesfile name="${requires-1.7}" unless="is-java-ge-1.7" />
       </fileset>
       <!-- test whether fileset is empty by converting it to a string -->
       <pathconvert refid="test.one.filesetid" property="test.one.files"
@@ -2348,7 +2375,7 @@ Test results in ${test.results}
           <include name="**/Test*.java" />
 	  <include name="**/Func*.java"/>
           <excludesfile name="${excludesfile}" if="excludesfile" />
-          <excludesfile name="${requires-1.7}" unless="is-java-1.7" />
+          <excludesfile name="${requires-1.7}" unless="is-java-ge-1.7" />
        </fileset>
       </batchtest>
      </junitelem>
@@ -2603,7 +2630,7 @@ Test results in ${test.results}
 
   <!-- ==================================================================== -->
   <target name="checkout-and-build"
-     depends="check.contrib,get.cvs.tag"
+     depends="require.release.java.version,check.contrib,get.cvs.tag"
      description="Checkout current cvs into temp dir, build and test all." >
    <property name="cvstag" value="" />
    <property name="target" value="test-all" />
@@ -2716,6 +2743,7 @@ Test results in ${test.results}
 	   inheritAll="false">
        <property name="ant-contrib.loaded" value="${ant-contrib.loaded}" />
        <property name="halt" value="${halt}" />
+       <property name="loglevel" value="${loglevel}" />
 <!--        <property name="excludesfile" value="${excludesfile} if=excludesfile" /> -->
        <property name="build.compiler" value="modern" />
      </ant>

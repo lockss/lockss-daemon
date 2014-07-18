@@ -1,5 +1,5 @@
 /*
- * $Id: ParticipantWsResult.java,v 1.1.2.2 2014-05-05 17:32:30 wkwilson Exp $
+ * $Id: ParticipantWsResult.java,v 1.1.2.3 2014-07-18 15:58:58 wkwilson Exp $
  */
 
 /*
@@ -29,13 +29,12 @@
  in this Software without prior written authorization from Stanford University.
 
  */
+package org.lockss.ws.entities;
 
 /**
  * Container for the information related to a poll participant that is the
  * result of a query.
  */
-package org.lockss.ws.entities;
-
 public class ParticipantWsResult {
   private String peerId;
   private String peerStatus;
@@ -51,78 +50,156 @@ public class ParticipantWsResult {
   private Long lastStateChange;
   private Boolean isExParticipant;
 
+  /**
+   * Provides the peer identifier.
+   * 
+   * @return a String with the identifier.
+   */
   public String getPeerId() {
     return peerId;
   }
   public void setPeerId(String peerId) {
     this.peerId = peerId;
   }
+
+  /**
+   * Provides the peer status.
+   * 
+   * @return a String with the status.
+   */
   public String getPeerStatus() {
     return peerStatus;
   }
   public void setPeerStatus(String peerStatus) {
     this.peerStatus = peerStatus;
   }
+
+  /**
+   * Provides an indication of whether the participant has voted.
+   * 
+   * @return a Boolean with the indication.
+   */
   public Boolean getHasVoted() {
     return hasVoted;
   }
   public void setHasVoted(Boolean hasVoted) {
     this.hasVoted = hasVoted;
   }
+
+  /**
+   * Provides the participant agreement percentage.
+   * 
+   * @return a Float with the agreement percentage.
+   */
   public Float getPercentAgreement() {
     return percentAgreement;
   }
   public void setPercentAgreement(Float percentAgreement) {
     this.percentAgreement = percentAgreement;
   }
+
+  /**
+   * Provides the count of votes in agreement.
+   * 
+   * @return a Long with the count.
+   */
   public Long getAgreedVoteCount() {
     return agreedVoteCount;
   }
   public void setAgreedVoteCount(Long agreedVoteCount) {
     this.agreedVoteCount = agreedVoteCount;
   }
+
+  /**
+   * Provides the count of votes in disagreement.
+   * 
+   * @return a Long with the count.
+   */
   public Long getDisagreedVoteCount() {
     return disagreedVoteCount;
   }
   public void setDisagreedVoteCount(Long disagreedVoteCount) {
     this.disagreedVoteCount = disagreedVoteCount;
   }
+
+  /**
+   * Provides the count of votes as poller.
+   * 
+   * @return a Long with the count.
+   */
   public Long getPollerOnlyVoteCount() {
     return pollerOnlyVoteCount;
   }
   public void setPollerOnlyVoteCount(Long pollerOnlyVoteCount) {
     this.pollerOnlyVoteCount = pollerOnlyVoteCount;
   }
+
+  /**
+   * Provides the count of votes as voter.
+   * 
+   * @return a Long with the count.
+   */
   public Long getVoterOnlyVotecount() {
     return voterOnlyVotecount;
   }
   public void setVoterOnlyVotecount(Long voterOnlyVotecount) {
     this.voterOnlyVotecount = voterOnlyVotecount;
   }
+
+  /**
+   * Provides the count of bytes hashed.
+   * 
+   * @return a Long with the byte count.
+   */
   public Long getBytesHashed() {
     return bytesHashed;
   }
   public void setBytesHashed(Long bytesHashed) {
     this.bytesHashed = bytesHashed;
   }
+
+  /**
+   * Provides the count of bytes read.
+   * 
+   * @return a Long with the byte count.
+   */
   public Long getBytesRead() {
     return bytesRead;
   }
   public void setBytesRead(Long bytesRead) {
     this.bytesRead = bytesRead;
   }
+
+  /**
+   * Provides the participant current state.
+   * 
+   * @return a String with the current state.
+   */
   public String getCurrentState() {
     return currentState;
   }
   public void setCurrentState(String currentState) {
     this.currentState = currentState;
   }
+
+  /**
+   * Provides the timestamp of the last state change.
+   * 
+   * @return a Long with the timestamp as the number of milliseconds since the
+   *         beginning of 1970.
+   */
   public Long getLastStateChange() {
     return lastStateChange;
   }
   public void setLastStateChange(Long lastStateChange) {
     this.lastStateChange = lastStateChange;
   }
+
+  /**
+   * Provides an indication of whether the peer is an ex-participant.
+   * 
+   * @return a Boolean with the indication.
+   */
   public Boolean getIsExParticipant() {
     return isExParticipant;
   }

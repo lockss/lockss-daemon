@@ -17,7 +17,7 @@
   </entry>   
   <entry>
     <string>plugin_version</string>
-    <string>48</string>
+    <string>51</string>
   </entry>
 <!-- Now a child of BaseAtypon which lives in a different directory "atypon" -->  
   <entry>
@@ -26,7 +26,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>11</string>
+    <string>14</string>
   </entry>   
   <entry>
     <string>plugin_feature_version_map</string>
@@ -37,11 +37,11 @@
       </entry>
       <entry>
         <string>Poll</string>
-	    <string>25</string>
+	    <string>28</string>
       </entry>
       <entry>
         <string>Substance</string>
-	    <string>3</string>
+	    <string>4</string>
       </entry>
     </map>
   </entry>
@@ -104,33 +104,38 @@
   <entry>
     <string>au_rate_limiter_info</string>
     <org.lockss.plugin.RateLimiterInfo>
-    <rate>1/6s</rate>
-    <cond>
-	<entry>
-	  <org.lockss.daemon.CrawlWindows-Daily>
-	    <from>12:00</from>
-	    <to>24:00</to>
-	    <timeZoneId>America/Los_Angeles</timeZoneId>
-	  </org.lockss.daemon.CrawlWindows-Daily>
-	  <org.lockss.plugin.RateLimiterInfo>
-	    <rate>1/2s</rate>
-	  </org.lockss.plugin.RateLimiterInfo>
-	</entry>
-    <entry>
-	  <org.lockss.daemon.CrawlWindows-Daily>
-	    <from>24:00</from>
-	    <to>12:00</to>
-	    <timeZoneId>America/Los_Angeles</timeZoneId>
-	  </org.lockss.daemon.CrawlWindows-Daily>
-	  <org.lockss.plugin.RateLimiterInfo>
-	    <rate>1/6s</rate>
+      <!-- This very next rate is there only for the plugin to be well-formed, it does not actually have any effect -->
+      <rate>1/6s</rate>
+      <cond>
+        <entry>
+          <org.lockss.daemon.CrawlWindows-Daily>
+            <from>12:00</from>
+            <to>24:00</to>
+            <timeZoneId>America/Los_Angeles</timeZoneId>
+          </org.lockss.daemon.CrawlWindows-Daily>
+          <org.lockss.plugin.RateLimiterInfo>
+            <rate>1/2s</rate>
+          </org.lockss.plugin.RateLimiterInfo>
+        </entry>
+        <entry>
+          <org.lockss.daemon.CrawlWindows-Daily>
+            <from>24:00</from>
+            <to>12:00</to>
+            <timeZoneId>America/Los_Angeles</timeZoneId>
+          </org.lockss.daemon.CrawlWindows-Daily>
+          <org.lockss.plugin.RateLimiterInfo>
+            <rate>1/6s</rate>
+          </org.lockss.plugin.RateLimiterInfo>
+        </entry>
+      </cond>
     </org.lockss.plugin.RateLimiterInfo>
-	</entry>
-   </cond>
-  </org.lockss.plugin.RateLimiterInfo>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
     <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_au_config_user_msg</string>
+    <string>Atypon Systems hosts this archival unit (AU) and requires that you &lt;a href=&apos;http://www.tandfonline.com/action/institutionLockssIpChange&apos;&gt;register the IP address of this LOCKSS box in your institutional account as a crawler&lt;/a&gt; before allowing your LOCKSS box to harvest this AU. Failure to comply with this publisher requirement may trigger crawler traps on the Atypon Systems platform, and your LOCKSS box or your entire institution may be temporarily banned from accessing the site. You only need to register the IP address of your LOCKSS box once for all AUs published by Taylor &amp; Francis.</string>
   </entry>
 </map>

@@ -1,10 +1,10 @@
 /*
- * $Id: MetaPressUrlNormalizer.java,v 1.2 2013-03-07 20:28:16 alexandraohlson Exp $
+ * $Id: MetaPressUrlNormalizer.java,v 1.2.22.1 2014-07-18 15:54:38 wkwilson Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,22 +32,27 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.metapress;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.UrlNormalizer;
+import org.lockss.util.Logger;
 
 
 public class MetaPressUrlNormalizer implements UrlNormalizer {
-
-  protected static final String[] QUERY_DISQUALIFY = new String[] {
-    "sortorder=",
-  };
-
+  
+  protected static Logger logger = Logger.getLogger(MetaPressUrlNormalizer.class);
+  
+  // Should not disqualify query where like  &p_o=10 or &p_o=20 (these are pages on TOC)
+  protected static Pattern PAT_DISQUALIFY =
+      Pattern.compile("^sortorder=(?!.*[&amp;]p_o=[1-9])");
+  
   /*
    * arguments we want to remove
    * p: some random number/letter - seems to be date/time marker, not necessary to view item
    * pi: related to issue numbering to track previous/next. Not necessary to view
-   * p_o: related to volume numbering to track previous/next. Not necessary to view
    * For example of above:
    * http://inderscience.metapress.com/content/m1804w66tn802h54/?p=9bc3f3743d4f48d5ac0793c7ab0d2ccf&pi=3
    * http://inderscience.metapress.com/content/m1804w66tn802h54
@@ -58,13 +63,16 @@ public class MetaPressUrlNormalizer implements UrlNormalizer {
    *    a=# (which language to present article text in, 2011+)
    *    k=# (which language to present keywords in, 2011+)
    *    example: http://liverpool.metapress.com/content/5quu123154411492/?k=9&a=12
+   *  Turns out we need
+   *    p_o: related to pages of articles in TOC, where p_o != 0
    */
   protected static final String[] QUERY_REMOVE = new String[] {
     "p=",
     "pi=",
-    "p_o=",
+    "p_o=0",
     "mark=",
     "sw=",
+    "sortorder="
   };
   
   public static String normalizeQuery(String query) {
@@ -74,16 +82,15 @@ public class MetaPressUrlNormalizer implements UrlNormalizer {
     }
     
     // Disqualifying prefix: empty result
-    for (String prefix : QUERY_DISQUALIFY) {
-      if (query.startsWith(prefix)) {
-        return "";
-      }
+    Matcher mat = PAT_DISQUALIFY.matcher(query);
+    if (mat.find()) {
+      return "";
     }
     
     // Potentially non-empty result
     StringBuilder sb = new StringBuilder(query.length());
     int begin = 0;
-
+    
     while (begin < query.length()) {
       // Move past an ampersand
       if (query.charAt(begin) == '&') {
@@ -124,7 +131,7 @@ public class MetaPressUrlNormalizer implements UrlNormalizer {
     if (questionMark < 0) {
       return url;
     }
-
+    
     String query = url.substring(questionMark + 1);
     String simplifiedQuery = normalizeQuery(query);
     if (simplifiedQuery == null || simplifiedQuery.length() == 0) {

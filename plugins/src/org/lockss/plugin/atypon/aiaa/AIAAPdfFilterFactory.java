@@ -1,5 +1,5 @@
 /*
- * $Id: AIAAPdfFilterFactory.java,v 1.1 2013-07-31 21:43:58 alexandraohlson Exp $
+ * $Id: AIAAPdfFilterFactory.java,v 1.1.6.1 2014-07-18 15:54:39 wkwilson Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.plugin.atypon.aiaa;
 import org.lockss.filter.pdf.ExtractingPdfFilterFactory;
 import org.lockss.pdf.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.atypon.BaseAtyponPdfFilterFactory.BaseAtyponPdfDocumentFactory;
 
 /*
  * The AIAA pdf files have the CreationDate and ModDate and the two ID numbers in the trailer
@@ -64,6 +65,10 @@ public class AIAAPdfFilterFactory extends ExtractingPdfFilterFactory {
       }
     }
     
+  }
+
+  public AIAAPdfFilterFactory() {
+    super(new BaseAtyponPdfDocumentFactory()); // FIXME 1.66
   }
   
   @Override

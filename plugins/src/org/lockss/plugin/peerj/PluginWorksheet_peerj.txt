@@ -255,6 +255,16 @@ Notes
 Anything else that you think the plugin writer needs to be aware of 
 in terms of URL layout.
 
+** PeerJ uses external libraries:
+  https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js
+  https://cdn.mathjax.org/mathjax/2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML,Safe
+  https://cdn.mathjax.org/mathjax/2.4-latest/extensions/Safe.js?rev=2.4-beta-2
+  https://cdn.mathjax.org/mathjax/2.4-latest/config/TeX-AMS-MML_HTMLorMML.js?rev=2.4-beta-2
+  This is becoming more standard.  We have run a number of publishers using
+  external libraries, such as SilverchairJournal. Tom and Thib are working
+  on a daemon solution for this issue. Until then PeerJ plugin can not be
+  released to production.
+
 --------------------------URL NORMALIZATION-------------------------
 As you click around from article to article or issue TOC are you 
 getting arguments on the end of 
@@ -324,7 +334,9 @@ sfxlink javascript commands
   section for ris, bibtex, pdf (additional), and xml files. It would be 
   nice to have a function such as "remove all left column except section 
   Download as". In case the publisher makes errors in these links, 
-  we can catch these by hash comparing.
+  we can catch these by hash comparing. (Daemon 1.65.4 now has 
+  HtmlNodeFilters.allExceptSubtree() that we can remove all left column, except
+  "Download as").
   - right column
   - footer
   - questions/comments/feedback neear footer
@@ -333,6 +345,10 @@ sfxlink javascript commands
   - (flag|follow|unfollow|metrics|share)modal
 
 Anything else you think might need to be removed from hashing??
+
+----------------------XML HASH FILTERING---------------------------
+* PeerJ has timestamp in their .unixref files
+  https://peerj.com/articles/46.unixref
 
 -------------------HTML CRAWL FILTERING-----------------------------
 If the URL pattern for articles is non-deterministic (that is, it 

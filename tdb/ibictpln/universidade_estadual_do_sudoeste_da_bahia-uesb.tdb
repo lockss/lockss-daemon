@@ -51,7 +51,8 @@
       au < released ; 2010 ; 8 ; Estudos da Língua(gem) Volume 8 ; 2010 >
       au < released ; 2011 ; 9 ; Estudos da Língua(gem) Volume 9 ; 2011 >
       au < released ; 2012 ; 10 ; Estudos da Língua(gem) Volume 10 ; 2012 >
-      au < expected ; 2013 ; 11 ; Estudos da Língua(gem) Volume 11 ; 2013 >
+      au < manifest ; 2013 ; 11 ; Estudos da Língua(gem) Volume 11 ; 2013 >
+      au < expected ; 2014 ; 12 ; Estudos da Língua(gem) Volume 12 ; 2014 >
 
   }
 
@@ -175,8 +176,9 @@
       param[base_url] = http://periodicos.uesb.br/
       param[journal_id] = rbba
 
-      au < ready ; 2012 ; 1 ; Revista Binacional Brasil-Argentina Volume 1 ; 2012 >
-      au < expected ; 2013 ; 2 ; Revista Binacional Brasil-Argentina Volume 2 ; 2013 >
+      au < released ; 2012 ; 1 ; Revista Binacional Brasil-Argentina Volume 1 ; 2012 >
+      au < manifest ; 2013 ; 2 ; Revista Binacional Brasil-Argentina Volume 2 ; 2013 >
+      au < expected ; 2014 ; 3 ; Revista Binacional Brasil-Argentina Volume 3 ; 2014 >
 
   }
 

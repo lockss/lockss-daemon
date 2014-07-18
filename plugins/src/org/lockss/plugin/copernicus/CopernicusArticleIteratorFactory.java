@@ -1,5 +1,5 @@
 /*
- * $Id: CopernicusArticleIteratorFactory.java,v 1.2 2012-11-19 21:03:18 alexandraohlson Exp $
+ * $Id: CopernicusArticleIteratorFactory.java,v 1.2.30.1 2014-07-18 15:54:39 wkwilson Exp $
  */
 
 /*
@@ -52,90 +52,87 @@ public class CopernicusArticleIteratorFactory
     implements ArticleIteratorFactory,
                ArticleMetadataExtractorFactory {
 
-  protected static Logger log = Logger.getLogger("CopernicusArticleIteratorFactory");
+  protected static Logger log = Logger.getLogger(CopernicusArticleIteratorFactory.class);
   
-  protected static final String ROOT_TEMPLATE = "\"%s%s/\", base_url, volume_name"; // params from tdb file corresponding to AU  
-  // In the pattern, the bit in parens (ending in supplement) excludes thos patterns that end in <blah>supplement.pdf, but takes other <blah>.pdf
- // protected static final String PATTERN_TEMPLATE = "\"^%s%s/[0-9]+/[0-9]+/(?![A-Za-z0-9-]+supplement\\.pdf)[A-Za-z0-9-]+\\.pdf\", base_url,volume_name";
- // pick up the abstract as the logical definition of one article
-// although the format seems to be consistent, don't box in the alphanum sequence, just the depth
-  protected static final String PATTERN_TEMPLATE = "\"^%s%s/[^/]+/[^/]+/[^/]+\\.html\", base_url,volume_name";
+  protected static final String ROOT_TEMPLATE = "\"%s%s/\", base_url, volume_name"; 
+  // although the format seems to be consistent, don't box in the alphanum sequence, just the depth
+  // since we pick up ".pdf" as well, be sure not to pick up "-supplement.pdf" as well
+  //(?<!-supplement) is negative lookbehind and will cancel out the *.pdf if it matches
+  protected static final String PATTERN_TEMPLATE = "\"^%s%s/[^/]+/[^/]+/[^/]+(?<!-supplement)\\.(html|pdf)\", base_url,volume_name";
   
-  @Override
-  public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
-                                                      MetadataTarget target)
-      throws PluginException {
-    return new CopernicusArticleIterator(au,
-                                         new SubTreeArticleIterator.Spec()
-                                             .setTarget(target)
-                                             .setRootTemplate(ROOT_TEMPLATE)
-                                             .setPatternTemplate(PATTERN_TEMPLATE));
-  }
 
-  protected static class CopernicusArticleIterator extends SubTreeArticleIterator {
-    
-//  Use parens to group the base article URL 
-    protected Pattern ABSTRACT_PATTERN = Pattern.compile("(/[^/]+/[^/]+/[^/]+)\\.html$", Pattern.CASE_INSENSITIVE);
-
-    public CopernicusArticleIterator(ArchivalUnit au,
-                                     SubTreeArticleIterator.Spec spec) {
-      super(au, spec);
-    }
-    
-    @Override
-    protected ArticleFiles createArticleFiles(CachedUrl cu) {
-      String url = cu.getUrl();
-      log.info("article url?: " + url);
+  // primary aspects of the article
+  final Pattern ABSTRACT_PATTERN = Pattern.compile("(/[^/]+/[^/]+/[^/]+)\\.html$", Pattern.CASE_INSENSITIVE);
+  final Pattern PDF_PATTERN = Pattern.compile("(/[^/]+/[^/]+/[^/]+)\\.pdf$", Pattern.CASE_INSENSITIVE);
+  
+  // how to change from one form (aspect) of article to another
+  final String ABSTRACT_REPLACEMENT = "$1.html";
+  final String PDF_REPLACEMENT = "$1.pdf";
+  // secondary aspect replacements
+  final String XML_REPLACEMENT = "$1.xml";
+  final String SUPPL_REPLACEMENT = "$1-supplement.pdf";
+  final String SUPPL_ZIP_REPLACEMENT = "$1-supplement.zip";
+  final String RIS_REPLACEMENT = "$1.ris";
+  final String BIB_REPLACEMENT = "$1.bib";
+  
+    public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) throws PluginException {
+      SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
       
-      Matcher mat = ABSTRACT_PATTERN.matcher(url);
-      if (mat.find()) {
-        return processAbstract(cu, mat);
-      }
-      log.warning("Mismatch between article iterator factory and article iterator: " + url);
-      return null;
-    }
-    
-    protected ArticleFiles processAbstract(CachedUrl cu, Matcher mat) {
-      ArticleFiles af = new ArticleFiles();
-
-      af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, cu);
-      af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE, cu);
-      guessAdditionalFiles(af, mat);
+      builder.setSpec(target,
+          ROOT_TEMPLATE,
+          PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
       
-      return af;
-      }
-    
-    protected void guessAdditionalFiles(ArticleFiles af, Matcher mat) {      
-      CachedUrl pdfCu = au.makeCachedUrl(mat.replaceFirst("$1.pdf"));
-      CachedUrl risCu = au.makeCachedUrl(mat.replaceFirst("$1.ris"));
-      CachedUrl bibCu = au.makeCachedUrl(mat.replaceFirst("$1.bib"));
-      CachedUrl supCu = au.makeCachedUrl(mat.replaceFirst("$1-supplement.pdf"));
-      //.xml file is another version of metadata plus references & abstract. ignore it.
+      // The order in which these aspects are added is important. They determine which will trigger
+      // the ArticleFiles and if you are only counting articles (not pulling metadata) then the 
+      // lower aspects aren't looked for, once you get a match.
 
-      // note that if there is no PDF you will not have a ROLE_FULL_TEXT_CU!!
-      if (pdfCu != null && pdfCu.hasContent()) {
-        af.setFullTextCu(pdfCu);
-        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
-      }
-      AuUtil.safeRelease(pdfCu);
+      // set up PDF to be an aspect that will trigger an ArticleFiles
+      builder.addAspect(PDF_PATTERN,
+          PDF_REPLACEMENT,
+          ArticleFiles.ROLE_FULL_TEXT_PDF);
+      
+      // set up Abstract to be an aspect that will trigger an ArticleFiles
+      // NOTE - for the moment this also means an abstract could be considered a FULL_TEXT_CU until this is deprecated
+      // though the ordered list for role full text will mean if any of the others are there, they will become the FTCU
+      builder.addAspect(ABSTRACT_PATTERN,
+          ABSTRACT_REPLACEMENT,
+          ArticleFiles.ROLE_ABSTRACT,
+          ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE,
+          ArticleFiles.ROLE_ARTICLE_METADATA);
 
-      if (risCu != null && risCu.hasContent()) {
-        af.setRoleCu(ArticleFiles.ROLE_CITATION + "Ris", risCu);
-        af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, risCu);
-      }
-      AuUtil.safeRelease(risCu);
+      // set a role, but it isn't sufficient to trigger an ArticleFiles
+      builder.addAspect(XML_REPLACEMENT,
+          ArticleFiles.ROLE_FULL_TEXT_XML);
 
-      if (bibCu != null && bibCu.hasContent()) {
-        af.setRoleCu(ArticleFiles.ROLE_CITATION + "Bibtex", bibCu);
-      } 
-      AuUtil.safeRelease(bibCu);
+      // set a role, but it isn't sufficient to trigger an ArticleFiles
+      builder.addAspect(SUPPL_REPLACEMENT,
+          ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS);
+      // set a role, but it isn't sufficient to trigger an ArticleFiles
+      builder.addAspect(SUPPL_ZIP_REPLACEMENT,
+          ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS);
+      
+      // set a role, but it isn't sufficient to trigger an ArticleFiles
+      builder.addAspect(RIS_REPLACEMENT,
+          ArticleFiles.ROLE_ARTICLE_METADATA,
+          ArticleFiles.ROLE_CITATION_RIS);
 
-      if (supCu != null && supCu.hasContent()) {
-        af.setRoleCu(ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS, supCu);
-      }
-      AuUtil.safeRelease(supCu);
+      // set a role, but it isn't sufficient to trigger an ArticleFiles
+      builder.addAspect(BIB_REPLACEMENT,
+          ArticleFiles.ROLE_CITATION_BIBTEX);
+
+      // The order in which we want to define full_text_cu.  
+      // First one that exists will get the job
+      builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF,
+      ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE);  
+
+      // set the ROLE_ARTICLE_METADATA to the first one that exists 
+      builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA,
+          ArticleFiles.ROLE_CITATION_RIS,
+          ArticleFiles.ROLE_ABSTRACT);
+
+      return builder.getSubTreeArticleIterator();
     }
-  }
+
   
   @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)

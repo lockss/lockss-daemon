@@ -1,18 +1,21 @@
 #!/bin/sh
 
 TITLE_DBS=""
+PROPS=""
 PLN=prod
 HEAP_ARG=-Xmx512m
 
 while true ; do
   case "$1" in
-    "-classpath" )
-      if [ -z "$CLASSPATH" ] ; then
-	CLASSPATH="$2"
+    "-classpath" | "-cp" )
+      if [ -z "$AUX_CLASSPATH" ] ; then
+	AUX_CLASSPATH="$2"
       else
-	CLASSPATH="$CLASSPATH":"$2"
+	AUX_CLASSPATH="$AUX_CLASSPATH":"$2"
       fi
-      echo "CLASSPATH=$CLASSPATH"
+      shift; shift; continue;;
+    "-libdir" )
+      LIB_DIR="$2"
       shift; shift; continue;;
     "-debug" )
       args="$args -Dorg.lockss.defaultLogLevel=DEBUG"
@@ -25,6 +28,9 @@ while true ; do
       shift; continue;;
     "-titlepat" )
       TITLE_DBS="${TITLE_DBS} $2"
+      shift; shift; continue;;
+    "-props" )
+      PROPS="${PROPS} $2"
       shift; shift; continue;;
     "-pln" )
       PLN="$2"
@@ -73,8 +79,11 @@ if [ -z "${TITLE_DBS}" -a -d ${TDB_DIR} ]; then
   TITLE_DBS="`find ${TDB_DIR} -maxdepth 1 -name \*.xml | sort`"
 fi
 
+if [ -z "${PROPS}" ]; then
+  PROPS=../common.xml
+fi
 
-PROP_URL_LIST="../common.xml ${TITLE_DBS} lockss.txt lockss.opt ${EXTRA_PROP_URLS}"
+PROP_URL_LIST="${PROPS} ${TITLE_DBS} lockss.txt lockss.opt ${EXTRA_PROP_URLS}"
 # NB leading space meaningful here
 PROP_ARGS=`echo " " $PROP_URL_LIST | sed 's/ [ ]*/ -p /g'`
 
@@ -83,7 +92,18 @@ mkdir -p lib
 cp "${PROJECT_DIR}/lib/lockss.jar" lib
 cp "${PROJECT_DIR}/lib/lockss-test.jar" lib
 cp "${PROJECT_DIR}/lib/lockss-plugins.jar" lib
-CLASSPATH=lib/lockss.jar:lib/lockss-test.jar:lib/lockss-plugins.jar:`cat "${PROJECT_DIR}/test/test-classpath"`
+
+if [ -n "$LIB_DIR" ] ; then
+    LIB_DIR=`( cd "${LIB_DIR}"; pwd )`
+    CPSTR=`cat "../../../test/test-p-classpath"`
+    LIB_CP=`eval echo "${CPSTR}"`
+else
+    LIB_CP=`cat "${PROJECT_DIR}/test/test-classpath"`
+fi
+if [ -n "$AUX_CLASSPATH" ] ; then
+    AUX_CLASSPATH="$AUX_CLASSPATH":
+fi
+CLASSPATH=${AUX_CLASSPATH}lib/lockss.jar:lib/lockss-test.jar:lib/lockss-plugins.jar:${LIB_CP}
 # Transform paths when running under cygwin
 if [ "$TERM" = "cygwin" ]; then
   CLASSPATH=`cygpath -w -p $CLASSPATH`

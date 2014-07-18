@@ -1,5 +1,5 @@
 /*
- * $Id: MathematicalSciencesPublishersArticleIteratorFactory.java,v 1.4 2014-03-07 00:02:50 etenbrink Exp $
+ * $Id: MathematicalSciencesPublishersArticleIteratorFactory.java,v 1.4.2.1 2014-07-18 15:54:41 wkwilson Exp $
  */
 
 /*
@@ -56,9 +56,10 @@ implements ArticleIteratorFactory,
       "\"%s%s/%d/\", base_url, journal_id, year"; 
   
   protected static final String PATTERN_TEMPLATE =
-      "\"^%s%s/%d/[0-9-]+/p.+[.]xhtml\", base_url, journal_id, year";
+      "\"^%s%s/%d/[0-9-]+/p.+[.]xhtml$\", base_url, journal_id, year";
   
-  // various aspects of an article
+  // various article aspects
+  // note that the base url remains the same within a journal site
   // http://msp.org/involve/2013/6-1/p01.xhtml
   // http://msp.org/camcos/2012/7-2/p01-s.pdf
   // http://msp.org/camcos/2012/7-2/camcos-v7-n2-p01-p.pdf
@@ -76,6 +77,7 @@ implements ArticleIteratorFactory,
   protected static final String PPDF_REPLACEMENT = "$1/$2/$3$4$5/$1-v$3$4n$5-p$6-p.pdf";
   protected static final String ALT_SPDF_REPLACEMENT = "$1/$2/$3$4$5/$1-$2-$3-$6s.pdf";
   protected static final String ALT_PPDF_REPLACEMENT = "$1/$2/$3$4$5/$1-$2-$3-$6p.pdf";
+  protected static final String REFERENCE_REPLACEMENT = "$1/$2/$3$4$5/b$6.xhtml";
   
   // MSP publisher, article content may look like this but you do not know
   // how many of the aspects will exist for a particular journal
@@ -84,6 +86,7 @@ implements ArticleIteratorFactory,
   //  msp.org/<journal_id>/<year>/<voliss>/<page_id>s.pdf (screen pdf)
   //  msp.org/<journal_id>/<year>/<voliss>/<page_id>p.pdf (printer pdf)
   //  msp.org/<journal_id>/<year>/<voliss>/b<page>xhtml (references)
+  //  Not collected:
   //  msp.org/<journal_id>/<year>/<voliss>/f<page>xhtml (forward citations)
   //
 
@@ -104,11 +107,16 @@ implements ArticleIteratorFactory,
         ABSTRACT_PATTERN, ABSTRACT_REPLACEMENT,
         ArticleFiles.ROLE_ABSTRACT, ArticleFiles.ROLE_ARTICLE_METADATA);
     
-    // set up PDF to be an aspect that will trigger an ArticleFiles
+    // set up PDF to be an aspect
     builder.addAspect(
         Arrays.asList(SPDF_REPLACEMENT, PPDF_REPLACEMENT, 
             ALT_SPDF_REPLACEMENT, ALT_PPDF_REPLACEMENT),
         ArticleFiles.ROLE_FULL_TEXT_PDF);
+    
+    // set up minor reference aspect
+    builder.addAspect(
+        REFERENCE_REPLACEMENT,
+        ArticleFiles.ROLE_REFERENCES);
     
     // The order in which we want to define full_text_cu.
     // First one that exists will get the job

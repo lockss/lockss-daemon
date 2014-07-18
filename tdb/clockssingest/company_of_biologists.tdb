@@ -9,6 +9,7 @@
 
   plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
   implicit < status ; status2 ; year ; name ; param[volume_name] >
+  comment[0] = for tdb title list update go to http://www.biologists.com/journals.html
 
   {
   
@@ -36,6 +37,7 @@
     >
 
     param[base_url] = http://dev.biologists.org/
+    comment[notReady] = 404, 503 and 500 errors
 
     au < manifest ; exists ; 1953 ; Development Volume 1 ; 1 >
     au < manifest ; exists ; 1954 ; Development Volume 2 ; 2 >
@@ -157,24 +159,24 @@
     au < manifest ; exists ; 1993 ; Development Volume 118 ; 118 >
     au < manifest ; exists ; 1993 ; Development Volume 119 ; 119 >
     au < manifest ; exists ; 1994 ; Development Volume 120 ; 120 >
-    au < ready ; exists ; 1995 ; Development Volume 121 ; 121 >
-    au < testing ; exists ; 1996 ; Development Volume 122 ; 122 >
-    au < ready ; exists ; 1996 ; Development Volume 123 ; 123 >
-    au < testing ; exists ; 1997 ; Development Volume 124 ; 124 >
-    au < ready ; exists ; 1998 ; Development Volume 125 ; 125 >
+    au < crawling ; exists ; 1995 ; Development Volume 121 ; 121 >
+    au < notReady ; exists ; 1996 ; Development Volume 122 ; 122 >
+    au < crawling ; exists ; 1996 ; Development Volume 123 ; 123 >
+    au < ready ; exists ; 1997 ; Development Volume 124 ; 124 >
+    au < crawling ; exists ; 1998 ; Development Volume 125 ; 125 >
     au < testing ; exists ; 1999 ; Development Volume 126 ; 126 >
     au < testing ; exists ; 2000 ; Development Volume 127 ; 127 >
-    au < ready ; exists ; 2001 ; Development Volume 128 ; 128 >
-    au < ready ; exists ; 2002 ; Development Volume 129 ; 129 >
-    au < ready ; exists ; 2003 ; Development Volume 130 ; 130 >
-    au < ready ; exists ; 2004 ; Development Volume 131 ; 131 >
+    au < crawling ; exists ; 2001 ; Development Volume 128 ; 128 >
+    au < crawling ; exists ; 2002 ; Development Volume 129 ; 129 >
+    au < crawling ; exists ; 2003 ; Development Volume 130 ; 130 >
+    au < crawling ; exists ; 2004 ; Development Volume 131 ; 131 >
     au < testing ; exists ; 2005 ; Development Volume 132 ; 132 >
     au < testing ; exists ; 2006 ; Development Volume 133 ; 133 >
-    au < ready ; exists ; 2007 ; Development Volume 134 ; 134 >
+    au < crawling ; exists ; 2007 ; Development Volume 134 ; 134 >
     au < testing ; exists ; 2008 ; Development Volume 135 ; 135 >
     au < testing ; exists ; 2009 ; Development Volume 136 ; 136 >
     au < testing ; exists ; 2010 ; Development Volume 137 ; 137 >
-    au < finished ; crawling ; 2011 ; Development Volume 138 ; 138 >
+    au < finished ; frozen ; 2011 ; Development Volume 138 ; 138 >
     au < finished ; crawling ; 2012 ; Development Volume 139 ; 139 >
     au < crawling ; exists ; 2013 ; Development Volume 140 ; 140 >
     au < manifest ; exists ; 2014 ; Development Volume 141 ; 141 >
@@ -191,12 +193,13 @@
     >
 
     param[base_url] = http://dmm.biologists.org/
+    comment[notReady] = No permission statement on manifest page
 
-    au < testing ; exists ; 2008 ; Disease Models & Mechanisms Volume 1 ; 1 >
+    au < notReady ; exists ; 2008 ; Disease Models & Mechanisms Volume 1 ; 1 >
     au < testing ; exists ; 2009 ; Disease Models & Mechanisms Volume 2 ; 2 >
     au < testing ; exists ; 2010 ; Disease Models & Mechanisms Volume 3 ; 3 >
-    au < finished ; crawling ; 2011 ; Disease Models & Mechanisms Volume 4 ; 4 >
-    au < finished ; crawling ; 2012 ; Disease Models & Mechanisms Volume 5 ; 5 >
+    au < finished ; frozen ; 2011 ; Disease Models & Mechanisms Volume 4 ; 4 >
+    au < finished ; frozen ; 2012 ; Disease Models & Mechanisms Volume 5 ; 5 >
     au < crawling ; exists ; 2013 ; Disease Models & Mechanisms Volume 6 ; 6 >
     au < manifest ; exists ; 2014 ; Disease Models & Mechanisms Volume 7 ; 7 >
 
@@ -214,6 +217,7 @@
     comment[legacy] = 1853-1965 under a different name, with three series of synthetic volume names
 
     param[base_url] = http://jcs.biologists.org/
+    comment[notReady] = No permission statement on manifest page
 
     au < manifest ; exists ; 1966 ; Journal of Cell Science Volume 1 ; 1 >
     au < manifest ; exists ; 1967 ; Journal of Cell Science Volume 2 ; 2 >
@@ -325,20 +329,20 @@
     au < testing ; exists ; 1995 ; Journal of Cell Science Volume 108 ; 108 >
     au < testing ; exists ; 1996 ; Journal of Cell Science Volume 109 ; 109 >
     au < testing ; exists ; 1997 ; Journal of Cell Science Volume 110 ; 110 >
-    au < ready ; exists ; 1998 ; Journal of Cell Science Volume 111 ; 111 >
+    au < crawling ; exists ; 1998 ; Journal of Cell Science Volume 111 ; 111 >
     au < testing ; exists ; 1999 ; Journal of Cell Science Volume 112 ; 112 >
     au < testing ; exists ; 2000 ; Journal of Cell Science Volume 113 ; 113 >
     au < testing ; exists ; 2001 ; Journal of Cell Science Volume 114 ; 114 >
-    au < testing ; exists ; 2002 ; Journal of Cell Science Volume 115 ; 115 >
+    au < notReady ; exists ; 2002 ; Journal of Cell Science Volume 115 ; 115 >
     au < testing ; exists ; 2003 ; Journal of Cell Science Volume 116 ; 116 >
     au < testing ; exists ; 2004 ; Journal of Cell Science Volume 117 ; 117 >
     au < testing ; exists ; 2005 ; Journal of Cell Science Volume 118 ; 118 >
     au < testing ; exists ; 2006 ; Journal of Cell Science Volume 119 ; 119 >
     au < testing ; exists ; 2007 ; Journal of Cell Science Volume 120 ; 120 >
-    au < ready ; exists ; 2008 ; Journal of Cell Science Volume 121 ; 121 >
+    au < crawling ; exists ; 2008 ; Journal of Cell Science Volume 121 ; 121 >
     au < testing ; exists ; 2009 ; Journal of Cell Science Volume 122 ; 122 >
     au < testing ; exists ; 2010 ; Journal of Cell Science Volume 123 ; 123 >
-    au < finished ; crawling ; 2011 ; Journal of Cell Science Volume 124 ; 124 >
+    au < finished ; frozen ; 2011 ; Journal of Cell Science Volume 124 ; 124 >
     au < finished ; crawling ; 2012 ; Journal of Cell Science Volume 125 ; 125 >
     au < crawling ; exists ; 2013 ; Journal of Cell Science Volume 126 ; 126 >
     au < manifest ; exists ; 2014 ; Journal of Cell Science Volume 127 ; 127 >
@@ -554,10 +558,10 @@
     au < manifest ; exists ; 1994 ; Journal of Experimental Biology Volume 196 ; 196 >
     au < manifest ; exists ; 1994 ; Journal of Experimental Biology Volume 197 ; 197 >
     au < testing ; exists ; 1995 ; Journal of Experimental Biology Volume 198 ; 198 >
-    au < ready ; exists ; 1996 ; Journal of Experimental Biology Volume 199 ; 199 >
+    au < crawling ; exists ; 1996 ; Journal of Experimental Biology Volume 199 ; 199 >
     au < testing ; exists ; 1997 ; Journal of Experimental Biology Volume 200 ; 200 >
     au < testing ; exists ; 1998 ; Journal of Experimental Biology Volume 201 ; 201 >
-    au < ready ; exists ; 1999 ; Journal of Experimental Biology Volume 202 ; 202 >
+    au < crawling ; exists ; 1999 ; Journal of Experimental Biology Volume 202 ; 202 >
     au < testing ; exists ; 2000 ; Journal of Experimental Biology Volume 203 ; 203 >
     au < testing ; exists ; 2001 ; Journal of Experimental Biology Volume 204 ; 204 >
     au < testing ; exists ; 2002 ; Journal of Experimental Biology Volume 205 ; 205 >
@@ -569,8 +573,8 @@
     au < testing ; exists ; 2008 ; Journal of Experimental Biology Volume 211 ; 211 >
     au < testing ; exists ; 2009 ; Journal of Experimental Biology Volume 212 ; 212 >
     au < testing ; exists ; 2010 ; Journal of Experimental Biology Volume 213 ; 213 >
-    au < finished ; crawling ; 2011 ; Journal of Experimental Biology Volume 214 ; 214 >
-    au < finished ; crawling ; 2012 ; Journal of Experimental Biology Volume 215 ; 215 >
+    au < finished ; frozen ; 2011 ; Journal of Experimental Biology Volume 214 ; 214 >
+    au < finished ; frozen ; 2012 ; Journal of Experimental Biology Volume 215 ; 215 >
     au < crawling ; exists ; 2013 ; Journal of Experimental Biology Volume 216 ; 216 >
     au < manifest ; exists ; 2014 ; Journal of Experimental Biology Volume 217 ; 217 >
 

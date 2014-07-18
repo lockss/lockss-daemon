@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>testing - Evan/Ly</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>3</string>
+        <string>4</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -34,7 +34,7 @@
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.64.0</string>
+    <string>1.65.0</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -116,10 +116,6 @@
     <long>1209600000</long>
   </entry>
   <entry>
-    <string>au_crawlwindow</string>
-    <string>org.lockss.plugin.highwire.HighWirePressCrawlWindow</string>
-  </entry>
-  <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.highwire.HighWireDrupalHtmlFilterFactory</string>
   </entry>
@@ -170,7 +166,7 @@
   </entry>
   <entry>
     <string>au_permission_checker_factory</string>
-    <string>org.lockss.plugin.highwire.HighWirePressH20PermissionCheckerFactory</string>
+    <string>org.lockss.plugin.highwire.HighWireDrupalPermissionCheckerFactory</string>
   </entry>
   <entry>
     <string>plugin_fetch_rate_limiter_source</string>
@@ -178,23 +174,14 @@
   </entry>
   <entry>
     <string>au_def_pause_time</string>
-    <long>1250</long>
+    <long>6000</long>
   </entry>
   <entry>
     <string>au_mime_rate_limiter_map</string>
     <map>
       <entry>
         <string>application/pdf,text/html,application/vnd.ms-powerpoint</string>
-        <string>1/3000</string>
-      </entry>
-    </map>
-  </entry>
-  <entry>
-    <string>content-testing_override</string>
-    <map>
-      <entry>
-        <string>au_crawlwindow</string>
-        <org.lockss.util.Default />
+        <string>1/6000</string>
       </entry>
     </map>
   </entry>

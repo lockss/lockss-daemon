@@ -1,10 +1,10 @@
 /*
- * $Id: CounterReportsBookReport2L.java,v 1.6 2013-06-19 17:39:52 fergaloy-sf Exp $
+ * $Id: CounterReportsBookReport2L.java,v 1.6.12.1 2014-07-18 15:59:05 wkwilson Exp $
  */
 
 /*
 
- Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -38,7 +38,6 @@ package org.lockss.exporter.counter;
 import static org.lockss.db.DbManager.*;
 import static org.lockss.exporter.counter.CounterReportsManager.*;
 import static org.lockss.metadata.MetadataManager.*;
-
 import org.lockss.app.LockssDaemon;
 
 public class CounterReportsBookReport2L extends CounterReportsBookReport2 {
@@ -93,7 +92,8 @@ public class CounterReportsBookReport2L extends CounterReportsBookReport2 {
       + " and am." + AU_SEQ_COLUMN + " = au." + AU_SEQ_COLUMN
       + " and au." + PLUGIN_SEQ_COLUMN + " = pl." + PLUGIN_SEQ_COLUMN
       + " and pl." + PLATFORM_SEQ_COLUMN + " = pla." + PLATFORM_SEQ_COLUMN
-      + " order by n." + NAME_COLUMN + " asc";
+      + " order by n." + NAME_COLUMN + " asc"
+      + ", a." + PUBLICATION_SEQ_COLUMN + " asc";
 
   // Query to get the book request counts to be included in the report.
   // This the same query used for Book Report 2, except for the fact that in
@@ -130,8 +130,9 @@ public class CounterReportsBookReport2L extends CounterReportsBookReport2 {
       + ", a." + PUBLICATION_SEQ_COLUMN
       + ", a." + REQUEST_YEAR_COLUMN
       + ", a." + REQUEST_MONTH_COLUMN
-      + " order by n." + NAME_COLUMN
-      + ", a." + REQUEST_YEAR_COLUMN
+      + " order by n." + NAME_COLUMN + " asc"
+      + ", a." + PUBLICATION_SEQ_COLUMN + " asc"
+      + ", a." + REQUEST_YEAR_COLUMN + " asc"
       + ", a." + REQUEST_MONTH_COLUMN + " asc";
 
   /**

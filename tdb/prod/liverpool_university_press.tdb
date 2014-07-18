@@ -1,8 +1,7 @@
 {
 
   publisher <
-    name = Liverpool University Press ;
-    info[tester] = 7
+    name = Liverpool University Press
   >
   
   comment[moving] = from MetaPress to Atypon
@@ -169,6 +168,8 @@
       au < released ; 2009 ; The Byron Journal Volume 37 ; 37 >
       au < released ; 2010 ; The Byron Journal Volume 38 ; 38 >
       au < released ; 2011 ; The Byron Journal Volume 39 ; 39 >
+      au < ready ; 2012 ; The Byron Journal Volume 40 ; 40 >
+      au < released ; 2013 ; The Byron Journal Volume 41 ; 41 >
 
     }
 
@@ -189,7 +190,7 @@
       au < down ; 2011 ; The Byron Journal Volume 39 ; 39 >
       au < down ; 2012 ; The Byron Journal Volume 40 ; 40 >
       au < doNotProcess ; 2013 ; The Byron Journal Volume 41 ; 41 >
-      au < expected ; 2014 ; The Byron Journal Volume 42 ; 42 >
+      au < doNotProcess ; 2014 ; The Byron Journal Volume 42 ; 42 >
 
     }
 
@@ -379,11 +380,13 @@
       attr[journal_id] = jlc
 
       au < doesNotExist ; 0 ; Journal of Literary & Cultural Disability Studies Volume 1 ; 1 >
-      au < doesNotExist ; 0 ; Journal of Literary & Cultural Disability Studies Volume 2 ; 2 >      
+      au < doesNotExist ; 0 ; Journal of Literary & Cultural Disability Studies Volume 2 ; 2 >
       au < released ; 2009 ; Journal of Literary & Cultural Disability Studies Volume 3 ; 3 >
       au < released ; 2010 ; Journal of Literary & Cultural Disability Studies Volume 4 ; 4 >
       au < released ; 2011 ; Journal of Literary & Cultural Disability Studies Volume 5 ; 5 >
       au < released ; 2012 ; Journal of Literary & Cultural Disability Studies Volume 6 ; 6 >
+      au < released ; 2013 ; Journal of Literary & Cultural Disability Studies Volume 7 ; 7 >
+      au < doNotProcess ; 2014 ; Journal of Literary & Cultural Disability Studies Volume 8 ; 8 >
     
     }
     
@@ -430,8 +433,26 @@
 	au < down ; 2011 ; Labour History Review Volume 76 ; 76 >
 	au < down ; 2012 ; Labour History Review Volume 77 ; 77 >
 	au < doNotProcess ; 2013 ; Labour History Review Volume 78 ; 78 >
-	au < expected ; 2014 ; Labour History Review Volume 79 ; 79 >
+	au < manifest ; 2014 ; Labour History Review Volume 79 ; 79 >
 
+  }
+
+  {
+  
+    title <
+      name = Modern Languages Open 
+    >
+
+    {
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; name ; volume ; param[year] >
+    param[base_url] = http://mloa.cch.kcl.ac.uk/
+    param[journal_id] = mlo
+    comment[issn] = missing info
+    
+    au < expected ; 2014 ; Modern Languages Open Volume 1 ; 1 ; 2014 >
+    
+    }
   }
 
   {
@@ -457,7 +478,7 @@
       au < released ; 2010 ; Music, Sound, and the Moving Image Volume 4 ; 4 >
       au < released ; 2011 ; Music, Sound, and the Moving Image Volume 5 ; 5 >
       au < released ; 2012 ; Music, Sound, and the Moving Image Volume 6 ; 6 >
-      au < ready ; 2013 ; Music, Sound, and the Moving Image Volume 7 ; 7 >
+      au < released ; 2013 ; Music, Sound, and the Moving Image Volume 7 ; 7 >
 
     }
    
@@ -475,7 +496,7 @@
       au < down ; 2011 ; Music, Sound, and the Moving Image Volume 5 ; 5 >
       au < down ; 2012 ; Music, Sound, and the Moving Image Volume 6 ; 6 >
       au < doNotProcess ; 2013 ; Music, Sound, and the Moving Image Volume 7 ; 7 >
-      au < expected ; 2014 ; Music, Sound, and the Moving Image Volume 8 ; 8 >
+      au < manifest ; 2014 ; Music, Sound, and the Moving Image Volume 8 ; 8 >
 
     }
     
@@ -521,7 +542,7 @@
       au < released ; 2010 ; Romani Studies Volume 20 ; 20 >
       au < released ; 2011 ; Romani Studies Volume 21 ; 21 >
       au < released ; 2012 ; Romani Studies Volume 22 ; 22 >
-      au < ready ; 2013 ; Romani Studies Volume 23 ; 23 >
+      au < released ; 2013 ; Romani Studies Volume 23 ; 23 >
 
     }      
 
@@ -547,7 +568,7 @@
       au < down ; 2011 ; Romani Studies Volume 21 ; 21 >
       au < down ; 2012 ; Romani Studies Volume 22 ; 22 >
       au < doNotProcess ; 2013 ; Romani Studies Volume 23 ; 23 >
-      au < expected ; 2014 ; Romani Studies Volume 24 ; 24 >
+      au < manifest ; 2014 ; Romani Studies Volume 24 ; 24 >
 
     }
     
@@ -575,7 +596,7 @@
       au < released ; 2010 ; Science Fiction Film and Television Volume 3 ; 3 >
       au < released ; 2011 ; Science Fiction Film and Television Volume 4 ; 4 >
       au < released ; 2012 ; Science Fiction Film and Television Volume 5 ; 5 >
-      au < ready ; 2013 ; Science Fiction Film and Television Volume 6 ; 6 >
+      au < released ; 2013 ; Science Fiction Film and Television Volume 6 ; 6 >
  
     }
    
@@ -622,7 +643,7 @@
     au < down ; 2011 ; Sculpture Journal Volume 20 ; 20 >
     au < down ; 2012 ; Sculpture Journal Volume 21 ; 21 >
     au < doNotProcess ; 2013 ; Sculpture Journal Volume 22 ; 22 >
-    au < expected ; 2014 ; Sculpture Journal Volume 23 ; 23 >
+    au < doNotProcess ; 2014 ; Sculpture Journal Volume 23 ; 23 >
 
   }
   

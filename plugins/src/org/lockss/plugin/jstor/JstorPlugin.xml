@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>testing</string>
+    <string>testing - Alex/Mep</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -13,54 +13,85 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Poll</string>
-        <string>1</string>
+        <string>5</string>
       </entry>
       <entry>
         <string>Substance</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
     </map>
   </entry>
   <entry>
+    <string>required_daemon_version</string>
+    <string>1.65.0</string>
+  </entry>  
+  <entry>
+    <string>plugin_publishing_platform</string>
+    <string>JSTOR</string>
+  </entry>    
+  <entry>
     <string>au_name</string>
-    <string>&quot;JSTOR Plugin, Base URL %s, Journal ID %s, Volume Name %s&quot;, base_url, journal_id, volume_name</string>
+    <string>"JSTOR Plugin, Base URL %s, Base URL 2 %s, Journal ID %s, Volume %s", base_url, base_url2, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%slockss/%s/%s&quot;, base_url, journal_id, volume_name</string>
+    <string>"%slockss/%s/%s/index.html", base_url, journal_id, volume_name</string>
   </entry>
+  <entry>
+  <string>au_manifest</string>
+    <list>
+      <string>"%slockss/%s/%s/index.html", base_url, journal_id, volume_name</string>
+      <string>"%slockss/%s/%s/index.html", base_url2, journal_id, volume_name</string>
+    </list>
+  </entry>  
   <entry>
     <string>au_crawlrules</string>
     <list>
       <string>1,"^%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(\?v=.+)?$", base_url</string>
-      <string>4,"^%s", base_url</string>
+      <!-- http://www.jstor.org/literatum/publisher/jstor/journals/covergifs/amerjarch/cover.jpg -->
+      <!-- include it in case images don't have a suffix  -->
+      <string>1,"^%sliteratum/publisher/jstor/journals/", base_url</string>    
       <!-- Issue TOC: http://www.jstor.org/action/showToc?journalCode=19thcenturymusic&issue=3&volume=11 -->
+      <!--  when you come in off the manifest page; order of arguments usually the first, but both work -->
       <string>1,"^%saction/showToc\?journalCode=%s&amp;issue=[^&amp;]+&amp;volume=%s", base_url, journal_id, volume_name</string>
-      <!-- Opaque Issue TOC: http://www.jstor.org/stable/i249413 -->
-      <string>1,"^%sstable/i[0-9]+$", base_url</string>
-      <!-- Issue TOC: http://www.jstor.org/stable/10.1525/abt.2010.72.issue-9, Article Pages: http://www.jstor.org/stable/10.1525/abt.2010.72.9.1 -->
-      <string>1,"^%sstable/((view|pdfplus|info|full|pdf|media|select)/)?[\.0-9]+/%s\.[0-9]{4}\.%s\.", base_url, journal_id, volume_name</string>
-      <!-- Opaque Article Pages: http://www.jstor.org/stable/746318 -->
-      <string>1,"^%sstable/((view|pdfplus|info|full|pdf|media|select)/)?[0-9]+(\.pdf)?$", base_url</string>
-      <!-- Opaque Article Thumbnails: http://www.jstor.org/stable/select/4436970?seq=1&thumbView=thumbs&thumbPager=one -->
-      <string>1,"^%sstable/(select/)?[0-9]+\?[^#]+", base_url</string>
+      <string>1,"^%saction/showToc\?journalCode=%s&amp;volume=%s&amp;issue=[^&amp;]+", base_url, journal_id, volume_name</string>
+      <!--  we don't care about the two other versions of TOC because they're redundant (next/prev links) -->
+      <!-- http://www.jstor.org/stable/i249413 or http://www.jstor.org/stable/10.1525/abt.2010.72.issue-9-->
+      <!-- abstract, view, info aspects of article pages (both opaque and not) redirect to pdf version -->
+      <!-- <base>/stable/10.1525/abt.2010.72.9.1 or <base>/stable/7436318 or -->
+      <!-- <base>/stable/info/746318 or <base>/stable/view/746318-->
+      <string>2,"^%sstable/((view|info)/)?[.0-9]+/.+", base_url, volume_name</string> 
+      <string>2,"^%sstable/((view|info)/)?[i0-9]+$", base_url</string>
+      <!--  spider trap if it's like other Atypon; doesn't matter what the intermed dir is-->
+      <string>2,"^%sstable/[^/]+/[0-9.]+/[-.9]+$", base_url</string>
+      <!--  Do get pdfplus and full, if it exists with either both parts of doi or just second part -->
+      <string>1,"^%sstable/(pdfplus|full|pdf|media|select)/[.0-9]+/.+", base_url</string>
+      <!--  when the article ID is just the doi 2nd part, it is only numbers -->
+      <string>1,"^%sstable/(pdfplus|full|pdf|media|select)/[0-9]+(\.pdf)?$", base_url</string>
+      <!-- the media could lead to figures but only get there from "full" --> 
+      <!-- the select leads to thumbnails but normalize off arguments -->
+      <!--  RIS citation files: we generate these in a link extractor but must allow, they use https -->
+      <!-- https://www.jstor.org/action/downloadSingleCitationSec?format=refman&doi=10.2307/41827174 -->
+      <string>1,"^%saction/downloadSingleCitationSec\?format=refman&amp;doi=", base_url2</string>
+      <!-- http://www.jstor.org/action/showPopup?citid=citart1&id=abt.2013.75.6.7-f01&doi=10.1525%2Fabt.2013.75.6.7 -->
+      <string>1,"^%saction/(showImage|showFullPopup|showPopup)\?([^=]+=[^&amp;]*&amp;)*doi=", base_url</string>
     </list>
   </entry>
   <entry>
     <string>plugin_config_props</string>
     <list>
-      <org.lockss.daemon.ConfigParamDescr>(viewtitle\.aspx\?titleid=|gateway/article/full-text-html/)[0-9]+$
+      <org.lockss.daemon.ConfigParamDescr>
         <key>base_url</key>
         <displayName>Base URL</displayName>
         <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
@@ -69,6 +100,15 @@
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url2</key>
+        <displayName>Base URL 2</displayName>
+        <description>Secondary Base URL</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>      
       <org.lockss.daemon.ConfigParamDescr>
         <key>journal_id</key>
         <displayName>Journal ID</displayName>
@@ -91,7 +131,11 @@
   </entry>
   <entry>
      <string>au_substance_url_pattern</string>
-     <string>&quot;^%s&quot;, base_url</string>
+     <list>
+        <string>"^%sstable/(pdfplus|full|pdf)/[.0-9]+/[^\?&amp;]+$", base_url</string>
+        <!-- older uses just 2nd part of doi and it is just numbers -->
+        <string>"^%sstable/(pdfplus|full|pdf)/[0-9]+(\.pdf)?$", base_url</string>        
+    </list>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
@@ -101,7 +145,10 @@
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.jstor.JstorHtmlCrawlFilterFactory</string>
   </entry>
-  <!--
+  <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.jstor.JstorPdfFilterFactory</string>
+  </entry>  
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.jstor.JstorArticleIteratorFactory</string>
@@ -111,21 +158,32 @@
     <string>org.lockss.plugin.jstor.JstorArticleIteratorFactory</string>
   </entry>
   <entry>
-    <string>text/html_metadata_extractor_factory_map</string>
+    <string>text/plain_metadata_extractor_factory_map</string>
     <map>
       <entry>
         <string>*</string>
-        <string>org.lockss.plugin.jstor.JstorHtmlMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.jstor.JstorRisMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>
-  -->
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.jstor.JstorUrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>text/html_link_extractor_factory</string>
+    <string>org.lockss.plugin.jstor.JstorHtmlLinkExtractorFactory</string>
+  </entry>  
   <entry>
     <string>au_def_pause_time</string>
-    <long>6000</long>
+    <long>3000</long>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
     <long>1209600000</long>
   </entry>
+  <entry>
+    <string>plugin_au_config_user_msg</string>
+    <string>Atypon Systems hosts this archival unit (AU) and requires that you &lt;a href=&apos;http://www.jstor.org/action/institutionLockssIpChange&apos;&gt;register the IP address of this LOCKSS box in your institutional account as a crawler&lt;/a&gt; before allowing your LOCKSS box to harvest this AU. Failure to comply with this publisher requirement may trigger crawler traps on the Atypon Systems platform, and your LOCKSS box or your entire institution may be temporarily banned from accessing the site. You only need to register the IP address of your LOCKSS box once for all AUs published by JSTOR.</string>
+  </entry>  
 </map>

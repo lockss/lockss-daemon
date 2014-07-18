@@ -1,4 +1,4 @@
-/* $Id: TestOJS2ArticleIteratorFactory.java,v 1.4 2013-10-23 04:25:24 tlipkis Exp $
+/* $Id: TestOJS2ArticleIteratorFactory.java,v 1.4.6.1 2014-07-18 15:49:54 wkwilson Exp $
 
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -62,7 +62,7 @@ public class TestOJS2ArticleIteratorFactory extends ArticleIteratorTestCase {
   private final String JOURNAL_ID = "lq";
   private final String YEAR = "2012";
   
-  // expected urls for artile 1
+  // expected urls for article 1
   private final String EXPECTED_ABS_URL_1 =
     "http://www.ojs2articleiteratortest.com/index.php/lq/article/view/8110";
   private final String EXPECTED_ARTICLE_METADATA_URL_1 =
@@ -188,7 +188,7 @@ public class TestOJS2ArticleIteratorFactory extends ArticleIteratorTestCase {
 
       for (int i = 0;i< actualUrls1.length; i++) {
         log.info("expected url1: " + expectedUrls1[i]);
-        log.info("actual url1: " + actualUrls1[i]);
+        log.info("  actual url1: " + actualUrls1[i]);
         assertEquals(expectedUrls1[i], actualUrls1[i]);
       }
       
@@ -205,7 +205,7 @@ public class TestOJS2ArticleIteratorFactory extends ArticleIteratorTestCase {
 
         for (int i = 0;i< actualUrls2.length; i++) {
           log.info("expected url2: " + expectedUrls2[i]);
-          log.info("actual url2: " + actualUrls2[i]);
+          log.info("  actual url2: " + actualUrls2[i]);
           assertEquals(expectedUrls2[i], actualUrls2[i]);
         }
       }

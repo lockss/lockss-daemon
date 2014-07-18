@@ -1,5 +1,5 @@
 /*
- * $Id: AuUtil.java,v 1.44 2014-04-23 20:44:45 tlipkis Exp $
+ * $Id: AuUtil.java,v 1.44.2.1 2014-07-18 15:59:01 wkwilson Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import java.util.*;
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.util.*;
+import org.lockss.util.urlconn.*;
 import org.lockss.daemon.*;
 import org.lockss.jetty.CuResourceHandler;
 import org.lockss.crawler.*;
@@ -633,6 +634,14 @@ public class AuUtil {
    * should be accessible as CachedUrls */
   public static boolean hasArchiveFileTypes(ArchivalUnit au) {
     return au.getArchiveFileTypes() != null;
+  }
+
+  public static CacheException mapException(ArchivalUnit au,
+					    LockssUrlConnection connection,
+					    Exception fetchException,
+					    String message) {
+    CacheResultMap map = au.getPlugin().getCacheResultMap();
+    return map.mapException(au, connection, fetchException, message);
   }
 
   /**

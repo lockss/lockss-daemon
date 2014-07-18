@@ -1,10 +1,10 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.95 2013-04-09 04:46:13 tlipkis Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.95.14.1 2014-07-18 15:48:31 wkwilson Exp $
 */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -1594,7 +1594,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       assertEquals(-1, req.getPriority());
 
       // Remove param, ensure priority map gets removed
-      ConfigurationUtil.setFromArgs("foo", "bar");
+      ConfigurationUtil.resetConfig();
       mau1.setAuId("foo4");
       req.setPriority(-3);
       crawlManager.setReqPriority(req);
@@ -1613,7 +1613,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       assertEquals(4, crawlManager.getCrawlPoolSize("barpool"));
 
       // Remove param, ensure map reverts to empty
-      ConfigurationUtil.setFromArgs("foo", "bar");
+      ConfigurationUtil.resetConfig();
       assertEquals(1, crawlManager.getCrawlPoolSize("nopool"));
       assertEquals(1, crawlManager.getCrawlPoolSize("foopool"));
     }

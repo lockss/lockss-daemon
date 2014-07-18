@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>testing</string>
+    <string>ready</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -13,18 +13,18 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Poll</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -41,8 +41,9 @@
     <string>"American Mathematical Society Plugin, Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
   </entry>
   <entry>
+    <!-- Not really in use for the GLN, see the CLOCKSS version -->
     <string>au_start_url</string>
-    <string>"%s%s/%d/manifest", base_url, journal_id, year</string>
+    <string>"%slockssdata/?p=%s&amp;y=%d", base_url, journal_id, year</string>
   </entry>
   <entry> 
     <string>au_feature_urls</string>
@@ -69,6 +70,7 @@
     <string>au_crawlrules</string>
     <list>
       <string>1,"^%s.*[.](bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url</string>
+      <string>1,"^%s(?:journals/)?%s/home-%d[.]html$", base_url, journal_id, year</string>
       <string>1,"^%s%s/%d-[0-9-]{2,9}/?$", base_url, journal_id, year</string>
       <string>1,"^%sjournals/%s/%d-[0-9-]{2,9}/", base_url, journal_id, year</string>
     </list>

@@ -1,10 +1,10 @@
 /*
- * $Id: TdbAu.java,v 1.28 2013-12-09 20:15:17 pgust Exp $
+ * $Id: TdbAu.java,v 1.28.4.1 2014-07-18 15:59:10 wkwilson Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -394,7 +394,8 @@ public class TdbAu implements BibliographicItem, Comparable<TdbAu> {
 //         props = new HashMap<String,String>();
         props = new Flat3Map();
       }
-      props.put(StringPool.AU_CONFIG_PROPS.intern(name), value);
+      props.put(StringPool.TDBAU_PROPS.intern(name),
+		StringPool.TDBAU_PROPS.internMapValue(name, value));
     }
   }
   
@@ -442,7 +443,8 @@ public class TdbAu implements BibliographicItem, Comparable<TdbAu> {
     if (params.containsKey(name)) {
       throw new TdbException("cannot replace value of au param \"" + name + "\" for au \"" + this.name + "\"");
     }
-    params.put(StringPool.AU_CONFIG_PROPS.intern(name), value);
+    params.put(StringPool.AU_CONFIG_PROPS.intern(name),
+	       StringPool.AU_CONFIG_PROPS.internMapValue(name, value));
     getId().invalidateHashCode();  // setting params modifies ID hashcode
   }
   
@@ -490,7 +492,8 @@ public class TdbAu implements BibliographicItem, Comparable<TdbAu> {
     if (attrs.containsKey(name)) {
       throw new TdbException("cannot replace value of au attr \"" + name + "\" for au \"" + this.name + "\"");
     }
-    attrs.put(StringPool.AU_CONFIG_PROPS.intern(name), value);
+    attrs.put(StringPool.TDBAU_ATTRS.intern(name),
+	      StringPool.TDBAU_ATTRS.internMapValue(name, value));
   }
   
   /**

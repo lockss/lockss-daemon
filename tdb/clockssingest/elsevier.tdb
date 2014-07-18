@@ -17,10 +17,10 @@
     comment[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[year] >
     
-    au < doNotProcess ; crawling ; 2009 ; Elsevier Source Content 2009 ; 2009 >
-    au < doNotProcess ; crawling ; 2010 ; Elsevier Source Content 2010 ; 2010 >
-    au < doNotProcess ; crawling ; 2011 ; Elsevier Source Content 2011 ; 2011 >
-    au < doNotProcess ; crawling ; 2012 ; Elsevier Source Content 2012 ; 2012 >
+    au < doNotProcess ; frozen ; 2009 ; Elsevier Source Content 2009 ; 2009 >
+    au < doNotProcess ; frozen ; 2010 ; Elsevier Source Content 2010 ; 2010 >
+    au < doNotProcess ; frozen ; 2011 ; Elsevier Source Content 2011 ; 2011 >
+    au < doNotProcess ; frozen ; 2012 ; Elsevier Source Content 2012 ; 2012 >
     au < doNotProcess ; crawling ; 2013 ; Elsevier Source Content 2013 ; 2013 >
     au < expected ; exists ; 2014 ; Elsevier Source Content 2014 ; 2014 >
     

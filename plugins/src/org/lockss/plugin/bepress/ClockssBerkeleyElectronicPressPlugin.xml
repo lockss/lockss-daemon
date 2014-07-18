@@ -1,4 +1,4 @@
-<!--  $Id: ClockssBerkeleyElectronicPressPlugin.xml,v 1.22 2014-04-10 20:07:50 aishizaki Exp $ -->
+<!--  $Id: ClockssBerkeleyElectronicPressPlugin.xml,v 1.22.2.1 2014-07-18 15:54:33 wkwilson Exp $ -->
 <map>
   <!-- ClockssBePressPlugin.xml inherits from BePressPlugin.xml. --> 
   <entry>
@@ -15,7 +15,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>29</string>
+    <string>30</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -27,7 +27,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>29</string>
+    <string>30</string>
   </entry>
   <entry>
     <string>au_name</string>

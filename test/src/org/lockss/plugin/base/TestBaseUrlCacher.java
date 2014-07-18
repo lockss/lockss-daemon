@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.70 2013-01-06 02:54:49 tlipkis Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.70.28.1 2014-07-18 15:49:53 wkwilson Exp $
  */
 
 /*
@@ -131,6 +131,37 @@ public class TestBaseUrlCacher extends LockssTestCase {
     assertEquals(UrlCacher.CACHE_RESULT_FETCHED, cacher.cache());
     assertTrue(cacher.wasStored);
     assertEquals(1, pauseBeforeFetchCounter);
+    assertNull(cacher.getInfoException());
+  }
+
+  public void testCacheEmpty() throws IOException {
+    pauseBeforeFetchCounter = 0;
+
+    cacher._input = new StringInputStream("");
+    cacher._headers = new CIProperties();
+    // should cache
+    assertEquals(UrlCacher.CACHE_RESULT_FETCHED, cacher.cache());
+    assertTrue(cacher.wasStored);
+    assertEquals(1, pauseBeforeFetchCounter);
+    assertClass(CacheException.WarningOnly.class,
+		cacher.getInfoException());
+    assertEquals("Empty file stored",
+		 cacher.getInfoException().getMessage());
+  }
+
+  public void testCacheEmptyPluginDoesntCare() throws IOException {
+    HttpResultMap resultMap = (HttpResultMap)plugin.getCacheResultMap();
+    resultMap.storeMapEntry(ContentValidationException.EmptyFile.class,
+			    CacheSuccess.class);
+    pauseBeforeFetchCounter = 0;
+
+    cacher._input = new StringInputStream("");
+    cacher._headers = new CIProperties();
+    // should cache
+    assertEquals(UrlCacher.CACHE_RESULT_FETCHED, cacher.cache());
+    assertTrue(cacher.wasStored);
+    assertEquals(1, pauseBeforeFetchCounter);
+    assertNull(cacher.getInfoException());
   }
 
   public void testReCacheWCookie() throws IOException {
@@ -770,7 +801,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
       InputStream is = muc.getUncachedInputStream();
       fail("Should have thrown RedirectOutsideCrawlSpecException");
     } catch (CacheException.RedirectOutsideCrawlSpecException e) {
-      assertEquals(redTo, e.getMessage());
+      assertEquals("Redirected to excluded URL: " + redTo, e.getMessage());
       CIProperties p = muc.getUncachedProperties();
       assertEquals(redTo, p.getProperty("location"));
     }
@@ -818,7 +849,8 @@ public class TestBaseUrlCacher extends LockssTestCase {
       InputStream is = muc.getUncachedInputStream();
       fail("Should have thrown RedirectOutsideCrawlSpecException");
     } catch (CacheException.RedirectOutsideCrawlSpecException e) {
-      assertEquals(redToUnNorm, e.getMessage());
+      assertEquals("Redirected to excluded URL: " + redToUnNorm,
+		   e.getMessage());
       CIProperties p = muc.getUncachedProperties();
       assertEquals(redToUnNorm, p.getProperty("location"));
     }

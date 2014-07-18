@@ -7,7 +7,7 @@
     implicit < status ; year ; volume ; name ; param[year] >
     param[base_url] = http://js.sagamorepub.com/
     
-    comment[CAUTION] = This publisher has subscription journals. currently our testing process shows successful result, even though pdf file sizes are zero.
+    comment[CAUTION] = This publisher has subscription journals. in the past our testing process showed successful result, even though pdf file sizes are zero.
     comment[subscription] = See PD-1032
 
   {
@@ -17,20 +17,18 @@
     >
 
     param[journal_id] = ajess
-    
-    comment[subscription] = awaiting subscription see RT 5681
 
-    au < doNotProcess ; 2004 ; 1 ; Asian Journal of Exercise and Sports Science Volume 1 ; 2004 >
-    au < doNotProcess ; 2005 ; 2 ; Asian Journal of Exercise and Sports Science Volume 2 ; 2005 >
-    au < doNotProcess ; 2006 ; 3 ; Asian Journal of Exercise and Sports Science Volume 3 ; 2006 >
-    au < doNotProcess ; 2007 ; 4 ; Asian Journal of Exercise and Sports Science Volume 4 ; 2007 >
-    au < doNotProcess ; 2008 ; 5 ; Asian Journal of Exercise and Sports Science Volume 5 ; 2008 >
-    au < doNotProcess ; 2009 ; 6 ; Asian Journal of Exercise and Sports Science Volume 6 ; 2009 >
-    au < doNotProcess ; 2010 ; 7 ; Asian Journal of Exercise and Sports Science Volume 7 ; 2010 >
-    au < doNotProcess ; 2011 ; 8 ; Asian Journal of Exercise and Sports Science Volume 8 ; 2011 >
-    au < doNotProcess ; 2012 ; 9 ; Asian Journal of Exercise and Sports Science Volume 9 ; 2012 >
-    au < doNotProcess ; 2013 ; 10 ; Asian Journal of Exercise and Sports Science Volume 10 ; 2013 >
-    au < doNotProcess ; 2014 ; 11 ; Asian Journal of Exercise and Sports Science Volume 11 ; 2014 >
+    au < ready ; 2004 ; 1 ; Asian Journal of Exercise and Sports Science Volume 1 ; 2004 >
+    au < ready ; 2005 ; 2 ; Asian Journal of Exercise and Sports Science Volume 2 ; 2005 >
+    au < ready ; 2006 ; 3 ; Asian Journal of Exercise and Sports Science Volume 3 ; 2006 >
+    au < ready ; 2007 ; 4 ; Asian Journal of Exercise and Sports Science Volume 4 ; 2007 >
+    au < ready ; 2008 ; 5 ; Asian Journal of Exercise and Sports Science Volume 5 ; 2008 >
+    au < ready ; 2009 ; 6 ; Asian Journal of Exercise and Sports Science Volume 6 ; 2009 >
+    au < ready ; 2010 ; 7 ; Asian Journal of Exercise and Sports Science Volume 7 ; 2010 >
+    au < ready ; 2011 ; 8 ; Asian Journal of Exercise and Sports Science Volume 8 ; 2011 >
+    au < ready ; 2012 ; 9 ; Asian Journal of Exercise and Sports Science Volume 9 ; 2012 >
+    au < ready ; 2013 ; 10 ; Asian Journal of Exercise and Sports Science Volume 10 ; 2013 >
+    au < manifest ; 2014 ; 11 ; Asian Journal of Exercise and Sports Science Volume 11 ; 2014 >
   }
 
   {
@@ -41,33 +39,34 @@
 
     param[journal_id] = gjhpep
 
-    au < doNotProcess ; 2012 ; 1 ; The Global Journal of Health and Physical Education Pedagogy Volume 1 ; 2012 >
-    au < doNotProcess ; 2013 ; 2 ; The Global Journal of Health and Physical Education Pedagogy Volume 2 ; 2013 >
-    au < doNotProcess ; 2014 ; 3 ; The Global Journal of Health and Physical Education Pedagogy Volume 3 ; 2014 >
+    au < testing ; 2012 ; 1 ; The Global Journal of Health and Physical Education Pedagogy Volume 1 ; 2012 >
+    au < testing ; 2013 ; 2 ; The Global Journal of Health and Physical Education Pedagogy Volume 2 ; 2013 >
+    au < manifest ; 2014 ; 3 ; The Global Journal of Health and Physical Education Pedagogy Volume 3 ; 2014 >
   }
 
   {
     title <
-      name = Global Journal of Health Education and Promotion 
+      name = Global Journal of Health Education and Promotion ;
+      eissn = 2332-1016 
     >
 
     param[journal_id] = gjhep
 
-    au < doNotProcess ; 1998 ; 1 ; Global Journal of Health Education and Promotion Volume 1 ; 1998 >
-    au < doNotProcess ; 1999 ; 2 ; Global Journal of Health Education and Promotion Volume 2 ; 1999 >
-    au < doNotProcess ; 2000 ; 3 ; Global Journal of Health Education and Promotion Volume 3 ; 2000 >
-    au < doNotProcess ; 2001 ; 4 ; Global Journal of Health Education and Promotion Volume 4 ; 2001 >
-    au < doNotProcess ; 2002 ; 5 ; Global Journal of Health Education and Promotion Volume 5 ; 2002 >
-    au < doNotProcess ; 2003 ; 6 ; Global Journal of Health Education and Promotion Volume 6 ; 2003 >
-    au < doNotProcess ; 2004 ; 7 ; Global Journal of Health Education and Promotion Volume 7 ; 2004 >
-    au < doNotProcess ; 2005 ; 8 ; Global Journal of Health Education and Promotion Volume 8 ; 2005 >
-    au < doNotProcess ; 2006 ; 9 ; Global Journal of Health Education and Promotion Volume 9 ; 2006 >
-    au < doNotProcess ; 2007 ; 10 ; Global Journal of Health Education and Promotion Volume 10 ; 2007 >
-    au < doNotProcess ; 2008 ; 11 ; Global Journal of Health Education and Promotion Volume 11 ; 2008 >
-    au < doNotProcess ; 2009 ; 12 ; Global Journal of Health Education and Promotion Volume 12 ; 2009 >
-    au < doNotProcess ; 2010 ; 13 ; Global Journal of Health Education and Promotion Volume 13 ; 2010 >
-    au < doNotProcess ; 2011 ; 14 ; Global Journal of Health Education and Promotion Volume 14 ; 2011 >
-    au < doNotProcess ; 2012 ; 15 ; Global Journal of Health Education and Promotion Volume 15 ; 2012 >
+    au < manifest ; 1998 ; 1 ; Global Journal of Health Education and Promotion Volume 1 ; 1998 >
+    au < manifest ; 1999 ; 2 ; Global Journal of Health Education and Promotion Volume 2 ; 1999 >
+    au < manifest ; 2000 ; 3 ; Global Journal of Health Education and Promotion Volume 3 ; 2000 >
+    au < manifest ; 2001 ; 4 ; Global Journal of Health Education and Promotion Volume 4 ; 2001 >
+    au < manifest ; 2002 ; 5 ; Global Journal of Health Education and Promotion Volume 5 ; 2002 >
+    au < manifest ; 2003 ; 6 ; Global Journal of Health Education and Promotion Volume 6 ; 2003 >
+    au < manifest ; 2004 ; 7 ; Global Journal of Health Education and Promotion Volume 7 ; 2004 >
+    au < testing ; 2005 ; 8 ; Global Journal of Health Education and Promotion Volume 8 ; 2005 >
+    au < testing ; 2006 ; 9 ; Global Journal of Health Education and Promotion Volume 9 ; 2006 >
+    au < testing ; 2007 ; 10 ; Global Journal of Health Education and Promotion Volume 10 ; 2007 >
+    au < testing ; 2008 ; 11 ; Global Journal of Health Education and Promotion Volume 11 ; 2008 >
+    au < testing ; 2009 ; 12 ; Global Journal of Health Education and Promotion Volume 12 ; 2009 >
+    au < testing ; 2010 ; 13 ; Global Journal of Health Education and Promotion Volume 13 ; 2010 >
+    au < testing ; 2011 ; 14 ; Global Journal of Health Education and Promotion Volume 14 ; 2011 >
+    au < testing ; 2012 ; 15 ; Global Journal of Health Education and Promotion Volume 15 ; 2012 >
     au < expected ; 2013 ; 16 ; Global Journal of Health Education and Promotion Volumd 16 ; 2013 >
   }
 
@@ -79,12 +78,12 @@
 
     param[journal_id] = jasm
 
-    au < doNotProcess ; 2009 ; 1 ; Journal of Applied Sport Management: Research that Matters Volume 1 ; 2009 >
-    au < doNotProcess ; 2010 ; 2 ; Journal of Applied Sport Management: Research that Matters Volume 2 ; 2010 >
-    au < doNotProcess ; 2011 ; 3 ; Journal of Applied Sport Management: Research that Matters Volume 3 ; 2011 >
-    au < doNotProcess ; 2012 ; 4 ; Journal of Applied Sport Management: Research that Matters Volume 4 ; 2012 >
-    au < doNotProcess ; 2013 ; 5 ; Journal of Applied Sport Management: Research that Matters Volume 5 ; 2013 >
-    au < doNotProcess ; 2014 ; 6 ; Journal of Applied Sport Management: Research that Matters Volume 6 ; 2014 >
+    au < manifest ; 2009 ; 1 ; Journal of Applied Sport Management: Research that Matters Volume 1 ; 2009 >
+    au < manifest ; 2010 ; 2 ; Journal of Applied Sport Management: Research that Matters Volume 2 ; 2010 >
+    au < manifest ; 2011 ; 3 ; Journal of Applied Sport Management: Research that Matters Volume 3 ; 2011 >
+    au < manifest ; 2012 ; 4 ; Journal of Applied Sport Management: Research that Matters Volume 4 ; 2012 >
+    au < manifest ; 2013 ; 5 ; Journal of Applied Sport Management: Research that Matters Volume 5 ; 2013 >
+    au < manifest ; 2014 ; 6 ; Journal of Applied Sport Management: Research that Matters Volume 6 ; 2014 >
   }
 
   {
@@ -94,8 +93,8 @@
 
     param[journal_id] = jfpdm
 
-    au < doNotProcess ; 2013 ; 1 ; Journal of Facility Planning, Design, and Management Volume 1 ; 2013 >
-    au < doNotProcess ; 2014 ; 2 ; Journal of Facility Planning, Design, and Management Volume 2 ; 2014 >
+    au < manifest ; 2013 ; 1 ; Journal of Facility Planning, Design, and Management Volume 1 ; 2013 >
+    au < manifest ; 2014 ; 2 ; Journal of Facility Planning, Design, and Management Volume 2 ; 2014 >
 
   }
 
@@ -107,26 +106,26 @@
 
     param[journal_id] = jlr
 
-    au < doNotProcess ; 1995 ; 27 ; Journal of Leisure Research Volume 27 ; 1995 >
-    au < doNotProcess ; 1996 ; 28 ; Journal of Leisure Research Volume 28 ; 1996 >
-    au < doNotProcess ; 1997 ; 29 ; Journal of Leisure Research Volume 29 ; 1997 >
-    au < doNotProcess ; 1998 ; 30 ; Journal of Leisure Research Volume 30 ; 1998 >
-    au < doNotProcess ; 1999 ; 31 ; Journal of Leisure Research Volume 31 ; 1999 >
-    au < doNotProcess ; 2000 ; 32 ; Journal of Leisure Research Volume 32 ; 2000 >
-    au < doNotProcess ; 2001 ; 33 ; Journal of Leisure Research Volume 33 ; 2001 >
-    au < doNotProcess ; 2002 ; 34 ; Journal of Leisure Research Volume 34 ; 2002 >
-    au < doNotProcess ; 2003 ; 35 ; Journal of Leisure Research Volume 35 ; 2003 >
-    au < doNotProcess ; 2004 ; 36 ; Journal of Leisure Research Volume 36 ; 2004 >
-    au < doNotProcess ; 2005 ; 37 ; Journal of Leisure Research Volume 37 ; 2005 >
-    au < doNotProcess ; 2006 ; 38 ; Journal of Leisure Research Volume 38 ; 2006 >
-    au < doNotProcess ; 2007 ; 39 ; Journal of Leisure Research Volume 39 ; 2007 >
-    au < doNotProcess ; 2008 ; 40 ; Journal of Leisure Research Volume 40 ; 2008 >
-    au < doNotProcess ; 2009 ; 41 ; Journal of Leisure Research Volume 41 ; 2009 >
-    au < doNotProcess ; 2010 ; 42 ; Journal of Leisure Research Volume 42 ; 2010 >
-    au < doNotProcess ; 2011 ; 43 ; Journal of Leisure Research Volume 43 ; 2011 >
-    au < doNotProcess ; 2012 ; 44 ; Journal of Leisure Research Volume 44 ; 2012 >
-    au < doNotProcess ; 2013 ; 45 ; Journal of Leisure Research Volume 45 ; 2013 >
-    au < doNotProcess ; 2014 ; 46 ; Journal of Leisure Research Volume 46 ; 2014 >
+    au < manifest ; 1995 ; 27 ; Journal of Leisure Research Volume 27 ; 1995 >
+    au < manifest ; 1996 ; 28 ; Journal of Leisure Research Volume 28 ; 1996 >
+    au < manifest ; 1997 ; 29 ; Journal of Leisure Research Volume 29 ; 1997 >
+    au < manifest ; 1998 ; 30 ; Journal of Leisure Research Volume 30 ; 1998 >
+    au < manifest ; 1999 ; 31 ; Journal of Leisure Research Volume 31 ; 1999 >
+    au < manifest ; 2000 ; 32 ; Journal of Leisure Research Volume 32 ; 2000 >
+    au < manifest ; 2001 ; 33 ; Journal of Leisure Research Volume 33 ; 2001 >
+    au < manifest ; 2002 ; 34 ; Journal of Leisure Research Volume 34 ; 2002 >
+    au < manifest ; 2003 ; 35 ; Journal of Leisure Research Volume 35 ; 2003 >
+    au < manifest ; 2004 ; 36 ; Journal of Leisure Research Volume 36 ; 2004 >
+    au < manifest ; 2005 ; 37 ; Journal of Leisure Research Volume 37 ; 2005 >
+    au < manifest ; 2006 ; 38 ; Journal of Leisure Research Volume 38 ; 2006 >
+    au < manifest ; 2007 ; 39 ; Journal of Leisure Research Volume 39 ; 2007 >
+    au < manifest ; 2008 ; 40 ; Journal of Leisure Research Volume 40 ; 2008 >
+    au < manifest ; 2009 ; 41 ; Journal of Leisure Research Volume 41 ; 2009 >
+    au < manifest ; 2010 ; 42 ; Journal of Leisure Research Volume 42 ; 2010 >
+    au < manifest ; 2011 ; 43 ; Journal of Leisure Research Volume 43 ; 2011 >
+    au < manifest ; 2012 ; 44 ; Journal of Leisure Research Volume 44 ; 2012 >
+    au < manifest ; 2013 ; 45 ; Journal of Leisure Research Volume 45 ; 2013 >
+    au < manifest ; 2014 ; 46 ; Journal of Leisure Research Volume 46 ; 2014 >
   }
 
   {
@@ -137,38 +136,38 @@
 
     param[journal_id] = jpra
 
-    au < doNotProcess ; 1983 ; 1 ; Journal of Park and Recreation Administration Volume 1 ; 1983 >
-    au < doNotProcess ; 1984 ; 2 ; Journal of Park and Recreation Administration Volume 2 ; 1984 >
-    au < doNotProcess ; 1985 ; 3 ; Journal of Park and Recreation Administration Volume 3 ; 1985 >
-    au < doNotProcess ; 1986 ; 4 ; Journal of Park and Recreation Administration Volume 4 ; 1986 >
-    au < doNotProcess ; 1987 ; 5 ; Journal of Park and Recreation Administration Volume 5 ; 1987 >
-    au < doNotProcess ; 1988 ; 6 ; Journal of Park and Recreation Administration Volume 6 ; 1988 >
-    au < doNotProcess ; 1989 ; 7 ; Journal of Park and Recreation Administration Volume 7 ; 1989 >
-    au < doNotProcess ; 1990 ; 8 ; Journal of Park and Recreation Administration Volume 8 ; 1990 >
-    au < doNotProcess ; 1991 ; 9 ; Journal of Park and Recreation Administration Volume 9 ; 1991 >
-    au < doNotProcess ; 1992 ; 10 ; Journal of Park and Recreation Administration Volume 10 ; 1992 >
-    au < doNotProcess ; 1993 ; 11 ; Journal of Park and Recreation Administration Volume 11 ; 1993 >
-    au < doNotProcess ; 1994 ; 12 ; Journal of Park and Recreation Administration Volume 12 ; 1994 >
-    au < doNotProcess ; 1995 ; 13 ; Journal of Park and Recreation Administration Volume 13 ; 1995 >
-    au < doNotProcess ; 1996 ; 14 ; Journal of Park and Recreation Administration Volume 14 ; 1996 >
-    au < doNotProcess ; 1997 ; 15 ; Journal of Park and Recreation Administration Volume 15 ; 1997 >
-    au < doNotProcess ; 1998 ; 16 ; Journal of Park and Recreation Administration Volume 16 ; 1998 >
-    au < doNotProcess ; 1999 ; 17 ; Journal of Park and Recreation Administration Volume 17 ; 1999 >
-    au < doNotProcess ; 2000 ; 18 ; Journal of Park and Recreation Administration Volume 18 ; 2000 >
-    au < doNotProcess ; 2001 ; 19 ; Journal of Park and Recreation Administration Volume 19 ; 2001 >
-    au < doNotProcess ; 2002 ; 20 ; Journal of Park and Recreation Administration Volume 20 ; 2002 >
-    au < doNotProcess ; 2003 ; 21 ; Journal of Park and Recreation Administration Volume 21 ; 2003 >
-    au < doNotProcess ; 2004 ; 22 ; Journal of Park and Recreation Administration Volume 22 ; 2004 >
-    au < doNotProcess ; 2005 ; 23 ; Journal of Park and Recreation Administration Volume 23 ; 2005 >
-    au < doNotProcess ; 2006 ; 24 ; Journal of Park and Recreation Administration Volume 24 ; 2006 >
-    au < doNotProcess ; 2007 ; 25 ; Journal of Park and Recreation Administration Volume 25 ; 2007 >
-    au < doNotProcess ; 2008 ; 26 ; Journal of Park and Recreation Administration Volume 26 ; 2008 >
-    au < doNotProcess ; 2009 ; 27 ; Journal of Park and Recreation Administration Volume 27 ; 2009 >
-    au < doNotProcess ; 2010 ; 28 ; Journal of Park and Recreation Administration Volume 28 ; 2010 >
-    au < doNotProcess ; 2011 ; 29 ; Journal of Park and Recreation Administration Volume 29 ; 2011 >
-    au < doNotProcess ; 2012 ; 30 ; Journal of Park and Recreation Administration Volume 39 ; 2012 >
-    au < doNotProcess ; 2013 ; 31 ; Journal of Park and Recreation Administration Volume 31 ; 2013 >
-    au < doNotProcess ; 2014 ; 32 ; Journal of Park and Recreation Administration Volume 32 ; 2014 >
+    au < manifest ; 1983 ; 1 ; Journal of Park and Recreation Administration Volume 1 ; 1983 >
+    au < manifest ; 1984 ; 2 ; Journal of Park and Recreation Administration Volume 2 ; 1984 >
+    au < manifest ; 1985 ; 3 ; Journal of Park and Recreation Administration Volume 3 ; 1985 >
+    au < manifest ; 1986 ; 4 ; Journal of Park and Recreation Administration Volume 4 ; 1986 >
+    au < manifest ; 1987 ; 5 ; Journal of Park and Recreation Administration Volume 5 ; 1987 >
+    au < manifest ; 1988 ; 6 ; Journal of Park and Recreation Administration Volume 6 ; 1988 >
+    au < manifest ; 1989 ; 7 ; Journal of Park and Recreation Administration Volume 7 ; 1989 >
+    au < manifest ; 1990 ; 8 ; Journal of Park and Recreation Administration Volume 8 ; 1990 >
+    au < manifest ; 1991 ; 9 ; Journal of Park and Recreation Administration Volume 9 ; 1991 >
+    au < manifest ; 1992 ; 10 ; Journal of Park and Recreation Administration Volume 10 ; 1992 >
+    au < manifest ; 1993 ; 11 ; Journal of Park and Recreation Administration Volume 11 ; 1993 >
+    au < manifest ; 1994 ; 12 ; Journal of Park and Recreation Administration Volume 12 ; 1994 >
+    au < manifest ; 1995 ; 13 ; Journal of Park and Recreation Administration Volume 13 ; 1995 >
+    au < manifest ; 1996 ; 14 ; Journal of Park and Recreation Administration Volume 14 ; 1996 >
+    au < manifest ; 1997 ; 15 ; Journal of Park and Recreation Administration Volume 15 ; 1997 >
+    au < manifest ; 1998 ; 16 ; Journal of Park and Recreation Administration Volume 16 ; 1998 >
+    au < manifest ; 1999 ; 17 ; Journal of Park and Recreation Administration Volume 17 ; 1999 >
+    au < manifest ; 2000 ; 18 ; Journal of Park and Recreation Administration Volume 18 ; 2000 >
+    au < manifest ; 2001 ; 19 ; Journal of Park and Recreation Administration Volume 19 ; 2001 >
+    au < manifest ; 2002 ; 20 ; Journal of Park and Recreation Administration Volume 20 ; 2002 >
+    au < manifest ; 2003 ; 21 ; Journal of Park and Recreation Administration Volume 21 ; 2003 >
+    au < manifest ; 2004 ; 22 ; Journal of Park and Recreation Administration Volume 22 ; 2004 >
+    au < manifest ; 2005 ; 23 ; Journal of Park and Recreation Administration Volume 23 ; 2005 >
+    au < manifest ; 2006 ; 24 ; Journal of Park and Recreation Administration Volume 24 ; 2006 >
+    au < manifest ; 2007 ; 25 ; Journal of Park and Recreation Administration Volume 25 ; 2007 >
+    au < manifest ; 2008 ; 26 ; Journal of Park and Recreation Administration Volume 26 ; 2008 >
+    au < manifest ; 2009 ; 27 ; Journal of Park and Recreation Administration Volume 27 ; 2009 >
+    au < manifest ; 2010 ; 28 ; Journal of Park and Recreation Administration Volume 28 ; 2010 >
+    au < manifest ; 2011 ; 29 ; Journal of Park and Recreation Administration Volume 29 ; 2011 >
+    au < manifest ; 2012 ; 30 ; Journal of Park and Recreation Administration Volume 39 ; 2012 >
+    au < manifest ; 2013 ; 31 ; Journal of Park and Recreation Administration Volume 31 ; 2013 >
+    au < manifest ; 2014 ; 32 ; Journal of Park and Recreation Administration Volume 32 ; 2014 >
   }
 
   {
@@ -179,41 +178,41 @@
 
     param[journal_id] = pe
 
-    au < doNotProcess ; 1980 ; 37 ; The Physical Educator Volume 37 ; 1980 >
-    au < doNotProcess ; 1981 ; 38 ; The Physical Educator Volume 38 ; 1981 >
-    au < doNotProcess ; 1982 ; 39 ; The Physical Educator Volume 39 ; 1982 >
-    au < doNotProcess ; 1983 ; 40 ; The Physical Educator Volume 40 ; 1983 >
-    au < doNotProcess ; 1984 ; 41 ; The Physical Educator Volume 41 ; 1984 >
-    au < doNotProcess ; 1985 ; 42 ; The Physical Educator Volume 42 ; 1985 >
-    au < doNotProcess ; 1986 ; 43 ; The Physical Educator Volume 43 ; 1986 >
-    au < doNotProcess ; 1987 ; 44 ; The Physical Educator Volume 44 ; 1987 >
-    au < doNotProcess ; 1988 ; 45 ; The Physical Educator Volume 45 ; 1988 >
-    au < doNotProcess ; 1989 ; 46 ; The Physical Educator Volume 46 ; 1989 >
-    au < doNotProcess ; 1990 ; 47 ; The Physical Educator Volume 47 ; 1990 >
-    au < doNotProcess ; 1991 ; 48 ; The Physical Educator Volume 48 ; 1991 >
-    au < doNotProcess ; 1992 ; 49 ; The Physical Educator Volume 49 ; 1992 >
-    au < doNotProcess ; 1993 ; 50 ; The Physical Educator Volume 50 ; 1993 >
-    au < doNotProcess ; 1994 ; 51 ; The Physical Educator Volume 51 ; 1994 >
-    au < doNotProcess ; 1995 ; 52 ; The Physical Educator Volume 52 ; 1995 >
-    au < doNotProcess ; 1996 ; 53 ; The Physical Educator Volume 53 ; 1996 >
-    au < doNotProcess ; 1997 ; 54 ; The Physical Educator Volume 54 ; 1997 >
-    au < doNotProcess ; 1998 ; 55 ; The Physical Educator Volume 55 ; 1998 >
-    au < doNotProcess ; 1999 ; 56 ; The Physical Educator Volume 56 ; 1999 >
-    au < doNotProcess ; 2000 ; 57 ; The Physical Educator Volume 57 ; 2000 >
-    au < doNotProcess ; 2001 ; 58 ; The Physical Educator Volume 58 ; 2001 >
-    au < doNotProcess ; 2002 ; 59 ; The Physical Educator Volume 59 ; 2002 >
-    au < doNotProcess ; 2003 ; 60 ; The Physical Educator Volume 60 ; 2003 >
-    au < doNotProcess ; 2004 ; 61 ; The Physical Educator Volume 61 ; 2004 >
-    au < doNotProcess ; 2005 ; 62 ; The Physical Educator Volume 62 ; 2005 >
-    au < doNotProcess ; 2006 ; 63 ; The Physical Educator Volume 63 ; 2006 >
-    au < doNotProcess ; 2007 ; 64 ; The Physical Educator Volume 64 ; 2007 >
-    au < doNotProcess ; 2008 ; 65 ; The Physical Educator Volume 65 ; 2008 >
-    au < doNotProcess ; 2009 ; 66 ; The Physical Educator Volume 66 ; 2009 >
-    au < doNotProcess ; 2010 ; 67 ; The Physical Educator Volume 67 ; 2010 >
-    au < doNotProcess ; 2011 ; 68 ; The Physical Educator Volume 68 ; 2011 >
-    au < doNotProcess ; 2012 ; 69 ; The Physical Educator Volume 69 ; 2012 >
-    au < doNotProcess ; 2013 ; 70 ; The Physical Educator Volume 70 ; 2013 >
-    au < doNotProcess ; 2014 ; 71 ; The Physical Educator Volume 71 ; 2014 >
+    au < manifest ; 1980 ; 37 ; The Physical Educator Volume 37 ; 1980 >
+    au < manifest ; 1981 ; 38 ; The Physical Educator Volume 38 ; 1981 >
+    au < manifest ; 1982 ; 39 ; The Physical Educator Volume 39 ; 1982 >
+    au < manifest ; 1983 ; 40 ; The Physical Educator Volume 40 ; 1983 >
+    au < manifest ; 1984 ; 41 ; The Physical Educator Volume 41 ; 1984 >
+    au < manifest ; 1985 ; 42 ; The Physical Educator Volume 42 ; 1985 >
+    au < manifest ; 1986 ; 43 ; The Physical Educator Volume 43 ; 1986 >
+    au < manifest ; 1987 ; 44 ; The Physical Educator Volume 44 ; 1987 >
+    au < manifest ; 1988 ; 45 ; The Physical Educator Volume 45 ; 1988 >
+    au < manifest ; 1989 ; 46 ; The Physical Educator Volume 46 ; 1989 >
+    au < manifest ; 1990 ; 47 ; The Physical Educator Volume 47 ; 1990 >
+    au < manifest ; 1991 ; 48 ; The Physical Educator Volume 48 ; 1991 >
+    au < manifest ; 1992 ; 49 ; The Physical Educator Volume 49 ; 1992 >
+    au < manifest ; 1993 ; 50 ; The Physical Educator Volume 50 ; 1993 >
+    au < manifest ; 1994 ; 51 ; The Physical Educator Volume 51 ; 1994 >
+    au < manifest ; 1995 ; 52 ; The Physical Educator Volume 52 ; 1995 >
+    au < manifest ; 1996 ; 53 ; The Physical Educator Volume 53 ; 1996 >
+    au < manifest ; 1997 ; 54 ; The Physical Educator Volume 54 ; 1997 >
+    au < manifest ; 1998 ; 55 ; The Physical Educator Volume 55 ; 1998 >
+    au < manifest ; 1999 ; 56 ; The Physical Educator Volume 56 ; 1999 >
+    au < manifest ; 2000 ; 57 ; The Physical Educator Volume 57 ; 2000 >
+    au < manifest ; 2001 ; 58 ; The Physical Educator Volume 58 ; 2001 >
+    au < manifest ; 2002 ; 59 ; The Physical Educator Volume 59 ; 2002 >
+    au < manifest ; 2003 ; 60 ; The Physical Educator Volume 60 ; 2003 >
+    au < manifest ; 2004 ; 61 ; The Physical Educator Volume 61 ; 2004 >
+    au < manifest ; 2005 ; 62 ; The Physical Educator Volume 62 ; 2005 >
+    au < manifest ; 2006 ; 63 ; The Physical Educator Volume 63 ; 2006 >
+    au < manifest ; 2007 ; 64 ; The Physical Educator Volume 64 ; 2007 >
+    au < manifest ; 2008 ; 65 ; The Physical Educator Volume 65 ; 2008 >
+    au < manifest ; 2009 ; 66 ; The Physical Educator Volume 66 ; 2009 >
+    au < manifest ; 2010 ; 67 ; The Physical Educator Volume 67 ; 2010 >
+    au < manifest ; 2011 ; 68 ; The Physical Educator Volume 68 ; 2011 >
+    au < manifest ; 2012 ; 69 ; The Physical Educator Volume 69 ; 2012 >
+    au < manifest ; 2013 ; 70 ; The Physical Educator Volume 70 ; 2013 >
+    au < manifest ; 2014 ; 71 ; The Physical Educator Volume 71 ; 2014 >
   }
 
   {
@@ -224,26 +223,26 @@
 
     param[journal_id] = schole
 
-    au < doNotProcess ; 1995 ; 10 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 10 ; 1995 >
-    au < doNotProcess ; 1996 ; 11 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 11 ; 1996 >
-    au < doNotProcess ; 1997 ; 12 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 12 ; 1997 >
-    au < doNotProcess ; 1998 ; 13 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 13 ; 1998 >
-    au < doNotProcess ; 1999 ; 14 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 14 ; 1999 >
-    au < doNotProcess ; 2000 ; 15 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 15 ; 2000 >
-    au < doNotProcess ; 2001 ; 16 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 16 ; 2001 >
-    au < doNotProcess ; 2002 ; 17 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 17 ; 2002 >
-    au < doNotProcess ; 2003 ; 18 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 18 ; 2003 >
-    au < doNotProcess ; 2004 ; 19 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 19 ; 2004 >
-    au < doNotProcess ; 2005 ; 20 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 20 ; 2005 >
-    au < doNotProcess ; 2006 ; 21 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 21 ; 2006 >
-    au < doNotProcess ; 2007 ; 22 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 22 ; 2007 >
-    au < doNotProcess ; 2008 ; 23 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 23 ; 2008 >
-    au < doNotProcess ; 2009 ; 24 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 24 ; 2009 >
-    au < doNotProcess ; 2010 ; 25 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 25 ; 2010 >
-    au < doNotProcess ; 2011 ; 26 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 26 ; 2011 >
-    au < doNotProcess ; 2012 ; 27 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 27 ; 2012 >
-    au < doNotProcess ; 2013 ; 28 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 28 ; 2013 >
-    au < doNotProcess ; 2014 ; 29 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 29 ; 2014 >
+    au < manifest ; 1995 ; 10 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 10 ; 1995 >
+    au < manifest ; 1996 ; 11 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 11 ; 1996 >
+    au < manifest ; 1997 ; 12 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 12 ; 1997 >
+    au < manifest ; 1998 ; 13 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 13 ; 1998 >
+    au < manifest ; 1999 ; 14 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 14 ; 1999 >
+    au < manifest ; 2000 ; 15 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 15 ; 2000 >
+    au < manifest ; 2001 ; 16 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 16 ; 2001 >
+    au < manifest ; 2002 ; 17 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 17 ; 2002 >
+    au < manifest ; 2003 ; 18 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 18 ; 2003 >
+    au < manifest ; 2004 ; 19 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 19 ; 2004 >
+    au < manifest ; 2005 ; 20 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 20 ; 2005 >
+    au < manifest ; 2006 ; 21 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 21 ; 2006 >
+    au < manifest ; 2007 ; 22 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 22 ; 2007 >
+    au < manifest ; 2008 ; 23 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 23 ; 2008 >
+    au < manifest ; 2009 ; 24 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 24 ; 2009 >
+    au < manifest ; 2010 ; 25 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 25 ; 2010 >
+    au < manifest ; 2011 ; 26 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 26 ; 2011 >
+    au < manifest ; 2012 ; 27 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 27 ; 2012 >
+    au < manifest ; 2013 ; 28 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 28 ; 2013 >
+    au < manifest ; 2014 ; 29 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 29 ; 2014 >
   }
 
   {
@@ -254,25 +253,25 @@
 
     param[journal_id] = trj
 
-    au < doNotProcess ; 1995 ; 29 ; Therapeutic Recreation Journal Volume 29 ; 1995 >
-    au < doNotProcess ; 1996 ; 30 ; Therapeutic Recreation Journal Volume 30 ; 1996 >
-    au < doNotProcess ; 1997 ; 31 ; Therapeutic Recreation Journal Volume 31 ; 1997 >
-    au < doNotProcess ; 1998 ; 32 ; Therapeutic Recreation Journal Volume 32 ; 1998 >
-    au < doNotProcess ; 1999 ; 33 ; Therapeutic Recreation Journal Volume 33 ; 1999 >
-    au < doNotProcess ; 2000 ; 34 ; Therapeutic Recreation Journal Volume 34 ; 2000 >
-    au < doNotProcess ; 2001 ; 35 ; Therapeutic Recreation Journal Volume 35 ; 2001 >
-    au < doNotProcess ; 2002 ; 36 ; Therapeutic Recreation Journal Volume 36 ; 2002 >
-    au < doNotProcess ; 2003 ; 37 ; Therapeutic Recreation Journal Volume 37 ; 2003 >
-    au < doNotProcess ; 2004 ; 38 ; Therapeutic Recreation Journal Volume 38 ; 2004 >
-    au < doNotProcess ; 2005 ; 39 ; Therapeutic Recreation Journal Volume 39 ; 2005 >
-    au < doNotProcess ; 2006 ; 40 ; Therapeutic Recreation Journal Volume 40 ; 2006 >
-    au < doNotProcess ; 2007 ; 41 ; Therapeutic Recreation Journal Volume 41 ; 2007 >
-    au < doNotProcess ; 2008 ; 42 ; Therapeutic Recreation Journal Volume 42 ; 2008 >
-    au < doNotProcess ; 2009 ; 43 ; Therapeutic Recreation Journal Volume 43 ; 2009 >
-    au < doNotProcess ; 2010 ; 44 ; Therapeutic Recreation Journal Volume 44 ; 2010 >
-    au < doNotProcess ; 2011 ; 45 ; Therapeutic Recreation Journal Volume 45 ; 2011 >
-    au < doNotProcess ; 2012 ; 46 ; Therapeutic Recreation Journal Volume 46 ; 2012 >
-    au < doNotProcess ; 2013 ; 47 ; Therapeutic Recreation Journal Volume 47 ; 2013 >
-    au < doNotProcess ; 2014 ; 48 ; Therapeutic Recreation Journal Volume 48 ; 2014 >
+    au < manifest ; 1995 ; 29 ; Therapeutic Recreation Journal Volume 29 ; 1995 >
+    au < manifest ; 1996 ; 30 ; Therapeutic Recreation Journal Volume 30 ; 1996 >
+    au < manifest ; 1997 ; 31 ; Therapeutic Recreation Journal Volume 31 ; 1997 >
+    au < manifest ; 1998 ; 32 ; Therapeutic Recreation Journal Volume 32 ; 1998 >
+    au < manifest ; 1999 ; 33 ; Therapeutic Recreation Journal Volume 33 ; 1999 >
+    au < manifest ; 2000 ; 34 ; Therapeutic Recreation Journal Volume 34 ; 2000 >
+    au < manifest ; 2001 ; 35 ; Therapeutic Recreation Journal Volume 35 ; 2001 >
+    au < manifest ; 2002 ; 36 ; Therapeutic Recreation Journal Volume 36 ; 2002 >
+    au < manifest ; 2003 ; 37 ; Therapeutic Recreation Journal Volume 37 ; 2003 >
+    au < manifest ; 2004 ; 38 ; Therapeutic Recreation Journal Volume 38 ; 2004 >
+    au < manifest ; 2005 ; 39 ; Therapeutic Recreation Journal Volume 39 ; 2005 >
+    au < manifest ; 2006 ; 40 ; Therapeutic Recreation Journal Volume 40 ; 2006 >
+    au < manifest ; 2007 ; 41 ; Therapeutic Recreation Journal Volume 41 ; 2007 >
+    au < manifest ; 2008 ; 42 ; Therapeutic Recreation Journal Volume 42 ; 2008 >
+    au < manifest ; 2009 ; 43 ; Therapeutic Recreation Journal Volume 43 ; 2009 >
+    au < manifest ; 2010 ; 44 ; Therapeutic Recreation Journal Volume 44 ; 2010 >
+    au < manifest ; 2011 ; 45 ; Therapeutic Recreation Journal Volume 45 ; 2011 >
+    au < manifest ; 2012 ; 46 ; Therapeutic Recreation Journal Volume 46 ; 2012 >
+    au < manifest ; 2013 ; 47 ; Therapeutic Recreation Journal Volume 47 ; 2013 >
+    au < manifest ; 2014 ; 48 ; Therapeutic Recreation Journal Volume 48 ; 2014 >
   }
 }

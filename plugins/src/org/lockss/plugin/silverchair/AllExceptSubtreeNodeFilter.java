@@ -1,5 +1,5 @@
 /*
- * $Id: AllExceptSubtreeNodeFilter.java,v 1.1.2.2 2014-05-05 17:32:31 wkwilson Exp $
+ * $Id: AllExceptSubtreeNodeFilter.java,v 1.1.2.3 2014-07-18 15:56:32 wkwilson Exp $
  */
 
 /*
@@ -34,7 +34,14 @@ package org.lockss.plugin.silverchair;
 
 import org.htmlparser.*;
 import org.htmlparser.util.NodeList;
+import org.lockss.filter.html.HtmlNodeFilters;
 
+// FIXME 1.65
+/**
+ * When 1.65 is widely available, use
+ * {@link HtmlNodeFilters#allExceptSubtree(NodeFilter, NodeFilter)}
+ * (a.k.a. {@link HtmlNodeFilters.AllExceptSubtreeNodeFilter} instead.
+ */
 public class AllExceptSubtreeNodeFilter implements NodeFilter {
 
   protected NodeFilter rootNodeFilter;

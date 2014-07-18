@@ -4,7 +4,7 @@
   >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; volume ; name ; param[year] >
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
 
   {
 
@@ -16,12 +16,11 @@
       comment[publisher] = Associação Brasileira de História das Religiões
       param[base_url] = http://www.abhr.org.br/plura/ojs/
       param[journal_id] = anais
-      
-      comment[notReady] = Structure of urls is non-standard. May need new crawl rule.
 
-      au < notReady ; 2011 ; 12 ; Anais dos Simpósios da ABHR Volume 12 ; 2011 >
-      au < notReady ; 2012 ; 13 ; Anais dos Simpósios da ABHR Volume 13 ; 2012 >
-      au < expected ; 2013 ; 14 ; Anais dos Simpósios da ABHR Volume 14 ; 2013 >
+      au < notReady ; 2011 ; 12 ; Anais dos Simpósios da ABHR Volume 12 ; 2011 ; difference in article 218/153 >
+      au < released ; 2012 ; 13 ; Anais dos Simpósios da ABHR Volume 13 ; 2012 ; >
+      au < expected ; 2013 ; 14 ; Anais dos Simpósios da ABHR Volume 14 ; 2013 ; >
+      au < expected ; 2014 ; 15 ; Anais dos Simpósios da ABHR Volume 15 ; 2014 ; >
 
   }
 

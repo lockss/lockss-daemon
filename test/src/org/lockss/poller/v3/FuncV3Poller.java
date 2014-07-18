@@ -1,5 +1,5 @@
 /*
- * $Id: FuncV3Poller.java,v 1.22 2013-02-24 04:54:20 dshr Exp $
+ * $Id: FuncV3Poller.java,v 1.22.22.1 2014-07-18 15:49:44 wkwilson Exp $
  */
 
 /*
@@ -333,10 +333,6 @@ public class FuncV3Poller extends LockssTestCase {
       }
       sem.take(5000); // Really shouldn't take this long
       return (V3LcapMessage)sentMsgs.get(voter);
-    }
-
-    protected boolean scheduleHash() {
-      return true;
     }
   }
 

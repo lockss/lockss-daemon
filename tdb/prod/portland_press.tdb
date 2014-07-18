@@ -13,25 +13,6 @@
   {
   
     title <
-      name = ASN NEURO ;
-      eissn = 1759-0914 
-    >
-
-    param[base_url] = http://www.asnneuro.org/
-    param[journal_id] = an
-
-    au < exists ; 2009 ; ASN NEURO Volume 1 ; 001 >
-    au < exists ; 2010 ; ASN NEURO Volume 2 ; 002 >
-    au < exists ; 2011 ; ASN NEURO Volume 3 ; 003 >
-    au < exists ; 2012 ; ASN NEURO Volume 4 ; 004 >
-    au < exists ; 2013 ; ASN NEURO Volume 5 ; 005 >
-    au < expected ; 2014 ; ASN NEURO Volume 6 ; 006 >
-    
-  }
-    
-  {
-  
-    title <
       name = Biochemical Journal ;
       issn = 1815-9923 ;
       eissn = 1815-9931 ;
@@ -508,18 +489,18 @@ comment[bj1] = no permission from publisher
     au < released ; 2012 ; Biochemical Journal Volume 442 ; 442 >
     au < released ; 2012 ; Biochemical Journal Volume 443 ; 443 >
     au < released ; 2012 ; Biochemical Journal Volume 444 ; 444 >
-    au < testing ; 2012 ; Biochemical Journal Volume 445 ; 445 >
-    au < testing ; 2012 ; Biochemical Journal Volume 446 ; 446 >
-    au < testing ; 2012 ; Biochemical Journal Volume 447 ; 447 >
-    au < testing ; 2012 ; Biochemical Journal Volume 448 ; 448 >
-    au < testing ; 2013 ; Biochemical Journal Volume 449 ; 449 >
-    au < testing ; 2013 ; Biochemical Journal Volume 450 ; 450 >
-    au < testing ; 2013 ; Biochemical Journal Volume 451 ; 451 >
-    au < testing ; 2013 ; Biochemical Journal Volume 452 ; 452 >
-    au < testing ; 2013 ; Biochemical Journal Volume 453 ; 453 >
-    au < testing ; 2013 ; Biochemical Journal Volume 454 ; 454 >
-    au < testing ; 2013 ; Biochemical Journal Volume 455 ; 455 >
-    au < testing ; 2013 ; Biochemical Journal Volume 456 ; 456 >
+    au < released ; 2012 ; Biochemical Journal Volume 445 ; 445 >
+    au < released ; 2012 ; Biochemical Journal Volume 446 ; 446 >
+    au < released ; 2012 ; Biochemical Journal Volume 447 ; 447 >
+    au < released ; 2012 ; Biochemical Journal Volume 448 ; 448 >
+    au < released ; 2013 ; Biochemical Journal Volume 449 ; 449 >
+    au < released ; 2013 ; Biochemical Journal Volume 450 ; 450 >
+    au < released ; 2013 ; Biochemical Journal Volume 451 ; 451 >
+    au < released ; 2013 ; Biochemical Journal Volume 452 ; 452 >
+    au < released ; 2013 ; Biochemical Journal Volume 453 ; 453 >
+    au < released ; 2013 ; Biochemical Journal Volume 454 ; 454 >
+    au < released ; 2013 ; Biochemical Journal Volume 455 ; 455 >
+    au < released ; 2013 ; Biochemical Journal Volume 456 ; 456 >
     au < doNotProcess ; 2014 ; Biochemical Journal Volume 457 ; 457 >
     au < doNotProcess ; 2014 ; Biochemical Journal Volume 458 ; 458 >
     au < doNotProcess ; 2014 ; Biochemical Journal Volume 459 ; 459 >
@@ -602,7 +583,7 @@ comment[bj1] = no permission from publisher
     au < released ; 2008 ; Biology of the Cell Volume 100 ; 100 >
     au < doNotProcess ; 2009 ; Biology of the Cell Volume 101 ; 101 >
     au < released ; 2010 ; Biology of the Cell Volume 102 ; 102 >
-    au < manifest ; 2011 ; Biology of the Cell Volume 103 ; 103 >
+    au < released ; 2011 ; Biology of the Cell Volume 103 ; 103 >
     
   } 
   
@@ -665,9 +646,9 @@ comment[bj1] = no permission from publisher
     au < released ; 2009 ; Biochemical Society Transactions Volume 37 ; 037 >
     au < released ; 2010 ; Biochemical Society Transactions Volume 38 ; 038 >
     au < released ; 2011 ; Biochemical Society Transactions Volume 39 ; 039 >
-    au < manifest ; 2012 ; Biochemical Society Transactions Volume 40 ; 040 >
-    au < manifest ; 2013 ; Biochemical Society Transactions Volume 41 ; 041 >
-    au < manifest ; 2014 ; Biochemical Society Transactions Volume 42 ; 042 >
+    au < released ; 2012 ; Biochemical Society Transactions Volume 40 ; 040 >
+    au < released ; 2013 ; Biochemical Society Transactions Volume 41 ; 041 >
+    au < doNotProcess ; 2014 ; Biochemical Society Transactions Volume 42 ; 042 >
     
   }
   
@@ -725,9 +706,9 @@ comment[bj1] = no permission from publisher
     au < released ; 2009 ; Bioscience Reports Volume 29 ; 029 >
     au < released ; 2010 ; Bioscience Reports Volume 30 ; 030 >
     au < released ; 2011 ; Bioscience Reports Volume 31 ; 031 >
-    au < manifest ; 2012 ; Bioscience Reports Volume 32 ; 032 >
-    au < manifest ; 2013 ; Bioscience Reports Volume 33 ; 033 >
-    au < manifest ; 2014 ; Bioscience Reports Volume 34 ; 034 >
+    au < released ; 2012 ; Bioscience Reports Volume 32 ; 032 >
+    au < released ; 2013 ; Bioscience Reports Volume 33 ; 033 >
+    au < doNotProcess ; 2014 ; Bioscience Reports Volume 34 ; 034 >
 
   }
 
@@ -745,55 +726,55 @@ comment[bj1] = no permission from publisher
     param[base_url] = http://www.babonline.org/
     param[journal_id] = bab
 
-    au < released ; 1987 ; Biotechnology and Applied Biochemistry Volume 9 [abstracts only] ; 009 >
-    au < released ; 1988 ; Biotechnology and Applied Biochemistry Volume 10 [abstracts only] ; 010 >
-    au < released ; 1989 ; Biotechnology and Applied Biochemistry Volume 11 [abstracts only] ; 011 >
-    au < released ; 1990 ; Biotechnology and Applied Biochemistry Volume 12 [abstracts only] ; 012 >
-    au < released ; 1991 ; Biotechnology and Applied Biochemistry Volume 13 [abstracts only] ; 013 >
-    au < released ; 1991 ; Biotechnology and Applied Biochemistry Volume 14 [abstracts only] ; 014 >
-    au < released ; 1992 ; Biotechnology and Applied Biochemistry Volume 15 [abstracts only] ; 015 >
-    au < released ; 1992 ; Biotechnology and Applied Biochemistry Volume 16 [abstracts only] ; 016 >
-    au < released ; 1993 ; Biotechnology and Applied Biochemistry Volume 17 [abstracts only] ; 017 >
-    au < released ; 1993 ; Biotechnology and Applied Biochemistry Volume 18 [abstracts only] ; 018 >
-    au < released ; 1994 ; Biotechnology and Applied Biochemistry Volume 19 [abstracts only] ; 019 >
-    au < released ; 1994 ; Biotechnology and Applied Biochemistry Volume 20 [abstracts only] ; 020 >
-    au < released ; 1995 ; Biotechnology and Applied Biochemistry Volume 21 [abstracts only] ; 021 >
-    au < released ; 1995 ; Biotechnology and Applied Biochemistry Volume 22 [abstracts only] ; 022 >
-    au < released ; 1996 ; Biotechnology and Applied Biochemistry Volume 23 [abstracts only] ; 023 >
-    au < released ; 1996 ; Biotechnology and Applied Biochemistry Volume 24 [abstracts only] ; 024 >
-    au < released ; 1997 ; Biotechnology and Applied Biochemistry Volume 25 [abstracts only] ; 025 >
-    au < released ; 1997 ; Biotechnology and Applied Biochemistry Volume 26 [abstracts only] ; 026 >
-    au < released ; 1998 ; Biotechnology and Applied Biochemistry Volume 27 [abstracts only] ; 027 >
-    au < released ; 1998 ; Biotechnology and Applied Biochemistry Volume 28 ; 028 >
-    au < released ; 1999 ; Biotechnology and Applied Biochemistry Volume 29 ; 029 >
-    au < released ; 1999 ; Biotechnology and Applied Biochemistry Volume 30 ; 030 >
-    au < released ; 2000 ; Biotechnology and Applied Biochemistry Volume 31 ; 031 >
-    au < released ; 2000 ; Biotechnology and Applied Biochemistry Volume 32 ; 032 >
-    au < released ; 2001 ; Biotechnology and Applied Biochemistry Volume 33 ; 033 >
-    au < released ; 2001 ; Biotechnology and Applied Biochemistry Volume 34 ; 034 >
-    au < released ; 2002 ; Biotechnology and Applied Biochemistry Volume 35 ; 035 >
-    au < released ; 2002 ; Biotechnology and Applied Biochemistry Volume 36 ; 036 >
-    au < released ; 2003 ; Biotechnology and Applied Biochemistry Volume 37 ; 037 >
-    au < released ; 2003 ; Biotechnology and Applied Biochemistry Volume 38 ; 038 >
-    au < released ; 2004 ; Biotechnology and Applied Biochemistry Volume 39 ; 039 >
-    au < released ; 2004 ; Biotechnology and Applied Biochemistry Volume 40 ; 040 >
-    au < released ; 2005 ; Biotechnology and Applied Biochemistry Volume 41 ; 041 >
-    au < released ; 2005 ; Biotechnology and Applied Biochemistry Volume 42 ; 042 >
-    au < released ; 2006 ; Biotechnology and Applied Biochemistry Volume 43 ; 043 >
-    au < released ; 2006 ; Biotechnology and Applied Biochemistry Volume 44 ; 044 >
-    au < released ; 2006 ; Biotechnology and Applied Biochemistry Volume 45 ; 045 >
-    au < released ; 2007 ; Biotechnology and Applied Biochemistry Volume 46 ; 046 >
-    au < released ; 2007 ; Biotechnology and Applied Biochemistry Volume 47 ; 047 >
-    au < released ; 2007 ; Biotechnology and Applied Biochemistry Volume 48 ; 048 >
-    au < released ; 2008 ; Biotechnology and Applied Biochemistry Volume 49 ; 049 >
-    au < released ; 2008 ; Biotechnology and Applied Biochemistry Volume 50 ; 050 >
-    au < released ; 2008 ; Biotechnology and Applied Biochemistry Volume 51 ; 051 >
-    au < released ; 2009 ; Biotechnology and Applied Biochemistry Volume 52 ; 052 >
-    au < released ; 2009 ; Biotechnology and Applied Biochemistry Volume 53 ; 053 >
-    au < released ; 2009 ; Biotechnology and Applied Biochemistry Volume 54 ; 054 >
-    au < released ; 2010 ; Biotechnology and Applied Biochemistry Volume 55 ; 055 >
-    au < released ; 2010 ; Biotechnology and Applied Biochemistry Volume 56 ; 056 >
-    au < released ; 2010 ; Biotechnology and Applied Biochemistry Volume 57 ; 057 >
+    au < down ; 1987 ; Biotechnology and Applied Biochemistry Volume 9 [abstracts only] ; 009 >
+    au < down ; 1988 ; Biotechnology and Applied Biochemistry Volume 10 [abstracts only] ; 010 >
+    au < down ; 1989 ; Biotechnology and Applied Biochemistry Volume 11 [abstracts only] ; 011 >
+    au < down ; 1990 ; Biotechnology and Applied Biochemistry Volume 12 [abstracts only] ; 012 >
+    au < down ; 1991 ; Biotechnology and Applied Biochemistry Volume 13 [abstracts only] ; 013 >
+    au < down ; 1991 ; Biotechnology and Applied Biochemistry Volume 14 [abstracts only] ; 014 >
+    au < down ; 1992 ; Biotechnology and Applied Biochemistry Volume 15 [abstracts only] ; 015 >
+    au < down ; 1992 ; Biotechnology and Applied Biochemistry Volume 16 [abstracts only] ; 016 >
+    au < down ; 1993 ; Biotechnology and Applied Biochemistry Volume 17 [abstracts only] ; 017 >
+    au < down ; 1993 ; Biotechnology and Applied Biochemistry Volume 18 [abstracts only] ; 018 >
+    au < down ; 1994 ; Biotechnology and Applied Biochemistry Volume 19 [abstracts only] ; 019 >
+    au < down ; 1994 ; Biotechnology and Applied Biochemistry Volume 20 [abstracts only] ; 020 >
+    au < down ; 1995 ; Biotechnology and Applied Biochemistry Volume 21 [abstracts only] ; 021 >
+    au < down ; 1995 ; Biotechnology and Applied Biochemistry Volume 22 [abstracts only] ; 022 >
+    au < down ; 1996 ; Biotechnology and Applied Biochemistry Volume 23 [abstracts only] ; 023 >
+    au < down ; 1996 ; Biotechnology and Applied Biochemistry Volume 24 [abstracts only] ; 024 >
+    au < down ; 1997 ; Biotechnology and Applied Biochemistry Volume 25 [abstracts only] ; 025 >
+    au < down ; 1997 ; Biotechnology and Applied Biochemistry Volume 26 [abstracts only] ; 026 >
+    au < down ; 1998 ; Biotechnology and Applied Biochemistry Volume 27 [abstracts only] ; 027 >
+    au < down ; 1998 ; Biotechnology and Applied Biochemistry Volume 28 ; 028 >
+    au < down ; 1999 ; Biotechnology and Applied Biochemistry Volume 29 ; 029 >
+    au < down ; 1999 ; Biotechnology and Applied Biochemistry Volume 30 ; 030 >
+    au < down ; 2000 ; Biotechnology and Applied Biochemistry Volume 31 ; 031 >
+    au < down ; 2000 ; Biotechnology and Applied Biochemistry Volume 32 ; 032 >
+    au < down ; 2001 ; Biotechnology and Applied Biochemistry Volume 33 ; 033 >
+    au < down ; 2001 ; Biotechnology and Applied Biochemistry Volume 34 ; 034 >
+    au < down ; 2002 ; Biotechnology and Applied Biochemistry Volume 35 ; 035 >
+    au < down ; 2002 ; Biotechnology and Applied Biochemistry Volume 36 ; 036 >
+    au < down ; 2003 ; Biotechnology and Applied Biochemistry Volume 37 ; 037 >
+    au < down ; 2003 ; Biotechnology and Applied Biochemistry Volume 38 ; 038 >
+    au < down ; 2004 ; Biotechnology and Applied Biochemistry Volume 39 ; 039 >
+    au < down ; 2004 ; Biotechnology and Applied Biochemistry Volume 40 ; 040 >
+    au < down ; 2005 ; Biotechnology and Applied Biochemistry Volume 41 ; 041 >
+    au < down ; 2005 ; Biotechnology and Applied Biochemistry Volume 42 ; 042 >
+    au < down ; 2006 ; Biotechnology and Applied Biochemistry Volume 43 ; 043 >
+    au < down ; 2006 ; Biotechnology and Applied Biochemistry Volume 44 ; 044 >
+    au < down ; 2006 ; Biotechnology and Applied Biochemistry Volume 45 ; 045 >
+    au < down ; 2007 ; Biotechnology and Applied Biochemistry Volume 46 ; 046 >
+    au < down ; 2007 ; Biotechnology and Applied Biochemistry Volume 47 ; 047 >
+    au < down ; 2007 ; Biotechnology and Applied Biochemistry Volume 48 ; 048 >
+    au < down ; 2008 ; Biotechnology and Applied Biochemistry Volume 49 ; 049 >
+    au < down ; 2008 ; Biotechnology and Applied Biochemistry Volume 50 ; 050 >
+    au < down ; 2008 ; Biotechnology and Applied Biochemistry Volume 51 ; 051 >
+    au < down ; 2009 ; Biotechnology and Applied Biochemistry Volume 52 ; 052 >
+    au < down ; 2009 ; Biotechnology and Applied Biochemistry Volume 53 ; 053 >
+    au < down ; 2009 ; Biotechnology and Applied Biochemistry Volume 54 ; 054 >
+    au < down ; 2010 ; Biotechnology and Applied Biochemistry Volume 55 ; 055 >
+    au < down ; 2010 ; Biotechnology and Applied Biochemistry Volume 56 ; 056 >
+    au < down ; 2010 ; Biotechnology and Applied Biochemistry Volume 57 ; 057 >
     
   }
 
@@ -810,6 +791,7 @@ comment[bj1] = no permission from publisher
     param[journal_id] = cs
     
     comment[notReady_V118] = 500 http://www.clinsci.org/cs/118/cs1180411.htm  
+    comment[v123] = 401 not authorized on content15 http://www.clinsci.org/cs/ev/123/0073/cs1230073_evtext03.htm 
 
     au < released ; 1979 ; Clinical Science Volume 56 ; 056 >
     au < released ; 1979 ; Clinical Science Volume 57 ; 057 >
@@ -872,15 +854,15 @@ comment[bj1] = no permission from publisher
     au < released ; 2008 ; Clinical Science Volume 114 ; 114 >
     au < released ; 2008 ; Clinical Science Volume 115 ; 115 >
     au < released ; 2009 ; Clinical Science Volume 116 ; 116 >
-    au < ready ; 2009 ; Clinical Science Volume 117 ; 117 >
+    au < released ; 2009 ; Clinical Science Volume 117 ; 117 >
     au < doNotProcess ; 2010 ; Clinical Science Volume 118 ; 118 >
     au < released ; 2010 ; Clinical Science Volume 119 ; 119 >
     au < released ; 2011 ; Clinical Science Volume 120 ; 120 >
     au < released ; 2011 ; Clinical Science Volume 121 ; 121 >
-    au < manifest ; 2012 ; Clinical Science Volume 122 ; 122 >
-    au < testing ; 2012 ; Clinical Science Volume 123 ; 123 >
-    au < testing ; 2013 ; Clinical Science Volume 124 ; 124 >
-    au < testing ; 2013 ; Clinical Science Volume 125 ; 125 >
+    au < released ; 2012 ; Clinical Science Volume 122 ; 122 >
+    au < doNotProcess ; 2012 ; Clinical Science Volume 123 ; 123 >
+    au < released ; 2013 ; Clinical Science Volume 124 ; 124 >
+    au < released ; 2013 ; Clinical Science Volume 125 ; 125 >
     au < doNotProcess ; 2014 ; Clinical Science Volume 126 ; 126 >
     au < doNotProcess ; 2014 ; Clinical Science Volume 127 ; 127 >
         
@@ -915,12 +897,12 @@ comment[bj1] = no permission from publisher
     au < released ; 2010 ; Essays in Biochemistry Volume 47 ; 047 >
     au < released ; 2010 ; Essays in Biochemistry Volume 48 ; 048 >
     au < released ; 2011 ; Essays in Biochemistry Volume 49 ; 049 >
-    au < testing ; 2011 ; Essays in Biochemistry Volume 50 ; 050 >
-    au < testing ; 2011 ; Essays in Biochemistry Volume 51 ; 051 >
-    au < testing ; 2012 ; Essays in Biochemistry Volume 52 ; 052 >
-    au < testing ; 2012 ; Essays in Biochemistry Volume 53 ; 053 >
-    au < testing ; 2013 ; Essays in Biochemistry Volume 54 ; 054 >
-    au < testing ; 2013 ; Essays in Biochemistry Volume 55 ; 055 >
+    au < released ; 2011 ; Essays in Biochemistry Volume 50 ; 050 >
+    au < released ; 2011 ; Essays in Biochemistry Volume 51 ; 051 >
+    au < released ; 2012 ; Essays in Biochemistry Volume 52 ; 052 >
+    au < released ; 2012 ; Essays in Biochemistry Volume 53 ; 053 >
+    au < released ; 2013 ; Essays in Biochemistry Volume 54 ; 054 >
+    au < released ; 2013 ; Essays in Biochemistry Volume 55 ; 055 >
     au < doNotProcess ; 2014 ; Essays in Biochemistry Volume 56 ; 056 >
     au < doNotProcess ; 2014 ; Essays in Biochemistry Volume 57 ; 057 >
 

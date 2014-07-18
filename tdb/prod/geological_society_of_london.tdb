@@ -127,9 +127,11 @@
     au < HighWirePressPlugin ; down ; 2008 ; Geological Society of London Memoirs Volume 33 ; 33 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Geological Society of London Memoirs Volume 34 ; 34 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Geological Society of London Memoirs Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; released ; 2012 ; Geological Society of London Memoirs Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; released ; 2011 ; Geological Society of London Memoirs Volume 36 ; 36 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Geological Society of London Memoirs Volume 37 ; 37 >
-    au < HighWirePressH20Plugin ; manifest ; 2014 ; Geological Society of London Memoirs Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Geological Society of London Memoirs Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; manifest ; 2014 ; Geological Society of London Memoirs Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; expected ; 2014 ; Geological Society of London Memoirs Volume 40 ; 40 >
 
   }
 
@@ -527,17 +529,24 @@
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Geological Society of London Special Publications Volume 379 ; 379 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Geological Society of London Special Publications Volume 380 ; 380 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Geological Society of London Special Publications Volume 381 ; 381 >
-    au < HighWirePressH20Plugin ; manifest ; 2014 ; Geological Society of London Special Publications Volume 382 ; 382 >
-    au < HighWirePressH20Plugin ; manifest ; 2014 ; Geological Society of London Special Publications Volume 383 ; 383 >
-    au < HighWirePressH20Plugin ; manifest ; 2014 ; Geological Society of London Special Publications Volume 384 ; 384 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Geological Society of London Special Publications Volume 382 ; 382 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Geological Society of London Special Publications Volume 383 ; 383 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Geological Society of London Special Publications Volume 384 ; 384 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Geological Society of London Special Publications Volume 385 ; 385 >
-    au < HighWirePressH20Plugin ; expected ; 2014 ; Geological Society of London Special Publications Volume 386 ; 386 >
-    au < HighWirePressH20Plugin ; expected ; 2014 ; Geological Society of London Special Publications Volume 387 ; 387 >
+    au < HighWirePressH20Plugin ; manifest ; 2014 ; Geological Society of London Special Publications Volume 386 ; 386 >
+    au < HighWirePressH20Plugin ; manifest ; 2014 ; Geological Society of London Special Publications Volume 387 ; 387 >
     au < HighWirePressH20Plugin ; expected ; 2014 ; Geological Society of London Special Publications Volume 388 ; 388 >
     au < HighWirePressH20Plugin ; expected ; 2014 ; Geological Society of London Special Publications Volume 389 ; 389 >
-    au < HighWirePressH20Plugin ; expected ; 2014 ; Geological Society of London Special Publications Volume 390 ; 390 >
-    au < HighWirePressH20Plugin ; expected ; 2014 ; Geological Society of London Special Publications Volume 391 ; 391 >
-    au < HighWirePressH20Plugin ; expected ; 2014 ; Geological Society of London Special Publications Volume 392 ; 392 >
+    au < HighWirePressH20Plugin ; manifest ; 2014 ; Geological Society of London Special Publications Volume 390 ; 390 >
+    au < HighWirePressH20Plugin ; manifest ; 2014 ; Geological Society of London Special Publications Volume 391 ; 391 >
+    au < HighWirePressH20Plugin ; manifest ; 2014 ; Geological Society of London Special Publications Volume 392 ; 392 >
+    au < HighWirePressH20Plugin ; expected ; 2014 ; Geological Society of London Special Publications Volume 393 ; 393 >
+    au < HighWirePressH20Plugin ; manifest ; 2014 ; Geological Society of London Special Publications Volume 394 ; 394 >
+    au < HighWirePressH20Plugin ; manifest ; 2014 ; Geological Society of London Special Publications Volume 395 ; 395 >
+    au < HighWirePressH20Plugin ; expected ; 2014 ; Geological Society of London Special Publications Volume 396 ; 396 >
+    au < HighWirePressH20Plugin ; manifest ; 2014 ; Geological Society of London Special Publications Volume 397 ; 397 >
+    au < HighWirePressH20Plugin ; expected ; 2014 ; Geological Society of London Special Publications Volume 398 ; 398 >
+    au < HighWirePressH20Plugin ; expected ; 2014 ; Geological Society of London Special Publications Volume 399 ; 399 >
 
   }
 
@@ -703,7 +712,9 @@
   {
 
       title <
-        name = Transactions of the Edinburgh Geological Society 
+        name = Transactions of the Edinburgh Geological Society ;
+        issn = 0371-6260 ;
+        eissn = 2052-9414
     >
 
     {

@@ -188,6 +188,8 @@
       name = Chinese Journal of Chemical Physics ;
       issn = 1674-0068
     >
+    
+    comment[moved] = As of start 2013 published by AIP.
 
     param[journal_issn] = 1674-0068
     comment[continues] = 1003-7713
@@ -197,8 +199,6 @@
     au < finished ; crawling ; 2010 ; Chinese Journal of Chemical Physics Volume 23 ; 23 > 
     au < finished ; crawling ; 2011 ; Chinese Journal of Chemical Physics Volume 24 ; 24 > 
     au < finished ; crawling ; 2012 ; Chinese Journal of Chemical Physics Volume 25 ; 25 > 
-    au < expected ; exists ; 2013 ; Chinese Journal of Chemical Physics Volume 26 ; 26 > 
-    au < expected ; exists ; 2014 ; Chinese Journal of Chemical Physics Volume 27 ; 27 > 
 
   }
 
@@ -214,18 +214,6 @@
 
     au < manifest ; exists ; 2006 ; Chinese Journal of Chemical Physics Volume 19 ; 19 > 
     au < manifest ; exists ; 2007 ; Chinese Journal of Chemical Physics Volume 20 ; 20 > 
-
-  }
-  
-  {
-
-    title <
-      name = Chinese Journal of Semiconductors ;
-      issn = 0253-4177
-    >
-
-    param[journal_issn] = 0253-4177
-    comment[0] = no content online yet, toc lists years 1980-2008
 
   }
 
@@ -394,7 +382,7 @@
     au < crawling ; exists ; 2013 ; Communications in Theoretical Physics Volume 59 ; 59 >
     au < crawling ; exists ; 2013 ; Communications in Theoretical Physics Volume 60 ; 60 >
     au < manifest ; exists ; 2014 ; Communications in Theoretical Physics Volume 61 ; 61 >
-    au < expected ; exists ; 2014 ; Communications in Theoretical Physics Volume 62 ; 62 >
+    au < manifest ; exists ; 2014 ; Communications in Theoretical Physics Volume 62 ; 62 >
 
   }
 
@@ -583,7 +571,7 @@
     au < crawling ; exists ; 2013 ; EPL (Europhysics Letters) Volume 104 ; 104 >
     au < manifest ; exists ; 2014 ; EPL (Europhysics Letters) Volume 105 ; 105 > 
     au < manifest ; exists ; 2014 ; EPL (Europhysics Letters) Volume 106 ; 106 >
-    au < expected ; exists ; 2014 ; EPL (Europhysics Letters) Volume 107 ; 107 >
+    au < manifest ; exists ; 2014 ; EPL (Europhysics Letters) Volume 107 ; 107 >
     au < expected ; exists ; 2014 ; EPL (Europhysics Letters) Volume 108 ; 108 >
 
   }
@@ -1635,8 +1623,9 @@
 
     param[journal_issn] = 1742-6596
     comment[param] = eissn preferred
-    comment[notReady170] = crawl failure
-    comment[notReady] = low agreement
+    comment[ingNotReady170] = crawl failure
+    comment[ingNotReady] = low agreement
+    comment[notReady] = PD-1111, hash filter for metrics tag
 
     au < manifest ; exists ; 2004 ; Journal of Physics: Conference Series Volume 1 ; 1 >
     au < manifest ; exists ; 2004 ; Journal of Physics: Conference Series Volume 2 ; 2 >
@@ -2099,28 +2088,28 @@
     au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 459 ; 459 >
     au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 460 ; 460 >
     au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 461 ; 461 >
-    au < manifest ; exists ; 2013 ; Journal of Physics: Conference Series Volume 462 ; 462 >
+    au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 462 ; 462 >
     au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 463 ; 463 >
     au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 464 ; 464 >
     au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 465 ; 465 >
     au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 466 ; 466 >
-    au < manifest ; exists ; 2013 ; Journal of Physics: Conference Series Volume 467 ; 467 >
-    au < manifest ; exists ; 2013 ; Journal of Physics: Conference Series Volume 468 ; 468 >
-    au < manifest ; exists ; 2013 ; Journal of Physics: Conference Series Volume 469 ; 469 >
-    au < manifest ; exists ; 2013 ; Journal of Physics: Conference Series Volume 470 ; 470 >
-    au < manifest ; exists ; 2013 ; Journal of Physics: Conference Series Volume 471 ; 471 >
-    au < manifest ; exists ; 2013 ; Journal of Physics: Conference Series Volume 472 ; 472 >
-    au < manifest ; exists ; 2013 ; Journal of Physics: Conference Series Volume 473 ; 473 >
-    au < manifest ; exists ; 2013 ; Journal of Physics: Conference Series Volume 474 ; 474 >
-    au < manifest ; exists ; 2013 ; Journal of Physics: Conference Series Volume 475 ; 475 >
-    au < manifest ; exists ; 2013 ; Journal of Physics: Conference Series Volume 476 ; 476 >
-    au < manifest ; exists ; 2013 ; Journal of Physics: Conference Series Volume 477 ; 477 >
-    au < manifest ; exists ; 2013 ; Journal of Physics: Conference Series Volume 478 ; 478 >
-    au < manifest ; exists ; 2013 ; Journal of Physics: Conference Series Volume 479 ; 479 >
+    au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 467 ; 467 >
+    au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 468 ; 468 >
+    au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 469 ; 469 >
+    au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 470 ; 470 >
+    au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 471 ; 471 >
+    au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 472 ; 472 >
+    au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 473 ; 473 >
+    au < notReady ; exists ; 2013 ; Journal of Physics: Conference Series Volume 474 ; 474 >
+    au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 475 ; 475 >
+    au < notReady ; exists ; 2013 ; Journal of Physics: Conference Series Volume 476 ; 476 >
+    au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 477 ; 477 >
+    au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 478 ; 478 >
+    au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 479 ; 479 >
     au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 480 ; 480 >
     au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 481 ; 481 >
     au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 482 ; 482 >
-    au < manifest ; exists ; 2013 ; Journal of Physics: Conference Series Volume 483 ; 483 >
+    au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 483 ; 483 >
     au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 484 ; 484 >
     au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 485 ; 485 >
     au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 486 ; 486 >
@@ -2137,16 +2126,36 @@
     au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 497 ; 497 >
     au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 498 ; 498 >
     au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 499 ; 499 >
-    au < expected ; exists ; 2014 ; Journal of Physics: Conference Series Volume 500 ; 500 >
+    au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 500 ; 500 >
     au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 501 ; 501 >
     au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 502 ; 502 >
     au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 503 ; 503 >
     au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 504 ; 504 >
-    au < expected ; exists ; 2014 ; Journal of Physics: Conference Series Volume 505 ; 505 >
+    au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 505 ; 505 >
     au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 506 ; 506 >
-    au < expected ; exists ; 2014 ; Journal of Physics: Conference Series Volume 507 ; 507 >
+    au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 507 ; 507 >
     au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 508 ; 508 >
-    au < expected ; exists ; 2014 ; Journal of Physics: Conference Series Volume 509 ; 509 >
+    au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 509 ; 509 >
+    au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 510 ; 510 >
+    au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 511 ; 511 >
+    au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 512 ; 512 >
+    au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 513 ; 513 >
+    au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 514 ; 514 >
+    au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 515 ; 515 >
+    au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 516 ; 516 >
+    au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 517 ; 517 >
+    au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 518 ; 518 >
+    au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 519 ; 519 >
+    au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 520 ; 520 >
+    au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 521 ; 521 >
+    au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 522 ; 522 >
+    au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 523 ; 523 >
+    au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 524 ; 524 >
+    au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 525 ; 525 >
+    au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 526 ; 526 >
+    au < manifest ; exists ; 2014 ; Journal of Physics: Conference Series Volume 527 ; 527 >
+    au < expected ; exists ; 2014 ; Journal of Physics: Conference Series Volume 528 ; 528 >
+    au < expected ; exists ; 2014 ; Journal of Physics: Conference Series Volume 529 ; 529 >
   }
 
   {
@@ -2254,6 +2263,8 @@
       name = Journal of Semiconductors ;
       issn = 1674-4926
     >
+    
+    comment[0] = Formerly 'Chinese Journal of Semiconductors' 0253-4177
 
     param[journal_issn] = 1674-4926
 

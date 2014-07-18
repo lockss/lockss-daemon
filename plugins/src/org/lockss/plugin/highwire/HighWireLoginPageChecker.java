@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireLoginPageChecker.java,v 1.2 2006-07-19 16:44:44 thib_gc Exp $
+ * $Id: HighWireLoginPageChecker.java,v 1.2.132.1 2014-07-18 15:54:38 wkwilson Exp $
  */
 
 /*
@@ -38,20 +38,20 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.highwire;
 
-import org.lockss.daemon.*;
-import org.lockss.util.*;
-import java.util.*;
 import java.io.*;
+import java.util.*;
+
+import org.lockss.daemon.LoginPageChecker;
+import org.lockss.util.*;
 
 public class HighWireLoginPageChecker implements LoginPageChecker {
-
+  
   public static final String LOGIN_STRING =
     "<!-- login page comment for LOCKSS-->";
-
+  
   public static final String NO_STORE_VALUE = "no-store";
   public static final String CACHE_CONTROL_HEADER = "cache-control";
-
-
+  
   public boolean isLoginPage(Properties props, Reader reader)
       throws IOException {
     if (props == null) {
@@ -59,9 +59,9 @@ public class HighWireLoginPageChecker implements LoginPageChecker {
     } else if (reader == null) {
       throw new NullPointerException("Called with a null reader");
     }
-
+    
     if (NO_STORE_VALUE.equalsIgnoreCase((String)
-					 props.get(CACHE_CONTROL_HEADER))) {
+        props.get(CACHE_CONTROL_HEADER))) {
       return StringUtil.containsString(reader, LOGIN_STRING);
     }
     return false;

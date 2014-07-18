@@ -13,18 +13,18 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Poll</string>
-        <string>4</string>
+        <string>5</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -64,6 +64,12 @@
     <string>au_crawlrules</string>
     <list>
       <string>1,"^https?://(%s|%s).*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host, home_url_host</string>
+<!--  article level metrics live at <filename>-metrics.html -->      
+      <string>2,"^%s%s/.*-metrics.html$",base_url,volume_name</string>
+<!--  related articles live at <filename>-relations.html -->      
+      <string>2,"^%s%s/.*-relations.html$",base_url,volume_name</string>
+<!--article at <base_url>/14/4/2012/<filename>.(html|.pdf|.xml|.ris|.bib) -->
+<!--issue TOC at <base_url>/14/index.html or <base_url>/68/issue2.html -->
       <string>1,"^%s%s/",base_url,volume_name</string>
 <!--  anything not explicitly collected is inherently excluded so you don't need a statement-->
     </list>
@@ -143,6 +149,15 @@
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.copernicus.CopernicusArticleIteratorFactory</string>
   </entry> 
+   <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.copernicus.CopernicusHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>  
   <entry>
   <string>application/x-research-info-systems_metadata_extractor_factory_map</string>
   <map> 

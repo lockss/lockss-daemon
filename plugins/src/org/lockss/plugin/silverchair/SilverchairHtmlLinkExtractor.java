@@ -1,5 +1,5 @@
 /*
- * $Id: SilverchairHtmlLinkExtractor.java,v 1.1.2.2 2014-05-05 17:32:31 wkwilson Exp $
+ * $Id: SilverchairHtmlLinkExtractor.java,v 1.1.2.3 2014-07-18 15:56:32 wkwilson Exp $
  */
 
 /*
@@ -34,19 +34,36 @@ package org.lockss.plugin.silverchair;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.Arrays;
 import java.util.regex.*;
 
 import org.lockss.extractor.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.Logger;
+import org.lockss.util.StringUtil;
 
 public class SilverchairHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
 
   private static final Logger logger = Logger.getLogger(SilverchairHtmlLinkExtractor.class);
   
-  protected static final Pattern PATTERN_SRCURL =
-      Pattern.compile("/article\\.aspx\\?articleid=([^&]+)$", Pattern.CASE_INSENSITIVE);
+  protected static final Pattern PATTERN_ARTICLE =
+      Pattern.compile("/article\\.aspx\\?(articleid=[^&]+)$",
+                      Pattern.CASE_INSENSITIVE);
+  
+  protected static final Pattern PATTERN_CITATION =
+      Pattern.compile("/downloadCitation\\.aspx\\?(format=[^&]+)?$",
+                      Pattern.CASE_INSENSITIVE);
+  
+  protected static final Pattern PATTERN_COMBRES =
+      Pattern.compile("//[^/]+(/combres\\.axd/.*)$",
+                      Pattern.CASE_INSENSITIVE);
+  
+  protected static final Pattern PATTERN_DOWNLOAD_FILE =
+      Pattern.compile("javascript:downloadFile\\('([^']+)'\\)",
+                      Pattern.CASE_INSENSITIVE);
+  
+  protected static final Pattern PATTERN_JQUERY =
+      Pattern.compile("//ajax\\.googleapis\\.com/ajax/libs/jquery/([^/]+)/jquery\\.min\\.js$",
+                      Pattern.CASE_INSENSITIVE);
   
   @Override
   protected String extractLinkFromTag(StringBuffer link,
@@ -54,28 +71,121 @@ public class SilverchairHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
                                       Callback cb)
       throws IOException {
     char ch = link.charAt(0);
-    if ((ch == 'a' || ch == 'A') && beginsWithTag(link, ATAG) && srcUrl.contains("article.aspx?articleid=")) {
+
+    // <a>
+    if ((ch == 'a' || ch == 'A') && beginsWithTag(link, ATAG)) {
+      // <a onclick="...">
+      String onclick = getAttributeValue("onclick", link);
+      if (onclick == null) {
+        onclick = "";
+      }
+      
+      Matcher onclickMat = null;
+      onclickMat = PATTERN_DOWNLOAD_FILE.matcher(onclick);
+      if (onclickMat.find()) {
+        logger.debug3("Found target onclick URL");
+        String url = onclickMat.group(1);
+        logger.debug3(String.format("Generated %s", url));
+        if (baseUrl == null) { baseUrl = new URL(srcUrl); } // Copycat of parseLink()
+        if (!StringUtil.isNullString(url)) {
+          emit(cb, resolveUri(baseUrl, url));
+        }
+      }
+      
+      // <a href="...">
       String href = getAttributeValue(HREF, link);
-      if (href != null && href.endsWith("/downloadCitation.aspx?format=ris")) {
-        logger.debug3("Found target URL");
-        // Derive the article ID from srcUrl
-        Matcher srcMat = PATTERN_SRCURL.matcher(srcUrl);
-        if (srcMat.find()) {
-          String articleId = srcMat.group(1);
-          // Generate the correct URLs of all citations (including RIS)
+      if (href == null) {
+        href = "";
+      }
+
+      Matcher hrefMat = null;
+      hrefMat = PATTERN_CITATION.matcher(href);
+      if (hrefMat.find()) {
+        logger.debug3("Found target citation URL");
+        // Derive citation format; can be null
+        String formatPair = hrefMat.group(1);
+        Matcher srcUrlMat = PATTERN_ARTICLE.matcher(srcUrl);
+        if (srcUrlMat.find()) {
+          // Derive article ID
+          String articleIdPair = srcUrlMat.group(1);
+          // Generate correct citation URL
+          String url = null;
+          if (formatPair == null) {
+            url = String.format("/downloadCitation.aspx?%s", articleIdPair);
+          }
+          else {
+            url = String.format("/downloadCitation.aspx?%s&%s", formatPair, articleIdPair);
+          }
+          logger.debug3(String.format("Generated %s", url));
           if (baseUrl == null) { baseUrl = new URL(srcUrl); } // Copycat of parseLink()
-          for (String str : Arrays.asList("format=ris&",
-                                          "format=bibtex&",
-                                          "format=txt&",
-              "")) {
-            String url = String.format("/downloadCitation.aspx?%sarticleid=%s", str, articleId);
-            logger.debug3(String.format("Generated %s", url));
+          if (!StringUtil.isNullString(url)) {
             emit(cb, resolveUri(baseUrl, url));
           }
         }
       }
+      
+      return super.extractLinkFromTag(link, au, cb);
     }
-    // Defer to the parent no matter what
+
+    // <img>
+    else if ((ch == 'i' || ch == 'I') && beginsWithTag(link, IMGTAG)) {
+      String dataOriginal = getAttributeValue("data-original", link);
+      if (baseUrl == null) { baseUrl = new URL(srcUrl); } // Copycat of parseLink()
+      if (!StringUtil.isNullString(dataOriginal)) {
+        emit(cb, resolveUri(baseUrl, dataOriginal));
+      }
+      return super.extractLinkFromTag(link, au, cb);
+    }
+    
+    // <link>
+    else if ((ch == 'l' || ch == 'L') && beginsWithTag(link, LINKTAG)) {
+      String href = getAttributeValue(HREF, link);
+      if (href == null) {
+        href = "";
+      }
+      Matcher hrefMat = PATTERN_COMBRES.matcher(href);
+      if (hrefMat.find()) {
+        logger.debug3("Found target Combres stylesheet URL");
+        String url = hrefMat.group(1);
+        logger.debug3(String.format("Generated %s", url));
+        if (baseUrl == null) { baseUrl = new URL(srcUrl); } // Copycat of parseLink()
+        emit(cb, resolveUri(baseUrl, hrefMat.group(1)));
+      }
+      return super.extractLinkFromTag(link, au, cb);
+    }
+    
+    // <script>
+    else if ((ch == 's' || ch == 'S') && beginsWithTag(link, SCRIPTTAG)) {
+      String src = getAttributeValue(SRC, link);
+      if (src == null) {
+        src = "";
+      }
+      
+      Matcher srcMat = null;
+      
+      srcMat = PATTERN_COMBRES.matcher(src);
+      if (srcMat.find()) {
+        logger.debug3("Found target Combres script URL");
+        String url = srcMat.group(1);
+        logger.debug3(String.format("Generated %s", url));
+        if (baseUrl == null) { baseUrl = new URL(srcUrl); } // Copycat of parseLink()
+        emit(cb, resolveUri(baseUrl, srcMat.group(1)));
+        return super.extractLinkFromTag(link, au, cb);
+      }
+
+      srcMat = PATTERN_JQUERY.matcher(src);
+      if (srcMat.find()) {
+        logger.debug3("Found target JQuery URL");
+        String jqueryVersion = srcMat.group(1);
+        // Generate local JQuery URL
+        String url = String.format("/JS/plugins/jquery-%s.min.js", jqueryVersion);
+        logger.debug3(String.format("Generated %s", url));
+        if (baseUrl == null) { baseUrl = new URL(srcUrl); } // Copycat of parseLink()
+        emit(cb, resolveUri(baseUrl, url));
+        return super.extractLinkFromTag(link, au, cb);
+      }
+    }
+
     return super.extractLinkFromTag(link, au, cb);
   }
 

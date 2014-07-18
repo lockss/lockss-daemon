@@ -1,0 +1,43 @@
+{
+
+  publisher <
+    name = Loyola Marymount University
+  >
+  
+    {
+  
+      title <
+        name = Journal of Catholic Education
+      >
+        
+        comment[issn] = eissn is not 2164-0246 as listed on the website. issn must change when title changes. If issn does not change, then the title of the same journal published by Boston College University Libraries should change.
+        
+        param[base_url] = http://digitalcommons.lmu.edu/
+        plugin = org.lockss.plugin.bepress.BePressPlugin
+        implicit < status ; year ; name ; param[volume] >
+        param[journal_abbr] = ce
+        
+        comment[continues] = Catholic Education: A Journal of Inquiry and Practice, 2164-0246, published by boston_college_university_libraries
+
+        au < doNotProcess ; 1997-1998 ; Journal of Catholic Education Volume 1 ; 1 >
+        au < doNotProcess ; 1998-1999 ; Journal of Catholic Education Volume 2 ; 2 >
+        au < doNotProcess ; 1999-2000 ; Journal of Catholic Education Volume 3 ; 3 >
+        au < doNotProcess ; 2000-2001 ; Journal of Catholic Education Volume 4 ; 4 >
+        au < doNotProcess ; 2001-2002 ; Journal of Catholic Education Volume 5 ; 5 >
+        au < doNotProcess ; 2002-2003 ; Journal of Catholic Education Volume 6 ; 6 >
+        au < doNotProcess ; 2003-2004 ; Journal of Catholic Education Volume 7 ; 7 >
+        au < doNotProcess ; 2004-2005 ; Journal of Catholic Education Volume 8 ; 8 >
+        au < doNotProcess ; 2005-2006 ; Journal of Catholic Education Volume 9 ; 9 >
+        au < doNotProcess ; 2006-2007 ; Journal of Catholic Education Volume 10 ; 10 >
+        au < doNotProcess ; 2007-2008 ; Journal of Catholic Education Volume 11 ; 11 >
+        au < doNotProcess ; 2008-2009 ; Journal of Catholic Education Volume 12 ; 12 >
+        au < doNotProcess ; 2009-2010 ; Journal of Catholic Education Volume 13 ; 13 >
+        au < doNotProcess ; 2010-2011 ; Journal of Catholic Education Volume 14 ; 14 >
+        au < doNotProcess ; 2011-2012 ; Journal of Catholic Education Volume 15 ; 15 >
+        au < exists ; 2012-2013 ; Journal of Catholic Education Volume 16 ; 16 >
+        au < exists ; 2013-2014 ; Journal of Catholic Education Volume 17 ; 17 >
+        au < expected ; 2014-2015 ; Journal of Catholic Education Volume 18 ; 18 >
+        
+    }
+    
+}

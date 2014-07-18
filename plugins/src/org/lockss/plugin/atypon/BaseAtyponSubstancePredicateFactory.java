@@ -1,5 +1,5 @@
 /**
- * $Id: BaseAtyponSubstancePredicateFactory.java,v 1.3 2014-02-28 23:19:54 alexandraohlson Exp $
+ * $Id: BaseAtyponSubstancePredicateFactory.java,v 1.3.2.1 2014-07-18 15:54:34 wkwilson Exp $
  */
 /*
 
@@ -66,13 +66,13 @@ SubstancePredicateFactory {
     static Logger log = Logger.getLogger(BaseAtyponSubstancePredicate.class);; 
     private ArchivalUnit au;
     private UrlPredicate up = null;
-    final static Pattern PDF_OR_PDFPLUS_PATTERN = Pattern.compile("/doi/(pdf|pdfplus)/[.0-9]+/[^?^&]+$", Pattern.CASE_INSENSITIVE);
-    final static Pattern ABSTRACT_OR_FULL_PATTERN = Pattern.compile("/doi/(abs|full)/[.0-9]+/[^?^&]+$", Pattern.CASE_INSENSITIVE);
-    final static Pattern ABSTRACT_ONLY_PATTERN = Pattern.compile("/doi/abs/[.0-9]+/[^?^&]+$", Pattern.CASE_INSENSITIVE);
+    final static Pattern PDF_OR_PDFPLUS_PATTERN = Pattern.compile("/doi/(pdf|pdfplus)/[.0-9]+/[^?&]+$", Pattern.CASE_INSENSITIVE);
+    final static Pattern ABSTRACT_OR_FULL_PATTERN = Pattern.compile("/doi/(abs|full)/[.0-9]+/[^?&]+$", Pattern.CASE_INSENSITIVE);
+    final static Pattern ABSTRACT_ONLY_PATTERN = Pattern.compile("/doi/abs/[.0-9]+/[^?&]+$", Pattern.CASE_INSENSITIVE);
 
     // Abstract will never be substance, but we want to check for redirection
     // use different implementation of PATTERN to meet needs of UrlPredicate
-    final static String ABSTRACT_STRING = "/doi/abs/[.0-9]+/[^?^&]+$";
+    final static String ABSTRACT_STRING = "/doi/abs/[.0-9]+/[^?&]+$";
     final static org.apache.oro.text.regex.Pattern ABSTRACT_PATTERN = 
         RegexpUtil.uncheckedCompile(ABSTRACT_STRING);
 

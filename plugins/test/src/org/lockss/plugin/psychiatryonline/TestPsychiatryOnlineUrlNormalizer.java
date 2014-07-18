@@ -1,5 +1,5 @@
 /*
- * $Id: TestPsychiatryOnlineUrlNormalizer.java,v 1.4 2012-09-26 20:59:28 alexandraohlson Exp $
+ * $Id: TestPsychiatryOnlineUrlNormalizer.java,v 1.4.34.1 2014-07-18 15:49:52 wkwilson Exp $
  */
 
 /*
@@ -32,7 +32,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.psychiatryonline;
 
-import org.lockss.daemon.PluginException;
 import org.lockss.plugin.UrlNormalizer;
 import org.lockss.test.LockssTestCase;
 

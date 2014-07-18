@@ -1,5 +1,5 @@
 /*
- * $Id: PeerJHtmlHashFilterFactory.java,v 1.2 2013-10-09 22:55:37 ldoan Exp $
+ * $Id: PeerJHtmlHashFilterFactory.java,v 1.2.6.1 2014-07-18 15:56:32 wkwilson Exp $
  */
 
 /*
@@ -33,12 +33,24 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.peerj;
 
 import java.io.InputStream;
+import java.io.IOException;
+import java.io.Reader;
+import java.util.Vector;
 
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.*;
+import org.htmlparser.util.NodeList;
+import org.htmlparser.visitors.NodeVisitor;
+import org.htmlparser.Tag;
+import org.htmlparser.util.ParserException;
+import org.htmlparser.Attribute;
+
+import org.lockss.filter.FilterUtil;
+import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
+import org.lockss.util.ReaderInputStream;
 
 /*
  * Maximal hash filtering
@@ -71,51 +83,99 @@ public class PeerJHtmlHashFilterFactory implements FilterFactory {
         new TagNameFilter("script"),
         new TagNameFilter("noscript"),
         // filter out comments
-        HtmlNodeFilters.commentWithRegex(".*"),
+        HtmlNodeFilters.comment(),
         // top navbar - brand name, search, article, etc.
         HtmlNodeFilters.tagWithAttribute(
             "div", "class", "navbar navbar-fixed-top navbar-inverse"),
         // top navbar - logo, socialism, etc.
         HtmlNodeFilters.tagWithAttribute(
             "div", "class", "item-top-navbar-inner"),
-        // from preprints near top "is not a peer-reviewed venue"
-        HtmlNodeFilters.tagWithAttribute(
-            "div", "class", "alert alert-warning"),
-        // left column - follow button and flag
-        HtmlNodeFilters.tagWithAttributeRegex(
-            "div", "class", ".*notification-actions-btn"),
-        // left column - article navigation
-        HtmlNodeFilters.tagWithAttribute(
-            "div", "class", "article-navigation"),
-        // left column - subject areas
-        HtmlNodeFilters.tagWithAttribute(
-            "div", "class", "subjects-navigation"),
-        // left column - counter
-        HtmlNodeFilters.tagWithAttribute(
-            "div", "id", "article-item-metrics-container"),
-        // near top - socialism
-        HtmlNodeFilters.tagWithAttribute(
-            "div", "class", "pj-socialism-container"),
+            // left column - all except 'Download as' dropdown menu
+        HtmlNodeFilters.allExceptSubtree(
+            HtmlNodeFilters.tagWithAttributeRegex(
+                "div", "class", "article-item-leftbar"),
+            HtmlNodeFilters.tagWithAttribute("ul", "class", "dropdown-menu")),
         // right column - all
         HtmlNodeFilters.tagWithAttributeRegex(
             "div", "class", ".*article-item-rightbar-wrap.*"),
-        // annotations
+        // Overlay near bottom - institution alerts
+        HtmlNodeFilters.tagWithAttribute(
+            "div", "id", "instit-alert"),
+        // near top - socialism
+        HtmlNodeFilters.tagWithAttribute(
+            "div", "class", "pj-socialism-container"),
+        // these modals are found after "Right sidebar" html code near bottom 
         HtmlNodeFilters.tagWithAttribute("div", "id", "flagModal"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "followModal"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "unfollowModal"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "metricsModal"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "shareModal"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "citing-modal"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "article-links-modal"),
+        // found under comment <!-- annotations -->
         HtmlNodeFilters.tagWithAttribute(
             "div", "class", "tab-content annotation-tab-content"),
         HtmlNodeFilters.tagWithAttribute(
-            "ul", "class", "nav nav-tabs annotation-tabs-nav"),
+           "ul", "class", "nav nav-tabs annotation-tabs-nav"),
         // foot
         HtmlNodeFilters.tagWithAttribute("div", "class", "foot"),
-        // <div class="tab-content annotation-tab-content">
      };
-
-    return new HtmlFilterInputStream(in, encoding, 
-        HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    
+    // removing attributes "style" and "itemprop", by adding the wanted
+    // attributes one by one to the each tag, then inserting a space
+    // between the attributes.
+    HtmlTransform xform = new HtmlTransform() {      
+      @Override
+      public NodeList transform(NodeList nodeList) throws IOException {
+        try {
+          nodeList.visitAllNodesWith(new NodeVisitor() {
+            @Override
+            public void visitTag(Tag tag) {
+              // get the attributes in each tag
+              Vector<Attribute> attributes;
+              Attribute attribute;
+              String attrKey;
+              int size;
+              Vector<Attribute> vecAttr = new Vector<Attribute>();  
+              // gets the attributes in the tag
+              attributes = tag.getAttributesEx();
+              if (attributes != null) {
+                size = attributes.size();
+                for (int i = 0; i < size; i++) {
+                  attribute = attributes.elementAt(i);
+                  attrKey = attribute.getName();
+                  if (attrKey != null) {
+                    if (!(("style".equalsIgnoreCase(attrKey)) 
+                        || ("itemprop".equalsIgnoreCase(attrKey)))) {
+                      vecAttr.add(attribute);
+                    }
+                  }
+                }
+                // insert space between attributes, starting from
+                // the last element of the attributes vector.
+                for (int i = vecAttr.size()-1; i >= 1; i--) {
+                  vecAttr.insertElementAt(new Attribute (" "), i);
+                }
+                tag.setAttributesEx(vecAttr);
+              } 
+            }
+          });
+        }
+        catch (ParserException pe) {
+          throw new IOException(pe);
+        }
+        return nodeList;
+      }
+    };
+  
+    InputStream filtered = new HtmlFilterInputStream(
+        in, encoding, new HtmlCompoundTransform(
+            HtmlNodeFilterTransform.exclude(new OrFilter(filters)), xform));
+  
+    // add whitespace filter
+    Reader filteredReader = FilterUtil.getReader(filtered, encoding);
+    return new ReaderInputStream(new WhiteSpaceFilter(filteredReader));
+    
   }
     
 }

@@ -1,10 +1,10 @@
 /*
- * $Id: MetaPressHtmlCrawlFilterFactory.java,v 1.2 2013-10-14 19:39:32 etenbrink Exp $
+ * $Id: MetaPressHtmlCrawlFilterFactory.java,v 1.2.6.1 2014-07-18 15:54:38 wkwilson Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,12 +36,16 @@ import java.io.InputStream;
 
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.*;
+import org.lockss.config.TdbAu;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.util.Logger;
 
 public class MetaPressHtmlCrawlFilterFactory implements FilterFactory {
-
+  
+  protected static Logger log = Logger.getLogger(MetaPressHtmlCrawlFilterFactory.class);
+  
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
@@ -52,9 +56,23 @@ public class MetaPressHtmlCrawlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "References"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "references"),
     };
-    return new HtmlFilterInputStream(in,
+    HtmlFilterInputStream hfis = new HtmlFilterInputStream(in,
                                      encoding,
                                      HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    // to handle errors like java.io.IOException: org.htmlparser.util.EncodingChangeException:
+    // Unable to sync new encoding within range of +/- 100 chars
+    // Allows the default of 100 to be overridden in tdb
+    if (au != null) {
+      TdbAu tdbau = au.getTdbAu();
+      if (tdbau != null) {
+        String range = tdbau.getAttr("EncodingMatchRange");
+        if (range != null && !range.isEmpty()) {
+          hfis.setEncodingMatchRange(Integer.parseInt(range));
+          log.debug3("Set setEncodingMatchRange: " + range);
+        }
+      } else {log.debug("tdbau was null");}
+    } else {log.warning("au was null");}
+    return hfis;
   }
 
 }

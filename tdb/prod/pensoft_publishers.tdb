@@ -13,7 +13,8 @@
    {
      title <
       name = Biodiversity Data Journal ;
-      eissn = 1314-2828 
+      eissn = 1314-2828 ;
+      comment[0] = This journal is at a different url http://biodiversitydatajournal.com
      >
 
    }
@@ -34,7 +35,7 @@
     au < released ; 2011 ; 2011 ; BioRisk Issue 6 ; 6 >
     au < released ; 2012 ; 2012 ; BioRisk Issue 7 ; 7 >
     au < manifest ; 2013 ; 2013 ; BioRisk Issue 8 ; 8 >
-    au < expected ; 2014 ; 2014 ; BioRisk Issue 9 ; 9 >
+    au < manifest ; 2014 ; 2014 ; BioRisk Issue 9 ; 9 >
 
    }
 
@@ -57,6 +58,20 @@
 
    }
 
+   {
+     title <
+      name = Deutsche Entomologische Zeitschrift ;
+      issn = 1435-1951 ;
+      eissn = 1860-1324 ;
+      issnl = 1435-1951
+     >
+     
+     param[journal_name] = dez
+
+     au < exists ; 2014 ; 2014 ; Deutsche Entomologische Zeitschrift Issue 61 ; 61 >
+
+   }
+   
    {
 
     title <
@@ -147,6 +162,21 @@
    {
 
     title <
+      name = Nota Lepidopterologica ;
+      issn = 0342-7536 ;
+      eissn = 2367-5365 ;
+      issnl = 0342-7536
+    >
+    
+    param[journal_name] = nl
+
+    au < exists ; 2014 ; 2014 ; Nota Lepidopterologica Issues 37 ; 37 >
+    
+   }
+
+   {
+
+    title <
       name = PhytoKeys ;
       issn = 1314-2011 ;
       eissn = 1314-2003 ;
@@ -158,7 +188,7 @@
     au < released ; 2010 ; 2010 ; PhytoKeys Issue 1 ; 1 >
     au < released ; 2011 ; 2011 ; PhytoKeys Issues 2-7 ; 2-7 >
     au < released ; 2012 ; 2012 ; PhytoKeys Issues 8-19 ; 8-19 >
-    au < testing ; 2013 ; 2013 ; PhytoKeys Issues 20-26 ; 20-26 >
+    au < manifest ; 2013 ; 2013 ; PhytoKeys Issues 20-26 ; 20-26 >
     au < manifest ; 2014 ; 2014 ; PhytoKeys Issues 27-32 ; 27-32 >
 
    }
@@ -201,6 +231,21 @@
     au < manifest ; 2014 ; 2014 ; ZooKeys Issues 343-430 ; 343-430 >
 
    }
+   
+   {
+
+    title <
+      name = Zoosystematics and Evolution ;
+      issn = 1435-1935 ;
+      eissn = 1860-0743 ;
+      issnl = 1435-1935 
+    >
+
+    param[journal_name] = zse
+
+    au < exists ; 2014 ; 2014 ; Zoosystematics and Evolution Issues 90 ; 90 >
+
+    }
 
   }
 

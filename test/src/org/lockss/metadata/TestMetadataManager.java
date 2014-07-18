@@ -1,10 +1,10 @@
 /*
- * $Id: TestMetadataManager.java,v 1.5 2013-03-05 16:34:51 fergaloy-sf Exp $
+ * $Id: TestMetadataManager.java,v 1.5.22.1 2014-07-18 15:49:50 wkwilson Exp $
  */
 
 /*
 
-Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -567,7 +567,7 @@ public class TestMetadataManager extends LockssTestCase {
     assertFalse(metadataManager.isEligibleForReindexing(mau1));
 
     // Remove param, ensure priority map gets removed
-    ConfigurationUtil.setFromArgs("foo", "bar");
+    ConfigurationUtil.resetConfig();
     mau1.setAuId("foo4");
     assertTrue(metadataManager.isEligibleForReindexing(mau1));
 

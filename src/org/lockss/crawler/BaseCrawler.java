@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.52 2014-03-23 17:10:33 tlipkis Exp $
+ * $Id: BaseCrawler.java,v 1.52.2.1 2014-07-18 15:59:57 wkwilson Exp $
  */
 
 /*
@@ -531,6 +531,7 @@ public abstract class BaseCrawler
       uc.storeContent(is, uc.getUncachedProperties());
       updateCacheStats(UrlCacher.CACHE_RESULT_FETCHED, uc);
     }
+    reportInfoException(uc);
   }
 
   protected void updateCacheStats(int cacheResult, UrlCacher uc) {
@@ -570,6 +571,17 @@ public abstract class BaseCrawler
 	cu.release();
       }
       break;
+    }
+  }
+
+  protected boolean isIgnoredException(Exception ex) {
+    return (ex == null || ex instanceof CacheSuccess);
+  }
+
+  protected void reportInfoException(UrlCacher uc) {
+    CacheException ex = uc.getInfoException();
+    if (!isIgnoredException(ex)) {
+      crawlStatus.signalErrorForUrl(uc.getUrl(), ex);
     }
   }
 

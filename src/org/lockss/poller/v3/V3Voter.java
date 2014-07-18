@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.96 2014-01-14 04:29:19 tlipkis Exp $
+ * $Id: V3Voter.java,v 1.96.4.1 2014-07-18 15:59:09 wkwilson Exp $
  */
 
 /*
@@ -410,25 +410,30 @@ public class V3Voter extends BasePoll {
     stateMachine = makeStateMachine(voterUserData);
 
     // Set up substance checker
-    subChecker = new SubstanceChecker(getAu());
-    if (subChecker.isEnabledFor(SubstanceChecker.CONTEXT_VOTE)) {
+    subChecker = makeSubstanceChecker();
+  }
+
+  SubstanceChecker makeSubstanceChecker() {
+    SubstanceChecker res = new SubstanceChecker(getAu());
+    if (res.isEnabledFor(SubstanceChecker.CONTEXT_VOTE)) {
       AuState aus = AuUtil.getAuState(getAu());
       if (aus.getSubstanceState() == SubstanceChecker.State.Yes &&
 	  AuUtil.isCurrentFeatureVersion(getAu(), Plugin.Feature.Substance)) {
 	// Don't need to check for substance if already known to exist,
 	// unless substance pattern version has changed.
 	// This is not a valid assumption if polls are allowed to delete files.
-	subChecker = null;
+	res = null;
       } else {
 	log.debug2("Enabling substance checking");
 	SubstanceChecker.State state = voterUserData.getSubstanceCheckerState();
 	if (state != null) {
-	  subChecker.setHasSubstance(state);
+	  res.setHasSubstance(state);
 	}
       }
     } else {
-      subChecker = null;
+      res = null;
     }
+    return res;
   }
 
   PsmInterp newPsmInterp(PsmMachine stateMachine, Object userData) {
@@ -1148,46 +1153,28 @@ public class V3Voter extends BasePoll {
 	return;
       }
       if (e == null) {
-	if (subChecker != null) {
-	  switch (subChecker.hasSubstance()) {
-	  case No:
-	    AuState aus = AuUtil.getAuState(getAu());
-	    if (!aus.hasNoSubstance()) {
-	      // Alert only on transition to no substance from other than no
-	      // substance.
-	      String msg =
-		"AU has no files containing substantial content; not voting.";
-	      pollManager.raiseAlert(Alert.auAlert(Alert.CRAWL_NO_SUBSTANCE,
-						   getAu()),
-				     msg);
-	    }
- 	    aus.setSubstanceState(SubstanceChecker.State.No);
-	    aus.storeAuState();
-	    log.warning("No files containing substantial content found during hash; not voting");
-	    V3LcapMessage msg =
-	      voterUserData.makeMessage(V3LcapMessage.MSG_VOTE);
-	    msg.setVoterNonce(null);
-	    msg.setNak(PollNak.NAK_NO_SUBSTANCE);
-	    try {
-	      sendMessageTo(msg, getPollerId());
-	    } catch (IOException ex) {
-	      log.error("Unable to send message in poll " + getKey() + ": " +
-			msg, ex);
-	    }
-	    stopPoll(STATUS_NO_SUBSTANCE);
-	    break;
-	  default:
-	    if (hasher instanceof BlockHasher && !isSampledPoll()) {
-	      LocalHashResult lhr = ((BlockHasher)hasher).getLocalHashResult();
-	      log.debug2("Recording local hash result: " + lhr);
-	      idManager.signalLocalHashComplete(lhr);
-	    }
-	    hashComplete();
-	    break;
+	switch (updateSubstance(subChecker)) {
+	case No:
+	  log.warning("No files containing substantial content found during hash; not voting");
+	  V3LcapMessage msg = voterUserData.makeMessage(V3LcapMessage.MSG_VOTE);
+	  msg.setVoterNonce(null);
+	  msg.setNak(PollNak.NAK_NO_SUBSTANCE);
+	  try {
+	    sendMessageTo(msg, getPollerId());
+	  } catch (IOException ex) {
+	    log.error("Unable to send message in poll " + getKey() + ": " +
+		      msg, ex);
 	  }
-	} else {
-	  hashComplete();
+	  stopPoll(STATUS_NO_SUBSTANCE);
+	  break;
+	  default:
 	}
+	if (hasher instanceof BlockHasher && !isSampledPoll()) {
+	  LocalHashResult lhr = ((BlockHasher)hasher).getLocalHashResult();
+	  log.debug2("Recording local hash result: " + lhr);
+	  idManager.signalLocalHashComplete(lhr);
+	}
+	hashComplete();
       } else {
         if (e instanceof SchedService.Timeout) {
           log.warning("Hash deadline passed before the hash was finished.");
@@ -1201,6 +1188,31 @@ public class V3Voter extends BasePoll {
         }
       }
     }
+  }
+
+  SubstanceChecker.State updateSubstance(SubstanceChecker sc) {
+    AuState aus = AuUtil.getAuState(getAu());
+    if (sc != null) {
+      SubstanceChecker.State oldSub = aus.getSubstanceState();
+      SubstanceChecker.State newSub = sc.hasSubstance();
+      if (newSub != oldSub) {
+	log.debug2("Change substance state: " + oldSub + " => " + newSub);
+	aus.setSubstanceState(newSub);
+	aus.storeAuState();
+      }
+      switch (newSub) {
+      case No:
+	if (oldSub != SubstanceChecker.State.No) {
+	  // Alert on transition to no substance
+	  String msg =
+	    "AU has no files containing substantial content; not voting.";
+	  pollManager.raiseAlert(Alert.auAlert(Alert.CRAWL_NO_SUBSTANCE,
+					       getAu()),
+				 msg);
+	}
+      }
+    }
+    return aus.getSubstanceState();
   }
 
   private class BlockEventHandler implements BlockHasher.EventHandler {

@@ -1,0 +1,74 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>testing</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.highwire.elife.ELifeDrupalPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>HighWire eLife Drupal Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.highwire.HighWireDrupalPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent_version</string>
+    <string>7</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"HighWire eLife Drupal Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%slockss-manifest/elife_%s.html", base_url, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <!-- no gifs from other volumes
+      <string>2,"^%scontent/(?!([^/]+/)?%s)[^?]*[.]gif", base_url, volume_name</string>
+      <string>1,"^https?://%s[^?]*/highwire/jcore", base_url_host</string>
+       -->
+      <!-- all images, resources, css, js, etc. -->
+      <string>1,"^https?://%s/[^?]*[.](bmp|gif|ico|jpe?g|png|tif?f|(css|js)([?].*)?)$", base_url_host</string>
+      <!-- Do not crawl unless from base url -->
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%s(content/[^/]+/e[^/?]+$|highwire/(filestream|markup)/|elife/download-video/)", base_url</string>
+      <string>1,"^%scontent(/elife)?/[^/]+/e[^/?]+([.]full[.]pdf$|/article-(data|info)|/.*/embed/)", base_url</string>
+      <string>1,"^%shighwire/citation/[^/]+/ris$", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^%scontent(/elife)?/[^/]+/e[^.]+([.]full([.]pdf([+]html)?)?)?$", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_permission_checker_factory</string>
+    <string>org.lockss.plugin.highwire.HighWireDrupalPermissionCheckerFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.highwire.elife.ELifeDrupalHtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.highwire.elife.ELifeDrupalHtmlCrawlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <string>500=org.lockss.plugin.highwire.elife.ELifeDrupalHttpResponseHandler</string>
+    </list>
+  </entry>
+</map>

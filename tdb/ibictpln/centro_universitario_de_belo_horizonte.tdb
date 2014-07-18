@@ -16,14 +16,14 @@
       comment[publisher] = Centro Universitário de Belo Horizonte
       param[base_url] = http://revistas.unibh.br/
       param[journal_id] = dcbas
-      comment[notReady] = One machine missed a few pages
 
       au < released ; 2008 ; 1 ; e-Scientia Volume 2008 ; 2008 >
       au < released ; 2009 ; 2 ; e-Scientia Volume 2009 ; 2009 >
-      au < notReady ; 2010 ; 3 ; e-Scientia Volume 2010 ; 2010 >
+      au < released ; 2010 ; 3 ; e-Scientia Volume 2010 ; 2010 >
       au < released ; 2011 ; 4 ; e-Scientia Volume 2011 ; 2011 >
       au < released ; 2012 ; 5 ; e-Scientia Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 6 ; e-Scientia Volume 2013 ; 2013 >
+      au < ready ; 2013 ; 6 ; e-Scientia Volume 2013 ; 2013 >
+      au < manifest ; 2014 ; 7 ; e-Scientia Volume 2014 ; 2014 >
 
   }
 
@@ -37,14 +37,14 @@
       comment[publisher] = Centro Universitário de Belo Horizonte
       param[base_url] = http://revistas.unibh.br/
       param[journal_id] = dcet
-      comment[notReady] = One machine missed a few pages
 
       au < released ; 2008 ; 1 ; e-Xacta Volume 2008 ; 2008 >
       au < released ; 2009 ; 2 ; e-Xacta Volume 2009 ; 2009 >
       au < released ; 2010 ; 3 ; e-Xacta Volume 2010 ; 2010 >
-      au < notReady ; 2011 ; 4 ; e-Xacta Volume 2011 ; 2011 >
+      au < released ; 2011 ; 4 ; e-Xacta Volume 2011 ; 2011 >
       au < released ; 2012 ; 5 ; e-Xacta Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 6 ; e-Xacta Volume 2013 ; 2013 >
+      au < ready ; 2013 ; 6 ; e-Xacta Volume 2013 ; 2013 >
+      au < manifest ; 2014 ; 7 ; e-Xacta Volume 2014 ; 2014 >
 
   }
 
@@ -64,7 +64,8 @@
       au < released ; 2010 ; 3 ; e-Hum Volume 2010 ; 2010 >
       au < released ; 2011 ; 4 ; e-Hum Volume 2011 ; 2011 >
       au < released ; 2012 ; 5 ; e-Hum Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 6 ; e-Hum Volume 2013 ; 2013 >
+      au < ready ; 2013 ; 6 ; e-Hum Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 7 ; e-Hum Volume 2014 ; 2014 >
 
   }
 
@@ -78,14 +79,14 @@
       comment[publisher] = Centro Universitário de Belo Horizonte
       param[base_url] = http://revistas.unibh.br/
       param[journal_id] = dcjpg
-      comment[notReady] = One machine missed a few pages and some whitespace issues perhaps
 
       au < released ; 2008 ; 1 ; e-Cevitas Volume 2008 ; 2008 >
       au < released ; 2009 ; 2 ; e-Cevitas Volume 2009 ; 2009 >
       au < released ; 2010 ; 3 ; e-Cevitas Volume 2010 ; 2010 >
       au < released ; 2011 ; 4 ; e-Cevitas Volume 2011 ; 2011 >
-      au < notReady ; 2012 ; 5 ; e-Cevitas Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 6 ; e-Cevitas Volume 2013 ; 2013 >
+      au < released ; 2012 ; 5 ; e-Cevitas Volume 2012 ; 2012 >
+      au < ready ; 2013 ; 6 ; e-Cevitas Volume 2013 ; 2013 >
+      au < manifest ; 2014 ; 7 ; e-Cevitas Volume 2014 ; 2014 >
 
   }
 
@@ -103,9 +104,6 @@
       au < released ; 2008 ; 1 ; e-Tec Volume 2008 ; 2008 >
       au < released ; 2009 ; 2 ; e-Tec Volume 2009 ; 2009 >
       au < released ; 2010 ; 3 ; e-Tec Volume 2010 ; 2010 >
-      au < expected ; 2011 ; 4 ; e-Tec Volume 2011 ; 2011 >
-      au < expected ; 2012 ; 5 ; e-Tec Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 6 ; e-Tec Volume 2013 ; 2013 >
 
   }
 
@@ -126,7 +124,8 @@
       au < released ; 2010 ; 4 ; e-Com Volume 2010 ; 2010 >
       au < released ; 2011 ; 5 ; e-Com Volume 2011 ; 2011 >
       au < released ; 2012 ; 6 ; e-Com Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 7 ; e-Com Volume 2013 ; 2013 >
+      au < ready ; 2013 ; 7 ; e-Com Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 8 ; e-Com Volume 2014 ; 2014 >
 
   }
 

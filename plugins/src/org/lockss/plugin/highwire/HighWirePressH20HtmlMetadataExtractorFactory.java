@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20HtmlMetadataExtractorFactory.java,v 1.5 2014-04-11 18:27:09 etenbrink Exp $
+ * $Id: HighWirePressH20HtmlMetadataExtractorFactory.java,v 1.5.2.1 2014-07-18 15:54:38 wkwilson Exp $
  */
 
 /*
@@ -40,42 +40,27 @@ import org.apache.commons.collections.map.MultiValueMap;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
-import org.lockss.extractor.MetadataField.Cardinality;
 import org.lockss.plugin.*;
 
 
 public class HighWirePressH20HtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
-  static Logger log = Logger.getLogger("HighWirePressH20HtmlMetadataExtractorFactory");
-
+  static Logger log = Logger.getLogger(HighWirePressH20HtmlMetadataExtractorFactory.class);
+  
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
-							   String contentType)
+        String contentType)
       throws PluginException {
     return new HighWirePressH20HtmlMetadataExtractor();
   }
   
-  public static class HighWirePressH20HtmlMetadataExtractor 
-    implements FileMetadataExtractor {
- 
-    // To do (PJG): Use the definitions from MetadataField once 1.59 is out
-    private static final String KEY_LANGUAGE = "language";
-    private static final MetadataField FIELD_LANGUAGE = new MetadataField(
-        KEY_LANGUAGE, Cardinality.Single);
-    private static final String KEY_FORMAT = "format";
-    public static final MetadataField FIELD_FORMAT = new MetadataField(
-        KEY_FORMAT, Cardinality.Single);
-    public static final String KEY_PROPRIETARY_IDENTIFIER =
-        "propietary_identifier";
-    public static final MetadataField FIELD_PROPRIETARY_IDENTIFIER =
-        new MetadataField(KEY_PROPRIETARY_IDENTIFIER, Cardinality.Single);
-
+  public static class HighWirePressH20HtmlMetadataExtractor implements FileMetadataExtractor {
     
     // Map HighWire H20 HTML meta tag names to cooked metadata fields
     private static MultiMap tagMap = new MultiValueMap();
     static {
-      tagMap.put("DC.Format", FIELD_FORMAT);
-      tagMap.put("DC.Language", FIELD_LANGUAGE);
+      tagMap.put("DC.Format", MetadataField.FIELD_FORMAT);
+      tagMap.put("DC.Language", MetadataField.FIELD_LANGUAGE);
       tagMap.put("DC.Publisher", MetadataField.FIELD_PUBLISHER);
-      tagMap.put("citation_journal_title", MetadataField.FIELD_JOURNAL_TITLE);
+      tagMap.put("citation_journal_title", MetadataField.FIELD_PUBLICATION_TITLE);
       tagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
       tagMap.put("citation_date", MetadataField.FIELD_DATE);
       tagMap.put("citation_authors", new MetadataField(
@@ -89,16 +74,23 @@ public class HighWirePressH20HtmlMetadataExtractorFactory implements FileMetadat
       tagMap.put("citation_public_url", MetadataField.FIELD_ACCESS_URL);
       // typical field value: "acupmed;30/1/8": extract "acupmed"
       tagMap.put("citation_mjid", new MetadataField(
-          FIELD_PROPRIETARY_IDENTIFIER, 
+          MetadataField.FIELD_PROPRIETARY_IDENTIFIER, 
           MetadataField.extract("^([^;]+);", 1)));
     }
-
+    
     @Override
     public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
         throws IOException {
       ArticleMetadata am = 
         new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
-      am.cook(tagMap);    	  
+      am.cook(tagMap);
+      String url = am.get(MetadataField.FIELD_ACCESS_URL);
+      if (url != null && !url.isEmpty()) {
+        CachedUrl val = cu.getArchivalUnit().makeCachedUrl(url);
+        if (!val.hasContent()) {
+          am.replace(MetadataField.FIELD_ACCESS_URL, cu.getUrl());
+        }
+      }
       emitter.emitMetadata(cu, am);
     }
   }

@@ -1,10 +1,10 @@
 /*
- * $Id: TestLogger.java,v 1.29 2012-08-08 07:23:05 tlipkis Exp $
+ * $Id: TestLogger.java,v 1.29.36.1 2014-07-18 15:49:44 wkwilson Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -205,7 +205,7 @@ public class TestLogger extends LockssTestCase {
   }
 
   static String testOutputOutput[] = {
-    "Warning: 1-test-log: msg2 warning",
+    "Warning: 1-test-log:  msg2 warning",
     "Error: 1-test-log: msg3 error",
   };
 
@@ -216,8 +216,8 @@ public class TestLogger extends LockssTestCase {
     l.setLevel(Logger.LEVEL_WARNING);
     target.resetMessages();
     l.info("msg1 info");
-    l.warning("msg2 warning");
-    l.error("msg3 error");
+    l.warning(" msg2 warning");
+    l.error("msg3 error\n");
     l.setLevel(Logger.LEVEL_CRITICAL);
     l.error("msg4 error");
     Iterator iter = target.messageIterator();

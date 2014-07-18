@@ -1,10 +1,10 @@
 /*
- * $Id: BaseAtyponPdfFilterFactory.java,v 1.1 2013-04-19 22:49:44 alexandraohlson Exp $
+ * $Id: BaseAtyponPdfFilterFactory.java,v 1.1.18.1 2014-07-18 15:54:34 wkwilson Exp $
  */
 
 /*
 
- Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,19 +32,56 @@
 
 package org.lockss.plugin.atypon;
 
-import org.lockss.filter.pdf.SimplePdfFilterFactory;
-import org.lockss.pdf.PdfDocument;
-import org.lockss.pdf.PdfException;
-import org.lockss.pdf.PdfUtil;
-import org.lockss.plugin.ArchivalUnit;
+import java.io.*;
 
+import org.apache.pdfbox.exceptions.*;
+import org.apache.pdfbox.pdfparser.PDFParser;
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.lockss.filter.pdf.SimplePdfFilterFactory;
+import org.lockss.pdf.*;
+import org.lockss.pdf.pdfbox.PdfBoxDocument;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.util.IOUtil;
 
 public class BaseAtyponPdfFilterFactory extends SimplePdfFilterFactory {
 
-  public BaseAtyponPdfFilterFactory() {
-    super();
+  /*
+   * FIXME 1.66
+   */
+  public static class BaseAtyponPdfDocumentFactory implements PdfDocumentFactory {
+    @Override
+    public PdfDocument parse(InputStream pdfInputStream)
+        throws IOException, PdfCryptographyException, PdfException {
+      try {
+        PDFParser pdfParser = new PDFParser(pdfInputStream);
+        pdfParser.parse();
+        PDDocument pdDocument = pdfParser.getPDDocument();
+        if (pdDocument.isEncrypted()) {
+          pdDocument.decrypt("");
+        }
+        pdDocument.setAllSecurityToBeRemoved(true);
+        return new PdfBoxDocument(pdDocument) {
+          // Empty body (constructor is not visible but is visible from subclass)
+        };
+      }
+      catch (CryptographyException ce) {
+        throw new PdfCryptographyException(ce);
+      }
+      catch (InvalidPasswordException ipe) {
+        throw new PdfCryptographyException(ipe);
+      }
+      catch (IOException ioe) {
+        throw new PdfException(ioe);
+      }
+      finally {
+        IOUtil.safeClose(pdfInputStream);
+      }
+    }
   }
-
+  
+  public BaseAtyponPdfFilterFactory() {
+    super(new BaseAtyponPdfDocumentFactory()); // FIXME 1.66
+  }
 
   /*
    * Many Atypon pdf files have the CreationDate and ModDate and the two ID numbers in the trailer

@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuMetadataRecorder.java,v 1.5 2013-08-20 16:40:05 fergaloy-sf Exp $
+ * $Id: TestAuMetadataRecorder.java,v 1.5.6.1 2014-07-18 15:49:50 wkwilson Exp $
  */
 
 /*
@@ -231,7 +231,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
   private ArticleMetadataBuffer getJournalMetadata(String publishername,
       int publicationCount, int articleCount, boolean noJournalTitleNoISSN)
       throws IOException {
-    ArticleMetadataBuffer result = new ArticleMetadataBuffer();
+    ArticleMetadataBuffer result = new ArticleMetadataBuffer(getTempDir());
 
     for (int i = 1; i <= publicationCount; i++) {
       for (int j = 1; j <= articleCount; j++) {
@@ -314,7 +314,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
 
   private ArticleMetadataBuffer getBookMetadata(String publishername,
       int publicationCount, int articleCount) throws IOException {
-    ArticleMetadataBuffer result = new ArticleMetadataBuffer();
+    ArticleMetadataBuffer result = new ArticleMetadataBuffer(getTempDir());
 
     for (int i = 1; i <= publicationCount; i++) {
       for (int j = 1; j <= articleCount; j++) {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseAtyponHtmlLinkExtractorFactory.java,v 1.2 2013-08-30 22:21:56 alexandraohlson Exp $
+ * $Id: TestBaseAtyponHtmlLinkExtractorFactory.java,v 1.2.6.1 2014-07-18 15:49:46 wkwilson Exp $
  */
 /*
 
@@ -35,6 +35,7 @@ import java.util.HashSet;
 import java.util.Set;
 import org.lockss.plugin.UrlNormalizer;
 import org.lockss.plugin.atypon.BaseAtyponUrlNormalizer;
+import org.lockss.extractor.JsoupHtmlLinkExtractor;
 import org.lockss.extractor.LinkExtractor;
 import org.lockss.extractor.RegexpCssLinkExtractor;
 import org.lockss.test.LockssTestCase;
@@ -222,8 +223,8 @@ public class TestBaseAtyponHtmlLinkExtractorFactory extends LockssTestCase {
   private Set<String> parseSingleSource(String source)
       throws Exception {
     MockArchivalUnit m_mau = new MockArchivalUnit();
-    LinkExtractor ue = new RegexpCssLinkExtractor();
-    m_mau.setLinkExtractor("text/css", ue);
+    LinkExtractor ue = new JsoupHtmlLinkExtractor();
+    m_mau.setLinkExtractor("html", ue);
     MockCachedUrl mcu =
         new org.lockss.test.MockCachedUrl("http://BaseAtypon.org/", m_mau);
     mcu.setContent(source);

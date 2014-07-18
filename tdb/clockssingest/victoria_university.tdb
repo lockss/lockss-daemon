@@ -3,11 +3,12 @@
   publisher <
     name = Victoria University ;
     info[contract] = 2014 ;
-    info[tester] = 0
+    info[tester] = 7
   >
-
-  param[base_url] = http://vulj.vu.edu.au/
+  
+  param[base_url] = http://vulj.vu.edu.au/ 
   plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
+  param[journal_id] = vulj
   implicit < status ; status2 ; year ; name ; volume ; param[year] >
 
   {
@@ -17,9 +18,11 @@
       eissn = 1838-6857 ;
       issnl = 1839-6849
     >
-
-    au < exists ; exists ; 2011 ; DICTUM - Victoria Law School Journal Volume 1 ; 1 ; 2011 >
-    au < exists ; exists ; 2012 ; DICTUM - Victoria Law School Journal Volume 2 ; 2 ; 2012 >
+    
+      comment[name_change] = After Volume 2, issues changed name/issn to Victoria University Law and Justice Journal
+    
+      au < crawling ; exists ; 2011 ; DICTUM - Victoria Law School Journal Volume 1 ; 1 ; 2011 >
+      au < crawling ; exists ; 2012 ; DICTUM - Victoria Law School Journal Volume 2 ; 2 ; 2012 >
 
   }
 
@@ -31,8 +34,11 @@
       issnl = 2202-7912
     >
 
-    au < exists ; exists ; 2013 ; Victoria University Law and Justice Journal Volume 3 ; 3 ; 2013 >
-    au < expected ; exists ; 2014 ; Victoria University Law and Justice Journal Volume 4 ; 4 ; 2014 >
+      comment[name_change0] = Title changed name/issn from DICTUM - Victoria Law School Journal
+      comment[name_change1] = Volumes 1-2 are available under issn 1838-6849
+      
+      au < crawling ; exists ; 2013 ; Victoria University Law and Justice Journal Volume 3 ; 3 ; 2013 >
+      au < expected ; exists ; 2014 ; Victoria University Law and Justice Journal Volume 4 ; 4 ; 2014 >
 
   }
 

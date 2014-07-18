@@ -1,5 +1,5 @@
 /*
- * $Id: TestCopernicusHtmlFilterFactory.java,v 1.5 2013-02-19 18:12:37 alexandraohlson Exp $
+ * $Id: TestCopernicusHtmlFilterFactory.java,v 1.5.22.1 2014-07-18 15:49:48 wkwilson Exp $
  */
 /*
 
@@ -88,14 +88,14 @@ public class TestCopernicusHtmlFilterFactory extends LockssTestCase {
       "</tr></table> </body></html>";
   
   private static final String iFrameHtml =
-      "<div id=\"page_colum_left\" class=\"page_colum\">" +
+      "<div id=\"page_colum_foo\" class=\"page_colum\">" +
           "<iframe " +
           "frameborder=\"0\" id=\"co_auth_check_authiframecontainer\" " +
           "style=\"width: 179px; height: 57px; margin: 0; margin-bottom: 5px; margin-left: 10px; margin-top: -15px; padding: 0; border: none; overflow: hidden; background-color: transparent; display: none;\"" +
           " src=\"\"></iframe>" +
           "<div class=\"page_colum_container CMSCONTAINER\">";
   private static final String iFrameFiltered =
-      "<div id=\"page_colum_left\" class=\"page_colum\">" +
+      "<div id=\"page_colum_foo\" class=\"page_colum\">" +
           "<div class=\"page_colum_container CMSCONTAINER\">";
   
   private static final String leftColumnHtml =
@@ -191,6 +191,38 @@ public class TestCopernicusHtmlFilterFactory extends LockssTestCase {
           "<span class=\"pb_toc_link\"><br /><br />&nbsp;<span style=\"white-space:nowrap;\"><a href=\"/14/1111/1996/angeo-14-1111-1996.pdf\" >Full Article</a>" +
           "(PDF, 639 KB)</span>&nbsp; &nbsp;<br /><br /></div></div></div>"; 
   
+  private static final String headerContentHtml =
+      "<body><!-- $$BODY_HEAD$$ -->" +
+      "<div id=\"page_header\" class=\"farbe_auf_journaluntergrund\">" +
+      "<a id=\"page_header_cover\" title=\"\" href=\"http://www.scientific-drilling.net/index.html\">" +
+      "<!-- --></a><a id=\"sd_moodboard\" href=\"http://www.scientific-drilling.net/index.html\"><!-- --></a> " +                      
+      "<div id=\"page_header_main\" class=\"hintergrundfarbe_journal\">" +
+       "<div id=\"page_header_main_headlines\"></div></div>" +
+       "<div id=\"page_header_footer\" class=\"hintergrundfarbe_journal\">" + 
+       "</div><!-- TOPRIGHT -->" +
+       "<div id=\"page_header_main_right_b0x\" class=\"farbe_auf_journalhintergrund\"></div>" +
+       "<!-- TOPRIGHT/ -->" +
+       "</div><!-- HEADER/ --></body>";
+  private static final String headerContentFiltered =
+      "<body></body>";
+  
+  private static final String allLeftColumnHtml =
+      "<table id=\"page_columntable\"><tr>" +
+          "<td class=\"hintergrundfarbe_spalten page_columntable_colum\" style=\"border-left: none;\">" +
+          "<!-- LEFT COLUM -->" +
+          "<div id=\"page_colum_left\" class=\"page_colum\">" +
+          "<div class=\"page_colum_container CMSCONTAINER\" id=\"page_colum_left_container\">" +
+          "<div id=\"page_navigation_left\" class=\"cmsbox \">" +
+          "<ul class=\"co_function_get_navigation get_navigation farbe_auf_hauptnavigation\">" +
+          "<li class=\"hintergrundfarbe_journal_hervorgehoben co_function_get_navigation_is_no_parent co_function_get_navigation_is_open\" id=\"co_getnavigation_page_home\">" +
+          "<a   href=\"http://foo.html\" pageid=\"4817\" class=\"hintergrundfarbe_journal active_menuitem\">Home</a></li>" +
+          " </ul> </div></div></div><!-- LEFT COLUM/ -->" +    
+          "</td></tr></table>";
+
+private static final String allLeftColumnFiltered =
+"<table id=\"page_columntable\"><tr>" +
+    "<td class=\"hintergrundfarbe_spalten page_columntable_colum\" style=\"border-left: none;\">" +
+    "</td></tr></table>";
   public void testFiltering() throws Exception {
     InputStream inA;
     InputStream inB;
@@ -238,6 +270,17 @@ public class TestCopernicusHtmlFilterFactory extends LockssTestCase {
         ENC);
     assertEquals(StringUtil.fromInputStream(inA),
         StringUtil.fromInputStream(inB));
+    
+    /* remove left column search area */
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(allLeftColumnHtml),
+        ENC);
+    assertEquals(allLeftColumnFiltered,StringUtil.fromInputStream(inA));    
+
+    /* remove left column search area */
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(headerContentHtml),
+        ENC);
+    assertEquals(headerContentFiltered,StringUtil.fromInputStream(inA));    
+
     
   }
 }

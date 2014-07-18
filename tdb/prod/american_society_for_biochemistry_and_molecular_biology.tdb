@@ -65,9 +65,9 @@
     au < released ; 2008 ; Journal of Biological Chemistry Volume 283 ; 283 >
     au < released ; 2009 ; Journal of Biological Chemistry Volume 284 ; 284 >
     au < released ; 2010 ; Journal of Biological Chemistry Volume 285 ; 285 >
-    au < testing ; 2011 ; Journal of Biological Chemistry Volume 286 ; 286 >
-    au < testing ; 2012 ; Journal of Biological Chemistry Volume 287 ; 287 >
-    au < testing ; 2013 ; Journal of Biological Chemistry Volume 288 ; 288 >
+    au < manifest ; 2011 ; Journal of Biological Chemistry Volume 286 ; 286 >
+    au < manifest ; 2012 ; Journal of Biological Chemistry Volume 287 ; 287 >
+    au < manifest ; 2013 ; Journal of Biological Chemistry Volume 288 ; 288 >
     au < manifest ; 2014 ; Journal of Biological Chemistry Volume 289 ; 289 >
 
   }
@@ -76,9 +76,9 @@
   
     title <
       name = The Journal of Lipid Research ;
-      issn = 1535-9476 ;
-      eissn = 1535-9484 ;
-      issnl = 1535-9476
+      issn = 0022-2275 ;
+      eissn = 1539-7262 ;
+      issnl = 0022-2275
     >
 
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
@@ -138,7 +138,7 @@
     au < released ; 2010 ; The Journal of Lipid Research Volume 51 ; 51 >
     au < released ; 2011 ; The Journal of Lipid Research Volume 52 ; 52 >
     au < released ; 2012 ; The Journal of Lipid Research Volume 53 ; 53 >
-    au < testing ; 2013 ; The Journal of Lipid Research Volume 54 ; 54 >
+    au < released ; 2013 ; The Journal of Lipid Research Volume 54 ; 54 >
     au < manifest ; 2014 ; The Journal of Lipid Research Volume 55 ; 55 >
 
   }
@@ -147,9 +147,9 @@
   
     title <
       name = Molecular & Cellular Proteomics ;
-      issn = 0022-2275 ;
-      eissn = 1539-7262 ;
-      issnl = 0022-2275
+      issn = 1535-9476 ;
+      eissn = 1535-9484 ;
+      issnl = 1535-9476
     >
 
     {
@@ -169,7 +169,7 @@
       au < HighWirePressPlugin ; down ; 2010 ; Molecular & Cellular Proteomics Volume 9 ; 9 >
       au < HighWirePressH20Plugin ; released ; 2011 ; Molecular & Cellular Proteomics Volume 10 ; 10 >
       au < HighWirePressH20Plugin ; released ; 2012 ; Molecular & Cellular Proteomics Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; testing ; 2013 ; Molecular & Cellular Proteomics Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; check ; 2013 ; Molecular & Cellular Proteomics Volume 12 ; 12 >
       au < HighWirePressH20Plugin ; manifest ; 2014 ; Molecular & Cellular Proteomics Volume 13 ; 13 >
 
     }

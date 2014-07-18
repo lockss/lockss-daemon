@@ -4,6 +4,9 @@
     name = Royal College of Physicians
   >
 
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    implicit < status ; year ; name ; param[volume_name] >
+
   {
 
     title <
@@ -12,9 +15,7 @@
       eissn = 1473-4893 
     >
 
-    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://www.clinmed.rcpjournal.org/
-    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2001 ; Clinical Medicine Volume 1 ; 1 >
     au < exists ; 2002 ; Clinical Medicine Volume 2 ; 2 >
@@ -33,5 +34,18 @@
     
   }
     
+  {
+
+    title <
+      name = Future Hospital Journal ;
+      issn = 2055-3323 ;
+      eissn = 2055-3331 
+    >
+
+    param[base_url] = http://futurehospital.rcpjournal.org/
+
+    au < exists ; 2014 ; Future Hospital Journal Volume 1 ; 1 >
+    
+  }
 
 }

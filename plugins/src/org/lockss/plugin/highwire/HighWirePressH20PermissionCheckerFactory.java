@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20PermissionCheckerFactory.java,v 1.1 2014-02-19 23:22:19 etenbrink Exp $
+ * $Id: HighWirePressH20PermissionCheckerFactory.java,v 1.1.2.1 2014-07-18 15:54:38 wkwilson Exp $
  */
 
 /*
@@ -32,16 +32,64 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.highwire;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.Reader;
 import java.util.*;
+
 import org.lockss.daemon.*;
+import org.lockss.daemon.Crawler.PermissionHelper;
 import org.lockss.plugin.*;
+import org.lockss.util.Logger;
+import org.lockss.util.StringUtil;
 
 public class HighWirePressH20PermissionCheckerFactory
-  implements PermissionCheckerFactory {
+  implements PermissionCheckerFactory{
   
-  public List<ProbePermissionChecker> createPermissionCheckers(ArchivalUnit au) {
-    List<ProbePermissionChecker> list = new ArrayList<ProbePermissionChecker>(1);
-    list.add(new ProbePermissionChecker(new HighWirePressH20LoginPageChecker(), au));
+  public class H20ProbePermissionChecker extends ProbePermissionChecker {
+    
+    private final Logger logger = Logger.getLogger(H20ProbePermissionChecker.class);
+    protected ArchivalUnit au;
+    protected String probeUrl;
+    
+    @Override
+    public boolean checkPermission(PermissionHelper pHelper, Reader inputReader,
+        String permissionUrl) {
+      
+      BufferedReader in = new BufferedReader(inputReader); 
+      boolean ret = true;
+      try {
+        in.mark(10240);
+        if (StringUtil.containsString(in, "platform = DRUPAL", true)) {
+          logger.siteError(" ");
+          logger.siteError("       ===============        ");
+          logger.siteError(" ");
+          logger.siteError("found DRUPAL flag");
+          logger.siteError(" ");
+          logger.siteError("       ===============        ");
+          logger.siteError(" ");
+          ret = false;
+        }
+        in.reset();
+      } catch (IOException e) {
+        logger.warning("IOException checking drupal flag", e);
+      }
+      if (ret) {
+        ret = super.checkPermission(pHelper, in, permissionUrl);
+      }
+      return ret;
+    }
+    
+    public H20ProbePermissionChecker(ArchivalUnit au) {
+      super(au);
+      this.au = au;
+    }
+  }
+  
+  public List<H20ProbePermissionChecker> createPermissionCheckers(ArchivalUnit au) {
+    List<H20ProbePermissionChecker> list = new ArrayList<H20ProbePermissionChecker>(1);
+    list.add(new H20ProbePermissionChecker(au));
     return list;
   }
 }
+

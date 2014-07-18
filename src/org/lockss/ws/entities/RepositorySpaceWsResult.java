@@ -1,5 +1,5 @@
 /*
- * $Id: RepositorySpaceWsResult.java,v 1.1.2.2 2014-05-05 17:32:30 wkwilson Exp $
+ * $Id: RepositorySpaceWsResult.java,v 1.1.2.3 2014-07-18 15:58:58 wkwilson Exp $
  */
 
 /*
@@ -29,13 +29,12 @@
  in this Software without prior written authorization from Stanford University.
 
  */
+package org.lockss.ws.entities;
 
 /**
  * Container for the information related to a repository space that is the
  * result of a query.
  */
-package org.lockss.ws.entities;
-
 public class RepositorySpaceWsResult {
   private String repositorySpaceId;
   private Long size;
@@ -47,54 +46,107 @@ public class RepositorySpaceWsResult {
   private Integer deletedCount;
   private Integer orphanedCount;
 
+  /**
+   * Provides the repository space identifier.
+   * 
+   * @return a String with the identifier.
+   */
   public String getRepositorySpaceId() {
     return repositorySpaceId;
   }
   public void setRepositorySpaceId(String repositorySpaceId) {
     this.repositorySpaceId = repositorySpaceId;
   }
+
+  /**
+   * Provides the size of the repository space.
+   * 
+   * @return a Long with the size in bytes.
+   */
   public Long getSize() {
     return size;
   }
   public void setSize(Long size) {
     this.size = size;
   }
+
+  /**
+   * Provides the size of the repository space that is used.
+   * 
+   * @return a Long with the size in bytes.
+   */
   public Long getUsed() {
     return used;
   }
   public void setUsed(Long used) {
     this.used = used;
   }
+
+  /**
+   * Provides the size of the repository space that is free.
+   * 
+   * @return a Long with the size in bytes.
+   */
   public Long getFree() {
     return free;
   }
   public void setFree(Long free) {
     this.free = free;
   }
+
+  /**
+   * Provides the percentage of occupation of the repository space.
+   * 
+   * @return a Double with the percentage.
+   */
   public Double getPercentageFull() {
     return percentageFull;
   }
   public void setPercentageFull(Double percentageFull) {
     this.percentageFull = percentageFull;
   }
+
+  /**
+   * Provides the count of active Archival Units in the repository space.
+   * 
+   * @return a Integer with the count.
+   */
   public Integer getActiveCount() {
     return activeCount;
   }
   public void setActiveCount(Integer activeCount) {
     this.activeCount = activeCount;
   }
+
+  /**
+   * Provides the count of inactive Archival Units in the repository space.
+   * 
+   * @return a Integer with the count.
+   */
   public Integer getInactiveCount() {
     return inactiveCount;
   }
   public void setInactiveCount(Integer inactiveCount) {
     this.inactiveCount = inactiveCount;
   }
+
+  /**
+   * Provides the count of deleted Archival Units in the repository space.
+   * 
+   * @return a Integer with the count.
+   */
   public Integer getDeletedCount() {
     return deletedCount;
   }
   public void setDeletedCount(Integer deletedCount) {
     this.deletedCount = deletedCount;
   }
+
+  /**
+   * Provides the count of orphaned Archival Units in the repository space.
+   * 
+   * @return a Integer with the count.
+   */
   public Integer getOrphanedCount() {
     return orphanedCount;
   }

@@ -24,7 +24,7 @@
       param[base_url] = http://bjr.birjournals.org/
     
       au < down ; crawling ; 2011 ; British Journal of Radiology Volume 84 ; 84 >
-      au < down ; crawling ; 2012 ; British Journal of Radiology Volume 85 ; 85 >
+      au < down ; frozen ; 2012 ; British Journal of Radiology Volume 85 ; 85 >
       au < down ; exists ; 2013 ; British Journal of Radiology Volume 86 ; 86 >
       
     }
@@ -145,7 +145,7 @@
       param[base_url] = http://dmfr.birjournals.org/
 
       au < down ; crawling ; 2011 ; Dentomaxillofacial Radiology Volume 40 ; 40 > 
-      au < down ; crawling ; 2012 ; Dentomaxillofacial Radiology Volume 41 ; 41 >
+      au < down ; frozen ; 2012 ; Dentomaxillofacial Radiology Volume 41 ; 41 >
       au < down ; exists ; 2013 ; Dentomaxillofacial Radiology Volume 42 ; 42 >
 
     }
@@ -214,13 +214,13 @@
     
       au < down ; crawling ; 1999 ; Imaging Volume 11 ; 11 >
       au < down ; crawling ; 2000 ; Imaging Volume 12 ; 12 >
-      au < down ; crawling ; 2001 ; Imaging Volume 13 ; 13 >
+      au < down ; frozen ; 2001 ; Imaging Volume 13 ; 13 >
       au < down ; crawling ; 2002 ; Imaging Volume 14 ; 14 >
-      au < down ; crawling ; 2003 ; Imaging Volume 15 ; 15 >
-      au < down ; crawling ; 2004 ; Imaging Volume 16 ; 16 >
+      au < down ; frozen ; 2003 ; Imaging Volume 15 ; 15 >
+      au < down ; frozen ; 2004 ; Imaging Volume 16 ; 16 >
       au < down ; crawling ; 2005 ; Imaging Volume 17 ; 17 >
       au < down ; crawling ; 2006 ; Imaging Volume 18 ; 18 >
-      au < down ; crawling ; 2007 ; Imaging Volume 19 ; 19 >
+      au < down ; frozen ; 2007 ; Imaging Volume 19 ; 19 >
       au < down ; crawling ; 2008 ; Imaging Volume 20 ; 20 >
       au < down ; crawling ; 2009 ; Imaging Volume 21 ; 21 >
     

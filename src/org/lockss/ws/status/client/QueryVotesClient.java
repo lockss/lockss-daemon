@@ -1,5 +1,5 @@
 /*
- * $Id: QueryVotesClient.java,v 1.1.2.2 2014-05-05 17:32:31 wkwilson Exp $
+ * $Id: QueryVotesClient.java,v 1.1.2.3 2014-07-18 15:59:03 wkwilson Exp $
  */
 
 /*
@@ -29,15 +29,14 @@
  in this Software without prior written authorization from Stanford University.
 
  */
-
-/**
- * A client for the DaemonStatusService.queryVotes() web service operation.
- */
 package org.lockss.ws.status.client;
 
 import java.util.List;
 import org.lockss.ws.entities.VoteWsResult;
 
+/**
+ * A client for the DaemonStatusService.queryVotes() web service operation.
+ */
 public class QueryVotesClient extends QueryBaseClient {
   /**
    * The main method.
@@ -63,7 +62,7 @@ public class QueryVotesClient extends QueryBaseClient {
 	System.out.println("voteResult = " + voteResult);
       }
     } else {
-      System.out.println("polls = " + votes);
+      System.out.println("votes = " + votes);
     }
   }
 }

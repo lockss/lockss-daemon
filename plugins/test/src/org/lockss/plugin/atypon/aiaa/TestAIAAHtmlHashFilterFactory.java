@@ -1,5 +1,5 @@
 /*
- * $Id: TestAIAAHtmlHashFilterFactory.java,v 1.4 2013-12-18 16:58:24 alexandraohlson Exp $
+ * $Id: TestAIAAHtmlHashFilterFactory.java,v 1.4.4.1 2014-07-18 15:49:46 wkwilson Exp $
  */
 /*
 
@@ -122,7 +122,79 @@ public class TestAIAAHtmlHashFilterFactory extends LockssTestCase {
       "<span class=\"title2\" >" +
       "A. Fitting the Johnson Distribution to Point Data</span> " +
       "<p>The Johnson distribution</p>";
+  
+  private static final String adHolderDiv = 
+      "<div " +
+          "id=\"widget-7132\" class=\"widget type-ad-placeholder ui-helper-clearfix\">" +
+          "<div class=\"view\">" +
+          "<div class=\"view-inner\">" +
+          "<!-- placeholder id=null, description=Admin Message -->" +
+          "</div>" +
+          "</div>" +
+          "</div>";
+  private static final String adHolderDivFiltered = 
+      "";
+  
+  private static final String listItemCitedBy =
+      "<ul> <li class=\"articleToolLi showPDFPlus\">" +
+          "<a href=\"/doi/pdfplus/10.2514/1.36414\" target=\"_blank\">" +
+          "PDF Plus (724 KB)" +
+          "</a>" +
+          "</li>" +
+          "<li>" +
+          "<a href=\"/doi/abs/10.2514/1.36414#citedBySection\">Cited By</a>" +
+          "</li>" +
+          "</ul>";
+  private static final String listItemCitedByFiltered =
+      "<ul> <li class=\"articleToolLi showPDFPlus\">" +
+          "<a href=\"/doi/pdfplus/10.2514/1.36414\" target=\"_blank\">" +
+          "PDF Plus (724 KB)" +
+          "</a>" +
+          "</li>" +
+          "</ul>";
       
+public static final String sectionsPulldown =  
+  "<table width=\"50%\" cellpadding=\"0\" cellspacing=\"0\"><tr>" +
+  "<td nowrap=\"\" height=\"16\" width=\"40\" align=\"left\">" +
+  "<span class=\"fulltext\">Sections:</span> </td>" +
+  "<td nowrap=\"\" height=\"16\" width=\"92\" align=\"left\" valign=\"middle\">" +
+  "<form style=\"margin-bottom:0\">" +
+  "<select name=\"select23\" class=\"fulltextdd\" onChange=\"GoTo(this, 'self')\">" +
+  "<option value=\"#\" selected=\"\">Choose</option>" +
+  "<option value=\"#_i16\">References</option>" +
+  "<option value=\"#citart1\">CITING ARTICLES</option></select></form>" +
+  "</td></tr></table>";
+public static final String sectionsPulldownFiltered =  
+"<table width=\"50%\" cellpadding=\"0\" cellspacing=\"0\"><tr>" +
+"<td nowrap=\"\" height=\"16\" width=\"40\" align=\"left\">" +
+"<span class=\"fulltext\">Sections:</span> </td>" +
+"<td nowrap=\"\" height=\"16\" width=\"92\" align=\"left\" valign=\"middle\">" +
+"<form style=\"margin-bottom:0\">" +
+"<select name=\"select23\" class=\"fulltextdd\" onChange=\"GoTo(this, 'self')\">" +
+"<option value=\"#\" selected=\"\">Choose</option>" +
+"<option value=\"#_i16\">References</option>" +
+"</select></form>" +
+"</td></tr></table>";
+
+public static final String sectionHeading =
+  "<div class=\"sectionHeadingContainer\"><div class=\"sectionHeadingContainer2\">" +
+  "<table class=\"sectionHeading\" width=\"100%\" cellpadding=\"0\" cellspacing=\"0\"><tr>" +
+  "<th align=\"left\" valign=\"middle\" width=\"95%\">I. Introduction</th>" +
+  "<td nowrap=\"\" class=\"sectionHeading\" align=\"right\">" +
+  "<form style=\"margin-bottom:0\">" +
+  "<select name=\"select23\" class=\"fulltextdd\" onChange=\"GoTo(this, 'self')\">" +
+  "<option value=\"\" selected=\"\">Choose</option>" +
+  "<option value=\"#\">Top of page</option>" +
+  "<option value=\"#_i16\">References</option>" +
+  "<option value=\"#citart1\">CITING ARTICLES</option></select></form></td>" +
+  "<td height=\"16\" width=\"16\" nowrap=\"\">" +
+  "<a href=\"#_i3\">" +
+  "<img src=\"/templates/jsp/images/arrow_down.gif\" alt=\"Next section\"></img>" +
+  "</a></td></tr></table></div></div>";
+public static final String sectionHeadingFiltered =
+"<div class=\"sectionHeadingContainer\"><div class=\"sectionHeadingContainer2\">" +
+"</div></div>";
+
   
   public void testFiltering() throws Exception {
     InputStream inA;
@@ -143,6 +215,22 @@ public class TestAIAAHtmlHashFilterFactory extends LockssTestCase {
     inA = fact.createFilteredInputStream(mau, new StringInputStream(spanIdHtml),
         ENC);
     assertEquals(spanIdHtmlFiltered,StringUtil.fromInputStream(inA));
+    
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(adHolderDiv),
+        ENC);
+    assertEquals(adHolderDivFiltered,StringUtil.fromInputStream(inA));
+
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(listItemCitedBy),
+        ENC);
+    assertEquals(listItemCitedByFiltered,StringUtil.fromInputStream(inA));
+
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(sectionsPulldown),
+        ENC);
+    assertEquals(sectionsPulldownFiltered,StringUtil.fromInputStream(inA));
+
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(sectionHeading),
+        ENC);
+    assertEquals(sectionHeadingFiltered,StringUtil.fromInputStream(inA));
  
   }
 }

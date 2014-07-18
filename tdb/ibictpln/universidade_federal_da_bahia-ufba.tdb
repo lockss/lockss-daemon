@@ -4,7 +4,9 @@
   >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; volume ; name ; param[year] >
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
+    
+    comment[notReady] = Records load times causing low agreement. See PD-1104.
 
   {
 
@@ -17,8 +19,8 @@
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = cadernosaa
 
-      au < exists ; 2012 ; 1 ; Cadernos de Arte e Antropologia Volume 1 ; 2012 >
-      au < exists ; 2013 ; 2 ; Cadernos de Arte e Antropologia Volume 2 ; 2013 >
+      au < exists ; 2012 ; 1 ; Cadernos de Arte e Antropologia Volume 1 ; 2012 ; >
+      au < exists ; 2013 ; 2 ; Cadernos de Arte e Antropologia Volume 2 ; 2013 ; >
 
   }
 
@@ -33,8 +35,8 @@
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = revistadanca
 
-      au < exists ; 2012 ; 1 ; Dança: Revista do Programa de pós-graduação em Dança Volume 1 ; 2012 >
-      au < expected ; 2013 ; 2 ; Dança: Revista do Programa de pós-graduação em Dança Volume 2 ; 2013 >
+      au < exists ; 2012 ; 1 ; Dança: Revista do Programa de pós-graduação em Dança Volume 1 ; 2012 ; >
+      au < expected ; 2013 ; 2 ; Dança: Revista do Programa de pós-graduação em Dança Volume 2 ; 2013 ; >
 
   }
 
@@ -49,8 +51,8 @@
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = RBDA
 
-      au < exists ; 2006 ; 1 ; Revista Brasileira de Direito Animal Volume 1 ; 0001 >
-      au < exists ; 2013 ; 8 ; Revista Brasileira de Direito Animal Volume 8 ; 2013 >
+      au < exists ; 2006 ; 1 ; Revista Brasileira de Direito Animal Volume 1 ; 0001 ; >
+      au < exists ; 2013 ; 8 ; Revista Brasileira de Direito Animal Volume 8 ; 2013 ; >
 
   }
 
@@ -65,7 +67,7 @@
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = gesta
 
-      au < expected ; 2013 ; 1 ; Revista Eletrônica de Gestão e Tecnologias Ambientais Volume 1 ; 2013 >
+      au < expected ; 2013 ; 1 ; Revista Eletrônica de Gestão e Tecnologias Ambientais Volume 1 ; 2013 ; >
 
   }
 
@@ -80,9 +82,9 @@
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = anaiseneq2012
 
-      au < exists ; 2012 ; 1 ; Anais do XVI Encontro Nacional de Ensino de Química Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 2 ; Anais do XVI Encontro Nacional de Ensino de Química Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 3 ; Anais do XVI Encontro Nacional de Ensino de Química Volume 2014 ; 2014 >
+      au < exists ; 2012 ; 1 ; Anais do XVI Encontro Nacional de Ensino de Química Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 2 ; Anais do XVI Encontro Nacional de Ensino de Química Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 3 ; Anais do XVI Encontro Nacional de Ensino de Química Volume 2014 ; 2014 ; >
 
   }
 
@@ -97,15 +99,15 @@
       param[base_url] = http://www.museu-goeldi.br/editora/
       param[journal_id] = humanas
 
-      au < exists ; 2006 ; 1 ; Boletim do Museu Paraense Emílio Goeldi: Ciências Humanas Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 2 ; Boletim do Museu Paraense Emílio Goeldi: Ciências Humanas Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 3 ; Boletim do Museu Paraense Emílio Goeldi: Ciências Humanas Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 4 ; Boletim do Museu Paraense Emílio Goeldi: Ciências Humanas Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 5 ; Boletim do Museu Paraense Emílio Goeldi: Ciências Humanas Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 6 ; Boletim do Museu Paraense Emílio Goeldi: Ciências Humanas Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 7 ; Boletim do Museu Paraense Emílio Goeldi: Ciências Humanas Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 8 ; Boletim do Museu Paraense Emílio Goeldi: Ciências Humanas Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 9 ; Boletim do Museu Paraense Emílio Goeldi: Ciências Humanas Volume 2014 ; 2014 >
+      au < exists ; 2006 ; 1 ; Boletim do Museu Paraense Emílio Goeldi: Ciências Humanas Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 2 ; Boletim do Museu Paraense Emílio Goeldi: Ciências Humanas Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 3 ; Boletim do Museu Paraense Emílio Goeldi: Ciências Humanas Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 4 ; Boletim do Museu Paraense Emílio Goeldi: Ciências Humanas Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 5 ; Boletim do Museu Paraense Emílio Goeldi: Ciências Humanas Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 6 ; Boletim do Museu Paraense Emílio Goeldi: Ciências Humanas Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 7 ; Boletim do Museu Paraense Emílio Goeldi: Ciências Humanas Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 8 ; Boletim do Museu Paraense Emílio Goeldi: Ciências Humanas Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 9 ; Boletim do Museu Paraense Emílio Goeldi: Ciências Humanas Volume 2014 ; 2014 ; >
 
   }
 
@@ -120,15 +122,15 @@
       param[base_url] = http://www.museu-goeldi.br/editora/
       param[journal_id] = naturais
 
-      au < exists ; 2006 ; 1 ; Boletim do Museu Paraense Emílio Goeldi: Ciências Naturais Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 2 ; Boletim do Museu Paraense Emílio Goeldi: Ciências Naturais Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 3 ; Boletim do Museu Paraense Emílio Goeldi: Ciências Naturais Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 4 ; Boletim do Museu Paraense Emílio Goeldi: Ciências Naturais Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 5 ; Boletim do Museu Paraense Emílio Goeldi: Ciências Naturais Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 6 ; Boletim do Museu Paraense Emílio Goeldi: Ciências Naturais Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 7 ; Boletim do Museu Paraense Emílio Goeldi: Ciências Naturais Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 8 ; Boletim do Museu Paraense Emílio Goeldi: Ciências Naturais Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 9 ; Boletim do Museu Paraense Emílio Goeldi: Ciências Naturais Volume 2014 ; 2014 >
+      au < exists ; 2006 ; 1 ; Boletim do Museu Paraense Emílio Goeldi: Ciências Naturais Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 2 ; Boletim do Museu Paraense Emílio Goeldi: Ciências Naturais Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 3 ; Boletim do Museu Paraense Emílio Goeldi: Ciências Naturais Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 4 ; Boletim do Museu Paraense Emílio Goeldi: Ciências Naturais Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 5 ; Boletim do Museu Paraense Emílio Goeldi: Ciências Naturais Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 6 ; Boletim do Museu Paraense Emílio Goeldi: Ciências Naturais Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 7 ; Boletim do Museu Paraense Emílio Goeldi: Ciências Naturais Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 8 ; Boletim do Museu Paraense Emílio Goeldi: Ciências Naturais Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 9 ; Boletim do Museu Paraense Emílio Goeldi: Ciências Naturais Volume 2014 ; 2014 ; >
 
   }
 
@@ -143,13 +145,13 @@
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = cadgeoc
 
-      au < exists ; 1996 ; 1 ; Cadernos de Geociências Volume 1996 ; 1996 >
-      au < exists ; 2001 ; 2 ; Cadernos de Geociências Volume 2001 ; 2001 >
-      au < exists ; 2010 ; 3 ; Cadernos de Geociências Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 4 ; Cadernos de Geociências Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 5 ; Cadernos de Geociências Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 6 ; Cadernos de Geociências Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 7 ; Cadernos de Geociências Volume 2014 ; 2014 >
+      au < exists ; 1996 ; 1 ; Cadernos de Geociências Volume 1996 ; 1996 ; >
+      au < exists ; 2001 ; 2 ; Cadernos de Geociências Volume 2001 ; 2001 ; >
+      au < exists ; 2010 ; 3 ; Cadernos de Geociências Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 4 ; Cadernos de Geociências Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 5 ; Cadernos de Geociências Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 6 ; Cadernos de Geociências Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 7 ; Cadernos de Geociências Volume 2014 ; 2014 ; >
 
   }
 
@@ -163,10 +165,9 @@
       comment[publisher] = Universidade Federal da Bahia
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = cppgav
-      comment[notReady] = Records load times causing low agreement
 
-      au < notReady ; 2006 ; 1 ; Cadernos de PPGAV: Programa de Pós-Graduação em Artes Visuais Volume 2006 ; 2006 >
-      au < notReady ; 2007 ; 2 ; Cadernos de PPGAV: Programa de Pós-Graduação em Artes Visuais Volume 2007 ; 2007 >
+      au < notReady ; 2006 ; 1 ; Cadernos de PPGAV: Programa de Pós-Graduação em Artes Visuais Volume 2006 ; 2006 ; needs filter >
+      au < notReady ; 2007 ; 2 ; Cadernos de PPGAV: Programa de Pós-Graduação em Artes Visuais Volume 2007 ; 2007 ; needs filter >
 
   }
 
@@ -180,9 +181,8 @@
       comment[publisher] = Universidade Federal da Bahia
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = nit
-      comment[notReady] = Records load times causing low agreement
 
-      au < notReady ; 2008 ; 1 ; Cadernos de Prospecção Volume 2008 ; 2008 >
+      au < notReady ; 2008 ; 1 ; Cadernos de Prospecção Volume 2008 ; 2008 ; needs filter >
 
   }
 
@@ -196,21 +196,16 @@
       comment[publisher] = Universidade Federal da Bahia
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = ppgau
-      comment[notReady] = Records load times causing low agreement
 
-      au < notReady ; 2002 ; 1 ; Cadernos PPG-AU Volume 2002 ; 2002 >
-      au < notReady ; 2003 ; 2 ; Cadernos PPG-AU Volume 2003 ; 2003 >
-      au < notReady ; 2004 ; 3 ; Cadernos PPG-AU Volume 2004 ; 2004 >
-      au < notReady ; 2005 ; 4 ; Cadernos PPG-AU Volume 2005 ; 2005 >
-      au < notReady ; 2006 ; 5 ; Cadernos PPG-AU Volume 2006 ; 2006 >
-      au < notReady ; 2007 ; 6 ; Cadernos PPG-AU Volume 2007 ; 2007 >
-      au < notReady ; 2008 ; 7 ; Cadernos PPG-AU Volume 2008 ; 2008 >
-      au < notReady ; 2009 ; 8 ; Cadernos PPG-AU Volume 2009 ; 2009 >
-      au < notReady ; 2010 ; 9 ; Cadernos PPG-AU Volume 2010 ; 2010 >
-      au < expected ; 2011 ; 10 ; Cadernos PPG-AU Volume 2011 ; 2011 >
-      au < expected ; 2012 ; 11 ; Cadernos PPG-AU Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 12 ; Cadernos PPG-AU Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 13 ; Cadernos PPG-AU Volume 2014 ; 2014 >
+      au < notReady ; 2002 ; 1 ; Cadernos PPG-AU Volume 2002 ; 2002 ; needs filter >
+      au < notReady ; 2003 ; 2 ; Cadernos PPG-AU Volume 2003 ; 2003 ; needs filter >
+      au < notReady ; 2004 ; 3 ; Cadernos PPG-AU Volume 2004 ; 2004 ; needs filter >
+      au < notReady ; 2005 ; 4 ; Cadernos PPG-AU Volume 2005 ; 2005 ; needs filter >
+      au < notReady ; 2006 ; 5 ; Cadernos PPG-AU Volume 2006 ; 2006 ; needs filter >
+      au < notReady ; 2007 ; 6 ; Cadernos PPG-AU Volume 2007 ; 2007 ; needs filter >
+      au < notReady ; 2008 ; 7 ; Cadernos PPG-AU Volume 2008 ; 2008 ; needs filter >
+      au < notReady ; 2009 ; 8 ; Cadernos PPG-AU Volume 2009 ; 2009 ; no articles >
+      au < notReady ; 2010 ; 9 ; Cadernos PPG-AU Volume 2010 ; 2010 ; needs filter >
 
   }
 
@@ -225,18 +220,18 @@
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = contemporaneaposcom
 
-      au < exists ; 2003 ; 1 ; Contemporanea: Revista de Comunicação e Cultura Volume 2003 ; 2003 >
-      au < exists ; 2004 ; 2 ; Contemporanea: Revista de Comunicação e Cultura Volume 2004 ; 2004 >
-      au < exists ; 2005 ; 3 ; Contemporanea: Revista de Comunicação e Cultura Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 4 ; Contemporanea: Revista de Comunicação e Cultura Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 5 ; Contemporanea: Revista de Comunicação e Cultura Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 6 ; Contemporanea: Revista de Comunicação e Cultura Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 7 ; Contemporanea: Revista de Comunicação e Cultura Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 8 ; Contemporanea: Revista de Comunicação e Cultura Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 9 ; Contemporanea: Revista de Comunicação e Cultura Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 10 ; Contemporanea: Revista de Comunicação e Cultura Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 11 ; Contemporanea: Revista de Comunicação e Cultura Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 12 ; Contemporanea: Revista de Comunicação e Cultura Volume 2014 ; 2014 >
+      au < exists ; 2003 ; 1 ; Contemporanea: Revista de Comunicação e Cultura Volume 2003 ; 2003 ; >
+      au < exists ; 2004 ; 2 ; Contemporanea: Revista de Comunicação e Cultura Volume 2004 ; 2004 ; >
+      au < exists ; 2005 ; 3 ; Contemporanea: Revista de Comunicação e Cultura Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 4 ; Contemporanea: Revista de Comunicação e Cultura Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 5 ; Contemporanea: Revista de Comunicação e Cultura Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 6 ; Contemporanea: Revista de Comunicação e Cultura Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 7 ; Contemporanea: Revista de Comunicação e Cultura Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 8 ; Contemporanea: Revista de Comunicação e Cultura Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 9 ; Contemporanea: Revista de Comunicação e Cultura Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 10 ; Contemporanea: Revista de Comunicação e Cultura Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 11 ; Contemporanea: Revista de Comunicação e Cultura Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 12 ; Contemporanea: Revista de Comunicação e Cultura Volume 2014 ; 2014 ; >
 
   }
 
@@ -251,16 +246,15 @@
       comment[publisher] = Universidade Federal da Bahia
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = rcvisual
-      comment[notReady] = Records load times causing low agreement
 
-      au < notReady ; 2007 ; 1 ; Cultura Visual Volume 2007 ; 2007 >
-      au < notReady ; 2008 ; 2 ; Cultura Visual Volume 2008 ; 2008 >
-      au < notReady ; 2009 ; 3 ; Cultura Visual Volume 2009 ; 2009 >
-      au < notReady ; 2010 ; 4 ; Cultura Visual Volume 2010 ; 2010 >
-      au < notReady ; 2011 ; 5 ; Cultura Visual Volume 2011 ; 2011 >
-      au < notReady ; 2012 ; 6 ; Cultura Visual Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 7 ; Cultura Visual Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 8 ; Cultura Visual Volume 2014 ; 2014 >
+      au < notReady ; 2007 ; 1 ; Cultura Visual Volume 2007 ; 2007 ; needs filter >
+      au < notReady ; 2008 ; 2 ; Cultura Visual Volume 2008 ; 2008 ; needs filter >
+      au < notReady ; 2009 ; 3 ; Cultura Visual Volume 2009 ; 2009 ; needs filter >
+      au < notReady ; 2010 ; 4 ; Cultura Visual Volume 2010 ; 2010 ; needs filter >
+      au < notReady ; 2011 ; 5 ; Cultura Visual Volume 2011 ; 2011 ; needs filter >
+      au < notReady ; 2012 ; 6 ; Cultura Visual Volume 2012 ; 2012 ; needs filter >
+      au < manifest ; 2013 ; 7 ; Cultura Visual Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 8 ; Cultura Visual Volume 2014 ; 2014 ; >
 
   }
 
@@ -276,16 +270,16 @@
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = geotextos
 
-      au < exists ; 2005 ; 1 ; GeoTextos Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 2 ; GeoTextos Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 3 ; GeoTextos Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 4 ; GeoTextos Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 5 ; GeoTextos Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 6 ; GeoTextos Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 7 ; GeoTextos Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 8 ; GeoTextos Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 9 ; GeoTextos Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 10 ; GeoTextos Volume 2014 ; 2014 >
+      au < exists ; 2005 ; 1 ; GeoTextos Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 2 ; GeoTextos Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 3 ; GeoTextos Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 4 ; GeoTextos Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 5 ; GeoTextos Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 6 ; GeoTextos Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 7 ; GeoTextos Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 8 ; GeoTextos Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 9 ; GeoTextos Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 10 ; GeoTextos Volume 2014 ; 2014 ; >
 
   }
 
@@ -300,9 +294,9 @@
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = ictus
 
-      au < exists ; 2012 ; 1 ; Ictus: Periódico do PPGMUS Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 2 ; Ictus: Periódico do PPGMUS Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 3 ; Ictus: Periódico do PPGMUS Volume 2014 ; 2014 >
+      au < exists ; 2012 ; 1 ; Ictus: Periódico do PPGMUS Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 2 ; Ictus: Periódico do PPGMUS Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 3 ; Ictus: Periódico do PPGMUS Volume 2014 ; 2014 ; >
 
   }
 
@@ -317,13 +311,13 @@
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = pculturais
 
-      au < exists ; 2008 ; 1 ; Políticas Culturais em Revista Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 2 ; Políticas Culturais em Revista Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 3 ; Políticas Culturais em Revista Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 4 ; Políticas Culturais em Revista Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 5 ; Políticas Culturais em Revista Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 6 ; Políticas Culturais em Revista Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 7 ; Políticas Culturais em Revista Volume 2014 ; 2014 >
+      au < exists ; 2008 ; 1 ; Políticas Culturais em Revista Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 2 ; Políticas Culturais em Revista Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 3 ; Políticas Culturais em Revista Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 4 ; Políticas Culturais em Revista Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 5 ; Políticas Culturais em Revista Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 6 ; Políticas Culturais em Revista Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 7 ; Políticas Culturais em Revista Volume 2014 ; 2014 ; >
 
   }
 
@@ -337,16 +331,16 @@
       comment[publisher] = Universidade Federal da Bahia
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = revistaici
-      comment[notReady] = Records load times causing low agreement
+      comment[v2008] = bio has url with no http.  http://www.portalseer.ufba.br/index.php/revistaici/rt/bio/1779
 
-      au < notReady ; 2007 ; 1 ; Ponto de Acesso Volume 2007 ; 2007 >
-      au < notReady ; 2008 ; 2 ; Ponto de Acesso Volume 2008 ; 2008 >
-      au < notReady ; 2009 ; 3 ; Ponto de Acesso Volume 2009 ; 2009 >
-      au < notReady ; 2010 ; 4 ; Ponto de Acesso Volume 2010 ; 2010 >
-      au < notReady ; 2011 ; 5 ; Ponto de Acesso Volume 2011 ; 2011 >
-      au < notReady ; 2012 ; 6 ; Ponto de Acesso Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 7 ; Ponto de Acesso Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 8 ; Ponto de Acesso Volume 2014 ; 2014 >
+      au < notReady ; 2007 ; 1 ; Ponto de Acesso Volume 2007 ; 2007 ; needs filter >
+      au < notReady ; 2008 ; 2 ; Ponto de Acesso Volume 2008 ; 2008 ; url with no http on bio 1779 >
+      au < notReady ; 2009 ; 3 ; Ponto de Acesso Volume 2009 ; 2009 ; needs filter >
+      au < notReady ; 2010 ; 4 ; Ponto de Acesso Volume 2010 ; 2010 ; needs filter >
+      au < notReady ; 2011 ; 5 ; Ponto de Acesso Volume 2011 ; 2011 ; needs filter >
+      au < notReady ; 2012 ; 6 ; Ponto de Acesso Volume 2012 ; 2012 ; needs filter >
+      au < manifest ; 2013 ; 7 ; Ponto de Acesso Volume 2013 ; 2013 ; >
+      au < manifest ; 2014 ; 8 ; Ponto de Acesso Volume 2014 ; 2014 ; >
 
   }
 
@@ -361,15 +355,14 @@
       comment[publisher] = Universidade Federal da Bahia
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = revteatro
-      comment[notReady] = Records load times causing low agreement
 
-      au < notReady ; 2008 ; 1 ; Repertório: teatro & Dança Volume 2008 ; 2008 >
-      au < notReady ; 2009 ; 2 ; Repertório: teatro & Dança Volume 2009 ; 2009 >
-      au < notReady ; 2010 ; 3 ; Repertório: teatro & Dança Volume 2010 ; 2010 >
-      au < notReady ; 2011 ; 4 ; Repertório: teatro & Dança Volume 2011 ; 2011 >
-      au < notReady ; 2012 ; 5 ; Repertório: teatro & Dança Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 6 ; Repertório: teatro & Dança Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 7 ; Repertório: teatro & Dança Volume 2014 ; 2014 >
+      au < notReady ; 2008 ; 1 ; Repertório: teatro & Dança Volume 2008 ; 2008 ; needs filter >
+      au < notReady ; 2009 ; 2 ; Repertório: teatro & Dança Volume 2009 ; 2009 ; needs filter >
+      au < notReady ; 2010 ; 3 ; Repertório: teatro & Dança Volume 2010 ; 2010 ; needs filter >
+      au < notReady ; 2011 ; 4 ; Repertório: teatro & Dança Volume 2011 ; 2011 ; needs filter >
+      au < notReady ; 2012 ; 5 ; Repertório: teatro & Dança Volume 2012 ; 2012 ; needs filter >
+      au < manifest ; 2013 ; 6 ; Repertório: teatro & Dança Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 7 ; Repertório: teatro & Dança Volume 2014 ; 2014 ; >
 
   }
 
@@ -385,18 +378,18 @@
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = enfermagem
 
-      au < exists ; 2001 ; 1 ; Revista Baiana de Enfermagem Volume 2001 ; 2001 >
-      au < exists ; 2002 ; 2 ; Revista Baiana de Enfermagem Volume 2002 ; 2002 >
-      au < exists ; 2003 ; 3 ; Revista Baiana de Enfermagem Volume 2003 ; 2003 >
-      au < exists ; 2004 ; 4 ; Revista Baiana de Enfermagem Volume 2004 ; 2004 >
-      au < exists ; 2006 ; 6 ; Revista Baiana de Enfermagem Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 7 ; Revista Baiana de Enfermagem Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 8 ; Revista Baiana de Enfermagem Volume 2008 ; 2008 >
-      au < exists ; 2010 ; 10 ; Revista Baiana de Enfermagem Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 11 ; Revista Baiana de Enfermagem Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 12 ; Revista Baiana de Enfermagem Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 13 ; Revista Baiana de Enfermagem Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 14 ; Revista Baiana de Enfermagem Volume 2014 ; 2014 >
+      au < exists ; 2001 ; 1 ; Revista Baiana de Enfermagem Volume 2001 ; 2001 ; >
+      au < exists ; 2002 ; 2 ; Revista Baiana de Enfermagem Volume 2002 ; 2002 ; >
+      au < exists ; 2003 ; 3 ; Revista Baiana de Enfermagem Volume 2003 ; 2003 ; >
+      au < exists ; 2004 ; 4 ; Revista Baiana de Enfermagem Volume 2004 ; 2004 ; >
+      au < exists ; 2006 ; 6 ; Revista Baiana de Enfermagem Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 7 ; Revista Baiana de Enfermagem Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 8 ; Revista Baiana de Enfermagem Volume 2008 ; 2008 ; >
+      au < exists ; 2010 ; 10 ; Revista Baiana de Enfermagem Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 11 ; Revista Baiana de Enfermagem Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 12 ; Revista Baiana de Enfermagem Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 13 ; Revista Baiana de Enfermagem Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 14 ; Revista Baiana de Enfermagem Volume 2014 ; 2014 ; >
 
   }
 
@@ -411,21 +404,20 @@
       comment[publisher] = Universidade Federal da Bahia
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = cmbio
-      comment[notReady] = Records load times causing low agreement
 
-      au < notReady ; 2002 ; 1 ; Revista de Ciências Médicas e Biológicas Volume 2002 ; 2002 >
-      au < notReady ; 2003 ; 2 ; Revista de Ciências Médicas e Biológicas Volume 2003 ; 2003 >
-      au < notReady ; 2004 ; 3 ; Revista de Ciências Médicas e Biológicas Volume 2004 ; 2004 >
-      au < notReady ; 2005 ; 4 ; Revista de Ciências Médicas e Biológicas Volume 2005 ; 2005 >
-      au < notReady ; 2006 ; 5 ; Revista de Ciências Médicas e Biológicas Volume 2006 ; 2006 >
-      au < notReady ; 2007 ; 6 ; Revista de Ciências Médicas e Biológicas Volume 2007 ; 2007 >
-      au < notReady ; 2008 ; 7 ; Revista de Ciências Médicas e Biológicas Volume 2008 ; 2008 >
-      au < notReady ; 2009 ; 8 ; Revista de Ciências Médicas e Biológicas Volume 2009 ; 2009 >
-      au < notReady ; 2010 ; 9 ; Revista de Ciências Médicas e Biológicas Volume 2010 ; 2010 >
-      au < notReady ; 2011 ; 10 ; Revista de Ciências Médicas e Biológicas Volume 2011 ; 2011 >
-      au < notReady ; 2012 ; 11 ; Revista de Ciências Médicas e Biológicas Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 12 ; Revista de Ciências Médicas e Biológicas Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 13 ; Revista de Ciências Médicas e Biológicas Volume 2014 ; 2014 >
+      au < notReady ; 2002 ; 1 ; Revista de Ciências Médicas e Biológicas Volume 2002 ; 2002 ; needs filter >
+      au < notReady ; 2003 ; 2 ; Revista de Ciências Médicas e Biológicas Volume 2003 ; 2003 ; needs filter >
+      au < notReady ; 2004 ; 3 ; Revista de Ciências Médicas e Biológicas Volume 2004 ; 2004 ; needs filter >
+      au < notReady ; 2005 ; 4 ; Revista de Ciências Médicas e Biológicas Volume 2005 ; 2005 ; needs filter >
+      au < notReady ; 2006 ; 5 ; Revista de Ciências Médicas e Biológicas Volume 2006 ; 2006 ; needs filter >
+      au < notReady ; 2007 ; 6 ; Revista de Ciências Médicas e Biológicas Volume 2007 ; 2007 ; needs filter >
+      au < notReady ; 2008 ; 7 ; Revista de Ciências Médicas e Biológicas Volume 2008 ; 2008 ; needs filter >
+      au < notReady ; 2009 ; 8 ; Revista de Ciências Médicas e Biológicas Volume 2009 ; 2009 ; needs filter >
+      au < notReady ; 2010 ; 9 ; Revista de Ciências Médicas e Biológicas Volume 2010 ; 2010 ; needs filter >
+      au < notReady ; 2011 ; 10 ; Revista de Ciências Médicas e Biológicas Volume 2011 ; 2011 ; needs filter >
+      au < notReady ; 2012 ; 11 ; Revista de Ciências Médicas e Biológicas Volume 2012 ; 2012 ; needs filter >
+      au < manifest ; 2013 ; 12 ; Revista de Ciências Médicas e Biológicas Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 13 ; Revista de Ciências Médicas e Biológicas Volume 2014 ; 2014 ; >
 
   }
 
@@ -439,16 +431,15 @@
       comment[publisher] = Universidade Federal da Bahia
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = rcontabilidade
-      comment[notReady] = Records load times causing low agreement
 
-      au < notReady ; 2007 ; 1 ; Revista de Contabilidade de UFBA Volume 2007 ; 2007 >
-      au < notReady ; 2008 ; 2 ; Revista de Contabilidade de UFBA Volume 2008 ; 2008 >
-      au < notReady ; 2009 ; 3 ; Revista de Contabilidade de UFBA Volume 2009 ; 2009 >
-      au < notReady ; 2010 ; 4 ; Revista de Contabilidade de UFBA Volume 2010 ; 2010 >
-      au < notReady ; 2011 ; 5 ; Revista de Contabilidade de UFBA Volume 2011 ; 2011 >
-      au < notReady ; 2012 ; 6 ; Revista de Contabilidade de UFBA Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 7 ; Revista de Contabilidade de UFBA Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 8 ; Revista de Contabilidade de UFBA Volume 2014 ; 2014 >
+      au < notReady ; 2007 ; 1 ; Revista de Contabilidade de UFBA Volume 2007 ; 2007 ; needs filter >
+      au < notReady ; 2008 ; 2 ; Revista de Contabilidade de UFBA Volume 2008 ; 2008 ; needs filter >
+      au < notReady ; 2009 ; 3 ; Revista de Contabilidade de UFBA Volume 2009 ; 2009 ; needs filter >
+      au < notReady ; 2010 ; 4 ; Revista de Contabilidade de UFBA Volume 2010 ; 2010 ; needs filter >
+      au < notReady ; 2011 ; 5 ; Revista de Contabilidade de UFBA Volume 2011 ; 2011 ; needs filter >
+      au < notReady ; 2012 ; 6 ; Revista de Contabilidade de UFBA Volume 2012 ; 2012 ; needs filter >
+      au < manifest ; 2013 ; 7 ; Revista de Contabilidade de UFBA Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 8 ; Revista de Contabilidade de UFBA Volume 2014 ; 2014 ; >
 
   }
 
@@ -463,27 +454,26 @@
       comment[publisher] = Universidade Federal da Bahia
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = entreideias
-      comment[notReady] = Records load times causing low agreement
 
-      au < notReady ; 1994 ; 1 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 1994 ; 1994 >
-      au < notReady ; 1997 ; 4 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 1997 ; 1997 >
-      au < notReady ; 1998 ; 5 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 1998 ; 1998 >
-      au < notReady ; 1999 ; 6 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 1999 ; 1999 >
-      au < notReady ; 2000 ; 7 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2000 ; 2000 >
-      au < notReady ; 2001 ; 8 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2001 ; 2001 >
-      au < notReady ; 2002 ; 9 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2002 ; 2002 >
-      au < notReady ; 2003 ; 10 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2003 ; 2003 >
-      au < notReady ; 2004 ; 11 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2004 ; 2004 >
-      au < notReady ; 2005 ; 12 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2005 ; 2005 >
-      au < notReady ; 2006 ; 13 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2006 ; 2006 >
-      au < notReady ; 2007 ; 14 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2007 ; 2007 >
-      au < notReady ; 2008 ; 15 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2008 ; 2008 >
-      au < notReady ; 2009 ; 16 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2009 ; 2009 >
-      au < notReady ; 2010 ; 17 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2010 ; 2010 >
-      au < notReady ; 2011 ; 18 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2011 ; 2011 >
-      au < notReady ; 2012 ; 19 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 20 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 21 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2014 ; 2014 >
+      au < notReady ; 1994 ; 1 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 1994 ; 1994 ; needs filter >
+      au < notReady ; 1997 ; 4 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 1997 ; 1997 ; needs filter >
+      au < notReady ; 1998 ; 5 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 1998 ; 1998 ; needs filter >
+      au < notReady ; 1999 ; 6 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 1999 ; 1999 ; needs filter >
+      au < notReady ; 2000 ; 7 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2000 ; 2000 ; needs filter >
+      au < notReady ; 2001 ; 8 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2001 ; 2001 ; needs filter >
+      au < notReady ; 2002 ; 9 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2002 ; 2002 ; needs filter >
+      au < notReady ; 2003 ; 10 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2003 ; 2003 ; needs filter >
+      au < notReady ; 2004 ; 11 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2004 ; 2004 ; needs filter >
+      au < notReady ; 2005 ; 12 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2005 ; 2005 ; needs filter >
+      au < notReady ; 2006 ; 13 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2006 ; 2006 ; needs filter >
+      au < notReady ; 2007 ; 14 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2007 ; 2007 ; needs filter >
+      au < notReady ; 2008 ; 15 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2008 ; 2008 ; needs filter >
+      au < notReady ; 2009 ; 16 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2009 ; 2009 ; needs filter >
+      au < notReady ; 2010 ; 17 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2010 ; 2010 ; needs filter >
+      au < notReady ; 2011 ; 18 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2011 ; 2011 ; needs filter >
+      au < notReady ; 2012 ; 19 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2012 ; 2012 ; needs filter >
+      au < manifest ; 2013 ; 20 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 21 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2014 ; 2014 ; >
 
   }
 
@@ -497,24 +487,23 @@
       comment[publisher] = Universidade Federal da Bahia
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = universitas
-      comment[notReady] = Records load times causing low agreement
 
-      au < notReady ; 1968 ; 1 ; Universitas Volume 1968 ; 1968 >
-      au < notReady ; 1969 ; 2 ; Universitas Volume 1969 ; 1969 >
-      au < notReady ; 1970 ; 3 ; Universitas Volume 1970 ; 1970 >
-      au < notReady ; 1971 ; 4 ; Universitas Volume 1971 ; 1971 >
-      au < notReady ; 1972 ; 5 ; Universitas Volume 1972 ; 1972 >
-      au < notReady ; 1973 ; 6 ; Universitas Volume 1973 ; 1973 >
-      au < notReady ; 1977 ; 7 ; Universitas Volume 1977 ; 1977 >
-      au < notReady ; 1978 ; 8 ; Universitas Volume 1978 ; 1978 >
-      au < notReady ; 1979 ; 9 ; Universitas Volume 1979 ; 1979 >
-      au < notReady ; 1981 ; 10 ; Universitas Volume 1981 ; 1981 >
-      au < notReady ; 1982 ; 11 ; Universitas Volume 1982 ; 1982 >
-      au < notReady ; 1983 ; 12 ; Universitas Volume 1983 ; 1983 >
-      au < notReady ; 1985 ; 13 ; Universitas Volume 1985 ; 1985 >
-      au < notReady ; 1986 ; 14 ; Universitas Volume 1986 ; 1986 >
-      au < notReady ; 1987 ; 15 ; Universitas Volume 1987 ; 1987 >
-      au < notReady ; 1991 ; 16 ; Universitas Volume 1991 ; 1991 >
+      au < notReady ; 1968 ; 1 ; Universitas Volume 1968 ; 1968 ; no articles >
+      au < notReady ; 1969 ; 2 ; Universitas Volume 1969 ; 1969 ; no articles >
+      au < notReady ; 1970 ; 3 ; Universitas Volume 1970 ; 1970 ; no articles >
+      au < notReady ; 1971 ; 4 ; Universitas Volume 1971 ; 1971 ; no articles >
+      au < notReady ; 1972 ; 5 ; Universitas Volume 1972 ; 1972 ; no articles >
+      au < notReady ; 1973 ; 6 ; Universitas Volume 1973 ; 1973 ; no articles >
+      au < notReady ; 1977 ; 7 ; Universitas Volume 1977 ; 1977 ; no articles >
+      au < notReady ; 1978 ; 8 ; Universitas Volume 1978 ; 1978 ; no articles >
+      au < notReady ; 1979 ; 9 ; Universitas Volume 1979 ; 1979 ; no articles >
+      au < notReady ; 1981 ; 10 ; Universitas Volume 1981 ; 1981 ; no articles >
+      au < notReady ; 1982 ; 11 ; Universitas Volume 1982 ; 1982 ; no articles >
+      au < notReady ; 1983 ; 12 ; Universitas Volume 1983 ; 1983 ; no articles >
+      au < notReady ; 1985 ; 13 ; Universitas Volume 1985 ; 1985 ; no articles >
+      au < notReady ; 1986 ; 14 ; Universitas Volume 1986 ; 1986 ; no articles >
+      au < notReady ; 1987 ; 15 ; Universitas Volume 1987 ; 1987 ; no articles >
+      au < notReady ; 1991 ; 16 ; Universitas Volume 1991 ; 1991 ; needs filter >
 
   }
 

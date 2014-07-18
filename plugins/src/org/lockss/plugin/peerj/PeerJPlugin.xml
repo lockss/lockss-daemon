@@ -13,22 +13,23 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>5</string>
   </entry>
   <entry>
+    <!-- to use new feature of HtmlNodeFilters in the html hash filter - allExceptSubtree() -->
     <string>required_daemon_version</string>
-    <string>1.62.0</string>
+    <string>1.65.4</string>
   </entry>
   <entry>
   <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>1</string>
+        <string>4</string>
       </entry>
       <entry>
         <string>Poll</string>
-        <string>1</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -58,9 +59,11 @@
     <string>au_crawlrules</string>
     <list>
       <string>1,"^%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f|swf)$", base_url</string>
+      <!-- get font-awesome -->
+      <string>1,"^%sassets/font.*", base_url</string>
       <!-- hardwire cloudfront host in case publisher changes it -->
-      <string>2,"^https://(dfzljdn9uc3pi|d3amtssd1tejdt|d2pdyyx74uypu5).cloudfront.net/images/"</string>
-      <string>1,"^https://(dfzljdn9uc3pi|d3amtssd1tejdt|d2pdyyx74uypu5).cloudfront.net/%s/", volume_name</string>
+      <string>1,"^https://(dfzljdn9uc3pi|d3amtssd1tejdt|d2pdyyx74uypu5)\.cloudfront\.net/(images|collections)/"</string>
+      <string>1,"^https://(dfzljdn9uc3pi|d3amtssd1tejdt|d2pdyyx74uypu5)\.cloudfront\.net/%s/", volume_name</string>
       <string>4,"^%s", base_url</string>
       <string>1,"^%s(articles|preprints)/index\.html\?month=%s-[0-9]+$", base_url, volume_name</string>
       <string>1,"^%s(articles|preprints|reviews)/[0-9]+/?$", base_url</string>
@@ -108,14 +111,30 @@
     <string>au_feature_urls</string>
     <map>
       <entry>
+        <!-- https://peerj.com/ -->
+        <string>au_title</string>
+        <string>"%s", base_url</string>
+      </entry>
+      <entry>
+        <!-- https://peerj.com/archives/?year=2013 -->
+        <!-- https://peerj.com/archives-preprints/?year=2013 -->
         <string>au_volume</string>
-        <string>"%s%s/?year=%s", base_url, peerj_site, volume_name</string>
+        <string>"%s%s/?year=%s", base_url, peerj_site, volume</string>
+      </entry>
+      <entry>
+        <!-- https://peerj.com/articles/index.html?month=2013-02 -->
+        <string>au_issue</string>
+        <string>"%sarticles/index.html?month=%s-%s", base_url, volume, issue</string>
       </entry>
     </map>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.peerj.PeerJHtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>application/xml_filter_factory</string>
+    <string>org.lockss.plugin.peerj.PeerJXmlFilterFactory</string>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
@@ -145,11 +164,5 @@
   <entry>
     <string>au_def_pause_time</string>
     <long>3000</long>
-  </entry>
-  <entry>
-    <string>plugin_cache_result_list</string>
-    <list>
-      <string>403=org.lockss.util.urlconn.CacheException$UnretryableException</string>
-    </list>
   </entry>
 </map>

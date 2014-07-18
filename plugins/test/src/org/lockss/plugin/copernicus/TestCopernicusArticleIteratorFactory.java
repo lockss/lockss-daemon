@@ -1,5 +1,5 @@
 /*
- * $Id: TestCopernicusArticleIteratorFactory.java,v 1.2 2012-11-19 21:03:19 alexandraohlson Exp $
+ * $Id: TestCopernicusArticleIteratorFactory.java,v 1.2.30.1 2014-07-18 15:49:48 wkwilson Exp $
  */
 
 /*
@@ -32,29 +32,21 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.copernicus;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.regex.Pattern;
 
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
-import org.lockss.config.TdbAu;
 import org.lockss.daemon.CachedUrlSetSpec;
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.SingleNodeCachedUrlSetSpec;
-import org.lockss.daemon.TitleConfig;
-import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.ArticleMetadataExtractor;
-import org.lockss.extractor.BaseArticleMetadataExtractor;
 import org.lockss.extractor.FileMetadataExtractor;
-import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
-import org.lockss.extractor.ArticleMetadataExtractor.Emitter;
 import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.SimulatedArchivalUnit;
 import org.lockss.plugin.simulated.SimulatedContentGenerator;
-import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.state.NodeManager;
 import org.lockss.test.*;
 import org.lockss.util.*;
@@ -132,16 +124,19 @@ public class TestCopernicusArticleIteratorFactory extends ArticleIteratorTestCas
     //"\"^%s%s/[0-9]+/[0-9]+/[A-Za-z0-9-]+\\.html\", base_url,volume_name"
 
     assertNotMatchesRE(pat, "http://www.clim-past.net/7/1/2012/cp-7-1-2012.html"); //wrong volume
-    assertNotMatchesRE(pat, "http://www.clim-past.net/8/1/2012/cp-8-1-2012.pdf"); //pdf not abstract
+    assertMatchesRE(pat, "http://www.clim-past.net/8/1/2012/cp-8-1-2012.pdf"); //pdf not abstract
+    assertNotMatchesRE(pat, "http://www.clim-past.net/8/1/2012/cp-8-1-2012-supplement.pdf"); //supplement, not article
+    assertNotMatchesRE(pat, "http://www.clim-past.net/8/1/2012/cp-8-1-2012-supplement.zip"); //zip not pdf
     assertMatchesRE(pat, "http://www.clim-past.net/8/1/2012/cp-8-1-2012.html");
     assertNotMatchesRE(pat, "http://www.clim-past.net/8/1/2012");
-    assertNotMatchesRE(pat, "http://www.clim-past.net/8/1/2012/cp-8-1-2012-supplement.pdf");
+    assertNotMatchesRE(pat, "http://www.clim-past.net/8/1/2012/cp-8-1-2012.ris");// secondary, not primary
+    assertNotMatchesRE(pat, "http://www.clim-past.net/8/1/2012/cp-8-1-2012.bib");// secondary, not primary
   }
   
   
    
   public void testCreateArticleFiles() throws Exception {
-    int expCount = 15; // 1 depth, 4 branches, 5 files, but removing some later in test   
+    // 1 depth, 4 branches, 5 files, but removing some later in test   
     PluginTestUtil.crawlSimAu(sau);
     
  /*
@@ -149,6 +144,8 @@ public class TestCopernicusArticleIteratorFactory extends ArticleIteratorTestCas
   *  what you would find in a "real" crawl with this plugin:
   *  <base_url>/48/<page#>/2011/art#file.{html, pdf & ris}   
   */
+    
+    // will become 8/#/2012/art#file.{html,pdf,ris}
     String pat1 = "branch(\\d+)/(\\d+file)\\.html";
     String rep1 = "8/$1/2012/art$2.html";
     PluginTestUtil.copyAu(sau, au, ".*\\.html$", pat1, rep1);
@@ -160,57 +157,60 @@ public class TestCopernicusArticleIteratorFactory extends ArticleIteratorTestCas
     PluginTestUtil.copyAu(sau, au, ".*\\.txt$", pat3, rep3);
     
     // Remove some of the URLs just created to make test more robust
-    // Remove files 1file.html and 2file.pdf in each branch (and there are 3 branches)
+    // Remove files art1file.html and art2file.ris in each branch (and there are 4 branches)
+    // Remove art3file.pdf in only one of the branches
+
     int deleted = 0;
-    int pdf_deleted = 0;
     for (Iterator it = au.getAuCachedUrlSet().contentHashIterator() ; it.hasNext() ; ) {
       CachedUrlSetNode cusn = (CachedUrlSetNode)it.next();
       if (cusn instanceof CachedUrl) {
         CachedUrl cu = (CachedUrl)cusn;
         String url = cu.getUrl();
         if (url.contains("/2012/")) {
-          if (url.endsWith("1file.html") || url.endsWith("2file.ris")) {
+          if (url.endsWith("1file.html") || url.endsWith("2file.ris") || url.endsWith("3file.pdf")) {
             deleteBlock(cu);
             ++deleted;
-          } else if (url.endsWith("3file.pdf") && (pdf_deleted == 0)) {
-            // delete ONE pdf file to see what happens with no FULL_TEXT_CU
-            // it probably won't happen but the publisher might have an error
-            pdf_deleted = 1;
+          }
+          // and in the first branch only, create edge cases with only one type of file
+          if (url.contains("1/2012") && (url.endsWith("1file.pdf") || url.endsWith("4file.pdf")
+              || url.endsWith("4file.ris") || url.endsWith("5file.html") || url.endsWith("5file.ris"))) {
+            //BRANCH ONE - art1 = only ris; art4=only html; art5=only pdf
             deleteBlock(cu);
+            ++deleted;
           }
         }
       }
     }
-    assertEquals(8, deleted); // 3 branches, 2 files removed per branch - don't count PDF file
+    assertEquals(17, deleted); // 4 branches, 3 files removed per branch - plus one additional PDF file
 
-    Iterator<ArticleFiles> it = au.getArticleIterator();
+    Iterator<ArticleFiles> it = au.getArticleIterator(MetadataTarget.Any());
     int count = 0;
-    int countNoRis = 0;
-    int countNoPDF = 0;
+    int countFullText = 0;
+    int countMetadata = 0;
     while (it.hasNext()) {
       ArticleFiles af = it.next();
       log.info(af.toString());
+      count ++;
       CachedUrl cu = af.getFullTextCu();
       if ( cu != null) {
-         String url = cu.getUrl();
-         String contentType = cu.getContentType();
-         log.debug("count " + count + " url " + url + " " + contentType);
-         count++;
-      } else {
-        // only a PDF file is full text
-        ++countNoPDF;
+        String url = cu.getUrl();
+        String contentType = cu.getContentType();
+        log.debug("countFullText " + count + " url " + url + " " + contentType);
+        ++countFullText;
       }
-      if ( af.getRoleUrl(ArticleFiles.ROLE_ARTICLE_METADATA) == null) {
-        ++countNoRis; 
+      cu = af.getRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA);
+      if (cu != null) {
+        ++countMetadata; //could be ris file or abstract
       }
-    }
-    // missing HTML file will mean no article is picked up at all
-    // missing Ris file will be fine
-    // there should always be a pdf whenever an article is found
+    }      
+
+    // 20 possible articles 
+    //     count & countFullText - 1 for RIS only (branch1, file1)
+    //     countMetadata - 2 (pdf only branch1, file 5)
     log.debug("Article count is " + count);
-    assertEquals(expCount, count);
-    assertEquals(4, countNoRis);
-    assertEquals(1, countNoPDF);
+    assertEquals(19, count); //20 (5 x 4 branches; minus branch1, file1 which only has a ris version
+    assertEquals(19, countFullText); // current builder counts abstract as full text if all there is
+    assertEquals(18, countMetadata); // if you have an articlefiles and either ris or abstract
 }
 
 private void deleteBlock(CachedUrl cu) throws IOException {

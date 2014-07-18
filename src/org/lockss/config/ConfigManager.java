@@ -1,10 +1,10 @@
 /*
- * $Id: ConfigManager.java,v 1.95 2013-05-30 14:00:18 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.95.12.1 2014-07-18 15:59:10 wkwilson Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -196,8 +196,8 @@ public class ConfigManager implements LockssManager {
   static final String PARAM_PLATFORM_LOG_DIR = PLATFORM + "logdirectory";
   static final String PARAM_PLATFORM_LOG_FILE = PLATFORM + "logfile";
 
-  static final String PARAM_PLATFORM_SMTP_HOST = PLATFORM + "smtphost";
-  static final String PARAM_PLATFORM_SMTP_PORT = PLATFORM + "smtpport";
+  public static final String PARAM_PLATFORM_SMTP_HOST = PLATFORM + "smtphost";
+  public static final String PARAM_PLATFORM_SMTP_PORT = PLATFORM + "smtpport";
   static final String PARAM_PLATFORM_PIDFILE = PLATFORM + "pidfile";
 
   public static final String CONFIG_FILE_UI_IP_ACCESS = "ui_ip_access.txt";
@@ -1412,6 +1412,9 @@ public class ConfigManager implements LockssManager {
 		       firstSpace);
       platformOverride(config, IdentityManager.PARAM_IDDB_DIR,
 		       new File(firstSpace, "iddb").toString());
+      platformDefault(config,
+		      org.lockss.truezip.TrueZipManager.PARAM_CACHE_DIR,
+		      new File(firstSpace, "tfile").toString());
     }
   }
 
@@ -1429,6 +1432,7 @@ public class ConfigManager implements LockssManager {
     }
   }
 
+  /** Override current config value with val */
   private void platformOverride(Configuration config, String key, String val) {
     String oldval = config.get(key);
     if (oldval != null && !StringUtil.equalStrings(oldval, val)) {
@@ -1438,6 +1442,14 @@ public class ConfigManager implements LockssManager {
     config.put(key, val);
   }
 
+  /** Store val in config iff key currently not set */
+  private void platformDefault(Configuration config, String key, String val) {
+    if (!config.containsKey(key)) {
+      platformOverride(config, key, val);
+    }
+  }
+
+  /** Copy value of platformKey in config iff key currently not set */
   private void conditionalPlatformOverride(Configuration config,
 					   String platformKey, String key) {
     String value = config.get(platformKey);
@@ -1487,6 +1499,9 @@ public class ConfigManager implements LockssManager {
     }
     if (elided > 0) log.debug(elided + " keys elided");
     log.debug("New TdbAus: " + diffs.getTdbAuDifferenceCount());
+    if (log.isDebug3()) {
+      log.debug3("TdbDiffs: " + diffs.getTdbDifferences());
+    }
 
     if (log.isDebug2()) {
       Tdb tdb = config.getTdb();

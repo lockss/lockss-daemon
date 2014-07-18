@@ -4,7 +4,7 @@
   >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; volume ; name ; param[year] >
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
 
   {
 
@@ -17,17 +17,17 @@
       param[base_url] = http://revistas.unisinos.br/
       param[journal_id] = base
 
-      au < released ; 2004 ; 1 ; BASE-Revista de Administração e Contabilidade da Unisinos Volume 2004 ; 2004 >
-      au < released ; 2005 ; 2 ; BASE-Revista de Administração e Contabilidade da Unisinos Volume 2005 ; 2005 >
-      au < released ; 2006 ; 3 ; BASE-Revista de Administração e Contabilidade da Unisinos Volume 2006 ; 2006 >
-      au < released ; 2007 ; 4 ; BASE-Revista de Administração e Contabilidade da Unisinos Volume 2007 ; 2007 >
-      au < released ; 2008 ; 5 ; BASE-Revista de Administração e Contabilidade da Unisinos Volume 2008 ; 2008 >
-      au < released ; 2009 ; 6 ; BASE-Revista de Administração e Contabilidade da Unisinos Volume 2009 ; 2009 >
-      au < released ; 2010 ; 7 ; BASE-Revista de Administração e Contabilidade da Unisinos Volume 2010 ; 2010 >
-      au < released ; 2011 ; 8 ; BASE-Revista de Administração e Contabilidade da Unisinos Volume 2011 ; 2011 >
-      au < released ; 2012 ; 9 ; BASE-Revista de Administração e Contabilidade da Unisinos Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 10 ; BASE-Revista de Administração e Contabilidade da Unisinos Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 11 ; BASE-Revista de Administração e Contabilidade da Unisinos Volume 2014 ; 2014 >
+      au < released ; 2004 ; 1 ; BASE-Revista de Administração e Contabilidade da Unisinos Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 2 ; BASE-Revista de Administração e Contabilidade da Unisinos Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 3 ; BASE-Revista de Administração e Contabilidade da Unisinos Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 4 ; BASE-Revista de Administração e Contabilidade da Unisinos Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 5 ; BASE-Revista de Administração e Contabilidade da Unisinos Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 6 ; BASE-Revista de Administração e Contabilidade da Unisinos Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 7 ; BASE-Revista de Administração e Contabilidade da Unisinos Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 8 ; BASE-Revista de Administração e Contabilidade da Unisinos Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 9 ; BASE-Revista de Administração e Contabilidade da Unisinos Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 10 ; BASE-Revista de Administração e Contabilidade da Unisinos Volume 2013 ; 2013 ; >
+      au < manifest ; 2014 ; 11 ; BASE-Revista de Administração e Contabilidade da Unisinos Volume 2014 ; 2014 ; >
 
   }
 
@@ -42,17 +42,17 @@
       param[base_url] = http://revistas.unisinos.br/
       param[journal_id] = calidoscopio
 
-      au < exists ; 2004 ; 1 ; Calidoscópio Volume 2004 ; 2004 >
-      au < exists ; 2005 ; 2 ; Calidoscópio Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 3 ; Calidoscópio Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 4 ; Calidoscópio Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 5 ; Calidoscópio Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 6 ; Calidoscópio Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 7 ; Calidoscópio Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 8 ; Calidoscópio Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 9 ; Calidoscópio Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 10 ; Calidoscópio Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 11 ; Calidoscópio Volume 2014 ; 2014 >
+      au < exists ; 2004 ; 1 ; Calidoscópio Volume 2004 ; 2004 ; >
+      au < exists ; 2005 ; 2 ; Calidoscópio Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 3 ; Calidoscópio Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 4 ; Calidoscópio Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 5 ; Calidoscópio Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 6 ; Calidoscópio Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 7 ; Calidoscópio Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 8 ; Calidoscópio Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 9 ; Calidoscópio Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 10 ; Calidoscópio Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 11 ; Calidoscópio Volume 2014 ; 2014 ; >
 
   }
 
@@ -67,16 +67,16 @@
       param[base_url] = http://revistas.unisinos.br/
       param[journal_id] = ciencias_sociais
 
-      au < exists ; 2005 ; 1 ; Ciências Sociais Unisinos Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 2 ; Ciências Sociais Unisinos Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 3 ; Ciências Sociais Unisinos Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 4 ; Ciências Sociais Unisinos Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 5 ; Ciências Sociais Unisinos Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 6 ; Ciências Sociais Unisinos Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 7 ; Ciências Sociais Unisinos Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 8 ; Ciências Sociais Unisinos Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 9 ; Ciências Sociais Unisinos Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 10 ; Ciências Sociais Unisinos Volume 2014 ; 2014 >
+      au < exists ; 2005 ; 1 ; Ciências Sociais Unisinos Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 2 ; Ciências Sociais Unisinos Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 3 ; Ciências Sociais Unisinos Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 4 ; Ciências Sociais Unisinos Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 5 ; Ciências Sociais Unisinos Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 6 ; Ciências Sociais Unisinos Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 7 ; Ciências Sociais Unisinos Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 8 ; Ciências Sociais Unisinos Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 9 ; Ciências Sociais Unisinos Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 10 ; Ciências Sociais Unisinos Volume 2014 ; 2014 ; >
 
   }
 
@@ -91,13 +91,13 @@
       param[base_url] = http://revistas.unisinos.br/
       param[journal_id] = contextosclinicos
 
-      au < exists ; 2008 ; 1 ; Contextos Clínicos Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 2 ; Contextos Clínicos Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 3 ; Contextos Clínicos Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 4 ; Contextos Clínicos Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 5 ; Contextos Clínicos Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 6 ; Contextos Clínicos Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 7 ; Contextos Clínicos Volume 2014 ; 2014 >
+      au < exists ; 2008 ; 1 ; Contextos Clínicos Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 2 ; Contextos Clínicos Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 3 ; Contextos Clínicos Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 4 ; Contextos Clínicos Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 5 ; Contextos Clínicos Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 6 ; Contextos Clínicos Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 7 ; Contextos Clínicos Volume 2014 ; 2014 ; >
 
   }
 
@@ -112,11 +112,11 @@
       param[base_url] = http://revistas.unisinos.br/
       param[journal_id] = controversia
 
-      au < exists ; 2010 ; 1 ; Controvérsia Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 2 ; Controvérsia Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 3 ; Controvérsia Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 4 ; Controvérsia Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 5 ; Controvérsia Volume 2014 ; 2014 >
+      au < exists ; 2010 ; 1 ; Controvérsia Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 2 ; Controvérsia Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 3 ; Controvérsia Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 4 ; Controvérsia Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 5 ; Controvérsia Volume 2014 ; 2014 ; >
 
   }
 
@@ -131,17 +131,17 @@
       param[base_url] = http://revistas.unisinos.br/
       param[journal_id] = educacao
 
-      au < exists ; 2004 ; 1 ; Educação Unisinos Volume 2004 ; 2004 >
-      au < exists ; 2005 ; 2 ; Educação Unisinos Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 3 ; Educação Unisinos Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 4 ; Educação Unisinos Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 5 ; Educação Unisinos Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 6 ; Educação Unisinos Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 7 ; Educação Unisinos Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 8 ; Educação Unisinos Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 9 ; Educação Unisinos Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 10 ; Educação Unisinos Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 11 ; Educação Unisinos Volume 2014 ; 2014 >
+      au < exists ; 2004 ; 1 ; Educação Unisinos Volume 2004 ; 2004 ; >
+      au < exists ; 2005 ; 2 ; Educação Unisinos Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 3 ; Educação Unisinos Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 4 ; Educação Unisinos Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 5 ; Educação Unisinos Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 6 ; Educação Unisinos Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 7 ; Educação Unisinos Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 8 ; Educação Unisinos Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 9 ; Educação Unisinos Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 10 ; Educação Unisinos Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 11 ; Educação Unisinos Volume 2014 ; 2014 ; >
 
   }
 
@@ -155,15 +155,14 @@
       comment[publisher] = Universidade do Vale do Rio dos Sinos
       param[base_url] = http://revistas.unisinos.br/
       param[journal_id] = entrelinhas
-      comment[notready] = no substance
 
-      au < notReady ; 2005 ; 1 ; Entrelinhas Volume 2005 ; 2005 >
-      au < notReady ; 2006 ; 2 ; Entrelinhas Volume 2006 ; 2006 >
-      au < notReady ; 2007 ; 3 ; Entrelinhas Volume 2007 ; 2007 >
-      au < released ; 2011 ; 7 ; Entrelinhas Volume 2011 ; 2011 >
-      au < released ; 2012 ; 8 ; Entrelinhas Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 9 ; Entrelinhas Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 10 ; Entrelinhas Volume 2014 ; 2014 >
+      au < notReady ; 2005 ; 1 ; Entrelinhas Volume 2005 ; 2005 ; no articles >
+      au < notReady ; 2006 ; 2 ; Entrelinhas Volume 2006 ; 2006 ; no articles >
+      au < notReady ; 2007 ; 3 ; Entrelinhas Volume 2007 ; 2007 ; no articles >
+      au < released ; 2011 ; 7 ; Entrelinhas Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 8 ; Entrelinhas Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 9 ; Entrelinhas Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 10 ; Entrelinhas Volume 2014 ; 2014 ; >
 
   }
 
@@ -178,16 +177,16 @@
       param[base_url] = http://revistas.unisinos.br/
       param[journal_id] = estudos_tecnologicos
 
-      au < exists ; 2005 ; 1 ; Estudos Tecnológicos em Engenharia Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 2 ; Estudos Tecnológicos em Engenharia Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 3 ; Estudos Tecnológicos em Engenharia Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 4 ; Estudos Tecnológicos em Engenharia Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 5 ; Estudos Tecnológicos em Engenharia Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 6 ; Estudos Tecnológicos em Engenharia Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 7 ; Estudos Tecnológicos em Engenharia Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 8 ; Estudos Tecnológicos em Engenharia Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 9 ; Estudos Tecnológicos em Engenharia Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 10 ; Estudos Tecnológicos em Engenharia Volume 2014 ; 2014 >
+      au < exists ; 2005 ; 1 ; Estudos Tecnológicos em Engenharia Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 2 ; Estudos Tecnológicos em Engenharia Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 3 ; Estudos Tecnológicos em Engenharia Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 4 ; Estudos Tecnológicos em Engenharia Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 5 ; Estudos Tecnológicos em Engenharia Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 6 ; Estudos Tecnológicos em Engenharia Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 7 ; Estudos Tecnológicos em Engenharia Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 8 ; Estudos Tecnológicos em Engenharia Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 9 ; Estudos Tecnológicos em Engenharia Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 10 ; Estudos Tecnológicos em Engenharia Volume 2014 ; 2014 ; >
 
   }
 
@@ -202,17 +201,17 @@
       param[base_url] = http://revistas.unisinos.br/
       param[journal_id] = filosofia
 
-      au < exists ; 2004 ; 1 ; Filosofia Unisinos Volume 2004 ; 2004 >
-      au < exists ; 2005 ; 2 ; Filosofia Unisinos Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 3 ; Filosofia Unisinos Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 4 ; Filosofia Unisinos Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 5 ; Filosofia Unisinos Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 6 ; Filosofia Unisinos Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 7 ; Filosofia Unisinos Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 8 ; Filosofia Unisinos Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 9 ; Filosofia Unisinos Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 10 ; Filosofia Unisinos Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 11 ; Filosofia Unisinos Volume 2014 ; 2014 >
+      au < exists ; 2004 ; 1 ; Filosofia Unisinos Volume 2004 ; 2004 ; >
+      au < exists ; 2005 ; 2 ; Filosofia Unisinos Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 3 ; Filosofia Unisinos Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 4 ; Filosofia Unisinos Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 5 ; Filosofia Unisinos Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 6 ; Filosofia Unisinos Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 7 ; Filosofia Unisinos Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 8 ; Filosofia Unisinos Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 9 ; Filosofia Unisinos Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 10 ; Filosofia Unisinos Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 11 ; Filosofia Unisinos Volume 2014 ; 2014 ; >
 
   }
 
@@ -227,17 +226,17 @@
       param[base_url] = http://revistas.unisinos.br/
       param[journal_id] = fronteiras
 
-      au < exists ; 2004 ; 1 ; Fronteiras-estudos midiáticos Volume 2004 ; 2004 >
-      au < exists ; 2005 ; 2 ; Fronteiras-estudos midiáticos Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 3 ; Fronteiras-estudos midiáticos Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 4 ; Fronteiras-estudos midiáticos Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 5 ; Fronteiras-estudos midiáticos Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 6 ; Fronteiras-estudos midiáticos Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 7 ; Fronteiras-estudos midiáticos Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 8 ; Fronteiras-estudos midiáticos Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 9 ; Fronteiras-estudos midiáticos Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 10 ; Fronteiras-estudos midiáticos Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 11 ; Fronteiras-estudos midiáticos Volume 2014 ; 2014 >
+      au < exists ; 2004 ; 1 ; Fronteiras-estudos midiáticos Volume 2004 ; 2004 ; >
+      au < exists ; 2005 ; 2 ; Fronteiras-estudos midiáticos Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 3 ; Fronteiras-estudos midiáticos Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 4 ; Fronteiras-estudos midiáticos Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 5 ; Fronteiras-estudos midiáticos Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 6 ; Fronteiras-estudos midiáticos Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 7 ; Fronteiras-estudos midiáticos Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 8 ; Fronteiras-estudos midiáticos Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 9 ; Fronteiras-estudos midiáticos Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 10 ; Fronteiras-estudos midiáticos Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 11 ; Fronteiras-estudos midiáticos Volume 2014 ; 2014 ; >
 
   }
 
@@ -252,16 +251,16 @@
       param[base_url] = http://revistas.unisinos.br/
       param[journal_id] = gaea
 
-      au < exists ; 2005 ; 1 ; Gaea-Journal of Geoscience Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 2 ; Gaea-Journal of Geoscience Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 3 ; Gaea-Journal of Geoscience Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 4 ; Gaea-Journal of Geoscience Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 5 ; Gaea-Journal of Geoscience Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 6 ; Gaea-Journal of Geoscience Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 7 ; Gaea-Journal of Geoscience Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 8 ; Gaea-Journal of Geoscience Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 9 ; Gaea-Journal of Geoscience Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 10 ; Gaea-Journal of Geoscience Volume 2014 ; 2014 >
+      au < exists ; 2005 ; 1 ; Gaea-Journal of Geoscience Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 2 ; Gaea-Journal of Geoscience Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 3 ; Gaea-Journal of Geoscience Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 4 ; Gaea-Journal of Geoscience Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 5 ; Gaea-Journal of Geoscience Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 6 ; Gaea-Journal of Geoscience Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 7 ; Gaea-Journal of Geoscience Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 8 ; Gaea-Journal of Geoscience Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 9 ; Gaea-Journal of Geoscience Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 10 ; Gaea-Journal of Geoscience Volume 2014 ; 2014 ; >
 
   }
 
@@ -276,17 +275,17 @@
       param[base_url] = http://revistas.unisinos.br/
       param[journal_id] = historia
 
-      au < exists ; 2004 ; 1 ; História Unisinos Volume 2004 ; 2004 >
-      au < exists ; 2005 ; 2 ; História Unisinos Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 3 ; História Unisinos Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 4 ; História Unisinos Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 5 ; História Unisinos Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 6 ; História Unisinos Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 7 ; História Unisinos Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 8 ; História Unisinos Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 9 ; História Unisinos Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 10 ; História Unisinos Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 11 ; História Unisinos Volume 2014 ; 2014 >
+      au < exists ; 2004 ; 1 ; História Unisinos Volume 2004 ; 2004 ; >
+      au < exists ; 2005 ; 2 ; História Unisinos Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 3 ; História Unisinos Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 4 ; História Unisinos Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 5 ; História Unisinos Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 6 ; História Unisinos Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 7 ; História Unisinos Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 8 ; História Unisinos Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 9 ; História Unisinos Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 10 ; História Unisinos Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 11 ; História Unisinos Volume 2014 ; 2014 ; >
 
   }
 
@@ -301,10 +300,10 @@
       param[base_url] = http://revistas.unisinos.br/
       param[journal_id] = jacr
 
-      au < exists ; 2011 ; 1 ; Journal of Applied Computing Research Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 2 ; Journal of Applied Computing Research Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 3 ; Journal of Applied Computing Research Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 4 ; Journal of Applied Computing Research Volume 2014 ; 2014 >
+      au < exists ; 2011 ; 1 ; Journal of Applied Computing Research Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 2 ; Journal of Applied Computing Research Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 3 ; Journal of Applied Computing Research Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 4 ; Journal of Applied Computing Research Volume 2014 ; 2014 ; >
 
   }
 
@@ -319,15 +318,15 @@
       param[base_url] = http://revistas.unisinos.br/
       param[journal_id] = neotropical
 
-      au < exists ; 2006 ; 1 ; Neotropical Biology and Conservation Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 2 ; Neotropical Biology and Conservation Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 3 ; Neotropical Biology and Conservation Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 4 ; Neotropical Biology and Conservation Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 5 ; Neotropical Biology and Conservation Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 6 ; Neotropical Biology and Conservation Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 7 ; Neotropical Biology and Conservation Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 8 ; Neotropical Biology and Conservation Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 9 ; Neotropical Biology and Conservation Volume 2014 ; 2014 >
+      au < exists ; 2006 ; 1 ; Neotropical Biology and Conservation Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 2 ; Neotropical Biology and Conservation Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 3 ; Neotropical Biology and Conservation Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 4 ; Neotropical Biology and Conservation Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 5 ; Neotropical Biology and Conservation Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 6 ; Neotropical Biology and Conservation Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 7 ; Neotropical Biology and Conservation Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 8 ; Neotropical Biology and Conservation Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 9 ; Neotropical Biology and Conservation Volume 2014 ; 2014 ; >
 
   }
 
@@ -342,16 +341,16 @@
       param[base_url] = http://revistas.unisinos.br/
       param[journal_id] = perspectiva_economica
 
-      au < exists ; 2005 ; 1 ; Perspectiva Econômica Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 2 ; Perspectiva Econômica Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 3 ; Perspectiva Econômica Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 4 ; Perspectiva Econômica Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 5 ; Perspectiva Econômica Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 6 ; Perspectiva Econômica Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 7 ; Perspectiva Econômica Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 8 ; Perspectiva Econômica Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 9 ; Perspectiva Econômica Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 10 ; Perspectiva Econômica Volume 2014 ; 2014 >
+      au < exists ; 2005 ; 1 ; Perspectiva Econômica Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 2 ; Perspectiva Econômica Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 3 ; Perspectiva Econômica Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 4 ; Perspectiva Econômica Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 5 ; Perspectiva Econômica Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 6 ; Perspectiva Econômica Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 7 ; Perspectiva Econômica Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 8 ; Perspectiva Econômica Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 9 ; Perspectiva Econômica Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 10 ; Perspectiva Econômica Volume 2014 ; 2014 ; >
 
   }
 
@@ -366,12 +365,12 @@
       param[base_url] = http://revistas.unisinos.br/
       param[journal_id] = RECHTD
 
-      au < exists ; 2009 ; 1 ; RECHTD-Revista de Estudos Constitucionais, Hermenêutica e Teoria do Direito Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 2 ; RECHTD-Revista de Estudos Constitucionais, Hermenêutica e Teoria do Direito Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 3 ; RECHTD-Revista de Estudos Constitucionais, Hermenêutica e Teoria do Direito Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 4 ; RECHTD-Revista de Estudos Constitucionais, Hermenêutica e Teoria do Direito Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 5 ; RECHTD-Revista de Estudos Constitucionais, Hermenêutica e Teoria do Direito Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 6 ; RECHTD-Revista de Estudos Constitucionais, Hermenêutica e Teoria do Direito Volume 2014 ; 2014 >
+      au < exists ; 2009 ; 1 ; RECHTD-Revista de Estudos Constitucionais, Hermenêutica e Teoria do Direito Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 2 ; RECHTD-Revista de Estudos Constitucionais, Hermenêutica e Teoria do Direito Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 3 ; RECHTD-Revista de Estudos Constitucionais, Hermenêutica e Teoria do Direito Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 4 ; RECHTD-Revista de Estudos Constitucionais, Hermenêutica e Teoria do Direito Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 5 ; RECHTD-Revista de Estudos Constitucionais, Hermenêutica e Teoria do Direito Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 6 ; RECHTD-Revista de Estudos Constitucionais, Hermenêutica e Teoria do Direito Volume 2014 ; 2014 ; >
 
   }
 
@@ -386,13 +385,13 @@
       param[base_url] = http://revistas.unisinos.br/
       param[journal_id] = sdrj
 
-      au < exists ; 2008 ; 1 ; SDRJ-Strategic Design Research Journal Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 2 ; SDRJ-Strategic Design Research Journal Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 3 ; SDRJ-Strategic Design Research Journal Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 4 ; SDRJ-Strategic Design Research Journal Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 5 ; SDRJ-Strategic Design Research Journal Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 6 ; SDRJ-Strategic Design Research Journal Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 7 ; SDRJ-Strategic Design Research Journal Volume 2014 ; 2014 >
+      au < exists ; 2008 ; 1 ; SDRJ-Strategic Design Research Journal Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 2 ; SDRJ-Strategic Design Research Journal Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 3 ; SDRJ-Strategic Design Research Journal Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 4 ; SDRJ-Strategic Design Research Journal Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 5 ; SDRJ-Strategic Design Research Journal Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 6 ; SDRJ-Strategic Design Research Journal Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 7 ; SDRJ-Strategic Design Research Journal Volume 2014 ; 2014 ; >
 
   }
 
@@ -407,18 +406,18 @@
       param[base_url] = http://revistas.unisinos.br/
       param[journal_id] = versoereverso
 
-      au < exists ; 2003 ; 1 ; Verso e Reverso Volume 2003 ; 2003 >
-      au < exists ; 2004 ; 2 ; Verso e Reverso Volume 2004 ; 2004 >
-      au < exists ; 2005 ; 3 ; Verso e Reverso Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 4 ; Verso e Reverso Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 5 ; Verso e Reverso Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 6 ; Verso e Reverso Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 7 ; Verso e Reverso Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 8 ; Verso e Reverso Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 9 ; Verso e Reverso Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 10 ; Verso e Reverso Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 11 ; Verso e Reverso Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 12 ; Verso e Reverso Volume 2014 ; 2014 >
+      au < exists ; 2003 ; 1 ; Verso e Reverso Volume 2003 ; 2003 ; >
+      au < exists ; 2004 ; 2 ; Verso e Reverso Volume 2004 ; 2004 ; >
+      au < exists ; 2005 ; 3 ; Verso e Reverso Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 4 ; Verso e Reverso Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 5 ; Verso e Reverso Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 6 ; Verso e Reverso Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 7 ; Verso e Reverso Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 8 ; Verso e Reverso Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 9 ; Verso e Reverso Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 10 ; Verso e Reverso Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 11 ; Verso e Reverso Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 12 ; Verso e Reverso Volume 2014 ; 2014 ; >
 
   }
 

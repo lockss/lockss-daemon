@@ -1001,6 +1001,7 @@ class SimpleV3SymmetricTestCase( V3TestCases ):
         self.local_configuration = { "org.lockss.poll.v3.allSymmetricPolls": True }
         self.simulated_AU_parameters = { 'numFiles': 3 }
         self.symmetric = True
+
         self.expected_voter_agreement = '100.00'
 
     def _damage_AU( self ):
@@ -1013,6 +1014,8 @@ class NoQuorumSymmetricV3TestCase( SimpleV3SymmetricTestCase ):
         SimpleV3SymmetricTestCase.__init__( self, methodName )
         self.local_configuration[ 'org.lockss.poll.v3.quorum' ] = 30
         self.expected_agreement = '100.00'
+        # Even though no quorum, voters will tally symmetric vote
+        self.expected_voter_agreement = '100.00'
 
     def _await_repair( self, nodes ):
         log.info( 'Waiting for V3 poll to report no quorum...' )

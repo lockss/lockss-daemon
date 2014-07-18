@@ -1,10 +1,10 @@
 /*
- * $Id: SystemMetrics.java,v 1.32 2008-11-02 21:11:52 tlipkis Exp $
+ * $Id: SystemMetrics.java,v 1.32.88.1 2014-07-18 15:59:08 wkwilson Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -115,7 +115,9 @@ public class SystemMetrics
     if (changedKeys.contains(PARAM_MEM_LOG_INTERVAL)) {
       memLogInterval = newConfig.getTimeInterval(PARAM_MEM_LOG_INTERVAL,
 						 DEFAULT_MEM_LOG_INTERVAL);
-      schedMemLog();
+      if (memLogInterval > 0) {
+	doMemLog();
+      }
     }
   }
 
@@ -258,9 +260,22 @@ public class SystemMetrics
   // Log the current memory usage
   private void doMemLog() {
     Runtime rt = Runtime.getRuntime();
-    logger.info("Memory Total: " + rt.totalMemory() +
-		", Free: " + rt.freeMemory() + ", " +
-		pluginMgr.getAllAus().size() + " AUs");
+    long tot = rt.totalMemory();
+    long free = rt.freeMemory();
+    long max = rt.maxMemory();
+    logger.info("Memory Used: " + K(tot - free) +
+		", Free: " + K(free) +
+		", Total: " + K(tot) +
+		", Max: " + K(max) +
+		( (pluginMgr == null) ? "" :
+		  (", " + pluginMgr.getAllAus().size() + " AUs")));
+    if (logger.isDebug2()) {
+      logger.debug2("String Pools:\n" + StringPool.allStats());
+    }
     schedMemLog();
+  }
+
+  private String K(long n) {
+    return StringUtil.sizeToString(n);
   }
 }

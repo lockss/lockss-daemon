@@ -1,5 +1,5 @@
 /*
- * $Id: TrueZipManager.java,v 1.5 2013-12-09 22:59:46 fergaloy-sf Exp $
+ * $Id: TrueZipManager.java,v 1.5.4.1 2014-07-18 15:59:11 wkwilson Exp $
  *
 
 Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
@@ -53,8 +53,7 @@ public class TrueZipManager extends BaseLockssManager
   public static final String PREFIX = Configuration.PREFIX + "truezip.";
 
   public static final String PARAM_CACHE_DIR = PREFIX + "cacheDir";
-  public static final String DEFAULT_CACHE_DIR =
-    "<org.lockss.platform.tmpDir>/tfile";
+  public static final String DEFAULT_CACHE_DIR = ".";
 
   /** Target maximum size of TFile cache in MB.  Cache may grow larger if
    * necessary. */
@@ -90,11 +89,7 @@ public class TrueZipManager extends BaseLockssManager
 			Configuration.Differences changedKeys) {
     if (changedKeys.contains(PREFIX)) {
       if (cacheDir == null) {
-	cacheDir = config.get(PARAM_CACHE_DIR, null);
-	if (cacheDir == null) {
-	  cacheDir =
-	    new File(PlatformUtil.getSystemTempDir(), "tfile").toString();
-	}
+	cacheDir = config.get(PARAM_CACHE_DIR, DEFAULT_CACHE_DIR);
 	tfc = new TFileCache(cacheDir);
       }
       long maxMb = config.getLong(PARAM_CACHE_MAX_MB, DEFAULT_CACHE_MAX_MB);
@@ -108,7 +103,6 @@ public class TrueZipManager extends BaseLockssManager
     return tfc;
   }
 
-  
   public TFileCache.Entry getCachedTFileEntry(CachedUrl cu)
       throws IOException {
     return getTFileCache().getCachedTFileEntry(cu);

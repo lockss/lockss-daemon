@@ -1,5 +1,5 @@
 /*
- * $Id: PermissionRecord.java,v 1.7.116.1 2014-05-05 17:32:31 wkwilson Exp $
+ * $Id: PermissionRecord.java,v 1.7.116.2 2014-07-18 15:59:57 wkwilson Exp $
  */
 
 /*
@@ -72,9 +72,7 @@ public class PermissionRecord {
   }
 
   public int getStatus() {
-    //return status;
-	//do not commit this is a hack
-    return PERMISSION_OK;
+    return status;
   }
 
   public void setStatus(int status) {

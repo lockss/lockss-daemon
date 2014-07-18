@@ -1,5 +1,5 @@
 /*
- * $Id: SilverchairHtmlHashFilterFactory.java,v 1.1.2.1 2014-05-05 17:32:31 wkwilson Exp $
+ * $Id: SilverchairHtmlHashFilterFactory.java,v 1.1.2.2 2014-07-18 15:56:32 wkwilson Exp $
  */
 
 /*
@@ -81,12 +81,16 @@ public class SilverchairHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "refContainer"),
         // Comments may contain article links? (not in above commentFormContainer div) (AMA)
         HtmlNodeFilters.tagWithAttribute("div", "class", "commentBody"),
-        // Corrections create two-way link between articles (AMA)
-        HtmlNodeFilters.tagWithAttribute("div", "id", "scm6MainContent_divCorrections"),
-        HtmlNodeFilters.tagWithAttribute("div", "id", "scm6MainContent_divCorrectionLinkToParent"),
         // Cross links: "This article/letter/etc. relates to...", "This erratum
         // concerns...", "See also...", [ACCP, ACP]
         HtmlNodeFilters.tagWithAttribute("div", "class", "linkType"),
+        // Corrections create two-way link between articles (AMA)
+        HtmlNodeFilters.tagWithAttribute("div", "id", "scm6MainContent_divCorrections"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "scm6MainContent_divCorrectionLinkToParent"),
+        // Author disclosures box tends to reference older policy/guidelines documents
+        HtmlNodeFilters.tagWithAttribute("div", "id", "scm6MainContent_divDisclosures"),
+        // Erratum link from old to new article [APA]
+        HtmlNodeFilters.tagWithAttribute("div", "id", "scm6MainContent_divErratum"),
         /*
          * The right column ('portletColumn') is likely to reference articles
          * (most read, related articles, most recent articles...), but it also
@@ -100,7 +104,7 @@ public class SilverchairHtmlHashFilterFactory implements FilterFactory {
          *     <div id="ctl00_scm6MainContent_ToolBox"> but not inside <div class="portletColumn">
          */
         new AllExceptSubtreeNodeFilter(HtmlNodeFilters.tagWithAttributeRegex("div", "class", "portletColumn"),
-                                    HtmlNodeFilters.tagWithAttribute("div", "id", "scm6MainContent_ToolBox")),
+                                       HtmlNodeFilters.tagWithAttribute("div", "id", "scm6MainContent_ToolBox")),
         /*
          * Broad area filtering 
          */

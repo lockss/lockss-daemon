@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawlSpec.java,v 1.16.54.1 2014-05-05 17:32:35 wkwilson Exp $
+ * $Id: BaseCrawlSpec.java,v 1.16.54.2 2014-07-18 15:59:08 wkwilson Exp $
  */
 
 /*
@@ -64,11 +64,11 @@ public abstract class BaseCrawlSpec implements CrawlSpec {
 			  PermissionChecker permissionChecker,
 			  LoginPageChecker loginPageChecker)
       throws ClassCastException {
-	/*
+
     if(permissionUrls.isEmpty()) {
       //do we want to throw if we have no permission urls?
       throw new IllegalArgumentException("Permission list must not be empty");
-    }*/
+    }
     //XXX do we allow null CrawlRule ?
 //     if(rule == null){
 //       throw new IllegalArgumentException("CrawlRule must not be null");

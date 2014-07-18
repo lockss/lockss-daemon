@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawlStatus.java,v 1.18 2010-11-03 06:06:06 tlipkis Exp $
+ * $Id: MockCrawlStatus.java,v 1.18.60.1 2014-07-18 15:49:41 wkwilson Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.lockss.crawler.*;
 import org.lockss.plugin.ArchivalUnit;
 
 public class MockCrawlStatus extends CrawlerStatus {
+  static Logger log = Logger.getLogger("MockCrawlStatus");
 
   int crawlStatus = -1;
   String crawlStatusString = null;
@@ -92,6 +93,20 @@ public class MockCrawlStatus extends CrawlerStatus {
 
   public void setUrlsExcluded(List urlsExcluded) {
     excluded = new MyUrlCount(urlsExcluded);
+  }
+
+  public void setUrlsExcluded(Map urlsExcluded) {
+    excluded = new MyUrlCount(urlsExcluded);
+  }
+
+  @Override
+    public boolean anyExcludedWithReason() {
+    MyUrlCount excl = (MyUrlCount)excluded;
+    if (excl.map == null) return false;
+    for (Map.Entry ent : (Collection<Map.Entry>)excl.map.entrySet()) {
+      if (ent.getValue() != null) return true;
+    }
+    return false;
   }
 
   public void setNumUrlsWithErrors(int num) {
@@ -173,13 +188,23 @@ public class MockCrawlStatus extends CrawlerStatus {
       return true;
     }
     public List getList() {
-      return lst != null ? lst : Collections.EMPTY_LIST;
+      return lst != null ? lst
+	: map != null ? new ArrayList(map.keySet()) : Collections.EMPTY_LIST;
     }
     public Map getMap() {
-      return map != null ? map : Collections.EMPTY_MAP;
+      return map != null ? map
+	: lst != null ? mapFromList(lst) : Collections.EMPTY_MAP;
     }
     public UrlCount seal() {
       return this;
+    }
+
+    private Map mapFromList(List lst) {
+      HashMap res = new HashMap();
+      for (Object o : lst) {
+	res.put(o, null);
+      }
+      return res;
     }
   }
 }
