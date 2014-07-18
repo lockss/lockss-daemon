@@ -4,10 +4,10 @@
   >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; volume ; name ; param[year] >
+    implicit < status ; year ; volume ; name ; param[year] ; comment[notReady] >
 
   {
-
+  
       title <
         name = RBTur: Revista Brasileira de Pesquisa em Turismo ;
         issn = 1982-6125
@@ -17,13 +17,13 @@
       param[base_url] = http://www.revistas.univerciencia.org/turismo/
       param[journal_id] = rbtur
 
-      au < testing ; 2007 ; 1 ; RBTur: Revista Brasileira de Pesquisa em Turismo Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 2 ; RBTur: Revista Brasileira de Pesquisa em Turismo Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 3 ; RBTur: Revista Brasileira de Pesquisa em Turismo Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 4 ; RBTur: Revista Brasileira de Pesquisa em Turismo Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 5 ; RBTur: Revista Brasileira de Pesquisa em Turismo Volume 2011 ; 2011 >
-      au < expected ; 2012 ; 6 ; RBTur: Revista Brasileira de Pesquisa em Turismo Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 7 ; RBTur: Revista Brasileira de Pesquisa em Turismo Volume 2013 ; 2013 >
+      au < notReady ; 2007 ; 1 ; RBTur: Revista Brasileira de Pesquisa em Turismo Volume 2007 ; 2007 ; No permisson statement on manifest page >
+      au < notReady ; 2008 ; 2 ; RBTur: Revista Brasileira de Pesquisa em Turismo Volume 2008 ; 2008 ; No permisson statement on manifest page >
+      au < notReady ; 2009 ; 3 ; RBTur: Revista Brasileira de Pesquisa em Turismo Volume 2009 ; 2009 ; No permisson statement on manifest page >
+      au < notReady ; 2010 ; 4 ; RBTur: Revista Brasileira de Pesquisa em Turismo Volume 2010 ; 2010 ; No permisson statement on manifest page >
+      au < notReady ; 2011 ; 5 ; RBTur: Revista Brasileira de Pesquisa em Turismo Volume 2011 ; 2011 ; No permisson statement on manifest page >
+      au < expected ; 2012 ; 6 ; RBTur: Revista Brasileira de Pesquisa em Turismo Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 7 ; RBTur: Revista Brasileira de Pesquisa em Turismo Volume 2013 ; 2013 ; >
 
   }
 
