@@ -57,7 +57,7 @@
       au < crawling ; exists ; 2013 ; 2013 ; Advances in Geosciences Volume 35 ; 35 >
       au < crawling ; exists ; 2013 ; 2013 ; Advances in Geosciences Volume 36 ; 36 >
       au < ready ; exists ; 2014 ; 2014 ; Advances in Geosciences Volume 37 ; 37 >
-      au < manifest ; exists ; 2014 ; 2014 ; Advances in Geosciences Volume 38 ; 38 >
+      au < testing ; exists ; 2014 ; 2014 ; Advances in Geosciences Volume 38 ; 38 >
     
    }
     
@@ -145,7 +145,7 @@
       au < manifest ; exists ; 2011 ; 2011 ; Annales Geophysicae Volume 29 ; 29 >
       au < finished ; crawling ; 2012 ; 2012 ; Annales Geophysicae Volume 30 ; 30 >
       au < crawling ; exists ; 2013 ; 2013 ; Annales Geophysicae Volume 31 ; 31 >
-      au < testing ; exists ; 2014 ; 2014 ; Annales Geophysicae Volume 32 ; 32 >
+      au < ready ; exists ; 2014 ; 2014 ; Annales Geophysicae Volume 32 ; 32 >
     
    }
     
@@ -254,7 +254,7 @@
       au < manifest ; exists ; 2011 ; 2011 ; Biogeosciences Volume 8 ; 8 >
       au < finished ; crawling ; 2012 ; 2012 ; Biogeosciences Volume 9 ; 9 >
       au < crawling ; exists ; 2013 ; 2013 ; Biogeosciences Volume 10 ; 10 >
-      au < testing ; exists ; 2014 ; 2014 ; Biogeosciences Volume 11 ; 11 >
+      au < ready ; exists ; 2014 ; 2014 ; Biogeosciences Volume 11 ; 11 >
     
    }
     
@@ -277,7 +277,7 @@
       au < manifest ; exists ; 2011 ; 2011 ; Climate of the Past Volume 7 ; 7 >
       au < finished ; frozen ; 2012 ; 2012 ; Climate of the Past Volume 8 ; 8 >
       au < crawling ; exists ; 2013 ; 2013 ; Climate of the Past Volume 9 ; 9 >
-      au < manifest ; exists ; 2014 ; 2014 ; Climate of the Past Volume 10 ; 10 >
+      au < testing ; exists ; 2014 ; 2014 ; Climate of the Past Volume 10 ; 10 >
     
    }
     
@@ -297,7 +297,7 @@
       au < manifest ; exists ; 2011 ; 2011 ; Drinking Water Engineering and Science Volume 4 ; 4 >
       au < finished ; frozen ; 2012 ; 2012 ; Drinking Water Engineering and Science Volume 5 ; 5 >
       au < crawling ; exists ; 2013 ; 2013 ; Drinking Water Engineering and Science Volume 6 ; 6 >
-      au < manifest ; exists ; 2014 ; 2014 ; Drinking Water Engineering and Science Volume 7 ; 7 >
+      au < testing ; exists ; 2014 ; 2014 ; Drinking Water Engineering and Science Volume 7 ; 7 >
     
    }
     
@@ -312,7 +312,7 @@
       param[home_url] = http://www.earth-surface-dynamics.net/
 
       au < crawling ; exists ; 2013 ; 2013 ; Earth Surface Dynamics Volume 1 ; 1 >
-      au < manifest ; exists ; 2014 ; 2014 ; Earth Surface Dynamics Volume 2 ; 2 >
+      au < testing ; exists ; 2014 ; 2014 ; Earth Surface Dynamics Volume 2 ; 2 >
     
    }
     
@@ -326,7 +326,7 @@
       param[home_url] = http://www.earth-surf-dynam-discuss.net/
 
       au < crawling ; exists ; 2013 ; 2013 ; Earth Surface Dynamics Discussions Volume 1 ; 1 >
-      au < manifest ; exists ; 2014 ; 2014 ; Earth Surface Dynamics Discussions Volume 2 ; 2 >
+      au < testing ; exists ; 2014 ; 2014 ; Earth Surface Dynamics Discussions Volume 2 ; 2 >
     
    }
     
@@ -344,7 +344,7 @@
       au < manifest ; exists ; 2011 ; 2011 ; Earth System Dynamics Volume 2 ; 2 >
       au < finished ; crawling ; 2012 ; 2012 ; Earth System Dynamics Volume 3 ; 3 >
       au < crawling ; exists ; 2013 ; 2013 ; Earth System Dynamics Volume 4 ; 4 >
-      au < manifest ; exists ; 2014 ; 2014 ; Earth System Dynamics Volume 5 ; 5 >
+      au < testing ; exists ; 2014 ; 2014 ; Earth System Dynamics Volume 5 ; 5 >
     
    }
     
@@ -363,7 +363,7 @@
       au < manifest ; exists ; 2011 ; 2011 ; Earth System Science Data Volume 3 ; 3 >
       au < finished ; crawling ; 2012 ; 2012 ; Earth System Science Data Volume 4 ; 4 >
       au < crawling ; exists ; 2013 ; 2013 ; Earth System Science Data Volume 5 ; 5 >
-      au < manifest ; exists ; 2014 ; 2014 ; Earth System Science Data Volume 6 ; 6 >
+      au < testing ; exists ; 2014 ; 2014 ; Earth System Science Data Volume 6 ; 6 >
     
    }
     
@@ -429,7 +429,7 @@
       au < crawling ; exists ; 2013 ; 2013 ; Fossil Record Reports Volume 16 [abstract only] ; 16 >
       }
       
-      au < manifest ; exists ; 2014 ; 2014 ; Fossil Record Reports Volume 17 ; 17 >
+      au < testing ; exists ; 2014 ; 2014 ; Fossil Record Reports Volume 17 ; 17 >
       
    }
     
