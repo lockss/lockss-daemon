@@ -3737,13 +3737,13 @@
   {
 
     title <
-      name = Translational Materials Research
+      name = Translational Materials Research ;
+      eissn = 2053-1613
     >
     
-    comment[new] = coming out in 2014
-    param[journal_issn] = X
+    param[journal_issn] = 2053-1613
 
-    au < expected ; exists ; 2014 ; Translational Materials Research Volume 1 ; 1 > 
+    au < exists ; exists ; 2014 ; Translational Materials Research Volume 1 ; 1 > 
 
   }
 
