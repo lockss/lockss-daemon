@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.250 2014-06-05 20:18:09 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.251 2014-07-21 03:19:44 tlipkis Exp $
  */
 
 /*
@@ -1661,17 +1661,36 @@ public class PluginManager
 	       " of " + newPlug.getPluginName());
       return info;
     } catch (PluginException.PluginNotFound e) {
-      log.error("Plugin not found: " + pluginName);
+      logAndAlert(pluginName, "Plugin not found", e);
     } catch (PluginException.LinkageError e) {
-      log.error("Can't load plugin: " + pluginName, e);
+      logAndAlertStack(pluginName, "Can't load plugin", e);
     } catch (PluginException.IncompatibleDaemonVersion e) {
-      log.error("Incompatible Plugin: " + e.getMessage());
+      logAndAlert(pluginName, "Incompatible Plugin", e);
     } catch (PluginException.InvalidDefinition e) {
-      log.error("Error in plugin: " + e.getMessage());
+      logAndAlert(pluginName, "Error in plugin", e);
     } catch (Exception e) {
-      log.error("Can't load plugin: " + pluginName, e);
+      logAndAlertStack(pluginName, "Can't load plugin", e);
     }
     return null;
+  }
+
+  void logAndAlertStack(String pluginName, String msg, Exception e) {
+    log.error(msg + ": " + pluginName, e);
+    alert0(pluginName, msg, e.getMessage());
+  }
+
+  void logAndAlert(String pluginName, String msg, Exception e) {
+    logAndAlert(pluginName, msg, e.getMessage());
+  }
+
+  void logAndAlert(String pluginName, String msg, String emsg) {
+    log.error(msg + ": " + pluginName + ": " + emsg);
+    alert0(pluginName, msg, emsg);
+  }
+
+  void alert0(String pluginName, String msg, String emsg) {
+    raiseAlert(Alert.cacheAlert(Alert.PLUGIN_NOT_LOADED), 
+	       String.format("%s: %s\n%s", msg, pluginName, emsg));
   }
 
   /**
@@ -3044,21 +3063,12 @@ public class PluginManager
     log.debug2("processOneRegistryAu: " + au.getName());
     CachedUrlSet cus = au.getAuCachedUrlSet();
 
-    for (Iterator cusIter = cus.contentHashIterator(); cusIter.hasNext(); ) {
-      CachedUrlSetNode cusn = (CachedUrlSetNode)cusIter.next();
-
-      // TODO: Eventually this should be replaced with
-      // "cusn.hasContent()", which will add another loop if it is a
-      // CachedUrlSet.
-
-      String url = cusn.getUrl();
-      if (StringUtil.endsWithIgnoreCase(url, ".jar") &&
-	  cusn.isLeaf()) {
-
+    for (CachedUrl cu : cus.getCuIterable()) {
+      String url = cu.getUrl();
+      if (StringUtil.endsWithIgnoreCase(url, ".jar")) {
 	// This CachedUrl represents a plugin JAR, validate it and
 	// process the plugins it contains.
 
-	CachedUrl cu = (CachedUrl)cusn;
 	try {
 	  processOneRegistryJar(cu, url, au, tmpMap);
 	} catch (RuntimeException e) {

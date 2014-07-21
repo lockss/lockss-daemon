@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.108 2013-10-23 04:25:23 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.109 2014-07-21 03:19:44 tlipkis Exp $
  */
 
 /*
@@ -1872,8 +1872,14 @@ public class TestPluginManager extends LockssTestCase {
       cuList.add(cu);
     }
 
+    @Override
     public Iterator contentHashIterator() {
       return cuList.iterator();
+    }
+
+    @Override
+    public CuIterator getCuIterator() {
+      return new MockCuIterator(cuList);
     }
   }
 }
