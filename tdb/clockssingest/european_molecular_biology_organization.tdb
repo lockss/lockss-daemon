@@ -91,8 +91,12 @@
   {
   
     title <
-      name = EMBO Molecular Medicine
+      name = EMBO Molecular Medicine ;
+      eissn = 1757-4684
     >
+    param[base_url] = http://embomolmed.embopress.org/
+    au < doNotProcess ; doNotProcess ; 2013 ; EMBO Molecular Medicine Volume 5 ; 5 >
+    au < doNotProcess ; doNotProcess ; 2014 ; EMBO Molecular Medicine Volume 6 ; 6 >
 
   }
 
