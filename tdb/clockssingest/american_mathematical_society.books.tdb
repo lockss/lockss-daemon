@@ -17,7 +17,8 @@
     title < 
       name = Contemporary Mathematics ;
       issn = 0271-4132 ;
-      eissn = 1098-3627
+      eissn = 1098-3627 ;
+      type = bookSeries
     >
     param[journal_id] = conm
     implicit < status ; status2 ; year ; name ; param[volume] >
@@ -655,7 +656,8 @@
     title < 
       name = Mathematical Surveys and Monographs ;
       issn = 0076-5376 ;
-      eissn = 2331-7159
+      eissn = 2331-7159 ;
+      type = bookSeries
     >
     param[journal_id] = surv
     implicit < status ; status2 ; year ; name ; param[volume] >
@@ -843,7 +845,8 @@
     title < 
       name = Memoirs of the American Mathematical Society ;
       issn = 0065-9266 ;
-      eissn = 1947-6221
+      eissn = 1947-6221 ;
+      type = bookSeries
     >
     param[journal_id] = memo
     implicit < status ; status2 ; year ; name ; param[volume] >
@@ -1938,7 +1941,8 @@
     {
   
     title < 
-      name = Proceedings of Symposia in Pure Mathematics 
+      name = Proceedings of Symposia in Pure Mathematics ;
+      type = bookSeries
     >
     
     param[journal_id] = pspum
@@ -2065,7 +2069,8 @@
     {
   
     title < 
-      name = Proceedings of Symposia in Applied Mathematics 
+      name = Proceedings of Symposia in Applied Mathematics ;
+      type = bookSeries
     >
     
     param[journal_id] = psapm
