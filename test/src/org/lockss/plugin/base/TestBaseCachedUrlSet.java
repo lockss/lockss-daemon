@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCachedUrlSet.java,v 1.18 2013-06-26 04:46:21 tlipkis Exp $
+ * $Id: TestBaseCachedUrlSet.java,v 1.19 2014-07-21 03:21:34 tlipkis Exp $
  */
 
 /*
@@ -188,13 +188,15 @@ public class TestBaseCachedUrlSet extends LockssTestCase {
   }
 
   public void testHashIterator() throws Exception {
-    createLeaf("http://www.example.com/testDir/branch1/leaf2",
-               "test stream", null);
-    createLeaf("http://www.example.com/testDir/leaf4", "test stream", null);
-    createLeaf("http://www.example.com/testDir/branch2/leaf3",
-               "test stream", null);
-    createLeaf("http://www.example.com/testDir/branch1/leaf1",
-               "test stream", null);
+    String lurl1 = "http://www.example.com/testDir/branch1/leaf1";
+    String lurl2 = "http://www.example.com/testDir/branch1/leaf2";
+    String lurl3 = "http://www.example.com/testDir/branch2/leaf3";
+    String lurl4 = "http://www.example.com/testDir/leaf4";
+
+    createLeaf(lurl3, "test stream", null);
+    createLeaf(lurl2, "test stream", null);
+    createLeaf(lurl1, "test stream", null);
+    createLeaf(lurl4, "test stream", null);
 
     CachedUrlSetSpec rSpec =
         new RangeCachedUrlSetSpec("http://www.example.com/testDir");
@@ -208,13 +210,20 @@ public class TestBaseCachedUrlSet extends LockssTestCase {
     String[] expectedA = new String[] {
       "http://www.example.com/testDir",
       "http://www.example.com/testDir/branch1",
-      "http://www.example.com/testDir/branch1/leaf1",
-      "http://www.example.com/testDir/branch1/leaf2",
+      lurl1,
+      lurl2,
       "http://www.example.com/testDir/branch2",
-      "http://www.example.com/testDir/branch2/leaf3",
-      "http://www.example.com/testDir/leaf4"
+      lurl3,
+      lurl4,
       };
     assertIsomorphic(expectedA, childL);
+
+    // test getCuIterator and getCuIterable
+    assertEquals(ListUtil.list(lurl1, lurl2, lurl3, lurl4),
+		 PluginTestUtil.urlsOf(ListUtil.fromIterator(fileSet.getCuIterator())));
+    assertEquals(PluginTestUtil.urlsOf(ListUtil.fromIterator(fileSet.getCuIterator())),
+		 PluginTestUtil.urlsOf(ListUtil.fromIterable(fileSet.getCuIterable())));
+
 
     // add content to an internal node
     // should behave normally
@@ -240,6 +249,10 @@ public class TestBaseCachedUrlSet extends LockssTestCase {
       "http://www.example.com/testDir/branch1/leaf2"
       };
     assertIsomorphic(expectedA, childL);
+    assertEquals(ListUtil.fromArray(expectedA),
+		 PluginTestUtil.urlsOf(ListUtil.fromIterator(fileSet.getCuIterator())));
+    assertEquals(PluginTestUtil.urlsOf(ListUtil.fromIterator(fileSet.getCuIterator())),
+		 PluginTestUtil.urlsOf(ListUtil.fromIterable(fileSet.getCuIterable())));
   }
 
   public void testHashIteratorPruned() throws Exception {
@@ -693,6 +706,10 @@ public class TestBaseCachedUrlSet extends LockssTestCase {
 
     public FilterRule getFilterRule(String mimeType) {
       return null;
+    }
+
+    public boolean shouldBeCached(String url) {
+      return true;
     }
   }
 

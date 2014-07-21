@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSet.java,v 1.57 2012-08-21 08:35:56 tlipkis Exp $
+ * $Id: MockCachedUrlSet.java,v 1.58 2014-07-21 03:21:34 tlipkis Exp $
  */
 
 /*
@@ -174,6 +174,24 @@ public class MockCachedUrlSet implements CachedUrlSet {
     return hashIterator;
   }
 
+  public CuIterator getCuIterator() {
+    if (hashSource!=null) {
+      return new MockCuIterator(hashSource);
+    }
+    if (hashIterator != null) {
+      return new MockCuIterator(hashIterator);
+    }
+    return null;
+  }
+
+  public CuIterable getCuIterable() {
+    return new CuIterable() {
+      @Override
+      protected CuIterator makeIterator() {
+	return getCuIterator();
+      }};
+  }
+
   public void setHashIterator(Iterator it) {
     hashIterator = it;
   }
@@ -182,8 +200,8 @@ public class MockCachedUrlSet implements CachedUrlSet {
     hashSource = col;
   }
 
-  public Iterator<CachedUrl> archiveMemberIterator() {
-    return contentHashIterator();
+  public CuIterator archiveMemberIterator() {
+    return getCuIterator();
   }
 
   // Methods used by the poller

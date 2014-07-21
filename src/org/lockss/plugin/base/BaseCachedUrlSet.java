@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrlSet.java,v 1.36 2014-06-02 00:45:38 tlipkis Exp $
+ * $Id: BaseCachedUrlSet.java,v 1.37 2014-07-21 03:21:34 tlipkis Exp $
  */
 
 /*
@@ -196,7 +196,19 @@ public class BaseCachedUrlSet implements CachedUrlSet {
     return new CusIterator();
   }
 
-  public Iterator<CachedUrl> archiveMemberIterator() {
+  public CuIterator getCuIterator() {
+    return CuIterator.forCus(this);
+  }
+
+  public CuIterable getCuIterable() {
+    return new CuIterable() {
+      @Override
+      protected CuIterator makeIterator() {
+	return getCuIterator();
+      }};
+  }
+
+  public CuIterator archiveMemberIterator() {
     return new ArcMemIterator();
   }
 
@@ -535,10 +547,10 @@ public class BaseCachedUrlSet implements CachedUrlSet {
   }
   /**
    * Iterator over all the content files in a CachedUrlSet, including
-   * archive members.  Unlike {@link CusIterator}, this {@link CachedUrl}s,
-   * and only those that have content.  */
-  public class ArcMemIterator implements Iterator<CachedUrl> {
-    private Iterator<CachedUrlSetNode> cusIter;
+   * archive members.  Unlike {@link CusIterator}, this returns {@link
+   * CachedUrl}s, and only those that have content.  */
+  public class ArcMemIterator extends CuIterator {
+    private CuIterator cuIter;
     // Stack of archive members in the current archive.
     private LinkedList<TFileIterator> arcIterStack =
 	new LinkedList<TFileIterator>();
@@ -548,12 +560,12 @@ public class BaseCachedUrlSet implements CachedUrlSet {
     // the CU of the archive we're currently traversing
     private CachedUrl curArcCu = null;
 
-    ArcMemIterator(Iterator cusIter) {
-      this.cusIter = cusIter;
+    ArcMemIterator(CuIterator cuIter) {
+      this.cuIter = cuIter;
     }
 
     ArcMemIterator() {
-      this(BaseCachedUrlSet.this.contentHashIterator());
+      this(BaseCachedUrlSet.this.getCuIterator());
     }
 
     public void remove() {
@@ -613,12 +625,9 @@ public class BaseCachedUrlSet implements CachedUrlSet {
 	  }
 	}
 	curArcCu = null;
-	if (cusIter.hasNext()) {
-	  CachedUrl cu = AuUtil.getCu(cusIter.next());
+	if (cuIter.hasNext()) {
+	  CachedUrl cu = cuIter.next();
 	  try {
-	    if (cu == null || !cu.hasContent()) {
-	      continue;
-	    }
 	    if (isExcludedByDate(cu)) {
 	      continue;
 	    }

@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrlSet.java,v 1.11 2012-08-21 08:35:56 tlipkis Exp $
+ * $Id: CachedUrlSet.java,v 1.12 2014-07-21 03:21:34 tlipkis Exp $
  */
 
 /*
@@ -99,6 +99,9 @@ public interface CachedUrlSet extends CachedUrlSetNode {
   public Iterator flatSetIterator();
 
   /**
+   * To iterate through just the content (ignoring internal nodes) use
+   * {@link #getCuIterator()} or {@link #getCuIterable()}.
+   *
    * Return an {@link Iterator} of {@link CachedUrlSetNode}
    * objects representing all the nodes of the tree rooted at this
    * <code>CachedUrlSet</code> that should be hashed.  These are CachedUrlSets
@@ -112,13 +115,27 @@ public interface CachedUrlSet extends CachedUrlSetNode {
   public Iterator contentHashIterator();
 
   /**
+   * Return a {@link CuIterator} of {@link CachedUrl} objects representing
+   * the content URLs within this <code>CachedUrlSet</code>
+   * @return a {@link CuIterator}
+   */
+  public CuIterator getCuIterator();
+
+  /**
+   * Return an Iterable collection view of the CachedUrls in this
+   * CachedUrlSet.
+   * @return a {@link CuIterable}
+   */
+  public CuIterable getCuIterable();
+
+  /**
    * Return an {@link Iterator} of {@link CachedUrl}s for each content node
    * within the {@link CachedUrlSetSpec}.  Any archive files (zip, etc.)
    * recognized by the plugin are opened and their members interated over
    * (including opening any nested archives).  Archive files themselves are
    * not included in the iteration.
    */
-  public Iterator<CachedUrl> archiveMemberIterator();
+  public CuIterator archiveMemberIterator();
 
   /**
    * Exclude from iterators returned by {@link #archiveMemberIterator()}

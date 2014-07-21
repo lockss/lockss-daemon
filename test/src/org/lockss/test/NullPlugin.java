@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.123 2014-07-11 23:32:58 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.124 2014-07-21 03:21:34 tlipkis Exp $
  */
 
 /*
@@ -411,7 +411,18 @@ public class NullPlugin {
       return null;
     }
 
-    public Iterator<org.lockss.plugin.CachedUrl> archiveMemberIterator() {
+    public CuIterator getCuIterator() {
+      return null;
+    }
+
+    public CuIterable getCuIterable() {
+      return new CuIterable() {
+	protected CuIterator makeIterator() {
+	  return getCuIterator();
+	}};
+    }
+
+    public CuIterator archiveMemberIterator() {
       return null;
     }
 
