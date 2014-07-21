@@ -31,13 +31,13 @@
   {
 
     title <
-      name = 2D Materials
+      name = 2D Materials ;
+      eissn = 2053-1583
     >
     
-    comment[new] = coming out in 2014
-    param[journal_issn] = Y
+    param[journal_issn] = 2053-1583
 
-    au < expected ; exists ; 2014 ; 2D Materials Volume 1 ; 1 > 
+    au < exists ; exists ; 2014 ; 2D Materials Volume 1 ; 1 > 
 
   }
 
