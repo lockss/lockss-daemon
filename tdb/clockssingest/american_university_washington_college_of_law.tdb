@@ -73,16 +73,16 @@
   {
 
     title <
-      name = American University Intellectual Property Brief
+      name = Intellectual Property Brief
     >
 
     param[journal_abbr] = ipbrief
 
-    au < finished ; crawling ; 2010 ; American University Intellectual Property Brief Issue 1 ; 1 >
-    au < finished ; crawling ; 2010 ; American University Intellectual Property Brief Issue 2 ; 2 >
-    au < finished ; crawling ; 2012 ; American University Intellectual Property Brief Issue 3 ; 3 >
-    au < finished ; crawling ; 2013 ; American University Intellectual Property Brief Issue 4 ; 4 >
-    au < ready ; exists ; 2014 ; American University Intellectual Property Brief Issue 5 ; 5 >
+    au < finished ; crawling ; 2010 ; Intellectual Property Brief Issue 1 ; 1 >
+    au < finished ; crawling ; 2010 ; Intellectual Property Brief Issue 2 ; 2 >
+    au < finished ; crawling ; 2012 ; Intellectual Property Brief Issue 3 ; 3 >
+    au < finished ; crawling ; 2013 ; Intellectual Property Brief Issue 4 ; 4 >
+    au < ready ; exists ; 2014 ; Intellectual Property Brief Issue 5 ; 5 >
 
   }
 
