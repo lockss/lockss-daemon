@@ -1,5 +1,5 @@
 /*
- * $Id: TestSubTreeArticleIterator.java,v 1.12 2014-01-03 00:58:40 etenbrink Exp $
+ * $Id: TestSubTreeArticleIterator.java,v 1.13 2014-07-21 03:19:12 tlipkis Exp $
  */
 
 /*
@@ -110,13 +110,13 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
     MySubTreeArticleIterator iter =
       new MySubTreeArticleIterator(sau, new Spec());
     iter.hasNext();
-    assertClass(BaseCachedUrlSet.CusIterator.class, iter.getCusIterator());
+    assertClass(CuContentIterator.class, iter.getCuIterator());
 
     MySubTreeArticleIterator iter2 =
       new MySubTreeArticleIterator(sau,
 				   new Spec().setVisitArchiveMembers(true));
     iter2.hasNext();
-    assertClass(BaseCachedUrlSet.ArcMemIterator.class, iter2.getCusIterator());
+    assertClass(BaseCachedUrlSet.ArcMemIterator.class, iter2.getCuIterator());
 
     doTestArticleCounts();
 
@@ -480,8 +480,8 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
       return false;
     }
 
-    Iterator<?> getCusIterator() {
-      return cusIter;
+    Iterator<?> getCuIterator() {
+      return cuIter;
     }
 
     void setRecordPredInvocations() {

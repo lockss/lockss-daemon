@@ -1,10 +1,10 @@
 /*
- * $Id: TestPluginTestUtil.java,v 1.1 2013-06-06 06:33:52 tlipkis Exp $
+ * $Id: TestPluginTestUtil.java,v 1.2 2014-07-21 03:17:23 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -65,5 +65,11 @@ public class TestPluginTestUtil extends LockssTestCase {
     List range = (List)auConfig.getMapElement("num_issue_range");
     assertIsomorphic(ListUtil.list(3L,7L), range);
     assertSame(tau1, au1.getTdbAu());
+  }
+
+  public void testUrlsOf() throws Exception {
+    assertEquals(ListUtil.list("foo", "bar"),
+		 PluginTestUtil.urlsOf(ListUtil.list(new MockCachedUrl("foo"),
+						     new MockCachedUrl("bar"))));
   }
 }

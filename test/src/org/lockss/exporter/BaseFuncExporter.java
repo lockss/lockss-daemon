@@ -1,5 +1,5 @@
 /*
- * $Id: BaseFuncExporter.java,v 1.7 2012-05-30 08:31:29 tlipkis Exp $
+ * $Id: BaseFuncExporter.java,v 1.8 2014-07-21 03:19:12 tlipkis Exp $
  */
 
 /*
@@ -110,15 +110,11 @@ public abstract class BaseFuncExporter extends LockssTestCase {
     auUrls = new ArrayList<String>();
     auDirs = new ArrayList<String>();
 
-    Iterator iter = sau.getAuCachedUrlSet().contentHashIterator();
-    while (iter.hasNext()) {
-      CachedUrlSetNode node = (CachedUrlSetNode)iter.next();
-      if (node.hasContent()) {
-	String url = AuUtil.getCu(node).getUrl();
-	auUrls.add(url);
-	if (dirpat.matcher(url).matches()) {
-	  auDirs.add(url);
-	}
+    for (CachedUrl cu : AuUtil.getCuIterable(sau)) {
+      String url = cu.getUrl();
+      auUrls.add(url);
+      if (dirpat.matcher(url).matches()) {
+	auDirs.add(url);
       }
     }      
   }

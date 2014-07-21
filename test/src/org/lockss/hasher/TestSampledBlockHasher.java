@@ -1,5 +1,5 @@
 /*
- * $Id: TestSampledBlockHasher.java,v 1.8 2013-07-24 19:01:09 tlipkis Exp $
+ * $Id: TestSampledBlockHasher.java,v 1.9 2014-07-21 03:19:12 tlipkis Exp $
  */
 
 /*
@@ -290,12 +290,10 @@ public class TestSampledBlockHasher extends LockssTestCase {
 
   private byte[] getExpectedCusBytes(CachedUrlSet cus, int mod)
     throws IOException {
-    Iterator it = cus.contentHashIterator();
     List byteArrays = new LinkedList();
     int totalSize = 0;
 
-    while (it.hasNext()) {
-      CachedUrl cu = cachedUrlSetNodeToCachedUrl((CachedUrlSetNode) it.next());
+    for (CachedUrl cu : cus.getCuIterable()) {
       String urlName = cu.getUrl();
       byte[] hash = (sampleNonce + urlName).getBytes();
       if (mod > 0 && cu.hasContent() && isIncluded(urlName, mod)) {
@@ -311,7 +309,7 @@ public class TestSampledBlockHasher extends LockssTestCase {
     }
     byte[] returnArr = new byte[totalSize];
     int pos = 0;
-    it = byteArrays.iterator();
+    Iterator it = byteArrays.iterator();
     while (it.hasNext()) {
       byte[] curArr = (byte[]) it.next();
       for (int ix=0; ix<curArr.length; ix++) {
@@ -319,18 +317,6 @@ public class TestSampledBlockHasher extends LockssTestCase {
       }
     }
     return returnArr;
-  }
-
-  private CachedUrl cachedUrlSetNodeToCachedUrl(CachedUrlSetNode cusn)
-      throws IOException {
-    switch (cusn.getType()) {
-      case CachedUrlSetNode.TYPE_CACHED_URL_SET:
-	CachedUrlSet cus = (CachedUrlSet)cusn;
-	return cus.getArchivalUnit().makeCachedUrl(cus.getUrl());
-      case CachedUrlSetNode.TYPE_CACHED_URL:
-	return (CachedUrl)cusn;
-    }
-    return null;
   }
 
   private byte[] getExpectedCuBytes(CachedUrl cu) throws IOException {

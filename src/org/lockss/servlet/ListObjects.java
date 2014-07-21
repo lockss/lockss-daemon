@@ -1,5 +1,5 @@
 /*
- * $Id: ListObjects.java,v 1.26 2014-04-23 20:48:03 tlipkis Exp $
+ * $Id: ListObjects.java,v 1.27 2014-07-21 03:19:12 tlipkis Exp $
  */
 
 /*
@@ -203,22 +203,19 @@ public class ListObjects extends LockssServlet {
     abstract void processContentCu(CachedUrl cu);
 
     void doBody() {
-      for (Iterator iter = getIterator();
+      for (CuIterator iter = getIterator();
 	   iter.hasNext(); ) {
-	CachedUrlSetNode cusn = (CachedUrlSetNode)iter.next();
-	CachedUrl cu = AuUtil.getCu(cusn);
+	CachedUrl cu = iter.next();
 	try {
-	  if (cu != null) {
-	    processCu(cu);
-	  }	  
+	  processCu(cu);
 	} finally {
 	  AuUtil.safeRelease(cu);
 	}
       }
     }
 
-    Iterator getIterator() {
-      return au.getAuCachedUrlSet().contentHashIterator();
+    CuIterator getIterator() {
+      return au.getAuCachedUrlSet().getCuIterator();
     }
 
     protected void processCu(CachedUrl cu) {
@@ -253,7 +250,7 @@ public class ListObjects extends LockssServlet {
       wrtr.println("# URLs* in " + au.getName());
     }
 
-    Iterator getIterator() {
+    CuIterator getIterator() {
       return au.getAuCachedUrlSet().archiveMemberIterator();
     }
     
@@ -274,8 +271,8 @@ public class ListObjects extends LockssServlet {
       subChecker = new SubstanceChecker(au);
     }
 
-    Iterator getIterator() {
-      return au.getAuCachedUrlSet().contentHashIterator();
+    CuIterator getIterator() {
+      return au.getAuCachedUrlSet().getCuIterator();
     }
   }
 
@@ -341,7 +338,7 @@ public class ListObjects extends LockssServlet {
       wrtr.println("# URL\tContentType\tsize");
     }
 
-    Iterator getIterator() {
+    CuIterator getIterator() {
       return au.getAuCachedUrlSet().archiveMemberIterator();
     }
     

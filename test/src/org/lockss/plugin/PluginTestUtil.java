@@ -1,5 +1,5 @@
 /*
- * $Id: PluginTestUtil.java,v 1.6 2013-06-06 06:33:52 tlipkis Exp $
+ * $Id: PluginTestUtil.java,v 1.7 2014-07-21 03:17:23 tlipkis Exp $
  *
 
 Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
@@ -292,56 +292,47 @@ public class PluginTestUtil {
     if (ifMatch != null) {
       ifMatchPat = Pattern.compile(ifMatch);
     }
-    for (Iterator iter = fromCus.contentHashIterator();
-	 iter.hasNext(); ) {
-      CachedUrlSetNode cusn = (CachedUrlSetNode)iter.next();
-      if (cusn.hasContent()) {
-	CachedUrl cu = getCu(fromAu, cusn);
-	try {
-	  String fromUrl = cu.getUrl();
-	  String toUrl = fromUrl;
-	  if (ifMatchPat != null) {
-	    Matcher mat = ifMatchPat.matcher(fromUrl);
-	    if (!mat.find()) {
-	      log.debug3("no match: " + fromUrl + ", " + ifMatchPat);
-	      continue;
-	    }
+    for (CachedUrl cu : fromCus.getCuIterable()) {
+      try {
+	String fromUrl = cu.getUrl();
+	String toUrl = fromUrl;
+	if (ifMatchPat != null) {
+	  Matcher mat = ifMatchPat.matcher(fromUrl);
+	  if (!mat.find()) {
+	    log.debug3("no match: " + fromUrl + ", " + ifMatchPat);
+	    continue;
 	  }
-	  if (pattern != null) {
-	    Matcher mat = pattern.matcher(fromUrl);
-	    toUrl = mat.replaceAll(rep);
-	  }
-	  UrlCacher uc = toAu.makeUrlCacher(toUrl);
-	  CIProperties props = cu.getProperties();
-	  if (props == null) {
-	  }
-	  uc.storeContent(cu.getUnfilteredInputStream(), props);
-	  if (!toUrl.equals(fromUrl)) {
-	    log.debug2("Copied " + fromUrl + " to " + toUrl);
-	  } else {
-	    log.debug2("Copied " + fromUrl);
-	  }
-	} catch (Exception e) {
-	  log.error("Couldn't copy " + cu.getUrl(), e);
-	  res = false;
-	} finally {
-	  cu.release();
 	}
+	if (pattern != null) {
+	  Matcher mat = pattern.matcher(fromUrl);
+	  toUrl = mat.replaceAll(rep);
+	}
+	UrlCacher uc = toAu.makeUrlCacher(toUrl);
+	CIProperties props = cu.getProperties();
+	if (props == null) {
+	}
+	uc.storeContent(cu.getUnfilteredInputStream(), props);
+	if (!toUrl.equals(fromUrl)) {
+	  log.debug2("Copied " + fromUrl + " to " + toUrl);
+	} else {
+	  log.debug2("Copied " + fromUrl);
+	}
+      } catch (Exception e) {
+	log.error("Couldn't copy " + cu.getUrl(), e);
+	res = false;
+      } finally {
+	cu.release();
       }
     }
     return res;
   }
 
-  private static CachedUrl getCu(ArchivalUnit au, CachedUrlSetNode cusn) {
-    switch (cusn.getType()) {
-    case CachedUrlSetNode.TYPE_CACHED_URL_SET:
-      CachedUrlSet cus = (CachedUrlSet)cusn;
-      return au.makeCachedUrl(cus.getUrl());
-    case CachedUrlSetNode.TYPE_CACHED_URL:
-      return (CachedUrl)cusn;
-    }
-    throw new RuntimeException("Unknown CachedUrlSetNode type ("
-			       + cusn.getType() + ": " + cusn);
+  public static List<String> urlsOf(final Iterable<CachedUrl> cus) {
+    return new ArrayList<String>() {{
+	for (CachedUrl cu : cus) {
+	  add(cu.getUrl());
+	}
+      }};
   }
 
   private static PluginManager getPluginManager() {

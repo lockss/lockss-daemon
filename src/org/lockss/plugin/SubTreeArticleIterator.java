@@ -1,5 +1,5 @@
 /*
- * $Id: SubTreeArticleIterator.java,v 1.19 2013-03-20 05:30:16 thib_gc Exp $
+ * $Id: SubTreeArticleIterator.java,v 1.20 2014-07-21 03:19:12 tlipkis Exp $
  */
 
 /*
@@ -436,8 +436,8 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
   protected Pattern includeSubTreePat = null;
   /** Pattern for subtrees not to recurse into, or null */
   protected Pattern excludeSubTreePat = null;
-  /** Underlying CachedUrlSet iterator */
-  protected Iterator cusIter = null;
+  /** Underlying CachedUrl iterator */
+  protected CuIterator cuIter = null;
   /** Root CachecUrlSets */
   Collection<CachedUrlSet> roots;
   /** Iterator over subtree roots */
@@ -571,28 +571,25 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
       } else {
 	CachedUrl cu = null;
 	try {
-	  if (cusIter == null || !cusIter.hasNext()) {
+	  if (cuIter == null || !cuIter.hasNext()) {
 	    if (!rootIter.hasNext()) {
 	      return null;
 	    } else {
 	      CachedUrlSet root = rootIter.next();
-	      cusIter = spec.isVisitArchiveMembers
-		? root.archiveMemberIterator() : root.contentHashIterator();
+	      cuIter = spec.isVisitArchiveMembers
+		? root.archiveMemberIterator() : root.getCuIterator();
 	      continue;
 	    }
 	  } else {
-	    CachedUrlSetNode node = (CachedUrlSetNode)cusIter.next();
-	    cu = AuUtil.getCu(node);
-	    if (cu != null && cu.hasContent()) {
-	      if (isArticleCu(cu)) {
-		// isArticleCu() might have caused file to open
-		cu.release();
-		visitArticleCu(cu);
-		if (nextElement == null) {
-		  continue;
-		}
-		return nextElement;
+	    cu = cuIter.next();
+	    if (isArticleCu(cu)) {
+	      // isArticleCu() might have caused file to open
+	      cu.release();
+	      visitArticleCu(cu);
+	      if (nextElement == null) {
+		continue;
 	      }
+	      return nextElement;
 	    }
 	  }
 	} catch (Exception ex) {

@@ -1,5 +1,5 @@
 /*
- * $Id: Exporter.java,v 1.9 2011-04-04 07:15:03 tlipkis Exp $
+ * $Id: Exporter.java,v 1.10 2014-07-21 03:19:12 tlipkis Exp $
  */
 
 /*
@@ -273,15 +273,8 @@ public abstract class Exporter {
   }
 
   // return the next CU with content
-  private CachedUrl getNextCu(Iterator iter) {
-    while (iter.hasNext()) {
-      CachedUrlSetNode node = (CachedUrlSetNode)iter.next();
-      CachedUrl cu = AuUtil.getCu(node);
-      if (cu != null && cu.hasContent()) {
-	return cu;
-      }
-    }
-    return null;
+  private CachedUrl getNextCu(CuIterator iter) {
+    return iter.hasNext() ? iter.next() : null;
   }
 
   /** Return true if, interpreting URLs as filenames, dirCu is a directory
@@ -300,7 +293,7 @@ public abstract class Exporter {
 
   private void writeFiles() {
     PlatformUtil platutil = PlatformUtil.getInstance();
-    Iterator iter = au.getAuCachedUrlSet().contentHashIterator();
+    CuIterator iter = AuUtil.getCuIterator(au);
     int errs = 0;
     CachedUrl curCu = null;
     CachedUrl nextCu = getNextCu(iter);

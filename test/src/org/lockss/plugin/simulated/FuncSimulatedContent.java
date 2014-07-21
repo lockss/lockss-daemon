@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedContent.java,v 1.80 2012-08-08 07:15:46 tlipkis Exp $
+ * $Id: FuncSimulatedContent.java,v 1.81 2014-07-21 03:19:12 tlipkis Exp $
  */
 
 /*
@@ -232,15 +232,7 @@ public class FuncSimulatedContent extends LockssTestCase {
   }
 
   List<String> auUrls(ArchivalUnit au) {
-    List<String> res = new ArrayList<String>();
-    for (Iterator iter = au.getAuCachedUrlSet().contentHashIterator();
-	 iter.hasNext(); ) {
-      CachedUrlSetNode cusn = (CachedUrlSetNode)iter.next();
-      if (cusn.hasContent()) {
-	res.add(cusn.getUrl());
-      }
-    }
-    return res;
+    return PluginTestUtil.urlsOf(au.getAuCachedUrlSet().getCuIterable());
   }
 
   protected void createContent(SimulatedArchivalUnit sau) {

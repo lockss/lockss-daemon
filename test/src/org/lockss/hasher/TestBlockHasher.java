@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockHasher.java,v 1.25 2013-08-19 20:24:49 tlipkis Exp $
+ * $Id: TestBlockHasher.java,v 1.26 2014-07-21 03:19:12 tlipkis Exp $
  */
 
 /*
@@ -949,20 +949,17 @@ public class TestBlockHasher extends LockssTestCase {
 			  "SHA-1:f36b4825e5db2cf7dd2d2593b3f5c24c0311d8b2");
 
     if (log.isDebug3()) {
-      for (Iterator it1 = cus.contentHashIterator(); it1.hasNext(); ) {
-	CachedUrlSetNode cusn = (CachedUrlSetNode)it1.next();
-	if (cusn instanceof CachedUrl) {
-	  CachedUrl[] vers = ((CachedUrl)cusn).getCuVersions();
-	  log.debug3(cusn.getUrl() + " has " + vers.length + " versions.");
-	  for (int i = 0; i < vers.length; i++) {
-	    Properties vProps = vers[i].getProperties();
-	    log.debug3("Version: " + i + " has " + vProps.size() +
-		       " entries");
-	    for (Iterator it2 = vProps.keySet().iterator(); it2.hasNext(); ) {
-	      String key = (String) it2.next();
-	      log.debug("Version: " + i + " key: " + key + " val: " +
-			vProps.get(key));
-	    }
+      for (CachedUrl cu : cus.getCuIterable()) {
+	CachedUrl[] vers = cu.getCuVersions();
+	log.debug3(cu.getUrl() + " has " + vers.length + " versions.");
+	for (int i = 0; i < vers.length; i++) {
+	  Properties vProps = vers[i].getProperties();
+	  log.debug3("Version: " + i + " has " + vProps.size() +
+		     " entries");
+	  for (Iterator it2 = vProps.keySet().iterator(); it2.hasNext(); ) {
+	    String key = (String) it2.next();
+	    log.debug("Version: " + i + " key: " + key + " val: " +
+		      vProps.get(key));
 	  }
 	}
       }

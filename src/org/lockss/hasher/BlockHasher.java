@@ -1,5 +1,5 @@
 /*
- * $Id: BlockHasher.java,v 1.32 2013-10-17 07:49:14 tlipkis Exp $
+ * $Id: BlockHasher.java,v 1.33 2014-07-21 03:19:12 tlipkis Exp $
  */
 
 /*
@@ -224,7 +224,7 @@ public class BlockHasher extends GenericHasher {
   }
 
   protected Iterator getIterator(CachedUrlSet cus) {
-    return cus.contentHashIterator();
+    return cus.getCuIterator();
   }
 
   /** V3 hashes only content nodes.  NOTE: This routine also
