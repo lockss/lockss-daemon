@@ -57,7 +57,7 @@
       au < crawling ; exists ; 2013 ; 2013 ; Advances in Geosciences Volume 35 ; 35 >
       au < crawling ; exists ; 2013 ; 2013 ; Advances in Geosciences Volume 36 ; 36 >
       au < ready ; exists ; 2014 ; 2014 ; Advances in Geosciences Volume 37 ; 37 >
-      au < testing ; exists ; 2014 ; 2014 ; Advances in Geosciences Volume 38 ; 38 >
+      au < ready ; exists ; 2014 ; 2014 ; Advances in Geosciences Volume 38 ; 38 >
     
    }
     
@@ -277,7 +277,7 @@
       au < manifest ; exists ; 2011 ; 2011 ; Climate of the Past Volume 7 ; 7 >
       au < finished ; frozen ; 2012 ; 2012 ; Climate of the Past Volume 8 ; 8 >
       au < crawling ; exists ; 2013 ; 2013 ; Climate of the Past Volume 9 ; 9 >
-      au < testing ; exists ; 2014 ; 2014 ; Climate of the Past Volume 10 ; 10 >
+      au < ready ; exists ; 2014 ; 2014 ; Climate of the Past Volume 10 ; 10 >
     
    }
     
@@ -297,7 +297,7 @@
       au < manifest ; exists ; 2011 ; 2011 ; Drinking Water Engineering and Science Volume 4 ; 4 >
       au < finished ; frozen ; 2012 ; 2012 ; Drinking Water Engineering and Science Volume 5 ; 5 >
       au < crawling ; exists ; 2013 ; 2013 ; Drinking Water Engineering and Science Volume 6 ; 6 >
-      au < testing ; exists ; 2014 ; 2014 ; Drinking Water Engineering and Science Volume 7 ; 7 >
+      au < ready ; exists ; 2014 ; 2014 ; Drinking Water Engineering and Science Volume 7 ; 7 >
     
    }
     
@@ -312,7 +312,7 @@
       param[home_url] = http://www.earth-surface-dynamics.net/
 
       au < crawling ; exists ; 2013 ; 2013 ; Earth Surface Dynamics Volume 1 ; 1 >
-      au < testing ; exists ; 2014 ; 2014 ; Earth Surface Dynamics Volume 2 ; 2 >
+      au < ready ; exists ; 2014 ; 2014 ; Earth Surface Dynamics Volume 2 ; 2 >
     
    }
     
@@ -344,7 +344,7 @@
       au < manifest ; exists ; 2011 ; 2011 ; Earth System Dynamics Volume 2 ; 2 >
       au < finished ; crawling ; 2012 ; 2012 ; Earth System Dynamics Volume 3 ; 3 >
       au < crawling ; exists ; 2013 ; 2013 ; Earth System Dynamics Volume 4 ; 4 >
-      au < testing ; exists ; 2014 ; 2014 ; Earth System Dynamics Volume 5 ; 5 >
+      au < ready ; exists ; 2014 ; 2014 ; Earth System Dynamics Volume 5 ; 5 >
     
    }
     
@@ -429,7 +429,7 @@
       au < crawling ; exists ; 2013 ; 2013 ; Fossil Record Reports Volume 16 [abstract only] ; 16 >
       }
       
-      au < testing ; exists ; 2014 ; 2014 ; Fossil Record Reports Volume 17 ; 17 >
+      au < ready ; exists ; 2014 ; 2014 ; Fossil Record Reports Volume 17 ; 17 >
       
    }
     
@@ -512,7 +512,7 @@
       au < manifest ; exists ; 2011 ; 2011 ; Geographica Helvetica Volume 66 ; 66 >
       au < crawling ; exists ; 2012 ; 2012 ; Geographica Helvetica Volume 67 ; 67 >
       au < ingNotReady ; exists ; 2013 ; 2013 ; Geographica Helvetica Volume 68 ; 68 >
-      au < manifest ; exists ; 2014 ; 2014 ; Geographica Helvetica Volume 69 ; 69 >
+      au < testing ; exists ; 2014 ; 2014 ; Geographica Helvetica Volume 69 ; 69 >
     
    }
     
@@ -528,7 +528,7 @@
 
       au < finished ; crawling ; 2012 ; 2012 ; Geoscientific Instrumentation, Methods and Data Systems Volume 1 ; 1 >
       au < crawling ; exists ; 2013 ; 2013 ; Geoscientific Instrumentation, Methods and Data Systems Volume 2 ; 2 >
-      au < manifest ; exists ; 2014 ; 2014 ; Geoscientific Instrumentation, Methods and Data Systems Volume 3 ; 3 >
+      au < testing ; exists ; 2014 ; 2014 ; Geoscientific Instrumentation, Methods and Data Systems Volume 3 ; 3 >
     
    }
    
@@ -548,7 +548,7 @@
       au < manifest ; exists ; 2011 ; 2011 ; Geoscientific Model Development Volume 4 ; 4 >
       au < finished ; frozen ; 2012 ; 2012 ; Geoscientific Model Development Volume 5 ; 5 >
       au < crawling ; exists ; 2013 ; 2013 ; Geoscientific Model Development Volume 6 ; 6 >
-      au < manifest ; exists ; 2014 ; 2014 ; Geoscientific Model Development Volume 7 ; 7 >
+      au < testing ; exists ; 2014 ; 2014 ; Geoscientific Model Development Volume 7 ; 7 >
     
    }
     
@@ -563,7 +563,7 @@
       param[home_url] = http://www.geothermal-energy-science.net/
 
       au < crawling ; exists ; 2013 ; 2013 ; Geothermal Energy Science Volume 1 ; 1 >
-      au < manifest ; exists ; 2014 ; 2014 ; Geothermal Energy Science Volume 2 ; 2 >
+      au < testing ; exists ; 2014 ; 2014 ; Geothermal Energy Science Volume 2 ; 2 >
     
    }
     
@@ -581,7 +581,7 @@
       au < manifest ; exists ; 2011 ; 2011 ; History of Geo- and Space Sciences Volume 2 ; 2 >
       au < finished ; crawling ; 2012 ; 2012 ; History of Geo- and Space Sciences Volume 3 ; 3 >
       au < crawling ; exists ; 2013 ; 2013 ; History of Geo- and Space Sciences Volume 4 ; 4 >
-      au < manifest ; exists ; 2014 ; 2014 ; History of Geo- and Space Sciences Volume 5 ; 5 >
+      au < testing ; exists ; 2014 ; 2014 ; History of Geo- and Space Sciences Volume 5 ; 5 >
     
    }
     
@@ -612,7 +612,7 @@
       au < manifest ; exists ; 2011 ; 2011 ; Hydrology and Earth System Sciences Volume 15 ; 15 >
       au < finished ; frozen ; 2012 ; 2012 ; Hydrology and Earth System Sciences Volume 16 ; 16 >
       au < crawling ; exists ; 2013 ; 2013 ; Hydrology and Earth System Sciences Volume 17 ; 17 >
-      au < manifest ; exists ; 2014 ; 2014 ; Hydrology and Earth System Sciences Volume 18 ; 18 >
+      au < testing ; exists ; 2014 ; 2014 ; Hydrology and Earth System Sciences Volume 18 ; 18 >
     
    }
     
@@ -626,7 +626,7 @@
       param[base_url] = http://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/
       param[home_url] = http://www.isprs.org/
 
-      au < manifest ; exists ; 2012 ; 2012 ; ISPRS Annals Volume I-2 ; I-2 >
+      au < testing ; exists ; 2012 ; 2012 ; ISPRS Annals Volume I-2 ; I-2 >
       au < manifest ; exists ; 2012 ; 2012 ; ISPRS Annals Volume I-3 ; I-3 >
       au < manifest ; exists ; 2012 ; 2012 ; ISPRS Annals Volume I-4 ; I-4 >
       au < manifest ; exists ; 2012 ; 2012 ; ISPRS Annals Volume I-7 ; I-7 >
@@ -699,7 +699,7 @@
       au < manifest ; exists ; 2011 ; 2011 ; ISPRS Archives Volume XXXVIII-5/W16 ; XXXVIII-5-W16 >
       au < manifest ; exists ; 2011 ; 2011 ; ISPRS Archives Volume XXXVIII-6/W27 ; XXXVIII-6-W27 >
       au < manifest ; exists ; 2011 ; 2011 ; ISPRS Archives Volume XXXVIII-8/W20 ; XXXVIII-8-W20 >
-      au < manifest ; exists ; 2012 ; 2012 ; ISPRS Archives Volume XXXVIII-4/C26 ; XXXVIII-4-C26 >
+      au < testing ; exists ; 2012 ; 2012 ; ISPRS Archives Volume XXXVIII-4/C26 ; XXXVIII-4-C26 >
       au < manifest ; exists ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B1 ; XXXIX-B1 >
       au < manifest ; exists ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B2 ; XXXIX-B2 >
       au < manifest ; exists ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B3 ; XXXIX-B3 >
@@ -741,7 +741,7 @@
 
       au < finished ; crawling ; 2012 ; 2012 ; Journal of Sensors and Sensor Systems Volume 1 ; 1 >
       au < crawling ; exists ; 2013 ; 2013 ; Journal of Sensors and Sensor Systems Volume 2 ; 2 >
-      au < manifest ; exists ; 2014 ; 2014 ; Journal of Sensors and Sensor Systems Volume 3 ; 3 >
+      au < testing ; exists ; 2014 ; 2014 ; Journal of Sensors and Sensor Systems Volume 3 ; 3 >
     
    }
    
@@ -759,7 +759,7 @@
       au < manifest ; exists ; 2011 ; 2011 ; Mechanical Sciences Volume 2 ; 2 >
       au < finished ; crawling ; 2012 ; 2012 ; Mechanical Sciences Volume 3 ; 3 >
       au < crawling ; exists ; 2013 ; 2013 ; Mechanical Sciences Volume 4 ; 4 >
-      au < manifest ; exists ; 2014 ; 2014 ; Mechanical Sciences Volume 5 ; 5 >
+      au < testing ; exists ; 2014 ; 2014 ; Mechanical Sciences Volume 5 ; 5 >
     
    }
     
@@ -786,7 +786,7 @@
       au < manifest ; exists ; 2011 ; 2011 ; Natural Hazards and Earth System Sciences Volume 11 ; 11 >
       au < finished ; crawling ; 2012 ; 2012 ; Natural Hazards and Earth System Sciences Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; 2013 ; Natural Hazards and Earth System Sciences Volume 13 ; 13 >
-      au < manifest ; exists ; 2014 ; 2014 ; Natural Hazards and Earth System Sciences Volume 14 ; 14 >
+      au < testing ; exists ; 2014 ; 2014 ; Natural Hazards and Earth System Sciences Volume 14 ; 14 >
     
    }
    
