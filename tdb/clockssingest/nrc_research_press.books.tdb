@@ -9,144 +9,35 @@
   comment[platform] = Atypon
   
   plugin = needs.plugin
+  implicit < status ; status2 ; name ; param[isbn] ; param[eisbn] >
 
   {
   
     title < 
-      name = 1996 International Symposium on Bacterial Polyhydroxyalkanoates 
+      name = NRC Research Press Books ;
+      type = bookSeries
+      >
       
-    >
-      comment[isbn] = 978-0-660-17083-1 
-      comment[eisbn] = 978-0-9878114-5-5
-    
-  }
-  
-  {
-  
-    title < 
-      name = Advances in Mycorrhizal Science and Technology 
-      
-    >
-     comment[isbn] = 978-0-660-19883-5
-     comment[eisbn] = 978-0-660-19882-8
-    
-  }
-  
-  {
-  
-    title < 
-      name = Alfalfa and Relatives: Evolution and Classification of Medicago 
-      
-    >
-     comment[isbn] = 978-0-660-19979-5
-     comment[eisbn] = 978-1-927346-18-1 
-    
-  }
-  
-  {
-  
-    title < 
-      name = Annotated Keys to the Genera of Nearctic Chalcidoidea
-     
-    >
-    comment[isbn] = 978-0-660-16669-8
-    comment[eisbn] = 978-0-9878114-2-4
-    
-  }
-
-  {
-  
-    title < 
-      name = Assessment of Species Diversity in the Atlantic Maritime Ecozone
- 
-    >
-    comment[isbn] = 978-0-660-19835-4 
-    comment[eisbn] = 978-0-660-19836-1
-    
-  }
-
-  {
-  
-    title < 
-      name = Atlantic Halibut (Hippoglossus hippoglossus) and Pacific Halibut (H. stenolepis) and their North American Fisheries Canadian Bulletin of Fisheries and Aquatic Sciences No. 227
-     
-    >
-    comment[isbn] = 978-0-660-15111-3 
-    comment[eisbn] = 978-0-660-19313-7
-  }
-  
-  
-  {
-  
-    title < 
-      name = Atlas of Migmatites
-      
-    >
-    comment[isbn] = 978-0-660-19787-6 
-    comment[eisbn] = 978-0-660-19788-3
-    
-  }
-  
-  {
-  
-    title < 
-      name = Audubon: Beyond Birds
-      
-    >
-    comment[isbn] = 978-0-660-19894-1
-    comment[eisbn] = 978-0-660-19895-8
-    
-    
-  }
-  
-  {
-  
-    title < 
-      name = Beetles of the Gal���pagos Islands, Ecuador
-        
-    >
-    comment[isbn] = 978-0-660-19421-9 
-    comment[eisbn] = 978-0-660-19422-6
-
-  }
-  
-  {
-  
-    title < 
-      name = Biodiversity & Health 
-        
-    >
-    comment[isbn] = 978-0-660-62713-7 
-    comment[eisbn] = 978-0-662-49441-6
-
-  }
-  
-  {
-  
-    title < 
-      name = Biology of Populus and its Implications for Management and Conservation
-	    
-    >
-    comment[isbn] = 978-0-660-16506-6 
-    comment[eisbn] = 978-0-9878114-1-7
-
-  }
-  
-  {
-  
-    title < 
-      name = Blue Grouse: Their Biology and Natural History
-      
-    >
-    comment[isbn] = 978-0-660-19271-0 
-    comment[eisbn] = 978-0-660-19272-7
+      au < exists ; exists ; 1996 International Symposium on Bacterial Polyhydroxyalkanoates ; 978-0-660-17083-1  ; 978-0-9878114-5-5 >
+      au < exists ; exists ; Advances in Mycorrhizal Science and Technology ; 978-0-660-19883-5 ; 978-0-660-19882-8 >
+      au < exists ; exists ; Alfalfa and Relatives: Evolution and Classification of Medicago ; 978-0-660-19979-5 ; 978-1-927346-18-1 >
+      au < exists ; exists ; Annotated Keys to the Genera of Nearctic Chalcidoidea ; 978-0-660-16669-8 ; 978-0-9878114-2-4 >
+      au < exists ; exists ; Assessment of Species Diversity in the Atlantic Maritime Ecozone ; 978-0-660-19835-4 ; 978-0-660-19836-1 >
+      au < exists ; exists ; Atlantic Halibut (Hippoglossus hippoglossus) and Pacific Halibut (H. stenolepis) and their North American Fisheries Canadian Bulletin of Fisheries and Aquatic Sciences No. 227 ; 978-0-660-15111-3 ; 978-0-660-19313-7 >
+      au < exists ; exists ; Atlas of Migmatites ; 978-0-660-19787-6 ; 978-0-660-19788-3 >
+      au < exists ; exists ; Audubon: Beyond Birds ; 978-0-660-19894-1 ; 978-0-660-19895-8 >
+      au < exists ; exists ; Beetles of the Galapagos Islands, Ecuador ; 978-0-660-19421-9 ; 978-0-660-19422-6 >
+      au < exists ; exists ; Biodiversity & Health ; 978-0-660-62713-7 ; 978-0-662-49441-6 >
+      au < exists ; exists ; Biology of Populus and its Implications for Management and Conservation ; 978-0-660-16506-6 ; 978-0-9878114-1-7 >
+      au < exists ; exists ; Blue Grouse: Their Biology and Natural History ; 978-0-660-19271-0 ; 978-0-660-19272-7 >
      
   }
   
   {
   
     title < 
-      name = Calcium: The Grand-Master Cell Signaler
+      name = Calcium: The Grand-Master Cell Signaler ;
+      type = bookSeries
          
     >
     comment[isbn] = 978-0-660-18201-8 
@@ -157,7 +48,8 @@
   {
   
     title < 
-      name = Canadian Marine Fisheries in a Changing and Uncertain World Canadian Special Publication of Fisheries and Aquatic Sciences No. 129 
+      name = Canadian Marine Fisheries in a Changing and Uncertain World Canadian Special Publication of Fisheries and Aquatic Sciences No. 129 ;
+      type = bookSeries
       
     >
     comment[isbn] = 978-0-660-17638-3 
@@ -168,7 +60,8 @@
   {
   
     title < 
-      name = Canadian Medicinal Crops
+      name = Canadian Medicinal Crops ;
+      type = bookSeries
        
     >
     comment[isbn] = 978-0-660-17534-8 
@@ -179,7 +72,8 @@
   {
   
     title < 
-      name = Canadian System of Soil Classification, 3rd Ed.
+      name = Canadian System of Soil Classification, 3rd Ed. ;
+      type = bookSeries
       
     >
     comment[isbn] = 978-0-660-17404-4 
