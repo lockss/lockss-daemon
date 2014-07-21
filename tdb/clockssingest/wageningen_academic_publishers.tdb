@@ -77,7 +77,8 @@
   {
 
   title <
-    name = Wageningen Academic Publishers Books
+    name = Wageningen Academic Publishers Books ;
+    type = bookSeries
   >
 
     plugin = needs.plugin
