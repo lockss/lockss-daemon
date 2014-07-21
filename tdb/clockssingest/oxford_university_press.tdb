@@ -8485,7 +8485,8 @@
   {
 
     title <
-      name = International Immunology Meeting Abstracts 
+      name = International Immunology Meeting Abstracts ;
+      type = bookSeries
     >
     
     param[base_url] = http://intimmabs.oxfordjournals.org/
