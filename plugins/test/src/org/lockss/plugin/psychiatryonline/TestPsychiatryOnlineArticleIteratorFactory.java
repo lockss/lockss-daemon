@@ -124,22 +124,14 @@ public class TestPsychiatryOnlineArticleIteratorFactory extends ArticleIteratorT
     
     // get cached url content type and properties from simulated contents
     // for UrclCacher.storeContent()
-    Iterator<CachedUrlSetNode> cuIter = sau.getAuCachedUrlSet().contentHashIterator();
     CachedUrl cuHtml = null;
-    CachedUrlSetNode cusn;
-    while (cuIter.hasNext()) {
-      cusn = cuIter.next();
-      if (!cusn.hasContent()) {
-        continue;
-      }
-      if (cusn.getType() == CachedUrlSetNode.TYPE_CACHED_URL) {
-        CachedUrl cu = (CachedUrl)cusn;
+    for (CachedUrl cu : AuUtil.getCuIterable(sau)) {
         if (cuHtml == null 
             && cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_HTML)) {
           //log.info("html contenttype: " + cu.getContentType());
           cuHtml = cu;
+	  break;
         }
-      }
     }
     // store content using cached url content type and properties
     UrlCacher uc;

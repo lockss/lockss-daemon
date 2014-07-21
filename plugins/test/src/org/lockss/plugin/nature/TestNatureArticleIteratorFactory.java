@@ -1,5 +1,5 @@
 /*
- * $Id: TestNatureArticleIteratorFactory.java,v 1.4 2012-08-08 07:19:51 tlipkis Exp $
+ * $Id: TestNatureArticleIteratorFactory.java,v 1.5 2014-07-21 03:28:29 tlipkis Exp $
  */
 
 /*
@@ -114,16 +114,12 @@ public class TestNatureArticleIteratorFactory extends LockssTestCase {
     
     // Remove some URLs
     int deleted = 0; 
-    for (Iterator it = nau.getAuCachedUrlSet().contentHashIterator() ; it.hasNext() ; ) {
-      CachedUrlSetNode cusn = (CachedUrlSetNode)it.next();
-      if (cusn instanceof CachedUrl) {
-        CachedUrl cu = (CachedUrl)cusn;
+    for (CachedUrl cu : AuUtil.getCuIterable(nau)) {
         String url = cu.getUrl();
         if (url.contains("/journal/") && (url.endsWith("1file.html") || url.endsWith("2file.pdf"))) {
           deleteBlock(cu);
           ++deleted;
         }
-      }
     }
     assertEquals(8, deleted);
 

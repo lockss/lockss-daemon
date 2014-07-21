@@ -1,5 +1,5 @@
 /*
- * $Id: TestMichiganStateUniversityExtensionArticleIteratorFactory.java,v 1.2 2012-08-08 07:19:51 tlipkis Exp $
+ * $Id: TestMichiganStateUniversityExtensionArticleIteratorFactory.java,v 1.3 2014-07-21 03:28:29 tlipkis Exp $
  */
 
 /*
@@ -133,25 +133,16 @@ public class TestMichiganStateUniversityExtensionArticleIteratorFactory
       BASE_URL + "Bulletins/Bulletin/PDF/Historical/finished_pubs/e6/e6rev2.pdf"
     };
     
-    Iterator<CachedUrlSetNode> cuIter = sau.getAuCachedUrlSet().contentHashIterator();
-    
-    if(cuIter.hasNext()) {
-      CachedUrlSetNode cusn = cuIter.next();
-      CachedUrl cuPdf = null;
-      UrlCacher uc;
-      while(cuIter.hasNext() && (cuPdf == null)) {
-        if(cusn.getType() == CachedUrlSetNode.TYPE_CACHED_URL && cusn.hasContent()) {
-          CachedUrl cu = (CachedUrl)cusn;
-          if(cuPdf == null && cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_PDF)) {
-            cuPdf = cu;
-          }
-        }
-        cusn = cuIter.next();
+    CachedUrl cuPdf = null;
+    for (CachedUrl cu : AuUtil.getCuIterable(sau)) {
+      if (cuPdf == null && cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_PDF)) {
+	cuPdf = cu;
+	break;
       }
-      for(String url : urls) {
-        uc = au.makeUrlCacher(url);
-        uc.storeContent(cuPdf.getUnfilteredInputStream(), cuPdf.getProperties());
-      }
+    }
+    for (String url : urls) {
+      UrlCacher uc = au.makeUrlCacher(url);
+      uc.storeContent(cuPdf.getUnfilteredInputStream(), cuPdf.getProperties());
     }
     
     Stack<String[]> expStack = new Stack<String[]>();

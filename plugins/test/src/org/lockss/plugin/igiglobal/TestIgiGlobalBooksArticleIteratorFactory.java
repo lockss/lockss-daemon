@@ -136,41 +136,31 @@ public class TestIgiGlobalBooksArticleIteratorFactory extends ArticleIteratorTes
         BASE_URL,
         BASE_URL + "gateway"
     };
-    Iterator<CachedUrlSetNode> cuIter = sau.getAuCachedUrlSet().contentHashIterator();
-    
-    if(cuIter.hasNext()){
-      CachedUrlSetNode cusn = cuIter.next();
-      CachedUrl cuPdf = null;
-      CachedUrl cuHtml = null;
-      UrlCacher uc;
+    CachedUrl cuPdf = null;
+    CachedUrl cuHtml = null;
+    for (CachedUrl cu : AuUtil.getCuIterable(sau)) {
       //
       // The only thing we seem to be doing with the content that was created in the SimulatedAU 
       // Is to pick up one PDF cu and one HTML cu
       // Only the HTML CU is used and then only to put content in to other html URLs in the UrlCacher
       //
-      while(cuIter.hasNext() && (cuPdf == null || cuHtml == null))
-      {
-        if(cusn.getType() == CachedUrlSetNode.TYPE_CACHED_URL && cusn.hasContent())
-        {
-          CachedUrl cu = (CachedUrl)cusn;
-          if(cuPdf == null && cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_PDF))
-          {
-            cuPdf = cu;
-          }
-          else if (cuHtml == null && cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_HTML))
-          {
-            cuHtml = cu;
-          }
-        }
-        cusn = cuIter.next();
+      if(cuPdf == null && cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_PDF))
+	{
+	  cuPdf = cu;
+	}
+      else if (cuHtml == null && cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_HTML))
+	{
+	  cuHtml = cu;
+	}
+      if (cuPdf != null && cuHtml != null) {
+	break;
       }
-      
-      // add a URL with content to the "real" au
-      // oddly, they'll all be html...the PDF URLs have an thml frameset so this is okay
-      for (String url : urls) {
-        uc = au.makeUrlCacher(url);
-        uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
-      }
+    }
+    // add a URL with content to the "real" au
+    // oddly, they'll all be html...the PDF URLs have an thml frameset so this is okay
+    for (String url : urls) {
+      UrlCacher uc = au.makeUrlCacher(url);
+      uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
     }
     
     Stack<String[]> expStack = new Stack<String[]>();

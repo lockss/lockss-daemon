@@ -1,4 +1,4 @@
-/* $Id: TestPeerJArticleIteratorFactory.java,v 1.3 2013-10-15 18:55:20 ldoan Exp $
+/* $Id: TestPeerJArticleIteratorFactory.java,v 1.4 2014-07-21 03:28:28 tlipkis Exp $
 
 Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -40,6 +40,7 @@ import org.lockss.daemon.SingleNodeCachedUrlSetSpec;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArticleFiles;
+import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.CachedUrlSet;
 import org.lockss.plugin.CachedUrlSetNode;
@@ -184,11 +185,7 @@ public class TestPeerJArticleIteratorFactory
 
     // Remove some URLs
     int deletedFileCount = 0; 
-    for (Iterator<CachedUrlSetNode> it = 
-        au.getAuCachedUrlSet().contentHashIterator() ; it.hasNext() ; ) {
-      CachedUrlSetNode cusn = it.next();
-      if (cusn instanceof CachedUrl) {
-        CachedUrl cu = (CachedUrl)cusn;
+    for (CachedUrl cu : AuUtil.getCuIterable(au)) {
         String url = cu.getUrl();
         log.info("au cached url: " + url);
         if (url.contains(variantBaseConstant) 
@@ -196,7 +193,6 @@ public class TestPeerJArticleIteratorFactory
           deleteBlock(cu);
           ++deletedFileCount;
         }
-      }
     }
     assertEquals(EXP_DELETED_FILE_COUNT, deletedFileCount);
     

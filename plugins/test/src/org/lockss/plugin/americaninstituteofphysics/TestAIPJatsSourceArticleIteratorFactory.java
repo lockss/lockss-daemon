@@ -38,6 +38,7 @@ import org.lockss.config.Configuration;
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArticleFiles;
+import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.CachedUrlSetNode;
 import org.lockss.plugin.PluginTestUtil;
@@ -187,11 +188,7 @@ public class TestAIPJatsSourceArticleIteratorFactory
     int expPdfCount = 0;
     int xmlCount = 0;
     int pdfCount = 0;
-    for (Iterator it = au.getAuCachedUrlSet().contentHashIterator() ; 
-        it.hasNext() ; ) {
-      CachedUrlSetNode cusn = (CachedUrlSetNode)it.next();
-      if (cusn instanceof CachedUrl) {
-        CachedUrl cu = (CachedUrl)cusn;
+    for (CachedUrl cu : AuUtil.getCuIterable(au)) {
         String url = cu.getUrl();
         log.debug3("url: " + url);
         if (url.contains("/Markup/")) {
@@ -203,7 +200,6 @@ public class TestAIPJatsSourceArticleIteratorFactory
         } else if (url.contains("Page_Renditions")) {
           pdfCount++;
         }
-     }
     }
     //log.info("Article count is " + count);
     log.debug3("xml count is " + xmlCount);

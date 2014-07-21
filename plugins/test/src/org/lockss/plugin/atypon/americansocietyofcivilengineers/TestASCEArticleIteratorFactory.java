@@ -1,5 +1,5 @@
 /*
- * $Id: TestASCEArticleIteratorFactory.java,v 1.1 2013-05-13 21:16:06 ldoan Exp $
+ * $Id: TestASCEArticleIteratorFactory.java,v 1.2 2014-07-21 03:28:30 tlipkis Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import org.lockss.config.Configuration;
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArticleFiles;
+import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.CachedUrlSetNode;
 import org.lockss.plugin.PluginTestUtil;
@@ -167,17 +168,9 @@ public class TestASCEArticleIteratorFactory extends ArticleIteratorTestCase {
 
     // get cached url content type and properties from simulated contents
     // for UrclCacher.storeContent()
-    Iterator<CachedUrlSetNode> cuIter = sau.getAuCachedUrlSet().contentHashIterator();
     CachedUrl cuPdf = null;
     CachedUrl cuHtml = null;
-    CachedUrlSetNode cusn;
-    while (cuIter.hasNext()) {
-      cusn = cuIter.next();
-      if (!cusn.hasContent()) {
-        continue;
-      }
-      if (cusn.getType() == CachedUrlSetNode.TYPE_CACHED_URL) {
-        CachedUrl cu = (CachedUrl)cusn;
+    for (CachedUrl cu : AuUtil.getCuIterable(sau)) {
         if (cuPdf == null 
             && cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_PDF)) {
           //log.info("pdf contenttype: " + cu.getContentType());
@@ -187,7 +180,9 @@ public class TestASCEArticleIteratorFactory extends ArticleIteratorTestCase {
           //log.info("html contenttype: " + cu.getContentType());
           cuHtml = cu;
         }
-      }
+	if (cuPdf != null && cuHtml != null) {
+	  break;
+	}
     }
     // store content using cached url content type and properties
     UrlCacher uc;

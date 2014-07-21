@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseAtyponArticleIteratorFactory.java,v 1.3 2013-07-01 22:18:05 alexandraohlson Exp $
+ * $Id: TestBaseAtyponArticleIteratorFactory.java,v 1.4 2014-07-21 03:28:30 tlipkis Exp $
  */
 
 /*
@@ -191,10 +191,7 @@ public class TestBaseAtyponArticleIteratorFactory extends ArticleIteratorTestCas
     // branch5: (doubles) - art1 (full+pdf); art2 (full+pdfplus); art3 (pdf+pdfplus); art4 (ALL)
     int deleted = 0;
     int deletedRIS = 0;
-    for (Iterator it = au.getAuCachedUrlSet().contentHashIterator() ; it.hasNext() ; ) {
-      CachedUrlSetNode cusn = (CachedUrlSetNode)it.next();
-      if (cusn instanceof CachedUrl) {
-        CachedUrl cu = (CachedUrl)cusn;
+    for (CachedUrl cu : AuUtil.getCuIterable(au)) {
         String url = cu.getUrl();
         // branch 1 - all or none
         if (url.contains("b1.art00")) {
@@ -276,7 +273,6 @@ public class TestBaseAtyponArticleIteratorFactory extends ArticleIteratorTestCas
             ++deleted;
           }
         }
-      }
     }
     assertEquals(32, deleted); // trust me
     assertEquals(4, deletedRIS);

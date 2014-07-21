@@ -1,4 +1,4 @@
-/* $Id: TestNationalWeatherAssociationArticleIteratorFactory.java,v 1.1 2014-01-28 17:56:46 ldoan Exp $ */
+/* $Id: TestNationalWeatherAssociationArticleIteratorFactory.java,v 1.2 2014-07-21 03:28:29 tlipkis Exp $ */
 
 /*
 
@@ -44,6 +44,7 @@ import org.lockss.daemon.SingleNodeCachedUrlSetSpec;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArticleFiles;
+import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.CachedUrlSet;
 import org.lockss.plugin.CachedUrlSetNode;
@@ -199,11 +200,7 @@ public class TestNationalWeatherAssociationArticleIteratorFactory
     // http://www.example.com/xjid/abstracts/2013/2013-xjid4002/abstract.php
     // http://www.example.com/xjid/articles/2013/2013-xjid1001/2013-xjid1001.pdf    
     int deletedFileCount = 0; 
-    for (Iterator it = 
-        au.getAuCachedUrlSet().contentHashIterator() ; it.hasNext() ; ) {
-      CachedUrlSetNode cusn = (CachedUrlSetNode)it.next();
-      if (cusn instanceof CachedUrl) {
-        CachedUrl cu = (CachedUrl)cusn;
+    for (CachedUrl cu : AuUtil.getCuIterable(au)) {
         String url = cu.getUrl();
         log.info("au cached url: " + url);
         if ((url.contains("/articles/") && url.endsWith("1001.pdf")) 
@@ -211,7 +208,6 @@ public class TestNationalWeatherAssociationArticleIteratorFactory
           deleteBlock(cu);
           ++deletedFileCount;
         }
-      }
     }
     assertEquals(EXP_DELETED_FILE_COUNT, deletedFileCount);
     

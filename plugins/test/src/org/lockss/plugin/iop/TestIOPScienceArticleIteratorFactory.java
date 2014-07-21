@@ -151,39 +151,30 @@ public class TestIOPScienceArticleIteratorFactory extends ArticleIteratorTestCas
         AU_URL + "/5/5/fulltext",
         AU_URL
     };
-    Iterator<CachedUrlSetNode> cuIter = sau.getAuCachedUrlSet().contentHashIterator();
-    
-    if(cuIter.hasNext()){
-      CachedUrlSetNode cusn = cuIter.next();
-      CachedUrl cuPdf = null;
-      CachedUrl cuHtml = null;
-      UrlCacher uc;
-      while(cuIter.hasNext() && (cuPdf == null || cuHtml == null))
-      {
-        if(cusn.getType() == CachedUrlSetNode.TYPE_CACHED_URL && cusn.hasContent())
-        {
-          CachedUrl cu = (CachedUrl)cusn;
-          if (cuPdf == null && 
-              cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_PDF))
-          {
-            cuPdf = cu;
-          }
-          else if (cuHtml == null && 
-              cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_HTML))
-          {
-            cuHtml = cu;
-          }
-        }
-        cusn = cuIter.next();
+    CachedUrl cuPdf = null;
+    CachedUrl cuHtml = null;
+    for (CachedUrl cu : AuUtil.getCuIterable(sau)) {
+      if (cuPdf == null && 
+	  cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_PDF))
+	{
+	  cuPdf = cu;
+	}
+      else if (cuHtml == null && 
+	       cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_HTML))
+	{
+	  cuHtml = cu;
+	}
+      if (cuPdf != null && cuHtml != null) {
+	break;
       }
-      for (String url : urls) {
-        uc = au.makeUrlCacher(url);
-        if (url.contains("pdf")) {
-          uc.storeContent(cuPdf.getUnfilteredInputStream(), cuPdf.getProperties());
-        }
-        else {
-          uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
-        }
+    }
+    for (String url : urls) {
+      UrlCacher uc = au.makeUrlCacher(url);
+      if (url.contains("pdf")) {
+	uc.storeContent(cuPdf.getUnfilteredInputStream(), cuPdf.getProperties());
+      }
+      else {
+	uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
       }
     }
     

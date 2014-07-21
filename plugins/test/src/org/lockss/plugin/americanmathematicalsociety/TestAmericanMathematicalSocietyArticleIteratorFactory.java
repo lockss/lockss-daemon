@@ -1,5 +1,5 @@
 /*
- * $Id: TestAmericanMathematicalSocietyArticleIteratorFactory.java,v 1.1 2014-03-27 22:21:20 etenbrink Exp $
+ * $Id: TestAmericanMathematicalSocietyArticleIteratorFactory.java,v 1.2 2014-07-21 03:28:30 tlipkis Exp $
  */
 
 /*
@@ -163,16 +163,12 @@ public class TestAmericanMathematicalSocietyArticleIteratorFactory extends Artic
     // Remove some of the URLs just created to make test more robust
     
     int deleted = 0;
-    for (Iterator<?> it = au.getAuCachedUrlSet().contentHashIterator() ; it.hasNext() ; ) {
-      CachedUrlSetNode cusn = (CachedUrlSetNode)it.next();
-      if (cusn instanceof CachedUrl) {
-        CachedUrl cu = (CachedUrl)cusn;
+    for (CachedUrl cu : AuUtil.getCuIterable(au)) {
         String url = cu.getUrl();
         if (url.contains("003.pdf")) {
           deleteBlock(cu);
           ++deleted;
         }
-      }
     }
     assertEquals(1, deleted);
     

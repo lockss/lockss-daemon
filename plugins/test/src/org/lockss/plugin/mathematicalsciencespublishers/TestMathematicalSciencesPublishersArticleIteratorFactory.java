@@ -1,5 +1,5 @@
 /*
- * $Id: TestMathematicalSciencesPublishersArticleIteratorFactory.java,v 1.3 2014-05-19 23:16:47 etenbrink Exp $
+ * $Id: TestMathematicalSciencesPublishersArticleIteratorFactory.java,v 1.4 2014-07-21 03:28:29 tlipkis Exp $
  */
 
 /*
@@ -175,10 +175,7 @@ public class TestMathematicalSciencesPublishersArticleIteratorFactory extends Ar
     //
     // branch1: remove all aspects for 009
     int deleted = 0;
-    for (Iterator it = au.getAuCachedUrlSet().contentHashIterator() ; it.hasNext() ; ) {
-      CachedUrlSetNode cusn = (CachedUrlSetNode)it.next();
-      if (cusn instanceof CachedUrl) {
-        CachedUrl cu = (CachedUrl)cusn;
+    for (CachedUrl cu : AuUtil.getCuIterable(au)) {
         String url = cu.getUrl();
         // branch 1 - all or none
         if (url.contains("-1/")) {
@@ -191,7 +188,6 @@ public class TestMathematicalSciencesPublishersArticleIteratorFactory extends Ar
             ++deleted;
           }
         }
-      }
     }
     assertEquals(3, deleted); // trust me
 

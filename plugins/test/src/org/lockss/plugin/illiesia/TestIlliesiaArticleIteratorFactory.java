@@ -1,5 +1,5 @@
 /* 
- * $Id: TestIlliesiaArticleIteratorFactory.java,v 1.1 2014-02-01 19:09:09 ldoan Exp $
+ * $Id: TestIlliesiaArticleIteratorFactory.java,v 1.2 2014-07-21 03:28:29 tlipkis Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ import org.lockss.daemon.SingleNodeCachedUrlSetSpec;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArticleFiles;
+import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.CachedUrlSet;
 import org.lockss.plugin.CachedUrlSetNode;
@@ -163,18 +164,13 @@ public class TestIlliesiaArticleIteratorFactory
     // Remove some urls: pdf urls ending with 002.pdf and 004.pdf
     // deletedFileCount should be 6
     int deletedFileCount = 0; 
-    for (Iterator it = 
-        au.getAuCachedUrlSet().contentHashIterator() ; it.hasNext() ; ) {
-      CachedUrlSetNode cusn = (CachedUrlSetNode)it.next();
-      if (cusn instanceof CachedUrl) {
-        CachedUrl cu = (CachedUrl)cusn;
+    for (CachedUrl cu : AuUtil.getCuIterable(au)) {
         String url = cu.getUrl();
         log.info("au cached url: " + url);
         if (url.endsWith("002.pdf") || url.endsWith("004.pdf")) {
           deleteBlock(cu);
           ++deletedFileCount;
         }
-      }
     }
     assertEquals(EXP_DELETED_FILE_COUNT, deletedFileCount);
     

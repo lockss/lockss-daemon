@@ -1,5 +1,5 @@
 /*
- * $Id: TestIUMJArticleIteratorFactory.java,v 1.4 2013-10-07 20:23:57 etenbrink Exp $
+ * $Id: TestIUMJArticleIteratorFactory.java,v 1.5 2014-07-21 03:28:29 tlipkis Exp $
  */
 
 /*
@@ -179,52 +179,42 @@ public class TestIUMJArticleIteratorFactory extends ArticleIteratorTestCase {
         BASE_URL + "",
         BASE_URL
     };
-    Iterator<CachedUrlSetNode> cuIter = sau.getAuCachedUrlSet().contentHashIterator();
-    
-    if(cuIter.hasNext()){
-      CachedUrlSetNode cusn = cuIter.next();
-      CachedUrl cuPdf = null;
-      CachedUrl cuHtml = null;
-      CachedUrl cuXml = null;
-      UrlCacher uc;
-      while(cuIter.hasNext() && (cuPdf == null || cuHtml == null || cuXml == null))
-      {
-        if(cusn.getType() == CachedUrlSetNode.TYPE_CACHED_URL && cusn.hasContent())
-        {
-          CachedUrl cu = (CachedUrl)cusn;
-          if (cuPdf == null && 
-              cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_PDF))
-          {
-            cuPdf = cu;
-          }
-          else if (cuHtml == null && 
-              cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_HTML))
-          {
-            cuHtml = cu;
-          }
-          else if (cuXml == null && 
-              cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_XML))
-          {
-            cuXml = cu;
-          }
-        }
-        cusn = cuIter.next();
+    CachedUrl cuPdf = null;
+    CachedUrl cuHtml = null;
+    CachedUrl cuXml = null;
+    for (CachedUrl cu : AuUtil.getCuIterable(sau)) {
+      if (cuPdf == null && 
+	  cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_PDF))
+	{
+	  cuPdf = cu;
+	}
+      else if (cuHtml == null && 
+	       cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_HTML))
+	{
+	  cuHtml = cu;
+	}
+      else if (cuXml == null && 
+	       cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_XML))
+	{
+	  cuXml = cu;
+	}
+      if (cuPdf != null && cuHtml != null && cuXml != null) {
+	break;
       }
-      
-      for (String url : urls) {
-        uc = au.makeUrlCacher(url);
-        if (url.contains("IUMJ/FULLTEXT")) {
-          uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
-        }
-        else if (url.contains("/pdf")) {
-          uc.storeContent(cuPdf.getUnfilteredInputStream(), cuPdf.getProperties());
-        }
-        else if (url.contains("META")) {
-          uc.storeContent(cuXml.getUnfilteredInputStream(), cuXml.getProperties());
-        }
-        else {
-          uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
-        }
+    }
+    for (String url : urls) {
+      UrlCacher uc = au.makeUrlCacher(url);
+      if (url.contains("IUMJ/FULLTEXT")) {
+	uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
+      }
+      else if (url.contains("/pdf")) {
+	uc.storeContent(cuPdf.getUnfilteredInputStream(), cuPdf.getProperties());
+      }
+      else if (url.contains("META")) {
+	uc.storeContent(cuXml.getUnfilteredInputStream(), cuXml.getProperties());
+      }
+      else {
+	uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
       }
     }
     

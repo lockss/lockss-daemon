@@ -138,58 +138,49 @@ public class TestIgiGlobalArticleIteratorFactory extends ArticleIteratorTestCase
         BASE_URL,
         BASE_URL + "gateway"
     };
-    Iterator<CachedUrlSetNode> cuIter = sau.getAuCachedUrlSet().contentHashIterator();
-    
-    if(cuIter.hasNext()){
-      CachedUrlSetNode cusn = cuIter.next();
-      CachedUrl cuPdf = null;
-      CachedUrl cuHtml = null;
-      UrlCacher uc;
-      while(cuIter.hasNext() && (cuPdf == null || cuHtml == null))
-      {
-        if(cusn.getType() == CachedUrlSetNode.TYPE_CACHED_URL && cusn.hasContent())
-        {
-          CachedUrl cu = (CachedUrl)cusn;
-          if (cuPdf == null && 
-              cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_PDF))
-          {
-            cuPdf = cu;
-          }
-          else if (cuHtml == null && 
-              cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_HTML))
-          {
-            cuHtml = cu;
-          }
-        }
-        cusn = cuIter.next();
+    CachedUrl cuPdf = null;
+    CachedUrl cuHtml = null;
+    for (CachedUrl cu : AuUtil.getCuIterable(sau)) {
+      if (cuPdf == null && 
+	  cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_PDF))
+	{
+	  cuPdf = cu;
+	}
+      else if (cuHtml == null && 
+	       cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_HTML))
+	{
+	  cuHtml = cu;
+	}
+      if (cuPdf != null && cuHtml != null) {
+	break;
       }
-      byte[] b = new byte [512];
-      cuHtml.getUnfilteredInputStream().read(b, 0, 350);
-      String landingPage = new String(b);
-      landingPage = landingPage.replace("</BODY>", "xxxx <iframe random=\"stuff\" " +
-          "src=\"/pdf.aspx?tid%3d20212%26ptid%3d464%26ctid%3d3%26t%3dArticle+Title\">" +
-          "xxxx\n</BODY>");
-      for (String url : urls) {
-        uc = au.makeUrlCacher(url);
-        if (url.contains("full-text-html")) {
-          uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
-        }
-        else if (url.contains("articles/full-text-pdf")) {
-          uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
-          url = url.replace("full-text-pdf", "pdf");
-          uc = au.makeUrlCacher(url);
-          uc.storeContent(cuPdf.getUnfilteredInputStream(), cuPdf.getProperties());
-        }
-        else if (url.contains("full-text-pdf")) {
-          uc.storeContent(new ByteArrayInputStream(landingPage.getBytes()),
-              cuHtml.getProperties());
-        }
-        else if (url.contains("/pdf.aspx")) {
-          uc.storeContent(cuPdf.getUnfilteredInputStream(), cuPdf.getProperties());
-        }
-        else if (url.matches(".*gateway/article/[0-9]+$")) {
-          uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
-        }
+    }
+    byte[] b = new byte [512];
+    cuHtml.getUnfilteredInputStream().read(b, 0, 350);
+    String landingPage = new String(b);
+    landingPage = landingPage.replace("</BODY>", "xxxx <iframe random=\"stuff\" " +
+				      "src=\"/pdf.aspx?tid%3d20212%26ptid%3d464%26ctid%3d3%26t%3dArticle+Title\">" +
+				      "xxxx\n</BODY>");
+    for (String url : urls) {
+      UrlCacher uc = au.makeUrlCacher(url);
+      if (url.contains("full-text-html")) {
+	uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
+      }
+      else if (url.contains("articles/full-text-pdf")) {
+	uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
+	url = url.replace("full-text-pdf", "pdf");
+	uc = au.makeUrlCacher(url);
+	uc.storeContent(cuPdf.getUnfilteredInputStream(), cuPdf.getProperties());
+      }
+      else if (url.contains("full-text-pdf")) {
+	uc.storeContent(new ByteArrayInputStream(landingPage.getBytes()),
+			cuHtml.getProperties());
+      }
+      else if (url.contains("/pdf.aspx")) {
+	uc.storeContent(cuPdf.getUnfilteredInputStream(), cuPdf.getProperties());
+      }
+      else if (url.matches(".*gateway/article/[0-9]+$")) {
+	uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
       }
     }
     

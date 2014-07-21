@@ -145,26 +145,20 @@ public class TestMetaPressArticleIteratorFactory extends ArticleIteratorTestCase
                                            
     // get cached url content type and properties from simulated contents
     // for UrclCacher.storeContent()
-    Iterator<CachedUrlSetNode> cuIter = sau.getAuCachedUrlSet().contentHashIterator();
     CachedUrl cuPdf = null;
     CachedUrl cuHtml = null;
-    CachedUrlSetNode cusn;
-    while (cuIter.hasNext()) {
-      cusn = cuIter.next();
-      if (!cusn.hasContent()) {
-        continue;
+    for (CachedUrl cu : AuUtil.getCuIterable(sau)) {
+      if (cuPdf == null 
+	  && cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_PDF)) {
+	//log.info("pdf contenttype: " + cu.getContentType());
+	cuPdf = cu;
+      } else if (cuHtml == null 
+		 && cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_HTML)) {
+	//log.info("html contenttype: " + cu.getContentType());
+	cuHtml = cu;
       }
-      if (cusn.getType() == CachedUrlSetNode.TYPE_CACHED_URL) {
-        CachedUrl cu = (CachedUrl)cusn;
-        if (cuPdf == null 
-            && cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_PDF)) {
-          //log.info("pdf contenttype: " + cu.getContentType());
-          cuPdf = cu;
-        } else if (cuHtml == null 
-            && cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_HTML)) {
-          //log.info("html contenttype: " + cu.getContentType());
-          cuHtml = cu;
-        }
+      if (cuPdf != null && cuHtml != null) {
+	break;
       }
     }
     // store content using cached url content type and properties

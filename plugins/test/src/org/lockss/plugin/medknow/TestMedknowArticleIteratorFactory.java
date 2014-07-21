@@ -151,17 +151,9 @@ public class TestMedknowArticleIteratorFactory extends ArticleIteratorTestCase {
                                            
     // get cached url content type and properties from simulated contents
     // for UrclCacher.storeContent()
-    Iterator<CachedUrlSetNode> cuIter = sau.getAuCachedUrlSet().contentHashIterator();
     CachedUrl cuAbs = null;
     CachedUrl cuPdf = null;
-    CachedUrlSetNode cusn;
-    while (cuIter.hasNext()) {
-      cusn = cuIter.next();
-      if (!cusn.hasContent()) {
-        continue;
-      }
-      if (cusn.getType() == CachedUrlSetNode.TYPE_CACHED_URL) {
-        CachedUrl cu = (CachedUrl)cusn;
+    for (CachedUrl cu : AuUtil.getCuIterable(sau)) {
         if (cuPdf == null 
             && cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_PDF)) {
           //log.info("pdf contenttype: " + cu.getContentType());
@@ -171,7 +163,9 @@ public class TestMedknowArticleIteratorFactory extends ArticleIteratorTestCase {
           // log.info("abs html contenttype: " + cu.getContentType());
           cuAbs = cu;
         }
-      }
+	if (cuPdf != null && cuAbs != null) {
+	  break;
+	}
     }   
     // store content using cached url content type and properties
     UrlCacher uc;

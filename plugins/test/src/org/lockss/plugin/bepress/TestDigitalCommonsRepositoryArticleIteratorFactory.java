@@ -1,5 +1,5 @@
 /* 
- * $Id: TestDigitalCommonsRepositoryArticleIteratorFactory.java,v 1.1 2013-11-19 21:43:08 ldoan Exp $
+ * $Id: TestDigitalCommonsRepositoryArticleIteratorFactory.java,v 1.2 2014-07-21 03:28:30 tlipkis Exp $
  */
 /*
 
@@ -45,6 +45,7 @@ import org.lockss.daemon.SingleNodeCachedUrlSetSpec;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArticleFiles;
+import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.CachedUrlSet;
 import org.lockss.plugin.CachedUrlSetNode;
@@ -156,18 +157,13 @@ public class TestDigitalCommonsRepositoryArticleIteratorFactory
     // "article=002" and "article=004"
     // deletedFileCount should be 2
     int deletedFileCount = 0; 
-    for (Iterator it = 
-        au.getAuCachedUrlSet().contentHashIterator() ; it.hasNext() ; ) {
-      CachedUrlSetNode cusn = (CachedUrlSetNode)it.next();
-      if (cusn instanceof CachedUrl) {
-        CachedUrl cu = (CachedUrl)cusn;
+    for (CachedUrl cu : AuUtil.getCuIterable(au)) {
         String url = cu.getUrl();
         log.info("au cached url: " + url);
         if (url.contains("article=002") || url.contains("article=004")) {
           deleteBlock(cu);
           ++deletedFileCount;
         }
-      }
     }
     assertEquals(EXP_DELETED_FILE_COUNT, deletedFileCount);
     

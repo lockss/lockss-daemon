@@ -1,5 +1,5 @@
 /* 
- * $Id: TestHeterocyclesArticleIteratorFactory.java,v 1.3 2013-11-25 22:47:04 ldoan Exp $
+ * $Id: TestHeterocyclesArticleIteratorFactory.java,v 1.4 2014-07-21 03:28:30 tlipkis Exp $
  */
 
 /*
@@ -46,6 +46,7 @@ import org.lockss.daemon.SingleNodeCachedUrlSetSpec;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArticleFiles;
+import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.CachedUrlSet;
 import org.lockss.plugin.CachedUrlSetNode;
@@ -188,11 +189,7 @@ public class TestHeterocyclesArticleIteratorFactory
     // http://www.example.com/clockss/libraries/fulltext/11111/87/3001
     // http://www.example.com/clockss/libraries/fulltext/11111/87/4001
     int deletedFileCount = 0; 
-    for (Iterator it = 
-        au.getAuCachedUrlSet().contentHashIterator() ; it.hasNext() ; ) {
-      CachedUrlSetNode cusn = (CachedUrlSetNode)it.next();
-      if (cusn instanceof CachedUrl) {
-        CachedUrl cu = (CachedUrl)cusn;
+    for (CachedUrl cu : AuUtil.getCuIterable(au)) {
         String url = cu.getUrl();
         log.info("au cached url: " + url);
         if ((url.contains("/fulltext/") && url.endsWith("1")) 
@@ -200,7 +197,6 @@ public class TestHeterocyclesArticleIteratorFactory
           deleteBlock(cu);
           ++deletedFileCount;
         }
-      }
     }
     assertEquals(EXP_DELETED_FILE_COUNT, deletedFileCount);
     

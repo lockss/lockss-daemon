@@ -1,5 +1,5 @@
 /*
- * $Id: TestGeorgThiemeVerlagArticleIteratorFactory.java,v 1.7 2014-04-18 20:29:06 etenbrink Exp $
+ * $Id: TestGeorgThiemeVerlagArticleIteratorFactory.java,v 1.8 2014-07-21 03:28:30 tlipkis Exp $
  */
 
 /*
@@ -171,43 +171,33 @@ public class TestGeorgThiemeVerlagArticleIteratorFactory extends ArticleIterator
         BASE_URL,
         BASE_URL + "ejournals"
     };
-    Iterator<CachedUrlSetNode> cuIter = sau.getAuCachedUrlSet().contentHashIterator();
-    
-    if(cuIter.hasNext()){
-      CachedUrlSetNode cusn = cuIter.next();
-      CachedUrl cuPdf = null;
-      CachedUrl cuHtml = null;
-      UrlCacher uc;
-      while(cuIter.hasNext() && (cuPdf == null || cuHtml == null))
-      {
-        if(cusn.getType() == CachedUrlSetNode.TYPE_CACHED_URL && cusn.hasContent())
-        {
-          CachedUrl cu = (CachedUrl)cusn;
-          if (cuPdf == null && 
-              cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_PDF))
-          {
-            cuPdf = cu;
-          }
-          else if (cuHtml == null && 
-              cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_HTML))
-          {
-            cuHtml = cu;
-          }
-        }
-        cusn = cuIter.next();
+    CachedUrl cuPdf = null;
+    CachedUrl cuHtml = null;
+    for (CachedUrl cu : AuUtil.getCuIterable(sau)) {
+      if (cuPdf == null && 
+	  cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_PDF))
+	{
+	  cuPdf = cu;
+	}
+      else if (cuHtml == null && 
+	       cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_HTML))
+	{
+	  cuHtml = cu;
+	}
+      if (cuPdf != null && cuHtml != null) {
+	break;
       }
-      
-      for (String url : urls) {
-        uc = au.makeUrlCacher(url);
-        if (url.contains("html")) {
-          uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
-        }
-        else if (url.contains("pdf")) {
-          uc.storeContent(cuPdf.getUnfilteredInputStream(), cuPdf.getProperties());
-        }
-        else if (url.contains("abstract")) {
-          uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
-        }
+    }
+    for (String url : urls) {
+      UrlCacher uc = au.makeUrlCacher(url);
+      if (url.contains("html")) {
+	uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
+      }
+      else if (url.contains("pdf")) {
+	uc.storeContent(cuPdf.getUnfilteredInputStream(), cuPdf.getProperties());
+      }
+      else if (url.contains("abstract")) {
+	uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
       }
     }
     

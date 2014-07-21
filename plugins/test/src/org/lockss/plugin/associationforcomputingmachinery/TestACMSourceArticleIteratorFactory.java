@@ -1,4 +1,4 @@
-/* $Id: TestACMSourceArticleIteratorFactory.java,v 1.1 2014-02-07 15:32:40 aishizaki Exp $
+/* $Id: TestACMSourceArticleIteratorFactory.java,v 1.2 2014-07-21 03:28:30 tlipkis Exp $
 
 Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -135,11 +135,7 @@ public class TestACMSourceArticleIteratorFactory extends ArticleIteratorTestCase
     int xmlCount = 0;
     int htmlCount = 0;
     int pdfCount = 0;
-    for (Iterator it = au.getAuCachedUrlSet().contentHashIterator() ; 
-        it.hasNext() ; ) {
-      CachedUrlSetNode cusn = (CachedUrlSetNode)it.next();
-      if (cusn instanceof CachedUrl) {
-        CachedUrl cu = (CachedUrl)cusn;
+    for (CachedUrl cu : AuUtil.getCuIterable(au)) {
         String url = cu.getUrl();
         log.info("url: " + url);
         if (url.contains("/NEW-MAG-QUEUE-V9I7-2001562/")) {
@@ -151,7 +147,6 @@ public class TestACMSourceArticleIteratorFactory extends ArticleIteratorTestCase
         } else if (url.endsWith(".pdf")) {
           pdfCount++;
         }
-     }
     }
     //log.info("Article count is " + count);
     log.info("xml count is " + xmlCount);

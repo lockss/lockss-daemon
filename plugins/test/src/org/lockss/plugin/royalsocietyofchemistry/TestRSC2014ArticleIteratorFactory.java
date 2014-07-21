@@ -1,5 +1,5 @@
 /*
- * $Id: TestRSC2014ArticleIteratorFactory.java,v 1.1 2014-05-07 01:00:16 etenbrink Exp $
+ * $Id: TestRSC2014ArticleIteratorFactory.java,v 1.2 2014-07-21 03:28:28 tlipkis Exp $
  */
 
 /*
@@ -187,10 +187,7 @@ public class TestRSC2014ArticleIteratorFactory extends ArticleIteratorTestCase {
     // Remove some of the URLs just created to make test more robust
     
     int deleted = 0;
-    for (Iterator<?> it = au.getAuCachedUrlSet().contentHashIterator() ; it.hasNext() ; ) {
-      CachedUrlSetNode cusn = (CachedUrlSetNode)it.next();
-      if (cusn instanceof CachedUrl) {
-        CachedUrl cu = (CachedUrl)cusn;
+    for (CachedUrl cu : AuUtil.getCuIterable(au)) {
         String url = cu.getUrl();
         if (url.contains("en/content/articlelanding/2013/an/S-002")) {
           deleteBlock(cu);
@@ -208,7 +205,6 @@ public class TestRSC2014ArticleIteratorFactory extends ArticleIteratorTestCase {
           deleteBlock(cu);
           ++deleted;
         }
-      }
     }
     assertEquals(4, deleted);
     

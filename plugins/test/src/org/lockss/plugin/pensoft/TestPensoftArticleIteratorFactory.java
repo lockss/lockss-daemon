@@ -1,4 +1,4 @@
-/* $Id: TestPensoftArticleIteratorFactory.java,v 1.3 2013-03-20 22:03:27 aishizaki Exp $  */
+/* $Id: TestPensoftArticleIteratorFactory.java,v 1.4 2014-07-21 03:28:28 tlipkis Exp $  */
 /*
 
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
@@ -145,40 +145,31 @@ public class TestPensoftArticleIteratorFactory extends ArticleIteratorTestCase {
         BASE_URL + "journals/PR0/article/123456.pdf",
         BASE_URL + "journals/PR0/article/680159.pdf",
     };
-    Iterator<CachedUrlSetNode> cuIter = sau.getAuCachedUrlSet().contentHashIterator();
-    
-    if(cuIter.hasNext()){
-            CachedUrlSetNode cusn = cuIter.next();
-            CachedUrl cuPdf = null;
-            CachedUrl cuHtml = null;
-            UrlCacher uc;
-            while(cuIter.hasNext() && (cuPdf == null || cuHtml == null))
-                {
-                if(cusn.getType() == CachedUrlSetNode.TYPE_CACHED_URL && cusn.hasContent())
-                {
-                        CachedUrl cu = (CachedUrl)cusn;
-                        if(cuPdf == null && cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_PDF))
-                        {
-                                cuPdf = cu;
-                        }
-                        else if (cuHtml == null && cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_HTML))
-                        {
-                                cuHtml = cu;
-                        }
-                }
-                cusn = cuIter.next();
-                }
-            for(String url : urls)
-            {
-                    uc = au.makeUrlCacher(url);
-                    if(url.contains("pdf")){
-                        uc.storeContent(cuPdf.getUnfilteredInputStream(), cuPdf.getProperties());
-                    }
-                    else if(url.contains("full") || url.contains("ris")){
-                        uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
-                    }
-            }
+    CachedUrl cuPdf = null;
+    CachedUrl cuHtml = null;
+    for (CachedUrl cu : AuUtil.getCuIterable(sau)) {
+      if(cuPdf == null && cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_PDF))
+	{
+	  cuPdf = cu;
+	}
+      else if (cuHtml == null && cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_HTML))
+	{
+	  cuHtml = cu;
+	}
+      if (cuPdf != null && cuHtml != null) {
+	break;
+      }
     }
+    for(String url : urls)
+      {
+	UrlCacher uc = au.makeUrlCacher(url);
+	if(url.contains("pdf")){
+	  uc.storeContent(cuPdf.getUnfilteredInputStream(), cuPdf.getProperties());
+	}
+	else if(url.contains("full") || url.contains("ris")){
+	  uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
+	}
+      }
     /*
 
      */  
