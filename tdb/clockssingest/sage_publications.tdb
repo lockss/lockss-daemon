@@ -3406,14 +3406,14 @@
   {
 
     title <
-      name = Big Data and Society ;
+      name = Big Data & Society ;
       eissn = 2053-9517 ;
       issnl = 2053-9517
     >
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://bds.sagepub.com/
 
-      au < exists ; exists ; 2014 ; Big Data and Society Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2014 ; Big Data & Society Volume 1 ; 1 ; >
 
   }
 
@@ -6122,7 +6122,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://cme.sagepub.com/
 
-      au < exists ; exists ; 2014 ; Contemporary Review of the Middle East Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2014 ; Contemporary Review of the Middle East Volume 1 ; 1 ; >
 
     }
 
@@ -27919,6 +27919,7 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
+      comment[notReady] = link in manifest page incorrect
 
       au < manifest ; exists ; 1982-1983 ; Nutrition and Health Volume 1 ; 1 ; >
       au < manifest ; exists ; 1983 ; Nutrition and Health Volume 2 ; 2 ; >
@@ -27941,7 +27942,7 @@
       au < finished ; frozen ; 2007-2008 ; Nutrition and Health Volume 19 ; 19 ; >
       au < zapped ; finished ; 2009-2011 ; Nutrition and Health Volume 20 ; 20 ; >
       au < finished ; crawling ; 2012 ; Nutrition and Health Volume 21 ; 21 ; >
-      au < exists ; exists ; 2013 ; Nutrition and Health Volume 22 ; 22 ; >
+      au < notReady ; exists ; 2013 ; Nutrition and Health Volume 22 ; 22 ; >
       au < expected ; exists ; 2014 ; Nutrition and Health Volume 23 ; 23 ; >
 
     }
@@ -39522,7 +39523,7 @@
       au < crawling ; exists ; 2011 ; Australian Journal of Education Volume 55 ; 55 ; >
       au < finished ; frozen ; 2012 ; Australian Journal of Education Volume 56 ; 56 ; >
       au < crawling ; exists ; 2013 ; Australian Journal of Education Volume 57 ; 57 ; >
-      au < expected ; exists ; 2014 ; Australian Journal of Education Volume 58 ; 58 ; >
+      au < manifest ; exists ; 2014 ; Australian Journal of Education Volume 58 ; 58 ; >
 
     }
 

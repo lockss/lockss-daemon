@@ -59,6 +59,7 @@
       title <
         name = Cahiers Élisabéthains ;
         issn = 0184-7678 ;
+        eissn = 2054-4715 ;
         issnl = 0184-7678
       >
       
@@ -74,11 +75,10 @@
      au < crawling ; exists ; 2012 ; Cahiers Élisabéthains Volume 82 ; 82 >
      au < crawling ; exists ; 2013 ; Cahiers Élisabéthains Volume 83 ; 83 >
      au < ready ; exists ; 2013 ; Cahiers Élisabéthains Volume 84 ; 84 >
-     au < expected ; exists ; 2014 ; Cahiers Élisabéthains Volume 85 ; 85 >
+     au < manifest ; exists ; 2014 ; Cahiers Élisabéthains Volume 85 ; 85 >
      au < expected ; exists ; 2014 ; Cahiers Élisabéthains Volume 86 ; 86 >
     
     }
-    
     
     {
 
@@ -102,7 +102,6 @@
      au < manifest ; exists ; 2014 ; Critical Studies in Television: Scholarly Studies in Small Screen Fictions Volume 9 ; 9 >
 
     }
- 
  
     {
 
@@ -134,7 +133,6 @@
 
     }
 
-
     {
 
     title <
@@ -165,7 +163,6 @@
 
     }
 
-
     {
 
     title <
@@ -179,7 +176,6 @@
      param[journal_issn] = 1748-1325
 
     }
-
 
     {
 
@@ -211,7 +207,6 @@
     
     }
 
-
     {
 
     title <
@@ -234,7 +229,6 @@
      au < expected ; exists ; 2014 ; Irish Economic and Social History Volume 41 ; 41 >
 
     }
-
 
     {
 
@@ -282,7 +276,6 @@
    
     }
 
-
     {
 
     title <
@@ -313,7 +306,6 @@
     
     }
 
-
     {
 
     title <
@@ -343,7 +335,6 @@
      au < manifest ; exists ; 2014 ; Literature & History Volume 23 ; 23 >
 
     }
-
 
     {
     title <
@@ -463,7 +454,6 @@
     }
 
   }
-
 
   
   {

@@ -1596,7 +1596,7 @@
         param[journal_issn] = 2196-064X 
         comment[platform] = BioMedCentralPlugin
   
-        au < exists ; exists ; 2014 ; Journal of Trust Management Volume 1 ; 1 >
+        au < manifest ; exists ; 2014 ; Journal of Trust Management Volume 1 ; 1 >
   
     }
   
@@ -1714,7 +1714,7 @@
         au < manifest ; exists ; 2011 ; Multilingual Education Volume 1 ; 1 >
         au < manifest ; exists ; 2012 ; Multilingual Education Volume 2 ; 2 >
         au < manifest ; exists ; 2013 ; Multilingual Education Volume 3 ; 3 >
-        au < expected ; exists ; 2014 ; Multilingual Education Volume 4 ; 4 >
+        au < manifest ; exists ; 2014 ; Multilingual Education Volume 4 ; 4 >
   
     }
 
@@ -1921,7 +1921,7 @@
         param[journal_issn] = 2197-9847
         comment[platform] = BioMedCentralPlugin
 
-        au < exists ; exists ; 2014 ; Research in the Mathematical Sciences Volume 1 ; 1 >
+        au < manifest ; exists ; 2014 ; Research in the Mathematical Sciences Volume 1 ; 1 >
 
     }
 
