@@ -1,5 +1,5 @@
 /*
- * $Id: ListUtil.java,v 1.15 2011-08-19 10:36:19 easyonthemayo Exp $
+ * $Id: ListUtil.java,v 1.16 2014-07-21 03:16:39 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -268,6 +268,15 @@ public class ListUtil {
     List l = list();
     while (iterator.hasNext()) {
       l.add(iterator.next());
+    }
+    return l;
+  }
+
+  /** Create a list containing the elements from an Iterable */
+  public static List fromIterable(Iterable iterable) {
+    List l = list();
+    for (Object o : iterable) {
+      l.add(o);
     }
     return l;
   }

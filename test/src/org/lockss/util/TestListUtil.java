@@ -1,5 +1,5 @@
 /*
- * $Id: TestListUtil.java,v 1.9 2007-05-10 23:42:20 tlipkis Exp $
+ * $Id: TestListUtil.java,v 1.10 2014-07-21 03:16:39 tlipkis Exp $
  */
 
 /*
@@ -58,6 +58,11 @@ public class TestListUtil extends LockssTestCase {
     String arr[] = {"1", "2", "4"};
     assertEquals(ListUtil.fromArray(arr),
 		 ListUtil.fromIterator(new ArrayIterator(arr)));
+  }
+
+  public void testFromIteratable() {
+    List lst = ListUtil.list("1", "2", "4");
+    assertEquals(lst, ListUtil.fromIterable(lst));
   }
 
   public void testFromCSV() {
