@@ -340,7 +340,8 @@
    title <
      name = Demonstrating Philosophy ;
      isbn13 = 978-0-8191-7198-6 ;
-     isbn10 = 0-8191-7199-0
+     isbn10 = 0-8191-7199-0 ;
+     type = book
    >
    
     param[journal_id] = demphil
@@ -762,7 +763,8 @@
  
    title <
      name = Letters of Francis William Newman, Chiefly on Religion ;
-     isbn13 = 978-1-889680-76-7
+     isbn13 = 978-1-889680-76-7 ;
+     type = book
    >
    
     param[journal_id] = lettersfwn
@@ -1195,7 +1197,8 @@
  
    title <
      name = The Proceedings of the Twentieth World Congress of Philosophy ;
-     isbn13 = 978-1-889680-19-4
+     isbn13 = 978-1-889680-19-4 ; 
+     type = book
    >
    
     param[journal_id] = wcp20
@@ -1207,7 +1210,8 @@
  
    title <
      name = The Proceedings of the Twenty-First World Congress of Philosophy ;
-     isbn13 = 978-975-7748-34-2
+     isbn13 = 978-975-7748-34-2 ; 
+     type = book
    >
    
     param[journal_id] = wcp21
@@ -1220,7 +1224,8 @@
    title <
      name = Proceedings of the XXII World Congress of Philosophy ;
      isbn13 = 978-1-889680-92-7 ;
-     isbn10 = 1-889680-92-3
+     isbn10 = 1-889680-92-3 ; 
+     type = book
    >
    
     param[journal_id] = wcp22
@@ -1484,7 +1489,8 @@
    title <
      name = Spiritual Goods: Faith Traditions and the Practice of Business ;
      isbn13 = 978-1-889680-21-7 ;
-     isbn10 = 1-889680-21-4
+     isbn10 = 1-889680-21-4 ; 
+     type = book
    >
    
     param[journal_id] = spiritgds
@@ -1568,7 +1574,8 @@
    title <
      name = Teaching New Histories of Philosophy ;
      isbn13 = 978-0-9763726-0-8 ;
-     isbn10 = 0-9763726-0-6
+     isbn10 = 0-9763726-0-6 ; 
+     type = book
    >
    
     param[journal_id] = tnhp
@@ -1592,7 +1599,8 @@
    title <
      name = Teaching Philosophy Today ;
      isbn13 = 978-1-889680-91-0 ;
-     isbn10 = 1-889680-91-5
+     isbn10 = 1-889680-91-5 ; 
+     type = book
    >
    
     param[journal_id] = tptoday
@@ -1662,7 +1670,8 @@
  
    title <
      name = The Works of Francis William Newman on Religion ;
-     isbn13 = 978-1-889680-75-0
+     isbn13 = 978-1-889680-75-0 ; 
+     type = book
    >
    
     param[journal_id] = worksfwn
