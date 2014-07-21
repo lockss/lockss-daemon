@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrl.java,v 1.54 2014-07-11 23:35:24 tlipkis Exp $
+ * $Id: MockCachedUrl.java,v 1.55 2014-07-21 03:16:58 tlipkis Exp $
  */
 
 /*
@@ -136,17 +136,17 @@ public class MockCachedUrl implements CachedUrl {
     return version;
   }
   
-  public CachedUrl addVersion(String content) {
+  public MockCachedUrl addVersion(String content) {
     // Special case: If this is the first version, alias for 'addContent'
     if (this.content == null) {
       this.content = content;
       return this;
     } else {
-      MockCachedUrl cus = new MockCachedUrl(url, au);
-      cus.content = content;
-      cus.version = versions.size() + 1;
-      versions.add(cus);
-      return cus;
+      MockCachedUrl mcu = new MockCachedUrl(url, au);
+      mcu.content = content;
+      mcu.version = versions.size() + 1;
+      versions.add(mcu);
+      return mcu;
     }
   }
 
