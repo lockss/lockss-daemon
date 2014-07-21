@@ -1,5 +1,5 @@
 /*
- * $Id: CuContentIterator.java,v 1.1 2014-07-21 03:16:14 tlipkis Exp $
+ * $Id: CuContentIterator.java,v 1.2 2014-07-21 19:26:21 tlipkis Exp $
  */
 
 /*
@@ -102,7 +102,7 @@ public class CuContentIterator extends CuIterator {
   protected boolean isIncluded(CachedUrl cu) {
     if (getOptions().isIncludedOnly() &&
 	!cu.getArchivalUnit().shouldBeCached(cu.getUrl())) {
-      log.critical("Excluding " + cu.getUrl());
+      log.debug("Excluding " + cu.getUrl());
       return false;
     }
     if (getCrawlManager(cu) != null &&
