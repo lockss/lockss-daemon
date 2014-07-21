@@ -151,7 +151,7 @@
     au < finished ; frozen ; 2010 ; Emerging Health Threats Journal Volume 3 ; 3 ; 2010 >
     au < finished ; frozen ; 2011 ; Emerging Health Threats Journal [including Supplements] Volume 4 ; 4 ; 2011 >
     au < finished ; frozen ; 2012 ; Emerging Health Threats Journal [including Supplements] Volume 5 ; 5 ; 2012 >
-    au < ready ; exists ; 2013 ; Emerging Health Threats Journal [including Supplements] Volume 6 ; 6 ; 2013 >
+    au < crawling ; exists ; 2013 ; Emerging Health Threats Journal [including Supplements] Volume 6 ; 6 ; 2013 >
     au < manifest ; exists ; 2014 ; Emerging Health Threats Journal [including Supplements] Volume 7 ; 7 ; 2014 >
 
   } 
@@ -335,7 +335,7 @@
     au < finished ; crawling ; 2010 ; International Journal of Qualitative Studies on Health and Well-being Volume 5 ; 5 ; 2010 >
     au < finished ; crawling ; 2011 ; International Journal of Qualitative Studies on Health and Well-being Volume 6 ; 6 ; 2011 >
     au < finished ; frozen ; 2012 ; International Journal of Qualitative Studies on Health and Well-being Volume 7 ; 7 ; 2012 >
-    au < ready ; exists ; 2013 ; International Journal of Qualitative Studies on Health and Well-being Volume 8 ; 8 ; 2013 >
+    au < crawling ; exists ; 2013 ; International Journal of Qualitative Studies on Health and Well-being Volume 8 ; 8 ; 2013 >
     au < manifest ; exists ; 2014 ; International Journal of Qualitative Studies on Health and Well-being Volume 9 ; 9 ; 2014 >
   }
 
@@ -354,7 +354,7 @@
     au < finished ; crawling ; 2010 ; Journal of Aesthetics & Culture Volume 2 ; 2 ; 2010 >
     au < finished ; crawling ; 2011 ; Journal of Aesthetics & Culture Volume 3 ; 3 ; 2011 >
     au < finished ; frozen ; 2012 ; Journal of Aesthetics & Culture Volume 4 ; 4 ; 2012 >
-    au < ready ; exists ; 2013 ; Journal of Aesthetics & Culture Volume 5 ; 5 ; 2013 >
+    au < crawling ; exists ; 2013 ; Journal of Aesthetics & Culture Volume 5 ; 5 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Aesthetics & Culture Volume 6 ; 6 ; 2014 >
   }
 
@@ -388,7 +388,7 @@
     param[journal_id] = jecme
 
     au < manifest ; exists ; 2012 ; Journal of European Continuing Medical Education Volume 1 ; 1 ; 2012 >
-    au < ready ; exists ; 2013 ; Journal of European Continuing Medical Education Volume 2 ; 2 ; 2013 >
+    au < crawling ; exists ; 2013 ; Journal of European Continuing Medical Education Volume 2 ; 2 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of European Continuing Medical Education Volume 3 ; 3 ; 2014 >
 
   }
@@ -527,7 +527,7 @@
       au < finished ; crawling ; 2010 ; Medical Education Online Volume 15 ; 15 ; 2010 >
       au < finished ; crawling ; 2011 ; Medical Education Online Volume 16 ; 16 ; 2011 >
       au < finished ; frozen ; 2012 ; Medical Education Online Volume 17 ; 17 ; 2012 >
-      au < ready ; exists ; 2013 ; Medical Education Online Volume 18 ; 18 ; 2013 >
+      au < crawling ; exists ; 2013 ; Medical Education Online Volume 18 ; 18 ; 2013 >
       au < manifest ; exists ; 2014 ; Medical Education Online Volume 19 ; 19 ; 2014 >
       
     }
@@ -569,7 +569,7 @@
     au < finished ; frozen ; 2009 ; Microbial Ecology in Health and Disease Volume 21 ; 21 ; 2009 >
     au < finished ; frozen ; 2011 ; Microbial Ecology in Health and Disease Volume 22 ; 22 ; 2011 >
     au < finished ; crawling ; 2012 ; Microbial Ecology in Health and Disease Volume 23 ; 23 ; 2012 >
-    au < ready ; exists ; 2013 ; Microbial Ecology in Health and Disease Volume 24 ; 24 ; 2013 >
+    au < crawling ; exists ; 2013 ; Microbial Ecology in Health and Disease Volume 24 ; 24 ; 2013 >
     au < manifest ; exists ; 2014 ; Microbial Ecology in Health and Disease Volume 25 ; 25 ; 2014 >
   }
 
@@ -752,7 +752,7 @@
 
     au < finished ; frozen ; 2011 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 1 ; 1 ; 2011 >
     au < finished ; crawling ; 2012 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 2 ; 2 ; 2012 >
-    au < ready ; exists ; 2013 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 3 ; 3 ; 2013 >
+    au < crawling ; exists ; 2013 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 3 ; 3 ; 2013 >
     au < manifest ; exists ; 2014 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 4 ; 4 ; 2014 >
 
   }
@@ -899,7 +899,7 @@
     au < finished ; frozen ; 2010 ; Vulnerable Groups & Inclusion Volume 1 ; 1 ; 2010 >
     au < finished ; frozen ; 2011 ; Vulnerable Groups & Inclusion Volume 2 ; 2 ; 2011 >
     au < finished ; frozen ; 2012 ; Vulnerable Groups & Inclusion Volume 3 ; 3 ; 2012 >
-    au < ready ; exists ; 2013 ; Vulnerable Groups & Inclusion Volume 4 ; 4 ; 2013 >
+    au < crawling ; exists ; 2013 ; Vulnerable Groups & Inclusion Volume 4 ; 4 ; 2013 >
     au < manifest ; exists ; 2014 ; Vulnerable Groups & Inclusion Volume 5 ; 5 ; 2014 >
   }
 
