@@ -1,5 +1,5 @@
 /*
- * $Id: AuUtil.java,v 1.45 2014-07-11 23:33:13 tlipkis Exp $
+ * $Id: AuUtil.java,v 1.46 2014-07-21 03:20:38 tlipkis Exp $
  */
 
 /*
@@ -67,11 +67,33 @@ public class AuUtil {
   private static final int DEFAULT_POLL_PROTOCOL_VERSION =
     Poll.V3_PROTOCOL;
 
+  /** The maximum number of CachedUrl versions to search to find the
+   * earliert, in order to extract the earliest fetch time.
+   */
+  public static final String PARAM_EARLIEST_VERSION_SEARCH_MAX =
+    Configuration.PREFIX + "plugin.earliestVersionSearchMax";
+  private static final int DEFAULT_EARLIEST_VERSION_SEARCH_MAX = 100;
+
   // The parser of the formatted date in the CU property 'Date'.
   // SimpleDateFormat is not thread-safe, so this member requires synchronized
   // access.
   private static DateFormat CU_PROPERTY_DATE_PARSER =
       new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss zzz");
+
+  private static int earliestVersionSearchMax =
+    DEFAULT_EARLIEST_VERSION_SEARCH_MAX;
+
+  /** Called by org.lockss.config.MiscConfig
+   */
+  public static void setConfig(Configuration config,
+                               Configuration oldConfig,
+                               Configuration.Differences diffs) {
+    if (diffs.contains(PARAM_EARLIEST_VERSION_SEARCH_MAX)) {
+      earliestVersionSearchMax =
+	config.getInt(PARAM_EARLIEST_VERSION_SEARCH_MAX,
+		      DEFAULT_EARLIEST_VERSION_SEARCH_MAX);
+    }
+  }
 
   public static LockssDaemon getDaemon(ArchivalUnit au) {
     return au.getPlugin().getDaemon();
@@ -85,6 +107,26 @@ public class AuUtil {
   public static AuState getAuState(ArchivalUnit au) {
     NodeManager nodeManager = getDaemon(au).getNodeManager(au);
     return nodeManager.getAuState();
+  }
+
+  /**
+   * Convenience method to return a {@link CuIterable? over the {@link
+   * CachedUrl}s in the AU.
+   * @param au the AU
+   * @return a CuIterable
+   */
+  public static CuIterable getCuIterable(ArchivalUnit au) {
+    return au.getAuCachedUrlSet().getCuIterable();
+  }
+
+  /**
+   * Convenience method to return a {@link CuIterator? over the {@link
+   * CachedUrl}s in the AU.
+   * @param au the AU
+   * @return a CuIterator
+   */
+  public static CuIterator getCuIterator(ArchivalUnit au) {
+    return au.getAuCachedUrlSet().getCuIterator();
   }
 
   /**
@@ -755,12 +797,18 @@ public class AuUtil {
 
       // Check whether it is not a member of an archive.
       if (!cachedUrl.isArchiveMember()) {
-	// Yes: Get the first version of the cached URL.
-	cachedUrl = cachedUrl.getCuVersion(1);
+	// Yes: Get the earlist version of the cached URL.
+	// If this is version 1 don't need to check for earlier version.
+	if (cachedUrl.getVersion() != 1) {
+	  // XXX There's no good way to do this because the array is sorted
+	  // most to least recent.  Must limit the number of versions
+	  // returned for sanity, but might not get earliest
+	  CachedUrl[] vers = cachedUrl.getCuVersions(earliestVersionSearchMax);
+	  cachedUrl = vers[vers.length - 1];
+	}
 	if (log.isDebug3())
 	  log.debug3(DEBUG_HEADER + "cachedUrl = " + cachedUrl);
       }
-
       // Get its properties.
       CIProperties cuProperties = cachedUrl.getProperties();
       if (log.isDebug3())

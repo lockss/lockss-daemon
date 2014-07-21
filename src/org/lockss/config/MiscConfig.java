@@ -1,5 +1,5 @@
 /*
- * $Id: MiscConfig.java,v 1.13 2014-05-28 00:16:27 tlipkis Exp $
+ * $Id: MiscConfig.java,v 1.14 2014-07-21 03:20:38 tlipkis Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.config;
 
 import org.lockss.daemon.*;
+import org.lockss.plugin.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.servlet.*;
@@ -54,6 +55,7 @@ public class MiscConfig {
 	  UrlUtil.setConfig(config, oldConfig, diffs);
 	  StringPool.setConfig(config, oldConfig, diffs);
 	  PluginUtil.setConfig(config, oldConfig, diffs);
+	  AuUtil.setConfig(config, oldConfig, diffs);
 	  ServletUtil.setConfig(config, oldConfig, diffs);
 	  ExpertConfig.setConfig(config, oldConfig, diffs);
 	  MimeTypeMap.setConfig(config, oldConfig, diffs);

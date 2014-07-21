@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuUtil.java,v 1.25 2014-07-11 23:33:13 tlipkis Exp $
+ * $Id: TestAuUtil.java,v 1.26 2014-07-21 03:20:38 tlipkis Exp $
  */
 
 /*
@@ -538,18 +538,36 @@ public class TestAuUtil extends LockssTestCase {
   }
 
   public void testGetUrlFetchTime() throws IOException {
-    String url = "http://foo/";
+    String url1 = "http://foo/one";
+    String url2 = "http://foo/two";
+    // No fetch time stored
     MockArchivalUnit mau = new MockArchivalUnit();
+    mau.addUrl(url1, "c1");
 
-    long fetchTime = AuUtil.getUrlFetchTime(mau, url);
-    assertEquals(0L, fetchTime);
+    assertEquals(0L, AuUtil.getUrlFetchTime(mau, url1));
 
-    setUpDiskPaths();
-    LocalMockArchivalUnit mau2 = new LocalMockArchivalUnit(mbp);
-    getMockLockssDaemon().getNodeManager(mau2).startService();
+    // Test the precedence of date properties
+    MockCachedUrl mcu2 = mau.addUrl(url2, true, true);
+    mcu2.setProperty("date", "Fri, 10 Sep 2004 09:43:40 GMT");
+    assertEquals(1094809420000L, AuUtil.getUrlFetchTime(mau, url2));
 
-    fetchTime = AuUtil.getUrlFetchTime(mau2, url);
-    assertEquals(0L, fetchTime);
+    mcu2.setProperty("X_Lockss-server-date", "33333");
+    assertEquals(33333L, AuUtil.getUrlFetchTime(mau, url2));
+
+    mcu2.setProperty("X-Lockss-Orig-X_Lockss-server-date", "1234555");
+    assertEquals(1234555L, AuUtil.getUrlFetchTime(mau, url2));
+
+    mcu2.setProperty("X-Lockss-Orig-X_Lockss-server-date", "");
+    assertEquals(33333L, AuUtil.getUrlFetchTime(mau, url2));
+
+    // Add some versions.  MockCachedUrl returns them in the order added,
+    // contrary to real repository nodes, so we check for the last one
+    // added.
+    MockCachedUrl mcu2a = mcu2.addVersion("ver 1");
+    mcu2a.setProperty("X-Lockss-Orig-X_Lockss-server-date", "321321321");
+    MockCachedUrl mcu2b = mcu2.addVersion("ver 2");
+    mcu2b.setProperty("X-Lockss-Orig-X_Lockss-server-date", "88886666");
+    assertEquals(88886666L, AuUtil.getUrlFetchTime(mau, url2));
   }
 
   private static class LocalMockArchivalUnit extends MockArchivalUnit {
