@@ -2324,13 +2324,13 @@
   {
 
     title <
-      name = Materials Research Express
+      name = Materials Research Express ;
+      eissn = 2053-1591
     >
     
-    comment[new] = coming out in 2014
-    param[journal_issn] = Z
+    param[journal_issn] = 2053-1591
 
-    au < expected ; exists ; 2014 ; Materials Research Express Volume 1 ; 1 > 
+    au < exists ; exists ; 2014 ; Materials Research Express Volume 1 ; 1 > 
 
   }
 
