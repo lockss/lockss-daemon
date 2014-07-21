@@ -9,6 +9,9 @@
   plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
   param[base_url] = http://digitalcommons.pace.edu/ 
   implicit < status ; status2 ; year ; name ; param[volume] >
+  
+  comment[doNotInclude] = Pace International Law Review Online Companion. See RT ticket 3743 and roundup issue 3679. http://digitalcommons.pace.edu/pilronline/
+  
 
   {
 
@@ -59,7 +62,7 @@
       name = Pace Environmental Law Review Online Companion
     >
 
-    comment[issn] = requested in RT ticket 3743
+    comment[issn] = requested in RT ticket 3743. No issn
     param[journal_abbr] = pelroc
 
     au < finished ; crawling ; 2011 ; Pace Environmental Law Review Online Companion Volume 1 ; 1 >
@@ -104,17 +107,6 @@
     au < finished ; crawling ; 2012 ; Pace International Law Review Volume 24 ; 24 >
     au < crawling ; exists ; 2013 ; Pace International Law Review Volume 25 ; 25 >
     au < manifest ; exists ; 2014 ; Pace International Law Review Volume 26 ; 26 >
-
-  }
-
-  {
-
-    title <
-      name = Pace International Law Review Online Companion 
-    >
-   
-    comment[scope] = not included -- see RT ticket 3743 and roundup issue 3679
-    comment[url] = http://digitalcommons.pace.edu/pilronline/
 
   }
 
@@ -167,7 +159,8 @@
   {
 
     title <
-      name = Pace I.P., Sports & Entertainment Law Forum
+      name = Pace I.P., Sports & Entertainment Law Forum ;
+      eissn = 2329-9894
     >
 
     comment[issn] = requested in RT ticket 3743
