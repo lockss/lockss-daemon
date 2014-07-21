@@ -1,5 +1,5 @@
 /*
- * $Id: Alert.java,v 1.19 2014-03-23 17:09:12 tlipkis Exp $
+ * $Id: Alert.java,v 1.20 2014-07-21 03:19:29 tlipkis Exp $
  */
 
 /*
@@ -85,6 +85,10 @@ public class Alert {
     new Alert("DaemonStarted").
     setAttribute(ATTR_SEVERITY, SEVERITY_INFO).
     setAttribute(ATTR_IS_TIME_CRITICAL, true);
+
+  public static final Alert PLUGIN_NOT_LOADED =
+    new Alert("PluginNotLoaded").
+    setAttribute(ATTR_SEVERITY, SEVERITY_WARNING);
 
   public static final Alert AU_CREATED =
     cAlert("AuCreated").
