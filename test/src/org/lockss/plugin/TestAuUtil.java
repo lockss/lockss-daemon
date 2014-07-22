@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuUtil.java,v 1.26 2014-07-21 03:20:38 tlipkis Exp $
+ * $Id: TestAuUtil.java,v 1.27 2014-07-22 20:16:53 fergaloy-sf Exp $
  */
 
 /*
@@ -568,6 +568,12 @@ public class TestAuUtil extends LockssTestCase {
     MockCachedUrl mcu2b = mcu2.addVersion("ver 2");
     mcu2b.setProperty("X-Lockss-Orig-X_Lockss-server-date", "88886666");
     assertEquals(88886666L, AuUtil.getUrlFetchTime(mau, url2));
+
+    try {
+      AuUtil.getUrlFetchTime(mau, "http://foo/three");
+      fail("getUrlFetchTime() didn't throw on bad URL");
+    } catch (NullPointerException npe) {
+    }
   }
 
   private static class LocalMockArchivalUnit extends MockArchivalUnit {

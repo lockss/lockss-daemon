@@ -1,5 +1,5 @@
 /*
- * $Id: AuUtil.java,v 1.46 2014-07-21 03:20:38 tlipkis Exp $
+ * $Id: AuUtil.java,v 1.47 2014-07-22 20:16:53 fergaloy-sf Exp $
  */
 
 /*
@@ -754,16 +754,21 @@ public class AuUtil {
     for (String url : urls) {
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "url = " + url);
 
-      // Get the fetch time of this URL.
-      long newFetchTime = getUrlFetchTime(au, url);
-      if (log.isDebug3())
-	log.debug3(DEBUG_HEADER + "newFetchTime = " + newFetchTime);
+      try {
+	// Get the fetch time of this URL.
+	long newFetchTime = getUrlFetchTime(au, url);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "newFetchTime = " + newFetchTime);
 
-      // Check whether it is earlier than any of the previously found fetch
-      // times.
-      if (newFetchTime > 0 && (fetchTime == 0 || newFetchTime < fetchTime)) {
-	// Yes: Remember it.
-	fetchTime = newFetchTime;
+	// Check whether it is earlier than any of the previously found fetch
+	// times.
+	if (newFetchTime > 0 && (fetchTime == 0 || newFetchTime < fetchTime)) {
+	  // Yes: Remember it.
+	  fetchTime = newFetchTime;
+	}
+      } catch (Exception e) {
+	log.info("Exception caught getting fetch time for AU = '" + au
+	    + "', URL = '" + url + "'", e);
       }
     }
 
@@ -880,10 +885,6 @@ public class AuUtil {
 	  }
 	}
       }
-    } catch (Exception e) {
-      log.info("Exception caught ", e);
-      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "fetchTime = " + fetchTime);
-      return fetchTime;
     } finally {
       // Release the cached URL.
       safeRelease(cachedUrl);
