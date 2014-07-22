@@ -1,5 +1,5 @@
 /*
- * $Id: WoltersKluwerSgmlAdapter.java,v 1.1 2014-07-18 16:22:36 aishizaki Exp $
+ * $Id: WoltersKluwerSgmlAdapter.java,v 1.2 2014-07-22 02:09:28 thib_gc Exp $
  */
 
 /*
@@ -32,12 +32,12 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.clockss.wolterskluwer;
 
-import java.io.FileReader;
 import java.io.Reader;
 import java.util.regex.Pattern;
 
-import org.apache.commons.io.IOUtils;
-
+/*
+ * After 1.66 comes out, extend org.lockss.util.LineRewritingReader instead.
+ */
 public class WoltersKluwerSgmlAdapter extends RewritingReader {
 
   public static final Pattern UNCLOSED_SGML_TAGS =
@@ -53,8 +53,5 @@ public class WoltersKluwerSgmlAdapter extends RewritingReader {
   public String rewriteLine(String line) {
     return UNCLOSED_SGML_TAGS.matcher(line).replaceAll(UNCLOSED_SGML_TAGS_REPLACEMENT);
   }
-   public static void main(String[] args) throws Exception {
-       IOUtils.copy(new WoltersKluwerSgmlAdapter(new FileReader(args[0])), System.out);
-       System.out.flush();
-     }
+
 }

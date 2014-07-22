@@ -1,10 +1,10 @@
 /*
- * $Id: RisFilterInputStream.java,v 1.1 2013-08-29 22:41:23 alexandraohlson Exp $
+ * $Id: RisFilterInputStream.java,v 1.2 2014-07-22 02:09:27 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,13 +39,20 @@ package org.lockss.plugin.atypon;
 import java.io.*;
 import java.util.*;
 
+import org.lockss.filter.RisFilterReader;
 import org.lockss.util.*;
 
-/*
- * Reads in an RIS file line by line removing any lines that start with any substring on the filterList
- * This is a local version which will live as part of the plugin only until the org.lockss.filter version 
- * is in the released daemon (probably 1.63)
+/**
+ * Reads in an RIS file line by line removing any lines that start with any
+ * substring on the filterList This is a local version which will live as part
+ * of the plugin only until the org.lockss.filter version is in the released
+ * daemon (probably 1.63)
+ * 
+ * @deprecated Use {@link RisFilterReader} which can be turned back into an
+ *             {@link InputStream} with
+ *             {@link RisFilterReader#toInputStream(String)}.
  */
+@Deprecated
 public class RisFilterInputStream extends InputStream {
   private static Logger log = Logger.getLogger("RisFilter");
   private ArrayList<String> filterList = new ArrayList<String>();
@@ -53,11 +60,19 @@ public class RisFilterInputStream extends InputStream {
   private InputStream in;
   private String encoding;
 
+  /**
+   * @deprecated
+   */
+  @Deprecated
   public RisFilterInputStream(InputStream in, String encoding, String filter){
     this(in, encoding);
     filterList.add(filter);
   }
 
+  /**
+   * @deprecated
+   */
+  @Deprecated
   public RisFilterInputStream(InputStream in, String encoding, ArrayList<String> list){
     this(in, encoding);
     filterList = list;
