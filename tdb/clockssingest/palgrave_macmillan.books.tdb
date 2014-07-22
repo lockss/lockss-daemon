@@ -2,7 +2,7 @@
   publisher <
     name = Palgrave Macmillan Books ;
     info[contract] = 2011 ;
-    info[tester] = 5z
+    info[tester] = 5
   >
 
     plugin = org.lockss.plugin.palgrave.ClockssPalgraveBookPlugin
