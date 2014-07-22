@@ -1,5 +1,5 @@
 /*
- * $Id: RewritingReader.java,v 1.2 2014-07-05 21:44:08 tlipkis Exp $
+ * $Id: LineRewritingReader.java,v 1.1 2014-07-22 02:08:41 thib_gc Exp $
  */
 
 /*
@@ -44,17 +44,14 @@ import java.io.Reader;
  * {@link #rewriteLine(String)} method.
  * </p>
  * <p>
- * A {@link BufferedReader} is used to read from the underlying {@link Reader},
- * which trims line terminators. This class re-injects line terminators using
- * the system-dependent line separater (value of <tt>line.separator</tt>
- * System property}, which may not mimic the incoming data's line
- * terminators, and will definitely end the last line with a linte terminator.
+ * A {@link LineEndingBufferedReader} is used to read from the underlying
+ * {@link Reader}, which keeps line terminators.
  * </p>
  * 
  * @author Thib Guicherd-Callin
  * @since 1.66
  */
-public abstract class RewritingReader extends Reader {
+public abstract class LineRewritingReader extends Reader {
 
   /**
    * <p>
@@ -62,21 +59,21 @@ public abstract class RewritingReader extends Reader {
    * {@link BufferedReader}.
    * </p>
    */
-  private BufferedReader bufferedReader;
+  protected LineEndingBufferedReader underlyingReader;
   
   /**
    * <p>
    * The index into the current line.
    * </p>
    */
-  private int currentIndex;
+  protected int currentIndex;
   
   /**
    * <p>
    * The line most recently read from the underlying {@link Reader}.
    * </p>
    */
-  private String currentLine;
+  protected String currentLine;
   
   /**
    * <p>
@@ -84,22 +81,22 @@ public abstract class RewritingReader extends Reader {
    * file.
    * </p>
    */
-  private boolean isEof;
+  protected boolean isEof;
   
   /**
    * <p>
    * A flag denoting whether {@link #close()} has been called on this instance.
    * </p>
    */
-  private boolean isClosed;
+  protected boolean isClosed;
   
   /**
    * <p>
-   * The maximum length allowed for a line consumed from the underlyin
+   * The maximum length allowed for a line consumed from the underlying
    * {@link Reader} (<code>0</code> for unlimited line length).
    * </p>
    */
-  private int maxLineLength;
+  protected int maxLineLength;
   
   /**
    * <p>
@@ -111,18 +108,16 @@ public abstract class RewritingReader extends Reader {
    *          An underlying {@link Reader} instance.
    * @param maxLineLength
    *          The maximum line length allowed, <code>0</code> for unlimited
-   *          length. Note that the underlying {@link Reader} is consumed via a
-   *          {@link BufferedReader} which trims the line terminator, which is
-   *          system-dependent; this maximum length applies to a trimmed line.
+   *          length.
    * @since 1.66
    */
-  public RewritingReader(Reader underlyingReader,
-                         int maxLineLength) {
-    if (underlyingReader instanceof BufferedReader) {
-      this.bufferedReader = (BufferedReader)underlyingReader;
+  public LineRewritingReader(Reader underlyingReader,
+                             int maxLineLength) {
+    if (underlyingReader instanceof LineEndingBufferedReader) {
+      this.underlyingReader = (LineEndingBufferedReader)underlyingReader;
     }
     else {
-      this.bufferedReader = new BufferedReader(underlyingReader);
+      this.underlyingReader = new LineEndingBufferedReader(underlyingReader);
     }
     setMaxLineLength(maxLineLength);
     this.currentLine = null;
@@ -140,17 +135,19 @@ public abstract class RewritingReader extends Reader {
    * @param underlyingReader
    *          An underlying {@link Reader} instance.
    * @since 1.66
-   * @see RewritingReader#RewritingReader(Reader, int)
+   * @see LineRewritingReader#RewritingReader(Reader, int)
    */
-  public RewritingReader(Reader underlyingReader) {
+  public LineRewritingReader(Reader underlyingReader) {
     this(underlyingReader, 0);
   }
   
   @Override
   public void close() throws IOException {
-    checkNotClosed();
-    bufferedReader.close();
+    if (isClosed) {
+      return;
+    }
     isClosed = true;
+    underlyingReader.close();
   }
   
   /**
@@ -174,10 +171,8 @@ public abstract class RewritingReader extends Reader {
     int charsAvailable = currentLine.length() - currentIndex;
     int charsRequested = Math.min(buf.length - off, len);
     int charsToProcess = Math.min(charsAvailable, charsRequested);
-    for (int i = 0 ; i < charsToProcess ; ++i) {
-      buf[off + i] = currentLine.charAt(currentIndex + i);
-    }
-    consumeSomeInput(charsToProcess);
+    currentLine.getChars(currentIndex, currentIndex + charsToProcess, buf, off);
+    advance(charsToProcess);
     return charsToProcess;
   }
   
@@ -207,9 +202,9 @@ public abstract class RewritingReader extends Reader {
    *           if this instance has already been closed.
    * @since 1.66
    */
-  protected void checkNotClosed() throws IOException {
+  protected void throwIfClosed() throws IOException {
     if (isClosed) {
-      throw new IOException("Already closed");
+      throw new IOException("stream closed");
     }
   }
 
@@ -224,7 +219,7 @@ public abstract class RewritingReader extends Reader {
    *          The number of characters consumed from the current line.
    * @since 1.66
    */
-  protected void consumeSomeInput(int charsConsumed) {
+  protected void advance(int charsConsumed) {
     currentIndex = currentIndex + charsConsumed;
     if (currentIndex == currentLine.length()) {
       currentLine = null;
@@ -245,24 +240,22 @@ public abstract class RewritingReader extends Reader {
    * @since 1.66
    */
   protected void getSomeInput() throws IOException {
-    checkNotClosed();
-    if (!isEof && currentLine == null) {
-      currentLine = bufferedReader.readLine();
+    throwIfClosed();
+    while (!isEof && currentLine == null) {
+      currentLine = underlyingReader.readLine();
       currentIndex = 0;
       if (currentLine == null) {
-        this.isEof = true;
+        isEof = true;
       }
       else {
         if (maxLineLength > 0 && currentLine.length() > maxLineLength) {
           throw new IOException(String.format("Line length (%d) exceeds maximum line length (%d)", currentLine.length(), maxLineLength));
         }
-        String rewritten = rewriteLine(currentLine);
-        if (rewritten == null) {
-          currentLine = Constants.EOL;
+        currentLine = rewriteLine(currentLine);
+        if (currentLine != null) {
+          return;
         }
-        else {
-          currentLine = rewritten + Constants.EOL;
-        }
+        // otherwise skip this line and get another
       }
     }
   }
@@ -274,15 +267,14 @@ public abstract class RewritingReader extends Reader {
    * maximum line length (if set).
    * </p>
    * <p>
-   * Returning <code>null</code> is not intended, but if it happens, this class
-   * will act as if an empty string had been returned instead.
+   * Returning <code>null</code> means that the line should be skipped (ignored)
+   * entirely.
    * </p>
    * 
    * @param line
    *          The incoming line of character data from the underlying
-   *          {@link Reader}, without its line terminator
-   * @return A rewritten line of data, to which the system-dependent line
-   *         terminator will be appended.
+   *          {@link Reader}, with its line ending.
+   * @return A rewritten line of data.
    * @since 1.66
    */
   public abstract String rewriteLine(String line);

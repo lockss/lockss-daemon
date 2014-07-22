@@ -1,5 +1,5 @@
 /*
- * $Id: TestRewritingReader.java,v 1.2 2014-07-05 21:44:08 tlipkis Exp $
+ * $Id: TestLineRewritingReader.java,v 1.1 2014-07-22 02:08:40 thib_gc Exp $
  */
 
 /*
@@ -32,16 +32,15 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 
-import java.io.BufferedReader;
-import java.io.StringReader;
+import java.io.*;
 import java.nio.CharBuffer;
 
 import org.apache.commons.io.IOUtils;
 import org.lockss.test.LockssTestCase;
 
-public class TestRewritingReader extends LockssTestCase {
+public class TestLineRewritingReader extends LockssTestCase {
 
-  public static class StringRewritingReader extends RewritingReader {
+  public static class StringRewritingReader extends LineRewritingReader {
     
     public StringRewritingReader(String str) {
       super(new StringReader(str));
@@ -56,7 +55,7 @@ public class TestRewritingReader extends LockssTestCase {
 
   public void testEmptyReader() throws Exception {
     // Also test that asking for input after EOF doesn't throw
-    RewritingReader rr = null;
+    LineRewritingReader rr = null;
     char[] buf = new char[64];
     CharBuffer cb = CharBuffer.allocate(64);
     
@@ -102,49 +101,81 @@ public class TestRewritingReader extends LockssTestCase {
   }
   
   public void testUppercase() throws Exception {
-    RewritingReader rr = new StringRewritingReader("abc\n\n\ndef\n\n\nghi") {
+    LineRewritingReader lrr = new StringRewritingReader("abc\n\n\ndef\n\n\nghi") {
       @Override
       public String rewriteLine(String line) {
         return line.toUpperCase();
       }
     };
-    BufferedReader br = new BufferedReader(rr);
-    assertEquals("ABC", br.readLine());
-    assertEquals("", br.readLine());
-    assertEquals("", br.readLine());
-    assertEquals("DEF", br.readLine());
-    assertEquals("", br.readLine());
-    assertEquals("", br.readLine());
-    assertEquals("GHI", br.readLine());
-    assertEquals(null, br.readLine());
-    assertEquals(null, br.readLine());
+    StringWriter sw = new StringWriter();
+    IOUtils.copy(lrr, sw);
+    assertEquals("ABC\n\n\nDEF\n\n\nGHI", sw.toString());
   }
   
-  public void testLineTerminators() throws Exception {
-    String thisPlatform = Constants.EOL;
-    String otherPlatform = "\r".equals(thisPlatform) ? "\n" : "\r";
-    RewritingReader rr = new StringRewritingReader(String.format("abc%sdef%s", otherPlatform, otherPlatform));
-    
-    char[] buf = new char[8];
-    assertEquals(4, rr.read(buf));
-    assertEquals(4, rr.read(buf, 4, 4));
-    assertEquals(String.format("abc%sdef%s", thisPlatform, thisPlatform), String.valueOf(buf));
-    assertEquals(-1, rr.read(buf));
-    assertEquals(-1, rr.read(buf));
-  }
-  
-  public void testToleratesNullRewrite() throws Exception {
-    RewritingReader rr = new StringRewritingReader("abc") {
+  public void testSkipsNullLines() throws Exception {
+    LineRewritingReader lrr = new StringRewritingReader("abc\ndef\nghi\n") {
       @Override
       public String rewriteLine(String line) {
-        return null;
+        return "def\n".equals(line) ? null : line;
       }
     };
-    char[] buf = new char[Constants.EOL.length()];
-    assertEquals(buf.length, rr.read(buf));
-    assertEquals(Constants.EOL, String.valueOf(buf));
-    assertEquals(-1, rr.read(buf));
-    assertEquals(-1, rr.read(buf));
+    StringWriter sw = new StringWriter();
+    IOUtils.copy(lrr, sw);
+    assertEquals("abc\nghi\n", sw.toString());
+  }
+  
+  public void testClose() throws Exception {
+    LineRewritingReader lrr = new StringRewritingReader("abc\ndef\nghi\n");
+    char[] buf = new char[4];
+    lrr.read(buf);
+    lrr.close();
+    try {
+      lrr.read(buf);
+      fail("Should have thrown \"stream closed\"");
+    }
+    catch (IOException expected) {
+      assertEquals("stream closed", expected.getMessage());
+    }
+    lrr.close(); // shouldn't throw
+  }
+  
+  public void testMaxLineLength() throws Exception {
+    LineRewritingReader lrr = new LineRewritingReader(new StringReader("a\nbb\nccc\ndddd\n"), 4) {
+      @Override
+      public String rewriteLine(String line) {
+        return line;
+      }
+    };
+    char[] buf = new char[32];
+    try {
+      do {
+        // no-op
+      } while (lrr.read(buf) != -1);
+      fail("Should have thrown because maximum line length exceeded");
+    }
+    catch (IOException expected) {
+      // Expected
+    }
+  }
+  
+  public void testDoubleWrapping() throws Exception {
+    class LineRewritingReader2 extends LineRewritingReader {
+      public LineRewritingReader2(Reader underlyingReader) {
+        super(underlyingReader);
+      }
+      public Reader getUnderlyingReader() {
+        return underlyingReader;
+      }
+      @Override
+      public String rewriteLine(String line) {
+        return line;
+      }
+    }
+    Reader underlyingSR = new StringReader("foo");
+    System.out.println(new LineRewritingReader2(underlyingSR).getUnderlyingReader().getClass());
+    assertTrue(new LineRewritingReader2(underlyingSR).getUnderlyingReader() instanceof LineEndingBufferedReader);
+    LineEndingBufferedReader underlyingLEBR = new LineEndingBufferedReader(new StringReader("foo"));
+    assertSame(underlyingLEBR, new LineRewritingReader2(underlyingLEBR).getUnderlyingReader());
   }
   
 }
