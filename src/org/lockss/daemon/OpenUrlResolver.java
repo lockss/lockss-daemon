@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.50 2014-07-14 23:19:39 pgust Exp $
+ * $Id: OpenUrlResolver.java,v 1.51 2014-07-22 16:38:52 pgust Exp $
  */
 
 /*
@@ -648,7 +648,7 @@ public class OpenUrlResolver {
           // search matching titles without ISBNs
           OpenUrlInfo resolved = 
             resolveBookFromTdbAus(noTdbAus, date, volume, edition, spage);
-          if (resolved != null) {
+          if (resolved.resolvedTo != OpenUrlInfo.ResolvedTo.NONE) {
             if (log.isDebug3()) {
               log.debug3(  "Located url " + resolved.resolvedUrl 
                          + ", title \"" + title + "\"");
@@ -716,7 +716,17 @@ public class OpenUrlResolver {
           }
         }
       }
-      log.debug3("Failed to resolve from title: \"" + title + "\"");
+
+      OpenUrlInfo resolved = 
+          OpenUrlInfo.newInstance(null, null, OpenUrlInfo.ResolvedTo.TITLE);
+
+      // create bibliographic item with only title properties
+      resolved.resolvedBibliographicItem =  
+            new BibliographicItemAdapter() {}
+              .setPublisherName(
+                  (tdbPub == null) ? "(Unknown Publisher)" : pub)
+              .setPublicationTitle(title);
+      return resolved;
       
     } else  if (tdbPub != null) {
       OpenUrlInfo resolved = OpenUrlInfo.newInstance(
@@ -945,11 +955,11 @@ public class OpenUrlResolver {
     String url = resolveUrl(aUrl, proxySpec);
     if (url != null) {
       CachedUrl cu = pluginMgr.findCachedUrl(url, CuContentReq.PreferContent);
-      if (cu == null) {
-        return OpenUrlInfo.newInstance(url, proxySpec, OpenUrlInfo.ResolvedTo.NONE);
+      if (cu != null) {
+        return OpenUrlInfo.newInstance(url, proxySpec);
       }
     }
-    return OpenUrlInfo.newInstance(url, proxySpec);
+    return noOpenUrlInfo;
   }
   
   
@@ -1037,7 +1047,7 @@ public class OpenUrlResolver {
     } catch (IllegalArgumentException ex) {
     }
     
-    if (resolved.resolvedUrl == null) {
+    if (resolved.resolvedTo == OpenUrlInfo.ResolvedTo.NONE) {
       // use DOI International resolver for DOI
       resolved = resolveFromUrl("http://dx.doi.org/" + doi);
     }
@@ -1110,7 +1120,6 @@ public class OpenUrlResolver {
    * @return the OpenUrlInfo
    */
   private OpenUrlInfo resolveFromDoi(DbManager dbMgr, String doi) {
-    String url = null;
     Connection conn = null;
     try {
       conn = dbMgr.getConnection();
@@ -1125,7 +1134,10 @@ public class OpenUrlResolver {
       stmt.setString(1, doi.toUpperCase());
       ResultSet resultSet = dbMgr.executeQuery(stmt);
       if (resultSet.next()) {
-        url = resultSet.getString(1);
+        String url = resultSet.getString(1);
+        OpenUrlInfo resolved = resolveFromUrl(url);
+        return resolved;
+        
       }
     } catch (SQLException ex) {
       log.error("Getting DOI:" + doi, ex);
@@ -1134,7 +1146,7 @@ public class OpenUrlResolver {
     } finally {
       DbManager.safeRollbackAndClose(conn);
     }
-    return new OpenUrlInfo(url, null, OpenUrlInfo.ResolvedTo.ARTICLE);
+    return noOpenUrlInfo;
   }
 
   /**
@@ -1375,7 +1387,7 @@ public class OpenUrlResolver {
     String url = null;
 
     PreparedStatement stmt =
-	daemon.getDbManager().prepareStatement(conn, query.toString());
+	daemon.getDbManager().prepareStatement(conn, query);
 
     try {
       for (int i = 0; i < args.size(); i++) {
@@ -1641,9 +1653,11 @@ public class OpenUrlResolver {
       }
       
       resolved = getBookUrl(plugin, paramMap);
-      resolved.resolvedBibliographicItem = tdbau;
-      log.debug3(  "Found starting url from definable plugin: " 
-                 + resolved.resolvedUrl);
+      if (resolved.resolvedTo != OpenUrlInfo.ResolvedTo.NONE) {
+        resolved.resolvedBibliographicItem = tdbau;
+        log.debug3(  "Found starting url from definable plugin: " 
+            + resolved.resolvedUrl);
+      }
     } else {
       log.debug3("No plugin found for key: " + pluginKey); 
     }
@@ -1659,10 +1673,6 @@ public class OpenUrlResolver {
    */
   private OpenUrlInfo getBookUrl(Plugin plugin, TypedEntryMap paramMap) {
     OpenUrlInfo resolved = getPluginUrl(plugin, auBookAuFeatures, paramMap);
-    if (resolved.resolvedUrl == null) {
-      resolved = OpenUrlInfo.newInstance(
-        paramMap.getString("base_url"), null, OpenUrlInfo.ResolvedTo.PUBLISHER);
-    }
     return resolved;
   }
 
@@ -1734,9 +1744,11 @@ public class OpenUrlResolver {
       // for the same feature (e.g. au_feature_urls/au_year)
       paramMap.setMapElement(AU_FEATURE_KEY, tdbau.getAttr(AU_FEATURE_KEY));
       resolved = getJournalUrl(plugin, paramMap);
-      resolved.resolvedBibliographicItem = tdbau;
-      log.debug3(  "Found starting url from definable plugin: " 
-                 + resolved.resolvedUrl);
+      if (resolved.resolvedTo != OpenUrlInfo.ResolvedTo.NONE) {
+        resolved.resolvedBibliographicItem = tdbau;
+        log.debug3(  "Found starting url from definable plugin: " 
+                   + resolved.resolvedUrl);
+      }
     } else {
       log.debug3("No plugin found for key: " + pluginKey); 
     }
@@ -1751,10 +1763,6 @@ public class OpenUrlResolver {
    */
   private OpenUrlInfo getJournalUrl(Plugin plugin, TypedEntryMap paramMap) { 
     OpenUrlInfo resolved = getPluginUrl(plugin, auJournalFeatures, paramMap);
-    if (resolved.resolvedUrl == null) {
-      resolved = OpenUrlInfo.newInstance(paramMap.getString("base_url"), null,
-                                         OpenUrlInfo.ResolvedTo.PUBLISHER);
-    }
     return resolved;
   }
   
@@ -1980,7 +1988,9 @@ public class OpenUrlResolver {
     for (TdbAu tdbau : notFoundTdbAuList) {
       if (!tdbau.isDown()) {
         OpenUrlInfo aResolved = getBookUrl(tdbau, null, null, null, null);
-        return aResolved;
+        if (aResolved.resolvedTo != OpenUrlInfo.ResolvedTo.NONE) {
+          return aResolved;
+        }
       }
       log.debug2("discarding URL because tdbau is down: " + tdbau.getName());
     }
@@ -1988,8 +1998,8 @@ public class OpenUrlResolver {
     // pick any AU to use for resolving the title as a last resort
     if (!notFoundTdbAuList.isEmpty()) {
       OpenUrlInfo aResolved = 
-          getJournalUrl(notFoundTdbAuList.get(0), null, null, null, null);
-      aResolved.resolvedUrl = null;
+          OpenUrlInfo.newInstance(null, null, OpenUrlInfo.ResolvedTo.TITLE);
+      aResolved.resolvedBibliographicItem = notFoundTdbAuList.get(0);
       return aResolved;
     }
     return noOpenUrlInfo;
@@ -2023,7 +2033,7 @@ public class OpenUrlResolver {
     } catch (IllegalArgumentException ex) {
     }
 
-    if (resolved.resolvedUrl == null) {
+    if (resolved.resolvedTo == OpenUrlInfo.ResolvedTo.NONE) {
       // resolve from TDB
       Tdb tdb = ConfigManager.getCurrentConfig().getTdb();
       Collection<TdbAu> tdbAus = (tdb == null)
@@ -2079,10 +2089,6 @@ public class OpenUrlResolver {
           
       query.append("select distinct ");
       query.append("u." + URL_COLUMN);
-      query.append(",");
-      query.append("p." + PLUGIN_ID_COLUMN);
-      query.append(",");
-      query.append("a." + AU_KEY_COLUMN);
       
       from.append(URL_TABLE + " u");
       from.append("," + PLUGIN_TABLE + " p");
@@ -2189,8 +2195,10 @@ public class OpenUrlResolver {
 	  resolveFromQuery(conn, query.toString() + " from " + from.toString()
 	      + " where " + where.toString(), args);
       log.debug3(DEBUG_HEADER + "url = " + url);
-      resolved = OpenUrlInfo.newInstance(url, null, 
-                                         OpenUrlInfo.ResolvedTo.CHAPTER);
+      if (url != null) {
+        resolved = OpenUrlInfo.newInstance(url, null, 
+                                           OpenUrlInfo.ResolvedTo.CHAPTER);
+      }
     } catch (DbException dbe) {
       log.error("Getting ISBN:" + isbn, dbe);
         
@@ -2213,7 +2221,7 @@ public class OpenUrlResolver {
 
     String authorUC = author.toUpperCase();
     // match single author
-    where.append("upper(");
+    where.append("upper(aut.");
     where.append(AUTHOR_NAME_COLUMN);
     where.append(") = ?");
     args.add(authorUC);
@@ -2223,14 +2231,14 @@ public class OpenUrlResolver {
             
     // match last name of author 
     // (last, first name separated by ',')
-    where.append(" or upper(");
+    where.append(" or upper(aut.");
     where.append(AUTHOR_NAME_COLUMN);
     where.append(") like ? escape '\\'");
     args.add(authorEsc+",%");
     
     // match last name of author
     // (first last name separated by ' ')
-    where.append(" or upper(");
+    where.append(" or upper(aut.");
     where.append(AUTHOR_NAME_COLUMN);
     where.append(") like ? escape '\\'");
     args.add("% " + authorEsc);    
