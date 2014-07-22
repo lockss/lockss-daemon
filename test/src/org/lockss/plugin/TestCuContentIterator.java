@@ -1,5 +1,5 @@
 /*
- * $Id: TestCuContentIterator.java,v 1.1 2014-07-21 03:16:14 tlipkis Exp $
+ * $Id: TestCuContentIterator.java,v 1.2 2014-07-22 00:23:19 tlipkis Exp $
  */
 
 /*
@@ -58,7 +58,7 @@ public class TestCuContentIterator extends LockssTestCase {
   }
 
   public void testIteratorDefaultOptions() throws Exception {
-    assertEquals(false,
+    assertEquals(true,
 		 CurrentConfig.getBooleanParam(CuIterOptions.PARAM_INCLUDED_ONLY,
 					       CuIterOptions.DEFAULT_INCLUDED_ONLY));
   }

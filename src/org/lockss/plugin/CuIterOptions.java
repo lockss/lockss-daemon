@@ -1,5 +1,5 @@
 /*
- * $Id: CuIterOptions.java,v 1.1 2014-07-21 03:16:14 tlipkis Exp $
+ * $Id: CuIterOptions.java,v 1.2 2014-07-22 00:23:19 tlipkis Exp $
  */
 
 /*
@@ -53,7 +53,7 @@ public class CuIterOptions {
   /** Include in the iterator only CUs whose URL matches the crawl rules
    * (which may have changed since files were collected) */
   static final String PARAM_INCLUDED_ONLY = PREFIX + "includedOnly";
-  static final boolean DEFAULT_INCLUDED_ONLY = false;
+  static final boolean DEFAULT_INCLUDED_ONLY = true;
 
 
   private boolean contentOnly;

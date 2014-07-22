@@ -1,5 +1,5 @@
 /*
- * $Id: TestCuIterable.java,v 1.1 2014-07-21 03:16:14 tlipkis Exp $
+ * $Id: TestCuIterable.java,v 1.2 2014-07-22 00:23:19 tlipkis Exp $
  */
 
 /*
@@ -56,7 +56,7 @@ public class TestCuIterable extends LockssTestCase {
   }
 
   public void testIterableDefaultOptions() throws Exception {
-    assertEquals(false,
+    assertEquals(true,
 		 CurrentConfig.getBooleanParam(CuIterOptions.PARAM_INCLUDED_ONLY,
 					       CuIterOptions.DEFAULT_INCLUDED_ONLY));
   }
