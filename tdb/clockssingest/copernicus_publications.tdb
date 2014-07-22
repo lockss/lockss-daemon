@@ -512,7 +512,7 @@
       au < manifest ; exists ; 2011 ; 2011 ; Geographica Helvetica Volume 66 ; 66 >
       au < crawling ; exists ; 2012 ; 2012 ; Geographica Helvetica Volume 67 ; 67 >
       au < ingNotReady ; exists ; 2013 ; 2013 ; Geographica Helvetica Volume 68 ; 68 >
-      au < testing ; exists ; 2014 ; 2014 ; Geographica Helvetica Volume 69 ; 69 >
+      au < notReady ; exists ; 2014 ; 2014 ; Geographica Helvetica Volume 69 ; 69 >
     
    }
     
@@ -528,7 +528,7 @@
 
       au < finished ; crawling ; 2012 ; 2012 ; Geoscientific Instrumentation, Methods and Data Systems Volume 1 ; 1 >
       au < crawling ; exists ; 2013 ; 2013 ; Geoscientific Instrumentation, Methods and Data Systems Volume 2 ; 2 >
-      au < testing ; exists ; 2014 ; 2014 ; Geoscientific Instrumentation, Methods and Data Systems Volume 3 ; 3 >
+      au < ready ; exists ; 2014 ; 2014 ; Geoscientific Instrumentation, Methods and Data Systems Volume 3 ; 3 >
     
    }
    
@@ -563,7 +563,7 @@
       param[home_url] = http://www.geothermal-energy-science.net/
 
       au < crawling ; exists ; 2013 ; 2013 ; Geothermal Energy Science Volume 1 ; 1 >
-      au < testing ; exists ; 2014 ; 2014 ; Geothermal Energy Science Volume 2 ; 2 >
+      au < ready ; exists ; 2014 ; 2014 ; Geothermal Energy Science Volume 2 ; 2 >
     
    }
     
@@ -581,7 +581,7 @@
       au < manifest ; exists ; 2011 ; 2011 ; History of Geo- and Space Sciences Volume 2 ; 2 >
       au < finished ; crawling ; 2012 ; 2012 ; History of Geo- and Space Sciences Volume 3 ; 3 >
       au < crawling ; exists ; 2013 ; 2013 ; History of Geo- and Space Sciences Volume 4 ; 4 >
-      au < testing ; exists ; 2014 ; 2014 ; History of Geo- and Space Sciences Volume 5 ; 5 >
+      au < ready ; exists ; 2014 ; 2014 ; History of Geo- and Space Sciences Volume 5 ; 5 >
     
    }
     
@@ -612,7 +612,7 @@
       au < manifest ; exists ; 2011 ; 2011 ; Hydrology and Earth System Sciences Volume 15 ; 15 >
       au < finished ; frozen ; 2012 ; 2012 ; Hydrology and Earth System Sciences Volume 16 ; 16 >
       au < crawling ; exists ; 2013 ; 2013 ; Hydrology and Earth System Sciences Volume 17 ; 17 >
-      au < testing ; exists ; 2014 ; 2014 ; Hydrology and Earth System Sciences Volume 18 ; 18 >
+      au < ready ; exists ; 2014 ; 2014 ; Hydrology and Earth System Sciences Volume 18 ; 18 >
     
    }
     
@@ -741,7 +741,7 @@
 
       au < finished ; crawling ; 2012 ; 2012 ; Journal of Sensors and Sensor Systems Volume 1 ; 1 >
       au < crawling ; exists ; 2013 ; 2013 ; Journal of Sensors and Sensor Systems Volume 2 ; 2 >
-      au < testing ; exists ; 2014 ; 2014 ; Journal of Sensors and Sensor Systems Volume 3 ; 3 >
+      au < ready ; exists ; 2014 ; 2014 ; Journal of Sensors and Sensor Systems Volume 3 ; 3 >
     
    }
    
@@ -759,7 +759,7 @@
       au < manifest ; exists ; 2011 ; 2011 ; Mechanical Sciences Volume 2 ; 2 >
       au < finished ; crawling ; 2012 ; 2012 ; Mechanical Sciences Volume 3 ; 3 >
       au < crawling ; exists ; 2013 ; 2013 ; Mechanical Sciences Volume 4 ; 4 >
-      au < testing ; exists ; 2014 ; 2014 ; Mechanical Sciences Volume 5 ; 5 >
+      au < ready ; exists ; 2014 ; 2014 ; Mechanical Sciences Volume 5 ; 5 >
     
    }
     
@@ -786,7 +786,7 @@
       au < manifest ; exists ; 2011 ; 2011 ; Natural Hazards and Earth System Sciences Volume 11 ; 11 >
       au < finished ; crawling ; 2012 ; 2012 ; Natural Hazards and Earth System Sciences Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; 2013 ; Natural Hazards and Earth System Sciences Volume 13 ; 13 >
-      au < testing ; exists ; 2014 ; 2014 ; Natural Hazards and Earth System Sciences Volume 14 ; 14 >
+      au < ready ; exists ; 2014 ; 2014 ; Natural Hazards and Earth System Sciences Volume 14 ; 14 >
     
    }
    
