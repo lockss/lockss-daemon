@@ -133,7 +133,7 @@
 
     au < expected ; exists ; 2011 ; The Comics Grid: Journal of Comics Scholarship Volume 1 ; 1 ; 2011 >
     au < expected ; exists ; 2012 ; The Comics Grid: Journal of Comics Scholarship Volume 2 ; 2 ; 2012 >
-    au < manifest ; exists ; 2013 ; The Comics Grid: Journal of Comics Scholarship Volume 3 ; 3 ; 2013 >
+    au < testing ; exists ; 2013 ; The Comics Grid: Journal of Comics Scholarship Volume 3 ; 3 ; 2013 >
     au < manifest ; exists ; 2014 ; The Comics Grid: Journal of Comics Scholarship Volume 4 ; 4 ; 2014 >
     
   }
@@ -245,7 +245,7 @@
     param[journal_id] = joad
 
     au < manifest ; exists ; 2012 ; Journal of Open Archaeology Data Volume 1 ; 1 ; 2012 >
-    au < manifest ; exists ; 2013 ; Journal of Open Archaeology Data Volume 2 ; 2 ; 2013 >
+    au < testing ; exists ; 2013 ; Journal of Open Archaeology Data Volume 2 ; 2 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Open Archaeology Data Volume 3 ; 3 ; 2014 >
 
   }
@@ -260,7 +260,7 @@
     param[base_url] = http://openhealthdata.metajnl.com/
     param[journal_id] = jophd
     
-    au < manifest ; exists ; 2013 ; Journal of Open Public Health Data Volume 1 ; 1 ; 2013 >
+    au < testing ; exists ; 2013 ; Journal of Open Public Health Data Volume 1 ; 1 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Open Public Health Data Volume 2 ; 2 ; 2014 >
 
   }
@@ -275,7 +275,7 @@
     param[base_url] = http://openpsychologydata.metajnl.com/
     param[journal_id] = jopd
     
-    au < manifest ; exists ; 2013 ; Journal of Open Psychology Data Volume 1 ; 1 ; 2013 >
+    au < testing ; exists ; 2013 ; Journal of Open Psychology Data Volume 1 ; 1 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Open Psychology Data Volume 2 ; 2 ; 2014 >
 
   }
@@ -427,7 +427,7 @@
     au < manifest ; exists ; 2010 ; Psychologica Belgica Volume 50 ; 50 ; 2010 >
     au < manifest ; exists ; 2011 ; Psychologica Belgica Volume 51 ; 51 ; 2011 >
     au < manifest ; exists ; 2012 ; Psychologica Belgica Volume 52 ; 52 ; 2012 >
-    au < manifest ; exists ; 2013 ; Psychologica Belgica Volume 53 ; 53 ; 2013 >
+    au < testing ; exists ; 2013 ; Psychologica Belgica Volume 53 ; 53 ; 2013 >
     au < manifest ; exists ; 2014 ; Psychologica Belgica Volume 54 ; 54 ; 2014 >
 
   }
