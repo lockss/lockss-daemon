@@ -1,5 +1,5 @@
 /*
- * $Id: InternationalUnionOfCrystallographyArticleIteratorFactory.java,v 1.1 2014-07-22 16:41:45 cdelia Exp $
+ * $Id: InternationalUnionOfCrystallographyArticleIteratorFactory.java,v 1.6 2014-07-22 17:01:16 cdelia Exp $
  */
 
 /*
