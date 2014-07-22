@@ -1,5 +1,5 @@
 /*
- * $Id: RisFilterInputStream.java,v 1.2 2014-07-22 02:09:27 thib_gc Exp $
+ * $Id: RisFilterInputStream.java,v 1.3 2014-07-22 20:38:54 thib_gc Exp $
  */
 
 /*
@@ -39,7 +39,6 @@ package org.lockss.plugin.atypon;
 import java.io.*;
 import java.util.*;
 
-import org.lockss.filter.RisFilterReader;
 import org.lockss.util.*;
 
 /**
@@ -48,9 +47,9 @@ import org.lockss.util.*;
  * of the plugin only until the org.lockss.filter version is in the released
  * daemon (probably 1.63)
  * 
- * @deprecated Use {@link RisFilterReader} which can be turned back into an
+ * @deprecated Use {@link org.lockss.filter.RisFilterReader} which can be turned back into an
  *             {@link InputStream} with
- *             {@link RisFilterReader#toInputStream(String)}.
+ *             {@link org.lockss.filter.RisFilterReader#toInputStream(String)}.
  */
 @Deprecated
 public class RisFilterInputStream extends InputStream {
