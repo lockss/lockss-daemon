@@ -1,5 +1,5 @@
 /* 
- * $Id: TestBusinessSystemsLaboratoryArticleIteratorFactory.java,v 1.2 2014-07-21 03:28:30 tlipkis Exp $
+ * $Id: TestBusinessSystemsLaboratoryArticleIteratorFactory.java,v 1.3 2014-07-22 00:03:18 wkwilson Exp $
  */
 /*
 
@@ -81,9 +81,8 @@ public class TestBusinessSystemsLaboratoryArticleIteratorFactory
   
   private static final int DEFAULT_FILESIZE = 3000;
   
-  private static final int EXP_DELETED_FILE_COUNT = 2;
-  private static final int EXP_FULL_TEXT_COUNT = 2; // full text pdf
-  private static final int EXP_PDF_COUNT = 2; // after deleteBlock
+  private static final int EXP_FULL_TEXT_COUNT = 3; // full text pdf
+  private static final int EXP_PDF_COUNT = 3; // after deleteBlock
 
   public void setUp() throws Exception {
     super.setUp();
@@ -161,19 +160,6 @@ public class TestBusinessSystemsLaboratoryArticleIteratorFactory
     String pdfRep = "/BSR\\.Vol\\.$1\\.author\\.title\\.$2file.pdf";
     PluginTestUtil.copyAu(sau, au, ".*\\.pdf$", pdfPat, pdfRep);   
     
-    // Remove some URLs: pdfs end with 001file.pdf
-    // deletedFileCount should be 2
-    int deletedFileCount = 0; 
-    for (CachedUrl cu : AuUtil.getCuIterable(au)) {
-        String url = cu.getUrl();
-        log.info("au cached url: " + url);
-        if (url.endsWith(".001file.pdf")) {
-          deleteBlock(cu);
-          ++deletedFileCount;
-        }
-    }
-    assertEquals(EXP_DELETED_FILE_COUNT, deletedFileCount);
-    
     // au should now match the aspects that the SubTreeArticleIteratorBuilder
     // builds in BusinessSystemsLaboratoryArticleIteratorFactory
     Iterator<ArticleFiles> it = au.getArticleIterator(MetadataTarget.Any());
@@ -203,14 +189,5 @@ public class TestBusinessSystemsLaboratoryArticleIteratorFactory
     assertEquals(EXP_FULL_TEXT_COUNT, countFullText);
     assertEquals(EXP_PDF_COUNT, countPdf);
    }
- 
-  private void deleteBlock(CachedUrl cu) throws IOException {
-    log.info("deleting " + cu.getUrl());
-    CachedUrlSetSpec cuss = new SingleNodeCachedUrlSetSpec(cu.getUrl());
-    ArchivalUnit au = cu.getArchivalUnit();
-    CachedUrlSet cus = au.makeCachedUrlSet(cuss);
-    NodeManager nm = au.getPlugin().getDaemon().getNodeManager(au);
-    nm.deleteNode(cus);
-  }
 
 }
