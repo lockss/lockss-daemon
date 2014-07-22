@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataDatabaseUtil.java,v 1.18 2014-02-04 17:00:24 pgust Exp $
+ * $Id: MetadataDatabaseUtil.java,v 1.19 2014-07-22 17:45:37 fergaloy-sf Exp $
  */
 
 /*
@@ -106,7 +106,7 @@ final public class MetadataDatabaseUtil {
       printissn = MetadataUtil.formatIssn(resultSet.getString(3));
       eissn = MetadataUtil.formatIssn(resultSet.getString(4));
       printisbn = MetadataUtil.formatIsbn(resultSet.getString(5));
-      eisbn = MetadataUtil.formatIssn(resultSet.getString(6));
+      eisbn = MetadataUtil.formatIsbn(resultSet.getString(6));
       startvolume = resultSet.getString(7);
       endvolume = resultSet.getString(7);
       startyear = resultSet.getString(8);
