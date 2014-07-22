@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.26 2014-06-25 19:44:29 fergaloy-sf Exp $
+ * $Id: MetadataManager.java,v 1.27 2014-07-22 16:18:20 fergaloy-sf Exp $
  */
 
 /*
@@ -6468,7 +6468,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     }
 
     // Remove punctuation.
-    String normal = number.replaceAll("-", "");
+    String normal = number.replaceAll("-", "").trim();
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "normal = '" + normal + "'.");
 
     // Check whether the number without punctuation fits in the allowed space.

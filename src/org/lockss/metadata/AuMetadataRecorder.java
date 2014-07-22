@@ -1,5 +1,5 @@
 /*
- * $Id: AuMetadataRecorder.java,v 1.16 2014-01-14 04:32:06 tlipkis Exp $
+ * $Id: AuMetadataRecorder.java,v 1.17 2014-07-22 16:18:20 fergaloy-sf Exp $
  */
 
 /*
@@ -279,12 +279,14 @@ public class AuMetadataRecorder {
    */
   private ArticleMetadataInfo normalizeMetadata(ArticleMetadataInfo mdinfo) {
     if (mdinfo.accessUrl != null) {
-      if (mdinfo.accessUrl.length() > MAX_URL_COLUMN) {
+      String accessUrl = mdinfo.accessUrl.trim();
+      if (accessUrl.length() > MAX_URL_COLUMN) {
 	log.warning("accessUrl too long '" + mdinfo.accessUrl
 	    + "' for title: '" + mdinfo.journalTitle + "' publisher: "
 	    + mdinfo.publisher + "'");
-	mdinfo.accessUrl =
-	    DbManager.truncateVarchar(mdinfo.accessUrl, MAX_URL_COLUMN);
+	mdinfo.accessUrl = DbManager.truncateVarchar(accessUrl, MAX_URL_COLUMN);
+      } else {
+	mdinfo.accessUrl = accessUrl;
       }
     }
 
@@ -301,7 +303,7 @@ public class AuMetadataRecorder {
 	"ISSN", mdinfo.journalTitle, mdinfo.publisher);
 
     if (mdinfo.doi != null) {
-      String doi = mdinfo.doi;
+      String doi = mdinfo.doi.trim();
       if (StringUtil.startsWithIgnoreCase(doi, "doi:")) {
 	doi = doi.substring("doi:".length());
 	log.debug3("doi = '" + doi + "'.");
@@ -317,79 +319,95 @@ public class AuMetadataRecorder {
     }
 
     if (mdinfo.pubDate != null) {
-      if (mdinfo.pubDate.length() > MAX_DATE_COLUMN) {
+      String pubDate = mdinfo.pubDate.trim();
+      if (pubDate.length() > MAX_DATE_COLUMN) {
 	log.warning("pubDate too long '" + mdinfo.pubDate + "' for title: '"
 	    + mdinfo.journalTitle + "' publisher: " + mdinfo.publisher + "'");
-	mdinfo.pubDate =
-	    DbManager.truncateVarchar(mdinfo.pubDate, MAX_DATE_COLUMN);
+	mdinfo.pubDate = DbManager.truncateVarchar(pubDate, MAX_DATE_COLUMN);
+      } else {
+	mdinfo.pubDate = pubDate;
       }
     }
 
     if (mdinfo.volume != null) {
-      if (mdinfo.volume.length() > MAX_VOLUME_COLUMN) {
-	log.warning("volume too long '" + mdinfo.pubDate + "' for title: '"
+      String volume = mdinfo.volume.trim();
+      if (volume.length() > MAX_VOLUME_COLUMN) {
+	log.warning("volume too long '" + mdinfo.volume + "' for title: '"
 	    + mdinfo.journalTitle + "' publisher: " + mdinfo.publisher + "'");
-	mdinfo.volume =
-	    DbManager.truncateVarchar(mdinfo.volume, MAX_VOLUME_COLUMN);
+	mdinfo.volume = DbManager.truncateVarchar(volume, MAX_VOLUME_COLUMN);
+      } else {
+	mdinfo.volume = volume;
       }
     }
 
     if (mdinfo.issue != null) {
-      if (mdinfo.issue.length() > MAX_ISSUE_COLUMN) {
+      String issue = mdinfo.issue.trim();
+      if (issue.length() > MAX_ISSUE_COLUMN) {
 	log.warning("issue too long '" + mdinfo.issue + "' for title: '"
 	    + mdinfo.journalTitle + "' publisher: " + mdinfo.publisher + "'");
-	mdinfo.issue =
-	    DbManager.truncateVarchar(mdinfo.issue, MAX_ISSUE_COLUMN);
+	mdinfo.issue = DbManager.truncateVarchar(issue, MAX_ISSUE_COLUMN);
+      } else {
+	mdinfo.issue = issue;
       }
     }
 
     if (mdinfo.startPage != null) {
-      if (mdinfo.startPage.length() > MAX_START_PAGE_COLUMN) {
+      String startPage = mdinfo.startPage.trim();
+      if (startPage.length() > MAX_START_PAGE_COLUMN) {
 	log.warning("startPage too long '" + mdinfo.startPage
 	    + "' for title: '" + mdinfo.journalTitle + "' publisher: "
 	    + mdinfo.publisher + "'");
 	mdinfo.startPage =
-	    DbManager.truncateVarchar(mdinfo.startPage, MAX_START_PAGE_COLUMN);
+	    DbManager.truncateVarchar(startPage, MAX_START_PAGE_COLUMN);
+      } else {
+	mdinfo.startPage = startPage;
       }
     }
 
     if (mdinfo.articleTitle != null) {
-      if (mdinfo.articleTitle.length() > MAX_NAME_COLUMN) {
+      String name = mdinfo.articleTitle.trim();
+      if (name.length() > MAX_NAME_COLUMN) {
 	log.warning("article title too long '" + mdinfo.articleTitle
 	    + "' for title: '" + mdinfo.journalTitle + "' publisher: "
 	    + mdinfo.publisher + "'");
-	mdinfo.articleTitle =
-	    DbManager.truncateVarchar(mdinfo.articleTitle, MAX_NAME_COLUMN);
+	mdinfo.articleTitle = DbManager.truncateVarchar(name, MAX_NAME_COLUMN);
+      } else {
+	mdinfo.articleTitle = name;
       }
     }
 
     if (mdinfo.publisher != null) {
-      if (mdinfo.publisher.length() > MAX_NAME_COLUMN) {
+      String name = mdinfo.publisher.trim();
+      if (name.length() > MAX_NAME_COLUMN) {
 	log.warning("publisher too long '" + mdinfo.publisher
 	    + "' for title: '" + mdinfo.journalTitle + "'");
-	mdinfo.publisher =
-	    DbManager.truncateVarchar(mdinfo.publisher, MAX_NAME_COLUMN);
+	mdinfo.publisher = DbManager.truncateVarchar(name, MAX_NAME_COLUMN);
+      } else {
+	mdinfo.publisher = name;
       }
     }
 
     if (mdinfo.journalTitle != null) {
-      if (mdinfo.journalTitle.length() > MAX_NAME_COLUMN) {
+      String name = mdinfo.journalTitle.trim();
+      if (name.length() > MAX_NAME_COLUMN) {
 	log.warning("journal title too long '" + mdinfo.journalTitle
 	    + "' for publisher: " + mdinfo.publisher + "'");
-	mdinfo.journalTitle =
-	    DbManager.truncateVarchar(mdinfo.journalTitle, MAX_NAME_COLUMN);
+	mdinfo.journalTitle = DbManager.truncateVarchar(name, MAX_NAME_COLUMN);
+      } else {
+	mdinfo.journalTitle = name;
       }
     }
 
     if (mdinfo.authorSet != null) {
       Set<String> authors = new HashSet<String>();
       for (String author : mdinfo.authorSet) {
-	if (author.length() > MAX_AUTHOR_COLUMN) {
+	String name = author.trim();
+	if (name.length() > MAX_AUTHOR_COLUMN) {
 	  log.warning("author too long '" + author + "' for title: '"
 	      + mdinfo.journalTitle + "' publisher: " + mdinfo.publisher + "'");
-	  authors.add(DbManager.truncateVarchar(author, MAX_AUTHOR_COLUMN));
+	  authors.add(DbManager.truncateVarchar(name, MAX_AUTHOR_COLUMN));
 	} else {
-	  authors.add(author);
+	  authors.add(name);
 	}
       }
       mdinfo.authorSet = authors;
@@ -398,12 +416,13 @@ public class AuMetadataRecorder {
     if (mdinfo.keywordSet != null) {
       Set<String> keywords = new HashSet<String>();
       for (String keyword : mdinfo.keywordSet) {
-	if (keyword.length() > MAX_KEYWORD_COLUMN) {
+	String name = keyword.trim();
+	if (name.length() > MAX_KEYWORD_COLUMN) {
 	  log.warning("keyword too long '" + keyword + "' for title: '"
 	      + mdinfo.journalTitle + "' publisher: " + mdinfo.publisher + "'");
-	  keywords.add(DbManager.truncateVarchar(keyword, MAX_KEYWORD_COLUMN));
+	  keywords.add(DbManager.truncateVarchar(name, MAX_KEYWORD_COLUMN));
 	} else {
-	  keywords.add(keyword);
+	  keywords.add(name);
 	}
       }
       mdinfo.keywordSet = keywords;
@@ -412,58 +431,68 @@ public class AuMetadataRecorder {
     if (mdinfo.featuredUrlMap != null) {
       Map<String, String> featuredUrls = new HashMap<String, String>();
       for (String key : mdinfo.featuredUrlMap.keySet()) {
-	if (mdinfo.featuredUrlMap.get(key).length() > MAX_URL_COLUMN) {
+	String url = mdinfo.featuredUrlMap.get(key).trim();
+	if (url.length() > MAX_URL_COLUMN) {
 	  log.warning("URL too long '" + mdinfo.featuredUrlMap.get(key)
 	      + "' for title: '" + mdinfo.journalTitle + "' publisher: "
 	      + mdinfo.publisher + "'");
-	  featuredUrls.put(key,
-	                   DbManager.truncateVarchar(mdinfo.featuredUrlMap.
-	                                             get(key), MAX_URL_COLUMN));
+	  featuredUrls.put(key, DbManager.truncateVarchar(url, MAX_URL_COLUMN));
 	} else {
-	  featuredUrls.put(key, mdinfo.featuredUrlMap.get(key));
+	  featuredUrls.put(key, url);
 	}
       }
       mdinfo.featuredUrlMap = featuredUrls;
     }
 
     if (mdinfo.endPage != null) {
-      if (mdinfo.endPage.length() > MAX_END_PAGE_COLUMN) {
+      String endPage = mdinfo.endPage.trim();
+      if (endPage.length() > MAX_END_PAGE_COLUMN) {
 	log.warning("endPage too long '" + mdinfo.endPage + "' for title: '"
 	    + mdinfo.journalTitle + "' publisher: " + mdinfo.publisher + "'");
 	mdinfo.endPage =
-	    DbManager.truncateVarchar(mdinfo.endPage, MAX_END_PAGE_COLUMN);
+	    DbManager.truncateVarchar(endPage, MAX_END_PAGE_COLUMN);
+      } else {
+	mdinfo.endPage = endPage;
       }
     }
 
     if (mdinfo.coverage != null) {
-      if (mdinfo.coverage.length() > MAX_COVERAGE_COLUMN) {
+      String coverage = mdinfo.coverage.trim();
+      if (coverage.length() > MAX_COVERAGE_COLUMN) {
 	log.warning("coverage too long '" + mdinfo.coverage + "' for title: '"
 	    + mdinfo.journalTitle + "' publisher: " + mdinfo.publisher + "'");
 	mdinfo.coverage =
-	    DbManager.truncateVarchar(mdinfo.coverage, MAX_COVERAGE_COLUMN);
+	    DbManager.truncateVarchar(coverage, MAX_COVERAGE_COLUMN);
+      } else {
+	mdinfo.coverage = coverage;
       }
     } else {
-	mdinfo.coverage = "fulltext";
+      mdinfo.coverage = "fulltext";
     }
 
     if (mdinfo.itemNumber != null) {
-      if (mdinfo.itemNumber.length() > MAX_ITEM_NO_COLUMN) {
+      String itemNumber = mdinfo.itemNumber.trim();
+      if (itemNumber.length() > MAX_ITEM_NO_COLUMN) {
 	log.warning("itemNumber too long '" + mdinfo.itemNumber
 	    + "' for title: '" + mdinfo.journalTitle + "' publisher: "
 	    + mdinfo.publisher + "'");
 	mdinfo.itemNumber =
 	    DbManager.truncateVarchar(mdinfo.itemNumber, MAX_ITEM_NO_COLUMN);
+      } else {
+	mdinfo.itemNumber = itemNumber;
       }
     }
 
     if (mdinfo.proprietaryIdentifier != null) {
-      if (mdinfo.proprietaryIdentifier.length() > MAX_PUBLICATION_ID_COLUMN) {
+      String name = mdinfo.proprietaryIdentifier.trim();
+      if (name.length() > MAX_PUBLICATION_ID_COLUMN) {
 	log.warning("proprietaryIdentifier too long '"
 	    + mdinfo.proprietaryIdentifier + "' for title: '"
 	    + mdinfo.journalTitle + "' publisher: " + mdinfo.publisher + "'");
 	mdinfo.proprietaryIdentifier =
-	    DbManager.truncateVarchar(mdinfo.proprietaryIdentifier,
-				      MAX_PUBLICATION_ID_COLUMN);
+	    DbManager.truncateVarchar(name, MAX_PUBLICATION_ID_COLUMN);
+      } else {
+	mdinfo.proprietaryIdentifier = name;
       }
     }
 
