@@ -698,7 +698,7 @@
      >
 
     param[journal_id] = kms
-    comment[continued_by] = 9780748669097
+    comment[continued_by] = isbn 9780748669097, journal_id of kmsj
     comment[0] = From 2013, this journal is available as an annual book publication
 
     au < finished ; frozen ; 2009 ; Katherine Mansfield Studies Volume 1 ; 1 >
@@ -713,7 +713,6 @@
 
     title <
       name = Katherine Mansfield Studies ;
-      isbn = 9780748669097 ;
       type = bookSeries
      >
 
@@ -722,9 +721,11 @@
     param[journal_id] = kmsj
     comment[continues] = 2041-4501
     implicit < status ; status2 ; year ; name ; param[isbn] >
+    
+    comment[0] = we are not processing books for this publisher yet.
 
-    au < exists ; exists ; 2013 ; Katherine Mansfield and the (Post)colonial; 9780748669097 >
-    au < expected ; exists ; 2014 ; Katherine Mansfield and World War One ; 9780748695348 >
+    au < doNotProcess ; doNotProcess ; 2013 ; Katherine Mansfield and the (Post)colonial; 9780748669097 >
+    au < doNotProcess ; doNotProcess ; 2014 ; Katherine Mansfield and World War One ; 9780748695348 >
 
   }
 
