@@ -2688,7 +2688,7 @@
     param[base_url] = http://anr.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2014 ; The Anthropocene Review Volume 1 ; 1 >
+    au < manifest ; 2014 ; The Anthropocene Review Volume 1 ; 1 >
 
   }
 
@@ -3792,7 +3792,7 @@
     {
 
       title <
-        name = Big Data and Society ;
+        name = Big Data & Society ;
         eissn = 2053-9517 ;
         issnl = 2053-9517
       >
@@ -3800,7 +3800,7 @@
         param[base_url] = http://bds.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 2014 ; Big Data and Society Volume 1 ; 1 >
+        au < manifest ; 2014 ; Big Data & Society Volume 1 ; 1 >
 
     }
 
@@ -6818,7 +6818,7 @@
         param[base_url] = http://cme.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 2014 ; Contemporary Review of the Middle East Volume 1 ; 1 >
+        au < manifest ; 2014 ; Contemporary Review of the Middle East Volume 1 ; 1 >
 
     }
 
@@ -43000,7 +43000,7 @@ comment[mpj] = now published by Brill
       au < manifest ; 2011 ; Australian Journal of Education Volume 55 ; 55 >
       au < released ; 2012 ; Australian Journal of Education Volume 56 ; 56 >
       au < manifest ; 2013 ; Australian Journal of Education Volume 57 ; 57 >
-      au < expected ; 2014 ; Australian Journal of Education Volume 58 ; 58 >
+      au < manifest ; 2014 ; Australian Journal of Education Volume 58 ; 58 >
 
     }
 

@@ -1591,7 +1591,7 @@
         param[journal_issn] = 2196-064X 
         comment[platform] = BioMedCentralPlugin
   
-        au < exists ; 2014 ; Journal of Trust Management Volume 1 ; 1 >
+        au < manifest ; 2014 ; Journal of Trust Management Volume 1 ; 1 >
   
     }
   
@@ -1916,7 +1916,7 @@
         param[journal_issn] = 2197-9847
         comment[platform] = BioMedCentralPlugin
 
-        au < exists ; 2014 ; Research in the Mathematical Sciences Volume 1 ; 1 >
+        au < manifest ; 2014 ; Research in the Mathematical Sciences Volume 1 ; 1 >
 
     }
 
