@@ -1,10 +1,10 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.67 2013-10-23 04:19:34 tlipkis Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.68 2014-07-22 07:56:12 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -1474,6 +1474,12 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     int max = 5;
     String url = "http://www.example.com/versionedcontent.txt";
     Properties props = new Properties();
+
+    // No existing node
+    RepositoryNode leaf0 = repo.createNewNode(url);
+    assertFalse(leaf0.hasContent());
+    RepositoryNodeVersion[] vers0 = leaf0.getNodeVersions();
+    assertEquals(1, vers0.length);
 
     RepositoryNode leaf = repo.createNewNode(url);
     // create several versions

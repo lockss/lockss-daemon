@@ -1,10 +1,10 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.93 2014-01-14 04:28:53 tlipkis Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.94 2014-07-22 07:56:12 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -1732,6 +1732,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
   // return array of version numbers of all present previous versions
   int[] getVersionNumbers() {
     String[] names = getContentDir().list(NumericFilenameFilter.INSTANCE);
+    if (names == null) {
+      return new int[0];
+    }
     int[] res = new int[names.length];
     for (int ix = names.length - 1; ix >= 0; ix--) {
       try {
