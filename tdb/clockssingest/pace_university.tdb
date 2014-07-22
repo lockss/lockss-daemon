@@ -59,10 +59,11 @@
   {
 
     title <
-      name = Pace Environmental Law Review Online Companion
+      name = Pace Environmental Law Review Online Companion ;
+      issn = 2164-9936
     >
 
-    comment[issn] = requested in RT ticket 3743. No issn
+    comment[issn] = requested in RT ticket 3743.
     param[journal_abbr] = pelroc
 
     au < finished ; crawling ; 2011 ; Pace Environmental Law Review Online Companion Volume 1 ; 1 >
