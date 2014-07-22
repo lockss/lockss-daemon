@@ -1,10 +1,10 @@
 /*
- * $Id: TestBaseCachedUrl.java,v 1.26 2013-08-08 06:00:07 tlipkis Exp $
+ * $Id: TestBaseCachedUrl.java,v 1.27 2014-07-22 07:55:25 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -70,11 +70,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    CIProperties props = new CIProperties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    ConfigurationUtil.setCurrentConfigFromProps(props);
-
+    setUpDiskSpace();
     theDaemon = getMockLockssDaemon();
     theDaemon.getHashService();
 
@@ -104,19 +100,38 @@ public class TestBaseCachedUrl extends LockssTestCase {
     }
 
     public void testFilterParamFilterOn() throws IOException {
-      String config = PARAM_SHOULD_FILTER_HASH_STREAM+"=true";
-      ConfigurationUtil.setCurrentConfigFromString(config);
+      ConfigurationUtil.addFromArgs(PARAM_SHOULD_FILTER_HASH_STREAM, "true");
       MyCachedUrl cu = new MyCachedUrl(new MyAu(), null);
       cu.openForHashing();
       assertTrue(cu.gotFilteredStream);
     }
 
     public void testFilterParamFilterOff() throws IOException {
-      String config = PARAM_SHOULD_FILTER_HASH_STREAM+"=false";
-      ConfigurationUtil.setCurrentConfigFromString(config);
+      ConfigurationUtil.addFromArgs(PARAM_SHOULD_FILTER_HASH_STREAM, "false");
       MyCachedUrl cu = new MyCachedUrl(new MyAu(), null);
       cu.openForHashing();
       assertFalse(cu.gotFilteredStream);
+    }
+
+    public void testNoVersions() throws IOException {
+      CachedUrl cu = mau.makeCachedUrl(url1);
+      assertFalse(cu.hasContent());
+      CachedUrl[] all = cu.getCuVersions();
+      assertEquals(1, all.length);
+      assertFalse(all[0].hasContent());
+      assertEquals(cu.getUrl(), all[0].getUrl());
+      try {
+	cu.getUnfilteredInputStream();
+	fail("getUnfilteredInputStream() should fail when no content");
+      } catch (UnsupportedOperationException e) {
+	assertMatchesRE("No content", e.getMessage());
+      }
+      try {
+	cu.getProperties();
+	fail("getProperties() should fail when no content");
+      } catch (UnsupportedOperationException e) {
+	assertMatchesRE("No content", e.getMessage());
+      }
     }
   }
 
@@ -213,6 +228,31 @@ public class TestBaseCachedUrl extends LockssTestCase {
       assertTrue(cu.isLeaf());
     }
 
+    public void testHasContent() throws Exception {
+      // In version tests, getTestCu() not applicable before node created
+      assertFalse(mau.makeCachedUrl(url1).hasContent());
+
+      ConfigurationUtil.addFromArgs(BaseCachedUrl.PARAM_INCLUDED_ONLY, "true");
+
+      createLeaf(url1, content1, null);
+      createLeaf(url2, content2, null);
+      createLeaf(url3, "", null);
+      mau.addUrlToBeCached(url1);
+      mau.addUrlToBeCached(url3);
+
+      CachedUrl cu = getTestCu(url1);
+      assertTrue(cu.hasContent());
+
+      cu = getTestCu(url2);
+      // not in crawl rules
+      assertFalse(cu.hasContent());
+      ConfigurationUtil.addFromArgs(BaseCachedUrl.PARAM_INCLUDED_ONLY, "false");
+      assertTrue(cu.hasContent());
+
+      cu = getTestCu(url3);
+      assertTrue(cu.hasContent());
+    }
+
     public void testOpenForReading() throws Exception {
       createLeaf(url1, content1, null);
       createLeaf(url2, content2, null);
@@ -247,8 +287,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
 
     public void testOpenForHashingWontFilterIfConfiguredNotTo()
 	throws Exception {
-      String config = PARAM_SHOULD_FILTER_HASH_STREAM+"=false";
-      ConfigurationUtil.setCurrentConfigFromString(config);
+      ConfigurationUtil.addFromArgs(PARAM_SHOULD_FILTER_HASH_STREAM, "false");
       createLeaf(url1, "<test stream>", null);
       String str = "This is a filtered stream";
       mau.setFilterRule(new MyMockFilterRule(new StringReader(str)));
@@ -264,8 +303,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
 
     public void testOpenForHashingUsesFilterRule()
 	throws Exception {
-      String config = PARAM_SHOULD_FILTER_HASH_STREAM + "=true";
-      ConfigurationUtil.setCurrentConfigFromString(config);
+      ConfigurationUtil.addFromArgs(PARAM_SHOULD_FILTER_HASH_STREAM, "true");
       createLeaf(url1, "blah <test stream>", null);
       String str = "This is a filtered stream";
       mau.setFilterRule(new MyMockFilterRule(new StringReader(str)));
@@ -277,8 +315,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
 
     public void testOpenForHashingUsesFilterFactory()
 	throws Exception {
-      String config = PARAM_SHOULD_FILTER_HASH_STREAM + "=true";
-      ConfigurationUtil.setCurrentConfigFromString(config);
+      ConfigurationUtil.addFromArgs(PARAM_SHOULD_FILTER_HASH_STREAM, "true");
       createLeaf(url1, "blah <test stream>", null);
       String str = "This is a filtered stream";
       mau.setHashFilterFactory(new MyMockFilterFactory(new StringInputStream(str)));
@@ -290,8 +327,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
 
     public void testOpenForHashingWithUnfilteredHash()
 	throws Exception {
-      String config = PARAM_SHOULD_FILTER_HASH_STREAM + "=true";
-      ConfigurationUtil.setCurrentConfigFromString(config);
+      ConfigurationUtil.addFromArgs(PARAM_SHOULD_FILTER_HASH_STREAM, "true");
       String unfiltered = "This is the content before filtering";
       createLeaf(url1, unfiltered, null);
       String str = "This is a filtered stream";
@@ -316,8 +352,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
 
     public void testOpenForHashingUsesFilterFactoryBeforeRule()
 	throws Exception {
-      String config = PARAM_SHOULD_FILTER_HASH_STREAM + "=true";
-      ConfigurationUtil.setCurrentConfigFromString(config);
+      ConfigurationUtil.addFromArgs(PARAM_SHOULD_FILTER_HASH_STREAM, "true");
       createLeaf(url1, "blah <test stream>", null);
       String strRule = "This is a filtered stream";
       mau.setFilterRule(new MyMockFilterRule(new StringReader(strRule)));
@@ -389,8 +424,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
     }
 
     public void testFilterReset() throws Exception {
-      String config = PARAM_SHOULD_FILTER_HASH_STREAM + "=true";
-      ConfigurationUtil.setCurrentConfigFromString(config);
+      ConfigurationUtil.addFromArgs(PARAM_SHOULD_FILTER_HASH_STREAM, "true");
       String unfilt = randomString(100000); // must be longer than will be buffered
       createLeaf(url1, unfilt, null);
       mau.setHashFilterFactory(new MarkResetFilterFactory(20000, 18000));
@@ -410,8 +444,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
     }
 
     public void testFilterIllegalReset() throws Exception {
-      String config = PARAM_SHOULD_FILTER_HASH_STREAM + "=true";
-      ConfigurationUtil.setCurrentConfigFromString(config);
+      ConfigurationUtil.addFromArgs(PARAM_SHOULD_FILTER_HASH_STREAM, "true");
       String unfilt = randomString(20000);
       createLeaf(url1, unfilt, null);
       mau.setHashFilterFactory(new MarkResetFilterFactory(5000, 10000));

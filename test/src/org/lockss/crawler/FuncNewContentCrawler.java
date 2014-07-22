@@ -1,10 +1,10 @@
 /*
- * $Id: FuncNewContentCrawler.java,v 1.29 2012-08-08 07:15:46 tlipkis Exp $
+ * $Id: FuncNewContentCrawler.java,v 1.30 2014-07-22 07:55:25 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -40,6 +40,7 @@ import org.apache.commons.collections.bag.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.base.*;
 import org.lockss.plugin.simulated.*;
 import org.lockss.repository.*;
 import org.lockss.test.*;
@@ -89,6 +90,9 @@ public class FuncNewContentCrawler extends LockssTestCase {
     //test that we don't cache a file that is globally excluded
     props.setProperty(CrawlManagerImpl.PARAM_EXCLUDE_URL_PATTERN,
 		      ".*(branch1/.*){3,}");
+    // Crawl rule check in BaseCachedUrl.hasContent() interferes with
+    // shouldBeCached() counter below - disable it.
+    props.setProperty(BaseCachedUrl.PARAM_INCLUDED_ONLY, "false");
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
     theDaemon = getMockLockssDaemon();

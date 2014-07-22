@@ -1,10 +1,10 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.54 2013-11-06 18:03:33 fergaloy-sf Exp $
+ * $Id: BaseCachedUrl.java,v 1.55 2014-07-22 07:55:25 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -62,13 +62,21 @@ public class BaseCachedUrl implements CachedUrl {
   private RepositoryNode leaf = null;
   protected RepositoryNode.RepositoryNodeContents rnc = null;
 
+  public static final String PREFIX = Configuration.PREFIX + "baseCachedUrl.";
+
   private static final String PARAM_SHOULD_FILTER_HASH_STREAM =
-    Configuration.PREFIX+"baseCachedUrl.filterHashStream";
+    PREFIX + "filterHashStream";
   private static final boolean DEFAULT_SHOULD_FILTER_HASH_STREAM = true;
 
   public static final String PARAM_FILTER_USE_CHARSET =
-    Configuration.PREFIX + "baseCachedUrl.filterUseCharset";
+    PREFIX + "filterUseCharset";
   public static final boolean DEFAULT_FILTER_USE_CHARSET = true;
+
+  /** Hide files with URLs that don't match the crawl rules (which may have
+   * changed since files were collected) */
+  public static final String PARAM_INCLUDED_ONLY = PREFIX + "includedOnly";
+  static final boolean DEFAULT_INCLUDED_ONLY = true;
+
   public static final String DEFAULT_METADATA_CONTENT_TYPE = "text/html";
 
   public BaseCachedUrl(ArchivalUnit owner, String url) {
@@ -159,6 +167,12 @@ public class BaseCachedUrl implements CachedUrl {
   }
 
   public boolean hasContent() {
+    if (CurrentConfig.getBooleanParam(PARAM_INCLUDED_ONLY,
+				      DEFAULT_INCLUDED_ONLY) &&
+	!au.shouldBeCached(getUrl())) {
+      logger.debug("hasContent("+getUrl()+"): excluded by crawl rule");
+      return false;
+    }
     if (repository==null) {
       getRepository();
     }
@@ -388,6 +402,12 @@ public class BaseCachedUrl implements CachedUrl {
     }
 
     public boolean hasContent() {
+      if (CurrentConfig.getBooleanParam(PARAM_INCLUDED_ONLY,
+					DEFAULT_INCLUDED_ONLY) &&
+	  !au.shouldBeCached(getUrl())) {
+	logger.debug("hasContent("+getUrl()+"): excluded by crawl rule");
+	return false;
+      }
       return getNodeVersion().hasContent();
     }
 
@@ -396,7 +416,13 @@ public class BaseCachedUrl implements CachedUrl {
      * @return the string form
      */
     public String toString() {
-      return "[BCU: v=" + getVersion() + " " + url+"]";
+      int ver;
+      try {
+	ver = getVersion();
+      } catch (RuntimeException e) {
+	ver = -1;
+      }
+      return "[BCU: v=" + ver + " " + url+"]";
     }
   }
 
