@@ -43823,7 +43823,8 @@ comment[mpj] = now published by Brill
     {
 
       title <
-        name = SAGE Open Engineering
+        name = SAGE Open Engineering ;
+        eissn = 2050-3113
       >
 
     pluginSuffix = HighWirePressH20Plugin

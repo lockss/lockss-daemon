@@ -12111,8 +12111,9 @@
 
     title <
       name = Health Services Research and Managerial Epidemiology ;
-      eissn = 2333-3392 ;
-      issnl = 2333-3392
+        issn = 2333-3928 ;
+        eissn = 2333-3392 ;
+        issnl = 2333-3928
     >
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://hme.sagepub.com/
@@ -40191,8 +40192,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://seo.sagepub.com/
 
-    au < exists ; exists ; 2013 ; SAGE Open Engineering Volume 1 ; 1 ; >
-    au < expected ; exists ; 2014 ; SAGE Open Engineering Volume 2 ; 2 ; >
+    au < expected ; exists ; 2014 ; SAGE Open Engineering Volume 1 ; 1 ; >
 
     }
 
