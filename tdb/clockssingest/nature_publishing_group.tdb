@@ -609,7 +609,7 @@
     >
     
     param[journal_id] = clpt
-    comment[platform] = moving to Wiley Blackwell, effective on 2015-01-01
+    comment[publisher] = moving to Wiley Blackwell, effective on 2015-01-01
 
     au < exists ; exists ; 1980 ; Clinical Pharmacology & Therapeutics Volume 27 ; 1980 ; 27 >
     au < exists ; exists ; 1980 ; Clinical Pharmacology & Therapeutics Volume 28 ; 1980 ; 28 >
@@ -692,7 +692,7 @@
     >
 
     param[journal_id] = psp
-    comment[platform] = moving to Wiley Blackwell, effective on 2015-01-01
+    comment[publisher] = moving to Wiley Blackwell, effective on 2015-01-01
     
     au < exists ; exists ; 2012 ; CPT: Pharmacometrics & Systems Pharmacology Volume 1 ; 2012 ; 1 >
     au < exists ; exists ; 2013 ; CPT: Pharmacometrics & Systems Pharmacology Volume 2 ; 2013 ; 2 >
