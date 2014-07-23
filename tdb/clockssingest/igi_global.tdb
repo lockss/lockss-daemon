@@ -366,7 +366,7 @@
     au < manifest ; exists ; 2010 ; International Journal of Artificial Life Research (IJALR) Volume 1 ; 1 > 
     au < finished ; crawling ; 2011 ; International Journal of Artificial Life Research (IJALR) Volume 2 ; 2 > 
     au < finished ; crawling ; 2012 ; International Journal of Artificial Life Research (IJALR) Volume 3 ; 3 > 
-    au < testing ; exists ; 2013 ; International Journal of Artificial Life Research (IJALR) Volume 4 ; 4 > 
+    au < manifest ; exists ; 2013 ; International Journal of Artificial Life Research (IJALR) Volume 4 ; 4 > 
     au < expected ; exists ; 2014 ; International Journal of Artificial Life Research (IJALR) Volume 5 ; 5 > 
 
   }
@@ -702,7 +702,7 @@
 
     au < finished ; crawling ; 2011 ; International Journal of Cyber Warfare and Terrorism (IJCWT) Volume 1 ; 1 > 
     au < finished ; crawling ; 2012 ; International Journal of Cyber Warfare and Terrorism (IJCWT) Volume 2 ; 2 > 
-    au < testing ; exists ; 2013 ; International Journal of Cyber Warfare and Terrorism (IJCWT) Volume 3 ; 3 > 
+    au < manifest ; exists ; 2013 ; International Journal of Cyber Warfare and Terrorism (IJCWT) Volume 3 ; 3 > 
     au < expected ; exists ; 2014 ; International Journal of Cyber Warfare and Terrorism (IJCWT) Volume 4 ; 4 > 
 
   }
@@ -741,7 +741,7 @@
     param[journal_issn] = 1941-6296
 
     au < manifest ; exists ; 2009 ; International Journal of Decision Support System Technology (IJDSST) Volume 1 ; 1 > 
-    au < testing ; exists ; 2010 ; International Journal of Decision Support System Technology (IJDSST) Volume 2 ; 2 > 
+    au < manifest ; exists ; 2010 ; International Journal of Decision Support System Technology (IJDSST) Volume 2 ; 2 > 
     au < finished ; crawling ; 2011 ; International Journal of Decision Support System Technology (IJDSST) Volume 3 ; 3 > 
     au < finished ; crawling ; 2012 ; International Journal of Decision Support System Technology (IJDSST) Volume 4 ; 4 > 
     au < crawling ; exists ; 2013 ; International Journal of Decision Support System Technology (IJDSST) Volume 5 ; 5 > 
@@ -874,7 +874,7 @@
     >
     param[journal_issn] = 1937-9633
 
-    au < testing ; exists ; 2009 ; International Journal of E-Adoption (IJEA) Volume 1 ; 1 > 
+    au < manifest ; exists ; 2009 ; International Journal of E-Adoption (IJEA) Volume 1 ; 1 > 
     au < manifest ; exists ; 2010 ; International Journal of E-Adoption (IJEA) Volume 2 ; 2 > 
     au < finished ; crawling ; 2011 ; International Journal of E-Adoption (IJEA) Volume 3 ; 3 > 
     au < finished ; crawling ; 2012 ; International Journal of E-Adoption (IJEA) Volume 4 ; 4 > 
@@ -1161,7 +1161,7 @@
     >
     param[journal_issn] = 1947-8488
 
-    au < testing ; exists ; 2010 ; International Journal of Geotechnical Earthquake Engineering (IJGEE) Volume 1 ; 1 > 
+    au < manifest ; exists ; 2010 ; International Journal of Geotechnical Earthquake Engineering (IJGEE) Volume 1 ; 1 > 
     au < finished ; crawling ; 2011 ; International Journal of Geotechnical Earthquake Engineering (IJGEE) Volume 2 ; 2 > 
     au < finished ; crawling ; 2012 ; International Journal of Geotechnical Earthquake Engineering (IJGEE) Volume 3 ; 3 > 
     au < crawling ; exists ; 2013 ; International Journal of Geotechnical Earthquake Engineering (IJGEE) Volume 4 ; 4 > 
@@ -2166,7 +2166,7 @@
     >
     param[journal_issn] = 1947-3036
 
-    au < testing ; exists ; 2010 ; International Journal of Secure Software Engineering (IJSSE) Volume 1 ; 1 > 
+    au < manifest ; exists ; 2010 ; International Journal of Secure Software Engineering (IJSSE) Volume 1 ; 1 > 
     au < finished ; crawling ; 2011 ; International Journal of Secure Software Engineering (IJSSE) Volume 2 ; 2 > 
     au < finished ; crawling ; 2012 ; International Journal of Secure Software Engineering (IJSSE) Volume 3 ; 3 > 
     au < crawling ; exists ; 2013 ; International Journal of Secure Software Engineering (IJSSE) Volume 4 ; 4 > 
@@ -2723,7 +2723,7 @@
     au < manifest ; exists ; 2007 ; Journal of Cases on Information Technology (JCIT) Volume 9 ; 9 > 
     au < manifest ; exists ; 2008 ; Journal of Cases on Information Technology (JCIT) Volume 10 ; 10 > 
     au < manifest ; exists ; 2009 ; Journal of Cases on Information Technology (JCIT) Volume 11 ; 11 > 
-    au < testing ; exists ; 2010 ; Journal of Cases on Information Technology (JCIT) Volume 12 ; 12 > 
+    au < manifest ; exists ; 2010 ; Journal of Cases on Information Technology (JCIT) Volume 12 ; 12 > 
     au < finished ; crawling ; 2011 ; Journal of Cases on Information Technology (JCIT) Volume 13 ; 13 > 
     au < finished ; crawling ; 2012 ; Journal of Cases on Information Technology (JCIT) Volume 14 ; 14 > 
     au < crawling ; exists ; 2013 ; Journal of Cases on Information Technology (JCIT) Volume 15 ; 15 > 
@@ -2879,7 +2879,7 @@
     au < manifest ; exists ; 2006 ; Journal of Organizational and End User Computing (JOEUC) Volume 18 ; 18 > 
     au < manifest ; exists ; 2007 ; Journal of Organizational and End User Computing (JOEUC) Volume 19 ; 19 > 
     au < manifest ; exists ; 2008 ; Journal of Organizational and End User Computing (JOEUC) Volume 20 ; 20 > 
-    au < testing ; exists ; 2009 ; Journal of Organizational and End User Computing (JOEUC) Volume 21 ; 21 > 
+    au < manifest ; exists ; 2009 ; Journal of Organizational and End User Computing (JOEUC) Volume 21 ; 21 > 
     au < manifest ; exists ; 2010 ; Journal of Organizational and End User Computing (JOEUC) Volume 22 ; 22 > 
     au < finished ; crawling ; 2011 ; Journal of Organizational and End User Computing (JOEUC) Volume 23 ; 23 > 
     au < finished ; crawling ; 2012 ; Journal of Organizational and End User Computing (JOEUC) Volume 24 ; 24 > 
