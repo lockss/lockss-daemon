@@ -362,7 +362,7 @@
 
       au < notReady ; 2011 ; 1 ; Revista Lugares de Educação Volume 2011 ; 2011 ; url missing http >
       au < notReady ; 2012 ; 2 ; Revista Lugares de Educação Volume 2012 ; 2012 ; url missing http >
-      au < testing ; 2013 ; 3 ; Revista Lugares de Educação Volume 2013 ; 2013 ; >
+      au < notReady ; 2013 ; 3 ; Revista Lugares de Educação Volume 2013 ; 2013 ; many recursive urls>
       au < manifest ; 2014 ; 4 ; Revista Lugares de Educação Volume 2014 ; 2014 ; >
 
   }
@@ -400,7 +400,7 @@
       au < released ; 2010 ; 19 ; Revista Nordestina de Biologia Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 20 ; Revista Nordestina de Biologia Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 21 ; Revista Nordestina de Biologia Volume 2012 ; 2012 ; >
-      au < testing ; 2013 ; 22 ; Revista Nordestina de Biologia Volume 2013 ; 2013 ; >
+      au < notReady ; 2013 ; 22 ; Revista Nordestina de Biologia Volume 2013 ; 2013 ; recursive url: 	http://periodicos.ufpb.br/ojs2/index.php/revnebio/article/view/12155/www.ufpe.br/www.ufpe.br/>
       au < expected ; 2014 ; 23 ; Revista Nordestina de Biologia Volume 2014 ; 2014 ; >
 
   }
