@@ -5977,7 +5977,7 @@
         implicit < status ; year ; name ; param[volume_name] >
         param[base_url] = http://cpd.sagepub.com/
         
-        comment[0] = Moving to Wiley Blackwell in 2013.
+        comment[publisher] = Moving to Wiley Blackwell in 2013.
 
         au < down ; 2012 ; Clinical Pharmacology in Drug Development Volume 1 ; 1 >
 
@@ -19963,7 +19963,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         param[base_url] = http://jcp.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
         
-        comment[0] = moving to Wiley Blackwell in 2013
+        comment[publisher] = moving to Wiley Blackwell in 2013
 
         au < down ; 1961 ; The Journal of Clinical Pharmacology Volume 1 ; 1 >
         au < down ; 1962 ; The Journal of Clinical Pharmacology Volume 2 ; 2 >
