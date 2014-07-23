@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.101 2014-07-13 04:17:14 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.102 2014-07-23 22:56:15 clairegriffin Exp $
  */
 
 /*
@@ -36,7 +36,6 @@ import java.util.*;
 import java.net.*;
 import java.io.*;
 import org.apache.commons.collections.map.LRUMap;
-import org.apache.oro.text.regex.*;
 
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
@@ -467,7 +466,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
       // PriorityBuffer can't recover from comparator error, so this must
       // abort.
       abortCrawl();
-    }      
+    }
   }
 
   // Default Set impl overridden for some tests
@@ -637,72 +636,82 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     }
 
     // parse the page
+    if (parseThePage(curl, fetchQueue, processedUrls, maxDepthUrls, uc)) {
+      return false;
+    }
+    logger.debug3("Removing from parsing list: "+uc.getUrl());
+    return (!crawlStatus.isCrawlError());
+  }
+
+  protected boolean parseThePage(CrawlUrlData curl, CrawlQueue fetchQueue,
+                               Map<String, CrawlUrlData> processedUrls,
+                               Map<String, CrawlUrlData> maxDepthUrls,
+                               UrlCacher uc) {
     try {
       if (!processedUrls.containsKey(uc.getUrl())) {
-	logger.debug3("Parsing "+uc);
-	CachedUrl cu = uc.getCachedUrl();
-	try {
-	  //XXX quick fix; if-statement should be removed when we rework
-	  //handling of error condition
-	  if (cu.hasContent()) {
-	    LinkExtractor extractor = getLinkExtractor(cu);
-	    if (extractor != null) {
-	      //IOException if the CU can't be read
-	      InputStream in = null;
-	      try {
-		in = cu.getUnfilteredInputStream();
-		// Might be reparsing with new content (if depth reduced
-		// below refetch depth); clear any existing children
-		curl.clearChildren();
-		String charset = getCharset(cu);
-		in = FilterUtil.getCrawlFilteredStream(au, in, charset,
-						       cu.getContentType());
-		extractor.extractUrls(au, in, charset,
-				      PluginUtil.getBaseUrl(cu),
-				      new MyLinkExtractorCallback(au, curl,
-								  fetchQueue,
-								  processedUrls,
-								  maxDepthUrls));
-		// done adding children, trim to size
-		curl.trimChildren();
-		crawlStatus.signalUrlParsed(uc.getUrl());
-	      } catch (PluginException e) {
-		logger.error("Plugin LinkExtractor error", e);
-		crawlStatus.signalErrorForUrl(uc.getUrl(),
-					      "Plugin LinkExtractor error: " +
-					      e.getMessage(),
-					      Crawler.STATUS_PLUGIN_ERROR);
-	      } finally {
-		IOUtil.safeClose(in);
-	      }
-	    }
-	    processedUrls.put(uc.getUrl(), curl);
-	  }
-	} finally {
-	  cu.release();
-	}
+        logger.debug3("Parsing "+uc);
+        CachedUrl cu = uc.getCachedUrl();
+        try {
+          //XXX quick fix; if-statement should be removed when we rework
+          //handling of error condition
+          if (cu.hasContent()) {
+            LinkExtractor extractor = getLinkExtractor(cu);
+            if (extractor != null) {
+              //IOException if the CU can't be read
+              InputStream in = null;
+              try {
+                in = cu.getUnfilteredInputStream();
+                // Might be reparsing with new content (if depth reduced
+                // below refetch depth); clear any existing children
+                curl.clearChildren();
+                String charset = getCharset(cu);
+                in = FilterUtil.getCrawlFilteredStream(au, in, charset,
+                                                       cu.getContentType());
+                extractor.extractUrls(au, in, charset,
+                                      PluginUtil.getBaseUrl(cu),
+                                      new MyLinkExtractorCallback(au, curl,
+                                                                  fetchQueue,
+                                                                  processedUrls,
+                                                                  maxDepthUrls));
+                // done adding children, trim to size
+                curl.trimChildren();
+                crawlStatus.signalUrlParsed(uc.getUrl());
+              } catch (PluginException e) {
+                logger.error("Plugin LinkExtractor error", e);
+                crawlStatus.signalErrorForUrl(uc.getUrl(),
+                                              "Plugin LinkExtractor error: " +
+                                                  e.getMessage(),
+                                              Crawler.STATUS_PLUGIN_ERROR);
+              } finally {
+                IOUtil.safeClose(in);
+              }
+            }
+            processedUrls.put(uc.getUrl(), curl);
+          }
+        } finally {
+          cu.release();
+        }
       }
     } catch (CacheException ex) {
       crawlStatus.signalErrorForUrl(uc.getUrl(), ex);
       if (ex.isAttributeSet(CacheException.ATTRIBUTE_FATAL)) {
-	logger.error("Fatal error parsing "+uc, ex);
-	abortCrawl();
-	return false;
+        logger.error("Fatal error parsing "+uc, ex);
+        abortCrawl();
+        return true;
       } else if (ex.isAttributeSet(CacheException.ATTRIBUTE_FAIL)) {
-	logger.siteError("Couldn't parse "+uc+". continuing", ex);
-	crawlStatus.setCrawlStatus(Crawler.STATUS_EXTRACTOR_ERROR);
+        logger.siteError("Couldn't parse "+uc+". continuing", ex);
+        crawlStatus.setCrawlStatus(Crawler.STATUS_EXTRACTOR_ERROR);
       } else {
-	logger.siteWarning("Couldn't parse "+uc+". ignoring error", ex);
+        logger.siteWarning("Couldn't parse "+uc+". ignoring error", ex);
       }
       curl.setFailedParse(true);
       processedUrls.put(uc.getUrl(), curl);
     } catch (IOException ioe) {
       logger.error("Problem parsing "+uc+". Ignoring", ioe);
       crawlStatus.signalErrorForUrl(uc.getUrl(), ioe.getMessage(),
-				    Crawler.STATUS_FETCH_ERROR);
+                                    Crawler.STATUS_FETCH_ERROR);
     }
-    logger.debug3("Removing from parsing list: "+uc.getUrl());
-    return (!crawlStatus.isCrawlError());
+    return false;
   }
 
   // Callers are all local and know that we release the CU
