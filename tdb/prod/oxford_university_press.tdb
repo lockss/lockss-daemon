@@ -5653,15 +5653,7 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://eurjhf.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-    
-    
 
-    au < HighWirePressH20Plugin ; doNotProcess ; 1999 ; European Journal of Heart Failure Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2000 ; European Journal of Heart Failure Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; European Journal of Heart Failure Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; European Journal of Heart Failure Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; European Journal of Heart Failure Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2004 ; European Journal of Heart Failure Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; released ; 2005 ; European Journal of Heart Failure Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; released ; 2006 ; European Journal of Heart Failure Volume 8 ; 8 >
     au < HighWirePressH20Plugin ; released ; 2007 ; European Journal of Heart Failure Volume 9 ; 9 >
