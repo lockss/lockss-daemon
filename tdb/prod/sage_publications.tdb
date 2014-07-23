@@ -37634,6 +37634,21 @@ comment[mpj] = now published by Brill
     }
 
     {
+      title <
+        name = South Asian Journal of Human Resources Management ;
+        issn = 2322-0937 ; 
+        eissn = 2349-5790
+      >
+  
+        param[base_url] = http://hrm.sagepub.com/
+        pluginSuffix = HighWirePressH20Plugin
+        implicit < status ; year ; name ; param[volume_name] >
+  
+        au < exists ; 2014 ; South Asian Journal of Human Resources Management Volume 1 ; 1 ; >
+  
+    }
+    
+    {
 
       title <
         name = South Asia Research ;
