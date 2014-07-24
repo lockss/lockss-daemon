@@ -9,11 +9,11 @@
       
     >
 
-      pluginPrefix = org.lockss.plugin.highwire.
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.echorespract.com/
-      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < HighWirePressH20Plugin ; exists ; 2014 ; Echo Research and Practice Volume 1 ; 1 >
+      au < exists ; 2014 ; Echo Research and Practice Volume 1 ; 1 >
 
   }
   
