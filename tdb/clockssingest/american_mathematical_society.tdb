@@ -216,7 +216,7 @@
     au < manifest ; exists ; 2011 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 15 ; 2011 >
     au < crawling ; exists ; 2012 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 16 ; 2012 >
     au < crawling ; exists ; 2013 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 17 ; 2013 >
-    au < testing ; exists ; 2014 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 18 ; 2014 >
+    au < ready ; exists ; 2014 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 18 ; 2014 >
 
     }
     
@@ -310,7 +310,7 @@
     au < manifest ; exists ; 2011 ; Journal of the American Mathematical Society Volume 24 ; 2011 >
     au < crawling ; exists ; 2012 ; Journal of the American Mathematical Society Volume 25 ; 2012 >
     au < crawling ; exists ; 2013 ; Journal of the American Mathematical Society Volume 26 ; 2013 >
-    au < testing ; exists ; 2014 ; Journal of the American Mathematical Society Volume 27 ; 2014 >
+    au < ready ; exists ; 2014 ; Journal of the American Mathematical Society Volume 27 ; 2014 >
       
    }
     
@@ -462,7 +462,7 @@
     au < manifest ; exists ; 2011 ; Mathematics of Computation Volume 80 ; 2011 >
     au < crawling ; exists ; 2012 ; Mathematics of Computation Volume 81 ; 2012 >
     au < crawling ; exists ; 2013 ; Mathematics of Computation Volume 82 ; 2013 >
-    au < testing ; exists ; 2014 ; Mathematics of Computation Volume 83 ; 2014 >
+    au < ready ; exists ; 2014 ; Mathematics of Computation Volume 83 ; 2014 >
 
     }
     
@@ -571,7 +571,7 @@
     au < manifest ; exists ; 2011 ; Proceedings of the American Mathematical Society Volume 139 ; 2011 >
     au < crawling ; exists ; 2012 ; Proceedings of the American Mathematical Society Volume 140 ; 2012 >
     au < crawling ; exists ; 2013 ; Proceedings of the American Mathematical Society Volume 141 ; 2013 >
-    au < testing ; exists ; 2014 ; Proceedings of the American Mathematical Society Volume 142 ; 2014 >
+    au < ready ; exists ; 2014 ; Proceedings of the American Mathematical Society Volume 142 ; 2014 >
 
     }
     
@@ -640,7 +640,7 @@
     au < manifest ; exists ; 2011 ; Representation Theory - An electronic journal of the AMS Volume 15 ; 2011 >
     au < crawling ; exists ; 2012 ; Representation Theory - An electronic journal of the AMS Volume 16 ; 2012 >
     au < crawling ; exists ; 2013 ; Representation Theory - An electronic journal of the AMS Volume 17 ; 2013 >
-    au < testing ; exists ; 2014 ; Representation Theory - An electronic journal of the AMS Volume 18 ; 2014 >
+    au < ready ; exists ; 2014 ; Representation Theory - An electronic journal of the AMS Volume 18 ; 2014 >
 
     }
     
@@ -665,7 +665,7 @@
     au < manifest ; exists ; 2011 ; St. Petersburg Mathematical Journal Volume 22 ; 2011 >
     au < crawling ; exists ; 2012 ; St. Petersburg Mathematical Journal Volume 23 ; 2012 >
     au < crawling ; exists ; 2013 ; St. Petersburg Mathematical Journal Volume 24 ; 2013 >
-    au < testing ; exists ; 2014 ; St. Petersburg Mathematical Journal Volume 25 ; 2014 >
+    au < ready ; exists ; 2014 ; St. Petersburg Mathematical Journal Volume 25 ; 2014 >
 
     }
     
@@ -725,7 +725,7 @@
     au < manifest ; exists ; 2011 ; Transactions of the American Mathematical Society Volume 363 ; 2011 >
     au < crawling ; exists ; 2012 ; Transactions of the American Mathematical Society Volume 364 ; 2012 >
     au < crawling ; exists ; 2013 ; Transactions of the American Mathematical Society Volume 365 ; 2013 >
-    au < testing ; exists ; 2014 ; Transactions of the American Mathematical Society Volume 366 ; 2014 >
+    au < ready ; exists ; 2014 ; Transactions of the American Mathematical Society Volume 366 ; 2014 >
 
     }
     
@@ -739,7 +739,7 @@
     comment[type] = ejournal only
     param[journal_id] = btran
 
-    au < testing ; exists ; 2014 ; Transactions of the American Mathematical Society B Volume 1 ; 2014 >
+    au < ready ; exists ; 2014 ; Transactions of the American Mathematical Society B Volume 1 ; 2014 >
 
     }
    
