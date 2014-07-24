@@ -1,5 +1,5 @@
 /*
- * $Id: TestSubscriptionManager.java,v 1.8 2014-06-25 19:44:29 fergaloy-sf Exp $
+ * $Id: TestSubscriptionManager.java,v 1.9 2014-07-24 20:46:22 fergaloy-sf Exp $
  */
 
 /*
@@ -69,7 +69,6 @@ import org.lockss.test.MockArchivalUnit;
 import org.lockss.test.MockLockssDaemon;
 import org.lockss.test.MockPlugin;
 import org.lockss.util.ListUtil;
-import org.lockss.util.Logger;
 import org.lockss.util.PlatformUtil;
 
 /**
@@ -1590,5 +1589,46 @@ public class TestSubscriptionManager extends LockssTestCase {
     count =
 	subManager.deleteSubscriptionTypeRanges(conn, subscriptionSeq, false);
     assertEquals(unsubscribedCount, count);
+  }
+  
+  public void testIsSubscribable() throws TdbException {
+    TdbTitle title = TdbTestUtil.makeRangeTestTitle(false);
+    assertTrue(subManager.isSubscribable(title));
+
+    title = TdbTestUtil.makeBookSeriesTestTitle("v1", "1954", "2000");
+    assertTrue(subManager.isSubscribable(title));
+
+    title = TdbTestUtil.makeBookTestTitle("v1", "1954", "2000");
+    assertFalse(subManager.isSubscribable(title));
+
+    Tdb tdb = new Tdb();
+
+    Properties auDown = new Properties();
+    auDown.setProperty("title", "Title[10.2468/24681357]");
+    auDown.setProperty("issn", "1144-875X");
+    auDown.setProperty("eissn", "7744-6521");
+    auDown.setProperty("attributes.volume", "42");
+    auDown.setProperty("journalTitle", "Journal[10.2468/24681357]");
+    auDown.setProperty("attributes.publisher", "Publisher[10.2468/24681357]");
+    auDown.setProperty("plugin", "org.lockss.plugin.simulated.SimulatedPlugin");
+    auDown.setProperty("param.1.key", "pub_down");
+    auDown.setProperty("param.1.value", "true");
+
+    tdb.addTdbAuFromProperties(auDown);
+    title = tdb.getTdbTitlesByIssn("1144-875X").iterator().next();
+    assertFalse(subManager.isSubscribable(title));
+
+    Properties auUp = new Properties();
+    auUp.setProperty("title", "Title[10.2468/24681357]");
+    auUp.setProperty("issn", "1144-875X");
+    auUp.setProperty("eissn", "7744-6521");
+    auUp.setProperty("attributes.volume", "54");
+    auUp.setProperty("journalTitle", "Journal[10.2468/24681357]");
+    auUp.setProperty("attributes.publisher", "Publisher[10.2468/24681357]");
+    auUp.setProperty("plugin", "org.lockss.plugin.simulated.SimulatedPlugin");
+
+    tdb.addTdbAuFromProperties(auUp);
+    title = tdb.getTdbTitlesByIssn("1144-875X").iterator().next();
+    assertTrue(subManager.isSubscribable(title));
   }
 }

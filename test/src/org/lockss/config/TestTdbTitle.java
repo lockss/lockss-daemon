@@ -1,10 +1,10 @@
 /*
- * $Id: TestTdbTitle.java,v 1.8 2013-04-01 16:54:43 pgust Exp $
+ * $Id: TestTdbTitle.java,v 1.9 2014-07-24 20:46:23 fergaloy-sf Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -42,7 +42,7 @@ import java.util.*;
  * Test class for <code>org.lockss.config.TdbTitle</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdbTitle.java,v 1.8 2013-04-01 16:54:43 pgust Exp $
+ * @version $Id: TestTdbTitle.java,v 1.9 2014-07-24 20:46:23 fergaloy-sf Exp $
  */
 
 public class TestTdbTitle extends LockssTestCase {
@@ -490,5 +490,26 @@ public class TestTdbTitle extends LockssTestCase {
     assertNotSame(title3, title4);
     assertEquals(title3.getId(), title4.getId());
     assertEquals(title3, title4);
+  }
+  
+  /**
+   * Test isSerial()
+   * @throws TdbException for invalid Tdb operations
+   */
+  public void testIsSerial() throws TdbException {
+    TdbTitle title = new TdbTitle("Test Title", "0000-0000");
+    TdbAu au = new TdbAu("Test AU", "pluginA");
+    title.addTdbAu(au);
+    assertTrue(title.isSerial());
+    au.setPropertyByName("issn", "1234-5678");
+    au.setPropertyByName("eissn", "2468-1357");
+    au.setPropertyByName("issnl", "8765-4321");
+    assertTrue(title.isSerial());
+    au.setAttr("isbn", "1234567890");
+    assertTrue(title.isSerial());
+    au.setPropertyByName("type", "book");
+    assertFalse(title.isSerial());
+    au.setPropertyByName("type", "blog");
+    assertFalse(title.isSerial());
   }
 }

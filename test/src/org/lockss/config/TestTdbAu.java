@@ -1,10 +1,10 @@
 /*
- * $Id: TestTdbAu.java,v 1.21 2014-01-14 08:56:10 tlipkis Exp $
+ * $Id: TestTdbAu.java,v 1.22 2014-07-24 20:46:23 fergaloy-sf Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -44,7 +44,7 @@ import java.util.*;
  * Test class for <code>org.lockss.config.TdbAu</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdbAu.java,v 1.21 2014-01-14 08:56:10 tlipkis Exp $
+ * @version $Id: TestTdbAu.java,v 1.22 2014-07-24 20:46:23 fergaloy-sf Exp $
  */
 
 public class TestTdbAu extends LockssTestCase {
@@ -729,5 +729,22 @@ public class TestTdbAu extends LockssTestCase {
     assertEquals(au1.getParam("x"), au2.getParam("x"));
     assertEquals(au1.getPluginId(), au2.getPluginId());
     assertEquals(au1.getPluginVersion(), au2.getPluginVersion());
+  }
+  
+  /**
+   * Test isSerial()
+   * @throws TdbException for invalid Tdb operations
+   */
+  public void testIsSerial() throws TdbException {
+    TdbAu au = new TdbAu("Test AU", "pluginA");
+    assertTrue(au.isSerial());
+    au.setPropertyByName("issn", "1234-5678");
+    assertTrue(au.isSerial());
+    au.setAttr("isbn", "978-3-540-33894-9");
+    assertTrue(au.isSerial());
+    au.setPropertyByName("type", "book");
+    assertFalse(au.isSerial());
+    au.setPropertyByName("type", "blog");
+    assertFalse(au.isSerial());
   }
 }

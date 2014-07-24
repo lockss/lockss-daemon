@@ -1,5 +1,5 @@
 /*
- * $Id: SubscriptionManager.java,v 1.16 2014-06-25 19:44:29 fergaloy-sf Exp $
+ * $Id: SubscriptionManager.java,v 1.17 2014-07-24 20:46:23 fergaloy-sf Exp $
  */
 
 /*
@@ -77,7 +77,6 @@ import org.lockss.metadata.MetadataManager;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.AuEvent;
 import org.lockss.plugin.AuEventHandler;
-import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.Plugin;
 import org.lockss.plugin.PluginManager;
 import org.lockss.remote.RemoteApi;
@@ -1242,6 +1241,11 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     try {
       // Loop through all the titles with configured archival units.
       for (TdbTitle title : configuredTitles) {
+	// Skip any titles that are not subscribable.
+	if (!isSubscribable(title)) {
+	  continue;
+	}
+
 	// Create subscriptions for all the configured archival units of this
 	// title.
 	subscribePublicationConfiguredAus(title, conn, configuredAus, status);
@@ -1378,8 +1382,8 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "au = " + au);
 
       try {
-	// Check whether the archival unit is configured.
-	if (configuredAus.contains(au)) {
+	// Check whether the archival unit is not down and it is configured.
+	if (!au.isDown() && configuredAus.contains(au)) {
 	  // Yes: Get the plugin identifier.
 	  String pluginId = PluginManager.pluginKeyFromName(au.getPluginId());
 	  if (log.isDebug3())
@@ -1996,6 +2000,11 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 
       // Loop through all the titles (subscribed or not) of the publisher.
       for (TdbTitle title : publisher.getTdbTitles()) {
+	// Skip any titles that are not subscribable.
+	if (!isSubscribable(title)) {
+	  continue;
+	}
+
 	titleName = title.getName();
 	if (log.isDebug3())
 	  log.debug3(DEBUG_HEADER + "titleName = " + titleName);
@@ -2193,6 +2202,91 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	+ mapByPublisher.size());
     return mapByPublisher;
   }
+
+  /**
+   * Provides an indication of whether a TdbTitle can be the subject of a
+   * subscription.
+   * 
+   * @return <code>true</code> if the TdbTitle can be the subject of a
+   *         subscription, <code>false</code> otherwise.
+   */
+  public boolean isSubscribable(TdbTitle tdbTitle) {
+    final String DEBUG_HEADER = "isSubscribable(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "tdbTitle = " + tdbTitle);
+    boolean result = false;
+
+    // Check whether the TdbTitle exists.
+    if (tdbTitle != null) {
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "tdbTitle = " + tdbTitle);
+
+      // Yes: Check whether the TdbTitle is marked as a serial title.
+      if (tdbTitle.isSerial()) {
+	// Yes: Loop through the title archival units.
+	for (TdbAu tdbAu : tdbTitle.getTdbAus()) {
+	  // Check whether this archival unit is not down.
+	  if (!tdbAu.isDown()) {
+	    // Yes: The TdbTitle is subscribable; no need to do anything more.
+	    result = true;
+	    break;
+	  }
+	}
+
+	if (log.isDebug3() && !result) {
+	  log.debug3(DEBUG_HEADER + "tdbTitle '" + tdbTitle
+	      + "' is not subscribable because all of its AUs are down.");
+	}
+      } else {
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "title '" + tdbTitle
+	    + "' is not subscribable because it's not a serial publication.");
+      }
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+    return result;
+  }
+
+  /**
+   * Provides the titles of a publisher that can be the subject of a
+   * subscription.
+   * 
+   * @param publisher
+   *          A TdbPublisher with the publisher.
+   * @return a Collection<TdbTitle> with the titles that can be the subject of a
+   *         subscription.
+   */
+  /*private Collection<TdbTitle> getSubscribableTitles(TdbPublisher publisher) {
+    final String DEBUG_HEADER = "getSubscribableTitles(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "publisher = " + publisher);
+
+    Collection<TdbTitle> subscribableTitles =
+	new ArrayList<TdbTitle>(publisher.getTdbAuCount());
+
+    // Loop through all the titles.
+    for (TdbTitle title : publisher.getTdbTitles()) {
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "title = " + title);
+
+      if (title.isSerial()) {
+	for (TdbAu tdbAu : title.getTdbAus()) {
+	  if (!tdbAu.isDown()) {
+	    subscribableTitles.add(title);
+	    break;
+	  }
+	}
+
+	if (log.isDebug3()) {
+	  if (!subscribableTitles.contains(title)) {
+	    log.debug3(DEBUG_HEADER + "title '" + title
+		+ "' is not subscribable because all of its AUs are down.");
+	  }
+	}
+      } else {
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "title '" + title
+	    + "' is not subscribable because it's not a serial publication.");
+      }
+    }
+
+    return subscribableTitles;
+  }*/
 
   /**
    * Provides an indication of whether there is a subscription defined for this
@@ -2824,6 +2918,13 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 
     // Loop through all the covered publication archival units.
     for (TdbAu tdbAu : coveredTdbAus) {
+      // Skip those archival units that are down.
+      if (tdbAu.isDown()) {
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "TdbAu '" + tdbAu
+	    + "' is marked down.");
+	continue;
+      }
+
       // Get the archival unit identifier.
       String auId = tdbAu.getAuId(pluginManager);
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auId = " + auId);
@@ -2832,17 +2933,12 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       ArchivalUnit au = pluginManager.getAuFromId(auId);
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "au = " + au);
 
-      // Check whether the archival unit is not active and it is not marked as
-      // being down.
-      if (au == null
-	  || (!pluginManager.isActiveAu(au) && !AuUtil.isPubDown(au))) {
-	// Yes: Add the the archival unit to the configuration of those to be
+      // Check whether the archival unit is not active.
+      if (au == null || (!pluginManager.isActiveAu(au))) {
+	// Yes: Add the archival unit to the configuration of those to be
 	// configured.
 	config = addAuConfiguration(tdbAu, auId, config);
 	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "config = " + config);
-
-	// Delete the AU from the unconfigured AU table, if it is there.
-	//removeFromUnconfiguredAus(conn, auId);
       } else {
 	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "TdbAu '" + tdbAu
 	    + "' is already configured.");

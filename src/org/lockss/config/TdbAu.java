@@ -1,5 +1,5 @@
 /*
- * $Id: TdbAu.java,v 1.29 2014-05-28 00:15:51 tlipkis Exp $
+ * $Id: TdbAu.java,v 1.30 2014-07-24 20:46:23 fergaloy-sf Exp $
  */
 
 /*
@@ -1099,5 +1099,18 @@ public class TdbAu implements BibliographicItem, Comparable<TdbAu> {
     }
 
     return 0;
+  }
+
+  /**
+   * Provides an indication of whether this archival unit belongs to a serial
+   * publication.
+   * 
+   * @return <code>true</code> if this archival unit belongs to a serial
+   *         publication, <code>false</code> otherwise.
+   */
+  public boolean isSerial() {
+    String publicationType = getPublicationType();
+    return "journal".equals(publicationType)
+	|| "bookSeries".equals(publicationType);
   }
 }
