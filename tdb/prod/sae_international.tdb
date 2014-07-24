@@ -39,7 +39,6 @@
     
     param[base_url] = http://saealtpow.saejournals.org/
     
-    
     au < exists ; 2012 ; SAE International Journal of Alternative Powertrains Volume 1 ; 1 >
     au < exists ; 2013 ; SAE International Journal of Alternative Powertrains Volume 2 ; 2 >
     au < expected ; 2014 ; SAE International Journal of Alternative Powertrains Volume 3 ; 3 >
@@ -77,7 +76,6 @@
     >
     
     param[base_url] = http://saeeng.saejournals.org/
-    comment[notReady] = login page found
     
     au < released ; 2009 ; SAE International Journal of Engines Volume 1 ; 1 >
     au < released ; 2009-2010 ; SAE International Journal of Engines Volume 2 ; 2 >
@@ -99,7 +97,6 @@
     >
     
     param[base_url] = http://saefuel.saejournals.org/
-    comment[notReady] = login page found
     
     au < released ; 2009 ; SAE International Journal of Fuels and Lubricants Volume 1 ; 1 >
     au < released ; 2009-2010 ; SAE International Journal of Fuels and Lubricants Volume 2 ; 2 >
