@@ -4,9 +4,16 @@
   >
 {
     title <
-      name = Echo Research and Practice
+      name = Echo Research and Practice ;
+      eissn = 2055-0464
       
     >
+
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://www.echorespract.com/
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+      au < HighWirePressH20Plugin ; exists ; 2014 ; Echo Research and Practice Volume 1 ; 1 >
 
   }
   
