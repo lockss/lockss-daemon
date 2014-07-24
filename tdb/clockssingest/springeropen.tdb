@@ -1328,6 +1328,21 @@
     {
   
         title <
+          name = Journal of Experimental Orthopaedics ;
+          issn = 2197-1153 
+        >
+  
+        param[base_url] = http://www.jeo-esska.com/
+        param[journal_issn] = 2197-1153 
+        comment[platform] = BioMedCentralPlugin
+  
+        au < exists ; exists ; 2014 ; Journal of Experimental Orthopaedics Volume 1 ; 1 >
+  
+    }
+
+    {
+  
+        title <
           name = The Journal of Headache and Pain ;
           issn = 1129-2369 ;
           eissn = 1129-2377
