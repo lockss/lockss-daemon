@@ -7,6 +7,7 @@
     implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
 
     comment[notReady] = no permission. Unmapped exception: javax.net.ssl.SSLHandshakeException: java.security.cert.CertificateException: Untrusted Server Certificate Chain
+    comment[notReady2013] = no permission. Unknown cause as daemons reset before crawl tracker could be checked. Presumed ot be same Unmapped exception
 
   {
 
@@ -77,7 +78,7 @@
       au < notReady ; 2010 ; 23 ; Biotemas Volume 2010 ; 2010 ; Untrusted Server Certificate Chain >
       au < notReady ; 2011 ; 24 ; Biotemas Volume 2011 ; 2011 ; Untrusted Server Certificate Chain >
       au < notReady ; 2012 ; 25 ; Biotemas Volume 2012 ; 2012 ; Untrusted Server Certificate Chain >
-      au < testing ; 2013 ; 26 ; Biotemas Volume 2013 ; 2013 ; >
+      au < notReady ; 2013 ; 26 ; Biotemas Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 27 ; Biotemas Volume 2014 ; 2014 ; >
 
   }
@@ -106,7 +107,7 @@
       au < notReady ; 2010 ; 14 ; Boletim de Pesquisa NELIC Volume 2010 ; 2010 ; Untrusted Server Certificate Chain >
       au < notReady ; 2011 ; 15 ; Boletim de Pesquisa NELIC Volume 2011 ; 2011 ; Untrusted Server Certificate Chain >
       au < notReady ; 2012 ; 16 ; Boletim de Pesquisa NELIC Volume 2012 ; 2012 ; Untrusted Server Certificate Chain >
-      au < testing ; 2013 ; 17 ; Boletim de Pesquisa NELIC Volume 2013 ; 2013 ; >
+      au < notReady ; 2013 ; 17 ; Boletim de Pesquisa NELIC Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 18 ; Boletim de Pesquisa NELIC Volume 2014 ; 2014 ; >
 
   }
@@ -137,7 +138,7 @@
       au < notReady ; 2010 ; 12 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2010 ; 2010 ; Untrusted Server Certificate Chain >
       au < notReady ; 2011 ; 13 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2011 ; 2011 ; Untrusted Server Certificate Chain >
       au < notReady ; 2012 ; 14 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2012 ; 2012 ; Untrusted Server Certificate Chain >
-      au < testing ; 2013 ; 15 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2013 ; 2013 ; >
+      au < notReady ; 2013 ; 15 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 16 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2014 ; 2014 ; >
 
   }
@@ -208,7 +209,7 @@
       au < notReady ; 2010 ; 8 ; Em Tese [1806-5023] Volume 2010 ; 2010 ; Untrusted Server Certificate Chain >
       au < notReady ; 2011 ; 9 ; Em Tese [1806-5023] Volume 2011 ; 2011 ; Untrusted Server Certificate Chain >
       au < notReady ; 2012 ; 10 ; Em Tese [1806-5023] Volume 2012 ; 2012 ; Untrusted Server Certificate Chain >
-      au < testing ; 2013 ; 11 ; Em Tese [1806-5023] Volume 2013 ; 2013 ; >
+      au < notReady ; 2013 ; 11 ; Em Tese [1806-5023] Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 12 ; Em Tese [1806-5023] Volume 2014 ; 2014 ; >
 
   }
@@ -233,7 +234,7 @@
       au < notReady ; 2010 ; 7 ; Estudos em Jornalismo e Mídia Volume 2010 ; 2010 ; Untrusted Server Certificate Chain >
       au < notReady ; 2011 ; 8 ; Estudos em Jornalismo e Mídia Volume 2011 ; 2011 ; Untrusted Server Certificate Chain >
       au < notReady ; 2012 ; 9 ; Estudos em Jornalismo e Mídia Volume 2012 ; 2012 ; Untrusted Server Certificate Chain >
-      au < testing ; 2013 ; 10 ; Estudos em Jornalismo e Mídia Volume 2013 ; 2013 ; >
+      au < notReady ; 2013 ; 10 ; Estudos em Jornalismo e Mídia Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 11 ; Estudos em Jornalismo e Mídia Volume 2014 ; 2014 ; >
 
   }
@@ -270,7 +271,7 @@
       au < notReady ; 2010 ; 19 ; Estudos Feministas Volume 2010 ; 2010 ; Untrusted Server Certificate Chain >
       au < notReady ; 2011 ; 20 ; Estudos Feministas Volume 2011 ; 2011 ; Untrusted Server Certificate Chain >
       au < notReady ; 2012 ; 21 ; Estudos Feministas Volume 2012 ; 2012 ; Untrusted Server Certificate Chain >
-      au < testing ; 2013 ; 22 ; Estudos Feministas Volume 2013 ; 2013 ; >
+      au < notReady ; 2013 ; 22 ; Estudos Feministas Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 23 ; Estudos Feministas Volume 2014 ; 2014 ; >
 
   }
@@ -297,7 +298,7 @@
       au < notReady ; 2010 ; 9 ; ethic@-An international Journal for Moral Philosophy Volume 2010 ; 2010 ; Untrusted Server Certificate Chain >
       au < notReady ; 2011 ; 10 ; ethic@-An international Journal for Moral Philosophy Volume 2011 ; 2011 ; Untrusted Server Certificate Chain >
       au < notReady ; 2012 ; 11 ; ethic@-An international Journal for Moral Philosophy Volume 2012 ; 2012 ; Untrusted Server Certificate Chain >
-      au < testing ; 2013 ; 12 ; ethic@-An international Journal for Moral Philosophy Volume 2013 ; 2013 ; >
+      au < notReady ; 2013 ; 12 ; ethic@-An international Journal for Moral Philosophy Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 13 ; ethic@-An international Journal for Moral Philosophy Volume 2014 ; 2014 ; >
 
   }
@@ -323,7 +324,7 @@
       au < notReady ; 2010 ; 13 ; Fórum Linguístico Volume 2010 ; 2010 ; Untrusted Server Certificate Chain >
       au < notReady ; 2011 ; 14 ; Fórum Linguístico Volume 2011 ; 2011 ; Untrusted Server Certificate Chain >
       au < notReady ; 2012 ; 15 ; Fórum Linguístico Volume 2012 ; 2012 ; Untrusted Server Certificate Chain >
-      au < testing ; 2013 ; 16 ; Fórum Linguístico Volume 2013 ; 2013 ; >
+      au < notReady ; 2013 ; 16 ; Fórum Linguístico Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 17 ; Fórum Linguístico Volume 2014 ; 2014 ; >
 
   }
@@ -352,7 +353,7 @@
       au < notReady ; 2010 ; 12 ; ILHA-Revista de Antropologia Volume 2010 ; 2010 ; Untrusted Server Certificate Chain >
       au < notReady ; 2011 ; 13 ; ILHA-Revista de Antropologia Volume 2011 ; 2011 ; Untrusted Server Certificate Chain >
       au < notReady ; 2012 ; 14 ; ILHA-Revista de Antropologia Volume 2012 ; 2012 ; Untrusted Server Certificate Chain >
-      au < testing ; 2013 ; 15 ; ILHA-Revista de Antropologia Volume 2013 ; 2013 ; >
+      au < notReady ; 2013 ; 15 ; ILHA-Revista de Antropologia Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 16 ; ILHA-Revista de Antropologia Volume 2014 ; 2014 ; >
 
   }
@@ -446,7 +447,7 @@
       au < notReady ; 2010 ; 23 ; Motrivivência Volume 2010 ; 2010 ; Untrusted Server Certificate Chain >
       au < notReady ; 2011 ; 24 ; Motrivivência Volume 2011 ; 2011 ; Untrusted Server Certificate Chain >
       au < notReady ; 2012 ; 25 ; Motrivivência Volume 2012 ; 2012 ; Untrusted Server Certificate Chain >
-      au < testing ; 2013 ; 26 ; Motrivivência Volume 2013 ; 2013 ; >
+      au < notReady ; 2013 ; 26 ; Motrivivência Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 27 ; Motrivivência Volume 2014 ; 2014 ; >
 
   }
@@ -468,7 +469,7 @@
       au < notReady ; 2010 ; 8 ; Outra travessia Volume 2010 ; 2010 ; Untrusted Server Certificate Chain >
       au < notReady ; 2011 ; 9 ; Outra travessia Volume 2011 ; 2011 ; Untrusted Server Certificate Chain >
       au < notReady ; 2012 ; 10 ; Outra travessia Volume 2012 ; 2012 ; Untrusted Server Certificate Chain >
-      au < testing ; 2013 ; 11 ; Outra travessia Volume 2013 ; 2013 ; >
+      au < notReady ; 2013 ; 11 ; Outra travessia Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 12 ; Outra travessia Volume 2014 ; 2014 ; >
 
   }
@@ -495,7 +496,7 @@
       au < notReady ; 2010 ; 9 ; Política & Sociedade Volume 2010 ; 2010 ; Untrusted Server Certificate Chain >
       au < notReady ; 2011 ; 10 ; Política & Sociedade Volume 2011 ; 2011 ; Untrusted Server Certificate Chain >
       au < notReady ; 2012 ; 11 ; Política & Sociedade Volume 2012 ; 2012 ; Untrusted Server Certificate Chain >
-      au < testing ; 2013 ; 12 ; Política & Sociedade Volume 2013 ; 2013 ; >
+      au < notReady ; 2013 ; 12 ; Política & Sociedade Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 13 ; Política & Sociedade Volume 2014 ; 2014 ; >
 
   }
@@ -527,7 +528,7 @@
       au < notReady ; 2010 ; 14 ; Principia: an international journal of epistemology Volume 2010 ; 2010 ; Untrusted Server Certificate Chain >
       au < notReady ; 2011 ; 15 ; Principia: an international journal of epistemology Volume 2011 ; 2011 ; Untrusted Server Certificate Chain >
       au < notReady ; 2012 ; 16 ; Principia: an international journal of epistemology Volume 2012 ; 2012 ; Untrusted Server Certificate Chain >
-      au < testing ; 2013 ; 17 ; Principia: an international journal of epistemology Volume 2013 ; 2013 ; >
+      au < notReady ; 2013 ; 17 ; Principia: an international journal of epistemology Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 18 ; Principia: an international journal of epistemology Volume 2014 ; 2014 ; >
 
   }
@@ -550,7 +551,7 @@
       au < notReady ; 2010 ; 5 ; Revemat: revista eletrônica de educação matemática Volume 2010 ; 2010 ; Untrusted Server Certificate Chain >
       au < notReady ; 2011 ; 6 ; Revemat: revista eletrônica de educação matemática Volume 2011 ; 2011 ; Untrusted Server Certificate Chain >
       au < notReady ; 2012 ; 7 ; Revemat: revista eletrônica de educação matemática Volume 2012 ; 2012 ; Untrusted Server Certificate Chain >
-      au < testing ; 2013 ; 8 ; Revemat: revista eletrônica de educação matemática Volume 2013 ; 2013 ; >
+      au < notReady ; 2013 ; 8 ; Revemat: revista eletrônica de educação matemática Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 9 ; Revemat: revista eletrônica de educação matemática Volume 2014 ; 2014 ; >
 
   }
@@ -579,7 +580,7 @@
       au < notReady ; 2010 ; 11 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2010 ; 2010 ; Untrusted Server Certificate Chain >
       au < notReady ; 2011 ; 12 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2011 ; 2011 ; Untrusted Server Certificate Chain >
       au < notReady ; 2012 ; 13 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2012 ; 2012 ; Untrusted Server Certificate Chain >
-      au < testing ; 2013 ; 14 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2013 ; 2013 ; >
+      au < notReady ; 2013 ; 14 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 15 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2014 ; 2014 ; >
 
   }
@@ -612,7 +613,7 @@
       au < notReady ; 2010 ; 15 ; Revista Cadernos de Tradução Volume 2010 ; 2010 ; Untrusted Server Certificate Chain >
       au < notReady ; 2011 ; 16 ; Revista Cadernos de Tradução Volume 2011 ; 2011 ; Untrusted Server Certificate Chain >
       au < notReady ; 2012 ; 17 ; Revista Cadernos de Tradução Volume 2012 ; 2012 ; Untrusted Server Certificate Chain >
-      au < testing ; 2013 ; 18 ; Revista Cadernos de Tradução Volume 2013 ; 2013 ; >
+      au < notReady ; 2013 ; 18 ; Revista Cadernos de Tradução Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 19 ; Revista Cadernos de Tradução Volume 2014 ; 2014 ; >
 
   }
@@ -637,7 +638,7 @@
       au < notReady ; 2010 ; 6 ; Revista Contemporânea de Contabilidade Volume 2010 ; 2010 ; Untrusted Server Certificate Chain >
       au < notReady ; 2011 ; 7 ; Revista Contemporânea de Contabilidade Volume 2011 ; 2011 ; Untrusted Server Certificate Chain >
       au < notReady ; 2012 ; 8 ; Revista Contemporânea de Contabilidade Volume 2012 ; 2012 ; Untrusted Server Certificate Chain >
-      au < testing ; 2013 ; 9 ; Revista Contemporânea de Contabilidade Volume 2013 ; 2013 ; >
+      au < notReady ; 2013 ; 9 ; Revista Contemporânea de Contabilidade Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 10 ; Revista Contemporânea de Contabilidade Volume 2014 ; 2014 ; >
 
   }
@@ -714,7 +715,7 @@
       au < notReady ; 2010 ; 29 ; Revista de Ciências Humanas [issn 0101-9589] Volume 2010 ; 2010 ; Untrusted Server Certificate Chain >
       au < notReady ; 2011 ; 30 ; Revista de Ciências Humanas [issn 0101-9589] Volume 2011 ; 2011 ; Untrusted Server Certificate Chain >
       au < notReady ; 2012 ; 31 ; Revista de Ciências Humanas [issn 0101-9589] Volume 2012 ; 2012 ; Untrusted Server Certificate Chain >
-      au < testing ; 2013 ; 32 ; Revista de Ciências Humanas [issn 0101-9589] Volume 2013 ; 2013 ; >
+      au < notReady ; 2013 ; 32 ; Revista de Ciências Humanas [issn 0101-9589] Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 33 ; Revista de Ciências Humanas [issn 0101-9589] Volume 2014 ; 2014 ; >
 
   }
@@ -747,7 +748,7 @@
       au < notReady ; 2010 ; 15 ; revista eletrônica de biblioteconomia e ciência da informação Volume 2010 ; 2010 ; Untrusted Server Certificate Chain >
       au < notReady ; 2011 ; 16 ; revista eletrônica de biblioteconomia e ciência da informação Volume 2011 ; 2011 ; Untrusted Server Certificate Chain >
       au < notReady ; 2012 ; 17 ; revista eletrônica de biblioteconomia e ciência da informação Volume 2012 ; 2012 ; Untrusted Server Certificate Chain >
-      au < testing ; 2013 ; 18 ; revista eletrônica de biblioteconomia e ciência da informação Volume 2013 ; 2013 ; >
+      au < notReady ; 2013 ; 18 ; revista eletrônica de biblioteconomia e ciência da informação Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 19 ; revista eletrônica de biblioteconomia e ciência da informação Volume 2014 ; 2014 ; >
 
   }
@@ -804,7 +805,7 @@
       au < notReady ; 2010 ; 17 ; Revista Esboços Volume 2010 ; 2010 ; Untrusted Server Certificate Chain >
       au < notReady ; 2011 ; 18 ; Revista Esboços Volume 2011 ; 2011 ; Untrusted Server Certificate Chain >
       au < notReady ; 2012 ; 19 ; Revista Esboços Volume 2012 ; 2012 ; Untrusted Server Certificate Chain >
-      au < testing ; 2013 ; 20 ; Revista Esboços Volume 2013 ; 2013 ; >
+      au < notReady ; 2013 ; 20 ; Revista Esboços Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 21 ; Revista Esboços Volume 2014 ; 2014 ; >
 
   }
@@ -911,7 +912,7 @@
       au < notReady ; 2010 ; 25 ; Revista GEOSUL Volume 2010 ; 2010 ; Untrusted Server Certificate Chain >
       au < notReady ; 2011 ; 26 ; Revista GEOSUL Volume 2011 ; 2011 ; Untrusted Server Certificate Chain >
       au < notReady ; 2012 ; 27 ; Revista GEOSUL Volume 2012 ; 2012 ; Untrusted Server Certificate Chain >
-      au < testing ; 2013 ; 28 ; Revista GEOSUL Volume 2013 ; 2013 ; >
+      au < notReady ; 2013 ; 28 ; Revista GEOSUL Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 29 ; Revista GEOSUL Volume 2014 ; 2014 ; >
 
   }
@@ -981,7 +982,7 @@
       au < notReady ; 2010 ; 32 ; Revista Ilha do Desterro Volume 2010 ; 2010 ; Untrusted Server Certificate Chain >
       au < notReady ; 2011 ; 33 ; Revista Ilha do Desterro Volume 2011 ; 2011 ; Untrusted Server Certificate Chain >
       au < notReady ; 2012 ; 34 ; Revista Ilha do Desterro Volume 2012 ; 2012 ; Untrusted Server Certificate Chain >
-      au < testing ; 2013 ; 35 ; Revista Ilha do Desterro Volume 2013 ; 2013 ; >
+      au < notReady ; 2013 ; 35 ; Revista Ilha do Desterro Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 36 ; Revista Ilha do Desterro Volume 2014 ; 2014 ; >
 
   }
@@ -1058,7 +1059,7 @@
       au < notReady ; 2010 ; 2 ; Revista Mundos do Trabalho Volume 2010 ; 2010 ; Untrusted Server Certificate Chain >
       au < notReady ; 2011 ; 3 ; Revista Mundos do Trabalho Volume 2011 ; 2011 ; Untrusted Server Certificate Chain >
       au < notReady ; 2012 ; 4 ; Revista Mundos do Trabalho Volume 2012 ; 2012 ; Untrusted Server Certificate Chain >
-      au < testing ; 2013 ; 5 ; Revista Mundos do Trabalho Volume 2013 ; 2013 ; >
+      au < notReady ; 2013 ; 5 ; Revista Mundos do Trabalho Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 6 ; Revista Mundos do Trabalho Volume 2014 ; 2014 ; >
 
   }
@@ -1138,7 +1139,7 @@
       au < notReady ; 2010 ; 12 ; Revista Zero-a-seis Volume 2010 ; 2010 ; Untrusted Server Certificate Chain >
       au < notReady ; 2011 ; 13 ; Revista Zero-a-seis Volume 2011 ; 2011 ; Untrusted Server Certificate Chain >
       au < notReady ; 2012 ; 14 ; Revista Zero-a-seis Volume 2012 ; 2012 ; Untrusted Server Certificate Chain >
-      au < testing ; 2013 ; 15 ; Revista Zero-a-seis Volume 2013 ; 2013 ; >
+      au < notReady ; 2013 ; 15 ; Revista Zero-a-seis Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 16 ; Revista Zero-a-seis Volume 2014 ; 2014 ; >
 
   }
@@ -1162,7 +1163,7 @@
       au < notReady ; 2010 ; 7 ; Revista Texto Digital Volume 2010 ; 2010 ; Untrusted Server Certificate Chain >
       au < notReady ; 2011 ; 8 ; Revista Texto Digital Volume 2011 ; 2011 ; Untrusted Server Certificate Chain >
       au < notReady ; 2012 ; 9 ; Revista Texto Digital Volume 2012 ; 2012 ; Untrusted Server Certificate Chain >
-      au < testing ; 2013 ; 10 ; Revista Texto Digital Volume 2013 ; 2013 ; >
+      au < notReady ; 2013 ; 10 ; Revista Texto Digital Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 11 ; Revista Texto Digital Volume 2014 ; 2014 ; >
 
   }
@@ -1184,7 +1185,7 @@
       au < notReady ; 2010 ; 6 ; Scientia Traductionis Volume 2010 ; 2010 ; Untrusted Server Certificate Chain >
       au < notReady ; 2011 ; 7 ; Scientia Traductionis Volume 2011 ; 2011 ; Untrusted Server Certificate Chain >
       au < notReady ; 2012 ; 8 ; Scientia Traductionis Volume 2012 ; 2012 ; Untrusted Server Certificate Chain >
-      au < testing ; 2013 ; 9 ; Scientia Traductionis Volume 2013 ; 2013 ; >
+      au < notReady ; 2013 ; 9 ; Scientia Traductionis Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 10 ; Scientia Traductionis Volume 2014 ; 2014 ; >
 
   }
@@ -1233,7 +1234,7 @@
       au < notReady ; 2010 ; 31 ; Seqüência: Estudos Jurídicos e Políticos Volume 2010 ; 2010 ; Untrusted Server Certificate Chain >
       au < notReady ; 2011 ; 32 ; Seqüência: Estudos Jurídicos e Políticos Volume 2011 ; 2011 ; Untrusted Server Certificate Chain >
       au < notReady ; 2012 ; 33 ; Seqüência: Estudos Jurídicos e Políticos Volume 2012 ; 2012 ; Untrusted Server Certificate Chain >
-      au < testing ; 2013 ; 34 ; Seqüência: Estudos Jurídicos e Políticos Volume 2013 ; 2013 ; >
+      au < notReady ; 2013 ; 34 ; Seqüência: Estudos Jurídicos e Políticos Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 35 ; Seqüência: Estudos Jurídicos e Políticos Volume 2014 ; 2014 ; >
 
   }
@@ -1325,7 +1326,7 @@
       au < notReady ; 2010 ; 14 ; Working Papers em Lingüística Volume 2010 ; 2010 ; Untrusted Server Certificate Chain >
       au < notReady ; 2011 ; 15 ; Working Papers em Lingüística Volume 2011 ; 2011 ; Untrusted Server Certificate Chain >
       au < notReady ; 2012 ; 16 ; Working Papers em Lingüística Volume 2012 ; 2012 ; Untrusted Server Certificate Chain >
-      au < testing ; 2013 ; 17 ; Working Papers em Lingüística Volume 2013 ; 2013 ; >
+      au < notReady ; 2013 ; 17 ; Working Papers em Lingüística Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 18 ; Working Papers em Lingüística Volume 2014 ; 2014 ; >
 
   }
