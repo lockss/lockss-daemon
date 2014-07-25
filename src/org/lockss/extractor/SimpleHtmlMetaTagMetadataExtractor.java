@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleHtmlMetaTagMetadataExtractor.java,v 1.13 2013-10-07 15:22:38 etenbrink Exp $
+ * $Id: SimpleHtmlMetaTagMetadataExtractor.java,v 1.14 2014-07-25 06:39:06 tlipkis Exp $
  */
 
 /*
@@ -56,50 +56,53 @@ public class SimpleHtmlMetaTagMetadataExtractor
       throw new IllegalArgumentException("extract() called with null CachedUrl");
     }
     ArticleMetadata ret = new ArticleMetadata();
-    BufferedReader bReader =
-      new BufferedReader(cu.openForReading());
-    for (String line = bReader.readLine();
-	 line != null;
-	 line = bReader.readLine()) {
-      int i = StringUtil.indexOfIgnoreCase(line, "<meta ");
-      while (i >= 0) {
-        // recognize end of tag character preceded by optional '/', 
-        // preceded by a double-quote that is separated by zero or more 
-        // whitespace characters
-        int j = i+1;
-        while (true) {
-          j = StringUtil.indexOfIgnoreCase(line, ">", j);
-          if (j < 0) break;
-          String s = line.substring(i,j);
-          if (s.endsWith("/")) {
-            s = s.substring(0,s.length()-1);
-          }
-          if (s.trim().endsWith("\"")) {
-            break;
-          }
-          j++;
-        }
-        if (j < 0) {
-          // join next line with tag end
-          String nextLine = bReader.readLine();
-          if (nextLine == null) {
-            break;
-          }
-          if (line.endsWith("=") && nextLine.startsWith(" ")) {
-            // here we trim leading spaces from nextLine
-            Matcher m = whiteSpacePat.matcher(nextLine);
-            nextLine = m.replaceFirst("");
-          }
-          line += nextLine;
-          continue;
-        }
-        String meta = line.substring(i, j+1);
-        if (log.isDebug3()) log.debug3("meta: " + meta);
-        addTag(meta, ret);
-        i = StringUtil.indexOfIgnoreCase(line, "<meta ", j+1);
+    BufferedReader bReader = null;
+    try {
+      bReader = new BufferedReader(cu.openForReading());
+      for (String line = bReader.readLine();
+	   line != null;
+	   line = bReader.readLine()) {
+	int i = StringUtil.indexOfIgnoreCase(line, "<meta ");
+	while (i >= 0) {
+	  // recognize end of tag character preceded by optional '/', 
+	  // preceded by a double-quote that is separated by zero or more 
+	  // whitespace characters
+	  int j = i+1;
+	  while (true) {
+	    j = StringUtil.indexOfIgnoreCase(line, ">", j);
+	    if (j < 0) break;
+	    String s = line.substring(i,j);
+	    if (s.endsWith("/")) {
+	      s = s.substring(0,s.length()-1);
+	    }
+	    if (s.trim().endsWith("\"")) {
+	      break;
+	    }
+	    j++;
+	  }
+	  if (j < 0) {
+	    // join next line with tag end
+	    String nextLine = bReader.readLine();
+	    if (nextLine == null) {
+	      break;
+	    }
+	    if (line.endsWith("=") && nextLine.startsWith(" ")) {
+	      // here we trim leading spaces from nextLine
+	      Matcher m = whiteSpacePat.matcher(nextLine);
+	      nextLine = m.replaceFirst("");
+	    }
+	    line += nextLine;
+	    continue;
+	  }
+	  String meta = line.substring(i, j+1);
+	  if (log.isDebug3()) log.debug3("meta: " + meta);
+	  addTag(meta, ret);
+	  i = StringUtil.indexOfIgnoreCase(line, "<meta ", j+1);
+	}
       }
+    } finally {
+      IOUtil.safeClose(bReader);
     }
-    IOUtil.safeClose(bReader);
     return ret;
   }
   private void addTag(String line, ArticleMetadata ret) {
