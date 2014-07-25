@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArticleMetadataExtractor.java,v 1.13 2014-01-14 08:55:26 tlipkis Exp $
+ * $Id: TestBaseArticleMetadataExtractor.java,v 1.14 2014-07-25 06:38:24 tlipkis Exp $
  */
 
 /*
@@ -212,6 +212,67 @@ public class TestBaseArticleMetadataExtractor extends LockssTestCase {
     Map<String,String> actual = getMap(mdlist.get(0));
     assertEquals(exp, actual);
   }
+
+  // Non-existant role name falls back to tdb info
+  public void testTdbBadRole() throws Exception {
+    BaseArticleMetadataExtractor me =
+      new BaseArticleMetadataExtractor("norole");
+    me.setAddTdbDefaults(true);
+    ArticleMetadataListExtractor mle = new ArticleMetadataListExtractor(me);
+    Map map = MapUtil.map(MetadataField.FIELD_VOLUME, "vol16",
+			  // Invalid value
+			  MetadataField.FIELD_ISSN, "not_an_issn");
+
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(),
+					       makeAf(mau1, map));
+    Map<String,String> actual = getMap(mdlist.get(0));
+    assertEquals(tdbmap1, actual);
+  }
+
+  // No role, extracts from  full text CU
+  public void testTdbNoRole() throws Exception {
+    BaseArticleMetadataExtractor me = new BaseArticleMetadataExtractor();
+    me.setAddTdbDefaults(true);
+    ArticleMetadataListExtractor mle = new ArticleMetadataListExtractor(me);
+    Map map = MapUtil.map(MetadataField.FIELD_VOLUME, "vol16",
+			  // Invalid value
+			  MetadataField.FIELD_ISSN, "not_an_issn");
+
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(),
+					       makeAf(mau1, map));
+    // Copy of md values corresponding to tdb
+    Map<String,String> exp = new HashMap<String,String>(tdbmap1);
+    // Add/replace explicit md values 
+    exp.put("volume", "vol16");
+    Map<String,String> actual = getMap(mdlist.get(0));
+    assertEquals(exp, actual);
+  }
+
+  // Extractor throws, uses tdb only
+  public void testTdbExtractorThrows() throws Exception {
+    BaseArticleMetadataExtractor me = new BaseArticleMetadataExtractor();
+    me.setAddTdbDefaults(true);
+    ArticleMetadataListExtractor mle = new ArticleMetadataListExtractor(me);
+    Map map = MapUtil.map(MetadataField.FIELD_VOLUME, "vol16",
+			  // Invalid value
+			  MetadataField.FIELD_ISSN, "not_an_issn");
+
+
+    ArticleFiles af = makeAf(mau1, map);
+    MockCachedUrl cu1 = (MockCachedUrl)af.getFullTextCu();
+    cu1.setFileMetadataExtractor(new FileMetadataExtractor() {
+	public void extract(MetadataTarget target, CachedUrl cu,
+			    Emitter emitter)
+	    throws IOException, PluginException {
+	  throw new IOException("Throwsing emitter");
+	}});
+
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(),
+					       af);
+    Map<String,String> actual = getMap(mdlist.get(0));
+    assertEquals(tdbmap1, actual);
+  }
+
 
   public void testPreferTdbPubTrue() throws Exception {
     ConfigurationUtil.addFromArgs(BaseArticleMetadataExtractor.PARAM_PREFER_TDB_PUBLISHER,

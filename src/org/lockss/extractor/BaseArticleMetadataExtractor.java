@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArticleMetadataExtractor.java,v 1.21 2014-01-31 01:04:16 pgust Exp $
+ * $Id: BaseArticleMetadataExtractor.java,v 1.22 2014-07-25 06:38:24 tlipkis Exp $
  */
 
 /*
@@ -178,26 +178,32 @@ public class BaseArticleMetadataExtractor implements ArticleMetadataExtractor {
 	FileMetadataExtractor me = cu.getFileMetadataExtractor(target);
         if (me != null) {
           me.extract(target, cu, myEmitter);
-          AuUtil.safeRelease(cu);
           return;
         }
       } catch (IOException ex) {
 	log.warning("Error in FileMetadataExtractor", ex);
+      } finally {
+	AuUtil.safeRelease(cu);
       }
     } else {
-      // use full-text CU if cuRole CU not available
+      // get full-text CU if cuRole CU not present
       cu = af.getFullTextCu();
       if (log.isDebug3()) {
-        log.debug3("Missing CU for role " + cuRole 
-                      + ". Using fullTextCU " + af.getFullTextUrl());
+	log.debug3("Missing CU for role " + cuRole
+		   + ". Using fullTextCU " + af.getFullTextUrl());
       }
     }
+    // Here if cuRole wasn't present or extractor threw IOException
     if (cu != null) {
-      // emit at least basic metadata for the selected CU 
-      // if no article metadata is available
-      ArticleMetadata am = new ArticleMetadata();
-      myEmitter.emitMetadata(cu, am);
-      AuUtil.safeRelease(cu);
+      try {
+	if (log.isDebug3()) {
+	  log.debug3("Storing tdb info for  " + cu.getUrl());
+	}
+	ArticleMetadata am = new ArticleMetadata();
+	myEmitter.emitMetadata(cu, am);
+      } finally {
+	AuUtil.safeRelease(cu);
+      }
     }
   }
 }
