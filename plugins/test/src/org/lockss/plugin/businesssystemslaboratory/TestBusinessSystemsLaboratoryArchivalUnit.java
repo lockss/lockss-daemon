@@ -1,5 +1,5 @@
 /*
- * $Id: TestBusinessSystemsLaboratoryArchivalUnit.java,v 1.2 2013-11-07 00:51:25 ldoan Exp $
+ * $Id: TestBusinessSystemsLaboratoryArchivalUnit.java,v 1.3 2014-07-25 19:52:29 ldoan Exp $
  */
 
 /*
@@ -140,6 +140,7 @@ public class TestBusinessSystemsLaboratoryArchivalUnit extends LockssTestCase {
     // <bslbase>/BSR.Vol.2-Iss.1-Massaro.et.al.Organising.Innovation.pdf
     // <bslbase>/BSR-Vol.2-Iss.1-2013-complete-issue.pdf
     // <bslbase>/BSR.Vol.2-Iss.2-Symposium.Valencia.2013.Complete.Issue.pdf
+    // <bslbase>/Business_Systems_Review-Vol.2-Issue3-2013-full-issue.pdf
     shouldCacheTest(ROOT_URL + "Bardy.&.Massaro.(2013).Sustainability."
                     + "Value.Index.2.1.htm", true, bslAu, cus);
     shouldCacheTest(ROOT_URL + "BSR.Vol.2-Iss.1-Massaro.et.al.Organising."
@@ -148,6 +149,8 @@ public class TestBusinessSystemsLaboratoryArchivalUnit extends LockssTestCase {
                     true, bslAu, cus);
     shouldCacheTest(ROOT_URL + "BSR.Vol.2-Iss.2-Symposium.Valencia.2013."
                     + "Complete.Issue.pdf", true, bslAu, cus);
+    shouldCacheTest(ROOT_URL + "Business_Systems_Review-Vol.2-Issue3-2013-"
+                    + "full-issue.pdf", true, bslAu, cus);
     
     // should not get crawled - missing volume name and year
     shouldCacheTest(ROOT_URL + "BSR.January-June.htm", false, bslAu, cus);  
