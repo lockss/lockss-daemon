@@ -1,5 +1,5 @@
 /*
- * $Id: MonitoringInputStream.java,v 1.4 2006-09-22 06:26:27 tlipkis Exp $
+ * $Id: MonitoringInputStream.java,v 1.5 2014-07-25 07:05:15 tlipkis Exp $
  */
 
 /*
@@ -46,6 +46,7 @@ public class MonitoringInputStream extends InputStream {
   private InputStream in;
   private String name;
   private String openTrace;
+  private long openTime;;
 //   private String closeTrace;
   private String closeAbortTrace;
   private boolean isOpen = true;
@@ -55,6 +56,7 @@ public class MonitoringInputStream extends InputStream {
     this.in = in;
     this.name = name;
     openTrace = StringUtil.stackTraceString(new Exception("Open"));
+    openTime = TimeBase.nowMs();
   }
 
   public MonitoringInputStream(InputStream in, String name, boolean logClose) {
@@ -99,7 +101,9 @@ public class MonitoringInputStream extends InputStream {
 
   protected void finalize() {
     if (isOpen) {
-      log.warning("Never closed (" + name + ").  Opened at " + openTrace);
+      log.warning("Never closed (" + name + ").  Opened at " +
+		  Logger.getTimeStampFormat().format(openTime) +
+		  " at " + openTrace);
       if (closeAbortTrace != null) {
 	log.warning("Close threw: " + closeAbortTrace);
       }
