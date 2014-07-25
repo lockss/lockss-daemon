@@ -3,7 +3,7 @@
   publisher <
     name = International Water Association Publishing ;
     info[contract] = 2013 ;
-    info[tester] = 7
+    info[tester] = 8
   >
   
     plugin = org.lockss.plugin.portlandpress.ClockssPortlandPressPlugin
@@ -223,7 +223,7 @@
     au < manifest ; exists ; 2010 ; Water Practice and Technology Volume 5 ; 005 >
     au < manifest ; exists ; 2011 ; Water Practice and Technology Volume 6 ; 006 >
     au < manifest ; exists ; 2012 ; Water Practice and Technology Volume 7 ; 007 >
-    au < testing ; exists ; 2013 ; Water Practice and Technology Volume 8 ; 008 >
+    au < manifest ; exists ; 2013 ; Water Practice and Technology Volume 8 ; 008 >
     au < manifest ; exists ; 2014 ; Water Practice and Technology Volume 9 ; 009 >
 
   }
