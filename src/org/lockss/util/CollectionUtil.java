@@ -1,5 +1,5 @@
 /*
- * $Id: CollectionUtil.java,v 1.20 2013-02-08 23:23:20 clairegriffin Exp $
+ * $Id: CollectionUtil.java,v 1.21 2014-07-25 07:01:48 tlipkis Exp $
  */
 
 /*
@@ -136,13 +136,13 @@ public class CollectionUtil {
   /**
    * Returns an arbitrary element from the collection
    */
-  public static Object getAnElement(Collection coll) {
+  public static <T> T getAnElement(Collection<T> coll) {
     if (coll == null) {
       throw new IllegalArgumentException("Called with null collection");
     } else if (coll.size() == 0) {
       return null;
     }
-    Iterator it = coll.iterator();
+    Iterator<T> it = coll.iterator();
     return it.next();
   }
 

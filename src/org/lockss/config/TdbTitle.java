@@ -1,5 +1,5 @@
 /*
- * $Id: TdbTitle.java,v 1.17 2014-07-24 20:46:23 fergaloy-sf Exp $
+ * $Id: TdbTitle.java,v 1.18 2014-07-25 07:01:48 tlipkis Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import org.lockss.util.*;
  * This class represents a title database title.
  *
  * @author  Philip Gust
- * @version $Id: TdbTitle.java,v 1.17 2014-07-24 20:46:23 fergaloy-sf Exp $
+ * @version $Id: TdbTitle.java,v 1.18 2014-07-25 07:01:48 tlipkis Exp $
  */
 public class TdbTitle {
   /**
@@ -964,9 +964,9 @@ public class TdbTitle {
    */
   public boolean isSerial() {
     boolean result = false;
-    for (TdbAu tdbau : tdbAus.values()) {
+    TdbAu tdbau = CollectionUtil.getAnElement(tdbAus.values());
+    if (tdbau != null) {
       result = tdbau.isSerial();
-      break;
     }
     return result;
   }

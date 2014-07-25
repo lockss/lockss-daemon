@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.123 2013-10-16 23:14:01 fergaloy-sf Exp $
+ * $Id: LockssDaemon.java,v 1.124 2014-07-25 07:01:48 tlipkis Exp $
  */
 
 /*
@@ -867,7 +867,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    */
   public void stopAllAuManagers() {
     ArchivalUnit au;
-    while ((au = (ArchivalUnit)CollectionUtil.getAnElement(auManagerMaps.keySet())) != null) {
+    while ((au = CollectionUtil.getAnElement(auManagerMaps.keySet())) != null) {
       log.debug2("Stopping all managers for " + au);
       stopAuManagers(au);
     }

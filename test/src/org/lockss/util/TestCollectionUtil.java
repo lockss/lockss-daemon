@@ -1,5 +1,5 @@
 /*
- * $Id: TestCollectionUtil.java,v 1.18 2011-01-08 15:46:37 pgust Exp $
+ * $Id: TestCollectionUtil.java,v 1.19 2014-07-25 07:01:48 tlipkis Exp $
  */
 
 /*
@@ -185,11 +185,11 @@ public class TestCollectionUtil extends LockssTestCase {
   }
 
   public void testGetAnElement() {
-    Set set = SetUtil.set("str1", "str2", "str3");
+    Set<String> set = SetUtil.set("str1", "str2", "str3");
     Set expectedElements = SetUtil.set("str1", "str2", "str3");
     Set s = new HashSet();
     while (!set.isEmpty()) {
-      String element = (String)CollectionUtil.getAnElement(set);
+      String element = CollectionUtil.getAnElement(set);
       assertContains(set, element);
       assertContains(expectedElements, element);
       set.remove(element);
