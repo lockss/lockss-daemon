@@ -1,5 +1,5 @@
 /*
- * $Id: WoltersKluwerSourceXmlSchemaHelper.java,v 1.1 2014-07-18 16:22:36 aishizaki Exp $
+ * $Id: WoltersKluwerSourceXmlSchemaHelper.java,v 1.2 2014-07-25 17:34:46 aishizaki Exp $
  */
 
 /*
@@ -223,7 +223,9 @@ implements SourceXmlSchemaHelper {
 
   /* Under an item node, the interesting bits live at these relative locations */
   // Just the pdf name is not under the WK_articleNode
-  private static String WK_pdf = "//D/@AN";
+  //private static String WK_pdf = "//D/@AN";
+  private static String WK_pdf = "@AN";
+
   
   // The following are all under WK_articleNode = "/DG/D"
   // but are issue-level info
@@ -267,8 +269,8 @@ implements SourceXmlSchemaHelper {
   static private final Map<String,XPathValue>     
   WK_articleMap = new HashMap<String,XPathValue>();
   static {
+    WK_articleMap.put(WK_pdf, XmlDomMetadataExtractor.TEXT_VALUE); 
     WK_articleMap.put(WK_issn, XmlDomMetadataExtractor.TEXT_VALUE);
-    //WK_articleMap.put(WK_pdf, XmlDomMetadataExtractor.TEXT_VALUE); 
     WK_articleMap.put(WK_journal_title, XmlDomMetadataExtractor.TEXT_VALUE); 
     WK_articleMap.put(WK_doi, XmlDomMetadataExtractor.TEXT_VALUE); 
     WK_articleMap.put(WK_article_title, WK_ARTICLE_TITLE_VALUE); 
@@ -276,7 +278,6 @@ implements SourceXmlSchemaHelper {
     WK_articleMap.put(WK_vol, XmlDomMetadataExtractor.TEXT_VALUE);
     WK_articleMap.put(WK_author, WK_AUTHOR_VALUE);
     WK_articleMap.put(WK_pubdate, WK_DATE_VALUE);
-    WK_articleMap.put(WK_pdf, XmlDomMetadataExtractor.TEXT_VALUE); 
     WK_articleMap.put(WK_pgs, XmlDomMetadataExtractor.TEXT_VALUE); 
     WK_articleMap.put(WK_pgset, XmlDomMetadataExtractor.TEXT_VALUE); 
   }
@@ -285,14 +286,12 @@ implements SourceXmlSchemaHelper {
   static private final String WK_articleNode = "/DG/D"; 
 
   /* 3. WK global value we care about: the pdf names */ 
+  /*
   static private final Map<String,XPathValue> 
     WK_globalMap = new HashMap<String, XPathValue>();
   static {
-    WK_globalMap.put(WK_pdf, XmlDomMetadataExtractor.TEXT_VALUE); 
-    //WK_globalMap.put(WK_issn, XmlDomMetadataExtractor.TEXT_VALUE); 
-    //WK_globalMap.put(WK_issue, XmlDomMetadataExtractor.TEXT_VALUE); 
-    //WK_globalMap.put(WK_vol, XmlDomMetadataExtractor.TEXT_VALUE); 
   }
+  */
 
   /*
    * The emitter will need a map to know how to cook ONIX raw values

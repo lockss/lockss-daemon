@@ -1,5 +1,5 @@
 /*
- * $Id: WoltersKluwerSourceArticleIteratorFactory.java,v 1.1 2014-07-18 16:22:36 aishizaki Exp $
+ * $Id: WoltersKluwerSourceArticleIteratorFactory.java,v 1.2 2014-07-25 17:34:46 aishizaki Exp $
  */ 
 /*
 
@@ -37,8 +37,6 @@ import java.util.regex.*;
 
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadataExtractor;
-import org.lockss.extractor.ArticleMetadataExtractor.Emitter;
-//import org.lockss.extractor.BaseArticleMetadataExtractor.MyEmitter;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.ArticleMetadataExtractorFactory;
 import org.lockss.extractor.BaseArticleMetadataExtractor;
@@ -59,12 +57,13 @@ public class WoltersKluwerSourceArticleIteratorFactory
   
   public static final Pattern XML_PATTERN = Pattern.compile("/(.*)\\.[\\d]$", Pattern.CASE_INSENSITIVE);
   public static final String XML_REPLACEMENT = "/$1.[\\d]";
+  public static final String SGML_SUFFIX = ".0";
+  public static final String SGML_CONTENT_TYPE = "application/xml";
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) throws PluginException {
     SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
     
-    // no need to limit to ROOT_TEMPLATE
     SubTreeArticleIterator.Spec theSpec = builder.newSpec();
     theSpec.setRootTemplate(ROOT_TEMPLATE);
     theSpec.setTarget(target);
@@ -120,13 +119,14 @@ public class WoltersKluwerSourceArticleIteratorFactory
         if (cu != null) {
           try {
             FileMetadataExtractor me = cu.getFileMetadataExtractor(target);
+            // TODO: 1.67 - Tom promises to put a way to set the ContentType in the daemon
             // here's where we differ from superclass implementation
             // if the me is null because the contentType==null because the sgml-based
             // metadata file is not recognized, THEN we want to fix that...
             if (me == null) {
               // if this is the sgml file (only one that ends in ".0")
-              if ((cu.getContentType() == null) && (cu.getUrl().endsWith(".0"))){
-                String ct = "application/xml"; //"application/xml"
+              if ((cu.getContentType() == null) && (cu.getUrl().endsWith(SGML_SUFFIX))){
+                String ct = SGML_CONTENT_TYPE; //"application/xml"
                 me = cu.getArchivalUnit().getFileMetadataExtractor(target, ct);
               }
             }

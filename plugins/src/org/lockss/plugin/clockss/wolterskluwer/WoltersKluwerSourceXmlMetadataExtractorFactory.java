@@ -1,5 +1,5 @@
 /*
- * $Id: WoltersKluwerSourceXmlMetadataExtractorFactory.java,v 1.1 2014-07-18 16:22:37 aishizaki Exp $
+ * $Id: WoltersKluwerSourceXmlMetadataExtractorFactory.java,v 1.2 2014-07-25 17:34:46 aishizaki Exp $
  */
 
 /*
@@ -42,7 +42,6 @@ import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 
-import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
@@ -53,7 +52,6 @@ import org.xml.sax.SAXException;
 
 public class WoltersKluwerSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
   static Logger log = Logger.getLogger(WoltersKluwerSourceXmlMetadataExtractorFactory.class);
-
   private static SourceXmlSchemaHelper WKHelper = null;
 
   @Override
@@ -140,22 +138,9 @@ public class WoltersKluwerSourceXmlMetadataExtractorFactory extends SourceXmlMet
     }
 
   /**
-   * A routine used by preEmitCheck to know which files to check for
-   * existence. 
-   * It returns a list of strings, each string is a
-   * complete url for a file that could be used to check for whether a cu
-   * with that name exists and has content.
-   * If the returned list is null, preEmitCheck returns TRUE
-   * If any of the files in the list is found and exists, preEmitCheck 
-   * returns TRUE. It stops after finding one.
-   * If the list is not null and no file exists, preEmitCheck returns FALSE
-   * The first existing file from the list gets set as the access URL.
-   * The child plugin could override preEmitCheck for different results.
-   * The base version of this returns the value of the schema helper's value at
-   * getFilenameXPathKey in the same directory as the XML file.
-   * 
-   * WoltersKluwer includes a partial name of its pdf file (article), so we
-   * need to add a the full_path at the front and ".pdf" on the end
+   * overriding existing routine because: WoltersKluwer includes a partial name
+   * of its pdf file (article), so we need to add a the full_path at the front
+   * plus the prefix "0" and ".pdf" on the end
    * @param cu
    * @param oneAM
    * @return
@@ -163,50 +148,28 @@ public class WoltersKluwerSourceXmlMetadataExtractorFactory extends SourceXmlMet
   protected ArrayList<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, 
       CachedUrl cu,
       ArticleMetadata oneAM) {
-    
+    final String ZERO = "0";
+    final String DOT_PDF = ".pdf";
+
     // get the key for a piece of metadata used in building the filename
     String fn_key = helper.getFilenameXPathKey();  
     // the schema doesn't define a filename so don't do a default preEmitCheck
     if (fn_key == null) {
       return null; // no preEmitCheck 
     }
-    List<String> fValues = oneAM.getRawList(helper.getFilenameXPathKey());
-    //String filenameValue = oneAM.getRaw(helper.getFilenameXPathKey());
-    ArrayList<String> returnList = new ArrayList<String>();
-
-    String filenameValue = getFilenameValue(oneAM, helper.getFilenameXPathKey());
+    String filenameValue = oneAM.getRaw(fn_key);
     // we expected a value, but didn't get one...we need to return something
     // for preEmitCheck to fail
     if (filenameValue == null) {
       filenameValue = "NOFILEINMETADATA"; // we expected a value, but got none
     }
-    StringBuilder pdfName = new StringBuilder();
-    // MUST add "0" to the front to make it match the pdf in the zipfile.  GRRR
-    pdfName.append("0"+filenameValue + ".pdf");
-    String cuBase = FilenameUtils.getFullPath(cu.getUrl());
-
-    returnList.add(cuBase + pdfName);
     
+    ArrayList<String> returnList = new ArrayList<String>();
+    String cuBase = FilenameUtils.getFullPath(cu.getUrl());
+    // MUST add "0" to the front to make it match the pdf in the zipfile.  GRRR
+    returnList.add(cuBase + ZERO + filenameValue + DOT_PDF);
     return returnList;
     }
-  
-  /*
-   * To get the pdf filename associated with an article, relying on the sax parser
-   * to keep things in order....  Getting the list of pages for all articles in the
-   * issue and the page for the current issue.  Using its index in the list to index
-   * the files/pdfs in the its list...
-   */
-  String getFilenameValue(ArticleMetadata rawAM, String fnameKey) {
-    String fname = null;
-    List<String> fValues = rawAM.getRawList(fnameKey);
-    String pages = rawAM.getRaw(WoltersKluwerSourceXmlSchemaHelper.WK_pgs);
-    List<String> pageList = rawAM.getRawList(WoltersKluwerSourceXmlSchemaHelper.WK_pgset);
-    int index = pageList.indexOf(pages);
-    if (index >= 0) {
-      fname = fValues.get(index);
-    }
-    return fname;
-  }
 
   }
 }
