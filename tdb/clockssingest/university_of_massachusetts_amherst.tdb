@@ -55,7 +55,7 @@
     implicit < status ; status2 ; year ; name ; param[volume] >
 
     au < crawling ; exists ; 2013 ; communication +1 Volume 1 ; 1 >
-    au < manifest ; exists ; 2014 ; communication +1 Volume 2 ; 2 >
+    au < testing ; exists ; 2014 ; communication +1 Volume 2 ; 2 >
 
   }
   
@@ -104,6 +104,7 @@
     au < manifest ; exists ; 2009 ; EDGE - A Graduate Journal for German and Scandinavian Studies Volume 1 ; 1 >
     au < manifest ; exists ; 2011 ; EDGE - A Graduate Journal for German and Scandinavian Studies Volume 2 ; 2 >
     au < crawling ; exists ; 2013 ; EDGE - A Graduate Journal for German and Scandinavian Studies Volume 3 ; 3 >
+    au < exists ; exists ; 2014 ; EDGE - A Graduate Journal for German and Scandinavian Studies Volume 4 ; 4 >
 
   }
   
@@ -142,7 +143,7 @@
     param[journal_abbr] = hs
     implicit < status ; status2 ; year ; name ; param[volume] >
 
-    au < expected ; exists ; 2013 ; Heritage & Society Volume 1 ; 1 >
+    au < expected ; exists ; 2014 ; Heritage & Society Volume 1 ; 1 >
 
   }
   
@@ -157,7 +158,7 @@
     param[journal_abbr] = hosteur
     implicit < status ; status2 ; year ; name ; param[volume] >
 
-    au < expected ; exists ; 2013 ; HOSTEUR Volume 1 ; 1 >
+    au < expected ; exists ; 2014 ; HOSTEUR Volume 1 ; 1 >
 
   }
   
@@ -172,7 +173,7 @@
     param[journal_abbr] = ichrie_case_study_competition
     implicit < status ; status2 ; year ; name ; param[volume] >
 
-    au < expected ; exists ; 2013 ; ICHRIE Johnson & Wales Case Study Competition Volume 1 ; 1 >
+    au < expected ; exists ; 2014 ; ICHRIE Johnson & Wales Case Study Competition Volume 1 ; 1 >
 
   }
   
@@ -187,7 +188,7 @@
     
     plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
     param[base_url] = http://scholarworks.umass.edu/
-    param[journal_abbr] = 
+    param[journal_abbr] = intljssw
     implicit < status ; status2 ; year ; name ; param[volume] >
 
     au < manifest ; exists ; 2008 ; International Journal of Soil, Sediment and Water Volume 1 ; 1 >
@@ -200,6 +201,7 @@
   
     title < 
       name = Journal of Hospitality Financial Management ;
+      issn = 1091-3211 ;
       eissn = 2152-2790
     >
     

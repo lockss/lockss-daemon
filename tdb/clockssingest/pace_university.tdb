@@ -54,7 +54,7 @@
     au < finished ; crawling ; 2011 ; Pace Environmental Law Review Volume 28 ; 28 >
     au < finished ; frozen ; 2012 ; Pace Environmental Law Review Volume 29 ; 29 >
     au < crawling ; exists ; 2013 ; Pace Environmental Law Review Volume 30 ; 30 >
-    au < manifest ; exists ; 2014 ; Pace Environmental Law Review Volume 31 ; 31 >
+    au < testing ; exists ; 2014 ; Pace Environmental Law Review Volume 31 ; 31 >
 
   }
 
@@ -65,13 +65,12 @@
       eissn = 2164-9936
     >
 
-    comment[issn] = requested in RT ticket 3743.
     param[journal_abbr] = pelroc
 
     au < finished ; crawling ; 2011 ; Pace Environmental Law Review Online Companion Volume 1 ; 1 >
     au < finished ; frozen ; 2012 ; Pace Environmental Law Review Online Companion Volume 2 ; 2 >
     au < crawling ; exists ; 2013 ; Pace Environmental Law Review Online Companion Volume 3 ; 3 >
-    au < manifest ; exists ; 2014 ; Pace Environmental Law Review Online Companion Volume 4 ; 4 >
+    au < testing ; exists ; 2014 ; Pace Environmental Law Review Online Companion Volume 4 ; 4 >
 
   }
 
@@ -109,7 +108,7 @@
     au < finished ; crawling ; 2011 ; Pace International Law Review Volume 23 ; 23 >
     au < finished ; crawling ; 2012 ; Pace International Law Review Volume 24 ; 24 >
     au < crawling ; exists ; 2013 ; Pace International Law Review Volume 25 ; 25 >
-    au < manifest ; exists ; 2014 ; Pace International Law Review Volume 26 ; 26 >
+    au < testing ; exists ; 2014 ; Pace International Law Review Volume 26 ; 26 >
 
   }
 
@@ -155,7 +154,7 @@
     au < finished ; crawling ; 2010-2011 ; Pace Law Review Volume 31 ; 31 >
     au < finished ; crawling ; 2011-2012 ; Pace Law Review Volume 32 ; 32 >
     au < crawling ; exists ; 2012-2013 ; Pace Law Review Volume 33 ; 33 >
-    au < manifest ; exists ; 2013-2014 ; Pace Law Review Volume 34 ; 34 >
+    au < testing ; exists ; 2013-2014 ; Pace Law Review Volume 34 ; 34 >
 
   }
 
@@ -166,13 +165,12 @@
       eissn = 2329-9894
     >
 
-    comment[issn] = requested in RT ticket 3743
     param[journal_abbr] = pipself
 
     au < finished ; crawling ; 2011 ; Pace I.P., Sports & Entertainment Law Forum Volume 1 ; 1 >
     au < finished ; crawling ; 2012 ; Pace I.P., Sports & Entertainment Law Forum Volume 2 ; 2 >
     au < crawling ; exists ; 2013 ; Pace I.P., Sports & Entertainment Law Forum Volume 3 ; 3 >
-    au < manifest ; exists ; 2014 ; Pace I.P., Sports & Entertainment Law Forum Volume 4 ; 4 >
+    au < testing ; exists ; 2014 ; Pace I.P., Sports & Entertainment Law Forum Volume 4 ; 4 >
 
   }
 
