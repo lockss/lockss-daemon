@@ -1,5 +1,5 @@
 /*
- * $Id: BusinessSystemsLaboratoryHtmlHashFilterFactory.java,v 1.2 2014-01-21 20:19:07 thib_gc Exp $
+ * $Id: BusinessSystemsLaboratoryHtmlHashFilterFactory.java,v 1.3 2014-07-25 19:50:47 ldoan Exp $
  */
 
 /*
@@ -64,7 +64,7 @@ public class BusinessSystemsLaboratoryHtmlHashFilterFactory
         new TagNameFilter("script"),
         // filter out comments
         // FIXME after 1.64: replace with HtmlNodeFilters.comment() 
-        HtmlNodeFilters.commentWithRegex(".*"),
+        HtmlNodeFilters.comment(),
     };
 
     return new HtmlFilterInputStream(in, encoding, 

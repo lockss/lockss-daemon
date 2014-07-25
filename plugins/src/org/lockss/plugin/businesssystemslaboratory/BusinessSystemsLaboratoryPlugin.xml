@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -60,8 +60,10 @@
       <string>1,"^%sBSR[.-]Vol[.-]%s[.-][^/]+\.pdf$", base_url, volume_name</string>
       <!-- complete issue http://www.business-systems-review.org/BSR-Vol.2-Iss.1-2013-complete-issue.pdf -->
       <!-- Complete Issue http://www.business-systems-review.org/BSR.Vol.2-Iss.2-Symposium.Valencia.2013.Complete.Issue.pdf -->
-      <!-- http://www.business-systems-review.org/BSR-Vol.1-ISS.1-June-December.2012.Complete.pdf -->
-      <string>1,"^%sBSR[^/]+[.-]%d[.-]complete([.-]issue)?\.pdf$", base_url, year</string>
+      <!-- Complete       http://www.business-systems-review.org/BSR-Vol.1-ISS.1-June-December.2012.Complete.pdf -->
+      <!-- full issue     http://www.business-systems-review.org/Business_Systems_Review-Vol.2-Issue3-2013-full-issue.pdf -->
+      <!-- <string>1,"^%sBSR[^/]+[.-]%d[.-]complete([.-]issue)?\.pdf$", base_url, year</string> -->
+      <string>1,"^%s(BSR|Business_Systems_Review)[^/]+[.-]%d[.-](complete|full)([.-]issue)?\.pdf$", base_url, year</string>
       <!-- http://www.business-systems-review.org/BSR.2.2.Special.Issue.Symposium.Valencia.2013.htm  -->
       <string>1,"^%sBSR[^/]+Special[.-]Issue[^/]+[.-]%d\.htm$", base_url, year</string>
     </list>
