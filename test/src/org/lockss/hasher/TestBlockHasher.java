@@ -1,10 +1,10 @@
 /*
- * $Id: TestBlockHasher.java,v 1.26 2014-07-21 03:19:12 tlipkis Exp $
+ * $Id: TestBlockHasher.java,v 1.27 2014-07-28 07:15:45 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -508,7 +508,6 @@ public class TestBlockHasher extends LockssTestCase {
     MessageDigest[] digs = { dig };
     byte[][] inits = {null};
     MyBlockHasher hasher = new MyBlockHasher(cus, digs, inits, handRec);
-    hasher.suppressMarkAsSuspect(false);
     hasher.setFiltered(false);
     assertEquals(3, hashToEnd(hasher, stepSize));
     assertTrue(hasher.finished());
@@ -563,7 +562,6 @@ public class TestBlockHasher extends LockssTestCase {
     MessageDigest[] digs = { dig };
     byte[][] inits = {null};
     MyBlockHasher hasher = new MyBlockHasher(cus, digs, inits, handRec);
-    hasher.suppressMarkAsSuspect(false);
     hasher.setFiltered(false);
     hasher.setExcludeSuspectVersions(true);
     assertEquals(3, hashToEnd(hasher, stepSize));
@@ -669,7 +667,6 @@ public class TestBlockHasher extends LockssTestCase {
     cu.setContent(corrupt);
     RecordingEventHandler handRec3 = new RecordingEventHandler();
     MyBlockHasher hasher3 = new MyBlockHasher(cus, digs, inits, handRec3);
-    hasher3.suppressMarkAsSuspect(false);
     hasher3.setFiltered(false);
     assertEquals(corrupt.length(), hashToEnd(hasher3, stepSize));
     assertTrue(hasher3.finished());
@@ -833,9 +830,16 @@ public class TestBlockHasher extends LockssTestCase {
     testOneContentLocalHashObsolete(100);
   }
   
-  public void testOneContentLocalHashBad() throws Exception {
+  // These mark suspect versions so must be in separate tests
+  public void testOneContentLocalHashBad1() throws Exception {
     testOneContentLocalHashBad(1);
+  }
+  
+  public void testOneContentLocalHashBad3() throws Exception {
     testOneContentLocalHashBad(3);
+  }
+  
+  public void testOneContentLocalHashBad100() throws Exception {
     testOneContentLocalHashBad(100);
   }
   
@@ -873,9 +877,16 @@ public class TestBlockHasher extends LockssTestCase {
     testOneContentLocalHashGoodNoDigest(100);
   }
   
-  public void testOneContentLocalHashBadNoDigest() throws Exception {
+  // These mark suspect versions so must be in separate tests
+  public void testOneContentLocalHashBadNoDigest1() throws Exception {
     testOneContentLocalHashBadNoDigest(1);
+  }
+  
+  public void testOneContentLocalHashBadNoDigest3() throws Exception {
     testOneContentLocalHashBadNoDigest(3);
+  }
+  
+  public void testOneContentLocalHashBadNoDigest100() throws Exception {
     testOneContentLocalHashBadNoDigest(100);
   }
   
@@ -1522,7 +1533,6 @@ public class TestBlockHasher extends LockssTestCase {
   class MyBlockHasher extends BlockHasher {
     Map throwOnOpen = new HashMap();
     Map throwOnRead = new HashMap();
-    boolean suppressMarkAsSuspect = true;
 
     public MyBlockHasher(CachedUrlSet cus, MessageDigest[] digests,
 			 byte[][]initByteArrays, EventHandler cb) {
@@ -1565,20 +1575,6 @@ public class TestBlockHasher extends LockssTestCase {
 				     ? new IOException("Reading from hash input stream") : null,
 				     null);
     }
-
-    void suppressMarkAsSuspect(boolean val) {
-      suppressMarkAsSuspect = val;
-    }
-
-    @Override
-    protected void markAsSuspect(CachedUrl cu, String alg,
-				 byte[] contentHash,
-				 byte[] storedHash) {
-      if (!suppressMarkAsSuspect) {
-	super.markAsSuspect(cu, alg, contentHash, storedHash);
-      }
-    }
-
 
   }
 

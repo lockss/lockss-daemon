@@ -1,10 +1,10 @@
 /*
- * $Id: BlockHasher.java,v 1.33 2014-07-21 03:19:12 tlipkis Exp $
+ * $Id: BlockHasher.java,v 1.34 2014-07-28 07:15:45 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -626,7 +626,6 @@ public class BlockHasher extends GenericHasher {
 			  byte[] storedHash) {
     log.error(cu.getUrl() + ":" + cu.getVersion() +
 	      " hash mismatch");
-    lhr.newlySuspect(cu.getUrl());
     markAsSuspect(cu, alg, contentHash, storedHash);
   }
 
@@ -658,10 +657,16 @@ public class BlockHasher extends GenericHasher {
 				      byte[] contentHash,
 				      byte[] storedHash) {
     ensureAuSuspectUrlVersions();
-    asuv.markAsSuspect(cu.getUrl(), cu.getVersion(), alg,
-		       contentHash, storedHash);
-    // save on each change.  Should have option to save only at end of hash?
-    saveAuSuspectUrlVersions();
+    log.critical("isExcludeSuspectVersions: " + isExcludeSuspectVersions);
+    log.critical("isSuspect: " + cu + ": " + asuv.isSuspect(cu.getUrl(), cu.getVersion()));
+    if (isExcludeSuspectVersions ||
+	!asuv.isSuspect(cu.getUrl(), cu.getVersion())) {
+      asuv.markAsSuspect(cu.getUrl(), cu.getVersion(), alg,
+			 contentHash, storedHash);
+      // save on each change.  Should have option to save only at end of hash?
+      saveAuSuspectUrlVersions();
+      lhr.newlySuspect(cu.getUrl());
+    }
   }
 
   private void ensureAuSuspectUrlVersions() {
