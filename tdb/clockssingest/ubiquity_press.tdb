@@ -189,18 +189,18 @@
     param[base_url] = http://www.jcircadianrhythms.com/
     param[journal_id] = jcr
 
-    au < exists ; exists ; 2003 ; Journal of Circadian Rhythms Volume 1 ; 1 ; 2003 >
-    au < exists ; exists ; 2004 ; Journal of Circadian Rhythms Volume 2 ; 2 ; 2004 >
-    au < exists ; exists ; 2005 ; Journal of Circadian Rhythms Volume 3 ; 3 ; 2005 >
-    au < exists ; exists ; 2006 ; Journal of Circadian Rhythms Volume 4 ; 4 ; 2006 >
-    au < exists ; exists ; 2007 ; Journal of Circadian Rhythms Volume 5 ; 5 ; 2007 >
-    au < exists ; exists ; 2008 ; Journal of Circadian Rhythms Volume 6 ; 6 ; 2008 >
-    au < exists ; exists ; 2009 ; Journal of Circadian Rhythms Volume 7 ; 7 ; 2009 >
-    au < exists ; exists ; 2010 ; Journal of Circadian Rhythms Volume 8 ; 8 ; 2010 >
-    au < exists ; exists ; 2011 ; Journal of Circadian Rhythms Volume 9 ; 9 ; 2011 >
-    au < exists ; exists ; 2012 ; Journal of Circadian Rhythms Volume 10 ; 10 ; 2012 >
-    au < exists ; exists ; 2013 ; Journal of Circadian Rhythms Volume 11 ; 11 ; 2013 >
-    au < exists ; exists ; 2014 ; Journal of Circadian Rhythms Volume 12 ; 12 ; 2014 >
+    au < manifest ; exists ; 2003 ; Journal of Circadian Rhythms Volume 1 ; 1 ; 2003 >
+    au < manifest ; exists ; 2004 ; Journal of Circadian Rhythms Volume 2 ; 2 ; 2004 >
+    au < manifest ; exists ; 2005 ; Journal of Circadian Rhythms Volume 3 ; 3 ; 2005 >
+    au < manifest ; exists ; 2006 ; Journal of Circadian Rhythms Volume 4 ; 4 ; 2006 >
+    au < manifest ; exists ; 2007 ; Journal of Circadian Rhythms Volume 5 ; 5 ; 2007 >
+    au < manifest ; exists ; 2008 ; Journal of Circadian Rhythms Volume 6 ; 6 ; 2008 >
+    au < manifest ; exists ; 2009 ; Journal of Circadian Rhythms Volume 7 ; 7 ; 2009 >
+    au < manifest ; exists ; 2010 ; Journal of Circadian Rhythms Volume 8 ; 8 ; 2010 >
+    au < manifest ; exists ; 2011 ; Journal of Circadian Rhythms Volume 9 ; 9 ; 2011 >
+    au < manifest ; exists ; 2012 ; Journal of Circadian Rhythms Volume 10 ; 10 ; 2012 >
+    au < manifest ; exists ; 2013 ; Journal of Circadian Rhythms Volume 11 ; 11 ; 2013 >
+    au < manifest ; exists ; 2014 ; Journal of Circadian Rhythms Volume 12 ; 12 ; 2014 >
 
   }
 
