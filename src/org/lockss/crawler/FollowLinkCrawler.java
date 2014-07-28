@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.102 2014-07-23 22:56:15 clairegriffin Exp $
+ * $Id: FollowLinkCrawler.java,v 1.103 2014-07-28 21:20:09 clairegriffin Exp $
  */
 
 /*
@@ -557,14 +557,8 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	    return false;
 	  }
 
-	  if (exploderPattern != null &&
-	      RegexpUtil.isMatchRe(uc.getUrl(), exploderPattern)) {
-	    // This url matches the pattern for archives to be exploded.
-	    explodeArchive(uc);
-	  } else {
-	    cacheWithRetries(uc);
-	  }
-	  checkSubstanceCollected(uc.getCachedUrl());
+    fetchThePage(uc);
+    checkSubstanceCollected(uc.getCachedUrl());
 	  curl.setFetched(true);
 	}
       } catch (CacheException.RepositoryException ex) {
@@ -641,6 +635,16 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     }
     logger.debug3("Removing from parsing list: "+uc.getUrl());
     return (!crawlStatus.isCrawlError());
+  }
+
+  protected void fetchThePage(final UrlCacher uc) throws IOException {
+    if (exploderPattern != null &&
+        RegexpUtil.isMatchRe(uc.getUrl(), exploderPattern)) {
+      // This url matches the pattern for archives to be exploded.
+      explodeArchive(uc);
+    } else {
+      cacheWithRetries(uc);
+    }
   }
 
   protected boolean parseThePage(CrawlUrlData curl, CrawlQueue fetchQueue,
