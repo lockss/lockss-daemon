@@ -1687,7 +1687,7 @@
       au < finished ; frozen ; 2010 ; International Journal of Computational Materials Science and Surface Engineering Volume 3 ; 3 >
       au < zapped ; finished ; 2011 ; International Journal of Computational Materials Science and Surface Engineering Volume 4 ; 4 >
       au < finished ; frozen ; 2012-2013 ; International Journal of Computational Materials Science and Surface Engineering Volume 5 ; 5 >
-      au < expected ; exists ; 2014 ; International Journal of Computational Materials Science and Surface Engineering Volume 6 ; 6 >
+      au < manifest ; exists ; 2014 ; International Journal of Computational Materials Science and Surface Engineering Volume 6 ; 6 >
 
     }
 
@@ -5494,7 +5494,7 @@
       au < crawling ; exists ; 2013 ; International Journal of Modelling, Identification and Control Volume 19 ; 19 >
       au < crawling ; exists ; 2013 ; International Journal of Modelling, Identification and Control Volume 20 ; 20 >
       au < manifest ; exists ; 2014 ; International Journal of Modelling, Identification and Control Volume 21 ; 21 >
-      au < expected ; exists ; 2014 ; International Journal of Modelling, Identification and Control Volume 22 ; 22 >
+      au < manifest ; exists ; 2014 ; International Journal of Modelling, Identification and Control Volume 22 ; 22 >
       au < expected ; exists ; 2014 ; International Journal of Modelling, Identification and Control Volume 23 ; 23 >
 
     }
@@ -5532,7 +5532,7 @@
       au < zapped ; finished ; 2011 ; International Journal of Monetary Economics and Finance Volume 4 ; 4 >
       au < zapped ; finished ; 2012 ; International Journal of Monetary Economics and Finance Volume 5 ; 5 >
       au < crawling ; exists ; 2013 ; International Journal of Monetary Economics and Finance Volume 6 ; 6 >
-      au < expected ; exists ; 2014 ; International Journal of Monetary Economics and Finance Volume 7 ; 7 >
+      au < manifest ; exists ; 2014 ; International Journal of Monetary Economics and Finance Volume 7 ; 7 >
 
     }
 
@@ -7116,7 +7116,7 @@
       param[journal_issn] = 1759-9741
       
       au < finished ; frozen ; 2012-2013 ; International Journal of Strategic Engineering Asset Management Volume 1 ; 1 >
-      au < expected ; exists ; 2014 ; International Journal of Strategic Engineering Asset Management Volume 2 ; 2 >
+      au < manifest ; exists ; 2014 ; International Journal of Strategic Engineering Asset Management Volume 2 ; 2 >
 
     }
 
@@ -7367,9 +7367,7 @@
 
       param[journal_issn] = 1759-9342
       
-      au < finished ; crawling ; 2012 ; International Journal of Systems Control and Information Processing Volume 1 ; 1 >
-      au < expected ; exists ; 2013 ; International Journal of Systems Control and Information Processing Volume 2 ; 2 >
-      au < expected ; exists ; 2014 ; International Journal of Systems Control and Information Processing Volume 3 ; 3 >
+      au < finished ; crawling ; 2012-2014 ; International Journal of Systems Control and Information Processing Volume 1 ; 1 >
 
     }
 
@@ -7408,7 +7406,7 @@
       au < finished ; frozen ; 2009-2010 ; International Journal of Teaching and Case Studies Volume 2 ; 2 >
       au < zapped ; finished ; 2011 ; International Journal of Teaching and Case Studies Volume 3 ; 3 >
       au < crawling ; exists ; 2013 ; International Journal of Teaching and Case Studies Volume 4 ; 4 >
-      au < expected ; exists ; 2014 ; International Journal of Teaching and Case Studies Volume 5 ; 5 >
+      au < manifest ; exists ; 2014 ; International Journal of Teaching and Case Studies Volume 5 ; 5 >
 
     }
 
