@@ -1,5 +1,5 @@
 /*
- * $Id: SpiderCrawlSpec.java,v 1.11 2013-08-10 20:49:46 tlipkis Exp $
+ * $Id: SpiderCrawlSpec.java,v 1.12 2014-07-28 21:18:06 clairegriffin Exp $
  */
 
 /*
@@ -34,7 +34,6 @@ package org.lockss.daemon;
 
 import java.util.*;
 import org.lockss.util.*;
-import org.lockss.plugin.*;
 import org.lockss.plugin.ExploderHelper;
 
 /**
@@ -46,6 +45,7 @@ public final class SpiderCrawlSpec extends BaseCrawlSpec {
   private List<String> startList;
   private int refetchDepth = -1;
   private String exploderPattern = null;
+  private String ajaxPattern = null;
   private ExploderHelper exploderHelper = null;
 
   /**

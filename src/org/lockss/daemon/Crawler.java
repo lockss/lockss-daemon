@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.59 2012-11-08 06:21:40 tlipkis Exp $
+ * $Id: Crawler.java,v 1.60 2014-07-28 21:18:06 clairegriffin Exp $
  */
 
 /*
@@ -56,7 +56,8 @@ public interface Crawler {
     NEW_CONTENT("New Content"),
     REPAIR("Repair"),
     BACKGROUND("Background"),		// not used
-    OAI("OAI");
+    OAI("OAI"),
+    AJAX("AJAX");
 
     final String printString;
     Type(String printString) {

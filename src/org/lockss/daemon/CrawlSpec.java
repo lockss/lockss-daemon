@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlSpec.java,v 1.25 2011-05-18 04:09:55 tlipkis Exp $
+ * $Id: CrawlSpec.java,v 1.26 2014-07-28 21:18:06 clairegriffin Exp $
  */
 
 /*
@@ -105,6 +105,12 @@ public interface CrawlSpec {
    * @return pattern to recognize archive files to be exploded
    */
   public String getExploderPattern();
+
+  /**
+   * Get the pattern to match to trigger an ajax crawl
+   * @return the pattern to match to trigger an ajax crawl
+   */
+  public String getAjaxPattern();
 
   /**
    * Return the cookie policy specified by the plugin, if any.

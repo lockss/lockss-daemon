@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawlSpec.java,v 1.16 2011-05-18 04:09:55 tlipkis Exp $
+ * $Id: BaseCrawlSpec.java,v 1.17 2014-07-28 21:18:06 clairegriffin Exp $
  */
 
 /*
@@ -147,6 +147,8 @@ public abstract class BaseCrawlSpec implements CrawlSpec {
   public String getExploderPattern() {
     return null;
   }
+
+  public String getAjaxPattern() {return null;}
 
   // XXX temporary
   public void setExploderPattern(String pat) {
