@@ -208,7 +208,7 @@
     au < released ; 2011 ; International Journal of Agricultural and Environmental Information Systems (IJAEIS) Volume 2 ; 2 >
     au < released ; 2012 ; International Journal of Agricultural and Environmental Information Systems (IJAEIS) Volume 3 ; 3 >
     au < manifest ; 2013 ; International Journal of Agricultural and Environmental Information Systems (IJAEIS) Volume 4 ; 4 >
-    au < expected ; 2014 ; International Journal of Agricultural and Environmental Information Systems (IJAEIS) Volume 5 ; 5 >
+    au < manifest ; 2014 ; International Journal of Agricultural and Environmental Information Systems (IJAEIS) Volume 5 ; 5 >
 
   }
 
@@ -460,7 +460,7 @@
     au < released ; 2011 ; International Journal of Business Data Communications and Networking (IJBDCN) Volume 7 ; 7 >
     au < released ; 2012 ; International Journal of Business Data Communications and Networking (IJBDCN) Volume 8 ; 8 >
     au < manifest ; 2013 ; International Journal of Business Data Communications and Networking (IJBDCN) Volume 9 ; 9 >
-    au < expected ; 2014 ; International Journal of Business Data Communications and Networking (IJBDCN) Volume 10 ; 10 >
+    au < manifest ; 2014 ; International Journal of Business Data Communications and Networking (IJBDCN) Volume 10 ; 10 >
 
   }
 
@@ -527,7 +527,7 @@
     au < released ; 2011 ; International Journal of Cloud Applications and Computing (IJCAC) Volume 1 ; 1 >
     au < released ; 2012 ; International Journal of Cloud Applications and Computing (IJCAC) Volume 2 ; 2 >
     au < manifest ; 2013 ; International Journal of Cloud Applications and Computing (IJCAC) Volume 3 ; 3 >
-    au < expected ; 2014 ; International Journal of Cloud Applications and Computing (IJCAC) Volume 4 ; 4 >
+    au < manifest ; 2014 ; International Journal of Cloud Applications and Computing (IJCAC) Volume 4 ; 4 >
 
   }
 
@@ -650,7 +650,7 @@
     au < released ; 2011 ; International Journal of Customer Relationship Marketing and Management (IJCRMM) Volume 2 ; 2 >
     au < released ; 2012 ; International Journal of Customer Relationship Marketing and Management (IJCRMM) Volume 3 ; 3 >
     au < manifest ; 2013 ; International Journal of Customer Relationship Marketing and Management (IJCRMM) Volume 4 ; 4 >
-    au < expected ; 2014 ; International Journal of Customer Relationship Marketing and Management (IJCRMM) Volume 5 ; 5 >
+    au < manifest ; 2014 ; International Journal of Customer Relationship Marketing and Management (IJCRMM) Volume 5 ; 5 >
 
   }
 
@@ -667,7 +667,7 @@
     au < released ; 2011 ; International Journal of Cyber Behavior, Psychology and Learning (IJCBPL) Volume 1 ; 1 >
     au < released ; 2012 ; International Journal of Cyber Behavior, Psychology and Learning (IJCBPL) Volume 2 ; 2 >
     au < manifest ; 2013 ; International Journal of Cyber Behavior, Psychology and Learning (IJCBPL) Volume 3 ; 3 >
-    au < expected ; 2014 ; International Journal of Cyber Behavior, Psychology and Learning (IJCBPL) Volume 4 ; 4 >
+    au < manifest ; 2014 ; International Journal of Cyber Behavior, Psychology and Learning (IJCBPL) Volume 4 ; 4 >
 
   }
 
@@ -700,7 +700,7 @@
     au < released ; 2011 ; International Journal of Cyber Warfare and Terrorism (IJCWT) Volume 1 ; 1 >
     au < released ; 2012 ; International Journal of Cyber Warfare and Terrorism (IJCWT) Volume 2 ; 2 >
     au < manifest ; 2013 ; International Journal of Cyber Warfare and Terrorism (IJCWT) Volume 3 ; 3 >
-    au < expected ; 2014 ; International Journal of Cyber Warfare and Terrorism (IJCWT) Volume 4 ; 4 >
+    au < manifest ; 2014 ; International Journal of Cyber Warfare and Terrorism (IJCWT) Volume 4 ; 4 >
 
   }
 
@@ -814,7 +814,7 @@
     au < released ; 2011 ; International Journal of Digital Literacy and Digital Competence (IJDLDC) Volume 2 ; 2 >
     au < released ; 2012 ; International Journal of Digital Literacy and Digital Competence (IJDLDC) Volume 3 ; 3 >
     au < manifest ; 2013 ; International Journal of Digital Literacy and Digital Competence (IJDLDC) Volume 4 ; 4 >
-    au < expected ; 2014 ; International Journal of Digital Literacy and Digital Competence (IJDLDC) Volume 5 ; 5 >
+    au < manifest ; 2014 ; International Journal of Digital Literacy and Digital Competence (IJDLDC) Volume 5 ; 5 >
 
   }
 
@@ -839,7 +839,7 @@
     au < released ; 2011 ; International Journal of Distance Education Technologies (IJDET) Volume 9 ; 9 >
     au < released ; 2012 ; International Journal of Distance Education Technologies (IJDET) Volume 10 ; 10 >
     au < manifest ; 2013 ; International Journal of Distance Education Technologies (IJDET) Volume 11 ; 11 >
-    au < expected ; 2014 ; International Journal of Distance Education Technologies (IJDET) Volume 12 ; 12 >
+    au < manifest ; 2014 ; International Journal of Distance Education Technologies (IJDET) Volume 12 ; 12 >
 
   }
 
@@ -901,7 +901,7 @@
     au < released ; 2011 ; International Journal of E-Business Research (IJEBR) Volume 7 ; 7 >
     au < released ; 2012 ; International Journal of E-Business Research (IJEBR) Volume 8 ; 8 >
     au < manifest ; 2013 ; International Journal of E-Business Research (IJEBR) Volume 9 ; 9 >
-    au < expected ; 2014 ; International Journal of E-Business Research (IJEBR) Volume 10 ; 10 >
+    au < manifest ; 2014 ; International Journal of E-Business Research (IJEBR) Volume 10 ; 10 >
 
   }
 
@@ -968,24 +968,24 @@
 
   {
 
-    title <
-      name = International Journal of Electronic Government Research (IJEGR) ;
-      issn = 1548-3886 ;
-      eissn = 1548-3894 ;
-      issnl = 1548-3886
-    >
-        param[journal_issn] = 1548-3886
+  title <
+    name = International Journal of Electronic Government Research (IJEGR) ;
+    issn = 1548-3886 ;
+    eissn = 1548-3894 ;
+    issnl = 1548-3886
+  >
+    param[journal_issn] = 1548-3886
 
-        au < released ; 2005 ; International Journal of Electronic Government Research (IJEGR) Volume 1 ; 1 >
-        au < released ; 2006 ; International Journal of Electronic Government Research (IJEGR) Volume 2 ; 2 >
-        au < released ; 2007 ; International Journal of Electronic Government Research (IJEGR) Volume 3 ; 3 >
-        au < released ; 2008 ; International Journal of Electronic Government Research (IJEGR) Volume 4 ; 4 >
-        au < released ; 2009 ; International Journal of Electronic Government Research (IJEGR) Volume 5 ; 5 >
-        au < released ; 2010 ; International Journal of Electronic Government Research (IJEGR) Volume 6 ; 6 >
-        au < released ; 2011 ; International Journal of Electronic Government Research (IJEGR) Volume 7 ; 7 >
-        au < released ; 2012 ; International Journal of Electronic Government Research (IJEGR) Volume 8 ; 8 >
-        au < manifest ; 2013 ; International Journal of Electronic Government Research (IJEGR) Volume 9 ; 9 >
-        au < expected ; 2014 ; International Journal of Electronic Government Research (IJEGR) Volume 10 ; 10 >
+    au < released ; 2005 ; International Journal of Electronic Government Research (IJEGR) Volume 1 ; 1 >
+    au < released ; 2006 ; International Journal of Electronic Government Research (IJEGR) Volume 2 ; 2 >
+    au < released ; 2007 ; International Journal of Electronic Government Research (IJEGR) Volume 3 ; 3 >
+    au < released ; 2008 ; International Journal of Electronic Government Research (IJEGR) Volume 4 ; 4 >
+    au < released ; 2009 ; International Journal of Electronic Government Research (IJEGR) Volume 5 ; 5 >
+    au < released ; 2010 ; International Journal of Electronic Government Research (IJEGR) Volume 6 ; 6 >
+    au < released ; 2011 ; International Journal of Electronic Government Research (IJEGR) Volume 7 ; 7 >
+    au < released ; 2012 ; International Journal of Electronic Government Research (IJEGR) Volume 8 ; 8 >
+    au < manifest ; 2013 ; International Journal of Electronic Government Research (IJEGR) Volume 9 ; 9 >
+    au < manifest ; 2014 ; International Journal of Electronic Government Research (IJEGR) Volume 10 ; 10 >
 
    }
 
@@ -1044,7 +1044,7 @@
     au < released ; 2011 ; International Journal of Enterprise Information Systems (IJEIS) Volume 7 ; 7 >
     au < released ; 2012 ; International Journal of Enterprise Information Systems (IJEIS) Volume 8 ; 8 >
     au < manifest ; 2013 ; International Journal of Enterprise Information Systems (IJEIS) Volume 9 ; 9 >
-    au < expected ; 2014 ; International Journal of Enterprise Information Systems (IJEIS) Volume 10 ; 10 >
+    au < manifest ; 2014 ; International Journal of Enterprise Information Systems (IJEIS) Volume 10 ; 10 >
 
   }
 
@@ -1079,7 +1079,7 @@
     au < released ; 2011 ; International Journal of E-Politics (IJEP) Volume 2 ; 2 >
     au < released ; 2012 ; International Journal of E-Politics (IJEP) Volume 3 ; 3 >
     au < manifest ; 2013 ; International Journal of E-Politics (IJEP) Volume 4 ; 4 >
-    au < expected ; 2014 ; International Journal of E-Politics (IJEP) Volume 5 ; 5 >
+    au < manifest ; 2014 ; International Journal of E-Politics (IJEP) Volume 5 ; 5 >
 
 
   }
@@ -1092,14 +1092,14 @@
       eissn = 1941-6288 ;
       issnl = 1941-627X
     >
-        param[journal_issn] = 1941-627X
+    param[journal_issn] = 1941-627X
 
-        au < released ; 2009 ; International Journal of E-Services and Mobile Applications (IJESMA) Volume 1 ; 1 >
-        au < released ; 2010 ; International Journal of E-Services and Mobile Applications (IJESMA) Volume 2 ; 2 >
-        au < released ; 2011 ; International Journal of E-Services and Mobile Applications (IJESMA) Volume 3 ; 3 >
-        au < released ; 2012 ; International Journal of E-Services and Mobile Applications (IJESMA) Volume 4 ; 4 >
-        au < manifest ; 2013 ; International Journal of E-Services and Mobile Applications (IJESMA) Volume 5 ; 5 >
-        au < expected ; 2014 ; International Journal of E-Services and Mobile Applications (IJESMA) Volume 6 ; 6 >
+    au < released ; 2009 ; International Journal of E-Services and Mobile Applications (IJESMA) Volume 1 ; 1 >
+    au < released ; 2010 ; International Journal of E-Services and Mobile Applications (IJESMA) Volume 2 ; 2 >
+    au < released ; 2011 ; International Journal of E-Services and Mobile Applications (IJESMA) Volume 3 ; 3 >
+    au < released ; 2012 ; International Journal of E-Services and Mobile Applications (IJESMA) Volume 4 ; 4 >
+    au < manifest ; 2013 ; International Journal of E-Services and Mobile Applications (IJESMA) Volume 5 ; 5 >
+    au < manifest ; 2014 ; International Journal of E-Services and Mobile Applications (IJESMA) Volume 6 ; 6 >
 
 
    }
@@ -1172,7 +1172,7 @@
     au < released ; 2011 ; International Journal of Geotechnical Earthquake Engineering (IJGEE) Volume 2 ; 2 >
     au < released ; 2012 ; International Journal of Geotechnical Earthquake Engineering (IJGEE) Volume 3 ; 3 >
     au < manifest ; 2013 ; International Journal of Geotechnical Earthquake Engineering (IJGEE) Volume 4 ; 4 >
-    au < expected ; 2014 ; International Journal of Geotechnical Earthquake Engineering (IJGEE) Volume 5 ; 5 >
+    au < manifest ; 2014 ; International Journal of Geotechnical Earthquake Engineering (IJGEE) Volume 5 ; 5 >
 
 
   }
@@ -1386,7 +1386,7 @@
     au < released ; 2011 ; International Journal of Information Security and Privacy (IJISP) Volume 5 ; 5 >
     au < released ; 2012 ; International Journal of Information Security and Privacy (IJISP) Volume 6 ; 6 >
     au < manifest ; 2013 ; International Journal of Information Security and Privacy (IJISP) Volume 7 ; 7 >
-    au < expected ; 2014 ; International Journal of Information Security and Privacy (IJISP) Volume 8 ; 8 >
+    au < manifest ; 2014 ; International Journal of Information Security and Privacy (IJISP) Volume 8 ; 8 >
 
   }
 
@@ -1540,7 +1540,7 @@
     au < released ; 2011 ; International Journal of Information Technology Project Management (IJITPM) Volume 2 ; 2 >
     au < released ; 2012 ; International Journal of Information Technology Project Management (IJITPM) Volume 3 ; 3 >
     au < manifest ; 2013 ; International Journal of Information Technology Project Management (IJITPM) Volume 4 ; 4 >
-    au < expected ; 2014 ; International Journal of Information Technology Project Management (IJITPM) Volume 5 ; 5 >
+    au < manifest ; 2014 ; International Journal of Information Technology Project Management (IJITPM) Volume 5 ; 5 >
 
   }
 
@@ -1677,7 +1677,7 @@
     au < released ; 2011 ; International Journal of IT/Business Alignment and Governance (IJITBAG) Volume 2 ; 2 >
     au < released ; 2012 ; International Journal of IT/Business Alignment and Governance (IJITBAG) Volume 3 ; 3 >
     au < manifest ; 2013 ; International Journal of IT/Business Alignment and Governance (IJITBAG) Volume 4 ; 4 >
-    au < expected ; 2014 ; International Journal of IT/Business Alignment and Governance (IJITBAG) Volume 5 ; 5 >
+    au < manifest ; 2014 ; International Journal of IT/Business Alignment and Governance (IJITBAG) Volume 5 ; 5 >
 
   }
 
@@ -1695,7 +1695,7 @@
     au < released ; 2011 ; International Journal of Knowledge and Systems Science (IJKSS) Volume 2 ; 2 >
     au < released ; 2012 ; International Journal of Knowledge and Systems Science (IJKSS) Volume 3 ; 3 >
     au < manifest ; 2013 ; International Journal of Knowledge and Systems Science (IJKSS) Volume 4 ; 4 >
-    au < expected ; 2014 ; International Journal of Knowledge and Systems Science (IJKSS) Volume 5 ; 5 >
+    au < manifest ; 2014 ; International Journal of Knowledge and Systems Science (IJKSS) Volume 5 ; 5 >
 
   }
 
@@ -2039,8 +2039,7 @@
 
     au < released ; 2011 ; International Journal of People-Oriented Programming (IJPOP) Volume 1 ; 1 >
     au < released ; 2012 ; International Journal of People-Oriented Programming (IJPOP) Volume 2 ; 2 >
-    au < expected ; 2013 ; International Journal of People-Oriented Programming (IJPOP) Volume 3 ; 3 >
-    au < expected ; 2014 ; International Journal of People-Oriented Programming (IJPOP) Volume 4 ; 4 >
+    au < manifest ; 2014 ; International Journal of People-Oriented Programming (IJPOP) Volume 3 ; 3 >
 
   }
 
@@ -2154,7 +2153,7 @@
 
     au < released ; 2012 ; International Journal of Risk and Contingency Management (IJRCM) Volume 1 ; 1 >
     au < manifest ; 2013 ; International Journal of Risk and Contingency Management (IJRCM) Volume 2 ; 2 >
-    au < expected ; 2014 ; International Journal of Risk and Contingency Management (IJRCM) Volume 3 ; 3 >
+    au < manifest ; 2014 ; International Journal of Risk and Contingency Management (IJRCM) Volume 3 ; 3 >
 
   }
 
@@ -2331,7 +2330,7 @@
     au < released ; 2011 ; International Journal of Strategic Decision Sciences (IJSDS) Volume 2 ; 2 >
     au < released ; 2012 ; International Journal of Strategic Decision Sciences (IJSDS) Volume 3 ; 3 >
     au < manifest ; 2013 ; International Journal of Strategic Decision Sciences (IJSDS) Volume 4 ; 4 >
-    au < expected ; 2014 ; International Journal of Strategic Decision Sciences (IJSDS) Volume 5 ; 5 >
+    au < manifest ; 2014 ; International Journal of Strategic Decision Sciences (IJSDS) Volume 5 ; 5 >
 
   }
 
@@ -2634,7 +2633,7 @@
     au < released ; 2011 ; International Journal of Web Portals (IJWP) Volume 3 ; 3 >
     au < released ; 2012 ; International Journal of Web Portals (IJWP) Volume 4 ; 4 >
     au < manifest ; 2013 ; International Journal of Web Portals (IJWP) Volume 5 ; 5 >
-    au < expected ; 2014 ; International Journal of Web Portals (IJWP) Volume 6 ; 6 >
+    au < manifest ; 2014 ; International Journal of Web Portals (IJWP) Volume 6 ; 6 >
 
   }
 
@@ -2658,7 +2657,7 @@
     au < released ; 2011 ; International Journal of Web Services Research (IJWSR) Volume 8 ; 8 >
     au < released ; 2012 ; International Journal of Web Services Research (IJWSR) Volume 9 ; 9 >
     au < manifest ; 2013 ; International Journal of Web Services Research (IJWSR) Volume 10 ; 10 >
-    au < expected ; 2014 ; International Journal of Web Services Research (IJWSR) Volume 11 ; 11 >
+    au < manifest ; 2014 ; International Journal of Web Services Research (IJWSR) Volume 11 ; 11 >
 
   }
 
@@ -2847,7 +2846,7 @@
     au < released ; 2011 ; Journal of Global Information Management (JGIM) Volume 19 ; 19 >
     au < released ; 2012 ; Journal of Global Information Management (JGIM) Volume 20 ; 20 >
     au < manifest ; 2013 ; Journal of Global Information Management (JGIM) Volume 21 ; 21 >
-    au < expected ; 2014 ; Journal of Global Information Management (JGIM) Volume 22 ; 22 >
+    au < manifest ; 2014 ; Journal of Global Information Management (JGIM) Volume 22 ; 22 >
 
   }
 
@@ -2867,7 +2866,7 @@
     au < released ; 2011 ; Journal of Information Technology Research (JITR) Volume 4 ; 4 >
     au < released ; 2012 ; Journal of Information Technology Research (JITR) Volume 5 ; 5 >
     au < manifest ; 2013 ; Journal of Information Technology Research (JITR) Volume 6 ; 6 >
-    au < expected ; 2014 ; Journal of Information Technology Research (JITR) Volume 7 ; 7 >
+    au < manifest ; 2014 ; Journal of Information Technology Research (JITR) Volume 7 ; 7 >
 
   }
 
