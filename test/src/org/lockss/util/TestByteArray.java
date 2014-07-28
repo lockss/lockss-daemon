@@ -1,10 +1,10 @@
 /*
- * $Id: TestByteArray.java,v 1.9 2012-10-08 22:06:16 barry409 Exp $
+ * $Id: TestByteArray.java,v 1.10 2014-07-28 07:15:27 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -77,6 +77,12 @@ public class TestByteArray extends LockssTestCase {
     assertEquals(t2, ByteArray.fromHexString("FFFFFFFF"));
     assertEquals(t3, ByteArray.fromHexString("8FFFFFFF"));
     assertEquals(t4, ByteArray.fromHexString("7FFFFFFF"));
+
+    try {
+      ByteArray.fromHexString("123");
+      fail("fromHexString should throw on odd-length input");
+    } catch (IllegalArgumentException ignore) {
+    }
   }
 
   public void testEncodeInt() {

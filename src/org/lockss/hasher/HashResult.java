@@ -1,10 +1,10 @@
 /*
- * $Id: HashResult.java,v 1.8 2013-07-15 18:46:11 tlipkis Exp $
+ * $Id: HashResult.java,v 1.9 2014-07-28 07:15:27 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -38,7 +38,7 @@ import java.util.*;
 import org.lockss.util.*;
 
 /**
- * Wrap the byte array returned by {@link MessageDigest#digest}
+ * Wrap the byte array returned by {@link MessageDigest#digest()}
  * to force equality and sorting by content of the byte array.
  */
 final public class HashResult implements LockssSerializable {
@@ -119,6 +119,8 @@ final public class HashResult implements LockssSerializable {
       checkBytes(bytes);
       return new HashResult(bytes, alg);
     } catch (NumberFormatException ex) {
+      throw new IllegalByteArray(hash + " not hex number");
+    } catch (IllegalArgumentException ex) {
       throw new IllegalByteArray(hash + " not hex number");
     }
   }
