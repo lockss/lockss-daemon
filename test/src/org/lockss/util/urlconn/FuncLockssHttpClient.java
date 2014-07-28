@@ -1,5 +1,5 @@
 /*
- * $Id: FuncLockssHttpClient.java,v 1.17 2012-09-25 23:01:42 tlipkis Exp $
+ * $Id: FuncLockssHttpClient.java,v 1.18 2014-07-28 06:48:59 tlipkis Exp $
  */
 
 /*
@@ -52,7 +52,7 @@ public class FuncLockssHttpClient extends LockssTestCase {
   // This url must be one that results in no response from the host.  If
   // there is any response (e.g.,"host not found", "no route to host",
   // "connection refused") the test may fail
-  static String URL_CONN_TIMEOUT = "http://dev1.lockss.org:1234/";
+  static String URL_CONN_TIMEOUT = "http://example.com:1234/";
 
   static String EOH = "\r\n\r\n";
 
