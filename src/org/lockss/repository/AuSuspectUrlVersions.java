@@ -1,10 +1,10 @@
 /*
- * $Id: AuSuspectUrlVersions.java,v 1.4 2013-08-08 05:58:43 tlipkis Exp $
+ * $Id: AuSuspectUrlVersions.java,v 1.4.12.1 2014-07-28 07:12:35 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -101,6 +101,11 @@ public class AuSuspectUrlVersions implements LockssSerializable {
 	return (url.equals(suv.getUrl()) && version == suv.getVersion());
       }
       return false;
+    }
+
+    public String toString() {
+      return "[SuspectUrl: " + url + ":" + version +
+	", comp: " + computedHash + ", stored: " + storedHash + "]";
     }
   }
 
