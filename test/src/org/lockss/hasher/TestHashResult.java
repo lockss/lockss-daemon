@@ -1,10 +1,10 @@
 /*
- * $Id: TestHashResult.java,v 1.10 2014-06-02 00:46:07 tlipkis Exp $
+ * $Id: TestHashResult.java,v 1.10.2.1 2014-07-28 07:11:50 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -118,6 +118,7 @@ public class TestHashResult extends LockssTestCase {
   public void testMakeFromString() {
     String good = "SHA-1:deadbeef";
     HashResult hr = HashResult.make(good);
+    assertEquals(good.toUpperCase(), hr.toString());
     assertEquals(0, good.compareToIgnoreCase(hr.toString()));
     for (int i = 0; i < bad.length; i++) {
       try {
@@ -127,6 +128,14 @@ public class TestHashResult extends LockssTestCase {
 	// Expected
       }
     }
+  }
+
+  public void testMakeFromStringWithLeadingZeroes() {
+    String good = "SHA-1:0000266B7F1B82B2689A485FFC00C02D65E9C8D1";
+    HashResult hr = HashResult.make(good);
+    assertEquals(20, hr.getBytes().length);
+    assertEquals(good, hr.toString());
+    assertEquals(0, good.compareToIgnoreCase(hr.toString()));
   }
 
   // Simple holder class to serialize/deserialize a HashResult field

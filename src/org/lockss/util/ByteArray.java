@@ -1,10 +1,10 @@
 /*
- * $Id: ByteArray.java,v 1.14 2012-10-08 22:06:16 barry409 Exp $
+ * $Id: ByteArray.java,v 1.14.38.1 2014-07-28 07:11:51 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -170,15 +170,13 @@ public class ByteArray {
     return new String(buf);
   }
 
-  /** Return hex representation of bytes in array */
+  /** Parse hax string to byte array.  Result includes leading zeros - this
+   * is intended to be used with MessageDigest results.
+   * @param hex input string, length must be even.
+   * @return byte array w/ numeric value of hex string
+   */
   public static byte[] fromHexString(String hex) {
-    byte[] a = new BigInteger(hex, 16).toByteArray();
-    if (a.length == ((hex.length() + 1) / 2)) {
-      return a;
-    }
-    byte[] res = new byte[a.length - 1];
-    System.arraycopy(a, 1, res, 0, res.length);
-    return res;
+    return javax.xml.bind.DatatypeConverter.parseHexBinary(hex);
   }
 
   private static LockssRandom THE_RAND = new LockssRandom();

@@ -1,10 +1,10 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.68 2013-08-10 20:47:11 tlipkis Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.68.10.1 2014-07-28 07:11:50 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -43,6 +43,7 @@ import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.hasher.*;
+import org.lockss.repository.AuSuspectUrlVersions.SuspectUrlVersion;
 
 /**
  * This is the test class for org.lockss.daemon.LockssRepositoryImpl
@@ -154,6 +155,8 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     createLeaf(url1, "test stream 1", null);
     String url2 = "http://www.example.com/testDir/branch1/leaf2";
     createLeaf(url2, "test stream 3", null);
+    String url3 = "http://www.example.com/testDir/branch1/leaf3333";
+    createLeaf(url3, "test stream 3", null);
     createLeaf("http://www.example.com/testDir/branch2/leaf3",
                "test stream 5", null);
     createLeaf("http://www.example.com/testDir/leaf4", "test stream 6", null);
@@ -194,6 +197,12 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     asuv.markAsSuspect(url2, 2, res1, res2);
     assertTrue(asuv.isSuspect(url2, 2));
 
+    // Ensure we have some with leading zeros
+    HashResult res3 = HashResult.make("SHA1:0044ff");
+    HashResult res4 = HashResult.make("SHA1:0000ff");
+    asuv.markAsSuspect(url3, 2, res3, res4);
+    assertTrue(asuv.isSuspect(url2, 2));
+
     File file = new File(location, LockssRepositoryImpl.SUSPECT_VERSIONS_FILE);
     assertFalse("Suspect file shouldn't exist: " + file, file.exists());
     repo.storeSuspectUrlVersions(mau, asuv);
@@ -226,6 +235,19 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     assertFalse(asuv2.isSuspect(url2, 1));
     assertTrue(asuv2.isSuspect(url2, 2));
 
+    SuspectUrlVersion suv3 = findSuv(asuv2, url3, 2);
+    assertEquals("SHA1:0044FF", suv3.getComputedHash().toString());
+    assertEquals("SHA1:0000FF", suv3.getStoredHash().toString());
+  }
+
+  SuspectUrlVersion findSuv(AuSuspectUrlVersions asuv,
+			    String url, int version) {
+    for (SuspectUrlVersion suv : asuv.getSuspectList()) {
+      if (url.equals(suv.getUrl()) && version == suv.getVersion()) {
+	return suv;
+      }
+    }
+    return null;
   }
 
   public void testGetRepositoryRoot() throws Exception {
