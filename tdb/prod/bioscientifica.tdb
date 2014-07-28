@@ -14,7 +14,7 @@
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.echorespract.com/
 
-      au < exists ; 2014 ; Echo Research and Practice Volume 1 ; 1 >
+      au < manifest ; 2014 ; Echo Research and Practice Volume 1 ; 1 >
 
   }
   
