@@ -1,5 +1,5 @@
 /*
- * $Id: CuContentIterator.java,v 1.2 2014-07-21 19:26:21 tlipkis Exp $
+ * $Id: CuContentIterator.java,v 1.2.2.1 2014-07-29 21:58:26 tlipkis Exp $
  */
 
 /*
@@ -51,6 +51,7 @@ public class CuContentIterator extends CuIterator {
   private Iterator<CachedUrlSetNode> cusIter;
   private CachedUrl nextElement = null;
   private CrawlManager crawlMgr;
+  private int excluded = 0;
 
   public CuContentIterator(Iterator<CachedUrlSetNode> cusIter) {
     this.cusIter = cusIter;
@@ -72,6 +73,10 @@ public class CuContentIterator extends CuIterator {
       return element;
     }
     throw new NoSuchElementException();
+  }
+
+  public int getExcludedCount() {
+    return excluded;
   }
 
   private CachedUrl findNextElement() {
@@ -103,11 +108,13 @@ public class CuContentIterator extends CuIterator {
     if (getOptions().isIncludedOnly() &&
 	!cu.getArchivalUnit().shouldBeCached(cu.getUrl())) {
       log.debug("Excluding " + cu.getUrl());
+      excluded++;
       return false;
     }
     if (getCrawlManager(cu) != null &&
 	getCrawlManager(cu).isGloballyExcludedUrl(cu.getArchivalUnit(),
 						cu.getUrl())) {
+      excluded++;
       return false;
     }
     return true;

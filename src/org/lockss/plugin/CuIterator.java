@@ -1,5 +1,5 @@
 /*
- * $Id: CuIterator.java,v 1.1 2014-07-21 03:16:14 tlipkis Exp $
+ * $Id: CuIterator.java,v 1.1.2.1 2014-07-29 21:58:26 tlipkis Exp $
  */
 
 /*
@@ -69,6 +69,10 @@ public abstract class CuIterator implements Iterator<CachedUrl> {
     getOptions().setIncludedOnly(val);
     return this;
   }
+
+  /** Return the count of CUs excluded by the iterator (due to crawl rules
+   * or global exclude patterns). */
+  public abstract int getExcludedCount();
 
   protected CuIterOptions getOptions() {
     if (options == null) {

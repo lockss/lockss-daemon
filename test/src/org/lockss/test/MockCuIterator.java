@@ -1,5 +1,5 @@
 /*
- * $Id: MockCuIterator.java,v 1.1 2014-07-21 03:16:14 tlipkis Exp $
+ * $Id: MockCuIterator.java,v 1.1.2.1 2014-07-29 21:58:26 tlipkis Exp $
  */
 
 /*
@@ -71,6 +71,10 @@ public class MockCuIterator extends CuIterator {
       return element;
     }
     throw new NoSuchElementException();
+  }
+
+  public int getExcludedCount() {
+    return 0;
   }
 
   private CachedUrl findNextElement() {
