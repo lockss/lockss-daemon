@@ -1,5 +1,5 @@
 /*
- * $Id: ViewContent.java,v 1.26 2013-01-16 08:07:51 tlipkis Exp $
+ * $Id: ViewContent.java,v 1.27 2014-07-29 22:02:50 tlipkis Exp $
  */
 
 /*
@@ -112,6 +112,8 @@ public class ViewContent extends LockssServlet {
       displayNotFound("URL " + url + " not found in AU: " + au.getName());
       return;
     }
+    boolean hasIncludedContent = cu.hasContent();
+    cu.setOption(CachedUrl.OPTION_INCLUDED_ONLY, "false");
     String versionStr = getParameter("version");
     if (versionStr != null) {
       try {
@@ -119,6 +121,7 @@ public class ViewContent extends LockssServlet {
 	int curVer = cu.getVersion();
 	if (version != curVer) {
 	  CachedUrl verCu = cu.getCuVersion(version);
+	  verCu.setOption(CachedUrl.OPTION_INCLUDED_ONLY, "false");
 	  if (verCu != null && verCu.hasContent()) {
 	    cu = verCu;
 	  } else {
@@ -155,13 +158,13 @@ public class ViewContent extends LockssServlet {
 	if (isFrameType(ctype)) {
 	  displayFrameSet();
 	} else {
-	  displaySummary(false);
+	  displaySummary(false, hasIncludedContent);
 	}
       } else if ("content".equalsIgnoreCase(frame)) {
 	displayContent();
       } else if ("summary".equalsIgnoreCase(frame)) {
 	setFramed(true);
-	displaySummary(true);
+	displaySummary(true, hasIncludedContent);
       } else {
 	displayError(HttpResponse.__400_Bad_Request,
 		     "Illegal frame parameter: " + frame);
@@ -195,7 +198,8 @@ public class ViewContent extends LockssServlet {
     set.write(resp.getWriter());
   }
 
-  void displaySummary(boolean contentInOtherFrame) throws IOException {
+  void displaySummary(boolean contentInOtherFrame,
+		      boolean hasIncludedContent) throws IOException {
     Page page = newPage();
     layoutErrorBlock(page);
 
@@ -210,6 +214,11 @@ public class ViewContent extends LockssServlet {
     tbl.add("URL:&nbsp;");
     tbl.newCell("align=left");
     tbl.add(url);
+    if (!hasIncludedContent) {
+      tbl.newRow();
+      tbl.newCell("colspan=2 align=left");
+      tbl.add("<b>Excluded by crawl rules - hidden from normal processing</b>");
+    }
     page.add("<font size=+1>");
     page.add(tbl);
     page.add("</font>");

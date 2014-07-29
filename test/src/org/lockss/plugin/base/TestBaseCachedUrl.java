@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCachedUrl.java,v 1.27 2014-07-22 07:55:25 tlipkis Exp $
+ * $Id: TestBaseCachedUrl.java,v 1.28 2014-07-29 22:02:50 tlipkis Exp $
  */
 
 /*
@@ -248,6 +248,19 @@ public class TestBaseCachedUrl extends LockssTestCase {
       assertFalse(cu.hasContent());
       ConfigurationUtil.addFromArgs(BaseCachedUrl.PARAM_INCLUDED_ONLY, "false");
       assertTrue(cu.hasContent());
+      ConfigurationUtil.addFromArgs(BaseCachedUrl.PARAM_INCLUDED_ONLY, "true");
+      assertFalse(cu.hasContent());
+
+      // IncludedOnly option should override config param
+      cu.setOption(CachedUrl.OPTION_INCLUDED_ONLY, "false");
+      assertTrue(cu.hasContent());
+      cu.setOption(CachedUrl.OPTION_INCLUDED_ONLY, "true");
+      assertFalse(cu.hasContent());
+      ConfigurationUtil.addFromArgs(BaseCachedUrl.PARAM_INCLUDED_ONLY, "false");
+      assertFalse(cu.hasContent());
+      cu.setOption(CachedUrl.OPTION_INCLUDED_ONLY, "neither");
+      assertTrue(cu.hasContent());
+
 
       cu = getTestCu(url3);
       assertTrue(cu.hasContent());

@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrl.java,v 1.35 2013-10-31 03:07:26 fergaloy-sf Exp $
+ * $Id: CachedUrl.java,v 1.36 2014-07-29 22:02:51 tlipkis Exp $
  */
 
 /*
@@ -57,9 +57,8 @@ import org.lockss.extractor.*;
  * @version 0.0 */
 public interface CachedUrl extends CachedUrlSetNode {
 
-  /** If content was found by following a redirect from here, the URL at
-   * which the content was found (possibly the last in a chain of
-   * redirects).
+  /** The string prepended to response header names as they're copied into
+   * the CachedUrl's properties.  null means no prefix.
   */
   public static final String HEADER_PREFIX = null;
 
@@ -137,6 +136,10 @@ public interface CachedUrl extends CachedUrlSetNode {
     PROPERTY_FETCH_TIME,
   };
 
+  /** If true, CachedURLs outside the crawl spec will appear to have no
+   * content  */
+  public static final String OPTION_INCLUDED_ONLY = "IncludedOnly";
+
   /**
    * Return a version-specific CachedUrl for the specified content version
    * @throws UnsupportedOperationException if node has no versions
@@ -171,6 +174,14 @@ public interface CachedUrl extends CachedUrlSetNode {
    * @return version number
    */
   public int getVersion();
+  
+  /**
+   * Set options that control behavior<br>
+   *
+   * {@link #OPTION_INCLUDED_ONLY} ({@value #OPTION_INCLUDED_ONLY}):
+   * Overrides config param only if explicitly set true or false
+   */
+  public void setOption(String option, String val);
 
   /**
   * Get an object from which the content of the url can be read
