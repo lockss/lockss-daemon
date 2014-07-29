@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaylorAndFrancisHtmlFilterFactory.java,v 1.16 2014-07-08 17:30:29 alexandraohlson Exp $
+ * $Id: TestTaylorAndFrancisHtmlFilterFactory.java,v 1.17 2014-07-29 22:01:04 alexandraohlson Exp $
  */
 
 /*
@@ -630,7 +630,37 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
             "</div>" +
             "</div>";
 
-
+    // note lower case of "articles"
+    private static final String citArticlesCase1 =
+    "<li>" +
+    "<strong>" +
+    "Published online:</strong>" +
+    " 25 Jan 2013</li>" +
+    "<li>" +
+    "<div>" +
+    "<strong>" +
+    "Citing articles:</strong> 0</div>" +
+    "</li>";
+    
+    // note upper case of "Articles" when there are results
+    private static final String citArticlesCase2 =
+    "<li>" +
+    "<strong>" +
+    "Published online:</strong>" +
+    " 25 Jan 2013</li>" +
+    "<li>" +
+    "<div>" +
+    "<strong>" +
+    "Citing Articles:</strong>" +
+    "</div>" +
+    "<a href=\"/doi/citedby/10.1080/xxxx\" >" +
+    "CrossRef (14)</a>" +
+    "&nbsp; | <a target='_blank' href=\"http://gateway.webofknowledge.com/gateway/Gateway.cgi\" >" +
+    "Web of Science (9)</a>" +
+    "&nbsp; | <a target='_blank' href=\"http://www.scopus.com/inward/citedby.url?partnerID=xxx\" >" +
+    "Scopus (10)</a>" +
+    "&nbsp;</li>";
+   
     public void setUp() throws Exception {
       super.setUp();
       fact = new TaylorAndFrancisHtmlHashFilterFactory();
@@ -940,6 +970,16 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
               new StringInputStream(tocEntry),
               Constants.DEFAULT_ENCODING);
       assertEquals(tocEntryFiltered, StringUtil.fromInputStream(actIn));
+      InputStream inA =
+          fact.createFilteredInputStream(mau,
+              new StringInputStream(citArticlesCase1),
+              Constants.DEFAULT_ENCODING);
+      InputStream inB =
+          fact.createFilteredInputStream(mau,
+              new StringInputStream(citArticlesCase2),
+              Constants.DEFAULT_ENCODING);
+      assertEquals(StringUtil.fromInputStream(inA), StringUtil.fromInputStream(inB));
+
     }
     
   }

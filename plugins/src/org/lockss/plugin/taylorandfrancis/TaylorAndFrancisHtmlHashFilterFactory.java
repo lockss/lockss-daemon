@@ -1,5 +1,5 @@
 /*
- * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.17 2014-07-08 17:30:27 alexandraohlson Exp $
+ * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.18 2014-07-29 22:01:04 alexandraohlson Exp $
  */
 
 /*
@@ -284,12 +284,15 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
     Reader tagFilter = HtmlTagFilter.makeNestedFilter(reader,
                                                       ListUtil.list(
         // Two alternate forms of citation links (no easy to characterize in the DOM)
-        new TagPair("<li><strong>Citations:", "</li>"),
-        new TagPair("<li><strong><a href=\"/doi/citedby/", "</li>"),
+        // the final argument "true" is to ignore case. Yes, case can vary
+        new TagPair("<li><strong>Citations:", "</li>", true),
+        new TagPair("<li><strong><a href=\"/doi/citedby/", "</li>", true),
         // Added to some articles later
-        new TagPair("<li><strong>Citation information:", "</li>"),
-        // toc/rama20/7/1 - new wording 
-        new TagPair("<li><div><strong>Citing Articles:", "</li>")
+        new TagPair("<li><strong>Citation information:", "</li>", true),
+        // toc/rama20/7/1 - new wording; 
+        // different case toc/wjsa21/37/2
+        new TagPair("<li><div><strong>Citing Articles:", "</li>", true)
+        //<li><div><strong>Citing articles:</strong> 0</div></li>
     ));
     Reader stringFilter = tagFilter;
     // Wording change
