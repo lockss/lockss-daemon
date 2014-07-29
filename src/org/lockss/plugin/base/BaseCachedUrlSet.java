@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrlSet.java,v 1.37 2014-07-21 03:21:34 tlipkis Exp $
+ * $Id: BaseCachedUrlSet.java,v 1.38 2014-07-29 22:01:49 tlipkis Exp $
  */
 
 /*
@@ -584,6 +584,10 @@ public class BaseCachedUrlSet implements CachedUrlSet {
         return cu;
       }
       throw new NoSuchElementException();
+    }
+
+    public int getExcludedCount() {
+      return cuIter.getExcludedCount();
     }
 
     /**

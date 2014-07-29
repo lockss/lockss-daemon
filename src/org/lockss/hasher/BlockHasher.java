@@ -1,5 +1,5 @@
 /*
- * $Id: BlockHasher.java,v 1.34 2014-07-28 07:15:45 tlipkis Exp $
+ * $Id: BlockHasher.java,v 1.35 2014-07-29 22:01:50 tlipkis Exp $
  */
 
 /*
@@ -80,7 +80,9 @@ public class BlockHasher extends GenericHasher {
     DEFAULT_IGNORE_FILES_OUTSIDE_CRAWL_SPEC;
   private boolean isExcludeSuspectVersions = false;
 
-  protected int filesIgnored = 0;
+  protected int excludedByPlugin = 0;
+  protected int excludedByCrawlRule = 0;
+  protected int excludedByIterator = 0;
 
   protected MessageDigest[] initialDigests;
   protected byte[][] initByteArrays;
@@ -104,6 +106,7 @@ public class BlockHasher extends GenericHasher {
   private boolean enableLocalHash = DEFAULT_ENABLE_LOCAL_HASH;
   // private LocalHashHandler localHashHandler = null;
   private AuSuspectUrlVersions asuv = null;
+  private CuIterator cuIter;
 
   LocalHashResult lhr = null;
 
@@ -215,16 +218,37 @@ public class BlockHasher extends GenericHasher {
   }
 
   public void storeActualHashDuration(long elapsed, Exception err) {
-    if (filesIgnored != 0) {
-      log.info(filesIgnored +
-	       " files ignored because they're no longer in the crawl spec");
-    }
+    reportExclusions();
     // XXX need to account for number of parallel hashes
     cus.storeActualHashDuration(elapsed, err);
   }
 
+  protected void reportExclusions() {
+    if (excludedByPlugin != 0) {
+      log.info(excludedByPlugin +
+	       " files excluded by plugin poll-exclusion pattern");
+    }
+    if (excludedByIterator != 0) {
+      log.info(excludedByIterator +
+	       " files excluded by iterator (no longer in the crawl spec or globally excluded)");
+    }
+    if (excludedByCrawlRule != 0) {
+      log.info(excludedByCrawlRule +
+	       " files excluded (no longer in the crawl spec or globally excluded)");
+    }
+  }
+
   protected Iterator getIterator(CachedUrlSet cus) {
-    return cus.getCuIterator();
+    return (cuIter = cus.getCuIterator());
+  }
+
+  @Override
+  public boolean finished() {
+    boolean ret = super.finished();
+    if (ret) {
+      excludedByIterator = cuIter.getExcludedCount();
+    }
+    return ret;
   }
 
   /** V3 hashes only content nodes.  NOTE: This routine also
@@ -235,15 +259,16 @@ public class BlockHasher extends GenericHasher {
     String url = node.getUrl();
     if (crawlMgr != null && crawlMgr.isGloballyExcludedUrl(au, url)) {
       if (isTrace) log.debug3("isIncluded(" + url + "): globally excluded");
+      excludedByCrawlRule++;
       return false;
     }
     if (ignoreFilesOutsideCrawlSpec && !au.shouldBeCached(url)) {
-      filesIgnored++;
+      excludedByCrawlRule++;
       if (isTrace) log.debug3("isIncluded(" + url + "): not in spec");
       return false;
     }
     if (excludeUrlPats != null && isMatch(url, excludeUrlPats)) {
-      filesIgnored++;
+      excludedByPlugin++;
       if (isTrace) log.debug3("isIncluded(" + url + "): excluded by plugin");
       return false;
     }

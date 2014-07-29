@@ -1,5 +1,5 @@
 /*
- * $Id: TestCuContentIterator.java,v 1.2 2014-07-22 00:23:19 tlipkis Exp $
+ * $Id: TestCuContentIterator.java,v 1.3 2014-07-29 22:01:49 tlipkis Exp $
  */
 
 /*
@@ -99,9 +99,9 @@ public class TestCuContentIterator extends LockssTestCase {
 
     ConfigurationUtil.addFromArgs(CrawlManagerImpl.PARAM_EXCLUDE_URL_PATTERN,
 				  "file4\\.html");
-    assertEquals(ListUtil.list(cu1),
-		 ListUtil.fromIterator(CuIterator.forCus(cus)));
-
+    CuIterator cui = CuIterator.forCus(cus);
+    assertEquals(ListUtil.list(cu1), ListUtil.fromIterator(cui));
+    assertEquals(2, cui.getExcludedCount());
   }
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: SampledBlockHasher.java,v 1.9 2013-07-24 19:01:09 tlipkis Exp $
+ * $Id: SampledBlockHasher.java,v 1.10 2014-07-29 22:01:50 tlipkis Exp $
  */
 
 /*
@@ -266,10 +266,7 @@ public class SampledBlockHasher extends BlockHasher {
   }
 
   public void storeActualHashDuration(long elapsed, Exception err) {
-    if (filesIgnored != 0) {
-      log.info(filesIgnored +
-	       " files ignored because they're no longer in the crawl spec");
-    }
+    reportExclusions();
     // We only hashed 1/modulus of the content.
     int modulus = inclusionPolicy.getSampleModulus();
     cus.storeActualHashDuration(elapsed * modulus, err);
