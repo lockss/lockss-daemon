@@ -1,4 +1,4 @@
-/* $Id: PalgraveBookRisMetadataExtractorFactory.java,v 1.4 2014-07-29 17:09:38 aishizaki Exp $
+/* $Id: PalgraveBookRisMetadataExtractorFactory.java,v 1.5 2014-07-29 18:11:54 alexandraohlson Exp $
  
  Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
@@ -28,8 +28,6 @@
 
 package org.lockss.plugin.palgrave;
 
-import org.apache.commons.collections.MultiMap;
-import org.apache.commons.collections.map.MultiValueMap;
 import org.lockss.daemon.*;
 
 import org.lockss.extractor.*;
@@ -67,32 +65,12 @@ import org.lockss.util.Logger;
       }
       log.debug3("ris: " + ris.toString());
       ris.addRisTag("PY", MetadataField.FIELD_DATE);
-      ris.addRisTag("TI", MetadataField.FIELD_JOURNAL_TITLE);
+      ris.addRisTag("TI", MetadataField.FIELD_PUBLICATION_TITLE);
       ris.addRisTag("SN", MetadataField.FIELD_EISBN);
       ris.addRisTag("DO", MetadataField.FIELD_DOI);
       ris.addRisTag("L1", MetadataField.FIELD_ACCESS_URL);
     
     return ris;
   }
-  
-  /*
-   public class PalgraveBookRisMetadataExtractor extends RisMetadataExtractor {
-    Logger log = Logger.getLogger("PalgraveBookRisMetadataExtractor");
-    private MultiMap risTagToMetadataField;
-
-    public PalgraveBookRisMetadataExtractor(){
-            risTagToMetadataField = new MultiValueMap();
-            risTagToMetadataField.put("T1", MetadataField.FIELD_ARTICLE_TITLE);
-            risTagToMetadataField.put("AU", MetadataField.FIELD_AUTHOR);
-            risTagToMetadataField.put("JF", MetadataField.FIELD_JOURNAL_TITLE);
-            risTagToMetadataField.put("DO", MetadataField.FIELD_DOI);
-            risTagToMetadataField.put("PB", MetadataField.FIELD_PUBLISHER);
-            risTagToMetadataField.put("VL", MetadataField.FIELD_VOLUME);
-            risTagToMetadataField.put("IS", MetadataField.FIELD_ISSUE);
-            risTagToMetadataField.put("SP", MetadataField.FIELD_START_PAGE);
-            risTagToMetadataField.put("EP", MetadataField.FIELD_END_PAGE);
-            risTagToMetadataField.put("PY", MetadataField.FIELD_DATE);
-    }
-  }*/
 
 }
