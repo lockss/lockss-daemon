@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.55 2014-07-22 07:55:25 tlipkis Exp $
+ * $Id: BaseCachedUrl.java,v 1.55.2.1 2014-07-29 21:59:46 tlipkis Exp $
  */
 
 /*
@@ -61,6 +61,7 @@ public class BaseCachedUrl implements CachedUrl {
   private LockssRepository repository;
   private RepositoryNode leaf = null;
   protected RepositoryNode.RepositoryNodeContents rnc = null;
+  protected Properties options;
 
   public static final String PREFIX = Configuration.PREFIX + "baseCachedUrl.";
 
@@ -166,10 +167,34 @@ public class BaseCachedUrl implements CachedUrl {
     }
   }
 
+  public void setOption(String option, String val) {
+    if (options == null) {
+      options = new Properties();
+    }
+    options.setProperty(option, val);
+  }
+
+  protected String getOption(String option) {
+    if (options == null) {
+      return null;
+    }
+    return options.getProperty(option);
+  }
+
+  protected boolean isIncludedOnly() {
+    String incOpt = getOption(OPTION_INCLUDED_ONLY);
+    if ("true".equalsIgnoreCase(incOpt)) {
+      return true;
+    }
+    if ("false".equalsIgnoreCase(incOpt)) {
+      return false;
+    }
+    return CurrentConfig.getBooleanParam(PARAM_INCLUDED_ONLY,
+					 DEFAULT_INCLUDED_ONLY);
+  }
+
   public boolean hasContent() {
-    if (CurrentConfig.getBooleanParam(PARAM_INCLUDED_ONLY,
-				      DEFAULT_INCLUDED_ONLY) &&
-	!au.shouldBeCached(getUrl())) {
+    if (isIncludedOnly() && !au.shouldBeCached(getUrl())) {
       logger.debug("hasContent("+getUrl()+"): excluded by crawl rule");
       return false;
     }
@@ -378,7 +403,6 @@ public class BaseCachedUrl implements CachedUrl {
 
   CachedUrl getArchiveMemberCu(ArchiveMemberSpec ams, TFile memberTf) {
     Member memb = new Member(au, url, this, ams, memberTf);
-    logger.critical("getAMC("+ams+", "+memberTf+"): " + memb);
     return memb;
   }
 
@@ -402,9 +426,7 @@ public class BaseCachedUrl implements CachedUrl {
     }
 
     public boolean hasContent() {
-      if (CurrentConfig.getBooleanParam(PARAM_INCLUDED_ONLY,
-					DEFAULT_INCLUDED_ONLY) &&
-	  !au.shouldBeCached(getUrl())) {
+      if (isIncludedOnly() && !au.shouldBeCached(getUrl())) {
 	logger.debug("hasContent("+getUrl()+"): excluded by crawl rule");
 	return false;
       }

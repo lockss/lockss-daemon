@@ -1,10 +1,10 @@
 /*
- * $Id: MockCachedUrl.java,v 1.55 2014-07-21 03:16:58 tlipkis Exp $
+ * $Id: MockCachedUrl.java,v 1.55.2.1 2014-07-29 21:59:45 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -169,6 +169,8 @@ public class MockCachedUrl implements CachedUrl {
     this.lrf = lrf;
   }
 
+  public void setOption(String option, String val) {
+  }
 
   public boolean hasContent() {
     return doesExist || content != null;

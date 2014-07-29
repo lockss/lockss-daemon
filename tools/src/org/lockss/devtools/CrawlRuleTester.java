@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRuleTester.java,v 1.36 2013-10-31 03:07:26 fergaloy-sf Exp $
+ * $Id: CrawlRuleTester.java,v 1.36.8.1 2014-07-29 21:59:45 tlipkis Exp $
  */
 
 /*
@@ -571,6 +571,9 @@ public class CrawlRuleTester extends Thread {
 
     public String getContentType() {
       throw new UnsupportedOperationException("Not implemented");
+    }
+
+    public void setOption(String option, String val) {
     }
 
     public boolean hasContent() {
