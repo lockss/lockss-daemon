@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>down - audrey/janice </string>
+    <string>testing - audrey/janice </string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -9,18 +9,18 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Poll</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -30,7 +30,7 @@
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.60.3</string>
+    <string>1.66.0</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -106,6 +106,10 @@
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.palgrave.PalgraveBookArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>application/x-research-info-systems_filter_factory</string>
+    <string>org.lockss.plugin.palgrave.PalgraveBookRisFilterFactory</string>
   </entry>
   <entry>
     <string>application/x-research-info-systems_metadata_extractor_factory_map</string>

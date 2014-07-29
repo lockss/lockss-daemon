@@ -1,4 +1,4 @@
-/* $Id: PalgraveBookRisMetadataExtractorFactory.java,v 1.3 2014-06-09 15:32:00 aishizaki Exp $
+/* $Id: PalgraveBookRisMetadataExtractorFactory.java,v 1.4 2014-07-29 17:09:38 aishizaki Exp $
  
  Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
@@ -28,6 +28,8 @@
 
 package org.lockss.plugin.palgrave;
 
+import org.apache.commons.collections.MultiMap;
+import org.apache.commons.collections.map.MultiValueMap;
 import org.lockss.daemon.*;
 
 import org.lockss.extractor.*;
@@ -36,7 +38,8 @@ import org.lockss.util.Logger;
   // Palgrave Book Citation Export:
   // TY  - BOOK
   // AU  - Larsson, Mats
-  // PY  - 2012/09/25
+  // DA  - 2014/08/01
+  // PY  - 2012
   // TI  - The Business of Global Energy Transformation: Saving Billions through Sustainable Models
   // PB  - Palgrave Macmillan
   // CY  - Basingstoke
@@ -57,6 +60,11 @@ import org.lockss.util.Logger;
       log.info("Inside Palgrave Book metadata extractor factory");
       
       RisMetadataExtractor ris = new RisMetadataExtractor();
+      // removing use of DA - PalgraveBook uses this for citation access date
+      // and uses PY for publication year
+      if (ris.containsRisTag("DA")) {
+        ris.removeRisTag("DA");
+      }
       log.debug3("ris: " + ris.toString());
       ris.addRisTag("PY", MetadataField.FIELD_DATE);
       ris.addRisTag("TI", MetadataField.FIELD_JOURNAL_TITLE);
@@ -66,5 +74,25 @@ import org.lockss.util.Logger;
     
     return ris;
   }
+  
+  /*
+   public class PalgraveBookRisMetadataExtractor extends RisMetadataExtractor {
+    Logger log = Logger.getLogger("PalgraveBookRisMetadataExtractor");
+    private MultiMap risTagToMetadataField;
+
+    public PalgraveBookRisMetadataExtractor(){
+            risTagToMetadataField = new MultiValueMap();
+            risTagToMetadataField.put("T1", MetadataField.FIELD_ARTICLE_TITLE);
+            risTagToMetadataField.put("AU", MetadataField.FIELD_AUTHOR);
+            risTagToMetadataField.put("JF", MetadataField.FIELD_JOURNAL_TITLE);
+            risTagToMetadataField.put("DO", MetadataField.FIELD_DOI);
+            risTagToMetadataField.put("PB", MetadataField.FIELD_PUBLISHER);
+            risTagToMetadataField.put("VL", MetadataField.FIELD_VOLUME);
+            risTagToMetadataField.put("IS", MetadataField.FIELD_ISSUE);
+            risTagToMetadataField.put("SP", MetadataField.FIELD_START_PAGE);
+            risTagToMetadataField.put("EP", MetadataField.FIELD_END_PAGE);
+            risTagToMetadataField.put("PY", MetadataField.FIELD_DATE);
+    }
+  }*/
 
 }

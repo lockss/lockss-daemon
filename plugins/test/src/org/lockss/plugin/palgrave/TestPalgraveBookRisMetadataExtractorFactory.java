@@ -1,4 +1,4 @@
-/* $Id: TestPalgraveBookRisMetadataExtractorFactory.java,v 1.3 2014-06-06 17:33:41 aishizaki Exp $
+/* $Id: TestPalgraveBookRisMetadataExtractorFactory.java,v 1.4 2014-07-29 17:09:38 aishizaki Exp $
 
  Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
@@ -44,6 +44,7 @@ import org.lockss.plugin.simulated.*;
 // TI  - The Business of Global Energy Transformation: Saving Billions through Sustainable Models
 // PB  - Palgrave Macmillan
 // CY  - Basingstoke
+// DA  - 2014/07/23
 // SN  - 9781137024497
 // ID  - 10.1057/9781137024497
 // UR  - http://dx.doi.org/10.1057/9781137024497
@@ -104,14 +105,17 @@ public class TestPalgraveBookRisMetadataExtractorFactory extends LockssTestCase 
   }
 
   // the metadata that should be extracted
+  // PalgraveBook seems to now use DA for the date the citation was accessed
+  // and PY for publication year, so we now ignore DA
   String goodAuthors[] = {"Larsson, Mats"};
-  String goodDate = "2012/09/25";
+  String goodDate = "2012";
   String goodJournalTitle = "The Business of Global Energy Transformation: Saving Billions through Sustainable Models";
   String goodPublisher = "Palgrave Macmillan";
   String goodBookIsbn = "9781137024497";
   String goodDoi = "10.1057/9781137024497";
   String goodAccessUrl = "http://www.palgraveconnect.com/pc/busman2013/browse/inside/download/9781137024497.pdf";
-  
+  String goodDA = "2014/07/23";
+
   private String createGoodContent() {
     StringBuilder sb = new StringBuilder();
     sb.append("TY  - BOOK");
@@ -127,7 +131,8 @@ public class TestPalgraveBookRisMetadataExtractorFactory extends LockssTestCase 
     sb.append(goodPublisher);
     sb.append("\nSN  - ");
     sb.append(goodBookIsbn);
-//    sb.append("\nID  - ");
+    sb.append("\nDA  - ");
+    sb.append(goodDA);
     sb.append("\nDO  - ");
     sb.append(goodDoi);
     sb.append("\nL1  - ");
@@ -160,7 +165,7 @@ public class TestPalgraveBookRisMetadataExtractorFactory extends LockssTestCase 
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
-
+System.out.println(md.toString());
     Iterator<String> actAuthIter = md.getList(MetadataField.FIELD_AUTHOR).iterator();
     for(String expAuth : goodAuthors) {
     	assertEquals(expAuth, actAuthIter.next());
