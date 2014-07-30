@@ -1,5 +1,5 @@
 /*
- * $Id: TestBusinessSystemsLaboratoryArchivalUnit.java,v 1.3 2014-07-25 19:52:29 ldoan Exp $
+ * $Id: TestBusinessSystemsLaboratoryArchivalUnit.java,v 1.4 2014-07-30 22:28:28 thib_gc Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.util.Properties;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.RangeCachedUrlSetSpec;
+import org.lockss.extractor.JsoupHtmlLinkExtractor;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrlSet;
 import org.lockss.plugin.UrlCacher;
@@ -49,9 +50,7 @@ import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockAuState;
 import org.lockss.test.MockLockssDaemon;
-import org.lockss.util.ListUtil;
-import org.lockss.util.Logger;
-import org.lockss.util.TimeBase;
+import org.lockss.util.*;
 
 /* 
  * Tests archival unit for Business Systems Laboratory
@@ -199,6 +198,10 @@ public class TestBusinessSystemsLaboratoryArchivalUnit extends LockssTestCase {
       makeAu(new URL("http://www.example2.com/"), "8", "2008");
     assertEquals(PLUGIN_NAME + ", Base URL http://www.example2.com/,"
                  + " Volume 8, Year 2008", au2.getName());
+  }
+  
+  public void testHtmlLinkExtractor() throws Exception {
+    assertClass(JsoupHtmlLinkExtractor.class, bslAu.getLinkExtractor(Constants.MIME_TYPE_HTML));
   }
 
 }
