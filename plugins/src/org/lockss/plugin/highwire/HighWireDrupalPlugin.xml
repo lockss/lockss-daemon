@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>9</string>
+    <string>10</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>4</string>
+        <string>5</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -107,7 +107,7 @@
       <!-- Do not crawl unless from base url -->
       <string>4,"^%s", base_url</string>
       <string>2,"^%s(?:[^?]+(?:most-(?:cited|read)|featured_article|featured-podcasts|(?:back-matter|ed-board)[.]pdf)|content/(?:by/|early/|[^{]+[{]))", base_url</string>
-      <string>1,"^%s(?:content(?:/[^/]+)?/(?:%s|suppl)|highwire/(?:filestream|markup))/", base_url, volume_name</string>
+      <string>1,"^%s(?:content(?:/[^/]+)?/(?:%s|suppl)|highwire/(?:filestream|markup|article_citation_preview))/", base_url, volume_name</string>
       <string>1,"^%shighwire/citation/[^/]+/ris$", base_url</string>
     </list>
   </entry>
