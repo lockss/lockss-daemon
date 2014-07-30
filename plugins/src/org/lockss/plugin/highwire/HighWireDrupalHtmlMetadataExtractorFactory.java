@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireDrupalHtmlMetadataExtractorFactory.java,v 1.4 2014-04-28 19:30:11 etenbrink Exp $
+ * $Id: HighWireDrupalHtmlMetadataExtractorFactory.java,v 1.5 2014-07-30 16:02:41 etenbrink Exp $
  */
 
 /*
@@ -64,6 +64,7 @@ public class HighWireDrupalHtmlMetadataExtractorFactory implements FileMetadataE
       tagMap.put("citation_journal_title", MetadataField.FIELD_PUBLICATION_TITLE);
       tagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
       tagMap.put("citation_date", MetadataField.FIELD_DATE);
+      tagMap.put("citation_publication_date", MetadataField.FIELD_DATE);
       tagMap.put("citation_authors", new MetadataField(
           MetadataField.FIELD_AUTHOR, MetadataField.splitAt(";")));
       tagMap.put("citation_author", MetadataField.FIELD_AUTHOR);
