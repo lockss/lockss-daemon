@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireDrupalHtmlMetadataExtractor.java,v 1.1 2014-02-19 22:37:23 etenbrink Exp $
+ * $Id: TestHighWireDrupalHtmlMetadataExtractor.java,v 1.2 2014-07-30 16:04:17 etenbrink Exp $
  */
 
 /*
@@ -142,6 +142,7 @@ public class TestHighWireDrupalHtmlMetadataExtractor extends LockssTestCase {
       goodAuthors[5] + "\" name=\"citation_authors\" />" +
       "<meta content=\"" + goodArticleTitle + "\" name=\"citation_title\" />" +
       "<meta content=\"" + goodDate + "\" name=\"citation_date\" />" +
+      "<meta content=\"" + goodDate + "\" name=\"citation_publication_date\" />" +
       "<meta content=\"" + goodVolume + "\" name=\"citation_volume\" />" +
       "<meta content=\"" + goodIssue + "\" name=\"citation_issue\" />" +
       "<meta content=\"" + goodStartPage + "\" name=\"citation_firstpage\" />" +
@@ -171,7 +172,7 @@ public class TestHighWireDrupalHtmlMetadataExtractor extends LockssTestCase {
     assertEquals(goodFormat, md.get(MetadataField.FIELD_FORMAT));
     assertEquals(goodLanguage, md.get(MetadataField.FIELD_LANGUAGE));
     assertEquals(goodPublisher, md.get(MetadataField.FIELD_PUBLISHER));
-    assertEquals(goodJournalTitle, md.get(MetadataField.FIELD_JOURNAL_TITLE));
+    assertEquals(goodJournalTitle, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
     assertEquals(Arrays.asList(goodAuthors), md.getList(MetadataField.FIELD_AUTHOR));
     assertEquals(goodArticleTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
     assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));

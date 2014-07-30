@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireDrupalHtmlFilterFactory.java,v 1.1 2014-02-19 22:37:23 etenbrink Exp $
+ * $Id: TestHighWireDrupalHtmlFilterFactory.java,v 1.2 2014-07-30 16:04:17 etenbrink Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.plugin.highwire;
 import java.io.*;
 
 import org.lockss.util.*;
+import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.test.*;
 
 public class TestHighWireDrupalHtmlFilterFactory extends LockssTestCase {
@@ -80,10 +81,10 @@ public class TestHighWireDrupalHtmlFilterFactory extends LockssTestCase {
   
   //  // copyright statement may change
   //  HtmlNodeFilters.tagWithAttribute("ul", "class", "copyright-statement"),
-  private static final String withCopyright = "</div>\n" +
+  private static final String withCopyright = "<html class=\"js\" lang=\"en\">\n" +
       "<ul class=\"copyright-statement\"><li class=\"fn\">Copyright © 2012 American Society</li>" +
-      "</ul><div>";
-  private static final String withoutCopyright = "</div> <div>";
+      "</ul></html>";
+  private static final String withoutCopyright = "<html> </html>";
   
   //// messages can appear arbitrarily
   //HtmlNodeFilters.tagWithAttributeRegex("div", "id", "messages"),
@@ -94,8 +95,8 @@ public class TestHighWireDrupalHtmlFilterFactory extends LockssTestCase {
   
   //// extras, prev/next pager and right sidebar may change
   //HtmlNodeFilters.tagWithAttributeRegex("div", "class", "cit-extra"),
-  private static final String withCitExtra = "</div>\n" +
-      "<div class=\"cit-extra\">" +
+  private static final String withCitExtra = "<html class=\"js\" lang=\"en\">\nx" +
+      "<div class=\"cit-extra\">y" +
       "<a href=\"/lookup/external-ref?access_num=10.1056/NEJM200005183422006&amp;link_type=DOI\" " +
       "class=\"cit-ref-sprinkles cit-ref-sprinkles-doi cit-ref-sprinkles-crossref\"><span>CrossRef</span></a>" +
       "<a href=\"/lookup/external-ref?access_num=10816188&amp;link_type=MED&amp;atom=" +
@@ -104,11 +105,11 @@ public class TestHighWireDrupalHtmlFilterFactory extends LockssTestCase {
       "<a href=\"/lookup/external-ref?access_num=000087068200006&amp;link_type=ISI\" " +
       "class=\"cit-ref-sprinkles cit-ref-sprinkles-newisilink cit-ref-sprinkles-webofscience\">" +
       "<span>Web of Science</span></a>" +
-      "</div><div>";
-  private static final String withoutCitExtra = "</div>\n<div>";
+      "</div></html>";
+  private static final String withoutCitExtra = "<html> x</html>";
   
   //HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pane-highwire-node-pager"),
-  private static final String withPager = "</div>\n" +
+  private static final String withPager = "<html>\n" +
       "<div class=\"panel-pane pane-highwire-node-pager\" >\n" + 
       "<div class=\"pane-content\">\n" + 
       "<div class=\"pager highwire-pager pager-mini clearfix highwire-node-pager " +
@@ -118,19 +119,19 @@ public class TestHighWireDrupalHtmlFilterFactory extends LockssTestCase {
       "<a href=\"/content/999/9/C99\" title=\"Drive in the oviduct\" rel=\"next\" " +
       "class=\"pager-link-next link-icon link-icon-right\">Next <i class=\"icon-circle-arrow-right\">" +
       "</i></a></span></div>  </div>\n" + 
-      "</div><div>";
-  private static final String withoutPager = "</div>\n<div>";
+      "</div></html>";
+  private static final String withoutPager = "<html> </html>";
   
   //HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-right-wrapper"),
-  private static final String withSidebar = "</div>\n" +
+  private static final String withSidebar = "<html>\n" +
       "<div class=\"sidebar-right-wrapper grid-10 omega\">\n" + 
       "<div class=\"panel-panel panel-region-sidebar-right\">\n" + 
       "<div class=\"inside\">" +
       "<div class=\"panel-pane pane-panels-mini " +
       "pane-jnl-iss-issue-arch-art pane-style-alt-content\" >\n" + 
       "</div></div></div></div>\n" +
-      "<div>";
-  private static final String withoutSidebar = "</div>\n<div>";
+      "</html>";
+  private static final String withoutSidebar = "<html> </html>";
   
   //new TagNameFilter("script"),
   //new TagNameFilter("noscript"),
@@ -141,6 +142,14 @@ public class TestHighWireDrupalHtmlFilterFactory extends LockssTestCase {
       "</div>";
   private static final String withoutScript =
       "<div></div>";
+  
+  // HtmlNodeFilters.tagWithAttributeRegex("div", "class", "author-tooltip")
+  private static final String withToolTip =
+      "<html>\n" +
+      "<div class=\"author-tooltip0-asdf\">tip here</div>" +
+      "</html>";
+  private static final String withoutToolTip =
+      "<html> </html>";
   
   public void testFiltering() throws Exception {
     assertFilterToString(headHtml, headHtmlFiltered);
@@ -154,6 +163,7 @@ public class TestHighWireDrupalHtmlFilterFactory extends LockssTestCase {
     assertFilterToSame(withPager, withoutPager);
     assertFilterToSame(withSidebar, withoutSidebar);
     assertFilterToSame(withScript, withoutScript);
+    assertFilterToSame(withToolTip, withoutToolTip);
     
   }
   

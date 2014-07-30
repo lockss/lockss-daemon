@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireDrupalHtmlLinkExtractorFactory.java,v 1.1 2014-04-11 22:45:23 etenbrink Exp $
+ * $Id: TestHighWireDrupalHtmlLinkExtractorFactory.java,v 1.2 2014-07-30 16:04:17 etenbrink Exp $
  */
 /*
 
@@ -51,10 +51,30 @@ public class TestHighWireDrupalHtmlLinkExtractorFactory extends LockssTestCase {
   private final String HW_BASE_URL = "http://ajp.highwire.org/";
   private static final String NODE_ID = "111111";
   
-  private static final String citation= "<html><head><title>Test Title</title>" +
+  private static final String citation = "<html><head><title>Test Title</title>" +
       "<link href=\"/node/" + NODE_ID + "\" rel=\"shortlink\">" +
       "<div>" +
       "</head><body></body>" +
+      "</html>";
+  
+  private static final String toc = "<html><head><title>Test Title</title>" +
+      "</head><body>" +
+      "<ul class=\"toc-section\">" +
+      "  <li class=\"toc-item first last odd\"><div class=\"toc-citation\">" +
+      "      <div rel=\"/highwire/article_citation_preview/" + NODE_ID + "\" data-node-nid=\"" + NODE_ID + 
+      "\" title=\"&lt;a href=&quot;http://ajprenal.physiology.org/content/304/1/F1&quot;" +
+      " class=&quot;highwire-cite-linked-title&quot;&gt;&lt;div class=&quot;highwire-cite-title&quot;&gt;" +
+      "Renal&lt;/div&gt;&lt;/a&gt;\" class=\"highwire-article-citation tooltip-enable" +
+      " highwire_article_citation_tooltip-processed\"><div class=\"highwire-cite" +
+      " highwire-citation-jnl-aps-toc-citation clearfix\">\n" + 
+      "      <div class=\"highwire-cite-access\"><i title=\"Open Access\" class=\"highwire-access-icon" +
+      " highwire-access-icon-open-access open-access icon-unlock-alt\"></i></div>\n" + 
+      "      <a class=\"highwire-cite-linked-title\" href=\"http://ajprenal.physiology.org/content/304/1/F1\">" +
+      "<div class=\"highwire-cite-title\">Renal</div></a>  \n" + 
+      "      <div class=\"highwire-cite-authors\"></div>\n" + 
+      "      <div class=\"highwire-cite-metadata\"></div>\n" + 
+      "  </div></div></div></li></ul>" +
+      "</body>" +
       "</html>";
   
   public static final String basicLinksHtml = "      <ul>" +
@@ -125,6 +145,31 @@ public class TestHighWireDrupalHtmlLinkExtractorFactory extends LockssTestCase {
   private Set<String> parseSingleSource(String source)
       throws Exception {
     String srcUrl = HW_BASE_URL + "content/1/2/c3";
+    String mimeType = "html";
+    LinkExtractor ue = new JsoupHtmlLinkExtractor();
+    m_mau.setLinkExtractor(mimeType, ue);
+    MockCachedUrl mcu = new org.lockss.test.MockCachedUrl(srcUrl, m_mau);
+    mcu.setContent(source);
+    
+    m_callback.reset();
+    m_extractor.extractUrls(m_mau,
+        new org.lockss.test.StringInputStream(source), ENC,
+        srcUrl, m_callback);
+    return m_callback.getFoundUrls();
+  }
+  
+  // and once we get to the toc page, will we handle stuff as expected? 
+  public void testToc() throws Exception {
+    String expectedUrl = HW_BASE_URL + "highwire/article_citation_preview/" + NODE_ID;
+    Set<String> result_strings = parseToc(toc);
+    
+    assertEquals(2, result_strings.size());
+    assertTrue(result_strings.contains(expectedUrl));
+  }
+  
+  private Set<String> parseToc(String source)
+      throws Exception {
+    String srcUrl = HW_BASE_URL + "content/1/2.toc";
     String mimeType = "html";
     LinkExtractor ue = new JsoupHtmlLinkExtractor();
     m_mau.setLinkExtractor(mimeType, ue);
