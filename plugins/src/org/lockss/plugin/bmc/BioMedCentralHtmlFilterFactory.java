@@ -1,5 +1,5 @@
 /*
- * $Id: BioMedCentralHtmlFilterFactory.java,v 1.11 2013-10-30 22:21:56 thib_gc Exp $
+ * $Id: BioMedCentralHtmlFilterFactory.java,v 1.12 2014-07-30 21:56:27 aishizaki Exp $
  */
 
 /*
@@ -95,6 +95,8 @@ public class BioMedCentralHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", ".*/about/mostviewed"),
         // Springer branding below the footer
         HtmlNodeFilters.tagWithAttribute("div", "class", "springer"),
+        // removing empty <div> tag that moves around..
+        HtmlNodeFilters.tagWithAttribute("div", "id", "biome-badge"),
         // The text of this link changed from "About this article" to "Article metrics"
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/about$"),
         // Journal of Cheminformatics -  an "accesses" and/or "citations" block
