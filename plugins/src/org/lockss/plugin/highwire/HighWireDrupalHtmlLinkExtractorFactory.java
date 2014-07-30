@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireDrupalHtmlLinkExtractorFactory.java,v 1.2 2014-04-18 20:36:05 etenbrink Exp $
+ * $Id: HighWireDrupalHtmlLinkExtractorFactory.java,v 1.3 2014-07-30 16:01:14 etenbrink Exp $
  */
 
 /*
@@ -59,6 +59,7 @@ public class HighWireDrupalHtmlLinkExtractorFactory implements LinkExtractorFact
   private static final String HREF_NAME = "href";
   private static final String REL_NAME = "rel";
   private static final String SHORTLINK = "shortlink";
+  private static final String DIV_NAME = "div";
   
   protected static Pattern URL_PATTERN = Pattern.compile(
       "^(https?://[^/]+/)content/[^/]+/[^/]+/[^/?]+$", Pattern.CASE_INSENSITIVE);
@@ -71,6 +72,7 @@ public class HighWireDrupalHtmlLinkExtractorFactory implements LinkExtractorFact
     JsoupHtmlLinkExtractor extractor = new JsoupHtmlLinkExtractor();
     // we will do some additional processing for <link href="/node/25370" rel="shortlink">
     extractor.registerTagExtractor(LINK_NAME, new HWSimpleTagLinkExtractor(HREF_NAME));
+    extractor.registerTagExtractor(DIV_NAME, new HWSimpleTagLinkExtractor(REL_NAME));
     return extractor;
   }
   
