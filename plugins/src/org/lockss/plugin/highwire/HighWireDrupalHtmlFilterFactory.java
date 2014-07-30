@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireDrupalHtmlFilterFactory.java,v 1.5 2014-06-03 01:00:14 etenbrink Exp $
+ * $Id: HighWireDrupalHtmlFilterFactory.java,v 1.6 2014-07-30 15:59:07 etenbrink Exp $
  */
 
 /*
@@ -35,13 +35,16 @@ package org.lockss.plugin.highwire;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.Reader;
+import java.util.Vector;
 
+import org.htmlparser.Attribute;
+import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.Tag;
 import org.htmlparser.filters.*;
+import org.htmlparser.nodes.TextNode;
+import org.htmlparser.tags.Html;
 import org.htmlparser.util.NodeList;
-import org.htmlparser.util.ParserException;
-import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.FilterUtil;
 import org.lockss.filter.WhiteSpaceFilter;
@@ -75,52 +78,56 @@ public class HighWireDrupalHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "cit-extra"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-right-wrapper"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pane-highwire-node-pager"),
+        // author tool-tips changed for http://ajpheart.physiology.org/content/306/11/H1594.figures-only
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "author-tooltip"),
         // most scripts are in head, however, if any are in the body they are filtered
         new TagNameFilter("script"),
         new TagNameFilter("noscript"),
     };
     
-    // HTML transform to remove uniqueness from div "data-unqiue-id" attribute
-    // http://ajpcell.physiology.org/highwire/markup/44550/expansion?width=1000
-    //   &height=500&iframe=true&postprocessors=highwire_figures%2Chighwire_math
+    // HTML transform to remove all remaining nodes except HTML, and convert all child 
+    // nodes of html to a single plaintext node
+    // http://ajpheart.physiology.org/content/306/10/H1385 (HW had replaced SPAN tags with DIV
+    // cannot keep up with all the continual changes to 
     
     HtmlTransform xform = new HtmlTransform() {
       @Override
       public NodeList transform(NodeList nodeList) throws IOException {
-        try {
-          nodeList.visitAllNodesWith(new NodeVisitor() {
-            @Override
-            public void visitTag(Tag tag) {
-              try {
-                if ("div".equalsIgnoreCase(tag.getTagName())) {
-                  if (tag.getAttribute("data-unqiue-id") != null) {
-                    tag.setAttribute("data-unqiue-id", "non-unqiue-nor-unique");
-                  }
-                  if (tag.getAttribute("data-unique-id") != null) {
-                    tag.setAttribute("data-unique-id", "non-unqiue-nor-unique");
-                  }
-                }
-                super.visitTag(tag);
-              }
-              catch (Exception exc) {
-                log.debug2("Internal error (visitor)", exc); // Ignore this tag and move on
-              }
-            }
-          });
+        NodeList nl = new NodeList();
+        boolean subst = true;
+        for (int sx = 0; sx < nodeList.size(); ) {
+          Node snode = nodeList.elementAt(sx);
+          if (snode instanceof Tag) {
+            String tagName = ((Tag) snode).getTagName().toLowerCase();
+            Attribute a = ((Tag) snode).getAttributeEx(tagName);
+            Vector<Attribute> v = new Vector<Attribute>();
+            v.add(a);
+            ((Tag) snode).setAttributesEx(v);
+          }
+          if (snode instanceof Html) {
+            subst = false;
+            NodeList tnl = new NodeList ();
+            TextNode tn = new TextNode(snode.toPlainTextString());
+            tnl.add(tn);
+            snode.setChildren(tnl);
+            sx++;
+          } else {
+            nodeList.remove(sx);
+            log.debug("Removed snode: " + snode.toString());
+            NodeList tnl = new NodeList ();
+            TextNode tn = new TextNode(snode.toPlainTextString());
+            tnl.add(tn);
+            snode.setChildren(tnl);
+            nl.add(snode);
+          }
         }
-        catch (ParserException pe) {
-          log.debug2("Internal error (parser)", pe); // Bail
-        }
-        return nodeList;
+        return subst ? nl : nodeList;
       }
     };
     
     InputStream filtered =  new HtmlFilterInputStream(in, encoding,
         new HtmlCompoundTransform(
-            HtmlNodeFilterTransform.exclude(
-                new OrFilter(filters)),xform))
-    .registerTag(new HtmlTags.Header())
-    .registerTag(new HtmlTags.Footer()); // XXX registerTag can be removed after 1.65
+            HtmlNodeFilterTransform.exclude(new OrFilter(filters)), xform));
     
     Reader filteredReader = FilterUtil.getReader(filtered, encoding);
     return new ReaderInputStream(new WhiteSpaceFilter(filteredReader));
