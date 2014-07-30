@@ -1,5 +1,5 @@
 /*
- * $Id: SilverchairRisMetadataExtractorFactory.java,v 1.1 2014-04-29 15:07:05 thib_gc Exp $
+ * $Id: SilverchairRisMetadataExtractorFactory.java,v 1.2 2014-07-30 21:57:06 thib_gc Exp $
  */
 
 /*
@@ -117,6 +117,11 @@ public class SilverchairRisMetadataExtractorFactory implements FileMetadataExtra
           throws IOException, PluginException {
         ArticleMetadata am = extract(target, cu);
         am.putRaw("extractor.type", "RIS");
+        /*
+         * FIXME
+         * putIfBetter only replaces the value if the one stored is invalid
+         * which may not be what was intended here, maybe use am.replace(...)
+         */
         am.putIfBetter(MetadataField.FIELD_PUBLICATION_TITLE, am.getRaw("JO"));
         am.putIfBetter(MetadataField.FIELD_DATE, am.getRaw("Y1"));
         am.putIfBetter(MetadataField.FIELD_DOI, am.getRaw("N1"));
