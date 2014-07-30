@@ -1,5 +1,5 @@
 /*
- * $Id: TestBioMedCentralPluginHtmlFilterFactory.java,v 1.7 2013-07-19 21:23:08 aishizaki Exp $
+ * $Id: TestBioMedCentralPluginHtmlFilterFactory.java,v 1.8 2014-07-30 21:57:43 aishizaki Exp $
  */
 
 /*
@@ -120,75 +120,71 @@ public class TestBioMedCentralPluginHtmlFilterFactory extends LockssTestCase {
   
   private static final String SkyscraperAdHtmlHashFiltered =
     "<div id=\"\" style=\"width:830px; height:600px\"> </div>";
+  
+  private static final String BiomeBadgeHash = 
+    "<div id=\"biome-badge\" style=\"width: 100%\">" +
+    "<script>" +
+    "window.onmessage = function(e) {" +
+    "if(e.data == \"biome-failed\") {" +
+    "console.log(e);" +
+    "document.getElementById(\"biome-badge\").style.display = \"none\";" +
+    "}" +
+    "};" +
+    "</script>" +
+    "<iframe src=\"http://www.biomedcentral.com/sites/9001/biome-widget.html?doi=10.1186/1757-1146-1-9&size=large\" width=\"100%\" height=\"75px\">Your browser does not support iframes</iframe>" +
+    "</div>" +
+    "Hello World";
+  private static final String BiomeBadgeHashFiltered = "Hello World";
 
-  public void testFiltering() throws Exception {
+
+  private void checkHashFilter2(String testStr1, String testStr2) throws Exception {
     InputStream inA;
     InputStream inB;
+    
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(testStr1),
+        ENC);
+    inB = fact.createFilteredInputStream(mau, new StringInputStream(testStr2),
+        ENC);  
+    assertEquals(StringUtil.fromInputStream(inA), StringUtil.fromInputStream(inB));
 
+  }
+  private void checkHashFilter1(String testStr, String filtStr) throws Exception {
+    InputStream inA;
+    
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(testStr),
+        ENC);
+    assertEquals(StringUtil.fromInputStream(inA), filtStr);
+
+  }
+  
+  public void testFiltering() throws Exception {
+    
     /* inst1 test */
-    inA = fact.createFilteredInputStream(mau, new StringInputStream(inst1),
-        ENC);
-    inB = fact.createFilteredInputStream(mau, new StringInputStream(inst2),
-        ENC);
-
-    assertEquals(StringUtil.fromInputStream(inA),
-        StringUtil.fromInputStream(inB));
-
+    checkHashFilter2(inst1, inst2);
 
     /* articlesTab test */
-    inA = fact.createFilteredInputStream(mau, new StringInputStream(articlesTab1),
-        ENC);
-    inB = fact.createFilteredInputStream(mau, new StringInputStream(articlesTab2),
-        ENC);
-
-    assertEquals(StringUtil.fromInputStream(inA),
-        StringUtil.fromInputStream(inB));
+    checkHashFilter2(articlesTab1, articlesTab2);
 
     /* whiteSpace test */
-    inA = fact.createFilteredInputStream(mau, new StringInputStream(whiteSpace1),
-        ENC);
-    inB = fact.createFilteredInputStream(mau, new StringInputStream(whiteSpace2),
-        ENC);
-
-    assertEquals(StringUtil.fromInputStream(inA),
-        StringUtil.fromInputStream(inB));
+    checkHashFilter2(whiteSpace1, whiteSpace2);
 
     /* impactFactor test */
-    inA = fact.createFilteredInputStream(mau, new StringInputStream(impactFactorHtmlHash),
-        ENC);
-
-    assertEquals(impactFactorHtmlHashFiltered,StringUtil.fromInputStream(inA));
+    checkHashFilter1(impactFactorHtmlHash, impactFactorHtmlHashFiltered);
 
     /* access test */     
-    inA = fact.createFilteredInputStream(mau, new StringInputStream(accessHtmlHash),
-        ENC);
-
-    assertEquals(accessHtmlHashFiltered,StringUtil.fromInputStream(inA));
+    checkHashFilter1(accessHtmlHash, accessHtmlHashFiltered);
 
     /* access block */
-    inA = fact.createFilteredInputStream(mau, new StringInputStream(accessesBlockHtml),
-        ENC);
-
-    assertEquals(accessesBlockHtmlFiltered,StringUtil.fromInputStream(inA));
-
+    checkHashFilter1(accessesBlockHtml, accessesBlockHtmlFiltered);
 
     /* citations block */
-    inA = fact.createFilteredInputStream(mau, new StringInputStream(citationsBlockHtml),
-        ENC);
-
-    assertEquals(citationsBlockHtmlFiltered,StringUtil.fromInputStream(inA));
+    checkHashFilter1(citationsBlockHtml, citationsBlockHtmlFiltered);
 
     /* bannerAd */     
-    inA = fact.createFilteredInputStream(mau, new StringInputStream(bannerAdHtmlHash),
-        ENC);
-
-    assertEquals(bannerAdHtmlHashFiltered,StringUtil.fromInputStream(inA));
+    checkHashFilter1(bannerAdHtmlHash, bannerAdHtmlHashFiltered);
 
     /* SkyscraperAd */     
-    inA = fact.createFilteredInputStream(mau, new StringInputStream(SkyscraperAdHtmlHash),
-        ENC);
-
-    assertEquals(SkyscraperAdHtmlHashFiltered,StringUtil.fromInputStream(inA));
+    checkHashFilter1(SkyscraperAdHtmlHash, SkyscraperAdHtmlHashFiltered);
 
   }
   private static final String SocialNetworkingHash = "<ul id=\"social-networking-links\">"+
@@ -198,13 +194,8 @@ public class TestBioMedCentralPluginHtmlFilterFactory extends LockssTestCase {
   private static final String SocialNetworkingHashFiltered = "Hello World";
 
   public void testFilterSocialNetworking() throws Exception {
-    InputStream inA;
-    /* SkyscraperAd */     
-    inA = fact.createFilteredInputStream(mau, new StringInputStream(SocialNetworkingHash),
-        ENC);
-
-    assertEquals(SocialNetworkingHashFiltered,StringUtil.fromInputStream(inA));
-
+    
+    checkHashFilter1(SocialNetworkingHash, SocialNetworkingHashFiltered);
   }
   private static final String GoogleAdHash = "<dl class=\"google-ad wide \">"+
         "<dt class=\"hide\">"+
@@ -212,12 +203,13 @@ public class TestBioMedCentralPluginHtmlFilterFactory extends LockssTestCase {
   private static final String GoogleAdHashFiltered = "Hello World";
 
   public void testFilterGoogleAd() throws Exception {
-    InputStream inA;
-    /* SkyscraperAd */     
-    inA = fact.createFilteredInputStream(mau, new StringInputStream(GoogleAdHash),
-        ENC);
+    
+    checkHashFilter1(GoogleAdHash, GoogleAdHashFiltered);
 
-    assertEquals(GoogleAdHashFiltered,StringUtil.fromInputStream(inA));
+  }
+  public void testFilterBiomeBadge() throws Exception {
+    
+    checkHashFilter1(BiomeBadgeHash, BiomeBadgeHashFiltered);
 
   }
 }
