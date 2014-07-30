@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireDrupalHtmlCrawlFilterFactory.java,v 1.2 2014-03-17 21:51:43 etenbrink Exp $
+ * $Id: HighWireDrupalHtmlCrawlFilterFactory.java,v 1.3 2014-07-30 15:56:39 etenbrink Exp $
  */
 
 /*
@@ -57,9 +57,7 @@ public class HighWireDrupalHtmlCrawlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pane-highwire-node-pager"),
     };
     InputStream filtered = new HtmlFilterInputStream(in, encoding,
-        HtmlNodeFilterTransform.exclude(new OrFilter(filters)))
-    .registerTag(new HtmlTags.Header())
-    .registerTag(new HtmlTags.Footer()); // XXX registerTag can be removed after 1.65
+        HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
     return filtered;
   }
 
