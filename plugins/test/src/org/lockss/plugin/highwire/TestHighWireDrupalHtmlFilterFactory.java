@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireDrupalHtmlFilterFactory.java,v 1.2 2014-07-30 16:04:17 etenbrink Exp $
+ * $Id: TestHighWireDrupalHtmlFilterFactory.java,v 1.3 2014-07-31 21:51:45 etenbrink Exp $
  */
 
 /*
@@ -35,7 +35,6 @@ package org.lockss.plugin.highwire;
 import java.io.*;
 
 import org.lockss.util.*;
-import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.test.*;
 
 public class TestHighWireDrupalHtmlFilterFactory extends LockssTestCase {
@@ -52,8 +51,8 @@ public class TestHighWireDrupalHtmlFilterFactory extends LockssTestCase {
   
   //  // Publisher adding/updating meta tags
   //  new TagNameFilter("head"),
-  private static final String headHtml = "<html><head>Title</head></HTML>";
-  private static final String headHtmlFiltered = "<html></HTML>";
+  private static final String headHtml = "A<html><head>Title</head></HTML>9";
+  private static final String headHtmlFiltered = "A9";
   
   //  // remove ALL comments
   //  HtmlNodeFilters.comment(),
@@ -65,37 +64,37 @@ public class TestHighWireDrupalHtmlFilterFactory extends LockssTestCase {
   //  // No relevant content in header/footer
   //  new TagNameFilter("header"),
   //  new TagNameFilter("footer"),
-  private static final String header = "<div>\n" + 
+  private static final String header = "A<div>\n" + 
       "<header id=\"section-header\" class=\"section section-header\">\n" + 
       "<div id=\"zone-user-wrapper\" class=\"zone-wrapper\"></div>\n" + 
       "</header>\n" + 
-      "</div>";
-  private static final String headerFiltered = "<div> </div>";
+      "</div>9";
+  private static final String headerFiltered = "A 9";
   
-  private static final String footer = "<div>\n" + 
+  private static final String footer = "A<div>\n" + 
       "<footer id=\"section-footer\" class=\"section section-footer\">\n" + 
       "<div id=\"zone-postscript\" class=\"zone zone-postscript clearfix container-30\"></div>\n" +
       "</footer>\n" + 
-      "</div>";
-  private static final String footerFiltered = "<div> </div>";
+      "</div>9";
+  private static final String footerFiltered = "A 9";
   
   //  // copyright statement may change
   //  HtmlNodeFilters.tagWithAttribute("ul", "class", "copyright-statement"),
-  private static final String withCopyright = "<html class=\"js\" lang=\"en\">\n" +
-      "<ul class=\"copyright-statement\"><li class=\"fn\">Copyright © 2012 American Society</li>" +
-      "</ul></html>";
-  private static final String withoutCopyright = "<html> </html>";
+  private static final String withCopyright = "A<html class=\"js\" lang=\"en\">\n" +
+      "<ul class=\"copyright-statement\">gone<li class=\"fn\">Copyright © 2012 American Society</li>" +
+      "</ul></html>9";
+  private static final String withoutCopyright = "A 9";
   
   //// messages can appear arbitrarily
   //HtmlNodeFilters.tagWithAttributeRegex("div", "id", "messages"),
-  private static final String messages = "<div>\n" +
+  private static final String messages = "A<div>\n" +
       "<div id=\"messages\">arbitrary text" +
-      "</div></div>";
-  private static final String messagesFiltered = "<div> </div>";
+      "</div></div>9";
+  private static final String messagesFiltered = "A 9";
   
   //// extras, prev/next pager and right sidebar may change
   //HtmlNodeFilters.tagWithAttributeRegex("div", "class", "cit-extra"),
-  private static final String withCitExtra = "<html class=\"js\" lang=\"en\">\nx" +
+  private static final String withCitExtra = "A<html class=\"js\" lang=\"en\">\nx" +
       "<div class=\"cit-extra\">y" +
       "<a href=\"/lookup/external-ref?access_num=10.1056/NEJM200005183422006&amp;link_type=DOI\" " +
       "class=\"cit-ref-sprinkles cit-ref-sprinkles-doi cit-ref-sprinkles-crossref\"><span>CrossRef</span></a>" +
@@ -105,12 +104,12 @@ public class TestHighWireDrupalHtmlFilterFactory extends LockssTestCase {
       "<a href=\"/lookup/external-ref?access_num=000087068200006&amp;link_type=ISI\" " +
       "class=\"cit-ref-sprinkles cit-ref-sprinkles-newisilink cit-ref-sprinkles-webofscience\">" +
       "<span>Web of Science</span></a>" +
-      "</div></html>";
-  private static final String withoutCitExtra = "<html> x</html>";
+      "</div></html>9";
+  private static final String withoutCitExtra = "A x9";
   
   //HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pane-highwire-node-pager"),
-  private static final String withPager = "<html>\n" +
-      "<div class=\"panel-pane pane-highwire-node-pager\" >\n" + 
+  private static final String withPager = "A<html>\n" +
+      "<div class=\"panel-pane pane-highwire-node-pager\" >X\n" + 
       "<div class=\"pane-content\">\n" + 
       "<div class=\"pager highwire-pager pager-mini clearfix highwire-node-pager " +
       "highwire-article-pager\"><span class=\"pager-prev\"><a href=\"/content/999/9/C91\" " +
@@ -119,37 +118,37 @@ public class TestHighWireDrupalHtmlFilterFactory extends LockssTestCase {
       "<a href=\"/content/999/9/C99\" title=\"Drive in the oviduct\" rel=\"next\" " +
       "class=\"pager-link-next link-icon link-icon-right\">Next <i class=\"icon-circle-arrow-right\">" +
       "</i></a></span></div>  </div>\n" + 
-      "</div></html>";
-  private static final String withoutPager = "<html> </html>";
+      "</div></html>9";
+  private static final String withoutPager = "A 9";
   
   //HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-right-wrapper"),
-  private static final String withSidebar = "<html>\n" +
-      "<div class=\"sidebar-right-wrapper grid-10 omega\">\n" + 
+  private static final String withSidebar = "A<html>\n" +
+      "<div class=\"sidebar-right-wrapper grid-10 omega\">X\n" + 
       "<div class=\"panel-panel panel-region-sidebar-right\">\n" + 
       "<div class=\"inside\">" +
       "<div class=\"panel-pane pane-panels-mini " +
       "pane-jnl-iss-issue-arch-art pane-style-alt-content\" >\n" + 
       "</div></div></div></div>\n" +
-      "</html>";
-  private static final String withoutSidebar = "<html> </html>";
+      "</html>9";
+  private static final String withoutSidebar = "A 9";
   
   //new TagNameFilter("script"),
   //new TagNameFilter("noscript"),
   private static final String withScript =
-      "<div>" +
-      "<script type=\"text/javascript\">GA_googleFillSlot(\"tower_right_160x600\");</script>" +
+      "A<div>\n" +
+      "<script type=\"text/javascript\">GA_googleFillSlot(\"tower_right_160x600\");</script> " +
       "<noscript type=\"text/javascript\">GA_googleFillSlot(\"tower_right_160x600\");</noscript>" +
-      "</div>";
+      "</div>9";
   private static final String withoutScript =
-      "<div></div>";
+      "A 9";
   
   // HtmlNodeFilters.tagWithAttributeRegex("div", "class", "author-tooltip")
   private static final String withToolTip =
-      "<html>\n" +
+      "A<html>\n" +
       "<div class=\"author-tooltip0-asdf\">tip here</div>" +
-      "</html>";
+      "</html>9";
   private static final String withoutToolTip =
-      "<html> </html>";
+      "A 9";
   
   public void testFiltering() throws Exception {
     assertFilterToString(headHtml, headHtmlFiltered);
@@ -158,25 +157,15 @@ public class TestHighWireDrupalHtmlFilterFactory extends LockssTestCase {
     assertFilterToString(footer, footerFiltered);
     assertFilterToString(messages, messagesFiltered);
     
-    assertFilterToSame(withCopyright, withoutCopyright);
-    assertFilterToSame(withCitExtra, withoutCitExtra);
-    assertFilterToSame(withPager, withoutPager);
-    assertFilterToSame(withSidebar, withoutSidebar);
-    assertFilterToSame(withScript, withoutScript);
-    assertFilterToSame(withToolTip, withoutToolTip);
+    assertFilterToString(withCopyright, withoutCopyright);
+    assertFilterToString(withCitExtra, withoutCitExtra);
+    assertFilterToString(withPager, withoutPager);
+    assertFilterToString(withSidebar, withoutSidebar);
+    assertFilterToString(withScript, withoutScript);
+    assertFilterToString(withToolTip, withoutToolTip);
     
   }
   
-  private void assertFilterToSame(String str1, String str2) throws Exception {
-    
-    InputStream inA = fact.createFilteredInputStream(mau, new StringInputStream(str1),
-        Constants.DEFAULT_ENCODING);
-    InputStream inB = fact.createFilteredInputStream(mau, new StringInputStream(str2),
-        Constants.DEFAULT_ENCODING);
-    String actual = StringUtil.fromInputStream(inA);
-    String expected = StringUtil.fromInputStream(inB);
-    assertEquals(actual, expected, actual);
-  }
   
   //Don't put the 2nd string through the filter - use it as a constant
   private void assertFilterToString(String orgString, String finalString) throws Exception {
