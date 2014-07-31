@@ -12945,6 +12945,22 @@
   }
 
   {
+
+    title <
+      name = ILRReview: Industrial & Labor Relations Review ;
+      issn = 0019-7939 ;
+      eissn = 2162-271X 
+    >
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      param[base_url] = http://ilr.sagepub.com/
+
+      au < exists ; exists ; 2012 ; ILRReview: Industrial & Labor Relations Review Volume 65 ; 65 ; >
+      au < exists ; exists ; 2013 ; ILRReview: Industrial & Labor Relations Review Volume 66 ; 66 ; >
+      au < exists ; exists ; 2014 ; ILRReview: Industrial & Labor Relations Review Volume 67 ; 67 ; >
+  }
+
+  {
   
     title <
       name = ICAN: Infant, Child, & Adolescent Nutrition ;
