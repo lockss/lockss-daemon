@@ -1,5 +1,5 @@
 /*
- * $Id: WoltersKluwerSgmlAdapter.java,v 1.2 2014-07-22 02:09:28 thib_gc Exp $
+ * $Id: WoltersKluwerSgmlAdapter.java,v 1.3 2014-07-31 21:01:07 alexandraohlson Exp $
  */
 
 /*
@@ -35,10 +35,12 @@ package org.lockss.plugin.clockss.wolterskluwer;
 import java.io.Reader;
 import java.util.regex.Pattern;
 
+import org.lockss.util.LineRewritingReader;
+
 /*
  * After 1.66 comes out, extend org.lockss.util.LineRewritingReader instead.
  */
-public class WoltersKluwerSgmlAdapter extends RewritingReader {
+public class WoltersKluwerSgmlAdapter extends LineRewritingReader {
 
   public static final Pattern UNCLOSED_SGML_TAGS =
       Pattern.compile("<((COVER|SPP|TGP|XUI|MATH) [^>]+)>", Pattern.CASE_INSENSITIVE);
