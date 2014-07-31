@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireDrupalHtmlFilterFactory.java,v 1.6 2014-07-30 15:59:07 etenbrink Exp $
+ * $Id: HighWireDrupalHtmlFilterFactory.java,v 1.7 2014-07-31 21:50:54 etenbrink Exp $
  */
 
 /*
@@ -43,7 +43,6 @@ import org.htmlparser.NodeFilter;
 import org.htmlparser.Tag;
 import org.htmlparser.filters.*;
 import org.htmlparser.nodes.TextNode;
-import org.htmlparser.tags.Html;
 import org.htmlparser.util.NodeList;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.FilterUtil;
@@ -94,8 +93,7 @@ public class HighWireDrupalHtmlFilterFactory implements FilterFactory {
       @Override
       public NodeList transform(NodeList nodeList) throws IOException {
         NodeList nl = new NodeList();
-        boolean subst = true;
-        for (int sx = 0; sx < nodeList.size(); ) {
+        for (int sx = 0; sx < nodeList.size(); sx++) {
           Node snode = nodeList.elementAt(sx);
           if (snode instanceof Tag) {
             String tagName = ((Tag) snode).getTagName().toLowerCase();
@@ -104,24 +102,10 @@ public class HighWireDrupalHtmlFilterFactory implements FilterFactory {
             v.add(a);
             ((Tag) snode).setAttributesEx(v);
           }
-          if (snode instanceof Html) {
-            subst = false;
-            NodeList tnl = new NodeList ();
-            TextNode tn = new TextNode(snode.toPlainTextString());
-            tnl.add(tn);
-            snode.setChildren(tnl);
-            sx++;
-          } else {
-            nodeList.remove(sx);
-            log.debug("Removed snode: " + snode.toString());
-            NodeList tnl = new NodeList ();
-            TextNode tn = new TextNode(snode.toPlainTextString());
-            tnl.add(tn);
-            snode.setChildren(tnl);
-            nl.add(snode);
-          }
+          TextNode tn = new TextNode(snode.toPlainTextString());
+          nl.add(tn);
         }
-        return subst ? nl : nodeList;
+        return nl;
       }
     };
     
