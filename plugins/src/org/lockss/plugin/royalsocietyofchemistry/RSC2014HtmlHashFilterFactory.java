@@ -1,5 +1,5 @@
 /*
- * $Id: RSC2014HtmlHashFilterFactory.java,v 1.2 2014-07-01 18:23:01 etenbrink Exp $
+ * $Id: RSC2014HtmlHashFilterFactory.java,v 1.3 2014-07-31 22:31:25 etenbrink Exp $
  */
 
 /*
@@ -70,7 +70,9 @@ public class RSC2014HtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tag("head"),
     };
     
-    // HTML transform to html attributes that are moving around
+    // Transform to remove attributes from html and other tags
+    // some tag attributes changed based on IP or other status
+    // some attributes changed over time, either arbitrarily or sequentially
     HtmlTransform xform = new HtmlTransform() {
       @Override
       public NodeList transform(NodeList nodeList) throws IOException {
@@ -80,8 +82,13 @@ public class RSC2014HtmlHashFilterFactory implements FilterFactory {
             public void visitTag(Tag tag) {
               String tagName = tag.getTagName().toLowerCase();
               try {
-                if ("html".equals(tagName)) {
-                  Attribute a = tag.getAttributeEx("html");
+                if ("html".equals(tagName) ||
+                    "span".equals(tagName) ||
+                    "div".equals(tagName) ||
+                    "h1".equals(tagName) ||
+                    "h2".equals(tagName) ||
+                    "a".equals(tagName)) {
+                  Attribute a = tag.getAttributeEx(tagName);
                   Vector<Attribute> v = new Vector<Attribute>();
                   v.add(a);
                   tag.setAttributesEx(v);
