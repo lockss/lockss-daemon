@@ -1,5 +1,5 @@
 /*
- * $Id: TestRSC2014HtmlHashFilterFactory.java,v 1.3 2014-07-31 22:32:11 etenbrink Exp $
+ * $Id: TestRSC2014HtmlHashFilterFactory.java,v 1.4 2014-07-31 23:01:28 etenbrink Exp $
  */
 
 /*
@@ -95,8 +95,8 @@ public class TestRSC2014HtmlHashFilterFactory extends LockssTestCase {
       "title=\"Link via OpenURL Resolver\"><img src=\"http://pubs.rsc.org/en\"></a>.";
   
   private static final String withoutLinks = "" +
-      "A. A, A. K, H. S, and R. A, Native changes in <span class=\"italic\">Bacillus subtilis</span>" +
-      ", <span class=\"italic\">Jnl.</span>, year, <span class=\"bold\">2</span>(1), 80 87" +
+      "A. A, A. K, H. S, and R. A, Native changes in <span>Bacillus subtilis</span>" +
+      ", <span>Jnl.</span>, year, <span>2</span>(1), 80 87" +
       "<a>Left</a><a><img src=\"http://pubs.rsc.org/en\"></a>.";
   
   public void testFiltering() throws Exception {
