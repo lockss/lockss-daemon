@@ -117,9 +117,10 @@
 
     plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
     param[journal_id] = difi
+    comment[notReady] = PDF Plus file is temporarily unavailable
 
     au < crawling ; exists ; 2013 ; DIFI Family Research and Proceedings Volume 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; DIFI Family Research and Proceedings Volume 2014 ; 2014 >
+    au < notReady ; exists ; 2014 ; DIFI Family Research and Proceedings Volume 2014 ; 2014 >
 
   }
 
