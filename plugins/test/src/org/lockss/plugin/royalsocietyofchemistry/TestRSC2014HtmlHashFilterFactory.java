@@ -1,5 +1,5 @@
 /*
- * $Id: TestRSC2014HtmlHashFilterFactory.java,v 1.2 2014-07-01 18:21:30 etenbrink Exp $
+ * $Id: TestRSC2014HtmlHashFilterFactory.java,v 1.3 2014-07-31 22:32:11 etenbrink Exp $
  */
 
 /*
@@ -86,9 +86,23 @@ public class TestRSC2014HtmlHashFilterFactory extends LockssTestCase {
       "</body>" +
       "</html>";
   
+  private static final String withLinks = "" +
+      "A. A, A. K, H. S, and R. A, Native changes in <span class=\"italic\">Bacillus subtilis</span>" +
+      ", <span class=\"italic\">Jnl.</span>, year, <span class=\"bold\">2</span>(1), 80 87" +
+      "<a target=\"_blank\" class=\"Links\" href=\"http://www.rsc.org/\" " +
+      "title=\"Left in text\">Left</a>" +
+      "<a target=\"_blank\" class=\"URLLinks\" href=\"http://pubs.rsc.org/\" " +
+      "title=\"Link via OpenURL Resolver\"><img src=\"http://pubs.rsc.org/en\"></a>.";
+  
+  private static final String withoutLinks = "" +
+      "A. A, A. K, H. S, and R. A, Native changes in <span class=\"italic\">Bacillus subtilis</span>" +
+      ", <span class=\"italic\">Jnl.</span>, year, <span class=\"bold\">2</span>(1), 80 87" +
+      "<a>Left</a><a><img src=\"http://pubs.rsc.org/en\"></a>.";
+  
   public void testFiltering() throws Exception {
     assertFilterToSame(withScript, withoutScript);
     assertFilterToSame(withStuff, withoutStuff);
+    assertFilterToSame(withLinks, withoutLinks);
   }
   
   private void assertFilterToSame(String str1, String str2) throws Exception {
