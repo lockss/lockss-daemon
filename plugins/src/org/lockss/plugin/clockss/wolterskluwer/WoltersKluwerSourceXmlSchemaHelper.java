@@ -1,5 +1,5 @@
 /*
- * $Id: WoltersKluwerSourceXmlSchemaHelper.java,v 1.2 2014-07-25 17:34:46 aishizaki Exp $
+ * $Id: WoltersKluwerSourceXmlSchemaHelper.java,v 1.3 2014-07-31 17:41:14 aishizaki Exp $
  */
 
 /*
@@ -221,45 +221,36 @@ implements SourceXmlSchemaHelper {
    *  WoltersKluwer specific XPATH key definitions that we care about
    */
 
-  /* Under an item node, the interesting bits live at these relative locations */
-  // Just the pdf name is not under the WK_articleNode
-  //private static String WK_pdf = "//D/@AN";
+  // the pdf name still needs some help to match reality:
+  //   add a '0' to the front, add ".pdf" to the end
   private static String WK_pdf = "@AN";
 
   
   // The following are all under WK_articleNode = "/DG/D"
   // but are issue-level info
   /* title, subtitle */
-  private static String WK_journal_title =  ".//SO/PB";
-  private static String WK_issn = ".//ISN"; 
-  private static String WK_issue = ".//SO/IS/IP";
-  private static String WK_vol =".//SO/V";
+  private static String WK_journal_title =  "./BB/SO/PB";
+  private static String WK_issn = "./BB/SO/ISN"; 
+  private static String WK_issue = "./BB/SO/IS/IP";
+  private static String WK_vol ="./BB/SO/V";
   /* article title, subtitle */
   private static String WK_TITLENODE = "TG";
   private static String WK_TITLE = "TI";
   private static String WK_SUBTITLE = "STI";
-  private static String WK_article_title = ".//"+WK_TITLENODE;
+  private static String WK_article_title = "./BB/"+WK_TITLENODE;
   /* doi */
-  private static String WK_doi = ".//XUI/@UI";
-  
-  /* pages */
-  // made these public so that WoltersKluwerSourceXmlMetadataExtractorFactory can access
-  static String WK_pgs = ".//SO/PG";
-  static String WK_pgset = "//SO/PG";
-
+  private static String WK_doi = "./BB/XUI/@UI";
   /* published date */
   private static String WK_DY = "DY";
   private static String WK_MO = "MO";
   private static String WK_YR = "YR";
   private static String WK_DATENODE = "DA";
-  private static String WK_pubdate = ".//SO/"+WK_DATENODE;
+  private static String WK_pubdate = "./BB/SO/"+WK_DATENODE;
   /* author */
   private static String WK_FN = "FN";
   private static String WK_MN = "MN";
   private static String WK_SN = "SN";
-  private static String WK_author = ".//PN";
-
-  /* access_url  not set here */
+  private static String WK_author = "./BB/BY/PN";
 
   /*
    *  The following 3 variables are needed to use the XPathXmlMetadataParser
@@ -278,14 +269,13 @@ implements SourceXmlSchemaHelper {
     WK_articleMap.put(WK_vol, XmlDomMetadataExtractor.TEXT_VALUE);
     WK_articleMap.put(WK_author, WK_AUTHOR_VALUE);
     WK_articleMap.put(WK_pubdate, WK_DATE_VALUE);
-    WK_articleMap.put(WK_pgs, XmlDomMetadataExtractor.TEXT_VALUE); 
-    WK_articleMap.put(WK_pgset, XmlDomMetadataExtractor.TEXT_VALUE); 
+
   }
 
   /* 2.  Top level Nodepath */
   static private final String WK_articleNode = "/DG/D"; 
 
-  /* 3. WK global value we care about: the pdf names */ 
+  /* 3. WK global value we care about: none, so WK_globalMap is null */ 
   /*
   static private final Map<String,XPathValue> 
     WK_globalMap = new HashMap<String, XPathValue>();
@@ -318,7 +308,7 @@ implements SourceXmlSchemaHelper {
    */
   @Override
   public Map<String, XPathValue> getGlobalMetaMap() {
-    //return WK_globalMap;
+    //no globalMap, so returning null
     return null;
   }
 
