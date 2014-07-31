@@ -18,12 +18,12 @@
     
     param[journal_id] = bio
 
-    au < manifest ; 2009 ; Bioanalysis Volume 1 ; 1 >
-    au < manifest ; 2010 ; Bioanalysis Volume 2 ; 2 >
-    au < manifest ; 2011 ; Bioanalysis Volume 3 ; 3 >
+    au < testing ; 2009 ; Bioanalysis Volume 1 ; 1 >
+    au < testing ; 2010 ; Bioanalysis Volume 2 ; 2 >
+    au < testing ; 2011 ; Bioanalysis Volume 3 ; 3 >
     au < ready ; 2012 ; Bioanalysis Volume 4 ; 4 >
     au < ready ; 2013 ; Bioanalysis Volume 5 ; 5 >
-    au < manifest ; 2014 ; Bioanalysis Volume 6 ; 6 >
+    au < testing ; 2014 ; Bioanalysis Volume 6 ; 6 >
     
   }
 
@@ -75,7 +75,7 @@
     au < ready ; 2011 ; Clinical Investigation Volume 1 ; 1 >
     au < ready ; 2012 ; Clinical Investigation Volume 2 ; 2 >
     au < ready ; 2013 ; Clinical Investigation Volume 3 ; 3 >
-    au < manifest ; 2014 ; Clinical Investigation Volume 4 ; 4 >
+    au < testing ; 2014 ; Clinical Investigation Volume 4 ; 4 >
     
   }
 
@@ -88,14 +88,13 @@
     >
     
     param[journal_id] = fmc
-    comment[notReady] = PD-1054, low agreement of pdf, hash compare XX
 
-    au < notReady ; 2009 ; Future Medicinal Chemistry Volume 1 ; 1 >
+    au < ready ; 2009 ; Future Medicinal Chemistry Volume 1 ; 1 >
     au < ready ; 2010 ; Future Medicinal Chemistry Volume 2 ; 2 >
     au < ready ; 2011 ; Future Medicinal Chemistry Volume 3 ; 3 >
     au < ready ; 2012 ; Future Medicinal Chemistry Volume 4 ; 4 >
     au < ready ; 2013 ; Future Medicinal Chemistry Volume 5 ; 5 >
-    au < manifest ; 2014 ; Future Medicinal Chemistry Volume 6 ; 6 >
+    au < testing ; 2014 ; Future Medicinal Chemistry Volume 6 ; 6 >
     
   }
 
@@ -109,7 +108,7 @@
     param[journal_id] = pbp
 
     au < ready ; 2013 ; Pharmaceutical Bioprocessing Volume 1 ; 1 >
-    au < manifest ; 2014 ; Pharmaceutical Bioprocessing Volume 2 ; 2 >
+    au < testing ; 2014 ; Pharmaceutical Bioprocessing Volume 2 ; 2 >
     
   }
 
@@ -124,7 +123,7 @@
 
     au < ready ; 2012 ; Pharmaceutical Patent Analyst Volume 1 ; 1 >
     au < ready ; 2013 ; Pharmaceutical Patent Analyst Volume 2 ; 2 >
-    au < manifest ; 2014 ; Pharmaceutical Patent Analyst Volume 3 ; 3 >
+    au < testing ; 2014 ; Pharmaceutical Patent Analyst Volume 3 ; 3 >
     
   }
 
@@ -142,7 +141,7 @@
     au < ready ; 2011 ; Therapeutic Delivery Volume 2 ; 2 >
     au < ready ; 2012 ; Therapeutic Delivery Volume 3 ; 3 >
     au < ready ; 2013 ; Therapeutic Delivery Volume 4 ; 4 >
-    au < manifest ; 2014 ; Therapeutic Delivery Volume 5 ; 5 >
+    au < testing ; 2014 ; Therapeutic Delivery Volume 5 ; 5 >
     
   }
 
