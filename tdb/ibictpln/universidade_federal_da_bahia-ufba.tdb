@@ -166,8 +166,8 @@
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = cppgav
 
-      au < testing ; 2006 ; 1 ; Cadernos de PPGAV: Programa de Pós-Graduação em Artes Visuais Volume 2006 ; 2006 ; >
-      au < testing ; 2007 ; 2 ; Cadernos de PPGAV: Programa de Pós-Graduação em Artes Visuais Volume 2007 ; 2007 ; >
+      au < ready ; 2006 ; 1 ; Cadernos de PPGAV: Programa de Pós-Graduação em Artes Visuais Volume 2006 ; 2006 ; >
+      au < ready ; 2007 ; 2 ; Cadernos de PPGAV: Programa de Pós-Graduação em Artes Visuais Volume 2007 ; 2007 ; >
 
   }
 
@@ -182,7 +182,7 @@
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = nit
 
-      au < testing ; 2008 ; 1 ; Cadernos de Prospecção Volume 2008 ; 2008 ; >
+      au < ready ; 2008 ; 1 ; Cadernos de Prospecção Volume 2008 ; 2008 ; >
 
   }
 
@@ -197,15 +197,15 @@
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = ppgau
 
-      au < testing ; 2002 ; 1 ; Cadernos PPG-AU Volume 2002 ; 2002 ; >
-      au < testing ; 2003 ; 2 ; Cadernos PPG-AU Volume 2003 ; 2003 ; >
-      au < testing ; 2004 ; 3 ; Cadernos PPG-AU Volume 2004 ; 2004 ; >
-      au < testing ; 2005 ; 4 ; Cadernos PPG-AU Volume 2005 ; 2005 ; >
-      au < testing ; 2006 ; 5 ; Cadernos PPG-AU Volume 2006 ; 2006 ; >
-      au < testing ; 2007 ; 6 ; Cadernos PPG-AU Volume 2007 ; 2007 ; >
-      au < testing ; 2008 ; 7 ; Cadernos PPG-AU Volume 2008 ; 2008 ; >
+      au < ready ; 2002 ; 1 ; Cadernos PPG-AU Volume 2002 ; 2002 ; >
+      au < ready ; 2003 ; 2 ; Cadernos PPG-AU Volume 2003 ; 2003 ; >
+      au < ready ; 2004 ; 3 ; Cadernos PPG-AU Volume 2004 ; 2004 ; >
+      au < ready ; 2005 ; 4 ; Cadernos PPG-AU Volume 2005 ; 2005 ; >
+      au < ready ; 2006 ; 5 ; Cadernos PPG-AU Volume 2006 ; 2006 ; >
+      au < ready ; 2007 ; 6 ; Cadernos PPG-AU Volume 2007 ; 2007 ; >
+      au < ready ; 2008 ; 7 ; Cadernos PPG-AU Volume 2008 ; 2008 ; >
       au < notReady ; 2009 ; 8 ; Cadernos PPG-AU Volume 2009 ; 2009 ; no articles >
-      au < testing ; 2010 ; 9 ; Cadernos PPG-AU Volume 2010 ; 2010 ; >
+      au < ready ; 2010 ; 9 ; Cadernos PPG-AU Volume 2010 ; 2010 ; >
 
   }
 
@@ -247,12 +247,12 @@
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = rcvisual
 
-      au < testing ; 2007 ; 1 ; Cultura Visual Volume 2007 ; 2007 ; >
-      au < testing ; 2008 ; 2 ; Cultura Visual Volume 2008 ; 2008 ; >
-      au < testing ; 2009 ; 3 ; Cultura Visual Volume 2009 ; 2009 ; >
-      au < testing ; 2010 ; 4 ; Cultura Visual Volume 2010 ; 2010 ; >
-      au < testing ; 2011 ; 5 ; Cultura Visual Volume 2011 ; 2011 ; >
-      au < testing ; 2012 ; 6 ; Cultura Visual Volume 2012 ; 2012 ; >
+      au < ready ; 2007 ; 1 ; Cultura Visual Volume 2007 ; 2007 ; >
+      au < ready ; 2008 ; 2 ; Cultura Visual Volume 2008 ; 2008 ; >
+      au < ready ; 2009 ; 3 ; Cultura Visual Volume 2009 ; 2009 ; >
+      au < ready ; 2010 ; 4 ; Cultura Visual Volume 2010 ; 2010 ; >
+      au < ready ; 2011 ; 5 ; Cultura Visual Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 6 ; Cultura Visual Volume 2012 ; 2012 ; >
       au < ready ; 2013 ; 7 ; Cultura Visual Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 8 ; Cultura Visual Volume 2014 ; 2014 ; >
 
@@ -333,12 +333,12 @@
       param[journal_id] = revistaici
       comment[v2008] = bio has url with no http.  http://www.portalseer.ufba.br/index.php/revistaici/rt/bio/1779
 
-      au < testing ; 2007 ; 1 ; Ponto de Acesso Volume 2007 ; 2007 ; >
+      au < ready ; 2007 ; 1 ; Ponto de Acesso Volume 2007 ; 2007 ; >
       au < notReady ; 2008 ; 2 ; Ponto de Acesso Volume 2008 ; 2008 ; url with no http on bio 1779 >
       au < testing ; 2009 ; 3 ; Ponto de Acesso Volume 2009 ; 2009 ; >
-      au < testing ; 2010 ; 4 ; Ponto de Acesso Volume 2010 ; 2010 ; >
+      au < ready ; 2010 ; 4 ; Ponto de Acesso Volume 2010 ; 2010 ; >
       au < testing ; 2011 ; 5 ; Ponto de Acesso Volume 2011 ; 2011 ; >
-      au < testing ; 2012 ; 6 ; Ponto de Acesso Volume 2012 ; 2012 ; >
+      au < ready ; 2012 ; 6 ; Ponto de Acesso Volume 2012 ; 2012 ; >
       au < ready ; 2013 ; 7 ; Ponto de Acesso Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 8 ; Ponto de Acesso Volume 2014 ; 2014 ; >
 
@@ -356,11 +356,11 @@
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = revteatro
 
-      au < testing ; 2008 ; 1 ; Repertório: teatro & Dança Volume 2008 ; 2008 ; >
-      au < testing ; 2009 ; 2 ; Repertório: teatro & Dança Volume 2009 ; 2009 ; >
-      au < testing ; 2010 ; 3 ; Repertório: teatro & Dança Volume 2010 ; 2010 ; >
-      au < testing ; 2011 ; 4 ; Repertório: teatro & Dança Volume 2011 ; 2011 ; >
-      au < testing ; 2012 ; 5 ; Repertório: teatro & Dança Volume 2012 ; 2012 ; >
+      au < ready ; 2008 ; 1 ; Repertório: teatro & Dança Volume 2008 ; 2008 ; >
+      au < ready ; 2009 ; 2 ; Repertório: teatro & Dança Volume 2009 ; 2009 ; >
+      au < ready ; 2010 ; 3 ; Repertório: teatro & Dança Volume 2010 ; 2010 ; >
+      au < ready ; 2011 ; 4 ; Repertório: teatro & Dança Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 5 ; Repertório: teatro & Dança Volume 2012 ; 2012 ; >
       au < ready ; 2013 ; 6 ; Repertório: teatro & Dança Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 7 ; Repertório: teatro & Dança Volume 2014 ; 2014 ; >
 
@@ -432,12 +432,12 @@
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = rcontabilidade
 
-      au < testing ; 2007 ; 1 ; Revista de Contabilidade de UFBA Volume 2007 ; 2007 ; >
-      au < testing ; 2008 ; 2 ; Revista de Contabilidade de UFBA Volume 2008 ; 2008 ; >
-      au < testing ; 2009 ; 3 ; Revista de Contabilidade de UFBA Volume 2009 ; 2009 ; >
-      au < testing ; 2010 ; 4 ; Revista de Contabilidade de UFBA Volume 2010 ; 2010 ; >
-      au < testing ; 2011 ; 5 ; Revista de Contabilidade de UFBA Volume 2011 ; 2011 ; >
-      au < testing ; 2012 ; 6 ; Revista de Contabilidade de UFBA Volume 2012 ; 2012 ; >
+      au < ready ; 2007 ; 1 ; Revista de Contabilidade de UFBA Volume 2007 ; 2007 ; >
+      au < ready ; 2008 ; 2 ; Revista de Contabilidade de UFBA Volume 2008 ; 2008 ; >
+      au < ready ; 2009 ; 3 ; Revista de Contabilidade de UFBA Volume 2009 ; 2009 ; >
+      au < ready ; 2010 ; 4 ; Revista de Contabilidade de UFBA Volume 2010 ; 2010 ; >
+      au < ready ; 2011 ; 5 ; Revista de Contabilidade de UFBA Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 6 ; Revista de Contabilidade de UFBA Volume 2012 ; 2012 ; >
       au < ready ; 2013 ; 7 ; Revista de Contabilidade de UFBA Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 8 ; Revista de Contabilidade de UFBA Volume 2014 ; 2014 ; >
 
@@ -455,23 +455,23 @@
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = entreideias
 
-      au < testing ; 1994 ; 1 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 1994 ; 1994 ; >
-      au < testing ; 1997 ; 4 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 1997 ; 1997 ; >
-      au < testing ; 1998 ; 5 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 1998 ; 1998 ; >
-      au < testing ; 1999 ; 6 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 1999 ; 1999 ; >
-      au < testing ; 2000 ; 7 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2000 ; 2000 ; >
-      au < testing ; 2001 ; 8 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2001 ; 2001 ; >
-      au < testing ; 2002 ; 9 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2002 ; 2002 ; >
-      au < testing ; 2003 ; 10 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2003 ; 2003 ; >
-      au < testing ; 2004 ; 11 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2004 ; 2004 ; >
-      au < testing ; 2005 ; 12 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2005 ; 2005 ; >
-      au < testing ; 2006 ; 13 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2006 ; 2006 ; >
-      au < testing ; 2007 ; 14 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2007 ; 2007 ; >
-      au < testing ; 2008 ; 15 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2008 ; 2008 ; >
-      au < testing ; 2009 ; 16 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2009 ; 2009 ; >
-      au < testing ; 2010 ; 17 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2010 ; 2010 ; >
-      au < testing ; 2011 ; 18 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2011 ; 2011 ; >
-      au < testing ; 2012 ; 19 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2012 ; 2012 ; >
+      au < ready ; 1994 ; 1 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 1994 ; 1994 ; >
+      au < ready ; 1997 ; 4 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 1997 ; 1997 ; >
+      au < ready ; 1998 ; 5 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 1998 ; 1998 ; >
+      au < ready ; 1999 ; 6 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 1999 ; 1999 ; >
+      au < ready ; 2000 ; 7 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2000 ; 2000 ; >
+      au < ready ; 2001 ; 8 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2001 ; 2001 ; >
+      au < ready ; 2002 ; 9 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2002 ; 2002 ; >
+      au < ready ; 2003 ; 10 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2003 ; 2003 ; >
+      au < ready ; 2004 ; 11 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2004 ; 2004 ; >
+      au < ready ; 2005 ; 12 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2005 ; 2005 ; >
+      au < ready ; 2006 ; 13 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2006 ; 2006 ; >
+      au < ready ; 2007 ; 14 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2007 ; 2007 ; >
+      au < ready ; 2008 ; 15 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2008 ; 2008 ; >
+      au < ready ; 2009 ; 16 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2009 ; 2009 ; >
+      au < ready ; 2010 ; 17 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2010 ; 2010 ; >
+      au < ready ; 2011 ; 18 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 19 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2012 ; 2012 ; >
       au < ready ; 2013 ; 20 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 21 ; Revista Entreideias: Educação, Cultura e Sociedade Volume 2014 ; 2014 ; >
 
