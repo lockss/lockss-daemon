@@ -6,7 +6,7 @@
     info[tester] = S
   >
 
-    plugin = needs.plugin
+    plugin = needs.SourcePlugin
     param[base_url] = http://books.bradypus.net/
 
     {
