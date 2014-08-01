@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdbq.py,v 1.24 2014-05-21 21:01:15 thib_gc Exp $
+# $Id: tdbq.py,v 1.25 2014-08-01 21:09:04 thib_gc Exp $
 
 __copyright__ = '''\
 
@@ -29,7 +29,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '''0.4.5'''
+__version__ = '''0.4.6'''
 
 from optparse import OptionGroup, OptionParser
 import re
@@ -95,6 +95,10 @@ class TdbqConstants:
     OPTION_READY_SHORT = 'Y'
     OPTION_READY_HELP = 'keep AUs whose status is "%s"' % (AU.Status.READY,)
     
+    OPTION_READY_SOURCE = 'readySource'
+    OPTION_READY_SOURCE_SHORT = 'O'
+    OPTION_READY_SOURCE_HELP = 'keep AUs whose status is "%s"' % (AU.Status.READY_SOURCE,)
+    
     OPTION_RELEASED = 'released'
     OPTION_RELEASED_SHORT = 'R'
     OPTION_RELEASED_HELP = 'keep AUs whose status is "%s"' % (AU.Status.RELEASED,)
@@ -122,6 +126,7 @@ class TdbqConstants:
                            AU.Status.TESTING,
                            AU.Status.NOT_READY,
                            AU.Status.READY,
+                           AU.Status.READY_SOURCE,
                            AU.Status.CRAWLING,
                            AU.Status.DEEP_CRAWL,
                            AU.Status.FROZEN,
@@ -157,6 +162,7 @@ class TdbqConstants:
                        OPTION_DEEP_CRAWL_SHORT,
                        OPTION_MANIFEST_SHORT,
                        OPTION_NOT_READY_SHORT,
+                       OPTION_READY_SOURCE_SHORT,
                        OPTION_PRODUCTION_SHORT,
                        OPTION_RELEASED_SHORT,
                        OPTION_SUPERSEDED_SHORT,
@@ -594,6 +600,7 @@ def __option_parser__(parser=None):
                                (TdbqConstants.OPTION_TESTING_SHORT, TdbqConstants.OPTION_TESTING, TdbqConstants.OPTION_TESTING_HELP, AU.Status.TESTING),
                                (TdbqConstants.OPTION_NOT_READY_SHORT, TdbqConstants.OPTION_NOT_READY, TdbqConstants.OPTION_NOT_READY_HELP, AU.Status.NOT_READY),
                                (TdbqConstants.OPTION_READY_SHORT, TdbqConstants.OPTION_READY, TdbqConstants.OPTION_READY_HELP, AU.Status.READY),
+                               (TdbqConstants.OPTION_READY_SOURCE_SHORT, TdbqConstants.OPTION_READY_SOURCE, TdbqConstants.OPTION_READY_SOURCE_HELP, AU.Status.READY_SOURCE),
                                (TdbqConstants.OPTION_CRAWLING_SHORT, TdbqConstants.OPTION_CRAWLING, TdbqConstants.OPTION_CRAWLING_HELP, AU.Status.CRAWLING),
                                (TdbqConstants.OPTION_DEEP_CRAWL_SHORT, TdbqConstants.OPTION_DEEP_CRAWL, TdbqConstants.OPTION_DEEP_CRAWL_HELP, AU.Status.DEEP_CRAWL),
                                (TdbqConstants.OPTION_FROZEN_SHORT, TdbqConstants.OPTION_FROZEN, TdbqConstants.OPTION_FROZEN_HELP, AU.Status.FROZEN),
