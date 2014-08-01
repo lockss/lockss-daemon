@@ -11,11 +11,11 @@
       issn = 1860-5974 ;
       issnl = 1860-5974
     >
-	
+
     rights = openaccess
-	
-	comment[ojs] = cannot find manifest pages following the rule of OJSplugin
-	
+
+    comment[ojs] = content stored on arxiv, not at local base_url. Publisher does not respond. See RT4320
+
     {
     
       plugin = org.lockss.plugin.ojs.OJSPlugin
