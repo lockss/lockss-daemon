@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlWsResult.java,v 1.2 2014-06-05 05:48:47 fergaloy-sf Exp $
+ * $Id: CrawlWsResult.java,v 1.3 2014-08-01 17:13:35 fergaloy-sf Exp $
  */
 
 /*
@@ -39,7 +39,9 @@ import java.util.List;
  * query.
  */
 public class CrawlWsResult {
+  private String auId;
   private String auName;
+  private String crawlKey;
   private String crawlType;
   private Long startTime;
   private Long duration;
@@ -66,6 +68,18 @@ public class CrawlWsResult {
   private Integer linkDepth;
 
   /**
+   * Provides the Archival Unit identifier.
+   * 
+   * @return a String with the identifier.
+   */
+  public String getAuId() {
+    return auId;
+  }
+  public void setAuId(String auId) {
+    this.auId = auId;
+  }
+
+  /**
    * Provides the Archival Unit name.
    * 
    * @return a String with the name.
@@ -76,7 +90,19 @@ public class CrawlWsResult {
   public void setAuName(String auName) {
     this.auName = auName;
   }
-  
+
+  /**
+   * Provides the crawl key.
+   * 
+   * @return a String with the crawl key.
+   */
+public String getCrawlKey() {
+    return crawlKey;
+  }
+  public void setCrawlKey(String crawlKey) {
+    this.crawlKey = crawlKey;
+  }
+
   /**
    * Provides the type of crawl.
    * 
@@ -368,21 +394,21 @@ public String getCrawlType() {
 
   @Override
   public String toString() {
-    return "CrawlWsResult [auName=" + auName + ", crawlType=" + crawlType
-	+ ", startTime=" + startTime + ", duration=" + duration
-	+ ", crawlStatus=" + crawlStatus + ", bytesFetchedCount="
-	+ bytesFetchedCount + ", pagesFetchedCount=" + pagesFetchedCount
-	+ ", pagesFetched=" + pagesFetched + ", pagesParsedCount="
-	+ pagesParsedCount + ", pagesParsed=" + pagesParsed
-	+ ", pagesPendingCount=" + pagesPendingCount + ", pagesPending="
-	+ pagesPending + ", pagesExcludedCount=" + pagesExcludedCount
-	+ ", pagesExcluded=" + pagesExcluded + ", offSiteUrlsExcludedCount="
-	+ offSiteUrlsExcludedCount + ", pagesNotModifiedCount="
-	+ pagesNotModifiedCount + ", pagesNotModified=" + pagesNotModified
-	+ ", pagesWithErrorsCount=" + pagesWithErrorsCount
-	+ ", pagesWithErrors=" + pagesWithErrors + ", mimeTypeCount="
-	+ mimeTypeCount + ", mimeTypes=" + mimeTypes + ", sources=" + sources
-	+ ", startingUrls=" + startingUrls + ", refetchDepth=" + refetchDepth
-	+ ", linkDepth=" + linkDepth + "]";
+    return "CrawlWsResult [auId=" + auId + ", auName=" + auName + ", crawlKey="
+	+ crawlKey + ", crawlType=" + crawlType + ", startTime=" + startTime
+	+ ", duration=" + duration + ", crawlStatus=" + crawlStatus
+	+ ", bytesFetchedCount=" + bytesFetchedCount + ", pagesFetchedCount="
+	+ pagesFetchedCount + ", pagesFetched=" + pagesFetched
+	+ ", pagesParsedCount=" + pagesParsedCount + ", pagesParsed="
+	+ pagesParsed + ", pagesPendingCount=" + pagesPendingCount
+	+ ", pagesPending=" + pagesPending + ", pagesExcludedCount="
+	+ pagesExcludedCount + ", pagesExcluded=" + pagesExcluded
+	+ ", offSiteUrlsExcludedCount="	+ offSiteUrlsExcludedCount
+	+ ", pagesNotModifiedCount=" + pagesNotModifiedCount
+	+ ", pagesNotModified=" + pagesNotModified + ", pagesWithErrorsCount="
+	+ pagesWithErrorsCount + ", pagesWithErrors=" + pagesWithErrors
+	+ ", mimeTypeCount=" + mimeTypeCount + ", mimeTypes=" + mimeTypes
+	+ ", sources=" + sources + ", startingUrls=" + startingUrls
+	+ ", refetchDepth=" + refetchDepth + ", linkDepth=" + linkDepth + "]";
   }
 }

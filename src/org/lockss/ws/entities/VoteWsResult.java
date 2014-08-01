@@ -1,5 +1,5 @@
 /*
- * $Id: VoteWsResult.java,v 1.2 2014-06-05 05:48:47 fergaloy-sf Exp $
+ * $Id: VoteWsResult.java,v 1.3 2014-08-01 17:13:35 fergaloy-sf Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ package org.lockss.ws.entities;
  * query.
  */
 public class VoteWsResult {
+  private String auId;
   private String auName;
   private String callerId;
   private String voteStatus;
@@ -57,6 +58,18 @@ public class VoteWsResult {
   private Integer disagreedUrlCount;
   private Integer pollerOnlyUrlCount;
   private Integer voterOnlyUrlCount;
+
+  /**
+   * Provides the Archival Unit identifier.
+   * 
+   * @return a String with the identifier.
+   */
+  public String getAuId() {
+    return auId;
+  }
+  public void setAuId(String auId) {
+    this.auId = auId;
+  }
 
   /**
    * Provides the Archival Unit name.
@@ -315,8 +328,8 @@ public class VoteWsResult {
 
   @Override
   public String toString() {
-    return "VoteWsResult [auName=" + auName + ", callerId=" + callerId
-	+ ", voteStatus=" + voteStatus + ", startTime=" + startTime
+    return "VoteWsResult [auId=" + auId + ", auName=" + auName + ", callerId="
+	+ callerId + ", voteStatus=" + voteStatus + ", startTime=" + startTime
 	+ ", deadline=" + deadline + ", voteKey=" + voteKey + ", isPollActive="
 	+ isPollActive + ", currentState=" + currentState + ", errorDetail="
 	+ errorDetail + ", voteDeadline=" + voteDeadline + ", duration="

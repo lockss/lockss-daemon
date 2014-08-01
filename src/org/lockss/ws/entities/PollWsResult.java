@@ -1,5 +1,5 @@
 /*
- * $Id: PollWsResult.java,v 1.2 2014-06-05 05:48:47 fergaloy-sf Exp $
+ * $Id: PollWsResult.java,v 1.3 2014-08-01 17:13:35 fergaloy-sf Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import java.util.Set;
  * query.
  */
 public class PollWsResult {
+  private String auId;
   private String auName;
   private Integer participantCount;
   private String pollStatus;
@@ -74,6 +75,18 @@ public class PollWsResult {
   private Long bytesReadCount;
   private Integer quorum;
   private List<ParticipantWsResult> participants;
+
+  /**
+   * Provides the Archival Unit identifier.
+   * 
+   * @return a String with the identifier.
+   */
+  public String getAuId() {
+    return auId;
+  }
+  public void setAuId(String auId) {
+    this.auId = auId;
+  }
 
   /**
    * Provides the Archival Unit name.
@@ -489,9 +502,9 @@ public class PollWsResult {
 
   @Override
   public String toString() {
-    return "PollWsResult [auName=" + auName + ", participantCount="
-	+ participantCount + ", pollStatus=" + pollStatus
-	+ ", talliedUrlCount=" + talliedUrlCount + ", talliedUrls="
+    return "PollWsResult [auId=" + auId + ", auName=" + auName
+	+ ", participantCount=" + participantCount + ", pollStatus="
+	+ pollStatus + ", talliedUrlCount=" + talliedUrlCount + ", talliedUrls="
 	+ talliedUrls + ", hashErrorCount=" + hashErrorCount + ", errorUrls="
 	+ errorUrls + ", completedRepairCount=" + completedRepairCount
 	+ ", completedRepairs=" + completedRepairs + ", percentAgreement="

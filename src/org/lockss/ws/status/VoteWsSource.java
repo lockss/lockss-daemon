@@ -1,5 +1,5 @@
 /*
- * $Id: VoteWsSource.java,v 1.1 2014-04-25 23:10:59 fergaloy-sf Exp $
+ * $Id: VoteWsSource.java,v 1.2 2014-08-01 17:13:35 fergaloy-sf Exp $
  */
 
 /*
@@ -30,10 +30,6 @@
 
  */
 
-/**
- * Container for the information that is used as the source for a query related
- * to votes.
- */
 package org.lockss.ws.status;
 
 import org.lockss.poller.v3.V3Voter;
@@ -44,9 +40,14 @@ import org.lockss.util.ByteArray;
 import org.lockss.util.TimeBase;
 import org.lockss.ws.entities.VoteWsResult;
 
+/**
+ * Container for the information that is used as the source for a query related
+ * to votes.
+ */
 public class VoteWsSource extends VoteWsResult {
   private V3Voter vote;
 
+  private boolean auIdPopulated = false;
   private boolean auNamePopulated = false;
   private boolean callerIdPopulated = false;
   private boolean voteStatusPopulated = false;
@@ -74,6 +75,17 @@ public class VoteWsSource extends VoteWsResult {
 
   public VoteWsSource(V3Voter vote) {
     this.vote = vote;
+  }
+
+  @Override
+  public String getAuId() {
+    if (!auIdPopulated) {
+      setAuId(vote.getAu().getAuId());
+
+      auIdPopulated = true;
+    }
+
+    return super.getAuId();
   }
 
   @Override

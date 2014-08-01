@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlWsSource.java,v 1.1 2014-04-25 23:10:59 fergaloy-sf Exp $
+ * $Id: CrawlWsSource.java,v 1.2 2014-08-01 17:13:35 fergaloy-sf Exp $
  */
 
 /*
@@ -30,10 +30,6 @@
 
  */
 
-/**
- * Container for the information that is used as the source for a query related
- * to crawls.
- */
 package org.lockss.ws.status;
 
 import java.util.ArrayList;
@@ -47,11 +43,17 @@ import org.lockss.util.TimeBase;
 import org.lockss.ws.entities.CrawlWsResult;
 import org.lockss.ws.entities.UrlErrorWsResult;
 
+/**
+ * Container for the information that is used as the source for a query related
+ * to crawls.
+ */
 public class CrawlWsSource extends CrawlWsResult {
   private CrawlerStatus crawlerStatus = null;
   private CrawlReq crawlerRequest = null;
 
+  private boolean auIdPopulated = false;
   private boolean auNamePopulated = false;
+  private boolean crawlKeyPopulated = false;
   private boolean crawlTypePopulated = false;
   private boolean startTimePopulated = false;
   private boolean durationPopulated = false;
@@ -90,6 +92,21 @@ public class CrawlWsSource extends CrawlWsResult {
   }
 
   @Override
+  public String getAuId() {
+    if (!auIdPopulated) {
+      if (isStatus) {
+	setAuId(crawlerStatus.getAuId());
+      } else {
+	setAuId(crawlerRequest.getAu().getAuId());
+      }
+
+      auIdPopulated = true;
+    }
+
+    return super.getAuId();
+  }
+
+  @Override
   public String getAuName() {
     if (!auNamePopulated) {
       if (isStatus) {
@@ -102,6 +119,19 @@ public class CrawlWsSource extends CrawlWsResult {
     }
 
     return super.getAuName();
+  }
+
+  @Override
+  public String getCrawlKey() {
+    if (!crawlKeyPopulated) {
+      if (isStatus) {
+	setCrawlKey(crawlerStatus.getKey());
+      }
+
+      crawlKeyPopulated = true;
+    }
+
+    return super.getCrawlKey();
   }
 
   @Override

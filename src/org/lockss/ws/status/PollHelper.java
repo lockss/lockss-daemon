@@ -1,5 +1,5 @@
 /*
- * $Id: PollHelper.java,v 1.2 2014-05-29 16:53:45 fergaloy-sf Exp $
+ * $Id: PollHelper.java,v 1.3 2014-08-01 17:13:35 fergaloy-sf Exp $
  */
 
 /*
@@ -30,9 +30,6 @@
 
  */
 
-/**
- * Helper of the DaemonStatus web service implementation of poll queries.
- */
 package org.lockss.ws.status;
 
 import java.util.ArrayList;
@@ -47,6 +44,9 @@ import org.lockss.poller.v3.V3Poller;
 import org.lockss.util.Logger;
 import org.lockss.ws.entities.PollWsResult;
 
+/**
+ * Helper of the DaemonStatus web service implementation of poll queries.
+ */
 public class PollHelper {
   /**
    * The fully-qualified name of the class of the objects used as source in a
@@ -62,6 +62,7 @@ public class PollHelper {
   //
   // Property names used in poll queries.
   //
+  static String AU_ID = "auId";
   static String AU_NAME = "auName";
   static String PARTICIPANT_COUNT = "participantCount";
   static String POLL_STATUS = "pollStatus";
@@ -103,6 +104,7 @@ public class PollHelper {
   @SuppressWarnings("serial")
   static final Set<String> PROPERTY_NAMES = new HashSet<String>() {
     {
+      add(AU_ID);
       add(AU_NAME);
       add(PARTICIPANT_COUNT);
       add(POLL_STATUS);
@@ -219,9 +221,19 @@ public class PollHelper {
     StringBuilder builder = new StringBuilder("PollWsResult [");
     boolean isFirst = true;
 
-    if (result.getAuName() != null) {
-      builder.append("auName=").append(result.getAuName());
+    if (result.getAuId() != null) {
+      builder.append("auId=").append(result.getAuId());
       isFirst = false;
+    }
+
+    if (result.getAuName() != null) {
+      if (!isFirst) {
+	builder.append(", ");
+      } else {
+	isFirst = false;
+      }
+
+      builder.append("auName=").append(result.getAuName());
     }
 
     if (result.getParticipantCount() != null) {

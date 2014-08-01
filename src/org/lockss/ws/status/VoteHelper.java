@@ -1,5 +1,5 @@
 /*
- * $Id: VoteHelper.java,v 1.2 2014-05-29 16:53:45 fergaloy-sf Exp $
+ * $Id: VoteHelper.java,v 1.3 2014-08-01 17:13:35 fergaloy-sf Exp $
  */
 
 /*
@@ -30,9 +30,6 @@
 
  */
 
-/**
- * Helper of the DaemonStatus web service implementation of vote queries.
- */
 package org.lockss.ws.status;
 
 import java.util.ArrayList;
@@ -46,6 +43,9 @@ import org.lockss.poller.v3.V3Voter;
 import org.lockss.util.Logger;
 import org.lockss.ws.entities.VoteWsResult;
 
+/**
+ * Helper of the DaemonStatus web service implementation of vote queries.
+ */
 public class VoteHelper {
   /**
    * The fully-qualified name of the class of the objects used as source in a
@@ -61,6 +61,7 @@ public class VoteHelper {
   //
   // Property names used in vote queries.
   //
+  static String AU_ID = "auId";
   static String AU_NAME = "auName";
   static String CALLER_ID = "callerId";
   static String VOTE_STATUS = "voteStatus";
@@ -89,6 +90,7 @@ public class VoteHelper {
   @SuppressWarnings("serial")
   static final Set<String> PROPERTY_NAMES = new HashSet<String>() {
     {
+      add(AU_ID);
       add(AU_NAME);
       add(CALLER_ID);
       add(VOTE_STATUS);
@@ -185,9 +187,19 @@ public class VoteHelper {
     StringBuilder builder = new StringBuilder("VoteWsResult [");
     boolean isFirst = true;
 
-    if (result.getAuName() != null) {
-      builder.append("auName=").append(result.getAuName());
+    if (result.getAuId() != null) {
+      builder.append("auId=").append(result.getAuId());
       isFirst = false;
+    }
+
+    if (result.getAuName() != null) {
+      if (!isFirst) {
+	builder.append(", ");
+      } else {
+	isFirst = false;
+      }
+
+      builder.append("auName=").append(result.getAuName());
     }
 
     if (result.getCallerId() != null) {

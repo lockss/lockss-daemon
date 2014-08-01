@@ -1,5 +1,5 @@
 /*
- * $Id: PollWsSource.java,v 1.1 2014-04-29 19:47:04 fergaloy-sf Exp $
+ * $Id: PollWsSource.java,v 1.2 2014-08-01 17:13:35 fergaloy-sf Exp $
  */
 
 /*
@@ -30,10 +30,6 @@
 
  */
 
-/**
- * Container for the information that is used as the source for a query related
- * to polls.
- */
 package org.lockss.ws.status;
 
 import java.util.ArrayList;
@@ -52,9 +48,14 @@ import org.lockss.ws.entities.ParticipantWsResult;
 import org.lockss.ws.entities.PollWsResult;
 import org.lockss.ws.entities.RepairWsResult;
 
+/**
+ * Container for the information that is used as the source for a query related
+ * to polls.
+ */
 public class PollWsSource extends PollWsResult {
   private V3Poller poll;
 
+  private boolean auIdPopulated = false;
   private boolean auNamePopulated = false;
   private boolean participantCountPopulated = false;
   private boolean pollStatusPopulated = false;
@@ -93,6 +94,9 @@ public class PollWsSource extends PollWsResult {
   private boolean isPoll;
 
   public PollWsSource(ArchivalUnit au) {
+    setAuId(au.getAuId());
+    auIdPopulated = true;
+
     setAuName(au.getName());
     auNamePopulated = true;
 
@@ -139,6 +143,19 @@ public class PollWsSource extends PollWsResult {
   public PollWsSource(V3Poller poll) {
     this.poll = poll;
     isPoll = true;
+  }
+
+  @Override
+  public String getAuId() {
+    if (!auIdPopulated) {
+      if (isPoll) {
+	setAuId(poll.getAu().getAuId());
+      }
+
+      auIdPopulated = true;
+    }
+
+    return super.getAuId();
   }
 
   @Override
