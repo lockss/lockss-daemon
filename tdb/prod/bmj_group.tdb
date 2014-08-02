@@ -1850,7 +1850,8 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
       title <
         name = Lupus Science & Medicine ;
-        eissn = 2053-8790
+        eissn = 2053-8790 ;
+        info[hw_jcode] = lupusscimed
     >
 
     {
