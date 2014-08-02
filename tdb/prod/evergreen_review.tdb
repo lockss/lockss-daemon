@@ -17,9 +17,13 @@
 
     rights = openaccess
 
-comment[er1] = manifest statement is gone, probably different URL structure
-comment[pjg1] = new plugin needed once publisher restores manifests, RU3628 RT3875
+comment[pjg1] = new plugin needed RU3628 RT3875
  
+   {
+    plugin = org.lockss.plugin.evergreenreview.EvergreenReviewPlugin
+    implicit < status ; year ; name ; param[volume_name] >
+    param[base_url] = http://www.evergreenreview.com/ 
+
     au < down ; 1998 ; Evergreen Review 100 ; 100 >
     au < down ; 1998-1999 ; Evergreen Review 101 ; 101 >
     au < down ; 1999 ; Evergreen Review 102 ; 102 >
@@ -31,6 +35,12 @@ comment[pjg1] = new plugin needed once publisher restores manifests, RU3628 RT38
     au < down ; 2004 ; Evergreen Review 108 ; 108 >
     au < down ; 2004 ; Evergreen Review 109 ; 109 >
     au < down ; 2004-2005 ; Evergreen Review 110 ; 110 >
+   }
+   {
+    plugin = needs.plugins
+    implicit < status ; year ; name ; param[volume_name] >
+    param[base_url] = http://www.evergreenreview.com/ 
+
     au < exists ; 2006 ; Evergreen Review 111 ; 111 >
     au < exists ; 2007 ; Evergreen Review 112 ; 112 >
     au < exists ; 2007 ; Evergreen Review 113 ; 113 >
@@ -50,7 +60,8 @@ comment[pjg1] = new plugin needed once publisher restores manifests, RU3628 RT38
     au < exists ; 2011 ; Evergreen Review 127 ; 127 >
     au < exists ; 2011 ; Evergreen Review 128 ; 128 >
     au < exists ; 2012 ; Evergreen Review 129 ; 129 >
+   }
   
   }
-  
+
 }
