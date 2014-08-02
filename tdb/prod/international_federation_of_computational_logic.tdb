@@ -14,11 +14,11 @@
 
     rights = openaccess
 
-    comment[ojs] = content stored on arxiv, not at local base_url. Publisher does not respond. See RT4320
+    comment[ojs] = content stored on arxiv, not at local base_url. Not ojs. Publisher does not respond. See RT4320
 
     {
     
-      plugin = org.lockss.plugin.ojs.OJSPlugin
+      plugin = needs.plugin
       param[base_url] = http://www.lmcs-online.org/ojs/
       implicit < status ; year ; name ; volume ; param[year] >
     
