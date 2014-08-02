@@ -5,11 +5,6 @@
     info[tester] = 4
   >
   
-  plugin = org.lockss.plugin.internationalunionofcrystallography.InternationalUnionOfCrystallographyPlugin
-  param[base_url] = http://journals.iucr.org/
-  param[scripts_url] = http://scripts.iucr.org/
-  implicit < status ; year ; volume ; name ; param[year] ; param[issue] >
-  
   {
   
     title <
@@ -22,6 +17,11 @@
     
     comment[doNotProcess] = Moving to a new platform by October 2014.
     comment[publisher] = Publisher requests preservation of 2008 to present only.
+
+    plugin = org.lockss.plugin.internationalunionofcrystallography.InternationalUnionOfCrystallographyPlugin
+    param[base_url] = http://journals.iucr.org/
+    param[scripts_url] = http://scripts.iucr.org/
+    implicit < status ; year ; volume ; name ; param[year] ; param[issue] >
 
     au < manifest ; 2008 ; 64 ; Acta Crystallographica Section E: Structure Reports Online Volume 64 Part 1 ; 2008 ; 01 >
     au < manifest ; 2008 ; 64 ; Acta Crystallographica Section E: Structure Reports Online Volume 64 Part 2 ; 2008 ; 02 >
@@ -82,19 +82,19 @@
     au < released ; 2012 ; 68 ; Acta Crystallographica Section E: Structure Reports Online Volume 68 Part 9 ; 2012 ; 09 >
     au < released ; 2012 ; 68 ; Acta Crystallographica Section E: Structure Reports Online Volume 68 Part 10 ; 2012 ; 10 >
     au < released ; 2012 ; 68 ; Acta Crystallographica Section E: Structure Reports Online Volume 68 Part 11 ; 2012 ; 11 >
-    au < manifest ; 2012 ; 68 ; Acta Crystallographica Section E: Structure Reports Online Volume 68 Part 12 ; 2012 ; 12 >
-    au < manifest ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 Part 1 ; 2013 ; 01 >
-    au < manifest ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 Part 2 ; 2013 ; 02 >
-    au < manifest ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 Part 3 ; 2013 ; 03 >
-    au < manifest ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 Part 4 ; 2013 ; 04 >
-    au < manifest ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 Part 5 ; 2013 ; 05 >
-    au < manifest ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 Part 6 ; 2013 ; 06 >
-    au < manifest ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 Part 7 ; 2013 ; 07 >
-    au < manifest ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 Part 8 ; 2013 ; 08 >
-    au < manifest ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 Part 9 ; 2013 ; 09 >
-    au < manifest ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 Part 10 ; 2013 ; 10 >
-    au < manifest ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 Part 11 ; 2013 ; 11 >
-    au < manifest ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 Part 12 ; 2013 ; 12 >
+    au < doNotProcess ; 2012 ; 68 ; Acta Crystallographica Section E: Structure Reports Online Volume 68 Part 12 ; 2012 ; 12 >
+    au < doNotProcess ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 Part 1 ; 2013 ; 01 >
+    au < doNotProcess ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 Part 2 ; 2013 ; 02 >
+    au < doNotProcess ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 Part 3 ; 2013 ; 03 >
+    au < doNotProcess ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 Part 4 ; 2013 ; 04 >
+    au < doNotProcess ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 Part 5 ; 2013 ; 05 >
+    au < doNotProcess ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 Part 6 ; 2013 ; 06 >
+    au < doNotProcess ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 Part 7 ; 2013 ; 07 >
+    au < doNotProcess ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 Part 8 ; 2013 ; 08 >
+    au < doNotProcess ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 Part 9 ; 2013 ; 09 >
+    au < doNotProcess ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 Part 10 ; 2013 ; 10 >
+    au < doNotProcess ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 Part 11 ; 2013 ; 11 >
+    au < doNotProcess ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 Part 12 ; 2013 ; 12 >
     au < doNotProcess ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 Part 1 ; 2014 ; 01 >
     au < doNotProcess ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 Part 2 ; 2014 ; 02 >
     au < doNotProcess ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 Part 3 ; 2014 ; 03 >
@@ -117,6 +117,12 @@
       eissn = 2052-2525 ;
       issnl = 2052-2525
     >
+    
+    plugin = needs.plugin
+    param[base_url] = http://journals.iucr.org/
+    param[scripts_url] = http://scripts.iucr.org/
+    implicit < status ; year ; volume ; name ; param[year] ; param[issue] >
+
     
     param[journal_id] = m
     
