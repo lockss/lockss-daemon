@@ -17,7 +17,7 @@
     param[base_url] = http://www.eumed.net/entelequia/
     implicit < status ; year ; name ; param[volume] >
 
-    comment[entelequia] = This plugin needs work
+    comment[entelequia] = Plugin down. Needs review and possible revision.
 
     au < exists ; 2006 ; Entelequia: Revista Interdisciplinar Issue 1 ; 1 >
     au < exists ; 2006 ; Entelequia: Revista Interdisciplinar Issue 2 ; 2 >
@@ -33,7 +33,9 @@
     au < exists ; 2010 ; Entelequia: Revista Interdisciplinar Issue 12 ; 12 >
     au < exists ; 2011 ; Entelequia: Revista Interdisciplinar Issue 13 ; 13 >
     au < exists ; 2012 ; Entelequia: Revista Interdisciplinar Issue 14 ; 14 >
-    au < expected ; 2013 ; Entelequia: Revista Interdisciplinar Issue 15 ; 15 >
+    au < exists ; 2013 ; Entelequia: Revista Interdisciplinar Issue 15 ; 15 >
+    au < exists ; 2013 ; Entelequia: Revista Interdisciplinar Issue 16 ; 16 >
+    au < exists ; 2014 ; Entelequia: Revista Interdisciplinar Issue 17 ; 17 >
 
   }
 
