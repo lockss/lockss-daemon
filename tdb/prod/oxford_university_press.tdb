@@ -5653,15 +5653,17 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://eurjhf.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    
+    comment[moved] = moved to Wiley Blackwell.
 
-    au < HighWirePressH20Plugin ; released ; 2005 ; European Journal of Heart Failure Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; released ; 2006 ; European Journal of Heart Failure Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; released ; 2007 ; European Journal of Heart Failure Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; released ; 2008 ; European Journal of Heart Failure Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; released ; 2009 ; European Journal of Heart Failure Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; released ; 2010 ; European Journal of Heart Failure Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; released ; 2011 ; European Journal of Heart Failure Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; released ; 2012 ; European Journal of Heart Failure Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; down ; 2005 ; European Journal of Heart Failure Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; down ; 2006 ; European Journal of Heart Failure Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; down ; 2007 ; European Journal of Heart Failure Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; down ; 2008 ; European Journal of Heart Failure Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; down ; 2009 ; European Journal of Heart Failure Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; down ; 2010 ; European Journal of Heart Failure Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; down ; 2011 ; European Journal of Heart Failure Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; down ; 2012 ; European Journal of Heart Failure Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; European Journal of Heart Failure Volume 15 ; 15 >
 
     }
