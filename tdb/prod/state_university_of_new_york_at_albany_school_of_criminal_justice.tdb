@@ -16,25 +16,9 @@
     plugin = edu.indiana.lib.plugin.jcjpc.JcjpcPlugin
     param[base_url] = http://www.albany.edu/scj/jcjpc/
     implicit < status ; year ; name ; param[volume] >
-    comment[0] = see RU1943
+    comment[0] = see RU1943. Journal appears to be abandoned.
 
-    au < doesNotExist ; 1993 ; Journal of Criminal Justice and Popular Culture Volume 1 ; 1 >
-    au < doesNotExist ; 1994 ; Journal of Criminal Justice and Popular Culture Volume 2 ; 2 >
-    au < doesNotExist ; 1995 ; Journal of Criminal Justice and Popular Culture Volume 3 ; 3 >
-    au < doesNotExist ; 1996 ; Journal of Criminal Justice and Popular Culture Volume 4 ; 4 >
-    au < doNotProcess ; 1997 ; Journal of Criminal Justice and Popular Culture Volume 5 ; 5 >
-    au < doNotProcess ; 1998 ; Journal of Criminal Justice and Popular Culture Volume 6 ; 6 >
-    au < doNotProcess ; 1999-2000 ; Journal of Criminal Justice and Popular Culture Volume 7 ; 7 >
-    au < doNotProcess ; 2000-2001 ; Journal of Criminal Justice and Popular Culture Volume 8 ; 8 >
-    au < doNotProcess ; 2001-2002 ; Journal of Criminal Justice and Popular Culture Volume 9 ; 9 >
     au < down ; 2003 ; Journal of Criminal Justice and Popular Culture Volume 10 ; 10 >
-    au < exists ; 2004 ; Journal of Criminal Justice and Popular Culture Volume 11 ; 11 >
-    au < exists ; 2005 ; Journal of Criminal Justice and Popular Culture Volume 12 ; 12 >
-    au < exists ; 2006 ; Journal of Criminal Justice and Popular Culture Volume 13 ; 13 >
-    au < doNotProcess ; 2007 ; Journal of Criminal Justice and Popular Culture Volume 14 ; 14 >
-    au < doNotProcess ; 2008 ; Journal of Criminal Justice and Popular Culture Volume 15 ; 15 >
-    au < doNotProcess ; 2009 ; Journal of Criminal Justice and Popular Culture Volume 16 ; 16 >
-    au < doNotProcess ; 2010 ; Journal of Criminal Justice and Popular Culture Volume 17 ; 17 >
     
   }
 
