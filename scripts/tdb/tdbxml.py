@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# $Id: tdbxml.py,v 1.39 2013-12-20 23:41:38 thib_gc Exp $
+# $Id: tdbxml.py,v 1.40 2014-08-04 23:20:45 thib_gc Exp $
 
 __copyright__ = '''\
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,7 +29,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.4.11'
+__version__ = '0.4.12'
 
 from datetime import datetime
 from optparse import OptionGroup, OptionParser
@@ -259,9 +259,9 @@ def __process(tdb, options):
    <property name="class" value="xpath" />
    <property name="xpath" value=%(outer)s[attributes/publisher=%(inner)s%(publisher2)s%(inner)s]%(outer)s />
   </property>
-  
+
  </property>
- 
+
  <property name="org.lockss.title">
 ''' % { 'publisher': __escape(current_pub.name()),
         'publisher1': __escape(current_pub.name().replace('.', '')),
