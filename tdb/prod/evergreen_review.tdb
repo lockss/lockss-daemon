@@ -37,7 +37,7 @@ comment[pjg1] = new plugin needed RU3628 RT3875
     au < down ; 2004-2005 ; Evergreen Review 110 ; 110 >
    }
    {
-    plugin = needs.plugins
+    plugin = needs.plugin
     implicit < status ; year ; name ; param[volume_name] >
     param[base_url] = http://www.evergreenreview.com/ 
 
