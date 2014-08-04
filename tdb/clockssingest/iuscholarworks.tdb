@@ -180,11 +180,11 @@
 
   {
     title <
-      name = InULA Notes: Indiana University Librarians Association
+      name = InULA Notes: Indiana University Librarians Association ;
+      eissn = 2334-1645
     >
       param[journal_id] = inula
       comment[0] = no issue in 2001, 2002, 2004
-      comment[issn] = missing
       
       au < manifest ; exists ; 1996 ; 1996 ; InULA Notes: Indiana University Librarians Association Volume 12 ; 12 >
       au < manifest ; exists ; 1997 ; 1997 ; InULA Notes: Indiana University Librarians Association Volume 13 ; 13 >
@@ -222,11 +222,11 @@
 
   {
     title <
-      name = Journal of the Indiana University Student Personnel Association
+      name = Journal of the Indiana University Student Personnel Association ;
+      eissn = 2334-1548
     >
       param[journal_id] = jiuspa
       comment[0] = no issue in 2007-2009
-      comment[issn] = missing
 
       au < manifest ; exists ; 2006 ; 2006 ; Journal of the Indiana University Student Personnel Association Volume 2006 ; 2006 >
       au < manifest ; exists ; 2011 ; 2011 ; Journal of the Indiana University Student Personnel Association Volume 2011 ; 2011 >
