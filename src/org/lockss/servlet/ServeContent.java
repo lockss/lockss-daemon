@@ -1,10 +1,10 @@
 /*
- * $Id: ServeContent.java,v 1.86 2014-07-14 23:20:55 pgust Exp $
+ * $Id: ServeContent.java,v 1.87 2014-08-04 23:13:15 fergaloy-sf Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -60,6 +60,7 @@ import org.lockss.daemon.*;
 import org.lockss.daemon.OpenUrlResolver.OpenUrlInfo;
 import org.lockss.daemon.OpenUrlResolver.OpenUrlInfo.ResolvedTo;
 import org.lockss.exporter.counter.CounterReportsRequestRecorder;
+import org.lockss.exporter.counter.CounterReportsRequestRecorder.PublisherContacted;
 import org.lockss.exporter.biblio.BibliographicItem;
 import org.lockss.plugin.*;
 import org.lockss.plugin.AuUtil.AuProxyInfo;
@@ -762,15 +763,15 @@ public class ServeContent extends LockssServlet {
     String host = UrlUtil.getHost(url);
     boolean isInCache = isInCache();
     boolean isHostDown = proxyMgr.isHostDown(host);
+    PublisherContacted pubContacted =
+	CounterReportsRequestRecorder.PublisherContacted.FALSE;
 
     if (isNeverProxyForAu(au) || isMementoRequest()) {
       if (isInCache) {
         serveFromCache();
         logAccess("200 from cache");
         // Record the necessary information required for COUNTER reports.
-	recordRequest(url,
-		      CounterReportsRequestRecorder.PublisherContacted.FALSE,
-		      200);
+	recordRequest(url, pubContacted, 200);
       } else {
 	/*
 	 * We don't want to redirect to the publisher, so pass KnownDown below
@@ -818,12 +819,15 @@ public class ServeContent extends LockssServlet {
         }
       }
       conn.execute();
+      pubContacted = CounterReportsRequestRecorder.PublisherContacted.TRUE;
     } catch (IOException ex) {
       if (log.isDebug3()) log.debug3("conn.execute", ex);
 
       // mark host down if connection timed out
       if (ex instanceof LockssUrlConnection.ConnectionTimeoutException) {
         proxyMgr.setHostDown(host, isInCache);
+      } else {
+	pubContacted = CounterReportsRequestRecorder.PublisherContacted.TRUE;
       }
       pstate = PubState.KnownDown;
 
@@ -835,7 +839,7 @@ public class ServeContent extends LockssServlet {
     int response = 0;
     try {
       if (conn != null) {
-        response = conn.getResponseCode();
+	response = conn.getResponseCode();
         if (log.isDebug2())
           log.debug2("response: " + response + " " + conn.getResponseMessage());
         if (response == HttpResponse.__200_OK) {
@@ -845,9 +849,7 @@ public class ServeContent extends LockssServlet {
             serveFromPublisher(conn);
             logAccess(present(isInCache, "200 from publisher"));
             // Record the necessary information required for COUNTER reports.
-	    recordRequest(url,
-			  CounterReportsRequestRecorder.PublisherContacted.TRUE,
-			  response);
+	    recordRequest(url, pubContacted, response);
             return;
           } catch (CacheException.PermissionException ex) {
             logAccess("login exception: " + ex.getMessage());
@@ -867,9 +869,7 @@ public class ServeContent extends LockssServlet {
       serveFromCache();
       logAccess("present, 200 from cache");
       // Record the necessary information required for COUNTER reports.
-      recordRequest(url,
-		    CounterReportsRequestRecorder.PublisherContacted.TRUE,
-		    response);
+      recordRequest(url, pubContacted, response);
     } else {
       log.debug2("No content for: " + url);
       // return 404 with index

@@ -1,10 +1,10 @@
 /*
- * $Id: ProxyHandler.java,v 1.86 2014-02-26 08:09:06 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.87 2014-08-04 23:13:15 fergaloy-sf Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.86 2014-02-26 08:09:06 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.87 2014-08-04 23:13:15 fergaloy-sf Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -48,6 +48,7 @@ import org.lockss.app.LockssDaemon;
 import org.lockss.config.*;
 import org.lockss.daemon.CuUrl;
 import org.lockss.exporter.counter.CounterReportsRequestRecorder;
+import org.lockss.exporter.counter.CounterReportsRequestRecorder.PublisherContacted;
 import org.lockss.plugin.*;
 import org.lockss.state.AuState;
 import org.lockss.util.*;
@@ -873,6 +874,9 @@ public class ProxyHandler extends AbstractHttpHandler {
         conn.setCookiePolicy(cookiePolicy);
       }
 
+      PublisherContacted pubContacted =
+	  CounterReportsRequestRecorder.PublisherContacted.TRUE;
+
       // If we ever handle input, this is (more-or-less) the HttpClient way
       // to do it
 
@@ -892,15 +896,16 @@ public class ProxyHandler extends AbstractHttpHandler {
 	// Remember this only for hosts whose content we hold.
 	if (e instanceof LockssUrlConnection.ConnectionTimeoutException) {
 	  proxyMgr.setHostDown(request.getURI().getHost(), isInCache);
-      }
+	  pubContacted = CounterReportsRequestRecorder.PublisherContacted.FALSE;
+	}
 	// if we get any error and it's in the cache, serve it from there
 	if (isInCache) {
 	  serveFromCache(pathInContext, pathParams, request, response, cu);
 	  // Record the necessary information required for COUNTER reports.
 	  recordRequest(request,
-			urlString,
-			CounterReportsRequestRecorder.PublisherContacted.TRUE,
-			conn.getResponseCode());
+	      		urlString,
+	      		pubContacted,
+	      		conn.getResponseCode());
 	} else {
 	  // else generate an error page
 	  sendProxyErrorPage(e, request, response,
@@ -927,10 +932,7 @@ public class ProxyHandler extends AbstractHttpHandler {
 	serveFromCache(pathInContext, pathParams, request,
 		       response, cu);
 	// Record the necessary information required for COUNTER reports.
-	recordRequest(request,
-		      urlString,
-		      CounterReportsRequestRecorder.PublisherContacted.TRUE,
-		      conn.getResponseCode());
+	recordRequest(request, urlString, pubContacted, conn.getResponseCode());
 	return;
       }
 
