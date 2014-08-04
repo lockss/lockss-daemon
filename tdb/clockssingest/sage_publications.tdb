@@ -13575,7 +13575,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2013 ; Insight on Africa Volume 5 ; 5 ; >
-      au < expected ; exists ; 2014 ; Insight on Africa Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2014 ; Insight on Africa Volume 6 ; 6 ; >
 
   }
 
@@ -15674,7 +15674,7 @@
       au < finished ; crawling ; 2011-2012 ; Intervention in School and Clinic Volume 47 ; 47 ; >
       au < finished ; crawling ; 2012-2013 ; Intervention in School and Clinic Volume 48 ; 48 ; >
       au < crawling ; exists ; 2013-2014 ; Intervention in School and Clinic Volume 49 ; 49 ; >
-      au < expected ; exists ; 2014-2015 ; Intervention in School and Clinic Volume 50 ; 50 ; >
+      au < manifest ; exists ; 2014-2015 ; Intervention in School and Clinic Volume 50 ; 50 ; >
 
     }
 
@@ -29716,7 +29716,7 @@
         param[base_url] = http://hcs.sagepub.com/
 
         au < crawling ; exists ; 2013 ; Proceedings of the International Symposium of Human Factors and Ergonomics in Healthcare Volume 2 ; 2 ; >
-        au < expected ; exists ; 2014 ; Proceedings of the International Symposium of Human Factors and Ergonomics in Healthcare Volume 3 ; 3 ; >
+        au < manifest ; exists ; 2014 ; Proceedings of the International Symposium of Human Factors and Ergonomics in Healthcare Volume 3 ; 3 ; >
 
     }
 
@@ -36462,7 +36462,7 @@
       au < crawling ; exists ; 2013 ; Thesis Eleven Volume 119 ; 119 ; >
       au < manifest ; exists ; 2014 ; Thesis Eleven Volume 120 ; 120 ; >
       au < manifest ; exists ; 2014 ; Thesis Eleven Volume 121 ; 121 ; >
-      au < expected ; exists ; 2014 ; Thesis Eleven Volume 122 ; 122 ; >
+      au < manifest ; exists ; 2014 ; Thesis Eleven Volume 122 ; 122 ; >
       au < expected ; exists ; 2014 ; Thesis Eleven Volume 123 ; 123 ; >
       au < expected ; exists ; 2014 ; Thesis Eleven Volume 124 ; 124 ; >
       au < expected ; exists ; 2014 ; Thesis Eleven Volume 125 ; 125 ; >
