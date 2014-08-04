@@ -1,5 +1,5 @@
 /*
- * $Id: DbManager.java,v 1.38 2014-07-22 16:18:20 fergaloy-sf Exp $
+ * $Id: DbManager.java,v 1.39 2014-08-04 23:24:54 fergaloy-sf Exp $
  */
 
 /*
@@ -678,6 +678,7 @@ public class DbManager extends BaseLockssDaemonManager
   public static final String MD_ITEM_TYPE_BOOK_SERIES = "book_series";
   public static final String MD_ITEM_TYPE_JOURNAL = "journal";
   public static final String MD_ITEM_TYPE_JOURNAL_ARTICLE = "journal_article";
+  public static final String MD_ITEM_TYPE_BOOK_VOLUME = "book_volume";
 
   /**
    * The platform name when there is no platform name.
@@ -2514,7 +2515,7 @@ public class DbManager extends BaseLockssDaemonManager
   // After this service has started successfully, this is the version of the
   // database that will be in place, as long as the database version prior to
   // starting the service was not higher already.
-  private int targetDatabaseVersion = 15;
+  private int targetDatabaseVersion = 16;
 
   // The maximum number of retries to be attempted when encountering transient
   // SQL exceptions.
@@ -3020,6 +3021,8 @@ public class DbManager extends BaseLockssDaemonManager
 	  updateDatabaseFrom13To14(conn);
 	} else if (from == 14) {
 	  updateDatabaseFrom14To15(conn);
+	} else if (from == 15) {
+	  updateDatabaseFrom15To16(conn);
 	} else {
 	  throw new DbException("Non-existent method to update the database "
 	      + "from version " + from + ".");
@@ -7443,5 +7446,23 @@ public class DbManager extends BaseLockssDaemonManager
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Updates the database from version 15 to version 16.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws DbException
+   *           if any problem occurred updating the database.
+   */
+  private void updateDatabaseFrom15To16(Connection conn) throws DbException {
+    final String DEBUG_HEADER = "updateDatabaseFrom15To16(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    // Add new metadata item type.
+    addMetadataItemType(conn, MD_ITEM_TYPE_BOOK_VOLUME);
+
+    if (log.isDebug2())  log.debug2(DEBUG_HEADER + "Done.");
   }
 }
