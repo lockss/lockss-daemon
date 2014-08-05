@@ -4036,14 +4036,14 @@
       param[base_url] = http://www.immunome-research.com/
       param[journal_issn] = 1745-7580
       
-      comment[0] = No longer adding new content, but old content remains online.
+      comment[0] = Moved to Springer
 
-      au < released ; 2005 ; Immunome Research Volume 1 ; 1 >
-      au < released ; 2006 ; Immunome Research Volume 2 ; 2 >
-      au < released ; 2007 ; Immunome Research Volume 3 ; 3 >
-      au < released ; 2008 ; Immunome Research Volume 4 ; 4 >
-      au < manifest ; 2009 ; Immunome Research Volume 5 ; 5 >
-      au < manifest ; 2010 ; Immunome Research Volume 6 ; 6 >
+      au < down ; 2005 ; Immunome Research Volume 1 ; 1 >
+      au < down ; 2006 ; Immunome Research Volume 2 ; 2 >
+      au < down ; 2007 ; Immunome Research Volume 3 ; 3 >
+      au < down ; 2008 ; Immunome Research Volume 4 ; 4 >
+      au < doNotProcess ; 2009 ; Immunome Research Volume 5 ; 5 >
+      au < doNotProcess ; 2010 ; Immunome Research Volume 6 ; 6 >
 
     }
 
