@@ -17,7 +17,7 @@
 
     rights = openaccess
     
-    comment[0] = no manifest pages for V14-21 as of Nov 2012
+    comment[0] = no manifest pages for V14-21 as of Nov 2012. Plugin down. Needs review.
     
     au < released ; 1997 ; Cyberjournal for Pentecostal-Charismatic Research Volume 1 ; 1 >
     au < released ; 1997 ; Cyberjournal for Pentecostal-Charismatic Research Volume 2 ; 2 >
@@ -32,15 +32,15 @@
     au < released ; 2002 ; Cyberjournal for Pentecostal-Charismatic Research Volume 11 ; 11 >
     au < released ; 2003 ; Cyberjournal for Pentecostal-Charismatic Research Volume 12 ; 12 >
     au < released ; 2004 ; Cyberjournal for Pentecostal-Charismatic Research Volume 13 ; 13 >
-    au < exists ; 2005 ; Cyberjournal for Pentecostal-Charismatic Research Volume 14 ; 14 >
-    au < exists ; 2006 ; Cyberjournal for Pentecostal-Charismatic Research Volume 15 ; 15 >
-    au < exists ; 2007 ; Cyberjournal for Pentecostal-Charismatic Research Volume 16 ; 16 >
-    au < exists ; 2008 ; Cyberjournal for Pentecostal-Charismatic Research Volume 17 ; 17 >
-    au < exists ; 2009 ; Cyberjournal for Pentecostal-Charismatic Research Volume 18 ; 18 >
-    au < exists ; 2010 ; Cyberjournal for Pentecostal-Charismatic Research Volume 19 ; 19 >
-    au < exists ; 2011 ; Cyberjournal for Pentecostal-Charismatic Research Volume 20 ; 20 >
-    au < exists ; 2012 ; Cyberjournal for Pentecostal-Charismatic Research Volume 21 ; 21 >
-    au < expected ; 2013 ; Cyberjournal for Pentecostal-Charismatic Research Volume 22 ; 22 >
+    au < doNotProcess ; 2005 ; Cyberjournal for Pentecostal-Charismatic Research Volume 14 ; 14 >
+    au < doNotProcess ; 2006 ; Cyberjournal for Pentecostal-Charismatic Research Volume 15 ; 15 >
+    au < doNotProcess ; 2007 ; Cyberjournal for Pentecostal-Charismatic Research Volume 16 ; 16 >
+    au < doNotProcess ; 2008 ; Cyberjournal for Pentecostal-Charismatic Research Volume 17 ; 17 >
+    au < doNotProcess ; 2009 ; Cyberjournal for Pentecostal-Charismatic Research Volume 18 ; 18 >
+    au < doNotProcess ; 2010 ; Cyberjournal for Pentecostal-Charismatic Research Volume 19 ; 19 >
+    au < doNotProcess ; 2011 ; Cyberjournal for Pentecostal-Charismatic Research Volume 20 ; 20 >
+    au < doNotProcess ; 2012 ; Cyberjournal for Pentecostal-Charismatic Research Volume 21 ; 21 >
+    au < doNotProcess ; 2013 ; Cyberjournal for Pentecostal-Charismatic Research Volume 22 ; 22 >
   
   }
   
