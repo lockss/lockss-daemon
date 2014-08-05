@@ -18,7 +18,7 @@
     {
 
       plugin = edu.fcla.plugin.arkivoc.ArkivocPlugin
-      implicit < status ; name ; volume ; param[year] >        
+      implicit < status ; name ; volume ; param[year] >
       param[base_url] = http://www.arkat-usa.org/ark/arkivoc/
 
       au < superseded ; ARKIVOC Volume 2004 [retracted] ; 2004 ; 2004 >
@@ -28,7 +28,7 @@
     {
 
       plugin = edu.fcla.plugin.arkivoc.ArkivocPlugin
-      implicit < status ; name ; volume ; param[year] >        
+      implicit < status ; name ; volume ; param[year] >
       param[base_url] = http://www.arkat-usa.org/ark/journal/
 
       au < superseded ; ARKIVOC Volume 2004 [superseded] ; 2004; 2004 >
@@ -38,22 +38,15 @@
     {
 
       plugin = edu.fcla.plugin.arkivoc.ArkivocPlugin
-      implicit < status ; name ; volume ; param[year] >        
+      implicit < status ; name ; volume ; param[year] >
       param[base_url] = http://www.arkat-usa.org/
 
-      au < down ; ARKIVOC Volume 2000 ; 2000 ; 2000 >    
-      au < down ; ARKIVOC Volume 2001 ; 2001 ; 2001 >    
-      au < down ; ARKIVOC Volume 2002 ; 2002 ; 2002 >    
-      au < down ; ARKIVOC Volume 2003 ; 2003 ; 2003 >    
-      au < down ; ARKIVOC Volume 2004 ; 2004 ; 2004 >    
-      au < down ; ARKIVOC Volume 2005 ; 2005 ; 2005 >    
-      au < exists ; ARKIVOC Volume 2006 ; 2006 ; 2006 >    
-      au < exists ; ARKIVOC Volume 2007 ; 2007 ; 2007 >    
-      au < exists ; ARKIVOC Volume 2008 ; 2008 ; 2008 >    
-      au < exists ; ARKIVOC Volume 2009 ; 2009 ; 2009 >    
-      au < exists ; ARKIVOC Volume 2010 ; 2010 ; 2010 >    
-      au < exists ; ARKIVOC Volume 2011 ; 2011 ; 2011 >    
-      au < exists ; ARKIVOC Volume 2012 ; 2012 ; 2012 >    
+      au < down ; ARKIVOC Volume 2000 ; 2000 ; 2000 >
+      au < down ; ARKIVOC Volume 2001 ; 2001 ; 2001 >
+      au < down ; ARKIVOC Volume 2002 ; 2002 ; 2002 >
+      au < down ; ARKIVOC Volume 2003 ; 2003 ; 2003 >
+      au < down ; ARKIVOC Volume 2004 ; 2004 ; 2004 >
+      au < down ; ARKIVOC Volume 2005 ; 2005 ; 2005 >
     
     }
       
@@ -64,19 +57,19 @@
       implicit < status ; name ; volume ; param[year] >
       param[base_url] = http://quod.lib.umich.edu/a/ark/
 
-      au < exists ; ARKIVOC Volume 2000 ; 2000 ; 2000 >    
-      au < exists ; ARKIVOC Volume 2001 ; 2001 ; 2001 >    
-      au < exists ; ARKIVOC Volume 2002 ; 2002 ; 2002 >    
-      au < exists ; ARKIVOC Volume 2003 ; 2003 ; 2003 >    
-      au < exists ; ARKIVOC Volume 2004 ; 2004 ; 2004 >    
-      au < exists ; ARKIVOC Volume 2005 ; 2005 ; 2005 >    
-      au < exists ; ARKIVOC Volume 2006 ; 2006 ; 2006 >    
-      au < exists ; ARKIVOC Volume 2007 ; 2007 ; 2007 >    
-      au < exists ; ARKIVOC Volume 2008 ; 2008 ; 2008 >    
-      au < exists ; ARKIVOC Volume 2009 ; 2009 ; 2009 >    
-      au < exists ; ARKIVOC Volume 2010 ; 2010 ; 2010 >    
-      au < exists ; ARKIVOC Volume 2011 ; 2011 ; 2011 >    
-      au < exists ; ARKIVOC Volume 2012 ; 2012 ; 2012 >    
+      au < doNotProcess ; ARKIVOC Volume 2000 ; 2000 ; 2000 >
+      au < doNotProcess ; ARKIVOC Volume 2001 ; 2001 ; 2001 >
+      au < doNotProcess ; ARKIVOC Volume 2002 ; 2002 ; 2002 >
+      au < doNotProcess ; ARKIVOC Volume 2003 ; 2003 ; 2003 >
+      au < doNotProcess ; ARKIVOC Volume 2004 ; 2004 ; 2004 >
+      au < doNotProcess ; ARKIVOC Volume 2005 ; 2005 ; 2005 >
+      au < exists ; ARKIVOC Volume 2006 ; 2006 ; 2006 >
+      au < exists ; ARKIVOC Volume 2007 ; 2007 ; 2007 >
+      au < exists ; ARKIVOC Volume 2008 ; 2008 ; 2008 >
+      au < exists ; ARKIVOC Volume 2009 ; 2009 ; 2009 >
+      au < exists ; ARKIVOC Volume 2010 ; 2010 ; 2010 >
+      au < exists ; ARKIVOC Volume 2011 ; 2011 ; 2011 >
+      au < exists ; ARKIVOC Volume 2012 ; 2012 ; 2012 >
     
     }
       
