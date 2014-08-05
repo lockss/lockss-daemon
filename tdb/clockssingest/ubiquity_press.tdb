@@ -146,7 +146,10 @@
     >
     
     param[base_url] = http://www.govafricajournal.org/
-    param[journal_id] = unknown
+    param[journal_id] = gaj
+    
+    au < expected ; exists ; 2014 ; Governance in Africa Volume 1 ; 1 ; 2014 >
+
 
   }
 
@@ -201,17 +204,6 @@
     au < manifest ; exists ; 2012 ; Journal of Circadian Rhythms Volume 10 ; 10 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Circadian Rhythms Volume 11 ; 11 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Circadian Rhythms Volume 12 ; 12 ; 2014 >
-
-  }
-
-  {
-  
-    title < 
-      name = Journal of Cosmology
-    >
-    
-    param[base_url] = unknown
-    param[journal_id] = unknown
 
   }
 
@@ -385,6 +377,21 @@
   {
   
     title < 
+      name = Open Journal of Bioresources ;
+      eissn = 2056-5542
+    >
+    
+    param[base_url] = http://openbioresources.metajnl.com/
+    param[journal_id] = ojb
+
+    
+    au < exists ; exists ; 2014 ; Open Journal of Bioresources Volume 1 ; 1 ; 2014 >
+    
+  }
+
+  {
+  
+    title < 
       name = Present Pasts ;
       eissn = 1759-2941
     >
@@ -472,7 +479,7 @@
     >
     
     param[base_url] = http://www.utrechtjournal.org/
-    param[journal_id] = ujiel
+    param[journal_id] = ujil
 
     au < exists ; exists ; 2010 ; Utrecht Journal of International and European Law Volume 26 ; 26 ; 2010 >
     au < exists ; exists ; 2011 ; Utrecht Journal of International and European Law Volume 27 ; 27 ; 2011 >
