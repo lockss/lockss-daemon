@@ -1,5 +1,5 @@
 /*
- * $Id: TestBioMedCentralPluginHtmlFilterFactory.java,v 1.8 2014-07-30 21:57:43 aishizaki Exp $
+ * $Id: TestBioMedCentralPluginHtmlFilterFactory.java,v 1.9 2014-08-05 18:51:46 aishizaki Exp $
  */
 
 /*
@@ -122,6 +122,7 @@ public class TestBioMedCentralPluginHtmlFilterFactory extends LockssTestCase {
     "<div id=\"\" style=\"width:830px; height:600px\"> </div>";
   
   private static final String BiomeBadgeHash = 
+    "<div id=\"mobile-sidebar\">" +
     "<div id=\"biome-badge\" style=\"width: 100%\">" +
     "<script>" +
     "window.onmessage = function(e) {" +
@@ -132,7 +133,7 @@ public class TestBioMedCentralPluginHtmlFilterFactory extends LockssTestCase {
     "};" +
     "</script>" +
     "<iframe src=\"http://www.biomedcentral.com/sites/9001/biome-widget.html?doi=10.1186/1757-1146-1-9&size=large\" width=\"100%\" height=\"75px\">Your browser does not support iframes</iframe>" +
-    "</div>" +
+    "</div>" + "</div>" +
     "Hello World";
   private static final String BiomeBadgeHashFiltered = "Hello World";
 

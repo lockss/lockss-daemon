@@ -1,10 +1,10 @@
 /*
- * $Id: BioMedCentralHtmlFilterFactory.java,v 1.12 2014-07-30 21:56:27 aishizaki Exp $
+ * $Id: BioMedCentralHtmlFilterFactory.java,v 1.13 2014-08-05 18:51:46 aishizaki Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -65,6 +65,7 @@ public class BioMedCentralHtmlFilterFactory implements FilterFactory {
         // Links to one-time names inside the page
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^#"),
         // Contains the institution name; once a 'class', now an 'id'
+        // following six not in springeropen 
         HtmlNodeFilters.tagWithAttribute("td", "class", "topnav"),
         HtmlNodeFilters.tagWithAttribute("td", "id", "topnav"),
         // Contains advertising
@@ -75,6 +76,7 @@ public class BioMedCentralHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("table", "class", "footer2t"),
         // Institution-dependent link resolvers
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/sfx_links\\?.*"),
+        
         // Institution-dependent greeting
         HtmlNodeFilters.tagWithAttribute("li", "class", "greeting"),
         // Malformed HTML
@@ -95,8 +97,15 @@ public class BioMedCentralHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", ".*/about/mostviewed"),
         // Springer branding below the footer
         HtmlNodeFilters.tagWithAttribute("div", "class", "springer"),
+        // remove footer
+        HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
+        // remove the mobile sidebar
+        HtmlNodeFilters.tagWithAttribute("div", "id", "mobile-sidebar"),
+        // remove the right side column
+        HtmlNodeFilters.tagWithAttribute("div", "id", "article-navigation-bar"),
+
         // removing empty <div> tag that moves around..
-        HtmlNodeFilters.tagWithAttribute("div", "id", "biome-badge"),
+        //HtmlNodeFilters.tagWithAttribute("div", "id", "biome-badge"),
         // The text of this link changed from "About this article" to "Article metrics"
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/about$"),
         // Journal of Cheminformatics -  an "accesses" and/or "citations" block
