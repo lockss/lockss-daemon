@@ -4586,19 +4586,21 @@
         eissn = 1749-7221 ;
         issnl = 1749-7221
       >
+      
+      comment[moved] = moved to Thieme.
 
       param[base_url] = http://www.jbppni.com/
       param[journal_issn] = 1749-7221
 
-      au < released ; 2006 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 1 ; 1 >
-      au < released ; 2007 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2 ; 2 >
-      au < released ; 2008 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 3 ; 3 >
-      au < released ; 2009 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 4 ; 4 >
-      au < released ; 2010 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 5 ; 5 >
-      au < released ; 2011 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 6 ; 6 >
-      au < manifest ; 2012 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 7 ; 7 >
-      au < manifest ; 2013 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 8 ; 8 >
-      au < manifest ; 2014 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 9 ; 9 >
+      au < down ; 2006 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 1 ; 1 >
+      au < down ; 2007 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2 ; 2 >
+      au < down ; 2008 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 3 ; 3 >
+      au < down ; 2009 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 4 ; 4 >
+      au < down ; 2010 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 5 ; 5 >
+      au < down ; 2011 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 6 ; 6 >
+      au < doNotProcess ; 2012 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 7 ; 7 >
+      au < doNotProcess ; 2013 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 8 ; 8 >
+      au < doNotProcess ; 2014 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 9 ; 9 >
 
     }
 
