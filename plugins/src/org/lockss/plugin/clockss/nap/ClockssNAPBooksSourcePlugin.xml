@@ -19,10 +19,6 @@
         <string>1</string>
       </entry>
       <entry>
-        <string>Poll</string>
-        <string>1</string>
-      </entry>
-      <entry>
         <string>Substance</string>
         <string>1</string>
       </entry>
@@ -38,15 +34,15 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>6</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"NAP Books Source Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
+    <string>"National Academies Press Books Source Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>NAP Books Source Plugin (CLOCKSS)</string>
+    <string>National Academies Press Books Source Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>

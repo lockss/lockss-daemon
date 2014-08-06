@@ -1,5 +1,5 @@
 /*
- * $Id: NAPSourceXmlMetadataExtractorFactory.java,v 1.1 2014-06-20 16:05:05 alexandraohlson Exp $
+ * $Id: NAPSourceXmlMetadataExtractorFactory.java,v 1.2 2014-08-06 19:18:53 alexandraohlson Exp $
  */
 
 /*
@@ -32,16 +32,11 @@
 
 package org.lockss.plugin.clockss.nap;
 
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.regex.Pattern;
-
 import org.apache.commons.io.FilenameUtils;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
-import org.lockss.extractor.FileMetadataExtractor.Emitter;
-
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
