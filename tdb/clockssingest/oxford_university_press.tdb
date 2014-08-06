@@ -5540,19 +5540,11 @@
     param[base_url] = http://eurjhfsupp.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < doNotProcess ; exists ; 2002 ; European Journal of Heart Failure Supplements Volume 1 ; 1 ; >
-    au < doNotProcess ; exists ; 2003 ; European Journal of Heart Failure Supplements Volume 2 ; 2 ; >
-    au < doNotProcess ; exists ; 2004 ; European Journal of Heart Failure Supplements Volume 3 ; 3 ; >
-    au < doNotProcess ; exists ; 2005 ; European Journal of Heart Failure Supplements Volume 4 ; 4 ; >
-    au < doNotProcess ; exists ; 2006 ; European Journal of Heart Failure Supplements Volume 5 ; 5 ; >
-    au < doNotProcess ; exists ; 2007 ; European Journal of Heart Failure Supplements Volume 6 ; 6 ; >
     au < manifest ; exists ; 2008 ; European Journal of Heart Failure Supplements Volume 7 ; 7 ; >
     au < finished ; frozen ; 2009 ; European Journal of Heart Failure Supplements Volume 8 ; 8 ; >
     au < finished ; crawling ; 2010 ; European Journal of Heart Failure Supplements Volume 9 ; 9 ; >
     au < finished ; crawling ; 2011 ; European Journal of Heart Failure Supplements Volume 10 ; 10 ; >
     au < finished ; crawling ; 2012 ; European Journal of Heart Failure Supplements Volume 11 ; 11 ; >
-    au < expected ; exists ; 2013 ; European Journal of Heart Failure Supplements Volume 12 ; 12 ; >
-    au < expected ; exists ; 2014 ; European Journal of Heart Failure Supplements Volume 13 ; 13 ; >
 
   }
 
