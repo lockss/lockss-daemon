@@ -1,5 +1,5 @@
 /*
- * $Id: WoltersKluwerSourceXmlSchemaHelper.java,v 1.3 2014-07-31 17:41:14 aishizaki Exp $
+ * $Id: WoltersKluwerSourceXmlSchemaHelper.java,v 1.4 2014-08-06 17:27:45 alexandraohlson Exp $
  */
 
 /*
@@ -64,24 +64,22 @@ implements SourceXmlSchemaHelper {
    */
   /*
    * AUTHOR information
-   * NODE=<Contrib-group>  
-   *  BY/PN/
-   *  FN=
+   * NODE=<article-node>./BB/BY/PN  
+   *  FN= 
    *  SN=
    *  MN=
+   *  requires at least either a surname or a firstname ("Cher?")
    */
   static private final NodeValue WK_AUTHOR_VALUE = new NodeValue() {
     @Override
     public String getValue(Node node) {
-      if (node == null) {
-        return null;
-      }
       log.debug3("getValue of WOLTERSKLUWER contributor");
       NodeList childNodes = node.getChildNodes(); 
+      if (childNodes == null) return null;
       String fname = null;
       String sname = null;
       String mname = null;
-      StringBuilder names = new StringBuilder();
+
       for (int m = 0; m < childNodes.getLength(); m++) {
         Node infoNode = childNodes.item(m);
         String nodeName = infoNode.getNodeName();
@@ -102,6 +100,7 @@ implements SourceXmlSchemaHelper {
         log.debug3("no valid contributor found");
         return null;
       }
+      StringBuilder names = new StringBuilder();
       // now at least some of the name is available - return as much as possible
       // if we try to names.append(null) it adds "null" - don't want that!
       if (sname != null) {
@@ -112,7 +111,6 @@ implements SourceXmlSchemaHelper {
         if (mname!= null) {
           names.append (NAME_SPACE + mname);
         }
-        return names.toString();
       } else {  // else only a givenname
         names.append(fname);
       }
@@ -121,10 +119,10 @@ implements SourceXmlSchemaHelper {
   };
 
   /* 
-   * PUBLISHING DATE - 
-   *   /DG/D/BB/SO/DA/DY=15
-   *   /DG/D/BB/SO/DA/MO=March
-   *   /DG/D/BB/SO/DA/YR=2014
+   * PUBLISHING DATE - <article-node>/BB/SO/DA
+   *   DY=15
+   *   MO=March
+   *   YR=2014
    */
   static private final NodeValue WK_DATE_VALUE = new NodeValue() {
     @Override
@@ -136,20 +134,19 @@ implements SourceXmlSchemaHelper {
       String month = null;
       String day = null;
       String nodeName = null;
-
-      if (node.getNodeName().equals(WK_DATENODE)) {
-        for (int m = 0; m < childNodes.getLength(); m++) {
-          Node childNode = childNodes.item(m);
-          nodeName = childNode.getNodeName();
-          if (WK_DY.equals(nodeName)) {
-            day = childNode.getTextContent();
-          } else if (WK_MO.equals(nodeName)) {
-            month = childNode.getTextContent();
-          } else if (WK_YR.equals(nodeName)) {
-            year = childNode.getTextContent();
-          }
+      
+      for (int m = 0; m < childNodes.getLength(); m++) {
+        Node childNode = childNodes.item(m);
+        nodeName = childNode.getNodeName();
+        if (WK_DY.equals(nodeName)) {
+          day = childNode.getTextContent();
+        } else if (WK_MO.equals(nodeName)) {
+          month = childNode.getTextContent();
+        } else if (WK_YR.equals(nodeName)) {
+          year = childNode.getTextContent();
         }
-      } 
+      }
+      
       // make it W3C format YYYY or YYYY-MM or YYYY-MM-DD
       StringBuilder dBuilder = new StringBuilder();
       if (year.equals(null)) return null;
@@ -172,35 +169,35 @@ implements SourceXmlSchemaHelper {
 
   /* 
    * Article Title, Subtitle - 
-   *   /DG/D/BB/TG/TI=ValidTitle
-   *   /DG/D/BB/TG/STI= with an equally valid subtitle
+   *   <article-node/BB/TG
+   *  TI=ValidTitle
+   *  STI= with an equally valid subtitle
+   * we will take one or both
    */
   
   static private final NodeValue WK_ARTICLE_TITLE_VALUE = new NodeValue() {
     @Override
     public String getValue(Node node) {
-      if (node == null) {
-        return null;
-      }
+
       log.debug3("getValue of WOLTERSKLUWER ARTICLE TITLE");
       String title = null;
       String subtitle = null;
       String nodeName = null;
-      StringBuilder titleVal = new StringBuilder();
       NodeList childNodes = node.getChildNodes(); 
+      if (childNodes == null) return null;
 
       for (int m = 0; m < childNodes.getLength(); m++) {
         Node infoNode = childNodes.item(m);
         nodeName = infoNode.getNodeName();
         
-        if ("#text".equals(nodeName)) {
-          continue;
-        } else if(WK_TITLE.equals(nodeName)) {
+        if (WK_TITLE.equals(nodeName)) {
           title = infoNode.getTextContent();
         } else if(WK_SUBTITLE.equals(nodeName)){
           subtitle = infoNode.getTextContent();
         }
       }
+      
+      StringBuilder titleVal = new StringBuilder();
       if (title != null) {
         titleVal.append(title);
       }
@@ -220,15 +217,13 @@ implements SourceXmlSchemaHelper {
   /* 
    *  WoltersKluwer specific XPATH key definitions that we care about
    */
+  // The following are all under WK_articleNode = "/DG/D"
+  // but are issue-level info
 
   // the pdf name still needs some help to match reality:
   //   add a '0' to the front, add ".pdf" to the end
   private static String WK_pdf = "@AN";
-
-  
-  // The following are all under WK_articleNode = "/DG/D"
-  // but are issue-level info
-  /* title, subtitle */
+  /* publication info */
   private static String WK_journal_title =  "./BB/SO/PB";
   private static String WK_issn = "./BB/SO/ISN"; 
   private static String WK_issue = "./BB/SO/IS/IP";
@@ -244,8 +239,7 @@ implements SourceXmlSchemaHelper {
   private static String WK_DY = "DY";
   private static String WK_MO = "MO";
   private static String WK_YR = "YR";
-  private static String WK_DATENODE = "DA";
-  private static String WK_pubdate = "./BB/SO/"+WK_DATENODE;
+  private static String WK_pubdate = "./BB/SO/DA";
   /* author */
   private static String WK_FN = "FN";
   private static String WK_MN = "MN";
@@ -276,12 +270,6 @@ implements SourceXmlSchemaHelper {
   static private final String WK_articleNode = "/DG/D"; 
 
   /* 3. WK global value we care about: none, so WK_globalMap is null */ 
-  /*
-  static private final Map<String,XPathValue> 
-    WK_globalMap = new HashMap<String, XPathValue>();
-  static {
-  }
-  */
 
   /*
    * The emitter will need a map to know how to cook ONIX raw values
@@ -295,8 +283,6 @@ implements SourceXmlSchemaHelper {
     cookMap.put(WK_vol, MetadataField.FIELD_VOLUME);
     cookMap.put(WK_issue, MetadataField.FIELD_ISSUE);
     cookMap.put(WK_journal_title, MetadataField.FIELD_PUBLICATION_TITLE);
-    // using deprecated FIELD_JOURNAL_TITLE until updated everywhere
-    cookMap.put(WK_journal_title, MetadataField.FIELD_JOURNAL_TITLE);
     cookMap.put(WK_article_title, MetadataField.FIELD_ARTICLE_TITLE);
     cookMap.put(WK_author, MetadataField.FIELD_AUTHOR);
     cookMap.put(WK_pubdate, MetadataField.FIELD_DATE);

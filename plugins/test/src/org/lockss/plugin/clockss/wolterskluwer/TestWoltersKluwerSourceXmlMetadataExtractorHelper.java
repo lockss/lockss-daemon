@@ -1,6 +1,6 @@
-/* $Id: TestWoltersKluwerSourceXmlMetadataExtractorHelper.java,v 1.1 2014-07-18 16:24:00 aishizaki Exp $
+/* $Id: TestWoltersKluwerSourceXmlMetadataExtractorHelper.java,v 1.2 2014-08-06 17:27:45 alexandraohlson Exp $
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -28,16 +28,12 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.clockss.wolterskluwer;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
-import org.lockss.daemon.PublicationDate;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.definable.DefinablePlugin;
 
 //import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 
@@ -54,7 +50,7 @@ public class TestWoltersKluwerSourceXmlMetadataExtractorHelper
       Logger.getLogger(TestWoltersKluwerSourceXmlMetadataExtractorHelper.class);
 
   private MockLockssDaemon theDaemon;
-  private MockArchivalUnit mau; // aipjats source au
+  private MockArchivalUnit mau; 
 
   private static final String YEAR = "2013";
 
@@ -253,8 +249,6 @@ public class TestWoltersKluwerSourceXmlMetadataExtractorHelper
 
        assertEquals(GOOD_ISSN, md.get(MetadataField.FIELD_ISSN));
        assertEquals(TEST_PDF_URL, md.get(MetadataField.FIELD_ACCESS_URL));
-      //use FIELD_JOURNAL_TITLE for content5/6 until they adopt the latest daemon
-       assertEquals(GOOD_JOURNAL_TITLE, md.get(MetadataField.FIELD_JOURNAL_TITLE));
        assertEquals(GOOD_JOURNAL_TITLE, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
        assertEquals(GOOD_DOI, md.get(MetadataField.FIELD_DOI));
        assertEquals(GOOD_ISSUE, md.get(MetadataField.FIELD_ISSUE));

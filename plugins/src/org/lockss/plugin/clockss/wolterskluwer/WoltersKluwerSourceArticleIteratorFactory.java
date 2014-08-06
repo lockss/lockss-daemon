@@ -1,5 +1,5 @@
 /*
- * $Id: WoltersKluwerSourceArticleIteratorFactory.java,v 1.2 2014-07-25 17:34:46 aishizaki Exp $
+ * $Id: WoltersKluwerSourceArticleIteratorFactory.java,v 1.3 2014-08-06 17:27:45 alexandraohlson Exp $
  */ 
 /*
 
@@ -51,7 +51,9 @@ public class WoltersKluwerSourceArticleIteratorFactory
   protected static Logger log = 
       Logger.getLogger(WoltersKluwerSourceArticleIteratorFactory.class);
 
-  protected static final String ROOT_TEMPLATE = "\"%s\", base_url, ";   // 
+  protected static final String ROOT_TEMPLATE = "\"%s\", base_url, ";
+  // suffix has only ever been one digit, may be 0-9
+  // 2014/CIRC20140304.0.zip!/20140304.0
   private static final String PATTERN_TEMPLATE = 
       "\"%s%d/[^/]+\\.zip!/(.*)\\.[\\d]$\",base_url,year";
   

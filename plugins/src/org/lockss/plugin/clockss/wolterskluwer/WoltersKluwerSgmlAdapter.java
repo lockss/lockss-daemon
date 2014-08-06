@@ -1,5 +1,5 @@
 /*
- * $Id: WoltersKluwerSgmlAdapter.java,v 1.3 2014-07-31 21:01:07 alexandraohlson Exp $
+ * $Id: WoltersKluwerSgmlAdapter.java,v 1.4 2014-08-06 17:27:45 alexandraohlson Exp $
  */
 
 /*
@@ -38,7 +38,10 @@ import java.util.regex.Pattern;
 import org.lockss.util.LineRewritingReader;
 
 /*
- * After 1.66 comes out, extend org.lockss.util.LineRewritingReader instead.
+ * Turn the SGML file into valid XML by in-line terminating the following unclosed
+ * tags. For example,
+ * <COVER foo="blah">..... becomes
+ * <COVER foo="blah"/>
  */
 public class WoltersKluwerSgmlAdapter extends LineRewritingReader {
 
