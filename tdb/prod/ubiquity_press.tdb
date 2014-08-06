@@ -184,8 +184,9 @@
       name = Journal of Cosmology 
     >
     
-    param[base_url] = unknown
-    param[journal_id] = unknown
+    param[base_url] = http://journalofcosmology.com/
+    param[journal_id] = joc
+    comment[0] = needs review on web structure, http://journalofcosmology.com/JOC22/indexVol22CONTENTS.htm
 
   }
 
@@ -269,6 +270,21 @@
     
   }
   
+  {
+  
+    title < 
+      name = Open Journal of Bioresources ;
+      eissn = 2056-5542
+    >
+    
+    param[base_url] = http://openbioresources.metajnl.com/
+    param[journal_id] = ojb
+
+    
+    au < exists ; 2014 ; Open Journal of Bioresources Volume 1 ; 1 ; 2014 >
+    
+  }
+
   {
   
     title < 
