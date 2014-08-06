@@ -53,7 +53,7 @@
       au < released ; 2010 ; 13 ; Acta Scientiarum. Agronomy Volume 2010 ; 2010 >
       au < released ; 2011 ; 14 ; Acta Scientiarum. Agronomy Volume 2011 ; 2011 >
       au < released ; 2012 ; 15 ; Acta Scientiarum. Agronomy Volume 2012 ; 2012 >
-      au < releasing ; 2013 ; 16 ; Acta Scientiarum. Agronomy Volume 2013 ; 2013 >
+      au < released ; 2013 ; 16 ; Acta Scientiarum. Agronomy Volume 2013 ; 2013 >
       au < manifest ; 2014 ; 17 ; Acta Scientiarum. Agronomy Volume 2014 ; 2014 >
 
   }
@@ -85,7 +85,7 @@
       au < released ; 2010 ; 13 ; Acta Scientiarum. Animal Sciences Volume 2010 ; 2010 >
       au < released ; 2011 ; 14 ; Acta Scientiarum. Animal Sciences Volume 2011 ; 2011 >
       au < released ; 2012 ; 15 ; Acta Scientiarum. Animal Sciences Volume 2012 ; 2012 >
-      au < releasing ; 2013 ; 16 ; Acta Scientiarum. Animal Sciences Volume 2013 ; 2013 >
+      au < released ; 2013 ; 16 ; Acta Scientiarum. Animal Sciences Volume 2013 ; 2013 >
       au < manifest ; 2014 ; 17 ; Acta Scientiarum. Animal Sciences Volume 2014 ; 2014 >
 
   }
@@ -224,7 +224,7 @@
       au < released ; 2010 ; 3 ; Acta Scientiarum. Language and Culture Volume 2010 ; 2010 >
       au < released ; 2011 ; 4 ; Acta Scientiarum. Language and Culture Volume 2011 ; 2011 >
       au < released ; 2012 ; 5 ; Acta Scientiarum. Language and Culture Volume 2012 ; 2012 >
-      au < releasing ; 2013 ; 6 ; Acta Scientiarum. Language and Culture Volume 2013 ; 2013 >
+      au < released ; 2013 ; 6 ; Acta Scientiarum. Language and Culture Volume 2013 ; 2013 >
       au < manifest ; 2014 ; 7 ; Acta Scientiarum. Language and Culture Volume 2014 ; 2014 >
 
   }
@@ -289,7 +289,7 @@
       au < released ; 2010 ; 14 ; Arquivos do Museu Dinâmico Interdisciplinar Volume 2010 ; 2010 >
       au < released ; 2011 ; 15 ; Arquivos do Museu Dinâmico Interdisciplinar Volume 2011 ; 2011 >
       au < released ; 2012 ; 16 ; Arquivos do Museu Dinâmico Interdisciplinar Volume 2012 ; 2012 >
-      au < releasing ; 2013 ; 17 ; Arquivos do Museu Dinâmico Interdisciplinar Volume 2013 ; 2013 >
+      au < released ; 2013 ; 17 ; Arquivos do Museu Dinâmico Interdisciplinar Volume 2013 ; 2013 >
       au < expected ; 2014 ; 18 ; Arquivos do Museu Dinâmico Interdisciplinar Volume 2014 ; 2014 >
 
   }
@@ -353,36 +353,36 @@
       param[journal_id] = BolGeogr
       comment[notReady] = Can't store page: java.lang.IllegalArgumentException: Unavailable au manager:NodeManager
 
-      au < releasing ; 1983 ; 1 ; Boletim de Geografia Volume 1983 ; 1983 >
-      au < releasing ; 1984 ; 2 ; Boletim de Geografia Volume 1984 ; 1984 >
-      au < releasing ; 1985 ; 3 ; Boletim de Geografia Volume 1985 ; 1985 >
-      au < releasing ; 1986 ; 4 ; Boletim de Geografia Volume 1986 ; 1986 >
-      au < releasing ; 1987 ; 5 ; Boletim de Geografia Volume 1987 ; 1987 >
-      au < releasing ; 1988 ; 6 ; Boletim de Geografia Volume 1988 ; 1988 >
-      au < releasing ; 1989 ; 7 ; Boletim de Geografia Volume 1989 ; 1989 >
-      au < releasing ; 1990 ; 8 ; Boletim de Geografia Volume 1990 ; 1990 >
-      au < releasing ; 1991 ; 9 ; Boletim de Geografia Volume 1991 ; 1991 >
-      au < releasing ; 1992 ; 10 ; Boletim de Geografia Volume 1992 ; 1992 >
-      au < releasing ; 1993 ; 11 ; Boletim de Geografia Volume 1993 ; 1993 >
-      au < releasing ; 1994 ; 12 ; Boletim de Geografia Volume 1994 ; 1994 >
-      au < releasing ; 1995 ; 13 ; Boletim de Geografia Volume 1995 ; 1995 >
-      au < releasing ; 1996 ; 14 ; Boletim de Geografia Volume 1996 ; 1996 >
-      au < releasing ; 1997 ; 15 ; Boletim de Geografia Volume 1997 ; 1997 >
-      au < releasing ; 1998 ; 16 ; Boletim de Geografia Volume 1998 ; 1998 >
-      au < releasing ; 1999 ; 17 ; Boletim de Geografia Volume 1999 ; 1999 >
+      au < released ; 1983 ; 1 ; Boletim de Geografia Volume 1983 ; 1983 >
+      au < released ; 1984 ; 2 ; Boletim de Geografia Volume 1984 ; 1984 >
+      au < released ; 1985 ; 3 ; Boletim de Geografia Volume 1985 ; 1985 >
+      au < released ; 1986 ; 4 ; Boletim de Geografia Volume 1986 ; 1986 >
+      au < released ; 1987 ; 5 ; Boletim de Geografia Volume 1987 ; 1987 >
+      au < released ; 1988 ; 6 ; Boletim de Geografia Volume 1988 ; 1988 >
+      au < released ; 1989 ; 7 ; Boletim de Geografia Volume 1989 ; 1989 >
+      au < released ; 1990 ; 8 ; Boletim de Geografia Volume 1990 ; 1990 >
+      au < released ; 1991 ; 9 ; Boletim de Geografia Volume 1991 ; 1991 >
+      au < released ; 1992 ; 10 ; Boletim de Geografia Volume 1992 ; 1992 >
+      au < released ; 1993 ; 11 ; Boletim de Geografia Volume 1993 ; 1993 >
+      au < released ; 1994 ; 12 ; Boletim de Geografia Volume 1994 ; 1994 >
+      au < released ; 1995 ; 13 ; Boletim de Geografia Volume 1995 ; 1995 >
+      au < released ; 1996 ; 14 ; Boletim de Geografia Volume 1996 ; 1996 >
+      au < released ; 1997 ; 15 ; Boletim de Geografia Volume 1997 ; 1997 >
+      au < released ; 1998 ; 16 ; Boletim de Geografia Volume 1998 ; 1998 >
+      au < released ; 1999 ; 17 ; Boletim de Geografia Volume 1999 ; 1999 >
       au < notReady ; 2000 ; 18 ; Boletim de Geografia Volume 2000 ; 2000 >
-      au < releasing ; 2001 ; 19 ; Boletim de Geografia Volume 2001 ; 2001 >
-      au < releasing ; 2002 ; 20 ; Boletim de Geografia Volume 2002 ; 2002 >
-      au < releasing ; 2003 ; 21 ; Boletim de Geografia Volume 2003 ; 2003 >
-      au < releasing ; 2004 ; 22 ; Boletim de Geografia Volume 2004 ; 2004 >
-      au < releasing ; 2005 ; 23 ; Boletim de Geografia Volume 2005 ; 2005 >
-      au < releasing ; 2006 ; 24 ; Boletim de Geografia Volume 2006 ; 2006 >
-      au < releasing ; 2007 ; 25 ; Boletim de Geografia Volume 2007 ; 2007 >
-      au < releasing ; 2008 ; 26 ; Boletim de Geografia Volume 2008 ; 2008 >
-      au < releasing ; 2009 ; 27 ; Boletim de Geografia Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 28 ; Boletim de Geografia Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 29 ; Boletim de Geografia Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 30 ; Boletim de Geografia Volume 2012 ; 2012 >
+      au < released ; 2001 ; 19 ; Boletim de Geografia Volume 2001 ; 2001 >
+      au < released ; 2002 ; 20 ; Boletim de Geografia Volume 2002 ; 2002 >
+      au < released ; 2003 ; 21 ; Boletim de Geografia Volume 2003 ; 2003 >
+      au < released ; 2004 ; 22 ; Boletim de Geografia Volume 2004 ; 2004 >
+      au < released ; 2005 ; 23 ; Boletim de Geografia Volume 2005 ; 2005 >
+      au < released ; 2006 ; 24 ; Boletim de Geografia Volume 2006 ; 2006 >
+      au < released ; 2007 ; 25 ; Boletim de Geografia Volume 2007 ; 2007 >
+      au < released ; 2008 ; 26 ; Boletim de Geografia Volume 2008 ; 2008 >
+      au < released ; 2009 ; 27 ; Boletim de Geografia Volume 2009 ; 2009 >
+      au < released ; 2010 ; 28 ; Boletim de Geografia Volume 2010 ; 2010 >
+      au < released ; 2011 ; 29 ; Boletim de Geografia Volume 2011 ; 2011 >
+      au < released ; 2012 ; 30 ; Boletim de Geografia Volume 2012 ; 2012 >
       au < notReady ; 2013 ; 31 ; Boletim de Geografia Volume 2013 ; 2013 >
       au < expected ; 2014 ; 32 ; Boletim de Geografia Volume 2014 ; 2014 >
 
