@@ -613,7 +613,7 @@
       au < released ; 2002 ; 4 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 2002 ; 2002 ; >
       au < released ; 2003 ; 5 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 2003 ; 2003 ; >
       au < released ; 2004 ; 6 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 2004 ; 2004 ; >
-      au < testing ; 2005 ; 7 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 2005 ; 2005 ; >
+      au < ready ; 2005 ; 7 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 2005 ; 2005 ; >
       au < released ; 2006 ; 8 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 2006 ; 2006 ; >
       au < released ; 2007 ; 9 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 2007 ; 2007 ; >
       au < released ; 2008 ; 10 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 2008 ; 2008 ; >
@@ -1163,7 +1163,7 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = revistadoscursos
 
-      au < testing ; 1915 ; 1 ; Revista dos Cursos da Faculdade de Medicina de Porto Alegre Volume 1915 ; 1915 ; >
+      au < ready ; 1915 ; 1 ; Revista dos Cursos da Faculdade de Medicina de Porto Alegre Volume 1915 ; 1915 ; >
 
   }
 
