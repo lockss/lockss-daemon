@@ -25,7 +25,7 @@
       au < released ; 2010 ; 6 ; Revista Ágora Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 7 ; Revista Ágora Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 8 ; Revista Ágora Volume 2012 ; 2012 ; >
-      au < ready ; 2013 ; 9 ; Revista Ágora Volume 2013 ; 2013 ; >
+      au < releasing ; 2013 ; 9 ; Revista Ágora Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 10 ; Revista Ágora Volume 2014 ; 2014 ; >
 
   }
@@ -45,7 +45,7 @@
       au < released ; 2010 ; 2 ; Argumentum Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 3 ; Argumentum Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 4 ; Argumentum Volume 2012 ; 2012 ; >
-      au < ready ; 2013 ; 5 ; Argumentum Volume 2013 ; 2013 ; >
+      au < releasing ; 2013 ; 5 ; Argumentum Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 6 ; Argumentum Volume 2014 ; 2014 ; >
 
   }
@@ -100,7 +100,7 @@
       au < released ; 2010 ; 21 ; Dimensões: revista de História da Ufes Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 22 ; Dimensões: revista de História da Ufes Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 23 ; Dimensões: revista de História da Ufes Volume 2012 ; 2012 ; >
-      au < ready ; 2013 ; 24 ; Dimensões: revista de História da Ufes Volume 2013 ; 2013 ; >
+      au < releasing ; 2013 ; 24 ; Dimensões: revista de História da Ufes Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 25 ; Dimensões: revista de História da Ufes Volume 2014 ; 2014 ; >
 
   }
@@ -117,10 +117,10 @@
       param[journal_id] = educacao
 
       au < notReady ; 2009 ; 1 ; Cadernos de Pesquisa em Educação Volume 2009 ; 2009 ; Crawl completed with no substance >
-      au < ready ; 2010 ; 2 ; Cadernos de Pesquisa em Educação Volume 2010 ; 2010 ; >
-      au < ready ; 2011 ; 3 ; Cadernos de Pesquisa em Educação Volume 2011 ; 2011 ; >
-      au < ready ; 2012 ; 4 ; Cadernos de Pesquisa em Educação Volume 2012 ; 2012 ; >
-      au < ready ; 2013 ; 5 ; Cadernos de Pesquisa em Educação Volume 2013 ; 2013 ; >
+      au < releasing ; 2010 ; 2 ; Cadernos de Pesquisa em Educação Volume 2010 ; 2010 ; >
+      au < releasing ; 2011 ; 3 ; Cadernos de Pesquisa em Educação Volume 2011 ; 2011 ; >
+      au < releasing ; 2012 ; 4 ; Cadernos de Pesquisa em Educação Volume 2012 ; 2012 ; >
+      au < releasing ; 2013 ; 5 ; Cadernos de Pesquisa em Educação Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 6 ; Cadernos de Pesquisa em Educação Volume 2014 ; 2014 ; >
 
   }
@@ -147,7 +147,7 @@
       au < released ; 2010 ; 11 ; Geografares Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 12 ; Geografares Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 13 ; Geografares Volume 2012 ; 2012 ; >
-      au < ready ; 2013 ; 14 ; Geografares Volume 2013 ; 2013 ; >
+      au < releasing ; 2013 ; 14 ; Geografares Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 15 ; Geografares Volume 2014 ; 2014 ; >
 
   }
@@ -231,7 +231,7 @@
       param[journal_id] = musicaelinguagem
 
       au < released ; 2012 ; 1 ; Música e Linguagem Volume 2012 ; 2012 ; >
-      au < ready ; 2013 ; 2 ; Música e Linguagem Volume 2013 ; 2013 ; >
+      au < releasing ; 2013 ; 2 ; Música e Linguagem Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 3 ; Música e Linguagem Volume 2014 ; 2014 ; >
 
   }
@@ -249,7 +249,7 @@
 
       au < released ; 2011 ; 1 ; PERcursos Linguísticos Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 2 ; PERcursos Linguísticos Volume 2012 ; 2012 ; >
-      au < ready ; 2013 ; 3 ; PERcursos Linguísticos Volume 2013 ; 2013 ; >
+      au < releasing ; 2013 ; 3 ; PERcursos Linguísticos Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 4 ; PERcursos Linguísticos Volume 2014 ; 2014 ; >
 
   }
@@ -266,7 +266,7 @@
       param[journal_id] = ppgadm
 
       au < released ; 2012 ; 1 ; Revista Gestão & Conexões Volume 2012 ; 2012 ; >
-      au < ready ; 2013 ; 2 ; Revista Gestão & Conexões Volume 2013 ; 2013 ; >
+      au < releasing ; 2013 ; 2 ; Revista Gestão & Conexões Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 3 ; Revista Gestão & Conexões Volume 2014 ; 2014 ; >
 
   }
@@ -383,7 +383,7 @@
       au < released ; 2010 ; 1 ; Temporalis Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 2 ; Temporalis Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 3 ; Temporalis Volume 2012 ; 2012 ; >
-      au < ready ; 2013 ; 4 ; Temporalis Volume 2013 ; 2013 ; >
+      au < releasing ; 2013 ; 4 ; Temporalis Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 5 ; Temporalis Volume 2014 ; 2014 ; >
 
   }
