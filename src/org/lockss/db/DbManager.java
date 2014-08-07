@@ -1,5 +1,5 @@
 /*
- * $Id: DbManager.java,v 1.38 2014-07-22 16:18:20 fergaloy-sf Exp $
+ * $Id: DbManager.java,v 1.38.2.1 2014-08-07 21:57:35 fergaloy-sf Exp $
  */
 
 /*
@@ -2447,37 +2447,6 @@ public class DbManager extends BaseLockssDaemonManager
       + " and " + AU_TABLE + "." + PLUGIN_SEQ_COLUMN
       + " = p." + PLUGIN_SEQ_COLUMN
       + " and p." + PLUGIN_ID_COLUMN + " = ?)";
-
-  // SQL statements that update the database to version 15.
-  private static final String[] VERSION_15_QUERIES = new String[] {
-    "update " + PUBLISHER_TABLE + " set " + PUBLISHER_NAME_COLUMN
-    + " = trim(" + PUBLISHER_NAME_COLUMN + ")",
-    "update " + MD_ITEM_NAME_TABLE
-    + " set " + NAME_COLUMN + " = trim(" + NAME_COLUMN + ")",
-    "update " + ISBN_TABLE
-    + " set " + ISBN_COLUMN + " = trim(" + ISBN_COLUMN + ")",
-    "update " + ISSN_TABLE
-    + " set " + ISSN_COLUMN + " = trim(" + ISSN_COLUMN + ")",
-    "update " + BIB_ITEM_TABLE
-    + " set " + VOLUME_COLUMN + " = trim(" + VOLUME_COLUMN + "),"
-    + ISSUE_COLUMN + " = trim(" + ISSUE_COLUMN + "),"
-    + START_PAGE_COLUMN + " = trim(" + START_PAGE_COLUMN + "),"
-    + END_PAGE_COLUMN + " = trim(" + END_PAGE_COLUMN + "),"
-    + ITEM_NO_COLUMN + " = trim(" + ITEM_NO_COLUMN + ")",
-    "update " + MD_ITEM_TABLE
-    + " set " + DATE_COLUMN + " = trim(" + DATE_COLUMN + "),"
-    + COVERAGE_COLUMN + " = trim(" + COVERAGE_COLUMN + ")",
-    "update " + AUTHOR_TABLE
-    + " set " + AUTHOR_NAME_COLUMN + " = trim(" + AUTHOR_NAME_COLUMN + ")",
-    "update " + DOI_TABLE
-    + " set " + DOI_COLUMN + " = trim(" + DOI_COLUMN + ")",
-    "update " + URL_TABLE
-    + " set " + URL_COLUMN + " = trim(" + URL_COLUMN + ")",
-    "update " + KEYWORD_TABLE
-    + " set " + KEYWORD_COLUMN + " = trim(" + KEYWORD_COLUMN + ")",
-    "update " + PUBLICATION_TABLE
-    + " set " + PUBLICATION_ID_COLUMN + " = trim(" + PUBLICATION_ID_COLUMN + ")"
-  };
 
   // Derby SQL state of exception thrown on successful database shutdown.
   private static final String SHUTDOWN_SUCCESS_STATE_CODE = "08006";
@@ -7413,35 +7382,6 @@ public class DbManager extends BaseLockssDaemonManager
    *           if any problem occurred updating the database.
    */
   private void updateDatabaseFrom14To15(Connection conn) throws DbException {
-    final String DEBUG_HEADER = "updateDatabaseFrom14To15(): ";
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
-
-    if (conn == null) {
-      throw new DbException("Null connection");
-    }
-
-    PreparedStatement statement = null;
-
-    // Loop through all the queries to be excuted.
-    for (String query : VERSION_15_QUERIES) {
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "query = '" + query + "'.");
-
-      try {
-	// Prepare the query.
-	statement = prepareStatementBeforeReady(conn, query);
-
-	// Execute the query.
-	int count = executeUpdateBeforeReady(statement);
-	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count + ".");
-      } catch (DbException dbe) {
-	log.error("Cannot trim text value", dbe);
-	log.error("SQL = '" + query + "'.");
-	throw dbe;
-      } finally {
-	DbManager.safeCloseStatement(statement);
-      }
-    }
-
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+    // Disabled due to unexpected errors.
   }
 }
