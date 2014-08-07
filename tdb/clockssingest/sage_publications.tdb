@@ -34896,6 +34896,21 @@
 
     }
 
+    {
+
+      title <
+        name = Studies in People's History ;
+        issn = 2348-4489 ;
+        issnl = 2348-4489
+      >
+
+        pluginSuffix = ClockssHighWirePressH20Plugin
+        param[base_url] = http://sip.sagepub.com/
+
+        au < exists ; exists ; 2014 ; Studies in People's History Volume 1 ; 1 ; >
+
+    }
+
   {
 
     title <

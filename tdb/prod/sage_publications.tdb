@@ -38272,6 +38272,22 @@ comment[mpj] = now published by Brill
     {
 
       title <
+        name = Studies in People's History ;
+        issn = 2348-4489 ;
+        issnl = 2348-4489
+      >
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://sip.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 2014 ; Studies in People's History Volume 1 ; 1 >
+
+    }
+
+    {
+
+      title <
         name = Studies in Religion/Sciences Religieuses ;
         issn = 0008-4298 ;
         eissn = 2042-0587 
