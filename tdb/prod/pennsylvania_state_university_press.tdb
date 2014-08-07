@@ -611,6 +611,7 @@
       issnl = 1526-1018
     >
 
+      {
       plugin = org.lockss.plugin.jstor.JstorPlugin
       param[base_url] = http://www.jstor.org/
       param[base_url2] = https://www.jstor.org/
@@ -621,6 +622,18 @@
       au < manifest ; 2012 ; The Journal of Ayn Rand Studies Volume 12 ; 12 >
       au < manifest ; 2013 ; The Journal of Ayn Rand Studies Volume 13 ; 13 >
       au < manifest ; 2014 ; The Journal of Ayn Rand Studies Volume 14 ; 14 >
+      }
+      
+      {
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; year ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = journal_of_ayn_rand_studies
+      attr[journal_id] = ars
+    
+      au < exists ; 2014 ; The Journal of Ayn Rand Studies Volume 14 ; 14 >
+      
+     }
       
   }
 
