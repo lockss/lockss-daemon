@@ -197,3 +197,76 @@ directories will not be deleted.  A very simple cleanup script is included.
 Just invoke it with:
 
     % ./clean.sh
+
+
+----------------------------------------------------------------------------
+
+6. Demos
+
+There are three "test cases" that are actually demos created for the TRAC audit
+of the CLOCKSS Archive. They show the basic functionality of the LOCKSS Polling
+and Repair Protocol, which is described here:
+
+http://documents.clockss.org/index.php/LOCKSS:_Polling_and_Repair_Protocol
+
+Each demo creates a network of 5 LOCKSS daemons configured to preserve one
+AU of simulated content:
+
+AuditDemo1
+	One of the daemons calls a poll, and the other 4 vote in it. Their
+	content is all identical, so there is 100% agreement in this poll.
+
+AuditDemo2
+	One of the daemons calls a poll, but before it does one file in its
+	simulated content is damaged. The other 4 vote, and they all
+	disagree with the poller, who requests a repair from one of the
+	other 4. Once the repair is received, the poller re-tallies the
+	poll and now finds 100% agreement.
+
+AuditDemo3
+	In AuditDemo2 the simulated content was open access, so there was
+	no restriction on the voter sending a repair to the poller. The
+	common case is that the content is not open access, in which case
+	the voter has to remember agreeing with the poller in the past
+	about the AU being repaired. In this demo the daemons achieve
+	agreement on the non-open access content before damage occurs at
+	the poller.  Then when the poller calls a poll, detects the
+	damage and requests a repair, the voter remembers the prior
+	agreement and sends a repair.
+
+As checked out from CVS, the three demos work correctly. However, they are
+more informative if they are run as follows:
+
+	cp testsuite.opt.demo testsuite.opt
+	python testsuite.py AuditDemo1
+	./clean.sh
+	python testsuite.py AuditDemo2
+	./clean.sh
+	python testsuite.py AuditDemo3
+	./clean.sh
+	rm testsuite.opt
+
+The testsuite.opt file configures the demos as follows:
+- The logs are not automatically deleted after the demo but remain in the
+  location testsuite-1/daemon-804[12345]/test.out until ./clean.sh is
+  executed.
+- The daemon log levels are adjusted to provide full logging of the
+  polling and voting processes.
+- The daemons are not shut down until the user presses ENTER. This allows
+  access with user lockss-u and password lockss-p to the UI of the poller
+  at:
+
+  http://localhost:8041/
+
+  and one of the voters at:
+
+  http://localhost:8042/
+
+Annotated logs from the first two demos configured in this way are at:
+
+AuditDemo1
+  http://documents.clockss.org/images/3/3b/Poller-good.pdf
+  http://documents.clockss.org/images/b/b2/Voter-good.pdf
+AuditDemo2
+  http://documents.clockss.org/images/a/a2/Poller-bad.pdf
+  http://documents.clockss.org/images/2/23/Voter-bad.pdf

@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedContentGenerator.java,v 1.38 2013-08-23 03:34:01 etenbrink Exp $
+ * $Id: SimulatedContentGenerator.java,v 1.38.10.1 2014-08-07 23:41:11 dshr Exp $
  */
 
 /*
@@ -165,6 +165,8 @@ public class SimulatedContentGenerator {
    */
   public static final int FILE_TYPE_XHTML = 64;
 
+  public static final String CONFIG_PREFIX =
+    "org.lockss.plugin.simulated.SimulatedContentGenerator.";
   // how deep the tree extends
   private int treeDepth = 4;
   // number of branches at each level
@@ -206,37 +208,48 @@ public class SimulatedContentGenerator {
   static SimulatedContentGenerator getInstance(String rootPath) {
     SimulatedContentGenerator ret = null;
     logger.debug3("SimulatedContentGenerator.getInstance(" + rootPath + ")");
-    boolean arc = CurrentConfig.getBooleanParam("org.lockss.plugin.simulated.SimulatedContentGenerator.doArcFile", false);
-    boolean warc = CurrentConfig.getBooleanParam("org.lockss.plugin.simulated.SimulatedContentGenerator.doWarcFile", false);
-    boolean zip = CurrentConfig.getBooleanParam("org.lockss.plugin.simulated.SimulatedContentGenerator.doZipFile", false);
-    boolean tar = CurrentConfig.getBooleanParam("org.lockss.plugin.simulated.SimulatedContentGenerator.doTarFile", false);
-    boolean springer = CurrentConfig.getBooleanParam("org.lockss.plugin.simulated.SimulatedContentGenerator.doSpringer", false);
+    boolean arc = CurrentConfig.getBooleanParam(CONFIG_PREFIX +
+						"doArcFile", false);
+    boolean warc = CurrentConfig.getBooleanParam(CONFIG_PREFIX +
+						 "doWarcFile", false);
+    boolean zip = CurrentConfig.getBooleanParam(CONFIG_PREFIX +
+						"doZipFile", false);
+    boolean tar = CurrentConfig.getBooleanParam(CONFIG_PREFIX +
+						"doTarFile", false);
+    boolean springer = CurrentConfig.getBooleanParam(CONFIG_PREFIX +
+						     "doSpringer", false);
     logger.debug3("SimulatedContentGenerator: arc " + arc + " zip " + zip +
 		  " tar " + tar);
     if (arc) {
-      boolean actual = CurrentConfig.getBooleanParam("org.lockss.plugin.simulated.SimulatedContentGenerator.actualArcFile", false);
+      boolean actual = CurrentConfig.getBooleanParam(CONFIG_PREFIX +
+						     "actualArcFile", false);
       if (actual) {
 	ret = new ActualArcContentGenerator(rootPath);
       } else {
 	ret = new SimulatedArcContentGenerator(rootPath);
       }
     } else if (warc) {
-      boolean actual = CurrentConfig.getBooleanParam("org.lockss.plugin.simulated.SimulatedContentGenerator.actualWarcFile", false);
+      boolean actual = CurrentConfig.getBooleanParam(CONFIG_PREFIX +
+						     "actualWarcFile", false);
       if (actual) {
         ret = new ActualWarcContentGenerator(rootPath);
       } else {
         ret = new SimulatedWarcContentGenerator(rootPath);
       }
     } else if (zip) {
-      boolean actual = CurrentConfig.getBooleanParam("org.lockss.plugin.simulated.SimulatedContentGenerator.actualZipFile", false);
+      boolean actual = CurrentConfig.getBooleanParam(CONFIG_PREFIX +
+						     "actualZipFile", false);
       if (actual) {
 	ret = new ActualZipContentGenerator(rootPath);
       } else {
 	ret = new SimulatedZipContentGenerator(rootPath);
       }
     } else if (tar) {
-      boolean actual = CurrentConfig.getBooleanParam("org.lockss.plugin.simulated.SimulatedContentGenerator.actualTarFile", false);
-      String tarName = CurrentConfig.getParam("org.lockss.plugin.simulated.SimulatedContentGenerator.actualTarFileName", "content.tar");
+      boolean actual = CurrentConfig.getBooleanParam(CONFIG_PREFIX +
+						     "actualTarFile", false);
+      String tarName = CurrentConfig.getParam(CONFIG_PREFIX +
+					      "actualTarFileName",
+					      "content.tar");
       if (actual) {
 	  ret = new ActualTarContentGenerator(rootPath, tarName);
       } else {
@@ -453,7 +466,13 @@ public class SimulatedContentGenerator {
       generateFile(treeRoot, jj, 0, 0,
 		   (alterFile && (jj==getAbnormalFileNumber())));
     }
-    generateIndexFile(treeRoot, LockssPermission.LOCKSS_PERMISSION_STRING);
+    boolean openAccess = CurrentConfig.getBooleanParam(CONFIG_PREFIX +
+						       "openAccess", false);
+    String perm = (openAccess ?
+		   LockssPermission.LOCKSS_OPEN_ACCESS_PERMISSION_STRING :
+		   LockssPermission.LOCKSS_PERMISSION_STRING);
+    generateIndexFile(treeRoot, perm);
+
     logger.debug("Generated content tree: " + contentRoot);
     return treeRoot.toString();
   }

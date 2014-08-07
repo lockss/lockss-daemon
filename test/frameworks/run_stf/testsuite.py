@@ -251,8 +251,9 @@ class V3TestCases( LockssTestCases ):
         self.assertEqual( len( self.clients ) - 1, len( repairer_info ) )
         for ( box, agreement ) in repairer_info.iteritems():
             log.debug( "Client %s box %s agree %s" % ( self.victim, box, agreement ) )
-            self.assertEqual( agreement, self.expected_agreement, 
+            self.assertEqual( agreement, self.expected_agreement,
                        'Voter %s had actual agreement: %s expected: %s' % ( box, agreement, self.expected_agreement ) )
+
 
     def _verify_voters_counts( self ):
         poll_key = self.victim.getV3PollKey( self.AU )
@@ -332,6 +333,54 @@ class SimpleV3TestCase( V3TestCases ):
 
     def _damage_AU( self ):
         return [ ]
+
+class AuditDemo1( V3TestCases ):
+    """Demo a V3 poll with no disagreement"""
+
+    def __init__( self, methodName = 'runTest' ):
+        V3TestCases.__init__( self, methodName )
+        self.simulated_AU_parameters = { 'depth': 1, 'branch': 1, 'numFiles': 2 }
+
+    def _damage_AU( self ):
+        return [ ]
+
+    def _check_v3_result( self, nodes ):
+        log.info( 'Checking V3 poll result...' )
+        self._verify_poll_results()
+        self._verify_voter_agreements()
+        self._verify_voters_counts()
+        log.info( 'AU successfully polled' )
+
+class AuditDemo2( V3TestCases ):
+    """Demo a basic V3 poll with repair via open access"""
+
+    def __init__( self, methodName = 'runTest' ):
+        V3TestCases.__init__( self, methodName )
+	self.local_configuration = {
+            'org.lockss.poll.v3.repairFromCachePercent': 100,
+	    'org.lockss.plugin.simulated.SimulatedContentGenerator.openAccess': 'true'
+	}
+        self.simulated_AU_parameters = { 'depth': 1, 'branch': 1, 'numFiles': 2 }
+            
+    def _damage_AU( self ):
+        nodes = [ self.victim.randomDamageSingleNode( self.AU ) ]
+        self._set_expected_agreement_from_damaged( nodes )
+        return nodes
+
+    def _verify_voter_agreements( self ):
+        poll_key = self.victim.getV3PollKey( self.AU )
+        for client in self.clients:
+            if client != self.victim:
+                repairer_info = client.getAuRepairerInfo( self.AU, 'LastPercentAgreement' )
+                repairer_count = len( repairer_info)
+                for ( box, agreement ) in repairer_info.iteritems():
+                    self.assertEqual(self.expected_voter_agreement,
+                                     agreement,
+                                     'Client %s wrong agreement %s with box %s' % ( client, agreement, box))
+                    if self.symmetric == True:
+                        log.info( 'Symmetric client %s repairers OK' % client )
+                    else:
+                        log.info( 'Asymmetric client %s repairers OK' % client )
 
 
 class SimpleV3LocalTestCase( V3TestCases ):
@@ -963,7 +1012,6 @@ class RepairFromPeerV3TestCase( RepairFromPeerV3Tests ):
         RepairFromPeerV3Tests.__init__( self, methodName )
         self.local_configuration[ 'org.lockss.poll.pollStarterAdditionalDelayBetweenPolls' ] = '20s'    # XXX
 
-
 class RepairFromPeerWithDeactivateV3TestCase( RepairFromPeerV3Tests ):
     """Ensure that repairing from a V3 peer after AU deactivate/reactivate works correctly"""
 
@@ -972,6 +1020,13 @@ class RepairFromPeerWithDeactivateV3TestCase( RepairFromPeerV3Tests ):
         self.local_configuration[ 'org.lockss.poll.pollStarterAdditionalDelayBetweenPolls' ] = '20s'    # XXX
         self.toggle_AU_activation = True
 
+class AuditDemo3( RepairFromPeerV3Tests ):
+    """Demo a basic V3 poll with repair via previous agreement"""
+
+    def __init__( self, methodName = 'runTest' ):
+        RepairFromPeerV3Tests.__init__( self, methodName )
+        self.local_configuration[ 'org.lockss.poll.pollStarterAdditionalDelayBetweenPolls' ] = '20s'    # XXX
+        self.simulated_AU_parameters = { 'depth': 1, 'branch': 1, 'numFiles': 2 }
 
 class RepairHugeFromPeerV3TestCase( RepairFromPeerV3Tests ):
     """Ensure that repairing a huge file from a V3 peer works correctly."""
