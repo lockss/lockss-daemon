@@ -113,7 +113,7 @@
     param[base_url] = http://www.comicsgrid.com/
     param[journal_id] = cg
 
-    au < testing ; 2013 ; The Comics Grid: Journal of Comics Scholarship Volume 3 ; 3 ; 2013 >
+    au < ready ; 2013 ; The Comics Grid: Journal of Comics Scholarship Volume 3 ; 3 ; 2013 >
     au < manifest ; 2014 ; The Comics Grid: Journal of Comics Scholarship Volume 4 ; 4 ; 2014 >
     
   }
@@ -163,17 +163,17 @@
     param[base_url] = http://www.jcircadianrhythms.com/
     param[journal_id] = jcr
 
-    au < testing ; 2003 ; Journal of Circadian Rhythms Volume 1 ; 1 ; 2003>
-    au < testing ; 2004 ; Journal of Circadian Rhythms Volume 2 ; 2 ; 2004>
-    au < testing ; 2005 ; Journal of Circadian Rhythms Volume 3 ; 3 ; 2005>
-    au < testing ; 2006 ; Journal of Circadian Rhythms Volume 4 ; 4 ; 2006>
-    au < testing ; 2007 ; Journal of Circadian Rhythms Volume 5 ; 5 ; 2007>
-    au < testing ; 2008 ; Journal of Circadian Rhythms Volume 6 ; 6 ; 2008>
-    au < testing ; 2009 ; Journal of Circadian Rhythms Volume 7 ; 7 ; 2009>
-    au < testing ; 2010 ; Journal of Circadian Rhythms Volume 8 ; 8 ; 2010>
-    au < testing ; 2011 ; Journal of Circadian Rhythms Volume 9 ; 9 ; 2011>
-    au < testing ; 2012 ; Journal of Circadian Rhythms Volume 10 ; 10 ; 2012 >
-    au < testing ; 2013 ; Journal of Circadian Rhythms Volume 11 ; 11 ; 2013 >
+    au < ready ; 2003 ; Journal of Circadian Rhythms Volume 1 ; 1 ; 2003>
+    au < ready ; 2004 ; Journal of Circadian Rhythms Volume 2 ; 2 ; 2004>
+    au < ready ; 2005 ; Journal of Circadian Rhythms Volume 3 ; 3 ; 2005>
+    au < ready ; 2006 ; Journal of Circadian Rhythms Volume 4 ; 4 ; 2006>
+    au < ready ; 2007 ; Journal of Circadian Rhythms Volume 5 ; 5 ; 2007>
+    au < ready ; 2008 ; Journal of Circadian Rhythms Volume 6 ; 6 ; 2008>
+    au < ready ; 2009 ; Journal of Circadian Rhythms Volume 7 ; 7 ; 2009>
+    au < ready ; 2010 ; Journal of Circadian Rhythms Volume 8 ; 8 ; 2010>
+    au < ready ; 2011 ; Journal of Circadian Rhythms Volume 9 ; 9 ; 2011>
+    au < ready ; 2012 ; Journal of Circadian Rhythms Volume 10 ; 10 ; 2012 >
+    au < ready ; 2013 ; Journal of Circadian Rhythms Volume 11 ; 11 ; 2013 >
     au < manifest ; 2014 ; Journal of Circadian Rhythms Volume 12 ; 12 ; 2014 >
 
   }
@@ -219,8 +219,8 @@
     param[base_url] = http://openarchaeologydata.metajnl.com/
     param[journal_id] = joad
     
-    au < testing ; 2012 ; Journal of Open Archaeology Data Volume 1 ; 1 ; 2012 >
-    au < testing ; 2013 ; Journal of Open Archaeology Data Volume 2 ; 2 ; 2013 >
+    au < ready ; 2012 ; Journal of Open Archaeology Data Volume 1 ; 1 ; 2012 >
+    au < ready ; 2013 ; Journal of Open Archaeology Data Volume 2 ; 2 ; 2013 >
     au < manifest ; 2014 ; Journal of Open Archaeology Data Volume 3 ; 3 ; 2014 >
 
   }
@@ -235,7 +235,7 @@
     param[base_url] = http://openhealthdata.metajnl.com/
     param[journal_id] = jophd
     
-    au < testing ; 2013 ; Journal of Open Public Health Data Volume 1 ; 1 ; 2013 >
+    au < ready ; 2013 ; Journal of Open Public Health Data Volume 1 ; 1 ; 2013 >
     au < manifest ; 2014 ; Journal of Open Public Health Data Volume 2 ; 2 ; 2014 >
 
   }
@@ -250,7 +250,7 @@
     param[base_url] = http://openpsychologydata.metajnl.com/
     param[journal_id] = jopd
     
-    au < testing ; 2013 ; Journal of Open Psychology Data Volume 1 ; 1 ; 2013 >
+    au < ready ; 2013 ; Journal of Open Psychology Data Volume 1 ; 1 ; 2013 >
     au < manifest ; 2014 ; Journal of Open Psychology Data Volume 2 ; 2 ; 2014 >
 
   }
@@ -265,7 +265,7 @@
     param[base_url] = http://openresearchsoftware.metajnl.com/
     param[journal_id] = jors
 
-    au < testing ; 2013 ; Journal of Open Research Software Volume 1 ; 1 ; 2013 >
+    au < ready ; 2013 ; Journal of Open Research Software Volume 1 ; 1 ; 2013 >
     au < manifest ; 2014 ; Journal of Open Research Software Volume 2 ; 2 ; 2014 >
     
   }
@@ -391,15 +391,15 @@
     param[base_url] = http://www.psychologicabelgica.com/
     param[journal_id] = pb
 
-    au < testing ; 2005 ; Psychologica Belgica Volume 45 ; 45 ; 2005 >
-    au < testing ; 2006 ; Psychologica Belgica Volume 46 ; 46 ; 2006 >
-    au < testing ; 2007 ; Psychologica Belgica Volume 47 ; 47 ; 2007 >
-    au < testing ; 2008 ; Psychologica Belgica Volume 48 ; 48 ; 2008 >
-    au < testing ; 2009 ; Psychologica Belgica Volume 49 ; 49 ; 2009 >
-    au < testing ; 2010 ; Psychologica Belgica Volume 50 ; 50 ; 2010 >
-    au < testing ; 2011 ; Psychologica Belgica Volume 51 ; 51 ; 2011 >
-    au < testing ; 2012 ; Psychologica Belgica Volume 52 ; 52 ; 2012 >
-    au < testing ; 2013 ; Psychologica Belgica Volume 53 ; 53 ; 2013 >
+    au < ready ; 2005 ; Psychologica Belgica Volume 45 ; 45 ; 2005 >
+    au < ready ; 2006 ; Psychologica Belgica Volume 46 ; 46 ; 2006 >
+    au < ready ; 2007 ; Psychologica Belgica Volume 47 ; 47 ; 2007 >
+    au < ready ; 2008 ; Psychologica Belgica Volume 48 ; 48 ; 2008 >
+    au < ready ; 2009 ; Psychologica Belgica Volume 49 ; 49 ; 2009 >
+    au < ready ; 2010 ; Psychologica Belgica Volume 50 ; 50 ; 2010 >
+    au < ready ; 2011 ; Psychologica Belgica Volume 51 ; 51 ; 2011 >
+    au < ready ; 2012 ; Psychologica Belgica Volume 52 ; 52 ; 2012 >
+    au < ready ; 2013 ; Psychologica Belgica Volume 53 ; 53 ; 2013 >
     au < manifest ; 2014 ; Psychologica Belgica Volume 54 ; 54 ; 2014 >
 
   }
