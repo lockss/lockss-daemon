@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.55.2.1 2014-07-29 21:59:46 tlipkis Exp $
+ * $Id: BaseCachedUrl.java,v 1.55.2.2 2014-08-07 06:53:28 tlipkis Exp $
  */
 
 /*
@@ -194,10 +194,6 @@ public class BaseCachedUrl implements CachedUrl {
   }
 
   public boolean hasContent() {
-    if (isIncludedOnly() && !au.shouldBeCached(getUrl())) {
-      logger.debug("hasContent("+getUrl()+"): excluded by crawl rule");
-      return false;
-    }
     if (repository==null) {
       getRepository();
     }
@@ -208,7 +204,14 @@ public class BaseCachedUrl implements CachedUrl {
 	return false;
       }
     }
-    return (leaf == null) ? false : leaf.hasContent();
+    if (leaf == null || !leaf.hasContent()) {
+      return false;
+    }
+    if (isIncludedOnly() && !au.shouldBeCached(getUrl())) {
+      logger.debug2("hasContent("+getUrl()+"): excluded by crawl rule");
+      return false;
+    }
+    return true;
   }
 
   public InputStream getUnfilteredInputStream() {
@@ -426,11 +429,14 @@ public class BaseCachedUrl implements CachedUrl {
     }
 
     public boolean hasContent() {
-      if (isIncludedOnly() && !au.shouldBeCached(getUrl())) {
-	logger.debug("hasContent("+getUrl()+"): excluded by crawl rule");
+      if (!getNodeVersion().hasContent()) {
 	return false;
       }
-      return getNodeVersion().hasContent();
+      if (isIncludedOnly() && !au.shouldBeCached(getUrl())) {
+	logger.debug2("hasContent("+getUrl()+"): excluded by crawl rule");
+	return false;
+      }
+      return true;
     }
 
     /**
