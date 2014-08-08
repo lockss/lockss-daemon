@@ -1,5 +1,5 @@
 /*
- * $Id: ArticleMetadataBuffer.java,v 1.4 2014-06-02 00:45:22 tlipkis Exp $
+ * $Id: ArticleMetadataBuffer.java,v 1.5 2014-08-08 17:26:01 pgust Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
+import java.text.ParseException;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -275,7 +276,9 @@ class ArticleMetadataBuffer {
         if (locale == null) {
           locale = Locale.getDefault();
         }
-        pubDate = new PublicationDate(dateStr, locale);
+        try {
+          pubDate = new PublicationDate(dateStr, locale);
+        } catch (ParseException ex) {}
       }
       return pubDate;
     }
