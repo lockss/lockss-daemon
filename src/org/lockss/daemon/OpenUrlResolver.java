@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.51 2014-07-22 16:38:52 pgust Exp $
+ * $Id: OpenUrlResolver.java,v 1.52 2014-08-08 18:04:54 pgust Exp $
  */
 
 /*
@@ -1428,8 +1428,9 @@ public class OpenUrlResolver {
     // get the year from the date
     String year = null;
     if (date != null) {
-      int y = new PublicationDate(date).getYear();
-      year = (y == 0) ? null : Integer.toString(y);
+      try {
+        year = Integer.toString(PublicationDate.parse(date).getYear());
+      } catch (ParseException ex) {}
     }
 
     // list of AUs that match volume and year specified
@@ -1907,8 +1908,9 @@ public class OpenUrlResolver {
     // get the year from the date
     String year = null;
     if (date != null) {
-      int y = new PublicationDate(date).getYear();
-      year = (y == 0) ? null : Integer.toString(y);
+      try {
+        year = Integer.toString(PublicationDate.parse(date).getYear());
+      } catch (ParseException ex) {}
     }
 
     // list of AUs that match volume and year specified
