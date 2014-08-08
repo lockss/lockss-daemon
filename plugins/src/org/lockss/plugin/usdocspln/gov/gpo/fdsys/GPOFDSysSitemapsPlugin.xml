@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>21</string>
+    <string>22</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -91,11 +91,19 @@
   </entry>
   <entry>
     <string>au_def_pause_time</string>
-    <long>6000</long>
+    <long>3000</long>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
     <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_fetch_rate_limiter_source</string>
+    <string>key:GPO</string>
+  </entry>
+  <entry>
+    <string>au_crawlwindow</string>
+    <string>org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysCrawlWindow</string>
   </entry>
   <entry>
     <string>application/xml_link_extractor_factory</string>
