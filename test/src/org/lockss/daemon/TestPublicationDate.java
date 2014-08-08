@@ -1,5 +1,5 @@
 /*
- * $Id: TestPublicationDate.java,v 1.12 2012-11-07 14:25:28 easyonthemayo Exp $
+ * $Id: TestPublicationDate.java,v 1.13 2014-08-08 18:05:26 pgust Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.daemon;
 
+import java.text.ParseException;
 import java.util.*;
 import org.lockss.test.*;
 
@@ -44,7 +45,7 @@ public class TestPublicationDate extends LockssTestCase {
   /**
    * Test big-endian date formats that put year first, month second, and day last.
    */
-  public void testBigEndian() {
+  public void testBigEndian() throws ParseException {
     assertEquals("2010-03-13", PublicationDate.parse("2010.3.13",Locale.US).toString());
     assertEquals("2010-03", PublicationDate.parse("2010.3",Locale.US).toString()); 
     assertEquals("2010-03-13", PublicationDate.parse("2010.3.13",Locale.US).toString()); 
@@ -69,7 +70,7 @@ public class TestPublicationDate extends LockssTestCase {
   /**
    * Test little-endian date formats that put day first, month second, and year last.
    */
-  public void testLittleEndian() {
+  public void testLittleEndian() throws ParseException {
     assertEquals("2010-03", PublicationDate.parse("Mar 2010",Locale.US).toString());
     assertEquals("2010-03", PublicationDate.parse("Mar., 2010",Locale.US).toString());
 //  "May-June 2010", //     -> 2010-05 ??
@@ -98,7 +99,7 @@ public class TestPublicationDate extends LockssTestCase {
    * Test middle-endian date formats that put month first, day second, and year third.
    * This form is peculiar to the US English locale.
    */
-  public void testMiddleEndian() {
+  public void testMiddleEndian() throws ParseException {
     assertEquals("2010-03-13", PublicationDate.parse("March 13, 2010",Locale.US).toString());
     assertEquals("2010-03-13", PublicationDate.parse("Mar. 13, 2010",Locale.US).toString()); 
     assertEquals("2010-03-13", PublicationDate.parse("13 Mar. 2010",Locale.US).toString()); 
@@ -119,14 +120,22 @@ public class TestPublicationDate extends LockssTestCase {
    * Test bad date formats
    */
   public void testBad() {
-    assertEquals("0", PublicationDate.parse("20111226").toString());
-    assertEquals("0", PublicationDate.parse(20111226).toString());
-    assertEquals("0", PublicationDate.parse("funky.chicken").toString());
-    assertEquals("0", PublicationDate.parse("MCM").toString());
+    try {
+      PublicationDate.parse("20111226");
+      fail();
+    } catch (ParseException ex) { }
+    try {
+      PublicationDate.parse("funky.chicken");
+      fail();
+    } catch (ParseException ex) {}
+    try {
+      PublicationDate.parse("MCM");
+      fail();
+    } catch (ParseException ex) {}
   }
 
-  public void testYearOnly() {
-    assertEquals("2010", PublicationDate.parse(2010).toString());
+  public void testYearOnly() throws ParseException {
+    assertEquals("2010", PublicationDate.parse("2010").toString());
   }
 
 }
