@@ -85,18 +85,22 @@
       </entry>
     </map>
   </entry>
-
+     <!-- standard layout is <base>/content/<vol>/....-->
+     <!-- standard layout is <base>/content/pdf/....-->
+     <!-- Genome Biology [1465-6906] is unique and -->
+     <!--   uses <base>/2009/<vol> but still <base>/content/pdf for pdf version -->
+     <!--  hence the \d{4} option in some rules -->
   <entry>
     <string>au_crawlrules</string>
     <list>
       <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(\?\d+)?$", base_url_host</string>
       <string>4,"^%s.{0,150}", base_url</string>
       <string>2,"^%sregistration", base_url</string>
-      <string>2,"^%scontent/%s/.*/(about|citations-pubmedcentral|comments|email|postcomment)$", base_url, volume_name</string> <!-- excluding a login-type page -->
-      <string>2,"^%scontent/%s/.*\?fmt_view=(classic|mobile)$", base_url, volume_name</string>-->
+      <string>2,"^%s(content|\d{4})/%s/.*/(about|citations-pubmedcentral|comments|email|postcomment)$", base_url, volume_name</string> <!-- excluding a login-type page -->
+      <string>2,"^%s(content|\d{4})/%s/.*\?fmt_view=(classic|mobile)$", base_url, volume_name</string>
       <string>2,"^%s%s/%s/[^/]+/(about|comments|email|postcomment)", base_url, journal_issn, volume_name</string>
-      <string>2,"^%scontent/%s/.*email\?from=standard$", base_url, volume_name</string>-->      
-      <string>1,"^%scontent/(%s|notes)/", base_url, volume_name</string>
+      <string>2,"^%s(content|\d{4})/%s/.*email\?from=standard$", base_url, volume_name</string>      
+      <string>1,"^%s(content|\d{4})/(%s|notes)/", base_url, volume_name</string>
       <string>1,"^%s(articles/browse\.asp|content)\?(date=&amp;volume=%s)[^0-9]", base_url, volume_name</string>
       <!-- http://www.biomedcentral.com/content/epub/1471-2253-13-50.epub -->
       <string>1,"^%scontent/(pdf|epub)/", base_url</string>
@@ -105,16 +109,7 @@
       <string>1,"^%scontent/(download/(figures|supplementary|xml)|files/pdf|pdf|xml|supplementary|html)/", base_url</string>
       <string>1,"^%ssupplements/(%s|notes)/", base_url, volume_name</string>
       <string>1,"^%srender/render.asp\?", base_url</string>
-      <!-- The following rules are for Genome Biology [1465-6906] which is very different than the others  -->
-      <!-- articles pages use <base>/2009/<vol> instead of <base>/content/<vol> -->
-      <string>2,"^%s\d{4}/%s/.*\?fmt_view=(classic|mobile)$", base_url, volume_name</string>
-      <string>2,"^%s\d{4}/%s/.*/(about|citations-pubmedcentral|comments|email|postcomment)$", base_url, volume_name</string> <!-- excluding a login-type page -->
-      <string>2,"^%s\d{4}/%s/.*email\?from=standard$", base_url, volume_name</string>-->      
-      <string>1,"^%s\d{4}/%s/", base_url, volume_name</string>
-      <!-- include:  http://genomebiology.com/content/issue/image/12/12
-           exclude:  http://genomebiology.com/2002/3/2/comment/1002/postcomment
-                     http://genomebiology.com/2002/3/2/comment/1002?fmt_view=mobile
-        --> 
+      <!-- Genome Biology again include:  http://genomebiology.com/content/issue/image/12/12 -->
       <string>1,"^%scontent/issue/image/%s/", base_url, volume_name</string>
  </list>
   </entry>
