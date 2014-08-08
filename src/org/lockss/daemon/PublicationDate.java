@@ -1,5 +1,5 @@
 /*
- * $Id: PublicationDate.java,v 1.6 2012-11-07 14:25:27 easyonthemayo Exp $
+ * $Id: PublicationDate.java,v 1.7 2014-08-08 18:05:44 pgust Exp $
  */
 
 /*
@@ -31,6 +31,7 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.daemon;
 
+import java.text.ParseException;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.LinkedHashMap;
@@ -357,8 +358,9 @@ public class PublicationDate {
    * the default locale.
    * 
    * @param dateStr the date string
+   * @throws ParseException if the date cannot be parsed
    */
-  public PublicationDate(String dateStr) {
+  public PublicationDate(String dateStr) throws ParseException {
     this(dateStr, Locale.getDefault());
   }
   
@@ -366,13 +368,14 @@ public class PublicationDate {
    * Construct a publication date by parsing a string formatted in
    * the specified locale.
    * 
-   * @param dateStr the date string
+   * @param s the date string
    * @param locale the locale for interpreting the date string
+   * @throws ParseException if the date cannot be parsed
    */
-  public PublicationDate(String dateStr, Locale locale) {
+  public PublicationDate(String s, Locale locale) throws ParseException {
     
     // normalize by stripping accents and lower-casing
-    dateStr = StringUtil.toUnaccented(dateStr).toLowerCase(locale);
+    String dateStr = StringUtil.toUnaccented(s).toLowerCase(locale);
 
     // get season
     Map<String,Integer> myseasons = seasons.get(locale.getLanguage());
@@ -433,14 +436,18 @@ public class PublicationDate {
     Calendar c = Calendar.getInstance(locale);
 
     // earliest and latest recognizable years
-    int firstYear = 1000;                       // first year; limits to 4-digit years
-    int lastYear = c.get(Calendar.YEAR)+1;      // year after current year (some pubs come out in advance)
+    // first year; limits to 4-digit years
+    int firstYear = 1000;
+    // year after current year (some pubs come out in advance)
+    int lastYear = c.get(Calendar.YEAR)+1;      
 
     // get month names
-    Map<String, Integer> months = c.getDisplayNames(Calendar.MONTH, Calendar.ALL_STYLES, locale);
+    Map<String, Integer> months = 
+        c.getDisplayNames(Calendar.MONTH, Calendar.ALL_STYLES, locale);
     
     // process words from date string after removing quarter or season
-    for (StringTokenizer tok = new StringTokenizer(dateStr); tok.hasMoreElements(); ) {
+    for (StringTokenizer tok = new StringTokenizer(dateStr); 
+         tok.hasMoreElements(); ) {
       // remove extraneous trailing punctuation
       String word= tok.nextToken();
 
@@ -450,7 +457,9 @@ public class PublicationDate {
         for (Map.Entry<String,Integer> entry : months.entrySet()) {
           // strip punctuation because keys for a few locales 
           // include trailing punctuation with their abbreviations
-          if (StringUtil.toUnaccented(entry.getKey()).replaceAll("\\p{Punct}+$", "").equalsIgnoreCase(w)) {
+          if (StringUtil.toUnaccented(
+              entry.getKey()).replaceAll(
+                  "\\p{Punct}+$", "").equalsIgnoreCase(w)) {
             month = entry.getValue()+1;
             break;
           }
@@ -495,7 +504,9 @@ public class PublicationDate {
       for (int i = 0; i < len; i++) {
         Integer n = null;
         for (Map.Entry<String, Integer> entry : months.entrySet()) {
-          if (StringUtil.toUnaccented(entry.getKey()).replaceAll("\\p{Punct}+$", "").equalsIgnoreCase(wds[i])) {
+          if (StringUtil.toUnaccented(
+              entry.getKey()).replaceAll(
+                  "\\p{Punct}+$", "").equalsIgnoreCase(wds[i])) {
             n = entry.getValue();
             break;
           }
@@ -515,7 +526,8 @@ public class PublicationDate {
       
       if (w[0] > 0) {
         if ((w[0] >= firstYear) && (w[0] <= lastYear)) {
-          // parse year and season, year and quarter, year and month, or year month and day
+          // parse year and season, year and quarter, 
+          // year and month, or year month and day
           year = w[0];
           if (w[1] != 0) {
             if (wds[1].equalsIgnoreCase("S"+w[1])) {
@@ -567,6 +579,12 @@ public class PublicationDate {
         }
       }
     }
+    
+    // There must be at least a year. It would be good to catch
+    // other cases as well, but this is what is curently being done. 
+    if (year == 0) {
+      throw new ParseException(s, 0);
+    }
   }
   
   /**
@@ -588,25 +606,16 @@ public class PublicationDate {
    */
   public PublicationDate(Date aDate, String mask) {
     if ((mask != null) && mask.length() >= 1) {
-      year = aDate.getYear();
+      Calendar cal = Calendar.getInstance();
+      cal.setTime(aDate);
+      year = cal.get(Calendar.YEAR);
       if (mask.length() >= 2) {
-        month = aDate.getMonth();
+        month = cal.get(Calendar.MONTH);
         if (mask.length() >= 3) {
-          day = aDate.getDay();
+          day = cal.get(Calendar.DAY_OF_MONTH);
         }
       }
     }
-  }
-
-  /**
-   * Static for checking a publication date represented as an integer year only
-   * for the default locale.
-   * @param pubDate the date as an int year
-   * @param locale the locale
-   * @return
-   */
-  static public PublicationDate parse(int pubDate) {
-    return new PublicationDate(""+pubDate);
   }
 
   /**
@@ -614,9 +623,10 @@ public class PublicationDate {
    * default locale.
    * @param pubDateStr the date string
    * @param locale the locale
-   * @return
+   * @throws ParseException if unrecognized date string
    */
-  static public PublicationDate parse(String pubDateStr) {
+  static public PublicationDate parse(String pubDateStr) 
+      throws ParseException {
     return new PublicationDate(pubDateStr);
   }
 
@@ -625,9 +635,10 @@ public class PublicationDate {
    * specified locale. 
    * @param pubDateStr the date string
    * @param locale the locale
-   * @return
+   * @throws ParseException if unrecognized date string
    */
-  static public PublicationDate parse(String pubDateStr, Locale locale) {
+  static public PublicationDate parse(String pubDateStr, Locale locale) 
+      throws ParseException {
     return new PublicationDate(pubDateStr, locale);
   }
   
@@ -656,7 +667,7 @@ public class PublicationDate {
   
   /**
    * Get the year for this date.
-   * @return the year or 0 if not specified
+   * @return the year
    */
   public int getYear() {
     return year;
@@ -679,8 +690,16 @@ public class PublicationDate {
   }
   
   /**
+   * Get the 1-based quarter for this date.
+   * @return the quarter if not specified
+   */
+  public int getQuarter() {
+    return quarter;
+  }
+  
+  /**
    * Get the 1-based season for this date.
-   * @return the season or 0 if not specified
+   * @return the season if not specified
    */
   public int getSeason() {
     return season;
