@@ -1,4 +1,4 @@
-/* $Id: TestWoltersKluwerSgmlAdapter.java,v 1.1 2014-08-01 23:01:26 aishizaki Exp $
+/* $Id: TestWoltersKluwerSgmlAdapter.java,v 1.2 2014-08-08 17:17:46 aishizaki Exp $
 
 Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -28,23 +28,17 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.clockss.wolterskluwer;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.Reader;
+
 import java.util.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
-import org.lockss.config.*;
-import org.lockss.daemon.PublicationDate;
-import org.lockss.extractor.*;
-import org.lockss.plugin.*;
-import org.lockss.plugin.definable.DefinablePlugin;
+
 import org.lockss.util.LineRewritingReader;
 import java.io.StringReader;
 
 /*
- * Test WoltersKluwerSgmlAdapter, which extends LineRewritingReadr
- *   - this takes unclosed sgml tags and rewrites them to end in "/>"
+ * Test WoltersKluwerSgmlAdapter, which extends LineRewritingReader
+ *   - this takes unclosed sgml tags and rewrites them, inline, to end in "/>"
  *     which the xml sax parser can then handle
  *   - we provide the unclosed sgml tags to this adapter
  */
@@ -95,7 +89,22 @@ public class TestWoltersKluwerSgmlAdapter
       assertEquals(filteredStr, afterList.get(i));
       //log.info(afterList.get(i));
     }
+  }
+  
+  public static final String SGML_REGEX = ".*/[^/]+\\.zip!/(.*)\\.[\\d]{1,2}$";
 
+  public void testSgmlRegex() throws Exception {
+    String inS0 = "hello/world.zip!/CHECKTHIS.";
+    String s1 = null;
+    // tests for digits (up to 2) as suffix
+    for (int i = 0; i < 11; i++) {
+      s1 = new String(inS0 + i);
+      assertTrue(s1.matches(SGML_REGEX));
+    }
+    // checks a digit+char as suffix
+    s1 = new String(inS0 + "3g");
+    assertFalse(s1.matches(SGML_REGEX));
+   
   }
 
 }

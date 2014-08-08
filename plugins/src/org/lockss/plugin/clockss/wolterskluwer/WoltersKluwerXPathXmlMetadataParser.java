@@ -1,5 +1,5 @@
 /*
- * $Id: WoltersKluwerXPathXmlMetadataParser.java,v 1.1 2014-07-18 16:22:37 aishizaki Exp $
+ * $Id: WoltersKluwerXPathXmlMetadataParser.java,v 1.2 2014-08-08 17:17:46 aishizaki Exp $
  */
 
 /*
@@ -66,6 +66,9 @@ public class WoltersKluwerXPathXmlMetadataParser extends XPathXmlMetadataParser 
     setDoXmlFiltering(doXmlFiltering);
   }
 
+  /*
+   *  uses the sgmlentities.dtd to help parse WK's metadata/sgml file(non-Javadoc)
+   */
   @Override
   protected DocumentBuilder makeDocumentBuilder(DocumentBuilderFactory dbf)
       throws ParserConfigurationException {

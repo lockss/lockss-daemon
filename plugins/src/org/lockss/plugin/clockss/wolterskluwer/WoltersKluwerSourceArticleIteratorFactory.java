@@ -1,5 +1,5 @@
 /*
- * $Id: WoltersKluwerSourceArticleIteratorFactory.java,v 1.3 2014-08-06 17:27:45 alexandraohlson Exp $
+ * $Id: WoltersKluwerSourceArticleIteratorFactory.java,v 1.4 2014-08-08 17:17:46 aishizaki Exp $
  */ 
 /*
 
@@ -61,7 +61,8 @@ public class WoltersKluwerSourceArticleIteratorFactory
   public static final String XML_REPLACEMENT = "/$1.[\\d]";
   public static final String SGML_SUFFIX = ".0";
   public static final String SGML_CONTENT_TYPE = "application/xml";
-  
+  // following regex matches the sgml file - only ever seen one digit at end, but just in case...
+  public static final String SGML_REGEX = ".*/[^/]+\\.zip!/(.*)\\.[\\d]{1,2}$";
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) throws PluginException {
     SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
@@ -126,8 +127,9 @@ public class WoltersKluwerSourceArticleIteratorFactory
             // if the me is null because the contentType==null because the sgml-based
             // metadata file is not recognized, THEN we want to fix that...
             if (me == null) {
-              // if this is the sgml file (only one that ends in ".0")
-              if ((cu.getContentType() == null) && (cu.getUrl().endsWith(SGML_SUFFIX))){
+              // if this is the sgml file (only one that ends in ".[0-9]{1,2}")
+              // (only ever seen one digit ending, but will allow 2...)
+              if ((cu.getContentType() == null) && (cu.getUrl().matches(SGML_REGEX))){
                 String ct = SGML_CONTENT_TYPE; //"application/xml"
                 me = cu.getArchivalUnit().getFileMetadataExtractor(target, ct);
               }

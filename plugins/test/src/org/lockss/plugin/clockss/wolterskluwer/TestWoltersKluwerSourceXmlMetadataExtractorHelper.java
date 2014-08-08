@@ -1,4 +1,4 @@
-/* $Id: TestWoltersKluwerSourceXmlMetadataExtractorHelper.java,v 1.2 2014-08-06 17:27:45 alexandraohlson Exp $
+/* $Id: TestWoltersKluwerSourceXmlMetadataExtractorHelper.java,v 1.3 2014-08-08 17:17:46 aishizaki Exp $
 
 Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -116,13 +116,46 @@ public class TestWoltersKluwerSourceXmlMetadataExtractorHelper
     "<!DOCTYPE dg SYSTEM \"ovidbase.dtd\">"+
     "<DG>"+
     "</DG>";
+  // Try some disallowed content: 
+  // Bad date: date without a year
+  private static final String BAD_PUB_DAY = "77";
+  private static final String BAD_PUB_MONTH = "Juneteenth";
+  private static final String BAD_PUB_YEAR = "";
+  // Bad authors name combos:
+  private static final String BAD1_FN = "Firstname";
+  private static final String BAD1_MN = "M";
+  private static final String BAD1_SN = "LastName";
+  private static final String BAD2_FN = "Cher";
+  private static final String BAD2_SN = "";
+  // Bad Title: only subtitle
+  private static final String BAD_ARTICLE_SUBTITLE = "Just a Subtitle";
+  private static final String BAD_ARTICLE_TITLE = ":" +BAD_ARTICLE_SUBTITLE;
+  private static ArrayList badAuthors = (ArrayList) ListUtil.list(
+      BAD1_SN + ", " + BAD1_FN + " " + BAD1_MN,
+      ", " + BAD2_FN);
   
   private static final String BAD_CONTENT =
-    "<HTML><HEAD><TITLE>" + GOOD_ARTICLE_TITLE + "</TITLE></HEAD><BODY>\n"
-    + "<meta name=\"foo\"" +  " content=\"bar\">\n"
-    + "  <div id=\"issn\">"
-    + "<!-- FILE: /data/templates/www.example.com/bogus/issn.inc -->MUMBLE: "
-    + " </div>\n";
+    "<!DOCTYPE dg SYSTEM \"ovidbase.dtd\">" +
+    "<DG><COVER NAME=\"G0256406-201406150-00000\">" +
+    "<D V=\"2009.2F\" AN=\""+ACCESS_URL+"\" FILE=\"G0256406-201406150-00001\" CME=\"CME\">" +
+    "<BB>" +
+    "<TG>" +
+    "<TI></TI>" +
+    "<STI>" + BAD_ARTICLE_SUBTITLE + "</STI></TG>" +
+    "<BY>" +
+    "<PN><FN>"+BAD1_FN+"</FN><MN>"+BAD1_MN+"</MN><SN>"+BAD1_SN+"</SN><DEG>MD</DEG></PN>" +
+    "<PN><FN>"+BAD2_FN+"</FN><SN>"+BAD2_SN+"</SN><DEG>MD, MSc</DEG></PN>" +
+    "</BY>" +
+    "<SO>" +
+    "<PB>"+GOOD_JOURNAL_TITLE+"</PB>" +
+    "<ISN>"+GOOD_ISSN+"</ISN>" +
+    "<DA><DY>"+BAD_PUB_DAY+"</DY><MO>"+BAD_PUB_MONTH+"</MO><YR>"+BAD_PUB_YEAR+"</YR></DA>" +
+    "<V>"+GOOD_VOLUME+"</V>" +
+    "<IS><IP>"+GOOD_ISSUE+"</IP></IS>" +
+    "<PG>1&ndash;6</PG></SO>" +
+    "<CP>&copy; 2014 Lippincott Williams &amp; Wilkins.</CP>" +
+    "<DT>Article</DT><XUI XDB=\"pub-doi\" UI=\""+GOOD_DOI+"\"></BB>" +
+    "</D></DG>";
 
 
   public void setUp() throws Exception {
@@ -186,7 +219,7 @@ public class TestWoltersKluwerSourceXmlMetadataExtractorHelper
     assertEmpty(mdlist);
 
   }
-  /*
+  
   public void testExtractFromBadContent() throws Exception {
     String xml_url = TEST_XML_URL;
     String pdf_url = TEST_PDF_URL;
@@ -209,10 +242,21 @@ public class TestWoltersKluwerSourceXmlMetadataExtractorHelper
     FileMetadataListExtractor mle =
       new FileMetadataListExtractor(me);
     List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), xml_cu);
-    assertEmpty(mdlist);
+    assertNotEmpty(mdlist);
+        ArticleMetadata md = null;
+
+    for (int i = 0; i< mdlist.size(); i++) {
+      md = mdlist.get(i);
+      assertNotNull(md);
+
+      // checking how the "bad" inputs (date, title, authors) are handled
+      assertEquals(badAuthors.toString(), md.getList(MetadataField.FIELD_AUTHOR).toString());
+      assertEquals(null, md.get(MetadataField.FIELD_DATE));
+      assertEquals(BAD_ARTICLE_TITLE, md.get(MetadataField.FIELD_ARTICLE_TITLE));
+    }
   
   }
-  */
+  
   // original xml file from the publisher
   public void testExtractFromBasicContent() throws Exception {
     CIProperties xmlHeader = new CIProperties();
@@ -228,7 +272,9 @@ public class TestWoltersKluwerSourceXmlMetadataExtractorHelper
 
       cu.setContent(string_input);
       cu.setContentSize(string_input.length());
-      cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/xml");
+      // the CU does not recognize the sgml (yet- maybe by 1.67?)
+      cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/sgml");
+
       // setting content (non-pdf) just so the check can find content
       pcu.setContent(string_input);
       pcu.setContentSize(string_input.length());

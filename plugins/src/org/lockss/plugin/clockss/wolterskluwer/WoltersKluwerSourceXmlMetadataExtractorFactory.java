@@ -1,5 +1,5 @@
 /*
- * $Id: WoltersKluwerSourceXmlMetadataExtractorFactory.java,v 1.2 2014-07-25 17:34:46 aishizaki Exp $
+ * $Id: WoltersKluwerSourceXmlMetadataExtractorFactory.java,v 1.3 2014-08-08 17:17:46 aishizaki Exp $
  */
 
 /*
@@ -84,7 +84,7 @@ public class WoltersKluwerSourceXmlMetadataExtractorFactory extends SourceXmlMet
      * (non-Javadoc)
      * @see org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory.SourceXmlMetadataExtractor#extract(org.lockss.extractor.MetadataTarget, org.lockss.plugin.CachedUrl, org.lockss.extractor.FileMetadataExtractor.Emitter)
      * using the WoltersKluwerXPathXmlMetadataParser, WoltersKluwerSgmlAdapter and
-     * RewritingReader to parse WoltersKluwer's SGML metadata file
+     * LineRewritingReader to parse WoltersKluwer's SGML metadata file
      * 
      */
     @Override

@@ -1,5 +1,5 @@
 /*
- * $Id: WoltersKluwerSourceXmlSchemaHelper.java,v 1.4 2014-08-06 17:27:45 alexandraohlson Exp $
+ * $Id: WoltersKluwerSourceXmlSchemaHelper.java,v 1.5 2014-08-08 17:17:46 aishizaki Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.lockss.extractor.*;
 import org.lockss.extractor.XmlDomMetadataExtractor.NodeValue;
 import org.lockss.extractor.XmlDomMetadataExtractor.XPathValue;
 
+import java.text.ParseException;
 import java.util.*;
 
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
@@ -56,8 +57,10 @@ implements SourceXmlSchemaHelper {
 
   private static final String NAME_SEPARATOR = ", ";
   private static final String NAME_SPACE = " ";
-  private static final String DATE_SEPARATOR = " ";
+  private static final String DATE_SEPARATOR = "-";
   private static final String TITLE_SEPARATOR = ":";
+  private static final String ZERO_YEAR = "0";
+  private static final String EMPTY_DATE = null;
 
   /* 
    *  WoltersKluwer specific node evaluators to extract the information we want
@@ -149,7 +152,7 @@ implements SourceXmlSchemaHelper {
       
       // make it W3C format YYYY or YYYY-MM or YYYY-MM-DD
       StringBuilder dBuilder = new StringBuilder();
-      if (year.equals(null)) return null;
+      if (year.equals(null)) return EMPTY_DATE;
       dBuilder.append(year); //YYYY
       if (month.equals(null)) {
         return dBuilder.toString();     // return just YYYY, if no MM
@@ -159,9 +162,21 @@ implements SourceXmlSchemaHelper {
           dBuilder.append(DATE_SEPARATOR + day);
         }
       }
-      // WK uses a text month (eg "June" instead of 06"), 
-      // which won't work with the database, so converting
-      PublicationDate date = new PublicationDate(dBuilder.toString());
+      // WK uses a text month (eg "June" instead of 06"), which won't 
+      // work with the database, so converting. If the date is invalid,
+      // return "" (will be a null date in the database)
+      PublicationDate date = null;
+      try {
+        // if the date is invalid, in 1.67 PublicationDate will throw a ParseException
+        // To be backward compatible, this will throw/catch its own exception
+        date = new PublicationDate(dBuilder.toString());
+        if (ZERO_YEAR.equals(date.toString())){
+          throw new ParseException(date.toString(), 0);
+        }
+      } catch (ParseException e) {
+        // invalid date (eg year = 0)
+        return EMPTY_DATE;
+      }
       return date.toString();
 
     }
@@ -169,7 +184,7 @@ implements SourceXmlSchemaHelper {
 
   /* 
    * Article Title, Subtitle - 
-   *   <article-node/BB/TG
+   *   <article-node>/BB/TG
    *  TI=ValidTitle
    *  STI= with an equally valid subtitle
    * we will take one or both
