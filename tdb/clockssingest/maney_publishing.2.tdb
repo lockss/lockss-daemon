@@ -348,7 +348,23 @@
     param[journal_id] = bronsoc
     comment[continued_by] = 1474-8932
  
-    au < manifest ; exists ; 1976-1980 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 17 ; 17 >   
+    au < exists ; exists ; 1895-1898 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 1 ; 1 >
+    au < exists ; exists ; 1899-1906 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 2 ; 2 >
+    au < exists ; exists ; 1906 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 3 ; 3 >
+    au < exists ; exists ; 1907-1912 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 4 ; 4 >
+    au < exists ; exists ; 1913-1919 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 5 ; 5 >
+    au < exists ; exists ; 1920-1925 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 6 ; 6 >
+    au < exists ; exists ; 1926-1931 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 7 ; 7 >
+    au < exists ; exists ; 1932-1935 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 8 ; 8 >
+    au < exists ; exists ; 1936-1939 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 9 ; 9 >
+    au < exists ; exists ; 1940-1945 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 10 ; 10 >
+    au < exists ; exists ; 1946-1950 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 11 ; 11 >
+    au < exists ; exists ; 1951-1955 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 12 ; 12 >
+    au < exists ; exists ; 1956-1960 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 13 ; 13 >
+    au < exists ; exists ; 1961-1965 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 14 ; 14 >
+    au < exists ; exists ; 1966-1970 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 15 ; 15 >
+    au < exists ; exists ; 1971-1975 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 16 ; 16 >
+    au < manifest ; exists ; 1976-1980 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 17 ; 17 > 
     au < manifest ; exists ; 1981-1985 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 18 ; 18 > 
     au < manifest ; exists ; 1986-1989 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 19 ; 19 > 
     au < manifest ; exists ; 1990-1993 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 20 ; 20 > 
@@ -374,8 +390,8 @@
     comment[continues] = 0309-7765
 
     au < manifest ; exists ; 2002 ; Bronte Studies Volume 27 ; 27 > 
-    au < doesNotExist ; doesNotExist ; 2003 ; Bronte Studies Volume 28 ; 28 > 
-    au < doesNotExist ; doesNotExist ; 2004 ; Bronte Studies Volume 29 ; 29 > 
+    au < manifest ; exists ; 2003 ; Bronte Studies Volume 28 ; 28 > 
+    au < manifest ; exists ; 2004 ; Bronte Studies Volume 29 ; 29 > 
     au < manifest ; exists ; 2005 ; Bronte Studies Volume 30 ; 30 > 
     au < manifest ; exists ; 2006 ; Bronte Studies Volume 31 ; 31 > 
     au < manifest ; exists ; 2007 ; Bronte Studies Volume 32 ; 32 > 
@@ -511,7 +527,7 @@
     au < manifest ; exists ; 1974 ; Canadian Metallurgical Quarterly Volume 13 ; 13 >
     au < manifest ; exists ; 1975 ; Canadian Metallurgical Quarterly Volume 14 ; 14 >
     au < manifest ; exists ; 1976 ; Canadian Metallurgical Quarterly Volume 15 ; 15 >
-    au < doesNotExist ; doesNotExist ; 1977 ; Canadian Metallurgical Quarterly Volume 16 ; 16 >
+    au < manifest ; exists ; 1977 ; Canadian Metallurgical Quarterly Volume 16 ; 16 >
     au < doesNotExist ; doesNotExist ; 1978 ; Canadian Metallurgical Quarterly Volume 17 ; 17 >
     au < manifest ; exists ; 1979 ; Canadian Metallurgical Quarterly Volume 18 ; 18 >
     au < manifest ; exists ; 1980 ; Canadian Metallurgical Quarterly Volume 19 ; 19 >
@@ -532,8 +548,8 @@
     au < manifest ; exists ; 1995 ; Canadian Metallurgical Quarterly Volume 34 ; 34 >
     au < manifest ; exists ; 1996 ; Canadian Metallurgical Quarterly Volume 35 ; 35 >
     au < manifest ; exists ; 1997 ; Canadian Metallurgical Quarterly Volume 36 ; 36 >
-    au < doesNotExist ; doesNotExist ; 1998 ; Canadian Metallurgical Quarterly Volume 37 ; 37 >
-    au < doesNotExist ; doesNotExist ; 1999 ; Canadian Metallurgical Quarterly Volume 38 ; 38 >
+    au < manifest ; exists ; 1998 ; Canadian Metallurgical Quarterly Volume 37 ; 37 >
+    au < manifest ; exists ; 1999 ; Canadian Metallurgical Quarterly Volume 38 ; 38 >
     au < manifest ; exists ; 2000 ; Canadian Metallurgical Quarterly Volume 39 ; 39 >
     au < manifest ; exists ; 2001 ; Canadian Metallurgical Quarterly Volume 40 ; 40 >
     au < manifest ; exists ; 2002 ; Canadian Metallurgical Quarterly Volume 41 ; 41 >
@@ -2957,8 +2973,8 @@
     au < manifest ; exists ; 2000 ; Midland History Volume 25 ; 25 > 
     au < manifest ; exists ; 2001 ; Midland History Volume 26 ; 26 > 
     au < manifest ; exists ; 2002 ; Midland History Volume 27 ; 27 > 
-    au < doesNotExist ; doesNotExist ; 2003 ; Midland History Volume 28 ; 28 > 
-    au < doesNotExist ; doesNotExist ; 2004 ; Midland History Volume 29 ; 29 > 
+    au < manifest ; exists ; 2003 ; Midland History Volume 28 ; 28 > 
+    au < manifest ; exists ; 2004 ; Midland History Volume 29 ; 29 > 
     au < manifest ; exists ; 2005 ; Midland History Volume 30 ; 30 > 
     au < manifest ; exists ; 2006 ; Midland History Volume 31 ; 31 > 
     au < manifest ; exists ; 2007 ; Midland History Volume 32 ; 32 > 
@@ -3225,7 +3241,7 @@
 
     au < manifest ; exists ; 1966 ; Northern History Volume 1 ; 1 > 
     au < manifest ; exists ; 1967 ; Northern History Volume 2 ; 2 > 
-    au < doesNotExist ; doesNotExist ; 1968 ; Northern History Volume 3 ; 3 > 
+    au < manifest ; exists ; 1968 ; Northern History Volume 3 ; 3 > 
     au < manifest ; exists ; 1969 ; Northern History Volume 4 ; 4 > 
     au < manifest ; exists ; 1970 ; Northern History Volume 5 ; 5 > 
     au < manifest ; exists ; 1971 ; Northern History Volume 6 ; 6 > 
@@ -3239,7 +3255,7 @@
     au < manifest ; exists ; 1978 ; Northern History Volume 14 ; 14 > 
     au < manifest ; exists ; 1979 ; Northern History Volume 15 ; 15 > 
     au < manifest ; exists ; 1980 ; Northern History Volume 16 ; 16 > 
-    au < doesNotExist ; doesNotExist ; 1981 ; Northern History Volume 17 ; 17 > 
+    au < manifest ; exists ; 1981 ; Northern History Volume 17 ; 17 > 
     au < manifest ; exists ; 1982 ; Northern History Volume 18 ; 18 > 
     au < manifest ; exists ; 1983 ; Northern History Volume 19 ; 19 > 
     au < manifest ; exists ; 1984 ; Northern History Volume 20 ; 20 > 
@@ -4524,7 +4540,7 @@
     param[journal_id] = vea 
 
     au < manifest ; exists ; 1971 ; Vernacular Architecture Volume 1 ; 1 > 
-    au < doesNotExist ; doesNotExist ; 0 ; Vernacular Architecture Volume 2 ; 2 > 
+    au < manifest ; exists ; 1971 ; Vernacular Architecture Volume 2 ; 2 > 
     au < manifest ; exists ; 1972 ; Vernacular Architecture Volume 3 ; 3 > 
     au < manifest ; exists ; 1973 ; Vernacular Architecture Volume 4 ; 4 > 
     au < manifest ; exists ; 1974 ; Vernacular Architecture Volume 5 ; 5 > 
