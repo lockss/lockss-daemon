@@ -52,9 +52,9 @@
       param[base_url] = http://journals.co-action.net/
       param[journal_id] = aie
 
-      au < manifest ; exists ; 2010 ; Annals of Innovation & Entrepreneurship Volume 1 ; 1 ; 2010 >
-      au < manifest ; exists ; 2011 ; Annals of Innovation & Entrepreneurship Volume 2 ; 2 ; 2011 >
-      au < manifest ; exists ; 2012 ; Annals of Innovation & Entrepreneurship Volume 3 ; 3 ; 2012 >
+      au < testing ; exists ; 2010 ; Annals of Innovation & Entrepreneurship Volume 1 ; 1 ; 2010 >
+      au < testing ; exists ; 2011 ; Annals of Innovation & Entrepreneurship Volume 2 ; 2 ; 2011 >
+      au < testing ; exists ; 2012 ; Annals of Innovation & Entrepreneurship Volume 3 ; 3 ; 2012 >
       au < expected ; exists ; 2013 ; Annals of Innovation & Entrepreneurship Volume 4 ; 4 ; 2013 >
       au < expected ; exists ; 2014 ; Annals of Innovation & Entrepreneurship Volume 5 ; 5 ; 2014 >
     
@@ -218,7 +218,7 @@
       comment[0] = includes supplements
 
       au < crawling ; exists ; 2010 ; European Journal of Psychotraumatology [including Supplements] Volume 1 ; 1 ; 2010 >
-      au < manifest ; exists ; 2011 ; European Journal of Psychotraumatology [including Supplements] Volume 2 ; 2 ; 2011 >
+      au < testing ; exists ; 2011 ; European Journal of Psychotraumatology [including Supplements] Volume 2 ; 2 ; 2011 >
       au < doNotProcess ; doNotProcess ; 2012 ; European Journal of Psychotraumatology [including Supplements] Volume 3 ; 3 ; 2012 >
       au < crawling ; exists ; 2013 ; European Journal of Psychotraumatology [including Supplements] Volume 4 ; 4 ; 2013 >
       au < manifest ; exists ; 2014 ; European Journal of Psychotraumatology [including Supplements] Volume 5 ; 5 ; 2014 >
@@ -387,7 +387,7 @@
     param[base_url] = http://www.jecme.eu/
     param[journal_id] = jecme
 
-    au < manifest ; exists ; 2012 ; Journal of European Continuing Medical Education Volume 1 ; 1 ; 2012 >
+    au < testing ; exists ; 2012 ; Journal of European Continuing Medical Education Volume 1 ; 1 ; 2012 >
     au < crawling ; exists ; 2013 ; Journal of European Continuing Medical Education Volume 2 ; 2 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of European Continuing Medical Education Volume 3 ; 3 ; 2014 >
 
