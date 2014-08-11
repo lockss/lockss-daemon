@@ -148,7 +148,7 @@
     param[base_url] = http://www.govafricajournal.org/
     param[journal_id] = gaj
     
-    au < expected ; exists ; 2014 ; Governance in Africa Volume 1 ; 1 ; 2014 >
+    au < manifest ; exists ; 2014 ; Governance in Africa Volume 1 ; 1 ; 2014 >
 
 
   }
@@ -385,7 +385,7 @@
     param[journal_id] = ojb
 
     
-    au < exists ; exists ; 2014 ; Open Journal of Bioresources Volume 1 ; 1 ; 2014 >
+    au < manifest ; exists ; 2014 ; Open Journal of Bioresources Volume 1 ; 1 ; 2014 >
     
   }
 
@@ -481,10 +481,11 @@
     param[base_url] = http://www.utrechtjournal.org/
     param[journal_id] = ujil
 
-    au < exists ; exists ; 2010 ; Utrecht Journal of International and European Law Volume 26 ; 26 ; 2010 >
-    au < exists ; exists ; 2011 ; Utrecht Journal of International and European Law Volume 27 ; 27 ; 2011 >
-    au < exists ; exists ; 2012 ; Utrecht Journal of International and European Law Volume 28 ; 28 ; 2012 >
-    au < exists ; exists ; 2013 ; Utrecht Journal of International and European Law Volume 29 ; 29 ; 2013 >
+    au < manifest ; exists ; 2010 ; Utrecht Journal of International and European Law Volume 26 ; 26 ; 2010 >
+    au < manifest ; exists ; 2011 ; Utrecht Journal of International and European Law Volume 27 ; 27 ; 2011 >
+    au < manifest ; exists ; 2012 ; Utrecht Journal of International and European Law Volume 28 ; 28 ; 2012 >
+    au < manifest ; exists ; 2013 ; Utrecht Journal of International and European Law Volume 29 ; 29 ; 2013 >
+    au < exists ; exists ; 2014 ; Utrecht Journal of International and European Law Volume 30 ; 30 ; 2013 >
 
   }
 
