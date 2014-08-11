@@ -2612,7 +2612,7 @@
         au < manifest ; 2014 ; The Annals of the American Academy of Political and Social Science Volume 652 ; 652 >
         au < exists ; 2014 ; The Annals of the American Academy of Political and Social Science Volume 653 ; 653 >
         au < manifest ; 2014 ; The Annals of the American Academy of Political and Social Science Volume 654 ; 654 >
-        au < expected ; 2014 ; The Annals of the American Academy of Political and Social Science Volume 655 ; 655 >
+        au < manifest ; 2014 ; The Annals of the American Academy of Political and Social Science Volume 655 ; 655 >
         au < expected ; 2014 ; The Annals of the American Academy of Political and Social Science Volume 656 ; 656 >
 
       }
@@ -3434,7 +3434,7 @@
         au < released ; 2011 ; Australian & New Zealand Journal of Criminology Volume 44 ; 44 >
         au < released ; 2012 ; Australian & New Zealand Journal of Criminology Volume 45 ; 45 >
         au < manifest ; 2013 ; Australian & New Zealand Journal of Criminology Volume 46 ; 46 >
-        au < expected ; 2014 ; Australian & New Zealand Journal of Criminology Volume 47 ; 47 >
+        au < manifest ; 2014 ; Australian & New Zealand Journal of Criminology Volume 47 ; 47 >
 
       }
       
@@ -15586,8 +15586,12 @@
       param[base_url] = http://ioa.sagepub.com/
       implicit < status ; year ; name ; param[volume_name] >
 
+      au < exists ; 2009 ; Insight on Africa Volume 1 ; 1 >
+      au < exists ; 2010 ; Insight on Africa Volume 2 ; 2 >
+      au < exists ; 2011 ; Insight on Africa Volume 3 ; 3 >
+      au < exists ; 2012 ; Insight on Africa Volume 4 ; 4 >
       au < manifest ; 2013 ; Insight on Africa Volume 5 ; 5 >
-      au < expected ; 2014 ; Insight on Africa Volume 6 ; 6 >
+      au < manifest ; 2014 ; Insight on Africa Volume 6 ; 6 >
 
     }
 
@@ -23865,7 +23869,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
     au < exists ; 2011 ; Journal of International Political Theory Volume 7 ; 7 >
     au < exists ; 2012 ; Journal of International Political Theory Volume 8 ; 8 >
     au < exists ; 2013 ; Journal of International Political Theory Volume 9 ; 9 >
-    au < exists ; 2014 ; Journal of International Political Theory Volume 10 ; 10 >
+    au < manifest ; 2014 ; Journal of International Political Theory Volume 10 ; 10 >
 
   }
 
@@ -30865,7 +30869,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2013 ; National Institute Economic Review Volume 226 ; 226 >
         au < manifest ; 2014 ; National Institute Economic Review Volume 227 ; 227 >
         au < manifest ; 2014 ; National Institute Economic Review Volume 228 ; 228 >
-        au < expected ; 2014 ; National Institute Economic Review Volume 229 ; 229 >
+        au < manifest ; 2014 ; National Institute Economic Review Volume 229 ; 229 >
         au < expected ; 2014 ; National Institute Economic Review Volume 230 ; 230 >
 
       }
@@ -38281,7 +38285,7 @@ comment[mpj] = now published by Brill
         param[base_url] = http://sip.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 2014 ; Studies in People's History Volume 1 ; 1 >
+        au < manifest ; 2014 ; Studies in People's History Volume 1 ; 1 >
 
     }
 
@@ -38514,7 +38518,7 @@ comment[mpj] = now published by Brill
         au < exists ; 2011-2012 ; TEACHING Exceptional Children Volume 44 ; 44 >
         au < exists ; 2012-2013 ; TEACHING Exceptional Children Volume 45 ; 45 >
         au < manifest ; 2013-2014 ; TEACHING Exceptional Children Volume 46 ; 46 >
-        au < expected ; 2014-2015 ; TEACHING Exceptional Children Volume 47 ; 47 >
+        au < manifest ; 2014-2015 ; TEACHING Exceptional Children Volume 47 ; 47 >
       
     }
 
@@ -39868,7 +39872,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2014 ; Thesis Eleven Volume 120 ; 120 >
         au < manifest ; 2014 ; Thesis Eleven Volume 121 ; 121 >
         au < manifest ; 2014 ; Thesis Eleven Volume 122 ; 122 >
-        au < expected ; 2014 ; Thesis Eleven Volume 123 ; 123 >
+        au < manifest ; 2014 ; Thesis Eleven Volume 123 ; 123 >
         au < expected ; 2014 ; Thesis Eleven Volume 124 ; 124 >
         au < expected ; 2014 ; Thesis Eleven Volume 125 ; 125 >
 
@@ -45630,14 +45634,31 @@ comment[mpj] = now published by Brill
       {
       
         param[base_url] = http://shr.sagepub.com/
+        comment[0] = Title change in 2014, same base_url
+        comment[continued_by] = 2054-2704
   
         au < doNotProcess ; 2010 ; JRSM Short Reports Volume 1 ; 1 >
         au < doNotProcess ; 2011 ; JRSM Short Reports Volume 2 ; 2 >
         au < exists ; 2012 ; JRSM Short Reports Volume 3 ; 3 >
         au < manifest ; 2013 ; JRSM Short Reports Volume 4 ; 4 >
-        au < expected ; 2014 ; JRSM Short Reports Volume 5 ; 5 >
       
       }
+  
+    }
+  
+    {
+    
+      title <
+        name = JRSM Open ;
+        eissn = 2054-2704
+      >
+      
+        plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+        implicit < status ; year ; name ; param[volume_name] >
+        param[base_url] = http://shr.sagepub.com/
+        comment[continues] = 2042-5333
+  
+        au < exists ; 2014 ; JRSM Open Volume 5 ; 5 ; >
   
     }
   
