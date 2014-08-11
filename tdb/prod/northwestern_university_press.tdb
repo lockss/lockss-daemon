@@ -10,6 +10,21 @@
 
   {
     title <
+      name = Islamic Africa ;
+      issn = 2333-262X ;
+      eissn = 2154-0993 ;
+      issnl = 2333-262X
+    >
+
+    param[journal_dir] = islamic_africa
+    attr[journal_id] = isa
+
+    au < exists ; 2014 ; Renaissance Drama Volume 5 ; 5 >
+
+  }
+
+  {
+    title <
       name = Renaissance Drama ;
       issn = 0486-3739 ;
       issnl = 0486-3739
