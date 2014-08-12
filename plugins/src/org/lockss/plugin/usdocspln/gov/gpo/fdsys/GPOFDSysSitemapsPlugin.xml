@@ -106,6 +106,10 @@
     <string>org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysCrawlWindow</string>
   </entry>
   <entry>
+    <string>au_refetch_depth</string>
+    <int>99</int>
+  </entry>
+  <entry>
     <string>application/xml_link_extractor_factory</string>
     <string>org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsLinkExtractorFactory</string>
   </entry>
