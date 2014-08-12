@@ -1,5 +1,5 @@
 /*
- * $Id: TestGPOFDSysBulkDataArticleIteratorFactory.java,v 1.1 2012-08-27 21:02:29 davidecorcoran Exp $
+ * $Id: TestGPOFDSysBulkDataArticleIteratorFactory.java,v 1.2 2014-08-12 21:42:43 thib_gc Exp $
  */
 
 /*
@@ -74,7 +74,7 @@ public class TestGPOFDSysBulkDataArticleIteratorFactory
     Configuration conf = ConfigManager.newConfiguration();
     conf.put("root", rootPath);
     conf.put("base_url", "http://www.gpo.gov/");
-    conf.put("year", "2012");
+    conf.put("volume_name", "2012");
     conf.put("depth", "1");
     conf.put("branch", "4");
     conf.put("numFiles", "7");
@@ -88,7 +88,7 @@ public class TestGPOFDSysBulkDataArticleIteratorFactory
   Configuration fdSysBulkDataAuConfig() {
     return ConfigurationUtil.fromArgs("base_url", BASE_URL,
        "collection_id", "CBD",
-       "year", "2001");
+       "volume_name", "2001");
   }
 
   public void testRoots() throws Exception {

@@ -1,10 +1,10 @@
 /*
- * $Id: TestGPOFDSysHtmlFilterFactory.java,v 1.5 2012-07-31 21:42:56 thib_gc Exp $
+ * $Id: TestGPOFDSysHtmlFilterFactory.java,v 1.6 2014-08-12 21:42:43 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -223,12 +223,13 @@ public class TestGPOFDSysHtmlFilterFactory extends LockssTestCase {
   }
   
   public void testFilterRule() throws Exception {
-    doTestString("",
+    // Note the space due to the white space filter
+    doTestString(" ",
                  "<!--<input type=\"hidden\" name=\"struts.token.name\" value=\"struts.token\" />\n" +
-                 "<input type=\"hidden\" name=\"struts.token\" value=\"H34QZK9TF4N77V7LRD94SBULW6JZ9DPB\" />-->");
-    doTestString("",
+                 "<input type=\"hidden\" name=\"struts.token\" value=\"H34QZK9TF4N77V7LRD94SBULW6JZ9DPB\" />-->\n");
+    doTestString(" ",
                  "<input type=\"hidden\" name=\"struts.token.name\" value=\"struts.token\" />\n" +
-                 "<input type=\"hidden\" name=\"struts.token\" value=\"H34QZK9TF4N77V7LRD94SBULW6JZ9DPB\" />");
+                 "<input type=\"hidden\" name=\"struts.token\" value=\"H34QZK9TF4N77V7LRD94SBULW6JZ9DPB\" />\n");
   }
   
   private void doTestString(String expectedOutput,

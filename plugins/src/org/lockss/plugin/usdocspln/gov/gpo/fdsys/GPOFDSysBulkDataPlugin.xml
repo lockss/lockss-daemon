@@ -9,22 +9,22 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Substance</string>
-        <string>3</string>
+        <string>4</string>
       </entry>
       <entry>
         <string>Poll</string>
-        <string>5</string>
+        <string>6</string>
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
     </map>
   </entry>
@@ -58,11 +58,10 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
-        <key>year</key>
-        <displayName>Year</displayName>
-        <description>Four digit year (e.g., 2004)</description>
-        <type>4</type>
-        <size>4</size>
+        <key>volume_name</key>
+        <displayName>Volume Name</displayName>
+        <type>1</type>
+        <size>20</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
@@ -70,7 +69,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"GPO FDSys Bulk Data Plugin, Base URL %s, Collection ID %s, Year %d", base_url, collection_id, year</string>
+    <string>"GPO FDSys Bulk Data Plugin, Base URL %s, Collection ID %s, Volume %s", base_url, collection_id, volume_name</string>
   </entry>
   <entry>
     <string>au_manifest</string>
@@ -78,14 +77,14 @@
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%sfdsys/bulkdata/%s", base_url, collection_id</string>
+    <string>"%sfdsys/bulkdata/%s/%s", base_url, collection_id, volume_name</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
       <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
       <string>4,"^%s", base_url</string>
-      <string>1,"^%sfdsys/bulkdata/.*%s/%d", base_url, collection_id, year</string>
+      <string>1,"^%sfdsys/bulkdata/%s/%s/", base_url, collection_id, volume_name</string>
     </list>
   </entry>
   <entry>
@@ -96,7 +95,7 @@
            http://www.gpo.gov/fdsys/bulkdata/CFR/1996/CFR-1996.zip
            http://www.gpo.gov/fdsys/bulkdata/FR/2011/12/FR-2011-12-28.xml
         -->
-      <string>"^%sfdsys/bulkdata/%s/%d/([/\d]{3,6})?(%s-%d([-\w]{2,8})?.(xml|zip))?", base_url, collection_id, year, collection_id, year</string>
+      <string>"^%sfdsys/bulkdata/%s/%s/([/\d]{3,6})?(%s-%s([-\w]{2,8})?.(xml|zip))?", base_url, collection_id, volume_name, collection_id, volume_name</string>
     </list>
   </entry>
   <entry>
@@ -108,7 +107,7 @@
       </entry>
       <entry>
         <string>au_volume</string>
-        <string>"%sfdsys/bulkdata/%s/%d", base_url, collection_id, year</string>
+        <string>"%sfdsys/bulkdata/%s/%s", base_url, collection_id, volume_name</string>
       </entry>
     </map>
   </entry>
@@ -129,6 +128,15 @@
     <string>org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysCrawlWindow</string>
   </entry>
   <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysHtmlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysBulkDataArticleIteratorFactory</string>
+  </entry>
+<!--
+  <entry>
     <string>text/html_metadata_extractor_factory_map</string>
     <map>
       <entry>
@@ -137,16 +145,9 @@
       </entry>
     </map>
   </entry>
-  <entry>
-    <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysBulkDataArticleIteratorFactory</string>
-  </entry>
     <entry>
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysBulkDataArticleIteratorFactory</string>
   </entry>
-  <entry>
-    <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysBulkDataHtmlFilterFactory</string>
-  </entry>
+-->
 </map>

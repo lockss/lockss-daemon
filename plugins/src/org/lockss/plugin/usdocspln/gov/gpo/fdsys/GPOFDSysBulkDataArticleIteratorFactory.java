@@ -1,10 +1,10 @@
 /*
- * $Id: GPOFDSysBulkDataArticleIteratorFactory.java,v 1.1 2012-08-27 21:02:29 davidecorcoran Exp $
+ * $Id: GPOFDSysBulkDataArticleIteratorFactory.java,v 1.2 2014-08-12 21:42:42 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -44,14 +44,13 @@ public class GPOFDSysBulkDataArticleIteratorFactory
   implements ArticleIteratorFactory,
        ArticleMetadataExtractorFactory {
   
-  protected static Logger log = 
-    Logger.getLogger("GPOFDSysBulkDataArticleIteratorFactory");
+  protected static Logger log = Logger.getLogger(GPOFDSysBulkDataArticleIteratorFactory.class);
   
   protected static final String ROOT_TEMPLATE =
-    "\"%sfdsys/bulkdata/%s/%d/\", base_url, collection_id, year";
+    "\"%sfdsys/bulkdata/%s/%s/\", base_url, collection_id, volume_name";
 
   protected static final String PATTERN_TEMPLATE =
-    "\"^%sfdsys/bulkdata/%s/%d/%s-%d\", base_url, collection_id, year, collection_id, year, collection_id";
+    "\"^%sfdsys/bulkdata/%s/%s/%s-%s\", base_url, collection_id, volume_name, collection_id, volume_name, collection_id";
 
   
   @Override

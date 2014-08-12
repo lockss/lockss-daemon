@@ -1,5 +1,5 @@
 /*
- * $Id: GPOFDSysHtmlFilterFactory.java,v 1.7 2014-08-08 22:09:02 thib_gc Exp $
+ * $Id: GPOFDSysHtmlFilterFactory.java,v 1.8 2014-08-12 21:42:42 thib_gc Exp $
  */
 
 /*
@@ -33,7 +33,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.usdocspln.gov.gpo.fdsys;
 
 import java.io.*;
-import java.util.List;
 
 import org.htmlparser.*;
 import org.htmlparser.filters.*;
@@ -41,7 +40,6 @@ import org.htmlparser.util.*;
 import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.*;
-import org.lockss.filter.HtmlTagFilter.TagPair;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
@@ -60,14 +58,16 @@ public class GPOFDSysHtmlFilterFactory implements FilterFactory {
         /* Document header */
         // Differences in the presence and order of <meta> tags and spacing of the <title> tag
         new TagNameFilter("head"),
-        /* Scripts */
+        /* Scripts, inline style */
         new TagNameFilter("script"),
         new TagNameFilter("noscript"),
+        new TagNameFilter("style"),
         /* Header */
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "top-menu-one"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "top-banner-inside"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "top-menu-two"),
-        /* Left column */
+        /* Left column (various cells of a two-column table layout) */
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "left-menu"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "page-details-left-mask"),
         /* Footer */
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "footer"),
@@ -81,11 +81,14 @@ public class GPOFDSysHtmlFilterFactory implements FilterFactory {
         /*
          * Other
          */
-        // Filters the "Email a link to this page" link
+        // Variable Struts identifier, sometime in a comment, sometimes not
+        HtmlNodeFilters.tagWithAttributeRegex("input", "type", "hidden"),
+        HtmlNodeFilters.comment(),
+        // "Email a link to this page" link [probably contained in larger block now]
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^search/notificationPage\\.action\\?emailBody="),
-        // Filters session ID from search results
+        // Session ID from search results [probably contained in larger block now]
         HtmlNodeFilters.tagWithAttributeRegex("form", "action", "jsessionid="),
-        // Differ over time in the presence and placement of rel="nofollow"
+        // Differs over time in the presence and placement of rel="nofollow"
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^delivery/getpackage\\.action\\?packageId="),
     };
   
@@ -98,7 +101,7 @@ public class GPOFDSysHtmlFilterFactory implements FilterFactory {
             public void visitTag(Tag tag) {
               String tagName = tag.getTagName().toLowerCase();
               if ("a".equals(tagName)) {
-                tag.removeAttribute("onclick");
+                tag.removeAttribute("onclick"); // Javascript calls changed over time
               }
             }
           });
@@ -115,21 +118,11 @@ public class GPOFDSysHtmlFilterFactory implements FilterFactory {
                                   encoding,
                                   new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters)),
                                                             xform));
-  	    
-    List pairs = ListUtil.list(
-      // May contain a session token in a comment
-      new TagPair("<!--<input type=\"hidden\" name=\"struts.token.name\" value=\"struts.token\" />",
-                  "\" />-->"),
-      // ...Or not in a comment, just two <input> tags in a row
-      new TagPair("<input type=\"hidden\" name=\"struts.token.name\" value=\"struts.token\" />",
-                  "\" />")
-    );
-  	      
+
     try {
-      Reader prefilteredReader = new InputStreamReader(prefilteredStream, encoding);
-      Reader filteredReader = HtmlTagFilter.makeNestedFilter(prefilteredReader, pairs);
+      Reader filteredReader = new InputStreamReader(prefilteredStream, encoding);
       Reader whitespaceReader = new WhiteSpaceFilter(filteredReader);
-      return new ReaderInputStream(whitespaceReader);
+      return new ReaderInputStream(whitespaceReader, encoding);
     }
     catch (UnsupportedEncodingException uee) {
       throw new PluginException(uee);
