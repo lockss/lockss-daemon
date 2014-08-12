@@ -1,5 +1,5 @@
 /*
- * $Id: SubscriptionManager.java,v 1.17 2014-07-24 20:46:23 fergaloy-sf Exp $
+ * $Id: SubscriptionManager.java,v 1.18 2014-08-12 18:05:21 fergaloy-sf Exp $
  */
 
 /*
@@ -3575,8 +3575,8 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 		    && !publisherName.equals(previousPublisherName)))
 	    || ((pIssn == null && previousPissn != null)
 		|| (pIssn != null && !pIssn.equals(previousPissn)))
-	    || ((pIssn == null && previousEissn != null)
-		|| (pIssn != null && !eIssn.equals(previousEissn)))) {
+	    || ((eIssn == null && previousEissn != null)
+		|| (eIssn != null && !eIssn.equals(previousEissn)))) {
 
 	  // Yes: Start a new subscription.
 	  publication = new SerialPublication();
