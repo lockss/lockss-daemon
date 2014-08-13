@@ -1,5 +1,5 @@
 /*
- * $Id: TestRSC2014HtmlHashFilterFactory.java,v 1.4 2014-07-31 23:01:28 etenbrink Exp $
+ * $Id: TestRSC2014HtmlHashFilterFactory.java,v 1.5 2014-08-13 21:19:06 etenbrink Exp $
  */
 
 /*
@@ -99,7 +99,30 @@ public class TestRSC2014HtmlHashFilterFactory extends LockssTestCase {
       ", <span>Jnl.</span>, year, <span>2</span>(1), 80 87" +
       "<a>Left</a><a><img src=\"http://pubs.rsc.org/en\"></a>.";
   
+  private static final String genError = "" +
+      "<html><body>" +
+      "<span id=\"top\"/>" +
+      "</body></html>";
+  
+  private static final String noError = "" +
+      "<html><body>" +
+      "<span/>" +
+      "</body></html>";
+  
+  
   public void testFiltering() throws Exception {
+    try {
+      InputStream inA = fact.createFilteredInputStream(mau,
+          new StringInputStream(genError),
+          Constants.DEFAULT_ENCODING);
+      String a = StringUtil.fromInputStream(inA);
+      // generates an error when attempting to process <span/>
+      assertEquals(noError, a);
+    }
+    catch (Error err) { // XXX allow a breakpoint to be set
+      String a = "s";
+      a.concat(" b");
+    }
     assertFilterToSame(withScript, withoutScript);
     assertFilterToSame(withStuff, withoutStuff);
     assertFilterToSame(withLinks, withoutLinks);
@@ -112,8 +135,8 @@ public class TestRSC2014HtmlHashFilterFactory extends LockssTestCase {
         Constants.DEFAULT_ENCODING);
     String a = StringUtil.fromInputStream(inA);
     String b = StringUtil.fromInputStream(inB);
-    assertEquals(a, b);
-    assertEquals(a, str2);
+    assertEquals(b, a);
+    assertEquals(str2, a);
   }
   
 }
