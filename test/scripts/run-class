@@ -60,4 +60,4 @@ done
 class=$1
 shift
 
-java $args $class $@
+java $args $class "$@"
