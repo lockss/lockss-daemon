@@ -1,5 +1,5 @@
 /*
- * $Id: RSC2014HtmlHashFilterFactory.java,v 1.3 2014-07-31 22:31:25 etenbrink Exp $
+ * $Id: RSC2014HtmlHashFilterFactory.java,v 1.4 2014-08-13 21:15:58 etenbrink Exp $
  */
 
 /*
@@ -87,10 +87,15 @@ public class RSC2014HtmlHashFilterFactory implements FilterFactory {
                     "div".equals(tagName) ||
                     "h1".equals(tagName) ||
                     "h2".equals(tagName) ||
+                    "h3".equals(tagName) ||
                     "a".equals(tagName)) {
                   Attribute a = tag.getAttributeEx(tagName);
                   Vector<Attribute> v = new Vector<Attribute>();
                   v.add(a);
+                  if (tag.isEmptyXmlTag()) {
+                    Attribute end = tag.getAttributeEx("/");
+                    v.add(end);
+                  }
                   tag.setAttributesEx(v);
                 }
               }
