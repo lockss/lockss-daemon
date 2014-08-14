@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>24</string>
+    <string>25</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -104,10 +104,6 @@
   <entry>
     <string>au_crawlwindow</string>
     <string>org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysCrawlWindow</string>
-  </entry>
-  <entry>
-    <string>au_refetch_depth</string>
-    <int>99</int>
   </entry>
   <entry>
     <string>application/xml_link_extractor_factory</string>
