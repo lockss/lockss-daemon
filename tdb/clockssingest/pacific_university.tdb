@@ -19,9 +19,11 @@
     param[base_url] = http://commons.pacificu.edu/
     param[journal_abbr] = hip
     implicit < status ; status2 ; year ; name ; param[volume] >
+    
+    comment[moved] = journal moved. No manifest pages.
 
-    au < finished ; crawling ; 2011-2013 ; Health and Interprofessional Practice Volume 1 ; 1 >
-    au < crawling ; exists ; 2013-2014 ; Health and Interprofessional Practice Volume 2 ; 2 >
+    au < down ; crawling ; 2011-2013 ; Health and Interprofessional Practice Volume 1 ; 1 >
+    au < down ; exists ; 2013-2014 ; Health and Interprofessional Practice Volume 2 ; 2 >
     
   }
 
