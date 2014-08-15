@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaJournalHtmlFilterFactory.java,v 1.30 2014-07-15 00:49:47 etenbrink Exp $
+ * $Id: IngentaJournalHtmlFilterFactory.java,v 1.31 2014-08-15 21:35:05 etenbrink Exp $
  */ 
 
 /*
@@ -33,16 +33,17 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.ingenta;
 
 import java.io.*;
+import java.util.Vector;
 
 import org.htmlparser.*;
 import org.htmlparser.filters.AndFilter;
 import org.htmlparser.filters.HasAttributeFilter;
 import org.htmlparser.filters.OrFilter;
 import org.htmlparser.filters.TagNameFilter;
+import org.htmlparser.nodes.TextNode;
 import org.htmlparser.tags.CompositeTag;
 import org.htmlparser.tags.LinkTag;
 import org.htmlparser.util.*;
-import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.*;
 import org.lockss.filter.HtmlTagFilter.TagPair;
@@ -52,24 +53,6 @@ import org.lockss.util.*;
 
 public class IngentaJournalHtmlFilterFactory implements FilterFactory {
   Logger log = Logger.getLogger(IngentaJournalHtmlFilterFactory.class);
-  
-  // XXX remove after 1.66 release
-  private static class NavTag extends CompositeTag {
-    
-    /**
-     * The set of names handled by this tag.
-     */
-    private static final String[] mIds = new String[] {"nav"};
-    
-    /**
-     * Return the set of names handled by this tag.
-     * @return The names to be matched that create tags of this type.
-     */
-    public String[] getIds() {
-      return mIds;
-    }
-    
-  }
   
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
@@ -100,6 +83,16 @@ public class IngentaJournalHtmlFilterFactory implements FilterFactory {
         //  http://www.ingentaconnect.com/content/intellect/ac/2001/00000012/00000001
         new TagNameFilter("footer"),
         new TagNameFilter("nav"),
+        new TagNameFilter("style"),
+        // filter extraneous tags found at
+        // http://www.ingentaconnect.com/content/intellect/ac/2000/00000011/00000002/art00017
+        HtmlNodeFilters.tagWithAttribute("div", "id", "sign-in-container"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "tools"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "shareContent"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "icon-key"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "cornerPolicyTab"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "mainCookiesPopUp"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "cacheIssue"),
         // filter out <link rel="stylesheet" href="..."> because Ingenta has
         // bad habit of adding a version number to the CSS file name
         HtmlNodeFilters.tagWithAttribute("link", "rel", "stylesheet"),
@@ -137,7 +130,8 @@ public class IngentaJournalHtmlFilterFactory implements FilterFactory {
         // Filter out <div id="cart-navbar">...</div>
         HtmlNodeFilters.tagWithAttribute("div", "id", "cart-navbar"),
         // Filter out <div class="heading-macfix article-access-options">...</div>
-        HtmlNodeFilters.tagWithAttribute("div", "class", "heading-macfix"), 
+        // Found instance of extra space in class value
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "heading-macfix"), 
         // Filter out <div id="baynote-recommendations">...</div>
         HtmlNodeFilters.tagWithAttribute("div", "id", "baynote-recommendations"),
         // Filter out <div id="bookmarks-container">...</div>
@@ -209,36 +203,46 @@ public class IngentaJournalHtmlFilterFactory implements FilterFactory {
     HtmlTransform xform = new HtmlTransform() {
       @Override
       public NodeList transform(NodeList nodeList) throws IOException {
-        try {
-          nodeList.visitAllNodesWith(new NodeVisitor() {
-            @Override
-            public void visitTag(Tag tag) {
-              try {
-                if ("li".equalsIgnoreCase(tag.getTagName()) &&
-                    tag.getAttribute("class") != null &&
-                    tag.getAttribute("class").trim().startsWith("rowShade")) {
-                  tag.setAttribute("class", "");
-                }
-                else {
-                  super.visitTag(tag);
-                }
-              }
-              catch (Exception exc) {
-                log.debug2("Internal error (visitor)", exc); // Ignore this tag and move on
-              }
+        NodeList nl = new NodeList();
+        for (int sx = 0; sx < nodeList.size(); sx++) {
+          Node snode = nodeList.elementAt(sx);
+          if (snode instanceof Tag) {
+            Tag tag = (Tag) snode;
+            String tagName = tag.getTagName().toLowerCase();
+            if ("li".equals(tagName) &&
+                tag.getAttribute("class") != null &&
+                tag.getAttribute("class").trim().startsWith("rowShade")) {
+              Attribute a = tag.getAttributeEx(tagName);
+              Vector<Attribute> v = new Vector<Attribute>();
+              v.add(a);
+              tag.setAttributesEx(v);
+              nl.add(tag);
             }
-          });
+            else if ("a".equals(tagName) &&
+                tag.getAttribute("title") != null &&
+                tag.getAttribute("title").contains("external reference") ) {
+              ;
+              TextNode tn = new TextNode(snode.toPlainTextString());
+              nl.add(tn);
+            }
+            else {
+              NodeList knl = tag.getChildren();
+              if (knl != null) {
+                transform(knl);
+              }
+              nl.add(snode);
+            }
+          }
+          else {
+            nl.add(snode);
+          }
         }
-        catch (ParserException pe) {
-          log.debug2("Internal error (parser)", pe); // Bail
-        }
-        return nodeList;
+        return nl;
       }
     };
     
     InputStream filteredStream =  new HtmlFilterInputStream(in, encoding,
-        new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters)),xform))
-    .registerTag(new NavTag()); // XXX remove after 1.66 release
+        new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters)),xform));
     
     Reader filteredReader = FilterUtil.getReader(filteredStream, encoding);
     Reader tagFilter = HtmlTagFilter.makeNestedFilter(filteredReader,
