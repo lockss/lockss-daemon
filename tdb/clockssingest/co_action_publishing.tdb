@@ -126,11 +126,11 @@
     param[base_url] = http://www.education-inquiry.net/
     param[journal_id] = edui
 
-    au < exists ; exists ; 2010 ; Education Inquiry Volume 1 ; 1 ; 2010 >
-    au < exists ; exists ; 2011 ; Education Inquiry Volume 2 ; 2 ; 2011 >
-    au < exists ; exists ; 2012 ; Education Inquiry Volume 3 ; 3 ; 2012 >
-    au < exists ; exists ; 2013 ; Education Inquiry Volume 4 ; 4 ; 2013 >
-    au < exists ; exists ; 2014 ; Education Inquiry Volume 5 ; 5 ; 2014 >
+    au < manifest ; exists ; 2010 ; Education Inquiry Volume 1 ; 1 ; 2010 >
+    au < manifest ; exists ; 2011 ; Education Inquiry Volume 2 ; 2 ; 2011 >
+    au < manifest ; exists ; 2012 ; Education Inquiry Volume 3 ; 3 ; 2012 >
+    au < manifest ; exists ; 2013 ; Education Inquiry Volume 4 ; 4 ; 2013 >
+    au < manifest ; exists ; 2014 ; Education Inquiry Volume 5 ; 5 ; 2014 >
 
   }
 
@@ -189,7 +189,7 @@
     param[base_url] = http://www.ecrj.net/
     param[journal_id] = ecrj
 
-    au < exists ; exists ; 2014 ; European Clinical Respiratory Journal Volume 1 ; 1 ; 2014 >
+    au < manifest ; exists ; 2014 ; European Clinical Respiratory Journal Volume 1 ; 1 ; 2014 >
 
   }
 
@@ -205,7 +205,7 @@
       param[base_url] = http://www.eurojnlofpsychotraumatol.net/
       param[journal_id] = ejpt
       comment[0] = includes supplements
-      comment[1] = notReady due to fetch errors see RU 4449
+
 
       au < superseded ; exists ; 2010 ; European Journal of Psychotraumatology [including Supplements] Volume 1 [to delete] ; 1 ; 2010 >
       au < superseded ; exists ; 2011 ; European Journal of Psychotraumatology [including Supplements] Volume 2 [to delete] ; 2 ; 2011 >
@@ -404,8 +404,8 @@
     param[base_url] = http://www.jmahp.net/
     param[journal_id] = jmahp
 
-    au < exists ; exists ; 2013 ; Journal of Market Access & Health Policy Volume 1 ; 1 ; 2013 >
-    au < exists ; exists ; 2014 ; Journal of Market Access & Health Policy Volume 2 ; 2 ; 2014 >
+    au < manifest ; exists ; 2013 ; Journal of Market Access & Health Policy Volume 1 ; 1 ; 2013 >
+    au < manifest ; exists ; 2014 ; Journal of Market Access & Health Policy Volume 2 ; 2 ; 2014 >
 
   }
 
