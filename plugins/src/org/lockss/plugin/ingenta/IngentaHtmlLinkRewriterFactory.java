@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaHtmlLinkRewriterFactory.java,v 1.4 2014-03-27 22:40:55 etenbrink Exp $
+ * $Id: IngentaHtmlLinkRewriterFactory.java,v 1.5 2014-08-15 19:04:29 etenbrink Exp $
  */
 
 /*
@@ -210,7 +210,7 @@ public class IngentaHtmlLinkRewriterFactory
       sb.append(matcher.group(i));
     }
     sb.append("?crawler=true");
-    // create version of rwritten URL without MIME type as fall-back
+    // create version of rewritten URL without MIME type as fall-back
     // in case the URL we ingested didn't have the MIME type
     String newUrlNoMime = sb.toString();
     
@@ -220,7 +220,7 @@ public class IngentaHtmlLinkRewriterFactory
     
     // see if a matching URL with the original MIME type param
     // exists matches original MIME type, e.g.:
-    // http://api.ingentaconnect.com/...?crawler=true&mimetype=application/pdf               
+    // http://api.ingentaconnect.com/...?crawler=true&mimetype=application/pdf
     CachedUrl cu = au.makeCachedUrl(newUrl);
     try {
       if ((cu == null) 
