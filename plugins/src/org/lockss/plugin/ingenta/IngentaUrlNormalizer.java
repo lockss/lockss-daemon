@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaUrlNormalizer.java,v 1.2 2009-10-07 23:37:22 thib_gc Exp $
+ * $Id: IngentaUrlNormalizer.java,v 1.3 2014-08-15 19:14:03 etenbrink Exp $
  */
 
 /*
@@ -77,8 +77,11 @@ public class IngentaUrlNormalizer implements UrlNormalizer {
       }
       
       // Then massage the path to include slashes and "?crawler=true"
+      // replace &mimetype=application/pdf (assumed default) see IngentaHtmlLinkRewriterFactory
+      // with ?crawler=true, otherwise add ?crawler=true to mimetype param
       String path = url.substring(baseUrlPrefix.length());
       path = path.replaceAll("%2[Ff]", "/");
+      path = path.replaceFirst("&mimetype=application/pdf", "?crawler=true");
       path = path.replaceFirst("&mimetype=", "?crawler=true&mimetype=");
       
       // Now construct the URL
