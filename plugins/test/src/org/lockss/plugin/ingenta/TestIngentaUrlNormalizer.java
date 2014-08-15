@@ -1,10 +1,10 @@
 /*
- * $Id: TestIngentaUrlNormalizer.java,v 1.1 2009-10-07 23:37:22 thib_gc Exp $
+ * $Id: TestIngentaUrlNormalizer.java,v 1.2 2014-08-15 21:41:12 etenbrink Exp $
  */
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -60,7 +60,7 @@ public class TestIngentaUrlNormalizer extends LockssTestCase {
   public void testOneTimeUrls() throws Exception {
     assertEquals("http://api.example.com/content/publi/jour/2005/00000044/00000003/art00001?crawler=true&mimetype=text/html",
                  normalizer.normalizeUrl("http://www.example.com/search/download?pub=infobike%3a%2f%2fpubli%2fjour%2f2005%2f00000044%2f00000003%2fart00001&mimetype=text%2fhtml&exitTargetId=1234567890123", au));
-    assertEquals("http://api.example.com/content/publi/jour/2002/00000009/00000001/art00003?crawler=true&mimetype=application/pdf",
+    assertEquals("http://api.example.com/content/publi/jour/2002/00000009/00000001/art00003?crawler=true",
                  normalizer.normalizeUrl("http://www.example.com/search/download?pub=infobike%3a%2f%2fpubli%2fjour%2f2002%2f00000009%2f00000001%2fart00003&mimetype=application%2fpdf", au));
   }
   
