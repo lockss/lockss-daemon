@@ -145,16 +145,15 @@
     {
   
         title <
-          name = Biointerphases ;
-          issn = 1559-4106 
+          name = Bioresources and Bioprocessing ;
+          issn = 2197-4365 
         >
   
-        param[base_url] = http://www.biointerphases.com/
-        param[journal_issn] = 1559-4106 
+        param[base_url] = http://www.bioresourcesbioprocessing.com/
+        param[journal_issn] = 2197-4365 
         comment[platform] = BioMedCentralPlugin
   
-        au < manifest ; 2013 ; Biointerphases Volume 8 ; 8 >
-        au < expected ; 2014 ; Biointerphases Volume 9 ; 9 >
+        au < exists ; 2014 ; Bioresources and Bioprocessing Volume 1 ; 1 >
   
     }
   
@@ -1091,6 +1090,21 @@
     {
   
         title <
+          name = International Journal of Food Contamination ;
+          issn = 2196-2804 
+        >
+  
+        param[base_url] = http://www.foodcontaminationjournal.com/
+        param[journal_issn] = 2196-2804 
+        comment[platform] = BioMedCentralPlugin
+  
+        au < exists ; 2014 ; International Journal of Food Contamination Volume 1 ; 1 >
+  
+    }
+  
+    {
+  
+        title <
           name = International Journal of Industrial Chemistry ;
           issn = 2228-5547 
         >
@@ -1972,6 +1986,21 @@
     {
   
         title <
+          name = ROBOMECH Journal ;
+          issn = 2197-4225
+        >
+  
+        param[base_url] = http://www.robomechjournal.com/
+        param[journal_issn] = 2197-4225
+        comment[platform] = BioMedCentralPlugin
+  
+        au < exists ; 2014 ; ROBOMECH Journal Volume 1 ; 1 >
+  
+    }
+  
+    {
+  
+        title <
           name = Scalable Computing ;
           issn = 2194-6876
         >
@@ -2161,6 +2190,30 @@
         au < exists ; 2012 ; Arabian Journal of Mathematics Volume 1 ; 1 >
         au < expected ; 2013 ; Arabian Journal of Mathematics Volume 2 ; 2 >
         au < expected ; 2014 ; Arabian Journal of Mathematics volume 3 ; 3 >
+  
+    }
+  
+    {
+  
+        title <
+          name = Biointerphases ;
+          issn = 1934-8630 ;
+          eissn = 1559-4106 
+        >
+  
+        param[base_url] = http://www.springer.com/13758/
+        param[journal_issn] = 1559-4106 
+        comment[platform] = Springer
+  
+        au < exists ; 2006 ; Biointerphases Volume 1 ; 1 >
+        au < exists ; 2007 ; Biointerphases Volume 2 ; 2 >
+        au < exists ; 2008 ; Biointerphases Volume 3 ; 3 >
+        au < exists ; 2009 ; Biointerphases Volume 4 ; 4 >
+        au < exists ; 2010 ; Biointerphases Volume 5 ; 5 >
+        au < exists ; 2011 ; Biointerphases Volume 6 ; 6 >
+        au < exists ; 2012 ; Biointerphases Volume 7 ; 7 >
+        au < exists ; 2013 ; Biointerphases Volume 8 ; 8 >
+        au < expected ; 2014 ; Biointerphases Volume 9 ; 9 >
   
     }
   
