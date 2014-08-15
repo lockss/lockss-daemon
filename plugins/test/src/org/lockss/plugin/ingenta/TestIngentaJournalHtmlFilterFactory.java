@@ -1,5 +1,5 @@
 /*
- * $Id: TestIngentaJournalHtmlFilterFactory.java,v 1.16 2014-07-15 00:28:21 etenbrink Exp $
+ * $Id: TestIngentaJournalHtmlFilterFactory.java,v 1.17 2014-08-15 21:43:30 etenbrink Exp $
  */
 
 /*
@@ -115,6 +115,14 @@ public class TestIngentaJournalHtmlFilterFactory extends LockssTestCase {
     // Icon on article reference page
     {"span", "class", "access-icon"},
     {"span", "class", "acess-icon"},
+    {"span", "class", "acess-icon"},
+    // extraneous tags
+    {"div", "id", "sign-in-container"},
+    {"div", "id", "tools"},
+    {"div", "class", "shareContent"},
+    {"div", "class", "icon-key"},
+    {"div", "class", "cornerPolicyTab"},
+    {"div", "class", "mainCookiesPopUp"},
   };
   
   // single tags from IngentaJouranlHtmlFilterFactory
@@ -193,7 +201,7 @@ public class TestIngentaJournalHtmlFilterFactory extends LockssTestCase {
   //test div class heading-macfix with explicit tests
   private static final String HeadingMacfixHtml =
       "<p>The chickens were decidedly cold.</p>" +
-          "<div class=\"heading-macfix\"> " +
+          "<div class=\" heading-macfix\"> " +
           "<span class=\"rust\"> 2" +
           "</span> references have been identified for this article, " +
           "of which <span class=\"rust\">2</span> have matches and can be" +
@@ -347,27 +355,85 @@ public class TestIngentaJournalHtmlFilterFactory extends LockssTestCase {
     assertEquals(ScriptHtmlFiltered,StringUtil.fromInputStream(inA));
   }
   
-  //test nav with explicit test
+  //test nav, footer, style with explicit test
   private static final String NavHtml =
       "<p>The chickens were decidedly cold.</p>" +
+          "<style> /* cache issue message */ .cacheIssue { display:none; background: none repeat scroll 0 0 #faf9a9;" +
+          " color:#000; padding:9px; position: absolute; top:-10px; width:986px; z-index:108;" +
+          " box-shadow: 2px 2px 3px #88898a; } .cacheIssue p { width: 92%; }" +
+          " .cacheIssue a { color:#0775cf; text-decoration:underlined !important; }" +
+          " .cacheIssue a:hover{ color:#0775cf; text-decoration:underlined; }" +
+          " .cacheIssue span { color: #7c7b09; cursor: pointer; display: block;" +
+          " font-size: 14px; font-weight: bold; padding: 0 7px; position: absolute;" +
+          " right: -1px; top: 8px; border-radius:6px; }" +
+          " .cacheIssue span:hover { color: #05477c; } } " +
+          "</style>" +
           "<nav role=\"navigation\" class=\"navbar navbar\"> " +
           "<button data-target=\"#about-section-nav\" data-toggle=\"collapse\"" +
           " class=\"navbar-toggle\" type=\"button\"> " +
           "<span><i class=\"fa fa-ellipsis-h\"></i></span> </button>" +
           "<form action=\"/cart?exitTargetId=1404984884181\" class=\"cartButtonRWD\"> " +
           "<input type=\"submit\" value=\"\" class=\"navbar-toggle\"> </form> " +
-          "</nav>";
+          "</nav>" +
+          "<footer role=\"footernav\" class=\"footer\">\n" + 
+          "<div class=\"foo\">\n" + 
+          "</div>\n" + 
+          "</footer>";
   
   private static final String NavHtmlFiltered =
       "<p>The chickens were decidedly cold.</p>";
   
-  public void testNavScript() throws Exception {
+  public void testNavHtml() throws Exception {
     InputStream inA;
     
     inA = fact.createFilteredInputStream(mau, new StringInputStream(NavHtml),
         Constants.DEFAULT_ENCODING);
     
     assertEquals(NavHtmlFiltered,StringUtil.fromInputStream(inA));
+  }
+  
+  //test li with rowShade with explicit test
+  private static final String RowShade =
+      "<ul>" +
+      "<li class=\" rowShadeOdd\" more>i1</li>" +
+      "<li class=\"rowShadeEven\" more2>i2</li>" +
+      "<li class=\"diff\" diff2>i2</li>" +
+      "</ul>";
+  
+  private static final String RowShadeFiltered =
+      "<ul>" +
+      "<li>i1</li>" +
+      "<li>i2</li>" +
+      "<li class=\"diff\" diff2>i2</li>" +
+      "</ul>";
+  
+  public void testRowShade() throws Exception {
+    InputStream inA;
+    
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(RowShade),
+        Constants.DEFAULT_ENCODING);
+    
+    assertEquals(RowShadeFiltered,StringUtil.fromInputStream(inA));
+  }
+  
+  //test li with rowShade with explicit test
+  private static final String ExtRef =
+      /*
+       * <a title="link to external reference" onclick="popup('reswin','780','600')" href="#">19, p102</a>
+       */
+      "<a title=\"link to external reference\" onclick=\"popup('/path/ref', 'reswin', '40', '30')\" " +
+      "href=\"#\">19, p102</a>";
+  
+  private static final String ExtRefFiltered =
+      "19, p102";
+  
+  public void testExtRef() throws Exception {
+    InputStream inA;
+    
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(ExtRef),
+        Constants.DEFAULT_ENCODING);
+    
+    assertEquals(ExtRefFiltered,StringUtil.fromInputStream(inA));
   }
   
 }
