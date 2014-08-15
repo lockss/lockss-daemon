@@ -1,10 +1,10 @@
 /*
- * $Id: IngentaHtmlLinkRewriterFactory.java,v 1.5 2014-08-15 19:04:29 etenbrink Exp $
+ * $Id: IngentaHtmlLinkRewriterFactory.java,v 1.6 2014-08-15 21:38:30 etenbrink Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
