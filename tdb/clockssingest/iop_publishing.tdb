@@ -911,23 +911,38 @@
       eissn = 1029-8479 ;
       issnl = 1126-6708
     >
-    
-    param[journal_issn] = 1126-6708
-    comment[moved_to] = Springer Science+Business Media in 2010
 
-    au < manifest ; exists ; 1997 ; Journal of High Energy Physics Volume 1997 ; 1997 > 
-    au < manifest ; exists ; 1998 ; Journal of High Energy Physics Volume 1998 ; 1998 > 
-    au < manifest ; exists ; 1999 ; Journal of High Energy Physics Volume 1999 ; 1999 > 
-    au < manifest ; exists ; 2000 ; Journal of High Energy Physics Volume 2000 ; 2000 > 
-    au < manifest ; exists ; 2001 ; Journal of High Energy Physics Volume 2001 ; 2001 > 
-    au < manifest ; exists ; 2002 ; Journal of High Energy Physics Volume 2002 ; 2002 > 
-    au < manifest ; exists ; 2003 ; Journal of High Energy Physics Volume 2003 ; 2003 > 
-    au < manifest ; exists ; 2004 ; Journal of High Energy Physics Volume 2004 ; 2004 > 
-    au < manifest ; exists ; 2005 ; Journal of High Energy Physics Volume 2005 ; 2005 > 
-    au < manifest ; exists ; 2006 ; Journal of High Energy Physics Volume 2006 ; 2006 > 
-    au < manifest ; exists ; 2007 ; Journal of High Energy Physics Volume 2007 ; 2007 > 
-    au < finished ; crawling ; 2008 ; Journal of High Energy Physics Volume 2008 ; 2008 > 
-    au < finished ; crawling ; 2009 ; Journal of High Energy Physics Volume 2009 ; 2009 > 
+    comment[moved_to] = Springer Science+Business Media in 2010
+    
+    {
+    
+      param[journal_issn] = 1126-6708
+
+      au < manifest ; exists ; 1997 ; Journal of High Energy Physics Volume 1997 ; 1997 > 
+      au < manifest ; exists ; 1998 ; Journal of High Energy Physics Volume 1998 ; 1998 > 
+      au < manifest ; exists ; 1999 ; Journal of High Energy Physics Volume 1999 ; 1999 > 
+      au < manifest ; exists ; 2000 ; Journal of High Energy Physics Volume 2000 ; 2000 > 
+      au < manifest ; exists ; 2001 ; Journal of High Energy Physics Volume 2001 ; 2001 > 
+      au < manifest ; exists ; 2002 ; Journal of High Energy Physics Volume 2002 ; 2002 > 
+      au < manifest ; exists ; 2003 ; Journal of High Energy Physics Volume 2003 ; 2003 > 
+      au < manifest ; exists ; 2004 ; Journal of High Energy Physics Volume 2004 ; 2004 > 
+      au < manifest ; exists ; 2005 ; Journal of High Energy Physics Volume 2005 ; 2005 > 
+      au < manifest ; exists ; 2006 ; Journal of High Energy Physics Volume 2006 ; 2006 > 
+      au < manifest ; exists ; 2007 ; Journal of High Energy Physics Volume 2007 ; 2007 > 
+      au < finished ; crawling ; 2008 ; Journal of High Energy Physics Volume 2008 ; 2008 > 
+      au < finished ; crawling ; 2009 ; Journal of High Energy Physics Volume 2009 ; 2009 > 
+    
+    }
+
+    {
+    
+      param[journal_issn] = 1029-8479
+      
+      comment[delete] = malformed AU on ingest1 only. 
+
+      au < superseded ; exists ; 2008 ; Journal of High Energy Physics Volume 2008 [to delete] ; 2008 > 
+    
+    }
 
   }
 
