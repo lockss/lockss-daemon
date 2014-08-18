@@ -69,28 +69,43 @@
   </entry>
   <entry>
     <string>au_crawlrules</string>
+    <!-- examples
+    http://www.palgraveconnect.com/pc/socialsciences2013/browse/inside/chapter/9781137268839/9781137268839.0001.html?chapterDoi=9781137268839.0001
+    http://www.palgraveconnect.com/pc/browse/citationExport?doi=10.1057/9781137310149&WT.cg_n=eBooks&WT.cg_s=Citation%20Export
+    http://www.palgraveconnect.com/pc/doifinder/10.1057/9781137284808.0007
+    http://www.palgraveconnect.com/pc/education2013/browse/inside/download/9781137021052.pdf
+    -->
     <list>
       <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
       <string>4,"^%s", base_url</string>
-      <string>1,"^%s.+/browse/inside/.*", base_url</string>
-      <string>1,"^%s.+/browse/citationExport.*", base_url</string>
-      <string>1,"^%s.+/10\.1057/%s\.\d+$", base_url, book_isbn</string>
+      <string>1,"^%spc/[^/]+/browse/inside/.*", base_url</string>
+      <string>1,"^%spc/browse/citationExport.*", base_url</string>
+      <string>1,"^%spc/doifinder/10\.1057/%s\.\d+$", base_url, book_isbn</string>
     </list>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
+    <!-- examples
+    http://www.palgraveconnect.com/pc/education2013/browse/inside/download/9781137021052.pdf
+    http://www.palgraveconnect.com/pc/socialsciences2013/browse/inside/epub/9781137268839.epub
+    (not verified, but from article iterator comments:
+    http://www.palgraveconnect.com/pc/econfin2012/browse/inside/9781137283351.html
+    )
+    -->
     <list>
-      <string>"^%s.+/browse/inside/.+\.(html|pdf|epub)$", base_url</string>
+      <string>"^%spc/[^/]+/browse/inside(/[^/]+)?/%s\.(html|pdf|epub)$", base_url, book_isbn</string>
     </list>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
     <long>6000</long>
   </entry>
+  <!--
   <entry>
     <string>au_def_new_content_crawl</string>
     <long>1209600000</long>
   </entry>
+  -->
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.palgrave.PalgraveBookHtmlHashFilterFactory</string>
