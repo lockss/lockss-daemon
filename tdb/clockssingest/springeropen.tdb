@@ -157,7 +157,7 @@
         param[journal_issn] = 2197-4365 
         comment[platform] = BioMedCentralPlugin
   
-        au < exists ; exists ; 2014 ; Bioresources and Bioprocessing Volume 1 ; 1 >
+        au < manifest ; exists ; 2014 ; Bioresources and Bioprocessing Volume 1 ; 1 >
   
     }
   
@@ -1102,7 +1102,7 @@
         param[journal_issn] = 2196-2804 
         comment[platform] = BioMedCentralPlugin
   
-        au < exists ; exists ; 2014 ; International Journal of Food Contamination Volume 1 ; 1 >
+        au < manifest ; exists ; 2014 ; International Journal of Food Contamination Volume 1 ; 1 >
   
     }
   
@@ -1999,7 +1999,7 @@
         param[journal_issn] = 2197-4225
         comment[platform] = BioMedCentralPlugin
   
-        au < exists ; exists ; 2014 ; ROBOMECH Journal Volume 1 ; 1 >
+        au < manifest ; exists ; 2014 ; ROBOMECH Journal Volume 1 ; 1 >
   
     }
   
