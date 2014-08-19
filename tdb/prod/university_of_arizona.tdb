@@ -17,6 +17,8 @@
 
     param[journal_dir] = arizona_journal_of_hispanic_cultural_studies
     attr[journal_id] = hcs
+    
+    comment[2013] = manifest page but no content as of 2014/8/19
 
     au < manifest ; 1997 ; Arizona Journal of Hispanic Cultural Studies Volume 1 ; 1 >
     au < manifest ; 1998 ; Arizona Journal of Hispanic Cultural Studies Volume 2 ; 2 >
@@ -34,7 +36,7 @@
     au < released ; 2010 ; Arizona Journal of Hispanic Cultural Studies Volume 14 ; 14 >
     au < released ; 2011 ; Arizona Journal of Hispanic Cultural Studies Volume 15 ; 15 >
     au < released ; 2012 ; Arizona Journal of Hispanic Cultural Studies Volume 16 ; 16 >
-    au < testing ; 2013 ; Arizona Journal of Hispanic Cultural Studies Volume 17 ; 17 >
+    au < notReady ; 2013 ; Arizona Journal of Hispanic Cultural Studies Volume 17 ; 17 >
     au < doNotProcess ; 2014 ; Arizona Journal of Hispanic Cultural Studies Volume 18 ; 18 >
 
   }
