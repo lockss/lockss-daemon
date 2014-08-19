@@ -214,9 +214,7 @@
         param[base_url] = http://archderm.jamanetwork.com/
         param[resource_id] = 68
         
-        comment[smoketest] = created one au for testing
-    
-        au < testing ; exists ; 2013 ; Archives of Dermatology Volume 149 ; 2013 >    
+        au < manifest ; exists ; 2013 ; Archives of Dermatology Volume 149 ; 2013 >    
     
       }
 
@@ -283,9 +281,7 @@
         param[base_url] = http://archfaci.jamanetwork.com/
         param[resource_id] = 69
         
-        comment[smoketest] = created one au for testing
-    
-        au < testing ; exists ; 2013 ; Archives of Facial Plastic Surgery Volume 15 ; 2013 >    
+        au < manifest ; exists ; 2013 ; Archives of Facial Plastic Surgery Volume 15 ; 2013 >    
     
       }
 
@@ -607,9 +603,7 @@
         param[base_url] = http://archinte.jamanetwork.com/
         param[resource_id] = 71
         
-        comment[smoketest] = created one au for testing
-    
-        au < testing ; exists ; 2013 ; Archives of Internal Medicine Volume 173 ; 2013 >    
+        au < manifest ; exists ; 2013 ; Archives of Internal Medicine Volume 173 ; 2013 >    
     
       }
 
@@ -712,9 +706,7 @@
         param[base_url] =  http://archneur.jamanetwork.com/
         param[resource_id] = 72
         
-        comment[smoketest] = created one au for testing
-    
-        au < testing ; exists ; 2013 ; Archives of Neurology Volume 70 ; 2013 >    
+        au < manifest ; exists ; 2013 ; Archives of Neurology Volume 70 ; 2013 >    
     
       }
 
@@ -977,9 +969,7 @@
         param[base_url] =  http://archopht.jamanetwork.com/
         param[resource_id] = 73
         
-        comment[smoketest] = created one au for testing
-    
-        au < testing ; exists ; 2013 ; Archives of Ophthalmology Volume 131 ; 2013 >    
+        au < manifest ; exists ; 2013 ; Archives of Ophthalmology Volume 131 ; 2013 >    
     
       }
 
@@ -1338,9 +1328,7 @@
         param[base_url] = http://archpedi.jamanetwork.com/
         param[resource_id] = 75
         
-        comment[smoketest] = created one au for testing
-    
-        au < testing ; exists ; 2013 ; Archives of Pediatrics & Adolescent Medicine Volume 167 ; 2013 >    
+        au < manifest ; exists ; 2013 ; Archives of Pediatrics & Adolescent Medicine Volume 167 ; 2013 >    
     
       }
 
@@ -1521,9 +1509,7 @@
         param[base_url] = http://archsurg.jamanetwork.com/
         param[resource_id] = 76
         
-        comment[smoketest] = created one au for testing
-    
-        au < testing ; exists ; 2013 ; Archives of Surgery Volume 148 ; 2013 >    
+        au < manifest ; exists ; 2013 ; Archives of Surgery Volume 148 ; 2013 >    
     
       }
 
@@ -1896,10 +1882,8 @@
         param[base_url] = http://jama.jamanetwork.com/
         param[resource_id] = 67
         
-        comment[smoketest] = created one au for testing
-    
-        au < testing ; exists ; 2011 ; JAMA: The Journal of the American Medical Association Volume 305-306 ; 2011 >
-        au < testing ; exists ; 2013 ; JAMA: The Journal of the American Medical Association Volume 309-310 ; 2013 >    
+        au < manifest ; exists ; 2011 ; JAMA: The Journal of the American Medical Association Volume 305-306 ; 2011 >
+        au < manifest ; exists ; 2013 ; JAMA: The Journal of the American Medical Association Volume 309-310 ; 2013 >    
     
       }
 
