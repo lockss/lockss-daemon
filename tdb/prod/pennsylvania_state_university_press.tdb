@@ -245,6 +245,19 @@
     >
     
     {
+      plugin = org.lockss.plugin.jstor.JstorPlugin
+      param[base_url] = http://www.jstor.org/
+      param[base_url2] = https://www.jstor.org/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      param[journal_id] = critphilrace
+
+      au < exists ; 2013 ; Comparative Literature Studies Volume 1 ; 1 >
+      au < exists ; 2014 ; Comparative Literature Studies Volume 2 ; 2 >
+      
+    }
+
+    {
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
@@ -640,7 +653,7 @@
   {
   
     title <
-      name = Journal of Eastern Mediterranean Archaeology and Heritage Studies ;
+      name = Journal of Eastern Mediterranean Archaeology & Heritage Studies ;
       issn = 2166-3548 ;
       eissn = 2166-3556 ;
       issnl = 2166-3548 
@@ -654,8 +667,8 @@
 
       param[journal_id] = jeasmedarcherstu
 
-      au < manifest ; 2013 ; Journal of Eastern Mediterranean Archaeology and Heritage Studies Volume 1 ; 1 >
-      au < manifest ; 2014 ; Journal of Eastern Mediterranean Archaeology and Heritage Studies Volume 2 ; 2 >
+      au < manifest ; 2013 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 1 ; 1 >
+      au < manifest ; 2014 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 2 ; 2 >
       
     }
 
@@ -666,8 +679,8 @@
       param[journal_dir] = journal_of_eastern_mediterranean_archaeology_and_heritage_studies
       attr[journal_id] = ema
       
-      au < released ; 2013 ; Journal of Eastern Mediterranean Archaeology and Heritage Studies Volume 1 ; 1 >
-      au < manifest ; 2014 ; Journal of Eastern Mediterranean Archaeology and Heritage Studies Volume 2 ; 2 >
+      au < released ; 2013 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 1 ; 1 >
+      au < manifest ; 2014 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 2 ; 2 >
       
     }
     
@@ -799,7 +812,6 @@
       param[base_url] = http://www.jstor.org/
       param[base_url2] = https://www.jstor.org/
       implicit < status ; year ; name ; param[volume_name] >
-      comment[needs_plugin] = years 2010-2012 on JSTOR/PSU Press
       comment[continues] = 0742-5503
     
       param[journal_id] = jmedirelicult
@@ -884,7 +896,6 @@
     {
     
       plugin = org.lockss.plugin.jstor.JstorPlugin
-      comment[needs_plugin] = years 2006-2012 on JSTOR/PSU Press.
       comment[continues] = 0886-1730 JSTOR/Moravian Historical Society? years 1857-2000
       param[base_url] = http://www.jstor.org/
       param[base_url2] = https://www.jstor.org/
