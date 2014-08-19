@@ -4,7 +4,7 @@
     name = Whiting and Birch ;
     info[back] = 2011 ;
     info[contract] = 2012 ;
-    info[tester] = 7 
+    info[tester] = 8
   >
     plugin = org.lockss.plugin.metapress.ClockssMetaPressPlugin
     param[base_url] = http://essential.metapress.com/
