@@ -1,5 +1,5 @@
 /*
- * $Id: TestFilterRunner.java,v 1.3 2006-09-16 22:55:22 tlipkis Exp $
+ * $Id: TestFilterRunner.java,v 1.4 2014-08-19 06:15:24 tlipkis Exp $
  */
 
 /*
@@ -123,21 +123,10 @@ public class TestFilterRunner extends LockssTestCase {
     }
   }
 
-  private static String hwFilterFactoryStr =
-    "org.lockss.plugin.highwire.HighWireHtmlFilterFactory";
-
   private static String mockFilterFactoryStr =
     "org.lockss.test.MockFilterFactory";
 
-  public void testFilterFactoryFromStringHighWire()
-      throws ClassNotFoundException, InstantiationException,
-	     IllegalAccessException {
-    FilterFactory filterFactory = FilterRunner.filterFactoryFromString(hwFilterFactoryStr);
-    assertTrue(filterFactory instanceof
-	       org.lockss.plugin.highwire.HighWireHtmlFilterFactory);
-  }
-
-  public void testFilterFactoryFromStringMock()
+  public void testFilterFactoryFromString()
       throws ClassNotFoundException, InstantiationException,
 	     IllegalAccessException  {
     FilterFactory filterFactory =

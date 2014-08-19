@@ -1,5 +1,5 @@
 /*
- * $Id: TestFilterRuleRunner.java,v 1.1 2006-09-16 22:55:22 tlipkis Exp $
+ * $Id: TestFilterRuleRunner.java,v 1.2 2014-08-19 06:15:24 tlipkis Exp $
  */
 
 /*
@@ -125,21 +125,10 @@ public class TestFilterRuleRunner extends LockssTestCase {
     }
   }
 
-  private static String hwFilterRuleStr =
-    "org.lockss.plugin.highwire.HighWireFilterRule";
-
   private static String mockFilterRuleStr =
     "org.lockss.test.MockFilterRule";
 
-  public void testFilterRuleFromStringHighWire()
-      throws ClassNotFoundException, InstantiationException,
-	     IllegalAccessException {
-    FilterRule filterRule = FilterRunner.filterRuleFromString(hwFilterRuleStr);
-    assertTrue(filterRule instanceof
-	       org.lockss.plugin.highwire.HighWireFilterRule);
-  }
-
-  public void testFilterRuleFromStringMock()
+  public void testFilterRuleFromString()
       throws ClassNotFoundException, InstantiationException,
 	     IllegalAccessException  {
     FilterRule filterRule =
