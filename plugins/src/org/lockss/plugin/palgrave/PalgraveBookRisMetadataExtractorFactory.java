@@ -1,4 +1,4 @@
-/* $Id: PalgraveBookRisMetadataExtractorFactory.java,v 1.5 2014-07-29 18:11:54 alexandraohlson Exp $
+/* $Id: PalgraveBookRisMetadataExtractorFactory.java,v 1.6 2014-08-19 16:48:21 aishizaki Exp $
  
  Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
@@ -54,9 +54,7 @@ import org.lockss.util.Logger;
     public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
           String contentType) 
               throws PluginException {
-    
-      log.info("Inside Palgrave Book metadata extractor factory");
-      
+          
       RisMetadataExtractor ris = new RisMetadataExtractor();
       // removing use of DA - PalgraveBook uses this for citation access date
       // and uses PY for publication year

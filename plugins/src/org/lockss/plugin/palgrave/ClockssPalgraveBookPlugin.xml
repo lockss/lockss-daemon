@@ -76,6 +76,8 @@
     http://www.palgraveconnect.com/pc/education2013/browse/inside/download/9781137021052.pdf
     -->
     <list>
+      <!-- removes gifs for fb, reddit, etc.. -->
+      <string>2,"^%sview/images/.*\.gif", base_url</string> 
       <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
       <string>4,"^%s", base_url</string>
       <string>1,"^%spc/[^/]+/browse/inside/.*", base_url</string>
@@ -88,24 +90,20 @@
     <!-- examples
     http://www.palgraveconnect.com/pc/education2013/browse/inside/download/9781137021052.pdf
     http://www.palgraveconnect.com/pc/socialsciences2013/browse/inside/epub/9781137268839.epub
-    (not verified, but from article iterator comments:
-    http://www.palgraveconnect.com/pc/econfin2012/browse/inside/9781137283351.html
-    )
     -->
     <list>
-      <string>"^%spc/[^/]+/browse/inside(/[^/]+)?/%s\.(html|pdf|epub)$", base_url, book_isbn</string>
+    <!--  <string>"^%spc/[^/]+/browse/inside(/[^/]+)?/%s\.(html|pdf|epub)$", base_url, book_isbn</string> -->
+    <string>"^%spc/[^/]+/browse/inside/[^/]+/%s\.(pdf|epub)$", base_url, book_isbn</string>
     </list>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
     <long>6000</long>
   </entry>
-  <!--
   <entry>
     <string>au_def_new_content_crawl</string>
     <long>1209600000</long>
   </entry>
-  -->
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.palgrave.PalgraveBookHtmlHashFilterFactory</string>

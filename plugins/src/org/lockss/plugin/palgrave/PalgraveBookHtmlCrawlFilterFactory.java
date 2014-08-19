@@ -1,4 +1,4 @@
-/* $Id: PalgraveBookHtmlCrawlFilterFactory.java,v 1.2 2014-06-09 15:32:00 aishizaki Exp $
+/* $Id: PalgraveBookHtmlCrawlFilterFactory.java,v 1.3 2014-08-19 16:48:21 aishizaki Exp $
  
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -45,8 +45,7 @@ public class PalgraveBookHtmlCrawlFilterFactory implements FilterFactory {
                                                String encoding)
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
-        // right column "Related content" and "Content you might be
-        // interested in"
+        // right column "Related content" and "Recently Viewed" 
         // <div class="box-well">
         // http://www.palgraveconnect.com/pc/doifinder/10.1057/9780230597655
         HtmlNodeFilters.tagWithAttribute("div", "class", "box-well"),
