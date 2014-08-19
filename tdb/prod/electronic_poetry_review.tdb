@@ -12,7 +12,7 @@
     >  
 
     rights = openaccess
-    comment[epr1] = EPRPlugin2002On might be broken (includes issue1 URLs in years 2002 and 2003)
+    comment[epr1] = EPRPlugin2002On might be broken (includes issue1 URLs in years 2002 and 2003). At base_url, message is account suspended.
     
     {
     
@@ -20,7 +20,7 @@
       param[base_url] = http://www.epoetry.org/  
       implicit < status ; year ; name >
   
-      au < released ; 2001 ; Electronic Poetry Review 2001 >
+      au < down ; 2001 ; Electronic Poetry Review 2001 >
       
     }
     
@@ -30,9 +30,8 @@
       param[base_url] = http://www.epoetry.org/  
       implicit < status ; name ; param[year] ; param[num_issue_range] >    
     
-      au < released ; Electronic Poetry Review 2002 ; 2002 ; 3-4 >
-      au < released ; Electronic Poetry Review 2003 ; 2003 ; 5-6 >
-      au < exists ; Electronic Poetry Review 2005 ; 2005 ; 7-7 >
+      au < down ; Electronic Poetry Review 2002 ; 2002 ; 3-4 >
+      au < down ; Electronic Poetry Review 2003 ; 2003 ; 5-6 >
     
     }
 

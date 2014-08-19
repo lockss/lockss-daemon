@@ -18,8 +18,10 @@
       plugin = edu.wisc.library.plugin.BigBridgeVol1Plugin
       param[base_url] = http://www.bigbridge.org/  
       implicit < status ; name ; volume >
+      
+      comment[plugin] = plugin needs review and possible revision.
     
-      au < exists ; Big Bridge Volume 1 ; 1 >
+      au < doNotProcess ; Big Bridge Volume 1 ; 1 >
       
     }
     
@@ -28,6 +30,8 @@
       plugin = edu.wisc.library.plugin.BigBridgePlugin
       param[base_url] = http://www.bigbridge.org/  
       implicit < status ; name ; param[volume] ; param[num_issue_range] >
+      
+      comment[plugin] = plugin needs review and possible revision.
 
       au < released ; Big Bridge Volume 2 ; 2 ; 5-8 >    
     
