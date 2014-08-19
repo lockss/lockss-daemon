@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.364 2014-07-10 20:05:48 tlipkis Exp $
+ $Id: build.xml,v 1.365 2014-08-19 05:24:43 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -192,10 +192,6 @@ Args:
   <property name="tools.test.classes" value="${tools.test}/classes"/>
 
   <property name="instrumented" value="${basedir}/instrumented"/>
-
-  <property name="wrapper.path"    value="org/lockss/plugin/wrapper"/>
-  <property name="tobewrapped.src" value="${src}/org/lockss/plugin"/>
-  <property name="plugin.wrapper.template" value="${tools.src}/pluginwrapper.xml" />
 
   <property name="javadoc"        value="${basedir}/javadoc"/>
   <property name="test.javadoc"   value="${test}/javadoc"/>
@@ -539,8 +535,6 @@ Args:
     <pathelement path="${nekohtml.jar}" />
     <pathelement path="${js.jar}" />
     <pathelement path="${xmlunit.jar}" />
-    <!-- plugin jar -->
-    <pathelement path="${lockss.plugins.jar}" />
   </path>
 
   <path id="test.run.classpath">
@@ -574,7 +568,7 @@ Args:
   </path>
 
   <path id="plugins.test.run.classpath">
-    <path refid="test.run.classpath" />
+    <path refid="plugins.test.compile.classpath" />
     <pathelement path="${lockss.plugins.test.jar}" />
   </path>
 
@@ -1008,7 +1002,7 @@ The target you have selected requires compiling under JDK 1.7.
   </target>
 
   <!-- ==================================================================== -->
-  <target name="compile-tests" depends="jar-plugins,prepare.test"
+  <target name="compile-tests" depends="jar-lockss,prepare.test"
    description="Compile the LOCKSS test classes" >
     <dojavac srcdir="${test.src}" destdir="${test.classes}"
              cpid="test.compile.classpath" >
@@ -2474,7 +2468,7 @@ Test results in ${test.results}
         <test fork="${fork}" name="org.lockss.test.PluginWellformednessTests" />
 		    <jvmarg value="-server"/>
 	<formatter type="plain" usefile="false" />
-	<classpath refid="test.run.classpath" />
+	<classpath refid="plugins.test.run.classpath" />
 	<jvmarg line="${junit.default.args}"/>
 	<jvmarg line="${jvmargs}"/>
         <sysproperty key="org.lockss.test.TestPluginNames"
@@ -2518,7 +2512,7 @@ Test results in ${test.results}
      <then>
       <echo message="Validating plugin xml files"/>
       <java classname="PluginUtil" fork="true" failonerror="true" >
-	<classpath refid="test.run.classpath" />
+	<classpath refid="plugins.test.run.classpath" />
         <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
         <sysproperty key="org.lockss.manager.PluginManager"
 		     value="org.lockss.test.NonVersionCheckingPluginManager"/>
