@@ -67,6 +67,22 @@
   }
 
   {
+  
+    title <
+      name = Critical Philosophy of Race ;
+      issn = 2165-8684 ;
+      eissn = 2165-8692 ;
+      issnl = 2165-8684
+    >
+    
+      param[journal_id] = critphilrace
+
+      au < exists ; exists ; 2013 ; Comparative Literature Studies Volume 1 ; 1 >
+      au < exists ; exists ; 2014 ; Comparative Literature Studies Volume 2 ; 2 >
+      
+  }
+
+  {
 
     title <
       name = The Edgar Allen Poe Review ;
@@ -131,6 +147,7 @@
     >
 
       param[journal_id] = goodsociety
+      comment[continues] = 2157-2968
 
       au < manifest ; exists ; 2010 ; The Good Society Volume 19 ; 19 >
       au < manifest ; exists ; 2011 ; The Good Society Volume 20 ; 20 >
