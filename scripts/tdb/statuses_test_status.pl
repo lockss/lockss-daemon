@@ -21,7 +21,7 @@ while (my $line = <>) {
     for (my $x = 0; $x < @F; ++$x) {
         push(@G, $F[$x]);
         if ($x == 1) {
-            my $new_field = "unknown";
+            my $new_field = "needs.plugin";
             if (exists($new_text{$F[1]})) {
                 $new_field = $new_text{$F[$x]};
             }
