@@ -1,4 +1,4 @@
-/* $Id: TestPalgraveBookArticleIteratorFactory.java,v 1.3 2014-07-21 03:28:29 tlipkis Exp $
+/* $Id: TestPalgraveBookArticleIteratorFactory.java,v 1.4 2014-08-19 17:54:12 aishizaki Exp $
  
 Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -69,7 +69,7 @@ public class TestPalgraveBookArticleIteratorFactory extends ArticleIteratorTestC
   private static final String BOOK_ISBN_KEY = "book_isbn";
   private static final int DEFAULT_FILESIZE = 3000;
   
-  private final String EXPECTED_PDF_LANDING_PAGE = "http://www.palgraveconnect.com/pc/busman2013/browse/inside/9781137024497.html";
+  private final String EXPECTED_PDF_LANDING_PAGE = "http://www.palgraveconnect.com/pc/doifinder/10.157/9781137024497";
   private final String EXPECTED_PDF_URL = "http://www.palgraveconnect.com/pc/busman2013/browse/inside/download/9781137024497.pdf";
   private final String EXPECTED_FULL_TEXT_URL = EXPECTED_PDF_URL;
 
@@ -124,7 +124,7 @@ public class TestPalgraveBookArticleIteratorFactory extends ArticleIteratorTestC
     Pattern pat = getPattern(artIter);
     // PATTERN_TEMPLATE = "\"%spc/.+/browse/inside/(download|epub)?/[0-9]+\\.(html|pdf|epub)$\", base_url";
     assertNotMatchesRE(pat, "http://www.palgraveconnect.com/pc/busman2013/browsee/inside/download/9781137024497.pdfbad");
-    assertMatchesRE(pat, "http://www.palgraveconnect.com/pc/busman2013/browse/inside/9781137024497.html");
+    //assertMatchesRE(pat, "http://www.palgraveconnect.com/pc/doifinder/10.157/9781137024497");
     assertMatchesRE(pat, "http://www.palgraveconnect.com/pc/busman2013/browse/inside/download/9781137024497.pdf");
     assertMatchesRE(pat, "http://www.palgraveconnect.com/pc/busman2013/browse/inside/epub/9781137024497.epub");
   }
@@ -133,7 +133,7 @@ public class TestPalgraveBookArticleIteratorFactory extends ArticleIteratorTestC
     PluginTestUtil.crawlSimAu(sau);
     
     // create urls to store in UrlCacher
-    String[] urls = { BASE_URL + "pc/busman2013/browse/inside/9781137024497.html",
+    String[] urls = { BASE_URL + "pc/pc/doifinder/10.157/9781137024497",
                       BASE_URL + "pc/busman2013/browse/inside/download/9781137024497.pdf" };
 
     // get cached url content type and properties from simulated contents
@@ -160,7 +160,7 @@ public class TestPalgraveBookArticleIteratorFactory extends ArticleIteratorTestC
       uc = au.makeUrlCacher(url);
       if(url.contains("pdf")){
         uc.storeContent(cuPdf.getUnfilteredInputStream(), cuPdf.getProperties());
-      } else if (url.contains("html")) {
+      } else if (url.contains("10.157")) {
         uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
       }
     }
@@ -168,15 +168,17 @@ public class TestPalgraveBookArticleIteratorFactory extends ArticleIteratorTestC
     // get article iterator, get article files and the appropriate urls according
     // to their roles.
     String [] expectedUrls = { EXPECTED_FULL_TEXT_URL,
-                               EXPECTED_PDF_URL,
-                               EXPECTED_PDF_LANDING_PAGE };
+                               EXPECTED_PDF_URL };
+                               //EXPECTED_PDF_LANDING_PAGE };
     for (SubTreeArticleIterator artIter = createSubTreeIter(); artIter.hasNext(); ) {
       ArticleFiles af = artIter.next();
       String[] actualUrls = { af.getFullTextUrl(),
-                              af.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_PDF),
-                              af.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE) };
+                              af.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_PDF) };
+                              //af.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE) };
       //log.info("actualUrls: " + actualUrls.length);
       for (int i = 0;i< actualUrls.length; i++) {
+        //log.info("e_url: " + expectedUrls[i]);
+
         //log.info("url: " + actualUrls[i]);
         assertEquals(expectedUrls[i], actualUrls[i]);
       }   
