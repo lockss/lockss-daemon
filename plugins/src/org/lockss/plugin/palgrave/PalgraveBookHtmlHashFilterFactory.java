@@ -1,4 +1,4 @@
-/* $Id: PalgraveBookHtmlHashFilterFactory.java,v 1.4 2014-07-29 17:09:38 aishizaki Exp $
+/* $Id: PalgraveBookHtmlHashFilterFactory.java,v 1.5 2014-08-19 18:55:06 thib_gc Exp $
  
 Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -45,8 +45,7 @@ public class PalgraveBookHtmlHashFilterFactory implements FilterFactory {
 	// added by audrey: Extreme Hashing
 	// there are differences in some of their comments; remove them all!
 	HtmlNodeFilters.comment(),
-	// removing their citation cut/paste interpretations because they can include
-	// a current date - we preserve the original RIS info elsewhere
+	// removing the citation tab because it includes the access date
 	HtmlNodeFilters.tagWithAttribute("dl", "class", "citation-list"),
 	// header, footer in http://www.palgraveconnect.com/pc/doifinder/10.1057/9781137283351
         // institutional info in the constrain-header
