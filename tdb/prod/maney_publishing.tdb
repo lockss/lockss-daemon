@@ -351,7 +351,7 @@
   {
 
     title <
-      name = Bronte Society Transactions: The Journal of Bronte Studies ;
+      name = Brontë Society Transactions: The Journal of Brontë Studies ;
       issn = 0309-7765 
     >
 
@@ -365,23 +365,23 @@
     implicit < status ; year ; name ; param[volume_name] >
     comment[continued_by] = 1474-8932
  
-    au < down ; 1976-1980 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 17 ; 17 > 
-    au < down ; 1981-1985 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 18 ; 18 > 
-    au < down ; 1986-1989 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 19 ; 19 > 
-    au < down ; 1990-1993 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 20 ; 20 > 
-    au < down ; 1993-1996 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 21 ; 21 > 
-    au < down ; 1997 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 22 ; 22 > 
-    au < down ; 1998 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 23 ; 23 > 
-    au < down ; 1999 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 24 ; 24 > 
-    au < down ; 2000 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 25 ; 25 > 
-    au < down ; 2001 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 26 ; 26 > 
+    au < down ; 1976-1980 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 17 ; 17 > 
+    au < down ; 1981-1985 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 18 ; 18 > 
+    au < down ; 1986-1989 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 19 ; 19 > 
+    au < down ; 1990-1993 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 20 ; 20 > 
+    au < down ; 1993-1996 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 21 ; 21 > 
+    au < down ; 1997 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 22 ; 22 > 
+    au < down ; 1998 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 23 ; 23 > 
+    au < down ; 1999 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 24 ; 24 > 
+    au < down ; 2000 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 25 ; 25 > 
+    au < down ; 2001 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 26 ; 26 > 
 
   }
 
   {
 
     title <
-      name = Bronte Studies ;
+      name = Brontë Studies ;
       issn = 1474-8932 ;
       eissn = 1745-8226 ;
       issnl = 1474-8932 
@@ -398,18 +398,18 @@
     implicit < status ; year ; name ; param[volume_name] >
     comment[continues] = 0309-7765
 
-    au < down ; 2002 ; Bronte Studies Volume 27 ; 27 > 
-    au < doesNotExist ; 2003 ; Bronte Studies Volume 28 ; 28 > 
-    au < doesNotExist ; 2004 ; Bronte Studies Volume 29 ; 29 > 
-    au < down ; 2005 ; Bronte Studies Volume 30 ; 30 > 
-    au < down ; 2006 ; Bronte Studies Volume 31 ; 31 > 
-    au < down ; 2007 ; Bronte Studies Volume 32 ; 32 > 
-    au < doNotProcess ; 2008 ; Bronte Studies Volume 33 ; 33 > 
-    au < down ; 2009 ; Bronte Studies Volume 34 ; 34 > 
-    au < down ; 2010 ; Bronte Studies Volume 35 ; 35 > 
-    au < down ; 2011 ; Bronte Studies Volume 36 ; 36 > 
-    au < down ; 2012 ; Bronte Studies Volume 37 ; 37 > 
-    au < doNotProcess ; 2013 ; Bronte Studies Volume 38 ; 38 > 
+    au < down ; 2002 ; Brontë Studies Volume 27 ; 27 > 
+    au < doesNotExist ; 2003 ; Brontë Studies Volume 28 ; 28 > 
+    au < doesNotExist ; 2004 ; Brontë Studies Volume 29 ; 29 > 
+    au < down ; 2005 ; Brontë Studies Volume 30 ; 30 > 
+    au < down ; 2006 ; Brontë Studies Volume 31 ; 31 > 
+    au < down ; 2007 ; Brontë Studies Volume 32 ; 32 > 
+    au < doNotProcess ; 2008 ; Brontë Studies Volume 33 ; 33 > 
+    au < down ; 2009 ; Brontë Studies Volume 34 ; 34 > 
+    au < down ; 2010 ; Brontë Studies Volume 35 ; 35 > 
+    au < down ; 2011 ; Brontë Studies Volume 36 ; 36 > 
+    au < down ; 2012 ; Brontë Studies Volume 37 ; 37 > 
+    au < doNotProcess ; 2013 ; Brontë Studies Volume 38 ; 38 > 
 
   }
 
