@@ -1,4 +1,4 @@
-/* $Id: PalgraveBookArticleIteratorFactory.java,v 1.3 2014-06-09 15:32:00 aishizaki Exp $
+/* $Id: PalgraveBookArticleIteratorFactory.java,v 1.4 2014-08-19 16:46:37 aishizaki Exp $
  
 Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -41,8 +41,7 @@ import org.lockss.util.Logger;
 
 /*
  * Gets book once crawled.
- * top-level: http://www.palgraveconnect.com/pc/doifinder/10.1057/9781137283351
- * html (view pdf): http://www.palgraveconnect.com/pc/econfin2012/browse/inside/9781137283351.html
+ * top-level (also html/view pdf) : http://www.palgraveconnect.com/pc/doifinder/10.1057/9781137283351
  * pdf (download pdf): http://www.palgraveconnect.com/pc/econfin2012/browse/inside/download/9781137283351.pdf
  * epub (download epub): http://www.palgraveconnect.com/pc/econfin2012/browse/inside/epub/9781137283351.epub
  * citation export: http://www.palgraveconnect.com/pc/browse/citationExport?doi=10.1057/9781137024497&WT.cg_n=eBooks&WT.cg_s=Citation%20Export
@@ -63,14 +62,14 @@ public class PalgraveBookArticleIteratorFactory
   protected static final String PATTERN_TEMPLATE = 
     "\"%spc/.+/browse/inside(/download|/epub)?/[0-9]+\\.(html|pdf|epub)$\", base_url";
   
-  protected Pattern PDF_LANDING_PATTERN = 
-    Pattern.compile("/pc/(.+)/browse/inside/([0-9]+)\\.html$", Pattern.CASE_INSENSITIVE);
+  protected Pattern PDF_LANDING_PATTERN =
+    Pattern.compile("/pc/doifinder/10.1057/([0-9]+)$", Pattern.CASE_INSENSITIVE);
   protected Pattern PDF_PATTERN = 
     Pattern.compile("/pc/(.+)/browse/inside/download/([0-9]+)\\.pdf$", Pattern.CASE_INSENSITIVE);
   protected Pattern EPUB_PATTERN = 
     Pattern.compile("/pc/(.+)/browse/inside/epub/([0-9]+)\\.epub$", Pattern.CASE_INSENSITIVE);
     
-  protected static String PDF_LANDING_REPLACEMENT = "/pc/$1/browse/inside/$2.html";
+  protected static String PDF_LANDING_REPLACEMENT = "/pc/doifinder/10.157/$1";
   protected static String PDF_REPLACEMENT = "/pc/$1/browse/inside/download/$2.pdf";
   protected static String EPUB_REPLACEMENT = "/pc/$1/browse/inside/epub/$2.epub";
   protected static String CITATION_RIS_REPLACEMENT = 
