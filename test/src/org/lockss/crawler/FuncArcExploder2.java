@@ -1,10 +1,10 @@
 /*
- * $Id: FuncArcExploder2.java,v 1.8 2012-08-08 07:15:46 tlipkis Exp $
+ * $Id: FuncArcExploder2.java,v 1.9 2014-08-19 05:24:11 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2007-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2007-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -129,7 +129,7 @@ public class FuncArcExploder2 extends LockssTestCase {
     props.setProperty(FollowLinkCrawler.PARAM_STORE_ARCHIVES, "true");
     props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
     String explodedPluginName =
-      "org.lockss.plugin.archiveit.ArchiveItExplodedPlugin";
+      "org.lockss.crawler.FuncArcExploder2MockExplodedPlugin";
     props.setProperty(Exploder.PARAM_EXPLODED_PLUGIN_NAME, explodedPluginName);
     props.setProperty(Exploder.PARAM_EXPLODED_AU_YEAR, GOOD_YEAR);
     props.setProperty(Exploder.PARAM_EXPLODED_AU_COLLECTION, COLLECTION);

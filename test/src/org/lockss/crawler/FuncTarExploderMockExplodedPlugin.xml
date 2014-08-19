@@ -43,27 +43,6 @@
     </list>
   </entry>
   <entry>
-    <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.elsevier.ElsevierArticleIteratorFactory</string>
-  </entry>
-  <entry>
-    <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.elsevier.ElsevierArticleIteratorFactory</string>
-  </entry>
-  <entry>
-    <string>text/xml_metadata_extractor_factory_map</string>
-    <map>
-      <entry>
-        <string>*</string>
-        <string>org.lockss.plugin.elsevier.ElsevierXmlMetadataExtractorFactory</string>
-      </entry>
-      <entry>
-        <string>DublinCore</string>
-        <string>org.lockss.plugin.elsevier.ElsevierXmlMetadataExtractorFactory</string>
-      </entry>
-    </map>
-  </entry>
-  <entry>
     <string>plugin_notes</string>
     <string>Plugin for FuncTarExploder test</string>
   </entry>

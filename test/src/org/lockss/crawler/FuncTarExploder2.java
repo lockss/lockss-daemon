@@ -1,10 +1,10 @@
 /*
- * $Id: FuncTarExploder2.java,v 1.22 2012-08-21 08:37:32 tlipkis Exp $
+ * $Id: FuncTarExploder2.java,v 1.23 2014-08-19 05:24:10 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2007-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2007-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,15 +35,17 @@ package org.lockss.crawler;
 import java.io.*;
 import java.util.*;
 
+import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.Bag;
 import org.apache.commons.collections.bag.*;
+import org.apache.commons.collections.map.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.*;
 import org.lockss.plugin.exploded.*;
-import org.lockss.plugin.elsevier.*;
 import org.lockss.plugin.base.*;
+import org.lockss.plugin.ExploderHelper;
 import org.lockss.repository.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
@@ -157,7 +159,7 @@ public class FuncTarExploder2 extends LockssTestCase {
     props.setProperty(FollowLinkCrawler.PARAM_STORE_ARCHIVES, "true");
     props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
     String explodedPluginName =
-      "org.lockss.plugin.elsevier.ClockssElsevierExplodedPlugin";
+      "org.lockss.crawler.FuncTarExploder2MockExplodedPlugin";
     props.setProperty(Exploder.PARAM_EXPLODED_PLUGIN_NAME, explodedPluginName);
     props.setProperty(Exploder.PARAM_EXPLODED_AU_YEAR, "1997");
     ConfigurationUtil.setCurrentConfigFromProps(props);
@@ -179,7 +181,7 @@ public class FuncTarExploder2 extends LockssTestCase {
     pluginMgr.ensurePluginLoaded(explodedPluginKey);
 
     sau = PluginTestUtil.createAndStartSimAu(simAuConfig(tempDirPath));
-    ArticleIteratorFactory aif = new ElsevierArticleIteratorFactory();
+    ArticleIteratorFactory aif = new MyArticleIteratorFactory();
     sau.setArticleIteratorFactory(aif);
   }
 
@@ -275,14 +277,14 @@ public class FuncTarExploder2 extends LockssTestCase {
 	MockExplodedPlugin mep = (MockExplodedPlugin)plugin;
 	String articleMimeType = "application/pdf";
 	mep.setDefaultArticleMimeType(articleMimeType);
-	mep.setArticleIteratorFactory(new ElsevierArticleIteratorFactory());
-	mep.setArticleMetadataExtractorFactory(new ElsevierArticleIteratorFactory());
-	mep.setFileMetadataExtractorFactory(new ElsevierXmlMetadataExtractorFactory());
+	mep.setArticleIteratorFactory(new MyArticleIteratorFactory());
+	mep.setArticleMetadataExtractorFactory(new MyArticleMetadataExtractorFactory());
+	mep.setFileMetadataExtractorFactory(new MyXmlMetadataExtractorFactory());
 	ArticleMetadataExtractor me =
 	  plugin.getArticleMetadataExtractor(MetadataTarget.Any(), au);
 	assertNotNull(me);
 	assertTrue(""+me.getClass(),
-		   me instanceof ElsevierXmlMetadataExtractorFactory.ElsevierXmlMetadataExtractor);
+		   me instanceof MyXmlMetadataExtractorFactory.MyXmlMetadataExtractor);
 	ArticleMetadataListExtractor mle = new ArticleMetadataListExtractor(me);
 	int count = 0;
 	Set<String> foundDoiSet = new HashSet<String>();
@@ -389,7 +391,8 @@ public class FuncTarExploder2 extends LockssTestCase {
 			  null, // PermissionChecker
 			  null, // LoginPageChecker
 			  ".tar$", // exploder pattern
-			  new ElsevierExploderHelper() );
+			  new MyExploderHelper()
+			  );
     NewContentCrawler crawler = new
       NewContentCrawler(sau, spec, new MockAuState());
     crawler.setCrawlManager(crawlMgr);
@@ -433,4 +436,266 @@ public class FuncTarExploder2 extends LockssTestCase {
     }
   }
 
+  static class MyArticleIteratorFactory implements ArticleIteratorFactory {
+    /*
+     * The Elsevier exploded URL structure means that the metadata for an
+     * article is at a URL like
+     * http://elsevier.clockss.org/<issn>/<issue>/<article>/main.xml The
+     * DOI is between <ce:doi> and </ce:doi>.
+     */
+    public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
+							MetadataTarget target)
+	throws PluginException {
+      return new SubTreeArticleIterator(au,
+					new SubTreeArticleIterator.Spec()
+					.setTarget(target)) {
+	protected ArticleFiles createArticleFiles(CachedUrl cu) {
+	  ArticleFiles res = new ArticleFiles();
+	  res.setFullTextCu(cu);
+	  // cu points to a file whose name is .../main.pdf
+	  // but the DOI we want is in a file whose name is .../main.xml
+	  // The rest of the metadata is in the dataset.toc file that
+	  // describes the package in which the article was delivered.
+	  String pdfUrl = cu.getUrl();
+	  if (StringUtil.endsWithIgnoreCase(pdfUrl, ".pdf")) {
+	    String xmlUrl = pdfUrl.substring(0, pdfUrl.length()-4) + ".xml";
+	    CachedUrl xmlCu = cu.getArchivalUnit().makeCachedUrl(xmlUrl);
+	    try {
+	      if (xmlCu != null && xmlCu.hasContent()) {
+		res.setRoleCu("xml", xmlCu);
+	      }
+	    } finally {
+	      AuUtil.safeRelease(xmlCu);
+	    }
+	  }
+	  return res;
+	}
+      };
+    }
+  }
+
+  static class MyArticleMetadataExtractorFactory
+    implements ArticleMetadataExtractorFactory {
+    public ArticleMetadataExtractor
+      createArticleMetadataExtractor(MetadataTarget target)
+	throws PluginException {
+      return new BaseArticleMetadataExtractor("xml");
+    }
+  }
+
+  /**
+   * Documentation of the Elsevier format is at:
+   * http://info.sciencedirect.com/techsupport/sdos/effect41.pdf
+   * http://info.sciencedirect.com/techsupport/sdos/sdos30.pdf
+   *
+   * This ExploderHelper encapsulates knowledge about the way
+   * Elsevier delivers source files.  They come as TAR
+   * archives containing additions to a directory tree whose
+   * layers are:
+   *
+   * 1. <code>${JOURNAL_ID}</code> JOURNAL_ID is the ISSN (or an
+   *    ISSN-like string) without the dash. The tar file is named
+   *    ${JOURNAL_ID}.tar
+   *
+   * 2. <code>${ISSUE_ID}</code> ISSUE_ID is string unique name for the
+   *    issue within the journal.
+   *
+   * 3. <code>${ARTICLE_ID}</code> ARTICLE_ID is a similar string naming
+   *    the article.
+   * This directory contains files called
+   * - *.pdf PDF
+   * - *.raw ASCII
+   * - *.sgm SGML
+   * - *.gif figures etc
+   * - *.jpg images etc.
+   * - *.xml
+   * - stripin.toc see Appendix 2
+   * - checkmd5.fil md5 sums for files
+   *
+   * This class maps this into base URLs that look like:
+   *
+   * <code>http://elsevier.clockss.org/JOU=${JOURNAL_ID}/
+   *
+   * and the rest of the url inside the AU is the rest of the name of the entry.
+   * It synthesizes suitable header fields for the files based on their
+   * extensions.
+   *
+   * If the input ArchiveEntry contains a name matching this pattern the
+   * baseUrl, restOfUrl, headerFields fields are set.  Otherwise,
+   * they are left null.
+   */
+  static class MyExploderHelper implements ExploderHelper {
+    private static final int ISS_INDEX = 0;
+    private static final int ART_INDEX = 1;
+    private static final String BASE_URL = "http://elsevier.clockss.org/";
+    static final int endOfBase = 0;
+    static final int minimumPathLength = 3;
+    private static final String[] ignoreMe = {
+      "checkmd5.fil",
+    };
+    private static final String extension = ".tar";
+
+    public MyExploderHelper() {
+    }
+
+    public void process(ArchiveEntry ae) {
+      String issn = archiveNameToISSN(ae);
+      if (issn == null) {
+	ae.setRestOfUrl(null);
+	return;
+      }
+      // The base URL contains the ISSN from the archive name
+      String baseUrlStem = BASE_URL;
+      String baseUrl = baseUrlStem + issn + "/";
+      // Parse the name
+      String fullName = ae.getName();
+      String[] pathElements = fullName.split("/");
+      if (pathElements.length < minimumPathLength) {
+	for (int i = 0; i < ignoreMe.length; i++) {
+	  if (fullName.toLowerCase().endsWith(ignoreMe[i])) {
+	    ae.setBaseUrl(baseUrl);
+	    ae.setRestOfUrl(null);
+	    log.debug("Path " + fullName + " ignored");
+	    return;
+	  }
+	}
+	log.warning("Path " + fullName + " too short");
+	return;
+      }
+      for (int i = 0; i < endOfBase; i++) {
+	baseUrl += pathElements[i] + "/";
+      }
+      String restOfUrl = "";
+      for (int i = endOfBase; i < pathElements.length ; i++) {
+	restOfUrl += pathElements[i];
+	if ((i + 1) < pathElements.length) {
+	  restOfUrl += "/";
+	}
+      }
+      CIProperties headerFields =
+	Exploder.syntheticHeaders(baseUrl + restOfUrl, ae.getSize());
+      log.debug(ae.getName() + " mapped to " +
+		   baseUrl + " plus " + restOfUrl);
+      log.debug2(baseUrl + restOfUrl + " props " + headerFields);
+      ae.setBaseUrl(baseUrl);
+      ae.setRestOfUrl(restOfUrl);
+      ae.setHeaderFields(headerFields);
+      if (restOfUrl.endsWith(".pdf")) {
+	// Add a link to the article to the journal TOC page at
+	// ${JOURNAL_ID}/index.html
+	Hashtable addText = new Hashtable();
+	String journalTOC = baseUrl + "index.html";
+	String link = "<li><a href=\"" + baseUrl + restOfUrl + "\">" +
+	  "issue #" + pathElements[ISS_INDEX] +
+	  " art #" + pathElements[ART_INDEX] + "</a></li>\n";
+	log.debug3("journalTOC " + journalTOC + " link " + link);
+	ae.addTextTo(journalTOC, link);
+      } else if (restOfUrl.endsWith(".xml")) {
+	// XXX it would be great to be able to get the DOI from the
+	// XXX metadata files and put it in the text here
+      }
+      CIProperties props = new CIProperties();
+      props.put(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+      props.put(ConfigParamDescr.PUBLISHER_NAME.getKey(),
+		"Elsevier");
+      props.put(ConfigParamDescr.JOURNAL_ISSN.getKey(),
+		issn);
+      ae.setAuProps(props);
+    }
+
+    private boolean checkISSN(String s) {
+      char[] c = s.toCharArray();
+      // The ISSN is 7 digits followed by either a digit or X
+      // The last digit is a check digit as described here:
+      // http://en.wikipedia.org/wiki/ISSN
+      if (c.length != 8) {
+	return false;
+      }
+      int checksum = 0;
+      for (int i = 0; i < c.length-1; i++) {
+	if (!Character.isDigit(c[i])) {
+	  return false;
+	}
+	try {
+	  int j = Integer.parseInt(Character.toString(c[i]));
+	  checksum += j * (c.length - i);
+	} catch (NumberFormatException ex) {
+	  return false;
+	}
+      }
+      if (Character.isDigit(c[c.length-1])) {
+	try {
+	  int j = Integer.parseInt(Character.toString(c[c.length-1]));
+	  checksum += j;
+	} catch (NumberFormatException ex) {
+	  return false;
+	}
+      } else if (c[c.length-1] == 'X') {
+	checksum += 10;
+      } else {
+	return false;
+      }
+      if ((checksum % 11) != 0) {
+	return false;
+      }
+      return true;
+    }
+
+    private String archiveNameToISSN(ArchiveEntry ae) {
+      String ret = null;
+      String an = ae.getArchiveName();
+      if (an != null) {
+	// The ISSN is the part of an from the last / to the .tar
+	int slash = an.lastIndexOf("/");
+	int dot = an.lastIndexOf(extension);
+	if (slash > 0 && dot > slash) {
+	  String maybe = an.substring(slash + 1, dot);
+	  if (checkISSN(maybe)) {
+	    ret = maybe;
+	    log.debug3("ISSN: " + ret);
+	  } else {
+	    log.warning("Bad ISSN in archive name " + an);
+	  }
+	} else {
+	  log.warning("Malformed archive name " + an);
+	}
+      } else {
+	log.error("Null archive name");
+      }
+      return ret;
+    }
+  }
+
+  static class MyXmlMetadataExtractorFactory
+    implements FileMetadataExtractorFactory {
+
+    public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
+							     String contentType)
+	throws PluginException {
+      return new MyXmlMetadataExtractor();
+    }
+
+    public static class MyXmlMetadataExtractor
+      extends SimpleFileMetadataExtractor {
+
+      private static MultiMap tagMap = new MultiValueMap();
+      static {
+	// Elsevier doesn't prefix the DOI in dc.Identifier with doi:
+	tagMap.put("ce:doi", MetadataField.DC_FIELD_IDENTIFIER);
+	tagMap.put("ce:doi", MetadataField.FIELD_DOI);
+      };
+
+      public MyXmlMetadataExtractor() {
+      }
+
+      public ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
+	  throws IOException, PluginException {
+	SimpleFileMetadataExtractor extr = new SimpleXmlMetadataExtractor(tagMap);
+	ArticleMetadata am = extr.extract(target, cu);
+	// extract metadata from BePress specific metadata tags
+	am.cook(tagMap);
+	return am;
+      }
+    }
+  }
 }
