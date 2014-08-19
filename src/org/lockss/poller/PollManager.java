@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.269 2014-03-23 17:10:11 tlipkis Exp $
+ * $Id: PollManager.java,v 1.270 2014-08-19 05:26:47 tlipkis Exp $
  */
 
 /*
@@ -2342,6 +2342,9 @@ public class PollManager
       theLog.debug3("received from router message:" + msg.toString());
       try {
 	handleIncomingMessage(msg);
+      }
+      catch (ProtocolException ex) {
+	theLog.error("handleIncomingMessage() threw", ex);
       }
       catch (IOException ex) {
 	theLog.error("handleIncomingMessage() threw", ex);
