@@ -1,5 +1,5 @@
 /*
- * $Id: JsoupHtmlLinkExtractor.java,v 1.10 2014-08-20 19:46:26 clairegriffin Exp $
+ * $Id: JsoupHtmlLinkExtractor.java,v 1.11 2014-08-20 22:54:27 clairegriffin Exp $
  */
 
 /*
@@ -187,6 +187,7 @@ public class JsoupHtmlLinkExtractor implements LinkExtractor {
         CurrentConfig.getBooleanParam(PARAM_PROCESS_FORMS,
                                       DEFAULT_PROCESS_FORMS);
     m_tagTable.putAll(theTagTable);
+    m_styleAttrExtractor = new StyleAttrLinkExtractor();
   }
 
   /**
