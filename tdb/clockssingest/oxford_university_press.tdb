@@ -5,7 +5,7 @@
     info[contract] = 2009 ;
     info[tester] = 5
   >
-    comment[notReady] = until HighWire issues are resolved
+
     pluginPrefix = org.lockss.plugin.highwire.
     implicit < status ; status2 ; year ; name ; param[volume_name] ; comment[proxy] >
 
@@ -5282,7 +5282,6 @@
 
     param[base_url] = http://eurheartj.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
-    comment[notReady] = needs hash filter RU 4470
 
     au < manifest ; exists ; 1980 ; European Heart Journal Volume 1 ; 1 ; >
     au < manifest ; exists ; 1981 ; European Heart Journal Volume 2 ; 2 ; >
