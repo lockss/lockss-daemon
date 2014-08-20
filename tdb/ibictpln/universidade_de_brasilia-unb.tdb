@@ -18,19 +18,19 @@
       param[journal_id] = archai
 
       au < released ; 2008 ; 1 ; ARCHAI: Revista de Estudos sobre as Origens do Pensamento Ocidental Volume 2008 ; 2008 ; >
-      au < released ; 2009 ; 2 ; ARCHAI: Revista de Estudos sobre as Origens do Pensamento Ocidental Volume 2009 ; 2009 ; >
-      au < released ; 2010 ; 3 ; ARCHAI: Revista de Estudos sobre as Origens do Pensamento Ocidental Volume 2010 ; 2010 ; >
-      au < released ; 2011 ; 4 ; ARCHAI: Revista de Estudos sobre as Origens do Pensamento Ocidental Volume 2011 ; 2011 ; >
-      au < released ; 2012 ; 5 ; ARCHAI: Revista de Estudos sobre as Origens do Pensamento Ocidental Volume 2012 ; 2012 ; >
-      au < released ; 2013 ; 6 ; ARCHAI: Revista de Estudos sobre as Origens do Pensamento Ocidental Volume 2013 ; 2013 ; >
-      au < expected ; 2014 ; 7 ; ARCHAI: Revista de Estudos sobre as Origens do Pensamento Ocidental Volume 2014 ; 2014 ; >
+      au < released ; 2009 ; 2-3 ; ARCHAI: Revista de Estudos sobre as Origens do Pensamento Ocidental Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 4-5 ; ARCHAI: Revista de Estudos sobre as Origens do Pensamento Ocidental Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 6-7 ; ARCHAI: Revista de Estudos sobre as Origens do Pensamento Ocidental Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 8-9 ; ARCHAI: Revista de Estudos sobre as Origens do Pensamento Ocidental Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 10-11 ; ARCHAI: Revista de Estudos sobre as Origens do Pensamento Ocidental Volume 2013 ; 2013 ; >
+      au < exists ; 2014 ; 12-13 ; ARCHAI: Revista de Estudos sobre as Origens do Pensamento Ocidental Volume 2014 ; 2014 ; >
 
   }
 
   {
 
       title <
-        name = revista Belas Infiéis ;
+        name = Belas Infiéis ;
         issn = 2316-6614
       >
 
@@ -38,16 +38,16 @@
       param[base_url] = http://seer.bce.unb.br/
       param[journal_id] = belasinfieis
 
-      au < released ; 2012 ; 1 ; revista Belas Infiéis Volume 2012 ; 2012 ; >
-      au < released ; 2013 ; 2 ; revista Belas Infiéis Volume 2013 ; 2013 ; >
-      au < expected ; 2014 ; 3 ; revista Belas Infiéis Volume 2014 ; 2014 ; >
+      au < released ; 2012 ; 1 ; Belas Infiéis Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 2 ; Belas Infiéis Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 3 ; Belas Infiéis Volume 2014 ; 2014 ; >
 
   }
 
   {
 
       title <
-        name = revista eletrônica Ciência & Tecnologia Social ;
+        name = Ciência & Tecnologia Social ;
         issn = 2236-7837
       >
 
@@ -55,9 +55,9 @@
       param[base_url] = http://seer.bce.unb.br/
       param[journal_id] = cts
 
-      au < released ; 2011 ; 1 ; revista eletrônica Ciência & Tecnologia Social Volume 2011 ; 2011 ; >
-      au < released ; 2013 ; 1 ; revista eletrônica Ciência & Tecnologia Social Volume 2013 ; 2013 ; >
-      au < expected ; 2014 ; 2 ; revista eletrônica Ciência & Tecnologia Social Volume 2014 ; 2014 ; >
+      au < released ; 2011 ; 1 ; Ciência & Tecnologia Social Volume 2011 ; 2011 ; >
+      au < released ; 2013 ; 1 ; Ciência & Tecnologia Social Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 2 ; Ciência & Tecnologia Social Volume 2014 ; 2014 ; >
 
   }
 
@@ -168,19 +168,19 @@
       au < released ; 1995 ; 1 ; Cadernos de Linguagem e Sociedade Volume 1995 ; 1995 ; >
       au < released ; 1996 ; 2 ; Cadernos de Linguagem e Sociedade Volume 1996 ; 1996 ; >
       au < released ; 1997 ; 3 ; Cadernos de Linguagem e Sociedade Volume 1997 ; 1997 ; >
-      au < released ; 1999 ; 4 ; Cadernos de Linguagem e Sociedade Volume 1999 ; 1999 ; >
-      au < released ; 2000 ; 5 ; Cadernos de Linguagem e Sociedade Volume 2000 ; 2000 ; >
-      au < released ; 2001 ; 6 ; Cadernos de Linguagem e Sociedade Volume 2001 ; 2001 ; >
-      au < released ; 2003 ; 7 ; Cadernos de Linguagem e Sociedade Volume 2003 ; 2003 ; >
-      au < released ; 2005 ; 8 ; Cadernos de Linguagem e Sociedade Volume 2005 ; 2005 ; >
-      au < released ; 2007 ; 9 ; Cadernos de Linguagem e Sociedade Volume 2007 ; 2007 ; >
-      au < released ; 2008 ; 10 ; Cadernos de Linguagem e Sociedade Volume 2008 ; 2008 ; >
-      au < released ; 2009 ; 11 ; Cadernos de Linguagem e Sociedade Volume 2009 ; 2009 ; >
-      au < released ; 2010 ; 12 ; Cadernos de Linguagem e Sociedade Volume 2010 ; 2010 ; >
-      au < released ; 2011 ; 13 ; Cadernos de Linguagem e Sociedade Volume 2011 ; 2011 ; >
-      au < released ; 2012 ; 14 ; Cadernos de Linguagem e Sociedade Volume 2012 ; 2012 ; >
-      au < released ; 2013 ; 15 ; Cadernos de Linguagem e Sociedade Volume 2013 ; 2013 ; >
-      au < expected ; 2014 ; 16 ; Cadernos de Linguagem e Sociedade Volume 2014 ; 2014 ; >
+      au < released ; 1999 ; 3 ; Cadernos de Linguagem e Sociedade Volume 1999 ; 1999 ; >
+      au < released ; 2000 ; 4 ; Cadernos de Linguagem e Sociedade Volume 2000 ; 2000 ; >
+      au < released ; 2001 ; 5 ; Cadernos de Linguagem e Sociedade Volume 2001 ; 2001 ; >
+      au < released ; 2003 ; 6 ; Cadernos de Linguagem e Sociedade Volume 2003 ; 2003 ; >
+      au < released ; 2005 ; 7 ; Cadernos de Linguagem e Sociedade Volume 2005 ; 2005 ; >
+      au < released ; 2007 ; 8 ; Cadernos de Linguagem e Sociedade Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 9 ; Cadernos de Linguagem e Sociedade Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 10 ; Cadernos de Linguagem e Sociedade Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 11 ; Cadernos de Linguagem e Sociedade Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 12 ; Cadernos de Linguagem e Sociedade Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 13 ; Cadernos de Linguagem e Sociedade Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 14 ; Cadernos de Linguagem e Sociedade Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 15 ; Cadernos de Linguagem e Sociedade Volume 2014 ; 2014 ; >
 
   }
 
@@ -246,7 +246,7 @@
       au < released ; 2011 ; 12 ; Boletim Meridiano 47 Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 13 ; Boletim Meridiano 47 Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 14 ; Boletim Meridiano 47 Volume 2013 ; 2013 ; >
-      au < expected ; 2014 ; 15 ; Boletim Meridiano 47 Volume 2014 ; 2014 ; >
+      au < exists ; 2014 ; 15 ; Boletim Meridiano 47 Volume 2014 ; 2014 ; >
 
   }
 
