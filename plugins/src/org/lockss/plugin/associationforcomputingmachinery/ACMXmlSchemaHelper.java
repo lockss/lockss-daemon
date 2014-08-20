@@ -1,5 +1,5 @@
 /*
- * $Id: ACMXmlSchemaHelper.java,v 1.4 2014-05-02 13:49:38 aishizaki Exp $
+ * $Id: ACMXmlSchemaHelper.java,v 1.5 2014-08-20 23:50:14 alexandraohlson Exp $
  */
 
 /*
@@ -62,14 +62,14 @@ implements SourceXmlSchemaHelper {
    */
   /**
    *  Journal or Proceedings Title
-   *  <journal_rec>
-   *  <journal_name>ACM Journal of Computer Documentation (JCD)</journal_name>
+   *  Note that this will only be EITHER
+   *    <journal_name>ACM Journal of Computer Documentation (JCD)</journal_name>
    *  OR
-   *  <proceeding_rec>
-   *  <acronym>NordiCHI '10</acronym>
-   *  <proc_desc>Proceedings of the 6th Nordic Conference</proc_desc>
-   *  <proc_title>Human-Computer Interaction</proc_title>
-   *  <proc_subtitle>Extending Boundaries</proc_subtitle>
+   *  <proceeding_rec> which has child nodes that hold the information
+   *    <acronym>NordiCHI '10</acronym>
+   *    <proc_desc>Proceedings of the 6th Nordic Conference</proc_desc>
+   *    <proc_title>Human-Computer Interaction</proc_title>
+   *    <proc_subtitle>Extending Boundaries</proc_subtitle>
    *  from dl.acm.org: 
    *  acronym: proc_desc on proc_title: proc_subtitle
    *  
