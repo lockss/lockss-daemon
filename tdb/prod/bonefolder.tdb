@@ -17,6 +17,8 @@
     implicit < status ; year ; name ; param[volume] >
     param[base_url] = http://www.philobiblon.com/bonefolder/
     
+    comment[publisher] = website says that volume 8 is the last issue.
+    
     au < released ; 2004-2005 ; The Bonefolder Volume 1 ; 1 >
     au < released ; 2005-2006 ; The Bonefolder Volume 2 ; 2 >
     au < released ; 2006-2007 ; The Bonefolder Volume 3 ; 3 >
@@ -25,8 +27,6 @@
     au < released ; 2009-2010 ; The Bonefolder Volume 6 ; 6 >
     au < released ; 2011 ; The Bonefolder Volume 7 ; 7 >
     au < released ; 2012 ; The Bonefolder Volume 8 ; 8 >
-    au < expected ; 2013 ; The Bonefolder Volume 9 ; 9 >
-    au < expected ; 2014 ; The Bonefolder Volume 10 ; 10 >
  
   }
   
