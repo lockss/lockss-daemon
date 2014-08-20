@@ -1,10 +1,10 @@
 /*
- * $Id: TestDbManager.java,v 1.9 2014-01-14 22:45:42 fergaloy-sf Exp $
+ * $Id: TestDbManager.java,v 1.10 2014-08-20 21:28:54 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -218,6 +218,7 @@ public class TestDbManager extends LockssTestCase {
 
   @Override
   public void tearDown() throws Exception {
+    dbManager.waitForThreadsToFinish(500);
     dbManager.stopService();
     theDaemon.stopDaemon();
     super.tearDown();

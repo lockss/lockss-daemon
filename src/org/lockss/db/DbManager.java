@@ -1,5 +1,5 @@
 /*
- * $Id: DbManager.java,v 1.39 2014-08-04 23:24:54 fergaloy-sf Exp $
+ * $Id: DbManager.java,v 1.40 2014-08-20 21:28:54 fergaloy-sf Exp $
  */
 
 /*
@@ -40,9 +40,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.SQLTransientException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 import javax.sql.DataSource;
 import org.apache.commons.beanutils.BeanUtils;
@@ -2449,36 +2451,223 @@ public class DbManager extends BaseLockssDaemonManager
       + " = p." + PLUGIN_SEQ_COLUMN
       + " and p." + PLUGIN_ID_COLUMN + " = ?)";
 
-  // SQL statements that update the database to version 15.
-  private static final String[] VERSION_15_QUERIES = new String[] {
-    "update " + PUBLISHER_TABLE + " set " + PUBLISHER_NAME_COLUMN
-    + " = trim(" + PUBLISHER_NAME_COLUMN + ")",
-    "update " + MD_ITEM_NAME_TABLE
-    + " set " + NAME_COLUMN + " = trim(" + NAME_COLUMN + ")",
-    "update " + ISBN_TABLE
-    + " set " + ISBN_COLUMN + " = trim(" + ISBN_COLUMN + ")",
-    "update " + ISSN_TABLE
-    + " set " + ISSN_COLUMN + " = trim(" + ISSN_COLUMN + ")",
-    "update " + BIB_ITEM_TABLE
-    + " set " + VOLUME_COLUMN + " = trim(" + VOLUME_COLUMN + "),"
-    + ISSUE_COLUMN + " = trim(" + ISSUE_COLUMN + "),"
-    + START_PAGE_COLUMN + " = trim(" + START_PAGE_COLUMN + "),"
-    + END_PAGE_COLUMN + " = trim(" + END_PAGE_COLUMN + "),"
-    + ITEM_NO_COLUMN + " = trim(" + ITEM_NO_COLUMN + ")",
-    "update " + MD_ITEM_TABLE
-    + " set " + DATE_COLUMN + " = trim(" + DATE_COLUMN + "),"
-    + COVERAGE_COLUMN + " = trim(" + COVERAGE_COLUMN + ")",
-    "update " + AUTHOR_TABLE
-    + " set " + AUTHOR_NAME_COLUMN + " = trim(" + AUTHOR_NAME_COLUMN + ")",
-    "update " + DOI_TABLE
-    + " set " + DOI_COLUMN + " = trim(" + DOI_COLUMN + ")",
-    "update " + URL_TABLE
-    + " set " + URL_COLUMN + " = trim(" + URL_COLUMN + ")",
-    "update " + KEYWORD_TABLE
-    + " set " + KEYWORD_COLUMN + " = trim(" + KEYWORD_COLUMN + ")",
-    "update " + PUBLICATION_TABLE
-    + " set " + PUBLICATION_ID_COLUMN + " = trim(" + PUBLICATION_ID_COLUMN + ")"
-  };
+  // SQL statement that obtains all the trimmable publisher names in the
+  // database.
+  private static final String GET_TRIMMABLE_PUBLISHER_NAMES_QUERY = "select "
+      + "distinct " + PUBLISHER_NAME_COLUMN
+      + " from " + PUBLISHER_TABLE
+      + " where " + PUBLISHER_NAME_COLUMN + " like ' %'"
+      + " or " + PUBLISHER_NAME_COLUMN + " like '% '";
+
+  // Query to update the name of a publisher.
+  private static final String UPDATE_PUBLISHER_NAME_QUERY = "update "
+      + PUBLISHER_TABLE
+      + " set " + PUBLISHER_NAME_COLUMN + " = ?"
+      + " where " + PUBLISHER_NAME_COLUMN + " = ?";
+
+  // SQL statement that obtains all the trimmable metadata item names in the
+  // database.
+  private static final String GET_TRIMMABLE_MD_ITEM_NAMES_QUERY = "select "
+      + "distinct " + NAME_COLUMN
+      + " from " + MD_ITEM_NAME_TABLE
+      + " where " + NAME_COLUMN + " like ' %'"
+      + " or " + NAME_COLUMN + " like '% '";
+
+  // Query to update the name of a metadata item.
+  private static final String UPDATE_MD_ITEM_NAME_QUERY = "update "
+      + MD_ITEM_NAME_TABLE
+      + " set " + NAME_COLUMN + " = ?"
+      + " where " + NAME_COLUMN + " = ?";
+
+  // SQL statement that obtains all the trimmable ISBNs in the database.
+  private static final String GET_TRIMMABLE_ISBNS_QUERY = "select distinct "
+      + ISBN_COLUMN
+      + " from " + ISBN_TABLE
+      + " where " + ISBN_COLUMN + " like ' %'"
+      + " or " + ISBN_COLUMN + " like '% '";
+
+  // Query to update an ISBN.
+  private static final String UPDATE_ISBN_QUERY = "update "
+      + ISBN_TABLE
+      + " set " + ISBN_COLUMN + " = ?"
+      + " where " + ISBN_COLUMN + " = ?";
+
+  // SQL statement that obtains all the trimmable ISSNs in the database.
+  private static final String GET_TRIMMABLE_ISSNS_QUERY = "select distinct "
+      + ISSN_COLUMN
+      + " from " + ISSN_TABLE
+      + " where " + ISSN_COLUMN + " like ' %'"
+      + " or " + ISSN_COLUMN + " like '% '";
+
+  // Query to update an ISSN.
+  private static final String UPDATE_ISSN_QUERY = "update "
+      + ISSN_TABLE
+      + " set " + ISSN_COLUMN + " = ?"
+      + " where " + ISSN_COLUMN + " = ?";
+
+  // SQL statement that obtains all the trimmable bibliographic item volumes in
+  // the database.
+  private static final String GET_TRIMMABLE_VOLUMES_QUERY = "select distinct "
+      + VOLUME_COLUMN
+      + " from " + BIB_ITEM_TABLE
+      + " where " + VOLUME_COLUMN + " like ' %'"
+      + " or " + VOLUME_COLUMN + " like '% '";
+
+  // Query to update a bibliographic item volume.
+  private static final String UPDATE_VOLUME_QUERY = "update "
+      + BIB_ITEM_TABLE
+      + " set " + VOLUME_COLUMN + " = ?"
+      + " where " + VOLUME_COLUMN + " = ?";
+
+  // SQL statement that obtains all the trimmable bibliographic item issues in
+  // the database.
+  private static final String GET_TRIMMABLE_ISSUES_QUERY = "select distinct "
+      + ISSUE_COLUMN
+      + " from " + BIB_ITEM_TABLE
+      + " where " + ISSUE_COLUMN + " like ' %'"
+      + " or " + ISSUE_COLUMN + " like '% '";
+
+  // Query to update a bibliographic item issue.
+  private static final String UPDATE_ISSUE_QUERY = "update "
+      + BIB_ITEM_TABLE
+      + " set " + ISSUE_COLUMN + " = ?"
+      + " where " + ISSUE_COLUMN + " = ?";
+
+  // SQL statement that obtains all the trimmable bibliographic item start pages
+  // in the database.
+  private static final String GET_TRIMMABLE_START_PAGES_QUERY = "select "
+      + "distinct " + START_PAGE_COLUMN
+      + " from " + BIB_ITEM_TABLE
+      + " where " + START_PAGE_COLUMN + " like ' %'"
+      + " or " + START_PAGE_COLUMN + " like '% '";
+
+  // Query to update a bibliographic item start page.
+  private static final String UPDATE_START_PAGE_QUERY = "update "
+      + BIB_ITEM_TABLE
+      + " set " + START_PAGE_COLUMN + " = ?"
+      + " where " + START_PAGE_COLUMN + " = ?";
+
+  // SQL statement that obtains all the trimmable bibliographic item end pages
+  // in the database.
+  private static final String GET_TRIMMABLE_END_PAGES_QUERY = "select distinct "
+      + END_PAGE_COLUMN
+      + " from " + BIB_ITEM_TABLE
+      + " where " + END_PAGE_COLUMN + " like ' %'"
+      + " or " + END_PAGE_COLUMN + " like '% '";
+
+  // Query to update a bibliographic item end page.
+  private static final String UPDATE_END_PAGE_QUERY = "update "
+      + BIB_ITEM_TABLE
+      + " set " + END_PAGE_COLUMN + " = ?"
+      + " where " + END_PAGE_COLUMN + " = ?";
+
+  // SQL statement that obtains all the trimmable bibliographic item numbers in
+  // the database.
+  private static final String GET_TRIMMABLE_ITEM_NOS_QUERY = "select distinct "
+      + ITEM_NO_COLUMN
+      + " from " + BIB_ITEM_TABLE
+      + " where " + ITEM_NO_COLUMN + " like ' %'"
+      + " or " + ITEM_NO_COLUMN + " like '% '";
+
+  // Query to update a bibliographic item number.
+  private static final String UPDATE_ITEM_NO_QUERY = "update "
+      + BIB_ITEM_TABLE
+      + " set " + ITEM_NO_COLUMN + " = ?"
+      + " where " + ITEM_NO_COLUMN + " = ?";
+
+  // SQL statement that obtains all the trimmable metadata item dates in the
+  // database.
+  private static final String GET_TRIMMABLE_MD_ITEM_DATES_QUERY = "select "
+      + "distinct " + DATE_COLUMN
+      + " from " + MD_ITEM_TABLE
+      + " where " + DATE_COLUMN + " like ' %'"
+      + " or " + DATE_COLUMN + " like '% '";
+
+  // Query to update a metadata item date.
+  private static final String UPDATE_MD_ITEM_DATE_QUERY = "update "
+      + MD_ITEM_TABLE
+      + " set " + DATE_COLUMN + " = ?"
+      + " where " + DATE_COLUMN + " = ?";
+
+  // SQL statement that obtains all the trimmable metadata item coverages in the
+  // database.
+  private static final String GET_TRIMMABLE_MD_ITEM_COVERAGES_QUERY = "select "
+      + "distinct " + COVERAGE_COLUMN
+      + " from " + MD_ITEM_TABLE
+      + " where " + COVERAGE_COLUMN + " like ' %'"
+      + " or " + COVERAGE_COLUMN + " like '% '";
+
+  // Query to update a metadata item coverage.
+  private static final String UPDATE_MD_ITEM_COVERAGE_QUERY = "update "
+      + MD_ITEM_TABLE
+      + " set " + COVERAGE_COLUMN + " = ?"
+      + " where " + COVERAGE_COLUMN + " = ?";
+
+  // SQL statement that obtains all the trimmable author names in the database.
+  private static final String GET_TRIMMABLE_AUTHOR_NAMES_QUERY = "select "
+      + "distinct " + AUTHOR_NAME_COLUMN
+      + " from " + AUTHOR_TABLE
+      + " where " + AUTHOR_NAME_COLUMN + " like ' %'"
+      + " or " + AUTHOR_NAME_COLUMN + " like '% '";
+
+  // Query to update an author name.
+  private static final String UPDATE_AUTHOR_NAME_QUERY = "update "
+      + AUTHOR_TABLE
+      + " set " + AUTHOR_NAME_COLUMN + " = ?"
+      + " where " + AUTHOR_NAME_COLUMN + " = ?";
+
+  // SQL statement that obtains all the trimmable DOIs in the database.
+  private static final String GET_TRIMMABLE_DOIS_QUERY = "select distinct "
+      + DOI_COLUMN
+      + " from " + DOI_TABLE
+      + " where " + DOI_COLUMN + " like ' %'"
+      + " or " + DOI_COLUMN + " like '% '";
+
+  // Query to update a DOI.
+  private static final String UPDATE_DOI_QUERY = "update "
+      + DOI_TABLE
+      + " set " + DOI_COLUMN + " = ?"
+      + " where " + DOI_COLUMN + " = ?";
+
+  // SQL statement that obtains all the trimmable URLs in the database.
+  private static final String GET_TRIMMABLE_URLS_QUERY = "select distinct "
+      + URL_COLUMN
+      + " from " + URL_TABLE
+      + " where " + URL_COLUMN + " like ' %'"
+      + " or " + URL_COLUMN + " like '% '";
+
+  // Query to update a URL.
+  private static final String UPDATE_URL_QUERY = "update "
+      + URL_TABLE
+      + " set " + URL_COLUMN + " = ?"
+      + " where " + URL_COLUMN + " = ?";
+
+  // SQL statement that obtains all the trimmable keywords in the database.
+  private static final String GET_TRIMMABLE_KEYWORDS_QUERY = "select distinct "
+      + KEYWORD_COLUMN
+      + " from " + KEYWORD_TABLE
+      + " where " + KEYWORD_COLUMN + " like ' %'"
+      + " or " + KEYWORD_COLUMN + " like '% '";
+
+  // Query to update a keyword.
+  private static final String UPDATE_KEYWORD_QUERY = "update "
+      + KEYWORD_TABLE
+      + " set " + KEYWORD_COLUMN + " = ?"
+      + " where " + KEYWORD_COLUMN + " = ?";
+
+  // SQL statement that obtains all the trimmable publication identifiers in the
+  // database.
+  private static final String GET_TRIMMABLE_PUBLICATION_IDS_QUERY = "select "
+      + "distinct " + PUBLICATION_ID_COLUMN
+      + " from " + PUBLICATION_TABLE
+      + " where " + PUBLICATION_ID_COLUMN + " like ' %'"
+      + " or " + PUBLICATION_ID_COLUMN + " like '% '";
+
+  // Query to update a publication identifier.
+  private static final String UPDATE_PUBLICATION_ID_QUERY = "update "
+      + PUBLICATION_TABLE
+      + " set " + PUBLICATION_ID_COLUMN + " = ?"
+      + " where " + PUBLICATION_ID_COLUMN + " = ?";
 
   // Derby SQL state of exception thrown on successful database shutdown.
   private static final String SHUTDOWN_SUCCESS_STATE_CODE = "08006";
@@ -2515,7 +2704,7 @@ public class DbManager extends BaseLockssDaemonManager
   // After this service has started successfully, this is the version of the
   // database that will be in place, as long as the database version prior to
   // starting the service was not higher already.
-  private int targetDatabaseVersion = 16;
+  private int targetDatabaseVersion = 17;
 
   // The maximum number of retries to be attempted when encountering transient
   // SQL exceptions.
@@ -2530,6 +2719,9 @@ public class DbManager extends BaseLockssDaemonManager
 
   // An indication of whether the database was booted.
   private boolean dbBooted = false;
+
+  // The spawned threads.
+  private List<Thread> threads = new ArrayList<Thread>();
 
   /**
    * Starts the DbManager service.
@@ -3023,6 +3215,8 @@ public class DbManager extends BaseLockssDaemonManager
 	  updateDatabaseFrom14To15(conn);
 	} else if (from == 15) {
 	  updateDatabaseFrom15To16(conn);
+	} else if (from == 16) {
+	  updateDatabaseFrom16To17(conn);
 	} else {
 	  throw new DbException("Non-existent method to update the database "
 	      + "from version " + from + ".");
@@ -3037,7 +3231,7 @@ public class DbManager extends BaseLockssDaemonManager
 	    // Yes: Check whether the last update does not involve an
 	    // asynchronous process that will update the database version in the
 	    // database when it finishes. 
-	    if (from != 9 && from != 13) {
+	    if (from != 9 && from != 13 && from != 16) {
 	      // Yes: Record the current database version in the database.
 	      recordDbVersion(conn, from + 1);
 	    }
@@ -3745,7 +3939,7 @@ public class DbManager extends BaseLockssDaemonManager
       if (logger.isDebug3()) logger.debug3(DEBUG_HEADER + "Rolled back.");
     } catch (SQLException sqle) {
       logger.error("Exception caught rolling back the connection", sqle);
-      DbManager.safeRollbackAndClose(conn);
+      DbManager.safeCloseConnection(conn);
       throw new DbException("Cannot roll back the transaction", sqle);
     }
   }
@@ -6550,7 +6744,8 @@ public class DbManager extends BaseLockssDaemonManager
     // Populate in a separate thread the ArchivalUnit creation times and the
     // book chapter/journal article fetch times.
     DbVersion9To10Migrator migrator = new DbVersion9To10Migrator();
-    new Thread(migrator).start();
+    Thread thread = new Thread(migrator, "DbVersion9To10Migrator");
+    thread.start();
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
@@ -7295,7 +7490,8 @@ public class DbManager extends BaseLockssDaemonManager
     // Populate in a separate thread the ArchivalUnit active flag for inactive
     // Archival Units.
     DbVersion13To14Migrator migrator = new DbVersion13To14Migrator();
-    new Thread(migrator).start();
+    Thread thread = new Thread(migrator, "DbVersion13To14Migrator");
+    thread.start();
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
@@ -7416,36 +7612,7 @@ public class DbManager extends BaseLockssDaemonManager
    *           if any problem occurred updating the database.
    */
   private void updateDatabaseFrom14To15(Connection conn) throws DbException {
-    final String DEBUG_HEADER = "updateDatabaseFrom14To15(): ";
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
-
-    if (conn == null) {
-      throw new DbException("Null connection");
-    }
-
-    PreparedStatement statement = null;
-
-    // Loop through all the queries to be excuted.
-    for (String query : VERSION_15_QUERIES) {
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "query = '" + query + "'.");
-
-      try {
-	// Prepare the query.
-	statement = prepareStatementBeforeReady(conn, query);
-
-	// Execute the query.
-	int count = executeUpdateBeforeReady(statement);
-	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count + ".");
-      } catch (DbException dbe) {
-	log.error("Cannot trim text value", dbe);
-	log.error("SQL = '" + query + "'.");
-	throw dbe;
-      } finally {
-	DbManager.safeCloseStatement(statement);
-      }
-    }
-
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+    // Disabled due to unexpected errors.
   }
 
   /**
@@ -7463,6 +7630,384 @@ public class DbManager extends BaseLockssDaemonManager
     // Add new metadata item type.
     addMetadataItemType(conn, MD_ITEM_TYPE_BOOK_VOLUME);
 
-    if (log.isDebug2())  log.debug2(DEBUG_HEADER + "Done.");
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Records the existence of a spawned thread. Useful to avoid ugly but
+   * harmless exceptions when running tests.
+   * 
+   * @param thread A Thread with the thread to be recorded.
+   */
+  synchronized private void recordThread(Thread thread) {
+    final String DEBUG_HEADER = "recordThread(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "thread = '" + thread + "'");
+
+    threads.add(thread);
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Removes the record of a spawned thread. Useful to avoid ugly but harmless
+   * exceptions when running tests.
+   * 
+   * @param name A String with the name to be cleaned up.
+   */
+  synchronized void cleanUpThread(String name) {
+    final String DEBUG_HEADER = "cleanUpThread(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "name = '" + name + "'");
+    Thread namedThread = null;
+
+    for (Thread thread : threads) {
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "thread = '" + thread + "'");
+
+      if (name.equals(thread.getName())) {
+	namedThread = thread;
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "namedThread = '" + namedThread + "'");
+	break;
+      }
+    }
+
+    if (namedThread != null) {
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "Removing namedThread = '"
+	  + namedThread + "'...");
+      threads.remove(namedThread);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "Done.");
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Waits for all recorded threads to finish. Useful to avoid ugly but harmless
+   * exceptions when running tests.
+   * 
+   * @param timeout A long with the number of millisecons to wait at most for
+   * threads to die.
+   */
+  synchronized void waitForThreadsToFinish(long timeout) {
+    final String DEBUG_HEADER = "waitForThreadsToFinish(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "timeout = " + timeout);
+
+    for (Thread thread : threads) {
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "Waiting for thread = '" + thread + "'...");
+      if (thread.isAlive()) {
+	try {
+	  thread.join(timeout);
+	} catch (InterruptedException ie) {
+	  // Do Nothing.
+	}
+      }
+
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "Done.");
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Updates the database from version 16 to version 17.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws DbException
+   *           if any problem occurred updating the database.
+   */
+  private void updateDatabaseFrom16To17(Connection conn) throws DbException {
+    final String DEBUG_HEADER = "updateDatabaseFrom16To17(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    if (conn == null) {
+      throw new DbException("Null connection");
+    }
+
+    // Populate in a separate thread the ArchivalUnit creation times and the
+    // book chapter/journal article fetch times.
+    DbVersion16To17Migrator migrator = new DbVersion16To17Migrator();
+    Thread thread = new Thread(migrator, "DbVersion16To17Migrator");
+    recordThread(thread);
+    thread.start();
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Migrates the contents of the database from version 16 to version 17.
+   */
+  void migrateDatabaseFrom16To17() {
+    final String DEBUG_HEADER = "migrateDatabaseFrom16To17(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    Connection conn = null;
+
+    try {
+      // Get a connection to the database.
+      conn = getConnectionBeforeReady();
+
+      // Trim publisher names.
+      trimTextColumns(conn, "publisher name",
+	  GET_TRIMMABLE_PUBLISHER_NAMES_QUERY, PUBLISHER_NAME_COLUMN,
+	  UPDATE_PUBLISHER_NAME_QUERY);
+
+      // Trim metadata item names.
+      trimTextColumns(conn, "metadata item name",
+	  GET_TRIMMABLE_MD_ITEM_NAMES_QUERY, NAME_COLUMN,
+	  UPDATE_MD_ITEM_NAME_QUERY);
+
+      // Trim ISBNs.
+      trimTextColumns(conn, "ISBN", GET_TRIMMABLE_ISBNS_QUERY, ISBN_COLUMN,
+	  UPDATE_ISBN_QUERY);
+
+      // Trim ISSNs.
+      trimTextColumns(conn, "ISSN", GET_TRIMMABLE_ISSNS_QUERY, ISSN_COLUMN,
+	  UPDATE_ISSN_QUERY);
+
+      // Trim bibliographic item volumes.
+      trimTextColumns(conn, "volume", GET_TRIMMABLE_VOLUMES_QUERY,
+	  VOLUME_COLUMN, UPDATE_VOLUME_QUERY);
+
+      // Trim bibliographic item issues.
+      trimTextColumns(conn, "issue", GET_TRIMMABLE_ISSUES_QUERY, ISSUE_COLUMN,
+	  UPDATE_ISSUE_QUERY);
+
+      // Trim bibliographic item start pages.
+      trimTextColumns(conn, "start page", GET_TRIMMABLE_START_PAGES_QUERY,
+	  START_PAGE_COLUMN, UPDATE_START_PAGE_QUERY);
+
+      // Trim bibliographic item end pages.
+      trimTextColumns(conn, "start page", GET_TRIMMABLE_END_PAGES_QUERY,
+	  END_PAGE_COLUMN, UPDATE_END_PAGE_QUERY);
+
+      // Trim bibliographic item numbers.
+      trimTextColumns(conn, "item number", GET_TRIMMABLE_ITEM_NOS_QUERY,
+	  ITEM_NO_COLUMN, UPDATE_ITEM_NO_QUERY);
+
+      // Trim metadata item dates.
+      trimTextColumns(conn, "metadata item date",
+	  GET_TRIMMABLE_MD_ITEM_DATES_QUERY, DATE_COLUMN,
+	  UPDATE_MD_ITEM_DATE_QUERY);
+
+      // Trim metadata item coverages.
+      trimTextColumns(conn, "metadata item coverage",
+	  GET_TRIMMABLE_MD_ITEM_COVERAGES_QUERY, COVERAGE_COLUMN,
+	  UPDATE_MD_ITEM_COVERAGE_QUERY);
+
+      // Trim author names.
+      trimTextColumns(conn, "author name", GET_TRIMMABLE_AUTHOR_NAMES_QUERY,
+	  AUTHOR_NAME_COLUMN, UPDATE_AUTHOR_NAME_QUERY);
+
+      // Trim DOIs.
+      trimTextColumns(conn, "DOI", GET_TRIMMABLE_DOIS_QUERY, DOI_COLUMN,
+	  UPDATE_DOI_QUERY);
+
+      // Trim URLs.
+      trimTextColumns(conn, "URL", GET_TRIMMABLE_URLS_QUERY, URL_COLUMN,
+	  UPDATE_URL_QUERY);
+
+      // Trim keywords.
+      trimTextColumns(conn, "keyword", GET_TRIMMABLE_KEYWORDS_QUERY,
+	  KEYWORD_COLUMN, UPDATE_KEYWORD_QUERY);
+
+      // Trim publication identifiers.
+      trimTextColumns(conn, "publication identifier",
+	  GET_TRIMMABLE_PUBLICATION_IDS_QUERY, PUBLICATION_ID_COLUMN,
+	  UPDATE_PUBLICATION_ID_QUERY);
+
+      // Record the current database version in the database.
+      recordDbVersion(conn, 17);
+      commitOrRollback(conn, log);
+    } catch (DbException dbe) {
+      log.error("Cannot migrate the database from version 16 to 17", dbe);
+    } finally {
+      DbManager.safeRollbackAndClose(conn);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Trims text columns in the database.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param textKind
+   *          A String with the kind of column text to be trimmed.
+   * @param findTrimmablesSql
+   *          A String with the SQL query used to find rows in the database that
+   *          contain trimmable text.
+   * @param columnName
+   *          A String with the name of the column with the text to be trimmed.
+   * @param updateTrimmedSql
+   *          A String with the SQL query used to update the text in the
+   *          database with the trimmed version.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  private void trimTextColumns(Connection conn, String textKind,
+      String findTrimmablesSql, String columnName, String updateTrimmedSql)
+      throws DbException {
+    final String DEBUG_HEADER = "trimTextColumns(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "textKind = '" + textKind + "'");
+      log.debug2(DEBUG_HEADER + "findTrimmablesSql = '" + findTrimmablesSql
+	  + "'");
+      log.debug2(DEBUG_HEADER + "columnName = '" + columnName + "'");
+      log.debug2(DEBUG_HEADER + "updateTrimmedSql = '" + updateTrimmedSql
+	  + "'");
+    }
+
+    if (conn == null) {
+      throw new DbException("Null connection.");
+    }
+
+    // Find the instances of trimmable text strings.
+    List<String> trimmableTextColumns = findTrimmableTextColumns(conn,
+	textKind, findTrimmablesSql, columnName);
+
+    // Loop through the trimmable text strings.
+    for (String trimmableText : trimmableTextColumns) {
+      // Trim this text string.
+      trimTextColumn(conn, trimmableText, textKind, updateTrimmedSql);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Finds trimmable text columns in the database.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param textKind
+   *          A String with the kind of column text to be trimmed.
+   * @param findTrimmablesSql
+   *          A String with the SQL query used to find rows in the database that
+   *          contain trimmable text.
+   * @param columnName
+   *          A String with the name of the column with the text to be trimmed.
+   * @return a List<String> with the text strings that are trimmable.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  private List<String> findTrimmableTextColumns(Connection conn,
+      String textKind, String findTrimmablesSql, String columnName)
+      throws DbException {
+    final String DEBUG_HEADER = "findTrimmableTextColumns(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "textKind = '" + textKind + "'");
+      log.debug2(DEBUG_HEADER + "findTrimmablesSql = '" + findTrimmablesSql
+	  + "'");
+      log.debug2(DEBUG_HEADER + "columnName = '" + columnName + "'");
+    }
+
+    if (conn == null) {
+      throw new DbException("Null connection.");
+    }
+
+    List<String> trimmableStrings = new ArrayList<String>();
+    PreparedStatement statement = null;
+    ResultSet resultSet = null;
+
+    try {
+      // Get the trimmable text strings.
+      statement = prepareStatementBeforeReady(conn, findTrimmablesSql);
+      resultSet = executeQueryBeforeReady(statement);
+
+      // Loop through all the trimmable text strings.
+      while (resultSet.next()) {
+	// Get the trimmable column text.
+	String text = resultSet.getString(columnName);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "text = '" + text + "'");
+
+	// Check whether it's not empty.
+	if (!StringUtil.isNullString(text) && text.trim().length() > 0) {
+	  // Yes: Add it to the result.
+	  trimmableStrings.add(text);
+	} else {
+	  // No: Report the problem.
+	  log.warning("Ignored empty " + textKind + " '" + text + "'.");
+	}
+      }
+    } catch (SQLException sqle) {
+      String message = "Cannot get trimmable " + textKind + "s";
+      log.error(message, sqle);
+      log.error("SQL = '" + findTrimmablesSql + "'.");
+      log.error("columnName = '" + columnName + "'.");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(statement);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "trimmableStrings.size() = "
+	+ trimmableStrings.size());
+    return trimmableStrings;
+  }
+
+  /**
+   * Trims a text column in the database.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param trimmableText
+   *          A String with the text of the column to be trimmed.
+   * @param textKind
+   *          A String with the kind of column text to be trimmed.
+   * @param updateTrimmedSql
+   *          A String with the SQL query used to update the text in the
+   *          database with the trimmed version.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  private void trimTextColumn(Connection conn, String trimmableText,
+      String textKind, String updateTrimmedSql) throws DbException {
+    final String DEBUG_HEADER = "trimTextColumn(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "trimmableText = '" + trimmableText + "'");
+      log.debug2(DEBUG_HEADER + "textKind = '" + textKind + "'");
+      log.debug2(DEBUG_HEADER + "updateTrimmedSql = '" + updateTrimmedSql
+	  + "'");
+    }
+
+    if (conn == null) {
+      throw new DbException("Null connection.");
+    }
+
+    String trimmedText = trimmableText.trim();
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "trimmedText = '" + trimmedText + "'");
+
+    // Update the trimmable text with its trimmed value.
+    PreparedStatement updateStatement = null;
+
+    try {
+      updateStatement = prepareStatementBeforeReady(conn, updateTrimmedSql);
+      updateStatement.setString(1, trimmedText);
+      updateStatement.setString(2, trimmableText);
+      int count = executeUpdateBeforeReady(updateStatement);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
+      commitOrRollback(conn, log);
+    } catch (SQLException sqle) {
+      String message = "Cannot update trimmed " + textKind + " text";
+      log.warning(message, sqle);
+      log.warning("trimmableText = '" + trimmableText + "'.");
+      log.warning("trimmedText = '" + trimmedText + "'.");
+      log.warning("SQL = '" + updateTrimmedSql + "'.");
+      rollback(conn, log);
+    } catch (DbException dbe) {
+      String message = "Cannot update trimmed " + textKind + " text";
+      log.warning(message, dbe);
+      log.warning("trimmableText = '" + trimmableText + "'.");
+      log.warning("trimmedText = '" + trimmedText + "'.");
+      log.warning("SQL = '" + updateTrimmedSql + "'.");
+      rollback(conn, log);
+    } finally {
+      DbManager.safeCloseStatement(updateStatement);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
 }
