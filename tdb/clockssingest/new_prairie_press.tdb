@@ -130,7 +130,7 @@
 
     {
     
-      param[base_url] = https://jhaponline.org/journals/
+      param[base_url] = http://jhaponline.org/journals/
       param[journal_id] = jhap
 
       au < down ; frozen ; 2011 ; Journal for the History of Analytical Philosophy Volume 1 (2011) ; 1 ; 2011 >
@@ -139,7 +139,7 @@
     }
     {
     
-      param[base_url] = http://jhaponline.org/
+      param[base_url] = https://jhaponline.org/
       param[journal_id] = jhap
 
       au < doNotProcess ; doNotProcess ; 2011 ; Journal for the History of Analytical Philosophy Volume 1 (2011) ; 1 ; 2011 >
