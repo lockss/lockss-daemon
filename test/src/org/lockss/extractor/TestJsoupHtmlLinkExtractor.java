@@ -1,5 +1,5 @@
 /*
- * $Id: TestJsoupHtmlLinkExtractor.java,v 1.5 2014-04-23 22:42:59 clairegriffin Exp $
+ * $Id: TestJsoupHtmlLinkExtractor.java,v 1.6 2014-08-20 19:46:26 clairegriffin Exp $
  */
 
 /*
@@ -76,6 +76,13 @@ public class TestJsoupHtmlLinkExtractor extends LockssTestCase {
     String test = "http://www.pensoft.net/journals/neobiota/issue/11/";
     URL url = new URL(test);
     MyLinkExtractorCallback callback = new MyLinkExtractorCallback();
+    String[] expectedResolvedIssues = {
+      "http://www.pensoft.net/journals/neobiota/issue/12/",
+      "http://www.pensoft.net/journals/neobiota/issue/13/",
+      "http://www.pensoft.net/journals/neobiota/issue/14/",
+      "http://www.pensoft.net/journals/neobiota/issue/15/"
+    };
+    java.util.List<String> issues = ListUtil.fromArray(expectedResolvedIssues);
 
     m_extractor.extractUrls(m_mau, url.openStream(), ENC, test, callback);
     Set<String> urls = callback.getFoundUrls();
@@ -90,7 +97,6 @@ public class TestJsoupHtmlLinkExtractor extends LockssTestCase {
         }
       }
     }
-
   }
 
   public void testThrowsOnNullInputStream() throws Exception {
@@ -197,7 +203,7 @@ public class TestJsoupHtmlLinkExtractor extends LockssTestCase {
     singleTagShouldNotParse("http://www.example.com/web_link.jpg",
                             "<option  value=", "</option>", m_mau);
     singleTagShouldNotParse("http://www.example.com/web_link.jpg",
-                            "<option a=b value=", "</option>", m_mau);
+                               "<option a=b value=", "</option>", m_mau);
   }
 
   public void testParsesOptionNegative() throws Exception {
@@ -209,9 +215,9 @@ public class TestJsoupHtmlLinkExtractor extends LockssTestCase {
 
   public void testDoCrawlImageWithSrcInAltTag() throws Exception {
     singleTagShouldParse("http://www.example.com/web_link.jpg",
-                         "<img alt=src src=", "</img>");
+                            "<img alt=src src=", "</img>");
     singleTagShouldParse("http://www.example.com/web_link.jpg",
-                         "<img alt = src src=", "</img>");
+                            "<img alt = src src=", "</img>");
   }
 
   public void testDoCrawlImageWithSrcInAltTagAfterSrcProper()
@@ -327,8 +333,8 @@ public class TestJsoupHtmlLinkExtractor extends LockssTestCase {
       + "</html>\n";
 
     assertEquals(SetUtil.set(expectedPrefix + url1, expectedPrefix + url2,
-                                expectedPrefix + url3, expectedPrefix + url4,
-                                expectedPrefix + url5, expectedPrefix + url6),
+                             expectedPrefix + url3, expectedPrefix + url4,
+                             expectedPrefix + url5, expectedPrefix + url6),
                     parseSingleSource(source));
   }
 
@@ -369,7 +375,7 @@ public class TestJsoupHtmlLinkExtractor extends LockssTestCase {
 
   public void testDoCrawlBody() throws Exception {
     singleTagShouldParse("http://www.example.com/web_link.jpg",
-                         "<body background=", "</body>");
+                            "<body background=", "</body>");
   }
 
   /**
@@ -900,7 +906,7 @@ public class TestJsoupHtmlLinkExtractor extends LockssTestCase {
     mcu.setContent(source);
 
     m_extractor.extractUrls(m_mau, new StringInputStream(source), ENC,
-                            "http://www.example.com", m_callback);
+                               "http://www.example.com", m_callback);
 
     java.util.Set<String> expected = new java.util.HashSet<String>();
     java.util.Collections.addAll(expected, url1, url2);

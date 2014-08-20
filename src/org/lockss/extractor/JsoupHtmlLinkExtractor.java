@@ -1,5 +1,5 @@
 /*
- * $Id: JsoupHtmlLinkExtractor.java,v 1.9 2014-05-08 00:06:43 clairegriffin Exp $
+ * $Id: JsoupHtmlLinkExtractor.java,v 1.10 2014-08-20 19:46:26 clairegriffin Exp $
  */
 
 /*
@@ -127,8 +127,9 @@ public class JsoupHtmlLinkExtractor implements LinkExtractor {
                     new SimpleTagLinkExtractor(new String[]
                                                    {"url", "src", "filename"})
                    );
-
-
+    theTagTable.put("script", new ScriptTagLinkExtractor());
+    theTagTable.put("base", new BaseTagLinkExtractor());
+    theTagTable.put("style", new StyleTagLinkExtractor());
   }
 
   /**
@@ -166,6 +167,11 @@ public class JsoupHtmlLinkExtractor implements LinkExtractor {
                  HtmlFormExtractor.FieldIterator> m_formGenerators;
 
   /**
+   * A link extractor for 'style' attributes rather than tags.
+   */
+  private StyleAttrLinkExtractor m_styleAttrExtractor;
+
+  /**
    * constructor used for the jsoup link extractor.
    */
   public JsoupHtmlLinkExtractor() {
@@ -199,6 +205,7 @@ public class JsoupHtmlLinkExtractor implements LinkExtractor {
     m_formRestrictors = restrictors;
     m_formGenerators = generators;
     m_tagTable.putAll(theTagTable);
+    m_styleAttrExtractor = new StyleAttrLinkExtractor();
   }
 
   public void setFormRestrictors(final Map<String,
@@ -321,7 +328,6 @@ public class JsoupHtmlLinkExtractor implements LinkExtractor {
     private URL m_baseUrl;
     private String m_encoding;
     private boolean m_inScript;
-    private LinkExtractor m_styleAttrExtractor;
 
     /**
      * Constructor
@@ -344,10 +350,15 @@ public class JsoupHtmlLinkExtractor implements LinkExtractor {
       }
       m_encoding = encoding;
       m_inScript = false;
-      m_tagTable.put("script", new ScriptTagLinkExtractor(this));
-      m_tagTable.put("base", new BaseTagLinkExtractor(this));
-      m_tagTable.put("style", new StyleTagLinkExtractor(m_encoding));
-      m_styleAttrExtractor = new StyleAttrLinkExtractor(m_encoding);
+      VisitorLinkExtractor vle;
+      vle = (VisitorLinkExtractor) m_tagTable.get("script");
+      vle.setNodeVisitor(this);
+      vle = (VisitorLinkExtractor) m_tagTable.get("base");
+      vle.setNodeVisitor(this);
+      EncodedLinkExtractor ele;
+      ele = (EncodedLinkExtractor) m_tagTable.get("style");
+      ele.setEncoding(m_encoding);
+      m_styleAttrExtractor.setEncoding(m_encoding);
     }
 
     /**
@@ -506,6 +517,13 @@ public class JsoupHtmlLinkExtractor implements LinkExtractor {
     public void tagEnd(Node node, ArchivalUnit au, Callback cb);
 
   }
+  public interface EncodedLinkExtractor {
+    public void setEncoding(String encoding);
+  }
+
+  public interface VisitorLinkExtractor {
+    public void setNodeVisitor(LinkExtractorNodeVisitor nodeVisitor);
+  }
 
   /**
    * Base Class for all Tag Link extractors which implements tagBegin
@@ -546,11 +564,13 @@ public class JsoupHtmlLinkExtractor implements LinkExtractor {
   /**
    * Link Extractor for the html "base" tag
    */
-  public static class BaseTagLinkExtractor extends BaseLinkExtractor {
+  public static class BaseTagLinkExtractor extends BaseLinkExtractor
+    implements VisitorLinkExtractor{
     private boolean m_baseSet = false;
-    private LinkExtractorNodeVisitor m_nodeVisitor;
+    protected LinkExtractorNodeVisitor m_nodeVisitor;
 
-    BaseTagLinkExtractor(LinkExtractorNodeVisitor nodeVisitor) {
+    public void setNodeVisitor(LinkExtractorNodeVisitor nodeVisitor)
+    {
       m_nodeVisitor = nodeVisitor;
     }
 
@@ -647,10 +667,12 @@ public class JsoupHtmlLinkExtractor implements LinkExtractor {
   /**
    * Link Extractor for the script tag
    */
-  public static class ScriptTagLinkExtractor extends BaseLinkExtractor {
-    private LinkExtractorNodeVisitor m_nodeVisitor;
+  public static class ScriptTagLinkExtractor extends BaseLinkExtractor
+    implements VisitorLinkExtractor{
+    protected LinkExtractorNodeVisitor m_nodeVisitor;
 
-    ScriptTagLinkExtractor(LinkExtractorNodeVisitor nodeVisitor) {
+    public void setNodeVisitor(LinkExtractorNodeVisitor nodeVisitor)
+    {
       m_nodeVisitor = nodeVisitor;
     }
 
@@ -675,11 +697,12 @@ public class JsoupHtmlLinkExtractor implements LinkExtractor {
   /**
    * Base Link Extractor for tags containing style text
    */
-  public static class BaseStyleLinkExtractor extends BaseLinkExtractor {
+  public static class BaseStyleLinkExtractor extends BaseLinkExtractor
+    implements EncodedLinkExtractor{
 
     protected String m_encoding;
 
-    public BaseStyleLinkExtractor(String encoding) {
+    public void setEncoding(String encoding) {
       m_encoding = encoding;
     }
 
@@ -708,10 +731,6 @@ public class JsoupHtmlLinkExtractor implements LinkExtractor {
    */
   public static class StyleTagLinkExtractor extends BaseStyleLinkExtractor {
 
-    public StyleTagLinkExtractor(String encoding) {
-      super(encoding);
-    }
-
     /**
      * Extract link(s) from this tag.
      *
@@ -732,10 +751,6 @@ public class JsoupHtmlLinkExtractor implements LinkExtractor {
    * Link Extractor for tags with a style attribute
    */
   public static class StyleAttrLinkExtractor extends BaseStyleLinkExtractor {
-
-    public StyleAttrLinkExtractor(String encoding) {
-      super(encoding);
-    }
 
     /**
      * Extract link(s) from this tag.
