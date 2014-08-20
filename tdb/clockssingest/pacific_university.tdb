@@ -20,7 +20,7 @@
     param[journal_abbr] = hip
     implicit < status ; status2 ; year ; name ; param[volume] >
     
-    comment[moved] = journal moved. No manifest pages.
+    comment[moved] = journal no longer eligible for clockss inclusion. No manifest pages.
 
     au < down ; crawling ; 2011-2013 ; Health and Interprofessional Practice Volume 1 ; 1 >
     au < down ; exists ; 2013-2014 ; Health and Interprofessional Practice Volume 2 ; 2 >
