@@ -76,7 +76,7 @@
      au < crawling ; exists ; 2012 ; Cahiers Élisabéthains Volume 82 ; 82 >
      au < crawling ; exists ; 2013 ; Cahiers Élisabéthains Volume 83 ; 83 >
      au < crawling ; exists ; 2013 ; Cahiers Élisabéthains Volume 84 ; 84 >
-     au < notReady ; exists ; 2014 ; Cahiers Élisabéthains Volume 85 ; 85 >
+     au < doNotProcess ; exists ; 2014 ; Cahiers Élisabéthains Volume 85 ; 85 >
      au < expected ; exists ; 2014 ; Cahiers Élisabéthains Volume 86 ; 86 >
     
     }
@@ -130,7 +130,7 @@
      au < finished ; frozen ; 2011 ; Gothic Studies Volume 13 ; 13 >
      au < finished ; frozen ; 2012 ; Gothic Studies Volume 14 ; 14 >
      au < crawling ; exists ; 2013 ; Gothic Studies Volume 15 ; 15 >
-     au < notReady ; exists ; 2014 ; Gothic Studies Volume 16 ; 16 >
+     au < doNotProcess ; exists ; 2014 ; Gothic Studies Volume 16 ; 16 >
 
     }
 
@@ -160,7 +160,7 @@
      au < finished ; frozen ; 2011 ; International Journal of Electrical Engineering Education Volume 48 ; 48 >
      au < finished ; frozen ; 2012 ; International Journal of Electrical Engineering Education Volume 49 ; 49 >
      au < crawling ; exists ; 2013 ; International Journal of Electrical Engineering Education Volume 50 ; 50 >
-     au < notReady ; exists ; 2014 ; International Journal of Electrical Engineering Education Volume 51 ; 51 >
+     au < doNotProcess ; exists ; 2014 ; International Journal of Electrical Engineering Education Volume 51 ; 51 >
 
     }
 
@@ -276,7 +276,7 @@
      au < finished ; frozen ; 2011 ; Journal of Adult and Continuing Education Volume 17 ; 17 >
      au < finished ; frozen ; 2012 ; Journal of Adult and Continuing Education Volume 18 ; 18 >
      au < crawling ; exists ; 2013 ; Journal of Adult and Continuing Education Volume 19 ; 19 >
-     au < notReady ; exists ; 2014 ; Journal of Adult and Continuing Education Volume 20 ; 20 >
+     au < doNotProcess ; exists ; 2014 ; Journal of Adult and Continuing Education Volume 20 ; 20 >
    
     }
 
@@ -306,7 +306,7 @@
      au < finished ; frozen ; 2011 ; The Journal of Transport History Volume 32 ; 32 >
      au < finished ; frozen ; 2012 ; The Journal of Transport History Volume 33 ; 33 >
      au < crawling ; exists ; 2013 ; The Journal of Transport History Volume 34 ; 34 >
-     au < notReady ; exists ; 2014 ; The Journal of Transport History Volume 35 ; 35 >
+     au < doNotProcess ; exists ; 2014 ; The Journal of Transport History Volume 35 ; 35 >
     
     }
 
@@ -336,7 +336,7 @@
      au < finished ; frozen ; 2011 ; Literature & History Volume 20 ; 20 >
      au < finished ; frozen ; 2012 ; Literature & History Volume 21 ; 21 >
      au < crawling ; exists ; 2013 ; Literature & History Volume 22 ; 22 >
-     au < notReady ; exists ; 2014 ; Literature & History Volume 23 ; 23 >
+     au < doNotProcess ; exists ; 2014 ; Literature & History Volume 23 ; 23 >
 
     }
 
@@ -393,7 +393,7 @@
      au < manifest ; exists ; 2010 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 14 ; 14 >
      au < crawling ; exists ; 2011 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 15 ; 15 >
      au < crawling ; exists ; 2012-2013 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 16 ; 16 >
-     au < notReady ; exists ; 2014 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 17 ; 17 >
+     au < doNotProcess ; exists ; 2014 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 17 ; 17 >
 
     }
 
@@ -438,7 +438,7 @@
      au < finished ; frozen ; 2012 ; Research in Education Volume 88 ; 88 >
      au < crawling ; exists ; 2013 ; Research in Education Volume 89 ; 89 >
      au < crawling ; exists ; 2013 ; Research in Education Volume 90 ; 90 >
-     au < notReady ; exists ; 2014 ; Research in Education Volume 91 ; 91 >
+     au < doNotProcess ; exists ; 2014 ; Research in Education Volume 91 ; 91 >
      au < expected ; exists ; 2014 ; Research in Education Volume 92 ; 92 >
     
     }
