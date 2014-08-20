@@ -425,19 +425,19 @@
     comment[supersedes] = see journal id 'jamds'
     param[journal_id] = ads
 
-    au < manifest ; 1997 ; Journal of Applied Mathematics and Decision Sciences Volume 1997 ; 1997 ; 1997 >
-    au < manifest ; 1998 ; Journal of Applied Mathematics and Decision Sciences Volume 1998 ; 1998 ; 1998 >
-    au < manifest ; 1999 ; Journal of Applied Mathematics and Decision Sciences Volume 1999 ; 1999 ; 1999 >
-    au < manifest ; 2000 ; Journal of Applied Mathematics and Decision Sciences Volume 2000 ; 2000 ; 2000 >
-    au < manifest ; 2001 ; Journal of Applied Mathematics and Decision Sciences Volume 2001 ; 2001 ; 2001 >
-    au < manifest ; 2002 ; Journal of Applied Mathematics and Decision Sciences Volume 2002 ; 2002 ; 2002 >
-    au < manifest ; 2003 ; Journal of Applied Mathematics and Decision Sciences Volume 2003 ; 2003 ; 2003 >
-    au < manifest ; 2004 ; Journal of Applied Mathematics and Decision Sciences Volume 2004 ; 2004 ; 2004 >
+    au < manifest ; 1997 ; Journal of Applied Mathematics and Decision Sciences Volume 1 (1997) ; 1997 ; 1 >
+    au < manifest ; 1998 ; Journal of Applied Mathematics and Decision Sciences Volume 2 (1998) ; 1998 ; 2 >
+    au < manifest ; 1999 ; Journal of Applied Mathematics and Decision Sciences Volume 3 (1999) ; 1999 ; 3 >
+    au < manifest ; 2000 ; Journal of Applied Mathematics and Decision Sciences Volume 4 (2000) ; 2000 ; 4 >
+    au < manifest ; 2001 ; Journal of Applied Mathematics and Decision Sciences Volume 5 (2001) ; 2001 ; 5 >
+    au < manifest ; 2002 ; Journal of Applied Mathematics and Decision Sciences Volume 6 (2002) ; 2002 ; 6 >
+    au < manifest ; 2003 ; Journal of Applied Mathematics and Decision Sciences Volume 7 (2003) ; 2003 ; 7 >
+    au < manifest ; 2004 ; Journal of Applied Mathematics and Decision Sciences Volume 8 (2004) ; 2004 ; 8 >
     au < manifest ; 2005 ; Journal of Applied Mathematics and Decision Sciences Volume 2005 ; 2005 ; 2005 >
     au < manifest ; 2006 ; Journal of Applied Mathematics and Decision Sciences Volume 2006 ; 2006 ; 2006 >
     au < manifest ; 2007 ; Journal of Applied Mathematics and Decision Sciences Volume 2007 ; 2007 ; 2007 >
     au < manifest ; 2008 ; Journal of Applied Mathematics and Decision Sciences Volume 2008 ; 2008 ; 2008 >
-    au < released ; 2009 ; Advances in Decision Sciences Volume 2009 ; 2009 ; 2009 >
+    au < released ; 2009 ; Journal of Applied Mathematics and Decision Sciences Volume 2009 ; 2009 ; 2009 >
     au < released ; 2010 ; Advances in Decision Sciences Volume 2010 ; 2010 ; 2010 >
     au < released ; 2011 ; Advances in Decision Sciences Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; Advances in Decision Sciences Volume 2012 ; 2012 ; 2012 >
@@ -455,14 +455,14 @@
 
     param[journal_id] = ade
 
-    au < down ; 2004 ; Advances in Difference Equations Volume 2004 ; 2004 ; 2004 >
-    au < down ; 2005 ; Advances in Difference Equations Volume 2005 ; 2005 ; 2005 >
-    au < down ; 2006 ; Advances in Difference Equations Volume 2006 ; 2006 ; 2006 >
-    au < down ; 2007 ; Advances in Difference Equations Volume 2007 ; 2007 ; 2007 >
-    au < down ; 2008 ; Advances in Difference Equations Volume 2008 ; 2008 ; 2008 >
-    au < down ; 2009 ; Advances in Difference Equations Volume 2009 ; 2009 ; 2009 >
-    au < down ; 2010 ; Advances in Difference Equations Volume 2010 ; 2010 ; 2010 >
-    au < down ; 2011 ; Advances in Difference Equations Volume 2011 ; 2011 ; 2011 >
+    au < down ; 2004 ; Advances in Difference Equations Volume 2004 [superseded] ; 2004 ; 2004 >
+    au < down ; 2005 ; Advances in Difference Equations Volume 2005 [superseded] ; 2005 ; 2005 >
+    au < down ; 2006 ; Advances in Difference Equations Volume 2006 [superseded] ; 2006 ; 2006 >
+    au < down ; 2007 ; Advances in Difference Equations Volume 2007 [superseded] ; 2007 ; 2007 >
+    au < down ; 2008 ; Advances in Difference Equations Volume 2008 [superseded] ; 2008 ; 2008 >
+    au < down ; 2009 ; Advances in Difference Equations Volume 2009 [superseded] ; 2009 ; 2009 >
+    au < down ; 2010 ; Advances in Difference Equations Volume 2010 [superseded] ; 2010 ; 2010 >
+    au < down ; 2011 ; Advances in Difference Equations Volume 2011 [superseded] ; 2011 ; 2011 >
 
   }
 
@@ -2563,15 +2563,15 @@
     au < manifest ; 1998 ; Computational and Mathematical Methods in Medicine Volume 1 (1998) ; 1998 ; 1 >
     au < manifest ; 1999 ; Computational and Mathematical Methods in Medicine Volume 1-2 (1999) ; 1999 ; 1-2 >
     au < manifest ; 2000 ; Computational and Mathematical Methods in Medicine Volume 2-3 (2000) ; 2000 ; 2-3 >
-    au < manifest ; 2001 ; Computational and Mathematical Methods in Medicine Volume 3 ; 2001 ; 3 >
-    au < manifest ; 2002 ; Computational and Mathematical Methods in Medicine Volume 4 ; 2002 ; 4 >
-    au < manifest ; 2003 ; Computational and Mathematical Methods in Medicine Volume 5 ; 2003 ; 5 >
-    au < manifest ; 2005 ; Computational and Mathematical Methods in Medicine Volume 6 ; 2005 ; 6 >
-    au < manifest ; 2006 ; Computational and Mathematical Methods in Medicine Volume 7 ; 2006 ; 7 >
-    au < manifest ; 2007 ; Computational and Mathematical Methods in Medicine Volume 8 ; 2007 ; 8 >
-    au < manifest ; 2008 ; Computational and Mathematical Methods in Medicine Volume 9 ; 2008 ; 9 >
-    au < manifest ; 2009 ; Computational and Mathematical Methods in Medicine Volume 10 ; 2009 ; 10 >
-    au < manifest ; 2010 ; Computational and Mathematical Methods in Medicine Volume 11 ; 2010 ; 11 >
+    au < manifest ; 2001 ; Computational and Mathematical Methods in Medicine Volume 3 (2001); 2001 ; 3 >
+    au < manifest ; 2002 ; Computational and Mathematical Methods in Medicine Volume 4 (2002) ; 2002 ; 4 >
+    au < manifest ; 2003 ; Computational and Mathematical Methods in Medicine Volume 5 (2003) ; 2003 ; 5 >
+    au < manifest ; 2005 ; Computational and Mathematical Methods in Medicine Volume 6 (2005) ; 2005 ; 6 >
+    au < manifest ; 2006 ; Computational and Mathematical Methods in Medicine Volume 7 (2006) ; 2006 ; 7 >
+    au < manifest ; 2007 ; Computational and Mathematical Methods in Medicine Volume 8 (2007) ; 2007 ; 8 >
+    au < manifest ; 2008 ; Computational and Mathematical Methods in Medicine Volume 9 (2008) ; 2008 ; 9 >
+    au < manifest ; 2009 ; Computational and Mathematical Methods in Medicine Volume 10 (2009) ; 2009 ; 10 >
+    au < manifest ; 2010 ; Computational and Mathematical Methods in Medicine Volume 11 (2010) ; 2010 ; 11 >
     au < manifest ; 2011 ; Computational and Mathematical Methods in Medicine Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; Computational and Mathematical Methods in Medicine Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Computational and Mathematical Methods in Medicine Volume 2013 ; 2013 ; 2013 >
@@ -3946,7 +3946,7 @@
     }
     
     {
-    param[journal_id] = ijeclo
+    param[journal_id] = ijecol
 
     au < exists ; 2007 ; Research Letters in Ecology Volume 2007 ; 2007 ; 2007 >
     au < exists ; 2008 ; Research Letters in Ecology Volume 2008 ; 2008 ; 2008 >
