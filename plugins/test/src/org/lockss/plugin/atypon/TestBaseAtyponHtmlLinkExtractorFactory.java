@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseAtyponHtmlLinkExtractorFactory.java,v 1.3 2014-05-05 19:07:29 alexandraohlson Exp $
+ * $Id: TestBaseAtyponHtmlLinkExtractorFactory.java,v 1.4 2014-08-20 23:01:39 alexandraohlson Exp $
  */
 /*
 
@@ -31,10 +31,13 @@
 
 package org.lockss.plugin.atypon;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 import org.lockss.plugin.UrlNormalizer;
 import org.lockss.plugin.atypon.BaseAtyponUrlNormalizer;
+import org.lockss.extractor.HtmlFormExtractor;
 import org.lockss.extractor.JsoupHtmlLinkExtractor;
 import org.lockss.extractor.LinkExtractor;
 import org.lockss.extractor.RegexpCssLinkExtractor;
@@ -134,10 +137,53 @@ public class TestBaseAtyponHtmlLinkExtractorFactory extends LockssTestCase {
     super.setUp();
     m_mau = new MockArchivalUnit();
     m_callback = new MyLinkExtractorCallback();
-    fact = new BaseAtyponHtmlLinkExtractorFactory();
-    m_extractor = fact.createLinkExtractor("html");
+    // CREATE A TESTING ADEQUATE VERSION of the link extractor
+    m_extractor = createTestingLinkExtractor("html");    
+    
+    //fact = new BaseAtyponHtmlLinkExtractorFactory();
+    //m_extractor = fact.createLinkExtractor("html");
 
   }
+  // Copied pretty much from BaseAtyponHtmlLInkExtractorFactory
+  private org.lockss.extractor.LinkExtractor createTestingLinkExtractor(String mimeType) {
+      Map<String, HtmlFormExtractor.FormFieldRestrictions> baseRestrictor
+      = new HashMap<String, HtmlFormExtractor.FormFieldRestrictions>();
+
+      baseRestrictor = setUpBaseRestrictor();
+       Map<String, HtmlFormExtractor.FieldIterator> generators;
+      generators = new HashMap<String, HtmlFormExtractor.FieldIterator>();
+
+      // set up the link extractor using the TESTING constructor
+      //JsoupHtmlLinkExtractor extractor = new JsoupHtmlLinkExtractor();
+      JsoupHtmlLinkExtractor extractor = new JsoupHtmlLinkExtractor(false, true,
+          baseRestrictor, generators);
+     extractor.setFormRestrictors(baseRestrictor); 
+      return extractor;
+
+  }
+  
+  //copied directly from BaseAtyponHtmlLinkExtractor
+  private Map<String, HtmlFormExtractor.FormFieldRestrictions> setUpBaseRestrictor() {
+    Set<String> include = new HashSet<String>();
+    Set<String> exclude = new HashSet<String>();
+    Map<String, HtmlFormExtractor.FormFieldRestrictions> restrictor
+    = new HashMap<String, HtmlFormExtractor.FormFieldRestrictions>();
+
+    /* only include forms with the name "frmCitMgr" */
+    include = SetUtil.fromCSV("frmCitmgr");
+    HtmlFormExtractor.FormFieldRestrictions include_restrictions = new HtmlFormExtractor.FormFieldRestrictions(include,null);
+    restrictor.put(HtmlFormExtractor.FORM_NAME, include_restrictions);
+    
+    /* now set up an exclude restriction on "format" */ 
+    exclude = SetUtil.fromCSV("refworks,refworks-cn"); 
+    HtmlFormExtractor.FormFieldRestrictions exclude_restrictions = new HtmlFormExtractor.FormFieldRestrictions(null, exclude);
+    restrictor.put("format", exclude_restrictions);
+    
+    return restrictor;
+  }
+  
+  
+  
   Set<String> expectedUrls;
 
   /* Since this sample form comes from SIAM this is very similar to the TestSiamHtmLinkExtractor, but 
