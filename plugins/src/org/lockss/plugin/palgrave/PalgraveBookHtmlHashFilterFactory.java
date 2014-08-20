@@ -1,4 +1,4 @@
-/* $Id: PalgraveBookHtmlHashFilterFactory.java,v 1.5 2014-08-19 18:55:06 thib_gc Exp $
+/* $Id: PalgraveBookHtmlHashFilterFactory.java,v 1.6 2014-08-20 21:46:39 aishizaki Exp $
  
 Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -42,6 +42,7 @@ public class PalgraveBookHtmlHashFilterFactory implements FilterFactory {
     NodeFilter[] filters = new NodeFilter[] {
 	// http://www.palgraveconnect.com/pc/doifinder/10.1057/9780230597655
 	new TagNameFilter("script"),
+	new TagNameFilter("noscript"),
 	// added by audrey: Extreme Hashing
 	// there are differences in some of their comments; remove them all!
 	HtmlNodeFilters.comment(),

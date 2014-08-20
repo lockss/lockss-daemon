@@ -30,6 +30,7 @@
   </entry>
   <entry>
     <string>required_daemon_version</string>
+    <!-- needs 1.66 for ris filter -->
     <string>1.66.0</string>
   </entry>
   <entry>
@@ -80,8 +81,8 @@
       <string>2,"^%sview/images/.*\.gif", base_url</string> 
       <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
       <string>4,"^%s", base_url</string>
-      <string>1,"^%spc/[^/]+/browse/inside/.*", base_url</string>
-      <string>1,"^%spc/browse/citationExport.*", base_url</string>
+      <string>1,"^%spc/[^/]+/browse/inside/", base_url</string>
+      <string>1,"^%spc/browse/citationExport\?doi=10\.1057/%s[^/]+Export$", base_url, book_isbn</string>
       <string>1,"^%spc/doifinder/10\.1057/%s\.\d+$", base_url, book_isbn</string>
     </list>
   </entry>
@@ -98,7 +99,7 @@
   </entry>
   <entry>
     <string>au_def_pause_time</string>
-    <long>6000</long>
+    <long>3000</long>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -107,10 +108,6 @@
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.palgrave.PalgraveBookHtmlHashFilterFactory</string>
-  </entry>
-  <entry>
-    <string>text/html_crawl_filter_factory</string>
-    <string>org.lockss.plugin.palgrave.PalgraveBookHtmlCrawlFilterFactory</string>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
@@ -123,6 +120,10 @@
   <entry>
     <string>application/x-research-info-systems_filter_factory</string>
     <string>org.lockss.plugin.palgrave.PalgraveBookRisFilterFactory</string>
+  </entry>
+  <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.palgrave.PalgraveBookPdfFilterFactory</string>
   </entry>
   <entry>
     <string>application/x-research-info-systems_metadata_extractor_factory_map</string>

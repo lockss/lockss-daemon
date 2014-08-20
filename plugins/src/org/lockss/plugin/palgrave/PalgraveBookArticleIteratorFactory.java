@@ -1,4 +1,4 @@
-/* $Id: PalgraveBookArticleIteratorFactory.java,v 1.4 2014-08-19 16:46:37 aishizaki Exp $
+/* $Id: PalgraveBookArticleIteratorFactory.java,v 1.5 2014-08-20 21:46:39 aishizaki Exp $
  
 Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -60,16 +60,17 @@ public class PalgraveBookArticleIteratorFactory
   // root: http://www.palgraveconnect.com
   protected static final String ROOT_TEMPLATE = "\"%spc/\", base_url";
   protected static final String PATTERN_TEMPLATE = 
-    "\"%spc/.+/browse/inside(/download|/epub)?/[0-9]+\\.(html|pdf|epub)$\", base_url";
+   //"\"%spc/.+/browse/inside(/download|/epub)?/[0-9]+\\.(html|pdf|epub)$\", base_url";
+ "\"%spc/[^/]+/(browse/inside/download|browse/inside/epub|10\\.1057)/[0-9]+(\\.pdf|\\.epub)?\", base_url";
   
   protected Pattern PDF_LANDING_PATTERN =
-    Pattern.compile("/pc/doifinder/10.1057/([0-9]+)$", Pattern.CASE_INSENSITIVE);
+    Pattern.compile("/pc/doifinder/10\\.1057/([0-9]+)$", Pattern.CASE_INSENSITIVE);
   protected Pattern PDF_PATTERN = 
-    Pattern.compile("/pc/(.+)/browse/inside/download/([0-9]+)\\.pdf$", Pattern.CASE_INSENSITIVE);
+    Pattern.compile("/pc/([^/]+)/browse/inside/download/([0-9]+)\\.pdf$", Pattern.CASE_INSENSITIVE);
   protected Pattern EPUB_PATTERN = 
-    Pattern.compile("/pc/(.+)/browse/inside/epub/([0-9]+)\\.epub$", Pattern.CASE_INSENSITIVE);
+    Pattern.compile("/pc/([^/]+)/browse/inside/epub/([0-9]+)\\.epub$", Pattern.CASE_INSENSITIVE);
     
-  protected static String PDF_LANDING_REPLACEMENT = "/pc/doifinder/10.157/$1";
+  protected static String PDF_LANDING_REPLACEMENT = "/pc/doifinder/10.1057/$1";
   protected static String PDF_REPLACEMENT = "/pc/$1/browse/inside/download/$2.pdf";
   protected static String EPUB_REPLACEMENT = "/pc/$1/browse/inside/epub/$2.epub";
   protected static String CITATION_RIS_REPLACEMENT = 
@@ -90,7 +91,14 @@ public class PalgraveBookArticleIteratorFactory
                             
     // primary roles have enough info to trigger an article.
     // the order of builder.addAspect is important.
-    // in this case pdf is the first to be consider a full-text
+    // the order in which we want to define full_text_cu.  
+    // first one that exists will get the job
+    // in this case the landing page is the first to be consider a full-text
+   
+    builder.addAspect(PDF_LANDING_PATTERN,
+                      PDF_LANDING_REPLACEMENT,
+                      ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE);
+    
     builder.addAspect(PDF_PATTERN,
                       PDF_REPLACEMENT,
                       ArticleFiles.ROLE_FULL_TEXT_PDF);
@@ -98,21 +106,11 @@ public class PalgraveBookArticleIteratorFactory
     builder.addAspect(EPUB_PATTERN,
                       EPUB_REPLACEMENT,
                       ArticleFiles.ROLE_FULL_TEXT_EPUB);
-    
-    builder.addAspect(PDF_LANDING_PATTERN,
-                      PDF_LANDING_REPLACEMENT,
-                      ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE);
-    
+
     // secondary roles don't have enough info to trigger an article
     builder.addAspect(CITATION_RIS_REPLACEMENT,
                       ArticleFiles.ROLE_CITATION_RIS,
                       ArticleFiles.ROLE_ARTICLE_METADATA);
-    
-    // the order in which we want to define full_text_cu.  
-    // first one that exists will get the job
-    builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF,
-                                 ArticleFiles.ROLE_FULL_TEXT_EPUB,
-                                 ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE);
 
     return builder.getSubTreeArticleIterator();
  
