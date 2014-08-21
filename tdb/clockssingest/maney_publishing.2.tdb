@@ -807,7 +807,6 @@
     param[journal_id] = cest 
     comment[jounral_id] = both cest & cst point to same title
     comment[continues] = 0007-0599
-    comment[notReady] = low agreement
 
     au < exists ; exists ; 2003 ; Corrosion Engineering, Science and Technology Volume 38 ; 38 > 
     au < exists ; exists ; 2004 ; Corrosion Engineering, Science and Technology Volume 39 ; 39 > 
@@ -1351,7 +1350,6 @@
     param[journal_id] = hdy 
 
     comment[1] = ceased publication in 2011
-    comment[notReady] = requesting manifest pages RT 1962
     
     au < down ; exists ; 2007 ; The Hardy Review Volume 9 ; 9 > 
     au < down ; exists ; 2008 ; The Hardy Review Volume 10 ; 10 > 
@@ -2374,7 +2372,6 @@
     >
 
     param[journal_id] = scm 
-    comment[notReady] = low agreement
 
     au < down ; exists ; 2011 ; Journal of Spinal Cord Medicine Volume 34 ; 34 > 
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Spinal Cord Medicine Volume 35 ; 35 > 
@@ -2569,7 +2566,6 @@
     >
 
     param[journal_id] = lev 
-    comment[notReady] = low agreement
 
     au < manifest ; exists ; 1969 ; Levant Volume 1 ; 1 > 
     au < manifest ; exists ; 1970 ; Levant Volume 2 ; 2 > 
