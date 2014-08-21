@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>testing - Janice/Alex V1.67</string>
+    <string>down - Janice/Alex V1.67</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>  
   <entry>
     <string>plugin_name</string>
@@ -57,5 +57,9 @@
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.atypon.maney.ManeyAtyponHtmlCrawlFilterFactory</string>
   </entry>
+  <entry>
+    <string>text/html_link_extractor_factory</string>
+    <string>org.lockss.plugin.atypon.maney.ManeyAtyponHtmlLinkExtractorFactory</string>
+  </entry> 
   <!-- add plugin_au_config_user_msg -->
 </map>
