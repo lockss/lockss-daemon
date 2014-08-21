@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>25</string>
+    <string>26</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -90,20 +90,12 @@
       </list>
   </entry>
   <entry>
-    <string>au_def_pause_time</string>
-    <long>3000</long>
-  </entry>
-  <entry>
     <string>au_def_new_content_crawl</string>
     <long>1209600000</long>
   </entry>
   <entry>
     <string>plugin_fetch_rate_limiter_source</string>
     <string>key:GPO</string>
-  </entry>
-  <entry>
-    <string>au_crawlwindow</string>
-    <string>org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysCrawlWindow</string>
   </entry>
   <entry>
     <string>application/xml_link_extractor_factory</string>
@@ -128,5 +120,49 @@
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysHtmlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>au_crawl_depth</string>
+    <int>99</int>
+  </entry>
+  <entry>
+    <string>au_rate_limiter_info</string>
+    <org.lockss.plugin.RateLimiterInfo>
+      <!-- this very next rate is ignored -->
+      <rate>1/3s</rate>
+      <cond>
+        <!-- pause crawls Monday through Friday 9am through 9pm Eastern (12h) -->
+        <entry>
+          <org.lockss.daemon.CrawlWindows-Daily>
+            <from>9:00</from>
+            <to>21:00</to>
+            <timeZoneId>US/Eastern</timeZoneId>
+            <daysOfWeek>2;3;4;5;6</daysOfWeek>
+          </org.lockss.daemon.CrawlWindows-Daily>
+          <org.lockss.plugin.RateLimiterInfo>
+            <rate>1/12h</rate>
+          </org.lockss.plugin.RateLimiterInfo>
+        </entry>
+        <!-- pause crawls Sunday 2am through 10am Eastern (8h) -->
+        <entry>
+          <org.lockss.daemon.CrawlWindows-Daily>
+            <from>2:00</from>
+            <to>10:00</to>
+            <timeZoneId>US/Eastern</timeZoneId>
+            <daysOfWeek>1</daysOfWeek>
+          </org.lockss.daemon.CrawlWindows-Daily>
+          <org.lockss.plugin.RateLimiterInfo>
+            <rate>1/8h</rate>
+          </org.lockss.plugin.RateLimiterInfo>
+        </entry>
+        <!-- the rest of the time, 1/3s -->
+        <entry>
+          <org.lockss.daemon.CrawlWindows-Always />
+          <org.lockss.plugin.RateLimiterInfo>
+            <rate>1/3s</rate>
+          </org.lockss.plugin.RateLimiterInfo>
+        </entry>
+      </cond>
+    </org.lockss.plugin.RateLimiterInfo>
   </entry>
 </map>

@@ -1,5 +1,5 @@
 /*
- * $Id: TestGPOFDSysCrawlWindow.java,v 1.1 2014-08-08 18:33:47 thib_gc Exp $
+ * $Id: TestGPOFDSysCrawlWindow.java,v 1.2 2014-08-21 22:41:26 thib_gc Exp $
  */
 
 /*
@@ -35,76 +35,137 @@ package org.lockss.plugin.usdocspln.gov.gpo.fdsys;
 import java.text.*;
 import java.util.*;
 
-import org.lockss.daemon.CrawlWindow;
-import org.lockss.test.LockssTestCase;
+import org.lockss.config.Configuration;
+import org.lockss.crawler.CrawlRateLimiter;
+import org.lockss.daemon.*;
+import org.lockss.plugin.RateLimiterInfo;
+import org.lockss.plugin.base.BaseArchivalUnit;
+import org.lockss.plugin.definable.*;
+import org.lockss.test.*;
+import org.lockss.util.TimeBase;
 
+/**
+ * <p>
+ * This plugin currently has variable crawl rates that emulate a crawl window,
+ * to allow deep recrawls longer than the crawl window to succeed.
+ * </p>
+ */
 public class TestGPOFDSysCrawlWindow extends LockssTestCase {
 
-  protected CrawlWindow window;
+  protected DefinableArchivalUnit au;
+  
+  protected SimpleDateFormat easternSdf;
+  
+  protected SimpleDateFormat gmtSdf;
   
   public void setUp() throws Exception {
+    super.setUp();
+    // Set up date/time tools
     TimeZone.setDefault(TimeZone.getTimeZone("GMT"));
-    window = new GPOFDSysCrawlWindow().makeCrawlWindow();
+    easternSdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    easternSdf.setTimeZone(TimeZone.getTimeZone("US/Eastern"));
+    gmtSdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+    gmtSdf.setTimeZone(TimeZone.getTimeZone("GMT"));
+    // Set min fetch delay lower than the plugin's lowest, to test default
+    ConfigurationUtil.addFromArgs(BaseArchivalUnit.PARAM_MIN_FETCH_DELAY, "123");
+    Configuration config = ConfigurationUtil.fromArgs(ConfigParamDescr.BASE_URL.getKey(),
+                                                      "http://www.example.com/",
+                                                      "collection_id",
+                                                      "GOVXYZ",
+                                                      ConfigParamDescr.YEAR.getKey(),
+                                                      "2013");
+    DefinablePlugin dp = new DefinablePlugin();
+    dp.initPlugin(getMockLockssDaemon(), "org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsPlugin");
+    au = (DefinableArchivalUnit)dp.createAu(config);
   }
   
-  public void testCrawlWindowNY() throws Exception {
-    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-    sdf.setTimeZone(TimeZone.getTimeZone("US/Eastern"));
+  public void testWindowingCrawlRates() throws Exception {
+    RateLimiterInfo rli = au.getRateLimiterInfo();
+    assertEquals("GPO", rli.getCrawlPoolKey());
+    assertEquals("1/3s", rli.getDefaultRate()); // Ignored
+    CrawlRateLimiter crl = CrawlRateLimiter.Util.forRli(rli);
+
+    /*
+     * PST
+     */
+    // 2014-01-13 through 2014-01-17 are a Monday through Friday
+    for (int d = 13 /* Monday */ ; d <= 17 /* Friday */ ; ++d) {
+      TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-01-" + d + " 08:59:59")));
+      assertEquals("1/3s", crl.getRateLimiterFor("foo", null).getRate());
+      TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-01-" + d + " 09:00:00")));
+      assertEquals("1/12h", crl.getRateLimiterFor("foo", null).getRate());
+      TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-01-" + d + " 20:59:59")));
+      assertEquals("1/12h", crl.getRateLimiterFor("foo", null).getRate());
+      TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-01-" + d + " 21:00:00")));
+      assertEquals("1/3s", crl.getRateLimiterFor("foo", null).getRate());
+    }
+    // 2014-01-18 is a Saturday
+    TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-01-18 01:59:59")));
+    assertEquals("1/3s", crl.getRateLimiterFor("foo", null).getRate());
+    TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-01-18 02:00:00")));
+    assertEquals("1/3s", crl.getRateLimiterFor("foo", null).getRate());
+    TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-01-18 08:59:59")));
+    assertEquals("1/3s", crl.getRateLimiterFor("foo", null).getRate());
+    TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-01-18 09:00:00")));
+    assertEquals("1/3s", crl.getRateLimiterFor("foo", null).getRate());
+    TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-01-18 09:59:59")));
+    assertEquals("1/3s", crl.getRateLimiterFor("foo", null).getRate());
+    TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-01-18 10:00:00")));
+    assertEquals("1/3s", crl.getRateLimiterFor("foo", null).getRate());
+    TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-01-18 20:59:59")));
+    assertEquals("1/3s", crl.getRateLimiterFor("foo", null).getRate());
+    TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-01-18 21:00:00")));
+    assertEquals("1/3s", crl.getRateLimiterFor("foo", null).getRate());
+    // 2014-01-19 is a Sunday
+    TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-01-19 01:59:59")));
+    assertEquals("1/3s", crl.getRateLimiterFor("foo", null).getRate());
+    TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-01-19 02:00:00")));
+    assertEquals("1/8h", crl.getRateLimiterFor("foo", null).getRate());
+    TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-01-19 09:59:59")));
+    assertEquals("1/8h", crl.getRateLimiterFor("foo", null).getRate());
+    TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-01-19 10:00:00")));
+    assertEquals("1/3s", crl.getRateLimiterFor("foo", null).getRate());
     
-    // August 4, 2014 was a Monday
-    assertTrue(window.canCrawl(sdf.parse("2014-08-04 08:59:59")));
-    assertFalse(window.canCrawl(sdf.parse("2014-08-04 09:00:00")));
-    assertFalse(window.canCrawl(sdf.parse("2014-08-04 20:59:59")));
-    assertTrue(window.canCrawl(sdf.parse("2014-08-04 21:00:00")));
-    // August 8, 2014 was a Friday
-    assertTrue(window.canCrawl(sdf.parse("2014-08-08 08:59:59")));
-    assertFalse(window.canCrawl(sdf.parse("2014-08-08 09:00:00")));
-    assertFalse(window.canCrawl(sdf.parse("2014-08-08 20:59:59")));
-    assertTrue(window.canCrawl(sdf.parse("2014-08-08 21:00:00")));
-    // August 9, 2014 was a Saturday
-    assertTrue(window.canCrawl(sdf.parse("2014-08-09 01:59:59")));
-    assertTrue(window.canCrawl(sdf.parse("2014-08-09 02:00:00")));
-    assertTrue(window.canCrawl(sdf.parse("2014-08-09 08:59:59")));
-    assertTrue(window.canCrawl(sdf.parse("2014-08-09 09:00:00")));
-    assertTrue(window.canCrawl(sdf.parse("2014-08-09 09:59:59")));
-    assertTrue(window.canCrawl(sdf.parse("2014-08-09 10:00:00")));
-    assertTrue(window.canCrawl(sdf.parse("2014-08-09 20:59:59")));
-    assertTrue(window.canCrawl(sdf.parse("2014-08-09 21:00:00")));
-    // August 10, 2014 was a Sunday
-    assertTrue(window.canCrawl(sdf.parse("2014-08-10 01:59:59")));
-    assertFalse(window.canCrawl(sdf.parse("2014-08-10 02:00:00")));
-    assertFalse(window.canCrawl(sdf.parse("2014-08-10 09:59:59")));
-    assertTrue(window.canCrawl(sdf.parse("2014-08-10 10:00:00")));
+    /*
+     * PDT
+     */
+    // 2014-08-11 through 2014-08-15 are a Monday through Friday
+    for (int d = 11 /* Monday */ ; d <= 15 /* Friday */ ; ++d) {
+      TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-08-" + d + " 08:59:59")));
+      assertEquals("1/3s", crl.getRateLimiterFor("foo", null).getRate());
+      TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-08-" + d + " 09:00:00")));
+      assertEquals("1/12h", crl.getRateLimiterFor("foo", null).getRate());
+      TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-08-" + d + " 20:59:59")));
+      assertEquals("1/12h", crl.getRateLimiterFor("foo", null).getRate());
+      TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-08-" + d + " 21:00:00")));
+      assertEquals("1/3s", crl.getRateLimiterFor("foo", null).getRate());
+    }
+    // 2014-08-16 is a Saturday
+    TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-08-16 01:59:59")));
+    assertEquals("1/3s", crl.getRateLimiterFor("foo", null).getRate());
+    TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-08-16 02:00:00")));
+    assertEquals("1/3s", crl.getRateLimiterFor("foo", null).getRate());
+    TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-08-16 08:59:59")));
+    assertEquals("1/3s", crl.getRateLimiterFor("foo", null).getRate());
+    TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-08-16 09:00:00")));
+    assertEquals("1/3s", crl.getRateLimiterFor("foo", null).getRate());
+    TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-08-16 09:59:59")));
+    assertEquals("1/3s", crl.getRateLimiterFor("foo", null).getRate());
+    TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-08-16 10:00:00")));
+    assertEquals("1/3s", crl.getRateLimiterFor("foo", null).getRate());
+    TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-08-16 20:59:59")));
+    assertEquals("1/3s", crl.getRateLimiterFor("foo", null).getRate());
+    TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-08-16 21:00:00")));
+    assertEquals("1/3s", crl.getRateLimiterFor("foo", null).getRate());
+    // 2014-08-17 is a Sunday
+    TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-08-17 01:59:59")));
+    assertEquals("1/3s", crl.getRateLimiterFor("foo", null).getRate());
+    TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-08-17 02:00:00")));
+    assertEquals("1/8h", crl.getRateLimiterFor("foo", null).getRate());
+    TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-08-17 09:59:59")));
+    assertEquals("1/8h", crl.getRateLimiterFor("foo", null).getRate());
+    TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-08-17 10:00:00")));
+    assertEquals("1/3s", crl.getRateLimiterFor("foo", null).getRate());
   }
-  
-  public void testCrawlWindowCA() throws Exception {
-    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-    sdf.setTimeZone(TimeZone.getTimeZone("US/Pacific"));
-    
-    // August 4, 2014 was a Monday
-    assertTrue(window.canCrawl(sdf.parse("2014-08-04 05:59:59")));
-    assertFalse(window.canCrawl(sdf.parse("2014-08-04 06:00:00")));
-    assertFalse(window.canCrawl(sdf.parse("2014-08-04 17:59:59")));
-    assertTrue(window.canCrawl(sdf.parse("2014-08-04 18:00:00")));
-    // August 8, 2014 was a Friday
-    assertTrue(window.canCrawl(sdf.parse("2014-08-08 05:59:59")));
-    assertFalse(window.canCrawl(sdf.parse("2014-08-08 06:00:00")));
-    assertFalse(window.canCrawl(sdf.parse("2014-08-08 17:59:59")));
-    assertTrue(window.canCrawl(sdf.parse("2014-08-08 18:00:00")));
-    // August 9, 2014 was a Saturday
-    assertTrue(window.canCrawl(sdf.parse("2014-08-08 22:59:59")));
-    assertTrue(window.canCrawl(sdf.parse("2014-08-08 23:00:00")));
-    assertTrue(window.canCrawl(sdf.parse("2014-08-09 05:59:59")));
-    assertTrue(window.canCrawl(sdf.parse("2014-08-09 06:00:00")));
-    assertTrue(window.canCrawl(sdf.parse("2014-08-09 06:59:59")));
-    assertTrue(window.canCrawl(sdf.parse("2014-08-09 07:00:00")));
-    assertTrue(window.canCrawl(sdf.parse("2014-08-09 17:59:59")));
-    assertTrue(window.canCrawl(sdf.parse("2014-08-09 18:00:00")));
-    // August 10, 2014 was a Sunday
-    assertTrue(window.canCrawl(sdf.parse("2014-08-09 22:59:59")));
-    assertFalse(window.canCrawl(sdf.parse("2014-08-09 23:00:00")));
-    assertFalse(window.canCrawl(sdf.parse("2014-08-10 06:59:59")));
-    assertTrue(window.canCrawl(sdf.parse("2014-08-10 07:00:00")));
-  }
-  
+
 }
