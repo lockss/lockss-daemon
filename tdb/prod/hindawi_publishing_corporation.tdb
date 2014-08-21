@@ -6714,9 +6714,9 @@
 
     param[journal_id] = jcnc
 
-    au < released ; 2008 ; Journal of Computer Networks and Communications Volume 2008 ; 2008 ; 2008 >
-    au < released ; 2009 ; Journal of Computer Networks and Communications Volume 2009 ; 2009 ; 2009 >
-    au < released ; 2010 ; Journal of Computer Networks and Communications Volume 2010 ; 2010 ; 2010 >
+    au < released ; 2008 ; Journal of Computer Systems, Networks, and Communications Volume 2008 ; 2008 ; 2008 >
+    au < released ; 2009 ; Journal of Computer Systems, Networks, and Communications Volume 2009 ; 2009 ; 2009 >
+    au < released ; 2010 ; Journal of Computer Systems, Networks, and Communications Volume 2010 ; 2010 ; 2010 >
     au < released ; 2011 ; Journal of Computer Networks and Communications Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; Journal of Computer Networks and Communications Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Journal of Computer Networks and Communications Volume 2013 ; 2013 ; 2013 >
@@ -6874,7 +6874,7 @@
 
     param[journal_id] = jde
     
-    au < manifest ; 2014 ; Journal of Difference Equationsy Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; 2014 ; Journal of Difference Equations Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -7521,9 +7521,10 @@
 
     comment[supersedes] = see journal id 'rlnt', incongruent overlap
     param[journal_id] = jnt
+    comment[merged] = Research Letters in Nanotechnology 2008–2009 (Merged)
 
-    au < released ; 2008 ; Journal of Nanotechnology Volume 2008 ; 2008 ; 2008 >
-    au < released ; 2009 ; Journal of Nanotechnology Volume 2009 ; 2009 ; 2009 >
+    au < released ; 2008 ; Research Letters in Nanotechnology Volume 2008 ; 2008 ; 2008 >
+    au < released ; 2009 ; Research Letters in Nanotechnology Volume 2009 ; 2009 ; 2009 >
     au < released ; 2010 ; Journal of Nanotechnology Volume 2010 ; 2010 ; 2010 >
     au < released ; 2011 ; Journal of Nanotechnology Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; Journal of Nanotechnology Volume 2012 ; 2012 ; 2012 >
@@ -9072,10 +9073,11 @@
     
     {
     param[journal_id] = physri
+    comment[merged] = Research Letters in Physics 2008–2009 (Merged)
 
     au < manifest ; 2008 ; Research Letters in Physics Volume 2008 ; 2008 ; 2008 >
     au < manifest ; 2009 ; Research Letters in Physics Volume 2009 ; 2009 ; 2009 >
-    au < manifest ; 2010 ; Research Letters in Physics Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; 2010 ; Physics Research International Volume 2010 ; 2010 ; 2010 >
     au < manifest ; 2011 ; Physics Research International Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; Physics Research International Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Physics Research International Volume 2013 ; 2013 ; 2013 >
