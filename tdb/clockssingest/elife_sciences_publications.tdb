@@ -1,11 +1,12 @@
 {
-
   publisher <
     name = eLife Sciences Publications ;
     info[contract] = 2014 ;
     info[tester] = 0
   >
 
+  plugin = org.lockss.plugin.highwire.elife.ClockssELifeDrupalPlugin
+  implicit < status ; status2 ; year ; name ; param[volume_name] >
   
   {
     title <
@@ -15,7 +16,10 @@
 
     comment[platform] = HighWire Drupal
     param[base_url] = http://elifesciences.org/
-
+    {
+      au < testing ; exists ; 2012 ; eLife : Year 2012 ; 2012 >
+      au < testing ; exists ; 2013 ; eLife : Year 2013 ; 2013 >
+      au < testing ; exists ; 2014 ; eLife : Year 2014 ; 2014 >
+    }
   }
-
 }

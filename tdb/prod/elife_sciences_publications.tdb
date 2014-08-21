@@ -3,6 +3,9 @@
     name = eLife Sciences Publications
   >
 
+  plugin = org.lockss.plugin.highwire.elife.ELifeDrupalPlugin
+  implicit < status ; year ; name ; param[volume_name] >
+  
   {
     title <
       name = eLife ;
@@ -11,8 +14,10 @@
 
     comment[platform] = HighWire Drupal
     param[base_url] = http://elifesciences.org/
-
+    {
+      au < testing ; 2012 ; eLife : Year 2012 ; 2012 >
+      au < testing ; 2013 ; eLife : Year 2013 ; 2013 >
+      au < testing ; 2014 ; eLife : Year 2014 ; 2014 >
+    }
   }
-
 }
-
