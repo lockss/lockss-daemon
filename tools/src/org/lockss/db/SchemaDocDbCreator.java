@@ -1,5 +1,5 @@
 /*
- * $Id: SchemaDocDbCreator.java,v 1.2 2013-10-25 19:57:25 fergaloy-sf Exp $
+ * $Id: SchemaDocDbCreator.java,v 1.3 2014-08-21 00:05:59 fergaloy-sf Exp $
  */
 
 /*
@@ -79,6 +79,7 @@ public class SchemaDocDbCreator {
 
     DbManager dbManager = daemon.getDbManager();
     dbManager.startService();
+    dbManager.waitForThreadsToFinish(500);
     dbManager.stopService();
     System.exit(0);
   }
