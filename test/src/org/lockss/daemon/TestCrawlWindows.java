@@ -1,10 +1,10 @@
 /*
- * $Id: TestCrawlWindows.java,v 1.9 2014-06-09 23:53:28 tlipkis Exp $
+ * $Id: TestCrawlWindows.java,v 1.10 2014-08-21 22:41:03 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,7 +34,7 @@ package org.lockss.daemon;
 
 import java.io.*;
 import java.util.*;
-import java.text.SimpleDateFormat;
+import java.text.*;
 import org.lockss.util.*;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockCrawlWindow;
@@ -43,15 +43,18 @@ import org.lockss.test.MockCrawlWindow;
  * This is the test class for org.lockss.daemon.CrawlWindowRule.Window
  */
 public class TestCrawlWindows extends LockssTestCase {
+  
   Calendar start;
   Calendar end;
   Calendar testCal;
 
-  static TimeZone GMT = TimeZone.getTimeZone("GMT");
+  protected static final TimeZone GMT = TimeZone.getTimeZone("GMT");
+  protected static final TimeZone GMT_PLUS_1 = TimeZone.getTimeZone("GMT+1:00");
+  protected static final TimeZone EASTERN = TimeZone.getTimeZone("US/Eastern");
+  protected static final TimeZone PACIFIC = TimeZone.getTimeZone("US/Pacific");
 
   public void setUp() throws Exception {
     super.setUp();
-
     start = Calendar.getInstance();
     end = Calendar.getInstance();
     testCal = Calendar.getInstance();
@@ -64,68 +67,149 @@ public class TestCrawlWindows extends LockssTestCase {
   }
 
   public void testTimeZone() {
-    start = Calendar.getInstance(GMT);
-    start.set(Calendar.HOUR_OF_DAY, 7);
-    start.set(Calendar.MINUTE, 0);
-    end = Calendar.getInstance(GMT);
-    end.set(Calendar.HOUR_OF_DAY, 8);
-    // since the end point is non-inclusive, end a minute after the hour
-    end.set(Calendar.MINUTE, 1);
-
-    // same time zone
-    CrawlWindows.BaseCalCrawlWindow interval =
-        new CrawlWindows.Interval(start, end, CrawlWindows.TIME, GMT);
-
-    testCal = Calendar.getInstance(GMT);
-    testCal.set(Calendar.MINUTE, 0);
-    testCal.set(Calendar.HOUR_OF_DAY, 8);
+    setTime(start, GMT, 11, 30);
+    setTime(end, GMT, 12, 31); // end point non-inclusive: end a minute after
+    
+    CrawlWindows.BaseCalCrawlWindow interval = null;
+    
+    // From 11:30am to 12:30pm inclusive GMT
+    interval = new CrawlWindows.Interval(start, end, CrawlWindows.TIME, GMT);
+    setTime(testCal, GMT, 11, 29);
+    assertFalse(interval.canCrawl(testCal.getTime()));
+    setTime(testCal, GMT, 11, 30);
     assertTrue(interval.canCrawl(testCal.getTime()));
-    testCal.set(Calendar.HOUR_OF_DAY, 6);
+    setTime(testCal, GMT, 12, 30);
+    assertTrue(interval.canCrawl(testCal.getTime()));
+    setTime(testCal, GMT, 12, 31);
     assertFalse(interval.canCrawl(testCal.getTime()));
 
-    // different time zone
-    CrawlWindows.BaseCalCrawlWindow interval2 =
-        new CrawlWindows.Interval(start, end, CrawlWindows.TIME,
-				  TimeZone.getTimeZone("GMT+1:00"));
-    testCal.set(Calendar.HOUR_OF_DAY, 8);
-    assertFalse(interval2.canCrawl(testCal.getTime()));
-    testCal.set(Calendar.HOUR_OF_DAY, 6);
-    assertTrue(interval2.canCrawl(testCal.getTime()));
+    // From 11:30am to 12:30pm inclusive GMT+1:00 (start and end were GMT)
+    interval = new CrawlWindows.Interval(start, end, CrawlWindows.TIME, GMT_PLUS_1);
+    // which is from 10:30am to 11:30am inclusive GMT
+    setTime(testCal, GMT, 10, 29);
+    assertFalse(interval.canCrawl(testCal.getTime()));
+    setTime(testCal, GMT, 10, 30);
+    assertTrue(interval.canCrawl(testCal.getTime()));
+    setTime(testCal, GMT, 11, 30);
+    assertTrue(interval.canCrawl(testCal.getTime()));
+    setTime(testCal, GMT, 11, 31);
+    assertFalse(interval.canCrawl(testCal.getTime()));
+    
+    // From 11:30am to 12:30pm inclusive GMT
+    interval = new CrawlWindows.Interval(start, end, CrawlWindows.TIME, GMT);
+    // which is from 6:30am to 7:30am inclusive EST
+    setDate(testCal, EASTERN, 2014, Calendar.JANUARY, 1);
+    setTime(testCal, EASTERN, 6, 29);
+    assertFalse(interval.canCrawl(testCal.getTime()));
+    setTime(testCal, EASTERN, 6, 30);
+    assertTrue(interval.canCrawl(testCal.getTime()));
+    setTime(testCal, EASTERN, 7, 30);
+    assertTrue(interval.canCrawl(testCal.getTime()));
+    setTime(testCal, EASTERN, 7, 31);
+    assertFalse(interval.canCrawl(testCal.getTime()));
+    // ...and from 7:30am to 8:30am inclusive EDT
+    setDate(testCal, EASTERN, 2014, Calendar.JULY, 1);
+    setTime(testCal, EASTERN, 7, 29);
+    assertFalse(interval.canCrawl(testCal.getTime()));
+    setTime(testCal, EASTERN, 7, 30);
+    assertTrue(interval.canCrawl(testCal.getTime()));
+    setTime(testCal, EASTERN, 8, 30);
+    assertTrue(interval.canCrawl(testCal.getTime()));
+    setTime(testCal, EASTERN, 8, 31);
+    assertFalse(interval.canCrawl(testCal.getTime()));
+
+    // From 11:30am to 12:30pm inclusive US/Eastern (start and end were GMT)
+    interval = new CrawlWindows.Interval(start, end, CrawlWindows.TIME, EASTERN);
+    // which is from 4:30pm to 5:30pm inclusive GMT in Winter
+    setDate(testCal, GMT, 2014, Calendar.JANUARY, 1);
+    setTime(testCal, GMT, 16, 29);
+    assertFalse(interval.canCrawl(testCal.getTime()));
+    setTime(testCal, GMT, 16, 30);
+    assertTrue(interval.canCrawl(testCal.getTime()));
+    setTime(testCal, GMT, 17, 30);
+    assertTrue(interval.canCrawl(testCal.getTime()));
+    setTime(testCal, GMT, 17, 31);
+    assertFalse(interval.canCrawl(testCal.getTime()));
+    // ...and from 3:30pm to 4:30pm inclusive GMT in Summer
+    setDate(testCal, GMT, 2014, Calendar.JULY, 1);
+    setTime(testCal, GMT, 15, 29);
+    assertFalse(interval.canCrawl(testCal.getTime()));
+    setTime(testCal, GMT, 15, 30);
+    assertTrue(interval.canCrawl(testCal.getTime()));
+    setTime(testCal, GMT, 16, 30);
+    assertTrue(interval.canCrawl(testCal.getTime()));
+    setTime(testCal, GMT, 16, 31);
+    assertFalse(interval.canCrawl(testCal.getTime()));
+    
+    // From 11:30am to 12:30pm inclusive US/Eastern (start and end were GMT)
+    interval = new CrawlWindows.Interval(start, end, CrawlWindows.TIME, EASTERN);
+    // which is from 8:30am to 9:30am inclusive US/Pacific in Winter
+    setDate(testCal, PACIFIC, 2014, Calendar.JANUARY, 1);
+    setTime(testCal, PACIFIC, 8, 29);
+    assertFalse(interval.canCrawl(testCal.getTime()));
+    setTime(testCal, PACIFIC, 8, 30);
+    assertTrue(interval.canCrawl(testCal.getTime()));
+    setTime(testCal, PACIFIC, 9, 30);
+    assertTrue(interval.canCrawl(testCal.getTime()));
+    setTime(testCal, PACIFIC, 9, 31);
+    assertFalse(interval.canCrawl(testCal.getTime()));
+    // ...and also in Summer
+    setDate(testCal, PACIFIC, 2014, Calendar.JULY, 1);
+    setTime(testCal, PACIFIC, 8, 29);
+    assertFalse(interval.canCrawl(testCal.getTime()));
+    setTime(testCal, PACIFIC, 8, 30);
+    assertTrue(interval.canCrawl(testCal.getTime()));
+    setTime(testCal, PACIFIC, 9, 30);
+    assertTrue(interval.canCrawl(testCal.getTime()));
+    setTime(testCal, PACIFIC, 9, 31);
+    assertFalse(interval.canCrawl(testCal.getTime()));
   }
 
-  public void testANDSetNull() {
+  public void testAndSetNull() {
     try {
       CrawlWindow cw = new CrawlWindows.And(null);
-      fail("CrawlWindows.AND with null list should throw");
-    } catch (NullPointerException e) { }
+      fail("CrawlWindows.And with null list should throw");
+    }
+    catch (NullPointerException expected) {
+      // Expected
+    }
     CrawlWindow cw = new CrawlWindows.And(Collections.EMPTY_SET);
     assertTrue(cw.canCrawl(testCal.getTime()));
   }
 
-  public void testORSetNull() {
+  public void testOrSetNull() {
     try {
       CrawlWindow cw = new CrawlWindows.Or(null);
-      fail("CrawlWindows.OR with null list should throw");
-    } catch (NullPointerException e) { }
+      fail("CrawlWindows.Or with null list should throw");
+    }
+    catch (NullPointerException expected) {
+      // Expected
+    }
     CrawlWindow cw = new CrawlWindows.Or(Collections.EMPTY_SET);
     assertFalse(cw.canCrawl(testCal.getTime()));
   }
 
-  public void testNOTNull() {
+  public void testNotNull() {
     try {
       CrawlWindow cw = new CrawlWindows.Not(null);
-      fail("CrawlWindows.NOT with null window should throw");
-    } catch (NullPointerException e) { }
+      fail("CrawlWindows.Not with null window should throw");
+    }
+    catch (NullPointerException expected) {
+      // Expected
+    }
   }
 
   public void testWindowSetWrongClass() {
     try {
       CrawlWindow cw = new CrawlWindows.And(SetUtil.set("foo"));
-      fail("CrawlWindows.WindowSet with list of non-CrawlWindows should throw");
-    } catch (ClassCastException e) { }
+      fail("CrawlWindows.WindowSet with set of non-CrawlWindows should throw");
+    }
+    catch (ClassCastException expected) {
+      // Expected
+    }
   }
 
-  public void testANDSet() {
+  public void testAndSet() {
     MockCrawlWindow win1 = new MockCrawlWindow();
     win1.setAllowCrawl(false);
     MockCrawlWindow win2 = new MockCrawlWindow();
@@ -143,7 +227,7 @@ public class TestCrawlWindows extends LockssTestCase {
     assertTrue(andWin.canCrawl(testCal.getTime()));
   }
 
-  public void testORSet() {
+  public void testOrSet() {
     MockCrawlWindow win1 = new MockCrawlWindow();
     win1.setAllowCrawl(false);
     MockCrawlWindow win2 = new MockCrawlWindow();
@@ -161,7 +245,7 @@ public class TestCrawlWindows extends LockssTestCase {
     assertTrue(orWin.canCrawl(testCal.getTime()));
   }
 
-  public void testNOTWindow() {
+  public void testNotWindow() {
     MockCrawlWindow win1 = new MockCrawlWindow();
     win1.setAllowCrawl(false);
 
@@ -211,70 +295,62 @@ public class TestCrawlWindows extends LockssTestCase {
     assertFalse(interval.isMatch(testCal));
   }
 
+  /**
+   * 
+   */
   public void testIntervalTimeStandard() {
     // interval from 7:30->15:45
-    start.set(Calendar.HOUR_OF_DAY, 7);
-    start.set(Calendar.MINUTE, 30);
-    end.set(Calendar.HOUR_OF_DAY, 15);
-    end.set(Calendar.MINUTE, 45);
+    setTime(start, 7, 30);
+    setTime(end, 15, 45);
     CrawlWindows.Interval interval = new CrawlWindows.Interval(start, end,
         CrawlWindows.TIME, null);
 
-    testCal.set(Calendar.HOUR_OF_DAY, 6);
+    setTime(testCal, 6, 0);
     assertFalse(interval.isMatch(testCal));
-    testCal.set(Calendar.HOUR_OF_DAY, 7);
-    testCal.set(Calendar.MINUTE, 25);
+    setTime(testCal, 7, 25);
     assertFalse(interval.isMatch(testCal));
-    testCal.set(Calendar.MINUTE, 30);
+    setTime(testCal, 7, 30);
     assertTrue(interval.isMatch(testCal));
-    testCal.set(Calendar.MINUTE, 47);
+    setTime(testCal, 7, 47);
     assertTrue(interval.isMatch(testCal));
-    testCal.set(Calendar.HOUR_OF_DAY, 12);
+    setTime(testCal, 12, 47);
     assertTrue(interval.isMatch(testCal));
-    testCal.set(Calendar.HOUR_OF_DAY, 15);
-    testCal.set(Calendar.MINUTE, 5);
+    setTime(testCal, 15, 5);
     assertTrue(interval.isMatch(testCal));
-    testCal.set(Calendar.MINUTE, 44);
+    setTime(testCal, 15, 44);
     assertTrue(interval.isMatch(testCal));
-    testCal.set(Calendar.MINUTE, 45);
+    setTime(testCal, 15, 45);
     assertFalse(interval.isMatch(testCal));
-    testCal.set(Calendar.HOUR_OF_DAY, 17);
-    testCal.set(Calendar.MINUTE, 0);
+    setTime(testCal, 17, 0);
     assertFalse(interval.isMatch(testCal));
   }
 
   public void testIntervalTimeWrapAround() {
     // interval from 15:30->7:45
-    start.set(Calendar.HOUR_OF_DAY, 15);
-    start.set(Calendar.MINUTE, 30);
-    end.set(Calendar.HOUR_OF_DAY, 7);
-    end.set(Calendar.MINUTE, 45);
-
+    setTime(start, 15, 30);
+    setTime(end, 7, 45);
     CrawlWindows.Interval interval = new CrawlWindows.Interval(start, end,
         CrawlWindows.TIME, null);
 
-    testCal.set(Calendar.HOUR_OF_DAY, 14);
+    setTime(testCal, 14, 0);
     assertFalse(interval.isMatch(testCal));
-    testCal.set(Calendar.HOUR_OF_DAY, 15);
-    testCal.set(Calendar.MINUTE, 25);
+    setTime(testCal, 15, 25);
     assertFalse(interval.isMatch(testCal));
-    testCal.set(Calendar.MINUTE, 30);
+    setTime(testCal, 15, 30);
     assertTrue(interval.isMatch(testCal));
-    testCal.set(Calendar.MINUTE, 47);
+    setTime(testCal, 15, 47);
     assertTrue(interval.isMatch(testCal));
-    testCal.set(Calendar.HOUR_OF_DAY, 17);
+    setTime(testCal, 17, 47);
     assertTrue(interval.isMatch(testCal));
-    testCal.set(Calendar.HOUR_OF_DAY, 1);
+    setTime(testCal, 1, 47);
     assertTrue(interval.isMatch(testCal));
-    testCal.set(Calendar.HOUR_OF_DAY, 7);
-    testCal.set(Calendar.MINUTE, 5);
+    setTime(testCal, 7, 5);
     assertTrue(interval.isMatch(testCal));
-    testCal.set(Calendar.MINUTE, 44);
+    setTime(testCal, 7, 44);
     assertTrue(interval.isMatch(testCal));
-    testCal.set(Calendar.MINUTE, 45);
+    setTime(testCal, 7, 45);
     assertFalse(interval.isMatch(testCal));
-    testCal.set(Calendar.HOUR_OF_DAY, 8);
-    testCal.set(Calendar.MINUTE, 0);
+    setTime(testCal, 8, 0);
     assertFalse(interval.isMatch(testCal));
   }
 
@@ -310,7 +386,7 @@ public class TestCrawlWindows extends LockssTestCase {
     assertFalse(interval.isMatch(testCal));
   }
 
-  public void testANDIntervals() {
+  public void testAndIntervals() {
     // interval from 7->15
     start.set(Calendar.HOUR_OF_DAY, 7);
     end.set(Calendar.HOUR_OF_DAY, 15);
@@ -404,38 +480,44 @@ public class TestCrawlWindows extends LockssTestCase {
   }
 
   public void testGetCrawlIntervals() {
-    start.set(Calendar.HOUR_OF_DAY, 13);
-    start.set(Calendar.MINUTE, 55);
-    // make sure the dates are constant between all the calendars
+    /*
+     * This test is fragile. TimeInterval is implemented as a pair of doubles
+     * which are epoch milliseconds, but the granularity of getCrawlIntervals()
+     * is one minute and the granularity of crawl windows is one second.
+     * Removing any of the alignments on 'start' introduces mysterious
+     * intermittent failures between the 'expected' list and the 'actual' list
+     * of TimeIntervals that end up being noise in the milliseconds.
+     */
+    
+    // 1:55pm->2:00pm
+    setTime(start, 13, 55);
     end.setTime(start.getTime());
-    end.set(Calendar.HOUR_OF_DAY, 14);
-    end.set(Calendar.MINUTE, 0);
-
-    CrawlWindow interval = new CrawlWindows.Interval(start, end,
-        CrawlWindows.TIME, null);
+    setTime(end, 14, 0);
+    CrawlWindow interval = new CrawlWindows.Interval(start, end, CrawlWindows.TIME, null);
+    
+    // 2:05pm->2:15pm
     Calendar start2 = Calendar.getInstance();
-    Calendar end2 = Calendar.getInstance();
     start2.setTime(start.getTime());
-    start2.set(Calendar.HOUR_OF_DAY, 14);
-    start2.set(Calendar.MINUTE, 5);
+    setTime(start2, 14, 5);
+    Calendar end2 = Calendar.getInstance();
     end2.setTime(start.getTime());
-    end2.set(Calendar.HOUR_OF_DAY, 14);
-    end2.set(Calendar.MINUTE, 15);
-    CrawlWindow interval2 = new CrawlWindows.Interval(start2, end2,
-        CrawlWindows.TIME, null);
+    setTime(end2, 14, 15);
+    CrawlWindow interval2 = new CrawlWindows.Interval(start2, end2, CrawlWindows.TIME, null);
 
+    // Union of 1:55pm->2:00pm and 2:05pm->2:15pm
     CrawlWindow orWin = new CrawlWindows.Or(SetUtil.set(interval, interval2));
 
+    // 1:50pm->2:10pm
     Calendar start3 = Calendar.getInstance();
-    Calendar end3 = Calendar.getInstance();
     start3.setTime(start.getTime());
-    start3.set(Calendar.HOUR_OF_DAY, 13);
-    start3.set(Calendar.MINUTE, 50);
-    // make sure the dates are constant between start and end
+    setTime(start3, 13, 50);
+    Calendar end3 = Calendar.getInstance();
     end3.setTime(start.getTime());
-    end3.set(Calendar.HOUR_OF_DAY, 14);
-    end3.set(Calendar.MINUTE, 10);
+    setTime(end3, 14, 10);
 
+    // The expected crawl intervals in the union of 1:55pm->2:00pm and
+    // 2:05pm->2:15pm overlapping with 1:50pm->2:10pm are 1:55pm->2:00pm and
+    // 2:05->2:10pm, for a total of 10 minutes
     List expectedList = ListUtil.list(
         new TimeInterval(start.getTime(), end.getTime()),
         // last interval ends early
@@ -448,117 +530,195 @@ public class TestCrawlWindows extends LockssTestCase {
     assertEquals(10, numMinutes);
   }
 
-  public void testDaily() {
+  public void testDaily() throws Exception {
     CrawlWindows.Daily win;
 
     // Open from 2:00am to 7:00am GMT
-    win = new CrawlWindows.Daily("2:00", "7:00", "GMT");
+    SimpleDateFormat gmtSdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+    gmtSdf.setTimeZone(GMT);
+    win = new CrawlWindows.Daily("2:00", "7:00", GMT.getID());
     assertEquals("Daily from 2:00 to 7:00, GMT", win.toString());
-    assertFalse(win.canCrawl(new Date("1/1/1 0:0 GMT")));
-    assertFalse(win.canCrawl(new Date("1/1/1 1:59 GMT")));
-    assertFalse(win.canCrawl(new Date("1/1/2 1:59 GMT")));
-    assertFalse(win.canCrawl(new Date("1/1/6 1:59 GMT")));
-    assertTrue(win.canCrawl(new Date("1/1/1 2:00 GMT")));
-    assertTrue(win.canCrawl(new Date("1/1/1 6:00 GMT")));
-    assertTrue(win.canCrawl(new Date("1/1/1 6:59 GMT")));
-    assertFalse(win.canCrawl(new Date("1/1/1 7:00 GMT")));
-    assertFalse(win.canCrawl(new Date("1/1/1 23:59 GMT")));
+    assertFalse(win.canCrawl(gmtSdf.parse("2014-01-01 00:00")));
+    assertFalse(win.canCrawl(gmtSdf.parse("2014-07-01 00:00")));
+    assertFalse(win.canCrawl(gmtSdf.parse("2014-01-01 01:59")));
+    assertFalse(win.canCrawl(gmtSdf.parse("2014-07-01 01:59")));
+    assertTrue(win.canCrawl(gmtSdf.parse("2014-01-01 02:00")));
+    assertTrue(win.canCrawl(gmtSdf.parse("2014-07-01 02:00")));
+    assertTrue(win.canCrawl(gmtSdf.parse("2014-01-01 06:59")));
+    assertTrue(win.canCrawl(gmtSdf.parse("2014-07-01 06:59")));
+    assertFalse(win.canCrawl(gmtSdf.parse("2014-01-01 07:00")));
+    assertFalse(win.canCrawl(gmtSdf.parse("2014-07-01 07:00")));
+    assertFalse(win.canCrawl(gmtSdf.parse("2014-01-01 23:59")));
+    assertFalse(win.canCrawl(gmtSdf.parse("2014-07-01 23:59")));
 
-    // Open from 7:00am to 10:00pm, timezone GMT-0700 = 14:00 - 05:00 GMT
-    win = new CrawlWindows.Daily("7:00", "22:00", "GMT-0700");
-    assertEquals("Daily from 7:00 to 22:00, GMT-0700", win.toString());
-    assertFalse(win.canCrawl(new Date("1/1/1 13:59 GMT")));
-    assertFalse(win.canCrawl(new Date("1/1/2 13:59 GMT")));
-    assertFalse(win.canCrawl(new Date("1/1/4 13:59 GMT")));
-    assertFalse(win.canCrawl(new Date("1/1/7 13:59 GMT")));
-    assertFalse(win.canCrawl(new Date("1/1/1 6:59 GMT-0700")));
-    assertTrue(win.canCrawl(new Date("1/1/1 14:00 GMT")));
-    assertTrue(win.canCrawl(new Date("1/1/1 14:01 GMT")));
-    assertTrue(win.canCrawl(new Date("1/1/1 15:00 GMT")));
-    assertTrue(win.canCrawl(new Date("1/1/1 23:59 GMT")));
-    assertTrue(win.canCrawl(new Date("1/1/1 00:00 GMT")));
-    assertTrue(win.canCrawl(new Date("1/1/1 01:00 GMT")));
-    assertTrue(win.canCrawl(new Date("1/1/1 04:59 GMT")));
-    assertFalse(win.canCrawl(new Date("1/1/1 05:01 GMT")));
+    // Open from 7:00am to 10:00pm GMT+01:00
+    // which is 6am-9pm GMT
+    win = new CrawlWindows.Daily("7:00", "22:00", GMT_PLUS_1.getID());
+    assertEquals("Daily from 7:00 to 22:00, GMT+01:00", win.toString());
+    assertFalse(win.canCrawl(gmtSdf.parse("2014-01-01 00:00")));
+    assertFalse(win.canCrawl(gmtSdf.parse("2014-07-01 00:00")));
+    assertFalse(win.canCrawl(gmtSdf.parse("2014-01-01 05:59")));
+    assertFalse(win.canCrawl(gmtSdf.parse("2014-07-01 05:59")));
+    assertTrue(win.canCrawl(gmtSdf.parse("2014-01-01 06:00")));
+    assertTrue(win.canCrawl(gmtSdf.parse("2014-07-01 06:00")));
+    assertTrue(win.canCrawl(gmtSdf.parse("2014-01-01 20:59")));
+    assertTrue(win.canCrawl(gmtSdf.parse("2014-07-01 20:59")));
+    assertFalse(win.canCrawl(gmtSdf.parse("2014-01-01 21:00")));
+    assertFalse(win.canCrawl(gmtSdf.parse("2014-07-01 21:00")));
+    assertFalse(win.canCrawl(gmtSdf.parse("2014-01-01 23:59")));
+    assertFalse(win.canCrawl(gmtSdf.parse("2014-07-01 23:59")));
 
     // Open from 10:00pm to 6:00am GMT
-    win = new CrawlWindows.Daily("22:00", "6:00", "GMT");
+    win = new CrawlWindows.Daily("22:00", "6:00", GMT.getID());
     assertEquals("Daily from 22:00 to 6:00, GMT", win.toString());
-    assertFalse(win.canCrawl(new Date("1/1/1 21:59 GMT")));
-    assertFalse(win.canCrawl(new Date("1/1/2 21:59 GMT")));
-    assertFalse(win.canCrawl(new Date("1/1/4 21:59 GMT")));
-    assertFalse(win.canCrawl(new Date("1/1/7 21:59 GMT")));
-    assertTrue(win.canCrawl(new Date("1/1/1 22:00 GMT")));
-    assertTrue(win.canCrawl(new Date("1/1/1 22:01 GMT")));
-    assertTrue(win.canCrawl(new Date("1/1/1 23:00 GMT")));
-    assertTrue(win.canCrawl(new Date("1/1/1 23:59 GMT")));
-    assertTrue(win.canCrawl(new Date("1/1/1 00:00 GMT")));
-    assertTrue(win.canCrawl(new Date("1/1/1 01:00 GMT")));
-    assertTrue(win.canCrawl(new Date("1/1/1 05:59 GMT")));
-    assertFalse(win.canCrawl(new Date("1/1/1 06:01 GMT")));
+    assertTrue(win.canCrawl(gmtSdf.parse("2014-01-01 00:00")));
+    assertTrue(win.canCrawl(gmtSdf.parse("2014-07-01 00:00")));
+    assertTrue(win.canCrawl(gmtSdf.parse("2014-01-01 05:59")));
+    assertTrue(win.canCrawl(gmtSdf.parse("2014-07-01 05:59")));
+    assertFalse(win.canCrawl(gmtSdf.parse("2014-01-01 06:00")));
+    assertFalse(win.canCrawl(gmtSdf.parse("2014-07-01 06:00")));
+    assertFalse(win.canCrawl(gmtSdf.parse("2014-01-01 21:59")));
+    assertFalse(win.canCrawl(gmtSdf.parse("2014-07-01 21:59")));
+    assertTrue(win.canCrawl(gmtSdf.parse("2014-01-01 22:00")));
+    assertTrue(win.canCrawl(gmtSdf.parse("2014-07-01 22:00")));
+    assertTrue(win.canCrawl(gmtSdf.parse("2014-01-01 23:59")));
+    assertTrue(win.canCrawl(gmtSdf.parse("2014-07-01 23:59")));
+
+    // Open from 12:30am to 3:30am US/Eastern
+    // which is 5:30-8:30am in Winter (EST)
+    // and 4:30-7:30am in Summer (EDT)
+    SimpleDateFormat easternSdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+    easternSdf.setTimeZone(EASTERN);
+    win = new CrawlWindows.Daily("0:30", "3:30", EASTERN.getID());
+    assertEquals("Daily from 0:30 to 3:30, US/Eastern", win.toString());
+    // EST
+    assertFalse(win.canCrawl(easternSdf.parse("2014-01-01 00:29")));
+    assertFalse(win.canCrawl(gmtSdf.parse("2014-01-01 05:29")));
+    assertTrue(win.canCrawl(easternSdf.parse("2014-01-01 00:30")));
+    assertTrue(win.canCrawl(gmtSdf.parse("2014-01-01 05:30")));
+    assertTrue(win.canCrawl(easternSdf.parse("2014-01-01 03:29")));
+    assertTrue(win.canCrawl(gmtSdf.parse("2014-01-01 08:29")));
+    assertFalse(win.canCrawl(easternSdf.parse("2014-01-01 03:30")));
+    assertFalse(win.canCrawl(gmtSdf.parse("2014-01-01 08:30")));
+    // EDT
+    assertFalse(win.canCrawl(easternSdf.parse("2014-07-01 00:29")));
+    assertFalse(win.canCrawl(gmtSdf.parse("2014-07-01 04:29")));
+    assertTrue(win.canCrawl(easternSdf.parse("2014-07-01 00:30")));
+    assertTrue(win.canCrawl(gmtSdf.parse("2014-07-01 04:30")));
+    assertTrue(win.canCrawl(easternSdf.parse("2014-07-01 03:29")));
+    assertTrue(win.canCrawl(gmtSdf.parse("2014-07-01 07:29")));
+    assertFalse(win.canCrawl(easternSdf.parse("2014-07-01 03:30")));
+    assertFalse(win.canCrawl(gmtSdf.parse("2014-07-01 07:30")));
+    // Spring forward (on March 9, 2014)
+    // In US/Eastern, the boundaries are 3 hours apart
+    // In GMT, one can see that this window is actually only 2 hours long
+    assertFalse(win.canCrawl(easternSdf.parse("2014-03-09 00:29")));
+    assertFalse(win.canCrawl(gmtSdf.parse("2014-03-09 05:29")));
+    assertTrue(win.canCrawl(easternSdf.parse("2014-03-09 00:30")));
+    assertTrue(win.canCrawl(gmtSdf.parse("2014-03-09 05:30")));
+    assertTrue(win.canCrawl(easternSdf.parse("2014-03-09 03:29")));
+    assertTrue(win.canCrawl(gmtSdf.parse("2014-03-09 07:29")));
+    assertFalse(win.canCrawl(easternSdf.parse("2014-03-09 03:30")));
+    assertFalse(win.canCrawl(gmtSdf.parse("2014-03-09 07:30")));
+    // Fall back (on November 2, 2014)
+    // In US/Eastern, the boundaries are 3 hours apart
+    // In GMT, one can see that this window is actually 4 hours long
+    assertFalse(win.canCrawl(easternSdf.parse("2014-11-02 00:29")));
+    assertFalse(win.canCrawl(gmtSdf.parse("2014-11-02 04:29")));
+    assertTrue(win.canCrawl(easternSdf.parse("2014-11-02 00:30")));
+    assertTrue(win.canCrawl(gmtSdf.parse("2014-11-02 04:30")));
+    assertTrue(win.canCrawl(easternSdf.parse("2014-11-02 03:29")));
+    assertTrue(win.canCrawl(gmtSdf.parse("2014-11-02 08:29")));
+    assertFalse(win.canCrawl(easternSdf.parse("2014-11-02 03:30")));
+    assertFalse(win.canCrawl(gmtSdf.parse("2014-11-02 08:30")));
   }
 
-  static final String SUNDAY = "March 3, 2013";
-  static final String MONDAY = "March 4, 2013";
-  static final String TUESDAY = "March 5, 2013";
-  static final String WEDNESDAY = "March 6, 2013";
-  static final String THURSDAY = "March 7, 2013";
-  static final String FRIDAY = "March 8, 2013";
-  static final String SATURDAY = "March 9, 2013";
-
-
-  public void testDailyWithDays() {
+  public void testDailyWithDays() throws Exception {
+    SimpleDateFormat gmtSdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+    gmtSdf.setTimeZone(GMT);
     CrawlWindows.Daily win;
-    win = new CrawlWindows.Daily("7:00", "22:00", null, "GMT");
+    win = new CrawlWindows.Daily("7:00", "22:00", null, GMT.getID());
     assertEquals("Daily from 7:00 to 22:00, GMT", win.toString());
 
     try {
-      new CrawlWindows.Daily("7:00", "22:00", "", "GMT");
-    } catch (IllegalArgumentException e) {
+      new CrawlWindows.Daily("7:00", "22:00", "", GMT.getID());
+    }
+    catch (IllegalArgumentException expected) {
+      // Expected
     }
 
     try {
-      new CrawlWindows.Daily("7:00", "22:00", "not;days", "GMT");
-    } catch (IllegalArgumentException e) {
+      new CrawlWindows.Daily("7:00", "22:00", "not;days", GMT.getID());
+    }
+    catch (IllegalArgumentException expected) {
+      // Expected
     }
 
     // weekdays
-    win = new CrawlWindows.Daily("7:00", "22:00", "2;3;4;5;6", "GMT");
+    win = new CrawlWindows.Daily("7:00", "22:00", "2;3;4;5;6", GMT.getID());
     assertEquals("Days 2;3;4;5;6 from 7:00 to 22:00, GMT", win.toString());
-    assertFalse(win.canCrawl(new Date(SUNDAY + " 7:00 GMT")));
-    assertTrue(win.canCrawl(new Date(MONDAY + " 7:00 GMT")));
-    assertTrue(win.canCrawl(new Date(TUESDAY + " 7:00 GMT")));
-    assertTrue(win.canCrawl(new Date(WEDNESDAY + " 7:00 GMT")));
-    assertTrue(win.canCrawl(new Date(THURSDAY + " 7:00 GMT")));
-    assertTrue(win.canCrawl(new Date(FRIDAY + " 7:00 GMT")));
-    assertFalse(win.canCrawl(new Date(SATURDAY + " 7:00 GMT")));
+    // 2014-08-11 is a Monday
+    for (int d = 11 /* Monday */ ; d <= 17 /* Sunday */ ; ++d) {
+      assertFalse(win.canCrawl(gmtSdf.parse("2014-08-" + d + " 06:59")));
+      assertEquals(d <= 15 /* Monday-Friday */, win.canCrawl(gmtSdf.parse("2014-08-" + d + " 07:00")));
+      assertEquals(d <= 15 /* Monday-Friday */, win.canCrawl(gmtSdf.parse("2014-08-" + d + " 21:59")));
+      assertFalse(win.canCrawl(gmtSdf.parse("2014-08-" + d + " 22:00")));
+    }
 
     // weekends
-    win = new CrawlWindows.Daily("7:00", "22:00", "1;7;1", "GMT");
+    win = new CrawlWindows.Daily("7:00", "22:00", "1;7;1", GMT.getID());
     assertEquals("Days 1;7 from 7:00 to 22:00, GMT", win.toString());
+    // 2014-08-11 is a Monday
+    for (int d = 11 /* Monday */ ; d <= 17 /* Sunday */ ; ++d) {
+      assertFalse(win.canCrawl(gmtSdf.parse("2014-08-" + d + " 06:59")));
+      assertEquals(d >= 16 /* Saturday-Sunday */, win.canCrawl(gmtSdf.parse("2014-08-" + d + " 07:00")));
+      assertEquals(d >= 16 /* Saturday-Sunday */, win.canCrawl(gmtSdf.parse("2014-08-" + d + " 21:59")));
+      assertFalse(win.canCrawl(gmtSdf.parse("2014-08-" + d + " 22:00")));
+    }
+    
+    // Eastern
+    SimpleDateFormat easternSdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+    easternSdf.setTimeZone(EASTERN);
+    win = new CrawlWindows.Daily("7:00", "8:00", "2;3;4;5;6", EASTERN.getID());
+    assertEquals("Days 2;3;4;5;6 from 7:00 to 8:00, US/Eastern", win.toString());
+    // 2014-01-13 is a Monday (7-8am Eastern = noon-1pm GMT)
+    for (int d = 13 /* Monday */ ; d <= 19 /* Sunday */ ; ++d) {
+      assertFalse(win.canCrawl(easternSdf.parse("2014-01-" + d + " 06:59")));
+      assertFalse(win.canCrawl(gmtSdf.parse("2014-01-" + d + " 11:59")));
+      assertEquals(d <= 17 /* Monday-Friday */, win.canCrawl(easternSdf.parse("2014-01-" + d + " 07:00")));
+      assertEquals(d <= 17 /* Monday-Friday */, win.canCrawl(gmtSdf.parse("2014-01-" + d + " 12:00")));
+      assertEquals(d <= 17 /* Monday-Friday */, win.canCrawl(easternSdf.parse("2014-01-" + d + " 07:59")));
+      assertEquals(d <= 17 /* Monday-Friday */, win.canCrawl(gmtSdf.parse("2014-01-" + d + " 12:59")));
+      assertFalse(win.canCrawl(easternSdf.parse("2014-01-" + d + " 08:00")));
+      assertFalse(win.canCrawl(gmtSdf.parse("2014-01-" + d + " 13:00")));
+    }
+    // 2014-08-11 is a Monday (7-8am Eastern = 11am-noon GMT)
+    for (int d = 11 /* Monday */ ; d <= 17 /* Sunday */ ; ++d) {
+      assertFalse(win.canCrawl(easternSdf.parse("2014-08-" + d + " 06:59")));
+      assertFalse(win.canCrawl(gmtSdf.parse("2014-08-" + d + " 10:59")));
+      assertEquals(d <= 15 /* Monday-Friday */, win.canCrawl(easternSdf.parse("2014-08-" + d + " 07:00")));
+      assertEquals(d <= 15 /* Monday-Friday */, win.canCrawl(gmtSdf.parse("2014-08-" + d + " 11:00")));
+      assertEquals(d <= 15 /* Monday-Friday */, win.canCrawl(easternSdf.parse("2014-08-" + d + " 07:59")));
+      assertEquals(d <= 15 /* Monday-Friday */, win.canCrawl(gmtSdf.parse("2014-08-" + d + " 11:59")));
+      assertFalse(win.canCrawl(easternSdf.parse("2014-08-" + d + " 08:00")));
+      assertFalse(win.canCrawl(gmtSdf.parse("2014-08-" + d + " 12:00")));
+    }
 
-    assertTrue(win.canCrawl(new Date(SUNDAY + " 7:00 GMT")));
-    assertFalse(win.canCrawl(new Date(MONDAY + " 7:00 GMT")));
-    assertFalse(win.canCrawl(new Date(TUESDAY + " 7:00 GMT")));
-    assertFalse(win.canCrawl(new Date(WEDNESDAY + " 7:00 GMT")));
-    assertFalse(win.canCrawl(new Date(THURSDAY + " 7:00 GMT")));
-    assertFalse(win.canCrawl(new Date(FRIDAY + " 7:00 GMT")));
-    assertTrue(win.canCrawl(new Date(SATURDAY + " 7:00 GMT")));
   }
 
   static String daily1 =
     "<org.lockss.daemon.CrawlWindows-Daily>\n" +
-    "<from>8:00</from>\n" +
-    "<to>22:00</to>\n" +
-    "<timeZoneId>GMT-0700</timeZoneId>\n" +
+    "  <from>8:00</from>\n" +
+    "  <to>22:00</to>\n" +
+    "  <timeZoneId>US/Eastern</timeZoneId>\n" +
     "</org.lockss.daemon.CrawlWindows-Daily>\n";
 
   static String daily2 =
     "<org.lockss.daemon.CrawlWindows-Daily>\n" +
-    "<from>20:00</from>\n" +
-    "<to>6:00</to>\n" +
-    "<timeZoneId>GMT</timeZoneId>\n" +
-    "<daysOfWeek>2;3;4;5;6</daysOfWeek>\n" +
+    "  <from>20:00</from>\n" +
+    "  <to>6:00</to>\n" +
+    "  <timeZoneId>GMT</timeZoneId>\n" +
+    "  <daysOfWeek>2;3;4;5;6</daysOfWeek>\n" +
     "</org.lockss.daemon.CrawlWindows-Daily>\n";
 
   CrawlWindow deserWindow(String input) throws Exception {
@@ -567,31 +727,46 @@ public class TestCrawlWindows extends LockssTestCase {
   }
 
   public void testDeserDaily() throws Exception {
+    SimpleDateFormat gmtSdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+    gmtSdf.setTimeZone(GMT);
+    SimpleDateFormat easternSdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+    easternSdf.setTimeZone(EASTERN);
     CrawlWindows.Daily win;
     
     win = (CrawlWindows.Daily)deserWindow(daily1);
-    assertEquals("Daily from 8:00 to 22:00, GMT-0700", win.toString());
-    assertFalse(win.canCrawl(new Date("1/1/1 7:59 GMT-0700")));
-    assertTrue(win.canCrawl(new Date("1/1/1 8:00 GMT-0700")));
-    assertTrue(win.canCrawl(new Date("1/1/1 21:59 GMT-0700")));
-    assertFalse(win.canCrawl(new Date("1/1/1 22:01 GMT-0700")));
-
-    assertFalse(win.canCrawl(new Date("1/1/2 14:59 GMT")));
-    assertTrue(win.canCrawl(new Date("1/1/2 15:00 GMT")));
-    assertTrue(win.canCrawl(new Date("1/1/2 4:59 GMT")));
-    assertFalse(win.canCrawl(new Date("1/1/2 5:01 GMT")));
+    assertEquals("Daily from 8:00 to 22:00, US/Eastern", win.toString());
+    // ...which is 1pm-3am GMT in Winter
+    assertFalse(win.canCrawl(easternSdf.parse("2014-01-01 07:59")));
+    assertFalse(win.canCrawl(gmtSdf.parse("2014-01-01 12:59")));
+    assertTrue(win.canCrawl(easternSdf.parse("2014-01-01 08:00")));
+    assertTrue(win.canCrawl(gmtSdf.parse("2014-01-01 13:00")));
+    assertTrue(win.canCrawl(easternSdf.parse("2014-01-01 21:59")));
+    assertTrue(win.canCrawl(gmtSdf.parse("2014-01-02 02:59")));
+    assertFalse(win.canCrawl(easternSdf.parse("2014-01-01 22:00")));
+    assertFalse(win.canCrawl(gmtSdf.parse("2014-01-02 03:00")));
+    // ...and noon-2am GMT in Summer
+    assertFalse(win.canCrawl(easternSdf.parse("2014-07-01 07:59")));
+    assertFalse(win.canCrawl(gmtSdf.parse("2014-07-01 11:59")));
+    assertTrue(win.canCrawl(easternSdf.parse("2014-07-01 08:00")));
+    assertTrue(win.canCrawl(gmtSdf.parse("2014-07-01 12:00")));
+    assertTrue(win.canCrawl(easternSdf.parse("2014-07-01 21:59")));
+    assertTrue(win.canCrawl(gmtSdf.parse("2014-07-02 01:59")));
+    assertFalse(win.canCrawl(easternSdf.parse("2014-07-01 22:00")));
+    assertFalse(win.canCrawl(gmtSdf.parse("2014-07-02 02:00")));
 
     win = (CrawlWindows.Daily)deserWindow(daily2);
     assertEquals("Days 2;3;4;5;6 from 20:00 to 6:00, GMT", win.toString());
-
-    assertFalse(win.canCrawl(new Date(SUNDAY + " 5:00 GMT")));
-    assertTrue(win.canCrawl(new Date(MONDAY + " 5:00 GMT")));
-    assertFalse(win.canCrawl(new Date(MONDAY + " 7:00 GMT")));
-    assertTrue(win.canCrawl(new Date(TUESDAY + " 5:00 GMT")));
-    assertTrue(win.canCrawl(new Date(WEDNESDAY + " 5:00 GMT")));
-    assertTrue(win.canCrawl(new Date(THURSDAY + " 5:00 GMT")));
-    assertTrue(win.canCrawl(new Date(FRIDAY + " 5:00 GMT")));
-    assertFalse(win.canCrawl(new Date(SATURDAY + " 5:00 GMT")));
+    // The resulting window is Mon0-6, Mon20-Tue6, Tue20-Wed6, Wed20-Thu6, Thu20-Fri6, Fri20-Fri24,
+    // not Mon20-Tue6, Tue20-Wed6, Wed20-Thu6, Thu20-Fri6, Fri20-Sat6 or similar
+    // 2014-08-11 is a Monday
+    for (int d = 11 /* Monday */ ; d <= 17 /* Sunday */ ; ++d) {
+      assertEquals(d <= 15 /* Monday-Friday */, win.canCrawl(gmtSdf.parse("2014-08-" + d + " 00:00")));
+      assertEquals(d <= 15 /* Monday-Friday */, win.canCrawl(gmtSdf.parse("2014-08-" + d + " 05:59")));
+      assertFalse(win.canCrawl(gmtSdf.parse("2014-08-" + d + " 06:00")));
+      assertFalse(win.canCrawl(gmtSdf.parse("2014-08-" + d + " 19:59")));
+      assertEquals(d <= 15 /* Monday-Friday */, win.canCrawl(gmtSdf.parse("2014-08-" + d + " 20:00")));
+      assertEquals(d <= 15 /* Monday-Friday */, win.canCrawl(gmtSdf.parse("2014-08-" + d + " 23:59")));
+    }
   }
 
   static String and1 =
@@ -735,5 +910,35 @@ public class TestCrawlWindows extends LockssTestCase {
 						CrawlWindows.DAY_OF_WEEK,
 						TimeZone.getTimeZone("PST")));
   }
+  
+  /** Utility */
+  protected static final void setDate(Calendar cal,
+                                      TimeZone tz,
+                                      int year,
+                                      int month,
+                                      int dayOfMonth) {
+    cal.setTimeZone(tz);
+    cal.set(Calendar.YEAR, year);
+    cal.set(Calendar.MONTH, month);
+    cal.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+  }
+  
+  /** Utility */
+  protected static final void setTime(Calendar cal,
+                                      TimeZone tz,
+                                      int hourOfDay,
+                                      int minute) {
+    cal.setTimeZone(tz);
+    setTime(cal, hourOfDay, minute);
+  }
+
+  /** Utility */
+  protected static final void setTime(Calendar cal,
+                                      int hourOfDay,
+                                      int minute) {
+    cal.set(Calendar.HOUR_OF_DAY, hourOfDay);
+    cal.set(Calendar.MINUTE, minute);
+  }
+
 }
 

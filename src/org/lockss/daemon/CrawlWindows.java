@@ -1,10 +1,10 @@
 /*
- * $Id: CrawlWindows.java,v 1.15 2014-06-09 23:53:28 tlipkis Exp $
+ * $Id: CrawlWindows.java,v 1.16 2014-08-21 22:41:03 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,7 +37,6 @@ import java.text.*;
 import org.apache.commons.lang.ObjectUtils;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 
-import org.lockss.app.LockssApp;
 import org.lockss.util.*;
 
 /**
@@ -69,7 +68,7 @@ public class CrawlWindows {
   public static final int MONTH = 32;
 
   static final int MAX_INTERVAL_LIST_SIZE = 100000;
-  private static Logger logger = Logger.getLogger("CrawlWindows");
+  private static Logger logger = Logger.getLogger(CrawlWindows.class);
 
   static TimeZone GMT = TimeZone.getTimeZone("GMT");
 
@@ -348,20 +347,19 @@ public class CrawlWindows {
 
     Interval getInterval() {
       if (intr == null) {
-	Calendar start = Calendar.getInstance();
-	start.setTimeZone(GMT);
-	start.setTimeInMillis(parseTime(from));
-	Calendar end = Calendar.getInstance();
-	end.setTimeZone(GMT);
-	end.setTimeInMillis(parseTime(to));
+        Calendar start = Calendar.getInstance();
+        start.setTimeZone(getTimeZone());
+        start.setTimeInMillis(parseTime(from));
+        Calendar end = Calendar.getInstance();
+        end.setTimeZone(getTimeZone());
+        end.setTimeInMillis(parseTime(to));
 
-	// start and end parsed according to supplied tz, don't apply
-	// further correction in windowCal
-	intr = new Interval(start, end, TIME, GMT);
+        // start and end parsed according to supplied tz, don't apply
+        // further correction in windowCal
+        intr = new Interval(start, end, TIME, getTimeZone());
       }
       return intr;
     }
-
 
     // sunday == 1
 
