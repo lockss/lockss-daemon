@@ -57,9 +57,11 @@
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.atypon.maney.ManeyAtyponHtmlCrawlFilterFactory</string>
   </entry>
+  <!--  not yet ready
   <entry>
     <string>text/html_link_extractor_factory</string>
     <string>org.lockss.plugin.atypon.maney.ManeyAtyponHtmlLinkExtractorFactory</string>
-  </entry> 
+  </entry>
+  --> 
   <!-- add plugin_au_config_user_msg -->
 </map>
