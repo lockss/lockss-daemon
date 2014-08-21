@@ -1,5 +1,5 @@
 /*
- * $Id: TestIngentaJournalHtmlFilterFactory.java,v 1.17 2014-08-15 21:43:30 etenbrink Exp $
+ * $Id: TestIngentaJournalHtmlFilterFactory.java,v 1.18 2014-08-21 19:32:16 etenbrink Exp $
  */
 
 /*
@@ -421,11 +421,12 @@ public class TestIngentaJournalHtmlFilterFactory extends LockssTestCase {
       /*
        * <a title="link to external reference" onclick="popup('reswin','780','600')" href="#">19, p102</a>
        */
+      "<li> Item " +
       "<a title=\"link to external reference\" onclick=\"popup('/path/ref', 'reswin', '40', '30')\" " +
-      "href=\"#\">19, p102</a>";
+      "href=\"#\">19, p102</a>  </li>";
   
   private static final String ExtRefFiltered =
-      "19, p102";
+      "<li> Item 19, p102 </li>";
   
   public void testExtRef() throws Exception {
     InputStream inA;
