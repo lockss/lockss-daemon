@@ -1,0 +1,30 @@
+#!/bin/sh
+
+# Select Java executable
+if [ -n "$JAVA_HOME" ] ; then
+ JAVA_EXEC="$JAVA_HOME/bin/java"
+else
+ JAVA_EXEC="java"
+fi
+
+args=""
+
+# Parse command line arguments
+while true ; do
+  case "$1" in
+    "-D" )
+      odir="`dirname $2`"
+      opts="-o ${odir} -lib ${odir}"
+      mkdir -p "${odir}"
+      break;;
+    -jar )
+      jar="-jar $2"
+      shift; shift; continue;;
+    ?* )
+      args="${args} $1"
+      shift; continue;;
+  esac
+  break
+done
+
+$JAVA_EXEC ${jar} ${opts} ${args}

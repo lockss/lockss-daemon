@@ -2,11 +2,11 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.366 2014-08-21 23:39:29 thib_gc Exp $
+ $Id: build.xml,v 1.367 2014-08-21 23:46:27 thib_gc Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
-Copyright (c) 2010-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -152,6 +152,10 @@ Args:
   <property name="test.lib"       value="${lib}"/>
   <property name="test.results"   value="${test}/results"/>
   <property name="test.native"    value="${test}/native"/>
+  <property name="generated"           value="${basedir}/generated"/>
+  <property name="generated.src"       value="${generated}/src"/>
+  <property name="generated.classes"   value="${generated}/classes" />
+
   <property name="framework.stf"    value="${test}/frameworks/run_stf"/>
 
   <property name="plugins"           value="${basedir}/plugins"/>
@@ -343,8 +347,12 @@ Args:
   <property name="proxy-plugin.jar" value="${lib}/proxy-plugin-1.5.jar" />
   <property name="webscarab.jar" value="${lib}/webscarab.jar" />
 
+  <property name="antlr.tools.jar" value="${lib}/antlr-4.4-complete.jar" />
+  <property name="antlr.runtime.jar" value="${lib}/antlr-runtime-4.4.jar" />
+	
   <!-- Jars we create -->
   <property name="lockss.jar"     value="${lib}/lockss.jar"/>
+  <property name="lockss.generated.jar"  value="${lib}/lockss-generated.jar"/>
   <property name="lockss.test.jar" value="${test.lib}/lockss-test.jar"/>
   <property name="lockss.plugins.jar" value="${lib}/lockss-plugins.jar"/>
   <property name="lockss.plugins.test.jar" value="${lib}/lockss-plugins-test.jar"/>
@@ -416,6 +424,7 @@ Args:
 
   <!--  Classpaths -->
   <path id="compile.classpath">
+    <pathelement path="${lockss.generated.jar}" />
     <pathelement path="${commons.lang.jar}" />
     <pathelement path="${commons.collections.jar}" />
     <pathelement path="${commons.logging.jar}" />
@@ -519,6 +528,8 @@ Args:
     <pathelement path="${logback-core.jar}" />
     <pathelement path="${logback-classic.jar}" />
     <pathelement path="${slf4j-api.jar}" />
+    <!-- Needed for TDB tools: -->
+    <pathelement path="${antlr.runtime.jar}" />
   </path>
 
   <path id="run.classpath">
@@ -526,9 +537,12 @@ Args:
     <path refid="compile.classpath" />
   </path>
 
-  <path id="test.compile.classpath">
-    <pathelement path="${lockss.jar}" />
+  <path id="generated.compile.classpath">
     <path refid="compile.classpath" />
+  </path>
+
+  <path id="test.compile.classpath">
+    <path refid="run.classpath" />
     <pathelement path="${junit.jar}" />
     <pathelement path="${junit.addons.jar}" />
     <pathelement path="${httpunit.jar}" />
@@ -866,6 +880,8 @@ The target you have selected requires compiling under JDK 1.7.
      depends="clean-tempbuild,clean-tools,clean-results,clean-rpm"
    description="Delete all generated files and dirs except tdbxml" >
     <delete dir="${classes}" quiet="true"/>
+    <delete dir="${generated.src}" quiet="true"/>
+    <delete dir="${generated.classes}" quiet="true"/>
     <delete dir="${test.classes}" quiet="true"/>
     <delete dir="${plugins.classes}" quiet="true"/>
     <delete dir="${plugins.test.classes}" quiet="true"/>
@@ -875,6 +891,7 @@ The target you have selected requires compiling under JDK 1.7.
     <delete dir="${test.javadoc}" quiet="true"/>
     <delete dir="${plugins.dir}" quiet="true"/>
     <delete file="${lockss.jar}" quiet="true"/>
+    <delete file="${lockss.generated.jar}" quiet="true"/>
     <delete file="${lockss.test.jar}" quiet="true"/>
     <delete file="${lockss.plugins.jar}" quiet="true"/>
     <delete file="${lockss.plugins.test.jar}" quiet="true"/>
@@ -973,7 +990,7 @@ The target you have selected requires compiling under JDK 1.7.
   </target>
 
   <!-- ==================================================================== -->
-  <target name="compile-lockss" depends="prepare"
+  <target name="compile-lockss" depends="prepare,jar-generated"
    description="Compile the LOCKSS classes" >
     <dojavac srcdir="${src}" destdir="${classes}" cpid="compile.classpath" >
      <javacelem>
@@ -999,6 +1016,18 @@ The target you have selected requires compiling under JDK 1.7.
       <param name="srcdir" value="${src}"/>
       <param name="clsdir" value="${classes}"/>
     </antcall>
+  </target>
+
+  <!-- ==================================================================== -->
+  <target name="compile-generated" depends="prepare,generate-parsers"
+   description="Compile the generated classes" >
+    <mkdir dir="${generated.classes}" />
+    <dojavac srcdir="${generated.src}" destdir="${generated.classes}"
+	     cpid="generated.compile.classpath" >
+     <javacelem>
+       <include name="**/*.java"/>
+     </javacelem>
+    </dojavac>
   </target>
 
   <!-- ==================================================================== -->
@@ -1107,6 +1136,46 @@ The target you have selected requires compiling under JDK 1.7.
        <include name="**/*.java"/>
      </javacelem>
     </dojavac>
+  </target>
+
+  <!-- ==================================================================== -->
+  <target name="generate-parsers" depends="prepare"
+          description="Generate parsers from ANTLR grammars" >
+    <apply executable="${scripts}/antlr-helper"
+           dir="${src}"
+           dest="${generated.src}"
+           failonerror="true"
+           verbose="true">
+      <arg value="-jar" />
+      <arg file="${antlr.tools.jar}" />
+      <srcfile/>
+      <arg value="-D" />
+      <targetfile/>
+      <fileset dir="${src}" includes="**/*Lexer.g4" />
+      <compositemapper>
+	<globmapper from="*Lexer.g4" to="*Lexer.java"/>
+	<globmapper from="*Lexer.g4" to="*Lexer.tokens"/>
+      </compositemapper>
+    </apply>
+
+    <apply executable="${scripts}/antlr-helper"
+           dir="${src}"
+           dest="${generated.src}"
+           failonerror="true"
+           verbose="true">
+      <arg value="-jar" />
+      <arg file="${antlr.tools.jar}" />
+      <srcfile/>
+      <arg value="-D" />
+      <targetfile/>
+      <fileset dir="${src}" includes="**/*Parser.g4" />
+      <compositemapper>
+	<globmapper from="*Parser.g4" to="*Parser.java"/>
+	<globmapper from="*Parser.g4" to="*Parser.tokens"/>
+	<globmapper from="*Parser.g4" to="*ParserListener.java"/>
+	<globmapper from="*Parser.g4" to="*ParserBaseListener.java"/>
+      </compositemapper>
+     </apply>
   </target>
 
   <!-- ==================================================================== -->
@@ -1233,6 +1302,14 @@ The target you have selected requires compiling under JDK 1.7.
     <pathconvert refid="prod.run.classpath" property="tmp.run.clspth"
       targetos="${detected.os}" />
     <echo message="${tmp.run.clspth}" file="${run.classpath.file}"/>
+  </target>
+
+  <!-- ==================================================================== -->
+  <target name="jar-generated" depends="compile-generated"
+	  description="Jar the generated classes" >
+    <jar jarfile="${lockss.generated.jar}" basedir="${generated.classes}" >
+      <include name="**/" />
+    </jar>
   </target>
 
   <!-- ==================================================================== -->
