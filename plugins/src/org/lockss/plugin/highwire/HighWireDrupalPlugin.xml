@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>testing - Evan/Ly</string>
+    <string>ready</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>10</string>
+    <string>11</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>5</string>
+        <string>6</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -106,6 +106,7 @@
       <string>1,"^https?://%s[^?]*/highwire/jcore", base_url_host</string>
       <!-- Do not crawl unless from base url -->
       <string>4,"^%s", base_url</string>
+      <!-- filter links with '{' like http://ajprenal.physiology.org/content/299/4/{openurl}?query=rft... -->
       <string>2,"^%s(?:[^?]+(?:most-(?:cited|read)|featured_article|featured-podcasts|(?:back-matter|ed-board)[.]pdf)|content/(?:by/|early/|[^{]+[{]))", base_url</string>
       <string>1,"^%s(?:content(?:/[^/]+)?/(?:%s|suppl)|highwire/(?:filestream|markup|article_citation_preview))/", base_url, volume_name</string>
       <string>1,"^%shighwire/citation/[^/]+/ris$", base_url</string>
