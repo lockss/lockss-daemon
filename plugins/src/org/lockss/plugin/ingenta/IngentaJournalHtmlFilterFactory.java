@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaJournalHtmlFilterFactory.java,v 1.31 2014-08-15 21:35:05 etenbrink Exp $
+ * $Id: IngentaJournalHtmlFilterFactory.java,v 1.32 2014-08-21 19:31:10 etenbrink Exp $
  */ 
 
 /*
@@ -209,11 +209,15 @@ public class IngentaJournalHtmlFilterFactory implements FilterFactory {
           if (snode instanceof Tag) {
             Tag tag = (Tag) snode;
             String tagName = tag.getTagName().toLowerCase();
+            NodeList knl = tag.getChildren();
+            if (knl != null) {
+              tag.setChildren(transform(knl));
+            }
             if ("li".equals(tagName) &&
                 tag.getAttribute("class") != null &&
                 tag.getAttribute("class").trim().startsWith("rowShade")) {
-              Attribute a = tag.getAttributeEx(tagName);
               Vector<Attribute> v = new Vector<Attribute>();
+              Attribute a = tag.getAttributeEx(tagName);
               v.add(a);
               tag.setAttributesEx(v);
               nl.add(tag);
@@ -226,11 +230,7 @@ public class IngentaJournalHtmlFilterFactory implements FilterFactory {
               nl.add(tn);
             }
             else {
-              NodeList knl = tag.getChildren();
-              if (knl != null) {
-                transform(knl);
-              }
-              nl.add(snode);
+              nl.add(tag);
             }
           }
           else {
