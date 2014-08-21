@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireDrupalHtmlLinkExtractorFactory.java,v 1.3 2014-07-30 16:01:14 etenbrink Exp $
+ * $Id: HighWireDrupalHtmlLinkExtractorFactory.java,v 1.4 2014-08-21 01:05:57 etenbrink Exp $
  */
 
 /*
@@ -62,7 +62,7 @@ public class HighWireDrupalHtmlLinkExtractorFactory implements LinkExtractorFact
   private static final String DIV_NAME = "div";
   
   protected static Pattern URL_PATTERN = Pattern.compile(
-      "^(https?://[^/]+/)content/[^/]+/[^/]+/[^/?]+$", Pattern.CASE_INSENSITIVE);
+      "^(https?://[^/]+/)content/[^/]+/[^/]+/[^/?.]+$", Pattern.CASE_INSENSITIVE);
   protected static Pattern NODE_PATTERN = Pattern.compile(
       "^/node/([0-9]+)$", Pattern.CASE_INSENSITIVE);
   
@@ -72,7 +72,7 @@ public class HighWireDrupalHtmlLinkExtractorFactory implements LinkExtractorFact
     JsoupHtmlLinkExtractor extractor = new JsoupHtmlLinkExtractor();
     // we will do some additional processing for <link href="/node/25370" rel="shortlink">
     extractor.registerTagExtractor(LINK_NAME, new HWSimpleTagLinkExtractor(HREF_NAME));
-    extractor.registerTagExtractor(DIV_NAME, new HWSimpleTagLinkExtractor(REL_NAME));
+    extractor.registerTagExtractor(DIV_NAME, new SimpleTagLinkExtractor(REL_NAME));
     return extractor;
   }
   
@@ -98,7 +98,7 @@ public class HighWireDrupalHtmlLinkExtractorFactory implements LinkExtractorFact
     public void tagBegin(Node node, ArchivalUnit au, Callback cb) {
       String srcUrl = node.baseUri();
       Matcher urlMat = URL_PATTERN.matcher(srcUrl);
-      // Are we on a page for which this would be pertinent?
+      // Are we on a page for which this would be pertinent? (html landing page)
       if ( (srcUrl != null) && urlMat.find()) {
         // now do we have a citation download href?
         if (node.hasAttr(HREF_NAME) && node.hasAttr(REL_NAME) &&
