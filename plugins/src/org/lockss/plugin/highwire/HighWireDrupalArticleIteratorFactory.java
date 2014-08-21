@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireDrupalArticleIteratorFactory.java,v 1.3 2014-06-05 20:34:12 etenbrink Exp $
+ * $Id: HighWireDrupalArticleIteratorFactory.java,v 1.4 2014-08-21 00:50:27 etenbrink Exp $
  */
 
 /*
@@ -60,10 +60,12 @@ public class HighWireDrupalArticleIteratorFactory
   // http://ajpcell.physiology.org/content/302/1/C1.figures-only
   // http://ajpcell.physiology.org/content/302/1/C1.full.pdf+html
   // http://ajpcell.physiology.org/content/302/1/C1.full.pdf
-  // http://ajpcell.physiology.org/content/302/1/C1.full-text.pdf+html (normalize)
-  // http://ajpcell.physiology.org/content/302/1/C1.full-text.pdf (normalize)
   
   // http://bjo.bmj.com/content/96/1/1.extract
+  
+  // these kinds of urls are not used as part of the AI
+  // http://ajpcell.physiology.org/content/302/1/C1.full-text.pdf+html (normalized)
+  // http://ajpcell.physiology.org/content/302/1/C1.full-text.pdf (normalized)
   // http://bjo.bmj.com/content/96/1/1.short
   // http://bjo.bmj.com/content/96/1/1.citation (usually no links)
   
