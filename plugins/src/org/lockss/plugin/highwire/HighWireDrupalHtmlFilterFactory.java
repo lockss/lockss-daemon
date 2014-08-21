@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireDrupalHtmlFilterFactory.java,v 1.7 2014-07-31 21:50:54 etenbrink Exp $
+ * $Id: HighWireDrupalHtmlFilterFactory.java,v 1.8 2014-08-21 00:53:03 etenbrink Exp $
  */
 
 /*
@@ -35,12 +35,9 @@ package org.lockss.plugin.highwire;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.Reader;
-import java.util.Vector;
 
-import org.htmlparser.Attribute;
 import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
-import org.htmlparser.Tag;
 import org.htmlparser.filters.*;
 import org.htmlparser.nodes.TextNode;
 import org.htmlparser.util.NodeList;
@@ -84,8 +81,7 @@ public class HighWireDrupalHtmlFilterFactory implements FilterFactory {
         new TagNameFilter("noscript"),
     };
     
-    // HTML transform to remove all remaining nodes except HTML, and convert all child 
-    // nodes of html to a single plaintext node
+    // HTML transform to convert all remaining nodes to plaintext nodes
     // http://ajpheart.physiology.org/content/306/10/H1385 (HW had replaced SPAN tags with DIV
     // cannot keep up with all the continual changes to 
     
@@ -95,13 +91,6 @@ public class HighWireDrupalHtmlFilterFactory implements FilterFactory {
         NodeList nl = new NodeList();
         for (int sx = 0; sx < nodeList.size(); sx++) {
           Node snode = nodeList.elementAt(sx);
-          if (snode instanceof Tag) {
-            String tagName = ((Tag) snode).getTagName().toLowerCase();
-            Attribute a = ((Tag) snode).getAttributeEx(tagName);
-            Vector<Attribute> v = new Vector<Attribute>();
-            v.add(a);
-            ((Tag) snode).setAttributesEx(v);
-          }
           TextNode tn = new TextNode(snode.toPlainTextString());
           nl.add(tn);
         }
