@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.120 2014-05-29 01:27:27 thib_gc Exp $
+ * $Id: StringUtil.java,v 1.121 2014-08-22 19:26:18 fergaloy-sf Exp $
  */
 
 /*
@@ -49,6 +49,8 @@ import org.apache.commons.lang.StringUtils;
 
 public class StringUtil {
 
+  private static final String DEFAULT_COLLECTION_SEPARATOR = ", ";
+  private static final String NULL_OBJECT_PRINTABLE_TEXT = "(null)";
   static Logger log = Logger.getLogger(StringUtil.class);
 
   /**
@@ -166,7 +168,7 @@ public class StringUtil {
    * @return Concatenated string
    */
   public static String separatedString(Collection c) {
-    return separatedString(c, ", ");
+    return separatedString(c, DEFAULT_COLLECTION_SEPARATOR);
   }
 
   /**
@@ -325,7 +327,7 @@ public class StringUtil {
 	sb.append(separatorInner);
       }
       Object obj = iter.next();
-      sb.append(obj == null ? "(null)" : obj.toString());
+      sb.append(obj == null ? NULL_OBJECT_PRINTABLE_TEXT : obj.toString());
     }
     if (!first) {
       sb.append(separatorLast);
@@ -1678,7 +1680,7 @@ public class StringUtil {
 	sb.append(numberOfUnits(temp, "day"));
 	millis -= temp * Constants.DAY;
 	if (millis >= Constants.MINUTE) {
-	  sb.append(", ");
+	  sb.append(DEFAULT_COLLECTION_SEPARATOR);
 	}
       }
       temp = millis / Constants.HOUR;
@@ -1686,7 +1688,7 @@ public class StringUtil {
 	sb.append(numberOfUnits(temp, "hour"));
 	millis -= temp * Constants.HOUR;
 	if (millis >= Constants.MINUTE) {
-	  sb.append(", ");
+	  sb.append(DEFAULT_COLLECTION_SEPARATOR);
 	}
       }
       temp = millis / Constants.MINUTE;
@@ -1695,7 +1697,7 @@ public class StringUtil {
 	millis -= temp * Constants.MINUTE;
 
 	if(millis >= Constants.SECOND) {
-	  sb.append(", ");
+	  sb.append(DEFAULT_COLLECTION_SEPARATOR);
 	}
       }
       temp = millis / Constants.SECOND;
@@ -2137,4 +2139,48 @@ public class StringUtil {
     return DASHES.matcher(str).replaceAll(CANONICAL_DASH);
   }
 
+  /**
+   * Provides a printable version of the contents of an array ob objects,
+   * suitable for logging.
+   * @param theArray An Object[] whe the array to be displayed.
+   * @return aString with the printable version of the contents of the array.
+   */
+  public static String toString(Object[] theArray) {
+    // Handle a null array;
+    if (theArray == null) {
+      return NULL_OBJECT_PRINTABLE_TEXT;
+    }
+
+    return "[" + separatedString(theArray, DEFAULT_COLLECTION_SEPARATOR) + "]";
+  }
+
+  /**
+   * Provides a printable version of the contents of an array of ints, suitable
+   * for logging.
+   * @param theArray An int[] whe the array to be displayed.
+   * @return aString with the printable version of the contents of the array.
+   */
+  public static String toString(int[] theArray) {
+    // Handle a null array;
+    if (theArray == null) {
+      return NULL_OBJECT_PRINTABLE_TEXT;
+    }
+
+    return "[" + separatedString(theArray, DEFAULT_COLLECTION_SEPARATOR) + "]";
+  }
+
+  /**
+   * Provides a printable version of the contents of an array of longs, suitable
+   * for logging.
+   * @param theArray A long[] whe the array to be displayed.
+   * @return aString with the printable version of the contents of the array.
+   */
+  public static String toString(long[] theArray) {
+    // Handle a null array;
+    if (theArray == null) {
+      return NULL_OBJECT_PRINTABLE_TEXT;
+    }
+
+    return "[" + separatedString(theArray, DEFAULT_COLLECTION_SEPARATOR) + "]";
+  }
 }
