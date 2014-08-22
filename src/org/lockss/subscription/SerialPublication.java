@@ -1,5 +1,5 @@
 /*
- * $Id: SerialPublication.java,v 1.3 2014-04-09 17:43:21 fergaloy-sf Exp $
+ * $Id: SerialPublication.java,v 1.4 2014-08-22 22:15:00 fergaloy-sf Exp $
  */
 
 /*
@@ -31,7 +31,7 @@
  */
 package org.lockss.subscription;
 
-import static org.lockss.db.DbManager.*;
+import static org.lockss.db.SqlConstants.*;
 import java.util.Collection;
 import org.lockss.config.TdbTitle;
 import org.lockss.config.TdbUtil;

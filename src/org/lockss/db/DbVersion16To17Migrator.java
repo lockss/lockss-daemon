@@ -1,5 +1,5 @@
 /*
- * $Id: DbVersion16To17Migrator.java,v 1.1 2014-08-20 21:28:54 fergaloy-sf Exp $
+ * $Id: DbVersion16To17Migrator.java,v 1.2 2014-08-22 22:14:59 fergaloy-sf Exp $
  */
 
 /*
@@ -56,12 +56,21 @@ public class DbVersion16To17Migrator extends LockssRunnable {
     final String DEBUG_HEADER = "lockssRun(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
-    DbManager dbManager = LockssDaemon.getLockssDaemon().getDbManager();
+    try {
+      DbManager dbManager = LockssDaemon.getLockssDaemon().getDbManager();
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "Obtained DbManager.");
 
-    // Perform the actual work.
-    dbManager.migrateDatabaseFrom16To17();
+      DbManagerSql dbManagerSql = dbManager.getDbManagerSqlBeforeReady();
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "Obtained DbManagerSql.");
+
+      // Perform the actual work.
+      dbManagerSql.migrateDatabaseFrom16To17();
+
+      dbManager.cleanUpThread("DbVersion16To17Migrator");
+    } catch (Exception e) {
+      log.error("Cannot migrate the database from version 16 to 17", e);
+    }
+
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
-
-    dbManager.cleanUpThread("DbVersion16To17Migrator");
   }
 }

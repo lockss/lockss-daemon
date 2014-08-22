@@ -1,5 +1,5 @@
 /*
- * $Id: TestSubscriptionManager.java,v 1.9 2014-07-24 20:46:22 fergaloy-sf Exp $
+ * $Id: TestSubscriptionManager.java,v 1.10 2014-08-22 22:15:00 fergaloy-sf Exp $
  */
 
 /*
@@ -31,6 +31,7 @@
  */
 package org.lockss.subscription;
 
+import static org.lockss.db.SqlConstants.*;
 import java.io.File;
 import java.io.IOException;
 import java.sql.Connection;
@@ -1343,11 +1344,11 @@ public class TestSubscriptionManager extends LockssTestCase {
 
     // Create the publication.
     Long publicationSeq = metadataManager.addPublication(conn, null,
-	DbManager.MD_ITEM_TYPE_JOURNAL, "Title of [vol123]", "id:11171508429",
+	MD_ITEM_TYPE_JOURNAL, "Title of [vol123]", "id:11171508429",
 	publisherSeq);
 
     // Create the publishing platform.
-    Long platformSeq = dbManager.addPlatform(conn, DbManager.NO_PLATFORM);
+    Long platformSeq = dbManager.addPlatform(conn, NO_PLATFORM);
 
     // Create the subscription.
     Long subscriptionSeq =

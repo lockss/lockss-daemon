@@ -1,5 +1,5 @@
 /*
- * $Id: FetchTimeExporter.java,v 1.10 2014-06-26 17:17:59 fergaloy-sf Exp $
+ * $Id: FetchTimeExporter.java,v 1.11 2014-08-22 22:15:00 fergaloy-sf Exp $
  */
 
 /*
@@ -31,7 +31,7 @@
  */
 package org.lockss.exporter;
 
-import static org.lockss.db.DbManager.*;
+import static org.lockss.db.SqlConstants.*;
 import static org.lockss.metadata.MetadataManager.*;
 import java.io.File;
 import java.io.FileWriter;

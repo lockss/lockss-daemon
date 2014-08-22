@@ -1,5 +1,5 @@
 /*
- * $Id: TestDbManager.java,v 1.10 2014-08-20 21:28:54 fergaloy-sf Exp $
+ * $Id: TestDbManager.java,v 1.11 2014-08-22 22:15:00 fergaloy-sf Exp $
  */
 
 /*
@@ -29,13 +29,6 @@
  in this Software without prior written authorization from Stanford University.
 
  */
-
-/**
- * Test class for org.lockss.db.DbManager.
- * 
- * @author Fernando Garcia-Loygorri
- * @version 1.0
- */
 package org.lockss.db;
 
 import java.io.File;
@@ -50,6 +43,12 @@ import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockLockssDaemon;
 import org.lockss.util.Logger;
 
+/**
+ * Test class for org.lockss.db.DbManager.
+ * 
+ * @author Fernando Garcia-Loygorri
+ * @version 1.0
+ */
 public class TestDbManager extends LockssTestCase {
   private static String TABLE_CREATE_SQL =
       "create table testtable (id bigint NOT NULL, name varchar(512))";
@@ -178,17 +177,20 @@ public class TestDbManager extends LockssTestCase {
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
     startService();
+    assertTrue(dbManager.isReady());
+    DbManagerSql dbManagerSql = dbManager.getDbManagerSql();
+
     Connection conn = dbManager.getConnection();
     assertNotNull(conn);
-    assertFalse(dbManager.tableExists(conn, "testtable"));
-    assertTrue(dbManager.createTableIfMissing(conn, "testtable",
+    assertFalse(dbManagerSql.tableExists(conn, "testtable"));
+    assertTrue(dbManagerSql.createTableIfMissing(conn, "testtable",
 					      TABLE_CREATE_SQL));
-    assertTrue(dbManager.tableExists(conn, "testtable"));
+    assertTrue(dbManagerSql.tableExists(conn, "testtable"));
 
     DbManager.safeRollbackAndClose(conn);
     conn = dbManager.getConnection();
     assertNotNull(conn);
-    assertFalse(dbManager.tableExists(conn, "testtable"));
+    assertFalse(dbManagerSql.tableExists(conn, "testtable"));
   }
 
   /**
@@ -231,16 +233,17 @@ public class TestDbManager extends LockssTestCase {
    */
   protected void createTable() throws Exception {
     startService();
-    assertEquals(true, dbManager.isReady());
+    assertTrue(dbManager.isReady());
+    DbManagerSql dbManagerSql = dbManager.getDbManagerSql();
 
     Connection conn = dbManager.getConnection();
     assertNotNull(conn);
-    assertFalse(dbManager.tableExists(conn, "testtable"));
-    assertTrue(dbManager.createTableIfMissing(conn, "testtable",
+    assertFalse(dbManagerSql.tableExists(conn, "testtable"));
+    assertTrue(dbManagerSql.createTableIfMissing(conn, "testtable",
 					      TABLE_CREATE_SQL));
-    assertTrue(dbManager.tableExists(conn, "testtable"));
-    dbManager.logTableSchema(conn, "testtable");
-    assertFalse(dbManager.createTableIfMissing(conn, "testtable",
+    assertTrue(dbManagerSql.tableExists(conn, "testtable"));
+    dbManagerSql.logTableSchema(conn, "testtable");
+    assertFalse(dbManagerSql.createTableIfMissing(conn, "testtable",
 					       TABLE_CREATE_SQL));
   }
 
@@ -275,10 +278,12 @@ public class TestDbManager extends LockssTestCase {
     dbManager.setTargetDatabaseVersion(0);
     dbManager.startService();
     assertTrue(dbManager.isReady());
+    DbManagerSql dbManagerSql = dbManager.getDbManagerSql();
 
     Connection conn = dbManager.getConnection();
     assertNotNull(conn);
-    assertFalse(dbManager.tableExists(conn, DbManager.OBSOLETE_METADATA_TABLE));
+    assertFalse(dbManagerSql.tableExists(conn,
+	SqlConstants.OBSOLETE_METADATA_TABLE));
   }
 
   /**
@@ -300,13 +305,15 @@ public class TestDbManager extends LockssTestCase {
     dbManager.setTargetDatabaseVersion(1);
     dbManager.startService();
     assertTrue(dbManager.isReady());
+    DbManagerSql dbManagerSql = dbManager.getDbManagerSql();
 
     Connection conn = dbManager.getConnection();
     assertNotNull(conn);
-    assertTrue(dbManager.tableExists(conn, DbManager.OBSOLETE_METADATA_TABLE));
+    assertTrue(dbManagerSql.tableExists(conn,
+	SqlConstants.OBSOLETE_METADATA_TABLE));
 
     PreparedStatement ps = dbManager.prepareStatement(conn,
-	"select count(*) from " + DbManager.OBSOLETE_METADATA_TABLE);
+	"select count(*) from " + SqlConstants.OBSOLETE_METADATA_TABLE);
 
     assertEquals(DbManager.DEFAULT_FETCH_SIZE, ps.getFetchSize());
   }
@@ -352,13 +359,15 @@ public class TestDbManager extends LockssTestCase {
     dbManager.setTargetDatabaseVersion(1);
     dbManager.startService();
     assertTrue(dbManager.isReady());
+    DbManagerSql dbManagerSql = dbManager.getDbManagerSql();
 
     Connection conn = dbManager.getConnection();
     assertNotNull(conn);
-    assertTrue(dbManager.tableExists(conn, DbManager.OBSOLETE_METADATA_TABLE));
+    assertTrue(dbManagerSql.tableExists(conn,
+	SqlConstants.OBSOLETE_METADATA_TABLE));
 
     PreparedStatement ps = dbManager.prepareStatement(conn,
-	"select count(*) from " + DbManager.OBSOLETE_METADATA_TABLE);
+	"select count(*) from " + SqlConstants.OBSOLETE_METADATA_TABLE);
 
     assertEquals(12345, ps.getFetchSize());
   }
@@ -382,11 +391,13 @@ public class TestDbManager extends LockssTestCase {
     dbManager.setTargetDatabaseVersion(2);
     dbManager.startService();
     assertTrue(dbManager.isReady());
+    DbManagerSql dbManagerSql = dbManager.getDbManagerSql();
 
     Connection conn = dbManager.getConnection();
     assertNotNull(conn);
-    assertFalse(dbManager.tableExists(conn, DbManager.OBSOLETE_METADATA_TABLE));
-    assertTrue(dbManager.tableExists(conn, DbManager.VERSION_TABLE));
+    assertFalse(dbManagerSql.tableExists(conn,
+	SqlConstants.OBSOLETE_METADATA_TABLE));
+    assertTrue(dbManagerSql.tableExists(conn, SqlConstants.VERSION_TABLE));
   }
 
   /**
@@ -408,11 +419,13 @@ public class TestDbManager extends LockssTestCase {
     dbManager.setTargetDatabaseVersion(2);
     dbManager.startService();
     assertTrue(dbManager.isReady());
+    DbManagerSql dbManagerSql = dbManager.getDbManagerSql();
 
     Connection conn = dbManager.getConnection();
     assertNotNull(conn);
-    assertFalse(dbManager.tableExists(conn, DbManager.OBSOLETE_METADATA_TABLE));
-    assertTrue(dbManager.tableExists(conn, DbManager.VERSION_TABLE));
+    assertFalse(dbManagerSql.tableExists(conn,
+	SqlConstants.OBSOLETE_METADATA_TABLE));
+    assertTrue(dbManagerSql.tableExists(conn, SqlConstants.VERSION_TABLE));
   }
 
   /**
@@ -431,17 +444,17 @@ public class TestDbManager extends LockssTestCase {
 
     String original = "Total characters = 21";
 
-    String truncated = DbManager.truncateVarchar(original, 30);
+    String truncated = DbManagerSql.truncateVarchar(original, 30);
     assertTrue(original.equals(truncated));
-    assertFalse(DbManager.isTruncatedVarchar(truncated));
+    assertFalse(DbManagerSql.isTruncatedVarchar(truncated));
 
-    truncated = DbManager.truncateVarchar(original, original.length());
+    truncated = DbManagerSql.truncateVarchar(original, original.length());
     assertTrue(original.equals(truncated));
-    assertFalse(DbManager.isTruncatedVarchar(truncated));
+    assertFalse(DbManagerSql.isTruncatedVarchar(truncated));
 
-    truncated = DbManager.truncateVarchar(original, original.length() - 3);
+    truncated = DbManagerSql.truncateVarchar(original, original.length() - 3);
     assertFalse(original.equals(truncated));
-    assertTrue(DbManager.isTruncatedVarchar(truncated));
+    assertTrue(DbManagerSql.isTruncatedVarchar(truncated));
     assertTrue(truncated.length() == original.length() - 3);
   }
 

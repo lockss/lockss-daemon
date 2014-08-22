@@ -1,10 +1,10 @@
 /*
- * $Id: DbMigrator.java,v 1.2 2013-10-16 23:10:44 fergaloy-sf Exp $
+ * $Id: DbMigrator.java,v 1.3 2014-08-22 22:14:59 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,14 +29,9 @@
  in this Software without prior written authorization from Stanford University.
 
  */
-
-/**
- * Database migrator.
- * 
- * @author Fernando Garcia-Loygorri
- */
 package org.lockss.db;
 
+import static org.lockss.db.SqlConstants.*;
 import gnu.getopt.Getopt;
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
@@ -57,6 +52,11 @@ import org.apache.commons.beanutils.BeanUtils;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 
+/**
+ * Database migrator.
+ * 
+ * @author Fernando Garcia-Loygorri
+ */
 public class DbMigrator extends DbManager {
   private static final Logger log = Logger.getLogger(DbMigrator.class);
 
@@ -122,6 +122,10 @@ public class DbMigrator extends DbManager {
   // The data source users.
   private String sourceUserName = null;
   private String targetUserName = null;
+
+  // The SQL code executors.
+  private DbManagerSql sourceDbManagerSql = null;
+  private DbManagerSql targetDbManagerSql = null;
 
   // The sequence mapping storage.
   Map<String, Map<Long, Long>> sequenceTranslation =
@@ -269,6 +273,11 @@ public class DbMigrator extends DbManager {
       // Create the source database data source.
       sourceDataSource = createDataSource(sourceClassName);
 
+      // Create the source SQL code executor.
+      sourceDbManagerSql = new DbManagerSql(sourceDataSource, sourceClassName,
+	  sourceUserName, DEFAULT_MAX_RETRY_COUNT, DEFAULT_RETRY_DELAY,
+	  DEFAULT_FETCH_SIZE);
+
       // Initialize the source database data source properties.
       initializeDataSourceProperties(sourceProperties, sourceDataSource);
 
@@ -285,16 +294,23 @@ public class DbMigrator extends DbManager {
       // Create the target database data source.
       targetDataSource = createDataSource(targetClassName);
 
+      // Create the target SQL code executor.
+      targetDbManagerSql = new DbManagerSql(targetDataSource, targetClassName,
+	  targetUserName, DEFAULT_MAX_RETRY_COUNT, DEFAULT_RETRY_DELAY,
+	  DEFAULT_FETCH_SIZE);
+
       // Do nothing more if the source and target databases are not different.
-      if (!(isSourceTypeDerby() && !isTargetTypeDerby()
-	    || isSourceTypePostgresql() && !isTargetTypePostgresql())) {
+      if (!(sourceDbManagerSql.isTypeDerby()
+	  && !targetDbManagerSql.isTypeDerby()
+	    || sourceDbManagerSql.isTypePostgresql()
+	    && !targetDbManagerSql.isTypePostgresql())) {
 	String message = "The source and target databases are not different.";
 	log.error(message);
 	throw new DbMigratorException(message);
       }
 
       // Check whether the PostgreSQL database is the target.
-      if (isTargetTypePostgresql()) {
+      if (targetDbManagerSql.isTypePostgresql()) {
 	// Yes: Initialize the database, if necessary.
 	initializePostgresqlDbIfNeeded(targetProperties);
       }
@@ -303,17 +319,22 @@ public class DbMigrator extends DbManager {
       initializeDataSourceProperties(targetProperties, targetDataSource);
 
       // Check whether the PostgreSQL database is the target.
-      if (isTargetTypePostgresql()) {
+      if (targetDbManagerSql.isTypePostgresql()) {
 	// Yes: Get the name of the database from the configuration.
 	String databaseName = targetProperties.get("databaseName");
 	if (log.isDebug3())
 	  log.debug3(DEBUG_HEADER + "databaseName = " + databaseName);
 
 	// Create the schema if it does not exist.
-	createPostgresqlSchemaIfMissing(databaseName, targetDataSource);
+	targetDbManagerSql.createPostgresqlSchemaIfMissing(databaseName,
+	    targetDataSource);
       }
     } catch (DbException dbe) {
       throw new DbMigratorException(dbe);
+    } catch (SQLException sqle) {
+      throw new DbMigratorException(sqle);
+    } catch (RuntimeException re) {
+      throw new DbMigratorException(re);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
@@ -399,72 +420,6 @@ public class DbMigrator extends DbManager {
   }
 
   /**
-   * Provides an indication of whether the source is a Derby database.
-   * 
-   * @return <code>true</code> if the source is a Derby database,
-   *         <code>false</code> otherwise.
-   */
-  private boolean isSourceTypeDerby() {
-    final String DEBUG_HEADER = "isSourceTypeDerby(): ";
-
-    boolean result = "org.apache.derby.jdbc.EmbeddedDataSource"
-	.equals(sourceClassName)
-	|| "org.apache.derby.jdbc.EmbeddedConnectionPoolDataSource"
-	.equals(sourceClassName);
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
-    return result;
-  }
-
-  /**
-   * Provides an indication of whether the source is a PostgreSQL database.
-   * 
-   * @return <code>true</code> if the source is a PostgreSQL database,
-   *         <code>false</code> otherwise.
-   */
-  private boolean isSourceTypePostgresql() {
-    final String DEBUG_HEADER = "isSourceTypePostgresql(): ";
-
-    boolean result = "org.postgresql.ds.PGSimpleDataSource"
-	.equals(sourceClassName)
-	|| "org.postgresql.ds.PGPoolingDataSource".equals(sourceClassName);
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
-    return result;
-  }
-
-  /**
-   * Provides an indication of whether the target is a Derby database.
-   * 
-   * @return <code>true</code> if the target is a Derby database,
-   *         <code>false</code> otherwise.
-   */
-  private boolean isTargetTypeDerby() {
-    final String DEBUG_HEADER = "isTargetTypeDerby(): ";
-
-    boolean result = "org.apache.derby.jdbc.EmbeddedDataSource"
-	.equals(targetClassName)
-	|| "org.apache.derby.jdbc.EmbeddedConnectionPoolDataSource"
-	.equals(targetClassName);
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
-    return result;
-  }
-
-  /**
-   * Provides an indication of whether the target is a PostgreSQL database.
-   * 
-   * @return <code>true</code> if the target is a PostgreSQL database,
-   *         <code>false</code> otherwise.
-   */
-  private boolean isTargetTypePostgresql() {
-    final String DEBUG_HEADER = "isTargetTypePostgresql(): ";
-
-    boolean result = "org.postgresql.ds.PGSimpleDataSource"
-	.equals(targetClassName)
-	|| "org.postgresql.ds.PGPoolingDataSource".equals(targetClassName);
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
-    return result;
-  }
-
-  /**
    * Initializes a PostreSQl database, if it does not exist already.
    * 
    * @param dbProperties
@@ -496,24 +451,14 @@ public class DbMigrator extends DbManager {
 	throw new DbMigratorException("Could not initialize the datasource", t);
       }
 
-      // Connect to the template database.
-      Connection conn = getConnectionBeforeReady(ds);
-
-      try {
-	// PostgreSQL does not allow a database to be created within a
-	// transaction.
-	conn.setAutoCommit(true);
-
-	// Create the database if it does not exist.
-	createPostgreSqlDbIfMissing(conn, databaseName);
-      } catch (SQLException sqle) {
-	throw new DbMigratorException(
-	    "Cannot set the connection to auto-commit", sqle);
-      } finally {
-	DbManager.safeCloseConnection(conn);
-      }
+      // Create the database if it does not exist.
+      targetDbManagerSql.createPostgreSqlDbIfMissing(ds, databaseName);
     } catch (DbException dbe) {
       throw new DbMigratorException(dbe);
+    } catch (SQLException sqle) {
+      throw new DbMigratorException(sqle);
+    } catch (RuntimeException re) {
+      throw new DbMigratorException(re);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
@@ -534,7 +479,7 @@ public class DbMigrator extends DbManager {
 
     try {
       // Get a connection to the source database.
-      sourceConn = getConnectionBeforeReady(sourceDataSource);
+      sourceConn = sourceDbManagerSql.getConnection(sourceDataSource);
 
       int dbVersion = -1;
 
@@ -543,7 +488,7 @@ public class DbMigrator extends DbManager {
 	if (log.isDebug3())
 	  log.debug3(DEBUG_HEADER + "dbVersion = " + dbVersion);
       } finally {
-        DbManager.rollback(sourceConn, log);
+	DbManagerSql.rollback(sourceConn, log);
       }
 
       // Check whether the source database needs to be updated before migrating
@@ -557,7 +502,7 @@ public class DbMigrator extends DbManager {
       }
 
       // Get a connection to the target database.
-      targetConn = getConnectionBeforeReady(targetDataSource);
+      targetConn = targetDbManagerSql.getConnection(targetDataSource);
 
       boolean created = false;
 
@@ -576,7 +521,7 @@ public class DbMigrator extends DbManager {
 	      CREATE_SEQ_TRANSLATION_TABLE_QUERY);
 	  if (log.isDebug3()) log.debug3(DEBUG_HEADER + "created = " + created);
 	} finally {
-	  DbManager.commitOrRollback(targetConn, log);
+	  DbManagerSql.commitOrRollback(targetConn, log);
 	}
       }
 
@@ -586,75 +531,88 @@ public class DbMigrator extends DbManager {
 
       // Populate the additional metadata.
       tableMap.get(PENDING_AU_TABLE)
-      .setCreateQuery(CREATE_PENDING_AU_TABLE_QUERY);
+      .setCreateQuery(DbManagerSql.CREATE_PENDING_AU_TABLE_QUERY);
 
       tableMap.get(COUNTER_REQUEST_TABLE)
-      .setCreateQuery(REQUEST_TABLE_CREATE_QUERY);
+      .setCreateQuery(DbManagerSql.REQUEST_TABLE_CREATE_QUERY);
       
       tableMap.get(COUNTER_REQUEST_TABLE).setRepeatedRowsAllowed(true);
 
       tableMap.get(UNCONFIGURED_AU_TABLE)
-      .setCreateQuery(CREATE_UNCONFIGURED_AU_TABLE_QUERY);
+      .setCreateQuery(DbManagerSql.CREATE_UNCONFIGURED_AU_TABLE_QUERY);
 
       tableMap.get(AU_PROBLEM_TABLE)
-      .setCreateQuery(CREATE_AU_PROBLEM_TABLE_QUERY);
+      .setCreateQuery(DbManagerSql.CREATE_AU_PROBLEM_TABLE_QUERY);
 
-      tableMap.get(PLATFORM_TABLE).setCreateQuery(CREATE_PLATFORM_TABLE_QUERY);
+      tableMap.get(PLATFORM_TABLE)
+      .setCreateQuery(DbManagerSql.CREATE_PLATFORM_TABLE_QUERY);
 
       tableMap.get(PLUGIN_TABLE).setCreateQuery(CREATE_PLUGIN_TABLE_QUERY);
 
-      tableMap.get(AU_TABLE).setCreateQuery(CREATE_AU_TABLE_QUERY);
+      tableMap.get(AU_TABLE).setCreateQuery(DbManagerSql.CREATE_AU_TABLE_QUERY);
 
-      tableMap.get(AU_MD_TABLE).setCreateQuery(CREATE_AU_MD_TABLE_QUERY);
+      tableMap.get(AU_MD_TABLE)
+      .setCreateQuery(DbManagerSql.CREATE_AU_MD_TABLE_QUERY);
 
       tableMap.get(MD_ITEM_TYPE_TABLE)
-      .setCreateQuery(CREATE_MD_ITEM_TYPE_TABLE_QUERY);
+      .setCreateQuery(DbManagerSql.CREATE_MD_ITEM_TYPE_TABLE_QUERY);
 
-      tableMap.get(MD_ITEM_TABLE).setCreateQuery(CREATE_MD_ITEM_TABLE_QUERY);
+      tableMap.get(MD_ITEM_TABLE)
+      .setCreateQuery(DbManagerSql.CREATE_MD_ITEM_TABLE_QUERY);
 
       tableMap.get(MD_ITEM_NAME_TABLE)
-      .setCreateQuery(CREATE_MD_ITEM_NAME_TABLE_QUERY);
+      .setCreateQuery(DbManagerSql.CREATE_MD_ITEM_NAME_TABLE_QUERY);
 
-      tableMap.get(MD_KEY_TABLE).setCreateQuery(CREATE_MD_KEY_TABLE_QUERY);
+      tableMap.get(MD_KEY_TABLE)
+      .setCreateQuery(DbManagerSql.CREATE_MD_KEY_TABLE_QUERY);
 
-      tableMap.get(MD_TABLE).setCreateQuery(CREATE_MD_TABLE_QUERY);
+      tableMap.get(MD_TABLE).setCreateQuery(DbManagerSql.CREATE_MD_TABLE_QUERY);
 
-      tableMap.get(BIB_ITEM_TABLE).setCreateQuery(CREATE_BIB_ITEM_TABLE_QUERY);
+      tableMap.get(BIB_ITEM_TABLE)
+      .setCreateQuery(DbManagerSql.CREATE_BIB_ITEM_TABLE_QUERY);
 
-      tableMap.get(URL_TABLE).setCreateQuery(CREATE_URL_TABLE_QUERY);
+      tableMap.get(URL_TABLE)
+      .setCreateQuery(DbManagerSql.CREATE_URL_TABLE_QUERY);
 
-      tableMap.get(AUTHOR_TABLE).setCreateQuery(CREATE_AUTHOR_TABLE_QUERY);
+      tableMap.get(AUTHOR_TABLE)
+      .setCreateQuery(DbManagerSql.CREATE_AUTHOR_TABLE_QUERY);
 
-      tableMap.get(KEYWORD_TABLE).setCreateQuery(CREATE_KEYWORD_TABLE_QUERY);
+      tableMap.get(KEYWORD_TABLE)
+      .setCreateQuery(DbManagerSql.CREATE_KEYWORD_TABLE_QUERY);
 
-      tableMap.get(DOI_TABLE).setCreateQuery(CREATE_DOI_TABLE_QUERY);
+      tableMap.get(DOI_TABLE)
+      .setCreateQuery(DbManagerSql.CREATE_DOI_TABLE_QUERY);
 
-      tableMap.get(ISSN_TABLE).setCreateQuery(CREATE_ISSN_TABLE_QUERY);
+      tableMap.get(ISSN_TABLE)
+      .setCreateQuery(DbManagerSql.CREATE_ISSN_TABLE_QUERY);
 
-      tableMap.get(ISBN_TABLE).setCreateQuery(CREATE_ISBN_TABLE_QUERY);
+      tableMap.get(ISBN_TABLE)
+      .setCreateQuery(DbManagerSql.CREATE_ISBN_TABLE_QUERY);
 
       tableMap.get(PUBLISHER_TABLE)
-      .setCreateQuery(CREATE_PUBLISHER_TABLE_QUERY);
+      .setCreateQuery(DbManagerSql.CREATE_PUBLISHER_TABLE_QUERY);
 
       tableMap.get(PUBLICATION_TABLE)
-      .setCreateQuery(CREATE_PUBLICATION_TABLE_QUERY);
+      .setCreateQuery(DbManagerSql.CREATE_PUBLICATION_TABLE_QUERY);
 
       tableMap.get(COUNTER_BOOK_TYPE_AGGREGATES_TABLE)
-      .setCreateQuery(BOOK_TYPE_AGGREGATES_TABLE_CREATE_QUERY);
+      .setCreateQuery(DbManagerSql.BOOK_TYPE_AGGREGATES_TABLE_CREATE_QUERY);
 
       tableMap.get(COUNTER_JOURNAL_TYPE_AGGREGATES_TABLE)
-      .setCreateQuery(JOURNAL_TYPE_AGGREGATES_TABLE_CREATE_QUERY);
+      .setCreateQuery(DbManagerSql.JOURNAL_TYPE_AGGREGATES_TABLE_CREATE_QUERY);
 
       tableMap.get(COUNTER_JOURNAL_PUBYEAR_AGGREGATE_TABLE)
-      .setCreateQuery(JOURNAL_PUBYEAR_AGGREGATE_TABLE_CREATE_QUERY);
+      .setCreateQuery(DbManagerSql
+	  .JOURNAL_PUBYEAR_AGGREGATE_TABLE_CREATE_QUERY);
 
       tableMap.get(SUBSCRIPTION_TABLE)
-      .setCreateQuery(CREATE_SUBSCRIPTION_TABLE_QUERY);
+      .setCreateQuery(DbManagerSql.CREATE_SUBSCRIPTION_TABLE_QUERY);
 
       tableMap.get(SUBSCRIPTION_RANGE_TABLE)
-      .setCreateQuery(CREATE_SUBSCRIPTION_RANGE_TABLE_QUERY);
+      .setCreateQuery(DbManagerSql.CREATE_SUBSCRIPTION_RANGE_TABLE_QUERY);
 
-      tableMap.get(VERSION_TABLE).setCreateQuery(CREATE_VERSION_TABLE_QUERY);
+      tableMap.get(VERSION_TABLE)
+      .setCreateQuery(DbManagerSql.CREATE_VERSION_TABLE_QUERY);
 
       // Remove the table that must be the last to be migrated.
       DbTable lastTable = tableMap.get(VERSION_TABLE);
@@ -692,23 +650,23 @@ public class DbMigrator extends DbManager {
       // Check whether this is the first execution of the migration process.
       if (isFirstExecution) {
 	// Yes: Add the indices for version 3.
-	executeDdlQueries(targetConn, VERSION_3_INDEX_CREATE_QUERIES);
+	targetDbManagerSql.updateDatabaseFrom2To3(targetConn);
 
 	// Add the indices for version 4.
-	executeDdlQueries(targetConn, VERSION_4_INDEX_CREATE_QUERIES);
+	targetDbManagerSql.createVersion4Indices(targetConn);
 
 	// Add the indices for version 5.
-	executeDdlQueries(targetConn, VERSION_5_INDEX_CREATE_QUERIES);
+	targetDbManagerSql.createVersion5Indices(targetConn);
 
 	// Check whether the database version is at least 6.
 	if (dbVersion >= 6) {
 	  // Yes: Add the indices for version 6.
-	  executeDdlQueries(targetConn, VERSION_6_INDEX_CREATE_QUERIES);
+	  targetDbManagerSql.createVersion6Indices(targetConn);
 
 	  // Check whether the database version is at least 7.
 	  if (dbVersion >= 7) {
 	    // Yes: Add the indices for version 7.
-	    executeDdlQueries(targetConn, VERSION_7_INDEX_CREATE_QUERIES);
+	    targetDbManagerSql.updateDatabaseFrom6To7(targetConn);
 	  }
 	}
       }
@@ -726,23 +684,18 @@ public class DbMigrator extends DbManager {
       if (!isFirstExecution) {
 	// Yes: Delete the sequence number translation table from the target
 	// database.
-	try {
-	  removeTableIfPresent(targetConn, SEQ_TRANSLATION_TABLE);
-	} finally {
-	  try {
-	    DbManager.commitOrRollback(targetConn, log);
-	  } catch (DbException dbe) {
-	    throw new DbMigratorException(dbe);
-	  }
-	}
+	removeTargetTableIfPresent(targetConn, SEQ_TRANSLATION_TABLE);
+	DbManagerSql.commitOrRollback(targetConn, log);
       }
     } catch (DbMigratorException dbme) {
       throw dbme;
-    } catch (DbException dbe) {
-      throw new DbMigratorException(dbe);
+    } catch (SQLException sqle) {
+      throw new DbMigratorException(sqle);
+    } catch (RuntimeException re) {
+      throw new DbMigratorException(re);
     } finally {
-      DbManager.safeCloseConnection(sourceConn);
-      DbManager.safeCloseConnection(targetConn);
+      DbManagerSql.safeCloseConnection(sourceConn);
+      DbManagerSql.safeCloseConnection(targetConn);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
@@ -774,9 +727,15 @@ public class DbMigrator extends DbManager {
     if (tableExists(conn, VERSION_TABLE, inTarget)) {
       try {
 	// Yes: Get the version from the version table in the database.
-	version = getDatabaseVersionBeforeReady(conn);
-      } catch (DbException dbe) {
-	throw new DbMigratorException(dbe);
+	if (inTarget) {
+	  version = targetDbManagerSql.getDatabaseVersion(conn);
+	} else {
+	  version = sourceDbManagerSql.getDatabaseVersion(conn);
+	}
+      } catch (SQLException sqle) {
+	throw new DbMigratorException(sqle);
+      } catch (RuntimeException re) {
+	throw new DbMigratorException(re);
       }
     }
 
@@ -816,23 +775,27 @@ public class DbMigrator extends DbManager {
     if (!tableExists(conn, tableName, true)) {
       // Yes: Create it.
       try {
-	statement = prepareStatementBeforeReady(conn,
-	    localizeCreateQuery(tableCreateSql));
-	int count = executeUpdateBeforeReady(statement);
+	statement = targetDbManagerSql.prepareStatement(conn,	
+	    targetDbManagerSql.localizeCreateQuery(tableCreateSql));
+	int count = targetDbManagerSql.executeUpdate(statement);
 	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
-      } catch (DbException dbe) {
-	throw new DbMigratorException(dbe);
+      } catch (SQLException sqle) {
+	throw new DbMigratorException(sqle);
+      } catch (RuntimeException re) {
+	throw new DbMigratorException(re);
       } finally {
-	DbManager.safeCloseStatement(statement);
+	DbManagerSql.safeCloseStatement(statement);
       }
 
       if (log.isDebug2())
 	log.debug2(DEBUG_HEADER + "Table '" + tableName + "' created.");
 
       try {
-	logTableSchemaBeforeReady(conn, tableName);
-      } catch (DbException dbe) {
-	throw new DbMigratorException(dbe);
+	targetDbManagerSql.logTableSchema(conn, tableName);
+      } catch (SQLException sqle) {
+	throw new DbMigratorException(sqle);
+      } catch (RuntimeException re) {
+	throw new DbMigratorException(re);
       }
 
       return true;
@@ -876,18 +839,18 @@ public class DbMigrator extends DbManager {
 
     try {
       // Get the database schema table data.
-      if (!inTarget && isSourceTypeDerby()) {
-	resultSet = conn.getMetaData().getTables(null, sourceUserName,
-	    tableName.toUpperCase(), TABLE_TYPES);
-      } else if (!inTarget && isSourceTypePostgresql()) {
-	resultSet = conn.getMetaData().getTables(null, sourceUserName,
-	    tableName.toLowerCase(), TABLE_TYPES);
-      } else if (inTarget && isTargetTypeDerby()) {
-	resultSet = conn.getMetaData().getTables(null, targetUserName,
-	    tableName.toUpperCase(), TABLE_TYPES);
-      } else if (inTarget && isTargetTypePostgresql()) {
-	resultSet = conn.getMetaData().getTables(null, targetUserName,
-	    tableName.toLowerCase(), TABLE_TYPES);
+      if (!inTarget && sourceDbManagerSql.isTypeDerby()) {
+	resultSet = DbManagerSql.getStandardTables(conn, null, sourceUserName,
+	    tableName.toUpperCase());
+      } else if (!inTarget && sourceDbManagerSql.isTypePostgresql()) {
+	resultSet = DbManagerSql.getStandardTables(conn, null, sourceUserName,
+	    tableName.toLowerCase());
+      } else if (inTarget && targetDbManagerSql.isTypeDerby()) {
+	resultSet = DbManagerSql.getStandardTables(conn, null, targetUserName,
+	    tableName.toUpperCase());
+      } else if (inTarget && targetDbManagerSql.isTypePostgresql()) {
+	resultSet = DbManagerSql.getStandardTables(conn, null, targetUserName,
+	    tableName.toLowerCase());
       }
 
       // Determine whether the table exists.
@@ -895,38 +858,11 @@ public class DbMigrator extends DbManager {
     } catch (SQLException sqle) {
 	throw new DbMigratorException("Cannot determine whether table '"
 	    + tableName + "' exists", sqle);
+    } catch (RuntimeException re) {
+	throw new DbMigratorException("Cannot determine whether table '"
+	    + tableName + "' exists", re);
     } finally {
-      DbManager.safeCloseResultSet(resultSet);
-    }
-
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
-    return result;
-  }
-
-  /**
-   * Provides a version of a table creation query localized for the database
-   * being used.
-   * 
-   * @param query
-   *          A String with the generic table creation query.
-   * 
-   * @return a String with the localized table creation query.
-   */
-  private String localizeCreateQuery(String query) {
-    final String DEBUG_HEADER = "localizeCreateQuery(): ";
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "query = " + query);
-
-    String result = query;
-
-    // Check whether the Derby database is being used.
-    if (isTargetTypeDerby()) {
-      // Yes.
-      result = StringUtil.replaceString(query, "--BigintSerialPk--",
-	  				BIGINT_SERIAL_PK_DERBY);
-      // No: Check whether the PostgreSQL database is being used.
-    } else if (isTargetTypePostgresql()) {
-      result = StringUtil.replaceString(query, "--BigintSerialPk--",
-	  				BIGINT_SERIAL_PK_PG);
+      DbManagerSql.safeCloseResultSet(resultSet);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
@@ -963,10 +899,10 @@ public class DbMigrator extends DbManager {
     ResultSet fkResultSet = null;
 
     try {
-      DatabaseMetaData metadata = conn.getMetaData();
+      DatabaseMetaData metadata = DbManagerSql.getMetadata(conn);
 
       // Get the database schema table data.
-      tableResultSet = metadata.getTables(null, schema, null, TABLE_TYPES);
+      tableResultSet = DbManagerSql.getStandardTables(conn, null, schema, null);
 
       // Loop through all the schema tables.
       while (tableResultSet.next()) {
@@ -1056,16 +992,23 @@ public class DbMigrator extends DbManager {
       log.error(message);
       log.error("TABLE_NAME = " + tableName);
       throw new DbMigratorException(message, sqle);
+    } catch (RuntimeException re) {
+      String message = "Cannot populate DB metadata.";
+      log.error(message);
+      log.error("TABLE_NAME = " + tableName);
+      throw new DbMigratorException(message, re);
     } finally {
-      DbManager.safeCloseResultSet(fkResultSet);
-      DbManager.safeCloseResultSet(pkResultSet);
-      DbManager.safeCloseResultSet(columnResultSet);
-      DbManager.safeCloseResultSet(tableResultSet);
+      DbManagerSql.safeCloseResultSet(fkResultSet);
+      DbManagerSql.safeCloseResultSet(pkResultSet);
+      DbManagerSql.safeCloseResultSet(columnResultSet);
+      DbManagerSql.safeCloseResultSet(tableResultSet);
 
       try {
-	DbManager.rollback(conn, log);
-      } catch (DbException dbe) {
-	throw new DbMigratorException(dbe);
+	DbManagerSql.rollback(conn, log);
+      } catch (SQLException sqle) {
+	throw new DbMigratorException(sqle);
+      } catch (RuntimeException re) {
+	throw new DbMigratorException(re);
       }
     }
 
@@ -1184,10 +1127,11 @@ public class DbMigrator extends DbManager {
       // deleted because the table may have multiple identical rows.
       if (table.isRepeatedRowsAllowed()) {
 	// Yes: Remove the table if it does exist.
-	removeTableIfPresent(targetConn, tableName);
+	removeTargetTableIfPresent(targetConn, tableName);
 
 	// Create the target table.
-	createTableBeforeReady(targetConn, tableName, createTableQuery);
+	targetDbManagerSql.createTable(targetConn, tableName,
+	    createTableQuery);
       } else {
 	// No: Create the target table, if necessary.
 	created = createTableIfNeeded(targetConn, tableName, createTableQuery);
@@ -1227,7 +1171,7 @@ public class DbMigrator extends DbManager {
 
 	  // Populate the primary key sequence translator data in memory with
 	  // the data in the database.
-	  populateSequenceTranslation(targetConn, tableName);
+	  populateTargetSequenceTranslation(targetConn, tableName);
 
 	  // Remember the primary key of this table.
 	  hasPrimaryKey = true;
@@ -1267,8 +1211,10 @@ public class DbMigrator extends DbManager {
 
       try {
 	// Get the rows from the source table.
-	readSource = prepareStatementBeforeReady(sourceConn, readSourceQuery);
-	sourceResultSet = executeQueryBeforeReady(readSource);
+	readSource = sourceDbManagerSql.prepareStatement(sourceConn,
+	    readSourceQuery);
+	sourceResultSet =
+	    sourceDbManagerSql.executeQuery(readSource);
 
 	// Loop through all the rows from the source table.
 	while (sourceResultSet.next()) {
@@ -1338,11 +1284,13 @@ public class DbMigrator extends DbManager {
 	    // Handle a table with a primary key differently to be able to
 	    // extract the generated primary key.
 	    if (hasPrimaryKey) {
-	      writeTarget = prepareStatementBeforeReady(targetConn,
+	      writeTarget =
+		  targetDbManagerSql.prepareStatement(targetConn,
 		  writeTargetQuery, Statement.RETURN_GENERATED_KEYS);
 	    } else {
 	      writeTarget =
-		  prepareStatementBeforeReady(targetConn, writeTargetQuery);
+		  targetDbManagerSql.prepareStatement(targetConn,
+		  writeTargetQuery);
 	    }
 
 	    index = 1;
@@ -1378,7 +1326,8 @@ public class DbMigrator extends DbManager {
 	    }
 
 	    // Write the row.
-	    int addedCount = executeUpdateBeforeReady(writeTarget);
+	    int addedCount =
+		targetDbManagerSql.executeUpdate(writeTarget);
 	    if (log.isDebug3())
 	      log.debug3(DEBUG_HEADER + "addedCount = " + addedCount);
 
@@ -1408,10 +1357,17 @@ public class DbMigrator extends DbManager {
 	      log.error(column.getName() + " = '" + column.getValue() + "'.");
 	    }
 	    throw new DbMigratorException(message, sqle);
-	  } catch (DbException dbe) {
-	      throw new DbMigratorException(dbe);
+	  } catch (RuntimeException re) {
+	    String message = "Cannot write the target '" + tableName
+		+ "' table";
+	    log.error(message, re);
+	    log.error("SQL = '" + writeTargetQuery + "'.");
+	    for (DbColumn column : columns) {
+	      log.error(column.getName() + " = '" + column.getValue() + "'.");
+	    }
+	    throw new DbMigratorException(message, re);
 	  } finally {
-	    DbManager.safeCloseStatement(writeTarget);
+	    DbManagerSql.safeCloseStatement(writeTarget);
 	  }
 	}
       } catch (SQLException sqle) {
@@ -1419,23 +1375,32 @@ public class DbMigrator extends DbManager {
 	log.error(message, sqle);
 	log.error("SQL = '" + readSourceQuery + "'.");
 	throw new DbMigratorException(message, sqle);
+      } catch (RuntimeException re) {
+	String message = "Cannot read the source '" + tableName + "' table";
+	log.error(message, re);
+	log.error("SQL = '" + readSourceQuery + "'.");
+	throw new DbMigratorException(message, re);
       } finally {
-	DbManager.safeCloseResultSet(sourceResultSet);
-	DbManager.safeCloseStatement(readSource);
+	DbManagerSql.safeCloseResultSet(sourceResultSet);
+	DbManagerSql.safeCloseStatement(readSource);
       }
 
       // Compare the rows in both tables.
       long rowCount = validateTableRowCount(sourceConn, targetConn, row);
       log.info("Table '" + tableName + "' successfully migrated - " + rowCount
 	  + " rows.");
-    } catch (DbException dbe) {
-      throw new DbMigratorException(dbe);
+    } catch (SQLException sqle) {
+      throw new DbMigratorException(sqle);
+    } catch (RuntimeException re) {
+      throw new DbMigratorException(re);
     } finally {
       try {
-	DbManager.commitOrRollback(targetConn, log);
-	DbManager.rollback(sourceConn, log);
-      } catch (DbException dbe) {
-	throw new DbMigratorException(dbe);
+	DbManagerSql.commitOrRollback(targetConn, log);
+	DbManagerSql.rollback(sourceConn, log);
+      } catch (SQLException sqle) {
+	throw new DbMigratorException(sqle);
+      } catch (RuntimeException re) {
+	throw new DbMigratorException(re);
       }
     }
 
@@ -1443,7 +1408,7 @@ public class DbMigrator extends DbManager {
   }
 
   /**
-   * Deletes a database table if it does exist.
+   * Deletes a target database table if it does exist.
    * 
    * @param conn
    *          A Connection with the database connection to be used.
@@ -1454,9 +1419,9 @@ public class DbMigrator extends DbManager {
    * @throws DbMigratorException
    *           if any problem occurred removing the table.
    */
-  private boolean removeTableIfPresent(Connection conn, String tableName)
+  private boolean removeTargetTableIfPresent(Connection conn, String tableName)
       throws DbMigratorException {
-    final String DEBUG_HEADER = "removeTableIfPresent(): ";
+    final String DEBUG_HEADER = "removeTargetTableIfPresent(): ";
     if (log.isDebug2())
       log.debug2(DEBUG_HEADER + "tableName = '" + tableName + "'.");
 
@@ -1472,19 +1437,24 @@ public class DbMigrator extends DbManager {
       String sql = null;
 
       try {
-	sql = dropTableQuery(tableName);
+	sql = DbManagerSql.dropTableQuery(tableName);
 	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "sql = '" + sql + "'.");
 
-	statement = prepareStatementBeforeReady(conn, sql);
-	int count = executeUpdateBeforeReady(statement);
+	statement = targetDbManagerSql.prepareStatement(conn, sql);
+	int count = targetDbManagerSql.executeUpdate(statement);
 	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
-      } catch (DbException dbe) {
+      } catch (SQLException sqle) {
 	String message = "Cannot drop table '" + tableName + "'";
-	log.error(message, dbe);
+	log.error(message, sqle);
 	log.error("SQL = '" + sql + "'.");
-	throw new DbMigratorException(dbe);
+	throw new DbMigratorException(sqle);
+      } catch (RuntimeException re) {
+	String message = "Cannot drop table '" + tableName + "'";
+	log.error(message, re);
+	log.error("SQL = '" + sql + "'.");
+	throw new DbMigratorException(re);
       } finally {
-	DbManager.safeCloseStatement(statement);
+	DbManagerSql.safeCloseStatement(statement);
       }
 
       if (log.isDebug2())
@@ -1518,12 +1488,12 @@ public class DbMigrator extends DbManager {
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
     // Get the count of rows in the source database table.
-    long sourceCount = countRows(sourceConn, row);
+    long sourceCount = countRows(sourceConn, row, false);
     if (log.isDebug3())
       log.debug3(DEBUG_HEADER + "sourceCount = " + sourceCount);
 
     // Get the count of rows in the target database table.
-    long targetCount = countRows(targetConn, row);
+    long targetCount = countRows(targetConn, row, true);
     if (log.isDebug3())
       log.debug3(DEBUG_HEADER + "targetCount = " + targetCount);
 
@@ -1545,11 +1515,14 @@ public class DbMigrator extends DbManager {
    *          A Connection with the database connection to be used.
    * @param tableName
    *          A String with the name of the table with the rows to be counted.
+   * @param inTarget
+   *          A boolean indicating whether the table rows are to be counted in
+   *          the target database.
    * @return a long with the number of rows in the table.
    * @throws DbMigratorException
    *           if any problem occurred counting the rows.
    */
-  private long countRows(Connection conn, DbRow row)
+  private long countRows(Connection conn, DbRow row, boolean inTarget)
       throws DbMigratorException {
     final String DEBUG_HEADER = "countRows(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
@@ -1565,19 +1538,26 @@ public class DbMigrator extends DbManager {
 
     // Get the row count.
     try {
-      statement = prepareStatementBeforeReady(conn, sql);
-      resultSet = executeQueryBeforeReady(statement);
+      if (inTarget) {
+	statement = targetDbManagerSql.prepareStatement(conn, sql);
+	resultSet = targetDbManagerSql.executeQuery(statement);
+      } else {
+	statement = sourceDbManagerSql.prepareStatement(conn, sql);
+	resultSet = sourceDbManagerSql.executeQuery(statement);
+      }
       resultSet.next();
       rowCount = resultSet.getLong(1);
     } catch (SQLException sqle) {
       log.error("Cannot get the count of rows", sqle);
       log.error("SQL = '" + sql + "'.");
       throw new DbMigratorException("Cannot get the count of rows", sqle);
-    } catch (DbException dbe) {
-      throw new DbMigratorException(dbe);
+    } catch (RuntimeException re) {
+      log.error("Cannot get the count of rows", re);
+      log.error("SQL = '" + sql + "'.");
+      throw new DbMigratorException("Cannot get the count of rows", re);
     } finally {
-      DbManager.safeCloseResultSet(resultSet);
-      DbManager.safeCloseStatement(statement);
+      DbManagerSql.safeCloseResultSet(resultSet);
+      DbManagerSql.safeCloseStatement(statement);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "rowCount = " + rowCount);
@@ -1595,9 +1575,9 @@ public class DbMigrator extends DbManager {
    * @throws DbMigratorException
    *           if any problem occurred populating the sequence translation map.
    */
-  private void populateSequenceTranslation(Connection conn, String tableName)
-      throws DbMigratorException {
-    final String DEBUG_HEADER = "populateSequenceTranslation(): ";
+  private void populateTargetSequenceTranslation(Connection conn,
+      String tableName) throws DbMigratorException {
+    final String DEBUG_HEADER = "populateTargetSequenceTranslation(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "tableName = " + tableName);
 
     if (conn == null) {
@@ -1609,11 +1589,11 @@ public class DbMigrator extends DbManager {
 
     try {
       // Get the sequence translations for the table.
-      statement =
-	  prepareStatementBeforeReady(conn, FIND_TABLE_TRANSLATION_QUERY);
+      statement = targetDbManagerSql.prepareStatement(conn,
+	  FIND_TABLE_TRANSLATION_QUERY);
       statement.setString(1, tableName);
 
-      resultSet = executeQueryBeforeReady(statement);
+      resultSet = targetDbManagerSql.executeQuery(statement);
 
       // Loop through all the sequence translations for the table.
       while (resultSet.next()) {
@@ -1635,11 +1615,14 @@ public class DbMigrator extends DbManager {
       log.error(message, sqle);
       log.error("SQL = '" + FIND_TABLE_TRANSLATION_QUERY + "'.");
       throw new DbMigratorException(message, sqle);
-    } catch (DbException dbe) {
-      throw new DbMigratorException(dbe);
+    } catch (RuntimeException re) {
+      String message = "Cannot read the sequence translation table";
+      log.error(message, re);
+      log.error("SQL = '" + FIND_TABLE_TRANSLATION_QUERY + "'.");
+      throw new DbMigratorException(message, re);
     } finally {
-      DbManager.safeCloseResultSet(resultSet);
-      DbManager.safeCloseStatement(statement);
+      DbManagerSql.safeCloseResultSet(resultSet);
+      DbManagerSql.safeCloseStatement(statement);
     }
   }
 
@@ -1675,7 +1658,8 @@ public class DbMigrator extends DbManager {
       log.debug3(DEBUG_HEADER + "findTargetQuery = '" + findTargetQuery + "'");
 
     try {
-      readTarget = prepareStatementBeforeReady(conn, findTargetQuery);
+      readTarget = targetDbManagerSql.prepareStatement(conn,
+	  findTargetQuery);
 
       int index = 1;
       for (DbColumn column : dbTable.getRow().getColumnsAsArray()) {
@@ -1687,7 +1671,7 @@ public class DbMigrator extends DbManager {
 	}
       }
 
-      targetResultSet = executeQueryBeforeReady(readTarget);
+      targetResultSet = targetDbManagerSql.executeQuery(readTarget);
       targetResultSet.next();
       rowCount = targetResultSet.getLong(1);
       if (log.isDebug3())
@@ -1701,11 +1685,18 @@ public class DbMigrator extends DbManager {
 	log.error(column.getName() + " = '" + column.getValue() + "'.");
       }
       throw new DbMigratorException(message, sqle);
-    } catch (DbException dbe) {
-      throw new DbMigratorException(dbe);
+    } catch (RuntimeException re) {
+      String message = "Cannot read the target '" + dbTable.getName()
+	  + "' table";
+      log.error(message, re);
+      log.error("SQL = '" + findTargetQuery.toString() + "'.");
+      for (DbColumn column : dbTable.getRow().getColumnsAsArray()) {
+	log.error(column.getName() + " = '" + column.getValue() + "'.");
+      }
+      throw new DbMigratorException(message, re);
     } finally {
-      DbManager.safeCloseResultSet(targetResultSet);
-      DbManager.safeCloseStatement(readTarget);
+      DbManagerSql.safeCloseResultSet(targetResultSet);
+      DbManagerSql.safeCloseStatement(readTarget);
     }
 
     return rowCount;
@@ -1782,13 +1773,14 @@ public class DbMigrator extends DbManager {
 
     try {
       // Add the row to the database.
-      insert = prepareStatementBeforeReady(conn, INSERT_SEQ_TRANSLATION_QUERY);
+      insert = targetDbManagerSql.prepareStatement(conn,
+	  INSERT_SEQ_TRANSLATION_QUERY);
 
       insert.setString(1, tableName);
       insert.setLong(2, sourceSeq);
       insert.setLong(3, targetSeq);
 
-      count = executeUpdateBeforeReady(insert);
+      count = targetDbManagerSql.executeUpdate(insert);
     } catch (SQLException sqle) {
       String message = "Cannot add sequence translation";
 	log.error(message, sqle);
@@ -1797,10 +1789,16 @@ public class DbMigrator extends DbManager {
 	log.error("targetSeq = " + targetSeq);
 	log.error("SQL = '" + INSERT_SEQ_TRANSLATION_QUERY + "'.");
 	throw new DbMigratorException(message, sqle);
-    } catch (DbException dbe) {
-      throw new DbMigratorException(dbe);
+    } catch (RuntimeException re) {
+      String message = "Cannot add sequence translation";
+	log.error(message, re);
+	log.error("tableName = " + tableName);
+	log.error("sourceSeq = " + sourceSeq);
+	log.error("targetSeq = " + targetSeq);
+	log.error("SQL = '" + INSERT_SEQ_TRANSLATION_QUERY + "'.");
+	throw new DbMigratorException(message, re);
     } finally {
-      DbManager.safeCloseStatement(insert);
+      DbManagerSql.safeCloseStatement(insert);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "count = " + count);

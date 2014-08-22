@@ -1,10 +1,10 @@
 /*
- * $Id: AuMetadataRecorder.java,v 1.17 2014-07-22 16:18:20 fergaloy-sf Exp $
+ * $Id: AuMetadataRecorder.java,v 1.18 2014-08-22 22:15:00 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -31,7 +31,7 @@
  */
 package org.lockss.metadata;
 
-import static org.lockss.db.DbManager.*;
+import static org.lockss.db.SqlConstants.*;
 import static org.lockss.metadata.MetadataManager.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;

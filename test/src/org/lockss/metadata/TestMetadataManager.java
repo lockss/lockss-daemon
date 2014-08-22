@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetadataManager.java,v 1.6 2014-06-30 04:58:14 tlipkis Exp $
+ * $Id: TestMetadataManager.java,v 1.7 2014-08-22 22:15:00 fergaloy-sf Exp $
  */
 
 /*
@@ -28,17 +28,15 @@ Except as contained in this notice, the name of Stanford University shall not
 be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 */
-
 package org.lockss.metadata;
 
-import static org.lockss.db.DbManager.*;
+import static org.lockss.db.SqlConstants.*;
 import static org.lockss.metadata.MetadataManager.*;
 import java.io.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.*;
-
 import org.lockss.config.*;
 import org.lockss.daemon.PluginException;
 import org.lockss.db.DbManager;

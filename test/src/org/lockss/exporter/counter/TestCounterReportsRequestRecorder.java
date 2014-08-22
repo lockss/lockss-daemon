@@ -1,10 +1,10 @@
 /*
- * $Id: TestCounterReportsRequestRecorder.java,v 1.10 2013-10-16 23:10:43 fergaloy-sf Exp $
+ * $Id: TestCounterReportsRequestRecorder.java,v 1.11 2014-08-22 22:14:59 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,16 +29,9 @@
  in this Software without prior written authorization from Stanford University.
 
  */
-
-/**
- * Test class for org.lockss.exporter.counter.CounterReportsRequestRecorder.
- * 
- * @author Fernando Garcia-Loygorri
- * @version 1.0
- */
 package org.lockss.exporter.counter;
 
-import static org.lockss.db.DbManager.*;
+import static org.lockss.db.SqlConstants.*;
 import static org.lockss.metadata.MetadataManager.PRIMARY_NAME_TYPE;
 import static org.lockss.plugin.ArticleFiles.*;
 import java.io.File;
@@ -57,6 +50,12 @@ import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockLockssDaemon;
 
+/**
+ * Test class for org.lockss.exporter.counter.CounterReportsRequestRecorder.
+ * 
+ * @author Fernando Garcia-Loygorri
+ * @version 1.0
+ */
 public class TestCounterReportsRequestRecorder extends LockssTestCase {
   // A URL that exists in the URL metadata table.
   private static final String RECORDABLE_URL =

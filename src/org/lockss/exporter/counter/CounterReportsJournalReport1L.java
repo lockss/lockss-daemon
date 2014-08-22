@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsJournalReport1L.java,v 1.7 2014-05-23 16:50:37 fergaloy-sf Exp $
+ * $Id: CounterReportsJournalReport1L.java,v 1.8 2014-08-22 22:15:00 fergaloy-sf Exp $
  */
 
 /*
@@ -29,17 +29,16 @@
  in this Software without prior written authorization from Stanford University.
 
  */
-
-/**
- * The COUNTER Journal Report 1L.
- */
 package org.lockss.exporter.counter;
 
-import static org.lockss.db.DbManager.*;
+import static org.lockss.db.SqlConstants.*;
 import static org.lockss.exporter.counter.CounterReportsManager.*;
 import static org.lockss.metadata.MetadataManager.*;
 import org.lockss.app.LockssDaemon;
 
+/**
+ * The COUNTER Journal Report 1L.
+ */
 public class CounterReportsJournalReport1L
 	extends CounterReportsJournalReport1 {
   // Query to get the journals to be included in the report.

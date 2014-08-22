@@ -1,10 +1,10 @@
 /*
- * $Id: ArticleMetadataBuffer.java,v 1.5 2014-08-08 17:26:01 pgust Exp $
+ * $Id: ArticleMetadataBuffer.java,v 1.6 2014-08-22 22:15:00 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2012-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -31,7 +31,7 @@
  */
 package org.lockss.metadata;
 
-import static org.lockss.db.DbManager.*;
+import static org.lockss.db.SqlConstants.*;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.File;

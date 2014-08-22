@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsBookReport2L.java,v 1.7 2014-05-23 16:50:37 fergaloy-sf Exp $
+ * $Id: CounterReportsBookReport2L.java,v 1.8 2014-08-22 22:15:00 fergaloy-sf Exp $
  */
 
 /*
@@ -29,17 +29,16 @@
  in this Software without prior written authorization from Stanford University.
 
  */
-
-/**
- * The COUNTER Book Report 2L.
- */
 package org.lockss.exporter.counter;
 
-import static org.lockss.db.DbManager.*;
+import static org.lockss.db.SqlConstants.*;
 import static org.lockss.exporter.counter.CounterReportsManager.*;
 import static org.lockss.metadata.MetadataManager.*;
 import org.lockss.app.LockssDaemon;
 
+/**
+ * The COUNTER Book Report 2L.
+ */
 public class CounterReportsBookReport2L extends CounterReportsBookReport2 {
   // Query to get the books to be included in the report.
   // This the same query used for Book Report 2, except for the fact that in

@@ -1,5 +1,5 @@
 /*
- * $Id: DbVersion13To14Migrator.java,v 1.1 2014-07-02 21:31:55 fergaloy-sf Exp $
+ * $Id: DbVersion13To14Migrator.java,v 1.2 2014-08-22 22:14:59 fergaloy-sf Exp $
  */
 
 /*
@@ -71,8 +71,16 @@ public class DbVersion13To14Migrator extends LockssRunnable {
       }
     }
 
-    // Perform the actual work.
-    daemon.getDbManager().migrateDatabaseFrom13To14();
+    try {
+      DbManagerSql dbManagerSql =
+	  daemon.getDbManager().getDbManagerSqlBeforeReady();
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "Obtained DbManagerSql.");
+
+      // Perform the actual work.
+      dbManagerSql.migrateDatabaseFrom13To14();
+    } catch (Exception e) {
+      log.error("Cannot migrate the database from version 13 to 14", e);
+    }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }

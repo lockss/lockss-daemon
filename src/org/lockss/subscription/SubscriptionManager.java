@@ -1,5 +1,5 @@
 /*
- * $Id: SubscriptionManager.java,v 1.18 2014-08-12 18:05:21 fergaloy-sf Exp $
+ * $Id: SubscriptionManager.java,v 1.19 2014-08-22 22:15:00 fergaloy-sf Exp $
  */
 
 /*
@@ -31,7 +31,7 @@
  */
 package org.lockss.subscription;
 
-import static org.lockss.db.DbManager.*;
+import static org.lockss.db.SqlConstants.*;
 import static org.lockss.metadata.MetadataManager.*;
 import java.io.BufferedReader;
 import java.io.File;

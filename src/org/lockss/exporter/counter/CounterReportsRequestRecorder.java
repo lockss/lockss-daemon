@@ -1,10 +1,10 @@
 /*
- * $Id: CounterReportsRequestRecorder.java,v 1.8 2013-06-19 23:02:27 fergaloy-sf Exp $
+ * $Id: CounterReportsRequestRecorder.java,v 1.9 2014-08-22 22:15:00 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,15 +29,9 @@
  in this Software without prior written authorization from Stanford University.
 
  */
-
-/**
- * Persists the request data necessary to create COUNTER reports.
- * 
- * @version 1.0
- */
 package org.lockss.exporter.counter;
 
-import static org.lockss.db.DbManager.*;
+import static org.lockss.db.SqlConstants.*;
 import static org.lockss.plugin.ArticleFiles.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -49,6 +43,11 @@ import org.lockss.db.DbManager;
 import org.lockss.util.Logger;
 import org.mortbay.http.HttpResponse;
 
+/**
+ * Persists the request data necessary to create COUNTER reports.
+ * 
+ * @version 1.0
+ */
 public class CounterReportsRequestRecorder {
   private static final Logger log = Logger
       .getLogger(CounterReportsRequestRecorder.class);

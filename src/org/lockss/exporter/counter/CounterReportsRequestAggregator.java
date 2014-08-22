@@ -1,10 +1,10 @@
 /*
- * $Id: CounterReportsRequestAggregator.java,v 1.9 2013-06-19 23:02:27 fergaloy-sf Exp $
+ * $Id: CounterReportsRequestAggregator.java,v 1.10 2014-08-22 22:15:00 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,16 +29,9 @@
  in this Software without prior written authorization from Stanford University.
 
  */
-
-/**
- * Periodically aggregates request statistics used in COUNTER reports and stores
- * them in the database.
- * 
- * @version 1.0
- */
 package org.lockss.exporter.counter;
 
-import static org.lockss.db.DbManager.*;
+import static org.lockss.db.SqlConstants.*;
 import static org.lockss.plugin.ArticleFiles.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -56,6 +49,12 @@ import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
 import org.lockss.util.Logger;
 
+/**
+ * Periodically aggregates request statistics used in COUNTER reports and stores
+ * them in the database.
+ * 
+ * @version 1.0
+ */
 public class CounterReportsRequestAggregator {
   // Prefix for the reporting configuration entries.
   public static final String PREFIX = Configuration.PREFIX + "report.";

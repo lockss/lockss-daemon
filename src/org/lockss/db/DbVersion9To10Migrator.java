@@ -1,10 +1,10 @@
 /*
- * $Id: DbVersion9To10Migrator.java,v 1.1 2013-10-16 23:10:44 fergaloy-sf Exp $
+ * $Id: DbVersion9To10Migrator.java,v 1.2 2014-08-22 22:14:59 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -61,7 +61,7 @@ public class DbVersion9To10Migrator extends LockssRunnable {
 
     // Wait until the AUs have been started.
     if (!daemon.areAusStarted()) {
-      log.debug(DEBUG_HEADER + "Waiting for aus to start");
+      if (log.isDebug()) log.debug(DEBUG_HEADER + "Waiting for aus to start");
 
       while (!daemon.areAusStarted()) {
 	try {
@@ -71,8 +71,16 @@ public class DbVersion9To10Migrator extends LockssRunnable {
       }
     }
 
-    // Perform the actual work.
-    daemon.getDbManager().migrateDatabaseFrom9To10();
+    try {
+      DbManagerSql dbManagerSql =
+	  daemon.getDbManager().getDbManagerSqlBeforeReady();
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "Obtained DbManagerSql.");
+
+      // Perform the actual work.
+      dbManagerSql.migrateDatabaseFrom9To10();
+    } catch (Exception e) {
+      log.error("Cannot migrate the database from version 9 to 10", e);
+    }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }

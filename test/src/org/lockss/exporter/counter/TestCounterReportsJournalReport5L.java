@@ -1,5 +1,5 @@
 /*
- * $Id: TestCounterReportsJournalReport5L.java,v 1.13 2014-01-02 22:41:48 fergaloy-sf Exp $
+ * $Id: TestCounterReportsJournalReport5L.java,v 1.14 2014-08-22 22:14:59 fergaloy-sf Exp $
  */
 
 /*
@@ -29,16 +29,9 @@
  in this Software without prior written authorization from Stanford University.
 
  */
-
-/**
- * Test class for org.lockss.exporter.counter.CounterReportsJournalReport5L.
- * 
- * @author Fernando Garcia-Loygorri
- * @version 1.0
- */
 package org.lockss.exporter.counter;
 
-import static org.lockss.db.DbManager.*;
+import static org.lockss.db.SqlConstants.*;
 import static org.lockss.metadata.MetadataManager.PRIMARY_NAME_TYPE;
 import static org.lockss.plugin.ArticleFiles.*;
 import java.io.BufferedReader;
@@ -63,6 +56,12 @@ import org.lockss.test.MockLockssDaemon;
 import org.lockss.util.IOUtil;
 import org.lockss.util.TimeBase;
 
+/**
+ * Test class for org.lockss.exporter.counter.CounterReportsJournalReport5L.
+ * 
+ * @author Fernando Garcia-Loygorri
+ * @version 1.0
+ */
 public class TestCounterReportsJournalReport5L extends LockssTestCase {
   private static final String JOURNAL_URL = "http://example.com/journal.url";
   private static final String HTML_URL = "http://example.com/html.url";

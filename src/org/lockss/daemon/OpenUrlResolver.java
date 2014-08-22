@@ -1,10 +1,10 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.52 2014-08-08 18:04:54 pgust Exp $
+ * $Id: OpenUrlResolver.java,v 1.53 2014-08-22 22:15:00 fergaloy-sf Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -31,7 +31,7 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.daemon;
 
-import static org.lockss.db.DbManager.*;
+import static org.lockss.db.SqlConstants.*;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.net.HttpURLConnection;

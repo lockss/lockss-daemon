@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsJournalReport5.java,v 1.9 2014-05-23 16:50:37 fergaloy-sf Exp $
+ * $Id: CounterReportsJournalReport5.java,v 1.10 2014-08-22 22:15:00 fergaloy-sf Exp $
  */
 
 /*
@@ -29,13 +29,9 @@
  in this Software without prior written authorization from Stanford University.
 
  */
-
-/**
- * The COUNTER Journal Report 5.
- */
 package org.lockss.exporter.counter;
 
-import static org.lockss.db.DbManager.*;
+import static org.lockss.db.SqlConstants.*;
 import static org.lockss.exporter.counter.CounterReportsManager.*;
 import static org.lockss.metadata.MetadataManager.*;
 import java.sql.Connection;
@@ -54,6 +50,9 @@ import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 import org.lockss.util.TimeBase;
 
+/**
+ * The COUNTER Journal Report 5.
+ */
 public class CounterReportsJournalReport5 extends CounterReportsJournalReport {
   private static final Logger log = Logger
       .getLogger(CounterReportsJournalReport5.class);

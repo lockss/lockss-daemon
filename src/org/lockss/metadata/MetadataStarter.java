@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataStarter.java,v 1.9 2014-07-02 21:31:56 fergaloy-sf Exp $
+ * $Id: MetadataStarter.java,v 1.10 2014-08-22 22:15:00 fergaloy-sf Exp $
  */
 
 /*
@@ -31,7 +31,7 @@
  */
 package org.lockss.metadata;
 
-import static org.lockss.db.DbManager.*;
+import static org.lockss.db.SqlConstants.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
