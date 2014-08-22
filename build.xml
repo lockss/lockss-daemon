@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.367 2014-08-21 23:46:27 thib_gc Exp $
+ $Id: build.xml,v 1.368 2014-08-22 19:09:45 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -1022,6 +1022,8 @@ The target you have selected requires compiling under JDK 1.7.
   <target name="compile-generated" depends="prepare,generate-parsers"
    description="Compile the generated classes" >
     <mkdir dir="${generated.classes}" />
+    <!-- If there are no generated files, src dir won't have been created. -->
+    <mkdir dir="${generated.src}" />
     <dojavac srcdir="${generated.src}" destdir="${generated.classes}"
 	     cpid="generated.compile.classpath" >
      <javacelem>
