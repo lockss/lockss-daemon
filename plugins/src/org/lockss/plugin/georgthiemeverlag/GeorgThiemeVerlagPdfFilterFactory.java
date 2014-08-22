@@ -1,5 +1,5 @@
 /*
- * $Id: GeorgThiemeVerlagPdfFilterFactory.java,v 1.3 2014-02-06 01:13:27 etenbrink Exp $
+ * $Id: GeorgThiemeVerlagPdfFilterFactory.java,v 1.4 2014-08-22 12:28:37 thib_gc Exp $
  */
 
 /*
@@ -73,11 +73,19 @@ public class GeorgThiemeVerlagPdfFilterFactory extends SimplePdfFilterFactory {
       catch (CryptographyException ce) {
         throw new PdfCryptographyException(ce);
       }
-      catch (InvalidPasswordException ipe) {
-        throw new PdfCryptographyException(ipe);
-      }
       catch (IOException ioe) {
         throw new PdfException(ioe);
+      }
+      catch (Exception exc) {
+        // FIXME 1.67
+        // InvalidPasswordException thrown by PDFBox <= 1.8.5 but not >= 1.8.6
+        // This hack will avoid 1.66 plugins being incompatible with 1.67 
+        if (exc instanceof InvalidPasswordException) {
+          throw new PdfCryptographyException(exc);
+        }
+        else {
+          throw new PdfException(exc);
+        }
       }
       finally {
         // PDFBox normally closes the input stream, but just in case

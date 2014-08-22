@@ -1,5 +1,5 @@
 /*
- * $Id: PdfBoxDocumentFactory.java,v 1.4 2014-07-16 20:15:46 thib_gc Exp $
+ * $Id: PdfBoxDocumentFactory.java,v 1.5 2014-08-22 12:28:37 thib_gc Exp $
  */
 
 /*
@@ -70,9 +70,6 @@ public class PdfBoxDocumentFactory implements PdfDocumentFactory {
     }
     catch (CryptographyException ce) {
       throw new PdfCryptographyException(ce);
-    }
-    catch (InvalidPasswordException ipe) {
-      throw new PdfCryptographyException(ipe);
     }
     catch (IOException ioe) {
       throw new PdfException(ioe);

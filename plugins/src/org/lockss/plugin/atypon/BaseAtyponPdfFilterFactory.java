@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponPdfFilterFactory.java,v 1.2 2014-07-09 22:20:46 thib_gc Exp $
+ * $Id: BaseAtyponPdfFilterFactory.java,v 1.3 2014-08-22 12:28:37 thib_gc Exp $
  */
 
 /*
@@ -67,11 +67,19 @@ public class BaseAtyponPdfFilterFactory extends SimplePdfFilterFactory {
       catch (CryptographyException ce) {
         throw new PdfCryptographyException(ce);
       }
-      catch (InvalidPasswordException ipe) {
-        throw new PdfCryptographyException(ipe);
-      }
       catch (IOException ioe) {
         throw new PdfException(ioe);
+      }
+      catch (Exception exc) {
+        // FIXME 1.67
+        // InvalidPasswordException thrown by PDFBox <= 1.8.5 but not >= 1.8.6
+        // This hack will avoid 1.66 plugins being incompatible with 1.67 
+        if (exc instanceof InvalidPasswordException) {
+          throw new PdfCryptographyException(exc);
+        }
+        else {
+          throw new PdfException(exc);
+        }
       }
       finally {
         IOUtil.safeClose(pdfInputStream);
