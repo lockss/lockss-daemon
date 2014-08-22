@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.251 2014-07-21 03:19:44 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.252 2014-08-22 19:22:47 fergaloy-sf Exp $
  */
 
 /*
@@ -300,7 +300,8 @@ public class PluginManager
   // manifest index display).
   private Map<String,AuSearchSet> hostAus = new HashMap<String,AuSearchSet>();
 
-  private Set inactiveAuIds = Collections.synchronizedSet(new HashSet());
+  private Set<String> inactiveAuIds =
+      Collections.synchronizedSet(new HashSet<String>());
 
   private List<AuEventHandler> auEventHandlers =
     new ArrayList<AuEventHandler>();
@@ -2512,7 +2513,7 @@ public class PluginManager
   }
 
   /** Return the AUIDs all AU that have been explicitly deactivated */
-  public Collection getInactiveAuIds() {
+  public Collection<String> getInactiveAuIds() {
     return inactiveAuIds;
   }
 
