@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.67 2013-03-19 04:26:15 tlipkis Exp $
+ * $Id: ArchivalUnit.java,v 1.68 2014-08-25 08:57:38 tlipkis Exp $
  */
 
 /*
@@ -251,6 +251,7 @@ public interface ArchivalUnit {
    */
   public SubstancePredicate makeSubstancePredicate()
       throws ArchivalUnit.ConfigurationException, PluginException.LinkageError;
+
   /**
    * Query the {@link AuState} object to determine if this is the proper
    * time to do a new content crawl.
