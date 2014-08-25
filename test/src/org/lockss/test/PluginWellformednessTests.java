@@ -1,5 +1,5 @@
 /*
-n * $Id: PluginWellformednessTests.java,v 1.6 2014-04-23 20:49:11 tlipkis Exp $
+n * $Id: PluginWellformednessTests.java,v 1.7 2014-08-25 08:59:02 tlipkis Exp $
  */
 
 /*
@@ -111,6 +111,9 @@ public final class PluginWellformednessTests extends LockssTestCase {
       try {
  	System.err.println("Testing plugin: " + pluginName);
 	resetAndTest(pluginName);
+      } catch (PluginFailedToLoadException e) {
+	log.error("Plugin " + pluginName + " failed");
+	failed.add(pluginName);
       } catch (Exception e) {
 	log.error("Plugin " + pluginName + " failed", e);
 	failed.add(pluginName);
@@ -137,6 +140,9 @@ public final class PluginWellformednessTests extends LockssTestCase {
    * and the factories are loadable and runnable.
    */
   public void testWellFormed(String pluginName) throws Exception {
+    if (getPlugin() == null) {
+      throw new PluginFailedToLoadException();
+    }
     ArchivalUnit au = createAu();
 
     assertSame(plugin, au.getPlugin());
@@ -200,6 +206,9 @@ public final class PluginWellformednessTests extends LockssTestCase {
     AuUtil.isRepairFromPublisherWhenTooClose(au, true);
     AuUtil.isRepairFromPublisherWhenTooClose(au, false);
     AuUtil.minReplicasForNoQuorumPeerRepair(au, 2);
+  }
+
+  public static class PluginFailedToLoadException extends Exception {
   }
 
   public static void main(String[] argv) {
