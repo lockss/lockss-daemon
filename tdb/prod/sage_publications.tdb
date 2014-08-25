@@ -18533,7 +18533,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         param[base_url] = http://aia.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 2014 ; Journal of Asian Security and International Affairs Volume 1 ; 1 >
+        au < manifest ; 2014 ; Journal of Asian Security and International Affairs Volume 1 ; 1 >
 
     }
 
@@ -21629,7 +21629,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2011 ; Journal of Emerging Market Finance Volume 10 ; 10 >
         au < released ; 2012 ; Journal of Emerging Market Finance Volume 11 ; 11 >
         au < manifest ; 2013 ; Journal of Emerging Market Finance Volume 12 ; 12 >
-        au < expected ; 2014 ; Journal of Emerging Market Finance Volume 13 ; 13 >
+        au < manifest ; 2014 ; Journal of Emerging Market Finance Volume 13 ; 13 >
 
       }
 
@@ -24872,7 +24872,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011-2012 ; Journal of Music Teacher Education Volume 21 ; 21 >
         au < released ; 2012-2013 ; Journal of Music Teacher Education Volume 22 ; 22 >
         au < manifest ; 2013-2014 ; Journal of Music Teacher Education Volume 23 ; 23 >
-        au < expected ; 2014-2015 ; Journal of Music Teacher Education Volume 24 ; 24 >
+        au < manifest ; 2014-2015 ; Journal of Music Teacher Education Volume 24 ; 24 >
 
       }
 
@@ -26474,7 +26474,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Journal of South Asian Development Volume 6 ; 6 >
         au < released ; 2012 ; Journal of South Asian Development Volume 7 ; 7 >
         au < manifest ; 2013 ; Journal of South Asian Development Volume 8 ; 8 >
-        au < expected ; 2014 ; Journal of South Asian Development Volume 9 ; 9 >
+        au < manifest ; 2014 ; Journal of South Asian Development Volume 9 ; 9 >
 
       }
 
@@ -30402,7 +30402,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Music Educators Journal Volume 98 ; 98 >
         au < released ; 2012 ; Music Educators Journal Volume 99 ; 99 >
         au < manifest ; 2013 ; Music Educators Journal Volume 100 ; 100 >
-        au < expected ; 2014 ; Music Educators Journal Volume 101 ; 101 >
+        au < manifest ; 2014 ; Music Educators Journal Volume 101 ; 101 >
 
       }
 
@@ -43279,7 +43279,7 @@ comment[mpj] = now published by Brill
     au < exists ; 2010 ; Annals of the ICRP Volume 40 ; 40 >
     au < manifest ; 2012 ; Annals of the ICRP Volume 41 ; 41 >
     au < exists ; 2013 ; Annals of the ICRP Volume 42 ; 42 >
-    au < expected ; 2014 ; Annals of the ICRP Volume 43 ; 43 >
+    au < manifest ; 2014 ; Annals of the ICRP Volume 43 ; 43 >
 
     }
 
@@ -45658,7 +45658,7 @@ comment[mpj] = now published by Brill
         param[base_url] = http://shr.sagepub.com/
         comment[continues] = 2042-5333
   
-        au < exists ; 2014 ; JRSM Open Volume 5 ; 5 >
+        au < manifest ; 2014 ; JRSM Open Volume 5 ; 5 >
   
     }
   
