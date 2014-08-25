@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -84,7 +84,7 @@
       <string>2,"^(?:%sen/(?:account/|error/|content/openurl/|.*iscitedby=)|%s[?]doi=[^&amp;]+&amp;newsite=1)", base_url, resolver_url</string>
       <string>1,"^%s(?:services/images/|en/content/openurlimage/|en/journals/lockss[?]journalcode=%s&amp;volume=%s&amp;year=%d&amp;issue=)", base_url, journal_code, volume_name, year</string>
       <string>1,"^%s[?]doi=", resolver_url</string>
-      <string>1,"^%sen/content/article(?:landing|pdf|html)/%d/%s/[^/?]+$", base_url, year, journal_code</string>
+      <string>1,"^%sen/content/article(?:landing|pdf|html)/%d/%s/[^/?.]+$", base_url, year, journal_code</string>
     </list>
   </entry>
   <entry>
