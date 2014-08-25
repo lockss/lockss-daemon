@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinablePlugin.java,v 1.49 2014-06-05 20:18:08 tlipkis Exp $
+ * $Id: TestDefinablePlugin.java,v 1.50 2014-08-25 08:57:02 tlipkis Exp $
  */
 
 /*
@@ -85,16 +85,23 @@ public class TestDefinablePlugin extends LockssTestCase {
     assertSameElements(ListUtil.list("un", "deux"),
 		       definablePlugin.getElementList("list"));
     assertNull(definablePlugin.getElementList("map"));
+  }
 
-    assertSameElements(ListUtil.list(ListUtil.list("one")),
-		       definablePlugin.getElementLists("str"));
-    assertSameElements(ListUtil.list(ListUtil.list("un", "deux")),
-		       definablePlugin.getElementLists("list"));
-    assertSameElements(ListUtil.list(ListUtil.list("1", "2", "3"),
-				     ListUtil.list("42")),
-		       definablePlugin.getElementLists("map"));
+  public void testFlatten() throws Exception {
+    defMap.putString("str", "one");
+    defMap.putCollection("list", ListUtil.list("un", "deux"));
+    defMap.putMap("map", MapUtil.map("k1", ListUtil.list("1", "2", "3"),
+				     "k2", "42"));
+    definablePlugin.initPlugin(daemon, defMap);
+    assertSameElements(ListUtil.list("str"),
+		       definablePlugin.flatten("str"));
+    assertSameElements(ListUtil.list("un", "deux"),
+		       definablePlugin.flatten(ListUtil.list("un", "deux")));
+    assertSameElements(ListUtil.list("1", "2", "3", "42"),
+		       definablePlugin.flatten(MapUtil.map("k1", ListUtil.list("1", "2", "3"),
+							   "k2", "42")));
 
-    assertEmpty(definablePlugin.getElementLists("nonesuch"));
+    assertEmpty(definablePlugin.flatten(null));
   }
 
   public void testInitMimeMapDefault() throws Exception {

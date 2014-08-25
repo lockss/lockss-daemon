@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.167 2014-02-25 08:06:41 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.168 2014-08-25 08:57:03 tlipkis Exp $
  */
 
 /*
@@ -295,7 +295,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 	if (auConfig.containsKey(key)) {
 	  Object val = descr.getValueOfType(auConfig.get(key));
 	  // we store years in two formats - short and long
-	  if (descr.getType() == ConfigParamDescr.TYPE_YEAR) {
+	  if (descr.getTypeEnum() == AuParamType.Year) {
 	    int year = ((Integer)val).intValue() % 100;
 	    paramMap.putInt(pool.intern(PREFIX_AU_SHORT_YEAR + key),
 			    year);
@@ -305,7 +305,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 	    }
 	  }
 	  // store separate host and path of URLs
-	  if (descr.getType() == ConfigParamDescr.TYPE_URL) {
+	  if (descr.getTypeEnum() == AuParamType.Url) {
 	    URL url = (URL)val;
 	    if(url != null) {
 	      paramMap.putString(pool.intern(key + SUFFIX_AU_HOST),

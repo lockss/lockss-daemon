@@ -1,10 +1,10 @@
 /*
- * $Id: MockPlugin.java,v 1.37 2014-06-30 08:22:01 tlipkis Exp $
+ * $Id: MockPlugin.java,v 1.38 2014-08-25 08:57:02 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -66,6 +66,7 @@ public class MockPlugin extends BasePlugin implements PluginTestable {
 
   private ArticleMetadataExtractor metadataExtractor = null;
   private ArticleIteratorFactory articleIteratorFactory = null;
+  private AuParamFunctor paramFunctor = null;
   
 
   public MockPlugin(){
@@ -197,6 +198,18 @@ public class MockPlugin extends BasePlugin implements PluginTestable {
   public void setAuConfigDescrs(List descrs) {
     auConfigDescrs = descrs;
     allParamDescrs = null;		// clear cache
+  }
+
+  public AuParamFunctor getAuParamFunctor() {
+    if (paramFunctor != null) {
+      return paramFunctor;
+    } else {
+      return super.getAuParamFunctor();
+    }
+  }
+
+  public void setAuParamFunctor(AuParamFunctor fn) {
+    paramFunctor = fn;
   }
 
   /**

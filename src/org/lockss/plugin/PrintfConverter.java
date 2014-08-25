@@ -1,5 +1,5 @@
 /*
- * $Id: PrintfConverter.java,v 1.5 2012-10-30 00:11:44 tlipkis Exp $
+ * $Id: PrintfConverter.java,v 1.6 2014-08-25 08:57:03 tlipkis Exp $
  */
 
 /*
@@ -72,46 +72,64 @@ public abstract class PrintfConverter {
     pf = new PrintfFormat(format);
     substitute_args = new ArrayList(p_args.size());
 
-    for (String key : p_args) {
-      Object val = paramMap.getMapElement(key);
-      ConfigParamDescr descr = plugin.findAuConfigDescr(key);
+    for (Expr arg : parseArgs(plugin, p_data)) {
+      Object val = argValue(arg);
+      AuParamType ptype = argType(arg);
       if (val != null) {
-	interpArg(key, val, descr);
+	interpArg(arg, val, ptype);
       } else {
 	missingArgs = true;
-	log.warning("missing argument for: " + key);
-	interpNullArg(key, val, descr);
+	log.warning("missing argument for: " + arg);
+	interpNullArg(arg, val, ptype);
       }
     }
   }
 
-  void interpArg(String key, Object val, ConfigParamDescr descr) {
-    switch (descr != null ? descr.getType()
-	    : ConfigParamDescr.TYPE_STRING) {
-    case ConfigParamDescr.TYPE_SET:
-      interpSetArg(key, val, descr);
+  Object argValue(Expr arg) {
+    Object argval = paramMap.getMapElement(arg.arg);
+    if (arg.fn == null) {
+      return argval;
+    }
+    try {
+      AuParamFunctor fn = plugin.getAuParamFunctor();
+      return fn.eval(null, arg.fn, argval,
+		     getParamType(plugin, arg.arg));
+    } catch (PluginException e) {
+      log.error("Error invoking AuParamFunctor", e);
+      throw new RuntimeException(e);
+    }
+  }
+
+  AuParamType argType(Expr arg) {
+    return arg.type;
+  }
+
+  void interpArg(Expr arg, Object val, AuParamType ptype) {
+    switch (ptype != null ? ptype : AuParamType.String) {
+    case Set:
+      interpSetArg(arg, val, ptype);
       break;
-    case ConfigParamDescr.TYPE_RANGE:
-      interpRangeArg(key, val, descr);
+    case Range:
+      interpRangeArg(arg, val, ptype);
       break;
-    case ConfigParamDescr.TYPE_NUM_RANGE:
-      interpNumRangeArg(key, val, descr);
+    case NumRange:
+      interpNumRangeArg(arg, val, ptype);
       break;
     default:
-      interpPlainArg(key, val, descr);
+      interpPlainArg(arg, val, ptype);
       break;
     }
   }
 
-  abstract void interpSetArg(String key, Object val,
-			     ConfigParamDescr descr);
-  abstract void interpRangeArg(String key, Object val,
-			       ConfigParamDescr descr);
-  abstract void interpNumRangeArg(String key, Object val,
-				  ConfigParamDescr descr);
-  abstract void interpPlainArg(String key, Object val,
-			       ConfigParamDescr descr);
-  void interpNullArg(String key, Object val, ConfigParamDescr descr) {
+  abstract void interpSetArg(Expr arg, Object val,
+			     AuParamType ptype);
+  abstract void interpRangeArg(Expr arg, Object val,
+			       AuParamType ptype);
+  abstract void interpNumRangeArg(Expr arg, Object val,
+				  AuParamType ptype);
+  abstract void interpPlainArg(Expr arg, Object val,
+			       AuParamType ptype);
+  void interpNullArg(Expr arg, Object val, AuParamType ptype) {
   }
 
   public static RegexpConverter newRegexpConverter(ArchivalUnit au,
@@ -132,8 +150,8 @@ public abstract class PrintfConverter {
   }
 
   public static class RegexpConverter extends PrintfConverter {
-    ArrayList matchArgs = new ArrayList();
-    ArrayList matchArgDescrs = new ArrayList();
+    List matchArgs = new ArrayList();
+    List<AuParamType> matchArgTypes = new ArrayList<AuParamType>();
 
     private RegexpConverter(ArchivalUnit au) {
       super(au);
@@ -149,7 +167,7 @@ public abstract class PrintfConverter {
       return Perl5Compiler.quotemeta(val);
     }
 
-    void interpSetArg(String key, Object val, ConfigParamDescr descr) {
+    void interpSetArg(Expr arg, Object val, AuParamType ptype) {
       // val must be a list; ok to throw if not
       List<String> vec = (List<String>)val;
       List tmplst = new ArrayList(vec.size());
@@ -159,19 +177,19 @@ public abstract class PrintfConverter {
       substitute_args.add(StringUtil.separatedString(tmplst, "(?:", "|", ")"));
     }
 
-    void interpRangeArg(String key, Object val, ConfigParamDescr descr) {
+    void interpRangeArg(Expr arg, Object val, AuParamType ptype) {
       substitute_args.add(RANGE_SUBSTITUTION_STRING);
       matchArgs.add(val);
-      matchArgDescrs.add(descr);
+      matchArgTypes.add(ptype);
     }
 
-    void interpNumRangeArg(String key, Object val, ConfigParamDescr descr) {
+    void interpNumRangeArg(Expr arg, Object val, AuParamType ptype) {
       substitute_args.add(NUM_SUBSTITUTION_STRING);
       matchArgs.add(val);
-      matchArgDescrs.add(descr);
+      matchArgTypes.add(ptype);
     }
 
-    void interpPlainArg(String key, Object val, ConfigParamDescr descr) {
+    void interpPlainArg(Expr arg, Object val, AuParamType ptype) {
       if (val instanceof String) {
 	val = quoteRegexpArg((String)val);
       }
@@ -189,7 +207,7 @@ public abstract class PrintfConverter {
       }
       try {
 	return new MatchPattern(pf.sprintf(substitute_args.toArray()),
-				matchArgs, matchArgDescrs);
+				matchArgs, matchArgTypes);
       } catch (Exception e) {
 	throw new PluginException.InvalidDefinition(e);
       }
@@ -263,18 +281,18 @@ public abstract class PrintfConverter {
       }
     }
 
-    void interpSetArg(String key, Object val, ConfigParamDescr descr) {
+    void interpSetArg(Expr arg, Object val, AuParamType ptype) {
       haveSets();
       // val must be a list; ok to throw if not
       List<String> vec = (List<String>)val;
       substitute_args.add(vec);
     }
 
-    void interpRangeArg(String key, Object val, ConfigParamDescr descr) {
-      throw new PluginException.InvalidDefinition("String range params are not allowed in URL patterns: " + key);
+    void interpRangeArg(Expr arg, Object val, AuParamType ptype) {
+      throw new PluginException.InvalidDefinition("String range params are not allowed in URL patterns: " + arg);
     }
 
-    void interpNumRangeArg(String key, Object val, ConfigParamDescr descr) {
+    void interpNumRangeArg(Expr arg, Object val, AuParamType ptype) {
       haveSets();
       // val must be a list; ok to throw if not
       List<Long> vec = (List<Long>)val;
@@ -294,7 +312,7 @@ public abstract class PrintfConverter {
       substitute_args.add(lst);
     }
 
-    void interpPlainArg(String key, Object val, ConfigParamDescr descr) {
+    void interpPlainArg(Expr arg, Object val, AuParamType ptype) {
       if (haveSets) {
 	substitute_args.add(Collections.singletonList(val));
       } else {
@@ -359,27 +377,27 @@ public abstract class PrintfConverter {
       super(plugin, paramMap);
     }
 
-    void interpSetArg(String key, Object val, ConfigParamDescr descr) {
+    void interpSetArg(Expr arg, Object val, AuParamType ptype) {
       // val must be a list; ok to throw if not
       List<String> vec = (List<String>)val;
       substitute_args.add(StringUtil.separatedString(vec, ", "));
     }
 
-    void interpRangeArg(String key, Object val, ConfigParamDescr descr) {
+    void interpRangeArg(Expr arg, Object val, AuParamType ptype) {
       // val must be a list; ok to throw if not
       List<String> vec = (List<String>)val;
       substitute_args.add(StringUtil.separatedString(vec, "-"));
     }
 
-    void interpNumRangeArg(String key, Object val, ConfigParamDescr descr) {
-      interpRangeArg(key, val, descr);
+    void interpNumRangeArg(Expr arg, Object val, AuParamType ptype) {
+      interpRangeArg(arg, val, ptype);
     }
 
-    void interpPlainArg(String key, Object val, ConfigParamDescr descr) {
+    void interpPlainArg(Expr arg, Object val, AuParamType ptype) {
       substitute_args.add(val);
     }
 
-    void interpNullArg(String key, Object val, ConfigParamDescr descr) {
+    void interpNullArg(Expr arg, Object val, AuParamType ptype) {
       substitute_args.add("(null)");
     }
 
@@ -402,17 +420,17 @@ public abstract class PrintfConverter {
   public static class MatchPattern {
     String regexp;
     List<List> matchArgs;
-    List<ConfigParamDescr> matchArgDescrs;
+    List<AuParamType> matchArgTypes;
 
     MatchPattern() {
     }
 
     MatchPattern(String regexp,
 		 List<List> matchArgs,
-		 List<ConfigParamDescr> matchArgDescrs) {
+		 List<AuParamType> matchArgTypes) {
       this.regexp = regexp;
       this.matchArgs = matchArgs;
-      this.matchArgDescrs = matchArgDescrs;
+      this.matchArgTypes = matchArgTypes;
     }
 
     public String getRegexp() {
@@ -423,8 +441,95 @@ public abstract class PrintfConverter {
       return matchArgs;
     }
 
-    public List<ConfigParamDescr> getMatchArgDescrs() {
-      return matchArgDescrs;
+    public List<AuParamType> getMatchArgTypes() {
+      return matchArgTypes;
+    }
+  }
+
+  /** Parsed printf arg.  Currently supports only param name or single-arg
+   * function */
+  public static class Expr {
+    String raw;
+    AuParamType type;
+    String fn;
+    String arg;
+
+    Expr(String raw, AuParamType type, String fn, String arg) {
+      this.raw = raw;
+      this.type = type;
+      this.fn = fn;
+      this.arg = arg;
+    }
+
+    public String getRaw() {
+      return raw;
+    }
+
+    public AuParamType getType() {
+      return type;
+    }
+
+    public String getFn() {
+      return fn;
+    }
+
+    public String getArg() {
+      return arg;
+    }
+
+    public String toString() {
+      if (fn == null) {
+	return "[Pf_Expr: " + raw + "]";
+      } else {
+	return "[Pf_Expr: " + raw + ", " + fn +"(" + arg + "): " + type + "]]";
+      }
+    }
+  }
+
+  public static List<Expr> parseArgs(ArchivalUnit au,
+				     PrintfUtil.PrintfData pdata) {
+    return parseArgs(au.getPlugin(), pdata);
+  }
+
+  public static List<Expr> parseArgs(Plugin plug,
+				     PrintfUtil.PrintfData pdata) {
+    List<Expr> res = new ArrayList<Expr>(pdata.getArguments().size());
+    for (String arg : pdata.getArguments()) {
+      res.add(parseArg(plug, arg));
+    }
+    return res;
+  }
+
+  protected static java.util.regex.Pattern ARG_PAT =
+    java.util.regex.Pattern.compile("(\\w+)\\((\\w+)\\)");
+
+  static Expr parseArg(Plugin plug, String arg) {
+    java.util.regex.Matcher mat = ARG_PAT.matcher(arg);
+    if (mat.matches()) {
+      String fn = mat.group(1);
+      String fnarg = mat.group(2);
+      return new Expr(arg, getFnType(plug, fn), fn, fnarg);
+    } else {
+      return new Expr(arg, getParamType(plug, arg), null, arg);
+    }
+  }
+
+  static AuParamType getParamType(Plugin plug, String name) {
+    ConfigParamDescr descr = plug.findAuConfigDescr(name);
+    return descr != null ? descr.getTypeEnum() : null;
+  }
+
+  static AuParamType getFnType(Plugin plug, String name) {
+    try {
+      AuParamType type = null;
+      AuParamFunctor fn = plug.getAuParamFunctor();
+      if (fn != null) {
+	type = fn.type(null, name);
+      }
+      return type != null ? type : AuParamType.String;
+    } catch (PluginException e) {
+      log.error("Plugin AuParamFunctor: " + plug, e);
+      return AuParamType.String;
     }
   }
 }

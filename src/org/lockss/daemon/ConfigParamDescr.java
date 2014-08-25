@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.51 2013-01-08 21:08:02 tlipkis Exp $
+ * $Id: ConfigParamDescr.java,v 1.52 2014-08-25 08:57:03 tlipkis Exp $
  */
 
 /*
@@ -73,6 +73,8 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
   public static final int TYPE_LONG = 11;
   /** Value is a time interval string */
   public static final int TYPE_TIME_INTERVAL = 12;
+
+  public static final int MAX_TYPE = 12;
 
   /** Largest set allowed by TYPE_SET */
   public static final int MAX_SET_SIZE = 10000;
@@ -399,11 +401,30 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
   }
 
   /**
-   * Return the specified value type
+   * Return the int representing the value type 
    * @return the type int
    */
   public int getType() {
     return type;
+  }
+
+  /**
+   * Return the AuParamType representing the value type 
+   * @return the type
+   */
+  public AuParamType getTypeEnum() {
+    return AuParamType.fromTypeInt(type);
+  }
+
+  /**
+   * Set the expected value type.  If {@link #setSize(int)} has not been
+   * called, and the type is one for which there is a reasonable default
+   * size, this will also set the size to the reasonable default.
+   * @param type the new type
+   * @return this
+   */
+  public ConfigParamDescr setType(AuParamType type) {
+    return setType(type.typeInt());
   }
 
   /**
@@ -523,200 +544,9 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
     }
   }
 
-  public Object getValueOfType(String val) throws InvalidFormatException {
-    Object ret_val = null;
-    switch (type) {
-      case TYPE_INT:
-        try {
-          ret_val = Integer.valueOf(val);
-        } catch (NumberFormatException nfe) {
-          throw new InvalidFormatException("Invalid Int: " + val);
-        }
-        break;
-      case TYPE_POS_INT:
-          try {
-            ret_val = Integer.valueOf(val);
-            if(((Integer)ret_val).intValue() < 0) {
-              throw new InvalidFormatException("Invalid Positive Int: " + val);
-            }
-          } catch (NumberFormatException nfe) {
-            throw new InvalidFormatException("Invalid Positive Int: " + val);
-          }
-          break;
-
-      case TYPE_LONG:
-        try {
-          ret_val = Long.valueOf(val);
-        } catch (NumberFormatException nfe) {
-          throw new InvalidFormatException("Invalid Long: " + val);
-        }
-        break;
-      case TYPE_TIME_INTERVAL:
-        try {
-          ret_val = StringUtil.parseTimeInterval(val);
-        } catch (NumberFormatException nfe) {
-          throw new InvalidFormatException("Invalid time interval: " + val);
-        }
-        break;
-      case TYPE_STRING:
-        if (!StringUtil.isNullString(val)) {
-          ret_val = val;
-        }
-        else {
-          throw new InvalidFormatException("Invalid String: " + val);
-        }
-        break;
-      case TYPE_URL:
-        try {
-          ret_val = new URL(val);
-        }
-        catch (MalformedURLException ex) {
-          throw new InvalidFormatException("Invalid URL: " + val, ex);
-        }
-        break;
-      case TYPE_YEAR:
-        if (val.length() == 4 || "0".equals(val)) {
-          try {
-            int i_val = Integer.parseInt(val);
-            if (i_val >= 0) {
-              ret_val = Integer.valueOf(val);
-            }
-          }
-          catch (NumberFormatException fe) {
-            // Defer to the throw statement below
-          }
-        }
-        if (ret_val == null) {
-          throw new InvalidFormatException("Invalid Year: " + val);
-        }
-        break;
-      case TYPE_BOOLEAN:
-        if(val.equalsIgnoreCase("true") ||
-           val.equalsIgnoreCase("yes") ||
-           val.equalsIgnoreCase("on") ||
-           val.equalsIgnoreCase("1")) {
-          ret_val = Boolean.TRUE;
-        }
-        else if(val.equalsIgnoreCase("false") ||
-           val.equalsIgnoreCase("no") ||
-           val.equalsIgnoreCase("off") ||
-           val.equalsIgnoreCase("0")) {
-          ret_val = Boolean.FALSE;
-        }
-        else
-          throw new InvalidFormatException("Invalid Boolean: " + val);
-        break;
-      case TYPE_USER_PASSWD:
-        if (!StringUtil.isNullString(val)) {
-	  List<String> lst = StringUtil.breakAt(val, ':', -1, true, false);
-	  if (lst.size() != 2) {
-	    throw new InvalidFormatException("User:Passwd must consist of two" +
-					     "strings separated by a colon: " +
-					     val);
-	  }
-	  ret_val = val;
-	}
-        else {
-          throw new InvalidFormatException("Invalid String: " + val);
-        }
-        break;
-      case TYPE_RANGE:
-      { // case block
-        ret_val = StringUtil.breakAt(val, '-', 2, true, true);
-        String s_min = (String)((Vector)ret_val).firstElement();
-        String s_max = (String)((Vector)ret_val).lastElement();
-        if ( !(s_min.compareTo(s_max) <= 0) ) {
-          throw new InvalidFormatException("Invalid Range: " + val);
-        }
-        break;
-      } // end case block
-      case TYPE_NUM_RANGE:
-      { // case block
-        ret_val = StringUtil.breakAt(val,'-',2,true, true);
-        String s_min = (String)((Vector)ret_val).firstElement();
-        String s_max = (String)((Vector)ret_val).lastElement();
-        try {
-          /*
-           * Caution: org.apache.commons.lang.math.NumberUtils.createLong(String)
-           * (which returns Long) throws NumberFormatException, whereas
-           * org.apache.commons.lang.math.NumberUtils.toLong(String)
-           * (which returns long) returns 0L when parsing fails.
-           */
-          Long l_min = NumberUtils.createLong(s_min);
-          Long l_max = NumberUtils.createLong(s_max);
-          if (l_min.compareTo(l_max) <= 0) {
-            ((Vector)ret_val).setElementAt(l_min, 0);
-            ((Vector)ret_val).setElementAt(l_max, 1);
-            break;
-          }
-        }
-        catch (NumberFormatException ex1) {
-          if (s_min.compareTo(s_max) <= 0) {
-            break;
-          }
-        }
-        throw new InvalidFormatException("Invalid Numeric Range: " + val);
-      } // end case block
-      case TYPE_SET:
-        ret_val = expandSetMacros(val);
-        break;
-      default:
-        throw new InvalidFormatException("Unknown type: " + type);
-    }
-
-    return ret_val;
-  }
-
-  // Pattern matches an integer range macro within a set
-  private static final String SET_MACRO_RANGE =
-    RegexpUtil.quotemeta(SET_RANGE_OPEN) +
-    "\\s*(\\d+)\\s*-\\s*(\\d+)\\s*" +
-    RegexpUtil.quotemeta(SET_RANGE_CLOSE);
-
-  private static Pattern SET_MACRO_RANGE_PAT =
-    Pattern.compile(SET_MACRO_RANGE);
-
-  List<String> expandSetMacros(String setSpec) {
-    List<String> raw = StringUtil.breakAt(setSpec,',', MAX_SET_SIZE,
-					  true, true);
-    // Avoid cost of pattern matches and list copy in the usual case of no
-    // range macros
-    for (String ele : raw) {
-      if (ele.startsWith(SET_RANGE_OPEN) && ele.endsWith(SET_RANGE_CLOSE)) {
-	return expandSetMacros0(raw);
-      }
-    }
-    return raw;
-  }
-
-  private List<String> expandSetMacros0(List<String> raw) {
-    int size = raw.size();
-    List<String> res = new ArrayList<String>(size + 50);
-    for (String ele : raw) {
-      Matcher m1 = SET_MACRO_RANGE_PAT.matcher(ele);
-      if (m1.matches()) {
-	try {
-	  int beg = Integer.valueOf(m1.group(1));
-	  int end = Integer.valueOf(m1.group(2));
-	  for (int ix = beg; ix <= end; ix++) {
-	    if (size++ > MAX_SET_SIZE) {
-	      log.warning("Set value has more than " + MAX_SET_SIZE +
-			  " elements; only the first " + MAX_SET_SIZE +
-			  " will be used: " + raw);
-	      return res;
-	    }
-	    res.add(Integer.toString(ix));
-	  }
-	} catch (RuntimeException e) {
-	  log.warning("Suspicious Set range macro: " + ele + " not expanded",
-		      e);
-	  res.add(ele);
-	}
-      } else {
-	res.add(ele);
-      }
-    }
-    return res;
+  public Object getValueOfType(String val)
+      throws AuParamType.InvalidFormatException {
+    return getTypeEnum().parse(val);
   }
 
   /** Return a legal value for the parameter.  Useful for generic plugin
@@ -840,6 +670,10 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
     }
   }
 
+  /**
+   * @deprecated After 1.67 is released, plugins should be converted to use
+   * AuParamType.InvalidFormatException instead
+   */
   public static class InvalidFormatException extends Exception {
     private Throwable nestedException;
 

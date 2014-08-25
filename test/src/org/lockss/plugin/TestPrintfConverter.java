@@ -1,5 +1,5 @@
 /*
- * $Id: TestPrintfConverter.java,v 1.2 2011-05-18 04:11:26 tlipkis Exp $
+ * $Id: TestPrintfConverter.java,v 1.3 2014-08-25 08:57:02 tlipkis Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.util.Constants.RegexpContext;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
+import org.lockss.plugin.base.*;
 
 public class TestPrintfConverter extends LockssTestCase {
 
@@ -224,28 +225,28 @@ public class TestPrintfConverter extends LockssTestCase {
     mp = convertVariableRegexpString("\"%sblah\", base_url");
     assertEquals(s1+"blah", mp.getRegexp());
     assertEmpty(mp.getMatchArgs());
-    assertEmpty(mp.getMatchArgDescrs());
+    assertEmpty(mp.getMatchArgTypes());
 
     mp = convertVariableRegexpString("\"%svol_%s\\?bool=%s\", base_url, volume_name, pub_down");
     assertEquals(s1+"vol_vol\\.name\\?bool=true", mp.getRegexp());
     assertEmpty(mp.getMatchArgs());
-    assertEmpty(mp.getMatchArgDescrs());
+    assertEmpty(mp.getMatchArgTypes());
 
     mp = convertVariableRegexpString("\"%sissue%s/foo\", base_url, issue_range");
     assertEquals(s1+"issue(.*)/foo", mp.getRegexp());
     assertEquals(ListUtil.list(ListUtil.list("a", "d")), mp.getMatchArgs());
-    assertEquals(ListUtil.list(ISSUE_RANGE), mp.getMatchArgDescrs());
+    assertEquals(ListUtil.list(AuParamType.Range), mp.getMatchArgTypes());
 
     mp = convertVariableRegexpString("\"%sissue%s/foo\", base_url, num_issue_range");
     assertEquals(s1+"issue(\\d+)/foo", mp.getRegexp());
 
     assertEquals(ListUtil.list(ListUtil.list(9L, 12L)), mp.getMatchArgs());
-    assertEquals(ListUtil.list(NUM_ISSUE_RANGE), mp.getMatchArgDescrs());
+    assertEquals(ListUtil.list(AuParamType.NumRange), mp.getMatchArgTypes());
 
     mp = convertVariableRegexpString("\"%sissue_%s/foo\", base_url, issue_set");
     assertEquals(s1+"issue_(?:Jan|Feb|Mar|Apr)/foo", mp.getRegexp());
     assertEmpty(mp.getMatchArgs());
-    assertEmpty(mp.getMatchArgDescrs());
+    assertEmpty(mp.getMatchArgTypes());
   }
 
   public void testConvertRegexpWithBlanks() throws Exception {
@@ -290,6 +291,62 @@ public class TestPrintfConverter extends LockssTestCase {
 		    "http://foo.bar:8080/embedded+space/blah/B");
     assertMatchesRE(mp.getRegexp(),
 		    "http://foo.bar:8080/embedded%20space/blah/C");
+  }
+
+  public void testDefaultFunctor() throws Exception {
+    setupAu(conf1());
+
+    assertEquals("Base is http://www.foo.bar:8080/blah",
+		 convertNameString("\"Base is %sblah\", add_www(base_url)"));
+    assertEquals("Base is http://foo.bar:8080/blah",
+		 convertNameString("\"Base is %sblah\", del_www(base_url)"));
+    try {
+      assertEquals("", convertNameString("\"a %s blah\", un_def(base_url)"));
+      fail("Undefined function should throw");
+    } catch (PluginException.InvalidDefinition e) {
+      assertEquals("Undefined function: un_def", e.getMessage());
+    }
+  }
+
+  public void testNonDefaultFunctor() throws Exception {
+    mplug.setAuParamFunctor(new TestFunctor());
+    setupAu(conf1());
+
+    assertIsomorphic(ListUtil.list("http://foo.bar:8080/blah/i_Feb/foo",
+				   "http://foo.bar:8080/blah/i_Apr/foo"),
+		 convertUrlList("\"%sblah/i_%s/foo\", base_url, filter_set(issue_set)"));
+
+    // Ensure delegates to BaseAuParamFunctor
+    assertEquals("Base is http://www.foo.bar:8080/blah",
+		 convertNameString("\"Base is %sblah\", add_www(base_url)"));
+  }
+
+  public static class TestFunctor extends BaseAuParamFunctor {
+    @Override
+    public Object eval(AuParamFunctor.FunctorData fd, String fn,
+		       Object arg, AuParamType type)
+	throws PluginException {
+      if (fn.equals("filter_set")) {
+	List<String> lst = (List<String>)arg;
+	boolean flg = false;
+	for (ListIterator iter = lst.listIterator(); iter.hasNext();) {
+	  iter.next();
+	  if (flg = !flg) {
+	    iter.remove();
+	  }
+	}
+	return lst;
+      }
+      return super.eval(fd, fn, arg, type);
+    }
+
+    @Override
+    public AuParamType type(AuParamFunctor.FunctorData fd, String fn) {
+      if (fn.equals("filter_set")) {
+	return AuParamType.Set;
+      }
+      return super.type(fd, fn);
+    }
   }
 
 

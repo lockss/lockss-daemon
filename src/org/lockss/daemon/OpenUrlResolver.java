@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.53 2014-08-22 22:15:00 fergaloy-sf Exp $
+ * $Id: OpenUrlResolver.java,v 1.54 2014-08-25 08:57:03 tlipkis Exp $
  */
 
 /*
@@ -55,7 +55,7 @@ import org.lockss.config.TdbAu;
 import org.lockss.config.TdbPublisher;
 import org.lockss.config.TdbTitle;
 import org.lockss.config.TdbUtil;
-import org.lockss.daemon.ConfigParamDescr.InvalidFormatException;
+import org.lockss.daemon.AuParamType.InvalidFormatException;
 import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
 import org.lockss.exporter.biblio.BibliographicItem;

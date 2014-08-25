@@ -1,5 +1,5 @@
 /*
- * $Id: Plugin.java,v 1.40 2014-07-11 23:34:08 tlipkis Exp $
+ * $Id: Plugin.java,v 1.41 2014-08-25 08:57:03 tlipkis Exp $
  */
 
 /*
@@ -133,6 +133,12 @@ public interface Plugin {
    * Return the ConfigParamDescr for the named param, or null if none.
    */
   public ConfigParamDescr findAuConfigDescr(String key);
+
+  /**
+   * Create an instance of the plugin's AuParamFunctor if any.
+   * @return an AuParamFunctor or null if none.
+   */
+  public AuParamFunctor getAuParamFunctor() throws PluginException.LinkageError;
 
   /**
    * Create or (re)configure an {@link ArchivalUnit} from the specified

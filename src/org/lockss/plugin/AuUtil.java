@@ -1,5 +1,5 @@
 /*
- * $Id: AuUtil.java,v 1.47 2014-07-22 20:16:53 fergaloy-sf Exp $
+ * $Id: AuUtil.java,v 1.48 2014-08-25 08:57:03 tlipkis Exp $
  */
 
 /*
@@ -628,7 +628,7 @@ public class AuUtil {
     }
     try {
       return cpd.getValueOfType(valstr);
-    } catch (ConfigParamDescr.InvalidFormatException e) {
+    } catch (AuParamType.InvalidFormatException e) {
       return null;
     }
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.99 2014-05-30 07:17:53 tlipkis Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.100 2014-08-25 08:57:03 tlipkis Exp $
  */
 
 /*
@@ -143,6 +143,8 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   public static final String KEY_AU_PERMISSION_CHECKER_FACTORY =
     "au_permission_checker_factory";
 
+  public static final String KEY_AU_PARAM_FUNCTOR = "au_param_functor";
+
   public static final String KEY_AU_LOGIN_PAGE_CHECKER =
     "au_login_page_checker";
   public static final String KEY_AU_REDIRECT_TO_LOGIN_URL_PATTERN =
@@ -172,8 +174,11 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     printfKeysContext.put(KEY_AU_SUBSTANCE_URL_PATTERN, PrintfContext.Regexp);
     printfKeysContext.put(KEY_AU_NON_SUBSTANCE_URL_PATTERN,
 			  PrintfContext.Regexp);
-
     printfKeysContext.put(KEY_AU_NAME, PrintfContext.Display);
+    // XXX These may use params supplied by OpenUrlResolver, need to inject
+    // that list here in order to check
+//     printfKeysContext.put(KEY_AU_FEATURE_URL_MAP,
+// 			  PrintfContext.URL);
   };
 
   protected DefinableArchivalUnit(Plugin myPlugin) {
@@ -754,22 +759,22 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
       return new CrawlRules.RE(mp.getRegexp(), ignoreCase, action);
     case 1:
       List argPair = matchArgs.get(0);
-      ConfigParamDescr descr = mp.getMatchArgDescrs().get(0);
-      switch (descr.getType()) {
-      case ConfigParamDescr.TYPE_RANGE:
+      AuParamType ptype = mp.getMatchArgTypes().get(0);
+      switch (ptype) {
+      case Range:
 	return new CrawlRules.REMatchRange(mp.getRegexp(),
 					   ignoreCase,
 					   action,
 					   (String)argPair.get(0),
 					   (String)argPair.get(1));
-      case ConfigParamDescr.TYPE_NUM_RANGE:
+      case NumRange:
 	return new CrawlRules.REMatchRange(mp.getRegexp(),
 					   ignoreCase,
 					   action,
 					   ((Long)argPair.get(0)).longValue(),
 					   ((Long)argPair.get(1)).longValue());
       default:
-	throw new RuntimeException("Shouldn't happen.  Unknown REMatchRange arg type: " + descr);
+	throw new RuntimeException("Shouldn't happen.  Unknown REMatchRange arg type: " + ptype);
       }
 
     default:

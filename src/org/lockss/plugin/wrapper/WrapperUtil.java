@@ -1,5 +1,5 @@
 /*
- * $Id: WrapperUtil.java,v 1.13 2012-07-09 07:52:31 tlipkis Exp $
+ * $Id: WrapperUtil.java,v 1.14 2014-08-25 08:57:02 tlipkis Exp $
  */
 
 /*
@@ -86,6 +86,8 @@ public class WrapperUtil {
 			   new CrawlUrlComparatorFactoryWrapper.Factory());
     registerWrapperFactory(SubstancePredicateFactory.class,
 			   new SubstancePredicateFactoryWrapper.Factory());
+    registerWrapperFactory(AuParamFunctor.class,
+			   new AuParamFunctorWrapper.Factory());
   }
 
   /** Register a wrapper factory for instances of the interface */

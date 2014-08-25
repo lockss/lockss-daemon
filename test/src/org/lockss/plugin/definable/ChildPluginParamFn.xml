@@ -1,0 +1,63 @@
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.definable.ChildPluginParamFn</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Child Plugin with custom parm functor</string>
+  </entry>
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.definable.LargeTestPlugin</string>
+  </entry>
+  <entry>
+    <string>au_param_functor</string>
+    <string>org.lockss.plugin.definable.TestDefinableArchivalUnit$TestFunctor</string>
+  </entry>
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+	<string>au_feat_single</string>
+	<string>"%s?issue=%d", base_url, num_issue_range</string>
+      </entry>
+      <entry>
+	<string>au_feat_list</string>
+	<list>
+	  <string>"%s?issue=%d", base_url, num_issue_range</string>
+	  <string>"%sfoo", base_url</string>
+	  <string>"%sset/%s", base_url, issue_set</string>
+	</list>
+      </entry>
+      <entry>
+	<string>au_feat_map</string>
+	<map>
+	  <entry>
+	    <string>key1</string>
+	    <string>"%sbar", base_url</string>
+	  </entry>
+	  <entry>
+	    <string>key2;*</string>
+	    <list>
+	      <string>"%s222", base_url</string>
+	      <string>"%s333/%s", base_url, issue_set</string>
+	    </list>
+	  </entry>
+	</map>
+      </entry>
+      <entry>
+	<string>au_feat_fn_single</string>
+	<string>"%s?issue=%d", add_www(base_url), num_issue_range</string>
+      </entry>
+      <entry>
+	<string>au_feat_fn_list</string>
+	<list>
+	  <string>"%s?issue=%d", add_www(base_url), num_issue_range</string>
+	  <string>"%sfoo/2year=%d", base_url, double(year)</string>
+	  <string>"%sset/%s", base_url, issue_set</string>
+	</list>
+      </entry>
+    </map>
+  </entry>
+</map>

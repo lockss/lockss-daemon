@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.66 2014-07-11 23:32:58 tlipkis Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.67 2014-08-25 08:57:02 tlipkis Exp $
  */
 
 /*
@@ -1182,13 +1182,11 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     }
   }
 
-  MyDefinablePlugin loadLargePlugin() {
+  MyDefinablePlugin loadPlugin(String pname) {
     MyPluginManager pmgr = new MyPluginManager();
     getMockLockssDaemon().setPluginManager(pmgr);
     pmgr.initService(getMockLockssDaemon());
 
-    // Load a complex plugin definition
-    String pname = "org.lockss.plugin.definable.LargeTestPlugin";
     String key = PluginManager.pluginKeyFromId(pname);
     assertTrue("Plugin was not successfully loaded",
 	       pmgr.ensurePluginLoaded(key));
@@ -1196,6 +1194,10 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertTrue(plug.toString() + " not a DefinablePlugin",
 	       plug instanceof DefinablePlugin);
     return (MyDefinablePlugin)plug;
+  }
+
+  MyDefinablePlugin loadLargePlugin() {
+    return loadPlugin("org.lockss.plugin.definable.LargeTestPlugin");
   }
 
   public void testLargePlugin() throws Exception {
@@ -1355,13 +1357,25 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
       (DefinableArchivalUnit)defplug.createAu(auConfig);
 
     assertEmpty(au.getAuFeatureUrls("wrong_key"));
+
+    // single URL feature
     assertEquals(ListUtil.list("http://base.foo/base_path/?issue=3"),
 		 au.getAuFeatureUrls("au_feat_single"));
+    // with arg fn
+    assertEquals(ListUtil.list("http://www.base.foo/base_path/?issue=3"),
+		 au.getAuFeatureUrls("au_feat_fn_single"));
+    // URL list
     assertEquals(ListUtil.list("http://base.foo/base_path/?issue=3",
 			       "http://base.foo/base_path/foo",
 			       "http://base.foo/base_path/set/1",
 			       "http://base.foo/base_path/set/2"),
 		 au.getAuFeatureUrls("au_feat_list"));
+    // with arg fn
+    assertEquals(ListUtil.list("http://www.base.foo/base_path/?issue=3",
+			       "http://base.foo/base_path/foo",
+			       "http://base.foo/base_path/set/1",
+			       "http://base.foo/base_path/set/2"),
+		 au.getAuFeatureUrls("au_feat_fn_list"));
     assertEquals(ListUtil.list("http://base.foo/base_path/222",
 			       "http://base.foo/base_path/333/1",
 			       "http://base.foo/base_path/333/2"),
@@ -1387,6 +1401,69 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 			       "http://base.foo/base_path/333/2"),
 		 au3.getAuFeatureUrls("au_feat_map"));
   }
+
+  public void testFeatureUrlsFn() throws Exception {
+    MyDefinablePlugin defplug =
+      loadPlugin("org.lockss.plugin.definable.ChildPluginParamFn");
+    // Configure and create an AU
+    Properties p = new Properties();
+    p.put("base_url", "http://base.foo/base_path/");
+    p.put("resolver_url", "http://resolv.er/path/");
+    p.put("journal_code", "J47");
+    p.put("year", "1984");
+//     p.put("issue_set", "1,2,3,3a");
+    p.put("issue_set", "1,2");
+    p.put("num_issue_range", "3-3");
+    Configuration auConfig = ConfigManager.fromProperties(p);
+    DefinableArchivalUnit au =
+      (DefinableArchivalUnit)defplug.createAu(auConfig);
+
+    assertEmpty(au.getAuFeatureUrls("wrong_key"));
+
+    // single URL feature
+    assertEquals(ListUtil.list("http://base.foo/base_path/?issue=3"),
+		 au.getAuFeatureUrls("au_feat_single"));
+    // with arg fn
+    assertEquals(ListUtil.list("http://dubdubdub.base.foo/base_path/?issue=3"),
+		 au.getAuFeatureUrls("au_feat_fn_single"));
+    // URL list
+    assertEquals(ListUtil.list("http://base.foo/base_path/?issue=3",
+			       "http://base.foo/base_path/foo",
+			       "http://base.foo/base_path/set/1",
+			       "http://base.foo/base_path/set/2"),
+		 au.getAuFeatureUrls("au_feat_list"));
+    // with arg fn
+    assertEquals(ListUtil.list("http://dubdubdub.base.foo/base_path/?issue=3",
+			       "http://base.foo/base_path/foo/2year=3968",
+			       "http://base.foo/base_path/set/1",
+			       "http://base.foo/base_path/set/2"),
+		 au.getAuFeatureUrls("au_feat_fn_list"));
+    assertEquals(ListUtil.list("http://base.foo/base_path/222",
+			       "http://base.foo/base_path/333/1",
+			       "http://base.foo/base_path/333/2"),
+		 au.getAuFeatureUrls("au_feat_map"));
+
+    // Set selector attr in tdb to key1
+    MyDefinableArchivalUnit au2 =
+      (MyDefinableArchivalUnit)defplug.createAu(auConfig);
+    TitleConfig tc = new TitleConfig("Foo", defplug);
+    tc.setAttributes(MapUtil.map("au_feature_key", "key1"));
+    au2.setTitleConfig(tc);
+    assertEquals(ListUtil.list("http://base.foo/base_path/bar"),
+		 au2.getAuFeatureUrls("au_feat_map"));
+
+    // Set selector attr in tdb to unknown key, should select * entry
+    MyDefinableArchivalUnit au3 =
+      (MyDefinableArchivalUnit)defplug.createAu(auConfig);
+    TitleConfig tc2 = new TitleConfig("Foo", defplug);
+    tc2.setAttributes(MapUtil.map("au_feature_key", "notkey17"));
+    au3.setTitleConfig(tc2);
+    assertEquals(ListUtil.list("http://base.foo/base_path/222",
+			       "http://base.foo/base_path/333/1",
+			       "http://base.foo/base_path/333/2"),
+		 au3.getAuFeatureUrls("au_feat_map"));
+  }
+
 
   List<String> getPatterns(final List<Pattern> pats) {
     return new ArrayList<String>() {{
@@ -1763,4 +1840,27 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
       return MyDefinablePlugin.class.getName();
     }
   }
+
+  public static class TestFunctor extends BaseAuParamFunctor {
+    @Override
+    public Object eval(AuParamFunctor.FunctorData fd, String fn,
+		       Object arg, AuParamType type)
+	throws PluginException {
+      if (fn.equals("double")) {
+	return (Integer)arg * 2;
+      } else if (fn.equals("add_www")) {
+	return UrlUtil.addSubDomain((String)arg, "dubdubdub");
+      }
+      return super.eval(fd, fn, arg, type);
+    }
+
+    @Override
+    public AuParamType type(AuParamFunctor.FunctorData fd, String fn) {
+      if (fn.equals("double")) {
+	return AuParamType.Int;
+      }
+      return super.type(fd, fn);
+    }
+  }
+
 }

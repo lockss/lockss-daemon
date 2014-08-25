@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.79 2014-07-11 23:32:59 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.80 2014-08-25 08:57:02 tlipkis Exp $
  */
 
 /*
@@ -369,44 +369,48 @@ public class DefinablePlugin extends BasePlugin {
   }
 
   void checkParamAgreement(String key, PrintfContext context) {
-    List<List<String>> lists = getElementLists(key);
-    if (lists == null) {
-      return;
-    }
-    for (List<String> printfList : lists) {
-      for (String printf : printfList) {
-	if (StringUtil.isNullString(printf)) {
-	  log.warning("Null printf string in " + key);
-	  continue;
+    Object val = definitionMap.getMapElement(key);
+    for (String printf : flatten(val)) {
+      if (StringUtil.isNullString(printf)) {
+	log.warning("Null printf string in " + key);
+	continue;
+      }
+      PrintfUtil.PrintfData p_data = PrintfUtil.stringToPrintf(printf);
+      List<PrintfConverter.Expr> p_args =
+	PrintfConverter.parseArgs(this, p_data);
+      for (PrintfConverter.Expr arg : p_args) {
+	ConfigParamDescr descr = findAuConfigDescr(arg.getArg());
+	if (descr == null) {
+	  throw new
+	    PluginException.InvalidDefinition("Not a declared parameter: " +
+					      arg.getArg() + " in " + printf +
+					      " in " + getPluginName());
 	}
-	PrintfUtil.PrintfData p_data = PrintfUtil.stringToPrintf(printf);
-	Collection<String> p_args = p_data.getArguments();
-	for (String arg : p_args) {
-	  ConfigParamDescr descr = findAuConfigDescr(arg);
-	  if (descr == null) {
+	AuParamType type = arg.getType();
+	// XXX Ineffective because fntype defaults to String
+	if (type == null) {
+	  throw new
+	    PluginException.InvalidDefinition("Not a declared parameter: " +
+					      arg.getRaw() + " in " + printf + " in " +
+					      getPluginName());
+	}
+	// ensure range and set params used only in legal context
+	switch (context) {
+	case Regexp:
+	case Display:
+	  // everything is legal in a regexp or a display string
+	  break;
+	case URL:
+	  // NUM_RANGE and SET legal because can enumerate.  Can't
+	  // enumerate RANGE
+	  switch (type) {
+	  case Range:
 	    throw new
-	      PluginException.InvalidDefinition("Not a declared parameter: " +
-						arg + " in " + printf + " in " +
-						getPluginName());
-	  }
-	  // ensure range and set params used only in legal context
-	  switch (context) {
-	  case Regexp:
-	  case Display:
-	    // everything is legal in a regexp or a display string
-	    break;
-	  case URL:
-	    // NUM_RANGE and SET legal because can enumerate.  Can't
-	    // enumerate RANGE
-	    switch (descr.getType()) {
-	    case ConfigParamDescr.TYPE_RANGE:
-	      throw new
-		PluginException.InvalidDefinition("Range parameter (" + arg +
-						  ") used in illegal context in " +
-						  getPluginName() + ": "
-						  + key + ": " + printf);
-	    default:
-	    }
+	      PluginException.InvalidDefinition("Range parameter (" + arg +
+						") used in illegal context in " +
+						getPluginName() + ": "
+						+ key + ": " + printf);
+	  default:
 	  }
 	}
       }
@@ -486,19 +490,20 @@ public class DefinablePlugin extends BasePlugin {
     return coerceToList(val);
   }
 
-  public List<List<String>> getElementLists(String key) {
-    final Object val = definitionMap.getMapElement(key);
-    if (val instanceof Map) {
-      return new ArrayList<List<String>>() {{
+  List<String> flatten(final Object val) {
+    if (val instanceof List) {
+      return (List)val;
+    } else if (val instanceof Map) {
+      return new ArrayList<String>() {{
 	  for (Map.Entry ent: ((Map<?,?>)val).entrySet()) {
-	    add(coerceToList(ent.getValue()));
+	    addAll(flatten(ent.getValue()));
 	  }
-	}};
-    }      
-    if (val != null) {
-      return Collections.singletonList(coerceToList(val));
+      }};
+    } else if (val instanceof String) {
+      return Collections.singletonList((String)val);
+    } else {
+      return Collections.EMPTY_LIST;
     }
-    return Collections.EMPTY_LIST;
   }
 
   public List<String> coerceToList(Object val) {
@@ -834,6 +839,17 @@ public class DefinablePlugin extends BasePlugin {
     }
     crawlWindow = window;
     return window;
+  }
+
+  public AuParamFunctor getAuParamFunctor() {
+    String auParamFunctorClass =
+      definitionMap.getString(DefinableArchivalUnit.KEY_AU_PARAM_FUNCTOR,
+			      null);
+    if (auParamFunctorClass != null) {
+      return (AuParamFunctor)newAuxClass(auParamFunctorClass,
+					 AuParamFunctor.class);
+    }
+    return super.getAuParamFunctor();
   }
 
   LoginPageChecker loginChecker;

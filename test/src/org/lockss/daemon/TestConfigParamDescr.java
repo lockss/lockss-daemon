@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigParamDescr.java,v 1.17 2013-01-08 21:08:02 tlipkis Exp $
+ * $Id: TestConfigParamDescr.java,v 1.18 2014-08-25 08:57:02 tlipkis Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.*;
 
 import org.lockss.app.LockssApp;
 import org.lockss.daemon.ConfigParamDescr.InvalidFormatException;
+import org.lockss.config.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 
@@ -81,6 +82,62 @@ public class TestConfigParamDescr extends LockssTestCase {
     assertTrue(d1.isDefaultOnly());
   }
 
+  public void testTypeIntToEnum() {
+    ConfigParamDescr d1 = new ConfigParamDescr("k1");
+    d1.setType(ConfigParamDescr.TYPE_STRING);
+    assertEquals(AuParamType.String, d1.getTypeEnum());
+    d1.setType(ConfigParamDescr.TYPE_INT);
+    assertEquals(AuParamType.Int, d1.getTypeEnum());
+    d1.setType(ConfigParamDescr.TYPE_URL);
+    assertEquals(AuParamType.Url, d1.getTypeEnum());
+    d1.setType(ConfigParamDescr.TYPE_YEAR);
+    assertEquals(AuParamType.Year, d1.getTypeEnum());
+    d1.setType(ConfigParamDescr.TYPE_BOOLEAN);
+    assertEquals(AuParamType.Boolean, d1.getTypeEnum());
+    d1.setType(ConfigParamDescr.TYPE_POS_INT);
+    assertEquals(AuParamType.PosInt, d1.getTypeEnum());
+    d1.setType(ConfigParamDescr.TYPE_RANGE);
+    assertEquals(AuParamType.Range, d1.getTypeEnum());
+    d1.setType(ConfigParamDescr.TYPE_NUM_RANGE);
+    assertEquals(AuParamType.NumRange, d1.getTypeEnum());
+    d1.setType(ConfigParamDescr.TYPE_SET);
+    assertEquals(AuParamType.Set, d1.getTypeEnum());
+    d1.setType(ConfigParamDescr.TYPE_USER_PASSWD);
+    assertEquals(AuParamType.UserPasswd, d1.getTypeEnum());
+    d1.setType(ConfigParamDescr.TYPE_LONG);
+    assertEquals(AuParamType.Long, d1.getTypeEnum());
+    d1.setType(ConfigParamDescr.TYPE_TIME_INTERVAL);
+    assertEquals(AuParamType.TimeInterval, d1.getTypeEnum());
+  }
+
+  public void testTypeEnumToInt() {
+    ConfigParamDescr d1 = new ConfigParamDescr("k1");
+    d1.setType(AuParamType.String);
+    assertEquals(ConfigParamDescr.TYPE_STRING, d1.getType());
+    d1.setType(AuParamType.Int);
+    assertEquals(ConfigParamDescr.TYPE_INT, d1.getType());
+    d1.setType(AuParamType.Url);
+    assertEquals(ConfigParamDescr.TYPE_URL, d1.getType());
+    d1.setType(AuParamType.Year);
+    assertEquals(ConfigParamDescr.TYPE_YEAR, d1.getType());
+    d1.setType(AuParamType.Boolean);
+    assertEquals(ConfigParamDescr.TYPE_BOOLEAN, d1.getType());
+    d1.setType(AuParamType.PosInt);
+    assertEquals(ConfigParamDescr.TYPE_POS_INT, d1.getType());
+    d1.setType(AuParamType.Range);
+    assertEquals(ConfigParamDescr.TYPE_RANGE, d1.getType());
+    d1.setType(AuParamType.NumRange);
+    assertEquals(ConfigParamDescr.TYPE_NUM_RANGE, d1.getType());
+    d1.setType(AuParamType.Set);
+    assertEquals(ConfigParamDescr.TYPE_SET, d1.getType());
+    d1.setType(AuParamType.UserPasswd);
+    assertEquals(ConfigParamDescr.TYPE_USER_PASSWD, d1.getType());
+    d1.setType(AuParamType.Long);
+    assertEquals(ConfigParamDescr.TYPE_LONG, d1.getType());
+    d1.setType(AuParamType.TimeInterval);
+    assertEquals(ConfigParamDescr.TYPE_TIME_INTERVAL, d1.getType());
+  }
+
   public void testSizeDefault() {
     ConfigParamDescr d1 = new ConfigParamDescr("k1");
     assertEquals(0, d1.getSize());
@@ -110,6 +167,41 @@ public class TestConfigParamDescr extends LockssTestCase {
 
     ConfigParamDescr d6 = new ConfigParamDescr("k1");
     d6.setType(ConfigParamDescr.TYPE_TIME_INTERVAL);
+    assertEquals(10, d6.getSize());
+    d6.setSize(18);
+    assertEquals(18, d6.getSize());
+
+  }
+
+  public void testSizeDefault2() {
+    ConfigParamDescr d1 = new ConfigParamDescr("k1");
+    assertEquals(0, d1.getSize());
+    d1.setType(AuParamType.Boolean);
+    assertEquals(4, d1.getSize());
+
+    ConfigParamDescr d2 = new ConfigParamDescr("k1");
+    d2.setType(AuParamType.Year);
+    assertEquals(4, d2.getSize());
+
+    ConfigParamDescr d3 = new ConfigParamDescr("k1");
+    d3.setType(AuParamType.Int);
+    assertEquals(10, d3.getSize());
+    d3.setSize(12);
+    assertEquals(12, d3.getSize());
+
+    ConfigParamDescr d4 = new ConfigParamDescr("k1");
+    d4.setSize(12);
+    d4.setType(AuParamType.Int);
+    assertEquals(12, d4.getSize());
+
+    ConfigParamDescr d5 = new ConfigParamDescr("k1");
+    d5.setType(AuParamType.Long);
+    assertEquals(10, d5.getSize());
+    d5.setSize(18);
+    assertEquals(18, d5.getSize());
+
+    ConfigParamDescr d6 = new ConfigParamDescr("k1");
+    d6.setType(AuParamType.TimeInterval);
     assertEquals(10, d6.getSize());
     d6.setSize(18);
     assertEquals(18, d6.getSize());
@@ -317,6 +409,22 @@ public class TestConfigParamDescr extends LockssTestCase {
       ncint.getValueOfType("abcd");
       fail("Should have thrown InvalidFormatException");
     } catch (InvalidFormatException expected) {
+    }
+  }
+
+  // Ensure that either exception can be caught.  Remove after 1.67 when
+  // ConfigParamDescr.InvalidFormatException is retired
+  public void testException() throws Exception {
+    ConfigParamDescr desc = ConfigParamDescr.YEAR;
+    try {
+      desc.getValueOfType("abcd");
+      fail("Should have thrown ConfigParamDescr.InvalidFormatException");
+    } catch (ConfigParamDescr.InvalidFormatException expected) {
+    }
+    try {
+      desc.getValueOfType("abcd");
+      fail("Should have thrown AuParamType.InvalidFormatException");
+    } catch (AuParamType.InvalidFormatException expected) {
     }
   }
 

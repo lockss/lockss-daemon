@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.86 2013-10-03 19:44:20 tlipkis Exp $
+ * $Id: BasePlugin.java,v 1.87 2014-08-25 08:57:03 tlipkis Exp $
  */
 
 /*
@@ -36,9 +36,7 @@ import java.util.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.app.*;
-import org.lockss.config.Configuration;
-import org.lockss.config.Tdb;
-import org.lockss.config.TdbAu;
+import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.ExploderHelper;
@@ -282,20 +280,20 @@ public abstract class BasePlugin
       List<ConfigParamDescr> local = getLocalAuConfigDescrs();
       ArrayList<ConfigParamDescr> res = new ArrayList<ConfigParamDescr>(local);
       for (ConfigParamDescr descr : local) {
-	switch (descr.getType()) {
-	case ConfigParamDescr.TYPE_YEAR:
+	switch (descr.getTypeEnum()) {
+	case Year:
 	  res.add(descr.getDerivedDescr(BaseArchivalUnit.PREFIX_AU_SHORT_YEAR
 					+ descr.getKey()));
 	  break;
-	case ConfigParamDescr.TYPE_URL:
+	case Url:
 	  ConfigParamDescr derived;
 	  derived = descr.getDerivedDescr(descr.getKey()
 					  + BaseArchivalUnit.SUFFIX_AU_HOST);
-	  derived.setType(ConfigParamDescr.TYPE_STRING);
+	  derived.setType(AuParamType.String);
 	  res.add(derived);
 	  derived = descr.getDerivedDescr(descr.getKey()
 					  + BaseArchivalUnit.SUFFIX_AU_PATH);
-	  derived.setType(ConfigParamDescr.TYPE_STRING);
+	  derived.setType(AuParamType.String);
 	  res.add(derived);
 	  break;
 	}
@@ -465,6 +463,10 @@ public abstract class BasePlugin
 
   public ArchiveFileTypes getArchiveFileTypes() {
     return null;
+  }
+
+  public AuParamFunctor getAuParamFunctor() {
+    return BaseAuParamFunctor.SINGLETON;
   }
 
   protected Comparator<CrawlUrl> getCrawlUrlComparator(ArchivalUnit au)
