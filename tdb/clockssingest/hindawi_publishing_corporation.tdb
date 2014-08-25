@@ -781,7 +781,7 @@
 
     param[journal_id] = amb
 
-    au < expected ; exists ; 2014 ; Advances in Molecular Biology Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2014 ; Advances in Molecular Biology Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -1205,7 +1205,7 @@
 
     param[journal_id] = atox
 
-    au < expected ; exists ; 2014 ; Advances in Toxicology Volume 2014 ; 2014 ; 2014 >
+    au < manifest ; exists ; 2014 ; Advances in Toxicology Volume 2014 ; 2014 ; 2014 >
 
   }
 
