@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlUtil.java,v 1.45 2014-01-14 04:34:04 tlipkis Exp $
+ * $Id: TestUrlUtil.java,v 1.46 2014-08-25 08:58:18 tlipkis Exp $
  */
 
 /*
@@ -961,6 +961,35 @@ public class TestUrlUtil extends LockssTestCase {
 		 UrlUtil.getFileExtension("http://a.b/file.zip?foo=bar"));
     assertEquals("zip",
 		 UrlUtil.getFileExtension("http://a.b/file.zip#ref"));
+  }
+
+  public void testAddSubDomain() {
+    assertEquals("http://www.foo.bar",
+		 UrlUtil.addSubDomain("http://foo.bar", "www"));
+    assertEquals("http://web.foo.bar/",
+		 UrlUtil.addSubDomain("http://foo.bar/", "web"));
+    assertEquals("http://www.foo.bar/path",
+		 UrlUtil.addSubDomain("http://foo.bar/path", "www"));
+    assertEquals("http://www.foo.bar:8080/path",
+		 UrlUtil.addSubDomain("http://foo.bar:8080/path", "www"));
+    // Doesn't check for redundant subdomain
+    assertEquals("http://www.www.foo.bar/path",
+		 UrlUtil.addSubDomain("http://www.foo.bar/path", "www"));
+  }
+
+  public void testDelSubDomain() {
+    assertEquals("http://foo.bar/",
+		 UrlUtil.delSubDomain("http://www.foo.bar/", "www"));
+    assertEquals("http://foo.bar/",
+		 UrlUtil.delSubDomain("http://WWW.foo.bar/", "www"));
+    assertEquals("http://foo.bar/path",
+		 UrlUtil.delSubDomain("http://web.foo.bar/path", "web"));
+    assertEquals("http://foo.bar:80/path",
+		 UrlUtil.delSubDomain("http://www.foo.bar:80/path", "www"));
+    assertSame("http://foo.bar/path",
+		 UrlUtil.delSubDomain("http://foo.bar/path", "www"));
+    assertSame("http://wwwfoo.bar/path",
+		 UrlUtil.delSubDomain("http://wwwfoo.bar/path", "www"));
   }
 
   public void testResolveJavascriptUrl() {

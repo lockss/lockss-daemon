@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.64 2014-01-14 04:34:04 tlipkis Exp $
+ * $Id: UrlUtil.java,v 1.65 2014-08-25 08:58:18 tlipkis Exp $
  *
 
 Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
@@ -33,11 +33,11 @@ package org.lockss.util;
 import java.io.*;
 import java.net.*;
 import java.util.*;
+import java.util.regex.*;
 
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.commons.httpclient.*;
-import org.apache.oro.text.regex.*;
 
 import org.lockss.config.*;
 import org.lockss.daemon.PluginBehaviorException;
@@ -147,8 +147,7 @@ public class UrlUtil {
   }
 
   static Pattern AKAMAI_PATH_PAT =
-      RegexpUtil.uncheckedCompile("/(?:[^/]+/){4}([^/]+)(/.*)?$",
-          Perl5Compiler.READ_ONLY_MASK);
+    Pattern.compile("/(?:[^/]+/){4}([^/]+)(/.*)?$");
 
   /** Normalize URL to a canonical form: lowercase scheme and hostname,
    * normalize path.  Removes any reference part.  XXX need to add
@@ -195,11 +194,10 @@ public class UrlUtil {
 
     if (normalizeAkamaiUrl &&
         StringUtil.endsWithIgnoreCase(host, ".akamai.net")) {
-      Perl5Matcher matcher = RegexpUtil.getMatcher();
-      if (matcher.contains(path, AKAMAI_PATH_PAT)) {
-        MatchResult matchResult = matcher.getMatch();
-        host = matchResult.group(1);
-        path = matchResult.group(2);
+      Matcher m = AKAMAI_PATH_PAT.matcher(path);
+      if (m.find()) {
+        host = m.group(1);
+        path = m.group(2);
         changed = true;
         log.debug2("Akamai rewrite newhost, newpath: " + host + ", " + path);
       }
@@ -487,16 +485,13 @@ public class UrlUtil {
   }
 
   private static Pattern URL_PAT =
-      RegexpUtil.uncheckedCompile("^[a-zA-Z]+:/",
-          (Perl5Compiler.READ_ONLY_MASK
-           + Perl5Compiler.CASE_INSENSITIVE_MASK));
+    Pattern.compile("^[a-zA-Z]+:/", Pattern.CASE_INSENSITIVE);
 
   /** Return true if the string is a url.  Very basic, just checks that the
    * string starts with &quot;scheme:/&quot;.  (So returns false for,
    * <i>eg</i>, <tt>jar:file:...</tt>)*/
   public static boolean isUrl(String str) {
-    Perl5Matcher matcher = RegexpUtil.getMatcher();
-    return matcher.contains(str, URL_PAT);
+    return URL_PAT.matcher(str).find();
   }
 
   /** Return true if an http: or https: url */
@@ -555,6 +550,16 @@ public class UrlUtil {
   public static String getHost(String urlStr) throws MalformedURLException {
     URL url = new URL(urlStr);
     return url.getHost();
+  }
+
+  /**
+   * @param urlStr string representation of a url
+   * @return the path portion of the url
+   * @throws MalformedURLException if urlStr is not a well formed URL
+   */
+  public static String getPath(String urlStr) throws MalformedURLException {
+    URL url = new URL(urlStr);
+    return url.getPath();
   }
 
   /**
@@ -1040,6 +1045,40 @@ public class UrlUtil {
       return null;
     }
     return FileUtil.getExtension(filename);
+  }
+
+  /** Match the scheme and host:port part of a URL */
+  static Pattern SCHEME_HOST_PAT = Pattern.compile("^(\\w+://)([^/]+)");
+
+  /** Add a subdomain to the host part of a URL
+   * @param url the URL string
+   * @param subdomain the subdomain to add (no trailing dot)
+   * @return the URL string with the host prefixed with the subdomain
+   */
+  public static String addSubDomain(String url, String subdomain) {
+    return SCHEME_HOST_PAT.matcher(url).replaceFirst("$1" + subdomain + ".$2");
+  }
+
+  /** Remove a subdomain from the host part of a URL
+   * @param url the URL string
+   * @param subdomain the (case insensitive) subdomain to remove (no
+   * trailing dot)
+   * @return the URL string with the subdomain removed from the beginning
+   * of the host
+   */
+  public static String delSubDomain(String url, String subdomain) {
+    Matcher m = SCHEME_HOST_PAT.matcher(url);
+    if (m.find()) {
+      String host = m.group(2);
+      if (StringUtil.startsWithIgnoreCase(host, subdomain) &&
+	  '.' == host.charAt(subdomain.length())) {
+	StringBuffer sb = new StringBuffer();
+	m.appendReplacement(sb, "$1" + host.substring(subdomain.length() + 1));
+	m.appendTail(sb);
+	return sb.toString();
+      }
+    }
+    return url;
   }
 
   /**
