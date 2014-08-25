@@ -44,14 +44,17 @@ import org.lockss.util.PrintfUtil.*;
 public class TestPrintfUtil extends LockssTestCase {
 
   public void testStringToPrintf() throws Exception {
-    PrintfData printfData = PrintfUtil.stringToPrintf("\"foo%dbar%sbaz%%\", my_int, my_str");
+    PrintfData printfData =
+      PrintfUtil.stringToPrintf("\"foo%dbar%sbaz%%\", my_int, my_str");
 
-    assertEquals("foo%dbar%sbaz%%",
-                 printfData.getFormat());
+    assertEquals("foo%dbar%sbaz%%", printfData.getFormat());
+    assertEquals(ListUtil.list("my_int", "my_str"), printfData.getArguments());
 
-    Iterator /* of String */ iter = printfData.getArguments().iterator();
-    assertEquals("my_int", iter.next());
-    assertEquals("my_str", iter.next());
+    printfData =
+      PrintfUtil.stringToPrintf(" \"foo%dbar%sbaz%%\" , my_int , my_str ");
+
+    assertEquals("foo%dbar%sbaz%%", printfData.getFormat());
+    assertEquals(ListUtil.list("my_int", "my_str"), printfData.getArguments());
   }
 
   public void testPrintfToString() throws Exception {

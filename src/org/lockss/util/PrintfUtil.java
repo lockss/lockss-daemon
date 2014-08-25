@@ -1,5 +1,5 @@
 /*
- * $Id: PrintfUtil.java,v 1.7 2008-05-19 07:39:30 tlipkis Exp $
+ * $Id: PrintfUtil.java,v 1.8 2014-08-25 08:58:03 tlipkis Exp $
  */
 
 /*
@@ -47,9 +47,9 @@ public class PrintfUtil {
       String format = printfStr.substring(firstQuote+1, lastQuote);
       data.setFormat(format);
       String args = printfStr.substring(lastQuote+1);
-      StringTokenizer tokenizer = new StringTokenizer(args, ", ", false);
+      StringTokenizer tokenizer = new StringTokenizer(args.trim(), ",", false);
       while (tokenizer.hasMoreTokens()) {
-        data.addArgument(tokenizer.nextToken());
+        data.addArgument(tokenizer.nextToken().trim());
       }
     }
     return data;
