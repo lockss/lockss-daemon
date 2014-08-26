@@ -1,5 +1,5 @@
 /*
- * $Id: RSC2014HtmlHashFilterFactory.java,v 1.4 2014-08-13 21:15:58 etenbrink Exp $
+ * $Id: RSC2014HtmlHashFilterFactory.java,v 1.5 2014-08-26 19:51:24 etenbrink Exp $
  */
 
 /*
@@ -38,12 +38,11 @@ import java.io.Reader;
 import java.util.Vector;
 
 import org.htmlparser.Attribute;
+import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.Tag;
 import org.htmlparser.filters.OrFilter;
 import org.htmlparser.util.NodeList;
-import org.htmlparser.util.ParserException;
-import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.FilterUtil;
 import org.lockss.filter.WhiteSpaceFilter;
@@ -76,41 +75,38 @@ public class RSC2014HtmlHashFilterFactory implements FilterFactory {
     HtmlTransform xform = new HtmlTransform() {
       @Override
       public NodeList transform(NodeList nodeList) throws IOException {
-        try {
-          nodeList.visitAllNodesWith(new NodeVisitor() {
-            @Override
-            public void visitTag(Tag tag) {
-              String tagName = tag.getTagName().toLowerCase();
-              try {
-                if ("html".equals(tagName) ||
-                    "span".equals(tagName) ||
-                    "div".equals(tagName) ||
-                    "h1".equals(tagName) ||
-                    "h2".equals(tagName) ||
-                    "h3".equals(tagName) ||
-                    "a".equals(tagName)) {
-                  Attribute a = tag.getAttributeEx(tagName);
-                  Vector<Attribute> v = new Vector<Attribute>();
-                  v.add(a);
-                  if (tag.isEmptyXmlTag()) {
-                    Attribute end = tag.getAttributeEx("/");
-                    v.add(end);
-                  }
-                  tag.setAttributesEx(v);
-                }
-              }
-              catch (Exception exc) {
-                log.debug2("Internal error (visitor)", exc); // Ignore this tag and move on
-              }
-              // Always
-              super.visitTag(tag);
+        NodeList nl = new NodeList();
+        for (int sx = 0; sx < nodeList.size(); sx++) {
+          Node snode = nodeList.elementAt(sx);
+          if (snode instanceof Tag) {
+            Tag tag = (Tag) snode;
+            if (tag.isEmptyXmlTag()) {
+              continue;
             }
-          });
+            String tagName = tag.getTagName().toLowerCase();
+            NodeList knl = tag.getChildren();
+            if (knl != null) {
+              tag.setChildren(transform(knl));
+            }
+            if ("html".equals(tagName) ||
+                "span".equals(tagName) ||
+                "div".equals(tagName) ||
+                "h1".equals(tagName) ||
+                "h2".equals(tagName) ||
+                "h3".equals(tagName) ||
+                "a".equals(tagName)) {
+              Attribute a = tag.getAttributeEx(tagName);
+              Vector<Attribute> v = new Vector<Attribute>();
+              v.add(a);
+              tag.setAttributesEx(v);
+            }
+            nl.add(tag);
+          }
+          else {
+            nl.add(snode);
+          }
         }
-        catch (ParserException pe) {
-          log.debug2("Internal error (parser)", pe); // Bail
-        }
-        return nodeList;
+        return nl;
       }
     };
     
