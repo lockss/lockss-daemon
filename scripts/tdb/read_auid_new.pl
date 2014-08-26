@@ -355,6 +355,8 @@ while (my $line = <>) {
            ($plugin eq "AMetSocPlugin") || 
            ($plugin eq "ManeyAtyponPlugin") || 
            ($plugin eq "JstorPlugin") || 
+           ($plugin eq "BIRAtyponPlugin") || 
+           ($plugin eq "AmPublicHealthAssocPlugin") || 
            ($plugin eq "FutureSciencePlugin")) {
         $url = sprintf("%slockss/%s/%s/index.html", 
             $param{base_url}, $param{journal_id}, $param{volume_name});
@@ -391,6 +393,7 @@ while (my $line = <>) {
            ($plugin eq "ClockssAMetSocPlugin") || 
            ($plugin eq "ClockssManeyAtyponPlugin") || 
            ($plugin eq "ClockssJstorPlugin") || 
+           ($plugin eq "ClockssBIRAtyponPlugin") || 
            ($plugin eq "ClockssFutureSciencePlugin")) {
         $url = sprintf("%sclockss/%s/%s/index.html", 
             $param{base_url}, $param{journal_id}, $param{volume_name});
@@ -462,6 +465,26 @@ while (my $line = <>) {
             $vol_title = "\"" . $vol_title . "\"";
           }
         } 
+        $result = "Manifest";
+      } else {
+        $result = "--"
+      }
+    } else {
+      $result = "--"
+    }
+    sleep(4);
+        
+  } elsif ($plugin eq "ClockssAmericanMathematicalSocietyPlugin") {
+    $url = sprintf("%sclockssdata/?p=%s&y=%d", 
+      $param{base_url}, $param{journal_id}, $param{year});
+    $man_url = uri_unescape($url);
+    #printf("\nUrl: %s\n", $man_url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+      if (defined($man_contents) && (($man_contents =~ m/$clockss_tag/))) {
+        $vol_title = $1;
         $result = "Manifest";
       } else {
         $result = "--"
