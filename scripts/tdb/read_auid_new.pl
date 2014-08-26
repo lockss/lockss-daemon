@@ -483,7 +483,7 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/\/$param{journal_id}\/$param{year}\//)) {
+      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
         $vol_title = $param{journal_id};
         if ($man_contents =~ m/\/$param{journal_id}\/$param{year}-/) {
           $result = "Manifest";
