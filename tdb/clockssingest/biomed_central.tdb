@@ -2009,7 +2009,7 @@
       au < crawling ; exists ; 2010 ; Alzheimer's Research & Therapy Volume 2 ; 2 >
       au < finished ; crawling ; 2011 ; Alzheimer's Research & Therapy Volume 3 ; 3 >
       au < finished ; crawling ; 2012 ; Alzheimer's Research & Therapy Volume 4 ; 4 >
-      au < manifest ; exists ; 2013 ; Alzheimer's Research & Therapy Volume 5 ; 5 >
+      au < testing ; exists ; 2013 ; Alzheimer's Research & Therapy Volume 5 ; 5 >
       au < manifest ; exists ; 2014 ; Alzheimer's Research & Therapy Volume 6 ; 6 >
 
     }
@@ -2198,7 +2198,7 @@
       au < finished ; crawling ; 2010 ; Arthritis Research & Therapy Volume 12 ; 12 >
       au < finished ; crawling ; 2011 ; Arthritis Research & Therapy Volume 13 ; 13 >
       au < ingNotReady ; exists ; 2012 ; Arthritis Research & Therapy Volume 14 ; 14 >
-      au < manifest ; exists ; 2013 ; Arthritis Research & Therapy Volume 15 ; 15 >
+      au < testing ; exists ; 2013 ; Arthritis Research & Therapy Volume 15 ; 15 >
       au < manifest ; exists ; 2014 ; Arthritis Research & Therapy Volume 16 ; 16 >
 
     }
@@ -2556,7 +2556,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < finished ; crawling ; 2010 ; Breast Cancer Research Volume 12 ; 12 >
       au < finished ; crawling ; 2011 ; Breast Cancer Research Volume 13 ; 13 >
       au < crawling ; exists ; 2012 ; Breast Cancer Research Volume 14 ; 14 >
-      au < manifest ; exists ; 2013 ; Breast Cancer Research Volume 15 ; 15 >
+      au < testing ; exists ; 2013 ; Breast Cancer Research Volume 15 ; 15 >
       au < manifest ; exists ; 2014 ; Breast Cancer Research Volume 16 ; 16 >
 
     }
@@ -3177,7 +3177,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2010 ; Critical Care Volume 14 ; 14 >
       au < crawling ; exists ; 2011 ; Critical Care Volume 15 ; 15 >
       au < crawling ; exists ; 2012 ; Critical Care Volume 16 ; 16 >
-      au < manifest ; exists ; 2013 ; Critical Care Volume 17 ; 17 >
+      au < testing ; exists ; 2013 ; Critical Care Volume 17 ; 17 >
       au < manifest ; exists ; 2014 ; Critical Care Volume 18 ; 18 >
 
     }
@@ -3678,7 +3678,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < finished ; crawling ; 2010 ; Genome Biology Volume 11 ; 11 >
       au < crawling ; exists ; 2011 ; Genome Biology Volume 12 ; 12 >
       au < crawling ; exists ; 2012 ; Genome Biology Volume 13 ; 13 >
-      au < manifest ; exists ; 2013 ; Genome Biology Volume 14 ; 14 >
+      au < testing ; exists ; 2013 ; Genome Biology Volume 14 ; 14 >
       au < manifest ; exists ; 2014 ; Genome Biology Volume 15 ; 15 >
       
     }
@@ -3715,7 +3715,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2010 ; Genome Medicine Volume 2 ; 2 >
       au < manifest ; exists ; 2011 ; Genome Medicine Volume 3 ; 3 >
       au < manifest ; exists ; 2012 ; Genome Medicine Volume 4 ; 4 >
-      au < manifest ; exists ; 2013 ; Genome Medicine Volume 5 ; 5 >
+      au < testing ; exists ; 2013 ; Genome Medicine Volume 5 ; 5 >
       au < manifest ; exists ; 2014 ; Genome Medicine Volume 6 ; 6 >
 
     }
@@ -6250,7 +6250,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2010 ; Stem Cell Research & Therapy Volume 1 ; 1 >
       au < manifest ; exists ; 2011 ; Stem Cell Research & Therapy Volume 2 ; 2 >
       au < manifest ; exists ; 2012 ; Stem Cell Research & Therapy Volume 3 ; 3 >
-      au < manifest ; exists ; 2013 ; Stem Cell Research & Therapy Volume 4 ; 4 >
+      au < testing ; exists ; 2013 ; Stem Cell Research & Therapy Volume 4 ; 4 >
       au < manifest ; exists ; 2014 ; Stem Cell Research & Therapy Volume 5 ; 5 >
 
     }
@@ -6559,7 +6559,7 @@ comment[bmr] = journal archive available, but no new volumes
         au < manifest ; exists ; 2010 ; World Allergy Organization Journal Volume 3 ; 3 >
         au < manifest ; exists ; 2011 ; World Allergy Organization Journal Volume 4 ; 4 >
         au < manifest ; exists ; 2012 ; World Allergy Organization Journal Volume 5 ; 5 >
-        au < manifest ; exists ; 2013 ; World Allergy Organization Journal Volume 6 ; 6 >
+        au < testing ; exists ; 2013 ; World Allergy Organization Journal Volume 6 ; 6 >
         au < manifest ; exists ; 2014 ; World Allergy Organization Journal Volume 7 ; 7 >
       
       }
