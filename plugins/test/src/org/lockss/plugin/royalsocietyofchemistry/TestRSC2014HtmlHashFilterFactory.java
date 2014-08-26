@@ -1,5 +1,5 @@
 /*
- * $Id: TestRSC2014HtmlHashFilterFactory.java,v 1.5 2014-08-13 21:19:06 etenbrink Exp $
+ * $Id: TestRSC2014HtmlHashFilterFactory.java,v 1.6 2014-08-26 19:33:13 etenbrink Exp $
  */
 
 /*
@@ -104,25 +104,19 @@ public class TestRSC2014HtmlHashFilterFactory extends LockssTestCase {
       "<span id=\"top\"/>" +
       "</body></html>";
   
+  private static final String genError2 = "" +
+      "<html><body>" +
+      "<span id=\"top\"/>" +
+      "</body></html>";
+  
   private static final String noError = "" +
       "<html><body>" +
-      "<span/>" +
       "</body></html>";
   
   
   public void testFiltering() throws Exception {
-    try {
-      InputStream inA = fact.createFilteredInputStream(mau,
-          new StringInputStream(genError),
-          Constants.DEFAULT_ENCODING);
-      String a = StringUtil.fromInputStream(inA);
-      // generates an error when attempting to process <span/>
-      assertEquals(noError, a);
-    }
-    catch (Error err) { // XXX allow a breakpoint to be set
-      String a = "s";
-      a.concat(" b");
-    }
+    assertFilterToSame(genError, noError);
+    assertFilterToSame(genError2, noError);
     assertFilterToSame(withScript, withoutScript);
     assertFilterToSame(withStuff, withoutStuff);
     assertFilterToSame(withLinks, withoutLinks);
