@@ -486,7 +486,7 @@ while (my $line = <>) {
       my $man_contents = $resp->content;
       if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
         $vol_title = $param{journal_id};
-        if ($man_contents =~ m/\/$param{journal_id}\/$param{year}-/) {
+        if (($man_contents =~ m/\/$param{journal_id}\//) && ($man_contents =~ m/$param{year}/)) {
           $result = "Manifest";
         } else {
           $result = "--NO_URL--";
