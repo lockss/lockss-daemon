@@ -484,7 +484,7 @@ while (my $line = <>) {
     if ($resp->is_success) {
       my $man_contents = $resp->content;
       if (defined($man_contents) && (($man_contents =~ m/$clockss_tag/))) {
-        $vol_title = $1;
+        $vol_title = $param{journal_id};
         $result = "Manifest";
       } else {
         $result = "--"
