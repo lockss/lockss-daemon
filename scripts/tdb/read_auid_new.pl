@@ -355,6 +355,7 @@ while (my $line = <>) {
            ($plugin eq "AMetSocPlugin") || 
            ($plugin eq "ManeyAtyponPlugin") || 
            ($plugin eq "JstorPlugin") || 
+           ($plugin eq "MassachusettsMedicalSocietyPlugin") || 
            ($plugin eq "BIRAtyponPlugin") || 
            ($plugin eq "AmPublicHealthAssocPlugin") || 
            ($plugin eq "FutureSciencePlugin")) {
