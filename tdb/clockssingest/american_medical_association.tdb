@@ -618,7 +618,7 @@
         pluginSuffix = ClockssSilverchairJournalsPlugin
         param[base_url] = http://archinte.jamanetwork.com/
         param[resource_id] = 71
-        comment[notReady] = axd file not sync
+        comment[notReady] = PD-1173, axd file not sync
         
         au < notReady ; exists ; 2013 ; JAMA Internal Medicine Volume 173 ; 2013 >
         au < exists ; exists ; 2014 ; JAMA Internal Medicine Volume 174 ; 2014 >
