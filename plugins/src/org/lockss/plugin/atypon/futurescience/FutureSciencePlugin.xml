@@ -9,8 +9,25 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>13</string>
+    <string>14</string>
   </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>9</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>13</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>6</string>
+      </entry>
+    </map>
+  </entry>  
   <entry>
     <string>plugin_name</string>
     <string>Future Science Plugin</string>
@@ -21,7 +38,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>14</string>
+    <string>15</string>
   </entry>  
    <entry>
     <string>plugin_publishing_platform</string>

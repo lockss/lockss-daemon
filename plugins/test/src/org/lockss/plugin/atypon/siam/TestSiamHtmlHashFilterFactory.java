@@ -1,5 +1,5 @@
 /*
- * $Id: TestSiamHtmlHashFilterFactory.java,v 1.5 2013-08-06 22:45:13 alexandraohlson Exp $
+ * $Id: TestSiamHtmlHashFilterFactory.java,v 1.6 2014-08-27 17:35:04 alexandraohlson Exp $
  */
 /*
 
@@ -37,6 +37,7 @@ import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockArchivalUnit;
 import org.lockss.test.StringInputStream;
 import org.lockss.util.Constants;
+import org.lockss.util.IOUtil;
 import org.lockss.util.StringUtil;
 
 public class TestSiamHtmlHashFilterFactory extends LockssTestCase {
@@ -95,7 +96,7 @@ public class TestSiamHtmlHashFilterFactory extends LockssTestCase {
           " <a class=\"ref nowrap\" href=\"/doi/abs/10.1137/x\">Abstract</a> |" +
           " <a class=\"ref nowrap\" href=\"/doi/ref/10.1137/x\">References</a> |" +
           " <a class=\"ref nowrap\" target=\"_blank\" title=\"Opens new window\" href=\"/doi/pdf/10.1137/x\">PDF (1862 KB)</a>" +
-          "  </td>" +
+          " </td>" +
           " </tr>";
 
   private static final String citedAnchorHtml =
@@ -140,7 +141,7 @@ public class TestSiamHtmlHashFilterFactory extends LockssTestCase {
           "       </script></td>";
   private static final String scriptFindItFiltered =
       "<span class=\"ciationPageRange\">pp. 337-369</span><a href=\"http://dx.doi.org/10.1137/x\" class=\"ref doi\">" +
-          "http://dx.doi.org/10.1137/x</a> |  Cited <b>40</b> times</div>" +
+          "http://dx.doi.org/10.1137/x</a> | Cited <b>40</b> times</div>" +
           "<div class=\"doiCrossRef\"></div><div class=\"pubDate\">Online Publication Date: 2009-2010</div>" +
           " <a class=\"ref nowrap\" href=\"/doi/abs/10.1137/x\">Abstract</a> | <a class=\"ref nowrap\"" +
           "href=\"/doi/ref/10.1137/x\">References</a> | <a class=\"ref nowrap\" target=\"_blank\" title=\"Opens new window\"" +
@@ -203,11 +204,10 @@ public class TestSiamHtmlHashFilterFactory extends LockssTestCase {
           "</div>";
   private static final String leftColumnFiltered =
       "<div class=\"yui3-g \">" +
-          "  <div class=\"yui3-u yui3-u-1-4 \" >" +
-          "    <div class=\"inner\">" +
-          "      " +
-          "    </div>" +
-          "  </div>" +
+          " <div class=\"yui3-u yui3-u-1-4 \" >" +
+          " <div class=\"inner\">" +
+          " </div>" +
+          " </div>" +
           "</div>";
 
   private static final String rightColumn =
@@ -241,7 +241,7 @@ public class TestSiamHtmlHashFilterFactory extends LockssTestCase {
   private static final String rightColumnFiltered =
       "<div id=\"articleContent\"><p class=\"fulltext\"></p>" +
           "<div class=\"landSubjectHeading\"></div>" +
-          "  <h1 class=\"arttitle\">A Title</h1>" +
+          " <h1 class=\"arttitle\">A Title</h1>" +
           "</div>";
 
   private static final String header =

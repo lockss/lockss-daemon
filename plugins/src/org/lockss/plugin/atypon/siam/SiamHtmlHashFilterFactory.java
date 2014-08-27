@@ -1,5 +1,5 @@
 /*
- * $Id: SiamHtmlHashFilterFactory.java,v 1.6 2013-08-27 20:21:31 alexandraohlson Exp $
+ * $Id: SiamHtmlHashFilterFactory.java,v 1.7 2014-08-27 17:35:04 alexandraohlson Exp $
  */
 
 /*
@@ -66,7 +66,8 @@ public class SiamHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
     // super.createFilteredInputStream adds siamfilter to the baseAtyponFilters
     // and returns the filtered input stream using an array of NodeFilters that 
     // combine the two arrays of NodeFilters.
-    return super.createFilteredInputStream(au, in, encoding, siamfilter);
+    boolean doWS = true; // do a white space filtering as well.
+    return super.createFilteredInputStream(au, in, encoding, siamfilter, doWS);
 
   }
 }

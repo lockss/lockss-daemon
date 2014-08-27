@@ -1,5 +1,5 @@
 /*
- * $Id: AIAAHtmlHashFilterFactory.java,v 1.6 2014-05-20 22:18:28 alexandraohlson Exp $
+ * $Id: AIAAHtmlHashFilterFactory.java,v 1.7 2014-08-27 17:35:04 alexandraohlson Exp $
  */
 
 /*
@@ -89,12 +89,9 @@ public class AIAAHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
     };
     // super.createFilteredInputStream adds aiaa filter to the baseAtyponFilters
     // and returns the filtered input stream using an array of NodeFilters that 
-    // combine the two arrays of NodeFilters.
-    InputStream superFiltered = super.createFilteredInputStream(au, in, encoding, afilters);
-
-    // Also need white space filter to condense multiple white spaces down to 1
-    Reader reader = FilterUtil.getReader(superFiltered, encoding);
-    return new ReaderInputStream(new WhiteSpaceFilter(reader));
+    // combine the two arrays of NodeFilters and then applies a white space filter
+    boolean doWS = true;
+    return super.createFilteredInputStream(au, in, encoding, afilters, doWS);
 
   }
 

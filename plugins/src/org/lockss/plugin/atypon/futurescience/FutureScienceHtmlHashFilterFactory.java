@@ -1,5 +1,5 @@
 /*
- * $Id: FutureScienceHtmlHashFilterFactory.java,v 1.7 2013-12-11 20:16:49 alexandraohlson Exp $
+ * $Id: FutureScienceHtmlHashFilterFactory.java,v 1.8 2014-08-27 17:35:04 alexandraohlson Exp $
  */
 
 /*
@@ -52,6 +52,7 @@ import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.FilterUtil;
 import org.lockss.filter.HtmlTagFilter;
+import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.HtmlCompoundTransform;
 import org.lockss.filter.html.HtmlFilterInputStream;
 import org.lockss.filter.html.HtmlNodeFilterTransform;
@@ -177,7 +178,7 @@ public class FutureScienceHtmlHashFilterFactory implements FilterFactory {
     // remove comments now that we're done filtering 
     Reader read2 = HtmlTagFilter.makeNestedFilter(read1,
           ListUtil.list(new HtmlTagFilter.TagPair("<!--", "-->",true)));
-    return new ReaderInputStream(read2);
+    return new ReaderInputStream(new WhiteSpaceFilter(read2));
   }
 }
 

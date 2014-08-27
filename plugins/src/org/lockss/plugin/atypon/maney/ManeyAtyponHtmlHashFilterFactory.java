@@ -1,5 +1,5 @@
 /*
- * $Id: ManeyAtyponHtmlHashFilterFactory.java,v 1.4 2014-06-04 21:05:37 alexandraohlson Exp $
+ * $Id: ManeyAtyponHtmlHashFilterFactory.java,v 1.5 2014-08-27 17:35:04 alexandraohlson Exp $
  */
 
 /*
@@ -117,12 +117,9 @@ public class ManeyAtyponHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFa
 
     // super.createFilteredInputStream adds maney filter to the baseAtyponFilters
     // and returns the filtered input stream using an array of NodeFilters that 
-    // combine the two arrays of NodeFilters.
-    InputStream superFiltered = super.createFilteredInputStream(au, in, encoding, filters);
-
-    // Also need white space filter to condense multiple white spaces down to 1
-    Reader reader = FilterUtil.getReader(superFiltered, encoding);
-    return new ReaderInputStream(new WhiteSpaceFilter(reader));
+    // combine the two arrays of NodeFilters - also do optional white space filter
+    boolean doWS = true;
+    return super.createFilteredInputStream(au, in, encoding, filters, doWS);
   }
 
 }

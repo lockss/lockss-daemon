@@ -1,5 +1,5 @@
 /*
- * $Id: TestFutureScienceHtmlHashFilterFactory.java,v 1.6 2013-12-11 20:16:49 alexandraohlson Exp $
+ * $Id: TestFutureScienceHtmlHashFilterFactory.java,v 1.7 2014-08-27 17:35:04 alexandraohlson Exp $
  */
 
 /* Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University, all rights reserved.
@@ -92,7 +92,7 @@ public class TestFutureScienceHtmlHashFilterFactory extends LockssTestCase{
           "</table>";
 
   private static final String freeHtmlFiltered =
-      "    " +
+      " " +
           "<h2 class=\"tocHeading\">" +
           "<span class=\"subj-group\">Special Focus Issue</span>" +
           "</h2>" +
@@ -172,9 +172,8 @@ public class TestFutureScienceHtmlHashFilterFactory extends LockssTestCase{
           "  <!-- end left side menu -->" +
           "  </td>";
   private static final String sideMenuHtmlFiltered =
-      "      <td valign=\"top\" width=\"165\">  " +
-          "  " +
-          "  </td>";
+      " <td valign=\"top\" width=\"165\"> " +
+          "</td>";
 
   private static final String alsoReadHtml =
       "<td><div class=\"full_text\">" +
@@ -340,7 +339,7 @@ public class TestFutureScienceHtmlHashFilterFactory extends LockssTestCase{
   private static final String spanCommentFiltered =
       "<div class=\"ack\"> " +
       "<span class=\"title\" >Put the Title Here.</span>" +
-      "  <p>    " +
+      " <p> " +
       "<h2 class=\"tocHeading\"></h2></p>" +
       "<table><tr><td>ONE</td>" +
       "</tr></table>" +

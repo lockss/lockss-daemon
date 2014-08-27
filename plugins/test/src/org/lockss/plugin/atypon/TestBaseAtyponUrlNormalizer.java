@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseAtyponUrlNormalizer.java,v 1.3 2014-07-08 17:30:29 alexandraohlson Exp $
+ * $Id: TestBaseAtyponUrlNormalizer.java,v 1.4 2014-08-27 17:35:04 alexandraohlson Exp $
  */
 
 /*
@@ -51,7 +51,11 @@ public class TestBaseAtyponUrlNormalizer extends LockssTestCase {
     // remove resultBean stuff - so far seen in BIR and T&F, probably spreading
     assertEquals("http://www.baseatypon.com/doi/abs/10.1080/19416520.2013.759433",
         normalizer.normalizeUrl("http://www.baseatypon.com/doi/abs/10.1080/19416520.2013.759433?queryID=%24%7BresultBean.queryID%7D", null));
-
+    
+    // test one that popped up in taylorandfrancis and is still there?
+    assertEquals("http://www.tandfonline.com/doi/abs/10.5504/50YRTIMB.2011.0036",
+        normalizer.normalizeUrl("http://www.tandfonline.com/doi/abs/10.5504/50YRTIMB.2011.0036?queryID=%24%7BresultBean.queryID%7D", null));
+    
     /* 
      * citation download stuff : each child has a slightly different starting URL
      * add to this section as you add children - in lieu of a full child URL normalization test

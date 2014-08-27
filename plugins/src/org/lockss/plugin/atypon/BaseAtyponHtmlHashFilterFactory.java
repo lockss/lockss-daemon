@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponHtmlHashFilterFactory.java,v 1.5 2013-10-18 21:02:36 alexandraohlson Exp $
+ * $Id: BaseAtyponHtmlHashFilterFactory.java,v 1.6 2014-08-27 17:35:04 alexandraohlson Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.plugin.atypon;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.Reader;
 import java.util.Arrays;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.Tag;
@@ -42,10 +43,13 @@ import org.htmlparser.tags.Span;
 import org.htmlparser.util.NodeList;
 import org.htmlparser.util.ParserException;
 import org.htmlparser.visitors.NodeVisitor;
+import org.lockss.filter.FilterUtil;
+import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.atypon.aiaa.AIAAHtmlHashFilterFactory;
 import org.lockss.util.Logger;
+import org.lockss.util.ReaderInputStream;
 
 /**
  * BaseAtyponHtmlHashFilterFactory
@@ -136,4 +140,29 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
     return new HtmlFilterInputStream(in, encoding,
         new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(bothFilters)), xform));
   }
+  
+  /** Create a FilteredInputStream that excludes the the atyponBaseFilters and
+   * moreNodes as specified in the params, also do a WhiteSpace filter if boolean set
+   * @param au  The archival unit
+   * @param in  Incoming input stream
+   * @param encoding  The encoding
+   * @param moreNodes An array of NodeFilters to be excluded with atyponBaseFilters
+   * @param doWhiteSpace A boolean to indicate if returned stream should also have  white spaces consolidated
+   */ 
+  public InputStream createFilteredInputStream(ArchivalUnit au,
+      InputStream in, String encoding, NodeFilter[] moreNodes, boolean doWS) {
+    NodeFilter[] bothFilters = addTo(moreNodes);
+    
+    InputStream combinedFiltered = new HtmlFilterInputStream(in, encoding,
+        new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(bothFilters)), xform));
+    if (doWS == true) {
+      Reader reader = FilterUtil.getReader(combinedFiltered, encoding);
+      return new ReaderInputStream(new WhiteSpaceFilter(reader)); 
+    } else { 
+       return combinedFiltered;
+    }
+  }
+  
+  
+  
 }
