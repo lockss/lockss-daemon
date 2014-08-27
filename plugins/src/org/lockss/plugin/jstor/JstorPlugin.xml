@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -64,19 +64,23 @@
       <string>1,"^%sliteratum/publisher/jstor/journals/", base_url</string>    
       <!-- Issue TOC: http://www.jstor.org/action/showToc?journalCode=19thcenturymusic&issue=3&volume=11 -->
       <!--  when you come in off the manifest page; order of arguments usually the first, but both work -->
+      <!--  consolidate these; issue may come before or after the volume -->
+      <string>1,"^%saction/showToc\?journalCode=%s.*&amp;volume=%s", base_url, journal_id, volume_name</string>
+      <!-- 
       <string>1,"^%saction/showToc\?journalCode=%s&amp;issue=[^&amp;]+&amp;volume=%s", base_url, journal_id, volume_name</string>
       <string>1,"^%saction/showToc\?journalCode=%s&amp;volume=%s&amp;issue=[^&amp;]+", base_url, journal_id, volume_name</string>
-      <!--  we don't care about the two other versions of TOC because they're redundant (next/prev links) -->
-      <!-- http://www.jstor.org/stable/i249413 or http://www.jstor.org/stable/10.1525/abt.2010.72.issue-9-->
-      <!-- abstract, view, info aspects of article pages (both opaque and not) redirect to pdf version -->
-      <!-- <base>/stable/10.1525/abt.2010.72.9.1 or <base>/stable/7436318 or -->
-      <!-- <base>/stable/info/746318 or <base>/stable/view/746318-->
-      <string>2,"^%sstable/((view|info)/)?[.0-9]+/.+", base_url, volume_name</string> 
-      <string>2,"^%sstable/((view|info)/)?[i0-9]+$", base_url</string>
+      -->
+      <!--  we don't care about redundant versions of TOC (next/prev links) -->
+      <!--  we don't want redirection from abstract/view/info aspects of article pages -->
+      <!-- issue - BASE/stable/i249413 or BASE/stable/10.1525/abt.2010.72.issue-9-->
+      <!-- stable - BASE/stable/7436318 or BASE/stable/10.1525/abt.2010.72.9.1 or -->
+      <!-- abstract -BASE/stable/info/746318 or BASE/stable/view/746318-->
+      <string>2,"^%sstable/((view|info)/)?[.0-9]+/", base_url, volume_name</string> 
+      <string>2,"^%sstable/((view|info)/)?i?[0-9]+$", base_url</string>
       <!--  spider trap if it's like other Atypon; doesn't matter what the intermed dir is-->
       <string>2,"^%sstable/[^/]+/[0-9.]+/[-.9]+$", base_url</string>
       <!--  Do get pdfplus and full, if it exists with either both parts of doi or just second part -->
-      <string>1,"^%sstable/(pdfplus|full|pdf|media|select)/[.0-9]+/.+", base_url</string>
+      <string>1,"^%sstable/(pdfplus|full|pdf|media|select)/[.0-9]+/", base_url</string>
       <!--  when the article ID is just the doi 2nd part, it is only numbers -->
       <string>1,"^%sstable/(pdfplus|full|pdf|media|select)/[0-9]+(\.pdf)?$", base_url</string>
       <!-- the media could lead to figures but only get there from "full" --> 
@@ -132,7 +136,8 @@
   <entry>
      <string>au_substance_url_pattern</string>
      <list>
-        <string>"^%sstable/(pdfplus|full|pdf)/[.0-9]+/[^\?&amp;]+$", base_url</string>
+       <!--  newer use two part doi as article identifier -->
+        <string>"^%sstable/(pdfplus|full|pdf)/[.0-9]+/.+$", base_url</string>
         <!-- older uses just 2nd part of doi and it is just numbers -->
         <string>"^%sstable/(pdfplus|full|pdf)/[0-9]+(\.pdf)?$", base_url</string>        
     </list>
@@ -184,6 +189,6 @@
   </entry>
   <entry>
     <string>plugin_au_config_user_msg</string>
-    <string>Atypon Systems hosts this archival unit (AU) and requires that you &lt;a href=&apos;http://www.jstor.org/action/institutionLockssIpChange&apos;&gt;register the IP address of this LOCKSS box in your institutional account as a crawler&lt;/a&gt; before allowing your LOCKSS box to harvest this AU. Failure to comply with this publisher requirement may trigger crawler traps on the Atypon Systems platform, and your LOCKSS box or your entire institution may be temporarily banned from accessing the site. You only need to register the IP address of your LOCKSS box once for all AUs published by JSTOR.</string>
+    <string>Atypon Systems hosts this archival unit (AU) and may require you to register the IP address of this LOCKSS box as a crawler, by sending e-mail to &lt;a href=&apos;mailto:support@jstor.org&apos;&gt;support at JSTOR&lt;/a&gt;. Failure to comply with this publisher requirement may trigger crawler traps on the JSTOR platform, and your LOCKSS box or your entire institution may be temporarily banned from accessing the site. You only need to register the IP address of your LOCKSS box once for all AUs published by JSTOR.</string>
   </entry>  
 </map>

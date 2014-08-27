@@ -44,7 +44,7 @@ import org.lockss.util.Logger;
 
 public class JstorHtmlHashFilterFactory implements FilterFactory {
 
-	Logger log = Logger.getLogger("JstorFilterFactoryy");
+	Logger log = Logger.getLogger(JstorHtmlHashFilterFactory.class);
 	
   public static class FilteringException extends PluginException {
     public FilteringException() { super(); }
@@ -77,8 +77,9 @@ public class JstorHtmlHashFilterFactory implements FilterFactory {
        */
       // Contains ad-specific cookies
       new TagNameFilter("script"),
+      new TagNameFilter("noscript"),
       //filter out comments
-      HtmlNodeFilters.commentWithRegex(".*"),
+      HtmlNodeFilters.comment(),      
       // Document header
       new TagNameFilter("head"),
       // Header of toc page
@@ -94,7 +95,6 @@ public class JstorHtmlHashFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttribute("div",  "class", "articleBody_author"),
       HtmlNodeFilters.tagWithAttribute("div", "id", "articleFoot"),
       
-      new TagNameFilter("noscript"),
       HtmlNodeFilters.tagWithAttribute("div", "class", "marketingLinks"),
       HtmlNodeFilters.tagWithAttribute("div", "id", "journalLinks"),
       HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "issueTools"),

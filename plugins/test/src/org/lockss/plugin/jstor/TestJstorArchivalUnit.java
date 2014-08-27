@@ -1,5 +1,5 @@
 /*
- * $Id: TestJstorArchivalUnit.java,v 1.4 2014-07-11 12:00:30 alexandraohlson Exp $
+ * $Id: TestJstorArchivalUnit.java,v 1.5 2014-08-27 01:14:10 alexandraohlson Exp $
  */
 
 /*
@@ -33,8 +33,11 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.jstor;
 
 import java.net.URL;
+import java.util.List;
 import java.util.Properties;
 
+import org.apache.oro.text.regex.Pattern;
+import org.apache.oro.text.regex.PatternMatcher;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
@@ -74,13 +77,13 @@ public class TestJstorArchivalUnit extends LockssTestCase {
   }
   
   // backward compatible - make AU based on lockss version of plugin
-  private DefinableArchivalUnit makeAu(Boolean valid, int volume, String jid) 
+  private DefinableArchivalUnit makeAu(boolean valid, int volume, String jid) 
     throws Exception {
       return makeAu(valid, volume, jid, false);
   }
 
   // A more flexible version of the makeAU routine that allows choice of plugin
-  private DefinableArchivalUnit makeAu(Boolean valid, int volume, String jid, Boolean isClockss)
+  private DefinableArchivalUnit makeAu(boolean valid, int volume, String jid, boolean isClockss)
       throws Exception {
 
     Properties props = new Properties();
@@ -132,10 +135,10 @@ public class TestJstorArchivalUnit extends LockssTestCase {
     //http://www.jstor.org/action/showToc?journalCode=jmorahist&issue=1%2F2&volume=13
     shouldCacheTest(ROOT_URL+"action/showToc?journalCode=xxxx&issue=1%2F2&volume=123", true, JSAu, cus);    
     shouldCacheTest(ROOT_URL+"action/showToc?journalCode=xxxx&volume=123&issue=1%2F2", true, JSAu, cus);    
-    //NO: toc page NOT reached fro manifest (from prev/next)
+    //NO: toc page NOT reached from manifest (from prev/next)
     // http://www.jstor.org/stable/i249413 or http://www.jstor.org/stable/10.1525/abt.2010.72.issue-9
     shouldCacheTest(ROOT_URL+"toc/xxxx/123/5", false, JSAu, cus); // usual Atypon, but not jstor
-    shouldCacheTest(ROOT_URL+"stablei249413", false, JSAu, cus);
+    shouldCacheTest(ROOT_URL+"stable/i249413", false, JSAu, cus);
     shouldCacheTest(ROOT_URL+"stable/11.1111/xxxx.2010.123.issue-5", false, JSAu, cus);
 
 
@@ -148,6 +151,12 @@ public class TestJstorArchivalUnit extends LockssTestCase {
     shouldCacheTest(ROOT_URL+"stable/full/11.1111/1234-abc.12G", true, JSAu, cus);
     shouldCacheTest(ROOT_URL+"stable/media/11.1111/1234-abc.12G", true, JSAu, cus);
     shouldCacheTest(ROOT_URL+"stable/select/11.1111/1234-abc.12G", true, JSAu, cus);
+    // old style article pages
+    shouldCacheTest(ROOT_URL+"stable/pdf/1234567.pdf", true, JSAu, cus);
+    shouldCacheTest(ROOT_URL+"stable/full/1234567", true, JSAu, cus);
+    // old style is only numbers
+    shouldCacheTest(ROOT_URL+"stable/select/1234-abc.12G", false, JSAu, cus);
+    
 
     // NO -abstract, view, info aspects of article pages (both opaque and not) redirect to pdf version
     //<!-- <base>/stable/10.1525/abt.2010.72.9.1 or <base>/stable/7436318 or -->
@@ -223,14 +232,16 @@ public class TestJstorArchivalUnit extends LockssTestCase {
   
   private static final String gln_message = 
       "Atypon Systems hosts this archival unit (AU) " +
-          "and requires that you <a " +
-          "href=\'http://www.jstor.org/action/institutionLockssIpChange\'>" +
-          "register the IP address of this LOCKSS box in your institutional account as" +
-          " a crawler</a> before allowing your LOCKSS box to harvest this AU." +
+          "and may require you to register the IP address "+
+          "of this LOCKSS box as a crawler, by sending e-mail to <a " +
+          "href=\'mailto:support@jstor.org\'>" +
+          "support at JSTOR</a>." +
           " Failure to comply with this publisher requirement may trigger crawler traps" + 
-          " on the Atypon Systems platform, and your LOCKSS box or your entire institution" +
+          " on the JSTOR platform, and your LOCKSS box or your entire institution" +
           " may be temporarily banned from accessing the site. You only need to register the IP " +
           "address of your LOCKSS box once for all AUs published by JSTOR.";
+ 
+  
   
   public void testConfigUsrMsg() throws Exception {
     // a clockssAU
@@ -239,6 +250,53 @@ public class TestJstorArchivalUnit extends LockssTestCase {
 
     ArchivalUnit jsGLNAu = makeAu(true, 137, "tranamerentosoc3", false);
     assertEquals(gln_message, jsGLNAu.getProperties().getString(DefinableArchivalUnit.KEY_AU_CONFIG_USER_MSG, null));
+  }
+  
+  List<String> substanceList = ListUtil.list(
+  ROOT_URL+"stable/pdf/11.1111/1234-abc.12G.pdf",
+  ROOT_URL+"stable/pdfplus/11.1111/1234-abc.12G.pdf",
+  ROOT_URL+"stable/pdf/1234567.pdf",
+  ROOT_URL+"stable/pdfplus/1234567.pdf",
+  ROOT_URL+"stable/full/11.1111/1234-abc.12G",
+  ROOT_URL+"stable/full/1234567");
+  
+  List<String> notSubstanceList = ListUtil.list(
+  ROOT_URL+"action/showToc?journalCode=xxxx&issue=1%2F2&volume=123",    
+  ROOT_URL+"stable/media/11.1111/1234-abc.12G",
+  ROOT_URL+"stable/select/11.1111/1234-abc.12G",
+  ROOT_URL2+"action/downloadSingleCitationSec?format=refman&doi=11.1111/1234-abc.12G",
+  ROOT_URL2+"action/downloadSingleCitationSec?format=refman&doi=10.2307/41827175",
+  ROOT_URL+"jawr/1105425977/bundles/jstorSiteCatalyst.js",
+  ROOT_URL+"literatum/publisher/jstor/journals/content/jmorahist/2013/jmorahist.13.1.issue-1/jmorahist.13.1.issue-1/20130523/jmorahist.13.1.issue-1.cover.jpg");
+  
+  public void testCheckSubstanceRules() throws Exception {
+    boolean found;
+    URL base = new URL(ROOT_URL);
+    ArchivalUnit jsAu = makeAu(true, 137, "tranamerentosoc3", false);
+    PatternMatcher matcher = RegexpUtil.getMatcher();   
+    List<Pattern> patList = jsAu.makeSubstanceUrlPatterns();
+
+
+    for (String nextUrl : substanceList) {
+      log.debug3("testing for substance: "+ nextUrl);
+      found = false;
+      for (Pattern nextPat : patList) {
+            found = matcher.matches(nextUrl, nextPat);
+            if (found) break;
+      }
+      assertEquals(true,found);
+    }
+    
+    for (String nextUrl : notSubstanceList) {
+      log.debug3("testing for not substance: "+ nextUrl);
+      found = false;
+      for (Pattern nextPat : patList) {
+            found = matcher.matches(nextUrl, nextPat);
+            if (found) break;
+      }
+      assertEquals(false,found);
+    }
+
   }
 
 }

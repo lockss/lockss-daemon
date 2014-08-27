@@ -1,5 +1,5 @@
 /*
- * $Id: JstorHtmlFormExtractor.java,v 1.3 2014-06-27 18:16:46 alexandraohlson Exp $
+ * $Id: JstorHtmlFormExtractor.java,v 1.4 2014-08-27 01:14:10 alexandraohlson Exp $
  */
 
 /*
@@ -90,28 +90,26 @@ public class JstorHtmlFormExtractor extends HtmlFormExtractor {
      * Extending 
      */
     public void tagBegin(Node node, ArchivalUnit au, Callback cb) {
-      log.setLevel("debug3");
       log.debug3("custom tagBegin");
       String srcUrl = node.baseUri();
-      // TODO - put in a url check to make sure it's a page that we care about
+
       if (node.hasAttr(NAME_ATTR) && node.hasAttr(VAL_ATTR)) {
         if ("doi".equalsIgnoreCase((node.attr(NAME_ATTR)))) {
           String doitext = node.attr(VAL_ATTR);
           Matcher doiMat = DOI_URL_PATTERN.matcher(doitext);
           Matcher baseMat = BASE_URL_PATTERN.matcher(srcUrl);
+          /* Are we on a TOC page? and doi we have a node that identifies a doi? */
           if (doiMat.find() && baseMat.find()) {
             String doi1 = doiMat.group(1);
             String doi2 = doiMat.group(2);
             // ris citation uses https, not http
             String new_base = au.getConfiguration().get(ConfigParamDescr.BASE_URL2.getKey());
-//            String newUrl = baseMat.group(1) + CITATION_URL_START + doi1 + "%2F" + doi2;
             String newUrl = new_base + CITATION_URL_START + doi1 + "/" + doi2;
             log.debug3("Generating a new link: " + newUrl);
             cb.foundLink(newUrl);
           }
         }
       }
-      // TODO - we want to call the super regardless of whether we generated a new url
       log.debug3("now calling the super tagBegin");
       super.tagBegin(node, au, cb);
     }

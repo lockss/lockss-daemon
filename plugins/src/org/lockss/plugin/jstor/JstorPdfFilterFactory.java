@@ -1,5 +1,5 @@
 /*
- * $Id: JstorPdfFilterFactory.java,v 1.5 2014-06-13 18:01:34 alexandraohlson Exp $
+ * $Id: JstorPdfFilterFactory.java,v 1.6 2014-08-27 01:14:10 alexandraohlson Exp $
  */
 
 /*
@@ -137,6 +137,7 @@ public class JstorPdfFilterFactory extends ExtractingPdfFilterFactory {
       super.setUp();
       result = false;
       state = 0;
+      beginIndex = endIndex = -1;
     }
     
   }  

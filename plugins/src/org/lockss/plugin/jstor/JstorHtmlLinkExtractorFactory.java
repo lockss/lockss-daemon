@@ -1,4 +1,4 @@
-/* $Id: JstorHtmlLinkExtractorFactory.java,v 1.1 2014-05-21 18:05:19 alexandraohlson Exp $
+/* $Id: JstorHtmlLinkExtractorFactory.java,v 1.2 2014-08-27 01:14:10 alexandraohlson Exp $
  */
 
 /*
@@ -53,9 +53,6 @@ import org.lockss.util.Logger;
 
 public class JstorHtmlLinkExtractorFactory 
 implements LinkExtractorFactory {
-  
-  private static Logger log = Logger.getLogger(JstorHtmlLinkExtractorFactory.class);
-
 
   public org.lockss.extractor.LinkExtractor createLinkExtractor(String mimeType) {
 
