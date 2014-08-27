@@ -1,5 +1,5 @@
 /*
- * $Id: TestJstorArchivalUnit.java,v 1.5 2014-08-27 01:14:10 alexandraohlson Exp $
+ * $Id: TestJstorArchivalUnit.java,v 1.6 2014-08-27 20:43:55 alexandraohlson Exp $
  */
 
 /*
@@ -231,18 +231,12 @@ public class TestJstorArchivalUnit extends LockssTestCase {
   }
   
   private static final String gln_message = 
-      "Atypon Systems hosts this archival unit (AU) " +
+      "JSTOR hosts this archival unit (AU) " +
           "and may require you to register the IP address "+
-          "of this LOCKSS box as a crawler, by sending e-mail to <a " +
-          "href=\'mailto:support@jstor.org\'>" +
-          "support at JSTOR</a>." +
-          " Failure to comply with this publisher requirement may trigger crawler traps" + 
-          " on the JSTOR platform, and your LOCKSS box or your entire institution" +
-          " may be temporarily banned from accessing the site. You only need to register the IP " +
-          "address of your LOCKSS box once for all AUs published by JSTOR.";
+          "of this LOCKSS box as a crawler. For more information, visit the <a " +
+          "href=\'http://www.lockss.org/support/use-a-lockss-box/adding-titles/publisher-ip-address-registration-contacts-for-global-lockss-network/\'>" +
+          "LOCKSS IP address registration page</a>.";
  
-  
-  
   public void testConfigUsrMsg() throws Exception {
     // a clockssAU
     ArchivalUnit jsClockssAu = makeAu(true, 137, "tranamerentosoc3", true);
