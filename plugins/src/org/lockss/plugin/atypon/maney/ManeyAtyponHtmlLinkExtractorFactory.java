@@ -1,5 +1,5 @@
 /*
- * $Id: ManeyAtyponHtmlLinkExtractorFactory.java,v 1.2 2014-08-28 18:28:31 alexandraohlson Exp $
+ * $Id: ManeyAtyponHtmlLinkExtractorFactory.java,v 1.3 2014-08-28 19:18:58 alexandraohlson Exp $
  */
 
 /*
@@ -188,7 +188,6 @@ BaseAtyponHtmlLinkExtractorFactory {
      */
     public void tagBegin(Node node, ArchivalUnit au, Callback cb) {
       //log.setLevel("debug3");
-      boolean tagDone = false;
       String srcUrl = node.baseUri();
       Matcher fullArticleMat = PATTERN_FULL_ARTICLE_URL.matcher(srcUrl);
       // For the moment we only get here on a <script> tag, so no need to check 
@@ -225,13 +224,11 @@ BaseAtyponHtmlLinkExtractorFactory {
             }
           }
           // it was a figureViewer, no other link extraction needed
-          tagDone = true; 
+          return;
         }
       }
       // for one reason or another, we didn't handle this. Fall back to standard Jsoup
-      if (tagDone != true) {
-        super.tagBegin(node, au, cb);
-      }
+      super.tagBegin(node, au, cb);
     }
   }
 }
