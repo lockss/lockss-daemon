@@ -1,5 +1,5 @@
 /*
- * $Id: DbManagerSql.java,v 1.1 2014-08-22 22:14:59 fergaloy-sf Exp $
+ * $Id: DbManagerSql.java,v 1.2 2014-08-28 19:11:07 fergaloy-sf Exp $
  */
 
 /*
@@ -612,12 +612,6 @@ public class DbManagerSql {
       + "," + VERSION_COLUMN
       + ") values (?,?)";
 
-  // Query to update the database version.
-  private static final String UPDATE_DB_VERSION_QUERY = "update "
-      + VERSION_TABLE
-      + " set " + VERSION_COLUMN + " = ?"
-      + " where " + SYSTEM_COLUMN + " = ?";
-
   // Query to insert a type of metadata item.
   private static final String INSERT_MD_ITEM_TYPE_QUERY = "insert into "
       + MD_ITEM_TYPE_TABLE
@@ -625,12 +619,12 @@ public class DbManagerSql {
       + "," + TYPE_NAME_COLUMN
       + ") values (default,?)";
 
-  // Query to get the database version.
-  private static final String GET_DATABASE_VERSION_QUERY = "select "
+  // Query to get the database versions sorted in ascending order.
+  private static final String GET_SORTED_DATABASE_VERSIONS_QUERY = "select "
       + VERSION_COLUMN
       + " from " + VERSION_TABLE
       + " where " + SYSTEM_COLUMN + " = '" + DATABASE_VERSION_TABLE_SYSTEM
-      + "'";
+      + "' order by " + VERSION_COLUMN + " asc";
 
   // SQL statement that creates a database in PostgreSQL.
   private static final String CREATE_DATABASE_QUERY_PG =
@@ -2041,6 +2035,12 @@ public class DbManagerSql {
       + " set " + PUBLICATION_ID_COLUMN + " = ?"
       + " where " + PUBLICATION_ID_COLUMN + " = ?";
 
+  // SQL statements that create the necessary version 18 indices.
+  private static final String[] VERSION_18_INDEX_CREATE_QUERIES = new String[] {
+    "create unique index idx1_" + VERSION_TABLE + " on " + VERSION_TABLE
+    + "(" + SYSTEM_COLUMN + "," + VERSION_COLUMN + ")"
+  };
+
   // The database data source.
   private DataSource dataSource = null;
 
@@ -2764,16 +2764,16 @@ public class DbManagerSql {
   }
 
   /**
-   * Get the database version from the database.
+   * Provides the highest-numbered database update version from the database.
    * 
    * @param conn
    *          A Connection with the database connection to be used.
-   * @return an int with the database version.
+   * @return an int with the database update version.
    * @throws SQLException
    *           if any problem occurred accessing the database.
    */
-  int getDatabaseVersion(Connection conn) throws SQLException {
-    final String DEBUG_HEADER = "getDatabaseVersion(): ";
+  int getHighestNumberedDatabaseVersion(Connection conn) throws SQLException {
+    final String DEBUG_HEADER = "getHighestNumberedDatabaseVersion(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
     if (conn == null) {
@@ -2785,20 +2785,20 @@ public class DbManagerSql {
     ResultSet resultSet = null;
 
     try {
-      stmt = prepareStatement(conn, GET_DATABASE_VERSION_QUERY);
+      stmt = prepareStatement(conn, GET_SORTED_DATABASE_VERSIONS_QUERY);
       resultSet = executeQuery(stmt);
 
-      if (resultSet.next()) {
+      while (resultSet.next()) {
 	version = resultSet.getShort(VERSION_COLUMN);
 	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "version = " + version);
       }
     } catch (SQLException sqle) {
       log.error("Cannot get the database version", sqle);
-      log.error("SQL = '" + GET_DATABASE_VERSION_QUERY + "'.");
+      log.error("SQL = '" + GET_SORTED_DATABASE_VERSIONS_QUERY + "'.");
       throw sqle;
     } catch (RuntimeException re) {
       log.error("Cannot get the database version", re);
-      log.error("SQL = '" + GET_DATABASE_VERSION_QUERY + "'.");
+      log.error("SQL = '" + GET_SORTED_DATABASE_VERSIONS_QUERY + "'.");
       throw re;
     } finally {
       JdbcBridge.safeCloseResultSet(resultSet);
@@ -2807,106 +2807,6 @@ public class DbManagerSql {
 
     log.debug2(DEBUG_HEADER + "version = " + version);
     return version;
-  }
-
-  /**
-   * Records in the database the database version.
-   * 
-   * @param conn
-   *          A Connection with the database connection to be used.
-   * @param version
-   *          An int with version to be recorded.
-   * @return an int with the number of database rows recorded.
-   * @throws SQLException
-   *           if any problem occurred recording the database version.
-   */
-  int recordDbVersion(Connection conn, int version) throws SQLException {
-    final String DEBUG_HEADER = "recordDbVersion(): ";
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "version = " + version);
-
-    if (conn == null) {
-      throw new IllegalArgumentException("Null connection");
-    }
-
-    int count = 0;
-    int existingDbVersion = getDatabaseVersion(conn);
-
-    // Check whether the version to be recorded is greater than the one already
-    // in the database.
-    if (existingDbVersion < version) {
-      // Yes: Try to update the version.
-      count = updateDbVersion(conn, version);
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "updatedCount = " + count);
-
-      // Check whether the update was not successful.
-      if (count <= 0) {
-	// Yes: Add the version.
-	count = addDbVersion(conn, version);
-
-	if (log.isDebug2()) log.debug2(DEBUG_HEADER + "addedCount = " + count);
-	return count;
-      }
-    } else {
-      // No: Done.
-      if (log.isDebug3())
-	log.debug3(DEBUG_HEADER + existingDbVersion + " >= " + version);
-    }
-
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "updatedCount = " + count);
-    return count;
-  }
-
-  /**
-   * Updates in the database the database version.
-   * 
-   * @param conn
-   *          A Connection with the database connection to be used.
-   * @param version
-   *          An int with version to be updated.
-   * @return an int with the number of database rows updated.
-   * @throws SQLException
-   *           if any problem occurred accessing the database.
-   */
-  private int updateDbVersion(Connection conn, int version) throws SQLException
-  {
-    final String DEBUG_HEADER = "updateDbVersion(): ";
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "version = " + version);
-
-    if (conn == null) {
-      throw new IllegalArgumentException("Null connection");
-    }
-
-    int updatedCount = 0;
-    PreparedStatement updateVersion = null;
-
-    try {
-      updateVersion =
-	  prepareStatement(conn, UPDATE_DB_VERSION_QUERY);
-      updateVersion.setShort(1, (short)version);
-      updateVersion.setString(2, DATABASE_VERSION_TABLE_SYSTEM);
-
-      updatedCount = executeUpdate(updateVersion);
-    } catch (SQLException sqle) {
-      log.error("Cannot update the database version", sqle);
-      log.error("SQL = '" + UPDATE_DB_VERSION_QUERY + "'.");
-      log.error("version = " + version + ".");
-      log.error("DATABASE_VERSION_TABLE_SYSTEM = '"
-	  + DATABASE_VERSION_TABLE_SYSTEM + "'.");
-      throw sqle;
-    } catch (RuntimeException re) {
-      log.error("Cannot update the database version", re);
-      log.error("SQL = '" + UPDATE_DB_VERSION_QUERY + "'.");
-      log.error("version = " + version + ".");
-      log.error("DATABASE_VERSION_TABLE_SYSTEM = '"
-	  + DATABASE_VERSION_TABLE_SYSTEM + "'.");
-      throw re;
-    } finally {
-      JdbcBridge.safeCloseStatement(updateVersion);
-    }
-
-    if (log.isDebug2())
-      log.debug2(DEBUG_HEADER + "updatedCount = " + updatedCount);
-    return updatedCount;
   }
 
   /**
@@ -2920,7 +2820,7 @@ public class DbManagerSql {
    * @throws SQLException
    *           if any problem occurred accessing the database.
    */
-  private int addDbVersion(Connection conn, int version) throws SQLException {
+  int addDbVersion(Connection conn, int version) throws SQLException {
     final String DEBUG_HEADER = "addDbVersion(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "version = " + version);
 
@@ -2955,7 +2855,7 @@ public class DbManagerSql {
       JdbcBridge.safeCloseStatement(insertVersion);
     }
 
-    if (log.isDebug2()) log.debug(DEBUG_HEADER + "addedCount = " + addedCount);
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "addedCount = " + addedCount);
     return addedCount;
   }
 
@@ -5215,6 +5115,8 @@ public class DbManagerSql {
     // Populate in a separate thread the ArchivalUnit creation times and the
     // book chapter/journal article fetch times.
     DbVersion9To10Migrator migrator = new DbVersion9To10Migrator();
+    Thread thread = new Thread(migrator, "DbVersion9To10Migrator");
+    LockssDaemon.getLockssDaemon().getDbManager().recordThread(thread);
     new Thread(migrator).start();
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
@@ -5460,10 +5362,11 @@ public class DbManagerSql {
 
       if (success) {
 	// Yes: Record the current database version in the database.
-	recordDbVersion(conn, 10);
+	addDbVersion(conn, 10);
 
 	// Commit this partial update.
 	JdbcBridge.commitOrRollback(conn, log);
+	if (log.isDebug()) log.debug("Database updated to version " + 10);
       }
     }
 
@@ -5852,12 +5755,22 @@ public class DbManagerSql {
       throw new IllegalArgumentException("Null connection");
     }
 
-    // Add the new columns.
-    executeDdlQueries(conn, VERSION_14_COLUMN_ADD_QUERIES);
+    try {
+      // Add the new column.
+      executeDdlQueries(conn, VERSION_14_COLUMN_ADD_QUERIES);
+    } catch (SQLException sqle) {
+      // Handle the exception thrown when this same database update is performed
+      // more than once.
+      if (sqle.getMessage().indexOf("Column 'ACTIVE' already exists") == -1) {
+	throw sqle;
+      }
+    }
 
     // Populate in a separate thread the ArchivalUnit active flag for inactive
     // Archival Units.
     DbVersion13To14Migrator migrator = new DbVersion13To14Migrator();
+    Thread thread = new Thread(migrator, "DbVersion13To14Migrator");
+    LockssDaemon.getLockssDaemon().getDbManager().recordThread(thread);
     new Thread(migrator).start();
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
@@ -5885,8 +5798,9 @@ public class DbManagerSql {
       }
 
       // Record the current database version in the database.
-      recordDbVersion(conn, 14);
+      addDbVersion(conn, 14);
       JdbcBridge.commitOrRollback(conn, log);
+      if (log.isDebug()) log.debug("Database updated to version " + 14);
     } catch (SQLException sqle) {
       log.error("Cannot migrate the database from version 13 to 14", sqle);
     } catch (RuntimeException re) {
@@ -6128,8 +6042,9 @@ public class DbManagerSql {
 	  UPDATE_PUBLICATION_ID_QUERY);
 
       // Record the current database version in the database.
-      recordDbVersion(conn, 17);
+      addDbVersion(conn, 17);
       JdbcBridge.commitOrRollback(conn, log);
+      if (log.isDebug()) log.debug("Database updated to version " + 17);
     } catch (SQLException sqle) {
       log.error("Cannot migrate the database from version 16 to 17", sqle);
     } catch (RuntimeException re) {
@@ -6324,6 +6239,76 @@ public class DbManagerSql {
     } finally {
       JdbcBridge.safeCloseStatement(updateStatement);
     }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Provides all the database updates recorded in the database, sorted in
+   * ascending order.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @return a List<Integer> with the recorded database update versions.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  List<Integer> getSortedDatabaseVersions(Connection conn) throws SQLException {
+    final String DEBUG_HEADER = "getSortedDatabaseVersions(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    if (conn == null) {
+      throw new IllegalArgumentException("Null connection");
+    }
+
+    List<Integer> result = new ArrayList<Integer>();
+    PreparedStatement stmt = null;
+    ResultSet resultSet = null;
+
+    try {
+      stmt = prepareStatement(conn, GET_SORTED_DATABASE_VERSIONS_QUERY);
+      resultSet = executeQuery(stmt);
+
+      while (resultSet.next()) {
+	int version = resultSet.getShort(VERSION_COLUMN);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "version = " + version);
+	result.add(version);
+      }
+    } catch (SQLException sqle) {
+      log.error("Cannot get the database version", sqle);
+      log.error("SQL = '" + GET_SORTED_DATABASE_VERSIONS_QUERY + "'.");
+      throw sqle;
+    } catch (RuntimeException re) {
+      log.error("Cannot get the database version", re);
+      log.error("SQL = '" + GET_SORTED_DATABASE_VERSIONS_QUERY + "'.");
+      throw re;
+    } finally {
+      JdbcBridge.safeCloseResultSet(resultSet);
+      JdbcBridge.safeCloseStatement(stmt);
+    }
+
+    log.debug2(DEBUG_HEADER + "result = " + result);
+    return result;
+  }
+
+  /**
+   * Updates the database from version 17 to version 18.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws SQLException
+   *           if any problem occurred updating the database.
+   */
+  void updateDatabaseFrom17To18(Connection conn) throws SQLException {
+    final String DEBUG_HEADER = "updateDatabaseFrom17To18(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    if (conn == null) {
+      throw new IllegalArgumentException("Null connection");
+    }
+
+    // Create the necessary indices.
+    executeDdlQueries(conn, VERSION_18_INDEX_CREATE_QUERIES);
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }

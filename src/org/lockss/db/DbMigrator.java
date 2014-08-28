@@ -1,5 +1,5 @@
 /*
- * $Id: DbMigrator.java,v 1.3 2014-08-22 22:14:59 fergaloy-sf Exp $
+ * $Id: DbMigrator.java,v 1.4 2014-08-28 19:11:07 fergaloy-sf Exp $
  */
 
 /*
@@ -728,9 +728,9 @@ public class DbMigrator extends DbManager {
       try {
 	// Yes: Get the version from the version table in the database.
 	if (inTarget) {
-	  version = targetDbManagerSql.getDatabaseVersion(conn);
+	  version = targetDbManagerSql.getHighestNumberedDatabaseVersion(conn);
 	} else {
-	  version = sourceDbManagerSql.getDatabaseVersion(conn);
+	  version = sourceDbManagerSql.getHighestNumberedDatabaseVersion(conn);
 	}
       } catch (SQLException sqle) {
 	throw new DbMigratorException(sqle);

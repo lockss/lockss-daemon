@@ -1,5 +1,5 @@
 /*
- * $Id: DbManager.java,v 1.41 2014-08-22 22:14:59 fergaloy-sf Exp $
+ * $Id: DbManager.java,v 1.42 2014-08-28 19:11:07 fergaloy-sf Exp $
  */
 
 /*
@@ -218,7 +218,7 @@ public class DbManager extends BaseLockssDaemonManager
   // After this service has started successfully, this is the version of the
   // database that will be in place, as long as the database version prior to
   // starting the service was not higher already.
-  private int targetDatabaseVersion = 17;
+  private int targetDatabaseVersion = 18;
 
   // The maximum number of retries to be attempted when encountering transient
   // SQL exceptions.
@@ -650,7 +650,7 @@ public class DbManager extends BaseLockssDaemonManager
     }
 
     try {
-      return dbManagerSql.getDatabaseVersion(conn);
+      return dbManagerSql.getHighestNumberedDatabaseVersion(conn);
     } catch (SQLException sqle) {
       String message = "Cannot get the database version";
       log.error(message, sqle);
@@ -812,13 +812,9 @@ public class DbManager extends BaseLockssDaemonManager
       dbManagerSql.setUpDatabaseVersion1(conn);
 
       // Update the database to the final version.
-      updateDatabase(conn, 1, finalVersion);
-
-      // Check whether the updated database is at least at version 2.
-      if (finalVersion > 1) {
-	// Yes: Record the current database version in the database.
-	dbManagerSql.recordDbVersion(conn, finalVersion);
-      }
+      int lastRecordedVersion = updateDatabase(conn, 1, finalVersion);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "lastRecordedVersion = "
+	  + lastRecordedVersion);
 
       // Commit this partial update.
       DbManagerSql.commitOrRollback(conn, log);
@@ -1564,7 +1560,8 @@ public class DbManager extends BaseLockssDaemonManager
       if (dbManagerSql.tableExists(conn, VERSION_TABLE)) {
 	if (log.isDebug3())
 	  log.debug3(DEBUG_HEADER + VERSION_TABLE + " table exists.");
-	existingDbVersion = dbManagerSql.getDatabaseVersion(conn);
+	existingDbVersion =
+	    dbManagerSql.getHighestNumberedDatabaseVersion(conn);
       } else if (dbManagerSql.tableExists(conn, OBSOLETE_METADATA_TABLE)){
 	if (log.isDebug3())
 	  log.debug3(DEBUG_HEADER + OBSOLETE_METADATA_TABLE + " table exists.");
@@ -1574,30 +1571,81 @@ public class DbManager extends BaseLockssDaemonManager
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "existingDbVersion = "
 	  + existingDbVersion);
 
-      // Check whether the database needs to be updated.
-      if (targetDbVersion > existingDbVersion) {
-	// Yes.
-	if (log.isDebug3()) log.debug3(DEBUG_HEADER
-	    + "Database needs to be updated from existing version "
-	    + existingDbVersion + " to new version "
-	    + targetDbVersion);
-
-	// Update the database.
-	updateDatabase(conn, existingDbVersion, targetDbVersion);
-	log.info("Database has been updated to version " + targetDbVersion);
-
-	// No: Check whether the database is already up-to-date.
-      } else if (targetDbVersion == existingDbVersion) {
-	// Yes: Nothing more to do.
-	log.info("Database is up-to-date (version " + targetDbVersion
-	         + ")");
-      } else {
-	// No: The existing database is newer than what this version of the
-	// daemon expects: Disable the use of the database.
+      // Check whether the existing database is newer than what this version of
+      // the daemon expects.
+      if (targetDbVersion < existingDbVersion) {
+	// Yes: Disable the use of the database and report the problem.
 	throw new DbException("Existing database is version "
 	    + existingDbVersion
 	    + ", which is higher than the target database version "
 	    + targetDbVersion + " for this daemon.");
+      }
+
+      // Check whether any previously started threaded database updates need to
+      // be checked for completion.
+      if (existingDbVersion >= 2) {
+	// Yes: Get all the version updates recorded in the database.
+	List<Integer> recordedVersions =
+	    dbManagerSql.getSortedDatabaseVersions(conn);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "recordedVersions = " + recordedVersions);
+
+	// Check whether all the previous database updates need to be recorded
+	// in the database (The original update method only recorded the version
+	// of the highest-numbered update performed.
+	if (recordedVersions.size() == 1) {
+	  // Yes: Loop through all the versions to be recorded.
+	  for (int version = 2; version < existingDbVersion; version++) {
+	    if (log.isDebug3())
+	      log.debug3(DEBUG_HEADER + "Recording version " + version + "...");
+
+	    // Record the version in the database.
+	    int count = recordDbVersion(conn, version);
+	    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
+	  }
+	} else {
+	  // No: Perform any unfinished updates.
+	  performUnfinishedUpdates(conn, recordedVersions);
+	}
+      }
+
+      // Check whether the database needs to be updated beyond the existing
+      // database version.
+      if (targetDbVersion > existingDbVersion) {
+	// Yes.
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	    + "Database needs to be updated from existing version "
+	    + existingDbVersion + " to new version " + targetDbVersion);
+
+	// Update the database.
+	int lastRecordedVersion =
+	    updateDatabase(conn, existingDbVersion, targetDbVersion);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "lastRecordedVersion = "
+		+ lastRecordedVersion);
+
+	List<String> pendingUpdates = getPendingUpdates();
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pendingUpdates = '"
+		+ pendingUpdates + "'");
+
+	if (pendingUpdates.size() > 0) {
+	  log.info("Database has been updated to version " + lastRecordedVersion
+	      + ". Pending updates: " + pendingUpdates);
+	} else {
+	  log.info("Database has been updated to version "
+	      + lastRecordedVersion);
+	}
+      } else {
+	// No: Nothing more to do.
+	List<String> pendingUpdates = getPendingUpdates();
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pendingUpdates = '"
+		+ pendingUpdates + "'");
+
+	if (pendingUpdates.size() > 0) {
+	  log.info("Database is up-to-date at version " + existingDbVersion
+	      + ". Pending updates: " + pendingUpdates);
+	} else {
+	  log.info("Database is up-to-date at version " + existingDbVersion);
+	}
       }
     } catch (SQLException sqle) {
       throw new DbException("Cannot update the database to target version "
@@ -1613,6 +1661,63 @@ public class DbManager extends BaseLockssDaemonManager
   }
 
   /**
+   * Performs database updates that have not been recorded as finished.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param recordedVersions
+   *          A List<Integer> with the identifiers of the recorded database
+   *          updates.
+   * @throws DbException
+   *           if any problem occurred updating the database.
+   */
+  private void performUnfinishedUpdates(Connection conn,
+      List<Integer> recordedVersions) throws DbException {
+    final String DEBUG_HEADER = "performUnfinishedUpdates(): ";
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "recordedVersions = " + recordedVersions);
+
+    // The first database update that should be recorded is number 2, because
+    // the version table did not exist before.
+    int previousVersion = 1;
+
+    // Loop through all the recorded versions.
+    for (int recordedVersion : recordedVersions) {
+      if (log.isDebug3()) {
+	log.debug3(DEBUG_HEADER + "recordedVersion = " + recordedVersion);
+	log.debug3(DEBUG_HEADER + "previousVersion = " + previousVersion);
+      }
+
+      // Check whether there is a version skipped in the record of database
+      // updates.
+      if (recordedVersion - previousVersion > 1) {
+	// Yes.
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	    + "Skipped recorded versions between " + (previousVersion + 1)
+	    + " and " + (recordedVersion - 1) + " both inclusive.");
+
+	// Loop through all the skipped versions.
+	for (int version = previousVersion; version < recordedVersion - 1;
+	    version++) {
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER+ "Updating database from version " + version
+		+ " to version " + (version + 1));
+
+	  // Update the database from version dbVersion to version
+	  // dbVersion + 1.
+	  updateDatabase(conn, version, version + 1);
+	  if (log.isDebug3())
+	    log.debug3("Database has been updated to version " + (version + 1));
+	}
+      }
+
+      previousVersion = recordedVersion;
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
    * Updates the database to the target version.
    * 
    * @param conn
@@ -1622,12 +1727,11 @@ public class DbManager extends BaseLockssDaemonManager
    * @param finalDatabaseVersion
    *          An int with the version of the database to which the database is
    *          to be updated.
-   * @return <code>true</code> if the database was successfully updated,
-   *         <code>false</code> otherwise.
+   * @return an int with the highest update version recorded in the database.
    * @throws DbException
    *           if any problem occurred updating the database.
    */
-  private void updateDatabase(Connection conn, int existingDatabaseVersion,
+  private int updateDatabase(Connection conn, int existingDatabaseVersion,
       int finalDatabaseVersion) throws DbException {
     final String DEBUG_HEADER = "updateDatabase(): ";
     if (log.isDebug2()) {
@@ -1636,6 +1740,8 @@ public class DbManager extends BaseLockssDaemonManager
       log.debug2(DEBUG_HEADER + "finalDatabaseVersion = "
 	  + finalDatabaseVersion);
     }
+
+    int lastRecordedVersion = existingDatabaseVersion;
 
     // Loop through all the versions to be updated to reach the targeted
     // version.
@@ -1683,6 +1789,8 @@ public class DbManager extends BaseLockssDaemonManager
 	  dbManagerSql.updateDatabaseFrom15To16(conn);
 	} else if (from == 16) {
 	  dbManagerSql.updateDatabaseFrom16To17(conn);
+	} else if (from == 17) {
+	  dbManagerSql.updateDatabaseFrom17To18(conn);
 	} else {
 	  throw new DbException("Non-existent method to update the database "
 	      + "from version " + from + ".");
@@ -1705,7 +1813,10 @@ public class DbManager extends BaseLockssDaemonManager
 	    // database when it finishes. 
 	    if (from != 9 && from != 13 && from != 16) {
 	      // Yes: Record the current database version in the database.
-	      recordDbVersion(conn, from + 1);
+	      lastRecordedVersion = from + 1;
+	      recordDbVersion(conn, lastRecordedVersion);
+	      if (log.isDebug())
+		log.debug("Database updated to version " + lastRecordedVersion);
 	    }
 	  } else {
 	    // Commit this partial update.
@@ -1730,7 +1841,9 @@ public class DbManager extends BaseLockssDaemonManager
       }
     }
 
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "lastRecordedVersion = "
+	+ lastRecordedVersion);
+    return lastRecordedVersion;
   }
 
   /**
@@ -1750,7 +1863,7 @@ public class DbManager extends BaseLockssDaemonManager
     int count = -1;
 
     try {
-      count = dbManagerSql.recordDbVersion(conn, version);
+      count = dbManagerSql.addDbVersion(conn, version);
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
       DbManagerSql.commitOrRollback(conn, log);
     } catch (SQLException sqle) {
@@ -1867,5 +1980,27 @@ public class DbManager extends BaseLockssDaemonManager
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  private List<String> getPendingUpdates() {
+    final String DEBUG_HEADER = "getPendingUpdates(): ";
+    List<String> result = new ArrayList<String>();
+
+    for (Thread thread : threads) {
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "thread = '" + thread + "'");
+
+      String name = thread.getName();
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "name = '" + name + "'");
+      String from = name.substring(9, name.indexOf("To"));
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "from = '" + from + "'");
+      String to =
+	  name.substring(name.indexOf("To") + 2, name.indexOf("Migrator"));
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "to = '" + to + "'");
+      result.add(from + " -> " + to);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+    return result;
   }
 }

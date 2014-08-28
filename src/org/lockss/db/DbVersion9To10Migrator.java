@@ -1,5 +1,5 @@
 /*
- * $Id: DbVersion9To10Migrator.java,v 1.2 2014-08-22 22:14:59 fergaloy-sf Exp $
+ * $Id: DbVersion9To10Migrator.java,v 1.3 2014-08-28 19:11:07 fergaloy-sf Exp $
  */
 
 /*
@@ -72,12 +72,16 @@ public class DbVersion9To10Migrator extends LockssRunnable {
     }
 
     try {
-      DbManagerSql dbManagerSql =
-	  daemon.getDbManager().getDbManagerSqlBeforeReady();
+      DbManager dbManager = LockssDaemon.getLockssDaemon().getDbManager();
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "Obtained DbManager.");
+
+      DbManagerSql dbManagerSql = dbManager.getDbManagerSqlBeforeReady();
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "Obtained DbManagerSql.");
 
       // Perform the actual work.
       dbManagerSql.migrateDatabaseFrom9To10();
+
+      dbManager.cleanUpThread("DbVersion9To10Migrator");
     } catch (Exception e) {
       log.error("Cannot migrate the database from version 9 to 10", e);
     }

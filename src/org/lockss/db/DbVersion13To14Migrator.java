@@ -1,5 +1,5 @@
 /*
- * $Id: DbVersion13To14Migrator.java,v 1.2 2014-08-22 22:14:59 fergaloy-sf Exp $
+ * $Id: DbVersion13To14Migrator.java,v 1.3 2014-08-28 19:11:07 fergaloy-sf Exp $
  */
 
 /*
@@ -61,7 +61,7 @@ public class DbVersion13To14Migrator extends LockssRunnable {
 
     // Wait until the AUs have been started.
     if (!daemon.areAusStarted()) {
-      log.debug(DEBUG_HEADER + "Waiting for aus to start");
+      if (log.isDebug()) log.debug(DEBUG_HEADER + "Waiting for aus to start");
 
       while (!daemon.areAusStarted()) {
 	try {
@@ -72,12 +72,16 @@ public class DbVersion13To14Migrator extends LockssRunnable {
     }
 
     try {
-      DbManagerSql dbManagerSql =
-	  daemon.getDbManager().getDbManagerSqlBeforeReady();
+      DbManager dbManager = LockssDaemon.getLockssDaemon().getDbManager();
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "Obtained DbManager.");
+
+      DbManagerSql dbManagerSql = dbManager.getDbManagerSqlBeforeReady();
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "Obtained DbManagerSql.");
 
       // Perform the actual work.
       dbManagerSql.migrateDatabaseFrom13To14();
+
+      dbManager.cleanUpThread("DbVersion13To14Migrator");
     } catch (Exception e) {
       log.error("Cannot migrate the database from version 13 to 14", e);
     }
