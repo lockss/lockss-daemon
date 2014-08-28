@@ -214,7 +214,7 @@
         param[base_url] = http://archderm.jamanetwork.com/
         param[resource_id] = 68
         
-        au < manifest ; exists ; 2013 ; JAMA Dermatology Volume 149 ; 2013 >
+        au < testing ; exists ; 2013 ; JAMA Dermatology Volume 149 ; 2013 >
         au < exists ; exists ; 2014 ; JAMA of Dermatology Volume 150 ; 2014 >
     
       }
@@ -282,7 +282,7 @@
         param[base_url] = http://archfaci.jamanetwork.com/
         param[resource_id] = 69
         
-        au < testing ; exists ; 2013 ; JAMA Facial Plastic Surgery Volume 15 ; 2013 >
+        au < ready ; exists ; 2013 ; JAMA Facial Plastic Surgery Volume 15 ; 2013 >
         au < exists ; exists ; 2014 ; JAMA Facial Plastic Surgery Volume 16 ; 2014 >
     
       }
@@ -723,7 +723,7 @@
         param[base_url] =  http://archneur.jamanetwork.com/
         param[resource_id] = 72
         
-        au < manifest ; exists ; 2013 ; JAMA Neurology Volume 70 ; 2013 >
+        au < testing ; exists ; 2013 ; JAMA Neurology Volume 70 ; 2013 >
         au < exists ; exists ; 2014 ; JAMA Neurology Volume 71 ; 2014 >
     
       }
@@ -987,8 +987,8 @@
         param[base_url] =  http://archopht.jamanetwork.com/
         param[resource_id] = 73
         
-        au < manifest ; exists ; 2013 ; JAMA Ophthalmology Volume 131 ; 2013 >
-        au < exists ; exists ; 2014 ; JAMA Ophthalmology Volume 132 ; 2014 >
+        au < testing ; exists ; 2013 ; JAMA Ophthalmology Volume 131 ; 2013 >
+        au < testing ; exists ; 2014 ; JAMA Ophthalmology Volume 132 ; 2014 >
     
       }
 
@@ -1161,7 +1161,7 @@
         param[resource_id] = 74
         
         au < testing ; exists ; 2013 ; JAMA Otolaryngology - Head & Neck Surgery Volume 139 ; 2013 >
-        au < exists ; exists ; 2014 ; JAMA Otolaryngology - Head & Neck Surgery Volume 140 ; 2014 >
+        au < testing ; exists ; 2014 ; JAMA Otolaryngology - Head & Neck Surgery Volume 140 ; 2014 >
     
       }
     }
@@ -1360,7 +1360,7 @@
         param[base_url] = http://archpedi.jamanetwork.com/
         param[resource_id] = 75
         
-        au < manifest ; exists ; 2013 ; JAMA Pediatrics Volume 167 ; 2013 >
+        au < testing ; exists ; 2013 ; JAMA Pediatrics Volume 167 ; 2013 >
         au < exists ; exists ; 2014 ; JAMA Pediatrics Volume 168 ; 2014 >
     
       }
