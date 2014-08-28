@@ -1,5 +1,5 @@
 /*
- * $Id: ManeyAtyponHtmlLinkExtractorFactory.java,v 1.1 2014-08-27 17:35:04 alexandraohlson Exp $
+ * $Id: ManeyAtyponHtmlLinkExtractorFactory.java,v 1.2 2014-08-28 18:28:31 alexandraohlson Exp $
  */
 
 /*
@@ -32,8 +32,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.atypon.maney;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -41,7 +39,6 @@ import org.jsoup.nodes.Element;
 import org.jsoup.nodes.Node;
 import org.lockss.extractor.*;
 import org.lockss.extractor.JsoupHtmlLinkExtractor.ScriptTagLinkExtractor;
-import org.lockss.extractor.JsoupHtmlLinkExtractor.SimpleTagLinkExtractor;
 import org.lockss.extractor.LinkExtractor.Callback;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.atypon.BaseAtyponHtmlLinkExtractorFactory;
@@ -66,7 +63,7 @@ BaseAtyponHtmlLinkExtractorFactory {
    * Extracts image URLs from Maney Press browsable figure interface
    * which has static links to one version of the image (usually small) but
    * Javascript-generated links to other-size images.
-   * In order to know what the other image size/suffixes are we parse the 
+   * In order to know what the other image size & suffixes are we parse the 
    * information out of 
    * 
    * <script type="text/javascript">
@@ -84,7 +81,20 @@ BaseAtyponHtmlLinkExtractorFactory {
    * picked up by the base link extractor.
    * The end of the image URL is images/<size>/<filename> where 
    *   <size> = small, medium, large - corresponding to "s:", "m:", "l:" in the array.
-   * Not all images have all sizes.     
+   * Not all images have all sizes.    
+   * 
+   * Here are the links that would get generated from the above example, assuming that the URL
+   * of the page is 
+   *     http://www.maneyonline.com/doi/full/10.1179/0002698013Z.00000000033
+   * generated:
+   * http://www.maneyonline.com/na101/home/literatum/publisher/maney/journals/\
+   *       content/amb/2013/amb.2013.60.issue-3/0002698013z.00000000033/production/\
+   *       images/medium/s3-g1.gif
+   * http://www.maneyonline.com/na101/home/literatum/publisher/maney/journals/\
+   *       content/amb/2013/amb.2013.60.issue-3/0002698013z.00000000033/production/\
+   *       images/large/s3-g1.jpeg
+   *   and so on, through all the listed images
+   *  
    * @author Alexandra Ohlson
    */
   public static class ManeyScriptTagLinkExtractor extends ScriptTagLinkExtractor {
@@ -98,57 +108,73 @@ BaseAtyponHtmlLinkExtractorFactory {
     /* Make sure we're on a page that we care to parse for image information
      * Note that the base_url in this match does not include final "/" on purpose
      */
-    protected Pattern PATTERN_FULL_ARTICLE_URL = Pattern.compile("^(https?://.*)/doi/full/([.0-9]+)/([^?&]+)$");
+    protected Pattern PATTERN_FULL_ARTICLE_URL = Pattern.compile("^(https?://[^/]+)/doi/full/([.0-9]+)/([^?&]+)$");
     /*
      * Match the figureViewer in 3 steps.
      *  
      * 1. Match the overall "window.figureViewer" information and store the 
      * figures array as a single string for use by another matcher
      * group#1 is the doi, group#2 is the path (used) and group#3 is the figure information
-     * allow for the possibility of whitespace in likely locations
+     * Allow for the possibility of whitespace in likely locations - by liberal use 
+     * of \\s* which makes the regexp really really ugly
+     * Use of Pattern.DOTALL to allow '.' to handle newlines
      * 
      * window.figureViewer=
      * {doi:'(doi)',
      *  path:'(path)',
      *  figures:[(figure data)]}
+     *  
+     *  For clarity - here is a version of the regexp without white space bits
+     * "window\\.figureViewer=\\{doi:'([^']+)',path:'([^']+)',figures:\\[(.*)\\]\\}" 
      */
     protected static final Pattern PATTERN_FIGURE_VIEWER =
-        Pattern.compile("window\\.figureViewer=\\s?\\{doi:'([^']+)'\\s?,\\s?path:'([^']+)'\\s?,\\s?figures:\\[(.*)\\]\\}",
-            Pattern.CASE_INSENSITIVE);
+        Pattern.compile("window\\.figureViewer=\\s*\\{\\s*doi\\s*:\\s*'([^']+)'\\s*,\\s*path\\s*:\\s*'([^']+)'\\s*,\\s*figures\\s*:\\s*\\[(.*)\\]\\s*\\}",
+            Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
     /* 
      * 2. Now match the information that represents ONE image
      * We will iterate over the match as many times as there are images listed
+     * Allow for whitespace with use of '\\s*'
+     * Use of Pattern.DOTALL to allow '.' to handle newlines
      * 
      *  ONE FIGURE's DATA {i:'(figure ID)',g:[(figure data]}
      *  group#1 is the figureID, group#2 is the figure data for that image
      *   
+     *  For clarity - here is a version of the regexp without white space bits
+     * "\\{i:'([^']+)',g:\\[\\{([^\\}\\]]+)\\}\\]\\}",
      */
     protected static final Pattern PATTERN_FIGUREDATA=
-        Pattern.compile("\\s?\\{i:'([^']+)'\\s?,\\s?g:\\[\\{([^\\}\\]]+)\\}\\]\\}",
-            Pattern.CASE_INSENSITIVE);
+        Pattern.compile("\\s*\\{\\s*i\\s*:\\s*'([^']+)'\\s*,\\s*g\\s*:\\s*\\[\\s*\\{([^\\}\\]]+)\\}\\s*\\]\\s*\\}",
+            Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
     /*
      * 3. Size and filename for ONE image 
      * Within figure data for one image, there are one or more size/filename pairings
      * Iterate over the match as many times as there is useful information
      * Ignore the "size" entry, just find and use s|m|l
      * {m:'s3-g4.gif',l:'s3-g4.jpeg',size:'37 kB'}
+     * allow for white space
+     * Use of Pattern.DOTALL to allow '.' to handle newlines
      * 
+     * For clarity - here is a version of the regexp without white space bits
+     * "(s|m|l):'([^']+)'",
      */
     protected static final Pattern PATTERN_ONE_IMAGE=
-        Pattern.compile("(s|m|l):'([^']+)'",
-            Pattern.CASE_INSENSITIVE);          
-    /*
-     * To map the "s|m|l" to the matching subdirectory "small", "medium", "large"
-     */
-    static private final Map<String, String> sizeMap = 
-        new HashMap<String, String>(); 
-    static {
-      // translate file size type to url portion
-      sizeMap.put("s", "/images/small/");
-      sizeMap.put("m", "/images/medium/");
-      sizeMap.put("l", "/images/large/");
-    };
+        Pattern.compile("\\s*(s|m|l)\\s*:\\s*'([^']+)'",
+            Pattern.CASE_INSENSITIVE | Pattern.DOTALL);          
 
+    /*
+     * Translate the size 'key' to a url path section
+     * this is more efficient than a hashmap
+     * Because of regexp matching, we are guaranteed that the keyVal will
+     * match one of the three choices
+     */
+    private String getSizePath(String keyVal) {
+      switch (keyVal.charAt(0)) {
+        case 's': return "/images/small/";
+        case 'm': return "/images/medium/";
+        case 'l': return "/images/large/";
+      }
+      return null;
+    }
 
     /*
      * Extending the way links are extracted by the Jsoup link extractor in a specific case:
@@ -193,7 +219,7 @@ BaseAtyponHtmlLinkExtractorFactory {
             while (imgMat.find()) {
               String imgtype = imgMat.group(1);
               String imgFN = imgMat.group(2);
-              String newUrl = base_url + imgPathSt + sizeMap.get(imgtype) + imgFN;
+              String newUrl = base_url + imgPathSt + getSizePath(imgtype) + imgFN;
               log.debug3("new URL: " + newUrl);
               cb.foundLink(newUrl);
             }

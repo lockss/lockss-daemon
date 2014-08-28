@@ -1,5 +1,5 @@
 /*
- * $Id: TestManeyHtmlLinkExtractorFactory.java,v 1.1 2014-08-27 17:35:04 alexandraohlson Exp $
+ * $Id: TestManeyHtmlLinkExtractorFactory.java,v 1.2 2014-08-28 18:28:31 alexandraohlson Exp $
  */
 /*
 
@@ -129,6 +129,27 @@ public class TestManeyHtmlLinkExtractorFactory extends LockssTestCase {
   "  </section>" +
   "</div></div></body></html>";
 
+  
+  private static final String test3_figureLinksWithSpacesAndNewlines=
+      "<html><head><title>Test Title</title></head><body>" +
+          "<div class=\"holder\">" +
+          "<a title=\"Open Figure Viewer\" onclick=\"showFigures(this,event); return false;\" href=\"JavaScript:void(0);\" class=\"thumbnail\">" +
+          "<img alt=\"figure\" " +
+          "src=\"/" + test1_urlprefix + "/images/small/s3-g1.gif\">" +
+          "</img>" +
+          "</a>" +
+          "<span class=\"overlay\"></span>" +
+          "</div>" +
+          "<div>" +
+          "<" + SCRIPT_TAG + " type=\"text/javascript\">" +
+          "    window.figureViewer={  doi  : \'10.1179/0002698013Z.00000000033\'  ,  \n  " +
+          " path : \'/" + test1_urlprefix + "\' ,  figures : [ { i : \'S3F1\' , \n " +
+          		" g : [ { m : \'s3-g1.gif\' , l : \'s3-g1.jpeg\',size:\'116 kB\' } ] }\n" +
+          "\n   ] } </" + SCRIPT_TAG + ">" +
+          "</div>" +
+          "\n" +          
+          "</body>" +
+          "</html>";
 
   @Override
   public void setUp() throws Exception {
@@ -218,6 +239,26 @@ public class TestManeyHtmlLinkExtractorFactory extends LockssTestCase {
     }
   }
   
+   public void test3FigureLinks() throws Exception {
+     /* 
+      * Testing to make sure that the image extracgtor can handle spaces
+      * and newlines within the regexp section
+      */
+     expectedUrls = SetUtil.set(
+         MANEY_BASE_URL + test1_urlprefix + "/images/small/s3-g1.gif",
+         MANEY_BASE_URL + test1_urlprefix + "/images/medium/s3-g1.gif",
+         MANEY_BASE_URL + test1_urlprefix + "/images/large/s3-g1.jpeg");
+
+     Set<String> result_strings = parseSingleSource(test3_figureLinksWithSpacesAndNewlines, "full");
+
+     assertEquals(3, result_strings.size());
+     
+     for (String url : result_strings) {
+       log.debug3("URL: " + url);
+       assertTrue(expectedUrls.contains(url));
+     }
+     
+   }
   
   
   // this is copied directory from the Jsoup test to make sure that our class extension
