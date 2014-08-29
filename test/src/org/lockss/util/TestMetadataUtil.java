@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetadataUtil.java,v 1.12 2013-12-10 00:04:03 etenbrink Exp $
+ * $Id: TestMetadataUtil.java,v 1.13 2014-08-29 20:56:22 pgust Exp $
  */
 
 /*
@@ -292,51 +292,37 @@ public class TestMetadataUtil extends LockssTestCase {
     // Knuth vol 4A 1st edition
     
     // test ISBN conversions with correct check digit
-    assertEquals("0201038048", MetadataUtil.toIsbn10("978-0-201-03804-0"));
-    assertEquals("0201038048", MetadataUtil.toIsbn10("9780201038040"));
-    assertEquals("0201038048", MetadataUtil.toIsbn10("0-201-03804-8"));
-    assertEquals("0201038048", MetadataUtil.toIsbn10("0201038048"));
+    assertEquals("0201038048", MetadataUtil.toUnpunctuatedIsbn10("978-0-201-03804-0"));
+    assertEquals("0201038048", MetadataUtil.toUnpunctuatedIsbn10("9780201038040"));
+    assertEquals("0201038048", MetadataUtil.toUnpunctuatedIsbn10("0-201-03804-8"));
+    assertEquals("0201038048", MetadataUtil.toUnpunctuatedIsbn10("0201038048"));
 
-    assertEquals("9780201038040", MetadataUtil.toIsbn13("978-0-201-03804-0"));
-    assertEquals("9780201038040", MetadataUtil.toIsbn13("9780201038040"));
-    assertEquals("9780201038040", MetadataUtil.toIsbn13("0-201-03804-8"));
-    assertEquals("9780201038040", MetadataUtil.toIsbn13("0201038048"));
+    assertEquals("9780201038040", MetadataUtil.toUnpunctuatedIsbn13("978-0-201-03804-0"));
+    assertEquals("9780201038040", MetadataUtil.toUnpunctuatedIsbn13("9780201038040"));
+    assertEquals("9780201038040", MetadataUtil.toUnpunctuatedIsbn13("0-201-03804-8"));
+    assertEquals("9780201038040", MetadataUtil.toUnpunctuatedIsbn13("0201038048"));
 
     
     // test ISBN conversions with incorrect check digit
-    assertEquals("0201038048", MetadataUtil.toIsbn10("978-0-201-03804-7"));
-    assertEquals("0201038048", MetadataUtil.toIsbn10("9780201038047"));
-    assertEquals("0201038048", MetadataUtil.toIsbn10("0-201-03804-X"));
-    assertEquals("0201038048", MetadataUtil.toIsbn10("020103804X"));
+    assertEquals("0201038048", MetadataUtil.toUnpunctuatedIsbn10("978-0-201-03804-7"));
+    assertEquals("0201038048", MetadataUtil.toUnpunctuatedIsbn10("9780201038047"));
+    assertEquals("020103804X", MetadataUtil.toUnpunctuatedIsbn10("0-201-03804-X"));
+    assertEquals("020103804X", MetadataUtil.toUnpunctuatedIsbn10("020103804X"));
     
-    assertEquals("9780201038040", MetadataUtil.toIsbn13("978-0-201-03804-7"));
-    assertEquals("9780201038040", MetadataUtil.toIsbn13("9780201038047"));
-    assertEquals("9780201038040", MetadataUtil.toIsbn13("0-201-03804-X"));
-    assertEquals("9780201038040", MetadataUtil.toIsbn13("020103804X"));
+    assertEquals("9780201038040", MetadataUtil.toUnpunctuatedIsbn13("978-0-201-03804-0"));
+    assertEquals("9780201038040", MetadataUtil.toUnpunctuatedIsbn13("9780201038040"));
+    assertEquals("9780201038040", MetadataUtil.toUnpunctuatedIsbn13("0-201-03804-X"));
+    assertEquals("9780201038040", MetadataUtil.toUnpunctuatedIsbn13("020103804X"));
     
-    // test ISBN conversions with invalid check digit
-    assertNull(MetadataUtil.toIsbn10("978-0-201-03804-X"));
-    assertNull(MetadataUtil.toIsbn10("978020103804X"));
-    assertNull(MetadataUtil.toIsbn10("0-201-03804-Z"));
-    assertNull(MetadataUtil.toIsbn10("020103804Z"));
-  
-    assertNull(MetadataUtil.toIsbn13("978-0-201-03804-X"));
-    assertNull(MetadataUtil.toIsbn13("978020103804X"));
-    assertNull(MetadataUtil.toIsbn13("0-201-03804-Z"));
-    assertNull(MetadataUtil.toIsbn13("020103804Z"));
-  
-    // test ISBN conversions with invalid input issn
-    assertNull(MetadataUtil.toIsbn10("978-X-201-03804-0"));
-    assertNull(MetadataUtil.toIsbn10("9780X01038040"));
-    assertNull(MetadataUtil.toIsbn10("0-2X1-03804-8"));
-    assertNull(MetadataUtil.toIsbn10("02X1038048"));
-    assertNull(MetadataUtil.toIsbn10("xyzzy"));
+    // test ISBN-10 conversions with invalid input ISBN-13
+    assertNull(MetadataUtil.toUnpunctuatedIsbn10("978-X-201-03804-0"));
+    assertNull(MetadataUtil.toUnpunctuatedIsbn10("9780X01038040"));
+    assertNull(MetadataUtil.toUnpunctuatedIsbn10("xyzzy"));
 
-    assertNull(MetadataUtil.toIsbn13("978-X-201-03804-0"));
-    assertNull(MetadataUtil.toIsbn13("9780X01038040"));
-    assertNull(MetadataUtil.toIsbn13("0-2X1-03804-8"));
-    assertNull(MetadataUtil.toIsbn13("02X1038048"));
-    assertNull(MetadataUtil.toIsbn13("xyzzy"));
+    // test ISBN-13 conversions with invalid input ISBN-10
+    assertNull(MetadataUtil.toUnpunctuatedIsbn13("0-2X1-03804-8"));
+    assertNull(MetadataUtil.toUnpunctuatedIsbn13("02X1038048"));
+    assertNull(MetadataUtil.toUnpunctuatedIsbn13("xyzzy"));
     
     // test ISBN formatting
     assertEquals("978-0-201-03804-0", MetadataUtil.formatIsbn("9780201038040"));
