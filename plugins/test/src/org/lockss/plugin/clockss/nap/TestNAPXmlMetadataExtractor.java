@@ -1,5 +1,5 @@
 /*
- * $Id: TestNAPXmlMetadataExtractor.java,v 1.2 2014-08-29 19:12:58 alexandraohlson Exp $
+ * $Id: TestNAPXmlMetadataExtractor.java,v 1.3 2014-08-29 20:08:16 alexandraohlson Exp $
  */
 /*
 
@@ -50,7 +50,7 @@ public class TestNAPXmlMetadataExtractor extends LockssTestCase {
   private MockLockssDaemon theDaemon;
   private MockArchivalUnit mau;
 
-  private static String PLUGIN_NAME = "org.lockss.plugin.clockss.nap.ClockssNAPBooksSourcePlugin";
+  // PLUGIN_NAME = "org.lockss.plugin.clockss.nap.ClockssNAPBooksSourcePlugin";
   private static String BASE_URL = "http://www.source.org/";
   
   /*
@@ -107,24 +107,9 @@ public class TestNAPXmlMetadataExtractor extends LockssTestCase {
  
   private static final String realXMLFile = "NAPSourceTest.xml";
 
-
- 
-  private static final int ISBN_INDEX = 0;
-  private static final int TITLE_INDEX = 1;
-  private static final int DATE_INDEX = 2;
-  private static final int AUTHOR_INDEX = 3;
-  private static final int PUB_INDEX = 4;
-  
-  /* The order of expected values is:
-   *  isbn
-   *  title
-   *  date
-   *  author
-   *  pub
-   */
-  
   private static final String GOOD_TITLE = "Advanced Stuff for Future Wizards, Gremlins, and Physicists: Seventh Lecture International Dark Arts Series";
   private static final String GOOD_DATE =  "2000-11-28";
+  private static final String COPY_YEAR =  "2000";
   // a corporate author
   private static final String GOOD_AUTHOR = "Arthur P. Somebody, University of California at Hogwarts, Organized by the National Research Council and the Office of the Dark Arts";
   private static final String GOOD_PUBLISHER = "National Academies Press"; 
@@ -172,6 +157,7 @@ public class TestNAPXmlMetadataExtractor extends LockssTestCase {
           "<title>Advanced Stuff for Future Wizards, Gremlins, and Physicists:</title>\n" +
           "<author>Arthur P. Somebody, University of California at Hogwarts, Organized by the National Research Council and the Office of the Dark Arts</author>\n" +
           "<page_count>20</page_count>\n" +
+          "<copyright>2000</copyright>\n" +
           "<alt_title></alt_title>\n" +
           "<subtitle>Seventh Lecture International Dark Arts Series</subtitle>\n";
 
@@ -188,10 +174,6 @@ public class TestNAPXmlMetadataExtractor extends LockssTestCase {
           "<day>28</day>\n" +
           "<epoch>975387600</epoch>\n" +
           "</display_date>\n";
-
-  // find example to build up this test
-  private static final String nap_bad_date = "";
-  private static final String copyright_date = "";
 
   private static final String nap_pdf_book_item = 
       "<product><item>\n" +
@@ -222,9 +204,9 @@ public class TestNAPXmlMetadataExtractor extends LockssTestCase {
 
   public void testNoPdfBookItem() throws Exception {
 
-    String xml_no_pdf_book = nap_xml_start + nap_valid_flat_isbn + nap_display_date + nap_book_item + nap_item_contents + nap_xml_end;
-    mcu.setContent(xml_no_pdf_book);
-    mcu.setContentSize(xml_no_pdf_book.length());
+    String xml_string = nap_xml_start + nap_valid_flat_isbn + nap_display_date + nap_book_item + nap_item_contents + nap_xml_end;
+    mcu.setContent(xml_string);
+    mcu.setContentSize(xml_string.length());
     
     List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);
     assertNotEmpty(mdlist);
@@ -236,9 +218,9 @@ public class TestNAPXmlMetadataExtractor extends LockssTestCase {
   
   public void testNoValidISBN() throws Exception {
 
-    String xml_no_pdf_book = nap_xml_start + nap_invalid_flat_isbn + nap_display_date + nap_book_item + nap_item_contents + nap_xml_end;
-    mcu.setContent(xml_no_pdf_book);
-    mcu.setContentSize(xml_no_pdf_book.length());
+    String xml_string = nap_xml_start + nap_invalid_flat_isbn + nap_display_date + nap_book_item + nap_item_contents + nap_xml_end;
+    mcu.setContent(xml_string);
+    mcu.setContentSize(xml_string.length());
     
     List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);
     assertNotEmpty(mdlist);
@@ -246,6 +228,20 @@ public class TestNAPXmlMetadataExtractor extends LockssTestCase {
     ArticleMetadata mdRecord = mdlist.get(0);
       assertNotNull(mdRecord);
       assertEquals(null, mdRecord.get(MetadataField.FIELD_ISBN));
+  }
+  
+  public void testNoDisplayDate() throws Exception {
+
+    String xml_string = nap_xml_start + nap_invalid_flat_isbn + nap_book_item + nap_item_contents + nap_xml_end;
+    mcu.setContent(xml_string);
+    mcu.setContentSize(xml_string.length());
+    
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);
+    assertNotEmpty(mdlist);
+    assertEquals(1, mdlist.size());
+    ArticleMetadata mdRecord = mdlist.get(0);
+      assertNotNull(mdRecord);
+      assertEquals(COPY_YEAR, mdRecord.get(MetadataField.FIELD_DATE));
   }
   
 }

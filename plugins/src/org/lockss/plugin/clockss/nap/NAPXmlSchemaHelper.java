@@ -1,5 +1,5 @@
 /*
- * $Id: NAPXmlSchemaHelper.java,v 1.3 2014-08-29 19:12:58 alexandraohlson Exp $
+ * $Id: NAPXmlSchemaHelper.java,v 1.4 2014-08-29 20:08:17 alexandraohlson Exp $
  */
 
 /*
@@ -165,9 +165,7 @@ implements SourceXmlSchemaHelper {
   private static String NAP_title =  "title";
   private static String NAP_flatisbn = "flat_isbn";
   // Get the isbn13 value from the product/item node with a type of 'pdf_book'
-  private static String NAP_pdf_book_isbn13 = "product/item[type[text()='pdf_book']]/isbn13";
-  ///records/record[record-type[text()='A']]/name
-  
+  private static String NAP_pdf_book_isbn13 = "product/item[type[text()='pdf_book']]/isbn13";  
   private static String NAP_copyyear = "copyright";
   private static String NAP_displaydate =  "display_date";
 
