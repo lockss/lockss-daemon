@@ -10,6 +10,8 @@
     param[base_url] = http://msp.org/
     implicit < status ; status2 ; year ; name ; volume ; param[year] >
     
+    comment[0] = Do not include Annals of Mathematics, hosted by Princeton.
+    
   {
   
     title < 
