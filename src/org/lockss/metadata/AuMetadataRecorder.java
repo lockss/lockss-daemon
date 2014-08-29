@@ -1,5 +1,5 @@
 /*
- * $Id: AuMetadataRecorder.java,v 1.18 2014-08-22 22:15:00 fergaloy-sf Exp $
+ * $Id: AuMetadataRecorder.java,v 1.19 2014-08-29 20:46:09 pgust Exp $
  */
 
 /*
@@ -37,8 +37,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -47,12 +48,14 @@ import org.lockss.app.LockssDaemon;
 import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
 import org.lockss.exporter.counter.CounterReportsManager;
+import org.lockss.extractor.MetadataField;
 import org.lockss.metadata.ArticleMetadataBuffer.ArticleMetadataInfo;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.Plugin;
 import org.lockss.plugin.PluginManager;
 import org.lockss.util.Logger;
+import org.lockss.util.MetadataUtil;
 import org.lockss.util.StringUtil;
 import org.lockss.util.TimeBase;
 
@@ -175,7 +178,10 @@ public class AuMetadataRecorder {
   private Long parentSeq = null;
 
   // Properties used to take shortcuts in processing.
-  private String journalTitle = null;
+  private String seriesTitle = null;
+  private String proprietarySeriesId = null;
+  private String publicationTitle = null;
+  private String publicationType = null;
   private String pIsbn = null;
   private String eIsbn = null;
   private String pIssn = null;
@@ -282,7 +288,7 @@ public class AuMetadataRecorder {
       String accessUrl = mdinfo.accessUrl.trim();
       if (accessUrl.length() > MAX_URL_COLUMN) {
 	log.warning("accessUrl too long '" + mdinfo.accessUrl
-	    + "' for title: '" + mdinfo.journalTitle + "' publisher: "
+	    + "' for title: '" + mdinfo.publicationTitle + "' publisher: "
 	    + mdinfo.publisher + "'");
 	mdinfo.accessUrl = DbManager.truncateVarchar(accessUrl, MAX_URL_COLUMN);
       } else {
@@ -290,17 +296,11 @@ public class AuMetadataRecorder {
       }
     }
 
-    mdinfo.isbn = mdManager.normalizeIsbnOrIssn(mdinfo.isbn, MAX_ISBN_COLUMN,
-	"ISBN", mdinfo.journalTitle, mdinfo.publisher);
-
-    mdinfo.eisbn = mdManager.normalizeIsbnOrIssn(mdinfo.eisbn, MAX_ISBN_COLUMN,
-	"ISBN", mdinfo.journalTitle, mdinfo.publisher);
-
-    mdinfo.issn = mdManager.normalizeIsbnOrIssn(mdinfo.issn, MAX_ISSN_COLUMN,
-	"ISSN", mdinfo.journalTitle, mdinfo.publisher);
-
-    mdinfo.eissn = mdManager.normalizeIsbnOrIssn(mdinfo.eissn, MAX_ISSN_COLUMN,
-	"ISSN", mdinfo.journalTitle, mdinfo.publisher);
+    // strip punctuation and ensure values are proper ISBN or ISSN lengths
+    mdinfo.isbn = MetadataUtil.toUnpunctuatedIsbn(mdinfo.isbn);
+    mdinfo.eisbn = MetadataUtil.toUnpunctuatedIsbn(mdinfo.eisbn);
+    mdinfo.issn = MetadataUtil.toUnpunctuatedIssn(mdinfo.issn);
+    mdinfo.eissn = MetadataUtil.toUnpunctuatedIssn(mdinfo.eissn);
 
     if (mdinfo.doi != null) {
       String doi = mdinfo.doi.trim();
@@ -311,7 +311,7 @@ public class AuMetadataRecorder {
 
       if (doi.length() > MAX_DOI_COLUMN) {
 	log.warning("doi too long '" + mdinfo.doi + "' for title: '"
-	    + mdinfo.journalTitle + "' publisher: " + mdinfo.publisher + "'");
+	    + mdinfo.publicationTitle + "' publisher: " + mdinfo.publisher + "'");
 	mdinfo.doi = DbManager.truncateVarchar(doi, MAX_DOI_COLUMN);
       } else {
 	mdinfo.doi = doi;
@@ -322,7 +322,7 @@ public class AuMetadataRecorder {
       String pubDate = mdinfo.pubDate.trim();
       if (pubDate.length() > MAX_DATE_COLUMN) {
 	log.warning("pubDate too long '" + mdinfo.pubDate + "' for title: '"
-	    + mdinfo.journalTitle + "' publisher: " + mdinfo.publisher + "'");
+	    + mdinfo.publicationTitle + "' publisher: " + mdinfo.publisher + "'");
 	mdinfo.pubDate = DbManager.truncateVarchar(pubDate, MAX_DATE_COLUMN);
       } else {
 	mdinfo.pubDate = pubDate;
@@ -333,7 +333,7 @@ public class AuMetadataRecorder {
       String volume = mdinfo.volume.trim();
       if (volume.length() > MAX_VOLUME_COLUMN) {
 	log.warning("volume too long '" + mdinfo.volume + "' for title: '"
-	    + mdinfo.journalTitle + "' publisher: " + mdinfo.publisher + "'");
+	    + mdinfo.publicationTitle + "' publisher: " + mdinfo.publisher + "'");
 	mdinfo.volume = DbManager.truncateVarchar(volume, MAX_VOLUME_COLUMN);
       } else {
 	mdinfo.volume = volume;
@@ -344,7 +344,7 @@ public class AuMetadataRecorder {
       String issue = mdinfo.issue.trim();
       if (issue.length() > MAX_ISSUE_COLUMN) {
 	log.warning("issue too long '" + mdinfo.issue + "' for title: '"
-	    + mdinfo.journalTitle + "' publisher: " + mdinfo.publisher + "'");
+	    + mdinfo.publicationTitle + "' publisher: " + mdinfo.publisher + "'");
 	mdinfo.issue = DbManager.truncateVarchar(issue, MAX_ISSUE_COLUMN);
       } else {
 	mdinfo.issue = issue;
@@ -355,7 +355,7 @@ public class AuMetadataRecorder {
       String startPage = mdinfo.startPage.trim();
       if (startPage.length() > MAX_START_PAGE_COLUMN) {
 	log.warning("startPage too long '" + mdinfo.startPage
-	    + "' for title: '" + mdinfo.journalTitle + "' publisher: "
+	    + "' for title: '" + mdinfo.publicationTitle + "' publisher: "
 	    + mdinfo.publisher + "'");
 	mdinfo.startPage =
 	    DbManager.truncateVarchar(startPage, MAX_START_PAGE_COLUMN);
@@ -368,7 +368,7 @@ public class AuMetadataRecorder {
       String name = mdinfo.articleTitle.trim();
       if (name.length() > MAX_NAME_COLUMN) {
 	log.warning("article title too long '" + mdinfo.articleTitle
-	    + "' for title: '" + mdinfo.journalTitle + "' publisher: "
+	    + "' for title: '" + mdinfo.publicationTitle + "' publisher: "
 	    + mdinfo.publisher + "'");
 	mdinfo.articleTitle = DbManager.truncateVarchar(name, MAX_NAME_COLUMN);
       } else {
@@ -380,52 +380,63 @@ public class AuMetadataRecorder {
       String name = mdinfo.publisher.trim();
       if (name.length() > MAX_NAME_COLUMN) {
 	log.warning("publisher too long '" + mdinfo.publisher
-	    + "' for title: '" + mdinfo.journalTitle + "'");
+	    + "' for title: '" + mdinfo.publicationTitle + "'");
 	mdinfo.publisher = DbManager.truncateVarchar(name, MAX_NAME_COLUMN);
       } else {
 	mdinfo.publisher = name;
       }
     }
 
-    if (mdinfo.journalTitle != null) {
-      String name = mdinfo.journalTitle.trim();
+    if (mdinfo.seriesTitle != null) {
+      String name = mdinfo.seriesTitle.trim();
       if (name.length() > MAX_NAME_COLUMN) {
-	log.warning("journal title too long '" + mdinfo.journalTitle
-	    + "' for publisher: " + mdinfo.publisher + "'");
-	mdinfo.journalTitle = DbManager.truncateVarchar(name, MAX_NAME_COLUMN);
+        log.warning("series title too long '" + mdinfo.seriesTitle
+            + "' for publisher: " + mdinfo.publisher + "'");
+        mdinfo.seriesTitle = DbManager.truncateVarchar(name, MAX_NAME_COLUMN);
       } else {
-	mdinfo.journalTitle = name;
+        mdinfo.seriesTitle = name;
       }
     }
 
-    if (mdinfo.authorSet != null) {
-      Set<String> authors = new HashSet<String>();
-      for (String author : mdinfo.authorSet) {
+    if (mdinfo.publicationTitle != null) {
+      String name = mdinfo.publicationTitle.trim();
+      if (name.length() > MAX_NAME_COLUMN) {
+	log.warning("journal title too long '" + mdinfo.publicationTitle
+	    + "' for publisher: " + mdinfo.publisher + "'");
+	mdinfo.publicationTitle = DbManager.truncateVarchar(name, MAX_NAME_COLUMN);
+      } else {
+	mdinfo.publicationTitle = name;
+      }
+    }
+
+    if (mdinfo.authors != null) {
+      List<String> authors = new ArrayList<String>();
+      for (String author : mdinfo.authors) {
 	String name = author.trim();
 	if (name.length() > MAX_AUTHOR_COLUMN) {
 	  log.warning("author too long '" + author + "' for title: '"
-	      + mdinfo.journalTitle + "' publisher: " + mdinfo.publisher + "'");
+	      + mdinfo.publicationTitle + "' publisher: " + mdinfo.publisher + "'");
 	  authors.add(DbManager.truncateVarchar(name, MAX_AUTHOR_COLUMN));
 	} else {
 	  authors.add(name);
 	}
       }
-      mdinfo.authorSet = authors;
+      mdinfo.authors = authors;
     }
 
-    if (mdinfo.keywordSet != null) {
-      Set<String> keywords = new HashSet<String>();
-      for (String keyword : mdinfo.keywordSet) {
+    if (mdinfo.keywords != null) {
+      List<String> keywords = new ArrayList<String>();
+      for (String keyword : mdinfo.keywords) {
 	String name = keyword.trim();
 	if (name.length() > MAX_KEYWORD_COLUMN) {
 	  log.warning("keyword too long '" + keyword + "' for title: '"
-	      + mdinfo.journalTitle + "' publisher: " + mdinfo.publisher + "'");
+	      + mdinfo.publicationTitle + "' publisher: " + mdinfo.publisher + "'");
 	  keywords.add(DbManager.truncateVarchar(name, MAX_KEYWORD_COLUMN));
 	} else {
 	  keywords.add(name);
 	}
       }
-      mdinfo.keywordSet = keywords;
+      mdinfo.keywords = keywords;
     }
 
     if (mdinfo.featuredUrlMap != null) {
@@ -434,7 +445,7 @@ public class AuMetadataRecorder {
 	String url = mdinfo.featuredUrlMap.get(key).trim();
 	if (url.length() > MAX_URL_COLUMN) {
 	  log.warning("URL too long '" + mdinfo.featuredUrlMap.get(key)
-	      + "' for title: '" + mdinfo.journalTitle + "' publisher: "
+	      + "' for title: '" + mdinfo.publicationTitle + "' publisher: "
 	      + mdinfo.publisher + "'");
 	  featuredUrls.put(key, DbManager.truncateVarchar(url, MAX_URL_COLUMN));
 	} else {
@@ -448,7 +459,7 @@ public class AuMetadataRecorder {
       String endPage = mdinfo.endPage.trim();
       if (endPage.length() > MAX_END_PAGE_COLUMN) {
 	log.warning("endPage too long '" + mdinfo.endPage + "' for title: '"
-	    + mdinfo.journalTitle + "' publisher: " + mdinfo.publisher + "'");
+	    + mdinfo.publicationTitle + "' publisher: " + mdinfo.publisher + "'");
 	mdinfo.endPage =
 	    DbManager.truncateVarchar(endPage, MAX_END_PAGE_COLUMN);
       } else {
@@ -460,7 +471,7 @@ public class AuMetadataRecorder {
       String coverage = mdinfo.coverage.trim();
       if (coverage.length() > MAX_COVERAGE_COLUMN) {
 	log.warning("coverage too long '" + mdinfo.coverage + "' for title: '"
-	    + mdinfo.journalTitle + "' publisher: " + mdinfo.publisher + "'");
+	    + mdinfo.publicationTitle + "' publisher: " + mdinfo.publisher + "'");
 	mdinfo.coverage =
 	    DbManager.truncateVarchar(coverage, MAX_COVERAGE_COLUMN);
       } else {
@@ -474,7 +485,7 @@ public class AuMetadataRecorder {
       String itemNumber = mdinfo.itemNumber.trim();
       if (itemNumber.length() > MAX_ITEM_NO_COLUMN) {
 	log.warning("itemNumber too long '" + mdinfo.itemNumber
-	    + "' for title: '" + mdinfo.journalTitle + "' publisher: "
+	    + "' for title: '" + mdinfo.publicationTitle + "' publisher: "
 	    + mdinfo.publisher + "'");
 	mdinfo.itemNumber =
 	    DbManager.truncateVarchar(mdinfo.itemNumber, MAX_ITEM_NO_COLUMN);
@@ -488,7 +499,7 @@ public class AuMetadataRecorder {
       if (name.length() > MAX_PUBLICATION_ID_COLUMN) {
 	log.warning("proprietaryIdentifier too long '"
 	    + mdinfo.proprietaryIdentifier + "' for title: '"
-	    + mdinfo.journalTitle + "' publisher: " + mdinfo.publisher + "'");
+	    + mdinfo.publicationTitle + "' publisher: " + mdinfo.publisher + "'");
 	mdinfo.proprietaryIdentifier =
 	    DbManager.truncateVarchar(name, MAX_PUBLICATION_ID_COLUMN);
       } else {
@@ -496,9 +507,80 @@ public class AuMetadataRecorder {
       }
     }
 
+    if (mdinfo.proprietarySeriesIdentifier != null) {
+      String name = mdinfo.proprietarySeriesIdentifier.trim();
+      if (name.length() > MAX_PUBLICATION_ID_COLUMN) {
+        log.warning("proprietarySeriesIdentifier too long '"
+            + mdinfo.proprietarySeriesIdentifier + "' for series title: '"
+            + mdinfo.seriesTitle + "' publisher: " + mdinfo.publisher + "'");
+        mdinfo.proprietarySeriesIdentifier =
+            DbManager.truncateVarchar(name, MAX_PUBLICATION_ID_COLUMN);
+      } else {
+        mdinfo.proprietarySeriesIdentifier = name;
+      }
+    }
+
     return mdinfo;
   }
 
+  /**
+   * Replace gensym metadata title with new title.
+   *  
+   * @param conn
+   *          A Connection with the connection to the database
+   * @param mdSequence
+   *          The md_info record index.
+   * @param unknownRoot
+   *          The unknown root prefix
+   * @param title
+   *          The replacement title
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  private void replaceUnknownMdTitle(Connection conn, 
+      Long mdSequence, String unknownRoot, String title) throws DbException {
+    final String DEBUG_HEADER = "replaceGenSym(): ";
+
+    // Find the publication names.
+    Map<String, String> names = mdManager.getMdItemNames(conn, mdSequence);
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "names.size() = " + names.size());
+
+    // Loop through each publication name.
+    for (Map.Entry<String, String> entry : names.entrySet()) {
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "entry = " + entry);
+
+      // Check whether this is the primary name.
+      if (entry.getValue().equals(PRIMARY_NAME_TYPE)) {
+        // Yes: Check whether the name has been synthesized.
+        if (title.startsWith(unknownRoot)) {
+          // Yes: Check whether this is not a synthesized name.
+          if (!entry.getKey().startsWith(unknownRoot)) {
+            // Yes: Remove any synthesized names.
+            mdManager.removeNotPrimarySynthesizedMdItemNames(conn, mdSequence);
+
+            // Use the primary name instead of the synthesized name.
+            publicationTitle = entry.getKey();
+          }
+        } else {
+          // No: Check whether this is a synthesized name.
+          if (entry.getKey().startsWith(unknownRoot)) {
+            // Yes: Update the synthesized primary name with the current one.
+            mdManager.updatePrimarySynthesizedMdItemName(conn, mdSequence,
+                title);
+
+            // Remove the previously entered non-primary name for this
+            // publication.
+            mdManager.removeNotPrimaryMdItemName(conn, mdSequence,
+                title);
+          }
+        }
+
+        break;
+      }
+    }
+  }
+  
   /**
    * Stores in the database metadata for the Archival Unit.
    * 
@@ -593,22 +675,43 @@ public class AuMetadataRecorder {
 	}
       }
     }
-
+    
     // Check whether this is a new publication.
     if (publicationSeq == null || !isSamePublication(mdinfo)) {
       // Yes.
       log.debug3(DEBUG_HEADER + "is new publication.");
 
+      // Get the publication type in the metadata
+      publicationType = mdinfo.publicationType;
+      log.debug3(DEBUG_HEADER + "publicationType = " + publicationType);
+
       // Get the journal title received in the metadata.
-      journalTitle = mdinfo.journalTitle;
-      log.debug3(DEBUG_HEADER + "journalTitle = " + journalTitle);
+      publicationTitle = mdinfo.publicationTitle;
+      log.debug3(DEBUG_HEADER + "publicationTitle = " + publicationTitle);
 
       // Check whether no name was received in the metadata.
-      if (StringUtil.isNullString(journalTitle)) {
+      if (StringUtil.isNullString(publicationTitle)) {
 	// Yes: Synthesize a name.
-	journalTitle = synthesizePublicationTitle(mdinfo);
+        String defaultId = Long.toString(TimeBase.nowMs());
+	publicationTitle = synthesizePublicationTitle(mdinfo, defaultId);
       }
+      
+      // Check whether no name was received in the metadata.
+      if (MetadataField.PUBLICATION_TYPE_BOOKSERIES.equals(publicationType)) {
+        // Get the series title received in the metadata
+        seriesTitle = mdinfo.seriesTitle;
+        log.debug3(DEBUG_HEADER + "seriesTitle = " + seriesTitle);
 
+        if (StringUtil.isNullString(seriesTitle)) {
+          // Yes: Synthesize a name.
+          seriesTitle = synthesizeSeriesTitle(mdinfo, publicationTitle);
+        }
+
+        // Get the proprietary series identifier received in the metadata.
+        proprietarySeriesId = mdinfo.proprietarySeriesIdentifier;
+        log.debug3(DEBUG_HEADER + "proprietarySeriesId = " + proprietarySeriesId);
+      }
+      
       // Get any ISBN values received in the metadata.
       pIsbn = mdinfo.isbn;
       log.debug3(DEBUG_HEADER + "pIsbn = " + pIsbn);
@@ -630,10 +733,11 @@ public class AuMetadataRecorder {
       // Get the volume received in the metadata.
       volume = mdinfo.volume;
       log.debug3(DEBUG_HEADER + "volume = " + volume);
-
+      
       // Get the publication to which this metadata belongs.
-      publicationSeq = mdManager.findOrCreatePublication(conn, pIssn, eIssn,
-	  pIsbn, eIsbn, publisherSeq, journalTitle, proprietaryId, volume);
+      publicationSeq = mdManager.findOrCreatePublication(conn, publisherSeq, 
+          pIssn, eIssn, pIsbn, eIsbn, publicationType, 
+	  seriesTitle, proprietarySeriesId, publicationTitle, proprietaryId);
       log.debug3(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
 
       // Get the identifier of the parent, which is the publication metadata
@@ -641,53 +745,31 @@ public class AuMetadataRecorder {
       parentSeq = mdManager.findPublicationMetadataItem(conn, publicationSeq);
       log.debug3(DEBUG_HEADER + "parentSeq = " + parentSeq);
 
-      // Find the publication names.
-      Map<String, String> names = mdManager.getMdItemNames(conn, parentSeq);
-      if (log.isDebug3())
-	log.debug3(DEBUG_HEADER + "names.size() = " + names.size());
-
-      // Loop through each publication name.
-      for (Map.Entry<String, String> entry : names.entrySet()) {
-	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "entry = " + entry);
-
-	// Check whether this is the primary name.
-	if (entry.getValue().equals(PRIMARY_NAME_TYPE)) {
-	  // Yes: Check whether the publication name has been synthesized.
-	  if (journalTitle.startsWith(UNKNOWN_TITLE_NAME_ROOT)) {
-	    // Yes: Check whether this is not a synthesized name.
-	    if (!entry.getKey().startsWith(UNKNOWN_TITLE_NAME_ROOT)) {
-	      // Yes: Remove any synthesized names.
-	      mdManager.removeNotPrimarySynthesizedMdItemNames(conn, parentSeq);
-
-	      // Use the primary name instead of the synthesized name.
-	      journalTitle = entry.getKey();
-	    }
-	  } else {
-	    // No: Check whether this is a synthesized name.
-	    if (entry.getKey().startsWith(UNKNOWN_TITLE_NAME_ROOT)) {
-	      // Yes: Update the synthesized primary name with the current one.
-	      mdManager.updatePrimarySynthesizedMdItemName(conn, parentSeq,
-		  journalTitle);
-
-	      // Remove the previously entered non-primary name for this
-	      // publication.
-	      mdManager.removeNotPrimaryMdItemName(conn, parentSeq,
-		  journalTitle);
-	    }
-	  }
-
-	  break;
-	}
-      }
-
-      if (!journalTitle.startsWith(UNKNOWN_TITLE_NAME_ROOT)) {
-	// Remove any previously synthesized names for this publication.
-	mdManager.removeNotPrimarySynthesizedMdItemNames(conn, parentSeq);
-      }
+      // replace any unknown titles with this publication title
+      replaceUnknownMdTitle(
+          conn, parentSeq,UNKNOWN_TITLE_NAME_ROOT, publicationTitle); 
 
       // Get the type of the parent.
       parentMdItemType = getMdItemTypeName(conn, parentSeq);
       log.debug3(DEBUG_HEADER + "parentMdItemType = " + parentMdItemType);
+      
+      // replace any unknown series titles with this series title
+      if (MetadataField.PUBLICATION_TYPE_BOOKSERIES.equals(publicationType)
+          && !StringUtil.isNullString(seriesTitle)) {
+        Long seriesPublicationSeq = mdManager.findBookSeries(conn, publisherSeq,
+            pIssn, eIssn, seriesTitle);
+        log.debug3(DEBUG_HEADER 
+            + "seriesPublicationSeq = " + seriesPublicationSeq);
+        if (seriesPublicationSeq != null) {
+          Long seriesSeq = 
+              mdManager.findPublicationMetadataItem(conn, seriesPublicationSeq);
+          log.debug3(DEBUG_HEADER + "seriesMdSeq = " + seriesSeq);
+          if (seriesSeq != null) {
+            replaceUnknownMdTitle(
+                conn, seriesSeq, UNKNOWN_SERIES_NAME_ROOT, seriesTitle);
+          }
+        }
+      }
     }
 
     // Skip it if the publication could not be found or created.
@@ -777,9 +859,12 @@ public class AuMetadataRecorder {
    * 
    * @param mdinfo
    *          An ArticleMetadataInfo providing the metadata.
+   * @param defaultId
+   *          A default id for the publication title
    * @return a String with the synthetic publication title.
    */
-  private String synthesizePublicationTitle(ArticleMetadataInfo mdinfo) {
+  private String synthesizePublicationTitle(
+      ArticleMetadataInfo mdinfo, String defaultId) {
     final String DEBUG_HEADER = "synthesizePublicationTitle(): ";
     String result = null;
 
@@ -806,7 +891,42 @@ public class AuMetadataRecorder {
 	  + mdinfo.proprietaryIdentifier;
     } else {
       // No: Generate a random name.
-      result = UNKNOWN_TITLE_NAME_ROOT + "/id=" +  + TimeBase.nowMs();
+      result = UNKNOWN_TITLE_NAME_ROOT + "/id=" +  defaultId;
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+    return result;
+  }
+
+  /**
+   * Creates a synthetic book seriesn title using the available metadata.
+   * 
+   * @param mdinfo
+   *          An ArticleMetadataInfo providing the metadata.
+   * @param defaultId
+   *          A default id for generating the series title
+   * @return a String with the synthetic series title.
+   */
+  private String synthesizeSeriesTitle(
+      ArticleMetadataInfo mdinfo, String defaultId) {
+    final String DEBUG_HEADER = "synthesizeSeriesTitle(): ";
+    String result = null;
+
+    if (!StringUtil.isNullString(mdinfo.issn)) {
+      // Yes: Use it.
+      result = UNKNOWN_SERIES_NAME_ROOT + "/issn=" + mdinfo.issn;
+      // No: Check whether the metadata included the eISSN.
+    } else if (!StringUtil.isNullString(mdinfo.eissn)) {
+      // Yes: Use it.
+      result = UNKNOWN_SERIES_NAME_ROOT + "/eissn=" + mdinfo.eissn;
+      // No: Check whether the metadata included the proprietary identifier.
+    } else if (!StringUtil.isNullString(mdinfo.proprietarySeriesIdentifier)) {
+      // Yes: Use it.
+      result = UNKNOWN_SERIES_NAME_ROOT + "/seriesId="
+          + mdinfo.proprietarySeriesIdentifier;
+    } else {
+      // No: Generate a random name.
+      result = UNKNOWN_SERIES_NAME_ROOT + "/id=" + defaultId;
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
@@ -923,30 +1043,26 @@ public class AuMetadataRecorder {
     log.debug3(DEBUG_HEADER + "accessUrl = " + accessUrl);
 
     // Determine what type of a metadata item it is.
-    String mdItemType = null;
-    if (MD_ITEM_TYPE_BOOK.equals(parentMdItemType)) {
-      if (StringUtil.isNullString(startPage)
-	  && StringUtil.isNullString(endPage)
-	  && StringUtil.isNullString(itemNo)) {
-	mdItemType = MD_ITEM_TYPE_BOOK;
-      } else {
-	mdItemType = MD_ITEM_TYPE_BOOK_CHAPTER;
-      }
-    } else if (MD_ITEM_TYPE_JOURNAL.equals(parentMdItemType)) {
-      mdItemType = MD_ITEM_TYPE_JOURNAL_ARTICLE;
-    } else {
+    String mdItemType = mdinfo.articleType;
+    if (StringUtil.isNullString(mdItemType)) {
       // Skip it if the parent type is not a book or journal.
       log.error(DEBUG_HEADER + "Unknown parentMdItemType = "
-	  + parentMdItemType);
+  	  + parentMdItemType);
       return;
     }
-
+    
     log.debug3(DEBUG_HEADER + "mdItemType = " + mdItemType);
 
     // Find the metadata item type record sequence.
     Long mdItemTypeSeq = mdManager.findMetadataItemType(conn, mdItemType);
     log.debug3(DEBUG_HEADER + "mdItemTypeSeq = " + mdItemTypeSeq);
 
+    // sanity check -- type should be known in database
+    if (mdItemTypeSeq == null) {
+      log.error(DEBUG_HEADER + "Unknown articleType = " + mdItemType);
+      return;
+    }
+    
     Long mdItemSeq = null;
     boolean newMdItem = false;
 
@@ -985,11 +1101,11 @@ public class AuMetadataRecorder {
     log.debug3(DEBUG_HEADER + "volume = " + volume);
 
     // Get the authors received in the metadata.
-    Set<String> authors = mdinfo.authorSet;
+    Collection<String> authors = mdinfo.authors;
     log.debug3(DEBUG_HEADER + "authors = " + authors);
 
     // Get the keywords received in the metadata.
-    Set<String> keywords = mdinfo.keywordSet;
+    Collection<String> keywords = mdinfo.keywords;
     log.debug3(DEBUG_HEADER + "keywords = " + keywords);
 
     // Check whether it is a new metadata item.
@@ -1231,13 +1347,15 @@ public class AuMetadataRecorder {
    *         current publication, <code>false</code> otherwise.
    */
   private boolean isSamePublication(ArticleMetadataInfo mdinfo) {
-    return isSameProperty(journalTitle, mdinfo.journalTitle) &&
+    return isSameProperty(publicationTitle, mdinfo.publicationTitle) &&
 	isSameProperty(pIsbn, mdinfo.isbn) &&
 	isSameProperty(eIsbn, mdinfo.eisbn) &&
 	isSameProperty(pIssn, mdinfo.issn) &&
 	isSameProperty(eIssn, mdinfo.eissn) &&
 	isSameProperty(proprietaryId, mdinfo.proprietaryIdentifier) &&
-	isSameProperty(volume, mdinfo.volume);
+	isSameProperty(volume, mdinfo.volume) &&
+	isSameProperty(seriesTitle, mdinfo.seriesTitle) &&
+	isSameProperty(proprietarySeriesId, mdinfo.proprietarySeriesIdentifier);
   }
   
   /**
