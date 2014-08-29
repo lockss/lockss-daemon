@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicItemAdapter.java,v 1.11 2014-04-02 19:40:11 pgust Exp $
+ * $Id: BibliographicItemAdapter.java,v 1.12 2014-08-29 20:42:40 pgust Exp $
  */
 
 /*
@@ -66,6 +66,7 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
   protected String issnL = null;
   protected String publicationTitle = null;
   protected String seriesTitle = null;
+  protected String proprietarySeriesId = null;
   protected String proprietaryId = null;
   protected String publisherName = null;
   protected String name = null;
@@ -168,6 +169,11 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
   @Override
   public String getProprietaryId() {
     return proprietaryId;
+  }
+
+  @Override
+  public String getProprietarySeriesId() {
+    return proprietarySeriesId;
   }
 
   @Override
@@ -283,6 +289,11 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
     return this;
   }
 
+  public BibliographicItemAdapter setProprietarySeriesId(String proprietarySeriesId) {
+    this.proprietarySeriesId = proprietarySeriesId;
+    return this;
+  }
+
   public BibliographicItemAdapter setPublisherName(String publisherName) {
     this.publisherName = publisherName;
     return this;
@@ -377,6 +388,7 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
     setEissn(from.eIssn);
     setIssnL(from.issnL);
     setProprietaryId(from.proprietaryId);
+    setProprietarySeriesId(from.proprietarySeriesId);
     setPublicationTitle(from.publicationTitle);
     setPublisherName(from.publisherName);
     setName(from.name);

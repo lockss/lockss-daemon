@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicItem.java,v 1.7 2013-12-09 20:52:55 pgust Exp $
+ * $Id: BibliographicItem.java,v 1.8 2014-08-29 20:42:24 pgust Exp $
  */
 
 /*
@@ -122,6 +122,13 @@ public interface BibliographicItem {
    * @return the proprietary ID of the bibliographic item's journal
    */
   public String getProprietaryId();
+
+  /**
+   * Returns the proprietary ID of of the series of which the bibliographic 
+   * item is a part.
+   * @return the proprietary ID of the bibliographic item's series
+   */
+  public String getProprietarySeriesId();
 
   /**
    * Return publication type this AU. Values include "journal" for a journal,
