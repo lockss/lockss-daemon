@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataField.java,v 1.22 2014-01-10 21:11:55 tlipkis Exp $
+ * $Id: MetadataField.java,v 1.23 2014-08-29 20:44:17 pgust Exp $
  */
 
 /*
@@ -175,13 +175,23 @@ public class MetadataField {
       KEY_PUBLISHER, Cardinality.Single,publishervalid);
 
   /** Publication is a stand-alone book. */
-  public static final String PUBLICATON_TYPE_BOOK = "book";
+  public static final String PUBLICATION_TYPE_BOOK = "book";
   /** Publication is part of a book series. */
   public static final String PUBLICATION_TYPE_BOOKSERIES = "bookSeries";
   /** Publication is a journal. */
   public static final String PUBLICATION_TYPE_JOURNAL = "journal";
   
   public static final String KEY_PUBLICATION_TYPE = "pubtype";
+
+  /** Publication unit is a journal article */
+  public static final String ARTICLE_TYPE_JOURNALARTICLE = "journal_article";
+  /** Publication unit is a book chapter */
+  public static final String ARTICLE_TYPE_BOOKCHAPTER = "book_chapter";
+  /** Publication unit is a whole book or volume */
+  public static final String ARTICLE_TYPE_BOOKVOLUME = "book_volume";
+  
+  public static final String KEY_ARTICLE_TYPE = "articletype";
+
   // You cannot put in an empty string or a null value for publication type
   private static Validator pubtypevalid = new Validator() {
     public String validate(ArticleMetadata am,MetadataField field,String val)
@@ -198,6 +208,12 @@ public class MetadataField {
   /** Publication type, e.g. "book", "bookSeries", "journal" */
   public static final MetadataField FIELD_PUBLICATION_TYPE = new MetadataField(
       KEY_PUBLICATION_TYPE, Cardinality.Single,pubtypevalid);
+
+  /** Publication unit type, e.g. "article" (for journal), "chapter" 
+   * (for a book chapter), "volume" (for a whole book or volume) 
+   */
+  public static final MetadataField FIELD_ARTICLE_TYPE = new MetadataField(
+      KEY_ARTICLE_TYPE, Cardinality.Single,pubtypevalid);
 
   public static final String KEY_VOLUME = "volume";
   public static final MetadataField FIELD_VOLUME = new MetadataField(
@@ -264,13 +280,20 @@ public class MetadataField {
       return val;
     }
   };
-  /** Series title (e.g. a bookSeries)  for a publication series (e.g. books) */
+
+  /** 
+   * Proprietary series identifier (e.g. a bookSeries) 
+   * for a publication series (e.g. books) 
+   */
   public static final MetadataField FIELD_SERIES_TITLE = new MetadataField(
       KEY_SERIES_TITLE, Cardinality.Single, seriestitlevalid);
 
-  
+  public static final String KEY_PROPRIETARY_SERIES_IDENTIFIER =
+      "propietary_series_identifier";
+  public static final MetadataField FIELD_PROPRIETARY_SERIES_IDENTIFIER =
+      new MetadataField(KEY_PROPRIETARY_SERIES_IDENTIFIER, Cardinality.Single);
+
   /* Author is currently a delimited list of one or more authors. */
-  
   public static final String KEY_AUTHOR = "author";
   private static  Validator authorvalid = new Validator(){
     public String validate(ArticleMetadata am,MetadataField field,String val)
@@ -562,9 +585,10 @@ public class MetadataField {
     FIELD_FEATURED_URL_MAP,
     FIELD_FETCH_TIME,
     FIELD_ITEM_NUMBER,
-    FIELD_JOURNAL_TITLE,
     FIELD_KEYWORDS,
     FIELD_PROPRIETARY_IDENTIFIER,
+    FIELD_PROPRIETARY_SERIES_IDENTIFIER,
+    FIELD_PUBLICATION_TITLE,
     FIELD_PUBLISHER,
     FIELD_START_PAGE,
     FIELD_VOLUME,
