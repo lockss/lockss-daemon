@@ -1,5 +1,5 @@
 /*
- * $Id: TestArticleMetadataBuffer.java,v 1.2 2014-06-02 00:45:22 tlipkis Exp $
+ * $Id: TestArticleMetadataBuffer.java,v 1.3 2014-08-29 20:52:06 pgust Exp $
  */
 
 /*
@@ -58,10 +58,15 @@ public class TestArticleMetadataBuffer extends LockssTestCase {
     super.tearDown();
   }
 
-  public void testArticleMetadtataBuffer() throws Exception {
+  /**
+   * Variant with ISBN, ISSN, and item number metadata specified.
+   * Should result in 'bookSeries' and 'book_chapter' being in metadata item.
+   * @throws Exception
+   */
+  public void testArticleMetadtataBuffer1() throws Exception {
     for (int i = 1; i < 10; i++) {
       ArticleMetadata am = new ArticleMetadata();
-      am.put(MetadataField.FIELD_JOURNAL_TITLE, "Journal Title" + i);
+      am.put(MetadataField.FIELD_PUBLICATION_TITLE, "Journal Title" + i);
       am.put(MetadataField.FIELD_DATE, "2012-12-0"+i);
       am.put(MetadataField.FIELD_ISSN,"1234-567" + i);
       am.put(MetadataField.FIELD_EISSN,"4321-765" + i);
@@ -72,6 +77,7 @@ public class TestArticleMetadataBuffer extends LockssTestCase {
       am.put(MetadataField.FIELD_ACCESS_URL, "http://xyz.com/" + i);
       am.put(MetadataField.FIELD_ISBN, "0123456789");
       am.put(MetadataField.FIELD_EISBN, "9876543210");
+      am.put(MetadataField.FIELD_ITEM_NUMBER, "3");
       amBuffer.add(am);
     }
     int count = 0;
@@ -81,21 +87,109 @@ public class TestArticleMetadataBuffer extends LockssTestCase {
       assertNotNull(aminfo);
       count++;
       assertEquals("2012",aminfo.pubYear);
-      assertEquals("Journal Title"+count,aminfo.journalTitle);
+      assertEquals("Journal Title"+count,aminfo.publicationTitle);
       assertEquals("2012-12-0"+count,aminfo.pubDate);
       assertEquals("1234-567"+count,aminfo.issn);
       assertEquals("4321-765"+count,aminfo.eissn);
       assertEquals("Article Title"+count,aminfo.articleTitle);
       assertEquals("Publisher"+count,aminfo.publisher);
-      assertEquals("Author,First"+count+";Author,Second"+count, aminfo.authors);
+      assertSameElements(
+          new String[] {"Author,First"+count, "Author,Second"+count}, 
+          aminfo.authors);
       assertEquals("http://xyz.com/"+count,aminfo.accessUrl);
       assertEquals("0123456789",aminfo.isbn);
       assertEquals("9876543210",aminfo.eisbn);
+      assertEquals("3", aminfo.itemNumber);
+      assertEquals(MetadataField.PUBLICATION_TYPE_BOOKSERIES, aminfo.publicationType);
+      assertEquals(MetadataField.ARTICLE_TYPE_BOOKCHAPTER, aminfo.articleType);
     }
     assertEquals(9, count);
     amBuffer.close();
   }
   
+  /**
+   * Variant with 'bookSeries' publication type and 'book_chapter' article type.
+   * Should result in 'bookSeries' and 'book_chapter' being in metadata item.
+   * @throws Exception
+   */
+  public void testArticleMetadtataBuffer2() throws Exception {
+    for (int i = 1; i < 10; i++) {
+      ArticleMetadata am = new ArticleMetadata();
+      am.put(MetadataField.FIELD_PUBLICATION_TITLE, "Journal Title" + i);
+      am.put(MetadataField.FIELD_DATE, "2012-12-0"+i);
+      am.put(MetadataField.FIELD_ARTICLE_TITLE, "Article Title" + i);
+      am.put(MetadataField.FIELD_PUBLISHER, "Publisher"+i);
+      am.put(MetadataField.FIELD_AUTHOR, "Author,First"+i);
+      am.put(MetadataField.FIELD_AUTHOR, "Author,Second"+i);
+      am.put(MetadataField.FIELD_ACCESS_URL, "http://xyz.com/" + i);
+      am.put(MetadataField.FIELD_PUBLICATION_TYPE, "bookSeries");
+      am.put(MetadataField.FIELD_ARTICLE_TYPE, "book_chapter");
+      amBuffer.add(am);
+    }
+    int count = 0;
+    Iterator<ArticleMetadataInfo> amitr = amBuffer.iterator();
+    while (amitr.hasNext()) {
+      ArticleMetadataInfo aminfo = amitr.next();
+      assertNotNull(aminfo);
+      count++;
+      assertEquals("2012",aminfo.pubYear);
+      assertEquals("Journal Title"+count,aminfo.publicationTitle);
+      assertEquals("2012-12-0"+count,aminfo.pubDate);
+      assertEquals("Article Title"+count,aminfo.articleTitle);
+      assertEquals("Publisher"+count,aminfo.publisher);
+      assertSameElements(
+          new String[] {"Author,First"+count, "Author,Second"+count}, 
+          aminfo.authors);
+      assertEquals("http://xyz.com/"+count,aminfo.accessUrl);
+      assertEquals(MetadataField.PUBLICATION_TYPE_BOOKSERIES, aminfo.publicationType);
+      assertEquals(MetadataField.ARTICLE_TYPE_BOOKCHAPTER, aminfo.articleType);
+    }
+    assertEquals(9, count);
+    amBuffer.close();
+  }
+
+  /**
+   * Variant with 'bookSeries' publication type and item number metadata.
+   * Should result in 'bookSeries' and 'book_chapter' being in metadata item.
+   * @throws Exception
+   */
+  public void testArticleMetadtataBuffer3() throws Exception {
+    for (int i = 1; i < 10; i++) {
+      ArticleMetadata am = new ArticleMetadata();
+      am.put(MetadataField.FIELD_PUBLICATION_TITLE, "Journal Title" + i);
+      am.put(MetadataField.FIELD_DATE, "2012-12-0"+i);
+      am.put(MetadataField.FIELD_ARTICLE_TITLE, "Article Title" + i);
+      am.put(MetadataField.FIELD_PUBLISHER, "Publisher"+i);
+      am.put(MetadataField.FIELD_AUTHOR, "Author,First"+i);
+      am.put(MetadataField.FIELD_AUTHOR, "Author,Second"+i);
+      am.put(MetadataField.FIELD_ACCESS_URL, "http://xyz.com/" + i);
+      am.put(MetadataField.FIELD_PUBLICATION_TYPE, "bookSeries");
+      am.put(MetadataField.FIELD_ITEM_NUMBER, "3");
+      amBuffer.add(am);
+    }
+    int count = 0;
+    Iterator<ArticleMetadataInfo> amitr = amBuffer.iterator();
+    while (amitr.hasNext()) {
+      ArticleMetadataInfo aminfo = amitr.next();
+      assertNotNull(aminfo);
+      count++;
+      assertEquals("2012",aminfo.pubYear);
+      assertEquals("Journal Title"+count,aminfo.publicationTitle);
+      assertEquals("2012-12-0"+count,aminfo.pubDate);
+      assertEquals("Article Title"+count,aminfo.articleTitle);
+      assertEquals("Publisher"+count,aminfo.publisher);
+      assertSameElements(
+          new String[] {"Author,First"+count, "Author,Second"+count}, 
+          aminfo.authors);
+      assertEquals("http://xyz.com/"+count,aminfo.accessUrl);
+      assertEquals("3", aminfo.itemNumber);
+      assertEquals(MetadataField.PUBLICATION_TYPE_BOOKSERIES, aminfo.publicationType);
+      assertEquals(MetadataField.ARTICLE_TYPE_BOOKCHAPTER, aminfo.articleType);
+    }
+    assertEquals(9, count);
+    amBuffer.close();
+  }
+
   public void testEmptyArticleMetadtataBuffer() throws Exception {
     Iterator<ArticleMetadataInfo> amitr = amBuffer.iterator();
     assertFalse(amitr.hasNext());
@@ -123,6 +217,7 @@ public class TestArticleMetadataBuffer extends LockssTestCase {
     }
     try {
       // cannot obtain iterator after closing
+      @SuppressWarnings("unused")
       Iterator<ArticleMetadataInfo> amitr = amBuffer.iterator();
       fail("Should have thrown IllegalStateException");
     } catch (IllegalStateException ex) {
