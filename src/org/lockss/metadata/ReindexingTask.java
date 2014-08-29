@@ -1,5 +1,5 @@
 /*
- * $Id: ReindexingTask.java,v 1.15 2014-06-02 00:45:22 tlipkis Exp $
+ * $Id: ReindexingTask.java,v 1.16 2014-08-29 20:47:04 pgust Exp $
  */
 
 /*
@@ -30,8 +30,6 @@
 
  */
 package org.lockss.metadata;
-
-import static org.lockss.metadata.MetadataManager.NEVER_EXTRACTED_EXTRACTION_TIME;
 
 import java.io.*;
 import java.lang.management.*;
@@ -507,14 +505,14 @@ public class ReindexingTask extends StepTask {
       if (tdbau != null) {
         // Validate journal title against the TDB journal title.
         if (tdbauJournalTitle != null) {
-          if (!tdbauJournalTitle.equals(mdinfo.journalTitle)) {
-            if (mdinfo.journalTitle == null) {
+          if (!tdbauJournalTitle.equals(mdinfo.publicationTitle)) {
+            if (mdinfo.publicationTitle == null) {
               taskWarning("tdb title  is " + tdbauJournalTitle + " for "
                   + tdbauName + " -- metadata title is missing");
             } else {
               taskWarning("tdb title " + tdbauJournalTitle + " for "
                   + tdbauName + " -- does not match metadata journal title "
-                  + mdinfo.journalTitle);
+                  + mdinfo.publicationTitle);
             }
           }
         }
