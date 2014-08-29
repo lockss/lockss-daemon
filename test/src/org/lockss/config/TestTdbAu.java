@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdbAu.java,v 1.22 2014-07-24 20:46:23 fergaloy-sf Exp $
+ * $Id: TestTdbAu.java,v 1.23 2014-08-29 20:50:36 pgust Exp $
  */
 
 /*
@@ -44,7 +44,7 @@ import java.util.*;
  * Test class for <code>org.lockss.config.TdbAu</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdbAu.java,v 1.22 2014-07-24 20:46:23 fergaloy-sf Exp $
+ * @version $Id: TestTdbAu.java,v 1.23 2014-08-29 20:50:36 pgust Exp $
  */
 
 public class TestTdbAu extends LockssTestCase {
@@ -102,17 +102,31 @@ public class TestTdbAu extends LockssTestCase {
   }
   
   /**
-   * Test getProprietaryId() method.
+   * Test getProprietaryId() and getProprietarySeriesId() methods.
    * @throws TdbException for invalid Tdb operations
    */
   public void testProprietaryId() throws TdbException {
     TdbAu au1 = new TdbAu("Test AU", "pluginA");
-    // use param if specified
+    
+    // use param if specified with au type "journal"
     au1.setParam("journal_id", "foo");
     assertEquals("foo", au1.getProprietaryId());
     // use attr instead if also specified
     au1.setAttr("journal_id", "bar");
-    assertEquals("bar", au1.getProprietaryId());    
+    assertEquals("bar", au1.getProprietaryId());
+    
+    // verify no series series id for journal
+    assertNull(au1.getProprietarySeriesId());
+    
+    // change au type to "book series" and verify no proprietary id
+    au1.setPropertyByName("type", "bookSeries");
+    assertNull(au1.getProprietaryId());
+    // verify "journal_id" is is now interpreted as series id
+    assertEquals("bar", au1.getProprietarySeriesId());
+    
+    // verify that book id is now intrpreted as proprietary id
+    au1.setAttr("book_id", "baz");
+    assertEquals("baz", au1.getProprietaryId());
   }
   
   /**
@@ -463,9 +477,9 @@ public class TestTdbAu extends LockssTestCase {
     au.setPropertyByName("issn", "1234-5678");
     assertNull(au.getJournalTitle());  // because au has no TdbTitle
     au.setAttr("isbn", "978-3-540-33894-9");
-    assertEquals("Test AU", au.getJournalTitle());
+    assertEquals("Test AU", au.getPublicationTitle());
     au.setPropertyByName("type", "book");
-    assertEquals("Test AU", au.getJournalTitle());
+    assertEquals("Test AU", au.getPublicationTitle());
   }
   
   /**
