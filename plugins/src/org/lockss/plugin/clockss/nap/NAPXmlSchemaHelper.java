@@ -1,5 +1,5 @@
 /*
- * $Id: NAPXmlSchemaHelper.java,v 1.2 2014-07-07 17:42:49 alexandraohlson Exp $
+ * $Id: NAPXmlSchemaHelper.java,v 1.3 2014-08-29 19:12:58 alexandraohlson Exp $
  */
 
 /*
@@ -163,7 +163,11 @@ implements SourceXmlSchemaHelper {
   private static String NAP_record_id =  "record_id";
   // unfortunately the subtitle is a separate sibling - use an evaluator
   private static String NAP_title =  "title";
-  private static String NAP_isbn = "flat_isbn";
+  private static String NAP_flatisbn = "flat_isbn";
+  // Get the isbn13 value from the product/item node with a type of 'pdf_book'
+  private static String NAP_pdf_book_isbn13 = "product/item[type[text()='pdf_book']]/isbn13";
+  ///records/record[record-type[text()='A']]/name
+  
   private static String NAP_copyyear = "copyright";
   private static String NAP_displaydate =  "display_date";
 
@@ -182,8 +186,10 @@ implements SourceXmlSchemaHelper {
   static {
     NAP_articleMap.put(NAP_record_id, XmlDomMetadataExtractor.TEXT_VALUE);
     NAP_articleMap.put(NAP_title, NAP_TITLE_VALUE);
-    NAP_articleMap.put(NAP_isbn, XmlDomMetadataExtractor.TEXT_VALUE);
+    NAP_articleMap.put(NAP_flatisbn, XmlDomMetadataExtractor.TEXT_VALUE);
+    NAP_articleMap.put(NAP_pdf_book_isbn13, XmlDomMetadataExtractor.TEXT_VALUE);
     NAP_articleMap.put(NAP_displaydate, NAP_DATE_VALUE);
+    NAP_articleMap.put(NAP_copyyear, XmlDomMetadataExtractor.TEXT_VALUE);
     NAP_articleMap.put(NAP_author_string, XmlDomMetadataExtractor.TEXT_VALUE);
   }
 
@@ -197,8 +203,9 @@ implements SourceXmlSchemaHelper {
   private static final MultiValueMap cookMap = new MultiValueMap();
   static {
     // do NOT cook publisher_name; get from TDB file for consistency
+    // cook the isbn13, if it's not there we'll manually put in flat_isbn value
+    cookMap.put(NAP_pdf_book_isbn13, MetadataField.FIELD_ISBN);
     cookMap.put(NAP_title, MetadataField.FIELD_PUBLICATION_TITLE);
-    cookMap.put(NAP_isbn, MetadataField.FIELD_ISBN);
     cookMap.put(NAP_author_string, 
         new MetadataField(MetadataField.FIELD_AUTHOR, MetadataField.splitAt(AUTHOR_SPLIT_CHAR)));
     cookMap.put(NAP_displaydate, MetadataField.FIELD_DATE);
@@ -262,5 +269,6 @@ implements SourceXmlSchemaHelper {
   public String getFilenameXPathKey() {
     return null;
   }
+  
 
 }

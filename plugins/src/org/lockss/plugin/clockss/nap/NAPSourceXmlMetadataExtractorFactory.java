@@ -1,5 +1,5 @@
 /*
- * $Id: NAPSourceXmlMetadataExtractorFactory.java,v 1.2 2014-08-06 19:18:53 alexandraohlson Exp $
+ * $Id: NAPSourceXmlMetadataExtractorFactory.java,v 1.3 2014-08-29 19:12:58 alexandraohlson Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.plugin.clockss.nap;
 
 import java.util.ArrayList;
 import org.apache.commons.io.FilenameUtils;
+import org.apache.commons.lang.StringUtils;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
@@ -55,7 +56,8 @@ public class NAPSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtra
   }
 
   public class NAPSourceXmlMetadataExtractor extends SourceXmlMetadataExtractor {
-
+    Logger log = Logger.getLogger(NAPSourceXmlMetadataExtractor.class);
+    
     @Override
     protected SourceXmlSchemaHelper setUpSchema() {
       // this version of this routine is abstract, but should not get called 
@@ -69,6 +71,8 @@ public class NAPSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtra
       if (NAPHelper != null) {
         return NAPHelper;
       }
+      //TODO: REMOVE
+      log.setLevel("debug3");
       NAPHelper = new NAPXmlSchemaHelper();
       return NAPHelper;
     }
@@ -88,6 +92,28 @@ public class NAPSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtra
       returnList.add(cuBase + filenameValue + ".stamped.pdf");
       return returnList;
     }
+    
+    // After cooking the data, check for a date, if none was set, use the
+    // alternate information
+    // this is defined in the schema as 'NAP_copyyear'
+    private static final String COPYRIGHT_KEY = "copyright";
+    private static final String FLAT_ISBN_KEY = "flat_isbn";
+    protected void postCookProcess(SourceXmlSchemaHelper schemaHelper, 
+        CachedUrl cu, ArticleMetadata thisAM) {
 
+      log.debug3("in NAPSourceXmlMetadataExtractor postEmitProcess");
+      //If we didn't get a valid ISBN13, check the flat_isbn
+      if (thisAM.get(MetadataField.FIELD_ISBN) == null) {
+        String flat_isbn = thisAM.getRaw(FLAT_ISBN_KEY);
+        // null safe - very old content might have invalid ISBN (starts with "N")
+        if (!StringUtils.startsWithIgnoreCase(flat_isbn,  "N")) {
+          thisAM.put(MetadataField.FIELD_ISBN, flat_isbn);
+        }
+      }
+      //If we didn't get a valid date value, use the copyright year if it's there
+      if (thisAM.get(MetadataField.FIELD_DATE) == null) {
+        thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(COPYRIGHT_KEY));
+      }
+    }
   }
 }

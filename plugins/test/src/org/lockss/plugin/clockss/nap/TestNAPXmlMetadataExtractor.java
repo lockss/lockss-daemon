@@ -1,5 +1,5 @@
 /*
- * $Id: TestNAPXmlMetadataExtractor.java,v 1.1 2014-06-20 16:05:05 alexandraohlson Exp $
+ * $Id: TestNAPXmlMetadataExtractor.java,v 1.2 2014-08-29 19:12:58 alexandraohlson Exp $
  */
 /*
 
@@ -52,6 +52,17 @@ public class TestNAPXmlMetadataExtractor extends LockssTestCase {
 
   private static String PLUGIN_NAME = "org.lockss.plugin.clockss.nap.ClockssNAPBooksSourcePlugin";
   private static String BASE_URL = "http://www.source.org/";
+  
+  /*
+   * Set up the metadata expected for each of the above tests
+   */
+  private static final String pdfUrl1 = "http://www.source.com/10001.stamped.pdf";
+
+  private static CIProperties xmlHeader = new CIProperties();
+  private static String xml_url = "http://www.source.com/10001.xml";
+  private MockCachedUrl mcu;
+  private FileMetadataExtractor me;
+  private FileMetadataListExtractor mle;
 
   public void setUp() throws Exception {
     super.setUp();
@@ -66,6 +77,15 @@ public class TestNAPXmlMetadataExtractor extends LockssTestCase {
     theDaemon.getPluginManager().startService();
     theDaemon.getCrawlManager();
     mau.setConfiguration(auConfig());
+
+    // the following is consistent across all tests; only content changes
+    xmlHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
+    mcu = mau.addUrl(xml_url, true, true, xmlHeader);
+    mcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
+    mau.addUrl(pdfUrl1, true, true, xmlHeader);
+
+    me = new NAPSourceXmlMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/xml");
+    mle = new FileMetadataListExtractor(me);
     
   }
 
@@ -87,49 +107,7 @@ public class TestNAPXmlMetadataExtractor extends LockssTestCase {
  
   private static final String realXMLFile = "NAPSourceTest.xml";
 
-  //TODO - 
-  // add a test to check the splitting of an author
-  // add a test to check title: subtitle permutations
-  // ??
-  
-  public void testFromNAPXMLFile() throws Exception {
-    InputStream file_input = null;
-    try {
-      file_input = getResourceAsStream(realXMLFile);
-      String string_input = StringUtil.fromInputStream(file_input);
-      IOUtil.safeClose(file_input);
 
-      CIProperties xmlHeader = new CIProperties();  
-      String xml_url = "http://www.source.com/10001.xml";
-      xmlHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
-      MockCachedUrl mcu = mau.addUrl(xml_url, true, true, xmlHeader);
-      mcu.setContent(string_input);
-      mcu.setContentSize(string_input.length());
-      mcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
-
-      // Now add all the pdf files in our AU since we check for them before emitting
-      // doesn't matter what the header type is, it's not checked
-      mau.addUrl(pdfUrl1, true, true, xmlHeader);
-
-    FileMetadataExtractor me = new NAPSourceXmlMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/xml");
-      FileMetadataListExtractor mle =
-          new FileMetadataListExtractor(me);
-      List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);
-      assertNotEmpty(mdlist);
-      assertEquals(1, mdlist.size());
-
-      // check each returned md against expected values
-      Iterator<ArticleMetadata> mdIt = mdlist.iterator();
-      ArticleMetadata mdRecord = null;
-      while (mdIt.hasNext()) {
-        mdRecord = (ArticleMetadata) mdIt.next();
-        compareMetadata(mdRecord);
-      }
-    }finally {
-      IOUtil.safeClose(file_input);
-    }
-
-  }
  
   private static final int ISBN_INDEX = 0;
   private static final int TITLE_INDEX = 1;
@@ -144,34 +122,130 @@ public class TestNAPXmlMetadataExtractor extends LockssTestCase {
    *  author
    *  pub
    */
-  // filename is based on <RecordReference>
-  private static final String pdfUrl1 = "http://www.source.com/10001.stamped.pdf";
-  private static final ArrayList md1 = (ArrayList) ListUtil.list(
-      "0111111110",
-      "Advanced Stuff for Future Wizards, Gremlins, and Physicists: Seventh Lecture International Dark Arts Series",
-      "2000-11-28",
-      "Arthur P. Somebody, University of California at Hogwarts, Organized by the National Research Council and the Office of the Dark Arts", // a "corporate name" author
-      "National Academies Press");
   
-
+  private static final String GOOD_TITLE = "Advanced Stuff for Future Wizards, Gremlins, and Physicists: Seventh Lecture International Dark Arts Series";
+  private static final String GOOD_DATE =  "2000-11-28";
+  // a corporate author
+  private static final String GOOD_AUTHOR = "Arthur P. Somebody, University of California at Hogwarts, Organized by the National Research Council and the Office of the Dark Arts";
+  private static final String GOOD_PUBLISHER = "National Academies Press"; 
+  private static final String FLAT_ISBN =       "0111111110";
+  private static final String ISBN13 =       "111-0-309-51287-9";
+  private static final String BAD_ISBN = "NI000909"; //used with old content sometimes
+ 
+  //TODO - 
+  // add a test to check the splitting of an author
+  // add a test to check title: subtitle permutations
   
-  static private final Map<String, List> expectedMD =
-      new HashMap<String,List>();
-  static {
-    expectedMD.put(pdfUrl1, md1);
-  }
+  public void testFromNAPXMLFile() throws Exception {
+    InputStream file_input = null;
+    try {
+      file_input = getResourceAsStream(realXMLFile);
+      String string_input = StringUtil.fromInputStream(file_input);
+      IOUtil.safeClose(file_input);
 
-  private void compareMetadata(ArticleMetadata AM) {
-    String accessUrl = AM.get(MetadataField.FIELD_ACCESS_URL);
-    ArrayList expected = (ArrayList) expectedMD.get(accessUrl);
-    
-    assertNotNull(expected);
-    assertEquals(expected.get(ISBN_INDEX), AM.get(MetadataField.FIELD_ISBN));
-    assertEquals(expected.get(TITLE_INDEX), AM.get(MetadataField.FIELD_PUBLICATION_TITLE));
-    assertEquals(expected.get(DATE_INDEX), AM.get(MetadataField.FIELD_DATE));
-    assertEquals(expected.get(AUTHOR_INDEX),AM.get(MetadataField.FIELD_AUTHOR));
-    // This isn't in the metadata and can come from the TDB file
-    //    assertEquals(expected.get(PUB_INDEX), AM.get(MetadataField.FIELD_PUBLISHER)); // Though it gets overridden by tdb value
-    
+      // set up the content for this test
+      mcu.setContent(string_input);
+      mcu.setContentSize(string_input.length());
+
+      List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);
+      assertNotEmpty(mdlist);
+      assertEquals(1, mdlist.size());
+      ArticleMetadata mdRecord = mdlist.get(0);
+      assertNotNull(mdRecord);
+
+      assertEquals(ISBN13, mdRecord.get(MetadataField.FIELD_ISBN));
+      assertEquals(GOOD_TITLE, mdRecord.get(MetadataField.FIELD_PUBLICATION_TITLE));
+      assertEquals(GOOD_DATE, mdRecord.get(MetadataField.FIELD_DATE));
+      assertEquals(GOOD_AUTHOR,mdRecord.get(MetadataField.FIELD_AUTHOR));
+    }finally {
+      IOUtil.safeClose(file_input);
+    }
+
   }
+  
+  /*
+   * XML snippets which can be built up for specific cases
+   */
+  private static final String nap_xml_start = 
+      "<book>\n" +
+          "<record_id>10001</record_id>\n" +
+          "<title>Advanced Stuff for Future Wizards, Gremlins, and Physicists:</title>\n" +
+          "<author>Arthur P. Somebody, University of California at Hogwarts, Organized by the National Research Council and the Office of the Dark Arts</author>\n" +
+          "<page_count>20</page_count>\n" +
+          "<alt_title></alt_title>\n" +
+          "<subtitle>Seventh Lecture International Dark Arts Series</subtitle>\n";
+
+  private static final String nap_valid_flat_isbn =
+      "<flat_isbn>0111111110</flat_isbn>\n";
+
+  private static final String nap_invalid_flat_isbn =
+      "<flat_isbn>NI000909</flat_isbn>\n";
+
+  private static final String nap_display_date =
+      "<display_date>\n" + 
+          "<year>2000</year>\n" +
+          "<month>11</month>\n" +
+          "<day>28</day>\n" +
+          "<epoch>975387600</epoch>\n" +
+          "</display_date>\n";
+
+  // find example to build up this test
+  private static final String nap_bad_date = "";
+  private static final String copyright_date = "";
+
+  private static final String nap_pdf_book_item = 
+      "<product><item>\n" +
+          "<type>pdf_book</type>\n";
+
+  private static final String nap_book_item = 
+      "<product><item>\n" +
+          "<type>book</type>\n";
+
+  private static final String nap_item_contents =
+      "<isbn>0-111-51287-5</isbn>\n" +
+          "<isbn13>111-0-309-51287-9</isbn13>\n" +
+          "<price>11.50</price>\n" +
+          "<binding>pdfb</binding>\n" +
+          "<productID>10001-0-309-XXXXX-5</productID>\n" +
+          "<for_sale>on</for_sale>\n" +
+          "<free>on</free>\n" +
+          "<free_start_date>2005-02-24</free_start_date>\n" +
+          "<free_end_date></free_end_date>\n" +
+          "<word>PDF Full Book</word>\n" +
+          "<catalog_word>PDF BOOK</catalog_word>\n" +
+          "<bind_type>electronic</bind_type>\n" +
+
+  "</item>\n";
+
+  private static final String nap_xml_end =
+      "</product></book>";
+
+  public void testNoPdfBookItem() throws Exception {
+
+    String xml_no_pdf_book = nap_xml_start + nap_valid_flat_isbn + nap_display_date + nap_book_item + nap_item_contents + nap_xml_end;
+    mcu.setContent(xml_no_pdf_book);
+    mcu.setContentSize(xml_no_pdf_book.length());
+    
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);
+    assertNotEmpty(mdlist);
+    assertEquals(1, mdlist.size());
+    ArticleMetadata mdRecord = mdlist.get(0);
+    assertNotNull(mdRecord);
+    assertEquals(FLAT_ISBN, mdRecord.get(MetadataField.FIELD_ISBN));
+  }
+  
+  public void testNoValidISBN() throws Exception {
+
+    String xml_no_pdf_book = nap_xml_start + nap_invalid_flat_isbn + nap_display_date + nap_book_item + nap_item_contents + nap_xml_end;
+    mcu.setContent(xml_no_pdf_book);
+    mcu.setContentSize(xml_no_pdf_book.length());
+    
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);
+    assertNotEmpty(mdlist);
+    assertEquals(1, mdlist.size());
+    ArticleMetadata mdRecord = mdlist.get(0);
+      assertNotNull(mdRecord);
+      assertEquals(null, mdRecord.get(MetadataField.FIELD_ISBN));
+  }
+  
 }
