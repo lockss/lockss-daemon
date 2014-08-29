@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataDatabaseUtil.java,v 1.20 2014-08-22 22:15:00 fergaloy-sf Exp $
+ * $Id: MetadataDatabaseUtil.java,v 1.21 2014-08-29 20:45:21 pgust Exp $
  */
 
 /*
@@ -31,21 +31,20 @@
  */
 package org.lockss.metadata;
 
-import static org.lockss.db.SqlConstants.*;
-import static org.lockss.metadata.MetadataManager.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import org.lockss.app.LockssDaemon;
 import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
 import org.lockss.exporter.biblio.BibliographicItem;
+import org.lockss.exporter.biblio.BibliographicUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.MetadataUtil;
-import org.lockss.util.StringUtil;
 
 /**
  * This class contains a set of static methods for returning metadata database
@@ -77,17 +76,16 @@ final public class MetadataDatabaseUtil {
    */
   static class BibliographicDatabaseItem implements BibliographicItem {
     final String publisher;
-    final String publicationTitle;
     final String seriesTitle;
+    final String proprietarySeriesId;
+    final String publicationTitle;
     final String proprietaryId;
     final String printisbn;
     final String eisbn;
     final String printissn;
     final String eissn;
-    final String startyear;
-    final String endyear;
-    final String startvolume;
-    final String endvolume;
+    final String year;
+    final String volume;
     final String publicationType;
     final String coverageDepth;
 
@@ -101,41 +99,27 @@ final public class MetadataDatabaseUtil {
      */
     public BibliographicDatabaseItem(ResultSet resultSet) throws SQLException {
       publisher = resultSet.getString(1);
-      publicationTitle = resultSet.getString(2);
-      printissn = MetadataUtil.formatIssn(resultSet.getString(3));
-      eissn = MetadataUtil.formatIssn(resultSet.getString(4));
-      printisbn = MetadataUtil.formatIsbn(resultSet.getString(5));
-      eisbn = MetadataUtil.formatIsbn(resultSet.getString(6));
-      startvolume = resultSet.getString(7);
-      endvolume = resultSet.getString(7);
-      startyear = resultSet.getString(8);
-      endyear = resultSet.getString(8);
-      proprietaryId = resultSet.getString(9);
-      seriesTitle = null; // temporary value
-      
-      // todo: get from DB first
-      if (   !StringUtil.isNullString(eissn) 
-          || !StringUtil.isNullString(printissn)) {
-        if (   !StringUtil.isNullString(eisbn) 
-            || !StringUtil.isNullString(printisbn)) {
-          publicationType = "bookSeries";
-        } else {
-          publicationType = "journal";
-        }
-      } else if (   !StringUtil.isNullString(eisbn) 
-                 || !StringUtil.isNullString(printisbn)) {
-        publicationType = "book";
-      } else {
-        publicationType = "journal";
-      }
-      
-      // todo: get from DB first
-      coverageDepth = "fulltext";
+      seriesTitle = resultSet.getString(2);
+      proprietarySeriesId = resultSet.getString(3);
+      publicationTitle = resultSet.getString(4);
+      proprietaryId = resultSet.getString(5);
+      eissn = MetadataUtil.formatIssn(resultSet.getString(6));
+      printissn = MetadataUtil.formatIssn(resultSet.getString(7));
+      eisbn = MetadataUtil.formatIsbn(resultSet.getString(8));
+      printisbn = MetadataUtil.formatIsbn(resultSet.getString(9));
+      year = resultSet.getString(10);
+      volume = resultSet.getString(11);
+      coverageDepth = resultSet.getString(12);
+      publicationType = resultSet.getString(13);
     }
 
     @Override
     public String getPublicationType() {
-      return (publicationType == null) ? "journal" : publicationType;
+      if (publicationType == null) {
+        return "journal";
+      }
+      return (publicationType.equals("book_series")) 
+          ? "bookSeries" : publicationType;
     }
 
     @Override
@@ -145,7 +129,14 @@ final public class MetadataDatabaseUtil {
 
     @Override
     public String getIsbn() {
-      return (printisbn != null) ? printisbn : eisbn;
+      String isbn = getPrintIsbn();
+      if (!MetadataUtil.isIsbn(isbn)) {
+        isbn = getEisbn();
+        if (!MetadataUtil.isIssn(isbn)) {
+          isbn = null;
+        }
+      }
+      return isbn;
     }
 
     @Override
@@ -160,7 +151,17 @@ final public class MetadataDatabaseUtil {
 
     @Override
     public String getIssn() {
-      return (printissn != null) ? printissn : eissn;
+      String issn = getIssnL();
+      if (!MetadataUtil.isIssn(issn)) {
+        issn = getPrintIssn();
+        if (!MetadataUtil.isIssn(issn)) {
+          issn = getEissn();
+          if (!MetadataUtil.isIssn(issn)) {
+            issn = null;
+          }
+        }
+      }
+      return issn;
     }
 
     @Override
@@ -181,6 +182,11 @@ final public class MetadataDatabaseUtil {
     @Override
     public String getProprietaryId() {
       return proprietaryId;
+    }
+
+    @Override
+    public String getProprietarySeriesId() {
+      return proprietarySeriesId;
     }
 
     @Override
@@ -205,22 +211,12 @@ final public class MetadataDatabaseUtil {
 
     @Override
     public String getVolume() {
-      if (startvolume == null) {
-	return null;
-      } else if (endvolume == null) {
-	return endvolume;
-      }
-      return startvolume + "-" + endvolume;
+      return volume;
     }
 
     @Override
     public String getYear() {
-      if (startyear == null) {
-	return null;
-      } else if (endyear == null) {
-	return endyear;
-      }
-      return startyear + "-" + endyear;
+      return year;
     }
 
     @Override
@@ -230,22 +226,22 @@ final public class MetadataDatabaseUtil {
 
     @Override
     public String getStartVolume() {
-      return startvolume;
+      return BibliographicUtil.getRangeSetStart(getVolume());
     }
 
     @Override
     public String getEndVolume() {
-      return endvolume;
+      return BibliographicUtil.getRangeSetEnd(getVolume());
     }
 
     @Override
     public String getStartYear() {
-      return startyear;
+      return BibliographicUtil.getRangeSetStart(getYear());
     }
 
     @Override
     public String getEndYear() {
-      return endyear;
+      return BibliographicUtil.getRangeSetEnd(getYear());
     }
 
     @Override
@@ -258,85 +254,7 @@ final public class MetadataDatabaseUtil {
       return null;
     }
   }
-
-  /**
-   * This query generates a table of publication_seq keys and their
-   * corresponding publication names, p_issns, e_issns, p_isbns, and e_isbns.
-   * It can be embedded in other queries to provide item-level lists that
-   * include this information. 
-   * <p>
-   * Here is the original SQL query:
-   *<pre>
-select
-  publication_seq,
-  (select name from md_item_name
-   where
-     md_item_seq = publication.md_item_seq and
-     name_type = 'primary') publication_name,
-  (select formatissn(issn) from issn
-   where
-     md_item_seq = publication.md_item_seq and
-     issn.issn_type = 'p_issn' fetch first 1 rows only) p_issn,
-  (select formatissn(issn) from issn
-   where 
-     md_item_seq = publication.md_item_seq and
-     issn.issn_type = 'e_issn' fetch first 1 rows only) e_issn,
-  (select formatisbn(isbn) from isbn
-   where 
-     md_item_seq = publication.md_item_seq and
-     isbn.isbn_type = 'p_isbn' fetch first 1 rows only) p_isbn,
-  (select formatisbn(isbn) from isbn
-   where 
-     md_item_seq = publication.md_item_seq and
-     isbn.isbn_type = 'e_isbn' fetch first 1 rows only) e_isbn
-from
-  publisher, publication, md_item
-where
-  publisher.publisher_seq = publication.publisher_seq and
-  publication.md_item_seq = md_item.md_item_seq;
-   *</pre>
-   */
-  static final String PUBINFO_QUERY =
-        "select "
-      +    PUBLICATION_SEQ_COLUMN + ", "
-      +   "(select " + NAME_COLUMN + " from " + MD_ITEM_NAME_TABLE
-      +   " where " 
-      +      MD_ITEM_SEQ_COLUMN 
-      +      " = " + PUBLICATION_TABLE + "." + MD_ITEM_SEQ_COLUMN + " and "
-      +      NAME_TYPE_COLUMN
-      +      " = '" + PRIMARY_NAME_TYPE + "') publication_name, "
-      +   "(select " + ISSN_COLUMN + " from " + ISSN_TABLE
-      +   " where " 
-      +      MD_ITEM_SEQ_COLUMN 
-      +      " = " + PUBLICATION_TABLE + "." + MD_ITEM_SEQ_COLUMN + " and "
-      +      ISSN_TABLE + "." + ISSN_TYPE_COLUMN
-      +      " = 'p_issn' fetch first 1 rows only) p_issn, "
-      +   "(select " + ISSN_COLUMN + " from " + ISSN_TABLE
-      +   " where " 
-      +      MD_ITEM_SEQ_COLUMN 
-      +      " = " + PUBLICATION_TABLE + "." + MD_ITEM_SEQ_COLUMN + " and "
-      +      ISSN_TABLE + "." + ISSN_TYPE_COLUMN
-      +      " = 'e_issn' fetch first 1 rows only) e_issn, "
-      +   "(select " + ISBN_COLUMN + " from " + ISBN_TABLE
-      +   " where " 
-      +      MD_ITEM_SEQ_COLUMN 
-      +      " = " + PUBLICATION_TABLE + "." + MD_ITEM_SEQ_COLUMN + " and "
-      +      ISBN_TABLE + "." + ISBN_TYPE_COLUMN
-      +      " = 'p_isbn' fetch first 1 rows only) p_isbn, "
-      +   "(select " + ISBN_COLUMN + " from " + ISBN_TABLE
-      +   " where " 
-      +      MD_ITEM_SEQ_COLUMN 
-      +      " = " + PUBLICATION_TABLE + "." + MD_ITEM_SEQ_COLUMN + " and "
-      +      ISBN_TABLE + "." + ISBN_TYPE_COLUMN
-      +      " = 'e_isbn' fetch first 1 rows only) e_isbn "
-      + "from " 
-      +   PUBLISHER_TABLE + ", " + PUBLICATION_TABLE + ", " + MD_ITEM_TABLE
-      + " where "
-      +   PUBLISHER_TABLE + "." + PUBLISHER_SEQ_COLUMN
-      +   " = " + PUBLICATION_TABLE + "." + PUBLISHER_SEQ_COLUMN + " and "
-      +   PUBLICATION_TABLE + "." + MD_ITEM_SEQ_COLUMN
-      +   " = " + MD_ITEM_TABLE + "." + MD_ITEM_SEQ_COLUMN;
-          
+    
   /**
    * This query generates a table of publisher_names, publication_names, 
    * p_issns, e_issns, p_isbns, e_isbns, volumes, and years. The query
@@ -346,70 +264,111 @@ where
    * Here is the original SQL query:
    *<pre>
 select distinct
-  publisher_name, 
-  publication_name, 
-  p_issn, e_issn, p_isbn, e_isbn, 
-  volume, substr(date,1,4) "year", publication_id
-from
-  bib_item, 
-  md_item, 
-  publication, 
-  publisher, 
-  (select
-     publication_seq,
-     (select name from md_item_name
-      where
-        md_item_seq = publication.md_item_seq and
-        name_type = 'primary') publication_name,
-     (select formatissn(issn) from issn
-      where
-        md_item_seq = publication.md_item_seq and
-        issn.issn_type = 'p_issn' fetch first 1 rows only) p_issn,
-     (select formatissn(issn) from issn
-      where 
-        md_item_seq = publication.md_item_seq and
-        issn.issn_type = 'e_issn' fetch first 1 rows only) e_issn,
-     (select formatisbn(isbn) from isbn
-      where 
-        md_item_seq = publication.md_item_seq and
-        isbn.isbn_type = 'p_isbn' fetch first 1 rows only) p_isbn,
-     (select formatisbn(isbn) from isbn
-      where 
-        md_item_seq = publication.md_item_seq and
-        isbn.isbn_type = 'e_isbn' fetch first 1 rows only) e_isbn
-   from
-     publisher, publication, md_item
-   where
-     publisher.publisher_seq = publication.publisher_seq and
-     publication.md_item_seq = md_item.md_item_seq
-  ) pubinfo
-where
-  bib_item.md_item_seq = md_item.md_item_seq and
-  publication.md_item_seq = md_item.parent_seq and
-  publication.publisher_seq = publisher.publisher_seq and
-  pubinfo.publication_seq = publication.publication_seq;   *</pre>
+    p.publisher_name as publisher
+  , series_title.name as series_title
+  , pn0.publication_id series_proprietary_id
+  , title.name as title
+  , pn1.publication_id as proprietery_id
+  , coalesce(e_issn0.issn,e_issn1.issn) as e_issn
+  , coalesce(p_issn0.issn,p_issn1.issn) as p_issn
+  , e_isbn.isbn as e_isbn
+  , p_isbn.isbn as p_isbn
+  , substr(mi2.date, 1, 4) as published_year
+  , b.volume as volume
+  , mi2.coverage as coverage_depth
+  , coalesce(mit0.type_name,mit1.type_name) as publication_type
+from 
+    publisher p
+  , publication pn1
+  , md_item_name title
+  , md_item mi1
+      left join issn e_issn1
+        on mi1.md_item_seq = e_issn1.md_item_seq and e_issn1.issn_type = 'e_issn' 
+      left join issn p_issn1
+        on mi1.md_item_seq = p_issn1.md_item_seq and p_issn1.issn_type = 'p_issn'
+      left join isbn e_isbn
+        on mi1.md_item_seq = e_isbn.md_item_seq and e_isbn.isbn_type = 'e_isbn'
+      left join isbn p_isbn
+        on mi1.md_item_seq = p_isbn.md_item_seq and p_isbn.isbn_type = 'p_isbn'
+      left join md_item mi0
+        on mi0.md_item_seq = mi1.parent_seq
+      left join md_item_name series_title
+        on mi0.md_item_seq = series_title.md_item_seq and series_title.name_type = 'primary'
+      left join publication pn0
+        on mi0.md_item_seq = pn0.md_item_seq
+      left join md_item_type mit0
+        on mi0.md_item_type_seq = mit0.md_item_type_seq
+      left join issn e_issn0
+        on mi0.md_item_seq = e_issn0.md_item_seq and e_issn0.issn_type = 'e_issn' 
+      left join issn p_issn0
+        on mi0.md_item_seq = p_issn0.md_item_seq and p_issn0.issn_type = 'p_issn'
+      left join md_item mi2
+        on mi2.parent_seq = mi1.md_item_seq
+      left join bib_item b
+        on mi2.md_item_seq = b.md_item_seq
+  , md_item_type mit1
+where 
+      p.publisher_seq = pn1.publisher_seq
+  and pn1.md_item_seq = mi1.md_item_seq
+  and mi1.md_item_type_seq = mit1.md_item_type_seq
+  and mit1.type_name in ('journal','book')"
+  and mi1.md_item_seq = title.md_item_seq
+  and title.name_type = 'primary'
+   *</pre>
    */
   static final String bibliographicItemsQuery =
-        "select distinct "
-      +   "publisher_name, publication_name, "
-      +   "p_issn, e_issn, p_isbn, e_isbn, "
-      +   "volume, substr(" + DATE_COLUMN + ",1,4) \"year\", "
-      +   "publication_id "
-      + "from "
-      +    BIB_ITEM_TABLE + ", "
-      +    MD_ITEM_TABLE + ", "
-      +    PUBLICATION_TABLE + ", " 
-      +    PUBLISHER_TABLE + ","
-      +    "(" + PUBINFO_QUERY + ") pubinfo "
-      + "where "
-      +   BIB_ITEM_TABLE + "." + MD_ITEM_SEQ_COLUMN 
-      +     " = " + MD_ITEM_TABLE + "." + MD_ITEM_SEQ_COLUMN + " and "
-      +   PUBLICATION_TABLE + "." + MD_ITEM_SEQ_COLUMN
-      +     " = " + MD_ITEM_TABLE + "." + PARENT_SEQ_COLUMN + " and "
-      +   PUBLICATION_TABLE + "." + PUBLISHER_SEQ_COLUMN
-      +     " = " + PUBLISHER_TABLE + "." + PUBLISHER_SEQ_COLUMN + " and "
-      +   "pubinfo." + PUBLICATION_SEQ_COLUMN
-      +     " = " + PUBLICATION_TABLE + "." + PUBLICATION_SEQ_COLUMN;
+      "select distinct "
+    + "    p.publisher_name as publisher "
+    + "  , series_title.name as series_title "
+    + "  , pn0.publication_id series_proprietary_id "
+    + "  , title.name as title "
+    + "  , pn1.publication_id as proprietery_id "
+    + "  , coalesce(e_issn0.issn,e_issn1.issn) as e_issn "
+    + "  , coalesce(p_issn0.issn,p_issn1.issn) as p_issn "
+    + "  , e_isbn.isbn as e_isbn "
+    + "  , p_isbn.isbn as p_isbn "
+    + "  , substr(mi2.date, 1, 4) as published_year "
+    + "  , b.volume as volume "
+    + "  , mi2.coverage as coverage_depth "
+    + "  , coalesce(mit0.type_name,mit1.type_name) as publication_type "
+    + "from "
+    + "    publisher p "
+    + "  , publication pn1 "
+    + "  , md_item_name title "
+    + "  , md_item mi1 "
+    + "      left join issn e_issn1 "
+    + "        on mi1.md_item_seq = e_issn1.md_item_seq and e_issn1.issn_type = 'e_issn' " 
+    + "      left join issn p_issn1 "
+    + "        on mi1.md_item_seq = p_issn1.md_item_seq and p_issn1.issn_type = 'p_issn' "
+    + "      left join isbn e_isbn "
+    + "        on mi1.md_item_seq = e_isbn.md_item_seq and e_isbn.isbn_type = 'e_isbn' "
+    + "      left join isbn p_isbn "
+    + "        on mi1.md_item_seq = p_isbn.md_item_seq and p_isbn.isbn_type = 'p_isbn' "
+    + "      left join md_item mi0 "
+    + "        on mi0.md_item_seq = mi1.parent_seq "
+    + "      left join md_item_name series_title "
+    + "        on mi0.md_item_seq = series_title.md_item_seq and series_title.name_type = 'primary' "
+    + "      left join publication pn0 "
+    + "        on mi0.md_item_seq = pn0.md_item_seq "
+    + "      left join md_item_type mit0 "
+    + "        on mi0.md_item_type_seq = mit0.md_item_type_seq "
+    + "      left join issn e_issn0 "
+    + "        on mi0.md_item_seq = e_issn0.md_item_seq and e_issn0.issn_type = 'e_issn' " 
+    + "      left join issn p_issn0 "
+    + "        on mi0.md_item_seq = p_issn0.md_item_seq and p_issn0.issn_type = 'p_issn' "
+    + "      left join md_item mi2 "
+    + "        on mi2.parent_seq = mi1.md_item_seq "
+    + "      left join bib_item b "
+    + "        on mi2.md_item_seq = b.md_item_seq "
+    + "  , md_item_type mit1 "
+    + "where "
+    + "      p.publisher_seq = pn1.publisher_seq "
+    + "  and pn1.md_item_seq = mi1.md_item_seq "
+    + "  and mi1.md_item_type_seq = mit1.md_item_type_seq "
+    + "  and mit1.type_name in ('journal','book')"
+    + "  and mi1.md_item_seq = title.md_item_seq "
+    + "  and title.name_type = 'primary'";
+          
 
   /**
    * Returns a list of BibliographicItems from the metadata database.
@@ -417,16 +376,35 @@ where
    * @return a list of BibliobraphicItems from the metadata database.
    */
   static public List<BibliographicItem> getBibliographicItems() {
+    List<BibliographicItem> items = Collections.<BibliographicItem>emptyList();
+    Connection conn = null;
+    try {
+      DbManager dbManager = getDaemon().getDbManager();
+      conn = dbManager.getConnection();
+      items = getBibliographicItems(dbManager, conn);
+    } catch (DbException ex) {
+      log.warning(ex.getMessage());
+      log.warning("bibliographicItemsQuery = " + bibliographicItemsQuery);
+    } finally {
+      DbManager.safeRollbackAndClose(conn);
+    }
+    return items;
+  }
+  
+  /**
+   * Returns a list of BibliographicItems from the metadata database.
+   * @param dbManager the database manager
+   * @param conn the database connection 
+   * @return a list of BibliobraphicItems from the metadata database.
+   */
+  static public List<BibliographicItem> getBibliographicItems(
+      DbManager dbManager, Connection conn) {
     final String DEBUG_HEADER = "getBibliographicItems(): ";
     List<BibliographicItem> items = new ArrayList<BibliographicItem>();
-    Connection conn = null;
-    DbManager dbManager = null;
     PreparedStatement statement = null;
     ResultSet resultSet = null;
     
     try {
-      dbManager = getDaemon().getDbManager();
-      conn = dbManager.getConnection();
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "bibliographicItemsQuery = "
 	  + bibliographicItemsQuery);
       statement = dbManager.prepareStatement(conn, bibliographicItemsQuery);
@@ -448,7 +426,6 @@ where
     } finally {
       DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(statement);
-      DbManager.safeRollbackAndClose(conn);
     }
     return items;
   }
