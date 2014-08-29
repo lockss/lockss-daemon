@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuMetadataRecorder.java,v 1.7 2014-08-22 22:15:00 fergaloy-sf Exp $
+ * $Id: TestAuMetadataRecorder.java,v 1.8 2014-08-29 20:52:29 pgust Exp $
  */
 
 /*
@@ -160,6 +160,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
   public void testAll() throws Exception {
     runRecordJournal1();
     runRecordBook1();
+    runRecordBookSeries1();
     runRecordUnknownPublisher1();
     runRecordUnknownPublisher2();
     runRecordUnknownPublisher3();
@@ -192,6 +193,10 @@ public class TestAuMetadataRecorder extends LockssTestCase {
       // Get the initial number of publications.
       int initialPublicationCount = countPublications(conn);
       assertNotEquals(-1, initialPublicationCount);
+      
+      // Get the initial number of unknown publication titles
+      int initialUnknownTitlesCount = 
+          countUnknownTitles(conn);
 
       // Get the initial number of archival units.
       int initialAuMdCount = countArchivalUnits(conn);
@@ -201,47 +206,87 @@ public class TestAuMetadataRecorder extends LockssTestCase {
       int initialArticleCount = countAuMetadataItems(conn);
       assertNotEquals(-1, initialArticleCount);
 
-      ReindexingTask task = newReindexingTask(sau0, sau0.getPlugin()
-		.getArticleMetadataExtractor(MetadataTarget.OpenURL(), sau0));
-
+      // index with no publication titles to create unknown title entries 
+      int nTitles = 1;
+      int nArticles = 6;
       ArticleMetadataBuffer metadata =
-	  getJournalMetadata("Publisher", 1, 6, false);
+          getJournalMetadata("Publisher", nTitles, nArticles, true, false);
+
+      ReindexingTask task = newReindexingTask(sau0, sau0.getPlugin()
+                .getArticleMetadataExtractor(MetadataTarget.OpenURL(), sau0));
 
       // Write the AU metadata to the database.
       new AuMetadataRecorder(task, metadataManager, sau0)
-	  .recordMetadata(conn, metadata.iterator());
+          .recordMetadata(conn, metadata.iterator());
 
       // Check that 1 publisher exists.
       assertEquals(1, countPublishers(conn) - initialPublisherCount);
 
-      // Check that 1 publication exists.
-      assertEquals(1, countPublications(conn) - initialPublicationCount);
+      // Check that nTitles publication exists.
+      assertEquals(nTitles, countPublications(conn) - initialPublicationCount);
+
+      // Check that nTitles unknown publication title exists.
+      assertEquals(nTitles, 
+                   countUnknownTitles(conn) - initialUnknownTitlesCount);
 
       // Check that 1 archival unit exists.
       assertEquals(1, countArchivalUnits(conn) - initialAuMdCount);
 
-      // Check that 6 articles exist.
-      assertEquals(6, countAuMetadataItems(conn) - initialArticleCount);
+      // Check that nArticles articles for each of the nTitle titles
+      assertEquals(nTitles*nArticles, 
+                   countAuMetadataItems(conn) - initialArticleCount);
+      
+      // now index the same AU, this time with a publication title
+      metadata = 
+          getJournalMetadata("Publisher", nTitles, nArticles, false, false);
+      
+      task = newReindexingTask(sau0, sau0.getPlugin()
+          .getArticleMetadataExtractor(MetadataTarget.OpenURL(), sau0));
+
+      // Write the AU metadata to the database.
+      new AuMetadataRecorder(task, metadataManager, sau0)
+          .recordMetadata(conn, metadata.iterator());
+      
+      // Check that 1 publisher exists.
+      assertEquals(1, countPublishers(conn) - initialPublisherCount);
+      
+      // Check that nTitles publication exists.
+      assertEquals(1, countPublications(conn) - initialPublicationCount);
+      
+      // Check that 0 unknown publication title exists.
+      assertEquals(0, countUnknownTitles(conn) - initialUnknownTitlesCount);
+      
+      // Check that 1 archival unit exists.
+      assertEquals(1, countArchivalUnits(conn) - initialAuMdCount);
+      
+      // Check that nArticles articles for each of the nTitle titles
+      assertEquals(nTitles*nArticles, 
+                   countAuMetadataItems(conn) - initialArticleCount);
     } finally {
       DbManager.safeRollbackAndClose(conn);
     }
   }
 
   private ArticleMetadataBuffer getJournalMetadata(String publishername,
-      int publicationCount, int articleCount, boolean noJournalTitleNoISSN)
+      int publicationCount, int articleCount, 
+      boolean noJournalTitles, boolean noIssns)
       throws IOException {
     ArticleMetadataBuffer result = new ArticleMetadataBuffer(getTempDir());
 
     for (int i = 1; i <= publicationCount; i++) {
       for (int j = 1; j <= articleCount; j++) {
 	ArticleMetadata am = new ArticleMetadata();
+	am.put(MetadataField.FIELD_PUBLICATION_TYPE,
+	       MetadataField.PUBLICATION_TYPE_JOURNAL);
 
 	if (publishername != null) {
 	  am.put(MetadataField.FIELD_PUBLISHER, publishername);
 	}
 
-	if (!noJournalTitleNoISSN) {
-	  am.put(MetadataField.FIELD_JOURNAL_TITLE, "Journal Title" + i);
+	if (!noJournalTitles) {
+	  am.put(MetadataField.FIELD_PUBLICATION_TITLE, "Journal Title" + i);
+	}
+	if (!noIssns) {
 	  am.put(MetadataField.FIELD_ISSN, "1234-567" + i);
 	  am.put(MetadataField.FIELD_EISSN, "4321-765" + i);
 	}
@@ -259,12 +304,140 @@ public class TestAuMetadataRecorder extends LockssTestCase {
     return result;
   }
 
+
   /**
    * Records a book.
    * 
    * @throws Exception
    */
   private void runRecordBook1() throws Exception {
+    Connection conn = null;
+
+    try {
+      conn = dbManager.getConnection();
+
+      // Get the initial number of publishers.
+      int initialPublisherCount = countPublishers(conn);
+      assertNotEquals(-1, initialPublisherCount);
+
+      // Get the initial number of publications.
+      int initialPublicationCount = countPublications(conn);
+      assertNotEquals(-1, initialPublicationCount);
+      
+      // Get the initial number of unknown publication titles
+      int initialUnknownTitlesCount = countUnknownTitles(conn);
+
+      // Get the initial number of archival units.
+      int initialAuMdCount = countArchivalUnits(conn);
+      assertNotEquals(-1, initialAuMdCount);
+
+      // Get the initial number of chapters.
+      int initialChapterCount = countAuMetadataItems(conn);
+      assertNotEquals(-1, initialChapterCount);
+
+      // index without book titles to create unknown title entries
+      int nTitles = 2;
+      int nChapters = 3;
+      ArticleMetadataBuffer metadata = 
+        getBookMetadata("Publisher", nTitles, nChapters, true, false);
+
+      ReindexingTask task = newReindexingTask(sau0, sau0.getPlugin()
+		.getArticleMetadataExtractor(MetadataTarget.OpenURL(), sau0));
+
+      // Write the AU metadata to the database.
+      new AuMetadataRecorder(task, metadataManager, sau0)
+	  .recordMetadata(conn, metadata.iterator());
+
+      // Check that 1 publisher exists.
+      assertEquals(1, countPublishers(conn) - initialPublisherCount);
+
+      // Check that nTitles publications exists.
+      assertEquals(nTitles, countPublications(conn) - initialPublicationCount);
+
+      // check that each series is an unknown publication 
+      // because it had no title
+      int totalUnknowns = nTitles;
+      assertEquals(totalUnknowns, 
+                   countUnknownTitles(conn) - initialUnknownTitlesCount);
+
+      // Check that 1 archival unit exists.
+      assertEquals(1, countArchivalUnits(conn) - initialAuMdCount);
+
+      // Check that the total number of chapters is nChapters for each title
+      assertEquals(nTitles*nChapters, 
+                   countAuMetadataItems(conn) - initialChapterCount);
+      
+      // now reindex, filling in the book titles
+      metadata = 
+          getBookMetadata("Publisher", nTitles, nChapters, false, false);
+
+        // Write the AU metadata to the database.
+        new AuMetadataRecorder(task, metadataManager, sau0)
+            .recordMetadata(conn, metadata.iterator());
+
+        // Check that 1 publisher exists.
+        assertEquals(1, countPublishers(conn) - initialPublisherCount);
+
+        // Check that nTitles publications exists.
+        assertEquals(nTitles, countPublications(conn) - initialPublicationCount);
+
+        // check that there are now no unknown titles
+        assertEquals(0, countUnknownTitles(conn) - initialUnknownTitlesCount);
+
+        // Check that 1 archival unit exists.
+        assertEquals(1, countArchivalUnits(conn) - initialAuMdCount);
+
+        // Check that the total number of chapters is nChapters for each title
+        assertEquals(nTitles*nChapters, 
+                     countAuMetadataItems(conn) - initialChapterCount);
+    } finally {
+      DbManager.safeRollbackAndClose(conn);
+    }
+  }
+
+  private ArticleMetadataBuffer getBookMetadata(String publishername,
+      int publicationCount, int articleCount,
+      boolean noTitles, boolean noIsbns) throws IOException {
+    ArticleMetadataBuffer result = new ArticleMetadataBuffer(getTempDir());
+
+    for (int i = 1; i <= publicationCount; i++) {
+      for (int j = 1; j <= articleCount; j++) {
+	ArticleMetadata am = new ArticleMetadata();
+        am.put(MetadataField.FIELD_PUBLICATION_TYPE,
+            MetadataField.PUBLICATION_TYPE_BOOK);
+
+	if (publishername != null) {
+	  am.put(MetadataField.FIELD_PUBLISHER, publishername);
+	}
+
+	if (!noTitles) {
+	  am.put(MetadataField.FIELD_PUBLICATION_TITLE, "Book Title" + i);
+	}
+	
+	if (!noIsbns) {
+	  am.put(MetadataField.FIELD_ISBN, "01234567" + i + "X");
+	  am.put(MetadataField.FIELD_EISBN, "98765432" + i + "X");
+	}
+	
+	am.put(MetadataField.FIELD_DATE, "2012-12-0" + j);
+	am.put(MetadataField.FIELD_ARTICLE_TITLE, "Article Title" + i + j);
+	am.put(MetadataField.FIELD_AUTHOR, "Author,First" + i + j);
+	am.put(MetadataField.FIELD_AUTHOR, "Author,Second" + i + j);
+	am.put(MetadataField.FIELD_ACCESS_URL, "http://xyz.com/" + i + j);
+
+	result.add(am);
+      }
+    }
+
+    return result;
+  }
+
+  /**
+   * Records a book series.
+   * 
+   * @throws Exception
+   */
+  private void runRecordBookSeries1() throws Exception {
     Connection conn = null;
 
     try {
@@ -286,53 +459,135 @@ public class TestAuMetadataRecorder extends LockssTestCase {
       int initialChapterCount = countAuMetadataItems(conn);
       assertNotEquals(-1, initialChapterCount);
 
-      ReindexingTask task = newReindexingTask(sau0, sau0.getPlugin()
-		.getArticleMetadataExtractor(MetadataTarget.OpenURL(), sau0));
+      // Get the initial number of unknown publication titles
+      int initialUnknownTitlesCount = countUnknownTitles(conn);
+      
+      // index with no publication or series titles 
+      // to create unknown title entries
+      int nSeries = 1;
+      int nTitles = 2;
+      int nChapters = 3;
+      ArticleMetadataBuffer metadata = 
+          getBookSeriesMetadata("Publisher", 
+                                nSeries, nTitles, nChapters,
+                                true, false, true, false);
 
-      ArticleMetadataBuffer metadata = getBookMetadata("Publisher", 1, 3);
+      ReindexingTask task = newReindexingTask(sau0, sau0.getPlugin()
+                .getArticleMetadataExtractor(MetadataTarget.OpenURL(), sau0));
 
       // Write the AU metadata to the database.
       new AuMetadataRecorder(task, metadataManager, sau0)
-	  .recordMetadata(conn, metadata.iterator());
+          .recordMetadata(conn, metadata.iterator());
 
       // Check that 1 publisher exists.
       assertEquals(1, countPublishers(conn) - initialPublisherCount);
 
-      // Check that 1 publication exists.
-      assertEquals(1, countPublications(conn) - initialPublicationCount);
+      // Check that there is a publication for each title in each series for
+      // each publisher, plus one for each series which counts as a publication
+      int totalPublications = nSeries*(nTitles + 1); 
+      assertEquals(totalPublications, 
+                   countPublications(conn) - initialPublicationCount);
+
+      // check that each series and each title in the series
+      // is an unknown publication because it had no title
+      int totalUnknowns = nSeries * (nTitles + 1);
+      assertEquals(totalUnknowns, 
+                   countUnknownTitles(conn) - initialUnknownTitlesCount);
 
       // Check that 1 archival unit exists.
       assertEquals(1, countArchivalUnits(conn) - initialAuMdCount);
 
-      // Check that 3 articles exist.
-      assertEquals(3, countAuMetadataItems(conn) - initialChapterCount);
+      // Check that that the number of chapters is the number of
+      // chapters for all the titles and series
+      int totalChapters = nSeries*nTitles*nChapters;
+      assertEquals(totalChapters, 
+                   countAuMetadataItems(conn) - initialChapterCount);
+      
+      // now reindex the same content but provide 
+      // publication and series titles
+      metadata = getBookSeriesMetadata("Publisher", 
+          nSeries, nTitles, nChapters,
+          false, false, false, false);
+
+      task = newReindexingTask(sau0, sau0.getPlugin()
+          .getArticleMetadataExtractor(MetadataTarget.OpenURL(), sau0));
+
+      // Write the AU metadata to the database.
+      new AuMetadataRecorder(task, metadataManager, sau0)
+          .recordMetadata(conn, metadata.iterator());
+      
+      // Check that 1 publisher exists.
+      assertEquals(1, countPublishers(conn) - initialPublisherCount);
+      
+      // check that each series is an unknown publication 
+      // because it had no title
+      assertEquals(totalPublications, 
+                   countPublications(conn) - initialPublicationCount);
+      
+      // check that there are now no unknown publications because
+      // the series unknown series titles have been replaced
+      assertEquals(0, countUnknownTitles(conn) - initialUnknownTitlesCount);
+      
+      // Check that 1 archival unit exists.
+      assertEquals(1, countArchivalUnits(conn) - initialAuMdCount);
+      
+      // Check that that the number of chapters is the number of
+      // chapters for all the titles and series
+      assertEquals(totalChapters, 
+                   countAuMetadataItems(conn) - initialChapterCount);
+    
     } finally {
       DbManager.safeRollbackAndClose(conn);
     }
   }
 
-  private ArticleMetadataBuffer getBookMetadata(String publishername,
-      int publicationCount, int articleCount) throws IOException {
+  private ArticleMetadataBuffer getBookSeriesMetadata(String publishername,
+      int seriesCount, int publicationCount, int articleCount,
+      boolean noSeriesTitles, boolean noIssns, 
+      boolean noBookTitles, boolean noIsbns) throws IOException {
     ArticleMetadataBuffer result = new ArticleMetadataBuffer(getTempDir());
 
-    for (int i = 1; i <= publicationCount; i++) {
-      for (int j = 1; j <= articleCount; j++) {
-	ArticleMetadata am = new ArticleMetadata();
+    for (int sc = 1; sc <= seriesCount; sc++) {
+      for (int pc = 1; pc <= publicationCount; pc++) {
+        for (int ac = 1; ac <= articleCount; ac++) {
+          ArticleMetadata am = new ArticleMetadata();
+          am.put(MetadataField.FIELD_PUBLICATION_TYPE, 
+                 MetadataField.PUBLICATION_TYPE_BOOKSERIES);
 
-	if (publishername != null) {
-	  am.put(MetadataField.FIELD_PUBLISHER, publishername);
-	}
-
-	am.put(MetadataField.FIELD_JOURNAL_TITLE, "Journal Title" + i);
-	am.put(MetadataField.FIELD_ISBN, "012345678" + i);
-	am.put(MetadataField.FIELD_EISBN, "987654321" + i);
-	am.put(MetadataField.FIELD_DATE, "2012-12-0" + j);
-	am.put(MetadataField.FIELD_ARTICLE_TITLE, "Article Title" + i + j);
-	am.put(MetadataField.FIELD_AUTHOR, "Author,First" + i + j);
-	am.put(MetadataField.FIELD_AUTHOR, "Author,Second" + i + j);
-	am.put(MetadataField.FIELD_ACCESS_URL, "http://xyz.com/" + i + j);
-
-	result.add(am);
+          if (publishername != null) {
+            am.put(MetadataField.FIELD_PUBLISHER, publishername);
+          }
+  
+          if (!noSeriesTitles) {
+            am.put(MetadataField.FIELD_SERIES_TITLE, "Book Series Title" + sc);
+          }
+          if (!noIssns) {
+            am.put(MetadataField.FIELD_ISSN, "1234-567" + sc);
+            am.put(MetadataField.FIELD_EISSN, "4321-765" + sc);
+          }
+          
+          if (!noBookTitles) {
+            am.put(MetadataField.FIELD_PUBLICATION_TITLE, 
+                   "Book In Series Title" + sc + pc);
+          }
+          
+          if (!noIsbns) {
+            am.put(MetadataField.FIELD_ISBN, "02468024" + sc + pc);
+            am.put(MetadataField.FIELD_EISBN, "86430864" + sc + pc);
+          }
+          
+          am.put(MetadataField.FIELD_DATE, "2012-12-0" + ac);
+          am.put(MetadataField.FIELD_ARTICLE_TITLE, 
+                 "Article Title" + sc + pc + ac);
+          am.put(MetadataField.FIELD_AUTHOR, 
+                 "Author,First" + sc + pc + ac);
+          am.put(MetadataField.FIELD_AUTHOR, 
+                 "Author,Second" + sc + pc + ac);
+          am.put(MetadataField.FIELD_ACCESS_URL, 
+                 "http://xyz.com/" + sc + pc + ac);
+  
+          result.add(am);
+        }
       }
     }
 
@@ -373,7 +628,8 @@ public class TestAuMetadataRecorder extends LockssTestCase {
       ReindexingTask task = newReindexingTask(sau0, sau0.getPlugin()
 		.getArticleMetadataExtractor(MetadataTarget.OpenURL(), sau0));
 
-      ArticleMetadataBuffer metadata = getJournalMetadata(null, 1, 8, false);
+      ArticleMetadataBuffer metadata = 
+          getJournalMetadata(null, 1, 8, false, false);
 
       // Write the AU metadata to the database.
       new AuMetadataRecorder(task, metadataManager, sau0)
@@ -400,7 +656,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
 
       addJournalTypeAggregates(conn, publicationSeq, true, 2013, 1, 30, 20, 10);
 
-      metadata = getJournalMetadata("Publisher", 1, 8, false);
+      metadata = getJournalMetadata("Publisher", 1, 8, false, false);
 
       // Write the AU metadata to the database.
       new AuMetadataRecorder(task, metadataManager, sau0)
@@ -462,7 +718,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
 		.getArticleMetadataExtractor(MetadataTarget.OpenURL(), sau0));
 
       ArticleMetadataBuffer metadata =
-	  getJournalMetadata("Publisher", 1, 8, false);
+	  getJournalMetadata("Publisher", 1, 8, false, false);
 
       // Write the AU metadata to the database.
       new AuMetadataRecorder(task, metadataManager, sau0)
@@ -483,7 +739,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
       // Check that 0 archival unit problems exist.
       assertEquals(0, countAuProblems(conn) - initialProblemCount);
 
-      metadata = getJournalMetadata(null, 1, 8, false);
+      metadata = getJournalMetadata(null, 1, 8, false, false);
 
       // Write the AU metadata to the database.
       new AuMetadataRecorder(task, metadataManager, sau0)
@@ -503,6 +759,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
 
       // Check that 0 archival unit problems exist.
       assertEquals(0, countAuProblems(conn) - initialProblemCount);
+      
     } finally {
       DbManager.safeRollbackAndClose(conn);
     }
@@ -542,7 +799,8 @@ public class TestAuMetadataRecorder extends LockssTestCase {
       ReindexingTask task = newReindexingTask(sau0, sau0.getPlugin()
 		.getArticleMetadataExtractor(MetadataTarget.OpenURL(), sau0));
 
-      ArticleMetadataBuffer metadata = getJournalMetadata(null, 1, 8, false);
+      ArticleMetadataBuffer metadata = 
+          getJournalMetadata(null, 1, 8, false, false);
 
       // Write the AU metadata to the database.
       new AuMetadataRecorder(task, metadataManager, sau0)
@@ -571,7 +829,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
 
       metadataManager.removeAu(conn, sau0.getAuId());
 
-      metadata = getJournalMetadata("Publisher", 1, 8, false);
+      metadata = getJournalMetadata("Publisher", 1, 8, false, false);
 
       // Write the AU metadata to the database.
       new AuMetadataRecorder(task, metadataManager, sau0)
@@ -633,7 +891,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
 		.getArticleMetadataExtractor(MetadataTarget.OpenURL(), sau0));
 
       ArticleMetadataBuffer metadata =
-	  getJournalMetadata("Publisher", 1, 8, false);
+	  getJournalMetadata("Publisher", 1, 8, false, false);
 
       // Write the AU metadata to the database.
       new AuMetadataRecorder(task, metadataManager, sau0)
@@ -656,7 +914,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
 
       metadataManager.removeAu(conn, sau0.getAuId());
 
-      metadata = getJournalMetadata(null, 1, 8, false);
+      metadata = getJournalMetadata(null, 1, 8, false, false);
 
       // Write the AU metadata to the database.
       new AuMetadataRecorder(task, metadataManager, sau0)
@@ -699,6 +957,9 @@ public class TestAuMetadataRecorder extends LockssTestCase {
       // Get the initial number of publications.
       int initialPublicationCount = countPublications(conn);
       assertNotEquals(-1, initialPublicationCount);
+      
+      // Get the initial number of unknown publication titles
+      int initialUnknownTitlesCount = countUnknownTitles(conn);
 
       // Get the initial number of archival units.
       int initialAuMdCount = countArchivalUnits(conn);
@@ -708,11 +969,13 @@ public class TestAuMetadataRecorder extends LockssTestCase {
       int initialArticleCount = countAuMetadataItems(conn);
       assertNotEquals(-1, initialArticleCount);
 
+      int nTitles = 1;
+      int nArticles = 6;
+      ArticleMetadataBuffer metadata =
+        getJournalMetadata("Publisher", nTitles, nArticles, true, true);
+
       ReindexingTask task = newReindexingTask(sau0, sau0.getPlugin()
 		.getArticleMetadataExtractor(MetadataTarget.OpenURL(), sau0));
-
-      ArticleMetadataBuffer metadata =
-	  getJournalMetadata("Publisher", 1, 6, true);
 
       // Write the AU metadata to the database.
       new AuMetadataRecorder(task, metadataManager, sau0)
@@ -721,14 +984,22 @@ public class TestAuMetadataRecorder extends LockssTestCase {
       // Check that 1 publisher exist.
       assertEquals(1, countPublishers(conn) - initialPublisherCount);
 
-      // Check that 6 publication exist.
-      assertEquals(6, countPublications(conn) - initialPublicationCount);
+      // Check that a title was created for each article in each publication.
+      // This happens because there is no way to match publications with
+      // no title or ISSN.
+      assertEquals(nTitles*nArticles, 
+                   countPublications(conn) - initialPublicationCount);
+      
+      // Check that all of the titles created are unknown titles
+      assertEquals(nTitles*nArticles, 
+                   countUnknownTitles(conn) - initialUnknownTitlesCount);
 
       // Check that 1 archival unit exists.
       assertEquals(1, countArchivalUnits(conn) - initialAuMdCount);
 
-      // Check that 6 articles exist.
-      assertEquals(6, countAuMetadataItems(conn) - initialArticleCount);
+      // Check that nArticle articles exist for each of nTitles
+      assertEquals(nTitles*nArticles, 
+                   countAuMetadataItems(conn) - initialArticleCount);
     } catch (MetadataException me) {
       // Expected.
     } finally {
@@ -762,12 +1033,71 @@ public class TestAuMetadataRecorder extends LockssTestCase {
     PreparedStatement stmt = null;
 
     try {
+      String q = "  select " + MD_ITEM_NAME_TABLE + ".name from "
+          + PUBLICATION_TABLE + "," + MD_ITEM_TABLE + "," + MD_ITEM_NAME_TABLE
+          + " where " + PUBLICATION_TABLE + ".md_item_seq = "
+          + MD_ITEM_TABLE + ".md_item_seq and "
+          + MD_ITEM_NAME_TABLE + ".md_item_seq = " 
+          + MD_ITEM_TABLE + ".md_item_seq";
+      stmt = dbManager.prepareStatement(conn, q);
+      ResultSet r = dbManager.executeQuery(stmt);
+
+      String name = null;
+      while (r.next()) {
+        name = r.getString(1);
+      }
+      
       String query = "select count(*) from " + PUBLICATION_TABLE;
       stmt = dbManager.prepareStatement(conn, query);
       ResultSet resultSet = dbManager.executeQuery(stmt);
 
       if (resultSet.next()) {
 	count = resultSet.getInt(1);
+      }
+    } finally {
+      stmt.close();
+    }
+
+    return count;
+  }
+
+  private int countUnknownTitles(Connection conn)
+      throws SQLException, DbException {
+    int count = -1;
+    PreparedStatement stmt = null;
+
+    try {
+      String query = "select " + MD_ITEM_NAME_TABLE + ".name from " 
+          + PUBLICATION_TABLE + "," + MD_ITEM_TABLE + "," + MD_ITEM_NAME_TABLE
+          + " where " + PUBLICATION_TABLE + ".md_item_seq = " + MD_ITEM_TABLE
+          + ".md_item_seq and " + MD_ITEM_TABLE + ".md_item_seq = "
+          + MD_ITEM_NAME_TABLE + ".md_item_seq and " + MD_ITEM_NAME_TABLE
+          + ".name like 'UNKNOWN%'";  // name starts with "UNKNOWN"
+                    
+      stmt = dbManager.prepareStatement(conn, query);
+      ResultSet resultSet = dbManager.executeQuery(stmt);
+
+      String name = null;
+      while (resultSet.next()) {
+        name = resultSet.getString(1);
+      }
+    } finally {
+      stmt.close();
+    }
+    
+    try {
+      String query = "select count(*) from " 
+          + PUBLICATION_TABLE + "," + MD_ITEM_TABLE + "," + MD_ITEM_NAME_TABLE
+          + " where " + PUBLICATION_TABLE + ".md_item_seq = " + MD_ITEM_TABLE
+          + ".md_item_seq and " + MD_ITEM_TABLE + ".md_item_seq = "
+          + MD_ITEM_NAME_TABLE + ".md_item_seq and " + MD_ITEM_NAME_TABLE
+          + ".name like 'UNKNOWN%'";  // name starts with "UNKNOWN"
+                    
+      stmt = dbManager.prepareStatement(conn, query);
+      ResultSet resultSet = dbManager.executeQuery(stmt);
+
+      if (resultSet.next()) {
+        count = resultSet.getInt(1);
       }
     } finally {
       stmt.close();
