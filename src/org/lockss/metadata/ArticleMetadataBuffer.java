@@ -1,5 +1,5 @@
 /*
- * $Id: ArticleMetadataBuffer.java,v 1.6 2014-08-22 22:15:00 fergaloy-sf Exp $
+ * $Id: ArticleMetadataBuffer.java,v 1.7 2014-08-29 20:45:42 pgust Exp $
  */
 
 /*
@@ -31,7 +31,6 @@
  */
 package org.lockss.metadata;
 
-import static org.lockss.db.SqlConstants.*;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -41,14 +40,11 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.text.ParseException;
-import java.util.HashMap;
-import java.util.HashSet;
+import java.util.Collection;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.NoSuchElementException;
-import java.util.Set;
 import org.lockss.daemon.PublicationDate;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.MetadataField;
@@ -85,7 +81,10 @@ class ArticleMetadataBuffer {
   static class ArticleMetadataInfo implements Serializable {
     private static final long serialVersionUID = -2372571567706061080L;
     String publisher;
-    String journalTitle;
+    String seriesTitle;
+    String proprietarySeriesIdentifier;
+    String publicationTitle;
+    String publicationType;
     String isbn;
     String eisbn;
     String issn;
@@ -96,12 +95,12 @@ class ArticleMetadataBuffer {
     String pubDate; 
     final String pubYear;
     String articleTitle;
-    final String authors;
-    Set<String> authorSet;
+    String articleType;
+    Collection<String> authors;
     String doi;
     String accessUrl;
     Map<String, String> featuredUrlMap;
-    Set<String> keywordSet;
+    Collection<String> keywords;
     String endPage;
     String coverage;
     String itemNumber;
@@ -116,7 +115,10 @@ class ArticleMetadataBuffer {
      */
     public ArticleMetadataInfo(ArticleMetadata md) {
       publisher=md.get(MetadataField.FIELD_PUBLISHER);
-      journalTitle = md.get(MetadataField.FIELD_JOURNAL_TITLE);
+      seriesTitle = md.get(MetadataField.FIELD_SERIES_TITLE);
+      proprietarySeriesIdentifier =
+          md.get(MetadataField.FIELD_PROPRIETARY_SERIES_IDENTIFIER);
+      publicationTitle = md.get(MetadataField.FIELD_PUBLICATION_TITLE);
       isbn = md.get(MetadataField.FIELD_ISBN);
       eisbn = md.get(MetadataField.FIELD_EISBN);
       issn = md.get(MetadataField.FIELD_ISSN);
@@ -125,21 +127,21 @@ class ArticleMetadataBuffer {
       issue = md.get(MetadataField.FIELD_ISSUE);
       String allPages = md.get(MetadataField.FIELD_START_PAGE);
       if (allPages != null) {
-	String[] pages = allPages.split("\\D");
-	if (pages.length == 2) {
-	  startPage = pages[0];
-	  if (StringUtil.isNullString(md.get(MetadataField.FIELD_END_PAGE))) {
-	    endPage = pages[1];
-	  } else {
-	    endPage = md.get(MetadataField.FIELD_END_PAGE);
-	  }
-	} else {
-	  startPage = allPages;
-	  endPage = md.get(MetadataField.FIELD_END_PAGE);
-	}
+        String[] pages = allPages.split("\\D");
+        if (pages.length == 2) {
+          startPage = pages[0];
+          if (StringUtil.isNullString(md.get(MetadataField.FIELD_END_PAGE))) {
+            endPage = pages[1];
+          } else {
+            endPage = md.get(MetadataField.FIELD_END_PAGE);
+          }
+        } else {
+          startPage = allPages;
+          endPage = md.get(MetadataField.FIELD_END_PAGE);
+        }
       } else {
-	startPage = null;
-	endPage = md.get(MetadataField.FIELD_END_PAGE);
+        startPage = null;
+        endPage = md.get(MetadataField.FIELD_END_PAGE);
       }
       PublicationDate pd = getDateField(md);
       if (pd == null) {
@@ -148,116 +150,56 @@ class ArticleMetadataBuffer {
         pubDate = pd.toString();
         pubYear = Integer.toString(pd.getYear());
       }
-      articleTitle = getArticleTitleField(md);
-      authors = getAuthorField(md);
-      authorSet = getAuthorSet(md);
+      articleTitle = md.get(MetadataField.FIELD_ARTICLE_TITLE);
+      authors = md.getList(MetadataField.FIELD_AUTHOR);
       doi = md.get(MetadataField.FIELD_DOI);
       accessUrl = md.get(MetadataField.FIELD_ACCESS_URL);
-      featuredUrlMap =
-	  new HashMap<String, String>(md.getRawMap(MetadataField
-	                                           .FIELD_FEATURED_URL_MAP));
+      featuredUrlMap = md.getRawMap(MetadataField.FIELD_FEATURED_URL_MAP);
       log.debug3("featuredUrlMap = " + featuredUrlMap);
-      keywordSet = getKeywordSet(md);
+      keywords = md.getList(MetadataField.FIELD_KEYWORDS);;
       coverage = md.get(MetadataField.FIELD_COVERAGE);
       itemNumber = md.get(MetadataField.FIELD_ITEM_NUMBER);
       proprietaryIdentifier =
-	  md.get(MetadataField.FIELD_PROPRIETARY_IDENTIFIER);
+          md.get(MetadataField.FIELD_PROPRIETARY_IDENTIFIER);
       fetchTime = md.get(MetadataField.FIELD_FETCH_TIME);
-    }
-    
-    /**
-     * Return the author field to store in database. The field is comprised of a
-     * semicolon separated list of as many authors as will fit in the database
-     * author field.
-     * 
-     * @param md the ArticleMetadata
-     * @return the author or <code>null</code> if none specified
-     */
-    private static String getAuthorField(ArticleMetadata md) {
-      StringBuilder sb = new StringBuilder();
-      List<String> authors = md.getList(MetadataField.FIELD_AUTHOR);
-
-      // create author field as semicolon-separated list of authors from
-      // metadata
-      if (authors != null) {
-        for (String a : authors) {
-          if (sb.length() == 0) {
-            // check first author to see if it's too long -- probably caused 
-            // by metadata extractor not properly splitting a list of authors
-            if (a.length() >= MAX_AUTHOR_COLUMN) {
-              // just truncate first author to max length
-              log.warning("Author metadata too long -- truncating:'" + a + "'");
-              a = a.substring(0,MAX_AUTHOR_COLUMN);
-              break;
-            }
-          } else {
-            // include as many authors as will fit in the field
-            if (sb.length()+a.length()+1 > MAX_AUTHOR_COLUMN) {
-              break;
-            }
-            sb.append(';');
-          }
-          sb.append(a);
+      
+      // get publication type from metadata or infer it if not set
+      publicationType = md.get(MetadataField.FIELD_PUBLICATION_TYPE);
+      if (StringUtil.isNullString(publicationType)) {
+        if (MetadataManager.isBookSeries(
+            issn, eissn, isbn, eisbn, seriesTitle, volume)) {
+          // book series if e/isbn and either e/issn or volume fields present
+          publicationType = MetadataField.PUBLICATION_TYPE_BOOKSERIES;
+        } else if (MetadataManager.isBook(isbn, eisbn)) {
+          // book if e/isbn present
+          publicationType = MetadataField.PUBLICATION_TYPE_BOOK;
+        } else {
+          // journal if not book or bookSeries
+          publicationType = MetadataField.PUBLICATION_TYPE_JOURNAL;
         }
       }
-      return (sb.length() == 0) ? null : sb.toString();
+      
+      // get article type from metadata or infer it if not set
+      articleType = md.get(MetadataField.FIELD_ARTICLE_TYPE);
+      if (StringUtil.isNullString(articleType)) {
+        if (   MetadataField.PUBLICATION_TYPE_BOOK.equals(publicationType)
+            || MetadataField.PUBLICATION_TYPE_BOOKSERIES.equals(publicationType)) {
+          if (    StringUtil.isNullString(startPage)
+              || !StringUtil.isNullString(endPage)
+              || !StringUtil.isNullString(itemNumber)) {
+            // assume book chapter if startPage, endPage, or itemNumber present
+            articleType = MetadataField.ARTICLE_TYPE_BOOKCHAPTER;
+          } else {
+            // assume book volume if none of these fields are present
+            articleType = MetadataField.ARTICLE_TYPE_BOOKVOLUME;
+          }
+        } else if (MetadataField.PUBLICATION_TYPE_JOURNAL.equals(publicationType)) {
+          // assume article for journal
+          articleType = MetadataField.ARTICLE_TYPE_JOURNALARTICLE;          
+        }
+      }
     }
     
-    /**
-     * Return the authors as a set.
-     * 
-     * @param md the ArticleMetadata
-     * @return the authors or <code>null</code> if none specified
-     */
-    private static Set<String> getAuthorSet(ArticleMetadata md) {
-      return new HashSet<String>(md.getList(MetadataField.FIELD_AUTHOR));
-    }
-    
-    /**
-     * Return the keywords as a set.
-     * 
-     * @param md the ArticleMetadata
-     * @return the keywords or <code>null</code> if none specified
-     */
-    private static Set<String> getKeywordSet(ArticleMetadata md) {
-      Set<String> keywords = new HashSet<String>();
-      List<String> original = md.getList(MetadataField.FIELD_KEYWORDS);
-
-      if (original == null || original.size() == 0) {
-	return keywords;
-      }
-      
-      String [] splitKeywords;
-      
-      for (String unsplitKeywords : original) {
-	splitKeywords = unsplitKeywords.split(",");
-
-	for (String keyword : splitKeywords) {
-	  keywords.add(keyword.trim());
-	}
-      }
-      
-      return keywords;
-    }
-
-    /**
-     * Return the article title field to store in the database. The field is
-     * truncated to the size of the article title field.
-     * 
-     * @param md the ArticleMetadata
-     * @return the articleTitleField or <code>null</code> if none specified
-     */
-    static private String getArticleTitleField(ArticleMetadata md) {
-      // elide title field
-      String articleTitle = md.get(MetadataField.FIELD_ARTICLE_TITLE);
-      if (articleTitle != null
-	  && (articleTitle.length() > MAX_NAME_COLUMN)) {
-	articleTitle =
-	    articleTitle.substring(0, MAX_NAME_COLUMN);
-      }
-      return articleTitle;
-    }
-
     /**
      * Return the date field to store in the database. The date field can be
      * nearly anything a MetaData extractor chooses to provide, making it a near
@@ -290,28 +232,31 @@ class ArticleMetadataBuffer {
      */
     @Override
     public String toString() {
-      return "ArticleMetadataInfo [publisher=" + publisher
-	  + ", journalTitle=" + journalTitle
-	  + ", isbn=" + isbn
-	  + ", eisbn=" + eisbn
-	  + ", issn=" + issn
-	  + ", eissn=" + eissn
-	  + ", volume=" + volume
-	  + ", issue=" + issue
-	  + ", startPage=" + startPage
-	  + ", pubDate=" + pubDate
-	  + ", pubYear=" + pubYear
-	  + ", articleTitle=" + articleTitle
-	  + ", authors=" + authors
-	  + ", authorSet=" + authorSet
-	  + ", doi="+ doi
-	  + ", accessUrl=" + accessUrl
-	  + ", featuredUrlMap=" + featuredUrlMap
-	  + ", keywordSet=" + keywordSet
-	  + ", endPage=" + endPage
-	  + ", coverage=" + coverage
-	  + ", itemNumber=" + itemNumber
-	  + ", proprietaryIdentifier=" + proprietaryIdentifier + "]";
+      return "ArticleMetadataInfo "
+          + "[publisher=" + publisher
+          + ", seriesTitle=" + seriesTitle
+          + ", proprietarySeriesIdentifier=" + proprietarySeriesIdentifier
+          + ", publicationTitle=" + publicationTitle
+          + ", isbn=" + isbn
+          + ", eisbn=" + eisbn
+          + ", issn=" + issn
+          + ", eissn=" + eissn
+          + ", volume=" + volume
+          + ", issue=" + issue
+          + ", startPage=" + startPage
+          + ", pubDate=" + pubDate
+          + ", pubYear=" + pubYear
+          + ", articleTitle=" + articleTitle
+          + ", articleType=" + articleType
+          + ", authorSet=" + authors
+          + ", doi="+ doi
+          + ", accessUrl=" + accessUrl
+          + ", featuredUrlMap=" + featuredUrlMap
+          + ", keywordSet=" + keywords
+          + ", endPage=" + endPage
+          + ", coverage=" + coverage
+          + ", itemNumber=" + itemNumber
+          + ", proprietaryIdentifier=" + proprietaryIdentifier + "]";
     }
   }
 
@@ -319,9 +264,9 @@ class ArticleMetadataBuffer {
     collectedMetadataFile = 
       FileUtil.createTempFile("MetadataManager", "md", tmpdir);
     outstream =
-	new ObjectOutputStream(
-	    new BufferedOutputStream(
-		new FileOutputStream(collectedMetadataFile)));
+        new ObjectOutputStream(
+            new BufferedOutputStream(
+                new FileOutputStream(collectedMetadataFile)));
   }
 
   /** 
