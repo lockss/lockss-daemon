@@ -1,5 +1,5 @@
 /*
- * $Id: SubscriptionManager.java,v 1.19 2014-08-22 22:15:00 fergaloy-sf Exp $
+ * $Id: SubscriptionManager.java,v 1.20 2014-08-29 20:50:02 pgust Exp $
  */
 
 /*
@@ -73,6 +73,7 @@ import org.lockss.config.TdbTitle;
 import org.lockss.config.TdbUtil;
 import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
+import org.lockss.extractor.MetadataField;
 import org.lockss.metadata.MetadataManager;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.AuEvent;
@@ -82,6 +83,7 @@ import org.lockss.plugin.PluginManager;
 import org.lockss.remote.RemoteApi;
 import org.lockss.remote.RemoteApi.BatchAuStatus;
 import org.lockss.util.Logger;
+import org.lockss.util.MetadataUtil;
 import org.lockss.util.PlatformUtil;
 import org.lockss.util.StringUtil;
 
@@ -742,19 +744,31 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     String name = title.getName();
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "name = " + name);
 
-    // Get the title print ISSN.
-    String pIssn = mdManager.normalizeIsbnOrIssn(title.getPrintIssn(),
-	MAX_ISSN_COLUMN, "ISSN", name, publisher);
+    // Get the unpunctuated title print ISSN.
+    String pIssn = MetadataUtil.toUnpunctuatedIssn(title.getPrintIssn());
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pIssn = " + pIssn);
 
-    // Get the title electronic ISSN.
-    String eIssn = mdManager.normalizeIsbnOrIssn(title.getEissn(),
-	MAX_ISSN_COLUMN, "ISSN", name, publisher);
+    // Get the unpunctuated title electronic ISSN.
+    String eIssn = MetadataUtil.toUnpunctuatedIssn(title.getEissn());
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "eIssn = " + eIssn);
 
-    // Locate the title publication in the database.
-    Long publicationSeq = mdManager.findPublication(conn, pIssn, eIssn, null,
-	null, publisherSeq, name, null);
+    // Locate the title publication in the database (bookSeries or other)
+    String pubType = title.getPublicationType();
+    Long publicationSeq;
+    if (MetadataField.PUBLICATION_TYPE_BOOKSERIES.equals(pubType)) {
+      // Find the book series, where name is series title
+      publicationSeq = mdManager.findBookSeries(conn, publisherSeq,
+                                                pIssn, eIssn, name);
+    } else if (MetadataField.PUBLICATION_TYPE_JOURNAL.equals(pubType)) {
+      // name is journal title
+      publicationSeq = mdManager.findJournal(conn, publisherSeq,
+                                             pIssn, eIssn, name);
+    } else {
+      log.error(  "Unexpected publication type '" + pubType 
+                + "' for subscription to title '" + name + "'");
+      return null;
+    }
+    
     if (log.isDebug3())
       log.debug3(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
 
@@ -1284,19 +1298,17 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "publisher = " + publisher);
 
     // Get the title name.
-    String name = title.getName();
-    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "name = " + name);
+    String publicationName = title.getName();
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "name = " + publicationName);
 
-    // Get the title print ISSN.
-    String pIssn = mdManager.normalizeIsbnOrIssn(title.getPrintIssn(),
-	MAX_ISSN_COLUMN, "ISSN", name, publisher);
+    // Get the unpunctuated title print ISSN.
+    String pIssn = MetadataUtil.toUnpunctuatedIssn(title.getPrintIssn());
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pIssn = " + pIssn);
 
-    // Get the title electronic ISSN.
-    String eIssn = mdManager.normalizeIsbnOrIssn(title.getEissn(),
-	MAX_ISSN_COLUMN, "ISSN", name, publisher);
+    // Get the unpunctuated title electronic ISSN.
+    String eIssn = MetadataUtil.toUnpunctuatedIssn(title.getEissn());
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "eIssn = " + eIssn);
-
+    
     // Get the title proprietary identifier.
     String proprietaryId = title.getProprietaryId();
     if (log.isDebug3())
@@ -1314,9 +1326,24 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       if (log.isDebug3())
 	log.debug3(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
 
-      // Find the publication in the database or create it.
-      Long publicationSeq = mdManager.findOrCreatePublication(conn, pIssn,
-	  eIssn, null, null, publisherSeq, name, proprietaryId, null);
+      Long publicationSeq;
+      String pubType = title.getPublicationType();
+      if (MetadataField.PUBLICATION_TYPE_BOOKSERIES.equals(pubType)) {
+        publicationSeq = 
+            mdManager.findOrCreateBookSeries(conn, publisherSeq, 
+                                             pIssn, eIssn, 
+                                             publicationName, proprietaryId);
+      } else if (MetadataField.PUBLICATION_TYPE_JOURNAL.equals(pubType)) {
+        publicationSeq = 
+            mdManager.findOrCreateJournal(conn, publisherSeq,  
+                                          pIssn, eIssn, 
+                                          publicationName, proprietaryId);
+      } else {
+        String msg = "cannot subscribe to publication type '" + pubType + "'"; 
+        log.error(msg);
+        status.addStatusEntry(publicationName, false, msg, null);
+        return;
+      }
       if (log.isDebug3())
 	log.debug3(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
 
@@ -1338,12 +1365,12 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       DbManager.commitOrRollback(conn, log);
 
       // Report the success back to the caller.
-      status.addStatusEntry(name, null);
+      status.addStatusEntry(publicationName, null);
     } catch (DbException dbe) {
       // Report the failure back to the caller.
       log.error("Cannot add/update subscription to title with Id = "
 	  + title.getId(), dbe);
-      status.addStatusEntry(name, false, dbe.getMessage(), null);
+      status.addStatusEntry(publicationName, false, dbe.getMessage(), null);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
@@ -2720,10 +2747,37 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       log.debug3(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
 
     // Find the publication in the database or create it.
-    Long publicationSeq = mdManager.findOrCreatePublication(conn,
-	publication.getPissn(), publication.getEissn(), null, null,
-	publisherSeq, publication.getPublicationName(),
-	publication.getProprietaryId(), null);
+    Long publicationSeq;
+    TdbTitle title = publication.getTdbTitle();
+    if (title == null) {
+// todo: what about a return status?
+      log.error(  "No TdbTitle for publication '" 
+                + publication.getPublicationName() + "'");
+      return;
+    } else {
+      String pIssn = title.getPrintIssn();
+      String eIssn = publication.getEissn();
+      String publicationName = publication.getPublicationName();
+      String pubType = title.getPublicationType();
+      String proprietaryId = publication.getProprietaryId();
+      if (MetadataField.PUBLICATION_TYPE_BOOKSERIES.equals(pubType)) {
+        publicationSeq = 
+            mdManager.findOrCreateBookSeries(conn, publisherSeq, 
+                                             pIssn, eIssn, 
+                                             publicationName, proprietaryId);
+      } else if (MetadataField.PUBLICATION_TYPE_JOURNAL.equals(pubType)) {
+        publicationSeq = 
+            mdManager.findOrCreateJournal(conn,publisherSeq,  
+                                          pIssn, eIssn, 
+                                          publicationName, proprietaryId);
+      } else {
+// todo: what about a return status?
+        log.error(  "Cannot subscribe to publication type '" + pubType 
+                  + "' for publication name: '" + publicationName + "'");
+        return;
+      }
+      
+    }
     if (log.isDebug3())
       log.debug3(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
 
