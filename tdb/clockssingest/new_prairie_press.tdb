@@ -128,26 +128,15 @@
       plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
       implicit < status ; status2 ; year ; name ; volume ; param[year] >
 
-    {
+
     
       param[base_url] = http://jhaponline.org/journals/
       param[journal_id] = jhap
+      comment[0] = Journal moved in 2013. to https://jhaponline.org/
 
       au < down ; frozen ; 2011 ; Journal for the History of Analytical Philosophy Volume 1 (2011) ; 1 ; 2011 >
       au < down ; frozen ; 2012 ; Journal for the History of Analytical Philosophy Volume 1 (2012) ; 1 ; 2012 >
 
-    }
-    {
-    
-      param[base_url] = https://jhaponline.org/
-      param[journal_id] = jhap
-      comment[0] = The publisher stopped carrying this title in 2013 and Vicky advised to delete 2013-14 AUs since they were not ingested
-
-      au < doNotProcess ; doNotProcess ; 2011 ; Journal for the History of Analytical Philosophy Volume 1 (2011) ; 1 ; 2011 >
-      au < doNotProcess ; doNotProcess ; 2012 ; Journal for the History of Analytical Philosophy Volume 1 (2012) ; 1 ; 2012 >
-  
-
-    }
   }
 
   {
