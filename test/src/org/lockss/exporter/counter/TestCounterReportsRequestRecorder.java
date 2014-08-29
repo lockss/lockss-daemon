@@ -1,5 +1,5 @@
 /*
- * $Id: TestCounterReportsRequestRecorder.java,v 1.11 2014-08-22 22:14:59 fergaloy-sf Exp $
+ * $Id: TestCounterReportsRequestRecorder.java,v 1.12 2014-08-29 20:51:26 pgust Exp $
  */
 
 /*
@@ -140,10 +140,8 @@ public class TestCounterReportsRequestRecorder extends LockssTestCase {
 
       // Add the publication.
       Long publicationSeq =
-	  metadataManager.findOrCreatePublication(conn, null, null,
-						  "9876543210987",
-						  "9876543210123", publisherSeq,
-						  "The Full Book", null, null);
+	  metadataManager.findOrCreateBook(conn, publisherSeq, null,
+		"9876543210987", "9876543210123", "The Full Book", null);
 
       // Add the publishing platform.
       Long platformSeq = metadataManager.findOrCreatePlatform(conn,

@@ -1,5 +1,5 @@
 /*
- * $Id: TestCounterReportsBookReport1L.java,v 1.10 2014-08-22 22:14:59 fergaloy-sf Exp $
+ * $Id: TestCounterReportsBookReport1L.java,v 1.11 2014-08-29 20:51:26 pgust Exp $
  */
 
 /*
@@ -46,6 +46,7 @@ import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
 import org.lockss.exporter.counter.CounterReportsBookReport1L;
 import org.lockss.exporter.counter.CounterReportsManager;
+import org.lockss.extractor.MetadataField;
 import org.lockss.metadata.MetadataManager;
 import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.test.ConfigurationUtil;
@@ -259,19 +260,18 @@ public class TestCounterReportsBookReport1L extends LockssTestCase {
       Long publisherSeq =
 	  metadataManager.findOrCreatePublisher(conn, "Full Book Publisher");
 
-      // Add the publication.
+      // Add the publication -- test direct method
       publicationSeq =
-	  metadataManager.findOrCreatePublication(conn, null, null,
-						  "9876543210987",
-						  "9876543210123", publisherSeq,
-						  "The Full Book", null, null);
+	  metadataManager.findOrCreateBook(conn, publisherSeq, null, 
+		"9876543210987", "9876543210123", "The Full Book", null);
 
-      // Add an alternative name for the publication.
+      // Add an alternative name for the publication -- test indirect method
       Long publicationSeq2 =
-	  metadataManager.findOrCreatePublication(conn, null, null,
-	      					  "9876543210987",
-	      					  "9876543210123", publisherSeq,
-						  "Full Book Alt", null, null);
+	  metadataManager.findOrCreatePublication(conn, publisherSeq,
+	        null, null,
+	      	"9876543210987", "9876543210123", 
+	      	MetadataField.PUBLICATION_TYPE_BOOK,
+		null, null, "Full Book Alt", null);
 
       assertEquals(publicationSeq, publicationSeq2);
 
@@ -331,21 +331,18 @@ public class TestCounterReportsBookReport1L extends LockssTestCase {
       Long publisherSeq =
 	  metadataManager.findOrCreatePublisher(conn, "Section Book Publisher");
 
-      // Add the publication.
+      // Add the publication -- test direct method
       publicationSeq =
-	  metadataManager.findOrCreatePublication(conn, null, null,
-						  "9876543210234",
-						  "9876543210345", publisherSeq,
-						  "The Book In Sections", null,
-						  null);
+	  metadataManager.findOrCreateBook(conn, publisherSeq, null,
+		"9876543210234", "9876543210345", "The Book In Sections", null);
 
-      // Add an alternative name for the publication.
+      // Add an alternative name for the publication. -- test indirect method
       Long publicationSeq2 =
-	  metadataManager.findOrCreatePublication(conn, null, null,
-	      					  "9876543210234",
-	      					  "9876543210345", publisherSeq,
-						  "Book In Sections Alt", null,
-						  null);
+	  metadataManager.findOrCreatePublication(conn, publisherSeq,
+	        null, null,
+	      	"9876543210234", "9876543210345", 
+	      	MetadataField.PUBLICATION_TYPE_BOOK,
+		null, null, "Book In Sections Alt", null);
 
       assertEquals(publicationSeq, publicationSeq2);
 

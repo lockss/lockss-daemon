@@ -1,5 +1,5 @@
 /*
- * $Id: TestCounterReportsJournalReport1L.java,v 1.10 2014-08-22 22:14:59 fergaloy-sf Exp $
+ * $Id: TestCounterReportsJournalReport1L.java,v 1.11 2014-08-29 20:51:26 pgust Exp $
  */
 
 /*
@@ -46,6 +46,7 @@ import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
 import org.lockss.exporter.counter.CounterReportsJournalReport1L;
 import org.lockss.exporter.counter.CounterReportsManager;
+import org.lockss.extractor.MetadataField;
 import org.lockss.metadata.MetadataManager;
 import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.test.ConfigurationUtil;
@@ -261,17 +262,18 @@ public class TestCounterReportsJournalReport1L extends LockssTestCase {
       Long publisherSeq =
 	  metadataManager.findOrCreatePublisher(conn, "publisher");
 
-      // Add the publication.
+      // Add the publication -- test direct method
       publicationSeq =
-	  metadataManager.findOrCreatePublication(conn, "12345678", "98765432",
-						  null, null, publisherSeq,
-						  "JOURNAL", null, null);
+	  metadataManager.findOrCreateJournal(conn, publisherSeq,  
+	                                      "12345678", "98765432", 
+	                                      "JOURNAL", null);
 
-      // Add an alternative name for the publication.
+      // Add an alternative name for the publication -- test indirect method
       Long publicationSeq2 =
-	  metadataManager.findOrCreatePublication(conn, "12345678", "98765432",
-						  null, null, publisherSeq,
-						  "JOURNAL_ALT", null, null);
+	  metadataManager.findOrCreatePublication(conn, publisherSeq, 
+	      "12345678", "98765432", null, null, 
+	      MetadataField.PUBLICATION_TYPE_JOURNAL,
+	      null, null, "JOURNAL_ALT", null);
 
       assertEquals(publicationSeq, publicationSeq2);
 

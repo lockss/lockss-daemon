@@ -1,5 +1,5 @@
 /*
- * $Id: TestCounterReportsRequestAggregator.java,v 1.10 2014-08-22 22:14:59 fergaloy-sf Exp $
+ * $Id: TestCounterReportsRequestAggregator.java,v 1.11 2014-08-29 20:51:26 pgust Exp $
  */
 
 /*
@@ -372,9 +372,8 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
 
       // Add the publication.
       publicationSeq =
-	  metadataManager.findOrCreatePublication(conn, null, null, "FULLPISBN",
-						  "FULLEISBN", publisherSeq,
-						  "Full Name", null, null);
+	  metadataManager.findOrCreateBook(conn, publisherSeq, null,
+	      "FULLPISBN", "FULLEISBN", "Full Name", null);
 
       // Add the publishing platform.
       Long platformSeq = metadataManager.findOrCreatePlatform(conn,
@@ -432,10 +431,8 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
 
       // Add the publication.
       publicationSeq =
-	  metadataManager.findOrCreatePublication(conn, null, null,
-	                                          "SECTIONPISBN",
-	                                          "SECTIONEISBN", publisherSeq,
-						  "Section Name", null, null);
+	  metadataManager.findOrCreateBook(conn, publisherSeq, null,
+	      "SECTIONPISBN", "SECTIONEISBN", "Section Name", null);
 
       // Add the publishing platform.
       Long platformSeq = metadataManager.findOrCreatePlatform(conn,
@@ -665,9 +662,8 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
 
       // Add the publication.
       publicationSeq =
-	  metadataManager.findOrCreatePublication(conn, "PISSN", "EISSN",
-						  null, null, publisherSeq,
-						  "JOURNAL", null, null);
+	  metadataManager.findOrCreateJournal(conn, publisherSeq, 
+	                                      "PISSN", "EISSN", null, null);
 
       // Add the publishing platform.
       Long platformSeq = metadataManager.findOrCreatePlatform(conn, "platform");
