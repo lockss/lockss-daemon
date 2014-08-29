@@ -14,11 +14,10 @@
       name = Business Systems Review ;
       eissn = 2280-3866
     >
-
-    comment[doNotProcess] = plugin not ready
     
-    au < doNotProcess; 2012 ; Business Systems Review Volume 1 ; 1 ; 2012 >
-    au < doNotProcess; 2013 ; Business Systems Review Volume 2 ; 2 ; 2013 >
+    au < testing ; 2012 ; Business Systems Review Volume 1 ; 1 ; 2012 >
+    au < testing ; 2013 ; Business Systems Review Volume 2 ; 2 ; 2013 >
+    au < expected ; 2014 ; Business Systems Review Volume 3 ; 3 ; 2014 >
  
   }
 }

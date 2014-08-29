@@ -17,10 +17,8 @@
       eissn = 2280-3866
     >
 
-    comment[doNotProcess] = plugin not ready
-
-    au < manifest ; exists ; 2012 ; Business Systems Review Volume 1 ; 1 ; 2012 >
-    au < manifest ; exists ; 2013 ; Business Systems Review Volume 2 ; 2 ; 2013 >
+    au < testing ; exists ; 2012 ; Business Systems Review Volume 1 ; 1 ; 2012 >
+    au < testing ; exists ; 2013 ; Business Systems Review Volume 2 ; 2 ; 2013 >
     au < expected ; exists ; 2014 ; Business Systems Review Volume 3 ; 3 ; 2014 >
  
   }
