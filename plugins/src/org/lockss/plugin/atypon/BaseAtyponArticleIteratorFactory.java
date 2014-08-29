@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponArticleIteratorFactory.java,v 1.7 2014-07-08 17:30:28 alexandraohlson Exp $
+ * $Id: BaseAtyponArticleIteratorFactory.java,v 1.8 2014-08-29 17:16:46 alexandraohlson Exp $
  */
 
 /*
@@ -152,8 +152,8 @@ implements ArticleIteratorFactory,
 
     // The order in which we want to define full_text_cu.  
     // First one that exists will get the job
-    builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_HTML,
-        ArticleFiles.ROLE_FULL_TEXT_PDF,
+    builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF,
+        ArticleFiles.ROLE_FULL_TEXT_HTML,
     ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE);  // this should be ROLE_PDFPLUS when it's defined
 
     // The order in which we want to define what a PDF is 

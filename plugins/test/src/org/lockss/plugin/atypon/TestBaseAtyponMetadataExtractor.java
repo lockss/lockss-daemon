@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseAtyponMetadataExtractor.java,v 1.3 2013-07-31 21:43:56 alexandraohlson Exp $
+ * $Id: TestBaseAtyponMetadataExtractor.java,v 1.4 2014-08-29 17:16:46 alexandraohlson Exp $
  */
 /*
 
@@ -100,7 +100,7 @@ public class TestBaseAtyponMetadataExtractor extends LockssTestCase {
   String goodVolume = "13";
   String goodIssue = "3";
   String goodIssn = "1540-3459";
-  String goodURL = "http://dx.doi.org/" + goodDOI;
+  String doiURL = "http://dx.doi.org/" + goodDOI;
 
   /*
    "<meta name="dc.Title" content="Title of Article"></meta>
@@ -230,7 +230,7 @@ public class TestBaseAtyponMetadataExtractor extends LockssTestCase {
     sb.append("\nDO  - ");
     sb.append(goodDOI);
     sb.append("\nUR  - ");
-    sb.append(goodURL);
+    sb.append(doiURL);
     sb.append("\nER  -");
     return sb.toString();
   }
@@ -271,7 +271,8 @@ public class TestBaseAtyponMetadataExtractor extends LockssTestCase {
 
     assertEquals(goodPublisher, md.get(MetadataField.FIELD_PUBLISHER));
     assertEquals(goodDOI, md.get(MetadataField.FIELD_DOI));
-    assertEquals(goodURL, md.get(MetadataField.FIELD_ACCESS_URL));
+    // This shouldn't get set. It will default later to fuill_text_cu
+    assertNotEquals(doiURL, md.get(MetadataField.FIELD_ACCESS_URL));
 
   }
   

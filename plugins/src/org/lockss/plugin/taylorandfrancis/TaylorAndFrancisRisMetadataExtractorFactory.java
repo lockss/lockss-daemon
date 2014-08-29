@@ -1,5 +1,5 @@
 /*
- * $Id: TaylorAndFrancisRisMetadataExtractorFactory.java,v 1.3 2013-12-02 22:11:41 alexandraohlson Exp $
+ * $Id: TaylorAndFrancisRisMetadataExtractorFactory.java,v 1.4 2014-08-29 17:16:46 alexandraohlson Exp $
  */
 
 /*
@@ -81,7 +81,7 @@ public class TaylorAndFrancisRisMetadataExtractorFactory
     TaylorAndFrancisRisMetadataExtractor tfris = new TaylorAndFrancisRisMetadataExtractor();
     
     tfris.addRisTag("A1", MetadataField.FIELD_AUTHOR); // in case they use this 
-    tfris.addRisTag("UR", MetadataField.FIELD_ACCESS_URL);
+    // Do not add the "UR" tag because it points to dx.doi.org - not an access.url in the AU      
      return tfris;
   }
   

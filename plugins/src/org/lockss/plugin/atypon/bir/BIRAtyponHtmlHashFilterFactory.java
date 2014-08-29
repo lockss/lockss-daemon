@@ -1,5 +1,5 @@
 /*
- * $Id: BIRAtyponHtmlHashFilterFactory.java,v 1.1 2014-06-19 18:05:14 alexandraohlson Exp $
+ * $Id: BIRAtyponHtmlHashFilterFactory.java,v 1.2 2014-08-29 17:16:45 alexandraohlson Exp $
  */
 
 /*
@@ -104,12 +104,9 @@ public class BIRAtyponHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFact
 
     // super.createFilteredInputStream adds bir filter to the baseAtyponFilters
     // and returns the filtered input stream using an array of NodeFilters that 
-    // combine the two arrays of NodeFilters.
-    InputStream superFiltered = super.createFilteredInputStream(au, in, encoding, filters);
-
-    // Also need white space filter to condense multiple white spaces down to 1
-    Reader reader = FilterUtil.getReader(superFiltered, encoding);
-    return new ReaderInputStream(new WhiteSpaceFilter(reader));
+    // combine the two arrays of NodeFilters; do optional white space filtering
+    boolean doWS = true; 
+    return super.createFilteredInputStream(au, in, encoding, filters, doWS);
   }
 
 }

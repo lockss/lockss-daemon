@@ -57,6 +57,8 @@ public class TestTaylorAndFrancisMetadataExtractor extends LockssTestCase {
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   private static String BASE_URL = "http://www.tandfonline.com/";  
 
+  
+  
   // setup for TEST AU#1  
   private ArchivalUnit tfau1;  
   private static final String AU1_NAME = "Life, Pain & Death Volume 19";
@@ -158,6 +160,10 @@ public class TestTaylorAndFrancisMetadataExtractor extends LockssTestCase {
   String goodAbsUrl = "http://www.tandfonline.com/doi/abs/10.1080/09639284.2010.501577";
   String goodPdfUrl = "http://www.tandfonline.com/doi/pdf/10.1080/09639284.2010.501577";
   String goodHtmUrl = "http://www.tandfonline.com/doi/full/10.1080/09639284.2010.501577";
+  
+  //because the T&F UR in ris content is usually a dx.doi.org site
+  private  String doiURL = "http://dx.doi.org/" + goodDOI; 
+
   
   /* THIS SECTION TESTS THE HTML TAG EXTRACTION */
 
@@ -384,7 +390,7 @@ public class TestTaylorAndFrancisMetadataExtractor extends LockssTestCase {
     sb.append("\nDO  - ");
     sb.append(goodDOI);
     sb.append("\nUR  - ");
-    sb.append(goodUrl1);
+    sb.append(doiURL);
     sb.append("\nER  -");
     return sb.toString();
   }
@@ -427,7 +433,8 @@ public class TestTaylorAndFrancisMetadataExtractor extends LockssTestCase {
 
     assertEquals(goodImprintPublisher, md.get(MetadataField.FIELD_PUBLISHER));
     assertEquals(goodDOI, md.get(MetadataField.FIELD_DOI));
-    assertEquals(goodUrl1, md.get(MetadataField.FIELD_ACCESS_URL));
+    // The access url should not be set. Daemon will use full_text_cu
+    assertNotEquals(doiURL, md.get(MetadataField.FIELD_ACCESS_URL));
 
   }
   

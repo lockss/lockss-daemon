@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponRisMetadataExtractorFactory.java,v 1.2 2013-07-31 21:43:58 alexandraohlson Exp $
+ * $Id: BaseAtyponRisMetadataExtractorFactory.java,v 1.3 2014-08-29 17:16:46 alexandraohlson Exp $
  */
 
 /*
@@ -44,6 +44,8 @@ import org.lockss.util.Logger;
  *  NOTE: I have found the following:
  *  JO is often used (incorrectly) but consistently as the abbreviated form of the journal title, use JF and then T2 in preference
  *  Y1 usually is the same as DA, but not always, use DA if it's there
+ *  DO NOT pick up the "UR" because it often points to dx.doi.org stable URL which 
+ *  will not exist in the AU.  We must manually set the access_url
 TY  - JOUR
 T1  - <article title>
 AU  - <author>
@@ -81,7 +83,7 @@ implements FileMetadataExtractorFactory {
     BaseAtyponRisMetadataExtractor ba_ris = new BaseAtyponRisMetadataExtractor();
 
     ba_ris.addRisTag("A1", MetadataField.FIELD_AUTHOR);
-    ba_ris.addRisTag("UR", MetadataField.FIELD_ACCESS_URL);
+    // Do not use UR listed in the ris file! It will get set to full text CU by daemon
     return ba_ris;
   }
 
