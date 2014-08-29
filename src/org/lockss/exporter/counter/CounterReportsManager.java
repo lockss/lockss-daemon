@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsManager.java,v 1.16 2014-08-22 22:14:59 fergaloy-sf Exp $
+ * $Id: CounterReportsManager.java,v 1.17 2014-08-29 20:43:22 pgust Exp $
  */
 
 /*
@@ -345,8 +345,8 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
       // Get the identifier of the dummy publication used for the aggregation of
       // all book requests.
       allBooksPublicationSeq = metadataManager
-	  .findOrCreatePublication(conn, null, null, "CRBPISBN", "CRBEISBN",
-	                           publisherSeq, ALL_BOOKS_NAME, null, null);
+	  .findOrCreateBook(conn, publisherSeq, null,  
+	      "CRBPISBN", "CRBEISBN", ALL_BOOKS_NAME, null);
       log.debug2(DEBUG_HEADER + "allBooksPublicationSeq = "
 	  + allBooksPublicationSeq);
 
@@ -361,8 +361,8 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
       // Get the identifier of the dummy publication used for the aggregation of
       // all journal requests.
       allJournalsPublicationSeq = metadataManager
-	  .findOrCreatePublication(conn, "CRJPISSN", "CRJEISSN", null,null,
-	                           publisherSeq, ALL_JOURNALS_NAME, null, null);
+	  .findOrCreateJournal(conn, publisherSeq, 
+	                       "CRJPISSN", "CRJEISSN", ALL_JOURNALS_NAME, null);
       log.debug2(DEBUG_HEADER + "allJournalsPublicationSeq = "
 	  + allJournalsPublicationSeq);
 
