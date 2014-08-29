@@ -1,5 +1,5 @@
 /*
- * $Id: TestSubscriptionManager.java,v 1.10 2014-08-22 22:15:00 fergaloy-sf Exp $
+ * $Id: TestSubscriptionManager.java,v 1.11 2014-08-29 20:53:43 pgust Exp $
  */
 
 /*
@@ -1343,9 +1343,10 @@ public class TestSubscriptionManager extends LockssTestCase {
 	metadataManager.addPublisher(conn, "Publisher of [Title of [vol123]]");
 
     // Create the publication.
-    Long publicationSeq = metadataManager.addPublication(conn, null,
-	MD_ITEM_TYPE_JOURNAL, "Title of [vol123]", "id:11171508429",
-	publisherSeq);
+    Long publicationSeq = 
+        metadataManager.addPublication(conn, publisherSeq, null,
+                                       MD_ITEM_TYPE_JOURNAL, 
+                                       "Title of [vol123]", "id:11171508429");
 
     // Create the publishing platform.
     Long platformSeq = dbManager.addPlatform(conn, NO_PLATFORM);
