@@ -1,5 +1,5 @@
 /*
- * $Id: TdbAu.java,v 1.30 2014-07-24 20:46:23 fergaloy-sf Exp $
+ * $Id: TdbAu.java,v 1.31 2014-08-29 20:40:47 pgust Exp $
  */
 
 /*
@@ -254,22 +254,66 @@ public class TdbAu implements BibliographicItem, Comparable<TdbAu> {
   };
   
   /**
-   * Get the proprietary ID of the AU. This is a publisher spececified
-   * value found in the 'journal_id' attribute or parameter.
-   * 
-   * @return the name of this AU
+   * Array of props/attrs that can be used as a publisher-specified
+   * book id.
    */
-  public String getProprietaryId() {
+  private final String[] book_ids = {
+      "book_id",
+      "book_code",
+      "book_abbr"
+  };
+
+  /**
+   * Get an the attribute or parameter value associated with
+   * one of the ID names in the input array.
+   * 
+   * @param ids an array of ids
+   * @return the first value found for one of the ids
+   */
+  private String getId(String[] ids) {
     // give priority to attributes over params for overriding
-    for (String journal_id : journal_ids) {
-      String propId = getAttr(journal_id);
+    for (String id : ids) {
+      String propId = getAttr(id);
       if (!StringUtil.isNullString(propId)) return propId;
     }
-    for (String journal_id : journal_ids) {
-      String propId = getParam(journal_id);
+    for (String id : ids) {
+      String propId = getParam(id);
       if (!StringUtil.isNullString(propId)) return propId;
     }
     return null;
+  }
+  
+  /**
+   * Get the proprietary ID. For journals, this is a publisher specified 
+   * value of the title found in the 'journal_id' attribute or parameter 
+   * For books and book series, this is a publisher specified value for 
+   * a book represented by an AU in the "book_id" attribute or parameter.
+   * Use getProprietarySeriesId() for the publisher specified proprietary 
+   * series ID. 
+   * 
+   * @return the name of this AU
+   */
+  @Override
+  public String getProprietaryId() {
+    String pubType = getPublicationType();
+    String[] ids = journal_ids;
+    if (   pubType.equalsIgnoreCase("book")
+        || pubType.equals("bookSeries")) {
+      ids = book_ids;
+    }
+    return getId(ids);
+  }
+  
+  /**
+   * Get the proprietary series ID. This is a publisher spececified value
+   * found in the 'journal_id' attribute or parameter of a book series.
+   * 
+   * @return the name of this AU
+   */
+  @Override
+  public String getProprietarySeriesId() {
+    String pubType = getPublicationType();
+    return (pubType.equals("bookSeries")) ? getId(journal_ids) : null;
   }
   
   /**
@@ -281,6 +325,7 @@ public class TdbAu implements BibliographicItem, Comparable<TdbAu> {
   public TdbAu.Id getId() {
     return tdbAuId;
   }
+
   /**
    * Get the TdbPublisher for this AU.
    * 
@@ -644,18 +689,21 @@ public class TdbAu implements BibliographicItem, Comparable<TdbAu> {
    */
   public String getIssue() {
     String issue = getAttr("issue");
-    for (String key : new String[] {
-        "issue",
-        "num_issue_range",
-        "issue_set",
-        "issue_no",
-        "issues",
-        "issue_no.",
-        "issue_dir"
-    }) {
-      if (issue == null) {
+    if (issue == null) {
+      for (String key : new String[] {
+          "issue",
+          "num_issue_range",
+          "issue_set",
+          "issue_no",
+          "issues",
+          "issue_no.",
+          "issue_dir"
+      }) {
         issue = getParam(key);
-      } else return issue;
+        if (issue != null) {
+          break;
+        }
+      }
     }
     return issue;
   }
@@ -718,6 +766,7 @@ public class TdbAu implements BibliographicItem, Comparable<TdbAu> {
    * 
    * @return the print ISSN for this title or <code>null</code> if not specified
    */
+  @Override
   public String getPrintIssn() {
     return (props == null) ? null : props.get("issn");
   }
@@ -728,6 +777,7 @@ public class TdbAu implements BibliographicItem, Comparable<TdbAu> {
    * 
    * @return the eISSN for this title or <code>null</code> if not specified
    */
+  @Override
   public String getEissn() {
     return (props == null) ? null : props.get("eissn");
   }
@@ -738,6 +788,7 @@ public class TdbAu implements BibliographicItem, Comparable<TdbAu> {
    * 
    * @return the ISSN-L for this title or <code>null</code> if not specified
    */
+  @Override
   public String getIssnL() {
     return (props == null) ? null : props.get("issnl");
   }
@@ -751,6 +802,7 @@ public class TdbAu implements BibliographicItem, Comparable<TdbAu> {
    * @return representative for this title or <code>null</code> if not 
    *  specified or is ill-formed
    */
+  @Override
   public String getIssn() {
     String issn = getIssnL();
     if (!MetadataUtil.isIssn(issn)) {
@@ -770,6 +822,7 @@ public class TdbAu implements BibliographicItem, Comparable<TdbAu> {
    * 
    * @return the print ISBN for this TdbAu or <code>null</code> if not specified
    */
+  @Override
   public String getPrintIsbn() {
     String printIsbn = (attrs == null) ? null : attrs.get("isbn");
     if (logger.isDebug3() && printIsbn != null) {
@@ -783,6 +836,7 @@ public class TdbAu implements BibliographicItem, Comparable<TdbAu> {
    * 
    * @return the print ISBN for this TdbAu or <code>null</code> if not specified
    */
+  @Override
   public String getEisbn() {
     String eisbn = (attrs == null) ? null : attrs.get("eisbn");
     if (logger.isDebug3() && eisbn != null) {
@@ -800,6 +854,7 @@ public class TdbAu implements BibliographicItem, Comparable<TdbAu> {
    * @return the ISBN for this title or <code>null</code> if not specified
    *  or is malformed
    */
+  @Override
   public String getIsbn() {
     String isbn = getEisbn();
     if (!MetadataUtil.isIsbn(isbn)) {
@@ -819,6 +874,7 @@ public class TdbAu implements BibliographicItem, Comparable<TdbAu> {
    * a delimited list of ranges.
    * @return the start year or <code>null</code> if not specified
    */
+  @Override
   public String getStartYear() {
     return BibliographicUtil.getRangeSetStart(getYear());
   }
@@ -828,6 +884,7 @@ public class TdbAu implements BibliographicItem, Comparable<TdbAu> {
    * a delimited list of ranges.
    * @return the end year or <code>null</code> if not specified
    */
+  @Override
   public String getEndYear() {
     return BibliographicUtil.getRangeSetEnd(getYear());
   }
@@ -867,6 +924,7 @@ public class TdbAu implements BibliographicItem, Comparable<TdbAu> {
    * with a hyphen, the string is returned whole.
    * @return the start volume or <code>null</code> if not specified
    */
+  @Override
   public String getStartVolume() {
     return BibliographicUtil.getRangeSetStart(getVolume());
   }
@@ -877,6 +935,7 @@ public class TdbAu implements BibliographicItem, Comparable<TdbAu> {
    * with a hyphen, the string is returned whole.
    * @return the end volume or <code>null</code> if not specified
    */
+  @Override
   public String getEndVolume() {
     return BibliographicUtil.getRangeSetEnd(getVolume());
   }
@@ -907,6 +966,7 @@ public class TdbAu implements BibliographicItem, Comparable<TdbAu> {
    * @param tdbau the TdbAu
    * @return the volume name or <code>null</code> if not specified.
    */
+  @Override
   public String getVolume() {
     String auVolume = getAttr("volume");
     if (auVolume == null) {
