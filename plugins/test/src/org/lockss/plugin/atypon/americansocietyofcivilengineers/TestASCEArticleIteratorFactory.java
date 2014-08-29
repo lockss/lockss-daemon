@@ -1,5 +1,5 @@
 /*
- * $Id: TestASCEArticleIteratorFactory.java,v 1.2 2014-07-21 03:28:30 tlipkis Exp $
+ * $Id: TestASCEArticleIteratorFactory.java,v 1.3 2014-08-29 17:22:37 alexandraohlson Exp $
  */
 
 /*
@@ -87,7 +87,7 @@ public class TestASCEArticleIteratorFactory extends ArticleIteratorTestCase {
   private final String EXPECTED_FULL_URL = "http://ascelibrary.org/doi/full/10.1061/%28ASCE%291076-0431%282009%2915%3A1%2814%29";
   private final String EXPECTED_REF_URL = "http://ascelibrary.org/doi/ref/10.1061/%28ASCE%291076-0431%282009%2915%3A1%2814%29";
   private final String EXPECTED_PDF_URL = "http://ascelibrary.org/doi/pdf/10.1061/%28ASCE%291076-0431%282009%2915%3A1%2814%29";
-  private final String EXPECTED_FULL_TEXT_URL = EXPECTED_FULL_URL;
+  private final String EXPECTED_FULL_TEXT_URL = EXPECTED_PDF_URL;
 
   public void setUp() throws Exception {
     super.setUp();
