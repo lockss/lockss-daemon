@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.54 2014-08-25 08:57:03 tlipkis Exp $
+ * $Id: OpenUrlResolver.java,v 1.55 2014-08-29 20:41:27 pgust Exp $
  */
 
 /*
@@ -1269,7 +1269,7 @@ public class OpenUrlResolver {
       String plaheholder = "?";
       for (String issn : issns) {
         where.append(plaheholder);
-        args.add(issn.replaceAll("-", "")); // strip punctuation
+        args.add(MetadataUtil.toUnpunctuatedIssn(issn)); // strip punctuation
         plaheholder = ",?";
       }
       where.append(")");
@@ -2079,10 +2079,15 @@ public class OpenUrlResolver {
     OpenUrlInfo resolved = noOpenUrlInfo;
     Connection conn = null;
 
+    // error if input ISBN is not a ISBN-10 or ISBN-13
+    String strippedIsbn10 = MetadataUtil.toUnpunctuatedIsbn10(isbn);
+    String strippedIsbn13 = MetadataUtil.toUnpunctuatedIsbn13(isbn);
+    if ((strippedIsbn10 == null) && (strippedIsbn13 == null)) {
+      return resolved;
+    }
+
     try {
       conn = dbMgr.getConnection();
-      // strip punctuation
-      isbn = isbn.replaceAll("[- ]", "");
       
       StringBuilder query = new StringBuilder();
       StringBuilder from = new StringBuilder();
@@ -2112,10 +2117,19 @@ public class OpenUrlResolver {
       where.append("pu." + MD_ITEM_SEQ_COLUMN);
       where.append(" and pu." + MD_ITEM_SEQ_COLUMN + " = ");
       where.append("i." + MD_ITEM_SEQ_COLUMN);
-      where.append(" and i." + ISBN_COLUMN + " = ?");
+      where.append(" and i." + ISBN_COLUMN);
 
-      String strippedIsbn = isbn.replaceAll("-", "");
-      args.add(strippedIsbn); // strip punctuation
+      if ((strippedIsbn10 != null) && (strippedIsbn13 != null)) {
+        // check both ISBN-10 and ISBN-13 forms
+        where.append(" in (?,?)");
+        args.add(strippedIsbn10);
+        args.add(strippedIsbn13);
+      } else {
+        // can't convert to ISBN-10 or ISBN-13 because input isbn 
+        // is not well formed, so use whichever one is available
+        where.append(" = ?");
+        args.add((strippedIsbn13 != null) ? strippedIsbn13 : strippedIsbn10);
+      }
 
       boolean hasBookSpec = 
     	(date != null) || (volume != null) || (edition != null); 
