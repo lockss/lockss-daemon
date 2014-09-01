@@ -1,5 +1,5 @@
 /*
- * $Id: RegexpCssLinkRewriterFactory.java,v 1.4 2013-04-14 05:24:27 tlipkis Exp $
+ * $Id: RegexpCssLinkRewriterFactory.java,v 1.5 2014-09-01 23:40:43 tlipkis Exp $
  */
 
 /*
@@ -91,7 +91,7 @@ public class RegexpCssLinkRewriterFactory implements LinkRewriterFactory {
     // (G2) URI
     // (G3) = G1
 
-  private static CssLinkRewriterUrlEncodeMode urlEncodeMode =
+  private CssLinkRewriterUrlEncodeMode urlEncodeMode =
     DEFAULT_URL_ENCODE;
 
   private static final int GQUOTE1 = 1;
@@ -113,19 +113,6 @@ public class RegexpCssLinkRewriterFactory implements LinkRewriterFactory {
 
   private int maxBuf = DEFAULT_MAX_BUF;
   private int overlap = DEFAULT_OVERLAP;
-
-  /** Called by org.lockss.config.MiscConfig
-   */
-  public static void setConfig(Configuration config,
-			       Configuration oldConfig,
-			       Configuration.Differences diffs) {
-    if (diffs.contains(PARAM_URL_ENCODE)) {
-      urlEncodeMode =
-	(CssLinkRewriterUrlEncodeMode)
-	config.getEnum(CssLinkRewriterUrlEncodeMode.class,
-		       PARAM_URL_ENCODE, DEFAULT_URL_ENCODE);
-    }
-  }
 
   public RegexpCssLinkRewriterFactory() {
   }
@@ -154,6 +141,7 @@ public class RegexpCssLinkRewriterFactory implements LinkRewriterFactory {
       throw new IllegalArgumentException(e);
     }
     log.debug("Rewriting " + srcUrl + " in AU " + au);
+    setConfig();
     Collection<String> urlStems = au.getUrlStems();
     StringBuilder out = new StringBuilder();
 
@@ -267,4 +255,13 @@ public class RegexpCssLinkRewriterFactory implements LinkRewriterFactory {
       return UrlUtil.encodeQueryArg(str);
     }
   }
+
+  private void setConfig() {
+    Configuration config = ConfigManager.getCurrentConfig();
+    urlEncodeMode =
+      (CssLinkRewriterUrlEncodeMode)
+      config.getEnum(CssLinkRewriterUrlEncodeMode.class,
+		     PARAM_URL_ENCODE, DEFAULT_URL_ENCODE);
+  }
+
 }
