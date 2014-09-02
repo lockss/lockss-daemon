@@ -577,7 +577,7 @@
     au < finished ; crawling ; 2010 ; Cellular & Molecular Immunology Volume 7 ; 2010 ; 7 >
     au < finished ; crawling ; 2011 ; Cellular & Molecular Immunology Volume 8 ; 2011 ; 8 >
     au < finished ; crawling ; 2012 ; Cellular & Molecular Immunology Volume 9 ; 2012 ; 9 >
-    au < exists ; exists ; 2013 ; Cellular & Molecular Immunology Volume 10 ; 2013 ; 10 >
+    au < manifest ; exists ; 2013 ; Cellular & Molecular Immunology Volume 10 ; 2013 ; 10 >
     au < manifest ; exists ; 2014 ; Cellular & Molecular Immunology Volume 11 ; 2014 ; 11 >
 
   }
@@ -696,8 +696,8 @@
     param[journal_id] = psp
     comment[publisher] = moving to Wiley Blackwell, effective on 2015-01-01
     
-    au < exists ; exists ; 2012 ; CPT: Pharmacometrics & Systems Pharmacology Volume 1 ; 2012 ; 1 >
-    au < exists ; exists ; 2013 ; CPT: Pharmacometrics & Systems Pharmacology Volume 2 ; 2013 ; 2 >
+    au < manifest ; exists ; 2012 ; CPT: Pharmacometrics & Systems Pharmacology Volume 1 ; 2012 ; 1 >
+    au < manifest ; exists ; 2013 ; CPT: Pharmacometrics & Systems Pharmacology Volume 2 ; 2013 ; 2 >
     au < manifest ; exists ; 2014 ; CPT: Pharmacometrics & Systems Pharmacology Volume 3 ; 2014 ; 3 >
 
   }
@@ -768,8 +768,8 @@
 
     param[journal_id] = emi
 
-    au < exists ; exists ; 2012 ; Emerging Microbes & Infections Volume 1 ; 2012 ; 1 >
-    au < exists ; exists ; 2013 ; Emerging Microbes & Infections Volume 2 ; 2013 ; 2 >
+    au < manifest ; exists ; 2012 ; Emerging Microbes & Infections Volume 1 ; 2012 ; 1 >
+    au < manifest ; exists ; 2013 ; Emerging Microbes & Infections Volume 2 ; 2013 ; 2 >
     au < manifest ; exists ; 2014 ; Emerging Microbes & Infections Volume 3 ; 2014 ; 3 >
 
   }
@@ -1025,12 +1025,12 @@
     au < exists ; exists ; 2005 ; Genetics in Medicine Volume 7 ; 2005 ; 7 >
     au < exists ; exists ; 2006 ; Genetics in Medicine Volume 8 ; 2006 ; 8 >
     au < exists ; exists ; 2007 ; Genetics in Medicine Volume 9 ; 2007 ; 9 >
-    au < exists ; exists ; 2008 ; Genetics in Medicine Volume 10 ; 2008 ; 10 >
-    au < exists ; exists ; 2009 ; Genetics in Medicine Volume 11 ; 2009 ; 11 >
+    au < manifest ; exists ; 2008 ; Genetics in Medicine Volume 10 ; 2008 ; 10 >
+    au < manifest ; exists ; 2009 ; Genetics in Medicine Volume 11 ; 2009 ; 11 >
     au < down ; exists ; 2010 ; Genetics in Medicine Volume 12 [to delete] ; 2010 ; 12 >
     au < down ; exists ; 2011 ; Genetics in Medicine Volume 13 [to delete] ; 2011 ; 13 >
     au < finished ; frozen ; 2012 ; Genetics in Medicine Volume 14 ; 2012 ; 14 >
-    au < exists ; exists ; 2013 ; Genetics in Medicine Volume 15 ; 2013 ; 15 >
+    au < manifest ; exists ; 2013 ; Genetics in Medicine Volume 15 ; 2013 ; 15 >
     au < expected ; exists ; 2014 ; Genetics in Medicine Volume 16 ; 2014 ; 16 >
 
   }
@@ -1920,12 +1920,12 @@
     au < exists ; exists ; 2006 ; Kidney International Volume 70 (2006) ; 2006 ; 70 >
     au < exists ; exists ; 2007 ; Kidney International Volume 71 (2007) ; 2007 ; 71 >
     au < exists ; exists ; 2007 ; Kidney International Volume 72 (2007) ; 2007 ; 72 >
-    au < exists ; exists ; 2008 ; Kidney International Volume 73 (2008) ; 2008 ; 73 >
-    au < exists ; exists ; 2008 ; Kidney International Volume 74 (2008) ; 2008 ; 74 >
-    au < exists ; exists ; 2009 ; Kidney International Volume 75 (2009) ; 2009 ; 75 >
-    au < exists ; exists ; 2009 ; Kidney International Volume 76 (2009) ; 2009 ; 76 >
-    au < exists ; exists ; 2010 ; Kidney International Volume 77 (2010) ; 2010 ; 77 >
-    au < exists ; exists ; 2010 ; Kidney International Volume 78 (2010) ; 2010 ; 78 >
+    au < manifest ; exists ; 2008 ; Kidney International Volume 73 (2008) ; 2008 ; 73 >
+    au < manifest ; exists ; 2008 ; Kidney International Volume 74 (2008) ; 2008 ; 74 >
+    au < manifest ; exists ; 2009 ; Kidney International Volume 75 (2009) ; 2009 ; 75 >
+    au < manifest ; exists ; 2009 ; Kidney International Volume 76 (2009) ; 2009 ; 76 >
+    au < manifest ; exists ; 2010 ; Kidney International Volume 77 (2010) ; 2010 ; 77 >
+    au < manifest ; exists ; 2010 ; Kidney International Volume 78 (2010) ; 2010 ; 78 >
     au < finished ; crawling ; 2011 ; Kidney International Volume 79 ; 2011 ; 79 >
     au < crawling ; exists ; 2011 ; Kidney International Volume 80 ; 2011 ; 80 >
     au < finished ; crawling ; 2012 ; Kidney International Volume 81 ; 2012 ; 81 >
@@ -1945,8 +1945,8 @@
     param[journal_id] = kisup
 
     au < finished ; frozen ; 2011 ; Kidney International Supplements Volume 1 ; 2011 ; 1 >
-    au < exists ; exists ; 2012 ; Kidney International Supplements Volume 2 ; 2012 ; 2 >
-    au < exists ; exists ; 2013 ; Kidney International Supplements Volume 3 ; 2013 ; 3 >
+    au < manifest ; exists ; 2012 ; Kidney International Supplements Volume 2 ; 2012 ; 2 >
+    au < manifest ; exists ; 2013 ; Kidney International Supplements Volume 3 ; 2013 ; 3 >
     au < expected ; exists ; 2014 ; Kidney International Supplements Volume 4 ; 2014 ; 4 >
 
   }
@@ -2134,7 +2134,7 @@
     param[journal_id] = mtna
 
     au < finished ; frozen ; 2012 ; Molecular Therapy - Nucleic Acids Volume 1 ; 2012 ; 1 >
-    au < exists ; exists ; 2013 ; Molecular Therapy - Nucleic Acids Volume 2 ; 2013 ; 2 >
+    au < manifest ; exists ; 2013 ; Molecular Therapy - Nucleic Acids Volume 2 ; 2013 ; 2 >
     au < manifest ; exists ; 2014 ; Molecular Therapy - Nucleic Acids Volume 3 ; 2014 ; 3 >
 
   }
@@ -3764,7 +3764,7 @@
     
     au < finished ; crawling ; 2011 ; Nutrition & Diabetes Volume 1 ; 2011 ; 1 >
     au < finished ; crawling ; 2012 ; Nutrition & Diabetes Volume 2 ; 2012 ; 2 >
-    au < exists ; exists ; 2013 ; Nutrition & Diabetes Volume 3 ; 2013 ; 3 >
+    au < manifest ; exists ; 2013 ; Nutrition & Diabetes Volume 3 ; 2013 ; 3 >
     au < manifest ; exists ; 2014 ; Nutrition & Diabetes Volume 4 ; 2014 ; 4 >
   
   }
