@@ -1,5 +1,5 @@
 /*
- * $Id: SilverchairHtmlHashFilterFactory.java,v 1.3 2014-05-14 18:50:38 thib_gc Exp $
+ * $Id: SilverchairHtmlHashFilterFactory.java,v 1.4 2014-09-02 22:17:23 thib_gc Exp $
  */
 
 /*
@@ -91,6 +91,8 @@ public class SilverchairHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "scm6MainContent_divDisclosures"),
         // Erratum link from old to new article [APA]
         HtmlNodeFilters.tagWithAttribute("div", "id", "scm6MainContent_divErratum"),
+        // First page preview sometimes appears, sometimes not [AMA]
+        HtmlNodeFilters.tagWithAttribute("div", "id", "divFirstPagePreview"),
         /*
          * The right column ('portletColumn') is likely to reference articles
          * (most read, related articles, most recent articles...), but it also

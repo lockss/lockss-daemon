@@ -1,5 +1,5 @@
 /*
- * $Id: SilverchairHtmlCrawlFilterFactory.java,v 1.4 2014-06-06 22:21:39 thib_gc Exp $
+ * $Id: SilverchairHtmlCrawlFilterFactory.java,v 1.5 2014-09-02 22:17:23 thib_gc Exp $
  */
 
 /*
@@ -35,11 +35,9 @@ package org.lockss.plugin.silverchair;
 import java.io.*;
 import java.util.*;
 
-import org.apache.commons.io.IOUtils;
 import org.htmlparser.*;
 import org.htmlparser.filters.*;
 import org.lockss.daemon.PluginException;
-import org.lockss.extractor.LinkExtractor.Callback;
 import org.lockss.filter.HtmlTagFilter;
 import org.lockss.filter.HtmlTagFilter.TagPair;
 import org.lockss.filter.html.*;
@@ -97,6 +95,8 @@ public class SilverchairHtmlCrawlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "scm6MainContent_divDisclosures"),
         // Erratum link from old to new article [APA]
         HtmlNodeFilters.tagWithAttribute("div", "id", "scm6MainContent_divErratum"),
+        // First page preview sometimes appears, sometimes not [AMA]
+        HtmlNodeFilters.tagWithAttribute("div", "id", "divFirstPagePreview"),
         /*
          * The right column ('portletColumn') is likely to reference articles
          * (most read, related articles, most recent articles...), but it also
