@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.28 2014-04-23 20:44:30 tlipkis Exp $
+ * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.29 2014-09-02 00:18:40 tlipkis Exp $
  */
 
 /*
@@ -608,10 +608,14 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     }
   
     public void testAbsRewriting() throws Exception {
+      ConfigurationUtil.addFromArgs(RegexpCssLinkRewriterFactory.PARAM_URL_ENCODE,
+  				  "Minimal");
       testRewriting("Abs", orig, ISO, xformed, false);
     }
   
     public void testHostRelativeRewriting() throws Exception {
+      ConfigurationUtil.addFromArgs(RegexpCssLinkRewriterFactory.PARAM_URL_ENCODE,
+  				  "Minimal");
       testRewriting("Hostrel", orig, ISO, xformed, true);
     }
   
@@ -630,8 +634,8 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     }
   
     public void testScriptRewritingMinimal() throws Exception {
-      testRewriting("CSS abs minimal encoding", origScript, ISO, xformedScript,
-  		  false);
+      testRewriting("Script abs minimal encoding", origScript, ISO,
+		    xformedScript, false);
     }
    
     public void testCharsetWrong() throws Exception {
