@@ -765,7 +765,7 @@
     au < released ; 2010 ; Economic Indicators 2010 ; 2010 >
     au < released ; 2011 ; Economic Indicators 2011 ; 2011 >
     au < released ; 2012 ; Economic Indicators 2012 ; 2012 >
-    au < testing ; 2013 ; Economic Indicators 2013 ; 2013 >
+    au < ready ; 2013 ; Economic Indicators 2013 ; 2013 >
     au < manifest ; 2014 ; Economic Indicators 2014 ; 2014 >
       
   }
@@ -938,7 +938,7 @@
     au < released ; 2007 ; House Rules and Manual 2007 ; 2007 >
     au < released ; 2009 ; House Rules and Manual 2009 ; 2009 >
     au < released ; 2011 ; House Rules and Manual 2011 ; 2011 >
-    au < testing ; 2013 ; House Rules and Manual 2013 ; 2013 >
+    au < ready ; 2013 ; House Rules and Manual 2013 ; 2013 >
 	      
   }
 
@@ -1205,7 +1205,7 @@
     au < doesNotExist ; 2010 ; United States Government Manual 2010 ; 2010 >
     au < released ; 2011 ; United States Government Manual 2011 ; 2011 >
     au < manifest ; 2012 ; United States Government Manual 2012 ; 2012 >
-    au < testing ; 2013 ; United States Government Manual 2013 ; 2013 >
+    au < ready ; 2013 ; United States Government Manual 2013 ; 2013 >
     au < expected ; 2014 ; United States Government Manual 2014 ; 2014 >
 
   }
