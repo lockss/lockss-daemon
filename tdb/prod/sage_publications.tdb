@@ -32087,7 +32087,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2011-2012 ; Phi Delta Kappan Volume 93 ; 93 >
         au < doNotProcess ; 2012-2013 ; Phi Delta Kappan Volume 94 ; 94 >
         au < doNotProcess ; 2013-2014 ; Phi Delta Kappan Volume 95 ; 95 >
-        au < exists ; 2014-2015 ; Phi Delta Kappan Volume 96 ; 96 >
+        au < manifest ; 2014-2015 ; Phi Delta Kappan Volume 96 ; 96 >
     }
 
     {
@@ -34976,7 +34976,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011-2012 ; Rehabilitation Counseling Bulletin Volume 55 ; 55 >
         au < released ; 2012-2013 ; Rehabilitation Counseling Bulletin Volume 56 ; 56 >
         au < manifest ; 2013-2014 ; Rehabilitation Counseling Bulletin Volume 57 ; 57 >
-        au < expected ; 2014-2015 ; Rehabilitation Counseling Bulletin Volume 58 ; 58 >
+        au < manifest ; 2014-2015 ; Rehabilitation Counseling Bulletin Volume 58 ; 58 >
 
       }
 
@@ -45112,6 +45112,25 @@ comment[mpj] = now published by Brill
     {
     
       title <
+        name = International Journal of Care Coordination ;
+        issn = 2053-4354 ;
+        eissn = 2053-4353 ;
+        issnl = 2053-4354
+      >
+  
+        plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+        param[base_url] = http://icp.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+        
+        comment[continues] = 2040-4026
+  
+        au < manifest ; 2014 ; International Journal of Care Coordination Volume 17 ; 17 >
+  
+    }
+  
+    {
+    
+      title <
         name = International Journal of Care Pathways ;
         issn = 2040-4026 ;
         eissn = 2040-4034 ;
@@ -45125,6 +45144,8 @@ comment[mpj] = now published by Brill
         pluginPrefix = org.lockss.plugin.highwire.
         param[base_url] = http://icp.sagepub.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+        comment[continued_by] = 2053-4354
   
         au < HighWirePressH20Plugin ; manifest ; 2005 ; International Journal of Care Pathways Volume 9 ; 9 >
         au < HighWirePressH20Plugin ; manifest ; 2006 ; International Journal of Care Pathways Volume 10 ; 10 >
@@ -45134,8 +45155,6 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; manifest ; 2010 ; International Journal of Care Pathways Volume 14 ; 14 >
         au < HighWirePressH20Plugin ; manifest ; 2011 ; International Journal of Care Pathways Volume 15 ; 15 >
         au < HighWirePressH20Plugin ; released ; 2012 ; International Journal of Care Pathways Volume 16 ; 16 >
-        au < HighWirePressH20Plugin ; expected ; 2013 ; International Journal of Care Pathways Volume 17 ; 17 >
-        au < HighWirePressH20Plugin ; expected ; 2014 ; International Journal of Care Pathways Volume 18 ; 18 >
   
       }
   
