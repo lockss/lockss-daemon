@@ -11,8 +11,7 @@
   
     title < 
       name = International Journal of Infection Control ;
-      issn = 1948-6529 ;
-      eissn = 1946-5343 
+      eissn = 1996-9783 
     >
     
     param[base_url] = http://www.ijic.info/
@@ -43,6 +42,22 @@
     au < exists ; 2012 ; Pakistaniaat Volume 4 ; 4 ; 2012 >
     au < exists ; 2013 ; Pakistaniaat Volume 5 ; 5 ; 2013 >
     au < expected ; 2014 ; Pakistaniaat Volume 6 ; 6 ; 2014 >
+    
+  }
+  
+  {
+  
+    title < 
+      name = Understanding and Dismantling Privilege
+    >
+    
+    param[base_url] = http://www.wpcjournal.com/
+    param[journal_id] = ?
+
+    au < exists ; 2010 ; Understanding and Dismantling Privilege Volume 1 ; 1 ; 2010 >
+    au < exists ; 2012 ; Understanding and Dismantling Privilege Volume 2 ; 2 ; 2012 >
+    au < exists ; 2013 ; Understanding and Dismantling Privilege Volume 3 ; 3 ; 2013 >
+    au < exists ; 2014 ; Understanding and Dismantling Privilege Volume 4 ; 4 ; 2014 >
     
   }
   
