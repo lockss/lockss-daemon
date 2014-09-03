@@ -22,7 +22,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>7</string>
+    <string>8</string>
   </entry>
     <entry>
     <string>plugin_feature_version_map</string>
@@ -59,22 +59,22 @@
       <string>"^%s%d/.+\.xlsx$", base_url, year</string>
     </list>
   </entry>
-  
-    <entry>
+
+  <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.clockss.tangram.TangramSourceArticleIteratorFactory</string>
   </entry>
-  <!--
+
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.associationforcomputingmachinery.ACMSourceArticleIteratorFactory</string>
+    <string>org.lockss.plugin.clockss.tangram.TangramSourceArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>text/xml_metadata_extractor_factory_map</string>
     <map>
       <entry>
         <string>*</string>
-        <string>org.lockss.plugin.associationforcomputingmachinery.ACMSourceXmlMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.clockss.tangram.TangramSourceXmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>
@@ -83,13 +83,12 @@
     <map>
       <entry>
         <string>*</string>
-        <string>org.lockss.plugin.associationforcomputingmachinery.ACMSourceXmlMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.clockss.tangram.TangramSourceXmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>
   <entry>
     <string>text/html_link_extractor_factory</string>
     <string>org.lockss.plugin.clockss.ClockssSourceHtmlLinkExtractorFactory</string>
-  </entry
--->
+  </entry>
 </map>

@@ -1,5 +1,5 @@
 /*
- * $Id: TangramSourceArticleIteratorFactory.java,v 1.1 2014-06-30 14:43:18 aishizaki Exp $
+ * $Id: TangramSourceArticleIteratorFactory.java,v 1.2 2014-09-03 17:25:53 aishizaki Exp $
  */
 
 /*
@@ -50,18 +50,17 @@ public class TangramSourceArticleIteratorFactory implements ArticleIteratorFacto
 
   protected static Logger log = Logger.getLogger(TangramSourceArticleIteratorFactory.class);
 
-  public static final Pattern XLSX_PATTERN = Pattern.compile("/(.*)\\.xlsx$", Pattern.CASE_INSENSITIVE);
-  public static final String XLSX_REPLACEMENT = "/$1.xlsx";
+  public static final Pattern XML_PATTERN = Pattern.compile("/(.*)\\.xml$", Pattern.CASE_INSENSITIVE);
+  public static final String XML_REPLACEMENT = "/$1.xml";
   
   // ROOT_TEMPLATE doesn't need to be defined as sub-tree is entire tree under base/year
   //could handle any number of subdirectories under the year so long as end in .xml
-  protected static final String PATTERN_TEMPLATE = "\"^%s%d/(.*)\\.xlsx$\",base_url,year";
+  protected static final String PATTERN_TEMPLATE = "\"^%s%d/(.*)\\.xml$\",base_url,year";
   //
   // The source content structure looks like this:
-  // <root_location>/<year>/<possible subdirectories>/<STUFF>
-  //     where STUFF is a series of files:  <name>.pdf, <name>.epub &
-  //    as well as a some number of <othername(s)>.xml which provide the metadata
-  //    for all the content.
+  // <root_location>/<year>/STUFF
+  //     where STUFF is a series of files:  <isbn>.pdf (multiple) and Tes.xml
+  //     Tes.xml is where the metadata resides
   //
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -78,8 +77,8 @@ public class TangramSourceArticleIteratorFactory implements ArticleIteratorFacto
     // ultimately the metadata extractor needs to set the entire facet map 
 
     // set up XML to be an aspect that will trigger an ArticleFiles to feed the metadata extractor
-    builder.addAspect(XLSX_PATTERN,
-                      XLSX_REPLACEMENT,
+    builder.addAspect(XML_PATTERN,
+                      XML_REPLACEMENT,
                       ArticleFiles.ROLE_ARTICLE_METADATA);
 
     return builder.getSubTreeArticleIterator();

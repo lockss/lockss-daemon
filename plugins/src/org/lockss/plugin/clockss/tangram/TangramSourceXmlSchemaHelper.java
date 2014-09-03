@@ -1,5 +1,5 @@
 /*
- * $Id: TangramSourceXmlSchemaHelper.java,v 1.1 2014-06-30 14:43:18 aishizaki Exp $
+ * $Id: TangramSourceXmlSchemaHelper.java,v 1.2 2014-09-03 17:25:53 aishizaki Exp $
  */
 
 /*
@@ -90,7 +90,8 @@ implements SourceXmlSchemaHelper {
  // private static final String Tangram_publisher_name = "./publisher-name";
   private static final String Tangram_art_pubdate = ".//Data_pubblicazione";
   /* filename (relative) */
-  private static final String Tangram_book_url = ".//URL_Libro";
+  private static final String Tangram_book_url = ".//PDF";
+
   /* xpath  author */
   private static final String Tangram_author =  ".//Elenco_autori_curatori_principali";
   /*
