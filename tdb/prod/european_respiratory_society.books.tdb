@@ -13,10 +13,24 @@
   {
 
     title <
-      name = ERS Monograph ;
+      name = ERS Monograph
+    >
+    
+    comment[0] = Series name changed from European Respiratory Monograph.
+
+    au < exists ; 2014 ; 64 ; 10.1183/1025448x.erm6414 ; 978-1-84984-051-4 ; Cystic Fibrosis (2014) >
+    
+  }
+
+  {
+
+    title <
+      name = European Respiratory Monograph ;
       issn = 1025-448X ;
       eissn = 2075-6674 
     >
+    
+    comment[0] = Do not add titles. Series name, issn, eissn changed. New title ERS Monograph.
     
     au < exists ; 2002 ; 27 ; 10.1183/1025448x.erm2703 ; 978-1-904097-93-8 ; Pulmonary Vascular Pathology: a Clinical Update >
     au < exists ; 2003 ; 25 ; 10.1183/1025448x.erm2503 ; 978-1-904097-95-2 ; Respiratory Diseases in Women >
@@ -57,7 +71,6 @@
     au < exists ; 2013 ; 61 ; 10.1183/1025448x.erm6113 ; 978-1-84984-037-8 ; Complex Pleuropulmonary Infections >
     au < exists ; 2013 ; 62 ; 10.1183/1025448x.erm6213 ; 978-1-84984-045-3 ; Outcomes in Clinical Trials >
     au < exists ; 2014 ; 63 ; 10.1183/1025448x.erm6314 ; 978-1-84984-049-1 ; Community-Acquired Pneumonia >
-    au < exists ; 2014 ; 64 ; 10.1183/1025448x.erm6414 ; 978-1-84984-051-4 ; Cystic Fibrosis (2014) >
     
   }
 
