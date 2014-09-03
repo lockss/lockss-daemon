@@ -1061,13 +1061,14 @@
     >
 
     param[journal_id] = 100
+    comment[notReady] = PD-1187, hash filter for testimonials
     
     au < manifest ; exists ; 2009 ; Immunology and Immunogenetics Insights Volume 1 ; 1 ; 2009 >
     au < manifest ; exists ; 2010 ; Immunology and Immunogenetics Insights Volume 2 ; 2 ; 2010 >
     au < finished ; frozen ; 2011 ; Immunology and Immunogenetics Insights Volume 3 ; 3 ; 2011 >
     au < finished ; frozen ; 2012 ; Immunology and Immunogenetics Insights Volume 4 ; 4 ; 2012 >
     au < crawling ; exists ; 2013 ; Immunology and Immunogenetics Insights Volume 5 ; 5 ; 2013 >
-    au < testing ; exists ; 2014 ; Immunology and Immunogenetics Insights Volume 6 ; 6 ; 2014 >
+    au < notReady ; exists ; 2014 ; Immunology and Immunogenetics Insights Volume 6 ; 6 ; 2014 >
 
   }
   
@@ -1328,11 +1329,12 @@
     
     param[journal_id] = 147
     comment[0] = no issue in 2011, 2012
+    comment[notReady] = PD-1187, hash filter for testimonials
     
     au < manifest ; exists ; 2009 ; Lymphona and Chronic Lymphocytic Leukemias Volume 1 ; 1 ; 2009 >
     au < manifest ; exists ; 2010 ; Lymphona and Chronic Lymphocytic Leukemias Volume 2 ; 2 ; 2010 >
     au < crawling ; exists ; 2013 ; Lymphona and Chronic Lymphocytic Leukemias Volume 3 ; 3 ; 2013 >
-    au < testing ; exists ; 2014 ; Lymphona and Chronic Lymphocytic Leukemias Volume 4 ; 4 ; 2014 >
+    au < notReady ; exists ; 2014 ; Lymphona and Chronic Lymphocytic Leukemias Volume 4 ; 4 ; 2014 >
     
   }
   
@@ -1423,6 +1425,7 @@
     >
 
     param[journal_id] = 123
+    comment[notReady] = PD-1187, hash filter for testimonials
 
     au < manifest ; exists ; 2008 ; Open Journal of Cardiovascular Surgery Volume 1 ; 1 ; 2008 >
     au < manifest ; exists ; 2009 ; Open Journal of Cardiovascular Surgery Volume 2 ; 2 ; 2009 >
@@ -1430,7 +1433,7 @@
     au < finished ; frozen ; 2011 ; Open Journal of Cardiovascular Surgery Volume 4 ; 4 ; 2011 >
     au < finished ; frozen ; 2012 ; Open Journal of Cardiovascular Surgery Volume 5 ; 5 ; 2012 >
     au < crawling ; exists ; 2013 ; Open Journal of Cardiovascular Surgery Volume 6 ; 6 ; 2013 >
-    au < testing ; exists ; 2014 ; Open Journal of Cardiovascular Surgery Volume 7 ; 7 ; 2014 >
+    au < notReady ; exists ; 2014 ; Open Journal of Cardiovascular Surgery Volume 7 ; 7 ; 2014 >
 
   }
   
