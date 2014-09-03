@@ -10,46 +10,10 @@
   plugin = org.lockss.plugin.americanmathematicalsociety.ClockssAmericanMathematicalSocietyPlugin
   implicit < status ; status2 ; year ; name ; param[year] >
   param[base_url] = http://www.ams.org/
-
-    
-    {
   
-    title < 
-      name = Abstracts of Papers Presented to the AMS ;
-      issn = 0192-5857
-    >
-    
-    param[journal_id] = abs
-      
-    au < expected ; exists ; 2014 ; Abstracts of Papers Presented to the AMS Volume 35 ; 2014 >
-
-    }
-
-    {
-  
-    title < 
-      name = Asterisque ;
-      issn = 0303-1179
-    >
-    
-    param[journal_id] = ast
-      
-    au < expected ; exists ; 2014 ; Asterisque Volume 359-366 ; 2014 >
-
-    }
-
-    {
-  
-    title < 
-      name = Bulletin de la Société Mathématique de France ;
-      issn = 0037-9484
-    >
-    
-    param[journal_id] = bsmfjournal
-      
-    au < expected ; exists ; 2014 ; Bulletin de la Société Mathématique de France Volume 142 ; 2014 >
-
-    }
+  comment[0] = Do not include Abstracts of Papers Presented to the AMS 0192-5857
+  comment[1] = Do not include Asterisque 0303-1179
+  comment[2] = Do not include Bulletin de la Société Mathématique de France 0037-9484
 
     {
   
