@@ -1,0 +1,31 @@
+{
+
+  publisher <
+    name = Scholarly Exchange
+  >
+
+  plugin = org.lockss.plugin.ojs2.OJS2Plugin
+  implicit < status ; year ; name ; volume ; param[year] >
+
+  {
+  
+    title < 
+      name = Pakistaniaat ;
+      issn = 1948-6529 ;
+      eissn = 1946-5343 
+    >
+    
+    param[base_url] = http://pakistaniaat.org/
+    param[journal_id] = pak
+
+    au < exists ; 2009 ; Pakistaniaat Volume 1 ; 1 ; 2009 >
+    au < exists ; 2010 ; Pakistaniaat Volume 2 ; 2 ; 2010 >
+    au < exists ; 2011 ; Pakistaniaat Volume 3 ; 3 ; 2011 >
+    au < exists ; 2012 ; Pakistaniaat Volume 4 ; 4 ; 2012 >
+    au < exists ; 2013 ; Pakistaniaat Volume 5 ; 5 ; 2013 >
+    au < expected ; 2014 ; Pakistaniaat Volume 6 ; 6 ; 2014 >
+    
+  }
+  
+}
+
