@@ -10,6 +10,25 @@
   {
   
     title < 
+      name = International Journal of Infection Control ;
+      issn = 1948-6529 ;
+      eissn = 1946-5343 
+    >
+    
+    param[base_url] = http://www.ijic.info/
+    param[journal_id] = ?
+
+    au < exists ; 2010 ; International Journal of Infection Control Volume 6 ; 6 ; 2010 >
+    au < exists ; 2011 ; International Journal of Infection Control Volume 7 ; 7 ; 2011 >
+    au < exists ; 2012 ; International Journal of Infection Control Volume 8 ; 8 ; 2012 >
+    au < exists ; 2013 ; International Journal of Infection Control Volume 9 ; 9 ; 2013 >
+    au < exists ; 2014 ; International Journal of Infection Control Volume 10 ; 10 ; 2014 >
+    
+  }
+  
+  {
+  
+    title < 
       name = Pakistaniaat ;
       issn = 1948-6529 ;
       eissn = 1946-5343 
