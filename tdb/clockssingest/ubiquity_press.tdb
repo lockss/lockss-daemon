@@ -282,10 +282,8 @@
     param[base_url] = http://openresearchsoftware.metajnl.com/
     param[journal_id] = jors
     
-    comment[doNotProcess] = This journal does not have an editorial policies page: http://openresearchsoftware.metajnl.com/index.php/jors/about/editorialPolicies
-    
-    au < doNotProcess ; exists ; 2013 ; Journal of Open Research Software Volume 1 ; 1 ; 2013 >
-    au < doNotProcess ; exists ; 2014 ; Journal of Open Research Software Volume 2 ; 2 ; 2014 >
+    au < testing ; exists ; 2013 ; Journal of Open Research Software Volume 1 ; 1 ; 2013 >
+    au < testing ; exists ; 2014 ; Journal of Open Research Software Volume 2 ; 2 ; 2014 >
 
   }
   
