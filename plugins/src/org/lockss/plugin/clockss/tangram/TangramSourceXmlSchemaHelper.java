@@ -1,5 +1,5 @@
 /*
- * $Id: TangramSourceXmlSchemaHelper.java,v 1.2 2014-09-03 17:25:53 aishizaki Exp $
+ * $Id: TangramSourceXmlSchemaHelper.java,v 1.3 2014-09-04 22:00:52 aishizaki Exp $
  */
 
 /*
@@ -34,17 +34,14 @@ package org.lockss.plugin.clockss.tangram;
 
 import org.apache.commons.collections.map.MultiValueMap;
 import org.lockss.util.*;
-import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
 import org.lockss.extractor.XmlDomMetadataExtractor.NodeValue;
 import org.lockss.extractor.XmlDomMetadataExtractor.XPathValue;
-
 import java.util.*;
-
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import org.apache.commons.lang.StringUtils;
+
 
 /**
  *  A helper class that defines a schema for XML metadata extraction for
@@ -57,10 +54,56 @@ implements SourceXmlSchemaHelper {
   static StringBuilder urlName = new StringBuilder();
 
   private static final String AUTHOR_SPLIT_CH = ",";
+  private static final String TITLE_SEPARATOR = ":";
   /* 
    *  Tangram specific node evaluators to extract the information we want
    */
+  /* 
+   * Article Title, Subtitle - 
+   *   <article-node>/BB/TG
+   *  <Titolo>Book Title</Titolo>
+   *  <Sottotitolo>SubTitle</Sottotitolo>
+   *  if both: Title:SubTitle
+   *  or, either Title, or :SubTitle
+   */
   
+  static private final NodeValue TANGRAM_ARTICLE_TITLE_VALUE = new NodeValue() {
+    @Override
+    public String getValue(Node node) {
+
+      log.debug3("getValue of Tangram ARTICLE TITLE");
+      String title = null;
+      String subtitle = null;
+      String nodeName = null;
+      Node parent = node.getParentNode();
+      NodeList childNodes = parent.getChildNodes(); 
+      for (int m = 0; m < childNodes.getLength(); m++) {
+        Node child = childNodes.item(m);
+        if (Tangram_book_title.equals(child.getNodeName()) ){
+          title = child.getTextContent();
+        } else if (Tangram_book_subtitle.equals(child.getNodeName())) {
+          subtitle = child.getTextContent();
+        }
+      }     
+      
+      StringBuilder titleVal = new StringBuilder();
+      if (title != null) {
+        titleVal.append(title);
+      }
+      if (subtitle != null) {
+        titleVal.append(TITLE_SEPARATOR + subtitle);
+      }
+      if (titleVal.length() != 0)  {
+        log.debug3("article title: " + titleVal.toString());
+        return titleVal.toString();
+      } else {
+        log.debug3("no value in this article title");
+        return null;
+      }
+      
+    }
+  };
+
   /*
    * ROW information example
    * /node
@@ -84,16 +127,14 @@ implements SourceXmlSchemaHelper {
 
   /* Under an item node, the interesting bits live at these relative locations */
 
-  private static final String Tangram_book_title = ".//Titolo";
-  private static final String Tangram_isbn = ".//ISBN";
-
- // private static final String Tangram_publisher_name = "./publisher-name";
-  private static final String Tangram_art_pubdate = ".//Data_pubblicazione";
-  /* filename (relative) */
-  private static final String Tangram_book_url = ".//PDF";
-
-  /* xpath  author */
-  private static final String Tangram_author =  ".//Elenco_autori_curatori_principali";
+  private static final String Tangram_book_title = "Titolo";
+  private static final String Tangram_book_subtitle = "Sottotitolo";
+  private static final String Tangram_isbn = "ISBN";
+  private static final String Tangram_art_pubdate = "Data_pubblicazione";
+  /* access.url (relative) */
+  private static final String Tangram_book_url = "PDF";
+  /* author(s), single or multiple in one tag */
+  private static final String Tangram_author =  "Elenco_autori_curatori_principali";
   /*
    *  The following 3 variables are needed to use the XPathXmlMetadataParser
    */
@@ -105,19 +146,15 @@ implements SourceXmlSchemaHelper {
     // article specific stuff
     Tangram_articleMap.put(Tangram_art_pubdate, XmlDomMetadataExtractor.TEXT_VALUE); 
     Tangram_articleMap.put(Tangram_author, XmlDomMetadataExtractor.TEXT_VALUE);
-    Tangram_articleMap.put(Tangram_book_title, XmlDomMetadataExtractor.TEXT_VALUE);
+    Tangram_articleMap.put(Tangram_book_title, TANGRAM_ARTICLE_TITLE_VALUE);
     Tangram_articleMap.put(Tangram_isbn, XmlDomMetadataExtractor.TEXT_VALUE);
     Tangram_articleMap.put(Tangram_book_url, XmlDomMetadataExtractor.TEXT_VALUE);
   }
 
 
-  /* 2. Each item (book) has its own Row of information 
-   *    process each Row and glean all the needed information
-   *    from that row (of course, we're assuming that each Cell/Column is
-   *    in the right place
+  /* 2. All the metadata is neatly under the <node> for each book
    */
-//  static private final String Tangram_topNode = "/Workbook/Worksheet/Table/Row";
-  static private final String Tangram_topNode = "//node";
+  static private final String Tangram_topNode = "/catalogo/xml/node";
 
   /* 3. in Tangram, there some global information we gather */ 
   static private final Map<String,XPathValue>     
@@ -129,7 +166,7 @@ implements SourceXmlSchemaHelper {
   protected static final MultiValueMap cookMap = new MultiValueMap();
   static {
     cookMap.put(Tangram_isbn, MetadataField.FIELD_ISBN);
-    cookMap.put(Tangram_book_title, MetadataField.FIELD_JOURNAL_TITLE);
+    cookMap.put(Tangram_book_title, MetadataField.FIELD_PUBLICATION_TITLE);
     cookMap.put(Tangram_author, 
         new MetadataField(MetadataField.FIELD_AUTHOR, MetadataField.splitAt(AUTHOR_SPLIT_CH)));
     cookMap.put(Tangram_art_pubdate, MetadataField.FIELD_DATE);
