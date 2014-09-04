@@ -20,6 +20,9 @@
   comment[6] = Do not include Memoires de la Société Mathématique de France. 0249-633X
   comment[7] = Do not include Moscow Mathematical Journal. 1609-4514
   comment[8] = Do not include Sugaku Expositions. 0898-9583
+  comment[9] = Do not include Electronic Research Announcements. 1079-6762
+  comment[10] = Do not include Journal of Algebraic Geometry. 1056-3911
+  comment[11] = Do not include Quarterly of Applied Mathematics. 0033-569X. 1552-4485
 
     {
   
@@ -188,60 +191,6 @@
     au < crawling ; exists ; 2013 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 17 ; 2013 >
     au < crawling ; exists ; 2014 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 18 ; 2014 >
 
-    }
-    
-    {
-  
-    title < 
-      name = Electronic Research Announcements ;
-      issn = 1079-6762 
-    >
-
-    param[journal_id] = era
-    comment[0] = Beginning with Volume 14, this journal is published by the American Institute of Mathematical Sciences
-    
-    au < manifest ; exists ; 1995 ; Electronic Research Announcements Volume 1 ; 1995 >
-    au < manifest ; exists ; 1996 ; Electronic Research Announcements Volume 2 ; 1996 >
-    au < manifest ; exists ; 1997 ; Electronic Research Announcements Volume 3 ; 1997 >
-    au < manifest ; exists ; 1998 ; Electronic Research Announcements Volume 4 ; 1998 >
-    au < manifest ; exists ; 1999 ; Electronic Research Announcements Volume 5 ; 1999 >
-    au < manifest ; exists ; 2000 ; Electronic Research Announcements Volume 6 ; 2000 >
-    au < manifest ; exists ; 2001 ; Electronic Research Announcements Volume 7 ; 2001 >
-    au < manifest ; exists ; 2002 ; Electronic Research Announcements Volume 8 ; 2002 >
-    au < manifest ; exists ; 2003 ; Electronic Research Announcements Volume 9 ; 2003 >
-    au < manifest ; exists ; 2004 ; Electronic Research Announcements Volume 0 ; 2004 >
-    au < manifest ; exists ; 2005 ; Electronic Research Announcements Volume 11 ; 2005 >
-    au < manifest ; exists ; 2006 ; Electronic Research Announcements Volume 12 ; 2006 >
-    au < manifest ; exists ; 2007 ; Electronic Research Announcements Volume 13 ; 2007 >
-    
-    }
-    
-    {
-  
-    title < 
-      name = Journal of Algebraic Geometry ;
-      issn = 1056-3911 ;
-      eissn = 1534-7486
-    >
-
-    comment[type] = regular journal
-    param[journal_id] = jag
-    comment[notReady] = PD-1188, login needed for full-text pdf
-    
-    au < manifest ; exists ; 2002 ; Journal of Algebraic Geometry Volume 11 ; 2002 >
-    au < manifest ; exists ; 2003 ; Journal of Algebraic Geometry Volume 12 ; 2003 >
-    au < manifest ; exists ; 2004 ; Journal of Algebraic Geometry Volume 13 ; 2004 >
-    au < manifest ; exists ; 2005 ; Journal of Algebraic Geometry Volume 14 ; 2005 >
-    au < manifest ; exists ; 2006 ; Journal of Algebraic Geometry Volume 15 ; 2006 >
-    au < manifest ; exists ; 2007 ; Journal of Algebraic Geometry Volume 16 ; 2007 >
-    au < manifest ; exists ; 2008 ; Journal of Algebraic Geometry Volume 17 ; 2008 >
-    au < manifest ; exists ; 2009 ; Journal of Algebraic Geometry Volume 18 ; 2009 >
-    au < manifest ; exists ; 2010 ; Journal of Algebraic Geometry Volume 19 ; 2010 >
-    au < manifest ; exists ; 2011 ; Journal of Algebraic Geometry Volume 20 ; 2011 >
-    au < notReady ; exists ; 2012 ; Journal of Algebraic Geometry Volume 21 ; 2012 >
-    au < notReady ; exists ; 2013 ; Journal of Algebraic Geometry Volume 22 ; 2013 >
-    au < notReady ; exists ; 2014 ; Journal of Algebraic Geometry Volume 23 ; 2014 >
-      
     }
     
     {
@@ -443,31 +392,7 @@
     {
   
     title < 
-      name = Quarterly of Applied Mathematics ;
-      issn = 0033-569X ;
-      eissn = 1552-4485
-    >
-    
-    param[journal_id] = qam
-    comment[notReady] = PD-1188, login needed for full-text pdf
-      
-    au < manifest ; exists ; 2005 ; Quarterly of Applied Mathematics Volume 63 ; 2005 >
-    au < manifest ; exists ; 2006 ; Quarterly of Applied Mathematics Volume 64 ; 2006 >
-    au < manifest ; exists ; 2007 ; Quarterly of Applied Mathematics Volume 65 ; 2007 >
-    au < manifest ; exists ; 2008 ; Quarterly of Applied Mathematics Volume 66 ; 2008 >
-    au < manifest ; exists ; 2009 ; Quarterly of Applied Mathematics Volume 67 ; 2009 >
-    au < manifest ; exists ; 2010 ; Quarterly of Applied Mathematics Volume 68 ; 2010 >
-    au < manifest ; exists ; 2011 ; Quarterly of Applied Mathematics Volume 69 ; 2011 >
-    au < notReady ; exists ; 2012 ; Quarterly of Applied Mathematics Volume 70 ; 2012 >
-    au < notReady ; exists ; 2013 ; Quarterly of Applied Mathematics Volume 71 ; 2013 >
-    au < notReady ; exists ; 2014 ; Quarterly of Applied Mathematics Volume 72 ; 2014 >
-
-    }
-    
-    {
-  
-    title < 
-      name = Representation Theory - An electronic journal of the AMS ;
+      name = Representation Theory ;
       issn = 1088-4165 
       
     >
@@ -475,24 +400,24 @@
     comment[type] = ejournal only
     param[journal_id] = ert
 
-    au < manifest ; exists ; 1997 ; Representation Theory - An electronic journal of the AMS Volume 1 ; 1997 >
-    au < manifest ; exists ; 1998 ; Representation Theory - An electronic journal of the AMS Volume 2 ; 1998 >
-    au < manifest ; exists ; 1999 ; Representation Theory - An electronic journal of the AMS Volume 3 ; 1999 >
-    au < manifest ; exists ; 2000 ; Representation Theory - An electronic journal of the AMS Volume 4 ; 2000 >
-    au < manifest ; exists ; 2001 ; Representation Theory - An electronic journal of the AMS Volume 5 ; 2001 >
-    au < manifest ; exists ; 2002 ; Representation Theory - An electronic journal of the AMS Volume 6 ; 2002 >
-    au < manifest ; exists ; 2003 ; Representation Theory - An electronic journal of the AMS Volume 7 ; 2003 >
-    au < manifest ; exists ; 2004 ; Representation Theory - An electronic journal of the AMS Volume 8 ; 2004 >
-    au < manifest ; exists ; 2005 ; Representation Theory - An electronic journal of the AMS Volume 9 ; 2005 >
-    au < manifest ; exists ; 2006 ; Representation Theory - An electronic journal of the AMS Volume 10 ; 2006 >
-    au < manifest ; exists ; 2007 ; Representation Theory - An electronic journal of the AMS Volume 11 ; 2007 >
-    au < manifest ; exists ; 2008 ; Representation Theory - An electronic journal of the AMS Volume 12 ; 2008 >
-    au < manifest ; exists ; 2009 ; Representation Theory - An electronic journal of the AMS Volume 13 ; 2009 >
-    au < manifest ; exists ; 2010 ; Representation Theory - An electronic journal of the AMS Volume 14 ; 2010 >
-    au < manifest ; exists ; 2011 ; Representation Theory - An electronic journal of the AMS Volume 15 ; 2011 >
-    au < crawling ; exists ; 2012 ; Representation Theory - An electronic journal of the AMS Volume 16 ; 2012 >
-    au < crawling ; exists ; 2013 ; Representation Theory - An electronic journal of the AMS Volume 17 ; 2013 >
-    au < crawling ; exists ; 2014 ; Representation Theory - An electronic journal of the AMS Volume 18 ; 2014 >
+    au < manifest ; exists ; 1997 ; Representation Theory Volume 1 ; 1997 >
+    au < manifest ; exists ; 1998 ; Representation Theory Volume 2 ; 1998 >
+    au < manifest ; exists ; 1999 ; Representation Theory Volume 3 ; 1999 >
+    au < manifest ; exists ; 2000 ; Representation Theory Volume 4 ; 2000 >
+    au < manifest ; exists ; 2001 ; Representation Theory Volume 5 ; 2001 >
+    au < manifest ; exists ; 2002 ; Representation Theory Volume 6 ; 2002 >
+    au < manifest ; exists ; 2003 ; Representation Theory Volume 7 ; 2003 >
+    au < manifest ; exists ; 2004 ; Representation Theory Volume 8 ; 2004 >
+    au < manifest ; exists ; 2005 ; Representation Theory Volume 9 ; 2005 >
+    au < manifest ; exists ; 2006 ; Representation Theory Volume 10 ; 2006 >
+    au < manifest ; exists ; 2007 ; Representation Theory Volume 11 ; 2007 >
+    au < manifest ; exists ; 2008 ; Representation Theory Volume 12 ; 2008 >
+    au < manifest ; exists ; 2009 ; Representation Theory Volume 13 ; 2009 >
+    au < manifest ; exists ; 2010 ; Representation Theory Volume 14 ; 2010 >
+    au < manifest ; exists ; 2011 ; Representation Theory Volume 15 ; 2011 >
+    au < crawling ; exists ; 2012 ; Representation Theory Volume 16 ; 2012 >
+    au < crawling ; exists ; 2013 ; Representation Theory Volume 17 ; 2013 >
+    au < crawling ; exists ; 2014 ; Representation Theory Volume 18 ; 2014 >
 
     }
     
