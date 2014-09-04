@@ -1,5 +1,5 @@
 /*
- * $Id: TdbOut.java,v 1.1 2014-09-03 20:35:58 thib_gc Exp $
+ * $Id: TdbOut.java,v 1.2 2014-09-04 18:28:36 thib_gc Exp $
  */
 
 /*
@@ -155,8 +155,7 @@ public class TdbOut {
    */
   protected static final Option OPTION_FIELDS =
       OptionBuilder.withLongOpt(KEY_FIELDS)
-                   .hasArgs()
-                   .withValueSeparator(',')
+                   .hasArg()
                    .withArgName(ARG_FIELDS)
                    .withDescription("comma-separated list of fields to output")
                    .create(LETTER_FIELDS);
@@ -257,8 +256,7 @@ public class TdbOut {
    */
   protected static final Option OPTION_CSV =
       OptionBuilder.withLongOpt(KEY_CSV)
-                   .hasArgs()
-                   .withValueSeparator(',')
+                   .hasArg()
                    .withArgName(ARG_CSV)
                    .withDescription(String.format("short for --%s=%s --%s=%s", KEY_STYLE, STYLE_CSV, KEY_FIELDS, ARG_CSV))
                    .create(LETTER_CSV);
@@ -370,8 +368,7 @@ public class TdbOut {
    */
   protected static final Option OPTION_TSV =
       OptionBuilder.withLongOpt(KEY_TSV)
-                   .hasArgs()
-                   .withValueSeparator(',')
+                   .hasArg()
                    .withArgName(ARG_TSV)
                    .withDescription(String.format("short for --%s=%s --%s=%s", KEY_STYLE, STYLE_TSV, KEY_FIELDS, ARG_TSV))
                    .create(LETTER_TSV);
@@ -533,7 +530,7 @@ public class TdbOut {
     }
     if (cmd.hasOption(KEY_CSV)) {
       options.put(KEY_STYLE, STYLE_CSV);
-      options.put(KEY_FIELDS, Arrays.asList(cmd.getOptionValues(KEY_CSV)));
+      options.put(KEY_FIELDS, Arrays.asList(cmd.getOptionValue(KEY_CSV).split(",")));
     }
     if (cmd.hasOption(KEY_LIST)) {
       options.put(KEY_STYLE, STYLE_TSV);
@@ -541,7 +538,7 @@ public class TdbOut {
     }
     if (cmd.hasOption(KEY_TSV)) {
       options.put(KEY_STYLE, STYLE_TSV);
-      options.put(KEY_FIELDS, Arrays.asList(cmd.getOptionValues(KEY_TSV)));
+      options.put(KEY_FIELDS, Arrays.asList(cmd.getOptionValue(KEY_TSV).split(",")));
     }
     if (cmd.hasOption(KEY_STYLE)) {
       String style = cmd.getOptionValue(KEY_STYLE);
@@ -820,6 +817,7 @@ public class TdbOut {
    * @since 1.67
    */
   public static void main(String[] args) throws Exception {
+    /**/for(String str:args){System.out.println(str);}
     new TdbOut().run(args);
   }
 

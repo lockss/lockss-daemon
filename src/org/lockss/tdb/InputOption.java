@@ -1,5 +1,5 @@
 /*
- * $Id: InputOption.java,v 1.1 2014-09-03 20:35:58 thib_gc Exp $
+ * $Id: InputOption.java,v 1.2 2014-09-04 18:25:56 thib_gc Exp $
  */
 
 /*
@@ -143,17 +143,18 @@ public class InputOption {
    */
   public static void processCommandLine(Map<String, Object> options,
                                         CommandLine cmd) {
-    if (cmd.hasOption(KEY_INPUT) && cmd.getArgs().length > 0) {
+    String[] args = cmd.getArgs();
+    if (cmd.hasOption(KEY_INPUT) && args.length > 0) {
       AppUtil.error("--%s cannot be used with a list of input files", KEY_INPUT);
     }
     if (cmd.hasOption(KEY_INPUT)) {
       options.put(KEY_INPUT, Arrays.asList(cmd.getOptionValue(KEY_INPUT)));
     }
     else {
-      if (cmd.getArgs().length == 0) {
+      if (args.length == 0) {
         AppUtil.error("No input files specified");
       }
-      options.put(KEY_INPUT, Arrays.asList(cmd.getArgs()));
+      options.put(KEY_INPUT, Arrays.asList(args));
     }
   }
 
