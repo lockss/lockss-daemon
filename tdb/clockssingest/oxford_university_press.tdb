@@ -10249,6 +10249,21 @@
   {
 
     title <
+      name = Journal of Crohn's and Colitis ;
+      issn = 1873-9946 ;
+      eissn = 1876-4479 ;
+      issnl = 1873-9946
+    >
+    param[base_url] = http://ecco-jcc.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+    
+    au < expected ; exists ; 2014 ; Journal of Crohn's and Colitis Volume 8 ; 8 ; >
+    
+  }
+
+  {
+
+    title <
       name = Journal of Deaf Studies and Deaf Education ;
       issn = 1081-4159 ;
       eissn = 1465-7325 ;
