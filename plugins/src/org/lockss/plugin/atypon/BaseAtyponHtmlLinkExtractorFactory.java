@@ -1,4 +1,4 @@
-/* $Id: BaseAtyponHtmlLinkExtractorFactory.java,v 1.2 2013-08-30 22:21:56 alexandraohlson Exp $
+/* $Id: BaseAtyponHtmlLinkExtractorFactory.java,v 1.3 2014-09-04 23:02:25 alexandraohlson Exp $
  */
 
 /*
@@ -27,7 +27,7 @@ Except as contained in this notice, the name of Stanford University shall not
 be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
-*/
+ */
 
 package org.lockss.plugin.atypon;
 
@@ -36,22 +36,39 @@ The vanilla JsoupHtmlLinkExtractor will generate URLs from any forms that it fin
 without restrictions (inclusion/exclusion rules) and so long as those resulting URLs satisfy the crawl rules
 they will be collected which is too broad because you can't know everything you might encounter. 
 This is a thin wrapper that specifies what type of forms to INCLUDE to limit the potential collection. 
-*/
+ */
 
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
+import org.jsoup.nodes.Node;
 import org.lockss.extractor.HtmlFormExtractor;
 import org.lockss.extractor.JsoupHtmlLinkExtractor;
 import org.lockss.extractor.LinkExtractorFactory;
+import org.lockss.extractor.JsoupHtmlLinkExtractor.SimpleTagLinkExtractor;
+import org.lockss.extractor.LinkExtractor.Callback;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.atypon.maney.ManeyAtyponHtmlLinkExtractorFactory.ManeyScriptTagLinkExtractor;
+import org.lockss.plugin.taylorandfrancis.TaylorAndFrancisHtmlLinkExtractorFactory.TaylorAndFrancisSimpleTagLinkExtractor;
+import org.lockss.util.Logger;
 import org.lockss.util.SetUtil;
+import org.lockss.util.StringUtil;
 
 /* an implementation of JsoupHtmlLinkExtractor with a restrictor set */
 public class BaseAtyponHtmlLinkExtractorFactory 
 implements LinkExtractorFactory {
-  
+
+  private static String HREF_NAME = "href";
+  private static String LINK_TAG = "a";
+  private static String SCRIPT_TAG = "script";
+  //Identify a URL as being one for a full text html version of the article
+  protected static Pattern PATTERN_FULL_ARTICLE_URL = Pattern.compile("^(https?://[^/]+)/doi/full/([.0-9]+)/([^?&]+)$");
+
+
   /*
    * (non-Javadoc)
    * @see org.lockss.extractor.LinkExtractorFactory#createLinkExtractor(java.lang.String)
@@ -63,23 +80,29 @@ implements LinkExtractorFactory {
     = new HashMap<String, HtmlFormExtractor.FormFieldRestrictions>();
 
     baseRestrictor = setUpBaseRestrictor();
-    
-    // set up the link extractor with specific includes and excludes
+
+    // set up the base link extractor to use specific includes and excludes
     JsoupHtmlLinkExtractor extractor = new JsoupHtmlLinkExtractor();
     extractor.setFormRestrictors(baseRestrictor);
+
+    extractor.registerTagExtractor(LINK_TAG, new BaseAtyponSimpleTagLinkExtractor(HREF_NAME));
+    
+    // TODO: Add the MANEY/BiR/AIAA script tag link extractor once we have 1.67
+    //extractor.registerTagExtractor(SCRIPT_TAG, new AtyponScriptTagLinkExtractor());
     return extractor;
   }
 
   /*
    * A version of the method that allows a child to add additional restrictions
+   * for use by the citation download FORM extractor
    * This method merges the child restrictions with the necessary base restriction
    */
   public org.lockss.extractor.LinkExtractor createLinkExtractor(String mimeType, Map<String, HtmlFormExtractor.FormFieldRestrictions> child_restrictor) {
     Map<String, HtmlFormExtractor.FormFieldRestrictions> base_restrictor
     = new HashMap<String, HtmlFormExtractor.FormFieldRestrictions>();
-    
+
     base_restrictor = setUpBaseRestrictor();
-    
+
     // did the child add in any additional restrictions?
     if (child_restrictor != null) {
       //Iterate over the child's map
@@ -100,13 +123,13 @@ implements LinkExtractorFactory {
         }
       }
     }
-    
+
     // set up the link extractor with specific includes and excludes
     JsoupHtmlLinkExtractor extractor = new JsoupHtmlLinkExtractor();
     extractor.setFormRestrictors(base_restrictor);
     return extractor;
   }
-  
+
   private Map<String, HtmlFormExtractor.FormFieldRestrictions> setUpBaseRestrictor() {
     Set<String> include = new HashSet<String>();
     Set<String> exclude = new HashSet<String>();
@@ -117,12 +140,86 @@ implements LinkExtractorFactory {
     include = SetUtil.fromCSV("frmCitmgr");
     HtmlFormExtractor.FormFieldRestrictions include_restrictions = new HtmlFormExtractor.FormFieldRestrictions(include,null);
     restrictor.put(HtmlFormExtractor.FORM_NAME, include_restrictions);
-    
+
     /* now set up an exclude restriction on "format" */ 
     exclude = SetUtil.fromCSV("refworks,refworks-cn"); 
     HtmlFormExtractor.FormFieldRestrictions exclude_restrictions = new HtmlFormExtractor.FormFieldRestrictions(null, exclude);
     restrictor.put("format", exclude_restrictions);
-    
+
     return restrictor;
+  }
+
+  public static class BaseAtyponSimpleTagLinkExtractor 
+  extends SimpleTagLinkExtractor {
+
+    private static final Logger log = 
+        Logger.getLogger(BaseAtyponSimpleTagLinkExtractor.class);
+
+    // pattern to isolate id used in popRef call = see comment at tagBegin
+    static final protected Pattern POPREF_PATTERN = Pattern.compile(
+        "javascript:popRef(Full)?\\([\"']([^\"']+)", Pattern.CASE_INSENSITIVE);
+    
+    // define pieces used in the resulting URL
+    static final String ACTION_SHOWPOP = "/action/showPopup?citid=citart1&id=";
+    static final String ACTION_SHOWFULL = "/action/showFullPopup?id=";
+    static final String DOI_ARG = "&doi=";
+
+    // nothing needed in the constructor - just call the parent
+    public BaseAtyponSimpleTagLinkExtractor(String attr) {
+      super(attr);
+    }
+
+    /*
+     *  handle <a> tag with href value on a full html page
+     *  for <a class="ref" href="javascript:popRef('F1')">
+     *    ==> BASE/action/showPopup?citid=citart1&id=F1&doi=10.2466%2F05.08.IT.3.3
+     *  for <a class="ref" href="javascript:popRefFull('i1520-0469-66-1-187-f03')">
+     *    ==> BASE/action/showFullPopup?id=i1520-0469-66-1-187-f01&doi=10.1175%2F2008JAS2765.1
+     */
+    public void tagBegin(Node node, ArchivalUnit au, Callback cb) {
+      String srcUrl = node.baseUri();
+      Matcher fullArticleMat = PATTERN_FULL_ARTICLE_URL.matcher(srcUrl);
+      // Are we a page for which this would be pertinent?
+      if ( (srcUrl != null) && fullArticleMat.matches()) {
+        // build up a DOI value with html encoding of the slash"
+        String base_url = fullArticleMat.group(1);
+        String doiVal = fullArticleMat.group(2) + "%2F" + fullArticleMat.group(3);
+        /*
+         * For now this is only called for LINK tags with href set
+         * <a href="...">
+         * But put in check so it can expand as needed
+         */
+        if (LINK_TAG.equals(node.nodeName())) {
+          String href = node.attr(HREF_NAME);
+          if (StringUtil.isNullString(href)) {
+            //this is not the href you seek
+            super.tagBegin(node, au, cb);
+            return;
+          }
+          //1. Are we javascript:popRef(Full)('id')
+          Matcher hrefMat = null;
+          String idVal;
+          hrefMat = POPREF_PATTERN.matcher(href);
+          if (hrefMat.find()) {
+            log.debug3("Found popRef pattern");
+            // Derive showPopup URL
+            idVal = hrefMat.group(2);
+            String newUrl;
+            if (href.contains("popRefFull")) {
+              //identify variant
+              newUrl = base_url + ACTION_SHOWFULL + idVal + DOI_ARG + doiVal;
+            } else {
+              newUrl = base_url + ACTION_SHOWPOP + idVal + DOI_ARG + doiVal;
+            }
+            log.debug3("new URL: " + newUrl);
+            cb.foundLink(newUrl);
+            // if it was a popRef, no other link extraction needed
+            return;
+          }
+        }
+      }
+      // we didn't handle it, fall back to parent 
+      super.tagBegin(node, au, cb);
+    }
   }
 }

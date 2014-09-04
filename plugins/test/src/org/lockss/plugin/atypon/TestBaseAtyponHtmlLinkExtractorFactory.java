@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseAtyponHtmlLinkExtractorFactory.java,v 1.5 2014-08-20 23:26:27 alexandraohlson Exp $
+ * $Id: TestBaseAtyponHtmlLinkExtractorFactory.java,v 1.6 2014-09-04 23:02:25 alexandraohlson Exp $
  */
 /*
 
@@ -134,6 +134,7 @@ public class TestBaseAtyponHtmlLinkExtractorFactory extends LockssTestCase {
 
   @Override
   public void setUp() throws Exception {
+    //log.setLevel("debug3");
     super.setUp();
     m_mau = new MockArchivalUnit();
     m_callback = new MyLinkExtractorCallback();
@@ -144,6 +145,8 @@ public class TestBaseAtyponHtmlLinkExtractorFactory extends LockssTestCase {
   }
   
   Set<String> expectedUrls;
+  
+  /*-----------------TESTING THE CITATION DOWNLOAD LINK EXTRACTOR -------------- */
 
   /* Since this sample form comes from SIAM this is very similar to the TestSiamHtmLinkExtractor, but 
    * since this is the less restricted BaseAtyponHtnlLinkExtractor there are more expected URLs so it's
@@ -168,7 +171,7 @@ public class TestBaseAtyponHtmlLinkExtractorFactory extends LockssTestCase {
 
 
     String norm_url;
-    Set<String> result_strings = parseSingleSource(citationForm);
+    Set<String> result_strings = parseSingleSource(citationForm, "abs", null);
     Set<String> norm_urls = new HashSet<String>();
     final String refworks_url = BASE_URL + "action/downloadCitation?doi=" + DOI_START + "%2F" + DOI_END + "&format=refworks&include=cit";
     final String refworks_cn_url = BASE_URL + "action/downloadCitation?doi=" + DOI_START + "%2F" + DOI_END + "&format=refworks-cn&include=cit";
@@ -215,7 +218,7 @@ public class TestBaseAtyponHtmlLinkExtractorFactory extends LockssTestCase {
   // Using this form nothing should get picked up because the FORM_NAME won't match the include restrictor
   public void testOtherForm() throws Exception {
 
-    Set<String> result_strings = parseSingleSource(abstractWithForm);
+    Set<String> result_strings = parseSingleSource(abstractWithForm, "abs", null);
     for (String url : result_strings) {
       log.debug3("abstract form URL: " + url);
     }
@@ -223,21 +226,81 @@ public class TestBaseAtyponHtmlLinkExtractorFactory extends LockssTestCase {
     // because the "submit" button is an image and we need images to go through so pages look correct
     assertEquals(1, result_strings.size());
   }
-
   
-  private Set<String> parseSingleSource(String source)
+  /*------TESTING THE popRef and popRefFull javascript extractors-----------*/
+  
+  private static final String segRefFull_input=
+      "<a href=\"javascript:popRefFull('fig1')\" class=\"ref\">" +
+      "<img border=\"1\" align=\"bottom\" id=\"fig1image\" alt=\"\" " +
+      "src=\"/imagesource/home/xxx/yyy/zzz/journals/content/jnamex" +
+      "/2013/gabc.2013.99.issue-99/gabc2013-0099.9/20139999/images/small" +
+      "/figure1.gif\">" +
+      "<br><strong>View larger image </strong>(64K)<br><br></a>";
+    private static final String seg_doi =  "99.9999/gabc2013-0099.9";
+    public void testSEGImages() throws Exception {
+
+      Set<String> result_strings = parseSingleSource(segRefFull_input, "full", seg_doi);
+      for (String url : result_strings) {
+        log.debug3("segImages URL: " + url);
+      }
+      // get two URLS - the generated showPopupFull url & the imagesource url
+      assertEquals(2, result_strings.size());
+      assertTrue(result_strings.contains(BASE_URL + "action/showFullPopup" +
+          "?id=fig1&doi=99.9999%2Fgabc2013-0099.9")); 
+      assertTrue(result_strings.contains(BASE_URL + "imagesource/home/xxx/yyy/zzz/journals/content/jnamex/2013/" + 
+          "gabc.2013.99.issue-99/gabc2013-0099.9/20139999/images/small/figure1.gif"));
+    }
+    
+    private static final String amsci_popref =
+          "<tbody><tr bgcolor=\"foo\">" +
+          "<td align=\"center\" bgcolor=\"foo\" valign=\"top\">" +
+          "<a class=\"ref\" href=\"javascript:popRef('F1')\">" +
+          "<img src=\"/na101/home/literatum/publisher/ammons/journals/" +
+          "content/it/2014/it.2014.3.issue-1/05.08.it.3.3/20140321/images/small/05_08_it_3_3_f1.gif\" " +
+          "alt=\"\" id=\"F1image\" align=\"bottom\" border=\"1\"><br>" +
+          "<strong>View larger version</strong>(17K)<br><br></a></td>" +
+          "</td></tr></tbody>";
+    private static final String amsci_doi = "10.1111/05.08.IT.3.3";
+    public void testamsciImages() throws Exception {
+
+      Set<String> result_strings = parseSingleSource(amsci_popref, "full", amsci_doi);
+      for (String url : result_strings) {
+        log.debug3("amsciImages URL: " + url);
+      }
+      // get two URLS - the generated showPopupFull url & the imagesource url
+      assertEquals(2, result_strings.size());
+      assertTrue(result_strings.contains(BASE_URL + "action/showPopup?citid=citart1&" +
+          "id=F1&doi=10.1111%2F05.08.IT.3.3")); 
+      assertTrue(result_strings.contains(BASE_URL + "na101/home/literatum/publisher/ammons/journals/" + 
+          "content/it/2014/it.2014.3.issue-1/05.08.it.3.3/20140321/images/small/05_08_it_3_3_f1.gif"));
+    }
+  
+  /*-------TESTING THE window.FigureViewer link extractor -----------*/
+  /* currently only implemented under Maney. Requires 1.67 */
+  
+  /*------------------SUPPORT FUNCTIONS --------------------- */
+
+  // all setting of page type (full, abs) to test restrictions
+  // if doi argument is null, use default; otherwise use given
+  private Set<String> parseSingleSource(String source, String page_type, String page_doi)
       throws Exception {
+    String srcUrl;
+    if (page_doi == null) {
+      srcUrl = BASE_URL + "doi/" + page_type + "/" + DOI_START + "/" + DOI_END;
+    } else {
+      srcUrl = BASE_URL + "doi/" + page_type + "/" + page_doi;
+    }
     MockArchivalUnit m_mau = new MockArchivalUnit();
     LinkExtractor ue = new JsoupHtmlLinkExtractor();
     m_mau.setLinkExtractor("html", ue);
     MockCachedUrl mcu =
-        new org.lockss.test.MockCachedUrl("http://BaseAtypon.org/", m_mau);
+        new org.lockss.test.MockCachedUrl(srcUrl, m_mau);
     mcu.setContent(source);
 
     m_callback.reset();
     m_extractor.extractUrls(m_mau,
         new org.lockss.test.StringInputStream(source), ENC,
-        BASE_URL, m_callback);
+        srcUrl, m_callback);
     return m_callback.getFoundUrls();
   }
 
