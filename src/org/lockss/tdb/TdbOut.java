@@ -1,5 +1,5 @@
 /*
- * $Id: TdbOut.java,v 1.2 2014-09-04 18:28:36 thib_gc Exp $
+ * $Id: TdbOut.java,v 1.3 2014-09-04 18:29:33 thib_gc Exp $
  */
 
 /*
@@ -817,7 +817,6 @@ public class TdbOut {
    * @since 1.67
    */
   public static void main(String[] args) throws Exception {
-    /**/for(String str:args){System.out.println(str);}
     new TdbOut().run(args);
   }
 
