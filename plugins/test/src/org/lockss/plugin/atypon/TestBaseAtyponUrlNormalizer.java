@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseAtyponUrlNormalizer.java,v 1.4 2014-08-27 17:35:04 alexandraohlson Exp $
+ * $Id: TestBaseAtyponUrlNormalizer.java,v 1.5 2014-09-05 19:40:34 alexandraohlson Exp $
  */
 
 /*
@@ -107,4 +107,63 @@ public class TestBaseAtyponUrlNormalizer extends LockssTestCase {
 
   }
   
+  public void testShowImageNormalizer() throws Exception {
+    UrlNormalizer normalizer = new BaseAtyponUrlNormalizer();
+
+    /* Make sure a correct url going in, doesn't get modified */
+    assertEquals("http://www.baseatypon.com/action/showPopup?citid=citart1&id=F1&doi=10.2466%2F05.08.IT.3.3",
+        normalizer.normalizeUrl("http://www.baseatypon.com/action/showPopup?citid=citart1&id=F1&doi=10.2466%2F05.08.IT.3.3", null));
+
+    /* Make sure a correct url going in, has the DOI "/" properly encoded */
+    assertEquals("http://www.baseatypon.com/action/showPopup?citid=citart1&id=F1&doi=10.2466%2F05.08.IT.3.3",
+        normalizer.normalizeUrl("http://www.baseatypon.com/action/showPopup?citid=citart1&id=F1&doi=10.2466/05.08.IT.3.3", null));
+
+    /* Now check that it gets properly reordered */
+    assertEquals("http://www.baseatypon.com/action/showPopup?citid=citart1&id=F1&doi=10.2466%2F05.08.IT.3.3",
+        normalizer.normalizeUrl("http://www.baseatypon.com/action/showPopup?citid=citart1&doi=10.2466%2F05.08.IT.3.3&id=F1", null));
+    /* and properly reordered and url encoded */
+    assertEquals("http://www.baseatypon.com/action/showPopup?citid=citart1&id=F1&doi=10.2466%2F05.08.IT.3.3",
+        normalizer.normalizeUrl("http://www.baseatypon.com/action/showPopup?citid=citart1&doi=10.2466/05.08.IT.3.3&id=F1", null));
+
+    /* what do we do with a bogus argument */
+    assertEquals("http://www.baseatypon.com/action/showPopup?citid=citart1",
+        normalizer.normalizeUrl("http://www.baseatypon.com/action/showPopup?citid=citart1&doi", null));
+    /* Get rid of extraneous args */
+    assertEquals("http://www.baseatypon.com/action/showPopup?citid=citart1&id=F1&doi=10.2466%2F05.08.IT.3.3",
+        normalizer.normalizeUrl("http://www.baseatypon.com/action/showPopup?citid=citart1&foo=blah&doi=10.2466%2F05.08.IT.3.3&id=F1", null));
+    /* handle weird double "=" in an arg value */
+    assertEquals("http://www.baseatypon.com/action/showPopup?citid=citart1&id=F1&doi=10.2466%2F05.08.IT.3.3",
+        normalizer.normalizeUrl("http://www.baseatypon.com/action/showPopup?citid=citart1&foo=blah=rah&doi=10.2466%2F05.08.IT.3.3&id=F1", null));
+
+  }  
+  public void testShowImageFullNormalizer() throws Exception {
+    UrlNormalizer normalizer = new BaseAtyponUrlNormalizer();
+
+    /* Make sure a correct url going in, doesn't get modified */
+    assertEquals("http://www.baseatypon.com/action/showFullPopup?id=i1520-0469-66-1-187-f01&doi=10.1175%2F2008JAS2765.1",
+        normalizer.normalizeUrl("http://www.baseatypon.com/action/showFullPopup?id=i1520-0469-66-1-187-f01&doi=10.1175%2F2008JAS2765.1", null));
+
+    /* Make sure a correct url going in, has the DOI "/" properly encoded */
+    assertEquals("http://www.baseatypon.com/action/showFullPopup?id=i1520-0469-66-1-187-f01&doi=10.1175%2F2008JAS2765.1",
+        normalizer.normalizeUrl("http://www.baseatypon.com/action/showFullPopup?id=i1520-0469-66-1-187-f01&doi=10.1175/2008JAS2765.1", null));
+
+    /* Now make sure it gets reordered */
+    assertEquals("http://www.baseatypon.com/action/showFullPopup?id=i1520-0469-66-1-187-f01&doi=10.1175%2F2008JAS2765.1",
+        normalizer.normalizeUrl("http://www.baseatypon.com/action/showFullPopup?doi=10.1175%2F2008JAS2765.1&id=i1520-0469-66-1-187-f01", null));
+    /* reordered and encoded */
+    assertEquals("http://www.baseatypon.com/action/showFullPopup?id=i1520-0469-66-1-187-f01&doi=10.1175%2F2008JAS2765.1",
+        normalizer.normalizeUrl("http://www.baseatypon.com/action/showFullPopup?doi=10.1175/2008JAS2765.1&id=i1520-0469-66-1-187-f01", null));
+
+    /* do nothing but don't die for "bad" arg list */
+    assertEquals("http://www.baseatypon.com/action/showFullPopup?doi=11.1111%2Ffoo",
+        normalizer.normalizeUrl("http://www.baseatypon.com/action/showFullPopup?doi=11.1111/foo", null));
+    assertEquals("http://www.baseatypon.com/action/showFullPopup?doi=11.1111%2Ffoo",
+        normalizer.normalizeUrl("http://www.baseatypon.com/action/showFullPopup?doi=11.1111/foo&id", null));
+    
+    /* do nothing if it doesn't meet the requirements (match pattern AND have doi) */
+    assertEquals("http://www.baseatypon.com/action/showFullPopup?id=blah&key=otherval",
+        normalizer.normalizeUrl("http://www.baseatypon.com/action/showFullPopup?id=blah&key=otherval", null));
+
+  }
+
 }
