@@ -1,4 +1,4 @@
-/* $Id: PalgraveBookHtmlHashFilterFactory.java,v 1.6 2014-08-20 21:46:39 aishizaki Exp $
+/* $Id: PalgraveBookHtmlHashFilterFactory.java,v 1.7 2014-09-05 19:37:50 aishizaki Exp $
  
 Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -29,11 +29,15 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.palgrave;
 
 import java.io.InputStream;
+import java.io.Reader;
 
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.*;
+import org.lockss.filter.FilterUtil;
+import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.util.ReaderInputStream;
 
 public class PalgraveBookHtmlHashFilterFactory implements FilterFactory {
 
@@ -43,6 +47,9 @@ public class PalgraveBookHtmlHashFilterFactory implements FilterFactory {
 	// http://www.palgraveconnect.com/pc/doifinder/10.1057/9780230597655
 	new TagNameFilter("script"),
 	new TagNameFilter("noscript"),
+	// some unique numbers in metadata tab - remove all metadata
+	// <meta name="emanating" content="171X66X236X16" />
+	new TagNameFilter("meta"),
 	// added by audrey: Extreme Hashing
 	// there are differences in some of their comments; remove them all!
 	HtmlNodeFilters.comment(),
@@ -59,8 +66,12 @@ public class PalgraveBookHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "class", "column-width-sidebar column-r"),
         // only keeping stuff in the left sidebar
     };
-    return new HtmlFilterInputStream(in, encoding,
-        HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    InputStream filtered =  new HtmlFilterInputStream(in, encoding, HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    
+    Reader filteredReader = FilterUtil.getReader(filtered, encoding);
+    return new ReaderInputStream(new WhiteSpaceFilter(filteredReader));
+    //return new HtmlFilterInputStream(in, encoding,
+    //    HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
     }
     
 }
