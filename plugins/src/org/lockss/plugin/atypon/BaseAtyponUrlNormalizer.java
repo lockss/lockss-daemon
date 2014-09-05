@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponUrlNormalizer.java,v 1.7 2014-07-08 17:30:28 alexandraohlson Exp $
+ * $Id: BaseAtyponUrlNormalizer.java,v 1.8 2014-09-05 17:59:30 alexandraohlson Exp $
  */
 /*
  Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
@@ -56,6 +56,22 @@ public class BaseAtyponUrlNormalizer implements UrlNormalizer {
   private final String DOI_ARG = "doi";
   private final String FORMAT_ARG = "format";
   private final String INCLUDE_ARG = "include";
+  
+  /*
+   * JAVASCRIPT show(full)Image URL CLEANUP
+   * For those Atypon children that use a BASE/action/show(Full)Image?id=foo&doi=blah URL to 
+   *   display additional image sizes, the arguments can come in any order. We generate
+   *   some of these URLs with a link extractor and we don't want to get duplicate URLs
+   *   so normalize the order to be one of:
+   *    BASE/action/showPopup?citid=citart1&id=F1&doi=10.2466%2F05.08.IT.3.3
+   *    BASE/action/showFullPopup?id=i1520-0469-66-1-187-f01&doi=10.1175%2F2008JAS2765.1
+   *   
+   */
+     protected static final String ACTION_SHOWPOP = "/action/showPopup?citid=citart1&";
+     protected static final String ACTION_SHOWFULL = "/action/showFullPopup?";
+     private final String CITID_ARG = "citid";
+     private final String ID_ARG = "id";
+     
 
   public String normalizeUrl(String url, ArchivalUnit au)
       throws PluginException {
@@ -70,32 +86,42 @@ public class BaseAtyponUrlNormalizer implements UrlNormalizer {
       }
     }
 
+    // There are several cases where we need to specify order of arguments
+    // This is because we generate the URLS with the link extractor and need to 
+    // makes sure we don't get redundant URLs due to "found" links that are
+    // the same but for ordering.
+    // This happens for citation download and image viewer urls
+    
     // Only do this normalization for correctly formatted form downloaded citation URLs
     int qmark = url.indexOf("?");
-    if (url.contains(CITATION_DOWNLOAD_URL) && (url.contains(DOI_ARG + "=")) && (qmark >= 0)) {
-       Map<String, String> argMap = new HashMap<String, String>();
-       String oneArg;
-       String argKey;
-       String argVal;
-       int splitIndex;
-              
-      log.debug3("orig citation download url: " + url);
-      String cit_arg_string = url.substring(qmark+1);
-      log.debug3("citation url args in: " + cit_arg_string);
+    // Only proceed if this is a case we want
+    if ((url.contains(CITATION_DOWNLOAD_URL) || url.contains(ACTION_SHOWPOP) || 
+        url.contains(ACTION_SHOWFULL)) && url.contains(DOI_ARG) && (qmark >= 0)) {
+      //First pick up the args in to a map
+      Map<String, String> argMap = new HashMap<String, String>();
+      String oneArg;
+      String argKey;
+      String argVal;
+      int splitIndex;
+             
+     log.debug3("orig download url: " + url);
+     String arg_string = url.substring(qmark+1);
+     log.debug3("url args in: " + arg_string);
 
-      // put all the args in to a map
-      String[] cit_arg_list = cit_arg_string.split("&");
-      int num_args = cit_arg_list.length;
-      for (int i = 0; i < num_args; i++) {
-        oneArg = cit_arg_list[i];
-        log.debug3("argument: " + oneArg);
-        splitIndex = oneArg.indexOf("=");
-        argKey = oneArg.substring(0, splitIndex);
-        argVal = oneArg.substring(splitIndex+1);
-        log.debug3("map entry: " + argKey + "  " + argVal);
-        argMap.put(argKey,  argVal);
-      }
-
+     // put all the args in to a map
+     String[] arg_list = arg_string.split("&");
+     int num_args = arg_list.length;
+     for (int i = 0; i < num_args; i++) {
+       oneArg = arg_list[i];
+       log.debug3("argument: " + oneArg);
+       splitIndex = oneArg.indexOf("=");
+       argKey = oneArg.substring(0, splitIndex);
+       argVal = oneArg.substring(splitIndex+1);
+       log.debug3("map entry: " + argKey + "  " + argVal);
+       argMap.put(argKey,  argVal);
+     }
+     // Now handle each case appropriately  - first citation download
+     if (url.contains(CITATION_DOWNLOAD_URL)){
        StringBuilder new_url = new StringBuilder(url.substring(0,qmark));
       // add on DOI arg - this must be here
       if (argMap.containsKey(DOI_ARG)) {
@@ -120,7 +146,33 @@ public class BaseAtyponUrlNormalizer implements UrlNormalizer {
       }
       log.debug3("normalized citation download url: " + new_url);
       return new_url.toString();
+     } else if (url.contains(ACTION_SHOWPOP)) {
+       StringBuilder new_url = new StringBuilder(url.substring(0,qmark));
+       boolean firstarg = true;
+       // this only occurs for showImage, not showFullImage
+       if (argMap.containsKey(CITID_ARG)) {
+         // this always seems to be the same, but use what was collected in case
+         new_url.append("?" + CITID_ARG + "=" + argMap.get(CITID_ARG));
+         firstarg = false;
+       } 
+       // this will be the second arg for showImage and first for showFullImage
+       if (argMap.containsKey(ID_ARG)) {
+         if (firstarg) {
+           new_url.append("?");
+         } else {
+           new_url.append("&");
+         } 
+         new_url.append(ID_ARG + "=" + argMap.get(ID_ARG));
+       } 
+       if (argMap.containsKey(DOI_ARG)) {
+         //DOI's themselves might have "/" and this must be uri encoded
+         new_url.append("&" + DOI_ARG + "=" + StringUtil.replaceString(argMap.get(DOI_ARG), "/", "%2F"));
+       } 
+      log.debug3("normalized show(Full)Image download url: " + new_url);
+      return new_url.toString();
+     }      
     }
+    
     // some CSS/JS files have a hash argument that isn't needed
     String returnString = HASH_ARG_PATTERN.matcher(url).replaceFirst("$1");
     if (!returnString.equals(url)) {    
