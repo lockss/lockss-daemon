@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -20,7 +20,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -124,6 +124,10 @@
   <entry>
     <string>application/pdf_filter_factory</string>
     <string>org.lockss.plugin.palgrave.PalgraveBookPdfFilterFactory</string>
+  </entry>
+  <entry>
+    <string>application/epub+zip_filter_factory</string>
+    <string>org.lockss.plugin.palgrave.PalgraveBookEpubFilterFactory</string>
   </entry>
   <entry>
     <string>application/x-research-info-systems_metadata_extractor_factory_map</string>
