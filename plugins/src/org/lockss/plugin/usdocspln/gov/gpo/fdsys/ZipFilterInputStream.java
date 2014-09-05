@@ -1,5 +1,5 @@
 /*
- * $Id: ZipFilterInputStream.java,v 1.2 2014-09-05 18:44:49 thib_gc Exp $
+ * $Id: ZipFilterInputStream.java,v 1.3 2014-09-05 18:59:42 thib_gc Exp $
  */
 
 /*
@@ -35,6 +35,9 @@ package org.lockss.plugin.usdocspln.gov.gpo.fdsys;
 import java.io.*;
 import java.util.zip.*;
 
+/*
+ * This is also needed in Palgrave -- should be generalized in the daemon
+ */
 public abstract class ZipFilterInputStream extends InputStream {
 
   private ZipInputStream zipInputStream;
