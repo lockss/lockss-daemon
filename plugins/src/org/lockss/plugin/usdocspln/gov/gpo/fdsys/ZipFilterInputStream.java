@@ -1,5 +1,5 @@
 /*
- * $Id: ZipFilterInputStream.java,v 1.1 2014-09-02 17:59:43 thib_gc Exp $
+ * $Id: ZipFilterInputStream.java,v 1.2 2014-09-05 18:44:49 thib_gc Exp $
  */
 
 /*
@@ -105,8 +105,8 @@ public abstract class ZipFilterInputStream extends InputStream {
         eof = true;
         return;
       }
-      long size = ze.getSize();
-      if (size > 0L && keepZipEntry(ze)) {
+      long size = ze.getSize(); // can be -1L for deflate method
+      if (size != 0L && keepZipEntry(ze)) {
         currentZipEntry = ze;
         return;
       }
