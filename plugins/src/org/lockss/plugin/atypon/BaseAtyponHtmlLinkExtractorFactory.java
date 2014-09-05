@@ -1,9 +1,9 @@
-/* $Id: BaseAtyponHtmlLinkExtractorFactory.java,v 1.3 2014-09-04 23:02:25 alexandraohlson Exp $
+/* $Id: BaseAtyponHtmlLinkExtractorFactory.java,v 1.4 2014-09-05 20:44:16 alexandraohlson Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -52,8 +52,6 @@ import org.lockss.extractor.LinkExtractorFactory;
 import org.lockss.extractor.JsoupHtmlLinkExtractor.SimpleTagLinkExtractor;
 import org.lockss.extractor.LinkExtractor.Callback;
 import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.atypon.maney.ManeyAtyponHtmlLinkExtractorFactory.ManeyScriptTagLinkExtractor;
-import org.lockss.plugin.taylorandfrancis.TaylorAndFrancisHtmlLinkExtractorFactory.TaylorAndFrancisSimpleTagLinkExtractor;
 import org.lockss.util.Logger;
 import org.lockss.util.SetUtil;
 import org.lockss.util.StringUtil;
@@ -61,12 +59,15 @@ import org.lockss.util.StringUtil;
 /* an implementation of JsoupHtmlLinkExtractor with a restrictor set */
 public class BaseAtyponHtmlLinkExtractorFactory 
 implements LinkExtractorFactory {
+  
+  private static final Logger log = 
+      Logger.getLogger(BaseAtyponHtmlLinkExtractorFactory.class);
 
-  private static String HREF_NAME = "href";
-  private static String LINK_TAG = "a";
-  private static String SCRIPT_TAG = "script";
+  private static final String HREF_NAME = "href";
+  private static final String LINK_TAG = "a";
+  private static final String SCRIPT_TAG = "script";
   //Identify a URL as being one for a full text html version of the article
-  protected static Pattern PATTERN_FULL_ARTICLE_URL = Pattern.compile("^(https?://[^/]+)/doi/full/([.0-9]+)/([^?&]+)$");
+  protected static final Pattern PATTERN_FULL_ARTICLE_URL = Pattern.compile("^(https?://[^/]+)/doi/full/([.0-9]+)/([^?&]+)$");
 
 
   /*
@@ -152,17 +153,19 @@ implements LinkExtractorFactory {
   public static class BaseAtyponSimpleTagLinkExtractor 
   extends SimpleTagLinkExtractor {
 
-    private static final Logger log = 
-        Logger.getLogger(BaseAtyponSimpleTagLinkExtractor.class);
-
-    // pattern to isolate id used in popRef call = see comment at tagBegin
-    static final protected Pattern POPREF_PATTERN = Pattern.compile(
-        "javascript:popRef(Full)?\\([\"']([^\"']+)", Pattern.CASE_INSENSITIVE);
+    /*
+     *  pattern to isolate id used in popRef call = see comment at tagBegin
+     *  pulling "id" from inside javascript:popRef('foo')
+     *  the pattern is limited in that it doesn't handle a MIX of single and 
+     *  double quotes - but that's extremely unlikely for an id value
+     */
+    protected static final Pattern POPREF_PATTERN = Pattern.compile(
+        "javascript:popRef(Full)?\\([\"']([^\"']+)[\"']\\)", Pattern.CASE_INSENSITIVE);
     
     // define pieces used in the resulting URL
-    static final String ACTION_SHOWPOP = "/action/showPopup?citid=citart1&id=";
-    static final String ACTION_SHOWFULL = "/action/showFullPopup?id=";
-    static final String DOI_ARG = "&doi=";
+    private static final String ACTION_SHOWPOP = "/action/showPopup?citid=citart1&id=";
+    private static final String ACTION_SHOWFULL = "/action/showFullPopup?id=";
+    private static final String DOI_ARG = "&doi=";
 
     // nothing needed in the constructor - just call the parent
     public BaseAtyponSimpleTagLinkExtractor(String attr) {
@@ -205,8 +208,8 @@ implements LinkExtractorFactory {
             // Derive showPopup URL
             idVal = hrefMat.group(2);
             String newUrl;
-            if (href.contains("popRefFull")) {
-              //identify variant
+            if (hrefMat.group(1) != null) {
+              // this is testing if we matched the popRefFull variant
               newUrl = base_url + ACTION_SHOWFULL + idVal + DOI_ARG + doiVal;
             } else {
               newUrl = base_url + ACTION_SHOWPOP + idVal + DOI_ARG + doiVal;
