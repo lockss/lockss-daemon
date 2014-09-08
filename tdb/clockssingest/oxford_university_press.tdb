@@ -1652,6 +1652,22 @@
   {
 
     title <
+      name = Arbitration International ;
+      issn = 0957-0411 ;
+      eissn = 1875-8398 ;
+      issnl = 0957-0411 
+    >
+
+    param[base_url] = http://arbitration.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < expected ; exists ; 2014 ; Arbitration International Volume 30 ; 30 ; >
+
+  }
+
+  {
+
+    title <
       name = Arbitration Law Reports and Review ;
       issn = 2044-8651 ;
       eissn = 2044-9887 ;
@@ -4579,6 +4595,22 @@
 
     }
 
+  }
+
+  {
+
+    title <
+      name = Economic Policy ;
+      issn = 0266-4658 ;
+      eissn = 1468-0327 ;
+      issnl = 0266-4658 
+    >
+
+    param[base_url] = http://economicpolicy.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < expected ; exists ; 2014 ; Economic Policy Volume 29 ; 29 ; >
+    
   }
 
   {
@@ -8805,6 +8837,21 @@
   {
 
     title <
+      name = International Journal of Neuropsychopharmacology ;
+      issn = 1461-1457  ;
+      eissn = 1469-5111 ;
+      issnl = 1461-1457 
+    >
+
+    param[base_url] = http://ijnp.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < expected ; exists ; 2014 ; International Journal of Neuropsychopharmacology Volume 17 ; 17 ; >
+  }
+
+  {
+
+    title <
       name = International Journal of Public Opinion Research ;
       issn = 0954-2892 ;
       eissn = 1471-6909 ;
@@ -11949,6 +11996,22 @@
   {
 
     title <
+      name = Journal of Mammalogy ;
+      issn = 1545-1542  ;
+      eissn = 0022-2372 ;
+      issnl = 1545-1542 
+    >
+
+    param[base_url] = http://jmammal.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < expected ; exists ; 2014 ; Journal of Mammalogy Volume 95 ; 95 ; >
+
+  }
+
+  {
+
+    title <
       name = The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine ;
       issn = 0360-5310 ;
       eissn = 1744-5019 ;
@@ -13861,6 +13924,21 @@
 
     }
 
+  }
+
+  {
+
+    title <
+      name = Mammalian Species ;
+      eissn = 1545-1410 ;
+      issnl = 1545-1410 
+    >
+
+    param[base_url] = http://mspecies.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < expected ; exists ; 2014 ; Mammalian Species Volume 46 ; 46 ; >
+    
   }
 
   {
@@ -15839,6 +15917,22 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Nucleic Acids Symposium Series Volume 53 ; 53 ; >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = Nutrition Reviews ;
+      issn = 0029-6643 ;
+      eissn = 1753-4887 ;
+      issnl = 0029-6643
+    >
+
+    pluginSuffix = ClockssHighWirePressH20Plugin
+    param[base_url] = http://nutritionreviews.oxfordjournals.org/
+
+    au < expected ; exists ; 2014 ; Nutrition Reviews Volume 72 ; 72 ; >
 
   }
 
