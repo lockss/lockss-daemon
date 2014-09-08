@@ -10435,7 +10435,6 @@
 
     param[base_url] = http://jmicro.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
-    comment[notReady] =RU4168
 
     au < manifest ; exists ; 1953 ; Journal of Electron Microscopy Volume 1 ; 1 ; >
     au < manifest ; exists ; 1954 ; Journal of Electron Microscopy Volume 2 ; 2 ; >
