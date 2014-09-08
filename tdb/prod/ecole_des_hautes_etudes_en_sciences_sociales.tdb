@@ -1,0 +1,24 @@
+{
+  publisher <
+    name = Ecole des Hautes Etudes en Sciences Sociales
+  >
+
+  implicit < status ; year; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Annales. Histoire, Sciences sociales (French Edition) ;
+      issn = 0395-2649 ;
+      eissn = 1953-8146
+    >
+
+    param[journal_dir] = annales_histoire_sciences_sociales
+    attr[journal_id] = ahs
+    
+    au < exists ; 2014 ; Annales Volume 69 ; 69 >
+  }
+
+}
