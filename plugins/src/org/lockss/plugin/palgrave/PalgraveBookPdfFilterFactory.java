@@ -1,5 +1,5 @@
 /*
- * $Id: PalgraveBookPdfFilterFactory.java,v 1.1 2014-08-19 21:47:04 thib_gc Exp $
+ * $Id: PalgraveBookPdfFilterFactory.java,v 1.2 2014-09-08 15:03:08 aishizaki Exp $
  */
 
 /*
@@ -118,6 +118,7 @@ public class PalgraveBookPdfFilterFactory extends SimplePdfFilterFactory {
   @Override
   public void transform(ArchivalUnit au, PdfDocument pdfDocument) throws PdfException {
     pdfDocument.unsetModificationDate();
+    pdfDocument.unsetCreationDate();
     pdfDocument.unsetMetadata();
     PdfUtil.normalizeTrailerId(pdfDocument);
     
