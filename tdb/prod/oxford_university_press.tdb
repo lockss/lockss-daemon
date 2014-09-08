@@ -10604,7 +10604,7 @@
     >
     param[base_url] = http://ecco-jcc.oxfordjournals.org/
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-    implicit < status ; year ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume_name] >
     
     au < expected ; 2014 ; Journal of Crohn's and Colitis Volume 8 ; 8 >
     
