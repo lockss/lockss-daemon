@@ -52,9 +52,12 @@
 
       param[journal_id] = aps
       param[journal_issn] = 2042-793X
+      comment[0] = content published 2 years later
       
       au < released ; 2011 ; Art & the Public Sphere Volume 1 ; 1 >
-      au < expected ; 2014 ; Art & the Public Sphere Volume 2 ; 2 >
+      au < manifest ; 2012 ; Art & the Public Sphere Volume 2 ; 2 >
+      au < expected ; 2013 ; Art & the Public Sphere Volume 3 ; 3 >
+      au < expected ; 2014 ; Art & the Public Sphere Volume 4 ; 4 >
 
     }
 
