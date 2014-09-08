@@ -30,7 +30,7 @@
     au < crawling ; exists ; 2011 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 21 ; 21 >
     au < crawling ; exists ; 2012 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 22 ; 22 >
     au < crawling ; exists ; 2013 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 23 ; 23 >
-    au < manifest ; exists ; 2014 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 24 ; 24 >
+    au < doNotProcess ; exists ; 2014 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 24 ; 24 >
   
   }
 
@@ -67,7 +67,7 @@
     au < crawling ; exists ; 2010-2011 ; The Journal of Practice Teaching and Learning Volume 10 ; 10 >
     au < crawling ; exists ; 2011-2013 ; The Journal of Practice Teaching and Learning Volume 11 ; 11 >
     au < crawling ; exists ; 2013-2014 ; The Journal of Practice Teaching and Learning Volume 12 ; 12 >
-    au < expected ; exists ; 2014-2015 ; The Journal of Practice Teaching and Learning Volume 13 ; 13 >
+    au < doNotProcess ; exists ; 2014-2015 ; The Journal of Practice Teaching and Learning Volume 13 ; 13 >
     
   }    
   
@@ -87,8 +87,8 @@
     au < crawling ; exists ; 2010-2011 ; Social Work and Social Sciences Review Volume 14 ; 14 >
     au < crawling ; exists ; 2011-2012 ; Social Work and Social Sciences Review Volume 15 ; 15 >
     au < crawling ; exists ; 2012-2013 ; Social Work and Social Sciences Review Volume 16 ; 16 >
-    au < manifest ; exists ; 2013-2014 ; Social Work and Social Sciences Review Volume 17 ; 17 >
-    au < expected ; exists ; 2014-2015 ; Social Work and Social Sciences Review Volume 18 ; 18 >
+    au < testing ; exists ; 2013-2014 ; Social Work and Social Sciences Review Volume 17 ; 17 >
+    au < doNotProcess ; exists ; 2014-2015 ; Social Work and Social Sciences Review Volume 18 ; 18 >
     
   }
 
@@ -102,7 +102,7 @@
     param[journal_issn] = 1987-8710
 
     au < crawling ; exists ; 2012-2013 ; Journal of Social Policy and Social Work in Transition Volume 3 ; 3 >
-    au < expected ; exists ; 2014 ; Journal of Social Policy and Social Work in Transition Volume 4 ; 4 >
+    au < doNotProcess ; exists ; 2014 ; Journal of Social Policy and Social Work in Transition Volume 4 ; 4 >
     
   }
 
