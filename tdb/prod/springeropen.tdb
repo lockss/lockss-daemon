@@ -156,7 +156,6 @@
         au < manifest ; 2014 ; Bioresources and Bioprocessing Volume 1 ; 1 >
   
     }
-  
     {
   
         title <
@@ -1139,6 +1138,21 @@
     {
   
         title <
+          name = International Journal of STEM Education ;
+          issn = 2196-7822 
+        >
+
+        param[base_url] = http://www.stemeducationjournal.com/
+        param[journal_issn] = 2196-7822 
+        comment[platform] = BioMedCentralPlugin
+  
+        au < exists ; 2014 ; International Journal of STEM Education Volume 1 ; 1 >
+
+    }
+  
+    {
+  
+        title <
           name = International Nano Letters ;
           issn = 2228-5326 
         >
@@ -1995,6 +2009,21 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; 2014 ; ROBOMECH Journal Volume 1 ; 1 >
+  
+    }
+  
+    {
+  
+        title <
+          name = Robotics and Biomimetics ;
+          issn = 2197-3768 
+        >
+  
+        param[base_url] = http://www.jrobio.com/
+        param[journal_issn] = 2197-3768 
+        comment[platform] = BioMedCentralPlugin
+  
+        au < exists ; 2014 ; Robotics and Biomimetics Volume 1 ; 1 >
   
     }
   
