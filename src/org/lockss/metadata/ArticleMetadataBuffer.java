@@ -1,5 +1,5 @@
 /*
- * $Id: ArticleMetadataBuffer.java,v 1.7 2014-08-29 20:45:42 pgust Exp $
+ * $Id: ArticleMetadataBuffer.java,v 1.8 2014-09-09 22:50:47 pgust Exp $
  */
 
 /*
@@ -81,6 +81,7 @@ class ArticleMetadataBuffer {
   static class ArticleMetadataInfo implements Serializable {
     private static final long serialVersionUID = -2372571567706061080L;
     String publisher;
+    String provider;
     String seriesTitle;
     String proprietarySeriesIdentifier;
     String publicationTitle;
@@ -114,7 +115,8 @@ class ArticleMetadataBuffer {
      * @param md the ArticleMetadata
      */
     public ArticleMetadataInfo(ArticleMetadata md) {
-      publisher=md.get(MetadataField.FIELD_PUBLISHER);
+      publisher = md.get(MetadataField.FIELD_PUBLISHER);
+      provider = md.get(MetadataField.FIELD_PROVIDER);
       seriesTitle = md.get(MetadataField.FIELD_SERIES_TITLE);
       proprietarySeriesIdentifier =
           md.get(MetadataField.FIELD_PROPRIETARY_SERIES_IDENTIFIER);
