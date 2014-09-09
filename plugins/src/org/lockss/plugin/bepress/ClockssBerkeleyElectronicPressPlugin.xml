@@ -1,9 +1,9 @@
-<!--  $Id: ClockssBerkeleyElectronicPressPlugin.xml,v 1.23 2014-07-14 21:51:18 aishizaki Exp $ -->
+<!--  $Id: ClockssBerkeleyElectronicPressPlugin.xml,v 1.24 2014-09-09 02:15:19 mellen22 Exp $ -->
 <map>
   <!-- ClockssBePressPlugin.xml inherits from BePressPlugin.xml. --> 
   <entry>
    <string>plugin_status</string>
-   <string>ready </string>
+   <string>ready</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
