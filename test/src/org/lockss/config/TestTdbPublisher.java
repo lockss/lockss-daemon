@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdbPublisher.java,v 1.9 2014-07-16 20:15:10 pgust Exp $
+ * $Id: TestTdbPublisher.java,v 1.10 2014-09-09 22:52:36 pgust Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import java.util.*;
  * Test class for <code>org.lockss.config.TdbPublisher</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdbPublisher.java,v 1.9 2014-07-16 20:15:10 pgust Exp $
+ * @version $Id: TestTdbPublisher.java,v 1.10 2014-09-09 22:52:36 pgust Exp $
  */
 
 public class TestTdbPublisher extends LockssTestCase {
@@ -243,6 +243,43 @@ public class TestTdbPublisher extends LockssTestCase {
     assertNull(getTitleIdUnknown);
   }
   
+  /**
+   * Test getTdbProviderCount() method.
+   * @throws TdbException for invalid Tdb operations
+   */
+  public void testGetProvider() throws TdbException {
+    TdbPublisher publisher = new TdbPublisher("Test Publisher");
+
+    Collection<TdbTitle> titles = publisher.getTdbTitles();
+    assertEmpty(titles);
+    assertFalse(publisher.tdbTitleIterator().hasNext());
+    
+    // add two titles
+    TdbTitle title1 = new TdbTitle("Journal Title", "1234-5678");
+    publisher.addTdbTitle(title1);
+
+    TdbTitle title2 = new TdbTitle("Book Title", "978-0521807678");
+    publisher.addTdbTitle(title2);
+
+    TdbTitle title3 = new TdbTitle("Book Title", "978-0345303066");
+    publisher.addTdbTitle(title3);
+
+    TdbAu au1 = new TdbAu("Test AU1", "pluginA");
+    new TdbProvider("provider1").addTdbAu(au1);
+    TdbAu au2 = new TdbAu("Test AU2", "pluginB");
+    new TdbProvider("provider2").addTdbAu(au2);
+    TdbAu au3 = new TdbAu("Test AU3", "pluginC");
+    new TdbProvider("provider3").addTdbAu(au3);
+    title1.addTdbAu(au1);
+    title1.addTdbAu(au2);
+    title3.addTdbAu(au3);
+
+    // ensure there are two providers: one that was
+    // explicitly added  for au2, and one that was
+    // implicitly added for au1 and au3
+    assertEquals(3, publisher.getTdbProviderCount());
+  }
+
   /**
    * Test TdbAu.addPluginIdsForDifferences() method.
    * @throws TdbException for invalid Tdb operations
