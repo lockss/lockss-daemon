@@ -29,7 +29,7 @@
      au < finished ; crawling ; 2011 ; Alexandria Volume 22 ; 22 >
      au < finished ; crawling ; 2012 ; Alexandria Volume 23 ; 23 >
      au < crawling ; exists ; 2013 ; Alexandria Volume 24 ; 24 >
-     au < expected ; exists ; 2014 ; Alexandria Volume 25 ; 25 >
+     au < doNotProcess ; exists ; 2014 ; Alexandria Volume 25 ; 25 >
 
     }
   
@@ -50,7 +50,7 @@
      au < manifest ; exists ; 2005 ; Bulletin of the John Rylands Library Volume 87 ; 87 >
      au < manifest ; exists ; 2006 ; Bulletin of the John Rylands Library Volume 88 ; 88 >
      au < crawling ; exists ; 2012-2013 ; Bulletin of the John Rylands Library Volume 89 ; 89 >
-     au < ready ; exists ; 2014 ; Bulletin of the John Rylands Library Volume 90 ; 90 >
+     au < doNotProcess ; exists ; 2014 ; Bulletin of the John Rylands Library Volume 90 ; 90 >
     
     }
     
@@ -77,7 +77,7 @@
      au < crawling ; exists ; 2013 ; Cahiers Élisabéthains Volume 83 ; 83 >
      au < crawling ; exists ; 2013 ; Cahiers Élisabéthains Volume 84 ; 84 >
      au < doNotProcess ; exists ; 2014 ; Cahiers Élisabéthains Volume 85 ; 85 >
-     au < expected ; exists ; 2014 ; Cahiers Élisabéthains Volume 86 ; 86 >
+     au < doNotProcess ; exists ; 2014 ; Cahiers Élisabéthains Volume 86 ; 86 >
     
     }
     
@@ -100,7 +100,7 @@
      au < finished ; frozen ; 2011 ; Critical Studies in Television: Scholarly Studies in Small Screen Fictions Volume 6 ; 6 >
      au < finished ; frozen ; 2012 ; Critical Studies in Television: Scholarly Studies in Small Screen Fictions Volume 7 ; 7 >
      au < crawling ; exists ; 2013 ; Critical Studies in Television: Scholarly Studies in Small Screen Fictions Volume 8 ; 8 >
-     au < ready ; exists ; 2014 ; Critical Studies in Television: Scholarly Studies in Small Screen Fictions Volume 9 ; 9 >
+     au < doNotProcess ; exists ; 2014 ; Critical Studies in Television: Scholarly Studies in Small Screen Fictions Volume 9 ; 9 >
 
     }
  
@@ -204,7 +204,7 @@
      au < finished ; frozen ; 2011 ; International Journal of Mechanical Engineering Education Volume 39 ; 39 >
      au < finished ; crawling ; 2012 ; International Journal of Mechanical Engineering Education Volume 40 ; 40 >
      au < crawling ; exists ; 2013 ; International Journal of Mechanical Engineering Education Volume 41 ; 41 >
-     au < manifest ; exists ; 2014 ; International Journal of Mechanical Engineering Education Volume 42 ; 42 >
+     au < doNotProcess ; exists ; 2014 ; International Journal of Mechanical Engineering Education Volume 42 ; 42 >
     
     }
 
@@ -227,7 +227,7 @@
      au < finished ; frozen ; 2011 ; Irish Economic and Social History Volume 38 ; 38 >
      au < finished ; frozen ; 2012 ; Irish Economic and Social History Volume 39 ; 39 >
      au < crawling ; exists ; 2013 ; Irish Economic and Social History Volume 40 ; 40 >
-     au < expected ; exists ; 2014 ; Irish Economic and Social History Volume 41 ; 41 >
+     au < doNotProcess ; exists ; 2014 ; Irish Economic and Social History Volume 41 ; 41 >
 
     }
 
@@ -250,7 +250,7 @@
      au < finished ; frozen ; 2011 ; Irish Journal of Sociology Volume 19 ; 19 >
      au < finished ; frozen ; 2012 ; Irish Journal of Sociology Volume 20 ; 20 >
      au < crawling ; exists ; 2013 ; Irish Journal of Sociology Volume 21 ; 21 >
-     au < expected ; exists ; 2014 ; Irish Journal of Sociology Volume 22 ; 22 >
+     au < doNotProcess ; exists ; 2014 ; Irish Journal of Sociology Volume 22 ; 22 >
   
      }
 
@@ -362,7 +362,7 @@
      au < finished ; frozen ; 2011 ; Nineteenth Century Theatre and Film Volume 38 ; 38 >
      au < finished ; frozen ; 2012 ; Nineteenth Century Theatre and Film Volume 39 ; 39 >
      au < crawling ; exists ; 2013 ; Nineteenth Century Theatre and Film Volume 40 ; 40 >
-     au < expected ; exists ; 2014 ; Nineteenth Century Theatre and Film Volume 41 ; 41 >
+     au < doNotProcess ; exists ; 2014 ; Nineteenth Century Theatre and Film Volume 41 ; 41 >
     
     }
 
@@ -439,7 +439,7 @@
      au < crawling ; exists ; 2013 ; Research in Education Volume 89 ; 89 >
      au < crawling ; exists ; 2013 ; Research in Education Volume 90 ; 90 >
      au < doNotProcess ; exists ; 2014 ; Research in Education Volume 91 ; 91 >
-     au < expected ; exists ; 2014 ; Research in Education Volume 92 ; 92 >
+     au < doNotProcess ; exists ; 2014 ; Research in Education Volume 92 ; 92 >
     
     }
 
