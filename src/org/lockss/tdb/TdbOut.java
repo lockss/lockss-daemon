@@ -1,5 +1,5 @@
 /*
- * $Id: TdbOut.java,v 1.3 2014-09-04 18:29:33 thib_gc Exp $
+ * $Id: TdbOut.java,v 1.4 2014-09-09 19:44:54 thib_gc Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.*;
 import java.util.*;
 
 import org.apache.commons.cli.*;
+import org.lockss.tdb.AntlrUtil.SyntaxError;
 
 public class TdbOut {
 
@@ -463,6 +464,7 @@ public class TdbOut {
     // Options from other modules
     HelpOption.addOptions(options);
     VerboseOption.addOptions(options);
+    KeepGoingOption.addOptions(options);
     InputOption.addOptions(options);
     OutputOption.addOptions(options);
     tdbQueryBuilder.addOptions(options);
@@ -493,6 +495,7 @@ public class TdbOut {
   public Map<String, Object> processCommandLine(CommandLine cmd, Map<String, Object> options) {
     // Options from other modules
     VerboseOption.processCommandLine(options, cmd);
+    KeepGoingOption.processCommandLine(options, cmd);
     InputOption.processCommandLine(options, cmd);
     OutputOption.processCommandLine(options, cmd);
     tdbQueryBuilder.processCommandLine(options, cmd);
@@ -605,25 +608,33 @@ public class TdbOut {
   public Tdb processFiles(Map<String, Object> options) throws IOException {
     List<String> inputFiles = InputOption.getInput(options);
     for (String f : inputFiles) {
-      if ("-".equals(f)) {
-        try {
-          tdbBuilder.parse(System.in);
+      try {
+        if ("-".equals(f)) {
+          f = "<stdin>";
+          tdbBuilder.parse(f, System.in);
         }
-        catch (IOException ioe) {
-          AppUtil.error(VerboseOption.isVerbose(options), ioe, "Error while processing <stdin>");
-        }
-      }
-      else {
-        try {
+        else {
           tdbBuilder.parse(f);
         }
-        catch (FileNotFoundException fnfe) {
-          AppUtil.error(VerboseOption.isVerbose(options), fnfe, "File not found: %s", f);
-        }
-        catch (IOException ioe) {
-          AppUtil.error(VerboseOption.isVerbose(options), ioe, "Error while processing %s", f);
-        }
       }
+      catch (FileNotFoundException fnfe) {
+        AppUtil.warning(options, fnfe, "%s: file not found", f);
+        KeepGoingOption.addError(options, fnfe);
+      }
+      catch (IOException ioe) {
+        AppUtil.warning(options, ioe, "%s: I/O error", f);
+        KeepGoingOption.addError(options, ioe);
+      }
+      catch (SyntaxError se) {
+        AppUtil.warning(options, se, se.getMessage());
+        KeepGoingOption.addError(options, se);
+      }
+    }
+    
+    List<Exception> errors = KeepGoingOption.getErrors(options);
+    int errs = errors.size();
+    if (KeepGoingOption.isKeepGoing(options) && errs > 0) {
+      AppUtil.error(options, errors, "Encountered %d %s; exiting", errs, errs == 1 ? "error" : "errors");
     }
     return tdbBuilder.getTdb();
   }

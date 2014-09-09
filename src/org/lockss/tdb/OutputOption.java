@@ -1,5 +1,5 @@
 /*
- * $Id: OutputOption.java,v 1.1 2014-09-03 20:35:58 thib_gc Exp $
+ * $Id: OutputOption.java,v 1.2 2014-09-09 19:44:54 thib_gc Exp $
  */
 
 /*
@@ -146,7 +146,7 @@ public class OutputOption {
         options.put(KEY_OUTPUT, new PrintStream(f));
       }
       catch (FileNotFoundException fnfe) {
-        AppUtil.error(VerboseOption.isVerbose(options), fnfe, "Cannot output to %s", f);
+        AppUtil.error(options, fnfe, "%s: file not found", f);
       }
     }
   }

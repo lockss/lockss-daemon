@@ -1,5 +1,5 @@
 /*
- * $Id: AppUtil.java,v 1.1 2014-09-03 20:35:58 thib_gc Exp $
+ * $Id: AppUtil.java,v 1.2 2014-09-09 19:44:54 thib_gc Exp $
  */
 
 /*
@@ -57,28 +57,31 @@ public class AppUtil {
 
   /**
    * <p>
-   * Displays an error message to standard error <b>and then exits with
+   * Displays an error message to the error console, <b>and then exits with
    * {@link System#exit(int)}</b>.
    * </p>
    * 
-   * @param verbose
-   *          If true, additionally print a stack trace from the given
-   *          {@link Throwable} instance (if non-null) first.
-   * @param throwable
-   *          A {@link Throwable} instance (can be null).
+   * @param options
+   *          The options map.
+   * @param exceptions
+   *          A list of exceptions whose stack traces are output to the error
+   *          console if non null and the verbose option has been requested on
+   *          the command line.
    * @param format
    *          A format string.
    * @param args
    *          Arguments for the format string.
    * @since 1.67
    */
-  public static void error(boolean verbose,
-                           Throwable throwable,
+  public static void error(Map<String, Object> options,
+                           List<Exception> exceptions,
                            String format,
                            Object... args) {
     String msg = String.format(format, args);
-    if (verbose && throwable != null) {
-      throwable.printStackTrace(System.err);
+    if (options != null && VerboseOption.isVerbose(options) && exceptions != null) {
+      for (Exception exc : exceptions) {
+        exc.printStackTrace(System.err);
+      }
     }
     System.err.println(msg);
     System.exit(1);
@@ -86,10 +89,37 @@ public class AppUtil {
 
   /**
    * <p>
-   * Displays an error message to standard error <b>and then exits with
+   * Displays an error message to the error console, <b>and then exits with
    * {@link System#exit(int)}</b>.
    * </p>
    * 
+   * @param options
+   *          The options map.
+   * @param exc
+   *          An exception whose stack trace is output to the error console if
+   *          non null and the verbose option has been requested on the command
+   *          line.
+   * @param format
+   *          A format string.
+   * @param args
+   *          Arguments for the format string.
+   * @since 1.67
+   */
+  public static void error(Map<String, Object> options,
+                           Exception exc,
+                           String format,
+                           Object... args) {
+    error(options, exc == null ? null : Arrays.asList(exc), format, args);
+  }
+
+  /**
+   * <p>
+   * Displays an error message to the error console, <b>and then exits with
+   * {@link System#exit(int)}</b>.
+   * </p>
+   * 
+   * @param options
+   *          The options map.
    * @param format
    *          A format string.
    * @param args
@@ -98,7 +128,42 @@ public class AppUtil {
    */
   public static void error(String format,
                            Object... args) {
-    AppUtil.error(false, null, format, args);
+    error(null, (List<Exception>)null, format, args);
+  }
+
+  /**
+   * <p>
+   * Displays a warning to the error console, <b>and then exits with
+   * {@link System#exit(int)}</b> unless the keep-going options has been
+   * requested on the command line.
+   * </p>
+   * 
+   * @param options
+   *          The options map.
+   * @param exc
+   *          An exception whose stack trace is output to the error console if
+   *          non null and the verbose option has been requested on the command
+   *          line.
+   * @param format
+   *          A format string.
+   * @param args
+   *          Arguments for the format string.
+   * @since 1.67
+   * @see KeepGoingOption
+   * @see VerboseOption
+   */
+  public static void warning(Map<String, Object> options,
+                             Exception exc,
+                             String format,
+                             Object... args) {
+    String msg = String.format(format, args);
+    if (VerboseOption.isVerbose(options) && exc != null) {
+      exc.printStackTrace(System.err);
+    }
+    System.err.println(msg);
+    if (!KeepGoingOption.isKeepGoing(options)) {
+      System.exit(1);
+    }
   }
   
   /**

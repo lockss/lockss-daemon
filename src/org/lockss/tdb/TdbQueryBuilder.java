@@ -1,5 +1,5 @@
 /*
- * $Id: TdbQueryBuilder.java,v 1.1 2014-09-03 20:35:58 thib_gc Exp $
+ * $Id: TdbQueryBuilder.java,v 1.2 2014-09-09 19:44:54 thib_gc Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.misc.NotNull;
 import org.antlr.v4.runtime.tree.ParseTreeWalker;
 import org.apache.commons.cli.*;
+import org.lockss.tdb.AntlrUtil.NamedAntlrInputStream;
 import org.lockss.tdb.Predicates.*;
 import org.lockss.tdb.TdbQueryParser.*;
 
@@ -1021,7 +1022,7 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
     // Parse primary query into primary predicate
     if (cmd.hasOption(KEY_QUERY)) {
       String query = cmd.getOptionValue(KEY_QUERY);
-      CharStream charStream = AntlrUtil.makeNamedAntlrInputStream("<query>", query);
+      CharStream charStream = new NamedAntlrInputStream("<query>", query);
       TdbQueryLexer lexer = new TdbQueryLexer(charStream);
       AntlrUtil.setEmacsErrorListener(lexer);
       CommonTokenStream tokens = new CommonTokenStream(lexer);
@@ -1155,9 +1156,9 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
   
   /**
    * <p>
-   * If processing an abstract syntax tree of type Or2, pop the two predicates
-   * waiting on top of the stack, merge them into an
-   * {@link Predicates.OrPredicate} instance, and push the result onto the
+   * If processing an abstract syntax tree of type Or2, pops the two predicates
+   * waiting on top of the stack, merges them into an
+   * {@link Predicates.OrPredicate} instance, and pushes the result onto the
    * stack.
    * </p>
    * 
@@ -1174,9 +1175,9 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
   
   /**
    * <p>
-   * If processing an abstract syntax tree of type And2, pop the two predicates
-   * waiting on top of the stack, merge them into an
-   * {@link Predicates.OrPredicate} instance, and push the result onto the
+   * If processing an abstract syntax tree of type And2, pops the two predicates
+   * waiting on top of the stack, merges them into an
+   * {@link Predicates.OrPredicate} instance, and pushes the result onto the
    * stack.
    * </p>
    * 
@@ -1193,8 +1194,8 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
   
   /**
    * <p>
-   * If processing an abstract syntax tree of type ExprRegex, parse the regular
-   * expression and push an appropriate predicate onto the stack.
+   * If processing an abstract syntax tree of type ExprRegex, parses the regular
+   * expression and pushes an appropriate predicate onto the stack.
    * </p>
    * 
    * @param erctx
@@ -1219,7 +1220,7 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
   
   /**
    * <p>
-   * If processing an abstract syntax tree of type ExprString, push an
+   * If processing an abstract syntax tree of type ExprString, pushes an
    * appropriate predicate onto the stack.
    * </p>
    * 

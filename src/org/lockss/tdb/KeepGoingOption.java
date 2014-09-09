@@ -1,5 +1,5 @@
 /*
- * $Id: InputOption.java,v 1.3 2014-09-09 19:44:54 thib_gc Exp $
+ * $Id: KeepGoingOption.java,v 1.1 2014-09-09 19:44:54 thib_gc Exp $
  */
 
 /*
@@ -38,24 +38,21 @@ import org.apache.commons.cli.*;
 
 /**
  * <p>
- * Utilities defining standard input option.
+ * Utilities defining a standard keep-going option.
  * </p>
  * <p>
- * If the input option created by {@link #addOptions(Options)} is requested on
- * the command line processed by {@link #processCommandLine(Map, CommandLine)},
- * {@link #getInput(Map)} will return a list of strings representing files from
- * which input should be read. If the input option itself is used, the list will
- * contain its argument as the only element, otherwise the list will contain one
- * or more arguments from the invoking program's command line. It is an error if
- * no input file are specified or if input files are specified both via the
- * input option and arguments to the invoking program. To request input from
- * {@link System#in}, use <code>"-"</code> as a file name.
+ * If the keep-going option created by {@link #addOptions(Options)} is requested
+ * on the command line processed by
+ * {@link #processCommandLine(Map, CommandLine)}, {@link #isKeepGoing(Map)} will
+ * return <code>true</code> to indicate it; one can then add errors to the list
+ * of errors via {@link #addError(Map, Exception)} and retrieve them later via
+ * {@link #getErrors(Map)}.
  * </p>
  * 
  * @author Thib Guicherd-Callin
  * @since 1.67
  */
-public class InputOption {
+public class KeepGoingOption {
 
   /**
    * <p>
@@ -64,10 +61,10 @@ public class InputOption {
    * 
    * @since 1.67
    */
-  private InputOption() {
+  private KeepGoingOption() {
     // Prevent instantiation
   }
-  
+
   /**
    * <p>
    * Key for the standard input option ({@value}).
@@ -75,7 +72,7 @@ public class InputOption {
    * 
    * @since 1.67
    */
-  protected static final String KEY_INPUT = "input";
+  protected static final String KEY_KEEP_GOING = "keep-going";
   
   /**
    * <p>
@@ -84,34 +81,33 @@ public class InputOption {
    * 
    * @since 1.67
    */
-  protected static final char LETTER_INPUT = 'i';
+  protected static final char LETTER_KEEP_GOING = 'k';
   
   /**
    * <p>
-   * Argument name for the standard input option ({@value}).
+   * Standard keep-going option.
    * </p>
    * 
    * @since 1.67
    */
-  protected static final String ARG_INPUT = "FILE";
+  protected static final Option OPTION_KEEP_GOING =
+      OptionBuilder.withLongOpt(KEY_KEEP_GOING)
+                   .withDescription(String.format("do not stop at the first error; keep going until all files are processed"))
+                   .create(LETTER_KEEP_GOING);
   
+
   /**
    * <p>
-   * Standard input option.
+   * Key for the keep-going option's error list.
    * </p>
    * 
    * @since 1.67
    */
-  protected static final Option OPTION_INPUT =
-      OptionBuilder.withLongOpt(KEY_INPUT)
-                   .hasArg()
-                   .withArgName(ARG_INPUT)
-                   .withDescription(String.format("read input from %s instead of list of input files", ARG_INPUT))
-                   .create(LETTER_INPUT);
+  protected static final String KEY_KEEP_GOING_ERRORS = KEY_KEEP_GOING + "__errors";
   
   /**
    * <p>
-   * Adds the standard input option to a Commons CLI {@link Options}
+   * Adds the standard keep-going option to a Commons CLI {@link Options}
    * instance.
    * </p>
    * 
@@ -120,7 +116,7 @@ public class InputOption {
    * @since 1.67
    */
   public static void addOptions(Options options) {
-    options.addOption(OPTION_INPUT);
+    options.addOption(OPTION_KEEP_GOING);
   }
 
   /**
@@ -137,37 +133,55 @@ public class InputOption {
    */
   public static void processCommandLine(Map<String, Object> options,
                                         CommandLine cmd) {
-    String[] args = cmd.getArgs();
-    if (cmd.hasOption(KEY_INPUT) && args.length > 0) {
-      AppUtil.error("--%s cannot be used with a list of input files", KEY_INPUT);
-    }
-    if (cmd.hasOption(KEY_INPUT)) {
-      options.put(KEY_INPUT, Arrays.asList(cmd.getOptionValue(KEY_INPUT)));
-    }
-    else {
-      if (args.length == 0) {
-        AppUtil.error("No input files specified");
-      }
-      options.put(KEY_INPUT, Arrays.asList(args));
-    }
+    options.put(KEY_KEEP_GOING, Boolean.valueOf(cmd.hasOption(KEY_KEEP_GOING)));
+    options.put(KEY_KEEP_GOING_ERRORS, new ArrayList<Exception>());
   }
 
   /**
    * <p>
-   * Determines from the options map the list of files from which input is
-   * requested on the command line.
+   * Determines from the options map if the keep-going option has been requested
+   * on the command line.
    * </p>
    * 
    * @param options
    *          An options map.
-   * @return A list of file names from which input is requedted, either a single
-   *         file from the input option itself or one or more files from the
-   *         invoking program's command line, with <code>"-"</code> meaning
-   *         {@link System#in}.
+   * @return <code>true</code> if and only if the keep-going option has been
+   *         requested on the command line.
    * @since 1.67
    */
-  public static List<String> getInput(Map<String, Object> options) {
-    return (List<String>)options.get(KEY_INPUT);
+  public static boolean isKeepGoing(Map<String, Object> options) {
+    Boolean keepGoing = (Boolean)options.get(KEY_KEEP_GOING);
+    return keepGoing != null && keepGoing.booleanValue();
+  }
+  
+  /**
+   * <p>
+   * Adds an error to the list kept internally in the options map and proceeds.
+   * </p>
+   * 
+   * @param options
+   *          The options map.
+   * @param exc
+   *          An exception.
+   * @since 1.67
+   */
+  public static void addError(Map<String, Object> options,
+                              Exception exc) {
+    getErrors(options).add(exc);
+  }
+  
+  /**
+   * <p>
+   * Retrieves the list of errors kept internally in the options map.
+   * </p>
+   * 
+   * @param options
+   *          The options map.
+   * @return The list of errors stored in the options map.
+   * @since 1.67
+   */
+  public static List<Exception> getErrors(Map<String, Object> options) {
+    return (List<Exception>)options.get(KEY_KEEP_GOING_ERRORS);
   }
 
 }
