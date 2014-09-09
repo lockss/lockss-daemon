@@ -2,7 +2,8 @@
 
   publisher <
     name = American Physiological Society ;
-    info[contract] = 2008
+    info[contract] = 2008 ;
+    info[tester] = 5
   >
 
   pluginPrefix = org.lockss.plugin.highwire.
