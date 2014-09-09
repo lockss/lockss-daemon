@@ -682,8 +682,6 @@
     }
 
     {
-
-      comment[notReady] = manifest page is up, but the links are not working
       
       au < ClockssHighWireDrupalPlugin ; doNotProcess ; doNotProcess ; 1977 ; American Journal of Physiology - Cell Physiology Volume 232 ; 232 ; >
       au < ClockssHighWireDrupalPlugin ; doNotProcess ; doNotProcess ; 1977 ; American Journal of Physiology - Cell Physiology Volume 233 ; 233 ; >
@@ -759,7 +757,7 @@
       au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2012 ; American Journal of Physiology - Cell Physiology Volume 303 ; 303 ; >
       au < ClockssHighWireDrupalPlugin ; manifest ; exists ; 2013 ; American Journal of Physiology - Cell Physiology Volume 304 ; 304 ; >
       au < ClockssHighWireDrupalPlugin ; manifest ; exists ; 2013 ; American Journal of Physiology - Cell Physiology Volume 305 ; 305 ; >
-      au < ClockssHighWireDrupalPlugin ; notReady ; exists ; 2014 ; American Journal of Physiology - Cell Physiology Volume 306 ; 306 ; >
+      au < ClockssHighWireDrupalPlugin ; manifest ; exists ; 2014 ; American Journal of Physiology - Cell Physiology Volume 306 ; 306 ; >
       au < ClockssHighWireDrupalPlugin ; manifest ; exists ; 2014 ; American Journal of Physiology - Cell Physiology Volume 307 ; 307 ; >
 
     }
