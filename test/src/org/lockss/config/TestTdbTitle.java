@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdbTitle.java,v 1.9 2014-07-24 20:46:23 fergaloy-sf Exp $
+ * $Id: TestTdbTitle.java,v 1.10 2014-09-09 22:53:04 pgust Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import java.util.*;
  * Test class for <code>org.lockss.config.TdbTitle</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdbTitle.java,v 1.9 2014-07-24 20:46:23 fergaloy-sf Exp $
+ * @version $Id: TestTdbTitle.java,v 1.10 2014-09-09 22:53:04 pgust Exp $
  */
 
 public class TestTdbTitle extends LockssTestCase {
@@ -390,6 +390,20 @@ public class TestTdbTitle extends LockssTestCase {
     assertEquals("bookSeries", title.getPublicationType());
     au.setPropertyByName("type", "book");
     assertEquals("book", title.getPublicationType());
+  }
+
+  /**
+   * Test providers
+   * @throws TdbException for invalid Tdb operations
+   */
+  public void testProviders() throws TdbException {
+    TdbTitle title = new TdbTitle("Test Title", "0000-0000");
+    TdbAu au = new TdbAu("Test AU", "pluginA");
+    TdbProvider provider = new TdbProvider("providerA");
+    au.setTdbProvider(provider);
+    title.addTdbAu(au);
+    assertEquals(1, title.getTdbProviderCount());
+    assertEquals(provider, title.getTdbProviders().iterator().next());
   }
 
   /**
