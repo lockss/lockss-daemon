@@ -1,6 +1,7 @@
 {
   publisher <
-    name = eLife Sciences Publications
+    name = eLife Sciences Publications ;
+    info[tester] = 2
   >
 
   plugin = org.lockss.plugin.highwire.elife.ELifeDrupalPlugin
