@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataField.java,v 1.23 2014-08-29 20:44:17 pgust Exp $
+ * $Id: MetadataField.java,v 1.24 2014-09-09 22:50:25 pgust Exp $
  */
 
 /*
@@ -159,6 +159,21 @@ public class MetadataField {
   public static final MetadataField FIELD_EISBN = new MetadataField(KEY_EISBN,
       Cardinality.Single,eisbnvalid);
   
+  public static final String KEY_PROVIDER = "provider";
+  // You cannot put in an empty string or a null value for publisher
+  private static Validator providervalid = new Validator() {
+    public String validate(ArticleMetadata am,MetadataField field,String val)
+        throws MetadataException.ValidationException {
+      // normalize so that it is never set to null or to empty string
+      if( (val == null) || val.isEmpty()) {
+        throw new MetadataException.ValidationException("Illegal provider: empty string"); 
+      }
+      return val;
+    }
+  };
+  public static final MetadataField FIELD_PROVIDER = new MetadataField(
+      KEY_PROVIDER, Cardinality.Single,providervalid);
+
   public static final String KEY_PUBLISHER = "publisher";
   // You cannot put in an empty string or a null value for publisher
   private static Validator publishervalid = new Validator() {
