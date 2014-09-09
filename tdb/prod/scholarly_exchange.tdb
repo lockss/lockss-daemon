@@ -30,7 +30,7 @@
   {
   
     title < 
-      name = Interdisciplinary Journal of Maritime Studies ;
+      name = Coriolis: Interdisciplinary Journal of Maritime Studies ;
       eissn = 2163-8381
     >
     
@@ -38,10 +38,10 @@
     param[base_url] = http://ijms.nmdl.org/
     param[journal_id] = ?
 
-    au < exists ; 2010 ; Interdisciplinary Journal of Maritime Studies Volume 1 ; 1 ; 2010 >
-    au < exists ; 2011 ; Interdisciplinary Journal of Maritime Studies Volume 2 ; 2 ; 2011 >
-    au < exists ; 2012 ; Interdisciplinary Journal of Maritime Studies Volume 3 ; 3 ; 2012 >
-    au < exists ; 2013 ; Interdisciplinary Journal of Maritime Studies Volume 4 ; 4 ; 2013 >
+    au < exists ; 2010 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 1 ; 1 ; 2010 >
+    au < exists ; 2011 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 2 ; 2 ; 2011 >
+    au < exists ; 2012 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 3 ; 3 ; 2012 >
+    au < exists ; 2013 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 4 ; 4 ; 2013 >
     
   }
   
@@ -60,6 +60,24 @@
     au < exists ; 2012 ; International Journal of Infection Control Volume 8 ; 8 ; 2012 >
     au < exists ; 2013 ; International Journal of Infection Control Volume 9 ; 9 ; 2013 >
     au < exists ; 2014 ; International Journal of Infection Control Volume 10 ; 10 ; 2014 >
+    
+  }
+  
+  {
+  
+    title < 
+      name = International Journal of Transactional Analysis Research ;
+      eissn = 2218-3159 
+    >
+    
+    param[base_url] = http://www.ijtar.org/
+    param[journal_id] = ?
+
+    au < exists ; 2010 ; International Journal of Transactional Analysis Research Volume 1 ; 1 ; 2010 >
+    au < exists ; 2011 ; International Journal of Transactional Analysis Research Volume 2 ; 2 ; 2011 >
+    au < exists ; 2012 ; International Journal of Transactional Analysis Research Volume 3 ; 3 ; 2012 >
+    au < exists ; 2013 ; International Journal of Transactional Analysis Research Volume 4 ; 4 ; 2013 >
+    au < exists ; 2014 ; International Journal of Transactional Analysis Research Volume 5 ; 5 ; 2014 >
     
   }
   
