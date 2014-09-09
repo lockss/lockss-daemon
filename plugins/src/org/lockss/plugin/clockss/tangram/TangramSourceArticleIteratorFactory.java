@@ -1,5 +1,5 @@
 /*
- * $Id: TangramSourceArticleIteratorFactory.java,v 1.2 2014-09-03 17:25:53 aishizaki Exp $
+ * $Id: TangramSourceArticleIteratorFactory.java,v 1.3 2014-09-09 17:31:46 aishizaki Exp $
  */
 
 /*
@@ -50,12 +50,11 @@ public class TangramSourceArticleIteratorFactory implements ArticleIteratorFacto
 
   protected static Logger log = Logger.getLogger(TangramSourceArticleIteratorFactory.class);
 
-  public static final Pattern XML_PATTERN = Pattern.compile("/(.*)\\.xml$", Pattern.CASE_INSENSITIVE);
+  public static final Pattern XML_PATTERN = Pattern.compile("/([^/]+)\\.xml$", Pattern.CASE_INSENSITIVE);
   public static final String XML_REPLACEMENT = "/$1.xml";
-  
+
   // ROOT_TEMPLATE doesn't need to be defined as sub-tree is entire tree under base/year
-  //could handle any number of subdirectories under the year so long as end in .xml
-  protected static final String PATTERN_TEMPLATE = "\"^%s%d/(.*)\\.xml$\",base_url,year";
+  protected static final String PATTERN_TEMPLATE = "\"^%s%d/([^/]+)\\.xml$\",base_url,year";
   //
   // The source content structure looks like this:
   // <root_location>/<year>/STUFF
@@ -68,13 +67,12 @@ public class TangramSourceArticleIteratorFactory implements ArticleIteratorFacto
       throws PluginException {
     SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
     
-    // no need to limit to ROOT_TEMPLATE
     builder.setSpec(builder.newSpec()
                     .setTarget(target)
                     .setPatternTemplate(PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE));
     
     // NOTE - full_text_cu is set automatically to the url used for the articlefiles
-    // ultimately the metadata extractor needs to set the entire facet map 
+    // ultimately the metadata extractor needs to set the entire facet map     
 
     // set up XML to be an aspect that will trigger an ArticleFiles to feed the metadata extractor
     builder.addAspect(XML_PATTERN,

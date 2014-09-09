@@ -48,7 +48,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <!-- http://clockss-ingest.lockss.org/sourcefiles/tangram-released/2012/TES.xlsx -->
+      <!-- http://clockss-ingest.lockss.org/sourcefiles/tangram-released/2012/Tes.xml -->
       <string>"^%s%d/.+\.pdf$", base_url, year</string>
     </list>
   </entry>
