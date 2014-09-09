@@ -1,5 +1,5 @@
 /*
- * $Id: TdbTitle.java,v 1.18 2014-07-25 07:01:48 tlipkis Exp $
+ * $Id: TdbTitle.java,v 1.19 2014-09-09 22:48:40 pgust Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import org.lockss.util.*;
  * This class represents a title database title.
  *
  * @author  Philip Gust
- * @version $Id: TdbTitle.java,v 1.18 2014-07-25 07:01:48 tlipkis Exp $
+ * @version $Id: TdbTitle.java,v 1.19 2014-09-09 22:48:40 pgust Exp $
  */
 public class TdbTitle {
   /**
@@ -609,6 +609,44 @@ public class TdbTitle {
    */
   public Collection<TdbAu> getTdbAus() {
     return tdbAus.values();
+  }
+
+  /**
+   * Return all TdbProviders for this title.
+   * <p>
+   * Note: the collection should be treated as read-only.
+   *
+   * @return a collection of TdbProviders for this title
+   */
+  public Collection<TdbProvider> getTdbProviders() {
+    Set<TdbProvider> providers = new HashSet<TdbProvider>();
+    getTdbProviders(providers);
+    return providers;
+  }
+  
+  /**
+   * Add to a collection of TdbProviders for this title.
+   * @param providers a collection of TdbProviders to add to.
+   * @return <code>true</code> if any TdbProviders were added
+   */
+  public boolean getTdbProviders(Collection<TdbProvider> providers) {
+    boolean added = false;
+    for (TdbAu tdbAu : tdbAus.values()) {
+      TdbProvider provider = tdbAu.getTdbProvider();
+      if (provider != null) {
+        added |= providers.add(provider);
+      }
+    }
+    return added;
+  }
+
+  /**
+   * Return the number of TdbProviders for this title.
+   *
+   * @return the number of providers for this title
+   */
+  public int getTdbProviderCount() {
+    return getTdbProviders().size();
   }
 
   public Iterator<TdbAu> tdbAuIterator() {
