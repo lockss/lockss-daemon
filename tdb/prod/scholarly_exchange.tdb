@@ -12,6 +12,42 @@
   {
   
     title < 
+      name = African Journal of Pharmaceutical Sciences and Pharmacy ;
+      eissn = 2152-7849
+    >
+    
+    param[base_url] = http://www.ajpspjournal.com/
+    param[journal_id] = ?
+
+    au < exists ; 2010 ; African Journal of Pharmaceutical Sciences and Pharmacy Volume 1 ; 1 ; 2010 >
+    au < exists ; 2011 ; African Journal of Pharmaceutical Sciences and Pharmacy Volume 2 ; 2 ; 2011 >
+    au < exists ; 2012 ; African Journal of Pharmaceutical Sciences and Pharmacy Volume 3 ; 3 ; 2012 >
+    au < exists ; 2013 ; African Journal of Pharmaceutical Sciences and Pharmacy Volume 4 ; 4 ; 2013 >
+    au < expected ; 2014 ; African Journal of Pharmaceutical Sciences and Pharmacy Volume 5 ; 5 ; 2014 >
+    
+  }
+  
+  {
+  
+    title < 
+      name = Interdisciplinary Journal of Maritime Studies ;
+      eissn = 2163-8381
+    >
+    
+    comment[0] = closed to new content after 2013
+    param[base_url] = http://ijms.nmdl.org/
+    param[journal_id] = ?
+
+    au < exists ; 2010 ; Interdisciplinary Journal of Maritime Studies Volume 1 ; 1 ; 2010 >
+    au < exists ; 2011 ; Interdisciplinary Journal of Maritime Studies Volume 2 ; 2 ; 2011 >
+    au < exists ; 2012 ; Interdisciplinary Journal of Maritime Studies Volume 3 ; 3 ; 2012 >
+    au < exists ; 2013 ; Interdisciplinary Journal of Maritime Studies Volume 4 ; 4 ; 2013 >
+    
+  }
+  
+  {
+  
+    title < 
       name = International Journal of Infection Control ;
       eissn = 1996-9783 
     >
