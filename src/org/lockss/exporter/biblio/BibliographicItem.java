@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicItem.java,v 1.8 2014-08-29 20:42:24 pgust Exp $
+ * $Id: BibliographicItem.java,v 1.9 2014-09-09 22:49:06 pgust Exp $
  */
 
 /*
@@ -162,6 +162,12 @@ public interface BibliographicItem {
    * @return the title of the bibliographic item's publication series
    */
   public String getSeriesTitle();
+
+  /**
+   * Returns the name of the provider who provides the bibliographic item.
+   * @return the name of the bibliographic item's provider
+   */
+  public String getProviderName();
 
   /**
    * Returns the name of the publisher who publishes the journal of which the
