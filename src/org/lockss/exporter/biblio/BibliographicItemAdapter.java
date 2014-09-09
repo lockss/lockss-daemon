@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicItemAdapter.java,v 1.12 2014-08-29 20:42:40 pgust Exp $
+ * $Id: BibliographicItemAdapter.java,v 1.13 2014-09-09 22:49:27 pgust Exp $
  */
 
 /*
@@ -69,6 +69,7 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
   protected String proprietarySeriesId = null;
   protected String proprietaryId = null;
   protected String publisherName = null;
+  protected String providerName = null;
   protected String name = null;
   protected String volume = null;
   protected String year = null;
@@ -193,6 +194,11 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
   }
 
   @Override
+  public String getProviderName() {
+    return providerName;
+  }
+
+  @Override
   public String getPublisherName() {
     return publisherName;
   }
@@ -294,6 +300,11 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
     return this;
   }
 
+  public BibliographicItemAdapter setProviderName(String providerName) {
+    this.providerName = providerName;
+    return this;
+  }
+
   public BibliographicItemAdapter setPublisherName(String publisherName) {
     this.publisherName = publisherName;
     return this;
@@ -390,6 +401,7 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
     setProprietaryId(from.proprietaryId);
     setProprietarySeriesId(from.proprietarySeriesId);
     setPublicationTitle(from.publicationTitle);
+    setProviderName(from.providerName);
     setPublisherName(from.publisherName);
     setName(from.name);
     setVolume(from.volume);
@@ -444,6 +456,8 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
       return false;
     if (printIssn != null ? !printIssn.equals(that.printIssn) : that.printIssn != null)
       return false;
+    if (providerName != null ? !providerName.equals(that.providerName) : that.providerName != null)
+      return false;
     if (publisherName != null ? !publisherName.equals(that.publisherName) : that.publisherName != null)
       return false;
     if (startIssue != null ? !startIssue.equals(that.startIssue) : that.startIssue != null)
@@ -468,6 +482,7 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
     result = 31 * result + (eIssn != null ? eIssn.hashCode() : 0);
     result = 31 * result + (issnL != null ? issnL.hashCode() : 0);
     result = 31 * result + (publicationTitle != null ? publicationTitle.hashCode() : 0);
+    result = 31 * result + (providerName != null ? providerName.hashCode() : 0);
     result = 31 * result + (publisherName != null ? publisherName.hashCode() : 0);
     result = 31 * result + (name != null ? name.hashCode() : 0);
     result = 31 * result + (volume != null ? volume.hashCode() : 0);
