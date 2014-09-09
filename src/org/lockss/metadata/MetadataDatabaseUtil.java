@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataDatabaseUtil.java,v 1.21 2014-08-29 20:45:21 pgust Exp $
+ * $Id: MetadataDatabaseUtil.java,v 1.22 2014-09-09 22:51:09 pgust Exp $
  */
 
 /*
@@ -75,6 +75,7 @@ final public class MetadataDatabaseUtil {
    * 
    */
   static class BibliographicDatabaseItem implements BibliographicItem {
+    final String provider;
     final String publisher;
     final String seriesTitle;
     final String proprietarySeriesId;
@@ -111,6 +112,9 @@ final public class MetadataDatabaseUtil {
       volume = resultSet.getString(11);
       coverageDepth = resultSet.getString(12);
       publicationType = resultSet.getString(13);
+      
+      // TODO: modify query
+      provider = publisher;
     }
 
     @Override
@@ -202,6 +206,11 @@ final public class MetadataDatabaseUtil {
     @Override
     public String getPublisherName() {
       return publisher;
+    }
+
+    @Override
+    public String getProviderName() {
+      return provider;
     }
 
     @Override
