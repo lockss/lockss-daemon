@@ -1,5 +1,5 @@
 /*
- * $Id: TangramSourceArticleIteratorFactory.java,v 1.3 2014-09-09 17:31:46 aishizaki Exp $
+ * $Id: TangramSourceArticleIteratorFactory.java,v 1.4 2014-09-09 19:53:14 aishizaki Exp $
  */
 
 /*
@@ -42,9 +42,7 @@ import org.lockss.util.Logger;
 
 //
 // A generic article iterator for CLOCKSS source plugins that want to iterate on 
-// files that end in .xml at some level below the root directory. 
-// The metadata extraction will be customized by publisher plugin but will use
-// the xml files provided by this article iterator
+// files that end in .xml at the YEAR level below the root directory. 
 //
 public class TangramSourceArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 

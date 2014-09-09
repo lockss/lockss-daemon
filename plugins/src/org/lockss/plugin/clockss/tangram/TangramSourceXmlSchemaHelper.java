@@ -1,5 +1,5 @@
 /*
- * $Id: TangramSourceXmlSchemaHelper.java,v 1.3 2014-09-04 22:00:52 aishizaki Exp $
+ * $Id: TangramSourceXmlSchemaHelper.java,v 1.4 2014-09-09 19:53:14 aishizaki Exp $
  */
 
 /*
@@ -59,19 +59,18 @@ implements SourceXmlSchemaHelper {
    *  Tangram specific node evaluators to extract the information we want
    */
   /* 
-   * Article Title, Subtitle - 
-   *   <article-node>/BB/TG
+   * Book Title, Subtitle - 
    *  <Titolo>Book Title</Titolo>
    *  <Sottotitolo>SubTitle</Sottotitolo>
    *  if both: Title:SubTitle
    *  or, either Title, or :SubTitle
    */
   
-  static private final NodeValue TANGRAM_ARTICLE_TITLE_VALUE = new NodeValue() {
+  static private final NodeValue TANGRAM_BOOK_TITLE_VALUE = new NodeValue() {
     @Override
     public String getValue(Node node) {
 
-      log.debug3("getValue of Tangram ARTICLE TITLE");
+      log.debug3("getValue of Tangram BOOK TITLE");
       String title = null;
       String subtitle = null;
       String nodeName = null;
@@ -84,20 +83,25 @@ implements SourceXmlSchemaHelper {
         } else if (Tangram_book_subtitle.equals(child.getNodeName())) {
           subtitle = child.getTextContent();
         }
+        if ((title != null) && (subtitle != null)) {
+          break;
+        }
       }     
       
       StringBuilder titleVal = new StringBuilder();
       if (title != null) {
         titleVal.append(title);
       }
+      // if empty title, but subtitle exists => " :Subtitle" 
+      // not a great title, but valuable to know...
       if (subtitle != null) {
         titleVal.append(TITLE_SEPARATOR + subtitle);
       }
       if (titleVal.length() != 0)  {
-        log.debug3("article title: " + titleVal.toString());
+        log.debug3("book title: " + titleVal.toString());
         return titleVal.toString();
       } else {
-        log.debug3("no value in this article title");
+        log.debug3("no value in this book title");
         return null;
       }
       
@@ -105,7 +109,7 @@ implements SourceXmlSchemaHelper {
   };
 
   /*
-   * ROW information example
+   * Metadata example
    * /node
    *  /Elenco_autori_curatori_principali [principal author]
    *  /Elenco_autori_curatori_principali_INV [principal author, inverted]
@@ -115,6 +119,7 @@ implements SourceXmlSchemaHelper {
    *  /Formato [format]
    *  /Numero_pagine [# pages]
    *  /ISBN
+   *  /PDF
    *  /Prezzo_di_copertina [price]
    *  /Data_pubblicazione [pub date]
    *  /Collana [Series]
@@ -146,7 +151,7 @@ implements SourceXmlSchemaHelper {
     // article specific stuff
     Tangram_articleMap.put(Tangram_art_pubdate, XmlDomMetadataExtractor.TEXT_VALUE); 
     Tangram_articleMap.put(Tangram_author, XmlDomMetadataExtractor.TEXT_VALUE);
-    Tangram_articleMap.put(Tangram_book_title, TANGRAM_ARTICLE_TITLE_VALUE);
+    Tangram_articleMap.put(Tangram_book_title, TANGRAM_BOOK_TITLE_VALUE);
     Tangram_articleMap.put(Tangram_isbn, XmlDomMetadataExtractor.TEXT_VALUE);
     Tangram_articleMap.put(Tangram_book_url, XmlDomMetadataExtractor.TEXT_VALUE);
   }
@@ -170,8 +175,6 @@ implements SourceXmlSchemaHelper {
     cookMap.put(Tangram_author, 
         new MetadataField(MetadataField.FIELD_AUTHOR, MetadataField.splitAt(AUTHOR_SPLIT_CH)));
     cookMap.put(Tangram_art_pubdate, MetadataField.FIELD_DATE);
-    // these "urls" are relative filenames - must fill in later
-    cookMap.put(Tangram_book_url, MetadataField.FIELD_ACCESS_URL);
   }
 
 
