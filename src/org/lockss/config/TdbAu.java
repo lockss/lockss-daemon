@@ -1,5 +1,5 @@
 /*
- * $Id: TdbAu.java,v 1.31 2014-08-29 20:40:47 pgust Exp $
+ * $Id: TdbAu.java,v 1.32 2014-09-09 22:47:23 pgust Exp $
  */
 
 /*
@@ -36,7 +36,6 @@ import java.util.*;
 
 import org.apache.commons.collections.map.Flat3Map;
 import org.lockss.config.Tdb.TdbException;
-import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.exporter.biblio.BibliographicItem;
 import org.lockss.exporter.biblio.BibliographicUtil;
 import org.lockss.plugin.*;
@@ -65,6 +64,11 @@ public class TdbAu implements BibliographicItem, Comparable<TdbAu> {
    * The Title to which this AU belongs
    */
   private TdbTitle title;
+  
+  /**
+   * The Provider for this AU
+   */
+  private TdbProvider provider;
   
   /**
    * The plugin ID of the instance
@@ -140,8 +144,9 @@ public class TdbAu implements BibliographicItem, Comparable<TdbAu> {
      */
     public int hashCode() {
       if (hash == 0) {
-        hash = TdbAu.this.getParams().hashCode();;
-//        hash = au.getPluginId().hashCode() + au.getParams().hashCode();
+//        hash = TdbAu.this.getParams().hashCode();;
+        hash = TdbAu.this.getPluginId().hashCode() 
+             ^ TdbAu.this.getParams().hashCode();
       } 
       return hash;
     }
@@ -247,7 +252,7 @@ public class TdbAu implements BibliographicItem, Comparable<TdbAu> {
    * Array of props/attrs that can be used as a publisher-specified
    * journal id.
    */
-  private final String[] journal_ids = {
+  private static final String[] journal_ids = {
       "journal_id",
       "journal_code",
       "journal_abbr"
@@ -257,7 +262,7 @@ public class TdbAu implements BibliographicItem, Comparable<TdbAu> {
    * Array of props/attrs that can be used as a publisher-specified
    * book id.
    */
-  private final String[] book_ids = {
+  private static final String[] book_ids = {
       "book_id",
       "book_code",
       "book_abbr"
@@ -331,6 +336,16 @@ public class TdbAu implements BibliographicItem, Comparable<TdbAu> {
    * 
    * @return the TdbPublisher for this AU
    */
+  public TdbProvider getTdbProvider()
+  {
+    return provider;
+  }
+
+  /**
+   * Get the TdbPublisher for this AU.
+   * 
+   * @return the TdbPublisher for this AU
+   */
   public TdbPublisher getTdbPublisher()
   {
     return (title == null) ? null : title.getTdbPublisher();
@@ -360,6 +375,24 @@ public class TdbAu implements BibliographicItem, Comparable<TdbAu> {
     }
     
     this.title = title;
+  }
+  
+  
+  /**
+   * Set the title for this AU.
+   * 
+   * @param title the title for this AU
+   * @throws TdbException if the title is already set
+   */
+  protected void setTdbProvider(TdbProvider provider) throws TdbException {
+    if (provider == null) {
+      throw new IllegalArgumentException("au provider cannot be null");
+    }
+    if (this.provider != null) {
+      throw new TdbException("cannot reset provider for au \"" + name + "\"");
+    }
+    
+    this.provider = provider;
   }
   
   /**
@@ -650,10 +683,25 @@ public class TdbAu implements BibliographicItem, Comparable<TdbAu> {
   }
 
   /**
+   * Convenience method returns the AU's TdbProvider's name.
+   *
+   * @return the name of this AU's TdbProvider, or <tt>null</tt>
+   */
+  @Override
+  public String getProviderName() {
+    try {
+      return provider.getName();
+    } catch (NullPointerException e) {
+      return null;
+    }
+  }
+
+  /**
    * Get the start issue for this AU. Allows for the issue string to represent
    * a delimited list of ranges.
    * @return the start issue or <code>null</code> if not specified
    */
+  @Override
   public String getStartIssue() {
     return BibliographicUtil.getRangeSetStart(getIssue());
   }
@@ -663,6 +711,7 @@ public class TdbAu implements BibliographicItem, Comparable<TdbAu> {
    * a delimited list of ranges.
    * @return the end issue or <code>null</code> if not specified
    */
+  @Override
   public String getEndIssue() {
     return BibliographicUtil.getRangeSetEnd(getIssue());
   }
@@ -687,6 +736,7 @@ public class TdbAu implements BibliographicItem, Comparable<TdbAu> {
    *
    * @return issue for for this AU or <code>null</code> if not specified
    */
+  @Override
   public String getIssue() {
     String issue = getAttr("issue");
     if (issue == null) {
