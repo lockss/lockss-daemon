@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdbAu.java,v 1.23 2014-08-29 20:50:36 pgust Exp $
+ * $Id: TestTdbAu.java,v 1.24 2014-09-09 22:51:41 pgust Exp $
  */
 
 /*
@@ -44,7 +44,7 @@ import java.util.*;
  * Test class for <code>org.lockss.config.TdbAu</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdbAu.java,v 1.23 2014-08-29 20:50:36 pgust Exp $
+ * @version $Id: TestTdbAu.java,v 1.24 2014-09-09 22:51:41 pgust Exp $
  */
 
 public class TestTdbAu extends LockssTestCase {
@@ -73,20 +73,6 @@ public class TestTdbAu extends LockssTestCase {
     assertEquals("Test Au", au.getName());
   }
 
-  /**
-   * Test creating TdbPublisher with null name.
-   */
-  public void testNullPublisherName() {
-    TdbPublisher publisher = null;
-    try {
-      publisher = new TdbPublisher(null);
-      fail("TdbPublisher did not throw IllegalArgumentException for null argument.");
-    } catch (IllegalArgumentException ex) {
-      
-    }
-    assertNull(publisher);
-  }
-  
   /**
    * Test equals() method
    * @throws TdbException for invalid Tdb operations
@@ -172,10 +158,6 @@ public class TestTdbAu extends LockssTestCase {
     assertNotEquals(au1, au2);
   }
   
-  List fromIter(Iterator iter) {
-    return ListUtil.fromIterator(iter);
-  }
-
   /**
    * Test addAu() method.
    * @throws TdbException for invalid Tdb operations
@@ -473,9 +455,9 @@ public class TestTdbAu extends LockssTestCase {
    */
   public void testJournalTitle() throws TdbException {
     TdbAu au = new TdbAu("Test AU", "pluginA");
-    assertNull(au.getJournalTitle());  // because au has no TdbTitle
+    assertNull(au.getPublicationTitle());  // because au has no TdbTitle
     au.setPropertyByName("issn", "1234-5678");
-    assertNull(au.getJournalTitle());  // because au has no TdbTitle
+    assertNull(au.getPublicationTitle());  // because au has no TdbTitle
     au.setAttr("isbn", "978-3-540-33894-9");
     assertEquals("Test AU", au.getPublicationTitle());
     au.setPropertyByName("type", "book");
@@ -528,12 +510,33 @@ public class TestTdbAu extends LockssTestCase {
     
     // add au
     TdbAu au = new TdbAu("Test AU", "pluginA");
+    assertNull(au.getPublicationTitle());
     title.addTdbAu(au);
     
     // ensure same as publisher for AU's title
     TdbPublisher getPublisher = au.getTdbPublisher();
     assertEquals(publisher, getPublisher);
     assertEquals("Test Publisher", au.getPublisherName());
+  }
+
+  /**
+   * Test getProvider() method.
+   * @throws TdbException for invalid Tdb operations
+   */
+  public void testGetProvider() throws TdbException {
+    TdbProvider provider = new TdbProvider("Test Provider");
+    Collection<TdbTitle> titles = provider.getTdbTitles();
+    assertEmpty(titles);
+    
+    // add au
+    TdbAu au = new TdbAu("Test AU", "pluginA");
+    assertNull(au.getProviderName());
+    provider.addTdbAu(au);
+    
+    // ensure same as publisher for AU's title
+    TdbProvider getProvider = au.getTdbProvider();
+    assertEquals(provider, getProvider);
+    assertEquals("Test Provider", au.getProviderName());
   }
 
   /**
@@ -557,7 +560,7 @@ public class TestTdbAu extends LockssTestCase {
     au.setParam("p2", "v2");
     title.addTdbAu(au);
     assertEquals("7", au.getPropertyByName("pluginVersion"));
-    assertEquals("Test Title", au.getJournalTitle()); 
+    assertEquals("Test Title", au.getPublicationTitle()); 
     assertEquals(32500000, au.getEstimatedSize());
     Properties props = au.toProperties();
     assertTrue(props.containsKey("param.1.value"));
