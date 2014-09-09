@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArticleMetadataExtractor.java,v 1.14 2014-07-25 06:38:24 tlipkis Exp $
+ * $Id: TestBaseArticleMetadataExtractor.java,v 1.15 2014-09-09 22:53:25 pgust Exp $
  */
 
 /*
@@ -67,6 +67,7 @@ public class TestBaseArticleMetadataExtractor extends LockssTestCase {
     tdbProps.setProperty("issn", "0740-2783");
     tdbProps.setProperty("eissn", "0740-2783");
     tdbProps.setProperty("attributes.publisher", "Publisher[10.0135/12345678]");
+    tdbProps.setProperty("attributes.provider", "Provider[10.0135/12345678]");
     tdbProps.setProperty("plugin", mplug.getClass().toString());
 
     tdbProps.setProperty("param.1.key", "base_url");
@@ -77,6 +78,7 @@ public class TestBaseArticleMetadataExtractor extends LockssTestCase {
     mau1 = makeAu(tdbAu1);
 
     tdbProps.remove("attributes.publisher");
+    tdbProps.remove("attributes.provider");
     tdbProps.setProperty("title", "Air and Space Volume 1a");
     tdbProps.setProperty("param.2.value", "vol1a");
     mau1nopub = makeAu(tdb.addTdbAuFromProperties(tdbProps));
@@ -89,6 +91,7 @@ public class TestBaseArticleMetadataExtractor extends LockssTestCase {
 		  MetadataField.KEY_PUBLICATION_TITLE, "Air and Space Volume 1",
                   MetadataField.KEY_SERIES_TITLE, "Air and Space",
 		  MetadataField.KEY_PUBLISHER, "Publisher[10.0135/12345678]",
+                  MetadataField.KEY_PROVIDER, "Provider[10.0135/12345678]",
 		  MetadataField.KEY_ACCESS_URL, "fullurl",
 		  MetadataField.KEY_PUBLICATION_TYPE, "bookSeries");
 
@@ -102,6 +105,7 @@ public class TestBaseArticleMetadataExtractor extends LockssTestCase {
     tdbProps.setProperty("issn", "0740-2783");
     tdbProps.setProperty("eissn", "0740-2783");
     tdbProps.setProperty("attributes.publisher", "Publisher[10.0135/12345678]");
+    tdbProps.setProperty("attributes.provider", "Provider[10.0135/12345678]");
     tdbProps.setProperty("attributes.year", "1943");
     tdbProps.setProperty("attributes.issue", "40");
     tdbProps.setProperty("plugin", mplug.getClass().toString());
@@ -124,6 +128,7 @@ public class TestBaseArticleMetadataExtractor extends LockssTestCase {
                   MetadataField.KEY_SERIES_TITLE, "Air and Space",
 		  MetadataField.KEY_DATE, "1943",
 		  MetadataField.KEY_PUBLISHER, "Publisher[10.0135/12345678]",
+                  MetadataField.KEY_PROVIDER, "Provider[10.0135/12345678]",
 		  MetadataField.KEY_ACCESS_URL, "fullurl",
 		  MetadataField.KEY_PUBLICATION_TYPE, "bookSeries");
   }
@@ -186,12 +191,17 @@ public class TestBaseArticleMetadataExtractor extends LockssTestCase {
     BaseArticleMetadataExtractor me = new BaseArticleMetadataExtractor();
     me.setAddTdbDefaults(true);
     ArticleMetadataListExtractor mle = new ArticleMetadataListExtractor(me);
-    Map map = MapUtil.map(MetadataField.FIELD_VOLUME, "vol16");
+    Map map = MapUtil.map(MetadataField.FIELD_VOLUME, "vol16",
+                          MetadataField.FIELD_PUBLISHER, "extracted pub");
 
     List<ArticleMetadata> mdlist =
       mle.extract(MetadataTarget.Any(), makeAf(new MockArchivalUnit(), map));
-    assertEquals(MapUtil.map("volume", "vol16", "access.url", "fullurl"),
-		 getMap(mdlist.get(0)));
+    Map<String,String> actual = getMap(mdlist.get(0));
+    assertEquals(MapUtil.map("volume", "vol16",
+                             "publisher", "extracted pub",
+                             "provider", "extracted pub", // same as publisher
+                             "access.url", "fullurl"),
+		 actual);
   }
 
 
@@ -281,7 +291,8 @@ public class TestBaseArticleMetadataExtractor extends LockssTestCase {
     me.setAddTdbDefaults(true);
     ArticleMetadataListExtractor mle = new ArticleMetadataListExtractor(me);
     Map map = MapUtil.map(MetadataField.FIELD_VOLUME, "vol16",
-			  MetadataField.FIELD_PUBLISHER, "extracted pub");
+			  MetadataField.FIELD_PUBLISHER, "extracted pub",
+			  MetadataField.FIELD_PROVIDER, "extracted prov");
 
     List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(),
 					       makeAf(mau1, map));
@@ -300,7 +311,8 @@ public class TestBaseArticleMetadataExtractor extends LockssTestCase {
     me.setAddTdbDefaults(true);
     ArticleMetadataListExtractor mle = new ArticleMetadataListExtractor(me);
     Map map = MapUtil.map(MetadataField.FIELD_VOLUME, "vol16",
-			  MetadataField.FIELD_PUBLISHER, "extracted pub");
+        MetadataField.FIELD_PUBLISHER, "extracted pub",
+        MetadataField.FIELD_PROVIDER, "extracted prov");
 
     List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(),
 					       makeAf(mau1, map));
@@ -309,6 +321,7 @@ public class TestBaseArticleMetadataExtractor extends LockssTestCase {
     // Add/replace explicit md values 
     exp.put("volume", "vol16");
     exp.put("publisher", "extracted pub");
+    exp.put("provider", "extracted prov");
     Map<String,String> actual = getMap(mdlist.get(0));
     assertEquals(exp, actual);
   }
@@ -322,7 +335,8 @@ public class TestBaseArticleMetadataExtractor extends LockssTestCase {
     me.setAddTdbDefaults(true);
     ArticleMetadataListExtractor mle = new ArticleMetadataListExtractor(me);
     Map map = MapUtil.map(MetadataField.FIELD_VOLUME, "vol16",
-			  MetadataField.FIELD_PUBLISHER, "extracted pub");
+        MetadataField.FIELD_PUBLISHER, "extracted pub",
+        MetadataField.FIELD_PROVIDER, "extracted prov");
 
     List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(),
 					       makeAf(mau1nopub, map));
@@ -332,6 +346,7 @@ public class TestBaseArticleMetadataExtractor extends LockssTestCase {
     exp.put("publication.title", "Air and Space Volume 1a");
     exp.put("volume", "vol16");
     exp.put("publisher", "extracted pub");
+    exp.put("provider", "extracted prov");
     Map<String,String> actual = getMap(mdlist.get(0));
     assertEquals(exp, actual);
   }
