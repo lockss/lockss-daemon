@@ -1,5 +1,5 @@
 /*
- * $Id: Tdb.java,v 1.27 2014-07-16 20:12:46 pgust Exp $
+ * $Id: Tdb.java,v 1.28 2014-09-09 22:46:50 pgust Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ import org.lockss.util.*;
  * a specified plugin ID. 
  *
  * @author  Philip Gust
- * @version $Id: Tdb.java,v 1.27 2014-07-16 20:12:46 pgust Exp $
+ * @version $Id: Tdb.java,v 1.28 2014-09-09 22:46:50 pgust Exp $
  */
 public class Tdb {
   /**
@@ -63,7 +63,14 @@ public class Tdb {
   /**
    * Map of publisher names to TdBPublishers for this configuration
    */
-  private final Map<String, TdbPublisher> tdbPublisherMap = new HashMap<String,TdbPublisher>();
+  private final Map<String, TdbPublisher> tdbPublisherMap 
+  = new HashMap<String,TdbPublisher>();
+
+  /**
+   * Map of provider names to TdBProviders for this configuration
+   */
+  private final Map<String, TdbProvider> tdbProviderMap 
+    = new HashMap<String,TdbProvider>();
 
   /**
    * Determines whether more AUs can be added.
@@ -86,6 +93,11 @@ public class Tdb {
   static final String UNKNOWN_PUBLISHER_PREFIX = "Publisher of ";
   
   /**
+   * Prefix appended to generated unknown publisher
+   */
+  static final String UNKNOWN_PROVIDER_PREFIX = "Provider of ";
+  
+  /**
    * This exception is thrown by Tdb related classes in place of an
    * unchecked IllegalStateException when an operation cannot be
    * performed because it is incompatible with state of the Tdb.
@@ -96,7 +108,7 @@ public class Tdb {
    * also handle this exception.
    * 
    * @author  Philip Gust
-   * @version $Id: Tdb.java,v 1.27 2014-07-16 20:12:46 pgust Exp $
+   * @version $Id: Tdb.java,v 1.28 2014-09-09 22:46:50 pgust Exp $
    */
   @SuppressWarnings("serial")
   static public class TdbException extends Exception {
@@ -153,9 +165,11 @@ public class Tdb {
    * Register the au with this Tdb for its plugin.
    * 
    * @param au the TdbAu
-   * @return <code>false</code> if already registered, otherwise <code>true</code>
+   * @return <code>false</code> if already registered, 
+   *   otherwise <code>true</code>
+   * @throws TdbException if adding new TdbAu with duplicate id
    */
-  private boolean addTdbAuForPlugin(TdbAu au) {
+  private boolean addTdbAuForPlugin(TdbAu au) throws TdbException {
     // add AU to list for plugins 
     String pluginId = au.getPluginId();
     Collection<TdbAu.Id> auids = pluginIdTdbAuIdsMap.get(pluginId);
@@ -163,9 +177,16 @@ public class Tdb {
       auids = new HashSet<TdbAu.Id>();
       pluginIdTdbAuIdsMap.put(pluginId, auids);
     } 
-    
     if (!auids.add(au.getId())) {
-      return false;
+      // find existing au
+      for (TdbAu.Id auid : auids) {
+        if (auid.getTdbAu() == au) {
+          // returns false if this TdbAu is already added
+          return false;
+        }
+      }
+      // throw exception if adding another AU with duplicate au id.
+      throw new TdbException("New au with duplicate id: " + au.getName());
     }
     
     // increment the total AU count;
@@ -195,16 +216,56 @@ public class Tdb {
   }
 
   /**
+   * Add TdbProvider to Tdb
+   * @param provider the TdbProvider
+   * @return <code>true</code> if a new provider was added, <code>false<code>
+   *   if this providerr is already added
+   * @throws TdbException if trying to add new provider with duplicate name
+   */
+  public boolean addTdbProvider(TdbProvider provider)  throws TdbException {
+    String providerName = provider.getName();
+    TdbProvider oldProvider = tdbProviderMap.put(providerName, provider);
+    if ((oldProvider != null) && (oldProvider != provider)) {
+      // restore old publisher and report error
+      tdbProviderMap.put(providerName, oldProvider);
+      throw new TdbException("New au provider with duplicate name: " 
+                            + providerName);
+    }
+    return (oldProvider == null);
+  }
+  
+  /**
+   * Add TdbPublisher to Tdb
+   * @param publisher the TdbPublisher
+   * @return <code>true</code> if a new publisher was added, <code>false<code>
+   *   if this publisher is already added
+   * @throws TdbException if trying to add new publisher with duplicate name
+   */
+  public boolean addTdbPublisher(TdbPublisher publisher)  throws TdbException {
+    String pubName = publisher.getName();
+    TdbPublisher oldPublisher = tdbPublisherMap.put(pubName, publisher);
+    if ((oldPublisher != null) && (oldPublisher != publisher)) {
+      // restore old publisher and report error
+      tdbPublisherMap.put(pubName, oldPublisher);
+      throw new TdbException("New au publisher with duplicate name: " 
+                            + pubName);
+    }
+    return (oldPublisher == null);
+  }
+  
+  /**
    * Add a new TdbAu to this title database. The TdbAu must have
-   * its pluginID, and title set.  The TdbAu''s title must also have 
-   * its titleId and publisher set. The publisher name must be unique
+   * its pluginID, provider, and title set.  The TdbAu's title must also 
+   * have its titleId and publisher set. The publisher name must be unique
    * to all publishers in this Tdb.
    * 
    * @param au the TdbAu to add.
+   * @return <code>true</code> if new AU was added, <code>false</code> if
+   *   this AU was previously added
    * @throws TdbException if Tdb is sealed, this is a duplicate au, or
-   *   the au's publisher is a duplicate 
+   *   the au's publisher or provider is a duplicate 
    */
-  public void addTdbAu(TdbAu au) throws TdbException {
+  public boolean addTdbAu(TdbAu au) throws TdbException {
     if (au == null) {
       throw new IllegalArgumentException("TdbAu cannot be null");
     }
@@ -226,23 +287,50 @@ public class Tdb {
       throw new IllegalArgumentException("TdbAu's publisher not set");
     }
 
-    // make sure publisher is not a duplicate
-    String pubName = publisher.getName();
-    TdbPublisher oldPublisher = tdbPublisherMap.put(pubName, publisher);
-    if ((oldPublisher != null) && (oldPublisher != publisher)) {
-      // restore old publisher and report error
-      tdbPublisherMap.put(pubName, oldPublisher);
-      throw new TdbException("New au publisher with duplicate name: " + pubName);
-    }
-   
-    // register the au with this instance
-    if (!addTdbAuForPlugin(au)) {
-      // remove new publisher and report error 
-      if (oldPublisher == null) {
-        tdbPublisherMap.remove(pubName);
+    // validate provider
+    TdbProvider provider = au.getTdbProvider();
+    if (provider == null) {
+      String pubName = publisher.getName();
+      // assume the provider is the same as the publisher
+      provider = tdbProviderMap.get(pubName);
+      if (provider == null) {
+        provider = new TdbProvider(pubName);
       }
-      throw new TdbException("Cannot register au " + au.getName());
+      // add publisher provider to the au
+      provider.addTdbAu(au);
+      if (logger.isDebug3()) {
+        logger.debug3("Creating default provider for publisher " + pubName);
+      }
     }
+
+    boolean newPublisher = false;
+    boolean newProvider = false;
+    boolean newAu = false;
+    
+    try {
+      // add au publisher if not already added
+      newPublisher = addTdbPublisher(publisher);
+    
+      // add au provider if not already added
+      newProvider = addTdbProvider(provider);
+  
+      // add au if not already added
+      newAu = addTdbAuForPlugin(au);
+
+    } catch (TdbException ex) {
+      // remove new publisher and new provider, and report error 
+      if (newPublisher) {
+        tdbPublisherMap.remove(publisher.getName());
+      }
+      if (newProvider) {
+        tdbProviderMap.remove(provider.getName());
+      }
+      TdbException ex2 = new TdbException("Cannot register au " + au.getName());
+      ex2.initCause(ex);
+      throw ex2;
+    }
+    
+    return newAu;
   }
   
   /**
@@ -313,6 +401,8 @@ public class Tdb {
    * @param otherTdb a Tdb
    */
   private void addDifferences(Differences diffs, Tdb oldTdb) {
+
+    // process publishers
     Map<String, TdbPublisher> oldPublishers = oldTdb.getAllTdbPublishers();
 
     for (TdbPublisher oldPublisher : oldPublishers.values()) {
@@ -332,6 +422,28 @@ public class Tdb {
         thisPublisher.addDifferences(diffs, oldPublisher);
       }
     }
+
+    // process providers
+    Map<String, TdbProvider> oldProviders = oldTdb.getAllTdbProviders();
+
+    for (TdbProvider oldProvider : oldProviders.values()) {
+      if (!this.tdbProviderMap.containsKey(oldProvider.getName())) {
+        // add pluginIds for providers in tdb that are not in this Tdb
+        diffs.addProvider(oldProvider, Differences.Type.Old);
+      }
+    }
+
+    for (TdbProvider thisProvider : tdbProviderMap.values()) {
+      TdbProvider oldProvider = oldTdb.getTdbProvider(thisProvider.getName());
+      if (oldProvider == null) {
+        // add pluginIds for provider in this Tdb that is not in tdb
+        diffs.addProvider(thisProvider, Differences.Type.New);
+      } else {
+        // add pluginIds for providers in both Tdbs that are different 
+        thisProvider.addDifferences(diffs, oldProvider);
+      }
+    }
+  
   }
 
   /**
@@ -414,6 +526,7 @@ public class Tdb {
       
       // merge non-duplicate titles of otherPublisher into thisPublisher
       for (TdbTitle otherTitle : otherPublisher.getTdbTitles()) {
+        String titleName = otherTitle.getName();
         String otherId = otherTitle.getId();
         TdbTitle thisTitle;
         boolean titleIsNew = true;
@@ -431,42 +544,43 @@ public class Tdb {
           } else if (! thisTitle.getName().equals(otherTitle.getName())) {
             // error because it could lead to a missing title -- one probably has a typo
             // (what about checking other title elements too?)
-            logger.error("Ignorning duplicate title entry: \"" + otherTitle.getName() 
-                         + "\" with the same ID as \"" + thisTitle.getName() + "\"");
+            logger.error("Ignorning duplicate title entry: \"" + titleName 
+                         + "\" with the same ID as \"" 
+                         + thisTitle.getName() + "\"");
           }
         }
         
         // merge non-duplicate TdbAus of otherTitle into thisTitle
         for (TdbAu otherAu : otherTitle.getTdbAus()) {
-          // no need to check for existing au if title is new
-          String pluginId = otherAu.getPluginId();
-          if (titleIsNew || !getTdbAuIds(pluginId).contains(otherAu.getId())) {
-            // always succeeds we've already checked for duplicate
-            TdbAu thisAu = otherAu.copyForTdbTitle(thisTitle);            
+          String auName = otherAu.getName();
+          String providerName = otherAu.getProviderName();
+          TdbAu thisAu = findExistingTdbAu(otherAu);
+          if (thisAu == null) {
+            // copy new TdbAu
+            thisAu = otherAu.copyForTdbTitle(thisTitle);
+            // add copy to provider of same name
+            TdbProvider thisProvider = getTdbProvider(providerName);
+            if (thisProvider == null) {
+              // add new provider to this Tdb
+              thisProvider = new TdbProvider(providerName);
+              tdbProviderMap.put(providerName, thisProvider);
+            }
+            thisProvider.addTdbAu(thisAu);
+            // finish adding this AU
             addTdbAuForPlugin(thisAu);
           } else {
-            TdbAu thisAu = findExistingTdbAu(otherAu);
-            if (!thisAu.getTdbTitle().getName().equals(otherAu.getTdbTitle().getName())) {
-              if (!thisAu.getName().equals(otherAu.getName())) {
-                logger.error("Ignorning duplicate au entry: \"" + otherAu.getName() 
-                             + "\" for title \"" + otherAu.getTdbTitle().getName()
-                             + "\" with same definion as existing au entry: \"" 
-                             + thisAu.getName() + "\" for title \"" 
-                             + thisAu.getTdbTitle().getName() + "\"");
-              } else {
-                logger.error("Ignorning duplicate au entry: \"" + otherAu.getName() 
-                             + "\" for title \"" + otherAu.getTdbTitle().getName() 
-                             + "\" with same definion as existing one for title \""
-                             + thisAu.getTdbTitle().getName() + "\"");
-              }
-            } else if (!thisAu.getName().equals(otherAu.getName())) {
-              // error because it could lead to a missing AU -- one probably has a typo
-              logger.error("Ignorning duplicate au entry: \"" + otherAu.getName() 
-                           + "\" with the same definition as \"" + thisAu.getName() 
-                           + "\" for title \"" + otherAu.getTdbTitle().getName());
-            } else {
-              logger.warning("Ignoring duplicate au entry: \"" + otherAu.getName() 
-                             + "\" for title \"" + otherAu.getTdbTitle().getName());
+            // ignore and log error if existing AU is not identical
+            if (   !thisAu.getName().equals(auName)
+                || !thisAu.getTdbTitle().getName().equals(titleName)
+                || !thisAu.getTdbPublisher().getName().equals(pubName)
+                || !thisAu.getTdbProvider().getName().equals(providerName)) {
+              logger.error("Ignoring duplicate au entry id \"" + thisAu.getId()
+                         + " for provider \"" + providerName
+                         + "\" (" + thisAu.getProviderName() + "), publisher \""
+                         + pubName + "\" (" + thisAu.getPublisherName() 
+                         + "), title \"" + titleName + "\" (" 
+                         + thisAu.getPublicationTitle() + "), name \"" 
+                         + auName + "\" (" + thisAu.getName() + ")");
             }
           }
         }
@@ -563,6 +677,14 @@ public class Tdb {
   }
 
   /**
+   * Return the number of TdbProviders in this Tdb.
+   * 
+   * @return the total TdbProvider count
+   */
+  public int getTdbProviderCount() {
+    return tdbProviderMap.size();
+  }
+  /**
    * Add a new TdbAu from properties.  This method recognizes
    * properties of the following form:
    * <pre>
@@ -608,8 +730,101 @@ public class Tdb {
     if (isSealed()) {
       throw new TdbException("cannot add au to sealed TDB");
     }
+    
+    // generate new TdbAu from properties
     TdbAu au = newTdbAu(props);
-    addTdbAu(props, au);
+
+    // add au for plugin assuming it is not a duplicate
+    try {
+      addTdbAuForPlugin(au);
+    } catch (TdbException ex) {
+      // au already registered -- report existing au
+      TdbAu existingAu = findExistingTdbAu(au);
+      String titleName = getTdbTitleName(props, au);
+      if (!titleName.equals(existingAu.getTdbTitle().getName())) {
+        throw new TdbException(
+                       "Cannot add duplicate au entry: \"" + au.getName() 
+                     + "\" for title \"" + titleName 
+                     + "\" with same definition as existing au entry: \"" 
+                     + existingAu.getName() + "\" for title \"" 
+                     + existingAu.getTdbTitle().getName() + "\" to title database");
+      } else if (!existingAu.getName().equals(au.getName())) {
+        // error because it could lead to a missing AU -- one probably has a typo
+        throw new TdbException(
+                       "Cannot add duplicate au entry: \"" + au.getName() 
+                     + "\" with the same definition as \"" + existingAu.getName() 
+                     + "\" for title \"" + titleName + "\" to title database");
+      } else {
+        throw new TdbException(
+                       "Cannot add duplicate au entry: \"" + au.getName() 
+                     + "\" for title \"" + titleName + "\" to title database");
+      }
+    }
+
+    // get or create the TdbTitle for this
+    TdbTitle title = getTdbTitle(props, au);
+    try {
+      // add AU to title 
+      title.addTdbAu(au);
+    } catch (TdbException ex) {
+      // if we can't add au to title, remove for plugin and re-throw exception
+      removeTdbAuForPlugin(au);
+      throw ex;
+    }
+    
+    // get or create the TdbProvider for this 
+    TdbProvider provider = getTdbProvider(props, au);
+    try {
+      // add AU to title 
+      provider.addTdbAu(au);
+    } catch (TdbException ex) {
+      // if we can't add au to provider, remove for plugin and title,
+      // and re-throw exception
+      removeTdbAuForPlugin(au);
+      // TODO: what to do about unregistering with the tdbTitle?
+      throw ex;
+    }
+
+    // process title links
+    Map<String, Map<String,String>> linkMap = new HashMap<String, Map<String,String>>();
+    for (Map.Entry<Object,Object> entry : props.entrySet()) {
+      String key = ""+entry.getKey();
+      String value = ""+entry.getValue();
+      if (key.startsWith("journal.link.")) {
+        // skip to link name
+        String param = key.substring("link.".length());
+        int i;
+        if (   ((i = param.indexOf(".type")) < 0)
+            && ((i = param.indexOf(".journalId")) < 0)) {
+          logger.warning("Ignoring nexpected link key for au \"" + au.getName() + "\" key: \"" + key + "\"");
+        } else {
+          // get link map for linkName
+          String lname = param.substring(0,i);
+          Map<String,String> lmap = linkMap.get(lname);
+          if (lmap == null) {
+            lmap = new HashMap<String,String>();
+            linkMap.put(lname, lmap);
+          }
+          // add name and value to link map for link
+          String name = param.substring(i+1);
+          lmap.put(name, value);
+        }
+      }
+    }
+    
+    // add links to title from accumulated "type", "journalId" entries
+    for (Map<String, String> lmap : linkMap.values()) {
+      String name = lmap.get("type");
+      String value = lmap.get("journalId");
+      if ((name != null) && (value != null)) {
+        try {
+          TdbTitle.LinkType linkType = TdbTitle.LinkType.valueOf(name);
+          title.addLinkToTdbTitleId(linkType, value);
+        } catch (IllegalArgumentException ex) {
+          logger.warning("Ignoring unknown link type for au \"" + au.getName() + "\" name: \"" + name + "\"");
+        }
+      }
+    }
     
     return au;
   }
@@ -702,93 +917,6 @@ public class Tdb {
   }
   
   /**
-   * Add a TdbAu to a TdbTitle and TdbPubisher, and add links to 
-   * the TdbTitle specified by the properties.
-   * 
-   * @param props the properties
-   * @param au the TdbAu to add
-   * @throws TdbException if the AU already exists in this Tdb
-   */
-  private void addTdbAu(Properties props, TdbAu au) throws TdbException {
-    // add au for plugin assuming it is not a duplicate
-    if (!addTdbAuForPlugin(au)) {
-      // au already registered -- report existing au
-      TdbAu existingAu = findExistingTdbAu(au);
-      String titleName = getTdbTitleName(props, au);
-      if (!titleName.equals(existingAu.getTdbTitle().getName())) {
-        throw new TdbException(
-                       "Cannot add duplicate au entry: \"" + au.getName() 
-                     + "\" for title \"" + titleName 
-                     + "\" with same definition as existing au entry: \"" 
-                     + existingAu.getName() + "\" for title \"" 
-                     + existingAu.getTdbTitle().getName() + "\" to title database");
-      } else if (!existingAu.getName().equals(au.getName())) {
-        // error because it could lead to a missing AU -- one probably has a typo
-        throw new TdbException(
-                       "Cannot add duplicate au entry: \"" + au.getName() 
-                     + "\" with the same definition as \"" + existingAu.getName() 
-                     + "\" for title \"" + titleName + "\" to title database");
-      } else {
-        throw new TdbException(
-                       "Cannot add duplicate au entry: \"" + au.getName() 
-                     + "\" for title \"" + titleName + "\" to title database");
-      }
-    }
-
-    // get or create the TdbTitle for this 
-    TdbTitle title = getTdbTitle(props, au);
-    try {
-      // add AU to title 
-      title.addTdbAu(au);
-    } catch (TdbException ex) {
-      // if we can't add au to title, remove for plugin and re-throw exception
-      removeTdbAuForPlugin(au);
-      throw ex;
-    }
-    
-    // process title links
-    Map<String, Map<String,String>> linkMap = new HashMap<String, Map<String,String>>();
-    for (Map.Entry<Object,Object> entry : props.entrySet()) {
-      String key = ""+entry.getKey();
-      String value = ""+entry.getValue();
-      if (key.startsWith("journal.link.")) {
-        // skip to link name
-        String param = key.substring("link.".length());
-        int i;
-        if (   ((i = param.indexOf(".type")) < 0)
-            && ((i = param.indexOf(".journalId")) < 0)) {
-          logger.warning("Ignoring nexpected link key for au \"" + au.getName() + "\" key: \"" + key + "\"");
-        } else {
-          // get link map for linkName
-          String lname = param.substring(0,i);
-          Map<String,String> lmap = linkMap.get(lname);
-          if (lmap == null) {
-            lmap = new HashMap<String,String>();
-            linkMap.put(lname, lmap);
-          }
-          // add name and value to link map for link
-          String name = param.substring(i+1);
-          lmap.put(name, value);
-        }
-      }
-    }
-    
-    // add links to title from accumulated "type", "journalId" entries
-    for (Map<String, String> lmap : linkMap.values()) {
-      String name = lmap.get("type");
-      String value = lmap.get("journalId");
-      if ((name != null) && (value != null)) {
-        try {
-          TdbTitle.LinkType linkType = TdbTitle.LinkType.valueOf(name);
-          title.addLinkToTdbTitleId(linkType, value);
-        } catch (IllegalArgumentException ex) {
-          logger.warning("Ignoring unknown link type for au \"" + au.getName() + "\" name: \"" + name + "\"");
-        }
-      }
-    }
-  }
-
-  /**
    * Get title ID from properties and TdbAu.
    * 
    * @param props the properties
@@ -876,6 +1004,59 @@ public class Tdb {
     return title;
   }
   
+  /** 
+   * Get or create TdbTitle for the specified properties and TdbAu.
+   * 
+   * @param props the properties
+   * @param au the TdbAu
+   * @return the corresponding TdbTitle
+   */
+  private TdbProvider getTdbProvider(Properties props, TdbAu au) {
+    // get publisher name
+    String providerNameFromProps = getTdbProviderName(props, au);
+    
+    // get publisher specified by property name
+    TdbProvider provider = tdbProviderMap.get(providerNameFromProps);
+    if (provider == null) {
+      // warn of missing provider name
+      if (providerNameFromProps.startsWith(UNKNOWN_PROVIDER_PREFIX)) {
+        logger.warning("Provider missing for au \"" + au.getName() 
+                     + "\" -- using \"" + providerNameFromProps + "\"");
+      }
+
+      // create new publisher for specified publisher name
+      provider = new TdbProvider(providerNameFromProps);
+      tdbProviderMap.put(providerNameFromProps, provider);
+    }
+    return provider;
+  }
+  
+  /**
+   * Get provider name from properties and TdbAu. Uses the
+   * pubisher name as the provider name if not specified.
+   * 
+   * @param props the properties
+   * @param au the TdbAu
+   * @return the provider name
+   */
+  private String getTdbProviderName(Properties props, TdbAu au) {
+    // Use "provider" attribute if specified. 
+    // Otherwise use the publisher name as the provider name.
+    String providerName = props.getProperty("attributes.provider");
+    if (providerName == null) {
+      providerName = au.getPublisherName();
+      if (providerName == null) {
+        providerName = getTdbPublisherName(props, au);
+        if (providerName == null) {
+          // create provider name from au name as last resort
+          providerName = UNKNOWN_PROVIDER_PREFIX + "[" + au.getName() + "]";
+        }
+      }
+    }
+
+    return providerName;
+  }
+
   /**
    * Get publisher name from properties and TdbAu. Creates a name 
    * based on title name if not specified.
@@ -1255,18 +1436,43 @@ public class Tdb {
       ? tdbPublisherMap : Collections.<String,TdbPublisher>emptyMap();
   }
 
+  /**
+   * Get the publisher for the specified name.
+   * 
+   * @param name the publisher name
+   * @return the publisher, or <code>null</code> if not found
+   */
+  public TdbProvider getTdbProvider(String name) {
+    return (tdbProviderMap != null) ? tdbProviderMap.get(name) : null;
+  }
+
+  /**
+   * Returns all TdbPubishers in this configuration. 
+   * <p>
+   * Note: The returned map should not be modified.
+   * 
+   * @return a map of publisher names to publishers
+   */
+  public Map<String, TdbProvider> getAllTdbProviders() {
+    return (tdbProviderMap != null) 
+      ? tdbProviderMap : Collections.<String,TdbProvider>emptyMap();
+  }
+
   /** ObjectGraphIterator Transformer that descends into collections of
    * TdbPublishers and TdbTitles, returning TdbAus */
   static Transformer AU_ITER_XFORM = new Transformer() {
       public Object transform(Object input) {
 	if (input instanceof TdbPublisher) {
-	  return ((TdbPublisher)input).getTdbTitles().iterator();
+	  return ((TdbPublisher)input).tdbTitleIterator();
 	}
 	if (input instanceof TdbTitle) {
-	  return ((TdbTitle)input).getTdbAus().iterator();
+	  return ((TdbTitle)input).tdbAuIterator();
 	}
 	if (input instanceof TdbAu) {
 	  return input;
+	}
+	if (input instanceof TdbProvider) {
+	  return ((TdbProvider)input).tdbAuIterator();
 	}
 	throw new
 	  ClassCastException(input+" is not a TdbPublisher, TdbTitle or TdbAu");
@@ -1277,7 +1483,7 @@ public class Tdb {
   static Transformer TITLE_ITER_XFORM = new Transformer() {
       public Object transform(Object input) {
 	if (input instanceof TdbPublisher) {
-	  return ((TdbPublisher)input).getTdbTitles().iterator();
+	  return ((TdbPublisher)input).tdbTitleIterator();
 	}
 	if (input instanceof TdbTitle) {
 	  return input;
@@ -1286,6 +1492,11 @@ public class Tdb {
 	  ClassCastException(input+" is not a TdbPublisher or TdbTitle");
       }};
 
+
+  /** @return an Iterator over all the TdbProviders in this Tdb. */
+  public Iterator<TdbProvider> tdbProviderIterator() {
+    return tdbProviderMap.values().iterator();
+  }
 
   /** @return an Iterator over all the TdbPublishers in this Tdb. */
   public Iterator<TdbPublisher> tdbPublisherIterator() {
@@ -1326,13 +1537,16 @@ public class Tdb {
   public static class Differences  {
     enum Type {Old, New}
 
+    // newly added providers
+    private final Set<TdbProvider> newProviders
+      = new HashSet<TdbProvider>();;
     // newly added publishers
-    private final List<TdbPublisher> newPublishers
-      = new ArrayList<TdbPublisher>();;
+    private final Set<TdbPublisher> newPublishers
+      = new HashSet<TdbPublisher>();;
     // titles that have been added to existing publishers
-    private final List<TdbTitle> newTitles = new ArrayList<TdbTitle>();;
+    private final Set<TdbTitle> newTitles = new HashSet<TdbTitle>();;
     // AUs that have been added to existing titles
-    private final List<TdbAu> newAus = new ArrayList<TdbAu>();
+    private final Set<TdbAu> newAus = new HashSet<TdbAu>();
     // Retained for compatibility with legacy Plugin/TitleConfig mechanism
     private final Set<String> diffPluginIds = new HashSet<String>();
     private int tdbAuCountDiff;
@@ -1402,26 +1616,35 @@ public class Tdb {
 
     /** Return the {@link TdbPublisher}s that appear in the new Tdb and not
      * the old. */
-    public List<TdbPublisher> rawNewTdbPublishers() {
+    public Set<TdbPublisher> rawNewTdbPublishers() {
       return newPublishers;
     }
 
     /** Return the {@link TdbTitle}s that have been added to existing
      * {@link TdbPublisher}s.  To get the entire set of new titles, use
      * {@link #newTdbTitleIterator()}. */
-    public List<TdbTitle> rawNewTdbTitles() {
+    public Set<TdbTitle> rawNewTdbTitles() {
       return newTitles;
     }
 
     /** Return the {@link TdbAu}s that have been added to existing
      * {@link TdbTitle}s.  To get the entire set of new AUs, use
      * {@link #newTdbAuIterator()}. */
-    public List<TdbAu> rawNewTdbAus() {
+    public Set<TdbAu> rawNewTdbAus() {
       return newAus;
     }
 
     void addPluginId(String id) {
       diffPluginIds.add(id);
+    }
+
+    void addProvider(TdbProvider provider, Type type) {
+      switch (type) {
+      case New:
+        newProviders.add(provider);
+        break;
+      }
+      provider.addAllPluginIds(this);
     }
 
     void addPublisher(TdbPublisher pub, Type type) {
@@ -1493,6 +1716,11 @@ public class Tdb {
     }
 
     /** @return an Iterator over all the newly added TdbPublishers. */
+    public Iterator<TdbProvider> newTdbProviderIterator() {
+      return tdb.tdbProviderIterator();
+    }
+
+    /** @return an Iterator over all the newly added TdbPublishers. */
     public Iterator<TdbPublisher> newTdbPublisherIterator() {
       return tdb.tdbPublisherIterator();
     }
@@ -1508,24 +1736,30 @@ public class Tdb {
       return tdb.tdbAuIterator();
     }
 
+    /** Return the {@link TdbProvider}s that appear in the new Tdb and not
+     * the old. */
+    public Set<TdbProvider> rawNewTdbProviders() {
+      return SetUtil.fromIterator(newTdbProviderIterator());
+    }
+
     /** Return the {@link TdbPublisher}s that appear in the new Tdb and not
      * the old. */
-    public List<TdbPublisher> rawNewTdbPublishers() {
-      return ListUtil.fromIterator(newTdbPublisherIterator());
+    public Set<TdbPublisher> rawNewTdbPublishers() {
+      return SetUtil.fromIterator(newTdbPublisherIterator());
     }
 
     /** Return the {@link TdbTitle}s that have been added to existing
      * {@link TdbPublisher}s.  To get the entire set of new titles, use
      * {@link #newTdbTitleIterator()}. */
-    public List<TdbTitle> rawNewTdbTitles() {
-      return Collections.EMPTY_LIST;
+    public Set<TdbTitle> rawNewTdbTitles() {
+      return Collections.emptySet();
     }
 
     /** Return the {@link TdbAu}s that have been added to existing
      * {@link TdbTitle}s.  To get the entire set of new AUs, use
      * {@link #newTdbAuIterator()}. */
-    public List<TdbAu> rawNewTdbAus() {
-      return Collections.EMPTY_LIST;
+    public Set<TdbAu> rawNewTdbAus() {
+      return Collections.emptySet();
     }
 
   }
