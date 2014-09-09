@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseAtyponArchivalUnit.java,v 1.2 2014-07-10 17:17:39 alexandraohlson Exp $
+ * $Id: TestBaseAtyponArchivalUnit.java,v 1.3 2014-09-09 19:44:45 alexandraohlson Exp $
  */
 
 /*
@@ -217,14 +217,10 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
   
   private static final String gln_user_msg = 
       "Atypon Systems hosts this archival unit (AU) " +
-          "and requires that you <a " +
-          "href=\'http://journals.ametsoc.org/action/institutionLockssIpChange\'>" +
-          "register the IP address of this LOCKSS box in your institutional account as" +
-          " a crawler</a> before allowing your LOCKSS box to harvest this AU." +
-          " Failure to comply with this publisher requirement may trigger crawler traps" + 
-          " on the Atypon Systems platform, and your LOCKSS box or your entire institution" +
-          " may be temporarily banned from accessing the site. You only need to register the IP " +
-          "address of this LOCKSS box once for all AUs published by the American Meteorological Society.";
+          "and may require you to register the IP address "+
+          "of this LOCKSS box as a crawler. For more information, visit the <a " +
+          "href=\'http://www.lockss.org/support/use-a-lockss-box/adding-titles/publisher-ip-address-registration-contacts-for-global-lockss-network/\'>" +
+          "LOCKSS IP address registration page</a>.";
   
   public void testSpecificUserMsg() throws Exception {
     // set up a specific BaseAtypon child - in this case American Meteorological Society
