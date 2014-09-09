@@ -1,5 +1,5 @@
 /*
- * $Id: TdbPublisher.java,v 1.17 2014-07-16 20:10:30 pgust Exp $
+ * $Id: TdbPublisher.java,v 1.18 2014-09-09 22:47:49 pgust Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ import org.lockss.util.*;
  * This class represents a title database publisher.
  *
  * @author  Philip Gust
- * @version $Id: TdbPublisher.java,v 1.17 2014-07-16 20:10:30 pgust Exp $
+ * @version $Id: TdbPublisher.java,v 1.18 2014-09-09 22:47:49 pgust Exp $
  */
 public class TdbPublisher {
   /**
@@ -126,6 +126,40 @@ public class TdbPublisher {
     return titlesById.values();
   }
   
+  /**
+   * Return all TdbProviders for this publisher.
+   * <p>
+   * Note: the collection should be treated as read-only.
+   *
+   * @return a collection of TdbAus for this publisher
+   */
+  public Collection<TdbProvider> getTdbProviders() {
+    Set<TdbProvider> providers = new HashSet<TdbProvider>();
+    getTdbProviders(providers);
+    return providers;
+  }
+  
+  /**
+   * Add to a collection of TdbProviders for this publisher.
+   * @param providers a collection of TdbProviders to add to.
+   * @return <code>true</code> if any TdbProviders were added
+   */
+  public boolean getTdbProviders(Collection<TdbProvider> providers) {
+    boolean added = false;
+    for (TdbTitle title : titlesById.values()) {
+      added |= title.getTdbProviders(providers);
+    }
+    return added;
+  }
+
+  /**
+   * Return the number of TdbProviders for this publisher.
+   * @return the number of TdbProviders for this publisher
+   */
+  public int getTdbProviderCount() {
+    return getTdbProviders().size();
+  }
+
   public Iterator<TdbTitle> tdbTitleIterator() {
     return new ObjectGraphIterator(titlesById.values().iterator(),
 				   Tdb.TITLE_ITER_XFORM);
@@ -180,7 +214,7 @@ public class TdbPublisher {
    */
   public Collection<TdbTitle> getTdbTitlesLikeName(String titleName) {
     ArrayList<TdbTitle> matchTitles = new ArrayList<TdbTitle>();
-    getTdbTitlesByName(titleName, matchTitles);
+    getTdbTitlesLikeName(titleName, matchTitles);
     matchTitles.trimToSize();
     return matchTitles;
   }
@@ -435,6 +469,12 @@ public class TdbPublisher {
     
     if (oldPublisher == null) {
       throw new IllegalArgumentException("pubisher cannot be null");
+    }
+    
+    if (!oldPublisher.getName().equals(name)) {
+      // publishers have changed if they don't have the same names
+      diffs.addPublisher(oldPublisher, Tdb.Differences.Type.Old);
+      diffs.addPublisher(this, Tdb.Differences.Type.New);
     }
     
     // add the TdbTitles that only appear in publisher
