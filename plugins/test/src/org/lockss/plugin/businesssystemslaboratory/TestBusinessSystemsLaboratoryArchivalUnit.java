@@ -1,5 +1,5 @@
 /*
- * $Id: TestBusinessSystemsLaboratoryArchivalUnit.java,v 1.4 2014-07-30 22:28:28 thib_gc Exp $
+ * $Id: TestBusinessSystemsLaboratoryArchivalUnit.java,v 1.5 2014-09-10 18:44:29 thib_gc Exp $
  */
 
 /*
@@ -38,7 +38,7 @@ import java.util.Properties;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.RangeCachedUrlSetSpec;
-import org.lockss.extractor.JsoupHtmlLinkExtractor;
+import org.lockss.extractor.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrlSet;
 import org.lockss.plugin.UrlCacher;
@@ -201,7 +201,7 @@ public class TestBusinessSystemsLaboratoryArchivalUnit extends LockssTestCase {
   }
   
   public void testHtmlLinkExtractor() throws Exception {
-    assertClass(JsoupHtmlLinkExtractor.class, bslAu.getLinkExtractor(Constants.MIME_TYPE_HTML));
+    assertTrue(bslAu.getLinkExtractor(Constants.MIME_TYPE_HTML) instanceof GoslingHtmlLinkExtractor);
   }
 
 }

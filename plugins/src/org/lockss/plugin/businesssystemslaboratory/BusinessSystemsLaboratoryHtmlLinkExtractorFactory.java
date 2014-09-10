@@ -1,5 +1,5 @@
 /*
- * $Id: BusinessSystemsLaboratoryHtmlLinkExtractorFactory.java,v 1.1 2014-07-30 22:28:28 thib_gc Exp $
+ * $Id: BusinessSystemsLaboratoryHtmlLinkExtractorFactory.java,v 1.2 2014-09-10 18:44:29 thib_gc Exp $
  */
 
 /*
@@ -32,21 +32,27 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 
 package org.lockss.plugin.businesssystemslaboratory;
 
+import java.io.*;
+
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
+import org.lockss.plugin.ArchivalUnit;
 
-/**
- * <p>
- * Uses {@link JsoupHtmlLinkExtractor} because this site uses both an unusual
- * encoding and URLs with unusual characters.
- * </p>
- * @author Thib Guicherd-Callin
- */
 public class BusinessSystemsLaboratoryHtmlLinkExtractorFactory implements LinkExtractorFactory {
 
   @Override
   public LinkExtractor createLinkExtractor(String mimeType) throws PluginException {
-    return new JsoupHtmlLinkExtractor();
+    return new GoslingHtmlLinkExtractor() {
+      @Override
+      public void extractUrls(ArchivalUnit au,
+                              InputStream in,
+                              String encoding,
+                              String srcUrl,
+                              Callback cb)
+          throws IOException {
+        super.extractUrls(au, in, encoding == null ? "windows-1252" : encoding, srcUrl, cb);
+      }
+    };
   }
 
 }
