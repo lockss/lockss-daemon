@@ -1,10 +1,10 @@
 /*
- * $Id: IngentaPdfFilterFactory.java,v 1.14 2014-07-15 00:47:10 etenbrink Exp $
+ * $Id: IngentaPdfFilterFactory.java,v 1.15 2014-09-10 22:09:44 etenbrink Exp $
  */ 
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -170,7 +170,8 @@ public class IngentaPdfFilterFactory implements FilterFactory {
         worker.process(pdfTokenStream);
         if (worker.result) {
           List<PdfToken> tokens = pdfTokenStream.getTokens();
-          tokens.subList(worker.beginIndex, worker.endIndex).clear();
+          // clear tokens including text markers
+          tokens.subList(worker.beginIndex, worker.endIndex + 1).clear();
           pdfTokenStream.setTokens(tokens);
         }
       }
@@ -261,7 +262,8 @@ public class IngentaPdfFilterFactory implements FilterFactory {
         worker.process(pdfTokenStream);
         if (worker.result) {
           List<PdfToken> tokens = pdfTokenStream.getTokens();
-          tokens.subList(worker.beginIndex, worker.endIndex).clear();
+          // clear tokens including text markers
+          tokens.subList(worker.beginIndex, worker.endIndex + 1).clear();
           pdfTokenStream.setTokens(tokens);
         }
       }
@@ -309,7 +311,7 @@ public class IngentaPdfFilterFactory implements FilterFactory {
         switch (state) {
         
         case 0: {
-          if (isRestoreGraphicsState()) {
+          if (isSaveGraphicsState()) {
             endIndex = getIndex();
             ++state; 
           }
@@ -319,13 +321,13 @@ public class IngentaPdfFilterFactory implements FilterFactory {
           if (isShowTextMatches("\\s*Delivered by .* to: .*")) {
             ++state;
           }
-          else if (isRestoreGraphicsState()) {
+          else if (isRestoreGraphicsState() || isSaveGraphicsState()) {
             stop();
           }
         } break;
         
         case 2: {
-          if (isSaveGraphicsState()) {
+          if (isRestoreGraphicsState()) {
             beginIndex = getIndex();
             result = true;
             stop(); 
@@ -355,7 +357,8 @@ public class IngentaPdfFilterFactory implements FilterFactory {
         worker.process(pdfTokenStream);
         if (worker.result) {
           List<PdfToken> tokens = pdfTokenStream.getTokens();
-          tokens.subList(worker.beginIndex, worker.endIndex).clear();
+          // clear only the parts between the markers (exclusive)
+          tokens.subList(worker.beginIndex + 1, worker.endIndex).clear();
           pdfTokenStream.setTokens(tokens);
         }
       }
