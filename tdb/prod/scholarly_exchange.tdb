@@ -84,6 +84,46 @@
   {
   
     title < 
+      name = Intersticios ;
+      eissn = 1887-3898 
+    >
+    
+    param[base_url] = http://www.intersticios.es/
+    param[journal_id] = ?
+
+    au < exists ; 2007 ; Intersticios Volume 1 ; 1 ; 2007 >
+    au < exists ; 2008 ; Intersticios Volume 2 ; 2 ; 2008 >
+    au < exists ; 2009 ; Intersticios Volume 3 ; 3 ; 2009 >
+    au < exists ; 2010 ; Intersticios Volume 4 ; 4 ; 2010 >
+    au < exists ; 2011 ; Intersticios Volume 5 ; 5 ; 2011 >
+    au < exists ; 2012 ; Intersticios Volume 6 ; 6 ; 2012 >
+    au < exists ; 2013 ; Intersticios Volume 7 ; 7 ; 2013 >
+    au < exists ; 2014 ; Intersticios Volume 8 ; 8 ; 2014 >
+    
+  }
+  
+  {
+  
+    title < 
+      name = Investigative Sciences Journal ;
+      eissn = 1942-7794 
+    >
+    
+    param[base_url] = http://www.investigativesciencesjournal.org/
+    param[journal_id] = ?
+
+    au < exists ; 2009 ; Investigative Sciences Journal Volume 1 ; 1 ; 2009 >
+    au < exists ; 2010 ; Investigative Sciences Journal Volume 2 ; 2 ; 2010 >
+    au < exists ; 2011 ; Investigative Sciences Journal Volume 3 ; 3 ; 2011 >
+    au < exists ; 2012 ; Investigative Sciences Journal Volume 4 ; 4 ; 2012 >
+    au < exists ; 2013 ; Investigative Sciences Journal Volume 5 ; 5 ; 2013 >
+    au < exists ; 2014 ; Investigative Sciences Journal Volume 6 ; 6 ; 2014 >
+    
+  }
+  
+  {
+  
+    title < 
       name = Pakistaniaat ;
       issn = 1948-6529 ;
       eissn = 1946-5343 
