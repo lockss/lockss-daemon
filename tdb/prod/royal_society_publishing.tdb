@@ -244,12 +244,14 @@
       issnl = 2046-2441
     >
 
+    pluginPrefix = org.lockss.plugin.highwire.
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
     param[base_url] = http://rsob.royalsocietypublishing.org/
     
-    au < released ; 2011 ; Open Biology Volume 1 ; 1 >
-    au < released ; 2012 ; Open Biology Volume 2 ; 2 >
-    au < manifest ; 2013 ; Open Biology Volume 3 ; 3 >
-    au < manifest ; 2014 ; Open Biology Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; down ; 2011 ; Open Biology Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; down ; 2012 ; Open Biology Volume 2 ; 2 >
+    au < HighWireDrupalPlugin ; manifest ; 2013 ; Open Biology Volume 3 ; 3 >
+    au < HighWireDrupalPlugin ; manifest ; 2014 ; Open Biology Volume 4 ; 4 >
   
   }
   
