@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>47</string>
+    <string>48</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>20</string>
+        <string>21</string>
       </entry>
     </map>
   </entry>
@@ -144,7 +144,7 @@
         <type>1</type>
         <size>40</size>
         <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
+        <defaultOnly>false</defaultOnly>7
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
         <key>journal_id</key>
