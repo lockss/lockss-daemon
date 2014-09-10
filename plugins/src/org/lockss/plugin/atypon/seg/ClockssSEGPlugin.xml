@@ -60,9 +60,5 @@
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.atypon.seg.SEGHtmlCrawlFilterFactory</string>
   </entry>
-  <entry>
-    <string>text/html_link_extractor_factory</string>
-    <string>org.lockss.plugin.atypon.seg.SEGHtmlLinkExtractorFactory</string>
-  </entry>
 </map>    
 
