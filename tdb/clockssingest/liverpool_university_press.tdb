@@ -230,15 +230,20 @@
       eissn = 2047-7708 ;
       issnl = 0014-5483
     >
+    {
+      comment[upcoming] = this journal is upcoming in projectmuse
+      param[journal_issn] = 2047-7708
 
-    comment[upcoming] = this journal is upcoming in projectmuse
-    param[journal_issn] = 2047-7708
+      au < finished ; crawling ; 2011 ; Extrapolation Volume 52 ; 52 >
+      au < finished ; frozen ; 2012 ; Extrapolation Volume 53 ; 53 >
+      au < crawling ; exists ; 2013 ; Extrapolation Volume 54 ; 54 >
+      au < doNotProcess ; exists ; 2014 ; Extrapolation Volume 55 ; 55 >
+    }
+    {
+      param[journal_issn] = 0014-5483
 
-    au < finished ; crawling ; 2011 ; Extrapolation Volume 52 ; 52 >
-    au < finished ; frozen ; 2012 ; Extrapolation Volume 53 ; 53 >
-    au < crawling ; exists ; 2013 ; Extrapolation Volume 54 ; 54 >
-    au < doNotProcess ; exists ; 2014 ; Extrapolation Volume 55 ; 55 >
-
+      au < superseded ; exists ; 2011 ; Extrapolation Volume 52 [superseded] ; 52 >
+    }
   }
 
   {
