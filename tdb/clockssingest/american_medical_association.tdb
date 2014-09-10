@@ -213,8 +213,8 @@
         param[base_url] = http://archderm.jamanetwork.com/
         param[resource_id] = 68
         
-        au < testing ; exists ; 2013 ; JAMA Dermatology Volume 149 ; 2013 >
-        au < exists ; exists ; 2014 ; JAMA of Dermatology Volume 150 ; 2014 >
+        au < ready ; exists ; 2013 ; JAMA Dermatology Volume 149 ; 2013 >
+        au < testing ; exists ; 2014 ; JAMA of Dermatology Volume 150 ; 2014 >
     
       }
 
@@ -284,7 +284,7 @@
         param[resource_id] = 69
         
         au < crawling ; exists ; 2013 ; JAMA Facial Plastic Surgery Volume 15 ; 2013 >
-        au < exists ; exists ; 2014 ; JAMA Facial Plastic Surgery Volume 16 ; 2014 >
+        au < testing ; exists ; 2014 ; JAMA Facial Plastic Surgery Volume 16 ; 2014 >
     
       }
 
@@ -416,7 +416,7 @@
         param[resource_id] = 70
         
         au < crawling ; exists ; 2013 ; JAMA Psychiatry Volume 70 ; 2013 >
-        au < exists ; exists ; 2014 ; JAMA Psychiatry Volume 71 ; 2014 >
+        au < testing ; exists ; 2014 ; JAMA Psychiatry Volume 71 ; 2014 >
     
       }
 
@@ -624,7 +624,7 @@
         param[resource_id] = 71
         
         au < crawling ; exists ; 2013 ; JAMA Internal Medicine Volume 173 ; 2013 >
-        au < exists ; exists ; 2014 ; JAMA Internal Medicine Volume 174 ; 2014 >
+        au < testing ; exists ; 2014 ; JAMA Internal Medicine Volume 174 ; 2014 >
     
       }
 
