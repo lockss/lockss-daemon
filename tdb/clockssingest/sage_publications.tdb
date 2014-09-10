@@ -11609,6 +11609,20 @@
   {
 
     title <
+      name = Global Pediatric Health ;
+      eissn = 2333-794X ;
+      issnl = 2333-794X
+    >
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      param[base_url] = http://gph.sagepub.com/
+
+      au < exists ; exists ; 2014 ; Global Pediatric Health Volume 1 ; 1 ; >
+  }
+
+  {
+
+    title <
       name = Global Qualitative Nursing Research ;
       eissn = 2333-3936 ;
       issnl = 2333-3936
@@ -35328,6 +35342,33 @@
       au < manifest ; exists ; 2014 ; Teaching Sociology Volume 42 ; 42 ; >
 
     }
+
+  }
+
+  {
+  
+    title <
+      name = Technology in Cancer Research & Treatment ;
+      issn = 1533-0346 ;
+      eissn = 1533-0338
+    >
+
+      param[base_url] = http://tct.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2002 ; Technology in Cancer Research & Treatment Volume 1 ; 1 ; >
+      au < exists ; exists ; 2003 ; Technology in Cancer Research & Treatment Volume 2 ; 2 ; >
+      au < exists ; exists ; 2004 ; Technology in Cancer Research & Treatment Volume 3 ; 3 ; >
+      au < exists ; exists ; 2005 ; Technology in Cancer Research & Treatment Volume 4 ; 4 ; >
+      au < exists ; exists ; 2006 ; Technology in Cancer Research & Treatment Volume 5 ; 5 ; >
+      au < exists ; exists ; 2007 ; Technology in Cancer Research & Treatment Volume 6 ; 6 ; >
+      au < exists ; exists ; 2008 ; Technology in Cancer Research & Treatment Volume 7 ; 7 ; >
+      au < exists ; exists ; 2009 ; Technology in Cancer Research & Treatment Volume 8 ; 8 ; >
+      au < exists ; exists ; 2010 ; Technology in Cancer Research & Treatment Volume 9 ; 9 ; >
+      au < exists ; exists ; 2011 ; Technology in Cancer Research & Treatment Volume 10 ; 10 ; >
+      au < exists ; exists ; 2012 ; Technology in Cancer Research & Treatment Volume 11 ; 11 ; >
+      au < exists ; exists ; 2013 ; Technology in Cancer Research & Treatment Volume 12 ; 12 ; >
+      au < exists ; exists ; 2014 ; Technology in Cancer Research & Treatment Volume 13 ; 13 ; >
 
   }
 
