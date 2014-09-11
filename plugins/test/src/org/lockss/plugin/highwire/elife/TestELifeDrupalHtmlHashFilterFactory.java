@@ -1,5 +1,5 @@
 /*
- * $Id: TestELifeDrupalHtmlHashFilterFactory.java,v 1.2 2014-06-07 03:21:49 etenbrink Exp $
+ * $Id: TestELifeDrupalHtmlHashFilterFactory.java,v 1.3 2014-09-11 02:54:40 etenbrink Exp $
  */
 
 /*
@@ -112,15 +112,15 @@ public class TestELifeDrupalHtmlHashFilterFactory extends LockssTestCase {
   private static final String linkswFiltered = "<div> </div>";
   
   // HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-wrapper"),
-  private static final String withSidebar = "</div>\n" +
+  private static final String withSidebar = "<div>\n" +
       "<div class=\"sidebar-wrapper grid-9 omega\">\n" + 
       "      <div class=\"panel-panel panel-region-sidebar-lens\">\n" + 
       "        <div class=\"panel-pane pane-elife-article-lens-icon hidden-small\">\n" + 
       "        </div>\n" + 
       "      </div>\n" + 
       "</div>\n" + 
-      "<div>";
-  private static final String withoutSidebar = "</div>\n<div>";
+      "</div>";
+  private static final String withoutSidebar = "<div>\n</div>";
   
   // new TagNameFilter("script"),
   private static final String withScript =
@@ -130,6 +130,11 @@ public class TestELifeDrupalHtmlHashFilterFactory extends LockssTestCase {
   private static final String withoutScript =
       "<div></div>";
   
+  private static final String attrib = "<div>" +
+  		"<div id=\"foo-categories\">stuff\n" + 
+      "</div></div>";
+  private static final String attribFiltered = "<div><div>stuff </div></div>";
+  
   public void testFiltering() throws Exception {
     assertFilterToString(headHtml, headHtmlFiltered);
     assertFilterToString(header, headerFiltered);
@@ -138,6 +143,7 @@ public class TestELifeDrupalHtmlHashFilterFactory extends LockssTestCase {
     assertFilterToString(pheader, pheaderFiltered);
     assertFilterToString(artcat, artcatFiltered);
     assertFilterToString(linksw, linkswFiltered);
+    assertFilterToString(attrib, attribFiltered);
     
     assertFilterToSame(withSidebar, withoutSidebar);
     assertFilterToSame(withScript, withoutScript);
