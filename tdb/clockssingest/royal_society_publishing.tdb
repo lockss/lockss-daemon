@@ -6,8 +6,9 @@
     info[tester] = 8
   >
 
-  plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
-  implicit < status ; status2 ; year ; name ; param[volume_name] >
+    pluginPrefix = org.lockss.plugin.highwire.
+    pluginSuffix = ClockssHighWirePressH20Plugin
+    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
   {
 
@@ -258,12 +259,10 @@
     au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2011 ; Open Biology Volume 1 ; 1 >
     au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2012 ; Open Biology Volume 2 ; 2 >
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Open Biology Volume 3 [superseded] ; 3 >
-    au < ClockssHighWireDrupalPlugin ; exists ; exists ; 2013 ; Open Biology Volume 3 ; 3 >
-    au < ClockssHighWireDrupalPlugin ; exists ; exists ; 2014 ; Open Biology Volume 4 ; 4 >
+    au < ClockssHighWireDrupalPlugin ; testing ; exists ; 2013 ; Open Biology Volume 3 ; 3 >
+    au < ClockssHighWireDrupalPlugin ; testing ; exists ; 2014 ; Open Biology Volume 4 ; 4 >
     
-
   }
-
 
   {
 
