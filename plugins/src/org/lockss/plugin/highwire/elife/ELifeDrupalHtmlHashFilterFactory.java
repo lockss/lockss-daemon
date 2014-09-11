@@ -1,5 +1,5 @@
 /*
- * $Id: ELifeDrupalHtmlHashFilterFactory.java,v 1.1 2014-06-07 02:32:17 etenbrink Exp $
+ * $Id: ELifeDrupalHtmlHashFilterFactory.java,v 1.2 2014-09-11 02:46:41 etenbrink Exp $
  */
 
 /*
@@ -32,11 +32,17 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.highwire.elife;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.Reader;
+import java.util.Vector;
 
+import org.htmlparser.Attribute;
+import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
+import org.htmlparser.Tag;
 import org.htmlparser.filters.*;
+import org.htmlparser.util.NodeList;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.FilterUtil;
 import org.lockss.filter.WhiteSpaceFilter;
@@ -73,10 +79,43 @@ public class ELifeDrupalHtmlHashFilterFactory implements FilterFactory {
         new TagNameFilter("noscript"),
     };
     
+    // Transform to remove attributes from select tags
+    // some attributes changed over time, either arbitrarily or sequentially
+    HtmlTransform xform = new HtmlTransform() {
+      @Override
+      public NodeList transform(NodeList nodeList) throws IOException {
+        NodeList nl = new NodeList();
+        for (int sx = 0; sx < nodeList.size(); sx++) {
+          Node snode = nodeList.elementAt(sx);
+          if (snode instanceof Tag) {
+            Tag tag = (Tag) snode;
+            if (tag.isEmptyXmlTag()) {
+              continue;
+            }
+            String tagName = tag.getTagName().toLowerCase();
+            NodeList knl = tag.getChildren();
+            if (knl != null) {
+              tag.setChildren(transform(knl));
+            }
+            if ("div".equals(tagName)) {
+              Attribute a = tag.getAttributeEx(tagName);
+              Vector<Attribute> v = new Vector<Attribute>();
+              v.add(a);
+              tag.setAttributesEx(v);
+            }
+            nl.add(tag);
+          }
+          else {
+            nl.add(snode);
+          }
+        }
+        return nl;
+      }
+    };
+    
     InputStream filtered =  new HtmlFilterInputStream(in, encoding,
-            HtmlNodeFilterTransform.exclude(new OrFilter(filters)))
-    .registerTag(new HtmlTags.Header())
-    .registerTag(new HtmlTags.Footer()); // XXX registerTag can be removed after 1.65
+        new HtmlCompoundTransform(
+            HtmlNodeFilterTransform.exclude(new OrFilter(filters)), xform));
     
     Reader filteredReader = FilterUtil.getReader(filtered, encoding);
     return new ReaderInputStream(new WhiteSpaceFilter(filteredReader));
