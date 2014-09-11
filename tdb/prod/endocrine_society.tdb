@@ -56,6 +56,17 @@
 
     }
 
+    {
+     
+      plugin = needs.plugin
+      param[base_url] = http://press.endocrine.org/
+      param[journal_id] = edrv
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2014 ; Endocrine Reviews Volume 35 ; 35 >
+
+    }
+
   }
 
   {
