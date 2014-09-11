@@ -475,7 +475,7 @@
     au < finished ; crawling ; 2010 ; Cancer Gene Therapy Volume 17 ; 2010 ; 17 >
     au < finished ; frozen ; 2011 ; Cancer Gene Therapy Volume 18 ; 2011 ; 18 >
     au < finished ; frozen ; 2012 ; Cancer Gene Therapy Volume 19 ; 2012 ; 19 >
-    au < down ; exists ; 2013 ; Cancer Gene Therapy Volume 19 [to delete] ; 2013 ; 19 >
+    au < superseded ; exists ; 2013 ; Cancer Gene Therapy Volume 19 [to delete] ; 2013 ; 19 >
     au < crawling ; exists ; 2013 ; Cancer Gene Therapy Volume 20 ; 2013 ; 20 >
     au < manifest ; exists ; 2014 ; Cancer Gene Therapy Volume 21 ; 2014 ; 21 >
 
@@ -555,7 +555,7 @@
     au < finished ; crawling ; 2010 ; Cell Research Volume 20 ; 2010 ; 20 >
     au < finished ; frozen ; 2011 ; Cell Research Volume 21 ; 2011 ; 21 >
     au < finished ; frozen ; 2012 ; Cell Research Volume 22 ; 2012 ; 22 >
-    au < down ; exists ; 2013 ; Cell Research Volume 22 [to delete] ; 2013 ; 22 >
+    au < superseded ; exists ; 2013 ; Cell Research Volume 22 [to delete] ; 2013 ; 22 >
     au < crawling ; exists ; 2013 ; Cell Research Volume 23 ; 2013 ; 23 >
     au < manifest ; exists ; 2014 ; Cell Research Volume 24 ; 2014 ; 24 >
 
@@ -1449,7 +1449,7 @@
       issnl = 1087-0024
     >
 
-    comment[1] = 2010 does not exist, 2011 is the last issue as of 1/18/13
+    comment[1] = 2010 does not exist, 2013 is the last issue as of 9/10/14
     param[journal_id] = jidsp
 
 
@@ -1467,7 +1467,7 @@
     au < finished ; crawling ; 2008 ; JID Symposium Proceedings Volume 13 ; 2008 ; 13 >
     au < finished ; crawling ; 2009 ; JID Symposium Proceedings Volume 14 ; 2009 ; 14 >
     au < superseded ; down ; 2010 ; JID Symposium Proceedings Volume 15 [superseded] ; 2010 ; 15 >
-    au < finished ; crawling ; 2011 ; JID Symposium Proceedings Volume 15 ; 2011 ; 15 >
+    au < ready ; crawling ; 2011 ; JID Symposium Proceedings Volume 15 ; 2011 ; 15 >
     au < exists ; exists ; 2013 ; JID Symposium Proceedings Volume 16 ; 2010 ; 16 >
     
 
@@ -2868,7 +2868,7 @@
     au < finished ; crawling ; 2010 ; Nature Chemistry Volume 2 ; 2010 ; 2 >
     au < crawling ; exists ; 2011 ; Nature Chemistry Volume 3 ; 2011 ; 3 >
     au < crawling ; exists ; 2012 ; Nature Chemistry Volume 4 ; 2012 ; 4 >
-    au < crawling ; exists ; 2013 ; Nature Chemistry Volume 5 ; 2013 ; 5 >
+    au < ready ; exists ; 2013 ; Nature Chemistry Volume 5 ; 2013 ; 5 >
     au < manifest ; exists ; 2014 ; Nature Chemistry Volume 6 ; 2014 ; 6 >
 
   }
@@ -2918,7 +2918,7 @@
     au < exists ; exists ; 2010 ; Nature Communications Volume 1 ; 2010 ; 1 >
     au < crawling ; exists ; 2011 ; Nature Communications Volume 2 ; 2011 ; 2 >
     au < crawling ; exists ; 2012 ; Nature Communications Volume 3 ; 2012 ; 3 >
-    au < crawling ; exists ; 2013 ; Nature Communications Volume 4 ; 2013 ; 4 >
+    au < ready ; exists ; 2013 ; Nature Communications Volume 4 ; 2013 ; 4 >
     au < expected ; exists ; 2014 ; Nature Communications Volume 5 ; 2014 ; 5 >
   
   }
@@ -3550,7 +3550,7 @@
     au < finished ; frozen ; 2010 ; Nature Reviews Nephrology Volume 6 ; 2010 ; 6 >
     au < finished ; frozen ; 2011 ; Nature Reviews Nephrology Volume 7 ; 2011 ; 7 >
     au < crawling ; exists ; 2012 ; Nature Reviews Nephrology Volume 8 ; 2012 ; 8 >
-    au < crawling ; exists ; 2013 ; Nature Reviews Nephrology Volume 9 ; 2013 ; 9 >
+    au < ready ; exists ; 2013 ; Nature Reviews Nephrology Volume 9 ; 2013 ; 9 >
     au < manifest ; exists ; 2014 ; Nature Reviews Nephrology Volume 10 ; 2014 ; 10 >
 
   }
@@ -3830,7 +3830,7 @@
     au < crawling ; exists ; 2010 ; Oncogene Volume 29 ; 2010 ; 29 >
     au < finished ; crawling ; 2011 ; Oncogene Volume 30 ; 2011 ; 30 >
     au < crawling ; exists ; 2012 ; Oncogene Volume 31 ; 2012 ; 31 >
-    au < crawling ; exists ; 2013 ; Oncogene Volume 32 ; 2013 ; 32 >
+    au < ready ; exists ; 2013 ; Oncogene Volume 32 ; 2013 ; 32 >
     au < manifest ; exists ; 2014 ; Oncogene Volume 33 ; 2014 ; 33 >
 
   }
