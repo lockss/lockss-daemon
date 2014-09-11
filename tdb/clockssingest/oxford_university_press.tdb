@@ -14082,7 +14082,7 @@
     au < manifest ; exists ; 2010 ; Medical Mycology Volume 48 ; 48 ; >
     au < manifest ; exists ; 2011 ; Medical Mycology Volume 49 ; 49 ; >
     au < crawling ; exists ; 2012 ; Medical Mycology Volume 50 ; 50 ; >
-    au < notReady ; exists ; 2013 ; Medical Mycology Volume 51 ; 51 ; >
+    au < ready ; exists ; 2013 ; Medical Mycology Volume 51 ; 51 ; >
     au < manifest ; exists ; 2014 ; Medical Mycology Volume 52 ; 52 ; >
 
   }
@@ -16122,7 +16122,7 @@
     au < finished ; crawling ; 2010 ; The Opera Quarterly Volume 26 ; 26 ; >
     au < finished ; crawling ; 2011 ; The Opera Quarterly Volume 27 ; 27 ; >
     au < finished ; frozen ; 2012 ; The Opera Quarterly Volume 28 ; 28 ; >
-    au < notReady ; exists ; 2013 ; The Opera Quarterly Volume 29 ; 29 ; >
+    au < ready ; exists ; 2013 ; The Opera Quarterly Volume 29 ; 29 ; >
     au < expected ; exists ; 2014 ; The Opera Quarterly Volume 30 ; 30 ; >
 
     }
@@ -17873,7 +17873,7 @@
     au < manifest ; exists ; 2010 ; Publications of the Astronomical Society of Japan Volume 62 ; 62 ; >
     au < notReady ; exists ; 2011 ; Publications of the Astronomical Society of Japan Volume 63 ; 63 ; >
     au < notReady ; exists ; 2012 ; Publications of the Astronomical Society of Japan Volume 64 ; 64 ; >
-    au < notReady ; exists ; 2013 ; Publications of the Astronomical Society of Japan Volume 65 ; 65 ; >
+    au < ready ; exists ; 2013 ; Publications of the Astronomical Society of Japan Volume 65 ; 65 ; >
     au < manifest ; exists ; 2014 ; Publications of the Astronomical Society of Japan Volume 66 ; 66 ; >
 
   }
@@ -20847,7 +20847,7 @@
     au < finished ; frozen ; 2010 ; Yearbook of International Environmental Law Volume 20 ; 20 ; >
     au < finished ; crawling ; 2010 ; Yearbook of International Environmental Law Volume 21 ; 21 ; >
     au < finished ; frozen ; 2011 ; Yearbook of International Environmental Law Volume 22 ; 22 ; >
-    au < notReady ; exists ; 2012 ; Yearbook of International Environmental Law Volume 23 ; 23 ; >
+    au < ready ; exists ; 2012 ; Yearbook of International Environmental Law Volume 23 ; 23 ; >
 
   }
 
