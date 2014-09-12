@@ -1,4 +1,4 @@
-/* $Id: TestNationalWeatherAssociationArticleIteratorFactory.java,v 1.2 2014-07-21 03:28:29 tlipkis Exp $ */
+/* $Id: TestNationalWeatherAssociationArticleIteratorFactory.java,v 1.3 2014-09-12 19:54:13 ldoan Exp $ */
 
 /*
 
@@ -47,7 +47,6 @@ import org.lockss.plugin.ArticleFiles;
 import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.CachedUrlSet;
-import org.lockss.plugin.CachedUrlSetNode;
 import org.lockss.plugin.PluginTestUtil;
 import org.lockss.plugin.SubTreeArticleIterator;
 import org.lockss.plugin.simulated.SimulatedArchivalUnit;
@@ -121,27 +120,6 @@ public class TestNationalWeatherAssociationArticleIteratorFactory
   public void testRoots() throws Exception {
     SubTreeArticleIterator artIter = createSubTreeIter();
     assertEquals(ListUtil.list(BASE_URL + JID), getRootUrls(artIter));
-  }
-
-  public void testUrlsWithPrefixes() throws Exception {
-    SubTreeArticleIterator artIter = createSubTreeIter();
-    Pattern pat = getPattern(artIter);
-    
-    // Pattern PDF_PATTERN = Pattern.compile(
-    //  "/(articles)/([0-9]{4})/([0-9]{4}-[^/]+[0-9]+)
-    //          /([0-9]{4}-[^/]+[0-9]+\\.pdf)$", Pattern.CASE_INSENSITIVE);
-   
-    // <nwabase>.org/xjid/abstracts/2013/2013-XJID22/abstract.php
-    assertMatchesRE(pat, BASE_URL + JID + "/abstracts/" + YEAR + "/" 
-        + YEAR + "-" + JID + "22/abstract.php");
-
-    // <nwabase>.org/xjid/articles/2013/2013-XJID12/2013-XJID12.pdf
-    assertMatchesRE(pat, BASE_URL + JID + "/articles/" + YEAR + "/"
-        + YEAR + "-" + JID + "12/"+ YEAR + "-" + JID + "12.pdf");
-    
-    // <nwabase>.org/xjid/articles/2013/2013-XJID12/2013-XJID12.pdfbad
-    assertNotMatchesRE(pat, BASE_URL + JID + "/articles/" + YEAR + "/"
-        + YEAR + "-" + JID + "12/"+ YEAR + "-" + JID + "12.pdfbad");
   }
   
   // simulated cached urls:
