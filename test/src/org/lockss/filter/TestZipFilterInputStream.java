@@ -1,5 +1,5 @@
 /*
- * $Id: TestZipFilterInputStream.java,v 1.1 2014-09-12 18:45:06 thib_gc Exp $
+ * $Id: TestZipFilterInputStream.java,v 1.2 2014-09-12 18:49:03 thib_gc Exp $
  */
 
 /*
@@ -100,8 +100,8 @@ public class TestZipFilterInputStream extends LockssTestCase {
     try {
       zfis.close();
     }
-    catch (IOException ioe) {
-      assertEquals("stream closed", ioe.getMessage());
+    catch (IOException expected) {
+      assertEquals("stream closed", expected.getMessage());
     }
   }
 
@@ -145,8 +145,8 @@ public class TestZipFilterInputStream extends LockssTestCase {
     try {
       zfis.close();
     }
-    catch (IOException ioe) {
-      assertEquals("stream closed", ioe.getMessage());
+    catch (IOException expected) {
+      assertEquals("stream closed", expected.getMessage());
     }
   }
 
@@ -184,8 +184,8 @@ public class TestZipFilterInputStream extends LockssTestCase {
     try {
       zfis.close();
     }
-    catch (IOException ioe) {
-      assertEquals("stream closed", ioe.getMessage());
+    catch (IOException expected) {
+      assertEquals("stream closed", expected.getMessage());
     }
   }
   
@@ -247,8 +247,8 @@ public class TestZipFilterInputStream extends LockssTestCase {
     try {
       zfis.close();
     }
-    catch (IOException ioe) {
-      assertEquals("stream closed", ioe.getMessage());
+    catch (IOException expected) {
+      assertEquals("stream closed", expected.getMessage());
     }
   }
 
