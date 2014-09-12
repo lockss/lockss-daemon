@@ -87,6 +87,21 @@
 
   {
 
+   title <
+     name = Aesthetic Surgery Journal ;
+     issn = 1090-820X ;
+     eissn = 1527-330X 
+   >
+
+    comment[0] = move from Sage 2015-01-01
+    param[base_url] = http://asj.oxfordjournals.org 
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < expected ; exists ; 2015 ; Aesthetic Surgery Journal Volume 35 ; 35 ; >
+  }
+
+  {
+
     title <
       name = African Affairs ;
       issn = 0001-9909 ;
