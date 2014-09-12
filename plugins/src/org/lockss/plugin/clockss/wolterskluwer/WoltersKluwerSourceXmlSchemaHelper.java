@@ -1,5 +1,5 @@
 /*
- * $Id: WoltersKluwerSourceXmlSchemaHelper.java,v 1.5 2014-08-08 17:17:46 aishizaki Exp $
+ * $Id: WoltersKluwerSourceXmlSchemaHelper.java,v 1.6 2014-09-12 15:16:12 aishizaki Exp $
  */
 
 /*
@@ -152,17 +152,17 @@ implements SourceXmlSchemaHelper {
       
       // make it W3C format YYYY or YYYY-MM or YYYY-MM-DD
       StringBuilder dBuilder = new StringBuilder();
-      if (year.equals(null)) return EMPTY_DATE;
+      if (year == null) return EMPTY_DATE;
       dBuilder.append(year); //YYYY
-      if (month.equals(null)) {
+      if (month == null) {
         return dBuilder.toString();     // return just YYYY, if no MM
       } else {
         dBuilder.append(DATE_SEPARATOR + month);
-        if (!day.equals(null)) {
+        if (day != null) {
           dBuilder.append(DATE_SEPARATOR + day);
         }
       }
-      // WK uses a text month (eg "June" instead of 06"), which won't 
+      // WK sometimes uses a text month (eg "June" instead of 06"), which won't 
       // work with the database, so converting. If the date is invalid,
       // return "" (will be a null date in the database)
       PublicationDate date = null;
@@ -174,7 +174,7 @@ implements SourceXmlSchemaHelper {
           throw new ParseException(date.toString(), 0);
         }
       } catch (ParseException e) {
-        // invalid date (eg year = 0)
+        // invalid date (eg year == 0)
         return EMPTY_DATE;
       }
       return date.toString();

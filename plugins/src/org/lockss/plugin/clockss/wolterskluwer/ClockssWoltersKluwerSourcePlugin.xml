@@ -45,11 +45,25 @@
     <string>au_name</string>
     <string>"Wolters Kluwer Source Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
   </entry> 
+  <!-- for testing purposes
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"^%s%d/JAMCM2014\d+\.[0-9].zip", base_url, year</string>  
+      <string>1,"^%s%d/AJCO20121000\.[0-9].zip", base_url, year</string>  
+      <string>2,"^%s%d/[A-Z]+\d.*", base_url, year</string>    
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%s%d/", base_url, year</string>
+  </entry>
+  -->
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
       <!-- test: base_url2014/ACSMS20140400.0.zip -->
-      <string>"^%s%d/.+\.zip", base_url, year</string>
+      <string>"^%s%d/[^/]+\.zip$", base_url, year</string>
     </list>
   </entry>
   <entry>

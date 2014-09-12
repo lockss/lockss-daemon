@@ -1,5 +1,5 @@
 /*
- * $Id: WoltersKluwerSourceArticleIteratorFactory.java,v 1.4 2014-08-08 17:17:46 aishizaki Exp $
+ * $Id: WoltersKluwerSourceArticleIteratorFactory.java,v 1.5 2014-09-12 15:16:12 aishizaki Exp $
  */ 
 /*
 
@@ -55,14 +55,15 @@ public class WoltersKluwerSourceArticleIteratorFactory
   // suffix has only ever been one digit, may be 0-9
   // 2014/CIRC20140304.0.zip!/20140304.0
   private static final String PATTERN_TEMPLATE = 
-      "\"%s%d/[^/]+\\.zip!/(.*)\\.[\\d]$\",base_url,year";
+      "\"%s%d/[^/]+\\.zip!/[^/]+\\.([\\d])$\",base_url,year";
+  //      "\"%s%d/[^/]+\\.zip!/(.*)\\.[\\d]$\",base_url,year";
   
-  public static final Pattern XML_PATTERN = Pattern.compile("/(.*)\\.[\\d]$", Pattern.CASE_INSENSITIVE);
-  public static final String XML_REPLACEMENT = "/$1.[\\d]";
-  public static final String SGML_SUFFIX = ".0";
+  public static final Pattern XML_PATTERN = Pattern.compile("/([^/]+)\\.([\\d])$", Pattern.CASE_INSENSITIVE);
+  public static final String XML_REPLACEMENT = "/$1.$2";
   public static final String SGML_CONTENT_TYPE = "application/xml";
   // following regex matches the sgml file - only ever seen one digit at end, but just in case...
-  public static final String SGML_REGEX = ".*/[^/]+\\.zip!/(.*)\\.[\\d]{1,2}$";
+  public static final String SGML_REGEX = ".*/[^/]+\\.zip!/([^/]+)\\.[\\d]{1,2}$";
+  //  public static final String SGML_REGEX = ".*/[^/]+\\.zip!/(.*)\\.[\\d]{1,2}$";
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) throws PluginException {
     SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);

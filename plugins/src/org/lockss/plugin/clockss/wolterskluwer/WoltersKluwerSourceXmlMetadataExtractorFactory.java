@@ -1,5 +1,5 @@
 /*
- * $Id: WoltersKluwerSourceXmlMetadataExtractorFactory.java,v 1.3 2014-08-08 17:17:46 aishizaki Exp $
+ * $Id: WoltersKluwerSourceXmlMetadataExtractorFactory.java,v 1.4 2014-09-12 15:16:12 aishizaki Exp $
  */
 
 /*
@@ -114,7 +114,7 @@ public class WoltersKluwerSourceXmlMetadataExtractorFactory extends SourceXmlMet
         // AM list
         // 3. Consolidate identical records based on DeDuplicationXPathKey
         // consolidating as specified by the consolidateRecords() method
-        
+       
         Collection<ArticleMetadata> AMCollection = getConsolidatedAMList(schemaHelper,
             amList);
 
@@ -150,6 +150,7 @@ public class WoltersKluwerSourceXmlMetadataExtractorFactory extends SourceXmlMet
       ArticleMetadata oneAM) {
     final String ZERO = "0";
     final String DOT_PDF = ".pdf";
+    final int FULL_LEN = 24;
 
     // get the key for a piece of metadata used in building the filename
     String fn_key = helper.getFilenameXPathKey();  
@@ -166,8 +167,13 @@ public class WoltersKluwerSourceXmlMetadataExtractorFactory extends SourceXmlMet
     
     ArrayList<String> returnList = new ArrayList<String>();
     String cuBase = FilenameUtils.getFullPath(cu.getUrl());
-    // MUST add "0" to the front to make it match the pdf in the zipfile.  GRRR
-    returnList.add(cuBase + ZERO + filenameValue + DOT_PDF);
+    // MUST add "0" to the front (ONLY if the total number of chars < 24)
+    // to make it match the pdf in the zipfile.  GRRR
+    if (filenameValue.length() < FULL_LEN) {
+      returnList.add(cuBase + ZERO + filenameValue + DOT_PDF);
+    } else {
+      returnList.add(cuBase + filenameValue + DOT_PDF);
+    }
     return returnList;
     }
 
