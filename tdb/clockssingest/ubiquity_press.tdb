@@ -83,8 +83,6 @@
     param[base_url] = http://www.archaeologybulletin.org/
     param[journal_id] = bha
 
-    comment[permission] = no permission from publisher (at least on ingest2)
-
     {
        plugin = org.lockss.plugin.ubiquitypress.ClockssUbiquityPressPlugin
        comment[zapped] = Released under plugin that is obsolete: replaced by ClockssOJS2Plugin
@@ -112,7 +110,7 @@
     au < manifest ; exists ; 2008 ; The Bulletin of the History of Archaeology Volume 18 ; 18 ; 2008 >
     au < manifest ; exists ; 2009 ; The Bulletin of the History of Archaeology Volume 19 ; 19 ; 2009 >
     au < manifest ; exists ; 2010 ; The Bulletin of the History of Archaeology Volume 20 ; 20 ; 2010 >
-    au < ingNotReady ; exists ; 2011 ; The Bulletin of the History of Archaeology Volume 21 ; 21 ; 2011 >
+    au < crawling ; exists ; 2011 ; The Bulletin of the History of Archaeology Volume 21 ; 21 ; 2011 >
     au < crawling ; exists ; 2012 ; The Bulletin of the History of Archaeology Volume 22 ; 22 ; 2012 >
     au < crawling ; exists ; 2013 ; The Bulletin of the History of Archaeology Volume 23 ; 23 ; 2013 >
     au < manifest ; exists ; 2014 ; The Bulletin of the History of Archaeology Volume 24 ; 24 ; 2014 >
