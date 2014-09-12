@@ -7,7 +7,6 @@
   {
   
    {
-
       title <
         name = Academic Psychiatry ;
         issn = 1042-9670 ;
@@ -129,7 +128,6 @@
     }
 
     {
-
       title <
         name = Journal of Neuropsychiatry and Clinical Neurosciences ;
         issn = 0895-0172 ;
@@ -174,7 +172,6 @@
     }
 
     {
-
       title <
         name = Journal of Psychotherapy Practice and Research ;
         issn = 1055-050X
@@ -198,7 +195,6 @@
     }
 
     {
-
       title <
         name = Psychiatric News ;
         issn = 0033-2704 ;
@@ -238,7 +234,6 @@
     }
 
     {
-
       title <
         name = Psychiatric Services ;
         issn = 1075-2730 ;
@@ -285,7 +280,6 @@
     }
 
     {
-
       title <
         name = Psychosomatics ;
         issn = 0033-3182 ;
@@ -354,7 +348,6 @@
   }
 
   {
-  
     plugin = org.lockss.plugin.psychiatryonline.PsychiatryOnlineTextbooksPlugin
     param[base_url] = http://www.psychiatryonline.com/
     implicit < status ; year ; isbn ; eisbn ; name >
