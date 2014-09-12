@@ -6,8 +6,8 @@
     info[tester] = 0 ;
     comment[platform] = Metapress
   >
-    plugin = needs.plugin
-    param[base_url] = http://essential.metapress.com/content/
+    plugin = org.lockss.plugin.metapress.ClockssMetaPressPlugin
+    param[base_url] = http://essential.metapress.com/
     implicit < status ; status2 ; year ; name ; param[volume_name] >
     
   {
