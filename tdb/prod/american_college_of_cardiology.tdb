@@ -7,7 +7,6 @@
   comment[down] = publisher moved to Silverchair. 
 
   {
-
     title <
       name = JACC: Cardiovascular Imaging ;
       issn = 1936-878X ;
@@ -27,10 +26,8 @@
     }
 
     {
-      pluginPrefix = org.lockss.plugin.silverchair.
+      plugin = org.lockss.plugin.silverchair.SilverchairJournalsPlugin
       implicit < status ; year ; name ; param[year] >
-
-      pluginSuffix = SilverchairJournalsPlugin
       param[base_url] = http://imaging.onlinejacc.org/
       param[resource_id] = 102
 
@@ -42,7 +39,6 @@
   }
 
   {
-
     title <
       name = JACC: Cardiovascular Interventions ;
       issn = 1936-8798 ;
@@ -62,11 +58,9 @@
     }
 
     {
-      pluginPrefix = org.lockss.plugin.silverchair.
+      plugin = org.lockss.plugin.silverchair.SilverchairJournalsPlugin
       implicit < status ; year ; name ; param[year] >
-
-      pluginSuffix = SilverchairJournalsPlugin
-      param[base_url] = http://interventions.onlinejacc.org
+      param[base_url] = http://interventions.onlinejacc.org/
       param[resource_id] = 103
 
       au < exists ; 2013 ; JACC: Cardiovascular Interventions Volume 6 ; 2013 >
@@ -77,18 +71,15 @@
   }
 
   {
-
     title <
       name = JACC: Heart Failure ;
       issn = 2213-1779 
     >
 
     {
-      pluginPrefix = org.lockss.plugin.silverchair.
+      plugin = org.lockss.plugin.silverchair.SilverchairJournalsPlugin
       implicit < status ; year ; name ; param[year] >
-
-      pluginSuffix = SilverchairJournalsPlugin
-      param[base_url] = http://heartfailure.onlinejacc.org
+      param[base_url] = http://heartfailure.onlinejacc.org/
       param[resource_id] = 139
 
       au < exists ; 2013 ; JACC: Heart Failure Volume 1 ; 2013 >
@@ -176,11 +167,9 @@
     }
 
     {
-      pluginPrefix = org.lockss.plugin.silverchair.
+      plugin = org.lockss.plugin.silverchair.SilverchairJournalsPlugin
       implicit < status ; year ; name ; param[year] >
-
-      pluginSuffix = SilverchairJournalsPlugin
-      param[base_url] = http://content.onlinejacc.org
+      param[base_url] = http://content.onlinejacc.org/
       param[resource_id] = 101
 
       au < exists ; 2012 ; Journal of the American College of Cardiology Volume 59-60 ; 2012 >
