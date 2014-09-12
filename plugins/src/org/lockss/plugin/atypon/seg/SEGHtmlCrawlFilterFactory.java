@@ -1,5 +1,5 @@
 /*
- * $Id: SEGHtmlCrawlFilterFactory.java,v 1.1 2014-09-04 03:14:49 ldoan Exp $
+ * $Id: SEGHtmlCrawlFilterFactory.java,v 1.2 2014-09-12 19:56:57 ldoan Exp $
  */
 
 /*
@@ -76,11 +76,6 @@ public class SEGHtmlCrawlFilterFactory
     // external link from Case Studies section
     // ex: .../www.rockphysics.ethz.ch/downloads
     HtmlNodeFilters.tagWithAttribute("a", "class", "ext-link"),
-    
-    // previous/next link from showFullPopup page, reconstructed from
-    // javascript:popRefFull()
-    //    http://library.seg.org/action/showFullPopup?id=f4&doi=10.1190%2Fgeo2012-0065.1
-    HtmlNodeFilters.tagWithAttribute("span", "id", "prevnext"),
     
   };
 

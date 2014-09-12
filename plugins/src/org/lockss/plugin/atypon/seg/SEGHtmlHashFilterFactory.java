@@ -1,5 +1,5 @@
 /*
- * $Id: SEGHtmlHashFilterFactory.java,v 1.1 2014-09-04 03:14:49 ldoan Exp $
+ * $Id: SEGHtmlHashFilterFactory.java,v 1.2 2014-09-12 19:56:58 ldoan Exp $
  */
 
 /*
@@ -63,17 +63,6 @@ public class SEGHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
                 	    
 	// right column ads - <div class="mainAd">
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "mainAd"),
-        
-        // ??might need:
-        // some issue toc page has 'ContribStored', other 'ContribAuthorStored'
-        // <a class="entryAuthor" href="/action/doSearch?displaySummary=true
-        //      &amp;ContribAuthorStored=Campbell%2C+B">Bruce Campbell</a>
-        // HtmlNodeFilters.tagWithAttribute("a", "class", "entryAuthor"),
-        // from an article
-        // <a href="/action/doSearch?ContribStored=Doll%2C+W+E">William E. Doll</a>
-        // <a href="/action/doSearch?ContribAuthorStored=Hardage%2C+B">Bob Hardage</a>
-        // div class="artAuthors"
-        // HtmlNodeFilters.tagWithAttribute("div", "class", "artAuthors"),
 
 	// footer and footer_message filtered in BaseAtypon
     };
