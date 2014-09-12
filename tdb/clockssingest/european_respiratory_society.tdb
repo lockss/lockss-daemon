@@ -23,10 +23,10 @@
     au < manifest ; exists ; 2007-2008 ; Breathe Volume 4 ; 4 >
     au < manifest ; exists ; 2008-2009 ; Breathe Volume 5 ; 5 >
     au < manifest ; exists ; 2009-2010 ; Breathe Volume 6 ; 6 >
-    au < testing ; exists ; 2010-2011 ; Breathe Volume 7 ; 7 >
+    au < ready ; exists ; 2010-2011 ; Breathe Volume 7 ; 7 >
     au < ready ; exists ; 2011-2012 ; Breathe Volume 8 ; 8 >
-    au < testing ; exists ; 2012-2013 ; Breathe Volume 9 ; 9 >
-    au < testing ; exists ; 2014 ; Breathe Volume 10 ; 10 >
+    au < ready ; exists ; 2012-2013 ; Breathe Volume 9 ; 9 >
+    au < ready ; exists ; 2014 ; Breathe Volume 10 ; 10 >
     
   }
 
@@ -104,7 +104,7 @@
       au < finished ; crawling ; 2012 ; European Respiratory Journal Volume 40 ; 40 >
       au < crawling ; exists ; 2013 ; European Respiratory Journal Volume 41 ; 41 >
       au < crawling ; exists ; 2013 ; European Respiratory Journal Volume 42 ; 42 >
-      au < testing ; exists ; 2014 ; European Respiratory Journal Volume 43 ; 43 >
+      au < ready ; exists ; 2014 ; European Respiratory Journal Volume 43 ; 43 >
       au < manifest ; exists ; 2014 ; European Respiratory Journal Volume 44 ; 44 >
 
     }
@@ -131,7 +131,7 @@
     au < finished ; crawling ; 2011 ; European Respiratory Review Volume 20 ; 20 >
     au < finished ; frozen ; 2012 ; European Respiratory Review Volume 21 ; 21 >
     au < crawling ; exists ; 2013 ; European Respiratory Review Volume 22 ; 22 >
-    au < testing ; exists ; 2014 ; European Respiratory Review Volume 23 ; 23 >
+    au < ready ; exists ; 2014 ; European Respiratory Review Volume 23 ; 23 >
 
   }
 
