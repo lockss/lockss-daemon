@@ -178,10 +178,10 @@
     au < released ; 2010 ; Veterinary Record Volume 167 ; 167 >
     au < released ; 2011 ; Veterinary Record Volume 168 ; 168 >
     au < ready ; 2011 ; Veterinary Record Volume 169 ; 169 >
-    au < testing ; 2012 ; Veterinary Record Volume 170 ; 170 >
-    au < testing ; 2012 ; Veterinary Record Volume 171 ; 171 >
-    au < testing ; 2013 ; Veterinary Record Volume 172 ; 172 >
-    au < testing ; 2013 ; Veterinary Record Volume 173 ; 173 >
+    au < ready ; 2012 ; Veterinary Record Volume 170 ; 170 >
+    au < ready ; 2012 ; Veterinary Record Volume 171 ; 171 >
+    au < ready ; 2013 ; Veterinary Record Volume 172 ; 172 >
+    au < ready ; 2013 ; Veterinary Record Volume 173 ; 173 >
     au < manifest ; 2014 ; Veterinary Record Volume 174 ; 174 >
     au < manifest ; 2014 ; Veterinary Record Volume 175 ; 175 >
 
@@ -197,7 +197,7 @@
 
     param[base_url] = http://vetrecordopen.bmj.com/
 
-    au < testing ; 2013 ; Veterinary Record Open Volume 1 ; 1 >
+    au < ready ; 2013 ; Veterinary Record Open Volume 1 ; 1 >
     au < expected ; 2014 ; Veterinary Record Open Volume 2 ; 2 >
 
   }
