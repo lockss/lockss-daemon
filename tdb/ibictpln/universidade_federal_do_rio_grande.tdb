@@ -157,8 +157,8 @@
       param[base_url] = http://www.seer.furg.br/
       param[journal_id] = atlantica
 
-      au < notReady ; 1977 ; 1 ; Revista Atlântica Volume 1977 ; 1977 ; manifest page has 301 error >
-      au < notReady ; 1978 ; 2 ; Revista Atlântica Volume 1978 ; 1978 ; manifest page has 301 error >
+      au < notReady ; 1977 ; 1 ; Revista Atlântica Volume 1977 ; 1977 ; no articles >
+      au < notReady ; 1978 ; 2 ; Revista Atlântica Volume 1978 ; 1978 ; no articles >
       au < notReady ; 1980 ; 4 ; Revista Atlântica Volume 1980 ; 1980 ; manifest page has 301 error >
       au < notReady ; 1982 ; 6 ; Revista Atlântica Volume 1982 ; 1982 ; manifest page has 301 error >
       au < notReady ; 1983 ; 7 ; Revista Atlântica Volume 1983 ; 1983 ; manifest page has 301 error >
@@ -170,14 +170,14 @@
       au < notReady ; 1990 ; 14 ; Revista Atlântica Volume 1990 ; 1990 ; manifest page has 301 error >
       au < notReady ; 1991 ; 15 ; Revista Atlântica Volume 1991 ; 1991 ; no articles >
       au < notReady ; 1992 ; 16 ; Revista Atlântica Volume 1992 ; 1992 ; no articles >
-      au < notReady ; 1993 ; 17 ; Revista Atlântica Volume 1993 ; 1993 ; manifest page has 301 error >
+      au < notReady ; 1993 ; 17 ; Revista Atlântica Volume 1993 ; 1993 ; no articles >
       au < notReady ; 1994 ; 18 ; Revista Atlântica Volume 1994 ; 1994 ; no articles >
       au < notReady ; 1995 ; 19 ; Revista Atlântica Volume 1995 ; 1995 ; no articles >
       au < notReady ; 1996 ; 20 ; Revista Atlântica Volume 1996 ; 1996 ; manifest page has 301 error >
       au < notReady ; 1997 ; 21 ; Revista Atlântica Volume 1997 ; 1997 ; manifest page has 301 error >
       au < notReady ; 1998 ; 22 ; Revista Atlântica Volume 1998 ; 1998 ; manifest page has 301 error >
       au < notReady ; 1999 ; 23 ; Revista Atlântica Volume 1999 ; 1999 ; manifest page has 301 error >
-      au < notReady ; 2000 ; 24 ; Revista Atlântica Volume 2000 ; 2000 ; manifest page has 301 error >
+      au < notReady ; 2000 ; 24 ; Revista Atlântica Volume 2000 ; 2000 ; no articles >
       au < notReady ; 2001 ; 25 ; Revista Atlântica Volume 2001 ; 2001 ; manifest page has 301 error >
       au < notReady ; 2002 ; 26 ; Revista Atlântica Volume 2002 ; 2002 ; manifest page has 301 error >
       au < notReady ; 2003 ; 27 ; Revista Atlântica Volume 2003 ; 2003 ; manifest page has 301 error >
