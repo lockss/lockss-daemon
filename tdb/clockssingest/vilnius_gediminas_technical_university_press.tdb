@@ -5,21 +5,8 @@
     info[contract] = 2012 ;
     info[tester] = 8
   >
-
-  {
-    title <
-      name = The Baltic Journal of Road and Bridge Engineering ;
-      issn = 1822-427X ;
-      eissn = 1822-4288 ;
-      issnl = 1822-427X
-    >
-    
-    comment[status] = needs contract.
-    plugin = needs.new.plugin
-    param[base_url] = http://www.bjrbe.vgtu.lt/
-    
   
-  }
+  comment[down] = clockss permission statements gone from site.
 
   {
     title <
@@ -41,7 +28,7 @@
     au < manifest ; exists ; 2010 ; 2010 ; Business: Theory and Practice Volume 11 ; 11 >
     au < manifest ; exists ; 2011 ; 2011 ; Business: Theory and Practice Volume 12 ; 12 >
     au < finished ; frozen ; 2012 ; 2012 ; Business: Theory and Practice Volume 13 ; 13 >
-    au < crawling ; exists ; 2013 ; 2013 ; Business: Theory and Practice Volume 14 ; 14 >
+    au < down ; exists ; 2013 ; 2013 ; Business: Theory and Practice Volume 14 ; 14 >
     au < exists ; exists ; 2014 ; 2014 ; Business: Theory and Practice Volume 15 ; 15 >
 
   }
@@ -65,7 +52,7 @@
     au < manifest ; exists ; 2010 ; 2010 ; Coactivity: Philosophy, Communication Volume 18 ; 18 >
     au < manifest ; exists ; 2011 ; 2011 ; Coactivity: Philosophy, Communication Volume 19 ; 19 >
     au < finished ; crawling ; 2012 ; 2012 ; Coactivity: Philosophy, Communication Volume 20 ; 20 >
-    au < crawling ; exists ; 2013 ; 2013 ; Coactivity: Philosophy, Communication Volume 21 ; 21 >
+    au < down ; exists ; 2013 ; 2013 ; Coactivity: Philosophy, Communication Volume 21 ; 21 >
     au < exists ; exists ; 2014 ; 2014 ; Coactivity: Philosophy, Communication Volume 22 ; 22 >
 
   }
@@ -89,7 +76,7 @@
     au < manifest ; exists ; 2010 ; 2010 ; Coactivity: Philology, Educology Volume 18 ; 18 >
     au < manifest ; exists ; 2011 ; 2011 ; Coactivity: Philology, Educology Volume 19 ; 19 >
     au < finished ; frozen ; 2012 ; 2012 ; Coactivity: Philology, Educology Volume 20 ; 20 >
-    au < crawling ; exists ; 2013 ; 2013 ; Coactivity: Philology, Educology Volume 21 ; 21 >
+    au < down ; exists ; 2013 ; 2013 ; Coactivity: Philology, Educology Volume 21 ; 21 >
     au < exists ; exists ; 2014 ; 2014 ; Coactivity: Philology, Educology Volume 22 ; 22 >
 
   }
@@ -110,7 +97,7 @@
     au < manifest ; exists ; 2010 ; 2010 ; Science - Future of Lithuania Volume 2 ; 2 >
     au < manifest ; exists ; 2011 ; 2011 ; Science - Future of Lithuania Volume 3 ; 3 >
     au < finished ; frozen ; 2012 ; 2012 ; Science - Future of Lithuania Volume 4 ; 4 >
-    au < crawling ; exists ; 2013 ; 2013 ; Science - Future of Lithuania Volume 5 ; 5 >
+    au < down ; exists ; 2013 ; 2013 ; Science - Future of Lithuania Volume 5 ; 5 >
     au < exists ; exists ; 2014 ; 2014 ; Science - Future of Lithuania Volume 6 ; 6 >
 
   }
@@ -131,7 +118,7 @@
     au < manifest ; exists ; 2010 ; 2010 ; Evolution of Science and Technology Volume 2 ; 2 >
     au < manifest ; exists ; 2011 ; 2011 ; Evolution of Science and Technology Volume 3 ; 3 >
     au < finished ; frozen ; 2012 ; 2012 ; Evolution of Science and Technology Volume 4 ; 4 >
-    au < crawling ; exists ; 2013 ; 2013 ; Evolution of Science and Technology Volume 5 ; 5 >
+    au < down ; exists ; 2013 ; 2013 ; Evolution of Science and Technology Volume 5 ; 5 >
     au < expected ; exists ; 2014 ; 2014 ; Evolution of Science and Technology Volume 6 ; 6 >
 
   }
@@ -151,7 +138,7 @@
     au < manifest ; exists ; 2010 ; 2010 ; Business, Management and Education Volume 8 ; 8 >
     au < manifest ; exists ; 2011 ; 2011 ; Business, Management and Education Volume 9 ; 9 >
     au < finished ; frozen ; 2012 ; 2012 ; Business, Management and Education Volume 10 ; 10 >
-    au < crawling ; exists ; 2013 ; 2013 ; Business, Management and Education Volume 11 ; 11 >
+    au < down ; exists ; 2013 ; 2013 ; Business, Management and Education Volume 11 ; 11 >
     au < exists ; exists ; 2014 ; 2014 ; Business, Management and Education Volume 12 ; 12 >
 
   }
