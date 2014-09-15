@@ -29,6 +29,23 @@
   {
   
     title <
+      name = Journal of Japanese Philosophy ;
+      issn = 2327-0195 ;
+      eissn = 2327-0209 ;
+      issnl = 2327-0195
+    >
+
+    param[journal_dir] = journal_of_japanese_philosophy
+    attr[journal_id] = jjp
+    
+    au < exists ; 2013 ; Journal of Japanese Philosophy Volume 1 ; 1 >
+    au < expected ; 2014 ; Journal of Japanese Philosophy Volume 2 ; 2 >
+
+  }
+
+  {
+  
+    title <
       name = Mediaevalia ;
       issn = 0361-946X ;
       eissn = 2161-8046 ;
