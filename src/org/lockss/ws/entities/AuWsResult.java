@@ -1,5 +1,5 @@
 /*
- * $Id: AuWsResult.java,v 1.4 2014-06-09 07:11:22 fergaloy-sf Exp $
+ * $Id: AuWsResult.java,v 1.5 2014-09-15 23:42:39 fergaloy-sf Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ public class AuWsResult {
   private String name;
   private String volume;
   private String pluginName;
-  private Integer tdbYear;
+  private String tdbYear;
   private String accessType;
   private Long contentSize;
   private Long diskUsage;
@@ -122,12 +122,12 @@ public class AuWsResult {
   /**
    * Provides the Archival Unit publication year from the TDB.
    * 
-   * @return an Integer with the publication year from the TDB.
+   * @return a String with the publication year from the TDB.
    */
-  public Integer getTdbYear() {
+  public String getTdbYear() {
     return tdbYear;
   }
-  public void setTdbYear(Integer tdbYear) {
+  public void setTdbYear(String tdbYear) {
     this.tdbYear = tdbYear;
   }
 

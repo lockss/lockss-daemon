@@ -1,5 +1,5 @@
 /*
- * $Id: AuWsSource.java,v 1.5 2014-07-12 01:10:01 fergaloy-sf Exp $
+ * $Id: AuWsSource.java,v 1.6 2014-09-15 23:42:39 fergaloy-sf Exp $
  */
 
 /*
@@ -50,7 +50,6 @@ import org.lockss.protocol.PeerIdentity;
 import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.state.AuState;
 import org.lockss.state.NodeManager;
-import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 import org.lockss.util.TypedEntryMap;
 import org.lockss.ws.entities.AgreementTypeWsResult;
@@ -64,8 +63,6 @@ import org.lockss.ws.entities.PeerAgreementsWsResult;
  * to Archival Units.
  */
 public class AuWsSource extends AuWsResult {
-  private static Logger log = Logger.getLogger(AuWsSource.class);
-
   private ArchivalUnit au;
 
   private boolean auIdPopulated = false;
@@ -151,21 +148,9 @@ public class AuWsSource extends AuWsResult {
   }
 
   @Override
-  public Integer getTdbYear() {
+  public String getTdbYear() {
     if (!tdbYearPopulated) {
-      String yearAsString = null;
-
-      try {
-  	yearAsString = AuUtil.getTitleAttribute(au, "year");
-
-  	if (yearAsString != null) {
-  	  setTdbYear(Integer.valueOf(yearAsString));
-  	}
-      } catch (NumberFormatException nfe) {
-  	log.warning("Invalid year title attribute '" + yearAsString
-  	    + "' for auId '" + au.getAuId() + "'", nfe);
-      }
-
+      setTdbYear(AuUtil.getTitleAttribute(au, "year"));
       tdbYearPopulated = true;
     }
 

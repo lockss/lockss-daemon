@@ -1,5 +1,5 @@
 /*
- * $Id: AuHelper.java,v 1.5 2014-07-11 21:11:53 fergaloy-sf Exp $
+ * $Id: AuHelper.java,v 1.6 2014-09-15 23:42:39 fergaloy-sf Exp $
  */
 
 /*
@@ -184,18 +184,7 @@ public class AuHelper {
     Plugin plugin = au.getPlugin();
     result.setPluginName(plugin.getPluginName());
 
-    String yearAsString = null;
-
-    try {
-      yearAsString = AuUtil.getTitleAttribute(au, "year");
-
-      if (yearAsString != null) {
-	result.setYear(Integer.valueOf(yearAsString));
-      }
-    } catch (NumberFormatException nfe) {
-      log.warning("Invalid year title attribute '" + yearAsString
-	  + "' for auId '" + auId + "'", nfe);
-    }
+    result.setYear(AuUtil.getTitleAttribute(au, "year"));
 
     NodeManager nodeMgr = theDaemon.getNodeManager(au);
     AuState state = nodeMgr.getAuState();

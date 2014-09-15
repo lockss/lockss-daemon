@@ -1,5 +1,5 @@
 /*
- * $Id: AuStatus.java,v 1.2 2014-06-05 05:48:47 fergaloy-sf Exp $
+ * $Id: AuStatus.java,v 1.3 2014-09-15 23:42:39 fergaloy-sf Exp $
  */
 
 /*
@@ -38,7 +38,7 @@ public class AuStatus {
   private String volume;
   private String journalTitle;
   private String pluginName;
-  private Integer year;
+  private String year;
   private String accessType;
   private Long contentSize;
   private Long diskUsage;
@@ -93,9 +93,9 @@ public class AuStatus {
   /**
    * Provides the Archival Unit publication year.
    * 
-   * @return an Integer with the publication year.
+   * @return an String with the publication year.
    */
-  public Integer getYear() {
+  public String getYear() {
     return year;
   }
 
@@ -326,7 +326,7 @@ public class AuStatus {
     this.pluginName = pluginName;
   }
 
-  public void setYear(Integer year) {
+  public void setYear(String year) {
     this.year = year;
   }
 
