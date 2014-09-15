@@ -1,5 +1,5 @@
 /*
- * $Id: NationalWeatherAssociationHtmlMetadataExtractorFactory.java,v 1.1 2014-01-28 17:53:37 ldoan Exp $
+ * $Id: NationalWeatherAssociationHtmlMetadataExtractorFactory.java,v 1.2 2014-09-15 08:02:27 ldoan Exp $
  */
 
 /*
@@ -44,13 +44,9 @@ import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.extractor.SimpleHtmlMetaTagMetadataExtractor;
 import org.lockss.plugin.CachedUrl;
-import org.lockss.util.Logger;
 
 public class NationalWeatherAssociationHtmlMetadataExtractorFactory
   implements FileMetadataExtractorFactory {
-  
-  private static Logger log = Logger.getLogger(
-      "NationalWeatherAssociationHtmlMetadataExtractorFactory");
 
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(
@@ -71,26 +67,12 @@ public class NationalWeatherAssociationHtmlMetadataExtractorFactory
       // getting title from tdb, in this case, better journal title 
       // 'Journal of Operational Meteorology'
 
-      // <meta name="description" content="National Weather Association" />
-      // ?? no metadataField keyword found for description
-      
       // <meta name="creator" content="NWA IT Committee" />
       tagMap.put("creator", MetadataField.FIELD_AUTHOR);
-      
       // <meta name="date.created" scheme="ISO8601" content="2007-01-18" />
       tagMap.put("date.created", MetadataField.FIELD_DATE);
-
       // <meta name="language" scheme="DCTERMS.RFC1766" content="EN-US" />
       tagMap.put("language", MetadataField.FIELD_LANGUAGE);
-      
-      // <meta name="publisher" content="National Weather Association" />
-      tagMap.put("publisher", MetadataField.FIELD_PUBLISHER);
-      
-      // <meta http-equiv="Keywords" content="Meteorology, Operational, 
-      //        Atmospheric Science, National Weather Association, NWA" />
-      // ?? should it be <meta name="keywords"?
-      //tagMap.put("Keywords", MetadataField.FIELD_KEYWORDS);
-      
     }
 
     @Override
