@@ -1,4 +1,4 @@
-/* $Id: TestNationalWeatherAssociationArticleIteratorFactory.java,v 1.3 2014-09-12 19:54:13 ldoan Exp $ */
+/* $Id: TestNationalWeatherAssociationArticleIteratorFactory.java,v 1.4 2014-09-15 08:09:24 ldoan Exp $ */
 
 /*
 
@@ -120,6 +120,22 @@ public class TestNationalWeatherAssociationArticleIteratorFactory
   public void testRoots() throws Exception {
     SubTreeArticleIterator artIter = createSubTreeIter();
     assertEquals(ListUtil.list(BASE_URL + JID), getRootUrls(artIter));
+  }
+  
+  public void testUrlsWithPrefixes() throws Exception {
+    SubTreeArticleIterator artIter = createSubTreeIter();
+    Pattern pat = getPattern(artIter);
+    
+    // Pattern PDF_PATTERN = Pattern.compile(
+    //  "/(articles)/(([^/]+/)+)([^/]+)\\.pdf$", Pattern.CASE_INSENSITIVE);
+   
+    // <nwabase>.org/xjid/articles/2013/2013-XJID12/2013-XJID12.pdf
+    assertMatchesRE(pat, BASE_URL + JID + "/articles/" + YEAR + "/"
+        + YEAR + "-" + JID + "12/"+ YEAR + "-" + JID + "12.pdf");
+    
+    // <nwabase>.org/xjid/articles/2013/2013-XJID12/2013-XJID12.pdfbad
+    assertNotMatchesRE(pat, BASE_URL + JID + "/articles/" + YEAR + "/"
+        + YEAR + "-" + JID + "12/"+ YEAR + "-" + JID + "12.pdfbad");
   }
   
   // simulated cached urls:
