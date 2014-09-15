@@ -1,5 +1,5 @@
 /*
- * $Id: NationalWeatherAssociationHtmlHashFilterFactory.java,v 1.2 2014-02-11 21:54:06 thib_gc Exp $
+ * $Id: NationalWeatherAssociationHtmlHashFilterFactory.java,v 1.3 2014-09-15 08:00:15 ldoan Exp $
  */
 
 /*
@@ -38,7 +38,6 @@ import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.*;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
-import org.lockss.util.Logger;
 
 /*
  * This journal does not have list of issues. Articles are listed 
@@ -53,9 +52,6 @@ import org.lockss.util.Logger;
 public class NationalWeatherAssociationHtmlHashFilterFactory 
   implements FilterFactory {
   
-  private static Logger log = 
-      Logger.getLogger(NationalWeatherAssociationHtmlHashFilterFactory.class);
-
   public InputStream createFilteredInputStream(ArchivalUnit au, 
                                                InputStream in,
                                                String encoding) {
