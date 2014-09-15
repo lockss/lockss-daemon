@@ -72,7 +72,7 @@
    >
 
     comment[0] = move from Sage 2015-01-01
-    param[base_url] = http://asj.oxfordjournals.org 
+    param[base_url] = http://asj.oxfordjournals.org/ 
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     implicit < status ; year ; name ; param[volume_name] >
 

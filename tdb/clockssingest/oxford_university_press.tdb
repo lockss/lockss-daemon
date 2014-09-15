@@ -94,7 +94,7 @@
    >
 
     comment[0] = move from Sage 2015-01-01
-    param[base_url] = http://asj.oxfordjournals.org 
+    param[base_url] = http://asj.oxfordjournals.org/ 
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < expected ; exists ; 2015 ; Aesthetic Surgery Journal Volume 35 ; 35 ; >
@@ -108,7 +108,6 @@
       eissn = 1468-2621 ;
       issnl = 0001-9909
     >
-
 
     {
 
