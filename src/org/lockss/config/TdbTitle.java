@@ -1,5 +1,5 @@
 /*
- * $Id: TdbTitle.java,v 1.19 2014-09-09 22:48:40 pgust Exp $
+ * $Id: TdbTitle.java,v 1.20 2014-09-15 19:32:23 pgust Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import org.lockss.util.*;
  * This class represents a title database title.
  *
  * @author  Philip Gust
- * @version $Id: TdbTitle.java,v 1.19 2014-09-09 22:48:40 pgust Exp $
+ * @version $Id: TdbTitle.java,v 1.20 2014-09-15 19:32:23 pgust Exp $
  */
 public class TdbTitle {
   /**
@@ -123,7 +123,8 @@ public class TdbTitle {
   /**
    * A collection of AUs for this title
    */
-  private final HashMap<TdbAu.Id,TdbAu> tdbAus = new HashMap<TdbAu.Id, TdbAu>();
+  private final HashMap<TdbAu.Id,TdbAu> tdbAus = 
+      new HashMap<TdbAu.Id, TdbAu>(4, 1F);
 
   /**
    * A map of link types to a collection of title IDs
