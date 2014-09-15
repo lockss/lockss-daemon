@@ -1,5 +1,5 @@
 /*
- * $Id: TdbPublisher.java,v 1.18 2014-09-09 22:47:49 pgust Exp $
+ * $Id: TdbPublisher.java,v 1.19 2014-09-15 19:32:51 pgust Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ import org.lockss.util.*;
  * This class represents a title database publisher.
  *
  * @author  Philip Gust
- * @version $Id: TdbPublisher.java,v 1.18 2014-09-09 22:47:49 pgust Exp $
+ * @version $Id: TdbPublisher.java,v 1.19 2014-09-15 19:32:51 pgust Exp $
  */
 public class TdbPublisher {
   /**
@@ -59,7 +59,8 @@ public class TdbPublisher {
   /**
    * The map of title IDs to titles for this publisher
    */
-  private final HashMap<String, TdbTitle> titlesById = new HashMap<String, TdbTitle>();
+  private final HashMap<String, TdbTitle> titlesById = 
+      new HashMap<String, TdbTitle>(4, 1F);
 
 
   /**
