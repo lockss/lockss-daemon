@@ -1,4 +1,4 @@
-/* $Id: TestNationalWeatherAssociationHtmlMetadataExtractorFactory.java,v 1.1 2014-01-28 17:56:47 ldoan Exp $ */
+/* $Id: TestNationalWeatherAssociationHtmlMetadataExtractorFactory.java,v 1.2 2014-09-15 08:06:41 ldoan Exp $ */
 
 /*
 
@@ -90,7 +90,6 @@ public class TestNationalWeatherAssociationHtmlMetadataExtractorFactory
   
   String goodLanguage = "EN-US";
   String goodDate = "2012-02-22";
-  String goodPublisher = "Weather Forcast Association";
   String goodAuthor = "NXX IT Committee";
     
   // a chunk of html source code from the publisher's site from where the 
@@ -98,8 +97,7 @@ public class TestNationalWeatherAssociationHtmlMetadataExtractorFactory
   String goodContent = 
       "<meta name=\"creator\" content=\"NXX IT Committee\" />"
         + "<meta name=\"date.created\" scheme=\"ISO1111\" content=\"2012-02-22\" />"
-        + "<meta name=\"language\" scheme=\"DCS.RXXXX\" content=\"EN-US\" />"
-        + "<meta name=\"publisher\" content=\"Weather Forcast Association\" />";
+        + "<meta name=\"language\" scheme=\"DCS.RXXXX\" content=\"EN-US\" />";
         
   public void testExtractFromGoodContent() throws Exception {
     
@@ -127,7 +125,6 @@ public class TestNationalWeatherAssociationHtmlMetadataExtractorFactory
     assertEquals(goodAuthor, md.get(MetadataField.FIELD_AUTHOR));
     assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
     assertEquals(goodLanguage, md.get(MetadataField.FIELD_LANGUAGE));
-    assertEquals(goodPublisher, md.get(MetadataField.FIELD_PUBLISHER));
   }
   
 }
