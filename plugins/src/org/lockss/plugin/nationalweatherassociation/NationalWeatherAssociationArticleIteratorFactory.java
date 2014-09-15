@@ -1,5 +1,5 @@
 /*
- * $Id: NationalWeatherAssociationArticleIteratorFactory.java,v 1.1 2014-01-28 17:53:36 ldoan Exp $
+ * $Id: NationalWeatherAssociationArticleIteratorFactory.java,v 1.2 2014-09-15 07:59:19 ldoan Exp $
  */
 
 /*
@@ -41,32 +41,23 @@ import org.lockss.extractor.ArticleMetadataExtractorFactory;
 import org.lockss.extractor.BaseArticleMetadataExtractor;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.*;
-import org.lockss.util.Logger;
 
 public class NationalWeatherAssociationArticleIteratorFactory 
   implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
-  private static Logger log = Logger.getLogger(
-      NationalWeatherAssociationArticleIteratorFactory.class);
-
   private static final String ROOT_TEMPLATE = 
       "\"%s%s\", base_url, journal_id";
   
-  // <nwabase>.org/jom/abstracts/2013/2013-JOM22/abstract.php
   // <nwabase>.org/jom/articles/2013/2013-JOM12/2013-JOM12.pdf
   private static final String PATTERN_TEMPLATE = 
-      "\"^%s%s/(abstracts|articles)/[0-9]{4}/[0-9]{4}-[^/]+[0-9]+"
-        + "/((abstract\\.php)|([0-9]{4}-[^/]+[0-9]+\\.pdf))$\", "
-        + "base_url, journal_id";
+      "\"^%s%s/articles/%d/([^/]+/)+[^/]+\\.pdf$\", base_url, journal_id, year";
   
-  private static Pattern PDF_PATTERN = Pattern.compile(
-      "/(articles)/([0-9]{4})/([0-9]{4}-[^/]+[0-9]+)"
-        + "/([0-9]{4}-[^/]+[0-9]+\\.pdf)$", Pattern.CASE_INSENSITIVE);
-
+  private static final Pattern PDF_PATTERN = Pattern.compile(
+      "/(articles)/(([^/]+/)+)([^/]+)\\.pdf$", Pattern.CASE_INSENSITIVE);
+  
   // <nwabase>.org/jom/abstracts/2013/2013-JOM12/abstract.php
-  // <nwabase>.org/jom/articles/2013/2013-JOM12/2013-JOM12.pdf
-  private static String PDF_REPLACEMENT = "/$1/$2/$3/$4";
-  private static String ABSTRACT_REPLACEMENT = "/abstracts/$2/$3/abstract.php";
+  private static final String PDF_REPLACEMENT = "/$1/$2/$3.pdf";
+  private static final String ABSTRACT_REPLACEMENT = "/abstracts/$2abstract.php";
     
   // article content may look like:
   // <nwabase>.org/jom/abstracts/2013/2013-JOM12/abstract.php
@@ -77,25 +68,17 @@ public class NationalWeatherAssociationArticleIteratorFactory
       MetadataTarget target) throws PluginException {
     
     SubTreeArticleIteratorBuilder builder = 
-                                        new SubTreeArticleIteratorBuilder(au);    
+        new SubTreeArticleIteratorBuilder(au);    
     
     builder.setSpec(target,
         ROOT_TEMPLATE, PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
     
-    // The order in which these aspects are added is important. They determine
-    // which will trigger the ArticleFiles.
-
     // full text pdf - aspect that will trigger an ArticleFiles
     builder.addAspect(PDF_PATTERN, PDF_REPLACEMENT, 
         ArticleFiles.ROLE_FULL_TEXT_PDF);   
     
     builder.addAspect(ABSTRACT_REPLACEMENT, 
-        ArticleFiles.ROLE_ABSTRACT, ArticleFiles.ROLE_ARTICLE_METADATA);   
-
-    // The order in which we want to define full_text_cu.
-    // First one that exists will get the job
-    builder.setFullTextFromRoles(
-        ArticleFiles.ROLE_FULL_TEXT_PDF, ArticleFiles.ROLE_ABSTRACT);  
+        ArticleFiles.ROLE_ABSTRACT, ArticleFiles.ROLE_ARTICLE_METADATA);     
                 
      return builder.getSubTreeArticleIterator();
   }  
