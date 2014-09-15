@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>testing - ly/mep</string>
+    <string>down - ly/mep</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -13,22 +13,22 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Substance</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Poll</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
     </map>
   </entry>
@@ -111,15 +111,14 @@
       <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
       <string>4,"^%s", base_url</string>
       <!-- http://www.nwas.org/jom/abstracts/2013/2013-JOM22/abstract.php -->
-      <string>1,"^%s%s/abstracts/%d/%d-[^/]+[0-9]+/abstract\.php$", base_url, journal_id, year, year</string>
       <!-- http://www.nwas.org/jom/articles/2013/2013-JOM12/2013-JOM12.pdf -->
-      <string>1,"^%s%s/articles/%d/%d-[^/]+[0-9]+/%d-[^/]+[0-9]+\.pdf$", base_url, journal_id, year, year, year</string>
+      <string>1,"^%s%s/(abstracts|articles)/%d/", base_url, journal_id, year</string>
     </list>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"%s%s/articles/%d/%d-[^/]+[0-9]+/%d-[^/]+[0-9]+\.pdf$", base_url, journal_id, year, year, year</string>
+      <string>"\.pdf$"</string>
     </list>
   </entry>
   <entry>
