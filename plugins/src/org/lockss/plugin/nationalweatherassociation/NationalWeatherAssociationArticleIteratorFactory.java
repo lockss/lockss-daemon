@@ -1,5 +1,5 @@
 /*
- * $Id: NationalWeatherAssociationArticleIteratorFactory.java,v 1.2 2014-09-15 07:59:19 ldoan Exp $
+ * $Id: NationalWeatherAssociationArticleIteratorFactory.java,v 1.3 2014-09-15 17:31:57 ldoan Exp $
  */
 
 /*
@@ -56,7 +56,7 @@ public class NationalWeatherAssociationArticleIteratorFactory
       "/(articles)/(([^/]+/)+)([^/]+)\\.pdf$", Pattern.CASE_INSENSITIVE);
   
   // <nwabase>.org/jom/abstracts/2013/2013-JOM12/abstract.php
-  private static final String PDF_REPLACEMENT = "/$1/$2/$3.pdf";
+  private static final String PDF_REPLACEMENT = "/$1/$2$3.pdf";
   private static final String ABSTRACT_REPLACEMENT = "/abstracts/$2abstract.php";
     
   // article content may look like:
