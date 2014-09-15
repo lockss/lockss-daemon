@@ -1,5 +1,5 @@
 /*
- * $Id: Tdb.java,v 1.28 2014-09-09 22:46:50 pgust Exp $
+ * $Id: Tdb.java,v 1.29 2014-09-15 19:34:16 pgust Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ import org.lockss.util.*;
  * a specified plugin ID. 
  *
  * @author  Philip Gust
- * @version $Id: Tdb.java,v 1.28 2014-09-09 22:46:50 pgust Exp $
+ * @version $Id: Tdb.java,v 1.29 2014-09-15 19:34:16 pgust Exp $
  */
 public class Tdb {
   /**
@@ -57,20 +57,20 @@ public class Tdb {
    * A map of AUs per plugin, for this configuration
    * (provides faster access for Plugins)
    */
-  private final Map<String, Collection<TdbAu.Id>> pluginIdTdbAuIdsMap = 
-    new HashMap<String,Collection<TdbAu.Id>>();
+  private final Map<String, Map<TdbAu.Id,TdbAu>> pluginIdTdbAuIdsMap = 
+    new HashMap<String,Map<TdbAu.Id,TdbAu>>(4, 1F);
   
   /**
    * Map of publisher names to TdBPublishers for this configuration
    */
-  private final Map<String, TdbPublisher> tdbPublisherMap 
-  = new HashMap<String,TdbPublisher>();
+  private final Map<String, TdbPublisher> tdbPublisherMap = 
+    new HashMap<String,TdbPublisher>(4, 1F);
 
   /**
    * Map of provider names to TdBProviders for this configuration
    */
-  private final Map<String, TdbProvider> tdbProviderMap 
-    = new HashMap<String,TdbProvider>();
+  private final Map<String, TdbProvider> tdbProviderMap = 
+    new HashMap<String,TdbProvider>(4, 1F);
 
   /**
    * Determines whether more AUs can be added.
@@ -108,7 +108,7 @@ public class Tdb {
    * also handle this exception.
    * 
    * @author  Philip Gust
-   * @version $Id: Tdb.java,v 1.28 2014-09-09 22:46:50 pgust Exp $
+   * @version $Id: Tdb.java,v 1.29 2014-09-15 19:34:16 pgust Exp $
    */
   @SuppressWarnings("serial")
   static public class TdbException extends Exception {
@@ -172,19 +172,21 @@ public class Tdb {
   private boolean addTdbAuForPlugin(TdbAu au) throws TdbException {
     // add AU to list for plugins 
     String pluginId = au.getPluginId();
-    Collection<TdbAu.Id> auids = pluginIdTdbAuIdsMap.get(pluginId);
+    Map<TdbAu.Id,TdbAu> auids = pluginIdTdbAuIdsMap.get(pluginId);
     if (auids == null) {
-      auids = new HashSet<TdbAu.Id>();
+      auids = new HashMap<TdbAu.Id, TdbAu>(4, 1F);
       pluginIdTdbAuIdsMap.put(pluginId, auids);
     } 
-    if (!auids.add(au.getId())) {
-      // find existing au
-      for (TdbAu.Id auid : auids) {
-        if (auid.getTdbAu() == au) {
-          // returns false if this TdbAu is already added
-          return false;
-        }
+    TdbAu otherAu = auids.put(au.getId(),au);
+    if (otherAu != null) {
+      // check existing entry
+      if (au == otherAu) {
+        // OK if same AU
+        return false;
       }
+      // restore otherAu and throw exception
+      auids.put(otherAu.getId(),otherAu);
+      
       // throw exception if adding another AU with duplicate au id.
       throw new TdbException("New au with duplicate id: " + au.getName());
     }
@@ -204,8 +206,8 @@ public class Tdb {
     // if can't add au to title, we need to undo the au
     // registration and re-throw the exception we just caught
     String pluginId = au.getPluginId();
-    Collection<TdbAu.Id> c = pluginIdTdbAuIdsMap.get(pluginId);
-    if (c.remove(au.getId())) {
+    Map<TdbAu.Id, TdbAu> c = pluginIdTdbAuIdsMap.get(pluginId);
+    if (c.remove(au.getId()) != null) {
       if (c.isEmpty()) {
         pluginIdTdbAuIdsMap.remove(c);
       }
@@ -337,19 +339,7 @@ public class Tdb {
    * Seals a Tdb against further additions.
    */
   public void seal() {
-    if (!isSealed) {
       isSealed = true;
-
-      // convert map values to array lists to save space because
-      // they will not be modified now that the Tdb is sealed.
-      synchronized(pluginIdTdbAuIdsMap) {
-        for (Map.Entry<String, Collection<TdbAu.Id>> entry : pluginIdTdbAuIdsMap.entrySet()) {
-          ArrayList<TdbAu.Id> list = new ArrayList<TdbAu.Id>(entry.getValue());
-          list.trimToSize();
-          entry.setValue(list);
-        }
-      }
-    }
   }
 
   /**
@@ -401,7 +391,6 @@ public class Tdb {
    * @param otherTdb a Tdb
    */
   private void addDifferences(Differences diffs, Tdb oldTdb) {
-
     // process publishers
     Map<String, TdbPublisher> oldPublishers = oldTdb.getAllTdbPublishers();
 
@@ -554,7 +543,7 @@ public class Tdb {
         for (TdbAu otherAu : otherTitle.getTdbAus()) {
           String auName = otherAu.getName();
           String providerName = otherAu.getProviderName();
-          TdbAu thisAu = findExistingTdbAu(otherAu);
+          TdbAu thisAu = getTdbAuById(otherAu);
           if (thisAu == null) {
             // copy new TdbAu
             thisAu = otherAu.copyForTdbTitle(thisTitle);
@@ -589,19 +578,22 @@ public class Tdb {
   }
   
   /**
-   * Find existing TdbAu with same Id as another one.
+   * Get existing TdbAu with same Id as another one.
    * @param otherAu another TdbAu
    * @return an existing TdbAu already in thisTdb
    */
-  protected TdbAu findExistingTdbAu(TdbAu otherAu) {
-    // check for duplicate AU with same plugin for this Tdb
-    Collection<TdbAu.Id> ids = getTdbAuIds(otherAu.getPluginId());
-    for (TdbAu.Id id : ids) {
-      if (id.equals(otherAu.getId())) {
-        return id.getTdbAu();
-      }
-    }
-    return null;
+  public TdbAu getTdbAuById(TdbAu otherAu) {
+    Map<TdbAu.Id,TdbAu> map = pluginIdTdbAuIdsMap.get(otherAu.getPluginId());
+    return (map == null) ? null : map.get(otherAu.getId());
+  }
+  
+  /**
+   * Get existing TdbAu with the the specified id.
+   * @param auId the TdbAu.Id
+   * @return the existing TdbAu or <code>null</code> if not in this Tdb
+   */
+  public TdbAu getTdbAuById(TdbAu.Id auId) {
+    return getTdbAuById(auId.getTdbAu());
   }
   
   /**
@@ -614,8 +606,9 @@ public class Tdb {
    *    if no TdbAus for the specified plugin in this configuration.
    */
   public Collection<TdbAu.Id> getTdbAuIds(String pluginId) {
-    Collection<TdbAu.Id> auIds = pluginIdTdbAuIdsMap.get(pluginId);
-    return (auIds != null) ? auIds : Collections.<TdbAu.Id>emptyList();
+    Map<TdbAu.Id,TdbAu> auIdMap = pluginIdTdbAuIdsMap.get(pluginId);
+    return (auIdMap != null) ? 
+        auIdMap.keySet() : Collections.<TdbAu.Id>emptyList();
   }
   
   /**
@@ -639,8 +632,8 @@ public class Tdb {
     }
     Set<TdbAu.Id> allAuIds = new HashSet<TdbAu.Id>();
     // For each plugin's AU set, add them all to the set.
-    for (Collection<TdbAu.Id> auIds : pluginIdTdbAuIdsMap.values()) {
-      allAuIds.addAll(auIds);
+    for (Map<TdbAu.Id,TdbAu> auIdMap : pluginIdTdbAuIdsMap.values()) {
+      allAuIds.addAll(auIdMap.keySet());
     }
     return allAuIds;
   }
@@ -684,6 +677,7 @@ public class Tdb {
   public int getTdbProviderCount() {
     return tdbProviderMap.size();
   }
+
   /**
    * Add a new TdbAu from properties.  This method recognizes
    * properties of the following form:
@@ -739,7 +733,7 @@ public class Tdb {
       addTdbAuForPlugin(au);
     } catch (TdbException ex) {
       // au already registered -- report existing au
-      TdbAu existingAu = findExistingTdbAu(au);
+      TdbAu existingAu = getTdbAuById(au);
       String titleName = getTdbTitleName(props, au);
       if (!titleName.equals(existingAu.getTdbTitle().getName())) {
         throw new TdbException(
@@ -1005,11 +999,11 @@ public class Tdb {
   }
   
   /** 
-   * Get or create TdbTitle for the specified properties and TdbAu.
+   * Get or create TdbProvider for the specified properties and TdbAu.
    * 
    * @param props the properties
    * @param au the TdbAu
-   * @return the corresponding TdbTitle
+   * @return the corresponding TdbProvider
    */
   private TdbProvider getTdbProvider(Properties props, TdbAu au) {
     // get publisher name
@@ -1614,6 +1608,12 @@ public class Tdb {
 	});
     }
 
+    /** Return the {@link TdbProvider}s that appear in the new Tdb and not
+     * the old. */
+    public Set<TdbProvider> rawNewTdbProviders() {
+      return newProviders;
+    }
+
     /** Return the {@link TdbPublisher}s that appear in the new Tdb and not
      * the old. */
     public Set<TdbPublisher> rawNewTdbPublishers() {
@@ -1675,19 +1675,25 @@ public class Tdb {
     }
 
     static class Unmodifiable extends Differences {
+      void addProvider(TdbProvider provider, Type type) {
+        throw new UnsupportedOperationException(
+            "Can't modify unmodifiable Differences");
+      }
       void addPublisher(TdbPublisher pub, Type type) {
-	throw new UnsupportedOperationException("Can't modify unmodifiable Differences");
+	throw new UnsupportedOperationException(
+	    "Can't modify unmodifiable Differences");
       }
-
       void addTitle(TdbTitle title, Type type) {
-	throw new UnsupportedOperationException("Can't modify unmodifiable Differences");
+	throw new UnsupportedOperationException(
+	    "Can't modify unmodifiable Differences");
       }
-
       void addAu(TdbAu au, Type type) {
-	throw new UnsupportedOperationException("Can't modify unmodifiable Differences");
+	throw new UnsupportedOperationException(
+	    "Can't modify unmodifiable Differences");
       }
       void addPluginId(String id) {
-	throw new UnsupportedOperationException("Can't modify unmodifiable Differences");
+	throw new UnsupportedOperationException(
+	    "Can't modify unmodifiable Differences");
       }
     }
   }
