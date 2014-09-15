@@ -1,5 +1,5 @@
 /*
- * $Id: TdbAu.java,v 1.32 2014-09-09 22:47:23 pgust Exp $
+ * $Id: TdbAu.java,v 1.33 2014-09-15 19:31:53 pgust Exp $
  */
 
 /*
@@ -144,9 +144,8 @@ public class TdbAu implements BibliographicItem, Comparable<TdbAu> {
      */
     public int hashCode() {
       if (hash == 0) {
-//        hash = TdbAu.this.getParams().hashCode();;
-        hash = TdbAu.this.getPluginId().hashCode() 
-             ^ TdbAu.this.getParams().hashCode();
+        hash = (31*TdbAu.this.getPluginId().hashCode()) 
+             * TdbAu.this.getParams().hashCode();
       } 
       return hash;
     }
