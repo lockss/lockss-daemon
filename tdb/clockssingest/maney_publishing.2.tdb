@@ -789,7 +789,7 @@
     au < manifest ; exists ; 2009 ; Conservation and Management of Archaeological Sites Volume 11 ; 11 > 
     au < doNotProcess ; doNotProcess ; 2010 ; Conservation and Management of Archaeological Sites Volume 12 ; 12 > 
     au < doNotProcess ; doNotProcess ; 2011 ; Conservation and Management of Archaeological Sites Volume 13 ; 13 > 
-    au < exists ; exists ; 2012 ; Conservation and Management of Archaeological Sites Volume 14 ; 14 > 
+    au < manifest ; exists ; 2012 ; Conservation and Management of Archaeological Sites Volume 14 ; 14 > 
     au < manifest ; exists ; 2013 ; Conservation and Management of Archaeological Sites Volume 15 ; 15 > 
     au < manifest ; exists ; 2014 ; Conservation and Management of Archaeological Sites Volume 16 ; 16 > 
 
@@ -1102,7 +1102,7 @@
     au < manifest ; exists ; 2008 ; English Heritage Historical Review Volume 3 ; 3 >
     au < manifest ; exists ; 2009 ; English Heritage Historical Review Volume 4 ; 4 >
     au < doNotProcess ; doNotProcess ; 2010 ; English Heritage Historical Review Volume 5 ; 5 >  
-    au < exists ; exists ; 2011 ; English Heritage Historical Review Volume 6 ; 6 >
+    au < manifest ; exists ; 2011 ; English Heritage Historical Review Volume 6 ; 6 >
     au < manifest ; exists ; 2012 ; English Heritage Historical Review Volume 7 ; 7 >
    
   }
@@ -1351,9 +1351,9 @@
 
     comment[1] = ceased publication in 2011
     
-    au < exists ; exists ; 2007 ; The Hardy Review Volume 9 ; 9 > 
-    au < exists ; exists ; 2008 ; The Hardy Review Volume 10 ; 10 > 
-    au < exists ; exists ; 2009 ; The Hardy Review Volume 11 ; 11 > 
+    au < manifest ; exists ; 2007 ; The Hardy Review Volume 9 ; 9 > 
+    au < manifest ; exists ; 2008 ; The Hardy Review Volume 10 ; 10 > 
+    au < manifest ; exists ; 2009 ; The Hardy Review Volume 11 ; 11 > 
     au < doNotProcess ; doNotProcess ; 2010 ; The Hardy Review Volume 12 ; 12 > 
     au < doNotProcess ; doNotProcess ; 2011 ; The Hardy Review Volume 13 ; 13 >  
 
@@ -2091,7 +2091,7 @@
     au < manifest ; exists ; 2008-2009 ; Journal of Care Services Management Volume 3 ; 3 > 
     au < manifest ; exists ; 2009-2010 ; Journal of Care Services Management Volume 4 ; 4 > 
     au < manifest ; exists ; 2011 ; Journal of Care Services Management Volume 5 ; 5 >  
-    au < exists ; exists ; 2012 ; Journal of Care Services Management Volume 6 ; 6 > 
+    au < manifest ; exists ; 2012 ; Journal of Care Services Management Volume 6 ; 6 > 
     au < manifest ; exists ; 2013 ; Journal of Care Services Management Volume 7 ; 7 > 
     au < expected ; exists ; 2014 ; Journal of Care Services Management Volume 8 ; 8 > 
 
@@ -2373,7 +2373,7 @@
 
     param[journal_id] = scm 
 
-    au < exists ; exists ; 2011 ; Journal of Spinal Cord Medicine Volume 34 ; 34 > 
+    au < manifest ; exists ; 2011 ; Journal of Spinal Cord Medicine Volume 34 ; 34 > 
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Spinal Cord Medicine Volume 35 ; 35 > 
     au < manifest ; exists ; 2013 ; Journal of Spinal Cord Medicine Volume 36 ; 36 > 
     au < manifest ; exists ; 2014 ; Journal of Spinal Cord Medicine Volume 37 ; 37 > 
@@ -2609,7 +2609,7 @@
     au < manifest ; exists ; 2008 ; Levant Volume 40 ; 40 > 
     au < manifest ; exists ; 2009 ; Levant Volume 41 ; 41 > 
     au < doNotProcess ; doNotProcess ; 2010 ; Levant Volume 42 ; 42 > 
-    au < exists ; exists ; 2011 ; Levant Volume 43 ; 43 > 
+    au < manifest ; exists ; 2011 ; Levant Volume 43 ; 43 > 
     au < doNotProcess ; doNotProcess ; 2012 ; Levant Volume 44 ; 44 > 
     au < manifest ; exists ; 2013 ; Levant Volume 45 ; 45 > 
     au < manifest ; exists ; 2014 ; Levant Volume 46 ; 46 > 
@@ -3411,7 +3411,7 @@
     param[journal_id] = pch 
     comment[continues] = 0272-4936 
     
-    au < exists ; exists ; 2012 ; Paediatrics and International Child Health Volume 32 ; 32 >
+    au < manifest ; exists ; 2012 ; Paediatrics and International Child Health Volume 32 ; 32 >
     au < manifest ; exists ; 2013 ; Paediatrics and International Child Health Volume 33 ; 33 >
     au < manifest ; exists ; 2014 ; Paediatrics and International Child Health Volume 34 ; 34 >
     
@@ -3494,7 +3494,7 @@
     param[journal_id] = pgh
     comment[continues] = 0003-4983
     
-    au < exists ; exists ; 2012 ; Pathogens and Global Health Volume 106 ; 106 >
+    au < manifest ; exists ; 2012 ; Pathogens and Global Health Volume 106 ; 106 >
     au < manifest ; exists ; 2013 ; Pathogens and Global Health Volume 107 ; 107 >
     au < manifest ; exists ; 2014 ; Pathogens and Global Health Volume 108 ; 108 >
     
