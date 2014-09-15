@@ -4,8 +4,8 @@
     name = Metapress Essential ;
     comment[platform] = Metapress
   >
-    plugin = needs.plugin
-    param[base_url] = http://essential.metapress.com/content/
+    plugin = org.lockss.plugin.metapress.MetaPressPlugin
+    param[base_url] = http://essential.metapress.com/
     implicit < status ; year ; name ; param[volume_name] >
     
   {
