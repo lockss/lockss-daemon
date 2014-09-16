@@ -30,8 +30,20 @@
     }
     
     {
+    title < 
+      name = Journal of Astronomical Telescopes, Instruments, and Systems ;
+      issn = 2329-4124 ;
+      eissn = 2329-4221
+     >
+
+    param[base_url] = http://astronomicaltelescopes.spiedigitallibrary.org/
+    param[resource_id] = 166
     
-  
+    au < expected ; exists ; 2014 ; Journal of Astronomical Telescopes, Instruments, and Systems Volume 1 ; 2014 >
+
+    }
+    
+    {
     title < 
       name = Journal of Biomedical Optics ;
       issn = 1083-3668 ;
@@ -64,7 +76,6 @@
     }
     
     {
-  
     title < 
       name = Journal of Electronic Imaging ;
       issn = 1017-9909 ;
@@ -101,7 +112,20 @@
     }
     
     {
-  
+    title < 
+      name = Journal of Medical Imaging ;
+      issn = 2329-4302 ;
+      eissn = 2329-4310
+     >
+
+    param[base_url] = http://medicalimaging.spiedigitallibrary.org/
+    param[resource_id] = 165
+    
+    au < exists ; exists ; 2014 ; Journal of Medical Imaging Volume 1 ; 2014 >
+
+    }
+    
+    {
     title < 
       name = Journal of Micro/Nanolithography, MEMS, and MOEMS ;
       issn = 1932-5150 ;
@@ -128,7 +152,6 @@
     }
     
     {
-    
     title < 
       name = Journal of Nanophotonics ;
       eissn = 1934-2608
@@ -149,7 +172,6 @@
     } 
     
     {
-  
     title < 
       name = Journal of Photonics for Energy ;
       eissn = 1947-7988
@@ -166,7 +188,20 @@
     }
     
     {
-  
+    title < 
+      name = Neurophotonics ;
+      issn = 2329-423X ;
+      eissn = 2329-4248
+     >
+
+    param[base_url] = http://neurophotonics.spiedigitallibrary.org/
+    param[resource_id] = 169
+    
+    au < exists ; exists ; 2014 ; Neurophotonics Volume 1 ; 2014 >
+
+    }
+
+    {
     title < 
       name = Optical Engineering ;
       issn = 0091-3286 ;
@@ -252,7 +287,10 @@
     >
 
     param[base_url] = http://reviews.spiedigitallibrary.org/
+    comment[resource_id] = no resource_id
 
+    au < exists ; exists ; 2010 ; Optical Engineering Volume 1 ; 2010 >
+    au < exists ; exists ; 2011 ; Optical Engineering Volume 2 ; 2011 >
     }
 
 }
