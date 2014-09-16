@@ -148,14 +148,16 @@
     >
 
     param[journal_abbr] = jgspl
+    
+    comment[0] = Volumes 1-7 have no substance on some ingest machines. Need recrawling.
 
-    au < finished ; crawling ; 1993 ; The Journal of Gender, Social Policy & the Law Volume 1 ; 1 >
-    au < finished ; crawling ; 1994 ; The Journal of Gender, Social Policy & the Law Volume 2 ; 2 >
-    au < finished ; crawling ; 1995 ; The Journal of Gender, Social Policy & the Law Volume 3 ; 3 >
-    au < finished ; crawling ; 1996 ; The Journal of Gender, Social Policy & the Law Volume 4 ; 4 >
-    au < finished ; crawling ; 1997 ; The Journal of Gender, Social Policy & the Law Volume 5 ; 5 >
-    au < finished ; crawling ; 1998 ; The Journal of Gender, Social Policy & the Law Volume 6 ; 6 >
-    au < finished ; crawling ; 1999 ; The Journal of Gender, Social Policy & the Law Volume 7 ; 7 >
+    au < crawling ; crawling ; 1993 ; The Journal of Gender, Social Policy & the Law Volume 1 ; 1 >
+    au < crawling ; crawling ; 1994 ; The Journal of Gender, Social Policy & the Law Volume 2 ; 2 >
+    au < crawling ; crawling ; 1995 ; The Journal of Gender, Social Policy & the Law Volume 3 ; 3 >
+    au < crawling ; crawling ; 1996 ; The Journal of Gender, Social Policy & the Law Volume 4 ; 4 >
+    au < crawling ; crawling ; 1997 ; The Journal of Gender, Social Policy & the Law Volume 5 ; 5 >
+    au < crawling ; crawling ; 1998 ; The Journal of Gender, Social Policy & the Law Volume 6 ; 6 >
+    au < crawling ; crawling ; 1999 ; The Journal of Gender, Social Policy & the Law Volume 7 ; 7 >
     au < finished ; crawling ; 2000 ; The Journal of Gender, Social Policy & the Law Volume 8 ; 8 >
     au < crawling ; exists ; 2001 ; The Journal of Gender, Social Policy & the Law Volume 9 ; 9 >
     au < crawling ; exists ; 2002 ; The Journal of Gender, Social Policy & the Law Volume 10 ; 10 >
