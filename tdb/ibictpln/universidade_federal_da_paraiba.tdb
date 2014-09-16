@@ -305,10 +305,10 @@
       param[base_url] = http://periodicos.ufpb.br/ojs2/
       param[journal_id] = problemata
 
-      au < released ; 1998 ; 1 ; Problemata: Revista Internacional de Filosofia Volume 1998 ; 1998 ; >
-      au < released ; 2011 ; 2 ; Problemata: Revista Internacional de Filosofia Volume 2011 ; 2011 ; >
-      au < released ; 2012 ; 3 ; Problemata: Revista Internacional de Filosofia Volume 2012 ; 2012 ; >
-      au < released ; 2013 ; 4 ; Problemata: Revista Internacional de Filosofia Volume 2013 ; 2013 ; >
+      au < down ; 1998 ; 1 ; Problemata: Revista Internacional de Filosofia Volume 1998 ; 1998 ; >
+      au < down ; 2011 ; 2 ; Problemata: Revista Internacional de Filosofia Volume 2011 ; 2011 ; >
+      au < down ; 2012 ; 3 ; Problemata: Revista Internacional de Filosofia Volume 2012 ; 2012 ; >
+      au < down ; 2013 ; 4 ; Problemata: Revista Internacional de Filosofia Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 5 ; Problemata: Revista Internacional de Filosofia Volume 2014 ; 2014 ; >
 
   }
