@@ -1,5 +1,5 @@
 /*
- * $Id: SqlConstants.java,v 1.1 2014-08-22 22:14:59 fergaloy-sf Exp $
+ * $Id: SqlConstants.java,v 1.2 2014-09-16 19:55:43 fergaloy-sf Exp $
  */
 
 /*
@@ -155,6 +155,9 @@ public class SqlConstants {
 
   /** Name of the table used to identify the last run of incremental tasks. */
   public static final String LAST_RUN_TABLE = "last_run";
+
+  /** Name of the provider table. */
+  public static final String PROVIDER_TABLE = "provider";
 
   //
   // Database table column names.
@@ -400,6 +403,11 @@ public class SqlConstants {
   /** Archival Unit active indication column */
   public static final String ACTIVE_COLUMN = "active";
 
+  /** Provider columns. */
+  public static final String PROVIDER_SEQ_COLUMN = "provider_seq";
+  public static final String PROVIDER_LID_COLUMN = "provider_lid";
+  public static final String PROVIDER_NAME_COLUMN = "provider_name";
+
   //
   // Maximum lengths of variable text length database columns.
   //
@@ -513,6 +521,9 @@ public class SqlConstants {
   /** Length of the last value column. */
   public static final int MAX_LAST_VALUE_COLUMN = 32;
 
+  /** Length of the last LOCKSS identifier column. */
+  public static final int MAX_LID_COLUMN = 32;
+
   //
   //Types of metadata items.
   //
@@ -525,4 +536,7 @@ public class SqlConstants {
 
   /** The platform name when there is no platform name. */
   public static final String NO_PLATFORM = "";
+
+  /** The name of the unknown provider. */
+  public static final String UNKNOWN_PROVIDER_NAME = "UNKNOWN PROVIDER";
 }

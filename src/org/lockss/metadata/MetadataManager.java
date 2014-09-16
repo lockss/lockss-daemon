@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.29 2014-08-29 20:46:40 pgust Exp $
+ * $Id: MetadataManager.java,v 1.30 2014-09-16 19:55:42 fergaloy-sf Exp $
  */
 
 /*
@@ -48,7 +48,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-
 import org.lockss.app.BaseLockssDaemonManager;
 import org.lockss.app.ConfigurableManager;
 import org.lockss.config.Configuration;
@@ -69,7 +68,6 @@ import org.lockss.plugin.PluginManager;
 import org.lockss.scheduler.Schedule;
 import org.lockss.util.Constants;
 import org.lockss.util.Logger;
-import org.lockss.util.MetadataUtil;
 import org.lockss.util.StringUtil;
 import org.lockss.util.TimeBase;
 import org.lockss.util.PatternIntMap;
@@ -274,7 +272,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       + "," + MD_VERSION_COLUMN
       + "," + EXTRACT_TIME_COLUMN
       + "," + CREATION_TIME_COLUMN
-      + ") values (default,?,?,?,?)";
+      + "," + PROVIDER_SEQ_COLUMN
+      + ") values (default,?,?,?,?,?)";
 
   // Query to add a metadata item.
   private static final String INSERT_MD_ITEM_QUERY = "insert into "
@@ -2169,19 +2168,23 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    *          A long with the extraction time of the metadata.
    * @param creationTime
    *          A long with the creation time of the archival unit.
+   * @param providerSeq
+   *          A Long with the identifier of the Archival Unit provider.
    * @return a Long with the identifier of the Archival Unit metadata just
    *         added.
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
   public Long addAuMd(Connection conn, Long auSeq, int version,
-      long extractTime, long creationTime) throws DbException {
+      long extractTime, long creationTime, Long providerSeq)
+	  throws DbException {
     final String DEBUG_HEADER = "addAuMd(): ";
     if (log.isDebug2()) {
       log.debug2(DEBUG_HEADER + "auSeq = " + auSeq);
       log.debug2(DEBUG_HEADER + "version = " + version);
       log.debug2(DEBUG_HEADER + "extractTime = " + extractTime);
       log.debug2(DEBUG_HEADER + "creationTime = " + creationTime);
+      log.debug2(DEBUG_HEADER + "providerSeq = " + providerSeq);
     }
 
     ResultSet resultSet = null;
@@ -2196,6 +2199,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       insertAuMd.setShort(2, (short) version);
       insertAuMd.setLong(3, extractTime);
       insertAuMd.setLong(4, creationTime);
+      insertAuMd.setLong(5, providerSeq);
       dbManager.executeUpdate(insertAuMd);
       resultSet = insertAuMd.getGeneratedKeys();
 
@@ -2214,6 +2218,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       log.error("version = " + version);
       log.error("extractTime = " + extractTime);
       log.error("creationTime = " + creationTime);
+      log.error("providerSeq = " + providerSeq);
       log.error("sql = " + INSERT_AU_MD_QUERY);
       throw new DbException(message, sqle);
     } finally {

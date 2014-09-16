@@ -1,5 +1,5 @@
 /*
- * $Id: SerialPublication.java,v 1.4 2014-08-22 22:15:00 fergaloy-sf Exp $
+ * $Id: SerialPublication.java,v 1.5 2014-09-16 19:55:42 fergaloy-sf Exp $
  */
 
 /*
@@ -31,7 +31,6 @@
  */
 package org.lockss.subscription;
 
-import static org.lockss.db.SqlConstants.*;
 import java.util.Collection;
 import org.lockss.config.TdbTitle;
 import org.lockss.config.TdbUtil;
@@ -48,7 +47,8 @@ public class SerialPublication {
 
   private Integer publicationNumber;
   private String publicationName;
-  private String platformName = NO_PLATFORM;
+  private String providerLid;
+  private String providerName;
   private String publisherName;
   private String pIssn;
   private String eIssn;
@@ -72,12 +72,20 @@ public class SerialPublication {
     this.publicationName = publicationName;
   }
 
-  public String getPlatformName() {
-    return platformName;
+  public String getProviderLid() {
+    return providerLid;
   }
 
-  public void setPlatformName(String platformName) {
-    this.platformName = platformName;
+  public void setProviderLid(String providerLid) {
+    this.providerLid = providerLid;
+  }
+
+  public String getProviderName() {
+    return providerName;
+  }
+
+  public void setProviderName(String providerName) {
+    this.providerName = providerName;
   }
 
   public String getPublisherName() {
@@ -164,12 +172,24 @@ public class SerialPublication {
       // Yes: Get the TdbTitle from the eISSN.
       TdbTitle title =
 	  TdbUtil.getTdb().getTdbTitleByIssn(MetadataUtil.formatIssn(eIssn));
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "tdbTitle (eISSN = "
+	  + eIssn + ") = " + tdbTitle);
 
       // Check whether the TdbTitle is not found.
       if (title == null) {
 	// Yes: Get the TdbTitle from the pISSN.
 	title =
 	    TdbUtil.getTdb().getTdbTitleByIssn(MetadataUtil.formatIssn(pIssn));
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "tdbTitle (pISSN = "
+	    + pIssn + ") = " + tdbTitle);
+      }
+
+      // Check whether the TdbTitle is not found.
+      if (title == null) {
+	// Yes: Get the TdbTitle from the proprietary identifier.
+	title = TdbUtil.getTdb().getTdbTitleById(proprietaryId);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	    + "tdbTitle (proprietaryId = " + proprietaryId + ") = " + tdbTitle);
       }
 
       // Check whether the TdbTitle was found.
@@ -192,8 +212,7 @@ public class SerialPublication {
 	    + "Changed publication name to '" + publicationName + "'.");
       } else {
 	// No: Report the problem.
-	String message = "Cannot find tdbTitle with name '" + publicationName
-	    + "' for publisher with name '" + publisherName + "'.";
+	String message = "Cannot find tdbTitle for publication " + this;
 	log.error(message);
       }
     }
@@ -218,7 +237,8 @@ public class SerialPublication {
     StringBuilder sb = new StringBuilder(
 	"SerialPublication [publicationNumber=").append(publicationNumber)
 	.append(", publicationName='").append(publicationName)
-	.append("', platformName='").append(platformName)
+	.append("', providerLid='").append(providerLid)
+	.append("', providerName='").append(providerName)
 	.append("', publisherName='").append(publisherName)
 	.append("', pIssn='").append(pIssn)
 	.append("', eIssn='").append(eIssn)
@@ -228,7 +248,7 @@ public class SerialPublication {
     if (tdbTitle != null) {
       sb.append("', ").append(tdbTitle.toString()).append("]");
     } else {
-      sb.append("', TdbTitle: [null]");
+      sb.append("', TdbTitle: [null]").append("]");
     }
 
     return sb.toString();

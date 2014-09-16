@@ -1,5 +1,5 @@
 /*
- * $Id: AuMetadataRecorder.java,v 1.19 2014-08-29 20:46:09 pgust Exp $
+ * $Id: AuMetadataRecorder.java,v 1.20 2014-09-16 19:55:42 fergaloy-sf Exp $
  */
 
 /*
@@ -68,7 +68,7 @@ public class AuMetadataRecorder {
   static final String UNKNOWN_PUBLISHER_AU_PROBLEM = "UNKNOWN_PUBLISHER";
 
   // Query to update the version of an Archival Unit metadata.
-  private static final String UPDATE_AU_MD_QUERY = "update "
+  private static final String UPDATE_AU_MD_VERSION_QUERY = "update "
       + AU_MD_TABLE
       + " set " + MD_VERSION_COLUMN + " = ?"
       + " where " + AU_MD_SEQ_COLUMN + " = ?";
@@ -605,75 +605,8 @@ public class AuMetadataRecorder {
 
     // Check whether the publisher has not been located in the database.
     if (publisherSeq == null) {
-      // Yes: Get the publisher received in the metadata.
-      publisherName = mdinfo.publisher;
-      log.debug3(DEBUG_HEADER + "publisherName = " + publisherName);
-
-      // Check whether the publisher is in the metadata.
-      if (publisherName != null) {
-	// Yes: Find the publisher or create it.
-	publisherSeq = mdManager.findOrCreatePublisher(conn, publisherName);
-	log.debug3(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
-      } else {
-	// No: Find the AU in the database.
-	auSeq = mdManager.findAuByAuId(conn, auId);
-	log.debug3(DEBUG_HEADER + "auSeq = " + auSeq);
-
-	// Check whether the AU was found.
-	if (auSeq != null) {
-	  // Yes: Get the publisher of the AU.
-	  publisherSeq = mdManager.findAuPublisher(conn, auSeq);
-	  log.debug3(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
-
-	  // Check whether the AU publisher was found.
-	  if (publisherSeq != null) {
-	    // Yes: Get its name.
-	    publisherName = mdManager.getPublisherName(conn, publisherSeq);
-	    log.debug3(DEBUG_HEADER + "publisherName = " + publisherName);
-	  } else {
-	    // No: Report the problem.
-	    log.error("Null publisherSeq for auSeq = " + auSeq);
-	    log.error("auId = " + auId);
-	    log.error("auKey = " + auKey);
-	    log.error("auMdSeq = " + auMdSeq);
-	    log.error("auSeq = " + auSeq);
-	    throw new MetadataException("Null publisherSeq for auSeq = "
-		+ auSeq, mdinfo);
-	  }
-	} else {
-	  // No: Loop through all outstanding previous problems for this AU.
-	  for (String problem : mdManager.findAuProblems(conn, auId)) {
-	    // Check whether there is an unknown publisher already for this AU.
-	    if (problem.startsWith(UNKNOWN_PUBLISHER_AU_PROBLEM)) {
-	      // Yes: Get the corresponding publisher identifier.
-	      publisherSeq = mdManager.findPublisher(conn, problem);
-	      log.debug3(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
-
-	      // Check whether the publisher exists.
-	      if (publisherSeq != null) {
-		// Yes: Use it.
-		publisherName = problem;
-		break;
-	      } else {
-		// No: Remove the obsolete problem.
-		mdManager.removeAuProblem(conn, auId, problem);
-	      }
-	    }
-	  }
-
-	  // Check whether no previous unknown publisher for this AU exists.
-	  if (publisherName == null) {
-	    // Yes: Create a synthetic publisher name to be able to process the
-	    // Archival Unit.
-	    publisherName = UNKNOWN_PUBLISHER_AU_PROBLEM + TimeBase.nowMs();
-	    log.debug3(DEBUG_HEADER + "publisherName = " + publisherName);
-
-	    // Create the publisher.
-	    publisherSeq = mdManager.addPublisher(conn, publisherName);
-	    log.debug3(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
-	  }
-	}
-      }
+      // Yes: Find or create the publisher.
+      findOrCreatePublisher(conn, mdinfo);
     }
     
     // Check whether this is a new publication.
@@ -829,10 +762,15 @@ public class AuMetadataRecorder {
 	creationTime = AuUtil.getAuCreationTime(au);
       }
 
+      // Get the provider.
+      Long providerSeq = findOrCreateProvider(conn, mdinfo);
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "providerSeq = " + providerSeq);
+
       // Add to the database the new Archival Unit metadata.
       auMdSeq = mdManager.addAuMd(conn, auSeq, pluginVersion,
-                                  NEVER_EXTRACTED_EXTRACTION_TIME,
-                                  creationTime);
+                                  NEVER_EXTRACTED_EXTRACTION_TIME, creationTime,
+                                  providerSeq);
       log.debug3(DEBUG_HEADER + "new auSeq = " + auMdSeq);
 
       // Skip it if the new Archival Unit metadata could not be created.
@@ -852,6 +790,102 @@ public class AuMetadataRecorder {
     updateOrCreateMdItem(conn, mdinfo);
 
     log.debug3(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Finds the publisher in the database or creates a new one.
+   * 
+   * @param conn
+   *          A Connection with the connection to the database
+   * @param mdinfo
+   *          An ArticleMetadataInfo providing the metadata.
+   * @throws MetadataException
+   *           if any problem is detected with the passed metadata.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  private void findOrCreatePublisher(Connection conn,
+      ArticleMetadataInfo mdinfo) throws MetadataException, DbException {
+    final String DEBUG_HEADER = "findOrCreatePublisher(): ";
+
+    // Get the publisher received in the metadata.
+    publisherName = mdinfo.publisher;
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "publisherName = " + publisherName);
+
+    // Check whether the publisher is in the metadata.
+    if (publisherName != null) {
+      // Yes: Find the publisher or create it.
+      publisherSeq = mdManager.findOrCreatePublisher(conn, publisherName);
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
+    } else {
+      // No: Find the AU in the database.
+      auSeq = mdManager.findAuByAuId(conn, auId);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auSeq = " + auSeq);
+
+      // Check whether the AU was found.
+      if (auSeq != null) {
+	// Yes: Get the publisher of the AU.
+	publisherSeq = mdManager.findAuPublisher(conn, auSeq);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
+
+	// Check whether the AU publisher was found.
+	if (publisherSeq != null) {
+	  // Yes: Get its name.
+	  publisherName = mdManager.getPublisherName(conn, publisherSeq);
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "publisherName = " + publisherName);
+	} else {
+	  // No: Report the problem.
+	  log.error("Null publisherSeq for auSeq = " + auSeq);
+	  log.error("auId = " + auId);
+	  log.error("auKey = " + auKey);
+	  log.error("auMdSeq = " + auMdSeq);
+	  log.error("auSeq = " + auSeq);
+	  throw new MetadataException("Null publisherSeq for auSeq = " + auSeq,
+	      mdinfo);
+	}
+      } else {
+	// No: Loop through all outstanding previous problems for this AU.
+	for (String problem : mdManager.findAuProblems(conn, auId)) {
+	  // Check whether there is an unknown publisher already for this AU.
+	  if (problem.startsWith(UNKNOWN_PUBLISHER_AU_PROBLEM)) {
+	    // Yes: Get the corresponding publisher identifier.
+	    publisherSeq = mdManager.findPublisher(conn, problem);
+	    if (log.isDebug3())
+	      log.debug3(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
+
+	    // Check whether the publisher exists.
+	    if (publisherSeq != null) {
+	      // Yes: Use it.
+	      publisherName = problem;
+	      break;
+	    } else {
+	      // No: Remove the obsolete problem.
+	      mdManager.removeAuProblem(conn, auId, problem);
+	    }
+	  }
+	}
+
+	// Check whether no previous unknown publisher for this AU exists.
+	if (publisherName == null) {
+	  // Yes: Create a synthetic publisher name to be able to process the
+	  // Archival Unit.
+	  publisherName = UNKNOWN_PUBLISHER_AU_PROBLEM + TimeBase.nowMs();
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "publisherName = " + publisherName);
+
+	  // Create the publisher.
+	  publisherSeq = mdManager.addPublisher(conn, publisherName);
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
+	}
+      }
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
 
   /**
@@ -934,6 +968,44 @@ public class AuMetadataRecorder {
   }
 
   /**
+   * Finds the provider in the database or creates a new one.
+   * 
+   * @param conn
+   *          A Connection with the connection to the database
+   * @param mdinfo
+   *          An ArticleMetadataInfo providing the metadata.
+   * @return a Long with the identifier of the provider.
+   * @throws MetadataException
+   *           if any problem is detected with the passed metadata.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  private Long findOrCreateProvider(Connection conn,
+      ArticleMetadataInfo mdinfo) throws MetadataException, DbException {
+    final String DEBUG_HEADER = "findOrCreateProvider(): ";
+
+    // Get the name of the provider received in the metadata.
+    String providerName = mdinfo.provider;
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "providerName = " + providerName);
+
+    // Check whether no provider name was received in the metadata.
+    if (StringUtil.isNullString(providerName)) {
+      // Yes: Use the publisher name.
+      providerName = publisherName;
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "providerName = " + providerName);
+    }
+
+    // Find or create the provider.
+    // TODO: Replace the second argument with mdinfo.providerLid when available.
+    Long providerSeq = dbManager.findOrCreateProvider(conn, null, providerName);
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "providerSeq = " + providerSeq);
+    return providerSeq;
+  }
+
+  /**
    * Updates the metadata version an Archival Unit in the database.
    * 
    * @param conn
@@ -949,8 +1021,8 @@ public class AuMetadataRecorder {
       throws DbException {
     final String DEBUG_HEADER = "updateAuMd(): ";
     try {
-      PreparedStatement updateAu = dbManager.prepareStatement(conn,
-	  UPDATE_AU_MD_QUERY);
+      PreparedStatement updateAu =
+	  dbManager.prepareStatement(conn, UPDATE_AU_MD_VERSION_QUERY);
 
       try {
 	updateAu.setShort(1, (short) version);

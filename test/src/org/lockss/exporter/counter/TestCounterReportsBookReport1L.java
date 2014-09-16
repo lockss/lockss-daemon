@@ -1,5 +1,5 @@
 /*
- * $Id: TestCounterReportsBookReport1L.java,v 1.11 2014-08-29 20:51:26 pgust Exp $
+ * $Id: TestCounterReportsBookReport1L.java,v 1.12 2014-09-16 19:55:42 fergaloy-sf Exp $
  */
 
 /*
@@ -286,8 +286,13 @@ public class TestCounterReportsBookReport1L extends LockssTestCase {
       // Add the AU.
       Long auSeq = metadataManager.findOrCreateAu(conn, pluginSeq, "fullAuKey");
 
+      // Add the provider.
+      Long providerSeq = dbManager.findOrCreateProvider(conn, "fullProviderId",
+	  "fullProviderName");
+
       // Add the AU metadata.
-      Long auMdSeq = metadataManager.addAuMd(conn, auSeq, 1, 0L, 123L);
+      Long auMdSeq =
+	  metadataManager.addAuMd(conn, auSeq, 1, 0L, 123L, providerSeq);
 
       Long parentSeq =
 	  metadataManager.findPublicationMetadataItem(conn, publicationSeq);
@@ -357,8 +362,13 @@ public class TestCounterReportsBookReport1L extends LockssTestCase {
       // Add the AU.
       Long auSeq = metadataManager.findOrCreateAu(conn, pluginSeq, "secAuKey");
 
+      // Add the provider.
+      Long providerSeq = dbManager.findOrCreateProvider(conn, "secProviderId",
+	  "secProviderName");
+
       // Add the AU metadata.
-      Long auMdSeq = metadataManager.addAuMd(conn, auSeq, 1, 0L, 123L);
+      Long auMdSeq =
+	  metadataManager.addAuMd(conn, auSeq, 1, 0L, 123L, providerSeq);
 
       Long parentSeq =
 	  metadataManager.findPublicationMetadataItem(conn, publicationSeq);

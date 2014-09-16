@@ -1,5 +1,5 @@
 /*
- * $Id: FetchTimeExporter.java,v 1.11 2014-08-22 22:15:00 fergaloy-sf Exp $
+ * $Id: FetchTimeExporter.java,v 1.12 2014-09-16 19:55:44 fergaloy-sf Exp $
  */
 
 /*
@@ -173,6 +173,8 @@ public class FetchTimeExporter {
       + ", is2." + ISSN_COLUMN + " as " + E_ISSN_TYPE
       + ", ib1." + ISBN_COLUMN + " as " + P_ISBN_TYPE
       + ", ib2." + ISBN_COLUMN + " as " + E_ISBN_TYPE
+      + ", pv." + PROVIDER_LID_COLUMN
+      + ", pv." + PROVIDER_NAME_COLUMN
       + " from " + PUBLISHER_TABLE + " pr"
       + "," + PLUGIN_TABLE + " pl"
       + "," + PUBLICATION_TABLE + " pn"
@@ -181,6 +183,7 @@ public class FetchTimeExporter {
       + "," + BIB_ITEM_TABLE + " b"
       + "," + AU_MD_TABLE + " am"
       + "," + AU_TABLE + " a"
+      + "," + PROVIDER_TABLE + " pv"
       + "," + MD_ITEM_TABLE + " mi2"
       + " left outer join " + MD_ITEM_NAME_TABLE + " min2"
       + " on mi2." + MD_ITEM_SEQ_COLUMN + " = min2." + MD_ITEM_SEQ_COLUMN
@@ -213,6 +216,7 @@ public class FetchTimeExporter {
       + " and mi2." + AU_MD_SEQ_COLUMN + " = am." + AU_MD_SEQ_COLUMN
       + " and am." + AU_SEQ_COLUMN + " = a." + AU_SEQ_COLUMN
       + " and a." + PLUGIN_SEQ_COLUMN + " = pl." + PLUGIN_SEQ_COLUMN
+      + " and am." + PROVIDER_SEQ_COLUMN + " = pv." + PROVIDER_SEQ_COLUMN
       + " and " + "mi2." + MD_ITEM_SEQ_COLUMN + " > ?"
       + " order by mi2." + MD_ITEM_SEQ_COLUMN;
 
@@ -248,7 +252,7 @@ public class FetchTimeExporter {
       DEFAULT_MAX_NUMBER_OF_EXPORTED_ITEMS_PER_FILE;
 
   // The version of the export file format.
-  private int exportVersion = 3;
+  private int exportVersion = 4;
 
   /**
    * Constructor.
@@ -285,6 +289,29 @@ public class FetchTimeExporter {
       return true;
     }
 
+    // Get a connection to the database.
+    Connection conn = null;
+
+    try {
+      conn = dbManager.getConnection();
+    } catch (DbException dbe) {
+      log.error("Cannot get a connection to the database", dbe);
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+      return true;
+    }
+
+    try {
+      // Do nothing more if the required database version has not been
+      // completed.
+      if (!dbManager.isVersionCompleted(conn, 20)) {
+	return true;
+      }
+    } catch (DbException dbe) {
+      log.error("Cannot determine whether a database upgrade is done", dbe);
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+      return true;
+    }
+
     // Determine the report file name.
     String fileName = getReportFileName();
     if (log.isDebug2())
@@ -302,20 +329,6 @@ public class FetchTimeExporter {
     } catch (IOException ioe) {
       log.error("Cannot get a PrintWriter for the export output file '"
 	  + exportFile + "'", ioe);
-      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
-      return true;
-    }
-
-    // Get a connection to the database.
-    Connection conn = null;
-
-    try {
-      conn = dbManager.getConnection();
-    } catch (DbException dbe) {
-      log.error("Cannot get a connection to the database", dbe);
-      IOUtil.safeClose(writer);
-      boolean deleted = exportFile.delete();
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "deleted = " + deleted);
       if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
       return true;
     }
@@ -627,6 +640,7 @@ public class FetchTimeExporter {
     }
 
     String message = "Cannot get the data to be exported";
+    boolean hasError = false;
 
     String sql = GET_EXPORT_FETCH_TIME_QUERY;
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "SQL = '" + sql + "'.");
@@ -712,6 +726,14 @@ public class FetchTimeExporter {
 	  if (log.isDebug3())
 	    log.debug3(DEBUG_HEADER + "startPage = " + startPage);
 
+	  String providerLid = results.getString(PROVIDER_LID_COLUMN);
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "providerLid = " + providerLid);
+
+	  String providerName = results.getString(PROVIDER_NAME_COLUMN);
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "providerName = " + providerName);
+
 	  // Create the line to be written to the output file.
 	  StringBuilder sb = new StringBuilder();
 
@@ -736,7 +758,9 @@ public class FetchTimeExporter {
 	  .append(StringUtil.blankOutNlsAndTabs(eIsbn)).append(SEPARATOR)
 	  .append(StringUtil.blankOutNlsAndTabs(volume)).append(SEPARATOR)
 	  .append(StringUtil.blankOutNlsAndTabs(issue)).append(SEPARATOR)
-	  .append(StringUtil.blankOutNlsAndTabs(startPage));
+	  .append(StringUtil.blankOutNlsAndTabs(startPage)).append(SEPARATOR)
+	  .append(StringUtil.blankOutNlsAndTabs(providerLid)).append(SEPARATOR)
+	  .append(StringUtil.blankOutNlsAndTabs(providerName));
 
 	  // Write the line to the export output file.
 	  writer.println(sb.toString());
@@ -748,7 +772,8 @@ public class FetchTimeExporter {
 	    message = "Encountered unrecoverable error writing " +
 		"export output file '" + exportFile + "'";
 	    log.error(message);
-	    throw new DbException(message);
+	    hasError = true;
+	    break;
 	  }
 
 	  writer.flush();
@@ -772,6 +797,10 @@ public class FetchTimeExporter {
       DbManager.rollback(conn, log);
       DbManager.safeCloseResultSet(results);
       DbManager.safeCloseStatement(getExportData);
+    }
+
+    if (hasError) {
+      throw new DbException(message);
     }
 
     if (log.isDebug2())

@@ -1,10 +1,10 @@
 /*
- * $Id: SubscriptionManagement.java,v 1.5 2013-09-05 18:49:47 fergaloy-sf Exp $
+ * $Id: SubscriptionManagement.java,v 1.6 2014-09-16 19:55:44 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -477,7 +477,7 @@ public class SubscriptionManagement extends LockssServlet {
       String uniqueName = publicationName;
 
       // Check whether the publication name displayed must be qualified with the
-      // platform name to make it unique.
+      // provider name to make it unique.
       if ((i > 0
 	  && publicationName.equals(publications.get(i - 1)
 	      .getPublicationName()) && publisherName.equals(publications.get(
@@ -487,8 +487,8 @@ public class SubscriptionManagement extends LockssServlet {
 	          .getPublicationName()) && publisherName.equals(publications
 	      .get(i + 1).getPublisherName()))) {
 	// Yes: Create the unique name.
-	if (!StringUtil.isNullString(publication.getPlatformName())) {
-	  uniqueName += " [" + publication.getPlatformName() + "]";
+	if (!StringUtil.isNullString(publication.getProviderName())) {
+	  uniqueName += " [" + publication.getProviderName() + "]";
 	  if (log.isDebug3())
 	    log.debug3(DEBUG_HEADER + "uniqueName = " + uniqueName);
 	}
@@ -1181,8 +1181,8 @@ public class SubscriptionManagement extends LockssServlet {
     // Get the existing subscriptions with ranges.
     List<Subscription> subscriptions =
 	subManager.findAllSubscriptionsAndRanges();
-    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "subscriptions.size() = "
-	+ subscriptions.size());
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "subscriptions = " + subscriptions);
 
     if (subscriptions.size() > 0) {
       layoutErrorBlock(page);
@@ -1259,14 +1259,8 @@ public class SubscriptionManagement extends LockssServlet {
   private void populateTabsSubscriptions(List<Subscription> subscriptions,
       Map<String, Table> divTableMap) {
     final String DEBUG_HEADER = "populateTabsSubscriptions(): ";
-    if (log.isDebug2()) {
-      if (subscriptions != null) {
-	log.debug2(DEBUG_HEADER + "subscriptions.size() = "
-	    + subscriptions.size());
-      } else {
-	log.debug2(DEBUG_HEADER + "subscriptions is null");
-      }
-    }
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "subscriptions = " + subscriptions);
 
     Map.Entry<String, TreeSet<Subscription>> subEntry;
     String publisherName;
@@ -1364,7 +1358,7 @@ public class SubscriptionManagement extends LockssServlet {
 	continue;
       }
 
-      // The publication name and platform.
+      // The publication name.
       publicationName = publication.getPublicationName();
       if (log.isDebug3())
 	  log.debug3(DEBUG_HEADER + "publicationName = " + publicationName);
@@ -1373,7 +1367,7 @@ public class SubscriptionManagement extends LockssServlet {
       String uniqueName = publicationName;
 
       // Check whether the publication name displayed must be qualified with the
-      // platform name to make it unique.
+      // provider name to make it unique.
       if ((i > 0
 	   && publicationName.equals(subscriptions.get(i - 1).getPublication()
 	       .getPublicationName())
@@ -1386,8 +1380,8 @@ public class SubscriptionManagement extends LockssServlet {
 	   && publisherName.equals(subscriptions.get(i + 1).getPublication()
 	       .getPublisherName()))) {
 	// Yes: Create the unique name.
-	if (!StringUtil.isNullString(publication.getPlatformName())) {
-	  uniqueName += " [" + publication.getPlatformName() + "]";
+	if (!StringUtil.isNullString(publication.getProviderName())) {
+	  uniqueName += " [" + publication.getProviderName() + "]";
 	  if (log.isDebug3())
 	    log.debug3(DEBUG_HEADER + "uniqueName = " + uniqueName);
 	}

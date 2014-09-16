@@ -1,5 +1,5 @@
 /*
- * $Id: TestSubscriptionManager.java,v 1.11 2014-08-29 20:53:43 pgust Exp $
+ * $Id: TestSubscriptionManager.java,v 1.12 2014-09-16 19:55:43 fergaloy-sf Exp $
  */
 
 /*
@@ -48,6 +48,7 @@ import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.config.Tdb;
 import org.lockss.config.TdbAu;
+import org.lockss.config.TdbProvider;
 import org.lockss.config.TdbTestUtil;
 import org.lockss.config.TdbTitle;
 import org.lockss.config.Tdb.TdbException;
@@ -1330,17 +1331,18 @@ public class TestSubscriptionManager extends LockssTestCase {
 
     MockArchivalUnit au = (MockArchivalUnit)pluginManager.getAuFromId(auId);
     au.setTitleConfig(tc);
+    TdbAu tdbAu = au.getTdbAu();
 
     List<BibliographicPeriod> publicationRanges =
 	new ArrayList<BibliographicPeriod>();
     publicationRanges.add(new BibliographicPeriod("1954"));
-    au.getTdbAu().setPublicationRanges(publicationRanges);
+    tdbAu.setPublicationRanges(publicationRanges);
 
     Connection conn = dbManager.getConnection();
 
     // Create the publisher.
-    Long publisherSeq =
-	metadataManager.addPublisher(conn, "Publisher of [Title of [vol123]]");
+    String publisherName = "Publisher of [Title of [vol123]]";
+    Long publisherSeq =	metadataManager.addPublisher(conn, publisherName);
 
     // Create the publication.
     Long publicationSeq = 
@@ -1348,12 +1350,15 @@ public class TestSubscriptionManager extends LockssTestCase {
                                        MD_ITEM_TYPE_JOURNAL, 
                                        "Title of [vol123]", "id:11171508429");
 
-    // Create the publishing platform.
-    Long platformSeq = dbManager.addPlatform(conn, NO_PLATFORM);
+    // Add the provider.
+    TdbProvider provider = tdbAu.getTdbProvider();
+    // TODO: Replace the second argument with provider.getLid() when available.
+    Long providerSeq =
+	dbManager.findOrCreateProvider(conn, null, provider.getName());
 
     // Create the subscription.
     Long subscriptionSeq =
-	subManager.persistSubscription(conn, publicationSeq, platformSeq);
+	subManager.persistSubscription(conn, publicationSeq, providerSeq);
 
     DbManager.commitOrRollback(conn, log);
 

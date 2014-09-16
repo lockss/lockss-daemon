@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataDatabaseUtil.java,v 1.22 2014-09-09 22:51:09 pgust Exp $
+ * $Id: MetadataDatabaseUtil.java,v 1.23 2014-09-16 19:55:42 fergaloy-sf Exp $
  */
 
 /*
@@ -112,9 +112,7 @@ final public class MetadataDatabaseUtil {
       volume = resultSet.getString(11);
       coverageDepth = resultSet.getString(12);
       publicationType = resultSet.getString(13);
-      
-      // TODO: modify query
-      provider = publisher;
+      provider = resultSet.getString(14);
     }
 
     @Override
@@ -340,6 +338,7 @@ where
     + "  , b.volume as volume "
     + "  , mi2.coverage as coverage_depth "
     + "  , coalesce(mit0.type_name,mit1.type_name) as publication_type "
+    + "  , pv.provider_name "
     + "from "
     + "    publisher p "
     + "  , publication pn1 "
@@ -370,14 +369,17 @@ where
     + "      left join bib_item b "
     + "        on mi2.md_item_seq = b.md_item_seq "
     + "  , md_item_type mit1 "
+    + "  , au_md am "
+    + "  , provider pv "
     + "where "
     + "      p.publisher_seq = pn1.publisher_seq "
     + "  and pn1.md_item_seq = mi1.md_item_seq "
     + "  and mi1.md_item_type_seq = mit1.md_item_type_seq "
     + "  and mit1.type_name in ('journal','book')"
     + "  and mi1.md_item_seq = title.md_item_seq "
-    + "  and title.name_type = 'primary'";
-          
+    + "  and title.name_type = 'primary'"
+    + "  and mi2.au_md_seq = am.au_md_seq"
+    + "  and am.provider_seq = pv.provider_seq";
 
   /**
    * Returns a list of BibliographicItems from the metadata database.

@@ -1,5 +1,5 @@
 /*
- * $Id: SubscriptionManager.java,v 1.20 2014-08-29 20:50:02 pgust Exp $
+ * $Id: SubscriptionManager.java,v 1.21 2014-09-16 19:55:42 fergaloy-sf Exp $
  */
 
 /*
@@ -68,6 +68,7 @@ import org.lockss.app.ConfigurableManager;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.config.TdbAu;
+import org.lockss.config.TdbProvider;
 import org.lockss.config.TdbPublisher;
 import org.lockss.config.TdbTitle;
 import org.lockss.config.TdbUtil;
@@ -121,19 +122,19 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       PREFIX + "repositoryAvailSpaceThreshold";
   public static final int DEFAULT_REPOSITORY_AVAIL_SPACE_THRESHOLD = 0;
 
-  // Query to find a subscription by its publication and platform.
+  // Query to find a subscription by its publication and provider.
   private static final String FIND_SUBSCRIPTION_QUERY = "select "
       + SUBSCRIPTION_SEQ_COLUMN
       + " from " + SUBSCRIPTION_TABLE
       + " where " + PUBLICATION_SEQ_COLUMN + " = ?"
-      + " and " + PLATFORM_SEQ_COLUMN + " = ?";
+      + " and " + PROVIDER_SEQ_COLUMN + " = ?";
 
   // Query to add a subscription.
   private static final String INSERT_SUBSCRIPTION_QUERY = "insert into "
       + SUBSCRIPTION_TABLE
       + "(" + SUBSCRIPTION_SEQ_COLUMN
       + "," + PUBLICATION_SEQ_COLUMN
-      + "," + PLATFORM_SEQ_COLUMN
+      + "," + PROVIDER_SEQ_COLUMN
       + ") values (default,?,?)";
 
   // Query to find the subscription ranges of a publication.
@@ -189,47 +190,60 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       "select distinct"
       + " pu." + PUBLISHER_NAME_COLUMN
       + ",n." + NAME_COLUMN
-      + ",pl." + PLATFORM_NAME_COLUMN
+      + ",pr." + PROVIDER_LID_COLUMN
+      + ",pr." + PROVIDER_NAME_COLUMN
       + " from " + SUBSCRIPTION_RANGE_TABLE + " sr"
       + "," + SUBSCRIPTION_TABLE + " s"
       + "," + PUBLISHER_TABLE + " pu"
       + "," + PUBLICATION_TABLE + " p"
       + "," + MD_ITEM_NAME_TABLE + " n"
-      + "," + PLATFORM_TABLE + " pl"
+      + "," + PROVIDER_TABLE + " pr"
       + " where sr." + SUBSCRIPTION_SEQ_COLUMN + " = s."
       + SUBSCRIPTION_SEQ_COLUMN
       + " and s." + PUBLICATION_SEQ_COLUMN + " = p." + PUBLICATION_SEQ_COLUMN
       + " and p." + PUBLISHER_SEQ_COLUMN + " = pu." + PUBLISHER_SEQ_COLUMN
       + " and p." + MD_ITEM_SEQ_COLUMN + " = n." + MD_ITEM_SEQ_COLUMN
-      + " and s." + PLATFORM_SEQ_COLUMN + " = pl." + PLATFORM_SEQ_COLUMN
+      + " and s." + PROVIDER_SEQ_COLUMN + " = pr." + PROVIDER_SEQ_COLUMN
       + " order by pu." + PUBLISHER_NAME_COLUMN
       + ",n." + NAME_COLUMN
-      + ",pl." + PLATFORM_NAME_COLUMN;
+      + ",pr." + PROVIDER_NAME_COLUMN;
 
   // Query to find all the subscriptions and their ranges.
   private static final String FIND_ALL_SUBSCRIPTIONS_AND_RANGES_QUERY = "select"
       + " s." + SUBSCRIPTION_SEQ_COLUMN
       + ",n." + NAME_COLUMN
-      + ",pr." + PUBLISHER_NAME_COLUMN
-      + ",pl." + PLATFORM_NAME_COLUMN
+      + ",p." + PUBLICATION_ID_COLUMN
+      + ",pu." + PUBLISHER_NAME_COLUMN
+      + ",pr." + PROVIDER_LID_COLUMN
+      + ",pr." + PROVIDER_NAME_COLUMN
       + ",sr." + SUBSCRIPTION_RANGE_COLUMN
       + ",sr." + SUBSCRIBED_COLUMN
       + ",sr." + RANGE_IDX_COLUMN
+      + ",i1." + ISSN_COLUMN + " as " + P_ISSN_TYPE
+      + ",i2." + ISSN_COLUMN + " as " + E_ISSN_TYPE
       + " from " + SUBSCRIPTION_TABLE + " s"
       + "," + PUBLICATION_TABLE + " p"
-      + "," + PUBLISHER_TABLE + " pr"
+      + "," + PUBLISHER_TABLE + " pu"
       + "," + MD_ITEM_NAME_TABLE + " n"
-      + "," + PLATFORM_TABLE + " pl"
+      + "," + PROVIDER_TABLE + " pr"
       + "," + SUBSCRIPTION_RANGE_TABLE + " sr"
+      + "," + MD_ITEM_TABLE + " mi"
+      + " left outer join " + ISSN_TABLE + " i1"
+      + " on mi." + MD_ITEM_SEQ_COLUMN + " = i1." + MD_ITEM_SEQ_COLUMN
+      + " and i1." + ISSN_TYPE_COLUMN + " = '" + P_ISSN_TYPE + "'"
+      + " left outer join " + ISSN_TABLE + " i2"
+      + " on mi." + MD_ITEM_SEQ_COLUMN + " = i2." + MD_ITEM_SEQ_COLUMN
+      + " and i2." + ISSN_TYPE_COLUMN + " = '" + E_ISSN_TYPE + "'"
       + " where s." + PUBLICATION_SEQ_COLUMN + " = p." + PUBLICATION_SEQ_COLUMN
-      + " and p." + PUBLISHER_SEQ_COLUMN + " = pr." + PUBLISHER_SEQ_COLUMN
+      + " and p." + PUBLISHER_SEQ_COLUMN + " = pu." + PUBLISHER_SEQ_COLUMN
+      + " and p." + MD_ITEM_SEQ_COLUMN + " = mi." + MD_ITEM_SEQ_COLUMN
       + " and p." + MD_ITEM_SEQ_COLUMN + " = n." + MD_ITEM_SEQ_COLUMN
       + " and n." + NAME_TYPE_COLUMN + " = 'primary'"
-      + " and s." + PLATFORM_SEQ_COLUMN + " = pl." + PLATFORM_SEQ_COLUMN
+      + " and s." + PROVIDER_SEQ_COLUMN + " = pr." + PROVIDER_SEQ_COLUMN
       + " and s." + SUBSCRIPTION_SEQ_COLUMN + " = sr." + SUBSCRIPTION_SEQ_COLUMN
-      + " order by pr." + PUBLISHER_NAME_COLUMN
+      + " order by pu." + PUBLISHER_NAME_COLUMN
       + ",n." + NAME_COLUMN
-      + ",pl." + PLATFORM_NAME_COLUMN
+      + ",pr." + PROVIDER_NAME_COLUMN
       + ",sr." + SUBSCRIPTION_RANGE_COLUMN
       + ",sr." + SUBSCRIBED_COLUMN
       + ",sr." + RANGE_IDX_COLUMN;
@@ -262,7 +276,8 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       + " pu." + PUBLISHER_NAME_COLUMN
       + ",p." + PUBLICATION_ID_COLUMN
       + ",n." + NAME_COLUMN
-      + ",pl." + PLATFORM_NAME_COLUMN
+      + ",pr." + PROVIDER_LID_COLUMN
+      + ",pr." + PROVIDER_NAME_COLUMN
       + ",i1." + ISSN_COLUMN + " as " + P_ISSN_TYPE
       + ",i2." + ISSN_COLUMN + " as " + E_ISSN_TYPE
       + ",sr." + SUBSCRIPTION_RANGE_COLUMN
@@ -273,7 +288,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       + "," + PUBLISHER_TABLE + " pu"
       + "," + PUBLICATION_TABLE + " p"
       + "," + MD_ITEM_NAME_TABLE + " n"
-      + "," + PLATFORM_TABLE + " pl"
+      + "," + PROVIDER_TABLE + " pr"
       + "," + MD_ITEM_TABLE + " mi"
       + " left outer join " + ISSN_TABLE + " i1"
       + " on mi." + MD_ITEM_SEQ_COLUMN + " = i1." + MD_ITEM_SEQ_COLUMN
@@ -288,10 +303,10 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       + " and p." + MD_ITEM_SEQ_COLUMN + " = mi." + MD_ITEM_SEQ_COLUMN
       + " and mi." + MD_ITEM_SEQ_COLUMN + " = n." + MD_ITEM_SEQ_COLUMN
       + " and n." + NAME_TYPE_COLUMN + " = '" + PRIMARY_NAME_TYPE + "'"
-      + " and s." + PLATFORM_SEQ_COLUMN + " = pl." + PLATFORM_SEQ_COLUMN
+      + " and s." + PROVIDER_SEQ_COLUMN + " = pr." + PROVIDER_SEQ_COLUMN
       + " order by pu." + PUBLISHER_NAME_COLUMN
       + ",n." + NAME_COLUMN
-      + ",pl." + PLATFORM_NAME_COLUMN;
+      + ",pr." + PROVIDER_NAME_COLUMN;
 
   // Query to update the type of a subscription range.
   private static final String UPDATE_SUBSCRIPTION_RANGE_TYPE_QUERY = "update "
@@ -352,8 +367,8 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	return nameComparison;
       }
 
-      // Sort by platform name if the publication name is the same.
-      return o1.getPlatformName().compareTo(o2.getPlatformName());
+      // Sort by provider name if the publication name is the same.
+      return o1.getProviderName().compareTo(o2.getProviderName());
     }
   };
 
@@ -371,8 +386,8 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	return nameComparison;
       }
 
-      // Sort by platform name if the publication name is the same.
-      return p1.getPlatformName().compareTo(p2.getPlatformName());
+      // Sort by provider name if the publication name is the same.
+      return p1.getProviderName().compareTo(p2.getProviderName());
     }
   };
 
@@ -752,21 +767,28 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     String eIssn = MetadataUtil.toUnpunctuatedIssn(title.getEissn());
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "eIssn = " + eIssn);
 
-    // Locate the title publication in the database (bookSeries or other)
+    // Get the publication type.
     String pubType = title.getPublicationType();
-    Long publicationSeq;
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pubType = " + pubType);
+
+    // Check whether it's not a serial publication type.
+    if (!isSerialPublicationType(pubType)) {
+      // Yes: Report the problem.
+      log.error("Unexpected publication type '" + pubType 
+	  + "' for subscription to title '" + name + "'");
+      return null;
+    }
+
+    // Locate the title publication in the database (bookSeries or other)
+    Long publicationSeq = null;
     if (MetadataField.PUBLICATION_TYPE_BOOKSERIES.equals(pubType)) {
       // Find the book series, where name is series title
-      publicationSeq = mdManager.findBookSeries(conn, publisherSeq,
-                                                pIssn, eIssn, name);
+      publicationSeq =
+	  mdManager.findBookSeries(conn, publisherSeq, pIssn, eIssn, name);
     } else if (MetadataField.PUBLICATION_TYPE_JOURNAL.equals(pubType)) {
       // name is journal title
-      publicationSeq = mdManager.findJournal(conn, publisherSeq,
-                                             pIssn, eIssn, name);
-    } else {
-      log.error(  "Unexpected publication type '" + pubType 
-                + "' for subscription to title '" + name + "'");
-      return null;
+      publicationSeq =
+	  mdManager.findJournal(conn, publisherSeq, pIssn, eIssn, name);
     }
     
     if (log.isDebug3())
@@ -780,21 +802,25 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     }
 
     Set<Long> result = new HashSet<Long>();
-    Long platformSeq;
+    Long providerSeq;
     Long subscriptionSeq = null;
-    
-    // Loop through all the title platforms.
-    for (String platform : getTitlePlatforms(title)) {
-      // Find the publishing platform in the database.
-      platformSeq = mdManager.findPlatform(conn, platform);
-      if (log.isDebug3())
-	log.debug3(DEBUG_HEADER + "platformSeq = " + platformSeq);
 
-      // Check whether the platform exists in the database.
-      if (platformSeq != null) {
+    // Loop through all the title providers.
+    for (TdbProvider provider : title.getTdbProviders()) {
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "provider = " + provider);
+
+      // Find the provider in the database.
+      // TODO: Replace the second argument with provider.getLid() when
+      // available.
+      providerSeq = dbManager.findProvider(conn, null, provider.getName());
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "providerSeq = " + providerSeq);
+
+      // Check whether the provider exists in the database.
+      if (providerSeq != null) {
 	// Yes: Find in the database the publication subscription for the
-	// platform.
-	subscriptionSeq = findSubscription(conn, publicationSeq, platformSeq);
+	// provider.
+	subscriptionSeq = findSubscription(conn, publicationSeq, providerSeq);
 	if (log.isDebug3())
 	  log.debug3(DEBUG_HEADER + "subscriptionSeq = " + subscriptionSeq);
 
@@ -810,8 +836,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	  unsubscribedRanges
 	  	.addAll(findSubscriptionRanges(conn, subscriptionSeq, false));
 
-	  // Add this platform identifier/subscription identifier pai to the
-	  // results.
+	  // Add this subscription identifier to the results.
 	  result.add(subscriptionSeq);
 	}
       }
@@ -1069,47 +1094,17 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
   }
 
   /**
-   * Provides the platforms of a title.
+   * Provides an indication of whether a publication type corresponds to a
+   * serial publication.
    * 
-   * @param title
-   *          A TdbTitle with the title.
-   * @return a Collection<String> with the title platforms.
+   * @param pubType
+   *          A String with the publication type.
+   * @return a boolean with <code>true</code> if this publication type
+   *         corresponds to a serial publication, <code>false</code> otherwise.
    */
-  private Collection<String> getTitlePlatforms(TdbTitle title) {
-    final String DEBUG_HEADER = "getTitlePlatforms(): ";
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "title = " + title);
-
-    // Get the title archival units.
-    Collection<TdbAu> titleAus = title.getTdbAus();
-    if (log.isDebug3())
-      log.debug3(DEBUG_HEADER + "titleAus.size() = " + titleAus.size());
-
-    String pluginId;
-    String platform;
-    Collection<String> platforms = new HashSet<String>();
-
-    // Loop through all the title archival units.
-    for (TdbAu au : titleAus) {
-      // Get the plugin identifier.
-      pluginId = PluginManager.pluginKeyFromName(au.getPluginId());
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pluginId = " + pluginId);
-
-      // Get the plugin platform.
-      platform = pluginManager.getPlugin(pluginId).getPublishingPlatform();
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "platform = " + platform);
-
-      // Add it to the results if it is not null.
-      if (platform != null) {
-	platforms.add(platform);
-      }
-    }
-
-    if (platforms.size() == 0) {
-      platforms.add(NO_PLATFORM);
-    }
-
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "platforms = " + platforms);
-    return platforms;
+  private boolean isSerialPublicationType(String pubType) {
+    return (MetadataField.PUBLICATION_TYPE_BOOKSERIES.equals(pubType) ||
+	MetadataField.PUBLICATION_TYPE_JOURNAL.equals(pubType));
   }
 
   /**
@@ -1119,18 +1114,18 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    *          A Connection with the database connection to be used.
    * @param publicationSeq
    *          A Long with the identifier of the publication.
-   * @param platformSeq
-   *          A Long with the identifier of the platform.
+   * @param providerSeq
+   *          A Long with the identifier of the provider.
    * @return a Long with the identifier of the subscription.
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
   private Long findSubscription(Connection conn, Long publicationSeq,
-      Long platformSeq) throws DbException {
+      Long providerSeq) throws DbException {
     final String DEBUG_HEADER = "findSubscription(): ";
     if (log.isDebug2()) {
       log.debug2(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
-      log.debug2(DEBUG_HEADER + "platformSeq = " + platformSeq);
+      log.debug2(DEBUG_HEADER + "providerSeq = " + providerSeq);
     }
 
     PreparedStatement findSubscription =
@@ -1140,7 +1135,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 
     try {
       findSubscription.setLong(1, publicationSeq);
-      findSubscription.setLong(2, platformSeq);
+      findSubscription.setLong(2, providerSeq);
       resultSet = dbManager.executeQuery(findSubscription);
       if (resultSet.next()) {
 	subscriptionSeq = resultSet.getLong(SUBSCRIPTION_SEQ_COLUMN);
@@ -1151,7 +1146,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       log.error("Cannot find subscription", sqle);
       log.error("SQL = '" + FIND_SUBSCRIPTION_QUERY + "'.");
       log.error("publicationSeq = " + publicationSeq);
-      log.error("platformSeq = " + platformSeq);
+      log.error("providerSeq = " + providerSeq);
       throw new DbException("Cannot find subscription", sqle);
     } finally {
       DbManager.safeCloseResultSet(resultSet);
@@ -1315,9 +1310,9 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       log.debug3(DEBUG_HEADER + "proprietaryId = " + proprietaryId);
 
     // Get the periods covered by the title currently configured archival units,
-    // indexed by platform.
-    Map<String, List<BibliographicPeriod>> periodsByPlatform =
-	getTitleConfiguredCoveragePeriodsByPlatform(title.getSortedTdbAus(),
+    // indexed by provider.
+    Map<TdbProvider, List<BibliographicPeriod>> periodsByProvider =
+	getTitleConfiguredCoveragePeriodsByProvider(title.getSortedTdbAus(),
 	    configuredAus);
 
     try {
@@ -1326,8 +1321,18 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       if (log.isDebug3())
 	log.debug3(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
 
-      Long publicationSeq;
       String pubType = title.getPublicationType();
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pubType = " + pubType);
+
+      // Check whether it's not a serial publication type.
+      if (!isSerialPublicationType(pubType)) {
+	// Yes: Report the problem.
+        String msg = "Cannot subscribe to publication type '" + pubType + "'"; 
+        log.error(msg);
+        status.addStatusEntry(publicationName, false, msg, null);
+      }
+
+      Long publicationSeq = null;
       if (MetadataField.PUBLICATION_TYPE_BOOKSERIES.equals(pubType)) {
         publicationSeq = 
             mdManager.findOrCreateBookSeries(conn, publisherSeq, 
@@ -1338,26 +1343,22 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
             mdManager.findOrCreateJournal(conn, publisherSeq,  
                                           pIssn, eIssn, 
                                           publicationName, proprietaryId);
-      } else {
-        String msg = "cannot subscribe to publication type '" + pubType + "'"; 
-        log.error(msg);
-        status.addStatusEntry(publicationName, false, msg, null);
-        return;
       }
+
       if (log.isDebug3())
 	log.debug3(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
 
-      // Loop through all the platforms for which the title has archival units
+      // Loop through all the providers for which the title has archival units
       // currently configured.
-      for (String platform : periodsByPlatform.keySet()) {
-	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "platform = " + platform);
+      for (TdbProvider/*Map<String, String>*/ provider : periodsByProvider.keySet()) {
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "provider = " + provider);
 
-	List<BibliographicPeriod> periods = periodsByPlatform.get(platform);
+	List<BibliographicPeriod> periods = periodsByProvider.get(provider);
 	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "periods = " + periods);
 
 	// Create the subscriptions for the configured archival units for the
-	// publication and platform.
-	subscribePublicationPlatformConfiguredAus(publicationSeq, platform,
+	// publication and provider.
+	subscribePublicationProviderConfiguredAus(publicationSeq, provider,
 	    periods, conn);
       }
 
@@ -1378,29 +1379,29 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 
   /**
    * Provides the periods covered by the currently configured archival units of
-   * a title, indexed by platform.
+   * a title, indexed by provider.
    * 
    * @param titleAus
    *          A list of TdbAus with the title
    * @param configuredAus
    *          A List<TdbAu> with the archival units already configured in the
    *          system.
-   * @return a Map<String, List<BibliographicPeriod>> with the periods covered
-   *         by the currently configured archival units of the title, indexed by
-   *         platform.
+   * @return a Map<TdbProvider, List<BibliographicPeriod>> with the periods
+   *         covered by the currently configured archival units of the title,
+   *         indexed by provider.
    */
-  private Map<String, List<BibliographicPeriod>>
-  getTitleConfiguredCoveragePeriodsByPlatform(List<TdbAu> titleAus,
+  private Map<TdbProvider, List<BibliographicPeriod>>
+  getTitleConfiguredCoveragePeriodsByProvider(List<TdbAu> titleAus,
       List<TdbAu> configuredAus) {
     final String DEBUG_HEADER =
-	"getTitleConfiguredCoveragePeriodsByPlatform(): ";
+	"getTitleConfiguredCoveragePeriodsByProvider(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "titleAus = " + titleAus);
 
-    Map<String, List<BibliographicPeriod>> periodsByPlatform =
-	new HashMap<String, List<BibliographicPeriod>>();
+    Map<TdbProvider, List<BibliographicPeriod>> periodsByProvider =
+	new HashMap<TdbProvider, List<BibliographicPeriod>>();
 
-    String platform = null;
-    String lastPlatform = null;
+    TdbProvider provider = null;
+    TdbProvider lastProvider = null;
     List<BibliographicPeriod> periods = null;
     BibliographicPeriod period = null;
 
@@ -1411,18 +1412,13 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       try {
 	// Check whether the archival unit is not down and it is configured.
 	if (!au.isDown() && configuredAus.contains(au)) {
-	  // Yes: Get the plugin identifier.
-	  String pluginId = PluginManager.pluginKeyFromName(au.getPluginId());
+	  // Yes: Get the provider.
+	  provider = au.getTdbProvider();
 	  if (log.isDebug3())
-	    log.debug3(DEBUG_HEADER + "pluginId = " + pluginId);
+	    log.debug3(DEBUG_HEADER + "provider = " + provider);
 
-	  // Get the plugin platform.
-	  platform = pluginManager.getPlugin(pluginId).getPublishingPlatform();
-	  if (log.isDebug3())
-	    log.debug3(DEBUG_HEADER + "platform = " + platform);
-
-	  // Check whether there is a platform change.
-	  if (lastPlatform != null && !lastPlatform.equals(platform)) {
+	  // Check whether there is a provider change.
+	  if (lastProvider != null && !lastProvider.equals(provider)) {
 	    // Check whether there is a period defined by the previous archival
 	    // unit that needs to be saved.
 	    if (period != null) {
@@ -1434,17 +1430,17 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	      period = null;
 
 	      // Add the list of periods to the result map.
-	      periodsByPlatform.put(lastPlatform, periods);
+	      periodsByProvider.put(lastProvider, periods);
 
-	      lastPlatform = platform;
+	      lastProvider = provider;
 	    }
 	  }
 
-	  // Check whether this platform already exists in the result map.
-	  if (periodsByPlatform.containsKey(platform)) {
-	    // Yes: Get the list of periods for this platform already in the
+	  // Check whether this provider already exists in the result map.
+	  if (periodsByProvider.containsKey(provider)) {
+	    // Yes: Get the list of periods for this provider already in the
 	    // result map.
-	    periods = periodsByPlatform.get(platform);
+	    periods = periodsByProvider.get(provider);
 	  } else {
 	    // No: Initialize the list of periods.
 	    periods = new ArrayList<BibliographicPeriod>();
@@ -1456,7 +1452,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	      + auRangesLastIndex);
 
 	  // Check whether this configured archival unit follows another
-	  // configured archival unit for the same platform.
+	  // configured archival unit for the same provider.
 	  if (period != null) {
 	    // Yes: Check whether the end edge of the last publication range of
 	    // the archival unit exists.
@@ -1469,7 +1465,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	      // No: report the problem.
 	      log.warning("Skipped invalid last range "
 		  + auRanges.get(auRangesLastIndex) + " for AU = " + au
-		  + ", pluginId = " + pluginId + ", platform = " + platform);
+		  + ", provider = " + provider);
 	    }
 	  } else {
 	    // No: Check whether both the start edge of the first publication
@@ -1487,7 +1483,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	      log.warning("Skipped invalid first range "
 		  + auRanges.get(0) + " and/or last range "
 		  + auRanges.get(auRangesLastIndex) + " for AU = " + au
-		  + ", pluginId = " + pluginId + ", platform = " + platform);
+		  + ", provider = " + provider);
 	    }
 	  }
 
@@ -1508,7 +1504,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	    period = null;
 
 	    // Add the list of periods to the result map.
-	    periodsByPlatform.put(platform, periods);
+	    periodsByProvider.put(provider, periods);
 	  }
 	}
       } catch (RuntimeException re) {
@@ -1525,21 +1521,21 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	log.debug3(DEBUG_HEADER + "periods.size() = " + periods.size());
 
       // Add the list of periods to the result map.
-      periodsByPlatform.put(platform, periods);
+      periodsByProvider.put(provider, periods);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
-    return periodsByPlatform;
+    return periodsByProvider;
   }
 
   /**
-   * Creates subscriptions for the archival units of a title in a platform
-   * configured in the system.
+   * Creates subscriptions for the archival units of a title for a provider
+   * that are configured in the system.
    * 
    * @param publicationSeq
    *          A Long with the publication identifier.
-   * @param platform
-   *          A String with the publication platform.
+   * @param provider
+   *          A Map<String, String> with the provider information.
    * @param periods
    *          A List<BibliographicPeriod> with the periods of the archival
    *          units.
@@ -1548,24 +1544,27 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  private void subscribePublicationPlatformConfiguredAus(Long publicationSeq,
-      String platform, List<BibliographicPeriod> periods, Connection conn)
-      throws DbException {
-    final String DEBUG_HEADER = "subscribePublicationPlatformConfiguredAus(): ";
+  private void subscribePublicationProviderConfiguredAus(Long publicationSeq,
+      TdbProvider/*Map<String, String>*/ provider, List<BibliographicPeriod> periods,
+      Connection conn) throws DbException {
+    final String DEBUG_HEADER = "subscribePublicationProviderConfiguredAus(): ";
     if (log.isDebug2()) {
       log.debug2(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
-      log.debug2(DEBUG_HEADER + "platform = " + platform);
+      log.debug2(DEBUG_HEADER + "provider = " + provider);
       log.debug2(DEBUG_HEADER + "periods = " + periods);
     }
 
-    // Find the publishing platform in the database or create it.
-    Long platformSeq = mdManager.findOrCreatePlatform(conn, platform);
+    // Find the provider in the database or create it.
+    // TODO: Replace the second argument with provider().getLid() when
+    // available.
+    Long providerSeq =
+	dbManager.findOrCreateProvider(conn, null, provider.getName());
     if (log.isDebug3())
-      log.debug3(DEBUG_HEADER + "platformSeq = " + platformSeq);
+      log.debug3(DEBUG_HEADER + "providerSeq = " + providerSeq);
 
     // Find the subscription in the database or create it.
     Long subscriptionSeq =
-	findOrCreateSubscription(conn, publicationSeq, platformSeq);
+	findOrCreateSubscription(conn, publicationSeq, providerSeq);
     if (log.isDebug3())
       log.debug3(DEBUG_HEADER + "subscriptionSeq = " + subscriptionSeq);
 
@@ -1579,7 +1578,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     int periodCount = periods.size();
 
     // Loop through all the coalesced subscribed ranges covered by the title
-    // currently configured archival units for this platform.
+    // currently configured archival units for this provider.
     for (BibliographicPeriod period : periods) {
       if (log.isDebug3()) {
 	log.debug3(DEBUG_HEADER + "period = " + period);
@@ -1613,29 +1612,29 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    *          A Connection with the database connection to be used.
    * @param publicationSeq
    *          A Long with the identifier of the publication.
-   * @param platformSeq
-   *          A Long with the identifier of the platform.
+   * @param providerSeq
+   *          A Long with the identifier of the provider.
    * @return a Long with the identifier of the subscription.
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
   private Long findOrCreateSubscription(Connection conn, Long publicationSeq,
-      Long platformSeq) throws DbException {
+      Long providerSeq) throws DbException {
     final String DEBUG_HEADER = "findOrCreateSubscription(): ";
     if (log.isDebug2()) {
       log.debug2(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
-      log.debug2(DEBUG_HEADER + "platformSeq = " + platformSeq);
+      log.debug2(DEBUG_HEADER + "providerSeq = " + providerSeq);
     }
 
     // Locate the subscription in the database.
-    Long subscriptionSeq = findSubscription(conn, publicationSeq, platformSeq);
+    Long subscriptionSeq = findSubscription(conn, publicationSeq, providerSeq);
     if (log.isDebug3())
       log.debug3(DEBUG_HEADER + "old subscriptionSeq = " + subscriptionSeq);
 
     // Check whether it is a new subscription.
     if (subscriptionSeq == null) {
       // Yes: Add to the database the new subscription.
-      subscriptionSeq = persistSubscription(conn, publicationSeq, platformSeq);
+      subscriptionSeq = persistSubscription(conn, publicationSeq, providerSeq);
       if (log.isDebug3())
 	log.debug3(DEBUG_HEADER + "new subscriptionSeq = " + subscriptionSeq);
     }
@@ -1758,18 +1757,18 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    *          A Connection with the database connection to be used.
    * @param publicationSeq
    *          A Long with the identifier of the publication.
-   * @param platformSeq
-   *          A Long with the identifier of the platform.
+   * @param providerSeq
+   *          A Long with the identifier of the provider.
    * @return a Long with the identifier of the subscription just added.
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
   Long persistSubscription(Connection conn, Long publicationSeq,
-      Long platformSeq) throws DbException {
+      Long providerSeq) throws DbException {
     final String DEBUG_HEADER = "persistSubscription(): ";
     if (log.isDebug2()) {
       log.debug2(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
-      log.debug2(DEBUG_HEADER + "platformSeq = " + platformSeq);
+      log.debug2(DEBUG_HEADER + "providerSeq = " + providerSeq);
     }
 
     PreparedStatement insertSubscription = dbManager.prepareStatement(conn,
@@ -1781,13 +1780,13 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     try {
       // Skip auto-increment key field #0
       insertSubscription.setLong(1, publicationSeq);
-      insertSubscription.setLong(2, platformSeq);
+      insertSubscription.setLong(2, providerSeq);
       dbManager.executeUpdate(insertSubscription);
       resultSet = insertSubscription.getGeneratedKeys();
 
       if (!resultSet.next()) {
 	log.error("Unable to create SUBSCRIPTION table row: publicationSeq = "
-	    + publicationSeq + ", platformSeq = " + platformSeq
+	    + publicationSeq + ", providerSeq = " + providerSeq
 	    + " - No keys were generated.");
 	if (log.isDebug2()) log.debug2(DEBUG_HEADER + "subscriptionSeq = null");
 	return null;
@@ -1800,7 +1799,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       log.error("Cannot insert subscription", sqle);
       log.error("SQL = '" + INSERT_SUBSCRIPTION_QUERY + "'.");
       log.error("publicationSeq = " + publicationSeq);
-      log.error("platformSeq = " + platformSeq);
+      log.error("providerSeq = " + providerSeq);
       throw new DbException("Cannot insert subscription", sqle);
     } finally {
       DbManager.safeCloseResultSet(resultSet);
@@ -1827,8 +1826,12 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 
     Long subscriptionSeq;
     String publicationName;
+    String publicationId;
+    String pIssn;
+    String eIssn;
     String publisherName;
-    String platformName;
+    String providerLid;
+    String providerName;
     String ranges;
     boolean subscribed;
     SerialPublication publication;
@@ -1859,13 +1862,27 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	if (log.isDebug3())
 	  log.debug3(DEBUG_HEADER + "publicationName = " + publicationName);
 
+	publicationId = resultSet.getString(PUBLICATION_ID_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "publicationId = " + publicationId);
+
+        pIssn = resultSet.getString(P_ISSN_TYPE);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pIssn = " + pIssn);
+
+        eIssn = resultSet.getString(E_ISSN_TYPE);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "eIssn = " + eIssn);
+
 	publisherName = resultSet.getString(PUBLISHER_NAME_COLUMN);
 	if (log.isDebug3())
 	  log.debug3(DEBUG_HEADER + "publisherName = " + publisherName);
 
-	platformName = resultSet.getString(PLATFORM_NAME_COLUMN);
+	providerLid = resultSet.getString(PROVIDER_LID_COLUMN);
 	if (log.isDebug3())
-	  log.debug3(DEBUG_HEADER + "platformName = " + platformName);
+	  log.debug3(DEBUG_HEADER + "providerLid = " + providerLid);
+
+	providerName = resultSet.getString(PROVIDER_NAME_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "providerName = " + providerName);
 
 	ranges = resultSet.getString(SUBSCRIPTION_RANGE_COLUMN);
 	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "ranges = " + ranges);
@@ -1898,8 +1915,12 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	  // Initialize the new subscription publication.
 	  publication = new SerialPublication();
 	  publication.setPublicationName(publicationName);
+	  publication.setProprietaryId(publicationId);
+	  publication.setPissn(pIssn);
+	  publication.setEissn(eIssn);
 	  publication.setPublisherName(publisherName);
-	  publication.setPlatformName(platformName);
+	  publication.setProviderLid(providerLid);
+	  publication.setProviderName(providerName);
 
 	  // Initialize the new subscription.
 	  subscription = new Subscription();
@@ -1930,8 +1951,8 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       DbManager.safeCloseStatement(getAllSubscriptionRanges);
     }
 
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "subscriptions.size() = "
-	+ subscriptions.size());
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "subscriptions = " + subscriptions);
     return subscriptions;
   }
 
@@ -1999,10 +2020,6 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     Collection<Subscription> publisherSubscriptions = null;
     String publisherName;
     String titleName;
-    Set<String> pluginIds;
-    Plugin plugin;
-    Set<String> platformNames;
-    int platformCount = 0;
     SerialPublication publication;
     int publicationNumber = 1;
 
@@ -2036,55 +2053,29 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	if (log.isDebug3())
 	  log.debug3(DEBUG_HEADER + "titleName = " + titleName);
 
-	pluginIds = new HashSet<String>();
-	platformNames = new HashSet<String>();
-
-	if (log.isDebug3()) log.debug3(DEBUG_HEADER
-	    + "title.getTdbAus().size() = " + title.getTdbAus().size());
-
-	// Get all the plugin identifiers for all the archival units of the
-	// title.
-	for (TdbAu au : title.getTdbAus()) {
-	  pluginIds.add(au.getPluginId());
-	}
-
-	if (log.isDebug3())
-	  log.debug3(DEBUG_HEADER + "pluginIds.size() = " + pluginIds.size());
-
-	// Get all the platforms for all the plugins used by the title.
-	for (String pluginId : pluginIds) {
+	// Loop through all the title providers. 
+	for (TdbProvider provider : title.getTdbProviders()) {
+	  String providerName = provider.getName();
 	  if (log.isDebug3())
-	    log.debug3(DEBUG_HEADER + "pluginId = " + pluginId);
+	    log.debug3(DEBUG_HEADER + "providerName = " + providerName);
 
-	  plugin = pluginManager.getPlugin(pluginId);
+	  // TODO: Replace with provider.getLid() when available.
+	  String providerLid = null;
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "providerLid = " + providerLid);
 
-	  if (plugin != null) {
-	    platformNames.add(plugin.getPublishingPlatform());
-	  }
-	}
-
-	// If no platform is found, use the dummy 'NO PLATFORM' one.
-	platformCount = platformNames.size();
-	if (log.isDebug3())
-	  log.debug3(DEBUG_HEADER + "platformCount = " + platformCount);
-
-	if (platformCount == 0) {
-	  platformNames.add(NO_PLATFORM);
-	}
-
-	// Loop through all the title platforms. 
-	for (String platformName : platformNames) {
 	  // Check whether there is no subscription defined for this title and
-	  // this platform.
+	  // this provider.
 	  if (publisherSubscriptions == null
-	      || !matchSubscriptionTitleAndPlatform(publisherSubscriptions,
-		  titleName, platformName)) {
+	      || !matchSubscriptionTitleAndProvider(publisherSubscriptions,
+		  titleName, providerLid, providerName)) {
 	    // Yes: Add the publication to the list of publications with no
 	    // subscriptions.
 	    publication = new SerialPublication();
 	    publication.setPublicationNumber(publicationNumber++);
 	    publication.setPublicationName(titleName);
-	    publication.setPlatformName(platformName);
+	    publication.setProviderLid(providerLid);
+	    publication.setProviderName(providerName);
 	    publication.setPublisherName(publisherName);
 	    publication.setPissn(title.getPrintIssn());
 	    publication.setEissn(title.getEissn());
@@ -2126,7 +2117,8 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
     String publicationName;
-    String platformName;
+    String providerLid;
+    String providerName;
     String publisherName;
     SerialPublication publication;
     Subscription subscription;
@@ -2154,14 +2146,19 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	if (log.isDebug3())
 	  log.debug3(DEBUG_HEADER + "publicationName = " + publicationName);
 
-	platformName = resultSet.getString(PLATFORM_NAME_COLUMN);
+	providerLid = resultSet.getString(PROVIDER_LID_COLUMN);
 	if (log.isDebug3())
-	  log.debug3(DEBUG_HEADER + "platformName = " + platformName);
+	  log.debug3(DEBUG_HEADER + "providerLid = " + providerLid);
+
+	providerName = resultSet.getString(PROVIDER_NAME_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "providerName = " + providerName);
 
 	publication = new SerialPublication();
 	publication.setPublisherName(publisherName);
 	publication.setPublicationName(publicationName);
-	publication.setPlatformName(platformName);
+	publication.setProviderLid(providerLid);
+	publication.setProviderName(providerName);
 
 	subscription = new Subscription();
 	subscription.setPublication(publication);
@@ -2273,69 +2270,29 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
   }
 
   /**
-   * Provides the titles of a publisher that can be the subject of a
-   * subscription.
-   * 
-   * @param publisher
-   *          A TdbPublisher with the publisher.
-   * @return a Collection<TdbTitle> with the titles that can be the subject of a
-   *         subscription.
-   */
-  /*private Collection<TdbTitle> getSubscribableTitles(TdbPublisher publisher) {
-    final String DEBUG_HEADER = "getSubscribableTitles(): ";
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "publisher = " + publisher);
-
-    Collection<TdbTitle> subscribableTitles =
-	new ArrayList<TdbTitle>(publisher.getTdbAuCount());
-
-    // Loop through all the titles.
-    for (TdbTitle title : publisher.getTdbTitles()) {
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "title = " + title);
-
-      if (title.isSerial()) {
-	for (TdbAu tdbAu : title.getTdbAus()) {
-	  if (!tdbAu.isDown()) {
-	    subscribableTitles.add(title);
-	    break;
-	  }
-	}
-
-	if (log.isDebug3()) {
-	  if (!subscribableTitles.contains(title)) {
-	    log.debug3(DEBUG_HEADER + "title '" + title
-		+ "' is not subscribable because all of its AUs are down.");
-	  }
-	}
-      } else {
-	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "title '" + title
-	    + "' is not subscribable because it's not a serial publication.");
-      }
-    }
-
-    return subscribableTitles;
-  }*/
-
-  /**
    * Provides an indication of whether there is a subscription defined for this
-   * title and this platform.
+   * title and this provider.
    * 
    * @param subscriptions
    *          A Collection<Subscription> with all the subscriptions.
    * @param titleName
    *          A String with the name of the title.
-   * @param platformName
-   *          A String with the name of the platform.
+   * @param providerLid
+   *          A String with the LOCKSS identifier of the provider.
+   * @param providerName
+   *          A String with the name of the provider.
    * @return a boolean with <code>true</code> if the subscription for the title
-   *         and platform exists, <code>false</code> otherwise.
+   *         and provider exists, <code>false</code> otherwise.
    */
-  private boolean matchSubscriptionTitleAndPlatform(
+  private boolean matchSubscriptionTitleAndProvider(
       Collection<Subscription> subscriptions, String titleName,
-      String platformName) {
-    final String DEBUG_HEADER = "matchSubscriptionTitleAndPlatform(): ";
+      String providerLid, String providerName) {
+    final String DEBUG_HEADER = "matchSubscriptionTitleAndProvider(): ";
     if (log.isDebug2()) {
       log.debug2(DEBUG_HEADER + "subscriptions = " + subscriptions);
       log.debug2(DEBUG_HEADER + "titleName = " + titleName);
-      log.debug2(DEBUG_HEADER + "platformName = " + platformName);
+      log.debug2(DEBUG_HEADER + "providerLid = " + providerLid);
+      log.debug2(DEBUG_HEADER + "providerName = " + providerName);
     }
 
     // Handle the case when there are no subscriptions.
@@ -2358,7 +2315,9 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 
       // Check whether there is a match.
       if (publication.getPublicationName().equals(titleName)
-	  && publication.getPlatformName().equals(platformName)) {
+	  && (publication.getProviderLid() == null
+	      || publication.getProviderLid().equals(providerLid))
+	  && publication.getProviderName().equals(providerName)) {
 	// Yes: No need for further checking.
 	if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Found match.");
 	return true;
@@ -2383,14 +2342,26 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     if (log.isDebug2())
       log.debug2(DEBUG_HEADER + "publication = " + publication);
 
-    // Normalize the platform name, if necessary.
-    if (!StringUtil.isNullString(publication.getPlatformName())) {
-      if (publication.getPlatformName().length() > MAX_PLATFORM_COLUMN) {
-	log.warning("platform too long '" + publication.getPlatformName()
+    // Normalize the provider LOCKSS identifier, if necessary.
+    if (!StringUtil.isNullString(publication.getProviderLid())) {
+      if (publication.getProviderLid().length() > MAX_LID_COLUMN) {
+	log.warning("provider LOCKSS ID too long '"
+	    + publication.getProviderLid() + "' for title: '"
+	    + publication.getPublicationName() + "' publisher: "
+	    + publication.getPublisherName() + "'");
+	publication.setProviderLid(DbManager.truncateVarchar(
+	    publication.getProviderLid(), MAX_LID_COLUMN));
+      }
+    }
+
+    // Normalize the provider name, if necessary.
+    if (!StringUtil.isNullString(publication.getProviderName())) {
+      if (publication.getProviderName().length() > MAX_NAME_COLUMN) {
+	log.warning("provider name too long '" + publication.getProviderName()
 	    + "' for title: '" + publication.getPublicationName()
 	    + "' publisher: " + publication.getPublisherName() + "'");
-	publication.setPlatformName(DbManager.truncateVarchar(
-	    publication.getPlatformName(), MAX_PLATFORM_COLUMN));
+	publication.setProviderName(DbManager.truncateVarchar(
+	    publication.getProviderName(), MAX_NAME_COLUMN));
       }
     }
 
@@ -2475,8 +2446,10 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       List<BibliographicPeriod> subscriptionRanges,
       SerialPublication publication) {
     final String DEBUG_HEADER = "validateRanges(): ";
-    if (log.isDebug2())
+    if (log.isDebug2()) {
       log.debug2(DEBUG_HEADER + "subscriptionRanges = " + subscriptionRanges);
+      log.debug2(DEBUG_HEADER + "publication = " + publication);
+    }
 
     List<BibliographicPeriod> invalidRanges =
 	new ArrayList<BibliographicPeriod>();
@@ -2555,7 +2528,10 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
   boolean matchesTitleTdbAu(BibliographicPeriod range,
       SerialPublication publication) {
     final String DEBUG_HEADER = "matchesTitleTdbAu(): ";
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "range = " + range);
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "range = " + range);
+      log.debug2(DEBUG_HEADER + "publication = " + publication);
+    }
 
     // Loop through the publication archival units.
     for (TdbAu tdbAu : publication.getTdbTitle().getTdbAus()) {
@@ -2711,9 +2687,11 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    *          A Subscription with the subscription to be persisted.
    * @throws DbException
    *           if any problem occurred accessing the database.
+   * @throws SubscriptionException
+   *           if there are problems with the subscription publication.
    */
   private void persistSubscription(Connection conn, Subscription subscription)
-      throws DbException {
+      throws DbException, SubscriptionException {
     final String DEBUG_HEADER = "persistSubscription(): ";
     if (log.isDebug2())
       log.debug2(DEBUG_HEADER + "subscription = " + subscription);
@@ -2746,50 +2724,63 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     if (log.isDebug3())
       log.debug3(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
 
-    // Find the publication in the database or create it.
-    Long publicationSeq;
+    String publicationName = publication.getPublicationName();
+
+    // Get the publication TDB title.
     TdbTitle title = publication.getTdbTitle();
+
+    // Check whether this publication has no TDB title.
     if (title == null) {
-// todo: what about a return status?
-      log.error(  "No TdbTitle for publication '" 
-                + publication.getPublicationName() + "'");
-      return;
-    } else {
-      String pIssn = title.getPrintIssn();
-      String eIssn = publication.getEissn();
-      String publicationName = publication.getPublicationName();
-      String pubType = title.getPublicationType();
-      String proprietaryId = publication.getProprietaryId();
-      if (MetadataField.PUBLICATION_TYPE_BOOKSERIES.equals(pubType)) {
-        publicationSeq = 
-            mdManager.findOrCreateBookSeries(conn, publisherSeq, 
-                                             pIssn, eIssn, 
-                                             publicationName, proprietaryId);
-      } else if (MetadataField.PUBLICATION_TYPE_JOURNAL.equals(pubType)) {
-        publicationSeq = 
-            mdManager.findOrCreateJournal(conn,publisherSeq,  
-                                          pIssn, eIssn, 
-                                          publicationName, proprietaryId);
-      } else {
-// todo: what about a return status?
-        log.error(  "Cannot subscribe to publication type '" + pubType 
-                  + "' for publication name: '" + publicationName + "'");
-        return;
-      }
-      
+      // Yes: Report the problem.
+      String message = "No TdbTitle for publication '" + publicationName + "'";
+      log.error(message);
+      throw new SubscriptionException(message);
     }
+
+    String pubType = title.getPublicationType();
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pubType = " + pubType);
+
+    // Check whether it's not a serial publication type.
+    if (!isSerialPublicationType(pubType)) {
+      // Yes: Report the problem.
+      String message = "It's not possible to subscribe to publication '"
+	  + publicationName + "' because it is of type'" + pubType 
+          + "', not a book series or a journal";
+      log.error(message);
+      throw new SubscriptionException(message);
+    }
+
+    String pIssn = publication.getPissn();
+    String eIssn = publication.getEissn();
+    String proprietaryId = publication.getProprietaryId();
+
+    // Find the publication in the database or create it.
+    Long publicationSeq = null;
+
+    // Check whether it is a book series.
+    if (MetadataField.PUBLICATION_TYPE_BOOKSERIES.equals(pubType)) {
+      // Yes: Find it or create it.
+      publicationSeq = mdManager.findOrCreateBookSeries(conn, publisherSeq,
+	  pIssn, eIssn, publicationName, proprietaryId);
+      // No: Check whether it is a journal.
+    } else if (MetadataField.PUBLICATION_TYPE_JOURNAL.equals(pubType)) {
+      // Yes: Find it or create it.
+      publicationSeq = mdManager.findOrCreateJournal(conn,publisherSeq, pIssn,
+	  eIssn, publicationName, proprietaryId);
+    }
+      
     if (log.isDebug3())
       log.debug3(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
 
-    // Find the publishing platform in the database or create it.
-    Long platformSeq =
-	mdManager.findOrCreatePlatform(conn, publication.getPlatformName());
+    // Find the provider in the database or create it.
+    Long providerSeq = dbManager.findOrCreateProvider(conn,
+	publication.getProviderLid(), publication.getProviderName());
     if (log.isDebug3())
-      log.debug3(DEBUG_HEADER + "platformSeq = " + platformSeq);
+      log.debug3(DEBUG_HEADER + "providerSeq = " + providerSeq);
 
     // Find the subscription in the database or create it.
     Long subscriptionSeq =
-	findOrCreateSubscription(conn, publicationSeq, platformSeq);
+	findOrCreateSubscription(conn, publicationSeq, providerSeq);
     if (log.isDebug3())
       log.debug3(DEBUG_HEADER + "subscriptionSeq = " + subscriptionSeq);
 
@@ -3557,7 +3548,8 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
     String publicationName;
-    String platformName;
+    String providerLid;
+    String providerName;
     String publisherName;
     String publicationId;
     String pIssn;
@@ -3565,7 +3557,8 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     String range;
     Boolean subscribed;
     String previousPublicationName = null;
-    String previousPlatformName = null;
+    String previousProviderLid = null;
+    String previousProviderName = null;
     String previousPublisherName = null;
     String previousPublicationId = null;
     String previousPissn = null;
@@ -3599,9 +3592,13 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	if (log.isDebug3())
 	  log.debug3(DEBUG_HEADER + "publicationName = " + publicationName);
 
-	platformName = resultSet.getString(PLATFORM_NAME_COLUMN);
+	providerLid = resultSet.getString(PROVIDER_LID_COLUMN);
 	if (log.isDebug3())
-	  log.debug3(DEBUG_HEADER + "platformName = " + platformName);
+	  log.debug3(DEBUG_HEADER + "providerLid = " + providerLid);
+
+	providerName = resultSet.getString(PROVIDER_NAME_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "providerName = " + providerName);
 
 	publicationId = resultSet.getString(PUBLICATION_ID_COLUMN);
 	if (log.isDebug3())
@@ -3618,9 +3615,12 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	if (((publicationName == null && previousPublicationName != null)
 	     || (publicationName != null
 	         && !publicationName.equals(previousPublicationName)))
-	    || ((platformName == null && previousPlatformName != null)
-		|| (platformName != null
-		    && !platformName.equals(previousPlatformName)))
+	    || ((providerLid == null && previousProviderLid != null)
+		|| (providerLid != null
+		    && !providerLid.equals(previousProviderLid)))
+	    || ((providerName == null && previousProviderName != null)
+		|| (providerName != null
+		    && !providerName.equals(previousProviderName)))
 	    || ((publicationId == null && previousPublicationId != null)
 		|| (publicationId != null
 		    && !publicationId.equals(previousPublicationId)))
@@ -3636,7 +3636,8 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	  publication = new SerialPublication();
 	  publication.setPublisherName(publisherName);
 	  publication.setPublicationName(publicationName);
-	  publication.setPlatformName(platformName);
+	  publication.setProviderLid(providerLid);
+	  publication.setProviderName(providerName);
 	  publication.setProprietaryId(publicationId);
 	  publication.setPissn(pIssn);
 	  publication.setEissn(eIssn);
@@ -3656,7 +3657,8 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	  // Remember the publication for this subscription.
 	  previousPublisherName = publisherName;
 	  previousPublicationName = publicationName;
-	  previousPlatformName = platformName;
+	  previousProviderLid = providerLid;
+	  previousProviderName = providerName;
 	  previousPublicationId = publicationId;
 	  previousPissn = pIssn;
 	  previousEissn = eIssn;
@@ -3732,7 +3734,9 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	.blankOutNlsAndTabs(publication.getPublicationName()));
 
     entry.append(BACKUP_FIELD_SEPARATOR)
-    .append(StringUtil.blankOutNlsAndTabs(publication.getPlatformName()))
+    .append(StringUtil.blankOutNlsAndTabs(publication.getProviderLid()))
+    .append(BACKUP_FIELD_SEPARATOR)
+    .append(StringUtil.blankOutNlsAndTabs(publication.getProviderName()))
     .append(BACKUP_FIELD_SEPARATOR)
     .append(StringUtil.blankOutNlsAndTabs(publication.getPublisherName()))
     .append(BACKUP_FIELD_SEPARATOR)
@@ -3909,7 +3913,8 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     // Get the publication of the subscription.
     SerialPublication publication = new SerialPublication();
     publication.setPublicationName(iterator.next());
-    publication.setPlatformName(iterator.next());
+    publication.setProviderLid(iterator.next());
+    publication.setProviderName(iterator.next());
     publication.setPublisherName(iterator.next());
 
     String pIssn = iterator.next();
@@ -3983,7 +3988,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       return;
     }
 
-    // Get the platform identifiers and the subscription identifiers and ranges
+    // Get the provider identifiers and the subscription identifiers and ranges
     // for the archival unit title.
     List<BibliographicPeriod> subscribedRanges =
 	new ArrayList<BibliographicPeriod>();

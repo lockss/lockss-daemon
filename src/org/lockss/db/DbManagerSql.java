@@ -1,5 +1,5 @@
 /*
- * $Id: DbManagerSql.java,v 1.2 2014-08-28 19:11:07 fergaloy-sf Exp $
+ * $Id: DbManagerSql.java,v 1.3 2014-09-16 19:55:43 fergaloy-sf Exp $
  */
 
 /*
@@ -32,7 +32,6 @@
 package org.lockss.db;
 
 import static org.lockss.db.SqlConstants.*;
-
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.PreparedStatement;
@@ -48,6 +47,7 @@ import java.util.Map;
 import javax.sql.DataSource;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.ConfigManager;
+import org.lockss.config.TdbAu;
 import org.lockss.exporter.FetchTimeExporter;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.AuUtil;
@@ -603,6 +603,14 @@ public class DbManagerSql {
       + LAST_RUN_TABLE + " ("
       + LABEL_COLUMN + " varchar(" + MAX_LABEL_COLUMN + ") not null,"
       + LAST_VALUE_COLUMN + " varchar(" + MAX_LAST_VALUE_COLUMN + ") not null"
+      + ")";
+
+  // Query to create the table for providers.
+  private static final String CREATE_PROVIDER_TABLE_QUERY = "create table "
+      + PROVIDER_TABLE + " ("
+      + PROVIDER_SEQ_COLUMN + " --BigintSerialPk--,"
+      + PROVIDER_LID_COLUMN + " varchar(" + MAX_LID_COLUMN + "),"
+      + PROVIDER_NAME_COLUMN + " varchar(" + MAX_NAME_COLUMN + ") not null"
       + ")";
 
   // Query to insert the database version.
@@ -1727,7 +1735,7 @@ public class DbManagerSql {
 
   // SQL statement that obtains all existing plugin identifier/AU key pairs in
   // the database for Archival Units with unknown creation times.
-  private static final String GET_PLUGIN_IDS_AU_KEYS_QUERY = "select "
+  private static final String GET_NO_CTIME_PLUGIN_IDS_AU_KEYS_QUERY = "select "
       + "p." + PLUGIN_ID_COLUMN
       + ", a." + AU_KEY_COLUMN
       + ", am." + AU_MD_SEQ_COLUMN
@@ -2041,6 +2049,105 @@ public class DbManagerSql {
     + "(" + SYSTEM_COLUMN + "," + VERSION_COLUMN + ")"
   };
 
+  // The SQL code used to create the necessary version 19 database tables.
+  @SuppressWarnings("serial")
+  private static final Map<String, String> VERSION_19_TABLE_CREATE_QUERIES =
+    new LinkedHashMap<String, String>() {{
+      put(PROVIDER_TABLE, CREATE_PROVIDER_TABLE_QUERY);
+    }};
+
+  // SQL statements that create the necessary version 19 indices.
+  private static final String[] VERSION_19_INDEX_CREATE_QUERIES = new String[] {
+    "create index idx1_" + PROVIDER_TABLE + " on " + PROVIDER_TABLE
+      + "(" + PROVIDER_LID_COLUMN + ")",
+
+    "create unique index idx2_" + PROVIDER_TABLE + " on " + PROVIDER_TABLE
+      + "(" + PROVIDER_NAME_COLUMN + ")"
+    };
+
+  // The SQL code used to add the necessary version 19 database table columns.
+  private static final String[] VERSION_19_COLUMN_ADD_QUERIES = new String[] {
+    "alter table " + AU_MD_TABLE
+      + " add column " + PROVIDER_SEQ_COLUMN
+      + " bigint references " + PROVIDER_TABLE + " (" + PROVIDER_SEQ_COLUMN
+      + ") on delete cascade",
+    "alter table " + SUBSCRIPTION_TABLE
+      + " add column " + PROVIDER_SEQ_COLUMN
+      + " bigint references " + PROVIDER_TABLE + " (" + PROVIDER_SEQ_COLUMN
+      + ") on delete cascade"
+    };
+
+  // SQL statement that obtains all existing publishers in the database that are
+  // involved in subscriptions.
+  private static final String GET_ALL_SUBSCRIPTION_PUBLISHERS_QUERY = "select "
+      + "s." + SUBSCRIPTION_SEQ_COLUMN
+      + ", s." + PUBLICATION_SEQ_COLUMN
+      + ", pr." + PUBLISHER_NAME_COLUMN
+      + " from " + SUBSCRIPTION_TABLE + " s"
+      + ", " + PUBLICATION_TABLE + " pn"
+      + ", " + PUBLISHER_TABLE + " pr"
+      + " where s." + PUBLICATION_SEQ_COLUMN + " = pn." + PUBLICATION_SEQ_COLUMN
+      + " and pn." + PUBLISHER_SEQ_COLUMN + " = pr." + PUBLISHER_SEQ_COLUMN
+      + " order by s." + PUBLICATION_SEQ_COLUMN;
+
+  // Query to find a provider by its name.
+  private static final String FIND_PROVIDER_BY_NAME_QUERY = "select "
+      + PROVIDER_SEQ_COLUMN
+      + " from " + PROVIDER_TABLE
+      + " where " + PROVIDER_NAME_COLUMN + " = ?";
+
+  // Query to find a provider by its LOCKSS identifier.
+  private static final String FIND_PROVIDER_BY_LID_QUERY = "select "
+      + PROVIDER_SEQ_COLUMN
+      + " from " + PROVIDER_TABLE
+      + " where " + PROVIDER_LID_COLUMN + " = ?";
+
+  // Query to add a provider.
+  private static final String INSERT_PROVIDER_QUERY = "insert into "
+      + PROVIDER_TABLE
+      + "(" + PROVIDER_SEQ_COLUMN
+      + "," + PROVIDER_LID_COLUMN
+      + "," + PROVIDER_NAME_COLUMN
+      + ") values (default,?,?)";
+
+  // Query to update the LOCKSS identifier of a provider.
+  private static final String UPDATE_PROVIDER_LID_QUERY = "update "
+      + PROVIDER_TABLE
+      + " set " + PROVIDER_LID_COLUMN + " = ?"
+      + " where " + PROVIDER_SEQ_COLUMN + " = ?"
+      + " and " + PROVIDER_LID_COLUMN + " is null";
+
+  // Query to update the provider of an Archival Unit.
+  private static final String UPDATE_AU_MD_PROVIDER_QUERY = "update "
+      + AU_MD_TABLE
+      + " set " + PROVIDER_SEQ_COLUMN + " = ?"
+      + " where " + AU_MD_SEQ_COLUMN + " = ?";
+
+  // Query to update the provider of a subscription.
+  private static final String UPDATE_SUBSCRIPTION_PROVIDER_QUERY = "update "
+      + SUBSCRIPTION_TABLE
+      + " set " + PROVIDER_SEQ_COLUMN + " = ?"
+      + " where " + SUBSCRIPTION_SEQ_COLUMN + " = ?";
+
+  // SQL statement that obtains all existing plugin identifier/AU key pairs in
+  // the database for Archival Units that have no provider.
+  private static final String GET_NO_PROVIDER_PLUGIN_IDS_AU_KEYS_QUERY =
+    "select am." + AU_MD_SEQ_COLUMN
+      + ", a." + AU_KEY_COLUMN
+      + ", p." + PLUGIN_ID_COLUMN
+      + " from " + AU_MD_TABLE + " am"
+      + ", " + AU_TABLE + " a"
+      + ", " + PLUGIN_TABLE + " p"
+      + " where p." + PLUGIN_SEQ_COLUMN + " = a." + PLUGIN_SEQ_COLUMN
+      + " and a." + AU_SEQ_COLUMN + " = am." + AU_SEQ_COLUMN
+      + " and am." + PROVIDER_SEQ_COLUMN + " is null";
+
+  // Query to determine whether a specific database version has been completed.
+  private static final String COUNT_DATABASE_VERSION_QUERY = "select count(*) "
+      + " from " + VERSION_TABLE
+      + " where " + SYSTEM_COLUMN + " = '" + DATABASE_VERSION_TABLE_SYSTEM
+      + "' and " + VERSION_COLUMN + " = ?";
+
   // The database data source.
   private DataSource dataSource = null;
 
@@ -2143,7 +2250,7 @@ public class DbManagerSql {
    * @param resultSet
    *          A ResultSet with the database result set to be closed.
    */
-  public static void safeCloseResultSet(ResultSet resultSet) {
+  static void safeCloseResultSet(ResultSet resultSet) {
     JdbcBridge.safeCloseResultSet(resultSet);
   }
 
@@ -2153,7 +2260,7 @@ public class DbManagerSql {
    * @param statement
    *          A Statement with the database statement to be closed.
    */
-  public static void safeCloseStatement(Statement statement) {
+  static void safeCloseStatement(Statement statement) {
     JdbcBridge.safeCloseStatement(statement);
   }
 
@@ -2163,7 +2270,7 @@ public class DbManagerSql {
    * @param conn
    *          A Connection with the database connection to be closed.
    */
-  public static void safeCloseConnection(Connection conn) {
+  static void safeCloseConnection(Connection conn) {
     JdbcBridge.safeCloseConnection(conn);
   }
 
@@ -2174,7 +2281,7 @@ public class DbManagerSql {
    *          A Connection with the database connection to be rolled back and
    *          closed.
    */
-  public static void safeRollbackAndClose(Connection conn) {
+  static void safeRollbackAndClose(Connection conn) {
     JdbcBridge.safeRollbackAndClose(conn);
   }
 
@@ -2188,7 +2295,7 @@ public class DbManagerSql {
    * @throws SQLException
    *           if any problem occurred accessing the database.
    */
-  public static void commitOrRollback(Connection conn, Logger logger)
+  static void commitOrRollback(Connection conn, Logger logger)
       throws SQLException {
     JdbcBridge.commitOrRollback(conn, logger);
   }
@@ -2203,9 +2310,8 @@ public class DbManagerSql {
    * @throws SQLException
    *           if any problem occurred accessing the database.
    */
-  public static void rollback(Connection conn, Logger logger)
-      throws SQLException {
-      JdbcBridge.rollback(conn, logger);
+  static void rollback(Connection conn, Logger logger) throws SQLException {
+    JdbcBridge.rollback(conn, logger);
   }
 
   /**
@@ -2221,7 +2327,7 @@ public class DbManagerSql {
    *         maximum length allowed or the truncated text including an
    *         indication of the truncation.
    */
-  public static String truncateVarchar(String original, int maxLength) {
+  static String truncateVarchar(String original, int maxLength) {
     if (original.length() <= maxLength) {
       return original;
     }
@@ -2869,7 +2975,8 @@ public class DbManagerSql {
    * @throws SQLException
    *           if any problem occurred accessing the database.
    */
-  void executeBatch(Connection conn, String[] statements) throws SQLException {
+  private void executeBatch(Connection conn, String[] statements)
+      throws SQLException {
     final String DEBUG_HEADER = "executeBatch(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "statements = "
 	+ StringUtil.toString(statements));
@@ -2974,7 +3081,8 @@ public class DbManagerSql {
    * @throws SQLException
    *           if any problem occurred accessing the database.
    */
-  void executeDdlQuery(Connection conn, String ddlQuery) throws SQLException {
+  private void executeDdlQuery(Connection conn, String ddlQuery)
+      throws SQLException {
     final String DEBUG_HEADER = "executeDdlQuery(): ";
     if (log.isDebug2())
       log.debug2(DEBUG_HEADER + "ddlQuery = '" + ddlQuery + "'");
@@ -4583,7 +4691,7 @@ public class DbManagerSql {
    *          dropped belongs.
    * @param columnName
    *          A String with the name of the column to be dropped.
-   * @return a String with the query used to drop the index.
+   * @return a String with the query used to drop the column.
    */
   private static String dropColumnQuery(String tableName, String columnName) {
     return "alter table " + tableName
@@ -5289,7 +5397,8 @@ public class DbManagerSql {
       while (!done) {
 	// Get pairs of plugin identifier and AU key in the database for some
 	// Archival Units that need processing.
-	statement = prepareStatement(conn, GET_PLUGIN_IDS_AU_KEYS_QUERY);
+	statement =
+	    prepareStatement(conn, GET_NO_CTIME_PLUGIN_IDS_AU_KEYS_QUERY);
 	statement.setMaxRows(5);
 	resultSet = executeQuery(statement);
 
@@ -5350,11 +5459,11 @@ public class DbManagerSql {
       success = true;
     } catch (SQLException sqle) {
       log.error("Cannot populate Archival Unit timestamps", sqle);
-      log.error("SQL = '" + GET_PLUGIN_IDS_AU_KEYS_QUERY + "'.");
+      log.error("SQL = '" + GET_NO_CTIME_PLUGIN_IDS_AU_KEYS_QUERY + "'.");
       throw sqle;
     } catch (RuntimeException re) {
       log.error("Cannot populate Archival Unit timestamps", re);
-      log.error("SQL = '" + GET_PLUGIN_IDS_AU_KEYS_QUERY + "'.");
+      log.error("SQL = '" + GET_NO_CTIME_PLUGIN_IDS_AU_KEYS_QUERY + "'.");
       throw re;
     } finally {
       JdbcBridge.safeCloseResultSet(resultSet);
@@ -5700,6 +5809,30 @@ public class DbManagerSql {
    */
   void updateDatabaseFrom12To13(Connection conn) throws SQLException {
     final String DEBUG_HEADER = "updateDatabaseFrom12To13(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    if (conn == null) {
+      throw new IllegalArgumentException("Null connection");
+    }
+
+    // Reset to zero the identifier of the last metadata item for which the
+    // fetch time has been exported.
+    zeroLastExportedMdItemId(conn);
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Resets to zero the identifier of the last metadata item for which the fetch
+   * time has been exported.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws SQLException
+   *           if any problem occurred updating the database.
+   */
+  private void zeroLastExportedMdItemId(Connection conn) throws SQLException {
+    final String DEBUG_HEADER = "zeroLastExportedMdItemId(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
     if (conn == null) {
@@ -6311,5 +6444,832 @@ public class DbManagerSql {
     executeDdlQueries(conn, VERSION_18_INDEX_CREATE_QUERIES);
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Updates the database from version 18 to version 19.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws SQLException
+   *           if any problem occurred updating the database.
+   */
+  void updateDatabaseFrom18To19(Connection conn) throws SQLException {
+    final String DEBUG_HEADER = "updateDatabaseFrom18To19(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    if (conn == null) {
+      throw new IllegalArgumentException("Null connection");
+    }
+
+    // Create the necessary tables if they do not exist.
+    createTablesIfMissing(conn, VERSION_19_TABLE_CREATE_QUERIES);
+
+    // Create the necessary indices.
+    executeDdlQueries(conn, VERSION_19_INDEX_CREATE_QUERIES);
+
+    // Add the new columns.
+    executeDdlQueries(conn, VERSION_19_COLUMN_ADD_QUERIES);
+
+    // Populate the subscription provider reference column.
+    populateSubscriptionProvider(conn);
+
+    if (isTypeDerby()) {
+      // Drop the foreign key constraint of the now obsolete subscription
+      // platform reference column. Otherwise, Derby does not allow the dropping
+      // of a foreign key column.
+      executeDdlQuery(conn, dropConstraintQuery(SUBSCRIPTION_TABLE,
+	  "FK_PLATFORM_SEQ_SUBSCRIPTION"));
+    }
+
+    // Drop the now obsolete subscription platform reference column.
+    executeDdlQuery(conn,
+	dropColumnQuery(SUBSCRIPTION_TABLE, PLATFORM_SEQ_COLUMN));
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Populates the provider reference in the subscription table.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private void populateSubscriptionProvider(Connection conn)
+      throws SQLException {
+    final String DEBUG_HEADER = "populateSubscriptionProvider(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    if (conn == null) {
+      throw new IllegalArgumentException("Null connection");
+    }
+
+    Long previousPublicationSeq = null;
+    PreparedStatement statement = null;
+    ResultSet resultSet = null;
+
+    try {
+      // Get all the subscriptions and publication data.
+      statement = prepareStatement(conn, GET_ALL_SUBSCRIPTION_PUBLISHERS_QUERY);
+      resultSet = executeQuery(statement);
+
+      // Loop through all the subscriptions and publication data.
+      while (resultSet.next()) {
+	// Get the subscription identifier.
+	Long subscriptionSeq = resultSet.getLong(SUBSCRIPTION_SEQ_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "subscriptionSeq = " + subscriptionSeq);
+
+	// Get the publication identifier.
+	Long publicationSeq = resultSet.getLong(PUBLICATION_SEQ_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
+
+	// Get the publisher name.
+	String publisherName = resultSet.getString(PUBLISHER_NAME_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "publisherName = '" + publisherName + "'");
+
+	// Get the provider primary key for the publisher.
+	Long providerSeq = findOrCreateProvider(conn, null, publisherName);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "providerSeq = " + providerSeq);
+
+	// Check whether this is not the same publication as the previous one.
+	if (publicationSeq != previousPublicationSeq) {
+	  // Yes: Update the subscription provider.
+	  updateSubscriptionProvider(conn, subscriptionSeq, providerSeq);
+
+	  // Remember this publication.
+	  previousPublicationSeq = publicationSeq;
+	  if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	      + "previousPublicationSeq = " + previousPublicationSeq);
+	}
+      }
+    } catch (SQLException sqle) {
+      log.error("Cannot populate subscription provider", sqle);
+      log.error("SQL = '" + GET_ALL_SUBSCRIPTION_PUBLISHERS_QUERY + "'.");
+      throw sqle;
+    } catch (RuntimeException re) {
+      log.error("Cannot populate subscription provider", re);
+      log.error("SQL = '" + GET_ALL_SUBSCRIPTION_PUBLISHERS_QUERY + "'.");
+      throw re;
+    } finally {
+      JdbcBridge.safeCloseResultSet(resultSet);
+      JdbcBridge.safeCloseStatement(statement);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Provides the identifier of a provider if existing or after creating it
+   * otherwise.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param providerLid
+   *          A String with the provider LOCKSS identifier.
+   * @param providerName
+   *          A String with the provider name.
+   * @return a Long with the identifier of the provider.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  Long findOrCreateProvider(Connection conn, String providerLid,
+      String providerName) throws SQLException {
+    final String DEBUG_HEADER = "findOrCreateProvider(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "providerLid = '" + providerLid + "'");
+      log.debug2(DEBUG_HEADER + "providerName = '" + providerName + "'");
+    }
+
+    if (conn == null) {
+      throw new IllegalArgumentException("Null connection");
+    }
+
+    Long providerSeq = null;
+
+    // Check whether a LOCKSS identifier was passed.
+    if (!StringUtil.isNullString(providerLid)) {
+      // Yes: Find the provider in the database by its LOCKSS identifier.
+      providerSeq = findProviderByLid(conn, providerLid);
+      if (log.isDebug3())
+        log.debug3(DEBUG_HEADER + "providerSeq = " + providerSeq);
+    }
+
+    // Check whether the provider was not found and a name was passed.
+    if (providerSeq == null && !StringUtil.isNullString(providerName)) {
+      // Yes: Find the provider in the database by its name.
+      providerSeq = findProviderByName(conn, providerName);
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "providerSeq = " + providerSeq);
+
+      // Check whether the provider was found and a LOCKSS identifier was
+      // passed.
+      if (providerSeq != null && !StringUtil.isNullString(providerLid)) {
+        // Yes: Try to update the LOCKSS identifier.
+	int count = updateProviderLid(conn, providerSeq, providerLid);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
+
+	// Check whether no database row was updated.
+	if (count == 0) {
+	  // Yes: The database row already has a LOCKSS identifier different
+	  // than this one, so it is a different provider, albeit with the same
+	  // name.
+	  providerSeq = null;
+	}
+      }
+    }
+
+    // Check whether it is a new provider.
+    if (providerSeq == null) {
+      // Yes: Add to the database the new provider.
+      providerSeq = addProvider(conn, providerLid, providerName);
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "new providerSeq = " + providerSeq);
+    }
+
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "providerSeq = " + providerSeq);
+    return providerSeq;
+  }
+
+  /**
+   * Provides the identifier of a provider.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param providerLid
+   *          A String with the provider LOCKSS identifier.
+   * @param providerName
+   *          A String with the provider name.
+   * @return a Long with the identifier of the provider.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  Long findProvider(Connection conn, String providerLid, String providerName)
+      throws SQLException {
+    final String DEBUG_HEADER = "findProvider(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "providerLid = '" + providerLid + "'");
+      log.debug2(DEBUG_HEADER + "providerName = '" + providerName + "'");
+    }
+
+    if (conn == null) {
+      throw new IllegalArgumentException("Null connection");
+    }
+
+    Long providerSeq = null;
+
+    try {
+      if (!StringUtil.isNullString(providerLid)) {
+	providerSeq = findProviderByLid(conn, providerLid);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "providerSeq = " + providerSeq);
+      }
+
+      if (providerSeq == null && !StringUtil.isNullString(providerName)) {
+	providerSeq = findProviderByName(conn, providerName);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "providerSeq = " + providerSeq);
+      }
+    } catch (SQLException sqle) {
+      String message = "Cannot find provider";
+      log.error(message);
+      log.error("providerName = '" + providerName + "'");
+      log.error("providerLid = '" + providerLid + "'");
+      throw sqle;
+    } catch (RuntimeException re) {
+      String message = "Cannot find provider";
+      log.error(message);
+      log.error("providerName = '" + providerName + "'");
+      log.error("providerLid = '" + providerLid + "'");
+      throw re;
+    }
+
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "providerSeq = " + providerSeq);
+    return providerSeq;
+  }
+
+  /**
+   * Provides the identifier of a provider with a given name.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param providerName
+   *          A String with the provider name.
+   * @return a Long with the identifier of the provider.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private Long findProviderByName(Connection conn, String providerName)
+      throws SQLException {
+    final String DEBUG_HEADER = "findProviderByName(): ";
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "providerName = '" + providerName + "'");
+
+    if (conn == null) {
+      throw new IllegalArgumentException("Null connection");
+    }
+
+    Long providerSeq = null;
+    ResultSet resultSet = null;
+
+    PreparedStatement findProvider =
+	prepareStatement(conn, FIND_PROVIDER_BY_NAME_QUERY);
+
+    try {
+      findProvider.setString(1, providerName);
+
+      resultSet = executeQuery(findProvider);
+      if (resultSet.next()) {
+	providerSeq = resultSet.getLong(PROVIDER_SEQ_COLUMN);
+      }
+    } catch (SQLException sqle) {
+      log.error("Cannot find provider", sqle);
+      log.error("SQL = '" + FIND_PROVIDER_BY_NAME_QUERY + "'.");
+      log.error("providerName = '" + providerName + "'");
+      throw sqle;
+    } catch (RuntimeException re) {
+      log.error("Cannot find provider", re);
+      log.error("SQL = '" + FIND_PROVIDER_BY_NAME_QUERY + "'.");
+      log.error("providerName = '" + providerName + "'");
+      throw re;
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(findProvider);
+    }
+
+    if (log.isDebug2())
+	log.debug2(DEBUG_HEADER + "providerSeq = " + providerSeq);
+    return providerSeq;
+  }
+
+  /**
+   * Provides the identifier of a provider with a given LOCKSS identifier.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param providerLid
+   *          A String with the provider LOCKSS identifier.
+   * @return a Long with the identifier of the provider.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private Long findProviderByLid(Connection conn, String providerLid)
+      throws SQLException {
+    final String DEBUG_HEADER = "findProviderByLid(): ";
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "providerLid = '" + providerLid + "'");
+
+    if (conn == null) {
+      throw new IllegalArgumentException("Null connection");
+    }
+
+    Long providerSeq = null;
+
+    if (!StringUtil.isNullString(providerLid)) {
+      ResultSet resultSet = null;
+
+      PreparedStatement findProvider =
+	  prepareStatement(conn, FIND_PROVIDER_BY_LID_QUERY);
+
+      try {
+	findProvider.setString(1, providerLid);
+
+	resultSet = executeQuery(findProvider);
+	if (resultSet.next()) {
+	  providerSeq = resultSet.getLong(PROVIDER_SEQ_COLUMN);
+	}
+      } catch (SQLException sqle) {
+	log.error("Cannot find provider", sqle);
+	log.error("SQL = '" + FIND_PROVIDER_BY_LID_QUERY + "'.");
+	log.error("providerLid = '" + providerLid + "'");
+	throw sqle;
+      } catch (RuntimeException re) {
+	log.error("Cannot find provider", re);
+	log.error("SQL = '" + FIND_PROVIDER_BY_LID_QUERY + "'.");
+	log.error("providerLid = '" + providerLid + "'");
+	throw re;
+      } finally {
+	DbManager.safeCloseResultSet(resultSet);
+	DbManager.safeCloseStatement(findProvider);
+      }
+    }
+
+    if (log.isDebug2())
+	log.debug2(DEBUG_HEADER + "providerSeq = " + providerSeq);
+    return providerSeq;
+  }
+
+  /**
+   * Adds a provider to the database.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param providerLid
+   *          A String with the provider LOCKSS identifier.
+   * @param providerName
+   *          A String with the provider name.
+   * @return a Long with the identifier of the provider just added.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  Long addProvider(Connection conn, String providerLid, String providerName)
+      throws SQLException {
+    final String DEBUG_HEADER = "addProvider(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "providerLid = '" + providerLid + "'");
+      log.debug2(DEBUG_HEADER + "providerName = '" + providerName + "'");
+    }
+
+    if (conn == null) {
+      throw new IllegalArgumentException("Null connection");
+    }
+
+    Long providerSeq = null;
+    ResultSet resultSet = null;
+    PreparedStatement insertProvider = prepareStatement(conn,
+	INSERT_PROVIDER_QUERY, Statement.RETURN_GENERATED_KEYS);
+
+    try {
+      // skip auto-increment key field #0
+      insertProvider.setString(1, providerLid);
+      insertProvider.setString(2, providerName);
+      executeUpdate(insertProvider);
+      resultSet = insertProvider.getGeneratedKeys();
+
+      if (!resultSet.next()) {
+	log.error("Unable to create provider table row.");
+	return null;
+      }
+
+      providerSeq = resultSet.getLong(1);
+      log.debug3(DEBUG_HEADER + "Added providerSeq = " + providerSeq);
+    } catch (SQLException sqle) {
+      log.error("Cannot add a provider", sqle);
+      log.error("SQL = '" + INSERT_PROVIDER_QUERY + "'.");
+      log.error("providerLid = '" + providerLid + "'");
+      log.error("providerName = '" + providerName + "'");
+      throw sqle;
+    } catch (RuntimeException re) {
+      log.error("Cannot add a provider", re);
+      log.error("SQL = '" + INSERT_PROVIDER_QUERY + "'.");
+      log.error("providerLid = '" + providerLid + "'");
+      log.error("providerName = '" + providerName + "'");
+      throw re;
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(insertProvider);
+    }
+
+    if (log.isDebug2())
+	log.debug2(DEBUG_HEADER + "providerSeq = " + providerSeq);
+    return providerSeq;
+  }
+
+  /**
+   * Updates the LOCKSS identifier of a provider.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param providerSeq
+   *          A Long with the identifier of the provider.
+   * @param lockssId
+   *          A String with the provider LOCKSS identifier.
+   * @return an int with the number of database rows updated.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private int updateProviderLid(Connection conn, Long providerSeq,
+      String lockssId) throws SQLException {
+    final String DEBUG_HEADER = "updateProviderLid(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "providerSeq = " + providerSeq);
+      log.debug2(DEBUG_HEADER + "lockssId = '" + lockssId + "'");
+    }
+
+    if (conn == null) {
+      throw new IllegalArgumentException("Null connection");
+    }
+
+    int count = -1;
+    PreparedStatement statement = null;
+
+    try {
+      statement = prepareStatement(conn, UPDATE_PROVIDER_LID_QUERY);
+      statement.setString(1, lockssId);
+      statement.setLong(2, providerSeq);
+
+      count = executeUpdate(statement);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count + ".");
+    } catch (SQLException sqle) {
+      log.error("Cannot update the provider LOCKSS identifier", sqle);
+      log.error("SQL = '" + UPDATE_PROVIDER_LID_QUERY + "'.");
+      log.error("providerSeq = " + providerSeq);
+      log.error("lockssId = '" + lockssId + "'.");
+      throw sqle;
+    } catch (RuntimeException re) {
+      log.error("Cannot update the provider LOCKSS identifier", re);
+      log.error("SQL = '" + UPDATE_PROVIDER_LID_QUERY + "'.");
+      log.error("providerSeq = " + providerSeq);
+      log.error("lockssId = '" + lockssId + "'.");
+      throw re;
+    } finally {
+      JdbcBridge.safeCloseStatement(statement);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "count = " + count + ".");
+    return count;
+  }
+
+  /**
+   * Updates the provider in the subscription table.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param subscriptionSeq
+   *          A Long with the primary key of the subscription.
+   * @param providerSeq
+   *          A Long with the primary key of the provider.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private void updateSubscriptionProvider(Connection conn, Long subscriptionSeq,
+      Long providerSeq) throws SQLException {
+    final String DEBUG_HEADER = "updateSubscriptionProvider(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "subscriptionSeq = " + subscriptionSeq);
+      log.debug2(DEBUG_HEADER + "providerSeq = " + providerSeq);
+    }
+
+    if (conn == null) {
+      throw new IllegalArgumentException("Null connection");
+    }
+
+    PreparedStatement statement = null;
+
+    try {
+      statement = prepareStatement(conn, UPDATE_SUBSCRIPTION_PROVIDER_QUERY);
+      statement.setLong(1, providerSeq);
+      statement.setLong(2, subscriptionSeq);
+
+      int count = executeUpdate(statement);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count + ".");
+    } catch (SQLException sqle) {
+      log.error("Cannot update the subscription provider", sqle);
+      log.error("SQL = '" + UPDATE_SUBSCRIPTION_PROVIDER_QUERY + "'.");
+      log.error("subscriptionSeq = " + subscriptionSeq);
+      log.error("providerSeq = " + providerSeq);
+      throw sqle;
+    } catch (RuntimeException re) {
+      log.error("Cannot update the subscription provider", re);
+      log.error("SQL = '" + UPDATE_SUBSCRIPTION_PROVIDER_QUERY + "'.");
+      log.error("subscriptionSeq = " + subscriptionSeq);
+      log.error("providerSeq = " + providerSeq);
+      throw re;
+    } finally {
+      JdbcBridge.safeCloseStatement(statement);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Provides the query used to drop a constraint.
+   * 
+   * @param tableName
+   *          A String with the name of the table to which the constraint to be
+   *          dropped belongs.
+   * @param constraintName
+   *          A String with the name of the constraint to be dropped.
+   * @return a String with the query used to drop the constraint.
+   */
+  private static String dropConstraintQuery(String tableName,
+      String constraintName) {
+    return "alter table " + tableName + " drop constraint " + constraintName;
+  }
+
+  /**
+   * Updates the database from version 19 to version 20.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws SQLException
+   *           if any problem occurred updating the database.
+   */
+  void updateDatabaseFrom19To20(Connection conn) throws SQLException {
+    final String DEBUG_HEADER = "updateDatabaseFrom19To20(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    if (conn == null) {
+      throw new IllegalArgumentException("Null connection");
+    }
+
+    // Populate in a separate thread the Archival Unit providers.
+    DbVersion19To20Migrator migrator = new DbVersion19To20Migrator();
+    Thread thread = new Thread(migrator, "DbVersion19To20Migrator");
+    LockssDaemon.getLockssDaemon().getDbManager().recordThread(thread);
+    thread.start();
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Migrates the contents of the database from version 19 to version 20.
+   */
+  void migrateDatabaseFrom19To20() {
+    final String DEBUG_HEADER = "migrateDatabaseFrom19To20(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    Connection conn = null;
+
+    try {
+      // Get a connection to the database.
+      conn = getConnection();
+
+      // Populate the AU metadata provider reference column.
+      populateAuMetadataProvider(conn);
+
+      // Reset to zero the identifier of the last metadata item for which the
+      // fetch time has been exported.
+      zeroLastExportedMdItemId(conn);
+
+      // Record the current database version in the database.
+      addDbVersion(conn, 20);
+      JdbcBridge.commitOrRollback(conn, log);
+      if (log.isDebug()) log.debug("Database updated to version " + 20);
+    } catch (SQLException sqle) {
+      log.error("Cannot migrate the database from version 19 to 20", sqle);
+    } catch (RuntimeException re) {
+      log.error("Cannot migrate the database from version 19 to 20", re);
+    } finally {
+      JdbcBridge.safeRollbackAndClose(conn);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Populates the provider reference in the Archival Unit metadata table.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private void populateAuMetadataProvider(Connection conn) throws SQLException {
+    final String DEBUG_HEADER = "populateAuMetadataProvider(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    if (conn == null) {
+      throw new IllegalArgumentException("Null connection");
+    }
+
+    Long unknownProviderSeq = null;
+    PreparedStatement statement = null;
+    ResultSet resultSet = null;
+    boolean done = false;
+
+    try {
+      // Keep going while there are Archival Units that need processing.
+      while (!done) {
+	// Get pairs of plugin identifier and AU key in the database for AUs
+	// with no provider.
+	statement =
+	    prepareStatement(conn, GET_NO_PROVIDER_PLUGIN_IDS_AU_KEYS_QUERY);
+	statement.setMaxRows(5);
+	resultSet = executeQuery(statement);
+
+	// If no more pairs are found, the process is known to be finished.
+	done = true;
+
+	// Loop through all the pairs of plugin identifier and AU key found.
+	while (resultSet.next()) {
+	  // A pair is found, so the process is not known to be finished.
+	  done = false;
+
+	  // Get the AU_MD primary key.
+	  Long auMdSeq = resultSet.getLong(AU_MD_SEQ_COLUMN);
+	  if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auMdSeq = " + auMdSeq);
+
+	  // Get the plugin identifier.
+	  String pluginId = resultSet.getString(PLUGIN_ID_COLUMN);
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "pluginId = '" + pluginId + "'");
+
+	  // Get the AU key.
+	  String auKey = resultSet.getString(AU_KEY_COLUMN);
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "auKey = '" + auKey + "'");
+
+	  // Get the AU identifier.
+	  String auId = PluginManager.generateAuId(pluginId, auKey);
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "auId = '" + auId + "'");
+
+	  // Get the AU.
+	  TdbAu tdbAu = LockssDaemon.getLockssDaemon().getPluginManager()
+	      .getAuFromId(auId).getTdbAu();
+	  if (log.isDebug3()) log.debug3(DEBUG_HEADER + "tdbAu = " + tdbAu);
+
+	  // Get the provider LOCKSS identifier.
+	  // TODO: Replace with tdbAu.getProvider().getLid() when available.
+	  String providerLid = null;
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "providerLid = '" + providerLid + "'");
+
+	  // Get the provider name.
+	  String providerName = tdbAu.getProviderName();
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "providerName = '" + providerName + "'");
+
+	  // Determine the provider.
+	  Long providerSeq =
+	      findOrCreateProvider(conn, providerLid, providerName);
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "providerSeq = " + providerSeq);
+
+	  // Check whether no provider could be found or created.
+	  if (providerSeq == null) {
+	    // Yes: Find the unknown provider.
+	    if (unknownProviderSeq == null) {
+	      unknownProviderSeq =
+		  findOrCreateProvider(conn, null, UNKNOWN_PROVIDER_NAME);
+	      if (log.isDebug3()) log.debug3(DEBUG_HEADER
+		  + "unknownProviderSeq = " + unknownProviderSeq);
+	    }
+
+	    // Use the unknown provider.
+	    providerSeq = unknownProviderSeq;
+	    if (log.isDebug3())
+	      log.debug3(DEBUG_HEADER + "providerSeq = " + providerSeq);
+	  }
+
+	  // Update it in the database.
+	  updateAuMdProvider(conn, auMdSeq, providerSeq);
+
+	  JdbcBridge.commitOrRollback(conn, log);
+	}
+
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "done = " + done);
+      }
+    } catch (SQLException sqle) {
+      log.error("Cannot populate Archival Unit providers", sqle);
+      log.error("SQL = '" + GET_NO_PROVIDER_PLUGIN_IDS_AU_KEYS_QUERY + "'.");
+      throw sqle;
+    } catch (RuntimeException re) {
+      log.error("Cannot populate Archival Unit providers", re);
+      log.error("SQL = '" + GET_NO_PROVIDER_PLUGIN_IDS_AU_KEYS_QUERY + "'.");
+      throw re;
+    } finally {
+      JdbcBridge.safeCloseResultSet(resultSet);
+      JdbcBridge.safeCloseStatement(statement);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Updates the provider in the Archival Unit metadata table.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param auMdSeq
+   *          A Long with the primary key of the Archival Unit in the archival
+   *          unit metadata table.
+   * @param providerSeq
+   *          A Long with the primary key of the provider.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private void updateAuMdProvider(Connection conn, Long auMdSeq,
+      Long providerSeq) throws SQLException {
+    final String DEBUG_HEADER = "updateAuMdProvider(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "auMdSeq = " + auMdSeq);
+      log.debug2(DEBUG_HEADER + "providerSeq = " + providerSeq);
+    }
+
+    if (conn == null) {
+      throw new IllegalArgumentException("Null connection");
+    }
+
+    PreparedStatement statement = null;
+
+    try {
+      statement = prepareStatement(conn, UPDATE_AU_MD_PROVIDER_QUERY);
+      statement.setLong(1, providerSeq);
+      statement.setLong(2, auMdSeq);
+
+      int count = executeUpdate(statement);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count + ".");
+    } catch (SQLException sqle) {
+      log.error("Cannot update the Archival Unit provider", sqle);
+      log.error("SQL = '" + UPDATE_AU_MD_PROVIDER_QUERY + "'.");
+      log.error("auMdSeq = " + auMdSeq);
+      log.error("providerSeq = " + providerSeq);
+      throw sqle;
+    } catch (RuntimeException re) {
+      log.error("Cannot update the Archival Unit provider", re);
+      log.error("SQL = '" + UPDATE_AU_MD_PROVIDER_QUERY + "'.");
+      log.error("auMdSeq = " + auMdSeq);
+      log.error("providerSeq = " + providerSeq);
+      throw re;
+    } finally {
+      JdbcBridge.safeCloseStatement(statement);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Provides an indication of whether a given database upgrade has been
+   * completed.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param version
+   *          An int with the version of the database upgrade to check.
+   * @return <code>true</code> if the database upgrade has been completed,
+   *         <code>false</code> otherwise.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  boolean isVersionCompleted(Connection conn, int version) throws SQLException {
+    final String DEBUG_HEADER = "isVersionCompleted(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "version = " + version);
+
+    boolean result = false;
+
+    PreparedStatement stmt = null;
+    ResultSet resultSet = null;
+
+    try {
+      stmt = prepareStatement(conn, COUNT_DATABASE_VERSION_QUERY);
+      stmt.setInt(1, version);
+
+      resultSet = executeQuery(stmt);
+      result = resultSet.next();
+    } catch (SQLException sqle) {
+      log.error("Cannot find a database version", sqle);
+      log.error("SQL = '" + COUNT_DATABASE_VERSION_QUERY + "'.");
+      log.error("version = " + version);
+      throw sqle;
+    } catch (RuntimeException re) {
+      log.error("Cannot find a database version", re);
+      log.error("SQL = '" + COUNT_DATABASE_VERSION_QUERY + "'.");
+      log.error("version = " + version);
+      throw re;
+    } finally {
+      JdbcBridge.safeCloseResultSet(resultSet);
+      JdbcBridge.safeCloseStatement(stmt);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+    return result;
   }
 }

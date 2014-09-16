@@ -1,5 +1,5 @@
 /*
- * $Id: DbManager.java,v 1.42 2014-08-28 19:11:07 fergaloy-sf Exp $
+ * $Id: DbManager.java,v 1.43 2014-09-16 19:55:43 fergaloy-sf Exp $
  */
 
 /*
@@ -218,7 +218,7 @@ public class DbManager extends BaseLockssDaemonManager
   // After this service has started successfully, this is the version of the
   // database that will be in place, as long as the database version prior to
   // starting the service was not higher already.
-  private int targetDatabaseVersion = 18;
+  private int targetDatabaseVersion = 20;
 
   // The maximum number of retries to be attempted when encountering transient
   // SQL exceptions.
@@ -1628,11 +1628,20 @@ public class DbManager extends BaseLockssDaemonManager
 		+ pendingUpdates + "'");
 
 	if (pendingUpdates.size() > 0) {
-	  log.info("Database has been updated to version " + lastRecordedVersion
-	      + ". Pending updates: " + pendingUpdates);
+	  if (lastRecordedVersion > existingDbVersion) {
+	    log.info("Database has been updated to version "
+		+ lastRecordedVersion + ". Pending updates: " + pendingUpdates);
+	  } else {
+	    log.info("Database remains at version " + lastRecordedVersion
+		+ ". Pending updates: " + pendingUpdates);
+	  }
 	} else {
-	  log.info("Database has been updated to version "
+	  if (lastRecordedVersion > existingDbVersion) {
+	    log.info("Database has been updated to version "
 	      + lastRecordedVersion);
+	  } else {
+	    log.info("Database remains at version " + lastRecordedVersion);
+	  }
 	}
       } else {
 	// No: Nothing more to do.
@@ -1791,6 +1800,10 @@ public class DbManager extends BaseLockssDaemonManager
 	  dbManagerSql.updateDatabaseFrom16To17(conn);
 	} else if (from == 17) {
 	  dbManagerSql.updateDatabaseFrom17To18(conn);
+	} else if (from == 18) {
+	  dbManagerSql.updateDatabaseFrom18To19(conn);
+	} else if (from == 19) {
+	  dbManagerSql.updateDatabaseFrom19To20(conn);
 	} else {
 	  throw new DbException("Non-existent method to update the database "
 	      + "from version " + from + ".");
@@ -1811,7 +1824,7 @@ public class DbManager extends BaseLockssDaemonManager
 	    // Yes: Check whether the last update does not involve an
 	    // asynchronous process that will update the database version in the
 	    // database when it finishes. 
-	    if (from != 9 && from != 13 && from != 16) {
+	    if (from != 9 && from != 13 && from != 16 && from != 19) {
 	      // Yes: Record the current database version in the database.
 	      lastRecordedVersion = from + 1;
 	      recordDbVersion(conn, lastRecordedVersion);
@@ -1998,6 +2011,139 @@ public class DbManager extends BaseLockssDaemonManager
 	  name.substring(name.indexOf("To") + 2, name.indexOf("Migrator"));
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "to = '" + to + "'");
       result.add(from + " -> " + to);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+    return result;
+  }
+
+  /**
+   * Provides the identifier of a provider if existing or after creating it
+   * otherwise.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param providerLid
+   *          A String with the provider LOCKSS identifier.
+   * @param providerName
+   *          A String with the provider name.
+   * @return a Long with the identifier of the provider.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Long findOrCreateProvider(Connection conn, String providerLid,
+      String providerName) throws DbException {
+    final String DEBUG_HEADER = "findOrCreateProvider(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "providerLid = '" + providerLid + "'");
+      log.debug2(DEBUG_HEADER + "providerName = '" + providerName + "'");
+    }
+
+    Long providerSeq = null;
+
+    try {
+      providerSeq =
+	  dbManagerSql.findOrCreateProvider(conn, providerLid, providerName);
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "providerSeq = " + providerSeq);
+    } catch (SQLException sqle) {
+      String message = "Cannot find or create provider";
+      log.error(message);
+      log.error("providerLid = '" + providerLid + "'");
+      log.error("providerName = '" + providerName + "'");
+      throw new DbException(message, sqle);
+    } catch (RuntimeException re) {
+      String message = "Cannot find or create provider";
+      log.error(message);
+      log.error("providerLid = '" + providerLid + "'");
+      log.error("providerName = '" + providerName + "'");
+      throw new DbException(message, re);
+    }
+
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "providerSeq = " + providerSeq);
+    return providerSeq;
+  }
+
+  /**
+   * Provides the identifier of a provider.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param providerLid
+   *          A String with the provider LOCKSS identifier.
+   * @param providerName
+   *          A String with the provider name.
+   * @return a Long with the identifier of the provider.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Long findProvider(Connection conn, String providerLid,
+      String providerName) throws DbException {
+    final String DEBUG_HEADER = "findProvider(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "providerName = '" + providerName + "'");
+      log.debug2(DEBUG_HEADER + "providerLid = '" + providerLid + "'");
+    }
+
+    Long providerSeq = null;
+
+    try {
+      providerSeq = dbManagerSql.findProvider(conn, providerLid, providerName);
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "providerSeq = " + providerSeq);
+    } catch (SQLException sqle) {
+      String message = "Cannot find provider";
+      log.error(message);
+      log.error("providerLid = '" + providerLid + "'");
+      log.error("providerName = '" + providerName + "'");
+      throw new DbException(message, sqle);
+    } catch (RuntimeException re) {
+      String message = "Cannot find provider";
+      log.error(message);
+      log.error("providerLid = '" + providerLid + "'");
+      log.error("providerName = '" + providerName + "'");
+      throw new DbException(message, re);
+    }
+
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "providerSeq = " + providerSeq);
+    return providerSeq;
+  }
+
+  /**
+   * Provides an indication of whether a given database upgrade has been
+   * completed.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param version
+   *          An int with the version of the database upgrade to check.
+   * @return <code>true</code> if the database upgrade has been completed,
+   *         <code>false</code> otherwise.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  public boolean isVersionCompleted(Connection conn, int version)
+      throws DbException {
+    final String DEBUG_HEADER = "isVersionCompleted(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "version = " + version);
+
+    boolean result = false;
+
+    try {
+      result = dbManagerSql.isVersionCompleted(conn, version);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "result = " + result);
+    } catch (SQLException sqle) {
+      String message = "Cannot find a database version";
+      log.error(message);
+      log.error("version = " + version);
+      throw new DbException(message, sqle);
+    } catch (RuntimeException re) {
+      String message = "Cannot find a database version";
+      log.error(message);
+      log.error("version = " + version);
+      throw new DbException(message, re);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);

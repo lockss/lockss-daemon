@@ -1,10 +1,10 @@
 /*
- * $Id: TestMetadataDatabaseUtil.java,v 1.1 2014-08-29 20:53:13 pgust Exp $
+ * $Id: TestMetadataDatabaseUtil.java,v 1.2 2014-09-16 19:55:44 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,24 +32,17 @@
 
 package org.lockss.metadata;
 
-import static org.lockss.db.DbManager.*;
 import java.io.File;
 import java.io.IOException;
 import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.List;
 import java.util.Properties;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.Cron;
 import org.lockss.daemon.PluginException;
-import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
 import org.lockss.exporter.biblio.BibliographicItem;
-import org.lockss.exporter.counter.CounterReportsManager;
-import org.lockss.exporter.counter.CounterReportsRequestAggregator;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.MetadataField;
@@ -212,6 +205,7 @@ public class TestMetadataDatabaseUtil extends LockssTestCase {
         assertNull(item.getProprietaryId());
         assertNull(item.getProprietarySeriesId());
         assertNull(item.getSeriesTitle());
+        assertEquals("Publisher", item.getProviderName());
       }
     } finally {
       DbManager.safeRollbackAndClose(conn);
@@ -308,6 +302,7 @@ public class TestMetadataDatabaseUtil extends LockssTestCase {
         assertNull(item.getProprietaryId());
         assertNull(item.getProprietarySeriesId());
         assertNull(item.getSeriesTitle());
+        assertEquals("Publisher", item.getProviderName());
       }
     } finally {
       DbManager.safeRollbackAndClose(conn);
@@ -403,6 +398,7 @@ public class TestMetadataDatabaseUtil extends LockssTestCase {
         assertNull(item.getProprietaryId());
         assertNull(item.getProprietarySeriesId());
         assertNotNull(item.getSeriesTitle());
+        assertEquals("Publisher", item.getProviderName());
       }
     } finally {
       DbManager.safeRollbackAndClose(conn);
