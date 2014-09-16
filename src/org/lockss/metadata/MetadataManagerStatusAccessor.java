@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManagerStatusAccessor.java,v 1.2 2013-03-19 20:20:30 pgust Exp $
+ * $Id: MetadataManagerStatusAccessor.java,v 1.3 2014-09-16 21:47:28 pgust Exp $
  */
 
 /*
@@ -31,24 +31,36 @@
  */
 package org.lockss.metadata;
 
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import org.lockss.config.Configuration;
 import org.lockss.daemon.status.ColumnDescriptor;
 import org.lockss.daemon.status.StatusAccessor;
 import org.lockss.daemon.status.StatusService.NoSuchTableException;
 import org.lockss.daemon.status.StatusTable;
+import org.lockss.metadata.ArticleMetadataBuffer.ArticleMetadataInfo;
 import org.lockss.metadata.MetadataManager.ReindexingStatus;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.AuUtil;
+import org.lockss.plugin.Plugin;
+import org.lockss.plugin.PluginManager;
+import org.lockss.plugin.PluginStatus;
 import org.lockss.state.ArchivalUnitStatus;
 import org.lockss.util.CatalogueOrderComparator;
 import org.lockss.util.ListUtil;
+import org.lockss.util.Logger;
 import org.lockss.util.TimeBase;
 
 /**
  * This class displays the MetadataManager status for the current
- * and most recently run indexing operations.
+ * and most recently run indexing operations, for pending reindexing
+ * tasks (key: pending), and for reindexing task errors (key: errors).
  * 
  * @author Philip Gust
  * @version 1.0
@@ -56,7 +68,10 @@ import org.lockss.util.TimeBase;
  */
 public class MetadataManagerStatusAccessor implements StatusAccessor {
 
+  private static Logger log = Logger.getLogger(MetadataManagerStatusAccessor.class);
+
   final MetadataManager metadataMgr;
+  private String key = null;
   
   private static final String AU_COL_NAME = "au";
   private static final String INDEX_TYPE = "index_type";
@@ -116,6 +131,170 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
     this.metadataMgr = metadataMgr;
   }
   
+  /**
+   * Get an error summary for the task at the specified time.
+   * @param taskTime the task time for locating the task
+   * @return a list of SummaryInfo objects to display
+   */
+  private List<StatusTable.SummaryInfo> getErrorItemSummaryInfo(long taskTime) {
+    ReindexingTask task = null;
+    List<StatusTable.SummaryInfo> res =
+        new ArrayList<StatusTable.SummaryInfo>();
+
+    if (taskTime == 0) {
+      // debugging only -- select the first reindexing task to display
+      List<ReindexingTask> tasks = metadataMgr.getReindexingTasks();
+      if (tasks.size() > 0) {
+        task = tasks.get(0);
+      }
+    } else {
+      // select the failed reindexing task for the specified time 
+      List<ReindexingTask> tasks = metadataMgr.getFailedReindexingTasks();
+      for (ReindexingTask t : tasks) {
+        if (taskTime == t.getStartTime()) {
+          task = t;
+          break;
+        }
+      }
+    }
+
+    // spacer to offset from title
+    res.add(new StatusTable.SummaryInfo(
+        null,
+        ColumnDescriptor.TYPE_STRING,
+        "\u00A0"));  // unicode non-breaking space
+
+    if ( task == null) {
+      // report specified task not available
+      res.add(new StatusTable.SummaryInfo(
+          null,
+          ColumnDescriptor.TYPE_STRING,
+          "Reindexing task no longer available"));
+      res.add(new StatusTable.SummaryInfo(
+          null,
+          ColumnDescriptor.TYPE_STRING,
+          new StatusTable.Reference("Back to Metadata Indexing Errors", 
+              MetadataManager.METADATA_STATUS_TABLE_NAME,
+              "errors")));
+    } else {
+      // report information for specified task
+      res.add(new StatusTable.SummaryInfo(
+          "Volume",
+          ColumnDescriptor.TYPE_STRING,
+          task.getAuName()));
+      ArchivalUnit au = task.getAu();
+      Plugin plugin = au.getPlugin();
+      res.add(new StatusTable.SummaryInfo(
+          "Plugin",
+          ColumnDescriptor.TYPE_STRING,
+          PluginStatus.makePlugRef(plugin.getPluginName(), plugin)));
+      res.add(new StatusTable.SummaryInfo(
+          "Index Type",
+          ColumnDescriptor.TYPE_STRING,
+          task.isNewAu() ? "New Index" : "Reindex"));
+  
+      // show reindexing status string
+      String status;
+      ReindexingStatus reindexingStatus = task.getReindexingStatus();
+      switch (reindexingStatus) {
+        case Success:
+          status = "Success";
+          break;
+        case Failed:
+          status = "Failed";
+          break;
+        case Rescheduled:
+          status = "Rescheduled";
+          break;
+        default:
+          status = reindexingStatus.toString();
+      }
+  
+      res.add(new StatusTable.SummaryInfo(
+          "Status",
+          ColumnDescriptor.TYPE_STRING,
+          status));
+  
+      res.add(new StatusTable.SummaryInfo(
+          "Has substance",
+          ColumnDescriptor.TYPE_STRING,
+          task.hasNoAuSubstance() ? "No" : "Yes"));
+  
+      res.add(new StatusTable.SummaryInfo(
+          "Start time",
+          ColumnDescriptor.TYPE_DATE,
+          task.getStartTime()));
+      
+      res.add(new StatusTable.SummaryInfo(
+          "Index duration",
+          ColumnDescriptor.TYPE_TIME_INTERVAL,
+          task.getStartUpdateTime() - task.getStartTime()));
+      
+      res.add(new StatusTable.SummaryInfo(
+          "Articles indexed",
+          ColumnDescriptor.TYPE_INT,
+          task.getIndexedArticleCount()));
+  
+      res.add(new StatusTable.SummaryInfo(
+          "Update duration",
+          ColumnDescriptor.TYPE_TIME_INTERVAL,
+          task.getEndTime() - task.getStartUpdateTime()));
+      
+      res.add(new StatusTable.SummaryInfo(
+          "Articles updated",
+          ColumnDescriptor.TYPE_INT,
+          task.getUpdatedArticleCount()));
+      
+      res.add(new StatusTable.SummaryInfo(
+          null,
+          ColumnDescriptor.TYPE_STRING,
+          new StatusTable.Reference("AU configuration", 
+              ArchivalUnitStatus.AU_DEFINITION_TABLE_NAME, 
+              au.getAuId())));
+  
+      res.add(new StatusTable.SummaryInfo(
+          null,
+          ColumnDescriptor.TYPE_STRING,
+          new StatusTable.Reference("Back to Metadata Indexing Errors", 
+              MetadataManager.METADATA_STATUS_TABLE_NAME,
+              "errors")));
+      
+      Exception taskException = task.getException();
+      if (taskException != null) {
+        // spacer
+        res.add(new StatusTable.SummaryInfo(
+            null,
+            ColumnDescriptor.TYPE_STRING,
+            "\u00A0"));  // unicode non-breaking space
+
+        StringWriter sw = new StringWriter();
+        PrintWriter pw = new PrintWriter(sw);
+        taskException.printStackTrace(pw);
+        res.add(new StatusTable.SummaryInfo(
+            "Exception",
+            ColumnDescriptor.TYPE_STRING,
+            sw.toString()));
+        // show metadata info for a MedataException
+        if (taskException instanceof MetadataException) {
+          ArticleMetadataInfo info = 
+              ((MetadataException)taskException).getArticleMetadataInfo();
+          if (info != null) {
+            res.add(new StatusTable.SummaryInfo(
+                "MetadataInfo",
+                ColumnDescriptor.TYPE_STRING,
+                info.toString()));
+          }
+        }
+      }
+    }
+    
+    return res;
+  }
+  
+  /**
+   * Get summary info that is displayed above a list of items.
+   * @return a list of SummaryInfo objects to display
+   */
   private List<StatusTable.SummaryInfo> getSummaryInfo() {
     List<StatusTable.SummaryInfo> res =
 	new ArrayList<StatusTable.SummaryInfo>();
@@ -126,27 +305,53 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
     long articleCount = metadataMgr.getArticleCount();
     boolean indexingEnabled = metadataMgr.isIndexingEnabled();
     
-    res.add(new StatusTable.SummaryInfo(
-        "Active Indexing Operations",
-        ColumnDescriptor.TYPE_INT,
-        activeOps));
+    if (activeOps > 0 && !"indexing".equals(key)) {
+      res.add(new StatusTable.SummaryInfo(
+          "Active Indexing Operations",
+          ColumnDescriptor.TYPE_INT,
+          new StatusTable.Reference(activeOps,
+              MetadataManager.METADATA_STATUS_TABLE_NAME)));
+    } else {
+      res.add(new StatusTable.SummaryInfo(
+          "Active Indexing Operations",
+          ColumnDescriptor.TYPE_INT,
+          activeOps));
+    }
 
-    res.add(new StatusTable.SummaryInfo(
-        "Pending Indexing Operations",
+    if (pendingOps > 0 && !"pending".equals(key)) {
+      res.add(new StatusTable.SummaryInfo(
+          "Pending Indexing Operations",
         ColumnDescriptor.TYPE_INT,
-        pendingOps));
+        new StatusTable.Reference(pendingOps,
+            MetadataManager.METADATA_STATUS_TABLE_NAME,
+            "pending")));
+    } else {
+      res.add(new StatusTable.SummaryInfo(
+          "Pending Indexing Operations",
+          ColumnDescriptor.TYPE_INT,
+          pendingOps));
+    }
 
-    res.add(new StatusTable.SummaryInfo(
-        "Successful Indexing Operations",
-        ColumnDescriptor.TYPE_INT,
-        successfulOps));
+    if (successfulOps > 0 && !"indexing".equals(key)) {
+      res.add(new StatusTable.SummaryInfo(
+          "Successful Indexing Operations",
+          ColumnDescriptor.TYPE_INT,
+          new StatusTable.Reference(successfulOps,
+              MetadataManager.METADATA_STATUS_TABLE_NAME)));
+    } else {
+      res.add(new StatusTable.SummaryInfo(
+          "Successful Indexing Operations",
+          ColumnDescriptor.TYPE_INT,
+          successfulOps));
+    }
 
-    if (failedOps > 0) {
+    if (failedOps > 0 && !"errors".equals(key)) {
       res.add(new StatusTable.SummaryInfo(
         "Failed/Rescheduled Indexing Operations",
         ColumnDescriptor.TYPE_INT,
         new StatusTable.Reference(failedOps,
-            MetadataManager.METADATA_STATUS_ERROR_TABLE_NAME)));
+            MetadataManager.METADATA_STATUS_TABLE_NAME,
+            "errors")));
     } else {
       res.add(new StatusTable.SummaryInfo(
           "Failed/Rescheduled Indexing Operations",
@@ -167,11 +372,55 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
     return res;
   }
 
+  
   List<Map<String,Object>> getRows() {
-    return getRows(metadataMgr.getReindexingTasks());
+    return getTaskRows(metadataMgr.getReindexingTasks());
+  }
+
+  /**
+   * Get status rows for pending AUs.
+   * @param pendingAuIds the pending AU ids.
+   * @return list of rows
+   */
+  List<Map<String,Object>> getAuRows(Collection<String> pendingAuIds) {
+    List<Map<String,Object>> rows = new ArrayList<Map<String,Object>>();
+    PluginManager pluginMgr = metadataMgr.getDaemon().getPluginManager();
+    for (String auId : pendingAuIds) {
+      ArchivalUnit au = pluginMgr.getAuFromId(auId);
+      if (au == null) {
+        // log error
+        if (log.isDebug3()) {
+          log.debug3("Unknown pending AU: " + auId);
+        }
+      } else {
+        String auName = au.getName();
+        Map<String,Object> row = new HashMap<String,Object>();
+        row.put(AU_COL_NAME,
+                new StatusTable.Reference(auName,
+                                          ArchivalUnitStatus.AU_STATUS_TABLE_NAME,
+                                          auId));
+        // set index type from AU last index date if metadata database 
+        // not available
+        if (AuUtil.getAuState(au).getLastMetadataIndex() <= 0) {
+          row.put(INDEX_TYPE, "New Index");
+        } else {
+          row.put(INDEX_TYPE, "Reindex");
+        }
+        
+        row.put(INDEX_STATUS_COL_NAME, "Pending");
+        rows.add(row);
+      }
+    }
+    
+    return rows;
   }
   
-  List<Map<String,Object>> getRows(Collection<ReindexingTask> tasks) {
+  /**
+   * Get status rows for reindexing tasks.
+   * @param tasks the reindexing tasks
+   * @return list of rows
+   */
+  List<Map<String,Object>> getTaskRows(Collection<ReindexingTask> tasks) {
     List<Map<String,Object>> rows = new ArrayList<Map<String,Object>>();
     int rowNum = 0;
     for (ReindexingTask task : tasks) {
@@ -255,7 +504,7 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
         if (task.getException() != null) {
           row.put(INDEX_STATUS_COL_NAME,
                   new StatusTable.Reference(status,
-                      MetadataManager.METADATA_STATUS_ERROR_INFO_TABLE_NAME,
+                      MetadataManager.METADATA_STATUS_TABLE_NAME,
                       Long.toString(task.getStartTime())));
           
         } else {
@@ -289,10 +538,30 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
 
   @Override
   public void populateTable(StatusTable table) throws NoSuchTableException {
-    table.setRows(getRows());
-    table.setDefaultSortRules(sortRules);
-    table.setColumnDescriptors(getColDescs());
-    table.setSummaryInfo(getSummaryInfo());
+    key = (table.getKey() == null) ? "indexing" : table.getKey();
+    try {
+      long taskTime = Long.parseLong(key);
+      table.setTitle("Metadata Indexing Error Information");
+      table.setSummaryInfo(getErrorItemSummaryInfo(taskTime));
+    } catch (NumberFormatException ex) {
+      if ("pending".equals(key)) {
+        // list pending
+        table.setTitle("Metadata Pending Index Status");
+        table.setRows(getAuRows(metadataMgr.getPendingReindexingAus()));
+      } else if ("errors".equals(key)) {
+        // list errors
+        table.setTitle("Metadata Indexing Errors");
+        table.setRows(getTaskRows(metadataMgr.getFailedReindexingTasks()));
+      } else {
+        // list indexing status
+        key = "indexing";
+        table.setTitle("Metadata Indexing Status");
+        table.setRows(getTaskRows(metadataMgr.getReindexingTasks()));
+      }
+      table.setDefaultSortRules(sortRules);
+      table.setColumnDescriptors(getColDescs());
+      table.setSummaryInfo(getSummaryInfo());
+    }
   }
 
   @Override
