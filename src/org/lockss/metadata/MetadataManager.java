@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.30 2014-09-16 19:55:42 fergaloy-sf Exp $
+ * $Id: MetadataManager.java,v 1.31 2014-09-16 21:47:10 pgust Exp $
  */
 
 /*
@@ -148,17 +148,22 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   /** Default maximum reindexing tasks history */
   public static final int DEFAULT_HISTORY_MAX = 200;
 
+  /**
+   * The maximum size of pending AUs list returned by 
+   * {@link #getPendingReindexingAus()}.
+   */
+  public static final String PARAM_PENDING_AU_LIST_SIZE = PREFIX
+      + "maxPendingAuListSize";
+
+  /** 
+   * The default maximum size of pending AUs list returned by 
+   * {@link #getPendingReindexingAus()}.
+   */
+  public static final int DEFAULT_PENDING_AU_LIST_SIZE = 100;
+
   /** Name of metadata status table */
   public static final String METADATA_STATUS_TABLE_NAME =
       "MetadataStatusTable";
-  
-  /** Name of metadata status table error table */
-  public static final String METADATA_STATUS_ERROR_TABLE_NAME =
-      "MetadataStatusErrorTable";
-
-  /** Name of metadata status table error info table */
-  public static final String METADATA_STATUS_ERROR_INFO_TABLE_NAME =
-      "MetadataStatusErrorInfoTable";
 
   /** Map of AUID regexp to priority.  If set, AUs are assigned the
    * corresponding priority of the first regexp that their AUID matches.
@@ -836,6 +841,10 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   // The number of AUs pending to be reindexed.
   private long pendingAusCount = 0;
 
+  // the maximum size of the pending AUs list returned by 
+  // {@link #getPendingReindexingAus()}
+  private int pendingAuListSize = DEFAULT_PENDING_AU_LIST_SIZE;
+  
   // The number of successful reindexing operations.
   private long successfulReindexingCount = 0;
 
@@ -902,10 +911,6 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     StatusService statusServ = getDaemon().getStatusService();
     statusServ.registerStatusAccessor(METADATA_STATUS_TABLE_NAME,
         new MetadataManagerStatusAccessor(this));
-    statusServ.registerStatusAccessor(METADATA_STATUS_ERROR_TABLE_NAME,
-        new MetadataManagerErrorStatusAccessor(this));
-    statusServ.registerStatusAccessor(METADATA_STATUS_ERROR_INFO_TABLE_NAME,
-        new MetadataIndexingErrorInfoAccessor(this));
     statusServ.registerOverviewAccessor(METADATA_STATUS_TABLE_NAME,
         new MetadataIndexingOverviewAccessor(this));
 
@@ -1012,6 +1017,10 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       disableCrawlRescheduleTask =
 	  config.getBoolean(PARAM_DISABLE_CRAWL_RESCHEDULE_TASK,
 			    DEFAULT_DISABLE_CRAWL_RESCHEDULE_TASK);
+      pendingAuListSize = 
+          Math.max(0, config.getInt(PARAM_PENDING_AU_LIST_SIZE, 
+                                    DEFAULT_PENDING_AU_LIST_SIZE));
+
       if (isDaemonInited()) {
 	boolean doEnable =
 	  config.getBoolean(PARAM_INDEXING_ENABLED, DEFAULT_INDEXING_ENABLED);
@@ -1831,6 +1840,41 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    */
   public List<ReindexingTask> getFailedReindexingTasks() {
     return new ArrayList<ReindexingTask>(failedReindexingTasks);
+  }
+
+  /**
+   * Provides a collection of auids for AUs pending reindexing.
+   * The number of elements returned is controlled by a definable
+   * parameter {@link MetadataManager.PARAM_PENDING_AU_LIST_SIZE}.
+   * 
+   * @return default number of auids for AUs pending reindexing
+   */
+  public List<String> getPendingReindexingAus() { 
+    return getPendingReindexingAus(pendingAuListSize);
+  }
+  
+  /**
+   * Provides a collection of auids for AUs pending reindexing.
+   *
+   * @param  the maximum number of auids to return
+   * @return all auids for AUs pending reindexing
+   */
+  public List<String> getPendingReindexingAus(int maxAuIds) {
+    final String DEBUG_HEADER = "getPendingReindexingAus(): ";
+    Connection conn = null;
+    List<String> auids = Collections.emptyList();
+    try {
+      conn = dbManager.getConnection();
+      auids = getPrioritizedAuIdsToReindex(conn, maxAuIds);
+      DbManager.commitOrRollback(conn, log);
+    } catch (DbException dbe) {
+      log.error("Cannot start reindexing", dbe);
+    } finally {
+      DbManager.safeRollbackAndClose(conn);
+    }
+
+    log.debug3(DEBUG_HEADER + "count = " + auids.size());
+    return auids;
   }
   
   /**
