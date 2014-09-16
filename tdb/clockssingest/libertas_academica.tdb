@@ -1276,11 +1276,10 @@
 
     param[journal_id] = 173
     
-    au < exists ; exists ; 2010 ; Journal of Genomes and Exomes Volume 1 ; 1 ; 2010 >
-    au < crawling ; exists ; 2011 ; Journal of Genomes and Exomes Volume 2 ; 2 ; 2011 >
-    au < finished ; frozen ; 2012 ; Journal of Genomes and Exomes Volume 3 ; 3 ; 2012 >
-    au < crawling ; exists ; 2013 ; Journal of Genomes and Exomes Volume 4 ; 4 ; 2013 >
-    au < crawling ; exists ; 2014 ; Journal of Genomes and Exomes Volume 5 ; 5 ; 2014 >
+    au < superseded ; exists ; 2011 ; Journal of Genomes and Exomes Volume 0 [to delete] ; 0 ; 2011 >
+    au < finished ; frozen ; 2012 ; Journal of Genomes and Exomes Volume 1 ; 1 ; 2012 >
+    au < crawling ; exists ; 2013 ; Journal of Genomes and Exomes Volume 2 ; 2 ; 2013 >
+    au < crawling ; exists ; 2014 ; Journal of Genomes and Exomes Volume 3 ; 3 ; 2014 >
 
   }
   
