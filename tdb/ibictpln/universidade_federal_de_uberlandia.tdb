@@ -469,17 +469,17 @@
       param[base_url] = http://www.seer.ufu.br/
       param[journal_id] = olharesetrilhas
 
-      au < released ; 2000 ; 1 ; Olhares & Trilhas Volume 2000 ; 2000 ; >
-      au < released ; 2001 ; 2 ; Olhares & Trilhas Volume 2001 ; 2001 ; >
-      au < released ; 2002 ; 3 ; Olhares & Trilhas Volume 2002 ; 2002 ; >
-      au < released ; 2003 ; 4 ; Olhares & Trilhas Volume 2003 ; 2003 ; >
-      au < released ; 2004 ; 5 ; Olhares & Trilhas Volume 2004 ; 2004 ; >
-      au < released ; 2005 ; 6 ; Olhares & Trilhas Volume 2005 ; 2005 ; >
-      au < released ; 2006 ; 7 ; Olhares & Trilhas Volume 2006 ; 2006 ; >
-      au < released ; 2007 ; 8 ; Olhares & Trilhas Volume 2007 ; 2007 ; >
-      au < released ; 2008 ; 9 ; Olhares & Trilhas Volume 2008 ; 2008 ; >
-      au < released ; 2009 ; 10 ; Olhares & Trilhas Volume 2009 ; 2009 ; >
-      au < released ; 2010 ; 11 ; Olhares & Trilhas Volume 2010 ; 2010 ; >
+      au < down ; 2000 ; 1 ; Olhares & Trilhas Volume 2000 ; 2000 ; no manifest page >
+      au < down ; 2001 ; 2 ; Olhares & Trilhas Volume 2001 ; 2001 ; no manifest page >
+      au < down ; 2002 ; 3 ; Olhares & Trilhas Volume 2002 ; 2002 ; no manifest page >
+      au < down ; 2003 ; 4 ; Olhares & Trilhas Volume 2003 ; 2003 ; no manifest page >
+      au < down ; 2004 ; 5 ; Olhares & Trilhas Volume 2004 ; 2004 ; no manifest page >
+      au < down ; 2005 ; 6 ; Olhares & Trilhas Volume 2005 ; 2005 ; no manifest page >
+      au < down ; 2006 ; 7 ; Olhares & Trilhas Volume 2006 ; 2006 ; no manifest page >
+      au < down ; 2007 ; 8 ; Olhares & Trilhas Volume 2007 ; 2007 ; no manifest page >
+      au < down ; 2008 ; 9 ; Olhares & Trilhas Volume 2008 ; 2008 ; no manifest page >
+      au < down ; 2009 ; 10 ; Olhares & Trilhas Volume 2009 ; 2009 ; no manifest page >
+      au < down ; 2010 ; 11 ; Olhares & Trilhas Volume 2010 ; 2010 ; no manifest page >
       au < exists ; 2011 ; 12 ; Olhares & Trilhas Volume 2011 ; 2011 ; >
 
   }
