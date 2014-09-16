@@ -114,6 +114,21 @@
     {
   
         title <
+          name = Applied Informatics ;
+          eissn = 2196-0089 
+        >
+
+        param[base_url] = http://www.applied-informatics-j.com/
+        param[journal_issn] = 2196-0089 
+        comment[platform] = BioMedCentralPlugin
+
+        au < exists ; 2014 ; Applied Informatics Volume 1 ; 1 >
+
+    }
+
+    {
+  
+        title <
           name = Asia Pacific Journal on Computational Engineering ;
           eissn = 2196-1166
         >
