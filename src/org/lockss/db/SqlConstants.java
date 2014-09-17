@@ -1,5 +1,5 @@
 /*
- * $Id: SqlConstants.java,v 1.2 2014-09-16 19:55:43 fergaloy-sf Exp $
+ * $Id: SqlConstants.java,v 1.3 2014-09-17 22:48:32 pgust Exp $
  */
 
 /*
@@ -336,6 +336,9 @@ public class SqlConstants {
 
   /** Priority column. */
   public static final String PRIORITY_COLUMN = "priority";
+
+  /** is_new column. */
+  public static final String ISNEW_COLUMN = "is_new";
 
   /** System column. */
   public static final String SYSTEM_COLUMN = "system";
