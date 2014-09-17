@@ -1,0 +1,47 @@
+{
+
+  publisher <
+    name = SPIE ;
+    info[contract] = 2012 ;
+    info[tester] = 0
+  >
+
+    plugin = org.lockss.plugin.silverchair.ClockssSilverchairJournalsPlugin
+    implicit < status ; status2 ; year ; param[year] ; param[book_id] ; eisbn ; isbn ; name ; author >
+    param[base_url] = http://ebooks.spiedigitallibrary.org
+ 
+    {
+    title < 
+      name = eBooks ;
+      type = book
+    >
+    
+    au < exists ; exists ; 1989 ; 1989 ; 209 ; 9780819481030 ; 9780819401304 ; The New Physical Optics Notebook: Tutorials in Fourier Optics ; George O Reynolds , John B DeVelis, George B Parrent Jr, Brian J Thompson >
+    au < exists ; exists ; 1991 ; 1991 ; 207 ; 9780819478788 ; 9780819405364 ; Aberration Theory Made Simple ; Virendra N Mahajan >
+    au < exists ; exists ; 1991 ; 1991 ; 208 ; 9780819478528 ; 9780819406484 ; Digital Image Compression Techniques ; Majid Rabbani, Paul W Jones >
+    au < exists ; exists ; 1992 ; 1992 ; 206 ; 9780819479013 ; 9780819407634 ; Optics in Photography ; Rudolf Kingslake >
+    au < exists ; exists ; 2013 ; 2013 ; 560 ; 9780819495907 ; 9780819495891 ; Chemical Vapor Deposited Zinc Sulfide ; John McCloy, Randal Tustison >
+    au < exists ; exists ; 2013 ; 2013 ; 492 ; 9780819494832 ; 9780819494825 ; Commercialization Basics for the Photonics Industry ; David A. Krohn >
+    au < exists ; exists ; 2013 ; 2013 ; 695 ; 9780819497406 ; 9780819497390 ; Computer-Aided Cancer Detection and Diagnosis: Recent Advances ; Jinshan Tang, Sos S. Agaian >
+    au < exists ; exists ; 2013 ; 2013 ; 567 ; 9780819495709 ; 9780819495693 ; Electro-Optical System Analysis and Design: A Radiometry Perspective ; Cornelius Willers >
+    au < exists ; exists ; 2013 ; 2013 ; 651 ; 9780819496362 ; 9780819496355 ; Field Guide to Nonlinear Optics ; Peter E. Powers >
+    au < exists ; exists ; 2013 ; 2013 ; 566 ; 9780819485496 ; 9780819485489 ; Field Guide to Physical Optics ; Dan Smith >
+    au < exists ; exists ; 2013 ; 2013 ; 551 ; 9780819492982 ; 9780819492975 ; Laser Beam Quality Metrics ; T. Sean Ross >
+    au < exists ; exists ; 2013 ; 2013 ; 493 ; 9780819488206 ; 9780819488190 ; Laser Safety in the Lab ; Ken Barat >
+    au < exists ; exists ; 2013 ; 2013 ; 532 ; 9780819491565 ; 9780819491558 ; Military Displays Technology and Applications ; Daniel D. Desjardins >
+    au < exists ; exists ; 2013 ; 2013 ; 494 ; 9780819492555 ; 9780819492548 ; Modeling the Optical and Visual Performance of the Human Eye ; Pier Giorgio Gobbi >
+    au < exists ; exists ; 2013 ; 2013 ; 552 ; 9780819492951 ; 9780819492944 ; Multimodality Breast Imaging: Diagnosis and Treatment ; E. Y. K. Ng, U. Rajendra Acharya, Rangaraj M. Rangayyan, Jasjit S. Suri >
+    au < exists ; exists ; 2013 ; 2013 ; 652 ; 9780819496324 ; 9780819496317 ; Ocean Sensing and Monitoring: Optics and Other Methods ; Weilin W. Hou >
+    au < exists ; exists ; 2013 ; 2013 ; 653 ; 9780819491121 ; 9780819491114 ; Optical Imaging and Aberrations, Part III: Wavefront Analysis ; Virendra N. Mahajan >
+    au < exists ; exists ; 2013 ; 2013 ; 681 ; 9780819497888 ; 9780819497871 ; Optical Satellite Data Compression and Implementation ; Shen-En Qian >
+    au < exists ; exists ; 2013 ; 2013 ; 679 ; 9780819493293 ; 9780819493286 ; Optical Satellite Signal Processing and Enhancement ; Shen-En Qian >
+    au < exists ; exists ; 2013 ; 2013 ; 670 ; 9780819493323 ; 9780819493316 ; Pyroelectric Materials: Infrared Detectors, Particle Accelerators, and Energy Harvesters ; Ashok K. Batra, Mohan D. Aggarwal >
+    au < exists ; exists ; 2013 ; 2013 ; 553 ; 9780819493262 ; 9780819493255 ; Stray Light Analysis and Control ; Eric Fest >
+    au < exists ; exists ; 2013 ; 2013 ; 554 ; 9780819494580 ; 9780819494573 ; The Proper Care of Optics: Cleaning, Handling, Storage, and Shipping ; Robert Schalck >
+    au < exists ; exists ; 2013 ; 2013 ; 680 ; 9780819496096 ; 9780819495969 ; The Wonder of Nanotechnology: Quantum Optoelectronic Devices and Applications ; Manijeh Razeghi, Leo Esaki, Klaus von Klitzing >
+    au < exists ; exists ; 2013 ; 2013 ; 495 ; 9780819493231 ; 9780819493224 ; Value Metrics for Better Lighting ; Mark S. Rea >
+    au < exists ; exists ; 2013 ; 2013 ; 654 ; 9780819496430 ; 9780819496416 ; Windowed Fringe Pattern Analysis ; Qian Kemao >
+
+    }
+    
+}
