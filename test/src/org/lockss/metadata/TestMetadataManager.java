@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetadataManager.java,v 1.7 2014-08-22 22:15:00 fergaloy-sf Exp $
+ * $Id: TestMetadataManager.java,v 1.8 2014-09-17 22:46:11 pgust Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.*;
 import org.lockss.config.*;
+import org.lockss.config.Configuration.Differences;
 import org.lockss.daemon.PluginException;
 import org.lockss.db.DbManager;
 import org.lockss.extractor.ArticleMetadata;
@@ -413,12 +414,41 @@ public class TestMetadataManager extends LockssTestCase {
       count = resultSet.getInt(1);
     }
     assertEquals(5, count);
+    
+    // insert another pending AU that is not also in the metadata manager
+    insertPendingAuBatchStatement.setString(1, "XyzzyPlugin");
+    insertPendingAuBatchStatement.setString(2, "journal_id=xyzzy");
+    insertPendingAuBatchStatement.execute();
+    
+    // ensure that the the most recently added "new" AU is prioritized last
+    List<MetadataManager.PrioritizedAuId> auids =
+        metadataManager.getPrioritizedAuIdsToReindex(con, Integer.MAX_VALUE);
+    assertEquals(6, auids.size());
+    assertTrue(auids.get(0).isNew);
+    for (int i = 1; i <= 5; i++) {
+      assertFalse(auids.get(5).isNew);
+    }
+
+    // modify the metadata manager to not prioritize new AUs over existing ones
+    Configuration newConf = ConfigManager.newConfiguration();
+    newConf.put("org.lockss.metadataManager.prioritizeIndexingNewAus", "false");
+    Configuration oldConf = ConfigManager.newConfiguration();
+    Differences diffs = newConf.differences(oldConf);
+    metadataManager.setConfig(newConf, oldConf, diffs);
+
+    // ensure that the the most recently added "new" AU is prioritized first
+    auids = metadataManager.getPrioritizedAuIdsToReindex(con,Integer.MAX_VALUE);
+    assertEquals(6, auids.size());
+    for (int i = 0; i < 5; i++) {
+      assertFalse(auids.get(i).isNew);
+    }
+    assertTrue(auids.get(5).isNew);  // most recently added
 
     // Clear the table of pending AUs.
     query = "delete from " + PENDING_AU_TABLE;
     stmt = dbManager.prepareStatement(con, query);
     count = dbManager.executeUpdate(stmt);
-    assertEquals(5, count);
+    assertEquals(6, count);
 
     con.commit();
 
