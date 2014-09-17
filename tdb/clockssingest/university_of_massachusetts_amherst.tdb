@@ -56,7 +56,7 @@
     implicit < status ; status2 ; year ; name ; param[volume] >
 
     au < crawling ; exists ; 2013 ; communication +1 Volume 1 ; 1 >
-    au < ready ; exists ; 2014 ; communication +1 Volume 2 ; 2 >
+    au < crawling ; exists ; 2014 ; communication +1 Volume 2 ; 2 >
 
   }
   
@@ -105,7 +105,7 @@
     au < manifest ; exists ; 2009 ; EDGE - A Graduate Journal for German and Scandinavian Studies Volume 1 ; 1 >
     au < manifest ; exists ; 2011 ; EDGE - A Graduate Journal for German and Scandinavian Studies Volume 2 ; 2 >
     au < crawling ; exists ; 2013 ; EDGE - A Graduate Journal for German and Scandinavian Studies Volume 3 ; 3 >
-    au < ready ; exists ; 2014 ; EDGE - A Graduate Journal for German and Scandinavian Studies Volume 4 ; 4 >
+    au < crawling ; exists ; 2014 ; EDGE - A Graduate Journal for German and Scandinavian Studies Volume 4 ; 4 >
 
   }
   
