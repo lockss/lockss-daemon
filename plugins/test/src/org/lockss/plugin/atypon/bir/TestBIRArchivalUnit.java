@@ -1,5 +1,5 @@
 /*
- * $Id: TestBIRArchivalUnit.java,v 1.1 2014-09-17 20:53:25 alexandraohlson Exp $
+ * $Id: TestBIRArchivalUnit.java,v 1.2 2014-09-17 21:06:11 alexandraohlson Exp $
  */
 
 /*
@@ -86,10 +86,20 @@ public class TestBIRArchivalUnit extends LockssTestCase {
     DefinablePlugin ap = new DefinablePlugin();
     ap.initPlugin(getMockLockssDaemon(),
         "org.lockss.plugin.atypon.bir.BIRAtyponPlugin");
-    DefinableArchivalUnit AMetSocAU = (DefinableArchivalUnit)ap.createAu(config);
+    DefinableArchivalUnit BirAU = (DefinableArchivalUnit)ap.createAu(config);
     
     log.debug3("testing GLN user message");
-    assertEquals(gln_user_msg, AMetSocAU.getProperties().getString(DefinableArchivalUnit.KEY_AU_CONFIG_USER_MSG, null));
+    assertEquals(gln_user_msg, BirAU.getProperties().getString(DefinableArchivalUnit.KEY_AU_CONFIG_USER_MSG, null));
+
+    // now check clockss version non-message
+    DefinablePlugin cap = new DefinablePlugin();
+    cap.initPlugin(getMockLockssDaemon(),
+        "org.lockss.plugin.atypon.bir.ClockssBIRAtyponPlugin");
+    DefinableArchivalUnit ClBirAU = (DefinableArchivalUnit)cap.createAu(config);
+    
+    log.debug3("testing CLOCKSS absence of user message");
+    assertEquals(null, ClBirAU.getProperties().getString(DefinableArchivalUnit.KEY_AU_CONFIG_USER_MSG, null));    
+    
   }
 
 }
