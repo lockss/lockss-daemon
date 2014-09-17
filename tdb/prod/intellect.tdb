@@ -1684,20 +1684,22 @@
       >
       param[journal_id] = stp
       param[journal_issn] = 1468-2761
+      
+      comment[moved] = journal moved to Taylor and Francis.
     
-      au < released ; 2001-2002 ; Studies in Theatre and Performance Volume 21 ; 21 >
-      au < released ; 2002-2003 ; Studies in Theatre and Performance Volume 22 ; 22 >
-      au < released ; 2003-2004 ; Studies in Theatre and Performance Volume 23 ; 23 >
-      au < released ; 2004 ; Studies in Theatre and Performance Volume 24 ; 24 >
-      au < released ; 2005 ; Studies in Theatre and Performance Volume 25 ; 25 >
-      au < released ; 2006 ; Studies in Theatre and Performance Volume 26 ; 26 >
-      au < released ; 2007 ; Studies in Theatre and Performance Volume 27 ; 27 >
-      au < released ; 2007-2008 ; Studies in Theatre and Performance Volume 28 ; 28 >
-      au < released ; 2009 ; Studies in Theatre and Performance Volume 29 ; 29 >
-      au < released ; 2010 ; Studies in Theatre and Performance Volume 30 ; 30 >
-      au < released ; 2011 ; Studies in Theatre and Performance Volume 31 ; 31 >
-      au < released ; 2012 ; Studies in Theatre and Performance Volume 32 ; 32 >
-      au < released ; 2013 ; Studies in Theatre and Performance Volume 33 ; 33 >
+      au < down ; 2001-2002 ; Studies in Theatre and Performance Volume 21 ; 21 >
+      au < down ; 2002-2003 ; Studies in Theatre and Performance Volume 22 ; 22 >
+      au < down ; 2003-2004 ; Studies in Theatre and Performance Volume 23 ; 23 >
+      au < down ; 2004 ; Studies in Theatre and Performance Volume 24 ; 24 >
+      au < down ; 2005 ; Studies in Theatre and Performance Volume 25 ; 25 >
+      au < down ; 2006 ; Studies in Theatre and Performance Volume 26 ; 26 >
+      au < down ; 2007 ; Studies in Theatre and Performance Volume 27 ; 27 >
+      au < down ; 2007-2008 ; Studies in Theatre and Performance Volume 28 ; 28 >
+      au < down ; 2009 ; Studies in Theatre and Performance Volume 29 ; 29 >
+      au < down ; 2010 ; Studies in Theatre and Performance Volume 30 ; 30 >
+      au < down ; 2011 ; Studies in Theatre and Performance Volume 31 ; 31 >
+      au < down ; 2012 ; Studies in Theatre and Performance Volume 32 ; 32 >
+      au < down ; 2013 ; Studies in Theatre and Performance Volume 33 ; 33 >
 
     }
 
