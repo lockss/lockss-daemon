@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManagerStatusAccessor.java,v 1.3 2014-09-16 21:47:28 pgust Exp $
+ * $Id: MetadataManagerStatusAccessor.java,v 1.4 2014-09-17 22:47:07 pgust Exp $
  */
 
 /*
@@ -39,15 +39,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.lockss.config.Configuration;
 import org.lockss.daemon.status.ColumnDescriptor;
 import org.lockss.daemon.status.StatusAccessor;
 import org.lockss.daemon.status.StatusService.NoSuchTableException;
 import org.lockss.daemon.status.StatusTable;
 import org.lockss.metadata.ArticleMetadataBuffer.ArticleMetadataInfo;
+import org.lockss.metadata.MetadataManager.PrioritizedAuId;
 import org.lockss.metadata.MetadataManager.ReindexingStatus;
 import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.Plugin;
 import org.lockss.plugin.PluginManager;
 import org.lockss.plugin.PluginStatus;
@@ -382,15 +381,16 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
    * @param pendingAuIds the pending AU ids.
    * @return list of rows
    */
-  List<Map<String,Object>> getAuRows(Collection<String> pendingAuIds) {
+  List<Map<String,Object>> getPrioritizedAus(
+      Collection<PrioritizedAuId> pendingAuIds) {
     List<Map<String,Object>> rows = new ArrayList<Map<String,Object>>();
     PluginManager pluginMgr = metadataMgr.getDaemon().getPluginManager();
-    for (String auId : pendingAuIds) {
-      ArchivalUnit au = pluginMgr.getAuFromId(auId);
+    for (PrioritizedAuId pendingAuId : pendingAuIds) {
+      ArchivalUnit au = pluginMgr.getAuFromId(pendingAuId.auId);
       if (au == null) {
         // log error
         if (log.isDebug3()) {
-          log.debug3("Unknown pending AU: " + auId);
+          log.debug3("Unknown pending AU: " + pendingAuId.auId);
         }
       } else {
         String auName = au.getName();
@@ -398,15 +398,8 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
         row.put(AU_COL_NAME,
                 new StatusTable.Reference(auName,
                                           ArchivalUnitStatus.AU_STATUS_TABLE_NAME,
-                                          auId));
-        // set index type from AU last index date if metadata database 
-        // not available
-        if (AuUtil.getAuState(au).getLastMetadataIndex() <= 0) {
-          row.put(INDEX_TYPE, "New Index");
-        } else {
-          row.put(INDEX_TYPE, "Reindex");
-        }
-        
+                                          pendingAuId.auId));
+        row.put(INDEX_TYPE, pendingAuId.isNew ? "New Index" : "Reindex");
         row.put(INDEX_STATUS_COL_NAME, "Pending");
         rows.add(row);
       }
@@ -547,7 +540,7 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
       if ("pending".equals(key)) {
         // list pending
         table.setTitle("Metadata Pending Index Status");
-        table.setRows(getAuRows(metadataMgr.getPendingReindexingAus()));
+        table.setRows(getPrioritizedAus(metadataMgr.getPendingReindexingAus()));
       } else if ("errors".equals(key)) {
         // list errors
         table.setTitle("Metadata Indexing Errors");
