@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.31 2014-09-16 21:47:10 pgust Exp $
+ * $Id: MetadataManager.java,v 1.32 2014-09-17 22:47:51 pgust Exp $
  */
 
 /*
@@ -159,8 +159,21 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * The default maximum size of pending AUs list returned by 
    * {@link #getPendingReindexingAus()}.
    */
-  public static final int DEFAULT_PENDING_AU_LIST_SIZE = 100;
+  public static final int DEFAULT_PENDING_AU_LIST_SIZE = 200;
+  
+  /**
+   * Determines whether indexing new AUs is prioritized ahead of 
+   * reindexing exiting AUs.
+   */
+  public static final String PARAM_PRIORTIZE_INDEXING_NEW_AUS = PREFIX
+      + "prioritizeIndexingNewAus";
 
+  /**
+   * The default for prioritizing indexing of new AUs ahead of 
+   * reindexing existing AUs
+   */
+  public static final boolean DEFAULT_PRIORTIZE_INDEXING_NEW_AUS = true;
+  
   /** Name of metadata status table */
   public static final String METADATA_STATUS_TABLE_NAME =
       "MetadataStatusTable";
@@ -467,16 +480,32 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       + "count(*) from " + PENDING_AU_TABLE
       + " where " + PRIORITY_COLUMN + " >= 0";
   
-  // Query to find enabled pending AUs sorted by priority.
+  // Query to find enabled pending AUs sorted by priority. Subsitute "true"
+  // to prioritize indexing new AUs ahead of reindexing existing ones, "false"
+  // to index in the order they were added to the queue
   private static final String FIND_PRIORITIZED_ENABLED_PENDING_AUS_QUERY =
-      "select "
-      + PLUGIN_ID_COLUMN
-      + "," + AU_KEY_COLUMN
-      + "," + PRIORITY_COLUMN
+        "select "
+      +       PENDING_AU_TABLE + "." + PLUGIN_ID_COLUMN
+      + "," + PENDING_AU_TABLE + "." + AU_KEY_COLUMN
+      + "," + PENDING_AU_TABLE + "." + PRIORITY_COLUMN
+      + ",(" + AU_MD_TABLE + "." + AU_SEQ_COLUMN + " is null) " + ISNEW_COLUMN
       + " from " + PENDING_AU_TABLE
+      + "   left join " + PLUGIN_TABLE
+      + "     on " + PLUGIN_TABLE + "." + PLUGIN_ID_COLUMN
+      + "        = " + PENDING_AU_TABLE + "." + PLUGIN_ID_COLUMN
+      + "   left join " + AU_TABLE
+      + "     on " + AU_TABLE + "." + AU_KEY_COLUMN
+      + "        = " + PENDING_AU_TABLE + "." + AU_KEY_COLUMN
+      + "    and " + AU_TABLE + "." + PLUGIN_SEQ_COLUMN
+      + "        = " + PLUGIN_TABLE + "." + PLUGIN_SEQ_COLUMN
+      + "   left join " + AU_MD_TABLE
+      + "     on " + AU_MD_TABLE + "." + AU_SEQ_COLUMN
+      + "        = " + AU_TABLE + "." + AU_SEQ_COLUMN
       + " where " + PRIORITY_COLUMN + " >= 0"
-      + " order by " + PRIORITY_COLUMN;
-  
+      + " order by (true = ? and "
+      +            AU_MD_TABLE + "." + AU_SEQ_COLUMN + " is not null)," 
+      +            PENDING_AU_TABLE + "." + PRIORITY_COLUMN;
+
   // Query to find a pending AU by its key and plugin identifier.
   private static final String FIND_PENDING_AU_QUERY = "select "
       + PLUGIN_ID_COLUMN
@@ -845,6 +874,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   // {@link #getPendingReindexingAus()}
   private int pendingAuListSize = DEFAULT_PENDING_AU_LIST_SIZE;
   
+  private boolean prioritizeIndexingNewAus = 
+      DEFAULT_PRIORTIZE_INDEXING_NEW_AUS;
+  
   // The number of successful reindexing operations.
   private long successfulReindexingCount = 0;
 
@@ -1020,6 +1052,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       pendingAuListSize = 
           Math.max(0, config.getInt(PARAM_PENDING_AU_LIST_SIZE, 
                                     DEFAULT_PENDING_AU_LIST_SIZE));
+      prioritizeIndexingNewAus =
+          config.getBoolean(PARAM_PRIORTIZE_INDEXING_NEW_AUS,
+                            DEFAULT_PRIORTIZE_INDEXING_NEW_AUS);
 
       if (isDaemonInited()) {
 	boolean doEnable =
@@ -1245,29 +1280,29 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       // number of them is not reached.
       while (activeReindexingTasks.size() < maxReindexingTasks) {
         // Get the list of pending AUs to reindex.
-	List<String> auIds =
+	List<PrioritizedAuId> auIdsToReindex =
 	    getPrioritizedAuIdsToReindex(conn, maxReindexingTasks
 		- activeReindexingTasks.size());
 
 	// Nothing more to do if there are no pending AUs to reindex.
-        if (auIds.isEmpty()) {
+        if (auIdsToReindex.isEmpty()) {
           break;
         }
 
         // Loop through all the pending AUs. 
-        for (String auId : auIds) {
+        for (PrioritizedAuId auIdToReindex : auIdsToReindex) {
           // Get the next pending AU.
-          ArchivalUnit au = pluginMgr.getAuFromId(auId);
+          ArchivalUnit au = pluginMgr.getAuFromId(auIdToReindex.auId);
 
           // Check whether it does not exist.
           if (au == null) {
 	    // Yes: Cancel any running tasks associated with the AU and delete
 	    // the AU metadata.
             try {
-              int count = deleteAu(conn, auId);
-              notifyDeletedAu(auId, count);
+              int count = deleteAu(conn, auIdToReindex.auId);
+              notifyDeletedAu(auIdToReindex.auId, count);
             } catch (DbException dbe) {
-	      log.error("Error removing AU for auId " + auId
+	      log.error("Error removing AU for auId " + auIdToReindex.auId
 		  + " from the table of pending AUs", dbe);
             }
           } else {
@@ -1316,6 +1351,15 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   }
 
   /**
+   * This class returns the information about an AU to reindex.
+   */
+  public static class PrioritizedAuId {
+    public String auId;
+    long priority;
+    boolean isNew;
+  }
+  
+  /**
    * Provides a list of AuIds that require reindexing sorted by priority.
    * 
    * @param conn
@@ -1325,25 +1369,30 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @return a List<String> with the list of AuIds that require reindexing
    *         sorted by priority.
    */
-  public List<String> getPrioritizedAuIdsToReindex(Connection conn,
-                                                   int maxAuIds) {
+  public List<PrioritizedAuId> 
+    getPrioritizedAuIdsToReindex(Connection conn, int maxAuIds) {
     final String DEBUG_HEADER = "getPrioritizedAuIdsToReindex(): ";
-    ArrayList<String> auIds = new ArrayList<String>();
+    ArrayList<PrioritizedAuId> auIds = 
+        new ArrayList<PrioritizedAuId>();
 
     if (pluginMgr != null) {
       PreparedStatement selectPendingAus = null;
       ResultSet results = null;
       String sql = FIND_PRIORITIZED_ENABLED_PENDING_AUS_QUERY;
-      log.debug3("SQL = '" + sql + "'.");
-
+      log.debug3("SQL = '" + sql + "' prioritize new AUs = " 
+                 + prioritizeIndexingNewAus);
+      
       try {
 	selectPendingAus = dbManager.prepareStatement(conn, sql);
-        results = dbManager.executeQuery(selectPendingAus);
+	selectPendingAus.setBoolean(1, prioritizeIndexingNewAus);
+	results = dbManager.executeQuery(selectPendingAus);
 
         while ((auIds.size() < maxAuIds) && results.next()) {
           String pluginId = results.getString(PLUGIN_ID_COLUMN);
           log.debug2(DEBUG_HEADER + "pluginId = " + pluginId);
           String auKey = results.getString(AU_KEY_COLUMN);
+          long priority = results.getLong(PRIORITY_COLUMN);
+          boolean isNew = results.getBoolean(ISNEW_COLUMN);
           log.debug2(DEBUG_HEADER + "auKey = " + auKey);
           log.debug2(DEBUG_HEADER + "priority = "
               + results.getString(PRIORITY_COLUMN));
@@ -1351,7 +1400,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
 	  if (isEligibleForReindexing(auId)) {
 	    if (!activeReindexingTasks.containsKey(auId)) {
-	      auIds.add(auId);
+	      PrioritizedAuId auToReindex = new PrioritizedAuId();
+	      auToReindex.auId = auId;
+	      auToReindex.priority = priority;
+	      auToReindex.isNew = isNew;
+	      auIds.add(auToReindex);
 	      log.debug2(DEBUG_HEADER + "Added auId = " + auId
 		  + " to reindex list");
 	    }
@@ -1847,9 +1900,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * The number of elements returned is controlled by a definable
    * parameter {@link MetadataManager.PARAM_PENDING_AU_LIST_SIZE}.
    * 
-   * @return default number of auids for AUs pending reindexing
+   * @return default auids for AUs pending reindexing
    */
-  public List<String> getPendingReindexingAus() { 
+  public List<PrioritizedAuId> getPendingReindexingAus() { 
     return getPendingReindexingAus(pendingAuListSize);
   }
   
@@ -1859,22 +1912,22 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @param  the maximum number of auids to return
    * @return all auids for AUs pending reindexing
    */
-  public List<String> getPendingReindexingAus(int maxAuIds) {
+  public List<PrioritizedAuId> getPendingReindexingAus(int maxAuIds) {
     final String DEBUG_HEADER = "getPendingReindexingAus(): ";
     Connection conn = null;
-    List<String> auids = Collections.emptyList();
+    List<PrioritizedAuId> auidsToReindex = Collections.emptyList();
     try {
       conn = dbManager.getConnection();
-      auids = getPrioritizedAuIdsToReindex(conn, maxAuIds);
+      auidsToReindex = getPrioritizedAuIdsToReindex(conn, maxAuIds);
       DbManager.commitOrRollback(conn, log);
     } catch (DbException dbe) {
-      log.error("Cannot start reindexing", dbe);
+      log.error("Cannot get pending AU ids for reindexing", dbe);
     } finally {
       DbManager.safeRollbackAndClose(conn);
     }
 
-    log.debug3(DEBUG_HEADER + "count = " + auids.size());
-    return auids;
+    log.debug3(DEBUG_HEADER + "count = " + auidsToReindex.size());
+    return auidsToReindex;
   }
   
   /**
