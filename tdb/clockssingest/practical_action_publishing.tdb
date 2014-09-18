@@ -3,9 +3,10 @@
   publisher <
     name = Practical Action Publishing ;
     info[contract] = 2013 ;
-    info[tester] = 5 ;
-    comment[platform] = Metapress
+    info[tester] = 5
   >
+  
+  comment[0] = moving from Metapress to Atypon Feb or March 2015
   
   plugin = org.lockss.plugin.metapress.ClockssMetaPressPlugin
   param[base_url] = http://practicalaction.metapress.com/
