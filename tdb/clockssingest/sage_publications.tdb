@@ -2662,8 +2662,8 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Asian Journal of Management Cases Volume 5 ; 5 ; >
-      au < down ; crawling ; 2009 ; Asian Journal of Management Cases Volume 6 ; 6 ; >
+      au < superseded ; down ; 2008 ; Asian Journal of Management Cases Volume 5 [superseded] ; 5 ; >
+      au < superseded ; down ; 2009 ; Asian Journal of Management Cases Volume 6 [superseded] ; 6 ; >
 
     }
 
@@ -2675,8 +2675,8 @@
       au < manifest ; exists ; 2005 ; Asian Journal of Management Cases Volume 2 ; 2 ; >
       au < manifest ; exists ; 2006 ; Asian Journal of Management Cases Volume 3 ; 3 ; >
       au < manifest ; exists ; 2007 ; Asian Journal of Management Cases Volume 4 ; 4 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; Asian Journal of Management Cases Volume 5 ; 5 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; Asian Journal of Management Cases Volume 6 ; 6 ; >
+      au < wanted ; exists ; 2008 ; Asian Journal of Management Cases Volume 5 ; 5 ; >
+      au < wanted ; exists ; 2009 ; Asian Journal of Management Cases Volume 6 ; 6 ; >
       au < zapped ; finished ; 2010 ; Asian Journal of Management Cases Volume 7 ; 7 ; >
       au < zapped ; finished ; 2011 ; Asian Journal of Management Cases Volume 8 ; 8 ; >
       au < finished ; frozen ; 2012 ; Asian Journal of Management Cases Volume 9 ; 9 ; >
@@ -2782,8 +2782,8 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Asia-Pacific Journal of Public Health Volume 20 ; 20 ; >
-      au < down ; crawling ; 2009 ; Asia-Pacific Journal of Public Health Volume 21 ; 21 ; >
+      au < superseded ; down ; 2008 ; Asia-Pacific Journal of Public Health Volume 20 [superseded] ; 20 ; >
+      au < superseded ; down ; 2009 ; Asia-Pacific Journal of Public Health Volume 21 [superseded] ; 21 ; >
 
     }
 
@@ -2810,8 +2810,8 @@
       au < manifest ; exists ; 2005 ; Asia-Pacific Journal of Public Health Volume 17 ; 17 ; >
       au < manifest ; exists ; 2006 ; Asia-Pacific Journal of Public Health Volume 18 ; 18 ; >
       au < manifest ; exists ; 2007 ; Asia-Pacific Journal of Public Health Volume 19 ; 19 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; Asia-Pacific Journal of Public Health Volume 20 ; 20 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; Asia-Pacific Journal of Public Health Volume 21 ; 21 ; >
+      au < wanted ; exists ; 2008 ; Asia-Pacific Journal of Public Health Volume 20 ; 20 ; >
+      au < wanted ; exists ; 2009 ; Asia-Pacific Journal of Public Health Volume 21 ; 21 ; >
       au < zapped ; finished ; 2010 ; Asia-Pacific Journal of Public Health Volume 22 ; 22 ; >
       au < finished ; frozen ; 2011 ; Asia-Pacific Journal of Public Health Volume 23 ; 23 ; >
       au < finished ; frozen ; 2012 ; Asia-Pacific Journal of Public Health Volume 24 ; 24 ; >
@@ -3271,7 +3271,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < superseded ; exists ; 2009 ; Behavior Modification Volume 32 [to delete] ; 32 ; >
-      au < down ; crawling ; 2009 ; Behavior Modification Volume 33 ; 33 ; >
+      au < superseded ; down ; 2009 ; Behavior Modification Volume 33 [superseded] ; 33 ; >
 
     }
 
@@ -3311,7 +3311,7 @@
       au < manifest ; exists ; 2006 ; Behavior Modification Volume 30 ; 30 ; >
       au < manifest ; exists ; 2007 ; Behavior Modification Volume 31 ; 31 ; >
       au < finished ; crawling ; 2008 ; Behavior Modification Volume 32 ; 32 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; Behavior Modification Volume 33 ; 33 ; >
+      au < wanted ; exists ; 2009 ; Behavior Modification Volume 33 ; 33 ; >
       au < zapped ; finished ; 2010 ; Behavior Modification Volume 34 ; 34 ; >
       au < finished ; crawling ; 2011 ; Behavior Modification Volume 35 ; 35 ; >
       au < finished ; crawling ; 2012 ; Behavior Modification Volume 36 ; 36 ; >
@@ -5593,7 +5593,7 @@
 
       au < down ; frozen ; 2007-2008 ; Communication Disorders Quarterly Volume 29 ; 29 ; >
       au < zapped ; finished ; 2008-2009 ; Communication Disorders Quarterly Volume 30 ; 30 ; >
-      au < down ; exists ; 2009-2010 ; Communication Disorders Quarterly Volume 31 [to delete] ; 31 ; >
+      au < superseded ; exists ; 2009-2010 ; Communication Disorders Quarterly Volume 31 [to delete] ; 31 ; >
 
     }
 
@@ -6384,7 +6384,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Cooperation and Conflict Volume 43 ; 43 ; >
+      au < superseded ; down ; 2008 ; Cooperation and Conflict Volume 43 [superseded] ; 43 ; >
       au < zapped ; finished ; 2009 ; Cooperation and Conflict Volume 44 ; 44 ; reingest1.clockss.org:8082 >
 
     }
@@ -6435,7 +6435,7 @@
       au < manifest ; exists ; 2005 ; Cooperation and Conflict Volume 40 ; 40 ; >
       au < manifest ; exists ; 2006 ; Cooperation and Conflict Volume 41 ; 41 ; >
       au < manifest ; exists ; 2007 ; Cooperation and Conflict Volume 42 ; 42 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; Cooperation and Conflict Volume 43 ; 43 ; >
+      au < wanted ; exists ; 2008 ; Cooperation and Conflict Volume 43 ; 43 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Cooperation and Conflict Volume 44 ; 44 ; >
       au < finished ; crawling ; 2010 ; Cooperation and Conflict Volume 45 ; 45 ; >
       au < finished ; crawling ; 2011 ; Cooperation and Conflict Volume 46 ; 46 ; >
@@ -7679,7 +7679,7 @@
 
       au < down ; crawling ; 2007-2008 ; Currents in Biblical Research Volume 6 ; 6 ; >
       au < down ; crawling ; 2008-2009 ; Currents in Biblical Research Volume 7 ; 7 ; >
-      au < down ; crawling ; 2009-2010 ; Currents in Biblical Research Volume 8 ; 8 ; >
+      au < zapped ; finished ; 2009-2010 ; Currents in Biblical Research Volume 8 ; 8 ; >
 
     }
 
@@ -17452,7 +17452,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Journal of Child Health Care Volume 12 ; 12 ; >
-      au < down ; crawling ; 2009 ; Journal of Child Health Care Volume 13 ; 13 ; >
+      au < superseded ; down ; 2009 ; Journal of Child Health Care Volume 13 [superseded] ; 13 ; >
 
     }
 
@@ -17472,7 +17472,7 @@
       au < manifest ; exists ; 2006 ; Journal of Child Health Care Volume 10 ; 10 ; >
       au < manifest ; exists ; 2007 ; Journal of Child Health Care Volume 11 ; 11 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Child Health Care Volume 12 ; 12 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; Journal of Child Health Care Volume 13 ; 13 ; >
+      au < wanted ; exists ; 2009 ; Journal of Child Health Care Volume 13 ; 13 ; >
       au < zapped ; finished ; 2010 ; Journal of Child Health Care Volume 14 ; 14 ; >
       au < finished ; frozen ; 2011 ; Journal of Child Health Care Volume 15 ; 15 ; >
       au < finished ; crawling ; 2012 ; Journal of Child Health Care Volume 16 ; 16 ; >
@@ -22479,7 +22479,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Journal of Planning History Volume 7 ; 7 ; >
-      au < down ; crawling ; 2009 ; Journal of Planning History Volume 8 ; 8 ; >
+      au < superseded ; down ; 2009 ; Journal of Planning History Volume 8 [superseded] ; 8 ; >
 
     }
 
@@ -22494,7 +22494,7 @@
       au < manifest ; exists ; 2006 ; Journal of Planning History Volume 5 ; 5 ; >
       au < manifest ; exists ; 2007 ; Journal of Planning History Volume 6 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Planning History Volume 7 ; 7 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; Journal of Planning History Volume 8 ; 8 ; >
+      au < wanted ; exists ; 2009 ; Journal of Planning History Volume 8 ; 8 ; >
       au < zapped ; finished ; 2010 ; Journal of Planning History Volume 9 ; 9 ; >
       au < finished ; crawling ; 2011 ; Journal of Planning History Volume 10 ; 10 ; >
       au < finished ; frozen ; 2012 ; Journal of Planning History Volume 11 ; 11 ; >
@@ -32832,7 +32832,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; School Psychology International Volume 29 ; 29 ; >
+      au < zapped ; finished ; 2008 ; School Psychology International Volume 29 ; 29 ; >
       au < down ; crawling ; 2009 ; School Psychology International Volume 30 ; 30 ; >
 
     }
