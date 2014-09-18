@@ -23,10 +23,10 @@
       plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform$Simplified
     
-      au < down ; crawling ; 2008 ; AAP Grand Rounds Volume 19 ; 19 >
-      au < down ; crawling ; 2008 ; AAP Grand Rounds Volume 20 ; 20 >
-      au < down ; crawling ; 2009 ; AAP Grand Rounds Volume 21 ; 21 >
-      au < down ; crawling ; 2009 ; AAP Grand Rounds Volume 22 ; 22 >
+      au < superseded ; down ; 2008 ; AAP Grand Rounds Volume 19 [superseded] ; 19 >
+      au < superseded ; down ; 2008 ; AAP Grand Rounds Volume 20 [superseded] ; 20 >
+      au < superseded ; down ; 2009 ; AAP Grand Rounds Volume 21 [superseded] ; 21 >
+      au < superseded ; down ; 2009 ; AAP Grand Rounds Volume 22 [superseded] ; 22 >
       au < zapped ; finished ; 2010 ; AAP Grand Rounds Volume 23 ; 23 >
       au < zapped ; finished ; 2010 ; AAP Grand Rounds Volume 24 ; 24 >
 
@@ -54,14 +54,14 @@
       au < manifest ; exists ; 2006 ; AAP Grand Rounds Volume 16 ; 16 >
       au < manifest ; exists ; 2007 ; AAP Grand Rounds Volume 17 ; 17 >
       au < manifest ; exists ; 2007 ; AAP Grand Rounds Volume 18 ; 18 >
-      au < doNotProcess ; doNotProcess ; 2008 ; AAP Grand Rounds Volume 19 ; 19 >
-      au < doNotProcess ; doNotProcess ; 2008 ; AAP Grand Rounds Volume 20 ; 20 >
-      au < doNotProcess ; doNotProcess ; 2009 ; AAP Grand Rounds Volume 21 ; 21 >
-      au < doNotProcess ; doNotProcess ; 2009 ; AAP Grand Rounds Volume 22 ; 22 >
+      au < wanted ; exists ; 2008 ; AAP Grand Rounds Volume 19 ; 19 >
+      au < wanted ; exists ; 2008 ; AAP Grand Rounds Volume 20 ; 20 >
+      au < wanted ; exists ; 2009 ; AAP Grand Rounds Volume 21 ; 21 >
+      au < wanted ; exists ; 2009 ; AAP Grand Rounds Volume 22 ; 22 >
       au < doNotProcess ; doNotProcess ; 2010 ; AAP Grand Rounds Volume 23 ; 23 >
       au < doNotProcess ; doNotProcess ; 2010 ; AAP Grand Rounds Volume 24 ; 24 >
-      au < finished ; frozen ; 2011 ; AAP Grand Rounds Volume 25 ; 25 >
-      au < finished ; frozen ; 2011 ; AAP Grand Rounds Volume 26 ; 26 >
+      au < ready ; crawling ; 2011 ; AAP Grand Rounds Volume 25 ; 25 >
+      au < ready ; crawling ; 2011 ; AAP Grand Rounds Volume 26 ; 26 >
       au < finished ; frozen ; 2012 ; AAP Grand Rounds Volume 27 ; 27 >
       au < finished ; frozen ; 2012 ; AAP Grand Rounds Volume 28 ; 28 >
       au < crawling ; exists ; 2013 ; AAP Grand Rounds Volume 29 ; 29 >
