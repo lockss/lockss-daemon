@@ -120,18 +120,18 @@
       >
 
       comment[publisher] = Universidade Estadual de Campinas
-      param[base_url] = http://www.ifi.unicamp.br/physicae/ojs-2.1.1/
+      param[base_url] = http://physicae.ifi.unicamp.br/
       param[journal_id] = physicae
 
-      au < notReady ; 2000 ; 1 ; Physicae Volume 2000 ; 2000 ; 302 found >
-      au < notReady ; 2001 ; 2 ; Physicae Volume 2001 ; 2001 ; 302 found >
-      au < notReady ; 2003 ; 3 ; Physicae Volume 2003 ; 2003 ; 302 found >
-      au < notReady ; 2005 ; 4 ; Physicae Volume 2005 ; 2005 ; 302 found >
-      au < notReady ; 2006 ; 5 ; Physicae Volume 2006 ; 2006 ; 302 found >
-      au < notReady ; 2008 ; 6 ; Physicae Volume 2008 ; 2008 ; 302 found >
-      au < notReady ; 2009 ; 7 ; Physicae Volume 2009 ; 2009 ; 302 found >
-      au < notReady ; 2010 ; 8 ; Physicae Volume 2010 ; 2010 ; 302 found >
-      au < notReady ; 2011 ; 9 ; Physicae Volume 2011 ; 2011 ; 302 found >
+      au < exists ; 2000 ; 1 ; Physicae Volume 2000 ; 2000 ; >
+      au < exists ; 2001 ; 2 ; Physicae Volume 2001 ; 2001 ; >
+      au < exists ; 2003 ; 3 ; Physicae Volume 2003 ; 2003 ; >
+      au < exists ; 2005 ; 4 ; Physicae Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 5 ; Physicae Volume 2006 ; 2006 ; >
+      au < exists ; 2008 ; 6 ; Physicae Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 7 ; Physicae Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 8 ; Physicae Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 9 ; Physicae Volume 2011 ; 2011 ; >
       au < expected ; 2012 ; 10 ; Physicae Volume 2012 ; 2012 ; >
       au < expected ; 2013 ; 11 ; Physicae Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 12 ; Physicae Volume 2014 ; 2014 ; >
@@ -146,14 +146,13 @@
       >
 
       comment[publisher] = Universidade Estadual de Campinas
-      param[base_url] = http://www.ifi.unicamp.br/physicae/ojs-2.1.1/
+      param[base_url] = http://physicae.ifi.unicamp.br/
       param[journal_id] = phyproceedings
 
-      au < notReady ; 2010 ; 1 ; Physicae Proceedings Volume 2010 ; 2010 ; 302 found >
-      au < exists ; 2011 ; 2 ; Physicae Proceedings Volume 2011 ; 2011 ; >
-      au < notReady ; 2012 ; 3 ; Physicae Proceedings Volume 2012 ; 2012 ; 302 found >
-      au < expected ; 2013 ; 4 ; Physicae Proceedings Volume 2013 ; 2013 ; >
-      au < expected ; 2014 ; 5 ; Physicae Proceedings Volume 2014 ; 2014 ; >
+      au < exists ; 2010 ; 1 ; Physicae Proceedings Volume 2010 ; 2010 ; >
+      au < exists ; 2012 ; 2 ; Physicae Proceedings Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 3 ; Physicae Proceedings Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 4 ; Physicae Proceedings Volume 2014 ; 2014 ; >
 
   }
 
