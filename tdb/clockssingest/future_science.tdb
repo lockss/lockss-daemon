@@ -39,10 +39,12 @@
     
     comment[1] = Publisher no longer providing title after 2013
     param[journal_id] = bfs
+    
+    comment[0] = Volume 3 added to ingest 1,2,4 only
 
     au < doNotProcess ; doNotProcess ; 2010 ; Biofuels Volume 1 ; 1 >
     au < doNotProcess ; doNotProcess ; 2011 ; Biofuels Volume 2 ; 2 >
-    au < down ; exists ; 2012 ; Biofuels Volume 3 ; 3 >
+    au < superseded ; exists ; 2012 ; Biofuels Volume 3 ; 3 >
     au < down ; exists ; 2013 ; Biofuels Volume 4 ; 4 >
    
   }
@@ -94,7 +96,7 @@
     au < manifest ; exists ; 2009 ; Future Medicinal Chemistry Volume 1 ; 1 >
     au < manifest ; exists ; 2010 ; Future Medicinal Chemistry Volume 2 ; 2 >
     au < manifest ; exists ; 2011 ; Future Medicinal Chemistry Volume 3 ; 3 >
-    au < crawling ; exists ; 2012 ; Future Medicinal Chemistry Volume 4 ; 4 >
+    au < ready ; exists ; 2012 ; Future Medicinal Chemistry Volume 4 ; 4 >
     au < crawling ; exists ; 2013 ; Future Medicinal Chemistry Volume 5 ; 5 >
     au < manifest ; exists ; 2014 ; Future Medicinal Chemistry Volume 6 ; 6 >
     
