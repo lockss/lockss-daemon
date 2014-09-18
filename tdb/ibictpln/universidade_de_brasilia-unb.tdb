@@ -71,12 +71,20 @@
       >
 
       comment[publisher] = Universidade de Brasília-UNB
-      param[base_url] = http://seer.bce.unb.br/
       param[journal_id] = cts
-
-      au < released ; 2011 ; 1 ; Ciência & Tecnologia Social Volume 2011 ; 2011 ; >
-      au < released ; 2013 ; 1 ; Ciência & Tecnologia Social Volume 2013 ; 2013 ; >
+      {
+      param[base_url] = http://seer.bce.unb.br/
+      
+      au < superseded ; 2011 ; 1 ; Ciência & Tecnologia Social Volume 2011 [superseded] ; 2011 ; >
+      au < superseded ; 2013 ; 1 ; Ciência & Tecnologia Social Volume 2013 [superseded] ; 2013 ; >
+      }
+      {
+      param[base_url] = http://periodicos.unb.br/
+      
+      au < exists ; 2011 ; 1 ; Ciência & Tecnologia Social Volume 2011 ; 2011 ; >
+      au < exists ; 2013 ; 1 ; Ciência & Tecnologia Social Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 2 ; Ciência & Tecnologia Social Volume 2014 ; 2014 ; >
+      }
 
   }
 
@@ -88,22 +96,40 @@
       >
 
       comment[publisher] = Universidade de Brasília-UNB
-      param[base_url] = http://seer.bce.unb.br/
       param[journal_id] = emtempos
-
-      au < released ; 2002 ; 1 ; Em tempo de histórias Volume 2002 ; 2002 ; >
-      au < released ; 2003 ; 2 ; Em tempo de histórias Volume 2003 ; 2003 ; >
-      au < released ; 2004 ; 3 ; Em tempo de histórias Volume 2004 ; 2004 ; >
-      au < released ; 2005 ; 4 ; Em tempo de histórias Volume 2005 ; 2005 ; >
-      au < released ; 2006 ; 5 ; Em tempo de histórias Volume 2006 ; 2006 ; >
-      au < released ; 2007 ; 6 ; Em tempo de histórias Volume 2007 ; 2007 ; >
-      au < released ; 2008 ; 7 ; Em tempo de histórias Volume 2008 ; 2008 ; >
-      au < released ; 2009 ; 8 ; Em tempo de histórias Volume 2009 ; 2009 ; >
-      au < released ; 2010 ; 9 ; Em tempo de histórias Volume 2010 ; 2010 ; >
-      au < released ; 2011 ; 10 ; Em tempo de histórias Volume 2011 ; 2011 ; >
-      au < released ; 2012 ; 11 ; Em tempo de histórias Volume 2012 ; 2012 ; >
-      au < released ; 2013 ; 12 ; Em tempo de histórias Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 13 ; Em tempo de histórias Volume 2014 ; 2014 ; >
+      {
+      param[base_url] = http://seer.bce.unb.br/
+      
+      au < superseded ; 2002 ; 1 ; Em tempo de histórias Volume 2002 [superseded] ; 2002 ; >
+      au < superseded ; 2003 ; 2 ; Em tempo de histórias Volume 2003 [superseded] ; 2003 ; >
+      au < superseded ; 2004 ; 3 ; Em tempo de histórias Volume 2004 [superseded] ; 2004 ; >
+      au < superseded ; 2005 ; 4 ; Em tempo de histórias Volume 2005 [superseded] ; 2005 ; >
+      au < superseded ; 2006 ; 5 ; Em tempo de histórias Volume 2006 [superseded] ; 2006 ; >
+      au < superseded ; 2007 ; 6 ; Em tempo de histórias Volume 2007 [superseded] ; 2007 ; >
+      au < superseded ; 2008 ; 7 ; Em tempo de histórias Volume 2008 [superseded] ; 2008 ; >
+      au < superseded ; 2009 ; 8 ; Em tempo de histórias Volume 2009 [superseded] ; 2009 ; >
+      au < superseded ; 2010 ; 9 ; Em tempo de histórias Volume 2010 [superseded] ; 2010 ; >
+      au < superseded ; 2011 ; 10 ; Em tempo de histórias Volume 2011 [superseded] ; 2011 ; >
+      au < superseded ; 2012 ; 11 ; Em tempo de histórias Volume 2012 [superseded] ; 2012 ; >
+      au < superseded ; 2013 ; 12 ; Em tempo de histórias Volume 2013 [superseded] ; 2013 ; >
+      }
+      {
+      param[base_url] = http://periodicos.unb.br/
+      
+      au < exists ; 2002 ; 1 ; Em tempo de histórias Volume 2002 ; 2002 ; >
+      au < exists ; 2003 ; 2 ; Em tempo de histórias Volume 2003 ; 2003 ; >
+      au < exists ; 2004 ; 3 ; Em tempo de histórias Volume 2004 ; 2004 ; >
+      au < exists ; 2005 ; 4 ; Em tempo de histórias Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 5 ; Em tempo de histórias Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 6 ; Em tempo de histórias Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 7 ; Em tempo de histórias Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 8 ; Em tempo de histórias Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 9 ; Em tempo de histórias Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 10 ; Em tempo de histórias Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 11 ; Em tempo de histórias Volume 2012 ; 2012 ; >
+      au < exists ; 2013 ; 12 ; Em tempo de histórias Volume 2013 ; 2013 ; >
+      au < exists ; 2014 ; 13 ; Em tempo de histórias Volume 2014 ; 2014 ; >
+      }
 
   }
 
@@ -116,13 +142,20 @@
       >
 
       comment[publisher] = Universidade de Brasília-UNB
-      param[base_url] = http://seer.bce.unb.br/
       param[journal_id] = enedex
-
-      au < released ; 2011 ; 1 ; Revista Direito & Sensibilidade Volume 2011 ; 2011 ; >
+      {
+      param[base_url] = http://seer.bce.unb.br/
+      
+      au < superseded ; 2011 ; 1 ; Revista Direito & Sensibilidade Volume 2011 [superseded] ; 2011 ; >
+      }
+      {
+      param[base_url] = http://periodicos.unb.br/
+      
+      au < exists ; 2011 ; 1 ; Revista Direito & Sensibilidade Volume 2011 ; 2011 ; >
       au < expected ; 2012 ; 2 ; Revista Direito & Sensibilidade Volume 2012 ; 2012 ; >
       au < expected ; 2013 ; 3 ; Revista Direito & Sensibilidade Volume 2013 ; 2013 ; >
-
+      }
+      
   }
 
   {
@@ -134,26 +167,46 @@
       >
 
       comment[publisher] = Universidade de Brasília-UNB
-      param[base_url] = http://seer.bce.unb.br/
       param[journal_id] = estudos
-
-      au < released ; 1999 ; 1 ; Estudos de Literatura Brasileira Contemporânea Volume 1999 ; 1999 ; >
-      au < released ; 2000 ; 2 ; Estudos de Literatura Brasileira Contemporânea Volume 2000 ; 2000 ; >
-      au < released ; 2001 ; 3 ; Estudos de Literatura Brasileira Contemporânea Volume 2001 ; 2001 ; >
-      au < released ; 2002 ; 4 ; Estudos de Literatura Brasileira Contemporânea Volume 2002 ; 2002 ; >
-      au < released ; 2003 ; 5 ; Estudos de Literatura Brasileira Contemporânea Volume 2003 ; 2003 ; >
-      au < released ; 2004 ; 6 ; Estudos de Literatura Brasileira Contemporânea Volume 2004 ; 2004 ; >
-      au < released ; 2005 ; 7 ; Estudos de Literatura Brasileira Contemporânea Volume 2005 ; 2005 ; >
-      au < released ; 2006 ; 8 ; Estudos de Literatura Brasileira Contemporânea Volume 2006 ; 2006 ; >
-      au < released ; 2007 ; 9 ; Estudos de Literatura Brasileira Contemporânea Volume 2007 ; 2007 ; >
-      au < released ; 2008 ; 10 ; Estudos de Literatura Brasileira Contemporânea Volume 2008 ; 2008 ; >
-      au < released ; 2009 ; 11 ; Estudos de Literatura Brasileira Contemporânea Volume 2009 ; 2009 ; >
-      au < released ; 2010 ; 12 ; Estudos de Literatura Brasileira Contemporânea Volume 2010 ; 2010 ; >
-      au < released ; 2011 ; 13 ; Estudos de Literatura Brasileira Contemporânea Volume 2011 ; 2011 ; >
-      au < released ; 2012 ; 14 ; Estudos de Literatura Brasileira Contemporânea Volume 2012 ; 2012 ; >
-      au < released ; 2013 ; 15 ; Estudos de Literatura Brasileira Contemporânea Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 16 ; Estudos de Literatura Brasileira Contemporânea Volume 2014 ; 2014 ; >
-
+      {
+      param[base_url] = http://seer.bce.unb.br/
+      
+      au < superseded ; 1999 ; 1 ; Estudos de Literatura Brasileira Contemporânea Volume 1999 [superseded ; 1999 ; >
+      au < superseded ; 2000 ; 2 ; Estudos de Literatura Brasileira Contemporânea Volume 2000 [superseded ; 2000 ; >
+      au < superseded ; 2001 ; 3 ; Estudos de Literatura Brasileira Contemporânea Volume 2001 [superseded ; 2001 ; >
+      au < superseded ; 2002 ; 4 ; Estudos de Literatura Brasileira Contemporânea Volume 2002 [superseded ; 2002 ; >
+      au < superseded ; 2003 ; 5 ; Estudos de Literatura Brasileira Contemporânea Volume 2003 [superseded ; 2003 ; >
+      au < superseded ; 2004 ; 6 ; Estudos de Literatura Brasileira Contemporânea Volume 2004 [superseded ; 2004 ; >
+      au < superseded ; 2005 ; 7 ; Estudos de Literatura Brasileira Contemporânea Volume 2005 [superseded ; 2005 ; >
+      au < superseded ; 2006 ; 8 ; Estudos de Literatura Brasileira Contemporânea Volume 2006 [superseded ; 2006 ; >
+      au < superseded ; 2007 ; 9 ; Estudos de Literatura Brasileira Contemporânea Volume 2007 [superseded ; 2007 ; >
+      au < superseded ; 2008 ; 10 ; Estudos de Literatura Brasileira Contemporânea Volume 2008 [superseded] ; 2008 ; >
+      au < superseded ; 2009 ; 11 ; Estudos de Literatura Brasileira Contemporânea Volume 2009 [superseded] ; 2009 ; >
+      au < superseded ; 2010 ; 12 ; Estudos de Literatura Brasileira Contemporânea Volume 2010 [superseded] ; 2010 ; >
+      au < superseded ; 2011 ; 13 ; Estudos de Literatura Brasileira Contemporânea Volume 2011 [superseded] ; 2011 ; >
+      au < superseded ; 2012 ; 14 ; Estudos de Literatura Brasileira Contemporânea Volume 2012 [superseded] ; 2012 ; >
+      au < superseded ; 2013 ; 15 ; Estudos de Literatura Brasileira Contemporânea Volume 2013 [superseded] ; 2013 ; >
+      }
+      {
+      param[base_url] = http://periodicos.unb.br/
+      
+      au < exists ; 1999 ; 1 ; Estudos de Literatura Brasileira Contemporânea Volume 1999 ; 1999 ; >
+      au < exists ; 2000 ; 2 ; Estudos de Literatura Brasileira Contemporânea Volume 2000 ; 2000 ; >
+      au < exists ; 2001 ; 3 ; Estudos de Literatura Brasileira Contemporânea Volume 2001 ; 2001 ; >
+      au < exists ; 2002 ; 4 ; Estudos de Literatura Brasileira Contemporânea Volume 2002 ; 2002 ; >
+      au < exists ; 2003 ; 5 ; Estudos de Literatura Brasileira Contemporânea Volume 2003 ; 2003 ; >
+      au < exists ; 2004 ; 6 ; Estudos de Literatura Brasileira Contemporânea Volume 2004 ; 2004 ; >
+      au < exists ; 2005 ; 7 ; Estudos de Literatura Brasileira Contemporânea Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 8 ; Estudos de Literatura Brasileira Contemporânea Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 9 ; Estudos de Literatura Brasileira Contemporânea Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 10 ; Estudos de Literatura Brasileira Contemporânea Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 11 ; Estudos de Literatura Brasileira Contemporânea Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 12 ; Estudos de Literatura Brasileira Contemporânea Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 13 ; Estudos de Literatura Brasileira Contemporânea Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 14 ; Estudos de Literatura Brasileira Contemporânea Volume 2012 ; 2012 ; >
+      au < exists ; 2013 ; 15 ; Estudos de Literatura Brasileira Contemporânea Volume 2013 ; 2013 ; >
+      au < exists ; 2014 ; 16 ; Estudos de Literatura Brasileira Contemporânea Volume 2014 ; 2014 ; >
+      }
   }
 
   {
@@ -164,12 +217,19 @@
       >
 
       comment[publisher] = Universidade de Brasília-UNB
-      param[base_url] = http://seer.bce.unb.br/
       param[journal_id] = fmc
-
-      au < released ; 2013 ; 1 ; Revista de Filosofia Moderna e Contemporânea Volume 2013 ; 2013 ; >
+      {
+      param[base_url] = http://seer.bce.unb.br/
+      
+      au < superseded ; 2013 ; 1 ; Revista de Filosofia Moderna e Contemporânea Volume 2013 [superseded] ; 2013 ; >
       au < expected ; 2014 ; 2 ; Revista de Filosofia Moderna e Contemporânea Volume 2014 ; 2014 ; >
-
+      }
+      {
+      param[base_url] = http://periodicos.unb.br/
+      
+      au < exists ; 2013 ; 1 ; Revista de Filosofia Moderna e Contemporânea Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 2 ; Revista de Filosofia Moderna e Contemporânea Volume 2014 ; 2014 ; >
+      }
   }
 
   {
