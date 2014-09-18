@@ -270,7 +270,6 @@
         au < down ; frozen ; 2009 ; Archives of Facial Plastic Surgery Volume 11 ; 11 ; >
         au < down ; crawling ; 2010 ; Archives of Facial Plastic Surgery Volume 12 ; 12 ; >
         au < down ; frozen ; 2011 ; Archives of Facial Plastic Surgery Volume 13 ; 13 ; >
-        au < down ; exists ; 2012 ; Archives of Facial Plastic Surgery Volume 14 ; 14 ; >
 
       }
       
@@ -283,6 +282,7 @@
         param[base_url] = http://archfaci.jamanetwork.com/
         param[resource_id] = 69
         
+        au < exists ; exists ; 2012 ; JAMA Facial Plastic Surgery Volume 14 ; 2012 >
         au < crawling ; exists ; 2013 ; JAMA Facial Plastic Surgery Volume 15 ; 2013 >
         au < ready ; exists ; 2014 ; JAMA Facial Plastic Surgery Volume 16 ; 2014 >
     
@@ -402,7 +402,6 @@
         au < down ; crawling ; 2009 ; Archives of General Psychiatry Volume 66 ; 66 ; >
         au < down ; crawling ; 2010 ; Archives of General Psychiatry Volume 67 ; 67 ; >
         au < down ; frozen ; 2011 ; Archives of General Psychiatry Volume 68 ; 68 ; >
-        au < down ; exists ; 2012 ; Archives of General Psychiatry Volume 69 ; 69 ; >
 
       }
 
@@ -415,6 +414,7 @@
         param[base_url] = http://archpsyc.jamanetwork.com/
         param[resource_id] = 70
         
+        au < exists ; exists ; 2012 ; JAMA Psychiatry Volume 69 ; 2012 >
         au < crawling ; exists ; 2013 ; JAMA Psychiatry Volume 70 ; 2013 >
         au < ready ; exists ; 2014 ; JAMA Psychiatry Volume 71 ; 2014 >
     
@@ -610,7 +610,6 @@
         au < down ; crawling ; 2009 ; Archives of Internal Medicine Volume 169 ; 169 ; >
         au < down ; crawling ; 2010 ; Archives of Internal Medicine Volume 170 ; 170 ; >
         au < down ; crawling ; 2011 ; Archives of Internal Medicine Volume 171 ; 171 ; >
-        au < down ; exists ; 2012 ; Archives of Internal Medicine Volume 172 ; 172 ; >
 
       }
       
@@ -623,6 +622,7 @@
         param[base_url] = http://archinte.jamanetwork.com/
         param[resource_id] = 71
         
+        au < exists ; exists ; 2012 ; JAMA Internal Medicine Volume 172 ; 2012 >
         au < crawling ; exists ; 2013 ; JAMA Internal Medicine Volume 173 ; 2013 >
         au < ready ; exists ; 2014 ; JAMA Internal Medicine Volume 174 ; 2014 >
     
@@ -715,7 +715,6 @@
         au < down ; crawling ; 2009 ; Archives of Neurology Volume 66 ; 66 ; >
         au < down ; crawling ; 2010 ; Archives of Neurology Volume 67 ; 67 ; >
         au < down ; frozen ; 2011 ; Archives of Neurology Volume 68 ; 68 ; >
-        au < down ; exists ; 2012 ; Archives of Neurology Volume 69 ; 69 ; >
 
       }
       
@@ -728,6 +727,7 @@
         param[base_url] =  http://archneur.jamanetwork.com/
         param[resource_id] = 72
         
+        au < exists ; exists ; 2012 ; JAMA Neurology Volume 69 ; 2012 >
         au < testing ; exists ; 2013 ; JAMA Neurology Volume 70 ; 2013 >
         au < exists ; exists ; 2014 ; JAMA Neurology Volume 71 ; 2014 >
     
@@ -1397,8 +1397,8 @@
         au < zapped ; finished ; 1920 ; Archives of Surgery Volume 2 ; 2 ; reingest1.clockss.org:8082 >
         au < zapped ; finished ; 1921 ; Archives of Surgery Volume 3 ; 3 ; reingest2.clockss.org:8085 >
         au < zapped ; finished ; 1921 ; Archives of Surgery Volume 4 ; 4 ; reingest2.clockss.org:8085 >
-        au < down ; crawling ; 1922 ; Archives of Surgery Volume 5 ; 5 ; reingest3.clockss.org:8083 >
-        au < down ; crawling ; 1922 ; Archives of Surgery Volume 6 ; 6 ; reingest3.clockss.org:8083 >
+        au < superseded ; down ; 1922 ; Archives of Surgery Volume 5 [superseded] ; 5 ; reingest3.clockss.org:8083 >
+        au < superseded ; down ; 1922 ; Archives of Surgery Volume 6 [superseded] ; 6 ; reingest3.clockss.org:8083 >
         au < zapped ; finished ; 1923 ; Archives of Surgery Volume 7 ; 7 ; reingest4.clockss.org:8082 >
         au < zapped ; finished ; 1923 ; Archives of Surgery Volume 8 ; 8 ; reingest4.clockss.org:8082 >
         au < zapped ; finished ; 1924 ; Archives of Surgery Volume 9 ; 9 ; reingest1.clockss.org:8082 >
@@ -1916,7 +1916,6 @@
 
         au < down ; crawling ; 2011 ; JAMA: The Journal of the American Medical Association Volume 305 ; 305 ; >
         au < down ; crawling ; 2011 ; JAMA: The Journal of the American Medical Association Volume 306 ; 306 ; >
-        au < down ; exists ; 2012 ; JAMA: The Journal of the American Medical Association Volume 307 ; 307 ; >
 
       }
       
