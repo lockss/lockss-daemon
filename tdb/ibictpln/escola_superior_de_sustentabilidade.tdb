@@ -6,7 +6,7 @@
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
     implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
 
-  comment[0] = base_url may have a problem.
+  comment[0] = base_url is blacklisted.
 
 
   {
