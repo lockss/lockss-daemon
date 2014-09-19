@@ -1,5 +1,5 @@
 /*
- * $Id: TestGPOFDSysCrawlWindow.java,v 1.2 2014-08-21 22:41:26 thib_gc Exp $
+ * $Id: TestGPOFDSysCrawlWindow.java,v 1.3 2014-09-19 22:16:27 thib_gc Exp $
  */
 
 /*
@@ -93,9 +93,9 @@ public class TestGPOFDSysCrawlWindow extends LockssTestCase {
       TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-01-" + d + " 08:59:59")));
       assertEquals("1/3s", crl.getRateLimiterFor("foo", null).getRate());
       TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-01-" + d + " 09:00:00")));
-      assertEquals("1/12h", crl.getRateLimiterFor("foo", null).getRate());
+      assertEquals("1/1h", crl.getRateLimiterFor("foo", null).getRate());
       TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-01-" + d + " 20:59:59")));
-      assertEquals("1/12h", crl.getRateLimiterFor("foo", null).getRate());
+      assertEquals("1/1h", crl.getRateLimiterFor("foo", null).getRate());
       TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-01-" + d + " 21:00:00")));
       assertEquals("1/3s", crl.getRateLimiterFor("foo", null).getRate());
     }
@@ -120,9 +120,9 @@ public class TestGPOFDSysCrawlWindow extends LockssTestCase {
     TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-01-19 01:59:59")));
     assertEquals("1/3s", crl.getRateLimiterFor("foo", null).getRate());
     TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-01-19 02:00:00")));
-    assertEquals("1/8h", crl.getRateLimiterFor("foo", null).getRate());
+    assertEquals("1/1h", crl.getRateLimiterFor("foo", null).getRate());
     TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-01-19 09:59:59")));
-    assertEquals("1/8h", crl.getRateLimiterFor("foo", null).getRate());
+    assertEquals("1/1h", crl.getRateLimiterFor("foo", null).getRate());
     TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-01-19 10:00:00")));
     assertEquals("1/3s", crl.getRateLimiterFor("foo", null).getRate());
     
@@ -134,9 +134,9 @@ public class TestGPOFDSysCrawlWindow extends LockssTestCase {
       TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-08-" + d + " 08:59:59")));
       assertEquals("1/3s", crl.getRateLimiterFor("foo", null).getRate());
       TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-08-" + d + " 09:00:00")));
-      assertEquals("1/12h", crl.getRateLimiterFor("foo", null).getRate());
+      assertEquals("1/1h", crl.getRateLimiterFor("foo", null).getRate());
       TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-08-" + d + " 20:59:59")));
-      assertEquals("1/12h", crl.getRateLimiterFor("foo", null).getRate());
+      assertEquals("1/1h", crl.getRateLimiterFor("foo", null).getRate());
       TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-08-" + d + " 21:00:00")));
       assertEquals("1/3s", crl.getRateLimiterFor("foo", null).getRate());
     }
@@ -161,9 +161,9 @@ public class TestGPOFDSysCrawlWindow extends LockssTestCase {
     TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-08-17 01:59:59")));
     assertEquals("1/3s", crl.getRateLimiterFor("foo", null).getRate());
     TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-08-17 02:00:00")));
-    assertEquals("1/8h", crl.getRateLimiterFor("foo", null).getRate());
+    assertEquals("1/1h", crl.getRateLimiterFor("foo", null).getRate());
     TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-08-17 09:59:59")));
-    assertEquals("1/8h", crl.getRateLimiterFor("foo", null).getRate());
+    assertEquals("1/1h", crl.getRateLimiterFor("foo", null).getRate());
     TimeBase.setSimulated(gmtSdf.format(easternSdf.parse("2014-08-17 10:00:00")));
     assertEquals("1/3s", crl.getRateLimiterFor("foo", null).getRate());
   }
