@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerLinkBookArticleIteratorFactory.java,v 1.3 2013-03-07 00:50:34 thib_gc Exp $
+ * $Id: SpringerLinkBookArticleIteratorFactory.java,v 1.4 2014-09-19 22:50:39 pgust Exp $
  */
 
 /*
@@ -100,6 +100,6 @@ public class SpringerLinkBookArticleIteratorFactory implements ArticleIteratorFa
   
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
 	      throws PluginException {
-	    return new SpringerLinkBookArticleMetadataExtractor();
+    return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
   }
 }
