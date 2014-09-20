@@ -1,5 +1,5 @@
 /*
- * $Id: TestSEGHtmlFilterFactory.java,v 1.2 2014-09-12 19:58:13 ldoan Exp $
+ * $Id: TestSEGHtmlFilterFactory.java,v 1.3 2014-09-20 04:12:47 ldoan Exp $
  */
 
 /*
@@ -81,7 +81,7 @@ public class TestSEGHtmlFilterFactory
           "</div>";
   
   // top right of article - links to previous or next article
-  private static final String withArticleToolsNav = 
+  private static final String withArticleToolsNav =
       "<div class=\"block\">" +
           "<div class=\"stackContents\" id=\"articleToolsNav\">" +
           "<div class=\"stacked\" id=\"articleToolsPrev\">&lt;" +
@@ -141,36 +141,6 @@ public class TestSEGHtmlFilterFactory
           "</div>" +
           "</div>";
   
-  // Errata section
-  private static final String withSecErrata = 
-      "<div class=\"block\">" +
-          "<div id=\"sec_Errata\" class=\"articleGrouping\">" +
-          "<div class=\"header innerSubject\"><input type=\"checkbox\" " +
-          "onclick=\"markid('Errata');\" id=\"markallErrata\" " +
-          "class=\"marksec\"><h3><div class=\"subject\">Errata</div></h3>" +
-          "<a href=\"#top\" class=\"gooo\">" +
-          "<img src=\"/imagessrc/booo.gif\"></a></div><div id=\"Errata\">  " +
-          "<div class=\"nono\" id=\"erratum1\">" +
-          "<table class=\"articleEntry\">" +
-          "<tbody><tr><td width=\"18\" valign=\"top\" align=\"left\">" +
-          "<input type=\"chb\" onclick=\"chacha('erratum1', 'ss', 'nn')\" " +
-          "value=\"99.9999/2013-1009-ERRATUM.1\" " +
-          "name=\"doi\" id=\"erratum1\"><br>" +
-          "<img src=\"/imagessrc/access_full.gif\" " +
-          "alt=\"full access\" title=\"full access\" " +
-          "class=\"accessIcon\"></td><td class=\"toggle\"></td>" +
-          "<td valign=\"top\"><a href=\"/doi/abs/99.9999/erratum.1\" " +
-          "class=\"ref nowrap\"></a>" +
-          "<div class=\"date\">pub date: 31 Oct 2013</div>" +
-          "<a href=\"/doi/abs/99.9999/erratum.1\">Citation</a> | " +
-          "<a href=\"/doi/full/99.9999/erratum.1\">Full Text</a> | " +
-          "<a href=\"/doi/pdf/99.9999/erratum.1\" title=\"tittle open\" " +
-          "pdf\">PDF (26 KB)</a> " +
-          "| <a href=\"/doi/pdfplus/99.9999/erratum.1\" title=\"title open\"" +
-          "pdfplus\">PDF w/Links (28 KB)</a>&nbsp;</td></tr>" +
-          "</tbody></table></div> </div></div>" +
-          "</div>";
-  
   // external links within References section
   private static final String withAbstractReferences = 
       "<div class=\"block\">" +
@@ -207,6 +177,50 @@ public class TestSEGHtmlFilterFactory
           "</div>";
   
   // For hash filtering
+  // top right of article - links to previous or next article and Cited By
+  private static final String withTypePublicationTools = 
+      "<div class=\"block\">" +
+          "<div id=\"widget0\" " +
+          "class=\"widget type-publication-tools ui-helper-clearfix\">" +
+          "<div class=\"stackContents\" id=\"articleToolsNav\">" +
+          "<div class=\"stacked\" id=\"articleToolsPrev\">&lt;" +
+          "<a class=\"articleToolsNav\" "+
+          "href=\"/doi/abs/xx.xxxx/xxxx.185\">Previous Article</a>" +
+          "</div>" +
+          "<div class=\"stackedReverse\" id=\"articleToolsNext\">" +
+          "<a class=\"articleToolsNav\" "+
+          "href=\"/doi/abs/xx.xxxx/xxxx.215\">Next Article</a>&gt;" +
+          "</div>" +
+          "<div class=\"groupInfo\">" +
+          "Volume a, Issue b (2012)" +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "</div>";
+  
+  // below type-publication-tools of an article, where ads are inserted
+  private static final String withTypeAdPlaceholder = 
+      "<div class=\"block\">" +
+          "<div class=\"widget type-ad-placeholder ui-helper-clearfix\" " +
+          "id=\"widget0\">" +
+          "<div class=\"view\">" +
+          "<div class=\"view-inner\">" +
+          "<!-- placeholder id=null, description=Video Placeholder -->" +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "</div>";
+  
+  // from toc page - Cited count
+  private static final String withTocCitation = 
+      "<div class=\"block\">" +  
+          "<div class=\"citation tocCitation\">JournalX 11" +
+          "<span class=\"ciationPageRange\">pp 2-10 pages" +
+          "</span><a class=\"ref doi\" " +
+          "href=\"http://dx.doi.org/99.999/2013-X\">" +
+          "http://dx.doi.org/99.9999/2013-X</a> | Cited <b>5</b> time</div>" +
+          "</div>";
+  
   private static final String withMainAd =
       "<div class=\"block\">" +
           "<div class=\"mainAd\">" +
@@ -264,11 +278,10 @@ public class TestSEGHtmlFilterFactory
     }    
     public void testFiltering() throws Exception {
       doFilterTest(variantAu, variantFact, withPrevNextNav, filteredStr);
-      doFilterTest(variantAu, variantFact, withArticleToolsNav, filteredStr);
+      doFilterTest(variantAu, variantFact, withArticleToolsNav, filteredStr);      
       doFilterTest(variantAu, variantFact, 
           withLeftColumnExceptDownloadCitation, 
           withoutLeftColumnExceptDownloadCitation);
-      doFilterTest(variantAu, variantFact, withSecErrata, filteredStr);
       doFilterTest(variantAu, variantFact, 
           withAbstractReferences, filteredStr);
       doFilterTest(variantAu, variantFact, withExtLink, filteredStr);
@@ -288,7 +301,10 @@ public class TestSEGHtmlFilterFactory
     }
     public void testFiltering() throws Exception {
       doFilterTest(variantAu, variantFact, withPrevNextNav, filteredStr);
-      doFilterTest(variantAu, variantFact, withArticleToolsNav, filteredStr);
+      doFilterTest(variantAu, variantFact, 
+          withTypePublicationTools, filteredStr);
+      doFilterTest(variantAu, variantFact, withTypeAdPlaceholder, filteredStr);
+      doFilterTest(variantAu, variantFact, withTocCitation, filteredStr);
       doFilterTest(variantAu, variantFact, 
           withLeftColumnExceptDownloadCitation, 
           withoutLeftColumnExceptDownloadCitation);
