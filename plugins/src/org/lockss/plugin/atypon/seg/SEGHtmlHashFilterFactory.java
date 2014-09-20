@@ -1,5 +1,5 @@
 /*
- * $Id: SEGHtmlHashFilterFactory.java,v 1.2 2014-09-12 19:56:58 ldoan Exp $
+ * $Id: SEGHtmlHashFilterFactory.java,v 1.3 2014-09-20 04:03:32 ldoan Exp $
  */
 
 /*
@@ -51,8 +51,18 @@ public class SEGHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
         // top right of issue toc - links to previous or next issue
 	HtmlNodeFilters.tagWithAttribute("div", "id", "prevNextNav"),
 	
-	// top right of an article - links to previous or next article
-        HtmlNodeFilters.tagWithAttribute("div", "id", "articleToolsNav"),
+	// top right of an article - links to Previous or Next Article,
+	// and Cited By
+        HtmlNodeFilters.tagWithAttributeRegex(
+            "div", "class", "type-publication-tools"),
+       
+        // below type-publication-tools of an article, where ads are inserted    
+        HtmlNodeFilters.tagWithAttributeRegex(
+            "div", "class", "type-ad-placeholder"),
+            
+        // from toc page - Cited count
+        HtmlNodeFilters.tagWithAttribute(
+            "div", "class", "citation tocCitation"),
         
         // left column - all except Download Citations
         HtmlNodeFilters.allExceptSubtree(
