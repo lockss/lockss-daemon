@@ -1,5 +1,5 @@
 /*
- * $Id: SEGHtmlCrawlFilterFactory.java,v 1.2 2014-09-12 19:56:57 ldoan Exp $
+ * $Id: SEGHtmlCrawlFilterFactory.java,v 1.3 2014-09-20 04:07:12 ldoan Exp $
  */
 
 /*
@@ -60,22 +60,33 @@ public class SEGHtmlCrawlFilterFactory
             HtmlNodeFilters.tagWithAttributeRegex(
                 "a", "href", "/action/showCitFormats\\?")),
 
-    // errata section       
-    HtmlNodeFilters.tagWithAttribute("div", "id", "sec_Errata"),
-    
     // external links within References section
-    // ex: www.estcp.org
+    // Volume 17, Issue 1
+    // http://library.seg.org/doi/full/10.2113/JEEG17.1.1
+    // In the References section, there is a link to 
+    // http://library.seg.org/doi/full/10.2113/www.estcp.org
     HtmlNodeFilters.tagWithAttribute("div", "class", "abstractReferences"),
     
-    // links within short-legend of a figure
-    HtmlNodeFilters.tagWithAttribute("div", "class", "short-legend"),
-   
     // external links from Acknowledgements section
-    // ex: .../go.egi.eu/pdnon
-    //     .../matlabcentral/fileexchange/24531-accurate-fast-marching
+    // Volume 78, Issue 2
+    // http://library.seg.org/doi/full/10.1190/geo2012-0303.1
+    // In the Acknowledge section, there are links to 
+    // http://library.seg.org/doi/full/10.1190/go.egi.eu/pdnon and 
+    // http://library.seg.org/doi/full/10.1190/www.mathworks.com
+    //          /matlabcentral/fileexchange/24531-accurate-fast-marching
     // external link from Case Studies section
-    // ex: .../www.rockphysics.ethz.ch/downloads
+    // Volume 78, Issue 1
+    // http://library.seg.org/doi/full/10.1190/geo2012-0113.1
+    // In the Case Studies section, there is link to 
+    // http://library.seg.org/doi/full/10.1190
+    //          /www.rockphysics.ethz.ch/downloads
     HtmlNodeFilters.tagWithAttribute("a", "class", "ext-link"),
+    
+    // links within short-legend of a figure
+    // http://library.seg.org/doi/full/10.1190/geo2012-0106.1
+    // Part of a figure, there is a link the author info, which can already
+    // be found in References section.
+    HtmlNodeFilters.tagWithAttribute("div", "class", "short-legend"),
     
   };
 
