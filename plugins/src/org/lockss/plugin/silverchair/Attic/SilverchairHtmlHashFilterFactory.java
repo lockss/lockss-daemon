@@ -1,5 +1,5 @@
 /*
- * $Id: SilverchairHtmlHashFilterFactory.java,v 1.4 2014-09-02 22:17:23 thib_gc Exp $
+ * $Id: SilverchairHtmlHashFilterFactory.java,v 1.5 2014-09-22 22:16:44 thib_gc Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.plugin.silverchair;
 
 import java.io.*;
 
+import org.apache.commons.io.IOUtils;
 import org.htmlparser.*;
 import org.htmlparser.filters.*;
 import org.lockss.daemon.PluginException;
@@ -121,6 +122,8 @@ public class SilverchairHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "bannerTop"), // [ACCP, ACP, AMA, APA]
         HtmlNodeFilters.tagWithAttribute("div", "id", "globalHeader_dvMastHead"), // [ACCP, AMA]
         HtmlNodeFilters.tagWithAttribute("div", "id", "ctl00_globalHeader_dvMastHead"), // [ACP]
+        HtmlNodeFilters.tagWithAttribute("div", "id", "rmnheader"), // [AMA]
+        HtmlNodeFilters.tagWithAttribute("div", "class", "errorStates"), // [AMA]
         HtmlNodeFilters.tagWithAttribute("div", "class", "journalHeader"), // [APA]
         // Right column
         // ...(see crawl filter section)
@@ -146,17 +149,25 @@ public class SilverchairHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("a", "id", "^scm6MainContent_rptdisplayIssues_outer_ancArticleTypeBookMarkJump"),
         // Web of Science number of citing articles [ACCP, AMA, APA]
         HtmlNodeFilters.tagWithAttribute("div", "id", "citingArticles"),
+        // Ignore some tabbed content in the main section
+        HtmlNodeFilters.tagWithAttribute("div", "class", "cmeTabContainer"), // [AMA]
+        // Three little sections appended to the main section
+        HtmlNodeFilters.tagWithAttribute("div", "id", "divSignInSubscriptionUpsell"), // [AMA]
+        HtmlNodeFilters.tagWithAttribute("div", "class", "relatedArticlesMobile"), // [AMA]
+        HtmlNodeFilters.tagWithAttribute("div", "class", "collectionsMobile"), // [AMA]
     };
     
-    return new HtmlFilterInputStream(in,
-                                     encoding,
-                                     HtmlNodeFilterTransform.exclude(new OrFilter(nodeFilters)));
+    HtmlFilterInputStream htmlFilterInputStream =
+        new HtmlFilterInputStream(in,
+                                  encoding,
+                                  HtmlNodeFilterTransform.exclude(new OrFilter(nodeFilters)));
+    return new ReaderInputStream(new WhiteSpaceFilter(FilterUtil.getReader(htmlFilterInputStream, encoding)), encoding);
   }
 
-//  public static void main(String[] args) throws Exception {
-//    String file = "/tmp/p1/f1380160";
-//    IOUtils.copy(new SilverchairHtmlHashFilterFactory().createFilteredInputStream(null, new FileInputStream(file), "utf-8"),
-//                 new FileOutputStream(file + ".out"));
-//  }
+  public static void main(String[] args) throws Exception {
+    String file = "/tmp/p2/c4";
+    IOUtils.copy(new SilverchairHtmlHashFilterFactory().createFilteredInputStream(null, new FileInputStream(file), "utf-8"),
+                 new FileOutputStream(file + ".out"));
+  }
   
 }
