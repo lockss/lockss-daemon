@@ -96,11 +96,28 @@ Volume Table of Contents (May or may not be same as start url)
 Issue Table of contents
 * volume 35 issue 1: http://press.endocrine.org/toc/edrv/35/1
 
+At the TOC level, there are links to:
+* Show summary (expand/collapse)
+* Abstract
+* Full Text
+* References
+* Pdf
+* Supplement Material
+
+At the Article level, there tabs to these pages:
+* Abstract
+* Full Text
+* Figs
+* Refs
+* Pdf
+* Cited By (do we collect this page? I think not, but want to double check)
+
 Abstract
 * http://press.endocrine.org/doi/abs/10.1210/er.2013-1009
 ** some abstract path has label as 'CITATION' 
 http://press.endocrine.org/doi/abs/10.1210/er.2014-v35i1abs
 found in http://press.endocrine.org/toc/edrv/35/1
+
 Full text HTML
 * http://press.endocrine.org/doi/full/10.1210/er.2013-1009
 
@@ -141,25 +158,6 @@ Supplementary info
 Citation information (also note format options - may be RIS, Bibtex, endnote, etc)
 * ris, endnote, bibtex, medlars.
 
-At the TOC level, there are links to:
-* Show summary (expand/collapse)
-* Abstract
-* Full Text
-* References
-* Pdf
-* Supplement Material
-
-
-
-At the Article level, there tabs to these pages:
-* Abstract
-* Full Text
-* Figs
-* Refs
-* Pdf
-* Cited By (do we collect this page? I think not, but want to double check)
-
-
 
 Audio or Video?
 
@@ -177,51 +175,28 @@ embedded image (figure, table) and note the following, giving URL examples for e
 * Multiple size images:
 http://press.endocrine.org/na101/home/literatum/publisher/endo/journals/content/edrv/2014/edrv.2014.35.issue-3/er.2013-1067/20140519/images/large/zef9991428650001.jpeg
 http://press.endocrine.org/na101/home/literatum/publisher/endo/journals/content/edrv/2014/edrv.2014.35.issue-3/er.2013-1067/20140519/images/small/zef9991428650005.gif
-
 http://press.endocrine.org/na101/home/literatum/publisher/endo/journals/content/edrv/2014/edrv.2014.35.issue-3/er.2013-1067/20140519/images/small/zef9991428650004.gif
-
 http://press.endocrine.org/na101/home/literatum/publisher/endo/journals/content/edrv/2014/edrv.2014.35.issue-3/er.2013-1067/20140519/images/small/zef9991428650001.gif
-
 http://press.endocrine.org/na101/home/literatum/publisher/endo/journals/content/edrv/2014/edrv.2014.35.issue-3/er.2013-1067/20140519/images/medium/zef9991428650001.gif
-
-
 http://press.endocrine.org/templates/jsp/css/jquery-ui-1.10.2/base/images/ui-bg_flat_75_ffffff_40x100.png
-
-
 http://www.endocrine.org/~/media/Images/Society%20Logos/TES%20logo.png
-
 http://press.endocrine.org/templates/jsp/_style2/_endo/images/social-twit.png
-
-
 http://press.endocrine.org/pb/assets/raw/images/endo_logo.png
-
 http://press.endocrine.org/templates/jsp/images/dummy_table_thumb.gif
-
-
 http://press.endocrine.org/pb/assets/raw/images/bg-header-secondary-endo-reviews.jpg
-
-
 http://press.endocrine.org/na101/home/literatum/publisher/endo/journals/content/edrv/2014/edrv.2014.35.issue-3/er.2013-1067/20140519/images/small/zef9991428650002.gif
-
 http://press.endocrine.org/na101/home/literatum/publisher/endo/journals/content/edrv/2014/edrv.2014.35.issue-3/er.2013-1067/20140519/images/small/zef9991428650003.gif
-
-  
 http://press.endocrine.org/templates/jsp/images/free.gif
 
 Javasripts files:
 http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
-
 http://press.endocrine.org/wro/product.js
-
 http://press.endocrine.org/swfobject.js
 
 Stylesheet CSS files:
 http://press.endocrine.org/pb/css/1410360976947/head_4_17_33_34_129_340.css
-
 http://press.endocrine.org/wro/product.css
-
 http://press.endocrine.org/swfobject.js
-
 
 DOI pattern
 If this publisher uses DOIs, they may follow a pattern. It can be helpful to know what the pattern is. Give 3 examples of DOIs for this publisher including both parts (eg 101234/Blah_xxx124Is1)
@@ -297,11 +272,16 @@ sfxlink javascript commands
 Anything else you think might need to be removed from hashing??
 
 * At TOC level:
-* Top banner
+  - Top banner
+  - right column - all
+  - free.gif (ex: http://press.endocrine.org/toc/edrv/35/3)
+  <img border="0" align="middle" alt="" src="/templates/jsp/images/free.gif">
+  - footer
 
 * At Article level:
-* Top banner
-* right column - all except Download Citation
+  - Top banner
+  - right column - all except Download Citation
+  - footer
 
 -------------------HTML CRAWL FILTERING----------------------------------------
 If the URL pattern for articles is non-deterministic (that is, it doesn't contain volume,  year, journal 
@@ -321,19 +301,17 @@ listed below. If you find some, please provide the URL for the page where you sa
   Prev Article/Next Article links (sometimes these dead end at the ends of an issue, sometimes not)
 
 * At TOC level:
-* Top banner
-* Nav with current issue and past issues
-* Previous issue / Next issue
+  - Top banner
+  - Nav with current issue and past issues
+  - Previous issue / Next issue
 
 * At Article level:
-* Top banner
-* Nav with current issue and past issues
-* Previous article / Next articles
-* right column - all except Download Citation
-* Related content. Example in the Erratum section near the bottom of http://press.endocrine.org/toc/endo/154/10
-
-
-
+  - Top banner
+  - Nav with current issue and past issues
+  - Previous article / Next articles
+  - right column - all except Download Citation
+  - Related content. Example in the Erratum section near the bottom of 
+  http://press.endocrine.org/toc/endo/154/10
 
 This related content expands to Original Article containing links to other volume 153 issue 8.
 
@@ -372,4 +350,5 @@ Some publishers don't provide explicit metadata and we need to parse the source 
 * Metadata can be found in:
 * ris, endnote, bibtex, medlars from Download Citation form http://press.endocrine.org/action/showCitFormats?doi=10.1210%2Fer.2013-1067
 * abstract and full text html.
+
 
