@@ -3,7 +3,7 @@
   publisher <
     name = Metapress Essential ;
     info[contract] = 2013 ;
-    info[tester] = 0 ;
+    info[tester] = 4 ;
     comment[platform] = Metapress
   >
     plugin = org.lockss.plugin.metapress.ClockssMetaPressPlugin
