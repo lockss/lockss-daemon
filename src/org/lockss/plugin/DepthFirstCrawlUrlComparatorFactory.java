@@ -1,5 +1,5 @@
 /*
- * $Id: DepthFirstCrawlUrlComparatorFactory.java,v 1.1 2014-09-22 20:09:00 thib_gc Exp $
+ * $Id: DepthFirstCrawlUrlComparatorFactory.java,v 1.2 2014-09-22 23:47:10 thib_gc Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.util.Comparator;
 
 import org.lockss.crawler.CrawlUrl;
 import org.lockss.daemon.PluginException.LinkageError;
+import org.lockss.daemon.*;
 
 /**
  * <p>
@@ -57,33 +58,12 @@ public class DepthFirstCrawlUrlComparatorFactory implements CrawlUrlComparatorFa
       @Override
       public int compare(CrawlUrl cu1, CrawlUrl cu2) {
         String u1 = cu1.getUrl();
-        while (u1.charAt(u1.length() - 1) == SLASH) {
-          u1 = u1.substring(0, u1.length() - 1);
-        }
         String u2 = cu2.getUrl();
-        while (u2.charAt(u2.length() - 1) == SLASH) {
-          u2 = u2.substring(0, u2.length() - 1);
-        }
-        
         int i1 = 0;
         int i2 = 0;
         while (i1 < u1.length() && i2 < u2.length()) {
-          // Find next slash in u1
           int j1 = u1.indexOf(SLASH, i1);
-          if (j1 == i1) {
-            // u1 has consecutive slash: ignore it and loop
-            ++i1;
-            continue;
-          }
-          
-          // Find next slash in u2
           int j2 = u2.indexOf(SLASH, i2);
-          if (j2 == i2) {
-            // u1 has consecutive slash: ignore it and loop
-            ++i2;
-            continue;
-          }
-          
           if (j1 < 0) {
             if (j2 < 0) {
               // Current components are last of both: compare them
@@ -117,8 +97,21 @@ public class DepthFirstCrawlUrlComparatorFactory implements CrawlUrlComparatorFa
           }
         }
         
-        // u1 and u2 are equal
-        return 0;
+        // The while loop only ever terminates when u1 and u2 are identical
+        // (and ending in a slash), or when one (ending in a slash) is a prefix
+        // of the other; but be conservative
+        if (i1 == u1.length() && i2 == u2.length() && u1.equals(u2)) {
+          return 0;
+        }
+        else if (i1 == u1.length() && u1.charAt(i1 - 1) == SLASH && u2.startsWith(u1)) {
+          return 1;
+        }
+        else if (i2 == u2.length() && u2.charAt(i2 - 1) == SLASH && u1.startsWith(u2)) {
+          return -1;
+        }
+        else {
+          throw new ShouldNotHappenException(String.format("Error comparing URLs %s and %s", u1, u2));
+        }
       }
     };
   }

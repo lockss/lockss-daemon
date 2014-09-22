@@ -1,5 +1,5 @@
 /*
- * $Id: TestDepthFirstCrawlUrlComparatorFactory.java,v 1.1 2014-09-22 20:09:00 thib_gc Exp $
+ * $Id: TestDepthFirstCrawlUrlComparatorFactory.java,v 1.2 2014-09-22 23:47:10 thib_gc Exp $
  */
 
 /*
@@ -34,88 +34,92 @@ package org.lockss.plugin;
 
 import java.util.*;
 
-import org.lockss.crawler.CrawlUrl;
-import org.lockss.daemon.PluginException.LinkageError;
+import org.lockss.crawler.*;
 import org.lockss.test.LockssTestCase;
 
 public class TestDepthFirstCrawlUrlComparatorFactory extends LockssTestCase {
 
-  protected static class MyDepthFirstUrlComparator implements Comparator<String> {
+  /**
+   * <p>
+   * A string comparator that uses a crawl URL comparator to perform the
+   * comparison.
+   * </p>
+   * 
+   * @author Thib Guicherd-Callin
+   * @since 1.67
+   */
+  protected static class UrlComparatorAdapter implements Comparator<String> {
     
-    protected Comparator<CrawlUrl> cmp;
+    protected Comparator<CrawlUrl> cucmp;
     
-    public MyDepthFirstUrlComparator() throws LinkageError {
-      this.cmp = new DepthFirstCrawlUrlComparatorFactory().createCrawlUrlComparator(null);
+    public UrlComparatorAdapter(Comparator<CrawlUrl> cucmp) {
+      this.cucmp = cucmp;
     }
     
     @Override
     public int compare(String o1, String o2) {
-      class MyCrawlUrl implements CrawlUrl {
-        protected String url;
-        public MyCrawlUrl(String url) { this.url = url; }
-        @Override public String getUrl() { return url; }
-        @Override public int getDepth() { throw new UnsupportedOperationException(); }
-      }
-      return cmp.compare(new MyCrawlUrl(o1), new MyCrawlUrl(o2));
+      return cucmp.compare(new CrawlUrlData(o1, 0), new CrawlUrlData(o2, 0));
     }
     
   }
   
-  protected Comparator<String> cmp;
+  protected Comparator<String> scmp;
   
   public void setUp() throws Exception {
-    cmp = new MyDepthFirstUrlComparator();
+    scmp = new UrlComparatorAdapter(new DepthFirstCrawlUrlComparatorFactory().createCrawlUrlComparator(null));
   }
   
   public void testCompareUrls() throws Exception {
-     assertNegative(cmp.compare("http://www.example.com", "http://www.lockss.org"));
-     assertNegative(cmp.compare("http://www.example.com", "http://www.lockss.org/"));
-     assertNegative(cmp.compare("http://www.example.com/", "http://www.lockss.org"));
-     assertNegative(cmp.compare("http://www.example.com/", "http://www.lockss.org/"));
-     assertNegative(cmp.compare("http://www.example.com/", "http://www.lockss.org////"));
-     assertNegative(cmp.compare("http://www.example.com////", "http://www.lockss.org/t"));
-     assertNegative(cmp.compare("http://www.example.com////", "http://www.lockss.org////"));
+     assertNegative(scmp.compare("http://www.example.com", "http://www.lockss.org"));
+     assertNegative(scmp.compare("http://www.example.com", "http://www.lockss.org/"));
+     assertNegative(scmp.compare("http://www.example.com/", "http://www.lockss.org"));
+     assertNegative(scmp.compare("http://www.example.com/", "http://www.lockss.org/"));
      
-     assertEquals(0, cmp.compare("http://www.example.com/a", "http://www.example.com/a"));
-     assertEquals(0, cmp.compare("http://www.example.com/a", "http://www.example.com/a/"));
-     assertEquals(0, cmp.compare("http://www.example.com/a/", "http://www.example.com/a"));
-     assertEquals(0, cmp.compare("http://www.example.com/a/", "http://www.example.com/a/"));
-     assertEquals(0, cmp.compare("http://www.example.com/a/", "http:///www.example.com///a////"));
-     assertEquals(0, cmp.compare("http:///www.example.com///a////", "http://www.example.com/a/"));
+     assertEquals(0, scmp.compare("http://www.example.com/a", "http://www.example.com/a"));
+     assertPositive(scmp.compare("http://www.example.com/a", "http://www.example.com/a/"));
+     assertNegative(scmp.compare("http://www.example.com/a/", "http://www.example.com/a"));
+     assertEquals(0, scmp.compare("http://www.example.com/a/", "http://www.example.com/a/"));
      
-     assertNegative(cmp.compare("http://www.example.com/a", "http://www.example.com/x"));
-     assertNegative(cmp.compare("http://www.example.com/a", "http://www.example.com/x/"));
-     assertNegative(cmp.compare("http://www.example.com/a/", "http://www.example.com/x"));
-     assertNegative(cmp.compare("http://www.example.com/a/", "http://www.example.com/x/"));
+     assertNegative(scmp.compare("http://www.example.com/a", "http://www.example.com/x"));
+     assertNegative(scmp.compare("http://www.example.com/a", "http://www.example.com/x/"));
+     assertNegative(scmp.compare("http://www.example.com/a/", "http://www.example.com/x"));
+     assertNegative(scmp.compare("http://www.example.com/a/", "http://www.example.com/x/"));
      
-     assertNegative(cmp.compare("http://www.example.com/a", "http://www.example.com/x/y/z"));
-     assertNegative(cmp.compare("http://www.example.com/a", "http://www.example.com/x/y/z/"));
-     assertNegative(cmp.compare("http://www.example.com/a/", "http://www.example.com/x/y/z"));
-     assertNegative(cmp.compare("http://www.example.com/a/", "http://www.example.com/x/y/z/"));
-     assertNegative(cmp.compare("http://www.example.com/a/", "http://www.example.com//x///y////z/////"));
+     assertNegative(scmp.compare("http://www.example.com/a", "http://www.example.com/x/y/z"));
+     assertNegative(scmp.compare("http://www.example.com/a", "http://www.example.com/x/y/z/"));
+     assertNegative(scmp.compare("http://www.example.com/a/", "http://www.example.com/x/y/z"));
+     assertNegative(scmp.compare("http://www.example.com/a/", "http://www.example.com/x/y/z/"));
 
-     assertNegative(cmp.compare("http://www.example.com/a/b/c", "http://www.example.com/x"));
-     assertNegative(cmp.compare("http://www.example.com/a/b/c", "http://www.example.com/x/"));
-     assertNegative(cmp.compare("http://www.example.com/a/b/c/", "http://www.example.com/x"));
-     assertNegative(cmp.compare("http://www.example.com/a/b/c/", "http://www.example.com/x/"));
-     assertNegative(cmp.compare("http://www.example.com//a///b////c/////", "http://www.example.com/x/"));
+     assertNegative(scmp.compare("http://www.example.com/a/b/c", "http://www.example.com/x"));
+     assertNegative(scmp.compare("http://www.example.com/a/b/c", "http://www.example.com/x/"));
+     assertNegative(scmp.compare("http://www.example.com/a/b/c/", "http://www.example.com/x"));
+     assertNegative(scmp.compare("http://www.example.com/a/b/c/", "http://www.example.com/x/"));
      
-     assertPositive(cmp.compare("http://www.example.com/a", "http://www.example.com/a/b/c"));
-     assertPositive(cmp.compare("http://www.example.com/a", "http://www.example.com/a/b/c/"));
-     assertPositive(cmp.compare("http://www.example.com/a/", "http://www.example.com/a/b/c"));
-     assertPositive(cmp.compare("http://www.example.com/a/", "http://www.example.com/a/b/c/"));
+     assertPositive(scmp.compare("http://www.example.com/a", "http://www.example.com/a/b/c"));
+     assertPositive(scmp.compare("http://www.example.com/a", "http://www.example.com/a/b/c/"));
+     assertPositive(scmp.compare("http://www.example.com/a/", "http://www.example.com/a/b/c"));
+     assertPositive(scmp.compare("http://www.example.com/a/", "http://www.example.com/a/b/c/"));
   }
   
   public void testOrderList() throws Exception {
     List<String> expected = Arrays.asList(
+        "http://www.example.com/a/b/c/",
         "http://www.example.com/a/b/c",
+        "http://www.example.com/a/b/",
         "http://www.example.com/a/b",
+        "http://www.example.com/a/",
         "http://www.example.com/a",
+        "http://www.example.com/p/q/r/",
         "http://www.example.com/p/q/r",
+        "http://www.example.com/p/q/",
         "http://www.example.com/p/q",
+        "http://www.example.com/p/",
         "http://www.example.com/p",
+        "http://www.example.com/x/y/z/",
         "http://www.example.com/x/y/z",
+        "http://www.example.com/x/y/",
         "http://www.example.com/x/y",
+        "http://www.example.com/x/",
         "http://www.example.com/x",
         "http://www.example.com/"
     );
@@ -123,62 +127,59 @@ public class TestDepthFirstCrawlUrlComparatorFactory extends LockssTestCase {
     while (input.equals(expected)) {
       Collections.shuffle(input);
     }
-    Collections.sort(input, cmp);
+    Collections.sort(input, scmp);
     assertEquals(expected, input);
   }
   
-  public void testSimulateCrawl() throws Exception {
+  public void testCrawlQueue() throws Exception {
     // Simulate a crawl and its crawl queue for a simplistic site
-    List<String> cq = new ArrayList<String>();
-    cq.add("http://www.example.com/");
+    CrawlQueue cq = new CrawlQueue(new DepthFirstCrawlUrlComparatorFactory().createCrawlUrlComparator(null));
+    cq.add(mkcud("http://www.example.com/"));
 
-    assertEquals("http://www.example.com/", cq.remove(0));
+    assertEquals("http://www.example.com/", cq.remove().getUrl());
     // ... / has links to /x, /a, /p
-    cq.add("http://www.example.com/x");
-    cq.add("http://www.example.com/a");
-    cq.add("http://www.example.com/p");
-    Collections.sort(cq, cmp);
+    cq.add(mkcud("http://www.example.com/x"));
+    cq.add(mkcud("http://www.example.com/a"));
+    cq.add(mkcud("http://www.example.com/p"));
     
-    assertEquals("http://www.example.com/a", cq.remove(0));
+    assertEquals("http://www.example.com/a", cq.remove().getUrl());
     // ... /a has links to /, /a/b
-    cq.add("http://www.example.com/a/b");
-    Collections.sort(cq, cmp);
+    cq.add(mkcud("http://www.example.com/a/b"));
     
-    assertEquals("http://www.example.com/a/b", cq.remove(0));
+    assertEquals("http://www.example.com/a/b", cq.remove().getUrl());
     // ... /a/b has links to /a, /a/b/c
-    cq.add("http://www.example.com/a/b/c");
-    Collections.sort(cq, cmp);
+    cq.add(mkcud("http://www.example.com/a/b/c"));
     
-    assertEquals("http://www.example.com/a/b/c", cq.remove(0));
+    assertEquals("http://www.example.com/a/b/c", cq.remove().getUrl());
     // ... /a/b/c has links to /a/b
     
-    assertEquals("http://www.example.com/p", cq.remove(0));
+    assertEquals("http://www.example.com/p", cq.remove().getUrl());
     // ... /p has links to /, /p/q
-    cq.add("http://www.example.com/p/q");
-    Collections.sort(cq, cmp);
+    cq.add(mkcud("http://www.example.com/p/q"));
     
-    assertEquals("http://www.example.com/p/q", cq.remove(0));
+    assertEquals("http://www.example.com/p/q", cq.remove().getUrl());
     // ... /p/q has links to /p, /p/q/r
-    cq.add("http://www.example.com/p/q/r");
-    Collections.sort(cq, cmp);
+    cq.add(mkcud("http://www.example.com/p/q/r"));
     
-    assertEquals("http://www.example.com/p/q/r", cq.remove(0));
+    assertEquals("http://www.example.com/p/q/r", cq.remove().getUrl());
     // ... /p/q/r has links to /p/q
     
-    assertEquals("http://www.example.com/x", cq.remove(0));
+    assertEquals("http://www.example.com/x", cq.remove().getUrl());
     // ... /x has links to /, /x/y
-    cq.add("http://www.example.com/x/y");
-    Collections.sort(cq, cmp);
+    cq.add(mkcud("http://www.example.com/x/y"));
     
-    assertEquals("http://www.example.com/x/y", cq.remove(0));
+    assertEquals("http://www.example.com/x/y", cq.remove().getUrl());
     // ... /x/y has links to /x, /x/y/z
-    cq.add("http://www.example.com/x/y/z");
-    Collections.sort(cq, cmp);
+    cq.add(mkcud("http://www.example.com/x/y/z"));
     
-    assertEquals("http://www.example.com/x/y/z", cq.remove(0));
+    assertEquals("http://www.example.com/x/y/z", cq.remove().getUrl());
     // ... /x/y/z has links to /x/y
     
-    assertEmpty(cq);
+    assertTrue(cq.isEmpty());
+  }
+  
+  protected static CrawlUrlData mkcud(String url) {
+    return new CrawlUrlData(url, 0);
   }
   
 }
