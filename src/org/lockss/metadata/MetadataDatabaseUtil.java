@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataDatabaseUtil.java,v 1.23 2014-09-16 19:55:42 fergaloy-sf Exp $
+ * $Id: MetadataDatabaseUtil.java,v 1.24 2014-09-23 20:36:26 pgust Exp $
  */
 
 /*
@@ -263,10 +263,7 @@ final public class MetadataDatabaseUtil {
   }
     
   /**
-   * This query generates a table of publisher_names, publication_names, 
-   * p_issns, e_issns, p_isbns, e_isbns, volumes, and years. The query
-   * incorporates PUBINFO_QUERY as an additional table for accessing
-   * publication level values.
+   * This query generates information to populate BibliographicItem records.
    * <p>
    * Here is the original SQL query:
    *<pre>
@@ -318,7 +315,7 @@ where
       p.publisher_seq = pn1.publisher_seq
   and pn1.md_item_seq = mi1.md_item_seq
   and mi1.md_item_type_seq = mit1.md_item_type_seq
-  and mit1.type_name in ('journal','book')"
+  and mit1.type_name in ('journal','book')
   and mi1.md_item_seq = title.md_item_seq
   and title.name_type = 'primary'
    *</pre>
