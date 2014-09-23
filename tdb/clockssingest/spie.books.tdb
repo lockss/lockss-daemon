@@ -6,7 +6,7 @@
     info[tester] = 0
   >
 
-    plugin = org.lockss.plugin.silverchair.ClockssSilverchairJournalsPlugin
+    plugin = needs.plugin
     implicit < status ; status2 ; year ; param[year] ; param[book_id] ; eisbn ; isbn ; name ; author >
     param[base_url] = http://ebooks.spiedigitallibrary.org/
  
