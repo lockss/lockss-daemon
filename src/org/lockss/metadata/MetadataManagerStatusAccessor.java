@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManagerStatusAccessor.java,v 1.4 2014-09-17 22:47:07 pgust Exp $
+ * $Id: MetadataManagerStatusAccessor.java,v 1.5 2014-09-23 20:36:59 pgust Exp $
  */
 
 /*
@@ -302,6 +302,9 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
     long successfulOps = metadataMgr.getSuccessfulReindexingCount();
     long failedOps = metadataMgr.getFailedReindexingCount();
     long articleCount = metadataMgr.getArticleCount();
+    long publicationCount = metadataMgr.getPublicationCount();
+    long publisherCount = metadataMgr.getPublisherCount();
+    long providerCount = metadataMgr.getProviderCount();
     boolean indexingEnabled = metadataMgr.isIndexingEnabled();
     
     if (activeOps > 0 && !"indexing".equals(key)) {
@@ -362,6 +365,21 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
         "Total Articles in Index",
         ColumnDescriptor.TYPE_INT,
         articleCount));
+
+    res.add(new StatusTable.SummaryInfo(
+        "Total Publications in Index",
+        ColumnDescriptor.TYPE_INT,
+        publicationCount));
+
+    res.add(new StatusTable.SummaryInfo(
+        "Total Publishers in Index",
+        ColumnDescriptor.TYPE_INT,
+        publisherCount));
+
+    res.add(new StatusTable.SummaryInfo(
+        "Total Providers in Index",
+        ColumnDescriptor.TYPE_INT,
+        providerCount));
 
     res.add(new StatusTable.SummaryInfo(
         "Indexing Enabled",
