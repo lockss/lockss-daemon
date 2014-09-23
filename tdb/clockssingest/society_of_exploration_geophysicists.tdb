@@ -9,7 +9,7 @@
   >
 
  
-  plugin = needs.plugin
+  plugin = org.lockss.plugin.atypon.seg.ClockssSEGPlugin
   param[base_url] = http://library.seg.org/
   implicit < status ; status2 ; year ; name ; param[volume_name] >
 
@@ -161,7 +161,7 @@
       eissn = 1943-2658
     >
     
-    param[journal_id] = jeeg
+    param[journal_id] = jeegxx
 
     au < doNotProcess ; doNotProcess ; 1995-1996 ; Journal of Environmental and Engineering Geophysics Volume 1 ; 1 >
     au < doNotProcess ; doNotProcess ; 1997 ; Journal of Environmental and Engineering Geophysics Volume 2 ; 2  >
