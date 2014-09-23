@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetadataManager.java,v 1.8 2014-09-17 22:46:11 pgust Exp $
+ * $Id: TestMetadataManager.java,v 1.9 2014-09-23 20:40:16 pgust Exp $
  */
 
 /*
@@ -233,6 +233,24 @@ public class TestMetadataManager extends LockssTestCase {
     assertEquals(0, metadataManager.
                  getPrioritizedAuIdsToReindex(con, Integer.MAX_VALUE).size());
 
+    // 21 articles for each of four AUs
+    // au0 and au1 for plugin0 have the same articles for different AUs
+    long articleCount = metadataManager.getArticleCount(con);
+    assertEquals(105, articleCount);
+    
+    // one pubication for each of four plugins
+    long publicationCount = metadataManager.getPublicationCount(con);
+    assertEquals(4, publicationCount);
+    
+    // one publisher for each of four plugins
+    long publisherCount = metadataManager.getPublisherCount(con);
+    assertEquals(4, publisherCount);
+    
+    // one more provider than publications because
+    // au0 and au4 for plugin0 have different providers
+    long providerCount = metadataManager.getProviderCount(con);
+    assertEquals(5, providerCount);
+    
     // check distinct access URLs
     String query =           
       "select distinct " + URL_COLUMN + " from " + URL_TABLE;
@@ -697,6 +715,12 @@ public class TestMetadataManager extends LockssTestCase {
             Emitter emitter) throws IOException, PluginException {
           ArticleMetadata md = new ArticleMetadata();
           articleNumber++;
+
+          // use provider based on au number from last digit of auid: 0 or 4
+          String auid = af.getFullTextCu().getArchivalUnit().getAuId();
+          String auNumber = auid.substring(auid.length()-1);
+          md.put(MetadataField.FIELD_PROVIDER, "Provider "+auNumber);
+
           md.put(MetadataField.FIELD_PUBLISHER,"Publisher 0");
           md.put(MetadataField.FIELD_ISSN,"0740-2783");
           md.put(MetadataField.FIELD_VOLUME,"XI");
@@ -714,7 +738,7 @@ public class TestMetadataManager extends LockssTestCase {
                         + md.get(MetadataField.FIELD_DATE) + "."
                         + md.get(MetadataField.FIELD_START_PAGE); 
           md.put(MetadataField.FIELD_DOI, doi);
-          md.put(MetadataField.FIELD_JOURNAL_TITLE,
+          md.put(MetadataField.FIELD_PUBLICATION_TITLE,
                  "Journal[" + doiPrefix + "]");
           md.put(MetadataField.FIELD_ARTICLE_TITLE,"Title[" + doi + "]");
           md.put(MetadataField.FIELD_AUTHOR,"Author[" + doi + "]");
