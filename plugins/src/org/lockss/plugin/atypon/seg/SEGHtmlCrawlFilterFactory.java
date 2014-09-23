@@ -1,5 +1,5 @@
 /*
- * $Id: SEGHtmlCrawlFilterFactory.java,v 1.3 2014-09-20 04:07:12 ldoan Exp $
+ * $Id: SEGHtmlCrawlFilterFactory.java,v 1.4 2014-09-23 19:15:49 ldoan Exp $
  */
 
 /*
@@ -81,12 +81,6 @@ public class SEGHtmlCrawlFilterFactory
     // http://library.seg.org/doi/full/10.1190
     //          /www.rockphysics.ethz.ch/downloads
     HtmlNodeFilters.tagWithAttribute("a", "class", "ext-link"),
-    
-    // links within short-legend of a figure
-    // http://library.seg.org/doi/full/10.1190/geo2012-0106.1
-    // Part of a figure, there is a link the author info, which can already
-    // be found in References section.
-    HtmlNodeFilters.tagWithAttribute("div", "class", "short-legend"),
     
   };
 
