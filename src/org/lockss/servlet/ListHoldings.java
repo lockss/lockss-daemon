@@ -1,5 +1,5 @@
 /*
- * $Id: ListHoldings.java,v 1.53 2013-05-11 05:59:37 pgust Exp $
+ * $Id: ListHoldings.java,v 1.54 2014-09-23 20:39:25 pgust Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.util.*;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import org.apache.commons.lang.StringUtils;
+import org.lockss.app.LockssDaemon;
 import org.lockss.config.*;
 import org.lockss.config.TdbUtil.ContentScope;
 import org.lockss.config.TdbUtil.ContentType;
@@ -957,7 +958,16 @@ public class ListHoldings extends LockssServlet {
       // NOTE: getNumberTdbTitles() first has to produce a full list of titles;
       // this is expensive, in particular for the Preserved option, and so
       // should only be done when required.
-      int total = TdbUtil.getNumberTdbTitles(scope, ContentType.ALL);
+      long total = TdbUtil.getNumberTdbTitles(scope, ContentType.ALL);
+      if (scope == ContentScope.COLLECTED && useMetadataForPreserved()) {
+        // use number of publications in the metadata database if greater
+        // to account for file transfer content titles; this also handles
+        // cases where indexing is disabled or is not yet complete
+        total = Math.max(total, 
+                         LockssDaemon.getLockssDaemon()
+                                     .getMetadataManager()
+                                     .getPublicationCount());
+      }
       /*log.debug(String.format("Title count %s took approximately %ss",
           scope, (System.currentTimeMillis()-s)/1000
       ));*/
