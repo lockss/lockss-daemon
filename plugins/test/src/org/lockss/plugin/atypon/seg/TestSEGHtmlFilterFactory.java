@@ -1,5 +1,5 @@
 /*
- * $Id: TestSEGHtmlFilterFactory.java,v 1.3 2014-09-20 04:12:47 ldoan Exp $
+ * $Id: TestSEGHtmlFilterFactory.java,v 1.4 2014-09-23 20:00:37 ldoan Exp $
  */
 
 /*
@@ -156,18 +156,7 @@ public class TestSEGHtmlFilterFactory
           "</ol>" +
           "</div>" +
           "</div>" +
-          "</div>";
-  
-  // external links with short-legend of a figure
-  private static final String withShortLegend =
-      "<div class=\"block\">" +
-          "<div class=\"short-legend\">" +
-          "<p class=\"first last\">" +
-          "<span class=\"captionLabel\">Figure 6.</span>" +
-          "<a href=\"http://library.example.org/external_link\">extlink</a>" +
-          "</p" +
-          "</div>" +
-          "</div>";         
+          "</div>";      
   
   // external links within Acknowledgements and Case Studies sections
   private static final String withExtLink =
@@ -285,7 +274,6 @@ public class TestSEGHtmlFilterFactory
       doFilterTest(variantAu, variantFact, 
           withAbstractReferences, filteredStr);
       doFilterTest(variantAu, variantFact, withExtLink, filteredStr);
-      doFilterTest(variantAu, variantFact, withShortLegend, filteredStr);
     }    
   }
 
