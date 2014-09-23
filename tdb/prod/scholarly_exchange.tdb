@@ -34,9 +34,9 @@
       eissn = 2163-8381
     >
     
-    comment[0] = closed to new content after 2013
     param[base_url] = http://ijms.nmdl.org/
     param[journal_id] = ?
+    comment[0] = Journal closed to new content. Last volume 2013.
 
     au < exists ; 2010 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 1 ; 1 ; 2010 >
     au < exists ; 2011 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 2 ; 2 ; 2011 >
@@ -154,6 +154,57 @@
     au < exists ; 2012 ; Understanding and Dismantling Privilege Volume 2 ; 2 ; 2012 >
     au < exists ; 2013 ; Understanding and Dismantling Privilege Volume 3 ; 3 ; 2013 >
     au < exists ; 2014 ; Understanding and Dismantling Privilege Volume 4 ; 4 ; 2014 >
+    
+  }
+  
+  {
+  
+    title < 
+      name = Journal of Applied Leadership and Management
+    >
+    
+    param[base_url] = http://www.journal-alm.org/
+    param[journal_id] = ?
+
+    au < exists ; 2012 ; Journal of Applied Leadership and Management Volume 2012 ; 2012 ; 2012 >
+    au < exists ; 2013 ; Journal of Applied Leadership and Management Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; Journal of Applied Leadership and Management Volume 2014 ; 2014 ; 2014 >
+    
+  }
+  
+  {
+  
+    title < 
+      name = Journal of Experimental & Clinical Assisted Reproduction
+    >
+    
+    param[base_url] = http://www.jexpclinassistreprod.com/
+    param[journal_id] = ?
+    comment[0] = Journal closed to new content. Last volume 2011.
+
+    au < exists ; 2004 ; Journal of Experimental & Clinical Assisted Reproduction Volume 1 ; 1 ; 2004 >
+    au < exists ; 2005 ; Journal of Experimental & Clinical Assisted Reproduction Volume 2 ; 2 ; 2005 >
+    au < exists ; 2006 ; Journal of Experimental & Clinical Assisted Reproduction Volume 3 ; 3 ; 2006 >
+    au < exists ; 2007 ; Journal of Experimental & Clinical Assisted Reproduction Volume 4 ; 4 ; 2007 >
+    au < exists ; 2008 ; Journal of Experimental & Clinical Assisted Reproduction Volume 5 ; 5 ; 2008 >
+    au < exists ; 2009 ; Journal of Experimental & Clinical Assisted Reproduction Volume 6 ; 6 ; 2009 >
+    au < exists ; 2010 ; Journal of Experimental & Clinical Assisted Reproduction Volume 7 ; 7 ; 2010 >
+    au < exists ; 2011 ; Journal of Experimental & Clinical Assisted Reproduction Volume 8 ; 8 ; 2011 >
+    
+  }
+  
+  {
+  
+    title < 
+      name = Journal of Medical Education Perspectives
+    >
+    
+    param[base_url] = http://www.jmeps.com/
+    param[journal_id] = ?
+
+    au < exists ; 2012 ; Journal of Medical Education Perspectives Volume 1 ; 1 ; 2012 >
+    au < exists ; 2013 ; Journal of Medical Education Perspectives Volume 2 ; 2 ; 2013 >
+    au < exists ; 2014 ; Journal of Medical Education Perspectives Volume 3 ; 3 ; 2014 >
     
   }
   
