@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.32 2014-09-17 22:47:51 pgust Exp $
+ * $Id: MetadataManager.java,v 1.33 2014-09-23 20:37:22 pgust Exp $
  */
 
 /*
@@ -56,6 +56,7 @@ import org.lockss.daemon.LockssRunnable;
 import org.lockss.daemon.status.StatusService;
 import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
+import org.lockss.db.SqlConstants;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.BaseArticleMetadataExtractor;
 import org.lockss.extractor.MetadataField;
@@ -428,6 +429,42 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   // Query to count bibliographic items.
   private static final String COUNT_BIB_ITEM_QUERY = "select count(*) from "
       + BIB_ITEM_TABLE;
+
+  // Query to count publication items that have associated AU_ITEMs
+  // of type 'journal' or 'book'
+  private static final String COUNT_PUBLICATION_QUERY = 
+        "select count(distinct "
+      + PUBLICATION_TABLE + "." + MD_ITEM_SEQ_COLUMN + ") from "
+      + PUBLISHER_TABLE + "," + PUBLICATION_TABLE + "," 
+      + MD_ITEM_TABLE + "," + MD_ITEM_TYPE_TABLE
+      + " where " + PUBLISHER_TABLE + "." + PUBLISHER_SEQ_COLUMN
+      + "=" + PUBLICATION_TABLE + "." + PUBLISHER_SEQ_COLUMN
+      + " and " + PUBLICATION_TABLE + "." + MD_ITEM_SEQ_COLUMN
+      + "=" + MD_ITEM_TABLE + "." + MD_ITEM_SEQ_COLUMN
+      + " and " + MD_ITEM_TABLE + "." + MD_ITEM_TYPE_SEQ_COLUMN
+      + "=" + MD_ITEM_TYPE_TABLE + "." + MD_ITEM_TYPE_SEQ_COLUMN
+      + " and " + MD_ITEM_TYPE_TABLE + "." + TYPE_NAME_COLUMN
+      + " in ('journal','book')";
+
+  // Query to count PUBLISHER items that have associated AU_ITEMs
+  private static final String COUNT_PUBLISHER_QUERY = 
+        "select count(distinct "
+      + PUBLISHER_TABLE + "." + PUBLISHER_SEQ_COLUMN + ") from "
+      + PUBLISHER_TABLE + "," + PUBLICATION_TABLE + "," + MD_ITEM_TABLE 
+      + " where " + PUBLISHER_TABLE + "." + PUBLISHER_SEQ_COLUMN
+      + "=" + PUBLICATION_TABLE + "." + PUBLISHER_SEQ_COLUMN
+      + " and " + PUBLICATION_TABLE + "." + MD_ITEM_SEQ_COLUMN
+      + "=" + MD_ITEM_TABLE + "." + MD_ITEM_SEQ_COLUMN;
+
+  // Query to count PROVIDER items that have associated AU_ITEMs
+  private static final String COUNT_PROVIDER_QUERY =
+      "select count(distinct "
+    + PROVIDER_TABLE + "." + PROVIDER_SEQ_COLUMN + ") from "
+    + PROVIDER_TABLE + "," + AU_MD_TABLE + "," + MD_ITEM_TABLE 
+    + " where " + PROVIDER_TABLE + "." + PROVIDER_SEQ_COLUMN
+    + "=" + AU_MD_TABLE + "." + PROVIDER_SEQ_COLUMN
+    + " and " + AU_MD_TABLE + "." + AU_MD_SEQ_COLUMN
+    + "=" + MD_ITEM_TABLE + "." + AU_MD_SEQ_COLUMN;
 
   // Query to get the identifier of the metadata of an AU in the database.
   private static final String FIND_AU_MD_BY_AU_ID_QUERY = "select m."
@@ -867,6 +904,18 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   // The number of articles currently in the metadata database.
   private long metadataArticleCount = 0;
 
+  // The number of publications currently in the metadata database
+  // (-1 indicates needs recalculation)
+  private long metadataPublicationCount = -1;
+  
+  // The number of publishers currently in the metadata database
+  // (-1 indicates needs recalculation)
+  private long metadataPublisherCount = -1;
+  
+  // The number of providers currently in the metadata database
+  // (-1 indicates needs recalculation)
+  private long metadataProviderCount = -1;
+  
   // The number of AUs pending to be reindexed.
   private long pendingAusCount = 0;
 
@@ -934,8 +983,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     try {
       pendingAusCount = getEnabledPendingAusCount(conn);
       metadataArticleCount = getArticleCount(conn);
+      metadataPublicationCount = getPublicationCount(conn);
+      metadataPublisherCount = getPublisherCount(conn);
+      metadataProviderCount = getProviderCount(conn);
     } catch (DbException dbe) {
-      log.error("Cannot get pending AUs and article counts", dbe);
+      log.error("Cannot get pending AUs and counts", dbe);
     }
 
     DbManager.safeRollbackAndClose(conn);
@@ -1002,12 +1054,12 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  private long getArticleCount(Connection conn) throws DbException {
+  long getArticleCount(Connection conn) throws DbException {
     final String DEBUG_HEADER = "getArticleCount(): ";
     long rowCount = -1;
 
     PreparedStatement stmt =
-	dbManager.prepareStatement(conn, COUNT_BIB_ITEM_QUERY);
+        dbManager.prepareStatement(conn, COUNT_BIB_ITEM_QUERY);
     ResultSet resultSet = null;
     try {
       resultSet = dbManager.executeQuery(stmt);
@@ -1017,6 +1069,105 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       log.error("Cannot get the count of articles", sqle);
       log.error("SQL = '" + COUNT_BIB_ITEM_QUERY + "'.");
       throw new DbException("Cannot get the count of articles", sqle);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(stmt);
+    }
+
+    log.debug3(DEBUG_HEADER + "rowCount = " + rowCount);
+    return rowCount;
+  }
+
+  /**
+   * Provides the number of publications in the metadata database.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @return a long with the number of publications in the metadata database.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  long getPublicationCount(Connection conn) throws DbException {
+    final String DEBUG_HEADER = "getPublicationCount(): ";
+    long rowCount = -1;
+
+    PreparedStatement stmt =
+	dbManager.prepareStatement(conn, COUNT_PUBLICATION_QUERY);
+    ResultSet resultSet = null;
+    try {
+      resultSet = dbManager.executeQuery(stmt);
+      resultSet.next();
+      rowCount = resultSet.getLong(1);
+    } catch (SQLException sqle) {
+      log.error("Cannot get the count of publications", sqle);
+      log.error("SQL = '" + COUNT_PUBLICATION_QUERY + "'.");
+      throw new DbException("Cannot get the count of publications", sqle);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(stmt);
+    }
+
+    log.debug3(DEBUG_HEADER + "rowCount = " + rowCount);
+    return rowCount;
+  }
+
+  /**
+   * Provides the number of publishers in the metadata database.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @return a long with the number of publishers in the metadata database.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  long getPublisherCount(Connection conn) throws DbException {
+    final String DEBUG_HEADER = "getPublisherCount(): ";
+    long rowCount = -1;
+
+    PreparedStatement stmt =
+        dbManager.prepareStatement(conn, COUNT_PUBLISHER_QUERY);
+    ResultSet resultSet = null;
+    try {
+      resultSet = dbManager.executeQuery(stmt);
+      resultSet.next();
+      rowCount = resultSet.getLong(1);
+    } catch (SQLException sqle) {
+      log.error("Cannot get the count of publishers", sqle);
+      log.error("SQL = '" + COUNT_PUBLISHER_QUERY + "'.");
+      throw new DbException("Cannot get the count of publishers", sqle);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(stmt);
+    }
+
+    log.debug3(DEBUG_HEADER + "rowCount = " + rowCount);
+    return rowCount;
+  }
+
+  /**
+   * Provides the number of publishers in the metadata database.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @return a long with the number of publishers in the metadata database.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  long getProviderCount(Connection conn) throws DbException {
+    final String DEBUG_HEADER = "getProviderCount(): ";
+    long rowCount = -1;
+
+    PreparedStatement stmt =
+        dbManager.prepareStatement(conn, COUNT_PROVIDER_QUERY);
+    ResultSet resultSet = null;
+    try {
+      resultSet = dbManager.executeQuery(stmt);
+      resultSet.next();
+      rowCount = resultSet.getLong(1);
+    } catch (SQLException sqle) {
+      log.error("Cannot get the count of providers", sqle);
+      log.error("SQL = '" + COUNT_PROVIDER_QUERY + "'.");
+      throw new DbException("Cannot get the count of providers", sqle);
     } finally {
       DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(stmt);
@@ -1938,6 +2089,66 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    */
   public long getArticleCount() {
     return metadataArticleCount;
+  }
+  
+  /**
+   * Provides the number of distict publications in the metadata database.
+   * 
+   * @return the number of distinct publications in the metadata database
+   */
+  public long getPublicationCount() {
+    if (metadataPublicationCount < 0) {
+      Connection conn = null;
+      try {
+        conn = dbManager.getConnection();
+        metadataPublicationCount = getPublicationCount(conn);
+      } catch (DbException ex) {
+        log.error("getPublicationCount", ex);
+      } finally {
+        DbManager.safeRollbackAndClose(conn);
+      }
+    }
+    return (metadataPublicationCount < 0) ? 0 : metadataPublicationCount;
+  }
+
+  /**
+   * Provides the number of distict publishers in the metadata database.
+   * 
+   * @return the number of distinct publishers in the metadata database
+   */
+  public long getPublisherCount() {
+    if (metadataPublisherCount < 0) {
+      Connection conn = null;
+      try {
+        conn = dbManager.getConnection();
+        metadataPublisherCount = getPublisherCount(conn);
+      } catch (DbException ex) {
+        log.error("getPublisherCount", ex);
+      } finally {
+        DbManager.safeRollbackAndClose(conn);
+      }
+    }
+    return (metadataPublisherCount < 0) ? 0 : metadataPublisherCount;
+  }
+
+  /**
+   * Provides the number of distict providers in the metadata database.
+   * 
+   * @return the number of distinct providers in the metadata database
+   */
+  public long getProviderCount() {
+    if (metadataProviderCount < 0) {
+      Connection conn = null;
+      try {
+        conn = dbManager.getConnection();
+        metadataProviderCount = getProviderCount(conn);
+      } catch (DbException ex) {
+        log.error("getPublisherCount", ex);
+      } finally {
+        DbManager.safeRollbackAndClose(conn);
+      }
+    }
+    return (metadataProviderCount < 0) ? 0 : metadataProviderCount;
   }
 
   // The number of AUs pending to be reindexed.
@@ -4678,6 +4889,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
   synchronized void addToMetadataArticleCount(long count) {
     this.metadataArticleCount += count;
+    this.metadataPublicationCount = -1;  // needs recalculation
+    this.metadataPublisherCount = -1;    // needs recalculation
+    this.metadataProviderCount = -1;     // needs recalculation
   }
 
   /**
