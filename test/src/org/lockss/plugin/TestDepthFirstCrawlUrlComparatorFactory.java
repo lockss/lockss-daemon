@@ -1,5 +1,5 @@
 /*
- * $Id: TestDepthFirstCrawlUrlComparatorFactory.java,v 1.2 2014-09-22 23:47:10 thib_gc Exp $
+ * $Id: TestDepthFirstCrawlUrlComparatorFactory.java,v 1.3 2014-09-23 00:03:14 thib_gc Exp $
  */
 
 /*
@@ -58,7 +58,7 @@ public class TestDepthFirstCrawlUrlComparatorFactory extends LockssTestCase {
     
     @Override
     public int compare(String o1, String o2) {
-      return cucmp.compare(new CrawlUrlData(o1, 0), new CrawlUrlData(o2, 0));
+      return cucmp.compare(mkcud(o1), mkcud(o2));
     }
     
   }
