@@ -1,5 +1,5 @@
 /*
- * $Id: TestDbManager.java,v 1.11 2014-08-22 22:15:00 fergaloy-sf Exp $
+ * $Id: TestDbManager.java,v 1.12 2014-09-23 22:42:36 fergaloy-sf Exp $
  */
 
 /*
@@ -31,10 +31,12 @@
  */
 package org.lockss.db;
 
+import static org.lockss.db.SqlConstants.*;
 import java.io.File;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.Properties;
 import org.lockss.config.ConfigManager;
 import org.lockss.repository.LockssRepositoryImpl;
@@ -679,5 +681,59 @@ public class TestDbManager extends LockssTestCase {
 
     startService();
     assertFalse(dbManager.isReady());
+  }
+
+  /**
+   * Tests the provider functionality.
+   * 
+   * @throws Exception
+   */
+  public void testProvider() throws Exception {
+    Properties props = new Properties();
+    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    props
+	.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+
+    startService();
+    assertTrue(dbManager.isReady());
+
+    Connection conn = dbManager.getConnection();
+
+    // Add a provider with no LOCKSS identifier.
+    Long providerSeq1 =
+	dbManager.findOrCreateProvider(conn, null, "providerName1");
+    checkProvider(conn, providerSeq1, null, "providerName1");
+
+    // Add the new LOCKSS identifier to the same provider.
+    Long providerSeq2 =
+	dbManager.findOrCreateProvider(conn, "providerLid1", "providerName1");
+    assertEquals(providerSeq1, providerSeq2);
+    checkProvider(conn, providerSeq2, "providerLid1", "providerName1");
+
+    // Add a new provider with a LOCKSS identifier.
+    Long providerSeq3 =
+	dbManager.findOrCreateProvider(conn, "providerLid2", "providerName2");
+    assertNotEquals(providerSeq1, providerSeq3);
+    checkProvider(conn, providerSeq3, "providerLid2", "providerName2");
+
+    DbManager.commitOrRollback(conn, log);
+    DbManager.safeCloseConnection(conn);
+  }
+
+  private void checkProvider(Connection conn, Long providerSeq,
+      String expectedLid, String expectedName) throws Exception {
+    String query = "select " + PROVIDER_NAME_COLUMN
+	+ "," + PROVIDER_LID_COLUMN
+	+ " from " + PROVIDER_TABLE
+	+ " where " + PROVIDER_SEQ_COLUMN + " = ?";
+    PreparedStatement stmt = dbManager.prepareStatement(conn, query);
+    stmt.setLong(1, providerSeq);
+    ResultSet resultSet = dbManager.executeQuery(stmt);
+
+    assertTrue(resultSet.next());
+    assertEquals(expectedLid, resultSet.getString(PROVIDER_LID_COLUMN));
+    assertEquals(expectedName, resultSet.getString(PROVIDER_NAME_COLUMN));
+    assertFalse(resultSet.next());
   }
 }
