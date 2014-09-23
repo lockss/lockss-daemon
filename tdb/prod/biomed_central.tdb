@@ -3028,6 +3028,20 @@
 
     {
       title <
+        name = Clinical Hypertension ;
+        eissn = 2056-5909 ;
+        issnl = 2056-5909
+      >
+
+      param[base_url] = http://www.clinicalhypertension.com/
+      param[journal_issn] = 2056-5909
+      
+      au < expected ; 2014 ; Clinical Hypertension Volume 1 ; 1 >
+
+    }
+
+    {
+      title <
         name = Clinical Proteomics ;
         issn = 1542-6416 ;
         eissn = 1559-0275 ;
