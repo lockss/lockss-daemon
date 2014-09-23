@@ -12,7 +12,13 @@
       name = Tangram Edizioni Scientifiche Trento Source Content
     >
 
-    plugin = needs.plugin
+    plugin = org.lockss.plugin.clockss.tangram.ClockssTangramEdizioniScientificheSourcePlugin
+    param[base_url] = http://content5.lockss.org/sourcefiles/tangram-released/
+    comment[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[year] >
+    
+    au < testing ; exists ; 2014 ; Tangram Edizioni Scientifiche Trento Source Content 2014 ; 2014 >
+    
   }
 
 }
