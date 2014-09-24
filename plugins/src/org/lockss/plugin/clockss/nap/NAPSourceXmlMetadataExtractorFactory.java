@@ -1,5 +1,5 @@
 /*
- * $Id: NAPSourceXmlMetadataExtractorFactory.java,v 1.3 2014-08-29 19:12:58 alexandraohlson Exp $
+ * $Id: NAPSourceXmlMetadataExtractorFactory.java,v 1.4 2014-09-24 22:14:46 thib_gc Exp $
  */
 
 /*
@@ -68,12 +68,9 @@ public class NAPSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtra
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
       // Once you have it, just keep returning the same one. It won't change.
-      if (NAPHelper != null) {
-        return NAPHelper;
+      if (NAPHelper == null) {
+        NAPHelper = new NAPXmlSchemaHelper();
       }
-      //TODO: REMOVE
-      log.setLevel("debug3");
-      NAPHelper = new NAPXmlSchemaHelper();
       return NAPHelper;
     }
 

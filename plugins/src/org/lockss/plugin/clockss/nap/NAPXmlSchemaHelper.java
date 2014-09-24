@@ -1,5 +1,5 @@
 /*
- * $Id: NAPXmlSchemaHelper.java,v 1.4 2014-08-29 20:08:17 alexandraohlson Exp $
+ * $Id: NAPXmlSchemaHelper.java,v 1.5 2014-09-24 22:14:46 thib_gc Exp $
  */
 
 /*
@@ -55,7 +55,6 @@ public class NAPXmlSchemaHelper
 implements SourceXmlSchemaHelper {
   static Logger log = Logger.getLogger(NAPXmlSchemaHelper.class);
 
-  private static final String AUTHOR_SEPARATOR = ",";
   private static final String AUTHOR_SPLIT_CHAR = ";";
 
   /* 
