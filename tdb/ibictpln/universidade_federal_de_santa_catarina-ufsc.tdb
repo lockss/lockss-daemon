@@ -50,32 +50,32 @@
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = biotemas
 
-      au < manifest ; 1988 ; 1 ; Biotemas Volume 1988 ; 1988 ; >
-      au < manifest ; 1989 ; 2 ; Biotemas Volume 1989 ; 1989 ; >
-      au < manifest ; 1990 ; 3 ; Biotemas Volume 1990 ; 1990 ; >
-      au < manifest ; 1991 ; 4 ; Biotemas Volume 1991 ; 1991 ; >
-      au < manifest ; 1992 ; 5 ; Biotemas Volume 1992 ; 1992 ; >
-      au < manifest ; 1993 ; 6 ; Biotemas Volume 1993 ; 1993 ; >
-      au < manifest ; 1994 ; 7 ; Biotemas Volume 1994 ; 1994 ; >
-      au < manifest ; 1995 ; 8 ; Biotemas Volume 1995 ; 1995 ; >
-      au < manifest ; 1996 ; 9 ; Biotemas Volume 1996 ; 1996 ; >
-      au < manifest ; 1997 ; 10 ; Biotemas Volume 1997 ; 1997 ; >
-      au < manifest ; 1998 ; 11 ; Biotemas Volume 1998 ; 1998 ; >
-      au < manifest ; 1999 ; 12 ; Biotemas Volume 1999 ; 1999 ; >
-      au < manifest ; 2000 ; 13 ; Biotemas Volume 2000 ; 2000 ; >
-      au < manifest ; 2001 ; 14 ; Biotemas Volume 2001 ; 2001 ; >
-      au < manifest ; 2002 ; 15 ; Biotemas Volume 2002 ; 2002 ; >
-      au < manifest ; 2003 ; 16 ; Biotemas Volume 2003 ; 2003 ; >
-      au < manifest ; 2004 ; 17 ; Biotemas Volume 2004 ; 2004 ; >
-      au < manifest ; 2005 ; 18 ; Biotemas Volume 2005 ; 2005 ; >
-      au < manifest ; 2006 ; 19 ; Biotemas Volume 2006 ; 2006 ; >
-      au < manifest ; 2007 ; 20 ; Biotemas Volume 2007 ; 2007 ; >
-      au < manifest ; 2008 ; 21 ; Biotemas Volume 2008 ; 2008 ; >
-      au < manifest ; 2009 ; 22 ; Biotemas Volume 2009 ; 2009 ; >
-      au < manifest ; 2010 ; 23 ; Biotemas Volume 2010 ; 2010 ; >
-      au < manifest ; 2011 ; 24 ; Biotemas Volume 2011 ; 2011 ; >
-      au < manifest ; 2012 ; 25 ; Biotemas Volume 2012 ; 2012 ; >
-      au < manifest ; 2013 ; 26 ; Biotemas Volume 2013 ; 2013 ; >
+      au < testing ; 1988 ; 1 ; Biotemas Volume 1988 ; 1988 ; >
+      au < testing ; 1989 ; 2 ; Biotemas Volume 1989 ; 1989 ; >
+      au < testing ; 1990 ; 3 ; Biotemas Volume 1990 ; 1990 ; >
+      au < testing ; 1991 ; 4 ; Biotemas Volume 1991 ; 1991 ; >
+      au < testing ; 1992 ; 5 ; Biotemas Volume 1992 ; 1992 ; >
+      au < testing ; 1993 ; 6 ; Biotemas Volume 1993 ; 1993 ; >
+      au < testing ; 1994 ; 7 ; Biotemas Volume 1994 ; 1994 ; >
+      au < testing ; 1995 ; 8 ; Biotemas Volume 1995 ; 1995 ; >
+      au < testing ; 1996 ; 9 ; Biotemas Volume 1996 ; 1996 ; >
+      au < testing ; 1997 ; 10 ; Biotemas Volume 1997 ; 1997 ; >
+      au < testing ; 1998 ; 11 ; Biotemas Volume 1998 ; 1998 ; >
+      au < testing ; 1999 ; 12 ; Biotemas Volume 1999 ; 1999 ; >
+      au < testing ; 2000 ; 13 ; Biotemas Volume 2000 ; 2000 ; >
+      au < testing ; 2001 ; 14 ; Biotemas Volume 2001 ; 2001 ; >
+      au < testing ; 2002 ; 15 ; Biotemas Volume 2002 ; 2002 ; >
+      au < testing ; 2003 ; 16 ; Biotemas Volume 2003 ; 2003 ; >
+      au < testing ; 2004 ; 17 ; Biotemas Volume 2004 ; 2004 ; >
+      au < testing ; 2005 ; 18 ; Biotemas Volume 2005 ; 2005 ; >
+      au < testing ; 2006 ; 19 ; Biotemas Volume 2006 ; 2006 ; >
+      au < testing ; 2007 ; 20 ; Biotemas Volume 2007 ; 2007 ; >
+      au < testing ; 2008 ; 21 ; Biotemas Volume 2008 ; 2008 ; >
+      au < testing ; 2009 ; 22 ; Biotemas Volume 2009 ; 2009 ; >
+      au < testing ; 2010 ; 23 ; Biotemas Volume 2010 ; 2010 ; >
+      au < testing ; 2011 ; 24 ; Biotemas Volume 2011 ; 2011 ; >
+      au < testing ; 2012 ; 25 ; Biotemas Volume 2012 ; 2012 ; >
+      au < testing ; 2013 ; 26 ; Biotemas Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 27 ; Biotemas Volume 2014 ; 2014 ; >
 
   }
@@ -91,20 +91,20 @@
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = nelic
 
-      au < manifest ; 1997 ; 1 ; Boletim de Pesquisa NELIC Volume 1997 ; 1997 ; >
-      au < manifest ; 1998 ; 2 ; Boletim de Pesquisa NELIC Volume 1998 ; 1998 ; >
-      au < manifest ; 1999 ; 3 ; Boletim de Pesquisa NELIC Volume 1999 ; 1999 ; >
-      au < manifest ; 2001 ; 5 ; Boletim de Pesquisa NELIC Volume 2001 ; 2001 ; >
-      au < manifest ; 2002 ; 6 ; Boletim de Pesquisa NELIC Volume 2002 ; 2002 ; >
-      au < manifest ; 2003 ; 7 ; Boletim de Pesquisa NELIC Volume 2003 ; 2003 ; >
-      au < manifest ; 2006 ; 10 ; Boletim de Pesquisa NELIC Volume 2006 ; 2006 ; >
-      au < manifest ; 2007 ; 11 ; Boletim de Pesquisa NELIC Volume 2007 ; 2007 ; >
-      au < manifest ; 2008 ; 12 ; Boletim de Pesquisa NELIC Volume 2008 ; 2008 ; >
-      au < manifest ; 2009 ; 13 ; Boletim de Pesquisa NELIC Volume 2009 ; 2009 ; >
-      au < manifest ; 2010 ; 14 ; Boletim de Pesquisa NELIC Volume 2010 ; 2010 ; >
-      au < manifest ; 2011 ; 15 ; Boletim de Pesquisa NELIC Volume 2011 ; 2011 ; >
-      au < manifest ; 2012 ; 16 ; Boletim de Pesquisa NELIC Volume 2012 ; 2012 ; >
-      au < manifest ; 2013 ; 17 ; Boletim de Pesquisa NELIC Volume 2013 ; 2013 ; >
+      au < testing ; 1997 ; 1 ; Boletim de Pesquisa NELIC Volume 1997 ; 1997 ; >
+      au < testing ; 1998 ; 2 ; Boletim de Pesquisa NELIC Volume 1998 ; 1998 ; >
+      au < testing ; 1999 ; 3 ; Boletim de Pesquisa NELIC Volume 1999 ; 1999 ; >
+      au < testing ; 2001 ; 5 ; Boletim de Pesquisa NELIC Volume 2001 ; 2001 ; >
+      au < testing ; 2002 ; 6 ; Boletim de Pesquisa NELIC Volume 2002 ; 2002 ; >
+      au < testing ; 2003 ; 7 ; Boletim de Pesquisa NELIC Volume 2003 ; 2003 ; >
+      au < testing ; 2006 ; 10 ; Boletim de Pesquisa NELIC Volume 2006 ; 2006 ; >
+      au < testing ; 2007 ; 11 ; Boletim de Pesquisa NELIC Volume 2007 ; 2007 ; >
+      au < testing ; 2008 ; 12 ; Boletim de Pesquisa NELIC Volume 2008 ; 2008 ; >
+      au < testing ; 2009 ; 13 ; Boletim de Pesquisa NELIC Volume 2009 ; 2009 ; >
+      au < testing ; 2010 ; 14 ; Boletim de Pesquisa NELIC Volume 2010 ; 2010 ; >
+      au < testing ; 2011 ; 15 ; Boletim de Pesquisa NELIC Volume 2011 ; 2011 ; >
+      au < testing ; 2012 ; 16 ; Boletim de Pesquisa NELIC Volume 2012 ; 2012 ; >
+      au < testing ; 2013 ; 17 ; Boletim de Pesquisa NELIC Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 18 ; Boletim de Pesquisa NELIC Volume 2014 ; 2014 ; >
 
   }
@@ -121,21 +121,21 @@
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = rbcdh
 
-      au < manifest ; 1999 ; 1 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 1999 ; 1999 ; >
-      au < manifest ; 2000 ; 2 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2000 ; 2000 ; >
-      au < manifest ; 2001 ; 3 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2001 ; 2001 ; >
-      au < manifest ; 2002 ; 4 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2002 ; 2002 ; >
-      au < manifest ; 2003 ; 5 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2003 ; 2003 ; >
-      au < manifest ; 2004 ; 6 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2004 ; 2004 ; >
-      au < manifest ; 2005 ; 7 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2005 ; 2005 ; >
-      au < manifest ; 2006 ; 8 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2006 ; 2006 ; >
-      au < manifest ; 2007 ; 9 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2007 ; 2007 ; >
-      au < manifest ; 2008 ; 10 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2008 ; 2008 ; >
-      au < manifest ; 2009 ; 11 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2009 ; 2009 ; >
-      au < manifest ; 2010 ; 12 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2010 ; 2010 ; >
-      au < manifest ; 2011 ; 13 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2011 ; 2011 ; >
-      au < manifest ; 2012 ; 14 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2012 ; 2012 ; >
-      au < manifest ; 2013 ; 15 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2013 ; 2013 ; >
+      au < testing ; 1999 ; 1 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 1999 ; 1999 ; >
+      au < testing ; 2000 ; 2 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2000 ; 2000 ; >
+      au < testing ; 2001 ; 3 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2001 ; 2001 ; >
+      au < testing ; 2002 ; 4 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2002 ; 2002 ; >
+      au < testing ; 2003 ; 5 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2003 ; 2003 ; >
+      au < testing ; 2004 ; 6 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2004 ; 2004 ; >
+      au < testing ; 2005 ; 7 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2005 ; 2005 ; >
+      au < testing ; 2006 ; 8 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2006 ; 2006 ; >
+      au < testing ; 2007 ; 9 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2007 ; 2007 ; >
+      au < testing ; 2008 ; 10 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2008 ; 2008 ; >
+      au < testing ; 2009 ; 11 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2009 ; 2009 ; >
+      au < testing ; 2010 ; 12 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2010 ; 2010 ; >
+      au < testing ; 2011 ; 13 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2011 ; 2011 ; >
+      au < testing ; 2012 ; 14 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2012 ; 2012 ; >
+      au < testing ; 2013 ; 15 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 16 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2014 ; 2014 ; >
 
   }
@@ -151,36 +151,36 @@
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = fisica
 
-      au < manifest ; 1984 ; 1 ; Caderno Brasileiro de Ensino de Física Volume 1984 ; 1984 ; >
-      au < manifest ; 1985 ; 2 ; Caderno Brasileiro de Ensino de Física Volume 1985 ; 1985 ; >
-      au < manifest ; 1986 ; 3 ; Caderno Brasileiro de Ensino de Física Volume 1986 ; 1986 ; >
-      au < manifest ; 1987 ; 4 ; Caderno Brasileiro de Ensino de Física Volume 1987 ; 1987 ; >
-      au < manifest ; 1988 ; 5 ; Caderno Brasileiro de Ensino de Física Volume 1988 ; 1988 ; >
-      au < manifest ; 1989 ; 6 ; Caderno Brasileiro de Ensino de Física Volume 1989 ; 1989 ; >
-      au < manifest ; 1990 ; 7 ; Caderno Brasileiro de Ensino de Física Volume 1990 ; 1990 ; >
-      au < manifest ; 1991 ; 8 ; Caderno Brasileiro de Ensino de Física Volume 1991 ; 1991 ; >
-      au < manifest ; 1992 ; 9 ; Caderno Brasileiro de Ensino de Física Volume 1992 ; 1992 ; >
-      au < manifest ; 1993 ; 10 ; Caderno Brasileiro de Ensino de Física Volume 1993 ; 1993 ; >
-      au < manifest ; 1994 ; 11 ; Caderno Brasileiro de Ensino de Física Volume 1994 ; 1994 ; >
-      au < manifest ; 1995 ; 12 ; Caderno Brasileiro de Ensino de Física Volume 1995 ; 1995 ; >
-      au < manifest ; 1996 ; 13 ; Caderno Brasileiro de Ensino de Física Volume 1996 ; 1996 ; >
-      au < manifest ; 1997 ; 14 ; Caderno Brasileiro de Ensino de Física Volume 1997 ; 1997 ; >
-      au < manifest ; 1998 ; 15 ; Caderno Brasileiro de Ensino de Física Volume 1998 ; 1998 ; >
-      au < manifest ; 1999 ; 16 ; Caderno Brasileiro de Ensino de Física Volume 1999 ; 1999 ; >
-      au < manifest ; 2000 ; 17 ; Caderno Brasileiro de Ensino de Física Volume 2000 ; 2000 ; >
-      au < manifest ; 2001 ; 18 ; Caderno Brasileiro de Ensino de Física Volume 2001 ; 2001 ; >
-      au < manifest ; 2002 ; 19 ; Caderno Brasileiro de Ensino de Física Volume 2002 ; 2002 ; >
-      au < manifest ; 2003 ; 20 ; Caderno Brasileiro de Ensino de Física Volume 2003 ; 2003 ; >
-      au < manifest ; 2004 ; 21 ; Caderno Brasileiro de Ensino de Física Volume 2004 ; 2004 ; >
-      au < manifest ; 2005 ; 22 ; Caderno Brasileiro de Ensino de Física Volume 2005 ; 2005 ; >
-      au < manifest ; 2006 ; 23 ; Caderno Brasileiro de Ensino de Física Volume 2006 ; 2006 ; >
-      au < manifest ; 2007 ; 24 ; Caderno Brasileiro de Ensino de Física Volume 2007 ; 2007 ; >
-      au < manifest ; 2008 ; 25 ; Caderno Brasileiro de Ensino de Física Volume 2008 ; 2008 ; >
-      au < manifest ; 2009 ; 26 ; Caderno Brasileiro de Ensino de Física Volume 2009 ; 2009 ; >
-      au < manifest ; 2010 ; 27 ; Caderno Brasileiro de Ensino de Física Volume 2010 ; 2010 ; >
-      au < manifest ; 2011 ; 28 ; Caderno Brasileiro de Ensino de Física Volume 2011 ; 2011 ; >
-      au < manifest ; 2012 ; 29 ; Caderno Brasileiro de Ensino de Física Volume 2012 ; 2012 ; >
-      au < manifest ; 2013 ; 30 ; Caderno Brasileiro de Ensino de Física Volume 2013 ; 2013 ; >
+      au < testing ; 1984 ; 1 ; Caderno Brasileiro de Ensino de Física Volume 1984 ; 1984 ; >
+      au < testing ; 1985 ; 2 ; Caderno Brasileiro de Ensino de Física Volume 1985 ; 1985 ; >
+      au < testing ; 1986 ; 3 ; Caderno Brasileiro de Ensino de Física Volume 1986 ; 1986 ; >
+      au < testing ; 1987 ; 4 ; Caderno Brasileiro de Ensino de Física Volume 1987 ; 1987 ; >
+      au < testing ; 1988 ; 5 ; Caderno Brasileiro de Ensino de Física Volume 1988 ; 1988 ; >
+      au < testing ; 1989 ; 6 ; Caderno Brasileiro de Ensino de Física Volume 1989 ; 1989 ; >
+      au < testing ; 1990 ; 7 ; Caderno Brasileiro de Ensino de Física Volume 1990 ; 1990 ; >
+      au < testing ; 1991 ; 8 ; Caderno Brasileiro de Ensino de Física Volume 1991 ; 1991 ; >
+      au < testing ; 1992 ; 9 ; Caderno Brasileiro de Ensino de Física Volume 1992 ; 1992 ; >
+      au < testing ; 1993 ; 10 ; Caderno Brasileiro de Ensino de Física Volume 1993 ; 1993 ; >
+      au < testing ; 1994 ; 11 ; Caderno Brasileiro de Ensino de Física Volume 1994 ; 1994 ; >
+      au < testing ; 1995 ; 12 ; Caderno Brasileiro de Ensino de Física Volume 1995 ; 1995 ; >
+      au < testing ; 1996 ; 13 ; Caderno Brasileiro de Ensino de Física Volume 1996 ; 1996 ; >
+      au < testing ; 1997 ; 14 ; Caderno Brasileiro de Ensino de Física Volume 1997 ; 1997 ; >
+      au < testing ; 1998 ; 15 ; Caderno Brasileiro de Ensino de Física Volume 1998 ; 1998 ; >
+      au < testing ; 1999 ; 16 ; Caderno Brasileiro de Ensino de Física Volume 1999 ; 1999 ; >
+      au < testing ; 2000 ; 17 ; Caderno Brasileiro de Ensino de Física Volume 2000 ; 2000 ; >
+      au < testing ; 2001 ; 18 ; Caderno Brasileiro de Ensino de Física Volume 2001 ; 2001 ; >
+      au < testing ; 2002 ; 19 ; Caderno Brasileiro de Ensino de Física Volume 2002 ; 2002 ; >
+      au < testing ; 2003 ; 20 ; Caderno Brasileiro de Ensino de Física Volume 2003 ; 2003 ; >
+      au < testing ; 2004 ; 21 ; Caderno Brasileiro de Ensino de Física Volume 2004 ; 2004 ; >
+      au < testing ; 2005 ; 22 ; Caderno Brasileiro de Ensino de Física Volume 2005 ; 2005 ; >
+      au < testing ; 2006 ; 23 ; Caderno Brasileiro de Ensino de Física Volume 2006 ; 2006 ; >
+      au < testing ; 2007 ; 24 ; Caderno Brasileiro de Ensino de Física Volume 2007 ; 2007 ; >
+      au < testing ; 2008 ; 25 ; Caderno Brasileiro de Ensino de Física Volume 2008 ; 2008 ; >
+      au < testing ; 2009 ; 26 ; Caderno Brasileiro de Ensino de Física Volume 2009 ; 2009 ; >
+      au < testing ; 2010 ; 27 ; Caderno Brasileiro de Ensino de Física Volume 2010 ; 2010 ; >
+      au < testing ; 2011 ; 28 ; Caderno Brasileiro de Ensino de Física Volume 2011 ; 2011 ; >
+      au < testing ; 2012 ; 29 ; Caderno Brasileiro de Ensino de Física Volume 2012 ; 2012 ; >
+      au < testing ; 2013 ; 30 ; Caderno Brasileiro de Ensino de Física Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 31 ; Caderno Brasileiro de Ensino de Física Volume 2014 ; 2014 ; >
 
   }
@@ -196,17 +196,17 @@
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = emtese
 
-      au < manifest ; 2003 ; 1 ; Em Tese [1806-5023] Volume 2003 ; 2003 ; >
-      au < manifest ; 2004 ; 2 ; Em Tese [1806-5023] Volume 2004 ; 2004 ; >
-      au < manifest ; 2005 ; 3 ; Em Tese [1806-5023] Volume 2005 ; 2005 ; >
-      au < manifest ; 2006 ; 4 ; Em Tese [1806-5023] Volume 2006 ; 2006 ; >
-      au < manifest ; 2007 ; 5 ; Em Tese [1806-5023] Volume 2007 ; 2007 ; >
-      au < manifest ; 2008 ; 6 ; Em Tese [1806-5023] Volume 2008 ; 2008 ; >
-      au < manifest ; 2009 ; 7 ; Em Tese [1806-5023] Volume 2009 ; 2009 ; >
-      au < manifest ; 2010 ; 8 ; Em Tese [1806-5023] Volume 2010 ; 2010 ; >
-      au < manifest ; 2011 ; 9 ; Em Tese [1806-5023] Volume 2011 ; 2011 ; >
-      au < manifest ; 2012 ; 10 ; Em Tese [1806-5023] Volume 2012 ; 2012 ; >
-      au < manifest ; 2013 ; 11 ; Em Tese [1806-5023] Volume 2013 ; 2013 ; >
+      au < testing ; 2003 ; 1 ; Em Tese [1806-5023] Volume 2003 ; 2003 ; >
+      au < testing ; 2004 ; 2 ; Em Tese [1806-5023] Volume 2004 ; 2004 ; >
+      au < testing ; 2005 ; 3 ; Em Tese [1806-5023] Volume 2005 ; 2005 ; >
+      au < testing ; 2006 ; 4 ; Em Tese [1806-5023] Volume 2006 ; 2006 ; >
+      au < testing ; 2007 ; 5 ; Em Tese [1806-5023] Volume 2007 ; 2007 ; >
+      au < testing ; 2008 ; 6 ; Em Tese [1806-5023] Volume 2008 ; 2008 ; >
+      au < testing ; 2009 ; 7 ; Em Tese [1806-5023] Volume 2009 ; 2009 ; >
+      au < testing ; 2010 ; 8 ; Em Tese [1806-5023] Volume 2010 ; 2010 ; >
+      au < testing ; 2011 ; 9 ; Em Tese [1806-5023] Volume 2011 ; 2011 ; >
+      au < testing ; 2012 ; 10 ; Em Tese [1806-5023] Volume 2012 ; 2012 ; >
+      au < testing ; 2013 ; 11 ; Em Tese [1806-5023] Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 12 ; Em Tese [1806-5023] Volume 2014 ; 2014 ; >
 
   }
@@ -222,16 +222,16 @@
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = jornalismo
 
-      au < manifest ; 2004 ; 1 ; Estudos em Jornalismo e Mídia Volume 2004 ; 2004 ; >
-      au < manifest ; 2005 ; 2 ; Estudos em Jornalismo e Mídia Volume 2005 ; 2005 ; >
-      au < manifest ; 2006 ; 3 ; Estudos em Jornalismo e Mídia Volume 2006 ; 2006 ; >
-      au < manifest ; 2007 ; 4 ; Estudos em Jornalismo e Mídia Volume 2007 ; 2007 ; >
-      au < manifest ; 2008 ; 5 ; Estudos em Jornalismo e Mídia Volume 2008 ; 2008 ; >
-      au < manifest ; 2009 ; 6 ; Estudos em Jornalismo e Mídia Volume 2009 ; 2009 ; >
-      au < manifest ; 2010 ; 7 ; Estudos em Jornalismo e Mídia Volume 2010 ; 2010 ; >
-      au < manifest ; 2011 ; 8 ; Estudos em Jornalismo e Mídia Volume 2011 ; 2011 ; >
-      au < manifest ; 2012 ; 9 ; Estudos em Jornalismo e Mídia Volume 2012 ; 2012 ; >
-      au < manifest ; 2013 ; 10 ; Estudos em Jornalismo e Mídia Volume 2013 ; 2013 ; >
+      au < testing ; 2004 ; 1 ; Estudos em Jornalismo e Mídia Volume 2004 ; 2004 ; >
+      au < testing ; 2005 ; 2 ; Estudos em Jornalismo e Mídia Volume 2005 ; 2005 ; >
+      au < testing ; 2006 ; 3 ; Estudos em Jornalismo e Mídia Volume 2006 ; 2006 ; >
+      au < testing ; 2007 ; 4 ; Estudos em Jornalismo e Mídia Volume 2007 ; 2007 ; >
+      au < testing ; 2008 ; 5 ; Estudos em Jornalismo e Mídia Volume 2008 ; 2008 ; >
+      au < testing ; 2009 ; 6 ; Estudos em Jornalismo e Mídia Volume 2009 ; 2009 ; >
+      au < testing ; 2010 ; 7 ; Estudos em Jornalismo e Mídia Volume 2010 ; 2010 ; >
+      au < testing ; 2011 ; 8 ; Estudos em Jornalismo e Mídia Volume 2011 ; 2011 ; >
+      au < testing ; 2012 ; 9 ; Estudos em Jornalismo e Mídia Volume 2012 ; 2012 ; >
+      au < testing ; 2013 ; 10 ; Estudos em Jornalismo e Mídia Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 11 ; Estudos em Jornalismo e Mídia Volume 2014 ; 2014 ; >
 
   }
@@ -247,28 +247,28 @@
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = ref
 
-      au < manifest ; 1992 ; 1 ; Estudos Feministas Volume 1992 ; 1992 ; >
-      au < manifest ; 1993 ; 2 ; Estudos Feministas Volume 1993 ; 1993 ; >
-      au < manifest ; 1994 ; 3 ; Estudos Feministas Volume 1994 ; 1994 ; >
-      au < manifest ; 1995 ; 4 ; Estudos Feministas Volume 1995 ; 1995 ; >
-      au < manifest ; 1996 ; 5 ; Estudos Feministas Volume 1996 ; 1996 ; >
-      au < manifest ; 1997 ; 6 ; Estudos Feministas Volume 1997 ; 1997 ; >
-      au < manifest ; 1998 ; 7 ; Estudos Feministas Volume 1998 ; 1998 ; >
-      au < manifest ; 1999 ; 8 ; Estudos Feministas Volume 1999 ; 1999 ; >
-      au < manifest ; 2000 ; 9 ; Estudos Feministas Volume 2000 ; 2000 ; >
-      au < manifest ; 2001 ; 10 ; Estudos Feministas Volume 2001 ; 2001 ; >
-      au < manifest ; 2002 ; 11 ; Estudos Feministas Volume 2002 ; 2002 ; >
-      au < manifest ; 2003 ; 12 ; Estudos Feministas Volume 2003 ; 2003 ; >
-      au < manifest ; 2004 ; 13 ; Estudos Feministas Volume 2004 ; 2004 ; >
-      au < manifest ; 2005 ; 14 ; Estudos Feministas Volume 2005 ; 2005 ; >
-      au < manifest ; 2006 ; 15 ; Estudos Feministas Volume 2006 ; 2006 ; >
-      au < manifest ; 2007 ; 16 ; Estudos Feministas Volume 2007 ; 2007 ; >
-      au < manifest ; 2008 ; 17 ; Estudos Feministas Volume 2008 ; 2008 ; >
-      au < manifest ; 2009 ; 18 ; Estudos Feministas Volume 2009 ; 2009 ; >
-      au < manifest ; 2010 ; 19 ; Estudos Feministas Volume 2010 ; 2010 ; >
-      au < manifest ; 2011 ; 20 ; Estudos Feministas Volume 2011 ; 2011 ; >
-      au < manifest ; 2012 ; 21 ; Estudos Feministas Volume 2012 ; 2012 ; >
-      au < manifest ; 2013 ; 22 ; Estudos Feministas Volume 2013 ; 2013 ; >
+      au < testing ; 1992 ; 1 ; Estudos Feministas Volume 1992 ; 1992 ; >
+      au < testing ; 1993 ; 2 ; Estudos Feministas Volume 1993 ; 1993 ; >
+      au < testing ; 1994 ; 3 ; Estudos Feministas Volume 1994 ; 1994 ; >
+      au < testing ; 1995 ; 4 ; Estudos Feministas Volume 1995 ; 1995 ; >
+      au < testing ; 1996 ; 5 ; Estudos Feministas Volume 1996 ; 1996 ; >
+      au < testing ; 1997 ; 6 ; Estudos Feministas Volume 1997 ; 1997 ; >
+      au < testing ; 1998 ; 7 ; Estudos Feministas Volume 1998 ; 1998 ; >
+      au < testing ; 1999 ; 8 ; Estudos Feministas Volume 1999 ; 1999 ; >
+      au < testing ; 2000 ; 9 ; Estudos Feministas Volume 2000 ; 2000 ; >
+      au < testing ; 2001 ; 10 ; Estudos Feministas Volume 2001 ; 2001 ; >
+      au < testing ; 2002 ; 11 ; Estudos Feministas Volume 2002 ; 2002 ; >
+      au < testing ; 2003 ; 12 ; Estudos Feministas Volume 2003 ; 2003 ; >
+      au < testing ; 2004 ; 13 ; Estudos Feministas Volume 2004 ; 2004 ; >
+      au < testing ; 2005 ; 14 ; Estudos Feministas Volume 2005 ; 2005 ; >
+      au < testing ; 2006 ; 15 ; Estudos Feministas Volume 2006 ; 2006 ; >
+      au < testing ; 2007 ; 16 ; Estudos Feministas Volume 2007 ; 2007 ; >
+      au < testing ; 2008 ; 17 ; Estudos Feministas Volume 2008 ; 2008 ; >
+      au < testing ; 2009 ; 18 ; Estudos Feministas Volume 2009 ; 2009 ; >
+      au < testing ; 2010 ; 19 ; Estudos Feministas Volume 2010 ; 2010 ; >
+      au < testing ; 2011 ; 20 ; Estudos Feministas Volume 2011 ; 2011 ; >
+      au < testing ; 2012 ; 21 ; Estudos Feministas Volume 2012 ; 2012 ; >
+      au < testing ; 2013 ; 22 ; Estudos Feministas Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 23 ; Estudos Feministas Volume 2014 ; 2014 ; >
 
   }
