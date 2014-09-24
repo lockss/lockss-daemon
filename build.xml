@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.369 2014-09-02 22:04:06 thib_gc Exp $
+ $Id: build.xml,v 1.370 2014-09-24 23:19:23 clairegriffin Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -335,21 +335,13 @@ Args:
   <property name="ext.javadoc"
                       value="http://documents.lockss.org/gamma-libs/" />
   <!-- Needed by ajax crawler -->
-  <property name="crawljax-core.jar" value="${lib}/crawljax-core-3.6-l.jar" />
-  <property name="crawloverview-plugin.jar" value="${lib}/crawloverview-plugin-3.6-l.jar" />
-  <property name="httpclient.jar" value="${lib}/httpclient-4.3.1.jar" />
-  <property name="slf4j-api.jar" value="${lib}/slf4j-api-1.7.6.jar" />
-  <property name="logback-classic.jar" value="${lib}/logback-classic-1.1.1.jar" />
-  <property name="logback-core.jar"  value="${lib}/logback-core-1.1.1.jar" />
   <property name="jackson-core.jar" value="${lib}/jackson-core-2.3.2.jar" />
   <property name="jackson-databind.jar" value="${lib}/jackson-databind-2.3.2.jar" />
   <property name="jackson-annotations.jar" value="${lib}/jackson-annotations-2.3.0.jar" />
-  <property name="proxy-plugin.jar" value="${lib}/proxy-plugin-1.5.jar" />
-  <property name="webscarab.jar" value="${lib}/webscarab.jar" />
-
+  <property name="lockss-crawljax.jar" value="${lib}/lockss-crawljax.jar" />
+  
+  <property name="antlr.runtime.jar" value="${lib}/antlr-runtime-4.4.jar" />	
   <property name="antlr.tools.jar" value="${lib}/antlr-4.4-complete.jar" />
-  <property name="antlr.runtime.jar" value="${lib}/antlr-runtime-4.4.jar" />
-	
   <!-- Jars we create -->
   <property name="lockss.jar"     value="${lib}/lockss.jar"/>
   <property name="lockss.generated.jar"  value="${lib}/lockss-generated.jar"/>
@@ -517,17 +509,10 @@ Args:
 	<!-- Needed for DB migration-->
 	<pathelement path="${getopt.jar}" />
     <!-- Needed by AJAX crawler-->
-    <pathelement path="${crawljax-core.jar}" />
-    <pathelement path="${crawloverview-plugin.jar}" />
       <pathelement path="${jackson-annotations.jar}" />
     <pathelement path="${jackson-core.jar}" />
     <pathelement path="${jackson-databind.jar}" />
-    <pathelement path="${webscarab.jar}" />
-    <pathelement path="${proxy-plugin.jar}" />
-    <pathelement path="${httpclient.jar}" />
-    <pathelement path="${logback-core.jar}" />
-    <pathelement path="${logback-classic.jar}" />
-    <pathelement path="${slf4j-api.jar}" />
+	<pathelement path="${lockss-crawljax.jar}" />
     <!-- Needed for TDB tools: -->
     <pathelement path="${antlr.runtime.jar}" />
   </path>
