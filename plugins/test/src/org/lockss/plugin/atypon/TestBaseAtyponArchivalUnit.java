@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseAtyponArchivalUnit.java,v 1.3 2014-09-09 19:44:45 alexandraohlson Exp $
+ * $Id: TestBaseAtyponArchivalUnit.java,v 1.4 2014-09-24 18:56:23 alexandraohlson Exp $
  */
 
 /*
@@ -32,26 +32,18 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.atypon;
 
-import java.io.File;
-import java.io.InputStream;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.Properties;
 
-import junit.framework.Test;
-
-import org.lockss.app.LockssDaemon;
+import org.apache.commons.lang.StringUtils;
 import org.lockss.config.Configuration;
-import org.lockss.crawler.CrawlRateLimiter;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
 import org.lockss.plugin.definable.*;
-import org.lockss.plugin.maffey.MaffeyHtmlCrawlFilterFactory;
-import org.lockss.plugin.maffey.TestMaffeyHtmlFilterFactory;
-import org.lockss.plugin.maffey.TestMaffeyHtmlFilterFactory.TestCrawl;
-import org.lockss.plugin.maffey.TestMaffeyHtmlFilterFactory.TestHash;
-import org.lockss.plugin.wrapper.WrapperUtil;
-import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.state.AuState;
 import org.lockss.test.*;
 import org.lockss.util.*;
@@ -215,28 +207,153 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     assertEquals(PluginName + ", Base URL http://www.apha.com/, Journal ID apha, Volume 24", au1.getName());
   }
   
-  private static final String gln_user_msg = 
+  private static final String gln_lockss_user_msg = 
       "Atypon Systems hosts this archival unit (AU) " +
           "and may require you to register the IP address "+
           "of this LOCKSS box as a crawler. For more information, visit the <a " +
           "href=\'http://www.lockss.org/support/use-a-lockss-box/adding-titles/publisher-ip-address-registration-contacts-for-global-lockss-network/\'>" +
           "LOCKSS IP address registration page</a>.";
   
-  public void testSpecificUserMsg() throws Exception {
-    // set up a specific BaseAtypon child - in this case American Meteorological Society
+  private static final String bq_msg = 
+      "Atypon Systems hosts this archival unit (AU) and may require you to register the IP address of " +
+      "this LOCKSS box as a crawler, by sending e-mail to <a href=\'mailto:pcoyne@qf.org.qa\'>Paul Coyne</a>. " +
+      "Failure to comply with this publisher requirement may trigger crawler traps on the Atypon Systems platform, " +
+      "and your LOCKSS box or your entire institution may be temporarily banned from accessing the site. " +
+      "You only need to register the IP address of your LOCKSS box once for all AUs published by Bloomsbury Qatar.";
+
+  
+  /* test all the atypon child au_config_user_msgs
+   * by first checking the gln message either against a specific passed-in message
+   * or by making sure it contains the appropriate base-url and publisher name (to guard
+   * against cut-n-past errors
+   * and then checking that the clockss plugin has a null message
+   */
+  public void testUserMsgs() throws Exception {
+    //AMetSoc - points users at our web page with registration info
+    testSpecificUserMsg("http://journals.ametsoc.org/", gln_lockss_user_msg, 
+        "org.lockss.plugin.atypon.americanmeteorologicalsociety.AMetSocPlugin",
+        "org.lockss.plugin.atypon.americanmeteorologicalsociety.ClockssAMetSocPlugin");
+    // with a null msg it will verify that the message follows the form "<base_url>/action/institutionLockssIpChange"
+    testSpecificUserMsg("http://arc.aiaa.org/", null, 
+        "org.lockss.plugin.atypon.aiaa.AIAAPlugin",
+        "org.lockss.plugin.atypon.aiaa.ClockssAIAAPlugin");
+    //asce - only a clockss plugin
+    testSpecificUserMsg("http://ascelibrary.org/", null, 
+        null,
+        "org.lockss.plugin.atypon.americansocietyofcivilengineers.ClockssASCEPlugin");
+    //ammons
+    testSpecificUserMsg("http://www.amsciepub.com/", null, 
+        null,
+        "org.lockss.plugin.atypon.ammonsscientific.ClockssAmmonsScientificPlugin");
+    //apha
+    testSpecificUserMsg("http://ajph.aphapublications.org/", null, 
+        "org.lockss.plugin.atypon.apha.AmPublicHealthAssocPlugin",
+        null);
+    //bir
+    testSpecificUserMsg("http://www.birpublications.org/", null, 
+        "org.lockss.plugin.atypon.bir.BIRAtyponPlugin",
+        "org.lockss.plugin.atypon.bir.ClockssBIRAtyponPlugin");
+    //bloomsburyqatar - this one has a special message
+    testSpecificUserMsg("http://www.qscience.com/", bq_msg, 
+        "org.lockss.plugin.atypon.bloomsburyqatar.BloomsburyQatarPlugin",
+        "org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin");
+    //futurescience
+    testSpecificUserMsg("http://www.future-science.com/", null,
+        "org.lockss.plugin.atypon.futurescience.FutureSciencePlugin",
+        "org.lockss.plugin.atypon.futurescience.ClockssFutureSciencePlugin");
+    //maney
+    testSpecificUserMsg("http://www.maneyonline.com/", null, 
+        "org.lockss.plugin.atypon.maney.ManeyAtyponPlugin",
+        "org.lockss.plugin.atypon.maney.ClockssManeyAtyponPlugin");
+    //nrcresearch
+    testSpecificUserMsg("http://www.nrcresearchpress.com/", null, 
+        null,
+        "org.lockss.plugin.atypon.nrcresearchpress.ClockssNRCResearchPressPlugin");
+    //seg
+    testSpecificUserMsg("http://library.seg.org/", null, 
+        null,
+        "org.lockss.plugin.atypon.seg.ClockssSEGPlugin");
+    //siam
+    testSpecificUserMsg("http://epubs.siam.org/", null, 
+        "org.lockss.plugin.atypon.siam.SiamPlugin",
+        "org.lockss.plugin.atypon.siam.ClockssSiamPlugin");
+
+    // and the ones that do not live below the atypon directory
+    //bioone
+    testSpecificUserMsg("http://www.bioone.org/", null, 
+        "org.lockss.plugin.bioone.BioOneAtyponPlugin",
+        "org.lockss.plugin.bioone.ClockssBioOneAtyponPlugin");
+    //edinburgh
+    testSpecificUserMsg("http://www.euppublishing.com/", null, 
+        "org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin",
+        "org.lockss.plugin.edinburgh.ClockssEdinburghUniversityPressPlugin");
+    //t&f
+    testSpecificUserMsg("http://www.tandfonline.com/", null, 
+        "org.lockss.plugin.taylorandfrancis.TaylorAndFrancisPlugin",
+        "org.lockss.plugin.taylorandfrancis.ClockssTaylorAndFrancisPlugin");
+    
+  }
+  
+  // Associate the base_url with the publisher name for convenience
+  static private final Map<String, String> pluginPubMap =
+      new HashMap<String,String>();
+  static {
+    pluginPubMap.put("http://journals.ametsoc.org/", "American Meteorological Society");
+    pluginPubMap.put("http://arc.aiaa.org/", "American Institute of Aeronautics and Astronautics");
+    pluginPubMap.put("http://ascelibrary.org/", "American Society of Civil Engineers");
+    pluginPubMap.put("http://www.amsciepub.com/", "Ammons Scientific Journals");
+    pluginPubMap.put("http://ajph.aphapublications.org/", "American Public Health Association");
+    pluginPubMap.put("http://www.birpublications.org/", "British Institute of Radiology");
+    pluginPubMap.put("http://www.qscience.com/", "Bloomsbury Qatar Foundation Journals");
+    pluginPubMap.put("http://www.future-science.com/", "Future Science");
+    pluginPubMap.put("http://www.maneyonline.com/", "Maney Publishing");
+    pluginPubMap.put("http://www.nrcresearchpress.com/", "NRC Research Press");
+    pluginPubMap.put("http://library.seg.org/", "Society of Exploration Geophysicists");
+    pluginPubMap.put("http://epubs.siam.org/", "Society for Industrial and Applied Mathematics");
+    pluginPubMap.put("http://www.bioone.org/", "BioOne");
+    pluginPubMap.put("http://www.euppublishing.com/", "Edinburgh University Press");
+    pluginPubMap.put("http://www.tandfonline.com/", "Taylor & Francis");
+  }
+      
+  
+  private void testSpecificUserMsg(String plugin_base_url, String full_msg, 
+      String gln_plugin, String clockss_plugin) throws Exception {
+
     Properties props = new Properties();
     props.setProperty(VOL_KEY, Integer.toString(17));
     props.setProperty(JID_KEY, "eint");
-    props.setProperty(BASE_URL_KEY, "http://journals.ametsoc.org/");
+    props.setProperty(BASE_URL_KEY, plugin_base_url);
     Configuration config = ConfigurationUtil.fromProps(props);
+
+    if (!StringUtils.isEmpty(gln_plugin)) {
+      DefinablePlugin ap = new DefinablePlugin();
+      ap.initPlugin(getMockLockssDaemon(),
+          gln_plugin);
+      DefinableArchivalUnit gAU = (DefinableArchivalUnit)ap.createAu(config);
+
+      log.debug3("testing GLN user message");
+      if (!StringUtils.isEmpty(full_msg)) {
+        assertEquals(full_msg, gAU.getProperties().getString(DefinableArchivalUnit.KEY_AU_CONFIG_USER_MSG, null));
+      } else {
+        // check that the message includes "<base_url>/action/institutionLockssIpChange" and publisher name 
+        String config_msg = gAU.getProperties().getString(DefinableArchivalUnit.KEY_AU_CONFIG_USER_MSG, null);
+        log.debug3("config msg: " + config_msg);
+        assertTrue(config_msg.contains(plugin_base_url + "action/institutionLockssIpChange"));
+        assertTrue(config_msg.contains(pluginPubMap.get(plugin_base_url)));
+      }
+    }
+
+    // now check clockss version non-message
+    if (!StringUtils.isEmpty(clockss_plugin)) {
+      DefinablePlugin cap = new DefinablePlugin();
+      cap.initPlugin(getMockLockssDaemon(),
+          clockss_plugin);
+      DefinableArchivalUnit cAU = (DefinableArchivalUnit)cap.createAu(config);
+
+      log.debug3("testing CLOCKSS absence of user message");
+      assertEquals(null, cAU.getProperties().getString(DefinableArchivalUnit.KEY_AU_CONFIG_USER_MSG, null));
+    }
     
-    DefinablePlugin ap = new DefinablePlugin();
-    ap.initPlugin(getMockLockssDaemon(),
-        "org.lockss.plugin.atypon.americanmeteorologicalsociety.AMetSocPlugin");
-    DefinableArchivalUnit AMetSocAU = (DefinableArchivalUnit)ap.createAu(config);
-    
-    log.debug3("testing GLN user message");
-    assertEquals(gln_user_msg, AMetSocAU.getProperties().getString(DefinableArchivalUnit.KEY_AU_CONFIG_USER_MSG, null));
   }
 
 }
