@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.179 2014-06-05 20:18:51 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.180 2014-09-24 21:50:08 thib_gc Exp $
  */
 
 /*
@@ -44,7 +44,6 @@ import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 import org.lockss.hasher.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.definable.DefinablePlugin;
 import org.lockss.poller.*;
 import org.lockss.poller.PollManager.EventCtr;
 import org.lockss.poller.v3.V3Serializer.*;
@@ -66,7 +65,7 @@ import org.lockss.servlet.DisplayConverter;
  */
 public class V3Poller extends BasePoll {
 
-  private static Logger log = Logger.getLogger("V3Poller");
+  private static Logger log = Logger.getLogger(V3Poller.class);
 
   // Status strings used by the peers.
   public static final int PEER_STATUS_INITIALIZED = 0;
@@ -918,7 +917,7 @@ public class V3Poller extends BasePoll {
     };
     boolean suc = theDaemon.getSchedService().scheduleTask(task);
     if (!suc) {
-      String msg = "No room in schedule for" + 
+      String msg = "No room in schedule for " + 
 	StringUtil.timeIntervalToString(hashEst) + " hash between " +
 	earliestStart + " and " + latestFinish + ", at " + TimeBase.nowDate();
       pollerState.setErrorDetail(msg);
