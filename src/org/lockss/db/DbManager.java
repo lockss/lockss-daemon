@@ -1,5 +1,5 @@
 /*
- * $Id: DbManager.java,v 1.43 2014-09-16 19:55:43 fergaloy-sf Exp $
+ * $Id: DbManager.java,v 1.44 2014-09-24 01:53:01 fergaloy-sf Exp $
  */
 
 /*
@@ -1995,7 +1995,7 @@ public class DbManager extends BaseLockssDaemonManager
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
 
-  private List<String> getPendingUpdates() {
+  private synchronized List<String> getPendingUpdates() {
     final String DEBUG_HEADER = "getPendingUpdates(): ";
     List<String> result = new ArrayList<String>();
 
