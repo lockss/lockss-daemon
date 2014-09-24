@@ -5,8 +5,7 @@
     info[tester] = 0
   >
 
-    pluginPrefix = org.lockss.plugin.silverchair.
-    pluginSuffix = SilverchairJournalsPlugin
+    plugin = org.lockss.plugin.silverchair.SilverchairJournalsPlugin
     implicit < status ; year ; name ; param[year] >
  
     {
@@ -285,7 +284,7 @@
     >
 
     param[base_url] = http://proceedings.spiedigitallibrary.org/
-    pluginSuffix = needs.plugin
+    plugin = needs.plugin
     comment[resource_id] = no resource_id
     comment[access] = subscription & permission needed
 
@@ -351,7 +350,7 @@
     >
 
     param[base_url] = http://reviews.spiedigitallibrary.org/
-    pluginSuffix = needs.plugin
+    plugin = needs.plugin
     comment[resource_id] = no resource_id
     comment[access] = subscription & permission needed
 
