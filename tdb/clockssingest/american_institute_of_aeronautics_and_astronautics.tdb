@@ -94,12 +94,12 @@
     param[journal_id] = jacic
 
     au < manifest ; exists ; 2004 ; Journal of Aerospace Computing, Information, and Communication Volume 1 ; 1 >
-    au < testing ; exists ; 2005 ; Journal of Aerospace Computing, Information, and Communication Volume 2 ; 2 >
-    au < testing ; exists ; 2006 ; Journal of Aerospace Computing, Information, and Communication Volume 3 ; 3 >
-    au < testing ; exists ; 2007 ; Journal of Aerospace Computing, Information, and Communication Volume 4 ; 4 >
-    au < testing ; exists ; 2008 ; Journal of Aerospace Computing, Information, and Communication Volume 5 ; 5 >
-    au < testing ; exists ; 2009 ; Journal of Aerospace Computing, Information, and Communication Volume 6 ; 6 >
-    au < testing ; exists ; 2010 ; Journal of Aerospace Computing, Information, and Communication Volume 7 ; 7 >
+    au < manifest ; exists ; 2005 ; Journal of Aerospace Computing, Information, and Communication Volume 2 ; 2 >
+    au < manifest ; exists ; 2006 ; Journal of Aerospace Computing, Information, and Communication Volume 3 ; 3 >
+    au < manifest ; exists ; 2007 ; Journal of Aerospace Computing, Information, and Communication Volume 4 ; 4 >
+    au < manifest ; exists ; 2008 ; Journal of Aerospace Computing, Information, and Communication Volume 5 ; 5 >
+    au < manifest ; exists ; 2009 ; Journal of Aerospace Computing, Information, and Communication Volume 6 ; 6 >
+    au < manifest ; exists ; 2010 ; Journal of Aerospace Computing, Information, and Communication Volume 7 ; 7 >
     au < testing ; exists ; 2011 ; Journal of Aerospace Computing, Information, and Communication Volume 8 ; 8 >
     au < ready ; exists ; 2012 ; Journal of Aerospace Computing, Information, and Communication Volume 9 ; 9 >
     au < expected ; exists ; 2013 ; Journal of Aerospace Computing, Information, and Communication Volume 10 ; 10 >
@@ -159,7 +159,7 @@
     au < manifest ; exists ; 2002 ; Journal of Aircraft Volume 39 ; 39 >
     au < manifest ; exists ; 2003 ; Journal of Aircraft Volume 40 ; 40 >
     au < manifest ; exists ; 2004 ; Journal of Aircraft Volume 41 ; 41 >
-    au < testing ; exists ; 2005 ; Journal of Aircraft Volume 42 ; 42 >
+    au < manifest ; exists ; 2005 ; Journal of Aircraft Volume 42 ; 42 >
     au < testing ; exists ; 2006 ; Journal of Aircraft Volume 43 ; 43 >
     au < testing ; exists ; 2007 ; Journal of Aircraft Volume 44 ; 44 >
     au < testing ; exists ; 2008 ; Journal of Aircraft Volume 45 ; 45 >
@@ -229,8 +229,8 @@
     au < manifest ; exists ; 2002 ; Journal of Guidance, Control, and Dynamics Volume 25 ; 25 >
     au < manifest ; exists ; 2003 ; Journal of Guidance, Control, and Dynamics Volume 26 ; 26 >
     au < manifest ; exists ; 2004 ; Journal of Guidance, Control, and Dynamics Volume 27 ; 27 >
-    au < testing ; exists ; 2005 ; Journal of Guidance, Control, and Dynamics Volume 28 ; 28 >
-    au < testing ; exists ; 2006 ; Journal of Guidance, Control, and Dynamics Volume 29 ; 29 >
+    au < manifest ; exists ; 2005 ; Journal of Guidance, Control, and Dynamics Volume 28 ; 28 >
+    au < manifest ; exists ; 2006 ; Journal of Guidance, Control, and Dynamics Volume 29 ; 29 >
     au < testing ; exists ; 2007 ; Journal of Guidance, Control, and Dynamics Volume 30 ; 30 >
     au < testing ; exists ; 2008 ; Journal of Guidance, Control, and Dynamics Volume 31 ; 31 >
     au < testing ; exists ; 2009 ; Journal of Guidance, Control, and Dynamics Volume 32 ; 32 >
@@ -301,11 +301,11 @@
     au < manifest ; exists ; 2003 ; Journal of Propulsion and Power Volume 19 ; 19 >
     au < manifest ; exists ; 2004 ; Journal of Propulsion and Power Volume 20 ; 20 >
     au < testing ; exists ; 2005 ; Journal of Propulsion and Power Volume 21 ; 21 >
-    au < testing ; exists ; 2006 ; Journal of Propulsion and Power Volume 22 ; 22 >
-    au < testing ; exists ; 2007 ; Journal of Propulsion and Power Volume 23 ; 23 >
-    au < testing ; exists ; 2008 ; Journal of Propulsion and Power Volume 24 ; 24 >
-    au < testing ; exists ; 2009 ; Journal of Propulsion and Power Volume 25 ; 25 >
-    au < testing ; exists ; 2010 ; Journal of Propulsion and Power Volume 26 ; 26 >
+    au < manifest ; exists ; 2006 ; Journal of Propulsion and Power Volume 22 ; 22 >
+    au < manifest ; exists ; 2007 ; Journal of Propulsion and Power Volume 23 ; 23 >
+    au < manifest ; exists ; 2008 ; Journal of Propulsion and Power Volume 24 ; 24 >
+    au < manifest ; exists ; 2009 ; Journal of Propulsion and Power Volume 25 ; 25 >
+    au < manifest ; exists ; 2010 ; Journal of Propulsion and Power Volume 26 ; 26 >
     au < testing ; exists ; 2011 ; Journal of Propulsion and Power Volume 27 ; 27 >
     au < testing ; exists ; 2012 ; Journal of Propulsion and Power Volume 28 ; 28 >
     au < ready ; exists ; 2013 ; Journal of Propulsion and Power Volume 29 ; 29 >
@@ -364,15 +364,15 @@
     au < manifest ; exists ; 2002 ; Journal of Spacecraft and Rockets Volume 39 ; 39 >
     au < manifest ; exists ; 2003 ; Journal of Spacecraft and Rockets Volume 40 ; 40 >
     au < manifest ; exists ; 2004 ; Journal of Spacecraft and Rockets Volume 41 ; 41 >
-    au < testing ; exists ; 2005 ; Journal of Spacecraft and Rockets Volume 42 ; 42 >
-    au < testing ; exists ; 2006 ; Journal of Spacecraft and Rockets Volume 43 ; 43 >
-    au < testing ; exists ; 2007 ; Journal of Spacecraft and Rockets Volume 44 ; 44 >
-    au < testing ; exists ; 2008 ; Journal of Spacecraft and Rockets Volume 45 ; 45 >
-    au < testing ; exists ; 2009 ; Journal of Spacecraft and Rockets Volume 46 ; 46 >
+    au < manifest ; exists ; 2005 ; Journal of Spacecraft and Rockets Volume 42 ; 42 >
+    au < manifest ; exists ; 2006 ; Journal of Spacecraft and Rockets Volume 43 ; 43 >
+    au < manifest ; exists ; 2007 ; Journal of Spacecraft and Rockets Volume 44 ; 44 >
+    au < manifest ; exists ; 2008 ; Journal of Spacecraft and Rockets Volume 45 ; 45 >
+    au < manifest ; exists ; 2009 ; Journal of Spacecraft and Rockets Volume 46 ; 46 >
     au < testing ; exists ; 2010 ; Journal of Spacecraft and Rockets Volume 47 ; 47 >
-    au < testing ; exists ; 2011 ; Journal of Spacecraft and Rockets Volume 48 ; 48 >
-    au < testing ; exists ; 2012 ; Journal of Spacecraft and Rockets Volume 49 ; 49 >
-    au < testing ; exists ; 2013 ; Journal of Spacecraft and Rockets Volume 50 ; 50 >
+    au < manifest ; exists ; 2011 ; Journal of Spacecraft and Rockets Volume 48 ; 48 >
+    au < manifest ; exists ; 2012 ; Journal of Spacecraft and Rockets Volume 49 ; 49 >
+    au < manifest ; exists ; 2013 ; Journal of Spacecraft and Rockets Volume 50 ; 50 >
     au < manifest ; exists ; 2014 ; Journal of Spacecraft and Rockets Volume 51 ; 51 >
 
   }
@@ -406,14 +406,14 @@
     au < manifest ; exists ; 2003 ; Journal of Thermophysics and Heat Transfer Volume 17 ; 17 >
     au < manifest ; exists ; 2004 ; Journal of Thermophysics and Heat Transfer Volume 18 ; 18 >
     au < testing ; exists ; 2005 ; Journal of Thermophysics and Heat Transfer Volume 19 ; 19 >
-    au < testing ; exists ; 2006 ; Journal of Thermophysics and Heat Transfer Volume 20 ; 20 >
-    au < testing ; exists ; 2007 ; Journal of Thermophysics and Heat Transfer Volume 21 ; 21 >
+    au < manifest ; exists ; 2006 ; Journal of Thermophysics and Heat Transfer Volume 20 ; 20 >
+    au < manifest ; exists ; 2007 ; Journal of Thermophysics and Heat Transfer Volume 21 ; 21 >
     au < testing ; exists ; 2008 ; Journal of Thermophysics and Heat Transfer Volume 22 ; 22 >
-    au < testing ; exists ; 2009 ; Journal of Thermophysics and Heat Transfer Volume 23 ; 23 >
-    au < testing ; exists ; 2010 ; Journal of Thermophysics and Heat Transfer Volume 24 ; 24 >
-    au < testing ; exists ; 2011 ; Journal of Thermophysics and Heat Transfer Volume 25 ; 25 >
+    au < manifest ; exists ; 2009 ; Journal of Thermophysics and Heat Transfer Volume 23 ; 23 >
+    au < manifest ; exists ; 2010 ; Journal of Thermophysics and Heat Transfer Volume 24 ; 24 >
+    au < manifest ; exists ; 2011 ; Journal of Thermophysics and Heat Transfer Volume 25 ; 25 >
     au < testing ; exists ; 2012 ; Journal of Thermophysics and Heat Transfer Volume 26 ; 26 >
-    au < testing ; exists ; 2013 ; Journal of Thermophysics and Heat Transfer Volume 27 ; 27 >
+    au < manifest ; exists ; 2013 ; Journal of Thermophysics and Heat Transfer Volume 27 ; 27 >
     au < manifest ; exists ; 2014 ; Journal of Thermophysics and Heat Transfer Volume 28 ; 28 >
 
   } 
