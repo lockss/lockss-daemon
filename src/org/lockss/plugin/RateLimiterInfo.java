@@ -1,5 +1,5 @@
 /*
- * $Id: RateLimiterInfo.java,v 1.3 2012-05-17 17:58:06 tlipkis Exp $
+ * $Id: RateLimiterInfo.java,v 1.4 2014-09-24 00:33:46 tlipkis Exp $
  */
 
 /*
@@ -147,15 +147,17 @@ public class RateLimiterInfo {
 
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("[rli: ");
+    sb.append("[rli:");
     if (crawlPoolKey != null) {
-      sb.append("pool: ");
+      sb.append(" pool: ");
       sb.append(crawlPoolKey);
     }
     if (rate != null) {
+      sb.append(" ");
       sb.append(rate);
     }
     if (cond != null) {
+      sb.append(" ");
       sb.append(cond.toString());
     }
     if (urlRates != null) {
