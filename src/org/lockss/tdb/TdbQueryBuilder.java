@@ -1,5 +1,5 @@
 /*
- * $Id: TdbQueryBuilder.java,v 1.2 2014-09-09 19:44:54 thib_gc Exp $
+ * $Id: TdbQueryBuilder.java,v 1.3 2014-09-24 22:53:23 thib_gc Exp $
  */
 
 /*
@@ -137,6 +137,27 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
       OptionBuilder.withLongOpt(KEY_ALL)
                    .withDescription(String.format("include all testable (pre-production and production) statuses in secondary query %s", ALL_STATUSES))
                    .create(LETTER_ALL);
+  
+  /**
+   * <p>
+   * Key for the alliance option ({@value}).
+   * </p>
+   * 
+   * @since 1.67
+   */
+  protected static final String KEY_ALLIANCE = "alliance";
+  
+  /**
+   * <p>
+   * The alliance option.
+   * </p>
+   * 
+   * @since 1.67
+   */
+  protected static final Option OPTION_ALLIANCE =
+      OptionBuilder.withLongOpt(KEY_ALLIANCE)
+                   .withDescription(String.format("include only AUs whose plugin is not in the non-Alliance set"))
+                   .create();
   
   /**
    * <p>
@@ -506,6 +527,100 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
                    .withDescription(String.format("include status '%s' in secondary query", Au.STATUS_MANIFEST))
                    .create(LETTER_MANIFEST);
 
+  /**
+   * <p>
+   * Key for the non-alliance option ({@value}).
+   * </p>
+   * 
+   * @since 1.67
+   */
+  protected static final String KEY_NON_ALLIANCE = "non-alliance";
+  
+  /**
+   * <p>
+   * Unmodifiable list of plugins associated with the non-alliance option.
+   * </p>
+   * 
+   * @since 1.67
+   */
+  public static final List<String> NON_ALLIANCE_PLUGINS =
+      AppUtil.ul("edu.columbia.plugin.JiwsPlugin",
+                 "edu.cornell.library.epr.EPRPlugin2001",
+                 "edu.cornell.library.epr.EPRPlugin2002On",
+                 "edu.cornell.library.jbe.JBEPlugin",
+                 "edu.fcla.plugin.arkivoc.ArkivocPlugin",
+                 "edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin",
+                 "edu.harvard.plugin.jrs.JRSPlugin",
+                 "edu.harvard.plugin.WorldHaikuReview.WorldHaikuReviewPlugin",
+                 "edu.indiana.lib.plugin.jcjpc.JcjpcPlugin",
+                 "edu.indiana.lib.plugin.mto.MTOPlugin",
+                 "edu.jhu.library.plugin.jrf.JournalOfReligionAndFilmPlugin",
+                 "edu.jhu.library.plugin.MedievalForumPlugin",
+                 "edu.nyu.plugin.bonefolder.BonefolderPlugin",
+                 "edu.nyu.plugin.ejce.EJCEPlugin",
+                 "edu.nyu.plugin.ejcjs.EJCJSPlugin",
+                 "edu.nyu.plugin.heplwebzine.HEPLwebzine",
+                 "edu.nyu.plugin.journalofglobalbuddhism.JournalOfGlobalBuddhismPlugin",
+                 "edu.nyu.plugin.LeedsICSPlugin",
+                 "edu.princeton.plugin.bmcr.BMCRPlugin",
+                 "edu.princeton.plugin.ncaw.19thCenturyArtWorldwidePlugin",
+                 "edu.stanford.plugin.exquisitecorpse.ExquisiteCorpsePlugin",
+                 "edu.upenn.library.plugin.annualofurdustudies.AnnualOfUrduStudiesPlugin",
+                 "edu.upenn.library.plugin.clcweb.CLCWebPlugin",
+                 "edu.wisc.library.plugin.BigBridgePlugin",
+                 "edu.wisc.library.plugin.BigBridgeVol1Plugin",
+                 "edu.wisc.library.plugin.CortlandReviewPlugin",
+                 "edu.wisc.library.plugin.CortlandReview00Plugin",
+                 "edu.wisc.library.plugin.CortlandReview98Plugin",
+                 "edu.wisc.library.plugin.CortlandReview99Plugin",
+                 "edu.yale.library.lockss.plugin.intermarium.IntermariumPlugin",
+                 "edu.yale.library.lockss.plugin.mitejmes.MITEJMESPlugin",
+                 "gov.loc.plugin.CJPentecostalCharismaticResearchPlugin",
+                 "gov.loc.plugin.TESLEJPlugin",
+                 "nz.ac.otago.plugin.scholia.ScholiaPlugin",
+                 "org.lockss.plugin.absinthe.AbsinthePlugin",
+                 "org.lockss.plugin.bepress.BePressPlugin",
+                 "org.lockss.plugin.bioone.BioOnePlugin",
+                 "org.lockss.plugin.blackbird.BlackbirdPlugin",
+                 "org.lockss.plugin.clogic.CulturalLogicPlugin",
+                 "org.lockss.plugin.disputatio.DisputatioPlugin",
+                 "org.lockss.plugin.emc.EarlyModernCulturePlugin",
+                 "org.lockss.plugin.emls.EmlsPlugin",
+                 "org.lockss.plugin.evergreenreview.EvergreenReviewPlugin",
+                 "org.lockss.plugin.GendersPlugin",
+                 "org.lockss.plugin.histcoop.HistoryCooperativePlugin",
+                 "org.lockss.plugin.invisibleculture.InvisibleCulturePlugin",
+                 "org.lockss.plugin.jackmagazine.JackMagazinePlugin",
+                 "org.lockss.plugin.jscm.JSCMPlugin",
+                 "org.lockss.plugin.lapetitezine.LaPetiteZinePlugin",
+                 "org.lockss.plugin.locksscard.LockssCardPlugin",
+                 "org.lockss.plugin.madhattersreview.MadHattersReviewPlugin",
+                 "org.lockss.plugin.minerva.MinervaPlugin",
+                 "org.lockss.plugin.msr.MSRPlugin",
+                 "org.lockss.plugin.ojs.OJSPlugin",
+                 "org.lockss.plugin.othervoices.OtherVoicesPlugin",
+                 "org.lockss.plugin.projmuse.ProjectMusePlugin",
+                 "org.lockss.plugin.prok.ProkPlugin",
+                 "org.molvis.plugin.MolVisPlugin",
+                 "org.lockss.plugin.sfpoetrybroadside.SantaFePoetryBroadsidePlugin",
+                 "org.nypl.plugin.failbetter.FailbetterPlugin",
+                 "org.nypl.plugin.PoetryBayPlugin",
+                 "org.nypl.plugin.shampoo.ShampooPlugin",
+                 "org.nypl.plugin.WordsWithoutBordersPlugin",
+                 "za.ac.nlsa.lockss.plugin.WaterSAPlugin");
+  
+  /**
+   * <p>
+   * The alliance option.
+   * </p>
+   * 
+   * @since 1.67
+   */
+  protected static final Option OPTION_NON_ALLIANCE =
+      OptionBuilder.withLongOpt(KEY_NON_ALLIANCE)
+                   .withDescription(String.format("include only AUs whose plugin is in the non-Alliance set"))
+                   .create();
+  
   /**
    * <p>
    * Key for the notReady option ({@value}).
@@ -977,6 +1092,7 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    */
   public void addOptions(Options options) {
     options.addOption(OPTION_ALL);
+    options.addOption(OPTION_ALLIANCE);
     options.addOption(OPTION_CLOCKSS_PRESERVED);
     options.addOption(OPTION_CLOCKSS_PRODUCTION);
     options.addOption(OPTION_CRAWLING);
@@ -988,6 +1104,7 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
     options.addOption(OPTION_FROZEN);
     options.addOption(OPTION_ING_NOT_READY);
     options.addOption(OPTION_MANIFEST);
+    options.addOption(OPTION_NON_ALLIANCE);
     options.addOption(OPTION_NOT_READY);
     options.addOption(OPTION_PRODUCTION);
     options.addOption(OPTION_QUERY);
@@ -1016,10 +1133,8 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * @since 1.67
    */
   public void processCommandLine(Map<String, Object> map, CommandLine cmd) {
-    Predicate<Au> primaryPredicate = null;
-    Predicate<Au> secondaryPredicate = null;
-    
-    // Parse primary query into primary predicate
+    // Parse primary query into predicate
+    Predicate<Au> queryPredicate = null;
     if (cmd.hasOption(KEY_QUERY)) {
       String query = cmd.getOptionValue(KEY_QUERY);
       CharStream charStream = new NamedAntlrInputStream("<query>", query);
@@ -1034,10 +1149,11 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
       if (predicateStack.size() != 1) {
         AppUtil.error("Internal error: predicate stack size is %d", predicateStack.size());
       }
-      primaryPredicate = predicateStack.pop();
+      queryPredicate = predicateStack.pop();
     }
     
-    // Build secondary predicate
+    // Build status predicate
+    Predicate<Au> statusPredicate = null;
     final Set<String> secondarySet = new HashSet<String>();
     if (cmd.hasOption(KEY_ALL)) {
       secondarySet.addAll(ALL_STATUSES);
@@ -1107,7 +1223,7 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
     }
     if (secondarySet.size() > 0) {
       if (cmd.hasOption(KEY_STATUS2)) {
-        secondaryPredicate = new Predicate<Au>() {
+        statusPredicate = new Predicate<Au>() {
           @Override
           public boolean test(Au a) {
             return secondarySet.contains(a.getStatus2());
@@ -1115,7 +1231,7 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
         };
       }
       else {
-        secondaryPredicate = new Predicate<Au>() {
+        statusPredicate = new Predicate<Au>() {
           @Override
           public boolean test(Au a) {
             return secondarySet.contains(a.getStatus());
@@ -1124,17 +1240,38 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
       }
     }
     
-    // Join primary and secondary predicates
-    map.put(KEY_QUERY,
-            primaryPredicate == null
-               ? (secondaryPredicate == null
-                     ? new TruePredicate<Au>()
-                     : secondaryPredicate
-                 )
-               : (secondaryPredicate == null
-                     ? primaryPredicate
-                     : new AndPredicate<Au>(secondaryPredicate, primaryPredicate))
-                 );
+    // Add non-Alliance predicate
+    Predicate<Au> nonAlliancePredicate = null;
+    final Set<String> nonAllianceSet = new HashSet<String>(NON_ALLIANCE_PLUGINS);
+    if (cmd.hasOption(KEY_NON_ALLIANCE)) {
+      nonAlliancePredicate = new Predicate<Au>() {
+        @Override
+        public boolean test(Au a) {
+          return nonAllianceSet.contains(a.getPlugin());
+        }
+      };
+    }
+    else if (cmd.hasOption(KEY_ALLIANCE)) {
+      nonAlliancePredicate = new Predicate<Au>() {
+        @Override
+        public boolean test(Au a) {
+          return !nonAllianceSet.contains(a.getPlugin());
+        }
+      };
+    }
+    
+    // Join predicates
+    Predicate<Au> predicate = queryPredicate;
+    if (statusPredicate != null) {
+      predicate = (predicate == null ? statusPredicate : new AndPredicate<Au>(statusPredicate, predicate));
+    }
+    if (nonAlliancePredicate != null) {
+      predicate = (predicate == null ? nonAlliancePredicate : new AndPredicate<Au>(nonAlliancePredicate, predicate));
+    }
+    if (predicate == null) {
+      predicate = new TruePredicate<Au>();
+    }
+    map.put(KEY_QUERY, predicate);
   }
   
   /**
