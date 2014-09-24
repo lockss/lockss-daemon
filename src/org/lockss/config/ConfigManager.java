@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.98 2014-06-02 02:07:09 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.99 2014-09-24 00:33:10 tlipkis Exp $
  */
 
 /*
@@ -1278,6 +1278,8 @@ public class ConfigManager implements LockssManager {
     log.info(sb.toString());
     if (log.isDebug()) {
       logConfig(newConfig, oldConfig, diffs);
+    } else {
+      log.info("New TdbAus: " + diffs.getTdbAuDifferenceCount());
     }
   }
 
