@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfiguration.java,v 1.21 2013-03-06 08:36:41 tlipkis Exp $
+ * $Id: TestConfiguration.java,v 1.22 2014-09-24 00:32:39 tlipkis Exp $
  */
 
 /*
@@ -236,8 +236,8 @@ public class TestConfiguration extends LockssTestCase {
     c2.put("a", "cc");
     assertEquals("cc", c2.get("a"));
     Tdb tdb2 = c2.getTdb();
-    assertTrue(tdb1.computeDifferences(tdb2).getPluginIdsForDifferences().isEmpty());
-    assertFalse(tdb1 == tdb2);
+    assertEmpty(tdb1.computeDifferences(tdb2).getPluginIdsForDifferences());
+    assertNotSame(tdb1, tdb2);
   }
 
   public void testCopyFrom() throws TdbException {
@@ -257,8 +257,8 @@ public class TestConfiguration extends LockssTestCase {
     c2.put("a", "cc");
     assertEquals("cc", c2.get("a"));
     Tdb tdb2 = c2.getTdb();
-    assertTrue(tdb1.computeDifferences(tdb2).getPluginIdsForDifferences().isEmpty());
-    assertFalse(tdb1 == tdb2);
+    assertEmpty(tdb1.computeDifferences(tdb2).getPluginIdsForDifferences());
+    assertNotSame(tdb1, tdb2);
   }
 
   public void testCopyFromEvent() throws TdbException {
@@ -287,8 +287,8 @@ public class TestConfiguration extends LockssTestCase {
     c2.put("a", "cc");
     assertEquals("cc", c2.get("a"));
     Tdb tdb2 = c2.getTdb();
-    assertTrue(tdb1.computeDifferences(tdb2).getPluginIdsForDifferences().isEmpty());
-    assertFalse(tdb1 == tdb2);
+    assertEmpty(tdb1.computeDifferences(tdb2).getPluginIdsForDifferences());
+    assertNotSame(tdb1, tdb2);
   }
 
   public void testEquals() throws TdbException {

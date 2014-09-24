@@ -1,5 +1,5 @@
 /*
- * $Id: TdbAu.java,v 1.33 2014-09-15 19:31:53 pgust Exp $
+ * $Id: TdbAu.java,v 1.34 2014-09-24 00:32:39 tlipkis Exp $
  */
 
 /*
@@ -145,7 +145,7 @@ public class TdbAu implements BibliographicItem, Comparable<TdbAu> {
     public int hashCode() {
       if (hash == 0) {
         hash = (31*TdbAu.this.getPluginId().hashCode()) 
-             * TdbAu.this.getParams().hashCode();
+             + TdbAu.this.getParams().hashCode();
       } 
       return hash;
     }
@@ -1123,13 +1123,13 @@ public class TdbAu implements BibliographicItem, Comparable<TdbAu> {
    */
   protected TdbAu copyForTdbTitle(TdbTitle title) throws TdbException {
     TdbAu au = new TdbAu(name, pluginId);
-    title.addTdbAu(au);
 
     // immutable -- no need to copy
     au.attrs = attrs;
     au.props = props;
     au.params = params;
 
+    title.addTdbAu(au);
     return au;
     
   }

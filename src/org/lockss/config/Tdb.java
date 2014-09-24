@@ -1,5 +1,5 @@
 /*
- * $Id: Tdb.java,v 1.29 2014-09-15 19:34:16 pgust Exp $
+ * $Id: Tdb.java,v 1.30 2014-09-24 00:32:39 tlipkis Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ import org.lockss.util.*;
  * a specified plugin ID. 
  *
  * @author  Philip Gust
- * @version $Id: Tdb.java,v 1.29 2014-09-15 19:34:16 pgust Exp $
+ * @version $Id: Tdb.java,v 1.30 2014-09-24 00:32:39 tlipkis Exp $
  */
 public class Tdb {
   /**
@@ -108,7 +108,7 @@ public class Tdb {
    * also handle this exception.
    * 
    * @author  Philip Gust
-   * @version $Id: Tdb.java,v 1.29 2014-09-15 19:34:16 pgust Exp $
+   * @version $Id: Tdb.java,v 1.30 2014-09-24 00:32:39 tlipkis Exp $
    */
   @SuppressWarnings("serial")
   static public class TdbException extends Exception {
@@ -423,13 +423,9 @@ public class Tdb {
     }
 
     for (TdbProvider thisProvider : tdbProviderMap.values()) {
-      TdbProvider oldProvider = oldTdb.getTdbProvider(thisProvider.getName());
-      if (oldProvider == null) {
+      if (!oldTdb.tdbProviderMap.containsKey(thisProvider.getName())) {
         // add pluginIds for provider in this Tdb that is not in tdb
         diffs.addProvider(thisProvider, Differences.Type.New);
-      } else {
-        // add pluginIds for providers in both Tdbs that are different 
-        thisProvider.addDifferences(diffs, oldProvider);
       }
     }
   

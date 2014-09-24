@@ -1,5 +1,5 @@
 /*
- * $Id: TdbTitle.java,v 1.20 2014-09-15 19:32:23 pgust Exp $
+ * $Id: TdbTitle.java,v 1.21 2014-09-24 00:32:39 tlipkis Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import org.lockss.util.*;
  * This class represents a title database title.
  *
  * @author  Philip Gust
- * @version $Id: TdbTitle.java,v 1.20 2014-09-15 19:32:23 pgust Exp $
+ * @version $Id: TdbTitle.java,v 1.21 2014-09-24 00:32:39 tlipkis Exp $
  */
 public class TdbTitle {
   /**
@@ -926,13 +926,13 @@ public class TdbTitle {
 
       // pluginIDs for TdbAus that only appear in oldTitle
       for (TdbAu oldAu : oldTitle.getTdbAus()) {
-        if (!getTdbAus().contains(oldAu)) {
+	if (!oldAu.equals(tdbAus.get(oldAu.getId()))) {
           // add pluginID for title AU that is not in this TdbTitle
 	  diffs.addAu(oldAu, Tdb.Differences.Type.Old);
         }
       }
       for (TdbAu thisAu : this.getTdbAus()) {
-        if (!oldTitle.getTdbAus().contains(thisAu)) {
+	if (!thisAu.equals(oldTitle.getTdbAuById(thisAu.getId()))) {
           // add pluginId for AU in this TdbTitle that is not in oldTitle 
 	  diffs.addAu(thisAu, Tdb.Differences.Type.New);
         }

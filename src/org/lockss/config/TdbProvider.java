@@ -1,5 +1,5 @@
 /*
- * $Id: TdbProvider.java,v 1.2 2014-09-15 19:33:21 pgust Exp $
+ * $Id: TdbProvider.java,v 1.3 2014-09-24 00:32:39 tlipkis Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ import org.lockss.util.*;
  * This class represents a title database publisher.
  *
  * @author  Philip Gust
- * @version $Id: TdbProvider.java,v 1.2 2014-09-15 19:33:21 pgust Exp $
+ * @version $Id: TdbProvider.java,v 1.3 2014-09-24 00:32:39 tlipkis Exp $
  */
 public class TdbProvider {
   /**
@@ -131,13 +131,13 @@ public class TdbProvider {
     } else {
       // pluginIDs for TdbAus that only appear in oldProvider
       for (TdbAu oldAu : oldProvider.getTdbAus()) {
-        if (!getTdbAus().contains(oldAu)) {
-          // add pluginID for title AU that is not in this TdbProvider
+	if (!oldAu.equals(ausById.get(oldAu.getId()))) {
+          // add pluginID for provider AU that is not in this TdbProvider
           diffs.addAu(oldAu, Tdb.Differences.Type.Old);
         }
       }
       for (TdbAu thisAu : this.getTdbAus()) {
-        if (!oldProvider.getTdbAus().contains(thisAu)) {
+	if (!thisAu.equals(oldProvider.getTdbAuById(thisAu.getId()))) {
           // add pluginId for AU in this TdbProvider that is not in oldProvider 
           diffs.addAu(thisAu, Tdb.Differences.Type.New);
         }
@@ -162,6 +162,17 @@ public class TdbProvider {
     return ausById.values().iterator();
   }
   
+  /**
+   * Return the TdbAu for with the specified TdbAu.Key.
+   * 
+   * @param tdbAuId the Id of the TdbAu to select
+   * @return the TdbAu for the specified key
+   */
+  public TdbAu getTdbAuById(TdbAu.Id tdbAuId)
+  {
+    return ausById.get(tdbAuId);
+  }
+
   /**
    * Return the collection of TdbAus for this provider.
    * <p>
