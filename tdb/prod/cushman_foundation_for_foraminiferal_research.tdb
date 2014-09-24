@@ -1,8 +1,7 @@
 {
 
   publisher <
-    name = Cushman Foundation for Foraminiferal Research ;
-    info[tester] = 7
+    name = Cushman Foundation for Foraminiferal Research
   >
     
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin

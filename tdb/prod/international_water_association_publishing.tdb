@@ -1,8 +1,7 @@
 {
 
   publisher <
-    name = International Water Association Publishing;
-    info[tester] = 7
+    name = International Water Association Publishing
   >
   
     plugin = org.lockss.plugin.portlandpress.PortlandPressPlugin
