@@ -17,7 +17,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>16</string>
+    <string>17</string>
   </entry>
    <entry>
     <string>plugin_publishing_platform</string>
@@ -34,7 +34,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>13</string>
+        <string>14</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -48,7 +48,7 @@
   </entry>
   <entry>
     <string>au_start_url</string>
-<!-- the TOC for a specific year (volume) is on a lockss page.The final number is any issue # from that volume, so go with 1 -->
+<!-- the TOC for a specific year (volume) is on a lockss page.The final number is any issue # from that volume, or index -->
     <string>"%slockss/%s/%s/index.html", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
@@ -58,13 +58,19 @@
         <string>au_title</string>
         <string>"%sloi/%s", base_url, journal_id</string>
       </entry>
+      <!--  it is okay to use issue even though it's not a param, it is provided by the query -->
       <entry>
         <string>au_issue</string>
-        <string>&quot;%stoc/%s/%s/%s&quot;, base_url, journal_id, volume_name, issue</string>
+        <string>"%stoc/%s/%s/%s"", base_url, journal_id, volume_name, issue</string>
       </entry>  
       <!--  we don't need au_volume as it will default to au_start_url -->
     </map>
   </entry>
+  <entry>
+  <!-- manifest to issue to articles -->
+    <string>au_refetch_depth</string>
+    <int>2</int>
+  </entry>  
   <entry>
     <string>au_crawlrules</string>
     <!--  CRAWL COMMENT BLOCK
