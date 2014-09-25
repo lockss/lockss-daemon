@@ -1,8 +1,7 @@
 {
 
   publisher <
-    name = IP Publishing Ltd. ;
-    info[tester] = 7
+    name = IP Publishing Ltd.
   >
 
   plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
