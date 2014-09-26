@@ -7135,7 +7135,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; finished ; 2008 ; Health Promotion International Volume 23 ; 23 ; >
-    au < zapped ; finished ; 2009 ; Health Promotion International Volume 24 ; 24 ; reingest4.clockss.org:8082 >
+    au < zapped ; superseded ; 2009 ; Health Promotion International Volume 24 [superseded] ; 24 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -7167,7 +7167,7 @@
     au < manifest ; exists ; 2006 ; Health Promotion International Volume 21 ; 21 ; >
     au < manifest ; exists ; 2007 ; Health Promotion International Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Health Promotion International Volume 23 ; 23 ; >
-    au < finished ; crawling ; 2009 ; Health Promotion International Volume 24 ; 24 ; >
+    au < ready ; crawling ; 2009 ; Health Promotion International Volume 24 ; 24 ; >
     au < finished ; crawling ; 2010 ; Health Promotion International Volume 25 ; 25 ; >
     au < finished ; crawling ; 2011 ; Health Promotion International Volume 26 ; 26 ; >
     au < finished ; crawling ; 2012 ; Health Promotion International Volume 27 ; 27 ; >
@@ -7679,7 +7679,7 @@
     au < manifest ; exists ; 2008 ; ICSID Review: Foreign Investment Law Journal Volume 23 ; 23 ; >
     au < zapped ; finished ; 2009 ; ICSID Review: Foreign Investment Law Journal Volume 24 ; 24 ; >
     au < finished ; crawling ; 2010 ; ICSID Review: Foreign Investment Law Journal Volume 25 ; 25 ; >
-    au < finished ; crawling ; 2011 ; ICSID Review: Foreign Investment Law Journal Volume 26 ; 26 ; >
+    au < ready ; crawling ; 2011 ; ICSID Review: Foreign Investment Law Journal Volume 26 ; 26 ; >
     au < finished ; crawling ; 2012 ; ICSID Review: Foreign Investment Law Journal Volume 27 ; 27 ; >
     au < crawling ; exists ; 2013 ; ICSID Review: Foreign Investment Law Journal Volume 28 ; 28 ; >
     au < manifest ; exists ; 2014 ; ICSID Review: Foreign Investment Law Journal Volume 29 ; 29 ; >
@@ -8803,7 +8803,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; International Journal of Lexicography Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Lexicography Volume 22 ; 22 ; >
     au < zapped ; finished ; 2010 ; International Journal of Lexicography Volume 23 ; 23 ; >
-    au < finished ; crawling ; 2011 ; International Journal of Lexicography Volume 24 ; 24 ; >
+    au < ready ; crawling ; 2011 ; International Journal of Lexicography Volume 24 ; 24 ; >
     au < finished ; frozen ; 2012 ; International Journal of Lexicography Volume 25 ; 25 ; >
     au < crawling ; exists ; 2013 ; International Journal of Lexicography Volume 26 ; 26 ; >
     au < manifest ; exists ; 2014 ; International Journal of Lexicography Volume 27 ; 27 ; >
@@ -8911,7 +8911,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; International Journal of Public Opinion Research Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Public Opinion Research Volume 21 ; 21 ; >
     au < finished ; crawling ; 2010 ; International Journal of Public Opinion Research Volume 22 ; 22 ; >
-    au < finished ; crawling ; 2011 ; International Journal of Public Opinion Research Volume 23 ; 23 ; >
+    au < ready ; crawling ; 2011 ; International Journal of Public Opinion Research Volume 23 ; 23 ; >
     au < finished ; crawling ; 2012 ; International Journal of Public Opinion Research Volume 24 ; 24 ; >
     au < crawling ; exists ; 2013 ; International Journal of Public Opinion Research Volume 25 ; 25 ; >
     au < manifest ; exists ; 2014 ; International Journal of Public Opinion Research Volume 26 ; 26 ; >
@@ -9058,7 +9058,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; International Journal of Transitional Justice Volume 2 ; 2 ; >
     au < finished ; crawling ; 2009 ; International Journal of Transitional Justice Volume 3 ; 3 ; >
     au < finished ; crawling ; 2010 ; International Journal of Transitional Justice Volume 4 ; 4 ; >
-    au < finished ; crawling ; 2011 ; International Journal of Transitional Justice Volume 5 ; 5 ; >
+    au < ready ; crawling ; 2011 ; International Journal of Transitional Justice Volume 5 ; 5 ; >
     au < finished ; crawling ; 2012 ; International Journal of Transitional Justice Volume 6 ; 6 ; >
     au < crawling ; exists ; 2013 ; International Journal of Transitional Justice Volume 7 ; 7 ; >
     au < manifest ; exists ; 2014 ; International Journal of Transitional Justice Volume 8 ; 8 ; >
@@ -9338,7 +9338,7 @@
 
     au < finished ; crawling ; 2010 ; Jerusalem Review of Legal Studies Volume 1 ; 1 ; >
     au < finished ; crawling ; 2010 ; Jerusalem Review of Legal Studies Volume 2 ; 2 ; >
-    au < finished ; crawling ; 2011 ; Jerusalem Review of Legal Studies Volume 3 ; 3 ; >
+    au < ready ; crawling ; 2011 ; Jerusalem Review of Legal Studies Volume 3 ; 3 ; >
     au < finished ; frozen ; 2012 ; Jerusalem Review of Legal Studies Volume 4 ; 4 ; >
     au < finished ; frozen ; 2012 ; Jerusalem Review of Legal Studies Volume 5 ; 5 ; >
     au < finished ; frozen ; 2012 ; Jerusalem Review of Legal Studies Volume 6 ; 6 ; >
@@ -12427,7 +12427,7 @@
 
     {
     
-    au < ingNotReady ; exists ; 2012 ; Journal of the Pediatric Infectious Diseases Society Volume 1 ; 1 ; >
+    au < ready ; exists ; 2012 ; Journal of the Pediatric Infectious Diseases Society Volume 1 ; 1 ; >
     au < crawling ; exists ; 2013 ; Journal of the Pediatric Infectious Diseases Society Volume 2 ; 2 ; >
     au < manifest ; exists ; 2014 ; Journal of the Pediatric Infectious Diseases Society Volume 3 ; 3 ; >
     
@@ -13093,7 +13093,7 @@
     au < finished ; frozen ; 2009-2010 ; Journal of Social History Volume 43 ; 43 ; >
     au < zapped ; finished ; 2010-2011 ; Journal of Social History Volume 44 ; 44 ; >
     au < finished ; frozen ; 2011-2012 ; Journal of Social History Volume 45 ; 45 ; >
-    au < ingNotReady ; exists ; 2012-2013 ; Journal of Social History Volume 46 ; 46 ; >
+    au < ready ; exists ; 2012-2013 ; Journal of Social History Volume 46 ; 46 ; >
     au < crawling ; exists ; 2013-2014 ; Journal of Social History Volume 47 ; 47 ; >
     au < manifest ; exists ; 2014-2015 ; Journal of Social History Volume 48 ; 48 ; >
 
@@ -13115,7 +13115,7 @@
 
     au < crawling ; exists ; 2010 ; Journal of Surgical Case Reports Volume 2010 ; 2010 ; >
     au < crawling ; exists ; 2011 ; Journal of Surgical Case Reports Volume 2011 ; 2011 ; >
-    au < ingNotReady ; exists ; 2012 ; Journal of Surgical Case Reports Volume 2012 ; 2012 ; >
+    au < ready ; exists ; 2012 ; Journal of Surgical Case Reports Volume 2012 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Journal of Surgical Case Reports Volume 2013 ; 2013 ; >
     au < manifest ; exists ; 2014 ; Journal of Surgical Case Reports Volume 2014 ; 2014 ; >
 
@@ -13258,7 +13258,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; The Journal of Theological Studies Volume 60 ; 60 ; >
     au < finished ; crawling ; 2010 ; The Journal of Theological Studies Volume 61 ; 61 ; >
     au < finished ; frozen ; 2011 ; The Journal of Theological Studies Volume 62 ; 62 ; >
-    au < ingNotReady ; exists ; 2012 ; The Journal of Theological Studies Volume 63 ; 63 ; >
+    au < ready ; exists ; 2012 ; The Journal of Theological Studies Volume 63 ; 63 ; >
     au < crawling ; exists ; 2013 ; The Journal of Theological Studies Volume 64 ; 64 ; >
     au < manifest ; exists ; 2014 ; The Journal of Theological Studies Volume 65 ; 65 ; >
 
@@ -15369,7 +15369,7 @@
 
     au < superseded ; down ; 2010 ; NDT Plus Volume 3 [superseded] ; 3 ; >
     au < superseded ; down ; 2011 ; NDT Plus Volume 4 [superseded] ; 4 ; >
-    au < down ; exists ; 0 ; NDT Plus Volume 25 [to delete] ; 25 ; >
+    au < superseded ; exists ; 0 ; NDT Plus Volume 25 [to delete] ; 25 ; >
 
     }
 
@@ -17620,7 +17620,7 @@
     comment[continues] = 0033-068X
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < crawling ; exists ; 2012 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2012 ; 2012 ; >
+    au < ready ; exists ; 2012 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2012 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2013 ; 2013 ; >
     au < manifest ; exists ; 2014 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2014 ; 2014 ; >
 
@@ -21625,7 +21625,7 @@
     au < crawling ; exists ; 2009 ; Interacting with Computers Volume 21 ; 21 ; >
     au < crawling ; exists ; 2010 ; Interacting with Computers Volume 22 ; 22 ; >
     au < crawling ; exists ; 2011 ; Interacting with Computers Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2012 ; Interacting with Computers Volume 24 ; 24 ; >
+    au < ready ; exists ; 2012 ; Interacting with Computers Volume 24 ; 24 ; >
     au < crawling ; exists ; 2013 ; Interacting with Computers Volume 25 ; 25 ; >
     au < manifest ; exists ; 2014 ; Interacting with Computers Volume 26 ; 26 ; >
     
