@@ -4484,7 +4484,7 @@
     au < manifest ; exists ; 2007 ; Diplomatic History Volume 31 ; 31 ; >
     au < manifest ; exists ; 2008 ; Diplomatic History Volume 32 ; 32 ; >
     au < finished ; crawling ; 2009 ; Diplomatic History Volume 33 ; 33 ; >
-    au < crawling ; exists ; 2010 ; Diplomatic History Volume 34 ; 34 ; >
+    au < ready ; exists ; 2010 ; Diplomatic History Volume 34 ; 34 ; >
     au < crawling ; exists ; 2011 ; Diplomatic History Volume 35 ; 35 ; >
     au < ingNotReady ; exists ; 2012 ; Diplomatic History Volume 36 ; 36 ; >
     au < crawling ; exists ; 2013 ; Diplomatic History Volume 37 ; 37 ; >
@@ -5492,7 +5492,7 @@
     au < manifest ; exists ; 2007 ; European Journal of Echocardiography Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; European Journal of Echocardiography Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; European Journal of Echocardiography Volume 10 ; 10 ; >
-    au < finished ; crawling ; 2010 ; European Journal of Echocardiography Volume 11 ; 11 ; >
+    au < ready ; crawling ; 2010 ; European Journal of Echocardiography Volume 11 ; 11 ; >
     au < finished ; frozen ; 2011 ; European Journal of Echocardiography Volume 12 ; 12 ; >
     au < finished ; crawling ; 2012 ; European Heart Journal - Cardiovascular Imaging Volume 13 ; 13 ; >
     au < crawling ; exists ; 2013 ; European Heart Journal - Cardiovascular Imaging Volume 14 ; 14 ; >
@@ -8527,7 +8527,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < crawling ; exists ; 2010 ; International Immunology Meeting Abstracts Volume 22 ; 22 ; >
+      au < ready ; exists ; 2010 ; International Immunology Meeting Abstracts Volume 22 ; 22 ; >
       au < expected ; exists ; 2011 ; International Immunology Meeting Abstracts Volume 23 ; 23 ; >
 
     }
@@ -14249,7 +14249,7 @@
     au < manifest ; exists ; 1886 ; Mind Volume os-XI ; os-XI ; >
     au < manifest ; exists ; 1887 ; Mind Volume os-12 ; os-12 ; >
     au < manifest ; exists ; 1888 ; Mind Volume os-XIII ; os-XIII ; >
-    au < ingNotReady ; exists ; 1889 ; Mind Volume os-XIV ; os-XIV ; >
+    au < manifest ; exists ; 1889 ; Mind Volume os-XIV ; os-XIV ; >
     au < manifest ; exists ; 1890 ; Mind Volume os-XV ; os-XV ; >
     au < manifest ; exists ; 1891 ; Mind Volume os-XVI ; os-XVI ; >
     au < manifest ; exists ; 1892 ; Mind Volume 1 ; 1 ; >
@@ -15390,7 +15390,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; frozen ; 2008 ; Nephrology Dialysis Transplantation Volume 23 ; 23 ; >
-    au < down ; frozen ; 2009 ; Nephrology Dialysis Transplantation Volume 24 ; 24 ; >
+    au < superseded ; down ; 2009 ; Nephrology Dialysis Transplantation Volume 24 [superseded] ; 24 ; >
 
     }
 
@@ -15421,7 +15421,7 @@
     au < manifest ; exists ; 2005 ; Nephrology Dialysis Transplantation Volume 20 ; 20 ; >
     au < manifest ; exists ; 2006 ; Nephrology Dialysis Transplantation Volume 21 ; 21 ; >
     au < manifest ; exists ; 2007 ; Nephrology Dialysis Transplantation Volume 22 ; 22 ; >
-    au < crawling ; exists ; 2008 ; Nephrology Dialysis Transplantation Volume 23 ; 23 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Nephrology Dialysis Transplantation Volume 23 ; 23 ; >
     au < finished ; crawling ; 2009 ; Nephrology Dialysis Transplantation Volume 24 ; 24 ; >
     au < finished ; crawling ; 2010 ; Nephrology Dialysis Transplantation Volume 25 ; 25 ; >
     au < finished ; manifest ; 2011 ; Nephrology Dialysis Transplantation Volume 26 ; 26 ; >
@@ -17678,7 +17678,7 @@
     au < finished ; frozen ; 2011 ; Protein Engineering, Design & Selection : PEDS Volume 24 ; 24 ; >
     au < crawling ; exists ; 2012 ; Protein Engineering, Design & Selection : PEDS Volume 25 ; 25 ; >
     au < crawling ; exists ; 2013 ; Protein Engineering, Design & Selection : PEDS Volume 26 ; 26 ; >
-    au < crawling ; exists ; 2014 ; Protein Engineering, Design & Selection : PEDS Volume 27 ; 27 ; >
+    au < manifest ; exists ; 2014 ; Protein Engineering, Design & Selection : PEDS Volume 27 ; 27 ; >
 
     }
 
@@ -17714,7 +17714,7 @@
     au < finished ; crawling ; 2011 ; Public Health Ethics Volume 4 ; 4 ; >
     au < finished ; crawling ; 2012 ; Public Health Ethics Volume 5 ; 5 ; >
     au < crawling ; exists ; 2013 ; Public Health Ethics Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2014 ; Public Health Ethics Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2014 ; Public Health Ethics Volume 7 ; 7 ; >
 
     }
 
