@@ -1,0 +1,26 @@
+{
+
+  publisher <
+    name = Australian National University Press ;
+    info[contract] = 2014 ;
+    info[tester] = 0
+  >
+  
+    plugin = needs.plugin 
+    param[base_url] = http://press.anu.edu.au/
+    implicit < status ; status2 ; year ; book_id ; isbn ; eisbn; name ; author >
+    comment[param] = book name used as part of url, unknown param, wait for plugin writer to determine
+
+  {
+  
+    title <
+      name = eBooks ;
+      type = book
+    >
+    
+    au < exists ; exists ; 2003 ; 1 ; 0975122916 ; 0975122908 ; Out of the Ashes ; James J. Fox, Dionisio Babo Soares >
+    au < exists ; exists ; 2009 ; 205 ; 9781921536502 ; 9781921536519 ; The 2006 Military Takeover in Fiji ; Jon Fraenkel, Stewart Firth, Brij V. Lal >
+    au < exists ; exists ; 2013 ; 476 ; 9781925021271 ; 9781925021288 ; 4000 Years of Migration and Cultural Exchange (Terra Australis 40) ; Peter Bellwood, Eusebio Dizon >
+
+  }
+}
