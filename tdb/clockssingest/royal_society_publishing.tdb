@@ -104,7 +104,7 @@
     au < zapped ; finished ; 2008 ; Biology Letters Volume 4 ; 4 >
     au < zapped ; finished ; 2009 ; Biology Letters Volume 5 ; 5 >
     au < zapped ; finished ; 2010 ; Biology Letters Volume 6 ; 6 >
-    au < finished ; crawling ; 2011 ; Biology Letters Volume 7 ; 7 >
+    au < ready ; crawling ; 2011 ; Biology Letters Volume 7 ; 7 >
     au < finished ; crawling ; 2012 ; Biology Letters Volume 8 ; 8 >
     au < crawling ; exists ; 2013 ; Biology Letters Volume 9 ; 9 >
     au < manifest ; exists ; 2014 ; Biology Letters Volume 10 ; 10 >
@@ -150,8 +150,8 @@
     au < finished ; frozen ; 2006 ; Journal of the Royal Society Interface Volume 3 ; 3 >
     au < finished ; frozen ; 2007 ; Journal of the Royal Society Interface Volume 4 ; 4 >
     au < zapped ; finished ; 2008 ; Journal of the Royal Society Interface Volume 5 ; 5 >
-    au < finished ; crawling ; 2009 ; Journal of the Royal Society Interface Volume 6 ; 6 >
-    au < finished ; frozen ; 2010 ; Journal of the Royal Society Interface Volume 7 ; 7 >
+    au < ready ; crawling ; 2009 ; Journal of the Royal Society Interface Volume 6 ; 6 >
+    au < ready ; crawling ; 2010 ; Journal of the Royal Society Interface Volume 7 ; 7 >
     au < finished ; crawling ; 2011 ; Journal of the Royal Society Interface Volume 8 ; 8 >
     au < finished ; crawling ; 2012 ; Journal of the Royal Society Interface Volume 9 ; 9 >
     au < crawling ; exists ; 2013 ; Journal of the Royal Society Interface Volume 10 ; 10 >
@@ -235,7 +235,7 @@
     au < finished ; frozen ; 2007 ; Notes and Records of the Royal Society Volume 61 ; 61 >
     au < finished ; crawling ; 2008 ; Notes and Records of the Royal Society Volume 62 ; 62 >
     au < zapped ; finished ; 2009 ; Notes and Records of the Royal Society Volume 63 ; 63 >
-    au < finished ; crawling ; 2010 ; Notes and Records of the Royal Society Volume 64 ; 64 >
+    au < ready ; crawling ; 2010 ; Notes and Records of the Royal Society Volume 64 ; 64 >
     au < finished ; crawling ; 2011 ; Notes and Records of the Royal Society Volume 65 ; 65 >
     au < finished ; crawling ; 2012 ; Notes and Records of the Royal Society Volume 66 ; 66 >
     au < crawling ; exists ; 2013 ; Notes and Records of the Royal Society Volume 67 ; 67 >
@@ -461,8 +461,8 @@
     au < manifest ; exists ; 2003 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 361 ; 361 >
     au < manifest ; exists ; 2004 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 362 ; 362 >
     au < manifest ; exists ; 2005 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 363 ; 363 >
-    au < crawling ; exists ; 2006 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 364 ; 364 >
-    au < crawling ; exists ; 2007 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 365 ; 365 >
+    au < ready ; exists ; 2006 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 364 ; 364 >
+    au < ready ; exists ; 2007 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 365 ; 365 >
     au < finished ; frozen ; 2008 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 366 ; 366 >
     au < finished ; frozen ; 2009 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 367 ; 367 >
     au < zapped ; finished ; 2010 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 368 ; 368 >
@@ -671,8 +671,8 @@
     au < manifest ; exists ; 2006 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 361 ; 361 >
     au < manifest ; exists ; 2007 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 362 ; 362 >
     au < zapped ; finished ; 2008 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 363 ; 363 >
-    au < finished ; frozen ; 2009 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 364 ; 364 >
-    au < finished ; crawling ; 2010 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 365 ; 365 >
+    au < ready ; crawling ; 2009 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 364 ; 364 >
+    au < ready ; crawling ; 2010 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 365 ; 365 >
     au < finished ; crawling ; 2011 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 366 ; 366 >
     au < finished ; crawling ; 2012 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 367 ; 367 >
     au < crawling ; exists ; 2013 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 368 ; 368 >
@@ -1274,7 +1274,7 @@
     au < manifest ; exists ; 2006 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 462 ; 462 >
     au < manifest ; exists ; 2007 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 463 ; 463 >
     au < zapped ; finished ; 2008 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 464 ; 464 >
-    au < finished ; frozen ; 2009 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 465 ; 465 >
+    au < ready ; crawling ; 2009 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 465 ; 465 >
     au < zapped ; finished ; 2010 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 466 ; 466 >
     au < finished ; crawling ; 2011 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 467 ; 467 >
     au < finished ; crawling ; 2012 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 468 ; 468 >
@@ -1497,7 +1497,7 @@
     au < finished ; crawling ; 2007 ; Proceedings of the Royal Society B: Biological Sciences Volume 274 ; 274 >
     au < zapped ; finished ; 2008 ; Proceedings of the Royal Society B: Biological Sciences Volume 275 ; 275 >
     au < zapped ; finished ; 2009 ; Proceedings of the Royal Society B: Biological Sciences Volume 276 ; 276 >
-    au < finished ; frozen ; 2010 ; Proceedings of the Royal Society B: Biological Sciences Volume 277 ; 277 >
+    au < ready ; crawling ; 2010 ; Proceedings of the Royal Society B: Biological Sciences Volume 277 ; 277 >
     au < finished ; crawling ; 2011 ; Proceedings of the Royal Society B: Biological Sciences Volume 278 ; 278 >
     au < finished ; crawling ; 2012 ; Proceedings of the Royal Society B: Biological Sciences Volume 279 ; 279 >
     au < crawling ; exists ; 2013 ; Proceedings of the Royal Society B: Biological Sciences Volume 280 ; 280 >
