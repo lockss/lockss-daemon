@@ -9,6 +9,20 @@
   comment[0] = do not include Aviation technologies, eissn 2029-9974
 
   {
+
+      title <
+        name = The Baltic Journal of Road and Bridge Engineering ;
+        issn = 1822-427X ;
+        eissn = 1822-4288 ;
+        issnl = 1822-427X
+      >
+    plugin = needs.new.plugin
+    param[base_url] = http://www.bjrbe.vgtu.lt/
+    
+
+  }
+
+  {
     title <
       name = Business: Theory and Practice ;
       issn = 1648-0627 ;
