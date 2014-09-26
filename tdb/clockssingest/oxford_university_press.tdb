@@ -7352,7 +7352,7 @@
     param[base_url] = http://hmg.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Human Molecular Genetics Volume 17 ; 17 ; >
+    au < superseded ; down ; 2008 ; Human Molecular Genetics Volume 17 [superseded] ; 17 ; >
     au < zapped ; finished ; 2009 ; Human Molecular Genetics Volume 18 ; 18 ; reingest3.clockss.org:8083 >
 
     }
@@ -7378,7 +7378,7 @@
     au < manifest ; exists ; 2005 ; Human Molecular Genetics Volume 14 ; 14 ; >
     au < manifest ; exists ; 2006 ; Human Molecular Genetics Volume 15 ; 15 ; >
     au < manifest ; exists ; 2007 ; Human Molecular Genetics Volume 16 ; 16 ; >
-    au < doNotProcess ; doNotProcess ; 2008 ; Human Molecular Genetics Volume 17 ; 17 ; >
+    au < manifest ; exists ; 2008 ; Human Molecular Genetics Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Human Molecular Genetics Volume 18 ; 18 ; >
     au < finished ; frozen ; 2010 ; Human Molecular Genetics Volume 19 ; 19 ; >
     au < finished ; crawling ; 2011 ; Human Molecular Genetics Volume 20 ; 20 ; >
@@ -7702,7 +7702,7 @@
     param[base_url] = http://ietcom.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; IEICE Transactions on Communications Volume E91-B ; E91-B ; >
+    au < zapped ; superseded ; 2008 ; IEICE Transactions on Communications Volume E91-B [superseded] ; E91-B ; >
 
     }
 
@@ -7724,7 +7724,7 @@
     param[base_url] = http://ietele.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; IEICE Transactions on Electronics Volume E91-C ; E91-C ; >
+    au < zapped ; superseded ; 2008 ; IEICE Transactions on Electronics Volume E91-C [superseded] ; E91-C ; >
 
     }
 
@@ -7746,7 +7746,7 @@
     param[base_url] = http://ietfec.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; IEICE Transactions on Fundamentals of Electronics, Communications and Computer Sciences Volume E91-A ; E91-A ; >
+    au < zapped ; superseded ; 2008 ; IEICE Transactions on Fundamentals of Electronics, Communications and Computer Sciences Volume E91-A [superseded] ; E91-A ; >
 
     }
 
@@ -7768,7 +7768,7 @@
     param[base_url] = http://ietisy.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; IEICE Transactions on Information and Systems Volume E91-D ; E91-D ; >
+    au < zapped ; superseded ; 2008 ; IEICE Transactions on Information and Systems Volume E91-D [superseded] ; E91-D ; >
 
     }
 
@@ -10131,7 +10131,7 @@
     param[base_url] = http://jcs.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Journal of Church and State Volume 50 ; 50 ; >
+    au < superseded ; down ; 2008 ; Journal of Church and State Volume 50 [superseded] ; 50 ; >
 
     }
 
@@ -10189,7 +10189,7 @@
     au < manifest ; exists ; 2005 ; Journal of Church and State Volume 47 ; 47 ; >
     au < manifest ; exists ; 2006 ; Journal of Church and State Volume 48 ; 48 ; >
     au < manifest ; exists ; 2007 ; Journal of Church and State Volume 49 ; 49 ; >
-    au < doNotProcess ; doNotProcess ; 2008 ; Journal of Church and State Volume 50 ; 50 ; >
+    au < manifest ; exists ; 2008 ; Journal of Church and State Volume 50 ; 50 ; >
     au < finished ; frozen ; 2009 ; Journal of Church and State Volume 51 ; 51 ; >
     au < finished ; crawling ; 2010 ; Journal of Church and State Volume 52 ; 52 ; >
     au < finished ; frozen ; 2011 ; Journal of Church and State Volume 53 ; 53 ; >
@@ -10237,7 +10237,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; finished ; 2008 ; Journal of Competition Law & Economics Volume 4 ; 4 ; >
-    au < down ; crawling ; 2009 ; Journal of Competition Law & Economics Volume 5 ; 5 ; >
+    au < zapped ; superseded ; 2009 ; Journal of Competition Law & Economics Volume 5 [superseded] ; 5 ; >
 
     }
 
@@ -10250,7 +10250,7 @@
     au < manifest ; exists ; 2006 ; Journal of Competition Law & Economics Volume 2 ; 2 ; >
     au < manifest ; exists ; 2007 ; Journal of Competition Law & Economics Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Competition Law & Economics Volume 4 ; 4 ; >
-    au < doNotProcess ; doNotProcess ; 2009 ; Journal of Competition Law & Economics Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2009 ; Journal of Competition Law & Economics Volume 5 ; 5 ; >
     au < finished ; crawling ; 2010 ; Journal of Competition Law & Economics Volume 6 ; 6 ; >
     au < finished ; frozen ; 2011 ; Journal of Competition Law & Economics Volume 7 ; 7 ; >
     au < finished ; crawling ; 2012 ; Journal of Competition Law & Economics Volume 8 ; 8 ; >
@@ -10275,8 +10275,8 @@
     param[base_url] = http://jcsl.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Journal of Conflict and Security Law Volume 13 ; 13 ; >
-    au < down ; crawling ; 2009 ; Journal of Conflict and Security Law Volume 14 ; 14 ; >
+    au < superseded ; down ; 2008 ; Journal of Conflict and Security Law Volume 13 [superseded] ; 13 ; >
+    au < zapped ; superseded ; 2009 ; Journal of Conflict and Security Law Volume 14 [superseded] ; 14 ; >
 
     }
 
@@ -10297,8 +10297,8 @@
     au < manifest ; exists ; 2005 ; Journal of Conflict and Security Law Volume 10 ; 10 ; >
     au < manifest ; exists ; 2006 ; Journal of Conflict and Security Law Volume 11 ; 11 ; >
     au < manifest ; exists ; 2007 ; Journal of Conflict and Security Law Volume 12 ; 12 ; >
-    au < doNotProcess ; doNotProcess ; 2008 ; Journal of Conflict and Security Law Volume 13 ; 13 ; >
-    au < doNotProcess ; doNotProcess ; 2009 ; Journal of Conflict and Security Law Volume 14 ; 14 ; >
+    au < manifest ; exists ; 2008 ; Journal of Conflict and Security Law Volume 13 ; 13 ; >
+    au < manifest ; exists ; 2009 ; Journal of Conflict and Security Law Volume 14 ; 14 ; >
     au < finished ; crawling ; 2010 ; Journal of Conflict and Security Law Volume 15 ; 15 ; >
     au < finished ; crawling ; 2011 ; Journal of Conflict and Security Law Volume 16 ; 16 ; >
     au < finished ; frozen ; 2012 ; Journal of Conflict and Security Law Volume 17 ; 17 ; >
@@ -10339,7 +10339,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Journal of Deaf Studies and Deaf Education Volume 13 ; 13 ; >
-    au < down ; crawling ; 2009 ; Journal of Deaf Studies and Deaf Education Volume 14 ; 14 ; >
+    au < zapped ; superseded ; 2009 ; Journal of Deaf Studies and Deaf Education Volume 14 [superseded] ; 14 ; >
 
     }
 
@@ -10361,7 +10361,7 @@
     au < manifest ; exists ; 2006 ; Journal of Deaf Studies and Deaf Education Volume 11 ; 11 ; >
     au < manifest ; exists ; 2007 ; Journal of Deaf Studies and Deaf Education Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Deaf Studies and Deaf Education Volume 13 ; 13 ; >
-    au < doNotProcess ; doNotProcess ; 2009 ; Journal of Deaf Studies and Deaf Education Volume 14 ; 14 ; >
+    au < manifest ; exists ; 2009 ; Journal of Deaf Studies and Deaf Education Volume 14 ; 14 ; >
     au < finished ; frozen ; 2010 ; Journal of Deaf Studies and Deaf Education Volume 15 ; 15 ; >
     au < finished ; frozen ; 2011 ; Journal of Deaf Studies and Deaf Education Volume 16 ; 16 ; >
     au < finished ; crawling ; 2012 ; Journal of Deaf Studies and Deaf Education Volume 17 ; 17 ; >
@@ -10387,7 +10387,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; finished ; 2008 ; Journal of Design History Volume 21 ; 21 ; >
-    au < down ; crawling ; 2009 ; Journal of Design History Volume 22 ; 22 ; >
+    au < zapped ; superseded ; 2009 ; Journal of Design History Volume 22 [superseded] ; 22 ; >
 
     }
 
@@ -10417,7 +10417,7 @@
     au < manifest ; exists ; 2006 ; Journal of Design History Volume 19 ; 19 ; >
     au < manifest ; exists ; 2007 ; Journal of Design History Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Design History Volume 21 ; 21 ; >
-    au < doNotProcess ; doNotProcess ; 2009 ; Journal of Design History Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2009 ; Journal of Design History Volume 22 ; 22 ; >
     au < finished ; crawling ; 2010 ; Journal of Design History Volume 23 ; 23 ; >
     au < finished ; frozen ; 2011 ; Journal of Design History Volume 24 ; 24 ; >
     au < finished ; crawling ; 2012 ; Journal of Design History Volume 25 ; 25 ; >
@@ -10443,7 +10443,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Journal of Economic Geography Volume 8 ; 8 ; >
-    au < down ; crawling ; 2009 ; Journal of Economic Geography Volume 9 ; 9 ; >
+    au < zapped ; superseded ; 2009 ; Journal of Economic Geography Volume 9 [superseded] ; 9 ; >
 
     }
 
@@ -10462,7 +10462,7 @@
     au < manifest ; exists ; 2006 ; Journal of Economic Geography Volume 6 ; 6 ; >
     au < manifest ; exists ; 2007 ; Journal of Economic Geography Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Economic Geography Volume 8 ; 8 ; >
-    au < doNotProcess ; doNotProcess ; 2009 ; Journal of Economic Geography Volume 9 ; 9 ; >
+    au < manifest ; exists ; 2009 ; Journal of Economic Geography Volume 9 ; 9 ; >
     au < finished ; crawling ; 2010 ; Journal of Economic Geography Volume 10 ; 10 ; >
     au < finished ; crawling ; 2011 ; Journal of Economic Geography Volume 11 ; 11 ; >
     au < finished ; crawling ; 2012 ; Journal of Economic Geography Volume 12 ; 12 ; >
@@ -10490,7 +10490,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; finished ; 2008 ; Journal of Electron Microscopy Volume 57 ; 57 ; >
-    au < down ; crawling ; 2009 ; Journal of Electron Microscopy Volume 58 ; 58 ; >
+    au < zapped ; superseded ; 2009 ; Journal of Electron Microscopy Volume 58 [superseded] ; 58 ; >
 
     }
 
@@ -10556,7 +10556,7 @@
     au < manifest ; exists ; 2006 ; Journal of Electron Microscopy Volume 55 ; 55 ; >
     au < manifest ; exists ; 2007 ; Journal of Electron Microscopy Volume 56 ; 56 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Electron Microscopy Volume 57 ; 57 ; >
-    au < doNotProcess ; doNotProcess ; 2009 ; Journal of Electron Microscopy Volume 58 ; 58 ; >
+    au < manifest ; exists ; 2009 ; Journal of Electron Microscopy Volume 58 ; 58 ; >
     au < finished ; crawling ; 2010 ; Journal of Electron Microscopy Volume 59 ; 59 ; >
     au < finished ; crawling ; 2011 ; Journal of Electron Microscopy Volume 60 ; 60 ; >
     au < finished ; frozen ; 2012 ; Journal of Electron Microscopy Volume 61 ; 61 ; >
@@ -10656,8 +10656,8 @@
     param[base_url] = http://jxb.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; exists ; 2008 ; Journal of Experimental Botany Volume 59 [to delete] ; 59 ; >
-    au < down ; frozen ; 2009 ; Journal of Experimental Botany Volume 60 ; 60 ; >
+    au < superseded ; exists ; 2008 ; Journal of Experimental Botany Volume 59 [to delete] ; 59 ; >
+    au < superseded ; down ; 2009 ; Journal of Experimental Botany Volume 60 [superseded] ; 60 ; >
 
     }
 
@@ -10726,7 +10726,7 @@
     au < manifest ; exists ; 2006 ; Journal of Experimental Botany Volume 57 ; 57 ; >
     au < manifest ; exists ; 2007 ; Journal of Experimental Botany Volume 58 ; 58 ; >
     au < manifest ; exists ; 2008 ; Journal of Experimental Botany Volume 59 ; 59 ; >
-    au < doNotProcess ; doNotProcess ; 2009 ; Journal of Experimental Botany Volume 60 ; 60 ; >
+    au < manifest ; exists ; 2009 ; Journal of Experimental Botany Volume 60 ; 60 ; >
     au < finished ; frozen ; 2010 ; Journal of Experimental Botany Volume 61 ; 61 ; >
     au < finished ; crawling ; 2011 ; Journal of Experimental Botany Volume 62 ; 62 ; >
     au < finished ; crawling ; 2012 ; Journal of Experimental Botany Volume 63 ; 63 ; >
@@ -11088,7 +11088,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Journal of the History of Collections Volume 20 ; 20 ; >
-    au < down ; crawling ; 2009 ; Journal of the History of Collections Volume 21 ; 21 ; >
+    au < superseded ; down ; 2009 ; Journal of the History of Collections Volume 21 [superseded] ; 21 ; >
 
     }
 
@@ -11117,7 +11117,7 @@
     au < manifest ; exists ; 2006 ; Journal of the History of Collections Volume 18 ; 18 ; >
     au < manifest ; exists ; 2007 ; Journal of the History of Collections Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of the History of Collections Volume 20 ; 20 ; >
-    au < doNotProcess ; doNotProcess ; 2009 ; Journal of the History of Collections Volume 21 ; 21 ; >
+    au < manifest ; exists ; 2009 ; Journal of the History of Collections Volume 21 ; 21 ; >
     au < finished ; crawling ; 2010 ; Journal of the History of Collections Volume 22 ; 22 ; >
     au < finished ; crawling ; 2011 ; Journal of the History of Collections Volume 23 ; 23 ; >
     au < finished ; frozen ; 2012 ; Journal of the History of Collections Volume 24 ; 24 ; >
@@ -11648,7 +11648,7 @@
     param[base_url] = http://jis.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Journal of Islamic Studies Volume 19 ; 19 ; >
+    au < superseded ; down ; 2008 ; Journal of Islamic Studies Volume 19 [superseded] ; 19 ; >
     au < zapped ; finished ; 2009 ; Journal of Islamic Studies Volume 20 ; 20 ; >
 
     }
@@ -11676,7 +11676,7 @@
     au < manifest ; exists ; 2005 ; Journal of Islamic Studies Volume 16 ; 16 ; >
     au < manifest ; exists ; 2006 ; Journal of Islamic Studies Volume 17 ; 17 ; >
     au < manifest ; exists ; 2007 ; Journal of Islamic Studies Volume 18 ; 18 ; >
-    au < doNotProcess ; doNotProcess ; 2008 ; Journal of Islamic Studies Volume 19 ; 19 ; >
+    au < manifest ; exists ; 2008 ; Journal of Islamic Studies Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Islamic Studies Volume 20 ; 20 ; >
     au < finished ; frozen ; 2010 ; Journal of Islamic Studies Volume 21 ; 21 ; >
     au < finished ; crawling ; 2011 ; Journal of Islamic Studies Volume 22 ; 22 ; >
@@ -11857,9 +11857,9 @@
     param[base_url] = http://jlms.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Journal of the London Mathematical Society Volume 77 ; 77 ; >
+    au < superseded ; down ; 2008 ; Journal of the London Mathematical Society Volume 77 [superseded] ; 77 ; >
     au < zapped ; finished ; 2008 ; Journal of the London Mathematical Society Volume 78 ; 78 ; >
-    au < down ; crawling ; 2009 ; Journal of the London Mathematical Society Volume 79 ; 79 ; >
+    au < superseded ; down ; 2009 ; Journal of the London Mathematical Society Volume 79 [superseded] ; 79 ; >
     au < zapped ; finished ; 2009 ; Journal of the London Mathematical Society Volume 80 ; 80 ; >
 
     }
@@ -11990,7 +11990,7 @@
     au < manifest ; exists ; 2006 ; Journal of the London Mathematical Society Volume 74 ; 74 ; >
     au < manifest ; exists ; 2007 ; Journal of the London Mathematical Society Volume 75 ; 75 ; >
     au < manifest ; exists ; 2007 ; Journal of the London Mathematical Society Volume 76 ; 76 ; >
-    au < doNotProcess ; doNotProcess ; 2008 ; Journal of the London Mathematical Society Volume 77 ; 77 ; >
+    au < manifest ; exists ; 2008 ; Journal of the London Mathematical Society Volume 77 ; 77 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of the London Mathematical Society Volume 78 ; 78 ; >
     au < finished ; crawling ; 2009 ; Journal of the London Mathematical Society Volume 79 ; 79 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of the London Mathematical Society Volume 80 ; 80 ; >
@@ -12387,7 +12387,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; finished ; 2008 ; Journal of the ICRU Volume 8 ; 8 ; >
-    au < down ; crawling ; 2009 ; Journal of the ICRU Volume 9 ; 9 ; >
+    au < superseded ; down ; 2009 ; Journal of the ICRU Volume 9 [superseded] ; 9 ; >
 
     }
 
@@ -14033,7 +14033,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; finished ; 2008 ; Medical Law Review Volume 16 ; 16 ; >
-    au < down ; crawling ; 2009 ; Medical Law Review Volume 17 ; 17 ; >
+    au < superseded ; down ; 2009 ; Medical Law Review Volume 17 [superseded] ; 17 ; >
 
     }
 
@@ -15389,7 +15389,7 @@
     param[base_url] = http://ndt.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; frozen ; 2008 ; Nephrology Dialysis Transplantation Volume 23 ; 23 ; >
+    au < superseded ; down ; 2008 ; Nephrology Dialysis Transplantation Volume 23 [superseded] ; 23 ; >
     au < superseded ; down ; 2009 ; Nephrology Dialysis Transplantation Volume 24 [superseded] ; 24 ; >
 
     }
@@ -15421,7 +15421,7 @@
     au < manifest ; exists ; 2005 ; Nephrology Dialysis Transplantation Volume 20 ; 20 ; >
     au < manifest ; exists ; 2006 ; Nephrology Dialysis Transplantation Volume 21 ; 21 ; >
     au < manifest ; exists ; 2007 ; Nephrology Dialysis Transplantation Volume 22 ; 22 ; >
-    au < doNotProcess ; doNotProcess ; 2008 ; Nephrology Dialysis Transplantation Volume 23 ; 23 ; >
+    au < manifest ; exists ; 2008 ; Nephrology Dialysis Transplantation Volume 23 ; 23 ; >
     au < finished ; crawling ; 2009 ; Nephrology Dialysis Transplantation Volume 24 ; 24 ; >
     au < finished ; crawling ; 2010 ; Nephrology Dialysis Transplantation Volume 25 ; 25 ; >
     au < finished ; manifest ; 2011 ; Nephrology Dialysis Transplantation Volume 26 ; 26 ; >
@@ -16656,9 +16656,9 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; finished ; 2008 ; Past & Present Volume 198 ; 198 ; >
-    au < down ; crawling ; 2008 ; Past & Present Volume 199 ; 199 ; >
+    au < superseded ; down ; 2008 ; Past & Present Volume 199 [superseded] ; 199 ; >
     au < zapped ; finished ; 2008 ; Past & Present Volume 200 ; 200 ; >
-    au < down ; crawling ; 2008 ; Past & Present Volume 201 ; 201 ; >
+    au < superseded ; down ; 2008 ; Past & Present Volume 201 [superseded] ; 201 ; >
     au < zapped ; finished ; 2009 ; Past & Present Volume 202 ; 202 ; >
     au < zapped ; finished ; 2009 ; Past & Present Volume 203 ; 203 ; >
 
@@ -16867,9 +16867,9 @@
     au < manifest ; exists ; 2007 ; Past & Present Volume 196 ; 196 ; >
     au < manifest ; exists ; 2007 ; Past & Present Volume 197 ; 197 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Past & Present Volume 198 ; 198 ; >
-    au < doNotProcess ; doNotProcess ; 2008 ; Past & Present Volume 199 ; 199 ; >
+    au < manifest ; exists ; 2008 ; Past & Present Volume 199 ; 199 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Past & Present Volume 200 ; 200 ; >
-    au < doNotProcess ; doNotProcess ; 2008 ; Past & Present Volume 201 ; 201 ; >
+    au < manifest ; exists ; 2008 ; Past & Present Volume 201 ; 201 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Past & Present Volume 202 ; 202 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Past & Present Volume 203 ; 203 ; >
     au < finished ; crawling ; 2009 ; Past & Present Volume 204 ; 204 ; >
@@ -17067,7 +17067,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; frozen ; 2008 ; Plant and Cell Physiology Volume 49 ; 49 ; >
-    au < down ; crawling ; 2009 ; Plant and Cell Physiology Volume 50 ; 50 ; >
+    au < superseded ; down ; 2009 ; Plant and Cell Physiology Volume 50 [superseded] ; 50 ; >
 
     }
 
@@ -17979,7 +17979,7 @@
     param[base_url] = http://qjmed.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; QJM: An International Journal of Medicine Volume 101 ; 101 ; >
+    au < superseded ; down ; 2008 ; QJM: An International Journal of Medicine Volume 101 [superseded] ; 101 ; >
     au < down ; crawling ; 2009 ; QJM: An International Journal of Medicine Volume 102 ; 102 ; >
 
     }
@@ -18113,7 +18113,7 @@
     au < manifest ; exists ; 2005 ; QJM: An International Journal of Medicine Volume 98 ; 98 ; >
     au < manifest ; exists ; 2006 ; QJM: An International Journal of Medicine Volume 99 ; 99 ; >
     au < manifest ; exists ; 2007 ; QJM: An International Journal of Medicine Volume 100 ; 100 ; >
-    au < doNotProcess ; doNotProcess ; 2008 ; QJM: An International Journal of Medicine Volume 101 ; 101 ; >
+    au < manifest ; exists ; 2008 ; QJM: An International Journal of Medicine Volume 101 ; 101 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; QJM: An International Journal of Medicine Volume 102 ; 102 ; >
     au < finished ; frozen ; 2010 ; QJM: An International Journal of Medicine Volume 103 ; 103 ; >
     au < finished ; crawling ; 2011 ; QJM: An International Journal of Medicine Volume 104 ; 104 ; >
@@ -18253,7 +18253,7 @@
     param[base_url] = http://qjmam.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 61 ; 61 ; >
+    au < superseded ; down ; 2008 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 61 [superseded] ; 61 ; >
     au < down ; crawling ; 2009 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 62 ; 62 ; >
 
     }
@@ -18323,7 +18323,7 @@
     au < manifest ; exists ; 2005 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 58 ; 58 ; >
     au < manifest ; exists ; 2006 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 59 ; 59 ; >
     au < manifest ; exists ; 2007 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 60 ; 60 ; >
-    au < doNotProcess ; doNotProcess ; 2008 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 61 ; 61 ; >
+    au < manifest ; exists ; 2008 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 61 ; 61 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 62 ; 62 ; >
     au < finished ; crawling ; 2010 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 63 ; 63 ; >
     au < finished ; frozen ; 2011 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 64 ; 64 ; >
@@ -20133,17 +20133,17 @@
     param[base_url] = http://toxsci.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Toxicological Sciences Volume 101 ; 101 ; >
+    au < superseded ; down ; 2008 ; Toxicological Sciences Volume 101 [superseded] ; 101 ; >
     au < down ; frozen ; 2008 ; Toxicological Sciences Volume 102 ; 102 ; >
-    au < down ; crawling ; 2008 ; Toxicological Sciences Volume 103 ; 103 ; >
+    au < superseded ; down ; 2008 ; Toxicological Sciences Volume 103 [superseded] ; 103 ; >
     au < zapped ; finished ; 2008 ; Toxicological Sciences Volume 104 ; 104 ; >
-    au < down ; crawling ; 2008 ; Toxicological Sciences Volume 105 ; 105 ; >
+    au < superseded ; down ; 2008 ; Toxicological Sciences Volume 105 [superseded] ; 105 ; >
     au < zapped ; finished ; 2008 ; Toxicological Sciences Volume 106 ; 106 ; >
     au < zapped ; finished ; 2009 ; Toxicological Sciences Volume 107 ; 107 ; reingest4.clockss.org:8082 >
     au < zapped ; finished ; 2009 ; Toxicological Sciences Volume 108 ; 108 ; reingest4.clockss.org:8082 >
     au < zapped ; finished ; 2009 ; Toxicological Sciences Volume 109 ; 109 ; reingest4.clockss.org:8082 >
     au < zapped ; finished ; 2009 ; Toxicological Sciences Volume 110 ; 110 ; reingest4.clockss.org:8082 >
-    au < down ; crawling ; 2009 ; Toxicological Sciences Volume 111 ; 111 ; >
+    au < superseded ; down ; 2009 ; Toxicological Sciences Volume 111 [superseded] ; 111 ; >
 
     }
 
@@ -20252,11 +20252,11 @@
     au < manifest ; exists ; 2007 ; Toxicological Sciences Volume 98 ; 98 ; >
     au < manifest ; exists ; 2007 ; Toxicological Sciences Volume 99 ; 99 ; >
     au < manifest ; exists ; 2007 ; Toxicological Sciences Volume 100 ; 100 ; >
-    au < doNotProcess ; doNotProcess ; 2008 ; Toxicological Sciences Volume 101 ; 101 ; >
+    au < manifest ; exists ; 2008 ; Toxicological Sciences Volume 101 ; 101 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Toxicological Sciences Volume 102 ; 102 ; >
-    au < doNotProcess ; doNotProcess ; 2008 ; Toxicological Sciences Volume 103 ; 103 ; >
+    au < manifest ; exists ; 2008 ; Toxicological Sciences Volume 103 ; 103 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Toxicological Sciences Volume 104 ; 104 ; >
-    au < doNotProcess ; doNotProcess ; 2008 ; Toxicological Sciences Volume 105 ; 105 ; >
+    au < manifest ; exists ; 2008 ; Toxicological Sciences Volume 105 ; 105 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Toxicological Sciences Volume 106 ; 106 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Toxicological Sciences Volume 107 ; 107 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Toxicological Sciences Volume 108 ; 108 ; >
