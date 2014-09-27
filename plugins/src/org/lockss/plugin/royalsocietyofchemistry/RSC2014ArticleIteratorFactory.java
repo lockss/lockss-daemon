@@ -1,5 +1,5 @@
 /*
- * $Id: RSC2014ArticleIteratorFactory.java,v 1.2 2014-06-23 16:06:50 etenbrink Exp $
+ * $Id: RSC2014ArticleIteratorFactory.java,v 1.3 2014-09-27 01:27:55 etenbrink Exp $
  */
 
 /*
@@ -49,23 +49,20 @@ public class RSC2014ArticleIteratorFactory
   protected static final String ROOT_TEMPLATE = "\"%sen/content/\", base_url";
   
   protected static final String PATTERN_TEMPLATE =
-      "\"^%sen/content/article(?:landing|html|pdf)/%d/%s/\", " +
+      "\"^%sen/content/article(?:landing|pdf)/%d/%s/\", " +
       "base_url, year, journal_code";
   
   /*
    * various aspects of an article
    * http://pubs.rsc.org/en/content/articlelanding/2009/gc/b906831g
-   * http://pubs.rsc.org/en/content/articlehtml/2009/gc/b906831g
    * http://pubs.rsc.org/en/content/articlepdf/2009/gc/b906831g
+   * 
+   * http://pubs.rsc.org/en/content/articlehtml/2009/gc/b906831g  (NOT collected!)
    */
   
   // Identify groups in the pattern "/article(landing|html|pdf)/(<year>/<journalcode>)/(<doi>).*
   static final Pattern ABSTRACT_PATTERN = Pattern.compile(
       "/articlelanding/([0-9]{4}/[^/]+)/([^/?&]+)$",
-      Pattern.CASE_INSENSITIVE);
-  
-  static final Pattern HTML_PATTERN = Pattern.compile(
-      "/articlehtml/([0-9]{4}/[^/]+)/([^/?&]+)$",
       Pattern.CASE_INSENSITIVE);
   
   static final Pattern PDF_PATTERN = Pattern.compile(
@@ -74,7 +71,6 @@ public class RSC2014ArticleIteratorFactory
   
   // how to change from one form (aspect) of article to another
   static final String ABSTRACT_REPLACEMENT = "/articlelanding/$1/$2";
-  static final String HTML_REPLACEMENT = "/articlehtml/$1/$2";
   static final String PDF_REPLACEMENT = "/articlepdf/$1/$2";
   
   public Iterator<ArticleFiles> createArticleIterator(
@@ -90,9 +86,10 @@ public class RSC2014ArticleIteratorFactory
         PDF_PATTERN, PDF_REPLACEMENT,
         ArticleFiles.ROLE_FULL_TEXT_PDF);
     
-    builder.addAspect(
-        HTML_PATTERN, HTML_REPLACEMENT,
-        ArticleFiles.ROLE_FULL_TEXT_HTML);
+    // HTML is not collected
+    //    builder.addAspect(
+    //        HTML_PATTERN, HTML_REPLACEMENT,
+    //        ArticleFiles.ROLE_FULL_TEXT_HTML);
     
     // set up abstract to be an aspect that will trigger an ArticleFiles
     // NOTE - for the moment this also means it is considered a FULL_TEXT_CU
@@ -103,8 +100,7 @@ public class RSC2014ArticleIteratorFactory
         ArticleFiles.ROLE_ABSTRACT);
     
     builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA,
-        ArticleFiles.ROLE_ABSTRACT,
-        ArticleFiles.ROLE_FULL_TEXT_HTML);
+        ArticleFiles.ROLE_ABSTRACT);
     
     return builder.getSubTreeArticleIterator();
   }
