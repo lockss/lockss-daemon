@@ -1,5 +1,5 @@
 /*
- * $Id: TestRSC2014ArticleIteratorFactory.java,v 1.2 2014-07-21 03:28:28 tlipkis Exp $
+ * $Id: TestRSC2014ArticleIteratorFactory.java,v 1.3 2014-09-27 01:26:36 etenbrink Exp $
  */
 
 /*
@@ -140,16 +140,15 @@ public class TestRSC2014ArticleIteratorFactory extends ArticleIteratorTestCase {
     
     /*
      * http://pubs.rsc.org/en/content/articlelanding/2009/gc/b906831g
-     * http://pubs.rsc.org/en/content/articlehtml/2009/gc/b906831g
      * http://pubs.rsc.org/en/content/articlepdf/2009/gc/b906831g
      */
     // we match to 
     // "%sen/content/article(?:landing|html|pdf)/%d/%s/", base_url, year, journal_code
     assertMatchesRE(pat, "http://pubs.rsc.org/en/content/articlelanding/2013/an/b906831g");
-    assertMatchesRE(pat, "http://pubs.rsc.org/en/content/articlehtml/2013/an/b906831g");
     assertMatchesRE(pat, "http://pubs.rsc.org/en/content/articlepdf/2013/an/b906831g");
     
-    // but not to link or image 
+    // but not to html and not to link nor image
+    assertNotMatchesRE(pat, "http://pubs.rsc.org/en/content/articlehtml/2013/an/b906831g");
     assertNotMatchesRE(pat, "http://xlink.rsc.org/?doi=b906831g");
     assertNotMatchesRE(pat, "http://pubs.rsc.org/services/images/RSCpubs.ePlatform.Service.FreeContent.ImageService.svc/ImageService/image/GA?id=B90683G");
     
@@ -193,20 +192,12 @@ public class TestRSC2014ArticleIteratorFactory extends ArticleIteratorTestCase {
           deleteBlock(cu);
           ++deleted;
         }
-        if (url.contains("en/content/articlehtml/2013/an/S-003")) {
-          deleteBlock(cu);
-          ++deleted;
-        }
-        if (url.contains("en/content/articlehtml/2013/an/S-004")) {
-          deleteBlock(cu);
-          ++deleted;
-        }
         if (url.contains("en/content/articlepdf/2013/an/S-004")) {
           deleteBlock(cu);
           ++deleted;
         }
     }
-    assertEquals(4, deleted);
+    assertEquals(2, deleted);
     
     Iterator<ArticleFiles> it = au.getArticleIterator(MetadataTarget.Any());
     int count = 0;
@@ -236,14 +227,14 @@ public class TestRSC2014ArticleIteratorFactory extends ArticleIteratorTestCase {
     log.debug3("Article count is " + count);
     assertEquals(expCount, count);
     
-    // you will get a full text html for all but 2 articles
-    assertEquals(expCount-2, countFullTextHtml);
+    // you will get a full text html for no articles
+    assertEquals(0, countFullTextHtml);
     
     // you will get a full text pdf for all but 1 article
     assertEquals(expCount-1, countFullTextPdf);
     
-    // you will get metadata for ALL articles
-    assertEquals(expCount, countMetadata);
+    // you will get metadata for all but 1 article
+    assertEquals(expCount-1, countMetadata);
   }
   
   private void deleteBlock(CachedUrl cu) throws IOException {
