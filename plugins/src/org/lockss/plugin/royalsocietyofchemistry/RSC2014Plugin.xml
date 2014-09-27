@@ -13,18 +13,18 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Poll</string>
-        <string>6</string>
+        <string>7</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -55,7 +55,7 @@
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
-    <string>"^%sen/content/article(?:pdf|html)/%d/%s/[a-z0-9]+$", base_url, year, journal_code</string>
+    <string>"^%sen/content/articlepdf/%d/%s/[a-z0-9]+$", base_url, year, journal_code</string>
   </entry>
   <entry>
     <string>au_feature_urls</string>
@@ -75,6 +75,10 @@
     </map>
   </entry>
   <entry>
+    <string>plugin_notes</string>
+    <string>Currently, it is NOT allowed to preserve the full-text HTML view of articles (plain or enhanced).</string>
+  </entry>
+  <entry>
     <string>au_crawlrules</string>
     <list>
       <string>2,"^(?:%s)en/Error/", base_url</string>
@@ -84,7 +88,7 @@
       <string>2,"^(?:%sen/(?:account/|error/|content/openurl/|.*iscitedby=)|%s[?]doi=[^&amp;]+&amp;newsite=1)", base_url, resolver_url</string>
       <string>1,"^%s(?:services/images/|en/content/openurlimage/|en/journals/lockss[?]journalcode=%s&amp;volume=%s&amp;year=%d&amp;issue=)", base_url, journal_code, volume_name, year</string>
       <string>1,"^%s[?]doi=", resolver_url</string>
-      <string>1,"^%sen/content/article(?:landing|pdf|html)/%d/%s/[^/?.]+$", base_url, year, journal_code</string>
+      <string>1,"^%sen/content/article(?:landing|pdf)/%d/%s/[^/?.]+$", base_url, year, journal_code</string>
     </list>
   </entry>
   <entry>
