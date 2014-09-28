@@ -1,5 +1,5 @@
 /*
-* $Id: TestPeerJHtmlHashFilterFactory.java,v 1.3 2014-07-17 02:42:09 ldoan Exp $
+* $Id: TestPeerJHtmlHashFilterFactory.java,v 1.4 2014-09-28 06:04:12 ldoan Exp $
 */
 
 /*
@@ -46,6 +46,9 @@ public class TestPeerJHtmlHashFilterFactory extends LockssTestCase {
     fact = new PeerJHtmlHashFilterFactory();
   }
 
+ private static final String filteredStr = 
+      "<div class=\"block\"></div>";
+    
   private static final String withHead = 
       "<html>"
           + "<head>"
@@ -65,7 +68,6 @@ public class TestPeerJHtmlHashFilterFactory extends LockssTestCase {
          + "});"
          + "</script>"
          + "</div>";
-  private static final String withoutScript = "<div class=\"block\"></div>";
   
   private static final String withNoscript = 
       "<div class=\"block\">"
@@ -73,42 +75,12 @@ public class TestPeerJHtmlHashFilterFactory extends LockssTestCase {
         + "<div class=\"alert alert-warning\"></div>"
         + "</noscript>"
         + "</div>";
-  private static final String withoutNoscript = "<div class=\"block\"></div>";
   
   private static final String withComments =
       "<div class=\"block\">"
         + "<!-- empty element at the foot of the page -->"
         + "</div>";
-  private static final String withoutComments = "<div class=\"block\"></div>";
-
-  private static final String withTopNavbarInverse =
-      "<div class=\"block\">"
-        + "<div class=\"navbar navbar-fixed-top navbar-inverse\">"
-	+ "<div class=\"navbar-inner\">"
-        + "<div class=\"container\">"
-        + "<li class=\"divider\"></li>"
-        + "</div>"
-        + "</div>"
-        + "</div>"
-        + "</div>";
-  private static final String withoutTopNavbarInverse = 
-      "<div class=\"block\"></div>";
-  
-  private static final String withTopNavbarInner =
-      "<div class=\"block\">"
-        + "<div class=\"item-top-navbar-inner\">"
-        + "<div class=\"container\">"
-        + "<a href=\"/\" class=\"brand item-top-navbar-brand\""
-        + "<span class=\"item-top-navbar-social\">"
-        + "<a class=\"pj-socialism tw-soc\""
-        + "href=\"http://twitter.com/share?url=https://xxxxx.com/9999/"
-        + "&amp;via=thexxxx&amp;text=yyyyyyy\"</a>"
-        + "</span>"
-        + "</div></div>"
-        + "</div>";
-  private static final String withoutTopNavbarInner = 
-      "<div class=\"block\"></div>";
-  
+     
   private static final String withInstitutionAlert =
       "<div class=\"block\">"
         + "<div id=\"instit-alert\" "
@@ -122,10 +94,68 @@ public class TestPeerJHtmlHashFilterFactory extends LockssTestCase {
         + "See if you qualify <i class=\"icon-share-alt\"></i></a>"
         + "</div>"
         + "</div>";
-    private static final String withoutInstitutionAlert = 
-      "<div class=\"block\"></div>";
+  
+  private static final String withReadAnnounceAlert =
+      "<div class=\"block\">"
+        + "<div id=\"read-announce-alert\" "
+        + "class=\"well paper-well announcement-fixed\">"
+        + "<i class=\"icon-remove announce-close\"></i>"
+        + "<h2 class=\"slim\"><strong>Read</strong></h2>"
+        + "choosing to publish in XXX.<br> <strong><a class=\"open\" "
+        + "href=\"/about/interviews/\">Interviews</a></strong> / <strong>"
+        + "<a class=\"open\" href=\"/edu/\">case studies</a></strong>"
+        + "</div>"
+        + "</div>";
     
-      private static final String withAllLeftColumnExceptDownloadAs =
+  private static final String withQaAnnounceAlert =
+      "<div class=\"block\">"
+        + "<div id=\"qa-announce-alert\" "
+        + "class=\"well paper-well announcement-fixed\">"
+        + "<i class=\"icon-remove announce-close\"></i>"
+        + "<h2 class=\"slim\">Publish for <strong>free</strong></h2>"
+        + "waive your author fee<br> <strong><a class=\"open\" "
+        + "href=\"http://blog.com/yourownforfree\">Learn more</a></strong>"
+        + "</div>"
+        + "</div>";
+  
+  private static final String withSubmitAnnounceAlert =
+      "<div class=\"block\">"
+        + "<div id=\"submit-announce-alert\" "
+        + "class=\"well paper-well announcement-fixed\">"
+        + "<i class=\"icon-remove announce-close\"></i>"
+        + "<h2 class=\"slim\"><strong>Submit</strong> your next article</h2>"
+     	+ "<strong><a class=\"open\""
+        + "href=\"/about/interviews/\">Interviews</a></strong> / <strong>"
+     	+ "<a class=\"open\" href=\"/edu/\">case studies</a></strong>"
+     	+ "</div>"
+    	+ "</div>";
+  
+  private static final String withTopNavbarFixedTop =
+      "<div class=\"block\">"
+        + "<div class=\"navbar navbar-fixed-top navbar-inverse\">"
+	+ "<div class=\"navbar-inner\">"
+        + "<div class=\"container\">"
+        + "<li class=\"divider\"></li>"
+        + "</div>"
+        + "</div>"
+        + "</div>"
+        + "</div>";
+  
+  private static final String withItemTopNavbar =
+      "<div class=\"block\">"
+        + "<div class=\"item-top-navbar headroom headroom--top\">"
+        + "<div class=\"item-top-navbar-inner\">"
+        + "<div class=\"container\">"
+        + "<a href=\"/\" class=\"brand item-top-navbar-brand\""
+        + "<span class=\"item-top-navbar-social\">"
+        + "<a class=\"pj-socialism tw-soc\""
+        + "href=\"http://twitter.com/share?url=https://xxxxx.com/9999/"
+        + "&amp;via=thexxxx&amp;text=yyyyyyy\"</a>"
+        + "</span>"
+        + "</div></div></div>"
+        + "</div>";
+    
+  private static final String withAllLeftColumnExceptDownloadAs =
       "<div class=\"block\">"
         + "<div class=\"article-item-leftbar\">" 
         + "<div class=\"btn-group notification-actions-btn\">" 
@@ -176,7 +206,8 @@ public class TestPeerJHtmlHashFilterFactory extends LockssTestCase {
         + "</div>" 
         + "</div>" 
         + "</div>";
-    private static final String withoutAllLeftColumnExceptDownloadAs = 
+
+  private static final String withoutAllLeftColumnExceptDownloadAs = 
         "<div class=\"block\">"
           + "<div class=\"article-item-leftbar\">"
           + "<div class=\"btn-group notification-actions-btn\">"
@@ -194,7 +225,7 @@ public class TestPeerJHtmlHashFilterFactory extends LockssTestCase {
           + "</div></div></div></div></div></div>"
           + "</div>";
   
-  private static final String withRightbarWrap =
+  private static final String withAllRightColumnn =
       "<div class=\"block\">"
         + "<div class=\"span2 article-item-rightbar-wrap article-sidebar\""
         + "style=\"height: 21136px;\">"
@@ -209,8 +240,6 @@ public class TestPeerJHtmlHashFilterFactory extends LockssTestCase {
         + "<h3 class=\"slim\">Similar Academic Editors</h3>"
         + "</div>"
         + "</div>";
-  private static final String withoutRightbarWrap = 
-      "<div class=\"block\"></div>";
   
 private static final String withFlagModal =
       "<div class=\"block\">"
@@ -222,8 +251,6 @@ private static final String withFlagModal =
         + "</div>"
         + "</div>"
         + "</div>";
-  private static final String withoutFlagModal = 
-      "<div class=\"block\"></div>";
 
   private static final String withFollowModal =
       "<div class=\"block\">"
@@ -235,8 +262,6 @@ private static final String withFlagModal =
         + "</div>"
         + "</div>"
         + "</div>";
-  private static final String withoutFollowModal = 
-      "<div class=\"block\"></div>";
 
   private static final String withUnfollowModal =
       "<div class=\"block\">"
@@ -248,8 +273,6 @@ private static final String withFlagModal =
         + "</div>"
         + "</div>"
         + "</div>";
-  private static final String withoutUnfollowModal = 
-      "<div class=\"block\"></div>";
 
   private static final String withMetricsModal =
       "<div class=\"block\">"
@@ -260,8 +283,6 @@ private static final String withFlagModal =
          + "<div class=\"span12\"><p>Usage update</p>"
          + "</div></div></div></div>"
          + "</div>";
-  private static final String withoutMetricsModal = 
-      "<div class=\"block\"></div>";
   
   private static final String withShareModal =
       "<div class=\"block\">"
@@ -275,8 +296,6 @@ private static final String withFlagModal =
         + "data-url=\"https://xxxx.com/9999/\">Tweet</a>"
         + "</div></div></div></div>"
         + "</div>";
-  private static final String withoutShareModal = 
-      "<div class=\"block\"></div>";
   
   private static final String withCitingModal =
       "<div class=\"block\">"
@@ -291,8 +310,6 @@ private static final String withFlagModal =
         + "<i class=\"icon icon-spinner icon-spin\"></i></div>"
         + "</div>"
         + "</div>";
-  private static final String withoutCitingModal = 
-      "<div class=\"block\"></div>";
   
   private static final String withArticleLinksModal =
       "<div class=\"block\">"
@@ -311,8 +328,6 @@ private static final String withFlagModal =
         + "</div>"
         + "</div>"
         + "</div>";
-  private static final String withoutArticleLinksModal = 
-      "<div class=\"block\"></div>";
   
   private static final String withFoot =
       "<div class=\"block\">"
@@ -324,21 +339,6 @@ private static final String withFlagModal =
 	+ "data-target=\"theAteam\">the A team</a>"
 	+ "</div></div></div></div>"
 	+ "</div>";
-  private static final String withoutFoot =
-      "<div class=\"block\"></div>";
-
-  private static final String withAnnotationTabsContent =
-      "<div class=\"block\">"
-        + "<div class=\"tab-content annotation-tab-content\">"
-        + "<div class=\"tab-pane active\" id=\"feedback\">"
-        + "<div class=\"row-fluid annotation-feedback\">"
-        + "<h2>Add your feedback</h2>"
-        + "<div id=\"article-item-main-text\""
-        + "class=\"article-item-section-toggle\">"
-        + "</div></div></div></div>"
-        + "</div>";
-  private static final String withoutAnnotationTabsContent = 
-      "<div class=\"block\"></div>";
 
   private static final String withAnnotationTabsNav =
       "<div class=\"block\">"
@@ -349,8 +349,24 @@ private static final String withFlagModal =
         + "<i class=\"icon-comments\"></i> Questions</a></li>"
         + "</ul>"
         + "</div>";
-  private static final String withoutAnnotationTabsNav = 
-      "<div class=\"block\"></div>";
+    
+  private static final String withAnnotationTabsContent =
+      "<div class=\"block\">"
+        + "<div class=\"tab-content annotation-tab-content\">"
+        + "<div class=\"tab-pane active\" id=\"feedback\">"
+        + "<div class=\"row-fluid annotation-feedback\">"
+        + "<h2>Add your feedback</h2>"
+        + "<div id=\"article-item-main-text\""
+        + "class=\"article-item-section-toggle\">"
+        + "</div></div></div></div>"
+        + "</div>";
+
+  private static final String withAnnotationsOuterHeapmap =
+      "<div class=\"block\">"
+        + "<div class=\"annotations-outer-heatmap\">"
+        + "<div class=\"current-scroll\" "
+        + "style=\"height: 6.011233540001%; top: 0%;\"></div></div>"
+        + "</div>";
   
   public void testHeadFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
@@ -361,88 +377,61 @@ private static final String withFlagModal =
   public void testScriptFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(withScript), Constants.DEFAULT_ENCODING);
-    assertEquals(withoutScript, StringUtil.fromInputStream(actIn));
+    assertEquals(filteredStr, StringUtil.fromInputStream(actIn));
   }
 
   public void testNoscriptFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(withNoscript), Constants.DEFAULT_ENCODING);
-    assertEquals(withoutNoscript, StringUtil.fromInputStream(actIn));
+    assertEquals(filteredStr, StringUtil.fromInputStream(actIn));
   }
 
   public void testCommentsFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(withComments), Constants.DEFAULT_ENCODING);
-    assertEquals(withoutComments, StringUtil.fromInputStream(actIn));
-  }
-
-  public void testTopNavbarInverseFiltering() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau,
-        new StringInputStream(withTopNavbarInverse),
-          Constants.DEFAULT_ENCODING);
-    assertEquals(withoutTopNavbarInverse, StringUtil.fromInputStream(actIn));
+    assertEquals(filteredStr, StringUtil.fromInputStream(actIn));
   }
   
-  public void testTopNavbarInnerFiltering() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau,
-        new StringInputStream(withTopNavbarInner), Constants.DEFAULT_ENCODING);
-    assertEquals(withoutTopNavbarInner, StringUtil.fromInputStream(actIn));
-  }
-  
-  public void testRightbarWrapFiltering() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau,
-        new StringInputStream(withRightbarWrap), Constants.DEFAULT_ENCODING);
-    assertEquals(withoutRightbarWrap, StringUtil.fromInputStream(actIn));
-  }
-      
-  public void testFlagModalFiltering() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau,
-        new StringInputStream(withFlagModal), Constants.DEFAULT_ENCODING);
-    assertEquals(withoutFlagModal, StringUtil.fromInputStream(actIn));
-  }
-  
-  public void testFollowModalFiltering() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau,
-        new StringInputStream(withFollowModal), Constants.DEFAULT_ENCODING);
-    assertEquals(withoutFollowModal, StringUtil.fromInputStream(actIn));
-  }
-  
-  public void testUnfollowModalFiltering() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau,
-        new StringInputStream(withUnfollowModal), Constants.DEFAULT_ENCODING);
-    assertEquals(withoutUnfollowModal, StringUtil.fromInputStream(actIn));
-  }
-  
-  public void testShareModalFiltering() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau,
-        new StringInputStream(withShareModal), Constants.DEFAULT_ENCODING);
-    assertEquals(withoutShareModal, StringUtil.fromInputStream(actIn));
-  }
-
-  public void testMetricsModalFiltering() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau,
-        new StringInputStream(withMetricsModal), Constants.DEFAULT_ENCODING);
-    assertEquals(withoutMetricsModal, StringUtil.fromInputStream(actIn));
-  }
-  
-  public void testCitingModalFiltering() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau,
-        new StringInputStream(withCitingModal), Constants.DEFAULT_ENCODING);
-    assertEquals(withoutCitingModal, StringUtil.fromInputStream(actIn));
-  }
-  
-  public void testArticleLinksModalFiltering() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau,
-        new StringInputStream(withArticleLinksModal), 
-        Constants.DEFAULT_ENCODING);
-    assertEquals(withoutArticleLinksModal, StringUtil.fromInputStream(actIn));
-  }
-    
   public void testInstitutionAlertFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(withInstitutionAlert), 
         Constants.DEFAULT_ENCODING);
-    assertEquals(withoutInstitutionAlert, StringUtil.fromInputStream(actIn));
+    assertEquals(filteredStr, StringUtil.fromInputStream(actIn));
+  }
+  
+  public void testReadAnnounceAlertFiltering() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(withReadAnnounceAlert), 
+        Constants.DEFAULT_ENCODING);
+    assertEquals(filteredStr, StringUtil.fromInputStream(actIn));
+  }
+  
+  public void testQaAnnounceAlertFiltering() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(withQaAnnounceAlert), 
+        Constants.DEFAULT_ENCODING);
+    assertEquals(filteredStr, StringUtil.fromInputStream(actIn));
+  }
+    
+  public void testSubmitAnnounceAlertFiltering() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(withSubmitAnnounceAlert), 
+        Constants.DEFAULT_ENCODING);
+    assertEquals(filteredStr, StringUtil.fromInputStream(actIn));
+  }
+
+  public void testTopNavbarFixedTopFiltering() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(withTopNavbarFixedTop),
+        Constants.DEFAULT_ENCODING);
+    assertEquals(filteredStr, StringUtil.fromInputStream(actIn));
+  }
+  
+  public void testItemTopNavbarFiltering() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(withItemTopNavbar), 
+        Constants.DEFAULT_ENCODING);
+    assertEquals(filteredStr, StringUtil.fromInputStream(actIn));
   }
   
   public void testAllLeftColumnExceptDownloadAsFiltering() throws Exception {
@@ -452,26 +441,82 @@ private static final String withFlagModal =
     assertEquals(withoutAllLeftColumnExceptDownloadAs, 
         StringUtil.fromInputStream(actIn));
   }
+  
+  public void testAllRightColumnFiltering() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(withAllRightColumnn), Constants.DEFAULT_ENCODING);
+    assertEquals(filteredStr, StringUtil.fromInputStream(actIn));
+  }
+      
+  public void testFlagModalFiltering() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(withFlagModal), Constants.DEFAULT_ENCODING);
+    assertEquals(filteredStr, StringUtil.fromInputStream(actIn));
+  }
+  
+  public void testFollowModalFiltering() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(withFollowModal), Constants.DEFAULT_ENCODING);
+    assertEquals(filteredStr, StringUtil.fromInputStream(actIn));
+  }
+  
+  public void testUnfollowModalFiltering() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(withUnfollowModal), Constants.DEFAULT_ENCODING);
+    assertEquals(filteredStr, StringUtil.fromInputStream(actIn));
+  }
+  
+  public void testMetricsModalFiltering() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(withMetricsModal), Constants.DEFAULT_ENCODING);
+    assertEquals(filteredStr, StringUtil.fromInputStream(actIn));
+  }
+  
+  public void testShareModalFiltering() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(withShareModal), Constants.DEFAULT_ENCODING);
+    assertEquals(filteredStr, StringUtil.fromInputStream(actIn));
+  }
+
+
+  public void testCitingModalFiltering() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(withCitingModal), Constants.DEFAULT_ENCODING);
+    assertEquals(filteredStr, StringUtil.fromInputStream(actIn));
+  }
+  
+  public void testArticleLinksModalFiltering() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(withArticleLinksModal), 
+        Constants.DEFAULT_ENCODING);
+    assertEquals(filteredStr, StringUtil.fromInputStream(actIn));
+  }
     
   public void testFootFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(withFoot), Constants.DEFAULT_ENCODING);
-    assertEquals(withoutFoot, StringUtil.fromInputStream(actIn));
-  }
-  
-  public void testAnnotationTabsContentFiltering() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau,
-        new StringInputStream(withAnnotationTabsContent), 
-                                                 Constants.DEFAULT_ENCODING);
-    assertEquals(withoutAnnotationTabsContent, 
-                 StringUtil.fromInputStream(actIn));
+    assertEquals(filteredStr, StringUtil.fromInputStream(actIn));
   }
   
   public void testAnnotationTabsNavFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(withAnnotationTabsNav), 
-                                                 Constants.DEFAULT_ENCODING);
-    assertEquals(withoutAnnotationTabsNav, StringUtil.fromInputStream(actIn));
+        Constants.DEFAULT_ENCODING);
+    assertEquals(filteredStr, StringUtil.fromInputStream(actIn));
+  }
+    
+  public void testAnnotationTabsContentFiltering() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(withAnnotationTabsContent), 
+        Constants.DEFAULT_ENCODING);
+    assertEquals(filteredStr, StringUtil.fromInputStream(actIn));
+  }
+  
+  public void testAnnotationsOuterHeapmapFiltering() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(withAnnotationsOuterHeapmap), 
+        Constants.DEFAULT_ENCODING);
+    assertEquals(filteredStr, StringUtil.fromInputStream(actIn));
   }
 
 }
