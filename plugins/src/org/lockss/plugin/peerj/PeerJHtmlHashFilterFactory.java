@@ -1,5 +1,5 @@
 /*
- * $Id: PeerJHtmlHashFilterFactory.java,v 1.3 2014-07-17 02:41:45 ldoan Exp $
+ * $Id: PeerJHtmlHashFilterFactory.java,v 1.4 2014-09-28 05:56:06 ldoan Exp $
  */
 
 /*
@@ -49,7 +49,6 @@ import org.lockss.filter.FilterUtil;
 import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
-import org.lockss.util.Logger;
 import org.lockss.util.ReaderInputStream;
 
 /*
@@ -68,9 +67,6 @@ import org.lockss.util.ReaderInputStream;
  */
 public class PeerJHtmlHashFilterFactory implements FilterFactory {
   
-  private static Logger log = 
-      Logger.getLogger(PeerJHtmlHashFilterFactory.class);
-
   public InputStream createFilteredInputStream(ArchivalUnit au, 
                                           InputStream in, String encoding) {
 
@@ -82,28 +78,37 @@ public class PeerJHtmlHashFilterFactory implements FilterFactory {
         new TagNameFilter("head"),
         new TagNameFilter("script"),
         new TagNameFilter("noscript"),
+        // stylesheets
+        HtmlNodeFilters.tagWithAttribute("link", "rel", "stylesheet"),
         // filter out comments
         HtmlNodeFilters.comment(),
+        // from preprints article - ex: https://peerj.com/preprints/13v1/
+        // institution alert
+        HtmlNodeFilters.tagWithAttribute(
+            "div", "id", "instit-alert"),
+        // read annoucement alert
+        HtmlNodeFilters.tagWithAttribute(
+            "div", "id", "read-announce-alert"),
+        // qa announcement alert
+        HtmlNodeFilters.tagWithAttribute(
+            "div", "id", "qa-announce-alert"),
+        // submit announcement alert
+        HtmlNodeFilters.tagWithAttribute(
+            "div", "id", "submit-announce-alert"),    
         // top navbar - brand name, search, article, etc.
-        HtmlNodeFilters.tagWithAttribute(
-            "div", "class", "navbar navbar-fixed-top navbar-inverse"),
-        // top navbar - logo, socialism, etc.
-        HtmlNodeFilters.tagWithAttribute(
-            "div", "class", "item-top-navbar-inner"),
-            // left column - all except 'Download as' dropdown menu
+        HtmlNodeFilters.tagWithAttributeRegex(
+            "div", "class", "navbar-fixed-top"),
+        // top navbar - brand name, search, article, etc.
+        HtmlNodeFilters.tagWithAttributeRegex(
+            "div", "class", "item-top-navbar"),
+        // left column - all except 'Download as' dropdown menu
         HtmlNodeFilters.allExceptSubtree(
             HtmlNodeFilters.tagWithAttributeRegex(
                 "div", "class", "article-item-leftbar"),
             HtmlNodeFilters.tagWithAttribute("ul", "class", "dropdown-menu")),
         // right column - all
         HtmlNodeFilters.tagWithAttributeRegex(
-            "div", "class", ".*article-item-rightbar-wrap.*"),
-        // Overlay near bottom - institution alerts
-        HtmlNodeFilters.tagWithAttribute(
-            "div", "id", "instit-alert"),
-        // near top - socialism
-        HtmlNodeFilters.tagWithAttribute(
-            "div", "class", "pj-socialism-container"),
+            "div", "class", "article-item-rightbar-wrap"),
         // these modals are found after "Right sidebar" html code near bottom 
         HtmlNodeFilters.tagWithAttribute("div", "id", "flagModal"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "followModal"),
@@ -113,12 +118,15 @@ public class PeerJHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "citing-modal"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "article-links-modal"),
         // found under comment <!-- annotations -->
-        HtmlNodeFilters.tagWithAttribute(
-            "div", "class", "tab-content annotation-tab-content"),
-        HtmlNodeFilters.tagWithAttribute(
-           "ul", "class", "nav nav-tabs annotation-tabs-nav"),
+        HtmlNodeFilters.tagWithAttributeRegex(
+           "ul", "class", "annotation-tabs-nav"),
+        HtmlNodeFilters.tagWithAttributeRegex(
+            "div", "class", "annotation-tab-content"),
         // foot
         HtmlNodeFilters.tagWithAttribute("div", "class", "foot"),
+        // under foot
+        HtmlNodeFilters.tagWithAttribute(
+            "div", "class", "annotations-outer-heatmap"),
      };
     
     // removing attributes "style" and "itemprop", by adding the wanted
