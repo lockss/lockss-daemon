@@ -38,7 +38,7 @@
     param[journal_dir] = journal_of_japanese_philosophy
     attr[journal_id] = jjp
     
-    au < manifest ; 2013 ; Journal of Japanese Philosophy Volume 1 ; 1 >
+    au < testing ; 2013 ; Journal of Japanese Philosophy Volume 1 ; 1 >
     au < expected ; 2014 ; Journal of Japanese Philosophy Volume 2 ; 2 >
 
   }
@@ -57,7 +57,7 @@
     
     au < released ; 2011 ; Medaevalia Volume 32 ; 32 >
     au < released ; 2012 ; Medaevalia Volume 33 ; 33 >
-    au < manifest ; 2013 ; Medaevalia Volume 34 ; 34 >
+    au < testing ; 2013 ; Medaevalia Volume 34 ; 34 >
     au < expected ; 2014 ; Medaevalia Volume 35 ; 35 >
 
   }
