@@ -10279,7 +10279,7 @@
     >
 
     comment[journal_issn] = 0964-1866
-    param[journal_id] = ?
+    param[journal_id] = tc
     comment[0] = Online from 2012
 
     au < doNotProcess ; 2012 ; Therapeutic Communities: The International Journal of Therapeutic Communities Volume 33 ; 33 >
@@ -10298,7 +10298,7 @@
     >
 
     comment[journal_issn] = 1660-5373
-    param[journal_id] = ?
+    param[journal_id] = tr
     
     au < doNotProcess ; 1946 ; Tourism Review Volume 1 ; 1 >
     au < doNotProcess ; 1947 ; Tourism Review Volume 2 ; 2 >
@@ -10381,7 +10381,7 @@
     >
 
     comment[journal_issn] = 1754-2731
-    param[journal_id] = ?
+    param[journal_id] = tqm
     comment[0] = online from 2008 
     comment[continues] = 0954-478X
     
@@ -10404,7 +10404,7 @@
     >
 
     comment[journal_issn] = 0954-478X
-    param[journal_id] = ?
+    param[journal_id] = tqmm
     comment[continued_by] = 1754-2731
     
     au < doNotProcess ; 1988-1989 ; The TQM Magazine Volume 1 ; 1 >
@@ -10438,7 +10438,7 @@
     >
 
     comment[journal_issn] = 0968-4875
-    param[journal_id] = ?
+    param[journal_id] = tfq
     comment[merged_into] = 0954-478X
     
     au < doNotProcess ; 1993 ; Training for Quality Volume 1 ; 1 >
@@ -10458,7 +10458,7 @@
     >
 
     comment[journal_issn] = 1369-7234
-    param[journal_id] = ?
+    param[journal_id] = tst
     comment[0] = online from 2002 
     comment[continued_by] = 1477-7282
     
@@ -10475,7 +10475,7 @@
     >
 
     comment[journal_issn] = 1750-6166
-    param[journal_id] = ?
+    param[journal_id] = tg
     
     au < doNotProcess ; 2007 ; Transforming Government: People, Process and Policy Volume 1 ; 1 >
     au < doNotProcess ; 2008 ; Transforming Government: People, Process and Policy Volume 2 ; 2 >
@@ -10497,7 +10497,7 @@
     >
 
     comment[journal_issn] = 0305-5728
-    param[journal_id] = ?
+    param[journal_id] = vine
     
     au < doNotProcess ; 1971 ; VINE Volume 1 ; 1 >
     au < doNotProcess ; 1972 ; VINE Volume 2 ; 2 >
@@ -10555,7 +10555,7 @@
     >
 
     comment[journal_issn] = 0964-9425
-    param[journal_id] = ?
+    param[journal_id] = wimr
     comment[continued_by] = 1754-2413
     
     au < doNotProcess ; 1985-1986 ; Women in Management Review Volume 1 ; 1 >
@@ -10592,7 +10592,7 @@
     >
 
     comment[journal_issn] = 0043-8022
-    param[journal_id] = ?
+    param[journal_id] = ws
     comment[continued_by] = 1741-0401
     
     au < doNotProcess ; 1952 ; Work Study Volume 1 ; 1 >
@@ -10658,7 +10658,7 @@
     >
 
     comment[journal_issn] = 1366-3666
-    param[journal_id] = ?
+    param[journal_id] = wwop
     
     au < doNotProcess ; 2000 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 4 ; 4 >
     au < doNotProcess ; 2001 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 5 ; 5 >
@@ -10687,7 +10687,7 @@
     >
 
     comment[journal_issn] = 1352-3074
-    param[journal_id] = ?
+    param[journal_id] = wcdm
     
     au < doNotProcess ; 1994 ; World Class Design to Manufacture Volume 1 ; 1 >
     au < doNotProcess ; 1995 ; World Class Design to Manufacture Volume 2 ; 2 >
@@ -10702,7 +10702,7 @@
     >
 
     comment[journal_issn] = 2042-5961
-    param[journal_id] = ? 
+    param[journal_id] = wjemsd
 
     au < doNotProcess ; 2010 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 6 ; 6 >
     au < exists ; 2011 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 7 ; 7 >
@@ -10720,7 +10720,7 @@
     >
 
     comment[journal_issn] = 2042-5945
-    param[journal_id] = ?
+    param[journal_id] = wjstsd
 
       au < doNotProcess ; 2010 ; World Journal of Science, Technology and Sustainable Development Volume 7 ; 7 >
       au < doNotProcess ; 2011 ; World Journal of Science, Technology and Sustainable Development Volume 8 ; 8 >
@@ -10739,7 +10739,7 @@
     >
 
     comment[journal_issn] = 1755-4217
-    param[journal_id] = ?
+    param[journal_id] = whatt
     
     au < doNotProcess ; 2009 ; Worldwide Hospitality and Tourism Themes Volume 1 ; 1 >
     au < doNotProcess ; 2010 ; Worldwide Hospitality and Tourism Themes Volume 2 ; 2 >
@@ -10759,7 +10759,7 @@
     >
 
     comment[journal_issn] = 1747-3616
-    param[journal_id] = ?
+    param[journal_id] = yc
     
     au < doNotProcess ; 1999-2000 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 1 ; 1 >
     au < doNotProcess ; 2001 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 2 ; 2 >
