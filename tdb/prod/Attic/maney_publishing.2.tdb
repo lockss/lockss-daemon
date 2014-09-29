@@ -2398,7 +2398,7 @@
     au < doNotProcess ; 2011 ; Journal of the British Archaeological Association Volume 164 ; 164 >  
     au < doNotProcess ; 2012 ; Journal of the British Archaeological Association Volume 165 ; 165 > 
     au < manifest ; 2013 ; Journal of the British Archaeological Association Volume 166 ; 166 > 
-    au < expected ; 2014 ; Journal of the British Archaeological Association Volume 167 ; 167 > 
+    au < manifest ; 2014 ; Journal of the British Archaeological Association Volume 167 ; 167 > 
 
   }
 
@@ -3341,7 +3341,7 @@
   {
 
     title <
-      name = Packaging, Transport, Storage and Security of Radioactive Material ;
+      name = Packaging, Transport, Storage & Security of Radioactive Material ;
       issn = 1746-5095 ;
       eissn = 1746-5109 ;
       issnl = 1746-5095 
@@ -3350,17 +3350,17 @@
     param[journal_id] = prm 
     comment[journal_id] = both ptssrm and prm point to same title
     
-    au < manifest ; 2004 ; Packaging, Transport, Storage and Security of Radioactive Material Volume 15 ; 15 > 
-    au < manifest ; 2005 ; Packaging, Transport, Storage and Security of Radioactive Material Volume 16 ; 16 > 
-    au < manifest ; 2006 ; Packaging, Transport, Storage and Security of Radioactive Material Volume 17 ; 17 > 
-    au < manifest ; 2007 ; Packaging, Transport, Storage and Security of Radioactive Material Volume 18 ; 18 > 
-    au < manifest ; 2008 ; Packaging, Transport, Storage and Security of Radioactive Material Volume 19 ; 19 > 
-    au < manifest ; 2009 ; Packaging, Transport, Storage and Security of Radioactive Material Volume 20 ; 20 > 
-    au < manifest ; 2010 ; Packaging, Transport, Storage and Security of Radioactive Material Volume 21 ; 21 > 
-    au < doNotProcess ; 2011 ; Packaging, Transport, Storage and Security of Radioactive Material Volume 22 ; 22 > 
-    au < doNotProcess ; 2012 ; Packaging, Transport, Storage and Security of Radioactive Material Volume 23 ; 23 >
-    au < manifest ; 2013 ; Packaging, Transport, Storage and Security of Radioactive Material Volume 24 ; 24 >
-    au < expected ; 2014 ; Packaging, Transport, Storage and Security of Radioactive Material Volume 25 ; 25 >
+    au < manifest ; 2004 ; Packaging, Transport, Storage & Security of Radioactive Material Volume 15 ; 15 > 
+    au < manifest ; 2005 ; Packaging, Transport, Storage & Security of Radioactive Material Volume 16 ; 16 > 
+    au < manifest ; 2006 ; Packaging, Transport, Storage & Security of Radioactive Material Volume 17 ; 17 > 
+    au < manifest ; 2007 ; Packaging, Transport, Storage & Security of Radioactive Material Volume 18 ; 18 > 
+    au < manifest ; 2008 ; Packaging, Transport, Storage & Security of Radioactive Material Volume 19 ; 19 > 
+    au < manifest ; 2009 ; Packaging, Transport, Storage & Security of Radioactive Material Volume 20 ; 20 > 
+    au < manifest ; 2010 ; Packaging, Transport, Storage & Security of Radioactive Material Volume 21 ; 21 > 
+    au < doNotProcess ; 2011 ; Packaging, Transport, Storage & Security of Radioactive Material Volume 22 ; 22 > 
+    au < doNotProcess ; 2012 ; Packaging, Transport, Storage & Security of Radioactive Material Volume 23 ; 23 >
+    au < manifest ; 2013 ; Packaging, Transport, Storage & Security of Radioactive Material Volume 24 ; 24 >
+    au < manifest ; 2014 ; Packaging, Transport, Storage & Security of Radioactive Material Volume 25 ; 25 >
 
   }
 

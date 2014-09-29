@@ -5806,10 +5806,10 @@
         au < manifest ; 1998 ; Clinical EEG and Neuroscience Volume 29 ; 29 >
         au < manifest ; 1999 ; Clinical EEG and Neuroscience Volume 30 ; 30 >
         au < manifest ; 2000 ; Clinical EEG and Neuroscience Volume 31 ; 31 >
-        au < exists ; 2001 ; Clinical EEG and Neuroscience Volume 32 ; 32 >
+        au < manifest ; 2001 ; Clinical EEG and Neuroscience Volume 32 ; 32 >
         au < manifest ; 2002 ; Clinical EEG and Neuroscience Volume 33 ; 33 >
-        au < exists ; 2003 ; Clinical EEG and Neuroscience Volume 34 ; 34 >
-        au < exists ; 2004 ; Clinical EEG and Neuroscience Volume 35 ; 35 >
+        au < manifest ; 2003 ; Clinical EEG and Neuroscience Volume 34 ; 34 >
+        au < manifest ; 2004 ; Clinical EEG and Neuroscience Volume 35 ; 35 >
         au < manifest ; 2005 ; Clinical EEG and Neuroscience Volume 36 ; 36 >
         au < manifest ; 2006 ; Clinical EEG and Neuroscience Volume 37 ; 37 >
         au < manifest ; 2007 ; Clinical EEG and Neuroscience Volume 38 ; 38 >
@@ -17789,7 +17789,7 @@
       param[base_url] = http://jnr.sagepub.com/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 2013 ; Jadavpur Journal of International Relations Volume 17 ; 17 >
+      au < manifest ; 2013 ; Jadavpur Journal of International Relations Volume 17 ; 17 >
       au < expected ; 2014 ; Jadavpur Journal of International Relations Volume 18 ; 18 >
 
     }
@@ -29812,7 +29812,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Medical Law International Volume 11 ; 11 >
         au < released ; 2012 ; Medical Law International Volume 12 ; 12 >
         au < manifest ; 2013 ; Medical Law International Volume 13 ; 13 >
-        au < expected ; 2014 ; Medical Law International Volume 14 ; 14 >
+        au < manifest ; 2014 ; Medical Law International Volume 14 ; 14 >
         
       }
       
