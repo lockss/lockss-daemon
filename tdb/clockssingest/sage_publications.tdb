@@ -2810,8 +2810,8 @@
       au < manifest ; exists ; 2005 ; Asia-Pacific Journal of Public Health Volume 17 ; 17 ; >
       au < manifest ; exists ; 2006 ; Asia-Pacific Journal of Public Health Volume 18 ; 18 ; >
       au < manifest ; exists ; 2007 ; Asia-Pacific Journal of Public Health Volume 19 ; 19 ; >
-      au < ready ; exists ; 2008 ; Asia-Pacific Journal of Public Health Volume 20 ; 20 ; >
-      au < ready ; exists ; 2009 ; Asia-Pacific Journal of Public Health Volume 21 ; 21 ; >
+      au < crawling ; exists ; 2008 ; Asia-Pacific Journal of Public Health Volume 20 ; 20 ; >
+      au < crawling ; exists ; 2009 ; Asia-Pacific Journal of Public Health Volume 21 ; 21 ; >
       au < zapped ; finished ; 2010 ; Asia-Pacific Journal of Public Health Volume 22 ; 22 ; >
       au < finished ; frozen ; 2011 ; Asia-Pacific Journal of Public Health Volume 23 ; 23 ; >
       au < finished ; frozen ; 2012 ; Asia-Pacific Journal of Public Health Volume 24 ; 24 ; >
@@ -6435,7 +6435,7 @@
       au < manifest ; exists ; 2005 ; Cooperation and Conflict Volume 40 ; 40 ; >
       au < manifest ; exists ; 2006 ; Cooperation and Conflict Volume 41 ; 41 ; >
       au < manifest ; exists ; 2007 ; Cooperation and Conflict Volume 42 ; 42 ; >
-      au < ready ; exists ; 2008 ; Cooperation and Conflict Volume 43 ; 43 ; >
+      au < crawling ; exists ; 2008 ; Cooperation and Conflict Volume 43 ; 43 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Cooperation and Conflict Volume 44 ; 44 ; >
       au < finished ; crawling ; 2010 ; Cooperation and Conflict Volume 45 ; 45 ; >
       au < finished ; crawling ; 2011 ; Cooperation and Conflict Volume 46 ; 46 ; >
@@ -8341,7 +8341,7 @@
         au < manifest ; exists ; 2005 ; The Economic and Labour Relations Review Volume 16 ; 16 >
         au < manifest ; exists ; 2006 ; The Economic and Labour Relations Review Volume 17 ; 17 >
         au < manifest ; exists ; 2007 ; The Economic and Labour Relations Review Volume 18 ; 18 >
-        au < ready ; exists ; 2008 ; The Economic and Labour Relations Review Volume 19 ; 19 >
+        au < crawling ; exists ; 2008 ; The Economic and Labour Relations Review Volume 19 ; 19 >
         au < crawling ; exists ; 2009 ; The Economic and Labour Relations Review Volume 20 ; 20 >
         au < crawling ; exists ; 2010 ; The Economic and Labour Relations Review Volume 21 ; 21 >
         au < crawling ; exists ; 2011 ; The Economic and Labour Relations Review Volume 22 ; 22 >
@@ -11902,7 +11902,7 @@
       au < manifest ; exists ; 2005 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 42 ; 42 ; >
       au < manifest ; exists ; 2006 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 43 ; 43 ; >
       au < manifest ; exists ; 2007 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 44 ; 44 ; >
-      au < ready ; exists ; 2008 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 45 ; 45 ; >
+      au < crawling ; exists ; 2008 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 45 ; 45 ; >
       au < crawling ; exists ; 2009 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 46 ; 46 ; >
       au < crawling ; exists ; 2010 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 47 ; 47 ; >
       au < crawling ; exists ; 2011 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 48 ; 48 ; >
@@ -18632,7 +18632,7 @@
         pluginSuffix = ClockssHighWirePressH20Plugin
 
         au < manifest ; exists ; 2007 ; Journal of Diabetes Science and Technology Volume 1 ; 1 ; >
-        au < ready ; exists ; 2008 ; Journal of Diabetes Science and Technology Volume 2 ; 2 ; >
+        au < crawling ; exists ; 2008 ; Journal of Diabetes Science and Technology Volume 2 ; 2 ; >
         au < crawling ; exists ; 2009 ; Journal of Diabetes Science and Technology Volume 3 ; 3 ; >
         au < crawling ; exists ; 2010 ; Journal of Diabetes Science and Technology Volume 4 ; 4 ; >
         au < crawling ; exists ; 2011 ; Journal of Diabetes Science and Technology Volume 5 ; 5 ; >
@@ -22389,7 +22389,7 @@
       au < manifest ; exists ; 2005 ; Journal of Pharmacy Technology Volume 21 ; 21 ; >
       au < manifest ; exists ; 2006 ; Journal of Pharmacy Technology Volume 22 ; 22 ; >
       au < manifest ; exists ; 2007 ; Journal of Pharmacy Technology Volume 23 ; 23 ; >
-      au < ready ; exists ; 2008 ; Journal of Pharmacy Technology Volume 24 ; 24 ; >
+      au < crawling ; exists ; 2008 ; Journal of Pharmacy Technology Volume 24 ; 24 ; >
       au < crawling ; exists ; 2009 ; Journal of Pharmacy Technology Volume 25 ; 25 ; >
       au < crawling ; exists ; 2010 ; Journal of Pharmacy Technology Volume 26 ; 26 ; >
       au < crawling ; exists ; 2011 ; Journal of Pharmacy Technology Volume 27 ; 27 ; >
@@ -22494,7 +22494,7 @@
       au < manifest ; exists ; 2006 ; Journal of Planning History Volume 5 ; 5 ; >
       au < manifest ; exists ; 2007 ; Journal of Planning History Volume 6 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Planning History Volume 7 ; 7 ; >
-      au < ready ; exists ; 2009 ; Journal of Planning History Volume 8 ; 8 ; >
+      au < crawling ; exists ; 2009 ; Journal of Planning History Volume 8 ; 8 ; >
       au < zapped ; finished ; 2010 ; Journal of Planning History Volume 9 ; 9 ; >
       au < finished ; crawling ; 2011 ; Journal of Planning History Volume 10 ; 10 ; >
       au < finished ; frozen ; 2012 ; Journal of Planning History Volume 11 ; 11 ; >
@@ -26189,8 +26189,8 @@
         au < manifest ; exists ; 2005 ; Measurement and Control Volume 38 ; 38 >
         au < manifest ; exists ; 2006 ; Measurement and Control Volume 39 ; 39 >
         au < manifest ; exists ; 2007 ; Measurement and Control Volume 40 ; 40 >
-        au < ready ; exists ; 2008 ; Measurement and Control Volume 41 ; 41 >
-        au < ready ; exists ; 2009 ; Measurement and Control Volume 42 ; 42 >
+        au < crawling ; exists ; 2008 ; Measurement and Control Volume 41 ; 41 >
+        au < crawling ; exists ; 2009 ; Measurement and Control Volume 42 ; 42 >
         au < crawling ; exists ; 2010 ; Measurement and Control Volume 43 ; 43 >
         au < crawling ; exists ; 2011 ; Measurement and Control Volume 44 ; 44 >
         au < crawling ; exists ; 2012 ; Measurement and Control Volume 45 ; 45 >
@@ -34341,7 +34341,7 @@
       au < manifest ; exists ; 2005 ; South African Journal of Psychology Volume 35 ; 35 ; >
       au < manifest ; exists ; 2006 ; South African Journal of Psychology Volume 36 ; 36 ; >
       au < manifest ; exists ; 2007 ; South African Journal of Psychology Volume 37 ; 37 ; >
-      au < ready ; exists ; 2008 ; South African Journal of Psychology Volume 38 ; 38 ; >
+      au < crawling ; exists ; 2008 ; South African Journal of Psychology Volume 38 ; 38 ; >
       au < testing ; exists ; 2009 ; South African Journal of Psychology Volume 39 ; 39 ; >
       au < crawling ; exists ; 2010 ; South African Journal of Psychology Volume 40 ; 40 ; >
       au < crawling ; exists ; 2011 ; South African Journal of Psychology Volume 41 ; 41 ; >
@@ -41233,7 +41233,7 @@
         au < manifest ; exists ; 2005 ; International Journal of Maritime History Volume 17 ; 17 ; >
         au < manifest ; exists ; 2006 ; International Journal of Maritime History Volume 18 ; 18 ; >
         au < manifest ; exists ; 2007 ; International Journal of Maritime History Volume 19 ; 19 ; >
-        au < ready ; exists ; 2008 ; International Journal of Maritime History Volume 20 ; 20 ; >
+        au < crawling ; exists ; 2008 ; International Journal of Maritime History Volume 20 ; 20 ; >
         au < crawling ; exists ; 2009 ; International Journal of Maritime History Volume 21 ; 21 ; >
         au < crawling ; exists ; 2010 ; International Journal of Maritime History Volume 22 ; 22 ; >
         au < crawling ; exists ; 2011 ; International Journal of Maritime History Volume 23 ; 23 ; >
@@ -41360,7 +41360,7 @@
         au < manifest ; exists ; 2005 ; Journal of Medical Screening Volume 12 ; 12 ; >
         au < manifest ; exists ; 2006 ; Journal of Medical Screening Volume 13 ; 13 ; >
         au < manifest ; exists ; 2007 ; Journal of Medical Screening Volume 14 ; 14 ; >
-        au < ready ; exists ; 2008 ; Journal of Medical Screening Volume 15 ; 15 ; >
+        au < crawling ; exists ; 2008 ; Journal of Medical Screening Volume 15 ; 15 ; >
         au < crawling ; exists ; 2009 ; Journal of Medical Screening Volume 16 ; 16 ; >
         au < crawling ; exists ; 2010 ; Journal of Medical Screening Volume 17 ; 17 ; >
         au < crawling ; exists ; 2011 ; Journal of Medical Screening Volume 18 ; 18 ; >
