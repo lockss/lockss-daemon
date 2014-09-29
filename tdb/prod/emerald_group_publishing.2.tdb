@@ -1645,7 +1645,7 @@
     >
 
     comment[journal_issn] = 1750-5933
-    param[journal_id] = ?
+    param[journal_id] = dmij
     comment[continued_by] = 2040-7122
     
     au < doNotProcess ; 2007 ; Direct Marketing: An International Journal Volume 1 ; 1 >
@@ -1663,7 +1663,7 @@
     >
 
     comment[journal_issn] = 0965-3562
-    param[journal_id] = ?
+    param[journal_id] = dpm
     
     au < doNotProcess ; 1992 ; Disaster Prevention and Management Volume 1 ; 1 >
     au < doNotProcess ; 1993 ; Disaster Prevention and Management Volume 2 ; 2 >
@@ -1700,7 +1700,7 @@
     >
 
     comment[journal_issn] = 1745-9265
-    param[journal_id] = ?
+    param[journal_id] = dat
     
     au < doNotProcess ; 2001 ; Drugs and Alcohol Today Volume 1 ; 1 >
     au < doNotProcess ; 2002 ; Drugs and Alcohol Today Volume 2 ; 2 >
@@ -1728,7 +1728,7 @@
     >
 
     comment[journal_issn] = 0040-0912
-    param[journal_id] = ?
+    param[journal_id] = et
     
     au < doNotProcess ; 1959 ; Education + Training Volume 1 ; 1 >
     au < doNotProcess ; 1960 ; Education + Training Volume 2 ; 2 >
@@ -1798,7 +1798,7 @@
     >
 
     comment[journal_issn] = 1753-7983
-    param[journal_id] = ?
+    param[journal_id] = ebs
     
     au < doNotProcess ; 2008 ; Education, Business and Society: Contemporary Middle Eastern Issues Volume 1 ; 1 >
     au < doNotProcess ; 2009 ; Education, Business and Society: Contemporary Middle Eastern Issues Volume 2 ; 2 >
@@ -1819,7 +1819,7 @@
     >
 
     comment[journal_issn] = 0264-0473
-    param[journal_id] = ?
+    param[journal_id] = el
     
     au < doNotProcess ; 1983 ; The Electronic Library Volume 1 ; 1 >
     au < doNotProcess ; 1984 ; The Electronic Library Volume 2 ; 2 >
@@ -1864,7 +1864,7 @@
     >
 
     comment[journal_issn] = 1364-5137
-    param[journal_id] = ?
+    param[journal_id] = err
     comment[merged_into] = 0950-4125
     
     au < doNotProcess ; 1997 ; Electronic Resources Review Volume 1 ; 1 >
@@ -1883,7 +1883,7 @@
     >
 
     comment[journal_issn] = 0142-5455
-    param[journal_id] = ?
+    param[journal_id] = er
     
     au < doNotProcess ; 1979 ; Employee Relations: An International Journal Volume 1 ; 1 >
     au < doNotProcess ; 1980 ; Employee Relations: An International Journal Volume 2 ; 2 >
@@ -1933,7 +1933,7 @@
     >
 
     comment[journal_issn] = 0968-4891
-    param[journal_id] = ?
+    param[journal_id] = eio
     comment[continued_by] = 1463-4449
     
     au < doNotProcess ; 1993 ; Empowerment in Organizations Volume 1 ; 1 >
@@ -1954,7 +1954,7 @@
     >
 
     comment[journal_issn] = 0264-4401
-    param[journal_id] = ?
+    param[journal_id] = ec
     
     au < doNotProcess ; 1984 ; Engineering Computations Volume 1 ; 1 >
     au < doNotProcess ; 1985 ; Engineering Computations Volume 2 ; 2 >
@@ -1999,7 +1999,7 @@
     >
 
     comment[journal_issn] = 0969-9988
-    param[journal_id] = ?
+    param[journal_id] = ecam
     
     au < doNotProcess ; 1994 ; Engineering, Construction and Architectural Management Volume 1 ; 1 >
     au < doNotProcess ; 1995 ; Engineering, Construction and Architectural Management Volume 2 ; 2 >
@@ -2034,7 +2034,7 @@
     >
 
     comment[journal_issn] = 0956-6163
-    param[journal_id] = ?
+    param[journal_id] = emh
     comment[continued_by] = 1477-7835
     
     au < doNotProcess ; 1990 ; Environmental Management and Health Volume 1 ; 1 >
@@ -2062,7 +2062,7 @@
     >
 
     comment[journal_issn] = 0261-0159
-    param[journal_id] = ?
+    param[journal_id] = eoi
     comment[continued_by] = 2040-7149
     
     au < doNotProcess ; 1981 ; Equal Opportunities International Volume 1 ; 1 >
@@ -2105,7 +2105,7 @@
     >
 
     comment[journal_issn] = 2040-7149
-    param[journal_id] = ?
+    param[journal_id] = edi
     comment[0] = online from 2010  
     
     au < doNotProcess ; 2010 ; Equality, Diversity and Inclusion: An International Journal Volume 29 ; 29 >
@@ -2125,7 +2125,7 @@
     >
 
     comment[journal_issn] = 1757-0980
-    param[journal_id] = ?
+    param[journal_id] = eihsc
     
     au < doNotProcess ; 2008 ; Ethnicity and Inequalities in Health and Social Care Volume 1 ; 1 >
     au < doNotProcess ; 2009 ; Ethnicity and Inequalities in Health and Social Care Volume 2 ; 2 >
@@ -2146,7 +2146,7 @@
     >
 
     comment[journal_issn] = 1450-2194
-    param[journal_id] = ?
+    param[journal_id] = emjb
     
     au < doNotProcess ; 2006 ; EuroMed Journal of Business Volume 1 ; 1 >
     au < doNotProcess ; 2007 ; EuroMed Journal of Business Volume 2 ; 2 >
@@ -2169,7 +2169,7 @@
     >
 
     comment[journal_issn] = 0955-534X
-    param[journal_id] = ?
+    param[journal_id] = ebr
     comment[0] = online from 1989
     
     au < doNotProcess ; 1989 ; European Business Review Volume 89 ; 89 >
@@ -2210,7 +2210,7 @@
     >
 
     comment[journal_issn] = 1460-1060
-    param[journal_id] = ?
+    param[journal_id] = ejim
     
     au < doNotProcess ; 1998 ; European Journal of Innovation Management Volume 1 ; 1 >
     au < doNotProcess ; 1999 ; European Journal of Innovation Management Volume 2 ; 2 >
@@ -2241,7 +2241,7 @@
     >
 
     comment[journal_issn] = 0309-0566
-    param[journal_id] = ?
+    param[journal_id] = ejm
   
     au < doNotProcess ; 1967 ; European Journal of Marketing Volume 1 ; 1 >
     au < doNotProcess ; 1968 ; European Journal of Marketing Volume 2 ; 2 >
@@ -2303,7 +2303,7 @@
     >
 
     comment[journal_issn] = 0953-3230
-    param[journal_id] = ?
+    param[journal_id] = ed
     comment[0] = online from 1989
     comment[merged_into] = 1362-0436
 
@@ -2311,7 +2311,7 @@
     au < doNotProcess ; 1990 ; Executive Development Volume 3 ; 3 >
     au < doNotProcess ; 1991 ; Executive Development Volume 4 ; 4 >
     au < doNotProcess ; 1992 ; Executive Development Volume 5 ; 5 >
-    au < doNotProcess ; 1993 ; Executive Development Volume 6 ; 6 >    
+    au < doNotProcess ; 1993 ; Executive Development Volume 6 ; 6 >
     au < doNotProcess ; 1994 ; Executive Development Volume 7 ; 7 >
     au < doNotProcess ; 1995 ; Executive Development Volume 8 ; 8 >
 
@@ -2326,7 +2326,7 @@
     >
 
     comment[journal_issn] = 0263-2772
-    param[journal_id] = ?
+    param[journal_id] = f
 
     
     au < doNotProcess ; 1983 ; Facilities Volume 1 ; 1 >
@@ -2373,7 +2373,7 @@
     >
 
     comment[journal_issn] = 1463-6689
-    param[journal_id] = ?
+    param[journal_id] = fs
     
     au < doNotProcess ; 1999 ; foresight Volume 1 ; 1 >
     au < doNotProcess ; 2000 ; foresight Volume 2 ; 2 >
@@ -2403,7 +2403,7 @@
     >
 
     comment[journal_issn] = 1754-2413
-    param[journal_id] = ?
+    param[journal_id] = gm
     comment[0] = online from 2008
     
     au < doNotProcess ; 2008 ; Gender in Management: An International Journal Volume 23 ; 23 >
@@ -2424,7 +2424,7 @@
     >
 
     comment[journal_issn] = 2043-9377
-    param[journal_id] = ?
+    param[journal_id] = gs
     
     au < doNotProcess ; 2011 ; Grey Systems: Theory and Application Volume 1 ; 1 >
     au < doNotProcess ; 2012 ; Grey Systems: Theory and Application Volume 2 ; 2 >
@@ -2441,7 +2441,7 @@
     >
 
     comment[journal_issn] = 1077-5730
-    param[journal_id] = ?
+    param[journal_id] = hbs
     comment[continued_by] = 1751-5637
     
     au < doNotProcess ; 2000 ; Handbook of Business Strategy Volume 1 ; 1 >
@@ -2463,7 +2463,7 @@
     >
 
     comment[journal_issn] = 0965-4283
-    param[journal_id] = ?
+    param[journal_id] = he
     comment[0] = online from 1992
     
     au < doNotProcess ; 1992 ; Health Education Volume 92 ; 92 >
@@ -2501,7 +2501,7 @@
     >
 
     comment[journal_issn] = 0955-2065
-    param[journal_id] = ?
+    param[journal_id] = hmm
     comment[0] = online from 1992
     comment[merged_into] = 0268-9235
 
@@ -2523,7 +2523,7 @@
     >
 
     comment[journal_issn] = 2042-3896
-    param[journal_id] = ?
+    param[journal_id] = heswbl
 
     au < doNotProcess ; 2011 ; Higher Education, Skills and Work-based Learning Volume 1 ; 1 >
     au < doNotProcess ; 2012 ; Higher Education, Skills and Work-based Learning Volume 2 ; 2 >
@@ -2541,7 +2541,7 @@
 
     comment[0] = online from 2004
     comment[journal_issn] = 0819-8691
-    param[journal_id] = ?
+    param[journal_id] = her
 
     au < doNotProcess ; 2004 ; History of Education Review Volume 33 ; 33 >
     au < doNotProcess ; 2005 ; History of Education Review Volume 34 ; 34 >
@@ -2566,7 +2566,7 @@
     >
 
     comment[journal_issn] = 1460-8790
-    param[journal_id] = ?
+    param[journal_id] = hcs
 
     au < doNotProcess ; 1998 ; Housing, Care and Support: A journal on policy, research and practice Volume 1 ; 1 >
     au < doNotProcess ; 1999 ; Housing, Care and Support: A journal on policy, research and practice Volume 2 ; 2 >
@@ -2597,7 +2597,7 @@
     >
 
     comment[journal_issn] = 0967-0734
-    param[journal_id] = ?
+    param[journal_id] = hrmid
     comment[0] = online from 2002
     
     au < doNotProcess ; 2002 ; Human Resource Management International Digest Volume 10 ; 10 >
@@ -2665,7 +2665,7 @@
     >
 
     comment[journal_issn] = 1753-8254
-    param[journal_id] = ?
+    param[journal_id] = igdr
     
     au < doNotProcess ; 2008 ; Indian Growth and Development Review Volume 1 ; 1 >
     au < doNotProcess ; 2009 ; Indian Growth and Development Review Volume 2 ; 2 >
@@ -2686,7 +2686,7 @@
     >
 
     comment[journal_issn] = 0019-7858
-    param[journal_id] = ?
+    param[journal_id] = ict
 
     
     au < doNotProcess ; 1969 ; Industrial and Commercial Training Volume 1 ; 1 >
@@ -2747,7 +2747,7 @@
     >
 
     comment[journal_issn] = 0036-8792
-    param[journal_id] = ?
+    param[journal_id] = ilt
 
     
     au < doNotProcess ; 1949-1950 ; Industrial Lubrication and Tribology Volume 1 ; 1 >
@@ -2828,7 +2828,7 @@
     >
 
     comment[journal_issn] = 0263-5577
-    param[journal_id] = ?
+    param[journal_id] = imds
     comment[0] = online from 1970
 
     au < doNotProcess ; 1970 ; Industrial Management & Data Systems Volume 70 ; 70 >
@@ -2888,7 +2888,7 @@
     >
 
     comment[journal_issn] = 0143-991X
-    param[journal_id] = ?
+    param[journal_id] = ir
 
     au < doNotProcess ; 1973-1974 ; Industrial Robot: The international journal of industrial and service robotics Volume 1 ; 1 >
     au < doNotProcess ; 1975 ; Industrial Robot: The international journal of industrial and service robotics Volume 2 ; 2 >
@@ -2944,7 +2944,7 @@
     >
 
     comment[journal_issn] = 1463-6697
-    param[journal_id] = ?
+    param[journal_id] = info
 
     
     au < doNotProcess ; 1999 ; info Volume 1 ; 1 >
@@ -2975,7 +2975,7 @@
     >
 
     comment[journal_issn] = 0968-5227
-    param[journal_id] = ?
+    param[journal_id] = imcs
 
     
     au < doNotProcess ; 1993 ; Information Management & Computer Security Volume 1 ; 1 >
@@ -3012,7 +3012,7 @@
     >
 
     comment[journal_issn] = 0959-3845
-    param[journal_id] = ?
+    param[journal_id] = itp
     
     au < doNotProcess ; 1982-1983 ; Information Technology & People Volume 1 ; 1 >
     au < doNotProcess ; 1985 ; Information Technology & People Volume 2 ; 2 >
@@ -3053,7 +3053,7 @@
     >
 
     comment[journal_issn] = 0957-6061
-    param[journal_id] = ?
+    param[journal_id] = ims
     comment[continued_by] = 1741-038X
     
     au < doNotProcess ; 1990 ; Integrated Manufacturing Systems Volume 1 ; 1 >
@@ -3082,7 +3082,7 @@
     >
 
     comment[journal_issn] = 1741-5659
-    param[journal_id] = ?
+    param[journal_id] = itse
     
     au < doNotProcess ; 2004 ; Interactive Technology and Smart Education Volume 1 ; 1 >
     au < doNotProcess ; 2005 ; Interactive Technology and Smart Education Volume 2 ; 2 >
@@ -3107,7 +3107,7 @@
     >
 
     comment[journal_issn] = 0264-1615
-    param[journal_id] = ?
+    param[journal_id] = ilr
 
     au < doNotProcess ; 1973 ; Interlending & Document Supply Volume 1 ; 1 >
     au < doNotProcess ; 1974 ; Interlending & Document Supply Volume 2 ; 2 >
@@ -3161,7 +3161,7 @@
     >
 
     comment[journal_issn] = 2046-8253
-    param[journal_id] = ?
+    param[journal_id] = ijlls
 
     au < doNotProcess ; 2012 ; International Journal for Lesson and Learning Studies Volume 1 ; 1 >
     au < exists ; 2013 ; International Journal for Lesson and Learning Studies Volume 2 ; 2 >
@@ -3177,7 +3177,7 @@
     >
 
     comment[journal_issn] = 1759-751X
-    param[journal_id] = ?
+    param[journal_id] = ijrd
     
     au < doNotProcess ; 2009-2010 ; International Journal for Researcher Development Volume 1 ; 1 >
     
@@ -3192,7 +3192,7 @@
     >
 
     comment[journal_issn] = 1834-7649
-    param[journal_id] = ?
+    param[journal_id] = ijaim
     comment[0] =  online from 2007
     
     au < doNotProcess ; 2007 ; International Journal of Accounting & Information Management Volume 15 ; 15 >
@@ -3215,7 +3215,7 @@
     >
 
     comment[journal_issn] = 1465-4652
-    param[journal_id] = ?
+    param[journal_id] = ijams
     comment[merged_into] = 0957-6061
 
     au < doNotProcess ; 1999 ; International Journal of Agile Management Systems Volume 1 ; 1 >
@@ -3232,7 +3232,7 @@
     >
 
     comment[journal_issn] = 0265-2323
-    param[journal_id] = ?
+    param[journal_id] = ijbm
     
     au < doNotProcess ; 1983 ; International Journal of Bank Marketing Volume 1 ; 1 >
     au < doNotProcess ; 1984 ; International Journal of Bank Marketing Volume 2 ; 2 >
@@ -3278,7 +3278,7 @@
     >
 
     comment[journal_issn] = 0955-6214
-    param[journal_id] = ?
+    param[journal_id] = ijcm
     comment[0] =  online from 1990
     comment[continued_by] = 1362-0436
 
@@ -3300,7 +3300,7 @@
     >
 
     comment[journal_issn] = 1756-8692
-    param[journal_id] = ?
+    param[journal_id] = ijccsm
 
     au < doNotProcess ; 2009 ; International Journal of Climate Change Strategies and Management Volume 1 ; 1 >
     au < doNotProcess ; 2010 ; International Journal of Climate Change Strategies and Management Volume 2 ; 2 >
@@ -3320,7 +3320,7 @@
     >
 
     comment[journal_issn] = 0955-6222
-    param[journal_id] = ?
+    param[journal_id] = ijcst
     
     au < doNotProcess ; 1989 ; International Journal of Clothing Science and Technology Volume 1 ; 1 >
     au < doNotProcess ; 1990 ; International Journal of Clothing Science and Technology Volume 2 ; 2 >
