@@ -2838,7 +2838,7 @@
 
         au < crawling ; exists ; 2012 ; Asia Pacific Media Educator Volume 22 ; 22 ; >
         au < exists ; exists ; 2013 ; Asia Pacific Media Educator Volume 23 ; 23 ; >
-        au < expected ; exists ; 2014 ; Asia Pacific Media Educator Volume 24 ; 24 ; >
+        au < manifest ; exists ; 2014 ; Asia Pacific Media Educator Volume 24 ; 24 ; >
 
       }
 
@@ -5223,10 +5223,10 @@
         au < manifest ; exists ; 1998 ; Clinical EEG and Neuroscience Volume 29 ; 29 ; >
         au < manifest ; exists ; 1999 ; Clinical EEG and Neuroscience Volume 30 ; 30 ; >
         au < manifest ; exists ; 2000 ; Clinical EEG and Neuroscience Volume 31 ; 31 ; >
-        au < exists ; exists ; 2001 ; Clinical EEG and Neuroscience Volume 32 ; 32 ; >
+        au < manifest ; exists ; 2001 ; Clinical EEG and Neuroscience Volume 32 ; 32 ; >
         au < manifest ; exists ; 2002 ; Clinical EEG and Neuroscience Volume 33 ; 33 ; >
-        au < exists ; exists ; 2003 ; Clinical EEG and Neuroscience Volume 34 ; 34 ; >
-        au < exists ; exists ; 2004 ; Clinical EEG and Neuroscience Volume 35 ; 35 ; >
+        au < manifest ; exists ; 2003 ; Clinical EEG and Neuroscience Volume 34 ; 34 ; >
+        au < manifest ; exists ; 2004 ; Clinical EEG and Neuroscience Volume 35 ; 35 ; >
         au < manifest ; exists ; 2005 ; Clinical EEG and Neuroscience Volume 36 ; 36 ; >
         au < manifest ; exists ; 2006 ; Clinical EEG and Neuroscience Volume 37 ; 37 ; >
         au < manifest ; exists ; 2007 ; Clinical EEG and Neuroscience Volume 38 ; 38 ; >
@@ -15844,7 +15844,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://jnr.sagepub.com/
 
-      au < exists ; exists ; 2013 ; Jadavpur Journal of International Relations Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2013 ; Jadavpur Journal of International Relations Volume 17 ; 17 ; >
       au < expected ; exists ; 2014 ; Jadavpur Journal of International Relations Volume 18 ; 18 ; >
 
     }
@@ -28973,7 +28973,7 @@
         au < exists ; exists ; 2011-2012 ; Phi Delta Kappan Volume 93 ; 93 ; >
         au < exists ; exists ; 2012-2013 ; Phi Delta Kappan Volume 94 ; 94 ; >
         au < exists ; exists ; 2013-2014 ; Phi Delta Kappan Volume 95 ; 95 ; >
-        au < exists ; exists ; 2014-2015 ; Phi Delta Kappan Volume 96 ; 96 ; >
+        au < manifest ; exists ; 2014-2015 ; Phi Delta Kappan Volume 96 ; 96 ; >
     }
 
   {
