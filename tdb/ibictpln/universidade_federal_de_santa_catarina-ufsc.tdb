@@ -91,20 +91,20 @@
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = nelic
 
-      au < testing ; 1997 ; 1 ; Boletim de Pesquisa NELIC Volume 1997 ; 1997 ; >
-      au < testing ; 1998 ; 2 ; Boletim de Pesquisa NELIC Volume 1998 ; 1998 ; >
-      au < testing ; 1999 ; 3 ; Boletim de Pesquisa NELIC Volume 1999 ; 1999 ; >
-      au < testing ; 2001 ; 5 ; Boletim de Pesquisa NELIC Volume 2001 ; 2001 ; >
-      au < testing ; 2002 ; 6 ; Boletim de Pesquisa NELIC Volume 2002 ; 2002 ; >
-      au < testing ; 2003 ; 7 ; Boletim de Pesquisa NELIC Volume 2003 ; 2003 ; >
-      au < testing ; 2006 ; 10 ; Boletim de Pesquisa NELIC Volume 2006 ; 2006 ; >
-      au < testing ; 2007 ; 11 ; Boletim de Pesquisa NELIC Volume 2007 ; 2007 ; >
-      au < testing ; 2008 ; 12 ; Boletim de Pesquisa NELIC Volume 2008 ; 2008 ; >
-      au < testing ; 2009 ; 13 ; Boletim de Pesquisa NELIC Volume 2009 ; 2009 ; >
-      au < testing ; 2010 ; 14 ; Boletim de Pesquisa NELIC Volume 2010 ; 2010 ; >
-      au < testing ; 2011 ; 15 ; Boletim de Pesquisa NELIC Volume 2011 ; 2011 ; >
-      au < testing ; 2012 ; 16 ; Boletim de Pesquisa NELIC Volume 2012 ; 2012 ; >
-      au < testing ; 2013 ; 17 ; Boletim de Pesquisa NELIC Volume 2013 ; 2013 ; >
+      au < ready ; 1997 ; 1 ; Boletim de Pesquisa NELIC Volume 1997 ; 1997 ; >
+      au < ready ; 1998 ; 2 ; Boletim de Pesquisa NELIC Volume 1998 ; 1998 ; >
+      au < ready ; 1999 ; 3 ; Boletim de Pesquisa NELIC Volume 1999 ; 1999 ; >
+      au < ready ; 2001 ; 5 ; Boletim de Pesquisa NELIC Volume 2001 ; 2001 ; >
+      au < ready ; 2002 ; 6 ; Boletim de Pesquisa NELIC Volume 2002 ; 2002 ; >
+      au < ready ; 2003 ; 7 ; Boletim de Pesquisa NELIC Volume 2003 ; 2003 ; >
+      au < ready ; 2006 ; 10 ; Boletim de Pesquisa NELIC Volume 2006 ; 2006 ; >
+      au < ready ; 2007 ; 11 ; Boletim de Pesquisa NELIC Volume 2007 ; 2007 ; >
+      au < ready ; 2008 ; 12 ; Boletim de Pesquisa NELIC Volume 2008 ; 2008 ; >
+      au < ready ; 2009 ; 13 ; Boletim de Pesquisa NELIC Volume 2009 ; 2009 ; >
+      au < ready ; 2010 ; 14 ; Boletim de Pesquisa NELIC Volume 2010 ; 2010 ; >
+      au < ready ; 2011 ; 15 ; Boletim de Pesquisa NELIC Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 16 ; Boletim de Pesquisa NELIC Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 17 ; Boletim de Pesquisa NELIC Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 18 ; Boletim de Pesquisa NELIC Volume 2014 ; 2014 ; >
 
   }
@@ -121,16 +121,16 @@
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = rbcdh
 
-      au < testing ; 1999 ; 1 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 1999 ; 1999 ; >
-      au < testing ; 2000 ; 2 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2000 ; 2000 ; >
-      au < testing ; 2001 ; 3 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2001 ; 2001 ; >
-      au < testing ; 2002 ; 4 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2002 ; 2002 ; >
-      au < testing ; 2003 ; 5 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2003 ; 2003 ; >
-      au < testing ; 2004 ; 6 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2004 ; 2004 ; >
+      au < ready ; 1999 ; 1 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 1999 ; 1999 ; >
+      au < ready ; 2000 ; 2 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2000 ; 2000 ; >
+      au < ready ; 2001 ; 3 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2001 ; 2001 ; >
+      au < ready ; 2002 ; 4 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2002 ; 2002 ; >
+      au < ready ; 2003 ; 5 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2003 ; 2003 ; >
+      au < ready ; 2004 ; 6 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2004 ; 2004 ; >
       au < testing ; 2005 ; 7 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2005 ; 2005 ; >
-      au < testing ; 2006 ; 8 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2006 ; 2006 ; >
-      au < testing ; 2007 ; 9 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2007 ; 2007 ; >
-      au < testing ; 2008 ; 10 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2008 ; 2008 ; >
+      au < ready ; 2006 ; 8 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2006 ; 2006 ; >
+      au < ready ; 2007 ; 9 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2007 ; 2007 ; >
+      au < ready ; 2008 ; 10 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2008 ; 2008 ; >
       au < testing ; 2009 ; 11 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2009 ; 2009 ; >
       au < testing ; 2010 ; 12 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2010 ; 2010 ; >
       au < testing ; 2011 ; 13 ; Brazilian Journal of Kinanthropometry and Human Performance Volume 2011 ; 2011 ; >
