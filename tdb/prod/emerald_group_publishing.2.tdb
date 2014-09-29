@@ -10,6 +10,36 @@
 
   {
     title <
+      name = Academia Revista Latinoamericana de Administración ;
+      eissn = 1012-8255 ;
+      issnl = 1012-8255
+    >
+
+    comment[journal_issn] = 1012-8255
+    param[journal_id] = arla
+
+    au < exists ; 2013 ; Academia Revista Latinoamericana de Administración Volume 26 ; 26 >
+    au < exists ; 2014 ; Academia Revista Latinoamericana de Administración Volume 27 ; 27 >
+
+  }
+  
+  {
+    title <
+      name = Academic and Library Computing ;
+      eissn = 1055-4769 ;
+      issnl = 1055-4769
+    >
+
+    comment[journal_issn] = 1055-4769
+    param[journal_id] = alc
+
+    au < exists ; 1991 ; Academic and Library Computing Volume 8 ; 9 >
+    au < exists ; 1992 ; Academic and Library Computing Volume 8 ; 9 >
+
+  }
+  
+  {
+    title <
       name = Accounting Research Journal ;
       issn = 1030-9616 ;
       issnl = 1030-9616
@@ -96,6 +126,24 @@
 
   {
     title <
+      name = Advances in Mental Health and Learning Disabilities ;
+      eissn = 1753-0180 ;
+      issnl = 1753-0180
+    >
+
+    comment[journal_issn] = 1753-0180
+    param[journal_id] = amhld
+    comment[continued_by] = 2044-1282
+
+    au < doNotProcess ; 2007 ; Advances in Mental Health and Learning Disabilities Volume 1 ; 1 >
+    au < doNotProcess ; 2008 ; Advances in Mental Health and Learning Disabilities Volume 2 ; 2 >
+    au < doNotProcess ; 2009 ; Advances in Mental Health and Learning Disabilities Volume 3 ; 3 >
+    au < doNotProcess ; 2010 ; Advances in Mental Health and Learning Disabilities Volume 4 ; 4 >
+
+  }
+
+  {
+    title <
       name = Advances in Mental Health and Intellectual Disabilities ;
       issn = 2044-1282 ;
       eissn = 2044-1290 ;
@@ -105,9 +153,6 @@
     comment[journal_issn] = 2044-1282
     param[journal_id] = amhid
 
-    au < doNotProcess ; 2007 ; Advances in Mental Health and Intellectual Disabilities Volume 1 ; 1 >
-    au < doNotProcess ; 2008 ; Advances in Mental Health and Intellectual Disabilities Volume 2 ; 2 >
-    au < doNotProcess ; 2009 ; Advances in Mental Health and Intellectual Disabilities Volume 3 ; 3 >
     au < doNotProcess ; 2010 ; Advances in Mental Health and Intellectual Disabilities Volume 4 ; 4 >
     au < doNotProcess ; 2011 ; Advances in Mental Health and Intellectual Disabilities Volume 5 ; 5 >
     au < doNotProcess ; 2012 ; Advances in Mental Health and Intellectual Disabilities Volume 6 ; 6 >
@@ -438,6 +483,25 @@
   {
 
     title <
+      name = Asia Pacific International Journal of Marketing ;
+      eissn = 0954-7517 ;
+      issnl = 0954-7517
+    >
+
+    comment[journal_issn] = 0954-7517
+    param[journal_id] = apijm
+    
+    au < doNotProcess ; 1989 ; Asia Pacific International Journal of Marketing Volume 1 ; 1 >
+    au < doNotProcess ; 1990 ; Asia Pacific International Journal of Marketing Volume 2 ; 2 >
+    au < doNotProcess ; 1991 ; Asia Pacific International Journal of Marketing Volume 3 ; 3 >
+    au < doNotProcess ; 1992 ; Asia Pacific International Journal of Marketing Volume 4 ; 4 >
+    au < doNotProcess ; 1993 ; Asia Pacific International Journal of Marketing Volume 5 ; 5 >
+
+  }
+
+  {
+
+    title <
       name = Asia Pacific Journal of Marketing and Logistics ;
       issn = 1355-5855 ;
       eissn = 1758-4248 ;
@@ -447,10 +511,6 @@
     comment[journal_issn] = 1355-5855
     param[journal_id] = apjml
     
-    au < doNotProcess ; 1989 ; Asia Pacific Journal of Marketing and Logistics Volume 1 ; 1 >
-    au < doNotProcess ; 1990 ; Asia Pacific Journal of Marketing and Logistics Volume 2 ; 2 >
-    au < doNotProcess ; 1991 ; Asia Pacific Journal of Marketing and Logistics Volume 3 ; 3 >
-    au < doNotProcess ; 1992 ; Asia Pacific Journal of Marketing and Logistics Volume 4 ; 4 >
     au < doNotProcess ; 1993 ; Asia Pacific Journal of Marketing and Logistics Volume 5 ; 5 >
     au < doNotProcess ; 1994 ; Asia Pacific Journal of Marketing and Logistics Volume 6 ; 6 >
     au < doNotProcess ; 1995 ; Asia Pacific Journal of Marketing and Logistics Volume 7 ; 7 >
@@ -1108,15 +1168,15 @@
     comment[journal_issn] = 1065-0741
     param[journal_id] = cwis
     
-    au < doNotProcess ; 1984 ; Campus-Wide Information Systems Volume 1 ; 1 >
-    au < doNotProcess ; 1985 ; Campus-Wide Information Systems Volume 2 ; 2 >
-    au < doNotProcess ; 1986 ; Campus-Wide Information Systems Volume 3 ; 3 >
-    au < doNotProcess ; 1987 ; Campus-Wide Information Systems Volume 4 ; 4 >
-    au < doNotProcess ; 1988 ; Campus-Wide Information Systems Volume 5 ; 5 >
-    au < doNotProcess ; 1989 ; Campus-Wide Information Systems Volume 6 ; 6 >
-    au < doNotProcess ; 1990 ; Campus-Wide Information Systems Volume 7 ; 7 >
-    au < doNotProcess ; 1991 ; Campus-Wide Information Systems Volume 8 ; 8 >
-    au < doNotProcess ; 1992 ; Campus-Wide Information Systems Volume 9 ; 9 >
+    au < doNotProcess ; 1984 ; Library Workstation Report Volume 1 ; 1 >
+    au < doNotProcess ; 1985 ; Library Workstation Report Volume 2 ; 2 >
+    au < doNotProcess ; 1986 ; Library Workstation Report Volume 3 ; 3 >
+    au < doNotProcess ; 1987 ; Library Workstation Report Volume 4 ; 4 >
+    au < doNotProcess ; 1988 ; Library Workstation Report Volume 5 ; 5 >
+    au < doNotProcess ; 1989 ; Library Workstation Report Volume 6 ; 6 >
+    au < doNotProcess ; 1990 ; Library Workstation Report Volume 7 ; 7 >
+    au < doNotProcess ; 1991 ; Academic and Library Computing Volume 8 ; 8 >
+    au < doNotProcess ; 1992 ; Academic and Library Computing Volume 9 ; 9 >
     au < doNotProcess ; 1993 ; Campus-Wide Information Systems Volume 10 ; 10 >
     au < doNotProcess ; 1994 ; Campus-Wide Information Systems Volume 11 ; 11 >
     au < doNotProcess ; 1995 ; Campus-Wide Information Systems Volume 12 ; 12 >
@@ -3360,7 +3420,7 @@
     >
 
     comment[journal_issn] = 1056-9219
-    param[journal_id] = ?
+    param[journal_id] = ijcoma
     
     au < doNotProcess ; 1991 ; International Journal of Commerce and Management Volume 1 ; 1 >
     au < doNotProcess ; 1992 ; International Journal of Commerce and Management Volume 2 ; 2 >
@@ -3398,7 +3458,7 @@
     >
 
     comment[journal_issn] = 1044-4068
-    param[journal_id] = ?
+    param[journal_id] = ijcma
     
     au < doNotProcess ; 1990 ; International Journal of Conflict Management Volume 1 ; 1 >
     au < doNotProcess ; 1991 ; International Journal of Conflict Management Volume 2 ; 2 >
@@ -3437,7 +3497,7 @@
     >
 
     comment[journal_issn] = 0959-6119
-    param[journal_id] = ?
+    param[journal_id] = ijchm
     
     au < doNotProcess ; 1989 ; International Journal of Contemporary Hospitality Management Volume 1 ; 1 >
     au < doNotProcess ; 1990 ; International Journal of Contemporary Hospitality Management Volume 2 ; 2 >
@@ -3477,7 +3537,7 @@
     >
 
     comment[journal_issn] = 1750-6182
-    param[journal_id] = ?
+    param[journal_id] = ijcthr
     
     au < doNotProcess ; 2007 ; International Journal of Culture, Tourism and Hospitality Research Volume 1 ; 1 >
     au < doNotProcess ; 2008 ; International Journal of Culture, Tourism and Hospitality Research Volume 2 ; 2 >
@@ -3499,7 +3559,7 @@
     >
 
     comment[journal_issn] = 1446-8956
-    param[journal_id] = ?
+    param[journal_id] = ijdi
     comment[0] = online from 2003
     
     au < doNotProcess ; 2003 ; International Journal of Development Issues Volume 2 ; 2 > 
@@ -3527,7 +3587,7 @@
     >
 
     comment[journal_issn] = 1759-5908
-    param[journal_id] = ?
+    param[journal_id] = ijdrbe
     
     au < doNotProcess ; 2010 ; International Journal of Disaster Resilience in the Built Environment Volume 1 ; 1 >
     au < doNotProcess ; 2011 ; International Journal of Disaster Resilience in the Built Environment Volume 2 ; 2 >
@@ -3546,7 +3606,7 @@
     >
 
     comment[journal_issn] = 0951-354X
-    param[journal_id] = ?
+    param[journal_id] = ijem
     
     au < doNotProcess ; 1987 ; International Journal of Educational Management Volume 1 ; 1 >
     au < doNotProcess ; 1988 ; International Journal of Educational Management Volume 2 ; 2 >
@@ -3586,7 +3646,7 @@
     >
 
     comment[journal_issn] = 2047-0894
-    param[journal_id] = ?
+    param[journal_id] = ijes
 
     au < doNotProcess ; 2012 ; International Journal of Emergency Services Volume 1 ; 1 >
     au < exists ; 2013 ; International Journal of Emergency Services Volume 2 ; 2 >
@@ -3603,7 +3663,7 @@
     >
 
     comment[journal_issn] = 1746-8809
-    param[journal_id] = ?
+    param[journal_id] = ijoem
     
     au < doNotProcess ; 2006 ; International Journal of Emerging Markets Volume 1 ; 1 >
     au < doNotProcess ; 2007 ; International Journal of Emerging Markets Volume 2 ; 2 >
@@ -3626,7 +3686,7 @@
     >
 
     comment[journal_issn] = 1750-6220
-    param[journal_id] = ?
+    param[journal_id] = ijesm
     
     au < doNotProcess ; 2007 ; International Journal of Energy Sector Management Volume 1 ; 1 >
     au < doNotProcess ; 2008 ; International Journal of Energy Sector Management Volume 2 ; 2 >
@@ -3649,7 +3709,7 @@
     >
 
     comment[journal_issn] = 1355-2554
-    param[journal_id] = ?
+    param[journal_id] = ijebr
     
     au < doNotProcess ; 1995 ; International Journal of Entrepreneurial Behaviour & Research Volume 1 ; 1 >
     au < doNotProcess ; 1996 ; International Journal of Entrepreneurial Behaviour & Research Volume 2 ; 2 >
@@ -3681,7 +3741,7 @@
     >
 
     comment[journal_issn] = 1758-2954
-    param[journal_id] = ?
+    param[journal_id] = ijefm
 
     au < doNotProcess ; 2010 ; International Journal of Event and Festival Management Volume 1 ; 1 >
     au < doNotProcess ; 2011 ; International Journal of Event and Festival Management Volume 2 ; 2 >
@@ -3700,7 +3760,7 @@
     >
 
     comment[journal_issn] = 1756-6266
-    param[journal_id] = ?
+    param[journal_id] = ijge
     
     au < doNotProcess ; 2009 ; International Journal of Gender and Entrepreneurship Volume 1 ; 1 >
     au < doNotProcess ; 2010 ; International Journal of Gender and Entrepreneurship Volume 2 ; 2 >
@@ -3720,7 +3780,7 @@
     >
 
     comment[journal_issn] = 0952-6862
-    param[journal_id] = ?
+    param[journal_id] = ijhcqa
     
     au < doNotProcess ; 1988 ; International Journal of Health Care Quality Assurance Volume 1 ; 1 >
     au < doNotProcess ; 1989 ; International Journal of Health Care Quality Assurance Volume 2 ; 2 >
@@ -3761,7 +3821,7 @@
     >
 
     comment[journal_issn] = 1753-8270
-    param[journal_id] = ?
+    param[journal_id] = ijhma
     
     au < doNotProcess ; 2008 ; International Journal of Housing Markets and Analysis Volume 1 ; 1 >
     au < doNotProcess ; 2009 ; International Journal of Housing Markets and Analysis Volume 2 ; 2 >
@@ -3781,7 +3841,7 @@
     >
 
     comment[journal_issn] = 1756-378X
-    param[journal_id] = ?
+    param[journal_id] = ijicc
     
     au < doNotProcess ; 2008 ; International Journal of Intelligent Computing and Cybernetics Volume 1 ; 1 >
     au < doNotProcess ; 2009 ; International Journal of Intelligent Computing and Cybernetics Volume 2 ; 2 >
@@ -3802,7 +3862,7 @@
     >
 
     comment[journal_issn] = 1753-8394
-    param[journal_id] = ?
+    param[journal_id] = imefm
     
     au < doNotProcess ; 2008 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 1 ; 1 >
     au < doNotProcess ; 2009 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 2 ; 2 >
@@ -3823,7 +3883,7 @@
     >
 
     comment[journal_issn] = 1754-243X
-    param[journal_id] = ?
+    param[journal_id] = ijlma
     comment[0] = online from 2008
     
     au < doNotProcess ; 2008 ; International Journal of Law and Management Volume 50 ; 50 >
