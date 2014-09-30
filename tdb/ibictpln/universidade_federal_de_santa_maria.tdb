@@ -5,7 +5,7 @@
   >
 
   plugin = org.lockss.plugin.ojs2.OJS2Plugin
-  implicit < status ; year ; volume ; name ; param[year] >
+  implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
 
     param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
 
@@ -19,21 +19,21 @@
 
     param[journal_id] = reveducacao
 
-    au < released ; 2000 ; 1 ; Educação Volume 1 ; 2000 >
-    au < released ; 2001 ; 2 ; Educação Volume 2 ; 2001 >
-    au < released ; 2002 ; 3 ; Educação Volume 3 ; 2002 >
-    au < released ; 2003 ; 4 ; Educação Volume 4 ; 2003 >
-    au < released ; 2004 ; 5 ; Educação Volume 5 ; 2004 >
-    au < released ; 2005 ; 6 ; Educação Volume 6 ; 2005 >
-    au < released ; 2006 ; 7 ; Educação Volume 7 ; 2006 >
-    au < released ; 2007 ; 8 ; Educação Volume 8 ; 2007 >
-    au < released ; 2008 ; 9 ; Educação Volume 9 ; 2008 >
-    au < released ; 2009 ; 10 ; Educação Volume 10 ; 2009 >
-    au < released ; 2010 ; 11 ; Educação Volume 11 ; 2010 >
-    au < released ; 2011 ; 12 ; Educação Volume 12 ; 2011 >
-    au < released ; 2012 ; 13 ; Educação Volume 13 ; 2012 >
-    au < released ; 2013 ; 14 ; Educação Volume 14 ; 2013 >
-    au < manifest ; 2014 ; 15 ; Educação Volume 15 ; 2014 >
+    au < released ; 2000 ; 1 ; Educação Volume 1 ; 2000 ; >
+    au < released ; 2001 ; 2 ; Educação Volume 2 ; 2001 ; >
+    au < released ; 2002 ; 3 ; Educação Volume 3 ; 2002 ; >
+    au < released ; 2003 ; 4 ; Educação Volume 4 ; 2003 ; >
+    au < released ; 2004 ; 5 ; Educação Volume 5 ; 2004 ; >
+    au < released ; 2005 ; 6 ; Educação Volume 6 ; 2005 ; >
+    au < released ; 2006 ; 7 ; Educação Volume 7 ; 2006 ; >
+    au < released ; 2007 ; 8 ; Educação Volume 8 ; 2007 ; >
+    au < released ; 2008 ; 9 ; Educação Volume 9 ; 2008 ; >
+    au < released ; 2009 ; 10 ; Educação Volume 10 ; 2009 ; >
+    au < released ; 2010 ; 11 ; Educação Volume 11 ; 2010 ; >
+    au < released ; 2011 ; 12 ; Educação Volume 12 ; 2011 ; >
+    au < released ; 2012 ; 13 ; Educação Volume 13 ; 2012 ; >
+    au < released ; 2013 ; 14 ; Educação Volume 14 ; 2013 ; >
+    au < manifest ; 2014 ; 15 ; Educação Volume 15 ; 2014 ; >
 
   }
 
@@ -47,20 +47,20 @@
 
     param[journal_id] = fragmentum
 
-    au < released ; 2001 ; 1 ; Fragmentum Volume 1 ; 2001 >
-    au < released ; 2002 ; 2 ; Fragmentum Volume 2 ; 2002 >
-    au < released ; 2003 ; 3 ; Fragmentum Volume 3 ; 2003 >
-    au < released ; 2004 ; 4 ; Fragmentum Volume 4 ; 2004 >
-    au < released ; 2005 ; 5 ; Fragmentum Volume 5 ; 2005 >
-    au < released ; 2006 ; 6 ; Fragmentum Volume 6 ; 2006 >
-    au < released ; 2007 ; 7 ; Fragmentum Volume 7 ; 2007 >
-    au < released ; 2008 ; 8 ; Fragmentum Volume 8 ; 2008 >
-    au < released ; 2009 ; 9 ; Fragmentum Volume 9 ; 2009 >
-    au < released ; 2010 ; 10 ; Fragmentum Volume 10 ; 2010 >
-    au < released ; 2011 ; 11 ; Fragmentum Volume 11 ; 2011 >
-    au < released ; 2012 ; 12 ; Fragmentum Volume 12 ; 2012 >
-    au < released ; 2013 ; 13 ; Fragmentum Volume 13 ; 2013 >
-    au < manifest ; 2014 ; 14 ; Fragmentum Volume 14 ; 2014 >
+    au < released ; 2001 ; 1 ; Fragmentum Volume 1 ; 2001 ; >
+    au < released ; 2002 ; 2 ; Fragmentum Volume 2 ; 2002 ; >
+    au < released ; 2003 ; 3 ; Fragmentum Volume 3 ; 2003 ; >
+    au < released ; 2004 ; 4 ; Fragmentum Volume 4 ; 2004 ; >
+    au < released ; 2005 ; 5 ; Fragmentum Volume 5 ; 2005 ; >
+    au < released ; 2006 ; 6 ; Fragmentum Volume 6 ; 2006 ; >
+    au < released ; 2007 ; 7 ; Fragmentum Volume 7 ; 2007 ; >
+    au < released ; 2008 ; 8 ; Fragmentum Volume 8 ; 2008 ; >
+    au < released ; 2009 ; 9 ; Fragmentum Volume 9 ; 2009 ; >
+    au < released ; 2010 ; 10 ; Fragmentum Volume 10 ; 2010 ; >
+    au < released ; 2011 ; 11 ; Fragmentum Volume 11 ; 2011 ; >
+    au < released ; 2012 ; 12 ; Fragmentum Volume 12 ; 2012 ; >
+    au < released ; 2013 ; 13 ; Fragmentum Volume 13 ; 2013 ; >
+    au < manifest ; 2014 ; 14 ; Fragmentum Volume 14 ; 2014 ; >
 
   }
   
@@ -73,10 +73,10 @@
 
     param[journal_id] = reufsm
 
-    au < released ; 2011 ; 1 ; Revista de Enfermagem da UFSM Volume 1 ; 2011 >
-    au < released ; 2012 ; 2 ; Revista de Enfermagem da UFSM Volume 2 ; 2012 >
-    au < released ; 2013 ; 3 ; Revista de Enfermagem da UFSM Volume 3 ; 2013 >
-    au < manifest ; 2014 ; 4 ; Revista de Enfermagem da UFSM Volume 4 ; 2014 >
+    au < released ; 2011 ; 1 ; Revista de Enfermagem da UFSM Volume 1 ; 2011 ; >
+    au < released ; 2012 ; 2 ; Revista de Enfermagem da UFSM Volume 2 ; 2012 ; >
+    au < released ; 2013 ; 3 ; Revista de Enfermagem da UFSM Volume 3 ; 2013 ; >
+    au < manifest ; 2014 ; 4 ; Revista de Enfermagem da UFSM Volume 4 ; 2014 ; >
   }
 
   {
@@ -88,11 +88,11 @@
 
     param[journal_id] = remoa
 
-    au < released ; 2010 ; 1 ; Revista Monografias Ambientais Volume 1 ; 2010 >
-    au < released ; 2011 ; 2-4 ; Revista Monografias Ambientais Volume 2-4 ; 2011 >
-    au < released ; 2012 ; 5-10 ; Revista Monografias Ambientais Volume 5-10 ; 2012 >
-    au < released ; 2013 ; 11-12 ; Revista Monografias Ambientais Volume 11-12 ; 2013 >
-    au < manifest ; 2014 ; 13 ; Revista Monografias Ambientais Volume 13 ; 2014 >
+    au < released ; 2010 ; 1 ; Revista Monografias Ambientais Volume 1 ; 2010 ; >
+    au < released ; 2011 ; 2-4 ; Revista Monografias Ambientais Volume 2-4 ; 2011 ; >
+    au < released ; 2012 ; 5-10 ; Revista Monografias Ambientais Volume 5-10 ; 2012 ; >
+    au < released ; 2013 ; 11-12 ; Revista Monografias Ambientais Volume 11-12 ; 2013 ; >
+    au < manifest ; 2014 ; 13 ; Revista Monografias Ambientais Volume 13 ; 2014 ; >
   }
   
   {
@@ -104,9 +104,9 @@
 
     param[journal_id] = REDESG
 
-    au < released ; 2012 ; 1 ; Revista Direitos Emergentes na Sociedade Global Volume 1 ; 2012 >
-    au < released ; 2013 ; 2 ; Revista Direitos Emergentes na Sociedade Global Volume 2 ; 2013 >
-    au < expected ; 2014 ; 3 ; Revista Direitos Emergentes na Sociedade Global Volume 3 ; 2014 >
+    au < released ; 2012 ; 1 ; Revista Direitos Emergentes na Sociedade Global Volume 1 ; 2012 ; >
+    au < released ; 2013 ; 2 ; Revista Direitos Emergentes na Sociedade Global Volume 2 ; 2013 ; >
+    au < expected ; 2014 ; 3 ; Revista Direitos Emergentes na Sociedade Global Volume 3 ; 2014 ; >
 
   }
   
@@ -120,30 +120,30 @@
 
     param[journal_id] = cienciaflorestal
 
-    au < released ; 1991 ; 1 ; Ciência Florestal Volume 1 ; 1991 >
-    au < released ; 1992 ; 2 ; Ciência Florestal Volume 2 ; 1992 >
-    au < released ; 1993 ; 3 ; Ciência Florestal Volume 3 ; 1993 >
-    au < released ; 1994 ; 4 ; Ciência Florestal Volume 4 ; 1994 >
-    au < released ; 1995 ; 5 ; Ciência Florestal Volume 5 ; 1995 >
-    au < released ; 1996 ; 6 ; Ciência Florestal Volume 6 ; 1996 >
-    au < released ; 1997 ; 7 ; Ciência Florestal Volume 7 ; 1997 >
-    au < released ; 1998 ; 8 ; Ciência Florestal Volume 8 ; 1998 >
-    au < released ; 1999 ; 9 ; Ciência Florestal Volume 9 ; 1999 >
-    au < released ; 2000 ; 10 ; Ciência Florestal Volume 10 ; 2000 >
-    au < released ; 2001 ; 11 ; Ciência Florestal Volume 11 ; 2001 >
-    au < released ; 2002 ; 12 ; Ciência Florestal Volume 12 ; 2002 >
-    au < released ; 2003 ; 13 ; Ciência Florestal Volume 13 ; 2003 >
-    au < released ; 2004 ; 14 ; Ciência Florestal Volume 14 ; 2004 >
-    au < released ; 2005 ; 15 ; Ciência Florestal Volume 15 ; 2005 >
-    au < released ; 2006 ; 16 ; Ciência Florestal Volume 16 ; 2006 >
-    au < released ; 2007 ; 17 ; Ciência Florestal Volume 17 ; 2007 >
-    au < released ; 2008 ; 18 ; Ciência Florestal Volume 18 ; 2008 >
-    au < released ; 2009 ; 19 ; Ciência Florestal Volume 19 ; 2009 >
-    au < released ; 2010 ; 20 ; Ciência Florestal Volume 20 ; 2010 >
-    au < released ; 2011 ; 21 ; Ciência Florestal Volume 21 ; 2011 >
-    au < released ; 2012 ; 22 ; Ciência Florestal Volume 22 ; 2012 >
-    au < released ; 2013 ; 23 ; Ciência Florestal Volume 23 ; 2013 >
-    au < manifest ; 2014 ; 24 ; Ciência Florestal Volume 24 ; 2014 >
+    au < released ; 1991 ; 1 ; Ciência Florestal Volume 1 ; 1991 ; >
+    au < released ; 1992 ; 2 ; Ciência Florestal Volume 2 ; 1992 ; >
+    au < released ; 1993 ; 3 ; Ciência Florestal Volume 3 ; 1993 ; >
+    au < released ; 1994 ; 4 ; Ciência Florestal Volume 4 ; 1994 ; >
+    au < released ; 1995 ; 5 ; Ciência Florestal Volume 5 ; 1995 ; >
+    au < released ; 1996 ; 6 ; Ciência Florestal Volume 6 ; 1996 ; >
+    au < released ; 1997 ; 7 ; Ciência Florestal Volume 7 ; 1997 ; >
+    au < released ; 1998 ; 8 ; Ciência Florestal Volume 8 ; 1998 ; >
+    au < released ; 1999 ; 9 ; Ciência Florestal Volume 9 ; 1999 ; >
+    au < released ; 2000 ; 10 ; Ciência Florestal Volume 10 ; 2000 ; >
+    au < released ; 2001 ; 11 ; Ciência Florestal Volume 11 ; 2001 ; >
+    au < released ; 2002 ; 12 ; Ciência Florestal Volume 12 ; 2002 ; >
+    au < released ; 2003 ; 13 ; Ciência Florestal Volume 13 ; 2003 ; >
+    au < released ; 2004 ; 14 ; Ciência Florestal Volume 14 ; 2004 ; >
+    au < released ; 2005 ; 15 ; Ciência Florestal Volume 15 ; 2005 ; >
+    au < released ; 2006 ; 16 ; Ciência Florestal Volume 16 ; 2006 ; >
+    au < released ; 2007 ; 17 ; Ciência Florestal Volume 17 ; 2007 ; >
+    au < released ; 2008 ; 18 ; Ciência Florestal Volume 18 ; 2008 ; >
+    au < released ; 2009 ; 19 ; Ciência Florestal Volume 19 ; 2009 ; >
+    au < released ; 2010 ; 20 ; Ciência Florestal Volume 20 ; 2010 ; >
+    au < released ; 2011 ; 21 ; Ciência Florestal Volume 21 ; 2011 ; >
+    au < released ; 2012 ; 22 ; Ciência Florestal Volume 22 ; 2012 ; >
+    au < released ; 2013 ; 23 ; Ciência Florestal Volume 23 ; 2013 ; >
+    au < manifest ; 2014 ; 24 ; Ciência Florestal Volume 24 ; 2014 ; >
     
   }
   
@@ -156,10 +156,10 @@
 
     param[journal_id] = reget
 
-    au < released ; 2011 ; 2-4 ; Revista Eletrônica em Gestão, Educação e Tecnologia Ambiental Volume 2-4 ; 2011 >
-    au < released ; 2012 ; 5-8 ; Revista Eletrônica em Gestão, Educação e Tecnologia Ambiental Volume 5-8 ; 2012 >
-    au < released ; 2013 ; 9-17 ; Revista Eletrônica em Gestão, Educação e Tecnologia Ambiental Volume 9-17 ; 2013 >
-    au < manifest ; 2014 ; 18 ; Revista Eletrônica em Gestão, Educação e Tecnologia Ambiental Volume 18 ; 2014 >
+    au < released ; 2011 ; 2-4 ; Revista Eletrônica em Gestão, Educação e Tecnologia Ambiental Volume 2-4 ; 2011 ; >
+    au < released ; 2012 ; 5-8 ; Revista Eletrônica em Gestão, Educação e Tecnologia Ambiental Volume 5-8 ; 2012 ; >
+    au < released ; 2013 ; 9-17 ; Revista Eletrônica em Gestão, Educação e Tecnologia Ambiental Volume 9-17 ; 2013 ; >
+    au < manifest ; 2014 ; 18 ; Revista Eletrônica em Gestão, Educação e Tecnologia Ambiental Volume 18 ; 2014 ; >
 
   }
   
@@ -172,21 +172,21 @@
 
     param[journal_id] = educacaoespecial
 
-    au < released ; 2000 ; 13 ; Revista Educação Especial Volume 13 ; 2000 >
-    au < released ; 2001 ; 14 ; Revista Educação Especial Volume 14 ; 2001 >
-    au < released ; 2002 ; 15 ; Revista Educação Especial Volume 15 ; 2002 >
-    au < released ; 2003 ; 16 ; Revista Educação Especial Volume 16 ; 2003 >
-    au < released ; 2004 ; 17 ; Revista Educação Especial Volume 17 ; 2004 >
-    au < released ; 2005 ; 18 ; Revista Educação Especial Volume 18 ; 2005 >
-    au < released ; 2006 ; 19 ; Revista Educação Especial Volume 19 ; 2006 >
-    au < released ; 2007 ; 20 ; Revista Educação Especial Volume 20 ; 2007 >
-    au < released ; 2008 ; 21 ; Revista Educação Especial Volume 21 ; 2008 >
-    au < released ; 2009 ; 22 ; Revista Educação Especial Volume 22 ; 2009 >
-    au < released ; 2010 ; 23 ; Revista Educação Especial Volume 23 ; 2010 >
-    au < released ; 2011 ; 24 ; Revista Educação Especial Volume 24 ; 2011 >
-    au < released ; 2012 ; 25 ; Revista Educação Especial Volume 25 ; 2012 >
-    au < released ; 2013 ; 26 ; Revista Educação Especial Volume 26 ; 2013 >
-    au < manifest ; 2014 ; 27 ; Revista Educação Especial Volume 27 ; 2014 >
+    au < released ; 2000 ; 13 ; Revista Educação Especial Volume 13 ; 2000 ; >
+    au < released ; 2001 ; 14 ; Revista Educação Especial Volume 14 ; 2001 ; >
+    au < released ; 2002 ; 15 ; Revista Educação Especial Volume 15 ; 2002 ; >
+    au < released ; 2003 ; 16 ; Revista Educação Especial Volume 16 ; 2003 ; >
+    au < released ; 2004 ; 17 ; Revista Educação Especial Volume 17 ; 2004 ; >
+    au < released ; 2005 ; 18 ; Revista Educação Especial Volume 18 ; 2005 ; >
+    au < released ; 2006 ; 19 ; Revista Educação Especial Volume 19 ; 2006 ; >
+    au < released ; 2007 ; 20 ; Revista Educação Especial Volume 20 ; 2007 ; >
+    au < released ; 2008 ; 21 ; Revista Educação Especial Volume 21 ; 2008 ; >
+    au < released ; 2009 ; 22 ; Revista Educação Especial Volume 22 ; 2009 ; >
+    au < released ; 2010 ; 23 ; Revista Educação Especial Volume 23 ; 2010 ; >
+    au < released ; 2011 ; 24 ; Revista Educação Especial Volume 24 ; 2011 ; >
+    au < released ; 2012 ; 25 ; Revista Educação Especial Volume 25 ; 2012 ; >
+    au < released ; 2013 ; 26 ; Revista Educação Especial Volume 26 ; 2013 ; >
+    au < manifest ; 2014 ; 27 ; Revista Educação Especial Volume 27 ; 2014 ; >
 
   }
   
@@ -199,13 +199,13 @@
 
     param[journal_id] = revislav
 
-    au < exists ; 2008 ; 0001 ; Revista Digital do LAV Volume 1 ; 0001 >
-    au < exists ; 2009 ; 0002 ; Revista Digital do LAV Volume 2 ; 0002 >
-    au < exists ; 2010 ; 0003 ; Revista Digital do LAV Volume 3 ; 0003 >
-    au < exists ; 2011 ; 0004 ; Revista Digital do LAV Volume 4 ; 0004 >
-    au < released ; 2012 ; 2012 ; Revista Digital do LAV Volume 2012 ; 2012 >
-    au < released ; 2013 ; 2013 ; Revista Digital do LAV Volume 2013 ; 2013 >
-    au < manifest ; 2014 ; 2014 ; Revista Digital do LAV Volume 2014 ; 2014 >
+    au < exists ; 2008 ; 0001 ; Revista Digital do LAV Volume 1 ; 0001 ; >
+    au < exists ; 2009 ; 0002 ; Revista Digital do LAV Volume 2 ; 0002 ; >
+    au < exists ; 2010 ; 0003 ; Revista Digital do LAV Volume 3 ; 0003 ; >
+    au < exists ; 2011 ; 0004 ; Revista Digital do LAV Volume 4 ; 0004 ; >
+    au < released ; 2012 ; 2012 ; Revista Digital do LAV Volume 2012 ; 2012 ; >
+    au < released ; 2013 ; 2013 ; Revista Digital do LAV Volume 2013 ; 2013 ; >
+    au < manifest ; 2014 ; 2014 ; Revista Digital do LAV Volume 2014 ; 2014 ; >
 
   }
   
@@ -219,10 +219,10 @@
 
     param[journal_id] = geografia
 
-    au < released ; 2011 ; 15 ; Geografia Ensino & Pesquisa Volume 15 ; 2011 >
-    au < released ; 2012 ; 16 ; Geografia Ensino & Pesquisa Volume 16 ; 2012 >
-    au < released ; 2013 ; 17 ; Geografia Ensino & Pesquisa Volume 17 ; 2013 >
-    au < expected ; 2014 ; 18 ; Geografia Ensino & Pesquisa Volume 18 ; 2014 >
+    au < released ; 2011 ; 15 ; Geografia Ensino & Pesquisa Volume 15 ; 2011 ; >
+    au < released ; 2012 ; 16 ; Geografia Ensino & Pesquisa Volume 16 ; 2012 ; >
+    au < released ; 2013 ; 17 ; Geografia Ensino & Pesquisa Volume 17 ; 2013 ; >
+    au < expected ; 2014 ; 18 ; Geografia Ensino & Pesquisa Volume 18 ; 2014 ; >
 
   }
   
@@ -236,19 +236,19 @@
       comment[publisher] = Universidade Federal de Santa Maria
       param[journal_id] = animus
 
-      au < released ; 2002 ; 1 ; Animus: Revista Interamericana de Comunicação Midiática Volume 2002 ; 2002 >
-      au < released ; 2003 ; 2 ; Animus: Revista Interamericana de Comunicação Midiática Volume 2003 ; 2003 >
-      au < released ; 2004 ; 3 ; Animus: Revista Interamericana de Comunicação Midiática Volume 2004 ; 2004 >
-      au < released ; 2005 ; 4 ; Animus: Revista Interamericana de Comunicação Midiática Volume 2005 ; 2005 >
-      au < released ; 2006 ; 5 ; Animus: Revista Interamericana de Comunicação Midiática Volume 2006 ; 2006 >
-      au < released ; 2007 ; 6 ; Animus: Revista Interamericana de Comunicação Midiática Volume 2007 ; 2007 >
-      au < released ; 2008 ; 7 ; Animus: Revista Interamericana de Comunicação Midiática Volume 2008 ; 2008 >
-      au < released ; 2009 ; 8 ; Animus: Revista Interamericana de Comunicação Midiática Volume 2009 ; 2009 >
-      au < released ; 2010 ; 9 ; Animus: Revista Interamericana de Comunicação Midiática Volume 2010 ; 2010 >
-      au < released ; 2011 ; 10 ; Animus: Revista Interamericana de Comunicação Midiática Volume 2011 ; 2011 >
-      au < released ; 2012 ; 11 ; Animus: Revista Interamericana de Comunicação Midiática Volume 2012 ; 2012 >
-      au < released ; 2013 ; 12 ; Animus: Revista Interamericana de Comunicação Midiática Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 13 ; Animus: Revista Interamericana de Comunicação Midiática Volume 2014 ; 2014 >
+      au < released ; 2002 ; 1 ; Animus: Revista Interamericana de Comunicação Midiática Volume 2002 ; 2002 ; >
+      au < released ; 2003 ; 2 ; Animus: Revista Interamericana de Comunicação Midiática Volume 2003 ; 2003 ; >
+      au < released ; 2004 ; 3 ; Animus: Revista Interamericana de Comunicação Midiática Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 4 ; Animus: Revista Interamericana de Comunicação Midiática Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 5 ; Animus: Revista Interamericana de Comunicação Midiática Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 6 ; Animus: Revista Interamericana de Comunicação Midiática Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 7 ; Animus: Revista Interamericana de Comunicação Midiática Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 8 ; Animus: Revista Interamericana de Comunicação Midiática Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 9 ; Animus: Revista Interamericana de Comunicação Midiática Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 10 ; Animus: Revista Interamericana de Comunicação Midiática Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 11 ; Animus: Revista Interamericana de Comunicação Midiática Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 12 ; Animus: Revista Interamericana de Comunicação Midiática Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 13 ; Animus: Revista Interamericana de Comunicação Midiática Volume 2014 ; 2014 ; >
 
   }
 
@@ -263,25 +263,25 @@
       comment[publisher] = Universidade Federal de Santa Maria
       param[journal_id] = ccomunicacao
 
-      au < released ; 1996 ; 1 ; Cadernos de Comunicação Volume 1996 ; 1996 >
-      au < released ; 1997 ; 2 ; Cadernos de Comunicação Volume 1997 ; 1997 >
-      au < released ; 1998 ; 3 ; Cadernos de Comunicação Volume 1998 ; 1998 >
-      au < released ; 1999 ; 4 ; Cadernos de Comunicação Volume 1999 ; 1999 >
-      au < released ; 2000 ; 5 ; Cadernos de Comunicação Volume 2000 ; 2000 >
-      au < released ; 2001 ; 6 ; Cadernos de Comunicação Volume 2001 ; 2001 >
-      au < released ; 2002 ; 7 ; Cadernos de Comunicação Volume 2002 ; 2002 >
-      au < released ; 2003 ; 8 ; Cadernos de Comunicação Volume 2003 ; 2003 >
-      au < released ; 2004 ; 9 ; Cadernos de Comunicação Volume 2004 ; 2004 >
-      au < released ; 2005 ; 10 ; Cadernos de Comunicação Volume 2005 ; 2005 >
-      au < released ; 2006 ; 11 ; Cadernos de Comunicação Volume 2006 ; 2006 >
-      au < released ; 2007 ; 12 ; Cadernos de Comunicação Volume 2007 ; 2007 >
-      au < released ; 2008 ; 13 ; Cadernos de Comunicação Volume 2008 ; 2008 >
-      au < released ; 2009 ; 14 ; Cadernos de Comunicação Volume 2009 ; 2009 >
-      au < released ; 2010 ; 15 ; Cadernos de Comunicação Volume 2010 ; 2010 >
-      au < released ; 2011 ; 16 ; Cadernos de Comunicação Volume 2011 ; 2011 >
-      au < released ; 2012 ; 17 ; Cadernos de Comunicação Volume 2012 ; 2012 >
-      au < released ; 2013 ; 18 ; Cadernos de Comunicação Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 19 ; Cadernos de Comunicação Volume 2014 ; 2014 >
+      au < released ; 1996 ; 1 ; Cadernos de Comunicação Volume 1996 ; 1996 ; >
+      au < released ; 1997 ; 2 ; Cadernos de Comunicação Volume 1997 ; 1997 ; >
+      au < superseded ; 1998 ; 3 ; Cadernos de Comunicação Volume 1998 ; 1998 ; no content >
+      au < released ; 1999 ; 4 ; Cadernos de Comunicação Volume 1999 ; 1999 ; >
+      au < superseded ; 2000 ; 5 ; Cadernos de Comunicação Volume 2000 ; 2000 ; no content >
+      au < released ; 2001 ; 6 ; Cadernos de Comunicação Volume 2001 ; 2001 ; >
+      au < released ; 2002 ; 7 ; Cadernos de Comunicação Volume 2002 ; 2002 ; >
+      au < released ; 2003 ; 8 ; Cadernos de Comunicação Volume 2003 ; 2003 ; >
+      au < released ; 2004 ; 9 ; Cadernos de Comunicação Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 10 ; Cadernos de Comunicação Volume 2005 ; 2005 ; >
+      au < superseded ; 2006 ; 11 ; Cadernos de Comunicação Volume 2006 ; 2006 ; no content >
+      au < superseded ; 2007 ; 12 ; Cadernos de Comunicação Volume 2007 ; 2007 ; no content >
+      au < superseded ; 2008 ; 13 ; Cadernos de Comunicação Volume 2008 ; 2008 ; no content >
+      au < superseded ; 2009 ; 14 ; Cadernos de Comunicação Volume 2009 ; 2009 ; no content >
+      au < superseded ; 2010 ; 15 ; Cadernos de Comunicação Volume 2010 ; 2010 ; no content >
+      au < released ; 2011 ; 16 ; Cadernos de Comunicação Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 17 ; Cadernos de Comunicação Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 18 ; Cadernos de Comunicação Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 19 ; Cadernos de Comunicação Volume 2014 ; 2014 ; >
 
   }
 
@@ -296,17 +296,17 @@
       comment[publisher] = Universidade Federal de Santa Maria
       param[journal_id] = cienciaenatura
 
-      au < released ; 2004 ; 1 ; Ciência e Natura Volume 2004 ; 2004 >
-      au < released ; 2005 ; 2 ; Ciência e Natura Volume 2005 ; 2005 >
-      au < released ; 2006 ; 3 ; Ciência e Natura Volume 2006 ; 2006 >
-      au < released ; 2007 ; 4 ; Ciência e Natura Volume 2007 ; 2007 >
-      au < released ; 2008 ; 5 ; Ciência e Natura Volume 2008 ; 2008 >
-      au < released ; 2009 ; 6 ; Ciência e Natura Volume 2009 ; 2009 >
-      au < released ; 2010 ; 7 ; Ciência e Natura Volume 2010 ; 2010 >
-      au < released ; 2011 ; 8 ; Ciência e Natura Volume 2011 ; 2011 >
-      au < released ; 2012 ; 9 ; Ciência e Natura Volume 2012 ; 2012 >
-      au < released ; 2013 ; 10 ; Ciência e Natura Volume 2013 ; 2013 >
-      au < manifest ; 2014 ; 11 ; Ciência e Natura Volume 2014 ; 2014 >
+      au < released ; 2004 ; 1 ; Ciência e Natura Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 2 ; Ciência e Natura Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 3 ; Ciência e Natura Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 4 ; Ciência e Natura Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 5 ; Ciência e Natura Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 6 ; Ciência e Natura Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 7 ; Ciência e Natura Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 8 ; Ciência e Natura Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 9 ; Ciência e Natura Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 10 ; Ciência e Natura Volume 2013 ; 2013 ; >
+      au < manifest ; 2014 ; 11 ; Ciência e Natura Volume 2014 ; 2014 ; >
 
   }
 
@@ -320,22 +320,22 @@
       comment[publisher] = Universidade Federal de Santa Maria
       param[journal_id] = eed
 
-      au < released ; 1999 ; 1 ; ECONOMIA E DESENVOLVIMENTO Volume 1999 ; 1999 >
-      au < released ; 2000 ; 2 ; ECONOMIA E DESENVOLVIMENTO Volume 2000 ; 2000 >
-      au < released ; 2001 ; 3 ; ECONOMIA E DESENVOLVIMENTO Volume 2001 ; 2001 >
-      au < released ; 2002 ; 4 ; ECONOMIA E DESENVOLVIMENTO Volume 2002 ; 2002 >
-      au < released ; 2003 ; 5 ; ECONOMIA E DESENVOLVIMENTO Volume 2003 ; 2003 >
-      au < released ; 2004 ; 6 ; ECONOMIA E DESENVOLVIMENTO Volume 2004 ; 2004 >
-      au < released ; 2005 ; 7 ; ECONOMIA E DESENVOLVIMENTO Volume 2005 ; 2005 >
-      au < released ; 2006 ; 8 ; ECONOMIA E DESENVOLVIMENTO Volume 2006 ; 2006 >
-      au < released ; 2007 ; 9 ; ECONOMIA E DESENVOLVIMENTO Volume 2007 ; 2007 >
-      au < released ; 2008 ; 10 ; ECONOMIA E DESENVOLVIMENTO Volume 2008 ; 2008 >
-      au < released ; 2009 ; 11 ; ECONOMIA E DESENVOLVIMENTO Volume 2009 ; 2009 >
-      au < released ; 2010 ; 12 ; ECONOMIA E DESENVOLVIMENTO Volume 2010 ; 2010 >
-      au < released ; 2011 ; 13 ; ECONOMIA E DESENVOLVIMENTO Volume 2011 ; 2011 >
-      au < released ; 2012 ; 14 ; ECONOMIA E DESENVOLVIMENTO Volume 2012 ; 2012 >
-      au < released ; 2013 ; 15 ; ECONOMIA E DESENVOLVIMENTO Volume 2013 ; 2013 >
-      au < manifest ; 2014 ; 16 ; ECONOMIA E DESENVOLVIMENTO Volume 2014 ; 2014 >
+      au < released ; 1999 ; 1 ; ECONOMIA E DESENVOLVIMENTO Volume 1999 ; 1999 ; >
+      au < released ; 2000 ; 2 ; ECONOMIA E DESENVOLVIMENTO Volume 2000 ; 2000 ; >
+      au < released ; 2001 ; 3 ; ECONOMIA E DESENVOLVIMENTO Volume 2001 ; 2001 ; >
+      au < released ; 2002 ; 4 ; ECONOMIA E DESENVOLVIMENTO Volume 2002 ; 2002 ; >
+      au < released ; 2003 ; 5 ; ECONOMIA E DESENVOLVIMENTO Volume 2003 ; 2003 ; >
+      au < released ; 2004 ; 6 ; ECONOMIA E DESENVOLVIMENTO Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 7 ; ECONOMIA E DESENVOLVIMENTO Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 8 ; ECONOMIA E DESENVOLVIMENTO Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 9 ; ECONOMIA E DESENVOLVIMENTO Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 10 ; ECONOMIA E DESENVOLVIMENTO Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 11 ; ECONOMIA E DESENVOLVIMENTO Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 12 ; ECONOMIA E DESENVOLVIMENTO Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 13 ; ECONOMIA E DESENVOLVIMENTO Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 14 ; ECONOMIA E DESENVOLVIMENTO Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 15 ; ECONOMIA E DESENVOLVIMENTO Volume 2013 ; 2013 ; >
+      au < manifest ; 2014 ; 16 ; ECONOMIA E DESENVOLVIMENTO Volume 2014 ; 2014 ; >
 
   }
 
@@ -350,28 +350,28 @@
       comment[publisher] = Universidade Federal de Santa Maria
       param[journal_id] = extensaorural
 
-      au < released ; 1993 ; 1 ; Extensão Rural Volume 1993 ; 1993 >
-      au < released ; 1994 ; 2 ; Extensão Rural Volume 1994 ; 1994 >
-      au < released ; 1995 ; 3 ; Extensão Rural Volume 1995 ; 1995 >
-      au < released ; 1996 ; 4 ; Extensão Rural Volume 1996 ; 1996 >
-      au < released ; 1997 ; 5 ; Extensão Rural Volume 1997 ; 1997 >
-      au < released ; 1998 ; 6 ; Extensão Rural Volume 1998 ; 1998 >
-      au < released ; 1999 ; 7 ; Extensão Rural Volume 1999 ; 1999 >
-      au < released ; 2000 ; 8 ; Extensão Rural Volume 2000 ; 2000 >
-      au < released ; 2001 ; 9 ; Extensão Rural Volume 2001 ; 2001 >
-      au < released ; 2002 ; 10 ; Extensão Rural Volume 2002 ; 2002 >
-      au < released ; 2003 ; 11 ; Extensão Rural Volume 2003 ; 2003 >
-      au < released ; 2004 ; 12 ; Extensão Rural Volume 2004 ; 2004 >
-      au < released ; 2005 ; 13 ; Extensão Rural Volume 2005 ; 2005 >
-      au < released ; 2006 ; 14 ; Extensão Rural Volume 2006 ; 2006 >
-      au < released ; 2007 ; 15 ; Extensão Rural Volume 2007 ; 2007 >
-      au < released ; 2008 ; 16 ; Extensão Rural Volume 2008 ; 2008 >
-      au < released ; 2009 ; 17 ; Extensão Rural Volume 2009 ; 2009 >
-      au < released ; 2010 ; 18 ; Extensão Rural Volume 2010 ; 2010 >
-      au < released ; 2011 ; 19 ; Extensão Rural Volume 2011 ; 2011 >
-      au < released ; 2012 ; 20 ; Extensão Rural Volume 2012 ; 2012 >
-      au < released ; 2013 ; 21 ; Extensão Rural Volume 2013 ; 2013 >
-      au < manifest ; 2014 ; 22 ; Extensão Rural Volume 2014 ; 2014 >
+      au < released ; 1993 ; 1 ; Extensão Rural Volume 1993 ; 1993 ; >
+      au < released ; 1994 ; 2 ; Extensão Rural Volume 1994 ; 1994 ; >
+      au < released ; 1995 ; 3 ; Extensão Rural Volume 1995 ; 1995 ; >
+      au < released ; 1996 ; 4 ; Extensão Rural Volume 1996 ; 1996 ; >
+      au < released ; 1997 ; 5 ; Extensão Rural Volume 1997 ; 1997 ; >
+      au < released ; 1998 ; 6 ; Extensão Rural Volume 1998 ; 1998 ; >
+      au < released ; 1999 ; 7 ; Extensão Rural Volume 1999 ; 1999 ; >
+      au < released ; 2000 ; 8 ; Extensão Rural Volume 2000 ; 2000 ; >
+      au < released ; 2001 ; 9 ; Extensão Rural Volume 2001 ; 2001 ; >
+      au < released ; 2002 ; 10 ; Extensão Rural Volume 2002 ; 2002 ; >
+      au < released ; 2003 ; 11 ; Extensão Rural Volume 2003 ; 2003 ; >
+      au < released ; 2004 ; 12 ; Extensão Rural Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 13 ; Extensão Rural Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 14 ; Extensão Rural Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 15 ; Extensão Rural Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 16 ; Extensão Rural Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 17 ; Extensão Rural Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 18 ; Extensão Rural Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 19 ; Extensão Rural Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 20 ; Extensão Rural Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 21 ; Extensão Rural Volume 2013 ; 2013 ; >
+      au < manifest ; 2014 ; 22 ; Extensão Rural Volume 2014 ; 2014 ; >
 
   }
 
@@ -386,30 +386,30 @@
       comment[publisher] = Universidade Federal de Santa Maria
       param[journal_id] = letras
 
-      au < released ; 1991 ; 1 ; Letras Volume 1991 ; 1991 >
-      au < released ; 1992 ; 2 ; Letras Volume 1992 ; 1992 >
-      au < released ; 1993 ; 3 ; Letras Volume 1993 ; 1993 >
-      au < released ; 1994 ; 4 ; Letras Volume 1994 ; 1994 >
-      au < released ; 1995 ; 5 ; Letras Volume 1995 ; 1995 >
-      au < released ; 1996 ; 6 ; Letras Volume 1996 ; 1996 >
-      au < released ; 1997 ; 7 ; Letras Volume 1997 ; 1997 >
-      au < released ; 1998 ; 8 ; Letras Volume 1998 ; 1998 >
-      au < released ; 1999 ; 9 ; Letras Volume 1999 ; 1999 >
-      au < released ; 2000 ; 10 ; Letras Volume 2000 ; 2000 >
-      au < released ; 2001 ; 11 ; Letras Volume 2001 ; 2001 >
-      au < released ; 2002 ; 12 ; Letras Volume 2002 ; 2002 >
-      au < released ; 2003 ; 13 ; Letras Volume 2003 ; 2003 >
-      au < released ; 2004 ; 14 ; Letras Volume 2004 ; 2004 >
-      au < released ; 2005 ; 15 ; Letras Volume 2005 ; 2005 >
-      au < released ; 2006 ; 16 ; Letras Volume 2006 ; 2006 >
-      au < released ; 2007 ; 17 ; Letras Volume 2007 ; 2007 >
-      au < released ; 2008 ; 18 ; Letras Volume 2008 ; 2008 >
-      au < released ; 2009 ; 19 ; Letras Volume 2009 ; 2009 >
-      au < released ; 2010 ; 20 ; Letras Volume 2010 ; 2010 >
-      au < released ; 2011 ; 21 ; Letras Volume 2011 ; 2011 >
-      au < released ; 2012 ; 22 ; Letras Volume 2012 ; 2012 >
-      au < released ; 2013 ; 23 ; Letras Volume 2013 ; 2013 >
-      au < manifest ; 2014 ; 24 ; Letras Volume 2014 ; 2014 >
+      au < released ; 1991 ; 1 ; Letras Volume 1991 ; 1991 ; >
+      au < released ; 1992 ; 2 ; Letras Volume 1992 ; 1992 ; >
+      au < released ; 1993 ; 3 ; Letras Volume 1993 ; 1993 ; >
+      au < released ; 1994 ; 4 ; Letras Volume 1994 ; 1994 ; >
+      au < released ; 1995 ; 5 ; Letras Volume 1995 ; 1995 ; >
+      au < released ; 1996 ; 6 ; Letras Volume 1996 ; 1996 ; >
+      au < released ; 1997 ; 7 ; Letras Volume 1997 ; 1997 ; >
+      au < released ; 1998 ; 8 ; Letras Volume 1998 ; 1998 ; >
+      au < released ; 1999 ; 9 ; Letras Volume 1999 ; 1999 ; >
+      au < released ; 2000 ; 10 ; Letras Volume 2000 ; 2000 ; >
+      au < released ; 2001 ; 11 ; Letras Volume 2001 ; 2001 ; >
+      au < released ; 2002 ; 12 ; Letras Volume 2002 ; 2002 ; >
+      au < released ; 2003 ; 13 ; Letras Volume 2003 ; 2003 ; >
+      au < released ; 2004 ; 14 ; Letras Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 15 ; Letras Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 16 ; Letras Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 17 ; Letras Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 18 ; Letras Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 19 ; Letras Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 20 ; Letras Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 21 ; Letras Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 22 ; Letras Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 23 ; Letras Volume 2013 ; 2013 ; >
+      au < manifest ; 2014 ; 24 ; Letras Volume 2014 ; 2014 ; >
 
   }
 
@@ -423,13 +423,13 @@
       comment[publisher] = Universidade Federal de Santa Maria
       param[journal_id] = reaufsm
 
-      au < released ; 2008 ; 1 ; Revista de Administração da UFSM Volume 2008 ; 2008 >
-      au < released ; 2009 ; 2 ; Revista de Administração da UFSM Volume 2009 ; 2009 >
-      au < released ; 2010 ; 3 ; Revista de Administração da UFSM Volume 2010 ; 2010 >
-      au < released ; 2011 ; 4 ; Revista de Administração da UFSM Volume 2011 ; 2011 >
-      au < released ; 2012 ; 5 ; Revista de Administração da UFSM Volume 2012 ; 2012 >
-      au < released ; 2013 ; 6 ; Revista de Administração da UFSM Volume 2013 ; 2013 >
-      au < manifest ; 2014 ; 7 ; Revista de Administração da UFSM Volume 2014 ; 2014 >
+      au < released ; 2008 ; 1 ; Revista de Administração da UFSM Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 2 ; Revista de Administração da UFSM Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 3 ; Revista de Administração da UFSM Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 4 ; Revista de Administração da UFSM Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 5 ; Revista de Administração da UFSM Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 6 ; Revista de Administração da UFSM Volume 2013 ; 2013 ; >
+      au < manifest ; 2014 ; 7 ; Revista de Administração da UFSM Volume 2014 ; 2014 ; >
 
   }
 
@@ -443,17 +443,17 @@
       comment[publisher] = Universidade Federal de Santa Maria
       param[journal_id] = contabilidade
 
-      au < released ; 2004 ; 1 ; Revista Eletrônica de Contabilidade Volume 2004 ; 2004 >
-      au < released ; 2005 ; 2 ; Revista Eletrônica de Contabilidade Volume 2005 ; 2005 >
-      au < released ; 2006 ; 3 ; Revista Eletrônica de Contabilidade Volume 2006 ; 2006 >
-      au < released ; 2007 ; 4 ; Revista Eletrônica de Contabilidade Volume 2007 ; 2007 >
-      au < released ; 2008 ; 5 ; Revista Eletrônica de Contabilidade Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 6 ; Revista Eletrônica de Contabilidade Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 7 ; Revista Eletrônica de Contabilidade Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 8 ; Revista Eletrônica de Contabilidade Volume 2011 ; 2011 >
-      au < released ; 2012 ; 9 ; Revista Eletrônica de Contabilidade Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 10 ; Revista Eletrônica de Contabilidade Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 11 ; Revista Eletrônica de Contabilidade Volume 2014 ; 2014 >
+      au < released ; 2004 ; 1 ; Revista Eletrônica de Contabilidade Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 2 ; Revista Eletrônica de Contabilidade Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 3 ; Revista Eletrônica de Contabilidade Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 4 ; Revista Eletrônica de Contabilidade Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 5 ; Revista Eletrônica de Contabilidade Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 6 ; Revista Eletrônica de Contabilidade Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 7 ; Revista Eletrônica de Contabilidade Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 8 ; Revista Eletrônica de Contabilidade Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 9 ; Revista Eletrônica de Contabilidade Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 10 ; Revista Eletrônica de Contabilidade Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 11 ; Revista Eletrônica de Contabilidade Volume 2014 ; 2014 ; >
 
   }
 
@@ -468,37 +468,37 @@
       comment[publisher] = Universidade Federal de Santa Maria
       param[journal_id] = kinesis
 
-      au < released ; 1984 ; 1 ; Revista Kinesis Volume 1984 ; 1984 >
-      au < released ; 1985 ; 2 ; Revista Kinesis Volume 1985 ; 1985 >
-      au < released ; 1986 ; 3 ; Revista Kinesis Volume 1986 ; 1986 >
-      au < released ; 1987 ; 4 ; Revista Kinesis Volume 1987 ; 1987 >
-      au < released ; 1988 ; 5 ; Revista Kinesis Volume 1988 ; 1988 >
-      au < released ; 1989 ; 6 ; Revista Kinesis Volume 1989 ; 1989 >
-      au < released ; 1990 ; 7 ; Revista Kinesis Volume 1990 ; 1990 >
-      au < released ; 1991 ; 8 ; Revista Kinesis Volume 1991 ; 1991 >
-      au < released ; 1992 ; 9 ; Revista Kinesis Volume 1992 ; 1992 >
-      au < released ; 1993 ; 10 ; Revista Kinesis Volume 1993 ; 1993 >
-      au < released ; 1994 ; 11 ; Revista Kinesis Volume 1994 ; 1994 >
-      au < released ; 1995 ; 12 ; Revista Kinesis Volume 1995 ; 1995 >
-      au < released ; 1996 ; 13 ; Revista Kinesis Volume 1996 ; 1996 >
-      au < released ; 1997 ; 14 ; Revista Kinesis Volume 1997 ; 1997 >
-      au < released ; 1998 ; 15 ; Revista Kinesis Volume 1998 ; 1998 >
-      au < released ; 1999 ; 16 ; Revista Kinesis Volume 1999 ; 1999 >
-      au < released ; 2000 ; 17 ; Revista Kinesis Volume 2000 ; 2000 >
-      au < released ; 2001 ; 18 ; Revista Kinesis Volume 2001 ; 2001 >
-      au < released ; 2002 ; 19 ; Revista Kinesis Volume 2002 ; 2002 >
-      au < released ; 2003 ; 20 ; Revista Kinesis Volume 2003 ; 2003 >
-      au < exists ; 2004 ; 21 ; Revista Kinesis Volume 2004 ; 2004 >
-      au < exists ; 2005 ; 22 ; Revista Kinesis Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 23 ; Revista Kinesis Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 24 ; Revista Kinesis Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 25 ; Revista Kinesis Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 26 ; Revista Kinesis Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 27 ; Revista Kinesis Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 28 ; Revista Kinesis Volume 2011 ; 2011 >
-      au < released ; 2012 ; 29 ; Revista Kinesis Volume 2012 ; 2012 >
-      au < released ; 2013 ; 30 ; Revista Kinesis Volume 2013 ; 2013 >
-      au < manifest ; 2014 ; 31 ; Revista Kinesis Volume 2014 ; 2014 >
+      au < released ; 1984 ; 1 ; Revista Kinesis Volume 1984 ; 1984 ; >
+      au < released ; 1985 ; 2 ; Revista Kinesis Volume 1985 ; 1985 ; >
+      au < released ; 1986 ; 3 ; Revista Kinesis Volume 1986 ; 1986 ; >
+      au < released ; 1987 ; 4 ; Revista Kinesis Volume 1987 ; 1987 ; >
+      au < released ; 1988 ; 5 ; Revista Kinesis Volume 1988 ; 1988 ; >
+      au < released ; 1989 ; 6 ; Revista Kinesis Volume 1989 ; 1989 ; >
+      au < released ; 1990 ; 7 ; Revista Kinesis Volume 1990 ; 1990 ; >
+      au < released ; 1991 ; 8 ; Revista Kinesis Volume 1991 ; 1991 ; >
+      au < released ; 1992 ; 9 ; Revista Kinesis Volume 1992 ; 1992 ; >
+      au < released ; 1993 ; 10 ; Revista Kinesis Volume 1993 ; 1993 ; >
+      au < released ; 1994 ; 11 ; Revista Kinesis Volume 1994 ; 1994 ; >
+      au < released ; 1995 ; 12 ; Revista Kinesis Volume 1995 ; 1995 ; >
+      au < released ; 1996 ; 13 ; Revista Kinesis Volume 1996 ; 1996 ; >
+      au < released ; 1997 ; 14 ; Revista Kinesis Volume 1997 ; 1997 ; >
+      au < released ; 1998 ; 15 ; Revista Kinesis Volume 1998 ; 1998 ; >
+      au < released ; 1999 ; 16 ; Revista Kinesis Volume 1999 ; 1999 ; >
+      au < released ; 2000 ; 17 ; Revista Kinesis Volume 2000 ; 2000 ; >
+      au < released ; 2001 ; 18 ; Revista Kinesis Volume 2001 ; 2001 ; >
+      au < released ; 2002 ; 19 ; Revista Kinesis Volume 2002 ; 2002 ; >
+      au < released ; 2003 ; 20 ; Revista Kinesis Volume 2003 ; 2003 ; >
+      au < exists ; 2004 ; 21 ; Revista Kinesis Volume 2004 ; 2004 ; >
+      au < exists ; 2005 ; 22 ; Revista Kinesis Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 23 ; Revista Kinesis Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 24 ; Revista Kinesis Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 25 ; Revista Kinesis Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 26 ; Revista Kinesis Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 27 ; Revista Kinesis Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 28 ; Revista Kinesis Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 29 ; Revista Kinesis Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 30 ; Revista Kinesis Volume 2013 ; 2013 ; >
+      au < manifest ; 2014 ; 31 ; Revista Kinesis Volume 2014 ; 2014 ; >
 
   }
 
@@ -513,17 +513,17 @@
       comment[publisher] = Universidade Federal de Santa Maria
       param[journal_id] = revistasaude
 
-      au < released ; 2004 ; 1 ; Revista Saúde Volume 2004 ; 2004 >
-      au < released ; 2005 ; 2 ; Revista Saúde Volume 2005 ; 2005 >
-      au < released ; 2006 ; 3 ; Revista Saúde Volume 2006 ; 2006 >
-      au < released ; 2007 ; 4 ; Revista Saúde Volume 2007 ; 2007 >
-      au < released ; 2008 ; 5 ; Revista Saúde Volume 2008 ; 2008 >
-      au < released ; 2009 ; 6 ; Revista Saúde Volume 2009 ; 2009 >
-      au < released ; 2010 ; 7 ; Revista Saúde Volume 2010 ; 2010 >
-      au < released ; 2011 ; 8 ; Revista Saúde Volume 2011 ; 2011 >
-      au < released ; 2012 ; 9 ; Revista Saúde Volume 2012 ; 2012 >
-      au < released ; 2013 ; 10 ; Revista Saúde Volume 2013 ; 2013 >
-      au < manifest ; 2014 ; 11 ; Revista Saúde Volume 2014 ; 2014 >
+      au < released ; 2004 ; 1 ; Revista Saúde Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 2 ; Revista Saúde Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 3 ; Revista Saúde Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 4 ; Revista Saúde Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 5 ; Revista Saúde Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 6 ; Revista Saúde Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 7 ; Revista Saúde Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 8 ; Revista Saúde Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 9 ; Revista Saúde Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 10 ; Revista Saúde Volume 2013 ; 2013 ; >
+      au < manifest ; 2014 ; 11 ; Revista Saúde Volume 2014 ; 2014 ; >
 
   }
 
@@ -538,10 +538,10 @@
       comment[publisher] = Universidade Federal de Santa Maria
       param[journal_id] = seculoxxi
 
-      au < exists ; 2011 ; 1 ; Século XXI: Revista de Ciências Sociais Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 2 ; Século XXI: Revista de Ciências Sociais Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 3 ; Século XXI: Revista de Ciências Sociais Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 4 ; Século XXI: Revista de Ciências Sociais Volume 2014 ; 2014 >
+      au < exists ; 2011 ; 1 ; Século XXI: Revista de Ciências Sociais Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 2 ; Século XXI: Revista de Ciências Sociais Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 3 ; Século XXI: Revista de Ciências Sociais Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 4 ; Século XXI: Revista de Ciências Sociais Volume 2014 ; 2014 ; >
 
   }
 
