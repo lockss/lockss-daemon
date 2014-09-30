@@ -213,8 +213,8 @@
         param[base_url] = http://archderm.jamanetwork.com/
         param[resource_id] = 68
         
-        au < ready ; exists ; 2013 ; JAMA Dermatology Volume 149 ; 2013 >
-        au < ready ; exists ; 2014 ; JAMA Dermatology Volume 150 ; 2014 >
+        au < crawling ; exists ; 2013 ; JAMA Dermatology Volume 149 ; 2013 >
+        au < crawling ; exists ; 2014 ; JAMA Dermatology Volume 150 ; 2014 >
     
       }
 
@@ -284,7 +284,7 @@
         
         au < exists ; exists ; 2012 ; JAMA Facial Plastic Surgery Volume 14 ; 2012 >
         au < crawling ; exists ; 2013 ; JAMA Facial Plastic Surgery Volume 15 ; 2013 >
-        au < ready ; exists ; 2014 ; JAMA Facial Plastic Surgery Volume 16 ; 2014 >
+        au < crawling ; exists ; 2014 ; JAMA Facial Plastic Surgery Volume 16 ; 2014 >
     
       }
 
@@ -416,7 +416,7 @@
         
         au < exists ; exists ; 2012 ; JAMA Psychiatry Volume 69 ; 2012 >
         au < crawling ; exists ; 2013 ; JAMA Psychiatry Volume 70 ; 2013 >
-        au < ready ; exists ; 2014 ; JAMA Psychiatry Volume 71 ; 2014 >
+        au < crawling ; exists ; 2014 ; JAMA Psychiatry Volume 71 ; 2014 >
     
       }
 
@@ -624,7 +624,7 @@
         
         au < exists ; exists ; 2012 ; JAMA Internal Medicine Volume 172 ; 2012 >
         au < crawling ; exists ; 2013 ; JAMA Internal Medicine Volume 173 ; 2013 >
-        au < ready ; exists ; 2014 ; JAMA Internal Medicine Volume 174 ; 2014 >
+        au < crawling ; exists ; 2014 ; JAMA Internal Medicine Volume 174 ; 2014 >
     
       }
 
@@ -995,7 +995,7 @@
         param[resource_id] = 73
         
         au < crawling ; exists ; 2013 ; JAMA Ophthalmology Volume 131 ; 2013 >
-        au < ready ; exists ; 2014 ; JAMA Ophthalmology Volume 132 ; 2014 >
+        au < crawling ; exists ; 2014 ; JAMA Ophthalmology Volume 132 ; 2014 >
     
       }
 
@@ -1552,8 +1552,8 @@
         param[base_url] = http://archsurg.jamanetwork.com/
         param[resource_id] = 76
         
-        au < ready ; exists ; 2013 ; JAMA Surgery Volume 148 ; 2013 >
-        au < ready ; exists ; 2014 ; JAMA Surgery Volume 149 ; 2014 >
+        au < crawling ; exists ; 2013 ; JAMA Surgery Volume 148 ; 2013 >
+        au < crawling ; exists ; 2014 ; JAMA Surgery Volume 149 ; 2014 >
     
       }
 
@@ -1929,7 +1929,7 @@
         param[resource_id] = 67
         
         au < testing ; exists ; 2011 ; JAMA: The Journal of the American Medical Association Volume 305-306 ; 2011 >
-        au < ready ; exists ; 2012 ; JAMA: The Journal of the American Medical Association Volume 307-308 ; 2012 >
+        au < crawling ; exists ; 2012 ; JAMA: The Journal of the American Medical Association Volume 307-308 ; 2012 >
         au < testing ; exists ; 2013 ; JAMA: The Journal of the American Medical Association Volume 309-310 ; 2013 >
         au < exists ; exists ; 2014 ; JAMA: The Journal of the American Medical Association Volume 311-312 ; 2014 >
     
