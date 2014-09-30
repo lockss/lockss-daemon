@@ -11524,20 +11524,21 @@
       param[base_url] = http://ecx.sagepub.com/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < manifest ; 2001 ; Exceptional Children Volume 67 ; 67 >
+      au < manifest ; 2000-2001 ; Exceptional Children Volume 67 ; 67 >
       au < manifest ; 2001-2002 ; Exceptional Children Volume 68 ; 68 >
-      au < manifest ; 2003 ; Exceptional Children Volume 69 ; 69 >
-      au < manifest ; 2004 ; Exceptional Children Volume 70 ; 70 >
+      au < manifest ; 2002-2003 ; Exceptional Children Volume 69 ; 69 >
+      au < manifest ; 2003-2004 ; Exceptional Children Volume 70 ; 70 >
       au < manifest ; 2004-2005 ; Exceptional Children Volume 71 ; 71 >
       au < manifest ; 2005-2006 ; Exceptional Children Volume 72 ; 72 >
       au < manifest ; 2006-2007 ; Exceptional Children Volume 73 ; 73 >
       au < manifest ; 2007-2008 ; Exceptional Children Volume 74 ; 74 >
-      au < manifest ; 2009 ; Exceptional Children Volume 75 ; 75 >
-      au < manifest ; 2010 ; Exceptional Children Volume 76 ; 76 >
-      au < manifest ; 2011 ; Exceptional Children Volume 77 ; 77 >
-      au < manifest ; 2012 ; Exceptional Children Volume 78 ; 78 >
-      au < doesNotExist ; 2013 ; Exceptional Children Volume 79 ; 79 >
-      au < manifest ; 2014 ; Exceptional Children Volume 80 ; 80 >
+      au < manifest ; 2008-2009 ; Exceptional Children Volume 75 ; 75 >
+      au < manifest ; 2009-2010 ; Exceptional Children Volume 76 ; 76 >
+      au < manifest ; 2010-2011 ; Exceptional Children Volume 77 ; 77 >
+      au < manifest ; 2011-2012 ; Exceptional Children Volume 78 ; 78 >
+      au < exists ; 2012-2013 ; Exceptional Children Volume 79 ; 79 >
+      au < manifest ; 2013-2014 ; Exceptional Children Volume 80 ; 80 >
+      au < manifest ; 2014-2015 ; Exceptional Children Volume 81 ; 81 >
 
     }
 
