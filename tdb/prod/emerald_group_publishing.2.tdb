@@ -5146,9 +5146,9 @@
     comment[journal_issn] = 1758-1184
     param[journal_id] = ?
     
-    au < superseded ; 2009 ; Journal of Applied Research in Higher Education Volume 1 [superseded] ; 1 >
-    au < superseded ; 2010 ; Journal of Applied Research in Higher Education Volume 2 [superseded] ; 2 >
-    au < superseded ; 2011 ; Journal of Applied Research in Higher Education Volume 3 [superseded] ; 3 >
+    au < doNotProcess ; 2009 ; Journal of Applied Research in Higher Education Volume 1 ; 1 >
+    au < doNotProcess ; 2010 ; Journal of Applied Research in Higher Education Volume 2 ; 2 >
+    au < doNotProcess ; 2011 ; Journal of Applied Research in Higher Education Volume 3 ; 3 >
     }
 
     {
@@ -8364,17 +8364,17 @@
     comment[journal_issn] = 1022-2529
     param[journal_id] = ?
 
-    au < superseded ; 2000 ; Meditari Accountancy Research Volume 8 [superseded] ; 8 >
-    au < superseded ; 2001 ; Meditari Accountancy Research Volume 9 [superseded] ; 9 >
-    au < superseded ; 2002 ; Meditari Accountancy Research Volume 10 [superseded] ; 10 >
-    au < superseded ; 2003 ; Meditari Accountancy Research Volume 11 [superseded] ; 11 >
-    au < superseded ; 2004 ; Meditari Accountancy Research Volume 12 [superseded] ; 12 >
-    au < superseded ; 2005 ; Meditari Accountancy Research Volume 13 [superseded] ; 13 >
-    au < superseded ; 2006 ; Meditari Accountancy Research Volume 14 [superseded] ; 14 >
-    au < superseded ; 2007 ; Meditari Accountancy Research Volume 15 [superseded] ; 15 >
-    au < superseded ; 2008 ; Meditari Accountancy Research Volume 16 [superseded] ; 16 > 
-    au < superseded ; 2009 ; Meditari Accountancy Research Volume 17 [superseded] ; 17 >
-    au < superseded ; 2010 ; Meditari Accountancy Research Volume 18 [superseded] ; 18 >
+    au < doNotProcess ; 2000 ; Meditari Accountancy Research Volume 8 ; 8 >
+    au < doNotProcess ; 2001 ; Meditari Accountancy Research Volume 9 ; 9 >
+    au < doNotProcess ; 2002 ; Meditari Accountancy Research Volume 10 ; 10 >
+    au < doNotProcess ; 2003 ; Meditari Accountancy Research Volume 11 ; 11 >
+    au < doNotProcess ; 2004 ; Meditari Accountancy Research Volume 12 ; 12 >
+    au < doNotProcess ; 2005 ; Meditari Accountancy Research Volume 13 ; 13 >
+    au < doNotProcess ; 2006 ; Meditari Accountancy Research Volume 14 ; 14 >
+    au < doNotProcess ; 2007 ; Meditari Accountancy Research Volume 15 ; 15 >
+    au < doNotProcess ; 2008 ; Meditari Accountancy Research Volume 16 ; 16 > 
+    au < doNotProcess ; 2009 ; Meditari Accountancy Research Volume 17 ; 17 >
+    au < doNotProcess ; 2010 ; Meditari Accountancy Research Volume 18 ; 18 >
     }
 
     {
