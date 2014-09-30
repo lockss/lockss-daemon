@@ -162,7 +162,7 @@ public static class TestHash extends TestMaffeyHtmlFilterFactory {
 	  "</div><!-- categoriescolumn4 -->";
 	
 	private static final String testimonialsHtmlHashFiltered = 
-	  "<!-- categoriescolumn4 -->";
+	  "";  // Now removing comments
 	
 	
 	//# article views
@@ -194,7 +194,7 @@ public static class TestHash extends TestMaffeyHtmlFilterFactory {
 	  "<span>5,570</span> Article Views\n" +
 	  "</div><!-- article_meta_stats ends -->";
 	  
-	public static final String metaStatsHtmlHashFiltered = "<!-- article_meta_stats ends -->";
+	public static final String metaStatsHtmlHashFiltered = "";  // removing comments
 
 	  public void setUp() throws Exception {
 	    super.setUp();

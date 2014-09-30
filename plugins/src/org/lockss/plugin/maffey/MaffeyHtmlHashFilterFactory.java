@@ -65,10 +65,19 @@ public class MaffeyHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("link", "href", "css/grid.css\\?[0-9]+"),
         // Article views <p class="article_views_p">
         HtmlNodeFilters.tagWithAttribute("p", "class", "article_views_p"),
-        // News items change over time <div id="news_holder">
-        HtmlNodeFilters.tagWithAttribute("div", "id", "news_holder"),
+        // Latest News items change over time <div id="news_holder">
+        //HtmlNodeFilters.tagWithAttribute("div", "id", "news_holder"),   // rightcolumn
+        // remove entire right column
+        HtmlNodeFilters.tagWithAttribute("div", "class", "rightcolumn"), // headerright
+        HtmlNodeFilters.tagWithAttribute("div", "id", "sharing"), // the Sharing/social media
+        // author services, including author testimonials
+        HtmlNodeFilters.tagWithAttribute("div", "class", "hideForPrint"), 
+        // comments
+        HtmlNodeFilters.comment(),
+        
         // Chat with support availability status changes
         HtmlNodeFilters.tagWithAttribute("div", "class", "searchleft"),
+
         // Rotating user testimonials	
         HtmlNodeFilters.tagWithAttribute("div", "class", "categoriescolumn4"),
         // # article views
