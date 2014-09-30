@@ -3905,7 +3905,7 @@
     >
 
     comment[journal_issn] = 1756-1450
-    param[journal_id] = ?
+    param[journal_id] = ijlbe
     
     au < doNotProcess ; 2009 ; International Journal of Law in the Built Environment Volume 1 ; 1 >
     au < doNotProcess ; 2010 ; International Journal of Law in the Built Environment Volume 2 ; 2 >
@@ -3925,7 +3925,7 @@
     >
 
     comment[journal_issn] = 1747-9886
-    param[journal_id] = ?
+    param[journal_id] = ijlps
 
     au < doNotProcess ; 2005 ; The International Journal of Leadership in Public Services Volume 1 ; 1 >
     au < doNotProcess ; 2006 ; The International Journal of Leadership in Public Services Volume 2 ; 2 >
@@ -3948,7 +3948,7 @@
     >
 
     comment[journal_issn] = 2040-4166
-    param[journal_id] = ?
+    param[journal_id] = ijlss
 
     au < doNotProcess ; 2010 ; International Journal of Lean Six Sigma Volume 1 ; 1 >
     au < doNotProcess ; 2011 ; International Journal of Lean Six Sigma Volume 2 ; 2 >
@@ -3967,7 +3967,7 @@
     >
 
     comment[journal_issn] = 0957-4093
-    param[journal_id] = ?
+    param[journal_id] = ijlm
     
     au < doNotProcess ; 1990 ; The International Journal of Logistics Management Volume 1 ; 1 >
     au < doNotProcess ; 1991 ; The International Journal of Logistics Management Volume 2 ; 2 >
@@ -4006,7 +4006,7 @@
     >
 
     comment[journal_issn] = 1743-9132
-    param[journal_id] = ?
+    param[journal_id] = ijmf
     
     au < doNotProcess ; 2005 ; International Journal of Managerial Finance Volume 1 ; 1 >
     au < doNotProcess ; 2006 ; International Journal of Managerial Finance Volume 2 ; 2 >
@@ -4030,7 +4030,7 @@
     >
 
     comment[journal_issn] = 1753-8378
-    param[journal_id] = ?
+    param[journal_id] = ijmpb
     
     au < doNotProcess ; 2008 ; International Journal of Managing Projects in Business Volume 1 ; 1 >
     au < doNotProcess ; 2009 ; International Journal of Managing Projects in Business Volume 2 ; 2 >
@@ -4051,7 +4051,7 @@
     >
 
     comment[journal_issn] = 0143-7720
-    param[journal_id] = ?
+    param[journal_id] = ijm
     
     au < doNotProcess ; 1980 ; International Journal of Manpower Volume 1 ; 1 >
     au < doNotProcess ; 1981 ; International Journal of Manpower Volume 2 ; 2 >
@@ -4098,7 +4098,7 @@
     >
 
     comment[journal_issn] = 2046-6854
-    param[journal_id] = ?
+    param[journal_id] = ijmce
 
     au < doNotProcess ; 2012 ; International Journal of Mentoring and Coaching in Education Volume 1 ; 1 >
     au < exists ; 2013 ; International Journal of Mentoring and Coaching in Education Volume 2 ; 2 >
@@ -4117,7 +4117,7 @@
     >
 
     comment[journal_issn] = 1747-9894
-    param[journal_id] = ?
+    param[journal_id] = ijmhsc
 
     au < doNotProcess ; 2005 ; International Journal of Migration, Health and Social Care Volume 1 ; 1 >
     au < doNotProcess ; 2006 ; International Journal of Migration, Health and Social Care Volume 2 ; 2 >
@@ -4142,7 +4142,7 @@
     >
 
     comment[journal_issn] = 0961-5539
-    param[journal_id] = ?
+    param[journal_id] = hff
     
     au < doNotProcess ; 1991 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 1 ; 1 >
     au < doNotProcess ; 1992 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 2 ; 2 >
@@ -4181,7 +4181,7 @@
     >
 
     comment[journal_issn] = 0144-3577
-    param[journal_id] = ?
+    param[journal_id] = ijopm
     
     au < doNotProcess ; 1981 ; International Journal of Operations & Production Management Volume 1 ; 1 >
     au < doNotProcess ; 1982 ; International Journal of Operations & Production Management Volume 2 ; 2 >
@@ -4229,7 +4229,7 @@
     >
 
     comment[journal_issn] = 1934-8835
-    param[journal_id] = ?
+    param[journal_id] = ijoa
     
     au < doNotProcess ; 1993 ; International Journal of Organizational Analysis Volume 1 ; 1 >
     au < doNotProcess ; 1994 ; International Journal of Organizational Analysis Volume 2 ; 2 >
@@ -4265,7 +4265,7 @@
     >
 
     comment[journal_issn] = 1742-7371
-    param[journal_id] = ?
+    param[journal_id] = ijpcc
     
     au < doNotProcess ; 2005 ; International Journal of Pervasive Computing and Communications Volume 1 ; 1 >
     au < doNotProcess ; 2006 ; International Journal of Pervasive Computing and Communications Volume 2 ; 2 >
@@ -4289,7 +4289,7 @@
     >
 
     comment[journal_issn] = 1750-6123
-    param[journal_id] = ?
+    param[journal_id] = ijphm
     
     au < doNotProcess ; 2007 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 1 ; 1 >
     au < doNotProcess ; 2008 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 2 ; 2 >
@@ -4310,7 +4310,7 @@
     >
 
     comment[journal_issn] = 0960-0035
-    param[journal_id] = ?
+    param[journal_id] = ijpd
     
     au < doNotProcess ; 1971 ; International Journal of Physical Distribution & Logistics Management Volume 1 ; 1 >
     au < doNotProcess ; 1972 ; International Journal of Physical Distribution & Logistics Management Volume 2 ; 2 >
@@ -4368,7 +4368,7 @@
     
     >
     comment[journal_issn] = 1744-9200
-    param[journal_id] = ?
+    param[journal_id] = ijph
     comment[0] = online from 2005
       
     au < doNotProcess ; 2005 ; International Journal of Prisoner Health Volume 1 ; 1 >
@@ -4395,7 +4395,7 @@
     >
 
     comment[journal_issn] = 1741-0401
-    param[journal_id] = ?
+    param[journal_id] = ijppm
     comment[0] = online from 2004
     
     au < doNotProcess ; 2004 ; International Journal of Productivity and Performance Management Volume 53 ; 53 >
@@ -4421,7 +4421,7 @@
     >
 
     comment[journal_issn] = 0951-3558
-    param[journal_id] = ?
+    param[journal_id] = ijpsm
     
     au < doNotProcess ; 1988 ; International Journal of Public Sector Management Volume 1 ; 1 >
     au < doNotProcess ; 1989 ; International Journal of Public Sector Management Volume 2 ; 2 >
@@ -4462,7 +4462,7 @@
     >
 
     comment[journal_issn] = 0265-671X
-    param[journal_id] = ?
+    param[journal_id] = ijqrm
     
     au < doNotProcess ; 1984 ; International Journal of Quality & Reliability Management Volume 1 ; 1 >
     au < doNotProcess ; 1985 ; International Journal of Quality & Reliability Management Volume 2 ; 2 >
@@ -4507,7 +4507,7 @@
     >
 
     comment[journal_issn] = 1756-669X
-    param[journal_id] = ?
+    param[journal_id] = ijqss
     
     au < doNotProcess ; 2009 ; International Journal of Quality and Service Sciences Volume 1 ; 1 >
     au < doNotProcess ; 2010 ; International Journal of Quality and Service Sciences Volume 2 ; 2 >
@@ -4527,7 +4527,7 @@
     >
 
     comment[journal_issn] = 1359-8538
-    param[journal_id] = ?
+    param[journal_id] = ijqs
     comment[merged_into] = 0265-671X
     
     au < doNotProcess ; 1996 ; International Journal of Quality Science Volume 1 ; 1 >
@@ -4545,7 +4545,7 @@
     >
 
     comment[journal_issn] = 0959-0552
-    param[journal_id] = ?
+    param[journal_id] = ijrdm
     
     au < doNotProcess ; 1973 ; International Journal of Retail & Distribution Management Volume 1 ; 1 >
     au < doNotProcess ; 1974 ; International Journal of Retail & Distribution Management Volume 2 ; 2 >
@@ -4601,7 +4601,7 @@
     >
 
     comment[journal_issn] = 0956-4233
-    param[journal_id] = ?
+    param[journal_id] = ijsim
     
     au < doNotProcess ; 1990 ; International Journal of Service Industry Management Volume 1 ; 1 >
     au < doNotProcess ; 1991 ; International Journal of Service Industry Management Volume 2 ; 2 >
