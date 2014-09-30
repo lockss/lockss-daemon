@@ -1928,10 +1928,10 @@
         param[base_url] = http://jama.jamanetwork.com/
         param[resource_id] = 67
         
-        au < testing ; exists ; 2011 ; JAMA: The Journal of the American Medical Association Volume 305-306 ; 2011 >
+        au < ready ; exists ; 2011 ; JAMA: The Journal of the American Medical Association Volume 305-306 ; 2011 >
         au < crawling ; exists ; 2012 ; JAMA: The Journal of the American Medical Association Volume 307-308 ; 2012 >
         au < testing ; exists ; 2013 ; JAMA: The Journal of the American Medical Association Volume 309-310 ; 2013 >
-        au < exists ; exists ; 2014 ; JAMA: The Journal of the American Medical Association Volume 311-312 ; 2014 >
+        au < testing ; exists ; 2014 ; JAMA: The Journal of the American Medical Association Volume 311-312 ; 2014 >
     
       }
 
@@ -1964,8 +1964,8 @@
     au < zapped ; finished ; 2009 ; Virtual Mentor Volume 11 ; 11 ; 2009 >
     au < zapped ; finished ; 2010 ; Virtual Mentor Volume 12 ; 12 ; 2010 >
     au < zapped ; finished ; 2011 ; Virtual Mentor Volume 13 ; 13 ; 2011 >
-    au < exists ; exists ; 2012 ; Virtual Mentor Volume 14 ; 14 ; 2012 >
-    au < exists ; exists ; 2013 ; Virtual Mentor Volume 15 ; 15 ; 2013 >
+    au < testing ; exists ; 2012 ; Virtual Mentor Volume 14 ; 14 ; 2012 >
+    au < testing ; exists ; 2013 ; Virtual Mentor Volume 15 ; 15 ; 2013 >
     au < exists ; exists ; 2014 ; Virtual Mentor Volume 16 ; 16 ; 2014 >
 
   }
