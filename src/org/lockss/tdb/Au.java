@@ -1,5 +1,5 @@
 /*
- * $Id: Au.java,v 1.1 2014-09-03 20:35:58 thib_gc Exp $
+ * $Id: Au.java,v 1.2 2014-09-30 00:03:44 thib_gc Exp $
  */
 
 /*
@@ -1149,10 +1149,12 @@ public class Au {
     
     // AU traits
     final String auPrefix = "au:";
+    boolean auColon = false;
     if (trait.startsWith(auPrefix)) {
+      auColon = true;
       trait = trait.substring(auPrefix.length());
     }
-    if (trait.startsWith(PARAM_PREFIX)) {
+    if (trait.startsWith(PARAM_PREFIX) && trait.endsWith("]")) {
       key = trait.substring(PARAM_PREFIX.length(), trait.length() - 1);
       return new Functor<Au, String>() {
         @Override
@@ -1161,7 +1163,7 @@ public class Au {
         }
       };
     }
-    if (trait.startsWith(NONDEFPARAM_PREFIX)) {
+    if (trait.startsWith(NONDEFPARAM_PREFIX) && trait.endsWith("]")) {
       key = trait.substring(NONDEFPARAM_PREFIX.length(), trait.length() - 1);
       return new Functor<Au, String>() {
         @Override
@@ -1170,7 +1172,7 @@ public class Au {
         }
       };
     }
-    if (trait.startsWith(ATTR_PREFIX)) {
+    if (trait.startsWith(ATTR_PREFIX) && trait.endsWith("]")) {
       key = trait.substring(ATTR_PREFIX.length(), trait.length() - 1);
       return new Functor<Au, String>() {
         @Override
@@ -1178,6 +1180,15 @@ public class Au {
           return a.getAttrs().get(key);
         }
       };
+    }
+    if (auColon) {
+      key = trait;
+      return new Functor<Au, String>() {
+        @Override
+        public String apply(Au a) {
+          return a.getArbitraryValue(key);
+        }
+      }; 
     }
     
     return null;

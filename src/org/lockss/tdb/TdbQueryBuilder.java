@@ -1,5 +1,5 @@
 /*
- * $Id: TdbQueryBuilder.java,v 1.3 2014-09-24 22:53:23 thib_gc Exp $
+ * $Id: TdbQueryBuilder.java,v 1.4 2014-09-30 00:03:44 thib_gc Exp $
  */
 
 /*
@@ -1346,7 +1346,8 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
     Predicate<Au> ret = new Predicate<Au>() {
       @Override
       public boolean test(Au a) {
-        return pat.matcher(traitFunctor.apply(a)).find();
+        String trait = traitFunctor.apply(a);
+        return pat.matcher(trait == null ? "" : trait).find();
       }
     };
     if (erctx.DOES_NOT_MATCH() != null) {
