@@ -4,7 +4,7 @@
   >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; volume ; name ; param[year] >
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
 
   {
 
@@ -18,16 +18,16 @@
       param[base_url] = http://revistaseletronicas.pucrs.br/ojs/
       param[journal_id] = face
 
-      au < released ; 2005 ; 1 ; Análise: Revista de Administração da PUCRS Volume 2005 ; 2005 >
-      au < released ; 2006 ; 2 ; Análise: Revista de Administração da PUCRS Volume 2006 ; 2006 >
-      au < released ; 2007 ; 3 ; Análise: Revista de Administração da PUCRS Volume 2007 ; 2007 >
-      au < released ; 2008 ; 4 ; Análise: Revista de Administração da PUCRS Volume 2008 ; 2008 >
-      au < released ; 2009 ; 5 ; Análise: Revista de Administração da PUCRS Volume 2009 ; 2009 >
-      au < released ; 2010 ; 6 ; Análise: Revista de Administração da PUCRS Volume 2010 ; 2010 >
-      au < released ; 2011 ; 7 ; Análise: Revista de Administração da PUCRS Volume 2011 ; 2011 >
-      au < released ; 2012 ; 8 ; Análise: Revista de Administração da PUCRS Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 9 ; Análise: Revista de Administração da PUCRS Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 10 ; Análise: Revista de Administração da PUCRS Volume 2014 ; 2014 >
+      au < released ; 2005 ; 1 ; Análise: Revista de Administração da PUCRS Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 2 ; Análise: Revista de Administração da PUCRS Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 3 ; Análise: Revista de Administração da PUCRS Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 4 ; Análise: Revista de Administração da PUCRS Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 5 ; Análise: Revista de Administração da PUCRS Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 6 ; Análise: Revista de Administração da PUCRS Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 7 ; Análise: Revista de Administração da PUCRS Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 8 ; Análise: Revista de Administração da PUCRS Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 9 ; Análise: Revista de Administração da PUCRS Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 10 ; Análise: Revista de Administração da PUCRS Volume 2014 ; 2014 ; >
 
   }
 
@@ -42,11 +42,11 @@
       param[base_url] = http://revistaseletronicas.pucrs.br/ojs/
       param[journal_id] = aviation
 
-      au < released ; 2010 ; 1 ; Aviation in Focus: Journal of Aeronautical Sciences Volume 2010 ; 2010 >
-      au < released ; 2011 ; 2 ; Aviation in Focus: Journal of Aeronautical Sciences Volume 2011 ; 2011 >
-      au < released ; 2012 ; 3 ; Aviation in Focus: Journal of Aeronautical Sciences Volume 2012 ; 2012 >
-      au < released ; 2013 ; 4 ; Aviation in Focus: Journal of Aeronautical Sciences Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 5 ; Aviation in Focus: Journal of Aeronautical Sciences Volume 2014 ; 2014 >
+      au < released ; 2010 ; 1 ; Aviation in Focus: Journal of Aeronautical Sciences Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 2 ; Aviation in Focus: Journal of Aeronautical Sciences Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 3 ; Aviation in Focus: Journal of Aeronautical Sciences Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 4 ; Aviation in Focus: Journal of Aeronautical Sciences Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 5 ; Aviation in Focus: Journal of Aeronautical Sciences Volume 2014 ; 2014 ; >
 
   }
 
@@ -61,11 +61,11 @@
       param[base_url] = http://revistaseletronicas.pucrs.br/ojs/
       param[journal_id] = belt
 
-      au < released ; 2010 ; 1 ; BELT: Brazilian English Language Teaching Journal Volume 2010 ; 2010 >
-      au < released ; 2011 ; 2 ; BELT: Brazilian English Language Teaching Journal Volume 2011 ; 2011 >
-      au < released ; 2012 ; 3 ; BELT: Brazilian English Language Teaching Journal Volume 2012 ; 2012 >
-      au < released ; 2013 ; 4 ; BELT: Brazilian English Language Teaching Journal Volume 2013 ; 2013 >
-      au < manifest ; 2014 ; 5 ; BELT: Brazilian English Language Teaching Journal Volume 2014 ; 2014 >
+      au < released ; 2010 ; 1 ; BELT: Brazilian English Language Teaching Journal Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 2 ; BELT: Brazilian English Language Teaching Journal Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 3 ; BELT: Brazilian English Language Teaching Journal Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 4 ; BELT: Brazilian English Language Teaching Journal Volume 2013 ; 2013 ; >
+      au < manifest ; 2014 ; 5 ; BELT: Brazilian English Language Teaching Journal Volume 2014 ; 2014 ; >
 
   }
 
@@ -80,13 +80,13 @@
       param[base_url] = http://revistaseletronicas.pucrs.br/ojs/
       param[journal_id] = faenfi
 
-      au < released ; 2008 ; 1 ; Ciência & Saúde Volume 2008 ; 2008 >
-      au < released ; 2009 ; 2 ; Ciência & Saúde Volume 2009 ; 2009 >
-      au < released ; 2010 ; 3 ; Ciência & Saúde Volume 2010 ; 2010 >
-      au < released ; 2011 ; 4 ; Ciência & Saúde Volume 2011 ; 2011 >
-      au < released ; 2012 ; 5 ; Ciência & Saúde Volume 2012 ; 2012 >
-      au < released ; 2013 ; 6 ; Ciência & Saúde Volume 2013 ; 2013 >
-      au < manifest ; 2014 ; 7 ; Ciência & Saúde Volume 2014 ; 2014 >
+      au < released ; 2008 ; 1 ; Ciência & Saúde Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 2 ; Ciência & Saúde Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 3 ; Ciência & Saúde Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 4 ; Ciência & Saúde Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 5 ; Ciência & Saúde Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 6 ; Ciência & Saúde Volume 2013 ; 2013 ; >
+      au < manifest ; 2014 ; 7 ; Ciência & Saúde Volume 2014 ; 2014 ; >
 
   }
 
@@ -102,20 +102,20 @@
       param[base_url] = http://revistaseletronicas.pucrs.br/ojs/
       param[journal_id] = civitas
 
-      au < released ; 2001 ; 1 ; Civitas: Revista de Ciências Sociais Volume 2001 ; 2001 >
-      au < released ; 2002 ; 2 ; Civitas: Revista de Ciências Sociais Volume 2002 ; 2002 >
-      au < released ; 2003 ; 3 ; Civitas: Revista de Ciências Sociais Volume 2003 ; 2003 >
-      au < released ; 2004 ; 4 ; Civitas: Revista de Ciências Sociais Volume 2004 ; 2004 >
-      au < released ; 2005 ; 5 ; Civitas: Revista de Ciências Sociais Volume 2005 ; 2005 >
-      au < released ; 2006 ; 6 ; Civitas: Revista de Ciências Sociais Volume 2006 ; 2006 >
-      au < released ; 2007 ; 7 ; Civitas: Revista de Ciências Sociais Volume 2007 ; 2007 >
-      au < released ; 2008 ; 8 ; Civitas: Revista de Ciências Sociais Volume 2008 ; 2008 >
-      au < released ; 2009 ; 9 ; Civitas: Revista de Ciências Sociais Volume 2009 ; 2009 >
-      au < released ; 2010 ; 10 ; Civitas: Revista de Ciências Sociais Volume 2010 ; 2010 >
-      au < released ; 2011 ; 11 ; Civitas: Revista de Ciências Sociais Volume 2011 ; 2011 >
-      au < released ; 2012 ; 12 ; Civitas: Revista de Ciências Sociais Volume 2012 ; 2012 >
-      au < released ; 2013 ; 13 ; Civitas: Revista de Ciências Sociais Volume 2013 ; 2013 >
-      au < manifest ; 2014 ; 14 ; Civitas: Revista de Ciências Sociais Volume 2014 ; 2014 >
+      au < released ; 2001 ; 1 ; Civitas: Revista de Ciências Sociais Volume 2001 ; 2001 ; >
+      au < released ; 2002 ; 2 ; Civitas: Revista de Ciências Sociais Volume 2002 ; 2002 ; >
+      au < released ; 2003 ; 3 ; Civitas: Revista de Ciências Sociais Volume 2003 ; 2003 ; >
+      au < released ; 2004 ; 4 ; Civitas: Revista de Ciências Sociais Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 5 ; Civitas: Revista de Ciências Sociais Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 6 ; Civitas: Revista de Ciências Sociais Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 7 ; Civitas: Revista de Ciências Sociais Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 8 ; Civitas: Revista de Ciências Sociais Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 9 ; Civitas: Revista de Ciências Sociais Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 10 ; Civitas: Revista de Ciências Sociais Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 11 ; Civitas: Revista de Ciências Sociais Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 12 ; Civitas: Revista de Ciências Sociais Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 13 ; Civitas: Revista de Ciências Sociais Volume 2013 ; 2013 ; >
+      au < manifest ; 2014 ; 14 ; Civitas: Revista de Ciências Sociais Volume 2014 ; 2014 ; >
 
   }
 
@@ -130,11 +130,11 @@
       param[base_url] = http://revistaseletronicas.pucrs.br/ojs/
       param[journal_id] = conversasecontroversias
 
-      au < released ; 2010 ; 1 ; Conversas & Controvérsias Volume 2010 ; 2010 >
-      au < released ; 2011 ; 2 ; Conversas & Controvérsias Volume 2011 ; 2011 >
-      au < expected ; 2012 ; 3 ; Conversas & Controvérsias Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 4 ; Conversas & Controvérsias Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 5 ; Conversas & Controvérsias Volume 2014 ; 2014 >
+      au < released ; 2010 ; 1 ; Conversas & Controvérsias Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 2 ; Conversas & Controvérsias Volume 2011 ; 2011 ; >
+      au < expected ; 2012 ; 3 ; Conversas & Controvérsias Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 4 ; Conversas & Controvérsias Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 5 ; Conversas & Controvérsias Volume 2014 ; 2014 ; >
 
   }
 
@@ -150,16 +150,16 @@
       param[base_url] = http://revistaseletronicas.pucrs.br/ojs/
       param[journal_id] = fadir
 
-      au < released ; 2005 ; 1 ; Direito & Justiça: Revista de Direito da PUCRS Volume 2005 ; 2005 >
-      au < released ; 2006 ; 2 ; Direito & Justiça: Revista de Direito da PUCRS Volume 2006 ; 2006 >
-      au < released ; 2007 ; 3 ; Direito & Justiça: Revista de Direito da PUCRS Volume 2007 ; 2007 >
-      au < released ; 2008 ; 4 ; Direito & Justiça: Revista de Direito da PUCRS Volume 2008 ; 2008 >
-      au < released ; 2009 ; 5 ; Direito & Justiça: Revista de Direito da PUCRS Volume 2009 ; 2009 >
-      au < released ; 2010 ; 6 ; Direito & Justiça: Revista de Direito da PUCRS Volume 2010 ; 2010 >
-      au < released ; 2011 ; 7 ; Direito & Justiça: Revista de Direito da PUCRS Volume 2011 ; 2011 >
-      au < released ; 2012 ; 8 ; Direito & Justiça: Revista de Direito da PUCRS Volume 2012 ; 2012 >
-      au < released ; 2013 ; 9 ; Direito & Justiça: Revista de Direito da PUCRS Volume 2013 ; 2013 >
-      au < manifest ; 2014 ; 10 ; Direito & Justiça: Revista de Direito da PUCRS Volume 2014 ; 2014 >
+      au < released ; 2005 ; 1 ; Direito & Justiça: Revista de Direito da PUCRS Volume 2005 ; 2005 ; >
+      au < superseded ; 2006 ; 2 ; Direito & Justiça: Revista de Direito da PUCRS Volume 2006 ; 2006 ; no content >
+      au < released ; 2007 ; 3 ; Direito & Justiça: Revista de Direito da PUCRS Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 4 ; Direito & Justiça: Revista de Direito da PUCRS Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 5 ; Direito & Justiça: Revista de Direito da PUCRS Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 6 ; Direito & Justiça: Revista de Direito da PUCRS Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 7 ; Direito & Justiça: Revista de Direito da PUCRS Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 8 ; Direito & Justiça: Revista de Direito da PUCRS Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 9 ; Direito & Justiça: Revista de Direito da PUCRS Volume 2013 ; 2013 ; >
+      au < manifest ; 2014 ; 10 ; Direito & Justiça: Revista de Direito da PUCRS Volume 2014 ; 2014 ; >
 
   }
 
@@ -175,17 +175,17 @@
       param[base_url] = http://revistaseletronicas.pucrs.br/ojs/
       param[journal_id] = faced
 
-      au < released ; 2004 ; 1 ; Educação Volume 2004 ; 2004 >
-      au < released ; 2005 ; 2 ; Educação Volume 2005 ; 2005 >
-      au < released ; 2006 ; 3 ; Educação Volume 2006 ; 2006 >
-      au < released ; 2007 ; 4 ; Educação Volume 2007 ; 2007 >
-      au < released ; 2008 ; 5 ; Educação Volume 2008 ; 2008 >
-      au < released ; 2009 ; 6 ; Educação Volume 2009 ; 2009 >
-      au < released ; 2010 ; 7 ; Educação Volume 2010 ; 2010 >
-      au < released ; 2011 ; 8 ; Educação Volume 2011 ; 2011 >
-      au < released ; 2012 ; 9 ; Educação Volume 2012 ; 2012 >
-      au < released ; 2013 ; 10 ; Educação Volume 2013 ; 2013 >
-      au < manifest ; 2014 ; 11 ; Educação Volume 2014 ; 2014 >
+      au < released ; 2004 ; 1 ; Educação Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 2 ; Educação Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 3 ; Educação Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 4 ; Educação Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 5 ; Educação Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 6 ; Educação Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 7 ; Educação Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 8 ; Educação Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 9 ; Educação Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 10 ; Educação Volume 2013 ; 2013 ; >
+      au < manifest ; 2014 ; 11 ; Educação Volume 2014 ; 2014 ; >
 
   }
 
@@ -201,17 +201,17 @@
       param[base_url] = http://revistaseletronicas.pucrs.br/ojs/
       param[journal_id] = iberoamericana
 
-      au < released ; 2004 ; 1 ; Estudos Ibero-Americanos Volume 2004 ; 2004 >
-      au < released ; 2005 ; 2 ; Estudos Ibero-Americanos Volume 2005 ; 2005 >
-      au < released ; 2006 ; 3 ; Estudos Ibero-Americanos Volume 2006 ; 2006 >
-      au < released ; 2007 ; 4 ; Estudos Ibero-Americanos Volume 2007 ; 2007 >
-      au < released ; 2008 ; 5 ; Estudos Ibero-Americanos Volume 2008 ; 2008 >
-      au < released ; 2009 ; 6 ; Estudos Ibero-Americanos Volume 2009 ; 2009 >
-      au < released ; 2010 ; 7 ; Estudos Ibero-Americanos Volume 2010 ; 2010 >
-      au < released ; 2011 ; 8 ; Estudos Ibero-Americanos Volume 2011 ; 2011 >
-      au < released ; 2012 ; 9 ; Estudos Ibero-Americanos Volume 2012 ; 2012 >
-      au < released ; 2013 ; 10 ; Estudos Ibero-Americanos Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 11 ; Estudos Ibero-Americanos Volume 2014 ; 2014 >
+      au < released ; 2004 ; 1 ; Estudos Ibero-Americanos Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 2 ; Estudos Ibero-Americanos Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 3 ; Estudos Ibero-Americanos Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 4 ; Estudos Ibero-Americanos Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 5 ; Estudos Ibero-Americanos Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 6 ; Estudos Ibero-Americanos Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 7 ; Estudos Ibero-Americanos Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 8 ; Estudos Ibero-Americanos Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 9 ; Estudos Ibero-Americanos Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 10 ; Estudos Ibero-Americanos Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 11 ; Estudos Ibero-Americanos Volume 2014 ; 2014 ; >
 
   }
 
@@ -226,13 +226,13 @@
       param[base_url] = http://revistaseletronicas.pucrs.br/ojs/
       param[journal_id] = intuitio
 
-      au < released ; 2008 ; 1 ; intuitio Volume 2008 ; 2008 >
-      au < released ; 2009 ; 2 ; intuitio Volume 2009 ; 2009 >
-      au < released ; 2010 ; 3 ; intuitio Volume 2010 ; 2010 >
-      au < released ; 2011 ; 4 ; intuitio Volume 2011 ; 2011 >
-      au < released ; 2012 ; 5 ; intuitio Volume 2012 ; 2012 >
-      au < released ; 2013 ; 6 ; intuitio Volume 2013 ; 2013 >
-      au < manifest ; 2014 ; 7 ; intuitio Volume 2014 ; 2014 >
+      au < released ; 2008 ; 1 ; intuitio Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 2 ; intuitio Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 3 ; intuitio Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 4 ; intuitio Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 5 ; intuitio Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 6 ; intuitio Volume 2013 ; 2013 ; >
+      au < manifest ; 2014 ; 7 ; intuitio Volume 2014 ; 2014 ; >
 
   }
 
@@ -248,27 +248,27 @@
       param[base_url] = http://revistaseletronicas.pucrs.br/ojs/
       param[journal_id] = fale
 
-      au < released ; 1994 ; 1 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 1994 ; 1994 >
-      au < released ; 1995 ; 2 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 1995 ; 1995 >
-      au < released ; 1996 ; 3 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 1996 ; 1996 >
-      au < released ; 1997 ; 4 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 1997 ; 1997 >
-      au < released ; 1998 ; 5 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 1998 ; 1998 >
-      au < released ; 1999 ; 6 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 1999 ; 1999 >
-      au < released ; 2000 ; 7 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 2000 ; 2000 >
-      au < released ; 2001 ; 8 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 2001 ; 2001 >
-      au < released ; 2002 ; 9 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 2002 ; 2002 >
-      au < released ; 2003 ; 10 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 2003 ; 2003 >
-      au < released ; 2004 ; 11 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 2004 ; 2004 >
-      au < released ; 2005 ; 12 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 2005 ; 2005 >
-      au < released ; 2006 ; 13 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 2006 ; 2006 >
-      au < released ; 2007 ; 14 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 2007 ; 2007 >
-      au < released ; 2008 ; 15 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 2008 ; 2008 >
-      au < released ; 2009 ; 16 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 2009 ; 2009 >
-      au < released ; 2010 ; 17 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 2010 ; 2010 >
-      au < released ; 2011 ; 18 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 2011 ; 2011 >
-      au < released ; 2012 ; 19 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 2012 ; 2012 >
-      au < released ; 2013 ; 20 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 2013 ; 2013 >
-      au < manifest ; 2014 ; 21 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 2014 ; 2014 >
+      au < released ; 1994 ; 1 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 1994 ; 1994 ; >
+      au < released ; 1995 ; 2 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 1995 ; 1995 ; >
+      au < released ; 1996 ; 3 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 1996 ; 1996 ; >
+      au < released ; 1997 ; 4 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 1997 ; 1997 ; >
+      au < released ; 1998 ; 5 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 1998 ; 1998 ; >
+      au < released ; 1999 ; 6 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 1999 ; 1999 ; >
+      au < released ; 2000 ; 7 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 2000 ; 2000 ; >
+      au < released ; 2001 ; 8 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 2001 ; 2001 ; >
+      au < released ; 2002 ; 9 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 2002 ; 2002 ; >
+      au < released ; 2003 ; 10 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 2003 ; 2003 ; >
+      au < released ; 2004 ; 11 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 12 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 13 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 14 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 15 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 16 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 17 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 18 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 19 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 20 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 2013 ; 2013 ; >
+      au < manifest ; 2014 ; 21 ; Letras de Hoje: Estudos e debates de assuntos de linguística, literatura e língua portuguesa Volume 2014 ; 2014 ; >
 
   }
 
@@ -283,13 +283,13 @@
       param[base_url] = http://revistaseletronicas.pucrs.br/ojs/
       param[journal_id] = letronica
 
-      au < released ; 2008 ; 1 ; Letrônica: Revista Digital do PPGL Volume 2008 ; 2008 >
-      au < released ; 2009 ; 2 ; Letrônica: Revista Digital do PPGL Volume 2009 ; 2009 >
-      au < released ; 2010 ; 3 ; Letrônica: Revista Digital do PPGL Volume 2010 ; 2010 >
-      au < released ; 2011 ; 4 ; Letrônica: Revista Digital do PPGL Volume 2011 ; 2011 >
-      au < released ; 2012 ; 5 ; Letrônica: Revista Digital do PPGL Volume 2012 ; 2012 >
-      au < released ; 2013 ; 6 ; Letrônica: Revista Digital do PPGL Volume 2013 ; 2013 >
-      au < manifest ; 2014 ; 7 ; Letrônica: Revista Digital do PPGL Volume 2014 ; 2014 >
+      au < released ; 2008 ; 1 ; Letrônica: Revista Digital do PPGL Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 2 ; Letrônica: Revista Digital do PPGL Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 3 ; Letrônica: Revista Digital do PPGL Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 4 ; Letrônica: Revista Digital do PPGL Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 5 ; Letrônica: Revista Digital do PPGL Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 6 ; Letrônica: Revista Digital do PPGL Volume 2013 ; 2013 ; >
+      au < manifest ; 2014 ; 7 ; Letrônica: Revista Digital do PPGL Volume 2014 ; 2014 ; >
 
   }
 
@@ -305,13 +305,13 @@
       param[base_url] = http://revistaseletronicas.pucrs.br/ojs/
       param[journal_id] = navegacoes
 
-      au < released ; 2008 ; 1 ; Navegações: Revista de Cultura e Literaturas de Língua Portuguesa Volume 2008 ; 2008 >
-      au < released ; 2009 ; 2 ; Navegações: Revista de Cultura e Literaturas de Língua Portuguesa Volume 2009 ; 2009 >
-      au < released ; 2010 ; 3 ; Navegações: Revista de Cultura e Literaturas de Língua Portuguesa Volume 2010 ; 2010 >
-      au < released ; 2011 ; 4 ; Navegações: Revista de Cultura e Literaturas de Língua Portuguesa Volume 2011 ; 2011 >
-      au < released ; 2012 ; 5 ; Navegações: Revista de Cultura e Literaturas de Língua Portuguesa Volume 2012 ; 2012 >
-      au < released ; 2013 ; 6 ; Navegações: Revista de Cultura e Literaturas de Língua Portuguesa Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 7 ; Navegações: Revista de Cultura e Literaturas de Língua Portuguesa Volume 2014 ; 2014 >
+      au < released ; 2008 ; 1 ; Navegações: Revista de Cultura e Literaturas de Língua Portuguesa Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 2 ; Navegações: Revista de Cultura e Literaturas de Língua Portuguesa Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 3 ; Navegações: Revista de Cultura e Literaturas de Língua Portuguesa Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 4 ; Navegações: Revista de Cultura e Literaturas de Língua Portuguesa Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 5 ; Navegações: Revista de Cultura e Literaturas de Língua Portuguesa Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 6 ; Navegações: Revista de Cultura e Literaturas de Língua Portuguesa Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 7 ; Navegações: Revista de Cultura e Literaturas de Língua Portuguesa Volume 2014 ; 2014 ; >
 
   }
 
@@ -326,11 +326,11 @@
       param[base_url] = http://revistaseletronicas.pucrs.br/ojs/
       param[journal_id] = oficinadohistoriador
 
-      au < released ; 2010 ; 1 ; Oficina do Historiador Volume 2010 ; 2010 >
-      au < released ; 2011 ; 2 ; Oficina do Historiador Volume 2011 ; 2011 >
-      au < released ; 2012 ; 3 ; Oficina do Historiador Volume 2012 ; 2012 >
-      au < released ; 2013 ; 4 ; Oficina do Historiador Volume 2013 ; 2013 >
-      au < manifest ; 2014 ; 5 ; Oficina do Historiador Volume 2014 ; 2014 >
+      au < released ; 2010 ; 1 ; Oficina do Historiador Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 2 ; Oficina do Historiador Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 3 ; Oficina do Historiador Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 4 ; Oficina do Historiador Volume 2013 ; 2013 ; >
+      au < manifest ; 2014 ; 5 ; Oficina do Historiador Volume 2014 ; 2014 ; >
 
   }
 
@@ -346,16 +346,16 @@
       param[base_url] = http://revistaseletronicas.pucrs.br/ojs/
       param[journal_id] = revistapsico
 
-      au < released ; 2005 ; 1 ; Psico Volume 2005 ; 2005 >
-      au < released ; 2006 ; 2 ; Psico Volume 2006 ; 2006 >
-      au < released ; 2007 ; 3 ; Psico Volume 2007 ; 2007 >
-      au < released ; 2008 ; 4 ; Psico Volume 2008 ; 2008 >
-      au < released ; 2009 ; 5 ; Psico Volume 2009 ; 2009 >
-      au < released ; 2010 ; 6 ; Psico Volume 2010 ; 2010 >
-      au < released ; 2011 ; 7 ; Psico Volume 2011 ; 2011 >
-      au < released ; 2012 ; 8 ; Psico Volume 2012 ; 2012 >
-      au < released ; 2013 ; 9 ; Psico Volume 2013 ; 2013 >
-      au < manifest ; 2014 ; 10 ; Psico Volume 2014 ; 2014 >
+      au < released ; 2005 ; 1 ; Psico Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 2 ; Psico Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 3 ; Psico Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 4 ; Psico Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 5 ; Psico Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 6 ; Psico Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 7 ; Psico Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 8 ; Psico Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 9 ; Psico Volume 2013 ; 2013 ; >
+      au < manifest ; 2014 ; 10 ; Psico Volume 2014 ; 2014 ; >
 
   }
 
@@ -371,27 +371,27 @@
       param[base_url] = http://revistaseletronicas.pucrs.br/ojs/
       param[journal_id] = fzva
 
-      au < released ; 1994 ; 1 ; Revista da FZVA Volume 1994 ; 1994 >
-      au < released ; 1995 ; 2 ; Revista da FZVA Volume 1995 ; 1995 >
-      au < released ; 1996 ; 3 ; Revista da FZVA Volume 1996 ; 1996 >
-      au < released ; 1997 ; 4 ; Revista da FZVA Volume 1997 ; 1997 >
-      au < released ; 1998 ; 5 ; Revista da FZVA Volume 1998 ; 1998 >
-      au < released ; 1999 ; 6 ; Revista da FZVA Volume 1999 ; 1999 >
-      au < released ; 2000 ; 7 ; Revista da FZVA Volume 2000 ; 2000 >
-      au < released ; 2001 ; 8 ; Revista da FZVA Volume 2001 ; 2001 >
-      au < released ; 2002 ; 9 ; Revista da FZVA Volume 2002 ; 2002 >
-      au < released ; 2003 ; 10 ; Revista da FZVA Volume 2003 ; 2003 >
-      au < released ; 2004 ; 11 ; Revista da FZVA Volume 2004 ; 2004 >
-      au < released ; 2005 ; 12 ; Revista da FZVA Volume 2005 ; 2005 >
-      au < released ; 2006 ; 13 ; Revista da FZVA Volume 2006 ; 2006 >
-      au < released ; 2007 ; 14 ; Revista da FZVA Volume 2007 ; 2007 >
-      au < released ; 2008 ; 15 ; Revista da FZVA Volume 2008 ; 2008 >
-      au < released ; 2009 ; 16 ; Revista da FZVA Volume 2009 ; 2009 >
-      au < released ; 2010 ; 17 ; Revista da FZVA Volume 2010 ; 2010 >
-      au < released ; 2011 ; 18 ; Revista da FZVA Volume 2011 ; 2011 >
-      au < expected ; 2012 ; 19 ; Revista da FZVA Volume 2012 ; 2012 >
-      au < released ; 2013 ; 20 ; Revista da FZVA Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 21 ; Revista da FZVA Volume 2014 ; 2014 >
+      au < released ; 1994 ; 1 ; Revista da FZVA Volume 1994 ; 1994 ; >
+      au < released ; 1995 ; 2 ; Revista da FZVA Volume 1995 ; 1995 ; >
+      au < released ; 1996 ; 3 ; Revista da FZVA Volume 1996 ; 1996 ; >
+      au < released ; 1997 ; 4 ; Revista da FZVA Volume 1997 ; 1997 ; >
+      au < released ; 1998 ; 5 ; Revista da FZVA Volume 1998 ; 1998 ; >
+      au < released ; 1999 ; 6 ; Revista da FZVA Volume 1999 ; 1999 ; >
+      au < released ; 2000 ; 7 ; Revista da FZVA Volume 2000 ; 2000 ; >
+      au < released ; 2001 ; 8 ; Revista da FZVA Volume 2001 ; 2001 ; >
+      au < released ; 2002 ; 9 ; Revista da FZVA Volume 2002 ; 2002 ; >
+      au < released ; 2003 ; 10 ; Revista da FZVA Volume 2003 ; 2003 ; >
+      au < released ; 2004 ; 11 ; Revista da FZVA Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 12 ; Revista da FZVA Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 13 ; Revista da FZVA Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 14 ; Revista da FZVA Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 15 ; Revista da FZVA Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 16 ; Revista da FZVA Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 17 ; Revista da FZVA Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 18 ; Revista da FZVA Volume 2011 ; 2011 ; >
+      au < expected ; 2012 ; 19 ; Revista da FZVA Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 20 ; Revista da FZVA Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 21 ; Revista da FZVA Volume 2014 ; 2014 ; >
 
   }
 
@@ -406,13 +406,13 @@
       param[base_url] = http://revistaseletronicas.pucrs.br/ojs/
       param[journal_id] = graduacao
 
-      au < released ; 2008 ; 1 ; Revista da Graduação Volume 2008 ; 2008 >
-      au < released ; 2009 ; 2 ; Revista da Graduação Volume 2009 ; 2009 >
-      au < released ; 2010 ; 3 ; Revista da Graduação Volume 2010 ; 2010 >
-      au < released ; 2011 ; 4 ; Revista da Graduação Volume 2011 ; 2011 >
-      au < released ; 2012 ; 5 ; Revista da Graduação Volume 2012 ; 2012 >
-      au < released ; 2013 ; 6 ; Revista da Graduação Volume 2013 ; 2013 >
-      au < manifest ; 2014 ; 7 ; Revista da Graduação Volume 2014 ; 2014 >
+      au < released ; 2008 ; 1 ; Revista da Graduação Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 2 ; Revista da Graduação Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 3 ; Revista da Graduação Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 4 ; Revista da Graduação Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 5 ; Revista da Graduação Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 6 ; Revista da Graduação Volume 2013 ; 2013 ; >
+      au < manifest ; 2014 ; 7 ; Revista da Graduação Volume 2014 ; 2014 ; >
 
   }
 
@@ -427,11 +427,11 @@
       param[base_url] = http://revistaseletronicas.pucrs.br/ojs/
       param[journal_id] = porescrito
 
-      au < released ; 2010 ; 1 ; Revista Educação Por Escrito Volume 2010 ; 2010 >
-      au < released ; 2011 ; 2 ; Revista Educação Por Escrito Volume 2011 ; 2011 >
-      au < released ; 2012 ; 3 ; Revista Educação Por Escrito Volume 2012 ; 2012 >
-      au < released ; 2013 ; 4 ; Revista Educação Por Escrito Volume 2013 ; 2013 >
-      au < manifest ; 2014 ; 5 ; Revista Educação Por Escrito Volume 2014 ; 2014 >
+      au < released ; 2010 ; 1 ; Revista Educação Por Escrito Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 2 ; Revista Educação Por Escrito Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 3 ; Revista Educação Por Escrito Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 4 ; Revista Educação Por Escrito Volume 2013 ; 2013 ; >
+      au < manifest ; 2014 ; 5 ; Revista Educação Por Escrito Volume 2014 ; 2014 ; >
 
   }
 
@@ -447,27 +447,27 @@
       param[base_url] = http://revistaseletronicas.pucrs.br/ojs/
       param[journal_id] = revistafamecos
 
-      au < released ; 1994 ; 1 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 1994 ; 1994 >
-      au < released ; 1995 ; 2 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 1995 ; 1995 >
-      au < released ; 1996 ; 3 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 1996 ; 1996 >
-      au < released ; 1997 ; 4 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 1997 ; 1997 >
-      au < released ; 1998 ; 5 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 1998 ; 1998 >
-      au < released ; 1999 ; 6 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 1999 ; 1999 >
-      au < released ; 2000 ; 7 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2000 ; 2000 >
-      au < released ; 2001 ; 8 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2001 ; 2001 >
-      au < released ; 2002 ; 9 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2002 ; 2002 >
-      au < released ; 2003 ; 10 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2003 ; 2003 >
-      au < released ; 2004 ; 11 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2004 ; 2004 >
-      au < released ; 2005 ; 12 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2005 ; 2005 >
-      au < released ; 2006 ; 13 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2006 ; 2006 >
-      au < released ; 2007 ; 14 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2007 ; 2007 >
-      au < released ; 2008 ; 15 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2008 ; 2008 >
-      au < released ; 2009 ; 16 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2009 ; 2009 >
-      au < released ; 2010 ; 17 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2010 ; 2010 >
-      au < released ; 2011 ; 18 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2011 ; 2011 >
-      au < released ; 2012 ; 19 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2012 ; 2012 >
-      au < released ; 2013 ; 20 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2013 ; 2013 >
-      au < manifest ; 2014 ; 21 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2014 ; 2014 >
+      au < released ; 1994 ; 1 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 1994 ; 1994 ; >
+      au < released ; 1995 ; 2 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 1995 ; 1995 ; >
+      au < released ; 1996 ; 3 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 1996 ; 1996 ; >
+      au < released ; 1997 ; 4 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 1997 ; 1997 ; >
+      au < released ; 1998 ; 5 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 1998 ; 1998 ; >
+      au < released ; 1999 ; 6 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 1999 ; 1999 ; >
+      au < released ; 2000 ; 7 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2000 ; 2000 ; >
+      au < released ; 2001 ; 8 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2001 ; 2001 ; >
+      au < released ; 2002 ; 9 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2002 ; 2002 ; >
+      au < released ; 2003 ; 10 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2003 ; 2003 ; >
+      au < released ; 2004 ; 11 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 12 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 13 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 14 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 15 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 16 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 17 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 18 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 19 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 20 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2013 ; 2013 ; >
+      au < manifest ; 2014 ; 21 ; Revista FAMECOS: mídia, cultura e tecnologia Volume 2014 ; 2014 ; >
 
   }
 
@@ -483,16 +483,16 @@
       param[base_url] = http://revistaseletronicas.pucrs.br/ojs/
       param[journal_id] = fo
 
-      au < released ; 2005 ; 1 ; Revista Odonto Ciência Volume 2005 ; 2005 >
-      au < released ; 2006 ; 2 ; Revista Odonto Ciência Volume 2006 ; 2006 >
-      au < released ; 2007 ; 3 ; Revista Odonto Ciência Volume 2007 ; 2007 >
-      au < released ; 2008 ; 4 ; Revista Odonto Ciência Volume 2008 ; 2008 >
-      au < released ; 2009 ; 5 ; Revista Odonto Ciência Volume 2009 ; 2009 >
-      au < released ; 2010 ; 6 ; Revista Odonto Ciência Volume 2010 ; 2010 >
-      au < released ; 2011 ; 7 ; Revista Odonto Ciência Volume 2011 ; 2011 >
-      au < released ; 2012 ; 8 ; Revista Odonto Ciência Volume 2012 ; 2012 >
-      au < manifest ; 2013 ; 9 ; Revista Odonto Ciência Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 10 ; Revista Odonto Ciência Volume 2014 ; 2014 >
+      au < released ; 2005 ; 1 ; Revista Odonto Ciência Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 2 ; Revista Odonto Ciência Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 3 ; Revista Odonto Ciência Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 4 ; Revista Odonto Ciência Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 5 ; Revista Odonto Ciência Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 6 ; Revista Odonto Ciência Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 7 ; Revista Odonto Ciência Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 8 ; Revista Odonto Ciência Volume 2012 ; 2012 ; >
+      au < manifest ; 2013 ; 9 ; Revista Odonto Ciência Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 10 ; Revista Odonto Ciência Volume 2014 ; 2014 ; >
 
   }
 
@@ -508,16 +508,16 @@
       param[base_url] = http://revistaseletronicas.pucrs.br/ojs/
       param[journal_id] = scientiamedica
 
-      au < released ; 2005 ; 1 ; Scientia Medica Volume 2005 ; 2005 >
-      au < released ; 2006 ; 2 ; Scientia Medica Volume 2006 ; 2006 >
-      au < released ; 2007 ; 3 ; Scientia Medica Volume 2007 ; 2007 >
-      au < released ; 2008 ; 4 ; Scientia Medica Volume 2008 ; 2008 >
-      au < released ; 2009 ; 5 ; Scientia Medica Volume 2009 ; 2009 >
-      au < released ; 2010 ; 6 ; Scientia Medica Volume 2010 ; 2010 >
-      au < released ; 2011 ; 7 ; Scientia Medica Volume 2011 ; 2011 >
-      au < released ; 2012 ; 8 ; Scientia Medica Volume 2012 ; 2012 >
-      au < released ; 2013 ; 9 ; Scientia Medica Volume 2013 ; 2013 >
-      au < manifest ; 2014 ; 10 ; Scientia Medica Volume 2014 ; 2014 >
+      au < released ; 2005 ; 1 ; Scientia Medica Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 2 ; Scientia Medica Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 3 ; Scientia Medica Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 4 ; Scientia Medica Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 5 ; Scientia Medica Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 6 ; Scientia Medica Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 7 ; Scientia Medica Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 8 ; Scientia Medica Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 9 ; Scientia Medica Volume 2013 ; 2013 ; >
+      au < manifest ; 2014 ; 10 ; Scientia Medica Volume 2014 ; 2014 ; >
 
   }
 
@@ -533,25 +533,25 @@
       param[base_url] = http://revistaseletronicas.pucrs.br/ojs/
       param[journal_id] = famecos
 
-      au < released ; 1996 ; 1 ; Sessões do Imaginário: Cinema, Cibercultura, Tecnologias da Imagem Volume 1996 ; 1996 >
-      au < released ; 1997 ; 2 ; Sessões do Imaginário: Cinema, Cibercultura, Tecnologias da Imagem Volume 1997 ; 1997 >
-      au < released ; 1998 ; 3 ; Sessões do Imaginário: Cinema, Cibercultura, Tecnologias da Imagem Volume 1998 ; 1998 >
-      au < released ; 1999 ; 4 ; Sessões do Imaginário: Cinema, Cibercultura, Tecnologias da Imagem Volume 1999 ; 1999 >
-      au < released ; 2000 ; 5 ; Sessões do Imaginário: Cinema, Cibercultura, Tecnologias da Imagem Volume 2000 ; 2000 >
-      au < released ; 2001 ; 6 ; Sessões do Imaginário: Cinema, Cibercultura, Tecnologias da Imagem Volume 2001 ; 2001 >
-      au < released ; 2002 ; 7 ; Sessões do Imaginário: Cinema, Cibercultura, Tecnologias da Imagem Volume 2002 ; 2002 >
-      au < released ; 2003 ; 8 ; Sessões do Imaginário: Cinema, Cibercultura, Tecnologias da Imagem Volume 2003 ; 2003 >
-      au < released ; 2004 ; 9 ; Sessões do Imaginário: Cinema, Cibercultura, Tecnologias da Imagem Volume 2004 ; 2004 >
-      au < released ; 2005 ; 10 ; Sessões do Imaginário: Cinema, Cibercultura, Tecnologias da Imagem Volume 2005 ; 2005 >
-      au < released ; 2006 ; 11 ; Sessões do Imaginário: Cinema, Cibercultura, Tecnologias da Imagem Volume 2006 ; 2006 >
-      au < released ; 2007 ; 12 ; Sessões do Imaginário: Cinema, Cibercultura, Tecnologias da Imagem Volume 2007 ; 2007 >
-      au < released ; 2008 ; 13 ; Sessões do Imaginário: Cinema, Cibercultura, Tecnologias da Imagem Volume 2008 ; 2008 >
-      au < released ; 2009 ; 14 ; Sessões do Imaginário: Cinema, Cibercultura, Tecnologias da Imagem Volume 2009 ; 2009 >
-      au < released ; 2010 ; 15 ; Sessões do Imaginário: Cinema, Cibercultura, Tecnologias da Imagem Volume 2010 ; 2010 >
-      au < released ; 2011 ; 16 ; Sessões do Imaginário: Cinema, Cibercultura, Tecnologias da Imagem Volume 2011 ; 2011 >
-      au < released ; 2012 ; 17 ; Sessões do Imaginário: Cinema, Cibercultura, Tecnologias da Imagem Volume 2012 ; 2012 >
-      au < released ; 2013 ; 18 ; Sessões do Imaginário: Cinema, Cibercultura, Tecnologias da Imagem Volume 2013 ; 2013 >
-      au < manifest ; 2014 ; 19 ; Sessões do Imaginário: Cinema, Cibercultura, Tecnologias da Imagem Volume 2014 ; 2014 >
+      au < released ; 1996 ; 1 ; Sessões do Imaginário: Cinema, Cibercultura, Tecnologias da Imagem Volume 1996 ; 1996 ; >
+      au < released ; 1997 ; 2 ; Sessões do Imaginário: Cinema, Cibercultura, Tecnologias da Imagem Volume 1997 ; 1997 ; >
+      au < released ; 1998 ; 3 ; Sessões do Imaginário: Cinema, Cibercultura, Tecnologias da Imagem Volume 1998 ; 1998 ; >
+      au < released ; 1999 ; 4 ; Sessões do Imaginário: Cinema, Cibercultura, Tecnologias da Imagem Volume 1999 ; 1999 ; >
+      au < released ; 2000 ; 5 ; Sessões do Imaginário: Cinema, Cibercultura, Tecnologias da Imagem Volume 2000 ; 2000 ; >
+      au < released ; 2001 ; 6 ; Sessões do Imaginário: Cinema, Cibercultura, Tecnologias da Imagem Volume 2001 ; 2001 ; >
+      au < released ; 2002 ; 7 ; Sessões do Imaginário: Cinema, Cibercultura, Tecnologias da Imagem Volume 2002 ; 2002 ; >
+      au < released ; 2003 ; 8 ; Sessões do Imaginário: Cinema, Cibercultura, Tecnologias da Imagem Volume 2003 ; 2003 ; >
+      au < released ; 2004 ; 9 ; Sessões do Imaginário: Cinema, Cibercultura, Tecnologias da Imagem Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 10 ; Sessões do Imaginário: Cinema, Cibercultura, Tecnologias da Imagem Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 11 ; Sessões do Imaginário: Cinema, Cibercultura, Tecnologias da Imagem Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 12 ; Sessões do Imaginário: Cinema, Cibercultura, Tecnologias da Imagem Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 13 ; Sessões do Imaginário: Cinema, Cibercultura, Tecnologias da Imagem Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 14 ; Sessões do Imaginário: Cinema, Cibercultura, Tecnologias da Imagem Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 15 ; Sessões do Imaginário: Cinema, Cibercultura, Tecnologias da Imagem Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 16 ; Sessões do Imaginário: Cinema, Cibercultura, Tecnologias da Imagem Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 17 ; Sessões do Imaginário: Cinema, Cibercultura, Tecnologias da Imagem Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 18 ; Sessões do Imaginário: Cinema, Cibercultura, Tecnologias da Imagem Volume 2013 ; 2013 ; >
+      au < manifest ; 2014 ; 19 ; Sessões do Imaginário: Cinema, Cibercultura, Tecnologias da Imagem Volume 2014 ; 2014 ; >
 
   }
 
@@ -566,12 +566,12 @@
       param[base_url] = http://revistaseletronicas.pucrs.br/ojs/
       param[journal_id] = sistemapenaleviolencia
 
-      au < released ; 2009 ; 1 ; Sistema Penal & Violência Volume 2009 ; 2009 >
-      au < released ; 2010 ; 2 ; Sistema Penal & Violência Volume 2010 ; 2010 >
-      au < released ; 2011 ; 3 ; Sistema Penal & Violência Volume 2011 ; 2011 >
-      au < released ; 2012 ; 4 ; Sistema Penal & Violência Volume 2012 ; 2012 >
-      au < released ; 2013 ; 5 ; Sistema Penal & Violência Volume 2013 ; 2013 >
-      au < manifest ; 2014 ; 6 ; Sistema Penal & Violência Volume 2014 ; 2014 >
+      au < released ; 2009 ; 1 ; Sistema Penal & Violência Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 2 ; Sistema Penal & Violência Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 3 ; Sistema Penal & Violência Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 4 ; Sistema Penal & Violência Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 5 ; Sistema Penal & Violência Volume 2013 ; 2013 ; >
+      au < manifest ; 2014 ; 6 ; Sistema Penal & Violência Volume 2014 ; 2014 ; >
 
   }
 
@@ -587,16 +587,16 @@
       param[base_url] = http://revistaseletronicas.pucrs.br/ojs/
       param[journal_id] = teo
 
-      au < released ; 2005 ; 1 ; Teocomunicação – Revista da Teologia da PUCRS Volume 2005 ; 2005 >
-      au < released ; 2006 ; 2 ; Teocomunicação – Revista da Teologia da PUCRS Volume 2006 ; 2006 >
-      au < released ; 2007 ; 3 ; Teocomunicação – Revista da Teologia da PUCRS Volume 2007 ; 2007 >
-      au < released ; 2008 ; 4 ; Teocomunicação – Revista da Teologia da PUCRS Volume 2008 ; 2008 >
-      au < released ; 2009 ; 5 ; Teocomunicação – Revista da Teologia da PUCRS Volume 2009 ; 2009 >
-      au < released ; 2010 ; 6 ; Teocomunicação – Revista da Teologia da PUCRS Volume 2010 ; 2010 >
-      au < released ; 2011 ; 7 ; Teocomunicação – Revista da Teologia da PUCRS Volume 2011 ; 2011 >
-      au < released ; 2012 ; 8 ; Teocomunicação – Revista da Teologia da PUCRS Volume 2012 ; 2012 >
-      au < released ; 2013 ; 9 ; Teocomunicação – Revista da Teologia da PUCRS Volume 2013 ; 2013 >
-      au < manifest ; 2014 ; 10 ; Teocomunicação – Revista da Teologia da PUCRS Volume 2014 ; 2014 >
+      au < released ; 2005 ; 1 ; Teocomunicação – Revista da Teologia da PUCRS Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 2 ; Teocomunicação – Revista da Teologia da PUCRS Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 3 ; Teocomunicação – Revista da Teologia da PUCRS Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 4 ; Teocomunicação – Revista da Teologia da PUCRS Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 5 ; Teocomunicação – Revista da Teologia da PUCRS Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 6 ; Teocomunicação – Revista da Teologia da PUCRS Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 7 ; Teocomunicação – Revista da Teologia da PUCRS Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 8 ; Teocomunicação – Revista da Teologia da PUCRS Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 9 ; Teocomunicação – Revista da Teologia da PUCRS Volume 2013 ; 2013 ; >
+      au < manifest ; 2014 ; 10 ; Teocomunicação – Revista da Teologia da PUCRS Volume 2014 ; 2014 ; >
 
   }
 
@@ -611,19 +611,19 @@
       param[base_url] = http://revistaseletronicas.pucrs.br/ojs/
       param[journal_id] = fass
 
-      au < released ; 2002 ; 1 ; Textos & Contextos: Porto Alegre Volume 2002 ; 2002 >
-      au < released ; 2003 ; 2 ; Textos & Contextos: Porto Alegre Volume 2003 ; 2003 >
-      au < released ; 2004 ; 3 ; Textos & Contextos: Porto Alegre Volume 2004 ; 2004 >
-      au < released ; 2005 ; 4 ; Textos & Contextos: Porto Alegre Volume 2005 ; 2005 >
-      au < released ; 2006 ; 5 ; Textos & Contextos: Porto Alegre Volume 2006 ; 2006 >
-      au < released ; 2007 ; 6 ; Textos & Contextos: Porto Alegre Volume 2007 ; 2007 >
-      au < released ; 2008 ; 7 ; Textos & Contextos: Porto Alegre Volume 2008 ; 2008 >
-      au < released ; 2009 ; 8 ; Textos & Contextos: Porto Alegre Volume 2009 ; 2009 >
-      au < released ; 2010 ; 9 ; Textos & Contextos: Porto Alegre Volume 2010 ; 2010 >
-      au < released ; 2011 ; 10 ; Textos & Contextos: Porto Alegre Volume 2011 ; 2011 >
-      au < released ; 2012 ; 11 ; Textos & Contextos: Porto Alegre Volume 2012 ; 2012 >
-      au < released ; 2013 ; 12 ; Textos & Contextos: Porto Alegre Volume 2013 ; 2013 >
-      au < manifest ; 2014 ; 13 ; Textos & Contextos: Porto Alegre Volume 2014 ; 2014 >
+      au < released ; 2002 ; 1 ; Textos & Contextos: Porto Alegre Volume 2002 ; 2002 ; >
+      au < released ; 2003 ; 2 ; Textos & Contextos: Porto Alegre Volume 2003 ; 2003 ; >
+      au < released ; 2004 ; 3 ; Textos & Contextos: Porto Alegre Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 4 ; Textos & Contextos: Porto Alegre Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 5 ; Textos & Contextos: Porto Alegre Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 6 ; Textos & Contextos: Porto Alegre Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 7 ; Textos & Contextos: Porto Alegre Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 8 ; Textos & Contextos: Porto Alegre Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 9 ; Textos & Contextos: Porto Alegre Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 10 ; Textos & Contextos: Porto Alegre Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 11 ; Textos & Contextos: Porto Alegre Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 12 ; Textos & Contextos: Porto Alegre Volume 2013 ; 2013 ; >
+      au < manifest ; 2014 ; 13 ; Textos & Contextos: Porto Alegre Volume 2014 ; 2014 ; >
 
   }
 
@@ -639,16 +639,16 @@
       param[base_url] = http://revistaseletronicas.pucrs.br/ojs/
       param[journal_id] = veritas
 
-      au < released ; 2005 ; 1 ; Veritas – Revista de Filosofia da PUCRS Volume 2005 ; 2005 >
-      au < released ; 2006 ; 2 ; Veritas – Revista de Filosofia da PUCRS Volume 2006 ; 2006 >
-      au < released ; 2007 ; 3 ; Veritas – Revista de Filosofia da PUCRS Volume 2007 ; 2007 >
-      au < released ; 2008 ; 4 ; Veritas – Revista de Filosofia da PUCRS Volume 2008 ; 2008 >
-      au < released ; 2009 ; 5 ; Veritas – Revista de Filosofia da PUCRS Volume 2009 ; 2009 >
-      au < released ; 2010 ; 6 ; Veritas – Revista de Filosofia da PUCRS Volume 2010 ; 2010 >
-      au < released ; 2011 ; 7 ; Veritas – Revista de Filosofia da PUCRS Volume 2011 ; 2011 >
-      au < released ; 2012 ; 8 ; Veritas – Revista de Filosofia da PUCRS Volume 2012 ; 2012 >
-      au < released ; 2013 ; 9 ; Veritas – Revista de Filosofia da PUCRS Volume 2013 ; 2013 >
-      au < manifest ; 2014 ; 10 ; Veritas – Revista de Filosofia da PUCRS Volume 2014 ; 2014 >
+      au < released ; 2005 ; 1 ; Veritas – Revista de Filosofia da PUCRS Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 2 ; Veritas – Revista de Filosofia da PUCRS Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 3 ; Veritas – Revista de Filosofia da PUCRS Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 4 ; Veritas – Revista de Filosofia da PUCRS Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 5 ; Veritas – Revista de Filosofia da PUCRS Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 6 ; Veritas – Revista de Filosofia da PUCRS Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 7 ; Veritas – Revista de Filosofia da PUCRS Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 8 ; Veritas – Revista de Filosofia da PUCRS Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 9 ; Veritas – Revista de Filosofia da PUCRS Volume 2013 ; 2013 ; >
+      au < manifest ; 2014 ; 10 ; Veritas – Revista de Filosofia da PUCRS Volume 2014 ; 2014 ; >
 
   }
 
