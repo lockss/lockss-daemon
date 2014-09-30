@@ -40,7 +40,7 @@
     <string>au_start_url</string>
     <string>&quot;%slockss.php?t=lockss&amp;pa=issue&amp;j_id=%s&amp;year=%d&quot;, base_url, journal_id, year</string>
   </entry>
-  <entry>false
+  <entry>
     <string>au_crawlrules</string>
     <list>
       <string>1,&quot;^%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(\?[0-9]+)?$&quot;, base_url</string>
@@ -51,7 +51,7 @@
     </list>
   </entry>
   <entry>
-    <string>plugin_config_props</string>false
+    <string>plugin_config_props</string>
     <list>
       <org.lockss.daemon.ConfigParamDescr>
         <key>base_url</key>
