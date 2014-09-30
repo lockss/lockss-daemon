@@ -688,7 +688,7 @@
       param[journal_id] = padm
       param[journal_issn] = 1479-4713
       
-      comment[0] = It appears that our office does not have access to volume 1.
+      comment[0] = No subscription to volume 1. No manifest pages at all. Moved to Routledge? http://www.ingentaconnect.com/content/1479-4713
 
       au < released ; 2005 ; International Journal of Performance Arts and Digital Media Volume 1 ; 1 >
       au < released ; 2006-2007 ; International Journal of Performance Arts and Digital Media Volume 2 ; 2 >
@@ -1475,6 +1475,8 @@
       >
       param[journal_id] = sac
       param[journal_issn] = 1750-3175
+      
+      comment[publisher] = journal moved to Routledge? No subscription for us. http://www.ingentaconnect.com/content/1750-3175
     
       au < released ; 2007 ; Studies in Australasian Cinema Volume 1 ; 1 >
       au < released ; 2008 ; Studies in Australasian Cinema Volume 2 ; 2 >
@@ -1573,6 +1575,8 @@
         issn = 1471-5880 ;
         eissn = 1758-9517
       >
+
+      comment[publisher] = still on Ingenta, but moved to Routledge. No manifest pages. http://www.ingentaconnect.com/content/1471-5880
 
       param[journal_id] = sfc
       param[journal_issn] = 1471-5880
