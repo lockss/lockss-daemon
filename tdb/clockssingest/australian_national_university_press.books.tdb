@@ -8,7 +8,7 @@
   
     plugin = needs.plugin 
     param[base_url] = http://press.anu.edu.au/
-    implicit < status ; status2 ; year ; book_id ; isbn ; eisbn; name ; author >
+    implicit < status ; status2 ; year ; param[book_id] ; isbn ; eisbn ; name ; author >
     comment[param] = book name used as part of url, unknown param, wait for plugin writer to determine
 
   {
