@@ -734,8 +734,8 @@
     param[journal_id] = 164
     comment[0] = no years 2011, 2012, 2013 as of 4/25/13
 
-    au < manifest ; 2009 ; Clinical Medicine Reviews in Cardiology Volume 1 ; 1 ; 2009 >
-    au < manifest ; 2010 ; Clinical Medicine Reviews in Cardiology Volume 2 ; 2 ; 2010 >
+    au < exists ; 2009 ; Clinical Medicine Reviews in Cardiology Volume 1 ; 1 ; 2009 >
+    au < exists ; 2010 ; Clinical Medicine Reviews in Cardiology Volume 2 ; 2 ; 2010 >
 
   }
 
@@ -749,8 +749,8 @@
 
     param[journal_id] = 163
 
-    au < manifest ; 2009 ; Clinical Medicine Reviews in Oncology Volume 1 ; 1 ; 2009 >
-    au < manifest ; 2010 ; Clinical Medicine Reviews in Oncology Volume 2 ; 2 ; 2010 >
+    au < exists ; 2009 ; Clinical Medicine Reviews in Oncology Volume 1 ; 1 ; 2009 >
+    au < exists ; 2010 ; Clinical Medicine Reviews in Oncology Volume 2 ; 2 ; 2010 >
     au < released ; 2011 ; Clinical Medicine Reviews in Oncology Volume 3 ; 3 ; 2011 >
     au < released ; 2012 ; Clinical Medicine Reviews in Oncology Volume 4 ; 4 ; 2012 >
     au < expected ; 2013 ; Clinical Medicine Reviews in Oncology Volume 5 ; 5 ; 2013 >
@@ -768,7 +768,7 @@
     param[journal_id] = 167
     comment[0] = no years 2010, 2012, 2013 as of 10/4/13
 
-    au < manifest ; 2009 ; Clinical Medicine Reviews in Patient Care Volume 1 ; 1 ; 2009 >
+    au < exists ; 2009 ; Clinical Medicine Reviews in Patient Care Volume 1 ; 1 ; 2009 >
     au < released ; 2011 ; Clinical Medicine Reviews in Patient Care Volume 2 ; 2 ; 2011 >
 
   }
@@ -782,8 +782,8 @@
     >
     param[journal_id] = 166
 
-    au < manifest ; 2009 ; Clinical Medicine Reviews in Therapeutics Volume 1 ; 1 ; 2009 >
-    au < manifest ; 2010 ; Clinical Medicine Reviews in Therapeutics Volume 2 ; 2 ; 2010 >
+    au < exists ; 2009 ; Clinical Medicine Reviews in Therapeutics Volume 1 ; 1 ; 2009 >
+    au < exists ; 2010 ; Clinical Medicine Reviews in Therapeutics Volume 2 ; 2 ; 2010 >
     au < released ; 2011 ; Clinical Medicine Reviews in Therapeutics Volume 3 ; 3 ; 2011 >
     au < released ; 2012 ; Clinical Medicine Reviews in Therapeutics Volume 4 ; 4 ; 2012 >
     au < exists ; 2013 ; Clinical Medicine Reviews in Therapeutics Volume 5 ; 5 ; 2013 >
@@ -801,8 +801,8 @@
 
     param[journal_id] = 165
 
-    au < manifest ; 2009 ; Clinical Medicine Reviews in Vascular Health Volume 1 ; 1 ; 2009 >
-    au < manifest ; 2010 ; Clinical Medicine Reviews in Vascular Health Volume 2 ; 2 ; 2010 >
+    au < exists ; 2009 ; Clinical Medicine Reviews in Vascular Health Volume 1 ; 1 ; 2009 >
+    au < exists ; 2010 ; Clinical Medicine Reviews in Vascular Health Volume 2 ; 2 ; 2010 >
     au < released ; 2011 ; Clinical Medicine Reviews in Vascular Health Volume 3 ; 3 ; 2011 >
     au < released ; 2012 ; Clinical Medicine Reviews in Vascular Health Volume 4 ; 4 ; 2012 >
     au < exists ; 2013 ; Clinical Medicine Reviews in Vascular Health Volume 5 ; 5 ; 2013 >
@@ -820,8 +820,8 @@
 
     param[journal_id] = 162
 
-    au < manifest ; 2009 ; Clinical Medicine Reviews in Women's Health Volume 1 ; 1 ; 2009 >
-    au < manifest ; 2010 ; Clinical Medicine Reviews in Women's Health Volume 2 ; 2 ; 2010 >
+    au < exists ; 2009 ; Clinical Medicine Reviews in Women's Health Volume 1 ; 1 ; 2009 >
+    au < exists ; 2010 ; Clinical Medicine Reviews in Women's Health Volume 2 ; 2 ; 2010 >
     au < released ; 2011 ; Clinical Medicine Reviews in Women's Health Volume 3 ; 3 ; 2011 >
     au < released ; 2012 ; Clinical Medicine Reviews in Women's Health Volume 4 ; 4 ; 2012 >
     au < expected ; 2013 ; Clinical Medicine Reviews in Women's Health Volume 5 ; 5 ; 2013 >
