@@ -1,10 +1,10 @@
 /*
- * $Id: SchemaDocDbCreator.java,v 1.3 2014-08-21 00:05:59 fergaloy-sf Exp $
+ * $Id: SchemaDocDbCreator.java,v 1.4 2014-10-01 16:53:38 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -80,7 +80,6 @@ public class SchemaDocDbCreator {
     DbManager dbManager = daemon.getDbManager();
     dbManager.startService();
     dbManager.waitForThreadsToFinish(500);
-    dbManager.stopService();
     System.exit(0);
   }
 }
