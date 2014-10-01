@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseAuParamFunctor.java,v 1.1 2014-08-25 08:57:02 tlipkis Exp $
+ * $Id: TestBaseAuParamFunctor.java,v 1.2 2014-10-01 08:16:11 tlipkis Exp $
  */
 
 /*
@@ -57,22 +57,51 @@ public class TestBaseAuParamFunctor extends LockssTestCase {
     super.tearDown();
   }
 
-  public void testEval() throws PluginException {
+  public void testApply() throws PluginException {
     assertEquals("WWW.foo.bar",
-		 fn.eval(null, "url_host",
-			 "http://WWW.foo.bar/path/foo", AuParamType.String));
+		 fn.apply(null, "url_host",
+			  "http://WWW.foo.bar/path/foo", AuParamType.String));
     assertEquals("/path/foo",
-		 fn.eval(null, "url_path",
-			 "http://WWW.foo.bar/path/foo", AuParamType.String));
+		 fn.apply(null, "url_path",
+			  "http://WWW.foo.bar/path/foo", AuParamType.String));
+
     assertEquals("http://foo.bar/",
-		 fn.eval(null, "del_www",
-			 "http://WWW.foo.bar/", AuParamType.String));
+		 fn.apply(null, "del_www",
+			  "http://WWW.foo.bar/", AuParamType.String));
     assertEquals("http://www.FOO.BAR/",
-		 fn.eval(null, "add_www",
-			 "http://FOO.BAR/", AuParamType.String));
+		 fn.apply(null, "add_www",
+			  "http://FOO.BAR/", AuParamType.String));
+
+    assertEquals("https://FOO.BAR/",
+		 fn.apply(null, "to_https",
+			  "http://FOO.BAR/", AuParamType.String));
+    assertEquals("http://FOO.BAR/",
+		 fn.apply(null, "to_http",
+			  "https://FOO.BAR/", AuParamType.String));
+
+    assertEquals("http%3A%2F%2Ffoo.bar%2Fpath%3Fa%3Dv%26a2%3Dv2",
+		 fn.apply(null, "url_encode",
+			  "http://foo.bar/path?a=v&a2=v2",
+			  AuParamType.String));
+    assertEquals("http://foo.bar/path?a=v&a2=v2",
+		 fn.apply(null, "url_decode",
+			  "http%3A%2F%2Ffoo.bar%2Fpath%3Fa%3Dv%26a2%3Dv2",
+			  AuParamType.String));
+  }
+
+  AuParamType fntype(String name) throws PluginException {
+    return fn.type(null, name);
   }
 
   public void testType() throws PluginException {
-    assertEquals(AuParamType.String, fn.type(null, "url_host"));
+    assertEquals(null, fntype("no_fn"));
+    assertEquals(AuParamType.String, fntype("url_host"));
+    assertEquals(AuParamType.String, fntype("url_path"));
+    assertEquals(AuParamType.String, fntype("add_www"));
+    assertEquals(AuParamType.String, fntype("del_www"));
+    assertEquals(AuParamType.String, fntype("to_http"));
+    assertEquals(AuParamType.String, fntype("to_https"));
+    assertEquals(AuParamType.String, fntype("url_encode"));
+    assertEquals(AuParamType.String, fntype("url_decode"));
   }
 }

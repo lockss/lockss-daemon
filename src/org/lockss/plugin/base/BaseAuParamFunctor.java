@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAuParamFunctor.java,v 1.1 2014-08-25 08:57:03 tlipkis Exp $
+ * $Id: BaseAuParamFunctor.java,v 1.2 2014-10-01 08:16:11 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,9 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.base;
 
+import java.io.*;
 import java.net.*;
+import java.util.*;
 import java.util.regex.*;
 
 import org.lockss.util.*;
@@ -40,16 +42,35 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 
 /**
- * Functions that may be applied to AU config params in printf arguments.
+ * Default set of functions that may be applied to AU config params in
+ * printf arguments.  Plugins may subclass to add functions.
+ * <p>
+ * Supported functions: <dl>
+ * <dt>url_host</dt><dd>Returns the host part of a URL.</dd>
+ * <dt>url_path</dt><dd>Returns the path part of a URL.</dd>
+ * <dt>add_www</dt><dd>Adds leading <code>www</code> subdomain to host, if
+ * not already present.</dd>
+ * <dt>del_www</dt><dd>Removes leading <code>www</code> subdomain from
+ * host.</dd>
+ * <dt>to_https</dt><dd>Replaces <code>http:</code> with
+ * <code>https:</code> at start of URL.</dd>
+ * <dt>to_http</dt><dd>Replaces <code>https:</code> with
+ * <code>http:</code> at start of URL.</dd>
+ * <dt>url_encode</dt><dd>URL encodes argument.</dd>
+ * <dt>url_decode</dt><dd>URL decodes argument.</dd>
+ * </dl>  
  */
 public class BaseAuParamFunctor implements AuParamFunctor {
   static Logger log = Logger.getLogger("BaseAuParamFunctor");
 
-  public static AuParamFunctor SINGLETON = new BaseAuParamFunctor();
+  public static final AuParamFunctor SINGLETON = new BaseAuParamFunctor();
 
-  /** Evaluate the function named by fn, with single arg */
-  public Object eval(AuParamFunctor.FunctorData fd, String fn,
-		     Object arg, AuParamType type)
+  public static final String URL_ENCODE_CHARSET = "UTF-8";
+
+
+  /** Apply the function named by fn to a single arg */
+  public Object apply(AuParamFunctor.FunctorData fd, String fn,
+		      Object arg, AuParamType type)
       throws PluginException {
     try {
       if (fn.equals("url_host")) {
@@ -60,18 +81,41 @@ public class BaseAuParamFunctor implements AuParamFunctor {
 	return UrlUtil.addSubDomain((String)arg, "www");
       } else if (fn.equals("del_www")) {
 	return UrlUtil.delSubDomain((String)arg, "www");
+      } else if (fn.equals("to_https")) {
+	return UrlUtil.replaceScheme((String)arg, "http", "https");
+      } else if (fn.equals("to_http")) {
+	return UrlUtil.replaceScheme((String)arg, "https", "http");
+      } else if (fn.equals("url_encode")) {
+	return URLEncoder.encode((String)arg, URL_ENCODE_CHARSET);
+      } else if (fn.equals("url_decode")) {
+	return URLDecoder.decode((String)arg, URL_ENCODE_CHARSET);
       }
       throw new PluginException.InvalidDefinition("Undefined function: " + fn);
     } catch (ClassCastException e) {
       throw new PluginException.BehaviorException("Illegal arg type", e);
     } catch (MalformedURLException e) {
       throw new PluginException.BehaviorException("Malformed fn arg", e);
+    } catch (UnsupportedEncodingException e) {
+      throw new PluginException.BehaviorException("Unsupported charset (shouldn't happen)", e);
     }
   }
 
-  /** Return the BaseAuParamType named by fn, with array of args */
+  static Map<String,AuParamType> fnTypes = new HashMap<String,AuParamType>();
+  static {
+    for (String x : new String[] {
+	"url_host", "url_path",
+	"add_www", "del_www",
+	"to_http", "to_https",
+	"url_encode", "url_decode",
+      }) {
+      fnTypes.put(x, AuParamType.String);
+    }
+  };
+
+  /** Return the AuParamType of the value returned by fn.  Return null iff
+   * fn is undefined */
   public AuParamType type(AuParamFunctor.FunctorData fd, String fn) {
-    return AuParamType.String;
+    return fnTypes.get(fn);
   }
 
 }
