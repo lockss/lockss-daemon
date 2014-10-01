@@ -1,5 +1,5 @@
 /*
- * $Id: PeerJPdfFilterFactory.java,v 1.1 2014-10-01 21:05:59 thib_gc Exp $
+ * $Id: PeerJPdfFilterFactory.java,v 1.2 2014-10-01 21:07:48 thib_gc Exp $
  */
 
 /*
@@ -32,9 +32,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.peerj;
 
-import java.io.*;
-
-import org.apache.commons.io.IOUtils;
 import org.lockss.filter.pdf.SimplePdfFilterFactory;
 import org.lockss.pdf.*;
 import org.lockss.plugin.ArchivalUnit;
