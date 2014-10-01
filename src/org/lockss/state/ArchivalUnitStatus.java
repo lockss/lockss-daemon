@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.124 2014-06-23 22:51:48 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.125 2014-10-01 08:34:36 tlipkis Exp $
  */
 
 /*
@@ -1178,7 +1178,13 @@ public class ArchivalUnitStatus
       res.add(new StatusTable.SummaryInfo(null,
 					  ColumnDescriptor.TYPE_STRING,
 					  audef));
-
+      Object sclink =
+	new StatusTable.SrvLink("Serve AU",
+				AdminServletManager.SERVLET_SERVE_CONTENT,
+				PropUtil.fromArgs("auid", au.getAuId()));
+      res.add(new StatusTable.SummaryInfo(null,
+					  ColumnDescriptor.TYPE_STRING,
+					  sclink));
 
       List peerLinks = new ArrayList();
       peerLinks.add(PeerRepair.makeAuRef("Repair candidates", au.getAuId()));
