@@ -1,5 +1,5 @@
 /*
- * $Id: TestHashSvcSchedImpl.java,v 1.5 2005-08-11 06:33:19 tlipkis Exp $
+ * $Id: TestHashSvcSchedImpl.java,v 1.6 2014-10-01 08:33:10 tlipkis Exp $
  */
 
 /*
@@ -107,6 +107,27 @@ public class TestHashSvcSchedImpl extends LockssTestCase {
     assertFalse(svc.isIdle());
     svc.cancelAuHashes(au);
     assertTrue(svc.isIdle());
+  }
+
+  public void testCallback() throws Exception {
+    TimeBase.setSimulated();
+    final SimpleQueue q = new SimpleQueue.Fifo();
+
+    HashService.Callback cb = new HashService.Callback() {
+	public void hashingFinished(CachedUrlSet urlset,
+				    long timeUsed,
+				    Object cookie,
+				    CachedUrlSetHasher hasher,
+				    Exception e) {
+	  q.put(e);
+	}
+      };
+
+    assertTrue(hashContent("1", 300, -100, 500, cb));
+    assertFalse(svc.isIdle());
+    TimeBase.step(10000);
+    Exception cbex = (Exception)q.get(TIMEOUT_SHOULDNT);
+    assertClass(SchedService.Timeout.class, cbex);
   }
 
   public class MyMockCUSH extends MockCachedUrlSetHasher {

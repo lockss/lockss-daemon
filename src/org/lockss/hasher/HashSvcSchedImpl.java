@@ -1,5 +1,5 @@
 /*
- * $Id: HashSvcSchedImpl.java,v 1.27 2013-11-05 23:53:10 tlipkis Exp $
+ * $Id: HashSvcSchedImpl.java,v 1.28 2014-10-01 08:33:10 tlipkis Exp $
  */
 
 /*
@@ -325,6 +325,24 @@ public class HashSvcSchedImpl
       }
     }
 
+    Object getState(boolean done) {
+      if (!done) {
+	return isStepping() ? TASK_STATE_RUN : TASK_STATE_WAIT;
+      }
+      if (getException() == null) {
+	return TASK_STATE_DONE;
+      } else if (getException() instanceof SchedService.Timeout) {
+	if (urlsetHasher.typeString().startsWith("E")) {
+	  // XXX add status accessor to Hasher interface
+	  return TASK_STATE_RECALC_UNFINISHED;
+	} else {
+	  return TASK_STATE_TIMEOUT;
+	}
+      } else {
+	return TASK_STATE_ERROR;
+      }
+    }
+
     public String toString() {
       StringBuffer sb = new StringBuffer();
       sb.append("[HTask:");
@@ -441,7 +459,7 @@ public class HashSvcSchedImpl
 			task.getLatestFinish().getExpiration().getTime())));
       row.put("sort2", new Long(task.hashReqSeq));
       row.put("sched", new Integer(task.hashReqSeq));
-      row.put("state", getState(task, done));
+      row.put("state", task.getState(done));
       row.put("au", task.urlset.getArchivalUnit().getName());
       row.put("cus", task.urlset.getSpec());
       row.put("type", task.typeString());
@@ -461,19 +479,6 @@ public class HashSvcSchedImpl
 				 timeUsed));
       }
       return row;
-    }
-
-    private Object getState(HashTask task, boolean done) {
-      if (!done) {
-	return (task.isStepping()) ? TASK_STATE_RUN : TASK_STATE_WAIT;
-      }
-      if (task.getException() == null) {
-	return TASK_STATE_DONE;
-      } else if (task.getException() instanceof SchedService.Timeout) {
-	return TASK_STATE_TIMEOUT;
-      } else {
-	return TASK_STATE_ERROR;
-      }
     }
 
     private List getSummaryInfo(String key) {
@@ -549,12 +554,12 @@ public class HashSvcSchedImpl
   static final TaskState TASK_STATE_DONE = new TaskState("Done", 3);
 
   static final StatusTable.DisplayedValue TASK_STATE_TIMEOUT =
-    new StatusTable.DisplayedValue(new TaskState("Timeout", 3));
+    new StatusTable.DisplayedValue(new TaskState("Timeout", 3))
+    .setColor("red");
+  static final StatusTable.DisplayedValue TASK_STATE_RECALC_UNFINISHED =
+    new StatusTable.DisplayedValue(new TaskState("Recalc Not Done", 3))
+    .setColor("orange");
   static final StatusTable.DisplayedValue TASK_STATE_ERROR =
-    new StatusTable.DisplayedValue(new TaskState("Error", 3));
-
-  static {
-    TASK_STATE_TIMEOUT.setColor("red");
-    TASK_STATE_ERROR.setColor("red");
-  }
+    new StatusTable.DisplayedValue(new TaskState("Error", 3))
+    .setColor("red");
 }
