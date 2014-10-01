@@ -58,6 +58,7 @@
       param[journal_id] = olhardeprofessor
       comment[v1998] = http://www.revistas2.uepg.br/index.php/olhardeprofessor/rt/metadata/1332, url with no http
       comment[v1999] = http://www.revistas2.uepg.br/index.php/olhardeprofessor/rt/metadata/1342, url with no http
+      comment[v2013] = recursive url: http://www.revistas2.uepg.br/index.php/olhardeprofessor/rt/metadata/6098/www.uepg.br/www.uepg.br/www.uepg.br/
 
       au < notReady ; 1998 ; 1 ; Olhar de Professor Volume 1998 ; 1998 ; url with no http on metadata 1332-1341 >
       au < notReady ; 1999 ; 2 ; Olhar de Professor Volume 1999 ; 1999 ; url with no http on metadata 1342 etc >
@@ -74,7 +75,7 @@
       au < notReady ; 2010 ; 13 ; Olhar de Professor Volume 2010 ; 2010 ; url with no http on metadata pages >
       au < notReady ; 2011 ; 14 ; Olhar de Professor Volume 2011 ; 2011 ; url with no http on metadata pages >
       au < notReady ; 2012 ; 15 ; Olhar de Professor Volume 2012 ; 2012 ; url with no http on metadata pages >
-      au < notReady ; 2013 ; 16 ; Olhar de Professor Volume 2013 ; 2013 ; recursive url: http://www.revistas2.uepg.br/index.php/olhardeprofessor/rt/metadata/6098/www.uepg.br/www.uepg.br/www.uepg.br/ >
+      au < notReady ; 2013 ; 16 ; Olhar de Professor Volume 2013 ; 2013 ; url with no http on metadata page 6098 >
       au < expected ; 2014 ; 17 ; Olhar de Professor Volume 2014 ; 2014 ; >
 
   }
