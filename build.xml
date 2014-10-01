@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.372 2014-10-01 09:09:12 tlipkis Exp $
+ $Id: build.xml,v 1.373 2014-10-01 21:45:01 clairegriffin Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -338,7 +338,7 @@ Args:
   <property name="jackson-core.jar" value="${lib}/jackson-core-2.3.2.jar" />
   <property name="jackson-databind.jar" value="${lib}/jackson-databind-2.3.2.jar" />
   <property name="jackson-annotations.jar" value="${lib}/jackson-annotations-2.3.0.jar" />
-  <property name="lockss-crawljax.jar" value="${lib}/lockss-crawljax.jar" />
+  <property name="crawljax-lockss-bridge.jar" value="${lib}/crawljax-lockss-bridge.jar" />
   
   <property name="antlr.runtime.jar" value="${lib}/antlr-runtime-4.4.jar" />	
   <property name="antlr.tools.jar" value="${lib}/antlr-4.4-complete.jar" />
@@ -512,7 +512,7 @@ Args:
       <pathelement path="${jackson-annotations.jar}" />
     <pathelement path="${jackson-core.jar}" />
     <pathelement path="${jackson-databind.jar}" />
-    <pathelement path="${lockss-crawljax.jar}" />
+    <pathelement path="${crawljax-lockss-bridge.jar}" />
     <!-- Needed for TDB tools: -->
     <pathelement path="${antlr.runtime.jar}" />
   </path>
