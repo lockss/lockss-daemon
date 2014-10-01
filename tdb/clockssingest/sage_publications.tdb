@@ -8773,6 +8773,25 @@
   {
   
     title <
+      name = Educational Horizons ;
+      issn = 0013-175X ;
+      eissn = 2162-3163
+    >
+
+    param[base_url] = http://ehm.sagepub.com/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < exists ; exists ; 2011 ; Educational Horizons Volume 89 ; 89 ; >
+    au < exists ; exists ; 2011-2012 ; Educational Horizons Volume 90 ; 90 ; >
+    au < exists ; exists ; 2012-2013 ; Educational Horizons Volume 91 ; 91 ; >
+    au < exists ; exists ; 2013-2014 ; Educational Horizons Volume 92 ; 92 ; >
+    au < exists ; exists ; 2014-2015 ; Educational Horizons Volume 93 ; 93 ; >
+
+  }
+
+  {
+  
+    title <
       name = Educational Management Administration & Leadership ;
       issn = 1741-1432 ;
       eissn = 1741-1440
@@ -28444,6 +28463,19 @@
 
     }
 
+  }
+
+  {
+  
+    title <
+      name = Paradigm ;
+      issn = 0971-8907
+    >
+
+    param[base_url] = http://par.sagepub.com/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < exists ; exists ; 2014 ; Paradigm Volume 18 ; 18 ; >
   }
 
   {
