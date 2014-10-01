@@ -1,4 +1,4 @@
-/* $Id: TestTangramSourceXmlMetadataExtractorHelper.java,v 1.1 2014-09-04 22:00:52 aishizaki Exp $
+/* $Id: TestTangramSourceXmlMetadataExtractorHelper.java,v 1.2 2014-10-01 17:15:11 aishizaki Exp $
 
 Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -126,8 +126,9 @@ public class TestTangramSourceXmlMetadataExtractorHelper
   // the following content does not have the "section" level -
   // should work with and without
   private static final String BASIC_MULTIROW_CONTENT = 
+    "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>" +
     "<catalogo xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">" +
-    "<xml encoding=\"UTF-8\">" +
+      "<xml>" +
       "<node>" +
       "<Elenco_autori_curatori_principali>"+GOOD_AUTHOR1+"</Elenco_autori_curatori_principali>" +
       "<Elenco_autori_curatori_principali_INV>"+GOOD_AUTHOR1_INV+"</Elenco_autori_curatori_principali_INV>" +
@@ -266,6 +267,7 @@ public class TestTangramSourceXmlMetadataExtractorHelper
   */
 
   // from original xml file from the publisher
+
   public void testExtractFromBasicRowContent() throws Exception {
     CIProperties xmlHeader = new CIProperties();
     try {
@@ -310,7 +312,8 @@ public class TestTangramSourceXmlMetadataExtractorHelper
       //IOUtil.safeClose(file_input);
     }
   }
-  
+
+ /* 
   // from original xml file from the publisher
   public void testExtractFromMultiRowContent() throws Exception {
     CIProperties xmlHeader = new CIProperties();
@@ -367,7 +370,8 @@ public class TestTangramSourceXmlMetadataExtractorHelper
       //IOUtil.safeClose(file_input);
     }
   }
-
+*/
+  
  /* 
   String realXMLFile = "TES.xml";
   public void testFromRealXMLFile() throws Exception {
