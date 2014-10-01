@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.80 2014-08-25 08:57:02 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.81 2014-10-01 08:11:56 tlipkis Exp $
  */
 
 /*
@@ -359,16 +359,14 @@ public class DefinablePlugin extends BasePlugin {
 
 
 
-  enum PrintfContext {Regexp, URL, Display};
-
   void checkParamAgreement() {
-    for (Map.Entry<String,PrintfContext> ent
+    for (Map.Entry<String,PrintfConverter.PrintfContext> ent
 	   : DefinableArchivalUnit.printfKeysContext.entrySet()) {
       checkParamAgreement(ent.getKey(), ent.getValue());
     }
   }
 
-  void checkParamAgreement(String key, PrintfContext context) {
+  void checkParamAgreement(String key, PrintfConverter.PrintfContext context) {
     Object val = definitionMap.getMapElement(key);
     for (String printf : flatten(val)) {
       if (StringUtil.isNullString(printf)) {
@@ -376,8 +374,11 @@ public class DefinablePlugin extends BasePlugin {
 	continue;
       }
       PrintfUtil.PrintfData p_data = PrintfUtil.stringToPrintf(printf);
-      List<PrintfConverter.Expr> p_args =
-	PrintfConverter.parseArgs(this, p_data);
+      // Create a converter of the proper type.
+      PrintfConverter converter =
+	PrintfConverter.newConverterForContext(this, definitionMap, context);
+
+      List<PrintfConverter.Expr> p_args = converter.parseArgs(this, p_data);
       for (PrintfConverter.Expr arg : p_args) {
 	ConfigParamDescr descr = findAuConfigDescr(arg.getArg());
 	if (descr == null) {

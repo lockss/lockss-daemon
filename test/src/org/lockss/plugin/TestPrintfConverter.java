@@ -1,5 +1,5 @@
 /*
- * $Id: TestPrintfConverter.java,v 1.3 2014-08-25 08:57:02 tlipkis Exp $
+ * $Id: TestPrintfConverter.java,v 1.4 2014-10-01 08:11:56 tlipkis Exp $
  */
 
 /*
@@ -130,6 +130,8 @@ public class TestPrintfConverter extends LockssTestCase {
   public void testConvertUrlList() throws Exception {
     setupAu(conf1());
 
+    assertEquals(ListUtil.list("http://no.args/blah"),
+		 convertUrlList("http://no.args/blah"));
     assertEquals(ListUtil.list(BASE+"blah"),
 		 convertUrlList("\"%sblah\", base_url"));
     assertEquals(ListUtil.list(BASE+"blah/v_123/y2018"),
@@ -198,6 +200,8 @@ public class TestPrintfConverter extends LockssTestCase {
   public void testConvertName() throws Exception {
     setupAu(conf1());
 
+    assertEquals("no args",
+		 convertNameString("no args"));
     assertEquals("Base is "+BASE+"blah",
 		 convertNameString("\"Base is %sblah\", base_url"));
     assertEquals(BASE+"blah/v_123/y2018",
@@ -221,6 +225,11 @@ public class TestPrintfConverter extends LockssTestCase {
 
     String s1 = "http\\:\\/\\/foo\\.bar\\:8080\\/";
     PrintfConverter.MatchPattern mp;
+
+    mp = convertVariableRegexpString("blah/.*");
+    assertEquals("blah/.*", mp.getRegexp());
+    assertEmpty(mp.getMatchArgs());
+    assertEmpty(mp.getMatchArgTypes());
 
     mp = convertVariableRegexpString("\"%sblah\", base_url");
     assertEquals(s1+"blah", mp.getRegexp());
@@ -323,8 +332,8 @@ public class TestPrintfConverter extends LockssTestCase {
 
   public static class TestFunctor extends BaseAuParamFunctor {
     @Override
-    public Object eval(AuParamFunctor.FunctorData fd, String fn,
-		       Object arg, AuParamType type)
+    public Object apply(AuParamFunctor.FunctorData fd, String fn,
+			Object arg, AuParamType type)
 	throws PluginException {
       if (fn.equals("filter_set")) {
 	List<String> lst = (List<String>)arg;
@@ -337,7 +346,7 @@ public class TestPrintfConverter extends LockssTestCase {
 	}
 	return lst;
       }
-      return super.eval(fd, fn, arg, type);
+      return super.apply(fd, fn, arg, type);
     }
 
     @Override

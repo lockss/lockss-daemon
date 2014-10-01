@@ -1,5 +1,5 @@
 /*
- * $Id: AuParamFunctorWrapper.java,v 1.1 2014-08-25 08:57:02 tlipkis Exp $
+ * $Id: AuParamFunctorWrapper.java,v 1.2 2014-10-01 08:14:36 tlipkis Exp $
  */
 
 /*
@@ -49,10 +49,10 @@ public class AuParamFunctorWrapper
     return inst;
   }
 
-  public Object eval(FunctorData fd, String fn, Object arg, AuParamType type)
+  public Object apply(FunctorData fd, String fn, Object arg, AuParamType type)
       throws PluginException {
     try {
-      return inst.eval(fd, fn, arg, type);
+      return inst.apply(fd, fn, arg, type);
     } catch (LinkageError e) {
       throw new PluginException.LinkageError(e);
     }

@@ -1,5 +1,5 @@
 /*
- * $Id: PrintfUtil.java,v 1.8 2014-08-25 08:58:03 tlipkis Exp $
+ * $Id: PrintfUtil.java,v 1.9 2014-10-01 08:11:56 tlipkis Exp $
  */
 
 /*
@@ -39,6 +39,9 @@ import java.util.*;
  */
 public class PrintfUtil {
 
+  /** Parse a printf string: <code>"format string", arg1, ...,
+   * arg<i>n</i>"</code> .  An unquoted string is treated as a format
+   * string with no args */
   static public PrintfData stringToPrintf(String printfStr) {
     PrintfData data = new PrintfData();
     int firstQuote = printfStr.indexOf("\"");
@@ -51,6 +54,8 @@ public class PrintfUtil {
       while (tokenizer.hasMoreTokens()) {
         data.addArgument(tokenizer.nextToken().trim());
       }
+    } else {
+      data.setFormat(printfStr);
     }
     return data;
   }
@@ -130,6 +135,10 @@ public class PrintfUtil {
 
     public Collection<String> getArguments() {
       return m_arguments;
+    }
+
+    public boolean hasArguments() {
+      return !m_arguments.isEmpty();
     }
 
     public String toString() {

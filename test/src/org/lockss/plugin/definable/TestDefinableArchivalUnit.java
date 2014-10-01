@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.67 2014-08-25 08:57:02 tlipkis Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.68 2014-10-01 08:11:56 tlipkis Exp $
  */
 
 /*
@@ -112,10 +112,17 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     .setType(ConfigParamDescr.TYPE_BOOLEAN)
     .setDescription("BBBool");
 
+  public static final ConfigParamDescr UNSET_PARAM =
+    new ConfigParamDescr()
+    .setKey("unset_param")
+    .setDisplayName("unset param")
+    .setType(ConfigParamDescr.TYPE_STRING);
+
   public void testConvertUrlList() {
     configProps.add(ConfigParamDescr.VOLUME_NAME);
     configProps.add(ConfigParamDescr.YEAR);
     configProps.add(CPD_BOOLE);
+    configProps.add(UNSET_PARAM);
     additionalAuConfig.putInt("volume", 10);
     additionalAuConfig.putBoolean("boole", true);
     //  ensure dot in substitution string doesn't get regexp quoted
@@ -137,7 +144,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertEquals(ListUtil.list("Test Short Year = 03"),
 		 cau.convertUrlList("\"Test Short Year = %02d\", au_short_year"));
 
-    assertNull(cau.convertUrlList("\"Test no param = %s\", no_param"));
+    assertNull(cau.convertUrlList("\"Test no param = %s\", unset_param"));
   }
 
   public void testConvertVariableRegexStringWithNumRange() {
@@ -149,6 +156,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     additionalAuConfig.setMapElement(rkey, vec);
     additionalAuConfig.setMapElement(vkey, "a volume");
     configProps.add(ConfigParamDescr.NUM_ISSUE_RANGE);
+    configProps.add(ConfigParamDescr.VOLUME_NAME);
     setupAu(additionalAuConfig);
     PrintfConverter.MatchPattern mp =
       cau.convertVariableRegexpString("\"not a URL: iss:%s, vol:%s\", "
@@ -166,6 +174,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     additionalAuConfig.setMapElement(rkey, vec);
     additionalAuConfig.setMapElement(vkey, "a volume");
     configProps.add(ConfigParamDescr.NUM_ISSUE_RANGE);
+    configProps.add(ConfigParamDescr.VOLUME_NAME);
     setupAu(additionalAuConfig);
     PrintfConverter.MatchPattern mp =
       cau.convertVariableRegexpString("\"http://host.foo/%s/iss/%s\", "
@@ -230,6 +239,25 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 
   //XXX
 
+  public static final ConfigParamDescr INTEGER_PARAM =
+    new ConfigParamDescr()
+    .setKey("INTEGER")
+    .setDisplayName("iii")
+    .setType(ConfigParamDescr.TYPE_INT);
+
+  public static final ConfigParamDescr BOOLEAN_PARAM =
+    new ConfigParamDescr()
+    .setKey("BOOLEAN")
+    .setDisplayName("bbb")
+    .setType(ConfigParamDescr.TYPE_BOOLEAN);
+
+  public static final ConfigParamDescr STRING_PARAM =
+    new ConfigParamDescr()
+    .setKey("STRING")
+    .setDisplayName("sss")
+    .setType(ConfigParamDescr.TYPE_STRING);
+
+
   public void testConvertRegexpString() {
     additionalAuConfig.putInt("INTEGER", 10);
     additionalAuConfig.putBoolean("BOOLEAN", true);
@@ -238,7 +266,10 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     additionalAuConfig.putInt(ConfigParamDescr.YEAR.getKey(), 2003);
     additionalAuConfig.putInt(DefinableArchivalUnit.PREFIX_AU_SHORT_YEAR +
                ConfigParamDescr.YEAR.getKey(),3);
-
+    configProps.add(INTEGER_PARAM);
+    configProps.add(BOOLEAN_PARAM);
+    configProps.add(STRING_PARAM);
+    configProps.add(ConfigParamDescr.YEAR);
     setupAu(additionalAuConfig);
     PrintfConverter.MatchPattern mp =
       cau.convertVariableRegexpString("\"Test Integer = %d\", INTEGER",
@@ -268,6 +299,10 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     additionalAuConfig.putInt(ConfigParamDescr.YEAR.getKey(), 2003);
     additionalAuConfig.putInt(DefinableArchivalUnit.PREFIX_AU_SHORT_YEAR +
                ConfigParamDescr.YEAR.getKey(),3);
+    configProps.add(INTEGER_PARAM);
+    configProps.add(BOOLEAN_PARAM);
+    configProps.add(STRING_PARAM);
+    configProps.add(ConfigParamDescr.YEAR);
 
     setupAu(additionalAuConfig);
     PrintfConverter.MatchPattern mp =
@@ -289,9 +324,23 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertEquals("Test Short Year = 03", mp.getRegexp());
   }
 
+  public static final ConfigParamDescr URL_PARAM =
+    new ConfigParamDescr()
+    .setKey("URL")
+    .setDisplayName("url")
+    .setType(ConfigParamDescr.TYPE_URL);
+
+  public static final ConfigParamDescr VOL_PARAM =
+    new ConfigParamDescr()
+    .setKey("VOL")
+    .setDisplayName("vol")
+    .setType(ConfigParamDescr.TYPE_STRING);
+
   public void testConvertRule() throws LockssRegexpException {
     additionalAuConfig.putString("URL", "http://www.example.com/");
     additionalAuConfig.putString("VOL", "vol ume");
+    configProps.add(URL_PARAM);
+    configProps.add(VOL_PARAM);
     setupAu(additionalAuConfig);
     String rule1 = "1,\".*\\.gif\"";
     String rule2 = "1,\"%s\",URL";
@@ -333,8 +382,10 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   public void testConvertRuleMissingRequiredParam()
       throws LockssRegexpException {
     additionalAuConfig.putString("URL", "http://www.example.com/");
+    configProps.add(URL_PARAM);
+    configProps.add(UNSET_PARAM);
     setupAu(additionalAuConfig);
-    String rule1 = "1,\"%s\",URL,UNknown";
+    String rule1 = "1,\"%s\",URL,unset_param";
 
     assertEquals(null, cau.convertRule(rule1, false));
   }
@@ -342,9 +393,11 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   public void testConvertRuleMissingOptionalParam()
       throws LockssRegexpException {
     additionalAuConfig.putString("URL", "http://www.example.com/");
+    configProps.add(URL_PARAM);
+    configProps.add(UNSET_PARAM);
     setupAu(additionalAuConfig);
     String rule1 = "1,\"%s\",URL";
-    String rule2 = "1,\"%s%d\",URL,FOO";
+    String rule2 = "1,\"%s%d\",URL,unset_param";
 
     assertNotNull(cau.convertRule(rule1, false));
     assertNull(cau.convertRule(rule2, false));
@@ -1843,21 +1896,23 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 
   public static class TestFunctor extends BaseAuParamFunctor {
     @Override
-    public Object eval(AuParamFunctor.FunctorData fd, String fn,
-		       Object arg, AuParamType type)
+    public Object apply(AuParamFunctor.FunctorData fd, String fn,
+			Object arg, AuParamType type)
 	throws PluginException {
       if (fn.equals("double")) {
 	return (Integer)arg * 2;
       } else if (fn.equals("add_www")) {
 	return UrlUtil.addSubDomain((String)arg, "dubdubdub");
       }
-      return super.eval(fd, fn, arg, type);
+      return super.apply(fd, fn, arg, type);
     }
 
     @Override
     public AuParamType type(AuParamFunctor.FunctorData fd, String fn) {
       if (fn.equals("double")) {
 	return AuParamType.Int;
+      } else if (fn.equals("add_www")) {
+	return AuParamType.String;
       }
       return super.type(fd, fn);
     }

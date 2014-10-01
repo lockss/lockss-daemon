@@ -1,5 +1,5 @@
 /*
- * $Id: AuParamFunctor.java,v 1.1 2014-08-25 08:57:03 tlipkis Exp $
+ * $Id: AuParamFunctor.java,v 1.2 2014-10-01 08:11:57 tlipkis Exp $
  */
 
 /*
@@ -39,11 +39,12 @@ import org.lockss.daemon.*;
  * Functions that may be applied to AU config params in printf arguments.
  */
 public interface AuParamFunctor {
-  /** Evaluate the function named by fn, with single arg */
-  public Object eval(FunctorData fd, String fn, Object arg, AuParamType type)
+  /** Apply the function named by fn to a single arg */
+  public Object apply(FunctorData fd, String fn, Object arg, AuParamType type)
       throws PluginException;
 
-  /** Return the AuParamType named by fn */
+  /** Return the AuParamType of the value returned by fn.  Return null iff
+   * fn is undefined */
   public AuParamType type(FunctorData fd, String fn)
       throws PluginException;
 

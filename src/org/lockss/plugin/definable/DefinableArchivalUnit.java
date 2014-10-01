@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.100 2014-08-25 08:57:03 tlipkis Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.101 2014-10-01 08:11:57 tlipkis Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ import org.lockss.util.Constants.RegexpContext;
 import org.lockss.plugin.definable.DefinablePlugin.*;
 import org.lockss.oai.*;
 import org.lockss.state.AuState;
-import static org.lockss.plugin.definable.DefinablePlugin.PrintfContext;
+import static org.lockss.plugin.PrintfConverter.PrintfContext;
 
 /**
  * <p>ConfigurableArchivalUnit: An implementatation of Base Archival Unit used
@@ -160,7 +160,8 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 
   /** Context in which various printf templates are interpreted, for
    * argument type checking */
-  static Map<String,PrintfContext> printfKeysContext = new HashMap();
+  static Map<String,PrintfConverter.PrintfContext> printfKeysContext =
+    new HashMap<String,PrintfConverter.PrintfContext>();
   static {
     printfKeysContext.put(KEY_AU_START_URL, PrintfContext.URL);
     printfKeysContext.put(KEY_AU_PERMISSION_URL, PrintfContext.URL);

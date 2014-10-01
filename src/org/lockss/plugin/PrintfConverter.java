@@ -1,5 +1,5 @@
 /*
- * $Id: PrintfConverter.java,v 1.6 2014-08-25 08:57:03 tlipkis Exp $
+ * $Id: PrintfConverter.java,v 1.7 2014-10-01 08:11:57 tlipkis Exp $
  */
 
 /*
@@ -55,6 +55,7 @@ public abstract class PrintfConverter {
   Collection<String> p_args;
   ArrayList substitute_args;
   boolean missingArgs = false;
+  boolean allowUntypedArgs = false;
 
   private PrintfConverter(ArchivalUnit au) {
     this(au.getPlugin(), au.getProperties());
@@ -65,8 +66,19 @@ public abstract class PrintfConverter {
     this.paramMap = paramMap;
   }
 
+  /** Allow printf arg names with no corresponding ConfigParamDescr in the
+   * plugin. */
+  public PrintfConverter setAllowUntypedArgs(boolean val) {
+    allowUntypedArgs = val;
+    return this;
+  }
+
   void convert(String printfString) {
     p_data = PrintfUtil.stringToPrintf(printfString);
+    if (!p_data.hasArguments()) {
+      // short circuit if no args
+      return;
+    }
     format = p_data.getFormat();
     p_args = p_data.getArguments();
     pf = new PrintfFormat(format);
@@ -92,8 +104,7 @@ public abstract class PrintfConverter {
     }
     try {
       AuParamFunctor fn = plugin.getAuParamFunctor();
-      return fn.eval(null, arg.fn, argval,
-		     getParamType(plugin, arg.arg));
+      return fn.apply(null, arg.fn, argval, getParamType(plugin, arg.arg));
     } catch (PluginException e) {
       log.error("Error invoking AuParamFunctor", e);
       throw new RuntimeException(e);
@@ -198,6 +209,11 @@ public abstract class PrintfConverter {
 
     public MatchPattern getMatchPattern(String printfString) {
       convert(printfString);
+      if (!p_data.hasArguments()) {
+	// short circuit if no args
+	return new MatchPattern(p_data.getFormat(),
+				matchArgs, matchArgTypes);
+      }
       if (missingArgs) {
 	log.warning("Missing variable arguments: " + p_data);
 	return new MatchPattern();
@@ -322,6 +338,10 @@ public abstract class PrintfConverter {
 
     public List<String> getUrlList(String printfString) {
       convert(printfString);
+      if (!p_data.hasArguments()) {
+	// short circuit if no args
+	return Collections.singletonList(p_data.getFormat());
+      }
       if (missingArgs) {
 	log.warning("Missing variable arguments: " + p_data);
 	return null;
@@ -403,6 +423,10 @@ public abstract class PrintfConverter {
 
     public String getName(String printfString) {
       convert(printfString);
+      if (!p_data.hasArguments()) {
+	// short circuit if no args
+	return p_data.getFormat();
+      }
       if (missingArgs) {
 	log.warning("Missing variable arguments: " + p_data);
       }
@@ -414,6 +438,26 @@ public abstract class PrintfConverter {
       } catch (Exception e) {
 	throw new PluginException.InvalidDefinition(e);
       }
+    }
+  }
+
+  /** The contexts in which printf expressions may appear */
+  public enum PrintfContext {Regexp, URL, Display};
+
+
+  public static PrintfConverter newConverterForContext(Plugin plugin,
+						       TypedEntryMap plugDef,
+						       PrintfContext context) {
+    switch (context) {
+    case Regexp:
+      return PrintfConverter.newRegexpConverter(plugin, plugDef,
+						RegexpContext.String);
+    case Display:
+      return PrintfConverter.newNameConverter(plugin, plugDef);
+    case URL:
+      return PrintfConverter.newUrlListConverter(plugin, plugDef);
+    default:
+      return PrintfConverter.newUrlListConverter(plugin, plugDef);
     }
   }
 
@@ -486,13 +530,13 @@ public abstract class PrintfConverter {
     }
   }
 
-  public static List<Expr> parseArgs(ArchivalUnit au,
-				     PrintfUtil.PrintfData pdata) {
+  public List<Expr> parseArgs(ArchivalUnit au,
+			      PrintfUtil.PrintfData pdata) {
     return parseArgs(au.getPlugin(), pdata);
   }
 
-  public static List<Expr> parseArgs(Plugin plug,
-				     PrintfUtil.PrintfData pdata) {
+  public List<Expr> parseArgs(Plugin plug,
+			      PrintfUtil.PrintfData pdata) {
     List<Expr> res = new ArrayList<Expr>(pdata.getArguments().size());
     for (String arg : pdata.getArguments()) {
       res.add(parseArg(plug, arg));
@@ -500,11 +544,11 @@ public abstract class PrintfConverter {
     return res;
   }
 
-  protected static java.util.regex.Pattern ARG_PAT =
+  protected static final java.util.regex.Pattern FN_CALL_PAT =
     java.util.regex.Pattern.compile("(\\w+)\\((\\w+)\\)");
 
-  static Expr parseArg(Plugin plug, String arg) {
-    java.util.regex.Matcher mat = ARG_PAT.matcher(arg);
+  Expr parseArg(Plugin plug, String arg) {
+    java.util.regex.Matcher mat = FN_CALL_PAT.matcher(arg);
     if (mat.matches()) {
       String fn = mat.group(1);
       String fnarg = mat.group(2);
@@ -514,9 +558,16 @@ public abstract class PrintfConverter {
     }
   }
 
-  static AuParamType getParamType(Plugin plug, String name) {
+  AuParamType getParamType(Plugin plug, String name) {
     ConfigParamDescr descr = plug.findAuConfigDescr(name);
-    return descr != null ? descr.getTypeEnum() : null;
+    if ( descr != null) {
+      return descr.getTypeEnum();
+    }
+    if (allowUntypedArgs) {
+      return null;
+    }
+    // Should be checked exception
+    throw new RuntimeException("Unknown param in printf conversion: " + name);
   }
 
   static AuParamType getFnType(Plugin plug, String name) {
@@ -526,10 +577,10 @@ public abstract class PrintfConverter {
       if (fn != null) {
 	type = fn.type(null, name);
       }
-      return type != null ? type : AuParamType.String;
+      return type;
     } catch (PluginException e) {
       log.error("Plugin AuParamFunctor: " + plug, e);
-      return AuParamType.String;
+      return null;
     }
   }
 }

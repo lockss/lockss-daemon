@@ -49,12 +49,26 @@ public class TestPrintfUtil extends LockssTestCase {
 
     assertEquals("foo%dbar%sbaz%%", printfData.getFormat());
     assertEquals(ListUtil.list("my_int", "my_str"), printfData.getArguments());
+    assertTrue(printfData.hasArguments());
 
     printfData =
       PrintfUtil.stringToPrintf(" \"foo%dbar%sbaz%%\" , my_int , my_str ");
 
     assertEquals("foo%dbar%sbaz%%", printfData.getFormat());
     assertEquals(ListUtil.list("my_int", "my_str"), printfData.getArguments());
+    assertTrue(printfData.hasArguments());
+
+    // no args
+    printfData = PrintfUtil.stringToPrintf("\"foo bar\"");
+    assertEquals("foo bar", printfData.getFormat());
+    assertEmpty(printfData.getArguments());
+    assertFalse(printfData.hasArguments());
+
+    // no quotes
+    printfData = PrintfUtil.stringToPrintf("foo bar");
+    assertEquals("foo bar", printfData.getFormat());
+    assertEmpty(printfData.getArguments());
+    assertFalse(printfData.hasArguments());
   }
 
   public void testPrintfToString() throws Exception {
