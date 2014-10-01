@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlUtil.java,v 1.46 2014-08-25 08:58:18 tlipkis Exp $
+ * $Id: TestUrlUtil.java,v 1.47 2014-10-01 08:16:37 tlipkis Exp $
  */
 
 /*
@@ -972,8 +972,8 @@ public class TestUrlUtil extends LockssTestCase {
 		 UrlUtil.addSubDomain("http://foo.bar/path", "www"));
     assertEquals("http://www.foo.bar:8080/path",
 		 UrlUtil.addSubDomain("http://foo.bar:8080/path", "www"));
-    // Doesn't check for redundant subdomain
-    assertEquals("http://www.www.foo.bar/path",
+    // Doesn't add if already there
+    assertEquals("http://www.foo.bar/path",
 		 UrlUtil.addSubDomain("http://www.foo.bar/path", "www"));
   }
 
@@ -990,6 +990,20 @@ public class TestUrlUtil extends LockssTestCase {
 		 UrlUtil.delSubDomain("http://foo.bar/path", "www"));
     assertSame("http://wwwfoo.bar/path",
 		 UrlUtil.delSubDomain("http://wwwfoo.bar/path", "www"));
+  }
+
+  public void testReplaceScheme() {
+    assertEquals("http://foo.bar/",
+		 UrlUtil.replaceScheme("http://foo.bar/", "https", "foo"));
+    assertEquals("foo://foo.bar/",
+		 UrlUtil.replaceScheme("https://foo.bar/", "https", "foo"));
+    assertEquals("https://foo.bar/",
+		 UrlUtil.replaceScheme("http://foo.bar/", "http", "https"));
+    assertEquals("https://foo.bar/",
+		 UrlUtil.replaceScheme("https://foo.bar/", "http", "https"));
+    // ensure too-short string doesn't throw
+    assertEquals("htt",
+		 UrlUtil.replaceScheme("htt", "http", "https"));
   }
 
   public void testResolveJavascriptUrl() {

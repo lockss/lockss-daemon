@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.65 2014-08-25 08:58:18 tlipkis Exp $
+ * $Id: UrlUtil.java,v 1.66 2014-10-01 08:16:37 tlipkis Exp $
  *
 
 Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
@@ -1056,7 +1056,20 @@ public class UrlUtil {
    * @return the URL string with the host prefixed with the subdomain
    */
   public static String addSubDomain(String url, String subdomain) {
-    return SCHEME_HOST_PAT.matcher(url).replaceFirst("$1" + subdomain + ".$2");
+    Matcher m = SCHEME_HOST_PAT.matcher(url);
+    if (m.find()) {
+      String host = m.group(2);
+      if (StringUtil.startsWithIgnoreCase(host, subdomain) &&
+	  '.' == host.charAt(subdomain.length())) {
+	// subdomain already present
+	return url;
+      }
+      StringBuffer sb = new StringBuffer();
+      m.appendReplacement(sb, "$1" + subdomain + ".$2");
+      m.appendTail(sb);
+      return sb.toString();
+    }
+    return url;
   }
 
   /** Remove a subdomain from the host part of a URL
@@ -1077,6 +1090,23 @@ public class UrlUtil {
 	m.appendTail(sb);
 	return sb.toString();
       }
+    }
+    return url;
+  }
+
+  /** Remove a subdomain from the host part of a URL
+   * @param url the URL string
+   * @param subdomain the (case insensitive) subdomain to remove (no
+   * trailing dot)
+   * @return the URL string with the subdomain removed from the beginning
+   * of the host
+   */
+  public static String replaceScheme(String url, String from, String to) {
+    int flen = from.length();
+    if (StringUtil.startsWithIgnoreCase(url, from) &&
+	url.length() > flen &&
+	url.charAt(flen) == ':') {
+      return to + url.substring(flen);
     }
     return url;
   }
