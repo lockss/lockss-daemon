@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.55 2014-08-29 20:41:27 pgust Exp $
+ * $Id: OpenUrlResolver.java,v 1.56 2014-10-01 08:17:25 tlipkis Exp $
  */
 
 /*
@@ -1861,6 +1861,7 @@ public class OpenUrlResolver {
       // set up converter for use with feature URL printf strings
       UrlListConverter converter = 
         PrintfConverter.newUrlListConverter(plugin, paramMap);
+      converter.setAllowUntypedArgs(true);
       
       for (String s : printfStrings) {
         String url = null;
