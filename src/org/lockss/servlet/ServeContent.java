@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.87 2014-08-04 23:13:15 fergaloy-sf Exp $
+ * $Id: ServeContent.java,v 1.88 2014-10-01 08:34:21 tlipkis Exp $
  */
 
 /*
@@ -204,6 +204,11 @@ public class ServeContent extends LockssServlet {
   static final String PARAM_PROCESS_FORMS = PREFIX + "handleFormPost";
   static final boolean DEFAULT_PROCESS_FORMS = false;
 
+  // future param
+  public static final String DEFAULT_404_CANDIDATES_MSG =
+    "Possibly related content may be found "
+    + "in the following Archival Units" ;
+
   private static MissingFileAction missingFileAction =
       DEFAULT_MISSING_FILE_ACTION;
   private static boolean absoluteLinks = DEFAULT_ABSOLUTE_LINKS;
@@ -219,6 +224,7 @@ public class ServeContent extends LockssServlet {
   private static boolean paramAccessAlertsEnabled =
     DEFAULT_ACCESS_ALERTS_ENABLED;
   private static boolean processForms = DEFAULT_PROCESS_FORMS;
+  private static String candidates404Msg = DEFAULT_404_CANDIDATES_MSG;
 
 
   private ArchivalUnit au;
@@ -517,6 +523,17 @@ public class ServeContent extends LockssServlet {
           resp.sendRedirect(sb.toString());
           return;
         }
+	// If open URL resultion fails fall back to first start page
+        au = pluginMgr.getAuFromId(auid);
+	if (au != null) {
+	  CrawlSpec spec = au.getCrawlSpec();
+	  List<String> starts = spec.getStartingUrls();
+	  if (!starts.isEmpty()) {
+	    url = starts.get(0);
+	    handleUrlRequest();
+	    return;
+	  }
+	}
       }
 
       log.debug3("Unknown request");
@@ -1652,8 +1669,7 @@ public class ServeContent extends LockssServlet {
           displayIndexPage(candidateAus,
               HttpResponse.__404_Not_Found,
               block,
-              "Possibly related content may be found "
-              + "in the following Archival Units");
+              candidates404Msg);
         } else {
           displayIndexPage(Collections.<ArchivalUnit> emptyList(),
               HttpResponse.__404_Not_Found,
@@ -1849,7 +1865,7 @@ public class ServeContent extends LockssServlet {
 
     Block block = new Block(Block.Center);
     // display publisher page
-    block.add("<p>The requested URL is not preserved  on this LOCKSS box. ");
+    block.add("<p>The requested URL is not preserved on this LOCKSS box. ");
     block.add("Select link");
     block.add(addFootnote(
         "Selecting publisher link takes you away from this LOCKSS box."));
@@ -1878,8 +1894,7 @@ public class ServeContent extends LockssServlet {
           displayIndexPage(candidateAus,
               HttpResponse.__404_Not_Found,
               block,
-              "Possibly related content may be found "
-              + "in the following Archival Units");
+              candidates404Msg);
           logAccess("not present, 404 with index");
         } else {
           displayIndexPage(Collections.<ArchivalUnit>emptyList(),
@@ -1976,10 +1991,10 @@ public class ServeContent extends LockssServlet {
       }
     }
     page.add(centeredBlock);
-    endPage(page);
     if (result > 0) {
       resp.setStatus(result);
     }
+    endPage(page);
   }
 
   boolean areAnyExcluded(Collection<ArchivalUnit> auList, Predicate pred) {
