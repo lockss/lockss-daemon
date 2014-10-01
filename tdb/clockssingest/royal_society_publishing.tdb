@@ -20,7 +20,6 @@
     >
 
     param[base_url] = http://rsbm.royalsocietypublishing.org/
-    attr[journal_id] = rsbm
     comment[legacy] = there are more AUs in an earlier incarnation of the journal
 
     au < finished ; frozen ; 1955 ; Biographical Memoirs of Fellows of the Royal Society Volume 1 ; 1 >
@@ -96,7 +95,6 @@
     >
 
     param[base_url] = http://rsbl.royalsocietypublishing.org/
-    attr[journal_id] = rsbl
 
     au < finished ; frozen ; 2005 ; Biology Letters Volume 1 ; 1 >
     au < finished ; frozen ; 2006 ; Biology Letters Volume 2 ; 2 >
@@ -122,7 +120,6 @@
 
 
     param[base_url] = http://rsfs.royalsocietypublishing.org/
-    attr[journal_id] = rsfs
 
     comment[rsfs] = Do not add earlier issues - From 2008 to 2010 Interface Focus was published as a supplement to J R Soc Interface 
 
@@ -143,7 +140,6 @@
     >
 
     param[base_url] = http://rsif.royalsocietypublishing.org/
-    attr[journal_id] = rsif
 
     au < finished ; frozen ; 2004 ; Journal of the Royal Society Interface Volume 1 ; 1 >
     au < finished ; frozen ; 2005 ; Journal of the Royal Society Interface Volume 2 ; 2 >
@@ -169,7 +165,6 @@
     >
 
     param[base_url] = http://rsnr.royalsocietypublishing.org/
-    attr[journal_id] = rsnr
     comment[name] = title changed in 2014
 
     au < finished ; frozen ; 1938 ; Notes and Records of the Royal Society Volume 1 ; 1 >
@@ -253,7 +248,6 @@
 
     implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
     param[base_url] = http://rsob.royalsocietypublishing.org/
-    attr[journal_id] = rsob
     
     au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2011 ; Open Biology Volume 1 ; 1 >
     au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2012 ; Open Biology Volume 2 ; 2 >
@@ -273,7 +267,6 @@
     >
 
     param[base_url] = http://rsta.royalsocietypublishing.org/
-    attr[journal_id] = rsta
     
     au < manifest ; exists ; 1887 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 178 ; 178 >
     au < manifest ; exists ; 1888 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 179 ; 179 >
@@ -483,7 +476,6 @@
     >
 
     param[base_url] = http://rstb.royalsocietypublishing.org/
-    attr[journal_id] = rstb
 
     au < manifest ; exists ; 1887 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 178 ; 178 >
     au < manifest ; exists ; 1888 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 179 ; 179 >
@@ -689,7 +681,6 @@
     >
 
     param[base_url] = http://rstl.royalsocietypublishing.org/
-    attr[journal_id] = rstl
 
     au < manifest ; exists ; 1665-1666 ; Philosophical Transactions of the Royal Society of London Volume 1 ; 1 >
     au < manifest ; exists ; 1666-1667 ; Philosophical Transactions of the Royal Society of London Volume 2 ; 2 >
@@ -881,9 +872,6 @@
     >
 
     param[base_url] = http://rspa.royalsocietypublishing.org/
-    attr[journal_id] = rspa
-    
-        
 
     au < manifest ; exists ; 1905 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 76 ; 76 >
     au < manifest ; exists ; 1906 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 77 ; 77 >
@@ -1293,8 +1281,6 @@
     >
 
     param[base_url] = http://rspb.royalsocietypublishing.org/
-    attr[journal_id] = rspb
-    
 
     au < manifest ; exists ; 1905 ; Proceedings of the Royal Society B: Biological Sciences Volume 76 ; 76 >
     au < manifest ; exists ; 1905-1906 ; Proceedings of the Royal Society B: Biological Sciences Volume 77 ; 77 >
@@ -1514,7 +1500,6 @@
     >
 
     param[base_url] = http://rspl.royalsocietypublishing.org/
-    attr[journal_id] = rspl
 
     au < manifest ; exists ; 1800 ; Proceedings of the Royal Society of London Volume 1 ; 1 >
     au < manifest ; exists ; 1815 ; Proceedings of the Royal Society of London Volume 2 ; 2 >
@@ -1592,6 +1577,20 @@
     au < finished ; frozen ; 1904 ; Proceedings of the Royal Society of London Volume 74 ; 74 >
     au < finished ; crawling ; 1904 ; Proceedings of the Royal Society of London Volume 75 ; 75 >
 
+  }
+
+  {
+
+    title <
+      name = Royal Society Open Science ;
+      issn = 2054-5703 ;
+      issnl = 2054-5703 
+    >
+
+    param[base_url] = http://rsos.royalsocietypublishing.org/
+    pluginSuffix = ClockssHighWireDrupalPlugin
+
+    au < exists ; exists ; 2014 ; Royal Society Open Science Volume 1 ; 1 >
   }
 
 }

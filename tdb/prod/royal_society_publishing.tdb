@@ -1578,4 +1578,18 @@
 
   }
 
+  {
+
+    title <
+      name = Royal Society Open Science ;
+      issn = 2054-5703 ;
+      issnl = 2054-5703 
+    >
+
+    param[base_url] = http://rsos.royalsocietypublishing.org/
+    pluginSuffix = HighWireDrupalPlugin
+
+    au < exists ; 2014 ; Royal Society Open Science Volume 1 ; 1 >
+  }
+
 }
