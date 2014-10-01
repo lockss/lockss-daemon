@@ -14,12 +14,12 @@
       >
 
       comment[publisher] = Universidade Federal de Pelotas
-      param[base_url] = http://www.ufpel.tche.br/revistas/
+      param[base_url] = http://www2.ufpel.tche.br/revistas/
       param[journal_id] = enfermagemesaude
 
-      au < notReady ; 2011 ; 1 ; Journal of Nursing and Health Volume 1 ; 2011 ; moved to http://www2.ufpel.tche.br/revistas/? >
-      au < notReady ; 2012 ; 2 ; Journal of Nursing and Health Volume 2 ; 2012 ; moved to http://www2.ufpel.tche.br/revistas/? >
-      au < notReady ; 2013 ; 3 ; Journal of Nursing and Health Volume 3 ; 2013 ; moved to http://www2.ufpel.tche.br/revistas/? >
+      au < exists ; 2011 ; 1 ; Journal of Nursing and Health Volume 1 ; 2011 ; >
+      au < exists ; 2012 ; 2 ; Journal of Nursing and Health Volume 2 ; 2012 ; >
+      au < exists ; 2013 ; 3 ; Journal of Nursing and Health Volume 3 ; 2013 ; >
       au < expected ; 2014 ; 4 ; Journal of Nursing and Health Volume 4 ; 2014 ; >
 
   }
@@ -32,14 +32,14 @@
       >
 
       comment[publisher] = Universidade Federal de Pelotas
-      param[base_url] = http://www.ufpel.tche.br/revistas/
+      param[base_url] = http://www2.ufpel.tche.br/revistas/
       param[journal_id] = cienciadamadeira
 
-      au < notReady ; 2010 ; 1 ; Revista Ciência da Madeira Volume 1 ; 2010 ; moved to http://www2.ufpel.tche.br/revistas/? >
-      au < notReady ; 2011 ; 2 ; Revista Ciência da Madeira Volume 2 ; 2011 ; moved to http://www2.ufpel.tche.br/revistas/? >
-      au < notReady ; 2012 ; 3 ; Revista Ciência da Madeira Volume 3 ; 2012 ; moved to http://www2.ufpel.tche.br/revistas/? >
-      au < notReady ; 2013 ; 4 ; Revista Ciência da Madeira Volume 4 ; 2013 ; moved to http://www2.ufpel.tche.br/revistas/? >
-      au < notReady ; 2014 ; 5 ; Revista Ciência da Madeira Volume 5 ; 2014 ; moved to http://www2.ufpel.tche.br/revistas/? >
+      au < exists ; 2010 ; 1 ; Revista Ciência da Madeira Volume 1 ; 2010 ; >
+      au < exists ; 2011 ; 2 ; Revista Ciência da Madeira Volume 2 ; 2011 ; >
+      au < exists ; 2012 ; 3 ; Revista Ciência da Madeira Volume 3 ; 2012 ; >
+      au < exists ; 2013 ; 4 ; Revista Ciência da Madeira Volume 4 ; 2013 ; >
+      au < exists ; 2014 ; 5 ; Revista Ciência da Madeira Volume 5 ; 2014 ; >
 
   }
 
