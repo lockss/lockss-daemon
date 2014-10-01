@@ -1,5 +1,5 @@
 /*
- * $Id: FileTypeCrawlRateLimiter.java,v 1.2 2012-05-17 17:58:06 tlipkis Exp $
+ * $Id: FileTypeCrawlRateLimiter.java,v 1.3 2014-10-01 08:33:47 tlipkis Exp $
  */
 
 /*
@@ -72,7 +72,7 @@ public class FileTypeCrawlRateLimiter extends BaseCrawlRateLimiter {
   MimeLimiters mimeLimiterMap;
 
   /** Create a FileTypeCrawlRateLimiter from a RateLimiterInfo */
-  FileTypeCrawlRateLimiter(RateLimiterInfo rli) {
+  public FileTypeCrawlRateLimiter(RateLimiterInfo rli) {
     if (rli == null) {
       defaultLimiter = newRateLimiter(1, BaseArchivalUnit.DEFAULT_FETCH_DELAY);
     } else {

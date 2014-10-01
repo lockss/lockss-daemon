@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.73 2014-07-13 04:17:14 tlipkis Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.74 2014-10-01 08:33:46 tlipkis Exp $
  */
 
 /*
@@ -75,6 +75,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
   private MockLockssDaemon theDaemon;
   private LockssRepository repo;
   private int pauseBeforeFetchCounter;
+  private List wdogEvents = new ArrayList();
 
   private MockNodeManager nodeMgr = new MockNodeManager();
 
@@ -380,6 +381,48 @@ public class TestBaseUrlCacher extends LockssTestCase {
     }
 
   }
+
+  public void testStopWatchdogNo() throws IOException {
+    ConfigurationUtil.addFromArgs(BaseUrlCacher.PARAM_STOP_WATCHDOG_DURING_PAUSE,
+				  "false");
+    pauseBeforeFetchCounter = 0;
+
+
+    cacher._input = new StringInputStream("test stream");
+    cacher._headers = new CIProperties();
+    cacher._crl =
+      new FileTypeCrawlRateLimiter(new RateLimiterInfo("foo", "100/1"));
+    MockLockssWatchdog wdog = new MyLockssWatchdog();
+    cacher.setWatchdog(wdog);
+
+    assertEquals(UrlCacher.CACHE_RESULT_FETCHED, cacher.cache());
+    assertEquals(1, pauseBeforeFetchCounter);
+    assertEquals(ListUtil.list("getInterval" // just one from StringUtil.copy()
+			       ),
+		 wdogEvents);
+  }
+
+  public void testStopWatchdogYes() throws IOException {
+    ConfigurationUtil.addFromArgs(BaseUrlCacher.PARAM_STOP_WATCHDOG_DURING_PAUSE,
+				  "true");
+    pauseBeforeFetchCounter = 0;
+
+
+    cacher._input = new StringInputStream("test stream");
+    cacher._headers = new CIProperties();
+    cacher._crl =
+      new FileTypeCrawlRateLimiter(new RateLimiterInfo("foo", "100/1"));
+    MockLockssWatchdog wdog = new MyLockssWatchdog();
+    cacher.setWatchdog(wdog);
+
+    assertEquals(UrlCacher.CACHE_RESULT_FETCHED, cacher.cache());
+    assertEquals(1, pauseBeforeFetchCounter);
+    assertEquals(ListUtil.list("getInterval", "stop", "start: 47",
+			       "getInterval" // one more from StringUtil.copy()
+			       ),
+		 wdogEvents);
+  }
+
 
   // The following tests do not use MyMockBaseUrlCacher, so test more of
   // BaseUrlCacher. Mostly they test its behavior wrt the connection.
@@ -1429,6 +1472,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
     int getUncachedPropertiesCount = 0;
     int getUncachedInputStreamCount = 0;
     BaseArchivalUnit.ParamHandlerMap pMap;
+    CrawlRateLimiter _crl;
 
     List inputList;
 
@@ -1518,8 +1562,14 @@ public class TestBaseUrlCacher extends LockssTestCase {
     }
 
     @Override
+    public CrawlRateLimiter getCrawlRateLimiter() {
+      return _crl;
+    }
+
+    @Override
     protected void pauseBeforeFetch() {
       pauseBeforeFetchCounter++;
+      super.pauseBeforeFetch();
     }
   }
 
@@ -1672,6 +1722,26 @@ public class TestBaseUrlCacher extends LockssTestCase {
       return closeWasCalled;
     }
 
+  }
+
+  class MyLockssWatchdog extends MockLockssWatchdog {
+    private int numTimesPoked = 0;
+
+    public void startWDog(long interval) {
+      wdogEvents.add("start: " + interval);
+    }
+
+    public void stopWDog() {
+      wdogEvents.add("stop");
+    }
+
+    public long getWDogInterval() {
+      wdogEvents.add("getInterval");
+      return 47;
+    }
+
+    public void pokeWDog() {
+    }
   }
 
   public static void main(String[] argv) {

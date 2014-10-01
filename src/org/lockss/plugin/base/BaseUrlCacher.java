@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.98 2014-07-13 04:17:14 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.99 2014-10-01 08:33:47 tlipkis Exp $
  */
 
 /*
@@ -77,6 +77,12 @@ public class BaseUrlCacher implements UrlCacher {
   public static final String PARAM_LOGIN_CHECKER_MARK_LIMIT =
     Configuration.PREFIX + "baseuc.loginPageCheckerMarkLimit";
   public static final int DEFAULT_LOGIN_CHECKER_MARK_LIMIT = 24 * 1024;
+
+  /** If true, any thread watchdog will be stopped while waiting on a rate
+   * limiter. */
+  public static final String PARAM_STOP_WATCHDOG_DURING_PAUSE =
+    Configuration.PREFIX + "baseuc.stopWatchdogDuringPause";
+  public static final boolean DEFAULT_STOP_WATCHDOG_DURING_PAUSE = false;
 
   /** Maximum number of redirects that will be followed */
   static final int MAX_REDIRECTS = 10;
@@ -215,6 +221,10 @@ public class BaseUrlCacher implements UrlCacher {
 
   public void setCrawlRateLimiter(CrawlRateLimiter crl) {
     this.crl = crl;
+  }
+
+  public CrawlRateLimiter getCrawlRateLimiter() {
+    return crl;
   }
 
   private boolean isDamaged() {
@@ -751,8 +761,23 @@ public class BaseUrlCacher implements UrlCacher {
   }
 
   protected void pauseBeforeFetch() {
-    if (crl != null) {
-      crl.pauseBeforeFetch(fetchUrl, previousContentType);
+    if (getCrawlRateLimiter() != null) {
+      long wDogInterval = 0;
+      if (wdog != null &&
+	  CurrentConfig.getBooleanParam(PARAM_STOP_WATCHDOG_DURING_PAUSE,
+					DEFAULT_STOP_WATCHDOG_DURING_PAUSE)) {
+	wDogInterval = wdog.getWDogInterval();
+      }
+      try {
+	if (wDogInterval > 0) {
+	  wdog.stopWDog();
+	}
+	getCrawlRateLimiter().pauseBeforeFetch(fetchUrl, previousContentType);
+      } finally {
+	if (wDogInterval > 0) {
+ 	  wdog.startWDog(wDogInterval);
+	}
+      }
     }
   }
 
