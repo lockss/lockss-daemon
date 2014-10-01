@@ -1,10 +1,10 @@
 /*
- * $Id: TestPlatformUtil.java,v 1.13 2013-02-27 01:25:48 tlipkis Exp $
+ * $Id: TestPlatformUtil.java,v 1.14 2014-10-01 08:35:36 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -48,6 +48,40 @@ public class TestPlatformUtil extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     info = PlatformUtil.getInstance();
+  }
+
+  public void testEnsureRuntime_execDoesntImplicitlyInvokeShell() {
+    // This command echoes a number.
+    String[] cmd1 = {"sh", "-c", "echo $$"};
+    // This command should not echo a number
+    String[] cmd2 = {"echo", "$$"};
+
+    if (false) {
+      // Here only to verify validity of following test.  Disabled as might
+      // fail on non- *nix
+      assertMatchesRE("[0-9]", exec(cmd1));
+    }
+    assertNotMatchesRE("[0-9]", exec(cmd2));
+  }
+
+  String exec(String cmd[]) {
+    try {
+      Process p = Runtime.getRuntime().exec(cmd);
+      Reader rdr =
+	new InputStreamReader(new BufferedInputStream(p.getInputStream()),
+			      Constants.DEFAULT_ENCODING);
+      try {
+	String s = StringUtil.fromReader(rdr);
+	rdr.close();
+	return s;
+      } catch (IOException e) {
+	log.warning("Couldn't read from process stream", e);
+	return null;
+      }
+    } catch (Exception e) {
+      log.warning("exec() failed", e);
+      return null;
+    }
   }
 
   public void testGetSystemTempDir() {

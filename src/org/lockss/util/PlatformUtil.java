@@ -1,10 +1,10 @@
 /*
- * $Id: PlatformUtil.java,v 1.24 2012-12-17 23:48:45 clairegriffin Exp $
+ * $Id: PlatformUtil.java,v 1.25 2014-10-01 08:35:36 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -532,35 +532,6 @@ public class PlatformUtil {
       }
     }
 
-    /** Get vector of stat vectors for all processes from /proc/<n>/stat .
-     * Read the stat files with a shell with java code so the executing
-     * process (self) is java. */
-    Vector getAllProcStats() {
-      String[] cmd = {"sh",  "-c",  "cat /proc/[0-9]*/stat"};
-      Process p;
-      try {
-	p = rt().exec(cmd);
-	//        p.waitFor();
-      } catch (IOException e) {
-	log.error("Couldn't exec '" + cmd + "'", e);
-	return null;
-	//      } catch (InterruptedException e) {
-	//        log.error("waitFor()", e);
-	//        return null;
-      }
-      Reader r =
-	new InputStreamReader(new BufferedInputStream(p.getInputStream()));
-      String s;
-      try {
-	s = StringUtil.fromReader(r);
-      } catch (IOException e) {
-	log.error("Couldn't read from '" + cmd + "'", e);
-	return null;
-      }
-      System.out.println(s);
-      System.out.println(StringUtil.breakAt(s, '\n').size());
-      return StringUtil.breakAt(s, '\n');
-    }
   }
 
   /** OpenBSD implementation of platform-specific code */

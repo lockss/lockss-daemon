@@ -1,5 +1,5 @@
 /*
- * $Id: DNSSupportTest.java,v 1.5 2006-02-01 05:05:43 tlipkis Exp $
+ * $Id: DNSSupportTest.java,v 1.6 2014-10-01 08:35:36 tlipkis Exp $
  */
 
 /*
@@ -377,7 +377,7 @@ public class DNSSupportTest extends LockssTestCase {
       }
     }
     if (anyInCall) {
-      DebugUtils.getInstance().threadDump(true);
+      PlatformUtil.getInstance().threadDump(true);
     }
 
     for (int i = 0; i < thr.length; i++) {

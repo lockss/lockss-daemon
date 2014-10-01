@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.96 2014-06-30 04:58:14 tlipkis Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.97 2014-10-01 08:35:36 tlipkis Exp $
 */
 
 /*
@@ -139,7 +139,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
   protected void waitForCrawlToFinish(SimpleBinarySemaphore sem) {
     if (!sem.take(TIMEOUT_SHOULDNT)) {
-      DebugUtils.getInstance().threadDump(true);
+      PlatformUtil.getInstance().threadDump(true);
       TimerUtil.guaranteedSleep(1000);
       fail(didntMsg("finish", TIMEOUT_SHOULDNT));
     }
