@@ -1,5 +1,5 @@
 /*
- * $Id: Au.java,v 1.2 2014-09-30 00:03:44 thib_gc Exp $
+ * $Id: Au.java,v 1.3 2014-10-01 21:29:56 thib_gc Exp $
  */
 
 /*
@@ -366,7 +366,7 @@ public class Au {
         auidplus = auid;
       }
       else {
-        StringBuilder sb = new StringBuilder();
+        StringBuilder sb = new StringBuilder(auid);
         boolean first = true;
         for (Map.Entry<String, String> param : nondefParams.entrySet()) {
           sb.append(first ? "@@@NONDEF@@@" : "&");
