@@ -1,5 +1,5 @@
 /*
- * $Id: TestBibliographicItemImpl.java,v 1.6 2013-04-01 18:13:31 pgust Exp $
+ * $Id: TestBibliographicItemImpl.java,v 1.7 2014-10-02 19:39:56 pgust Exp $
  */
 
 /*
@@ -74,20 +74,38 @@ public class TestBibliographicItemImpl extends LockssTestCase {
   private final static String eIssue2 = "i9";
 
   // A BibliographicItem constructed using vol/year/issue convenience strings
-  private BibliographicItemImpl bibItem1 = new BibliographicItemImpl(
-      pIsbn, pIssn, 
-      title, titleId, publisher, name, volume, year, issue,
-      publicationType, coverageDepth
-  );
+  private BibliographicItemImpl bibItem1 =
+    (BibliographicItemImpl) new BibliographicItemImpl()
+    .setPrintIsbn(pIsbn)
+    .setPrintIssn(pIssn)
+    .setPublicationTitle(title)
+    .setProprietaryId(titleId)
+    .setPublisherName(publisher)
+    .setName(name)
+    .setVolume(volume)
+    .setYear(year)
+    .setIssue(issue)
+    .setPublicationType(publicationType)
+    .setCoverageDepth(coverageDepth);
+  
   // A BibliographicItem constructed using vol/year/issue start and end strings
-  private BibliographicItemImpl bibItem2 = new BibliographicItemImpl(
-      pIsbn, pIssn, title, titleId,
-      publisher, name,
-      sVol, eVol,
-      sYear, eYear,
-      sIssue, eIssue,
-      publicationType, coverageDepth      
-  );
+  private BibliographicItemImpl bibItem2 = (
+    BibliographicItemImpl) new BibliographicItemImpl()
+    .setPrintIsbn(pIsbn)
+    .setPrintIssn(pIssn)
+    .setPublicationTitle(title)
+    .setProprietaryId(titleId)
+    .setPublisherName(publisher)
+    .setName(name)
+    .setStartVolume(sVol)
+    .setEndVolume(eVol)
+    .setStartYear(sYear) 
+    .setEndYear(eYear)
+    .setStartIssue(sIssue) 
+    .setEndIssue(eIssue)
+    .setPublicationType(publicationType)
+    .setCoverageDepth(coverageDepth);      
+
   private BibliographicItemImpl bibItemCopy  = new BibliographicItemImpl(bibItem1);
   private BibliographicItemImpl bibItemClone = bibItem1.clone();
 
