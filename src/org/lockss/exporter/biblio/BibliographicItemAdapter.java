@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicItemAdapter.java,v 1.13 2014-09-09 22:49:27 pgust Exp $
+ * $Id: BibliographicItemAdapter.java,v 1.14 2014-10-02 19:37:22 pgust Exp $
  */
 
 /*
@@ -300,6 +300,11 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
     return this;
   }
 
+  public BibliographicItemAdapter setSeriesTitle(String seriesTitle) {
+    this.seriesTitle = seriesTitle;
+    return this;
+  }
+
   public BibliographicItemAdapter setProviderName(String providerName) {
     this.providerName = providerName;
     return this;
@@ -388,33 +393,34 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
   /**
    * Copy one instance to another.
    * 
-   * @param from from instance
-   * @param to to instance
-   * @return to instance
+   * @param other other instance
+   * @return this instance
    */
-  protected void copyFrom(BibliographicItemAdapter from) {
-    setPrintIsbn(from.printIsbn);
-    setEisbn(from.eIsbn);
-    setPrintIssn(from.printIssn);
-    setEissn(from.eIssn);
-    setIssnL(from.issnL);
-    setProprietaryId(from.proprietaryId);
-    setProprietarySeriesId(from.proprietarySeriesId);
-    setPublicationTitle(from.publicationTitle);
-    setProviderName(from.providerName);
-    setPublisherName(from.publisherName);
-    setName(from.name);
-    setVolume(from.volume);
-    setStartVolume(from.startVolume);
-    setEndVolume(from.endVolume);
-    setYear(from.year);
-    setStartYear(from.startYear);
-    setEndYear(from.endYear);
-    setIssue(from.issue);
-    setStartIssue(from.startIssue);
-    setEndIssue(from.endIssue);
-    setPublicationType(from.publicationType);
-    setCoverageDepth(from.coverageDepth);
+  protected BibliographicItemAdapter copyFrom(BibliographicItemAdapter other) {
+    setPrintIsbn(other.printIsbn);
+    setEisbn(other.eIsbn);
+    setPrintIssn(other.printIssn);
+    setEissn(other.eIssn);
+    setIssnL(other.issnL);
+    setProprietaryId(other.proprietaryId);
+    setPublicationTitle(other.publicationTitle);
+    setPublisherName(other.publisherName);
+    setProviderName(other.providerName);
+    setSeriesTitle(other.seriesTitle);
+    setProprietarySeriesId(other.proprietarySeriesId);
+    setName(other.name);
+    setVolume(other.volume);
+    setStartVolume(other.startVolume);
+    setEndVolume(other.endVolume);
+    setYear(other.year);
+    setStartYear(other.startYear);
+    setEndYear(other.endYear);
+    setIssue(other.issue);
+    setStartIssue(other.startIssue);
+    setEndIssue(other.endIssue);
+    setPublicationType(other.publicationType);
+    setCoverageDepth(other.coverageDepth);
+    return this;
   }  
 
 
@@ -450,6 +456,12 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
       return false;
     if (publicationTitle != null ? !publicationTitle.equals(that.publicationTitle) : that.publicationTitle != null)
       return false;
+    if (seriesTitle != null ? !seriesTitle.equals(that.seriesTitle) : that.seriesTitle != null)
+      return false;
+    if (proprietaryId != null ? !proprietaryId.equals(that.proprietaryId) : that.proprietaryId != null)
+      return false;
+    if (proprietarySeriesId != null ? !proprietarySeriesId.equals(that.proprietarySeriesId) : that.proprietarySeriesId != null)
+      return false;
     if (name != null ? !name.equals(that.name) : that.name != null)
       return false;
     if (printIsbn != null ? !printIsbn.equals(that.printIsbn) : that.printIsbn != null)
@@ -482,6 +494,9 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
     result = 31 * result + (eIssn != null ? eIssn.hashCode() : 0);
     result = 31 * result + (issnL != null ? issnL.hashCode() : 0);
     result = 31 * result + (publicationTitle != null ? publicationTitle.hashCode() : 0);
+    result = 31 * result + (seriesTitle != null ? seriesTitle.hashCode() : 0);
+    result = 31 * result + (proprietaryId != null ? proprietaryId.hashCode() : 0);
+    result = 31 * result + (proprietarySeriesId != null ? proprietarySeriesId.hashCode() : 0);
     result = 31 * result + (providerName != null ? providerName.hashCode() : 0);
     result = 31 * result + (publisherName != null ? publisherName.hashCode() : 0);
     result = 31 * result + (name != null ? name.hashCode() : 0);
