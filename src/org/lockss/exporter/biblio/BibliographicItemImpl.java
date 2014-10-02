@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicItemImpl.java,v 1.9 2014-04-02 19:34:35 pgust Exp $
+ * $Id: BibliographicItemImpl.java,v 1.10 2014-10-02 19:39:00 pgust Exp $
  */
 
 /*
@@ -33,10 +33,9 @@ package org.lockss.exporter.biblio;
 
 /**
  * A basic implementation of the <code>BibliographicItem</code> interface which
- * is mutable. All bibliographic data is passed in at construction, though
- * values may be null. Extends the {@link BibliographicItemAdapter}, so has
- * setters which return the BibliographicItem so they can be chained.
- * Values are set in the constructors using the adapter's methods.
+ * is mutable. All bibliographic data is passed though setters. Extends the 
+ * {@link BibliographicItemAdapter}, so setters return BibliographicItemAdapter 
+ * so they can be chained.
  *
  * @author Neil Mayo
  */
@@ -48,109 +47,13 @@ public class BibliographicItemImpl extends BibliographicItemAdapter {
   public BibliographicItemImpl() {}
 
   /**
-   * Create a BibliographicItem with the supplied field values. Values may
-   * be null. Start and end values for volumes, years and issues are retrieved
-   * from the full strings which may contain ranges.
-   * @param printIsbn
-   * @param printIssn
-   * @param journalTitle
-   * @param proprietaryId
-   * @param name
-   * @param volume
-   * @param year
-   * @param issue
+   * Create a BibliographicItemImpl by copying all the field values from the
+   * supplied BibliographicItemAdapter.
+   * @param other another BibliographicItemAdapter
    */
-  public BibliographicItemImpl(String printIsbn, String printIssn,
-                               String publicationTitle, String proprietaryId,
-                               String publisherName, String name,
-                               String volume, String year, String issue,
-                               String publicationType, String coverageDepth) {
-    setPrintIsbn(printIsbn);
-    setPrintIssn(printIssn);
-    setPublicationTitle(publicationTitle);
-    setProprietaryId(proprietaryId);
-    setPublisherName(publisherName);
-    setName(name);
-    setVolume(volume);
-    setYear(year);
-    setIssue(issue);
-    setPublicationType(publicationType);
-    setCoverageDepth(coverageDepth);
-  }
-
-  /**
-   * Create a BibliographicItem with the supplied field values. Values may
-   * be null. Start and end values for volumes, years and issues are explicitly
-   * supplied.
-   * @param printIsbn
-   * @param printIssn
-   * @param publicationTitle
-   * @param proprietaryId
-   * @param name
-   * @param startVolume
-   * @param endVolume
-   * @param startYear
-   * @param endYear
-   * @param startIssue
-   * @param endIssue
-   */
-  public BibliographicItemImpl(String printIsbn, String printIssn,
-                               String publicationTitle,
-                               String propietaryId,
-                               String publisherName, String name,
-                               String startVolume, String endVolume,
-                               String startYear, String endYear,
-                               String startIssue, String endIssue,
-                               String publicationType, String coverageDepth) {
-    setPrintIsbn(printIsbn);
-    setPrintIssn(printIssn);
-    setPublicationTitle(publicationTitle);
-    setProprietaryId(proprietaryId);
-    setPublisherName(publisherName);
-    setName(name);
-    setStartVolume(startVolume);
-    setEndVolume(endVolume);
-    setStartYear(startYear);
-    setEndYear(endYear);
-    setStartIssue(startIssue);
-    setEndIssue(endIssue);
-    setPublicationType(publicationType);
-    setCoverageDepth(coverageDepth);
-  }
-
-  /**
-   * Create a BibliographicItem by copying all the field values from the
-   * supplied BibliographicItem. Values may be null. Values are copied for both
-   * year and volume strings and their start and end values.
-   * @param other another BibliographicItem
-   */
-  public BibliographicItemImpl(BibliographicItem other) {
-    if (other instanceof BibliographicItemImpl) {
-      // initialize by copying fields from another BibliographicItemImpl
-      copyFrom((BibliographicItemImpl)other);
-    } else {
-      // initialize by copying properties from another BibliographicItem 
-      setPrintIsbn(other.getPrintIsbn());
-      setEisbn(other.getEisbn());
-      setPrintIssn(other.getPrintIssn());
-      setEissn(other.getEissn());
-      setIssnL(other.getIssnL());
-      setProprietaryId(other.getProprietaryId());
-      setPublicationTitle(other.getPublicationTitle());
-      setPublisherName(other.getPublisherName());
-      setName(other.getName());
-      setVolume(other.getVolume());
-      setStartVolume(other.getStartVolume());
-      setEndVolume(other.getEndVolume());
-      setYear(other.getYear());
-      setStartYear(other.getStartYear());
-      setEndYear(other.getEndYear());
-      setIssue(other.getIssue());
-      setStartIssue(other.getStartIssue());
-      setEndIssue(other.getEndIssue());
-      setPublicationType(other.getPublicationType());
-      setCoverageDepth(other.getCoverageDepth());
-    }
+  public BibliographicItemImpl(BibliographicItemAdapter other) {
+    // initialize by copying properties from another BibliographicItemAdapter
+    this.copyFrom(other);
   }
 
   /**
