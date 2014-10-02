@@ -1,5 +1,5 @@
 /*
- * $Id: TestBibliographicUtil.java,v 1.10 2013-12-09 21:16:32 pgust Exp $
+ * $Id: TestBibliographicUtil.java,v 1.11 2014-10-02 19:40:54 pgust Exp $
  */
 
 /*
@@ -72,9 +72,9 @@ public class TestBibliographicUtil extends LockssTestCase {
   private static final String issNumRng = issNum1+"-"+issNum2;
   
   // AUs for the equivalence tests
-  private BibliographicItem afrTod, afrTodEquiv, afrTodDiffVol, afrTodDiffYear,
+  private BibliographicItemAdapter afrTod, afrTodEquiv, afrTodDiffVol, afrTodDiffYear,
       afrTodDiffName, afrTodDiffJournalTitle, afrTodDiffIssn, afrTodDiffPublisher, afrTodNullYear;
-  private List<BibliographicItem> afrTodAus;
+  private List<BibliographicItemAdapter> afrTodAus;
 
 
   // OUP's "The Library..." has consecutive volumes with different identifier formats
@@ -205,8 +205,8 @@ public class TestBibliographicUtil extends LockssTestCase {
 
     // All Africa Today example titles should be from same title
     // except afrTodDiffJournalTitle, afrTodDiffIssn, afrTodDiffPublisher
-    List<BibliographicItem> sameTitleAfrTodAus = Arrays.asList(afrTod,
-        afrTodEquiv, afrTodDiffVol, afrTodDiffYear, afrTodNullYear);
+    List<BibliographicItemAdapter> sameTitleAfrTodAus = Arrays.asList(
+        afrTod, afrTodEquiv, afrTodDiffVol, afrTodDiffYear, afrTodNullYear);
     // XXX NOTE: we don;t incorporate test for ISBNs or ISSN-Ls or eIS[BS]Ns yet
 
     for (BibliographicItem bi1 : sameTitleAfrTodAus) {
