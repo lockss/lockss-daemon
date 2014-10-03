@@ -1,5 +1,5 @@
 /*
- * $Id: TdbTitle.java,v 1.21 2014-09-24 00:32:39 tlipkis Exp $
+ * $Id: TdbTitle.java,v 1.22 2014-10-03 23:04:46 fergaloy-sf Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import org.lockss.util.*;
  * This class represents a title database title.
  *
  * @author  Philip Gust
- * @version $Id: TdbTitle.java,v 1.21 2014-09-24 00:32:39 tlipkis Exp $
+ * @version $Id: TdbTitle.java,v 1.22 2014-10-03 23:04:46 fergaloy-sf Exp $
  */
 public class TdbTitle {
   /**
@@ -205,20 +205,26 @@ public class TdbTitle {
   }
 
   /**
-   * Return proprietary ID for this title. 
+   * Return the complete list of proprietary identifiers for this title.
    * 
-   * @return proprietary ID for this title or <code>null</code> 
-   * if not specified
+   * @return a String[] with the proprietary identifiers for this title
    */
-  public String getProprietaryId() {
-    String value = null;
+  public String[] getProprietaryIds() {
+    Set<String> proprietaryIds = new HashSet<String>();
+
     for (TdbAu tdbau : tdbAus.values()) {
-      value = tdbau.getProprietaryId();
-      if (value != null) {
-        break;
+      String[] auProprietaryIds = tdbau.getProprietaryIds();
+
+      if (auProprietaryIds != null && auProprietaryIds.length > 0) {
+	String auPropId = auProprietaryIds[0];
+
+	if (auPropId != null) {
+	  proprietaryIds.add(auPropId);
+	}
       }
     }
-    return value;
+
+    return proprietaryIds.toArray(new String[proprietaryIds.size()]);
   }
 
   /**

@@ -1,10 +1,10 @@
 /*
- * $Id: TestBibliographicItemImpl.java,v 1.7 2014-10-02 19:39:56 pgust Exp $
+ * $Id: TestBibliographicItemImpl.java,v 1.8 2014-10-03 23:04:46 fergaloy-sf Exp $
  */
 
 /*
 
-Copyright (c) 2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2011-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -47,7 +47,7 @@ public class TestBibliographicItemImpl extends LockssTestCase {
   private final static String eIssn = "1533-8606";
   private final static String issnL = "1556-326X";
   private final static String title = "A Journal";
-  private final static String titleId = "A JournalId";
+  private final static String[] titleIds = {"A JournalId"};
   private final static String publisher = "A Publisher";
   private final static String name = "A Journal Volume X";
   private final static String volume = "s1-s10";
@@ -79,7 +79,7 @@ public class TestBibliographicItemImpl extends LockssTestCase {
     .setPrintIsbn(pIsbn)
     .setPrintIssn(pIssn)
     .setPublicationTitle(title)
-    .setProprietaryId(titleId)
+    .setProprietaryIds(titleIds)
     .setPublisherName(publisher)
     .setName(name)
     .setVolume(volume)
@@ -94,7 +94,7 @@ public class TestBibliographicItemImpl extends LockssTestCase {
     .setPrintIsbn(pIsbn)
     .setPrintIssn(pIssn)
     .setPublicationTitle(title)
-    .setProprietaryId(titleId)
+    .setProprietaryIds(titleIds)
     .setPublisherName(publisher)
     .setName(name)
     .setStartVolume(sVol)

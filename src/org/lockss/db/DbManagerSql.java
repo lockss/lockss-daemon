@@ -1,5 +1,5 @@
 /*
- * $Id: DbManagerSql.java,v 1.3 2014-09-16 19:55:43 fergaloy-sf Exp $
+ * $Id: DbManagerSql.java,v 1.4 2014-10-03 23:04:45 fergaloy-sf Exp $
  */
 
 /*
@@ -416,8 +416,8 @@ public class DbManagerSql {
       + " (" + MD_ITEM_SEQ_COLUMN + ") on delete cascade,"
       + PUBLISHER_SEQ_COLUMN + " bigint not null references " + PUBLISHER_TABLE
       + " (" + PUBLISHER_SEQ_COLUMN + ") on delete cascade,"
-      + PUBLICATION_ID_COLUMN + " varchar(" + MAX_PUBLICATION_ID_COLUMN + ")"
-      + ")";
+      + OBSOLETE_PUBLICATION_ID_COLUMN + " varchar("
+      + OBSOLETE_MAX_PUBLICATION_ID_COLUMN + ")" + ")";
 
   // Query to create the table for recording pending AUs to index.
   static final String CREATE_PENDING_AU_TABLE_QUERY = "create table "
@@ -611,6 +611,15 @@ public class DbManagerSql {
       + PROVIDER_SEQ_COLUMN + " --BigintSerialPk--,"
       + PROVIDER_LID_COLUMN + " varchar(" + MAX_LID_COLUMN + "),"
       + PROVIDER_NAME_COLUMN + " varchar(" + MAX_NAME_COLUMN + ") not null"
+      + ")";
+
+  // Query to create the table for publication proprietary identifiers.
+  private static final String CREATE_PROPRIETARY_ID_TABLE_QUERY = "create "
+      + "table " + PROPRIETARY_ID_TABLE + " ("
+      + MD_ITEM_SEQ_COLUMN + " bigint not null references " + MD_ITEM_TABLE
+      + " (" + MD_ITEM_SEQ_COLUMN + ") on delete cascade,"
+      + PROPRIETARY_ID_COLUMN + " varchar(" + MAX_PROPRIETARY_ID_COLUMN
+      + ") not null"
       + ")";
 
   // Query to insert the database version.
@@ -2032,16 +2041,16 @@ public class DbManagerSql {
   // SQL statement that obtains all the trimmable publication identifiers in the
   // database.
   private static final String GET_TRIMMABLE_PUBLICATION_IDS_QUERY = "select "
-      + "distinct " + PUBLICATION_ID_COLUMN
+      + "distinct " + OBSOLETE_PUBLICATION_ID_COLUMN
       + " from " + PUBLICATION_TABLE
-      + " where " + PUBLICATION_ID_COLUMN + " like ' %'"
-      + " or " + PUBLICATION_ID_COLUMN + " like '% '";
+      + " where " + OBSOLETE_PUBLICATION_ID_COLUMN + " like ' %'"
+      + " or " + OBSOLETE_PUBLICATION_ID_COLUMN + " like '% '";
 
   // Query to update a publication identifier.
   private static final String UPDATE_PUBLICATION_ID_QUERY = "update "
       + PUBLICATION_TABLE
-      + " set " + PUBLICATION_ID_COLUMN + " = ?"
-      + " where " + PUBLICATION_ID_COLUMN + " = ?";
+      + " set " + OBSOLETE_PUBLICATION_ID_COLUMN + " = ?"
+      + " where " + OBSOLETE_PUBLICATION_ID_COLUMN + " = ?";
 
   // SQL statements that create the necessary version 18 indices.
   private static final String[] VERSION_18_INDEX_CREATE_QUERIES = new String[] {
@@ -2147,6 +2156,35 @@ public class DbManagerSql {
       + " from " + VERSION_TABLE
       + " where " + SYSTEM_COLUMN + " = '" + DATABASE_VERSION_TABLE_SYSTEM
       + "' and " + VERSION_COLUMN + " = ?";
+
+  // The SQL code used to create the necessary version 21 database tables.
+  @SuppressWarnings("serial")
+  private static final Map<String, String> VERSION_21_TABLE_CREATE_QUERIES =
+    new LinkedHashMap<String, String>() {{
+      put(PROPRIETARY_ID_TABLE, CREATE_PROPRIETARY_ID_TABLE_QUERY);
+    }};
+
+  // SQL statements that create the necessary version 21 indices.
+  private static final String[] VERSION_21_INDEX_CREATE_QUERIES = new String[] {
+    "create unique index idx1_" + PROPRIETARY_ID_TABLE + " on "
+  + PROPRIETARY_ID_TABLE
+  + "(" + MD_ITEM_SEQ_COLUMN + "," + PROPRIETARY_ID_COLUMN + ")"
+    };
+
+  // SQL statement that obtains all existing metadata item identifiers and their
+  // proprietary identifiers in the publication table.
+  private static final String GET_OLD_PUBLICATION_IDS_QUERY = "select "
+      + MD_ITEM_SEQ_COLUMN
+      + "," + OBSOLETE_PUBLICATION_ID_COLUMN
+      + " from " + PUBLICATION_TABLE
+      + " where " + OBSOLETE_PUBLICATION_ID_COLUMN + " is not null";
+
+  // Query to insert a proprietary identifier of a metadata item.
+  private static final String INSERT_PROPRIETARY_ID_QUERY = "insert into "
+      + PROPRIETARY_ID_TABLE
+      + "(" + MD_ITEM_SEQ_COLUMN
+      + "," + PROPRIETARY_ID_COLUMN
+      + ") values (?,?)";
 
   // The database data source.
   private DataSource dataSource = null;
@@ -2451,7 +2489,7 @@ public class DbManagerSql {
    *           if any problem occurred getting the connection.
    */
   Connection getConnection() throws SQLException {
-    return getConnection(dataSource, maxRetryCount, retryDelay, false);
+    return getConnection(dataSource, maxRetryCount, retryDelay, false, true);
   }
 
   /**
@@ -2462,12 +2500,17 @@ public class DbManagerSql {
    * @param autoCommit
    *          A boolean indicating the value of the connection auto-commit
    *          property.
+   * @param logException
+   *          A boolean indicating whether any exception received should be
+   *          logged.
    * @return a Connection with the database connection to be used.
    * @throws SQLException
    *           if any problem occurred getting the connection.
    */
-  Connection getConnection(boolean autoCommit) throws SQLException {
-    return getConnection(dataSource, maxRetryCount, retryDelay, autoCommit);
+  Connection getConnection(boolean autoCommit, boolean logException)
+      throws SQLException {
+    return getConnection(dataSource, maxRetryCount, retryDelay, autoCommit,
+	logException);
   }
 
   /**
@@ -2483,7 +2526,27 @@ public class DbManagerSql {
    *           if any problem occurred getting the connection.
    */
   Connection getConnection(DataSource ds) throws SQLException {
-    return getConnection(ds, maxRetryCount, retryDelay, false);
+    return getConnection(ds, maxRetryCount, retryDelay, false, true);
+  }
+
+  /**
+   * Provides a database connection using a passed datasource, retrying the
+   * operation in the default manner in case of transient failures.
+   * <p />
+   * Auto-commit is disabled to allow the client code to manage transactions.
+   * 
+   * @param ds
+   *          A DataSource with the datasource that provides the connection.
+   * @param logException
+   *          A boolean indicating whether any exception received should be
+   *          logged.
+   * @return a Connection with the database connection to be used.
+   * @throws SQLException
+   *           if any problem occurred getting the connection.
+   */
+  Connection getConnection(DataSource ds, boolean logException)
+      throws SQLException {
+    return getConnection(ds, maxRetryCount, retryDelay, false, logException);
   }
 
   /**
@@ -2495,13 +2558,17 @@ public class DbManagerSql {
    * @param autoCommit
    *          A boolean indicating the value of the connection auto-commit
    *          property.
+   * @param logException
+   *          A boolean indicating whether any exception received should be
+   *          logged.
    * @return a Connection with the database connection to be used.
    * @throws SQLException
    *           if any problem occurred getting the connection.
    */
-  Connection getConnection(DataSource ds, boolean autoCommit)
-      throws SQLException {
-    return getConnection(ds, maxRetryCount, retryDelay, autoCommit);
+  Connection getConnection(DataSource ds, boolean autoCommit,
+      boolean logException) throws SQLException {
+    return getConnection(ds, maxRetryCount, retryDelay, autoCommit,
+	logException);
   }
 
   /**
@@ -2520,12 +2587,15 @@ public class DbManagerSql {
    * @param autoCommit
    *          A boolean indicating the value of the connection auto-commit
    *          property.
+   * @param logException
+   *          A boolean indicating whether any exception received should be
+   *          logged.
    * @return a Connection with the database connection to be used.
    * @throws SQLException
    *           if any problem occurred accessing the database.
    */
   Connection getConnection(DataSource ds, int maxRetryCount, long retryDelay,
-      boolean autoCommit) throws SQLException {
+      boolean autoCommit, boolean logException) throws SQLException {
     if (ds == null) {
       throw new IllegalArgumentException("Null datasource");
     }
@@ -2534,18 +2604,26 @@ public class DbManagerSql {
       return
 	  JdbcBridge.getConnection(ds, maxRetryCount, retryDelay, autoCommit);
     } catch (SQLException sqle) {
-      // Report the problem.
-      log.error("Cannot get a database connection", sqle);
-      log.error("maxRetryCount = " + maxRetryCount, sqle);
-      log.error("retryDelay = " + retryDelay, sqle);
-      log.error("autoCommit = " + autoCommit, sqle);
+      // Check whether the client code wants the exception logged.
+      if (logException) {
+	// Yes: Report the problem.
+	log.error("Cannot get a database connection", sqle);
+	log.error("maxRetryCount = " + maxRetryCount);
+	log.error("retryDelay = " + retryDelay);
+	log.error("autoCommit = " + autoCommit);
+      }
+
       throw sqle;
     } catch (RuntimeException re) {
-      // Report the problem.
-      log.error("Cannot get a database connection", re);
-      log.error("maxRetryCount = " + maxRetryCount, re);
-      log.error("retryDelay = " + retryDelay, re);
-      log.error("autoCommit = " + autoCommit, re);
+      // Check whether the client code wants the exception logged.
+      if (logException) {
+	// Yes: Report the problem.
+	log.error("Cannot get a database connection", re);
+	log.error("maxRetryCount = " + maxRetryCount);
+	log.error("retryDelay = " + retryDelay);
+	log.error("autoCommit = " + autoCommit);
+      }
+
       throw re;
     }
   }
@@ -2656,15 +2734,15 @@ public class DbManagerSql {
 	  Statement.NO_GENERATED_KEYS, maxRetryCount, retryDelay, fetchSize);
     } catch (SQLException sqle) {
       log.error("Cannot prepare a statement", sqle);
-      log.error("sql = '" + sql + "'", sqle);
-      log.error("maxRetryCount = " + maxRetryCount, sqle);
-      log.error("retryDelay = " + retryDelay, sqle);
+      log.error("sql = '" + sql + "'");
+      log.error("maxRetryCount = " + maxRetryCount);
+      log.error("retryDelay = " + retryDelay);
       throw sqle;
     } catch (RuntimeException re) {
       log.error("Cannot prepare a statement", re);
-      log.error("sql = '" + sql + "'", re);
-      log.error("maxRetryCount = " + maxRetryCount, re);
-      log.error("retryDelay = " + retryDelay, re);
+      log.error("sql = '" + sql + "'");
+      log.error("maxRetryCount = " + maxRetryCount);
+      log.error("retryDelay = " + retryDelay);
       throw re;
     }
 
@@ -2735,17 +2813,17 @@ public class DbManagerSql {
 	  maxRetryCount, retryDelay, fetchSize);
     } catch (SQLException sqle) {
       log.error("Cannot prepare a statement", sqle);
-      log.error("sql = '" + sql + "'", sqle);
-      log.error("returnGeneratedKeys = " + returnGeneratedKeys, sqle);
-      log.error("maxRetryCount = " + maxRetryCount, sqle);
-      log.error("retryDelay = " + retryDelay, sqle);
+      log.error("sql = '" + sql + "'");
+      log.error("returnGeneratedKeys = " + returnGeneratedKeys);
+      log.error("maxRetryCount = " + maxRetryCount);
+      log.error("retryDelay = " + retryDelay);
       throw sqle;
     } catch (RuntimeException re) {
       log.error("Cannot prepare a statement", re);
-      log.error("sql = '" + sql + "'", re);
-      log.error("returnGeneratedKeys = " + returnGeneratedKeys, re);
-      log.error("maxRetryCount = " + maxRetryCount, re);
-      log.error("retryDelay = " + retryDelay, re);
+      log.error("sql = '" + sql + "'");
+      log.error("returnGeneratedKeys = " + returnGeneratedKeys);
+      log.error("maxRetryCount = " + maxRetryCount);
+      log.error("retryDelay = " + retryDelay);
       throw re;
     }
 
@@ -2796,13 +2874,13 @@ public class DbManagerSql {
       results = JdbcBridge.executeQuery(statement, maxRetryCount, retryDelay);
     } catch (SQLException sqle) {
       log.error("Cannot execute a query", sqle);
-      log.error("maxRetryCount = " + maxRetryCount, sqle);
-      log.error("retryDelay = " + retryDelay, sqle);
+      log.error("maxRetryCount = " + maxRetryCount);
+      log.error("retryDelay = " + retryDelay);
       throw sqle;
     } catch (RuntimeException re) {
-      log.error("Cannot execute a query", re);
-      log.error("maxRetryCount = " + maxRetryCount, re);
-      log.error("retryDelay = " + retryDelay, re);
+      log.error("Cannot execute a query");
+      log.error("maxRetryCount = " + maxRetryCount);
+      log.error("retryDelay = " + retryDelay);
       throw re;
     }
 
@@ -2854,13 +2932,13 @@ public class DbManagerSql {
 	  JdbcBridge.executeUpdate(statement, maxRetryCount, retryDelay);
     } catch (SQLException sqle) {
       log.error("Cannot execute an update", sqle);
-      log.error("maxRetryCount = " + maxRetryCount, sqle);
-      log.error("retryDelay = " + retryDelay, sqle);
+      log.error("maxRetryCount = " + maxRetryCount);
+      log.error("retryDelay = " + retryDelay);
       throw sqle;
     } catch (RuntimeException re) {
       log.error("Cannot execute an update", re);
-      log.error("maxRetryCount = " + maxRetryCount, re);
-      log.error("retryDelay = " + retryDelay, re);
+      log.error("maxRetryCount = " + maxRetryCount);
+      log.error("retryDelay = " + retryDelay);
       throw re;
     }
 
@@ -3096,11 +3174,11 @@ public class DbManagerSql {
 	  fetchSize);
     } catch (SQLException sqle) {
       log.error("Cannot execute a DDL query", sqle);
-      log.error("ddlQuery = '" + ddlQuery + "'", sqle);
+      log.error("ddlQuery = '" + ddlQuery + "'");
       throw sqle;
     } catch (RuntimeException re) {
       log.error("Cannot execute a DDL query", re);
-      log.error("ddlQuery = '" + ddlQuery + "'", re);
+      log.error("ddlQuery = '" + ddlQuery + "'");
       throw re;
     }
 
@@ -3245,11 +3323,11 @@ public class DbManagerSql {
       }
     } catch (SQLException sqle) {
       log.error("Cannot log table schema", sqle);
-      log.error("tableName = '" + tableName + "'", sqle);
+      log.error("tableName = '" + tableName + "'");
       throw sqle;
     } catch (RuntimeException re) {
       log.error("Cannot log table schema", re);
-      log.error("tableName = '" + tableName + "'", re);
+      log.error("tableName = '" + tableName + "'");
       throw re;
     } finally {
       JdbcBridge.safeCloseResultSet(resultSet);
@@ -3280,7 +3358,7 @@ public class DbManagerSql {
 
     // Connect to the template database. PostgreSQL does not allow a database
     // to be created within a transaction.
-    Connection conn = getConnection(ds, true);
+    Connection conn = getConnection(ds, true, true);
 
     // Check whether the database does not exist.
     if (!postgresqlDbExists(conn, databaseName)) {
@@ -6171,7 +6249,7 @@ public class DbManagerSql {
 
       // Trim publication identifiers.
       trimTextColumns(conn, "publication identifier",
-	  GET_TRIMMABLE_PUBLICATION_IDS_QUERY, PUBLICATION_ID_COLUMN,
+	  GET_TRIMMABLE_PUBLICATION_IDS_QUERY, OBSOLETE_PUBLICATION_ID_COLUMN,
 	  UPDATE_PUBLICATION_ID_QUERY);
 
       // Record the current database version in the database.
@@ -7271,5 +7349,150 @@ public class DbManagerSql {
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
     return result;
+  }
+
+  /**
+   * Updates the database from version 20 to version 21.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws SQLException
+   *           if any problem occurred updating the database.
+   */
+  void updateDatabaseFrom20To21(Connection conn) throws SQLException {
+    final String DEBUG_HEADER = "updateDatabaseFrom20To21(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    if (conn == null) {
+      throw new IllegalArgumentException("Null connection");
+    }
+
+    // Create the necessary tables if they do not exist.
+    createTablesIfMissing(conn, VERSION_21_TABLE_CREATE_QUERIES);
+
+    // Create the necessary indices.
+    executeDdlQueries(conn, VERSION_21_INDEX_CREATE_QUERIES);
+
+    // Populate the publication proprietary identifier table.
+    populateProprietaryIds(conn);
+
+    // Drop the now obsolete publication identifier column.
+    executeDdlQuery(conn,
+	dropColumnQuery(PUBLICATION_TABLE, OBSOLETE_PUBLICATION_ID_COLUMN));
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Populates the table of publication proprietary identifiers.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private void populateProprietaryIds(Connection conn)
+      throws SQLException {
+    final String DEBUG_HEADER = "populateProprietaryIds(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    if (conn == null) {
+      throw new IllegalArgumentException("Null connection");
+    }
+
+    PreparedStatement statement = null;
+    ResultSet resultSet = null;
+
+    try {
+      // Get all the publication propietary identifiers from the publication
+      // table.
+      statement = prepareStatement(conn, GET_OLD_PUBLICATION_IDS_QUERY);
+      resultSet = executeQuery(statement);
+
+      // Loop through all the publication propietary identifiers.
+      while (resultSet.next()) {
+	// Get the publication identifier.
+	Long mdItemSeq = resultSet.getLong(MD_ITEM_SEQ_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+
+	// Get the proprietary identifier.
+	String publicationId =
+	    resultSet.getString(OBSOLETE_PUBLICATION_ID_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "publicationId = " + publicationId);
+
+	// Yes: Add the row to the proprietary identifier table.
+	addMdItemProprietaryId(conn, mdItemSeq, publicationId);
+      }
+    } catch (SQLException sqle) {
+      log.error("Cannot populate proprietary identifier", sqle);
+      log.error("SQL = '" + GET_OLD_PUBLICATION_IDS_QUERY + "'.");
+      throw sqle;
+    } catch (RuntimeException re) {
+      log.error("Cannot populate proprietary identifier", re);
+      log.error("SQL = '" + GET_OLD_PUBLICATION_IDS_QUERY + "'.");
+      throw re;
+    } finally {
+      JdbcBridge.safeCloseResultSet(resultSet);
+      JdbcBridge.safeCloseStatement(statement);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Adds to the database a metadata item proprietary identifier.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param mdItemSeq
+   *          A Long with the metadata item identifier.
+   * @param proprietaryId
+   *          A String with the proprietary identifier of the metadata item.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  void addMdItemProprietaryId(Connection conn, Long mdItemSeq,
+      String proprietaryId) throws SQLException {
+    final String DEBUG_HEADER = "addMdItemProprietaryId(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+      log.debug2(DEBUG_HEADER + "proprietaryId = " + proprietaryId);
+    }
+
+    if (StringUtil.isNullString(proprietaryId)) {
+      return;
+    }
+
+    PreparedStatement insertMdItemProprietaryId =
+	prepareStatement(conn, INSERT_PROPRIETARY_ID_QUERY);
+
+    try {
+      insertMdItemProprietaryId.setLong(1, mdItemSeq);
+      insertMdItemProprietaryId.setString(2, proprietaryId);
+      int count = executeUpdate(insertMdItemProprietaryId);
+
+      if (log.isDebug3()) {
+	log.debug3(DEBUG_HEADER + "count = " + count);
+	log.debug3(DEBUG_HEADER + "Added proprietaryId = " + proprietaryId);
+      }
+    } catch (SQLException sqle) {
+      log.error("Cannot add proprietary identifier", sqle);
+      log.error("SQL = '" + INSERT_PROPRIETARY_ID_QUERY + "'.");
+      log.error("mdItemSeq = " + mdItemSeq);
+      log.error("proprietaryId = " + proprietaryId);
+      throw sqle;
+    } catch (RuntimeException re) {
+      log.error("Cannot add proprietary identifier", re);
+      log.error("SQL = '" + INSERT_PROPRIETARY_ID_QUERY + "'.");
+      log.error("mdItemSeq = " + mdItemSeq);
+      log.error("proprietaryId = " + proprietaryId);
+      throw re;
+    } finally {
+      JdbcBridge.safeCloseStatement(insertMdItemProprietaryId);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
 }

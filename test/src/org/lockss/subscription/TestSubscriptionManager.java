@@ -1,5 +1,5 @@
 /*
- * $Id: TestSubscriptionManager.java,v 1.12 2014-09-16 19:55:43 fergaloy-sf Exp $
+ * $Id: TestSubscriptionManager.java,v 1.13 2014-10-03 23:04:46 fergaloy-sf Exp $
  */
 
 /*
@@ -1345,10 +1345,14 @@ public class TestSubscriptionManager extends LockssTestCase {
     Long publisherSeq =	metadataManager.addPublisher(conn, publisherName);
 
     // Create the publication.
-    Long publicationSeq = 
-        metadataManager.addPublication(conn, publisherSeq, null,
-                                       MD_ITEM_TYPE_JOURNAL, 
-                                       "Title of [vol123]", "id:11171508429");
+    Long publicationSeq = metadataManager.addPublication(conn, publisherSeq,
+	null, MD_ITEM_TYPE_JOURNAL, "Title of [vol123]");
+
+    Long parentSeq =
+	  metadataManager.findPublicationMetadataItem(conn, publicationSeq);
+
+    metadataManager.addMdItemProprietaryIds(conn, parentSeq,
+	Collections.singleton("id:11171508429"));
 
     // Add the provider.
     TdbProvider provider = tdbAu.getTdbProvider();

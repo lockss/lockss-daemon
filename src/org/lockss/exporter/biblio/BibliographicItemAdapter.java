@@ -1,10 +1,10 @@
 /*
- * $Id: BibliographicItemAdapter.java,v 1.14 2014-10-02 19:37:22 pgust Exp $
+ * $Id: BibliographicItemAdapter.java,v 1.15 2014-10-03 23:04:46 fergaloy-sf Exp $
  */
 
 /*
 
-Copyright (c) 2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2011-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -31,6 +31,8 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.exporter.biblio;
 
+import java.util.Arrays;
+import org.apache.commons.lang.ArrayUtils;
 import org.lockss.util.MetadataUtil;
 import org.lockss.util.StringUtil;
 
@@ -66,8 +68,8 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
   protected String issnL = null;
   protected String publicationTitle = null;
   protected String seriesTitle = null;
-  protected String proprietarySeriesId = null;
-  protected String proprietaryId = null;
+  protected String[] proprietarySeriesIds = null;
+  protected String[] proprietaryIds = null;
   protected String publisherName = null;
   protected String providerName = null;
   protected String name = null;
@@ -168,13 +170,13 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
   }
 
   @Override
-  public String getProprietaryId() {
-    return proprietaryId;
+  public String[] getProprietaryIds() {
+    return proprietaryIds;
   }
 
   @Override
-  public String getProprietarySeriesId() {
-    return proprietarySeriesId;
+  public String[] getProprietarySeriesIds() {
+    return proprietarySeriesIds;
   }
 
   @Override
@@ -290,13 +292,14 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
     return this;
   }
 
-  public BibliographicItemAdapter setProprietaryId(String proprietaryId) {
-    this.proprietaryId = proprietaryId;
+  public BibliographicItemAdapter setProprietaryIds(String[] proprietaryIds) {
+    this.proprietaryIds = proprietaryIds;
     return this;
   }
 
-  public BibliographicItemAdapter setProprietarySeriesId(String proprietarySeriesId) {
-    this.proprietarySeriesId = proprietarySeriesId;
+  public BibliographicItemAdapter setProprietarySeriesIds(String[]
+      proprietarySeriesIds) {
+    this.proprietarySeriesIds = proprietarySeriesIds;
     return this;
   }
 
@@ -402,12 +405,13 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
     setPrintIssn(other.printIssn);
     setEissn(other.eIssn);
     setIssnL(other.issnL);
-    setProprietaryId(other.proprietaryId);
+    setProprietaryIds((String[])ArrayUtils.clone(other.proprietaryIds));
     setPublicationTitle(other.publicationTitle);
     setPublisherName(other.publisherName);
     setProviderName(other.providerName);
     setSeriesTitle(other.seriesTitle);
-    setProprietarySeriesId(other.proprietarySeriesId);
+    setProprietarySeriesIds((String[])ArrayUtils
+	.clone(other.proprietarySeriesIds));
     setName(other.name);
     setVolume(other.volume);
     setStartVolume(other.startVolume);
@@ -423,6 +427,19 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
     return this;
   }  
 
+  /**
+   * Provides an indication of whether there are no differences between this
+   * object and another one in anything other than proprietary identifiers.
+   * 
+   * @param other
+   *          A BibliographicItem with the other object.
+   * @return <code>true</code> if there are no differences in anything other
+   *         than their proprietary identifiers, <code>false</code> otherwise.
+   */
+  @Override
+  public boolean sameInNonProprietaryIdProperties(BibliographicItem other){
+    throw new UnsupportedOperationException();
+  }
 
   //////////////////////////////////////////////////////////////////////////////
   // Automatically generated equals and hashCode methods.
@@ -458,10 +475,12 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
       return false;
     if (seriesTitle != null ? !seriesTitle.equals(that.seriesTitle) : that.seriesTitle != null)
       return false;
-    if (proprietaryId != null ? !proprietaryId.equals(that.proprietaryId) : that.proprietaryId != null)
+    if (!Arrays.equals(proprietaryIds, that.proprietaryIds)) {
       return false;
-    if (proprietarySeriesId != null ? !proprietarySeriesId.equals(that.proprietarySeriesId) : that.proprietarySeriesId != null)
+    }
+    if (!Arrays.equals(proprietarySeriesIds, that.proprietarySeriesIds)) {
       return false;
+    }
     if (name != null ? !name.equals(that.name) : that.name != null)
       return false;
     if (printIsbn != null ? !printIsbn.equals(that.printIsbn) : that.printIsbn != null)
@@ -495,8 +514,8 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
     result = 31 * result + (issnL != null ? issnL.hashCode() : 0);
     result = 31 * result + (publicationTitle != null ? publicationTitle.hashCode() : 0);
     result = 31 * result + (seriesTitle != null ? seriesTitle.hashCode() : 0);
-    result = 31 * result + (proprietaryId != null ? proprietaryId.hashCode() : 0);
-    result = 31 * result + (proprietarySeriesId != null ? proprietarySeriesId.hashCode() : 0);
+    result = 31 * result + (proprietaryIds != null ? Arrays.hashCode(proprietaryIds) : 0);
+    result = 31 * result + (proprietarySeriesIds != null ? Arrays.hashCode(proprietarySeriesIds) : 0);
     result = 31 * result + (providerName != null ? providerName.hashCode() : 0);
     result = 31 * result + (publisherName != null ? publisherName.hashCode() : 0);
     result = 31 * result + (name != null ? name.hashCode() : 0);

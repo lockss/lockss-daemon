@@ -1,5 +1,5 @@
 /*
- * $Id: TdbTitleWsResult.java,v 1.1 2014-07-11 20:08:58 fergaloy-sf Exp $
+ * $Id: TdbTitleWsResult.java,v 1.2 2014-10-03 23:04:45 fergaloy-sf Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ public class TdbTitleWsResult {
   private TdbPublisherWsResult tdbPublisher;
   private String id;
   private String proprietaryId;
+  private List<String> proprietaryIds;
   private String publicationType;
   private String issn;
   private String issnL;
@@ -67,11 +68,23 @@ public class TdbTitleWsResult {
   public void setId(String id) {
     this.id = id;
   }
-  public String getProprietaryId() {
+  /**
+   * @deprecated Replaced by {@link #getProprietaryIds()}
+   */
+  @Deprecated public String getProprietaryId() {
     return proprietaryId;
   }
-  public void setProprietaryId(String proprietaryId) {
+  /**
+   * @deprecated Replaced by {@link #setProprietaryIds(List<String>)}
+   */
+  @Deprecated public void setProprietaryId(String proprietaryId) {
     this.proprietaryId = proprietaryId;
+  }
+  public List<String> getProprietaryIds() {
+    return proprietaryIds;
+  }
+  public void setProprietaryIds(List<String> proprietaryIds) {
+    this.proprietaryIds = proprietaryIds;
   }
   public String getPublicationType() {
     return publicationType;
@@ -114,8 +127,8 @@ public class TdbTitleWsResult {
   public String toString() {
     return "TdbTitleWsResult [name=" + name + ", tdbPublisher=" + tdbPublisher
 	+ ", id=" + id + ", proprietaryId=" + proprietaryId
-	+ ", publicationType=" + publicationType + ", issn=" + issn + ", issnL="
-	+ issnL + ", eIssn=" + eIssn + ", printIssn=" + printIssn + ", issns="
-	+ issns + "]";
+	+ ", proprietaryIds=" + proprietaryIds + ", publicationType="
+	+ publicationType + ", issn=" + issn + ", issnL=" + issnL + ", eIssn="
+	+ eIssn + ", printIssn=" + printIssn + ", issns=" + issns + "]";
   }
 }

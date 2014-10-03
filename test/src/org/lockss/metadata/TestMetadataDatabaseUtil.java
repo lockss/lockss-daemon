@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetadataDatabaseUtil.java,v 1.2 2014-09-16 19:55:44 fergaloy-sf Exp $
+ * $Id: TestMetadataDatabaseUtil.java,v 1.3 2014-10-03 23:04:46 fergaloy-sf Exp $
  */
 
 /*
@@ -69,7 +69,7 @@ import org.lockss.util.MetadataUtil;
  * @author Philip Gust
  */
 public class TestMetadataDatabaseUtil extends LockssTestCase {
-  static Logger log = Logger.getLogger(TestAuMetadataRecorder.class);
+  static Logger log = Logger.getLogger(TestMetadataDatabaseUtil.class);
 
   private SimulatedArchivalUnit sau0;
   private MockLockssDaemon theDaemon;
@@ -183,6 +183,8 @@ public class TestMetadataDatabaseUtil extends LockssTestCase {
           MetadataDatabaseUtil.getBibliographicItems(dbManager,  conn);
       assertEquals(nTitles, items.size());
       
+      BibliographicItem previousItem = null;
+
       for (BibliographicItem item : items) {
         assertEquals("journal", item.getPublicationType());
         assertEquals("Publisher", item.getPublisherName());
@@ -202,10 +204,19 @@ public class TestMetadataDatabaseUtil extends LockssTestCase {
         assertNotNull(item.getStartVolume());
         assertNotNull(item.getEndVolume());
         assertEquals(item.getStartVolume(), item.getEndVolume());
-        assertNull(item.getProprietaryId());
-        assertNull(item.getProprietarySeriesId());
+        if (item.getProprietaryIds() != null
+            && item.getProprietaryIds().length > 0) {
+          assertNull(item.getProprietaryIds()[0]);
+        }
+        if (item.getProprietarySeriesIds() != null
+            && item.getProprietarySeriesIds().length > 0) {
+          assertNull(item.getProprietarySeriesIds()[0]);
+        }
         assertNull(item.getSeriesTitle());
         assertEquals("Publisher", item.getProviderName());
+
+        assertFalse(item.sameInNonProprietaryIdProperties(previousItem));
+        previousItem = item;
       }
     } finally {
       DbManager.safeRollbackAndClose(conn);
@@ -279,6 +290,8 @@ public class TestMetadataDatabaseUtil extends LockssTestCase {
           MetadataDatabaseUtil.getBibliographicItems(dbManager,  conn);
       assertEquals(nTitles, items.size());
       
+      BibliographicItem previousItem = null;
+
       for (BibliographicItem item : items) {
         assertEquals("book", item.getPublicationType());
         assertEquals("Publisher", item.getPublisherName());
@@ -299,10 +312,19 @@ public class TestMetadataDatabaseUtil extends LockssTestCase {
         assertNull(item.getEndIssue());
         assertNull(item.getStartVolume());
         assertNull(item.getEndVolume());
-        assertNull(item.getProprietaryId());
-        assertNull(item.getProprietarySeriesId());
+        if (item.getProprietaryIds() != null
+            && item.getProprietaryIds().length > 0) {
+          assertNull(item.getProprietaryIds()[0]);
+        }
+        if (item.getProprietarySeriesIds() != null
+            && item.getProprietarySeriesIds().length > 0) {
+          assertNull(item.getProprietarySeriesIds()[0]);
+        }
         assertNull(item.getSeriesTitle());
         assertEquals("Publisher", item.getProviderName());
+
+        assertFalse(item.sameInNonProprietaryIdProperties(previousItem));
+        previousItem = item;
       }
     } finally {
       DbManager.safeRollbackAndClose(conn);
@@ -376,6 +398,8 @@ public class TestMetadataDatabaseUtil extends LockssTestCase {
           MetadataDatabaseUtil.getBibliographicItems(dbManager,  conn);
       assertEquals(nSeries*nTitles, items.size());
       
+      BibliographicItem previousItem = null;
+
       for (BibliographicItem item : items) {
         assertEquals("bookSeries", item.getPublicationType());
         assertEquals("Publisher", item.getPublisherName());
@@ -395,10 +419,19 @@ public class TestMetadataDatabaseUtil extends LockssTestCase {
         assertNotNull(item.getStartVolume());
         assertNotNull(item.getEndVolume());
         assertEquals(item.getStartVolume(), item.getEndVolume());
-        assertNull(item.getProprietaryId());
-        assertNull(item.getProprietarySeriesId());
+        if (item.getProprietaryIds() != null
+            && item.getProprietaryIds().length > 0) {
+          assertNull(item.getProprietaryIds()[0]);
+        }
+        if (item.getProprietarySeriesIds() != null
+            && item.getProprietarySeriesIds().length > 0) {
+          assertNull(item.getProprietarySeriesIds()[0]);
+        }
         assertNotNull(item.getSeriesTitle());
         assertEquals("Publisher", item.getProviderName());
+
+        assertFalse(item.sameInNonProprietaryIdProperties(previousItem));
+        previousItem = item;
       }
     } finally {
       DbManager.safeRollbackAndClose(conn);

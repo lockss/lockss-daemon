@@ -1,5 +1,5 @@
 /*
- * $Id: TdbTitleHelper.java,v 1.1 2014-07-11 20:08:57 fergaloy-sf Exp $
+ * $Id: TdbTitleHelper.java,v 1.2 2014-10-03 23:04:44 fergaloy-sf Exp $
  */
 
 /*
@@ -63,7 +63,8 @@ public class TdbTitleHelper {
   static String NAME = "name";
   static String TDB_PUBLISHER = "tdbPublisher";
   static String ID = "id";
-  static String PROPIETARY_ID = "proprietaryId";
+  static String PROPRIETARY_ID = "proprietaryId";
+  static String PROPRIETARY_IDS = "proprietaryIds";
   static String PUBLICATION_TYPE = "publicationType";
   static String ISSN = "issn";
   static String ISSN_L = "issnL";
@@ -80,7 +81,8 @@ public class TdbTitleHelper {
       add(NAME);
       add(TDB_PUBLISHER);
       add(ID);
-      add(PROPIETARY_ID);
+      add(PROPRIETARY_ID);
+      add(PROPRIETARY_IDS);
       add(PUBLICATION_TYPE);
       add(ISSN);
       add(ISSN_L);
@@ -196,6 +198,17 @@ public class TdbTitleHelper {
       builder.append("proprietaryId=").append(result.getProprietaryId());
     }
 
+    if (result.getProprietaryIds() != null
+	&& result.getProprietaryIds().size() > 0) {
+      if (!isFirst) {
+	builder.append(", ");
+      } else {
+	isFirst = false;
+      }
+
+      builder.append("proprietaryIds=").append(result.getProprietaryIds());
+    }
+
     if (result.getPublicationType() != null) {
       if (!isFirst) {
 	builder.append(", ");
@@ -246,7 +259,7 @@ public class TdbTitleHelper {
       builder.append("printIssn=").append(result.getPrintIssn());
     }
 
-    if (result.getIssns() != null) {
+    if (result.getIssns() != null && result.getIssns().size() > 0) {
       if (!isFirst) {
 	builder.append(", ");
       } else {

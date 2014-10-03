@@ -1,5 +1,5 @@
 /*
- * $Id: TdbAu.java,v 1.34 2014-09-24 00:32:39 tlipkis Exp $
+ * $Id: TdbAu.java,v 1.35 2014-10-03 23:04:46 fergaloy-sf Exp $
  */
 
 /*
@@ -288,38 +288,43 @@ public class TdbAu implements BibliographicItem, Comparable<TdbAu> {
   }
   
   /**
-   * Get the proprietary ID. For journals, this is a publisher specified 
-   * value of the title found in the 'journal_id' attribute or parameter 
-   * For books and book series, this is a publisher specified value for 
-   * a book represented by an AU in the "book_id" attribute or parameter.
-   * Use getProprietarySeriesId() for the publisher specified proprietary 
-   * series ID. 
+   * Get the proprietary identifiers. For journals, this is a value of the title
+   * found in the 'journal_id' attribute or parameter. For books and book
+   * series, this is a value for a book represented by an AU in the "book_id"
+   * attribute or parameter. Use getProprietarySeriesIds() for the proprietary
+   * identifier of a series.
    * 
-   * @return the name of this AU
+   * @return a String[] with the single proprietary identifier of this AU.
    */
   @Override
-  public String getProprietaryId() {
+  public String[] getProprietaryIds() {
     String pubType = getPublicationType();
     String[] ids = journal_ids;
     if (   pubType.equalsIgnoreCase("book")
         || pubType.equals("bookSeries")) {
       ids = book_ids;
     }
-    return getId(ids);
+    String[] proprietaryIds = {getId(ids)};
+    return proprietaryIds;
   }
   
   /**
-   * Get the proprietary series ID. This is a publisher spececified value
-   * found in the 'journal_id' attribute or parameter of a book series.
+   * Get the series proprietary identifiers. This is a value found in the
+   * 'journal_id' attribute or parameter of a book series.
    * 
-   * @return the name of this AU
+   * @return a String[] with the single series proprietary identifier of this
+   *         AU.
    */
   @Override
-  public String getProprietarySeriesId() {
+  public String[] getProprietarySeriesIds() {
+    String[] proprietaryIds = {null};
     String pubType = getPublicationType();
-    return (pubType.equals("bookSeries")) ? getId(journal_ids) : null;
+    if (pubType.equals("bookSeries")) {
+      proprietaryIds[0] = getId(journal_ids);
+    }
+    return proprietaryIds;
   }
-  
+
   /**
    * Get the key for this instance. Two instances represent
    * the same TdbAu if their keys are equal.
@@ -1221,5 +1226,19 @@ public class TdbAu implements BibliographicItem, Comparable<TdbAu> {
     String publicationType = getPublicationType();
     return "journal".equals(publicationType)
 	|| "bookSeries".equals(publicationType);
+  }
+
+  /**
+   * Provides an indication of whether there are no differences between this
+   * object and another one in anything other than proprietary identifiers.
+   * 
+   * @param other
+   *          A BibliographicItem with the other object.
+   * @return <code>true</code> if there are no differences in anything other
+   *         than their proprietary identifiers, <code>false</code> otherwise.
+   */
+  @Override
+  public boolean sameInNonProprietaryIdProperties(BibliographicItem other){
+    throw new UnsupportedOperationException();
   }
 }

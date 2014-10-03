@@ -1,10 +1,10 @@
 /*
- * $Id: CounterReportsJournalReport.java,v 1.1 2012-08-28 17:36:49 fergaloy-sf Exp $
+ * $Id: CounterReportsJournalReport.java,v 1.2 2014-10-03 23:04:43 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2012-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,13 +29,6 @@
  in this Software without prior written authorization from Stanford University.
 
  */
-
-/**
- * A generic journal COUNTER report.
- * 
- * @version 1.0
- * 
- */
 package org.lockss.exporter.counter;
 
 import java.util.ArrayList;
@@ -45,6 +38,12 @@ import org.lockss.app.LockssDaemon;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 
+/**
+ * A generic journal COUNTER report.
+ * 
+ * @version 1.0
+ * 
+ */
 public abstract class CounterReportsJournalReport extends BaseCounterReport {
   private static final Logger log = Logger
       .getLogger("CounterReportsJournalReport");
@@ -82,7 +81,8 @@ public abstract class CounterReportsJournalReport extends BaseCounterReport {
    *           if the period specified is not valid.
    */
   protected CounterReportsJournalReport(LockssDaemon daemon, int startMonth,
-      int startYear, int endMonth, int endYear) throws IllegalArgumentException {
+      int startYear, int endMonth, int endYear)
+      throws IllegalArgumentException {
     super(daemon, startMonth, startYear, endMonth, endYear);
   }
 
@@ -119,8 +119,8 @@ public abstract class CounterReportsJournalReport extends BaseCounterReport {
 	    .append(separator)
 	    .append(StringUtil.csvEncode(blankNull(journal.getDoi())))
 	    .append(separator)
-	    .append(StringUtil.csvEncode(blankNull(journal.getProprietaryId())))
-	    .append(separator)
+	    .append(StringUtil.csvEncode(StringUtil.separatedString(journal.
+		getProprietaryIds()))).append(separator)
 	    .append(StringUtil.csvEncode(blankNull(journal.getPrintIssn())))
 	    .append(separator)
 	    .append(StringUtil.csvEncode(blankNull(journal.getOnlineIssn())));
@@ -129,7 +129,8 @@ public abstract class CounterReportsJournalReport extends BaseCounterReport {
 	    .append(blankNull(journal.getPublisherName())).append(separator)
 	    .append(blankNull(journal.getPublishingPlatform()))
 	    .append(separator).append(blankNull(journal.getDoi()))
-	    .append(separator).append(blankNull(journal.getProprietaryId()))
+	    .append(separator)
+	    .append(StringUtil.separatedString(journal.getProprietaryIds()))
 	    .append(separator).append(blankNull(journal.getPrintIssn()))
 	    .append(separator).append(blankNull(journal.getOnlineIssn()));
       }

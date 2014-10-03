@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsBookReport2L.java,v 1.8 2014-08-22 22:15:00 fergaloy-sf Exp $
+ * $Id: CounterReportsBookReport2L.java,v 1.9 2014-10-03 23:04:43 fergaloy-sf Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ public class CounterReportsBookReport2L extends CounterReportsBookReport2 {
   private static final String SQL_QUERY_REPORT_BOOKS_2L_SELECT = "select "
       + "distinct a." + PUBLICATION_SEQ_COLUMN
       + ", n." + NAME_COLUMN
-      + ", p." + PUBLICATION_ID_COLUMN
+      + ", pi." + PROPRIETARY_ID_COLUMN
       + ", pu." + PUBLISHER_NAME_COLUMN
       + ", pla." + PLATFORM_NAME_COLUMN
       + ", d." + DOI_COLUMN
@@ -72,6 +72,8 @@ public class CounterReportsBookReport2L extends CounterReportsBookReport2 {
       + " on m1." + MD_ITEM_SEQ_COLUMN + " = d." + MD_ITEM_SEQ_COLUMN
       + " left outer join " + MD_ITEM_NAME_TABLE + " n"
       + " on m1." + MD_ITEM_SEQ_COLUMN + " = n." + MD_ITEM_SEQ_COLUMN
+      + " left outer join " + PROPRIETARY_ID_TABLE + " pi"
+      + " on m1." + MD_ITEM_SEQ_COLUMN + " = pi." + MD_ITEM_SEQ_COLUMN
       + " where"
       + " a." + SECTION_REQUESTS_COLUMN + " > 0"
       + " and ((a." + REQUEST_MONTH_COLUMN + " >= ?"
@@ -92,7 +94,8 @@ public class CounterReportsBookReport2L extends CounterReportsBookReport2 {
       + " and au." + PLUGIN_SEQ_COLUMN + " = pl." + PLUGIN_SEQ_COLUMN
       + " and pl." + PLATFORM_SEQ_COLUMN + " = pla." + PLATFORM_SEQ_COLUMN
       + " order by n." + NAME_COLUMN + " asc"
-      + ", a." + PUBLICATION_SEQ_COLUMN + " asc";
+      + ", a." + PUBLICATION_SEQ_COLUMN + " asc"
+      + ", pi." + PROPRIETARY_ID_COLUMN + " asc";
 
   // Query to get the book request counts to be included in the report.
   // This the same query used for Book Report 2, except for the fact that in

@@ -1,5 +1,5 @@
 /*
- * $Id: AuMetadataRecorder.java,v 1.20 2014-09-16 19:55:42 fergaloy-sf Exp $
+ * $Id: AuMetadataRecorder.java,v 1.21 2014-10-03 23:04:43 fergaloy-sf Exp $
  */
 
 /*
@@ -496,12 +496,13 @@ public class AuMetadataRecorder {
 
     if (mdinfo.proprietaryIdentifier != null) {
       String name = mdinfo.proprietaryIdentifier.trim();
-      if (name.length() > MAX_PUBLICATION_ID_COLUMN) {
+      if (name.length() > MAX_PROPRIETARY_ID_COLUMN) {
 	log.warning("proprietaryIdentifier too long '"
 	    + mdinfo.proprietaryIdentifier + "' for title: '"
-	    + mdinfo.publicationTitle + "' publisher: " + mdinfo.publisher + "'");
+	    + mdinfo.publicationTitle + "' publisher: "
+	    + mdinfo.publisher + "'");
 	mdinfo.proprietaryIdentifier =
-	    DbManager.truncateVarchar(name, MAX_PUBLICATION_ID_COLUMN);
+	    DbManager.truncateVarchar(name, MAX_PROPRIETARY_ID_COLUMN);
       } else {
 	mdinfo.proprietaryIdentifier = name;
       }
@@ -509,12 +510,12 @@ public class AuMetadataRecorder {
 
     if (mdinfo.proprietarySeriesIdentifier != null) {
       String name = mdinfo.proprietarySeriesIdentifier.trim();
-      if (name.length() > MAX_PUBLICATION_ID_COLUMN) {
+      if (name.length() > MAX_PROPRIETARY_ID_COLUMN) {
         log.warning("proprietarySeriesIdentifier too long '"
             + mdinfo.proprietarySeriesIdentifier + "' for series title: '"
             + mdinfo.seriesTitle + "' publisher: " + mdinfo.publisher + "'");
         mdinfo.proprietarySeriesIdentifier =
-            DbManager.truncateVarchar(name, MAX_PUBLICATION_ID_COLUMN);
+            DbManager.truncateVarchar(name, MAX_PROPRIETARY_ID_COLUMN);
       } else {
         mdinfo.proprietarySeriesIdentifier = name;
       }

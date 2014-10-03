@@ -1,10 +1,10 @@
 /*
- * $Id: BibliographicItem.java,v 1.9 2014-09-09 22:49:06 pgust Exp $
+ * $Id: BibliographicItem.java,v 1.10 2014-10-03 23:04:46 fergaloy-sf Exp $
  */
 
 /*
 
-Copyright (c) 2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2011-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -117,18 +117,22 @@ public interface BibliographicItem {
   public String getIssnL();
 
   /**
-   * Returns the proprietary ID of of the journal of which the bibliographic 
-   * item is a part.
-   * @return the proprietary ID of the bibliographic item's journal
+   * Returns the proprietary identifiers of the journal of which the
+   * bibliographic item is a part.
+   * 
+   * @return a String[] with the proprietary identifiers of the bibliographic
+   *         item's journal.
    */
-  public String getProprietaryId();
+  public String[] getProprietaryIds();
 
   /**
-   * Returns the proprietary ID of of the series of which the bibliographic 
-   * item is a part.
-   * @return the proprietary ID of the bibliographic item's series
+   * Returns the proprietary identifiers of the series of which the
+   * bibliographic item is a part.
+   * 
+   * @return a String[] with the proprietary identifiers of the bibliographic
+   *         item's series.
    */
-  public String getProprietarySeriesId();
+  public String[] getProprietarySeriesIds();
 
   /**
    * Return publication type this AU. Values include "journal" for a journal,
@@ -262,4 +266,14 @@ public interface BibliographicItem {
    */
   public String getEndIssue();
 
+  /**
+   * Provides an indication of whether there are no differences between this
+   * object and another one in anything other than proprietary identifiers.
+   * 
+   * @param other
+   *          A BibliographicItem with the other object.
+   * @return <code>true</code> if there are no differences in anything other
+   *         than their proprietary identifiers, <code>false</code> otherwise.
+   */
+  boolean sameInNonProprietaryIdProperties(BibliographicItem other);
 }

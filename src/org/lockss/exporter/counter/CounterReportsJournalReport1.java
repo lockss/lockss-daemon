@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsJournalReport1.java,v 1.10 2014-08-22 22:15:00 fergaloy-sf Exp $
+ * $Id: CounterReportsJournalReport1.java,v 1.11 2014-10-03 23:04:43 fergaloy-sf Exp $
  */
 
 /*
@@ -40,7 +40,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collection;
 import java.util.Iterator;
+import java.util.LinkedHashSet;
 import java.util.List;
 import org.lockss.app.LockssDaemon;
 import org.lockss.db.DbException;
@@ -61,7 +63,7 @@ public class CounterReportsJournalReport1 extends CounterReportsJournalReport {
   private static final String SQL_QUERY_REPORT_JOURNALS_SELECT = "select "
       + "distinct a." + PUBLICATION_SEQ_COLUMN
       + ", n." + NAME_COLUMN
-      + ", p." + PUBLICATION_ID_COLUMN
+      + ", pi." + PROPRIETARY_ID_COLUMN
       + ", pu." + PUBLISHER_NAME_COLUMN
       + ", pla." + PLATFORM_NAME_COLUMN
       + ", d." + DOI_COLUMN
@@ -86,6 +88,8 @@ public class CounterReportsJournalReport1 extends CounterReportsJournalReport {
       + " on m1." + MD_ITEM_SEQ_COLUMN + " = d." + MD_ITEM_SEQ_COLUMN
       + " left outer join " + MD_ITEM_NAME_TABLE + " n"
       + " on m1." + MD_ITEM_SEQ_COLUMN + " = n." + MD_ITEM_SEQ_COLUMN
+      + " left outer join " + PROPRIETARY_ID_TABLE + " pi"
+      + " on m1." + MD_ITEM_SEQ_COLUMN + " = pi." + MD_ITEM_SEQ_COLUMN
       + " where"
       + " a." + IS_PUBLISHER_INVOLVED_COLUMN + " = false"
       + " and ((a." + REQUEST_MONTH_COLUMN + " >= ?"
@@ -106,7 +110,8 @@ public class CounterReportsJournalReport1 extends CounterReportsJournalReport {
       + " and au." + PLUGIN_SEQ_COLUMN + " = pl." + PLUGIN_SEQ_COLUMN
       + " and pl." + PLATFORM_SEQ_COLUMN + " = pla." + PLATFORM_SEQ_COLUMN
       + " order by n." + NAME_COLUMN + " asc"
-      + ", a." + PUBLICATION_SEQ_COLUMN + " asc";
+      + ", a." + PUBLICATION_SEQ_COLUMN + " asc"
+      + ", pi." + PROPRIETARY_ID_COLUMN + " asc";
 
   // Query to get the journal request counts to be included in the report.
   //
@@ -223,6 +228,8 @@ public class CounterReportsJournalReport1 extends CounterReportsJournalReport {
     final String DEBUG_HEADER = "initializeReportRows(): ";
     log.debug2(DEBUG_HEADER + "Starting...");
     Long titleId = 0L;
+    String proprietaryId = null;
+    Collection<String> proprietaryIds = null;
 
     // The first row is a placeholder for the totals for all journals.
     CounterReportsJournal journal =
@@ -256,15 +263,37 @@ public class CounterReportsJournalReport1 extends CounterReportsJournalReport {
 	// Check whether this journal is the same as the previous one.
 	if (resultSet.getLong(PUBLICATION_SEQ_COLUMN) == titleId) {
 	  // Yes: This means that the publication has multiple values for some
-	  // attributes. Ignore the copy.
-	  log.debug2(DEBUG_HEADER + "Skipping repeated titleId = " + titleId
-	             + ".");
+	  // attributes. Get the proprietary identifier.
+	  proprietaryId = resultSet.getString(PROPRIETARY_ID_COLUMN);
+	  log.debug3(DEBUG_HEADER + "proprietaryId = '" + proprietaryId + "'.");
+
+	  // Add it to the list of proprietary identifiers, if it exists.
+	  if (!StringUtil.isNullString(proprietaryId)) {
+	    proprietaryIds.add(proprietaryId);
+	    log.debug3(DEBUG_HEADER + "Added proprietaryId = '" + proprietaryId
+		+ "'.");
+	  }
+
 	  continue;
 	}
 
 	// Get the identifier for the journal.
 	titleId = resultSet.getLong(PUBLICATION_SEQ_COLUMN);
 	log.debug2(DEBUG_HEADER + "titleId = " + titleId + ".");
+
+	// Initialize the collection of proprietary identifiers.
+	proprietaryIds = new LinkedHashSet<String>();
+
+	// Get the proprietary identifier.
+	proprietaryId = resultSet.getString(PROPRIETARY_ID_COLUMN);
+	log.debug3(DEBUG_HEADER + "proprietaryId = " + proprietaryId + ".");
+
+	// Add it to the list of proprietary identifiers, if it exists.
+	if (!StringUtil.isNullString(proprietaryId)) {
+	  proprietaryIds.add(proprietaryId);
+	  log.debug3(DEBUG_HEADER + "Added proprietaryId = '" + proprietaryId
+	      + "'.");
+	}
 
 	// Get the journal properties.
 	journal =
@@ -273,8 +302,7 @@ public class CounterReportsJournalReport1 extends CounterReportsJournalReport {
 	                              	.getString(PUBLISHER_NAME_COLUMN),
 	                              resultSet.getString(PLATFORM_NAME_COLUMN),
 	                              resultSet.getString(DOI_COLUMN),
-	                              resultSet
-	                              	.getString(PUBLICATION_ID_COLUMN),
+	                              proprietaryIds,
 	                              formatIssn(resultSet
 	                                         .getString(P_ISSN_TYPE)),
 	                              formatIssn(resultSet
@@ -391,6 +419,7 @@ public class CounterReportsJournalReport1 extends CounterReportsJournalReport {
     ItemCounts counts = null;
     PreparedStatement statement = null;
     ResultSet resultSet = null;
+    CounterReportsException exception = null;
     String sql = getReportRequestsSqlQuery();
     log.debug2(DEBUG_HEADER + "SQL = '" + sql + "'.");
 
@@ -426,8 +455,9 @@ public class CounterReportsJournalReport1 extends CounterReportsJournalReport {
 	  // Yes: This means that all the items for the current row have been
 	  // processed. Verify that there are more rows in the report.
 	  if (!rowIterator.hasNext()) {
-	    throw new CounterReportsException(BaseCounterReport
-	                                      .ERROR_UNEXPECTED_IDENTIFIER);
+	    exception = new CounterReportsException(BaseCounterReport
+		.ERROR_UNEXPECTED_IDENTIFIER);
+	    break;
 	  }
 	  
 	  // Make the next row the current one.
@@ -435,8 +465,9 @@ public class CounterReportsJournalReport1 extends CounterReportsJournalReport {
 
 	  // Check whether this row is not in sync with this item.
 	  if (currentRow.getTitleId() != titleId) {
-	    throw new CounterReportsException(BaseCounterReport
-	                                      .ERROR_WRONG_SORTING);
+	    exception = new CounterReportsException(BaseCounterReport
+		.ERROR_WRONG_SORTING);
+	    break;
 	  }
 	    
 	  // Initialize the period request counts of the current row.
@@ -475,6 +506,10 @@ public class CounterReportsJournalReport1 extends CounterReportsJournalReport {
 	// period by accumulating the request counts for this item.
 	accumulateRequestCounts(totalKeys, counts,
 	    allJournalsRowMonthRequestCounts.get(0));
+      }
+
+      if (exception != null) {
+	throw exception;
       }
     } catch (SQLException sqle) {
       log.error(

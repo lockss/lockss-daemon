@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCounterReportsTitle.java,v 1.4 2014-05-23 16:50:37 fergaloy-sf Exp $
+ * $Id: BaseCounterReportsTitle.java,v 1.5 2014-10-03 23:04:43 fergaloy-sf Exp $
  */
 
 /*
@@ -29,6 +29,9 @@
  in this Software without prior written authorization from Stanford University.
 
  */
+package org.lockss.exporter.counter;
+
+import java.util.Collection;
 
 /**
  * A title used in COUNTER reports.
@@ -36,8 +39,6 @@
  * @version 1.0
  * 
  */
-package org.lockss.exporter.counter;
-
 public abstract class BaseCounterReportsTitle implements CounterReportsTitle {
   // The DOI of the title.
   private final String doi;
@@ -51,8 +52,8 @@ public abstract class BaseCounterReportsTitle implements CounterReportsTitle {
   // The name of the publishing platform.
   private final String publishingPlatform;
 
-  // The proprietary identifier.
-  private final String proprietaryId;
+  // The proprietary identifiers.
+  private final Collection<String> proprietaryIds;
 
   // The ISBN of a book.
   protected String isbn = null;
@@ -77,13 +78,13 @@ public abstract class BaseCounterReportsTitle implements CounterReportsTitle {
    *          A String with the name of the publishing platform.
    * @param doi
    *          A String with the DOI of the title.
-   * @param proprietaryId
-   *          A String with the proprietary identifier.
+   * @param proprietaryIds
+   *          A Collection<String> with the proprietary identifiers.
    * @throws IllegalArgumentException
    *           if the name of the title is empty.
    */
   protected BaseCounterReportsTitle(String name, String publisherName,
-      String publishingPlatform, String doi, String proprietaryId)
+      String publishingPlatform, String doi, Collection<String> proprietaryIds)
       throws IllegalArgumentException {
     if (name == null || name.trim().length() == 0) {
       throw new IllegalArgumentException("Name cannot be empty.");
@@ -93,7 +94,7 @@ public abstract class BaseCounterReportsTitle implements CounterReportsTitle {
     this.publisherName = publisherName;
     this.publishingPlatform = publishingPlatform;
     this.doi = doi;
-    this.proprietaryId = proprietaryId;
+    this.proprietaryIds = proprietaryIds;
   }
 
   /**
@@ -157,13 +158,13 @@ public abstract class BaseCounterReportsTitle implements CounterReportsTitle {
   }
 
   /**
-   * Provides the proprietary identifier of the title.
+   * Provides the proprietary identifiers of the title.
    * 
-   * @return a String with the proprietary identifier of the title.
+   * @return a Collection<String> with the proprietary identifiers of the title.
    */
   @Override
-  public String getProprietaryId() {
-    return proprietaryId;
+  public Collection<String> getProprietaryIds() {
+    return proprietaryIds;
   }
 
   /**
@@ -190,7 +191,7 @@ public abstract class BaseCounterReportsTitle implements CounterReportsTitle {
   public String toString() {
     return "BaseCounterReportsTitle [doi=" + doi + ", name=" + name
 	+ ", publisherName=" + publisherName + ", publishingPlatform="
-	+ publishingPlatform + ", proprietaryId=" + proprietaryId + ", isbn="
+	+ publishingPlatform + ", proprietaryIds=" + proprietaryIds + ", isbn="
 	+ isbn + ", issn=" + issn + ", onlineIssn=" + onlineIssn
 	+ ", printIssn=" + printIssn + "]";
   }

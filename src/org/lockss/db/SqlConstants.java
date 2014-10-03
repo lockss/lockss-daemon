@@ -1,5 +1,5 @@
 /*
- * $Id: SqlConstants.java,v 1.3 2014-09-17 22:48:32 pgust Exp $
+ * $Id: SqlConstants.java,v 1.4 2014-10-03 23:04:44 fergaloy-sf Exp $
  */
 
 /*
@@ -158,6 +158,9 @@ public class SqlConstants {
 
   /** Name of the provider table. */
   public static final String PROVIDER_TABLE = "provider";
+
+  /** Name of the publication proprietary identifier table. */
+  public static final String PROPRIETARY_ID_TABLE = "proprietary_id";
 
   //
   // Database table column names.
@@ -331,8 +334,8 @@ public class SqlConstants {
   /** Publication identifier column. */
   public static final String PUBLICATION_SEQ_COLUMN = "publication_seq";
 
-  /** Publication publisher identifier column. */
-  public static final String PUBLICATION_ID_COLUMN = "publication_id";
+  /** Obsolete publication publisher identifier column. */
+  public static final String OBSOLETE_PUBLICATION_ID_COLUMN = "publication_id";
 
   /** Priority column. */
   public static final String PRIORITY_COLUMN = "priority";
@@ -506,8 +509,8 @@ public class SqlConstants {
   /** Length of the ISBN type column. */
   public static final int MAX_ISBN_TYPE_COLUMN = 16;
 
-  /** Length of the publication proprietary identifier column. */
-  public static final int MAX_PUBLICATION_ID_COLUMN = 32;
+  /** Length of the obsolete publication publisher identifier column. */
+  public static final int OBSOLETE_MAX_PUBLICATION_ID_COLUMN = 32;
 
   /** Length of the system column. */
   public static final int MAX_SYSTEM_COLUMN = 16;
@@ -526,6 +529,9 @@ public class SqlConstants {
 
   /** Length of the last LOCKSS identifier column. */
   public static final int MAX_LID_COLUMN = 32;
+
+  /** Length of the publication proprietary identifier column. */
+  public static final int MAX_PROPRIETARY_ID_COLUMN = 32;
 
   //
   //Types of metadata items.

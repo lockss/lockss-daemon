@@ -1,5 +1,5 @@
 /*
- * $Id: TestCounterReportsJournalReport5.java,v 1.16 2014-09-16 19:55:42 fergaloy-sf Exp $
+ * $Id: TestCounterReportsJournalReport5.java,v 1.17 2014-10-03 23:04:44 fergaloy-sf Exp $
  */
 
 /*
@@ -313,20 +313,17 @@ public class TestCounterReportsJournalReport5 extends LockssTestCase {
 	  metadataManager.findOrCreatePublisher(conn, "publisher");
 
       // Add the publication -- test direct method
-      publicationSeq =
-	  metadataManager.findOrCreateJournal(conn, publisherSeq,  
-	                                      "12345678", "98765432", 
-	                                      "JOURNAL", null);
+      publicationSeq = metadataManager.findOrCreateJournal(conn, publisherSeq,  
+	  "12345678", "98765432", "JOURNAL", "propId1");
 
       // Add the publishing platform.
       Long platformSeq = metadataManager.findOrCreatePlatform(conn, "platform");
 
       // Add an alternative name for the publication -- test indirect method
-      Long publicationSeq2 =
-	  metadataManager.findOrCreatePublication(conn, publisherSeq, 
-	      "12345678", "98765432", null, null, 
-	      MetadataField.PUBLICATION_TYPE_JOURNAL,
-	      null, null, "JOURNAL_ALT", null);
+      Long publicationSeq2 = metadataManager.findOrCreatePublication(conn,
+	  publisherSeq, "12345678", "98765432", null, null,
+	  MetadataField.PUBLICATION_TYPE_JOURNAL, null, null, "JOURNAL_ALT",
+	  "propId2");
 
       assertEquals(publicationSeq, publicationSeq2);
 
@@ -508,7 +505,7 @@ public class TestCounterReportsJournalReport5 extends LockssTestCase {
     line = reader.readLine();
 
     expected =
-	new StringBuilder("JOURNAL,publisher,platform,10.1000/182,,1234-5678,9876-5432,0,0,0,2,");
+	new StringBuilder("JOURNAL,publisher,platform,10.1000/182,\"propId1, propId2\",1234-5678,9876-5432,0,0,0,2,");
 
     for (int i = 0; i < columnCount; i++) {
       expected.append("0,");
@@ -549,7 +546,7 @@ public class TestCounterReportsJournalReport5 extends LockssTestCase {
     line = reader.readLine();
 
     expected =
-	new StringBuilder("JOURNAL\tpublisher\tplatform\t10.1000/182\t\t1234-5678\t9876-5432\t0\t0\t0\t2\t");
+	new StringBuilder("JOURNAL\tpublisher\tplatform\t10.1000/182\tpropId1, propId2\t1234-5678\t9876-5432\t0\t0\t0\t2\t");
 
     for (int i = 0; i < columnCount; i++) {
       expected.append("0\t");

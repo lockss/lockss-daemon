@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.33 2014-09-23 20:37:22 pgust Exp $
+ * $Id: MetadataManager.java,v 1.34 2014-10-03 23:04:43 fergaloy-sf Exp $
  */
 
 /*
@@ -56,7 +56,6 @@ import org.lockss.daemon.LockssRunnable;
 import org.lockss.daemon.status.StatusService;
 import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
-import org.lockss.db.SqlConstants;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.BaseArticleMetadataExtractor;
 import org.lockss.extractor.MetadataField;
@@ -312,8 +311,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       + "(" + PUBLICATION_SEQ_COLUMN
       + "," + MD_ITEM_SEQ_COLUMN
       + "," + PUBLISHER_SEQ_COLUMN
-      + "," + PUBLICATION_ID_COLUMN
-      + ") values (default,?,?,?)";
+      + ") values (default,?,?)";
 
   // Query to add a metadata item name.
   private static final String INSERT_MD_ITEM_NAME_QUERY = "insert into "
@@ -800,12 +798,6 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       + " and u." + FEATURE_COLUMN + " = '" + ACCESS_URL_FEATURE + "'"
       + " and u." + URL_COLUMN + " = ?";
 
-  // Query to update the publication proprietary identifier.
-  private static final String UPDATE_PUBLICATION_ID_QUERY = "update "
-      + PUBLICATION_TABLE
-      + " set " + PUBLICATION_ID_COLUMN + " = ?"
-      + " where " + PUBLICATION_SEQ_COLUMN + " = ?";
-
   static final String UNKNOWN_TITLE_NAME_ROOT = "UNKNOWN_TITLE";
   static final String UNKNOWN_SERIES_NAME_ROOT = "UNKNOWN_SERIES";
 
@@ -856,6 +848,12 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       + " from " + UNCONFIGURED_AU_TABLE
       + " where " + PLUGIN_ID_COLUMN + " = ?"
       + " and " + AU_KEY_COLUMN + " = ?";
+
+  // Query to find the proprietary identifiers of a metadata item.
+  private static final String FIND_MD_ITEM_PROPRIETARY_ID_QUERY = "select "
+      + PROPRIETARY_ID_COLUMN
+      + " from " + PROPRIETARY_ID_TABLE
+      + " where " + MD_ITEM_SEQ_COLUMN + " = ?";
 
   /**
    * Map of running reindexing tasks keyed by their AuIds
@@ -2812,10 +2810,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  public Long findOrCreateBookSeries(Connection conn,  Long publisherSeq, 
-      String pIssn, String eIssn, 
-      String seriesTitle, String proprietarySeriesId) 
-      throws DbException {
+  public Long findOrCreateBookSeries(Connection conn, Long publisherSeq, 
+      String pIssn, String eIssn, String seriesTitle,
+      String proprietarySeriesId) throws DbException {
     final String DEBUG_HEADER = "findOrCreateBookInBookSeries(): ";
     if (log.isDebug2()) {
       log.debug2(DEBUG_HEADER + "pIssn = " + pIssn);
@@ -2827,16 +2824,15 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
     // Construct a title for the book in the series.
     // Find the book series.
-    Long bookSeriesSeq =
-        findPublication(conn, publisherSeq, seriesTitle, 
-                        pIssn, eIssn, null, null, MD_ITEM_TYPE_BOOK_SERIES);
+    Long bookSeriesSeq = findPublication(conn, publisherSeq, seriesTitle, 
+	pIssn, eIssn, null, null, MD_ITEM_TYPE_BOOK_SERIES);
     log.debug3(DEBUG_HEADER + "bookSeriesSeq = " + bookSeriesSeq);
 
     // Check whether it is a new book series.
     if (bookSeriesSeq == null) {
       // Yes: Add to the database the new book series.
       bookSeriesSeq = addPublication(conn, publisherSeq, null, 
-          MD_ITEM_TYPE_BOOK_SERIES, seriesTitle, proprietarySeriesId);
+          MD_ITEM_TYPE_BOOK_SERIES, seriesTitle);
       log.debug3(DEBUG_HEADER + "new bookSeriesSeq = " + bookSeriesSeq);
 
       // Skip it if the new book series could not be added.
@@ -2854,6 +2850,10 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       addMdItemIssns(conn, mdItemSeq, pIssn, eIssn);
       log.debug3(DEBUG_HEADER + "added title ISSNs.");
 
+      // Add to the database the new book series proprietary identifier.
+      addMdItemProprietaryIds(conn, mdItemSeq,
+	  Collections.singleton(proprietarySeriesId));
+
     } else {
       // No: Get the book series metadata item identifier.
       Long mdItemSeq = findPublicationMetadataItem(conn, bookSeriesSeq);
@@ -2868,8 +2868,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       addNewMdItemIssns(conn, mdItemSeq, pIssn, eIssn);
       log.debug3(DEBUG_HEADER + "added new title ISSNs.");
 
-      // Update in the database the proprietary identifier, if not empty.
-      updateNonEmptyPublicationId(conn, bookSeriesSeq, proprietarySeriesId);
+      // Add to the database the proprietary identifier, if new.
+      addNewMdItemProprietaryIds(conn, mdItemSeq,
+	  Collections.singleton(proprietarySeriesId));
     }
 
     if (log.isDebug2()) {
@@ -2998,7 +2999,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     if (publicationSeq == null) {
       // Yes: Add to the database the new book.
       publicationSeq = addPublication(conn, publisherSeq, seriesMdItemSeq, 
-          MD_ITEM_TYPE_BOOK, title, proprietaryId);
+          MD_ITEM_TYPE_BOOK, title);
       log.debug3(DEBUG_HEADER + "new publicationSeq = " + publicationSeq);
 
       // Skip it if the new book could not be added.
@@ -3015,6 +3016,10 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       // Add to the database the new book ISBN values.
       addMdItemIsbns(conn, mdItemSeq, pIsbn, eIsbn);
       log.debug3(DEBUG_HEADER + "added title ISBNs.");
+
+      // Add to the database the new book proprietary identifier.
+      addMdItemProprietaryIds(conn, mdItemSeq,
+	  Collections.singleton(proprietaryId));
     } else {
       // No: Get the book metadata item identifier.
       Long mdItemSeq = findPublicationMetadataItem(conn, publicationSeq);
@@ -3029,8 +3034,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       addNewMdItemIsbns(conn, mdItemSeq, pIsbn, eIsbn);
       log.debug3(DEBUG_HEADER + "added new title ISBNs.");
 
-      // Update in the database the proprietary identifier, if not empty.
-      updateNonEmptyPublicationId(conn, publicationSeq, proprietaryId);
+      // Add to the database the proprietary identifier, if not there already.
+      addNewMdItemProprietaryIds(conn, mdItemSeq,
+	  Collections.singleton(proprietaryId));
     }
 
     if (log.isDebug2())
@@ -3083,7 +3089,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     if (publicationSeq == null) {
       // Yes: Add to the database the new journal.
       publicationSeq = addPublication(conn, publisherSeq, null, 
-          MD_ITEM_TYPE_JOURNAL, title, proprietaryId);
+          MD_ITEM_TYPE_JOURNAL, title);
       log.debug3(DEBUG_HEADER + "new publicationSeq = " + publicationSeq);
 
       // Skip it if the new journal could not be added.
@@ -3100,6 +3106,10 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       // Add to the database the new journal ISSN values.
       addMdItemIssns(conn, mdItemSeq, pIssn, eIssn);
       log.debug3(DEBUG_HEADER + "added title ISSNs.");
+
+      // Add to the database the new book proprietary identifier.
+      addMdItemProprietaryIds(conn, mdItemSeq,
+	  Collections.singleton(proprietaryId));
     } else {
       // No: Get the journal metadata item identifier.
       mdItemSeq = findPublicationMetadataItem(conn, publicationSeq);
@@ -3114,8 +3124,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       addNewMdItemIssns(conn, mdItemSeq, pIssn, eIssn);
       log.debug3(DEBUG_HEADER + "added new title ISSNs.");
 
-      // Update in the database the proprietary identifier, if not empty.
-      updateNonEmptyPublicationId(conn, publicationSeq, proprietaryId);
+      // Add to the database the proprietary identifier, if not there already.
+      addNewMdItemProprietaryIds(conn, mdItemSeq,
+	  Collections.singleton(proprietaryId));
     }
 
     return publicationSeq;
@@ -3215,23 +3226,19 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    *          A String with the type of publication.
    * @param title
    *          A String with the title of the publication.
-   * @param proprietaryId
-   *          A String with the proprietary identifier of the publication.
    * @return a Long with the identifier of the publication just added.
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  public Long addPublication(Connection conn, 
-      Long publisherSeq, Long parentMdItemSeq, String mdItemType,
-      String title, String proprietaryId)
-      throws DbException {
+  public Long addPublication(Connection conn, Long publisherSeq,
+      Long parentMdItemSeq, String mdItemType, String title)
+	  throws DbException {
     final String DEBUG_HEADER = "addPublication(): ";
     if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
       log.debug2(DEBUG_HEADER + "parentMdItemSeq = " + parentMdItemSeq);
       log.debug2(DEBUG_HEADER + "mdItemType = " + mdItemType);
       log.debug2(DEBUG_HEADER + "title = " + title);
-      log.debug2(DEBUG_HEADER + "proprietaryId = " + proprietaryId);
-      log.debug2(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
     }
 
     Long publicationSeq = null;
@@ -3264,7 +3271,6 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       // skip auto-increment key field #0
       insertPublication.setLong(1, mdItemSeq);
       insertPublication.setLong(2, publisherSeq);
-      insertPublication.setString(3, proprietaryId);
       dbManager.executeUpdate(insertPublication);
       resultSet = insertPublication.getGeneratedKeys();
 
@@ -3350,7 +3356,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     } catch (SQLException sqle) {
         log.error("Cannot find parent metadata item", sqle);
         log.error("mditemSeq = '" + mditemSeq + "'.");
-        log.error("SQL = '" + FIND_PUBLICATION_METADATA_ITEM_QUERY + "'.");
+        log.error("SQL = '" + FIND_PARENT_METADATA_ITEM_QUERY + "'.");
         throw new DbException("Cannot find parent metadata item", sqle);
     } finally {
       DbManager.safeCloseResultSet(resultSet);
@@ -3659,47 +3665,106 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   }
 
   /**
-   * Updates in the database the publication proprietary identifier, if not
-   * empty.
+   * Adds to the database publication proprietary identifiers, if not already
+   * there.
    * 
    * @param conn
    *          A Connection with the database connection to be used.
-   * @param publicationSeq
-   *          A Long with the publication identifier.
-   * @param publicationId
-   *          A String with the publication proprietary identifier.
+   * @param mdItemSeq
+   *          A Long with the metadata item identifier.
+   * @param proprietaryIds
+   *          A Collection<String> with the proprietary identifiers of the
+   *          metadata item.
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  private void updateNonEmptyPublicationId(Connection conn, Long publicationSeq,
-      String publicationId) throws DbException {
-    final String DEBUG_HEADER = "updateNonEmptyPublicationId(): ";
+  public void addNewMdItemProprietaryIds(Connection conn, Long mdItemSeq,
+      Collection<String> proprietaryIds) throws DbException {
+    final String DEBUG_HEADER = "addNewMdItemProprietaryIds(): ";
     if (log.isDebug2()) {
-      log.debug2(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
-      log.debug2(DEBUG_HEADER + "publicationId = " + publicationId);
+      log.debug2(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+      log.debug2(DEBUG_HEADER + "proprietaryIds = " + proprietaryIds);
     }
 
-    if (StringUtil.isNullString(publicationId)) {
+    // Initialize the collection of proprietary identifiers to be added.
+    ArrayList<String> newProprietaryIds = new ArrayList<String>(proprietaryIds);
+
+    Collection<String> oldProprietaryIds =
+	getMdItemProprietaryIds(conn, mdItemSeq);
+
+    // Remove them from the collection to be added.
+    newProprietaryIds.removeAll(oldProprietaryIds);
+
+    // Add the proprietary identifiers that are new.
+    addMdItemProprietaryIds(conn, mdItemSeq, newProprietaryIds);
+  }
+
+  /**
+   * Provides the proprietary identifiers of a metadata item.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param mdItemSeq
+   *          A Long with the metadata item identifier.
+   * @return A Collection<String> with the proprietary identifiers of the
+   *         metadata item.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  private Collection<String> getMdItemProprietaryIds(Connection conn,
+      Long mdItemSeq) throws DbException {
+    List<String> proprietaryIds = new ArrayList<String>();
+
+    PreparedStatement findMdItemProprietaryId =
+	dbManager.prepareStatement(conn, FIND_MD_ITEM_PROPRIETARY_ID_QUERY);
+
+    ResultSet resultSet = null;
+
+    try {
+      // Get the existing proprietary identifiers.
+      findMdItemProprietaryId.setLong(1, mdItemSeq);
+      resultSet = dbManager.executeQuery(findMdItemProprietaryId);
+
+      while (resultSet.next()) {
+	proprietaryIds.add(resultSet.getString(PROPRIETARY_ID_COLUMN));
+      }
+    } catch (SQLException sqle) {
+      throw new DbException("Cannot get the proprietary identifiers of a "
+	  + "metadata item", sqle);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(findMdItemProprietaryId);
+    }
+
+    return proprietaryIds;
+  }
+
+  /**
+   * Adds to the database the proprietary identifiers of a metadata item.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param mdItemSeq
+   *          A Long with the metadata item identifier.
+   * @param proprietaryIds
+   *          A Collection<String> with the proprietary identifiers of the
+   *          metadata item.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public void addMdItemProprietaryIds(Connection conn, Long mdItemSeq,
+      Collection<String> proprietaryIds) throws DbException {
+    final String DEBUG_HEADER = "addMdItemProprietaryIds(): ";
+
+    if (proprietaryIds == null || proprietaryIds.size() == 0) {
       return;
     }
 
-    PreparedStatement updatePublicationId =
-	dbManager.prepareStatement(conn, UPDATE_PUBLICATION_ID_QUERY);
+    for (String proprietaryId : proprietaryIds) {
+      dbManager.addMdItemProprietaryId(conn, mdItemSeq, proprietaryId);
 
-    try {
-      updatePublicationId.setString(1, publicationId);
-      updatePublicationId.setLong(2, publicationSeq);
-      int count = dbManager.executeUpdate(updatePublicationId);
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
-    } catch (SQLException sqle) {
-      log.error("Cannot update the publication proprietary identifier", sqle);
-      log.error("publicationSeq = '" + publicationSeq + "'.");
-      log.error("publicationId = '" + publicationId + "'.");
-      log.error("SQL = '" + UPDATE_PUBLICATION_ID_QUERY + "'.");
-      throw new DbException(
-	  "Cannot update the publication proprietary identifier", sqle);
-    } finally {
-      DbManager.safeCloseStatement(updatePublicationId);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	  + "Added proprietary identifier = " + proprietaryId);
     }
   }
 
@@ -6301,7 +6366,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  Collection<String> getMdItemKeywords(Connection conn, Long mdItemSeq)
+  private Collection<String> getMdItemKeywords(Connection conn, Long mdItemSeq)
       throws DbException {
     List<String> keywords = new ArrayList<String>();
 
@@ -6589,7 +6654,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     log.debug3(DEBUG_HEADER + "sourceMdItemSeq = " + sourceMdItemSeq);
     log.debug3(DEBUG_HEADER + "targetMdItemSeq = " + targetMdItemSeq);
 
-    Collection<String> sourceMdItemAuthors = getMdItemAuthors(conn, sourceMdItemSeq);
+    Collection<String> sourceMdItemAuthors =
+	getMdItemAuthors(conn, sourceMdItemSeq);
 
     addNewMdItemAuthors(conn, targetMdItemSeq, sourceMdItemAuthors);
 
@@ -6677,6 +6743,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
       // Merge the ISSNs.
       mergeMdItemIssns(conn, sourceMdItemSeq, targetMdItemSeq);
+
+      // Merge the proprietary identifiers.
+      mergeMdItemProprietaryIds(conn, sourceMdItemSeq, targetMdItemSeq);
     }
 
     log.debug3(DEBUG_HEADER + "Done.");
@@ -6772,6 +6841,34 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Merges the propritary identifiers of a metadata item into another metadata
+   * item.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param sourceMdItemSeq
+   *          A Long with the identifier of the source metadata item.
+   * @param targetMdItemSeq
+   *          A Long with the identifier of the target metadata item.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  private void mergeMdItemProprietaryIds(Connection conn, Long sourceMdItemSeq,
+      Long targetMdItemSeq) throws DbException {
+    final String DEBUG_HEADER = "mergeMdItemProprietaryIds(): ";
+    log.debug3(DEBUG_HEADER + "sourceMdItemSeq = " + sourceMdItemSeq);
+    log.debug3(DEBUG_HEADER + "targetMdItemSeq = " + targetMdItemSeq);
+
+    Collection<String> sourceMdItemProprietaryIds = 
+        getMdItemProprietaryIds(conn, sourceMdItemSeq);
+
+    addNewMdItemProprietaryIds(conn, targetMdItemSeq,
+	sourceMdItemProprietaryIds);
+
+    log.debug3(DEBUG_HEADER + "Done.");
   }
 
   /**

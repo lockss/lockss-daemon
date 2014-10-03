@@ -1,10 +1,10 @@
 /*
- * $Id: CounterReportsJournal.java,v 1.3 2013-06-19 17:43:20 fergaloy-sf Exp $
+ * $Id: CounterReportsJournal.java,v 1.4 2014-10-03 23:04:43 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,6 +29,9 @@
  in this Software without prior written authorization from Stanford University.
 
  */
+package org.lockss.exporter.counter;
+
+import java.util.Collection;
 
 /**
  * A journal used in COUNTER reports.
@@ -36,8 +39,6 @@
  * @version 1.0
  * 
  */
-package org.lockss.exporter.counter;
-
 public class CounterReportsJournal extends BaseCounterReportsTitle {
   /**
    * Constructor.
@@ -50,8 +51,8 @@ public class CounterReportsJournal extends BaseCounterReportsTitle {
    *          A String with the name of the publishing platform.
    * @param doi
    *          A String with the DOI of the journal.
-   * @param proprietaryId
-   *          A String with the proprietary identifier.
+   * @param proprietaryIds
+   *          A Collection<String> with the proprietary identifiers.
    * @param printIssn
    *          A String with the print ISSN of the journal.
    * @param onlineIssn
@@ -60,9 +61,9 @@ public class CounterReportsJournal extends BaseCounterReportsTitle {
    *           if the name of the title is empty.
    */
   protected CounterReportsJournal(String name, String publisherName,
-      String publishingPlatform, String doi, String proprietaryId,
+      String publishingPlatform, String doi, Collection<String> proprietaryIds,
       String printIssn, String onlineIssn) throws IllegalArgumentException {
-    super(name, publisherName, publishingPlatform, doi, proprietaryId);
+    super(name, publisherName, publishingPlatform, doi, proprietaryIds);
 
     this.printIssn = printIssn;
     this.onlineIssn = onlineIssn;

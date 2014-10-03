@@ -1,5 +1,5 @@
 /*
- * $Id: DbManager.java,v 1.44 2014-09-24 01:53:01 fergaloy-sf Exp $
+ * $Id: DbManager.java,v 1.45 2014-10-03 23:04:45 fergaloy-sf Exp $
  */
 
 /*
@@ -218,7 +218,7 @@ public class DbManager extends BaseLockssDaemonManager
   // After this service has started successfully, this is the version of the
   // database that will be in place, as long as the database version prior to
   // starting the service was not higher already.
-  private int targetDatabaseVersion = 20;
+  private int targetDatabaseVersion = 21;
 
   // The maximum number of retries to be attempted when encountering transient
   // SQL exceptions.
@@ -494,7 +494,7 @@ public class DbManager extends BaseLockssDaemonManager
 
     try {
       return dbManagerSql.getConnection(dataSource, maxRetryCount,
-	  retryDelay, false);
+	  retryDelay, false, true);
     } catch (SQLException sqle) {
       throw new DbException("Cannot get a connection to the database", sqle);
     } catch (RuntimeException re) {
@@ -1514,7 +1514,7 @@ public class DbManager extends BaseLockssDaemonManager
 
     // Get a connection, which will shutdown the Derby database.
     try {
-      dbManagerSql.getConnection(ds);
+      dbManagerSql.getConnection(ds, false);
     } catch (SQLException sqle) {
       // Check whether it is the expected exception.
       if (SHUTDOWN_SUCCESS_STATE_CODE.equals(sqle.getSQLState())) {
@@ -1804,6 +1804,8 @@ public class DbManager extends BaseLockssDaemonManager
 	  dbManagerSql.updateDatabaseFrom18To19(conn);
 	} else if (from == 19) {
 	  dbManagerSql.updateDatabaseFrom19To20(conn);
+	} else if (from == 20) {
+	  dbManagerSql.updateDatabaseFrom20To21(conn);
 	} else {
 	  throw new DbException("Non-existent method to update the database "
 	      + "from version " + from + ".");
@@ -2121,7 +2123,7 @@ public class DbManager extends BaseLockssDaemonManager
    *          An int with the version of the database upgrade to check.
    * @return <code>true</code> if the database upgrade has been completed,
    *         <code>false</code> otherwise.
-   * @throws SQLException
+   * @throws DbException
    *           if any problem occurred accessing the database.
    */
   public boolean isVersionCompleted(Connection conn, int version)
@@ -2148,5 +2150,44 @@ public class DbManager extends BaseLockssDaemonManager
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
     return result;
+  }
+
+  /**
+   * Adds to the database a metadata item proprietary identifier.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param mdItemSeq
+   *          A Long with the metadata item identifier.
+   * @param proprietaryId
+   *          A String with the proprietary identifier of the metadata item.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public void addMdItemProprietaryId(Connection conn, Long mdItemSeq,
+      String proprietaryId) throws DbException {
+    final String DEBUG_HEADER = "addMdItemProprietaryId(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+      log.debug2(DEBUG_HEADER + "proprietaryId = " + proprietaryId);
+    }
+
+    try {
+      dbManagerSql.addMdItemProprietaryId(conn, mdItemSeq, proprietaryId);
+    } catch (SQLException sqle) {
+      String message = "Cannot add proprietary identifier";
+      log.error(message);
+      log.error("mdItemSeq = " + mdItemSeq);
+      log.error("proprietaryId = " + proprietaryId);
+      throw new DbException(message, sqle);
+    } catch (RuntimeException re) {
+      String message = "Cannot add proprietary identifier";
+      log.error(message);
+      log.error("mdItemSeq = " + mdItemSeq);
+      log.error("proprietaryId = " + proprietaryId);
+      throw new DbException(message, re);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
 }

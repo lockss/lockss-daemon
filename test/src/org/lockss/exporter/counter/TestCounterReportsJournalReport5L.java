@@ -1,5 +1,5 @@
 /*
- * $Id: TestCounterReportsJournalReport5L.java,v 1.16 2014-09-16 19:55:42 fergaloy-sf Exp $
+ * $Id: TestCounterReportsJournalReport5L.java,v 1.17 2014-10-03 23:04:44 fergaloy-sf Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import java.io.FileReader;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.Calendar;
+import java.util.Collections;
 import java.util.GregorianCalendar;
 import java.util.Properties;
 import org.lockss.config.ConfigManager;
@@ -313,17 +314,14 @@ public class TestCounterReportsJournalReport5L extends LockssTestCase {
 	  metadataManager.findOrCreatePublisher(conn, "publisher");
 
       // Add the publication -- test direct method
-      publicationSeq =
-	  metadataManager.findOrCreateJournal(conn, publisherSeq, 
-	                                      "12345678", "98765432", 
-	                                      "JOURNAL", null);
+      publicationSeq = metadataManager.findOrCreateJournal(conn, publisherSeq,
+	  "12345678", "98765432", "JOURNAL", "propId1");
 
       // Add an alternative name for the publication -- test indirect method
-      Long publicationSeq2 =
-	  metadataManager.findOrCreatePublication(conn, publisherSeq, 
-	      "12345678", "98765432", null, null, 
-	      MetadataField.PUBLICATION_TYPE_JOURNAL,
-	      null, null, "JOURNAL_ALT", null);
+      Long publicationSeq2 = metadataManager.findOrCreatePublication(conn,
+	  publisherSeq, "12345678", "98765432", null, null,
+	  MetadataField.PUBLICATION_TYPE_JOURNAL, null, null, "JOURNAL_ALT",
+	  "propId2");
 
       assertEquals(publicationSeq, publicationSeq2);
 
@@ -347,6 +345,9 @@ public class TestCounterReportsJournalReport5L extends LockssTestCase {
 
       Long parentSeq =
 	  metadataManager.findPublicationMetadataItem(conn, publicationSeq);
+
+      metadataManager.addMdItemProprietaryIds(conn, parentSeq,
+	  Collections.singleton("propId3"));
 
       metadataManager.addMdItemDoi(conn, parentSeq, "10.1000/182");
 
@@ -509,7 +510,7 @@ public class TestCounterReportsJournalReport5L extends LockssTestCase {
     line = reader.readLine();
 
     expected =
-	new StringBuilder("JOURNAL,publisher,platform,10.1000/182,,1234-5678,9876-5432,0,0,0,4,");
+	new StringBuilder("JOURNAL,publisher,platform,10.1000/182,\"propId1, propId2, propId3\",1234-5678,9876-5432,0,0,0,4,");
 
     for (int i = 0; i < columnCount; i++) {
       expected.append("0,");
@@ -550,7 +551,7 @@ public class TestCounterReportsJournalReport5L extends LockssTestCase {
     line = reader.readLine();
 
     expected =
-	new StringBuilder("JOURNAL\tpublisher\tplatform\t10.1000/182\t\t1234-5678\t9876-5432\t0\t0\t0\t4\t");
+	new StringBuilder("JOURNAL\tpublisher\tplatform\t10.1000/182\tpropId1, propId2, propId3\t1234-5678\t9876-5432\t0\t0\t0\t4\t");
 
     for (int i = 0; i < columnCount; i++) {
       expected.append("0\t");

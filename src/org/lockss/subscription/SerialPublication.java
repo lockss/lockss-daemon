@@ -1,5 +1,5 @@
 /*
- * $Id: SerialPublication.java,v 1.5 2014-09-16 19:55:42 fergaloy-sf Exp $
+ * $Id: SerialPublication.java,v 1.6 2014-10-03 23:04:44 fergaloy-sf Exp $
  */
 
 /*
@@ -32,6 +32,7 @@
 package org.lockss.subscription;
 
 import java.util.Collection;
+import java.util.Set;
 import org.lockss.config.TdbTitle;
 import org.lockss.config.TdbUtil;
 import org.lockss.util.Logger;
@@ -52,7 +53,7 @@ public class SerialPublication {
   private String publisherName;
   private String pIssn;
   private String eIssn;
-  private String proprietaryId;
+  private Set<String> proprietaryIds;
   private TdbTitle tdbTitle;
   private String uniqueName;
 
@@ -112,12 +113,12 @@ public class SerialPublication {
     this.eIssn = eIssn;
   }
 
-  public String getProprietaryId() {
-    return proprietaryId;
+  public Set<String> getProprietaryIds() {
+    return proprietaryIds;
   }
 
-  public void setProprietaryId(String proprietaryId) {
-    this.proprietaryId = proprietaryId;
+  public void setProprietaryIds(Set<String> proprietaryIds) {
+    this.proprietaryIds = proprietaryIds;
   }
 
   /**
@@ -173,7 +174,7 @@ public class SerialPublication {
       TdbTitle title =
 	  TdbUtil.getTdb().getTdbTitleByIssn(MetadataUtil.formatIssn(eIssn));
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "tdbTitle (eISSN = "
-	  + eIssn + ") = " + tdbTitle);
+	  + eIssn + ") = " + title);
 
       // Check whether the TdbTitle is not found.
       if (title == null) {
@@ -181,15 +182,22 @@ public class SerialPublication {
 	title =
 	    TdbUtil.getTdb().getTdbTitleByIssn(MetadataUtil.formatIssn(pIssn));
 	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "tdbTitle (pISSN = "
-	    + pIssn + ") = " + tdbTitle);
+	    + pIssn + ") = " + title);
       }
 
       // Check whether the TdbTitle is not found.
       if (title == null) {
 	// Yes: Get the TdbTitle from the proprietary identifier.
-	title = TdbUtil.getTdb().getTdbTitleById(proprietaryId);
-	if (log.isDebug3()) log.debug3(DEBUG_HEADER
-	    + "tdbTitle (proprietaryId = " + proprietaryId + ") = " + tdbTitle);
+	for (String proprietaryId : proprietaryIds) {
+	  title = TdbUtil.getTdb().getTdbTitleById(proprietaryId);
+	  if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	      + "tdbTitle (proprietaryId = " + proprietaryId + ") = "
+	      + title);
+
+	  if (title != null) {
+	    break;
+	  }
+	}
       }
 
       // Check whether the TdbTitle was found.
@@ -242,7 +250,7 @@ public class SerialPublication {
 	.append("', publisherName='").append(publisherName)
 	.append("', pIssn='").append(pIssn)
 	.append("', eIssn='").append(eIssn)
-	.append("', proprietaryId='").append(proprietaryId)
+	.append("', proprietaryIds='").append(proprietaryIds)
 	.append("', uniqueName='").append(uniqueName);
 
     if (tdbTitle != null) {

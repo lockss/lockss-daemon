@@ -1,10 +1,10 @@
 /*
- * $Id: KbartConverter.java,v 1.49 2014-01-14 04:28:54 tlipkis Exp $
+ * $Id: KbartConverter.java,v 1.50 2014-10-03 23:04:46 fergaloy-sf Exp $
  */
 
 /*
 
-Copyright (c) 2010-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2010-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -867,7 +867,11 @@ public class KbartConverter {
    * @return the proprietary ID for the AU
    */
   public static String getTitleId(BibliographicItem au) {
-    return au.getProprietaryId();
+    String[] proprietaryIds = au.getProprietaryIds();
+    if (proprietaryIds != null && proprietaryIds.length > 0) {
+      return proprietaryIds[0];
+    }
+    return null;
   }
   
   /**

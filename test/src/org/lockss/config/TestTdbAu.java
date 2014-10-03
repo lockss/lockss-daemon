@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdbAu.java,v 1.24 2014-09-09 22:51:41 pgust Exp $
+ * $Id: TestTdbAu.java,v 1.25 2014-10-03 23:04:44 fergaloy-sf Exp $
  */
 
 /*
@@ -44,7 +44,7 @@ import java.util.*;
  * Test class for <code>org.lockss.config.TdbAu</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdbAu.java,v 1.24 2014-09-09 22:51:41 pgust Exp $
+ * @version $Id: TestTdbAu.java,v 1.25 2014-10-03 23:04:44 fergaloy-sf Exp $
  */
 
 public class TestTdbAu extends LockssTestCase {
@@ -96,23 +96,29 @@ public class TestTdbAu extends LockssTestCase {
     
     // use param if specified with au type "journal"
     au1.setParam("journal_id", "foo");
-    assertEquals("foo", au1.getProprietaryId());
+    assertEquals("foo", au1.getProprietaryIds()[0]);
     // use attr instead if also specified
     au1.setAttr("journal_id", "bar");
-    assertEquals("bar", au1.getProprietaryId());
+    assertEquals("bar", au1.getProprietaryIds()[0]);
     
     // verify no series series id for journal
-    assertNull(au1.getProprietarySeriesId());
+    if (au1.getProprietarySeriesIds() != null
+	&& au1.getProprietarySeriesIds().length > 0) {
+      assertNull(au1.getProprietarySeriesIds()[0]);
+    }
     
     // change au type to "book series" and verify no proprietary id
     au1.setPropertyByName("type", "bookSeries");
-    assertNull(au1.getProprietaryId());
+    if (au1.getProprietaryIds() != null && au1.getProprietaryIds().length > 0) {
+      assertNull(au1.getProprietaryIds()[0]);
+    }
+
     // verify "journal_id" is is now interpreted as series id
-    assertEquals("bar", au1.getProprietarySeriesId());
+    assertEquals("bar", au1.getProprietarySeriesIds()[0]);
     
     // verify that book id is now intrpreted as proprietary id
     au1.setAttr("book_id", "baz");
-    assertEquals("baz", au1.getProprietaryId());
+    assertEquals("baz", au1.getProprietaryIds()[0]);
   }
   
   /**

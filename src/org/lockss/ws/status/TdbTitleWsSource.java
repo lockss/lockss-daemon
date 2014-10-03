@@ -1,5 +1,5 @@
 /*
- * $Id: TdbTitleWsSource.java,v 1.1 2014-07-11 20:08:57 fergaloy-sf Exp $
+ * $Id: TdbTitleWsSource.java,v 1.2 2014-10-03 23:04:44 fergaloy-sf Exp $
  */
 
 /*
@@ -48,7 +48,7 @@ public class TdbTitleWsSource extends TdbTitleWsResult {
   private boolean namePopulated = false;
   private boolean tdbPublisherPopulated = false;
   private boolean idPopulated = false;
-  private boolean proprietaryIdPopulated = false;
+  private boolean proprietaryIdsPopulated = false;
   private boolean publicationTypePopulated = false;
   private boolean issnPopulated = false;
   private boolean issnLPopulated = false;
@@ -90,14 +90,34 @@ public class TdbTitleWsSource extends TdbTitleWsResult {
     return super.getId();
   }
 
+  /**
+   * @deprecated Replaced by {@link #getProprietaryIds()}
+   */
   @Override
-  public String getProprietaryId() {
-    if (!proprietaryIdPopulated) {
-      setProprietaryId(tdbTitle.getProprietaryId());
-      proprietaryIdPopulated = true;
-    }
+  @Deprecated public String getProprietaryId() {
+    setUpProprietaryIds();
 
     return super.getProprietaryId();
+  }
+
+  @Override
+  public List<String> getProprietaryIds() {
+    setUpProprietaryIds();
+
+    return super.getProprietaryIds();
+  }
+
+  private void setUpProprietaryIds() {
+    if (!proprietaryIdsPopulated) {
+      List<String> ids = Arrays.asList(tdbTitle.getProprietaryIds());
+      setProprietaryIds(ids);
+
+      if (ids.size() > 0) {
+	setProprietaryId(ids.get(0));
+      }
+
+      proprietaryIdsPopulated = true;
+    }
   }
 
   @Override

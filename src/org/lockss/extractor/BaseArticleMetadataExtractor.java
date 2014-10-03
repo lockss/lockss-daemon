@@ -1,10 +1,10 @@
 /*
- * $Id: BaseArticleMetadataExtractor.java,v 1.24 2014-09-09 22:49:57 pgust Exp $
+ * $Id: BaseArticleMetadataExtractor.java,v 1.25 2014-10-03 23:04:45 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -147,13 +147,26 @@ public class BaseArticleMetadataExtractor implements ArticleMetadataExtractor {
         am.putIfBetter(MetadataField.FIELD_ISSUE, tdbau.getStartIssue());
         am.putIfBetter(MetadataField.FIELD_PUBLICATION_TITLE,
                        tdbau.getPublicationTitle());
-        am.putIfBetter(MetadataField.FIELD_PROPRIETARY_IDENTIFIER,
-                       tdbau.getProprietaryId());
+
+        String propId = null;
+        if (tdbau.getProprietaryIds() != null
+            && tdbau.getProprietaryIds().length > 0) {
+          propId = tdbau.getProprietaryIds()[0];
+        }
+
+        am.putIfBetter(MetadataField.FIELD_PROPRIETARY_IDENTIFIER, propId);
         am.putIfBetter(MetadataField.FIELD_PUBLICATION_TYPE,
                        tdbau.getPublicationType());
         am.putIfBetter(MetadataField.FIELD_SERIES_TITLE,tdbau.getSeriesTitle());
+
+        propId = null;
+        if (tdbau.getProprietarySeriesIds() != null
+            && tdbau.getProprietarySeriesIds().length > 0) {
+          propId = tdbau.getProprietarySeriesIds()[0];
+        }
+
         am.putIfBetter(MetadataField.FIELD_PROPRIETARY_SERIES_IDENTIFIER,
-                       tdbau.getProprietarySeriesId());
+                       propId);
       }
     }
     if (log.isDebug3()) log.debug3("adding("+af.getFullTextCu());

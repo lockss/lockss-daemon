@@ -1,10 +1,10 @@
 /*
- * $Id: CounterReportsTitle.java,v 1.2 2012-12-07 07:27:04 fergaloy-sf Exp $
+ * $Id: CounterReportsTitle.java,v 1.3 2014-10-03 23:04:43 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2012-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,6 +29,9 @@
  in this Software without prior written authorization from Stanford University.
 
  */
+package org.lockss.exporter.counter;
+
+import java.util.Collection;
 
 /**
  * Representation of a title used in COUNTER reports.
@@ -36,8 +39,6 @@
  * @version 1.0
  * 
  */
-package org.lockss.exporter.counter;
-
 public interface CounterReportsTitle {
 
   /**
@@ -83,11 +84,11 @@ public interface CounterReportsTitle {
   String getPrintIssn();
 
   /**
-   * Provides the proprietary identifier of the title.
+   * Provides the proprietary identifiers of the title.
    * 
-   * @return a String with the proprietary identifier of the title.
+   * @return a Collection<String> with the proprietary identifiers of the title.
    */
-  String getProprietaryId();
+  Collection<String> getProprietaryIds();
 
   /**
    * Provides the publisher name of the title.

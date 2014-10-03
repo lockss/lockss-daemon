@@ -1,5 +1,5 @@
 /*
- * $Id: SubscriptionManager.java,v 1.21 2014-09-16 19:55:42 fergaloy-sf Exp $
+ * $Id: SubscriptionManager.java,v 1.22 2014-10-03 23:04:44 fergaloy-sf Exp $
  */
 
 /*
@@ -48,12 +48,14 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -210,9 +212,9 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 
   // Query to find all the subscriptions and their ranges.
   private static final String FIND_ALL_SUBSCRIPTIONS_AND_RANGES_QUERY = "select"
-      + " s." + SUBSCRIPTION_SEQ_COLUMN
+      + " distinct s." + SUBSCRIPTION_SEQ_COLUMN
       + ",n." + NAME_COLUMN
-      + ",p." + PUBLICATION_ID_COLUMN
+      + ",pi." + PROPRIETARY_ID_COLUMN
       + ",pu." + PUBLISHER_NAME_COLUMN
       + ",pr." + PROVIDER_LID_COLUMN
       + ",pr." + PROVIDER_NAME_COLUMN
@@ -234,6 +236,8 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       + " left outer join " + ISSN_TABLE + " i2"
       + " on mi." + MD_ITEM_SEQ_COLUMN + " = i2." + MD_ITEM_SEQ_COLUMN
       + " and i2." + ISSN_TYPE_COLUMN + " = '" + E_ISSN_TYPE + "'"
+      + " left outer join " + PROPRIETARY_ID_TABLE + " pi"
+      + " on mi." + MD_ITEM_SEQ_COLUMN + " = pi." + MD_ITEM_SEQ_COLUMN
       + " where s." + PUBLICATION_SEQ_COLUMN + " = p." + PUBLICATION_SEQ_COLUMN
       + " and p." + PUBLISHER_SEQ_COLUMN + " = pu." + PUBLISHER_SEQ_COLUMN
       + " and p." + MD_ITEM_SEQ_COLUMN + " = mi." + MD_ITEM_SEQ_COLUMN
@@ -246,7 +250,8 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       + ",pr." + PROVIDER_NAME_COLUMN
       + ",sr." + SUBSCRIPTION_RANGE_COLUMN
       + ",sr." + SUBSCRIBED_COLUMN
-      + ",sr." + RANGE_IDX_COLUMN;
+      + ",sr." + RANGE_IDX_COLUMN
+      + ",pi." + PROPRIETARY_ID_COLUMN;
 
   // Query to get the count of subscriptions.
   private static final String COUNT_SUBSCRIBED_PUBLICATIONS_QUERY = "select"
@@ -273,8 +278,8 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 
   // Query to find all the subscription data for backup purposes.
   private static final String FIND_SUBSCRIPTION_BACKUP_DATA_QUERY = "select"
-      + " pu." + PUBLISHER_NAME_COLUMN
-      + ",p." + PUBLICATION_ID_COLUMN
+      + " distinct pu." + PUBLISHER_NAME_COLUMN
+      + ",pi." + PROPRIETARY_ID_COLUMN
       + ",n." + NAME_COLUMN
       + ",pr." + PROVIDER_LID_COLUMN
       + ",pr." + PROVIDER_NAME_COLUMN
@@ -296,6 +301,8 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       + " left outer join " + ISSN_TABLE + " i2"
       + " on mi." + MD_ITEM_SEQ_COLUMN + " = i2." + MD_ITEM_SEQ_COLUMN
       + " and i2." + ISSN_TYPE_COLUMN + " = '" + E_ISSN_TYPE + "'"
+      + " left outer join " + PROPRIETARY_ID_TABLE + " pi"
+      + " on mi." + MD_ITEM_SEQ_COLUMN + " = pi." + MD_ITEM_SEQ_COLUMN
       + " where sr." + SUBSCRIPTION_SEQ_COLUMN + " = s."
       + SUBSCRIPTION_SEQ_COLUMN
       + " and s." + PUBLICATION_SEQ_COLUMN + " = p." + PUBLICATION_SEQ_COLUMN
@@ -306,7 +313,11 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       + " and s." + PROVIDER_SEQ_COLUMN + " = pr." + PROVIDER_SEQ_COLUMN
       + " order by pu." + PUBLISHER_NAME_COLUMN
       + ",n." + NAME_COLUMN
-      + ",pr." + PROVIDER_NAME_COLUMN;
+      + ",pr." + PROVIDER_NAME_COLUMN
+      + ",sr." + SUBSCRIPTION_RANGE_COLUMN
+      + ",sr." + SUBSCRIBED_COLUMN
+      + ",sr." + RANGE_IDX_COLUMN
+      + ",pi." + PROPRIETARY_ID_COLUMN;
 
   // Query to update the type of a subscription range.
   private static final String UPDATE_SUBSCRIPTION_RANGE_TYPE_QUERY = "update "
@@ -1304,10 +1315,17 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     String eIssn = MetadataUtil.toUnpunctuatedIssn(title.getEissn());
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "eIssn = " + eIssn);
     
-    // Get the title proprietary identifier.
-    String proprietaryId = title.getProprietaryId();
-    if (log.isDebug3())
-      log.debug3(DEBUG_HEADER + "proprietaryId = " + proprietaryId);
+    // Get the title proprietary identifiers.
+    String[] proprietaryIds = title.getProprietaryIds();
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "proprietaryIds = "
+	+ StringUtil.toString(proprietaryIds));
+
+    // Get the first proprietary identifier, if any.
+    String firstProprietaryId = null;
+
+    if (proprietaryIds != null && proprietaryIds.length > 0) {
+      firstProprietaryId = proprietaryIds[0];
+    }
 
     // Get the periods covered by the title currently configured archival units,
     // indexed by provider.
@@ -1334,23 +1352,42 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 
       Long publicationSeq = null;
       if (MetadataField.PUBLICATION_TYPE_BOOKSERIES.equals(pubType)) {
-        publicationSeq = 
-            mdManager.findOrCreateBookSeries(conn, publisherSeq, 
-                                             pIssn, eIssn, 
-                                             publicationName, proprietaryId);
+        publicationSeq = mdManager.findOrCreateBookSeries(conn, publisherSeq, 
+            pIssn, eIssn, publicationName, firstProprietaryId);
       } else if (MetadataField.PUBLICATION_TYPE_JOURNAL.equals(pubType)) {
-        publicationSeq = 
-            mdManager.findOrCreateJournal(conn, publisherSeq,  
-                                          pIssn, eIssn, 
-                                          publicationName, proprietaryId);
+        publicationSeq = mdManager.findOrCreateJournal(conn, publisherSeq,  
+            pIssn, eIssn, publicationName, firstProprietaryId);
       }
 
       if (log.isDebug3())
 	log.debug3(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
 
+      // Check whether there are additional proprietary identifiers.
+      if (proprietaryIds != null && proprietaryIds.length > 1) {
+	// Yes: Get the publication metadata item identifier.
+	Long mdItemSeq =
+	    mdManager.findPublicationMetadataItem(conn, publicationSeq);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+
+	Collection<String> otherPropIds = new LinkedHashSet<String>();
+
+	// Loop through the remaining proprietary identifiers.
+	for (int i = 1; i < proprietaryIds.length; i++) {
+	  // Check whether this proprietary identifier exists.
+	  if (proprietaryIds[i] != null) {
+	    // Yes: Add it to the collection, if not there already.
+	    otherPropIds.add(proprietaryIds[i]);
+	  }
+	}
+
+	// Persist the remaining proprietary identifiers in the database.
+	mdManager.addNewMdItemProprietaryIds(conn, mdItemSeq, otherPropIds);
+      }
+
       // Loop through all the providers for which the title has archival units
       // currently configured.
-      for (TdbProvider/*Map<String, String>*/ provider : periodsByProvider.keySet()) {
+      for (TdbProvider provider : periodsByProvider.keySet()) {
 	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "provider = " + provider);
 
 	List<BibliographicPeriod> periods = periodsByProvider.get(provider);
@@ -1824,19 +1861,20 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     final String DEBUG_HEADER = "findAllSubscriptionsAndRanges(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
-    Long subscriptionSeq;
+    Long subscriptionSeq = null;
     String publicationName;
-    String publicationId;
+    String proprietaryId;
     String pIssn;
     String eIssn;
     String publisherName;
     String providerLid;
     String providerName;
-    String ranges;
-    boolean subscribed;
+    String ranges = null;
+    boolean subscribed = false;
     SerialPublication publication;
     Subscription subscription = new Subscription();
     List<Subscription> subscriptions = new ArrayList<Subscription>();
+    Set<String> proprietaryIds = null;
 
     // Get a connection to the database.
     Connection conn = dbManager.getConnection();
@@ -1854,6 +1892,28 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 
       // Loop through all the results.
       while (resultSet.next()) {
+	// Check whether this subscription is the same as the previous one.
+	if (subscriptionSeq != null
+	    && resultSet.getLong(SUBSCRIPTION_SEQ_COLUMN) == subscriptionSeq
+	    && ranges != null
+	    && resultSet.getString(SUBSCRIPTION_RANGE_COLUMN).equals(ranges)
+	    && resultSet.getBoolean(SUBSCRIBED_COLUMN) == subscribed) {
+	  // Yes: This means that the publication has multiple values for some
+	  // attributes. Get the proprietary identifier.
+	  proprietaryId = resultSet.getString(PROPRIETARY_ID_COLUMN);
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "proprietaryId = " + proprietaryId);
+
+	  // Add it to the list of proprietary identifiers, if it exists.
+	  if (!StringUtil.isNullString(proprietaryId)) {
+	    proprietaryIds.add(proprietaryId);
+	    if (log.isDebug3()) log.debug3(DEBUG_HEADER
+		+ "Added proprietaryId = '" + proprietaryId + "'.");
+	  }
+
+	  continue;
+	}
+
 	subscriptionSeq = resultSet.getLong(SUBSCRIPTION_SEQ_COLUMN);
 	if (log.isDebug3())
 	  log.debug3(DEBUG_HEADER + "subscriptionSeq = " + subscriptionSeq);
@@ -1862,9 +1922,19 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	if (log.isDebug3())
 	  log.debug3(DEBUG_HEADER + "publicationName = " + publicationName);
 
-	publicationId = resultSet.getString(PUBLICATION_ID_COLUMN);
+	// Initialize the collection of proprietary identifiers.
+	proprietaryIds = new LinkedHashSet<String>();
+
+	proprietaryId = resultSet.getString(PROPRIETARY_ID_COLUMN);
 	if (log.isDebug3())
-	  log.debug3(DEBUG_HEADER + "publicationId = " + publicationId);
+	  log.debug3(DEBUG_HEADER + "proprietaryId = " + proprietaryId);
+
+	// Add it to the list of proprietary identifiers, if it exists.
+	if (!StringUtil.isNullString(proprietaryId)) {
+	  proprietaryIds.add(proprietaryId);
+	  if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	      + "Added proprietaryId = '" + proprietaryId + "'.");
+	}
 
         pIssn = resultSet.getString(P_ISSN_TYPE);
 	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pIssn = " + pIssn);
@@ -1915,7 +1985,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	  // Initialize the new subscription publication.
 	  publication = new SerialPublication();
 	  publication.setPublicationName(publicationName);
-	  publication.setProprietaryId(publicationId);
+	  publication.setProprietaryIds(proprietaryIds);
 	  publication.setPissn(pIssn);
 	  publication.setEissn(eIssn);
 	  publication.setPublisherName(publisherName);
@@ -2079,7 +2149,8 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	    publication.setPublisherName(publisherName);
 	    publication.setPissn(title.getPrintIssn());
 	    publication.setEissn(title.getEissn());
-	    publication.setProprietaryId(title.getProprietaryId());
+	    publication.setProprietaryIds(new LinkedHashSet<String>(Arrays
+		.asList(title.getProprietaryIds())));
 	    publication.setTdbTitle(title);
 
 	    if (log.isDebug3())
@@ -2395,15 +2466,32 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       }
     }
 
-    // Normalize the proprietary identifier, if necessary.
-    if (!StringUtil.isNullString(publication.getProprietaryId())) {
-      if (publication.getProprietaryId().length() > MAX_PUBLICATION_ID_COLUMN) {
-	log.warning("proprietaryId too long '" + publication.getProprietaryId()
-	    + "' for title: '" + publication.getPublicationName()
-	    + "' publisher: " + publication.getPublisherName() + "'");
-	publication.setProprietaryId(DbManager.truncateVarchar(
-	    publication.getProprietaryId(), MAX_PUBLICATION_ID_COLUMN));
+    // Normalize the proprietary identifiers, if necessary.
+    if (publication.getProprietaryIds() != null) {
+      Set<String> normalizedPropIds = new LinkedHashSet<String>();
+
+      for (String proprietaryId : publication.getProprietaryIds()) {
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "proprietaryId = " + proprietaryId);
+
+	String normalizedPropId = proprietaryId;
+
+	if (!StringUtil.isNullString(proprietaryId)) {
+	  if (proprietaryId.length() > MAX_PROPRIETARY_ID_COLUMN) {
+	    log.warning("proprietaryId too long '" + proprietaryId
+		+ "' for title: '" + publication.getPublicationName()
+		+ "' publisher: " + publication.getPublisherName() + "'");
+	    normalizedPropId = DbManager.truncateVarchar(proprietaryId,
+		MAX_PROPRIETARY_ID_COLUMN);
+	    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "normalizedPropId = "
+		+ normalizedPropId);
+	  }
+	}
+
+	normalizedPropIds.add(normalizedPropId);
       }
+
+      publication.setProprietaryIds(normalizedPropIds);
     }
 
     // Normalize the publisher name, if necessary.
@@ -2752,7 +2840,18 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 
     String pIssn = publication.getPissn();
     String eIssn = publication.getEissn();
-    String proprietaryId = publication.getProprietaryId();
+    
+    // Get the title proprietary identifiers.
+    Set<String> proprietaryIds = publication.getProprietaryIds();
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "proprietaryIds = " + proprietaryIds);
+
+    // Get the first proprietary identifier, if any.
+    String firstProprietaryId = null;
+
+    if (proprietaryIds != null && proprietaryIds.size() > 0) {
+      firstProprietaryId = proprietaryIds.iterator().next();
+    }
 
     // Find the publication in the database or create it.
     Long publicationSeq = null;
@@ -2761,16 +2860,38 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     if (MetadataField.PUBLICATION_TYPE_BOOKSERIES.equals(pubType)) {
       // Yes: Find it or create it.
       publicationSeq = mdManager.findOrCreateBookSeries(conn, publisherSeq,
-	  pIssn, eIssn, publicationName, proprietaryId);
+	  pIssn, eIssn, publicationName, firstProprietaryId);
       // No: Check whether it is a journal.
     } else if (MetadataField.PUBLICATION_TYPE_JOURNAL.equals(pubType)) {
       // Yes: Find it or create it.
       publicationSeq = mdManager.findOrCreateJournal(conn,publisherSeq, pIssn,
-	  eIssn, publicationName, proprietaryId);
+	  eIssn, publicationName, firstProprietaryId);
     }
-      
+
     if (log.isDebug3())
       log.debug3(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
+
+    // Check whether there are additional proprietary identifiers.
+    if (proprietaryIds != null && proprietaryIds.size() > 1) {
+      // Yes: Get the publication metadata item identifier.
+      Long mdItemSeq =
+	  mdManager.findPublicationMetadataItem(conn, publicationSeq);
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+
+      Collection<String> otherPropIds = new LinkedHashSet<String>();
+
+      // Loop through the remaining proprietary identifiers.
+      for (String proprietaryId : proprietaryIds) {
+	if (!proprietaryId.equals(firstProprietaryId)) {
+	  // Add it to the collection, if not there already.
+	  otherPropIds.add(proprietaryId);
+	}
+      }
+
+      // Persist the remaining proprietary identifiers in the database.
+      mdManager.addNewMdItemProprietaryIds(conn, mdItemSeq, otherPropIds);
+    }
 
     // Find the provider in the database or create it.
     Long providerSeq = dbManager.findOrCreateProvider(conn,
@@ -3547,25 +3668,25 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     final String DEBUG_HEADER = "findSubscriptionDataForBackup(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
-    String publicationName;
+    String publicationName = null;
     String providerLid;
-    String providerName;
-    String publisherName;
-    String publicationId;
+    String providerName = null;
+    String publisherName = null;
+    String proprietaryId;
     String pIssn;
     String eIssn;
-    String range;
-    Boolean subscribed;
+    String range = null;
+    Boolean subscribed = null;
     String previousPublicationName = null;
     String previousProviderLid = null;
     String previousProviderName = null;
     String previousPublisherName = null;
-    String previousPublicationId = null;
     String previousPissn = null;
     String previousEissn = null;
     SerialPublication publication;
     Subscription subscription = null;
     List<Subscription> subscriptions = new ArrayList<Subscription>();
+    Set<String> proprietaryIds = null;
 
     // Get a connection to the database.
     Connection conn = dbManager.getConnection();
@@ -3583,6 +3704,28 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 
       // Loop through all the results.
       while (resultSet.next()) {
+	// Check whether this subscription is the same as the previous one.
+	if (resultSet.getString(PUBLISHER_NAME_COLUMN).equals(publisherName)
+	    && resultSet.getString(NAME_COLUMN).equals(publicationName)
+	    && resultSet.getString(PROVIDER_NAME_COLUMN).equals(providerName)
+	    && resultSet.getString(SUBSCRIPTION_RANGE_COLUMN).equals(range)
+	    && resultSet.getBoolean(SUBSCRIBED_COLUMN) == subscribed) {
+	  // Yes: This means that the publication has multiple values for some
+	  // attributes. Get the proprietary identifier.
+	  proprietaryId = resultSet.getString(PROPRIETARY_ID_COLUMN);
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "proprietaryId = " + proprietaryId);
+
+	  // Add it to the list of proprietary identifiers, if it exists.
+	  if (!StringUtil.isNullString(proprietaryId)) {
+	    proprietaryIds.add(proprietaryId);
+	    if (log.isDebug3()) log.debug3(DEBUG_HEADER
+		+ "Added proprietaryId = '" + proprietaryId + "'.");
+	  }
+
+	  continue;
+	}
+
 	// Get the publication data.
 	publisherName = resultSet.getString(PUBLISHER_NAME_COLUMN);
 	if (log.isDebug3())
@@ -3600,9 +3743,19 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	if (log.isDebug3())
 	  log.debug3(DEBUG_HEADER + "providerName = " + providerName);
 
-	publicationId = resultSet.getString(PUBLICATION_ID_COLUMN);
+	// Initialize the collection of proprietary identifiers.
+	proprietaryIds = new LinkedHashSet<String>();
+
+	proprietaryId = resultSet.getString(PROPRIETARY_ID_COLUMN);
 	if (log.isDebug3())
-	  log.debug3(DEBUG_HEADER + "publicationId = " + publicationId);
+	  log.debug3(DEBUG_HEADER + "proprietaryId = " + proprietaryId);
+
+	// Add it to the list of proprietary identifiers, if it exists.
+	if (!StringUtil.isNullString(proprietaryId)) {
+	  proprietaryIds.add(proprietaryId);
+	  if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	      + "Added proprietaryId = '" + proprietaryId + "'.");
+	}
 
 	pIssn = resultSet.getString(P_ISSN_TYPE);
 	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pIssn = " + pIssn);
@@ -3621,9 +3774,6 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	    || ((providerName == null && previousProviderName != null)
 		|| (providerName != null
 		    && !providerName.equals(previousProviderName)))
-	    || ((publicationId == null && previousPublicationId != null)
-		|| (publicationId != null
-		    && !publicationId.equals(previousPublicationId)))
 	    || ((publisherName == null && previousPublisherName != null)
 		|| (publisherName != null
 		    && !publisherName.equals(previousPublisherName)))
@@ -3638,7 +3788,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	  publication.setPublicationName(publicationName);
 	  publication.setProviderLid(providerLid);
 	  publication.setProviderName(providerName);
-	  publication.setProprietaryId(publicationId);
+	  publication.setProprietaryIds(proprietaryIds);
 	  publication.setPissn(pIssn);
 	  publication.setEissn(eIssn);
 
@@ -3659,7 +3809,6 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	  previousPublicationName = publicationName;
 	  previousProviderLid = providerLid;
 	  previousProviderName = providerName;
-	  previousPublicationId = publicationId;
 	  previousPissn = pIssn;
 	  previousEissn = eIssn;
 	}
@@ -3744,7 +3893,8 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     .append(BACKUP_FIELD_SEPARATOR)
     .append(StringUtil.blankOutNlsAndTabs(publication.getEissn()))
     .append(BACKUP_FIELD_SEPARATOR)
-    .append(StringUtil.blankOutNlsAndTabs(publication.getProprietaryId()));
+    .append(StringUtil.blankOutNlsAndTabs(StringUtil
+	.separatedString(publication.getProprietaryIds())));
 
     // Loop through all the subscribed ranges.
     for (BibliographicPeriod range : subscription.getSubscribedRanges()) {
@@ -3929,10 +4079,14 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       publication.setEissn(eIssn);
     }
 
-    String proprietaryId = iterator.next();
-    
-    if (!proprietaryId.isEmpty()) {
-      publication.setProprietaryId(proprietaryId);
+    Set<String> proprietaryIds =
+	new LinkedHashSet<String>(StringUtil.breakAt(iterator.next(), ",",
+	    true));
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "proprietaryIds = " + proprietaryIds);
+
+    if (proprietaryIds.size() > 0) {
+      publication.setProprietaryIds(proprietaryIds);
     }
 
     // Get the subscription ranges.

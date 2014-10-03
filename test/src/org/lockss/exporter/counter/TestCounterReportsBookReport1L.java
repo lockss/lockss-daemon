@@ -1,5 +1,5 @@
 /*
- * $Id: TestCounterReportsBookReport1L.java,v 1.12 2014-09-16 19:55:42 fergaloy-sf Exp $
+ * $Id: TestCounterReportsBookReport1L.java,v 1.13 2014-10-03 23:04:44 fergaloy-sf Exp $
  */
 
 /*
@@ -261,9 +261,8 @@ public class TestCounterReportsBookReport1L extends LockssTestCase {
 	  metadataManager.findOrCreatePublisher(conn, "Full Book Publisher");
 
       // Add the publication -- test direct method
-      publicationSeq =
-	  metadataManager.findOrCreateBook(conn, publisherSeq, null, 
-		"9876543210987", "9876543210123", "The Full Book", null);
+      publicationSeq = metadataManager.findOrCreateBook(conn, publisherSeq,
+	  null, "9876543210987", "9876543210123", "The Full Book", "propIdF");
 
       // Add an alternative name for the publication -- test indirect method
       Long publicationSeq2 =
@@ -342,12 +341,10 @@ public class TestCounterReportsBookReport1L extends LockssTestCase {
 		"9876543210234", "9876543210345", "The Book In Sections", null);
 
       // Add an alternative name for the publication. -- test indirect method
-      Long publicationSeq2 =
-	  metadataManager.findOrCreatePublication(conn, publisherSeq,
-	        null, null,
-	      	"9876543210234", "9876543210345", 
-	      	MetadataField.PUBLICATION_TYPE_BOOK,
-		null, null, "Book In Sections Alt", null);
+      Long publicationSeq2 = metadataManager.findOrCreatePublication(conn,
+	  publisherSeq, null, null, "9876543210234", "9876543210345", 
+	  MetadataField.PUBLICATION_TYPE_BOOK, null, null,
+	  "Book In Sections Alt", "propIdS");
 
       assertEquals(publicationSeq, publicationSeq2);
 
@@ -486,7 +483,7 @@ public class TestCounterReportsBookReport1L extends LockssTestCase {
 
     assertEquals("\"Total for all books\",,,,,,,2,0,0,0,0,2", line);
     line = reader.readLine();
-    assertEquals("\"The Full Book\",\"Full Book Publisher\",fullPlatform,10.1000/182,,987-654321-0987,987-654321-0123,2,0,0,0,0,2",
+    assertEquals("\"The Full Book\",\"Full Book Publisher\",fullPlatform,10.1000/182,propIdF,987-654321-0987,987-654321-0123,2,0,0,0,0,2",
 	line);
     assertNull(reader.readLine());
 
@@ -510,7 +507,7 @@ public class TestCounterReportsBookReport1L extends LockssTestCase {
     assertEquals("Total for all books\t\t\t\t\t\t\t2\t0\t0\t0\t0\t2", line);
     line = reader.readLine();
     assertEquals(
-	"The Full Book\tFull Book Publisher\tfullPlatform\t10.1000/182\t\t987-654321-0987\t987-654321-0123\t2\t0\t0\t0\t0\t2",
+	"The Full Book\tFull Book Publisher\tfullPlatform\t10.1000/182\tpropIdF\t987-654321-0987\t987-654321-0123\t2\t0\t0\t0\t0\t2",
 	line);
     assertNull(reader.readLine());
 

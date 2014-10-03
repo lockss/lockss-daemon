@@ -1,5 +1,5 @@
 /*
- * $Id: TestCounterReportsJournalReport1L.java,v 1.12 2014-09-16 19:55:42 fergaloy-sf Exp $
+ * $Id: TestCounterReportsJournalReport1L.java,v 1.13 2014-10-03 23:04:44 fergaloy-sf Exp $
  */
 
 /*
@@ -263,10 +263,8 @@ public class TestCounterReportsJournalReport1L extends LockssTestCase {
 	  metadataManager.findOrCreatePublisher(conn, "publisher");
 
       // Add the publication -- test direct method
-      publicationSeq =
-	  metadataManager.findOrCreateJournal(conn, publisherSeq,  
-	                                      "12345678", "98765432", 
-	                                      "JOURNAL", null);
+      publicationSeq = metadataManager.findOrCreateJournal(conn, publisherSeq,  
+	  "12345678", "98765432", "JOURNAL", "propId");
 
       // Add an alternative name for the publication -- test indirect method
       Long publicationSeq2 =
@@ -423,7 +421,7 @@ public class TestCounterReportsJournalReport1L extends LockssTestCase {
     assertEquals("\"Total for all journals\",,,,,,,4,2,2,0,0,0,0,4", line);
     line = reader.readLine();
     assertEquals(
-	"JOURNAL,publisher,platform,10.1000/182,,1234-5678,9876-5432,4,2,2,0,0,0,0,4",
+	"JOURNAL,publisher,platform,10.1000/182,propId,1234-5678,9876-5432,4,2,2,0,0,0,0,4",
 	line);
     assertNull(reader.readLine());
     IOUtil.safeClose(reader);
@@ -446,7 +444,7 @@ public class TestCounterReportsJournalReport1L extends LockssTestCase {
 	"Total for all journals\t\t\t\t\t\t\t4\t2\t2\t0\t0\t0\t0\t4", line);
     line = reader.readLine();
     assertEquals(
-	"JOURNAL\tpublisher\tplatform\t10.1000/182\t\t1234-5678\t9876-5432\t4\t2\t2\t0\t0\t0\t0\t4",
+	"JOURNAL\tpublisher\tplatform\t10.1000/182\tpropId\t1234-5678\t9876-5432\t4\t2\t2\t0\t0\t0\t0\t4",
 	line);
     assertNull(reader.readLine());
     IOUtil.safeClose(reader);

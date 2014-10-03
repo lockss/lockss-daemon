@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.56 2014-10-01 08:17:25 tlipkis Exp $
+ * $Id: OpenUrlResolver.java,v 1.57 2014-10-03 23:04:45 fergaloy-sf Exp $
  */
 
 /*
@@ -1196,7 +1196,7 @@ public class OpenUrlResolver {
             new BibliographicItemAdapter() {}
               .setPublisherName(title.getTdbPublisher().getName())
               .setPublicationTitle(title.getName())
-              .setProprietaryId(title.getProprietaryId())
+              .setProprietaryIds(title.getProprietaryIds())
               .setCoverageDepth(title.getCoverageDepth())
               .setPrintIssn(title.getPrintIssn())
               .setEissn(title.getEissn())

@@ -1,10 +1,10 @@
 /*
- * $Id: CounterReportsBookReport.java,v 1.1 2012-08-28 17:36:49 fergaloy-sf Exp $
+ * $Id: CounterReportsBookReport.java,v 1.2 2014-10-03 23:04:43 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2012-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,13 +29,6 @@
  in this Software without prior written authorization from Stanford University.
 
  */
-
-/**
- * A generic book COUNTER report.
- * 
- * @version 1.0
- * 
- */
 package org.lockss.exporter.counter;
 
 import java.util.ArrayList;
@@ -45,6 +38,12 @@ import org.lockss.app.LockssDaemon;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 
+/**
+ * A generic book COUNTER report.
+ * 
+ * @version 1.0
+ * 
+ */
 public abstract class CounterReportsBookReport extends BaseCounterReport {
   private static final Logger log = Logger
       .getLogger("CounterReportsBookReport");
@@ -82,7 +81,8 @@ public abstract class CounterReportsBookReport extends BaseCounterReport {
    *           if the period specified is not valid.
    */
   protected CounterReportsBookReport(LockssDaemon daemon, int startMonth,
-      int startYear, int endMonth, int endYear) throws IllegalArgumentException {
+      int startYear, int endMonth, int endYear)
+      throws IllegalArgumentException {
     super(daemon, startMonth, startYear, endMonth, endYear);
   }
 
@@ -119,8 +119,8 @@ public abstract class CounterReportsBookReport extends BaseCounterReport {
 	    .append(separator)
 	    .append(StringUtil.csvEncode(blankNull(book.getDoi())))
 	    .append(separator)
-	    .append(StringUtil.csvEncode(blankNull(book.getProprietaryId())))
-	    .append(separator)
+	    .append(StringUtil.csvEncode(StringUtil.separatedString(book.
+		getProprietaryIds()))).append(separator)
 	    .append(StringUtil.csvEncode(blankNull(book.getIsbn())))
 	    .append(separator)
 	    .append(StringUtil.csvEncode(blankNull(book.getIssn())));
@@ -129,9 +129,9 @@ public abstract class CounterReportsBookReport extends BaseCounterReport {
 	    .append(blankNull(book.getPublisherName())).append(separator)
 	    .append(blankNull(book.getPublishingPlatform())).append(separator)
 	    .append(blankNull(book.getDoi())).append(separator)
-	    .append(blankNull(book.getProprietaryId())).append(separator)
-	    .append(blankNull(book.getIsbn())).append(separator)
-	    .append(blankNull(book.getIssn()));
+	    .append(StringUtil.separatedString(book.getProprietaryIds()))
+	    .append(separator).append(blankNull(book.getIsbn()))
+	    .append(separator).append(blankNull(book.getIssn()));
       }
 
       // Output the aggregate requests during the period.
