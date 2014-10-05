@@ -1,5 +1,5 @@
 /*
- * $Id: DbManagerSql.java,v 1.4 2014-10-03 23:04:45 fergaloy-sf Exp $
+ * $Id: DbManagerSql.java,v 1.5 2014-10-05 02:49:59 fergaloy-sf Exp $
  */
 
 /*
@@ -2037,20 +2037,6 @@ public class DbManagerSql {
       + KEYWORD_TABLE
       + " set " + KEYWORD_COLUMN + " = ?"
       + " where " + KEYWORD_COLUMN + " = ?";
-
-  // SQL statement that obtains all the trimmable publication identifiers in the
-  // database.
-  private static final String GET_TRIMMABLE_PUBLICATION_IDS_QUERY = "select "
-      + "distinct " + OBSOLETE_PUBLICATION_ID_COLUMN
-      + " from " + PUBLICATION_TABLE
-      + " where " + OBSOLETE_PUBLICATION_ID_COLUMN + " like ' %'"
-      + " or " + OBSOLETE_PUBLICATION_ID_COLUMN + " like '% '";
-
-  // Query to update a publication identifier.
-  private static final String UPDATE_PUBLICATION_ID_QUERY = "update "
-      + PUBLICATION_TABLE
-      + " set " + OBSOLETE_PUBLICATION_ID_COLUMN + " = ?"
-      + " where " + OBSOLETE_PUBLICATION_ID_COLUMN + " = ?";
 
   // SQL statements that create the necessary version 18 indices.
   private static final String[] VERSION_18_INDEX_CREATE_QUERIES = new String[] {
@@ -6246,11 +6232,6 @@ public class DbManagerSql {
       // Trim keywords.
       trimTextColumns(conn, "keyword", GET_TRIMMABLE_KEYWORDS_QUERY,
 	  KEYWORD_COLUMN, UPDATE_KEYWORD_QUERY);
-
-      // Trim publication identifiers.
-      trimTextColumns(conn, "publication identifier",
-	  GET_TRIMMABLE_PUBLICATION_IDS_QUERY, OBSOLETE_PUBLICATION_ID_COLUMN,
-	  UPDATE_PUBLICATION_ID_QUERY);
 
       // Record the current database version in the database.
       addDbVersion(conn, 17);
