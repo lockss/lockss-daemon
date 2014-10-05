@@ -1,5 +1,5 @@
 /*
- * $Id: DbManagerSql.java,v 1.5 2014-10-05 02:49:59 fergaloy-sf Exp $
+ * $Id: DbManagerSql.java,v 1.6 2014-10-05 04:57:46 fergaloy-sf Exp $
  */
 
 /*
@@ -7399,7 +7399,7 @@ public class DbManagerSql {
 
 	// Get the proprietary identifier.
 	String publicationId =
-	    resultSet.getString(OBSOLETE_PUBLICATION_ID_COLUMN);
+	    resultSet.getString(OBSOLETE_PUBLICATION_ID_COLUMN).trim();
 	if (log.isDebug3())
 	  log.debug3(DEBUG_HEADER + "publicationId = " + publicationId);
 
