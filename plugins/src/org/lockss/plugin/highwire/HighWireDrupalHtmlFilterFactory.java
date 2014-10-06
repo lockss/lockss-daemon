@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireDrupalHtmlFilterFactory.java,v 1.8 2014-08-21 00:53:03 etenbrink Exp $
+ * $Id: HighWireDrupalHtmlFilterFactory.java,v 1.9 2014-10-06 23:07:35 etenbrink Exp $
  */
 
 /*
@@ -63,22 +63,33 @@ public class HighWireDrupalHtmlFilterFactory implements FilterFactory {
         new TagNameFilter("head"),
         // remove ALL comments
         HtmlNodeFilters.comment(),
-        // No relevant content in header/footer
+        // No relevant content in header/footer (in crawl filter)
         new TagNameFilter("header"),
         new TagNameFilter("footer"),
         // copyright statement may change
         HtmlNodeFilters.tagWithAttribute("ul", "class", "copyright-statement"),
         // messages can appear arbitrarily
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "messages"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "alert"),
         // citation reference extras, right sidebar, prev/next pager can change
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "cit-extra"),
+        //  (in crawl filter)
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-right-wrapper"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pane-highwire-node-pager"),
+        new TagNameFilter("aside"),
         // author tool-tips changed for http://ajpheart.physiology.org/content/306/11/H1594.figures-only
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "author-tooltip"),
         // most scripts are in head, however, if any are in the body they are filtered
         new TagNameFilter("script"),
         new TagNameFilter("noscript"),
+        // while we collect rapid-responses, they change, so do not include for hash
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "rapid-responses"),
+        // APS articles sometimes had view links, but not always
+        HtmlNodeFilters.tagWithAttributeRegex("a", "class", "hw-link"),
+        // BMJ had tags on http://www.bmj.com/content/330/7506/0.8/rapid-responses
+        HtmlNodeFilters.tagWithAttribute("div", "id", "skip-link"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "cookie-notice"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "vote-widget"),
     };
     
     // HTML transform to convert all remaining nodes to plaintext nodes
