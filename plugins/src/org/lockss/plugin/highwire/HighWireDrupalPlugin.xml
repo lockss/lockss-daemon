@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>11</string>
+    <string>12</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>6</string>
+        <string>7</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -34,7 +34,7 @@
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.65.0</string>
+    <string>1.67.0</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -103,11 +103,17 @@
       <string>2,"^%scontent/(?!([^/]+/)?%s)[^?]*[.](?:gif)", base_url, volume_name</string>
       <!-- all images, resources, css, js, etc. -->
       <string>1,"^https?://%s/[^?]*[.](?:bmp|gif|ico|jpe?g|png|tif?f|(css|js)(?:[?].*)?)$", base_url_host</string>
-      <string>1,"^https?://%s[^?]*/highwire/jcore", base_url_host</string>
+      <!-- various font files, etc. -->
+      <string>1,"^https?://%s/[^?]*(highwire/jcore|[.](eot|svg|ttf|woff)$)", base_url_host</string>
+      <!-- permission page on any cloudfront host
+      <string>1,"^https?://[^.]+[.]cloudfront[.]net/lockss[.]htm$"</string>
+       -->
       <!-- Do not crawl unless from base url -->
       <string>4,"^%s", base_url</string>
+      <!-- Do not crawl these BMJ variations -->
+      <string>2,"^%scontent/.+([.]print|/(article-info|related|submit))", base_url</string>
       <!-- filter links with '{' like http://ajprenal.physiology.org/content/299/4/{openurl}?query=rft... -->
-      <string>2,"^%s(?:[^?]+(?:most-(?:cited|read)|featured_article|featured-podcasts|(?:back-matter|ed-board)[.]pdf)|content/(?:by/|early/|[^{]+[{]))", base_url</string>
+      <string>2,"^%s(?:[^?]+([?](sort|tab|form)|most-(cited|read)|featured_article|featured-podcasts|(back-matter|ed-board)[.]pdf)|content/(by/|early/|[^{]+[{]))", base_url</string>
       <string>1,"^%s(?:content(?:/[^/]+)?/(?:%s|suppl)|highwire/(?:filestream|markup|article_citation_preview))/", base_url, volume_name</string>
       <string>1,"^%shighwire/citation/[^/]+/ris$", base_url</string>
     </list>
@@ -168,6 +174,10 @@
   <entry>
     <string>au_permission_checker_factory</string>
     <string>org.lockss.plugin.highwire.HighWireDrupalPermissionCheckerFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_per_host_permission_path</string>
+    <string>/lockss.htm</string>
   </entry>
   <entry>
     <string>plugin_fetch_rate_limiter_source</string>
