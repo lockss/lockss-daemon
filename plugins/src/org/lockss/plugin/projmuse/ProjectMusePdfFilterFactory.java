@@ -1,10 +1,10 @@
 /*
- * $Id: ProjectMusePdfFilterFactory.java,v 1.7 2013-03-26 22:48:52 pgust Exp $
+ * $Id: ProjectMusePdfFilterFactory.java,v 1.8 2014-10-06 22:44:01 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,128 +32,87 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.projmuse;
 
+import java.util.regex.Pattern;
+
 import org.lockss.filter.pdf.*;
 import org.lockss.pdf.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.Logger;
 
-public class ProjectMusePdfFilterFactory extends SimplePdfFilterFactory {
+public class ProjectMusePdfFilterFactory extends ExtractingPdfFilterFactory {
   
   private static final Logger logger = Logger.getLogger(ProjectMusePdfFilterFactory.class);
   
-  
-  @Override
-  public void transform(ArchivalUnit au, PdfDocument pdfDocument)
-      throws PdfException {
+  public static class FrontPageWorker extends PdfTokenStreamWorker {
     
-    ProvidedByWorkerTransform worker = new ProvidedByWorkerTransform();
-    boolean removeFirstPage = false;
+    public static final Pattern ADDITIONAL_INFORMATION =
+        Pattern.compile("For additional information about this", Pattern.CASE_INSENSITIVE);
     
-    for (PdfPage pdfPage : pdfDocument.getPages()) {
-      PdfTokenStream pdfTokenStream = pdfPage.getPageTokenStream();
-      worker.process(pdfTokenStream);
-      if (worker.result) {
-        worker.transform(au, pdfTokenStream);
-        removeFirstPage = true;
-      }
-    }
-    
-    if (removeFirstPage) {
-      pdfDocument.removePage(0);
-    }
-    
-    pdfDocument.unsetCreationDate();
-    pdfDocument.unsetModificationDate();
-    pdfDocument.unsetMetadata();
-    PdfUtil.normalizeTrailerId(pdfDocument);
-    
-  }
-  
-  public static class ProvidedByWorkerTransform
-      extends PdfTokenStreamWorker
-      implements PdfTransform<PdfTokenStream> {
-    
-    // Case may vary, so need to do case-independent match
-    public static final String PROVIDED_BY_REGEX = "\\s*(?i)Access Provided by(?-i) .*";
+    public static final Pattern PROVIDED_BY =
+        Pattern.compile("Access provided by", Pattern.CASE_INSENSITIVE);
     
     private boolean result;
     
     private int state;
     
-    private int startIndex;
-    
-    public ProvidedByWorkerTransform() {
+    public FrontPageWorker() {
       super(Direction.FORWARD);
     }
     
     @Override
-    public void operatorCallback()
-        throws PdfException {
+    public void operatorCallback() throws PdfException {
       if (logger.isDebug3()) {
-        logger.debug3("ProvidedByWorkerTransform: initial: " + state);
-        logger.debug3("ProvidedByWorkerTransform: index: " + getIndex());
-        logger.debug3("ProvidedByWorkerTransform: operator: " + getOpcode());
+        logger.debug3("FrontPageWorker: initial: " + state);
+        logger.debug3("FrontPageWorker: index: " + getIndex());
+        logger.debug3("FrontPageWorker: operator: " + getOpcode());
       }
       
       switch (state) {
         
         case 0: {
-          // FIXME 1.60
-          if (PdfOpcodes.BEGIN_TEXT_OBJECT.equals(getOpcode())) {
-            startIndex = getIndex();
+          if (isBeginTextObject()) {
             ++state; 
           }
         } break;
         
         case 1: {
-          // FIXME 1.60
-          if (PdfOpcodes.SHOW_TEXT.equals(getOpcode())
-              && getTokens().get(getIndex() - 1).getString().matches(PROVIDED_BY_REGEX)) {
-            ++state; 
-          } 
-          // FIXME 1.60
-          else if (PdfOpcodes.SHOW_TEXT_GLYPH_POSITIONING.equals(getOpcode())) {
-            PdfToken token = getTokens().get(getIndex() - 1);
-            if (token.isArray()) {
-              for (PdfToken t : token.getArray()) {
-        	if (t.isString() && t.getString().matches(PROVIDED_BY_REGEX)) {
-        	  ++state; 
-        	}
-              }
-            }
-            // FIXME The following never happens, the operand can only be an array
-            else if (token.isString() && token.getString().matches(PROVIDED_BY_REGEX)) {
-              ++state; 
-            }
+          // FIXME 1.67: isShowTextContains/isShowTextGlyphPositioningContains
+          if (isShowTextFind(ADDITIONAL_INFORMATION) || isShowTextGlyphPositioningFind(ADDITIONAL_INFORMATION)) {
+            ++state;
           }
-          // FIXME 1.60
-          else if (PdfOpcodes.END_TEXT_OBJECT.equals(getOpcode())) { 
+          else if (isEndTextObject()) { 
             state = 0;
           }
         } break;
         
         case 2: {
-          // FIXME 1.60
-          if (PdfOpcodes.END_TEXT_OBJECT.equals(getOpcode())) {
+          // FIXME 1.67: isShowTextContains/isShowTextGlyphPositioningContains
+          if (isShowTextFind(PROVIDED_BY) || isShowTextGlyphPositioningFind(PROVIDED_BY)) {
+            ++state;
+          }
+          else if (isEndTextObject()) { 
+            state = 0;
+          }
+        } break;
+        
+        case 3: {
+          if (isEndTextObject()) {
             result = true;
             stop(); 
           }
         } break;
         
         default: {
-          throw new PdfException("Invalid state in ProvidedByWorkerTransform: " + state);
+          throw new PdfException("Invalid state in FrontPageWorker: " + state);
         }
     
       }
     
       if (logger.isDebug3()) {
-        logger.debug3("ProvidedByWorkerTransform: final: " + state);
-        logger.debug3("ProvidedByWorkerTransform: result: " + result);
+        logger.debug3("FrontPageWorker: final: " + state);
+        logger.debug3("FrontPageWorker: result: " + result);
       }
       
-      if (result) {
-        getTokens().subList(startIndex, getIndex()).clear();
-      }
     }
     
     @Override
@@ -163,14 +122,26 @@ public class ProjectMusePdfFilterFactory extends SimplePdfFilterFactory {
       result = false;
     }
     
-    @Override
-    public void transform(ArchivalUnit au,
-                          PdfTokenStream pdfTokenStream)
-        throws PdfException {
-      if (result) {
-        pdfTokenStream.setTokens(getTokens());
+  }
+  
+  @Override
+  public void transform(ArchivalUnit au, PdfDocument pdfDocument) throws PdfException {
+    pdfDocument.unsetCreationDate();
+    pdfDocument.unsetCreator();
+    pdfDocument.unsetMetadata();
+    pdfDocument.unsetModificationDate();
+    pdfDocument.unsetProducer();
+    PdfUtil.normalizeTrailerId(pdfDocument);
+    
+    if (pdfDocument.getNumberOfPages() > 0) {
+      FrontPageWorker worker = new FrontPageWorker();
+      worker.process(pdfDocument.getPage(0).getPageTokenStream());
+      if (worker.result) {
+        pdfDocument.removePage(0);
       }
     }
     
+    PdfUtil.normalizeAllTokenStreams(pdfDocument);
   }
+  
 }
