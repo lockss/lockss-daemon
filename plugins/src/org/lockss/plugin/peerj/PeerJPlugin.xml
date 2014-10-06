@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <!-- to use new feature of HtmlNodeFilters in the html hash filter - allExceptSubtree() -->
@@ -129,9 +129,17 @@
     </map>
   </entry>
   <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.peerj.PeerJHtmlCrawlFilterFactory</string>
+  </entry>
+  <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.peerj.PeerJHtmlHashFilterFactory</string>
   </entry>
+  <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.peerj.PeerJPdfFilterFactory</string>
+  </entry>  
   <entry>
     <string>application/xml_filter_factory</string>
     <string>org.lockss.plugin.peerj.PeerJXmlFilterFactory</string>
