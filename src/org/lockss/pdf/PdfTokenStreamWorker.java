@@ -1,5 +1,5 @@
 /*
- * $Id: PdfTokenStreamWorker.java,v 1.8 2013-06-26 22:33:08 thib_gc Exp $
+ * $Id: PdfTokenStreamWorker.java,v 1.9 2014-10-06 22:41:57 thib_gc Exp $
  */
 
 /*
@@ -453,6 +453,21 @@ public abstract class PdfTokenStreamWorker {
 
   /**
    * <p>
+   * Retrieves the operand of a single-operand operator (at index
+   * <code>getIndex() - 1</code>).
+   * </p>
+   * 
+   * @return The current operator's single operand (or null if the operator has
+   * another number of operands).
+   * @since 1.67
+   */
+  protected PdfToken getSingleOperand() {
+    List<PdfToken> operands = getOperands();
+    return (operands.size() == 1) ? operands.get(0) : null;
+  }
+
+  /**
+   * <p>
    * Gets the operands that go with the operator for which
    * {@link #operatorCallback()} is being called.
    * </p>
@@ -666,6 +681,24 @@ public abstract class PdfTokenStreamWorker {
   /**
    * <p>
    * Determines if the current opcode is {@link PdfOpcodes#SHOW_TEXT} and its
+   * string operand contains the given substring.
+   * </p>
+   * 
+   * @param substr
+   *          A given substring.
+   * @return <code>true</code> if the current opcode is
+   *         {@link PdfOpcodes#SHOW_TEXT} and its string operand contains
+   *         <code>substr</code>.
+   * @since 1.67
+   * @see String#contains(String)
+   */
+  protected boolean isShowTextContains(String substr) {
+    return isShowText() && getSingleOperand().getString().contains(substr);
+  }
+  
+  /**
+   * <p>
+   * Determines if the current opcode is {@link PdfOpcodes#SHOW_TEXT} and its
    * string operand ends with the given suffix.
    * </p>
    * 
@@ -678,7 +711,7 @@ public abstract class PdfTokenStreamWorker {
    * @see String#endsWith(String)
    */
   protected boolean isShowTextEndsWith(String suffix) {
-    return isShowText() && getTokens().get(getIndex() - 1).getString().endsWith(suffix);
+    return isShowText() && getSingleOperand().getString().endsWith(suffix);
   }
   
   /**
@@ -696,7 +729,7 @@ public abstract class PdfTokenStreamWorker {
    * @see String#equals(Object)
    */
   protected boolean isShowTextEquals(String str) {
-    return isShowText() && getTokens().get(getIndex() - 1).getString().equals(str);
+    return isShowText() && getSingleOperand().getString().equals(str);
   }
   
   /**
@@ -714,7 +747,7 @@ public abstract class PdfTokenStreamWorker {
    * @see String#equalsIgnoreCase(String)
    */
   protected boolean isShowTextEqualsIgnoreCase(String str) {
-    return isShowText() && getTokens().get(getIndex() - 1).getString().equalsIgnoreCase(str);
+    return isShowText() && getSingleOperand().getString().equalsIgnoreCase(str);
   }
   
   /**
@@ -724,8 +757,8 @@ public abstract class PdfTokenStreamWorker {
    * {@link Matcher#find()}.
    * </p>
    * <p>
-   * This method uses {@link Matcher#matches()}, which implicitly anchors at
-   * the beginning of the input string.
+   * This method uses {@link Matcher#find()}, which implicitly does not anchor
+   * at the beginning of the input string.
    * </p>
    * 
    * @param pattern
@@ -734,10 +767,10 @@ public abstract class PdfTokenStreamWorker {
    *         {@link PdfOpcodes#SHOW_TEXT} and its string operand matches
    *         <code>pattern</code>.
    * @since 1.62
-   * @see String#matches(String)
+   * @see Matcher#find()
    */
   protected boolean isShowTextFind(Pattern pattern) {
-    return isShowText() && pattern.matcher(getTokens().get(getIndex() - 1).getString()).find();
+    return isShowText() && pattern.matcher(getSingleOperand().getString()).find();
   }
   
   /**
@@ -757,6 +790,25 @@ public abstract class PdfTokenStreamWorker {
   /**
    * <p>
    * Determines if the current opcode is
+   * {@link PdfOpcodes#SHOW_TEXT_GLYPH_POSITIONING} and its string operand
+   * contains the given substring.
+   * </p>
+   * 
+   * @param substr
+   *          A given substring.
+   * @return <code>true</code> if the current opcode is
+   *         {@link PdfOpcodes#SHOW_TEXT_GLYPH_POSITIONING} and its string
+   *         operand contains <code>substr</code>.
+   * @since 1.67
+   * @see String#contains(String)
+   */
+  protected boolean isShowTextGlyphPositioningContains(String substr) {
+    return isShowTextGlyphPositioning() && getSingleOperand().getString().contains(substr);
+  }
+  
+  /**
+   * <p>
+   * Determines if the current opcode is
    * {@link PdfOpcodes#SHOW_TEXT_GLYPH_POSITIONING} and its string operand ends
    * with the given suffix.
    * </p>
@@ -770,7 +822,7 @@ public abstract class PdfTokenStreamWorker {
    * @see String#endsWith(String)
    */
   protected boolean isShowTextGlyphPositioningEndsWith(String suffix) {
-    return isShowTextGlyphPositioning() && getTokens().get(getIndex() - 1).getString().endsWith(suffix);
+    return isShowTextGlyphPositioning() && getSingleOperand().getString().endsWith(suffix);
   }
   
   /**
@@ -794,7 +846,7 @@ public abstract class PdfTokenStreamWorker {
       return false;
     }
     StringBuilder sb = new StringBuilder();
-    for (PdfToken tok : getTokens().get(getIndex() - 1).getArray()) {
+    for (PdfToken tok : getSingleOperand().getArray()) {
       if (tok.isString()) {
         sb.append(tok.getString());
       }
@@ -823,7 +875,7 @@ public abstract class PdfTokenStreamWorker {
       return false;
     }
     StringBuilder sb = new StringBuilder();
-    for (PdfToken tok : getTokens().get(getIndex() - 1).getArray()) {
+    for (PdfToken tok : getSingleOperand().getArray()) {
       if (tok.isString()) {
         sb.append(tok.getString());
       }
@@ -838,7 +890,7 @@ public abstract class PdfTokenStreamWorker {
    * matches the given pattern according to {@link Matcher#find()}.
    * </p>
    * <p>
-   * This method uses {@link Matcher#find()}, which does not implicitly anchor
+   * This method uses {@link Matcher#find()}, which implicitly does not anchor
    * at the beginning of the input string.
    * </p>
    * 
@@ -848,14 +900,14 @@ public abstract class PdfTokenStreamWorker {
    *         {@link PdfOpcodes#SHOW_TEXT_GLYPH_POSITIONING} and its string
    *         operand matches <code>regex</code>.
    * @since 1.62
-   * @see String#matches(String)
+   * @see Matcher#find()
    */
   protected boolean isShowTextGlyphPositioningFind(Pattern pattern) {
     if (!isShowTextGlyphPositioning()) {
       return false;
     }
     StringBuilder sb = new StringBuilder();
-    for (PdfToken tok : getTokens().get(getIndex() - 1).getArray()) {
+    for (PdfToken tok : getSingleOperand().getArray()) {
       if (tok.isString()) {
         sb.append(tok.getString());
       }
@@ -880,14 +932,14 @@ public abstract class PdfTokenStreamWorker {
    *         {@link PdfOpcodes#SHOW_TEXT_GLYPH_POSITIONING} and its string
    *         operand matches <code>regex</code>.
    * @since 1.60
-   * @see String#matches(String)
+   * @see Matcher#matches()
    */
   protected boolean isShowTextGlyphPositioningMatches(Pattern pattern) {
     if (!isShowTextGlyphPositioning()) {
       return false;
     }
     StringBuilder sb = new StringBuilder();
-    for (PdfToken tok : getTokens().get(getIndex() - 1).getArray()) {
+    for (PdfToken tok : getSingleOperand().getArray()) {
       if (tok.isString()) {
         sb.append(tok.getString());
       }
@@ -904,11 +956,8 @@ public abstract class PdfTokenStreamWorker {
    * <p>
    * This method uses {@link String#matches(String)} which compiles the regular
    * expression each time, so it may be inefficient compared to
-   * {@link #isShowTextGlyphPositioningMatches(Pattern)}.
-   * </p>
-   * <p>
-   * {@link String#matches(String)} delegates to {@link Matcher#matches()},
-   * which implicitly anchors at the beginning of the input string.
+   * {@link #isShowTextGlyphPositioningMatches(Pattern)}, and also implicitly
+   * anchors at the beginning of the input string.
    * </p>
    * 
    * @param regex
@@ -917,15 +966,15 @@ public abstract class PdfTokenStreamWorker {
    *         {@link PdfOpcodes#SHOW_TEXT_GLYPH_POSITIONING} and its string
    *         operand matches <code>regex</code>.
    * @since 1.60
-   * @see String#matches(String)
    * @see #isShowTextGlyphPositioningMatches(Pattern)
+   * @see String#matches(String)
    */
   protected boolean isShowTextGlyphPositioningMatches(String regex) {
     if (!isShowTextGlyphPositioning()) {
       return false;
     }
     StringBuilder sb = new StringBuilder();
-    for (PdfToken tok : getTokens().get(getIndex() - 1).getArray()) {
+    for (PdfToken tok : getSingleOperand().getArray()) {
       if (tok.isString()) {
         sb.append(tok.getString());
       }
@@ -954,7 +1003,7 @@ public abstract class PdfTokenStreamWorker {
       return false;
     }
     StringBuilder sb = new StringBuilder();
-    for (PdfToken tok : getTokens().get(getIndex() - 1).getArray()) {
+    for (PdfToken tok : getSingleOperand().getArray()) {
       if (tok.isString()) {
         sb.append(tok.getString());
         if (prefix.length() <= sb.length()) {
@@ -982,10 +1031,10 @@ public abstract class PdfTokenStreamWorker {
    *         {@link PdfOpcodes#SHOW_TEXT} and its string operand matches
    *         <code>pattern</code>.
    * @since 1.60
-   * @see String#matches(String)
+   * @see Matcher#matches()
    */
   protected boolean isShowTextMatches(Pattern pattern) {
-    return isShowText() && pattern.matcher(getTokens().get(getIndex() - 1).getString()).matches();
+    return isShowText() && pattern.matcher(getSingleOperand().getString()).matches();
   }
   
   /**
@@ -996,11 +1045,8 @@ public abstract class PdfTokenStreamWorker {
    * <p>
    * This method uses {@link String#matches(String)} which compiles the regular
    * expression each time, so it may be inefficient compared to
-   * {@link #isShowTextMatches(Pattern)}.
-   * </p>
-   * <p>
-   * {@link String#matches(String)} delegates to {@link Matcher#matches()},
-   * which implicitly anchors at the beginning of the input string.
+   * {@link #isShowTextMatches(Pattern)}, and also implicitly anchors at the
+   * beginning of the input string.
    * </p>
    * 
    * @param regex
@@ -1009,11 +1055,11 @@ public abstract class PdfTokenStreamWorker {
    *         {@link PdfOpcodes#SHOW_TEXT} and its string operand matches
    *         <code>regex</code>.
    * @since 1.60
-   * @see String#matches(String)
    * @see #isShowTextMatches(Pattern)
+   * @see String#matches(String)
    */
   protected boolean isShowTextMatches(String regex) {
-    return isShowText() && getTokens().get(getIndex() - 1).getString().matches(regex);
+    return isShowText() && getSingleOperand().getString().matches(regex);
   }
   
   /**
@@ -1031,7 +1077,7 @@ public abstract class PdfTokenStreamWorker {
    * @see String#startsWith(String)
    */
   protected boolean isShowTextStartsWith(String prefix) {
-    return isShowText() && getTokens().get(getIndex() - 1).getString().startsWith(prefix);
+    return isShowText() && getSingleOperand().getString().startsWith(prefix);
   }
   
   /**
