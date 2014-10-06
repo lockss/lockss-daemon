@@ -1,10 +1,10 @@
 /*
- * $Id: PdfBoxTokenStream.java,v 1.5 2013-11-21 00:30:10 thib_gc Exp $
+ * $Id: PdfBoxTokenStream.java,v 1.6 2014-10-06 22:42:39 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -87,7 +87,11 @@ public abstract class PdfBoxTokenStream implements PdfTokenStream {
   @Override
   public List<PdfToken> getTokens() throws PdfException {
     try {
-      List<PdfToken> tokens = PdfBoxTokens.convertList(getPdStream().getStream().getStreamTokens());
+      PDStream pdStream = getPdStream();
+      if (pdStream == null) {
+        return new ArrayList<PdfToken>(); // Blank page with null stream
+      }
+      List<PdfToken> tokens = PdfBoxTokens.convertList(pdStream.getStream().getStreamTokens());
       decodeStringsWithFontContext(tokens);
       return tokens;
     }
