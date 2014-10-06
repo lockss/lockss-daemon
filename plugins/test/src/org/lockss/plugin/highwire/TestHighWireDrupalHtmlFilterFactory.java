@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireDrupalHtmlFilterFactory.java,v 1.3 2014-07-31 21:51:45 etenbrink Exp $
+ * $Id: TestHighWireDrupalHtmlFilterFactory.java,v 1.4 2014-10-06 23:13:29 etenbrink Exp $
  */
 
 /*
@@ -150,6 +150,45 @@ public class TestHighWireDrupalHtmlFilterFactory extends LockssTestCase {
   private static final String withoutToolTip =
       "A 9";
   
+  private static final String withAside = "<div id=\"page\">" +
+      "A<aside>B\n" + 
+      " <div class=\"panel-pane pane-service-links\">\n" + 
+      "  <div class=\"pane-content\">\n" + 
+      "    <div class=\"service-links\">" +
+      "    </div>" +
+      "  </div>\n" + 
+      " </div>\n" + 
+      "</aside>\n" +
+      "9</div>";
+  private static final String withoutAside = 
+      "A 9";
+  
+  private static final String withForm = "<div id=\"page\">" +
+      "A<aside>\n" + 
+      " <div class=\"panel-pane pane-service-links\">\n" + 
+      "  <div class=\"pane-content\">\n" + 
+      "    <div class=\"service-links\">" +
+      "    </div>" +
+      "  </div>\n" + 
+      " </div>\n" + 
+      "</aside>\n" +
+      "9</div>";
+  private static final String withoutForm = 
+      "A 9";
+  
+  private static final String withRapidResponse =
+      "A<html>\n" +
+  "<div class=\"panel-pane pane-views-panes pane-bmj-rapid-responses-bmj-rr-article\">\n" + 
+  "        <h2 class=\"pane-title\">All rapid responses</h2>\n" + 
+  "        <div class=\"response-body\">\n" + 
+  "        </div>\n" + 
+  "</div>" +
+  "\n" + 
+  "</html>9";
+  private static final String withoutRapidResponse =
+  "A 9";
+
+  
   public void testFiltering() throws Exception {
     assertFilterToString(headHtml, headHtmlFiltered);
     assertFilterToString(comment, commentFiltered);
@@ -163,6 +202,9 @@ public class TestHighWireDrupalHtmlFilterFactory extends LockssTestCase {
     assertFilterToString(withSidebar, withoutSidebar);
     assertFilterToString(withScript, withoutScript);
     assertFilterToString(withToolTip, withoutToolTip);
+    assertFilterToString(withAside, withoutAside);
+    assertFilterToString(withForm, withoutForm);
+    assertFilterToString(withRapidResponse, withoutRapidResponse);
     
   }
   

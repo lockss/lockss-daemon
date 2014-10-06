@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireDrupalHtmlCrawlFilterFactory.java,v 1.1 2014-03-14 20:21:33 etenbrink Exp $
+ * $Id: TestHighWireDrupalHtmlCrawlFilterFactory.java,v 1.2 2014-10-06 23:13:29 etenbrink Exp $
  */
 
 /*
@@ -192,6 +192,36 @@ public class TestHighWireDrupalHtmlCrawlFilterFactory extends LockssTestCase {
       "\n" +
       "</div>";
   
+  private static final String withAside = "<div id=\"page\">" +
+      "<aside>\n" + 
+      " <div class=\"panel-pane pane-service-links\">\n" + 
+      "  <div class=\"pane-content\">\n" + 
+      "    <div class=\"service-links\">" +
+      "    </div>" +
+      "  </div>\n" + 
+      " </div>\n" + 
+      "</aside>\n" +
+      "</div>";
+  
+  private static final String withoutAside = "<div id=\"page\">" +
+      "\n" +
+      "</div>";
+  
+  private static final String withForm = "<div id=\"page\">" +
+      "<aside>\n" + 
+      " <div class=\"panel-pane pane-service-links\">\n" + 
+      "  <div class=\"pane-content\">\n" + 
+      "    <div class=\"service-links\">" +
+      "    </div>" +
+      "  </div>\n" + 
+      " </div>\n" + 
+      "</aside>\n" +
+      "</div>";
+  
+  private static final String withoutForm = "<div id=\"page\">" +
+      "\n" +
+      "</div>";
+  
   
   public void testFiltering() throws Exception {
     InputStream inA;
@@ -226,6 +256,18 @@ public class TestHighWireDrupalHtmlCrawlFilterFactory extends LockssTestCase {
         Constants.DEFAULT_ENCODING);
     a = StringUtil.fromInputStream(inA);
     assertEquals(withoutPager, a);
+    
+    // aside
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(withAside),
+        Constants.DEFAULT_ENCODING);
+    a = StringUtil.fromInputStream(inA);
+    assertEquals(withoutAside, a);
+    
+    // comments-form
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(withForm),
+        Constants.DEFAULT_ENCODING);
+    a = StringUtil.fromInputStream(inA);
+    assertEquals(withoutForm, a);
     
   }
   
