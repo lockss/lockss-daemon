@@ -1,0 +1,20 @@
+{
+
+  publisher <
+    name = Elementa: Science of the Anthropocene
+  >
+
+  {
+    title <
+      name = Elementa: Science of the Anthropocene 
+    >
+
+      plugin = needs.plugin
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://elementascience.org/
+      comment[bioOne] = published by bioone, but not on standard platform.
+
+  }
+
+}
+
