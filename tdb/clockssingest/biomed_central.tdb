@@ -6509,8 +6509,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 2050-7410
       comment[0] = no publication yet, 09/12/2013
 
-      au < expected ; exists ; 2013 ; Video Journal of Endoscopic Surgery and Interventional Techniques Volume 1 ; 1 >
-      au < expected ; exists ; 2014 ; Video Journal of Endoscopic Surgery and Interventional Techniques Volume 2 ; 2 >
+      au < expected ; exists ; 2014 ; Video Journal of Endoscopic Surgery and Interventional Techniques Volume 1 ; 1 >
 
     }
 
