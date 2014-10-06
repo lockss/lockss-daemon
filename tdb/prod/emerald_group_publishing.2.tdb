@@ -5139,17 +5139,9 @@
     title <
       name = Journal of Applied Research in Higher Education ;
       issn = 1758-1184 ;
+      eissn = 2050-7003 ;
       issnl = 1758-1184
     >
-
-    {
-    comment[journal_issn] = 1758-1184
-    param[journal_id] = ?
-    
-    au < doNotProcess ; 2009 ; Journal of Applied Research in Higher Education Volume 1 ; 1 >
-    au < doNotProcess ; 2010 ; Journal of Applied Research in Higher Education Volume 2 ; 2 >
-    au < doNotProcess ; 2011 ; Journal of Applied Research in Higher Education Volume 3 ; 3 >
-    }
 
     {
     comment[journal_issn] = 2050-7003
@@ -5324,22 +5316,22 @@
 
   {
     title <
-      name = Journal of Chinese Economics and Foreign Trade Studies ;
+      name = Journal of Chinese Economic and Foreign Trade Studies ;
       issn = 1754-4408 ;
       eissn = 1754-4416 ;
       issnl = 1754-4408
     >
 
     comment[journal_issn] = 1754-4408
-    param[journal_id] = ?
+    param[journal_id] = jcefts
     
-    au < doNotProcess ; 2008 ; Journal of Chinese Economics and Foreign Trade Studies Volume 1 ; 1 >
-    au < doNotProcess ; 2009 ; Journal of Chinese Economics and Foreign Trade Studies Volume 2 ; 2 >
-    au < doNotProcess ; 2010 ; Journal of Chinese Economics and Foreign Trade Studies Volume 3 ; 3 >
-    au < doNotProcess ; 2011 ; Journal of Chinese Economics and Foreign Trade Studies Volume 4 ; 4 >
-    au < doNotProcess ; 2012 ; Journal of Chinese Economics and Foreign Trade Studies Volume 5 ; 5 >
-    au < exists ; 2013 ; Journal of Chinese Economics and Foreign Trade Studies Volume 6 ; 6 >
-    au < exists ; 2014 ; Journal of Chinese Economics and Foreign Trade Studies Volume 7 ; 7 >
+    au < doNotProcess ; 2008 ; Journal of Chinese Economic and Foreign Trade Studies Volume 1 ; 1 >
+    au < doNotProcess ; 2009 ; Journal of Chinese Economic and Foreign Trade Studies Volume 2 ; 2 >
+    au < doNotProcess ; 2010 ; Journal of Chinese Economic and Foreign Trade Studies Volume 3 ; 3 >
+    au < doNotProcess ; 2011 ; Journal of Chinese Economic and Foreign Trade Studies Volume 4 ; 4 >
+    au < doNotProcess ; 2012 ; Journal of Chinese Economic and Foreign Trade Studies Volume 5 ; 5 >
+    au < exists ; 2013 ; Journal of Chinese Economic and Foreign Trade Studies Volume 6 ; 6 >
+    au < exists ; 2014 ; Journal of Chinese Economic and Foreign Trade Studies Volume 7 ; 7 >
 
   }
 
@@ -5352,7 +5344,7 @@
     >
 
     comment[journal_issn] = 1756-1396
-    param[journal_id] = ?
+    param[journal_id] = jce
     
     au < doNotProcess ; 2009 ; Journal of Chinese Entrepreneurship Volume 1 ; 1 >
     au < doNotProcess ; 2010 ; Journal of Chinese Entrepreneurship Volume 2 ; 2 >
@@ -5372,7 +5364,7 @@
     >
 
     comment[journal_issn] = 2040-8005
-    param[journal_id] = ?
+    param[journal_id] = jchrm
 
     au < doNotProcess ; 2010 ; Journal of Chinese Human Resource Management Volume 1 ; 1 >
     au < doNotProcess ; 2011 ; Journal of Chinese Human Resource Management Volume 2 ; 2 >
@@ -5391,7 +5383,7 @@
     >
 
     comment[journal_issn] = 1363-254X
-    param[journal_id] = ?
+    param[journal_id] = jcom
     
     au < doNotProcess ; 1997 ; Journal of Communication Management Volume 1 ; 1 >
     au < doNotProcess ; 1998 ; Journal of Communication Management Volume 2 ; 2 >
@@ -5422,7 +5414,7 @@
     >
 
     comment[journal_issn] = 0736-3761
-    param[journal_id] = ?
+    param[journal_id] = jcm
     
     au < doNotProcess ; 1984 ; Journal of Consumer Marketing Volume 1 ; 1 >
     au < doNotProcess ; 1985 ; Journal of Consumer Marketing Volume 2 ; 2 >
@@ -5467,7 +5459,7 @@
     >
 
     comment[journal_issn] = 1463-001X
-    param[journal_id] = ?
+    param[journal_id] = jcre
     
     au < doNotProcess ; 1999 ; Journal of Corporate Real Estate Volume 1 ; 1 >
     au < doNotProcess ; 2000 ; Journal of Corporate Real Estate Volume 2 ; 2 >
@@ -5495,7 +5487,7 @@
     >
 
     comment[journal_issn] = 2009-3829
-    param[journal_id] = ?
+    param[journal_id] = jcp
     
     au < doNotProcess ; 2011 ; Journal of Criminal Psychology Volume 1 ; 1 >
     au < doNotProcess ; 2012 ; Journal of Criminal Psychology Volume 2 ; 2 >
@@ -5512,7 +5504,7 @@
     >
 
     comment[journal_issn] = 2044-1266
-    param[journal_id] = ?
+    param[journal_id] = jchmsd
     
     au < doNotProcess ; 2011 ; Journal of Cultural Heritage Management and Sustainable Development Volume 1 ; 1 >
     au < doNotProcess ; 2012 ; Journal of Cultural Heritage Management and Sustainable Development Volume 2 ; 2 >
@@ -5530,7 +5522,7 @@
     >
 
     comment[journal_issn] = 0022-0418
-    param[journal_id] = ?
+    param[journal_id] = jd
     
     au < doNotProcess ; 1946 ; Journal of Documentation Volume 1 ; 1 >
     au < doNotProcess ; 1947 ; Journal of Documentation Volume 2 ; 2 >
@@ -5613,7 +5605,7 @@
     >
 
     comment[journal_issn] = 1026-4116
-    param[journal_id] = ?
+    param[journal_id] = jeas
 
     au < doNotProcess ; 2003 ; Journal of Economic and Administrative Sciences Volume 19 ; 19 >
     au < doNotProcess ; 2004 ; Journal of Economic and Administrative Sciences Volume 20 ; 20 >
@@ -5640,7 +5632,7 @@
     >
 
     comment[journal_issn] = 0144-3585
-    param[journal_id] = ?
+    param[journal_id] = jes
     
     au < doNotProcess ; 1974 ; Journal of Economic Studies Volume 1 ; 1 >
     au < doNotProcess ; 1975 ; Journal of Economic Studies Volume 2 ; 2 >
@@ -5695,7 +5687,7 @@
     >
 
     comment[journal_issn] = 0957-8234
-    param[journal_id] = ?
+    param[journal_id] = jea
     
     au < doNotProcess ; 1963 ; Journal of Educational Administration Volume 1 ; 1 >
     au < doNotProcess ; 1964 ; Journal of Educational Administration Volume 2 ; 2 >
@@ -5761,7 +5753,7 @@
     >
 
     comment[journal_issn] = 1726-0531
-    param[journal_id] = ?
+    param[journal_id] = jedt
     
     au < doNotProcess ; 2003 ; Journal of Engineering, Design and Technology Volume 1 ; 1 >
     au < doesNotExist ; 2004 ; Journal of Engineering, Design and Technology Volume 2 ; 2 >    
@@ -5787,7 +5779,7 @@
     >
 
     comment[journal_issn] = 1741-0398
-    param[journal_id] = ?
+    param[journal_id] = jeim
     comment[0] = online from 2004
     
     au < doNotProcess ; 2004 ; Journal of Enterprise Information Management Volume 17 ; 17 >
@@ -5813,7 +5805,7 @@
     >
 
     comment[journal_issn] = 1750-6204
-    param[journal_id] = ?
+    param[journal_id] = jec
     
     au < doNotProcess ; 2007 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 1 ; 1 >
     au < doNotProcess ; 2008 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 2 ; 2 >
@@ -5833,7 +5825,7 @@
     >
 
     comment[journal_issn] = 2045-2101
-    param[journal_id] = ?
+    param[journal_id] = jepp
     
     au < doNotProcess ; 2012 ; Journal of Entrepreneurship and Public Policy Volume 1 ; 1 >
     au < exists ; 2013 ; Journal of Entrepreneurship and Public Policy Volume 2 ; 2 >
@@ -5850,7 +5842,7 @@
     >
 
     comment[journal_issn] = 0309-0590
-    param[journal_id] = ?
+    param[journal_id] = jeit
     
     au < doNotProcess ; 1977 ; Journal of European Industrial Training Volume 1 ; 1 >
     au < doNotProcess ; 1978 ; Journal of European Industrial Training Volume 2 ; 2 >
@@ -5901,7 +5893,7 @@
     >
 
     comment[journal_issn] = 1753-9269
-    param[journal_id] = ?
+    param[journal_id] = jerer
     
     au < doNotProcess ; 2008 ; Journal of European Real Estate Research Volume 1 ; 1 >
     au < doNotProcess ; 2009 ; Journal of European Real Estate Research Volume 2 ; 2 >
@@ -5922,7 +5914,7 @@
     >
 
     comment[journal_issn] = 1472-5967
-    param[journal_id] = ?
+    param[journal_id] = jfm
     
     au < doNotProcess ; 2003 ; Journal of Facilities Management Volume 1 ; 1 >
     au < doNotProcess ; 2004 ; Journal of Facilities Management Volume 2 ; 2 >
@@ -5947,7 +5939,7 @@
     >
 
     comment[journal_issn] = 2043-6238
-    param[journal_id] = ?
+    param[journal_id] = jfbm
     
     au < doNotProcess ; 2011 ; Journal of Family Business Management Volume 1 ; 1 >
     au < doNotProcess ; 2012 ; Journal of Family Business Management Volume 2 ; 2 >
@@ -5965,7 +5957,7 @@
     >
 
     comment[journal_issn] = 1361-2026
-    param[journal_id] = ?
+    param[journal_id] = jfmm
     
     au < doNotProcess ; 1997 ; Journal of Fashion Marketing and Management Volume 1 ; 1 >
     au < doNotProcess ; 1998 ; Journal of Fashion Marketing and Management Volume 2 ; 2 >
@@ -5997,7 +5989,7 @@
     >
 
     comment[journal_issn] = 1359-0790
-    param[journal_id] = ?
+    param[journal_id] = jfc
     
     au < doNotProcess ; 1994 ; Journal of Financial Crime Volume 1 ; 1 >
     au < doNotProcess ; 1995 ; Journal of Financial Crime Volume 2 ; 2 >
@@ -6032,7 +6024,7 @@
     >
 
     comment[journal_issn] = 1757-6385
-    param[journal_id] = ?
+    param[journal_id] = jfep
     
     au < doNotProcess ; 2009 ; Journal of Financial Economic Policy Volume 1 ; 1 >
     au < doNotProcess ; 2010 ; Journal of Financial Economic Policy Volume 2 ; 2 >
@@ -6052,7 +6044,7 @@
     >
 
     comment[journal_issn] = 1366-4387
-    param[journal_id] = ?
+    param[journal_id] = jfmpc
     comment[0] = online from 2005
     
     au < doNotProcess ; 2005 ; Journal of Financial Management of Property and Construction Volume 10 ; 10 >
@@ -6077,7 +6069,7 @@
     >
 
     comment[journal_issn] = 1358-1988
-    param[journal_id] = ?
+    param[journal_id] = jfrc
     
     au < doNotProcess ; 1993 ; Journal of Financial Regulation and Compliance Volume 1 ; 1 >
     au < doNotProcess ; 1994 ; Journal of Financial Regulation and Compliance Volume 2 ; 2 >
@@ -6113,7 +6105,7 @@
     >
 
     comment[journal_issn] = 1985-2517
-    param[journal_id] = ?
+    param[journal_id] = jfra
     
     au < doNotProcess ; 2003 ; Journal of Financial Reporting & Accounting Volume 1 ; 1 >
     au < doNotProcess ; 2004 ; Journal of Financial Reporting & Accounting Volume 2 ; 2 >
@@ -6139,7 +6131,7 @@
     >
 
     comment[journal_issn] = 2041-2568
-    param[journal_id] = ?
+    param[journal_id] = jgr
     
     au < doNotProcess ; 2010 ; Journal of Global Responsibility Volume 1 ; 1 >
     au < doNotProcess ; 2011 ; Journal of Global Responsibility Volume 2 ; 2 >
@@ -6158,7 +6150,7 @@
     >
 
     comment[journal_issn] = 1477-7266
-    param[journal_id] = ?
+    param[journal_id] = jhom
     comment[0] =  online from 2003
     
     au < doNotProcess ; 2003 ; Journal of Health Organization and Management Volume 17 ; 17 >
@@ -6185,7 +6177,7 @@
     >
 
     comment[journal_issn] = 1755-750X
-    param[journal_id] = ?
+    param[journal_id] = jhrm
     
     au < doNotProcess ; 2009 ; Journal of Historical Research in Marketing Volume 1 ; 1 >
     au < doNotProcess ; 2010 ; Journal of Historical Research in Marketing Volume 2 ; 2 >
@@ -6205,7 +6197,7 @@
     >
 
     comment[journal_issn] = 1757-9880
-    param[journal_id] = ?
+    param[journal_id] = jhtt
     
     au < doNotProcess ; 2010 ; Journal of Hospitality and Tourism Technology Volume 1 ; 1 >
     au < doNotProcess ; 2011 ; Journal of Hospitality and Tourism Technology Volume 2 ; 2 >
@@ -6224,7 +6216,7 @@
     >
 
     comment[journal_issn] = 1401-338X
-    param[journal_id] = ?
+    param[journal_id] = jhrca
     
     au < doNotProcess ; 1996 ; Journal of Human Resource Costing & Accounting Volume 1 ; 1 >
     au < doNotProcess ; 1997 ; Journal of Human Resource Costing & Accounting Volume 2 ; 2 >
@@ -6254,7 +6246,7 @@
     >
 
     comment[journal_issn] = 2042-6747
-    param[journal_id] = ?
+    param[journal_id] = jhlscm
     
     au < doNotProcess ; 2011 ; Journal of Humanitarian Logistics and Supply Chain Management Volume 1 ; 1 >
     au < doNotProcess ; 2012 ; Journal of Humanitarian Logistics and Supply Chain Management Volume 2 ; 2 >
@@ -6272,7 +6264,7 @@
     >
 
     comment[journal_issn] = 1755-4195
-    param[journal_id] = ?
+    param[journal_id] = jibr
     
     au < doNotProcess ; 2009 ; Journal of Indian Business Research Volume 1 ; 1 >
     au < doNotProcess ; 2010 ; Journal of Indian Business Research Volume 2 ; 2 >
@@ -6292,7 +6284,7 @@
     >
 
     comment[journal_issn] = 1477-996X
-    param[journal_id] = ?
+    param[journal_id] = jices
     
     au < doNotProcess ; 2003 ; Journal of Information, Communication and Ethics in Society Volume 1 ; 1 >
     au < doNotProcess ; 2004 ; Journal of Information, Communication and Ethics in Society Volume 2 ; 2 >
@@ -6318,7 +6310,7 @@
     >
 
     comment[journal_issn] = 1476-9018
-    param[journal_id] = ?
+    param[journal_id] = jica
     
     au < doNotProcess ; 1996 ; Journal of Integrated Care: Practical evidence for service improvement Volume 4 ; 4 >
     au < doNotProcess ; 1997 ; Journal of Integrated Care: Practical evidence for service improvement Volume 5 ; 5 >
@@ -6351,7 +6343,7 @@
     >
 
     comment[journal_issn] = 1469-1930
-    param[journal_id] = ?
+    param[journal_id] = jic
     
     au < doNotProcess ; 2000 ; Journal of Intellectual Capital Volume 1 ; 1 >
     au < doNotProcess ; 2001 ; Journal of Intellectual Capital Volume 2 ; 2 >
@@ -6379,7 +6371,7 @@
     >
  
     comment[journal_issn] = 2046-469X
-    param[journal_id] = ?
+    param[journal_id] = jieb
     
     au < doNotProcess ; 2008 ; Journal of International Education in Business Volume 1 ; 1 >
     au < doNotProcess ; 2009 ; Journal of International Education in Business Volume 2 ; 2 >
@@ -6400,7 +6392,7 @@
     >
 
     comment[journal_issn] = 1477-0024
-    param[journal_id] = ?
+    param[journal_id] = jitlp
     
     au < doNotProcess ; 2002 ; Journal of International Trade Law and Policy Volume 1 ; 1 >
     au < doNotProcess ; 2003 ; Journal of International Trade Law and Policy Volume 2 ; 2 >
@@ -6427,7 +6419,7 @@
     >
 
     comment[journal_issn] = 1528-5812
-    param[journal_id] = ?
+    param[journal_id] = joic
     
     au < doNotProcess ; 2001 ; Journal of Investment Compliance Volume 1 ; 1 >
     au < doNotProcess ; 2002 ; Journal of Investment Compliance Volume 2 ; 2 >
@@ -6456,7 +6448,7 @@
     >
 
     comment[journal_issn] = 1759-0817
-    param[journal_id] = ?
+    param[journal_id] = jiabr
     
     au < doNotProcess ; 2010 ; Journal of Islamic Accounting and Business Research Volume 1 ; 1 >
     au < doNotProcess ; 2011 ; Journal of Islamic Accounting and Business Research Volume 2 ; 2 >
@@ -6475,7 +6467,7 @@
     >
 
     comment[journal_issn] = 1759-0833
-    param[journal_id] = ?
+    param[journal_id] = jima
     
     au < doNotProcess ; 2010 ; Journal of Islamic Marketing Volume 1 ; 1 >
     au < doNotProcess ; 2011 ; Journal of Islamic Marketing Volume 2 ; 2 >
@@ -6494,7 +6486,7 @@
     >
 
     comment[journal_issn] = 1367-3270
-    param[journal_id] = ?
+    param[journal_id] = jkm
     
     au < doNotProcess ; 1997 ; Journal of Knowledge Management Volume 1 ; 1 >
     au < doNotProcess ; 1998 ; Journal of Knowledge Management Volume 2 ; 2 >
@@ -6526,7 +6518,7 @@
     >
 
     comment[journal_issn] = 1756-1418
-    param[journal_id] = ?
+    param[journal_id] = jkic
     
     au < doNotProcess ; 2009 ; Journal of Knowledge-based Innovation in China Volume 1 ; 1 >
     au < doNotProcess ; 2010 ; Journal of Knowledge-based Innovation in China Volume 2 ; 2 >
@@ -6546,7 +6538,7 @@
     >
 
     comment[journal_issn] = 2042-0927
-    param[journal_id] = ?
+    param[journal_id] = jldob
     
     au < doNotProcess ; 2010 ; Journal of Learning Disabilities and Offending Behaviour: Practice, policy and research Volume 1 ; 1 >
     au < doNotProcess ; 2011 ; Journal of Learning Disabilities and Offending Behaviour: Practice, policy and research Volume 2 ; 2 > 
@@ -6566,7 +6558,7 @@
     >
 
     comment[journal_issn] = 0262-1711
-    param[journal_id] = ?
+    param[journal_id] = jmd
     
     au < doNotProcess ; 1982 ; Journal of Management Development Volume 1 ; 1 >
     au < doNotProcess ; 1983 ; Journal of Management Development Volume 2 ; 2 >
@@ -6613,7 +6605,7 @@
     >
 
     comment[journal_issn] = 1751-1348
-    param[journal_id] = ?
+    param[journal_id] = jmh
     comment[0] = online from 2006
 
     au < doNotProcess ; 2006 ; Journal of Management History Volume 12 ; 12 >
@@ -6637,7 +6629,7 @@
     >
 
     comment[journal_issn] = 1355-252X
-    param[journal_id] = ?
+    param[journal_id] = jmh
     comment[merged_into] = 0025-1747
     
     au < doNotProcess ; 1995 ; Journal of Management History (Archive) Volume 1 ; 1 >
@@ -6658,7 +6650,7 @@
     >
 
     comment[journal_issn] = 0268-9235
-    param[journal_id] = ?
+    param[journal_id] = jmm
     comment[continued_by] = 1477-7266
     
     au < doNotProcess ; 1986 ; Journal of Management in Medicine Volume 1 ; 1 >
@@ -6689,7 +6681,7 @@
     >
 
     comment[journal_issn] = 0268-3946
-    param[journal_id] = ?
+    param[journal_id] = jmp
     
     au < doNotProcess ; 1986 ; Journal of Managerial Psychology Volume 1 ; 1 >
     au < doNotProcess ; 1987 ; Journal of Managerial Psychology Volume 2 ; 2 >
@@ -6732,7 +6724,7 @@
     >
 
     comment[journal_issn] = 1741-038X
-    param[journal_id] = ?
+    param[journal_id] = jmtm
     comment[0] = online from 2004
     
     au < doNotProcess ; 2004 ; Journal of Manufacturing Technology Management Volume 15 ; 15 >
