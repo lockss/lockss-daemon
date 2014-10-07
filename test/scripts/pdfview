@@ -1,3 +1,2 @@
 #!/bin/sh
-
-ant -e run-class -Dclass=org.apache.pdfbox.PDFDebugger -Dargs=\"$@\"
+test/scripts/run-class org.apache.pdfbox.PDFDebugger "$@"
