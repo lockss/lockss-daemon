@@ -71,7 +71,9 @@ tmplib=tmplib
 mkdir -p $tmplib
 cp ${PROJECT_DIR}/lib/lockss.jar $tmplib
 cp ${PROJECT_DIR}/lib/lockss-test.jar $tmplib
-CLASSPATH=$tmplib/lockss.jar:$tmplib/lockss-test.jar:`cat test/test-classpath`
+cp ${PROJECT_DIR}/lib/lockss-plugins.jar $tmplib
+cp ${PROJECT_DIR}/lib/lockss-plugins-test.jar $tmplib
+CLASSPATH=$tmplib/lockss.jar:$tmplib/lockss-test.jar:$tmplib/lockss-plugins.jar:$tmplib/lockss-plugins-test.jar:`cat test/test-classpath`
 export CLASSPATH
 
 failcnt=0
