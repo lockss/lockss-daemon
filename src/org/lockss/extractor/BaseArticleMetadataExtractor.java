@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArticleMetadataExtractor.java,v 1.25 2014-10-03 23:04:45 fergaloy-sf Exp $
+ * $Id: BaseArticleMetadataExtractor.java,v 1.26 2014-10-08 22:21:07 alexandraohlson Exp $
  */
 
 /*
@@ -48,7 +48,7 @@ import org.lockss.plugin.*;
  */
 public class BaseArticleMetadataExtractor implements ArticleMetadataExtractor {
 
-  private static Logger log = Logger.getLogger("BaseArticleMetadataExtractor");
+  private static Logger log = Logger.getLogger(BaseArticleMetadataExtractor.class);
 
   public static final String PREFIX = Configuration.PREFIX + "metadata.";
 
@@ -56,9 +56,13 @@ public class BaseArticleMetadataExtractor implements ArticleMetadataExtractor {
    * the tdb if present.  Any value stored by the MetadataExtractor will be
    * used only if the tdb contains none for the AU */
   public static final String PARAM_PREFER_TDB_PUBLISHER =
-    PREFIX + "preferTdbPublisher";
-  public static final boolean DEFAULT_PREFER_TDB_PUBLISHER = false;
+      PREFIX + "preferTdbPublisher";
+    public static final boolean DEFAULT_PREFER_TDB_PUBLISHER = false;
 
+  public static final String PARAM_CHECK_ACCESS_URL =
+      PREFIX + "checkAccessUrl";
+  public static final boolean DEFAULT_CHECK_ACCESS_URL = true;
+    
   protected String cuRole = null;
   protected boolean isAddTdbDefaults = true;
 
@@ -99,6 +103,13 @@ public class BaseArticleMetadataExtractor implements ArticleMetadataExtractor {
   protected boolean isAddTdbDefaults() {
     return isAddTdbDefaults;
   }
+  
+  /** Return true if the access url should be checked to ensure it is in AU
+   */
+  protected boolean isCheckAccessUrl() {
+    return CurrentConfig.getBooleanParam(PARAM_CHECK_ACCESS_URL,
+        DEFAULT_CHECK_ACCESS_URL);
+  }
 
   /** For standard bibiographic metadata fields for which the extractor did
    * not produce a valid value, fill in a value from the TDB if available.
@@ -124,8 +135,8 @@ public class BaseArticleMetadataExtractor implements ArticleMetadataExtractor {
       TdbPublisher tdbpub = tdbau.getTdbPublisher();
       TdbProvider tdbprovider = tdbau.getTdbProvider();
       if (!tdbpub.isUnknownPublisher() &&
-	  CurrentConfig.getBooleanParam(PARAM_PREFER_TDB_PUBLISHER,
-					DEFAULT_PREFER_TDB_PUBLISHER)) {
+          CurrentConfig.getBooleanParam(PARAM_PREFER_TDB_PUBLISHER,
+              DEFAULT_PREFER_TDB_PUBLISHER)) {
 	am.replace(MetadataField.FIELD_PUBLISHER, tdbpub.getName());
 	// also process provider because the provider is usually the publisher
 	am.replace(MetadataField.FIELD_PROVIDER, tdbprovider.getName());
@@ -174,6 +185,37 @@ public class BaseArticleMetadataExtractor implements ArticleMetadataExtractor {
     if (log.isDebug3()) log.debug3("am: ("+am);
   }
 
+  /** Verify that the MetadataField.FIELD_ACCESS_URL is set to a url
+   * that was actually collected in this AU. If NOT, reset the value
+   * to that of the full_text_cu, which is guaranteed to be in the AU 
+   * @param af the ArticleFiles on which extract() was called.
+   * @param cu the CachedUrl selected by {@link #getCuToExtract(ArticleFiles)}.
+   * @param am the ArticleMetadata being emitted.
+   */
+  protected void checkAccessUrl(ArticleFiles af,
+      CachedUrl cu, ArticleMetadata am) {
+    if (log.isDebug3()) log.debug3("checkAccessUrl("+af+", "+cu+", "+am+")");
+
+    String access_val = am.get(MetadataField.FIELD_ACCESS_URL);
+    if (access_val == null) { 
+      // If no value was set, use the full_text_url; avoid checking the cached urls
+      am.put(MetadataField.FIELD_ACCESS_URL, af.getFullTextUrl());
+      if (log.isDebug3()) log.debug3("setting:"+af.getFullTextUrl());
+      return;
+    } 
+    CachedUrl testCu = cu.getArchivalUnit().makeCachedUrl(access_val);
+    if ((testCu == null) || (!testCu.hasContent())){
+      // Check if the set value exists in the AU, if not replace it with 
+      // the full text url
+      am.replace(MetadataField.FIELD_ACCESS_URL, af.getFullTextUrl());
+      if (log.isDebug3()) log.debug3("replacing:" + access_val + " with " +af.getFullTextUrl());
+      return;
+    }
+
+    if (log.isDebug3()) log.debug3("access_url " + access_val + " was fine");
+  }
+  
+  
   class MyEmitter implements FileMetadataExtractor.Emitter {
     private Emitter parent;
     private ArticleFiles af;
@@ -188,6 +230,9 @@ public class BaseArticleMetadataExtractor implements ArticleMetadataExtractor {
 
       if (isAddTdbDefaults()) {
 	addTdbDefaults(af, cu, am);
+      }
+      if (isCheckAccessUrl()) {
+        checkAccessUrl(af, cu, am);
       }
       parent.emitMetadata(af, am);
     }

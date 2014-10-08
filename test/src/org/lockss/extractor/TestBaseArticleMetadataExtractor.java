@@ -1,10 +1,10 @@
 /*
- * $Id: TestBaseArticleMetadataExtractor.java,v 1.15 2014-09-09 22:53:25 pgust Exp $
+ * $Id: TestBaseArticleMetadataExtractor.java,v 1.16 2014-10-08 22:21:07 alexandraohlson Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -43,7 +43,7 @@ import org.lockss.plugin.*;
 import org.lockss.util.*;
 
 public class TestBaseArticleMetadataExtractor extends LockssTestCase {
-  static Logger log = Logger.getLogger("TestBaseArticleMetadataExtractor");
+  static Logger log = Logger.getLogger(TestBaseArticleMetadataExtractor.class);
 
   private MockPlugin mplug;
 
@@ -140,6 +140,17 @@ public class TestBaseArticleMetadataExtractor extends LockssTestCase {
     assertFalse(me.isAddTdbDefaults());
     me.setAddTdbDefaults(true);
     assertTrue(me.isAddTdbDefaults());
+
+    // default value is true
+    assertTrue(me.isCheckAccessUrl());
+    ConfigurationUtil.addFromArgs(BaseArticleMetadataExtractor.PARAM_CHECK_ACCESS_URL,
+        "false");
+    assertFalse(me.isCheckAccessUrl());
+    ConfigurationUtil.addFromArgs(BaseArticleMetadataExtractor.PARAM_CHECK_ACCESS_URL,
+        "true");
+    assertTrue(me.isCheckAccessUrl());
+
+  
   }
 
   public void testGetCuToExtract() {
@@ -177,6 +188,9 @@ public class TestBaseArticleMetadataExtractor extends LockssTestCase {
   public void testNoTdbDefaults() throws Exception {
     BaseArticleMetadataExtractor me = new BaseArticleMetadataExtractor();
     me.setAddTdbDefaults(false);
+    ConfigurationUtil.addFromArgs(BaseArticleMetadataExtractor.PARAM_CHECK_ACCESS_URL,
+        "false"); // otherwise the default will add the fullurl as access.url    
+    
     ArticleMetadataListExtractor mle = new ArticleMetadataListExtractor(me);
     Map map = MapUtil.map(MetadataField.FIELD_VOLUME, "vol16");
 
@@ -184,7 +198,6 @@ public class TestBaseArticleMetadataExtractor extends LockssTestCase {
 					       makeAf(mau1, map));
     assertEquals(stringMap(map), getMap(mdlist.get(0)));
   }
-
 
   // setAddTdbDefaults(true) but no tdb should add just access.url
   public void testNoTdb() throws Exception {
@@ -367,6 +380,77 @@ public class TestBaseArticleMetadataExtractor extends LockssTestCase {
     assertEquals(exp, actual);
   }
 
+  // No change to access URL if not turned on
+  public void testNoChangeAccessurl() throws Exception {
+    BaseArticleMetadataExtractor me = new BaseArticleMetadataExtractor();
+    ConfigurationUtil.addFromArgs(BaseArticleMetadataExtractor.PARAM_CHECK_ACCESS_URL,
+        "false");
+    ArticleMetadataListExtractor mle = new ArticleMetadataListExtractor(me);
+    Map map = MapUtil.map(MetadataField.FIELD_ACCESS_URL, "wow");
+
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(),
+                                               makeAf(mau1, map));
+    assertEquals("wow", mdlist.get(0).get(MetadataField.FIELD_ACCESS_URL));
+  }  
+
+  // replace incorrect access_url with full text url
+  public void testChangeAccessurl() throws Exception {
+    BaseArticleMetadataExtractor me = new BaseArticleMetadataExtractor();
+    ConfigurationUtil.addFromArgs(BaseArticleMetadataExtractor.PARAM_CHECK_ACCESS_URL,
+        "true");
+    ArticleMetadataListExtractor mle = new ArticleMetadataListExtractor(me);
+    Map map = MapUtil.map(MetadataField.FIELD_ACCESS_URL, "wow");
+
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(),
+                                               makeAf(mau1, map));
+    assertEquals("fullurl", mdlist.get(0).get(MetadataField.FIELD_ACCESS_URL));
+  }  
+  
+  // replace incorrect access_url with full text url
+  public void testSetMissingAccessurl() throws Exception {
+    BaseArticleMetadataExtractor me = new BaseArticleMetadataExtractor();
+    ConfigurationUtil.addFromArgs(BaseArticleMetadataExtractor.PARAM_CHECK_ACCESS_URL,
+        "true");
+    ArticleMetadataListExtractor mle = new ArticleMetadataListExtractor(me);
+    // put something innocuous in the map
+    Map map = MapUtil.map(MetadataField.FIELD_VOLUME, "volwow");
+
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(),
+                                               makeAf(mau1, map));
+    assertEquals("fullurl", mdlist.get(0).get(MetadataField.FIELD_ACCESS_URL));
+  }   
+
+  // do NOT replace incorrect access_url with full text url
+  public void testLeaveMissingAccessurl() throws Exception {
+    BaseArticleMetadataExtractor me = new BaseArticleMetadataExtractor();
+    ConfigurationUtil.addFromArgs(BaseArticleMetadataExtractor.PARAM_CHECK_ACCESS_URL,
+        "false");
+    me.setAddTdbDefaults(false);
+    ArticleMetadataListExtractor mle = new ArticleMetadataListExtractor(me);
+    // put something innocuous in the map
+    Map map = MapUtil.map(MetadataField.FIELD_VOLUME, "volwow");
+
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(),
+                                               makeAf(mau1, map));
+    assertNull(mdlist.get(0).get(MetadataField.FIELD_ACCESS_URL));
+  }   
+  
+  // if isAddTdbDefaults is set AND
+  // the FIELD_ACCESS_URL isn't set, it will set 
+  public void testFooMissingAccessurl() throws Exception {
+    BaseArticleMetadataExtractor me = new BaseArticleMetadataExtractor();
+    ConfigurationUtil.addFromArgs(BaseArticleMetadataExtractor.PARAM_CHECK_ACCESS_URL,
+        "false");
+    me.setAddTdbDefaults(true);
+    ArticleMetadataListExtractor mle = new ArticleMetadataListExtractor(me);
+    // put something innocuous in the map
+    Map map = MapUtil.map(MetadataField.FIELD_VOLUME, "volwow");
+
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(),
+                                               makeAf(mau1, map));
+    assertEquals("fullurl", mdlist.get(0).get(MetadataField.FIELD_ACCESS_URL));
+  }   
+  
   Map<String,String> getMap(final ArticleMetadata am) {
     return new HashMap<String,String>() {{
 	for (String field : am.keySet()) {
