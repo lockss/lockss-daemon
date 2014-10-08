@@ -1,5 +1,5 @@
 /*
- * $Id: TangramSourceXPathXmlMetadataParser.java,v 1.1 2014-09-30 18:12:40 aishizaki Exp $
+ * $Id: TangramSourceXPathXmlMetadataParser.java,v 1.2 2014-10-08 19:35:02 aishizaki Exp $
  */
 
 /*
@@ -69,7 +69,7 @@ public class TangramSourceXPathXmlMetadataParser extends XPathXmlMetadataParser 
    * the default (ISO-8859-1) overrides.  When that is fixed, the generic 
    * XPathXmlMetadataParser can be used, and this class can be removed
    * along with supporting code in TangramSourceXmlMetadataExtractorFactory
-   */
+
   @Override
   protected InputSource makeInputSource(CachedUrl cu) throws UnsupportedEncodingException {
     InputSource is = null;
@@ -81,11 +81,34 @@ public class TangramSourceXPathXmlMetadataParser extends XPathXmlMetadataParser 
     }
     // setting the Encoding to default to UTF-8 until the lockss daemon provides
     // a way to get the correct encoding from the XML file
-    log.debug3("InputStream.fromSuper:" +is.getEncoding() );    
+    log.debug3("InputStream.fromSuper:" +is.getEncoding() );  
+log.info("InputStream.fromSuper:" +is.getEncoding() );    
+
     if (is != null) {
       is.setEncoding(Constants.ENCODING_UTF_8);
+log.info("Default charset: "+java.nio.charset.Charset.defaultCharset());
+
       log.debug3("InputStream.setEncoding:" +Constants.ENCODING_UTF_8 );
     }
+    return is;
+  }
+     */
+  @Override
+  protected InputSource makeInputSource(CachedUrl cu) throws UnsupportedEncodingException {
+    InputSource is = null;
+    // setting the encoding to default to UTF-8 until the lockss daemon provides
+    // a way to get the correct encoding from the XML file
+    try {
+
+      is = super.makeInputSource(cu, Constants.ENCODING_UTF_8);
+      log.debug3("Default charset: "+java.nio.charset.Charset.defaultCharset());
+      log.debug3("InputStream.fromSuper:" +is.getEncoding() );    
+
+    } catch (IOException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
+
     return is;
   }
   
