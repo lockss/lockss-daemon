@@ -1,5 +1,5 @@
 /*
- * $Id: XPathXmlMetadataParser.java,v 1.9 2014-07-08 01:41:13 thib_gc Exp $
+ * $Id: XPathXmlMetadataParser.java,v 1.10 2014-10-08 19:32:29 aishizaki Exp $
  */
 
 /*
@@ -452,7 +452,27 @@ public class XPathXmlMetadataParser  {
     is.setEncoding(cu.getEncoding());
     return is;
   }
-  
+
+  /**
+   *
+   * @param cu
+   *          A cached URL.
+   * @param encoding the encoding which should be used for this input stream
+   * @return
+   * @throws IOException
+   */
+  protected InputSource makeInputSource(CachedUrl cu, String encoding)
+      throws IOException {
+    // set the encoding on the BufferedReader which somehow sets the
+    // encoding to work (despite if the default charset is set wrongly),
+    // unlike just setting the encoding on the InputSource
+    BufferedReader in
+      = new BufferedReader(new InputStreamReader(getInputStreamFromCU(cu),
+                                                 encoding));
+    InputSource is = new InputSource(in);
+    is.setEncoding(encoding);
+    return is;
+  }
   /**
    *  Given a CU for an XML file, load and return the XML as a Document "tree". 
    * @param cu to the XML file
@@ -499,6 +519,8 @@ public class XPathXmlMetadataParser  {
       return cu.getUnfilteredInputStream();
     }
   }
+  
+  
 
   /**
    * A wrapper around ArticleMetadata creation to allow for override
