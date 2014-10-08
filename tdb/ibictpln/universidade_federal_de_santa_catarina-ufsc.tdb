@@ -311,17 +311,17 @@
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = forum
 
-      au < testing ; 1998 ; 1 ; Fórum Linguístico Volume 1998 ; 1998 ; >
-      au < testing ; 1999 ; 2 ; Fórum Linguístico Volume 1999 ; 1999 ; >
-      au < testing ; 2000 ; 3 ; Fórum Linguístico Volume 2000 ; 2000 ; >
-      au < testing ; 2003 ; 6 ; Fórum Linguístico Volume 2003 ; 2003 ; >
-      au < testing ; 2007 ; 10 ; Fórum Linguístico Volume 2007 ; 2007 ; >
-      au < testing ; 2008 ; 11 ; Fórum Linguístico Volume 2008 ; 2008 ; >
-      au < testing ; 2009 ; 12 ; Fórum Linguístico Volume 2009 ; 2009 ; >
-      au < testing ; 2010 ; 13 ; Fórum Linguístico Volume 2010 ; 2010 ; >
-      au < testing ; 2011 ; 14 ; Fórum Linguístico Volume 2011 ; 2011 ; >
-      au < testing ; 2012 ; 15 ; Fórum Linguístico Volume 2012 ; 2012 ; >
-      au < testing ; 2013 ; 16 ; Fórum Linguístico Volume 2013 ; 2013 ; >
+      au < ready ; 1998 ; 1 ; Fórum Linguístico Volume 1998 ; 1998 ; >
+      au < ready ; 1999 ; 2 ; Fórum Linguístico Volume 1999 ; 1999 ; >
+      au < ready ; 2000 ; 3 ; Fórum Linguístico Volume 2000 ; 2000 ; >
+      au < ready ; 2003 ; 6 ; Fórum Linguístico Volume 2003 ; 2003 ; >
+      au < ready ; 2007 ; 10 ; Fórum Linguístico Volume 2007 ; 2007 ; >
+      au < ready ; 2008 ; 11 ; Fórum Linguístico Volume 2008 ; 2008 ; >
+      au < ready ; 2009 ; 12 ; Fórum Linguístico Volume 2009 ; 2009 ; >
+      au < ready ; 2010 ; 13 ; Fórum Linguístico Volume 2010 ; 2010 ; >
+      au < ready ; 2011 ; 14 ; Fórum Linguístico Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 15 ; Fórum Linguístico Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 16 ; Fórum Linguístico Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 17 ; Fórum Linguístico Volume 2014 ; 2014 ; >
 
   }
@@ -336,21 +336,21 @@
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = ilha
 
-      au < testing ; 1999 ; 1 ; ILHA-Revista de Antropologia Volume 1999 ; 1999 ; >
-      au < testing ; 2000 ; 2 ; ILHA-Revista de Antropologia Volume 2000 ; 2000 ; >
-      au < testing ; 2001 ; 3 ; ILHA-Revista de Antropologia Volume 2001 ; 2001 ; >
-      au < testing ; 2002 ; 4 ; ILHA-Revista de Antropologia Volume 2002 ; 2002 ; >
-      au < testing ; 2003 ; 5 ; ILHA-Revista de Antropologia Volume 2003 ; 2003 ; >
-      au < testing ; 2004 ; 6 ; ILHA-Revista de Antropologia Volume 2004 ; 2004 ; >
-      au < testing ; 2005 ; 7 ; ILHA-Revista de Antropologia Volume 2005 ; 2005 ; >
-      au < testing ; 2006 ; 8 ; ILHA-Revista de Antropologia Volume 2006 ; 2006 ; >
-      au < testing ; 2007 ; 9 ; ILHA-Revista de Antropologia Volume 2007 ; 2007 ; >
-      au < testing ; 2008 ; 10 ; ILHA-Revista de Antropologia Volume 2008 ; 2008 ; >
-      au < testing ; 2009 ; 11 ; ILHA-Revista de Antropologia Volume 2009 ; 2009 ; >
-      au < testing ; 2010 ; 12 ; ILHA-Revista de Antropologia Volume 2010 ; 2010 ; >
-      au < testing ; 2011 ; 13 ; ILHA-Revista de Antropologia Volume 2011 ; 2011 ; >
-      au < testing ; 2012 ; 14 ; ILHA-Revista de Antropologia Volume 2012 ; 2012 ; >
-      au < testing ; 2013 ; 15 ; ILHA-Revista de Antropologia Volume 2013 ; 2013 ; >
+      au < ready ; 1999 ; 1 ; ILHA-Revista de Antropologia Volume 1999 ; 1999 ; >
+      au < ready ; 2000 ; 2 ; ILHA-Revista de Antropologia Volume 2000 ; 2000 ; >
+      au < ready ; 2001 ; 3 ; ILHA-Revista de Antropologia Volume 2001 ; 2001 ; >
+      au < ready ; 2002 ; 4 ; ILHA-Revista de Antropologia Volume 2002 ; 2002 ; >
+      au < ready ; 2003 ; 5 ; ILHA-Revista de Antropologia Volume 2003 ; 2003 ; >
+      au < ready ; 2004 ; 6 ; ILHA-Revista de Antropologia Volume 2004 ; 2004 ; >
+      au < ready ; 2005 ; 7 ; ILHA-Revista de Antropologia Volume 2005 ; 2005 ; >
+      au < ready ; 2006 ; 8 ; ILHA-Revista de Antropologia Volume 2006 ; 2006 ; >
+      au < ready ; 2007 ; 9 ; ILHA-Revista de Antropologia Volume 2007 ; 2007 ; >
+      au < ready ; 2008 ; 10 ; ILHA-Revista de Antropologia Volume 2008 ; 2008 ; >
+      au < ready ; 2009 ; 11 ; ILHA-Revista de Antropologia Volume 2009 ; 2009 ; >
+      au < ready ; 2010 ; 12 ; ILHA-Revista de Antropologia Volume 2010 ; 2010 ; >
+      au < ready ; 2011 ; 13 ; ILHA-Revista de Antropologia Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 14 ; ILHA-Revista de Antropologia Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 15 ; ILHA-Revista de Antropologia Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 16 ; ILHA-Revista de Antropologia Volume 2014 ; 2014 ; >
 
   }
