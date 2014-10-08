@@ -1,5 +1,5 @@
 /*
- * $Id: TestFutureScienceHtmlCrawlFilterFactory.java,v 1.2 2013-07-31 21:43:56 alexandraohlson Exp $
+ * $Id: TestFutureScienceHtmlCrawlFilterFactory.java,v 1.3 2014-10-08 16:11:25 alexandraohlson Exp $
  */
 
 /*
@@ -132,6 +132,30 @@ public class TestFutureScienceHtmlCrawlFilterFactory extends LockssTestCase {
               "<span class=\"title2\" id=\"d634692e2883\">Website</span> " +
               "<h2 style=\"margin-top:1em\">Affiliations</h2>";
       
+      private static final String articleNav=
+          "<table cellspacing=\"0\" cellpadding=\"0\" border=\"0\" class=\"breadcrumbs\">" +
+              "<tbody><tr>" +
+              "<td><a href=\"/\">Home</a></td>" +
+              "<td>&nbsp;&gt;</td><td></td>" +
+              "<td nowrap=\"nowrap\"><a href=\"/loi/test\">Journal home</a></td>" +
+              "<td>&nbsp;&gt;</td><td></td>" +
+              "<td nowrap=\"nowrap\"><a href=\"/toc/test/6/2\">TOC</a></td>" +
+              "<td>&nbsp;&gt;</td><td></td>" +
+              "<td nowrap=\"nowrap\">Full Text</td>" +
+              "</tr></tbody></table>";
+      private static final String articleNavFiltered=
+          "";
+      private static final String breadcrumb=
+          "<br>" +
+              "<a href=\"/doi/full/10.1111/test.13.197\">Prev. Article</a>" +
+              "|" +
+              "<a href=\"/doi/full/10.1111/test.13.201\">Next Article</a>" +
+              "<br>"; 
+      private static final String breadcrumbFiltered=
+          "<br>" +
+              "|" +
+              "<br>"; 
+      
 
 
  //Variant to test with Crawl Filter
@@ -150,6 +174,19 @@ public class TestFutureScienceHtmlCrawlFilterFactory extends LockssTestCase {
         new StringInputStream(citedBySection), Constants.DEFAULT_ENCODING);
 
     assertEquals(citedBySectionFiltered, StringUtil.fromInputStream(actIn1));
+  }
+  
+  public void testLinks() throws Exception {
+    InputStream actIn1 = fact.createFilteredInputStream(mau,
+        new StringInputStream(articleNav), Constants.DEFAULT_ENCODING);
+
+    assertEquals(articleNavFiltered, StringUtil.fromInputStream(actIn1));
+
+    actIn1 = fact.createFilteredInputStream(mau,
+        new StringInputStream(breadcrumb), Constants.DEFAULT_ENCODING);
+
+    assertEquals(breadcrumbFiltered, StringUtil.fromInputStream(actIn1));
+    
   }
   
   public void testAlsoRead() throws Exception {

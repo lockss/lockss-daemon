@@ -1,10 +1,10 @@
 /*
- * $Id: AIAAHtmlCrawlFilterFactory.java,v 1.4 2014-10-08 16:11:28 alexandraohlson Exp $
+ * $Id: AMetSocHtmlCrawlFilterFactory.java,v 1.5 2014-10-08 16:11:26 alexandraohlson Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -30,7 +30,7 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.atypon.aiaa;
+package org.lockss.plugin.atypon.americanmeteorologicalsociety;
 
 import java.io.InputStream;
 
@@ -40,11 +40,11 @@ import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.plugin.*;
 import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
 
-public class AIAAHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory {
+public class AMetSocHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory {
   static NodeFilter[] filters = new NodeFilter[] {
 
-    // link back to TOC from top of article (also on TOC, but no href)
-    HtmlNodeFilters.tagWithAttribute("div", "class", "head-middle"),
+    // section with in-line references to commented on article, or article that made comments
+    HtmlNodeFilters.tagWithAttribute("div", "class", "NLM_author-notes"),
   };
 
 

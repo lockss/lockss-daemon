@@ -1,5 +1,5 @@
 /*
- * $Id: TaylorAndFrancisHtmlCrawlFilterFactory.java,v 1.8 2014-07-08 17:30:28 alexandraohlson Exp $
+ * $Id: TaylorAndFrancisHtmlCrawlFilterFactory.java,v 1.9 2014-10-08 16:11:24 alexandraohlson Exp $
  */
 
 /*
@@ -44,7 +44,7 @@ import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 
-
+/* This does not inherit anything from BaseAtypon parent*/
 public class TaylorAndFrancisHtmlCrawlFilterFactory implements FilterFactory {
 
   protected static final Pattern corrections = Pattern.compile("Original Article|Corrigendum|Correction", Pattern.CASE_INSENSITIVE);
@@ -75,6 +75,11 @@ public class TaylorAndFrancisHtmlCrawlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("ul",  "class", "references"),     
         // if has "doi/mlt" will crawl filter out - but remove in case it doesn't
         HtmlNodeFilters.tagWithAttribute("li",  "class", "relatedArticleLink"),     
+        
+        //do not follow breadcrumb back to TOC in case of overcrawl to article
+        HtmlNodeFilters.tagWithAttribute("div", "id", "breadcrumb"),
+        //and if you get to TOC, don't follow links in header (next/prev)
+        HtmlNodeFilters.tagWithAttribute("div", "class", "hd"),
         
         // on a Corrigendum abstract or full text page, there will be a link to "Original Article"
         // and on the Original Article page there will be a link back to the "Corrigendum"

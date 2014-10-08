@@ -1,4 +1,4 @@
-/* $Id: FutureScienceHtmlCrawlFilterFactory.java,v 1.2 2013-08-06 21:09:32 aishizaki Exp $
+/* $Id: FutureScienceHtmlCrawlFilterFactory.java,v 1.3 2014-10-08 16:11:26 alexandraohlson Exp $
  */
 
 /*
@@ -32,9 +32,13 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.atypon.futurescience;
 
 import java.io.InputStream;
+import java.util.regex.Pattern;
 
+import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.OrFilter;
+import org.htmlparser.tags.CompositeTag;
+import org.htmlparser.tags.LinkTag;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
@@ -48,12 +52,8 @@ import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
  * 
  */
 public class FutureScienceHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory {
-  //PrevArt/NextArt and PrevIss/NextIss okay - terminate at boundaries 
-  //Browse Volumes section okay because crawl rules will exclude
+  protected static final Pattern prev_next = Pattern.compile("Prev. Article|Next Article", Pattern.CASE_INSENSITIVE);
   NodeFilter[] filters = new NodeFilter[] {
-      // article pages (abstract, reference, full) have a "cited by" section which will change over time
-      //HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
-
       // articles have a section "Users who read this also read..." which is tricky to isolate
       // It's a little scary, but <div class="full_text"> seems only to be used for this section (not to be confused with fulltext)
       // though I could verify that it is followed by <div class="header_divide"><h3>Users who read this article also read:</h3></div>
@@ -61,6 +61,19 @@ public class FutureScienceHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilt
 
       //bibliography on an article page
       HtmlNodeFilters.tagWithAttribute("table",  "class", "references"),
+      
+      //overcrawling is an occasional issue with in-line references to "original article"
+      //protect from further crawl by stopping "next/prev" article/TOC/issue
+      //I cannot see an obvious way to stop next/prev issue on TOC, so just limit getting to wrong toc
+      HtmlNodeFilters.tagWithAttribute("table",  "class", "breadcrumbs"),      
+      //irritatingly, next-prev article has no identifier...look at the text
+      new NodeFilter() {
+        @Override public boolean accept(Node node) {
+          if (!(node instanceof LinkTag)) return false;
+          String allText = ((CompositeTag)node).toPlainTextString();
+          return prev_next.matcher(allText).find();
+        }
+      },
 
   };
 

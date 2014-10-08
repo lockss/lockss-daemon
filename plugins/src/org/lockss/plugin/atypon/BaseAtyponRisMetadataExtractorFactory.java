@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponRisMetadataExtractorFactory.java,v 1.3 2014-08-29 17:16:46 alexandraohlson Exp $
+ * $Id: BaseAtyponRisMetadataExtractorFactory.java,v 1.4 2014-10-08 16:11:26 alexandraohlson Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.io.IOException;
 import org.lockss.daemon.*;
 
 import org.lockss.extractor.*;
+import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.util.Logger;
 
@@ -95,13 +96,26 @@ implements FileMetadataExtractorFactory {
     public void extract(MetadataTarget target, CachedUrl cu, FileMetadataExtractor.Emitter emitter) 
         throws IOException, PluginException {
       ArticleMetadata am = extract(target, cu); 
+      
+      /* 
+       * if, due to overcrawl, we got to a page that didn't have anything
+       * valid, eg "this page not found" html page
+       * don't emit empty metadata (because defaults would get put in
+       * Must do this after cooking, because it checks size of cooked info
+       */
+      if (am.isEmpty()) {
+        return;
+      }
 
-      /* if the cooked data isn't complete, we could try to pick up from secondary tags in raw data */
-      if (am.get(MetadataField.FIELD_JOURNAL_TITLE) == null) {
+      /*
+       * RIS data can be variable.  We don't have any way to add priority to
+       * the cooking of data, so fallback to alternate values manually
+       */
+      if (am.get(MetadataField.FIELD_PUBLICATION_TITLE) == null) {
         if (am.getRaw("T2") != null) {
-          am.put(MetadataField.FIELD_JOURNAL_TITLE, am.getRaw("T2"));
+          am.put(MetadataField.FIELD_PUBLICATION_TITLE, am.getRaw("T2"));
         } else if (am.getRaw("JO") != null) {
-          am.put(MetadataField.FIELD_JOURNAL_TITLE, am.getRaw("JO")); // might be unabbreviated version
+          am.put(MetadataField.FIELD_PUBLICATION_TITLE, am.getRaw("JO")); // might be unabbreviated version
         }
       } 
       if (am.get(MetadataField.FIELD_DATE) == null) {
@@ -109,6 +123,20 @@ implements FileMetadataExtractorFactory {
           am.put(MetadataField.FIELD_DATE, am.getRaw("Y1"));
         }
       }
+           
+      // Only emit if this item is likely to be from this AU
+      // protect against counting overcrawled articles
+      ArchivalUnit au = cu.getArchivalUnit();
+      if (!BaseAtyponMetadataUtil.metadataMatchesTdb(au, am)) {
+        return;
+      }
+      
+      /*
+       * Fill in DOI, publisher, other information available from
+       * the URL or TDB 
+       * CORRECT the access.url if it is not in the AU
+       */
+      BaseAtyponMetadataUtil.completeMetadata(cu, am);
       emitter.emitMetadata(cu, am);
     }
 

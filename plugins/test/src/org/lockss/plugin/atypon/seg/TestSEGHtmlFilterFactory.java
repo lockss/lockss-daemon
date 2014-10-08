@@ -1,5 +1,5 @@
 /*
- * $Id: TestSEGHtmlFilterFactory.java,v 1.4 2014-09-23 20:00:37 ldoan Exp $
+ * $Id: TestSEGHtmlFilterFactory.java,v 1.5 2014-10-08 16:11:28 alexandraohlson Exp $
  */
 
 /*
@@ -92,6 +92,19 @@ public class TestSEGHtmlFilterFactory
           "<a class=\"articleToolsNav\" "+
           "href=\"/doi/abs/xx.xxxx/xxxx.215\">Next Article</a>&gt;" +
           "</div>" +
+          "<div class=\"groupInfo\">" +
+          "Volume a, Issue b (2012)" +
+          "</div>" +
+          "</div>" +
+          "</div>";
+  // top right of article - links to previous or next article
+  private static final String articleNavFiltered =
+      "<div class=\"block\">" +
+          "<div class=\"stackContents\" id=\"articleToolsNav\">" +
+          "<div class=\"stacked\" id=\"articleToolsPrev\">&lt;" +
+          "</div>" +
+          "<div class=\"stackedReverse\" id=\"articleToolsNext\">" +
+          "&gt;</div>" +
           "<div class=\"groupInfo\">" +
           "Volume a, Issue b (2012)" +
           "</div>" +
@@ -267,7 +280,7 @@ public class TestSEGHtmlFilterFactory
     }    
     public void testFiltering() throws Exception {
       doFilterTest(variantAu, variantFact, withPrevNextNav, filteredStr);
-      doFilterTest(variantAu, variantFact, withArticleToolsNav, filteredStr);      
+      doFilterTest(variantAu, variantFact, withArticleToolsNav, articleNavFiltered);      
       doFilterTest(variantAu, variantFact, 
           withLeftColumnExceptDownloadCitation, 
           withoutLeftColumnExceptDownloadCitation);

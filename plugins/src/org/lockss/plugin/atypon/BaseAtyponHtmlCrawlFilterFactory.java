@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponHtmlCrawlFilterFactory.java,v 1.2 2014-05-05 19:07:30 alexandraohlson Exp $
+ * $Id: BaseAtyponHtmlCrawlFilterFactory.java,v 1.3 2014-10-08 16:11:26 alexandraohlson Exp $
  */
 
 /*
@@ -59,7 +59,33 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
   protected static NodeFilter[] baseAtyponFilters = new NodeFilter[] {
     
     HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
- 
+    
+    // Since overcrawling is a constant problem for Atypon, put common
+    // next article-previous article link for safety; 
+    // AIAA, AMetSoc, ASCE, Ammons, APHA, SEG,Siam, 
+    HtmlNodeFilters.tagWithAttribute("a", "class", "articleToolsNav"),
+    // BIR, Maney, Endocrine - also handles next/prev issue - also for issues
+    HtmlNodeFilters.tagWithAttributeRegex("td", "class", "journalNavRightTd"),
+    HtmlNodeFilters.tagWithAttributeRegex("td", "class", "journalNavLeftTd"),
+    // BQ, BioOne, Edinburgh, futurescience, nrc
+    //        all handle next/prev article link in plugin
+    // T&F doesn't have prev/next article links
+
+    // breadcrumb or other link back to TOC from article page
+    // AMetSoc, Ammons, APHA, NRC,  
+    HtmlNodeFilters.tagWithAttribute("div", "id", "breadcrumbs"),
+    // ASCE, BiR, Maney, SEG, SIAM, Endocrine 
+    HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "^(linkList )?breadcrumbs$"),
+
+    // on TOC next-prev issue
+    // AIAA, AMetSoc, Ammons, APHA, 
+    HtmlNodeFilters.tagWithAttribute("div", "id", "nextprev"),
+    // ASCE, SEG, SIAM
+    HtmlNodeFilters.tagWithAttribute("div", "id", "prevNextNav"),
+
+    //on TOC left column with listing of all volumes/issues
+    HtmlNodeFilters.tagWithAttribute("ul", "class", "volumeIssues"),
+    
     // Not all Atypon plugins necessarily need this but MANY do and it is
     // an insidious source of over crawling
     new NodeFilter() {

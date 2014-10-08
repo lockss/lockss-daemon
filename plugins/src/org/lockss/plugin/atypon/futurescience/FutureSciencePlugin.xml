@@ -55,6 +55,11 @@
   <entry>
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.atypon.futurescience.FutureScienceHtmlCrawlFilterFactory</string>
+  </entry>
+  <!--some pdfplus files need scraping.  -->  
+  <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponScrapingPdfFilterFactory</string>
   </entry>  
   <entry>
     <string>plugin_au_config_user_msg</string>

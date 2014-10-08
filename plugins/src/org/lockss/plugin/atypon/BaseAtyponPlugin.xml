@@ -160,7 +160,8 @@
   <entry>
     <string>text/html_crawl_filter_factory</string> 
     <string>org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory</string>
-  </entry>    
+  </entry>
+  <!--  by default, use the simple pdf filter factory, not the scraping alternative -->    
   <entry>
     <string>application/pdf_filter_factory</string>
     <string>org.lockss.plugin.atypon.BaseAtyponPdfFilterFactory</string>
@@ -217,7 +218,18 @@
     <string>org.lockss.plugin.atypon.BaseAtyponRisMetadataExtractorFactory</string>
    </entry>
   </map>
-  </entry>  
+  </entry> 
+  <entry>
+    <string>application/pdf_metadata_extractor_factory_map</string>
+    <!-- if you are trying to emit based on pdf, you have nothing. emit nothing  -->
+    <!-- which keeps default tdb information from getting stored for the item -->
+    <map>
+      <entry>
+        <string>*;</string>
+        <string>org.lockss.plugin.atypon.BaseAtyponNULLMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
   <!--
     GLN children need to have a plugin_au_config_user_msg, which is a plain
     string, not a printf string. CLOCKSS children that are children of a GLN

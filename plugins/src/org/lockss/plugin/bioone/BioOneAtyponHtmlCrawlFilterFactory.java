@@ -1,10 +1,10 @@
 /*
- * $Id: BioOneAtyponHtmlCrawlFilterFactory.java,v 1.3 2013-08-23 20:20:39 alexandraohlson Exp $
+ * $Id: BioOneAtyponHtmlCrawlFilterFactory.java,v 1.4 2014-10-08 16:11:25 alexandraohlson Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -40,7 +40,7 @@ import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 
-
+/* this crawl filter is currently not inheriting from BaseAtypon parent */
 public class BioOneAtyponHtmlCrawlFilterFactory implements FilterFactory {
 
   @Override
@@ -59,6 +59,12 @@ public class BioOneAtyponHtmlCrawlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "citingArticles"),
         // and the following on a TOC page:
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "titleTools"),
+        //filter prev-next article as protection in overcrawl
+        HtmlNodeFilters.tagWithAttribute("a", "class", "articleToolsNav"),
+        //filter next-prev issue on TOC 
+        HtmlNodeFilters.tagWithAttribute("div", "class", "issueNav"),
+        // and don't follow breadcrumbs back to TOC
+        HtmlNodeFilters.tagWithAttribute("div", "id", "breadcrumbs"),
 
         // Contains reverse citations
         HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),

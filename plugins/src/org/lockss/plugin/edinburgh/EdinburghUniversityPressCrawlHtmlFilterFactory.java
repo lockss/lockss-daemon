@@ -1,5 +1,5 @@
 /*
- * $Id: EdinburghUniversityPressCrawlHtmlFilterFactory.java,v 1.4 2013-08-23 20:20:40 alexandraohlson Exp $
+ * $Id: EdinburghUniversityPressCrawlHtmlFilterFactory.java,v 1.5 2014-10-08 16:11:28 alexandraohlson Exp $
  */
 
 /*
@@ -53,6 +53,11 @@ public class EdinburghUniversityPressCrawlHtmlFilterFactory extends BaseAtyponHt
         HtmlNodeFilters.tagWithAttribute("img", "id", "accessLogo"),
         // Contains "most downloaded articles" section
         HtmlNodeFilters.tagWithAttribute("div", "id", "journalSidebar"),
+        //filter out prev/next article in case of overcrawl
+        HtmlNodeFilters.tagWithAttribute("div", "class", "moduleToolBarPaging"),
+        //filter out breadcrumb back to TOC in case of overcrawl
+        HtmlNodeFilters.tagWithAttribute("div", "id", "mainBreadCrumb"),
+        
     };
     return super.createFilteredInputStream(au, in, encoding, edFilters);
   }

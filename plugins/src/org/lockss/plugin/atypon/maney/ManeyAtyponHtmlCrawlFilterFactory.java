@@ -1,5 +1,5 @@
 /*
- * $Id: ManeyAtyponHtmlCrawlFilterFactory.java,v 1.2 2014-06-04 19:37:40 alexandraohlson Exp $
+ * $Id: ManeyAtyponHtmlCrawlFilterFactory.java,v 1.3 2014-10-08 16:11:25 alexandraohlson Exp $
  */
 
 /*
@@ -59,6 +59,7 @@ public class ManeyAtyponHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilter
       HtmlNodeFilters.tagWithAttributeRegex("section", "class", "literatumMostReadWidget"),
       HtmlNodeFilters.tagWithAttributeRegex("section", "class", "literatumMostCitedWidget"),
       HtmlNodeFilters.tagWithAttributeRegex("section", "class", "publicationListWidget"),
+      //prev-next article is handled by parent
 
   };
   @Override

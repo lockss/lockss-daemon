@@ -1,4 +1,4 @@
-/* $Id: BloomsburyQatarHtmlCrawlFilterFactory.java,v 1.1 2013-08-28 17:56:44 alexandraohlson Exp $
+/* $Id: BloomsburyQatarHtmlCrawlFilterFactory.java,v 1.2 2014-10-08 16:11:28 alexandraohlson Exp $
  */
 
 /*
@@ -57,6 +57,11 @@ public class BloomsburyQatarHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFi
       HtmlNodeFilters.tagWithAttribute("div", "id", "journalInfoPanel"),
       HtmlNodeFilters.tagWithAttribute("div", "id", "topArticlesTabs"),
       HtmlNodeFilters.tagWithAttribute("div", "id", "toolsPanel"),
+      
+      // do prev-next article as protection on overcrawling
+      HtmlNodeFilters.tagWithAttribute("div", "class", "articleNavigation"),
+      // breadcrumb which would lead back to toc as protection on overcrawling
+      HtmlNodeFilters.tagWithAttribute("div", "id", "breadcrumb"),
       
       // the tab with references for the article which could lead to other articles
       HtmlNodeFilters.tagWithAttribute("div", "id", "referencesTab"),

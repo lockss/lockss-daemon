@@ -1,5 +1,5 @@
 /*
- * $Id: TestBioOneAtyponHtmlFilterFactory.java,v 1.1 2013-08-23 20:20:41 alexandraohlson Exp $
+ * $Id: TestBioOneAtyponHtmlFilterFactory.java,v 1.2 2014-10-08 16:11:29 alexandraohlson Exp $
  */
 /*
 
@@ -162,6 +162,56 @@ public class TestBioOneAtyponHtmlFilterFactory extends LockssTestCase {
           "</a>" +
           "</div>" +
           "<h2>Title Tools</h2>";
+  
+  
+  private static final String articleNav=
+      "<div class=\"articleNav\">" +
+          "<a class=\"articleToolsNav\" href=\"/doi/full/10.111/x\">Ç previous article</a>" +
+          "<span class=\"navSearchColon\"> : </span>" +
+          "<a class=\"articleToolsNav\" href=\"/doi/full/10.1111/x\">next article È</a>" +
+          "</div>";
+  private static final String articleNavFiltered=
+      "<div class=\"articleNav\">" +
+          "<span class=\"navSearchColon\"> : </span>" +
+          "</div>";
+  private static final String issueNav=
+      "<div class=\"issueNav\">Jun 2010 : Volume 45 Issue 1 |" +
+          "<!--<div id=\"nextprev\">-->" +
+          "<a href=\"/toc/xxx/44/2\">" +
+          "                            Ç previous issue" +
+          "</a>" +
+          "            : " +
+          "<a href=\"/toc/xxx/45/2\">" +
+          "                            next issue È" +
+          "</a>" +
+          "<!--</div><br/>-->" +
+          "</div>";
+
+  private static final String issueNavFiltered=
+      "";
+  private static final String breadcrumb=
+      "<div id=\"breadcrumbs\">" +
+          "<a href=\"/\">Home</a>" +
+          "    / " +
+          "<a href=\"/action/showPublications?type=byAlphabet\">All Titles</a>" +
+          "        / <span class=\"title\">" +
+          "<a href=\"/loi/xxx\">" +
+          "                    JTitle" +
+          "</a>" +
+          "</span>" +
+          "        / <span class=\"title\">" +
+          "<a href=\"/toc/xxx/45/1\">" +
+          "                    Jun 2010" +
+          "</a>" +
+          "</span>" +
+          "       / <span class=\"title\">" +
+          "               pg(s) 1-26" +
+          "</span>" +
+          "</div>";
+
+  private static final String breadcrumbFiltered=
+"";
+
 
 
   public static class TestCrawl extends TestBioOneAtyponHtmlFilterFactory {
@@ -183,6 +233,19 @@ public class TestBioOneAtyponHtmlFilterFactory extends LockssTestCase {
       inA = fact.createFilteredInputStream(mau, new StringInputStream(leftColumnTOC),
           ENC);
       assertEquals(leftColumnTOCFiltered,StringUtil.fromInputStream(inA));      
+
+      inA = fact.createFilteredInputStream(mau, new StringInputStream(articleNav),
+          ENC);
+      assertEquals(articleNavFiltered,StringUtil.fromInputStream(inA));      
+
+      inA = fact.createFilteredInputStream(mau, new StringInputStream(issueNav),
+          ENC);
+      assertEquals(issueNavFiltered,StringUtil.fromInputStream(inA));      
+
+      inA = fact.createFilteredInputStream(mau, new StringInputStream(breadcrumb),
+          ENC);
+      assertEquals(breadcrumbFiltered,StringUtil.fromInputStream(inA));      
+      
     }
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponArticleIteratorFactory.java,v 1.8 2014-08-29 17:16:46 alexandraohlson Exp $
+ * $Id: BaseAtyponArticleIteratorFactory.java,v 1.9 2014-10-08 16:11:26 alexandraohlson Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.plugin.atypon;
 import java.util.Iterator;
 import java.util.regex.Pattern;
 
+import org.lockss.config.TdbAu;
 import org.lockss.daemon.*;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.ArticleMetadataExtractorFactory;
@@ -129,14 +130,21 @@ implements ArticleIteratorFactory,
         ArticleFiles.ROLE_FULL_TEXT_HTML,
         ArticleFiles.ROLE_ARTICLE_METADATA); // use for metadata if abstract doesn't exist
 
-
-    // set up Abstract to be an aspect that will trigger an ArticleFiles
-    // NOTE - for the moment this also means an abstract could be considered a FULL_TEXT_CU until this is deprecated
-    // though the ordered list for role full text will mean if any of the others are there, they will become the FTCU
-    builder.addAspect(ABSTRACT_PATTERN,
-        ABSTRACT_REPLACEMENT,
-        ArticleFiles.ROLE_ABSTRACT,
-        ArticleFiles.ROLE_ARTICLE_METADATA);
+    if (isAbstractOnly(au)) {
+    // When part of an abstract only AU, set up an abstract to be an aspect
+    // that will trigger an articleFiles. 
+    // This also means an abstract could be considered a FULL_TEXT_CU until this is deprecated
+      builder.addAspect(ABSTRACT_PATTERN,
+          ABSTRACT_REPLACEMENT,
+          ArticleFiles.ROLE_ABSTRACT,
+          ArticleFiles.ROLE_ARTICLE_METADATA);
+    } else {
+      // If this isn't an "abstracts only" AU, an abstract alone should not
+      // be enough to trigger an ArticleFiles
+      builder.addAspect(ABSTRACT_REPLACEMENT,
+          ArticleFiles.ROLE_ABSTRACT,
+          ArticleFiles.ROLE_ARTICLE_METADATA);
+    }
 
     // set a role, but it isn't sufficient to trigger an ArticleFiles
     builder.addAspect(REFERENCES_REPLACEMENT,
@@ -184,4 +192,15 @@ implements ArticleIteratorFactory,
     return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
   }
 
+  private static boolean isAbstractOnly(ArchivalUnit au) {
+    boolean answer = false;
+    TdbAu tdbAu;
+    if ((tdbAu = au.getTdbAu()) != null) {
+      if ("abstracts".equals(tdbAu.getCoverageDepth())) {
+        answer = true;
+      }
+    }
+    return answer;
+  }
+  
 }

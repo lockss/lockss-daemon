@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaylorAndFrancisHtmlFilterFactory.java,v 1.17 2014-07-29 22:01:04 alexandraohlson Exp $
+ * $Id: TestTaylorAndFrancisHtmlFilterFactory.java,v 1.18 2014-10-08 16:11:25 alexandraohlson Exp $
  */
 
 /*
@@ -253,7 +253,35 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
     private static final String fullRefListingFiltered =
         "<div>" +
             "</div>";
+    
+    private static final String issueTOCNav=
+        "<div class=\"hd\">" +
+            "                    <h2>" +
+            "                    <a href=\"/loi/xxx20?open=7#vol_7\">Volume 7</a>," +
+            "            Issue 1," +
+            "2013" +
+            "<span style=\"float: right;margin-right: 5px\">" +
+            "        <a title=\"Previous issue\" href=\"http://www.tandfonline.com/toc/xxx20/6/1\">&lt; Prev</a>" +
+            "        |" +
+            "        <a title=\"Next issue\" href=\"http://www.tandfonline.com/toc/xxx20/8/1\">Next &gt;</a>" +
+            "</span>" +
+            "                    </h2>" +
+            "                </div>";
+    private static final String issueTOCNavFiltered=
+"";
 
+    private static final String breadcrumb=
+        "<div id=\"breadcrumb\">" +
+            " <a href=\"/\">Home</a>" +
+            "       &gt; " +
+            "        <a href=\"/loi/xxx20\">List of Issues</a>" +
+            "         &gt; " +
+            "        <a href=\"/toc/xxx20/7/1\">Table Of Contents</a>" +
+            "         &gt; " +
+            "        A Critical Assessment" +
+            "</div>";
+    private static final String breadcrumbFiltered=
+        "";
     public void setUp() throws Exception {
       super.setUp();
       fact = new TaylorAndFrancisHtmlCrawlFilterFactory();
@@ -291,6 +319,22 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
               Constants.DEFAULT_ENCODING);
       assertEquals(StringUtil.fromInputStream(actIn),
           fullRefListingFiltered);
+    } 
+    
+    public void testNavFiltering() throws Exception {
+      InputStream actIn =
+          fact.createFilteredInputStream(mau,
+              new StringInputStream(issueTOCNav),
+              Constants.DEFAULT_ENCODING);
+      assertEquals(StringUtil.fromInputStream(actIn),
+          issueTOCNavFiltered);
+
+      actIn =
+          fact.createFilteredInputStream(mau,
+              new StringInputStream(breadcrumb),
+              Constants.DEFAULT_ENCODING);
+      assertEquals(StringUtil.fromInputStream(actIn),
+          breadcrumbFiltered);
     } 
 
   }

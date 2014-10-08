@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponPdfFilterFactory.java,v 1.4 2014-10-08 16:11:26 alexandraohlson Exp $
+ * $Id: BaseAtyponPdfDocumentFactory.java,v 1.1 2014-10-08 16:11:26 alexandraohlson Exp $
  */
 
 /*
@@ -43,36 +43,44 @@ import org.lockss.pdf.pdfbox.PdfBoxDocument;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.IOUtil;
 
-/**
- * A pdf filter that handles the needs of many Atypon children
- * - handles pdfbox cryptography exception and removes creation date, modification
- * and trailer id.
- * For more complicated issues (usually seen in pdfplus - use the 
- * BaseAtyponScrapingPdfFilterFactory
- * @author alexohlson
- *
+/*
+ * FIXME 1.67
  */
-public class BaseAtyponPdfFilterFactory extends SimplePdfFilterFactory {
-
-  //Until the daemon handles this, use the special document factory
-  // that knows how to handle the cryptography exception
-  public BaseAtyponPdfFilterFactory() {
-    super(new BaseAtyponPdfDocumentFactory()); // FIXME 1.67
-  }
-
-  /*
-   * Many Atypon pdf files have the CreationDate and ModDate and the two ID numbers in the trailer
-   * vary from collection to collection. Filter them out to avoid incorrect hash failures.
-   * A child could choose to avoid this entirely by setting it to org.lockss.util.Default
-   * or they could write their own child implementation
-   */
+public class BaseAtyponPdfDocumentFactory implements PdfDocumentFactory {
   @Override
-  public void transform(ArchivalUnit au,
-                        PdfDocument pdfDocument)
-      throws PdfException {
-    pdfDocument.unsetCreationDate();
-    pdfDocument.unsetModificationDate();
-    PdfUtil.normalizeTrailerId(pdfDocument);
+  public PdfDocument parse(InputStream pdfInputStream)
+      throws IOException, PdfCryptographyException, PdfException {
+    try {
+      PDFParser pdfParser = new PDFParser(pdfInputStream);
+      pdfParser.parse();
+      PDDocument pdDocument = pdfParser.getPDDocument();
+      if (pdDocument.isEncrypted()) {
+        pdDocument.decrypt("");
+      }
+      pdDocument.setAllSecurityToBeRemoved(true);
+      return new PdfBoxDocument(pdDocument) {
+        // Empty body (constructor is not visible but is visible from subclass)
+      };
+    }
+    catch (CryptographyException ce) {
+      throw new PdfCryptographyException(ce);
+    }
+    catch (IOException ioe) {
+      throw new PdfException(ioe);
+    }
+    catch (Exception exc) {
+      // FIXME 1.67
+      // InvalidPasswordException thrown by PDFBox <= 1.8.5 but not >= 1.8.6
+      // This hack will avoid 1.67 plugins being incompatible with 1.67 
+      if (exc instanceof InvalidPasswordException) {
+        throw new PdfCryptographyException(exc);
+      }
+      else {
+        throw new PdfException(exc);
+      }
+    }
+    finally {
+      IOUtil.safeClose(pdfInputStream);
+    }
   }
-
 }

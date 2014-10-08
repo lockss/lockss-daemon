@@ -1,4 +1,4 @@
-/* $Id: ClockssNRCResearchPressHtmlCrawlFilterFactory.java,v 1.4 2013-10-11 20:03:33 alexandraohlson Exp $
+/* $Id: ClockssNRCResearchPressHtmlCrawlFilterFactory.java,v 1.5 2014-10-08 16:11:25 alexandraohlson Exp $
  */
 
 /*
@@ -68,6 +68,11 @@ public class ClockssNRCResearchPressHtmlCrawlFilterFactory extends BaseAtyponHtm
       HtmlNodeFilters.tagWithAttribute("a",  "class", "icon-recommended"), 
       // Remove link to correction/corrected article 
       HtmlNodeFilters.tagWithAttribute("a",  "class", "icon-related"),
+      // in case of overcrawl, don't follow next-prev-toc article links
+      HtmlNodeFilters.tagWithAttribute("a",  "class", "white-link-right"),
+      // in case of overcrawl, don't follow next-prev issue links on toc
+      HtmlNodeFilters.tagWithAttributeRegex("a",  "title", "(Previous|Next) Issue"),
+      
     };
     @Override
     public InputStream createFilteredInputStream(ArchivalUnit au,

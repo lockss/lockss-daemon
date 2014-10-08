@@ -1,6 +1,6 @@
-/* $Id: TestNRCResearchPressHtmlMetadataExtractorFactory.java,v 1.1 2013-04-19 22:49:44 alexandraohlson Exp $
+/* $Id: TestNRCResearchPressHtmlMetadataExtractorFactory.java,v 1.2 2014-10-08 16:11:26 alexandraohlson Exp $
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -28,41 +28,29 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.atypon.nrcresearchpress;
 
-import java.io.*;
 import java.util.*;
-import java.util.regex.*;
-
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
-import org.lockss.daemon.*;
-import org.lockss.crawler.*;
-import org.lockss.repository.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.atypon.BaseAtyponHtmlMetadataExtractorFactory;
-import org.lockss.plugin.base.*;
-import org.lockss.plugin.simulated.*;
 
 /**
  * One of the articles used to get the html source for this plugin is:
  * http://www.amsciepub.com/doi/abs/10.2466/07.17.21.PMS.113.6.703-714 
  */
 public class TestNRCResearchPressHtmlMetadataExtractorFactory extends LockssTestCase {
-  static Logger log = Logger.getLogger("TestNRCResearchPressMetadataExtractorFactory");
+  static Logger log = Logger.getLogger(TestNRCResearchPressHtmlMetadataExtractorFactory.class);
 
   private MockArchivalUnit mau;
   private MockLockssDaemon theDaemon;
 
-  private static String PLUGIN_NAME =
-    "org.lockss.plugin.atypon.ncrresearchpress.NRCResearchPressPlugin";
-
   private static String BASE_URL = "http://www.example.com";
-  private static String SIM_ROOT = BASE_URL + "cgi/reprint/";
 
   public void setUp() throws Exception {
     super.setUp();
-    String tempDirPath = setUpDiskSpace();
+    setUpDiskSpace();
 
     theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
@@ -174,6 +162,7 @@ public class TestNRCResearchPressHtmlMetadataExtractorFactory extends LockssTest
   String badContent =
     "<HTML><HEAD><TITLE>" + goodTitle + "</TITLE></HEAD><BODY>\n" + 
     "<meta name=\"foo\"" +  " content=\"bar\">\n" +
+    "<meta name=\"dc.Title\" content=\""+goodTitle+"\"></meta>" +
     "  <div id=\"issn\">" +
     "<!-- FILE: /data/templates/www.example.com/bogus/issn.inc -->MUMBLE: " +
     goodDescription + " </div>\n";
@@ -199,11 +188,37 @@ public class TestNRCResearchPressHtmlMetadataExtractorFactory extends LockssTest
     assertNull(md.get(MetadataField.FIELD_START_PAGE));
     assertNull(md.get(MetadataField.FIELD_ISSN));
     assertNull(md.get(MetadataField.FIELD_AUTHOR));
-    assertNull(md.get(MetadataField.FIELD_ARTICLE_TITLE));
+    assertNotNull(md.get(MetadataField.FIELD_ARTICLE_TITLE));
     assertNull(md.get(MetadataField.FIELD_JOURNAL_TITLE));
     assertNull(md.get(MetadataField.FIELD_DATE));
-    assertEquals(1, md.rawSize());
+    assertEquals(2, md.rawSize());
     assertEquals("bar", md.getRaw("foo"));
   }
+  
+  String allBadContent =
+      "<HTML><HEAD><TITLE>" + goodTitle + "</TITLE></HEAD><BODY>\n" + 
+      "<meta name=\"foo\"" +  " content=\"bar\">\n" +
+      "  <div id=\"issn\">" +
+      "<!-- FILE: /data/templates/www.example.com/bogus/issn.inc -->MUMBLE: " +
+      goodDescription + " </div>\n";
+
+  /*
+   * Base Atypon now declines to emit when there is no metadata of value 
+   * as it's usually an indication of a bogus page - "Can't find this page" sort of html
+   */
+    public void testExtractFromNoCollectedContent() throws Exception {
+      String url = "http://www.example.com/vol1/issue2/art3/";
+      MockCachedUrl cu = new MockCachedUrl(url, mau);
+      cu.setContent(allBadContent);
+      cu.setContentSize(allBadContent.length());
+      FileMetadataExtractor me =
+        new BaseAtyponHtmlMetadataExtractorFactory.BaseAtyponHtmlMetadataExtractor();
+      assertNotNull(me);
+      log.debug3("Extractor: " + me.toString());
+      FileMetadataListExtractor mle =
+        new FileMetadataListExtractor(me);
+      List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
+      assertEmpty(mdlist);
+    }
   
 }

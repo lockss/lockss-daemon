@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseAtyponMetadataExtractor.java,v 1.4 2014-08-29 17:16:46 alexandraohlson Exp $
+ * $Id: TestBaseAtyponMetadataExtractor.java,v 1.5 2014-10-08 16:11:25 alexandraohlson Exp $
  */
 /*
 
@@ -33,14 +33,19 @@
 
 package org.lockss.plugin.atypon;
 
+import java.io.IOException;
 import java.util.*;
 
+import org.apache.commons.io.IOUtils;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
+import org.lockss.daemon.ConfigParamDescr;
+import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.atypon.BaseAtyponHtmlMetadataExtractorFactory;
+import org.lockss.plugin.atypon.BaseAtyponHtmlMetadataExtractorFactory.BaseAtyponHtmlMetadataExtractor;
 import org.lockss.plugin.copernicus.CopernicusRisMetadataExtractorFactory;
 
 
@@ -50,12 +55,38 @@ public class TestBaseAtyponMetadataExtractor extends LockssTestCase {
 
   private MockLockssDaemon theDaemon;
   private ArchivalUnit bau;
+  private ArchivalUnit bau1;
   private static String PLUGIN_NAME = "org.lockss.plugin.atypon.BaseAtyponPlugin";
+  static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   private static String BASE_URL = "http://www.baseatypon.org/";
+  
+  // the metadata that should be extracted
+  static String goodDate = "2012-07-05";
+  static String[] goodAuthors = new String[] {"D. Author", "S. Author2"};
+  static String goodFormat = "text/HTML";
+  static String goodTitle = "Title of Article";
+  static String goodType = "research-article";
+  static String goodPublisher = "Base Atypon";
+  static String goodPublishingPlatform = "Atypon";
+  static String goodDOI = "10.1137/10081839X";
+  static String goodJID = "xxx";
+  
+  static String goodJournal = "Journal Name"; 
+  static String goodStartPage = "22";
+  static String goodEndPage = "44";
+  static String goodVolume = "13";
+  static String goodIssue = "3";
+  static String goodIssn = "1540-3459";
+  static String doiURL = "http://dx.doi.org/" + goodDOI;
+  private static final String ABS_URL =  BASE_URL + "doi/abs/10.1175/2010WCAS1063.1";
+  private static final String RIS_URL = BASE_URL + "action/downloadCitation?doi=" + goodDOI + "&format=ris&include=cit";
+
+
+
 
   public void setUp() throws Exception {
     super.setUp();
-    String tempDirPath = setUpDiskSpace(); // you need this to have startService work properly...
+    setUpDiskSpace(); // you need this to have startService work properly...
 
     theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
@@ -64,7 +95,17 @@ public class TestBaseAtyponMetadataExtractor extends LockssTestCase {
     theDaemon.getPluginManager().startService();
     theDaemon.getCrawlManager();
 
-    bau = PluginTestUtil.createAndStartAu(PLUGIN_NAME, auConfig());
+    
+    // in this directory this is file "test_baseatypon.tdb" but it becomes xml
+    ConfigurationUtil.addFromUrl(getResource("test_baseatypon.xml"));
+    Tdb tdb = ConfigManager.getCurrentConfig().getTdb();
+
+    TdbAu tdbau1 = tdb.getTdbAusLikeName(goodJournal + " Volume " + goodVolume).get(0);
+    assertNotNull("Didn't find named TdbAu",tdbau1);
+    bau1 = PluginTestUtil.createAndStartAu(tdbau1);
+    assertNotNull(bau1);
+    TypedEntryMap auConfig =  bau1.getProperties();
+    assertEquals(BASE_URL, auConfig.getString(BASE_URL_KEY));
   }
 
   public void tearDown() throws Exception {
@@ -76,31 +117,6 @@ public class TestBaseAtyponMetadataExtractor extends LockssTestCase {
    * Configuration method. 
    * @return
    */
-  Configuration auConfig() {
-    Configuration conf = ConfigManager.newConfiguration();
-    conf.put("base_url", BASE_URL);
-    conf.put("journal_id", "xxxx");
-    conf.put("volume_name","123");
-    return conf;
-  }
-  
-  // the metadata that should be extracted
-  String goodDate = "2012-07-05";
-  String[] goodAuthors = new String[] {"D. Author", "S. Author2"};
-  String goodFormat = "text/HTML";
-  String goodTitle = "Title of Article";
-  String goodType = "research-article";
-  String goodPublisher = "Base Atypon";
-  String goodPublishingPlatform = "Atypon";
-  String goodDOI = "10.1137/10081839X";
-  
-  String goodJournal = "Journal Name"; 
-  String goodStartPage = "22";
-  String goodEndPage = "44";
-  String goodVolume = "13";
-  String goodIssue = "3";
-  String goodIssn = "1540-3459";
-  String doiURL = "http://dx.doi.org/" + goodDOI;
 
   /*
    "<meta name="dc.Title" content="Title of Article"></meta>
@@ -142,15 +158,8 @@ public class TestBaseAtyponMetadataExtractor extends LockssTestCase {
    
 
   public void testExtractGoodHtmlContent() throws Exception {
-    String url = "http://www.example.com/vol1/issue2/art3/";
-    MockCachedUrl cu = new MockCachedUrl(url, bau);
-    cu.setContent(goodHtmlContent);
-    cu.setContentSize(goodHtmlContent.length());
-    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
-    FileMetadataExtractor me = new BaseAtyponHtmlMetadataExtractorFactory.BaseAtyponHtmlMetadataExtractor();
-    FileMetadataListExtractor mle =
-      new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
+    
+    List<ArticleMetadata> mdlist = setupContentForAU(bau1, ABS_URL, goodHtmlContent, true);
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
@@ -180,25 +189,16 @@ public class TestBaseAtyponMetadataExtractor extends LockssTestCase {
    
 
   public void testDOIExtraction() throws Exception {
-    String url = BASE_URL + "doi/abs/10.1175/2010WCAS1063.1";
-    MockCachedUrl cu = new MockCachedUrl(url, bau);
-    cu.setContent(goodHtmlContentNoDOIorPublisher);
-    cu.setContentSize(goodHtmlContentNoDOIorPublisher.length());
-    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
-    FileMetadataExtractor me = new BaseAtyponHtmlMetadataExtractorFactory.BaseAtyponHtmlMetadataExtractor();
-    FileMetadataListExtractor mle =
-      new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
+
+    List<ArticleMetadata> mdlist = setupContentForAU(bau1, ABS_URL, goodHtmlContentNoDOIorPublisher, true);
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
     // gets pulled from the URL if not set in the metadata
     assertEquals("10.1175/2010WCAS1063.1", md.get(MetadataField.FIELD_DOI));
     // gets set manually if not in the metadata
-    // first it would try the TDB (which won't exist for the Base Atypon plugin)
-    // next it would pull the publishing platform out of the plugin, which is better than nothing...
-    // Need to figure this out if based on Atypon Base
-   assertEquals(goodPublishingPlatform, md.get(MetadataField.FIELD_PUBLISHER));
+    // first it would try the TDB 
+   assertEquals(goodPublisher, md.get(MetadataField.FIELD_PUBLISHER));
     
   }
   
@@ -243,15 +243,8 @@ public class TestBaseAtyponMetadataExtractor extends LockssTestCase {
   public void testExtractGoodRisContent() throws Exception {
     String goodContent = createGoodRisContent();
     log.debug3(goodContent);
-    String url = BASE_URL + "action/downloadCitation?doi=" + goodDOI + "&format=ris&include=cit";
-    MockCachedUrl cu = new MockCachedUrl(url, bau);
-    cu.setContent(goodContent);
-    cu.setContentSize(goodContent.length());
-    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/plain");
-    FileMetadataExtractor me = new BaseAtyponRisMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/plain");
-    FileMetadataListExtractor mle =
-        new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
+    
+    List<ArticleMetadata> mdlist = setupContentForAU(bau1, RIS_URL, goodContent, false);
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
@@ -266,7 +259,7 @@ public class TestBaseAtyponMetadataExtractor extends LockssTestCase {
       assertEquals(expAuth, actAuthIter.next());
     }
     assertEquals(goodTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
-    assertEquals(goodJournal, md.get(MetadataField.FIELD_JOURNAL_TITLE));
+    assertEquals(goodJournal, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
     assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
 
     assertEquals(goodPublisher, md.get(MetadataField.FIELD_PUBLISHER));
@@ -304,15 +297,8 @@ public class TestBaseAtyponMetadataExtractor extends LockssTestCase {
   public void testExtractAlternateRisContent() throws Exception {
     String goodContent = createAlternateRisContent();
     log.debug3(goodContent);
-    String url = BASE_URL + "action/downloadCitation?doi=" + goodDOI + "&format=ris&include=cit";
-    MockCachedUrl cu = new MockCachedUrl(url, bau);
-    cu.setContent(goodContent);
-    cu.setContentSize(goodContent.length());
-    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/plain");
-    FileMetadataExtractor me = new BaseAtyponRisMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/plain");
-    FileMetadataListExtractor mle =
-        new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
+
+    List<ArticleMetadata> mdlist = setupContentForAU(bau1, RIS_URL, goodContent, false);
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
@@ -322,10 +308,44 @@ public class TestBaseAtyponMetadataExtractor extends LockssTestCase {
       assertEquals(expAuth, actAuthIter.next());
     }
     assertEquals(goodTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
-    assertEquals(goodJournal, md.get(MetadataField.FIELD_JOURNAL_TITLE));
+    assertEquals(goodJournal, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
     assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
     assertEquals(goodPublisher, md.get(MetadataField.FIELD_PUBLISHER));
   }
 
+  /* private support methods */
+  private List<ArticleMetadata> setupContentForAU(ArchivalUnit au, String url, 
+      String content,
+      boolean isHtmlExtractor) throws IOException, PluginException {
+    FileMetadataExtractor me;
+
+    UrlCacher uc = au.makeUrlCacher(url);
+    if (isHtmlExtractor) {
+      uc.storeContent(IOUtils.toInputStream(content, "utf-8"),getContentHtmlProperties());
+      me = new BaseAtyponHtmlMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/html");
+    } else {
+      uc.storeContent(IOUtils.toInputStream(content, "utf-8"),getContentRisProperties());
+      me = new BaseAtyponRisMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/plain");
+    }
+    CachedUrl cu = uc.getCachedUrl();
+    FileMetadataListExtractor mle = new FileMetadataListExtractor(me);
+    return mle.extract(MetadataTarget.Any(), cu);
+  }
+
+  private CIProperties getContentHtmlProperties() {
+    CIProperties cProps = new CIProperties();
+    // the CU checks the X-Lockss-content-type, not the content-type to determine encoding                                                  
+    cProps.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html; charset=UTF-8");
+    cProps.put("Content-type",  "text/html; charset=UTF-8");
+    return cProps;
+  }
+  private CIProperties getContentRisProperties() {
+    CIProperties cProps = new CIProperties();
+    // the CU checks the X-Lockss-content-type, not the content-type to determine encoding                                                  
+    cProps.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/plain; charset=UTF-8");
+    cProps.put("Content-type",  "text/plain; charset=UTF-8");
+    return cProps;
+  }
+    
 
 }

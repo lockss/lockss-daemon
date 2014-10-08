@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponHtmlMetadataExtractorFactory.java,v 1.6 2013-12-23 18:30:45 alexandraohlson Exp $
+ * $Id: BaseAtyponHtmlMetadataExtractorFactory.java,v 1.7 2014-10-08 16:11:26 alexandraohlson Exp $
  */
 
 /*
@@ -33,14 +33,10 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.atypon;
 
 import java.io.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
 
 import org.lockss.util.*;
-import org.lockss.config.TdbAu;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
@@ -48,7 +44,7 @@ import org.lockss.plugin.*;
 
 public class BaseAtyponHtmlMetadataExtractorFactory 
   implements FileMetadataExtractorFactory {
-  static Logger log = Logger.getLogger("BaseAtyponHtmlMetadataExtractorFactory");
+  static Logger log = Logger.getLogger(BaseAtyponHtmlMetadataExtractorFactory.class);
 
   public FileMetadataExtractor 
     createFileMetadataExtractor(MetadataTarget target, String contentType)
@@ -94,7 +90,6 @@ public class BaseAtyponHtmlMetadataExtractorFactory
     }
     
     
-    private String base_url;
     
     @Override
     public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
@@ -103,51 +98,33 @@ public class BaseAtyponHtmlMetadataExtractorFactory
         new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
  
       am.cook(tagMap);
+      /* 
+       * if, due to overcrawl, we got to a page that didn't have anything
+       * valid, eg "this page not found" html page
+       * don't emit empty metadata (because defaults would get put in
+       * Must do this after cooking, because it checks size of cooked info
+       */
+      if (am.isEmpty()) {
+        return;
+      }
       
-      // if the doi isn't in the metadata, we can still get it from the filename
-      if (am.get(MetadataField.FIELD_DOI) == null) {
-        
-        /*matches() is anchored so must create complete pattern or else use .finds() */
-        /* URL is "<base>/doi/(abs|full)/<doi1st>/<doi2nd> */
-        base_url = cu.getArchivalUnit().getConfiguration().get("base_url");
-        String patternString = "^" + base_url + "doi/[^/]+/([^/]+)/([^?^&]+)$";
-        Pattern METADATA_PATTERN = Pattern.compile(patternString, Pattern.CASE_INSENSITIVE);
-        String url = cu.getUrl();
-        Matcher mat = METADATA_PATTERN.matcher(url);
-        
-        if (mat.matches()) {
-          log.debug3("Pull DOI from URL " + mat.group(1) + "." + mat.group(2));
-          am.put(MetadataField.FIELD_DOI, mat.group(1) + "/" + mat.group(2));
-        }
+      // Only emit if this item is likely to be from this AU
+      // protect against counting overcrawled articles
+      ArchivalUnit au = cu.getArchivalUnit();
+      if (!BaseAtyponMetadataUtil.metadataMatchesTdb(au, am)) {
+        return;
       }
-
-      // If the publisher doesn't appear in the meta tags, set it from the TitleConfig value (if there)
-      if (am.get(MetadataField.FIELD_PUBLISHER) == null) {
-        
-        // We can try to get the publishger from the tdb file.  This would be the most accurate
-        TdbAu tdbau = cu.getArchivalUnit().getTdbAu(); // returns null if titleConfig is null 
-        String publisher = (tdbau == null) ? null : tdbau.getPublisherName();
-        
-        if (publisher == null) { 
-          // Last chance, we can try to get the publishing platform off the plugin
-          Plugin pg = cu.getArchivalUnit().getPlugin();
-          publisher = (pg == null) ? null : pg.getPublishingPlatform();
-         }
-        if (publisher != null) {
-          am.put(MetadataField.FIELD_PUBLISHER, publisher);
-        }
-      }
-      // if the journal title does not appear in the meta tags, then can set if
-      // from the tdb - cannot set it from the plugin, so no last chance for the journal title
-      if (am.get(MetadataField.FIELD_JOURNAL_TITLE) == null) {
-        TdbAu tdbau = cu.getArchivalUnit().getTdbAu();
-        String journal_title = (tdbau == null) ? null : tdbau.getJournalTitle();
-        if (journal_title != null) {
-          am.put(MetadataField.FIELD_JOURNAL_TITLE, journal_title);
-        }
-      }
- 
+      
+      /*
+       * Fill in DOI, publisher, other information available from
+       * the URL or TDB 
+       * CORRECT the access.url if it is not in the AU
+       */
+      BaseAtyponMetadataUtil.completeMetadata(cu, am);
+      
+      // If we've gotten this far, emit
       emitter.emitMetadata(cu, am);
+
     }
     
     protected MultiMap getTagMap() {

@@ -1,5 +1,5 @@
 /*
- * $Id: SEGHtmlCrawlFilterFactory.java,v 1.4 2014-09-23 19:15:49 ldoan Exp $
+ * $Id: SEGHtmlCrawlFilterFactory.java,v 1.5 2014-10-08 16:11:25 alexandraohlson Exp $
  */
 
 /*
@@ -46,12 +46,7 @@ import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
 public class SEGHtmlCrawlFilterFactory 
   extends BaseAtyponHtmlCrawlFilterFactory {
   static NodeFilter[] filters = new NodeFilter[] {
-    
-    // top right of issue toc - links to previous or next issue
-    HtmlNodeFilters.tagWithAttribute("div", "id", "prevNextNav"),
-    
-    // top right of an article - links to previous or next article
-    HtmlNodeFilters.tagWithAttribute("div", "id", "articleToolsNav"),
+    // prev-next article is handled by parent
     
     // left column of an article - all except Download Citations
     HtmlNodeFilters.allExceptSubtree(

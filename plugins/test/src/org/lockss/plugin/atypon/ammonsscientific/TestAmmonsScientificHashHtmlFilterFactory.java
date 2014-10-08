@@ -1,5 +1,5 @@
 /*
- * $Id: TestAmmonsScientificHashHtmlFilterFactory.java,v 1.1 2013-08-06 21:24:24 aishizaki Exp $
+ * $Id: TestAmmonsScientificHashHtmlFilterFactory.java,v 1.2 2014-10-08 16:11:29 alexandraohlson Exp $
  */
 
 /* Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University, all rights reserved.
@@ -42,7 +42,7 @@ public class TestAmmonsScientificHashHtmlFilterFactory extends LockssTestCase{
 
   public void setUp() throws Exception {
     super.setUp();
-    filt = new BaseAtyponHtmlHashFilterFactory();
+    filt = new AmmonsScientificHtmlHashFilterFactory();
     mau = new MockArchivalUnit();
   }
 
@@ -58,10 +58,10 @@ public class TestAmmonsScientificHashHtmlFilterFactory extends LockssTestCase{
     "</html>";
 
   private static final String withoutHeader =
-    "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n" +
-    "<html>\n" +
-    "<head>\n" +
-    "\n</head>\n" +
+    "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"> " +
+    "<html> " +
+    "<head> " +
+    "</head> " +
     "</html>";
   private static final String withScript=
     "<script type=\"text/javascript\"> <!-- // hide it from old browsers  var anyDbId = -1; //stop hiding --> </script>" +
@@ -70,7 +70,67 @@ public class TestAmmonsScientificHashHtmlFilterFactory extends LockssTestCase{
     "</script></td>Hello World";
   private static final String withoutScript=
     "<td></td>Hello World";
-
+  
+  private static final String accessIconHtml=
+      "<table border=\"0\" width=\"100%\" class=\"articleEntry\">" +
+          "<tr>" +
+          "<td align=\"right\" valign=\"top\" width=\"18\">" +
+          "<input type=\"checkbox\" name=\"doi\" value=\"10.2466/30.24.PMS.117xxxxx\" />" +
+          "<br />" +
+          "<img src=\"/templates/jsp/_style2/_premium/images/access_no.gif\" alt=\"No Access\" title=\"No Access\" class=\"accessIcon noAccess\" />" +
+          "</td>" +
+          "<td valign=\"top\">" +
+          "<div class=\"art_title\">" +
+          "<span class=\"hlFld-Title\">SOCCER" +
+          "</span>" +
+          "</div>" +
+          "<a class=\"entryAuthor\" href=\"/action/doSearch?Contrib=Green\">Green</a>" +
+          "<div class=\"art_meta\">Skills Volume 117, Issue 1, August 2013:  1-2.</div>" +
+          "<a class=\"ref nowrap \" href=\"/doi/abs/10.2466/30.24.PMS.117xxxxx\">Abstract" +
+          "</a> | " +
+          "<a class=\"ref nowrap\" href=\"/doi/full/10.2466/30.24.PMS.117xxxxx\">Full Text" +
+          "</a> | " +
+          "<a class=\"ref nowrap pdf\" target=\"_blank\" title=\"Opens new window\" href=\"/doi/pdf/10.2466/30.24.PMS.117xxxxx\">PDF (152 KB)" +
+          "</a> | " +
+          "<a class=\"ref nowrap pdfplus\" target=\"_blank\" title=\"Opens new window\" href=\"/doi/pdfplus/10.2466/30.24.PMS.117xxxxx\">PDF Plus (203 KB)" +
+          "</a> " +
+          "</td>" +
+          "</tr>" +
+          "</table>";
+  
+  private static final String accessIconHtmlFiltered=
+      "<table border=\"0\" width=\"100%\" class=\"articleEntry\">" +
+          "<tr>" +
+          "<td align=\"right\" valign=\"top\" width=\"18\">" +
+          "<input type=\"checkbox\" name=\"doi\" value=\"10.2466/30.24.PMS.117xxxxx\" />" +
+          "<br />" +
+          "</td>" +
+          "<td valign=\"top\">" +
+          "<div class=\"art_title\">" +
+          "<span class=\"hlFld-Title\">SOCCER" +
+          "</span>" +
+          "</div>" +
+          "<a class=\"entryAuthor\" href=\"/action/doSearch?Contrib=Green\">Green</a>" +
+          "<div class=\"art_meta\">Skills Volume 117, Issue 1, August 2013: 1-2.</div>" +
+          "<a class=\"ref nowrap \" href=\"/doi/abs/10.2466/30.24.PMS.117xxxxx\">Abstract" +
+          "</a> | " +
+          "<a class=\"ref nowrap\" href=\"/doi/full/10.2466/30.24.PMS.117xxxxx\">Full Text" +
+          "</a> | " +
+          "<a class=\"ref nowrap pdf\" target=\"_blank\" title=\"Opens new window\" href=\"/doi/pdf/10.2466/30.24.PMS.117xxxxx\">PDF (152 KB)" +
+          "</a> | " +
+          "<a class=\"ref nowrap pdfplus\" target=\"_blank\" title=\"Opens new window\" href=\"/doi/pdfplus/10.2466/30.24.PMS.117xxxxx\">PDF Plus (203 KB)" +
+          "</a> " +
+          "</td>" +
+          "</tr>" +
+          "</table>";
+  
+  private static final String accessLegend = 
+      "<div class=\"accessLegend\">" +
+          "            <div class=\"accessIcon_free\">"+
+          "                <img src=\"/templates/jsp/_style2/_premium/_ammons/images/access_free.gif\" />" +
+          "                Denotes Open Access Content" +
+          "            </div>" +
+          "    </div>";
 
   public void testHeader() throws Exception {
     InputStream inTest;
@@ -90,6 +150,20 @@ public class TestAmmonsScientificHashHtmlFilterFactory extends LockssTestCase{
     assertEquals( withoutScript,
         StringUtil.fromInputStream(inTest));
   }
+  public void testAccessIcon() throws Exception {
+    InputStream inTest;
 
+    inTest = filt.createFilteredInputStream(mau,
+        new StringInputStream(accessIconHtml), Constants.DEFAULT_ENCODING);
+
+    assertEquals( accessIconHtmlFiltered,
+        StringUtil.fromInputStream(inTest));
+    
+    // check div class=accessLegend gets filtered out
+    inTest = filt.createFilteredInputStream(mau,
+        new StringInputStream(accessLegend), Constants.DEFAULT_ENCODING);
+    assertEquals("",
+        StringUtil.fromInputStream(inTest));
+  }
 }
 

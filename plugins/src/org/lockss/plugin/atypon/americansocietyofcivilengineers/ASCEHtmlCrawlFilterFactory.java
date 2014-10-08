@@ -1,5 +1,5 @@
 /*
- * $Id: ASCEHtmlCrawlFilterFactory.java,v 1.3 2013-08-26 20:05:38 alexandraohlson Exp $
+ * $Id: ASCEHtmlCrawlFilterFactory.java,v 1.4 2014-10-08 16:11:28 alexandraohlson Exp $
  */
 
 /*
@@ -35,7 +35,6 @@ package org.lockss.plugin.atypon.americansocietyofcivilengineers;
 import java.io.InputStream;
 
 import org.htmlparser.NodeFilter;
-import org.htmlparser.filters.*;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
@@ -50,17 +49,10 @@ public class ASCEHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory
     // left column section history
     // <div class="sessionViewed">
     // http://ascelibrary.org/toc/jaeied/18/4
-    // necessary since some urls are opaque (not including year and/or volume)
-    // so can't differentiate urls from different AUs.
     // http://ascelibrary.org/doi/full/10.1061/(ASCE)CO.1943-7862.0000372
     HtmlNodeFilters.tagWithAttribute("div", "class", "sessionViewed"),
-    // <div class="citedBySection"></div>
-    //HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
     // <div id="relatedContent"
     HtmlNodeFilters.tagWithAttribute("div", "id", "relatedContent"),
-    // right near top - links to previous or next issue
-    // <div id="prevNextNav">
-    HtmlNodeFilters.tagWithAttribute("div", "id", "prevNextNav"),
   };
 
   @Override

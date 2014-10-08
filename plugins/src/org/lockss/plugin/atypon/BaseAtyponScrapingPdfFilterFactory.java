@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponPdfFilterFactory.java,v 1.4 2014-10-08 16:11:26 alexandraohlson Exp $
+ * $Id: BaseAtyponScrapingPdfFilterFactory.java,v 1.1 2014-10-08 16:11:26 alexandraohlson Exp $
  */
 
 /*
@@ -34,37 +34,39 @@ package org.lockss.plugin.atypon;
 
 import java.io.*;
 
+import org.apache.commons.io.IOUtils;
 import org.apache.pdfbox.exceptions.*;
 import org.apache.pdfbox.pdfparser.PDFParser;
 import org.apache.pdfbox.pdmodel.PDDocument;
+import org.lockss.filter.pdf.ExtractingPdfFilterFactory;
 import org.lockss.filter.pdf.SimplePdfFilterFactory;
 import org.lockss.pdf.*;
 import org.lockss.pdf.pdfbox.PdfBoxDocument;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.FilterFactory;
 import org.lockss.util.IOUtil;
 
+
+
 /**
- * A pdf filter that handles the needs of many Atypon children
- * - handles pdfbox cryptography exception and removes creation date, modification
- * and trailer id.
- * For more complicated issues (usually seen in pdfplus - use the 
- * BaseAtyponScrapingPdfFilterFactory
+ * A pdf filter that handles the more challenging Atypon children where pdfplus
+ * files have non-substantive changes (annotation uris, ordering, etc). In this
+ * case scrape out the content text for comparison.
  * @author alexohlson
  *
  */
-public class BaseAtyponPdfFilterFactory extends SimplePdfFilterFactory {
+public class BaseAtyponScrapingPdfFilterFactory extends ExtractingPdfFilterFactory {
 
   //Until the daemon handles this, use the special document factory
   // that knows how to handle the cryptography exception
-  public BaseAtyponPdfFilterFactory() {
+  public BaseAtyponScrapingPdfFilterFactory() {
     super(new BaseAtyponPdfDocumentFactory()); // FIXME 1.67
   }
 
   /*
    * Many Atypon pdf files have the CreationDate and ModDate and the two ID numbers in the trailer
    * vary from collection to collection. Filter them out to avoid incorrect hash failures.
-   * A child could choose to avoid this entirely by setting it to org.lockss.util.Default
-   * or they could write their own child implementation
+   * This is a scraping filter to it also returns just the actual pdf content and not the layout.
    */
   @Override
   public void transform(ArchivalUnit au,

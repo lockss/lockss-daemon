@@ -1,5 +1,5 @@
 /*
- * $Id: BIRAtyponHtmlCrawlFilterFactory.java,v 1.1 2014-06-19 18:05:14 alexandraohlson Exp $
+ * $Id: BIRAtyponHtmlCrawlFilterFactory.java,v 1.2 2014-10-08 16:11:29 alexandraohlson Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
 public class BIRAtyponHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory {
     
   NodeFilter[] filters = new NodeFilter[] {
-      // BaseAtypon takes care of citedBySection
+      // BaseAtypon takes care of citedBySection, original/errata issues & prev/next links
       
       // see notice of redundant publication toc/dmfr/42/8
       HtmlNodeFilters.tagWithAttribute("a",  "class", "relatedLink"),

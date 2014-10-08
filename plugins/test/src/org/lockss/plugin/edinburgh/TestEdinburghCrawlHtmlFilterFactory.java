@@ -1,5 +1,5 @@
 /*
- * $Id: TestEdinburghCrawlHtmlFilterFactory.java,v 1.1 2012-09-24 17:36:05 alexandraohlson Exp $
+ * $Id: TestEdinburghCrawlHtmlFilterFactory.java,v 1.2 2014-10-08 16:11:28 alexandraohlson Exp $
  */
 package org.lockss.plugin.edinburgh;
 
@@ -39,11 +39,54 @@ public class TestEdinburghCrawlHtmlFilterFactory extends LockssTestCase {
       + "<img src=\"/na101/home/literatum/jbctv.2006.3.1.128.fp.png_v03\""
       + "alt=\"Free first page\" class=\"firstPageImage\"/>"
       + "</div>";
+  
+  private static final String breadcrumb=
+      "<div id=\"mainBreadCrumb\">" +
+          "<a href=\"/action/showPublications?display=bySubject&amp;pubType=journal\">Journals</a> &gt;" +
+          "<a href=\"/journal/xxx\">DXXX</a> &gt;" +
+          "<a href=\"/loi/xxx\">All Issues</a> &gt;" +
+          "<a href=\"/toc/xxx/26/2\">" +
+          " Oct 2008</a> &gt;" +
+          "<span class=\"currentBreadCrumb\">TitleofArticle</span>" +
+          "</div>";
+  private static final String breadcrumbFiltered=
+"";
+  private static final String articleNav=
+      "<div class=\"moduleToolBar\">" +
+          "<div class=\"moduleToolBarPaging\">" +
+          "<p>" +
+          "<a class=\"link\" href=\"/toc/xxx/26/1\">&lt; Previous</a>" +
+          "</p>" +
+          "<div class=\"separator\">" +
+          "</div>" +
+          "<p>" +
+          "<a class=\"link\" href=\"/toc/xxx/27/1\">Next &gt;</a>" +
+          "</p>" +
+          "</div>" +
+          "</div>";
+  private static final String articleNavFiltered=
+      "<div class=\"moduleToolBar\">" +
+          "</div>";
+      
+  
 
   public void testCitationsFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau, new StringInputStream(withCitations),
         Constants.DEFAULT_ENCODING);
     assertEquals(withoutCitations, StringUtil.fromInputStream(actIn));
   }
+
+  public void testNavFiltering() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau, new StringInputStream(breadcrumb),
+        Constants.DEFAULT_ENCODING);
+    assertEquals(breadcrumbFiltered, StringUtil.fromInputStream(actIn));
+
+    actIn = fact.createFilteredInputStream(mau, new StringInputStream(articleNav),
+        Constants.DEFAULT_ENCODING);
+    assertEquals(articleNavFiltered, StringUtil.fromInputStream(actIn));
+
+  }
+  
+  
 
 }

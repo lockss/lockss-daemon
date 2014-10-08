@@ -1,5 +1,5 @@
 /*
- * $Id: TestAMetSocHtmlCrawlFilterFactory.java,v 1.3 2014-05-05 19:07:30 alexandraohlson Exp $
+ * $Id: TestAMetSocHtmlCrawlFilterFactory.java,v 1.4 2014-10-08 16:11:29 alexandraohlson Exp $
  */
 package org.lockss.plugin.atypon.americanmeteorologicalsociety;
 
@@ -8,10 +8,7 @@ import org.lockss.util.*;
 import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
 import org.lockss.test.*;
 
-/* AmetSoc no longer has a custom crawl filter but relies on BaseAtypon
- * leave this test in place both the ensure against regression and in 
- * case we ever need to customize
- */
+
 public class TestAMetSocHtmlCrawlFilterFactory extends LockssTestCase {
   static String ENC = Constants.DEFAULT_ENCODING;
 
@@ -20,7 +17,7 @@ public class TestAMetSocHtmlCrawlFilterFactory extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    fact = new BaseAtyponHtmlCrawlFilterFactory();
+    fact = new AMetSocHtmlCrawlFilterFactory();
     mau = new MockArchivalUnit();
   }
 
@@ -121,6 +118,27 @@ public class TestAMetSocHtmlCrawlFilterFactory extends LockssTestCase {
       "<img src=\"/userimages/2097/sfxbutton\" alt=\"OpenURL STANFORD UNIV. GREEN LIBRARY\" /></a>" +
       "</td>";
 
+  private static final String inLineCrossRef =
+      "<div class=\"NLM_author-notes\">" +
+          "<a name=\"\">" +
+          "</a>" +
+          "<div class=\"NLM_corresp\">" +
+          "<a name=\"cor1\">" +
+          "</a>" +
+          "<i>" +
+          "Corresponding author address:</i>" +
+          " Prof. Smarty Pants, 2455 Hayward St., E-mail: <a href=\"mailto:smarty@pants.edu\" class=\"email\">" +
+          "smarty@pants.edu</a>" +
+          "</div>" +
+          "<a name=\"n301\">" +
+          "</a>" +
+          "<p class=\"first last\">" +
+          "The original article that was the subject of this comment/reply can be found at " +
+          "<a target=\"_blank\" href=\"http://journals.ametsoc.org/doi/full/10.1175/xxx\">" +
+          "http://journals.ametsoc.org/doi/full/10.1175/xxx</a>" +
+          ".</p>" +
+          "</div>";
+
 
   public void testCitationsFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau, new StringInputStream(withCitations),
@@ -138,6 +156,12 @@ public class TestAMetSocHtmlCrawlFilterFactory extends LockssTestCase {
     actIn = fact.createFilteredInputStream(mau, new StringInputStream(againCorrig),
         Constants.DEFAULT_ENCODING);
     assertEquals(filteredAgainCorrig, StringUtil.fromInputStream(actIn));
+
+    actIn = fact.createFilteredInputStream(mau, new StringInputStream(inLineCrossRef),
+        Constants.DEFAULT_ENCODING);
+    assertEquals("", StringUtil.fromInputStream(actIn));
+    
+    
   }
 
 

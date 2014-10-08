@@ -1,5 +1,5 @@
 /*
- * $Id: TestNRCResearchPressHtmlCrawlFilterFactory.java,v 1.6 2013-10-11 20:03:33 alexandraohlson Exp $
+ * $Id: TestNRCResearchPressHtmlCrawlFilterFactory.java,v 1.7 2014-10-08 16:11:26 alexandraohlson Exp $
  */
 
 /*
@@ -146,6 +146,33 @@ public class TestNRCResearchPressHtmlCrawlFilterFactory extends LockssTestCase {
           "<li id=\"ref1\"><span class=\"numbering\"></span>" +
           "</li>" +
           "</ul>";
+  
+  private static final String articleNav=
+      "<p class=\"float-right no-margin\">" +
+          "<a title=\"Previous Article\" class=\"white-link-right\" href=\"/doi/abs/10.1111/z90-092\">" +
+          "      * Previous</a>" +
+          " <a class=\"white-link-right\" href=\"http://www.nrcresearchpress.com/toc/test/68/4\">" +
+          "   TOC" +
+          "  </a>" +
+          " <a title=\"Next Article\" class=\"white-link-right\" href=\"/doi/abs/10.1111/z90-094\">" +
+          " Next *" +
+          " </a>" +
+          " </p>";
+  private static final String articleNavFiltered=
+      "<p class=\"float-right no-margin\">" +
+          "   </p>";  
+  
+  private static final String issueNav=
+      "<p class=\"float-right\">" +
+          " <a title=\"Previous Issue\" class=\"red-link-right\" href=\"/toc/cjb/91/5\">" +
+          " * Previous Issue</a>" +
+          " <a title=\"Next Issue\" class=\"red-link-right\" href=\"/toc/cjb/91/7\">" +
+          " Next Issue *</a>" +
+          " </p>";        
+  private static final String issueNavFiltered=
+      "<p class=\"float-right\">" +
+          "   </p>";        
+
 
   //Variant to test with Crawl Filter
   public static class TestCrawl extends TestNRCResearchPressHtmlCrawlFilterFactory {
@@ -191,6 +218,15 @@ public class TestNRCResearchPressHtmlCrawlFilterFactory extends LockssTestCase {
     actIn1 = fact.createFilteredInputStream(mau,
         new StringInputStream(HtmlTestCrossLinks), Constants.DEFAULT_ENCODING);
     assertEquals(HtmlTestCrossLinksFiltered, StringUtil.fromInputStream(actIn1));
+    
+    actIn1 = fact.createFilteredInputStream(mau,
+        new StringInputStream(articleNav), Constants.DEFAULT_ENCODING);
+    assertEquals(articleNavFiltered, StringUtil.fromInputStream(actIn1));
+
+    actIn1 = fact.createFilteredInputStream(mau,
+        new StringInputStream(issueNav), Constants.DEFAULT_ENCODING);
+    assertEquals(issueNavFiltered, StringUtil.fromInputStream(actIn1));
+
 
   }
 

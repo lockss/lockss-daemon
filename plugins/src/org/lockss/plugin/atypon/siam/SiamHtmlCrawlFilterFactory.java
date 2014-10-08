@@ -1,4 +1,4 @@
-/* $Id: SiamHtmlCrawlFilterFactory.java,v 1.3 2013-08-23 20:20:39 alexandraohlson Exp $
+/* $Id: SiamHtmlCrawlFilterFactory.java,v 1.4 2014-10-08 16:11:29 alexandraohlson Exp $
  */
 
 /*
@@ -50,9 +50,9 @@ import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
 public class SiamHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory {
 
 
-  //PrevArt/NextArt and PrevIss/NextIss okay - terminate at boundaries 
   //Browse Volumes section okay because crawl rules will exclude
   NodeFilter[] filters = new NodeFilter[] {
+      //prev-next article is covered by parent
       // tracks articles previously viewed
       HtmlNodeFilters.tagWithAttribute("div", "id", "sessionHistory"),
       //  articles that were references for this article

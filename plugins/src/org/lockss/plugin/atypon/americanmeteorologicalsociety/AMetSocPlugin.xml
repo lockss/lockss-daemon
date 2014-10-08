@@ -54,6 +54,10 @@
     <string>org.lockss.plugin.atypon.americanmeteorologicalsociety.AMetSocHtmlHashFilterFactory</string>
   </entry>
   <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.atypon.americanmeteorologicalsociety.AMetSocHtmlCrawlFilterFactory</string>
+  </entry>  
+  <entry>
     <string>plugin_au_config_user_msg</string>
     <string>Atypon Systems hosts this archival unit (AU) and may require you to register the IP address of this LOCKSS box as a crawler. For more information, visit the &lt;a href=&apos;http://www.lockss.org/support/use-a-lockss-box/adding-titles/publisher-ip-address-registration-contacts-for-global-lockss-network/&apos;&gt;LOCKSS IP address registration page&lt;/a&gt;.</string>
   </entry>

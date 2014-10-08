@@ -1,0 +1,26 @@
+{
+  publisher <
+    name = Base Atypon
+  >
+
+  plugin = org.lockss.plugin.atypon.BaseAtyponPlugin
+  param[base_url] = http://www.baseatypon.org/
+  implicit < status ; year ; name ; param[volume_name] >
+
+  {
+  
+    title <
+      name = Journal Name ;
+      issn = 1540-3459 ;
+      eissn = 1965-4321 ;
+      issnl = 1965-0000
+    >
+
+    param[journal_id] = xxx 
+
+    au < released ; 2010 ; Journal Name Volume 11 ; 11 >
+    au < released ; 2011 ; Journal Name Volume 12 ; 12 >
+    au < released ; 2012 ; Journal Name Volume 13 ; 13 > 
+  }
+  
+}

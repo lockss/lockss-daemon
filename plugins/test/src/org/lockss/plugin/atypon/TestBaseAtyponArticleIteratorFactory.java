@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseAtyponArticleIteratorFactory.java,v 1.4 2014-07-21 03:28:30 tlipkis Exp $
+ * $Id: TestBaseAtyponArticleIteratorFactory.java,v 1.5 2014-10-08 16:11:25 alexandraohlson Exp $
  */
 
 /*
@@ -296,7 +296,9 @@ public class TestBaseAtyponArticleIteratorFactory extends ArticleIteratorTestCas
     }
     // potential article count is 20 (5 branches * 4 files each branch) = 20 (4 RIS files don't count as articles)
     // subtract the one where we removed everything
-    int expCount = 19; 
+    // subtract the one for abstract only. This would only count as an article
+    // in an "abstracts only AU
+    int expCount = 18; 
 
     log.debug3("Article count is " + count);
     assertEquals(expCount, count);
@@ -309,7 +311,8 @@ public class TestBaseAtyponArticleIteratorFactory extends ArticleIteratorTestCas
     // we're only going to get the right information if the TARGET is not NULL and set to other than isArticle()
     //assertEquals(16, countMetadata);
     //Now that we pick up downloaded RIS urls, we should always have this
-    assertEquals(19, countMetadata); //don't count the one where we removed everything
+    // note that with only an abstract, we no longer create an artilefiles
+    assertEquals(expCount, countMetadata); //don't count the one where we removed everything
   }
 
   private void deleteBlock(CachedUrl cu) throws IOException {
