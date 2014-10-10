@@ -1229,13 +1229,12 @@
       issnl = 1938-0216
     >
     param[journal_issn] = 1938-0216
+    comment[0] = out of print.
 
     au < manifest ; exists ; 2009 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 1 ; 1 > 
     au < manifest ; exists ; 2010 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 2 ; 2 > 
     au < finished ; crawling ; 2011 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 3 ; 3 > 
     au < finished ; crawling ; 2012 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 4 ; 4 > 
-    au < expected ; exists ; 2013 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 5 ; 5 > 
-    au < expected ; exists ; 2014 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 6 ; 6 > 
 
   }
 
