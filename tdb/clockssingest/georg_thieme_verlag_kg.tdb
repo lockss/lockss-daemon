@@ -270,7 +270,7 @@
     au < exists ; exists ; 2010 ; 2010 ; Aktuelle Trauatologie Volume 40 ; 40 >
     au < exists ; exists ; 2011 ; 2011 ; Aktuelle Trauatologie Volume 41 ; 41 >
     au < exists ; exists ; 2012 ; 2012 ; Aktuelle Trauatologie Volume 42 ; 42 >
-    au < expected ; exists ; 2013 ; 2013 ; Aktuelle Trauatologie Volume 43 ; 43 >
+    au < exists ; exists ; 2013 ; 2013 ; Aktuelle Trauatologie Volume 43 ; 43 >
     au < expected ; exists ; 2014 ; 2014 ; Aktuelle Trauatologie Volume 44 ; 44 >
 
    }
@@ -613,7 +613,7 @@
     au < exists ; exists ; 2010 ; 2010 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 2010 ; 70 >
     au < exists ; exists ; 2011 ; 2011 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 2011 ; 71 >
     au < exists ; exists ; 2012 ; 2012 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 2012 ; 72 >
-    au < expected ; exists ; 2013 ; 2013 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 2013 ; 73 >
+    au < exists ; exists ; 2013 ; 2013 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 2013 ; 73 >
     au < expected ; exists ; 2014 ; 2014 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 2014 ; 74 >
 
     }
@@ -1395,7 +1395,7 @@
     param[journal_id] = 10.1055/s-00025479
     comment[years] = 2013
 
-    au < expected ; exists ; 2013 ; 2013 ; Experimental and Clinical Endocrinology & Diabetes Reports Volume 1 ; 1 >
+    au < exists ; exists ; 2013 ; 2013 ; Experimental and Clinical Endocrinology & Diabetes Reports Volume 1 ; 1 >
 
   }
 
@@ -2174,7 +2174,7 @@
     param[journal_id] = 10.1055/s-00025473
     comment[years] = 2013-current
 
-    au < expected ; exists ; 2013 ; 2013 ; Journal of Knee Surgery Reports Volume 1 ; 1 >
+    au < exists ; exists ; 2013 ; 2013 ; Journal of Knee Surgery Reports Volume 1 ; 1 >
 
   }
 
@@ -2193,7 +2193,7 @@
     comment[1] = Minimally Invasive Neurosurgery was merged with this journal
 
     au < exists ; exists ; 2012 ; 2012 ; Journal of Neurological Surgery Part A : Central European Neurosurgery Volume 2012 ; 73 >
-    au < expected ; exists ; 2013 ; 2013 ; Journal of Neurological Surgery Part A : Central European Neurosurgery Volume 2013 ; 74 >
+    au < exists ; exists ; 2013 ; 2013 ; Journal of Neurological Surgery Part A : Central European Neurosurgery Volume 2013 ; 74 >
     au < expected ; exists ; 2014 ; 2014 ; Journal of Neurological Surgery Part A : Central European Neurosurgery Volume 2014 ; 75 >
 
   }
@@ -2211,7 +2211,7 @@
     comment[0] = under the umbrella title Journal of Neurological Surgery which combines several old titles
 
     au < exists ; exists ; 2012 ; 2012 ; Journal of Neurological Surgery Part B : Skull Base Volume 2012 ; 73 >
-    au < expected ; exists ; 2013 ; 2013 ; Journal of Neurological Surgery Part B : Skull Base Volume 2013 ; 74 >
+    au < exists ; exists ; 2013 ; 2013 ; Journal of Neurological Surgery Part B : Skull Base Volume 2013 ; 74 >
     au < expected ; exists ; 2014 ; 2014 ; Journal of Neurological Surgery Part B : Skull Base Volume 2014 ; 75 >
 
   }
@@ -2229,7 +2229,7 @@
     comment[years] = 2012-current
 
     au < exists ; exists ; 2012 ; 2012 ; Journal of Neurological Surgery Reports Volume 2012 ; 73 >
-    au < expected ; exists ; 2013 ; 2013 ; Journal of Neurological Surgery Reports Volume 2013 ; 74 >
+    au < exists ; exists ; 2013 ; 2013 ; Journal of Neurological Surgery Reports Volume 2013 ; 74 >
     au < expected ; exists ; 2014 ; 2014 ; Journal of Neurological Surgery Reports Volume 2014 ; 75 >
 
   }
@@ -2293,7 +2293,7 @@
     comment[years] = 2012-current
 
     au < exists ; exists ; 2012 ; 2012 ; Journal of Wrist Surgery Volume 2012 ; 1 >
-    au < expected ; exists ; 2013 ; 2013 ; Journal of Wrist Surgery Volume 2013 ; 2 >
+    au < exists ; exists ; 2013 ; 2013 ; Journal of Wrist Surgery Volume 2013 ; 2 >
     au < expected ; exists ; 2014 ; 2014 ; Journal of Wrist Surgery Volume 2014 ; 3 >
 
   }
@@ -2585,7 +2585,7 @@
     au < exists ; exists ; 2010 ; 2010 ; Krankenhauspsychiatrie Volume 2010 ; 21 >
     au < exists ; exists ; 2011 ; 2011 ; Krankenhauspsychiatrie Volume 2011 ; 22 >
     au < exists ; exists ; 2012 ; 2012 ; Krankenhauspsychiatrie Volume 2012 ; 23 >
-    au < expected ; exists ; 2013 ; 2013 ; Krankenhauspsychiatrie Volume 2013 ; 24 >
+    au < exists ; exists ; 2013 ; 2013 ; Krankenhauspsychiatrie Volume 2013 ; 24 >
     au < expected ; exists ; 2014 ; 2014 ; Krankenhauspsychiatrie Volume 2014 ; 25 >
 
   }
@@ -2694,7 +2694,7 @@
     param[journal_id] = 10.1055/s-00024359
     comment[years] = 2013-current
 
-    au < expected ; exists ; 2013 ; 2013 ; Metabolism and Nutrition in Oncology Volume 1 ; 1 >
+    au < exists ; exists ; 2013 ; 2013 ; Metabolism and Nutrition in Oncology Volume 1 ; 1 >
 
   }
 
@@ -3111,7 +3111,7 @@
     au < exists ; exists ; 2010 ; 2010 ; Orthopedic Trauma Directions Volume 2010 ; 8 >
     au < exists ; exists ; 2011 ; 2011 ; Orthopedic Trauma Directions Volume 2011 ; 9 >
     au < exists ; exists ; 2012 ; 2012 ; Orthopedic Trauma Directions Volume 2012 ; 10 >
-    au < expected ; exists ; 2013 ; 2013 ; Orthopedic Trauma Directions Volume 2013 ; 11 >
+    au < exists ; exists ; 2013 ; 2013 ; Orthopedic Trauma Directions Volume 2013 ; 11 >
     au < expected ; exists ; 2014 ; 2014 ; Orthopedic Trauma Directions Volume 2014 ; 12 >
 
   }
@@ -3138,7 +3138,7 @@
     au < exists ; exists ; 2010 ; 2010 ; Osteosynthesis & Trauma Care Volume 2010 ; 18 >
     au < exists ; exists ; 2011 ; 2011 ; Osteosynthesis & Trauma Care Volume 2011 ; 19 >
     au < exists ; exists ; 2012 ; 2012 ; Osteosynthesis & Trauma Care Volume 2012 ; 20 >
-    au < expected ; exists ; 2013 ; 2013 ; Osteosynthesis & Trauma Care Volume 2013 ; 21 >
+    au < exists ; exists ; 2013 ; 2013 ; Osteosynthesis & Trauma Care Volume 2013 ; 21 >
     au < expected ; exists ; 2014 ; 2014 ; Osteosynthesis & Trauma Care Volume 2014 ; 22 >
 
   }
@@ -3405,7 +3405,7 @@
    au < exists ; exists ; 2010 ; 2010 ; Plant Biology Volume 2010 ; 12 >
    au < exists ; exists ; 2011 ; 2011 ; Plant Biology Volume 2011 ; 13 >
    au < exists ; exists ; 2012 ; 2012 ; Plant Biology Volume 2012 ; 14 >
-   au < expected ; exists ; 2013 ; 2013 ; Plant Biology Volume 2013 ; 15 >
+   au < exists ; exists ; 2013 ; 2013 ; Plant Biology Volume 2013 ; 15 >
    au < expected ; exists ; 2014 ; 2014 ; Plant Biology Volume 2014 ; 16 >
 
   }
@@ -3609,7 +3609,7 @@
    au < exists ; exists ; 2010 ; 2010 ; Psychiatrie und Psychotherapie up2date Volume 2010 ; 4 >
    au < exists ; exists ; 2011 ; 2011 ; Psychiatrie und Psychotherapie up2date Volume 2011 ; 5 >
    au < exists ; exists ; 2012 ; 2012 ; Psychiatrie und Psychotherapie up2date Volume 2012 ; 6 >
-   au < expected ; exists ; 2013 ; 2013 ; Psychiatrie und Psychotherapie up2date Volume 2013 ; 7 >
+   au < exists ; exists ; 2013 ; 2013 ; Psychiatrie und Psychotherapie up2date Volume 2013 ; 7 >
    au < expected ; exists ; 2014 ; 2014 ; Psychiatrie und Psychotherapie up2date Volume 2014 ; 8 >
 
   }
@@ -3663,7 +3663,7 @@
    au < exists ; exists ; 2010 ; 2010 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 2010 ; 36 >
    au < exists ; exists ; 2011 ; 2011 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 2011 ; 37 >
    au < exists ; exists ; 2012 ; 2012 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 2012 ; 38 >
-   au < expected ; exists ; 2013 ; 2013 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 2013 ; 39 >
+   au < exists ; exists ; 2013 ; 2013 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 2013 ; 39 >
    au < expected ; exists ; 2014 ; 2014 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 2014 ; 40 >
 
   }
@@ -4391,7 +4391,7 @@
     au < exists ; exists ; 2010 ; 2010 ; Skull Base Volume 2010 ; 20 >
     au < exists ; exists ; 2011 ; 2011 ; Skull Base Volume 2011 ; 21 >
     au < exists ; exists ; 2012 ; 2012 ; Skull Base Volume 2012 ; 22 >
-    au < expected ; exists ; 2013 ; 2013 ; Skull Base Volume 2013 ; 23 >
+    au < exists ; exists ; 2013 ; 2013 ; Skull Base Volume 2013 ; 23 >
     au < expected ; exists ; 2014 ; 2014 ; Skull Base Volume 2014 ; 24 >
 
   }
@@ -4439,7 +4439,7 @@
     au < exists ; exists ; 2010 ; 2010 ; Sleep And Breathing Volume 2010 ; 14 >
     au < exists ; exists ; 2011 ; 2011 ; Sleep And Breathing Volume 2011 ; 15 >
     au < exists ; exists ; 2012 ; 2012 ; Sleep And Breathing Volume 2012 ; 16 >
-    au < expected ; exists ; 2013 ; 2013 ; Sleep And Breathing Volume 2013 ; 17 >
+    au < exists ; exists ; 2013 ; 2013 ; Sleep And Breathing Volume 2013 ; 17 >
     au < expected ; exists ; 2014 ; 2014 ; Sleep And Breathing Volume 2014 ; 18 >
 
   }
@@ -4974,7 +4974,7 @@
     au < exists ; exists ; 2010 ; 2010 ; Viszeralchirurgie Volume 2010 ; 45 >
     au < exists ; exists ; 2011 ; 2011 ; Viszeralchirurgie Volume 2011 ; 46 >
     au < exists ; exists ; 2012 ; 2012 ; Viszeralchirurgie Volume 2012 ; 47 >
-    au < expected ; exists ; 2013 ; 2013 ; Viszeralchirurgie Volume 2013 ; 48 >
+    au < exists ; exists ; 2013 ; 2013 ; Viszeralchirurgie Volume 2013 ; 48 >
     au < expected ; exists ; 2014 ; 2014 ; Viszeralchirurgie Volume 2014 ; 49 >
 
   }
@@ -5427,7 +5427,7 @@
     au < exists ; exists ; 2010 ; 2010 ; Zeitschrift für Gynäkologie Volume 2010 ; 132 >
     au < exists ; exists ; 2011 ; 2011 ; Zeitschrift für Gynäkologie Volume 2011 ; 133 >
     au < exists ; exists ; 2012 ; 2012 ; Zeitschrift für Gynäkologie Volume 2012 ; 134 >
-    au < expected ; exists ; 2013 ; 2013 ; Zeitschrift für Gynäkologie Volume 2013 ; 135 >
+    au < exists ; exists ; 2013 ; 2013 ; Zeitschrift für Gynäkologie Volume 2013 ; 135 >
     au < expected ; exists ; 2014 ; 2014 ; Zeitschrift für Gynäkologie Volume 2014 ; 136 >
 
   }
@@ -5457,7 +5457,7 @@
     au < exists ; exists ; 2010 ; 2010 ; Zeitschrift für Kinderchirurgie Volume 2010 ; 19 >
     au < exists ; exists ; 2011 ; 2011 ; Zeitschrift für Kinderchirurgie Volume 2011 ; 20 >
     au < exists ; exists ; 2012 ; 2012 ; Zeitschrift für Kinderchirurgie Volume 2012 ; 21 >
-    au < expected ; exists ; 2013 ; 2013 ; Zeitschrift für Kinderchirurgie Volume 2013 ; 22 >
+    au < exists ; exists ; 2013 ; 2013 ; Zeitschrift für Kinderchirurgie Volume 2013 ; 22 >
     au < expected ; exists ; 2014 ; 2014 ; Zeitschrift für Kinderchirurgie Volume 2014 ; 23 >
 
   }
@@ -5484,7 +5484,7 @@
     au < exists ; exists ; 2010 ; 2010 ; Zeitschrift für Allgemeinmedizin Volume 2010 ; 86 >
     au < exists ; exists ; 2011 ; 2011 ; Zeitschrift für Allgemeinmedizin Volume 2011 ; 87 >
     au < exists ; exists ; 2012 ; 2012 ; Zeitschrift für Allgemeinmedizin Volume 2012 ; 88 >
-    au < expected ; exists ; 2013 ; 2013 ; Zeitschrift für Allgemeinmedizin Volume 2013 ; 89 >
+    au < exists ; exists ; 2013 ; 2013 ; Zeitschrift für Allgemeinmedizin Volume 2013 ; 89 >
     au < expected ; exists ; 2014 ; 2014 ; Zeitschrift für Allgemeinmedizin Volume 2014 ; 90 >
 
   }
