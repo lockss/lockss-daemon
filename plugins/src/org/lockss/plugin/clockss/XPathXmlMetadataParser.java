@@ -1,5 +1,5 @@
 /*
- * $Id: XPathXmlMetadataParser.java,v 1.10 2014-10-08 19:32:29 aishizaki Exp $
+ * $Id: XPathXmlMetadataParser.java,v 1.11 2014-10-10 14:07:54 aishizaki Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.clockss;
 
 import java.io.*;
+
 import java.text.*;
 import java.util.*;
 
@@ -46,6 +47,8 @@ import org.lockss.plugin.*;
 import org.lockss.util.*;
 import org.w3c.dom.*;
 import org.xml.sax.*;
+import org.apache.commons.io.input.BOMInputStream;
+
 
 /**
  * This class extracts values from the XML specified by a CachedUrl
@@ -466,11 +469,25 @@ public class XPathXmlMetadataParser  {
     // set the encoding on the BufferedReader which somehow sets the
     // encoding to work (despite if the default charset is set wrongly),
     // unlike just setting the encoding on the InputSource
-    BufferedReader in
-      = new BufferedReader(new InputStreamReader(getInputStreamFromCU(cu),
-                                                 encoding));
+    BufferedReader in = null;
+    BOMInputStream bistream = null;
+    if (encoding != null) {
+      if (Constants.ENCODING_UTF_8.equals(encoding)) {
+        // Some UTF-8 xml files have a BOM char as the first - this strips it
+        // so the sax parser doesn't complain "No Content before prolog"
+        bistream = new BOMInputStream(getInputStreamFromCU(cu));
+        in = new BufferedReader(new InputStreamReader(bistream, encoding));
+      } else {
+        in = new BufferedReader(new InputStreamReader(getInputStreamFromCU(cu),
+            encoding));
+      }
+    } else {    // no encoding
+      in = new BufferedReader(new InputStreamReader(getInputStreamFromCU(cu)));
+      encoding = cu.getEncoding();
+    }
     InputSource is = new InputSource(in);
     is.setEncoding(encoding);
+
     return is;
   }
   /**
