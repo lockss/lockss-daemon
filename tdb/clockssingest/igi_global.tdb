@@ -397,11 +397,10 @@
       issnl = 2155-6962
     >
     param[journal_issn] = 2155-6962
+    comment[0] = out of print.
 
     au < finished ; crawling ; 2011 ; International Journal of Aviation Technology, Engineering and Management (IJATEM) Volume 1 ; 1 > 
     au < finished ; crawling ; 2012 ; International Journal of Aviation Technology, Engineering and Management (IJATEM) Volume 2 ; 2 > 
-    au < expected ; exists ; 2013 ; International Journal of Aviation Technology, Engineering and Management (IJATEM) Volume 3 ; 3 > 
-    au < expected ; exists ; 2014 ; International Journal of Aviation Technology, Engineering and Management (IJATEM) Volume 4 ; 4 > 
 
   }
 
@@ -415,11 +414,10 @@
     >
 
     param[journal_issn] = 1947-3575
+    comment[0] = out of print.
 
     au < finished ; crawling ; 2011 ; International Journal of Biomaterials Research and Engineering (IJBRE) Volume 1 ; 1 > 
     au < finished ; crawling ; 2012 ; International Journal of Biomaterials Research and Engineering (IJBRE) Volume 2 ; 2 > 
-    au < expected ; exists ; 2013 ; International Journal of Biomaterials Research and Engineering (IJBRE) Volume 3 ; 3 > 
-    au < expected ; exists ; 2014 ; International Journal of Biomaterials Research and Engineering (IJBRE) Volume 4 ; 4 > 
 
   }
 
@@ -757,12 +755,11 @@
       issnl = 1947-9050
     >
     param[journal_issn] = 1947-9050
+    comment[0] = out of print.
 
     au < manifest ; exists ; 2010 ; International Journal of Dependable and Trustworthy Information Systems (IJDTIS) Volume 1 ; 1 > 
     au < finished ; crawling ; 2011 ; International Journal of Dependable and Trustworthy Information Systems (IJDTIS) Volume 2 ; 2 > 
     au < finished ; crawling ; 2012 ; International Journal of Dependable and Trustworthy Information Systems (IJDTIS) Volume 3 ; 3 > 
-    au < expected ; exists ; 2013 ; International Journal of Dependable and Trustworthy Information Systems (IJDTIS) Volume 4 ; 4 > 
-    au < expected ; exists ; 2014 ; International Journal of Dependable and Trustworthy Information Systems (IJDTIS) Volume 5 ; 5 > 
 
   }
 
@@ -2533,8 +2530,7 @@
     param[journal_issn] = 2160-9896 
     comment[0] = content coming soon, 4/25/2014
 
-    au < expected ; exists ; 2013 ; International Journal of Telework and Telecommuting Technologies (IJTTT) Volume 1 ; 1 > 
-    au < expected ; exists ; 2014 ; International Journal of Telework and Telecommuting Technologies (IJTTT) Volume 2 ; 2 > 
+    au < expected ; exists ; 2014 ; International Journal of Telework and Telecommuting Technologies (IJTTT) Volume 1 ; 1 > 
 
   }
 
