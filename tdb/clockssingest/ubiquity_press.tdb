@@ -234,7 +234,7 @@
     param[base_url] = http://openarchaeologydata.metajnl.com/
     param[journal_id] = joad
 
-    au < ready ; exists ; 2012 ; Journal of Open Archaeology Data Volume 1 ; 1 ; 2012 >
+    au < crawling ; exists ; 2012 ; Journal of Open Archaeology Data Volume 1 ; 1 ; 2012 >
     au < crawling ; exists ; 2013 ; Journal of Open Archaeology Data Volume 2 ; 2 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Open Archaeology Data Volume 3 ; 3 ; 2014 >
 
@@ -428,8 +428,8 @@
     au < manifest ; exists ; 2008 ; Psychologica Belgica Volume 48 ; 48 ; 2008 >
     au < manifest ; exists ; 2009 ; Psychologica Belgica Volume 49 ; 49 ; 2009 >
     au < manifest ; exists ; 2010 ; Psychologica Belgica Volume 50 ; 50 ; 2010 >
-    au < ready ; exists ; 2011 ; Psychologica Belgica Volume 51 ; 51 ; 2011 >
-    au < ready ; exists ; 2012 ; Psychologica Belgica Volume 52 ; 52 ; 2012 >
+    au < crawling ; exists ; 2011 ; Psychologica Belgica Volume 51 ; 51 ; 2011 >
+    au < crawling ; exists ; 2012 ; Psychologica Belgica Volume 52 ; 52 ; 2012 >
     au < crawling ; exists ; 2013 ; Psychologica Belgica Volume 53 ; 53 ; 2013 >
     au < manifest ; exists ; 2014 ; Psychologica Belgica Volume 54 ; 54 ; 2014 >
 
@@ -478,9 +478,9 @@
     param[journal_id] = ujil
 
     au < manifest ; exists ; 2010 ; Utrecht Journal of International and European Law Volume 26 ; 26 ; 2010 >
-    au < ready ; exists ; 2011 ; Utrecht Journal of International and European Law Volume 27 ; 27 ; 2011 >
-    au < ready ; exists ; 2012 ; Utrecht Journal of International and European Law Volume 28 ; 28 ; 2012 >
-    au < ready ; exists ; 2013 ; Utrecht Journal of International and European Law Volume 29 ; 29 ; 2013 >
+    au < crawling ; exists ; 2011 ; Utrecht Journal of International and European Law Volume 27 ; 27 ; 2011 >
+    au < crawling ; exists ; 2012 ; Utrecht Journal of International and European Law Volume 28 ; 28 ; 2012 >
+    au < crawling ; exists ; 2013 ; Utrecht Journal of International and European Law Volume 29 ; 29 ; 2013 >
     au < manifest ; exists ; 2014 ; Utrecht Journal of International and European Law Volume 30 ; 30 ; 2014 >
 
   }
