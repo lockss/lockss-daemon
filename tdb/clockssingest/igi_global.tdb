@@ -1896,14 +1896,11 @@
       issnl = 1941-6318
     >
     param[journal_issn] = 1941-6318
-    comment[V4] = RT4726
+    comment[V4] = RT4726. April 30 2013. Perhaps journal has stopped publishing?
 
     au < manifest ; exists ; 2009 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 1 ; 1 > 
     au < crawling ; exists ; 2010 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 2 ; 2 > 
     au < finished ; crawling ; 2011 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 3 ; 3 > 
-    au < expected ; exists ; 2012 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 4 ; 4 > 
-    au < expected ; exists ; 2013 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 5 ; 5 > 
-    au < expected ; exists ; 2014 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 6 ; 6 > 
 
   }
 
