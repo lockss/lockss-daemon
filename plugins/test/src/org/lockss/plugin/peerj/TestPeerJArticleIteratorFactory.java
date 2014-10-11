@@ -1,4 +1,4 @@
-/* $Id: TestPeerJArticleIteratorFactory.java,v 1.4 2014-07-21 03:28:28 tlipkis Exp $
+/* $Id: TestPeerJArticleIteratorFactory.java,v 1.5 2014-10-11 00:44:52 ldoan Exp $
 
 Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -43,7 +43,6 @@ import org.lockss.plugin.ArticleFiles;
 import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.CachedUrlSet;
-import org.lockss.plugin.CachedUrlSetNode;
 import org.lockss.plugin.PluginTestUtil;
 import org.lockss.plugin.SubTreeArticleIterator;
 import org.lockss.plugin.simulated.SimulatedArchivalUnit;
@@ -276,7 +275,7 @@ public class TestPeerJArticleIteratorFactory
   }
   
   /*
-   * PeerJ Archives site is in GLN only.
+   * PeerJ Archives site.
    *   article files:
    *   full text pdf      - <baser_url>/articles/55.pdf
    *   abstract           - <baser_url>/articles/55/     (including full text)
@@ -288,9 +287,9 @@ public class TestPeerJArticleIteratorFactory
    *   alternate json     - <baser_url>/articles/55.json
    *   alternate unixref  - <baser_url>/articles/55.unixref
    */
- public static class TestLockss extends TestPeerJArticleIteratorFactory {
+ public static class TestArchives extends TestPeerJArticleIteratorFactory {
     
-    public TestLockss() {
+    public TestArchives() {
       variantPluginName = "org.lockss.plugin.peerj.PeerJPlugin";
       variantPeerjSite = "archives";
       variantBaseConstant = "articles";
@@ -305,7 +304,7 @@ public class TestPeerJArticleIteratorFactory
   }
 
  /*
-  * PeerJ Archives Preprints site is in Clockss only.
+  * PeerJ Archives Preprints site.
   *   article files:
   *   full text pdf      - <baser_url>/preprints/14.pdf
   *   abstract           - <baser_url>/preprints/14/      (including full text)
@@ -316,24 +315,24 @@ public class TestPeerJArticleIteratorFactory
   *   alternate rdf      - <baser_url>/preprints/14.rdf
   *   alternate json     - <baser_url>/preprints/14.json
   */
-  public static class TestClockss extends TestPeerJArticleIteratorFactory {
-    public TestClockss() {
-      variantPluginName = "org.lockss.plugin.peerj.ClockssPeerJPlugin";
+  public static class TestPreprints extends TestPeerJArticleIteratorFactory {
+    public TestPreprints() {
+      variantPluginName = "org.lockss.plugin.peerj.ClockssPeerJPreprintsPlugin";
       variantPeerjSite = "archives-preprints";
       variantBaseConstant = "preprints";
       variantArticleName = "14";
-      variantPeerjXmlRole = ClockssPeerJArticleIteratorFactory.ROLE_ABSTRACT_XML;
+      variantPeerjXmlRole = PeerJPreprintsArticleIteratorFactory.ROLE_ABSTRACT_XML;
       variantAlternateRoles = Arrays.asList(
-          ClockssPeerJArticleIteratorFactory.ROLE_ALTERNATE_ABSTRACT,
-          ClockssPeerJArticleIteratorFactory.ROLE_ALTERNATE_RDF,
-          ClockssPeerJArticleIteratorFactory.ROLE_ALTERNATE_JSON);
+          PeerJPreprintsArticleIteratorFactory.ROLE_ALTERNATE_ABSTRACT,
+          PeerJPreprintsArticleIteratorFactory.ROLE_ALTERNATE_RDF,
+          PeerJPreprintsArticleIteratorFactory.ROLE_ALTERNATE_JSON);
     }   
   }
 
   public static Test suite() {
     return variantSuites(new Class[] {
-        TestLockss.class,
-        TestClockss.class
+        TestArchives.class,
+        TestPreprints.class
       });
   }
 }

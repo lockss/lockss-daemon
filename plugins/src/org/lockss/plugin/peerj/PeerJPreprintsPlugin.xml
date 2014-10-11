@@ -5,14 +5,13 @@
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.peerj.PeerJPlugin</string>
+    <string>org.lockss.plugin.peerj.PeerJPreprintsPlugin</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>PeerJ Plugin</string>
+    <string>PeerJ Preprints Plugin</string>
   </entry>
   <entry>
-    <!-- splitting plugin into 2 for Archives and Preprints starting version 8 -->
     <string>plugin_version</string>
     <string>8</string>
   </entry>
@@ -40,7 +39,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"PeerJ Plugin, Base URL %s, PeerJ Site %s, Volume %s", base_url, peerj_site, volume_name</string>
+    <string>"PeerJ Preprints Plugin, Base URL %s, PeerJ Site %s, Volume %s", base_url, peerj_site, volume_name</string>
   </entry>
   <entry>
     <string>au_permission_url</string>
@@ -53,7 +52,6 @@
     </list>
   </entry>
   <entry>
-    <!-- https://peerj.com/archives/?year=2013 -->
     <string>au_start_url</string>
     <string>"%s%s/?year=%s", base_url, peerj_site, volume_name</string>
   </entry>
@@ -62,23 +60,22 @@
     <list>
       <string>1,"^%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f|swf)$", base_url</string>
       <!-- get font-awesome -->
-      <string>1,"^%sassets/font", base_url</string>
+      <string>1,"^%sassets/font.*", base_url</string>
       <!-- hardwire cloudfront host in case publisher changes it -->
-      <string>1,"^https://(dfzljdn9uc3pi|d3amtssd1tejdt|d2pdyyx74uypu5)\.cloudfront\.net/(images|collections)"</string>
-      <string>1,"^https://(dfzljdn9uc3pi|d3amtssd1tejdt|d2pdyyx74uypu5)\.cloudfront\.net/%s", volume_name</string>
+      <string>1,"^https://(dfzljdn9uc3pi|d3amtssd1tejdt|d2pdyyx74uypu5)\.cloudfront\.net/(images|collections)/"</string>
+      <string>1,"^https://(dfzljdn9uc3pi|d3amtssd1tejdt|d2pdyyx74uypu5)\.cloudfront\.net/%s/", volume_name</string>
       <string>4,"^%s", base_url</string>
-      <string>1,"/articles/index\.html\?month=%s-", volume_name</string>
-      <string>2,"/articles/[0-9]+/(author|editor)-[0-9]+$"</string>
-      <string>2,"/articles/[0-9]+[/.](citations|citeproc)/?$"</string>
-      <string>1,"/articles/[0-9]+/?$"</string>
-      <string>1,"/articles/[0-9]+\.[^/]+"</string>
-      <string>1,"/articles/[0-9]+/reviews/?$"</string>
+      <string>1,"/preprints/index\.html\?month=%s-", volume_name</string>
+      <string>2,"/preprints/[0-9]+/(author|editor)-[0-9]+$"</string>
+      <string>2,"/preprints/[0-9]+[/.](citations|citeproc)/?$"</string>
+      <string>1,"/preprints/[0-9]+(v[0-9]+)?/?$"</string>
+      <string>1,"/preprints/[0-9]+(v[0-9]+)?\.[^/]+"</string>
     </list>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"/articles/[0-9]+\.pdf$"</string>
+      <string>"/preprints/[0-9]+\.pdf$"</string>
     </list>
   </entry>
   <entry>
@@ -121,31 +118,36 @@
       </entry>
       <entry>
         <!-- https://peerj.com/archives/?year=2013 -->
+        <!-- https://peerj.com/archives-preprints/?year=2013 -->
         <string>au_volume</string>
         <string>"%s%s/?year=%s", base_url, peerj_site, volume</string>
       </entry>
       <entry>
         <!-- https://peerj.com/articles/index.html?month=2013-02 -->
         <string>au_issue</string>
-        <string>"%sarticles/index.html?month=%s-%s", base_url, volume, issue</string>
+        <string>"%spreprints/index.html?month=%s-%s", base_url, volume, issue</string>
       </entry>
     </map>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.peerj.PeerJHtmlHashFilterFactory</string>
-  </entry> 
+  </entry>
+  <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.peerj.PeerJPdfFilterFactory</string>
+  </entry>  
   <entry>
     <string>application/xml_filter_factory</string>
     <string>org.lockss.plugin.peerj.PeerJXmlFilterFactory</string>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.peerj.PeerJArticleIteratorFactory</string>
+    <string>org.lockss.plugin.peerj.PeerJPreprintsArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.peerj.PeerJArticleIteratorFactory</string>
+    <string>org.lockss.plugin.peerj.PeerJPreprintsArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>application/x-research-info-systems_metadata_extractor_factory_map</string>

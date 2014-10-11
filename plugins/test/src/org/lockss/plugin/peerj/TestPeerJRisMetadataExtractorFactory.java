@@ -1,4 +1,4 @@
-/* $Id: TestPeerJRisMetadataExtractorFactory.java,v 1.2 2014-05-30 20:35:54 ldoan Exp $
+/* $Id: TestPeerJRisMetadataExtractorFactory.java,v 1.3 2014-10-11 00:44:52 ldoan Exp $
 
  Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
@@ -70,8 +70,8 @@ public class TestPeerJRisMetadataExtractorFactory extends LockssTestCase {
   private MockLockssDaemon theDaemon;
   private ArchivalUnit pjau; // peerj au
   
-  private static final String 
-                          PLUGIN_NAME = "org.lockss.plugin.peerj.PeerJPlugin";
+  private static final String PLUGIN_NAME = 
+      "org.lockss.plugin.peerj.PeerJPlugin";
   
   private static final String BASE_URL = "http://www.example.com/";
   private static final String PEERJ_SITE = "archives";
@@ -86,7 +86,6 @@ public class TestPeerJRisMetadataExtractorFactory extends LockssTestCase {
     theDaemon.setDaemonInited(true);
     theDaemon.getPluginManager().startService();
     theDaemon.getCrawlManager();
-
     pjau = PluginTestUtil.createAndStartAu(PLUGIN_NAME, peerjAuConfig());
   }
 
@@ -96,8 +95,7 @@ public class TestPeerJRisMetadataExtractorFactory extends LockssTestCase {
   }
   
   protected ArchivalUnit createAu() throws ArchivalUnit.ConfigurationException {
-    return
-        PluginTestUtil.createAndStartAu(PLUGIN_NAME,  peerjAuConfig());
+    return PluginTestUtil.createAndStartAu(PLUGIN_NAME,  peerjAuConfig());
   }
 
   private Configuration peerjAuConfig() {

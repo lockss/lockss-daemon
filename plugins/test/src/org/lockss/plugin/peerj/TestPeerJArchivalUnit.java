@@ -1,10 +1,10 @@
 /*
- * $Id: TestPeerJArchivalUnit.java,v 1.3 2013-10-11 02:21:20 ldoan Exp $
+ * $Id: TestPeerJArchivalUnit.java,v 1.4 2014-10-11 00:44:52 ldoan Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,12 +34,14 @@ package org.lockss.plugin.peerj;
 
 import java.net.URL;
 import java.util.Properties;
+import junit.framework.Test;
 
 import org.lockss.config.Configuration;
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.RangeCachedUrlSetSpec;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrlSet;
+import org.lockss.plugin.PluginManager;
 import org.lockss.plugin.UrlCacher;
 import org.lockss.plugin.base.BaseCachedUrlSet;
 import org.lockss.plugin.definable.DefinableArchivalUnit;
@@ -56,227 +58,213 @@ import org.lockss.util.TimeBase;
 /* 
  * Tests archival unit for PeerJ Archival site
  */
-
 public class TestPeerJArchivalUnit extends LockssTestCase {
   
-  private static Logger log = Logger.getLogger(TestPeerJArchivalUnit.class);
+  String variantPluginId;
+  String variantPluginName;
+  DefinableArchivalUnit variantPeerjAu;
+  String variantPeerjSite;
+  String variantBaseConstant;
+  String tempDirPath;
+  MockLockssDaemon daemon;
+  PluginManager pluginMgr;
+  URL baseUrl;
   
-  private MockLockssDaemon theDaemon;
-  private DefinableArchivalUnit peerjArchivesAu;
-  private DefinableArchivalUnit peerjPreprintsAu;
-  private URL baseUrl;
-
-  private static final String PLUGIN_ID = "org.lockss.plugin.peerj.PeerJPlugin";
-  private static final String PLUGIN_NAME = "PeerJ Plugin";
+  private static Logger log = Logger.getLogger(TestPeerJArchivalUnit.class);
 
   private static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   private static final String PEERJ_SITE_KEY = "peerj_site";
   private static final String VOL_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
-  
   private static final String ROOT_URL = "http://www.example.com/";
-  private static final String PEERJ_ARCHIVES_SITE = "xxxxSite";
-  private static final String PEERJ_PREPRINTS_SITE = "xxxxPreprintsSite";
   private static final String VOLUME_NAME = "2013";
-  
 
-  public void setUp() throws Exception {
-    super.setUp();
-    setUpDiskSpace();
-    theDaemon = getMockLockssDaemon();
-    theDaemon.getHashService();
-
-    baseUrl = new URL(ROOT_URL);
-    peerjArchivesAu = makeAu(baseUrl, VOLUME_NAME, PEERJ_ARCHIVES_SITE);
-    peerjPreprintsAu = makeAu(baseUrl, VOLUME_NAME, 
-                                      PEERJ_PREPRINTS_SITE);
-  }
-
-  public void tearDown() throws Exception {
-    super.tearDown();
-  }
-
-  private DefinableArchivalUnit makeAu(URL url, String volumeName, 
-                                          String peerjSite) throws Exception {
+  public DefinableArchivalUnit createAu(URL url, String volume, 
+      String peerjSite, String pluginId) throws Exception {
     Properties props = new Properties();
-    props.setProperty(VOL_KEY, volumeName);
+    props.setProperty(VOL_KEY, volume);
     props.setProperty(PEERJ_SITE_KEY, peerjSite);
     if (url != null) {
       props.setProperty(BASE_URL_KEY, url.toString());
     }
     Configuration config = ConfigurationUtil.fromProps(props);
-    
     DefinablePlugin peerjDefinablePlugin = new DefinablePlugin();
-    peerjDefinablePlugin.initPlugin(getMockLockssDaemon(), PLUGIN_ID);
+    peerjDefinablePlugin.initPlugin(getMockLockssDaemon(), pluginId);
     DefinableArchivalUnit au = 
         (DefinableArchivalUnit)peerjDefinablePlugin.createAu(config);
     return au;
   }
-
-  public void testConstructNullUrl() throws Exception {
-    try {
-      makeAu(null, "2011", "peerjSiteBad");
-      fail("Should have thrown ArchivalUnit.ConfigurationException");
-    } catch (ArchivalUnit.ConfigurationException e) {
-    }
-  }
   
   // Test the crawl rules for PeerJ Archives site
-  public void testShouldCacheProperArchivesPages() throws Exception {
-    theDaemon.getLockssRepository(peerjArchivesAu);
-    theDaemon.getNodeManager(peerjArchivesAu);
-    BaseCachedUrlSet cus = new BaseCachedUrlSet(peerjArchivesAu,
-                               new RangeCachedUrlSetSpec(baseUrl.toString()));
-    // Test for pages that should get crawled
+  public void testShouldCacheProperPages(DefinableArchivalUnit au,
+      String peerjSite, URL baseUrl, String baseConstant) throws Exception {
+    daemon.getLockssRepository(au);
+    daemon.getNodeManager(au);
+    BaseCachedUrlSet cus = new BaseCachedUrlSet(au,
+        new RangeCachedUrlSetSpec(baseUrl.toString()));
     // permission page
-    shouldCacheTest(ROOT_URL + "lockss.txt", true, peerjArchivesAu, cus);  
-    // volume page
-    // https://peerj.com/archives/?year=2013
-    shouldCacheTest(ROOT_URL + "xxxxSite/?year=2013", 
-                    true, peerjArchivesAu, cus);  
-    // toc page for an issue
-    // https://peerj.com/articles/index.html?month=2013-09
-    shouldCacheTest(ROOT_URL + "articles/index.html?month=2013-09", 
-                    true, peerjArchivesAu, cus);
-    // article files
-    // https://peerj.com/articles/55/
-    // https://peerj.com/articles/55.bib
-    // https://peerj.com/articles/55.pdf
-    // https://peerj.com/articles/55.ris
-    // https://peerj.com/articles/55.xml
-    // https://peerj.com/articles/55.html
-    // https://peerj.com/articles/55.rdf
-    // https://peerj.com/articles/55.json
-    // https://peerj.com/articles/55.unixref
-    shouldCacheTest(ROOT_URL+"articles/55/", true, peerjArchivesAu, cus);
-    shouldCacheTest(ROOT_URL+"articles/55.bib", true, peerjArchivesAu, cus);
-    shouldCacheTest(ROOT_URL+"articles/55.pdf", true, peerjArchivesAu, cus);
-    shouldCacheTest(ROOT_URL+"articles/55.ris", true, peerjArchivesAu, cus);
-    shouldCacheTest(ROOT_URL+"articles/55.xml", true, peerjArchivesAu, cus);
-    shouldCacheTest(ROOT_URL+"articles/55.html", true, peerjArchivesAu, cus);
-    shouldCacheTest(ROOT_URL+"articles/55.rdf", true, peerjArchivesAu, cus);
-    shouldCacheTest(ROOT_URL+"articles/55.json", true, peerjArchivesAu, cus);
-    shouldCacheTest(ROOT_URL+"articles/55.unixref", true, peerjArchivesAu, cus);
+    shouldCacheTest(ROOT_URL + "lockss.txt", true, au, cus);  
+    // volume page - https://peerj.com/archives/?year=2013
+    shouldCacheTest(ROOT_URL + peerjSite + "/?year=2013", true, au, cus);  
+    // issue toc - https://peerj.com/articles/index.html?month=2013-09
+    shouldCacheTest(ROOT_URL + baseConstant + "/index.html?month=2013-09", 
+                    true, au, cus);
+    // article from Archives site - https://peerj.com/articles/55/
+    //   other files: .bib, .pdf, .ris, .xml, .rdf, .json, .unixref, /reviews
+    // article from Preprints site - https://peerj.com/preprints/55/
+    //   other files: .bib, .pdf, .ris, .xml, .rdf, .json
+    shouldCacheTest(ROOT_URL + baseConstant + "/55/", true, au, cus);
+    shouldCacheTest(ROOT_URL + baseConstant + "/55.bib", true, au, cus);
+    shouldCacheTest(ROOT_URL + baseConstant + "/55.pdf", true, au, cus);
+    shouldCacheTest(ROOT_URL + baseConstant + "/55.ris", true, au, cus);
+    shouldCacheTest(ROOT_URL + baseConstant + "/55.xml", true, au, cus);
+    shouldCacheTest(ROOT_URL + baseConstant + "/55.html", true, au, cus);
+    shouldCacheTest(ROOT_URL + baseConstant + "/55.rdf", true, au, cus);
+    shouldCacheTest(ROOT_URL + baseConstant + "/55.json", true, au, cus);
+    // not exists on Preprints site
+    if (baseConstant == "archives") {
+      shouldCacheTest(ROOT_URL + baseConstant + "/55.unixref", true, au, cus);
+      shouldCacheTest(ROOT_URL + baseConstant + "/55/reviews/", true, au, cus);
+    }
     // images figures and tables can live here
     // https://dfzljdn9uc3pi.cloudfront.net/2013/55/1/fig-1-2x.jpg
     // https://dfzljdn9uc3pi.cloudfront.net/2013/55/1/fig-1-full.png
     // https://d3amtssd1tejdt.cloudfront.net/2013/21/1/figure1.png
     // https://d2pdyyx74uypu5.cloudfront.net/2013/22/2/figure2.jpg
     shouldCacheTest("https://dfzljdn9uc3pi.cloudfront.net"
-    		    + "/2013/55/1/fig-1-2x.jpg", true, peerjArchivesAu, cus);   
+    		    + "/2013/55/1/fig-1-2x.jpg", true, au, cus);   
     shouldCacheTest("https://dfzljdn9uc3pi.cloudfront.net"
-                    + "/2013/55/1/fig-1-full.png", true, peerjArchivesAu, cus);   
+                    + "/2013/55/1/fig-1-full.png", true, au, cus);   
     shouldCacheTest("https://d3amtssd1tejdt.cloudfront.net"
-                    + "/2013/21/1/figure1.png", true, peerjArchivesAu, cus);
+                    + "/2013/21/1/figure1.png", true, au, cus);
     shouldCacheTest("https://d2pdyyx74uypu5.cloudfront.net"
-                   + "/2013/22/2/figure2.jpg", true, peerjArchivesAu, cus);   
+                   + "/2013/22/2/figure2.jpg", true, au, cus);   
     // missing peerj_site param - should not get crawled
-    shouldCacheTest(ROOT_URL + "?year=2012", false, peerjArchivesAu, cus);  
+    shouldCacheTest(ROOT_URL + "?year=2012", false, au, cus);  
     // LOCKSS
-    shouldCacheTest("http://lockss.stanford.edu", false, peerjArchivesAu, cus);
-  }
-  
-    // Test the crawl rules for PeerJ Preprints site
-  public void testShouldCacheProperPreprintsPages() throws Exception {
-    theDaemon.getLockssRepository(peerjPreprintsAu);
-    theDaemon.getNodeManager(peerjPreprintsAu);
-    BaseCachedUrlSet cus = new BaseCachedUrlSet(peerjPreprintsAu,
-                               new RangeCachedUrlSetSpec(baseUrl.toString()));
-    // Test for pages that should get crawled
-    // permission page
-    shouldCacheTest(ROOT_URL + "lockss.txt", true, peerjPreprintsAu, cus);  
-    // volume page
-    // https://peerj.com/archives-preprints/?year=2013
-    shouldCacheTest(ROOT_URL + "xxxxPreprintsSite/?year=2013", 
-                    true, peerjPreprintsAu, cus);  
-    // toc page for an issue
-    // https://peerj.com/preprints/index.html?month=2013-09
-    shouldCacheTest(ROOT_URL + "preprints/index.html?month=2013-09", 
-                    true, peerjPreprintsAu, cus);
-    // preprints files
-    // https://peerj.com/preprints/14/
-    // https://peerj.com/preprints/14.bib
-    // https://peerj.com/preprints/14.pdf
-    // https://peerj.com/preprints/14.ris
-    // https://peerj.com/preprints/14.xml
-    // https://peerj.com/preprints/14.html
-    // https://peerj.com/preprints/14.rdf
-    // https://peerj.com/preprints/14.json
-    shouldCacheTest(ROOT_URL+"preprints/14/", 
-                    true, peerjPreprintsAu, cus);
-    shouldCacheTest(ROOT_URL+"preprints/14.bib", 
-                    true, peerjPreprintsAu, cus);
-    shouldCacheTest(ROOT_URL+"preprints/14.pdf", 
-                    true, peerjPreprintsAu, cus);
-    shouldCacheTest(ROOT_URL+"preprints/14.ris", 
-                    true, peerjPreprintsAu, cus);
-    shouldCacheTest(ROOT_URL+"preprints/14.xml", 
-                    true, peerjPreprintsAu, cus);
-    shouldCacheTest(ROOT_URL+"preprints/14.html", 
-                    true, peerjPreprintsAu, cus);
-    shouldCacheTest(ROOT_URL+"preprints/14.rdf", 
-                    true, peerjPreprintsAu, cus);
-    shouldCacheTest(ROOT_URL+"preprints/14.json", 
-                    true, peerjPreprintsAu, cus);
-    // images figures and tables can live here
-    // https://dfzljdn9uc3pi.cloudfront.net/2013/55/1/fig-1-2x.jpg
-    // https://dfzljdn9uc3pi.cloudfront.net/2013/55/1/fig-1-full.png
-    // https://d3amtssd1tejdt.cloudfront.net/2013/21/1/figure1.png
-    // https://d2pdyyx74uypu5.cloudfront.net/lockss.txt
-    shouldCacheTest("https://dfzljdn9uc3pi.cloudfront.net"
-    		    + "/2013/55/1/fig-1-2x.jpg", true, peerjPreprintsAu, cus);   
-    shouldCacheTest("https://dfzljdn9uc3pi.cloudfront.net"
-                    + "/2013/55/1/fig-1-full.png", true, peerjPreprintsAu, cus);   
-    shouldCacheTest("https://d3amtssd1tejdt.cloudfront.net"
-                    + "/2013/21/1/figure1.png", true, peerjPreprintsAu, cus);   
-    shouldCacheTest("https://d2pdyyx74uypu5.cloudfront.net/lockss.txt",
-                    true, peerjPreprintsAu, cus);   
-    // missing peerj_site param - should not get crawled
-    shouldCacheTest(ROOT_URL + "?year=2012", false, peerjPreprintsAu, cus);  
-    // LOCKSS
-    shouldCacheTest("http://lockss.stanford.edu", false, peerjPreprintsAu, cus);
+    shouldCacheTest("http://lockss.stanford.edu", false, au, cus);
   }
   
   private void shouldCacheTest(String url, boolean shouldCache,
-                               ArchivalUnit au, CachedUrlSet cus) {
-    log.info ("shouldCacheTest url: " + url);
-
+      ArchivalUnit au, CachedUrlSet cus) {
+    //log.info ("shouldCacheTest url: " + url);
     UrlCacher uc = au.makeUrlCacher(url);
     assertEquals(shouldCache, uc.shouldBeCached());
   }
   
-  public void testStartUrlConstruction() throws Exception {
-    String expected = ROOT_URL + "xxxxSite/?year=2013";
-    assertEquals(ListUtil.list(expected), peerjArchivesAu.getNewContentCrawlUrls());
+  public void testStartUrlConstruction(DefinableArchivalUnit au,
+      String peerjSite) throws Exception {
+    String expected = ROOT_URL + peerjSite + "/?year=2013";
+    assertEquals(ListUtil.list(expected), au.getNewContentCrawlUrls());
   }
   
-  public void testShouldNotCachePageFromOtherSite() throws Exception {
-    theDaemon.getLockssRepository(peerjArchivesAu);
-    theDaemon.getNodeManager(peerjArchivesAu);
-    UrlCacher uc = peerjArchivesAu.makeUrlCacher(
-        "http://shadow2.stanford.edu/xxxxSite/?year=2013");
+  public void testShouldNotCachePageFromOtherSite(DefinableArchivalUnit au,
+      String peerjSite) throws Exception {
+    daemon.getLockssRepository(au);
+    daemon.getNodeManager(au);
+    UrlCacher uc = au.makeUrlCacher("http://shadow2.stanford.edu/" +
+    		peerjSite + "/?year=2013");
     assertFalse(uc.shouldBeCached());
   }
 
-  public void testShouldDoNewContentCrawlTooEarly() throws Exception {
+  public void testShouldDoNewContentCrawlTooEarly(DefinableArchivalUnit au) 
+      throws Exception {
     AuState aus = new MockAuState(null, TimeBase.nowMs(), -1, -1, null);
-    assertFalse(peerjArchivesAu.shouldCrawlForNewContent(aus));
+    assertFalse(au.shouldCrawlForNewContent(aus));
   }
 
-  public void testShouldDoNewContentCrawlFor0() throws Exception {
+  public void testShouldDoNewContentCrawlFor0(DefinableArchivalUnit au)
+      throws Exception {
     AuState aus = new MockAuState(null, 0, -1, -1, null);
-    assertTrue(peerjArchivesAu.shouldCrawlForNewContent(aus));
+    assertTrue(au.shouldCrawlForNewContent(aus));
+  }
+  
+  public void testConstructNullUrl(String volume, String peerjSite, 
+      String pluginId) throws Exception {
+    try {
+      createAu(null, volume, peerjSite, pluginId);
+      fail("Should have thrown ArchivalUnit.ConfigurationException");
+    } catch (ArchivalUnit.ConfigurationException e) {
+    }
   }
 
-  public void testgetName() throws Exception {
-    DefinableArchivalUnit au1 =
-      makeAu(new URL("http://www.example1.com/"), "2010", "xxxxSite1");
-    assertEquals(PLUGIN_NAME + ", Base URL http://www.example1.com/, "
-    		 + "PeerJ Site xxxxSite1, Volume 2010", au1.getName());
-    DefinableArchivalUnit au2 =
-      makeAu(new URL("http://www.example2.com/"), "2012", "xxxxSite2");
-    assertEquals(PLUGIN_NAME + ", Base URL http://www.example2.com/, "
-    		 + "PeerJ Site xxxxSite2, Volume 2012", au2.getName());
+  public void testGetName(String baseUrl, String volume, String peerjSite, 
+      String pluginId, String pluginName) throws Exception {
+    DefinableArchivalUnit au = createAu(
+        new URL(baseUrl), volume, peerjSite, pluginId);
+    assertEquals(pluginName + ", Base URL " + baseUrl + ", PeerJ Site " +
+        peerjSite + ", Volume " + volume, au.getName());
   }
-
+  
+  public void startMockDaemon() {
+    daemon = getMockLockssDaemon();
+    pluginMgr = daemon.getPluginManager();
+    pluginMgr.setLoadablePluginsReady(true);
+    daemon.setDaemonInited(true);
+    pluginMgr.startService();
+    daemon.getAlertManager();
+    daemon.getCrawlManager();
+  }
+          		
+  // Variant to test PeerJ Archives site
+  public static class TestArchives extends TestPeerJArchivalUnit {   
+    public void setUp() throws Exception {
+      super.setUp();
+      tempDirPath = setUpDiskSpace();
+      startMockDaemon();
+      variantPluginName = "PeerJ Plugin";
+      variantPluginId =  "org.lockss.plugin.peerj.PeerJPlugin";
+      variantPeerjSite = "xxxxArchives";
+      variantBaseConstant = "articles";
+      variantPeerjAu = createAu(new URL("http://www.example.com/"), 
+          VOLUME_NAME, variantPeerjSite, variantPluginId);
+      baseUrl = new URL(ROOT_URL);
+    }
+    public void testArchivalUnit() throws Exception {
+      testGetName("http://www.example1.com/", "2010", variantPeerjSite, 
+          variantPluginId, variantPluginName);
+      testConstructNullUrl("2011", "peerjSiteBad", variantPluginId);
+      testShouldDoNewContentCrawlFor0(variantPeerjAu);
+      testShouldDoNewContentCrawlTooEarly(variantPeerjAu);
+      testShouldNotCachePageFromOtherSite(variantPeerjAu, variantPeerjSite);
+      testStartUrlConstruction(variantPeerjAu, variantPeerjSite);
+      testShouldCacheProperPages(variantPeerjAu, variantPeerjSite, baseUrl, 
+          variantBaseConstant);
+    }
+  }
+  
+  // Variant to test PeerJ Preprints site
+  public static class TestPreprints extends TestPeerJArchivalUnit {   
+    public void setUp() throws Exception {
+      super.setUp();
+      tempDirPath = setUpDiskSpace();
+      startMockDaemon();
+      variantPluginName = "PeerJ Preprints Plugin (CLOCKSS)";
+      variantPluginId =  "org.lockss.plugin.peerj.ClockssPeerJPreprintsPlugin";
+      variantPeerjSite = "xxxxPreprints";
+      variantBaseConstant = "preprints";
+      variantPeerjAu = createAu(new URL("http://www.example.com/"), 
+          VOLUME_NAME, variantPeerjSite, variantPluginId);
+      baseUrl = new URL(ROOT_URL);
+    }
+    public void testArchivalUnit() throws Exception {
+      testGetName("http://www.example1.com/", "2010", variantPeerjSite, 
+          variantPluginId, variantPluginName);
+      testConstructNullUrl("2011", "peerjSiteBad", variantPluginId);
+      testShouldDoNewContentCrawlFor0(variantPeerjAu);
+      testShouldDoNewContentCrawlTooEarly(variantPeerjAu);
+      testShouldNotCachePageFromOtherSite(variantPeerjAu, variantPeerjSite);
+      testStartUrlConstruction(variantPeerjAu, variantPeerjSite);
+      testShouldCacheProperPages(variantPeerjAu, variantPeerjSite, baseUrl, 
+          variantBaseConstant);
+    }
+  }
+  
+  public static Test suite() {
+    return variantSuites(new Class[] {
+        TestArchives.class,
+        TestPreprints.class
+    });
+  }
+  
 }
 

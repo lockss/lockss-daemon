@@ -1,4 +1,6 @@
 Notes: Copied the initial analyis from RU4644, and added the rest.
+** Splitting the plugin into 2 separate plugins for PeerJ Archives site
+and PeerJ Preprints site. (plugin version 8).
 
 -------------------INSTRUCTIONS-------------------------------------
 Make a local copy of this file for each new plugin. 
@@ -95,7 +97,8 @@ examples for each that exists. If you can generalize to a pattern
   exclude if not matched ^<base_url>
   exclude ^<base_url>+
   include ^<base_url>(articles|preprints)/index.html\?month=2013-[0-9]+
-  include ^<base_url>(articles|preprints|reviews)/[0-9]+/
+  include ^<base_url>(articles|preprints)/[0-9]+/
+  include ^<base_url>(articles|preprints/[0-9]+/reviews/
   exclude ^<base_url>(articles|preprints)/[0-9]+/(author|editor)-[0-9]+
   include ^<base_url>(articles|preprints)/[0-9]+\.(bib|pdf|ris|xml|html|rdf|json|unixref)
 

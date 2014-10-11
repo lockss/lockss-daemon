@@ -1,5 +1,5 @@
 /*
- * $Id: TestPeerJHtmlFilterFactory.java,v 1.1 2014-10-06 04:45:06 ldoan Exp $
+ * $Id: TestPeerJHtmlFilterFactory.java,v 1.2 2014-10-11 00:44:52 ldoan Exp $
  */
 
 /*
@@ -52,6 +52,7 @@ import org.lockss.test.*;
 public class TestPeerJHtmlFilterFactory
   extends LockssTestCase {
   
+  String variantPluginId;
   FilterFactory variantFact;
   ArchivalUnit variantArchivesAu;
   ArchivalUnit variantPreprintsAu;
@@ -59,47 +60,9 @@ public class TestPeerJHtmlFilterFactory
   MockLockssDaemon daemon;
   PluginManager pluginMgr;
         
-  private static final String PLUGIN_NAME = 
-      "org.lockss.plugin.peerj.ClockssPeerJPlugin";
-  
-
   private static final String filteredStr = 
       "<div class=\"block\"></div>";
   
-  // for crawl filtering
-  // ex: https://peerj.com/articles/175/
-  private static final String withArchivesArticlePreexisting =
-     "<div class=\"block\">"   
-        + "<div id=\"article-preexisting\" class=\"well peerj-paper-well\">"
-        + "<i class=\"icon-pushpin icon-large\"></i>"
-        + "Note that a <a href=\"/preprints/1/\">PrePrint of this article</a>"
-        + "also exists, first published April 4, 2013."
-        + "</div>"
-        + "</div>";
-  private static final String filteredArchivesArticlePreexisting =
-     "<div class=\"block\">"   
-        + "<div id=\"article-preexisting\" class=\"well peerj-paper-well\">"
-        + "<i class=\"icon-pushpin icon-large\"></i>"
-        + "Note that a also exists, first published April 4, 2013."
-        + "</div>"
-        + "</div>";
-  
-  // ex: https://peerj.com/preprints/59/
-  private static final String withPreprintsArticlePreexisting =
-     "<div class=\"block\">" 
-        + "<div id=\"article-preexisting\" class=\"well peerj-paper-well\">"
-        + "<i class=\"icon-pushpin icon-large\"></i> Note that a "
-        + "<a href=\"/articles/199/\" rel=\"published-article\">"
-        + "peer-reviewed article of this PrePrint</a>also exists."
-        + "</div>"
-        + "</div>";
-  private static final String filteredPreprintsArticlePreexisting =
-      "<div class=\"block\">" 
-        + "<div id=\"article-preexisting\" class=\"well peerj-paper-well\">"
-        + "<i class=\"icon-pushpin icon-large\"></i> Note that a also exists."
-        + "</div>"
-        + "</div>";
-
   // for hash filtering
   private static final String withHead = 
       "<html>"
@@ -421,9 +384,9 @@ private static final String withFlagModal =
         + "</div>";
 
   
-  protected ArchivalUnit createAu(String peerjSite)
+  protected ArchivalUnit createAu(String peerjSite, String pluginId)
       throws ArchivalUnit.ConfigurationException {
-    return PluginTestUtil.createAndStartAu(PLUGIN_NAME,
+    return PluginTestUtil.createAndStartAu(pluginId,
         peerjAuConfig(peerjSite));
   }
   
@@ -455,26 +418,6 @@ private static final String withFlagModal =
     daemon.getCrawlManager();
   }
           		
-  // Variant to test with Crawl Filter
-  public static class TestCrawl extends TestPeerJHtmlFilterFactory {
-    public void setUp() throws Exception {
-      super.setUp();
-      tempDirPath = setUpDiskSpace();
-      startMockDaemon();
-      variantFact = new PeerJHtmlCrawlFilterFactory();
-      variantArchivesAu = createAu("archives");
-      variantPreprintsAu = createAu("archives-preprints");
-    }  
-    public void testFilteringArchives() throws Exception {
-      doFilterTest(variantArchivesAu, variantFact, 
-          withArchivesArticlePreexisting, filteredArchivesArticlePreexisting);
-    }
-    public void testFilteringPreprints() throws Exception {
-      doFilterTest(variantPreprintsAu, variantFact, 
-          withPreprintsArticlePreexisting, filteredPreprintsArticlePreexisting);
-    }  
-  }
-  
   // Variant to test with Hash Filter
   public static class TestHash extends TestPeerJHtmlFilterFactory {   
     public void setUp() throws Exception {
@@ -482,8 +425,10 @@ private static final String withFlagModal =
       tempDirPath = setUpDiskSpace();
       startMockDaemon();
       variantFact = new PeerJHtmlHashFilterFactory();
-      variantArchivesAu = createAu("archives");
-      variantPreprintsAu = createAu("archives-preprints");
+      variantArchivesAu = createAu("archives",
+          "org.lockss.plugin.peerj.PeerJPlugin");
+      variantPreprintsAu = createAu("archives-preprints",
+          "org.lockss.plugin.peerj.PeerJPreprintsPlugin");
     }
     public void testFilteringArchives() throws Exception {
       doFilterTest(variantArchivesAu, variantFact, withHead, filteredHead);
@@ -575,7 +520,6 @@ private static final String withFlagModal =
    
   public static Test suite() {
     return variantSuites(new Class[] {
-        TestCrawl.class,
         TestHash.class
     });
   }
