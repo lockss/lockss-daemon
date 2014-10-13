@@ -711,9 +711,9 @@
 
     param[journal_id] = cti
 
-    au < exists ; exists ; 2012 ; Clinical & Translational Immunology Volume 1 ; 2012 ; 1 >
-    au < exists ; exists ; 2013 ; Clinical & Translational Immunology Volume 2 ; 2013 ; 2 >
-    au < expected ; exists ; 2014 ; Clinical & Translational Immunology Volume 3 ; 2014 ; 3 >
+    au < manifest ; exists ; 2012 ; Clinical & Translational Immunology Volume 1 ; 2012 ; 1 >
+    au < manifest ; exists ; 2013 ; Clinical & Translational Immunology Volume 2 ; 2013 ; 2 >
+    au < manifest ; exists ; 2014 ; Clinical & Translational Immunology Volume 3 ; 2014 ; 3 >
 
   }
 
@@ -1801,10 +1801,10 @@
     au < crawling ; exists ; 2011 ; Kidney International Volume 80 ; 2011 ; 80 >
     au < finished ; crawling ; 2012 ; Kidney International Volume 81 ; 2012 ; 81 >
     au < exists ; exists ; 2012 ; Kidney International Volume 82 ; 2012 ; 82 >
-    au < exists ; exists ; 2013 ; Kidney International Volume 83 ; 2013 ; 83 >
-    au < exists ; exists ; 2013 ; Kidney International Volume 84 ; 2013 ; 84 >
-    au < exists ; exists ; 2014 ; Kidney International Volume 85 ; 2014 ; 85 >
-    au < exists ; exists ; 2014 ; Kidney International Volume 86 ; 2014 ; 86 >
+    au < manifest ; exists ; 2013 ; Kidney International Volume 83 ; 2013 ; 83 >
+    au < manifest ; exists ; 2013 ; Kidney International Volume 84 ; 2013 ; 84 >
+    au < manifest ; exists ; 2014 ; Kidney International Volume 85 ; 2014 ; 85 >
+    au < manifest ; exists ; 2014 ; Kidney International Volume 86 ; 2014 ; 86 >
     au < expected ; exists ; 2015 ; Kidney International Volume 87 ; 2015 ; 87 >
     au < expected ; exists ; 2015 ; Kidney International Volume 88 ; 2015 ; 88 >
 
