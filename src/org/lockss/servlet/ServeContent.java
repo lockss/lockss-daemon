@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.88 2014-10-01 08:34:21 tlipkis Exp $
+ * $Id: ServeContent.java,v 1.89 2014-10-13 22:46:47 pgust Exp $
  */
 
 /*
@@ -502,6 +502,13 @@ public class ServeContent extends LockssServlet {
         requestType = AccessLogType.OpenUrl;
       }
 
+      // if there are multiple results, present choices
+      if (resolved.size() > 1) {
+        handleMultiOpenUrlInfo(resolved);
+        return;
+      }
+      
+      // if there is only one result, present it
       url = resolved.getResolvedUrl();
       if (   (url != null)
           || (resolved.getResolvedTo() != ResolvedTo.NONE)) { 
@@ -708,6 +715,54 @@ public class ServeContent extends LockssServlet {
           "<meta HTTP-EQUIV=\"REFRESH\" content=\"0,url=" + srvUrl + "\">");
       writePage(p);
     }
+  }
+
+  /**
+   * Handler for missing OpenURL requests displays synthetic TOC
+   * for level returned by OpenURL resolver and offers a link to
+   * the URL at the publisher site.
+   *
+   * @param info the OpenUrlInfo from the OpenUrl resolver
+   * @param pstate the pub state
+   * @throws IOException if an IO error occurs
+   */
+  protected void handleMultiOpenUrlInfo(OpenUrlInfo multiInfo)
+      throws IOException {
+    Block detailBlock = new Block(Block.Center);
+    Table headerTable = new Table(0,"");
+    headerTable.addHeading("Found Matching Content from Multiple Sources", 
+                           "colspan=3");
+    detailBlock.add(headerTable);
+
+    Table detailTable = new Table(0, "cellspacing=6 cellpadding=0");
+    detailTable.addHeading("Publisher", "style=\"text-align:left\"");
+    detailTable.addHeading("Title", "style=\"text-align:left\"");
+    detailTable.addHeading("OpenURL", "style=\"text-align:left\"");
+    
+    // display publisher, title, and link for each info result
+    for (OpenUrlInfo info : multiInfo) {
+      BibliographicItem bibItem = info.getBibliographicItem();
+      String openUrlQuery = info.getOpenUrlQuery();
+      if (openUrlQuery != null) {
+        detailTable.newRow();
+        detailTable.newCell();
+        String publisherName = (bibItem == null) 
+                               ? null : bibItem.getPublisherName(); 
+        if (publisherName != null) detailTable.add(publisherName);
+        detailTable.newCell();
+        String title = (bibItem == null)
+                       ? null : bibItem.getPublicationTitle();
+        if (title != null) detailTable.add(title);
+        detailTable.newCell();
+        detailTable.add(srvLink(myServletDescr(), openUrlQuery, openUrlQuery));
+      }      
+    }
+    
+    detailBlock.add(detailTable);
+    
+    Page page = newPage();
+    page.add(detailBlock);
+    endPage(page);
   }
 
   /**
