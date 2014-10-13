@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.374 2014-10-07 00:41:03 thib_gc Exp $
+ $Id: build.xml,v 1.375 2014-10-13 18:19:28 thib_gc Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -312,7 +312,7 @@ Args:
   <property name="bouncycastle.version" value="jdk15on-151" />
   <property name="bouncycastle-provider.jar" value="${lib}/bcprov-${bouncycastle.version}.jar" />
   <property name="bouncycastle-mail.jar" value="${lib}/bcmail-${bouncycastle.version}.jar" />
-  <property name="icu4j.version" value="54_1" />
+  <property name="icu4j.version" value="54_1_1" />
   <property name="icu4j.jar" value="${lib}/icu4j-${icu4j.version}.jar" />
   <property name="icu4j-charset.jar" value="${lib}/icu4j-charset-${icu4j.version}.jar" />
   <property name="icu4j-localespi.jar" value="${lib}/icu4j-localespi-${icu4j.version}.jar" />
