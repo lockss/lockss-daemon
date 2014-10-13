@@ -101,10 +101,9 @@
     <list>
       <!-- no gifs from other volumes -->
       <string>2,"^%scontent/(?!([^/]+/)?%s)[^?]*[.](?:gif)", base_url, volume_name</string>
-      <!-- all images, resources, css, js, etc. -->
-      <string>1,"^https?://%s/[^?]*[.](?:bmp|gif|ico|jpe?g|png|tif?f|(css|js)(?:[?].*)?)$", base_url_host</string>
-      <!-- various font files, etc. -->
-      <string>1,"^https?://%s/[^?]*(highwire/jcore|[.](eot|svg|ttf|woff)$)", base_url_host</string>
+      <!-- all fonts, images, resources, css, js, etc. -->
+      <string>1,"^https?://%s/[^?]*[.](?:eot|svg|ttf|woff|bmp|gif|ico|jpe?g|png|tif?f|(css|js)(?:[?].*)?)$", base_url_host</string>
+      <string>1,"^https?://%s[^?]*/highwire/jcore", base_url_host</string>
       <!-- permission page on any cloudfront host
       <string>1,"^https?://[^.]+[.]cloudfront[.]net/lockss[.]htm$"</string>
        -->
