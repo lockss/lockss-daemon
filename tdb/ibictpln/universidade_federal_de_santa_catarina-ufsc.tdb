@@ -509,23 +509,23 @@
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = principia
 
-      au < testing ; 1997 ; 1 ; Principia: an international journal of epistemology Volume 1997 ; 1997 ; >
-      au < testing ; 1998 ; 2 ; Principia: an international journal of epistemology Volume 1998 ; 1998 ; >
-      au < testing ; 1999 ; 3 ; Principia: an international journal of epistemology Volume 1999 ; 1999 ; >
-      au < testing ; 2000 ; 4 ; Principia: an international journal of epistemology Volume 2000 ; 2000 ; >
-      au < testing ; 2001 ; 5 ; Principia: an international journal of epistemology Volume 2001 ; 2001 ; >
-      au < testing ; 2002 ; 6 ; Principia: an international journal of epistemology Volume 2002 ; 2002 ; >
-      au < testing ; 2003 ; 7 ; Principia: an international journal of epistemology Volume 2003 ; 2003 ; >
-      au < testing ; 2004 ; 8 ; Principia: an international journal of epistemology Volume 2004 ; 2004 ; >
-      au < testing ; 2005 ; 9 ; Principia: an international journal of epistemology Volume 2005 ; 2005 ; >
-      au < testing ; 2006 ; 10 ; Principia: an international journal of epistemology Volume 2006 ; 2006 ; >
-      au < testing ; 2007 ; 11 ; Principia: an international journal of epistemology Volume 2007 ; 2007 ; >
-      au < testing ; 2008 ; 12 ; Principia: an international journal of epistemology Volume 2008 ; 2008 ; >
-      au < testing ; 2009 ; 13 ; Principia: an international journal of epistemology Volume 2009 ; 2009 ; >
-      au < testing ; 2010 ; 14 ; Principia: an international journal of epistemology Volume 2010 ; 2010 ; >
-      au < testing ; 2011 ; 15 ; Principia: an international journal of epistemology Volume 2011 ; 2011 ; >
-      au < testing ; 2012 ; 16 ; Principia: an international journal of epistemology Volume 2012 ; 2012 ; >
-      au < testing ; 2013 ; 17 ; Principia: an international journal of epistemology Volume 2013 ; 2013 ; >
+      au < ready ; 1997 ; 1 ; Principia: an international journal of epistemology Volume 1997 ; 1997 ; >
+      au < ready ; 1998 ; 2 ; Principia: an international journal of epistemology Volume 1998 ; 1998 ; >
+      au < ready ; 1999 ; 3 ; Principia: an international journal of epistemology Volume 1999 ; 1999 ; >
+      au < ready ; 2000 ; 4 ; Principia: an international journal of epistemology Volume 2000 ; 2000 ; >
+      au < ready ; 2001 ; 5 ; Principia: an international journal of epistemology Volume 2001 ; 2001 ; >
+      au < ready ; 2002 ; 6 ; Principia: an international journal of epistemology Volume 2002 ; 2002 ; >
+      au < ready ; 2003 ; 7 ; Principia: an international journal of epistemology Volume 2003 ; 2003 ; >
+      au < ready ; 2004 ; 8 ; Principia: an international journal of epistemology Volume 2004 ; 2004 ; >
+      au < ready ; 2005 ; 9 ; Principia: an international journal of epistemology Volume 2005 ; 2005 ; >
+      au < ready ; 2006 ; 10 ; Principia: an international journal of epistemology Volume 2006 ; 2006 ; >
+      au < ready ; 2007 ; 11 ; Principia: an international journal of epistemology Volume 2007 ; 2007 ; >
+      au < ready ; 2008 ; 12 ; Principia: an international journal of epistemology Volume 2008 ; 2008 ; >
+      au < ready ; 2009 ; 13 ; Principia: an international journal of epistemology Volume 2009 ; 2009 ; >
+      au < ready ; 2010 ; 14 ; Principia: an international journal of epistemology Volume 2010 ; 2010 ; >
+      au < ready ; 2011 ; 15 ; Principia: an international journal of epistemology Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 16 ; Principia: an international journal of epistemology Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 17 ; Principia: an international journal of epistemology Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 18 ; Principia: an international journal of epistemology Volume 2014 ; 2014 ; >
 
   }
@@ -541,14 +541,14 @@
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = revemat
 
-      au < testing ; 2006 ; 1 ; Revemat: revista eletrônica de educação matemática Volume 2006 ; 2006 ; >
-      au < testing ; 2007 ; 2 ; Revemat: revista eletrônica de educação matemática Volume 2007 ; 2007 ; >
-      au < testing ; 2008 ; 3 ; Revemat: revista eletrônica de educação matemática Volume 2008 ; 2008 ; >
-      au < testing ; 2009 ; 4 ; Revemat: revista eletrônica de educação matemática Volume 2009 ; 2009 ; >
-      au < testing ; 2010 ; 5 ; Revemat: revista eletrônica de educação matemática Volume 2010 ; 2010 ; >
-      au < testing ; 2011 ; 6 ; Revemat: revista eletrônica de educação matemática Volume 2011 ; 2011 ; >
-      au < testing ; 2012 ; 7 ; Revemat: revista eletrônica de educação matemática Volume 2012 ; 2012 ; >
-      au < testing ; 2013 ; 8 ; Revemat: revista eletrônica de educação matemática Volume 2013 ; 2013 ; >
+      au < ready ; 2006 ; 1 ; Revemat: revista eletrônica de educação matemática Volume 2006 ; 2006 ; >
+      au < ready ; 2007 ; 2 ; Revemat: revista eletrônica de educação matemática Volume 2007 ; 2007 ; >
+      au < ready ; 2008 ; 3 ; Revemat: revista eletrônica de educação matemática Volume 2008 ; 2008 ; >
+      au < ready ; 2009 ; 4 ; Revemat: revista eletrônica de educação matemática Volume 2009 ; 2009 ; >
+      au < ready ; 2010 ; 5 ; Revemat: revista eletrônica de educação matemática Volume 2010 ; 2010 ; >
+      au < ready ; 2011 ; 6 ; Revemat: revista eletrônica de educação matemática Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 7 ; Revemat: revista eletrônica de educação matemática Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 8 ; Revemat: revista eletrônica de educação matemática Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 9 ; Revemat: revista eletrônica de educação matemática Volume 2014 ; 2014 ; >
 
   }
@@ -564,20 +564,20 @@
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = cadernosdepesquisa
 
-      au < testing ; 2000 ; 1 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2000 ; 2000 ; >
-      au < testing ; 2001 ; 2 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2001 ; 2001 ; >
-      au < testing ; 2002 ; 3 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2002 ; 2002 ; >
-      au < testing ; 2003 ; 4 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2003 ; 2003 ; >
-      au < testing ; 2004 ; 5 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2004 ; 2004 ; >
-      au < testing ; 2005 ; 6 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2005 ; 2005 ; >
-      au < testing ; 2006 ; 7 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2006 ; 2006 ; >
-      au < testing ; 2007 ; 8 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2007 ; 2007 ; >
-      au < testing ; 2008 ; 9 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2008 ; 2008 ; >
-      au < testing ; 2009 ; 10 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2009 ; 2009 ; >
+      au < ready ; 2000 ; 1 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2000 ; 2000 ; >
+      au < ready ; 2001 ; 2 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2001 ; 2001 ; >
+      au < ready ; 2002 ; 3 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2002 ; 2002 ; >
+      au < ready ; 2003 ; 4 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2003 ; 2003 ; >
+      au < ready ; 2004 ; 5 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2004 ; 2004 ; >
+      au < ready ; 2005 ; 6 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2005 ; 2005 ; >
+      au < ready ; 2006 ; 7 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2006 ; 2006 ; >
+      au < ready ; 2007 ; 8 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2007 ; 2007 ; >
+      au < ready ; 2008 ; 9 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2008 ; 2008 ; >
+      au < ready ; 2009 ; 10 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2009 ; 2009 ; >
       au < testing ; 2010 ; 11 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2010 ; 2010 ; >
-      au < testing ; 2011 ; 12 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2011 ; 2011 ; >
-      au < testing ; 2012 ; 13 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2012 ; 2012 ; >
-      au < testing ; 2013 ; 14 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2013 ; 2013 ; >
+      au < ready ; 2011 ; 12 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 13 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 14 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 15 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2014 ; 2014 ; >
 
   }
