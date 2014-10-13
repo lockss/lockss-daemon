@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuMetadataRecorder.java,v 1.8 2014-08-29 20:52:29 pgust Exp $
+ * $Id: TestAuMetadataRecorder.java,v 1.9 2014-10-13 22:21:28 fergaloy-sf Exp $
  */
 
 /*
@@ -32,13 +32,11 @@
 package org.lockss.metadata;
 
 import static org.lockss.db.SqlConstants.*;
-import java.io.File;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Properties;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.Cron;
@@ -74,39 +72,26 @@ public class TestAuMetadataRecorder extends LockssTestCase {
   static Logger log = Logger.getLogger(TestAuMetadataRecorder.class);
 
   private SimulatedArchivalUnit sau0;
-  private MockLockssDaemon theDaemon;
   private MetadataManager metadataManager;
-  private PluginManager pluginManager;
-  private String tempDirPath;
   private DbManager dbManager;
-  private CounterReportsManager counterReportsManager;
 
   public void setUp() throws Exception {
     super.setUp();
+    String tempDirPath = setUpDiskSpace();
 
-    tempDirPath = getTempDir().getAbsolutePath();
+    ConfigurationUtil.addFromArgs(MetadataManager.PARAM_INDEXING_ENABLED,
+	"true");
+    ConfigurationUtil.addFromArgs(CounterReportsManager.PARAM_COUNTER_ENABLED,
+	"true");
+    ConfigurationUtil.addFromArgs(CounterReportsManager
+	.PARAM_REPORT_BASEDIR_PATH, tempDirPath);
+    ConfigurationUtil.addFromArgs(CounterReportsRequestAggregator
+	.PARAM_COUNTER_REQUEST_AGGREGATION_TASK_FREQUENCY, "hourly");
 
-    // set derby database log 
-    System.setProperty("derby.stream.error.file",
-                       new File(tempDirPath,"derby.log").getAbsolutePath());
-
-    Properties props = new Properties();
-    props.setProperty(MetadataManager.PARAM_INDEXING_ENABLED, "true");
-    props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
-		      tempDirPath);
-    props.setProperty(CounterReportsManager.PARAM_COUNTER_ENABLED, "true");
-    props.setProperty(CounterReportsManager.PARAM_REPORT_BASEDIR_PATH,
-		      tempDirPath);
-    props
-	.setProperty(CounterReportsRequestAggregator
-	             .PARAM_COUNTER_REQUEST_AGGREGATION_TASK_FREQUENCY,
-		     "hourly");
-    ConfigurationUtil.setCurrentConfigFromProps(props);
-
-    theDaemon = getMockLockssDaemon();
+    MockLockssDaemon theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
 
-    pluginManager = theDaemon.getPluginManager();
+    PluginManager pluginManager = theDaemon.getPluginManager();
     pluginManager.setLoadablePluginsReady(true);
     theDaemon.setDaemonInited(true);
     pluginManager.startService();
@@ -115,10 +100,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
     sau0 = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin0.class,
                                               simAuConfig(tempDirPath + "/0"));
 
-    dbManager = new DbManager();
-    theDaemon.setDbManager(dbManager);
-    dbManager.initService(theDaemon);
-    dbManager.startService();
+    dbManager = getTestDbManager(tempDirPath);
 
     metadataManager = new MetadataManager();
     theDaemon.setMetadataManager(metadataManager);
@@ -130,7 +112,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
     cron.initService(theDaemon);
     cron.startService();
 
-    counterReportsManager = new CounterReportsManager();
+    CounterReportsManager counterReportsManager = new CounterReportsManager();
     theDaemon.setCounterReportsManager(counterReportsManager);
     counterReportsManager.initService(theDaemon);
     counterReportsManager.startService();
@@ -1042,9 +1024,8 @@ public class TestAuMetadataRecorder extends LockssTestCase {
       stmt = dbManager.prepareStatement(conn, q);
       ResultSet r = dbManager.executeQuery(stmt);
 
-      String name = null;
       while (r.next()) {
-        name = r.getString(1);
+        r.getString(1);
       }
       
       String query = "select count(*) from " + PUBLICATION_TABLE;
@@ -1077,9 +1058,8 @@ public class TestAuMetadataRecorder extends LockssTestCase {
       stmt = dbManager.prepareStatement(conn, query);
       ResultSet resultSet = dbManager.executeQuery(stmt);
 
-      String name = null;
       while (resultSet.next()) {
-        name = resultSet.getString(1);
+        resultSet.getString(1);
       }
     } finally {
       stmt.close();

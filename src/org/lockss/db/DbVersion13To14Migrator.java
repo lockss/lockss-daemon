@@ -1,5 +1,5 @@
 /*
- * $Id: DbVersion13To14Migrator.java,v 1.3 2014-08-28 19:11:07 fergaloy-sf Exp $
+ * $Id: DbVersion13To14Migrator.java,v 1.4 2014-10-13 22:21:28 fergaloy-sf Exp $
  */
 
 /*
@@ -31,61 +31,8 @@
  */
 package org.lockss.db;
 
-import org.lockss.app.LockssDaemon;
-import org.lockss.daemon.LockssRunnable;
-import org.lockss.util.Logger;
-
 /**
- * Migrates in a separate thread the database from version 13 to version 14.
- * 
- * @author Fernando Garcia-Loygorri
+ * Obsolete. Moved to DbVersion14To15Migrator.
  */
-public class DbVersion13To14Migrator extends LockssRunnable {
-  private static Logger log = Logger.getLogger(DbVersion13To14Migrator.class);
-
-  /**
-   * Constructor.
-   */
-  public DbVersion13To14Migrator() {
-    super("DbVersion13To14Migrator");
-  }
-
-  /**
-   * Entry point to start the process of migrating the database from version 13
-   * to version 14.
-   */
-  public void lockssRun() {
-    final String DEBUG_HEADER = "lockssRun(): ";
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
-    LockssDaemon daemon = LockssDaemon.getLockssDaemon();
-
-    // Wait until the AUs have been started.
-    if (!daemon.areAusStarted()) {
-      if (log.isDebug()) log.debug(DEBUG_HEADER + "Waiting for aus to start");
-
-      while (!daemon.areAusStarted()) {
-	try {
-	  daemon.waitUntilAusStarted();
-	} catch (InterruptedException ex) {
-	}
-      }
-    }
-
-    try {
-      DbManager dbManager = LockssDaemon.getLockssDaemon().getDbManager();
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "Obtained DbManager.");
-
-      DbManagerSql dbManagerSql = dbManager.getDbManagerSqlBeforeReady();
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "Obtained DbManagerSql.");
-
-      // Perform the actual work.
-      dbManagerSql.migrateDatabaseFrom13To14();
-
-      dbManager.cleanUpThread("DbVersion13To14Migrator");
-    } catch (Exception e) {
-      log.error("Cannot migrate the database from version 13 to 14", e);
-    }
-
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
-  }
+public class DbVersion13To14Migrator {
 }

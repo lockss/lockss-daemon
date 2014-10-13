@@ -1,5 +1,5 @@
 /*
- * $Id: TestSubscriptionManager.java,v 1.13 2014-10-03 23:04:46 fergaloy-sf Exp $
+ * $Id: TestSubscriptionManager.java,v 1.14 2014-10-13 22:21:29 fergaloy-sf Exp $
  */
 
 /*
@@ -32,7 +32,6 @@
 package org.lockss.subscription;
 
 import static org.lockss.db.SqlConstants.*;
-import java.io.File;
 import java.io.IOException;
 import java.sql.Connection;
 import java.util.ArrayList;
@@ -82,9 +81,7 @@ public class TestSubscriptionManager extends LockssTestCase {
   private static final String BASE_URL = "http://www.example.com/foo/";
 
   private String tempDirPath;
-  private MockLockssDaemon theDaemon;
   private PluginManager pluginManager;
-  private RemoteApi remoteApi;
   private SubscriptionManager subManager;
   private DbManager dbManager;
   private MetadataManager metadataManager;
@@ -93,21 +90,14 @@ public class TestSubscriptionManager extends LockssTestCase {
   @Override
   public void setUp() throws Exception {
     super.setUp();
+    tempDirPath = setUpDiskSpace();
 
-    tempDirPath = getTempDir().getAbsolutePath();
+    ConfigurationUtil.addFromArgs(MetadataManager.PARAM_INDEXING_ENABLED,
+	"true");
+    ConfigurationUtil.addFromArgs(SubscriptionManager
+	.PARAM_SUBSCRIPTION_ENABLED, "true");
 
-    // Set derby database log 
-    System.setProperty("derby.stream.error.file",
-                       new File(tempDirPath,"derby.log").getAbsolutePath());
-
-    Properties props = new Properties();
-    props.setProperty(MetadataManager.PARAM_INDEXING_ENABLED, "true");
-    props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
-		      tempDirPath);
-    props.setProperty(SubscriptionManager.PARAM_SUBSCRIPTION_ENABLED, "true");
-    ConfigurationUtil.setCurrentConfigFromProps(props);
-
-    theDaemon = getMockLockssDaemon();
+    MockLockssDaemon theDaemon = getMockLockssDaemon();
     theDaemon.setDaemonInited(true);
 
     pluginManager = theDaemon.getPluginManager();
@@ -127,13 +117,10 @@ public class TestSubscriptionManager extends LockssTestCase {
     MockIdentityManager idm = new MockIdentityManager();
     theDaemon.setIdentityManager(idm);
 
-    remoteApi = theDaemon.getRemoteApi();
+    RemoteApi remoteApi = theDaemon.getRemoteApi();
     remoteApi.startService();
 
-    dbManager = new DbManager();
-    theDaemon.setDbManager(dbManager);
-    dbManager.initService(theDaemon);
-    dbManager.startService();
+    dbManager = getTestDbManager(tempDirPath);
 
     metadataManager = new MetadataManager();
     theDaemon.setMetadataManager(metadataManager);

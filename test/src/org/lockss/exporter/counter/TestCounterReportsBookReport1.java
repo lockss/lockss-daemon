@@ -1,5 +1,5 @@
 /*
- * $Id: TestCounterReportsBookReport1.java,v 1.12 2014-09-16 19:55:42 fergaloy-sf Exp $
+ * $Id: TestCounterReportsBookReport1.java,v 1.13 2014-10-13 22:21:28 fergaloy-sf Exp $
  */
 
 /*
@@ -39,8 +39,6 @@ import java.io.File;
 import java.io.FileReader;
 import java.sql.Connection;
 import java.util.Calendar;
-import java.util.Properties;
-import org.lockss.config.ConfigManager;
 import org.lockss.daemon.Cron;
 import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
@@ -48,7 +46,6 @@ import org.lockss.exporter.counter.CounterReportsBookReport1;
 import org.lockss.exporter.counter.CounterReportsManager;
 import org.lockss.extractor.MetadataField;
 import org.lockss.metadata.MetadataManager;
-import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockLockssDaemon;
@@ -72,28 +69,17 @@ public class TestCounterReportsBookReport1 extends LockssTestCase {
   @Override
   public void setUp() throws Exception {
     super.setUp();
-    String tempDirPath = getTempDir().getAbsolutePath();
+    String tempDirPath = setUpDiskSpace();
 
-    // Set the database log.
-    System.setProperty("derby.stream.error.file", new File(tempDirPath,
-	"derby.log").getAbsolutePath());
-
-    Properties props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
-	      tempDirPath);
-    props.setProperty(CounterReportsManager.PARAM_COUNTER_ENABLED, "true");
-    props.setProperty(CounterReportsManager.PARAM_REPORT_BASEDIR_PATH,
-	tempDirPath);
-    ConfigurationUtil.setCurrentConfigFromProps(props);
+    ConfigurationUtil.addFromArgs(CounterReportsManager.PARAM_COUNTER_ENABLED,
+	"true");
+    ConfigurationUtil.addFromArgs(CounterReportsManager
+	.PARAM_REPORT_BASEDIR_PATH, tempDirPath);
 
     theDaemon = getMockLockssDaemon();
     theDaemon.setDaemonInited(true);
 
-    dbManager = new DbManager();
-    theDaemon.setDbManager(dbManager);
-    dbManager.initService(theDaemon);
-    dbManager.startService();
+    dbManager = getTestDbManager(tempDirPath);
 
     metadataManager = new MetadataManager();
     theDaemon.setMetadataManager(metadataManager);

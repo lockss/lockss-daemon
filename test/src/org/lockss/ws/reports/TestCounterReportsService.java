@@ -1,10 +1,10 @@
 /*
- * $Id: TestCounterReportsService.java,v 1.1 2013-03-22 04:47:31 fergaloy-sf Exp $
+ * $Id: TestCounterReportsService.java,v 1.2 2014-10-13 22:21:28 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,20 +29,15 @@
  in this Software without prior written authorization from Stanford University.
 
  */
-
 package org.lockss.ws.reports;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Properties;
-import org.lockss.config.ConfigManager;
 import org.lockss.daemon.Cron;
-import org.lockss.db.DbManager;
 import org.lockss.exporter.counter.CounterReportsManager;
 import org.lockss.metadata.MetadataManager;
-import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockLockssDaemon;
@@ -63,29 +58,17 @@ public class TestCounterReportsService extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
+    tempDirPath = setUpDiskSpace();
 
-    tempDirPath = getTempDir().getAbsolutePath();
-
-    // Set the database log.
-    System.setProperty("derby.stream.error.file", new File(tempDirPath,
-	"derby.log").getAbsolutePath());
-
-    Properties props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
-		      tempDirPath);
-    props.setProperty(CounterReportsManager.PARAM_COUNTER_ENABLED, "true");
-    props.setProperty(CounterReportsManager.PARAM_REPORT_BASEDIR_PATH,
-	tempDirPath);
-    ConfigurationUtil.setCurrentConfigFromProps(props);
+    ConfigurationUtil.addFromArgs(CounterReportsManager.PARAM_COUNTER_ENABLED,
+	"true");
+    ConfigurationUtil.addFromArgs(CounterReportsManager
+	.PARAM_REPORT_BASEDIR_PATH, tempDirPath);
 
     MockLockssDaemon theDaemon = getMockLockssDaemon();
     theDaemon.setDaemonInited(true);
 
-    DbManager dbManager = new DbManager();
-    theDaemon.setDbManager(dbManager);
-    dbManager.initService(theDaemon);
-    dbManager.startService();
+    getTestDbManager(tempDirPath);
 
     MetadataManager metadataManager = new MetadataManager();
     theDaemon.setMetadataManager(metadataManager);

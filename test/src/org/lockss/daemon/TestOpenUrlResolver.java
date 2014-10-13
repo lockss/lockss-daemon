@@ -1,5 +1,5 @@
 /*
- * $Id: TestOpenUrlResolver.java,v 1.29 2014-08-22 22:15:00 fergaloy-sf Exp $
+ * $Id: TestOpenUrlResolver.java,v 1.30 2014-10-13 22:21:29 fergaloy-sf Exp $
  */
 
 /*
@@ -39,7 +39,6 @@ import java.sql.ResultSet;
 import java.util.*;
 import org.lockss.config.*;
 import org.lockss.daemon.OpenUrlResolver.OpenUrlInfo;
-import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.ArticleMetadataExtractor;
@@ -57,8 +56,6 @@ import org.lockss.plugin.base.BaseCachedUrl;
 import org.lockss.plugin.simulated.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
-
-//import TestBePressMetadataExtractor.MySimulatedPlugin;
 
 /**
  * Test class for org.lockss.daemon.MetadataManager
@@ -83,17 +80,11 @@ public class TestOpenUrlResolver extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
 
-    String paramIndexingEnabled = 
-      Boolean.toString(!disableMetadataManager);
-    final String tempDirPath = getTempDir().getAbsolutePath();
-    ConfigurationUtil.setFromArgs(MetadataManager.PARAM_INDEXING_ENABLED, 
-                                  paramIndexingEnabled,
-                                  ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
-                                  new File(tempDirPath, "disk").toString());
+    String paramIndexingEnabled = Boolean.toString(!disableMetadataManager);
+    final String tempDirPath = setUpDiskSpace();
 
-    // set derby database log 
-    System.setProperty("derby.stream.error.file", 
-		       new File(tempDirPath,"derby.log").getAbsolutePath());
+    ConfigurationUtil.addFromArgs(MetadataManager.PARAM_INDEXING_ENABLED, 
+                                  paramIndexingEnabled);
     
     theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
@@ -178,20 +169,7 @@ public class TestOpenUrlResolver extends LockssTestCase {
 
     ausReindexed.clear();
 
-    dbManager = new DbManager() {
-      public Connection getConnection() throws DbException {
-	return super.getConnection();
-      }
-    };
-
-    theDaemon.setDbManager(dbManager);
-    dbManager.initService(theDaemon);
-
-    try {
-      dbManager.startService();
-    } catch (IllegalArgumentException ex) {
-      // ignored
-    }
+    dbManager = getTestDbManager(tempDirPath);
 
     metadataManager = new MetadataManager() {
       /**

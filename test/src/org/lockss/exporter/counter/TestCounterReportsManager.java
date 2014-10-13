@@ -1,10 +1,10 @@
 /*
- * $Id: TestCounterReportsManager.java,v 1.4 2012-12-07 07:27:04 fergaloy-sf Exp $
+ * $Id: TestCounterReportsManager.java,v 1.5 2014-10-13 22:21:28 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2012-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,6 +29,17 @@
  in this Software without prior written authorization from Stanford University.
 
  */
+package org.lockss.exporter.counter;
+
+import java.io.PrintWriter;
+import org.lockss.daemon.Cron;
+import org.lockss.db.DbManager;
+import org.lockss.exporter.counter.CounterReportsManager;
+import org.lockss.metadata.MetadataManager;
+import org.lockss.test.ConfigurationUtil;
+import org.lockss.test.LockssTestCase;
+import org.lockss.test.MockLockssDaemon;
+import org.lockss.util.IOUtil;
 
 /**
  * Test class for org.lockss.exporter.counter.CounterReportsManager.
@@ -36,22 +47,6 @@
  * @author Fernando Garcia-Loygorri
  * @version 1.0
  */
-package org.lockss.exporter.counter;
-
-import java.io.File;
-import java.io.PrintWriter;
-import java.util.Properties;
-import org.lockss.config.ConfigManager;
-import org.lockss.daemon.Cron;
-import org.lockss.db.DbManager;
-import org.lockss.exporter.counter.CounterReportsManager;
-import org.lockss.metadata.MetadataManager;
-import org.lockss.repository.LockssRepositoryImpl;
-import org.lockss.test.ConfigurationUtil;
-import org.lockss.test.LockssTestCase;
-import org.lockss.test.MockLockssDaemon;
-import org.lockss.util.IOUtil;
-
 public class TestCounterReportsManager extends LockssTestCase {
   private MockLockssDaemon theDaemon;
   private DbManager dbManager;
@@ -61,28 +56,17 @@ public class TestCounterReportsManager extends LockssTestCase {
   @Override
   public void setUp() throws Exception {
     super.setUp();
-    String tempDirPath = getTempDir().getAbsolutePath();
+    String tempDirPath = setUpDiskSpace();
 
-    // Set the database log.
-    System.setProperty("derby.stream.error.file", new File(tempDirPath,
-	"derby.log").getAbsolutePath());
-
-    Properties props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
-	      tempDirPath);
-    props.setProperty(CounterReportsManager.PARAM_COUNTER_ENABLED, "true");
-    props.setProperty(CounterReportsManager.PARAM_REPORT_BASEDIR_PATH,
-	tempDirPath);
-    ConfigurationUtil.setCurrentConfigFromProps(props);
+    ConfigurationUtil.addFromArgs(CounterReportsManager.PARAM_COUNTER_ENABLED,
+	"true");
+    ConfigurationUtil.addFromArgs(CounterReportsManager
+	.PARAM_REPORT_BASEDIR_PATH, tempDirPath);
 
     theDaemon = getMockLockssDaemon();
     theDaemon.setDaemonInited(true);
 
-    dbManager = new DbManager();
-    theDaemon.setDbManager(dbManager);
-    dbManager.initService(theDaemon);
-    dbManager.startService();
+    dbManager = getTestDbManager(tempDirPath);
 
     metadataManager = new MetadataManager();
     theDaemon.setMetadataManager(metadataManager);

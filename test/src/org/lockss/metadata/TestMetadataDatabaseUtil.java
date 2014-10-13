@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetadataDatabaseUtil.java,v 1.3 2014-10-03 23:04:46 fergaloy-sf Exp $
+ * $Id: TestMetadataDatabaseUtil.java,v 1.4 2014-10-13 22:21:28 fergaloy-sf Exp $
  */
 
 /*
@@ -29,14 +29,11 @@
  in this Software without prior written authorization from Stanford University.
 
  */
-
 package org.lockss.metadata;
 
-import java.io.File;
 import java.io.IOException;
 import java.sql.Connection;
 import java.util.List;
-import java.util.Properties;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.Cron;
@@ -72,31 +69,20 @@ public class TestMetadataDatabaseUtil extends LockssTestCase {
   static Logger log = Logger.getLogger(TestMetadataDatabaseUtil.class);
 
   private SimulatedArchivalUnit sau0;
-  private MockLockssDaemon theDaemon;
   private MetadataManager metadataManager;
-  private PluginManager pluginManager;
-  private String tempDirPath;
   private DbManager dbManager;
 
   public void setUp() throws Exception {
     super.setUp();
+    String tempDirPath = setUpDiskSpace();
 
-    tempDirPath = getTempDir().getAbsolutePath();
+    ConfigurationUtil.addFromArgs(MetadataManager.PARAM_INDEXING_ENABLED,
+	"true");
 
-    // set derby database log 
-    System.setProperty("derby.stream.error.file",
-                       new File(tempDirPath,"derby.log").getAbsolutePath());
-
-    Properties props = new Properties();
-    props.setProperty(MetadataManager.PARAM_INDEXING_ENABLED, "true");
-    props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
-		      tempDirPath);
-    ConfigurationUtil.setCurrentConfigFromProps(props);
-
-    theDaemon = getMockLockssDaemon();
+    MockLockssDaemon theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
 
-    pluginManager = theDaemon.getPluginManager();
+    PluginManager pluginManager = theDaemon.getPluginManager();
     pluginManager.setLoadablePluginsReady(true);
     theDaemon.setDaemonInited(true);
     pluginManager.startService();
@@ -105,10 +91,7 @@ public class TestMetadataDatabaseUtil extends LockssTestCase {
     sau0 = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin0.class,
                                               simAuConfig(tempDirPath + "/0"));
 
-    dbManager = new DbManager();
-    theDaemon.setDbManager(dbManager);
-    dbManager.initService(theDaemon);
-    dbManager.startService();
+    dbManager = getTestDbManager(tempDirPath);
 
     metadataManager = new MetadataManager();
     theDaemon.setMetadataManager(metadataManager);

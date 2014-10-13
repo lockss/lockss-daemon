@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetadataManager.java,v 1.9 2014-09-23 20:40:16 pgust Exp $
+ * $Id: TestMetadataManager.java,v 1.10 2014-10-13 22:21:28 fergaloy-sf Exp $
  */
 
 /*
@@ -63,7 +63,6 @@ public class TestMetadataManager extends LockssTestCase {
   private MockLockssDaemon theDaemon;
   private MetadataManager metadataManager;
   private PluginManager pluginManager;
-  private String tempDirPath;
   private DbManager dbManager;
 
   /** set of AuIds of AUs reindexed by the MetadataManager */
@@ -74,27 +73,17 @@ public class TestMetadataManager extends LockssTestCase {
   
   public void setUp() throws Exception {
     super.setUp();
+    String tempDirPath = setUpDiskSpace();
 
-    tempDirPath = getTempDir().getAbsolutePath();
-
-    // set derby database log 
-    System.setProperty("derby.stream.error.file",
-                       new File(tempDirPath,"derby.log").getAbsolutePath());
-
-    Properties props = new Properties();
-    props.setProperty(MetadataManager.PARAM_INDEXING_ENABLED, "true");
-    props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
-		      tempDirPath);
-    ConfigurationUtil.setCurrentConfigFromProps(props);
+    ConfigurationUtil.addFromArgs(MetadataManager.PARAM_INDEXING_ENABLED,
+	"true");
 
     theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
     pluginManager = theDaemon.getPluginManager();
     pluginManager.setLoadablePluginsReady(true);
     theDaemon.setDaemonInited(true);
-    pluginManager.startService();
     theDaemon.getCrawlManager();
-
 
     sau0 = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin0.class,
                                               simAuConfig(tempDirPath + "/0"));
@@ -115,10 +104,7 @@ public class TestMetadataManager extends LockssTestCase {
     // reset set of reindexed aus
     ausReindexed.clear();
 
-    dbManager = new DbManager();
-    theDaemon.setDbManager(dbManager);
-    dbManager.initService(theDaemon);
-    dbManager.startService();
+    dbManager = getTestDbManager(tempDirPath);
 
     metadataManager = new MetadataManager() {
       /**
@@ -783,7 +769,7 @@ public class TestMetadataManager extends LockssTestCase {
                         + md.get(MetadataField.FIELD_DATE) + "."
                         + md.get(MetadataField.FIELD_START_PAGE); 
           md.put(MetadataField.FIELD_DOI, doi);
-          md.put(MetadataField.FIELD_JOURNAL_TITLE,
+          md.put(MetadataField.FIELD_PUBLICATION_TITLE,
                  "Journal[" + doiPrefix + "]");
           md.put(MetadataField.FIELD_ARTICLE_TITLE, "Title[" + doi + "]");
           md.put(MetadataField.FIELD_AUTHOR, "Author1[" + doi + "]");
@@ -816,7 +802,7 @@ public class TestMetadataManager extends LockssTestCase {
           md.put(MetadataField.FIELD_ISBN,"978-1-58562-317-4");
           md.put(MetadataField.FIELD_DATE,"1993");
           md.put(MetadataField.FIELD_START_PAGE,"" + articleNumber);
-          md.put(MetadataField.FIELD_JOURNAL_TITLE,
+          md.put(MetadataField.FIELD_PUBLICATION_TITLE,
               "Manual of Clinical Psychopharmacology");
           md.put(MetadataField.FIELD_ARTICLE_TITLE,"Title[" + doi + "]");
           md.put(MetadataField.FIELD_AUTHOR,"Author1[" + doi + "]");
@@ -850,7 +836,7 @@ public class TestMetadataManager extends LockssTestCase {
           md.put(MetadataField.FIELD_ISBN,"976-1-58562-317-7");
           md.put(MetadataField.FIELD_DATE,"1999");
           md.put(MetadataField.FIELD_START_PAGE,"" + articleNumber);
-          md.put(MetadataField.FIELD_JOURNAL_TITLE,
+          md.put(MetadataField.FIELD_PUBLICATION_TITLE,
                  "Journal[" + doiPrefix + "]");
           md.put(MetadataField.FIELD_ARTICLE_TITLE,"Title[" + doi + "]");
           md.put(MetadataField.FIELD_AUTHOR,"Author1[" + doi + "]");

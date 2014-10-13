@@ -1,5 +1,5 @@
 /*
- * $Id: DbManager.java,v 1.45 2014-10-03 23:04:45 fergaloy-sf Exp $
+ * $Id: DbManager.java,v 1.46 2014-10-13 22:21:28 fergaloy-sf Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import javax.sql.DataSource;
@@ -220,6 +221,14 @@ public class DbManager extends BaseLockssDaemonManager
   // starting the service was not higher already.
   private int targetDatabaseVersion = 21;
 
+  // The database version updates that are performed asynchronously.
+  private int[] asynchronousUpdates = new int[] {10, 15, 17, 20};
+
+  // An indication of whether to perform only synchronous updates to the
+  // database. This is useful for performance reasons when creating an empty
+  // database from scratch.
+  private boolean skipAsynchronousUpdates = false;
+
   // The maximum number of retries to be attempted when encountering transient
   // SQL exceptions.
   private int maxRetryCount = DEFAULT_MAX_RETRY_COUNT;
@@ -241,6 +250,22 @@ public class DbManager extends BaseLockssDaemonManager
   private DbManagerSql dbManagerSql = new DbManagerSql(null,
       DEFAULT_DATASOURCE_CLASSNAME, DEFAULT_DATASOURCE_USER,
       DEFAULT_MAX_RETRY_COUNT, DEFAULT_RETRY_DELAY, DEFAULT_FETCH_SIZE);
+
+  /**
+   * Default constructor.
+   */
+  public DbManager() {
+  }
+
+  /**
+   * Constructor.
+   * 
+   * @param skipAsynchronousUpdates A boolean indicating whether to skip the
+   * asynchronous updates and just mark them as done.
+   */
+  public DbManager(boolean skipAsynchronousUpdates) {
+    this.skipAsynchronousUpdates = skipAsynchronousUpdates;
+  }
 
   /**
    * Starts the DbManager service.
@@ -1783,7 +1808,9 @@ public class DbManager extends BaseLockssDaemonManager
 	} else if (from == 8) {
 	  dbManagerSql.updateDatabaseFrom8To9(conn);
 	} else if (from == 9) {
-	  dbManagerSql.updateDatabaseFrom9To10(conn);
+	  if (!skipAsynchronousUpdates) {
+	    dbManagerSql.updateDatabaseFrom9To10(conn);
+	  }
 	} else if (from == 10) {
 	  dbManagerSql.updateDatabaseFrom10To11(conn);
 	} else if (from == 11) {
@@ -1793,17 +1820,23 @@ public class DbManager extends BaseLockssDaemonManager
 	} else if (from == 13) {
 	  dbManagerSql.updateDatabaseFrom13To14(conn);
 	} else if (from == 14) {
-	  dbManagerSql.updateDatabaseFrom14To15(conn);
+	  if (!skipAsynchronousUpdates) {
+	    dbManagerSql.updateDatabaseFrom14To15(conn);
+	  }
 	} else if (from == 15) {
 	  dbManagerSql.updateDatabaseFrom15To16(conn);
 	} else if (from == 16) {
-	  dbManagerSql.updateDatabaseFrom16To17(conn);
+	  if (!skipAsynchronousUpdates) {
+	    dbManagerSql.updateDatabaseFrom16To17(conn);
+	  }
 	} else if (from == 17) {
 	  dbManagerSql.updateDatabaseFrom17To18(conn);
 	} else if (from == 18) {
 	  dbManagerSql.updateDatabaseFrom18To19(conn);
 	} else if (from == 19) {
-	  dbManagerSql.updateDatabaseFrom19To20(conn);
+	  if (!skipAsynchronousUpdates) {
+	    dbManagerSql.updateDatabaseFrom19To20(conn);
+	  }
 	} else if (from == 20) {
 	  dbManagerSql.updateDatabaseFrom20To21(conn);
 	} else {
@@ -1823,10 +1856,10 @@ public class DbManager extends BaseLockssDaemonManager
 	if (success) {
 	  // Yes: Check whether the updated database is at least at version 2.
 	  if (from > 0) {
-	    // Yes: Check whether the last update does not involve an
-	    // asynchronous process that will update the database version in the
-	    // database when it finishes. 
-	    if (from != 9 && from != 13 && from != 16 && from != 19) {
+	    // Yes: Check whether this update will not be recorded in the
+	    // database by an asynchronous process when it finishes. 
+	    if (skipAsynchronousUpdates
+		|| Arrays.binarySearch(asynchronousUpdates, from + 1) < 0) {
 	      // Yes: Record the current database version in the database.
 	      lastRecordedVersion = from + 1;
 	      recordDbVersion(conn, lastRecordedVersion);

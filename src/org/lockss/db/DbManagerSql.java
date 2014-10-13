@@ -1,5 +1,5 @@
 /*
- * $Id: DbManagerSql.java,v 1.6 2014-10-05 04:57:46 fergaloy-sf Exp $
+ * $Id: DbManagerSql.java,v 1.7 2014-10-13 22:21:28 fergaloy-sf Exp $
  */
 
 /*
@@ -5963,10 +5963,29 @@ public class DbManagerSql {
       }
     }
 
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Updates the database from version 14 to version 15.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws SQLException
+   *           if any problem occurred updating the database.
+   */
+  void updateDatabaseFrom14To15(Connection conn) throws SQLException {
+    final String DEBUG_HEADER = "updateDatabaseFrom14To15(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    if (conn == null) {
+      throw new IllegalArgumentException("Null connection");
+    }
+
     // Populate in a separate thread the ArchivalUnit active flag for inactive
     // Archival Units.
-    DbVersion13To14Migrator migrator = new DbVersion13To14Migrator();
-    Thread thread = new Thread(migrator, "DbVersion13To14Migrator");
+    DbVersion14To15Migrator migrator = new DbVersion14To15Migrator();
+    Thread thread = new Thread(migrator, "DbVersion14To15Migrator");
     LockssDaemon.getLockssDaemon().getDbManager().recordThread(thread);
     new Thread(migrator).start();
 
@@ -5974,10 +5993,10 @@ public class DbManagerSql {
   }
 
   /**
-   * Migrates the contents of the database from version 13 to version 14.
+   * Migrates the contents of the database from version 14 to version 15.
    */
-  void migrateDatabaseFrom13To14() {
-    final String DEBUG_HEADER = "migrateDatabaseFrom13To14(): ";
+  void migrateDatabaseFrom14To15() {
+    final String DEBUG_HEADER = "migrateDatabaseFrom14To15(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
     Connection conn = null;
 
@@ -5995,13 +6014,13 @@ public class DbManagerSql {
       }
 
       // Record the current database version in the database.
-      addDbVersion(conn, 14);
+      addDbVersion(conn, 15);
       JdbcBridge.commitOrRollback(conn, log);
-      if (log.isDebug()) log.debug("Database updated to version " + 14);
+      if (log.isDebug()) log.debug("Database updated to version " + 15);
     } catch (SQLException sqle) {
-      log.error("Cannot migrate the database from version 13 to 14", sqle);
+      log.error("Cannot migrate the database from version 14 to 15", sqle);
     } catch (RuntimeException re) {
-      log.error("Cannot migrate the database from version 13 to 14", re);
+      log.error("Cannot migrate the database from version 14 to 15", re);
     } finally {
       JdbcBridge.safeRollbackAndClose(conn);
     }
@@ -6095,18 +6114,6 @@ public class DbManagerSql {
     }
 
     return UPDATE_AU_ACTIVE_QUERY;
-  }
-
-  /**
-   * Updates the database from version 14 to version 15.
-   * 
-   * @param conn
-   *          A Connection with the database connection to be used.
-   * @throws SQLException
-   *           if any problem occurred updating the database.
-   */
-  void updateDatabaseFrom14To15(Connection conn) throws SQLException {
-    // Disabled due to unexpected errors.
   }
 
   /**

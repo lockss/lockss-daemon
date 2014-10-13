@@ -1,10 +1,10 @@
 /*
- * $Id: LockssTestCase.java,v 1.116 2014-10-01 08:35:36 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.117 2014-10-13 22:21:29 fergaloy-sf Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,21 +29,19 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
 */
-
 package org.lockss.test;
 
 import java.io.*;
 import java.net.*;
 import java.security.SecureRandom;
 import java.util.*;
-
 import junit.framework.*;
-
 import org.apache.commons.collections.iterators.ObjectArrayIterator;
 import org.apache.commons.io.IOUtils;
 import org.apache.oro.text.regex.Pattern;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
+import org.lockss.db.DbManager;
 import org.lockss.util.*;
 
 
@@ -63,6 +61,7 @@ public class LockssTestCase extends TestCase {
   public static int TIMEOUT_SHOULDNT = DEFAULT_TIMEOUT_SHOULDNT;
 
   static final String TEST_ID_FILE_NAME = ".locksstestcase";
+  private static final String TEST_DB_FILE_SPEC = "/org/lockss/db/db.zip";
 
   private MockLockssDaemon mockDaemon = null;
 
@@ -2070,4 +2069,32 @@ public class LockssTestCase extends TestCase {
     }
   }
 
+  /**
+   * Provides a database manager already started that uses a database snapshot
+   * previously created.
+   * 
+   * @param tempDirPath
+   *          A String with the path to the temporary directory.
+   * @return a DbManager already started that uses a database snapshot
+   *         previously created.
+   * @throws IOException
+   *           if there are problems unzipping the database file.
+   */
+  protected DbManager getTestDbManager(String tempDirPath) throws IOException {
+    // Set the database log.
+    System.setProperty("derby.stream.error.file",
+	new File(tempDirPath, "derby.log").getAbsolutePath());
+
+    // Extract the database from the zip file.
+    ZipUtil.unzip(getResourceAsStream(TEST_DB_FILE_SPEC),
+	new File(tempDirPath, "db"));
+
+    // Create the database manager skipping the asynchronous updates.
+    DbManager dbManager = new DbManager(true);
+    mockDaemon.setDbManager(dbManager);
+    dbManager.initService(mockDaemon);
+    dbManager.startService();
+
+    return dbManager;
+  }
 }

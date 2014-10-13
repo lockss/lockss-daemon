@@ -1,5 +1,5 @@
 /*
- * $Id: TestDbManager.java,v 1.12 2014-09-23 22:42:36 fergaloy-sf Exp $
+ * $Id: TestDbManager.java,v 1.13 2014-10-13 22:21:28 fergaloy-sf Exp $
  */
 
 /*
@@ -37,9 +37,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.Properties;
-import org.lockss.config.ConfigManager;
-import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockLockssDaemon;
@@ -64,11 +61,7 @@ public class TestDbManager extends LockssTestCase {
     super.setUp();
 
     // Get the temporary directory used during the test.
-    tempDirPath = getTempDir().getAbsolutePath();
-
-    // Set the database log.
-    System.setProperty("derby.stream.error.file",
-		       new File(tempDirPath, "derby.log").getAbsolutePath());
+    tempDirPath = setUpDiskSpace();
 
     theDaemon = getMockLockssDaemon();
     theDaemon.setDaemonInited(true);
@@ -80,12 +73,6 @@ public class TestDbManager extends LockssTestCase {
    * @throws Exception
    */
   public void testCreateTable1() throws Exception {
-    Properties props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    props
-	.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
-    ConfigurationUtil.setCurrentConfigFromProps(props);
-
     createTable();
   }
 
@@ -95,14 +82,8 @@ public class TestDbManager extends LockssTestCase {
    * @throws Exception
    */
   public void testCreateTable2() throws Exception {
-    Properties props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    props
-	.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
-    props.setProperty(DbManager.PARAM_DATASOURCE_DATABASENAME,
-		      new File(tempDirPath, "db/TestDbManager")
-			  .getCanonicalPath());
-    ConfigurationUtil.setCurrentConfigFromProps(props);
+    ConfigurationUtil.addFromArgs(DbManager.PARAM_DATASOURCE_DATABASENAME,
+	new File(tempDirPath, "db/TestDbManager").getCanonicalPath());
 
     createTable();
   }
@@ -113,14 +94,10 @@ public class TestDbManager extends LockssTestCase {
    * @throws Exception
    */
   public void testCreateTable3() throws Exception {
-    Properties props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    props
-	.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
-    props.setProperty(DbManager.PARAM_DATASOURCE_CLASSNAME,
-		      "org.apache.derby.jdbc.ClientDataSource");
-    props.setProperty(DbManager.PARAM_DATASOURCE_PASSWORD, "somePassword");
-    ConfigurationUtil.setCurrentConfigFromProps(props);
+    ConfigurationUtil.addFromArgs(DbManager.PARAM_DATASOURCE_CLASSNAME,
+	"org.apache.derby.jdbc.ClientDataSource");
+    ConfigurationUtil.addFromArgs(DbManager.PARAM_DATASOURCE_PASSWORD,
+	"somePassword");
 
     createTable();
   }
@@ -133,7 +110,7 @@ public class TestDbManager extends LockssTestCase {
   public void testDisabled() throws Exception {
     ConfigurationUtil.addFromArgs(DbManager.PARAM_DBMANAGER_ENABLED, "false");
 
-    startService();
+    dbManager = getTestDbManager(tempDirPath);
     assertFalse(dbManager.isReady());
 
     try {
@@ -149,15 +126,11 @@ public class TestDbManager extends LockssTestCase {
    * @throws Exception
    */
   public void testNotReady() throws Exception {
-    Properties props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    props
-	.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
-    props.setProperty(DbManager.PARAM_DATASOURCE_CLASSNAME, "java.lang.String");
-    ConfigurationUtil.setCurrentConfigFromProps(props);
+    ConfigurationUtil.addFromArgs(DbManager.PARAM_DATASOURCE_CLASSNAME,
+	"java.lang.String");
 
-    startService();
-    assertEquals(false, dbManager.isReady());
+    dbManager = getTestDbManager(tempDirPath);
+    assertFalse(dbManager.isReady());
 
     try {
       dbManager.getConnection();
@@ -172,21 +145,15 @@ public class TestDbManager extends LockssTestCase {
    * @throws Exception
    */
   public void testRollback() throws Exception {
-    Properties props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    props
-	.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
-    ConfigurationUtil.setCurrentConfigFromProps(props);
-
-    startService();
+    dbManager = getTestDbManager(tempDirPath);
     assertTrue(dbManager.isReady());
     DbManagerSql dbManagerSql = dbManager.getDbManagerSql();
 
     Connection conn = dbManager.getConnection();
     assertNotNull(conn);
     assertFalse(dbManagerSql.tableExists(conn, "testtable"));
-    assertTrue(dbManagerSql.createTableIfMissing(conn, "testtable",
-					      TABLE_CREATE_SQL));
+    assertTrue(dbManagerSql
+	.createTableIfMissing(conn, "testtable", TABLE_CREATE_SQL));
     assertTrue(dbManagerSql.tableExists(conn, "testtable"));
 
     DbManager.safeRollbackAndClose(conn);
@@ -201,13 +168,9 @@ public class TestDbManager extends LockssTestCase {
    * @throws Exception
    */
   public void testCommitOrRollback() throws Exception {
-    Properties props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    props
-	.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
-    ConfigurationUtil.setCurrentConfigFromProps(props);
+    dbManager = getTestDbManager(tempDirPath);
+    assertTrue(dbManager.isReady());
 
-    startService();
     Connection conn = dbManager.getConnection();
     Logger logger = Logger.getLogger("testCommitOrRollback");
     DbManager.commitOrRollback(conn, logger);
@@ -216,6 +179,7 @@ public class TestDbManager extends LockssTestCase {
     conn = null;
     try {
       DbManager.commitOrRollback(conn, logger);
+      fail("commitOrRollback() should throw");
     } catch (DbException dbe) {
     }
   }
@@ -234,31 +198,19 @@ public class TestDbManager extends LockssTestCase {
    * @throws Exception
    */
   protected void createTable() throws Exception {
-    startService();
+    dbManager = getTestDbManager(tempDirPath);
     assertTrue(dbManager.isReady());
     DbManagerSql dbManagerSql = dbManager.getDbManagerSql();
 
     Connection conn = dbManager.getConnection();
     assertNotNull(conn);
     assertFalse(dbManagerSql.tableExists(conn, "testtable"));
-    assertTrue(dbManagerSql.createTableIfMissing(conn, "testtable",
-					      TABLE_CREATE_SQL));
+    assertTrue(dbManagerSql
+	.createTableIfMissing(conn, "testtable", TABLE_CREATE_SQL));
     assertTrue(dbManagerSql.tableExists(conn, "testtable"));
     dbManagerSql.logTableSchema(conn, "testtable");
-    assertFalse(dbManagerSql.createTableIfMissing(conn, "testtable",
-					       TABLE_CREATE_SQL));
-  }
-
-  /**
-   * Creates and starts the DbManager.
-   * 
-   * @throws Exception
-   */
-  protected void startService() throws Exception {
-    dbManager = new DbManager();
-    theDaemon.setDbManager(dbManager);
-    dbManager.initService(theDaemon);
-    dbManager.startService();
+    assertFalse(dbManagerSql
+	.createTableIfMissing(conn, "testtable", TABLE_CREATE_SQL));
   }
 
   /**
@@ -267,18 +219,7 @@ public class TestDbManager extends LockssTestCase {
    * @throws Exception
    */
   public void testEmptyDbSetup() throws Exception {
-    Properties props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    props
-	.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
-    ConfigurationUtil.setCurrentConfigFromProps(props);
-
-    dbManager = new DbManager();
-    theDaemon.setDbManager(dbManager);
-    dbManager.initService(theDaemon);
-    assertTrue(dbManager.setUpDatabase(0));
-    dbManager.setTargetDatabaseVersion(0);
-    dbManager.startService();
+    initializeTestDbManager(0, 0);
     assertTrue(dbManager.isReady());
     DbManagerSql dbManagerSql = dbManager.getDbManagerSql();
 
@@ -294,18 +235,7 @@ public class TestDbManager extends LockssTestCase {
    * @throws Exception
    */
   public void testV1Setup() throws Exception {
-    Properties props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    props
-	.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
-    ConfigurationUtil.setCurrentConfigFromProps(props);
-
-    dbManager = new DbManager();
-    theDaemon.setDbManager(dbManager);
-    dbManager.initService(theDaemon);
-    assertTrue(dbManager.setUpDatabase(1));
-    dbManager.setTargetDatabaseVersion(1);
-    dbManager.startService();
+    initializeTestDbManager(1, 1);
     assertTrue(dbManager.isReady());
     DbManagerSql dbManagerSql = dbManager.getDbManagerSql();
 
@@ -326,18 +256,7 @@ public class TestDbManager extends LockssTestCase {
    * @throws Exception
    */
   public void testV1ToV0Update() throws Exception {
-    Properties props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    props
-	.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
-    ConfigurationUtil.setCurrentConfigFromProps(props);
-
-    dbManager = new DbManager();
-    theDaemon.setDbManager(dbManager);
-    dbManager.initService(theDaemon);
-    assertTrue(dbManager.setUpDatabase(1));
-    dbManager.setTargetDatabaseVersion(0);
-    dbManager.startService();
+    initializeTestDbManager(1, 0);
     assertFalse(dbManager.isReady());
   }
 
@@ -347,19 +266,9 @@ public class TestDbManager extends LockssTestCase {
    * @throws Exception
    */
   public void testV0ToV1Update() throws Exception {
-    Properties props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    props
-	.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
-    props.setProperty(DbManager.PARAM_FETCH_SIZE, "12345");
-    ConfigurationUtil.setCurrentConfigFromProps(props);
+    ConfigurationUtil.addFromArgs(DbManager.PARAM_FETCH_SIZE, "12345");
 
-    dbManager = new DbManager();
-    theDaemon.setDbManager(dbManager);
-    dbManager.initService(theDaemon);
-    assertTrue(dbManager.setUpDatabase(0));
-    dbManager.setTargetDatabaseVersion(1);
-    dbManager.startService();
+    initializeTestDbManager(0, 1);
     assertTrue(dbManager.isReady());
     DbManagerSql dbManagerSql = dbManager.getDbManagerSql();
 
@@ -380,18 +289,7 @@ public class TestDbManager extends LockssTestCase {
    * @throws Exception
    */
   public void testV0ToV2Update() throws Exception {
-    Properties props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    props
-	.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
-    ConfigurationUtil.setCurrentConfigFromProps(props);
-
-    dbManager = new DbManager();
-    theDaemon.setDbManager(dbManager);
-    dbManager.initService(theDaemon);
-    assertTrue(dbManager.setUpDatabase(0));
-    dbManager.setTargetDatabaseVersion(2);
-    dbManager.startService();
+    initializeTestDbManager(0, 2);
     assertTrue(dbManager.isReady());
     DbManagerSql dbManagerSql = dbManager.getDbManagerSql();
 
@@ -408,18 +306,7 @@ public class TestDbManager extends LockssTestCase {
    * @throws Exception
    */
   public void testV1ToV2Update() throws Exception {
-    Properties props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    props
-	.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
-    ConfigurationUtil.setCurrentConfigFromProps(props);
-
-    dbManager = new DbManager();
-    theDaemon.setDbManager(dbManager);
-    dbManager.initService(theDaemon);
-    assertTrue(dbManager.setUpDatabase(1));
-    dbManager.setTargetDatabaseVersion(2);
-    dbManager.startService();
+    initializeTestDbManager(1, 2);
     assertTrue(dbManager.isReady());
     DbManagerSql dbManagerSql = dbManager.getDbManagerSql();
 
@@ -431,18 +318,35 @@ public class TestDbManager extends LockssTestCase {
   }
 
   /**
+   * Initializes a database manager with a database with an initial version
+   * updated to a target version.
+   * 
+   * @param initialVersion
+   *          An int with the initial version.
+   * @param targetVersion
+   *          An Int with the target database.
+   */
+  private void initializeTestDbManager(int initialVersion, int targetVersion) {
+    // Set the database log.
+    System.setProperty("derby.stream.error.file",
+		       new File(tempDirPath, "derby.log").getAbsolutePath());
+
+    // Create the database manager.
+    dbManager = new DbManager();
+    theDaemon.setDbManager(dbManager);
+    dbManager.initService(theDaemon);
+    assertTrue(dbManager.setUpDatabase(initialVersion));
+    dbManager.setTargetDatabaseVersion(targetVersion);
+    dbManager.startService();
+  }
+
+  /**
    * Tests text truncation.
    * 
    * @throws Exception
    */
   public void testTruncation() throws Exception {
-    Properties props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    props
-	.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
-    ConfigurationUtil.setCurrentConfigFromProps(props);
-
-    startService();
+    dbManager = getTestDbManager(tempDirPath);
 
     String original = "Total characters = 21";
 
@@ -466,13 +370,7 @@ public class TestDbManager extends LockssTestCase {
    * @throws Exception
    */
   public void testAuthenticationDefault() throws Exception {
-    Properties props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    props
-	.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
-    ConfigurationUtil.setCurrentConfigFromProps(props);
-
-    startService();
+    dbManager = getTestDbManager(tempDirPath);
 
     String dbUrlRoot = "jdbc:derby://localhost:1527/" + tempDirPath
 	+ "/db/DbManager";
@@ -509,15 +407,10 @@ public class TestDbManager extends LockssTestCase {
    * @throws Exception
    */
   public void testAuthenticationEmbedded() throws Exception {
-    Properties props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    props
-	.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
-    props.setProperty(DbManager.PARAM_DATASOURCE_CLASSNAME,
+    ConfigurationUtil.addFromArgs(DbManager.PARAM_DATASOURCE_CLASSNAME,
 	"org.apache.derby.jdbc.EmbeddedDataSource");
-    ConfigurationUtil.setCurrentConfigFromProps(props);
 
-    startService();
+    dbManager = getTestDbManager(tempDirPath);
 
     String dbUrlRoot = "jdbc:derby://localhost:1527/" + tempDirPath
 	+ "/db/DbManager";
@@ -554,16 +447,12 @@ public class TestDbManager extends LockssTestCase {
    * @throws Exception
    */
   public void testAuthenticationClient() throws Exception {
-    Properties props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    props
-	.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
-    props.setProperty(DbManager.PARAM_DATASOURCE_CLASSNAME,
+    ConfigurationUtil.addFromArgs(DbManager.PARAM_DATASOURCE_CLASSNAME,
 	"org.apache.derby.jdbc.ClientDataSource");
-    props.setProperty(DbManager.PARAM_DATASOURCE_PASSWORD, "somePassword");
-    ConfigurationUtil.setCurrentConfigFromProps(props);
+    ConfigurationUtil.addFromArgs(DbManager.PARAM_DATASOURCE_PASSWORD,
+	"somePassword");
 
-    startService();
+    dbManager = getTestDbManager(tempDirPath);
 
     Connection conn = null;
 
@@ -631,15 +520,10 @@ public class TestDbManager extends LockssTestCase {
    * @throws Exception
    */
   public void testMissingCredentialsSetUp() throws Exception {
-    Properties props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    props
-	.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
-    props.setProperty(DbManager.PARAM_DATASOURCE_CLASSNAME,
-	      "org.apache.derby.jdbc.ClientDataSource");
-    ConfigurationUtil.setCurrentConfigFromProps(props);
+    ConfigurationUtil.addFromArgs(DbManager.PARAM_DATASOURCE_CLASSNAME,
+	"org.apache.derby.jdbc.ClientDataSource");
 
-    startService();
+    dbManager = getTestDbManager(tempDirPath);
     assertTrue(dbManager.isReady());
   }
 
@@ -649,17 +533,13 @@ public class TestDbManager extends LockssTestCase {
    * @throws Exception
    */
   public void testMissingUserSetUp() throws Exception {
-    Properties props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    props
-	.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
-    props.setProperty(DbManager.PARAM_DATASOURCE_CLASSNAME,
-	      "org.apache.derby.jdbc.ClientDataSource");
-    props.setProperty(DbManager.PARAM_DATASOURCE_USER, "");
-    props.setProperty(DbManager.PARAM_DATASOURCE_PASSWORD, "somePassword");
-    ConfigurationUtil.setCurrentConfigFromProps(props);
+    ConfigurationUtil.addFromArgs(DbManager.PARAM_DATASOURCE_CLASSNAME,
+	"org.apache.derby.jdbc.ClientDataSource");
+    ConfigurationUtil.addFromArgs(DbManager.PARAM_DATASOURCE_USER, "");
+    ConfigurationUtil.addFromArgs(DbManager.PARAM_DATASOURCE_PASSWORD,
+	"somePassword");
 
-    startService();
+    dbManager = getTestDbManager(tempDirPath);
     assertFalse(dbManager.isReady());
   }
 
@@ -669,17 +549,12 @@ public class TestDbManager extends LockssTestCase {
    * @throws Exception
    */
   public void testMissingPasswordSetUp() throws Exception {
-    Properties props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    props
-	.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
-    props.setProperty(DbManager.PARAM_DATASOURCE_CLASSNAME,
-	      "org.apache.derby.jdbc.ClientDataSource");
-    props.setProperty(DbManager.PARAM_DATASOURCE_USER, "LOCKSS");
-    props.setProperty(DbManager.PARAM_DATASOURCE_PASSWORD, "");
-    ConfigurationUtil.setCurrentConfigFromProps(props);
+    ConfigurationUtil.addFromArgs(DbManager.PARAM_DATASOURCE_CLASSNAME,
+	"org.apache.derby.jdbc.ClientDataSource");
+    ConfigurationUtil.addFromArgs(DbManager.PARAM_DATASOURCE_USER, "LOCKSS");
+    ConfigurationUtil.addFromArgs(DbManager.PARAM_DATASOURCE_PASSWORD, "");
 
-    startService();
+    dbManager = getTestDbManager(tempDirPath);
     assertFalse(dbManager.isReady());
   }
 
@@ -689,13 +564,7 @@ public class TestDbManager extends LockssTestCase {
    * @throws Exception
    */
   public void testProvider() throws Exception {
-    Properties props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    props
-	.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
-    ConfigurationUtil.setCurrentConfigFromProps(props);
-
-    startService();
+    dbManager = getTestDbManager(tempDirPath);
     assertTrue(dbManager.isReady());
 
     Connection conn = dbManager.getConnection();
