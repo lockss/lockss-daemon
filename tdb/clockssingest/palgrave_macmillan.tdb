@@ -471,6 +471,8 @@
         eissn = 1741-2447 ;
         issnl = 1741-2439
       >
+      
+      comment[continued_by] = 2050-3318 Journal of Marketing Analytics
 
       param[journal_id] = dbm
 
@@ -494,8 +496,24 @@
       au < exists ; exists ; 2010 ; Journal of Database Marketing & Customer Strategy Management Volume 17 ; 2010 ; 17 >
       au < exists ; exists ; 2011 ; Journal of Database Marketing & Customer Strategy Management Volume 18 ; 2011 ; 18 >
       au < crawling ; exists ; 2012 ; Journal of Database Marketing & Customer Strategy Management Volume 19 ; 2012 ; 19 >
-      au < expected ; exists ; 2013 ; Journal of Database Marketing & Customer Strategy Management Volume 20 ; 2013 ; 20 >
-      au < expected ; exists ; 2014 ; Journal of Database Marketing & Customer Strategy Management Volume 21 ; 2014 ; 21 >
+
+    }
+
+    {
+
+      title <
+        name = Journal of Marketing Analytics ;
+        issn = 2050-3318 ;
+        eissn = 2050-3326 ;
+        issnl = 2050-3318
+      >
+      
+      comment[continues] = 1741-2439 Journal of Database Marketing & Customer Strategy Management
+
+      param[journal_id] = jma
+
+      au < exists ; exists ; 2013 ; Journal of Database Marketing & Customer Strategy Management Volume 20 ; 2013 ; 20 >
+      au < exists ; exists ; 2014 ; Journal of Database Marketing & Customer Strategy Management Volume 21 ; 2014 ; 21 >
 
     }
 
