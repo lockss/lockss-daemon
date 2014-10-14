@@ -1,5 +1,5 @@
 /*
- * $Id: WoltersKluwerSourceXmlSchemaHelper.java,v 1.6 2014-09-12 15:16:12 aishizaki Exp $
+ * $Id: WoltersKluwerSourceXmlSchemaHelper.java,v 1.7 2014-10-14 16:50:17 aishizaki Exp $
  */
 
 /*
@@ -237,7 +237,7 @@ implements SourceXmlSchemaHelper {
 
   // the pdf name still needs some help to match reality:
   //   add a '0' to the front, add ".pdf" to the end
-  private static String WK_pdf = "@AN";
+  private static String WK_pdf = "@AN|@an";
   /* publication info */
   private static String WK_journal_title =  "./BB/SO/PB";
   private static String WK_issn = "./BB/SO/ISN"; 

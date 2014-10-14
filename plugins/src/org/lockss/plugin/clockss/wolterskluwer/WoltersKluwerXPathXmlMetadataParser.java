@@ -1,5 +1,5 @@
 /*
- * $Id: WoltersKluwerXPathXmlMetadataParser.java,v 1.2 2014-08-08 17:17:46 aishizaki Exp $
+ * $Id: WoltersKluwerXPathXmlMetadataParser.java,v 1.3 2014-10-14 16:50:17 aishizaki Exp $
  */
 
 /*
@@ -33,6 +33,9 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.clockss.wolterskluwer;
 
 import java.io.*;
+
+import org.apache.commons.io.input.BOMInputStream;
+
 import java.util.Map;
 
 import javax.xml.parsers.*;
@@ -41,9 +44,16 @@ import javax.xml.xpath.XPathExpressionException;
 import org.lockss.extractor.XmlDomMetadataExtractor.XPathValue;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.XPathXmlMetadataParser;
+import org.lockss.util.Constants;
+import org.lockss.util.Logger;
 import org.xml.sax.*;
 
+import java.io.BufferedReader;
+import org.apache.commons.io.FilenameUtils;
+
+
 public class WoltersKluwerXPathXmlMetadataParser extends XPathXmlMetadataParser {
+  private static Logger log = Logger.getLogger(WoltersKluwerXPathXmlMetadataParser.class);
 
   public WoltersKluwerXPathXmlMetadataParser(Map<String, XPathValue> globalMap,
                                              String articleNode,
@@ -88,10 +98,36 @@ public class WoltersKluwerXPathXmlMetadataParser extends XPathXmlMetadataParser 
   
   @Override
   protected InputSource makeInputSource(CachedUrl cu) throws UnsupportedEncodingException {
-    InputStream cuInputStream = getInputStreamFromCU(cu);
+    //InputStream cuInputStream = getInputStreamFromCU(cu);
+    BOMInputStream cuInputStream = new BOMInputStream(getInputStreamFromCU(cu));
     Reader sgmlReader = new InputStreamReader(cuInputStream, cu.getEncoding());
     Reader xmlReader = new WoltersKluwerSgmlAdapter(sgmlReader);
-    return new InputSource(xmlReader);
+    InputSource is = new InputSource(xmlReader);
+    /*
+BufferedReader br = new BufferedReader(xmlReader);
+String filename = "testXmlOutput.1";
+String base = FilenameUtils.getFullPath(filename);
+try {
+writeToFile(br, base+filename);
+br.close();
+    } catch (IOException e) {
+  // TODO Auto-generated catch block
+  e.printStackTrace();
+}
+*/
+    is.setEncoding(Constants.ENCODING_UTF_8);
+log.info("InputStream.setEncoding:" +Constants.ENCODING_UTF_8 );
+
+    return is;
   }
-  
+ /* 
+  protected void writeToFile(BufferedReader r, String fname) throws IOException {
+    FileWriter fw = new FileWriter(fname);
+    String s;
+    while((s = r.readLine()) != null) {
+      fw.write(s);
+    }
+    fw.close();
+  }
+  */
 }

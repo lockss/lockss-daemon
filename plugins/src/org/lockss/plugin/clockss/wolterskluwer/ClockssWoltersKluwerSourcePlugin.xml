@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <!-- for rewritingReader -->
@@ -22,7 +22,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>8</string>
+    <string>10</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -33,7 +33,7 @@
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -49,12 +49,13 @@
     <string>au_name</string>
     <string>"Wolters Kluwer Source Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
   </entry> 
-  <!-- for testing purposes
+  <!-- for testing purposes 
   <entry>
     <string>au_crawlrules</string>
-    <list>
-      <string>1,"^%s%d/JAMCM2014\d+\.[0-9].zip", base_url, year</string>  
-      <string>1,"^%s%d/AJCO20121000\.[0-9].zip", base_url, year</string>  
+    <list> 
+      <string>1,"^%s%d/PRECOS20140300\.[0-9].zip", base_url, year</string>  
+      <string>1,"^%s%d/ARTE90000000\.[0-9].zip", base_url, year</string>  
+      <string>1,"^%s%d/SPNE20130801\.[0-9].zip", base_url, year</string>  
       <string>2,"^%s%d/[A-Z]+\d.*", base_url, year</string>    
     </list>
   </entry>
@@ -62,11 +63,11 @@
     <string>au_start_url</string>
     <string>"%s%d/", base_url, year</string>
   </entry>
-  -->
+   -->
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <!-- test: base_url2014/ACSMS20140400.0.zip -->
+      <!-- example: base_url2014/ACSMS20140400.0.zip -->
       <string>"^%s%d/[^/]+\.zip$", base_url, year</string>
     </list>
   </entry>
