@@ -11,6 +11,8 @@
       eissn = 1536-2442
     >
 
+    comment[platform] = change ownership to OUP Drupal
+
     {
 
       implicit < status ; year ; name ; param[volume] >
@@ -29,8 +31,6 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = insc
       
-      comment[notReady] = V10 Error 403 Forbidden http://www.bioone.org/action/showFullPopup?doi=10.1673%2F031.010.8401&id=t01
-
       au < released ; 2001 ; Journal of Insect Science Volume 1 ; 1 >
       au < released ; 2002 ; Journal of Insect Science Volume 2 ; 2 >
       au < released ; 2003 ; Journal of Insect Science Volume 3 ; 3 >
@@ -44,7 +44,6 @@
       au < released ; 2011 ; Journal of Insect Science Volume 11 ;11 >
       au < released ; 2012 ; Journal of Insect Science Volume 12 ; 12 >
       au < released ; 2013 ; Journal of Insect Science Volume 13 ; 13 >
-      au < manifest ; 2014 ; Journal of Insect Science Volume 14 ; 14 >
 
     }
 
