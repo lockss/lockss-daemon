@@ -397,10 +397,10 @@
       issnl = 2155-6962
     >
     param[journal_issn] = 2155-6962
-    comment[0] = out of print
+    comment[0] = out of print. no substance on 2012
 
     au < finished ; crawling ; 2011 ; International Journal of Aviation Technology, Engineering and Management (IJATEM) Volume 1 ; 1 > 
-    au < finished ; crawling ; 2012 ; International Journal of Aviation Technology, Engineering and Management (IJATEM) Volume 2 ; 2 > 
+    au < superseded ; down ; 2012 ; International Journal of Aviation Technology, Engineering and Management (IJATEM) Volume 2 [superseded] ; 2 > 
 
   }
 
@@ -414,10 +414,10 @@
     >
 
     param[journal_issn] = 1947-3575
-    comment[0] = out of print
+    comment[0] = out of print. no substance on 2012
 
     au < finished ; crawling ; 2011 ; International Journal of Biomaterials Research and Engineering (IJBRE) Volume 1 ; 1 > 
-    au < finished ; crawling ; 2012 ; International Journal of Biomaterials Research and Engineering (IJBRE) Volume 2 ; 2 > 
+    au < superseded ; down ; 2012 ; International Journal of Biomaterials Research and Engineering (IJBRE) Volume 2 [superseded] ; 2 > 
 
   }
 
@@ -755,11 +755,11 @@
       issnl = 1947-9050
     >
     param[journal_issn] = 1947-9050
-    comment[0] = out of print
+    comment[0] = out of print. no substance on 2012
 
     au < manifest ; exists ; 2010 ; International Journal of Dependable and Trustworthy Information Systems (IJDTIS) Volume 1 ; 1 > 
     au < finished ; crawling ; 2011 ; International Journal of Dependable and Trustworthy Information Systems (IJDTIS) Volume 2 ; 2 > 
-    au < finished ; crawling ; 2012 ; International Journal of Dependable and Trustworthy Information Systems (IJDTIS) Volume 3 ; 3 > 
+    au < superseded ; down ; 2012 ; International Journal of Dependable and Trustworthy Information Systems (IJDTIS) Volume 3 [superseded] ; 3 > 
 
   }
 
@@ -1229,12 +1229,12 @@
       issnl = 1938-0216
     >
     param[journal_issn] = 1938-0216
-    comment[0] = out of print.
+    comment[0] = out of print. no substance on 2012
 
     au < manifest ; exists ; 2009 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 1 ; 1 > 
     au < manifest ; exists ; 2010 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 2 ; 2 > 
     au < finished ; crawling ; 2011 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 3 ; 3 > 
-    au < finished ; crawling ; 2012 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 4 ; 4 > 
+    au < superseded ; down ; 2012 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 4 [superseded] ; 4 > 
 
   }
 
