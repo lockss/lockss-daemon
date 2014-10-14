@@ -39,8 +39,8 @@
     
     param[base_url] = http://saealtpow.saejournals.org/
     
-    au < exists ; 2012 ; SAE International Journal of Alternative Powertrains Volume 1 ; 1 >
-    au < exists ; 2013 ; SAE International Journal of Alternative Powertrains Volume 2 ; 2 >
+    au < manifest ; 2012 ; SAE International Journal of Alternative Powertrains Volume 1 ; 1 >
+    au < manifest ; 2013 ; SAE International Journal of Alternative Powertrains Volume 2 ; 2 >
     au < manifest ; 2014 ; SAE International Journal of Alternative Powertrains Volume 3 ; 3 >
   
   }
