@@ -2710,13 +2710,12 @@ comment[bmr] = journal archive available, but no new volumes
 
       param[base_url] = http://www.casesjournal.com/
       param[journal_issn] = 1757-1626
-      comment[0] = only vol1 - 3 available
+      comment[0] = only vol1 - 3 available. Discontinued in 2010
 
       au < crawling ; exists ; 2008 ; Cases Journal Volume 1 ; 1 >
       au < crawling ; exists ; 2009 ; Cases Journal Volume 2 ; 2 >
       au < finished ; crawling ; 2010 ; Cases Journal Volume 3 ; 3 >
-      au < finished ; crawling ; 2011 ; Cases Journal Volume 4 ; 4 >
-      au < expected ; exists ; 2012 ; Cases Journal Volume 5 ; 5 >
+      au < superseded ; down ; 2011 ; Cases Journal Volume 4 [superseded] ; 4 >
 
     }
 
