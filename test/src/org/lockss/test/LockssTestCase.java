@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.117 2014-10-13 22:21:29 fergaloy-sf Exp $
+ * $Id: LockssTestCase.java,v 1.118 2014-10-14 20:48:19 fergaloy-sf Exp $
  */
 
 /*
@@ -303,9 +303,25 @@ public class LockssTestCase extends TestCase {
    * @return An InputStream open on the resource.  Null is never returned.
    */
   protected InputStream getResourceAsStream(String name) {
+    return getResourceAsStream(name, true);
+  }
+
+  /** Convenience method for test classes to obtain an InputStream on a
+   * test file.
+   * @param name name of file in same directory as <tt>this</tt> (the code
+   * making this call), or a modified package name (dots replaced by
+   * slashes), interpreted as absolute if starts with shash, else relative
+   * to the package containing <tt>this</tt>.
+   * @param failOnNull A boolean indicating whether an assertion failure should
+   * occur if the resource is not found.
+   * @return An InputStream open on the resource.
+   */
+  protected InputStream getResourceAsStream(String name, boolean failOnNull) {
     InputStream res = getClass().getResourceAsStream(name);
     String err = "Resource not found: " + name;
-    assertNotNull(err, res);
+    if (failOnNull) {
+      assertNotNull(err, res);
+    }
     return res;
   }
 
@@ -2077,17 +2093,20 @@ public class LockssTestCase extends TestCase {
    *          A String with the path to the temporary directory.
    * @return a DbManager already started that uses a database snapshot
    *         previously created.
-   * @throws IOException
-   *           if there are problems unzipping the database file.
    */
-  protected DbManager getTestDbManager(String tempDirPath) throws IOException {
+  protected DbManager getTestDbManager(String tempDirPath) {
     // Set the database log.
     System.setProperty("derby.stream.error.file",
 	new File(tempDirPath, "derby.log").getAbsolutePath());
 
-    // Extract the database from the zip file.
-    ZipUtil.unzip(getResourceAsStream(TEST_DB_FILE_SPEC),
-	new File(tempDirPath, "db"));
+    try {
+      // Extract the database from the zip file.
+      ZipUtil.unzip(getResourceAsStream(TEST_DB_FILE_SPEC, false),
+	  new File(tempDirPath, "db"));
+    } catch (Exception e) {
+      log.debug("Unable to unzip database files from file " + TEST_DB_FILE_SPEC,
+	  e);
+    }
 
     // Create the database manager skipping the asynchronous updates.
     DbManager dbManager = new DbManager(true);
