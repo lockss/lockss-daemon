@@ -5385,20 +5385,32 @@
     param[base_url] = http://eurheartjsupp.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < manifest ; exists ; 2001 ; European Heart Journal Supplements Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2002 ; European Heart Journal Supplements Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2003 ; European Heart Journal Supplements Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2004 ; European Heart Journal Supplements Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2005 ; European Heart Journal Supplements Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2006 ; European Heart Journal Supplements Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2007 ; European Heart Journal Supplements Volume 9 ; 9 ; >
-    au < manifest ; exists ; 2008 ; European Heart Journal Supplements Volume 10 ; 10 ; >
-    au < finished ; frozen ; 2009 ; European Heart Journal Supplements Volume 11 ; 11 ; >
-    au < finished ; crawling ; 2010 ; European Heart Journal Supplements Volume 12 ; 12 ; >
-    au < finished ; crawling ; 2011 ; European Heart Journal Supplements Volume 13 ; 13 ; >
-    au < finished ; crawling ; 2012 ; European Heart Journal Supplements Volume 14 ; 14 ; >
-    au < expected ; exists ; 2013 ; European Heart Journal Supplements Volume 15 ; 15 ; >
-    au < manifest ; exists ; 2014 ; European Heart Journal Supplements Volume 16 ; 16 ; >
+    au < down ; frozen ; 2009 ; European Heart Journal Supplements Volume 11 ; 11 ; >
+    au < down ; crawling ; 2010 ; European Heart Journal Supplements Volume 12 ; 12 ; >
+    au < down ; crawling ; 2011 ; European Heart Journal Supplements Volume 13 ; 13 ; >
+    au < down ; crawling ; 2012 ; European Heart Journal Supplements Volume 14 ; 14 ; >
+
+    }
+
+    {
+
+    param[base_url] = http://eurheartjsupp.oxfordjournals.org/
+    pluginSuffix = ClockssHighWireDrupalPlugin
+
+    au < exists ; exists ; 2001 ; European Heart Journal Supplements Volume 3 ; 3 ; >
+    au < exists ; exists ; 2002 ; European Heart Journal Supplements Volume 4 ; 4 ; >
+    au < exists ; exists ; 2003 ; European Heart Journal Supplements Volume 5 ; 5 ; >
+    au < exists ; exists ; 2004 ; European Heart Journal Supplements Volume 6 ; 6 ; >
+    au < exists ; exists ; 2005 ; European Heart Journal Supplements Volume 7 ; 7 ; >
+    au < exists ; exists ; 2006 ; European Heart Journal Supplements Volume 8 ; 8 ; >
+    au < exists ; exists ; 2007 ; European Heart Journal Supplements Volume 9 ; 9 ; >
+    au < exists ; exists ; 2008 ; European Heart Journal Supplements Volume 10 ; 10 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; European Heart Journal Supplements Volume 11 ; 11 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; European Heart Journal Supplements Volume 12 ; 12 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; European Heart Journal Supplements Volume 13 ; 13 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; European Heart Journal Supplements Volume 14 ; 14 ; >
+    au < exists ; exists ; 2013 ; European Heart Journal Supplements Volume 15 ; 15 ; >
+    au < exists ; exists ; 2014 ; European Heart Journal Supplements Volume 16 ; 16 ; >
 
     }
 
@@ -17503,6 +17515,7 @@
     param[base_url] = http://ptp.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
     comment[continued_by] = 2050-3911
+    comment[moved] = PTP terminated in December 2012 and merged into PTEP in January 2013
 
     au < manifest ; exists ; 1946 ; Progress of Theoretical Physics (PTP) Volume 1 ; 1 ; >
     au < manifest ; exists ; 1947 ; Progress of Theoretical Physics (PTP) Volume 2 ; 2 ; >
@@ -17632,8 +17645,6 @@
     au < crawling ; exists ; 2011 ; Progress of Theoretical Physics (PTP) Volume 126 ; 126 ; >
     au < finished ; crawling ; 2012 ; Progress of Theoretical Physics (PTP) Volume 127 ; 127 ; >
     au < finished ; crawling ; 2012 ; Progress of Theoretical Physics (PTP) Volume 128 ; 128 ; >
-    au < expected ; exists ; 2013 ; Progress of Theoretical Physics (PTP) Volume 129 ; 129 ; >
-    au < expected ; exists ; 2013 ; Progress of Theoretical Physics (PTP) Volume 130 ; 130 ; >
 
     }
 
