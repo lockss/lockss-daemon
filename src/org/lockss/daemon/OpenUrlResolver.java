@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.59 2014-10-14 09:49:48 pgust Exp $
+ * $Id: OpenUrlResolver.java,v 1.60 2014-10-14 10:53:19 pgust Exp $
  */
 
 /*
@@ -155,17 +155,17 @@ public class OpenUrlResolver {
   public static final String PREFIX = Configuration.PREFIX + "openUrlResolver.";
 
   /**
-   * Determines the maximum number of OpenUrlResolver publishers that publish
-   * the same article when querying the metadata database This number will 
-   * certainly be very small (< 10)
+   * Determines the maximum number of OpenUrlResolver publishers+providers 
+   * that publish the same article when querying the metadata database.This 
+   * number will certainly be very small (< 10)
    * 
    */
   public static final String PARAM_MAX_PUBLISHERS_PER_ARTICLE = PREFIX
       + "max_publishers_per_article";
 
   /**
-   * Default value of OpenUrlResolver max_publishers_per_article configuration
-   * parameter.
+   * Default value of OpenUrlResolver max_publishers_per_article default
+   * configuration parameter.
    */
   public static final int DEFAULT_MAX_PUBLISHERS_PER_ARTICLE = 10;
 
@@ -1446,6 +1446,7 @@ public class OpenUrlResolver {
       select.append(",bi." + END_PAGE_COLUMN);
       select.append(",bi." + ITEM_NO_COLUMN);
       select.append(",n2." + NAME_COLUMN + " article_name");
+      select.append(",pv2." + PROVIDER_NAME_COLUMN);
       
       from.append(MD_ITEM_TABLE + " mi1");              // publication md_item
       from.append("," + MD_ITEM_TABLE + " mi2");        // article md_item
@@ -1456,6 +1457,8 @@ public class OpenUrlResolver {
       from.append("," + MD_ITEM_NAME_TABLE + " n2");  // article name
       from.append("," + URL_TABLE + " u");
       from.append("," + BIB_ITEM_TABLE + " bi");
+      from.append("," + PROVIDER_TABLE + " pv2");
+      from.append("," + AU_MD_TABLE + " am2");
 
       where.append("mi2." + PARENT_SEQ_COLUMN + "=");
       where.append("mi1." + MD_ITEM_SEQ_COLUMN);
@@ -1487,6 +1490,11 @@ public class OpenUrlResolver {
       where.append(" and n2." + MD_ITEM_SEQ_COLUMN + "=");
       where.append("mi2." + MD_ITEM_SEQ_COLUMN);
       where.append(" and n2." + NAME_TYPE_COLUMN + "='primary'");
+      
+      where.append(" and mi2." + AU_MD_SEQ_COLUMN + "=");
+      where.append("am2." + AU_MD_SEQ_COLUMN);
+      where.append(" and am2." + PROVIDER_SEQ_COLUMN + "=");
+      where.append("pv2." + PROVIDER_SEQ_COLUMN);
       
       if (hasJournalSpec) {
         // can specify an issue by a combination of date, volume and issue;
@@ -1557,16 +1565,15 @@ public class OpenUrlResolver {
       String qstr = select.toString() + from.toString() + where.toString();
       // only one value expected; any more and the query was under-specified
       int maxPublishersPerArticle = getMaxPublishersPerArticle();
-      String[][] results = new String[maxPublishersPerArticle+1][10];
+      String[][] results = new String[maxPublishersPerArticle+1][11];
       int count = resolveFromQuery(conn, qstr, args, results);
-      // TODO: note: could be modified to use 
-      // the combination of publisher and provider 
       if (count <= maxPublishersPerArticle) {
-        // ensure at most one result per publisher in case
-        // more than one publisher publishes the same serial
+        // ensure at most one result per publisher+provider in case
+        // more than one publisher+provider publishes the same serial
         Set<String> pubs = new HashSet<String>();
         for (int i = 0; i < count; i++) {
-          if (!pubs.add(results[i][1])) {  // publisher column
+          // combine publisher and provider columns to determine uniqueness
+          if (!pubs.add(results[i][1] + results[i][10])) {
             return noOpenUrlInfo;
           }
           OpenUrlInfo info = OpenUrlInfo.newInstance(results[i][0], null, 
@@ -2397,6 +2404,7 @@ public class OpenUrlResolver {
       select.append(",bi." + END_PAGE_COLUMN);
       select.append(",bi." + ITEM_NO_COLUMN + " chapt_no");
       select.append(",n2." + NAME_COLUMN + " chapt_title");
+      select.append(",pv2." + PROVIDER_NAME_COLUMN);
       
       from.append(MD_ITEM_TABLE + " mi1");              // publication md_item
       from.append("," + MD_ITEM_TABLE + " mi2");        // article md_item
@@ -2407,6 +2415,8 @@ public class OpenUrlResolver {
       from.append("," + MD_ITEM_NAME_TABLE + " n2");  // article name
       from.append("," + URL_TABLE + " u");
       from.append("," + BIB_ITEM_TABLE + " bi");
+      from.append("," + PROVIDER_TABLE + " pv2");
+      from.append("," + AU_MD_TABLE + " am2");
 
       where.append("mi2." + PARENT_SEQ_COLUMN + "=");
       where.append("mi1." + MD_ITEM_SEQ_COLUMN);
@@ -2449,6 +2459,11 @@ public class OpenUrlResolver {
       where.append("mi2." + MD_ITEM_SEQ_COLUMN);
       where.append(" and n2." + NAME_TYPE_COLUMN + "='primary'");
       
+      where.append(" and mi2." + AU_MD_SEQ_COLUMN + "=");
+      where.append("am2." + AU_MD_SEQ_COLUMN);
+      where.append(" and am2." + PROVIDER_SEQ_COLUMN + "=");
+      where.append("pv2." + PROVIDER_SEQ_COLUMN);
+
       if (hasBookSpec) {
         // can specify an issue by a combination of date, volume and edition;
         // how these combine varies, so do the most liberal match possible
@@ -2517,17 +2532,16 @@ public class OpenUrlResolver {
 
       String qstr = select.toString() + from.toString() + where.toString();
       int maxPublishersPerArticle = getMaxPublishersPerArticle();
-      String[][] results = new String[maxPublishersPerArticle+1][10];
+      String[][] results = new String[maxPublishersPerArticle+1][11];
       int count = resolveFromQuery(conn, qstr, args, results);
       log.debug3(DEBUG_HEADER + "count = " + count);
-      // TODO: note: could be modified to use 
-      // the combination of publisher and provider 
       if (count <= maxPublishersPerArticle) {
-        // ensure at most one result per publisher in case
-        // more than one publisher publishes the same book
+        // ensure at most one result per publisher+provider in case
+        // more than one publisher+provider publishes the same book
         Set<String> pubs = new HashSet<String>();
         for (int i = 0; i < count; i++) {
-          if (!pubs.add(results[i][1])) {  // publisher column
+          // combine publisher and provider columns to determine uniqueness
+          if (!pubs.add(results[i][1] + results[i][10])) {
             return noOpenUrlInfo;
           }
           OpenUrlInfo info = OpenUrlInfo.newInstance(results[i][0], null, 
