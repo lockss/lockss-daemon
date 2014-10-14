@@ -472,7 +472,7 @@
         issnl = 1741-2439
       >
       
-      comment[continued_by] = 2050-3318 Journal of Marketing Analytics
+      comment[continued_by] = 2050-3318 'Journal of Marketing Analytics'
 
       param[journal_id] = dbm
 
@@ -508,7 +508,7 @@
         issnl = 2050-3318
       >
       
-      comment[continues] = 1741-2439 Journal of Database Marketing & Customer Strategy Management
+      comment[continues] = 1741-2439 'Journal of Database Marketing & Customer Strategy Management', & 0967-3237 'Journal of Targeting, Measurement and Analysis for Marketing'.
 
       param[journal_id] = jma
 
@@ -815,8 +815,6 @@
       au < exists ; exists ; 2010 ; Journal of Targeting, Measurement and Analysis for Marketing Volume 18 ; 2010 ; 18 >
       au < exists ; exists ; 2011 ; Journal of Targeting, Measurement and Analysis for Marketing Volume 19 ; 2011 ; 19 >
       au < crawling ; exists ; 2012 ; Journal of Targeting, Measurement and Analysis for Marketing Volume 20 ; 2012 ; 20 >
-      au < expected ; exists ; 2013 ; Journal of Targeting, Measurement and Analysis for Marketing Volume 21 ; 2013 ; 21 >
-      au < expected ; exists ; 2014 ; Journal of Targeting, Measurement and Analysis for Marketing Volume 22 ; 2014 ; 22 >
 
     }
 
