@@ -11891,6 +11891,40 @@
   {
 
     title <
+      name = Journal of Insect Science ;
+      eissn = 1536-2442
+    >
+
+    comment[plaform] = change ownership from 2014 from University of Wisconsin Library
+
+    {
+
+    pluginPrefix = org.lockss.plugin.highwire.
+    param[base_url] = http://jinsectscience.oxfordjournals.org/
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+    au < HighWireDrupalPlugin ; doNotProcess ; 2003 ; Journal of Insect Science Volume 1 ; 1 >
+    au < HighWireDrupalPlugin ; doNotProcess ; 2004 ; Journal of Insect Science Volume 2 ; 2 >
+    au < HighWireDrupalPlugin ; doNotProcess ; 2005 ; Journal of Insect Science Volume 3 ; 3 >
+    au < HighWireDrupalPlugin ; doNotProcess ; 2006 ; Journal of Insect Science Volume 4 ; 4 >
+    au < HighWireDrupalPlugin ; doNotProcess ; 2007 ; Journal of Insect Science Volume 5 ; 5 >
+    au < HighWireDrupalPlugin ; doNotProcess ; 2008 ; Journal of Insect Science Volume 6 ; 6 >
+    au < HighWireDrupalPlugin ; doNotProcess ; 2009 ; Journal of Insect Science Volume 7 ; 7 >
+    au < HighWireDrupalPlugin ; doNotProcess ; 2010 ; Journal of Insect Science Volume 8 ; 8 >
+    au < HighWireDrupalPlugin ; doNotProcess ; 2011 ; Journal of Insect Science Volume 9 ; 9 >
+    au < HighWireDrupalPlugin ; doNotProcess ; 2012 ; Journal of Insect Science Volume 10 ; 10 >
+    au < HighWireDrupalPlugin ; doNotProcess ; 2013 ; Journal of Insect Science Volume 11 ; 11 >
+    au < HighWireDrupalPlugin ; doNotProcess ; 2014 ; Journal of Insect Science Volume 12 ; 12 >
+    au < HighWireDrupalPlugin ; doNotProcess ; 2005 ; Journal of Insect Science Volume 13 ; 13 >
+    au < HighWireDrupalPlugin ; exists ; 2014 ; Journal of Insect Science Volume 14 ; 14 >
+
+    }
+
+  }
+
+  {
+
+    title <
       name = Journal of Intellectual Property Law & Practice ;
       issn = 1747-1532 ;
       eissn = 1747-1540 ;
