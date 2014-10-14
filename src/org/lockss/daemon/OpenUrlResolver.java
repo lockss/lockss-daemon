@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.58 2014-10-13 22:46:17 pgust Exp $
+ * $Id: OpenUrlResolver.java,v 1.59 2014-10-14 09:49:48 pgust Exp $
  */
 
 /*
@@ -605,12 +605,12 @@ public class OpenUrlResolver {
     String anyIsbn = (eisbn != null) ? eisbn : isbn;
     if (anyIsbn != null) {
       OpenUrlInfo resolved = resolveFromIsbn(
-            isbn, pub, date, volume, edition, artnum, spage, author, atitle);
+          anyIsbn, pub, date, volume, edition, artnum, spage, author, atitle);
       if (resolved.resolvedTo != OpenUrlInfo.ResolvedTo.NONE) {
         log.debug3(
             "Located url " 
           + ((resolved.resolvedUrl == null) ? "" : resolved.resolvedUrl) 
-          + " for book ISBN " + isbn); 
+          + " for book ISBN " + anyIsbn); 
         return resolved;
       }
       log.debug3("Failed to resolve from ISBN: " + isbn);
