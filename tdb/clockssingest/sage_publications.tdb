@@ -34545,7 +34545,6 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
-      comment[sas18] = not online as of Oct 2011
 
       au < manifest ; exists ; 1994 ; South Asian Survey Volume 1 ; 1 ; >
       au < manifest ; exists ; 1995 ; South Asian Survey Volume 2 ; 2 ; >
@@ -34565,6 +34564,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; South Asian Survey Volume 16 ; 16 ; >
       au < zapped ; finished ; 2010 ; South Asian Survey Volume 17 ; 17 ; >
       au < finished ; frozen ; 2011 ; South Asian Survey Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2012 ; South Asian Survey Volume 19 ; 19 ; >
 
     }
 
