@@ -397,11 +397,10 @@
       issnl = 2155-6962
     >
     param[journal_issn] = 2155-6962
+    comment[0] = out of print
 
     au < released ; 2011 ; International Journal of Aviation Technology, Engineering and Management (IJATEM) Volume 1 ; 1 >
     au < released ; 2012 ; International Journal of Aviation Technology, Engineering and Management (IJATEM) Volume 2 ; 2 >
-    au < expected ; 2013 ; International Journal of Aviation Technology, Engineering and Management (IJATEM) Volume 3 ; 3 >
-    au < expected ; 2014 ; International Journal of Aviation Technology, Engineering and Management (IJATEM) Volume 4 ; 4 >
 
 
   }
@@ -416,11 +415,10 @@
     >
 
     param[journal_issn] = 1947-3575
+    comment[0] = out of print
 
     au < released ; 2011 ; International Journal of Biomaterials Research and Engineering (IJBRE) Volume 1 ; 1 >
     au < released ; 2012 ; International Journal of Biomaterials Research and Engineering (IJBRE) Volume 2 ; 2 >
-    au < expected ; 2013 ; International Journal of Biomaterials Research and Engineering (IJBRE) Volume 3 ; 3 >
-    au < expected ; 2014 ; International Journal of Biomaterials Research and Engineering (IJBRE) Volume 4 ; 4 >
 
   }
 
@@ -755,12 +753,11 @@
       issnl = 1947-9050
     >
     param[journal_issn] = 1947-9050
+    comment[0] = out of print
 
     au < released ; 2010 ; International Journal of Dependable and Trustworthy Information Systems (IJDTIS) Volume 1 ; 1 >
     au < released ; 2011 ; International Journal of Dependable and Trustworthy Information Systems (IJDTIS) Volume 2 ; 2 >
     au < released ; 2012 ; International Journal of Dependable and Trustworthy Information Systems (IJDTIS) Volume 3 ; 3 >
-    au < expected ; 2013 ; International Journal of Dependable and Trustworthy Information Systems (IJDTIS) Volume 4 ; 4 >
-    au < expected ; 2014 ; International Journal of Dependable and Trustworthy Information Systems (IJDTIS) Volume 5 ; 5 >
 
   }
 
@@ -1242,13 +1239,12 @@
       issnl = 1938-0216
     >
     param[journal_issn] = 1938-0216
+    comment[0] = out of print.
 
     au < released ; 2009 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 1 ; 1 >
     au < released ; 2010 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 2 ; 2 >
     au < released ; 2011 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 3 ; 3 >
     au < released ; 2012 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 4 ; 4 >
-    au < expected ; 2013 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 5 ; 5 >
-    au < expected ; 2014 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 6 ; 6 >
 
   }
 
@@ -1909,14 +1905,11 @@
     >
     
     param[journal_issn] = 1941-6318
-    comment[v4] = RT4726
+    comment[0] = out of print
 
     au < manifest ; 2009 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 1 ; 1 >
     au < manifest ; 2010 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 2 ; 2 >
     au < released ; 2011 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 3 ; 3 >
-    au < expected ; 2012 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 4 ; 4 >
-    au < expected ; 2013 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 5 ; 5 >
-    au < expected ; 2014 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 6 ; 6 >
 
   }
 
@@ -2557,8 +2550,7 @@
     param[journal_issn] = 2160-9896 
     comment[0] = content coming soon, 4/25/2014
 
-    au < expected ; 2013 ; International Journal of Telework and Telecommuting Technologies (IJTTT) Volume 1 ; 1 > 
-    au < expected ; 2014 ; International Journal of Telework and Telecommuting Technologies (IJTTT) Volume 2 ; 2 > 
+    au < expected ; 2014 ; International Journal of Telework and Telecommuting Technologies (IJTTT) Volume 1 ; 1 > 
 
   }
 

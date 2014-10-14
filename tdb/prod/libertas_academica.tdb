@@ -748,12 +748,12 @@
     >
 
     param[journal_id] = 163
+    comment[0] = no years 2013 as of 10/4/14
 
     au < exists ; 2009 ; Clinical Medicine Reviews in Oncology Volume 1 ; 1 ; 2009 >
     au < exists ; 2010 ; Clinical Medicine Reviews in Oncology Volume 2 ; 2 ; 2010 >
     au < released ; 2011 ; Clinical Medicine Reviews in Oncology Volume 3 ; 3 ; 2011 >
     au < released ; 2012 ; Clinical Medicine Reviews in Oncology Volume 4 ; 4 ; 2012 >
-    au < expected ; 2013 ; Clinical Medicine Reviews in Oncology Volume 5 ; 5 ; 2013 >
 
   }
 

@@ -397,7 +397,7 @@
       issnl = 2155-6962
     >
     param[journal_issn] = 2155-6962
-    comment[0] = out of print.
+    comment[0] = out of print
 
     au < finished ; crawling ; 2011 ; International Journal of Aviation Technology, Engineering and Management (IJATEM) Volume 1 ; 1 > 
     au < finished ; crawling ; 2012 ; International Journal of Aviation Technology, Engineering and Management (IJATEM) Volume 2 ; 2 > 
@@ -414,7 +414,7 @@
     >
 
     param[journal_issn] = 1947-3575
-    comment[0] = out of print.
+    comment[0] = out of print
 
     au < finished ; crawling ; 2011 ; International Journal of Biomaterials Research and Engineering (IJBRE) Volume 1 ; 1 > 
     au < finished ; crawling ; 2012 ; International Journal of Biomaterials Research and Engineering (IJBRE) Volume 2 ; 2 > 
@@ -755,7 +755,7 @@
       issnl = 1947-9050
     >
     param[journal_issn] = 1947-9050
-    comment[0] = out of print.
+    comment[0] = out of print
 
     au < manifest ; exists ; 2010 ; International Journal of Dependable and Trustworthy Information Systems (IJDTIS) Volume 1 ; 1 > 
     au < finished ; crawling ; 2011 ; International Journal of Dependable and Trustworthy Information Systems (IJDTIS) Volume 2 ; 2 > 
@@ -1892,8 +1892,8 @@
       issnl = 1941-6318
     >
     param[journal_issn] = 1941-6318
-    comment[V4] = RT4726. April 30 2013. Perhaps journal has stopped publishing?
-
+    comment[0] = out of print
+    
     au < manifest ; exists ; 2009 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 1 ; 1 > 
     au < crawling ; exists ; 2010 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 2 ; 2 > 
     au < finished ; crawling ; 2011 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 3 ; 3 > 
