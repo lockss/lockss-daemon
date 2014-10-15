@@ -18,7 +18,7 @@
       eissn = 1743-1670
     >
 
-    param[journal_id] = 122849
+    param[journal_issn] = 122849
     
     au < exists ; exists ; 2004 ; Black Theology: An International Journal Volume 2 ; 2 >
     au < exists ; exists ; 2005 ; Black Theology: An International Journal Volume 3 ; 3 >
@@ -42,7 +42,7 @@
       eissn = 1757-0646
     >
 
-    param[journal_id] = 122850
+    param[journal_issn] = 122850
     
     au < exists ; exists ; 2009 ; Comparative and Continental Philosophy Volume 1 ; 1 >
     au < exists ; exists ; 2010 ; Comparative and Continental Philosophy Volume 2 ; 2 >
@@ -61,7 +61,7 @@
       eissn = 1568-5160
     >
 
-    param[journal_id] = 122847
+    param[journal_issn] = 122847
     
     au < exists ; exists ; 2000 ; Critical Horizons: A Journal of Philosophy & Social Theory Volume 1 ; 1 >
     au < exists ; exists ; 2001 ; Critical Horizons: A Journal of Philosophy & Social Theory Volume 2 ; 2 >
@@ -89,7 +89,7 @@
       eissn = 1756-0748
     >
 
-    param[journal_id] = 122841
+    param[journal_issn] = 122841
     
     au < exists ; exists ; 2008 ; Practical Theology Volume 1 ; 1 >
     au < exists ; exists ; 2009 ; Practical Theology Volume 2 ; 2 >
@@ -109,7 +109,7 @@
       eissn = 1572-5138
     >
 
-    param[journal_id] = 122838
+    param[journal_issn] = 122838
     
     au < exists ; exists ; 2002 ; Journal of Critical Realism Volume 1 ; 1 >
     au < exists ; exists ; 2003 ; Journal of Critical Realism Volume 2 ; 2 >
@@ -135,7 +135,7 @@
       eissn = 2044-0251
     >
 
-    param[journal_id] = 122843
+    param[journal_issn] = 122843
     
     au < exists ; exists ; 2011 ; Journal for the Study of Spirituality Volume 1 ; 1 >
     au < exists ; exists ; 2012 ; Journal for the Study of Spirituality Volume 2 ; 2 >
@@ -152,7 +152,7 @@
       eissn = 2046-5734
     >
 
-    param[journal_id] = 122839
+    param[journal_issn] = 122839
     
     au < exists ; exists ; 2011 ; Medieval Mystical Theology Volume 20 ; 20 >
     au < exists ; exists ; 2012 ; Medieval Mystical Theology Volume 21 ; 21 >
@@ -169,7 +169,7 @@
       eissn = 1743-1727
     >
 
-    param[journal_id] = 122844
+    param[journal_issn] = 122844
     
     au < exists ; exists ; 2001 ; Reformation and Renaissance Review Volume 3 ; 3 >
     au < exists ; exists ; 2002 ; Reformation and Renaissance Review Volume 4 ; 4 >
@@ -196,7 +196,7 @@
       eissn = 1745-5170
     >
 
-    param[journal_id] = 122845
+    param[journal_issn] = 122845
     
     au < exists ; exists ; 1994 ; Theology & Sexuality Volume 1994 ; 1994 >
     au < exists ; exists ; 1995 ; Theology & Sexuality Volume 1995 ; 1995 >
@@ -230,7 +230,7 @@
       eissn = 1743-1719
     >
 
-    param[journal_id] = 122840
+    param[journal_issn] = 122840
     
     au < exists ; exists ; 2001 ; Political Theology Volume 2 ; 2 >
     au < exists ; exists ; 2002 ; Political Theology Volume 3 ; 3 >
@@ -257,7 +257,7 @@
       eissn = 2043-0469
     >
 
-    param[journal_id] = 122848
+    param[journal_issn] = 122848
     comment[continued_by] = 2050-2877
     
     au < exists ; exists ; 1995 ; Human Reproduction & Genetic Ethics Volume 1 ; 1 >
@@ -289,7 +289,7 @@
     >
     
     comment[continues] = 1028-7825
-    param[journal_id] = 122857
+    param[journal_issn] = 122857
 
     au < exists ; exists ; 2012 ; The New Bioethics: A Multidisciplinary Journal of Biotechnology and the Body Volume 18 ; 18 >
     au < expected ; exists ; 2013 ; The New Bioethics: A Multidisciplinary Journal of Biotechnology and the Body Volume 19 ; 19 >
@@ -305,7 +305,7 @@
       eissn = 1743-1654
     >
 
-    param[journal_id] = 122837
+    param[journal_issn] = 122837
     
     au < exists ; exists ; 2004 ; Journal of Adult Theological Education Volume 1 ; 1 >
     au < exists ; exists ; 2005 ; Journal of Adult Theological Education Volume 2 ; 2 >
@@ -329,7 +329,7 @@
       eissn = 2042-1273
     >
 
-    param[journal_id] = 122846
+    param[journal_issn] = 122846
     
     au < exists ; exists ; 2004 ; Rural Theology: international, ecumenical and interdisciplinary perspectives Volume 2 ; 2 >
     au < exists ; exists ; 2005 ; Rural Theology: international, ecumenical and interdisciplinary perspectives Volume 3 ; 3 >
@@ -353,7 +353,7 @@
       eissn = 1752-0738
     >
 
-    param[journal_id] = 122842
+    param[journal_issn] = 122842
     
     au < exists ; exists ; 2006 ; Reformation Volume 11 ; 11 >
     au < doesNotExist ; doesNotExist ; 2007 ; Reformation Volume 12 ; 0 >
