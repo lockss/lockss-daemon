@@ -1,5 +1,5 @@
 /*
- * $Id: PeerJArticleIteratorFactory.java,v 1.3 2014-10-11 00:44:12 ldoan Exp $
+ * $Id: PeerJArticleIteratorFactory.java,v 1.4 2014-10-15 19:26:30 ldoan Exp $
  */
 
 /*
@@ -106,8 +106,7 @@ implements ArticleIteratorFactory,
     // articles (not pulling metadata) then the lower aspects aren't looked 
     // for, once you get a match.
 
-    // html landing page from Archives site is full-text and abstract,
-    // but only abstract from Preprints site
+    // html landing page has full-text and abstract,
     builder.addAspect(ABSTRACT_PATTERN, ABSTRACT_REPLACEMENT, 
         ArticleFiles.ROLE_ABSTRACT, ArticleFiles.ROLE_FULL_TEXT_HTML);
 
@@ -131,7 +130,6 @@ implements ArticleIteratorFactory,
 
     builder.addAspect(ALTERNATE_JSON_REPLACEMENT, ROLE_ALTERNATE_JSON);
 
-    // only in Archives site not in Preprints site
     builder.addAspect(ALTERNATE_UNIXREF_REPLACEMENT, ROLE_ALTERNATE_UNIXREF);
     
     // The order in which we want to define full_text_cu.

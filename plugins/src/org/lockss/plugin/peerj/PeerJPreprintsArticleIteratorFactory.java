@@ -1,5 +1,5 @@
 /*
- * $Id: PeerJPreprintsArticleIteratorFactory.java,v 1.1 2014-10-11 00:44:12 ldoan Exp $
+ * $Id: PeerJPreprintsArticleIteratorFactory.java,v 1.2 2014-10-15 19:26:30 ldoan Exp $
  */
 
 /*
@@ -104,8 +104,6 @@ implements ArticleIteratorFactory,
     builder.addAspect(PDF_PATTERN, PDF_REPLACEMENT, 
         ArticleFiles.ROLE_FULL_TEXT_PDF);   
     
-    // html landing page from Archives site is full-text and abstract,
-    // but only abstract from Preprints site
     builder.addAspect(ABSTRACT_PATTERN, ABSTRACT_REPLACEMENT, 
         ArticleFiles.ROLE_ABSTRACT);
                       
