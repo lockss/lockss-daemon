@@ -18339,6 +18339,21 @@
   {
   
     title <
+      name = The Journal of Criminal Law ;
+      issn = 0022-0183 ;
+      eissn = 1740-5580
+    >
+
+    param[base_url] = http://clj.sagepub.com/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < exists ; exists ; 2014 ; The Journal of Criminal Law Volume 78 ; 78 ; >
+    
+  }
+
+  {
+  
+    title <
       name = Journal of Cross-Cultural Psychology ;
       issn = 0022-0221 ;
       eissn = 1552-5422
