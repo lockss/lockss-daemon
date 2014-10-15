@@ -1,4 +1,4 @@
-/* $Id: TestPeerJArticleIteratorFactory.java,v 1.5 2014-10-11 00:44:52 ldoan Exp $
+/* $Id: TestPeerJArticleIteratorFactory.java,v 1.6 2014-10-15 19:14:37 ldoan Exp $
 
 Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -112,7 +112,6 @@ public class TestPeerJArticleIteratorFactory
   private Configuration peerjAuConfig() {
     Configuration conf = ConfigManager.newConfiguration();
     conf.put("base_url", BASE_URL);
-    conf.put("peerj_site", variantPeerjSite);
     conf.put("volume_name", VOLUME_NAME);
     return conf;
   }

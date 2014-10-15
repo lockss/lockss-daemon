@@ -1,5 +1,5 @@
 /*
- * $Id: TestPeerJHtmlFilterFactory.java,v 1.2 2014-10-11 00:44:52 ldoan Exp $
+ * $Id: TestPeerJHtmlFilterFactory.java,v 1.3 2014-10-15 19:14:37 ldoan Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ import org.lockss.plugin.PluginTestUtil;
 import org.lockss.test.*;
 
 /*
- * Tests hash and crawl filtering for both PeerJ sites: Archives, and Preprints.
+ * Tests hash filtering for both PeerJ sites: Archives, and Preprints.
  */
 public class TestPeerJHtmlFilterFactory
   extends LockssTestCase {
@@ -384,16 +384,15 @@ private static final String withFlagModal =
         + "</div>";
 
   
-  protected ArchivalUnit createAu(String peerjSite, String pluginId)
+  protected ArchivalUnit createAu(String pluginId)
       throws ArchivalUnit.ConfigurationException {
     return PluginTestUtil.createAndStartAu(pluginId,
-        peerjAuConfig(peerjSite));
+        peerjAuConfig());
   }
   
-  private Configuration peerjAuConfig(String peerjSite) {
+  private Configuration peerjAuConfig() {
     Configuration conf = ConfigManager.newConfiguration();
     conf.put("base_url", "http://www.example.com/");
-    conf.put("peerj_site", peerjSite);
     conf.put("journal_id", "abc");
     conf.put("volume_name", "99");
     return conf;
@@ -425,9 +424,8 @@ private static final String withFlagModal =
       tempDirPath = setUpDiskSpace();
       startMockDaemon();
       variantFact = new PeerJHtmlHashFilterFactory();
-      variantArchivesAu = createAu("archives",
-          "org.lockss.plugin.peerj.PeerJPlugin");
-      variantPreprintsAu = createAu("archives-preprints",
+      variantArchivesAu = createAu("org.lockss.plugin.peerj.PeerJPlugin");
+      variantPreprintsAu = createAu(
           "org.lockss.plugin.peerj.PeerJPreprintsPlugin");
     }
     public void testFilteringArchives() throws Exception {

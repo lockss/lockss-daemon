@@ -1,4 +1,4 @@
-/* $Id: TestPeerJRisMetadataExtractorFactory.java,v 1.3 2014-10-11 00:44:52 ldoan Exp $
+/* $Id: TestPeerJRisMetadataExtractorFactory.java,v 1.4 2014-10-15 19:14:37 ldoan Exp $
 
  Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
@@ -74,7 +74,6 @@ public class TestPeerJRisMetadataExtractorFactory extends LockssTestCase {
       "org.lockss.plugin.peerj.PeerJPlugin";
   
   private static final String BASE_URL = "http://www.example.com/";
-  private static final String PEERJ_SITE = "archives";
   private static final String VOLUME_NAME = "2013";
     
   public void setUp() throws Exception {
@@ -101,7 +100,6 @@ public class TestPeerJRisMetadataExtractorFactory extends LockssTestCase {
   private Configuration peerjAuConfig() {
     Configuration conf = ConfigManager.newConfiguration();
     conf.put("base_url", BASE_URL);
-    conf.put("peerj_site", PEERJ_SITE);
     conf.put("volume_name", VOLUME_NAME);
     return conf;
   }

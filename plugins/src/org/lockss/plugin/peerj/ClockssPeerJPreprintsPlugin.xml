@@ -26,7 +26,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"PeerJ Preprints Plugin (CLOCKSS), Base URL %s, PeerJ Site %s, Volume %s", base_url, peerj_site, volume_name</string>
+    <string>"PeerJ Preprints Plugin (CLOCKSS), Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>

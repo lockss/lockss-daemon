@@ -9,7 +9,6 @@
   comment[platform] = Developed by Highwire.
   rights = openaccess
   
-  plugin = org.lockss.plugin.peerj.ClockssPeerJPlugin
   param[base_url] = https://peerj.com/
     
   implicit < status ; status2 ; year ; name ; param[volume_name] >
@@ -21,7 +20,7 @@
       issn = 2167-8359
     >    
   
-    param[peerj_site] = archives
+    plugin = org.lockss.plugin.peerj.ClockssPeerJPlugin
     
     au < testing ; exists ; 2013 ; PeerJ Archives: 2013 ; 2013 > 
     au < expected ; exists ; 2014 ; PeerJ Archives: 2014 ; 2014 > 
@@ -35,7 +34,7 @@
       issn = 2167-9843
     >
 
-    param[peerj_site] = archives-preprints
+    plugin = org.lockss.plugin.peerj.ClockssPeerJPreprintsPlugin
     
     au < testing ; exists ; 2013 ; PeerJ PrePrint Archives: 2013 ; 2013 > 
     au < expected ; exists ; 2014 ; PeerJ PrePrint Archives: 2014 ; 2014 > 
