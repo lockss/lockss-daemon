@@ -1,5 +1,5 @@
 /*
- * $Id: TestCron.java,v 1.10 2013-05-30 14:00:40 tlipkis Exp $
+ * $Id: TestCron.java,v 1.11 2014-10-15 06:43:33 tlipkis Exp $
  */
 
 /*
@@ -252,10 +252,10 @@ public class TestCron extends LockssTestCase {
     assertIsDate("1/1/2008 0:00", cron.nextMonth(timeOf("12/7/2007 4:00")));
   }
 
-  public void testMailBackupFileNextMonth() throws Exception {
+  public void testCreateBackupFileNextMonth() throws Exception {
     ConfigurationUtil.setFromArgs(RemoteApi.PARAM_BACKUP_EMAIL_FREQ,
 				  "monthly");
-    Cron.MailBackupFile task = new Cron.MailBackupFile(daemon);
+    RemoteApi.CreateBackupFile task = new RemoteApi.CreateBackupFile(daemon);
     // time 0 is midnight Jan 1, result s.b. Feb 1
     assertIsDate("2/1/1970 0:00", task.nextTime(0));
     assertEquals(31*Constants.DAY, task.nextTime(0));
@@ -267,10 +267,10 @@ public class TestCron extends LockssTestCase {
     assertIsDate("1/1/2008 0:00", task.nextTime(timeOf("12/7/2007 4:00")));
   }
 
-  public void testMailBackupFileNextWeek() throws Exception {
+  public void testCreateBackupFileNextWeek() throws Exception {
     ConfigurationUtil.setFromArgs(RemoteApi.PARAM_BACKUP_EMAIL_FREQ,
 				  "weekly");
-    Cron.MailBackupFile task = new Cron.MailBackupFile(daemon);
+    RemoteApi.CreateBackupFile task = new RemoteApi.CreateBackupFile(daemon);
     // time 0 is midnight Jan 1, result s.b. Jan 5
     assertEquals(4*Constants.DAY, task.nextTime(0));
     assertIsDate("1/5/1970 0:00", task.nextTime(timeOf("1/1/1970 0:00")));
@@ -281,10 +281,10 @@ public class TestCron extends LockssTestCase {
     assertIsDate("1/10/2005 0:00", task.nextTime(timeOf("1/4/2005 1:00")));
   }
 
-  public void testMailBackupFileMail() {
+  public void testCreateBackupFileMail() {
     MyRemoteApi rmt = new MyRemoteApi();
     daemon.setRemoteApi(rmt);
-    Cron.MailBackupFile task = new Cron.MailBackupFile(daemon);
+    RemoteApi.CreateBackupFile task = new RemoteApi.CreateBackupFile(daemon);
     assertFalse(rmt.sent);
     task.execute();
     assertTrue(rmt.sent);
@@ -378,9 +378,9 @@ public class TestCron extends LockssTestCase {
   static class MyRemoteApi extends RemoteApi {
     boolean sent = false;
 
-    public boolean sendMailBackup(boolean evenIfEmpty) throws IOException {
+    @Override
+    public void doPeriodicBackupFile() throws IOException {
       sent = true;
-      return true;
     }
   }
 

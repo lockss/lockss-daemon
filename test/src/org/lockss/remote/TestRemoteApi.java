@@ -1,5 +1,5 @@
 /*
- * $Id: TestRemoteApi.java,v 1.26 2014-04-09 17:43:21 fergaloy-sf Exp $
+ * $Id: TestRemoteApi.java,v 1.27 2014-10-15 06:43:33 tlipkis Exp $
  */
 
 /*
@@ -746,6 +746,79 @@ public class TestRemoteApi extends LockssTestCase {
 
   }
 
+  public void testBackupNone()
+      throws Exception {
+    writeAuConfigFile("org.lockss.au.FooPlugin.k~v.k=v\n");
+    Properties p = new Properties();
+    p.put(ConfigManager.PARAM_PLATFORM_ADMIN_EMAIL, "foo@bar");
+    p.put(ConfigManager.PARAM_PLATFORM_FQDN, "lockss42.example.com");
+    ConfigurationUtil.addFromProps(p);
+    MockMailService mgr = new MockMailService();
+    getMockLockssDaemon().setMailService(mgr);
+    rapi.createConfigBackupFile(RemoteApi.BackupFileDisposition.None);
+    assertEmpty("No mail was sent", mgr.getRecs());
+  }
+
+  public void testBackupKeep(RemoteApi.BackupFileDisposition bdf)
+      throws Exception {
+    writeAuConfigFile("org.lockss.au.FooPlugin.k~v.k=v\n");
+    String dir = setUpDiskSpace();
+    Properties p = new Properties();
+    p.put(ConfigManager.PARAM_PLATFORM_ADMIN_EMAIL, "foo@bar");
+    p.put(ConfigManager.PARAM_PLATFORM_FQDN, "lockss42.example.com");
+    ConfigurationUtil.addFromProps(p);
+    MockMailService mgr = new MockMailService();
+    getMockLockssDaemon().setMailService(mgr);
+    rapi.createConfigBackupFile(bdf);
+    File expFile = new File(new File(dir, "backup"),
+			    RemoteApi.DEFAULT_BACKUP_FILENAME);
+    assertTrue(expFile.exists());
+    // zip file should start with "PK"
+    InputStream is = new FileInputStream(expFile);
+    assertMatchesRE("^PK", StringUtil.fromInputStream(is));
+  }
+
+  public void testBackupKeep() throws Exception {
+    testBackupKeep(RemoteApi.BackupFileDisposition.Keep);
+    MockMailService mgr =
+      (MockMailService)getMockLockssDaemon().getMailService();
+    assertEmpty("Mail shouldn't have been sent", mgr.getRecs());
+  }
+
+  public void testBackupMailAndKeep() throws Exception {
+    testBackupKeep(RemoteApi.BackupFileDisposition.MailAndKeep);
+    MockMailService mgr =
+      (MockMailService)getMockLockssDaemon().getMailService();
+    assertNotEmpty("Mail should have been sent", mgr.getRecs());
+  }
+
+  void assertBackupMsg(MimeMessage msg, String fqdn,
+		       String from, String to,
+		       String expectedExt)
+      throws IOException, javax.mail.MessagingException {
+    assertNotNull(msg);
+    assertEquals("LOCKSS box " + fqdn + " <" + from + ">",
+		 msg.getHeader("From"));
+    assertEquals(to, msg.getHeader("To"));
+    assertEquals("Backup file for LOCKSS box " + fqdn + "",
+		 msg.getHeader("Subject"));
+    assertMatchesRE("^\\w\\w\\w, ",
+		    msg.getHeader("Date"));
+
+    javax.mail.internet.MimeBodyPart[] parts = msg.getParts();
+    assertEquals(2, parts.length);
+    assertMatchesRE("attached file is a backup",
+		    (String)parts[0].getContent());
+    assertMatchesRE( "retrieve the file\nat http://" + fqdn +
+		      ":8081/BatchAuConfig\\?lockssAction=SelectBackup ",
+		    (String)parts[0].getContent());
+    assertMatchesRE("LOCKSS_Backup_.*\\." + expectedExt,
+		    parts[1].getFileName());
+    // zip file should start with "PK"
+    assertMatchesRE("^PK",
+		    StringUtil.fromInputStream(parts[1].getInputStream()));
+  }
+
   public void testBackupEmail(String extParam, String expectedExt)
       throws Exception {
     writeAuConfigFile("org.lockss.au.FooPlugin.k~v.k=v\n");
@@ -753,42 +826,24 @@ public class TestRemoteApi extends LockssTestCase {
     if (extParam != null) {
       p.put(RemoteApi.PARAM_BACKUP_FILE_EXTENSION, extParam);
     }
-    p.put("org.lockss.backupEmail.enabled", "true");
     p.put(ConfigManager.PARAM_PLATFORM_ADMIN_EMAIL, "foo@bar");
     p.put(ConfigManager.PARAM_PLATFORM_FQDN, "lockss42.example.com");
     ConfigurationUtil.addFromProps(p);
     MockMailService mgr = new MockMailService();
     getMockLockssDaemon().setMailService(mgr);
-    rapi.sendMailBackup();
+    rapi.createConfigBackupFile(RemoteApi.BackupFileDisposition.Mail);
+    assertEquals("No mail was sent", 1, mgr.getRecs().size());
     MockMailService.Rec rec = mgr.getRec(0);
     MimeMessage msg = (MimeMessage)rec.getMsg();
     try {
-      assertNotNull(msg);
-      assertEquals("LOCKSS box lockss42.example.com <foo@bar>",
-		   msg.getHeader("From"));
-      assertEquals("foo@bar", msg.getHeader("To"));
-      assertEquals("Backup file for LOCKSS box lockss42.example.com",
-		   msg.getHeader("Subject"));
-      assertMatchesRE("^\\w\\w\\w, ",
-		      msg.getHeader("Date"));
-
-      javax.mail.internet.MimeBodyPart[] parts = msg.getParts();
-      assertEquals(2, parts.length);
-      assertMatchesRE("attached file is a backup",
-		      (String)parts[0].getContent());
-      assertMatchesRE("retrieve the file\nat http://lockss42.example.com:8081/BatchAuConfig\\?lockssAction=Backup ",
-		      (String)parts[0].getContent());
-      assertMatchesRE("LOCKSS_Backup_.*\\." + expectedExt,
-		      parts[1].getFileName());
-      // zip file should start with "PK"
-      assertMatchesRE("^PK",
-		      StringUtil.fromInputStream(parts[1].getInputStream()));
+      assertBackupMsg(msg, "lockss42.example.com", "foo@bar", "foo@bar",
+		      expectedExt);
     } finally {
       msg.delete(true);
     }
   }
 
-  public void testBackupEmailDefault() throws Exception {
+  public void testBackupEmailDefaultParams() throws Exception {
     testBackupEmail(null, "zip");
   }
 
@@ -799,7 +854,7 @@ public class TestRemoteApi extends LockssTestCase {
   public void testBackupEmailOverride() throws Exception {
     writeAuConfigFile("org.lockss.au.FooPlugin.k~v.k=v\n");
     Properties p = new Properties();
-    p.put("org.lockss.backupEmail.enabled", "true");
+//     p.put("org.lockss.backupEmail.enabled", "true");
     p.put(ConfigManager.PARAM_PLATFORM_ADMIN_EMAIL, "foo@bar");
     p.put(ConfigManager.PARAM_PLATFORM_FQDN, "lockss42.example.com");
     p.put(RemoteApi.PARAM_BACKUP_EMAIL_RECIPIENT, "rrr@ccc");
@@ -808,7 +863,7 @@ public class TestRemoteApi extends LockssTestCase {
     ConfigurationUtil.addFromProps(p);
     MockMailService mgr = new MockMailService();
     getMockLockssDaemon().setMailService(mgr);
-    rapi.sendMailBackup();
+    rapi.createConfigBackupFile(RemoteApi.BackupFileDisposition.Mail);
     MockMailService.Rec rec = mgr.getRec(0);
     MimeMessage msg = (MimeMessage)rec.getMsg();
     try {

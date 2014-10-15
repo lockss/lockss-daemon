@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.86 2014-01-29 05:21:20 tlipkis Exp $
+ * $Id: ServletUtil.java,v 1.87 2014-10-15 06:43:33 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.servlet;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.io.*;
 import java.text.*;
 import java.util.*;
 import java.util.List;
@@ -41,6 +42,7 @@ import java.util.regex.Pattern;
 
 import org.apache.commons.collections.*;
 import org.apache.commons.lang.mutable.*;
+import org.apache.commons.lang.time.FastDateFormat;
 import org.lockss.config.*;
 import org.lockss.app.*;
 import org.lockss.daemon.*;
@@ -1058,6 +1060,60 @@ public class ServletUtil {
     }
   }
 
+  private static final Format backupFileDf =
+    FastDateFormat.getInstance("HH:mm:ss MM/dd/yyyy");
+
+  public static void layoutBackup(LockssServlet servlet,
+				  Page page,
+				  RemoteApi remoteApi,
+				  String hiddenActionName,
+				  String hiddenVerbName,
+				  Verb verb,
+				  MutableInt buttonNumber,
+				  String backupFileButtonAction) {
+    Form frm = newForm(servlet.srvURL(servlet.myServletDescr()));
+    frm.add(new Input(Input.Hidden, hiddenActionName));
+    frm.add(new Input(Input.Hidden, hiddenVerbName, verb.valStr));
+    frm.add(new Input(Input.Hidden, "create"));
+    String expl;
+    Table tbl = new Table(RESTORE_TABLE_BORDER, RESTORE_TABLE_ATTRIBUTES);
+    tbl.newRow();
+    tbl.newCell(ALIGN_RIGHT);
+    Element retrieveButton = submitButton(servlet, buttonNumber,
+					  "Retrieve", backupFileButtonAction,
+					  "create", "");
+    tbl.add(retrieveButton);
+    try {
+      File permFile = remoteApi.getBackupFile();
+      if (permFile.exists()) {
+	tbl.newCell(ALIGN_LEFT);
+	tbl.add(StringUtil.sizeToString(permFile.length()));
+	tbl.add(" file created ");
+	tbl.add(backupFileDf.format(permFile.lastModified()));
+      } else {
+	tbl.newCell(ALIGN_LEFT);
+	tbl.add("(No backup file on disk)");
+	retrieveButton.attribute("disabled", "true");
+      }
+    } catch (IOException e) {
+      log.error("Error finding config backup file", e);
+      tbl.newCell(ALIGN_LEFT);
+      tbl.add("(Backup file not retrievable)");
+      retrieveButton.attribute("disabled", "true");
+    }
+    tbl.newRow();
+    tbl.newCell(ALIGN_RIGHT);
+    tbl.add(submitButton(servlet, buttonNumber,
+			 "Retrieve", backupFileButtonAction,
+			 "create", "true"));
+    tbl.newCell(ALIGN_LEFT);
+    tbl.add("newly created file");
+    frm.add(tbl);
+
+    layoutExplanationBlock(page, "Retrieve the most recent backup file or create and retrieve a new one");
+    page.add(frm);
+  }
+
   public static void layoutRestore(LockssServlet servlet,
                                    Page page,
                                    String hiddenActionName,
@@ -1076,7 +1132,7 @@ public class ServletUtil {
     tbl.add("Enter name of AU configuration backup file");
     tbl.newRow();
     tbl.newCell(ALIGN_CENTER);
-    tbl.add(new Input(Input.File, "AuConfigBackupContents"));
+    tbl.add(new Input(Input.File, backupFileFieldName));
     tbl.newRow();
     tbl.newCell(ALIGN_CENTER);
     tbl.add(submitButton(servlet, buttonNumber, "Restore", backupFileButtonAction));

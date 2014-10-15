@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.80 2014-07-17 19:18:34 fergaloy-sf Exp $
+ * $Id: RemoteApi.java,v 1.81 2014-10-15 06:43:33 tlipkis Exp $
  */
 
 /*
@@ -477,6 +477,38 @@ public class RemoteApi
 				   fileStream);
   }
 
+  public InputStream getAuConfigBackupFileOrStream(String machineName,
+						   boolean forceCreate)
+      throws IOException {
+    InputStream res = null;
+    if (!forceCreate) {
+      try {
+	res = backupFileInputStreamOrNull();
+      } catch (IOException e) {
+	log.error("Couldn't open existing backup file: " + e.toString());
+	// fall through
+      }
+    }
+    if (res == null) {
+      res = getAuConfigBackupStream(machineName);
+    }
+    return res;
+  }
+
+  InputStream backupFileInputStreamOrNull() throws IOException {
+    File bfile = getBackupFile();
+    if (!bfile.exists()) {
+      log.debug("No existing backup file: " + bfile);
+      return null;
+    }
+    if (bfile.length() == 0) {
+      log.debug("Backup file empty: " + bfile);
+      return null;
+    }
+    log.debug("Returning existing backup file: " + bfile);
+    return new BufferedInputStream(new FileInputStream(bfile));
+  }
+
   /** Open an InputStream on config/state backup file */
   public InputStream getAuConfigBackupStreamV2(String machineName)
       throws IOException {
@@ -484,9 +516,20 @@ public class RemoteApi
     return new BufferedInputStream(new DeleteFileOnCloseInputStream(file));
   }
 
+  public File createConfigBackupFile() throws IOException {
+    return createConfigBackupFile(getMachineName());
+  }
+
   public File createConfigBackupFile(String machineName) throws IOException {
-    log.info("createConfigBackupFile()");
-    File file = FileUtil.createTempFile("cfgsave", ".zip");
+    return createConfigBackupFile(null, machineName);
+  }
+
+  public File createConfigBackupFile(File permFile,
+				     String machineName) throws IOException {
+    log.info("createConfigBackupFile: " + permFile);
+    File file = FileUtil.createTempFile("cfgsave", ".zip",
+					(permFile != null
+					 ? permFile.getParentFile() : null));
     ZipOutputStream zip = null;
     try {
       OutputStream out = new BufferedOutputStream(new FileOutputStream(file));
@@ -551,7 +594,12 @@ public class RemoteApi
       }
 
       zip.close();
-      return file;
+      if (permFile != null) {
+	PlatformUtil.updateAtomically(file, permFile);
+	return permFile;
+      } else {
+	return file;
+      }
     } catch (IOException e) {
       log.warning("createConfigBackupFile", e);
       IOUtil.safeClose(zip);
@@ -1607,21 +1655,53 @@ public class RemoteApi
   // Support for mailing backup file
   // XXX Need to find a place for this.  o.l.daemon.admin?
 
-  static final String BACKUP_PREFIX = Configuration.PREFIX + "backupEmail.";
+  static final String BACKUP_PREFIX =
+    Configuration.PREFIX + "backup.";
+
+  static final String BACKUP_EMAIL_PREFIX =
+    Configuration.PREFIX + "backupEmail.";
+
+  /** Frequency of creating backup file; only supports "weekly" and
+   * "monthly" */
+  public static final String PARAM_BACKUP_FREQ =
+    BACKUP_PREFIX + "frequency";
+  public static final String DEFAULT_BACKUP_FREQ = "monthly";
+
+  /** Directory into which backup files are written.  Can be absolute, or
+   * relative to daemon's cwd. */
+  public static final String PARAM_BACKUP_DIR = BACKUP_PREFIX + "dir";
+  static final String DEFAULT_BACKUP_DIR = "<first_disk>/backup";
+
+  /** Backup file name. */
+  static final String PARAM_BACKUP_FILENAME = BACKUP_PREFIX + "fileName";
+  static final String DEFAULT_BACKUP_FILENAME = "config_backup.zip";
+
+
+  public enum BackupFileDisposition {None, Mail, Keep, MailAndKeep};
+
+  /** Backup file dispostion: None, Mail, Keep or MailAndKeep */
+  static final String PARAM_BACKUP_DISPOSITION =
+    BACKUP_PREFIX + "disposition";
+  static final BackupFileDisposition DEFAULT_BACKUP_DISPOSITION =
+    BackupFileDisposition.Mail;
 
   /** Enable periodic mailing of backup file */
-  static final String PARAM_BACKUP_EMAIL_ENABLED = BACKUP_PREFIX + "enabled";
+  static final String PARAM_BACKUP_EMAIL_ENABLED =
+    BACKUP_EMAIL_PREFIX + "enabled";
   static final boolean DEFAULT_BACKUP_EMAIL_ENABLED = false;
 
   /** Frequency of periodic mailing of backup file; only supports "weekly"
-   * and "montly" */
+   * and "monthly".
+   * @deprecated - use {@value #PARAM_BACKUP_FREQ} instead}
+   */
   public static final String PARAM_BACKUP_EMAIL_FREQ =
-    BACKUP_PREFIX + "frequency";
+    BACKUP_EMAIL_PREFIX + "frequency";
   public static final String DEFAULT_BACKUP_EMAIL_FREQ = "monthly";
 
   /** If sepcified, the recipient of backup emails.    If not specified,
    * uses the admin email adress */
-  static final String PARAM_BACKUP_EMAIL_RECIPIENT = BACKUP_PREFIX + "sendTo";
+  static final String PARAM_BACKUP_EMAIL_RECIPIENT =
+    BACKUP_EMAIL_PREFIX + "sendTo";
   static final String PARAM_DEFAULT_BACKUP_EMAIL_RECIPIENT =
     ConfigManager.PARAM_PLATFORM_ADMIN_EMAIL;
   // Make default param name show up as default in param listing.
@@ -1630,7 +1710,8 @@ public class RemoteApi
 
   /** If sepcified, the sender address on backup emails.  If not specified,
    * uses the admin email adress */
-  static final String PARAM_BACKUP_EMAIL_SENDER = BACKUP_PREFIX + "sender";
+  static final String PARAM_BACKUP_EMAIL_SENDER =
+    BACKUP_EMAIL_PREFIX + "sender";
   static final String PARAM_DEFAULT_BACKUP_EMAIL_SENDER =
     ConfigManager.PARAM_PLATFORM_ADMIN_EMAIL;
   // Make default param name show up as default in param listing.
@@ -1638,11 +1719,13 @@ public class RemoteApi
     "(value of " + PARAM_DEFAULT_BACKUP_EMAIL_SENDER + ")";
 
   /** printf string applied to cache-name, email-sender */
-  static final String PARAM_BACKUP_EMAIL_FROM = BACKUP_PREFIX + "from";
+  static final String PARAM_BACKUP_EMAIL_FROM =
+    BACKUP_EMAIL_PREFIX + "from";
   static final String DEFAULT_BACKUP_EMAIL_FROM = "LOCKSS box %s <%s>";
 
   /** URL for more info about backup file */
-  static final String PARAM_BACKUP_EMAIL_INFO_URL = BACKUP_PREFIX + "infoUrl";
+  static final String PARAM_BACKUP_EMAIL_INFO_URL =
+    BACKUP_EMAIL_PREFIX + "infoUrl";
   static final String DEFAULT_BACKUP_EMAIL_INFO_URL = null;
 
 
@@ -1654,7 +1737,7 @@ public class RemoteApi
   static final String BACK_MAIL_TEXT =
     "The attached file is a backup of configuration and state information\n" +
     "from LOCKSS box %s (%s).\n" +
-    "This file will be needed if the cache ever suffers a disk crash or\n" +
+    "This file will be helpful if the cache ever suffers a disk crash or\n" +
     "other serious loss of content.\n\n" +
     "(If your mail system blocked the attachment, you may retrieve the file\n"+
     "at %s )\n";
@@ -1663,68 +1746,113 @@ public class RemoteApi
     "\nFor more information see %s\n";
 
 
-  public boolean sendMailBackup() throws IOException {
-    return sendMailBackup(true);
-  }
-
-  public boolean sendMailBackup(boolean evenIfEmpty) throws IOException {
-    return sendMailBackup(evenIfEmpty, null);
-  }
-
-  public boolean sendMailBackup(boolean evenIfEmpty, String to)
-      throws IOException {
-    if (!configMgr.hasLocalCacheConfig()) {
-      log.info("Not mailing config backup because no local config");
-      return false;
-    }
+  protected void doPeriodicBackupFile() throws IOException {
     Configuration config = ConfigManager.getCurrentConfig();
-    if (!config.getBoolean(PARAM_BACKUP_EMAIL_ENABLED,
-			   DEFAULT_BACKUP_EMAIL_ENABLED)) {
-      return false;
+    BackupFileDisposition bfd =
+      (BackupFileDisposition)config.getEnum(BackupFileDisposition.class,
+					    PARAM_BACKUP_DISPOSITION,
+					    DEFAULT_BACKUP_DISPOSITION);
+    createConfigBackupFile(bfd);
+  }
+
+  public void createConfigBackupFile(BackupFileDisposition bfd)
+      throws IOException {
+    log.debug2("createConfigBackupFile: " + bfd);
+    Configuration config = ConfigManager.getCurrentConfig();
+    File permFile = null;
+    boolean delete = true;
+
+    switch (bfd) {
+    case None:
+      return;
+    case Keep:
+    case MailAndKeep:
+      permFile = getBackupFile(config);
+      delete = false;
     }
+    File bfile = createConfigBackupFile(permFile, getMachineName());
+    switch (bfd) {
+    case MailAndKeep:
+    case Mail:
+      mailBackupFile(bfile, getBackEmailRecipient(config), delete);
+    }
+  }
+
+  public File getBackupFile() throws IOException {
+    return getBackupFile(ConfigManager.getCurrentConfig());
+  }
+
+  public File getBackupFile(Configuration config) throws IOException {
+    File dir = getBackupDir(config);
+    if (dir == null) {
+      return null;
+    }
+    String fname = config.get(PARAM_BACKUP_FILENAME, DEFAULT_BACKUP_FILENAME);
+    return new File(dir, fname);
+  }
+
+  File getBackupDir(Configuration config) throws IOException {
+    String dirname = config.get(PARAM_BACKUP_DIR);
+    if (dirname != null) {
+      File dir = new File(dirname);
+      if (!dir.exists()) {
+	if (!dir.mkdirs()) {
+	  throw new IOException("Can't create backup dir: " + dir);
+	}
+      }
+      if (!dir.isDirectory()) {
+	throw new IOException("Backup dir is an existing non-directory file: " +
+			      dir);
+      }
+      if (!dir.canWrite()) {
+	throw new IOException("Can't write to backup dir: " + dir);
+      }
+      return dir;
+    }
+    return null;
+  }
+
+
+  String getMachineName() {
     String machineName = PlatformUtil.getLocalHostname();
     if (StringUtil.isNullString(machineName)) {
       machineName = "Unknown";
     }
+    return machineName;
+  }
+
+  public void mailBackupFile(File file, String to, boolean deleteFile)
+      throws IOException {
+    MailService mailSvc = getDaemon().getMailService();
+    MimeMessage msg = new MimeMessage();
+    Configuration config = ConfigManager.getCurrentConfig();
+
+    String id =
+      CurrentConfig.getParam(ConfigManager.PARAM_PLATFORM_IP_ADDRESS,
+			     "unknown");
+    String machineName = getMachineName();
+    String text =
+      String.format(BACK_MAIL_TEXT,
+		    machineName, id, ServletUtil.backupFileUrl(machineName));
     String moreInfoUrl = config.get(PARAM_BACKUP_EMAIL_INFO_URL,
 				    DEFAULT_BACKUP_EMAIL_INFO_URL);
-    if (StringUtil.isNullString(to)) {
-      to = getBackEmailRecipient(config);
+    if (!StringUtil.isNullString(moreInfoUrl)) {
+      text += String.format(BACK_MAIL_MORE_INFO, moreInfoUrl);
     }
-    MailService mailSvc = getDaemon().getMailService();
-    File bfile = null;
-    try {
-      bfile = createConfigBackupFile(machineName);
-      MimeMessage msg = new MimeMessage();
-
-      String id =
-	CurrentConfig.getParam(ConfigManager.PARAM_PLATFORM_IP_ADDRESS,
-			       "unknown");
-      String text =
-	sprintf(BACK_MAIL_TEXT,
-		new Object[] {machineName,
-			      id,
-			      ServletUtil.backupFileUrl(machineName)});
-      if (!StringUtil.isNullString(moreInfoUrl)) {
-	text += sprintf(BACK_MAIL_MORE_INFO,
-			new Object[] {moreInfoUrl});
-      }
-      msg.addTextPart(text);
-      msg.addTmpFile(bfile, getAuConfigBackupFileName());
-      msg.addHeader("From", getBackEmailFrom(config, machineName));
-      msg.addHeader("To", to);
-      msg.addHeader("Date", headerDf.format(TimeBase.nowDate()));
-      msg.addHeader("Subject",
-		    "Backup file for LOCKSS box " + machineName);
-      //     msg.addHeader("X-Mailer", getXMailer());
-      mailSvc.sendMail(getBackEmailSender(config), to, msg);
-      log.info("sent");
-      return true;
-    } finally {
-      try {
-	if (false && bfile != null) bfile.delete();
-      } catch (Exception e) {}
+    msg.addTextPart(text);
+    if (deleteFile) {
+      msg.addTmpFile(file, getAuConfigBackupFileName());
+    } else {
+      msg.addFile(file, getAuConfigBackupFileName());
     }
+    msg.addHeader("From", getBackEmailFrom(config, machineName));
+    msg.addHeader("To", to);
+    msg.addHeader("Date", headerDf.format(TimeBase.nowDate()));
+    msg.addHeader("Subject",
+		  "Backup file for LOCKSS box " + machineName);
+    //     msg.addHeader("X-Mailer", getXMailer());
+    mailSvc.sendMail(getBackEmailSender(config), to, msg);
+    log.info("sent");
   }
 
   public String getAuConfigBackupFileName() {
@@ -1755,17 +1883,41 @@ public class RemoteApi
     try {
       String fmt = config.get(PARAM_BACKUP_EMAIL_FROM,
 			      DEFAULT_BACKUP_EMAIL_FROM);
-      String[] args = { machineName, getBackEmailSender(config) };
-      return sprintf(fmt, args);
+      return String.format(fmt, machineName, getBackEmailSender(config));
     } catch (Exception e) {
       log.warning("getBackEmailFrom()", e);
       return "LOCKSS box";
     }
   }
 
-  String sprintf(String fmt, Object[] args) {
-    PrintfFormat pf = new PrintfFormat(fmt);
-    return pf.sprintf(args);
+  /** Cron.Task to periodically generate and optionally mail a backup
+   * file. */
+  public static class CreateBackupFile extends Cron.BaseTask {
+
+    public CreateBackupFile(LockssDaemon daemon) {
+      super(daemon);
+    }
+
+    public String getId() {
+      return "CreateBackup";
+    }
+
+    public long nextTime(long lastTime) {
+      return nextTime(lastTime,
+		      CurrentConfig.getParam(PARAM_BACKUP_FREQ,
+					     DEFAULT_BACKUP_FREQ));
+    }
+
+    public boolean execute() {
+      RemoteApi rmtApi = daemon.getRemoteApi();
+      try {
+	rmtApi.doPeriodicBackupFile();
+	return true;
+      } catch (IOException e) {
+	log.warning("Failed to create config backup", e);
+      }
+      return true;
+    }
   }
 
   /**

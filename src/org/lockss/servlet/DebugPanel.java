@@ -1,5 +1,5 @@
 /*
- * $Id: DebugPanel.java,v 1.41 2014-07-13 23:57:01 tlipkis Exp $
+ * $Id: DebugPanel.java,v 1.42 2014-10-15 06:43:33 tlipkis Exp $
  */
 
 /*
@@ -221,7 +221,7 @@ public class DebugPanel extends LockssServlet {
 
   private void doMailBackup() {
     try {
-      rmtApi.sendMailBackup();
+      rmtApi.createConfigBackupFile(RemoteApi.BackupFileDisposition.Mail);
     } catch (Exception e) {
       errMsg = "Error: " + e.getMessage();
     }

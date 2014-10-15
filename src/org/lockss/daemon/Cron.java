@@ -1,5 +1,5 @@
 /*
- * $Id: Cron.java,v 1.12 2013-05-30 14:00:40 tlipkis Exp $
+ * $Id: Cron.java,v 1.13 2014-10-15 06:43:33 tlipkis Exp $
  */
 
 /*
@@ -167,7 +167,7 @@ public class Cron
 
   /** Install standard tasks */
   void installTasks() {
-    addTask(new MailBackupFile(getDaemon()));
+    addTask(new RemoteApi.CreateBackupFile(getDaemon()));
     addTask(new SendPasswordReminder(getDaemon()));
   }
 
@@ -401,10 +401,10 @@ public class Cron
   }
 
   /** Task base */
-  abstract static class BaseTask implements Cron.Task {
+  public abstract static class BaseTask implements Cron.Task {
     protected final LockssDaemon daemon;
 
-    BaseTask(LockssDaemon daemon) {
+    public BaseTask(LockssDaemon daemon) {
       this.daemon = daemon;
     }
 
@@ -418,35 +418,6 @@ public class Cron
       } else {
 	return nextMonth(lastTime);
       }
-    }
-  }
-
-  /** Cron.Task to periodically mail back file to cache admin.  Doesn't
-   * belong here. */
-  static class MailBackupFile extends BaseTask {
-
-    MailBackupFile(LockssDaemon daemon) {
-      super(daemon);
-    }
-
-    public String getId() {
-      return "MailBackup";
-    }
-
-    public long nextTime(long lastTime) {
-      return nextTime(lastTime,
-		      CurrentConfig.getParam(RemoteApi.PARAM_BACKUP_EMAIL_FREQ,
-					     RemoteApi.DEFAULT_BACKUP_EMAIL_FREQ));
-    }
-
-    public boolean execute() {
-      RemoteApi rmtApi = daemon.getRemoteApi();
-      try {
-	return rmtApi.sendMailBackup(false);
-      } catch (IOException e) {
-	log.warning("Failed to mail backup file", e);
-      }
-      return true;
     }
   }
 

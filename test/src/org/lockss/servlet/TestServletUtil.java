@@ -1,5 +1,5 @@
 /*
- * $Id: TestServletUtil.java,v 1.9 2011-10-05 05:58:19 tlipkis Exp $
+ * $Id: TestServletUtil.java,v 1.10 2014-10-15 06:43:32 tlipkis Exp $
  */
 
 /*
@@ -48,11 +48,11 @@ import org.lockss.daemon.*;
 public class TestServletUtil extends LockssTestCase {
 
   public void testBackupFileUrl() throws Exception {
-    assertEquals("http://host.edu:8081/BatchAuConfig?lockssAction=Backup",
+    assertEquals("http://host.edu:8081/BatchAuConfig?lockssAction=SelectBackup",
 		 ServletUtil.backupFileUrl("host.edu"));
 
     ConfigurationUtil.setFromArgs(AdminServletManager.PARAM_PORT, "1234");
-    assertEquals("http://lib.edu:1234/BatchAuConfig?lockssAction=Backup",
+    assertEquals("http://lib.edu:1234/BatchAuConfig?lockssAction=SelectBackup",
 		 ServletUtil.backupFileUrl("lib.edu"));
 
   }

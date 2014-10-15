@@ -1,5 +1,5 @@
 /*
- * $Id: BatchAuConfig.java,v 1.54 2014-07-17 19:18:34 fergaloy-sf Exp $
+ * $Id: BatchAuConfig.java,v 1.55 2014-10-15 06:43:33 tlipkis Exp $
  */
 
 /*
@@ -80,6 +80,7 @@ public class BatchAuConfig extends LockssServlet {
   static final int VV_DEACT = 3;
   static final int VV_REACT = 4;
   static final int VV_RESTORE = 5;
+  static final int VV_BACKUP = 6;
 
   static final Verb VERB_ADD = new Verb(VV_ADD, "add", "added", true);
   static final Verb VERB_DEL = new Verb(VV_DEL, "remove", "removed", false);
@@ -89,15 +90,17 @@ public class BatchAuConfig extends LockssServlet {
     new Verb(VV_REACT, "reactivate", "reactivated", true);
   static final Verb VERB_RESTORE =
     new Verb(VV_RESTORE, "restore", "restored", true);
+  static final Verb VERB_BACKUP =
+    new Verb(VV_BACKUP, "backup", "backup", true);
   static final Verb[] verbs = {VERB_ADD, VERB_DEL,
 			       VERB_DEACT, VERB_REACT,
-			       VERB_RESTORE};
+			       VERB_RESTORE, VERB_BACKUP};
 
   static final String ACTION_SELECT_SETS_TO_ADD = "AddAus";
   static final String ACTION_SELECT_SETS_TO_DEL = "RemoveAus";
   static final String ACTION_SELECT_SETS_TO_DEACT = "DeactivateAus";
   static final String ACTION_SELECT_SETS_TO_REACT = "ReactivateAus";
-  static final String ACTION_BACKUP = "Backup";
+  static final String ACTION_BACKUP = "SelectBackup";
   static final String ACTION_RESTORE = "Restore";
   static final String ACTION_SELECT_RESTORE_TITLES = "SelectRestoreTitles";
   static final String ACTION_SELECT_AUS = "SelectSetAus";
@@ -106,6 +109,7 @@ public class BatchAuConfig extends LockssServlet {
   static final String ACTION_DEACT_AUS = "DoDeactivateAus";
   static final String ACTION_REACT_AUS = "DoReactivateAus";
   static final String ACTION_RESTORE_AUS = "DoAddAus";
+  static final String ACTION_DO_BACKUP = "Backup";
 
   static final String KEY_VERB = "Verb";
   static final String KEY_DEFAULT_REPO = "DefaultRepository";
@@ -176,7 +180,7 @@ public class BatchAuConfig extends LockssServlet {
     else if (action.equals(ACTION_SELECT_SETS_TO_DEL)) chooseSets(VERB_DEL);
     else if (action.equals(ACTION_SELECT_SETS_TO_DEACT)) chooseSets(VERB_DEACT);
     else if (action.equals(ACTION_SELECT_SETS_TO_REACT)) chooseSets(VERB_REACT);
-    else if (action.equals(ACTION_BACKUP)) doSaveAll();
+    else if (action.equals(ACTION_BACKUP)) displayBackup();
     else if (action.equals(ACTION_RESTORE)) displayRestore();
     else if (action.equals(ACTION_SELECT_AUS)) chooseAus();
     else if (action.equals(ACTION_SELECT_RESTORE_TITLES)) selectRestoreTitles();
@@ -186,6 +190,7 @@ public class BatchAuConfig extends LockssServlet {
       doAddAus(RemoteApi.BATCH_ADD_REACTIVATE);
     else if (action.equals(ACTION_RESTORE_AUS))
       doAddAus(RemoteApi.BATCH_ADD_RESTORE);
+    else if (action.equals(ACTION_DO_BACKUP)) doBackup();
     else if (action.equals(ACTION_REMOVE_AUS)) doRemoveAus(false);
     else if (action.equals(ACTION_DEACT_AUS)) doRemoveAus(true);
     else {
@@ -573,11 +578,26 @@ public class BatchAuConfig extends LockssServlet {
     displayBatchAuStatus(bas);
   }
 
+  /** Display the Backup page */
+  private void displayBackup() throws IOException {
+    Page page = newPage();
+    addJavaScript(page);
+    layoutErrorBlock(page);
+    MutableInt buttonNumber = new MutableInt(submitButtonNumber);
+    ServletUtil.layoutBackup(this, page, remoteApi,
+			     ACTION_TAG, KEY_VERB, VERB_BACKUP,
+			     buttonNumber, ACTION_DO_BACKUP);
+    submitButtonNumber = buttonNumber.intValue();
+    endPage(page);
+  }
+
   /** Serve the contents of the local AU config file, as
    * application/binary */
-  private void doSaveAll() throws IOException {
+  private void doBackup() throws IOException {
+    boolean forceCreate = "true".equalsIgnoreCase(req.getParameter("create"));
     try {
-      InputStream in = remoteApi.getAuConfigBackupStream(getMachineName());
+      InputStream in = remoteApi.getAuConfigBackupFileOrStream(getMachineName(),
+							       forceCreate);
       try {
 	resp.setContentType("application/binary");
 	resp.setHeader("Content-disposition",
@@ -594,7 +614,7 @@ public class BatchAuConfig extends LockssServlet {
       errMsg = "No AUs have been configured - nothing to backup";
       displayMenu();
     } catch (IOException e) {
-      log.warning("doSaveAll()", e);
+      log.warning("doBackup()", e);
       throw e;
     }
   }
@@ -740,6 +760,8 @@ public class BatchAuConfig extends LockssServlet {
 	return ACTION_REACT_AUS;
       case VV_RESTORE:
 	return ACTION_RESTORE_AUS;
+      case VV_BACKUP:
+	return ACTION_DO_BACKUP;
       }
       log.error("Unknown action " + val, new Throwable());
       return "UnknownAction";
