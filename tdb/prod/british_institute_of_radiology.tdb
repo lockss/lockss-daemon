@@ -108,7 +108,7 @@
     }
     
     {
-      plugin = needs.plugin
+      plugin = org.lockss.plugin.atypon.bir.BIRAtyponPlugin
       comment[platform] = Atypon
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.birpublications.org/
