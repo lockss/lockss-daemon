@@ -72,6 +72,7 @@ public class MaffeyHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "sharing"), // the Sharing/social media
         // author services, including author testimonials
         HtmlNodeFilters.tagWithAttribute("div", "class", "hideForPrint"), 
+        HtmlNodeFilters.tagWithAttribute("div", "class", "a-100 assets-light journal-footer"), 
         // comments
         HtmlNodeFilters.comment(),
         
