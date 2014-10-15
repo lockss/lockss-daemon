@@ -1,5 +1,5 @@
 /*
- * $Id: TangramSourceXPathXmlMetadataParser.java,v 1.2 2014-10-08 19:35:02 aishizaki Exp $
+ * $Id: TangramSourceXPathXmlMetadataParser.java,v 1.3 2014-10-15 19:52:17 aishizaki Exp $
  */
 
 /*
@@ -69,30 +69,8 @@ public class TangramSourceXPathXmlMetadataParser extends XPathXmlMetadataParser 
    * the default (ISO-8859-1) overrides.  When that is fixed, the generic 
    * XPathXmlMetadataParser can be used, and this class can be removed
    * along with supporting code in TangramSourceXmlMetadataExtractorFactory
-
-  @Override
-  protected InputSource makeInputSource(CachedUrl cu) throws UnsupportedEncodingException {
-    InputSource is = null;
-    try {
-      is = super.makeInputSource(cu);
-    } catch (IOException e) {
-      // TODO Auto-generated catch block
-      e.printStackTrace();
-    }
-    // setting the Encoding to default to UTF-8 until the lockss daemon provides
-    // a way to get the correct encoding from the XML file
-    log.debug3("InputStream.fromSuper:" +is.getEncoding() );  
-log.info("InputStream.fromSuper:" +is.getEncoding() );    
-
-    if (is != null) {
-      is.setEncoding(Constants.ENCODING_UTF_8);
-log.info("Default charset: "+java.nio.charset.Charset.defaultCharset());
-
-      log.debug3("InputStream.setEncoding:" +Constants.ENCODING_UTF_8 );
-    }
-    return is;
-  }
-     */
+   */
+  
   @Override
   protected InputSource makeInputSource(CachedUrl cu) throws UnsupportedEncodingException {
     InputSource is = null;
