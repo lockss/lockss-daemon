@@ -963,27 +963,6 @@
 
   {
 
-
-    title <
-      name = Katherine Mansfield Studies ;
-      type = bookSeries
-     >
-
-      plugin = needs.plugin
-      param[base_url] = http://www.euppublishing.com/
-      param[journal_id] = kmsj
-      comment[continues] = 2041-4501
-      implicit < status ; year ; name ; param[isbn] >
-
-      comment[0] = we are not processing books for this publisher yet.
-
-      au < doNotProcess ; 2013 ; Katherine Mansfield and the (Post)colonial; 9780748669097 >
-      au < doNotProcess ; 2014 ; Katherine Mansfield and World War One ; 9780748695348 >
-
-  }
-
-  {
-
     title <
       name = Modernist Cultures ;
       issn = 2041-1022 ;
