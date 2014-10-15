@@ -221,12 +221,12 @@
   </entry> 
   <entry>
     <string>application/pdf_metadata_extractor_factory_map</string>
-    <!-- if you are trying to emit based on pdf, you have nothing. emit nothing  -->
-    <!-- which keeps default tdb information from getting stored for the item -->
+    <!-- if full_text_cu PDF is only aspect of article (due to overcrawl) -->
+    <!-- suppress emit so TDB default info isn't used -->
     <map>
       <entry>
         <string>*;</string>
-        <string>org.lockss.plugin.atypon.BaseAtyponNULLMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.atypon.BaseAtyponNullMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>

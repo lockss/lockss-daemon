@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponNULLMetadataExtractorFactory.java,v 1.1 2014-10-08 16:11:26 alexandraohlson Exp $
+ * $Id: BaseAtyponNullMetadataExtractorFactory.java,v 1.1 2014-10-15 16:29:00 alexandraohlson Exp $
  */
 
 /*
@@ -33,17 +33,10 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.atypon;
 
 import java.io.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-import org.apache.commons.collections.MultiMap;
-import org.apache.commons.collections.map.MultiValueMap;
-
-import org.lockss.util.*;
-import org.lockss.config.TdbAu;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
+import org.lockss.util.Logger;
 
 /**
  * A metadata extractor so we can NOT emit when an article is found for which
@@ -55,21 +48,24 @@ import org.lockss.plugin.*;
  * @author alexohlson
  *
  */
-public class BaseAtyponNULLMetadataExtractorFactory 
+public class BaseAtyponNullMetadataExtractorFactory 
   implements FileMetadataExtractorFactory {
   
   public FileMetadataExtractor 
     createFileMetadataExtractor(MetadataTarget target, String contentType)
       throws PluginException {
-    return new BaseAtyponNULLMetadataExtractor();
+    return new BaseAtyponNullMetadataExtractor();
   }
 
-  public static class BaseAtyponNULLMetadataExtractor
+  public static class BaseAtyponNullMetadataExtractor
     implements FileMetadataExtractor {
+    static Logger log = Logger.getLogger(BaseAtyponNullMetadataExtractor.class);
+ 
 
     @Override
     public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
         throws IOException {
+      log.debug("Suppressing emit of metadata in Null extractor: " + cu.getUrl());
       // do nothing, do not allow TDB info to get used as default
       // by not emitting
     }

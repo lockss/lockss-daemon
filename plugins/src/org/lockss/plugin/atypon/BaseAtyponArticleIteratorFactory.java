@@ -1,10 +1,10 @@
 /*
- * $Id: BaseAtyponArticleIteratorFactory.java,v 1.9 2014-10-08 16:11:26 alexandraohlson Exp $
+ * $Id: BaseAtyponArticleIteratorFactory.java,v 1.10 2014-10-15 16:29:00 alexandraohlson Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -28,7 +28,7 @@ Except as contained in this notice, the name of Stanford University shall not
 be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
-*/
+ */
 
 package org.lockss.plugin.atypon;
 
@@ -46,16 +46,46 @@ import org.lockss.util.Logger;
 
 public class BaseAtyponArticleIteratorFactory
 implements ArticleIteratorFactory,
-           ArticleMetadataExtractorFactory {
+ArticleMetadataExtractorFactory {
 
   protected static Logger log = 
-      Logger.getLogger("BaseAtyponArticleIteratorFactory");
+      Logger.getLogger(BaseAtyponArticleIteratorFactory.class);
 
-  protected static final String ROOT_TEMPLATE = "\"%sdoi/\", base_url";
- 
-  protected static final String PATTERN_TEMPLATE = 
+  //arbitrary string is used in daemon for this  
+  private static final String ABSTRACTS_ONLY = "abstracts";  
+  private static final String ROLE_PDFPLUS = "PdfPlus";
+
+  private static final String ROOT_TEMPLATE = "\"%sdoi/\", base_url";
+  private static final String PATTERN_TEMPLATE = 
       "\"^%sdoi/(abs|full|pdf|pdfplus)/[.0-9]+/\", base_url";
-  
+
+  // various aspects of an article
+  // DOI's can have "/"s in the suffix
+  private static final Pattern PDF_PATTERN = Pattern.compile("/doi/pdf/([.0-9]+)/([^?&]+)$", Pattern.CASE_INSENSITIVE);
+  private static final Pattern ABSTRACT_PATTERN = Pattern.compile("/doi/abs/([.0-9]+)/([^?&]+)$", Pattern.CASE_INSENSITIVE);
+  private static final Pattern HTML_PATTERN = Pattern.compile("/doi/full/([.0-9]+)/([^?&]+)$", Pattern.CASE_INSENSITIVE);
+  private static final Pattern PDFPLUS_PATTERN = Pattern.compile("/doi/pdfplus/([.0-9]+)/([^?&]+)$", Pattern.CASE_INSENSITIVE);
+
+  // how to change from one form (aspect) of article to another
+  private static final String HTML_REPLACEMENT = "/doi/full/$1/$2";
+  private static final String ABSTRACT_REPLACEMENT = "/doi/abs/$1/$2";
+  private static final String PDF_REPLACEMENT = "/doi/pdf/$1/$2";
+  private static final String PDFPLUS_REPLACEMENT = "/doi/pdfplus/$1/$2";
+
+  // Things not an "article" but in support of an article
+  private static final String REFERENCES_REPLACEMENT = "/doi/ref/$1/$2";
+  private static final String SUPPL_REPLACEMENT = "/doi/suppl/$1/$2";
+  // link extractor used forms to pick up this URL
+
+  /* TODO: Note that if the DOI suffix has a "/" this will not work because the 
+   * slashes that are part of the DOI will not get encoded so they don't
+   * match the CU.  Waiting for builder support for smarter replacement
+   * Taylor & Francis works around this because it has current need
+   */
+  // After normalization, the citation information will live at this URL if it exists
+  private static final String RIS_REPLACEMENT = "/action/downloadCitation?doi=$1%2F$2&format=ris&include=cit";
+
+
   //
   // On an Atypon publisher, article content may look like this but you do not know
   // how many of the aspects will exist for a particular journal
@@ -77,38 +107,11 @@ implements ArticleIteratorFactory,
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) throws PluginException {
     SubTreeArticleIteratorBuilder builder = localBuilderCreator(au);
-    
-    // various aspects of an article
-    // DOI's can have "/"s in the suffix
-    final Pattern PDF_PATTERN = Pattern.compile("/doi/pdf/([.0-9]+)/([^?&]+)$", Pattern.CASE_INSENSITIVE);
-    final Pattern ABSTRACT_PATTERN = Pattern.compile("/doi/abs/([.0-9]+)/([^?&]+)$", Pattern.CASE_INSENSITIVE);
-    final Pattern HTML_PATTERN = Pattern.compile("/doi/full/([.0-9]+)/([^?&]+)$", Pattern.CASE_INSENSITIVE);
-    final Pattern PDFPLUS_PATTERN = Pattern.compile("/doi/pdfplus/([.0-9]+)/([^?&]+)$", Pattern.CASE_INSENSITIVE);
 
-    // how to change from one form (aspect) of article to another
-    final String HTML_REPLACEMENT = "/doi/full/$1/$2";
-    final String ABSTRACT_REPLACEMENT = "/doi/abs/$1/$2";
-    final String PDF_REPLACEMENT = "/doi/pdf/$1/$2";
-    final String PDFPLUS_REPLACEMENT = "/doi/pdfplus/$1/$2";
-    
-    // Things not an "article" but in support of an article
-    final String REFERENCES_REPLACEMENT = "/doi/ref/$1/$2";
-    final String SUPPL_REPLACEMENT = "/doi/suppl/$1/$2";
-    // link extractor used forms to pick up this URL
-    
-    /* TODO: Note that if the DOI suffix has a "/" this will not work because the 
-     * slashes that are part of the DOI will not get encoded so they don't
-     * match the CU.  Waiting for builder support for smarter replacement
-     * Taylor & Francis works around this because it has current need
-     */
-    // After normalization, the citation information will live at this URL if it exists
-    final String RIS_REPLACEMENT = "/action/downloadCitation?doi=$1%2F$2&format=ris&include=cit";
-
-    
     builder.setSpec(target,
         ROOT_TEMPLATE,
         PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
-    
+
     // The order in which these aspects are added is important. They determine which will trigger
     // the ArticleFiles and if you are only counting articles (not pulling metadata) then the 
     // lower aspects aren't looked for, once you get a match.
@@ -117,13 +120,12 @@ implements ArticleIteratorFactory,
     builder.addAspect(PDF_PATTERN,
         PDF_REPLACEMENT,
         ArticleFiles.ROLE_FULL_TEXT_PDF);
-    
+
     // set up PDFPLUS to be an aspect that will trigger an ArticleFiles
     builder.addAspect(PDFPLUS_PATTERN,
         PDFPLUS_REPLACEMENT,
-        ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE); //hmmm... only want this one to be this if pdf doesn't exist
-    /* ArticleFiles.ROLE_FULL_TEXT_PDFPLUS); */ // this should be ROLE_PDFPLUS when it's defined
-    
+        ROLE_PDFPLUS); 
+
     // set up full text html to be an aspect that will trigger an ArticleFiles
     builder.addAspect(HTML_PATTERN,
         HTML_REPLACEMENT,
@@ -131,9 +133,9 @@ implements ArticleIteratorFactory,
         ArticleFiles.ROLE_ARTICLE_METADATA); // use for metadata if abstract doesn't exist
 
     if (isAbstractOnly(au)) {
-    // When part of an abstract only AU, set up an abstract to be an aspect
-    // that will trigger an articleFiles. 
-    // This also means an abstract could be considered a FULL_TEXT_CU until this is deprecated
+      // When part of an abstract only AU, set up an abstract to be an aspect
+      // that will trigger an articleFiles. 
+      // This also means an abstract could be considered a FULL_TEXT_CU until this is deprecated
       builder.addAspect(ABSTRACT_PATTERN,
           ABSTRACT_REPLACEMENT,
           ArticleFiles.ROLE_ABSTRACT,
@@ -153,7 +155,7 @@ implements ArticleIteratorFactory,
     // set a role, but it isn't sufficient to trigger an ArticleFiles
     builder.addAspect(SUPPL_REPLACEMENT,
         ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS);
-    
+
     // set a role, but it isn't sufficient to trigger an ArticleFiles
     builder.addAspect(RIS_REPLACEMENT,
         ArticleFiles.ROLE_CITATION_RIS);
@@ -162,14 +164,14 @@ implements ArticleIteratorFactory,
     // First one that exists will get the job
     builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF,
         ArticleFiles.ROLE_FULL_TEXT_HTML,
-    ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE);  // this should be ROLE_PDFPLUS when it's defined
+        ROLE_PDFPLUS);  
 
     // The order in which we want to define what a PDF is 
     // if we only have PDFPLUS, that should become a FULL_TEXT_PDF
     builder.setRoleFromOtherRoles(ArticleFiles.ROLE_FULL_TEXT_PDF,
         ArticleFiles.ROLE_FULL_TEXT_PDF,
-    ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE); // this should be ROLE_PDFPLUS when it's defined
-    
+        ROLE_PDFPLUS); // this should be ROLE_PDFPLUS when it's defined
+
     // set the ROLE_ARTICLE_METADATA to the first one that exists 
     builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA,
         ArticleFiles.ROLE_CITATION_RIS,
@@ -178,29 +180,23 @@ implements ArticleIteratorFactory,
 
     return builder.getSubTreeArticleIterator();
   }
-  
+
   // Enclose the method that creates the builder to allow a child to do additional processing
   // for example Taylor&Francis
   protected SubTreeArticleIteratorBuilder localBuilderCreator(ArchivalUnit au) { 
-   return new SubTreeArticleIteratorBuilder(au);
+    return new SubTreeArticleIteratorBuilder(au);
   }
-  
-  
+
   @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
-    throws PluginException {
+      throws PluginException {
     return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
   }
 
+  // return true if the AU is of type "abstracts"
   private static boolean isAbstractOnly(ArchivalUnit au) {
-    boolean answer = false;
-    TdbAu tdbAu;
-    if ((tdbAu = au.getTdbAu()) != null) {
-      if ("abstracts".equals(tdbAu.getCoverageDepth())) {
-        answer = true;
-      }
-    }
-    return answer;
+    TdbAu tdbAu = au.getTdbAu();
+    return tdbAu != null && ABSTRACTS_ONLY.equals(tdbAu.getCoverageDepth());
   }
-  
+
 }

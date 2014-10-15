@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponPdfFilterFactory.java,v 1.4 2014-10-08 16:11:26 alexandraohlson Exp $
+ * $Id: BaseAtyponPdfFilterFactory.java,v 1.5 2014-10-15 16:29:00 alexandraohlson Exp $
  */
 
 /*
@@ -32,16 +32,9 @@
 
 package org.lockss.plugin.atypon;
 
-import java.io.*;
-
-import org.apache.pdfbox.exceptions.*;
-import org.apache.pdfbox.pdfparser.PDFParser;
-import org.apache.pdfbox.pdmodel.PDDocument;
 import org.lockss.filter.pdf.SimplePdfFilterFactory;
 import org.lockss.pdf.*;
-import org.lockss.pdf.pdfbox.PdfBoxDocument;
 import org.lockss.plugin.ArchivalUnit;
-import org.lockss.util.IOUtil;
 
 /**
  * A pdf filter that handles the needs of many Atypon children
@@ -70,6 +63,11 @@ public class BaseAtyponPdfFilterFactory extends SimplePdfFilterFactory {
   public void transform(ArchivalUnit au,
                         PdfDocument pdfDocument)
       throws PdfException {
+    doBaseTransforms(pdfDocument);
+  }
+  
+  public static void doBaseTransforms(PdfDocument pdfDocument) 
+   throws PdfException {
     pdfDocument.unsetCreationDate();
     pdfDocument.unsetModificationDate();
     PdfUtil.normalizeTrailerId(pdfDocument);

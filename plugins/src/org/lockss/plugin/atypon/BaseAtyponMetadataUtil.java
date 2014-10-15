@@ -1,4 +1,4 @@
-/* $Id: BaseAtyponMetadataUtil.java,v 1.1 2014-10-08 16:11:26 alexandraohlson Exp $
+/* $Id: BaseAtyponMetadataUtil.java,v 1.2 2014-10-15 16:29:00 alexandraohlson Exp $
  */
 
 /*
@@ -161,7 +161,7 @@ public class BaseAtyponMetadataUtil {
     // Using the normalization map, substitute characters
     for (Map.Entry<String, String> norm_entry : AtyponNormalizeMap.entrySet())
     {
-      log.debug3("normalizing title by replacing " + norm_entry.getKey() + " with " + norm_entry.getKey());
+      log.debug3("normalizing title by replacing " + norm_entry.getKey() + " with " + norm_entry.getValue());
       // StringUtils.replace is MUCH faster than String.replace
       outTitle = StringUtils.replace(outTitle, norm_entry.getKey(), norm_entry.getValue());
     }
@@ -183,7 +183,7 @@ public class BaseAtyponMetadataUtil {
 
       /*matches() is anchored so must create complete pattern or else use .finds() */
       /* URL is "<base>/doi/(abs|full)/<doi1st>/<doi2nd> */
-      String base_url = cu.getArchivalUnit().getConfiguration().get("base_url");
+      String base_url = cu.getArchivalUnit().getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
       String patternString = "^" + base_url + "doi/[^/]+/([^/]+)/([^?&]+)$";
       Pattern METADATA_PATTERN = Pattern.compile(patternString, Pattern.CASE_INSENSITIVE);
       String url = cu.getUrl();

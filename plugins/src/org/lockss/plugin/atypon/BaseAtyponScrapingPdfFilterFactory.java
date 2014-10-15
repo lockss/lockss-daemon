@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponScrapingPdfFilterFactory.java,v 1.1 2014-10-08 16:11:26 alexandraohlson Exp $
+ * $Id: BaseAtyponScrapingPdfFilterFactory.java,v 1.2 2014-10-15 16:29:00 alexandraohlson Exp $
  */
 
 /*
@@ -32,19 +32,9 @@
 
 package org.lockss.plugin.atypon;
 
-import java.io.*;
-
-import org.apache.commons.io.IOUtils;
-import org.apache.pdfbox.exceptions.*;
-import org.apache.pdfbox.pdfparser.PDFParser;
-import org.apache.pdfbox.pdmodel.PDDocument;
 import org.lockss.filter.pdf.ExtractingPdfFilterFactory;
-import org.lockss.filter.pdf.SimplePdfFilterFactory;
 import org.lockss.pdf.*;
-import org.lockss.pdf.pdfbox.PdfBoxDocument;
 import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.FilterFactory;
-import org.lockss.util.IOUtil;
 
 
 
@@ -72,9 +62,7 @@ public class BaseAtyponScrapingPdfFilterFactory extends ExtractingPdfFilterFacto
   public void transform(ArchivalUnit au,
                         PdfDocument pdfDocument)
       throws PdfException {
-    pdfDocument.unsetCreationDate();
-    pdfDocument.unsetModificationDate();
-    PdfUtil.normalizeTrailerId(pdfDocument);
+    BaseAtyponPdfFilterFactory.doBaseTransforms(pdfDocument);
   }
 
 }
