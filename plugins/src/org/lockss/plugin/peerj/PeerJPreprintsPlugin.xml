@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>8</string>
+    <string>9</string>
   </entry>
   <entry>
     <!-- to use new feature of HtmlNodeFilters in the html hash filter - allExceptSubtree() -->
@@ -39,7 +39,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"PeerJ Preprints Plugin, Base URL %s, PeerJ Site %s, Volume %s", base_url, peerj_site, volume_name</string>
+    <string>"PeerJ Preprints Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
     <string>au_permission_url</string>
@@ -52,8 +52,9 @@
     </list>
   </entry>
   <entry>
+    <!-- https://peerj.com/archives-preprints/?year=2013 -->
     <string>au_start_url</string>
-    <string>"%s%s/?year=%s", base_url, peerj_site, volume_name</string>
+    <string>"%sarchives-preprints/?year=%s", base_url, volume_name</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
@@ -65,17 +66,18 @@
       <string>1,"^https://(dfzljdn9uc3pi|d3amtssd1tejdt|d2pdyyx74uypu5)\.cloudfront\.net/(images|collections)/"</string>
       <string>1,"^https://(dfzljdn9uc3pi|d3amtssd1tejdt|d2pdyyx74uypu5)\.cloudfront\.net/%s/", volume_name</string>
       <string>4,"^%s", base_url</string>
-      <string>1,"/preprints/index\.html\?month=%s-", volume_name</string>
-      <string>2,"/preprints/[0-9]+/(author|editor)-[0-9]+$"</string>
-      <string>2,"/preprints/[0-9]+[/.](citations|citeproc)/?$"</string>
-      <string>1,"/preprints/[0-9]+(v[0-9]+)?/?$"</string>
-      <string>1,"/preprints/[0-9]+(v[0-9]+)?\.[^/]+"</string>
+      <!-- for debug <string>1,"^%spreprints/index\.html\?month=%s-09", base_url, volume_name</string> -->
+      <string>1,"^%spreprints/index\.html\?month=%s-", base_url, volume_name</string>
+      <string>2,"^%spreprints/[0-9]+/(author|editor)-[0-9]+$", base_url</string>
+      <string>2,"^%spreprints/[0-9]+[/.](citations|citeproc)/?$", base_url</string>
+      <string>1,"^%spreprints/[0-9]+(v[0-9]+)?/?$", base_url</string>
+      <string>1,"^%spreprints/[0-9]+(v[0-9]+)?\.[^/]+", base_url</string>
     </list>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"/preprints/[0-9]+\.pdf$"</string>
+      <string>"^%spreprints/[0-9]+\.pdf$", base_url</string>
     </list>
   </entry>
   <entry>
@@ -87,14 +89,6 @@
         <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
         <type>3</type>
         <size>40</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>peerj_site</key>
-        <displayName>PeerJ Site</displayName>
-        <type>1</type>
-        <size>50</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
@@ -120,7 +114,7 @@
         <!-- https://peerj.com/archives/?year=2013 -->
         <!-- https://peerj.com/archives-preprints/?year=2013 -->
         <string>au_volume</string>
-        <string>"%s%s/?year=%s", base_url, peerj_site, volume</string>
+        <string>"%s/?year=%s", base_url, volume</string>
       </entry>
       <entry>
         <!-- https://peerj.com/articles/index.html?month=2013-02 -->

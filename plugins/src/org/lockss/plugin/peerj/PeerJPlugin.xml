@@ -14,7 +14,7 @@
   <entry>
     <!-- splitting plugin into 2 for Archives and Preprints starting version 8 -->
     <string>plugin_version</string>
-    <string>8</string>
+    <string>9</string>
   </entry>
   <entry>
     <!-- to use new feature of HtmlNodeFilters in the html hash filter - allExceptSubtree() -->
@@ -40,7 +40,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"PeerJ Plugin, Base URL %s, PeerJ Site %s, Volume %s", base_url, peerj_site, volume_name</string>
+    <string>"PeerJ Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
     <string>au_permission_url</string>
@@ -55,7 +55,7 @@
   <entry>
     <!-- https://peerj.com/archives/?year=2013 -->
     <string>au_start_url</string>
-    <string>"%s%s/?year=%s", base_url, peerj_site, volume_name</string>
+    <string>"%sarchives/?year=%s", base_url, volume_name</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
@@ -67,18 +67,19 @@
       <string>1,"^https://(dfzljdn9uc3pi|d3amtssd1tejdt|d2pdyyx74uypu5)\.cloudfront\.net/(images|collections)"</string>
       <string>1,"^https://(dfzljdn9uc3pi|d3amtssd1tejdt|d2pdyyx74uypu5)\.cloudfront\.net/%s", volume_name</string>
       <string>4,"^%s", base_url</string>
-      <string>1,"/articles/index\.html\?month=%s-", volume_name</string>
-      <string>2,"/articles/[0-9]+/(author|editor)-[0-9]+$"</string>
-      <string>2,"/articles/[0-9]+[/.](citations|citeproc)/?$"</string>
-      <string>1,"/articles/[0-9]+/?$"</string>
-      <string>1,"/articles/[0-9]+\.[^/]+"</string>
-      <string>1,"/articles/[0-9]+/reviews/?$"</string>
+      <!-- for debug <string>1,"^%sarticles/index\.html\?month=%s-02", base_url, volume_name</string> -->
+      <string>1,"^%sarticles/index\.html\?month=%s-", base_url, volume_name</string>
+      <string>2,"^%sarticles/[0-9]+/(author|editor)-[0-9]+$", base_url</string>
+      <string>2,"^%sarticles/[0-9]+[/.](citations|citeproc)/?$", base_url</string>
+      <string>1,"^%sarticles/[0-9]+/?$", base_url</string>
+      <string>1,"^%sarticles/[0-9]+\.[^/]+", base_url</string>
+      <string>1,"^%sarticles/[0-9]+/reviews/?$", base_url</string>
     </list>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"/articles/[0-9]+\.pdf$"</string>
+      <string>"^%sarticles/[0-9]+\.pdf$", base_url</string>
     </list>
   </entry>
   <entry>
@@ -90,14 +91,6 @@
         <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
         <type>3</type>
         <size>40</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>peerj_site</key>
-        <displayName>PeerJ Site</displayName>
-        <type>1</type>
-        <size>50</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
@@ -122,7 +115,7 @@
       <entry>
         <!-- https://peerj.com/archives/?year=2013 -->
         <string>au_volume</string>
-        <string>"%s%s/?year=%s", base_url, peerj_site, volume</string>
+        <string>"%s?year=%s", base_url, volume</string>
       </entry>
       <entry>
         <!-- https://peerj.com/articles/index.html?month=2013-02 -->
