@@ -1,5 +1,5 @@
 /*
- * $Id: HttpClientUrlConnection.java,v 1.38 2014-06-24 06:49:07 tlipkis Exp $
+ * $Id: HttpClientUrlConnection.java,v 1.39 2014-10-15 22:40:56 clairegriffin Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -178,6 +178,8 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
       throws IOException {
     String u_str = urlString;
     try {
+      if(log.isDebug2())
+        log.debug2("in:"+ urlString + " isAscii:"+ StringUtil.isAscii(urlString));
       if(!StringUtil.isAscii(urlString)) {
         if(log.isDebug2()) log.debug2("in:" + u_str);
         u_str = UrlUtil.encodeUri(urlString, Constants.ENCODING_UTF_8);
