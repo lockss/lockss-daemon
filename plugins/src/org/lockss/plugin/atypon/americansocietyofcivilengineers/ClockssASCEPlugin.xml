@@ -49,6 +49,11 @@
     <org.lockss.util.Default />
   </entry>
   <entry>
+  <!--  CLOCKSS does not need this warning message about registering IP addresses -->
+    <string>plugin_au_config_user_msg</string>
+    <org.lockss.util.Default />
+  </entry>  
+  <entry>
     <string>clockss_override</string>
     <map>
       <entry>

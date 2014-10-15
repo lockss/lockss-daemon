@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseAtyponArchivalUnit.java,v 1.4 2014-09-24 18:56:23 alexandraohlson Exp $
+ * $Id: TestBaseAtyponArchivalUnit.java,v 1.5 2014-10-15 19:51:09 alexandraohlson Exp $
  */
 
 /*
@@ -221,7 +221,22 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
       "and your LOCKSS box or your entire institution may be temporarily banned from accessing the site. " +
       "You only need to register the IP address of your LOCKSS box once for all AUs published by Bloomsbury Qatar.";
 
+  private static final String default_msg_part1 = 
+      "Atypon Systems hosts this archival unit (AU) and requires " +
+  "that you <a href=\'";
   
+  private static final String default_msg_part2 =
+      "action/institutionLockssIpChange\'>register the " +
+          "IP address of this LOCKSS box in your institutional account as a " +
+  "crawler</a> before allowing your LOCKSS box to harvest this AU. " +
+          "Failure to comply with this publisher requirement may trigger crawler traps on the " +
+  "Atypon Systems platform, and your LOCKSS box or your entire institution may be " +
+          "temporarily banned from accessing the site. You only need to register the IP address " +
+  "of your LOCKSS box once for all AUs published by this publisher.";
+  
+
+      
+  private static final String BASE_ATYPON_BASE = "http://www.BaseAtypon.org/";
   /* test all the atypon child au_config_user_msgs
    * by first checking the gln message either against a specific passed-in message
    * or by making sure it contains the appropriate base-url and publisher name (to guard
@@ -229,6 +244,10 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
    * and then checking that the clockss plugin has a null message
    */
   public void testUserMsgs() throws Exception {
+    testSpecificUserMsg(BASE_ATYPON_BASE, default_msg_part1 + BASE_ATYPON_BASE + default_msg_part2, 
+        "org.lockss.plugin.atypon.BaseAtyponPlugin",
+        null);
+    
     //AMetSoc - points users at our web page with registration info
     testSpecificUserMsg("http://journals.ametsoc.org/", gln_lockss_user_msg, 
         "org.lockss.plugin.atypon.americanmeteorologicalsociety.AMetSocPlugin",
