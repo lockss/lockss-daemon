@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.125 2014-10-01 08:34:36 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.126 2014-10-15 06:44:41 tlipkis Exp $
  */
 
 /*
@@ -1149,6 +1149,12 @@ public class ArchivalUnitStatus
 	res.add(new StatusTable.SummaryInfo("Last Local Hash Scan",
 					    ColumnDescriptor.TYPE_DATE,
 					    new Long(lastLocal)));
+      }
+      long lastIndex = state.getLastMetadataIndex();
+      if (lastIndex > 0) {
+	res.add(new StatusTable.SummaryInfo("Last Metadata Indexing",
+					    ColumnDescriptor.TYPE_DATE,
+					    new Long(lastIndex)));
       }
       PollManager pm = theDaemon.getPollManager();
       boolean isCrawling = cmStatus.isRunningNCCrawl(au);
