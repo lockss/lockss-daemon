@@ -1,6 +1,7 @@
 Notes: Copied the initial analyis from RU4644, and added the rest.
 ** Splitting the plugin into 2 separate plugins for PeerJ Archives site
 and PeerJ Preprints site. (plugin version 8).
+** no longer need for peerj_site param (plugin version 9).
 
 -------------------INSTRUCTIONS-------------------------------------
 Make a local copy of this file for each new plugin. 
@@ -35,7 +36,6 @@ TDB information:
     ATTRS:
 
 * base_url (https://peerj.com/)
-* peerj_site (archives or archives-preprints)
 * volume_name (2013)  
 
 Start URL(s):
@@ -63,10 +63,8 @@ blah.org, etc)
 
 * website containing only 2013 issues
 a) base_url = https://peerj.com/
-   peerj_site = archives
    volume_name = 2013
 b) base_url = https://peerj.com/
-   peerj_site = archives-preprints
    volume_name = 2013
 
 -----------------------URL & SITE LAYOUT SECTION--------------------
@@ -84,7 +82,6 @@ examples for each that exists. If you can generalize to a pattern
 
 * from peerj.tdb: 
   param[base_url] = https://peerj.com/
-  param[peerj_site] = archives  or param[peerj_site] = archives-preprints
   
   include images - ^<base_url>.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f|swf)
   <!-- hardwire cloudfront host in case publisher changes it -->
