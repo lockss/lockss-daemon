@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.101 2014-10-01 08:11:57 tlipkis Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.102 2014-10-15 06:44:15 tlipkis Exp $
  */
 
 /*
@@ -303,7 +303,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
       definitionMap.getString(DefinablePlugin.KEY_PLUGIN_AU_CONFIG_USER_MSG,
 			      null);
     if (umsg != null) {
-      paramMap.putString(KEY_AU_CONFIG_USER_MSG, umsg);
+      paramMap.putString(KEY_AU_CONFIG_USER_MSG, makeConfigUserMsg(umsg));
     }
     String urlPat =
       (String)definitionMap.getMapElement(KEY_AU_REDIRECT_TO_LOGIN_URL_PATTERN);
@@ -311,6 +311,12 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
       paramMap.setMapElement(KEY_AU_REDIRECT_TO_LOGIN_URL_PATTERN,
 			     makeLoginUrlPattern(urlPat));
     }
+  }
+
+  protected String makeConfigUserMsg(String fmt) {
+    String res = convertNameString(fmt);
+    if (fmt.equals(res)) return fmt;
+    return res;
   }
 
   protected Pattern makeLoginUrlPattern(String val)

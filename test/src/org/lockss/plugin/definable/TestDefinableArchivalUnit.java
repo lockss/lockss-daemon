@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.68 2014-10-01 08:11:56 tlipkis Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.69 2014-10-15 06:44:15 tlipkis Exp $
  */
 
 /*
@@ -663,6 +663,36 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     props.put(ConfigParamDescr.VOLUME_NUMBER.getKey(), "42");
     cau.setConfiguration(ConfigurationUtil.fromProps(props));
     assertEquals(str, cau.getProperties().getString(DefinableArchivalUnit.KEY_AU_CONFIG_USER_MSG, null));
+  }
+
+  public void testUserMessageQuotes() throws Exception {
+    String exp = "test user msg";
+    String str = "\"" + exp + "\"";
+    setStdConfigProps();
+    defMap.putString(DefinablePlugin.KEY_PLUGIN_AU_CONFIG_USER_MSG, str);
+    defMap.putString(ArchivalUnit.KEY_AU_START_URL,
+                  "\"%slockss-volume/%d.html\", base_url, volume");
+    setupAu();
+    Properties props = new Properties();
+    props.put(ConfigParamDescr.BASE_URL.getKey(), "http://www.example.com/");
+    props.put(ConfigParamDescr.VOLUME_NUMBER.getKey(), "42");
+    cau.setConfiguration(ConfigurationUtil.fromProps(props));
+    assertEquals(exp, cau.getProperties().getString(DefinableArchivalUnit.KEY_AU_CONFIG_USER_MSG, null));
+  }
+
+  public void testUserMessagePrintf() throws Exception {
+    String str = "\"msg with vol: %d\",volume";
+    String exp = "msg with vol: 42";
+    setStdConfigProps();
+    defMap.putString(DefinablePlugin.KEY_PLUGIN_AU_CONFIG_USER_MSG, str);
+    defMap.putString(ArchivalUnit.KEY_AU_START_URL,
+                  "\"%slockss-volume/%d.html\", base_url, volume");
+    setupAu();
+    Properties props = new Properties();
+    props.put(ConfigParamDescr.BASE_URL.getKey(), "http://www.example.com/");
+    props.put(ConfigParamDescr.VOLUME_NUMBER.getKey(), "42");
+    cau.setConfiguration(ConfigurationUtil.fromProps(props));
+    assertEquals(exp, cau.getProperties().getString(DefinableArchivalUnit.KEY_AU_CONFIG_USER_MSG, null));
   }
 
   public void testGetManifestPage() throws Exception {
