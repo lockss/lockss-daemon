@@ -1,5 +1,5 @@
 /*
- * $Id: TestFollowLinkCrawler.java,v 1.43 2014-07-11 23:32:59 tlipkis Exp $
+ * $Id: TestFollowLinkCrawler.java,v 1.44 2014-10-15 06:42:25 tlipkis Exp $
  */
 
 /*
@@ -311,7 +311,8 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     mmuc.setInfoException(new CacheException.WarningOnly("vacuum"));
 
     assertTrue(crawler.doCrawl());
-    assertEquals(SetUtil.set(startUrl, url2), cus.getCachedUrls());
+    assertEquals(SetUtil.set(startUrl), cus.getCachedUrls());
+    assertEquals(SetUtil.set(url2), cus.getForceCachedUrls());
     CrawlerStatus cs = crawler.getStatus();
     assertEquals("vacuum", cs.getErrorForUrl(url2));
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.74 2014-10-01 08:33:46 tlipkis Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.75 2014-10-15 06:42:25 tlipkis Exp $
  */
 
 /*
@@ -121,6 +121,22 @@ public class TestBaseUrlCacher extends LockssTestCase {
     TimeBase.setReal();
     CacheException.setDefaultSuppressStackTrace(saveDefaultSuppressStackTrace);
     super.tearDown();
+  }
+
+  public void testFetchFlags() throws IOException {
+    BitSet cur = cacher.getFetchFlags();
+    assertTrue(cur.isEmpty());
+    try {
+      cacher.setFetchFlags(null);
+      fail("setFetchFlags(null) succeeded");
+    } catch (IllegalArgumentException e) {
+      // expected
+    }
+    BitSet bs = new BitSet();
+    bs.set(REFETCH_FLAG);
+    cacher.setFetchFlags(bs);
+    BitSet b2 = cacher.getFetchFlags();
+    assertEquals(bs, b2);
   }
 
   public void testCache() throws IOException {

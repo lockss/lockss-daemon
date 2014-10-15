@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.103 2014-07-28 21:20:09 clairegriffin Exp $
+ * $Id: FollowLinkCrawler.java,v 1.104 2014-10-15 06:42:25 tlipkis Exp $
  */
 
 /*
@@ -221,16 +221,18 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
       new LRUMap(config.getInt(PARAM_EXCLUDED_CACHE_SIZE,
 			       DEFAULT_EXCLUDED_CACHE_SIZE));
 
-
-    fetchFlags = new BitSet();
+    BitSet newFlags = new BitSet();
     if (config.getBoolean(PARAM_CLEAR_DAMAGE_ON_FETCH,
  			  DEFAULT_CLEAR_DAMAGE_ON_FETCH)) {
-      fetchFlags.set(UrlCacher.CLEAR_DAMAGE_FLAG);
+      newFlags.set(UrlCacher.CLEAR_DAMAGE_FLAG);
     }
     if (config.getBoolean(PARAM_REFETCH_IF_DAMAGED,
  			  DEFAULT_REFETCH_IF_DAMAGED)) {
-      fetchFlags.set(UrlCacher.REFETCH_IF_DAMAGE_FLAG);
+      newFlags.set(UrlCacher.REFETCH_IF_DAMAGE_FLAG);
     }
+    // update fetchFlags atomically
+    fetchFlags = newFlags;
+
     parseUseCharset = config.getBoolean(PARAM_PARSE_USE_CHARSET,
 					DEFAULT_PARSE_USE_CHARSET);
     explodeFiles = config.getBoolean(PARAM_EXPLODE_ARCHIVES,
@@ -538,10 +540,18 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 
     // Fetch URL if it has no content already or its depth is within the
     // refetch depth
-    CachedUrl cu0;
-    if (curl.getDepth() <= getRefetchDepth()
-	|| !(cu0 = uc.getCachedUrl()).hasContent()
-	|| (isRefetchEmptyFiles && cu0.getContentSize() == 0)) {
+    CachedUrl cu0 = uc.getCachedUrl();
+    boolean doFetch = (curl.getDepth() <= getRefetchDepth()
+		       || !cu0.hasContent());
+    if (isRefetchEmptyFiles && cu0.getContentSize() == 0) {
+      // Suppress If-Modified-Since when refetching empty files
+      doFetch = true;
+      BitSet flags = (BitSet)uc.getFetchFlags().clone();;
+      flags.set(UrlCacher.REFETCH_FLAG);
+      uc.setFetchFlags(flags);
+    }
+    cu0 = null;			     // ensure don't reuse this after fetch
+    if (doFetch) {
       try {
 	if (failedUrls.contains(uc.getUrl())) {
 	  //skip if it's already failed
@@ -557,8 +567,8 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	    return false;
 	  }
 
-    fetchThePage(uc);
-    checkSubstanceCollected(uc.getCachedUrl());
+	  fetchThePage(uc);
+	  checkSubstanceCollected(uc.getCachedUrl());
 	  curl.setFetched(true);
 	}
       } catch (CacheException.RepositoryException ex) {

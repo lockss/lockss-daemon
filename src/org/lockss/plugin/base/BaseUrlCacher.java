@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.99 2014-10-01 08:33:47 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.100 2014-10-15 06:42:25 tlipkis Exp $
  */
 
 /*
@@ -192,6 +192,9 @@ public class BaseUrlCacher implements UrlCacher {
   }
 
   public void setFetchFlags(BitSet fetchFlags) {
+    if (fetchFlags == null) {
+      throw new IllegalArgumentException("fetchFlags is null");
+    }
     this.fetchFlags = fetchFlags;
   }
 
