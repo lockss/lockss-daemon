@@ -1,5 +1,5 @@
 /*
- * $Id: TestVersionCounts.java,v 1.4 2014-04-23 20:47:10 tlipkis Exp $
+ * $Id: TestVersionCounts.java,v 1.5 2014-10-15 06:46:00 tlipkis Exp $
  */
 
 /*
@@ -73,7 +73,7 @@ public class TestVersionCounts extends LockssTestCase {
   
   public void setUp() throws Exception {
     super.setUp();
-    setUpCacheDir();
+    setUpDiskSpace();
     daemon = getMockLockssDaemon();
     pollerId = findPeerIdentity(localPeerKey);
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuUtil.java,v 1.27 2014-07-22 20:16:53 fergaloy-sf Exp $
+ * $Id: TestAuUtil.java,v 1.28 2014-10-15 06:46:00 tlipkis Exp $
  */
 
 /*
@@ -106,7 +106,7 @@ public class TestAuUtil extends LockssTestCase {
   }
 
   public void testGetAuState() throws IOException {
-    setUpDiskPaths();
+    setUpDiskSpace();
     LocalMockArchivalUnit mau = new LocalMockArchivalUnit(mbp);
     getMockLockssDaemon().getNodeManager(mau).startService();
     AuState aus = AuUtil.getAuState(mau);
@@ -115,7 +115,7 @@ public class TestAuUtil extends LockssTestCase {
   }
 
   public void testIsCurrentFeatureVersion() throws IOException {
-    setUpDiskPaths();
+    setUpDiskSpace();
     LocalMockArchivalUnit mau = new LocalMockArchivalUnit(mbp);
     getMockLockssDaemon().getNodeManager(mau).startService();
     AuState aus = AuUtil.getAuState(mau);
@@ -144,7 +144,7 @@ public class TestAuUtil extends LockssTestCase {
   }
 
   public void testHasCrawled() throws IOException {
-    setUpDiskPaths();
+    setUpDiskSpace();
     LocalMockArchivalUnit mau = new LocalMockArchivalUnit(mbp);
     getMockLockssDaemon().getNodeManager(mau).startService();
     assertFalse(AuUtil.hasCrawled(mau));
@@ -529,7 +529,7 @@ public class TestAuUtil extends LockssTestCase {
 
   public void testGetAuCreationTime() throws IOException {
     long now = TimeBase.nowMs() - 10000;
-    setUpDiskPaths();
+    setUpDiskSpace();
     LocalMockArchivalUnit mau = new LocalMockArchivalUnit(mbp);
     getMockLockssDaemon().getNodeManager(mau).startService();
 

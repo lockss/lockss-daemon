@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.118 2014-10-14 20:48:19 fergaloy-sf Exp $
+ * $Id: LockssTestCase.java,v 1.119 2014-10-15 06:46:00 tlipkis Exp $
  */
 
 /*
@@ -161,6 +161,11 @@ public class LockssTestCase extends TestCase {
    * @throws IOException
    */
   public String setUpDiskSpace() throws IOException {
+    String diskList =
+      CurrentConfig.getParam(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST);
+    if (!StringUtil.isNullString(diskList)) {
+      return StringUtil.breakAt(diskList, ";").get(0);
+    }
     String tmpdir = getTempDir().getAbsolutePath() + File.separator;
     ConfigurationUtil.addFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
 				  tmpdir);
@@ -184,17 +189,6 @@ public class LockssTestCase extends TestCase {
     mockDaemon = newMockLockssDaemon();
     super.setUp();
     disableThreadWatchdog();
-  }
-
-  /** If org.lockss.platform.diskSpacePaths isn't set in the current
-   * config, set it to point to a new temp dir */
-  protected void setUpCacheDir() throws IOException {
-    Configuration curConfig = ConfigManager.getCurrentConfig();
-    if (!curConfig.containsKey(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST)) {
-      String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-      ConfigurationUtil.addFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
-				    tempDirPath);
-    }
   }
 
   protected MockLockssDaemon newMockLockssDaemon() {
@@ -258,12 +252,6 @@ public class LockssTestCase extends TestCase {
     }
     // don't reenable the watchdog; some threads may not have exited yet
 //     enableThreadWatchdog();
-  }
-
-  public void setUpDiskPaths() throws IOException {
-    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
-				  tempDirPath);
   }
 
   public static boolean isKeepTempFiles() {

@@ -1,5 +1,5 @@
 /*
-n * $Id: PluginWellformednessTests.java,v 1.7 2014-08-25 08:59:02 tlipkis Exp $
+n * $Id: PluginWellformednessTests.java,v 1.8 2014-10-15 06:46:00 tlipkis Exp $
  */
 
 /*
@@ -59,7 +59,7 @@ public final class PluginWellformednessTests extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    setUpCacheDir();
+    setUpDiskSpace();
 
     daemon = getMockLockssDaemon();
     daemon.getPluginManager().startService();
