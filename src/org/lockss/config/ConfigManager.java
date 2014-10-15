@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.99 2014-09-24 00:33:10 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.100 2014-10-15 06:41:49 tlipkis Exp $
  */
 
 /*
@@ -49,6 +49,7 @@ import org.lockss.mail.*;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;
 import org.lockss.proxy.*;
+import org.lockss.remote.*;
 import org.lockss.repository.*;
 import org.lockss.servlet.*;
 import org.lockss.state.*;
@@ -1335,6 +1336,9 @@ public class ConfigManager implements LockssManager {
     setIfNotSet(config,
 		PARAM_OBS_ADMIN_HELP_URL,
 		AdminServletManager.PARAM_HELP_URL);
+    setIfNotSet(config,
+		RemoteApi.PARAM_BACKUP_EMAIL_FREQ,
+		RemoteApi.PARAM_BACKUP_FREQ);
   }
 
   private void setConfigMacros(Configuration config) {
@@ -1417,6 +1421,9 @@ public class ConfigManager implements LockssManager {
       platformDefault(config,
 		      org.lockss.truezip.TrueZipManager.PARAM_CACHE_DIR,
 		      new File(firstSpace, "tfile").toString());
+      platformDefault(config,
+		      RemoteApi.PARAM_BACKUP_DIR,
+		      new File(firstSpace, "backup").toString());
     }
   }
 
