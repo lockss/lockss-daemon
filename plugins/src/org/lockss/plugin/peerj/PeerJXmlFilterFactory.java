@@ -1,5 +1,5 @@
 /*
-* $Id: PeerJXmlFilterFactory.java,v 1.1 2014-05-30 20:19:06 ldoan Exp $
+* $Id: PeerJXmlFilterFactory.java,v 1.2 2014-10-15 21:20:17 thib_gc Exp $
 */
 
 /*
@@ -37,7 +37,6 @@ import java.util.List;
 
 import org.lockss.filter.FilterUtil;
 import org.lockss.filter.HtmlTagFilter;
-import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.HtmlTagFilter.TagPair;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
@@ -45,21 +44,15 @@ import org.lockss.util.*;
 public class PeerJXmlFilterFactory implements FilterFactory {
     
   public InputStream createFilteredInputStream(ArchivalUnit au,
-      InputStream in, String encoding) {
-  
+                                               InputStream in,
+                                               String encoding) {
     Reader reader = FilterUtil.getReader(in, encoding);
-    Reader filtReader = makeFilteredReader(reader);
-    return new ReaderInputStream(filtReader);
+    List tagList = ListUtil.list(// PeerJ has timestamp in their .unixref files
+                                 // e.g. https://peerj.com/articles/46.unixref
+                                 new TagPair("<timestamp>", "</timestamp>")
+        );
+    reader = HtmlTagFilter.makeNestedFilter(reader, tagList);
+    return new ReaderInputStream(reader, encoding);
   }
 
-  static Reader makeFilteredReader(Reader reader) {
-    List tagList = ListUtil.list(
-        // PeerJ has timestamp in their .unixref files
-        // https://peerj.com/articles/46.unixref
-        new TagPair("<timestamp>", "</timestamp>")
-    );
-  
-    Reader tagFilter = HtmlTagFilter.makeNestedFilter(reader, tagList);
-    return new WhiteSpaceFilter(tagFilter);
-  }
 }
