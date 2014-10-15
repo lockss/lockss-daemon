@@ -310,6 +310,7 @@
       eissn = 2161-6310 ;
       issnl = 1933-6632
     >
+      comment[notReady] = volume 14 has urls for issues from a different journal. http://www.jstor.org/clockss/jmorahist/14/index.html
       param[journal_id] = jmorahist
 
       au < manifest ; exists ; 2010 ; Journal of Moravian History Volume 8 ; 8 >
@@ -318,7 +319,7 @@
       au < crawling ; exists ; 2011 ; Journal of Moravian History Volume 11 ; 11 >
       au < manifest ; exists ; 2012 ; Journal of Moravian History Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; Journal of Moravian History Volume 13 ; 13 >
-      au < manifest ; exists ; 2014 ; Journal of Moravian History Volume 14 ; 14 >
+      au < notReady ; exists ; 2014 ; Journal of Moravian History Volume 14 ; 14 >
       
 
   }
