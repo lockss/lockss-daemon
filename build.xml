@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.377 2014-10-14 19:47:11 fergaloy-sf Exp $
+ $Id: build.xml,v 1.378 2014-10-15 20:27:47 fergaloy-sf Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -3412,32 +3412,6 @@ Test results in ${test.results}
     </antcall>
   </target>
 
-  <target name="build-empty-db" depends="check-empty-db"
-          unless="db.is.up.to.date"
-          description="Creates a database to be copied by tests.">
-    <delete dir="${empty.db.dir}" quiet="true" />
-    <java classname="org.lockss.db.EmptyDbCreator" fork="true">
-      <classpath refid="build.empty.db.run.classpath" />
-      <arg line="-d ${empty.db.parent.dir}" />
-      <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}" />
-    </java>
-  </target>
-
-  <target name="check-empty-db" depends="compile-tests"
-          description="Checks whether the empty database is up-to-date.">
-  	<mkdir dir="${empty.db.dir}" />
-    <uptodate property="db.requires.rebuild"
-              targetfile="${classes}/org/lockss/db/DbManager.class">
-      <srcfiles dir="${empty.db.dir}" />
-    </uptodate>
-    <if>
-      <isset property="db.requires.rebuild" />
-      <else>
-        <property name="db.is.up.to.date" value="true" />
-      </else>
-    </if>
-  </target>
-
   <path id="build.empty.db.run.classpath">
     <path refid="test.compile.classpath" />
     <pathelement path="${test.classes}" />
@@ -3453,19 +3427,15 @@ Test results in ${test.results}
       <else>
         <delete dir="${empty.db.dir}" quiet="true" />
         <java classname="org.lockss.db.EmptyDbCreator" fork="true">
-          <classpath refid="archive.empty.db.run.classpath" />
+          <classpath refid="build.empty.db.run.classpath" />
           <arg line="-d ${empty.db.parent.dir}" />
           <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}" />
         </java>
         <zip destfile="${empty.db.archive}" basedir="${empty.db.dir}" />
+        <delete dir="${empty.db.dir}" quiet="true" />
       </else>
     </if>
   </target>
-
-  <path id="archive.empty.db.run.classpath">
-    <path refid="test.compile.classpath" />
-    <pathelement path="${test.classes}" />
-  </path>
 
   <target name="clean-schema-doc"
           description="Deletes the database schema documentation." >
@@ -3480,15 +3450,22 @@ Test results in ${test.results}
   </target>
 
   <target name="schema-doc"
-          depends="check.contrib,clean-schema-doc,check-for-dot,build-empty-db"
+          depends="check.contrib,clean-schema-doc,check-for-dot,compile-tests"
           description="Creates database schema documentation diagrams.">
     <if>
       <isset property="dot.is.available" />
    	  <then>
+   	    <delete dir="${empty.db.dir}" quiet="true" />
+   	    <java classname="org.lockss.db.EmptyDbCreator" fork="true">
+   	      <classpath refid="build.empty.db.run.classpath" />
+   	      <arg line="-d ${empty.db.parent.dir}" />
+   	      <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}" />
+   	    </java>
         <java jar="${schemaSpy.jar}" fork="true" dir="${empty.db.dir}">
           <arg line="-t derby -db DbManager -dp ${derbynet.jar} -hq -noads -norows -u LOCKSS -o ${schema.doc.dir}" />
           <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
         </java>
+   	    <delete dir="${empty.db.dir}" quiet="true" />
       </then>
       <else>
         <echo message="Schema documentation not generated because the dot program is not available; continuing..."/>
