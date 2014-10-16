@@ -514,7 +514,6 @@
     comment[merged] = with 1538-0637, 1538-0645 and 1538-0653 into 1555-0494 in 2007
 
     au < zapped ; finished ; 2005 ; Frontiers of Economic Analysis & Policy Volume 1 ; 1 >
-    au < doNotProcess ; doNotProcess ; 2006 ; Frontiers of Economic Analysis & Policy Volume 2 ; 2 >
 
   }
 
@@ -531,7 +530,8 @@
     param[journal_section] = frontiers
     comment[merged] = with 1534-5998, 1534-6005 and 1534-6013 into 1555-0486 in 2007
 
-    au < zapped ; finished ; 2004 ; Frontiers of Macroeconomics Volume 1 ; 1 >    
+    au < zapped ; finished ; 2004 ; Frontiers of Macroeconomics Volume 1 ; 1 >
+    au < doNotProcess ; doNotProcess ; 2006 ; Frontiers of Macroeconomics Volume 2 ; 2 >
 
   }
 
