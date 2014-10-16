@@ -457,16 +457,6 @@
       au < released ; 2010 ; Molecular Interventions Volume 10 ; 10 ; reingest.lockss.org:80 >
       au < released ; 2011 ; Molecular Interventions Volume 11 ; 11 ; reingest.lockss.org:80 >
     }
-  }
-
-  {
-  
-    title <
-      name = Molecular Interventions ;
-      issn = 1534-0384 ;
-      eissn = 1543-2548 ;
-      issnl = 1534-0384
-    >
     {
     
       pluginPrefix = org.lockss.plugin.highwire.
