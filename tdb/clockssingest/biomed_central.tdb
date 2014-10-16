@@ -3366,15 +3366,9 @@ comment[bmr] = journal archive available, but no new volumes
         
         comment[to_delete] = AU size is 0. No manifest page. TOC doesn't match plugin. http://archive.biomedcentral.com/1742-5573/archive
 
-        au < manifest ; exists ; 2004 ; Epidemiologic Perspectives & Innovations Volume 1 ; 1 >
-        au < manifest ; exists ; 2005 ; Epidemiologic Perspectives & Innovations Volume 2 ; 2 >
-        au < manifest ; exists ; 2006 ; Epidemiologic Perspectives & Innovations Volume 3 ; 3 >
-        au < manifest ; exists ; 2007 ; Epidemiologic Perspectives & Innovations Volume 4 ; 4 >
-        au < doNotProcess ; doNotProcess ; 2008 ; Epidemiologic Perspectives & Innovations Volume 5 ; 5 >
-        au < down ; exists ; 2009 ; Epidemiologic Perspectives & Innovations Volume 6 [to delete] ; 6 >
-        au < doNotProcess ; doNotProcess ; 2010 ; Epidemiologic Perspectives & Innovations Volume 7 ; 7 >
-        au < down ; exists ; 2011 ; Epidemiologic Perspectives & Innovations Volume 8 [to delete] ; 8 >
-        au < down ; exists ; 2012 ; Epidemiologic Perspectives & Innovations Volume 9 [to delete] ; 9 >
+        au < superseded ; exists ; 2009 ; Epidemiologic Perspectives & Innovations Volume 6 [to delete] ; 6 >
+        au < superseded ; exists ; 2011 ; Epidemiologic Perspectives & Innovations Volume 8 [to delete] ; 8 >
+        au < superseded ; exists ; 2012 ; Epidemiologic Perspectives & Innovations Volume 9 [to delete] ; 9 >
       
       }
       
