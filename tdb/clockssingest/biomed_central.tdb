@@ -141,7 +141,7 @@
         comment[manifest] = manifest page only uses issn 2046-1682
 
         au < doNotProcess ; exists ; 2008 ; BMC Biophysics Volume 1 ; 1 >
-        au < down ; exists ; 2009 ; BMC Biophysics Volume 2 [superseded] ; 2 >
+        au < superseded ; exists ; 2009 ; BMC Biophysics Volume 2 [superseded] ; 2 >
         au < doNotProcess ; exists ; 2010 ; BMC Biophysics Volume 3 ; 3 >
         au < crawling ; exists ; 2011 ; BMC Biophysics Volume 4 ; 4 >
         au < crawling ; exists ; 2012 ; BMC Biophysics Volume 5 ; 5 >
@@ -4657,7 +4657,6 @@ comment[bmr] = journal archive available, but no new volumes
       au < superseded ; exists ; 2011 ; Journal of Circadian Rhythms Volume 9 [superseded] ; 9 >
       au < superseded ; exists ; 2012 ; Journal of Circadian Rhythms Volume 10 [superseded] ; 10 >
       au < superseded ; exists ; 2013 ; Journal of Circadian Rhythms Volume 11 [superseded] ; 11 >
-      au < doNotProcess ; doNotProcess ; 2014 ; Journal of Circadian Rhythms Volume 12 ; 12 >
       
     }
 
