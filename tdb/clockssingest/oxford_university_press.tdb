@@ -10924,6 +10924,21 @@
   {
 
     title <
+      name = Journal of Global Security Studies ;
+      issn = ;
+      eissn = ;
+      issnl = 
+    >
+
+    param[base_url] = http://jogss.oxfordjournals.org/
+    pluginSuffix = ClockssHighWireDrupalPlugin
+    comment[0] = expected to be online on 6 Jan 2016
+
+  }
+
+  {
+
+    title <
       name = Journal of Heredity ;
       issn = 0022-1503 ;
       eissn = 1465-7333 ;
@@ -14659,6 +14674,23 @@
   {
 
     title <
+      name = The Monist ;
+      issn = 0026-9662 ;
+      eissn = 2153-3601 ;
+      issnl = 0026-9662
+    >
+
+    pluginSuffix = ClockssHighWirePressH20Plugin
+    param[base_url] = http://monist.oxfordjournals.org/
+    comment[0] = expected to be online on 15 Jan 2015
+
+    au < expected ; exists ; 2015 ; The Monist Volume 98 ; 98 ; >
+
+  }
+
+  {
+
+    title <
       name = Monthly Notices of the Royal Astronomical Society ;
       issn = 0035-8711 ;
       eissn = 1365-2966 ;
@@ -15127,7 +15159,7 @@
     au < manifest ; exists ; 2008 ; Journal of Music Therapy Volume 45 ; 45 ; >
     au < manifest ; exists ; 2009 ; Journal of Music Therapy Volume 46 ; 46 ; >
     au < manifest ; exists ; 2010 ; Journal of Music Therapy Volume 47 ; 47 ; >
-    au < notReady ; exists ; 2011 ; Journal of Music Therapy Volume 48 ; 48 ; >
+    au < ready ; exists ; 2011 ; Journal of Music Therapy Volume 48 ; 48 ; >
     au < crawling ; exists ; 2012 ; Journal of Music Therapy Volume 49 ; 49 ; >
     au < crawling ; exists ; 2013 ; Journal of Music Therapy Volume 50 ; 50 ; >
     au < manifest ; exists ; 2014 ; Journal of Music Therapy Volume 51 ; 51 ; >
@@ -15178,7 +15210,7 @@
     au < manifest ; exists ; 2008 ; Music Therapy Perspectives Volume 26 ; 26 ; >
     au < manifest ; exists ; 2009 ; Music Therapy Perspectives Volume 27 ; 27 ; >
     au < manifest ; exists ; 2010 ; Music Therapy Perspectives Volume 28 ; 28 ; >
-    au < notReady ; exists ; 2011 ; Music Therapy Perspectives Volume 29 ; 29 ; >
+    au < ready ; exists ; 2011 ; Music Therapy Perspectives Volume 29 ; 29 ; >
     au < ready ; exists ; 2012 ; Music Therapy Perspectives Volume 30 ; 30 ; >
     au < exists ; exists ; 2013 ; Music Therapy Perspectives Volume 31 ; 31 ; >
     au < manifest ; exists ; 2014 ; Music Therapy Perspectives Volume 32 ; 32 ; >
