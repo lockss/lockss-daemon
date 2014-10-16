@@ -4490,6 +4490,23 @@
 
   {
 
+   title <
+     name = Digital Scholarship in the Humanities ;
+     issn = 2055-7671 ;
+     eissn = 2055-768X ;
+     issnl = 2055-7671 
+   >
+
+    param[base_url] = http://dsh.oxfordjournals.org/ 
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    implicit < status ; year ; name ; param[volume_name] >
+    comment[0] = expected to be online on 2 Dec 2014
+
+    au < expected ; 2015 ; Digital Scholarship in the Humanities Volume 1 ; 1 >
+  }
+
+  {
+
     title <
       name = Diplomatic History ;
       issn = 0145-2096 ;
@@ -11133,6 +11150,24 @@
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Journal of Financial Econometrics Volume 12 ; 12 >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = Journal of Financial Regulation ;
+      issn = 2053-4833 ;
+      eissn = 2053-4841 ;
+      issnl = 2053-4833
+    >
+
+    param[base_url] = http://jfr.oxfordjournals.org/
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    implicit < status ; year ; name ; param[volume_name] >
+    comment[0] = expected to be online on 21 Jan 2015
+
+    au < expected ; 2015 ; Journal of Financial Regulation Volume 1 ; 1 >
 
   }
 
