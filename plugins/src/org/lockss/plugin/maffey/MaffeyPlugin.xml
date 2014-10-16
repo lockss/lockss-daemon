@@ -8,48 +8,48 @@
     <string>org.lockss.plugin.maffey.MaffeyPlugin</string>
   </entry>
   <entry>
+    <string>plugin_version</string>
+    <string>9</string>
+  </entry>
+  <!-- for Builder
+  <entry>
+    <string>required_daemon_version</string> 
+    <string>1.62.0</string>
+  </entry>  
+  -->
+  <entry>
+  <string>plugin_parent</string>
+    <string>org.lockss.plugin.maffey.ClockssMaffeyPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent_version</string>
+    <string>9</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Maffey Plugin, Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
+  </entry>
+  <entry>
     <string>plugin_name</string>
     <string>Maffey Plugin</string>
   </entry>
   <entry>
-    <string>plugin_version</string>
-    <string>8</string>
-  </entry>
-  <entry>
-    <string>plugin_feature_version_map</string>
-    <map>
-      <entry>
-        <string>Poll</string>
-		<string>3</string>
-      </entry>
-      <entry>
-        <string>Substance</string>
-		<string>1</string>
-      </entry>
-      <entry>
-        <string>Metadata</string>
-                <string>2</string>
-      </entry>
-    </map>
-  </entry>
-  <entry>
-    <string>au_name</string>
-    <string>&quot;Maffey Plugin, Base URL %s, Journal ID %s, Year %d&quot;, base_url, journal_id, year</string>
-  </entry>
-  <entry>
     <string>au_start_url</string>
-    <string>&quot;%slockss.php?t=lockss&amp;pa=issue&amp;j_id=%s&amp;year=%d&quot;, base_url, journal_id, year</string>
+    <string>"%slockss.php?t=lockss&amp;pa=issue&amp;j_id=%s&amp;year=%d", base_url, journal_id, year</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,&quot;^%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(\?[0-9]+)?$&quot;, base_url</string>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%slockss\.php\?(t=lockss&amp;)?pa=article&amp;i_id=[0-9]+$&quot;, base_url</string>
-      <string>1,&quot;^%sredirect_file\.php\?.*fileType=pdf.*$&quot;, base_url</string>
-      <string>1,&quot;^%s[^/]+-article-a[0-9]+$&quot;, base_url</string>
+      <string>1,"^%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(\?[0-9]+)?$", base_url</string>
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%slockss\.php\?(t=lockss&amp;)?pa=article&amp;i_id=[0-9]+$", base_url</string>
+      <string>1,"^%sredirect_file\.php\?.*fileType=pdf.*$", base_url</string>
+      <string>1,"^%s[^/]+-article-a[0-9]+$", base_url</string>
     </list>
   </entry>
+</map>
+ 
+  <!--
   <entry>
     <string>plugin_config_props</string>
     <list>
@@ -86,6 +86,8 @@
   	 <string>au_substance_url_pattern</string>
      <string>"^%sredirect_file\.php\?.*fileType=pdf.*$", base_url</string>
   </entry>
+  -->
+  <!--
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.maffey.MaffeyHtmlHashFilterFactory</string>
@@ -123,4 +125,4 @@
     <string>au_def_new_content_crawl</string>
     <long>1209600000</long>
   </entry>
-</map>
+  -->
