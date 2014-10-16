@@ -155,6 +155,21 @@
       implicit < status ; status2 ; year ; name ; param[volume_name] >
       param[base_url] = http://dmfr.birjournals.org/
 
+      au < doNotProcess ; doNotProcess ; 1998 ; Dentomaxillofacial Radiology Volume 27 ; 27 >
+      au < doNotProcess ; doNotProcess ; 1999 ; Dentomaxillofacial Radiology Volume 28 ; 28 >
+      au < doNotProcess ; doNotProcess ; 2000 ; Dentomaxillofacial Radiology Volume 29 ; 29 >
+      au < doNotProcess ; doNotProcess ; 2001 ; Dentomaxillofacial Radiology Volume 30 ; 30 >
+      au < doNotProcess ; doNotProcess ; 2002 ; Dentomaxillofacial Radiology Volume 31 ; 31 >
+      au < doNotProcess ; doNotProcess ; 2003 ; Dentomaxillofacial Radiology Volume 32 ; 32 >
+      au < doNotProcess ; doNotProcess ; 2004 ; Dentomaxillofacial Radiology Volume 33 ; 33 >
+      au < doNotProcess ; doNotProcess ; 2005 ; Dentomaxillofacial Radiology Volume 34 ; 34 >
+      au < doNotProcess ; doNotProcess ; 2006 ; Dentomaxillofacial Radiology Volume 35 ; 35 >
+      au < doNotProcess ; doNotProcess ; 2007 ; Dentomaxillofacial Radiology Volume 36 ; 36 >
+      au < doNotProcess ; doNotProcess ; 2008 ; Dentomaxillofacial Radiology Volume 37 ; 37 >
+      au < doNotProcess ; doNotProcess ; 2009 ; Dentomaxillofacial Radiology Volume 38 ; 38 >
+      au < doNotProcess ; doNotProcess ; 2010 ; Dentomaxillofacial Radiology Volume 39 ; 39 >
+      au < doNotProcess ; doNotProcess ; 2011 ; Dentomaxillofacial Radiology Volume 40 ; 40 >
+      au < doNotProcess ; doNotProcess ; 2012 ; Dentomaxillofacial Radiology Volume 41 ; 41 >
       au < down ; crawling ; 2011 ; Dentomaxillofacial Radiology Volume 40 ; 40 > 
       au < down ; frozen ; 2012 ; Dentomaxillofacial Radiology Volume 41 ; 41 >
       au < down ; exists ; 2013 ; Dentomaxillofacial Radiology Volume 42 ; 42 >
