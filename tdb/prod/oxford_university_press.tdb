@@ -11257,6 +11257,21 @@
   {
 
     title <
+      name = Journal of Global Security Studies ;
+      issn = ;
+      eissn = ;
+      issnl = 
+    >
+
+    param[base_url] = http://jogss.oxfordjournals.org/
+    plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
+    comment[0] = expected to be online on 6 Jan 2016
+
+  }
+
+  {
+
+    title <
       name = Journal of Heredity ;
       issn = 0022-1503 ;
       eissn = 1465-7333 ;
@@ -15080,6 +15095,24 @@
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Molecular Plant Volume 7 ; 7 >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = The Monist ;
+      issn = 0026-9662 ;
+      eissn = 2153-3601 ;
+      issnl = 0026-9662
+    >
+
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    param[base_url] = http://monist.oxfordjournals.org/
+    implicit < status ; year ; name ; param[volume_name] >
+    comment[0] = expected to be online on 15 Jan 2015
+
+    au < expected ; 2015 ; The Monist Volume 98 ; 98 >
 
   }
 
