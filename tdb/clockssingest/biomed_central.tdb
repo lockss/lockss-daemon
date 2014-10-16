@@ -1430,9 +1430,16 @@
       comment[0] = Journal stopped at the end of 2012, merged with BMC Clinical Parmacology, and became BMC Pharmacology & Toxicology
       comment[1] = Volume 10 has no content on ingest machines or production machines.
 
+      au < doNotProcess ; doNotProcess ; 2001 ; BMC Pharmacology Volume 1 ; 1 >
+      au < doNotProcess ; doNotProcess ; 2002 ; BMC Pharmacology Volume 2 ; 2 >
+      au < doNotProcess ; doNotProcess ; 2003 ; BMC Pharmacology Volume 3 ; 3 >
+      au < doNotProcess ; doNotProcess ; 2004 ; BMC Pharmacology Volume 4 ; 4 >
+      au < doNotProcess ; doNotProcess ; 2005 ; BMC Pharmacology Volume 5 ; 5 >
+      au < doNotProcess ; doNotProcess ; 2006 ; BMC Pharmacology Volume 6 ; 6 >
+      au < doNotProcess ; doNotProcess ; 2007 ; BMC Pharmacology Volume 7 ; 7 >
       au < down ; exists ; 2008 ; BMC Pharmacology Volume 8 ; 8 >
       au < down ; exists ; 2009 ; BMC Pharmacology Volume 9 ; 9 >
-      au < superseded ; down ; 2010 ; BMC Pharmacology Volume 10 ; 10 >
+      au < superseded ; down ; 2010 ; BMC Pharmacology Volume 10 [to delete] ; 10 >
       au < down ; crawling ; 2011 ; BMC Pharmacology Volume 11 ; 11 >
 
     }
