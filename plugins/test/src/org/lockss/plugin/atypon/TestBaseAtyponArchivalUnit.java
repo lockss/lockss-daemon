@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseAtyponArchivalUnit.java,v 1.6 2014-10-15 20:05:12 alexandraohlson Exp $
+ * $Id: TestBaseAtyponArchivalUnit.java,v 1.7 2014-10-17 21:38:52 ldoan Exp $
  */
 
 /*
@@ -278,6 +278,10 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     testSpecificUserMsg("http://www.qscience.com/", bq_msg, 
         "org.lockss.plugin.atypon.bloomsburyqatar.BloomsburyQatarPlugin",
         "org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin");
+    //endocrine society
+    testSpecificUserMsg("http://press.endocrine.org/", null, 
+        "org.lockss.plugin.atypon.endocrinesociety.EndocrineSocietyPlugin",
+        "org.lockss.plugin.atypon.endocrinesociety.ClockssEndocrineSocietyPlugin");
     //futurescience
     testSpecificUserMsg("http://www.future-science.com/", null,
         "org.lockss.plugin.atypon.futurescience.FutureSciencePlugin",
@@ -326,6 +330,7 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     pluginPubMap.put("http://ajph.aphapublications.org/", "American Public Health Association");
     pluginPubMap.put("http://www.birpublications.org/", "British Institute of Radiology");
     pluginPubMap.put("http://www.qscience.com/", "Bloomsbury Qatar Foundation Journals");
+    pluginPubMap.put("http://press.endocrine.org/", "Endocrine Society");
     pluginPubMap.put("http://www.future-science.com/", "Future Science");
     pluginPubMap.put("http://www.maneyonline.com/", "Maney Publishing");
     pluginPubMap.put("http://www.nrcresearchpress.com/", "NRC Research Press");
