@@ -1,5 +1,5 @@
 /*
- * $Id: PeerJPreprintsArticleIteratorFactory.java,v 1.2 2014-10-15 19:26:30 ldoan Exp $
+ * $Id: PeerJPreprintsArticleIteratorFactory.java,v 1.3 2014-10-17 22:44:38 ldoan Exp $
  */
 
 /*
@@ -75,7 +75,7 @@ implements ArticleIteratorFactory,
   public static final String ROLE_ALTERNATE_RDF = "AlternateRdf";
   public static final String ROLE_ALTERNATE_JSON = "AlternateJson";
 
-  // PeerJ's preprints content looks like:
+  // PeerJ preprints content looks like:
   // <peerjbase>.com/preprints/14/
   // <peerjbase>.com/preprints/14.pdf
   // <peerjbase>.com/preprints/14.bib

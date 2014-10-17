@@ -1,5 +1,5 @@
 /*
- * $Id: PeerJHtmlHashFilterFactory.java,v 1.4 2014-09-28 05:56:06 ldoan Exp $
+ * $Id: PeerJHtmlHashFilterFactory.java,v 1.5 2014-10-17 22:44:38 ldoan Exp $
  */
 
 /*
@@ -54,12 +54,12 @@ import org.lockss.util.ReaderInputStream;
 /*
  * Maximal hash filtering
  * Html pages reviewed for filtering:
- * Archives:
+ * Archives (main):
  * year                 - https://peerj.com/archives/
  * volume/start url     - https://peerj.com/archives/?year=2013
  * issue toc            - https://peerj.com/articles/index.html?month=2013-02
  * article              - https://peerj.com/articles/46/
- * Archives-Preprints:
+ * Preprints:
  * year -               - https://peerj.com/archives-preprints/
  * volume/start url     - https://peerj.com/archives-preprints/?year=2013
  * issue toc            - https://peerj.com/preprints/index.html?month=2013-04

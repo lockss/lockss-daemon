@@ -130,7 +130,7 @@ pages:
   https://peerj.com/articles/46.html
   
 Abstract:
-* for archives site, abstract found in full text landing page, pdf, 
+* for archives (main) site, abstract found in full text landing page, pdf, 
 xml, and  other alternate files.
   https://peerj.com/article/173/ 
 * for archives-preprints, abstract found in abstract landing page, 
@@ -315,12 +315,12 @@ comment pairs that includes creation or modification date
 sfxlink javascript commands
 
 * Maximal filtering. Inspected urls for hash filtering:
-  Archives:
+  Archives (main):
     year              - https://peerj.com/archives/
     volume/start url  - https://peerj.com/archives/?year=2013
     issue toc         - https://peerj.com/articles/index.html?month=2013-02
     article           - https://peerj.com/articles/46/
-  Archives-Preprints:
+  Preprints:
     year -            - https://peerj.com/archives-preprints/
     volume/start url  - https://peerj.com/archives-preprints/?year=2013
     issue toc         - https://peerj.com/preprints/index.html?month=2013-04

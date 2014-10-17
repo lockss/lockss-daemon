@@ -1,5 +1,5 @@
 /*
- * $Id: PeerJArticleIteratorFactory.java,v 1.4 2014-10-15 19:26:30 ldoan Exp $
+ * $Id: PeerJArticleIteratorFactory.java,v 1.5 2014-10-17 22:44:38 ldoan Exp $
  */
 
 /*
@@ -69,7 +69,7 @@ implements ArticleIteratorFactory,
   private static String ALTERNATE_HTML_REPLACEMENT = "/$1/$2.html";
   private static String ALTERNATE_RDF_REPLACEMENT = "/$1/$2.rdf";
   private static String ALTERNATE_JSON_REPLACEMENT = "/$1/$2.json";
-  // only in Archives site not in Preprints site
+  // only in Archives (main) site not in Preprints site
   private static String ALTERNATE_UNIXREF_REPLACEMENT = "/$1/$2.unixref";
   
   public static final String ROLE_ALTERNATE_FULL_TEXT_HTML = 
@@ -80,7 +80,7 @@ implements ArticleIteratorFactory,
   
   
   // On an PeerJ publisher website, article content may look like:
-  // from Archives site
+  // from Archives (main) site
   // <peerjbase>.com/articles/55/
   // <peerjbase>.com/articles/55.pdf
   // <peerjbase>.com/articles/55.bib
