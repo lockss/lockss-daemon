@@ -818,15 +818,15 @@
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = extensio
 
-      au < testing ; 2004 ; 1 ; Revista Extensio Volume 2004 ; 2004 ; >
-      au < testing ; 2005 ; 2 ; Revista Extensio Volume 2005 ; 2005 ; >
-      au < testing ; 2006 ; 3 ; Revista Extensio Volume 2006 ; 2006 ; >
-      au < testing ; 2007 ; 4 ; Revista Extensio Volume 2007 ; 2007 ; >
-      au < testing ; 2008 ; 5 ; Revista Extensio Volume 2008 ; 2008 ; >
-      au < testing ; 2009 ; 6 ; Revista Extensio Volume 2009 ; 2009 ; >
-      au < testing ; 2010 ; 7 ; Revista Extensio Volume 2010 ; 2010 ; >
-      au < testing ; 2011 ; 8 ; Revista Extensio Volume 2011 ; 2011 ; >
-      au < testing ; 2012 ; 9 ; Revista Extensio Volume 2012 ; 2012 ; >
+      au < ready ; 2004 ; 1 ; Revista Extensio Volume 2004 ; 2004 ; >
+      au < ready ; 2005 ; 2 ; Revista Extensio Volume 2005 ; 2005 ; >
+      au < ready ; 2006 ; 3 ; Revista Extensio Volume 2006 ; 2006 ; >
+      au < ready ; 2007 ; 4 ; Revista Extensio Volume 2007 ; 2007 ; >
+      au < ready ; 2008 ; 5 ; Revista Extensio Volume 2008 ; 2008 ; >
+      au < ready ; 2009 ; 6 ; Revista Extensio Volume 2009 ; 2009 ; >
+      au < ready ; 2010 ; 7 ; Revista Extensio Volume 2010 ; 2010 ; >
+      au < ready ; 2011 ; 8 ; Revista Extensio Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 9 ; Revista Extensio Volume 2012 ; 2012 ; >
       au < expected ; 2013 ; 10 ; Revista Extensio Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 11 ; Revista Extensio Volume 2014 ; 2014 ; >
 
@@ -843,29 +843,29 @@
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = fragmentos
 
-      au < testing ; 1986 ; 1 ; Revista Fragmentos Volume 1986 ; 1986 ; >
-      au < testing ; 1987 ; 2 ; Revista Fragmentos Volume 1987 ; 1987 ; >
-      au < testing ; 1989 ; 4 ; Revista Fragmentos Volume 1989 ; 1989 ; >
-      au < testing ; 1990 ; 5 ; Revista Fragmentos Volume 1990 ; 1990 ; >
-      au < testing ; 1993 ; 8 ; Revista Fragmentos Volume 1993 ; 1993 ; >
-      au < testing ; 1994 ; 9 ; Revista Fragmentos Volume 1994 ; 1994 ; >
-      au < testing ; 1995 ; 10 ; Revista Fragmentos Volume 1995 ; 1995 ; >
-      au < testing ; 1996 ; 11 ; Revista Fragmentos Volume 1996 ; 1996 ; >
-      au < testing ; 1997 ; 12 ; Revista Fragmentos Volume 1997 ; 1997 ; >
-      au < testing ; 1998 ; 13 ; Revista Fragmentos Volume 1998 ; 1998 ; >
-      au < testing ; 1999 ; 14 ; Revista Fragmentos Volume 1999 ; 1999 ; >
-      au < testing ; 2000 ; 15 ; Revista Fragmentos Volume 2000 ; 2000 ; >
-      au < testing ; 2001 ; 16 ; Revista Fragmentos Volume 2001 ; 2001 ; >
-      au < testing ; 2002 ; 17 ; Revista Fragmentos Volume 2002 ; 2002 ; >
-      au < testing ; 2003 ; 18 ; Revista Fragmentos Volume 2003 ; 2003 ; >
-      au < testing ; 2004 ; 19 ; Revista Fragmentos Volume 2004 ; 2004 ; >
-      au < testing ; 2005 ; 20 ; Revista Fragmentos Volume 2005 ; 2005 ; >
-      au < testing ; 2006 ; 21 ; Revista Fragmentos Volume 2006 ; 2006 ; >
-      au < testing ; 2007 ; 22 ; Revista Fragmentos Volume 2007 ; 2007 ; >
-      au < testing ; 2008 ; 23 ; Revista Fragmentos Volume 2008 ; 2008 ; >
-      au < testing ; 2009 ; 24 ; Revista Fragmentos Volume 2009 ; 2009 ; >
-      au < testing ; 2010 ; 25 ; Revista Fragmentos Volume 2010 ; 2010 ; >
-      au < testing ; 2011 ; 26 ; Revista Fragmentos Volume 2011 ; 2011 ; >
+      au < ready ; 1986 ; 1 ; Revista Fragmentos Volume 1986 ; 1986 ; >
+      au < ready ; 1987 ; 2 ; Revista Fragmentos Volume 1987 ; 1987 ; >
+      au < ready ; 1989 ; 4 ; Revista Fragmentos Volume 1989 ; 1989 ; >
+      au < ready ; 1990 ; 5 ; Revista Fragmentos Volume 1990 ; 1990 ; >
+      au < ready ; 1993 ; 8 ; Revista Fragmentos Volume 1993 ; 1993 ; >
+      au < ready ; 1994 ; 9 ; Revista Fragmentos Volume 1994 ; 1994 ; >
+      au < ready ; 1995 ; 10 ; Revista Fragmentos Volume 1995 ; 1995 ; >
+      au < ready ; 1996 ; 11 ; Revista Fragmentos Volume 1996 ; 1996 ; >
+      au < ready ; 1997 ; 12 ; Revista Fragmentos Volume 1997 ; 1997 ; >
+      au < ready ; 1998 ; 13 ; Revista Fragmentos Volume 1998 ; 1998 ; >
+      au < ready ; 1999 ; 14 ; Revista Fragmentos Volume 1999 ; 1999 ; >
+      au < ready ; 2000 ; 15 ; Revista Fragmentos Volume 2000 ; 2000 ; >
+      au < ready ; 2001 ; 16 ; Revista Fragmentos Volume 2001 ; 2001 ; >
+      au < ready ; 2002 ; 17 ; Revista Fragmentos Volume 2002 ; 2002 ; >
+      au < ready ; 2003 ; 18 ; Revista Fragmentos Volume 2003 ; 2003 ; >
+      au < ready ; 2004 ; 19 ; Revista Fragmentos Volume 2004 ; 2004 ; >
+      au < ready ; 2005 ; 20 ; Revista Fragmentos Volume 2005 ; 2005 ; >
+      au < ready ; 2006 ; 21 ; Revista Fragmentos Volume 2006 ; 2006 ; >
+      au < ready ; 2007 ; 22 ; Revista Fragmentos Volume 2007 ; 2007 ; >
+      au < ready ; 2008 ; 23 ; Revista Fragmentos Volume 2008 ; 2008 ; >
+      au < ready ; 2009 ; 24 ; Revista Fragmentos Volume 2009 ; 2009 ; >
+      au < ready ; 2010 ; 25 ; Revista Fragmentos Volume 2010 ; 2010 ; >
+      au < ready ; 2011 ; 26 ; Revista Fragmentos Volume 2011 ; 2011 ; >
       au < expected ; 2012 ; 27 ; Revista Fragmentos Volume 2012 ; 2012 ; >
       au < expected ; 2013 ; 28 ; Revista Fragmentos Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 29 ; Revista Fragmentos Volume 2014 ; 2014 ; >
@@ -882,34 +882,34 @@
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = geosul
 
-      au < testing ; 1986 ; 1 ; Revista GEOSUL Volume 1986 ; 1986 ; >
-      au < testing ; 1987 ; 2 ; Revista GEOSUL Volume 1987 ; 1987 ; >
-      au < testing ; 1988 ; 3 ; Revista GEOSUL Volume 1988 ; 1988 ; >
-      au < testing ; 1989 ; 4 ; Revista GEOSUL Volume 1989 ; 1989 ; >
-      au < testing ; 1990 ; 5 ; Revista GEOSUL Volume 1990 ; 1990 ; >
-      au < testing ; 1991 ; 6 ; Revista GEOSUL Volume 1991 ; 1991 ; >
-      au < testing ; 1992 ; 7 ; Revista GEOSUL Volume 1992 ; 1992 ; >
-      au < testing ; 1993 ; 8 ; Revista GEOSUL Volume 1993 ; 1993 ; >
-      au < testing ; 1994 ; 9 ; Revista GEOSUL Volume 1994 ; 1994 ; >
-      au < testing ; 1995 ; 10 ; Revista GEOSUL Volume 1995 ; 1995 ; >
-      au < testing ; 1996 ; 11 ; Revista GEOSUL Volume 1996 ; 1996 ; >
-      au < testing ; 1997 ; 12 ; Revista GEOSUL Volume 1997 ; 1997 ; >
-      au < testing ; 1998 ; 13 ; Revista GEOSUL Volume 1998 ; 1998 ; >
-      au < testing ; 1999 ; 14 ; Revista GEOSUL Volume 1999 ; 1999 ; >
-      au < testing ; 2000 ; 15 ; Revista GEOSUL Volume 2000 ; 2000 ; >
-      au < testing ; 2001 ; 16 ; Revista GEOSUL Volume 2001 ; 2001 ; >
-      au < testing ; 2002 ; 17 ; Revista GEOSUL Volume 2002 ; 2002 ; >
-      au < testing ; 2003 ; 18 ; Revista GEOSUL Volume 2003 ; 2003 ; >
-      au < testing ; 2004 ; 19 ; Revista GEOSUL Volume 2004 ; 2004 ; >
-      au < testing ; 2005 ; 20 ; Revista GEOSUL Volume 2005 ; 2005 ; >
-      au < testing ; 2006 ; 21 ; Revista GEOSUL Volume 2006 ; 2006 ; >
-      au < testing ; 2007 ; 22 ; Revista GEOSUL Volume 2007 ; 2007 ; >
-      au < testing ; 2008 ; 23 ; Revista GEOSUL Volume 2008 ; 2008 ; >
-      au < testing ; 2009 ; 24 ; Revista GEOSUL Volume 2009 ; 2009 ; >
-      au < testing ; 2010 ; 25 ; Revista GEOSUL Volume 2010 ; 2010 ; >
-      au < testing ; 2011 ; 26 ; Revista GEOSUL Volume 2011 ; 2011 ; >
-      au < testing ; 2012 ; 27 ; Revista GEOSUL Volume 2012 ; 2012 ; >
-      au < testing ; 2013 ; 28 ; Revista GEOSUL Volume 2013 ; 2013 ; >
+      au < ready ; 1986 ; 1 ; Revista GEOSUL Volume 1986 ; 1986 ; >
+      au < ready ; 1987 ; 2 ; Revista GEOSUL Volume 1987 ; 1987 ; >
+      au < ready ; 1988 ; 3 ; Revista GEOSUL Volume 1988 ; 1988 ; >
+      au < ready ; 1989 ; 4 ; Revista GEOSUL Volume 1989 ; 1989 ; >
+      au < ready ; 1990 ; 5 ; Revista GEOSUL Volume 1990 ; 1990 ; >
+      au < ready ; 1991 ; 6 ; Revista GEOSUL Volume 1991 ; 1991 ; >
+      au < ready ; 1992 ; 7 ; Revista GEOSUL Volume 1992 ; 1992 ; >
+      au < ready ; 1993 ; 8 ; Revista GEOSUL Volume 1993 ; 1993 ; >
+      au < ready ; 1994 ; 9 ; Revista GEOSUL Volume 1994 ; 1994 ; >
+      au < notReady ; 1995 ; 10 ; Revista GEOSUL Volume 1995 ; 1995 ; no substance on website >
+      au < notReady ; 1996 ; 11 ; Revista GEOSUL Volume 1996 ; 1996 ; no substance on website >
+      au < notReady ; 1997 ; 12 ; Revista GEOSUL Volume 1997 ; 1997 ; no substance on website >
+      au < notReady ; 1998 ; 13 ; Revista GEOSUL Volume 1998 ; 1998 ; no substance on website >
+      au < ready ; 1999 ; 14 ; Revista GEOSUL Volume 1999 ; 1999 ; >
+      au < ready ; 2000 ; 15 ; Revista GEOSUL Volume 2000 ; 2000 ; >
+      au < ready ; 2001 ; 16 ; Revista GEOSUL Volume 2001 ; 2001 ; >
+      au < ready ; 2002 ; 17 ; Revista GEOSUL Volume 2002 ; 2002 ; >
+      au < ready ; 2003 ; 18 ; Revista GEOSUL Volume 2003 ; 2003 ; >
+      au < ready ; 2004 ; 19 ; Revista GEOSUL Volume 2004 ; 2004 ; >
+      au < ready ; 2005 ; 20 ; Revista GEOSUL Volume 2005 ; 2005 ; >
+      au < ready ; 2006 ; 21 ; Revista GEOSUL Volume 2006 ; 2006 ; >
+      au < ready ; 2007 ; 22 ; Revista GEOSUL Volume 2007 ; 2007 ; >
+      au < ready ; 2008 ; 23 ; Revista GEOSUL Volume 2008 ; 2008 ; >
+      au < ready ; 2009 ; 24 ; Revista GEOSUL Volume 2009 ; 2009 ; >
+      au < ready ; 2010 ; 25 ; Revista GEOSUL Volume 2010 ; 2010 ; >
+      au < ready ; 2011 ; 26 ; Revista GEOSUL Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 27 ; Revista GEOSUL Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 28 ; Revista GEOSUL Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 29 ; Revista GEOSUL Volume 2014 ; 2014 ; >
 
   }
