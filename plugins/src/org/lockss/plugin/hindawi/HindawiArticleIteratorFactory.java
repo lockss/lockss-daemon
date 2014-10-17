@@ -1,10 +1,10 @@
 /*
- * $Id: HindawiArticleIteratorFactory.java,v 1.2 2013-06-20 00:05:48 thib_gc Exp $
+ * $Id: HindawiArticleIteratorFactory.java,v 1.3 2014-10-17 17:57:36 alexandraohlson Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -44,7 +44,13 @@ public class HindawiArticleIteratorFactory
 
   protected static final String ROOT_TEMPLATE_HTML = "\"%sjournals/%s/%s/\", base_url, journal_id, volume_name";
   protected static final String ROOT_TEMPLATE_PDF = "\"%sjournals/%s/%s/\", download_url, journal_id, volume_name";
-  protected static final String PATTERN_TEMPLATE = "\"^(%sjournals/%s/%s/\\d+|%sjournals/%s/%s/\\d+\\.pdf)$\", base_url, journal_id, volume_name, download_url, journal_id, volume_name";
+  /* limit html art_id to  > 3 digits because article id's are generally ~6 digits and TOC 
+   * uses same format but with low number (indicating page of articles)
+   * Don't need to put digit limitation pdf version - will never be a TOC
+   * article example: http://www.hindawi.com/journals/ijmms/1978/231678/
+   * toc example: http://www.hindawi.com/journals/aaa/2013/ --> http://www.hindawi.com/journals/aaa/2013/14/ (1,373 articles)
+   */
+  protected static final String PATTERN_TEMPLATE = "\"^(%sjournals/%s/%s/\\d{4,}|%sjournals/%s/%s/\\d+\\.pdf)$\", base_url, journal_id, volume_name, download_url, journal_id, volume_name";
 
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) throws PluginException {
