@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.102 2014-05-29 01:27:27 thib_gc Exp $
+ * $Id: TestStringUtil.java,v 1.103 2014-10-17 21:48:17 thib_gc Exp $
  */
 
 /*
@@ -1423,6 +1423,12 @@ public class TestStringUtil extends LockssTestCase {
     assertEquals("a-z", StringUtil.normalizeDashes("a\u2013z"));
     assertEquals("a-z", StringUtil.normalizeDashes("a\u2014z"));
     assertEquals("a-z", StringUtil.normalizeDashes("a\u2015z"));
+  }
+  
+  public void testNonNull() throws Exception {
+    assertSame("foo", StringUtil.nonNull("foo"));
+    assertSame("", StringUtil.nonNull(""));
+    assertEquals("", StringUtil.nonNull(null));
   }
   
 }

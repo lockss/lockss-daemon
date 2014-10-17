@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.121 2014-08-22 19:26:18 fergaloy-sf Exp $
+ * $Id: StringUtil.java,v 1.122 2014-10-17 21:48:17 thib_gc Exp $
  */
 
 /*
@@ -2183,4 +2183,21 @@ public class StringUtil {
 
     return "[" + separatedString(theArray, DEFAULT_COLLECTION_SEPARATOR) + "]";
   }
+  
+  /**
+   * <p>
+   * Simply returns the given string, or the empty string <code>""</code> if
+   * null, i.e. guarantees a non-null string as a result.
+   * </p>
+   * 
+   * @param str
+   *          A string.
+   * @return If <code>str</code> is null, then <code>""</code>, otherwise
+   *         <code>str</code>.
+   * @since 1.67
+   */
+  public static String nonNull(String str) {
+    return (str == null) ? "" : str;
+  }
+  
 }
