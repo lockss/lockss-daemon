@@ -1,4 +1,4 @@
-/* $Id: TestPeerJArticleIteratorFactory.java,v 1.6 2014-10-15 19:14:37 ldoan Exp $
+/* $Id: TestPeerJArticleIteratorFactory.java,v 1.7 2014-10-17 22:49:51 ldoan Exp $
 
 Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -157,7 +157,7 @@ public class TestPeerJArticleIteratorFactory
   public void testCreateArticleFiles() throws Exception {
     PluginTestUtil.crawlSimAu(sau);
 
-    // 48 for Archives site
+    // 48 for Archives (main) site
     // 36 for Preprints since it does not have unixref files
     int expAlternateFileCount = 12 * variantAlternateRoles.size();
     
@@ -274,7 +274,7 @@ public class TestPeerJArticleIteratorFactory
   }
   
   /*
-   * PeerJ Archives site.
+   * PeerJ Archives (main) site.
    *   article files:
    *   full text pdf      - <baser_url>/articles/55.pdf
    *   abstract           - <baser_url>/articles/55/     (including full text)
@@ -303,7 +303,7 @@ public class TestPeerJArticleIteratorFactory
   }
 
  /*
-  * PeerJ Archives Preprints site.
+  * PeerJ Preprints site.
   *   article files:
   *   full text pdf      - <baser_url>/preprints/14.pdf
   *   abstract           - <baser_url>/preprints/14/      (including full text)

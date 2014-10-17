@@ -1,5 +1,5 @@
 /*
- * $Id: TestPeerJHtmlFilterFactory.java,v 1.3 2014-10-15 19:14:37 ldoan Exp $
+ * $Id: TestPeerJHtmlFilterFactory.java,v 1.4 2014-10-17 22:49:51 ldoan Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ import org.lockss.plugin.PluginTestUtil;
 import org.lockss.test.*;
 
 /*
- * Tests hash filtering for both PeerJ sites: Archives, and Preprints.
+ * Tests hash filtering for both PeerJ sites: Archives (main), and Preprints.
  */
 public class TestPeerJHtmlFilterFactory
   extends LockssTestCase {

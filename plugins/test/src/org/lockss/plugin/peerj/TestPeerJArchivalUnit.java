@@ -1,5 +1,5 @@
 /*
- * $Id: TestPeerJArchivalUnit.java,v 1.5 2014-10-15 19:14:37 ldoan Exp $
+ * $Id: TestPeerJArchivalUnit.java,v 1.6 2014-10-17 22:49:51 ldoan Exp $
  */
 
 /*
@@ -91,7 +91,7 @@ public class TestPeerJArchivalUnit extends LockssTestCase {
     return au;
   }
   
-  // Test the crawl rules for PeerJ Archives site
+  // Test the crawl rules for PeerJ Archives (main) site
   public void testShouldCacheProperPages(DefinableArchivalUnit au, 
       String peerjSite, String baseConstant) throws Exception {
     daemon.getLockssRepository(au);
@@ -106,7 +106,7 @@ public class TestPeerJArchivalUnit extends LockssTestCase {
     // issue toc - https://peerj.com/articles/index.html?month=2013-09
     shouldCacheTest(BASE_URL + baseConstant + "/index.html?month=2013-09", 
                     true, au, cus);
-    // article from Archives site - https://peerj.com/articles/55/
+    // article from Archives (main) site - https://peerj.com/articles/55/
     //   other files: .bib, .pdf, .ris, .xml, .rdf, .json, .unixref, /reviews
     // article from Preprints site - https://peerj.com/preprints/55/
     //   other files: .bib, .pdf, .ris, .xml, .rdf, .json
@@ -204,7 +204,7 @@ public class TestPeerJArchivalUnit extends LockssTestCase {
     daemon.getCrawlManager();
   }
 
-  // Variant to test PeerJ Archives site
+  // Variant to test PeerJ Archives (main) site
   public static class TestArchives extends TestPeerJArchivalUnit {   
     public void testArchivalUnit() throws Exception {
       variantPluginName = "PeerJ Plugin";
