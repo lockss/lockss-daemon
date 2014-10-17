@@ -1,5 +1,5 @@
 /*
- * $Id: TdbXml.java,v 1.2 2014-09-09 19:44:54 thib_gc Exp $
+ * $Id: TdbXml.java,v 1.3 2014-10-17 22:14:57 thib_gc Exp $
  */
 
 /*
@@ -206,15 +206,6 @@ public class TdbXml {
 
   /**
     * <p>
-    * A TDB builder.
-    * </p>
-    *
-    * @since 1.67
-    */
-  protected TdbBuilder tdbBuilder;
-  
-  /**
-    * <p>
     * A TDB query builder.
     * </p>
     *
@@ -230,7 +221,6 @@ public class TdbXml {
     * @since 1.67
     */
   public TdbXml() {
-    this.tdbBuilder = new TdbBuilder();
     this.tdbQueryBuilder = new TdbQueryBuilder();
   }
   
@@ -250,6 +240,7 @@ public class TdbXml {
     KeepGoingOption.addOptions(options);
     InputOption.addOptions(options);
     OutputOption.addOptions(options);
+    OutputDirectoryOption.addOptions(options);
     tdbQueryBuilder.addOptions(options);
     // Own options
     options.addOption(OPTION_NO_PUB_DOWN);
@@ -275,7 +266,12 @@ public class TdbXml {
     KeepGoingOption.processCommandLine(options, cmd);
     InputOption.processCommandLine(options, cmd);
     OutputOption.processCommandLine(options, cmd);
+    OutputDirectoryOption.processCommandLine(options, cmd);
     tdbQueryBuilder.processCommandLine(options, cmd);
+    // Sanity check
+    if (OutputOption.isSingleOutput(options) && OutputDirectoryOption.isMultipleOutput(options)) {
+      AppUtil.error("Cannot request both single and directory output");
+    }
     // Own options
     options.put(KEY_NO_PUB_DOWN, Boolean.valueOf(cmd.hasOption(KEY_NO_PUB_DOWN)));
     options.put(KEY_NO_TIMESTAMP, Boolean.valueOf(cmd.hasOption(KEY_NO_TIMESTAMP)));
@@ -284,63 +280,20 @@ public class TdbXml {
     
   /**
    * <p>
-   * Parses the TDB files listed in the options map.
+   * Produces output from a parsed TDB into the given print stream.
    * </p>
    * 
    * @param options
    *          The options map.
-   * @return A parsed {@link Tdb} structure.
-   * @throws IOException
-   *           if any I/O exceptions occur.
-   * @since 1.67
-   */
-  public Tdb processFiles(Map<String, Object> options) throws IOException {
-    List<String> inputFiles = InputOption.getInput(options);
-    for (String f : inputFiles) {
-      try {
-        if ("-".equals(f)) {
-          f = "<stdin>";
-          tdbBuilder.parse(f, System.in);
-        }
-        else {
-          tdbBuilder.parse(f);
-        }
-      }
-      catch (FileNotFoundException fnfe) {
-        AppUtil.warning(options, fnfe, "%s: file not found", f);
-        KeepGoingOption.addError(options, fnfe);
-      }
-      catch (IOException ioe) {
-        AppUtil.warning(options, ioe, "%s: I/O error", f);
-        KeepGoingOption.addError(options, ioe);
-      }
-      catch (SyntaxError se) {
-        AppUtil.warning(options, se, se.getMessage());
-        KeepGoingOption.addError(options, se);
-      }
-    }
-    
-    List<Exception> errors = KeepGoingOption.getErrors(options);
-    int errs = errors.size();
-    if (KeepGoingOption.isKeepGoing(options) && errs > 0) {
-      AppUtil.error(options, errors, "Encountered %d %s; exiting", errs, errs == 1 ? "error" : "errors");
-    }
-    return tdbBuilder.getTdb();
-  }
-  
-  /**
-   * <p>
-   * Produces output from a parsed TDB.
-   * </p>
-   * 
-   * @param options
-   *          The options map.
+   * @param out
+   *          A print stream.
    * @param tdb
    *          A TDB structure.
    * @since 1.67
    */
-  public void produceOutput(Map<String, Object> options, Tdb tdb) {
-    PrintStream out = OutputOption.getOutput(options);
+  public void produceOutput(Map<String, Object> options,
+                            PrintStream out,
+                            Tdb tdb) {
     Predicate<Au> auPredicate = tdbQueryBuilder.getAuPredicate(options);
     
     preamble(options, out);
@@ -491,6 +444,7 @@ public class TdbXml {
       out.append(" </property>\n");
       out.append("\n");
     }
+    
     postamble(options, out);
   }
 
@@ -651,6 +605,103 @@ public class TdbXml {
   public void postamble(Map<String, Object> options, PrintStream out) {
     out.println("</lockss-config>");
   }
+
+  /**
+   * <p>
+   * Runs the command when directory output has been requested, processing one
+   * input file at a time and producing output for it in the corresponding
+   * file before moving on to the next.
+   * </p>
+   * 
+   * @param options
+   *          The options map.
+   * @since 1.67
+   */
+  public void processMultipleOutput(Map<String, Object> options) {
+    List<String> inputFiles = InputOption.getInput(options);
+    for (String f : inputFiles) {
+      try {
+        TdbBuilder tdbBuilder = new TdbBuilder();
+        if ("-".equals(f)) {
+          AppUtil.warning(options, null, "Cannot process from standard input in output directory mode");
+          KeepGoingOption.addError(options, null);
+        }
+        else {
+          tdbBuilder.parse(f);
+          PrintStream out = OutputDirectoryOption.getMultipleOutput(options, f, ".xml");
+          produceOutput(options, out, tdbBuilder.getTdb());
+          out.close();
+        }
+      }
+      catch (FileNotFoundException fnfe) {
+        AppUtil.warning(options, fnfe, "%s: file not found", f);
+        KeepGoingOption.addError(options, fnfe);
+      }
+      catch (IOException ioe) {
+        AppUtil.warning(options, ioe, "%s: error reading from file", f);
+        KeepGoingOption.addError(options, ioe);
+      }
+      catch (SyntaxError se) {
+        AppUtil.warning(options, se, se.getMessage());
+        KeepGoingOption.addError(options, se);
+      }
+    }
+    
+    List<Exception> errors = KeepGoingOption.getErrors(options);
+    int errs = errors.size();
+    if (KeepGoingOption.isKeepGoing(options) && errs > 0) {
+      AppUtil.error(options, errors, "Encountered %d %s; exiting", errs, errs == 1 ? "error" : "errors");
+    }
+  }
+  
+  /**
+   * <p>
+   * Runs the command when single output has been requested, processing the
+   * entire set of input files before producing all output into a single
+   * destination.
+   * </p>
+   * 
+   * @param options
+   *          The options map.
+   * @since 1.67
+   */
+  public void processSingleOutput(Map<String, Object> options) {
+    List<String> inputFiles = InputOption.getInput(options);
+    TdbBuilder tdbBuilder = new TdbBuilder();
+    for (String f : inputFiles) {
+      try {
+        if ("-".equals(f)) {
+          f = "<stdin>";
+          tdbBuilder.parse(f, System.in);
+        }
+        else {
+          tdbBuilder.parse(f);
+        }
+      }
+      catch (FileNotFoundException fnfe) {
+        AppUtil.warning(options, fnfe, "%s: file not found", f);
+        KeepGoingOption.addError(options, fnfe);
+      }
+      catch (IOException ioe) {
+        AppUtil.warning(options, ioe, "%s: I/O error", f);
+        KeepGoingOption.addError(options, ioe);
+      }
+      catch (SyntaxError se) {
+        AppUtil.warning(options, se, se.getMessage());
+        KeepGoingOption.addError(options, se);
+      }
+    }
+    
+    List<Exception> errors = KeepGoingOption.getErrors(options);
+    int errs = errors.size();
+    if (KeepGoingOption.isKeepGoing(options) && errs > 0) {
+      AppUtil.error(options, errors, "Encountered %d %s; exiting", errs, errs == 1 ? "error" : "errors");
+    }
+    
+    PrintStream out = OutputOption.getSingleOutput(options);
+    produceOutput(options, out, tdbBuilder.getTdb());
+    out.close();
+  }
   
   /**
    * <p>
@@ -667,8 +718,12 @@ public class TdbXml {
   public void run(CommandLine cmd) throws IOException {
     Map<String, Object> options = new HashMap<String, Object>();
     processCommandLine(options, cmd);
-    Tdb tdb = processFiles(options);
-    produceOutput(options, tdb);
+    if (OutputDirectoryOption.isMultipleOutput(options)) {
+      processMultipleOutput(options);
+    }
+    else {
+      processSingleOutput(options);
+    }
   }
   
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: OutputOption.java,v 1.2 2014-09-09 19:44:54 thib_gc Exp $
+ * $Id: OutputOption.java,v 1.3 2014-10-17 22:14:57 thib_gc Exp $
  */
 
 /*
@@ -33,7 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.tdb;
 
 import java.io.*;
-import java.util.Map;
+import java.util.*;
 
 import org.apache.commons.cli.*;
 
@@ -46,7 +46,8 @@ import org.apache.commons.cli.*;
  * the command line processed by {@link #processCommandLine(Map, CommandLine)},
  * {@link #getOutput(Map)} will return an open {@link PrintStream} into which
  * output should be written. If the output option is not requested or if the
- * file name used is <code>"-"</code>, this is {@link System#out}.
+ * file name used is <code>"-"</code>, this is a wrapper for {@link System#out}
+ * that cannot actually be closed.
  * </p>
  * 
  * @author Thib Guicherd-Callin
@@ -134,36 +135,56 @@ public class OutputOption {
    */
   public static void processCommandLine(Map<String, Object> options,
                                         CommandLine cmd) {
-    String f = null;
     if (cmd.hasOption(KEY_OUTPUT)) {
-      f = cmd.getOptionValue(KEY_OUTPUT);
-    }
-    if (f == null || "-".equals(f)) {
-      options.put(KEY_OUTPUT, System.out);
-    }
-    else {
-      try {
-        options.put(KEY_OUTPUT, new PrintStream(f));
+      String f = cmd.getOptionValue(KEY_OUTPUT);
+      if (f == null || "-".equals(f)) {
+        options.put(KEY_OUTPUT, new PrintStream(System.out) {
+          @Override
+          public void close() {
+            // Don't close stdout
+          }
+        });
       }
-      catch (FileNotFoundException fnfe) {
-        AppUtil.error(options, fnfe, "%s: file not found", f);
+      else {
+        try {
+          options.put(KEY_OUTPUT, new PrintStream(f));
+        }
+        catch (FileNotFoundException fnfe) {
+          AppUtil.error(options, fnfe, "%s: error opening file for writing", f);
+        }
       }
     }
   }
 
   /**
    * <p>
-   * Determines from the options map the {@link PrintStream} into which output
-   * should be written, by default {@link System#out}.
+   * Determines if this option has been requested on the command line.
    * </p>
    * 
    * @param options
    *          An options map.
-   * @return An open {@link PrintStream} instance.
+   * @return True if and only if this option has been requested on the command
+   *         line.
    * @since 1.67
    */
-  public static PrintStream getOutput(Map<String, Object> options) {
+  public static boolean isSingleOutput(Map<String, Object> options) {
+    return options.containsKey(KEY_OUTPUT);
+  }
+  
+  /**
+   * <p>
+   * Returns an open print stream for the output file requested at the command
+   * line, or if not requested (or if the requested file name is <code>-</code>
+   * ), a wrapper for {@link System.out} that cannot actually be closed.
+   * </p>
+   * 
+   * @param options
+   *          The options maps.
+   * @return An open print stream.
+   * @since 1.67
+   */
+  public static PrintStream getSingleOutput(Map<String, Object> options) {
     return (PrintStream)options.get(KEY_OUTPUT);
   }
-
+  
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TdbOut.java,v 1.4 2014-09-09 19:44:54 thib_gc Exp $
+ * $Id: TdbOut.java,v 1.5 2014-10-17 22:14:57 thib_gc Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.*;
 
 import org.apache.commons.cli.*;
 import org.lockss.tdb.AntlrUtil.SyntaxError;
+import org.lockss.util.StringUtil;
 
 public class TdbOut {
 
@@ -651,7 +652,7 @@ public class TdbOut {
    * @since 1.67
    */
   public void produceOutput(Map<String, Object> options, Tdb tdb) {
-    PrintStream out = OutputOption.getOutput(options);
+    PrintStream out = OutputOption.getSingleOutput(options);
     Predicate<Au> auPredicate = tdbQueryBuilder.getAuPredicate(options);
     boolean csv = STYLE_CSV.equals(getStyle(options));
     
@@ -698,7 +699,7 @@ public class TdbOut {
    * @since 1.67
    */
   public void produceJournals(Map<String, Object> options, Tdb tdb) {
-    PrintStream out = OutputOption.getOutput(options);
+    PrintStream out = OutputOption.getSingleOutput(options);
     boolean typeJournal = KEY_TYPE_JOURNAL.equals(options.get(KEY_JOURNALS));
     for (Title title : tdb.getTitles()) {
       if (typeJournal && !Title.TYPE_JOURNAL.equals(title.getType())) {
@@ -707,8 +708,8 @@ public class TdbOut {
       out.println(String.format("%s,%s,%s,%s",
                                 csvValue(title.getPublisher().getName()),
                                 csvValue(title.getName()),
-                                csvValue(nonNull(title.getIssn())),
-                                csvValue(nonNull(title.getEissn()))));
+                                csvValue(StringUtil.nonNull(title.getIssn())),
+                                csvValue(StringUtil.nonNull(title.getEissn()))));
     }
     out.close();
   }
@@ -800,20 +801,6 @@ public class TdbOut {
     else {
       return "\"" + str.replace("\"", "\"\"") + "\"";
     }
-  }
-  
-  /**
-   * <p>
-   * Returns the given string, or the empty string if null.
-   * </p>
-   * 
-   * @param str
-   *          A string.
-   * @return <code>str == null ? "" : str</code>
-   * @since 1.67
-   */
-  protected static String nonNull(String str) {
-    return str == null ? "" : str;
   }
   
   /**
