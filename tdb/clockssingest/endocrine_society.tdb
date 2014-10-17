@@ -61,7 +61,7 @@
 
     {
      
-      plugin = needs.plugin
+      plugin = org.lockss.plugin.atypon.endocrinesociety.ClockssEndocrineSocietyPlugin
       param[base_url] = http://press.endocrine.org/
       param[journal_id] = edrv
 
@@ -126,7 +126,7 @@
 
     {
 
-      plugin = needs.plugin
+      plugin = org.lockss.plugin.atypon.endocrinesociety.ClockssEndocrineSocietyPlugin
       param[base_url] = http://press.endocrine.org/
       param[journal_id] = endo
 
@@ -310,7 +310,7 @@
 
     {
 
-      plugin = needs.plugin
+      plugin = org.lockss.plugin.atypon.endocrinesociety.ClockssEndocrineSocietyPlugin
       param[base_url] = http://press.endocrine.org/
       param[journal_id] = jcem
 
@@ -438,7 +438,7 @@
 
     {
 
-      plugin = needs.plugin
+      plugin = org.lockss.plugin.atypon.endocrinesociety.ClockssEndocrineSocietyPlugin
       param[base_url] = http://press.endocrine.org/
       param[journal_id] = mend
 
