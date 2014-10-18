@@ -15085,6 +15085,7 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://mplant.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    comment[0] = move to Cell Press 2015-01-01
 
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Molecular Plant Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; released ; 2009 ; Molecular Plant Volume 2 ; 2 >
