@@ -22206,12 +22206,7 @@
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     implicit < status ; year ; name ; param[volume_name] >
 
-    {
-
       au < manifest ; 2010 ; International Immunology Meeting Abstracts Volume 22 ; 22 >
-      au < expected ; 2011 ; International Immunology Meeting Abstracts Volume 23 ; 23 >
-
-    }
 
   }
 
