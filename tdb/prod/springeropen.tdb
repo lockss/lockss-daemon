@@ -1036,16 +1036,17 @@
   
         title <
           name = International Journal of Advanced Structural Engineering ;
-          issn = 2008-6695 
+          issn = 2008-3556 ;
+          eissn = 2008-6695 
         >
   
         param[base_url] = http://www.advancedstructeng.com/
         param[journal_issn] = 2008-6695 
         comment[platform] = BioMedCentralPlugin
   
-        au < exists ; 2012 ; International Journal of Advanced Structural Engineering Volume 2012 ; 2012 >
-        au < expected ; 2013 ; International Journal of Advanced Structural Engineering Volume 2013 ; 2013 >
-        au < expected ; 2014 ; International Journal of Advanced Structural Engineering Volume 2014 ; 2014 >
+        au < exists ; 2012 ; International Journal of Advanced Structural Engineering Volume 4 ; 4>
+        au < expected ; 2013 ; International Journal of Advanced Structural Engineering Volume 5 ; 5 >
+        au < expected ; 2014 ; International Journal of Advanced Structural Engineering Volume 6 ; 6 >
   
     }
   
@@ -2642,6 +2643,8 @@
         param[base_url] = http://www.springer.com/10202/
         param[journal_issn] = 1615-6609
         comment[platform] = Springer
+        comment[0] = no issue in 2007
+        comment[moved] = This journal will be discontinued at the end of 2012
   
         au < exists ; 2001-2003 ; Poiesis & Praxis Volume 1 ; 1 >
         au < exists ; 2003-2004 ; Poiesis & Praxis Volume 2 ; 2 >
@@ -2652,8 +2655,6 @@
         au < exists ; 2010-2011 ; Poiesis & Praxis Volume 7 ; 7 >
         au < exists ; 2011-2012 ; Poiesis & Praxis Volume 8 ; 8 >
         au < exists ; 2012 ; Poiesis & Praxis Volume 9 ; 9 >
-        au < expected ; 2013 ; Poiesis & Praxis Volume 10 ; 10 >
-        au < expected ; 2014 ; Poiesis & Praxis Volume 11 ; 11 >
   
     }
 
