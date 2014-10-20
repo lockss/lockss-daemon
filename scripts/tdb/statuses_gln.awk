@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# cat *.tdb | tdbout -t publisher,plugin,publisher:info[tester],status,year
+#tdbout -t publisher,plugin,publisher:info[tester],status,year *.tdb 
 
 BEGIN {
   FS="\t"

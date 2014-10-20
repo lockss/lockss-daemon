@@ -2,7 +2,7 @@
 #
 # Script to generate a list of AUs to test in the gln.
 #
-# cat tdb/prod/*.tdb | ./scripts/tdb/tdbout -MWTN -t publisher,plugin,publisher:info[tester],status,year | ./scripts/tdb/statuses_gln.awk
+# ./scripts/tdb/tdbout -MWTN -t publisher,plugin,publisher:info[tester],status,year tdb/prod/*.tdb | ./scripts/tdb/statuses_gln.awk
 
 
 tpath="/home/$LOGNAME/tmp"
@@ -19,12 +19,12 @@ mkdir -p $tpath
   diff $tpath/glnlist $tpath/notclockss | grep "< " | sed 's/..//' > $tpath/glnAndclockss
 
 #Report any AU in the gln marked notReady, wanted, or testing.
-cat ../../tdb/prod/*.tdb | ./tdbout -NWT -t publisher,plugin,publisher:info[tester],status,year > $tpath/glntest
+./tdbout -NWT -t publisher,plugin,publisher:info[tester],status,year ../../tdb/prod/*.tdb > $tpath/glntest
 
 #Report any AU in the gln marked manifest that does not have a file in clockss.
 for file in `cat $tpath/notclockss`
 do
-  ./tdbout -M -t publisher,plugin,publisher:info[tester],status,year -i ../../tdb/prod/$file >> $tpath/glntest
+  ./tdbout -M -t publisher,plugin,publisher:info[tester],status,year ../../tdb/prod/$file >> $tpath/glntest
 done
 
 #Report some AUs in the gln marked manifest that do not have an equivalent in clockss.
@@ -32,13 +32,13 @@ for file in `cat $tpath/glnAndclockss`
 do
   if ! grep $file $tpath/glnfilter > /dev/null
   then
-    ./tdbout -M -t publisher,plugin,publisher:info[tester],status,year -Q 'plugin ~ "OJS" or plugin ~ "ProjectMuse"' -i ../../tdb/prod/$file >> $tpath/glntest
+    ./tdbout -M -t publisher,plugin,publisher:info[tester],status,year -Q 'plugin ~ "OJS" or plugin ~ "ProjectMuse"' ../../tdb/prod/$file >> $tpath/glntest
 # Add in AUs in manifest status in files that are in both gln & clockss, with a * to mark them
-#    ./tdbout -M -t publisher,plugin,publisher:info[tester],status,year -Q 'plugin !~ "OJS" or plugin !~ "ProjectMuse"' -i ../../tdb/prod/$file | sed 's/^/*/' >> $tpath/glntest
+#    ./tdbout -M -t publisher,plugin,publisher:info[tester],status,year -Q 'plugin !~ "OJS" or plugin !~ "ProjectMuse"' ../../tdb/prod/$file | sed 's/^/*/' >> $tpath/glntest
 
-#    ./tdbout -M -t auid,publisher,plugin,publisher:info[tester],status -i ../../tdb/prod/$file > $tpath/glnM
+#    ./tdbout -M -t auid,publisher,plugin,publisher:info[tester],status ../../tdb/prod/$file > $tpath/glnM
 #    cat $tpath/glnM | sed 's/\t.*$//' | sed -e 's/^[^&]*&//' | sort | uniq > $tpath/glnauids
-#    ./tdbout -M -t auid | sed -e 's/^[^&]*&//' -i ../../tdb/clockssingest/$file | sort | uniq > $tpath/clockssauids
+#    ./tdbout -M -t auid | sed -e 's/^[^&]*&//' ../../tdb/clockssingest/$file | sort | uniq > $tpath/clockssauids
 #    diff $tpath/glnauids $tpath/clockssauids | grep "> " | sed 's/..//' > $tpath/mysteryauids
   fi
 done

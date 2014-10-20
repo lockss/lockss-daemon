@@ -71,8 +71,8 @@ fi
 # If the files exist, compare the titles.
 if [[ $exists_cks == 1  &&  $exists_gln == 1 ]]
 then
-  ./tdbout -j -i ../../tdb/prod/$file | sort | uniq | grep -vf gvc_gln.txt > $tpath/glnt.txt
-  ./tdbout -j -i ../../tdb/clockssingest/$file | sort | uniq | grep -vf gvc_clockss.txt > $tpath/clocksst.txt
+  ./tdbout -j ../../tdb/prod/$file | sort | uniq | grep -vf gvc_gln.txt > $tpath/glnt.txt
+  ./tdbout -j ../../tdb/clockssingest/$file | sort | uniq | grep -vf gvc_clockss.txt > $tpath/clocksst.txt
   rm $tpath/diff.txt
   if ! diff $tpath/glnt.txt $tpath/clocksst.txt > $tpath/diff.txt
     #echo Diff Lines: $diff_lines
@@ -89,8 +89,8 @@ then
     maxnumAUs1=$numdiffAUs
     maxnumAUs2=$numdiffAUs
     echo "No title differences"
-    ./tdbout -c auid,name,year -i ../../tdb/prod/$file | grep -vf gvc_gln.txt | sed -e 's/^[^&]*&//' | sed -e 's/ \[superseded\]//' | sort | uniq > $tpath/glnt.txt
-    ./tdbout -c auid,name,year -i ../../tdb/clockssingest/$file | grep -vf gvc_clockss.txt | sed -e 's/^[^&]*&//' | sed -e 's/ \[superseded\]//' | sort | uniq > $tpath/clocksst.txt
+    ./tdbout -c auid,name,year ../../tdb/prod/$file | grep -vf gvc_gln.txt | sed -e 's/^[^&]*&//' | sed -e 's/ \[superseded\]//' | sort | uniq > $tpath/glnt.txt
+    ./tdbout -c auid,name,year ../../tdb/clockssingest/$file | grep -vf gvc_clockss.txt | sed -e 's/^[^&]*&//' | sed -e 's/ \[superseded\]//' | sort | uniq > $tpath/clocksst.txt
     if ! diff -i $tpath/glnt.txt $tpath/clocksst.txt > $tpath/diff.txt
     then
       echo "AU differences: GLN v CLOCKSSingest"
@@ -116,15 +116,15 @@ then
       maxnumAUsA=$numdiffAUs
       echo "No AU differences"
       # Find AUs in the gln marked expected, exists, ready, released, superseded (these will be eleminated from the list)
-      ./tdbout -EXYRS -c auid,name -i ../../tdb/prod/$file | grep -vf gvc_gln.txt > $tpath/done_gln_exyrs.txt
+      ./tdbout -EXYRS -c auid,name ../../tdb/prod/$file | grep -vf gvc_gln.txt > $tpath/done_gln_exyrs.txt
       # Find AUs in the gln marked down
-      ./tdbout -D -c auid,name -i ../../tdb/prod/$file | grep -vf gvc_gln.txt | sed -e 's/HighWirePressPlugin/HighWirePressH20Plugin/' | sed -e 's/HighWireStrVolPlugin/HighWirePressH20Plugin/' > $tpath/done_gln_d.txt
+      ./tdbout -D -c auid,name ../../tdb/prod/$file | grep -vf gvc_gln.txt | sed -e 's/HighWirePressPlugin/HighWirePressH20Plugin/' | sed -e 's/HighWireStrVolPlugin/HighWirePressH20Plugin/' > $tpath/done_gln_d.txt
       # Find AUs in the gln marked doNotProcess
-      ./tdbout -c auid,name -Q 'status is "doNotProcess"' -i ../../tdb/prod/$file | grep -vf gvc_gln.txt > $tpath/done_gln_dnp.txt
+      ./tdbout -c auid,name -Q 'status is "doNotProcess"' ../../tdb/prod/$file | grep -vf gvc_gln.txt > $tpath/done_gln_dnp.txt
       # Merge all AUs to eliminate from list and sort
       cat $tpath/done_gln_exyrs.txt $tpath/done_gln_d.txt $tpath/done_gln_dnp.txt | sort > $tpath/done_gln.txt
       # Find AUs in clockss marked released, filter for odd cases, filter plugin name, and sort.
-      ./tdbout -F -c auid,name -i ../../tdb/clockssingest/$file | grep -vf gvc_clockss.txt | sed -e 's/Clockss//' | sed -e 's/BerkeleyElectronicPressPlugin/BePressPlugin/' | sort > $tpath/done_cks.txt
+      ./tdbout -F -c auid,name ../../tdb/clockssingest/$file | grep -vf gvc_clockss.txt | sed -e 's/Clockss//' | sed -e 's/BerkeleyElectronicPressPlugin/BePressPlugin/' | sort > $tpath/done_cks.txt
       if ! diff $tpath/done_cks.txt $tpath/done_gln.txt > $tpath/done_diff.txt
       then
         echo "***AU status diffs: mark ready in GLN***"
