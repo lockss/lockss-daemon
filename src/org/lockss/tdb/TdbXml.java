@@ -1,5 +1,5 @@
 /*
- * $Id: TdbXml.java,v 1.3 2014-10-17 22:14:57 thib_gc Exp $
+ * $Id: TdbXml.java,v 1.4 2014-10-20 23:19:01 thib_gc Exp $
  */
 
 /*
@@ -740,7 +740,7 @@ public class TdbXml {
     AppUtil.fixMainArgsForCommonsCli(mainArgs);
     Options options = new Options();
     addOptions(options);
-    CommandLine cmd = new GnuParser().parse(options, mainArgs);
+    CommandLine cmd = new PosixParser().parse(options, mainArgs);
     HelpOption.processCommandLine(cmd, options, getClass());
     run(cmd);
   }
