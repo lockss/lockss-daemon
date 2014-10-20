@@ -1,5 +1,5 @@
 /*
- * $Id: TangramSourceXPathXmlMetadataParser.java,v 1.3 2014-10-15 19:52:17 aishizaki Exp $
+ * $Id: TangramSourceXPathXmlMetadataParser.java,v 1.4 2014-10-20 18:03:52 thib_gc Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.Map;
 
 import javax.xml.xpath.XPathExpressionException;
 
+import org.lockss.daemon.ShouldNotHappenException;
 import org.lockss.extractor.XmlDomMetadataExtractor.XPathValue;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.XPathXmlMetadataParser;
@@ -45,7 +46,8 @@ import org.lockss.util.Logger;
 import org.xml.sax.*;
 
 public class TangramSourceXPathXmlMetadataParser extends XPathXmlMetadataParser {
-  private static Logger log = Logger.getLogger(TangramSourceXPathXmlMetadataParser.class);
+  
+  private static final Logger log = Logger.getLogger(TangramSourceXPathXmlMetadataParser.class);
 
   public TangramSourceXPathXmlMetadataParser(Map<String, XPathValue> globalMap,
                                              String articleNode,
@@ -82,9 +84,14 @@ public class TangramSourceXPathXmlMetadataParser extends XPathXmlMetadataParser 
       log.debug3("Default charset: "+java.nio.charset.Charset.defaultCharset());
       log.debug3("InputStream.fromSuper:" +is.getEncoding() );    
 
-    } catch (IOException e) {
-      // TODO Auto-generated catch block
-      e.printStackTrace();
+    }
+    catch (UnsupportedEncodingException uee) {
+      // makeInputSource can only actually ever throw UnsupportedEncodingException
+      throw uee;
+    }
+    catch (IOException exc) {
+      // makeInputSource can only actually ever throw UnsupportedEncodingException
+      throw new ShouldNotHappenException(exc);
     }
 
     return is;
