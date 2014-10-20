@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponArticleIteratorFactory.java,v 1.10 2014-10-15 16:29:00 alexandraohlson Exp $
+ * $Id: BaseAtyponArticleIteratorFactory.java,v 1.11 2014-10-20 20:53:36 alexandraohlson Exp $
  */
 
 /*
@@ -84,6 +84,9 @@ ArticleMetadataExtractorFactory {
    */
   // After normalization, the citation information will live at this URL if it exists
   private static final String RIS_REPLACEMENT = "/action/downloadCitation?doi=$1%2F$2&format=ris&include=cit";
+  // AMetSoc doens't do an "include=cit", only "include=abs"
+  // Do these as two separate patterns (not "OR") so we can have a priority choice
+  private static final String SECOND_RIS_REPLACEMENT = "/action/downloadCitation?doi=$1%2F$2&format=ris&include=abs";
 
 
   //
@@ -157,9 +160,10 @@ ArticleMetadataExtractorFactory {
         ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS);
 
     // set a role, but it isn't sufficient to trigger an ArticleFiles
-    builder.addAspect(RIS_REPLACEMENT,
+    // First choice is &include=cit; second choice is &include=abs (AMetSoc)
+    builder.addAspect(RIS_REPLACEMENT, SECOND_RIS_REPLACEMENT,
         ArticleFiles.ROLE_CITATION_RIS);
-
+    
     // The order in which we want to define full_text_cu.  
     // First one that exists will get the job
     builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF,
