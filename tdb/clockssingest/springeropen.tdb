@@ -1048,9 +1048,9 @@
         param[journal_issn] = 2008-6695 
         comment[platform] = BioMedCentralPlugin
   
-        au < exists ; exists ; 2012 ; International Journal of Advanced Structural Engineering Volume 4 ; 4 >
-        au < exists ; exists ; 2013 ; International Journal of Advanced Structural Engineering Volume 5 ; 5 >
-        au < exists ; exists ; 2014 ; International Journal of Advanced Structural Engineering Volume 6 ; 6 >
+        au < manifest ; exists ; 2012 ; International Journal of Advanced Structural Engineering Volume 4 ; 4 >
+        au < manifest ; exists ; 2013 ; International Journal of Advanced Structural Engineering Volume 5 ; 5 >
+        au < manifest ; exists ; 2014 ; International Journal of Advanced Structural Engineering Volume 6 ; 6 >
   
     }
   
