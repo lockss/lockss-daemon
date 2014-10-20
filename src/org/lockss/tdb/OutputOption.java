@@ -1,5 +1,5 @@
 /*
- * $Id: OutputOption.java,v 1.3 2014-10-17 22:14:57 thib_gc Exp $
+ * $Id: OutputOption.java,v 1.4 2014-10-20 22:42:37 thib_gc Exp $
  */
 
 /*
@@ -135,23 +135,21 @@ public class OutputOption {
    */
   public static void processCommandLine(Map<String, Object> options,
                                         CommandLine cmd) {
-    if (cmd.hasOption(KEY_OUTPUT)) {
-      String f = cmd.getOptionValue(KEY_OUTPUT);
-      if (f == null || "-".equals(f)) {
-        options.put(KEY_OUTPUT, new PrintStream(System.out) {
-          @Override
-          public void close() {
-            // Don't close stdout
-          }
-        });
+    String f = cmd.getOptionValue(KEY_OUTPUT);
+    if (f == null || "-".equals(f)) {
+      options.put(KEY_OUTPUT, new PrintStream(System.out) {
+        @Override
+        public void close() {
+          // Don't close stdout
+        }
+      });
+    }
+    else {
+      try {
+        options.put(KEY_OUTPUT, new PrintStream(f));
       }
-      else {
-        try {
-          options.put(KEY_OUTPUT, new PrintStream(f));
-        }
-        catch (FileNotFoundException fnfe) {
-          AppUtil.error(options, fnfe, "%s: error opening file for writing", f);
-        }
+      catch (FileNotFoundException fnfe) {
+        AppUtil.error(options, fnfe, "%s: error opening file for writing", f);
       }
     }
   }
