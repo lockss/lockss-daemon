@@ -1,0 +1,13 @@
+#!/bin/sh
+INDIR=$1
+OUTDIR=$2
+for f in $INDIR/*.tdb ; do
+  INFILE=`basename $f`
+  OUTFILE=$OUTDIR/`basename $INFILE .tdb`.xml
+  if [ ! -f $OUTFILE -o $f -nt $OUTFILE ]; then
+    FILES="${FILES} ${f}"
+  fi
+done
+if [ "X$FILES" != "X" ]; then
+  scripts/tdb/tdbxml --all --output-dir=$OUTDIR $FILES
+fi

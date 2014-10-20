@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.378 2014-10-15 20:27:47 fergaloy-sf Exp $
+ $Id: build.xml,v 1.379 2014-10-20 21:04:31 thib_gc Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -653,15 +653,15 @@ Args:
    </sequential>
   </macrodef>
 
-  <!--  dotdbxml runs tdbxml on all the .tdb files in a tree -->
-  <macrodef name="dotdbxml">
+  <!-- dotdbxmltree runs tdbxml on all the .tdb files in a tree but is slow -->
+  <macrodef name="dotdbxmltree">
    <attribute name="destdir" />
    <attribute name="srcdir" />
    <sequential>
     <apply executable="scripts/tdb/tdbxml" dir="${basedir}"
            addsourcefile="true"
            dest="@{destdir}"
-	   verbose="true"
+           verbose="true"
            failonerror="true"
            failifexecutionfails="true"
            relative="false"
@@ -679,6 +679,21 @@ Args:
    </sequential>
   </macrodef>
 
+	<!-- dotdbxmldir runs tdbxml on all the .tdb files in a directory and is fast -->
+	<macrodef name="dotdbxmldir">
+		<attribute name="destdir" />
+		<attribute name="srcdir" />
+		<sequential>
+			<exec dir="${basedir}"
+			      executable="scripts/tdbxml-helper"
+			      failifexecutionfails="true"
+			      failonerror="true">
+				<arg value="@{srcdir}" />
+				<arg value="@{destdir}" />
+			</exec>
+		</sequential>
+	</macrodef>
+	
   <!--  dojunit runs junit with standard params -->
   <macrodef name="dojunit">
    <attribute name="cpid" />
@@ -1037,7 +1052,7 @@ The target you have selected requires compiling under JDK 1.7.
     <!-- Compile the test .tdb file(s) in the test tree.  Do this before
 	 the copy below: in case foo.tdb and foo.xml are both checked in,
 	 the one in the source tree will be used. -->
-    <dotdbxml srcdir="${test.src}" destdir="${test.classes}" />
+    <dotdbxmltree srcdir="${test.src}" destdir="${test.classes}" />
 
     <!-- Copy all other files to classes hierarchy so they're available
 	 to tests -->
@@ -1077,7 +1092,7 @@ The target you have selected requires compiling under JDK 1.7.
     </dojavac>
 
     <!-- Compile the test .tdb file(s) in the plugins/test tree. -->
-    <dotdbxml srcdir="${plugins.test.src}" destdir="${plugins.test.classes}" />
+    <dotdbxmltree srcdir="${plugins.test.src}" destdir="${plugins.test.classes}" />
 
     <!-- Copy all other files to classes hierarchy so they're available
 	 to tests -->
@@ -1365,7 +1380,7 @@ Must specify output dir with -Doutdir=dir
     </fail>
 
     <mkdir dir="${outdir}" />
-    <dotdbxml srcdir="${indir}" destdir="${outdir}" />
+    <dotdbxmldir srcdir="${indir}" destdir="${outdir}" />
 
     <!-- Copy any .xml files (e.g., titleset definitions) -->
     <copy todir="${outdir}" >

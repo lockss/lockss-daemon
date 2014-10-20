@@ -1,4 +1,14 @@
-#!/bin/bash
+#!/bin/sh
+CLASSPATHFILE=test/run-classpath
+if [ ! -f $CLASSPATHFILE ]; then
+  echo "${CLASSPATHFILE} not found; run from root of project after ant jar-lockss"
+  exit 1
+fi
+if [ "X${JAVA_HOME}" = "X" ]; then
+  JAVA=java
+else
+  JAVA=$JAVA_HOME/bin/java
+fi
+$JAVA -classpath `cat test/run-classpath` org.lockss.tdb.TdbOut "$@"
 
-DIRECTORY=$(cd `dirname $0` && pwd)
-python $DIRECTORY/tdbout.py "$@"
+test/scripts/run-class org.lockss.tdb.TdbOut "$@"
