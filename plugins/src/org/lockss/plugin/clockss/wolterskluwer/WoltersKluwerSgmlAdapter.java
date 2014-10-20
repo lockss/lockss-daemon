@@ -1,5 +1,5 @@
 /*
- * $Id: WoltersKluwerSgmlAdapter.java,v 1.4 2014-08-06 17:27:45 alexandraohlson Exp $
+ * $Id: WoltersKluwerSgmlAdapter.java,v 1.5 2014-10-20 18:18:54 thib_gc Exp $
  */
 
 /*
@@ -45,6 +45,10 @@ import org.lockss.util.LineRewritingReader;
  */
 public class WoltersKluwerSgmlAdapter extends LineRewritingReader {
 
+  public static final Pattern STRAY_AMPERSANDS = Pattern.compile("& ");
+
+  public static final String STRAY_AMPERSANDS_REPLACEMENT = "&amp; ";
+
   public static final Pattern UNCLOSED_SGML_TAGS =
       Pattern.compile("<((COVER|SPP|TGP|XUI|MATH) [^>]+)>", Pattern.CASE_INSENSITIVE);
   
@@ -56,7 +60,9 @@ public class WoltersKluwerSgmlAdapter extends LineRewritingReader {
   
   @Override
   public String rewriteLine(String line) {
-    return UNCLOSED_SGML_TAGS.matcher(line).replaceAll(UNCLOSED_SGML_TAGS_REPLACEMENT);
+    line = STRAY_AMPERSANDS.matcher(line).replaceAll(STRAY_AMPERSANDS_REPLACEMENT);
+    line = UNCLOSED_SGML_TAGS.matcher(line).replaceAll(UNCLOSED_SGML_TAGS_REPLACEMENT);
+    return line;
   }
 
 }
