@@ -8550,14 +8550,9 @@
     >
     
     param[base_url] = http://intimmabs.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
 
-    {
-
-      pluginSuffix = ClockssHighWirePressH20Plugin
-
-      au < crawling ; exists ; 2010 ; International Immunology Meeting Abstracts Volume 22 ; 22 ; >
-
-    }
+    au < crawling ; exists ; 2010 ; International Immunology Meeting Abstracts Volume 22 ; 22 ; >
 
   }
 
