@@ -18097,6 +18097,7 @@
     pluginPrefix = org.lockss.plugin.highwire.
     comment[continued_by] = 2050-3911
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    comment[moved] = PTP terminated in December 2012 and merged into PTEP in January 2013
 
     au < HighWirePressH20Plugin ; manifest ; 1946 ; Progress of Theoretical Physics (PTP) Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 1947 ; Progress of Theoretical Physics (PTP) Volume 2 ; 2 >
@@ -18226,8 +18227,6 @@
     au < HighWirePressH20Plugin ; manifest ; 2011 ; Progress of Theoretical Physics (PTP) Volume 126 ; 126 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Progress of Theoretical Physics (PTP) Volume 127 ; 127 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Progress of Theoretical Physics (PTP) Volume 128 ; 128 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Progress of Theoretical Physics (PTP) Volume 129 ; 129 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Progress of Theoretical Physics (PTP) Volume 130 ; 130 >
 
     }
 
