@@ -18,6 +18,12 @@
     >
     
     comment[base_url] = http://www.africanjournalofmidwifery.com/
+    param[journal_id] = ajmw
+    
+    au < exists ; exists ; 2011 ; African Journal of Midwifery and Women's Health Volume 5 ; 5 >
+    au < exists ; exists ; 2012 ; African Journal of Midwifery and Women's Health Volume 6 ; 6 >
+    au < exists ; exists ; 2013 ; African Journal of Midwifery and Women's Health Volume 7 ; 7 >
+    au < exists ; exists ; 2014 ; African Journal of Midwifery and Women's Health Volume 8 ; 8 >
 
     
   }
@@ -30,6 +36,12 @@
     >
     
     comment[base_url] = http://www.cardiac-nursing.co.uk/
+    param[journal_id] = bjca
+    
+    au < exists ; exists ; 2011 ; British Journal of Cardiac Nursing Volume 6 ; 6 >
+    au < exists ; exists ; 2012 ; British Journal of Cardiac Nursing Volume 7 ; 7 >
+    au < exists ; exists ; 2013 ; British Journal of Cardiac Nursing Volume 8 ; 8 >
+    au < exists ; exists ; 2014 ; British Journal of Cardiac Nursing Volume 9 ; 9 >
 
     
   }
@@ -42,6 +54,12 @@
     >
     
     comment[base_url] = http://www.bjcn.co.uk/
+    param[journal_id] = bjcn
+    
+    au < exists ; exists ; 2011 ; British Journal of Community Nursing Volume 16 ; 16 >
+    au < exists ; exists ; 2012 ; British Journal of Community Nursing Volume 17 ; 17 >
+    au < exists ; exists ; 2013 ; British Journal of Community Nursing Volume 18 ; 18 >
+    au < exists ; exists ; 2014 ; British Journal of Community Nursing Volume 19 ; 19 >
 
     
   }
@@ -54,6 +72,12 @@
     >
     
     comment[base_url] = http://www.healthcare-assistants.co.uk/
+    param[journal_id] = bjha
+    
+    au < exists ; exists ; 2011 ; British Journal of Healthcare Assistants Volume 5 ; 5 >
+    au < exists ; exists ; 2012 ; British Journal of Healthcare Assistants Volume 6 ; 6 >
+    au < exists ; exists ; 2013 ; British Journal of Healthcare Assistants Volume 7 ; 7 >
+    au < exists ; exists ; 2014 ; British Journal of Healthcare Assistants Volume 8 ; 8 >
 
     
   }
@@ -66,6 +90,12 @@
     >
     
     comment[base_url] = http://www.bjhcm.co.uk/
+    param[journal_id] = bjhc
+    
+    au < exists ; exists ; 2011 ; British Journal of Healthcare Management Volume 17 ; 17 >
+    au < exists ; exists ; 2012 ; British Journal of Healthcare Management Volume 18 ; 18 >
+    au < exists ; exists ; 2013 ; British Journal of Healthcare Management Volume 19 ; 19 >
+    au < exists ; exists ; 2014 ; British Journal of Healthcare Management Volume 20 ; 20 >
 
     
   }
@@ -78,6 +108,12 @@
     >
     
     comment[base_url] = http://www.bjhm.co.uk/
+    param[journal_id] = hmed
+    
+    au < exists ; exists ; 2011 ; British Journal of Hospital Medicine Volume 72 ; 72 >
+    au < exists ; exists ; 2012 ; British Journal of Hospital Medicine Volume 73 ; 73 >
+    au < exists ; exists ; 2013 ; British Journal of Hospital Medicine Volume 74 ; 74 >
+    au < exists ; exists ; 2014 ; British Journal of Hospital Medicine Volume 75 ; 75 >
 
     
   }
@@ -90,6 +126,11 @@
     >
     
     comment[base_url] = http://www.bjmhn.co.uk/
+    param[journal_id] = bjmh
+    
+    au < doNotProcess ; doNotProcess ; 2014 ; British Journal of Mental Health Nursing Volume 1 ; 1 >
+    au < doNotProcess ; doNotProcess ; 2014 ; British Journal of Mental Health Nursing Volume 2 ; 2 >
+    au < exists ; exists ; 2014 ; British Journal of Mental Health Nursing Volume 3 ; 3 >
 
     
   }
@@ -120,6 +161,12 @@
     >
     
     comment[base_url] = http://www.bjnn.co.uk/
+    param[journal_id] = bjnn
+
+    au < exists ; exists ; 2011 ; British Journal of Neuroscience Nursing Volume 7 ; 7 >
+    au < exists ; exists ; 2012 ; British Journal of Neuroscience Nursing Volume 8 ; 8 >
+    au < exists ; exists ; 2013 ; British Journal of Neuroscience Nursing Volume 9 ; 9 >
+    au < exists ; exists ; 2014 ; British Journal of Neuroscience Nursing Volume 10 ; 10 >
 
     
   }
@@ -132,6 +179,12 @@
     >
     
     comment[base_url] = http://www.britishjournalofnursing.com/
+    param[journal_id] = bjon
+
+    au < exists ; exists ; 2011 ; British Journal of Nursing Volume 20 ; 20 >
+    au < exists ; exists ; 2012 ; British Journal of Nursing Volume 21 ; 21 >
+    au < exists ; exists ; 2013 ; British Journal of Nursing Volume 22 ; 22 >
+    au < exists ; exists ; 2014 ; British Journal of Nursing Volume 23 ; 23 >
 
     
   }
