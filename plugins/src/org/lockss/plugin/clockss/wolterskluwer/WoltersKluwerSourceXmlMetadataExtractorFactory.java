@@ -1,5 +1,5 @@
 /*
- * $Id: WoltersKluwerSourceXmlMetadataExtractorFactory.java,v 1.5 2014-10-14 16:50:17 aishizaki Exp $
+ * $Id: WoltersKluwerSourceXmlMetadataExtractorFactory.java,v 1.6 2014-10-21 18:41:09 aishizaki Exp $
  */
 
 /*
@@ -164,7 +164,7 @@ public class WoltersKluwerSourceXmlMetadataExtractorFactory extends SourceXmlMet
     if (filenameValue == null) {
       filenameValue = "NOFILEINMETADATA"; // we expected a value, but got none
     }
-log.info("filename("+filenameValue.length()+") "+ filenameValue);    
+    log.debug3("filename("+filenameValue.length()+") "+ filenameValue);    
     ArrayList<String> returnList = new ArrayList<String>();
     String cuBase = FilenameUtils.getFullPath(cu.getUrl());
     // MUST add "0" to the front (ONLY if the total number of chars < 24)
@@ -172,7 +172,7 @@ log.info("filename("+filenameValue.length()+") "+ filenameValue);
     String[] zeroArray= {"", ZERO, ZERO+ZERO, ZERO+ZERO+ZERO};
     if (filenameValue.length() < FULL_LEN) {
       int which = FULL_LEN - filenameValue.length();
-log.info ("need to add="+zeroArray[which]); 
+      log.debug3 ("need to add="+zeroArray[which]); 
       returnList.add(cuBase + zeroArray[which] + filenameValue + DOT_PDF);
     } else {
       returnList.add(cuBase + filenameValue + DOT_PDF);

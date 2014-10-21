@@ -1,5 +1,5 @@
 /*
- * $Id: WoltersKluwerSgmlAdapter.java,v 1.5 2014-10-20 18:18:54 thib_gc Exp $
+ * $Id: WoltersKluwerSgmlAdapter.java,v 1.6 2014-10-21 18:41:09 aishizaki Exp $
  */
 
 /*
@@ -40,8 +40,19 @@ import org.lockss.util.LineRewritingReader;
 /*
  * Turn the SGML file into valid XML by in-line terminating the following unclosed
  * tags. For example,
- * <COVER foo="blah">..... becomes
- * <COVER foo="blah"/>
+ * <COVER foo="blah">..... becomes  <COVER foo="blah"/>
+ * examples of unclosed tags:
+ *  <COVER NAME="G0000XYZ-201205000-00abc">  is converted to
+ *  <COVER NAME="G0000XYZ-201205000-00abc"/>
+ *  <TGP FILE="G7XY1">   =*=>  <TGP FILE="G7XY1"/>
+ *  <XUI XDB="pub-doi" UI="10.1213/XYZ.0b0abcd1824c4eb5"> converted to
+ *  <XUI XDB="pub-doi" UI="10.1213/XYZ.0b0abcd1824c4eb5"/> 
+ *  <MATH ID="Mx-11" FILE="HyyMMx">   =*=>  <MATH ID="Mx-11" FILE="HyyMMx">
+ * Additionally, tries to convert unprotected '& ' into '&amp; '
+ * This should work for those '&' that are followed by a space 
+ * e.g. "Child & Adolescent" => "Child &amp; Adolescent", but
+ * "PG&E" will still confound the parser.
+ * ToDo: write a better Pattern that can capture more unprotected '&'
  */
 public class WoltersKluwerSgmlAdapter extends LineRewritingReader {
 
@@ -53,7 +64,7 @@ public class WoltersKluwerSgmlAdapter extends LineRewritingReader {
       Pattern.compile("<((COVER|SPP|TGP|XUI|MATH) [^>]+)>", Pattern.CASE_INSENSITIVE);
   
   public static final String UNCLOSED_SGML_TAGS_REPLACEMENT = "<$1 />";
-  
+
   public WoltersKluwerSgmlAdapter(Reader sgmlReader) {
     super(sgmlReader);
   }

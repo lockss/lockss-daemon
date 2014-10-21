@@ -1,5 +1,5 @@
 /*
- * $Id: WoltersKluwerSourceXmlSchemaHelper.java,v 1.7 2014-10-14 16:50:17 aishizaki Exp $
+ * $Id: WoltersKluwerSourceXmlSchemaHelper.java,v 1.8 2014-10-21 18:41:09 aishizaki Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ import java.util.*;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import org.w3c.dom.NamedNodeMap;
 
 /**
  *  A helper class that defines a schema for XML metadata extraction for
@@ -228,7 +229,78 @@ implements SourceXmlSchemaHelper {
       }
     }
   };
+  
+  /*
+   * Some of the WK metadata files have the DOI appearing as:
+   * "DOI: 10.7123/01.ASJA.0000423116.36109.eb" - need to strip off
+   * the "DOI:" and any preceding white space
+   */ 
+static private final String DOI_ATTR_NAME = "XDB";
 
+  static private final NodeValue WK_DOI_VALUE = new NodeValue() {
+    static final String DOI_UPPER = "DOI:";
+    static final String DOI_LOWER = "doi:";
+    static final String XDB_ATTR = "XDB";
+    static final String XDB_TYPE = "pub-doi";
+    static final String UI_ATTR = "UI";
+
+    @Override
+    public String getValue(Node node) {
+      log.debug3("getValue of WOLTERSKLUWER DOI");
+      String doi = null;
+      NamedNodeMap attributes = node.getAttributes();
+      if (attributes == null) return null;
+
+      if(node.hasAttributes() ){
+        // is this the correct node?
+        Node xdbNode = attributes.getNamedItem(XDB_ATTR);
+        if (xdbNode != null) {
+          String uiType = xdbNode.getTextContent();
+          // check to see if we have the right node...
+          if (uiType.equals(XDB_TYPE)) {
+            // now get the attribute with the doi info
+            Node doiNode = attributes.getNamedItem(UI_ATTR);
+            if (doiNode != null) {
+              doi = doiNode.getTextContent();
+            }
+          }    
+        }
+      }
+      int cp = 0;
+      if (doi != null) {
+        // strip off any leading whitespace
+        cp = findNextNonWhiteSpace(doi);
+        // strip off leading "DOI:" phrase, if needed
+        char c = Character.toUpperCase(doi.charAt(cp));
+        if ((c == 'D') && ((doi.substring(cp)).startsWith(DOI_UPPER) || (doi.substring(cp)).startsWith(DOI_LOWER))){
+          cp += DOI_UPPER.length();
+          // strip off any more leading whitespace
+          cp += findNextNonWhiteSpace(doi.substring(cp));
+        }
+      }
+      String doiVal = null;
+      if (cp == 0) {
+        doiVal = doi;
+      } else {
+        doiVal = doi.substring(cp);
+      }
+      return doiVal;   
+  }
+  
+   private int findNextNonWhiteSpace(String s) {
+     int result = 0;
+     if (s != null) {
+       for( ; ; result++) {
+         if (Character.isWhitespace(s.charAt(result))) {
+           continue;
+         } else
+           break;
+       }
+     }
+     return result;
+  }
+  };
+  
   /* 
    *  WoltersKluwer specific XPATH key definitions that we care about
    */
@@ -249,7 +321,7 @@ implements SourceXmlSchemaHelper {
   private static String WK_SUBTITLE = "STI";
   private static String WK_article_title = "./BB/"+WK_TITLENODE;
   /* doi */
-  private static String WK_doi = "./BB/XUI/@UI";
+  private static String WK_doi = "./BB/XUI[@XDB='pub-doi']";
   /* published date */
   private static String WK_DY = "DY";
   private static String WK_MO = "MO";
@@ -272,7 +344,7 @@ implements SourceXmlSchemaHelper {
     WK_articleMap.put(WK_pdf, XmlDomMetadataExtractor.TEXT_VALUE); 
     WK_articleMap.put(WK_issn, XmlDomMetadataExtractor.TEXT_VALUE);
     WK_articleMap.put(WK_journal_title, XmlDomMetadataExtractor.TEXT_VALUE); 
-    WK_articleMap.put(WK_doi, XmlDomMetadataExtractor.TEXT_VALUE); 
+    WK_articleMap.put(WK_doi, WK_DOI_VALUE); 
     WK_articleMap.put(WK_article_title, WK_ARTICLE_TITLE_VALUE); 
     WK_articleMap.put(WK_issue, XmlDomMetadataExtractor.TEXT_VALUE);
     WK_articleMap.put(WK_vol, XmlDomMetadataExtractor.TEXT_VALUE);
@@ -364,4 +436,4 @@ implements SourceXmlSchemaHelper {
     return WK_pdf;
   }
 
-}  
+}

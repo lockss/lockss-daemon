@@ -1,5 +1,5 @@
 /*
- * $Id: WoltersKluwerXPathXmlMetadataParser.java,v 1.3 2014-10-14 16:50:17 aishizaki Exp $
+ * $Id: WoltersKluwerXPathXmlMetadataParser.java,v 1.4 2014-10-21 18:41:09 aishizaki Exp $
  */
 
 /*
@@ -103,31 +103,11 @@ public class WoltersKluwerXPathXmlMetadataParser extends XPathXmlMetadataParser 
     Reader sgmlReader = new InputStreamReader(cuInputStream, cu.getEncoding());
     Reader xmlReader = new WoltersKluwerSgmlAdapter(sgmlReader);
     InputSource is = new InputSource(xmlReader);
-    /*
-BufferedReader br = new BufferedReader(xmlReader);
-String filename = "testXmlOutput.1";
-String base = FilenameUtils.getFullPath(filename);
-try {
-writeToFile(br, base+filename);
-br.close();
-    } catch (IOException e) {
-  // TODO Auto-generated catch block
-  e.printStackTrace();
-}
-*/
+
     is.setEncoding(Constants.ENCODING_UTF_8);
-log.info("InputStream.setEncoding:" +Constants.ENCODING_UTF_8 );
+    log.debug3("InputStream.setEncoding:" +Constants.ENCODING_UTF_8 );
 
     return is;
   }
- /* 
-  protected void writeToFile(BufferedReader r, String fname) throws IOException {
-    FileWriter fw = new FileWriter(fname);
-    String s;
-    while((s = r.readLine()) != null) {
-      fw.write(s);
-    }
-    fw.close();
-  }
-  */
+
 }

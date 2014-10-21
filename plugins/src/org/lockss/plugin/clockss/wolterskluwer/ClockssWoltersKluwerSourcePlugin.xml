@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <!-- for rewritingReader -->
@@ -33,7 +33,7 @@
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>3</string>
+        <string>4</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -53,7 +53,7 @@
   <entry>
     <string>au_crawlrules</string>
     <list> 
-      <string>1,"^%s%d/PRECOS20140300\.[0-9].zip", base_url, year</string>  
+      <string>1,"^%s%d/JACP90000000\.[0-9].zip", base_url, year</string>  
       <string>1,"^%s%d/ARTE90000000\.[0-9].zip", base_url, year</string>  
       <string>1,"^%s%d/SPNE20130801\.[0-9].zip", base_url, year</string>  
       <string>2,"^%s%d/[A-Z]+\d.*", base_url, year</string>    
