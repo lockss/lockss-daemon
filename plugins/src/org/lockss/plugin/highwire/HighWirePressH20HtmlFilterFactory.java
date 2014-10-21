@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.57 2014-07-17 14:05:57 etenbrink Exp $
+ * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.58 2014-10-21 23:58:36 etenbrink Exp $
  */
 
 /*
@@ -244,6 +244,10 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
                   Attribute a = tag.getAttributeEx(tagName);
                   Vector<Attribute> v = new Vector<Attribute>();
                   v.add(a);
+                  if (tag.isEmptyXmlTag()) {
+                    Attribute end = tag.getAttributeEx("/");
+                    v.add(end);
+                  }
                   tag.setAttributesEx(v);
                 }
               }
