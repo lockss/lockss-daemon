@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20ArticleIteratorFactory.java,v 1.13 2014-03-03 21:47:41 etenbrink Exp $
+ * $Id: HighWirePressH20ArticleIteratorFactory.java,v 1.14 2014-10-21 23:57:22 etenbrink Exp $
  */
 
 /*
@@ -52,7 +52,7 @@ public class HighWirePressH20ArticleIteratorFactory
     "\"%scontent/%s/\", base_url, volume_name";
   
   protected static final String PATTERN_TEMPLATE =
-    "\"^%scontent/%s/((?:[^/]+/)?[^/]+)(?:.*[.]body|[.]full(?:[.]pdf)?)$\", " +
+    "\"^%scontent/%s/((?:[^/]+/)?[^/]+)(?:.*[.]body|[.]full(?:[.]pdf)?|[.]short)$\", " +
     "base_url, volume_name";
   
   // various aspects of an article
@@ -74,12 +74,17 @@ public class HighWirePressH20ArticleIteratorFactory
   protected static final Pattern PDF_PATTERN = Pattern.compile(
       "/([^/]+)[.]full[.]pdf$", Pattern.CASE_INSENSITIVE);
   
+  protected static final Pattern ABSTRACT_PATTERN = Pattern.compile(
+      "/([^/]+)[.]short$", Pattern.CASE_INSENSITIVE);
+  
   // how to change from one form (aspect) of article to another
   protected static final String HTML_REPLACEMENT = "/$1.full";
   protected static final String PDF_REPLACEMENT = "/$1.full.pdf";
   protected static final String PDF_LANDING_REPLACEMENT = "/$1.full.pdf+html";
   protected static final String ABSTRACT_REPLACEMENT = "/$1.abstract";
   protected static final String EXTRACT_REPLACEMENT = "/$1.extract";
+  protected static final String CITATION_REPLACEMENT = "/$1.citation";
+  protected static final String SHORT_REPLACEMENT = "/$1.short";
   protected static final String BODY_REPLACEMENT = "/$1.body";
   protected static final String FIGURES_REPLACEMENT = "/$1.figures-only";
   protected static final String SUPPL_REPLACEMENT = "/$1/suppl/DC1";
@@ -89,7 +94,6 @@ public class HighWirePressH20ArticleIteratorFactory
                                                       MetadataTarget target)
       throws PluginException {
     SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
-    
     builder.setSpec(target,
         ROOT_TEMPLATE, PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
     
@@ -114,7 +118,7 @@ public class HighWirePressH20ArticleIteratorFactory
         ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE);
     
     // set up abstract/extract to be an aspect
-    builder.addAspect(Arrays.asList(
+    builder.addAspect(ABSTRACT_PATTERN, Arrays.asList(
         ABSTRACT_REPLACEMENT, EXTRACT_REPLACEMENT),
         ArticleFiles.ROLE_ABSTRACT);
     
