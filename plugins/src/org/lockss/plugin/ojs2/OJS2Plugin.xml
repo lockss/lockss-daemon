@@ -16,7 +16,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>36</string>
+    <string>37</string>
   </entry>
   <!--  This is a list of OJS2 Child plugins - be sure to update
         the child's plugin_parent_version number to match, then
@@ -46,7 +46,7 @@
       </entry>
       <entry>
         <string>Substance</string>
-        <string>6</string>
+        <string>7</string>
       </entry>
     </map>
   </entry>
@@ -141,6 +141,10 @@
               viewFile for KwaZulu Natal Museum -->
         <string>"^%s(?:index[.]php/)?(?:%s/)?article/(?:view(?:File)?|download)/[^/]+/[^/]+$", base_url, journal_id</string>
       </list>
+  </entry>
+  <entry>
+    <string>au_permission_checker_factory</string>
+    <string>org.lockss.plugin.ojs2.OJS2PermissionCheckerFactory</string>
   </entry>
   <entry>
     <string>text/html_crawl_filter_factory</string>
