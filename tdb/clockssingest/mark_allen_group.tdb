@@ -8,6 +8,7 @@
   >
   
   plugin = org.lockss.plugin.atypon.markallen.ClockssMarkAllenPlugin
+  param[base_url] = http://www.magonlinelibrary.com/
   implicit < status ; status2 ; year ; name ; param[volume_name] >
 
   {
@@ -142,7 +143,7 @@
       eissn = 2052-4307 
     >
     
-    param[base_url] = http://www.britishjournalofmidwifery.com/
+    comment[base_url] = http://www.britishjournalofmidwifery.com/
     param[journal_id] = bjom
 
     au < exists ; exists ; 2011 ; British Journal of Midwifery Volume 19 ; 19 >
