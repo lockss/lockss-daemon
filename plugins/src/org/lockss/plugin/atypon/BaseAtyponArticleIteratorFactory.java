@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponArticleIteratorFactory.java,v 1.11 2014-10-20 20:53:36 alexandraohlson Exp $
+ * $Id: BaseAtyponArticleIteratorFactory.java,v 1.12 2014-10-21 16:47:13 alexandraohlson Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.atypon;
 
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.regex.Pattern;
 
@@ -161,7 +162,8 @@ ArticleMetadataExtractorFactory {
 
     // set a role, but it isn't sufficient to trigger an ArticleFiles
     // First choice is &include=cit; second choice is &include=abs (AMetSoc)
-    builder.addAspect(RIS_REPLACEMENT, SECOND_RIS_REPLACEMENT,
+    builder.addAspect(Arrays.asList(
+        RIS_REPLACEMENT, SECOND_RIS_REPLACEMENT),
         ArticleFiles.ROLE_CITATION_RIS);
     
     // The order in which we want to define full_text_cu.  

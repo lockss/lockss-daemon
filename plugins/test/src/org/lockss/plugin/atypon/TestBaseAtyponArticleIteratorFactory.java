@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseAtyponArticleIteratorFactory.java,v 1.5 2014-10-08 16:11:25 alexandraohlson Exp $
+ * $Id: TestBaseAtyponArticleIteratorFactory.java,v 1.6 2014-10-21 16:47:13 alexandraohlson Exp $
  */
 
 /*
@@ -175,8 +175,14 @@ public class TestBaseAtyponArticleIteratorFactory extends ArticleIteratorTestCas
     // "fix" the URL for *.txt files which represent the RIS download URL
     String pat3 = "branch(\\d+)/(\\d+)file\\.txt";
     String repris = "action/downloadCitation?doi=10.1137%2Fb$1.art$2&format=ris&include=cit";
+    // we should match to either cit (1st choice) or abs (2nd choice) before falling over to html
+    String altris = "action/downloadCitation?doi=10.1137%2Fb$1.art$2&format=ris&include=abs";
     
-    PluginTestUtil.copyAu(sau, au, ".*\\.txt$", pat3, repris);
+    //make 4th file in each branch use the alternate RIS file format (eg....&include=abs)
+    PluginTestUtil.copyAu(sau, au, ".*4file\\.txt$", pat3, altris);
+    // and all the rest of the text files are &include=cit
+    PluginTestUtil.copyAu(sau, au, ".*[^4]file\\.txt$", pat3, repris);
+    //PluginTestUtil.copyAu(sau, au, ".*\\.txt$", pat3, repris);
     
     // At this point we have 32 sets of 4 types of articles + 1 ris data for each article
     // Remove some of the URLs just created to make test more robust
@@ -187,7 +193,7 @@ public class TestBaseAtyponArticleIteratorFactory extends ArticleIteratorTestCas
     // branch2: (singletons) - art1 (abs only); art2 (full only); art3 (pdf only); art4 (pdfplus only)
     // branch3: (trios) - art1 (!abs); art2 (!full); art3 (!pdf); art3 (!pdfplus)
     // branch4: (doubles) - art1 (abs+full); art2 (abs+pdf); art3 (abs+pdfplus); art4 (ALL)
-    //    IN THIS BRANCH also remove the RIS file so that we fall back to the abstract
+    //    IN THIS BRANCH (4) also remove the RIS file so that we fall back to the abstract
     // branch5: (doubles) - art1 (full+pdf); art2 (full+pdfplus); art3 (pdf+pdfplus); art4 (ALL)
     int deleted = 0;
     int deletedRIS = 0;
