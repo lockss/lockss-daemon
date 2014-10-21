@@ -4994,14 +4994,14 @@
     param[base_url] = http://es.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < manifest ; exists ; 2000 ; Enterprise & Society Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2001 ; Enterprise & Society Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2002 ; Enterprise & Society Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2003 ; Enterprise & Society Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2004 ; Enterprise & Society Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2005 ; Enterprise & Society Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2006 ; Enterprise & Society Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2007 ; Enterprise & Society Volume 8 ; 8 ; >
+    au < testing ; exists ; 2000 ; Enterprise & Society Volume 1 ; 1 ; >
+    au < testing ; exists ; 2001 ; Enterprise & Society Volume 2 ; 2 ; >
+    au < testing ; exists ; 2002 ; Enterprise & Society Volume 3 ; 3 ; >
+    au < testing ; exists ; 2003 ; Enterprise & Society Volume 4 ; 4 ; >
+    au < testing ; exists ; 2004 ; Enterprise & Society Volume 5 ; 5 ; >
+    au < testing ; exists ; 2005 ; Enterprise & Society Volume 6 ; 6 ; >
+    au < testing ; exists ; 2006 ; Enterprise & Society Volume 7 ; 7 ; >
+    au < testing ; exists ; 2007 ; Enterprise & Society Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Enterprise & Society Volume 9 ; 9 ; >
     au < finished ; crawling ; 2009 ; Enterprise & Society Volume 10 ; 10 ; >
     au < finished ; frozen ; 2010 ; Enterprise & Society Volume 11 ; 11 ; >
