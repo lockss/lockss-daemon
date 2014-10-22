@@ -1,5 +1,5 @@
 /*
- * $Id: TestELifeDrupalHtmlCrawlFilterFactory.java,v 1.1 2014-06-07 02:32:51 etenbrink Exp $
+ * $Id: TestELifeDrupalHtmlCrawlFilterFactory.java,v 1.2 2014-10-22 16:17:10 etenbrink Exp $
  */
 
 /*
@@ -79,6 +79,18 @@ public class TestELifeDrupalHtmlCrawlFilterFactory extends LockssTestCase {
   private static final String withoutRefWrap = "<div id=\"page\">" +
       "</div>";
   
+  private static final String withCorr = "<div id=\"page\">" +
+      "<div class=\"elife-reflink-links-wrapper\">" +
+      "<span class=\"elife-reflink-link life-reflink-link-doi\">" +
+      "<a target=\"_blank\" href=\"/lookup/external-ref/doi?access_num=10&amp;link_type=DOI\">" +
+      "CrossRef</a></span><span class=\"elife-reflink-link life-reflink-link-medline\">" +
+      "<a target=\"_blank\" href=\"/lookup/external-ref/medline?access_num=1&amp;link_type=MED\">" +
+      "PubMed</a></span></div>" +
+      "</div>";
+  
+  private static final String withoutCorr = "<div id=\"page\">" +
+      "</div>";
+  
   
   public void testFiltering() throws Exception {
     InputStream inA;
@@ -95,6 +107,12 @@ public class TestELifeDrupalHtmlCrawlFilterFactory extends LockssTestCase {
         Constants.DEFAULT_ENCODING);
     a = StringUtil.fromInputStream(inA);
     assertEquals(withoutRefWrap, a);
+    
+    // "div", "class", "elife-article-corrections"
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(withCorr),
+        Constants.DEFAULT_ENCODING);
+    a = StringUtil.fromInputStream(inA);
+    assertEquals(withoutCorr, a);
     
   }
   
