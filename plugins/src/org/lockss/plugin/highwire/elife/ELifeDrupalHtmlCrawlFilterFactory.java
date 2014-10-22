@@ -1,5 +1,5 @@
 /*
- * $Id: ELifeDrupalHtmlCrawlFilterFactory.java,v 1.1 2014-06-07 02:32:17 etenbrink Exp $
+ * $Id: ELifeDrupalHtmlCrawlFilterFactory.java,v 1.2 2014-10-22 16:16:33 etenbrink Exp $
  */
 
 /*
@@ -51,6 +51,9 @@ public class ELifeDrupalHtmlCrawlFilterFactory implements FilterFactory {
         // Do not crawl responsive header or reflink-links-wrapper as links not wanted here
         HtmlNodeFilters.tagWithAttribute("div", "id", "region-responsive-header"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "elife-reflink-links-wrapper"),
+        // The following sections were a source of over-crawl (http://elifesciences.org/content/1/e00067)
+        HtmlNodeFilters.tagWithAttribute("div", "id", "related-content"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "elife-article-corrections"),
     };
     
     InputStream filtered = new HtmlFilterInputStream(in, encoding,
