@@ -1,5 +1,5 @@
 /*
- * $Id: ELifeDrupalArticleIteratorFactory.java,v 1.1 2014-09-11 02:36:13 etenbrink Exp $
+ * $Id: ELifeDrupalArticleIteratorFactory.java,v 1.2 2014-10-22 16:13:28 etenbrink Exp $
  */
 
 /*
@@ -52,8 +52,7 @@ public class ELifeDrupalArticleIteratorFactory
     "\"%scontent/\", base_url";
   
   protected static final String PATTERN_TEMPLATE =
-    "\"^%scontent/(?:[^/]+/)?[0-9]+/e(?:[^./?&]+)$\", " +
-    "base_url, volume_name";
+    "\"^%scontent/(?:[^/]+/)?[0-9]+/e(?:[^./?&]+)$\", " + "base_url";
   // various aspects of an article
   // http://elifesciences.org/content/1/e00311
   // http://elifesciences.org/content/elife/1/e00311.full.pdf
