@@ -1,10 +1,10 @@
 /*
- * $Id: RegexpCssLinkRewriterFactory.java,v 1.5 2014-09-01 23:40:43 tlipkis Exp $
+ * $Id: RegexpCssLinkRewriterFactory.java,v 1.6 2014-10-22 19:39:41 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,7 +37,7 @@ import java.net.*;
 import java.util.*;
 import java.util.regex.*;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
@@ -54,8 +54,9 @@ import org.lockss.servlet.*;
  * whitespace make a single statement larger than the buffer overlap.
  */
 public class RegexpCssLinkRewriterFactory implements LinkRewriterFactory {
+  
   private static final Logger log =
-    Logger.getLogger("RegexpCssLinkRewriterFactory");
+    Logger.getLogger(RegexpCssLinkRewriterFactory.class);
   
   enum CssLinkRewriterUrlEncodeMode {Full, Minimal};
 

@@ -1,10 +1,10 @@
 /*
- * $Id: CounterReportsJournalReport5.java,v 1.11 2014-10-03 23:04:43 fergaloy-sf Exp $
+ * $Id: CounterReportsJournalReport5.java,v 1.12 2014-10-22 19:39:34 thib_gc Exp $
  */
 
 /*
 
- Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,30 +34,21 @@ package org.lockss.exporter.counter;
 import static org.lockss.db.SqlConstants.*;
 import static org.lockss.exporter.counter.CounterReportsManager.*;
 import static org.lockss.metadata.MetadataManager.*;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.LinkedHashSet;
-import java.util.List;
-import org.apache.commons.lang.ArrayUtils;
+
+import java.sql.*;
+import java.util.*;
+
+import org.apache.commons.lang3.ArrayUtils;
 import org.lockss.app.LockssDaemon;
-import org.lockss.db.DbException;
-import org.lockss.db.DbManager;
-import org.lockss.util.Logger;
-import org.lockss.util.StringUtil;
-import org.lockss.util.TimeBase;
+import org.lockss.db.*;
+import org.lockss.util.*;
 
 /**
  * The COUNTER Journal Report 5.
  */
 public class CounterReportsJournalReport5 extends CounterReportsJournalReport {
-  private static final Logger log = Logger
-      .getLogger(CounterReportsJournalReport5.class);
+  
+  private static final Logger log = Logger.getLogger(CounterReportsJournalReport5.class);
 
   // Query to get the journals to be included in the report.
   private static final String SQL_QUERY_REPORT_JOURNALS_SELECT = "select "

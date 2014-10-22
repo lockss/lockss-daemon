@@ -1,10 +1,10 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.93 2013-08-10 20:59:28 tlipkis Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.94 2014-10-22 19:39:37 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,7 +36,7 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 
-import org.apache.commons.lang.SystemUtils;
+import org.apache.commons.lang3.SystemUtils;
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.plugin.*;
@@ -53,7 +53,8 @@ import org.lockss.util.*;
  */
 public class LockssRepositoryImpl
   extends BaseLockssDaemonManager implements LockssRepository {
-  private static Logger logger = Logger.getLogger("LockssRepository");
+  
+  private static final Logger logger = Logger.getLogger("LockssRepository");
 
   /**
    * Configuration parameter name for Lockss cache location.

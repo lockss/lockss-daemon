@@ -1,10 +1,10 @@
 /*
- * $Id: JsoupTagExtractor.java,v 1.4 2013-12-20 23:23:55 clairegriffin Exp $
+ * $Id: JsoupTagExtractor.java,v 1.5 2014-10-22 19:39:39 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.extractor;
 
-import org.apache.commons.lang.StringEscapeUtils;
+import org.apache.commons.lang3.StringEscapeUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -51,7 +51,7 @@ import java.util.Map;
 
 public class JsoupTagExtractor extends SimpleFileMetadataExtractor {
   
-  private static Logger theLog = Logger.getLogger(JsoupTagExtractor.class);
+  private static final Logger theLog = Logger.getLogger(JsoupTagExtractor.class);
 
   static final String DEFAULT_META_TAG = "meta";
   protected Collection<String> m_selectors;
@@ -201,7 +201,7 @@ public class JsoupTagExtractor extends SimpleFileMetadataExtractor {
   private String processHtml(final String name, String value) {
     value = HtmlUtil.stripHtmlTags(value);
     // remove character entities from content
-    value = StringEscapeUtils.unescapeHtml(value);
+    value = StringEscapeUtils.unescapeHtml4(value);
     // normalize multiple whitespaces to a single space character
     value = value.replaceAll("\\s+", " ");
     return value;

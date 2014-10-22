@@ -1,10 +1,10 @@
 /*
- * $Id: TestClockssPermission.java,v 1.5 2013-11-29 11:17:59 thib_gc Exp $
+ * $Id: TestClockssPermission.java,v 1.6 2014-10-22 19:39:36 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -60,7 +60,7 @@ public class TestClockssPermission extends LockssPermissionCheckerTestCase {
   }
 
   public void testClockssPermission() throws IOException {
-    String padding = org.apache.commons.lang.StringUtils.repeat("Blah ", 50);
+    String padding = org.apache.commons.lang3.StringUtils.repeat("Blah ", 50);
     assertTrue(hasPermission("CLOCKSS system has permission to ingest, preserve, and serve this Archival Unit"));
     assertTrue(hasPermission(padding + "CLOCKSS system has permission to ingest, preserve, and serve this Archival Unit"));
     assertTrue(hasPermission("CLOCKSS system has permission to ingest, preserve, and serve this Archival Unit" + padding));

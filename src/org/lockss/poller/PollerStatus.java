@@ -1,10 +1,10 @@
 /*
-* $Id: PollerStatus.java,v 1.30 2012-07-10 23:37:46 thib_gc Exp $
+* $Id: PollerStatus.java,v 1.31 2014-10-22 19:39:37 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,7 +34,7 @@ package org.lockss.poller;
 
 import java.util.*;
 
-import org.apache.commons.lang.mutable.MutableInt;
+import org.apache.commons.lang3.mutable.MutableInt;
 import org.lockss.daemon.status.*;
 import org.lockss.util.*;
 import org.lockss.app.*;
@@ -54,7 +54,8 @@ public class PollerStatus {
   public static final String POLL_STATUS_TABLE_NAME = "PollTable";
 
   protected PollManager pollManager;
-  private static Logger theLog=Logger.getLogger("PollerStatus");
+  
+  private static final Logger theLog = Logger.getLogger(PollerStatus.class);
 
   PollerStatus(PollManager pollManager) {
     this.pollManager = pollManager;

@@ -1,10 +1,10 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.149 2013-04-09 04:46:13 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.150 2014-10-22 19:39:35 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,8 +33,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.crawler;
 
 import java.util.*;
-import org.apache.commons.lang.builder.CompareToBuilder;
-import org.apache.commons.lang.mutable.MutableInt;
+import org.apache.commons.lang3.builder.CompareToBuilder;
+import org.apache.commons.lang3.mutable.MutableInt;
 import org.apache.commons.collections.*;
 import org.apache.commons.collections.map.*;
 import org.apache.commons.collections.bag.HashBag; // needed to disambiguate
@@ -64,7 +64,7 @@ import org.lockss.plugin.AuEvent;
 public class CrawlManagerImpl extends BaseLockssDaemonManager
     implements CrawlManager, CrawlManager.StatusSource, ConfigurableManager {
 
-  static Logger logger = Logger.getLogger("CrawlManager");
+  private static final Logger logger = Logger.getLogger("CrawlManager");
 
   public static final String PREFIX = Configuration.PREFIX + "crawler.";
 

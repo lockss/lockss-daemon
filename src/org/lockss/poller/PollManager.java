@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.270 2014-08-19 05:26:47 tlipkis Exp $
+ * $Id: PollManager.java,v 1.271 2014-10-22 19:39:36 thib_gc Exp $
  */
 
 /*
@@ -32,18 +32,16 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.poller;
 
+import static org.lockss.poller.v3.V3PollFactory.*;
 import static org.lockss.poller.v3.V3Poller.*;
 import static org.lockss.poller.v3.V3Voter.*;
-import static org.lockss.poller.v3.V3PollFactory.*;
-import static org.lockss.util.Constants.SECOND;
-import static org.lockss.util.Constants.MINUTE;
-import static org.lockss.util.Constants.HOUR;
-import static org.lockss.util.Constants.DAY;
-import static org.lockss.util.Constants.WEEK;
+import static org.lockss.util.Constants.*;
+
 import java.io.*;
 import java.util.*;
+
 import org.apache.commons.collections.map.*;
-import org.apache.commons.lang.mutable.MutableInt;
+import org.apache.commons.lang3.mutable.MutableInt;
 import org.lockss.alert.*;
 import org.lockss.app.*;
 import org.lockss.config.*;
@@ -54,8 +52,8 @@ import org.lockss.plugin.*;
 import org.lockss.poller.v3.*;
 import org.lockss.poller.v3.V3Serializer.PollSerializerException;
 import org.lockss.protocol.*;
-import org.lockss.protocol.psm.*;
 import org.lockss.protocol.V3LcapMessage.PollNak;
+import org.lockss.protocol.psm.PsmManager;
 import org.lockss.state.*;
 import org.lockss.util.*;
 
@@ -77,7 +75,8 @@ import org.lockss.util.*;
 public class PollManager
   extends BaseLockssDaemonManager implements ConfigurableManager {
 
-  protected static Logger theLog = Logger.getLogger("PollManager");
+  // Shared with MockPollManager
+  protected static final Logger theLog = Logger.getLogger(PollManager.class);
 
   static final String PREFIX = Configuration.PREFIX + "poll.";
   static final String PARAM_RECENT_EXPIRATION = PREFIX + "expireRecent";

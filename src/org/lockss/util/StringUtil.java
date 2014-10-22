@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.122 2014-10-17 21:48:17 thib_gc Exp $
+ * $Id: StringUtil.java,v 1.123 2014-10-22 19:39:34 thib_gc Exp $
  */
 
 /*
@@ -40,7 +40,7 @@ import java.text.Normalizer.Form;
 import java.lang.reflect.*;
 import java.math.BigInteger;
 import org.apache.oro.text.regex.*;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * This is a class to contain generic string utilities
@@ -51,7 +51,8 @@ public class StringUtil {
 
   private static final String DEFAULT_COLLECTION_SEPARATOR = ", ";
   private static final String NULL_OBJECT_PRINTABLE_TEXT = "(null)";
-  static Logger log = Logger.getLogger(StringUtil.class);
+  
+  private static final Logger log = Logger.getLogger(StringUtil.class);
 
   /**
    * Find the longest common prefix of a pair of strings. Case sensitive.

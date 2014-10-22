@@ -1,10 +1,10 @@
 /*
- * $Id: Exporter.java,v 1.10 2014-07-21 03:19:12 tlipkis Exp $
+ * $Id: Exporter.java,v 1.11 2014-10-22 19:39:40 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,12 +36,11 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
-import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 
 /**
@@ -49,7 +48,7 @@ import org.lockss.plugin.*;
  */
 public abstract class Exporter {
 
-  private static Logger log = Logger.getLogger("Exporter");
+  private static final Logger log = Logger.getLogger(Exporter.class);
 
   static final String PREFIX = Configuration.PREFIX + "exporter.";
 

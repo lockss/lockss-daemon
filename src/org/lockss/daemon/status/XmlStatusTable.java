@@ -1,10 +1,10 @@
 /*
- * $Id: XmlStatusTable.java,v 1.22 2012-07-17 08:49:04 tlipkis Exp $
+ * $Id: XmlStatusTable.java,v 1.23 2014-10-22 19:39:40 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,8 +35,7 @@ package org.lockss.daemon.status;
 import java.util.*;
 import java.text.*;
 
-import org.apache.commons.lang.StringEscapeUtils;
-import org.apache.commons.lang.time.FastDateFormat;
+import org.apache.commons.lang3.time.FastDateFormat;
 
 import org.lockss.util.*;
 import org.lockss.config.*;
@@ -45,7 +44,8 @@ import org.lockss.servlet.*;
 import org.w3c.dom.*;
 
 public class XmlStatusTable {
-  private static Logger logger = Logger.getLogger("XmlStatusTable");
+  
+  private static final Logger logger = Logger.getLogger(XmlStatusTable.class);
 
   /** Date/time format in XML output with outputVersion=1.  "Local" is
    * localtime, "GMT" or "UTC" are GMT, else should be a legal

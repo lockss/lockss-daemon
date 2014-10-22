@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.89 2014-10-13 22:46:47 pgust Exp $
+ * $Id: ServeContent.java,v 1.90 2014-10-22 19:39:33 thib_gc Exp $
  */
 
 /*
@@ -32,52 +32,49 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.servlet;
 
-import javax.servlet.http.*;
-import javax.servlet.*;
 import java.io.*;
 import java.net.*;
-import java.net.URI;
 import java.util.*;
 import java.util.List;
 import java.util.regex.*;
 
-import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.output.ByteArrayOutputStream;
+import javax.servlet.*;
+import javax.servlet.http.HttpServletResponse;
+
 import org.apache.commons.collections.*;
 import org.apache.commons.httpclient.util.DateParseException;
-import org.apache.commons.lang.StringEscapeUtils;
-import org.lockss.util.StringUtil;
-import org.mortbay.http.*;
-import org.mortbay.html.*;
-import org.lockss.util.*;
-import org.lockss.util.CloseCallbackInputStream.DeleteFileOnCloseInputStream;
-import org.lockss.util.urlconn.CacheException;
-import org.lockss.util.urlconn.LockssUrlConnection;
-import org.lockss.util.urlconn.LockssUrlConnectionPool;
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.output.ByteArrayOutputStream;
+import org.apache.commons.lang3.StringEscapeUtils;
+import org.lockss.alert.Alert;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.daemon.OpenUrlResolver.OpenUrlInfo;
 import org.lockss.daemon.OpenUrlResolver.OpenUrlInfo.ResolvedTo;
-import org.lockss.exporter.counter.CounterReportsRequestRecorder;
-import org.lockss.exporter.counter.CounterReportsRequestRecorder.PublisherContacted;
 import org.lockss.exporter.biblio.BibliographicItem;
+import org.lockss.exporter.counter.*;
+import org.lockss.exporter.counter.CounterReportsRequestRecorder.PublisherContacted;
 import org.lockss.plugin.*;
 import org.lockss.plugin.AuUtil.AuProxyInfo;
+import org.lockss.plugin.PluginManager.CuContentReq;
 import org.lockss.plugin.base.BaseUrlCacher;
-import static org.lockss.plugin.PluginManager.CuContentReq;
 import org.lockss.proxy.ProxyManager;
-import org.lockss.state.*;
-import org.lockss.rewriter.*;
-import org.lockss.alert.*;
-import org.mortbay.util.*;
+import org.lockss.rewriter.LinkRewriterFactory;
+import org.lockss.state.AuState;
+import org.lockss.util.*;
+import org.lockss.util.CloseCallbackInputStream.DeleteFileOnCloseInputStream;
+import org.lockss.util.urlconn.*;
+import org.mortbay.html.*;
+import org.mortbay.http.*;
 
 /** ServeContent servlet displays cached content with links
  *  rewritten.
  */
 @SuppressWarnings("serial")
 public class ServeContent extends LockssServlet {
-  static final Logger log = Logger.getLogger("ServeContent");
+  
+  private static final Logger log = Logger.getLogger(ServeContent.class);
 
   /** Prefix for this server's config tree */
   public static final String PREFIX = Configuration.PREFIX + "serveContent.";
@@ -421,7 +418,7 @@ public class ServeContent extends LockssServlet {
       if (log.isDebug2()) log.debug2("Url req, raw: " + url);
       // handle html-encoded URLs with characters like &amp;
       // that can appear as links embedded in HTML pages
-      url = StringEscapeUtils.unescapeHtml(url);
+      url = StringEscapeUtils.unescapeHtml4(url);
       requestType = AccessLogType.Url;
       //this is a partial replicate of proxy_handler post logic here
       if (HttpRequest.__POST.equals(req.getMethod()) && processForms) {

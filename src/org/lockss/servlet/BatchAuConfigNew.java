@@ -1,10 +1,10 @@
 /*
- * $Id: BatchAuConfigNew.java,v 1.7 2014-10-15 06:43:33 tlipkis Exp $
+ * $Id: BatchAuConfigNew.java,v 1.8 2014-10-22 19:39:33 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -40,13 +40,12 @@ import javax.servlet.*;
 import javax.servlet.http.HttpSession;
 
 import org.apache.commons.collections.map.LinkedMap;
-import org.apache.commons.lang.mutable.*;
+import org.apache.commons.lang3.mutable.*;
 import org.lockss.config.*;
 import org.lockss.daemon.TitleSet;
 import org.lockss.db.DbException;
 import org.lockss.plugin.PluginManager;
 import org.lockss.remote.RemoteApi;
-import org.lockss.remote.RemoteApi.BackupInfo;
 import org.lockss.remote.RemoteApi.BatchAuStatus;
 import org.lockss.servlet.ServletUtil.LinkWithExplanation;
 import org.lockss.subscription.SubscriptionManager;
@@ -73,7 +72,7 @@ public class BatchAuConfigNew extends LockssServlet {
     "If only one choice is shown for an AU, the contents of that AU " +
     "already exist in the selected disk.";
 
-  static Logger log = Logger.getLogger("BatchAuConfig");
+  private static final Logger log = Logger.getLogger("BatchAuConfig");
 
   static final int VV_ADD = 1;
   static final int VV_DEL = 2;

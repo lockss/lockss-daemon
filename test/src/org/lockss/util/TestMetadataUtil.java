@@ -1,10 +1,10 @@
 /*
- * $Id: TestMetadataUtil.java,v 1.13 2014-08-29 20:56:22 pgust Exp $
+ * $Id: TestMetadataUtil.java,v 1.14 2014-10-22 19:39:35 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,7 +35,7 @@ package org.lockss.util;
 import java.util.*;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
-import org.apache.commons.lang.LocaleUtils;
+import org.apache.commons.lang3.LocaleUtils;
 
 import org.lockss.test.*;
 

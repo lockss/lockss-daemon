@@ -1,10 +1,10 @@
 /*
- * $Id: LockssDaemon.java,v 1.124 2014-07-25 07:01:48 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.125 2014-10-22 19:39:40 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,7 +32,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.app;
 
 import java.util.*;
-import org.apache.commons.lang.SystemUtils;
+
+import org.apache.commons.lang3.*;
 import org.lockss.util.*;
 import org.lockss.alert.*;
 import org.lockss.daemon.*;
@@ -63,11 +64,12 @@ import org.apache.commons.collections.map.LinkedMap;
  * The LOCKSS daemon application
  */
 public class LockssDaemon extends LockssApp {
-  private static Logger log = Logger.getLogger(LockssDaemon.class);
+  
+  private static final Logger log = Logger.getLogger(LockssDaemon.class);
 
   private static final String PREFIX = Configuration.PREFIX + "daemon.";
 
-  public static final float MIN_JAVA_VERSION = 1.5f;
+  public static final JavaVersion MIN_JAVA_VERSION = JavaVersion.JAVA_1_5;
 
 /**
  * LOCKSS is a trademark of Stanford University.  Stanford hereby grants you

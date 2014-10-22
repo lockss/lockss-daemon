@@ -1,10 +1,10 @@
 /*
- * $Id: MetadataUtil.java,v 1.21 2014-08-29 20:47:53 pgust Exp $
+ * $Id: MetadataUtil.java,v 1.22 2014-10-22 19:39:34 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,7 +36,7 @@ import java.io.*;
 import java.util.*;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
-import org.apache.commons.lang.LocaleUtils;
+import org.apache.commons.lang3.LocaleUtils;
 
 import org.lockss.config.*;
 import org.lockss.app.*;
@@ -47,7 +47,7 @@ import static org.lockss.extractor.MetadataField.*;
 
 public class MetadataUtil {
 
-  static Logger log = Logger.getLogger(MetadataUtil.class);
+  private static final Logger log = Logger.getLogger(MetadataUtil.class);
 
   public static String getTargetMimeType(MetadataTarget target,
 					 ArchivalUnit au) {

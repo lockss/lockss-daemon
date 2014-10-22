@@ -1,10 +1,10 @@
 /*
- * $Id: TestUrlUtil.java,v 1.47 2014-10-01 08:16:37 tlipkis Exp $
+ * $Id: TestUrlUtil.java,v 1.48 2014-10-22 19:39:35 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,13 +34,13 @@ package org.lockss.util;
 
 import java.net.*;
 import java.util.*;
-import junit.framework.TestCase;
+
 import org.lockss.test.*;
-import org.lockss.util.*;
 import org.lockss.daemon.*;
 
 public class TestUrlUtil extends LockssTestCase {
-  private static Logger log = Logger.getLogger("TestUrlUtil");
+
+  private static final Logger log = Logger.getLogger(TestUrlUtil.class);
 
   // For testing against the behavior of code extracted from Java 1.4 URI class
   static String normalizePath(String path) {
@@ -384,7 +384,7 @@ public class TestUrlUtil extends LockssTestCase {
       throws MalformedURLException, PluginBehaviorException {
     MockArchivalUnit mau = new MockArchivalUnit();
 
-    Map normMap = org.apache.commons.lang.ArrayUtils.toMap(new String[][] {
+    Map normMap = org.apache.commons.lang3.ArrayUtils.toMap(new String[][] {
 	{"http://a.com/spurious/file", "http://a.com/file"},
 	{"http://a.com:80/path/file", "http://a.com/path/file"},
 	{"http://a.com/path/file", "http://a.com:80/path/file"},

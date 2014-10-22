@@ -1,10 +1,10 @@
 /*
- * $Id: PrunedCachedUrlSetSpec.java,v 1.4 2012-08-15 03:34:19 tlipkis Exp $
+ * $Id: PrunedCachedUrlSetSpec.java,v 1.5 2014-10-22 19:39:38 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,7 +33,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.daemon;
 
 import java.util.regex.*;
-import org.apache.commons.lang.*;
 
 import org.lockss.util.*;
 
@@ -45,7 +44,8 @@ import org.lockss.util.*;
  * subtree).
  */
 public class PrunedCachedUrlSetSpec extends RangeCachedUrlSetSpec {
-  static Logger log = Logger.getLogger("PCUSS");
+  
+  private static final Logger log = Logger.getLogger("PCUSS");
 
   Pattern includePat;
   Pattern excludePat;

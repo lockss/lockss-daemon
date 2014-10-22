@@ -1,10 +1,10 @@
 /*
- * $Id: TaskRunner.java,v 1.42 2008-02-15 09:14:41 tlipkis Exp $
+ * $Id: TaskRunner.java,v 1.43 2014-10-22 19:39:40 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -38,10 +38,9 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.scheduler;
 
-import java.io.*;
 import java.util.*;
 
-import org.apache.commons.lang.mutable.MutableBoolean;
+import org.apache.commons.lang3.mutable.MutableBoolean;
 import org.lockss.config.Configuration;
 import org.lockss.app.*;
 import org.lockss.daemon.*;
@@ -93,7 +92,7 @@ class TaskRunner {
   static final String WDOG_PARAM_NOTIFIER = "Notifier";
   static final long WDOG_DEFAULT_NOTIFIER = Constants.HOUR;
 
-  protected static Logger log = Logger.getLogger("TaskRunner");
+  private static final Logger log = Logger.getLogger(TaskRunner.class);
 
   private LockssDaemon daemon;
   private final SchedulerFactory schedulerFactory;

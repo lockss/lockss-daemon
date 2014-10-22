@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockHasher.java,v 1.27 2014-07-28 07:15:45 tlipkis Exp $
+ * $Id: TestBlockHasher.java,v 1.28 2014-10-22 19:39:36 thib_gc Exp $
  */
 
 /*
@@ -34,13 +34,10 @@ package org.lockss.hasher;
 
 import java.util.*;
 import java.io.*;
-import java.math.*;
 import java.security.*;
 
-import junit.framework.TestCase;
 import org.lockss.test.*;
 import org.lockss.daemon.*;
-import org.lockss.hasher.BlockHasher.EventHandler;
 import org.lockss.util.*;
 import org.lockss.filter.*;
 import org.lockss.crawler.*;
@@ -680,7 +677,7 @@ public class TestBlockHasher extends LockssTestCase {
   }
   
   String randomString(int len) {
-    return org.apache.commons.lang.RandomStringUtils.randomAlphabetic(len);
+    return org.apache.commons.lang3.RandomStringUtils.randomAlphabetic(len);
   }
 
   public void testOneContentLocalHashIncompleteRead()

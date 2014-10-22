@@ -1,10 +1,10 @@
 /*
- * $Id: ListHoldings.java,v 1.54 2014-09-23 20:39:25 pgust Exp $
+ * $Id: ListHoldings.java,v 1.55 2014-10-22 19:39:33 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,7 +37,7 @@ import java.io.OutputStream;
 import java.util.*;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.*;
 import org.lockss.config.TdbUtil.ContentScope;
@@ -88,7 +88,7 @@ import org.mortbay.html.Page;
 @SuppressWarnings("serial")
 public class ListHoldings extends LockssServlet {
   
-  protected static Logger log = Logger.getLogger("ListHoldings");    
+  private static final Logger log = Logger.getLogger(ListHoldings.class);
 
   static final String PREFIX = Configuration.PREFIX + "listHoldings.";
 

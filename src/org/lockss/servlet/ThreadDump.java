@@ -1,10 +1,10 @@
 /*
- * $Id: ThreadDump.java,v 1.12 2013-05-08 09:10:29 tlipkis Exp $
+ * $Id: ThreadDump.java,v 1.13 2014-10-22 19:39:33 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -46,6 +46,8 @@ import org.lockss.util.*;
  */
 public class ThreadDump extends LockssServlet {
 
+  private static final Logger log = Logger.getLogger(TimeMapService.class);
+  
   private static String
     KEY_IS_THREAD_CONTENTION_MONITORING_ENABLED = "Contention";
   private static String KEY_IS_THREAD_CPU_TIME_ENABLED = "Cpu_Time";

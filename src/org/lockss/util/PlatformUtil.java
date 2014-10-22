@@ -1,5 +1,5 @@
 /*
- * $Id: PlatformUtil.java,v 1.25 2014-10-01 08:35:36 tlipkis Exp $
+ * $Id: PlatformUtil.java,v 1.26 2014-10-22 19:39:34 thib_gc Exp $
  */
 
 /*
@@ -39,13 +39,15 @@ import java.text.*;
 import java.util.*;
 import java.util.regex.*;
 
-import org.apache.commons.lang.SystemUtils;
+import org.apache.commons.lang3.SystemUtils;
 import org.lockss.config.*;
 
 /** Utilities to communicate with platform to get info or take action not
  * possible from Java */
 public class PlatformUtil {
-  protected static Logger log = Logger.getLogger("PlatformInfo");
+  
+  private static final Logger log = Logger.getLogger("PlatformInfo");
+  
   private static final DecimalFormat percentFmt = new DecimalFormat("0%");
 
   /** Should be set to allowed TCP ports, based on platform- (and group-)

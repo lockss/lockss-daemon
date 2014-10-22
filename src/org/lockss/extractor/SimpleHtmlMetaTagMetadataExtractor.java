@@ -1,10 +1,10 @@
 /*
- * $Id: SimpleHtmlMetaTagMetadataExtractor.java,v 1.14 2014-07-25 06:39:06 tlipkis Exp $
+ * $Id: SimpleHtmlMetaTagMetadataExtractor.java,v 1.15 2014-10-22 19:39:39 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,7 +36,7 @@ import java.io.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.apache.commons.lang.StringEscapeUtils;
+import org.apache.commons.lang3.StringEscapeUtils;
 
 import org.lockss.util.*;
 import org.lockss.plugin.*;
@@ -44,7 +44,8 @@ import org.lockss.plugin.*;
 public class SimpleHtmlMetaTagMetadataExtractor
   extends SimpleFileMetadataExtractor {
 
-  static Logger log = Logger.getLogger(SimpleHtmlMetaTagMetadataExtractor.class);
+  private static final Logger log = Logger.getLogger(SimpleHtmlMetaTagMetadataExtractor.class);
+  
   private Pattern whiteSpacePat = Pattern.compile("\\s+");
 
   public SimpleHtmlMetaTagMetadataExtractor() {
@@ -153,7 +154,7 @@ public class SimpleHtmlMetaTagMetadataExtractor
     // filter raw HTML tags embedded within content -- publishers get sloppy
     content = HtmlUtil.stripHtmlTags(content);
     // remove character entities from content
-    content = StringEscapeUtils.unescapeHtml(content);
+    content = StringEscapeUtils.unescapeHtml4(content);
     // normalize multiple whitespace characters to a single space character
     Matcher m = whiteSpacePat.matcher(content);
     content = m.replaceAll(" ");

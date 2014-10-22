@@ -1,10 +1,10 @@
 /*
- * $Id: KbartTdbAuUtil.java,v 1.16 2012-01-16 17:51:20 pgust Exp $
+ * $Id: KbartTdbAuUtil.java,v 1.17 2014-10-22 19:39:34 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2010-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,20 +32,13 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.exporter.kbart;
 
-import java.util.List;
 import java.util.Map;
 
-import org.apache.commons.lang.StringUtils;
-import org.apache.oro.text.regex.MatchResult;
-import org.apache.oro.text.regex.Pattern;
-import org.apache.oro.text.regex.Perl5Matcher;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.oro.text.regex.*;
 import org.lockss.config.TdbAu;
 import org.lockss.exporter.biblio.BibliographicItem;
-import org.lockss.util.Logger;
-import org.lockss.util.MetadataUtil;
-import org.lockss.util.NumberUtil;
-import org.lockss.util.RegexpUtil;
-import org.lockss.util.StringUtil;
+import org.lockss.util.*;
 
 /**
  * Utility methods for extracting KBART data from a <code>Tdb</code> structure.
@@ -59,7 +52,7 @@ import org.lockss.util.StringUtil;
  */
 public class KbartTdbAuUtil {
 
-  private static Logger log = Logger.getLogger("KbartTdbAuUtil");
+  private static final Logger log = Logger.getLogger(KbartTdbAuUtil.class);
 
   // Default attribute keys
   static final String DEFAULT_YEAR_ATTR = "year";

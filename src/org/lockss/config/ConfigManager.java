@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.100 2014-10-15 06:41:49 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.101 2014-10-22 19:39:39 thib_gc Exp $
  */
 
 /*
@@ -37,7 +37,7 @@ import java.util.*;
 import java.net.*;
 
 import org.apache.commons.collections.Predicate;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.oro.text.regex.*;
 
 import org.lockss.app.*;
@@ -418,7 +418,7 @@ public class ConfigManager implements LockssManager {
 
   // MUST pass in explicit log level to avoid recursive call back to
   // Configuration to get Config log level.  (Others should NOT do this.)
-  protected static Logger log =
+  private static final Logger log =
     Logger.getLoggerWithInitialLevel("Config",
 				     Logger.getInitialDefaultLevel());
 

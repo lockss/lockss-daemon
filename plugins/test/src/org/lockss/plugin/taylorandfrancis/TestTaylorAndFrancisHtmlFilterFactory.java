@@ -1,10 +1,10 @@
 /*
- * $Id: TestTaylorAndFrancisHtmlFilterFactory.java,v 1.18 2014-10-08 16:11:25 alexandraohlson Exp $
+ * $Id: TestTaylorAndFrancisHtmlFilterFactory.java,v 1.19 2014-10-22 19:39:39 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,7 +36,7 @@ import java.io.*;
 
 import junit.framework.Test;
 
-import org.apache.commons.lang.RandomStringUtils;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.lockss.util.*;
 import org.lockss.plugin.FilterFactory;
 import org.lockss.test.*;
@@ -198,7 +198,7 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
             "<strong>" +
             "20." +
             "</strong>" +
-            "Author  ,   Q. 2011  . Title of Referenced Article  .   Acta  ,   1  Ð  19  .  " +
+            "Author  ,   Q. 2011  . Title of Referenced Article  .   Acta  ,   1  ï¿½  19  .  " +
             "Accessed 16 December 2011, available at: " +
             "<a href=\"http://www.tandfonline.com/doi/full/10.1080/09064702.2011.642000\" target=\"_blank\">" +
             "http://www.tandfonline.com/doi/full/10.1080/09064702.2011.642000</a>" +
@@ -239,7 +239,7 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
             "</strong>" +
             "   <span class=\"NLM_year\">" +
             "2011</span>" +
-            "  .   Title of Referenced Article .   Reference Journal  ,   1  Ð  19  .     Accessed 16 December 2011, available at: " +
+            "  .   Title of Referenced Article .   Reference Journal  ,   1  ï¿½  19  .     Accessed 16 December 2011, available at: " +
             "<a href=\"http://www.tandfonline.com/doi/full/10.1080/09064702.2011.642000\" target=\"_blank\">" +
             "http://www.tandfonline.com/doi/full/10.1080/09064702.2011.642000</a>" +
             "   . <a href=\"/servlet/linkout?suffix=CIT0020&amp;dbid=16384&amp;doi=10.1080/09064702.2012.670665\" " +

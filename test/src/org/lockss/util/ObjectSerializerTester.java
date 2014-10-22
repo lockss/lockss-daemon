@@ -1,10 +1,10 @@
 /*
- * $Id: ObjectSerializerTester.java,v 1.13 2006-10-20 03:28:36 thib_gc Exp $
+ * $Id: ObjectSerializerTester.java,v 1.14 2014-10-22 19:39:35 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,7 +35,7 @@ package org.lockss.util;
 import java.io.*;
 import java.net.URL;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.custommonkey.xmlunit.XMLTestCase;
 import org.custommonkey.xmlunit.XMLUnit;
 import org.lockss.config.CurrentConfig;
@@ -83,7 +83,7 @@ public abstract class ObjectSerializerTester extends XMLTestCase {
 
   /**
    * <p>A specialized version of
-   * {@link ObjectSerializerTester.DoSomething} that has a reference
+   * {@link ObjectSerializerTester.DoSomething} that has a reference to a
    * {@link File}.</p>
    * @author Thib Guicherd-Callin
    */
@@ -94,7 +94,7 @@ public abstract class ObjectSerializerTester extends XMLTestCase {
   /**
    * <p>A logger for use by this class.</p>
    */
-  protected Logger logger = Logger.getLogger(StringUtil.shortName(getClass()));
+  protected static final Logger logger = Logger.getLogger(ObjectSerializerTester.class);
 
   /**
    * <p>Tests whether the same input data deserialized into two new

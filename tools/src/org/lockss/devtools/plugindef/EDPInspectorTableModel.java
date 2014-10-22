@@ -1,10 +1,10 @@
 /*
- * $Id: EDPInspectorTableModel.java,v 1.21 2013-08-10 20:49:46 tlipkis Exp $
+ * $Id: EDPInspectorTableModel.java,v 1.22 2014-10-22 19:39:34 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,11 +35,10 @@ package org.lockss.devtools.plugindef;
 import javax.swing.table.*;
 import javax.swing.*;
 import java.awt.*;
-import java.util.ArrayList;
 
 import javax.swing.event.*;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.lockss.devtools.plugindef.EditableDefinablePlugin.DynamicallyLoadedComponentException;
 import org.lockss.plugin.definable.*;
 import org.lockss.daemon.PluginException;

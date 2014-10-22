@@ -1,10 +1,10 @@
 /*
- * $Id: TestArticleMetadata.java,v 1.5 2014-01-14 08:55:50 tlipkis Exp $
+ * $Id: TestArticleMetadata.java,v 1.6 2014-10-22 19:39:36 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,23 +32,19 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.extractor;
 
-import java.io.*;
 import java.util.*;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
 
 import org.lockss.test.*;
 import org.lockss.util.*;
-import org.lockss.daemon.*;
-import org.lockss.plugin.*;
 import static org.lockss.extractor.MetadataField.*;
-import static org.lockss.extractor.MetadataException.*;
 import static org.lockss.extractor.ArticleMetadata.InvalidValue;
-import static java.util.AbstractMap.SimpleEntry;
 
 public class TestArticleMetadata extends LockssTestCase {
-  static Logger log = Logger.getLogger("TestArticleMetadata");
+  
+  private static final Logger log = Logger.getLogger(TestArticleMetadata.class);
 
   static String RAW_KEY1 = "key1";
   static String RAW_KEY2 = "key2";

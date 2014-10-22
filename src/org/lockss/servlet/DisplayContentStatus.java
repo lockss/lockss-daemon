@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -40,7 +40,7 @@ import javax.xml.parsers.*;
 import javax.xml.transform.*;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
-import org.apache.commons.lang.time.FastDateFormat;
+import org.apache.commons.lang3.time.FastDateFormat;
 import org.lockss.config.*;
 import org.lockss.daemon.status.*;
 import org.lockss.plugin.ArchivalUnit;
@@ -54,7 +54,8 @@ import org.w3c.dom.Document;
  * Display Content Status servlet
  */
 public class DisplayContentStatus extends LockssServlet {
-  protected static Logger log = Logger.getLogger("DisplayContentStatus");
+  
+  private static final Logger log = Logger.getLogger(DisplayContentStatus.class);
 
   public static final String AU_TO_REMOVE = "removeAu";
   /**

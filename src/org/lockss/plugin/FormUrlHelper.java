@@ -1,6 +1,10 @@
 /*
+ * $Id$
+ */
 
-Copyright (c) 2001-2012 Board of Trustees of Leland Stanford Jr. University,
+/*
+
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -31,7 +35,7 @@ import java.util.Collections;
 import java.util.ArrayList;
 import java.lang.StringBuilder;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.lockss.util.Logger;
 
 /**
@@ -43,7 +47,8 @@ public class FormUrlHelper {
   String m_baseUrl;
   ArrayList<FormUrlInput> m_inputs;
   boolean m_valid = false;
-  private static final Logger logger = Logger.getLogger("FormUrlHelper");
+  
+  private static final Logger logger = Logger.getLogger(FormUrlHelper.class);
 
 
   public FormUrlHelper() {

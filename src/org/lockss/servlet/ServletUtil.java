@@ -1,10 +1,10 @@
 /*
- * $Id: ServletUtil.java,v 1.87 2014-10-15 06:43:33 tlipkis Exp $
+ * $Id: ServletUtil.java,v 1.88 2014-10-22 19:39:33 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -41,8 +41,8 @@ import java.util.List;
 import java.util.regex.Pattern;
 
 import org.apache.commons.collections.*;
-import org.apache.commons.lang.mutable.*;
-import org.apache.commons.lang.time.FastDateFormat;
+import org.apache.commons.lang3.mutable.*;
+import org.apache.commons.lang3.time.FastDateFormat;
 import org.lockss.config.*;
 import org.lockss.app.*;
 import org.lockss.daemon.*;
@@ -109,7 +109,7 @@ public class ServletUtil {
 
   }
 
-  static Logger log = Logger.getLogger("ServletUtil");
+  private static final Logger log = Logger.getLogger(ServletUtil.class);
 
   static final String PREFIX = Configuration.PREFIX + "ui.";
 

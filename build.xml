@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.379 2014-10-20 21:04:31 thib_gc Exp $
+ $Id: build.xml,v 1.380 2014-10-22 19:39:34 thib_gc Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -233,6 +233,8 @@ Args:
   <property name="log4j.jar" value="${lib}/log4j-1.2.13.jar"/>
   <property name="commons.lang.jar"
 				  value="${lib}/commons-lang-2.6.jar"/>
+  <property name="commons.lang3.jar"
+				  value="${lib}/commons-lang3-3.3.2.jar"/>
   <property name="commons.cli.jar"
   				  value="${lib}/commons-cli-1.2.jar"/>
   <property name="commons.collections.jar"
@@ -423,6 +425,7 @@ Args:
   <path id="compile.classpath">
     <pathelement path="${lockss.generated.jar}" />
     <pathelement path="${commons.lang.jar}" />
+    <pathelement path="${commons.lang3.jar}" /><!-- @since 1.67 -->
     <pathelement path="${commons.collections.jar}" />
     <pathelement path="${commons.logging.jar}" />
     <pathelement path="${commons.cli.jar}" />

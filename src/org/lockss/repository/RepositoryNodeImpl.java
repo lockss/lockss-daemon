@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.94 2014-07-22 07:56:12 tlipkis Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.95 2014-10-22 19:39:38 thib_gc Exp $
  */
 
 /*
@@ -37,10 +37,8 @@ import java.nio.charset.*;
 import java.net.MalformedURLException;
 import java.util.*;
 import java.util.Queue;
-import java.util.regex.Matcher;
 
 import org.apache.commons.io.FileUtils;
-import org.apache.commons.lang.StringUtils;
 import org.apache.oro.text.regex.*;
 
 import org.lockss.config.*;
@@ -178,7 +176,10 @@ public class RepositoryNodeImpl implements RepositoryNode {
   // identity url and location
   protected String url;
   protected String nodeLocation;
-  protected static Logger logger = Logger.getLogger("RepositoryNode");
+  
+  // Shared with AuNodeImpl
+  protected static final Logger logger = Logger.getLogger("RepositoryNode");
+  
   protected LockssRepositoryImpl repository;
   // preset so testIllegalOperations() doesn't null pointer
   private Deadline versionTimeout = Deadline.MAX;

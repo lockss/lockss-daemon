@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCachedUrl.java,v 1.28 2014-07-29 22:02:50 tlipkis Exp $
+ * $Id: TestBaseCachedUrl.java,v 1.29 2014-10-22 19:39:37 thib_gc Exp $
  */
 
 /*
@@ -35,7 +35,6 @@ package org.lockss.plugin.base;
 import java.io.*;
 import java.util.*;
 import java.security.MessageDigest;
-import java.math.BigInteger;
 import junit.framework.*;
 import org.lockss.plugin.*;
 import org.lockss.config.Configuration;
@@ -50,7 +49,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
   private static final String PARAM_SHOULD_FILTER_HASH_STREAM =
     Configuration.PREFIX+"baseCachedUrl.filterHashStream";
 
-  protected static Logger logger = Logger.getLogger("TestBaseCachedUrl");
+  private static final Logger logger = Logger.getLogger(TestBaseCachedUrl.class);
 
   protected LockssRepository repo;
   protected MockArchivalUnit mau;
@@ -433,7 +432,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
     }
 
     String randomString(int len) {
-      return org.apache.commons.lang.RandomStringUtils.randomAlphabetic(len);
+      return org.apache.commons.lang3.RandomStringUtils.randomAlphabetic(len);
     }
 
     public void testFilterReset() throws Exception {

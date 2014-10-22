@@ -1,10 +1,10 @@
 /*
- * $Id: EditableDefinablePlugin.java,v 1.36 2013-08-10 20:49:46 tlipkis Exp $
+ * $Id: EditableDefinablePlugin.java,v 1.37 2014-10-22 19:39:34 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,7 +34,7 @@ package org.lockss.devtools.plugindef;
 import java.io.IOException;
 import java.util.*;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.definable.*;
@@ -56,7 +56,9 @@ public class EditableDefinablePlugin extends DefinablePlugin {
   public static String[] CONFIG_PARAM_TYPES = ConfigParamDescr.TYPE_STRINGS;
 
   public static Map DEFAULT_CONFIG_PARAM_DESCRS = getDefaultConfigParamDescrs();
-  protected static Logger logger = Logger.getLogger("EditableDefinablePlugin");
+  
+  private static final Logger logger = Logger.getLogger(EditableDefinablePlugin.class);
+  
   protected PersistentPluginState pluginState;
 
   public EditableDefinablePlugin() {

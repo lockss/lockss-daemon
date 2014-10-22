@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArticleMetadataExtractor.java,v 1.16 2014-10-08 22:21:07 alexandraohlson Exp $
+ * $Id: TestBaseArticleMetadataExtractor.java,v 1.17 2014-10-22 19:39:36 thib_gc Exp $
  */
 
 /*
@@ -35,7 +35,6 @@ package org.lockss.extractor;
 import java.io.IOException;
 import java.util.*;
 
-import org.apache.commons.lang.ObjectUtils;
 import org.lockss.test.*;
 import org.lockss.daemon.*;
 import org.lockss.config.*;
@@ -43,7 +42,8 @@ import org.lockss.plugin.*;
 import org.lockss.util.*;
 
 public class TestBaseArticleMetadataExtractor extends LockssTestCase {
-  static Logger log = Logger.getLogger(TestBaseArticleMetadataExtractor.class);
+  
+  private static final Logger log = Logger.getLogger(TestBaseArticleMetadataExtractor.class);
 
   private MockPlugin mplug;
 

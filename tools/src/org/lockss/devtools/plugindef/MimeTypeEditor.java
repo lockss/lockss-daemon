@@ -1,10 +1,10 @@
 /*
- * $Id: MimeTypeEditor.java,v 1.4 2009-10-20 22:38:16 tlipkis Exp $
+ * $Id: MimeTypeEditor.java,v 1.5 2014-10-22 19:39:34 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,6 +29,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
 */
+
 package org.lockss.devtools.plugindef;
 
 import java.util.*;
@@ -38,10 +39,9 @@ import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.table.*;
 
-import org.apache.commons.lang.WordUtils;
+import org.apache.commons.lang3.text.WordUtils;
 import org.lockss.devtools.plugindef.EditableDefinablePlugin.DynamicallyLoadedComponentException;
 import org.lockss.daemon.*;
-import org.lockss.plugin.definable.DefinablePlugin.*;
 import org.lockss.util.Logger;
 
 /**
@@ -197,7 +197,7 @@ public class MimeTypeEditor extends JDialog implements EDPEditor {
   JButton dnButton = new JButton();
   JScrollPane jScrollPane1 = new JScrollPane();
 
-  protected static Logger logger = Logger.getLogger("FilterRulesEditor");
+  private static final Logger logger = Logger.getLogger(MimeTypeEditor.class);
 
   public MimeTypeEditor(MimeTypeEditorBuilder mimeTypeEditorBuilder,
                         Frame frame,

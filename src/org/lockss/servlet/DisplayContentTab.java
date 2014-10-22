@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -31,7 +31,7 @@
  */
 package org.lockss.servlet;
 
-import org.apache.commons.lang.time.FastDateFormat;
+import org.apache.commons.lang3.time.FastDateFormat;
 import org.lockss.config.TdbAu;
 import org.lockss.config.TdbUtil;
 import org.lockss.daemon.Crawler;
@@ -63,7 +63,8 @@ import java.util.List;
  * Display Content Status servlet
  */
 public class DisplayContentTab extends LockssServlet {
-    protected static Logger log = Logger.getLogger("DisplayContentTab");
+    
+  private static final Logger log = Logger.getLogger(DisplayContentTab.class);
 
     /**
      * Supported output formats

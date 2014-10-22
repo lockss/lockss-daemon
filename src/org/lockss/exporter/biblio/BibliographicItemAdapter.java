@@ -1,10 +1,10 @@
 /*
- * $Id: BibliographicItemAdapter.java,v 1.15 2014-10-03 23:04:46 fergaloy-sf Exp $
+ * $Id: BibliographicItemAdapter.java,v 1.16 2014-10-22 19:39:40 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2011-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.exporter.biblio;
 
 import java.util.Arrays;
-import org.apache.commons.lang.ArrayUtils;
+import org.apache.commons.lang3.ArrayUtils;
 import org.lockss.util.MetadataUtil;
 import org.lockss.util.StringUtil;
 

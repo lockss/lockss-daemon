@@ -1,10 +1,10 @@
 /*
- * $Id: DaemonStatus.java,v 1.91 2013-03-06 08:06:41 tlipkis Exp $
+ * $Id: DaemonStatus.java,v 1.92 2014-10-22 19:39:33 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,19 +33,16 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.servlet;
 
 import java.io.*;
-import java.text.*;
 import java.util.*;
 
 import javax.servlet.*;
 
-import org.apache.commons.lang.time.FastDateFormat;
 import org.mortbay.html.*;
 import org.w3c.dom.Document;
 
 import org.lockss.config.*;
 import org.lockss.daemon.status.*;
 import org.lockss.plugin.PluginManager;
-import org.lockss.protocol.*;
 import org.lockss.util.*;
 
 
@@ -53,7 +50,8 @@ import org.lockss.util.*;
  * DaemonStatus servlet
  */
 public class DaemonStatus extends LockssServlet {
-  protected static Logger log = Logger.getLogger("DaemonStatus");
+  
+  private static final Logger log = Logger.getLogger(DaemonStatus.class);
 
   /** Supported output formats */
   static final int OUTPUT_HTML = 1;

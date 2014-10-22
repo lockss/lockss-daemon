@@ -1,5 +1,5 @@
 /*
- * $Id: DateTimeUtil.java,v 1.1 2012-07-02 16:25:28 tlipkis Exp $
+ * $Id: DateTimeUtil.java,v 1.2 2014-10-22 19:39:34 thib_gc Exp $
  */
 
 /*
@@ -34,7 +34,7 @@ package org.lockss.util;
 
 import java.util.TimeZone;
 import java.util.Locale;
-import org.apache.commons.lang.time.FastDateFormat;
+import org.apache.commons.lang3.time.FastDateFormat;
 
 /**
  * Date/Time utilities

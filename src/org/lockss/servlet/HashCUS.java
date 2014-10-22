@@ -1,10 +1,10 @@
 /*
- * $Id: HashCUS.java,v 1.54 2013-07-24 19:02:33 tlipkis Exp $
+ * $Id: HashCUS.java,v 1.55 2014-10-22 19:39:33 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -41,7 +41,7 @@ import java.security.*;
 import javax.servlet.http.HttpSession;
 import org.mortbay.html.*;
 import org.mortbay.util.B64Code;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import org.lockss.app.*;
 import org.lockss.util.*;
@@ -161,7 +161,7 @@ public class HashCUS extends LockssServlet {
   static final String FOOT_REQ_ID_SESSION =
     "Req Id from previous background request in this session.";
 
-  static Logger log = Logger.getLogger("HashCUS");
+  private static final Logger log = Logger.getLogger(HashCUS.class);
 
   private static boolean isGlobalBackgroundRequests =
     DEFAULT_GLOBAL_BACKGROUND_REQUESTS;
@@ -1010,7 +1010,7 @@ public class HashCUS extends LockssServlet {
   }
 
   static String randomString(int len) {
-    return org.apache.commons.lang.RandomStringUtils.randomAlphabetic(len);
+    return org.apache.commons.lang3.RandomStringUtils.randomAlphabetic(len);
   }
 
   private String getReqId(Data d) {

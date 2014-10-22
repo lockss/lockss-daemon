@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.60 2014-10-14 10:53:19 pgust Exp $
+ * $Id: OpenUrlResolver.java,v 1.61 2014-10-22 19:39:38 thib_gc Exp $
  */
 
 /*
@@ -29,62 +29,32 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
 */
+
 package org.lockss.daemon;
 
 import static org.lockss.db.SqlConstants.*;
+
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.net.HttpURLConnection;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.text.ParseException;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.NoSuchElementException;
-import java.util.Set;
+import java.util.*;
 
-import org.apache.commons.lang.StringEscapeUtils;
+import org.apache.commons.lang3.StringEscapeUtils;
 import org.lockss.app.LockssDaemon;
-import org.lockss.config.ConfigManager;
-import org.lockss.config.Configuration;
-import org.lockss.config.Tdb;
-import org.lockss.config.TdbAu;
-import org.lockss.config.TdbPublisher;
-import org.lockss.config.TdbTitle;
-import org.lockss.config.TdbUtil;
+import org.lockss.config.*;
 import org.lockss.daemon.AuParamType.InvalidFormatException;
-import org.lockss.db.DbException;
-import org.lockss.db.DbManager;
-import org.lockss.exporter.biblio.BibliographicItem;
-import org.lockss.exporter.biblio.BibliographicItemImpl;
-import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.AuUtil;
+import org.lockss.db.*;
+import org.lockss.exporter.biblio.*;
+import org.lockss.plugin.*;
 import org.lockss.plugin.AuUtil.AuProxyInfo;
-import org.lockss.plugin.CachedUrl;
-import org.lockss.plugin.Plugin;
-import org.lockss.plugin.PluginManager;
-import org.lockss.plugin.PrintfConverter;
 import org.lockss.plugin.PluginManager.CuContentReq;
 import org.lockss.plugin.PrintfConverter.UrlListConverter;
 import org.lockss.plugin.definable.DefinableArchivalUnit;
 import org.lockss.proxy.ProxyManager;
-import org.lockss.util.ExternalizableMap;
-import org.lockss.util.IOUtil;
-import org.lockss.util.Logger;
-import org.lockss.util.MetadataUtil;
-import org.lockss.util.NumberUtil;
-import org.lockss.util.StringUtil;
-import org.lockss.util.TypedEntryMap;
-import org.lockss.util.UrlUtil;
-import org.lockss.util.urlconn.LockssUrlConnection;
-import org.lockss.util.urlconn.LockssUrlConnectionPool;
+import org.lockss.util.*;
+import org.lockss.util.urlconn.*;
 
 /**
  * This class  implements an OpenURL resolver that locates an article matching 
@@ -139,7 +109,8 @@ import org.lockss.util.urlconn.LockssUrlConnectionPool;
  * @version 1.0
  */
 public class OpenUrlResolver {
-  private static Logger log = Logger.getLogger("OpenUrlResolver");
+  
+  private static final Logger log = Logger.getLogger(OpenUrlResolver.class);
 
   /** the LOCKSS daemon */
   private final LockssDaemon daemon;
@@ -2121,7 +2092,7 @@ public class OpenUrlResolver {
       
       for (String s : printfStrings) {
         String url = null;
-        s = StringEscapeUtils.unescapeHtml(s);
+        s = StringEscapeUtils.unescapeHtml4(s);
         try {
           List<String> urls = converter.getUrlList(s);
           if ((urls != null) && !urls.isEmpty()) {

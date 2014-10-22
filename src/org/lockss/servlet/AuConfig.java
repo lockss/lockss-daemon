@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.73 2014-05-12 17:26:19 fergaloy-sf Exp $
+ * $Id: AuConfig.java,v 1.74 2014-10-22 19:39:33 thib_gc Exp $
  */
 
 /*
@@ -38,7 +38,7 @@ import java.util.List;
 
 import javax.servlet.*;
 
-import org.apache.commons.lang.mutable.MutableInt;
+import org.apache.commons.lang3.mutable.MutableInt;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
@@ -71,7 +71,7 @@ public class AuConfig extends LockssServlet {
     "It will only work with sites of the same type " +
     "for which the plugin was written.";
 
-  static Logger log = Logger.getLogger("AuConfig");
+  private static final Logger log = Logger.getLogger(AuConfig.class);
 
   static final String REPO_TAG = "lockssRepository";
 

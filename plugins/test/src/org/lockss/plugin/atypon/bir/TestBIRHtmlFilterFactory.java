@@ -1,5 +1,5 @@
 /*
- * $Id: TestBIRHtmlFilterFactory.java,v 1.1 2014-06-19 18:05:14 alexandraohlson Exp $
+ * $Id: TestBIRHtmlFilterFactory.java,v 1.2 2014-10-22 19:39:39 thib_gc Exp $
  */
 
 /*
@@ -39,7 +39,7 @@ package org.lockss.plugin.atypon.bir;
 
 import junit.framework.Test;
 
-import org.apache.commons.lang.RandomStringUtils;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.lockss.util.*;
 import org.lockss.plugin.FilterFactory;
 import org.lockss.test.*;

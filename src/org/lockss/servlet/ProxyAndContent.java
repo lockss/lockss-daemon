@@ -1,10 +1,10 @@
 /*
- * $Id: ProxyAndContent.java,v 1.31 2014-01-29 05:21:20 tlipkis Exp $
+ * $Id: ProxyAndContent.java,v 1.32 2014-10-22 19:39:33 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,14 +35,12 @@ package org.lockss.servlet;
 import java.io.IOException;
 import java.util.*;
 import java.util.List;
-import java.util.regex.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import org.mortbay.html.*;
 
 import org.apache.commons.collections.iterators.ObjectArrayIterator;
-import org.apache.commons.lang.StringUtils;
-import org.lockss.app.LockssApp;
+import org.apache.commons.lang3.StringUtils;
 import org.lockss.config.*;
 import org.lockss.daemon.ResourceManager;
 import org.lockss.proxy.*;
@@ -55,7 +53,8 @@ import org.lockss.util.*;
  * UI to configure content and audit proxies, and content server
  */
 public class ProxyAndContent extends LockssServlet {
-  private static Logger log = Logger.getLogger("ProxyAndContent");
+  
+  private static final Logger log = Logger.getLogger(ProxyAndContent.class);
 
   private static final String SUFFIX_KEY_ENABLE = "_ena";
   private static final String SUFFIX_KEY_PORT = "_port";

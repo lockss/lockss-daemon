@@ -1,10 +1,10 @@
 /*
- * $Id: TestRunKbartReport.java,v 1.10 2014-06-02 00:47:53 tlipkis Exp $
+ * $Id: TestRunKbartReport.java,v 1.11 2014-10-22 19:39:37 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -31,11 +31,10 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.devtools;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.lockss.exporter.biblio.BibliographicItem;
 import org.lockss.exporter.kbart.KbartExportFilter.PredefinedColumnOrdering;
 import org.lockss.exporter.kbart.KbartTitle;
-import static org.lockss.exporter.kbart.KbartTitle.Field.*;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.StringInputStream;
 import org.lockss.util.MetadataUtil;

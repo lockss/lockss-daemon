@@ -1,10 +1,10 @@
 /*
- * $Id: TestAlertConfig.java,v 1.7 2014-06-23 22:41:00 tlipkis Exp $
+ * $Id: TestAlertConfig.java,v 1.8 2014-10-22 19:39:37 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2004 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,12 +34,8 @@ package org.lockss.alert;
 
 import java.io.*;
 import java.util.*;
-import java.net.*;
-import java.text.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
-import org.lockss.daemon.*;
-import org.lockss.plugin.*;
 
 /**
  * This is the test class for org.lockss.alert.AlertConfig
@@ -132,7 +128,7 @@ public class TestAlertConfig extends LockssTestCase {
     AlertConfig lconf = mgr.loadAlertConfig(str);
     assertEquals(conf, lconf);
 
-    String str2 = org.apache.commons.lang.StringEscapeUtils.escapeXml(str);
+    String str2 = org.apache.commons.lang3.StringEscapeUtils.escapeXml(str);
     FileTestUtil.writeFile(file2, str2);
 
     // Ensure that the MATCHES predicate is processed correction when

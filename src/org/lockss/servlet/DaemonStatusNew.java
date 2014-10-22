@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -38,14 +38,13 @@ import java.util.*;
 
 import javax.servlet.*;
 
-import org.apache.commons.lang.time.FastDateFormat;
+import org.apache.commons.lang3.time.FastDateFormat;
 import org.mortbay.html.*;
 import org.w3c.dom.Document;
 
 import org.lockss.config.*;
 import org.lockss.daemon.status.*;
 import org.lockss.plugin.PluginManager;
-import org.lockss.protocol.*;
 import org.lockss.util.*;
 
 
@@ -53,7 +52,8 @@ import org.lockss.util.*;
  * DaemonStatus servlet
  */
 public class DaemonStatusNew extends LockssServlet {
-  protected static Logger log = Logger.getLogger("DaemonStatus");
+  
+  private static final Logger log = Logger.getLogger("DaemonStatus");
 
   /** Supported output formats */
   static final int OUTPUT_HTML = 1;

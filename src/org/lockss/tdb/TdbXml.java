@@ -1,5 +1,5 @@
 /*
- * $Id: TdbXml.java,v 1.4 2014-10-20 23:19:01 thib_gc Exp $
+ * $Id: TdbXml.java,v 1.5 2014-10-22 19:39:40 thib_gc Exp $
  */
 
 /*
@@ -38,7 +38,7 @@ import java.util.*;
 import java.util.regex.*;
 
 import org.apache.commons.cli.*;
-import org.apache.commons.lang.StringEscapeUtils;
+import org.apache.commons.lang3.StringEscapeUtils;
 import org.lockss.tdb.AntlrUtil.SyntaxError;
 
 import com.ibm.icu.text.Transliterator;

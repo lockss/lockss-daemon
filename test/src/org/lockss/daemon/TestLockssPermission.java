@@ -1,10 +1,10 @@
 /*
- * $Id: TestLockssPermission.java,v 1.9 2013-11-29 11:17:59 thib_gc Exp $
+ * $Id: TestLockssPermission.java,v 1.10 2014-10-22 19:39:34 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,7 +29,9 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
 */
+
 package org.lockss.daemon;
+
 import java.io.*;
 import java.util.*;
 
@@ -68,7 +70,7 @@ public class TestLockssPermission extends LockssPermissionCheckerTestCase {
   }
 
   public void testLockssPermission() throws IOException {
-    String padding = org.apache.commons.lang.StringUtils.repeat("Blah ", 50);
+    String padding = org.apache.commons.lang3.StringUtils.repeat("Blah ", 50);
     assertTrue(hasPermission("LOCKSS system has permission to collect, preserve, and serve this Archival Unit"));
     assertEquals(AuState.AccessType.Subscription, aus.getAccessType());
     assertTrue(hasPermission(padding + "LOCKSS system has permission to collect, preserve, and serve this Archival Unit"));
@@ -80,7 +82,7 @@ public class TestLockssPermission extends LockssPermissionCheckerTestCase {
   }
 
   public void testLockssOpenAccessPermission() throws IOException {
-    String padding = org.apache.commons.lang.StringUtils.repeat("Blah ", 50);
+    String padding = org.apache.commons.lang3.StringUtils.repeat("Blah ", 50);
     assertTrue(hasPermission("LOCKSS system has permission to collect, preserve, and serve this open access Archival Unit"));
     assertEquals(AuState.AccessType.OpenAccess, aus.getAccessType());
     assertTrue(hasPermission(padding + "LOCKSS system has permission to collect, preserve, and serve this open access Archival Unit"));
@@ -92,7 +94,7 @@ public class TestLockssPermission extends LockssPermissionCheckerTestCase {
   }
 
   public void testLockssOjsPermission() throws IOException {
-    String padding = org.apache.commons.lang.StringUtils.repeat("Blah ", 50);
+    String padding = org.apache.commons.lang3.StringUtils.repeat("Blah ", 50);
     String perm = "This journal utilizes the LOCKSS system to create a distributed archiving system among participating libraries and permits those libraries to create permanent archives of the journal for purposes of preservation and restoration";
     assertTrue(hasPermission(perm));
     assertEquals(AuState.AccessType.Subscription, aus.getAccessType());

@@ -1,10 +1,10 @@
 /*
- * $Id: RunKbartReport.java,v 1.12 2014-06-27 03:02:54 pgust Exp $
+ * $Id: RunKbartReport.java,v 1.13 2014-10-22 19:39:39 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,8 +32,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.devtools;
 
 import org.apache.commons.cli.*;
-import org.apache.commons.lang.ArrayUtils;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.ArrayUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.lockss.exporter.biblio.BibliographicItem;
 import org.lockss.exporter.biblio.BibliographicItemImpl;
 import org.lockss.exporter.biblio.BibliographicUtil;

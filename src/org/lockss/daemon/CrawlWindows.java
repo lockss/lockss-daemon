@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlWindows.java,v 1.16 2014-08-21 22:41:03 thib_gc Exp $
+ * $Id: CrawlWindows.java,v 1.17 2014-10-22 19:39:38 thib_gc Exp $
  */
 
 /*
@@ -34,8 +34,8 @@ package org.lockss.daemon;
 
 import java.util.*;
 import java.text.*;
-import org.apache.commons.lang.ObjectUtils;
-import org.apache.commons.lang.builder.HashCodeBuilder;
+import org.apache.commons.lang3.ObjectUtils;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 import org.lockss.util.*;
 
@@ -68,7 +68,8 @@ public class CrawlWindows {
   public static final int MONTH = 32;
 
   static final int MAX_INTERVAL_LIST_SIZE = 100000;
-  private static Logger logger = Logger.getLogger(CrawlWindows.class);
+  
+  private static final Logger logger = Logger.getLogger(CrawlWindows.class);
 
   static TimeZone GMT = TimeZone.getTimeZone("GMT");
 

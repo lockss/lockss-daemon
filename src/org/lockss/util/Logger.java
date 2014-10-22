@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.60 2014-06-30 04:58:33 tlipkis Exp $
+ * $Id: Logger.java,v 1.61 2014-10-22 19:39:34 thib_gc Exp $
  */
 
 /*
@@ -36,8 +36,8 @@ import java.sql.SQLException;
 import java.text.Format;
 
 import org.apache.commons.collections.map.ReferenceMap;
-import org.apache.commons.lang.StringUtils;
-import org.apache.commons.lang.time.FastDateFormat;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.time.FastDateFormat;
 
 import org.lockss.config.*;
 
@@ -58,7 +58,7 @@ public class Logger {
   static final String DEFAULT_DEFAULT_LEVEL = "info";
 
   /** Dateformat used for timestamps on log messages.  See {@link
-   * org.apache.commons.lang.time.SimpleDateFormat}.
+   * org.apache.commons.lang3.time.SimpleDateFormat}.
    * <ul><li><code>HH:mm:ss.SSS</code>: 24-hour time with
    * millisecs. <li><code>MM/dd/yyyy HH:mm:ss.SSS</code>: date and 24-hour
    * time</ul>Doesn't apply to targets such as SyslogTarget that provide

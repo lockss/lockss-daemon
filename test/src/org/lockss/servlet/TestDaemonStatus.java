@@ -1,10 +1,10 @@
 /*
- * $Id: TestDaemonStatus.java,v 1.11 2012-07-02 16:26:04 tlipkis Exp $
+ * $Id: TestDaemonStatus.java,v 1.12 2014-10-22 19:39:34 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,7 +34,7 @@ package org.lockss.servlet;
 
 import java.util.*;
 
-import org.apache.commons.lang.StringEscapeUtils;
+import org.apache.commons.lang3.StringEscapeUtils;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.daemon.status.*;
@@ -46,7 +46,7 @@ import com.meterware.httpunit.*;
  */
 public class TestDaemonStatus extends LockssServletTestCase {
 
-  static Logger log = Logger.getLogger("TestDaemonStatus");
+  private static final Logger log = Logger.getLogger(TestDaemonStatus.class);
 
 //  private DaemonStatus ds;
 

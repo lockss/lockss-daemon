@@ -1,10 +1,10 @@
 /*
- * $Id: KbartTitle.java,v 1.19 2013-02-15 16:43:31 easyonthemayo Exp $
+ * $Id: KbartTitle.java,v 1.20 2014-10-22 19:39:34 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2010-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,7 +34,7 @@ package org.lockss.exporter.kbart;
 
 import java.util.*;
 
-import org.apache.commons.lang.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.lockss.exporter.biblio.BibliographicUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.MetadataUtil;
@@ -83,7 +83,7 @@ import org.lockss.util.UrlUtil;
  */
 public class KbartTitle implements Comparable<KbartTitle>, Cloneable {
 
-  protected static Logger log = Logger.getLogger("KbartTitle");   
+  private static final Logger log = Logger.getLogger(KbartTitle.class);   
   
   /**
    * Implementation of the <code>Object.clone()</code> method. Creates a new 

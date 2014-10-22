@@ -1,10 +1,10 @@
 /*
- * $Id: TestSimpleHasher.java,v 1.8 2013-07-15 07:31:27 tlipkis Exp $
+ * $Id: TestSimpleHasher.java,v 1.9 2014-10-22 19:39:36 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -89,7 +89,7 @@ public class TestSimpleHasher extends LockssTestCase {
       String url = urls[ix];
       CachedUrl cu = mau.addUrl(url, false, true);
       files.add(cu);
-      addContent(mau, url, org.apache.commons.lang.StringUtils.repeat(url, ix));
+      addContent(mau, url, org.apache.commons.lang3.StringUtils.repeat(url, ix));
     }
     cus.setHashItSource(files);
     return mau;

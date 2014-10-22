@@ -1,10 +1,10 @@
 /*
- * $Id: NumberUtil.java,v 1.20 2014-05-26 07:30:54 tlipkis Exp $
+ * $Id: NumberUtil.java,v 1.21 2014-10-22 19:39:34 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,8 +34,8 @@ package org.lockss.util;
 import java.util.*;
 import java.math.BigDecimal;
 
-import org.apache.commons.lang.math.NumberUtils;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.math.NumberUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.oro.text.regex.Pattern;
 import org.lockss.exporter.biblio.BibliographicOrderScorer;
 import org.lockss.exporter.biblio.BibliographicUtil;

@@ -1,6 +1,10 @@
 /*
+ * $Id$
+ */
 
-Copyright (c) 2001-2012 Board of Trustees of Leland Stanford Jr. University,
+/*
+
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -25,9 +29,10 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
 */
+
 package org.lockss.plugin;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.lockss.daemon.PluginException;
 import org.lockss.util.Logger;
 
@@ -37,7 +42,7 @@ import java.util.Set;
 /** @author mlanken */
 public class FormUrlNormalizer implements UrlNormalizer {
 
-  private static Logger logger = Logger.getLogger("FormUrlNormalizer");
+  private static final Logger logger = Logger.getLogger(FormUrlNormalizer.class);
 
   private boolean m_sortAllUrls;
   private HashMap<String, Integer> m_limits;

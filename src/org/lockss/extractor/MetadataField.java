@@ -1,10 +1,10 @@
 /*
- * $Id: MetadataField.java,v 1.24 2014-09-09 22:50:25 pgust Exp $
+ * $Id: MetadataField.java,v 1.25 2014-10-22 19:39:39 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,8 +34,8 @@ package org.lockss.extractor;
 
 import java.util.*;
 import org.lockss.util.*;
-import org.apache.commons.lang.StringEscapeUtils;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringEscapeUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -45,7 +45,8 @@ import java.util.regex.Pattern;
  * cardinality and validator, if any.
  */
 public class MetadataField {
-  static Logger log = Logger.getLogger(MetadataField.class);
+  
+  private static final Logger log = Logger.getLogger(MetadataField.class);
   
   /**
    * A language of the resource. Recommended best practice is to use a
@@ -985,7 +986,7 @@ public class MetadataField {
       if (!StringUtil.isNullString(value)) {
         // matches a single html tag
         result = HtmlUtil.stripHtmlTags(value);
-        result = StringEscapeUtils.unescapeHtml(result);
+        result = StringEscapeUtils.unescapeHtml4(result);
       }
       return result;
     }

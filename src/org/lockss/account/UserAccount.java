@@ -1,10 +1,10 @@
 /*
- * $Id: UserAccount.java,v 1.15 2013-10-17 07:48:18 tlipkis Exp $
+ * $Id: UserAccount.java,v 1.16 2014-10-22 19:39:41 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,8 +36,8 @@ import java.io.*;
 import java.util.*;
 import java.security.*;
 import org.apache.oro.text.regex.*;
-import org.apache.commons.lang.*;
-import org.apache.commons.lang.time.*;
+import org.apache.commons.lang3.*;
+import org.apache.commons.lang3.time.*;
 import org.mortbay.util.Credential;
 
 import javax.servlet.http.*;
@@ -48,11 +48,11 @@ import org.lockss.jetty.*;
 import org.lockss.alert.*;
 import org.lockss.app.*;
 import org.lockss.servlet.*;
-import org.lockss.alert.*;
 
 /** User account data.
  */
 public abstract class UserAccount implements LockssSerializable, Comparable {
+  
   private static final Logger log = Logger.getLogger(UserAccount.class);
 
   // XXX enhance test/src/org/lockss/account/TestLCUserAccount.java

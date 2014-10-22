@@ -1,5 +1,5 @@
 /*
- * $Id: AuParamType.java,v 1.1 2014-08-25 08:57:03 tlipkis Exp $
+ * $Id: AuParamType.java,v 1.2 2014-10-22 19:39:38 thib_gc Exp $
  */
 
 /*
@@ -34,7 +34,7 @@ package org.lockss.daemon;
 import java.net.*;
 import java.util.*;
 import java.util.regex.*;
-import org.apache.commons.lang.math.NumberUtils;
+import org.apache.commons.lang3.math.NumberUtils;
 
 import org.lockss.util.*;
 import static org.lockss.daemon.ConfigParamDescr.*;

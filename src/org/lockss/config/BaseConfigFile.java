@@ -1,10 +1,10 @@
 /*
- * $Id: BaseConfigFile.java,v 1.11 2011-01-10 09:07:58 tlipkis Exp $
+ * $Id: BaseConfigFile.java,v 1.12 2014-10-22 19:39:39 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2001-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,7 +35,7 @@ package org.lockss.config;
 import java.io.*;
 import java.util.*;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 
@@ -44,7 +44,9 @@ import org.lockss.util.urlconn.*;
  * and parseable as either XML or props.
  */
 public abstract class BaseConfigFile implements ConfigFile {
-  protected static Logger log = Logger.getLogger("ConfigFile");
+  
+  // Shared with subclasses
+  protected static final Logger log = Logger.getLogger("ConfigFile");
 
   protected ConfigManager m_cfgMgr;
   protected int m_fileType;

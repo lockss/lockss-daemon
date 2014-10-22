@@ -1,5 +1,5 @@
 /*
- * $Id: BlockHasher.java,v 1.35 2014-07-29 22:01:50 tlipkis Exp $
+ * $Id: BlockHasher.java,v 1.36 2014-10-22 19:39:37 thib_gc Exp $
  */
 
 /*
@@ -32,21 +32,17 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.hasher;
 
-import java.io.*;
-import java.util.*;
+import java.io.InputStream;
 import java.security.*;
+import java.util.*;
 
-import org.apache.commons.lang.ArrayUtils;
+import org.apache.commons.lang3.ArrayUtils;
 import org.apache.oro.text.regex.*;
 import org.lockss.config.*;
 import org.lockss.plugin.*;
+import org.lockss.repository.AuSuspectUrlVersions;
 import org.lockss.state.SubstanceChecker;
 import org.lockss.util.*;
-import org.lockss.repository.*;
-import org.lockss.app.LockssDaemon;
-import org.lockss.protocol.IdentityManager;
-import org.lockss.protocol.PeerIdentity;
-import org.lockss.poller.Poll;
 
 /**
  * General class to handle content hashing
@@ -72,7 +68,7 @@ public class BlockHasher extends GenericHasher {
     Configuration.PREFIX + "blockHasher.localHashAlgorithm";
   public static final String DEFAULT_LOCAL_HASH_ALGORITHM = "SHA-1";
 
-  protected static Logger log = Logger.getLogger("BlockHasher");
+  private static final Logger log = Logger.getLogger(BlockHasher.class);
 
   private int maxVersions = DEFAULT_HASH_MAX_VERSIONS;
   private boolean includeUrl = false;

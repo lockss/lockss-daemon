@@ -1,10 +1,10 @@
 /*
- * $Id: CrawlerStatus.java,v 1.19 2014-07-13 04:16:28 tlipkis Exp $
+ * $Id: CrawlerStatus.java,v 1.20 2014-10-22 19:39:35 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,7 +34,7 @@ package org.lockss.crawler;
 
 import java.util.*;
 
-import org.apache.commons.lang.mutable.MutableInt;
+import org.apache.commons.lang3.mutable.MutableInt;
 import org.apache.commons.collections.set.ListOrderedSet;
 import org.apache.commons.collections.map.LinkedMap;
 import org.apache.commons.collections.iterators.*;
@@ -51,7 +51,8 @@ import org.lockss.plugin.*;
  * of URLs are recorded and displayed in the UI, or merely counted.
 */
 public class CrawlerStatus {
-  static Logger log = Logger.getLogger("CrawlerStatus");
+  
+  private static final Logger log = Logger.getLogger(CrawlerStatus.class);
 
   public static final String ALL_URLS = "all";
 

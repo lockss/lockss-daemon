@@ -1,10 +1,10 @@
 /*
- * $Id: KeyStoreUtil.java,v 1.8 2010-03-14 08:09:45 tlipkis Exp $
+ * $Id: KeyStoreUtil.java,v 1.9 2014-10-22 19:39:34 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,10 +34,8 @@ package org.lockss.util;
 
 import java.util.*;
 import java.io.*;
-import java.net.*;
 import java.security.*;
 import java.security.cert.*;
-import javax.net.ssl.*;
 
 import sun.security.x509.*;
 
@@ -50,7 +48,8 @@ import org.lockss.config.*;
  * Utilities for creating keystores
  */
 public class KeyStoreUtil {
-  protected static Logger log = Logger.getLogger("KeyStoreUtil");
+
+  private static final Logger log = Logger.getLogger(KeyStoreUtil.class);
 
 
   // Large set of args passed in Properties or Configuration
@@ -93,9 +92,9 @@ public class KeyStoreUtil {
 
 
   public static String randomString(int len, SecureRandom rng) {
-    return org.apache.commons.lang.RandomStringUtils.random(len, 32, 126,
-							    false, false,
-							    null, rng);
+    return org.apache.commons.lang3.RandomStringUtils.random(len, 32, 126,
+							     false, false,
+							     null, rng);
   }
 
   public static String randomString(int len, LockssDaemon daemon)

@@ -1,10 +1,10 @@
 /*
- * $Id: KbartExportFilter.java,v 1.20 2013-03-06 23:17:46 easyonthemayo Exp $
+ * $Id: KbartExportFilter.java,v 1.21 2014-10-22 19:39:34 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2010-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,7 +35,7 @@ package org.lockss.exporter.kbart;
 import java.util.*;
 
 import org.apache.commons.collections.comparators.ComparatorChain;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.lockss.config.TdbUtil.ContentScope;
 import org.lockss.exporter.kbart.KbartTitle.Field;
 import static org.lockss.exporter.kbart.KbartTitle.Field.*;
@@ -81,7 +81,7 @@ import org.lockss.util.*;
  */
 public class KbartExportFilter {
   
-  private static Logger log = Logger.getLogger("KbartExportFilter");
+  private static final Logger log = Logger.getLogger(KbartExportFilter.class);
 
   public static final boolean OMIT_EMPTY_FIELDS_DEFAULT =
       KbartExporter.omitEmptyFieldsByDefault;

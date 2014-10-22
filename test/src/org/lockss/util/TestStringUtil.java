@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.103 2014-10-17 21:48:17 thib_gc Exp $
+ * $Id: TestStringUtil.java,v 1.104 2014-10-22 19:39:35 thib_gc Exp $
  */
 
 /*
@@ -1128,7 +1128,7 @@ public class TestStringUtil extends LockssTestCase {
   }
 
   public void testFindStringEndLong() throws IOException {
-    String padding = org.apache.commons.lang.StringUtils.repeat("X ", 80);
+    String padding = org.apache.commons.lang3.StringUtils.repeat("X ", 80);
     String stringToFind = "This permision string is longer than 20 characters";
     String readerStr = padding + stringToFind;
     assertTrue("Didn't find string when it should",

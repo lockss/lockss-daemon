@@ -1,10 +1,10 @@
 /*
- * $Id: TestServeContent.java,v 1.1 2011-05-18 05:54:52 tlipkis Exp $
+ * $Id: TestServeContent.java,v 1.2 2014-10-22 19:39:34 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,12 +32,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.servlet;
 
-import java.util.*;
-
-import org.apache.commons.lang.StringEscapeUtils;
-//import com.meterware.servletunit.*;
-import com.meterware.httpunit.*;
-
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.servlet.ServeContent.PubState;
@@ -45,7 +39,7 @@ import org.lockss.servlet.ServeContent.MissingFileAction;
 
 public class TestServeContent extends LockssServletTestCase {
 
-  static Logger log = Logger.getLogger("TestServeContent");
+  private static final Logger log = Logger.getLogger(TestServeContent.class);
 
   private MyServeContent sc;
 

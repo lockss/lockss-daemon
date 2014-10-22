@@ -1,10 +1,10 @@
 /*
- * $Id: CXSerializer.java,v 1.21 2010-02-23 04:39:49 pgust Exp $
+ * $Id: CXSerializer.java,v 1.22 2014-10-22 19:39:34 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,7 +34,7 @@ package org.lockss.util;
 
 import java.io.*;
 
-import org.apache.commons.lang.mutable.MutableBoolean;
+import org.apache.commons.lang3.mutable.MutableBoolean;
 import org.exolab.castor.mapping.Mapping;
 
 import org.lockss.app.LockssApp;
@@ -502,7 +502,7 @@ public class CXSerializer extends ObjectSerializer {
   /**
    * <p>A logger for use by this serializer.</p>
    */
-  private static Logger logger = Logger.getLogger("CXSerializer");
+  private static final Logger logger = Logger.getLogger(CXSerializer.class);
 
   /**
    * <p>Returns the mode for this class from the configuration.</p>

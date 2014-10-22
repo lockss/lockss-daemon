@@ -1,10 +1,10 @@
 /*
- * $Id: LockssServlet.java,v 1.137 2014-05-14 04:13:28 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.138 2014-10-22 19:39:33 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -41,7 +41,7 @@ import java.security.Principal;
 import javax.servlet.*;
 import javax.servlet.http.*;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.collections.*;
 import org.apache.commons.collections.bidimap.*;
 import org.apache.commons.collections.iterators.*;
@@ -65,7 +65,8 @@ import org.xnap.commons.i18n.I18n;
 // single thread (request) at a time.
 public abstract class LockssServlet extends HttpServlet
   implements SingleThreadModel {
-  protected static Logger log = Logger.getLogger("LockssServlet");
+  
+  private static final Logger log = Logger.getLogger(LockssServlet.class);
 
   /** A gettext-commons I18n object usable by all servlets. The object is
    * cached per-package (internally to the gettext-commons library). */

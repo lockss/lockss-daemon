@@ -1,10 +1,10 @@
 /*
- * $Id: PsmToDot.java,v 1.3 2010-08-14 22:26:25 tlipkis Exp $
+ * $Id: PsmToDot.java,v 1.4 2014-10-22 19:39:40 thib_gc Exp $
  */
 
 /*
 
- Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,13 +37,13 @@ import java.util.*;
 import java.lang.reflect.*;
 import org.apache.commons.collections.*;
 import org.apache.commons.collections.map.*;
-import org.apache.commons.lang.StringUtils;
 
 import org.lockss.util.*;
 import org.lockss.protocol.psm.*;
 
 public class PsmToDot {
-  private static Logger log = Logger.getLogger("PsmToDot");
+  
+  private static final Logger log = Logger.getLogger(PsmToDot.class);
 
   static String HEADER =
     "digraph StateMachine {\n" +

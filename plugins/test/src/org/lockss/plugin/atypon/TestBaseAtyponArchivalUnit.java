@@ -1,10 +1,10 @@
 /*
- * $Id: TestBaseAtyponArchivalUnit.java,v 1.7 2014-10-17 21:38:52 ldoan Exp $
+ * $Id: TestBaseAtyponArchivalUnit.java,v 1.8 2014-10-22 19:39:34 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,16 +33,13 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.atypon;
 
 import java.net.URL;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Properties;
+import java.util.*;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.base.*;
+import org.lockss.plugin.base.BaseCachedUrlSet;
 import org.lockss.plugin.definable.*;
 import org.lockss.state.AuState;
 import org.lockss.test.*;
@@ -59,7 +56,7 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
   static final String VOL_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
   static final String ROOT_URL = "http://www.BaseAtypon.com/"; //this is not a real url
   
-  static Logger log = Logger.getLogger("TestBaseAtyponArchivalUnit");
+  private static final Logger log = Logger.getLogger(TestBaseAtyponArchivalUnit.class);
   
   static final String PLUGIN_ID = "org.lockss.plugin.atypon.BaseAtyponPlugin";
   static final String PluginName = "Base Atypon Plugin";

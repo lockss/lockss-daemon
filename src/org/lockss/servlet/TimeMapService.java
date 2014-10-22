@@ -1,10 +1,10 @@
 /*
- * $Id: TimeMapService.java,v 1.1 2013-03-11 05:43:11 clairegriffin Exp $
+ * $Id: TimeMapService.java,v 1.2 2014-10-22 19:39:33 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,8 +35,7 @@ package org.lockss.servlet;
 import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.servlet.CuTimeMap.CuMemento;
-import org.lockss.util.StringUtil;
-import org.lockss.util.UrlUtil;
+import org.lockss.util.*;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletResponse;
@@ -54,6 +53,8 @@ import java.util.Date;
  */
 public class TimeMapService extends TimeServlet {
 
+  private static final Logger log = Logger.getLogger(TimeMapService.class);
+  
   @Override
   protected void lockssHandleRequest() throws ServletException, IOException {
     checkValidRequest();

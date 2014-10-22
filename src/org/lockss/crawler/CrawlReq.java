@@ -1,10 +1,10 @@
 /*
- * $Id: CrawlReq.java,v 1.3 2012-11-08 06:21:40 tlipkis Exp $
+ * $Id: CrawlReq.java,v 1.4 2014-10-22 19:39:35 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,22 +32,9 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.crawler;
 
-import java.util.*;
-import org.apache.commons.lang.builder.CompareToBuilder;
-import org.apache.commons.collections.*;
-import org.apache.commons.collections.map.*;
-import org.apache.commons.collections.bag.HashBag; // needed to disambiguate
-import org.apache.commons.collections.set.ListOrderedSet;
-import EDU.oswego.cs.dl.util.concurrent.*;
-import org.lockss.config.*;
-import org.lockss.daemon.*;
-import org.lockss.daemon.status.*;
-import org.lockss.state.NodeState;
-import org.lockss.util.*;
-import org.lockss.app.*;
-import org.lockss.state.*;
+import org.lockss.daemon.ActivityRegulator;
 import org.lockss.plugin.*;
-import org.lockss.plugin.exploded.*;
+import org.lockss.state.AuState;
 
 public class CrawlReq {
   ArchivalUnit au;
