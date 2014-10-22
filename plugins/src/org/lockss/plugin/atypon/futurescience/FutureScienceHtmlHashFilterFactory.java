@@ -1,10 +1,10 @@
 /*
- * $Id: FutureScienceHtmlHashFilterFactory.java,v 1.8 2014-08-27 17:35:04 alexandraohlson Exp $
+ * $Id: FutureScienceHtmlHashFilterFactory.java,v 1.9 2014-10-22 21:51:12 alexandraohlson Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,6 +35,7 @@ package org.lockss.plugin.atypon.futurescience;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.Reader;
+import java.util.regex.Pattern;
 
 import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
@@ -43,7 +44,9 @@ import org.htmlparser.Tag;
 import org.htmlparser.Text;
 import org.htmlparser.filters.OrFilter;
 import org.htmlparser.filters.TagNameFilter;
+import org.htmlparser.tags.CompositeTag;
 import org.htmlparser.tags.Div;
+import org.htmlparser.tags.LinkTag;
 import org.htmlparser.tags.Span;
 import org.htmlparser.tags.TableColumn;
 import org.htmlparser.util.NodeList;
@@ -61,13 +64,22 @@ import org.lockss.filter.html.HtmlTransform;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.FilterFactory;
 import org.lockss.util.ListUtil;
+import org.lockss.util.Logger;
 import org.lockss.util.ReaderInputStream;
 
 /* Don't extend BaseAtyponHtmlHashFilterFactory because 1) FutureScienceGroup is somewhat different
  * AND because we need to keep the comments for some context specific filtering and then
  * we can remove them at the end
  */
+/*STANDALONE - DOES NOT INHERIT FROM BASE ATYPON */
 public class FutureScienceHtmlHashFilterFactory implements FilterFactory {
+  Logger log = Logger.getLogger(FutureScienceHtmlHashFilterFactory.class);
+  // String used to see if text matches a size description of an article
+  // usually "PDF Plus (527 KB)" or similar
+  // (?i) makes it case insensitive
+  private static final String SIZE_REGEX = "PDF\\s?(Plus)?\\s?\\(\\s?[0-9]+";
+  private static final Pattern SIZE_PATTERN = Pattern.compile(SIZE_REGEX, Pattern.CASE_INSENSITIVE);  
+  
 
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
@@ -114,6 +126,9 @@ public class FutureScienceHtmlHashFilterFactory implements FilterFactory {
         // Some article listings have a "free" glif. That change status over time, so remove the image
         //NOTE - there may still be an issue with extra spaces added when image is present
         HtmlNodeFilters.tagWithAttributeRegex("img", "src", "/images/free.gif$", true),
+        // some size notes are within an identifying span
+        // (see future science on an article page
+        HtmlNodeFilters.tagWithAttribute("span", "class", "fileSize"),        
 
         new NodeFilter() {      
           // look for a <td> that has a comment <!-- placeholder id=null....--> child somewhere in it. If it's there remove it.
@@ -158,6 +173,13 @@ public class FutureScienceHtmlHashFilterFactory implements FilterFactory {
               public void visitTag(Tag tag) {
                 if (tag instanceof Span && tag.getAttribute("id") != null) {
                   tag.removeAttribute("id");
+                } else if 
+                (tag instanceof LinkTag && ((CompositeTag) tag).getChildCount() == 1 &&
+                ((CompositeTag) tag).getFirstChild() instanceof Text) {
+                  if (SIZE_PATTERN.matcher(((CompositeTag) tag).getStringText()).find()) {
+                    log.debug3("removing link child text : " + ((CompositeTag) tag).getStringText());
+                    ((CompositeTag) tag).removeChild(0);
+                  } 
                 }
               }
             });

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponHtmlHashFilterFactory.java,v 1.7 2014-10-08 16:11:26 alexandraohlson Exp $
+ * $Id: BaseAtyponHtmlHashFilterFactory.java,v 1.8 2014-10-22 21:51:12 alexandraohlson Exp $
  */
 
 /*
@@ -36,9 +36,14 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.Reader;
 import java.util.Arrays;
+import java.util.regex.Pattern;
+
 import org.htmlparser.NodeFilter;
 import org.htmlparser.Tag;
+import org.htmlparser.Text;
 import org.htmlparser.filters.*;
+import org.htmlparser.tags.CompositeTag;
+import org.htmlparser.tags.LinkTag;
 import org.htmlparser.tags.Span;
 import org.htmlparser.util.NodeList;
 import org.htmlparser.util.ParserException;
@@ -47,7 +52,6 @@ import org.lockss.filter.FilterUtil;
 import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.atypon.aiaa.AIAAHtmlHashFilterFactory;
 import org.lockss.util.Logger;
 import org.lockss.util.ReaderInputStream;
 
@@ -62,6 +66,11 @@ import org.lockss.util.ReaderInputStream;
 
 public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
   Logger log = Logger.getLogger(BaseAtyponHtmlHashFilterFactory.class);
+  // String used to see if text matches a size description of an article
+  // usually "PDF Plus (527 KB)" or similar
+  // (?i) makes it case insensitive
+  private static final String SIZE_REGEX = "PDF\\s?(Plus)?\\s?\\(\\s?[0-9]+";
+  private static final Pattern SIZE_PATTERN = Pattern.compile(SIZE_REGEX, Pattern.CASE_INSENSITIVE);  
 
   protected static NodeFilter[] baseAtyponFilters = new NodeFilter[] {
     // 7/22/2013 starting to use a more aggressive hashing policy-
@@ -81,28 +90,40 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttributeRegex("img", "class", "^accessIcon"),
     // Contains the changeable list of citations
     HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
+    // some size notes are within an identifying span
+    // (see future science on an article page
+    HtmlNodeFilters.tagWithAttribute("span", "class", "fileSize"),
   };
 
   HtmlTransform xform = new HtmlTransform() {
     //; The "id" attribute of <span> tags can have a gensym
-      @Override
-      public NodeList transform(NodeList nodeList) throws IOException {
-        try {
-          nodeList.visitAllNodesWith(new NodeVisitor() {
-            @Override
-            public void visitTag(Tag tag) {
-              if (tag instanceof Span && tag.getAttribute("id") != null) {
-                tag.removeAttribute("id");
-              }
+    @Override
+    public NodeList transform(NodeList nodeList) throws IOException {
+      try {
+        nodeList.visitAllNodesWith(new NodeVisitor() {
+          @Override
+          public void visitTag(Tag tag) {
+            if (tag instanceof Span && tag.getAttribute("id") != null) {
+              tag.removeAttribute("id");
+            // some size notes are just text children of the link tag
+            // eg <a ..> PDF Plus (123 kb)</a>
+            } else if 
+            (tag instanceof LinkTag && ((CompositeTag) tag).getChildCount() == 1 &&
+            ((CompositeTag) tag).getFirstChild() instanceof Text) {
+              if (SIZE_PATTERN.matcher(((CompositeTag) tag).getStringText()).find()) {
+                log.debug3("removing link child text : " + ((CompositeTag) tag).getStringText());
+                ((CompositeTag) tag).removeChild(0);
+              } 
             }
-          });
-        } catch (ParserException pe) {
-          IOException ioe = new IOException();
-          ioe.initCause(pe);
-          throw ioe;
-        }
-        return nodeList;
+          }
+        });
+      } catch (ParserException pe) {
+        IOException ioe = new IOException();
+        ioe.initCause(pe);
+        throw ioe;
       }
+      return nodeList;
+    }
   };   
 
   /** Create an array of NodeFilters that combines the atyponBaseFilters with

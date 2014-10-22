@@ -1,5 +1,5 @@
 /*
- * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.18 2014-07-29 22:01:04 alexandraohlson Exp $
+ * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.19 2014-10-22 21:51:12 alexandraohlson Exp $
  */
 
 /*
@@ -34,7 +34,6 @@ package org.lockss.plugin.taylorandfrancis;
 
 import java.io.*;
 
-import org.apache.commons.compress.utils.IOUtils;
 import org.htmlparser.*;
 import org.htmlparser.filters.*;
 import org.htmlparser.util.*;
@@ -47,6 +46,7 @@ import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
 
+/*STANDALONE - DOES NOT INHERIT FROM BASE ATYPON */
 public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
 
   private static final Logger log = Logger.getLogger(TaylorAndFrancisHtmlHashFilterFactory.class);

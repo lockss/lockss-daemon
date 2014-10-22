@@ -1,10 +1,10 @@
 /*
- * $Id: BioOneAtyponHtmlHashFilterFactory.java,v 1.4 2013-08-23 20:20:39 alexandraohlson Exp $
+ * $Id: BioOneAtyponHtmlHashFilterFactory.java,v 1.5 2014-10-22 21:51:12 alexandraohlson Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -45,7 +45,7 @@ import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
 
-
+/*STANDALONE - DOES NOT INHERIT FROM BASE ATYPON */
 public class BioOneAtyponHtmlHashFilterFactory implements FilterFactory {
 
   @Override

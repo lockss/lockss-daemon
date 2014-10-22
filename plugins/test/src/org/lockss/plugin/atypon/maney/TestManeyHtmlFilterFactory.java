@@ -1,5 +1,5 @@
 /*
- * $Id: TestManeyHtmlFilterFactory.java,v 1.5 2014-10-22 21:38:58 thib_gc Exp $
+ * $Id: TestManeyHtmlFilterFactory.java,v 1.6 2014-10-22 21:51:12 alexandraohlson Exp $
  */
 
 /*
@@ -320,7 +320,7 @@ public class TestManeyHtmlFilterFactory extends LockssTestCase {
   "<div class=\"tocDeliverFormatsLinks\">" +                                                                                                                              
   "<a class=\"ref nowrap \" href=\"/doi/abs/10.1179/foo\">Citation</a> | " +                                                                                              
   "<a class=\"ref nowrap\" href=\"/doi/full/10.1179/foo\">Full Text</a> | " +                                                                                             
-  "<a class=\"ref nowrap\" target=\"_blank\" title=\"Opens new window\" href=\"/doi/pdfplus/10.1179/foo\">PDF (30 KB)</a> | " +                                           
+  "<a class=\"ref nowrap\" target=\"_blank\" title=\"Opens new window\" href=\"/doi/pdfplus/10.1179/foo\"></a> | " +                                           
   "<a class=\"ref nowrap\" href=\"/doi/full/10.1179/foo#allImages\">Figures</a><span class=\"publicationRightLink\"> | " +                                                
   "<a class=\"ref rightsLink tocRightLink\" title=\"Opens new window\" href=\"javascript:RightslinkPopUp('foo')\"></a>" +                                                 
   "</span>" +                                                                                                                                                             

@@ -1,5 +1,5 @@
 /*
- * $Id: BioOneAtyponHtmlCrawlFilterFactory.java,v 1.4 2014-10-08 16:11:25 alexandraohlson Exp $
+ * $Id: BioOneAtyponHtmlCrawlFilterFactory.java,v 1.5 2014-10-22 21:51:12 alexandraohlson Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 
 /* this crawl filter is currently not inheriting from BaseAtypon parent */
+/*STANDALONE - DOES NOT INHERIT FROM BASE ATYPON */
 public class BioOneAtyponHtmlCrawlFilterFactory implements FilterFactory {
 
   @Override

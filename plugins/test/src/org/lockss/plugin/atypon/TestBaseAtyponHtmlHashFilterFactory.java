@@ -1,4 +1,4 @@
-/*  $Id: TestBaseAtyponHtmlHashFilterFactory.java,v 1.1 2013-08-06 21:24:24 aishizaki Exp $
+/*  $Id: TestBaseAtyponHtmlHashFilterFactory.java,v 1.2 2014-10-22 21:51:12 alexandraohlson Exp $
  
  Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
 
@@ -198,6 +198,38 @@ public class TestBaseAtyponHtmlHashFilterFactory extends LockssTestCase {
   private static final String withComments =
     "<!--totalCount15--><!--modified:1374684679000-->Hello World";
   private static final String withoutComments ="Hello World";
+  
+  // the listing of articles on a TOC
+  private static final String pdfPlusSize =
+      "<div>" +
+          "<a class=\"ref nowrap\" target=\"_blank\" title=\"Opens new window\" " +
+          "href=\"/doi/pdfplus/10.2217/foo\">PDF Plus (584 KB)</a>" +
+          "<a class=\"ref nowrap\" target=\"_blank\" title=\"Opens new window\" " +
+          "href=\"/doi/pdfplus/10.2217/foo\">Pdf (584 KB)</a>" +
+          "<a class=\"ref nowrap\" target=\"_blank\" title=\"Opens new window\" " +
+          "href=\"/doi/pdfplus/10.2217/foo\">PDFplus(584 KB)</a>" +
+      "</div>";
+  private static final String pdfPlusSizeFiltered =
+      "<div>" +
+          "<a class=\"ref nowrap\" target=\"_blank\" title=\"Opens new window\" " +
+          "href=\"/doi/pdfplus/10.2217/foo\"></a>" +
+          "<a class=\"ref nowrap\" target=\"_blank\" title=\"Opens new window\" " +
+          "href=\"/doi/pdfplus/10.2217/foo\"></a>" +
+          "<a class=\"ref nowrap\" target=\"_blank\" title=\"Opens new window\" " +
+          "href=\"/doi/pdfplus/10.2217/foo\"></a>" +
+      "</div>";
+
+  // the filesize with the links on an article page
+  private static final String fileSize =
+      "<div>" +
+      "<a href=\"/doi/pdfplus/10.2217/foo\" target=\"_blank\">View PDF Plus " +
+  "<span class=\"fileSize\">(584 KB)</span></a>" +
+          "</div>";
+  private static final String fileSizeFiltered =
+      "<div>" +
+      "<a href=\"/doi/pdfplus/10.2217/foo\" target=\"_blank\">View PDF Plus " +
+  "</a>" +
+          "</div>";
 
   
   /*
@@ -250,5 +282,16 @@ public class TestBaseAtyponHtmlHashFilterFactory extends LockssTestCase {
     InputStream actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(withAccessIcon), Constants.DEFAULT_ENCODING);
     assertEquals(withoutAccessIcon, StringUtil.fromInputStream(actIn));
+  }
+  
+  public void test_pdfPlusSize() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(pdfPlusSize),
+        Constants.DEFAULT_ENCODING);
+    assertEquals(pdfPlusSizeFiltered, StringUtil.fromInputStream(actIn));
+    actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(fileSize),
+        Constants.DEFAULT_ENCODING);
+    assertEquals(fileSizeFiltered, StringUtil.fromInputStream(actIn));    
   }
 }

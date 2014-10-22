@@ -1,5 +1,5 @@
 /*
- * $Id: TestFutureScienceHtmlHashFilterFactory.java,v 1.7 2014-08-27 17:35:04 alexandraohlson Exp $
+ * $Id: TestFutureScienceHtmlHashFilterFactory.java,v 1.8 2014-10-22 21:51:12 alexandraohlson Exp $
  */
 
 /* Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University, all rights reserved.
@@ -345,6 +345,38 @@ public class TestFutureScienceHtmlHashFilterFactory extends LockssTestCase{
       "</tr></table>" +
       "</div>";
   
+  // the listing of articles on a TOC
+  private static final String pdfPlusSize =
+      "<div>" +
+          "<a class=\"ref nowrap\" target=\"_blank\" title=\"Opens new window\" " +
+          "href=\"/doi/pdfplus/10.2217/foo\">PDF Plus (584 KB)</a>" +
+          "<a class=\"ref nowrap\" target=\"_blank\" title=\"Opens new window\" " +
+          "href=\"/doi/pdfplus/10.2217/foo\">Pdf (584 KB)</a>" +
+          "<a class=\"ref nowrap\" target=\"_blank\" title=\"Opens new window\" " +
+          "href=\"/doi/pdfplus/10.2217/foo\">PDFplus(584 KB)</a>" +
+      "</div>";
+  private static final String pdfPlusSizeFiltered =
+      "<div>" +
+          "<a class=\"ref nowrap\" target=\"_blank\" title=\"Opens new window\" " +
+          "href=\"/doi/pdfplus/10.2217/foo\"></a>" +
+          "<a class=\"ref nowrap\" target=\"_blank\" title=\"Opens new window\" " +
+          "href=\"/doi/pdfplus/10.2217/foo\"></a>" +
+          "<a class=\"ref nowrap\" target=\"_blank\" title=\"Opens new window\" " +
+          "href=\"/doi/pdfplus/10.2217/foo\"></a>" +
+      "</div>";
+
+  // the filesize with the links on an article page
+  private static final String fileSize =
+      "<div>" +
+      "<a href=\"/doi/pdfplus/10.2217/foo\" target=\"_blank\">View PDF Plus " +
+  "<span class=\"fileSize\">(584 KB)</span></a>" +
+          "</div>";
+  private static final String fileSizeFiltered =
+      "<div>" +
+      "<a href=\"/doi/pdfplus/10.2217/foo\" target=\"_blank\">View PDF Plus " +
+  "</a>" +
+          "</div>";
+  
   public void test_topBannerHtml() throws Exception {
     InputStream actIn = filt.createFilteredInputStream(mau,
         new StringInputStream(topBannerHtml),
@@ -442,6 +474,17 @@ public class TestFutureScienceHtmlHashFilterFactory extends LockssTestCase{
         Constants.DEFAULT_ENCODING);
     assertEquals(spanCommentFiltered, StringUtil.fromInputStream(actIn));
 
+  }
+  
+  public void test_pdfPlusSize() throws Exception {
+    InputStream actIn = filt.createFilteredInputStream(mau,
+        new StringInputStream(pdfPlusSize),
+        Constants.DEFAULT_ENCODING);
+    assertEquals(pdfPlusSizeFiltered, StringUtil.fromInputStream(actIn));
+    actIn = filt.createFilteredInputStream(mau,
+        new StringInputStream(fileSize),
+        Constants.DEFAULT_ENCODING);
+    assertEquals(fileSizeFiltered, StringUtil.fromInputStream(actIn));    
   }
 
 }

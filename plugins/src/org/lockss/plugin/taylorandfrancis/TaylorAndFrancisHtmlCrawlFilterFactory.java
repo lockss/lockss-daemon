@@ -1,5 +1,5 @@
 /*
- * $Id: TaylorAndFrancisHtmlCrawlFilterFactory.java,v 1.9 2014-10-08 16:11:24 alexandraohlson Exp $
+ * $Id: TaylorAndFrancisHtmlCrawlFilterFactory.java,v 1.10 2014-10-22 21:51:12 alexandraohlson Exp $
  */
 
 /*
@@ -44,7 +44,7 @@ import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 
-/* This does not inherit anything from BaseAtypon parent*/
+/*STANDALONE - DOES NOT INHERIT FROM BASE ATYPON */
 public class TaylorAndFrancisHtmlCrawlFilterFactory implements FilterFactory {
 
   protected static final Pattern corrections = Pattern.compile("Original Article|Corrigendum|Correction", Pattern.CASE_INSENSITIVE);

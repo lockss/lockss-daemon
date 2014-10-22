@@ -1,5 +1,5 @@
 /*
- * $Id: TestSiamHtmlHashFilterFactory.java,v 1.6 2014-08-27 17:35:04 alexandraohlson Exp $
+ * $Id: TestSiamHtmlHashFilterFactory.java,v 1.7 2014-10-22 21:51:12 alexandraohlson Exp $
  */
 /*
 
@@ -95,7 +95,7 @@ public class TestSiamHtmlHashFilterFactory extends LockssTestCase {
           " <div class=\"pubDate\">Online Publication Date: 2009-2010</div>" +
           " <a class=\"ref nowrap\" href=\"/doi/abs/10.1137/x\">Abstract</a> |" +
           " <a class=\"ref nowrap\" href=\"/doi/ref/10.1137/x\">References</a> |" +
-          " <a class=\"ref nowrap\" target=\"_blank\" title=\"Opens new window\" href=\"/doi/pdf/10.1137/x\">PDF (1862 KB)</a>" +
+          " <a class=\"ref nowrap\" target=\"_blank\" title=\"Opens new window\" href=\"/doi/pdf/10.1137/x\"></a>" +
           " </td>" +
           " </tr>";
 
@@ -145,7 +145,7 @@ public class TestSiamHtmlHashFilterFactory extends LockssTestCase {
           "<div class=\"doiCrossRef\"></div><div class=\"pubDate\">Online Publication Date: 2009-2010</div>" +
           " <a class=\"ref nowrap\" href=\"/doi/abs/10.1137/x\">Abstract</a> | <a class=\"ref nowrap\"" +
           "href=\"/doi/ref/10.1137/x\">References</a> | <a class=\"ref nowrap\" target=\"_blank\" title=\"Opens new window\"" +
-          " href=\"/doi/pdf/10.1137/x\">PDF (1862 KB)</a>" +
+          " href=\"/doi/pdf/10.1137/x\"></a>" +
           " </td>";
 
   private static final String footer =
@@ -327,7 +327,7 @@ public class TestSiamHtmlHashFilterFactory extends LockssTestCase {
           "</a> | " +
           "<a class=\"ref nowrap\" href=\"/doi/ref/10.1137/110842545\">References" +
           "</a> | " +
-          "<a class=\"ref nowrap\" target=\"_blank\" title=\"Opens new window\" href=\"/doi/pdf/10.1137/110842545\">PDF (328 KB)" +
+          "<a class=\"ref nowrap\" target=\"_blank\" title=\"Opens new window\" href=\"/doi/pdf/10.1137/110842545\">" +
           "</a> " +
           "</td>" +
           "</tr>" +

@@ -1,5 +1,5 @@
 /*
- * $Id: TestAmmonsScientificHashHtmlFilterFactory.java,v 1.2 2014-10-08 16:11:29 alexandraohlson Exp $
+ * $Id: TestAmmonsScientificHashHtmlFilterFactory.java,v 1.3 2014-10-22 21:51:13 alexandraohlson Exp $
  */
 
 /* Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University, all rights reserved.
@@ -116,9 +116,9 @@ public class TestAmmonsScientificHashHtmlFilterFactory extends LockssTestCase{
           "</a> | " +
           "<a class=\"ref nowrap\" href=\"/doi/full/10.2466/30.24.PMS.117xxxxx\">Full Text" +
           "</a> | " +
-          "<a class=\"ref nowrap pdf\" target=\"_blank\" title=\"Opens new window\" href=\"/doi/pdf/10.2466/30.24.PMS.117xxxxx\">PDF (152 KB)" +
+          "<a class=\"ref nowrap pdf\" target=\"_blank\" title=\"Opens new window\" href=\"/doi/pdf/10.2466/30.24.PMS.117xxxxx\">" +
           "</a> | " +
-          "<a class=\"ref nowrap pdfplus\" target=\"_blank\" title=\"Opens new window\" href=\"/doi/pdfplus/10.2466/30.24.PMS.117xxxxx\">PDF Plus (203 KB)" +
+          "<a class=\"ref nowrap pdfplus\" target=\"_blank\" title=\"Opens new window\" href=\"/doi/pdfplus/10.2466/30.24.PMS.117xxxxx\">" +
           "</a> " +
           "</td>" +
           "</tr>" +

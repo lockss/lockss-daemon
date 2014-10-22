@@ -1,5 +1,5 @@
 /*
- * $Id: TestAIAAHtmlHashFilterFactory.java,v 1.6 2014-05-20 22:18:28 alexandraohlson Exp $
+ * $Id: TestAIAAHtmlHashFilterFactory.java,v 1.7 2014-10-22 21:51:12 alexandraohlson Exp $
  */
 /*
 
@@ -148,7 +148,6 @@ public class TestAIAAHtmlHashFilterFactory extends LockssTestCase {
   private static final String listItemCitedByFiltered =
       "<ul> <li class=\"articleToolLi showPDFPlus\">" +
           "<a href=\"/doi/pdfplus/10.2514/1.36414\" target=\"_blank\">" +
-          "PDF Plus (724 KB)" +
           "</a>" +
           "</li>" +
           "</ul>";
