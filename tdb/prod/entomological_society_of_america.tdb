@@ -4,6 +4,8 @@
     name = Entomological Society of America
   >
 
+    comment[0] = move to OUP on 2015-01-01
+
   {
     title <
       name = Annals of the Entomological Society of America ;
@@ -51,7 +53,7 @@
       au < released ; 2011 ; Annals of the Entomological Society of America Volume 104 ; 104 >
       au < released ; 2012 ; Annals of the Entomological Society of America Volume 105 ; 105 >
       au < released ; 2013 ; Annals of the Entomological Society of America Volume 106 ; 106 >
-      au < manifest ; 2014 ; Annals of the Entomological Society of America Volume 107 ; 107 >
+      au < doNotProcess ; 2014 ; Annals of the Entomological Society of America Volume 107 ; 107 >
             
     }
 
@@ -104,7 +106,7 @@
       au < released ; 2011 ; Environmental Entomology Volume 40 ; 40 >
       au < released ; 2012 ; Environmental Entomology Volume 41 ; 41 >
       au < released ; 2013 ; Environmental Entomology Volume 42 ; 42 >
-      au < manifest ; 2014 ; Environmental Entomology Volume 43 ; 43 >
+      au < doNotProcess ; 2014 ; Environmental Entomology Volume 43 ; 43 >
       
     }
 
@@ -158,7 +160,7 @@
       au < released ; 2011 ; Journal of Economic Entomology Volume 104 ; 104 >
       au < released ; 2012 ; Journal of Economic Entomology Volume 105 ; 105 >
       au < released ; 2013 ; Journal of Economic Entomology Volume 106 ; 106 >
-      au < manifest ; 2014 ; Journal of Economic Entomology Volume 107 ; 107 >
+      au < doNotProcess ; 2014 ; Journal of Economic Entomology Volume 107 ; 107 >
             
     }
 
@@ -210,7 +212,7 @@
       au < released ; 2011 ; Journal of Medical Entomology Volume 48 ; 48 >
       au < released ; 2012 ; Journal of Medical Entomology Volume 49 ; 49 >
       au < released ; 2013 ; Journal of Medical Entomology Volume 50 ; 50 >
-      au < manifest ; 2014 ; Journal of Medical Entomology Volume 51 ; 51 >
+      au < doNotProcess ; 2014 ; Journal of Medical Entomology Volume 51 ; 51 >
       
       
     }
