@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseAtyponArchivalUnit.java,v 1.8 2014-10-22 19:39:34 thib_gc Exp $
+ * $Id: TestBaseAtyponArchivalUnit.java,v 1.9 2014-10-22 21:38:58 thib_gc Exp $
  */
 
 /*
@@ -35,7 +35,7 @@ package org.lockss.plugin.atypon;
 import java.net.URL;
 import java.util.*;
 
-import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang.StringUtils;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;

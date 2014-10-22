@@ -1,5 +1,5 @@
 /*
- * $Id: TestManeyHtmlFilterFactory.java,v 1.4 2014-10-22 19:39:39 thib_gc Exp $
+ * $Id: TestManeyHtmlFilterFactory.java,v 1.5 2014-10-22 21:38:58 thib_gc Exp $
  */
 
 /*
@@ -39,7 +39,7 @@ package org.lockss.plugin.atypon.maney;
 
 import junit.framework.Test;
 
-import org.apache.commons.lang3.RandomStringUtils;
+import org.apache.commons.lang.RandomStringUtils;
 import org.lockss.util.*;
 import org.lockss.plugin.FilterFactory;
 import org.lockss.test.*;

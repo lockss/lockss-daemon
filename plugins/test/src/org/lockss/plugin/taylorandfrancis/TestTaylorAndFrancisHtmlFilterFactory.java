@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaylorAndFrancisHtmlFilterFactory.java,v 1.19 2014-10-22 19:39:39 thib_gc Exp $
+ * $Id: TestTaylorAndFrancisHtmlFilterFactory.java,v 1.20 2014-10-22 21:39:20 thib_gc Exp $
  */
 
 /*
@@ -36,7 +36,7 @@ import java.io.*;
 
 import junit.framework.Test;
 
-import org.apache.commons.lang3.RandomStringUtils;
+import org.apache.commons.lang.RandomStringUtils;
 import org.lockss.util.*;
 import org.lockss.plugin.FilterFactory;
 import org.lockss.test.*;
