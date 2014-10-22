@@ -5110,24 +5110,24 @@
     param[base_url] = http://es.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; manifest ; 2000 ; Enterprise & Society Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 2001 ; Enterprise & Society Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 2002 ; Enterprise & Society Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; manifest ; 2003 ; Enterprise & Society Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; manifest ; 2004 ; Enterprise & Society Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; ready ; 2000 ; Enterprise & Society Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; ready ; 2001 ; Enterprise & Society Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; ready ; 2002 ; Enterprise & Society Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; ready ; 2003 ; Enterprise & Society Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; ready ; 2004 ; Enterprise & Society Volume 5 ; 5 >
     au < HighWireStrVolPlugin ; superseded ; 2005 ; Enterprise & Society Volume 6 [superseded] ; 6 >
-    au < HighWirePressH20Plugin ; manifest ; 2005 ; Enterprise & Society Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; manifest ; 2006 ; Enterprise & Society Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; ready ; 2005 ; Enterprise & Society Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; ready ; 2006 ; Enterprise & Society Volume 7 ; 7 >
     au < HighWirePressPlugin ; superseded ; 2007 ; Enterprise & Society Volume 8 [superseded] ; 8 >
     au < HighWirePressH20Plugin ; manifest ; 2007 ; Enterprise & Society Volume 8 ; 8 >
     au < HighWirePressPlugin ; superseded ; 2008 ; Enterprise & Society Volume 9 [superseded] ; 9 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Enterprise & Society Volume 9 ; 9 >
     au < HighWirePressPlugin ; superseded ; 2009 ; Enterprise & Society Volume 10 [superseded] ; 10 >
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; Enterprise & Society Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; ready ; 2009 ; Enterprise & Society Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Enterprise & Society Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Enterprise & Society Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Enterprise & Society Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; manifest ; 2013 ; Enterprise & Society Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; ready ; 2013 ; Enterprise & Society Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; Enterprise & Society Volume 15 ; 15 >
 
     }
