@@ -20,7 +20,7 @@ echo "---------------------"
 # Script is run from lockss-daemon/scripts/tdb
 # These items should be run from lockss-daemon/plugins/src
 echo "*Plugins that don't exist, but are listed in tdb files: "
-grep -rl --include "*.xml" "plugin_identifier" plugins/src | sed 's/\(.*\).xml/\1/' | sort -u > $tpath/ab.txt
+( cd plugins/src && grep -rl --include "*.xml" "plugin_identifier" * | sed 's/\(.*\).xml/\1/' | sort -u ) > $tpath/ab.txt
 scripts/tdb/tdbout -t plugin tdb/*/*.tdb | sort -u | sed 's/\./\//g' > $tpath/ac.txt
 #plugins that have no AUs.
 #diff $tpath/ab.txt $tpath/ac.txt | grep "^< "     
