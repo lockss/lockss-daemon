@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20PermissionCheckerFactory.java,v 1.8 2014-07-02 18:03:17 etenbrink Exp $
+ * $Id: HighWirePressH20PermissionCheckerFactory.java,v 1.9 2014-10-22 00:00:19 etenbrink Exp $
  */
 
 /*
@@ -59,7 +59,7 @@ public class HighWirePressH20PermissionCheckerFactory
       BufferedReader in = new BufferedReader(inputReader); 
       boolean ret = true;
       try {
-        in.mark(10240);
+        in.mark(102400);
         if (StringUtil.containsString(in, "platform = DRUPAL", true)) {
           logger.siteError(" ");
           logger.siteError("       ===============        ");
