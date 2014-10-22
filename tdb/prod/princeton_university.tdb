@@ -78,9 +78,11 @@
     
       param[base_url] = http://www.princeton.edu/prok/
       
-      au < exists ; 2009 ; Princeton Report on Knowledge Volume 1 ; 1 >
-      au < exists ; 2009 ; Princeton Report on Knowledge Volume 2 ; 2 >
-      au < exists ; 2009 ; Princeton Report on Knowledge Volume 3 ; 3 >
+      comment[0] = Plugin needs review.
+      
+      au < doNotProcess ; 2009 ; Princeton Report on Knowledge Volume 1 ; 1 >
+      au < doNotProcess ; 2009 ; Princeton Report on Knowledge Volume 2 ; 2 >
+      au < doNotProcess ; 2009 ; Princeton Report on Knowledge Volume 3 ; 3 >
       
     }
   }
