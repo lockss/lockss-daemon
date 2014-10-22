@@ -1152,15 +1152,15 @@
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = textodigital
 
-      au < testing ; 2004 ; 1 ; Revista Texto Digital Volume 2004 ; 2004 ; >
-      au < testing ; 2006 ; 3 ; Revista Texto Digital Volume 2006 ; 2006 ; >
-      au < testing ; 2007 ; 4 ; Revista Texto Digital Volume 2007 ; 2007 ; >
-      au < testing ; 2008 ; 5 ; Revista Texto Digital Volume 2008 ; 2008 ; >
-      au < testing ; 2009 ; 6 ; Revista Texto Digital Volume 2009 ; 2009 ; >
-      au < testing ; 2010 ; 7 ; Revista Texto Digital Volume 2010 ; 2010 ; >
-      au < testing ; 2011 ; 8 ; Revista Texto Digital Volume 2011 ; 2011 ; >
-      au < testing ; 2012 ; 9 ; Revista Texto Digital Volume 2012 ; 2012 ; >
-      au < testing ; 2013 ; 10 ; Revista Texto Digital Volume 2013 ; 2013 ; >
+      au < ready ; 2004 ; 1 ; Revista Texto Digital Volume 2004 ; 2004 ; >
+      au < ready ; 2006 ; 3 ; Revista Texto Digital Volume 2006 ; 2006 ; >
+      au < ready ; 2007 ; 4 ; Revista Texto Digital Volume 2007 ; 2007 ; >
+      au < ready ; 2008 ; 5 ; Revista Texto Digital Volume 2008 ; 2008 ; >
+      au < ready ; 2009 ; 6 ; Revista Texto Digital Volume 2009 ; 2009 ; >
+      au < ready ; 2010 ; 7 ; Revista Texto Digital Volume 2010 ; 2010 ; >
+      au < ready ; 2011 ; 8 ; Revista Texto Digital Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 9 ; Revista Texto Digital Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 10 ; Revista Texto Digital Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 11 ; Revista Texto Digital Volume 2014 ; 2014 ; >
 
   }
@@ -1176,13 +1176,13 @@
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = scientia
 
-      au < testing ; 2005 ; 1 ; Scientia Traductionis Volume 2005 ; 2005 ; >
-      au < testing ; 2006 ; 2 ; Scientia Traductionis Volume 2006 ; 2006 ; >
-      au < testing ; 2007 ; 3 ; Scientia Traductionis Volume 2007 ; 2007 ; >
-      au < testing ; 2010 ; 6 ; Scientia Traductionis Volume 2010 ; 2010 ; >
-      au < testing ; 2011 ; 7 ; Scientia Traductionis Volume 2011 ; 2011 ; >
-      au < testing ; 2012 ; 8 ; Scientia Traductionis Volume 2012 ; 2012 ; >
-      au < testing ; 2013 ; 9 ; Scientia Traductionis Volume 2013 ; 2013 ; >
+      au < ready ; 2005 ; 1 ; Scientia Traductionis Volume 2005 ; 2005 ; >
+      au < ready ; 2006 ; 2 ; Scientia Traductionis Volume 2006 ; 2006 ; >
+      au < ready ; 2007 ; 3 ; Scientia Traductionis Volume 2007 ; 2007 ; >
+      au < ready ; 2010 ; 6 ; Scientia Traductionis Volume 2010 ; 2010 ; >
+      au < ready ; 2011 ; 7 ; Scientia Traductionis Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 8 ; Scientia Traductionis Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 9 ; Scientia Traductionis Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 10 ; Scientia Traductionis Volume 2014 ; 2014 ; >
 
   }
@@ -1198,39 +1198,39 @@
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = sequencia
 
-      au < testing ; 1980 ; 1 ; Seqüência: Estudos Jurídicos e Políticos Volume 1980 ; 1980 ; >
-      au < testing ; 1981 ; 2 ; Seqüência: Estudos Jurídicos e Políticos Volume 1981 ; 1981 ; >
-      au < testing ; 1982 ; 3 ; Seqüência: Estudos Jurídicos e Políticos Volume 1982 ; 1982 ; >
-      au < testing ; 1983 ; 4 ; Seqüência: Estudos Jurídicos e Políticos Volume 1983 ; 1983 ; >
-      au < testing ; 1984 ; 5 ; Seqüência: Estudos Jurídicos e Políticos Volume 1984 ; 1984 ; >
-      au < testing ; 1985 ; 6 ; Seqüência: Estudos Jurídicos e Políticos Volume 1985 ; 1985 ; >
-      au < testing ; 1986 ; 7 ; Seqüência: Estudos Jurídicos e Políticos Volume 1986 ; 1986 ; >
-      au < testing ; 1987 ; 8 ; Seqüência: Estudos Jurídicos e Políticos Volume 1987 ; 1987 ; >
-      au < testing ; 1988 ; 9 ; Seqüência: Estudos Jurídicos e Políticos Volume 1988 ; 1988 ; >
-      au < testing ; 1989 ; 10 ; Seqüência: Estudos Jurídicos e Políticos Volume 1989 ; 1989 ; >
-      au < testing ; 1990 ; 11 ; Seqüência: Estudos Jurídicos e Políticos Volume 1990 ; 1990 ; >
-      au < testing ; 1991 ; 12 ; Seqüência: Estudos Jurídicos e Políticos Volume 1991 ; 1991 ; >
-      au < testing ; 1992 ; 13 ; Seqüência: Estudos Jurídicos e Políticos Volume 1992 ; 1992 ; >
-      au < testing ; 1993 ; 14 ; Seqüência: Estudos Jurídicos e Políticos Volume 1993 ; 1993 ; >
-      au < testing ; 1994 ; 15 ; Seqüência: Estudos Jurídicos e Políticos Volume 1994 ; 1994 ; >
-      au < testing ; 1995 ; 16 ; Seqüência: Estudos Jurídicos e Políticos Volume 1995 ; 1995 ; >
-      au < testing ; 1996 ; 17 ; Seqüência: Estudos Jurídicos e Políticos Volume 1996 ; 1996 ; >
-      au < testing ; 1997 ; 18 ; Seqüência: Estudos Jurídicos e Políticos Volume 1997 ; 1997 ; >
-      au < testing ; 1998 ; 19 ; Seqüência: Estudos Jurídicos e Políticos Volume 1998 ; 1998 ; >
-      au < testing ; 1999 ; 20 ; Seqüência: Estudos Jurídicos e Políticos Volume 1999 ; 1999 ; >
-      au < testing ; 2000 ; 21 ; Seqüência: Estudos Jurídicos e Políticos Volume 2000 ; 2000 ; >
-      au < testing ; 2001 ; 22 ; Seqüência: Estudos Jurídicos e Políticos Volume 2001 ; 2001 ; >
-      au < testing ; 2002 ; 23 ; Seqüência: Estudos Jurídicos e Políticos Volume 2002 ; 2002 ; >
-      au < testing ; 2003 ; 24 ; Seqüência: Estudos Jurídicos e Políticos Volume 2003 ; 2003 ; >
-      au < testing ; 2004 ; 25 ; Seqüência: Estudos Jurídicos e Políticos Volume 2004 ; 2004 ; >
+      au < ready ; 1980 ; 1 ; Seqüência: Estudos Jurídicos e Políticos Volume 1980 ; 1980 ; >
+      au < ready ; 1981 ; 2 ; Seqüência: Estudos Jurídicos e Políticos Volume 1981 ; 1981 ; >
+      au < ready ; 1982 ; 3 ; Seqüência: Estudos Jurídicos e Políticos Volume 1982 ; 1982 ; >
+      au < ready ; 1983 ; 4 ; Seqüência: Estudos Jurídicos e Políticos Volume 1983 ; 1983 ; >
+      au < ready ; 1984 ; 5 ; Seqüência: Estudos Jurídicos e Políticos Volume 1984 ; 1984 ; >
+      au < ready ; 1985 ; 6 ; Seqüência: Estudos Jurídicos e Políticos Volume 1985 ; 1985 ; >
+      au < ready ; 1986 ; 7 ; Seqüência: Estudos Jurídicos e Políticos Volume 1986 ; 1986 ; >
+      au < ready ; 1987 ; 8 ; Seqüência: Estudos Jurídicos e Políticos Volume 1987 ; 1987 ; >
+      au < ready ; 1988 ; 9 ; Seqüência: Estudos Jurídicos e Políticos Volume 1988 ; 1988 ; >
+      au < ready ; 1989 ; 10 ; Seqüência: Estudos Jurídicos e Políticos Volume 1989 ; 1989 ; >
+      au < ready ; 1990 ; 11 ; Seqüência: Estudos Jurídicos e Políticos Volume 1990 ; 1990 ; >
+      au < ready ; 1991 ; 12 ; Seqüência: Estudos Jurídicos e Políticos Volume 1991 ; 1991 ; >
+      au < ready ; 1992 ; 13 ; Seqüência: Estudos Jurídicos e Políticos Volume 1992 ; 1992 ; >
+      au < ready ; 1993 ; 14 ; Seqüência: Estudos Jurídicos e Políticos Volume 1993 ; 1993 ; >
+      au < ready ; 1994 ; 15 ; Seqüência: Estudos Jurídicos e Políticos Volume 1994 ; 1994 ; >
+      au < ready ; 1995 ; 16 ; Seqüência: Estudos Jurídicos e Políticos Volume 1995 ; 1995 ; >
+      au < ready ; 1996 ; 17 ; Seqüência: Estudos Jurídicos e Políticos Volume 1996 ; 1996 ; >
+      au < ready ; 1997 ; 18 ; Seqüência: Estudos Jurídicos e Políticos Volume 1997 ; 1997 ; >
+      au < ready ; 1998 ; 19 ; Seqüência: Estudos Jurídicos e Políticos Volume 1998 ; 1998 ; >
+      au < ready ; 1999 ; 20 ; Seqüência: Estudos Jurídicos e Políticos Volume 1999 ; 1999 ; >
+      au < ready ; 2000 ; 21 ; Seqüência: Estudos Jurídicos e Políticos Volume 2000 ; 2000 ; >
+      au < ready ; 2001 ; 22 ; Seqüência: Estudos Jurídicos e Políticos Volume 2001 ; 2001 ; >
+      au < ready ; 2002 ; 23 ; Seqüência: Estudos Jurídicos e Políticos Volume 2002 ; 2002 ; >
+      au < ready ; 2003 ; 24 ; Seqüência: Estudos Jurídicos e Políticos Volume 2003 ; 2003 ; >
+      au < ready ; 2004 ; 25 ; Seqüência: Estudos Jurídicos e Políticos Volume 2004 ; 2004 ; >
       au < testing ; 2005 ; 26 ; Seqüência: Estudos Jurídicos e Políticos Volume 2005 ; 2005 ; >
-      au < testing ; 2006 ; 27 ; Seqüência: Estudos Jurídicos e Políticos Volume 2006 ; 2006 ; >
-      au < testing ; 2007 ; 28 ; Seqüência: Estudos Jurídicos e Políticos Volume 2007 ; 2007 ; >
+      au < ready ; 2006 ; 27 ; Seqüência: Estudos Jurídicos e Políticos Volume 2006 ; 2006 ; >
+      au < ready ; 2007 ; 28 ; Seqüência: Estudos Jurídicos e Políticos Volume 2007 ; 2007 ; >
       au < testing ; 2008 ; 29 ; Seqüência: Estudos Jurídicos e Políticos Volume 2008 ; 2008 ; >
-      au < testing ; 2009 ; 30 ; Seqüência: Estudos Jurídicos e Políticos Volume 2009 ; 2009 ; >
-      au < testing ; 2010 ; 31 ; Seqüência: Estudos Jurídicos e Políticos Volume 2010 ; 2010 ; >
-      au < testing ; 2011 ; 32 ; Seqüência: Estudos Jurídicos e Políticos Volume 2011 ; 2011 ; >
-      au < testing ; 2012 ; 33 ; Seqüência: Estudos Jurídicos e Políticos Volume 2012 ; 2012 ; >
+      au < ready ; 2009 ; 30 ; Seqüência: Estudos Jurídicos e Políticos Volume 2009 ; 2009 ; >
+      au < ready ; 2010 ; 31 ; Seqüência: Estudos Jurídicos e Políticos Volume 2010 ; 2010 ; >
+      au < ready ; 2011 ; 32 ; Seqüência: Estudos Jurídicos e Políticos Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 33 ; Seqüência: Estudos Jurídicos e Políticos Volume 2012 ; 2012 ; >
       au < testing ; 2013 ; 34 ; Seqüência: Estudos Jurídicos e Políticos Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 35 ; Seqüência: Estudos Jurídicos e Políticos Volume 2014 ; 2014 ; >
 
@@ -1247,21 +1247,21 @@
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = economia
 
-      au < testing ; 1986 ; 1 ; Textos de Economia Volume 1986 ; 1986 ; >
-      au < testing ; 1987 ; 2 ; Textos de Economia Volume 1987 ; 1987 ; >
-      au < testing ; 1989 ; 4 ; Textos de Economia Volume 1989 ; 1989 ; >
-      au < testing ; 1993 ; 8 ; Textos de Economia Volume 1993 ; 1993 ; >
-      au < testing ; 1994 ; 9 ; Textos de Economia Volume 1994 ; 1994 ; >
-      au < testing ; 1995 ; 10 ; Textos de Economia Volume 1995 ; 1995 ; >
-      au < testing ; 2002 ; 17 ; Textos de Economia Volume 2002 ; 2002 ; >
-      au < testing ; 2006 ; 21 ; Textos de Economia Volume 2006 ; 2006 ; >
-      au < testing ; 2007 ; 22 ; Textos de Economia Volume 2007 ; 2007 ; >
-      au < testing ; 2008 ; 23 ; Textos de Economia Volume 2008 ; 2008 ; >
-      au < testing ; 2009 ; 24 ; Textos de Economia Volume 2009 ; 2009 ; >
-      au < testing ; 2010 ; 25 ; Textos de Economia Volume 2010 ; 2010 ; >
-      au < testing ; 2011 ; 26 ; Textos de Economia Volume 2011 ; 2011 ; >
-      au < testing ; 2012 ; 27 ; Textos de Economia Volume 2012 ; 2012 ; >
-      au < testing ; 2013 ; 28 ; Textos de Economia Volume 2013 ; 2013 ; >
+      au < ready ; 1986 ; 1 ; Textos de Economia Volume 1986 ; 1986 ; >
+      au < ready ; 1987 ; 2 ; Textos de Economia Volume 1987 ; 1987 ; >
+      au < ready ; 1989 ; 4 ; Textos de Economia Volume 1989 ; 1989 ; >
+      au < ready ; 1993 ; 8 ; Textos de Economia Volume 1993 ; 1993 ; >
+      au < ready ; 1994 ; 9 ; Textos de Economia Volume 1994 ; 1994 ; >
+      au < ready ; 1995 ; 10 ; Textos de Economia Volume 1995 ; 1995 ; >
+      au < ready ; 2002 ; 17 ; Textos de Economia Volume 2002 ; 2002 ; >
+      au < ready ; 2006 ; 21 ; Textos de Economia Volume 2006 ; 2006 ; >
+      au < ready ; 2007 ; 22 ; Textos de Economia Volume 2007 ; 2007 ; >
+      au < ready ; 2008 ; 23 ; Textos de Economia Volume 2008 ; 2008 ; >
+      au < ready ; 2009 ; 24 ; Textos de Economia Volume 2009 ; 2009 ; >
+      au < ready ; 2010 ; 25 ; Textos de Economia Volume 2010 ; 2010 ; >
+      au < ready ; 2011 ; 26 ; Textos de Economia Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 27 ; Textos de Economia Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 28 ; Textos de Economia Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 29 ; Textos de Economia Volume 2014 ; 2014 ; >
 
   }
