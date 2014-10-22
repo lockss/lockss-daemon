@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>98</string>
+    <string>99</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -21,7 +21,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>98</string>
+    <string>99</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -75,9 +75,9 @@
           <string>citation_abstract_html_url</string>
           <string>citation_abstract_url</string>
           <string>citation_fulltext_html_url</string>
-	  <string>citation_pdf_url</string>
-	  <string>citation_public_url</string>
-	</list>
+          <string>citation_pdf_url</string>
+          <string>citation_public_url</string>
+        </list>
       </entry>
     </map>
   </entry>
