@@ -1,5 +1,5 @@
 /*
-/    * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.24 2014-07-17 15:27:39 etenbrink Exp $
+/    * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.25 2014-10-22 16:11:26 etenbrink Exp $
  */
 
 /*
@@ -510,6 +510,27 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
       "<body>\n" +
       "</body>";
   
+  private static final String spanTag =
+      "<body>\n" +
+      "<span id=\"top\"/>" +
+      "<span class=\"free\"/>" +
+      "</body>";
+  private static final String spanTagFiltered =
+      "<body> " +
+      "<span id=\"top\"/>" +
+      "</body>";
+  
+  private static final String attrTag =
+      "<body class=\"class\">\n" +
+      "<h1 id=\"id\">title</h1>" +
+      "<div id=\"top\"/>" +
+      "</body>";
+  private static final String attrTagFiltered =
+      "<body> " +
+      "<h1>title</h1>" +
+      "<div/>" +
+      "</body>";
+  
   public void testFiltering() throws Exception {
     assertFilterToSame(inst1, inst2);
     assertFilterToSame(withAds, withoutAds);
@@ -541,6 +562,8 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
     assertFilterToString(tocBannerAdHtml, tocBannerAdFiltered);
     assertFilterToString(sidebarGlobalNavHtml, sidebarGlobalNavFiltered);
     assertFilterToString(col3Html, col3Filtered);
+    assertFilterToString(spanTag, spanTagFiltered);
+    assertFilterToString(attrTag, attrTagFiltered);
   }
 
   private void assertFilterToSame(String str1, String str2) throws Exception {
