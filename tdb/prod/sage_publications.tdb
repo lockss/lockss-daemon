@@ -20888,7 +20888,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
   
-      au < exists ; 2014 ; The Journal of Criminal Law Volume 78 ; 78 >
+      au < manifest ; 2014 ; The Journal of Criminal Law Volume 78 ; 78 >
     }
 
     {
@@ -33023,7 +33023,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 55 ; 55 >
         au < released ; 2012 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 56 ; 56 >
         au < manifest ; 2013 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 57 ; 57 >
-        au < expected ; 2014 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 58 ; 58 >
+        au < manifest ; 2014 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 58 ; 58 >
 
       }
 
