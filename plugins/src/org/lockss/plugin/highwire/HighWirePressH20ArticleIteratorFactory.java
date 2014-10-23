@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20ArticleIteratorFactory.java,v 1.15 2014-10-23 03:04:26 etenbrink Exp $
+ * $Id: HighWirePressH20ArticleIteratorFactory.java,v 1.16 2014-10-23 03:13:37 etenbrink Exp $
  */
 
 /*
@@ -52,7 +52,7 @@ public class HighWirePressH20ArticleIteratorFactory
     "\"%scontent/%s/\", base_url, volume_name";
   
   protected static final String PATTERN_TEMPLATE =
-    "\"^%scontent/%s/((?:[^/]+/)?[^/]+)(?:.*[.]body|[.]full(?:[.]pdf)?|[.](abstract|short|extract|citation))$\", " +
+    "\"^%scontent/%s/((?:[^/]+/)?[^/]+)(?:.*[.]body|[.]full(?:[.]pdf)?|[.](abstract|short|citation))$\", " +
     "base_url, volume_name";
   
   // various aspects of an article
@@ -72,14 +72,13 @@ public class HighWirePressH20ArticleIteratorFactory
       "/([^/]+)[.]full[.]pdf$", Pattern.CASE_INSENSITIVE);
   
   protected static final Pattern ABSTRACT_PATTERN = Pattern.compile(
-      "/([^/]+)[.](?:abstract|short|extract|citation)$", Pattern.CASE_INSENSITIVE);
+      "/([^/]+)[.](?:abstract|short|citation)$", Pattern.CASE_INSENSITIVE);
   
   // how to change from one form (aspect) of article to another
   protected static final String HTML_REPLACEMENT = "/$1.full";
   protected static final String PDF_REPLACEMENT = "/$1.full.pdf";
   protected static final String PDF_LANDING_REPLACEMENT = "/$1.full.pdf+html";
   protected static final String ABSTRACT_REPLACEMENT = "/$1.abstract";
-  protected static final String EXTRACT_REPLACEMENT = "/$1.extract";
   protected static final String CITATION_REPLACEMENT = "/$1.citation";
   protected static final String SHORT_REPLACEMENT = "/$1.short";
   protected static final String BODY_REPLACEMENT = "/$1.body";
@@ -112,7 +111,7 @@ public class HighWirePressH20ArticleIteratorFactory
     
     // set up abstract/extract to be an aspect
     builder.addAspect(ABSTRACT_PATTERN, Arrays.asList(
-        ABSTRACT_REPLACEMENT, SHORT_REPLACEMENT, EXTRACT_REPLACEMENT, CITATION_REPLACEMENT),
+        ABSTRACT_REPLACEMENT, SHORT_REPLACEMENT, CITATION_REPLACEMENT),
         ArticleFiles.ROLE_ABSTRACT);
     
     // set up figures-only to be an aspect

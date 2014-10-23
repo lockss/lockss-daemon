@@ -183,7 +183,7 @@
       <entry>
         <string>abstracts</string>
         <list>
-          <string>"^%scontent/%s/[^?&amp;]+[.](?:abstract|short|extract|citation)$", base_url, volume_name</string>
+          <string>"^%scontent/%s/[^?&amp;]+[.](?:abstract|short|citation)$", base_url, volume_name</string>
         </list>
       </entry>
       <entry>
