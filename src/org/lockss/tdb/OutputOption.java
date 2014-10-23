@@ -1,5 +1,5 @@
 /*
- * $Id: OutputOption.java,v 1.4 2014-10-20 22:42:37 thib_gc Exp $
+ * $Id: OutputOption.java,v 1.5 2014-10-23 22:51:15 thib_gc Exp $
  */
 
 /*
@@ -109,6 +109,15 @@ public class OutputOption {
 
   /**
    * <p>
+   * Key for an explicit output option flag ({@value}).
+   * </p>
+   * 
+   * @since 1.67
+   */
+  protected static final String KEY_OUTPUT_REQUESTED = KEY_OUTPUT + "_requested";
+  
+  /**
+   * <p>
    * Adds the standard output option to a Commons CLI {@link Options}
    * instance.
    * </p>
@@ -135,6 +144,7 @@ public class OutputOption {
    */
   public static void processCommandLine(Map<String, Object> options,
                                         CommandLine cmd) {
+    options.put(KEY_OUTPUT_REQUESTED, Boolean.valueOf(cmd.hasOption(KEY_OUTPUT)));
     String f = cmd.getOptionValue(KEY_OUTPUT);
     if (f == null || "-".equals(f)) {
       options.put(KEY_OUTPUT, new PrintStream(System.out) {
@@ -166,7 +176,7 @@ public class OutputOption {
    * @since 1.67
    */
   public static boolean isSingleOutput(Map<String, Object> options) {
-    return options.containsKey(KEY_OUTPUT);
+    return ((Boolean)options.get(KEY_OUTPUT_REQUESTED)).booleanValue();
   }
   
   /**
