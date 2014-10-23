@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWirePressH20ArticleIteratorFactory.java,v 1.3 2014-10-22 16:09:05 etenbrink Exp $
+ * $Id: TestHighWirePressH20ArticleIteratorFactory.java,v 1.4 2014-10-23 03:14:30 etenbrink Exp $
  */
 
 /*
@@ -116,9 +116,9 @@ public class TestHighWirePressH20ArticleIteratorFactory extends ArticleIteratorT
     assertMatchesRE(pat, "http://bjo.bmj.com/content/1/1/1.full");
     assertMatchesRE(pat, "http://bjo.bmj.com/content/1/1/1.full.pdf");
     assertMatchesRE(pat, "http://bjo.bmj.com/content/1/1/1.short");
+    assertMatchesRE(pat, "http://bjo.bmj.com/content/1/1/1.abstract");
     // but not to ...
     assertNotMatchesRE(pat, "http://bjo.bmj.com/content/1/1/1.full.pdf+html");
-    assertNotMatchesRE(pat, "http://bjo.bmj.com/content/1/1/1.abstract");
     assertNotMatchesRE(pat, "http://bjo.bmj.com/content/1/1/1.extract");
     assertNotMatchesRE(pat, "http://bjo.bmj.com/email?gca=bjophthalmol;96/1/1&current-view-path=/content/96/1/1.extract");
 
