@@ -1,5 +1,5 @@
 /*
- * $Id: IOPScienceHtmlHashFilterFactory.java,v 1.9 2013-12-11 01:40:53 thib_gc Exp $
+ * $Id: IOPScienceHtmlHashFilterFactory.java,v 1.10 2014-10-23 01:27:48 etenbrink Exp $
  */
 
 /*
@@ -34,15 +34,15 @@ package org.lockss.plugin.iop;
 
 import java.io.*;
 
+import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.OrFilter;
 import org.htmlparser.filters.TagNameFilter;
+import org.htmlparser.tags.CompositeTag;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.*;
-import org.lockss.filter.HtmlTagFilter.TagPair;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
-import org.lockss.util.ListUtil;
 import org.lockss.util.ReaderInputStream;
 
 
@@ -61,9 +61,12 @@ public class IOPScienceHtmlHashFilterFactory implements FilterFactory {
         new TagNameFilter("script"),
         // Document header
         new TagNameFilter("head"),
+        // header/footer tags
+        new TagNameFilter("header"),
+        new TagNameFilter("footer"),
         // Header
         HtmlNodeFilters.tagWithAttribute("div", "id", "cookieBanner"),
-        /* <header> -- see string filter below FIXME HTML5 */
+        /* <header> -- see filter above */
         HtmlNodeFilters.tagWithAttribute("div", "id", "jnl-head-band"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "hdr"), // (old)
         HtmlNodeFilters.tagWithAttribute("div", "id", "nav"), // (old)
@@ -73,8 +76,10 @@ public class IOPScienceHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div",  "id", "rightCol"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "alsoRead"), // (now within)
         HtmlNodeFilters.tagWithAttribute("div", "id", "tacticalBanners"), // (now within)
+        // Contains the search box, which changes over time
+        HtmlNodeFilters.tagWithAttribute("div", "id", "login_dialog"),
         // Footer
-        /* <footer> -- see string filter below FIXME HTML5 */
+        /* <footer> -- see filter above */
         HtmlNodeFilters.tagWithAttribute("div", "id", "footer"), // (old)
 
         /*
@@ -90,19 +95,31 @@ public class IOPScienceHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div",  "class", "mathJaxControls"),
         // Contains a jsessionid
         HtmlNodeFilters.tagWithAttributeRegex("form", "action", "jsessionid"),
+        
+        // <div class="sideTabBar">
+        HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "sideTabBar"),
+        // <p class="viewingLinks">
+        HtmlNodeFilters.tagWithAttributeRegex("p",  "class", "viewingLinks"),
+        // <div class=" metrics-panel">
+        HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "metrics-panel"),
+        // <dd> <p> Total article downloads: <strong>1193</strong> </p>...</dd>
+        new TagNameFilter("dd") {
+          @Override
+          public boolean accept(Node node) {
+            if (super.accept(node)) {
+              String allText = ((CompositeTag)node).toPlainTextString();
+              return allText.toLowerCase().contains("Total article downloads");
+            }
+            return false;
+          }
+        },
     };
     
     InputStream filtered = new HtmlFilterInputStream(in,
                                                      encoding,
                                                      HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
-    
     Reader filteredReader = FilterUtil.getReader(filtered, encoding);
-    Reader tagFilter = HtmlTagFilter.makeNestedFilter(filteredReader,
-        ListUtil.list(
-            new TagPair("<header>", "</header>"), // FIXME HTML5
-            new TagPair("<footer>", "</footer>") // FIXME HTML5
-        ));
-    return new ReaderInputStream(new WhiteSpaceFilter(tagFilter));
+    return new ReaderInputStream(new WhiteSpaceFilter(filteredReader));
   }
 
 }
