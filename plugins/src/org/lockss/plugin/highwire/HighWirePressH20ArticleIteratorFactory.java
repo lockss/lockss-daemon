@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20ArticleIteratorFactory.java,v 1.14 2014-10-21 23:57:22 etenbrink Exp $
+ * $Id: HighWirePressH20ArticleIteratorFactory.java,v 1.15 2014-10-23 03:04:26 etenbrink Exp $
  */
 
 /*
@@ -52,7 +52,7 @@ public class HighWirePressH20ArticleIteratorFactory
     "\"%scontent/%s/\", base_url, volume_name";
   
   protected static final String PATTERN_TEMPLATE =
-    "\"^%scontent/%s/((?:[^/]+/)?[^/]+)(?:.*[.]body|[.]full(?:[.]pdf)?|[.]short)$\", " +
+    "\"^%scontent/%s/((?:[^/]+/)?[^/]+)(?:.*[.]body|[.]full(?:[.]pdf)?|[.](abstract|short|extract|citation))$\", " +
     "base_url, volume_name";
   
   // various aspects of an article
@@ -65,17 +65,14 @@ public class HighWirePressH20ArticleIteratorFactory
   // and 
   // http://aapredbook.aappublications.org/content/1/SEC70/SEC72/SEC74.body
   
-  protected static final Pattern BODY_PATTERN = Pattern.compile(
-      "/([^/]+)[.]body$", Pattern.CASE_INSENSITIVE);
-  
   protected static final Pattern HTML_PATTERN = Pattern.compile(
-      "/([^/]+)[.]full$", Pattern.CASE_INSENSITIVE);
+      "/([^/]+)[.](?:full|body)$", Pattern.CASE_INSENSITIVE);
   
   protected static final Pattern PDF_PATTERN = Pattern.compile(
       "/([^/]+)[.]full[.]pdf$", Pattern.CASE_INSENSITIVE);
   
   protected static final Pattern ABSTRACT_PATTERN = Pattern.compile(
-      "/([^/]+)[.]short$", Pattern.CASE_INSENSITIVE);
+      "/([^/]+)[.](?:abstract|short|extract|citation)$", Pattern.CASE_INSENSITIVE);
   
   // how to change from one form (aspect) of article to another
   protected static final String HTML_REPLACEMENT = "/$1.full";
@@ -100,12 +97,8 @@ public class HighWirePressH20ArticleIteratorFactory
     // set up full or full.pdf to be an aspect that will trigger an ArticleFiles
     // NOTE - for the moment this also means full is considered a FULL_TEXT_CU 
     // until this is deprecated
-    builder.addAspect(
-        BODY_PATTERN, BODY_REPLACEMENT,
-        ArticleFiles.ROLE_FULL_TEXT_HTML);
-    
-    builder.addAspect(
-        HTML_PATTERN, HTML_REPLACEMENT,
+    builder.addAspect(HTML_PATTERN, Arrays.asList(
+        BODY_REPLACEMENT, HTML_REPLACEMENT),
         ArticleFiles.ROLE_FULL_TEXT_HTML);
     
     builder.addAspect(
@@ -119,7 +112,7 @@ public class HighWirePressH20ArticleIteratorFactory
     
     // set up abstract/extract to be an aspect
     builder.addAspect(ABSTRACT_PATTERN, Arrays.asList(
-        ABSTRACT_REPLACEMENT, EXTRACT_REPLACEMENT),
+        ABSTRACT_REPLACEMENT, SHORT_REPLACEMENT, EXTRACT_REPLACEMENT, CITATION_REPLACEMENT),
         ArticleFiles.ROLE_ABSTRACT);
     
     // set up figures-only to be an aspect
