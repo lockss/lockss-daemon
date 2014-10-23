@@ -13,7 +13,7 @@ scripts/tdb/tdbout -t plugin tdb/*/*.tdb | sort -u | sed 's/\./\//g' > $tpath/ac
 diff $tpath/ab.txt $tpath/ac.txt | grep "^< " | sed 's/..\(.*\)/\1,0/' > $tpath/foo00.txt
 #plugins that have AUs
 #shopt -s extglob
-scripts/tdb/tdbout -t plugin `find ../../tdb -name \*.tdb -print` | sed 's/\./\//g' | awk -F"\t" 'BEGIN {OFS=","} {foo[$0]++} END {for(x in foo) {print x,foo[x]}}' >> $tpath/foo00.txt
+scripts/tdb/tdbout -t plugin `find tdb -name \*.tdb -print` | sed 's/\./\//g' | awk -F"\t" 'BEGIN {OFS=","} {foo[$0]++} END {for(x in foo) {print x,foo[x]}}' >> $tpath/foo00.txt
 #shopt -u extglob
 
 #To get the plugins with and without status:
