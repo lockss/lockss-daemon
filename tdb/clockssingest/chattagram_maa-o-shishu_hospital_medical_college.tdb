@@ -18,9 +18,10 @@
       param[base_url] = http://www.cmoshmcj.org/
       param[journal_id] = journal
       implicit < status ; status2 ; year ; name ; volume ; param[year] >
+      
+      comment[0] = website down. May be accessible from another url.
 
-      au < crawling ; exists ; 2013 ; Chattagram Maa-O-Shishu Hospital Medical College Journal Volume 12 ; 12 ; 2013 >
-      au < expected ; exists ; 2014 ; Chattagram Maa-O-Shishu Hospital Medical College Journal Volume 13 ; 13 ; 2014 >
+      au < down ; manifest ; 2013 ; Chattagram Maa-O-Shishu Hospital Medical College Journal Volume 12 ; 12 ; 2013 >
    
     }
 
