@@ -1277,25 +1277,25 @@
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = travessia
 
-      au < testing ; 1980 ; 1 ; Travessia Volume 1980 ; 1980 ; >
-      au < testing ; 1981 ; 2 ; Travessia Volume 1981 ; 1981 ; >
-      au < testing ; 1982 ; 3 ; Travessia Volume 1982 ; 1982 ; >
-      au < testing ; 1983 ; 4 ; Travessia Volume 1983 ; 1983 ; >
-      au < testing ; 1984 ; 5 ; Travessia Volume 1984 ; 1984 ; >
-      au < testing ; 1985 ; 6 ; Travessia Volume 1985 ; 1985 ; >
-      au < testing ; 1986 ; 7 ; Travessia Volume 1986 ; 1986 ; >
-      au < testing ; 1987 ; 8 ; Travessia Volume 1987 ; 1987 ; >
-      au < testing ; 1989 ; 10 ; Travessia Volume 1989 ; 1989 ; >
-      au < testing ; 1990 ; 11 ; Travessia Volume 1990 ; 1990 ; >
-      au < testing ; 1991 ; 12 ; Travessia Volume 1991 ; 1991 ; >
-      au < testing ; 1992 ; 13 ; Travessia Volume 1992 ; 1992 ; >
-      au < testing ; 1993 ; 14 ; Travessia Volume 1993 ; 1993 ; >
-      au < testing ; 1994 ; 15 ; Travessia Volume 1994 ; 1994 ; >
-      au < testing ; 1995 ; 16 ; Travessia Volume 1995 ; 1995 ; >
-      au < testing ; 1996 ; 17 ; Travessia Volume 1996 ; 1996 ; >
-      au < testing ; 1997 ; 18 ; Travessia Volume 1997 ; 1997 ; >
-      au < testing ; 1998 ; 19 ; Travessia Volume 1998 ; 1998 ; >
-      au < testing ; 1999 ; 20 ; Travessia Volume 1999 ; 1999 ; >
+      au < ready ; 1980 ; 1 ; Travessia Volume 1980 ; 1980 ; >
+      au < ready ; 1981 ; 2 ; Travessia Volume 1981 ; 1981 ; >
+      au < ready ; 1982 ; 3 ; Travessia Volume 1982 ; 1982 ; >
+      au < ready ; 1983 ; 4 ; Travessia Volume 1983 ; 1983 ; >
+      au < ready ; 1984 ; 5 ; Travessia Volume 1984 ; 1984 ; >
+      au < ready ; 1985 ; 6 ; Travessia Volume 1985 ; 1985 ; >
+      au < ready ; 1986 ; 7 ; Travessia Volume 1986 ; 1986 ; >
+      au < ready ; 1987 ; 8 ; Travessia Volume 1987 ; 1987 ; >
+      au < ready ; 1989 ; 10 ; Travessia Volume 1989 ; 1989 ; >
+      au < ready ; 1990 ; 11 ; Travessia Volume 1990 ; 1990 ; >
+      au < ready ; 1991 ; 12 ; Travessia Volume 1991 ; 1991 ; >
+      au < ready ; 1992 ; 13 ; Travessia Volume 1992 ; 1992 ; >
+      au < ready ; 1993 ; 14 ; Travessia Volume 1993 ; 1993 ; >
+      au < ready ; 1994 ; 15 ; Travessia Volume 1994 ; 1994 ; >
+      au < ready ; 1995 ; 16 ; Travessia Volume 1995 ; 1995 ; >
+      au < ready ; 1996 ; 17 ; Travessia Volume 1996 ; 1996 ; >
+      au < ready ; 1997 ; 18 ; Travessia Volume 1997 ; 1997 ; >
+      au < ready ; 1998 ; 19 ; Travessia Volume 1998 ; 1998 ; >
+      au < ready ; 1999 ; 20 ; Travessia Volume 1999 ; 1999 ; >
 
   }
 
@@ -1310,20 +1310,20 @@
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = workingpapers
 
-      au < testing ; 1997 ; 1 ; Working Papers em Lingüística Volume 1997 ; 1997 ; >
-      au < testing ; 1998 ; 2 ; Working Papers em Lingüística Volume 1998 ; 1998 ; >
-      au < testing ; 1999 ; 3 ; Working Papers em Lingüística Volume 1999 ; 1999 ; >
-      au < testing ; 2000 ; 4 ; Working Papers em Lingüística Volume 2000 ; 2000 ; >
-      au < testing ; 2001 ; 5 ; Working Papers em Lingüística Volume 2001 ; 2001 ; >
-      au < testing ; 2002 ; 6 ; Working Papers em Lingüística Volume 2002 ; 2002 ; >
-      au < testing ; 2003 ; 7 ; Working Papers em Lingüística Volume 2003 ; 2003 ; >
-      au < testing ; 2004 ; 8 ; Working Papers em Lingüística Volume 2004 ; 2004 ; >
-      au < testing ; 2008 ; 12 ; Working Papers em Lingüística Volume 2008 ; 2008 ; >
-      au < testing ; 2009 ; 13 ; Working Papers em Lingüística Volume 2009 ; 2009 ; >
-      au < testing ; 2010 ; 14 ; Working Papers em Lingüística Volume 2010 ; 2010 ; >
-      au < testing ; 2011 ; 15 ; Working Papers em Lingüística Volume 2011 ; 2011 ; >
-      au < testing ; 2012 ; 16 ; Working Papers em Lingüística Volume 2012 ; 2012 ; >
-      au < testing ; 2013 ; 17 ; Working Papers em Lingüística Volume 2013 ; 2013 ; >
+      au < ready ; 1997 ; 1 ; Working Papers em Lingüística Volume 1997 ; 1997 ; >
+      au < ready ; 1998 ; 2 ; Working Papers em Lingüística Volume 1998 ; 1998 ; >
+      au < ready ; 1999 ; 3 ; Working Papers em Lingüística Volume 1999 ; 1999 ; >
+      au < ready ; 2000 ; 4 ; Working Papers em Lingüística Volume 2000 ; 2000 ; >
+      au < ready ; 2001 ; 5 ; Working Papers em Lingüística Volume 2001 ; 2001 ; >
+      au < ready ; 2002 ; 6 ; Working Papers em Lingüística Volume 2002 ; 2002 ; >
+      au < ready ; 2003 ; 7 ; Working Papers em Lingüística Volume 2003 ; 2003 ; >
+      au < ready ; 2004 ; 8 ; Working Papers em Lingüística Volume 2004 ; 2004 ; >
+      au < ready ; 2008 ; 12 ; Working Papers em Lingüística Volume 2008 ; 2008 ; >
+      au < ready ; 2009 ; 13 ; Working Papers em Lingüística Volume 2009 ; 2009 ; >
+      au < ready ; 2010 ; 14 ; Working Papers em Lingüística Volume 2010 ; 2010 ; >
+      au < ready ; 2011 ; 15 ; Working Papers em Lingüística Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 16 ; Working Papers em Lingüística Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 17 ; Working Papers em Lingüística Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 18 ; Working Papers em Lingüística Volume 2014 ; 2014 ; >
 
   }
