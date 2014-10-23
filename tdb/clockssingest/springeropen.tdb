@@ -292,7 +292,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; exists ; 2012 ; Communications in Mobile Computing Volume 1 ; 1 >
-        au < manifest ; exists ; 2013 ; Communications in Mobile Computing Volume 2 ; 2 >
+        au < testing ; exists ; 2013 ; Communications in Mobile Computing Volume 2 ; 2 >
         au < expected ; exists ; 2014 ; Communications in Mobile Computing Volume 3 ; 3 >
   
     }
@@ -308,7 +308,7 @@
         param[journal_issn] = 2194-3206 
         comment[platform] = BioMedCentralPlugin
   
-        au < manifest ; exists ; 2013 ; Complex Adaptive Systems Modeling Volume 1 ; 1 >
+        au < testing ; exists ; 2013 ; Complex Adaptive Systems Modeling Volume 1 ; 1 >
         au < manifest ; exists ; 2014 ; Complex Adaptive Systems Modeling Volume 2 ; 2 >
   
     }
@@ -340,7 +340,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; exists ; 2012 ; Crime Science Volume 1 ; 1 >
-        au < manifest ; exists ; 2013 ; Crime Science Volume 2 ; 2 >
+        au < testing ; exists ; 2013 ; Crime Science Volume 2 ; 2 >
         au < manifest ; exists ; 2014 ; Crime Science Volume 3 ; 3 >
   
     }
@@ -373,7 +373,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; exists ; 2012 ; Critical Ultrasound Journal Volume 4 ; 4 >
-        au < manifest ; exists ; 2013 ; Critical Ultrasound Journal Volume 5 ; 5 >
+        au < testing ; exists ; 2013 ; Critical Ultrasound Journal Volume 5 ; 5 >
         au < manifest ; exists ; 2014 ; Critical Ultrasound Journal Volume 6 ; 6 >
   
     }
@@ -435,7 +435,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; exists ; 2012 ; Ecological Processes Volume 1 ; 1 >
-        au < manifest ; exists ; 2013 ; Ecological Processes Volume 2 ; 2 >
+        au < testing ; exists ; 2013 ; Ecological Processes Volume 2 ; 2 >
         au < manifest ; exists ; 2014 ; Ecological Processes Volume 3 ; 3 >
   
     }
@@ -468,7 +468,7 @@
   
         au < manifest ; exists ; 2011 ; EJNMMI Research Volume 1 ; 1 >
         au < manifest ; exists ; 2012 ; EJNMMI Research Volume 2 ; 2 >
-        au < manifest ; exists ; 2013 ; EJNMMI Research Volume 3 ; 3 >
+        au < testing ; exists ; 2013 ; EJNMMI Research Volume 3 ; 3 >
         au < manifest ; exists ; 2014 ; EJNMMI Research Volume 4 ; 4 >
   
     }
@@ -484,7 +484,7 @@
         param[journal_issn] = 1877-6345 
         comment[platform] = BioMedCentralPlugin
   
-        au < manifest ; exists ; 2013 ; Empirical Research in Vocational Education and Training Volume 5 ; 5 >
+        au < testing ; exists ; 2013 ; Empirical Research in Vocational Education and Training Volume 5 ; 5 >
         au < manifest ; exists ; 2014 ; Empirical Research in Vocational Education and Training Volume 6 ; 6 >
   
     }
