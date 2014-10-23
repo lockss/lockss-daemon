@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20PermissionCheckerFactory.java,v 1.9 2014-10-22 00:00:19 etenbrink Exp $
+ * $Id: HighWirePressH20PermissionCheckerFactory.java,v 1.10 2014-10-23 03:05:11 etenbrink Exp $
  */
 
 /*
@@ -46,9 +46,9 @@ import org.lockss.util.StringUtil;
 public class HighWirePressH20PermissionCheckerFactory
   implements PermissionCheckerFactory{
   
-  public class H20ProbePermissionChecker extends ProbePermissionChecker {
+  public static class H20ProbePermissionChecker extends ProbePermissionChecker {
     
-    private final Logger logger = Logger.getLogger(H20ProbePermissionChecker.class);
+    private static final Logger logger = Logger.getLogger(H20ProbePermissionChecker.class);
     protected ArchivalUnit au;
     protected String probeUrl;
     
