@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.382 2014-10-24 21:07:27 thib_gc Exp $
+ $Id: build.xml,v 1.383 2014-10-24 21:23:03 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -1359,7 +1359,7 @@ The target you have selected requires compiling under JDK 1.7.
 
     <for list="${plnnames}" delimiter=":" param="plnname">
       <sequential>
-	<antcall target="tdb-pln">
+	<antcall target="tdb.pln0">
 	  <param name="plnname" value="@{plnname}"/>
 	</antcall>
 
@@ -1368,8 +1368,16 @@ The target you have selected requires compiling under JDK 1.7.
   </target>
 
   <!-- ==================================================================== -->
-  <target name="tdb-pln" depends="jar-lockss"
+  <!-- tdb-pln0 is invoked by antcall in a loop, so its dependencies get
+       run repeatedly.  Avoid that by putting the dependency in a target
+       that's only invoked by users, with the actual work in a target with
+       no dependencies -->
+
+  <target name="tdb-pln" depends="jar-lockss,tdb.pln0"
 	  description="Process .tdb files for -Dplnname=PLN into .xml">
+  </target>
+
+  <target name="tdb.pln0">
     <fail unless="plnname">
 Must specify PLN name with -Dplnname=name
     </fail>
@@ -1976,6 +1984,7 @@ published on the Web. http://www.lockss.org
     </java>
     <javadoc
 	     failonerror="true"
+             maxmemory="512m"
              packagenames="org.lockss.*"
              sourcepath="${src}"
              destdir="${javadoc}"
@@ -1991,6 +2000,8 @@ published on the Web. http://www.lockss.org
              header="${javadoc.header}"
              bottom="Copyright &amp;copy; 2000-2013 Board of Trustees of Leland Stanford Jr. University, all rights reserved.">
        <classpath refid="compile.classpath" />
+       <arg line="${jvmargs}"/>
+
 <!-- disabled until javadoc back online -->
 <!--        <link href="${ext.javadoc}/commons-collections-3.2/docs/apidocs" /> -->
 <!--        <link href="${ext.javadoc}/commons-httpclient-2.0.2/docs/apidocs" /> -->
@@ -2081,6 +2092,7 @@ published on the Web. http://www.lockss.org
     <javadoc
              packagenames="org.lockss.*"
 	     failonerror="true"
+             maxmemory="512m"
              sourcepath="${test.src}"
              destdir="${test.javadoc}"
              use="${use}"
