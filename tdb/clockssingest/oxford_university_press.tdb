@@ -7307,7 +7307,7 @@
     au < finished ; crawling ; 2012 ; History Workshop Journal Volume 73 ; 73 ; >
     au < finished ; frozen ; 2012 ; History Workshop Journal Volume 74 ; 74 ; >
     au < crawling ; exists ; 2013 ; History Workshop Journal Volume 75 ; 75 ; >
-    au < testing ; exists ; 2013 ; History Workshop Journal Volume 76 ; 76 ; >
+    au < ready ; exists ; 2013 ; History Workshop Journal Volume 76 ; 76 ; >
     au < doNotProcess ; exists ; 2014 ; History Workshop Journal Volume 77 ; 77 ; >
     au < doNotProcess ; exists ; 2014 ; History Workshop Journal Volume 78 ; 78 ; >
 
@@ -21654,7 +21654,7 @@
       au < finished ; frozen ; 2011 ; The Quarterly Journal of Economics Volume 126 ; 126 ; >
       au < finished ; frozen ; 2012 ; The Quarterly Journal of Economics Volume 127 ; 127 ; >
       au < crawling ; exists ; 2013 ; The Quarterly Journal of Economics Volume 128 ; 128 ; >
-      au < manifest ; exists ; 2014 ; The Quarterly Journal of Economics Volume 129 ; 129 ; >
+      au < testing ; exists ; 2014 ; The Quarterly Journal of Economics Volume 129 ; 129 ; >
 
     }
 
@@ -21737,7 +21737,7 @@
     au < crawling ; exists ; 2011 ; Interacting with Computers Volume 23 ; 23 ; >
     au < crawling ; exists ; 2012 ; Interacting with Computers Volume 24 ; 24 ; >
     au < crawling ; exists ; 2013 ; Interacting with Computers Volume 25 ; 25 ; >
-    au < manifest ; exists ; 2014 ; Interacting with Computers Volume 26 ; 26 ; >
+    au < testing ; exists ; 2014 ; Interacting with Computers Volume 26 ; 26 ; >
     
   }
   {
@@ -21846,7 +21846,7 @@
     au < ready ; exists ; 2011 ; BioScience Volume 61 ; 61 ; >
     au < exists ; exists ; 2012 ; BioScience Volume 62 ; 62 ; >
     au < exists ; exists ; 2013 ; BioScience Volume 63 ; 63 ; >
-    au < manifest ; exists ; 2014 ; BioScience Volume 64 ; 64 ; >
+    au < testing ; exists ; 2014 ; BioScience Volume 64 ; 64 ; >
 
   }
 
