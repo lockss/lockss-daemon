@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.381 2014-10-23 18:24:25 tlipkis Exp $
+ $Id: build.xml,v 1.382 2014-10-24 21:07:27 thib_gc Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -687,13 +687,21 @@ Args:
 		<attribute name="destdir" />
 		<attribute name="srcdir" />
 		<sequential>
-			<exec dir="${basedir}"
-			      executable="scripts/tdbxml-helper"
-			      failifexecutionfails="true"
-			      failonerror="true">
-				<arg value="@{srcdir}" />
-				<arg value="@{destdir}" />
-			</exec>
+			<apply executable="scripts/tdb/tdbxml"
+			       dir="${basedir}"
+			       dest="@{destdir}"
+			       verbose="true"
+		 	       failonerror="true"
+			       failifexecutionfails="true"
+			       skipemptyfilesets="true"
+			       parallel="true">
+				<fileset dir="@{srcdir}" >
+					<include name="*.tdb"/>
+				</fileset>
+				<mapper type="glob" from="*.tdb" to="*.xml"/>
+				<arg value="--all" />
+				<arg value="--output-dir=@{destdir}" />
+			</apply>
 		</sequential>
 	</macrodef>
 	
