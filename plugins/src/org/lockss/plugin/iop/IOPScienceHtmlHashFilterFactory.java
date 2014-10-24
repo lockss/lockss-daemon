@@ -1,5 +1,5 @@
 /*
- * $Id: IOPScienceHtmlHashFilterFactory.java,v 1.11 2014-10-24 19:53:46 etenbrink Exp $
+ * $Id: IOPScienceHtmlHashFilterFactory.java,v 1.12 2014-10-24 22:58:47 etenbrink Exp $
  */
 
 /*
@@ -108,13 +108,13 @@ public class IOPScienceHtmlHashFilterFactory implements FilterFactory {
           public boolean accept(Node node) {
             if (super.accept(node)) {
               String allText = ((CompositeTag)node).toPlainTextString();
-              return allText.toLowerCase().contains("Total article downloads");
+              return allText.toLowerCase().contains("total article downloads");
             }
             return false;
           }
         },
-        // <a class="nextprevious"
-        HtmlNodeFilters.tagWithAttributeRegex("a",  "class", "nextprevious"),
+        // next/previous can change
+        HtmlNodeFilters.tagWithAttribute("div", "class", "jnlTocIssueNav"),
     };
     
     InputStream filtered = new HtmlFilterInputStream(in,
