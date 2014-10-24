@@ -1,5 +1,5 @@
 /*
- * $Id: IOPScienceHtmlHashFilterFactory.java,v 1.10 2014-10-23 01:27:48 etenbrink Exp $
+ * $Id: IOPScienceHtmlHashFilterFactory.java,v 1.11 2014-10-24 19:53:46 etenbrink Exp $
  */
 
 /*
@@ -113,6 +113,8 @@ public class IOPScienceHtmlHashFilterFactory implements FilterFactory {
             return false;
           }
         },
+        // <a class="nextprevious"
+        HtmlNodeFilters.tagWithAttributeRegex("a",  "class", "nextprevious"),
     };
     
     InputStream filtered = new HtmlFilterInputStream(in,
