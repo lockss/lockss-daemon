@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssDaemon.java,v 1.13 2007-05-23 02:26:54 tlipkis Exp $
+ * $Id: TestLockssDaemon.java,v 1.14 2014-10-24 19:43:32 thib_gc Exp $
  */
 
 /*
@@ -33,6 +33,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.app;
 
 import java.util.*;
+
+import org.apache.commons.lang3.JavaVersion;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.config.ConfigManager;
@@ -243,6 +245,11 @@ public class TestLockssDaemon extends LockssTestCase {
       return false;
     }
   }
+  
+  public void testMinJavaVersion() throws Exception {
+    assertEquals(JavaVersion.JAVA_1_6, LockssDaemon.MIN_JAVA_VERSION);
+  }
+  
   List events;
 
   class TestAuLockssDaemon extends LockssDaemon {
