@@ -1,5 +1,5 @@
 /*
- * $Id: TestIOPScienceHtmlHashFilterFactory.java,v 1.4 2013-12-11 01:40:53 thib_gc Exp $
+ * $Id: TestIOPScienceHtmlHashFilterFactory.java,v 1.5 2014-10-24 22:59:13 etenbrink Exp $
  */
 
 /*
@@ -148,8 +148,64 @@ public class TestIOPScienceHtmlHashFilterFactory extends LockssTestCase {
       "</footer>";
   private static final String hrtagsHtmlHashFiltered =
       " <body>stuff</body> ";
-
-
+  
+  // test removal of metrics-panel, etc.
+  private static final String metricsHtml =
+      "<div class=\" metrics-panel\">\n" + 
+      "    \n" + 
+      "    <!--  Start of Internal Stats Section -->\n" + 
+      "    <p>Please see the page <a href=\"/info/page/article-level-metrics\">article level metrics in IOPscience</a> for more information about the statistics available. Article usage data are updated once a week.</p>\n" + 
+      "    <h4 id=\"internalStatsHeaderId\" class=\"subhead\">Article usage</h4>\n" + 
+      "    <br clear=\"all\">\n" + 
+      "      \n" + 
+      "\n" + 
+      "<div class=\"hideMetrics\" id=\"crossrefErrorId\">\n" + 
+      "  Results for CrossRef are currently unavailable for this article.\n" + 
+      "</div>\n" + 
+      "\n" + 
+      "      <h4 id=\"bookmarksSectionId\" class=\"subhead hideMetrics\">Shares and bookmarks</h4>\n" + 
+      "\n" + 
+      "</div>" +
+      "" +
+      "<dl class=\"videoList\">\n" + 
+      "      <dt>Metrics</dt>\n" + 
+      "        <dd>\n" + 
+      "          <p>\n" + 
+      "                Total article downloads:\n" + 
+      "                <strong>408</strong>\n" + 
+      "                \n" + 
+      "          </p>\n" + 
+      "        <p>\n" + 
+      "          <a href=\"\" id=\"abstractMoreMetricsId\">More metrics</a>\n" + 
+      "        </p>\n" + 
+      "      </dd>\n" + 
+      "</dl>\n";
+  private static final String metricsHtmlFiltered =
+      "<dl class=\"videoList\"> <dt>Metrics</dt> </dl> ";
+  
+  // test removal of sideTabBar, viewingLinks, metrics-panel, 
+  private static final String miscHtml =
+      "\n<body>stuff" +
+      "<div class=\"sideTabBar\">\n" + 
+      "  <input type=\"hidden\" value=\"0268-1242/27/1/015002\" name=\"articleId\">\n" + 
+      "\n" + 
+      "<div style=\"display: none;\">\n" + 
+      "</div>\n" +
+      "" +
+      "<p class=\"viewingLinks\">\n" + 
+      "  \n" + 
+      "    <a title=\"Tag this article\"> Tag this article</a>\n" + 
+      "  \n" + 
+      "</p>" +
+      "" +
+      "<div class=\"jnlTocIssueNav\">\n" + 
+      "  <a href=\"/1742-6596/475/1\" class=\"nextprevious\">« previous issue</a> \n" + 
+      "  <a href=\"/1742-6596/477/1\" class=\"nextprevious\">next issue »</a>\n" + 
+      "</div>" +
+      "</body>\n";
+  private static final String miscHtmlFiltered =
+      " <body>stuff</body> ";
+  
   public void testFiltering() throws Exception {
     InputStream inA;
     InputStream inB;
@@ -183,6 +239,16 @@ public class TestIOPScienceHtmlHashFilterFactory extends LockssTestCase {
     inA = fact.createFilteredInputStream(mau, new StringInputStream(hrtagsHtmlHash),
         ENC);
     assertEquals(hrtagsHtmlHashFiltered, StringUtil.fromInputStream(inA));
+    
+    // metrics test
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(metricsHtml),
+        ENC);
+    assertEquals(metricsHtmlFiltered, StringUtil.fromInputStream(inA));
+    
+    // misc test
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(miscHtml),
+        ENC);
+    assertEquals(miscHtmlFiltered, StringUtil.fromInputStream(inA));
     
   }
 }
