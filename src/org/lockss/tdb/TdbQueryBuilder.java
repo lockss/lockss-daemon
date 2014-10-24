@@ -1,5 +1,5 @@
 /*
- * $Id: TdbQueryBuilder.java,v 1.4 2014-09-30 00:03:44 thib_gc Exp $
+ * $Id: TdbQueryBuilder.java,v 1.5 2014-10-24 21:58:23 thib_gc Exp $
  */
 
 /*
@@ -161,16 +161,16 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
   
   /**
    * <p>
-   * Key for the clockssPreserved option ({@value}).
+   * Key for the clockss-preserved option ({@value}).
    * </p>
    * 
    * @since 1.67
    */
-  protected static final String KEY_CLOCKSS_PRESERVED = "clockssPreserved";
+  protected static final String KEY_CLOCKSS_PRESERVED = "clockss-preserved";
 
   /**
    * <p>
-   * Single letter for the clockssPreserved option ({@value}).
+   * Single letter for the clockss-preserved option ({@value}).
    * </p>
    * 
    * @since 1.67
@@ -179,7 +179,7 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
   
   /**
    * <p>
-   * Unmodifiable list of statuses associated with the clockssPreserved option.
+   * Unmodifiable list of statuses associated with the clockss-preserved option.
    * </p>
    * 
    * @since 1.67
@@ -194,7 +194,7 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
   
   /**
    * <p>
-   * The clockssPreserved option.
+   * The clockss-preserved option.
    * </p>
    * 
    * @since 1.67
@@ -206,16 +206,16 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
   
   /**
    * <p>
-   * Key for the clockssProduction option ({@value}).
+   * Key for the clockss-production option ({@value}).
    * </p>
    * 
    * @since 1.67
    */
-  protected static final String KEY_CLOCKSS_PRODUCTION = "clockssProduction";
+  protected static final String KEY_CLOCKSS_PRODUCTION = "clockss-production";
   
   /**
    * <p>
-   * Single letter for the clockssProduction option ({@value}).
+   * Single letter for the clockss-production option ({@value}).
    * </p>
    * 
    * @since 1.67
@@ -224,7 +224,7 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
   
   /**
    * <p>
-   * Unmodifiable list of statuses associated with the clockssProduction option.
+   * Unmodifiable list of statuses associated with the clockss-production option.
    * </p>
    * 
    * @since 1.67
@@ -247,7 +247,7 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
 
   /**
    * <p>
-   * The clockssProduction option.
+   * The clockss-production option.
    * </p>
    * 
    * @since 1.67
