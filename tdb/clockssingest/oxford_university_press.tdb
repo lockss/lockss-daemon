@@ -3894,7 +3894,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2006-2007 ; The Chinese Journal of International Politics Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2008-2009 ; The Chinese Journal of International Politics Volume 2 ; 2 ; >
+    au < testing ; exists ; 2008-2009 ; The Chinese Journal of International Politics Volume 2 ; 2 ; >
     au < finished ; crawling ; 2010-2011 ; The Chinese Journal of International Politics Volume 3 ; 3 ; >
     au < finished ; crawling ; 2011 ; The Chinese Journal of International Politics Volume 4 ; 4 ; >
     au < finished ; crawling ; 2012 ; The Chinese Journal of International Politics Volume 5 ; 5 ; >
@@ -9780,8 +9780,8 @@
     au < manifest ; exists ; 2006 ; The Journal of Applied Poultry Research Volume 15 ; 15 ; >
     au < manifest ; exists ; 2007 ; The Journal of Applied Poultry Research Volume 16 ; 16 ; >
     au < manifest ; exists ; 2008 ; The Journal of Applied Poultry Research Volume 17 ; 17 ; >
-    au < manifest ; exists ; 2009 ; The Journal of Applied Poultry Research Volume 18 ; 18 ; >
-    au < manifest ; exists ; 2010 ; The Journal of Applied Poultry Research Volume 19 ; 19 ; >
+    au < testing ; exists ; 2009 ; The Journal of Applied Poultry Research Volume 18 ; 18 ; >
+    au < testing ; exists ; 2010 ; The Journal of Applied Poultry Research Volume 19 ; 19 ; >
     au < ready ; exists ; 2011 ; The Journal of Applied Poultry Research Volume 20 ; 20 ; >
     au < crawling ; exists ; 2012 ; The Journal of Applied Poultry Research Volume 21 ; 21 ; >
     au < crawling ; exists ; 2013 ; The Journal of Applied Poultry Research Volume 22 ; 22 ; >
@@ -10278,7 +10278,7 @@
     au < manifest ; exists ; 2006 ; Journal of Competition Law & Economics Volume 2 ; 2 ; >
     au < manifest ; exists ; 2007 ; Journal of Competition Law & Economics Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Competition Law & Economics Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2009 ; Journal of Competition Law & Economics Volume 5 ; 5 ; >
+    au < testing ; exists ; 2009 ; Journal of Competition Law & Economics Volume 5 ; 5 ; >
     au < finished ; crawling ; 2010 ; Journal of Competition Law & Economics Volume 6 ; 6 ; >
     au < finished ; frozen ; 2011 ; Journal of Competition Law & Economics Volume 7 ; 7 ; >
     au < finished ; crawling ; 2012 ; Journal of Competition Law & Economics Volume 8 ; 8 ; >
@@ -10326,7 +10326,7 @@
     au < manifest ; exists ; 2006 ; Journal of Conflict and Security Law Volume 11 ; 11 ; >
     au < manifest ; exists ; 2007 ; Journal of Conflict and Security Law Volume 12 ; 12 ; >
     au < manifest ; exists ; 2008 ; Journal of Conflict and Security Law Volume 13 ; 13 ; >
-    au < manifest ; exists ; 2009 ; Journal of Conflict and Security Law Volume 14 ; 14 ; >
+    au < testing ; exists ; 2009 ; Journal of Conflict and Security Law Volume 14 ; 14 ; >
     au < finished ; crawling ; 2010 ; Journal of Conflict and Security Law Volume 15 ; 15 ; >
     au < finished ; crawling ; 2011 ; Journal of Conflict and Security Law Volume 16 ; 16 ; >
     au < finished ; frozen ; 2012 ; Journal of Conflict and Security Law Volume 17 ; 17 ; >
@@ -10389,7 +10389,7 @@
     au < manifest ; exists ; 2006 ; Journal of Deaf Studies and Deaf Education Volume 11 ; 11 ; >
     au < manifest ; exists ; 2007 ; Journal of Deaf Studies and Deaf Education Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Deaf Studies and Deaf Education Volume 13 ; 13 ; >
-    au < manifest ; exists ; 2009 ; Journal of Deaf Studies and Deaf Education Volume 14 ; 14 ; >
+    au < testing ; exists ; 2009 ; Journal of Deaf Studies and Deaf Education Volume 14 ; 14 ; >
     au < finished ; frozen ; 2010 ; Journal of Deaf Studies and Deaf Education Volume 15 ; 15 ; >
     au < finished ; frozen ; 2011 ; Journal of Deaf Studies and Deaf Education Volume 16 ; 16 ; >
     au < finished ; crawling ; 2012 ; Journal of Deaf Studies and Deaf Education Volume 17 ; 17 ; >
@@ -10445,7 +10445,7 @@
     au < manifest ; exists ; 2006 ; Journal of Design History Volume 19 ; 19 ; >
     au < manifest ; exists ; 2007 ; Journal of Design History Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Design History Volume 21 ; 21 ; >
-    au < manifest ; exists ; 2009 ; Journal of Design History Volume 22 ; 22 ; >
+    au < testing ; exists ; 2009 ; Journal of Design History Volume 22 ; 22 ; >
     au < finished ; crawling ; 2010 ; Journal of Design History Volume 23 ; 23 ; >
     au < finished ; frozen ; 2011 ; Journal of Design History Volume 24 ; 24 ; >
     au < finished ; crawling ; 2012 ; Journal of Design History Volume 25 ; 25 ; >
@@ -10490,7 +10490,7 @@
     au < manifest ; exists ; 2006 ; Journal of Economic Geography Volume 6 ; 6 ; >
     au < manifest ; exists ; 2007 ; Journal of Economic Geography Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Economic Geography Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2009 ; Journal of Economic Geography Volume 9 ; 9 ; >
+    au < testing ; exists ; 2009 ; Journal of Economic Geography Volume 9 ; 9 ; >
     au < finished ; crawling ; 2010 ; Journal of Economic Geography Volume 10 ; 10 ; >
     au < finished ; crawling ; 2011 ; Journal of Economic Geography Volume 11 ; 11 ; >
     au < finished ; crawling ; 2012 ; Journal of Economic Geography Volume 12 ; 12 ; >
@@ -10584,7 +10584,7 @@
     au < manifest ; exists ; 2006 ; Journal of Electron Microscopy Volume 55 ; 55 ; >
     au < manifest ; exists ; 2007 ; Journal of Electron Microscopy Volume 56 ; 56 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Electron Microscopy Volume 57 ; 57 ; >
-    au < manifest ; exists ; 2009 ; Journal of Electron Microscopy Volume 58 ; 58 ; >
+    au < testing ; exists ; 2009 ; Journal of Electron Microscopy Volume 58 ; 58 ; >
     au < finished ; crawling ; 2010 ; Journal of Electron Microscopy Volume 59 ; 59 ; >
     au < finished ; crawling ; 2011 ; Journal of Electron Microscopy Volume 60 ; 60 ; >
     au < finished ; frozen ; 2012 ; Journal of Electron Microscopy Volume 61 ; 61 ; >
@@ -15160,7 +15160,7 @@
     au < manifest ; exists ; 2007 ; Journal of Music Therapy Volume 44 ; 44 ; >
     au < manifest ; exists ; 2008 ; Journal of Music Therapy Volume 45 ; 45 ; >
     au < manifest ; exists ; 2009 ; Journal of Music Therapy Volume 46 ; 46 ; >
-    au < testing ; exists ; 2010 ; Journal of Music Therapy Volume 47 ; 47 ; >
+    au < ready ; exists ; 2010 ; Journal of Music Therapy Volume 47 ; 47 ; >
     au < ready ; exists ; 2011 ; Journal of Music Therapy Volume 48 ; 48 ; >
     au < crawling ; exists ; 2012 ; Journal of Music Therapy Volume 49 ; 49 ; >
     au < crawling ; exists ; 2013 ; Journal of Music Therapy Volume 50 ; 50 ; >
@@ -15211,7 +15211,7 @@
     au < manifest ; exists ; 2007 ; Music Therapy Perspectives Volume 25 ; 25 ; >
     au < manifest ; exists ; 2008 ; Music Therapy Perspectives Volume 26 ; 26 ; >
     au < manifest ; exists ; 2009 ; Music Therapy Perspectives Volume 27 ; 27 ; >
-    au < testing ; exists ; 2010 ; Music Therapy Perspectives Volume 28 ; 28 ; >
+    au < ready ; exists ; 2010 ; Music Therapy Perspectives Volume 28 ; 28 ; >
     au < ready ; exists ; 2011 ; Music Therapy Perspectives Volume 29 ; 29 ; >
     au < ready ; exists ; 2012 ; Music Therapy Perspectives Volume 30 ; 30 ; >
     au < exists ; exists ; 2013 ; Music Therapy Perspectives Volume 31 ; 31 ; >
@@ -15266,7 +15266,7 @@
     au < manifest ; exists ; 2007 ; Music Theory Spectrum Volume 29 ; 29 ; >
     au < manifest ; exists ; 2008 ; Music Theory Spectrum Volume 30 ; 30 ; >
     au < manifest ; exists ; 2009 ; Music Theory Spectrum Volume 31 ; 31 ; >
-    au < testing ; exists ; 2010 ; Music Theory Spectrum Volume 32 ; 32 ; >
+    au < ready ; exists ; 2010 ; Music Theory Spectrum Volume 32 ; 32 ; >
     au < ready ; exists ; 2011 ; Music Theory Spectrum Volume 33 ; 33 ; >
     au < ready ; exists ; 2012 ; Music Theory Spectrum Volume 34 ; 34 ; >
     au < crawling ; exists ; 2013 ; Music Theory Spectrum Volume 35 ; 35 ; >
@@ -17155,7 +17155,7 @@
     au < manifest ; exists ; 2007 ; The Philosophical Quarterly Volume 57 ; 57 ; >
     au < manifest ; exists ; 2008 ; The Philosophical Quarterly Volume 58 ; 58 ; >
     au < manifest ; exists ; 2009 ; The Philosophical Quarterly Volume 59 ; 59 ; >
-    au < testing ; exists ; 2010 ; The Philosophical Quarterly Volume 60 ; 60 ; >
+    au < ready ; exists ; 2010 ; The Philosophical Quarterly Volume 60 ; 60 ; >
     au < crawling ; exists ; 2011 ; The Philosophical Quarterly Volume 61 ; 61 ; >
     au < crawling ; exists ; 2012 ; The Philosophical Quarterly Volume 62 ; 62 ; >
     au < crawling ; exists ; 2013 ; The Philosophical Quarterly Volume 63 ; 63 ; >
@@ -21492,10 +21492,10 @@
     au < manifest ; exists ; 2009 ; Progress of Theoretical Physics Supplement Volume 180 ; 180 ; >
     au < manifest ; exists ; 2009 ; Progress of Theoretical Physics Supplement Volume 181 ; 181 ; >
     au < manifest ; exists ; 2009 ; Progress of Theoretical Physics Supplement Volume 182 ; 182 ; >
-    au < testing ; exists ; 2010 ; Progress of Theoretical Physics Supplement Volume 183 ; 183 ; >
-    au < testing ; exists ; 2010 ; Progress of Theoretical Physics Supplement Volume 184 ; 184 ; >
-    au < testing ; exists ; 2010 ; Progress of Theoretical Physics Supplement Volume 185 ; 185 ; >
-    au < testing ; exists ; 2010 ; Progress of Theoretical Physics Supplement Volume 186 ; 186 ; >
+    au < ready ; exists ; 2010 ; Progress of Theoretical Physics Supplement Volume 183 ; 183 ; >
+    au < ready ; exists ; 2010 ; Progress of Theoretical Physics Supplement Volume 184 ; 184 ; >
+    au < ready ; exists ; 2010 ; Progress of Theoretical Physics Supplement Volume 185 ; 185 ; >
+    au < ready ; exists ; 2010 ; Progress of Theoretical Physics Supplement Volume 186 ; 186 ; >
     au < crawling ; exists ; 2011 ; Progress of Theoretical Physics Supplement Volume 187 ; 187 ; >
     au < crawling ; exists ; 2011 ; Progress of Theoretical Physics Supplement Volume 188 ; 188 ; >
     au < crawling ; exists ; 2011 ; Progress of Theoretical Physics Supplement Volume 189 ; 189 ; >
@@ -21654,7 +21654,7 @@
       au < finished ; frozen ; 2011 ; The Quarterly Journal of Economics Volume 126 ; 126 ; >
       au < finished ; frozen ; 2012 ; The Quarterly Journal of Economics Volume 127 ; 127 ; >
       au < crawling ; exists ; 2013 ; The Quarterly Journal of Economics Volume 128 ; 128 ; >
-      au < testing ; exists ; 2014 ; The Quarterly Journal of Economics Volume 129 ; 129 ; >
+      au < ready ; exists ; 2014 ; The Quarterly Journal of Economics Volume 129 ; 129 ; >
 
     }
 
