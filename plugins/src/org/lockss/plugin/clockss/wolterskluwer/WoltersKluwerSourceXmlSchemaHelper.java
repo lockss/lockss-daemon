@@ -1,5 +1,5 @@
 /*
- * $Id: WoltersKluwerSourceXmlSchemaHelper.java,v 1.8 2014-10-21 18:41:09 aishizaki Exp $
+ * $Id: WoltersKluwerSourceXmlSchemaHelper.java,v 1.9 2014-10-27 19:30:15 aishizaki Exp $
  */
 
 /*
@@ -271,6 +271,7 @@ static private final String DOI_ATTR_NAME = "XDB";
         // strip off any leading whitespace
         cp = findNextNonWhiteSpace(doi);
         // strip off leading "DOI:" phrase, if needed
+        if (doi.length() == cp) return null;    // if only whitespace, return null
         char c = Character.toUpperCase(doi.charAt(cp));
         if ((c == 'D') && ((doi.substring(cp)).startsWith(DOI_UPPER) || (doi.substring(cp)).startsWith(DOI_LOWER))){
           cp += DOI_UPPER.length();
@@ -290,7 +291,7 @@ static private final String DOI_ATTR_NAME = "XDB";
    private int findNextNonWhiteSpace(String s) {
      int result = 0;
      if (s != null) {
-       for( ; ; result++) {
+       for( ; result < s.length(); result++) {
          if (Character.isWhitespace(s.charAt(result))) {
            continue;
          } else
