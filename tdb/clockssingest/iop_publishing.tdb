@@ -72,14 +72,13 @@
     
     param[journal_issn] = 1758-5090
     comment[param] = eissn preferred
-    comment[notReady] = PD-1111, total number downloaded
 
     au < finished ; crawling ; 2009 ; Biofabrication Volume 1 ; 1 > 
     au < finished ; crawling ; 2010 ; Biofabrication Volume 2 ; 2 > 
     au < finished ; crawling ; 2011 ; Biofabrication Volume 3 ; 3 > 
     au < finished ; crawling ; 2012 ; Biofabrication Volume 4 ; 4 > 
     au < crawling ; exists ; 2013 ; Biofabrication Volume 5 ; 5 > 
-    au < notReady ; exists ; 2014 ; Biofabrication Volume 6 ; 6 > 
+    au < ready ; exists ; 2014 ; Biofabrication Volume 6 ; 6 > 
 
   }
 
@@ -366,7 +365,6 @@
     >
     
     param[journal_issn] = 0253-6102
-    comment[notReady] = PD-1111, CrossRef
     
     au < manifest ; exists ; 2005 ; Communications in Theoretical Physics Volume 43 ; 43 > 
     au < manifest ; exists ; 2005 ; Communications in Theoretical Physics Volume 44 ; 44 > 
@@ -386,7 +384,7 @@
     au < crawling ; exists ; 2012 ; Communications in Theoretical Physics Volume 58 ; 58 >
     au < crawling ; exists ; 2013 ; Communications in Theoretical Physics Volume 59 ; 59 >
     au < crawling ; exists ; 2013 ; Communications in Theoretical Physics Volume 60 ; 60 >
-    au < notReady ; exists ; 2014 ; Communications in Theoretical Physics Volume 61 ; 61 >
+    au < ready ; exists ; 2014 ; Communications in Theoretical Physics Volume 61 ; 61 >
     au < ready ; exists ; 2014 ; Communications in Theoretical Physics Volume 62 ; 62 >
 
   }
@@ -452,7 +450,7 @@
     au < finished ; crawling ; 2011 ; Environmental Research Letters Volume 6 ; 6 > 
     au < ingNotReady ; exists ; 2012 ; Environmental Research Letters Volume 7 ; 7 > 
     au < crawling ; exists ; 2013 ; Environmental Research Letters Volume 8 ; 8 > 
-    au < manifest ; exists ; 2014 ; Environmental Research Letters Volume 9 ; 9 > 
+    au < testing ; exists ; 2014 ; Environmental Research Letters Volume 9 ; 9 > 
 
   }
 
@@ -574,7 +572,7 @@
     au < crawling ; exists ; 2013 ; EPL (Europhysics Letters) Volume 102 ; 102 >
     au < crawling ; exists ; 2013 ; EPL (Europhysics Letters) Volume 103 ; 103 >
     au < crawling ; exists ; 2013 ; EPL (Europhysics Letters) Volume 104 ; 104 >
-    au < manifest ; exists ; 2014 ; EPL (Europhysics Letters) Volume 105 ; 105 > 
+    au < testing ; exists ; 2014 ; EPL (Europhysics Letters) Volume 105 ; 105 > 
     au < manifest ; exists ; 2014 ; EPL (Europhysics Letters) Volume 106 ; 106 >
     au < manifest ; exists ; 2014 ; EPL (Europhysics Letters) Volume 107 ; 107 >
     au < manifest ; exists ; 2014 ; EPL (Europhysics Letters) Volume 108 ; 108 >
@@ -627,7 +625,7 @@
     au < finished ; crawling ; 2011 ; European Journal of Physics Volume 32 ; 32 > 
     au < finished ; crawling ; 2012 ; European Journal of Physics Volume 33 ; 33 > 
     au < crawling ; exists ; 2013 ; European Journal of Physics Volume 34 ; 34 > 
-    au < manifest ; exists ; 2014 ; European Journal of Physics Volume 35 ; 35 > 
+    au < testing ; exists ; 2014 ; European Journal of Physics Volume 35 ; 35 > 
 
   }
 
@@ -688,7 +686,7 @@
     au < finished ; crawling ; 2011 ; Fluid Dynamics Research Volume 43 ; 43 > 
     au < finished ; crawling ; 2012 ; Fluid Dynamics Research Volume 44 ; 44 > 
     au < crawling ; exists ; 2013 ; Fluid Dynamics Research Volume 45 ; 45 > 
-    au < manifest ; exists ; 2014 ; Fluid Dynamics Research Volume 46 ; 46 > 
+    au < testing ; exists ; 2014 ; Fluid Dynamics Research Volume 46 ; 46 > 
 
   }
   
