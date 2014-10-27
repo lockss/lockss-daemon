@@ -69,6 +69,7 @@ public class MassachusettsMedicalSocietyHtmlHashFilterFactory implements FilterF
         // Contain cross-links to other articles in other journals/volumes
         HtmlNodeFilters.tagWithAttribute("div", "id", "related"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "trendsBox"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "trendsMod"),
         // Contains ads
         HtmlNodeFilters.tagWithAttribute("div", "id", "topAdBar"),
         //Remove Advertisement from Topbanner
