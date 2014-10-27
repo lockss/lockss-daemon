@@ -9,4 +9,8 @@ if [ "X${JAVA_HOME}" = "X" ]; then
 else
   JAVA=$JAVA_HOME/bin/java
 fi
-$JAVA -Xmx512m -classpath `cat $CLASSPATHFILE` org.lockss.tdb.TdbXml "$@"
+# Java 6 and earlier on the Mac has an unreasonably low default max heap 
+if [ `uname` = "Darwin" ]; then
+  JAVA_OPTS=-Xmx1024m
+fi
+$JAVA $JAVA_OPTS -classpath `cat $CLASSPATHFILE` org.lockss.tdb.TdbXml "$@"
