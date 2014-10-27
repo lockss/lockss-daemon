@@ -1,4 +1,4 @@
-/* $Id: TestWoltersKluwerSourceXmlMetadataExtractorHelper.java,v 1.3 2014-08-08 17:17:46 aishizaki Exp $
+/* $Id: TestWoltersKluwerSourceXmlMetadataExtractorHelper.java,v 1.4 2014-10-27 19:31:09 aishizaki Exp $
 
 Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -28,12 +28,15 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.clockss.wolterskluwer;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
+import org.apache.commons.io.input.BOMInputStream;
 
 //import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 
@@ -66,11 +69,12 @@ public class TestWoltersKluwerSourceXmlMetadataExtractorHelper
   private static final String TEST_PDF_URL = BASE_URL + "ADAPA20140615.0/" + "0"+BASIC_PDF_FILENAME;
 
   // expected metadata
-  private static final String GOOD_JOURNAL_TITLE = "Hello Oligarchy";
+  private static final String GOOD_JOURNAL_TITLE = "Hello Oligarchy: With Songs & Dances";
   private static final String GOOD_PUB_YEAR = "2014";
   private static final String GOOD_PUB_MONTH = "June";
   private static final String GOOD_PUB_DAY = "15";
-  private static final String GOOD_PUB_DATE = "2014-06-15";
+  private static final String GOOD_PUB_DATE = "2014-06";
+  //private static final String GOOD_PUB_DATE = "2014-06-15";
   private static final String GOOD_DOI = "10.1097/01.CNE.0000428768.49988.91";
   private static final String GOOD_ISSN = "0163-2108";
   private static final String GOOD_ISSUE = "8";
@@ -104,7 +108,8 @@ public class TestWoltersKluwerSourceXmlMetadataExtractorHelper
     "<SO>" +
     "<PB>"+GOOD_JOURNAL_TITLE+"</PB>" +
     "<ISN>"+GOOD_ISSN+"</ISN>" +
-    "<DA><DY>"+GOOD_PUB_DAY+"</DY><MO>"+GOOD_PUB_MONTH+"</MO><YR>"+GOOD_PUB_YEAR+"</YR></DA>" +
+    "<DA>"+"<MO>"+GOOD_PUB_MONTH+"</MO><YR>"+GOOD_PUB_YEAR+"</YR></DA>" +
+//    "<DA><DY>"+GOOD_PUB_DAY+"</DY><MO>"+GOOD_PUB_MONTH+"</MO><YR>"+GOOD_PUB_YEAR+"</YR></DA>" +
     "<V>"+GOOD_VOLUME+"</V>" +
     "<IS><IP>"+GOOD_ISSUE+"</IP></IS>" +
     "<PG>1&ndash;6</PG></SO>" +
@@ -127,6 +132,9 @@ public class TestWoltersKluwerSourceXmlMetadataExtractorHelper
   private static final String BAD1_SN = "LastName";
   private static final String BAD2_FN = "Cher";
   private static final String BAD2_SN = "";
+  // bad DOI (whichshould be corrected)
+  private static final String BAD_DOI = "  DOI:  "+GOOD_DOI;
+  //private static final String BAD_DOI = "  ";
   // Bad Title: only subtitle
   private static final String BAD_ARTICLE_SUBTITLE = "Just a Subtitle";
   private static final String BAD_ARTICLE_TITLE = ":" +BAD_ARTICLE_SUBTITLE;
@@ -154,8 +162,29 @@ public class TestWoltersKluwerSourceXmlMetadataExtractorHelper
     "<IS><IP>"+GOOD_ISSUE+"</IP></IS>" +
     "<PG>1&ndash;6</PG></SO>" +
     "<CP>&copy; 2014 Lippincott Williams &amp; Wilkins.</CP>" +
-    "<DT>Article</DT><XUI XDB=\"pub-doi\" UI=\""+GOOD_DOI+"\"></BB>" +
-    "</D></DG>";
+    "<DT>Article</DT><XUI XDB=\"pub-doi\" UI=\""+BAD_DOI+"\"></BB>" +
+    "</D>" +
+    // 
+    "<D V=\"2009.2F\" AN=\""+ACCESS_URL+"\" FILE=\"G0256406-201406150-00002\" CME=\"CME\">" +
+    "<BB>" +
+    "<TG>" +
+    "<TI></TI>" +
+    "<STI>" + BAD_ARTICLE_SUBTITLE + "1"+ "</STI></TG>" +
+    "<BY>" +
+    "<PN><FN>"+BAD1_FN+"</FN><MN>"+BAD1_MN+"</MN><SN>"+BAD1_SN+"</SN><DEG>MD</DEG></PN>" +
+    "<PN><FN>"+BAD2_FN+"</FN><SN>"+BAD2_SN+"</SN><DEG>MD, MSc</DEG></PN>" +
+    "</BY>" +
+    "<SO>" +
+    "<PB>"+GOOD_JOURNAL_TITLE+"1"+"</PB>" +
+    "<ISN>"+GOOD_ISSN+"1"+"</ISN>" +
+    "<DA><DY>"+BAD_PUB_DAY+"</DY><MO>"+BAD_PUB_MONTH+"</MO><YR>"+BAD_PUB_YEAR+"</YR></DA>" +
+    "<V>"+GOOD_VOLUME+"</V>" +
+    "<IS><IP>"+GOOD_ISSUE+"</IP></IS>" +
+    "<PG>1&ndash;6</PG></SO>" +
+    "<CP>&copy; 2014 Lippincott Williams &amp; Wilkins.</CP>" +
+    "<DT>Article</DT><XUI XDB=\"pub-doi\" UI=\" \"></BB>" +
+    "</D>" +
+    "</DG>";
 
 
   public void setUp() throws Exception {
@@ -194,7 +223,6 @@ public class TestWoltersKluwerSourceXmlMetadataExtractorHelper
 
     setUp();
   }
-
 
   public void testExtractFromEmptyContent() throws Exception {
     String xml_url = TEST_XML_URL;
@@ -245,15 +273,16 @@ public class TestWoltersKluwerSourceXmlMetadataExtractorHelper
     assertNotEmpty(mdlist);
         ArticleMetadata md = null;
 
-    for (int i = 0; i< mdlist.size(); i++) {
-      md = mdlist.get(i);
+    //for (int i = 0; i< mdlist.size(); i++) {
+      md = mdlist.get(0);
       assertNotNull(md);
 
       // checking how the "bad" inputs (date, title, authors) are handled
       assertEquals(badAuthors.toString(), md.getList(MetadataField.FIELD_AUTHOR).toString());
       assertEquals(null, md.get(MetadataField.FIELD_DATE));
       assertEquals(BAD_ARTICLE_TITLE, md.get(MetadataField.FIELD_ARTICLE_TITLE));
-    }
+      assertEquals(GOOD_DOI,md.get(MetadataField.FIELD_DOI));
+    //}
   
   }
   
@@ -307,46 +336,52 @@ public class TestWoltersKluwerSourceXmlMetadataExtractorHelper
       //IOUtil.safeClose(file_input);
     }
   }
- /* 
+
+/*
   // get test input files from current directory
 private String getInputFile(String filename) {
-  String jatsStr;
+  String fileStr;
   try {
     InputStream jatsIn = getClass().getResourceAsStream(filename);
-    jatsStr = StringUtil.fromInputStream(jatsIn);
+log.info("filename:"+filename);
+    fileStr = StringUtil.fromInputStream(jatsIn);
   }
   catch (IOException e) {
      throw new RuntimeException(e);
   }
-  return (jatsStr);
+  return (fileStr);
 }
- 
+/* 
   // Use when getting test content locally
   // original xml file from the publisher
+  final static String baseDir = "/Users/audreyishizaki/Desktop/LOCKSS/lockss-daemon/plugins/test/src/org/lockss/plugin/clockss/wolterskluwer/";
+  final static String testXmlFile = "JHYPE_20121000.0"; // "20120500.0"; //"90000000.0"; //"20120500.0";
+  final static String testPdfFile = "00004872-201210000-00001.pdf"; //"00000539-201205000-00033.pdf"; //"00004583-900000000-99789.pdf"; //"00000441-201205000-00001.pdf";
   public void testExtractFromRealContent() throws Exception {
-    String xml_url = getInputFile("20140615.0");
-    String pdf_url = getInputFile("00256406-201406150-00001.pdf");
-    //String xml_url = getInputFile("20130430.0");
-    //String pdf_url = getInputFile("00029679-201304300-00001.pdf");
+    //String xml_url = getInputFile(testXmlFile);
+    //String pdf_url = getInputFile(testPdfFile);
+
     CIProperties xmlHeader = new CIProperties();
-
-    InputStream file_input = null;
+    InputStream xml_istream = null;
+    InputStream pdf_istream = null;
+    BOMInputStream bom_istream = null;
     try {
-      //MockCachedUrl mcu = new MockCachedUrl(url, mau);
       xmlHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
-      //MockCachedUrl cu = new MockCachedUrl(xml_url, mau);
-      MockCachedUrl xcu = mau.addUrl(xml_url, true, true, xmlHeader);
+      MockCachedUrl xcu = mau.addUrl(baseDir+testXmlFile, true, true, xmlHeader);
       // need to check for this file before emitting
-      MockCachedUrl pcu = mau.addUrl(pdf_url, true, true, xmlHeader);
+      MockCachedUrl pcu = mau.addUrl(baseDir+testPdfFile, true, true, xmlHeader);
 
-      file_input = getResourceAsStream("20140615.0");
-      String xml_input = StringUtil.fromInputStream(file_input);
-      IOUtil.safeClose(file_input);
+      xml_istream = getResourceAsStream(testXmlFile);
+      bom_istream = new BOMInputStream(xml_istream, false);
+      String xml_input = StringUtil.fromInputStream(bom_istream);
+      IOUtil.safeClose(bom_istream);
+      IOUtil.safeClose(xml_istream);
+
       //MockCachedUrl pcu = new MockCachedUrl(pdf_url, mau);
       // really not going to be read other than to check .hasContent()
-      file_input = getResourceAsStream("00256406-201406150-00001.pdf");
-      String pdf_input = StringUtil.fromInputStream(file_input);
-      IOUtil.safeClose(file_input);
+      pdf_istream = getResourceAsStream(testPdfFile);
+      String pdf_input = StringUtil.fromInputStream(pdf_istream);
+      IOUtil.safeClose(pdf_istream);
       
       xcu.setContent(xml_input);
       xcu.setContentSize(xml_input.length());
@@ -369,7 +404,7 @@ private String getInputFile(String filename) {
        assertNotNull(md);
       log.info("metadata["+i+"]: ");
       log.info(md.get(MetadataField.FIELD_ISSN));
-      log.info(md.get(MetadataField.FIELD_JOURNAL_TITLE));
+      log.info(md.get(MetadataField.FIELD_PUBLICATION_TITLE));
       log.info(md.get(MetadataField.FIELD_ARTICLE_TITLE));
       log.info(md.get(MetadataField.FIELD_ACCESS_URL));
       log.info(md.get(MetadataField.FIELD_ISSUE));
@@ -380,8 +415,11 @@ private String getInputFile(String filename) {
       log.info(md.get(MetadataField.FIELD_DOI));
       }
     } finally {
-      IOUtil.safeClose(file_input);
+      IOUtil.safeClose(bom_istream);
+      IOUtil.safeClose(xml_istream);
+      IOUtil.safeClose(pdf_istream);
     }
   }
   */
+  
 }
