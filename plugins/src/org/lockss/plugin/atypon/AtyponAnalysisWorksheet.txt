@@ -15,6 +15,7 @@ ARTICLE URLS (some or all of):
     <base_url>/doi/full/<doi_1st>/<doi_2nd>
     <base_url>/doi/pdf/<doi_1st>/<doi_2nd>
     <base_url>/doi/pdfplus/<doi_1st>/<doi_2nd>
+     ....and others that should be collected
 
 Create a subdirectory under
 <workspace>/plugins/src/org/lockss/plugin/atypon/<newplugname>
