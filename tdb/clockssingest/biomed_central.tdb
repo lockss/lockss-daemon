@@ -1989,7 +1989,7 @@
       au < manifest ; exists ; 2004-2005 ; Allergy, Asthma & Clinical Immunology Volume 1 ; 1 >
       au < manifest ; exists ; 2006 ; Allergy, Asthma & Clinical Immunology Volume 2 ; 2 >
       au < manifest ; exists ; 2007 ; Allergy, Asthma & Clinical Immunology Volume 3 ; 3 >
-      au < testing ; exists ; 2008 ; Allergy, Asthma & Clinical Immunology Volume 4 ; 4 >
+      au < ready ; exists ; 2008 ; Allergy, Asthma & Clinical Immunology Volume 4 ; 4 >
       au < crawling ; exists ; 2009 ; Allergy, Asthma & Clinical Immunology Volume 5 ; 5 >
       au < crawling ; exists ; 2010 ; Allergy, Asthma & Clinical Immunology Volume 6 ; 6 >
       au < finished ; crawling ; 2011 ; Allergy, Asthma & Clinical Immunology Volume 7 ; 7 >
@@ -4760,7 +4760,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.jfootankleres.com/
       param[journal_issn] = 1757-1146
 
-      au < testing ; exists ; 2008 ; Journal of Foot and Ankle Research Volume 1 ; 1 >
+      au < ready ; exists ; 2008 ; Journal of Foot and Ankle Research Volume 1 ; 1 >
       au < crawling ; exists ; 2009 ; Journal of Foot and Ankle Research Volume 2 ; 2 >
       au < crawling ; exists ; 2010 ; Journal of Foot and Ankle Research Volume 3 ; 3 >
       au < crawling ; exists ; 2011 ; Journal of Foot and Ankle Research Volume 4 ; 4 >
