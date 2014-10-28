@@ -60,7 +60,8 @@
     title <
       name = Architecture and Culture ;
       issn = 2050-7828 ;
-      eissn = 2050-7836
+      eissn = 2050-7836 ;
+      issnl = 2050-7828
     >
 
     param[publisher_id] = bloomsbury
@@ -76,7 +77,8 @@
 
     title <
       name = Art In Translation ;
-      eissn = 1756-1310
+      eissn = 1756-1310 ;
+      issnl = 1756-1310
     >
 
     param[publisher_id] = bloomsbury
@@ -167,7 +169,33 @@
     au < doNotProcess ; 2011 ; The Design Journal Volume 14 ; 14 >
     au < doNotProcess ; 2012 ; The Design Journal Volume 15 ; 15 >
     au < released ; 2013 ; The Design Journal Volume 16 ; 16 >
+    au < exists ; 2014 ; The Design Journal Volume 17 ; 17 >
 
+  }
+
+  {
+
+    title <
+      name = Design Philosophy Papers ;
+      issn = 1448-7136 ;
+      issnl = 1448-7136
+    >
+    param[publisher_id] = bloomsbury
+    param[journal_id] = dphp
+    param[journal_issn] = 1448-7136
+
+    au < exists ; 2003 ; Design Philosophy Papers Volume 1 ; 1 >
+    au < exists ; 2004 ; Design Philosophy Papers Volume 2 ; 2 >
+    au < exists ; 2005 ; Design Philosophy Papers Volume 3 ; 3 >
+    au < exists ; 2006 ; Design Philosophy Papers Volume 4 ; 4 >
+    au < exists ; 2007 ; Design Philosophy Papers Volume 5 ; 5 >
+    au < exists ; 2008 ; Design Philosophy Papers Volume 6 ; 6 >
+    au < exists ; 2009 ; Design Philosophy Papers Volume 7 ; 7 >
+    au < exists ; 2010 ; Design Philosophy Papers Volume 8 ; 8 >
+    au < exists ; 2011 ; Design Philosophy Papers Volume 9 ; 9 >
+    au < exists ; 2012 ; Design Philosophy Papers Volume 10 ; 10 >
+    au < exists ; 2013 ; Design Philosophy Papers Volume 11 ; 11 >
+    au < exists ; 2014 ; Design Philosophy Papers Volume 12 ; 12 >
   }
 
   {
@@ -299,6 +327,22 @@
   {
 
     title <
+      name = Journal of Aesthetics and Phenomenology ;
+      issn = 2053-9320 ;
+      eissn = 2053-9339 ;
+      issnl = 2053-9320
+    >
+    param[publisher_id] = bloomsbury
+    param[journal_id] = jap
+    param[journal_issn] = 2053-9320
+
+    au < exists ; 2014 ; Journal of Aesthetics and Phenomenology Volume 1 ; 1 >
+
+  }
+
+  {
+
+    title <
       name = Journal for the Study of Food and Society ;
       issn = 1528-9796
     >
@@ -312,6 +356,22 @@
     au < doNotProcess ; 2000 ; Journal for the Study of Food and Society Volume 4 ; 4 >
     au < doNotProcess ; 2001 ; Journal for the Study of Food and Society Volume 5 ; 5 >
     au < doNotProcess ; 2002-2003 ; Journal for the Study of Food and Society Volume 6 ; 6 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Textile Design Research and Practice ;
+      issn = 2051-1787 ;
+      issnl = 2051-1787
+    >
+    param[publisher_id] = bloomsbury
+    param[journal_id] = jtex
+    param[journal_issn] = 2051-1787
+
+    au < exists ; 2013 ; Journal of Textile Design Research and Practice Volume 1 ; 1 >
+    au < exists ; 2014 ; Journal of Textile Design Research and Practice Volume 2 ; 2 >
 
   }
 
@@ -334,6 +394,21 @@
     au < doNotProcess ; 2012 ; The Journal of Modern Craft Volume 5 ; 5 >
     au < released ; 2013 ; The Journal of Modern Craft Volume 6 ; 6 >
     au < manifest ; 2014 ; The Journal of Modern Craft Volume 7 ; 7 >
+
+  }
+
+  {
+
+    title <
+      name = Luxury ;
+      issn = 2051-1817 ;
+      issnl = 2051-1817
+    >
+    param[publisher_id] = bloomsbury
+    param[journal_id] = lux
+    param[journal_issn] = 2051-1817
+
+    au < exists ; 2014 ; Luxury Volume 1 ; 1 >
 
   }
 
