@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -20,7 +20,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>4</string>
+        <string>5</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -79,6 +79,11 @@
     <list>
       <!-- removes gifs for fb, reddit, etc.. -->
       <string>2,"^%sview/images/.*\.gif", base_url</string> 
+      <!-- removes jpgs for journals -->
+      <string>2,"^%spal/images/journal-covers/[^/]+\.(jpg|gif)", base_url</string> 
+      <!-- catch this book cover, get rid of the rest -->
+      <string>1,"^%spc/[^/]+/small/%s_(large|small)\.(jpg|gif)", base_url, book_isbn</string> 
+      <string>2,"^%spc/[^/]+/small/[^/]+_small\.(jpg|gif)", base_url</string> 
       <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
       <string>4,"^%s", base_url</string>
       <string>1,"^%spc/[^/]+/browse/inside/", base_url</string>
@@ -129,6 +134,10 @@
     <string>application/epub+zip_filter_factory</string>
     <string>org.lockss.plugin.palgrave.PalgraveBookEpubFilterFactory</string>
   </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.palgrave.PalgraveBookUrlNormalizer</string>
+  </entry>  
   <entry>
     <string>application/x-research-info-systems_metadata_extractor_factory_map</string>
     <map>

@@ -1,4 +1,4 @@
-/* $Id: PalgraveBookHtmlHashFilterFactory.java,v 1.7 2014-09-05 19:37:50 aishizaki Exp $
+/* $Id: PalgraveBookHtmlHashFilterFactory.java,v 1.8 2014-10-28 22:40:28 aishizaki Exp $
  
 Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -65,13 +65,23 @@ public class PalgraveBookHtmlHashFilterFactory implements FilterFactory {
         // HtmlNodeFilters.tagWithAttribute("div", "class", "box-well"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "column-width-sidebar column-r"),
         // only keeping stuff in the left sidebar
+        // on the Left Sidebar, removing the tab(s) that can show related books
+        // (which can keep changing), a search tab and a references tab
+        HtmlNodeFilters.tagWithAttribute("div", "id", "infoPanel3"),    // search
+        HtmlNodeFilters.tagWithAttribute("div", "id", "infoPanel4"),    // reference
+        HtmlNodeFilters.tagWithAttribute("div", "id", "infoPanel5"),    // related
+        // looks like publisher is slowly switching its url conventions, leaving us
+        // with little changes in urls (adding a ".page=0" to some urls
+        HtmlNodeFilters.tagWithAttribute("li", "class", "view-cta"),
+        HtmlNodeFilters.tagWithAttribute("li", "class", "download-cta"),
+        HtmlNodeFilters.tagWithAttribute("li", "class", "kindle-cta"),
+
     };
     InputStream filtered =  new HtmlFilterInputStream(in, encoding, HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
     
     Reader filteredReader = FilterUtil.getReader(filtered, encoding);
     return new ReaderInputStream(new WhiteSpaceFilter(filteredReader));
-    //return new HtmlFilterInputStream(in, encoding,
-    //    HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+
     }
     
 }
