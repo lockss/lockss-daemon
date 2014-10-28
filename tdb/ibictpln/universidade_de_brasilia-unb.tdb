@@ -28,12 +28,12 @@
       {
       param[base_url] = http://periodicos.unb.br/
 
-      au < testing ; 2008 ; 1 ; ARCHAI: Revista de Estudos sobre as Origens do Pensamento Ocidental Volume 2008 ; 2008 ; >
-      au < testing ; 2009 ; 2-3 ; ARCHAI: Revista de Estudos sobre as Origens do Pensamento Ocidental Volume 2009 ; 2009 ; >
-      au < testing ; 2010 ; 4-5 ; ARCHAI: Revista de Estudos sobre as Origens do Pensamento Ocidental Volume 2010 ; 2010 ; >
-      au < testing ; 2011 ; 6-7 ; ARCHAI: Revista de Estudos sobre as Origens do Pensamento Ocidental Volume 2011 ; 2011 ; >
-      au < testing ; 2012 ; 8-9 ; ARCHAI: Revista de Estudos sobre as Origens do Pensamento Ocidental Volume 2012 ; 2012 ; >
-      au < testing ; 2013 ; 10-11 ; ARCHAI: Revista de Estudos sobre as Origens do Pensamento Ocidental Volume 2013 ; 2013 ; >
+      au < ready ; 2008 ; 1 ; ARCHAI: Revista de Estudos sobre as Origens do Pensamento Ocidental Volume 2008 ; 2008 ; >
+      au < ready ; 2009 ; 2-3 ; ARCHAI: Revista de Estudos sobre as Origens do Pensamento Ocidental Volume 2009 ; 2009 ; >
+      au < ready ; 2010 ; 4-5 ; ARCHAI: Revista de Estudos sobre as Origens do Pensamento Ocidental Volume 2010 ; 2010 ; >
+      au < ready ; 2011 ; 6-7 ; ARCHAI: Revista de Estudos sobre as Origens do Pensamento Ocidental Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 8-9 ; ARCHAI: Revista de Estudos sobre as Origens do Pensamento Ocidental Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 10-11 ; ARCHAI: Revista de Estudos sobre as Origens do Pensamento Ocidental Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 12-13 ; ARCHAI: Revista de Estudos sobre as Origens do Pensamento Ocidental Volume 2014 ; 2014 ; >
       }
   }
@@ -56,8 +56,8 @@
       {
       param[base_url] = http://periodicos.unb.br/
 
-      au < testing ; 2012 ; 1 ; Belas Infiéis Volume 2012 ; 2012 ; >
-      au < testing ; 2013 ; 2 ; Belas Infiéis Volume 2013 ; 2013 ; >
+      au < ready ; 2012 ; 1 ; Belas Infiéis Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 2 ; Belas Infiéis Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 3 ; Belas Infiéis Volume 2014 ; 2014 ; >
       }
 
@@ -81,8 +81,8 @@
       {
       param[base_url] = http://periodicos.unb.br/
       
-      au < testing ; 2011 ; 1 ; Ciência & Tecnologia Social Volume 2011 ; 2011 ; >
-      au < testing ; 2013 ; 1 ; Ciência & Tecnologia Social Volume 2013 ; 2013 ; >
+      au < ready ; 2011 ; 1 ; Ciência & Tecnologia Social Volume 2011 ; 2011 ; >
+      au < ready ; 2013 ; 1 ; Ciência & Tecnologia Social Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 2 ; Ciência & Tecnologia Social Volume 2014 ; 2014 ; >
       }
 
@@ -116,18 +116,18 @@
       {
       param[base_url] = http://periodicos.unb.br/
       
-      au < testing ; 2002 ; 1 ; Em tempo de histórias Volume 2002 ; 2002 ; >
-      au < testing ; 2003 ; 2 ; Em tempo de histórias Volume 2003 ; 2003 ; >
-      au < testing ; 2004 ; 3 ; Em tempo de histórias Volume 2004 ; 2004 ; >
-      au < testing ; 2005 ; 4 ; Em tempo de histórias Volume 2005 ; 2005 ; >
-      au < testing ; 2006 ; 5 ; Em tempo de histórias Volume 2006 ; 2006 ; >
-      au < testing ; 2007 ; 6 ; Em tempo de histórias Volume 2007 ; 2007 ; >
-      au < testing ; 2008 ; 7 ; Em tempo de histórias Volume 2008 ; 2008 ; >
-      au < testing ; 2009 ; 8 ; Em tempo de histórias Volume 2009 ; 2009 ; >
-      au < testing ; 2010 ; 9 ; Em tempo de histórias Volume 2010 ; 2010 ; >
-      au < testing ; 2011 ; 10 ; Em tempo de histórias Volume 2011 ; 2011 ; >
-      au < testing ; 2012 ; 11 ; Em tempo de histórias Volume 2012 ; 2012 ; >
-      au < testing ; 2013 ; 12 ; Em tempo de histórias Volume 2013 ; 2013 ; >
+      au < ready ; 2002 ; 1 ; Em tempo de histórias Volume 2002 ; 2002 ; >
+      au < ready ; 2003 ; 2 ; Em tempo de histórias Volume 2003 ; 2003 ; >
+      au < ready ; 2004 ; 3 ; Em tempo de histórias Volume 2004 ; 2004 ; >
+      au < ready ; 2005 ; 4 ; Em tempo de histórias Volume 2005 ; 2005 ; >
+      au < ready ; 2006 ; 5 ; Em tempo de histórias Volume 2006 ; 2006 ; >
+      au < ready ; 2007 ; 6 ; Em tempo de histórias Volume 2007 ; 2007 ; >
+      au < ready ; 2008 ; 7 ; Em tempo de histórias Volume 2008 ; 2008 ; >
+      au < ready ; 2009 ; 8 ; Em tempo de histórias Volume 2009 ; 2009 ; >
+      au < ready ; 2010 ; 9 ; Em tempo de histórias Volume 2010 ; 2010 ; >
+      au < ready ; 2011 ; 10 ; Em tempo de histórias Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 11 ; Em tempo de histórias Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 12 ; Em tempo de histórias Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 13 ; Em tempo de histórias Volume 2014 ; 2014 ; >
       }
 
@@ -151,7 +151,7 @@
       {
       param[base_url] = http://periodicos.unb.br/
       
-      au < testing ; 2011 ; 1 ; Revista Direito & Sensibilidade Volume 2011 ; 2011 ; >
+      au < ready ; 2011 ; 1 ; Revista Direito & Sensibilidade Volume 2011 ; 2011 ; >
       au < expected ; 2012 ; 2 ; Revista Direito & Sensibilidade Volume 2012 ; 2012 ; >
       au < expected ; 2013 ; 3 ; Revista Direito & Sensibilidade Volume 2013 ; 2013 ; >
       }
@@ -226,7 +226,7 @@
       {
       param[base_url] = http://periodicos.unb.br/
       
-      au < testing ; 2013 ; 1 ; Revista de Filosofia Moderna e Contemporânea Volume 2013 ; 2013 ; >
+      au < ready ; 2013 ; 1 ; Revista de Filosofia Moderna e Contemporânea Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 2 ; Revista de Filosofia Moderna e Contemporânea Volume 2014 ; 2014 ; >
       }
   }
@@ -263,21 +263,21 @@
       {
       param[base_url] = http://periodicos.unb.br/
       
-      au < testing ; 1995 ; 1 ; Cadernos de Linguagem e Sociedade Volume 1995 ; 1995 ; >
-      au < testing ; 1996 ; 2 ; Cadernos de Linguagem e Sociedade Volume 1996 ; 1996 ; >
-      au < testing ; 1997 ; 3 ; Cadernos de Linguagem e Sociedade Volume 1997 ; 1997 ; >
-      au < testing ; 1999 ; 3 ; Cadernos de Linguagem e Sociedade Volume 1999 ; 1999 ; >
-      au < testing ; 2000 ; 4 ; Cadernos de Linguagem e Sociedade Volume 2000 ; 2000 ; >
-      au < testing ; 2001 ; 5 ; Cadernos de Linguagem e Sociedade Volume 2001 ; 2001 ; >
-      au < testing ; 2003 ; 6 ; Cadernos de Linguagem e Sociedade Volume 2003 ; 2003 ; >
-      au < testing ; 2005 ; 7 ; Cadernos de Linguagem e Sociedade Volume 2005 ; 2005 ; >
-      au < testing ; 2007 ; 8 ; Cadernos de Linguagem e Sociedade Volume 2007 ; 2007 ; >
-      au < testing ; 2008 ; 9 ; Cadernos de Linguagem e Sociedade Volume 2008 ; 2008 ; >
-      au < testing ; 2009 ; 10 ; Cadernos de Linguagem e Sociedade Volume 2009 ; 2009 ; >
-      au < testing ; 2010 ; 11 ; Cadernos de Linguagem e Sociedade Volume 2010 ; 2010 ; >
-      au < testing ; 2011 ; 12 ; Cadernos de Linguagem e Sociedade Volume 2011 ; 2011 ; >
-      au < testing ; 2012 ; 13 ; Cadernos de Linguagem e Sociedade Volume 2012 ; 2012 ; >
-      au < testing ; 2013 ; 14 ; Cadernos de Linguagem e Sociedade Volume 2013 ; 2013 ; >
+      au < ready ; 1995 ; 1 ; Cadernos de Linguagem e Sociedade Volume 1995 ; 1995 ; >
+      au < ready ; 1996 ; 2 ; Cadernos de Linguagem e Sociedade Volume 1996 ; 1996 ; >
+      au < ready ; 1997 ; 3 ; Cadernos de Linguagem e Sociedade Volume 1997 ; 1997 ; >
+      au < ready ; 1999 ; 3 ; Cadernos de Linguagem e Sociedade Volume 1999 ; 1999 ; >
+      au < ready ; 2000 ; 4 ; Cadernos de Linguagem e Sociedade Volume 2000 ; 2000 ; >
+      au < ready ; 2001 ; 5 ; Cadernos de Linguagem e Sociedade Volume 2001 ; 2001 ; >
+      au < ready ; 2003 ; 6 ; Cadernos de Linguagem e Sociedade Volume 2003 ; 2003 ; >
+      au < ready ; 2005 ; 7 ; Cadernos de Linguagem e Sociedade Volume 2005 ; 2005 ; >
+      au < ready ; 2007 ; 8 ; Cadernos de Linguagem e Sociedade Volume 2007 ; 2007 ; >
+      au < ready ; 2008 ; 9 ; Cadernos de Linguagem e Sociedade Volume 2008 ; 2008 ; >
+      au < ready ; 2009 ; 10 ; Cadernos de Linguagem e Sociedade Volume 2009 ; 2009 ; >
+      au < ready ; 2010 ; 11 ; Cadernos de Linguagem e Sociedade Volume 2010 ; 2010 ; >
+      au < ready ; 2011 ; 12 ; Cadernos de Linguagem e Sociedade Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 13 ; Cadernos de Linguagem e Sociedade Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 14 ; Cadernos de Linguagem e Sociedade Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 15 ; Cadernos de Linguagem e Sociedade Volume 2014 ; 2014 ; >
       }
   }
@@ -303,11 +303,11 @@
       {
       param[base_url] = http://periodicos.unb.br/
       
-      au < testing ; 2009 ; 1 ; Revista Brasileira de Linguística Antropológica Volume 2009 ; 2009 ; >
-      au < testing ; 2010 ; 2 ; Revista Brasileira de Linguística Antropológica Volume 2010 ; 2010 ; >
-      au < testing ; 2011 ; 3 ; Revista Brasileira de Linguística Antropológica Volume 2011 ; 2011 ; >
-      au < testing ; 2012 ; 4 ; Revista Brasileira de Linguística Antropológica Volume 2012 ; 2012 ; >
-      au < testing ; 2013 ; 5 ; Revista Brasileira de Linguística Antropológica Volume 2013 ; 2013 ; >
+      au < ready ; 2009 ; 1 ; Revista Brasileira de Linguística Antropológica Volume 2009 ; 2009 ; >
+      au < ready ; 2010 ; 2 ; Revista Brasileira de Linguística Antropológica Volume 2010 ; 2010 ; >
+      au < ready ; 2011 ; 3 ; Revista Brasileira de Linguística Antropológica Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 4 ; Revista Brasileira de Linguística Antropológica Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 5 ; Revista Brasileira de Linguística Antropológica Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 6 ; Revista Brasileira de Linguística Antropológica Volume 2014 ; 2014 ; >
       }
   }
@@ -330,7 +330,7 @@
       {
       param[base_url] = http://periodicos.unb.br/
       
-      au < testing ; 2013 ; 1 ; Linhas Críticas Volume 2013 ; 2013 ; >
+      au < ready ; 2013 ; 1 ; Linhas Críticas Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 2 ; Linhas Críticas Volume 2014 ; 2014 ; >
       }
   }
@@ -365,20 +365,20 @@
       {
       param[base_url] = http://periodicos.unb.br/
       
-      au < testing ; 2000 ; 1 ; Boletim Meridiano 47 Volume 2000 ; 2000 ; >
-      au < testing ; 2001 ; 2 ; Boletim Meridiano 47 Volume 2001 ; 2001 ; >
-      au < testing ; 2002 ; 3 ; Boletim Meridiano 47 Volume 2002 ; 2002 ; >
-      au < testing ; 2003 ; 4 ; Boletim Meridiano 47 Volume 2003 ; 2003 ; >
-      au < testing ; 2004 ; 5 ; Boletim Meridiano 47 Volume 2004 ; 2004 ; >
-      au < testing ; 2005 ; 6 ; Boletim Meridiano 47 Volume 2005 ; 2005 ; >
-      au < testing ; 2006 ; 7 ; Boletim Meridiano 47 Volume 2006 ; 2006 ; >
-      au < testing ; 2007 ; 8 ; Boletim Meridiano 47 Volume 2007 ; 2007 ; >
-      au < testing ; 2008 ; 9 ; Boletim Meridiano 47 Volume 2008 ; 2008 ; >
-      au < testing ; 2009 ; 10 ; Boletim Meridiano 47 Volume 2009 ; 2009 ; >
-      au < testing ; 2010 ; 11 ; Boletim Meridiano 47 Volume 2010 ; 2010 ; >
-      au < testing ; 2011 ; 12 ; Boletim Meridiano 47 Volume 2011 ; 2011 ; >
-      au < testing ; 2012 ; 13 ; Boletim Meridiano 47 Volume 2012 ; 2012 ; >
-      au < testing ; 2013 ; 14 ; Boletim Meridiano 47 Volume 2013 ; 2013 ; >
+      au < ready ; 2000 ; 1 ; Boletim Meridiano 47 Volume 2000 ; 2000 ; >
+      au < ready ; 2001 ; 2 ; Boletim Meridiano 47 Volume 2001 ; 2001 ; >
+      au < ready ; 2002 ; 3 ; Boletim Meridiano 47 Volume 2002 ; 2002 ; >
+      au < ready ; 2003 ; 4 ; Boletim Meridiano 47 Volume 2003 ; 2003 ; >
+      au < ready ; 2004 ; 5 ; Boletim Meridiano 47 Volume 2004 ; 2004 ; >
+      au < ready ; 2005 ; 6 ; Boletim Meridiano 47 Volume 2005 ; 2005 ; >
+      au < ready ; 2006 ; 7 ; Boletim Meridiano 47 Volume 2006 ; 2006 ; >
+      au < ready ; 2007 ; 8 ; Boletim Meridiano 47 Volume 2007 ; 2007 ; >
+      au < ready ; 2008 ; 9 ; Boletim Meridiano 47 Volume 2008 ; 2008 ; >
+      au < ready ; 2009 ; 10 ; Boletim Meridiano 47 Volume 2009 ; 2009 ; >
+      au < ready ; 2010 ; 11 ; Boletim Meridiano 47 Volume 2010 ; 2010 ; >
+      au < ready ; 2011 ; 12 ; Boletim Meridiano 47 Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 13 ; Boletim Meridiano 47 Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 14 ; Boletim Meridiano 47 Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 15 ; Boletim Meridiano 47 Volume 2014 ; 2014 ; >
       }
   }
@@ -401,8 +401,8 @@
       {
       param[base_url] = http://periodicos.unb.br/
       
-      au < testing ; 2012 ; 1 ; Revista Museologia & Interdisciplinaridade Volume 2012 ; 2012 ; >
-      au < testing ; 2013 ; 2 ; Revista Museologia & Interdisciplinaridade Volume 2013 ; 2013 ; >
+      au < ready ; 2012 ; 1 ; Revista Museologia & Interdisciplinaridade Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 2 ; Revista Museologia & Interdisciplinaridade Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 3 ; Revista Museologia & Interdisciplinaridade Volume 2014 ; 2014 ; >
       }
   }
@@ -429,12 +429,12 @@
       {
       param[base_url] = http://periodicos.unb.br/
       
-      au < testing ; 2007 ; 1 ; Música em Contexto Volume 2007 ; 2007 ; >
-      au < testing ; 2008 ; 2 ; Música em Contexto Volume 2008 ; 2008 ; >
-      au < testing ; 2009 ; 3 ; Música em Contexto Volume 2009 ; 2009 ; >
-      au < testing ; 2010 ; 4 ; Música em Contexto Volume 2010 ; 2010 ; >
-      au < testing ; 2011 ; 5 ; Música em Contexto Volume 2011 ; 2011 ; >
-      au < testing ; 2012 ; 6 ; Música em Contexto Volume 2012 ; 2012 ; >
+      au < ready ; 2007 ; 1 ; Música em Contexto Volume 2007 ; 2007 ; >
+      au < ready ; 2008 ; 2 ; Música em Contexto Volume 2008 ; 2008 ; >
+      au < ready ; 2009 ; 3 ; Música em Contexto Volume 2009 ; 2009 ; >
+      au < ready ; 2010 ; 4 ; Música em Contexto Volume 2010 ; 2010 ; >
+      au < ready ; 2011 ; 5 ; Música em Contexto Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 6 ; Música em Contexto Volume 2012 ; 2012 ; >
       au < expected ; 2013 ; 7 ; Música em Contexto Volume 2013 ; 2013 ; >
       }
   }
@@ -459,10 +459,10 @@
       {
       param[base_url] = http://periodicos.unb.br/
       
-      au < testing ; 2009 ; 1 ; Revista Noctua Volume 2009 ; 2009 ; >
-      au < testing ; 2010 ; 2 ; Revista Noctua Volume 2010 ; 2010 ; >
-      au < testing ; 2011 ; 3 ; Revista Noctua Volume 2011 ; 2011 ; >
-      au < testing ; 2012 ; 4 ; Revista Noctua Volume 2012 ; 2012 ; >
+      au < ready ; 2009 ; 1 ; Revista Noctua Volume 2009 ; 2009 ; >
+      au < ready ; 2010 ; 2 ; Revista Noctua Volume 2010 ; 2010 ; >
+      au < ready ; 2011 ; 3 ; Revista Noctua Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 4 ; Revista Noctua Volume 2012 ; 2012 ; >
       au < expected ; 2013 ; 5 ; Revista Noctua Volume 2013 ; 2013 ; >
       }
   }
