@@ -1,10 +1,10 @@
 /*
- * $Id: SubTreeArticleIteratorBuilder.java,v 1.5 2014-01-06 18:18:45 etenbrink Exp $
+ * $Id: SubTreeArticleIteratorBuilder.java,v 1.6 2014-10-28 21:23:01 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -476,7 +476,7 @@ public class SubTreeArticleIteratorBuilder {
             }
           }
           // Process this aspect; full text CU (might be overridden later)
-          ArticleFiles af = new ArticleFiles();
+          ArticleFiles af = instantiateArticleFiles();
           af.setFullTextCu(cu);
           aspect.processRoles(af, cu);
           if (isDebug2) {
@@ -539,6 +539,20 @@ public class SubTreeArticleIteratorBuilder {
       }
       logger.warning(String.format("%s in %s did not match any expected patterns", url, au.getName()));
       return null;
+    }
+
+    /**
+     * <p>
+     * Instantiates a new {@link ArticleFiles} instance. Override this method if
+     * you need to instantiate a subclass of {@link ArticleFiles} with custom
+     * functionality.
+     * </p>
+     * 
+     * @return An {@link ArticleFiles} instance.
+     * @since 1.67
+     */
+    protected ArticleFiles instantiateArticleFiles() {
+      return new ArticleFiles();
     }
     
   }
@@ -1037,6 +1051,13 @@ public class SubTreeArticleIteratorBuilder {
   }
   
   /**
+   * <p>
+   * Instantiates a {@link BuildableSubTreeArticleIterator} if necessary. If you
+   * need to use a custom {@link BuildableSubTreeArticleIterator} class, the
+   * method you want to override is probably
+   * {@link #instantiateBuildableIterator()}, not this method.
+   * </p>
+   * 
    * @since 1.60
    */
   protected void maybeMakeSubTreeArticleIterator() {
