@@ -38,9 +38,10 @@
       comment[moved] = journal moved to new url from http://www.ajcn.org/ to http://ajcn.nutrition.org/.
       
       param[base_url] = http://ajcn.nutrition.org/
+      comment[notReady] = volume 94 and 95, urls on manifest pages are old. See for example http://ajcn.nutrition.org/lockss-manifest/vol_94_manifest.dtl
     
-      au < HighWirePressH20Plugin ; testing ; 2011 ; American Journal of Clinical Nutrition Volume 94 ; 94 >
-      au < HighWirePressH20Plugin ; testing ; 2012 ; American Journal of Clinical Nutrition Volume 95 ; 95 >
+      au < HighWirePressH20Plugin ; notReady ; 2011 ; American Journal of Clinical Nutrition Volume 94 ; 94 >
+      au < HighWirePressH20Plugin ; notReady ; 2012 ; American Journal of Clinical Nutrition Volume 95 ; 95 >
       au < HighWirePressH20Plugin ; ready ; 2012 ; American Journal of Clinical Nutrition Volume 96 ; 96 >
       au < HighWirePressH20Plugin ; ready ; 2013 ; American Journal of Clinical Nutrition Volume 97 ; 97 >
       au < HighWirePressH20Plugin ; ready ; 2013 ; American Journal of Clinical Nutrition Volume 98 ; 98 >
