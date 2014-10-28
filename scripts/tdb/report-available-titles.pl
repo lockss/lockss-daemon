@@ -266,7 +266,7 @@ if (($ret != 1) || $help) {
 
 # Now set up the paths based on lockss-daemon-home
 # Location of the tdbout script
-my $tdbout = "$daemonHome/scripts/tdb/tdbout.py";
+my $tdbout = "$daemonHome/scripts/tdb/tdbout";
 # List of all the TDB files
 my $tdbs_clockss = "$daemonHome/tdb/clockssingest/*.tdb";
 my $tdbs_gln = "$daemonHome/tdb/prod*/*.tdb"; #including UK
@@ -517,20 +517,20 @@ sub generateCsvMetadata {
     print STDERR " 1. Participating publishers and titles ($committedTitles)\n";
     # Don't forget the header row (though it is not used)
     run("echo '$cheader' > $committedTitles");
-    run("cat $tdbs | $tdbout -j $dumpErr | sort -u >> $committedTitles");
+    run("$tdbout -j $tdbs $dumpErr | sort -u >> $committedTitles");
 
     # (1) TDB metadata for AUs released into production
     #     (including those that have subsequently been marked as down)
     print STDERR " 2. Production AUs  ($tdbCsvProduction)\n";
     run("echo '$header' > $tdbCsvProduction");
-    run("cat $tdbs | $tdbout $productionQuery -c '$tdbFieldList' $dumpErr | sort -u >> $tdbCsvProduction");
+    run("$tdbout $productionQuery -c '$tdbFieldList' $tdbs $dumpErr | sort -u >> $tdbCsvProduction");
     # TDBOUT does not give error return value, so check the size of the output file
     die "tdbout failed: $?\n" unless &fileHasMoreThanAHeader($tdbCsvProduction);
 
     # (2) TDB metadata for AUs not released into production
     print STDERR " 3. Unreleased AUs  ($tdbCsvUnreleased)\n";
     run("echo '$header' > $tdbCsvUnreleased");
-    run("cat $tdbs | $tdbout $unreleasedQuery -c '$tdbFieldList' $dumpErr| sort -u >> $tdbCsvUnreleased");
+    run("$tdbout $unreleasedQuery -c '$tdbFieldList' $tdbs $dumpErr| sort -u >> $tdbCsvUnreleased");
     # TDBOUT does not give error return value, so check the size of the output file
     die "tdbout failed: $?\n" unless &fileHasMoreThanAHeader($tdbCsvUnreleased);
 } 
