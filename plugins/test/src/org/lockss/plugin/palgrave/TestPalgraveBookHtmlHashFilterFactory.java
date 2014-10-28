@@ -1,5 +1,5 @@
 /*
- * $Id: TestPalgraveBookHtmlHashFilterFactory.java,v 1.1 2014-06-06 17:33:42 aishizaki Exp $
+ * $Id: TestPalgraveBookHtmlHashFilterFactory.java,v 1.2 2014-10-28 22:43:19 aishizaki Exp $
  */
 
 /*
@@ -73,7 +73,20 @@ public class TestPalgraveBookHtmlHashFilterFactory extends LockssTestCase {
     "<div id=\"constrain\">" +
     "<div class=\"column-width-sidebar column-r\">" +
     "</div>" +  
+    "<meta name=\"keywords\" content=\"\" />" +
+    "<meta name=\"description\" content=\"Hello World is a global academic and business publisher.\" />" +
+    "<meta name=\"robots\" content=\"noarchive\" />" +
+    "<meta name=\"emanating\" content=\"171X66X236X16\" />" +
+    "<meta name=\"HW.z_cg_cat\" content=\"Business & Management\" />" +
+    "<meta name=\"HW.z_cg_ecollection\" content=\"Business & Management Collection 2011\" />" +
+    "<meta name=\"HW.z_cg_topic\" content=\"Jetson Studies in Leadership\" />" +
+    "<meta name=\"HW.z_prod_title\" content=\"For the Greater Good of All\" />" +
+    "<meta name=\"HW.cg_n\" content=\"Hello World Connect\" />" +
+    "<meta name=\"HW.cg_s\" content=\"Book\" />" +
     "</div>";
+
+  private static final String HtmlHashD = ".          .\t\t\t\t\t\t\t.";
+  private static final String HtmlHashDFiltered = ". . .";
 
 
   public void testFilterA() throws Exception {
@@ -103,6 +116,15 @@ public class TestPalgraveBookHtmlHashFilterFactory extends LockssTestCase {
         new StringInputStream(HtmlHashC), ENC);    
     String filtStr = StringUtil.fromInputStream(in);
     assertEquals(HtmlHashFiltered, filtStr);
+   
+  }
+  public void testFilterD() throws Exception {
+    InputStream in;
+
+    in = fact.createFilteredInputStream(mau, 
+        new StringInputStream(HtmlHashD), ENC);    
+    String filtStr = StringUtil.fromInputStream(in);
+    assertEquals(HtmlHashDFiltered, filtStr);
    
   }
 
