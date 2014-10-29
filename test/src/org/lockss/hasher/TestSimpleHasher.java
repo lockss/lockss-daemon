@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimpleHasher.java,v 1.11 2014-10-29 19:22:52 fergaloy-sf Exp $
+ * $Id: TestSimpleHasher.java,v 1.12 2014-10-29 20:11:58 fergaloy-sf Exp $
  */
 
 /*
@@ -31,6 +31,9 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.hasher;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.*;
 import java.io.*;
 import java.security.*;
@@ -1009,17 +1012,18 @@ public class TestSimpleHasher extends LockssTestCase {
     blockFile.delete();
     }
 
-  /*public void testFormatDateTime() throws Exception {
-    assertEquals("14:00:00 12/31/69", SimpleHasher.formatDateTime(0L));
-    TimeBase.setSimulated(0);
-    assertEquals("14:00:00 12/31/69",
-	SimpleHasher.formatDateTime(TimeBase.nowMs()));
-    assertEquals("03:46:40 01/12/70", SimpleHasher.formatDateTime(1000000000L));
-    assertEquals("23:46:40 03/02/73",
-	SimpleHasher.formatDateTime(100000000000L));
-    assertEquals("15:46:40 09/08/01",
-	SimpleHasher.formatDateTime(1000000000000L));
-  }*/
+  public void testFormatDateTime() throws Exception {
+    runTestFormatDateTime(0L, "00:00:00 01/01/70");
+    runTestFormatDateTime(1000000000L, "13:46:40 01/12/70");
+    runTestFormatDateTime(100000000000L, "09:46:40 03/03/73");
+    runTestFormatDateTime(1000000000000L, "01:46:40 09/09/01");
+  }
+
+  private void runTestFormatDateTime(long timestamp, String expected) {
+    TimeBase.setSimulated(timestamp
+	- TimeZone.getDefault().getOffset(timestamp));
+    assertEquals(expected, SimpleHasher.formatDateTime(TimeBase.nowMs()));
+  }
 
   public void testByteString() throws Exception {
     byte[] a = {};
