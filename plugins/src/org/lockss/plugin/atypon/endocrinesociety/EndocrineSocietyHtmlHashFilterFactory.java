@@ -1,5 +1,5 @@
 /*
- * $Id: EndocrineSocietyHtmlHashFilterFactory.java,v 1.1 2014-10-17 21:31:49 ldoan Exp $
+ * $Id: EndocrineSocietyHtmlHashFilterFactory.java,v 1.2 2014-10-29 21:05:32 ldoan Exp $
  */
 
 /*
@@ -47,7 +47,8 @@ public class EndocrineSocietyHtmlHashFilterFactory
       InputStream in, String encoding) {
     
     NodeFilter[] segFilters = new NodeFilter[] {
-        // <header> filtered in BaseAtypon
+        // pageHeader
+        HtmlNodeFilters.tagWithAttribute("section", "id", "pageHeader"),
         
         // right column of an article - all except Download Citations
         HtmlNodeFilters.allExceptSubtree(
@@ -57,9 +58,11 @@ public class EndocrineSocietyHtmlHashFilterFactory
                     "a", "href", "/action/showCitFormats\\?")),     
                                 
         // access icon free.gif - ex: http://press.endocrine.org/toc/edrv/35/3
-        HtmlNodeFilters.tagWithAttributeRegex("img", "src", "free.gif"),      
+        HtmlNodeFilters.tagWithAttributeRegex("img", "src", "free.gif"),   
+        
+        // pageFooter
+        HtmlNodeFilters.tagWithAttribute("section", "id", "pageFooter"),
 	
-	// footer and footer_message filtered in BaseAtypon
     };
     
     // super.createFilteredInputStream adds segFilters to the baseAtyponFilters

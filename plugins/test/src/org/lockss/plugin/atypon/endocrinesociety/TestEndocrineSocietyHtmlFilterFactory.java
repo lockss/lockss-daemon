@@ -1,5 +1,5 @@
 /*
- * $Id: TestEndocrineSocietyHtmlFilterFactory.java,v 1.1 2014-10-17 21:33:11 ldoan Exp $
+ * $Id: TestEndocrineSocietyHtmlFilterFactory.java,v 1.2 2014-10-29 21:02:36 ldoan Exp $
  */
 
 /*
@@ -92,7 +92,8 @@ public class TestEndocrineSocietyHtmlFilterFactory
           "<div class=\"widget-body\"><a href=\"/act/s\">Authen</a></div>" +
           "</section>" +
           "<section class=\"widget-box\" id=\"yyy\">" +
-          "<div class=\"body-box \"><div class=\"artTools\">" +
+          "<div class=\"body-box \">" +
+          "<div class=\"artTools\">" +
           "<ul class=\"linkList\">" +
           "<li class=\"title\">Article/Chapter Tools</li>" +
           "<li class=\"downloadCitations\">" +
@@ -160,11 +161,35 @@ public class TestEndocrineSocietyHtmlFilterFactory
            "</div>";
   
   // For hash filtering
+  // pageheader
+  private static final String withPageHeader =  
+      "<div class=\"block\">" +
+          "<section class=\"widget pageHeader none header widget-none  widget-compact-all\" id=\"pageHeader\">" +
+          "<div class=\"widget-body body body-none  body-compact-all\">" +
+          "<div class=\"page-header\">" +
+          "<section class=\"widget doubleClickAd alignCenter leaderBoard widget-none  widget-compact-all\" id=\"1e574115-efc7-4f46-bf71-c13a2b813fa3\">" +
+          "</section>" +
+          "</div></div>" +
+          "</section>" +
+          "</div>";        
+  
   // access icon free.gif - ex: http://press.endocrine.org/toc/edrv/35/3
   private static final String withFreeGif =  
       "<div class=\"block\">" +
           "<img src=\"/imgdir/images/free.gif\" align=\"middle\">" +
           "</div>";
+  
+  // pageFooter
+  private static final String withPageFooter =  
+      "<div class=\"block\">" +
+          "<section class=\"widget pageFooter none container-footer widget-none  widget-compact-all\" id=\"pageFooter\">" +
+          "<div class=\"widget-body body body-none  body-compact-all\">" +
+          "<div class=\"page-footer\">" +
+          "<div class=\"copyright\">" +
+          "<p>&copy; 2014 Endocrine Society</p>" +
+          "</div></div></div>" +
+          "</section>" +
+          "</div>";           
   
   protected ArchivalUnit createAu()
       throws ArchivalUnit.ConfigurationException {
@@ -223,9 +248,11 @@ public class TestEndocrineSocietyHtmlFilterFactory
    public static class TestHash extends TestEndocrineSocietyHtmlFilterFactory {   
      public void testFiltering() throws Exception {
       variantFact = new EndocrineSocietyHtmlHashFilterFactory();
+      doFilterTest(esau, variantFact, withPageHeader, filteredStr);
       doFilterTest(esau, variantFact, 
           withRightColumnExceptDownloadCitation, RightColumnFiltered);
       doFilterTest(esau, variantFact, withFreeGif, filteredStr);
+      doFilterTest(esau, variantFact, withPageFooter, filteredStr);
     }
   }
   
