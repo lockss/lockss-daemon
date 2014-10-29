@@ -1,5 +1,5 @@
 /*
- * $Id: PropUtil.java,v 1.21 2014-10-29 20:21:46 thib_gc Exp $
+ * $Id: PropUtil.java,v 1.22 2014-10-29 20:35:36 thib_gc Exp $
  */
 /*
 
@@ -226,40 +226,27 @@ public class PropUtil {
   /**
    * Turns the properties into a canonical string
    * @return a canonical string generated from the props.
-   * Simply calls {@link #mapToCanonicalEncodedString(Map)}
-   * because a {@link Properties} is a {@link Map}.
-   * @param props properties
-   * @see #mapToCanonicalEncodedString(Map)
+   * @param props properties (or really, any {@link Map})
    */
-  public static String propsToCanonicalEncodedString(Properties props) {
-    return mapToCanonicalEncodedString(props);
-  }
-  
-  /**
-   * Turns the map of key-value pairs into a canonical string.
-   * @return a canonical string generated from the map
-   * @param map A map of key-value pairs
-   * @since 1.67
-   */
-  public static String mapToCanonicalEncodedString(Map map) {
-    if (map == null || map.isEmpty()) {
+  public static String propsToCanonicalEncodedString(Map props) {
+    if (props == null || props.isEmpty()) {
       return "";
     }
     StringBuffer sb = new StringBuffer();
-    SortedSet sortedKeys = new TreeSet(map.keySet());
+    SortedSet sortedKeys = new TreeSet(props.keySet());
 
     for (Iterator it = sortedKeys.iterator() ; it.hasNext() ; ) {
       String key = it.next().toString();
       sb.append(PropKeyEncoder.encode(key));
       sb.append("~");
-      sb.append(PropKeyEncoder.encode(map.get(key).toString()));
+      sb.append(PropKeyEncoder.encode(props.get(key).toString()));
       if (it.hasNext()) {
         sb.append("&");
       }
     }
     return sb.toString();
   }
-
+  
   /**
    * Turns the canonical string into properties
    * @param s a string returned by propsToCanonicalEncodedString()

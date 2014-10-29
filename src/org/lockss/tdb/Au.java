@@ -1,5 +1,5 @@
 /*
- * $Id: Au.java,v 1.4 2014-10-29 20:22:01 thib_gc Exp $
+ * $Id: Au.java,v 1.5 2014-10-29 20:35:36 thib_gc Exp $
  */
 
 /*
@@ -329,7 +329,7 @@ public class Au {
     if (auid == null) {
       String plugin = getPlugin();
       Map<String, String> params = getParams();
-      auid = PluginManager.generateAuId(plugin, PropUtil.mapToCanonicalEncodedString(params));
+      auid = PluginManager.generateAuId(plugin, PropUtil.propsToCanonicalEncodedString(params));
     }
     return auid;
   }
