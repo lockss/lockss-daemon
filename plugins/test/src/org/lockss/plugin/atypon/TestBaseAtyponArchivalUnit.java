@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseAtyponArchivalUnit.java,v 1.9 2014-10-22 21:38:58 thib_gc Exp $
+ * $Id: TestBaseAtyponArchivalUnit.java,v 1.10 2014-10-29 21:04:16 ldoan Exp $
  */
 
 /*
@@ -287,6 +287,10 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     testSpecificUserMsg("http://www.maneyonline.com/", null, 
         "org.lockss.plugin.atypon.maney.ManeyAtyponPlugin",
         "org.lockss.plugin.atypon.maney.ClockssManeyAtyponPlugin");
+    //mark allen group
+    testSpecificUserMsg("http://www.magonlinelibrary.com/", null, 
+        "org.lockss.plugin.atypon.markallen.MarkAllenPlugin",
+        "org.lockss.plugin.atypon.markallen.ClockssMarkAllenPlugin");
     //nrcresearch
     testSpecificUserMsg("http://www.nrcresearchpress.com/", null, 
         null,
@@ -330,6 +334,7 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     pluginPubMap.put("http://press.endocrine.org/", "Endocrine Society");
     pluginPubMap.put("http://www.future-science.com/", "Future Science");
     pluginPubMap.put("http://www.maneyonline.com/", "Maney Publishing");
+    pluginPubMap.put("http://www.magonlinelibrary.com/", "Mark Allen Group");
     pluginPubMap.put("http://www.nrcresearchpress.com/", "NRC Research Press");
     pluginPubMap.put("http://library.seg.org/", "Society of Exploration Geophysicists");
     pluginPubMap.put("http://epubs.siam.org/", "Society for Industrial and Applied Mathematics");
