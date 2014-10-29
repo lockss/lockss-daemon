@@ -1,5 +1,5 @@
 /*
- * $Id: TdbXml.java,v 1.5 2014-10-22 19:39:40 thib_gc Exp $
+ * $Id: TdbXml.java,v 1.6 2014-10-29 20:22:31 thib_gc Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import java.util.regex.*;
 
 import org.apache.commons.cli.*;
 import org.apache.commons.lang3.StringEscapeUtils;
+import org.apache.commons.lang3.text.translate.*;
 import org.lockss.tdb.AntlrUtil.SyntaxError;
 
 import com.ibm.icu.text.Transliterator;
@@ -136,6 +137,17 @@ public class TdbXml {
       Transliterator.getInstance("NFD; [:Nonspacing Mark:] Remove; NFC");
 
   /**
+   * <p>
+   * A Commons Lang translator that escape XML and also numerically encodes
+   * characters starting at <code>0x7f</code>.
+   * </p>
+   * 
+   * @since 1.67
+   */
+  protected static final CharSequenceTranslator xmlEscaper =
+      StringEscapeUtils.ESCAPE_XML10.with(NumericEntityEscaper.above(0x7e));
+  
+  /**
     * <p>
     * A list of well-known definitional parameter names in preferred
     * order.
@@ -194,6 +206,9 @@ public class TdbXml {
     * @see #IMPLICIT_PARAM_ORDER
     */
   public static class ParamComparator implements Comparator<String> {
+    
+    public static final Comparator<String> INSTANCE = new ParamComparator();
+    
     @Override
     public int compare(String str1, String str2) {
       int i1 = IMPLICIT_PARAM_ORDER.indexOf(str1);
@@ -202,6 +217,7 @@ public class TdbXml {
                 ? ((i2 < 0) ? str1.compareTo(str2) : 1)
                 : ((i2 < 0) ? -1 : i1 - i2);
     }
+    
   }
 
   /**
@@ -300,7 +316,7 @@ public class TdbXml {
     
     Publisher currentPub = null;
     String escapedPublisherName = null;
-    String escapedPublisherNameShort = null;
+    String escapedPublisherNameNoDots = null;
     Title currentTitle = null;
     String escapedTitleName = null;
     String titleIssn = null;
@@ -328,14 +344,14 @@ public class TdbXml {
           sb.append("\n");
         }
         currentPub = pub;
-        escapedPublisherName = StringEscapeUtils.escapeXml(currentPub.getName());
-        escapedPublisherNameShort = escapedPublisherName.replace(".", "");
+        escapedPublisherName = xmlEscaper.translate(currentPub.getName());
+        escapedPublisherNameNoDots = escapedPublisherName.replace(".", "");
         sb.append(" <property name=\"org.lockss.titleSet\">\n");
         sb.append("\n");
-        sb.append("  <property name=\""); sb.append(escapedPublisherNameShort); sb.append("\">\n");
+        sb.append("  <property name=\""); sb.append(escapedPublisherNameNoDots); sb.append("\">\n");
         sb.append("   <property name=\"name\" value=\"All "); sb.append(escapedPublisherName); sb.append(" AUs\" />\n");
         sb.append("   <property name=\"class\" value=\"xpath\" />\n");
-        sb.append("   <property name=\"xpath\" value=\"[attributes/publisher='"); sb.append(escapedPublisherName); sb.append("']\" />\n");
+        sb.append("   <property name=\"xpath\" value='[attributes/publisher=\""); sb.append(escapedPublisherName); sb.append("\"]' />\n");
         sb.append("  </property>\n");
         sb.append("\n");
         sb.append(" </property>\n");
@@ -350,7 +366,7 @@ public class TdbXml {
       Title title = au.getTitle();
       if (title != currentTitle) {
         currentTitle = title;
-        escapedTitleName = StringEscapeUtils.escapeXml(currentTitle.getName());
+        escapedTitleName = xmlEscaper.translate(currentTitle.getName());
         titleIssn = title.getIssn();
         titleEissn = title.getEissn();
         titleIssnl = title.getIssnl();
@@ -364,10 +380,10 @@ public class TdbXml {
       // AU name
       String plugin = au.getPlugin();
       String auName = au.getName();
-      String escapedAuName = StringEscapeUtils.escapeXml(auName);
+      String escapedAuName = xmlEscaper.translate(auName);
       StringBuilder ausb = new StringBuilder();
       computeAuShortName(ausb, plugin, auName);
-      String escapedAuNameShort = StringEscapeUtils.escapeXml(ausb.toString());
+      String escapedAuNameShort = xmlEscaper.translate(ausb.toString());
       ausb = null; // in case ausb accidentally gets re-used below instead of sb
       
       sb.append("  <property name=\""); sb.append(escapedAuNameShort); sb.append("\">\n");
@@ -394,7 +410,7 @@ public class TdbXml {
       // Definitional parameters
       Map<String, String> params = au.getParams();
       List<String> paramNames = new ArrayList<String>(params.keySet());
-      Collections.sort(paramNames, new ParamComparator());
+      Collections.sort(paramNames, ParamComparator.INSTANCE);
       int paramIndex = 1;
       for (String param : paramNames) {
         String val = params.get(param);
