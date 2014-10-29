@@ -1,5 +1,5 @@
 /*
- * $Id: Au.java,v 1.3 2014-10-01 21:29:56 thib_gc Exp $
+ * $Id: Au.java,v 1.4 2014-10-29 20:22:01 thib_gc Exp $
  */
 
 /*
@@ -34,7 +34,8 @@ package org.lockss.tdb;
 
 import java.util.*;
 
-import org.lockss.util.PropKeyEncoder;
+import org.lockss.plugin.PluginManager;
+import org.lockss.util.*;
 
 /**
  * <p>
@@ -60,13 +61,13 @@ public class Au {
     this.proxy = other.proxy;
     this.rights = other.rights;
     if (other.attrsMap != null) {
-      this.attrsMap = new TreeMap<String, String>(other.attrsMap);
+      this.attrsMap = new HashMap<String, String>(other.attrsMap);
     }
     if (other.nondefParamsMap != null) {
-      this.nondefParamsMap = new TreeMap<String, String>(other.nondefParamsMap);
+      this.nondefParamsMap = new HashMap<String, String>(other.nondefParamsMap);
     }
     if (other.paramsMap != null) {
-      this.paramsMap = new TreeMap<String, String>(other.paramsMap);
+      this.paramsMap = new HashMap<String, String>(other.paramsMap);
     }
     if (other.map != null) {
       this.map = new HashMap<String, String>(other.map);
@@ -166,7 +167,7 @@ public class Au {
       case 'a': {
         if (key.startsWith(ATTR_PREFIX)) {
           if (attrsMap == null) {
-            attrsMap = new TreeMap<String, String>();
+            attrsMap = new HashMap<String, String>();
           }
           attrsMap.put(key.substring(ATTR_PREFIX.length(), key.length() - 1), value);
           return;
@@ -191,7 +192,7 @@ public class Au {
         }
         else if (key.startsWith(NONDEFPARAM_PREFIX)) {
           if (nondefParamsMap == null) {
-            nondefParamsMap = new TreeMap<String, String>();
+            nondefParamsMap = new HashMap<String, String>();
           }
           nondefParamsMap.put(key.substring(NONDEFPARAM_PREFIX.length(), key.length() - 1), value);
           return;
@@ -200,7 +201,7 @@ public class Au {
       case 'p': {
         if (key.startsWith(PARAM_PREFIX)) {
           if (paramsMap == null) {
-            paramsMap = new TreeMap<String, String>();
+            paramsMap = new HashMap<String, String>();
           }
           paramsMap.put(key.substring(PARAM_PREFIX.length(), key.length() - 1), value);
           return;
@@ -293,7 +294,7 @@ public class Au {
    * 
    * @since 1.67
    */
-  protected SortedMap<String, String> attrsMap;
+  protected Map<String, String> attrsMap;
   
   /**
    * <p>
@@ -303,8 +304,8 @@ public class Au {
    * @return The AU's attributes map.
    * @since 1.67
    */
-  public SortedMap<String, String> getAttrs() {
-    return Collections.unmodifiableSortedMap(attrsMap == null ? new TreeMap<String, String>() : attrsMap);
+  public Map<String, String> getAttrs() {
+    return attrsMap == null ? Collections.<String, String>emptyMap() : Collections.unmodifiableMap(attrsMap);
   }
   
   /**
@@ -328,15 +329,7 @@ public class Au {
     if (auid == null) {
       String plugin = getPlugin();
       Map<String, String> params = getParams();
-      StringBuilder sb = new StringBuilder();
-      sb.append(plugin.replace('.', '|'));
-      for (Map.Entry<String, String> param : params.entrySet()) {
-        sb.append("&");
-        sb.append(PropKeyEncoder.encode(param.getKey()));
-        sb.append("~");
-        sb.append(PropKeyEncoder.encode(param.getValue()));
-      }
-      auid = sb.toString();
+      auid = PluginManager.generateAuId(plugin, PropUtil.mapToCanonicalEncodedString(params));
     }
     return auid;
   }
@@ -507,7 +500,7 @@ public class Au {
    * 
    * @since 1.67
    */
-  protected SortedMap<String, String> nondefParamsMap;
+  protected Map<String, String> nondefParamsMap;
 
   /**
    * <p>
@@ -517,8 +510,8 @@ public class Au {
    * @return The AU's non-definitional parameters map.
    * @since 1.67
    */
-  public SortedMap<String, String> getNondefParams() {
-    return Collections.unmodifiableSortedMap(nondefParamsMap == null ? new TreeMap<String, String>() : nondefParamsMap);
+  public Map<String, String> getNondefParams() {
+    return nondefParamsMap == null ? Collections.<String, String>emptyMap() : Collections.unmodifiableMap(nondefParamsMap);
   }
 
   /**
@@ -537,7 +530,7 @@ public class Au {
    * 
    * @since 1.67
    */
-  protected SortedMap<String, String> paramsMap;
+  protected Map<String, String> paramsMap;
   
   /**
    * <p>
@@ -547,8 +540,8 @@ public class Au {
    * @return The AU's definitional parameters map.
    * @since 1.67
    */
-  public SortedMap<String, String> getParams() {
-    return Collections.unmodifiableSortedMap(paramsMap == null ? new TreeMap<String, String>() : paramsMap);
+  public Map<String, String> getParams() {
+    return paramsMap == null ? Collections.<String, String>emptyMap() : Collections.unmodifiableMap(paramsMap);
   }
   
   /**
