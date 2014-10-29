@@ -622,6 +622,7 @@ comment[mn20] = URL with 403 Forbidden error
       attr[journal_id] = roj
 
       au < released ; 2012 ; Review of Japanese Culture and Society Volume 24 ; 24 >
+      au < exists ; 2013 ; Review of Japanese Culture and Society Volume 25 ; 25 >
     
     }
   }
@@ -642,7 +643,8 @@ comment[mn20] = URL with 403 Forbidden error
 
       au < released ; 2013 ; U.S.-Japan Women's Journal Volume 43 ; 43 >
       au < released ; 2013 ; U.S.-Japan Women's Journal Volume 44 ; 44 >
-      au < doNotProcess ; 2014 ; U.S.-Japan Women's Journal Volume 45 ; 45 >
+      au < doNotProcess ; 2013 ; U.S.-Japan Women's Journal Volume 45 ; 45 >
+      au < doNotProcess ; 2014 ; U.S.-Japan Women's Journal Volume 46 ; 46 >
     
     }
   }
