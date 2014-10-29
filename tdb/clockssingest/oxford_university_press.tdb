@@ -371,7 +371,7 @@
     au < manifest ; exists ; 2006 ; Alcohol and Alcoholism Volume 41 ; 41 ; >
     au < manifest ; exists ; 2007 ; Alcohol and Alcoholism Volume 42 ; 42 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Alcohol and Alcoholism Volume 43 ; 43 ; >
-    au < manifest ; exists ; 2009 ; Alcohol and Alcoholism Volume 44 ; 44 ; >
+    au < testing ; exists ; 2009 ; Alcohol and Alcoholism Volume 44 ; 44 ; >
     au < finished ; frozen ; 2010 ; Alcohol and Alcoholism Volume 45 ; 45 ; >
     au < finished ; crawling ; 2011 ; Alcohol and Alcoholism Volume 46 ; 46 ; >
     au < finished ; frozen ; 2012 ; Alcohol and Alcoholism Volume 47 ; 47 ; >
@@ -10326,7 +10326,7 @@
     au < manifest ; exists ; 2006 ; Journal of Conflict and Security Law Volume 11 ; 11 ; >
     au < manifest ; exists ; 2007 ; Journal of Conflict and Security Law Volume 12 ; 12 ; >
     au < manifest ; exists ; 2008 ; Journal of Conflict and Security Law Volume 13 ; 13 ; >
-    au < testing ; exists ; 2009 ; Journal of Conflict and Security Law Volume 14 ; 14 ; >
+    au < ready ; exists ; 2009 ; Journal of Conflict and Security Law Volume 14 ; 14 ; >
     au < finished ; crawling ; 2010 ; Journal of Conflict and Security Law Volume 15 ; 15 ; >
     au < finished ; crawling ; 2011 ; Journal of Conflict and Security Law Volume 16 ; 16 ; >
     au < finished ; frozen ; 2012 ; Journal of Conflict and Security Law Volume 17 ; 17 ; >
@@ -10389,7 +10389,7 @@
     au < manifest ; exists ; 2006 ; Journal of Deaf Studies and Deaf Education Volume 11 ; 11 ; >
     au < manifest ; exists ; 2007 ; Journal of Deaf Studies and Deaf Education Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Deaf Studies and Deaf Education Volume 13 ; 13 ; >
-    au < testing ; exists ; 2009 ; Journal of Deaf Studies and Deaf Education Volume 14 ; 14 ; >
+    au < ready ; exists ; 2009 ; Journal of Deaf Studies and Deaf Education Volume 14 ; 14 ; >
     au < finished ; frozen ; 2010 ; Journal of Deaf Studies and Deaf Education Volume 15 ; 15 ; >
     au < finished ; frozen ; 2011 ; Journal of Deaf Studies and Deaf Education Volume 16 ; 16 ; >
     au < finished ; crawling ; 2012 ; Journal of Deaf Studies and Deaf Education Volume 17 ; 17 ; >
@@ -10445,7 +10445,7 @@
     au < manifest ; exists ; 2006 ; Journal of Design History Volume 19 ; 19 ; >
     au < manifest ; exists ; 2007 ; Journal of Design History Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Design History Volume 21 ; 21 ; >
-    au < testing ; exists ; 2009 ; Journal of Design History Volume 22 ; 22 ; >
+    au < ready ; exists ; 2009 ; Journal of Design History Volume 22 ; 22 ; >
     au < finished ; crawling ; 2010 ; Journal of Design History Volume 23 ; 23 ; >
     au < finished ; frozen ; 2011 ; Journal of Design History Volume 24 ; 24 ; >
     au < finished ; crawling ; 2012 ; Journal of Design History Volume 25 ; 25 ; >
@@ -10754,7 +10754,7 @@
     au < manifest ; exists ; 2006 ; Journal of Experimental Botany Volume 57 ; 57 ; >
     au < manifest ; exists ; 2007 ; Journal of Experimental Botany Volume 58 ; 58 ; >
     au < manifest ; exists ; 2008 ; Journal of Experimental Botany Volume 59 ; 59 ; >
-    au < manifest ; exists ; 2009 ; Journal of Experimental Botany Volume 60 ; 60 ; >
+    au < testing ; exists ; 2009 ; Journal of Experimental Botany Volume 60 ; 60 ; >
     au < finished ; frozen ; 2010 ; Journal of Experimental Botany Volume 61 ; 61 ; >
     au < finished ; crawling ; 2011 ; Journal of Experimental Botany Volume 62 ; 62 ; >
     au < finished ; crawling ; 2012 ; Journal of Experimental Botany Volume 63 ; 63 ; >
@@ -10860,7 +10860,7 @@
     au < manifest ; exists ; 2006 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 61 ; 61 ; >
     au < manifest ; exists ; 2007 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 62 ; 62 ; >
     au < manifest ; exists ; 2008 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 63 ; 63 ; >
-    au < manifest ; exists ; 2009 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 64A ; 64A ; >
+    au < testing ; exists ; 2009 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 64A ; 64A ; >
     au < finished ; crawling ; 2010 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 65A ; 65A ; >
     au < finished ; frozen ; 2011 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 66A ; 66A ; >
     au < finished ; frozen ; 2012 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 67A ; 67A ; >
@@ -17993,8 +17993,8 @@
     au < manifest ; exists ; 2006 ; Publications of the Astronomical Society of Japan Volume 58 ; 58 ; >
     au < manifest ; exists ; 2007 ; Publications of the Astronomical Society of Japan Volume 59 ; 59 ; >
     au < manifest ; exists ; 2008 ; Publications of the Astronomical Society of Japan Volume 60 ; 60 ; >
-    au < manifest ; exists ; 2009 ; Publications of the Astronomical Society of Japan Volume 61 ; 61 ; >
-    au < testing ; exists ; 2010 ; Publications of the Astronomical Society of Japan Volume 62 ; 62 ; >
+    au < testing ; exists ; 2009 ; Publications of the Astronomical Society of Japan Volume 61 ; 61 ; >
+    au < ready ; exists ; 2010 ; Publications of the Astronomical Society of Japan Volume 62 ; 62 ; >
     au < ready ; exists ; 2011 ; Publications of the Astronomical Society of Japan Volume 63 ; 63 ; >
     au < notReady ; exists ; 2012 ; Publications of the Astronomical Society of Japan Volume 64 ; 64 ; >
     au < crawling ; exists ; 2013 ; Publications of the Astronomical Society of Japan Volume 65 ; 65 ; >
@@ -18607,8 +18607,8 @@
     au < manifest ; exists ; 2008 ; Radiation Protection Dosimetry Volume 130 ; 130 ; >
     au < manifest ; exists ; 2008 ; Radiation Protection Dosimetry Volume 131 ; 131 ; >
     au < manifest ; exists ; 2008 ; Radiation Protection Dosimetry Volume 132 ; 132 ; >
-    au < manifest ; exists ; 2009 ; Radiation Protection Dosimetry Volume 133 ; 133 ; >
-    au < manifest ; exists ; 2009 ; Radiation Protection Dosimetry Volume 134 ; 134 ; >
+    au < testing ; exists ; 2009 ; Radiation Protection Dosimetry Volume 133 ; 133 ; >
+    au < testing ; exists ; 2009 ; Radiation Protection Dosimetry Volume 134 ; 134 ; >
     au < zapped ; finished ; 2009 ; Radiation Protection Dosimetry Volume 135 ; 135 ; >
     au < finished ; crawling ; 2009 ; Radiation Protection Dosimetry Volume 136 ; 136 ; >
     au < finished ; frozen ; 2009 ; Radiation Protection Dosimetry Volume 137 ; 137 ; >
@@ -21486,12 +21486,12 @@
     au < manifest ; exists ; 2008 ; Progress of Theoretical Physics Supplement Volume 174 ; 174 ; >
     au < manifest ; exists ; 2008 ; Progress of Theoretical Physics Supplement Volume 175 ; 175 ; >
     au < manifest ; exists ; 2008 ; Progress of Theoretical Physics Supplement Volume 176 ; 176 ; >
-    au < manifest ; exists ; 2009 ; Progress of Theoretical Physics Supplement Volume 177 ; 177 ; >
-    au < manifest ; exists ; 2009 ; Progress of Theoretical Physics Supplement Volume 178 ; 178 ; >
-    au < manifest ; exists ; 2009 ; Progress of Theoretical Physics Supplement Volume 179 ; 179 ; >
-    au < manifest ; exists ; 2009 ; Progress of Theoretical Physics Supplement Volume 180 ; 180 ; >
-    au < manifest ; exists ; 2009 ; Progress of Theoretical Physics Supplement Volume 181 ; 181 ; >
-    au < manifest ; exists ; 2009 ; Progress of Theoretical Physics Supplement Volume 182 ; 182 ; >
+    au < testing ; exists ; 2009 ; Progress of Theoretical Physics Supplement Volume 177 ; 177 ; >
+    au < testing ; exists ; 2009 ; Progress of Theoretical Physics Supplement Volume 178 ; 178 ; >
+    au < testing ; exists ; 2009 ; Progress of Theoretical Physics Supplement Volume 179 ; 179 ; >
+    au < testing ; exists ; 2009 ; Progress of Theoretical Physics Supplement Volume 180 ; 180 ; >
+    au < testing ; exists ; 2009 ; Progress of Theoretical Physics Supplement Volume 181 ; 181 ; >
+    au < testing ; exists ; 2009 ; Progress of Theoretical Physics Supplement Volume 182 ; 182 ; >
     au < ready ; exists ; 2010 ; Progress of Theoretical Physics Supplement Volume 183 ; 183 ; >
     au < ready ; exists ; 2010 ; Progress of Theoretical Physics Supplement Volume 184 ; 184 ; >
     au < ready ; exists ; 2010 ; Progress of Theoretical Physics Supplement Volume 185 ; 185 ; >
