@@ -9,18 +9,18 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Poll</string>
-        <string>5</string>
+        <string>6</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -71,24 +71,28 @@
   <entry>
     <string>au_crawlrules</string>
     <!-- examples
-    http://www.palgraveconnect.com/pc/socialsciences2013/browse/inside/chapter/9781137268839/9781137268839.0001.html?chapterDoi=9781137268839.0001
-    http://www.palgraveconnect.com/pc/browse/citationExport?doi=10.1057/9781137310149&WT.cg_n=eBooks&WT.cg_s=Citation%20Export
-    http://www.palgraveconnect.com/pc/doifinder/10.1057/9781137284808.0007
-    http://www.palgraveconnect.com/pc/education2013/browse/inside/download/9781137021052.pdf
+    start_url: http://www.palgraveconnect.com/pc/doifinder/10.1057/9781137284808
+    epub: http://www.palgraveconnect.com/pc/socialsciences2013/browse/inside/epub/9781137284808.epub
+    pdf: http://www.palgraveconnect.com/pc/education2013/browse/inside/download/9781137021052.pdf
+    ris citation  http://www.palgraveconnect.com/pc/browse/citationExport?doi=10.1057/9781137310149&WT.cg_n=eBooks&WT.cg_s=Citation%20Export
     -->
     <list>
       <!-- removes gifs for fb, reddit, etc.. -->
       <string>2,"^%sview/images/.*\.gif", base_url</string> 
       <!-- removes jpgs for journals -->
       <string>2,"^%spal/images/journal-covers/[^/]+\.(jpg|gif)", base_url</string> 
-      <!-- catch this book cover, get rid of the rest -->
-      <string>1,"^%spc/[^/]+/small/%s_(large|small)\.(jpg|gif)", base_url, book_isbn</string> 
+      <!-- catch this book cover(s), get rid of the rest -->
+      <string>1,"^%spc/[^/]+/(small|large)/%s_(large|small)\.(jpg|gif)", base_url, book_isbn</string> 
       <string>2,"^%spc/[^/]+/small/[^/]+_small\.(jpg|gif)", base_url</string> 
-      <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
+      <string>2,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
+      <string>2, "^%spc/(view|images)/", base_url</string>
       <string>4,"^%s", base_url</string>
-      <string>1,"^%spc/[^/]+/browse/inside/", base_url</string>
+      <!-- gets RIS metadata -->
       <string>1,"^%spc/browse/citationExport\?doi=10\.1057/%s[^/]+Export$", base_url, book_isbn</string>
-      <string>1,"^%spc/doifinder/10\.1057/%s\.\d+$", base_url, book_isbn</string>
+      <!-- gets book/epub pdf (no need for chapter pdf) -->
+      <string>1,"^%spc/[^/]+/browse/inside/(download|epub)/%s.(pdf|epub)$", base_url, book_isbn</string>
+      <!-- no need for the rest; CLOCKSS only -->
+      <string>2, "^%spc/[^/]+/browse/", base_url</string>
     </list>
   </entry>
   <entry>
@@ -98,7 +102,6 @@
     http://www.palgraveconnect.com/pc/socialsciences2013/browse/inside/epub/9781137268839.epub
     -->
     <list>
-    <!--  <string>"^%spc/[^/]+/browse/inside(/[^/]+)?/%s\.(html|pdf|epub)$", base_url, book_isbn</string> -->
     <string>"^%spc/[^/]+/browse/inside/[^/]+/%s\.(pdf|epub)$", base_url, book_isbn</string>
     </list>
   </entry>
@@ -134,10 +137,12 @@
     <string>application/epub+zip_filter_factory</string>
     <string>org.lockss.plugin.palgrave.PalgraveBookEpubFilterFactory</string>
   </entry>
+  <!-- no longer need the normalizer
   <entry>
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.palgrave.PalgraveBookUrlNormalizer</string>
   </entry>  
+  -->
   <entry>
     <string>application/x-research-info-systems_metadata_extractor_factory_map</string>
     <map>

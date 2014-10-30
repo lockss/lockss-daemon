@@ -1,4 +1,4 @@
-/* $Id: TestPalgraveBookArticleIteratorFactory.java,v 1.5 2014-08-20 22:00:00 aishizaki Exp $
+/* $Id: TestPalgraveBookArticleIteratorFactory.java,v 1.6 2014-10-30 20:59:56 aishizaki Exp $
  
 Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -124,7 +124,7 @@ public class TestPalgraveBookArticleIteratorFactory extends ArticleIteratorTestC
     Pattern pat = getPattern(artIter);
     // PATTERN_TEMPLATE = "\"%spc/.+/browse/inside/(download|epub)?/[0-9]+\\.(html|pdf|epub)$\", base_url";
     assertNotMatchesRE(pat, "http://www.palgraveconnect.com/pc/busman2013/browsee/inside/download/9781137024497.pdfbad");
-    assertMatchesRE(pat, "http://www.palgraveconnect.com/pc/doifinder/10.1057/9781137024497");
+    assertNotMatchesRE(pat, "http://www.palgraveconnect.com/pc/doifinder/10.1057/9781137024497");
     assertMatchesRE(pat, "http://www.palgraveconnect.com/pc/busman2013/browse/inside/download/9781137024497.pdf");
     assertMatchesRE(pat, "http://www.palgraveconnect.com/pc/busman2013/browse/inside/epub/9781137024497.epub");
   }

@@ -1,4 +1,4 @@
-/* $Id: PalgraveBookArticleIteratorFactory.java,v 1.5 2014-08-20 21:46:39 aishizaki Exp $
+/* $Id: PalgraveBookArticleIteratorFactory.java,v 1.6 2014-10-30 20:59:56 aishizaki Exp $
  
 Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -40,13 +40,13 @@ import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 
 /*
- * Gets book once crawled.
- * top-level (also html/view pdf) : http://www.palgraveconnect.com/pc/doifinder/10.1057/9781137283351
- * pdf (download pdf): http://www.palgraveconnect.com/pc/econfin2012/browse/inside/download/9781137283351.pdf
- * epub (download epub): http://www.palgraveconnect.com/pc/econfin2012/browse/inside/epub/9781137283351.epub
- * citation export: http://www.palgraveconnect.com/pc/browse/citationExport?doi=10.1057/9781137024497&WT.cg_n=eBooks&WT.cg_s=Citation%20Export
- * Metadata found in citation export ris file.
- * 
+ * CLOCKSS-only
+ * preserving the book-length pdf/epub, ris/metadata, cover images and landing page
+ * top-level (landing page) : http://www.palgraveconnect.com/pc/doifinder/10.1057/9781137283351
+ * pdf (download pdf):        http://www.palgraveconnect.com/pc/econfin2012/browse/inside/download/9781137283351.pdf
+ * epub (download epub):      http://www.palgraveconnect.com/pc/busman2013/browse/inside/epub/9780230389113.epub
+ * citation export:           http://www.palgraveconnect.com/pc/browse/citationExport?doi=10.1057/9781137024497&WT.cg_n=eBooks&WT.cg_s=Citation%20Export
+ * Metadata found in citation export ris file. 
  */
 
 public class PalgraveBookArticleIteratorFactory
@@ -59,18 +59,14 @@ public class PalgraveBookArticleIteratorFactory
   // match PATTERN_TEMPLATE.
   // root: http://www.palgraveconnect.com
   protected static final String ROOT_TEMPLATE = "\"%spc/\", base_url";
-  protected static final String PATTERN_TEMPLATE = 
-   //"\"%spc/.+/browse/inside(/download|/epub)?/[0-9]+\\.(html|pdf|epub)$\", base_url";
- "\"%spc/[^/]+/(browse/inside/download|browse/inside/epub|10\\.1057)/[0-9]+(\\.pdf|\\.epub)?\", base_url";
-  
-  protected Pattern PDF_LANDING_PATTERN =
-    Pattern.compile("/pc/doifinder/10\\.1057/([0-9]+)$", Pattern.CASE_INSENSITIVE);
+  protected static final String PATTERN_TEMPLATE =    
+   "\"%spc/([^/]+)/browse/inside(/download|/epub)/([0-9]+)\\.(pdf|epub)$\", base_url";
+
   protected Pattern PDF_PATTERN = 
     Pattern.compile("/pc/([^/]+)/browse/inside/download/([0-9]+)\\.pdf$", Pattern.CASE_INSENSITIVE);
   protected Pattern EPUB_PATTERN = 
     Pattern.compile("/pc/([^/]+)/browse/inside/epub/([0-9]+)\\.epub$", Pattern.CASE_INSENSITIVE);
     
-  protected static String PDF_LANDING_REPLACEMENT = "/pc/doifinder/10.1057/$1";
   protected static String PDF_REPLACEMENT = "/pc/$1/browse/inside/download/$2.pdf";
   protected static String EPUB_REPLACEMENT = "/pc/$1/browse/inside/epub/$2.epub";
   protected static String CITATION_RIS_REPLACEMENT = 
@@ -93,11 +89,7 @@ public class PalgraveBookArticleIteratorFactory
     // the order of builder.addAspect is important.
     // the order in which we want to define full_text_cu.  
     // first one that exists will get the job
-    // in this case the landing page is the first to be consider a full-text
-   
-    builder.addAspect(PDF_LANDING_PATTERN,
-                      PDF_LANDING_REPLACEMENT,
-                      ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE);
+    // in this case the pdf is the first to be consider a full-text cu
     
     builder.addAspect(PDF_PATTERN,
                       PDF_REPLACEMENT,
@@ -106,11 +98,14 @@ public class PalgraveBookArticleIteratorFactory
     builder.addAspect(EPUB_PATTERN,
                       EPUB_REPLACEMENT,
                       ArticleFiles.ROLE_FULL_TEXT_EPUB);
-
+    
     // secondary roles don't have enough info to trigger an article
+    
     builder.addAspect(CITATION_RIS_REPLACEMENT,
                       ArticleFiles.ROLE_CITATION_RIS,
                       ArticleFiles.ROLE_ARTICLE_METADATA);
+    
+    //builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE,ArticleFiles.ROLE_FULL_TEXT_PDF,ArticleFiles.ROLE_FULL_TEXT_EPUB);
 
     return builder.getSubTreeArticleIterator();
  
