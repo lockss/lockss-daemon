@@ -8888,9 +8888,25 @@
     >
 
     param[base_url] = http://ijnp.oxfordjournals.org/
-    pluginSuffix = ClockssHighWirePressH20Plugin
+    pluginSuffix = ClockssHighWireDrupalPlugin
 
-    au < expected ; exists ; 2014 ; International Journal of Neuropsychopharmacology Volume 17 ; 17 ; >
+    au < exists ; exists ; 1998 ; International Journal of Neuropsychopharmacology Volume 1 ; 1 ; >
+    au < exists ; exists ; 1999 ; International Journal of Neuropsychopharmacology Volume 2 ; 2 ; >
+    au < exists ; exists ; 2000 ; International Journal of Neuropsychopharmacology Volume 3 ; 3 ; >
+    au < exists ; exists ; 2001 ; International Journal of Neuropsychopharmacology Volume 4 ; 4 ; >
+    au < exists ; exists ; 2002 ; International Journal of Neuropsychopharmacology Volume 5 ; 5 ; >
+    au < exists ; exists ; 2003 ; International Journal of Neuropsychopharmacology Volume 6 ; 6 ; >
+    au < exists ; exists ; 2004 ; International Journal of Neuropsychopharmacology Volume 7 ; 7 ; >
+    au < exists ; exists ; 2005 ; International Journal of Neuropsychopharmacology Volume 8 ; 8 ; >
+    au < exists ; exists ; 2006 ; International Journal of Neuropsychopharmacology Volume 9 ; 9 ; >
+    au < exists ; exists ; 2007 ; International Journal of Neuropsychopharmacology Volume 10 ; 10 ; >
+    au < exists ; exists ; 2008 ; International Journal of Neuropsychopharmacology Volume 11 ; 11 ; >
+    au < exists ; exists ; 2009 ; International Journal of Neuropsychopharmacology Volume 12 ; 12 ; >
+    au < exists ; exists ; 2010 ; International Journal of Neuropsychopharmacology Volume 13 ; 13 ; >
+    au < exists ; exists ; 2011 ; International Journal of Neuropsychopharmacology Volume 14 ; 14 ; >
+    au < exists ; exists ; 2012 ; International Journal of Neuropsychopharmacology Volume 15 ; 15 ; >
+    au < exists ; exists ; 2013 ; International Journal of Neuropsychopharmacology Volume 16 ; 16 ; >
+    au < exists ; exists ; 2014 ; International Journal of Neuropsychopharmacology Volume 17 ; 17 ; >
   }
 
   {
@@ -10346,9 +10362,16 @@
       issnl = 1873-9946
     >
     param[base_url] = http://ecco-jcc.oxfordjournals.org/
-    pluginSuffix = ClockssHighWirePressH20Plugin
+    pluginSuffix = ClockssHighWireDrupalPlugin
     
-    au < expected ; exists ; 2014 ; Journal of Crohn's and Colitis Volume 8 ; 8 ; >
+    au < exists ; exists ; 2007 ; Journal of Crohn's and Colitis Volume 1 ; 1 ; >
+    au < exists ; exists ; 2008 ; Journal of Crohn's and Colitis Volume 2 ; 2 ; >
+    au < exists ; exists ; 2009 ; Journal of Crohn's and Colitis Volume 3 ; 3 ; >
+    au < exists ; exists ; 2010 ; Journal of Crohn's and Colitis Volume 4 ; 4 ; >
+    au < exists ; exists ; 2011 ; Journal of Crohn's and Colitis Volume 5 ; 5 ; >
+    au < exists ; exists ; 2012 ; Journal of Crohn's and Colitis Volume 6 ; 6 ; >
+    au < exists ; exists ; 2013 ; Journal of Crohn's and Colitis Volume 7 ; 7 ; >
+    au < exists ; exists ; 2014 ; Journal of Crohn's and Colitis Volume 8 ; 8 ; >
     
   }
 
@@ -12498,8 +12521,6 @@
     au < finished ; crawling ; 2010 ; Journal of the ICRU Volume 10 ; 10 ; >
     au < finished ; crawling ; 2011 ; Journal of the ICRU Volume 11 ; 11 ; >
     au < crawling ; exists ; 2012 ; Journal of the ICRU Volume 12 ; 12 ; >
-    au < expected ; exists ; 2013 ; Journal of the ICRU Volume 13 ; 13 ; >
-    au < doNotProcess ; exists ; 2014 ; Journal of the ICRU Volume 14 ; 14 ; >
 
     }
 
