@@ -1,5 +1,5 @@
 /*
- * $Id: SEGHtmlHashFilterFactory.java,v 1.3 2014-09-20 04:03:32 ldoan Exp $
+ * $Id: SEGHtmlHashFilterFactory.java,v 1.4 2014-10-31 23:17:00 ldoan Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ public class SEGHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
       InputStream in, String encoding) {
     
     NodeFilter[] segFilters = new NodeFilter[] {
-        // <header> filtered in BaseAtypon
+        // header filtered in BaseAtypon
         
         // top right of issue toc - links to previous or next issue
 	HtmlNodeFilters.tagWithAttribute("div", "id", "prevNextNav"),
@@ -73,14 +73,19 @@ public class SEGHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
                 	    
 	// right column ads - <div class="mainAd">
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "mainAd"),
+        
+        // above footer - click to increase image size
+        // http://library.seg.org/doi/abs/10.1190/2013-0823-SPSEINTRO.1
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "firstPage"),
 
-	// footer and footer_message filtered in BaseAtypon
+	// footer filtered in BaseAtypon
     };
     
     // super.createFilteredInputStream adds segFilters to the baseAtyponFilters
     // and returns the filtered input stream using an array of NodeFilters that 
     // combine the two arrays of NodeFilters.
-    return super.createFilteredInputStream(au, in, encoding, segFilters);
+    boolean doWS = true;
+    return super.createFilteredInputStream(au, in, encoding, segFilters, doWS);
     }
     
 }
