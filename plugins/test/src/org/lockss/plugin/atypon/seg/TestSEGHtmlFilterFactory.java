@@ -1,5 +1,5 @@
 /*
- * $Id: TestSEGHtmlFilterFactory.java,v 1.5 2014-10-08 16:11:28 alexandraohlson Exp $
+ * $Id: TestSEGHtmlFilterFactory.java,v 1.6 2014-10-31 23:18:00 ldoan Exp $
  */
 
 /*
@@ -235,6 +235,15 @@ public class TestSEGHtmlFilterFactory
           "</div>" +
           "</div>" +
           "</div>";
+  
+    private static final String withFirstPage =
+      "<div class=\"block\">" +
+          "<div id=\"firstPage\"><a href=\"#\" class=\"firstPageLink\" " +
+          "title=\"change image size\"><span class=\"msg\">" +
+          "Click to change image size</span>" +
+          "<img src=\"/imagesrc/xxx.png_v03\" alt=\"free\" " +
+          "class=\"firstPageImage\"></a></div>" +
+          "</div>";
 
   protected ArchivalUnit createAu()
       throws ArchivalUnit.ConfigurationException {
@@ -310,6 +319,7 @@ public class TestSEGHtmlFilterFactory
           withLeftColumnExceptDownloadCitation, 
           withoutLeftColumnExceptDownloadCitation);
       doFilterTest(variantAu, variantFact, withMainAd, filteredStr);
+      doFilterTest(variantAu, variantFact, withFirstPage, filteredStr);
     }
   }
   
