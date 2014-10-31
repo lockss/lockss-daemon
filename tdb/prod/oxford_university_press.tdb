@@ -310,55 +310,55 @@
     param[base_url] = http://alcalc.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; released ; 1963-1964 ; Alcohol and Alcoholism Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; released ; 1965-1967 ; Alcohol and Alcoholism Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; released ; 1968 ; Alcohol and Alcoholism Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; released ; 1969 ; Alcohol and Alcoholism Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; released ; 1970 ; Alcohol and Alcoholism Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; released ; 1971 ; Alcohol and Alcoholism Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; released ; 1972 ; Alcohol and Alcoholism Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; released ; 1973 ; Alcohol and Alcoholism Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; released ; 1974 ; Alcohol and Alcoholism Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; released ; 1975 ; Alcohol and Alcoholism Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; released ; 1976 ; Alcohol and Alcoholism Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; released ; 1977 ; Alcohol and Alcoholism Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; released ; 1978 ; Alcohol and Alcoholism Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; released ; 1979 ; Alcohol and Alcoholism Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; released ; 1980 ; Alcohol and Alcoholism Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; released ; 1981 ; Alcohol and Alcoholism Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; released ; 1982 ; Alcohol and Alcoholism Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; released ; 1983 ; Alcohol and Alcoholism Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; released ; 1984 ; Alcohol and Alcoholism Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; released ; 1985 ; Alcohol and Alcoholism Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; released ; 1986 ; Alcohol and Alcoholism Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; released ; 1987 ; Alcohol and Alcoholism Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; released ; 1988 ; Alcohol and Alcoholism Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; released ; 1989 ; Alcohol and Alcoholism Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; released ; 1990 ; Alcohol and Alcoholism Volume 25 ; 25 >
-    au < HighWirePressH20Plugin ; released ; 1991 ; Alcohol and Alcoholism Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; released ; 1992 ; Alcohol and Alcoholism Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; released ; 1993 ; Alcohol and Alcoholism Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; released ; 1994 ; Alcohol and Alcoholism Volume 29 ; 29 >
-    au < HighWirePressH20Plugin ; released ; 1995 ; Alcohol and Alcoholism Volume 30 ; 30 >
-    au < HighWirePressH20Plugin ; released ; 1996 ; Alcohol and Alcoholism Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; released ; 1997 ; Alcohol and Alcoholism Volume 32 ; 32 >
-    au < HighWirePressH20Plugin ; released ; 1998 ; Alcohol and Alcoholism Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; released ; 1999 ; Alcohol and Alcoholism Volume 34 ; 34 >
-    au < HighWirePressH20Plugin ; released ; 2000 ; Alcohol and Alcoholism Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; released ; 2001 ; Alcohol and Alcoholism Volume 36 ; 36 >
-    au < HighWirePressH20Plugin ; released ; 2002 ; Alcohol and Alcoholism Volume 37 ; 37 >
-    au < HighWirePressH20Plugin ; released ; 2003 ; Alcohol and Alcoholism Volume 38 ; 38 >
-    au < HighWirePressH20Plugin ; released ; 2004 ; Alcohol and Alcoholism Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; down ; 1963-1964 ; Alcohol and Alcoholism Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; down ; 1965-1967 ; Alcohol and Alcoholism Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; down ; 1968 ; Alcohol and Alcoholism Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; down ; 1969 ; Alcohol and Alcoholism Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; down ; 1970 ; Alcohol and Alcoholism Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; down ; 1971 ; Alcohol and Alcoholism Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; down ; 1972 ; Alcohol and Alcoholism Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; down ; 1973 ; Alcohol and Alcoholism Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; down ; 1974 ; Alcohol and Alcoholism Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; down ; 1975 ; Alcohol and Alcoholism Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; down ; 1976 ; Alcohol and Alcoholism Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; down ; 1977 ; Alcohol and Alcoholism Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; down ; 1978 ; Alcohol and Alcoholism Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; down ; 1979 ; Alcohol and Alcoholism Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; down ; 1980 ; Alcohol and Alcoholism Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; down ; 1981 ; Alcohol and Alcoholism Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; down ; 1982 ; Alcohol and Alcoholism Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; down ; 1983 ; Alcohol and Alcoholism Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; down ; 1984 ; Alcohol and Alcoholism Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; down ; 1985 ; Alcohol and Alcoholism Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; down ; 1986 ; Alcohol and Alcoholism Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; down ; 1987 ; Alcohol and Alcoholism Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; down ; 1988 ; Alcohol and Alcoholism Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; down ; 1989 ; Alcohol and Alcoholism Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; down ; 1990 ; Alcohol and Alcoholism Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; down ; 1991 ; Alcohol and Alcoholism Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; down ; 1992 ; Alcohol and Alcoholism Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; down ; 1993 ; Alcohol and Alcoholism Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; down ; 1994 ; Alcohol and Alcoholism Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; down ; 1995 ; Alcohol and Alcoholism Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; down ; 1996 ; Alcohol and Alcoholism Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; down ; 1997 ; Alcohol and Alcoholism Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; down ; 1998 ; Alcohol and Alcoholism Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; down ; 1999 ; Alcohol and Alcoholism Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; down ; 2000 ; Alcohol and Alcoholism Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; down ; 2001 ; Alcohol and Alcoholism Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; down ; 2002 ; Alcohol and Alcoholism Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; down ; 2003 ; Alcohol and Alcoholism Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; down ; 2004 ; Alcohol and Alcoholism Volume 39 ; 39 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Alcohol and Alcoholism Volume 40 ; 40 >
     au < HighWireStrVolPlugin ; down ; 2006 ; Alcohol and Alcoholism Volume 41 ; 41 >
     au < HighWireStrVolPlugin ; down ; 2007 ; Alcohol and Alcoholism Volume 42 ; 42 >
     au < HighWirePressPlugin ; down ; 2008 ; Alcohol and Alcoholism Volume 43 ; 43 >
-    au < HighWirePressH20Plugin ; released ; 2009 ; Alcohol and Alcoholism Volume 44 ; 44 >
-    au < HighWirePressH20Plugin ; released ; 2010 ; Alcohol and Alcoholism Volume 45 ; 45 >
-    au < HighWirePressH20Plugin ; released ; 2011 ; Alcohol and Alcoholism Volume 46 ; 46 >
-    au < HighWirePressH20Plugin ; released ; 2012 ; Alcohol and Alcoholism Volume 47 ; 47 >
-    au < HighWirePressH20Plugin ; manifest ; 2013 ; Alcohol and Alcoholism Volume 48 ; 48 >
-    au < HighWirePressH20Plugin ; manifest ; 2014 ; Alcohol and Alcoholism Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; down ; 2009 ; Alcohol and Alcoholism Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; down ; 2010 ; Alcohol and Alcoholism Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; down ; 2011 ; Alcohol and Alcoholism Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; down ; 2012 ; Alcohol and Alcoholism Volume 47 ; 47 >
+    au < HighWirePressDrupalPlugin ; manifest ; 2013 ; Alcohol and Alcoholism Volume 48 ; 48 >
+    au < HighWirePressDrupalPlugin ; manifest ; 2014 ; Alcohol and Alcoholism Volume 49 ; 49 >
 
     }
 

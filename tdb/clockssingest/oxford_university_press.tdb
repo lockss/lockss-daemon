@@ -317,7 +317,7 @@
 
     param[base_url] = http://alcalc.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
-	
+
     au < zapped ; finished ; 2008 ; Alcohol and Alcoholism Volume 43 ; 43 ; >
     au < down ; exists ; 2009 ; Alcohol and Alcoholism Volume 44 [to delete] ; 44 ; reingest3.clockss.org:8083 >
 
@@ -327,6 +327,18 @@
 
     param[base_url] = http://alcalc.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < down ; frozen ; 2010 ; Alcohol and Alcoholism Volume 45 ; 45 ; >
+    au < down ; crawling ; 2011 ; Alcohol and Alcoholism Volume 46 ; 46 ; >
+    au < down ; frozen ; 2012 ; Alcohol and Alcoholism Volume 47 ; 47 ; >
+    au < down ; exists ; 2013 ; Alcohol and Alcoholism Volume 48 ; 48 ; >
+
+    }
+
+    {
+
+    param[base_url] = http://alcalc.oxfordjournals.org/
+    pluginSuffix = ClockssHighWireDrupalPlugin
 
     au < manifest ; exists ; 1963-1964 ; Alcohol and Alcoholism Volume 1 ; 1 ; >
     au < manifest ; exists ; 1965-1967 ; Alcohol and Alcoholism Volume 2 ; 2 ; >
@@ -371,12 +383,12 @@
     au < manifest ; exists ; 2006 ; Alcohol and Alcoholism Volume 41 ; 41 ; >
     au < manifest ; exists ; 2007 ; Alcohol and Alcoholism Volume 42 ; 42 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Alcohol and Alcoholism Volume 43 ; 43 ; >
-    au < testing ; exists ; 2009 ; Alcohol and Alcoholism Volume 44 ; 44 ; >
-    au < finished ; frozen ; 2010 ; Alcohol and Alcoholism Volume 45 ; 45 ; >
-    au < finished ; crawling ; 2011 ; Alcohol and Alcoholism Volume 46 ; 46 ; >
-    au < finished ; frozen ; 2012 ; Alcohol and Alcoholism Volume 47 ; 47 ; >
-    au < crawling ; exists ; 2013 ; Alcohol and Alcoholism Volume 48 ; 48 ; >
-    au < doNotProcess ; exists ; 2014 ; Alcohol and Alcoholism Volume 49 ; 49 ; >
+    au < manifest ; exists ; 2009 ; Alcohol and Alcoholism Volume 44 ; 44 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Alcohol and Alcoholism Volume 45 ; 45 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Alcohol and Alcoholism Volume 46 ; 46 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Alcohol and Alcoholism Volume 47 ; 47 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Alcohol and Alcoholism Volume 48 ; 48 ; >
+    au < manifest ; exists ; 2014 ; Alcohol and Alcoholism Volume 49 ; 49 ; >
 
     }
 
