@@ -1,5 +1,5 @@
 /*
- * $Id: EndocrineSocietyHtmlHashFilterFactory.java,v 1.2 2014-10-29 21:05:32 ldoan Exp $
+ * $Id: EndocrineSocietyHtmlHashFilterFactory.java,v 1.3 2014-11-01 17:04:43 ldoan Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ public class EndocrineSocietyHtmlHashFilterFactory
   public InputStream createFilteredInputStream(ArchivalUnit au,
       InputStream in, String encoding) {
     
-    NodeFilter[] segFilters = new NodeFilter[] {
+    NodeFilter[] filters = new NodeFilter[] {
         // pageHeader
         HtmlNodeFilters.tagWithAttribute("section", "id", "pageHeader"),
         
@@ -65,10 +65,11 @@ public class EndocrineSocietyHtmlHashFilterFactory
 	
     };
     
-    // super.createFilteredInputStream adds segFilters to the baseAtyponFilters
+    // super.createFilteredInputStream adds filters to the baseAtyponFilters
     // and returns the filtered input stream using an array of NodeFilters that 
     // combine the two arrays of NodeFilters.
-    return super.createFilteredInputStream(au, in, encoding, segFilters);
+    boolean doWS = true;
+    return super.createFilteredInputStream(au, in, encoding, filters, doWS);
     }
     
 }
