@@ -1,5 +1,5 @@
 /*
- * $Id: SEGPdfFilterFactory.java,v 1.1 2014-10-31 18:40:19 thib_gc Exp $
+ * $Id: SEGPdfFilterFactory.java,v 1.2 2014-11-01 00:17:13 thib_gc Exp $
  */
 
 /*
@@ -32,9 +32,11 @@
 
 package org.lockss.plugin.atypon.seg;
 
+import java.io.*;
 import java.util.List;
 import java.util.regex.Pattern;
 
+import org.apache.commons.io.IOUtils;
 import org.lockss.filter.pdf.ExtractingPdfFilterFactory;
 import org.lockss.pdf.*;
 import org.lockss.plugin.ArchivalUnit;
@@ -46,20 +48,24 @@ public class SEGPdfFilterFactory extends ExtractingPdfFilterFactory {
 
     private static final Logger logger = Logger.getLogger(Worker.class);
     
-    public static final Pattern PATTERN =
+    public static final String CITED_BY_STRING = "This article has been cited by:";
+    
+    public static final Pattern DOWNLOADED_PATTERN =
         Pattern.compile("^Downloaded \\d+/\\d+/\\d+ to \\d+\\.\\d+\\.\\d+\\.\\d+", Pattern.CASE_INSENSITIVE);
     
     public int state;
-    public boolean result;
-    public int begin;
-    public int end;
+    public boolean resultCitedBy;
+    public boolean resultDownloaded;
+    public int beginDownloaded;
+    public int endDownloaded;
     
     @Override
     public void setUp() throws PdfException {
       this.state = 0;
-      this.result = false;
-      this.begin = -1;
-      this.end = -1;
+      this.resultCitedBy = false;
+      this.resultDownloaded = false;
+      this.beginDownloaded = -1;
+      this.endDownloaded = -1;
     }
     
     @Override
@@ -70,25 +76,26 @@ public class SEGPdfFilterFactory extends ExtractingPdfFilterFactory {
       switch (state) {
         case 0: {
           if (isBeginTextObject()) {
-            begin = getIndex();
+            beginDownloaded = getIndex();
             ++state;
-          }
-          else {
-            stop();
           }
         } break;
         case 1: {
-          if (isShowTextFind(PATTERN)) {
+          if (isShowTextGlyphPositioningEquals(CITED_BY_STRING)) {
+            resultCitedBy = true;
+            stop();
+          }
+          else if (isShowTextFind(DOWNLOADED_PATTERN)) {
             ++state;
           }
           else if (isEndTextObject()) {
-            stop();
+            stop(); // Both paths are only on the first BT..ET of the stream
           }
         } break;
         case 2: {
           if (isEndTextObject()) {
-            result = true;
-            end = getIndex();
+            resultDownloaded = true;
+            endDownloaded = getIndex();
             stop();
           }
         } break;
@@ -97,7 +104,7 @@ public class SEGPdfFilterFactory extends ExtractingPdfFilterFactory {
         }
       }
       logger.debug3("final: " + state);
-      logger.debug3("result: " + result);
+      logger.debug3("result: " + resultDownloaded);
     }
     
   }
@@ -116,17 +123,30 @@ public class SEGPdfFilterFactory extends ExtractingPdfFilterFactory {
     pdfDocument.unsetKeywords();
     
     Worker worker = new Worker();
-    for (PdfPage pdfPage : pdfDocument.getPages()) {
-      for (PdfTokenStream pdfTokenStream : pdfPage.getAllTokenStreams()) {
+    page_loop: for (int i = 0 ; i < pdfDocument.getNumberOfPages() ; ++i) {
+      PdfPage pdfPage = pdfDocument.getPage(i);
+      stream_loop: for (PdfTokenStream pdfTokenStream : pdfPage.getAllTokenStreams()) {
         worker.process(pdfTokenStream);
-        if (worker.result) {
+        if (worker.resultCitedBy) {
+          for (int j = pdfDocument.getNumberOfPages() - 1 ; j >= i ; --j) {
+            pdfDocument.removePage(j);
+          }
+          break page_loop;
+        }
+        if (worker.resultDownloaded) {
           List<PdfToken> tokens = pdfTokenStream.getTokens();
-          tokens.subList(worker.begin, worker.end + 1).clear();
+          tokens.subList(worker.beginDownloaded, worker.endDownloaded + 1).clear();
           pdfTokenStream.setTokens(tokens);
-          break;
+          break stream_loop;
         }
       }
     }
+  }
+  
+  public static void main(String[] args) throws Exception {
+    String file = "/tmp/d3/c3.pdf";
+    IOUtils.copy(new SEGPdfFilterFactory().createFilteredInputStream(null, new FileInputStream(file), null),
+                 new FileOutputStream(file + ".out"));
   }
   
 }
