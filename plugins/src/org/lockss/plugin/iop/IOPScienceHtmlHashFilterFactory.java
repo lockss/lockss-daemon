@@ -1,5 +1,5 @@
 /*
- * $Id: IOPScienceHtmlHashFilterFactory.java,v 1.12 2014-10-24 22:58:47 etenbrink Exp $
+ * $Id: IOPScienceHtmlHashFilterFactory.java,v 1.13 2014-11-01 00:49:29 etenbrink Exp $
  */
 
 /*
@@ -73,7 +73,7 @@ public class IOPScienceHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "header-content"), // (old)
         HtmlNodeFilters.tagWithAttribute("div", "id", "banner"), // (old)
         // Right column
-        HtmlNodeFilters.tagWithAttribute("div",  "id", "rightCol"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "rightCol"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "alsoRead"), // (now within)
         HtmlNodeFilters.tagWithAttribute("div", "id", "tacticalBanners"), // (now within)
         // Contains the search box, which changes over time
@@ -92,16 +92,16 @@ public class IOPScienceHtmlHashFilterFactory implements FilterFactory {
          * Other
          */
         // may not be an issue, but concerned that mathjax exposure will change
-        HtmlNodeFilters.tagWithAttribute("div",  "class", "mathJaxControls"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "mathJaxControls"),
         // Contains a jsessionid
         HtmlNodeFilters.tagWithAttributeRegex("form", "action", "jsessionid"),
         
         // <div class="sideTabBar">
-        HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "sideTabBar"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sideTabBar"),
         // <p class="viewingLinks">
-        HtmlNodeFilters.tagWithAttributeRegex("p",  "class", "viewingLinks"),
+        HtmlNodeFilters.tagWithAttributeRegex("p", "class", "viewingLinks"),
         // <div class=" metrics-panel">
-        HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "metrics-panel"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "metrics-panel"),
         // <dd> <p> Total article downloads: <strong>1193</strong> </p>...</dd>
         new TagNameFilter("dd") {
           @Override
@@ -115,6 +115,8 @@ public class IOPScienceHtmlHashFilterFactory implements FilterFactory {
         },
         // next/previous can change
         HtmlNodeFilters.tagWithAttribute("div", "class", "jnlTocIssueNav"),
+        // <span class="boxBut free-article">
+        HtmlNodeFilters.tagWithAttributeRegex("span", "class", "free-article"),
     };
     
     InputStream filtered = new HtmlFilterInputStream(in,
