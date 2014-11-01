@@ -226,10 +226,12 @@ Note that if you need to use the scraping filter, you also need to be sure that 
 
 * pdfplus contains growing list with a little triangle arrow:
 http://www.magonlinelibrary.com/doi/pdfplus/10.12968/bjom.2013.21.10.692
-
 * it looks like BaseAtyponHtmlHashFilterFactory does hash out the size text of
 pdfplus "PDF Plus (237 KB)"
-
+* downloaded http://www.magonlinelibrary.com/doi/pdf/10.12968/bjom.2013.21.10.692 on 22oct2014
+and 24oct2014, did "diff -au" and they are identical. So no pdf filter needed current.
+However, it's possible this will change in the future like the case of SEG and Endocrine Society.
+ 
 -------------------------DONE-----------------------------
 
 And with that, your plugin is probably 95% of the way done.  
