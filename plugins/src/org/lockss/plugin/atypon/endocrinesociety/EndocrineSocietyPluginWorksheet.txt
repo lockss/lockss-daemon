@@ -335,6 +335,12 @@ In a terminal window go to the directory that contain these two different versio
 %diff -a pdf_version1.pdf pdf_version2.pdf
 If there is a difference note that here and give the URL to the URL you tested.
 * downloaded http://press.endocrine.org/doi/pdf/10.1210/er.2013-1067 in 2 different days and did ?diff ?a?, there is no difference.
+==> on 21sep2014 the above downloaded page had no watermark.  But today 01nov2014, there is watermark.
+another example is http://press.endocrine.org/doi/pdf/10.1210/en.2012-2190 and 
+http://press.endocrine.org/doi/pdf/10.1210/en.2012-1931.
+** the watermark text is at the bottom of the pdf"
+"The Endocrine Society. Downloaded from press.endocrine.org by [${individualUser.displayName}] on 31 October 2014. at 17:35 For personal use only. No other uses without permission. . All rights reserved."
+*** this plugin will need pdf filter.
 
 -----------------------METADATA EXTRACTION--------------------------------------
 Metadata is provided in a variety of ways depending on the publisher. 
