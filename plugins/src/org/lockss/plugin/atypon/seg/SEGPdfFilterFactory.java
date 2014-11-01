@@ -1,5 +1,5 @@
 /*
- * $Id: SEGPdfFilterFactory.java,v 1.2 2014-11-01 00:17:13 thib_gc Exp $
+ * $Id: SEGPdfFilterFactory.java,v 1.3 2014-11-01 00:17:47 thib_gc Exp $
  */
 
 /*
@@ -141,12 +141,6 @@ public class SEGPdfFilterFactory extends ExtractingPdfFilterFactory {
         }
       }
     }
-  }
-  
-  public static void main(String[] args) throws Exception {
-    String file = "/tmp/d3/c3.pdf";
-    IOUtils.copy(new SEGPdfFilterFactory().createFilteredInputStream(null, new FileInputStream(file), null),
-                 new FileOutputStream(file + ".out"));
   }
   
 }
