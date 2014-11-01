@@ -1,5 +1,5 @@
 /*
- * $Id: MarkAllenHtmlHashFilterFactory.java,v 1.1 2014-10-29 21:09:58 ldoan Exp $
+ * $Id: MarkAllenHtmlHashFilterFactory.java,v 1.2 2014-11-01 00:12:06 ldoan Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ public class MarkAllenHtmlHashFilterFactory
   public InputStream createFilteredInputStream(ArchivalUnit au,
       InputStream in, String encoding) {
     
-    NodeFilter[] segFilters = new NodeFilter[] {
+    NodeFilter[] filters = new NodeFilter[] {
         
         // top page ad and all other ads with class LiteratumAd
         HtmlNodeFilters.tagWithAttributeRegex("section", "class", 
@@ -91,10 +91,11 @@ public class MarkAllenHtmlHashFilterFactory
         
     };
     
-    // super.createFilteredInputStream adds segFilters to the baseAtyponFilters
+    // super.createFilteredInputStream adds filters to the baseAtyponFilters
     // and returns the filtered input stream using an array of NodeFilters that 
     // combine the two arrays of NodeFilters.
-    return super.createFilteredInputStream(au, in, encoding, segFilters);
+    boolean doWS = true;
+    return super.createFilteredInputStream(au, in, encoding, filters, doWS);
   }
     
 }
