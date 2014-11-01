@@ -1,5 +1,5 @@
 /*
- * $Id: IOPScienceHtmlCrawlFilterFactory.java,v 1.3 2013-12-11 01:40:53 thib_gc Exp $
+ * $Id: IOPScienceHtmlCrawlFilterFactory.java,v 1.4 2014-11-01 00:56:01 etenbrink Exp $
  */
 
 /*
@@ -54,8 +54,9 @@ public class IOPScienceHtmlCrawlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "alsoRead"), // (now within)
         // Last 10 articles viewed; not the best characterization but unique enough
         HtmlNodeFilters.tagWithAttribute("div", "class", "tabs javascripted"),
-        // Hidden in each reference link
-        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^\\?"),
+        // Hidden in each reference link or malformed off-site links
+        // see http://iopscience.iop.org/0143-0807/35/4/045020/article
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^(\\?|[a-z]+[.].{2,}[.].{2,})"),
     };
     return new HtmlFilterInputStream(in,
                                      encoding,
