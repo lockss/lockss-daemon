@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>22</string>
+    <string>23</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -20,7 +20,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>14</string>
+        <string>15</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -156,5 +156,10 @@
   <entry>
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.iop.IOPScienceUrlNormalizer</string>
+  </entry>
+  <entry>
+    <!-- manifest to volume to issue -->
+    <string>au_refetch_depth</string>
+    <int>2</int>
   </entry>
 </map>
