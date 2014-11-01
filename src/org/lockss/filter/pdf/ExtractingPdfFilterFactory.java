@@ -1,5 +1,5 @@
 /*
- * $Id: ExtractingPdfFilterFactory.java,v 1.5 2013-02-28 01:55:28 thib_gc Exp $
+ * $Id: ExtractingPdfFilterFactory.java,v 1.6 2014-11-01 00:36:34 thib_gc Exp $
  */
 
 /*
@@ -203,12 +203,7 @@ public abstract class ExtractingPdfFilterFactory
       outputString(pdfDocument.getTitle());
     }
     
-    @Override
-    public void transform(ArchivalUnit au,
-                          PdfDocument pdfDocument)
-        throws PdfException {
-      this.au = au;
-      this.pdfDocument = pdfDocument;
+    public void outputDocumentInformation() throws PdfException {
       outputCreationDate();
       outputModificationDate();
       outputAuthor();
@@ -218,11 +213,20 @@ public abstract class ExtractingPdfFilterFactory
       outputSubject();
       outputTitle();
       outputMetadata();
+    }
+    
+    @Override
+    public void transform(ArchivalUnit au,
+                          PdfDocument pdfDocument)
+        throws PdfException {
+      this.au = au;
+      this.pdfDocument = pdfDocument;
+      outputDocumentInformation();
       for (PdfPage pdfPage : pdfDocument.getPages()) {
         outputPage(pdfPage);
       }
     }
-    
+
   }
   
   /**
