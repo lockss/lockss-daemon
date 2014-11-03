@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>5</string>
+        <string>6</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -40,6 +40,11 @@
     <string>au_start_url</string>
     <string>"%s%s/index.html", base_url, volume_name</string>
   </entry>
+  <entry>
+  <!-- manifest lists issue toc's, which list articles -->
+    <string>au_refetch_depth</string>
+    <int>2</int>
+  </entry>  
   <entry>
     <string>au_permission_url</string>
       <list>
