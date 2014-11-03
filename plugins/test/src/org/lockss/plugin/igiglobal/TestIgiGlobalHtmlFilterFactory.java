@@ -1,10 +1,10 @@
 /*
- * $Id: TestIgiGlobalHtmlFilterFactory.java,v 1.8 2013-12-23 21:16:54 etenbrink Exp $
+ * $Id: TestIgiGlobalHtmlFilterFactory.java,v 1.9 2014-11-03 22:03:14 aishizaki Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -78,7 +78,7 @@ public class TestIgiGlobalHtmlFilterFactory extends LockssTestCase {
 		  "</div>";
 
   private static final String citationHtml =
-		  "<span id=\"citeContent\" class=\"useremail\" onclick=\"toggleOptions('citation', 'CiteContent');\"></span>\n" +
+		  "<p> Hello World </p><span id=\"citeContent\" class=\"useremail\" onclick=\"toggleOptions('citation', 'CiteContent');\"></span>\n" +
 		  "<div id=\"citation\" class=\"useroptions\" style=\"width: 400px; padding: 15px; font-size: 10px; display: block;\">\n" +
 			  "<h3> MLA </h3>\n" +
 			  "<div style=\"margin-bottom: 15px;\">\n" +
@@ -94,8 +94,8 @@ public class TestIgiGlobalHtmlFilterFactory extends LockssTestCase {
 			  		"<input id=\"ctl00_cphCenterContent_ctl00_ucCiteContent_lnkSubmitToEasyBib\" type=\"image\" style=\"border-width:0px;\" onclick=\"this.form.target=\"_blank\";\" src=\"../../Images/EasyBib.jpg\" name=\"ctl00$cphCenterContent$ctl00$ucCiteContent$lnkSubmitToEasyBib\">\n" +
 			  "</span>\n" +
 		  "</div>";
-  private static final String citationHtmlFiltered =
-		  "<span id=\"citeContent\" class=\"useremail\" onclick=\"toggleOptions('citation', 'CiteContent');\"></span> ";
+  private static final String citationHtmlFiltered = "<p> Hello World </p>"+
+  "<span id=\"citeContent\" class=\"useremail\" onclick=\"toggleOptions('citation', 'CiteContent');\"></span> ";
 
   private static final String trialImageHtml =
 		  "<p>foo</p>" +
@@ -193,8 +193,17 @@ public class TestIgiGlobalHtmlFilterFactory extends LockssTestCase {
   public static final String footerWithSponsorFiltered =
       "</table></div></div> <div>";
 	
+  public static final String citedCitedByFavoriteButtons =
+    "<p> Hello World </p><span style=\"display:inline-block;\">" +
+    "<span style=\"display:inline-block;margin-right:5px;float:left;\">"+
+    "<span id=\"citeContent\" onclick=\"toggleOptions('citation', 'CiteContent');\" class=\"useremail\">"+
+    "<span id=\"ctl00_ctl00_cphMain_cphCenterContent_ucCiteContent_spanCiteContent\" class=\"btn-gray-rnd\">"+
+    "<span id=\"ctl00_ctl00_cphMain_cphCenterContent_ucCiteContent_lblCiteContent\">Cite</span>"+
+    "<span id=\"ctl00_ctl00_cphMain_cphCenterContent_ucCiteContent_iconCiteContent\" class=\"icon icon-inactive ui-icon-extlink\"></span>"+
+    "</span></span>";
+  public static final String citedCitedByFavoriteButtonsFiltered = "<p> Hello World </p>";
 
-  public void testSibebarFiltering() throws Exception {
+  public void testSidebarFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(null,
         new StringInputStream(sidebarHtml),
         Constants.DEFAULT_ENCODING);
@@ -262,5 +271,11 @@ public class TestIgiGlobalHtmlFilterFactory extends LockssTestCase {
 
     assertEquals(footerWithSponsorFiltered, StringUtil.fromInputStream(actIn));
   }
-  
+  public void testCitedByButtons() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(null,
+                                                       new StringInputStream(citedCitedByFavoriteButtons),
+                                                       Constants.DEFAULT_ENCODING);
+
+    assertEquals(citedCitedByFavoriteButtonsFiltered, StringUtil.fromInputStream(actIn));
+  } 
 }

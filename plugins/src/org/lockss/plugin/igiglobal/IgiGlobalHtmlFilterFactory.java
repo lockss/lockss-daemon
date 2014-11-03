@@ -1,10 +1,10 @@
 /*
- * $Id: IgiGlobalHtmlFilterFactory.java,v 1.8 2013-12-23 21:30:03 etenbrink Exp $
+ * $Id: IgiGlobalHtmlFilterFactory.java,v 1.9 2014-11-03 22:03:14 aishizaki Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -108,8 +108,17 @@ public class IgiGlobalHtmlFilterFactory implements FilterFactory {
         // Article titles
         HtmlNodeFilters.tagWithAttribute("div", "class", "Title1 BorderBottom"),
         HtmlNodeFilters.tagWithAttributeRegex("h2", "style", "border-bottom"),
+        // removing cite/cited by/favorite buttons
+        HtmlNodeFilters.tagWithAttribute("span", "style", "display:inline-block;"),
+      
+        // Cite button
+        //HtmlNodeFilters.tagWithAttribute("span", "id", "citeContent"),
+        // Cited by button - only appears once cited
+       // HtmlNodeFilters.tagWithAttributeRegex("a",  "id", "cphCenterContent_lnkCiteContent"),
+        // Favorite button - seen two ways
+       // HtmlNodeFilters.tagWithAttributeRegex("span", "is", "cphMain_cphCenterContent_ucFaborite_favoriteContainer"),
         // Favorite button
-        HtmlNodeFilters.tagWithAttribute("span", "id", "ctl00_ctl00_cphMain_cphCenter_favorite"),
+        //HtmlNodeFilters.tagWithAttribute("span", "id", "ctl00_ctl00_cphMain_cphCenter_favorite"),
         // Search box
         HtmlNodeFilters.tagWithAttribute("span", "class", "search-contents"),
         // Styling and markup of full text icons changed over time
