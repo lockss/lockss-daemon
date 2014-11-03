@@ -464,11 +464,12 @@
 
     param[base_url] = http://www.mechanicalcirculatorysupport.net/
     param[journal_id] = mcs
+    comment[notReady] = no substance
 
     au < finished ; crawling ; 2010 ; Mechanical Circulatory Support Volume 1 ; 1 ; 2010 >
     au < finished ; frozen ; 2011 ; Mechanical Circulatory Support Volume 2 ; 2 ; 2011 >
     au < finished ; crawling ; 2012 ; Mechanical Circulatory Support Volume 3 ; 3 ; 2012 >
-    au < testing ; exists ; 2013 ; Mechanical Circulatory Support Volume 4 ; 4 ; 2013 >
+    au < notReady ; exists ; 2013 ; Mechanical Circulatory Support Volume 4 ; 4 ; 2013 >
 
   }
 
