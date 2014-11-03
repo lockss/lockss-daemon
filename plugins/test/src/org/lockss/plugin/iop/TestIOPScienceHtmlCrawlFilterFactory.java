@@ -1,5 +1,5 @@
 /*
- * $Id: TestIOPScienceHtmlCrawlFilterFactory.java,v 1.1 2014-11-01 00:32:18 etenbrink Exp $
+ * $Id: TestIOPScienceHtmlCrawlFilterFactory.java,v 1.2 2014-11-03 22:15:07 etenbrink Exp $
  */
 
 /*
@@ -88,15 +88,6 @@ public class TestIOPScienceHtmlCrawlFilterFactory extends LockssTestCase {
       "\n" +
       "</dd>";
   
-  // Malformed off-site links
-  private static final String withSpec = "<dd>" +
-      "<a href=\"http://www.foo.fr/langues/en/index.php\">www.foo.fr/langues/en/index.php</a>\n" +
-      "<a href=\"www.foo.uni-heidelberg.de/software/\">www.ita.uni-heidelberg.de/software/</a>" +
-      "</dd>";
-  private static final String withoutSpec = "<dd>" +
-      "<a href=\"http://www.foo.fr/langues/en/index.php\">www.foo.fr/langues/en/index.php</a>\n" +
-      "</dd>";
-  
   
   public void testFiltering() throws Exception {
     InputStream inA;
@@ -125,12 +116,6 @@ public class TestIOPScienceHtmlCrawlFilterFactory extends LockssTestCase {
         Constants.DEFAULT_ENCODING);
     a = StringUtil.fromInputStream(inA);
     assertEquals(withoutRef, a);
-    
-    // Malformed off-site link
-    inA = fact.createFilteredInputStream(mau, new StringInputStream(withSpec),
-        Constants.DEFAULT_ENCODING);
-    a = StringUtil.fromInputStream(inA);
-    assertEquals(withoutSpec, a);
     
   }
   
