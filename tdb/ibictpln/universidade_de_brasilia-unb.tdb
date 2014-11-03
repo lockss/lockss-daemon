@@ -773,7 +773,7 @@
       {
       param[base_url] = http://periodicos.unb.br/
       
-      au < testing ; 2013 ; 1 ; Traduzires Volume 2013 ; 2013 ; >
+      au < ready ; 2013 ; 1 ; Traduzires Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 2 ; Traduzires Volume 2014 ; 2014 ; >
       }
   }
@@ -801,13 +801,13 @@
       {
       param[base_url] = http://periodicos.unb.br/
       
-      au < testing ; 1997 ; 1 ; Interethnic@ : Revista de Estudos em Relações Interétnicas Volume 1997 ; 1997 ; >
-      au < testing ; 1998 ; 2 ; Interethnic@ : Revista de Estudos em Relações Interétnicas Volume 1998 ; 1998 ; >
-      au < testing ; 1999 ; 3 ; Interethnic@ : Revista de Estudos em Relações Interétnicas Volume 1999 ; 1999 ; >
-      au < testing ; 2001 ; 4 ; Interethnic@ : Revista de Estudos em Relações Interétnicas Volume 2001 ; 2001 ; >
-      au < testing ; 2002 ; 5 ; Interethnic@ : Revista de Estudos em Relações Interétnicas Volume 2002 ; 2002 ; >
-      au < testing ; 2003 ; 6 ; Interethnic@ : Revista de Estudos em Relações Interétnicas Volume 2003 ; 2003 ; >
-      au < testing ; 2007 ; 7 ; Interethnic@ : Revista de Estudos em Relações Interétnicas Volume 2007 ; 2007 ; >
+      au < ready ; 1997 ; 1 ; Interethnic@ : Revista de Estudos em Relações Interétnicas Volume 1997 ; 1997 ; >
+      au < ready ; 1998 ; 2 ; Interethnic@ : Revista de Estudos em Relações Interétnicas Volume 1998 ; 1998 ; >
+      au < ready ; 1999 ; 3 ; Interethnic@ : Revista de Estudos em Relações Interétnicas Volume 1999 ; 1999 ; >
+      au < ready ; 2001 ; 4 ; Interethnic@ : Revista de Estudos em Relações Interétnicas Volume 2001 ; 2001 ; >
+      au < ready ; 2002 ; 5 ; Interethnic@ : Revista de Estudos em Relações Interétnicas Volume 2002 ; 2002 ; >
+      au < ready ; 2003 ; 6 ; Interethnic@ : Revista de Estudos em Relações Interétnicas Volume 2003 ; 2003 ; >
+      au < ready ; 2007 ; 7 ; Interethnic@ : Revista de Estudos em Relações Interétnicas Volume 2007 ; 2007 ; >
       }
   }
 
@@ -840,11 +840,11 @@
       au < notReady ; 2002 ; 6 ; ParticipAção Volume 2002 ; 2002 ; no articles >
       au < notReady ; 2003 ; 7 ; ParticipAção Volume 2003 ; 2003 ; no articles >
       au < notReady ; 2008 ; 8 ; ParticipAção Volume 2008 ; 2008 ; no articles >
-      au < testing ; 2009 ; 9 ; ParticipAção Volume 2009 ; 2009 ; >
-      au < testing ; 2010 ; 10 ; ParticipAção Volume 2010 ; 2010 ; >
-      au < testing ; 2011 ; 11 ; ParticipAção Volume 2011 ; 2011 ; >
-      au < testing ; 2012 ; 12 ; ParticipAção Volume 2012 ; 2012 ; >
-      au < testing ; 2013 ; 13 ; ParticipAção Volume 2013 ; 2013 ; >
+      au < ready ; 2009 ; 9 ; ParticipAção Volume 2009 ; 2009 ; >
+      au < ready ; 2010 ; 10 ; ParticipAção Volume 2010 ; 2010 ; >
+      au < ready ; 2011 ; 11 ; ParticipAção Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 12 ; ParticipAção Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 13 ; ParticipAção Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 14 ; ParticipAção Volume 2014 ; 2014 ; >
       }
   }
@@ -895,12 +895,12 @@
       {
       param[base_url] = http://periodicos.unb.br/
       
-      au < testing ; 2008 ; 1 ; Revista Horizontes de Linguística Aplicada Volume 2008 ; 2008 ; >
-      au < testing ; 2009 ; 2 ; Revista Horizontes de Linguística Aplicada Volume 2009 ; 2009 ; >
-      au < testing ; 2010 ; 3 ; Revista Horizontes de Linguística Aplicada Volume 2010 ; 2010 ; >
-      au < testing ; 2011 ; 4 ; Revista Horizontes de Linguística Aplicada Volume 2011 ; 2011 ; >
-      au < testing ; 2012 ; 5 ; Revista Horizontes de Linguística Aplicada Volume 2012 ; 2012 ; >
-      au < testing ; 2013 ; 6 ; Revista Horizontes de Linguística Aplicada Volume 2013 ; 2013 ; >
+      au < ready ; 2008 ; 1 ; Revista Horizontes de Linguística Aplicada Volume 2008 ; 2008 ; >
+      au < ready ; 2009 ; 2 ; Revista Horizontes de Linguística Aplicada Volume 2009 ; 2009 ; >
+      au < ready ; 2010 ; 3 ; Revista Horizontes de Linguística Aplicada Volume 2010 ; 2010 ; >
+      au < ready ; 2011 ; 4 ; Revista Horizontes de Linguística Aplicada Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 5 ; Revista Horizontes de Linguística Aplicada Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 6 ; Revista Horizontes de Linguística Aplicada Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 7 ; Revista Horizontes de Linguística Aplicada Volume 2014 ; 2014 ; >
       }
   }
@@ -927,12 +927,12 @@
       {
       param[base_url] = http://periodicos.unb.br/
       
-      au < testing ; 2008 ; 1 ; Revista Ibero-Americana de Ciência da Informação Volume 2008 ; 2008 ; >
-      au < testing ; 2009 ; 2 ; Revista Ibero-Americana de Ciência da Informação Volume 2009 ; 2009 ; >
-      au < testing ; 2010 ; 3 ; Revista Ibero-Americana de Ciência da Informação Volume 2010 ; 2010 ; >
-      au < testing ; 2011 ; 4 ; Revista Ibero-Americana de Ciência da Informação Volume 2011 ; 2011 ; >
-      au < testing ; 2012 ; 5 ; Revista Ibero-Americana de Ciência da Informação Volume 2012 ; 2012 ; >
-      au < testing ; 2013 ; 6 ; Revista Ibero-Americana de Ciência da Informação Volume 2013 ; 2013 ; >
+      au < ready ; 2008 ; 1 ; Revista Ibero-Americana de Ciência da Informação Volume 2008 ; 2008 ; >
+      au < ready ; 2009 ; 2 ; Revista Ibero-Americana de Ciência da Informação Volume 2009 ; 2009 ; >
+      au < ready ; 2010 ; 3 ; Revista Ibero-Americana de Ciência da Informação Volume 2010 ; 2010 ; >
+      au < ready ; 2011 ; 4 ; Revista Ibero-Americana de Ciência da Informação Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 5 ; Revista Ibero-Americana de Ciência da Informação Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 6 ; Revista Ibero-Americana de Ciência da Informação Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 7 ; Revista Ibero-Americana de Ciência da Informação Volume 2014 ; 2014 ; >
       }
   }
@@ -963,16 +963,16 @@
       {
       param[base_url] = http://periodicos.unb.br/
       
-      au < testing ; 2002 ; 1 ; Revista Sociedade e Estado Volume 2002 ; 2002 ; >
-      au < testing ; 2003 ; 2 ; Revista Sociedade e Estado Volume 2003 ; 2003 ; >
+      au < ready ; 2002 ; 1 ; Revista Sociedade e Estado Volume 2002 ; 2002 ; >
+      au < ready ; 2003 ; 2 ; Revista Sociedade e Estado Volume 2003 ; 2003 ; >
       au < testing ; 2004 ; 3 ; Revista Sociedade e Estado Volume 2004 ; 2004 ; >
-      au < testing ; 2005 ; 4 ; Revista Sociedade e Estado Volume 2005 ; 2005 ; >
-      au < testing ; 2006 ; 5 ; Revista Sociedade e Estado Volume 2006 ; 2006 ; >
-      au < testing ; 2007 ; 6 ; Revista Sociedade e Estado Volume 2007 ; 2007 ; >
-      au < testing ; 2008 ; 7 ; Revista Sociedade e Estado Volume 2008 ; 2008 ; >
+      au < ready ; 2005 ; 4 ; Revista Sociedade e Estado Volume 2005 ; 2005 ; >
+      au < ready ; 2006 ; 5 ; Revista Sociedade e Estado Volume 2006 ; 2006 ; >
+      au < ready ; 2007 ; 6 ; Revista Sociedade e Estado Volume 2007 ; 2007 ; >
+      au < ready ; 2008 ; 7 ; Revista Sociedade e Estado Volume 2008 ; 2008 ; >
       au < testing ; 2009 ; 8 ; Revista Sociedade e Estado Volume 2009 ; 2009 ; >
-      au < testing ; 2010 ; 9 ; Revista Sociedade e Estado Volume 2010 ; 2010 ; >
-      au < testing ; 2011 ; 10 ; Revista Sociedade e Estado Volume 2011 ; 2011 ; >
+      au < ready ; 2010 ; 9 ; Revista Sociedade e Estado Volume 2010 ; 2010 ; >
+      au < ready ; 2011 ; 10 ; Revista Sociedade e Estado Volume 2011 ; 2011 ; >
       au < expected ; 2014 ; 11 ; Revista Sociedade e Estado Volume 2014 ; 2014 ; >
       }
   }
