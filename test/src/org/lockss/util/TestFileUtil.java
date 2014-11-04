@@ -1,10 +1,10 @@
 /*
- * $Id: TestFileUtil.java,v 1.12 2010-02-23 05:04:40 pgust Exp $
+ * $Id: TestFileUtil.java,v 1.13 2014-11-04 18:11:57 fergaloy-sf Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -296,6 +296,18 @@ public class TestFileUtil extends LockssTestCase {
     File d1 = new File(dir, "foo");
     assertFalse(d1.exists());
     assertFalse(FileUtil.emptyDir(d1));
+  }
+
+  public void testSafeDeleteFile() throws IOException {
+    assertFalse(FileUtil.safeDeleteFile(null));
+    File dir = getTempDir("safeDelete");
+    writeFile(dir, "existingFile");
+    File f1 = new File(dir, "existingFile");
+    assertTrue(f1.exists());
+    assertTrue(FileUtil.safeDeleteFile(f1));
+    File f2 = new File(dir, "missingFile");
+    assertFalse(f2.exists());
+    assertFalse(FileUtil.safeDeleteFile(f2));
   }
 }
 

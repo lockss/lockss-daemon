@@ -1,8 +1,8 @@
 /*
- * $Id: FileUtil.java,v 1.14 2012-07-06 22:35:23 fergaloy-sf Exp $
+ * $Id: FileUtil.java,v 1.15 2014-11-04 18:11:57 fergaloy-sf Exp $
  *
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -359,7 +359,7 @@ public class FileUtil {
    */
   public static List<String> listTree(File root, String relativeTo,
 				    boolean includeDirs) {
-    List<String> res = new ArrayList();
+    List<String> res = new ArrayList<String>();
     listTree0(res, root, relativeTo, includeDirs);
     Collections.sort(res);
     return res;
@@ -461,4 +461,19 @@ public class FileUtil {
     }
   }
 
+  /**
+   * Deletes a file, handling a null reference appropriately.
+   * 
+   * @param f
+   *          A File with the file to be deleted.
+   * @return <code>true</code> if and only if the file is successfully deleted,
+   *         <code>false</code> otherwise.
+   */
+  public static boolean safeDeleteFile(File f) {
+    boolean result = false;
+    if (f != null) {
+      result = f.delete();
+    }
+    return result;
+  }
 }
