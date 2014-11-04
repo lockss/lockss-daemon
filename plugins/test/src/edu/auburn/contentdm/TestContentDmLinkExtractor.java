@@ -1,5 +1,5 @@
 /*
- * $Id: TestContentDmLinkExtractor.java,v 1.1 2014-10-16 06:57:47 tlipkis Exp $
+ * $Id: TestContentDmLinkExtractor.java,v 1.2 2014-11-04 16:47:24 tlipkis Exp $
  */
 
 /*
@@ -50,7 +50,7 @@ public class TestContentDmLinkExtractor extends LinkExtractorTestCase {
   }
 
   public LinkExtractorFactory getFactory() {
-    return new ContentDmLinkExtractorFactory();
+    return new DublinCoreLinkExtractor.Factory();
   }
 
   /** This is an error for Dublin Core; supress this test */

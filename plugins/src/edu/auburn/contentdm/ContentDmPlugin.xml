@@ -43,11 +43,11 @@
   </entry>
   <entry>
     <string>text/xml_link_extractor_factory</string>
-    <string>edu.auburn.contentdm.ContentDmLinkExtractorFactory</string>
+    <string>org.lockss.extractor.DublinCoreLinkExtractor$Factory</string>
   </entry>
   <entry>
     <string>application/xml_link_extractor_factory</string>
-    <string>edu.auburn.contentdm.ContentDmLinkExtractorFactory</string>
+    <string>org.lockss.extractor.DublinCoreLinkExtractor$Factory</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
