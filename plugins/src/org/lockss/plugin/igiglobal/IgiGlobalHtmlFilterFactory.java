@@ -1,5 +1,5 @@
 /*
- * $Id: IgiGlobalHtmlFilterFactory.java,v 1.9 2014-11-03 22:03:14 aishizaki Exp $
+ * $Id: IgiGlobalHtmlFilterFactory.java,v 1.10 2014-11-04 19:26:18 aishizaki Exp $
  */
 
 /*
@@ -108,17 +108,8 @@ public class IgiGlobalHtmlFilterFactory implements FilterFactory {
         // Article titles
         HtmlNodeFilters.tagWithAttribute("div", "class", "Title1 BorderBottom"),
         HtmlNodeFilters.tagWithAttributeRegex("h2", "style", "border-bottom"),
-        // removing cite/cited by/favorite buttons
-        HtmlNodeFilters.tagWithAttribute("span", "style", "display:inline-block;"),
-      
-        // Cite button
-        //HtmlNodeFilters.tagWithAttribute("span", "id", "citeContent"),
-        // Cited by button - only appears once cited
-       // HtmlNodeFilters.tagWithAttributeRegex("a",  "id", "cphCenterContent_lnkCiteContent"),
-        // Favorite button - seen two ways
-       // HtmlNodeFilters.tagWithAttributeRegex("span", "is", "cphMain_cphCenterContent_ucFaborite_favoriteContainer"),
-        // Favorite button
-        //HtmlNodeFilters.tagWithAttribute("span", "id", "ctl00_ctl00_cphMain_cphCenter_favorite"),
+
+        
         // Search box
         HtmlNodeFilters.tagWithAttribute("span", "class", "search-contents"),
         // Styling and markup of full text icons changed over time
@@ -130,7 +121,23 @@ public class IgiGlobalHtmlFilterFactory implements FilterFactory {
         
         // IGI Global books identifies library with access in header
         HtmlNodeFilters.tagWithAttribute("span", "id", "ctl00_ctl00_cphMain_cphCenter_lblHeader"),
-        
+        // removing cite/cited by/favorite buttons, if it's in a <span style="display:inline-block;"> tag
+        new TagNameFilter("span") {
+          @Override
+          public boolean accept(Node node) {
+            if (super.accept(node)) {
+              String spanStyle = ((CompositeTag) node).getAttribute("style");
+              if(spanStyle != null && spanStyle.equals("display:inline-block;")){
+                String spanText = ((CompositeTag) node).toPlainTextString();
+                if ((spanText.toLowerCase().contains("cite")) || 
+                    (spanText.toLowerCase().contains("favorite"))) {
+                  return true;
+                }
+              } 
+            }
+            return false;
+          }
+        },
         // <h3> replaced <h4> or vice versa at one point
         new TagNameFilter("h3"),
         new TagNameFilter("h4"),

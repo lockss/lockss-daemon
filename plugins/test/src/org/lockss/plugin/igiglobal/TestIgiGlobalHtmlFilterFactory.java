@@ -1,5 +1,5 @@
 /*
- * $Id: TestIgiGlobalHtmlFilterFactory.java,v 1.9 2014-11-03 22:03:14 aishizaki Exp $
+ * $Id: TestIgiGlobalHtmlFilterFactory.java,v 1.10 2014-11-04 19:26:18 aishizaki Exp $
  */
 
 /*
@@ -271,7 +271,7 @@ public class TestIgiGlobalHtmlFilterFactory extends LockssTestCase {
 
     assertEquals(footerWithSponsorFiltered, StringUtil.fromInputStream(actIn));
   }
-  public void testCitedByButtons() throws Exception {
+  public void testCiteButtons() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(null,
                                                        new StringInputStream(citedCitedByFavoriteButtons),
                                                        Constants.DEFAULT_ENCODING);
