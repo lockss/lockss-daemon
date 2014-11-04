@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimpleHasher.java,v 1.12 2014-10-29 20:11:58 fergaloy-sf Exp $
+ * $Id: TestSimpleHasher.java,v 1.13 2014-11-04 18:46:22 fergaloy-sf Exp $
  */
 
 /*
@@ -31,9 +31,6 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.hasher;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.*;
 import java.io.*;
 import java.security.*;
@@ -246,7 +243,7 @@ public class TestSimpleHasher extends LockssTestCase {
     SimpleHasher hasher = new SimpleHasher(null);
     HasherResult result = new HasherResult();
     String errorMessage = hasher.processHashTypeParam(params, result);
-    assertNull(result.getRunnerStatus());
+    assertEquals(HasherStatus.NotStarted, result.getRunnerStatus());
     assertNull(result.getRunnerError());
     assertNull(errorMessage);
     assertNull(params.getHashType());
@@ -255,7 +252,7 @@ public class TestSimpleHasher extends LockssTestCase {
     params.setHashType("V1Content");
     result = new HasherResult();
     errorMessage = hasher.processHashTypeParam(params, result);
-    assertNull(result.getRunnerStatus());
+    assertEquals(HasherStatus.NotStarted, result.getRunnerStatus());
     assertNull(result.getRunnerError());
     assertNull(errorMessage);
     assertEquals("V1Content", params.getHashType());
@@ -274,7 +271,7 @@ public class TestSimpleHasher extends LockssTestCase {
     params.setHashType("5");
     result = new HasherResult();
     errorMessage = hasher.processHashTypeParam(params, result);
-    assertNull(result.getRunnerStatus());
+    assertEquals(HasherStatus.NotStarted, result.getRunnerStatus());
     assertNull(result.getRunnerError());
     assertNull(errorMessage);
     assertEquals("V3File", params.getHashType());
@@ -295,7 +292,7 @@ public class TestSimpleHasher extends LockssTestCase {
     SimpleHasher hasher = new SimpleHasher(null);
     HasherResult result = new HasherResult();
     String errorMessage = hasher.processResultEncodingParam(params, result);
-    assertNull(result.getRunnerStatus());
+    assertEquals(HasherStatus.NotStarted, result.getRunnerStatus());
     assertNull(result.getRunnerError());
     assertNull(errorMessage);
     assertNull(params.getResultEncoding());
@@ -305,7 +302,7 @@ public class TestSimpleHasher extends LockssTestCase {
     params.setResultEncoding("Base64");
     result = new HasherResult();
     errorMessage = hasher.processResultEncodingParam(params, result);
-    assertNull(result.getRunnerStatus());
+    assertEquals(HasherStatus.NotStarted, result.getRunnerStatus());
     assertNull(result.getRunnerError());
     assertNull(errorMessage);
     assertEquals("Base64", params.getResultEncoding());
@@ -357,7 +354,7 @@ public class TestSimpleHasher extends LockssTestCase {
     result.setHashType(SimpleHasher.DEFAULT_HASH_TYPE);
 
     errorMessage = hasher.processParams(params, result);
-    assertNull(result.getRunnerStatus());
+    assertEquals(HasherStatus.NotStarted, result.getRunnerStatus());
     assertNull(result.getRunnerError());
     assertNull(errorMessage);
     // Clean up the result file.
@@ -427,7 +424,7 @@ public class TestSimpleHasher extends LockssTestCase {
     ArchivalUnit au = createAndStartAu();
     String errorMessage = hasher.processCus(au.getAuId(), AuCachedUrlSetSpec.URL,
 	null, null, HashType.V3Tree, result);
-    assertNull(result.getRunnerStatus());
+    assertEquals(HasherStatus.NotStarted, result.getRunnerStatus());
     assertNull(errorMessage);
     assertNull(result.getRunnerError());
     CachedUrlSet cus = result.getCus();
@@ -438,7 +435,7 @@ public class TestSimpleHasher extends LockssTestCase {
 
     errorMessage = hasher.processCus(au.getAuId(), AuCachedUrlSetSpec.URL, null,
 	null, HashType.V3Tree, result);
-    assertNull(result.getRunnerStatus());
+    assertEquals(HasherStatus.NotStarted, result.getRunnerStatus());
     assertNull(errorMessage);
     assertNull(result.getRunnerError());
     cus = result.getCus();
@@ -617,7 +614,7 @@ public class TestSimpleHasher extends LockssTestCase {
     hasher.processParams(params, result);
 
     hasher.doV1(result.getCus().getContentHasher(digest), result);
-    assertNull(result.getRunnerStatus());
+    assertEquals(HasherStatus.NotStarted, result.getRunnerStatus());
     assertNull(result.getRunnerError());
     assertTrue(result.isShowResult());
     assertEquals(expectedHash, ByteArray.toHexString(result.getHashResult()));
@@ -976,7 +973,7 @@ public class TestSimpleHasher extends LockssTestCase {
     } else {
       assertEquals(hashType, result.getHashType().toString());
     }
-    assertNull(result.getRunnerStatus());
+    assertEquals(HasherStatus.NotStarted, result.getRunnerStatus());
     assertNull(result.getRunnerError());
     assertTrue(result.isShowResult());
     assertNull(result.getHashResult());

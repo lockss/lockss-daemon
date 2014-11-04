@@ -1,5 +1,5 @@
 /*
- * $Id: HashCUS.java,v 1.56 2014-10-29 18:13:00 fergaloy-sf Exp $
+ * $Id: HashCUS.java,v 1.57 2014-11-04 18:46:22 fergaloy-sf Exp $
  */
 
 /*
@@ -295,6 +295,7 @@ public class HashCUS extends LockssServlet {
 
 	tbl.newCell();
 	switch (entryResult.getRunnerStatus()) {
+	case NotStarted:
 	case Init:
 	case Starting:
 	case Running: 
@@ -374,6 +375,7 @@ public class HashCUS extends LockssServlet {
       return;
     }
     switch (backgroundResult.getRunnerStatus()) {
+    case NotStarted:
     case Init:
     case Starting:
     case Running: 
@@ -384,18 +386,12 @@ public class HashCUS extends LockssServlet {
       break;
     default:
     }
-    delFile(backgroundResult.getBlockFile());
-    delFile(backgroundResult.getRecordFile());
+    FileUtil.safeDeleteFile(backgroundResult.getBlockFile());
+    FileUtil.safeDeleteFile(backgroundResult.getRecordFile());
 
     delRequest(reqId);
     statusMsg = "Background hash " + reqId + " deleted";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
-  }
-
-  private void delFile(File f) {
-    if (f != null) {
-      f.delete();
-    }
   }
 
   void checkStatus(String reqId, HasherResult result) {
@@ -970,10 +966,10 @@ public class HashCUS extends LockssServlet {
       String reqId = SimpleHasher.getReqId(params, result, getRequestMap());
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "reqId = " + reqId);
 
-      hasher.getHashingThread(params, result);
+      hasher.startHashingThread(params, result);
       statusMsg = "Queued background hash, Req Id: " + reqId;
     } catch (RuntimeException e) {
-      log.warning("hashSynchronously()", e);
+      log.warning("hashAsynchronously()", e);
       errorMessage = "Error starting background hash thread: " + e.toString();
     }
 

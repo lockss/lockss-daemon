@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleHasher.java,v 1.11 2014-10-29 18:13:00 fergaloy-sf Exp $
+ * $Id: SimpleHasher.java,v 1.12 2014-11-04 18:46:22 fergaloy-sf Exp $
  */
 
 /*
@@ -111,7 +111,7 @@ public class SimpleHasher {
    * The possible statuses of a hasher.
    */
   public static enum HasherStatus {
-    Init, Starting, Running, Done, Error, RequestError;
+    NotStarted, Init, Starting, Running, Done, Error, RequestError;
    }
 
   /**
@@ -326,7 +326,7 @@ public class SimpleHasher {
     final String DEBUG_HEADER = "hash(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
     result.setStartTime(TimeBase.nowMs());
-    result.setRunnerStatus(HasherStatus.Running);
+    result.setRunnerStatus(HasherStatus.Init);
 
     processHashTypeParam(params, result);
     if (HasherStatus.Error == result.getRunnerStatus()) {
@@ -339,12 +339,18 @@ public class SimpleHasher {
     }
 
     processParams(params, result);
+    if (HasherStatus.Error == result.getRunnerStatus()) {
+      return;
+    }
 
     try {
       digest = makeDigest(params.getAlgorithm(),
 	  params.isRecordFilteredStream(), result);
 
       if (digest == null) {
+	log.warning(DEBUG_HEADER + "No digest could be obtained");
+	result.setRunnerStatus(HasherStatus.Error);
+	result.setRunnerError("No digest could be obtained");
         return;
       }
     } catch (NoSuchAlgorithmException nsae) {
@@ -358,6 +364,8 @@ public class SimpleHasher {
       result.setRunnerError("Error making digest: " + e.getMessage());
       return;
     }
+
+    result.setRunnerStatus(HasherStatus.Running);
 
     try {
       switch (result.getHashType()) {
@@ -512,26 +520,13 @@ public class SimpleHasher {
       }
     }
 
-    if (StringUtil.isNullString(params.getAuId())) {
-      log.warning(DEBUG_HEADER + "No AU identifer has been specified");
-      result.setRunnerStatus(HasherStatus.Error);
-      result.setRunnerError("No AU identifer has been specified");
-      return "Select an AU";
+    errorMessage = processAuIdParam(params, result);
+
+    if (errorMessage != null) {
+      if (log.isDebug2())
+	log.debug2(DEBUG_HEADER + "errorMessage = " + errorMessage);
+      return errorMessage;
     }
-
-    ArchivalUnit au = LockssDaemon.getLockssDaemon().getPluginManager()
-	.getAuFromId(params.getAuId());
-
-    if (au == null) {
-      log.warning(DEBUG_HEADER + "No AU exists with the specified identifier "
-	  + params.getAuId());
-      result.setRunnerStatus(HasherStatus.Error);
-      result.setRunnerError("No AU exists with the specified identifier "
-	  + params.getAuId());
-      return "No such AU.  Select an AU";
-    }
-
-    result.setAu(au);
 
     if (StringUtil.isNullString(params.getUrl())) {
       params.setUrl(AuCachedUrlSetSpec.URL);
@@ -563,6 +558,48 @@ public class SimpleHasher {
 
     errorMessage = processCus(params.getAuId(), params.getUrl(),
 	params.getLower(), params.getUpper(), result.getHashType(), result);
+
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "errorMessage = " + errorMessage);
+    return errorMessage;
+  }
+
+  /**
+   * Handles the specification of the Archival Unit to be hashed.
+   * 
+   * @param params
+   *          A HasherParams with the parameters that define the hashing
+   *          operation.
+   * @param result
+   *          A HasherResult where to store the result of the hashing operation.
+   * @return a String with any error message.
+   */
+  private String processAuIdParam(HasherParams params, HasherResult result) {
+    final String DEBUG_HEADER = "processAuIdParam(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    String errorMessage = null;
+
+    if (StringUtil.isNullString(params.getAuId())) {
+      log.warning(DEBUG_HEADER + "No AU identifer has been specified");
+      result.setRunnerStatus(HasherStatus.Error);
+      result.setRunnerError("No AU identifer has been specified");
+      return "Select an AU";
+    }
+
+    ArchivalUnit au = LockssDaemon.getLockssDaemon().getPluginManager()
+	.getAuFromId(params.getAuId());
+
+    if (au == null) {
+      log.warning(DEBUG_HEADER + "No AU exists with the specified identifier "
+	  + params.getAuId());
+      result.setRunnerStatus(HasherStatus.Error);
+      result.setRunnerError("No AU exists with the specified identifier "
+	  + params.getAuId());
+      return "No such AU.  Select an AU";
+    }
+
+    result.setAu(au);
 
     if (log.isDebug2())
       log.debug2(DEBUG_HEADER + "errorMessage = " + errorMessage);
@@ -860,8 +897,7 @@ public class SimpleHasher {
   }
 
   /**
-   * Provides a thread that may be used to perform a hashing operation
-   * asynchronously.
+   * Starts a thread used to perform a hashing operation asynchronously.
    * 
    * @param params
    *          A HasherParams with the parameters that define the hashing
@@ -869,8 +905,21 @@ public class SimpleHasher {
    * @param result
    *          A HasherResult where to store the result of the hashing operation.
    */
-  public void getHashingThread(final HasherParams params,
+  public void startHashingThread(final HasherParams params,
       final HasherResult result) {
+    final String DEBUG_HEADER = "startHashingThread(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "params = " + params);
+      log.debug2(DEBUG_HEADER + "result = " + result);
+    }
+
+    if (result.getAu() == null) {
+      String errorMessage = processAuIdParam(params, result);
+      if (errorMessage != null) {
+	throw new RuntimeException(errorMessage);
+      }
+    }
+
     LockssRunnable runnable =
 	new LockssRunnable(AuUtil.getThreadNameFor("HashCUS", result.getAu())) {
       public void lockssRun() {

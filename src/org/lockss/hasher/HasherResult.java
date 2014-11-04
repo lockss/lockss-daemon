@@ -1,5 +1,5 @@
 /*
- * $Id: HasherResult.java,v 1.1 2014-10-29 18:13:00 fergaloy-sf Exp $
+ * $Id: HasherResult.java,v 1.2 2014-11-04 18:46:22 fergaloy-sf Exp $
  */
 
 /*
@@ -54,7 +54,7 @@ public class HasherResult {
   private File blockFile;
   private Future<Void> future;
   private String runnerError;
-  private HasherStatus runnerStatus;
+  private HasherStatus runnerStatus = HasherStatus.NotStarted;
   private byte[] hashResult;
   private long bytesHashed;
   private int filesHashed;
