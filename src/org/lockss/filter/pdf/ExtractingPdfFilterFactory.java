@@ -1,10 +1,10 @@
 /*
- * $Id: ExtractingPdfFilterFactory.java,v 1.6 2014-11-01 00:36:34 thib_gc Exp $
+ * $Id: ExtractingPdfFilterFactory.java,v 1.7 2014-11-05 00:52:13 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
