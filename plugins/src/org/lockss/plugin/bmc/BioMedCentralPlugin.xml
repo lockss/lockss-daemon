@@ -17,7 +17,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>32</string>
+    <string>33</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -32,7 +32,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>11</string>
+        <string>12</string>
       </entry>
     </map>
   </entry>
@@ -96,7 +96,7 @@
       <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(\?\d+)?$", base_url_host</string>
       <string>4,"^%s.{0,150}", base_url</string>
       <string>2,"^%sregistration", base_url</string>
-      <string>2,"^%s(content|\d{4})/%s/.*/(about|citations-pubmedcentral|comments|email|postcomment)$", base_url, volume_name</string> <!-- excluding a login-type page -->
+      <string>2,"^%s(content|\d{4})/%s/.*/(about|citations-pubmedcentral|prepub|comments|email|postcomment)$", base_url, volume_name</string> <!-- excluding a login-type page -->
       <string>2,"^%s(content|\d{4})/%s/.*\?fmt_view=(classic|mobile)$", base_url, volume_name</string>
       <string>2,"^%s%s/%s/[^/]+/(about|comments|email|postcomment)", base_url, journal_issn, volume_name</string>
       <string>2,"^%s(content|\d{4})/%s/.*email\?from=standard$", base_url, volume_name</string>      
