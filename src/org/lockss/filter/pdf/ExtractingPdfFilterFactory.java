@@ -1,5 +1,5 @@
 /*
- * $Id: ExtractingPdfFilterFactory.java,v 1.7 2014-11-05 00:52:13 thib_gc Exp $
+ * $Id: ExtractingPdfFilterFactory.java,v 1.8 2014-11-05 01:02:43 thib_gc Exp $
  */
 
 /*
@@ -203,6 +203,26 @@ public abstract class ExtractingPdfFilterFactory
       outputString(pdfDocument.getTitle());
     }
     
+    /**
+     * <p>
+     * Calls:
+     * </p>
+     * <ul>
+     * <li>{@link #outputCreationDate()}</li>
+     * <li>{@link #outputModificationDate()}</li>
+     * <li>{@link #outputAuthor()}</li>
+     * <li>{@link #outputCreator()}</li>
+     * <li>{@link #outputLanguage()}</li>
+     * <li>{@link #outputProducer()}</li>
+     * <li>{@link #outputSubject()}</li>
+     * <li>{@link #outputTitle()}</li>
+     * <li>{@link #outputMetadata()}</li>
+     * </ul>
+     * 
+     * @throws PdfException
+     *           if any processing error occurs.
+     * @since 1.67
+     */
     public void outputDocumentInformation() throws PdfException {
       outputCreationDate();
       outputModificationDate();
@@ -215,18 +235,33 @@ public abstract class ExtractingPdfFilterFactory
       outputMetadata();
     }
     
-    @Override
-    public void transform(ArchivalUnit au,
-                          PdfDocument pdfDocument)
-        throws PdfException {
-      this.au = au;
-      this.pdfDocument = pdfDocument;
+    /**
+     * <p>
+     * Calls {@link #outputDocumentInformation()}, and then for each page,
+     * {@link #outputPage(PdfPage)}.
+     * </p>
+     * 
+     * @param pdfDocument
+     *          A PDF document.
+     * @throws PdfException
+     *           if any processing error occurs.
+     * @since 1.67
+     */
+    public void outputDocument(PdfDocument pdfDocument) throws PdfException {
       outputDocumentInformation();
       for (PdfPage pdfPage : pdfDocument.getPages()) {
         outputPage(pdfPage);
       }
     }
 
+    @Override
+    public void transform(ArchivalUnit au,
+                          PdfDocument pdfDocument)
+        throws PdfException {
+      this.au = au;
+      this.pdfDocument = pdfDocument;
+      outputDocument(pdfDocument);
+    }
   }
   
   /**
