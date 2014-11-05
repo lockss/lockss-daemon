@@ -6,7 +6,7 @@
 tpath="/home/$LOGNAME/tmp"
 mkdir -p $tpath
 
-cd ../../plugins/src
+cd plugins/src
 
 #To get the plugins with and without status:
 grep -r -A 1 --include "*.xml" "<string>plugin_status</string>" * | grep "\- " | sed 's/.*\/\(.*\).xml-.*<string>\(.*\)<\/string>/\1\t\2/' > $tpath/foo01.txt
