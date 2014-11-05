@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.383 2014-10-24 21:23:03 tlipkis Exp $
+ $Id: build.xml,v 1.384 2014-11-05 01:20:07 thib_gc Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -246,7 +246,7 @@ Args:
   <property name="commons.codec.jar"
   				  value="${lib}/commons-codec-1.9.jar"/>
   <property name="commons.compress.jar"
-  				  value="${lib}/commons-compress-1.8.1.jar"/>
+  				  value="${lib}/commons-compress-1.9.jar"/>
   <property name="commons.httpclient.jar"
   			value="${lib}/commons-httpclient-3.0-rc4.jar"/>
   <property name="commons.io.jar"
