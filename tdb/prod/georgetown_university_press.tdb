@@ -1,0 +1,24 @@
+{
+  publisher <
+    name = Georgetown University Press
+  >
+
+  implicit < status ; year; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Al-ʿArabiyya: Journal of the American Association of Teachers of Arabic ;
+      issn = 0889-8731 ;
+      eissn = 2375-4036
+    >
+
+    param[journal_dir] = arabiyya_journal_of_the_american_association_of_teachers_of_arabic
+    attr[journal_id] = ara
+    
+    au < exists ; 2014 ; Al-ʿArabiyya: Journal of the American Association of Teachers of Arabic Volume 47 ; 47 >
+  }
+
+}
