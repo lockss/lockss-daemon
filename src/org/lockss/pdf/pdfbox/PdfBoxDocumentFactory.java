@@ -1,10 +1,10 @@
 /*
- * $Id: PdfBoxDocumentFactory.java,v 1.5 2014-08-22 12:28:37 thib_gc Exp $
+ * $Id: PdfBoxDocumentFactory.java,v 1.6 2014-11-05 01:19:23 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -44,6 +44,7 @@ import org.lockss.util.IOUtil;
  * <p>
  * A {@link PdfDocumentFactory} implementation based on PDFBox 1.6.0.
  * </p>
+ * 
  * @author Thib Guicherd-Callin
  * @since 1.56
  * @see <a href="http://pdfbox.apache.org/">PDFBox site</a>
@@ -60,12 +61,7 @@ public class PdfBoxDocumentFactory implements PdfDocumentFactory {
       PDFParser pdfParser = new PDFParser(pdfInputStream);
       pdfParser.parse(); // Probably closes the input stream
       PDDocument pdDocument = pdfParser.getPDDocument();
-    
-      pdDocument.setAllSecurityToBeRemoved(true);
-      if (pdDocument.isEncrypted()) {
-        pdDocument.decrypt("");
-      }
-
+      processAfterParse(pdDocument);
       return new PdfBoxDocument(pdDocument);
     }
     catch (CryptographyException ce) {
@@ -77,6 +73,28 @@ public class PdfBoxDocumentFactory implements PdfDocumentFactory {
     finally {
       // PDFBox normally closes the input stream, but just in case
       IOUtil.safeClose(pdfInputStream);
+    }
+  }
+
+  /**
+   * <p>
+   * Override this method to alter the processing of the {@link PDDocument}
+   * instance after it has been parsed by {@link PDFParser#parse()}.
+   * </p>
+   * 
+   * @param pdDocument
+   *          A freshly parsed {@link PDDocument} instance
+   * @throws CryptographyException
+   *           if a cryptography exception is thrown
+   * @throws IOException
+   *           if an I/O exception is thrown
+   * @since 1.67
+   */
+  protected void processAfterParse(PDDocument pdDocument)
+      throws CryptographyException, IOException {
+    pdDocument.setAllSecurityToBeRemoved(true);
+    if (pdDocument.isEncrypted()) {
+      pdDocument.decrypt("");
     }
   }
   
