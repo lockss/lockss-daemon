@@ -1,5 +1,5 @@
 /*
- * $Id: HasherResult.java,v 1.2 2014-11-04 18:46:22 fergaloy-sf Exp $
+ * $Id: HasherResult.java,v 1.3 2014-11-05 19:57:04 fergaloy-sf Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.hasher;
 
 import java.io.File;
+import java.io.OutputStream;
 import java.util.Arrays;
 import java.util.concurrent.Future;
 import org.lockss.plugin.ArchivalUnit;
@@ -51,6 +52,7 @@ public class HasherResult {
   private boolean showResult = false;
   private long requestTime;
   private File recordFile;
+  private OutputStream recordStream;
   private File blockFile;
   private Future<Void> future;
   private String runnerError;
@@ -131,6 +133,14 @@ public class HasherResult {
 
   public void setRecordFile(File recordFile) {
     this.recordFile = recordFile;
+  }
+
+  public OutputStream getRecordStream() {
+    return recordStream;
+  }
+
+  public void setRecordStream(OutputStream recordStream) {
+    this.recordStream = recordStream;
   }
 
   public File getBlockFile() {
@@ -232,11 +242,11 @@ public class HasherResult {
 	+ resultEncoding + ", au=" + au + ", challenge="
 	+ Arrays.toString(challenge) + ", verifier=" + Arrays.toString(verifier)
 	+ ", cus=" + cus + ", showResult=" + showResult + ", requestTime="
-	+ requestTime + ", recordFile="	+ recordFile + ", blockFile="
-	+ blockFile + ", future=" + future + ", runnerError=" + runnerError
-	+ ", runnerStatus=" + runnerStatus + ", hashResult="
-	+ Arrays.toString(hashResult) + ", bytesHashed=" + bytesHashed
-	+ ", filesHashed=" + filesHashed + ", startTime=" + startTime
-	+ ", elapsedTime=" + elapsedTime + "]";
+	+ requestTime + ", recordFile="	+ recordFile + ", recordStream="
+	+ recordStream + ", blockFile=" + blockFile + ", future=" + future
+	+ ", runnerError=" + runnerError + ", runnerStatus=" + runnerStatus
+	+ ", hashResult=" + Arrays.toString(hashResult) + ", bytesHashed="
+	+ bytesHashed + ", filesHashed=" + filesHashed + ", startTime="
+	+ startTime + ", elapsedTime=" + elapsedTime + "]";
   }
 }

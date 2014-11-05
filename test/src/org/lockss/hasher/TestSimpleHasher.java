@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimpleHasher.java,v 1.13 2014-11-04 18:46:22 fergaloy-sf Exp $
+ * $Id: TestSimpleHasher.java,v 1.14 2014-11-05 19:57:04 fergaloy-sf Exp $
  */
 
 /*
@@ -460,18 +460,19 @@ public class TestSimpleHasher extends LockssTestCase {
 
   public void testMakeDigest() throws Exception {
     HasherResult result = new HasherResult();
-    MessageDigest digest = new SimpleHasher(null)
-    .makeDigest(LcapMessage.getDefaultHashAlgorithm(), false, result);
+    MessageDigest digest = new SimpleHasher(null).makeDigestAndRecordStream(
+	LcapMessage.getDefaultHashAlgorithm(), false, result);
 
     assertTrue(digest instanceof MessageDigest);
     assertFalse(digest instanceof RecordingMessageDigest);
     assertEquals(LcapMessage.getDefaultHashAlgorithm(), digest.getAlgorithm());
     assertEquals(20, digest.getDigestLength());
     assertNull(result.getRecordFile());
+    assertNull(result.getRecordStream());
 
     result = new HasherResult();
-    digest = new SimpleHasher(null)
-    .makeDigest(LcapMessage.getDefaultHashAlgorithm(), true, result);
+    digest = new SimpleHasher(null).makeDigestAndRecordStream(
+	LcapMessage.getDefaultHashAlgorithm(), true, result);
 
     assertTrue(digest instanceof MessageDigest);
     assertTrue(digest instanceof RecordingMessageDigest);
@@ -479,61 +480,74 @@ public class TestSimpleHasher extends LockssTestCase {
     assertEquals(20, digest.getDigestLength());
     assertTrue(result.getRecordFile().getName().startsWith("HashCUS"));
     assertTrue(result.getRecordFile().getName().endsWith(".tmp"));
+    assertNotNull(result.getRecordStream());
     // Clean up the result file.
     result.getRecordFile().delete();
+    IOUtil.safeClose(result.getRecordStream());
 
     result = new HasherResult();
-    digest = new SimpleHasher(null).makeDigest("SHA", false, result);
+    digest =
+	new SimpleHasher(null).makeDigestAndRecordStream("SHA", false, result);
 
     assertTrue(digest instanceof MessageDigest);
     assertFalse(digest instanceof RecordingMessageDigest);
     assertEquals("SHA", digest.getAlgorithm());
     assertEquals(20, digest.getDigestLength());
     assertNull(result.getRecordFile());
+    assertNull(result.getRecordStream());
 
     result = new HasherResult();
-    digest = new SimpleHasher(null).makeDigest("SHA1", false, result);
+    digest =
+	new SimpleHasher(null).makeDigestAndRecordStream("SHA1", false, result);
 
     assertTrue(digest instanceof MessageDigest);
     assertFalse(digest instanceof RecordingMessageDigest);
     assertEquals("SHA1", digest.getAlgorithm());
     assertEquals(20, digest.getDigestLength());
     assertNull(result.getRecordFile());
+    assertNull(result.getRecordStream());
 
     result = new HasherResult();
-    digest = new SimpleHasher(null).makeDigest("MD5", false, result);
+    digest =
+	new SimpleHasher(null).makeDigestAndRecordStream("MD5", false, result);
 
     assertTrue(digest instanceof MessageDigest);
     assertFalse(digest instanceof RecordingMessageDigest);
     assertEquals("MD5", digest.getAlgorithm());
     assertEquals(16, digest.getDigestLength());
     assertNull(result.getRecordFile());
+    assertNull(result.getRecordStream());
 
     result = new HasherResult();
-    digest = new SimpleHasher(null).makeDigest("SHA-256", false, result);
+    digest = new SimpleHasher(null).makeDigestAndRecordStream("SHA-256", false,
+	result);
 
     assertTrue(digest instanceof MessageDigest);
     assertFalse(digest instanceof RecordingMessageDigest);
     assertEquals("SHA-256", digest.getAlgorithm());
     assertEquals(32, digest.getDigestLength());
     assertNull(result.getRecordFile());
+    assertNull(result.getRecordStream());
 
     try {
-      digest = new SimpleHasher(null).makeDigest(null, false, result);
+      digest =
+	  new SimpleHasher(null).makeDigestAndRecordStream(null, false, result);
       fail("Null algorithm should throw NullPointerException");
     } catch (NullPointerException npe) {
       // Expected.
     }
 
     try {
-      digest = new SimpleHasher(null).makeDigest("SHA256", false, result);
+      digest = new SimpleHasher(null).makeDigestAndRecordStream("SHA256", false,
+	  result);
       fail("Invalid algorithm should throw NoSuchAlgorithmException");
     } catch (NoSuchAlgorithmException nsae) {
       // Expected.
     }
 
     try {
-      digest = new SimpleHasher(null).makeDigest("FGL", false, result);
+      digest = new SimpleHasher(null).makeDigestAndRecordStream("FGL", false,
+	  result);
       fail("Invalid algorithm should throw NoSuchAlgorithmException");
     } catch (NoSuchAlgorithmException nsae) {
       // Expected.
@@ -603,8 +617,8 @@ public class TestSimpleHasher extends LockssTestCase {
       String challenge, String verifier, String expectedHash) throws Exception {
     HasherParams params = new HasherParams("thisMachine", false);
     HasherResult result = new HasherResult();
-    MessageDigest digest =
-	new SimpleHasher(null).makeDigest(digestType, false, result);
+    MessageDigest digest = new SimpleHasher(null).makeDigestAndRecordStream(
+	digestType, false, result);
     SimpleHasher hasher = new SimpleHasher(digest);
     hasher.processHashTypeParam(params, result);
     params.setAuId(au.getAuId());
@@ -954,8 +968,8 @@ public class TestSimpleHasher extends LockssTestCase {
       String expectedVoterNonceLine, String expectedHashLine) throws Exception {
     HasherParams params = new HasherParams("thisMachine", false);
     HasherResult result = new HasherResult();
-    MessageDigest digest =
-	new SimpleHasher(null).makeDigest(digestType, false, result);
+    MessageDigest digest = new SimpleHasher(null).makeDigestAndRecordStream(
+	digestType, false, result);
     SimpleHasher hasher = new SimpleHasher(digest);
     params.setHashType(hashType);
     hasher.processHashTypeParam(params, result);

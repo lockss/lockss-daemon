@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleHasher.java,v 1.12 2014-11-04 18:46:22 fergaloy-sf Exp $
+ * $Id: SimpleHasher.java,v 1.13 2014-11-05 19:57:04 fergaloy-sf Exp $
  */
 
 /*
@@ -344,53 +344,58 @@ public class SimpleHasher {
     }
 
     try {
-      digest = makeDigest(params.getAlgorithm(),
-	  params.isRecordFilteredStream(), result);
+      try {
+	digest = makeDigestAndRecordStream(params.getAlgorithm(),
+	    params.isRecordFilteredStream(), result);
 
-      if (digest == null) {
-	log.warning(DEBUG_HEADER + "No digest could be obtained");
+	if (digest == null) {
+	  log.warning(DEBUG_HEADER + "No digest could be obtained");
+	  result.setRunnerStatus(HasherStatus.Error);
+	  result.setRunnerError("No digest could be obtained");
+	  return;
+	}
+      } catch (NoSuchAlgorithmException nsae) {
+	log.warning(DEBUG_HEADER, nsae);
 	result.setRunnerStatus(HasherStatus.Error);
-	result.setRunnerError("No digest could be obtained");
-        return;
-      }
-    } catch (NoSuchAlgorithmException nsae) {
-      log.warning(DEBUG_HEADER, nsae);
-      result.setRunnerStatus(HasherStatus.Error);
-      result.setRunnerError("Invalid hashing algorithm: " + nsae.getMessage());
-      return;
-    } catch (Exception e) {
-      log.warning(DEBUG_HEADER, e);
-      result.setRunnerStatus(HasherStatus.Error);
-      result.setRunnerError("Error making digest: " + e.getMessage());
-      return;
-    }
-
-    result.setRunnerStatus(HasherStatus.Running);
-
-    try {
-      switch (result.getHashType()) {
-      case V1Content:
-      case V1File:
-	doV1(result.getCus().getContentHasher(digest), result);
-	break;
-      case V1Name:
-	doV1(result.getCus().getNameHasher(digest), result);
-	break;
-      case V3Tree:
-      case V3File:
-	doV3(params.getMachineName(), params.isExcludeSuspectVersions(),
-	    result);
-	break;
+	result.setRunnerError("Invalid hashing algorithm: "
+	    + nsae.getMessage());
+	return;
+      } catch (Exception e) {
+	log.warning(DEBUG_HEADER, e);
+	result.setRunnerStatus(HasherStatus.Error);
+	result.setRunnerError("Error making digest: " + e.getMessage());
+	return;
       }
 
-      result.setBytesHashed(getBytesHashed());
-      result.setFilesHashed(getFilesHashed());
-      result.setElapsedTime(getElapsedTime());
-      result.setRunnerStatus(HasherStatus.Done);
-    } catch (Exception e) {
-      log.warning("hash()", e);
-      result.setRunnerStatus(HasherStatus.Error);
-      result.setRunnerError("Error hashing: " + e.getMessage());
+      result.setRunnerStatus(HasherStatus.Running);
+
+      try {
+	switch (result.getHashType()) {
+	case V1Content:
+	case V1File:
+	  doV1(result.getCus().getContentHasher(digest), result);
+	  break;
+	case V1Name:
+	  doV1(result.getCus().getNameHasher(digest), result);
+	  break;
+	case V3Tree:
+	case V3File:
+	  doV3(params.getMachineName(), params.isExcludeSuspectVersions(),
+	      result);
+	  break;
+	}
+
+	result.setBytesHashed(getBytesHashed());
+	result.setFilesHashed(getFilesHashed());
+	result.setElapsedTime(getElapsedTime());
+	result.setRunnerStatus(HasherStatus.Done);
+      } catch (Exception e) {
+	log.warning("hash()", e);
+	result.setRunnerStatus(HasherStatus.Error);
+	result.setRunnerError("Error hashing: " + e.getMessage());
+      }
+    } finally {
+      IOUtil.safeClose(result.getRecordStream());
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
@@ -508,7 +513,7 @@ public class SimpleHasher {
       params.setAlgorithm(LcapMessage.getDefaultHashAlgorithm());
     }
 
-    if (isV3(result.getHashType())) {
+    if (isV3(result.getHashType()) && result.getBlockFile() == null) {
       try {
 	result.setBlockFile(FileUtil.createTempFile("HashCUS", ".tmp"));
       } catch (IOException ioe) {
@@ -520,12 +525,13 @@ public class SimpleHasher {
       }
     }
 
-    errorMessage = processAuIdParam(params, result);
-
-    if (errorMessage != null) {
-      if (log.isDebug2())
-	log.debug2(DEBUG_HEADER + "errorMessage = " + errorMessage);
-      return errorMessage;
+    if (result.getAu() == null) {
+      errorMessage = processAuIdParam(params, result);
+      if (errorMessage != null) {
+	if (log.isDebug2())
+	  log.debug2(DEBUG_HEADER + "errorMessage = " + errorMessage);
+	return errorMessage;
+      }
     }
 
     if (StringUtil.isNullString(params.getUrl())) {
@@ -660,7 +666,7 @@ public class SimpleHasher {
    */
   String processCus(String auId, String url, String lower, String upper,
       HashType hashType, HasherResult result) {
-    final String DEBUG_HEADER = "checkCus(): ";
+    final String DEBUG_HEADER = "processCus(): ";
     if (log.isDebug2()) {
       log.debug2(DEBUG_HEADER + "auId = " + auId);
       log.debug2(DEBUG_HEADER + "url = " + url);
@@ -720,7 +726,8 @@ public class SimpleHasher {
   }
 
   /**
-   * Provides the digest to be used in the hashing operation.
+   * Provides the digest to be used in the hashing operation and it sets up the
+   * filtered output stream if necessary.
    * 
    * @param algorithm
    *          A String with the type of digest to be used.
@@ -733,9 +740,10 @@ public class SimpleHasher {
    * @throws IOException
    * @throws NoSuchAlgorithmException
    */
-  MessageDigest makeDigest(String algorithm, boolean isRecordFilteredStream,
-      HasherResult result) throws IOException, NoSuchAlgorithmException {
-    final String DEBUG_HEADER = "makeDigest(): ";
+  MessageDigest makeDigestAndRecordStream(String algorithm,
+      boolean isRecordFilteredStream, HasherResult result)
+	  throws IOException, NoSuchAlgorithmException {
+    final String DEBUG_HEADER = "makeDigestAndRecordStream(): ";
     if (log.isDebug2()) {
       log.debug2(DEBUG_HEADER + "algorithm = " + algorithm);
       log.debug2(DEBUG_HEADER + "isRecordFilteredStream = "
@@ -743,31 +751,27 @@ public class SimpleHasher {
       log.debug2(DEBUG_HEADER + "result = " + result);
     }
 
-    OutputStream recordStream = null;
+    digest = MessageDigest.getInstance(algorithm);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "digest = " + digest);
 
-    try {
-      MessageDigest digest = MessageDigest.getInstance(algorithm);
+    if (isRecordFilteredStream) {
+      result.setRecordFile(FileUtil.createTempFile("HashCUS", ".tmp"));
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "result.getRecordFile() = "
+	  + result.getRecordFile());
+      OutputStream recordStream = new BufferedOutputStream(
+	  new FileOutputStream(result.getRecordFile()));
+      long truncateTo = CurrentConfig.getLongParam(
+	  PARAM_TRUNCATE_FILTERED_STREAM, DEFAULT_TRUNCATE_FILTERED_STREAM);
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "truncateTo = " + truncateTo);
+      digest = new RecordingMessageDigest(digest, recordStream, truncateTo);
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "digest = " + digest);
 
-      if (isRecordFilteredStream) {
-	result.setRecordFile(FileUtil.createTempFile("HashCUS", ".tmp"));
-	if (log.isDebug3()) log.debug3(DEBUG_HEADER
-	    + "result.getRecordFile() = " + result.getRecordFile());
-	recordStream = new BufferedOutputStream(new FileOutputStream(result
-	    .getRecordFile()));
-	long truncateTo = CurrentConfig.getLongParam(
-	    PARAM_TRUNCATE_FILTERED_STREAM, DEFAULT_TRUNCATE_FILTERED_STREAM);
-	if (log.isDebug3())
-	  log.debug3(DEBUG_HEADER + "truncateTo = " + truncateTo);
-	digest = new RecordingMessageDigest(digest, recordStream, truncateTo);
-	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "digest = " + digest);
-      }
-
-      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "digest = " + digest);
-      return digest;
-    } finally {
-      IOUtil.safeClose(recordStream);
+      result.setRecordStream(recordStream);
     }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "digest = " + digest);
+    return digest;
   }
 
   /**
@@ -806,6 +810,7 @@ public class SimpleHasher {
       log.debug2(DEBUG_HEADER + "machineName = " + machineName);
       log.debug2(DEBUG_HEADER + "excludeSuspectVersions = "
 	  + excludeSuspectVersions);
+      log.debug2(DEBUG_HEADER + "result = " + result);
       log.debug2(DEBUG_HEADER + "digest = " + digest);
     }
 
