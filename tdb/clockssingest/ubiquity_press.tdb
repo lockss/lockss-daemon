@@ -127,10 +127,6 @@
     param[base_url] = http://www.comicsgrid.com/
     param[journal_id] = cg
     
-    comment[back] = publisher says V1 and V2 will be online soon.
-
-    au < doesNotExist ; exists ; 2011 ; The Comics Grid: Journal of Comics Scholarship Volume 1 ; 1 ; 2011 >
-    au < doesNotExist ; exists ; 2012 ; The Comics Grid: Journal of Comics Scholarship Volume 2 ; 2 ; 2012 >
     au < crawling ; exists ; 2013 ; The Comics Grid: Journal of Comics Scholarship Volume 3 ; 3 ; 2013 >
     au < manifest ; exists ; 2014 ; The Comics Grid: Journal of Comics Scholarship Volume 4 ; 4 ; 2014 >
     
