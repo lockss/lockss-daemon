@@ -2125,7 +2125,7 @@
     au < finished ; frozen ; 2011 ; Biostatistics Volume 12 ; 12 ; >
     au < finished ; frozen ; 2012 ; Biostatistics Volume 13 ; 13 ; >
     au < crawling ; exists ; 2013 ; Biostatistics Volume 14 ; 14 ; >
-    au < testing ; exists ; 2014 ; Biostatistics Volume 15 ; 15 ; >
+    au < ready ; exists ; 2014 ; Biostatistics Volume 15 ; 15 ; >
 
     }
 
@@ -10901,8 +10901,8 @@
     au < finished ; frozen ; 2012 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 67A ; 67A ; >
     au < finished ; frozen ; 2012 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 67 ; 67 ; >
     au < crawling ; exists ; 2013 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 68 ; 68 ; >
-    au < doNotProcess ; exists ; 2014 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 69 ; 69 ; >
-    au < testing ; exists ; 2014 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 69A ; 69A ; >
+    au < testing ; exists ; 2014 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 69 ; 69 ; >
+    au < ready ; exists ; 2014 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 69A ; 69A ; >
 
     }
 
@@ -11217,7 +11217,7 @@
     au < finished ; crawling ; 2011 ; Journal of the History of Collections Volume 23 ; 23 ; >
     au < finished ; frozen ; 2012 ; Journal of the History of Collections Volume 24 ; 24 ; >
     au < crawling ; exists ; 2013 ; Journal of the History of Collections Volume 25 ; 25 ; >
-    au < manifest ; exists ; 2014 ; Journal of the History of Collections Volume 26 ; 26 ; >
+    au < testing ; exists ; 2014 ; Journal of the History of Collections Volume 26 ; 26 ; >
 
     }
 
@@ -11315,7 +11315,7 @@
     au < finished ; crawling ; 2011 ; Journal of the History of Medicine and Allied Sciences Volume 66 ; 66 ; >
     au < finished ; frozen ; 2012 ; Journal of the History of Medicine and Allied Sciences Volume 67 ; 67 ; >
     au < crawling ; exists ; 2013 ; Journal of the History of Medicine and Allied Sciences Volume 68 ; 68 ; >
-    au < manifest ; exists ; 2014 ; Journal of the History of Medicine and Allied Sciences Volume 69 ; 69 ; >
+    au < testing ; exists ; 2014 ; Journal of the History of Medicine and Allied Sciences Volume 69 ; 69 ; >
 
     }
 
@@ -11349,7 +11349,7 @@
     au < finished ; crawling ; 2011 ; Journal of Human Rights Practice Volume 3 ; 3 ; >
     au < finished ; frozen ; 2012 ; Journal of Human Rights Practice Volume 4 ; 4 ; >
     au < crawling ; exists ; 2013 ; Journal of Human Rights Practice Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2014 ; Journal of Human Rights Practice Volume 6 ; 6 ; >
+    au < testing ; exists ; 2014 ; Journal of Human Rights Practice Volume 6 ; 6 ; >
 
     }
 
@@ -11649,7 +11649,7 @@
     au < finished ; crawling ; 2011 ; Journal of Intellectual Property Law & Practice Volume 6 ; 6 ; >
     au < finished ; frozen ; 2012 ; Journal of Intellectual Property Law & Practice Volume 7 ; 7 ; >
     au < crawling ; exists ; 2013 ; Journal of Intellectual Property Law & Practice Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2014 ; Journal of Intellectual Property Law & Practice Volume 9 ; 9 ; >
+    au < testing ; exists ; 2014 ; Journal of Intellectual Property Law & Practice Volume 9 ; 9 ; >
 
     }
 
@@ -11690,7 +11690,7 @@
     au < finished ; frozen ; 2011 ; Journal of International Criminal Justice Volume 9 ; 9 ; >
     au < finished ; frozen ; 2012 ; Journal of International Criminal Justice Volume 10 ; 10 ; >
     au < crawling ; exists ; 2013 ; Journal of International Criminal Justice Volume 11 ; 11 ; >
-    au < manifest ; exists ; 2014 ; Journal of International Criminal Justice Volume 12 ; 12 ; >
+    au < testing ; exists ; 2014 ; Journal of International Criminal Justice Volume 12 ; 12 ; >
 
     }
 
