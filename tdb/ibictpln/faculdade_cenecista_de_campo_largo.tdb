@@ -4,7 +4,7 @@
   >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; volume ; name ; param[year] >
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
 
   {
 
@@ -17,19 +17,19 @@
       param[base_url] = http://revistas.facecla.com.br/
       param[journal_id] = recadm
 
-      au < released ; 2002 ; 1 ; Revista Eletrônica de Ciência Administrativa Volume 1 ; 2002 >
-      au < released ; 2003 ; 2 ; Revista Eletrônica de Ciência Administrativa Volume 2 ; 2003 >
-      au < released ; 2004 ; 3 ; Revista Eletrônica de Ciência Administrativa Volume 3 ; 2004 >
-      au < released ; 2005 ; 4 ; Revista Eletrônica de Ciência Administrativa Volume 4 ; 2005 >
-      au < released ; 2006 ; 5 ; Revista Eletrônica de Ciência Administrativa Volume 5 ; 2006 >
-      au < released ; 2007 ; 6 ; Revista Eletrônica de Ciência Administrativa Volume 6 ; 2007 >
-      au < released ; 2008 ; 7 ; Revista Eletrônica de Ciência Administrativa Volume 7 ; 2008 >
-      au < released ; 2009 ; 8 ; Revista Eletrônica de Ciência Administrativa Volume 8 ; 2009 >
-      au < released ; 2010 ; 9 ; Revista Eletrônica de Ciência Administrativa Volume 9 ; 2010 >
-      au < released ; 2011 ; 10 ; Revista Eletrônica de Ciência Administrativa Volume 10 ; 2011 >
-      au < released ; 2012 ; 11 ; Revista Eletrônica de Ciência Administrativa Volume 11 ; 2012 >
-      au < released ; 2013 ; 12 ; Revista Eletrônica de Ciência Administrativa Volume 12 ; 2013 >
-      au < manifest ; 2014 ; 13 ; Revista Eletrônica de Ciência Administrativa Volume 13 ; 2014 >
+      au < down ; 2002 ; 1 ; Revista Eletrônica de Ciência Administrativa Volume 1 ; 2002 ; url down >
+      au < down ; 2003 ; 2 ; Revista Eletrônica de Ciência Administrativa Volume 2 ; 2003 ; url down >
+      au < down ; 2004 ; 3 ; Revista Eletrônica de Ciência Administrativa Volume 3 ; 2004 ; url down >
+      au < down ; 2005 ; 4 ; Revista Eletrônica de Ciência Administrativa Volume 4 ; 2005 ; url down >
+      au < down ; 2006 ; 5 ; Revista Eletrônica de Ciência Administrativa Volume 5 ; 2006 ; url down >
+      au < down ; 2007 ; 6 ; Revista Eletrônica de Ciência Administrativa Volume 6 ; 2007 ; url down >
+      au < down ; 2008 ; 7 ; Revista Eletrônica de Ciência Administrativa Volume 7 ; 2008 ; url down >
+      au < down ; 2009 ; 8 ; Revista Eletrônica de Ciência Administrativa Volume 8 ; 2009 ; url down >
+      au < down ; 2010 ; 9 ; Revista Eletrônica de Ciência Administrativa Volume 9 ; 2010 ; url down >
+      au < down ; 2011 ; 10 ; Revista Eletrônica de Ciência Administrativa Volume 10 ; 2011 ; url down >
+      au < down ; 2012 ; 11 ; Revista Eletrônica de Ciência Administrativa Volume 11 ; 2012 ; url down >
+      au < down ; 2013 ; 12 ; Revista Eletrônica de Ciência Administrativa Volume 12 ; 2013 ; url down >
+      au < expected ; 2014 ; 13 ; Revista Eletrônica de Ciência Administrativa Volume 13 ; 2014 ; >
 
   }
 
@@ -44,19 +44,19 @@
       param[base_url] = http://revistas.facecla.com.br/
       param[journal_id] = reped
 
-      au < released ; 2002 ; 1 ; Revista Eletrônica de Ciências da Educação Volume 1 ; 2002 >
-      au < released ; 2003 ; 2 ; Revista Eletrônica de Ciências da Educação Volume 2 ; 2003 >
-      au < released ; 2004 ; 3 ; Revista Eletrônica de Ciências da Educação Volume 3 ; 2004 >
-      au < released ; 2005 ; 4 ; Revista Eletrônica de Ciências da Educação Volume 4 ; 2005 >
-      au < released ; 2006 ; 5 ; Revista Eletrônica de Ciências da Educação Volume 5 ; 2006 >
-      au < released ; 2007 ; 6 ; Revista Eletrônica de Ciências da Educação Volume 6 ; 2007 >
-      au < released ; 2008 ; 7 ; Revista Eletrônica de Ciências da Educação Volume 7 ; 2008 >
-      au < released ; 2009 ; 8 ; Revista Eletrônica de Ciências da Educação Volume 8 ; 2009 >
-      au < released ; 2010 ; 9 ; Revista Eletrônica de Ciências da Educação Volume 9 ; 2010 >
-      au < released ; 2011 ; 10 ; Revista Eletrônica de Ciências da Educação Volume 10 ; 2011 >
-      au < released ; 2012 ; 11 ; Revista Eletrônica de Ciências da Educação Volume 11 ; 2012 >
-      au < expected ; 2013 ; 12 ; Revista Eletrônica de Ciências da Educação Volume 12 ; 2013 >
-      au < expected ; 2014 ; 13 ; Revista Eletrônica de Ciências da Educação Volume 13 ; 2014 >
+      au < down ; 2002 ; 1 ; Revista Eletrônica de Ciências da Educação Volume 1 ; 2002 ; url down >
+      au < down ; 2003 ; 2 ; Revista Eletrônica de Ciências da Educação Volume 2 ; 2003 ; url down >
+      au < down ; 2004 ; 3 ; Revista Eletrônica de Ciências da Educação Volume 3 ; 2004 ; url down >
+      au < down ; 2005 ; 4 ; Revista Eletrônica de Ciências da Educação Volume 4 ; 2005 ; url down >
+      au < down ; 2006 ; 5 ; Revista Eletrônica de Ciências da Educação Volume 5 ; 2006 ; url down >
+      au < down ; 2007 ; 6 ; Revista Eletrônica de Ciências da Educação Volume 6 ; 2007 ; url down >
+      au < down ; 2008 ; 7 ; Revista Eletrônica de Ciências da Educação Volume 7 ; 2008 ; url down >
+      au < down ; 2009 ; 8 ; Revista Eletrônica de Ciências da Educação Volume 8 ; 2009 ; url down >
+      au < down ; 2010 ; 9 ; Revista Eletrônica de Ciências da Educação Volume 9 ; 2010 ; url down >
+      au < down ; 2011 ; 10 ; Revista Eletrônica de Ciências da Educação Volume 10 ; 2011 ; url down >
+      au < down ; 2012 ; 11 ; Revista Eletrônica de Ciências da Educação Volume 11 ; 2012 ; url down >
+      au < expected ; 2013 ; 12 ; Revista Eletrônica de Ciências da Educação Volume 12 ; 2013 ; >
+      au < expected ; 2014 ; 13 ; Revista Eletrônica de Ciências da Educação Volume 13 ; 2014 ; >
 
   }
 
@@ -71,19 +71,19 @@
       param[base_url] = http://revistas.facecla.com.br/
       param[journal_id] = reinfo
 
-      au < released ; 2002 ; 1 ; Revista Eletrônica de Sistemas de Informação Volume 1 ; 2002 >
-      au < released ; 2003 ; 2 ; Revista Eletrônica de Sistemas de Informação Volume 2 ; 2003 >
-      au < released ; 2004 ; 3 ; Revista Eletrônica de Sistemas de Informação Volume 3 ; 2004 >
-      au < released ; 2005 ; 4 ; Revista Eletrônica de Sistemas de Informação Volume 4 ; 2005 >
-      au < released ; 2006 ; 5 ; Revista Eletrônica de Sistemas de Informação Volume 5 ; 2006 >
-      au < released ; 2007 ; 6 ; Revista Eletrônica de Sistemas de Informação Volume 6 ; 2007 >
-      au < released ; 2008 ; 7 ; Revista Eletrônica de Sistemas de Informação Volume 7 ; 2008 >
-      au < released ; 2009 ; 8 ; Revista Eletrônica de Sistemas de Informação Volume 8 ; 2009 >
-      au < released ; 2010 ; 9 ; Revista Eletrônica de Sistemas de Informação Volume 9 ; 2010 >
-      au < released ; 2011 ; 10 ; Revista Eletrônica de Sistemas de Informação Volume 10 ; 2011 >
-      au < released ; 2012 ; 11 ; Revista Eletrônica de Sistemas de Informação Volume 11 ; 2012 >
-      au < released ; 2013 ; 12 ; Revista Eletrônica de Sistemas de Informação Volume 12 ; 2013 >
-      au < expected ; 2014 ; 13 ; Revista Eletrônica de Sistemas de Informação Volume 13 ; 2014 >
+      au < down ; 2002 ; 1 ; Revista Eletrônica de Sistemas de Informação Volume 1 ; 2002 ; url down >
+      au < down ; 2003 ; 2 ; Revista Eletrônica de Sistemas de Informação Volume 2 ; 2003 ; url down >
+      au < down ; 2004 ; 3 ; Revista Eletrônica de Sistemas de Informação Volume 3 ; 2004 ; url down >
+      au < down ; 2005 ; 4 ; Revista Eletrônica de Sistemas de Informação Volume 4 ; 2005 ; url down >
+      au < down ; 2006 ; 5 ; Revista Eletrônica de Sistemas de Informação Volume 5 ; 2006 ; url down >
+      au < down ; 2007 ; 6 ; Revista Eletrônica de Sistemas de Informação Volume 6 ; 2007 ; url down >
+      au < down ; 2008 ; 7 ; Revista Eletrônica de Sistemas de Informação Volume 7 ; 2008 ; url down >
+      au < down ; 2009 ; 8 ; Revista Eletrônica de Sistemas de Informação Volume 8 ; 2009 ; url down >
+      au < down ; 2010 ; 9 ; Revista Eletrônica de Sistemas de Informação Volume 9 ; 2010 ; url down >
+      au < down ; 2011 ; 10 ; Revista Eletrônica de Sistemas de Informação Volume 10 ; 2011 ; url down >
+      au < down ; 2012 ; 11 ; Revista Eletrônica de Sistemas de Informação Volume 11 ; 2012 ; url down >
+      au < down ; 2013 ; 12 ; Revista Eletrônica de Sistemas de Informação Volume 12 ; 2013 ; url down >
+      au < expected ; 2014 ; 13 ; Revista Eletrônica de Sistemas de Informação Volume 13 ; 2014 ; >
 
   }
 
@@ -98,9 +98,9 @@
       param[base_url] = http://revistas.facecla.com.br/
       param[journal_id] = redir
 
-      au < released ; 2012 ; 1 ; Revista Eletrônica Jurídica Volume 1 ; 2012 >
-      au < expected ; 2013 ; 2 ; Revista Eletrônica Jurídica Volume 2 ; 2013 >
-      au < expected ; 2014 ; 3 ; Revista Eletrônica Jurídica Volume 3 ; 2014 >
+      au < down ; 2012 ; 1 ; Revista Eletrônica Jurídica Volume 1 ; 2012 ; url down >
+      au < expected ; 2013 ; 2 ; Revista Eletrônica Jurídica Volume 2 ; 2013 ; >
+      au < expected ; 2014 ; 3 ; Revista Eletrônica Jurídica Volume 3 ; 2014 ; >
 
   }
 
