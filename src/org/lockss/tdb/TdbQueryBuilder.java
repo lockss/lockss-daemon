@@ -1,5 +1,5 @@
 /*
- * $Id: TdbQueryBuilder.java,v 1.5 2014-10-24 21:58:23 thib_gc Exp $
+ * $Id: TdbQueryBuilder.java,v 1.6 2014-11-06 01:30:15 thib_gc Exp $
  */
 
 /*
@@ -1181,6 +1181,9 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
     }
     if (cmd.hasOption(KEY_FINISHED)) {
       secondarySet.add(Au.STATUS_FINISHED);
+    }
+    if (cmd.hasOption(KEY_FROZEN)) {
+      secondarySet.add(Au.STATUS_FROZEN);
     }
     if (cmd.hasOption(KEY_ING_NOT_READY)) {
       secondarySet.add(Au.STATUS_ING_NOT_READY);
