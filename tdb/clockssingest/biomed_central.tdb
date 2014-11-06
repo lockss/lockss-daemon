@@ -200,11 +200,11 @@
       au < manifest ; exists ; 2005 ; BMC Blood Disorders Volume 5 ; 5 >
       au < manifest ; exists ; 2006 ; BMC Blood Disorders Volume 6 ; 6 >
       au < manifest ; exists ; 2007 ; BMC Blood Disorders Volume 7 ; 7 >
-      au < ingNotReady ; exists ; 2008 ; BMC Blood Disorders Volume 8 ; 8 >
-      au < ingNotReady ; exists ; 2009 ; BMC Blood Disorders Volume 9 ; 9 >
-      au < ingNotReady ; exists ; 2010 ; BMC Blood Disorders Volume 10 ; 10 >
-      au < ingNotReady ; crawling ; 2011 ; BMC Blood Disorders Volume 11 ; 11 >
-      au < ingNotReady ; exists ; 2012 ; BMC Blood Disorders Volume 12 ; 12 >
+      au < crawling ; exists ; 2008 ; BMC Blood Disorders Volume 8 ; 8 >
+      au < crawling ; exists ; 2009 ; BMC Blood Disorders Volume 9 ; 9 >
+      au < crawling ; exists ; 2010 ; BMC Blood Disorders Volume 10 ; 10 >
+      au < crawling ; crawling ; 2011 ; BMC Blood Disorders Volume 11 ; 11 >
+      au < crawling ; exists ; 2012 ; BMC Blood Disorders Volume 12 ; 12 >
       
       }
       
