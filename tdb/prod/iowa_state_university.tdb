@@ -28,7 +28,7 @@
     
       param[base_url] = http://clogic.eserver.org/
       
-      comment[manifest] = no manifests past 2006 as of 11/2012
+      comment[manifest] = no manifests past 2006 as of 11/2012. No volumes past 2013 as of 11/2014. Plugin needs review.
 
       au < released ; 1997-1998 ; Cultural Logic Volume 1 ; 1 ; 0001 >
       au < released ; 1998-1999 ; Cultural Logic Volume 2 ; 2 ; 0002 >
@@ -39,10 +39,13 @@
       au < released ; 2004 ; Cultural Logic Volume 7 ; 7 ; 2004 >
       au < released ; 2005 ; Cultural Logic Volume 8 ; 8 ; 2005 >
       au < released ; 2006 ; Cultural Logic Volume 9 ; 9 ; 2006 >
-      au < exists ; 2007 ; Cultural Logic 2007 ; ; 2007 >
-      au < exists ; 2008 ; Cultural Logic 2008 ; ; 2008 >
-      au < exists ; 2009 ; Cultural Logic 2009 ; ; 2009 >
-      au < exists ; 2010 ; Cultural Logic 2010 ; ; 2010 >
+      au < doNotProcess ; 2007 ; Cultural Logic 2007 ; ; 2007 >
+      au < doNotProcess ; 2008 ; Cultural Logic 2008 ; ; 2008 >
+      au < doNotProcess ; 2009 ; Cultural Logic 2009 ; ; 2009 >
+      au < doNotProcess ; 2010 ; Cultural Logic 2010 ; ; 2010 >
+      au < doNotProcess ; 2011 ; Cultural Logic 2011 ; ; 2011 >
+      au < doNotProcess ; 2012 ; Cultural Logic 2012 ; ; 2012 >
+      au < doNotProcess ; 2013 ; Cultural Logic 2013 ; ; 2013 >
     
     }
   
@@ -61,17 +64,17 @@
     implicit < status ; year ; name ; param[volume] >
     param[base_url] = http://emc.eserver.org/
     
-    comment[manifests] = no manifests past 2004 as of 11/2012
+    comment[manifests] = no manifests past 2004 as of 11/2012. No issues past V9 as of 11/2014. Plugin needs review.
     
     au < released ; 2000 ; Early Modern Culture Issue 1 ; 1 >
     au < released ; 2002 ; Early Modern Culture Issue 2 ; 2 >
     au < released ; 2003 ; Early Modern Culture Issue 3 ; 3 >
     au < released ; 2004 ; Early Modern Culture Issue 4 ; 4 >
-    au < exists ; 2006 ; Early Modern Culture Issue 5 ; 5 >
-    au < exists ; 2007 ; Early Modern Culture Issue 6 ; 6 >
-    au < exists ; 2008 ; Early Modern Culture Issue 7 ; 7 >
-    au < exists ; 2010 ; Early Modern Culture Issue 8 ; 8 >
-    au < exists ; 2012 ; Early Modern Culture Issue 9 ; 9 >
+    au < doNotProcess ; 2006 ; Early Modern Culture Issue 5 ; 5 >
+    au < doNotProcess ; 2007 ; Early Modern Culture Issue 6 ; 6 >
+    au < doNotProcess ; 2008 ; Early Modern Culture Issue 7 ; 7 >
+    au < doNotProcess ; 2010 ; Early Modern Culture Issue 8 ; 8 >
+    au < doNotProcess ; 2012 ; Early Modern Culture Issue 9 ; 9 >
   
   }
   
