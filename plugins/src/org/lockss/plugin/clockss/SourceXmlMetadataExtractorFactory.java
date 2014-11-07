@@ -1,5 +1,5 @@
 /*
- * $Id: SourceXmlMetadataExtractorFactory.java,v 1.18 2014-03-06 17:19:34 alexandraohlson Exp $
+ * $Id: SourceXmlMetadataExtractorFactory.java,v 1.19 2014-11-07 23:32:10 alexandraohlson Exp $
  */
 
 /*
@@ -108,11 +108,9 @@ implements FileMetadataExtractorFactory {
         // a child plugin can leave the default (no deduplication) or 
         // AMCollection pointing to just a subset of the full
         // AM list
-        // 3. Consolidate identical records based on DeDuplicationXPathKey
-        // consolidating as specified by the consolidateRecords() method
-        
-        Collection<ArticleMetadata> AMCollection = getConsolidatedAMList(schemaHelper,
-            amList);
+        // This routine used to be called conslidateAMList(schemaHelper, amList) which is 
+        // now deprecated in favor of this more general method which takes a cu as well.
+        Collection<ArticleMetadata> AMCollection = modifyAMList(schemaHelper, cu, amList);
 
         // 4. check, cook, and emit every item in resulting AM collection (list)
         for ( ArticleMetadata oneAM : AMCollection) {
@@ -249,10 +247,20 @@ implements FileMetadataExtractorFactory {
       return false;
     }
 
+    
+    
     /*
-     * Default behavior is not to consolidate
-     * A child plugin can choose to override this
+     * Default behavior is to replace the overridable routine that used to be 
+     * in its place
      */
+    protected Collection<ArticleMetadata> modifyAMList(SourceXmlSchemaHelper helper,
+        CachedUrl cu, List<ArticleMetadata> allAMs) {
+        return  getConsolidatedAMList(helper, allAMs);
+    }
+    
+/**
+ * @deprecated
+ */
     protected Collection<ArticleMetadata> getConsolidatedAMList(SourceXmlSchemaHelper helper,
         List<ArticleMetadata> allAMs) {
       return allAMs;
