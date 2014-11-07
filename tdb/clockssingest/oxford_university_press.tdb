@@ -11217,7 +11217,7 @@
     au < finished ; crawling ; 2011 ; Journal of the History of Collections Volume 23 ; 23 ; >
     au < finished ; frozen ; 2012 ; Journal of the History of Collections Volume 24 ; 24 ; >
     au < crawling ; exists ; 2013 ; Journal of the History of Collections Volume 25 ; 25 ; >
-    au < testing ; exists ; 2014 ; Journal of the History of Collections Volume 26 ; 26 ; >
+    au < ready ; exists ; 2014 ; Journal of the History of Collections Volume 26 ; 26 ; >
 
     }
 
@@ -11315,7 +11315,7 @@
     au < finished ; crawling ; 2011 ; Journal of the History of Medicine and Allied Sciences Volume 66 ; 66 ; >
     au < finished ; frozen ; 2012 ; Journal of the History of Medicine and Allied Sciences Volume 67 ; 67 ; >
     au < crawling ; exists ; 2013 ; Journal of the History of Medicine and Allied Sciences Volume 68 ; 68 ; >
-    au < testing ; exists ; 2014 ; Journal of the History of Medicine and Allied Sciences Volume 69 ; 69 ; >
+    au < ready ; exists ; 2014 ; Journal of the History of Medicine and Allied Sciences Volume 69 ; 69 ; >
 
     }
 
@@ -11349,7 +11349,7 @@
     au < finished ; crawling ; 2011 ; Journal of Human Rights Practice Volume 3 ; 3 ; >
     au < finished ; frozen ; 2012 ; Journal of Human Rights Practice Volume 4 ; 4 ; >
     au < crawling ; exists ; 2013 ; Journal of Human Rights Practice Volume 5 ; 5 ; >
-    au < testing ; exists ; 2014 ; Journal of Human Rights Practice Volume 6 ; 6 ; >
+    au < ready ; exists ; 2014 ; Journal of Human Rights Practice Volume 6 ; 6 ; >
 
     }
 
@@ -11649,7 +11649,7 @@
     au < finished ; crawling ; 2011 ; Journal of Intellectual Property Law & Practice Volume 6 ; 6 ; >
     au < finished ; frozen ; 2012 ; Journal of Intellectual Property Law & Practice Volume 7 ; 7 ; >
     au < crawling ; exists ; 2013 ; Journal of Intellectual Property Law & Practice Volume 8 ; 8 ; >
-    au < testing ; exists ; 2014 ; Journal of Intellectual Property Law & Practice Volume 9 ; 9 ; >
+    au < ready ; exists ; 2014 ; Journal of Intellectual Property Law & Practice Volume 9 ; 9 ; >
 
     }
 
@@ -11690,7 +11690,7 @@
     au < finished ; frozen ; 2011 ; Journal of International Criminal Justice Volume 9 ; 9 ; >
     au < finished ; frozen ; 2012 ; Journal of International Criminal Justice Volume 10 ; 10 ; >
     au < crawling ; exists ; 2013 ; Journal of International Criminal Justice Volume 11 ; 11 ; >
-    au < testing ; exists ; 2014 ; Journal of International Criminal Justice Volume 12 ; 12 ; >
+    au < ready ; exists ; 2014 ; Journal of International Criminal Justice Volume 12 ; 12 ; >
 
     }
 
@@ -11712,7 +11712,7 @@
     au < finished ; crawling ; 2011 ; Journal of International Dispute Settlement Volume 2 ; 2 ; >
     au < finished ; frozen ; 2012 ; Journal of International Dispute Settlement Volume 3 ; 3 ; >
     au < crawling ; exists ; 2013 ; Journal of International Dispute Settlement Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2014 ; Journal of International Dispute Settlement Volume 5 ; 5 ; >
+    au < testing ; exists ; 2014 ; Journal of International Dispute Settlement Volume 5 ; 5 ; >
 
   }
 
@@ -11756,7 +11756,7 @@
     au < finished ; frozen ; 2011 ; Journal of International Economic Law Volume 14 ; 14 ; >
     au < finished ; frozen ; 2012 ; Journal of International Economic Law Volume 15 ; 15 ; >
     au < crawling ; exists ; 2013 ; Journal of International Economic Law Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2014 ; Journal of International Economic Law Volume 17 ; 17 ; >
+    au < testing ; exists ; 2014 ; Journal of International Economic Law Volume 17 ; 17 ; >
 
     }
 
@@ -11947,7 +11947,7 @@
     au < finished ; crawling ; 2011 ; Journal of Logic and Computation Volume 21 ; 21 ; >
     au < finished ; frozen ; 2012 ; Journal of Logic and Computation Volume 22 ; 22 ; >
     au < crawling ; exists ; 2013 ; Journal of Logic and Computation Volume 23 ; 23 ; >
-    au < manifest ; exists ; 2014 ; Journal of Logic and Computation Volume 24 ; 24 ; >
+    au < testing ; exists ; 2014 ; Journal of Logic and Computation Volume 24 ; 24 ; >
 
     }
 
@@ -12493,7 +12493,7 @@
     au < finished ; crawling ; 2011 ; Journal of the National Cancer Institute: JNCI Volume 103 ; 103 ; >
     au < crawling ; exists ; 2012 ; Journal of the National Cancer Institute: JNCI Volume 104 ; 104 ; >
     au < crawling ; exists ; 2013 ; Journal of the National Cancer Institute: JNCI Volume 105 ; 105 ; >
-    au < manifest ; exists ; 2014 ; Journal of the National Cancer Institute: JNCI Volume 106 ; 106 ; >
+    au < testing ; exists ; 2014 ; Journal of the National Cancer Institute: JNCI Volume 106 ; 106 ; >
 
     }
 
@@ -12707,7 +12707,7 @@
     au < finished ; frozen ; 2011 ; Journal of Petrology Volume 52 ; 52 ; >
     au < crawling ; exists ; 2012 ; Journal of Petrology Volume 53 ; 53 ; >
     au < crawling ; exists ; 2013 ; Journal of Petrology Volume 54 ; 54 ; >
-    au < manifest ; exists ; 2014 ; Journal of Petrology Volume 55 ; 55 ; >
+    au < testing ; exists ; 2014 ; Journal of Petrology Volume 55 ; 55 ; >
 
     }
 
@@ -12772,7 +12772,7 @@
     au < finished ; frozen ; 2011 ; Journal of Plankton Research Volume 33 ; 33 ; >
     au < finished ; frozen ; 2012 ; Journal of Plankton Research Volume 34 ; 34 ; >
     au < crawling ; exists ; 2013 ; Journal of Plankton Research Volume 35 ; 35 ; >
-    au < manifest ; exists ; 2014 ; Journal of Plankton Research Volume 36 ; 36 ; >
+    au < testing ; exists ; 2014 ; Journal of Plankton Research Volume 36 ; 36 ; >
 
     }
 
@@ -12816,7 +12816,7 @@
     param[base_url] = http://jpo.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < manifest ; exists ; 2014 ; Journal of Professions and Organization Volume 1 ; 1 ; >
+    au < testing ; exists ; 2014 ; Journal of Professions and Organization Volume 1 ; 1 ; >
 
   }
 
@@ -12867,7 +12867,7 @@
     au < finished ; frozen ; 2011 ; Journal of Public Administration Research and Theory Volume 21 ; 21 ; >
     au < finished ; frozen ; 2012 ; Journal of Public Administration Research and Theory Volume 22 ; 22 ; >
     au < crawling ; exists ; 2013 ; Journal of Public Administration Research and Theory Volume 23 ; 23 ; >
-    au < manifest ; exists ; 2014 ; Journal of Public Administration Research and Theory Volume 24 ; 24 ; >
+    au < testing ; exists ; 2014 ; Journal of Public Administration Research and Theory Volume 24 ; 24 ; >
 
     }
 
@@ -13006,7 +13006,7 @@
     au < finished ; frozen ; 2011 ; Journal of Refugee Studies Volume 24 ; 24 ; >
     au < finished ; crawling ; 2012 ; Journal of Refugee Studies Volume 25 ; 25 ; >
     au < crawling ; exists ; 2013 ; Journal of Refugee Studies Volume 26 ; 26 ; >
-    au < manifest ; exists ; 2014 ; Journal of Refugee Studies Volume 27 ; 27 ; >
+    au < testing ; exists ; 2014 ; Journal of Refugee Studies Volume 27 ; 27 ; >
 
     }
 
