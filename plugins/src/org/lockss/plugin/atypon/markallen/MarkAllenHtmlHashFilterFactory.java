@@ -1,5 +1,5 @@
 /*
- * $Id: MarkAllenHtmlHashFilterFactory.java,v 1.2 2014-11-01 00:12:06 ldoan Exp $
+ * $Id: MarkAllenHtmlHashFilterFactory.java,v 1.3 2014-11-07 23:03:57 ldoan Exp $
  */
 
 /*
@@ -48,6 +48,12 @@ public class MarkAllenHtmlHashFilterFactory
     
     NodeFilter[] filters = new NodeFilter[] {
         
+        // institution banner
+        // <section class="widget literatumInstitutionBanner none slogan widget-none" id="dad9d09a-eaed-4707-a2cb-23c70f92032e">
+        // http://www.magonlinelibrary.com/doi/ref/10.12968/bjom.2013.21.10.701
+        HtmlNodeFilters.tagWithAttributeRegex("section", "class", 
+            "literatumInstitutionBanner"),
+        
         // top page ad and all other ads with class LiteratumAd
         HtmlNodeFilters.tagWithAttributeRegex("section", "class", 
             "literatumAd"),
@@ -55,16 +61,13 @@ public class MarkAllenHtmlHashFilterFactory
         // pageHeader - has links to current issue
         HtmlNodeFilters.tagWithAttribute("section", "id", "pageHeader"),
         
-        // pageFooter
-        HtmlNodeFilters.tagWithAttribute("section", "id", "pageFooter"),
-        
-        // panel under pageHeader has link current toc
+        // from toc - ad panel has link to other issue 
         // http://www.magonlinelibrary.com/toc/bjom/21/10
         HtmlNodeFilters.tagWithAttributeRegex("section", "class", 
-            "widget general-image none"),
+            "genericSlideshow"),
             
         // for toc - social media
-         HtmlNodeFilters.tagWithAttributeRegex("section", "class",
+        HtmlNodeFilters.tagWithAttributeRegex("section", "class",
             "general-bookmark-share"),
             
         // from toc - access icon container 
@@ -77,17 +80,21 @@ public class MarkAllenHtmlHashFilterFactory
             HtmlNodeFilters.tagWithAttributeRegex( 
                 "section", "class", "literatumArticleToolsWidget"),
                 HtmlNodeFilters.tagWithAttributeRegex(
-                    "a", "href", "/action/showCitFormats\\?")),     
+                    "a", "href", "/action/showCitFormats\\?")),   
                     
-        // abs, full text and ref right column - most read 
+        // from full text - Downloaded count
+        // <section class="widget literatumContentItemDownloadCount alignCenter addthisborder widget-box" 
+        //      id="3309a539-fe1c-4047-8e2c-68582ab6ff73">
+        HtmlNodeFilters.tagWithAttributeRegex("section", "class",
+            "literatumContentItemDownloadCount"),            
+                    
+        // toc, abs, full, text and ref right column - most read 
         // http://www.magonlinelibrary.com/doi/full/10.12968/bjom.2013.21.10.688
         HtmlNodeFilters.tagWithAttributeRegex("section", "class", 
             "layout-tabs"),
         
-        // full text right colummn - several locations with ids
-        // http://www.magonlinelibrary.com/doi/full/10.12968/bjom.2013.21.10.688
-        HtmlNodeFilters.tagWithAttributeRegex("section", "class", 
-            "layout-two-columns")
+        // pageFooter
+        HtmlNodeFilters.tagWithAttribute("section", "id", "pageFooter"),
         
     };
     

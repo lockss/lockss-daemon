@@ -113,12 +113,11 @@ ARTICLE pages:
      most read
      most cited
  
-* panel under pageHeader has link current toc
-* http://www.magonlinelibrary.com/toc/bjom/21/10
+* from toc, panel ad under pageHeader has link to other issue
+  http://www.magonlinelibrary.com/toc/bjom/21/10
      
 * most read
-http://www.magonlinelibrary.com/toc/bjom/21/8
-<div class="mostRead">
+  http://www.magonlinelibrary.com/doi/full/10.12968/bjom.2013.21.10.688
 
 * from abs and full text - middle column 
   http://www.magonlinelibrary.com/doi/abs/10.12968/bjom.2013.21.10.701
@@ -169,9 +168,10 @@ Thinks to look for:
 7) TOC - may have increasing citation counts next to each article listing, once they've been cited
 
 * top page ad and all other ads with class LiteratumAd
+* institution banner
 * pageHeader
 * pageFooter
-* panel under pageHeader has link current toc
+* panel ad under pageHeader has link to other issue
   http://www.magonlinelibrary.com/toc/bjom/21/10
 * for toc - social media
 * from toc - accessIconContainer 
@@ -182,6 +182,7 @@ Thinks to look for:
   http://www.magonlinelibrary.com/doi/full/10.12968/bjom.2013.21.10.688
 * full text right colummn - several locations with ids
   http://www.magonlinelibrary.com/doi/full/10.12968/bjom.2013.21.10.688
+* Downloaded count from full text.
 
 ---------------------LINK EXTRACTOR-----------------------------
 The BaseAtypon link extractor does two primary things - it generates the links on the "download citations" form so that we get the citations (RIS) and it generates the links needed to pick up the alternate sizes for the images. 

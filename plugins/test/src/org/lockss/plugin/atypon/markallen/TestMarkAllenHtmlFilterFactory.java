@@ -1,5 +1,5 @@
 /*
- * $Id: TestMarkAllenHtmlFilterFactory.java,v 1.1 2014-10-29 21:12:02 ldoan Exp $
+ * $Id: TestMarkAllenHtmlFilterFactory.java,v 1.2 2014-11-07 23:04:48 ldoan Exp $
  */
 
 /*
@@ -60,83 +60,49 @@ public class TestMarkAllenHtmlFilterFactory
   
   private static final String filteredStr = 
       "<div class=\"block\"></div>";
-
-  // For crawl filtering
-
-  // panel under pageHeader has link current toc
-  // http://www.magonlinelibrary.com/toc/bjom/21/10
-  private static final String withCurrentIssuePanel = 
-      "<div class=\"block\">" +  
-          "<section class=\"widget general-image none  \" id=\"b2c\">" +
+  
+  // institution banner
+  // http://www.magonlinelibrary.com/doi/ref/10.12968/bjom.2013.21.10.701
+  private static final String withLiteratumInstitutionBanner =
+      "<div class=\"block\">" + 
+          "<section id=\"da3\" class=\"widget literatumInstitutionBanner none slogan widget-none\">" +
           "<div class=\"wrapped \">" +
           "<div class=\"widget-body body body-none \">" +
-          "<a href=\"http://www.base.com/doi/full/11.1111/jid.2014.111\">" +
-          "<img src=\"/images/ad.gif\"></a></div>" +
-          "</div></section>" +
+          "<div class=\"welcome\"> </div>" +
+          "</div>" +
+          "</div>" +
+          "</section>" +
           "</div>";
+
+  // from toc - ad panel has link to other issue 
+  // http://www.magonlinelibrary.com/toc/bjom/21/10
+  private static final String withGenericSlideshow =
+      "<div class=\"block\">" +  
+          "<section class=\"widget genericSlideshow none  widget-none  widget-compact-all\" id=\"b98\">" +
+          "<div class=\"widget-body body body-none  body-compact-all\">" +
+          "<div class=\"slides\">" +
+          "<div class=\"widget-body body body-none \"><img src=\"/rawimage/jid-22-10.gif\"</div>" +
+          "<p><a href=\"http://www.magonlinelibrary.com/doi/full/10.12968/bjom.2014.22.10.694\" id=\"jidlink\">read</a></p>" +
+          "</div></div>" +
+          "</section>" +
+          "</div>";  
   
-  // middle column ad of an article - 
-  // all article tools except Download Citations
-  // http://www.magonlinelibrary.com/doi/full/10.12968/bjom.2013.21.10.701
-  private static final String withArticleToolsExceptDownloadCitation = 
+  // toc, abs, full, text and ref right column - most read 
+  // http://www.magonlinelibrary.com/doi/full/10.12968/bjom.2013.21.10.688
+  private static final String withLayoutTabs =
       "<div class=\"block\">" +
-          "<div class=\"articleTools\">" +
-          "<ul class=\"linkList blockLinks separators centered\">" +
-          "<li class=\"addToFavs\">" +
-          "<a href=\"/add-fav-link1\">fav</a>" +
-          "</li><li class=\"email\">" +
-          "<a href=\"/email-link\">email</a>" +
-          "</li>" +
-          "<li class=\"downloadCitations\">" +
-          "<a href=\"/action/showCitFormats?" +
-          "doi=11.11111%2Fhid.2013.11.11.111\">Download citation</a>" +
-          "</li>" +
-          "<li class=\"trackCitations\">" +
-          "<a href=\"/track-citation-link\">Track citations</a>" +
-          "</li>" +
-          "<li class=\"rightsLink\">" +
-          "<a href=\"/permision-link\" class=\"rightslink\">permission</a>" +
+          "<section class=\"widget layout-tabs none \" id=\"6e3\">" +
+          "<div class=\"widget-body body body-none \">" +
+          "<div class=\"tabs tabs-widget\">" +
+          "<ul class=\"tab-nav\">" +
+          "<li class=\"active \">" +
+          "<a href=\"#69a\">Most Read</a>" +
           "</li>" +
           "</ul>" +
-          "</div>" +
+          "</div></div>" +
+          "</section>" +
           "</div>";
   
-  private static final String articleToolsFiltered = 
-      "<div class=\"block\">" +
-          "<div class=\"articleTools\">" +
-          "<ul class=\"linkList blockLinks separators centered\">" +
-          "<li class=\"downloadCitations\">" +
-          "<a href=\"/action/showCitFormats?" +
-          "doi=11.11111%2Fhid.2013.11.11.111\">Download citation</a>" +
-          "</li>" +
-          "</ul>" +
-          "</div>" +
-          "</div>";
-  
-  // toc or full text right column - most read
-  private static final String withMostRead =
-      "<div class=\"block\">" +
-          "<div class=\"mostRead\">" +
-          "<ul>" +
-          "<li>" +
-          "<div class=\"title\">" +
-          "<a href=\"/doi/abs/10.12968/bjom.2013.21.6.454\">xyx1</a>" +
-          "</div>" +
-          "<div class=\"authors\"> </div>" +
-          "<div class=\"volumeIssue\"></div>" +
-          "</li>" +
-          "<li>" +
-          "<div class=\"title\">" +
-          "<a href=\"/doi/abs/11.11111/jid.2009.11.1.11111\">xyx2</a>" +
-          "</div>" +
-          "<div class=\"authors\">Leap </div>" +
-          "<div class=\"volumeIssue\"></div>" +
-          "</li>" +
-          "</ul>" +
-          "</div>" +
-          "</div>";
-  
-  // For hash filtering
   // top page ad and all other ads with class LiteratumAd
   private static final String withLiteratumAd =
       "<div class=\"block\">" +
@@ -189,7 +155,7 @@ public class TestMarkAllenHtmlFilterFactory
   // middle column ad of an article - all article tools with 
   // class literatumArticleToolsWidget except Download Citations
   // http://www.magonlinelibrary.com/doi/abs/10.12968/bjom.2013.21.10.701
-  private static final String withArticleToolsWidgetsExceptDownloadCitation = 
+  private static final String withArticleToolsWidgetExceptDownloadCitation = 
       "<div class=\"block\">" +
           "<section class=\"widget literatumArticleToolsWidget\" id=\"5ce\">" +
           "<ul class=\"linkList blockLinks separators centered\">" +
@@ -206,7 +172,15 @@ public class TestMarkAllenHtmlFilterFactory
           "</section>" +
           "</div>";
   
-  private static final String ArticleToolsWidgetsFiltered = 
+  // from full text - Downloaded count
+ private static final String withLiteratumContentItemDownloadCount = 
+     "<div class=\"block\">" +
+         "<section class=\"widget literatumContentItemDownloadCount widget-box\" id=\"33f\">" +
+            "<div class=\"widget-body\">Downloaded 22 times</div>" +
+            "</section>" +
+            "</div>";
+  
+  private static final String ArticleToolsWidgetFiltered = 
       "<div class=\"block\">" +
           "<section class=\"widget literatumArticleToolsWidget\" id=\"5ce\">" +
           "<ul class=\"linkList blockLinks separators centered\">" +
@@ -216,39 +190,8 @@ public class TestMarkAllenHtmlFilterFactory
           "</li>" +
           "</ul>" +
           "</section>" +
-          "</div>";
-  
-  // abs, full text and ref right column - most read 
-  // http://www.magonlinelibrary.com/doi/full/10.12968/bjom.2013.21.10.688
-  private static final String withLayoutTabs =  
-      "<div class=\"block\">" +
-          "<section class=\"widget layout-tabs none \" id=\"6e3\">" +
-          "<div class=\"widget-body body body-none \">" +
-          "<div class=\"tabs tabs-widget\">" +
-          "<ul class=\"tab-nav\">" +
-          "<li class=\"active \">" +
-          "<a href=\"#69a\">Most Read</a>" +
-          "</li>" +
-          "</ul>" +
-          "</div></div>" +
-          "</section>" +
-          "</div>";   
-  
-  // full text right colummn - several locations with ids
-  // http://www.magonlinelibrary.com/doi/full/10.12968/bjom.2013.21.10.688
-  private static final String withLayoutTwoColumns =  
-      "<div class=\"block\">" +
-          "<section class=\"widget layout-two-columns \" id=\"f92\">" +
-          "<div class=\"widget-body body body-none \">" +
-          "<div class=\"width_1_2\">" +
-          "<div dropzone=\"left\" class=\"autoheight\">" +
-          "</div></div>" +
-          "<div class=\"width_1_2\">" +
-          "<div dropzone=\"right\" class=\"autoheight\">" +
-          "</div></div></div>" +
-          "</section>" +
           "</div>";  
-  
+   
   // pageFooter
   private static final String withPageFooter =  
       "<div class=\"block\">" +
@@ -307,10 +250,8 @@ public class TestMarkAllenHtmlFilterFactory
   public static class TestCrawl extends TestMarkAllenHtmlFilterFactory {
     public void testFiltering() throws Exception {
       variantFact = new MarkAllenHtmlCrawlFilterFactory();
-      doFilterTest(maau, variantFact, withCurrentIssuePanel, filteredStr);
-      doFilterTest(maau, variantFact, 
-          withArticleToolsExceptDownloadCitation, articleToolsFiltered);
-      doFilterTest(maau, variantFact, withMostRead, filteredStr);
+      doFilterTest(maau, variantFact, withGenericSlideshow, filteredStr); 
+      doFilterTest(maau, variantFact, withLayoutTabs, filteredStr);    
     }    
   }
 
@@ -318,16 +259,19 @@ public class TestMarkAllenHtmlFilterFactory
    public static class TestHash extends TestMarkAllenHtmlFilterFactory {   
      public void testFiltering() throws Exception {
       variantFact = new MarkAllenHtmlHashFilterFactory();
+      doFilterTest(maau, variantFact, withLiteratumInstitutionBanner, 
+          filteredStr);
       doFilterTest(maau, variantFact, withLiteratumAd, filteredStr);
       doFilterTest(maau, variantFact, withPageHeader, filteredStr);
-      doFilterTest(maau, variantFact, withCurrentIssuePanel, filteredStr);
+      doFilterTest(maau, variantFact, withGenericSlideshow, filteredStr); 
       doFilterTest(maau, variantFact, withSocialMedia, filteredStr);
       doFilterTest(maau, variantFact, withAccessIconContainer, filteredStr);
       doFilterTest(maau, variantFact, 
-          withArticleToolsWidgetsExceptDownloadCitation, 
-          ArticleToolsWidgetsFiltered);
+          withArticleToolsWidgetExceptDownloadCitation, 
+          ArticleToolsWidgetFiltered);
+      doFilterTest(maau, variantFact, withLiteratumContentItemDownloadCount, 
+          filteredStr);
       doFilterTest(maau, variantFact, withLayoutTabs, filteredStr);
-      doFilterTest(maau, variantFact, withLayoutTwoColumns, filteredStr);
       doFilterTest(maau, variantFact, withPageFooter, filteredStr);
     }
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: MarkAllenHtmlCrawlFilterFactory.java,v 1.1 2014-10-29 21:09:57 ldoan Exp $
+ * $Id: MarkAllenHtmlCrawlFilterFactory.java,v 1.2 2014-11-07 23:03:57 ldoan Exp $
  */
 
 /*
@@ -51,22 +51,15 @@ public class MarkAllenHtmlCrawlFilterFactory
     // <td class="journalNavLeftTd">
     // <td class="journalNavRightTd">
     
-    // panel under pageHeader has link current toc
+    // from toc - below pageHeader, ad panel has link to other issue
     // http://www.magonlinelibrary.com/toc/bjom/21/10
     HtmlNodeFilters.tagWithAttributeRegex("section", "class", 
-        "widget general-image none"),
+        "genericSlideshow"),
     
-    // from abs and full text - middle column 
-    // http://www.magonlinelibrary.com/doi/abs/10.12968/bjom.2013.21.10.701
-    // all article tools except Download Citations
-    HtmlNodeFilters.allExceptSubtree(
-        HtmlNodeFilters.tagWithAttribute("ul", "class", 
-            "linkList blockLinks separators centered"),
-            HtmlNodeFilters.tagWithAttributeRegex(
-                "a", "href", "/action/showCitFormats\\?")),
-    
-    // toc right column - most read       
-    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "mostRead")                          
+    // toc, abs, full, text and ref right column - most read 
+    // http://www.magonlinelibrary.com/doi/full/10.12968/bjom.2013.21.10.688
+    HtmlNodeFilters.tagWithAttributeRegex("section", "class", 
+        "layout-tabs"),                     
                 
   };
 
