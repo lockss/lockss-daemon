@@ -1,5 +1,5 @@
 /*
- * $Id: TestEndocrineSocietyHtmlFilterFactory.java,v 1.2 2014-10-29 21:02:36 ldoan Exp $
+ * $Id: TestEndocrineSocietyHtmlFilterFactory.java,v 1.3 2014-11-08 22:59:39 ldoan Exp $
  */
 
 /*
@@ -61,7 +61,49 @@ public class TestEndocrineSocietyHtmlFilterFactory
   private static final String filteredStr = 
       "<div class=\"block\"></div>";
 
-  // For crawl filtering
+  
+  // top right of issue toc - links to previous or next issue
+  private static final String withNavJournal = 
+      "<div class=\"block\">" +
+          "<section class=\"widget general-html none nav-journal " +
+          "widget-none  widget-compact-all\" id=\"d97a\">  " +
+          "<div class=\"widget-body body body-none  body-compact-all\">" +
+          "<div class=\"nav-journal\">" +
+          "<ul>" +
+          "<li><a href=\"/toc/jid/0/0\">early</a></li>" +
+          "<li><a href=\"/toc/jid/current\">curren</a></li>" +
+          "<li><a href=\"/loi/jid\">past</a></li>" +
+          "<li><a href=\"/page/jid/about\">About</a></li>" +
+          "</ul>" +
+          "</div></div> +" +
+          "</section>" +
+          "</div>";
+  
+  // from toc - access icon container 
+  private static final String withAccessIconContainer =  
+      "<div class=\"block\">" +
+        "<td class=\"accessIconContainer\"><div></div></td>" +
+      "</div>"; 
+  
+  // from toc - top panel with 'subscribe'
+  private static final String withGutterless =  
+      "<div class=\"block\">" +
+          "<div class=\"pb-columns row-fluid gutterless\">" +
+          "<section class=\"widget general-image none  widget-none  " +
+          "widget-compact-all\" id=\"5bd\">" +
+          "<div class=\"widget-body body body-none  body-compact-all\">" +
+          "<a href=\"/journal/jid\"><img src=\"/imagesrc/header.jpg\"></a>" +
+          "</div>" +
+          "</section>" +
+          "<section class=\"widget general-image alignRight " +
+          "subsButtonHead widget-none  widget-compact-all\" id=\"7ae\">" +
+          "<div class=\"widget-body body body-none  body-compact-all\">" +
+          "<a href=\"http://www.example.com/e781\">" +
+          "<img src=\"/imagesrc/subscribe.png\"></a></div>" +
+          "</section>" +
+          "</div>" +
+          "</div>";
+          
   // top right of issue toc - links to previous or next issue
   private static final String withLiteratumBookIssueNavigation = 
       "<div class=\"block\">" +
@@ -86,6 +128,8 @@ public class TestEndocrineSocietyHtmlFilterFactory
   // right column of an article - all except Download Citations
   private static final String withRightColumnExceptDownloadCitation = 
       "<div class=\"block\">" +
+          "<section class=\"widget literatumRightSidebar none right-sidebar " +
+          "widget-none\" id=\"pageRightSidebar\">" +
           "<div class=\"sidebar sidebar-right\">" +
           "<div data-pb-dropzone=\"main\">" +
           "<section class=\"widget general-widget\" id=\"xxx\">" +
@@ -108,10 +152,13 @@ public class TestEndocrineSocietyHtmlFilterFactory
           "</section>" +
           "</div>" +
           "</div>" +
+          "</section>" +
           "</div>";
   
   private static final String RightColumnFiltered = 
       "<div class=\"block\">" +
+          "<section class=\"widget literatumRightSidebar none right-sidebar " +
+          "widget-none\" id=\"pageRightSidebar\">" +
           "<div class=\"sidebar sidebar-right\">" +
           "<div data-pb-dropzone=\"main\">" +
           "<section class=\"widget-box\" id=\"yyy\">" +
@@ -124,6 +171,7 @@ public class TestEndocrineSocietyHtmlFilterFactory
           "</li>" +
           "</ul>" +
           "</div></div></section></div></div>" +
+          "</section>" +
           "</div>";
   
   // related content near Erratum
@@ -160,29 +208,25 @@ public class TestEndocrineSocietyHtmlFilterFactory
           "title=\"External link\">NM_000001</a>" +
            "</div>";
   
-  // For hash filtering
   // pageheader
   private static final String withPageHeader =  
       "<div class=\"block\">" +
-          "<section class=\"widget pageHeader none header widget-none  widget-compact-all\" id=\"pageHeader\">" +
+          "<section class=\"widget pageHeader none header widget-none  " +
+          "widget-compact-all\" id=\"pageHeader\">" +
           "<div class=\"widget-body body body-none  body-compact-all\">" +
           "<div class=\"page-header\">" +
-          "<section class=\"widget doubleClickAd alignCenter leaderBoard widget-none  widget-compact-all\" id=\"1e574115-efc7-4f46-bf71-c13a2b813fa3\">" +
+          "<section class=\"widget doubleClickAd alignCenter leaderBoard " +
+          "widget-none  widget-compact-all\" id=\"1e3\">" +
           "</section>" +
           "</div></div>" +
           "</section>" +
           "</div>";        
   
-  // access icon free.gif - ex: http://press.endocrine.org/toc/edrv/35/3
-  private static final String withFreeGif =  
-      "<div class=\"block\">" +
-          "<img src=\"/imgdir/images/free.gif\" align=\"middle\">" +
-          "</div>";
-  
   // pageFooter
   private static final String withPageFooter =  
       "<div class=\"block\">" +
-          "<section class=\"widget pageFooter none container-footer widget-none  widget-compact-all\" id=\"pageFooter\">" +
+          "<section class=\"widget pageFooter none container-footer " +
+          "widget-none  widget-compact-all\" id=\"pageFooter\">" +
           "<div class=\"widget-body body body-none  body-compact-all\">" +
           "<div class=\"page-footer\">" +
           "<div class=\"copyright\">" +
@@ -236,8 +280,6 @@ public class TestEndocrineSocietyHtmlFilterFactory
       variantFact = new EndocrineSocietyHtmlCrawlFilterFactory();
       doFilterTest(esau, variantFact, withLiteratumBookIssueNavigation, 
           filteredStr);
-      doFilterTest(esau, variantFact, 
-          withRightColumnExceptDownloadCitation, RightColumnFiltered);
       doFilterTest(esau, variantFact, withRelatedLayer, filteredStr);      
       doFilterTest(esau, variantFact, withRelatedContent, filteredStr);      
       doFilterTest(esau, variantFact, withExtLink, filteredStr);      
@@ -249,9 +291,11 @@ public class TestEndocrineSocietyHtmlFilterFactory
      public void testFiltering() throws Exception {
       variantFact = new EndocrineSocietyHtmlHashFilterFactory();
       doFilterTest(esau, variantFact, withPageHeader, filteredStr);
+      doFilterTest(esau, variantFact, withNavJournal, filteredStr);
+      doFilterTest(esau, variantFact, withAccessIconContainer, filteredStr);
+      doFilterTest(esau, variantFact, withGutterless, filteredStr);
       doFilterTest(esau, variantFact, 
           withRightColumnExceptDownloadCitation, RightColumnFiltered);
-      doFilterTest(esau, variantFact, withFreeGif, filteredStr);
       doFilterTest(esau, variantFact, withPageFooter, filteredStr);
     }
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: EndocrineSocietyHtmlCrawlFilterFactory.java,v 1.1 2014-10-17 21:31:49 ldoan Exp $
+ * $Id: EndocrineSocietyHtmlCrawlFilterFactory.java,v 1.2 2014-11-08 22:58:52 ldoan Exp $
  */
 
 /*
@@ -33,7 +33,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.atypon.endocrinesociety;
 
 import java.io.InputStream;
-
 import org.htmlparser.NodeFilter;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
@@ -49,20 +48,13 @@ public class EndocrineSocietyHtmlCrawlFilterFactory
     // from issue toc or article: previous issue / next issue
     HtmlNodeFilters.tagWithAttributeRegex(
         "section", "class", "literatumBookIssueNavigation"),
-        
-    // right column of an article - all except Download Citations
-    HtmlNodeFilters.allExceptSubtree(
-        HtmlNodeFilters.tagWithAttributeRegex( 
-            "div", "class", "sidebar-right"),
-            HtmlNodeFilters.tagWithAttributeRegex(
-                "a", "href", "/action/showCitFormats\\?")),
                 
     // related content near Erratum
-    // http://press.endocrine.org/toc/endo/154/10
-    HtmlNodeFilters.tagWithAttribute("div", "class", "relatedLayer"),
+    // http://press.endocrine.org/toc/endo/154/10       
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "relatedLayer"),
     // related content from Related tab of Errata full text
     // http://press.endocrine.org/doi/full/10.1210/en.2013-1802
-    HtmlNodeFilters.tagWithAttribute("div", "id", "relatedContent"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "id", "relatedContent"),
     
     // external links within Table figures or middle of a paragraph
     // ex: http://press.endocrine.org/doi/full/10.1210/en.2012-2254
@@ -79,4 +71,5 @@ public class EndocrineSocietyHtmlCrawlFilterFactory
   throws PluginException{
     return super.createFilteredInputStream(au, in, encoding, filters);
   }
+
 }

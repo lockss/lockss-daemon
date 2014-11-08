@@ -1,5 +1,5 @@
 /*
- * $Id: EndocrineSocietyHtmlHashFilterFactory.java,v 1.3 2014-11-01 17:04:43 ldoan Exp $
+ * $Id: EndocrineSocietyHtmlHashFilterFactory.java,v 1.4 2014-11-08 22:58:52 ldoan Exp $
  */
 
 /*
@@ -47,18 +47,34 @@ public class EndocrineSocietyHtmlHashFilterFactory
       InputStream in, String encoding) {
     
     NodeFilter[] filters = new NodeFilter[] {
+        
+        // covered by BaseAtypon = next/previous
+        //<td class="journalNavLeftTd"> - 
+        // <td class="journalNavRightTd"> - 
+        
         // pageHeader
         HtmlNodeFilters.tagWithAttribute("section", "id", "pageHeader"),
+  
+        // nav journal - current past issues, about, authors
+        // http://press.endocrine.org/doi/full/10.1210/en.2012-2147
+        HtmlNodeFilters.tagWithAttributeRegex("section", "class", 
+            "nav-journal"),
+        
+        // top panel with 'subscribe'
+        // http://press.endocrine.org/doi/full/10.1210/en.2012-2147
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "gutterless"),
         
         // right column of an article - all except Download Citations
+        // note: institution banner is inside sidebar-right
         HtmlNodeFilters.allExceptSubtree(
             HtmlNodeFilters.tagWithAttributeRegex( 
-                "div", "class", "sidebar-right"),
+                "section", "class", "literatumRightSidebar"),
                 HtmlNodeFilters.tagWithAttributeRegex(
                     "a", "href", "/action/showCitFormats\\?")),     
-                                
-        // access icon free.gif - ex: http://press.endocrine.org/toc/edrv/35/3
-        HtmlNodeFilters.tagWithAttributeRegex("img", "src", "free.gif"),   
+         
+        // from toc - access icon container
+        // http://press.endocrine.org/toc/edrv/35/3            
+        HtmlNodeFilters.tagWithAttribute("td", "class", "accessIconContainer"), 
         
         // pageFooter
         HtmlNodeFilters.tagWithAttribute("section", "id", "pageFooter"),

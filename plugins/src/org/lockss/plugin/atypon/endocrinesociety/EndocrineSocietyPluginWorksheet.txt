@@ -277,17 +277,12 @@ sfxlink javascript commands
 
 Anything else you think might need to be removed from hashing??
 
-* At TOC level:
-  - Top banner
-  - right column - all
-  - free.gif (ex: http://press.endocrine.org/toc/edrv/35/3)
-  <img border="0" align="middle" alt="" src="/templates/jsp/images/free.gif">
-  - footer
-
-* At Article level:
-  - Top banner
+  - pageHeader
+  - nav journal - current past issues, about, authors
+  - accessIconContainer (ex: http://press.endocrine.org/toc/edrv/35/3)
+  - top panel with 'subscribe'
   - right column - all except Download Citation
-  - footer
+  - pageFooter
 
 -------------------HTML CRAWL FILTERING----------------------------------------
 If the URL pattern for articles is non-deterministic (that is, it doesn't contain volume,  year, journal 
@@ -315,9 +310,9 @@ listed below. If you find some, please provide the URL for the page where you sa
   - Top banner
   - Nav with current issue and past issues
   - Previous article / Next articles
-  - right column - all except Download Citation
   - Related content. Example in the Erratum section near the bottom of 
   http://press.endocrine.org/toc/endo/154/10
+  - external links within Table figures or middle of a paragraph
 
 This related content expands to Original Article containing links to other volume 153 issue 8.
 
@@ -338,9 +333,13 @@ If there is a difference note that here and give the URL to the URL you tested.
 ==> on 21sep2014 the above downloaded page had no watermark.  But today 01nov2014, there is watermark.
 another example is http://press.endocrine.org/doi/pdf/10.1210/en.2012-2190 and 
 http://press.endocrine.org/doi/pdf/10.1210/en.2012-1931.
-** the watermark text is at the bottom of the pdf"
-"The Endocrine Society. Downloaded from press.endocrine.org by [${individualUser.displayName}] on 31 October 2014. at 17:35 For personal use only. No other uses without permission. . All rights reserved."
-*** this plugin will need pdf filter.
+* the watermark text is at the bottom of the pdf"
+* Thib checked the watermark of the pdfs with and 
+without 'LOCKSS cache' user agent. The pdfs are served consistently with 
+the watermark. Unlike the case of Society of Exploration Geophysicists, 
+the pdfs on one content machine had watermark and not the other. 
+Will wait until this plugin is released to content machines, then run tests 
+and determine whether or not a pdf filter is needed.
 
 -----------------------METADATA EXTRACTION--------------------------------------
 Metadata is provided in a variety of ways depending on the publisher. 
