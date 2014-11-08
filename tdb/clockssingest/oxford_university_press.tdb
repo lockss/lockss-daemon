@@ -10901,7 +10901,7 @@
     au < finished ; frozen ; 2012 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 67A ; 67A ; >
     au < finished ; frozen ; 2012 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 67 ; 67 ; >
     au < crawling ; exists ; 2013 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 68 ; 68 ; >
-    au < testing ; exists ; 2014 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 69 ; 69 ; >
+    au < ready ; exists ; 2014 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 69 ; 69 ; >
     au < ready ; exists ; 2014 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 69A ; 69A ; >
 
     }
@@ -12816,7 +12816,7 @@
     param[base_url] = http://jpo.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < testing ; exists ; 2014 ; Journal of Professions and Organization Volume 1 ; 1 ; >
+    au < ready ; exists ; 2014 ; Journal of Professions and Organization Volume 1 ; 1 ; >
 
   }
 
