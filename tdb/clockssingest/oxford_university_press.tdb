@@ -2363,7 +2363,7 @@
     au < finished ; frozen ; 2011 ; Briefings in Bioinformatics Volume 12 ; 12 ; >
     au < finished ; crawling ; 2012 ; Briefings in Bioinformatics Volume 13 ; 13 ; >
     au < crawling ; exists ; 2013 ; Briefings in Bioinformatics Volume 14 ; 14 ; >
-    au < testing ; exists ; 2014 ; Briefings in Bioinformatics Volume 15 ; 15 ; >
+    au < ready ; exists ; 2014 ; Briefings in Bioinformatics Volume 15 ; 15 ; >
 
     }
 
@@ -2914,7 +2914,7 @@
     au < finished ; frozen ; 2011 ; The British Journal of Social Work Volume 41 ; 41 ; >
     au < finished ; crawling ; 2012 ; The British Journal of Social Work Volume 42 ; 42 ; >
     au < crawling ; exists ; 2013 ; The British Journal of Social Work Volume 43 ; 43 ; >
-    au < testing ; exists ; 2014 ; The British Journal of Social Work Volume 44 ; 44 ; >
+    au < ready ; exists ; 2014 ; The British Journal of Social Work Volume 44 ; 44 ; >
 
     }
 
@@ -3250,7 +3250,7 @@
     au < finished ; frozen ; 2011 ; Cambridge Journal of Economics Volume 35 ; 35 ; >
     au < finished ; frozen ; 2012 ; Cambridge Journal of Economics Volume 36 ; 36 ; >
     au < crawling ; exists ; 2013 ; Cambridge Journal of Economics Volume 37 ; 37 ; >
-    au < testing ; exists ; 2014 ; Cambridge Journal of Economics Volume 38 ; 38 ; >
+    au < ready ; exists ; 2014 ; Cambridge Journal of Economics Volume 38 ; 38 ; >
 
     }
 
@@ -3286,7 +3286,7 @@
     au < finished ; crawling ; 2011 ; Cambridge Journal of Regions, Economy and Society Volume 4 ; 4 ; >
     au < finished ; frozen ; 2012 ; Cambridge Journal of Regions, Economy and Society Volume 5 ; 5 ; >
     au < crawling ; exists ; 2013 ; Cambridge Journal of Regions, Economy and Society Volume 6 ; 6 ; >
-    au < testing ; exists ; 2014 ; Cambridge Journal of Regions, Economy and Society Volume 7 ; 7 ; >
+    au < ready ; exists ; 2014 ; Cambridge Journal of Regions, Economy and Society Volume 7 ; 7 ; >
 
     }
 
@@ -3396,7 +3396,7 @@
     au < finished ; crawling ; 2011 ; Capital Markets Law Journal Volume 6 ; 6 ; >
     au < finished ; crawling ; 2012 ; Capital Markets Law Journal Volume 7 ; 7 ; >
     au < crawling ; exists ; 2013 ; Capital Markets Law Journal Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2014 ; Capital Markets Law Journal Volume 9 ; 9 ; >
+    au < testing ; exists ; 2014 ; Capital Markets Law Journal Volume 9 ; 9 ; >
 
     }
 
@@ -3460,7 +3460,7 @@
     au < finished ; crawling ; 2011 ; Carcinogenesis Volume 32 ; 32 ; >
     au < finished ; crawling ; 2012 ; Carcinogenesis Volume 33 ; 33 ; >
     au < crawling ; exists ; 2013 ; Carcinogenesis Volume 34 ; 34 ; >
-    au < manifest ; exists ; 2014 ; Carcinogenesis Volume 35 ; 35 ; >
+    au < testing ; exists ; 2014 ; Carcinogenesis Volume 35 ; 35 ; >
 
     }
 
@@ -3654,7 +3654,7 @@
     au < finished ; crawling ; 2011 ; Cerebral Cortex Volume 21 ; 21 ; >
     au < finished ; crawling ; 2012 ; Cerebral Cortex Volume 22 ; 22 ; >
     au < crawling ; exists ; 2013 ; Cerebral Cortex Volume 23 ; 23 ; >
-    au < manifest ; exists ; 2014 ; Cerebral Cortex Volume 24 ; 24 ; >
+    au < testing ; exists ; 2014 ; Cerebral Cortex Volume 24 ; 24 ; >
 
     }
 
@@ -3695,7 +3695,7 @@
     au < finished ; crawling ; 2011 ; CESifo Economic Studies Volume 57 ; 57 ; >
     au < finished ; frozen ; 2012 ; CESifo Economic Studies Volume 58 ; 58 ; >
     au < crawling ; exists ; 2013 ; CESifo Economic Studies Volume 59 ; 59 ; >
-    au < manifest ; exists ; 2014 ; CESifo Economic Studies Volume 60 ; 60 ; >
+    au < testing ; exists ; 2014 ; CESifo Economic Studies Volume 60 ; 60 ; >
 
     }
 
@@ -3763,7 +3763,7 @@
     au < finished ; crawling ; 2011 ; Chemical Senses Volume 36 ; 36 ; >
     au < finished ; crawling ; 2012 ; Chemical Senses Volume 37 ; 37 ; >
     au < crawling ; exists ; 2013 ; Chemical Senses Volume 38 ; 38 ; >
-    au < manifest ; exists ; 2014 ; Chemical Senses Volume 39 ; 39 ; >
+    au < testing ; exists ; 2014 ; Chemical Senses Volume 39 ; 39 ; >
 
     }
 
@@ -3815,7 +3815,7 @@
     au < finished ; frozen ; 2011 ; Children & Schools Volume 33 ; 33 ; >
     au < finished ; frozen ; 2012 ; Children & Schools Volume 34 ; 34 ; >
     au < crawling ; exists ; 2013 ; Children & Schools Volume 35 ; 35 ; >
-    au < manifest ; exists ; 2014 ; Children & Schools Volume 36 ; 36 ; >
+    au < testing ; exists ; 2014 ; Children & Schools Volume 36 ; 36 ; >
 
   }
 
@@ -3834,7 +3834,7 @@
     param[base_url] = http://cjcl.oxfordjournals.org/ 
 
     au < crawling ; exists ; 2013 ; The Chinese Journal of Comparative Law Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2014 ; The Chinese Journal of Comparative Law Volume 2 ; 2 ; >
+    au < testing ; exists ; 2014 ; The Chinese Journal of Comparative Law Volume 2 ; 2 ; >
 
     }
 
@@ -3876,7 +3876,7 @@
     au < finished ; crawling ; 2011 ; Chinese Journal of International Law Volume 10 ; 10 ; >
     au < finished ; frozen ; 2012 ; Chinese Journal of International Law Volume 11 ; 11 ; >
     au < crawling ; exists ; 2013 ; Chinese Journal of International Law Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2014 ; Chinese Journal of International Law Volume 13 ; 13 ; >
+    au < testing ; exists ; 2014 ; Chinese Journal of International Law Volume 13 ; 13 ; >
 
     }
 
@@ -3911,7 +3911,7 @@
     au < finished ; crawling ; 2011 ; The Chinese Journal of International Politics Volume 4 ; 4 ; >
     au < finished ; crawling ; 2012 ; The Chinese Journal of International Politics Volume 5 ; 5 ; >
     au < crawling ; exists ; 2013 ; The Chinese Journal of International Politics Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2014 ; The Chinese Journal of International Politics Volume 7 ; 7 ; >
+    au < testing ; exists ; 2014 ; The Chinese Journal of International Politics Volume 7 ; 7 ; >
 
     }
 
@@ -3983,7 +3983,7 @@
     au < finished ; frozen ; 2011 ; Classical Receptions Journal Volume 3 ; 3 ; >
     au < finished ; crawling ; 2012 ; Classical Receptions Journal Volume 4 ; 4 ; >
     au < crawling ; exists ; 2013 ; Classical Receptions Journal Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2014 ; Classical Receptions Journal Volume 6 ; 6 ; >
+    au < testing ; exists ; 2014 ; Classical Receptions Journal Volume 6 ; 6 ; >
 
   }
 
@@ -4160,7 +4160,7 @@
     au < finished ; crawling ; 2011 ; Community Development Journal Volume 46 ; 46 ; >
     au < finished ; frozen ; 2012 ; Community Development Journal Volume 47 ; 47 ; >
     au < crawling ; exists ; 2013 ; Community Development Journal Volume 48 ; 48 ; >
-    au < manifest ; exists ; 2014 ; Community Development Journal Volume 49 ; 49 ; >
+    au < testing ; exists ; 2014 ; Community Development Journal Volume 49 ; 49 ; >
 
     }
 
@@ -4283,7 +4283,7 @@
     au < finished ; crawling ; 2011 ; Contemporary Women's Writing Volume 5 ; 5 ; >
     au < finished ; crawling ; 2012 ; Contemporary Women's Writing Volume 6 ; 6 ; >
     au < crawling ; exists ; 2013 ; Contemporary Women's Writing Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2014 ; Contemporary Women's Writing Volume 8 ; 8 ; >
+    au < testing ; exists ; 2014 ; Contemporary Women's Writing Volume 8 ; 8 ; >
 
     }
 
@@ -4388,7 +4388,7 @@
     au < finished ; crawling ; 2011 ; Contributions to Political Economy Volume 30 ; 30 ; >
     au < finished ; crawling ; 2012 ; Contributions to Political Economy Volume 31 ; 31 ; >
     au < crawling ; exists ; 2013 ; Contributions to Political Economy Volume 32 ; 32 ; >
-    au < manifest ; exists ; 2014 ; Contributions to Political Economy Volume 33 ; 33 ; >
+    au < testing ; exists ; 2014 ; Contributions to Political Economy Volume 33 ; 33 ; >
 
     }
 
@@ -4428,7 +4428,7 @@
     au < finished ; crawling ; 2011 ; Current Legal Problems Volume 64 ; 64 ; >
     au < finished ; crawling ; 2012 ; Current Legal Problems Volume 65 ; 65 ; >
     au < crawling ; exists ; 2013 ; Current Legal Problems Volume 66 ; 66 ; >
-    au < manifest ; exists ; 2014 ; Current Legal Problems Volume 67 ; 67 ; >
+    au < testing ; exists ; 2014 ; Current Legal Problems Volume 67 ; 67 ; >
 
   }
 
@@ -4637,7 +4637,7 @@
     au < finished ; crawling ; 2011 ; Early Music Volume 39 ; 39 ; >
     au < finished ; crawling ; 2012 ; Early Music Volume 40 ; 40 ; >
     au < crawling ; exists ; 2013 ; Early Music Volume 41 ; 41 ; >
-    au < manifest ; exists ; 2014 ; Early Music Volume 42 ; 42 ; >
+    au < testing ; exists ; 2014 ; Early Music Volume 42 ; 42 ; >
 
     }
 
@@ -4978,7 +4978,7 @@
     au < finished ; crawling ; 2011 ; ELT Journal Volume 65 ; 65 ; >
     au < finished ; crawling ; 2012 ; ELT Journal Volume 66 ; 66 ; >
     au < crawling ; exists ; 2013 ; ELT Journal Volume 67 ; 67 ; >
-    au < manifest ; exists ; 2014 ; ELT Journal Volume 68 ; 68 ; >
+    au < testing ; exists ; 2014 ; ELT Journal Volume 68 ; 68 ; >
 
     }
 
@@ -5022,7 +5022,7 @@
     au < finished ; crawling ; 2011 ; Enterprise & Society Volume 12 ; 12 ; >
     au < finished ; frozen ; 2012 ; Enterprise & Society Volume 13 ; 13 ; >
     au < crawling ; exists ; 2013 ; Enterprise & Society Volume 14 ; 14 ; >
-    au < manifest ; exists ; 2014 ; Enterprise & Society Volume 15 ; 15 ; >
+    au < testing ; exists ; 2014 ; Enterprise & Society Volume 15 ; 15 ; >
 
     }
 
@@ -5284,7 +5284,7 @@
     au < finished ; crawling ; 2011 ; Essays in Criticism Volume 61 ; 61 ; >
     au < finished ; frozen ; 2012 ; Essays in Criticism Volume 62 ; 62 ; >
     au < crawling ; exists ; 2013 ; Essays in Criticism Volume 63 ; 63 ; >
-    au < manifest ; exists ; 2014 ; Essays in Criticism Volume 64 ; 64 ; >
+    au < testing ; exists ; 2014 ; Essays in Criticism Volume 64 ; 64 ; >
 
     }
 
@@ -5877,7 +5877,7 @@
     au < finished ; crawling ; 2011 ; European Review of Agricultural Economics Volume 38 ; 38 ; >
     au < finished ; crawling ; 2012 ; European Review of Agricultural Economics Volume 39 ; 39 ; >
     au < crawling ; exists ; 2013 ; European Review of Agricultural Economics Volume 40 ; 40 ; >
-    au < manifest ; exists ; 2014 ; European Review of Agricultural Economics Volume 41 ; 41 ; >
+    au < testing ; exists ; 2014 ; European Review of Agricultural Economics Volume 41 ; 41 ; >
 
     }
 
@@ -5912,7 +5912,7 @@
     au < finished ; frozen ; 2011 ; European Review of Economic History Volume 15 ; 15 ; >
     au < finished ; frozen ; 2012 ; European Review of Economic History Volume 16 ; 16 ; >
     au < crawling ; exists ; 2013 ; European Review of Economic History Volume 17 ; 17 ; >
-    au < manifest ; exists ; 2014 ; European Review of Economic History Volume 18 ; 18 ; >
+    au < testing ; exists ; 2014 ; European Review of Economic History Volume 18 ; 18 ; >
 
   }
 
@@ -5969,7 +5969,7 @@
     au < finished ; crawling ; 2011 ; European Sociological Review Volume 27 ; 27 ; >
     au < finished ; frozen ; 2012 ; European Sociological Review Volume 28 ; 28 ; >
     au < crawling ; exists ; 2013 ; European Sociological Review Volume 29 ; 29 ; >
-    au < manifest ; exists ; 2014 ; European Sociological Review Volume 30 ; 30 ; >
+    au < testing ; exists ; 2014 ; European Sociological Review Volume 30 ; 30 ; >
 
     }
 
@@ -6061,7 +6061,7 @@
     au < finished ; crawling ; 2011 ; Family Practice Volume 28 ; 28 ; >
     au < finished ; crawling ; 2012 ; Family Practice Volume 29 ; 29 ; >
     au < crawling ; exists ; 2013 ; Family Practice Volume 30 ; 30 ; >
-    au < manifest ; exists ; 2014 ; Family Practice Volume 31 ; 31 ; >
+    au < testing ; exists ; 2014 ; Family Practice Volume 31 ; 31 ; >
 
     }
 
@@ -6990,7 +6990,7 @@
     au < finished ; crawling ; 2011 ; Glycobiology Volume 21 ; 21 ; >
     au < finished ; frozen ; 2012 ; Glycobiology Volume 22 ; 22 ; >
     au < crawling ; exists ; 2013 ; Glycobiology Volume 23 ; 23 ; >
-    au < manifest ; exists ; 2014 ; Glycobiology Volume 24 ; 24 ; >
+    au < testing ; exists ; 2014 ; Glycobiology Volume 24 ; 24 ; >
 
     }
 
@@ -7046,7 +7046,7 @@
     au < finished ; crawling ; 2011 ; Health & Social Work Volume 36 ; 36 ; >
     au < finished ; frozen ; 2012 ; Health & Social Work Volume 37 ; 37 ; >
     au < crawling ; exists ; 2013 ; Health & Social Work Volume 38 ; 38 ; >
-    au < manifest ; exists ; 2014 ; Health & Social Work Volume 39 ; 39 ; >
+    au < testing ; exists ; 2014 ; Health & Social Work Volume 39 ; 39 ; >
 
   }
 
@@ -11712,7 +11712,7 @@
     au < finished ; crawling ; 2011 ; Journal of International Dispute Settlement Volume 2 ; 2 ; >
     au < finished ; frozen ; 2012 ; Journal of International Dispute Settlement Volume 3 ; 3 ; >
     au < crawling ; exists ; 2013 ; Journal of International Dispute Settlement Volume 4 ; 4 ; >
-    au < testing ; exists ; 2014 ; Journal of International Dispute Settlement Volume 5 ; 5 ; >
+    au < ready ; exists ; 2014 ; Journal of International Dispute Settlement Volume 5 ; 5 ; >
 
   }
 
@@ -11756,7 +11756,7 @@
     au < finished ; frozen ; 2011 ; Journal of International Economic Law Volume 14 ; 14 ; >
     au < finished ; frozen ; 2012 ; Journal of International Economic Law Volume 15 ; 15 ; >
     au < crawling ; exists ; 2013 ; Journal of International Economic Law Volume 16 ; 16 ; >
-    au < testing ; exists ; 2014 ; Journal of International Economic Law Volume 17 ; 17 ; >
+    au < ready ; exists ; 2014 ; Journal of International Economic Law Volume 17 ; 17 ; >
 
     }
 
@@ -11947,7 +11947,7 @@
     au < finished ; crawling ; 2011 ; Journal of Logic and Computation Volume 21 ; 21 ; >
     au < finished ; frozen ; 2012 ; Journal of Logic and Computation Volume 22 ; 22 ; >
     au < crawling ; exists ; 2013 ; Journal of Logic and Computation Volume 23 ; 23 ; >
-    au < testing ; exists ; 2014 ; Journal of Logic and Computation Volume 24 ; 24 ; >
+    au < ready ; exists ; 2014 ; Journal of Logic and Computation Volume 24 ; 24 ; >
 
     }
 
@@ -12707,7 +12707,7 @@
     au < finished ; frozen ; 2011 ; Journal of Petrology Volume 52 ; 52 ; >
     au < crawling ; exists ; 2012 ; Journal of Petrology Volume 53 ; 53 ; >
     au < crawling ; exists ; 2013 ; Journal of Petrology Volume 54 ; 54 ; >
-    au < testing ; exists ; 2014 ; Journal of Petrology Volume 55 ; 55 ; >
+    au < ready ; exists ; 2014 ; Journal of Petrology Volume 55 ; 55 ; >
 
     }
 
@@ -12867,7 +12867,7 @@
     au < finished ; frozen ; 2011 ; Journal of Public Administration Research and Theory Volume 21 ; 21 ; >
     au < finished ; frozen ; 2012 ; Journal of Public Administration Research and Theory Volume 22 ; 22 ; >
     au < crawling ; exists ; 2013 ; Journal of Public Administration Research and Theory Volume 23 ; 23 ; >
-    au < testing ; exists ; 2014 ; Journal of Public Administration Research and Theory Volume 24 ; 24 ; >
+    au < ready ; exists ; 2014 ; Journal of Public Administration Research and Theory Volume 24 ; 24 ; >
 
     }
 
@@ -13006,7 +13006,7 @@
     au < finished ; frozen ; 2011 ; Journal of Refugee Studies Volume 24 ; 24 ; >
     au < finished ; crawling ; 2012 ; Journal of Refugee Studies Volume 25 ; 25 ; >
     au < crawling ; exists ; 2013 ; Journal of Refugee Studies Volume 26 ; 26 ; >
-    au < testing ; exists ; 2014 ; Journal of Refugee Studies Volume 27 ; 27 ; >
+    au < ready ; exists ; 2014 ; Journal of Refugee Studies Volume 27 ; 27 ; >
 
     }
 
