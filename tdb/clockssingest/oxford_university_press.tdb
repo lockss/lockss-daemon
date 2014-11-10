@@ -18740,6 +18740,22 @@
   {
 
     title <
+      name = Regenerative Biomaterials ;
+      issn = 2056-3418 ;
+      eissn = 2056-3426 ;
+      issnl = 2056-3418 
+    >
+
+    param[base_url] = http://rb.oxfordjournals.org/
+    pluginSuffix = ClockssHighWireDrupalPlugin
+
+    au < exists ; exists ; 2014 ; Regenerative Biomaterials Volume 1 ; 1 ; >
+
+  }
+
+  {
+
+    title <
       name = Reports of Patent, Design and Trade Mark Cases ;
       issn = 0080-1364 ;
       eissn = 1756-1000 ;
