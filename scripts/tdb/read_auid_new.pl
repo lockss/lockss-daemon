@@ -705,6 +705,8 @@ while (my $line = <>) {
         if ($man_contents =~ m/<h1\s*>\s*(.*)\s*<\/h1>/si) {
           $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
+          $vol_title =~ s/\s*<br \/>\s*/: /;
+          $vol_title =~ s/<?span>//;
           if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
             $vol_title = "\"" . $vol_title . "\"";
           }
