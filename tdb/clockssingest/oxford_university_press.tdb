@@ -3695,7 +3695,7 @@
     au < finished ; crawling ; 2011 ; CESifo Economic Studies Volume 57 ; 57 ; >
     au < finished ; frozen ; 2012 ; CESifo Economic Studies Volume 58 ; 58 ; >
     au < crawling ; exists ; 2013 ; CESifo Economic Studies Volume 59 ; 59 ; >
-    au < testing ; exists ; 2014 ; CESifo Economic Studies Volume 60 ; 60 ; >
+    au < ready ; exists ; 2014 ; CESifo Economic Studies Volume 60 ; 60 ; >
 
     }
 
@@ -3763,7 +3763,7 @@
     au < finished ; crawling ; 2011 ; Chemical Senses Volume 36 ; 36 ; >
     au < finished ; crawling ; 2012 ; Chemical Senses Volume 37 ; 37 ; >
     au < crawling ; exists ; 2013 ; Chemical Senses Volume 38 ; 38 ; >
-    au < testing ; exists ; 2014 ; Chemical Senses Volume 39 ; 39 ; >
+    au < ready ; exists ; 2014 ; Chemical Senses Volume 39 ; 39 ; >
 
     }
 
@@ -3815,7 +3815,7 @@
     au < finished ; frozen ; 2011 ; Children & Schools Volume 33 ; 33 ; >
     au < finished ; frozen ; 2012 ; Children & Schools Volume 34 ; 34 ; >
     au < crawling ; exists ; 2013 ; Children & Schools Volume 35 ; 35 ; >
-    au < testing ; exists ; 2014 ; Children & Schools Volume 36 ; 36 ; >
+    au < ready ; exists ; 2014 ; Children & Schools Volume 36 ; 36 ; >
 
   }
 
@@ -3834,7 +3834,7 @@
     param[base_url] = http://cjcl.oxfordjournals.org/ 
 
     au < crawling ; exists ; 2013 ; The Chinese Journal of Comparative Law Volume 1 ; 1 ; >
-    au < testing ; exists ; 2014 ; The Chinese Journal of Comparative Law Volume 2 ; 2 ; >
+    au < ready ; exists ; 2014 ; The Chinese Journal of Comparative Law Volume 2 ; 2 ; >
 
     }
 
@@ -3876,7 +3876,7 @@
     au < finished ; crawling ; 2011 ; Chinese Journal of International Law Volume 10 ; 10 ; >
     au < finished ; frozen ; 2012 ; Chinese Journal of International Law Volume 11 ; 11 ; >
     au < crawling ; exists ; 2013 ; Chinese Journal of International Law Volume 12 ; 12 ; >
-    au < testing ; exists ; 2014 ; Chinese Journal of International Law Volume 13 ; 13 ; >
+    au < ready ; exists ; 2014 ; Chinese Journal of International Law Volume 13 ; 13 ; >
 
     }
 
@@ -4428,7 +4428,7 @@
     au < finished ; crawling ; 2011 ; Current Legal Problems Volume 64 ; 64 ; >
     au < finished ; crawling ; 2012 ; Current Legal Problems Volume 65 ; 65 ; >
     au < crawling ; exists ; 2013 ; Current Legal Problems Volume 66 ; 66 ; >
-    au < testing ; exists ; 2014 ; Current Legal Problems Volume 67 ; 67 ; >
+    au < ready ; exists ; 2014 ; Current Legal Problems Volume 67 ; 67 ; >
 
   }
 
@@ -4637,7 +4637,7 @@
     au < finished ; crawling ; 2011 ; Early Music Volume 39 ; 39 ; >
     au < finished ; crawling ; 2012 ; Early Music Volume 40 ; 40 ; >
     au < crawling ; exists ; 2013 ; Early Music Volume 41 ; 41 ; >
-    au < testing ; exists ; 2014 ; Early Music Volume 42 ; 42 ; >
+    au < ready ; exists ; 2014 ; Early Music Volume 42 ; 42 ; >
 
     }
 
@@ -4978,7 +4978,7 @@
     au < finished ; crawling ; 2011 ; ELT Journal Volume 65 ; 65 ; >
     au < finished ; crawling ; 2012 ; ELT Journal Volume 66 ; 66 ; >
     au < crawling ; exists ; 2013 ; ELT Journal Volume 67 ; 67 ; >
-    au < testing ; exists ; 2014 ; ELT Journal Volume 68 ; 68 ; >
+    au < ready ; exists ; 2014 ; ELT Journal Volume 68 ; 68 ; >
 
     }
 
@@ -6990,7 +6990,7 @@
     au < finished ; crawling ; 2011 ; Glycobiology Volume 21 ; 21 ; >
     au < finished ; frozen ; 2012 ; Glycobiology Volume 22 ; 22 ; >
     au < crawling ; exists ; 2013 ; Glycobiology Volume 23 ; 23 ; >
-    au < testing ; exists ; 2014 ; Glycobiology Volume 24 ; 24 ; >
+    au < ready ; exists ; 2014 ; Glycobiology Volume 24 ; 24 ; >
 
     }
 
@@ -7046,7 +7046,7 @@
     au < finished ; crawling ; 2011 ; Health & Social Work Volume 36 ; 36 ; >
     au < finished ; frozen ; 2012 ; Health & Social Work Volume 37 ; 37 ; >
     au < crawling ; exists ; 2013 ; Health & Social Work Volume 38 ; 38 ; >
-    au < testing ; exists ; 2014 ; Health & Social Work Volume 39 ; 39 ; >
+    au < ready ; exists ; 2014 ; Health & Social Work Volume 39 ; 39 ; >
 
   }
 
@@ -8733,7 +8733,7 @@
     au < finished ; crawling ; 2011 ; International Journal of Law and Information Technology Volume 19 ; 19 ; >
     au < finished ; frozen ; 2012 ; International Journal of Law and Information Technology Volume 20 ; 20 ; >
     au < crawling ; exists ; 2013 ; International Journal of Law and Information Technology Volume 21 ; 21 ; >
-    au < testing ; exists ; 2014 ; International Journal of Law and Information Technology Volume 22 ; 22 ; >
+    au < ready ; exists ; 2014 ; International Journal of Law and Information Technology Volume 22 ; 22 ; >
 
     }
 
