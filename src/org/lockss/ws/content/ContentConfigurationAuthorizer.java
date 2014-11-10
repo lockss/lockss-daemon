@@ -1,5 +1,5 @@
 /*
- * $Id: ContentConfigurationAuthorizer.java,v 1.2 2014-06-03 22:45:53 fergaloy-sf Exp $
+ * $Id: ContentConfigurationAuthorizer.java,v 1.3 2014-11-10 17:46:33 fergaloy-sf Exp $
  */
 
 /*
@@ -29,24 +29,24 @@
  in this Software without prior written authorization from Stanford University.
 
  */
-
-/**
- * The authorization interceptor for the ContentConfiguration web service.
- */
 package org.lockss.ws.content;
 
 import org.lockss.servlet.LockssServlet;
 import org.lockss.ws.cxf.AuthorizationInterceptor;
 
+/**
+ * The authorization interceptor for the ContentConfiguration web service.
+ */
 public class ContentConfigurationAuthorizer extends AuthorizationInterceptor {
   /**
-   * Provides the name of the role required for the user to be able to execute
-   * operations of this web service.
+   * Provides the names of the roles permissible for the user to be able to
+   * execute operations of this web service.
    * 
-   * @return a String with the required role.
+   * @return a String[] with the permissible roles.
    */
   @Override
-  protected String getRequiredRole() {
-    return LockssServlet.ROLE_AU_ADMIN;
+  protected String[] getPermissibleRoles() {
+    String[] requiredRoles = {LockssServlet.ROLE_AU_ADMIN};
+    return requiredRoles;
   }
 }

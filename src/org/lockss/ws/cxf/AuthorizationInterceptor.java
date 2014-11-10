@@ -1,5 +1,5 @@
 /*
- * $Id: AuthorizationInterceptor.java,v 1.3 2014-06-06 06:03:51 fergaloy-sf Exp $
+ * $Id: AuthorizationInterceptor.java,v 1.4 2014-11-10 17:46:33 fergaloy-sf Exp $
  */
 
 /*
@@ -31,6 +31,7 @@
  */
 package org.lockss.ws.cxf;
 
+import java.util.Arrays;
 import org.apache.cxf.binding.soap.interceptor.SoapHeaderInterceptor;
 import org.apache.cxf.configuration.security.AuthorizationPolicy;
 import org.apache.cxf.interceptor.Fault;
@@ -53,12 +54,12 @@ public abstract class AuthorizationInterceptor extends SoapHeaderInterceptor {
   private static Logger log = Logger.getLogger(AuthorizationInterceptor.class);
 
   /**
-   * Provides the name of the role required for the user to be able to execute
-   * operations of this web service. Implemented in each subclass.
+   * Provides the names of the roles permissible for the user to be able to
+   * execute operations of this web service. Implemented in each subclass.
    * 
-   * @return a String with the required role.
+   * @return a String[] with the permissible roles.
    */
-  protected abstract String getRequiredRole();
+  protected abstract String[] getPermissibleRoles();
 
   /**
    * Message handler.
@@ -102,14 +103,14 @@ public abstract class AuthorizationInterceptor extends SoapHeaderInterceptor {
 	  + userAccount.getRoleSet());
     }
 
-    // Get the role required by this web service.
-    String requiredRole = getRequiredRole();
-    if (log.isDebug3())
-      log.debug3(DEBUG_HEADER + "requiredRole = " + requiredRole);
+    // Get the permissible roles for this web service.
+    String[] permissibleRoles = getPermissibleRoles();
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "permissibleRoles = "
+	+ Arrays.toString(permissibleRoles));
 
     // Check whether the user has the role required to execute operations of
     // this web service.
-    if (isAuthorized(userAccount, requiredRole)) {
+    if (isAuthorized(userAccount, permissibleRoles)) {
       // Yes: Continue normally.
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "Authorized.");
     } else {
@@ -128,15 +129,35 @@ public abstract class AuthorizationInterceptor extends SoapHeaderInterceptor {
    * 
    * @param userAccount
    *          A UserAccount with the user account data.
-   * @param requiredRole
-   *          A String with the role required by this web service.
+   * @param permissibleRoles
+   *          A String[] with the roles permissible for the user to be able to
+   *          execute operations of this web service.
    * @return a boolean with <code>TRUE</code> if the user has the role required
    *         to execute operations of this web service, <code>FALSE</code>
    *         otherwise.
    */
-  protected boolean isAuthorized(UserAccount userAccount, String requiredRole) {
-    return (userAccount != null
-	&& (userAccount.isUserInRole(requiredRole)
-	    || userAccount.isUserInRole(LockssServlet.ROLE_USER_ADMIN)));
+  protected boolean isAuthorized(UserAccount userAccount,
+      String[] permissibleRoles) {
+    // No anonymous access is authorized.
+    if (userAccount == null) {
+      return false;
+    }
+
+    // An administrator is always authorized.
+    if (userAccount.isUserInRole(LockssServlet.ROLE_USER_ADMIN)) {
+      return true;
+    }
+
+    // Loop though all the permissible roles.
+    for (String permissibleRole : permissibleRoles) {
+      // The user is authorized if it has this permissible role.
+      if (userAccount.isUserInRole(permissibleRole)) {
+	return true;
+      }
+    }
+
+    // The user is not authorized because it does not have any of the
+    // permissible roles.
+    return false;
   }
 }
