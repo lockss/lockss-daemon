@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimpleHasher.java,v 1.14 2014-11-05 19:57:04 fergaloy-sf Exp $
+ * $Id: TestSimpleHasher.java,v 1.15 2014-11-10 18:53:19 fergaloy-sf Exp $
  */
 
 /*
@@ -334,8 +334,6 @@ public class TestSimpleHasher extends LockssTestCase {
     assertEquals(HasherStatus.Error, result.getRunnerStatus());
     assertEquals("No AU identifer has been specified", result.getRunnerError());
     assertEquals("Select an AU", errorMessage);
-    // Clean up the result file.
-    result.getBlockFile().delete();
 
     params.setAuId("NoSuchAu");
     result = new HasherResult();
@@ -346,8 +344,6 @@ public class TestSimpleHasher extends LockssTestCase {
     assertEquals("No AU exists with the specified identifier NoSuchAu",
 	result.getRunnerError());
     assertEquals("No such AU.  Select an AU", errorMessage);
-    // Clean up the result file.
-    result.getBlockFile().delete();
 
     params.setAuId(createAndStartAu().getAuId());
     result = new HasherResult();

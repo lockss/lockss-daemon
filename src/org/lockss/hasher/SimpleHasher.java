@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleHasher.java,v 1.13 2014-11-05 19:57:04 fergaloy-sf Exp $
+ * $Id: SimpleHasher.java,v 1.14 2014-11-10 18:53:19 fergaloy-sf Exp $
  */
 
 /*
@@ -352,18 +352,26 @@ public class SimpleHasher {
 	  log.warning(DEBUG_HEADER + "No digest could be obtained");
 	  result.setRunnerStatus(HasherStatus.Error);
 	  result.setRunnerError("No digest could be obtained");
-	  return;
 	}
       } catch (NoSuchAlgorithmException nsae) {
 	log.warning(DEBUG_HEADER, nsae);
 	result.setRunnerStatus(HasherStatus.Error);
 	result.setRunnerError("Invalid hashing algorithm: "
 	    + nsae.getMessage());
-	return;
       } catch (Exception e) {
 	log.warning(DEBUG_HEADER, e);
 	result.setRunnerStatus(HasherStatus.Error);
 	result.setRunnerError("Error making digest: " + e.getMessage());
+      }
+
+      if (HasherStatus.Error == result.getRunnerStatus()) {
+	// Clean up an empty block file, if necessary.
+	if (result.getBlockFile() != null
+	    && result.getBlockFile().length() == 0) {
+	  FileUtil.safeDeleteFile(result.getBlockFile());
+	  result.setBlockFile(null);
+	}
+
 	return;
       }
 
@@ -513,18 +521,6 @@ public class SimpleHasher {
       params.setAlgorithm(LcapMessage.getDefaultHashAlgorithm());
     }
 
-    if (isV3(result.getHashType()) && result.getBlockFile() == null) {
-      try {
-	result.setBlockFile(FileUtil.createTempFile("HashCUS", ".tmp"));
-      } catch (IOException ioe) {
-	log.warning(DEBUG_HEADER, ioe);
-	result.setRunnerStatus(HasherStatus.Error);
-	errorMessage = "Cannot create block file: " + ioe.getMessage();
-	result.setRunnerError(errorMessage);
-	return errorMessage;
-      }
-    }
-
     if (result.getAu() == null) {
       errorMessage = processAuIdParam(params, result);
       if (errorMessage != null) {
@@ -564,6 +560,23 @@ public class SimpleHasher {
 
     errorMessage = processCus(params.getAuId(), params.getUrl(),
 	params.getLower(), params.getUpper(), result.getHashType(), result);
+    if (errorMessage != null) {
+	if (log.isDebug2())
+	  log.debug2(DEBUG_HEADER + "errorMessage = " + errorMessage);
+	return errorMessage;
+    }
+
+    if (isV3(result.getHashType()) && result.getBlockFile() == null) {
+      try {
+	result.setBlockFile(FileUtil.createTempFile("HashCUS", ".tmp"));
+      } catch (IOException ioe) {
+	log.warning(DEBUG_HEADER, ioe);
+	result.setRunnerStatus(HasherStatus.Error);
+	errorMessage = "Cannot create block file: " + ioe.getMessage();
+	result.setRunnerError(errorMessage);
+	return errorMessage;
+      }
+    }
 
     if (log.isDebug2())
       log.debug2(DEBUG_HEADER + "errorMessage = " + errorMessage);
