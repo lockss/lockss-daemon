@@ -14,6 +14,8 @@
       eissn = 1476-9158 ;
       issnl = 1476-9158
     >  
+    
+    comment[plugin] = plugin needs review.
 
     rights = openaccess
     
@@ -23,13 +25,14 @@
     au < released ; Electronic Journal of Contemporary Japanese Studies 2004 ; 2004 >
     au < released ; Electronic Journal of Contemporary Japanese Studies 2005 ; 2005 >
     au < released ; Electronic Journal of Contemporary Japanese Studies 2006 ; 2006 >
-    au < manifest ; Electronic Journal of Contemporary Japanese Studies 2007 ; 2007 >
-    au < manifest ; Electronic Journal of Contemporary Japanese Studies 2008 ; 2008 >
-    au < exists ; Electronic Journal of Contemporary Japanese Studies 2009 ; 2009 >
-    au < exists ; Electronic Journal of Contemporary Japanese Studies 2010 ; 2010 >
-    au < exists ; Electronic Journal of Contemporary Japanese Studies 2011 ; 2011 >
-    au < expected ; Electronic Journal of Contemporary Japanese Studies 2012 ; 2012 >
-    au < expected ; Electronic Journal of Contemporary Japanese Studies 2013 ; 2013 >
+    au < doNotProcess ; Electronic Journal of Contemporary Japanese Studies 2007 ; 2007 >
+    au < doNotProcess ; Electronic Journal of Contemporary Japanese Studies 2008 ; 2008 >
+    au < doNotProcess ; Electronic Journal of Contemporary Japanese Studies 2009 ; 2009 >
+    au < doNotProcess ; Electronic Journal of Contemporary Japanese Studies 2010 ; 2010 >
+    au < doNotProcess ; Electronic Journal of Contemporary Japanese Studies 2011 ; 2011 >
+    au < doNotProcess ; Electronic Journal of Contemporary Japanese Studies 2012 ; 2012 >
+    au < doNotProcess ; Electronic Journal of Contemporary Japanese Studies 2013 ; 2013 >
+    au < doNotProcess ; Electronic Journal of Contemporary Japanese Studies 2014 ; 2014 >
   
   }
   
