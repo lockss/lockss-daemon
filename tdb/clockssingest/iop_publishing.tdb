@@ -117,7 +117,6 @@
 
     param[journal_issn] = 1748-605X
     comment[param] = eissn preferred
-    comment[notReady] = PD1111, total number downloaded
 
     au < manifest ; exists ; 2006 ; Biomedical Materials Volume 1 ; 1 > 
     au < manifest ; exists ; 2007 ; Biomedical Materials Volume 2 ; 2 > 
@@ -127,7 +126,7 @@
     au < finished ; crawling ; 2011 ; Biomedical Materials Volume 6 ; 6 > 
     au < finished ; crawling ; 2012 ; Biomedical Materials Volume 7 ; 7 > 
     au < crawling ; exists ; 2013 ; Biomedical Materials Volume 8 ; 8 > 
-    au < notReady ; exists ; 2014 ; Biomedical Materials Volume 9 ; 9 > 
+    au < ready ; exists ; 2014 ; Biomedical Materials Volume 9 ; 9 > 
 
   }
   
@@ -249,7 +248,6 @@
 
     param[journal_issn] = 0256-307X
     comment[param] = print issn preferred
-    comment[notReady] = PD-1111, CrossRef
 
     au < manifest ; exists ; 1984 ; Chinese Physics Letters Volume 1 ; 1 > 
     au < manifest ; exists ; 1985 ; Chinese Physics Letters Volume 2 ; 2 > 
@@ -281,7 +279,7 @@
     au < finished ; crawling ; 2011 ; Chinese Physics Letters Volume 28 ; 28 > 
     au < finished ; crawling ; 2012 ; Chinese Physics Letters Volume 29 ; 29 > 
     au < crawling ; exists ; 2013 ; Chinese Physics Letters Volume 30 ; 30 > 
-    au < notReady ; exists ; 2014 ; Chinese Physics Letters Volume 31 ; 31 > 
+    au < ready ; exists ; 2014 ; Chinese Physics Letters Volume 31 ; 31 > 
 
   }
 
@@ -572,7 +570,7 @@
     au < crawling ; exists ; 2013 ; EPL (Europhysics Letters) Volume 102 ; 102 >
     au < crawling ; exists ; 2013 ; EPL (Europhysics Letters) Volume 103 ; 103 >
     au < crawling ; exists ; 2013 ; EPL (Europhysics Letters) Volume 104 ; 104 >
-    au < testing ; exists ; 2014 ; EPL (Europhysics Letters) Volume 105 ; 105 > 
+    au < ready ; exists ; 2014 ; EPL (Europhysics Letters) Volume 105 ; 105 > 
     au < manifest ; exists ; 2014 ; EPL (Europhysics Letters) Volume 106 ; 106 >
     au < manifest ; exists ; 2014 ; EPL (Europhysics Letters) Volume 107 ; 107 >
     au < manifest ; exists ; 2014 ; EPL (Europhysics Letters) Volume 108 ; 108 >
