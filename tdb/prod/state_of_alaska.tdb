@@ -14,7 +14,8 @@
     rights = openaccess
     plugin = us.ak.state.library.plugin.AlaskaStateDocsPlugin
     implicit < status ; year ; name ; param[year] >
-    comment[years] = fiscal not calendar (July-June)
+    comment[years] = ***fiscal not calendar (July-June)***
+    comment[manifest_page] = example http://library.alaska.gov/asp/shippinglists/fy_2013/fy_2013_shippinglists.html
     
     {
 
@@ -43,7 +44,7 @@
       au < released ; 2010-2011 ; Alaska State Documents 2011 ; 2011 >
       au < released ; 2011-2012 ; Alaska State Documents 2012 ; 2012 >
       au < released ; 2012-2013 ; Alaska State Documents 2013 ; 2013 >
-      au < expected ; 2013-2014 ; Alaska State Documents 2014 ; 2014 >
+      au < exists ; 2013-2014 ; Alaska State Documents 2014 ; 2014 >
       au < expected ; 2014-2015 ; Alaska State Documents 2015 ; 2015 >
 
     }
