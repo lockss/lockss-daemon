@@ -5228,7 +5228,7 @@
         param[base_url] = http://cno.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 2014 ; Child Neurology Open Volume 1 ; 1 >
+        au < manifest ; 2014 ; Child Neurology Open Volume 1 ; 1 >
     }
 
     {
@@ -30937,7 +30937,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2014 ; National Institute Economic Review Volume 227 ; 227 >
         au < manifest ; 2014 ; National Institute Economic Review Volume 228 ; 228 >
         au < manifest ; 2014 ; National Institute Economic Review Volume 229 ; 229 >
-        au < expected ; 2014 ; National Institute Economic Review Volume 230 ; 230 >
+        au < manifest ; 2014 ; National Institute Economic Review Volume 230 ; 230 >
 
       }
 

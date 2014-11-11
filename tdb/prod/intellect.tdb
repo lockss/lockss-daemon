@@ -205,7 +205,7 @@
       au < released ; 2012 ; Choreographic Practices Volume 2 ; 2 >
       au < released ; 2012 ; Choreographic Practices Volume 3 ; 3 >
       au < released ; 2013 ; Choreographic Practices Volume 4 ; 4 >
-      au < expected ; 2014 ; Choreographic Practices Volume 5 ; 5 >
+      au < manifest ; 2014 ; Choreographic Practices Volume 5 ; 5 >
 
     }
 
@@ -1196,16 +1196,16 @@
 
     {
       title <
-        name = Moving Image Review & Art Journal MIRAJ ;
+        name = Moving Image Review & Art Journal (MIRAJ) ;
         issn = 2045-6298 ;
         eissn = 2045-6301
       >
       param[journal_id] = miraj
       param[journal_issn] = 2045-6298
 
-      au < released ; 2012 ; Moving Image Review & Art Journal MIRAJ Volume 1 ; 1 >
-      au < released ; 2013 ; Moving Image Review & Art Journal MIRAJ Volume 2 ; 2 >
-      au < expected ; 2014 ; Moving Image Review & Art Journal MIRAJ Volume 3 ; 3 >
+      au < released ; 2012 ; Moving Image Review & Art Journal (MIRAJ) Volume 1 ; 1 >
+      au < released ; 2013 ; Moving Image Review & Art Journal (MIRAJ) Volume 2 ; 2 >
+      au < manifest ; 2014 ; Moving Image Review & Art Journal (MIRAJ) Volume 3 ; 3 >
       
     }
 
