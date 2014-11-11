@@ -15,14 +15,16 @@
     rights = openaccess
     plugin = org.lockss.plugin.hispanicissuesonline.HispanicIssuesOnLinePlugin
     implicit < status ; year ; name ; param[base_url] ; param[volume_name] >
+    
+    comment[plugin] = there are additional issues, but they appear to have a different format. Plugin needs review.
 
     au < superseded ; 2006 ; Hispanic Issues On Line 2006 [superseded] ; http://spanport.cla.umn.edu/publications/HispanicIssues/ ; Online_2006 >
-    au < exists ; 2006 ; Hispanic Issues On Line 2006 ; http://hispanicissues.umn.edu/ ; 2006 >
+    au < doNotProcess ; 2006 ; Hispanic Issues On Line 2006 ; http://hispanicissues.umn.edu/ ; 2006 >
     au < superseded ; 2007 ; Hispanic Issues On Line 2007 [superseded] ; http://spanport.cla.umn.edu/publications/HispanicIssues/ ; Online_2007 >
-    au < exists ; 2007 ; Hispanic Issues On Line 2007 ; http://hispanicissues.umn.edu/ ; 2007 >
-    au < exists ; 2008 ; Hispanic Issues On Line 2008 ; http://hispanicissues.umn.edu/ ; 2008 >
-    au < exists ; 2009 ; Hispanic Issues On Line 2009 ; http://hispanicissues.umn.edu/ ; 2009 >
-    au < exists ; 2010 ; Hispanic Issues On Line 2010 ; http://hispanicissues.umn.edu/ ; 2010 >
+    au < doNotProcess ; 2007 ; Hispanic Issues On Line 2007 ; http://hispanicissues.umn.edu/ ; 2007 >
+    au < doNotProcess ; 2008 ; Hispanic Issues On Line 2008 ; http://hispanicissues.umn.edu/ ; 2008 >
+    au < doNotProcess ; 2009 ; Hispanic Issues On Line 2009 ; http://hispanicissues.umn.edu/ ; 2009 >
+    au < doNotProcess ; 2010 ; Hispanic Issues On Line 2010 ; http://hispanicissues.umn.edu/ ; 2010 >
     
   }
 
