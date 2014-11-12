@@ -97,6 +97,7 @@
     param[base_url] = http://asj.oxfordjournals.org/ 
     pluginSuffix = ClockssHighWirePressH20Plugin
 
+    au < expected ; exists ; 2014 ; Aesthetic Surgery Journal Volume 34 ; 34 ; >
     au < expected ; exists ; 2015 ; Aesthetic Surgery Journal Volume 35 ; 35 ; >
   }
 

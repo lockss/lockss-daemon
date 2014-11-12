@@ -76,7 +76,9 @@
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     implicit < status ; year ; name ; param[volume_name] >
 
+    au < expected ; 2014 ; Aesthetic Surgery Journal Volume 34 ; 34 >
     au < expected ; 2015 ; Aesthetic Surgery Journal Volume 35 ; 35 >
+
   }
 
   {
