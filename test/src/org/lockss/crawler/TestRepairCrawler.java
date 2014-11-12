@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepairCrawler.java,v 1.49 2012-03-15 08:20:25 tlipkis Exp $
+ * $Id: TestRepairCrawler.java,v 1.50 2014-11-12 20:11:28 wkwilson Exp $
  */
 
 /*
@@ -34,6 +34,8 @@ package org.lockss.crawler;
 import java.util.*;
 import java.net.*;
 import java.io.*;
+
+import org.lockss.crawler.PermissionRecord.PermissionStatus;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
@@ -53,13 +55,12 @@ public class TestRepairCrawler extends LockssTestCase {
   private MockArchivalUnit mau = null;
   private MockCachedUrlSet cus = null;
 
-  private CrawlSpec spec = null;
   private MockAuState aus = new MockAuState();
   private static List testUrlList = ListUtil.list("http://example.com");
   private MockCrawlRule crawlRule = null;
   private String startUrl = "http://www.example.com/index.html";
   private List startUrls = ListUtil.list(startUrl);
-  private BaseCrawler crawler = null;
+  private MyRepairCrawler crawler = null;
   private MockLinkExtractor extractor = new MockLinkExtractor();
   private MockIdentityManager idm;
   private MockLockssDaemon theDaemon = getMockLockssDaemon();
@@ -90,38 +91,28 @@ public class TestRepairCrawler extends LockssTestCase {
     crawlRule.addUrlToCrawl(url1);
     crawlRule.addUrlToCrawl(permissionPage);
     crawlRule.addUrlToCrawl(permissionPage2);
+    
+    mau.setStartUrls(startUrls);
+    mau.setPermissionUrls(ListUtil.list(permissionPage));
+    mau.setCrawlRule(crawlRule);
 
-    spec = new SpiderCrawlSpec(startUrls, ListUtil.list(permissionPage),
-                               crawlRule, 1);
-
-    mau.setCrawlSpec(spec);
     mau.addUrl(url1);
     mau.addUrl(permissionPage, "noperm");
 
     mau.setPlugin(new MockPlugin(getMockLockssDaemon()));
 
     List repairUrls = ListUtil.list(url1);
-    crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
+    crawler = new MyRepairCrawler(mau, aus, repairUrls);
     crawler.setCrawlManager(crawlMgr);
-    ((BaseCrawler)crawler).daemonPermissionCheckers =
+    crawlMgr.newCrawlRateLimiter(mau);
+    crawler.daemonPermissionCheckers =
       ListUtil.list(new MockPermissionChecker(100));
-    ConfigurationUtil.addFromArgs(RepairCrawler.PARAM_FETCH_FROM_PUBLISHER_ONLY,
-                                  "false");
   }
 
   public void testMrcThrowsForNullAu() {
     try {
-      new RepairCrawler(null, spec, aus, testUrlList, 0);
+      new MyRepairCrawler(null, aus, testUrlList);
       fail("Contstructing a RepairCrawler with a null ArchivalUnit"
-           +" should throw an IllegalArgumentException");
-    } catch (IllegalArgumentException iae) {
-    }
-  }
-
-  public void testMrcThrowsForNullSpec() {
-    try {
-      new RepairCrawler(mau, null, aus, testUrlList, 0);
-      fail("Contstructing a RepairCrawler with a null CrawlSpec"
            +" should throw an IllegalArgumentException");
     } catch (IllegalArgumentException iae) {
     }
@@ -129,7 +120,7 @@ public class TestRepairCrawler extends LockssTestCase {
 
   public void testMrcThrowsForNullList() {
     try {
-      new RepairCrawler(mau, spec, aus, null, 0);
+      new MyRepairCrawler(mau, aus, null);
       fail("Contstructing a RepairCrawler with a null repair list"
            +" should throw a NullPointerException");
     } catch (NullPointerException npe) {
@@ -138,7 +129,7 @@ public class TestRepairCrawler extends LockssTestCase {
 
   public void testMrcThrowsForEmptyList() {
     try {
-      new RepairCrawler(mau, spec, aus, ListUtil.list(), 0);
+      new MyRepairCrawler(mau, aus, ListUtil.list());
       fail("Contstructing a RepairCrawler with a empty repair list"
            +" should throw an IllegalArgumentException");
     } catch (IllegalArgumentException iae) {
@@ -155,9 +146,11 @@ public class TestRepairCrawler extends LockssTestCase {
   }
 
   public void testRepairCrawlCallsForceCache() {
-    spec = new SpiderCrawlSpec(startUrls, startUrls, crawlRule, 1);
+		mau.setPermissionUrls( startUrls);
+		mau.setCrawlRule(crawlRule);
+		mau.setRefetchDepth(1);
 
-    crawler.doCrawl();
+    assertTrue(crawler.doCrawl());
 
     Set cachedUrls = cus.getForceCachedUrls();
     assertEquals(1, cachedUrls.size());
@@ -165,14 +158,14 @@ public class TestRepairCrawler extends LockssTestCase {
   }
 
   public void testRepairCrawlObeysCrawlWindow() {
-    spec.setCrawlWindow(new MyMockCrawlWindow());
+    mau.setCrawlWindow(new MyMockCrawlWindow());
 
     crawler.doCrawl();
 
     Set cachedUrls = cus.getForceCachedUrls();
     assertEquals(0, cachedUrls.size());
     assertEquals(Crawler.STATUS_WINDOW_CLOSED,
-                 crawler.getStatus().getCrawlStatus());
+                 crawler.getCrawlerStatus().getCrawlStatus());
   }
 
   public void testRepairCrawlIgnoreCrawlWindow() {
@@ -188,12 +181,15 @@ public class TestRepairCrawler extends LockssTestCase {
     crawlRule.addUrlToCrawl(repairUrl2);
 
     List repairUrls = ListUtil.list(repairUrl1, repairUrl2);
-    spec = new SpiderCrawlSpec(startUrls, permissionPages, crawlRule, 1);
-    spec.setCrawlWindow(new MyMockCrawlWindow());
-    crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
+    mau.setStartUrls(startUrls);
+    mau.setPermissionUrls( permissionPages);
+    mau.setCrawlRule(crawlRule);
+    mau.setRefetchDepth( 1);
+    mau.setCrawlWindow(new MyMockCrawlWindow());
+    crawler = new MyRepairCrawler(mau, aus, repairUrls);
     crawler.setCrawlManager(crawlMgr);
-    ((BaseCrawler)crawler).daemonPermissionCheckers =
-      ListUtil.list(new MockPermissionChecker(100));
+    crawler.setDaemonPermissionCheckers(
+      ListUtil.list(new MockPermissionChecker(100)));
 
     assertTrue(crawler.doCrawl());
 
@@ -221,12 +217,15 @@ public class TestRepairCrawler extends LockssTestCase {
 
     List repairUrls = ListUtil.list(repairUrl1, repairUrl2,
                                     repairUrl3, repairUrl4);
-    spec = new SpiderCrawlSpec(startUrls, permissionPages, crawlRule, 1);
-    spec.setCrawlWindow(new MyMockCrawlWindow());
-    crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
+    mau.setStartUrls(startUrls);
+mau.setPermissionUrls( permissionPages);
+mau.setCrawlRule(crawlRule);
+mau.setRefetchDepth( 1);
+    mau.setCrawlWindow(new MyMockCrawlWindow());
+    crawler = new MyRepairCrawler(mau, aus, repairUrls);
     crawler.setCrawlManager(crawlMgr);
-    ((BaseCrawler)crawler).daemonPermissionCheckers =
-      ListUtil.list(new MockPermissionChecker(100));
+    crawler.setDaemonPermissionCheckers(
+      ListUtil.list(new MockPermissionChecker(100)));
 
     assertFalse(crawler.doCrawl());
 
@@ -249,8 +248,11 @@ public class TestRepairCrawler extends LockssTestCase {
     MockLockssWatchdog wdog = new MockLockssWatchdog();
 
     List repairUrls = ListUtil.list(repairUrl1, repairUrl2, repairUrl3);
-    spec = new SpiderCrawlSpec(startUrls, startUrls, crawlRule, 1);
-    crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
+    mau.setStartUrls(startUrls);
+	mau.setPermissionUrls( startUrls);
+	mau.setCrawlRule(crawlRule);
+	mau.setRefetchDepth( 1);
+    crawler = new MyRepairCrawler(mau, aus, repairUrls);
     crawler.setCrawlManager(crawlMgr);
     crawler.setWatchdog(wdog);
     crawler.doCrawl();
@@ -258,21 +260,21 @@ public class TestRepairCrawler extends LockssTestCase {
     wdog.assertPoked(3);
   }
 
-  public void testRepairCrawlObeysCrawlSpec() {
+  public void testRepairCrawlObeysCrawlRules() {
     String repairUrl1 = "http://example.com/url1.html";
     String repairUrl2 = "http://example.com/url2.html";
 
-    mau.addUrl(repairUrl1);
-    mau.addUrl(repairUrl2);
-
-    crawlRule.addUrlToCrawl(repairUrl1);
+    mau.addUrl(repairUrl1, false, true);
+    mau.addUrl(repairUrl2, false, false);
 
     List repairUrls = ListUtil.list(repairUrl1, repairUrl2);
-    spec = new SpiderCrawlSpec(startUrls, permissionPages, crawlRule, 1);
-    crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
+    mau.setStartUrls(startUrls);
+		mau.setPermissionUrls( permissionPages);
+
+    crawler = new MyRepairCrawler(mau, aus, repairUrls);
     crawler.setCrawlManager(crawlMgr);
-    ((BaseCrawler)crawler).daemonPermissionCheckers =
-      ListUtil.list(new MockPermissionChecker(100));
+    crawler.setDaemonPermissionCheckers(
+      ListUtil.list(new MockPermissionChecker(100)));
 
     assertTrue(crawler.doCrawl());
 
@@ -284,17 +286,17 @@ public class TestRepairCrawler extends LockssTestCase {
     String repairUrl1 = "http://example.com/2005";
     String repairUrl2 = "http://example.com/2005/";
 
-    mau.addUrl(repairUrl1);
-    mau.addUrl(repairUrl2);
-
-    crawlRule.addUrlToCrawl(repairUrl2);
+    mau.addUrl(repairUrl1, true, false);
+    mau.addUrl(repairUrl2, true, true);
 
     List repairUrls = ListUtil.list(repairUrl1);
-    spec = new SpiderCrawlSpec(startUrls, permissionPages, crawlRule, 1);
-    crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
+    mau.setStartUrls(startUrls);
+		mau.setPermissionUrls( permissionPages);
+
+    crawler = new MyRepairCrawler(mau, aus, repairUrls);
     crawler.setCrawlManager(crawlMgr);
-    ((BaseCrawler)crawler).daemonPermissionCheckers =
-      ListUtil.list(new MockPermissionChecker(100));
+    crawler.setDaemonPermissionCheckers(
+      ListUtil.list(new MockPermissionChecker(100)));
 
     crawler.doCrawl();
 
@@ -320,11 +322,14 @@ public class TestRepairCrawler extends LockssTestCase {
     crawlRule.addUrlToCrawl(url2);
 
     List repairUrls = ListUtil.list(repairUrl1, repairUrl2);
-    spec = new SpiderCrawlSpec(startUrls, permissionPages, crawlRule, 1);
-    crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
+    mau.setStartUrls(startUrls);
+		mau.setPermissionUrls( permissionPages);
+		mau.setCrawlRule(crawlRule);
+		mau.setRefetchDepth( 1);
+    crawler = new MyRepairCrawler(mau, aus, repairUrls);
     crawler.setCrawlManager(crawlMgr);
-    ((BaseCrawler)crawler).daemonPermissionCheckers =
-      ListUtil.list(new MockPermissionChecker(100));
+    crawler.setDaemonPermissionCheckers(
+      ListUtil.list(new MockPermissionChecker(100)));
 
     crawler.doCrawl();
 
@@ -337,14 +342,17 @@ public class TestRepairCrawler extends LockssTestCase {
     mau.addUrl(repairUrl, new ExpectedRuntimeException("Test exception"), 1);
     List repairUrls = ListUtil.list(repairUrl);
     crawlRule.addUrlToCrawl(repairUrl);
-    spec = new SpiderCrawlSpec(startUrls, startUrls, crawlRule, 1);
-    crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
+    mau.setStartUrls(startUrls);
+		mau.setPermissionUrls( startUrls);
+		mau.setCrawlRule(crawlRule);
+		mau.setRefetchDepth( 1);
+    crawler = new MyRepairCrawler(mau, aus, repairUrls);
     crawler.setCrawlManager(crawlMgr);
 
     assertFalse(crawler.doCrawl());
   }
 
-  //these tests use MyRepairCrawler, which overrides fetchFromCache
+  //these tests use TestableRepairCrawler, which overrides fetchFromCache
   //and fetchFromPublisher; these methods should be tested separately
 
   void setAgreeingPeers(int numPeers) throws MalformedIdentityKeyException {
@@ -356,224 +364,14 @@ public class TestRepairCrawler extends LockssTestCase {
     idm.setAgeedForAu(mau, map);
   }
 
-  public void testFetchFromACacheOnly() throws MalformedIdentityKeyException {
-    idm.addPeerIdentity("127.0.0.1", new MockPeerIdentity("127.0.0.1"));
-    PeerIdentity id = idm.stringToPeerIdentity("127.0.0.1");
-
-    Map map = new HashMap();
-    map.put(id, new Long(10));
-    idm.setAgeedForAu(mau, map);
-
-    String repairUrl = "http://example.com/blah.html";
-
-    mau.addUrl(repairUrl).setContentSize(1234);
-    MockUrlCacher muc = (MockUrlCacher)mau.makeUrlCacher(repairUrl);
-    muc.setUncachedInputStream(new StringInputStream("blah"));
-    muc.setUncachedProperties(new CIProperties());
-    crawlRule.addUrlToCrawl(repairUrl);
-
-    MyRepairCrawler crawler =
-      new MyRepairCrawler(mau, spec, aus, ListUtil.list(repairUrl),0);
-    crawler.setCrawlManager(crawlMgr);
-    ((BaseCrawler)crawler).daemonPermissionCheckers =
-      ListUtil.list(new MockPermissionChecker(100));
-
-    ConfigurationUtil.addFromArgs(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHES_ONLY, "true");
-
-    assertTrue("doCrawl() returned false", crawler.doCrawl());
-    assertEquals("Fail! fetch from "+ crawler.getContentSource(repairUrl),
-                 id, crawler.getContentSource(repairUrl));
-    assertTrue("Fail! fetch from caches occur, fetchCacheCnt = " +
-                 crawler.getFetchCacheCnt(), crawler.getFetchCacheCnt() == 1);
-    assertTrue("Fail! fetch from publisher occurs",
-               crawler.getFetchPubCnt() == 0);
-    CrawlerStatus status = crawler.getStatus();
-    assertEquals(ListUtil.list("127.0.0.1"), status.getSources());
-    assertEquals(Crawler.STATUS_SUCCESSFUL, status.getCrawlStatus());
-    assertEquals(1234, status.getContentBytesFetched());
-  }
-
-  public void testFetchFromACacheOnlyPercent()
-      throws MalformedIdentityKeyException {
-    idm.addPeerIdentity("127.0.0.1", new MockPeerIdentity("127.0.0.1"));
-    PeerIdentity id = idm.stringToPeerIdentity("127.0.0.1");
-
-    Map map = new HashMap();
-    map.put(id, new Long(10));
-    idm.setAgeedForAu(mau, map);
-
-    String repairUrl = "http://example.com/blah.html";
-
-    mau.addUrl(repairUrl);
-    MockUrlCacher muc = (MockUrlCacher)mau.makeUrlCacher(repairUrl);
-    muc.setUncachedInputStream(new StringInputStream("blah"));
-    muc.setUncachedProperties(new CIProperties());
-    crawlRule.addUrlToCrawl(repairUrl);
-
-    MyRepairCrawler crawler =
-      makeCrawlerWPermission(mau, spec, aus, ListUtil.list(repairUrl), 100);
-    crawler.setCrawlManager(crawlMgr);
-
-    assertTrue("doCrawl() returned false", crawler.doCrawl());
-    assertEquals("Fail! fetch from "+ crawler.getContentSource(repairUrl),
-                 id, crawler.getContentSource(repairUrl));
-    assertTrue("Fail! fetch from caches occur, fetchCacheCnt = " +
-                 crawler.getFetchCacheCnt(), crawler.getFetchCacheCnt() == 1);
-    assertTrue("Fail! fetch from publisher occurs",
-               crawler.getFetchPubCnt() == 0);
-    CrawlerStatus status = crawler.getStatus();
-    assertEquals(ListUtil.list("127.0.0.1"), status.getSources());
-    assertEquals(Crawler.STATUS_SUCCESSFUL, status.getCrawlStatus());
-  }
-
-  public void testFetchFromCacheIgnoresLocalHost()
-      throws MalformedIdentityKeyException {
-    PeerIdentity id = idm.stringToPeerIdentity("127.0.0.1");
-    idm.setLocalIdentity(id);
-
-    Map map = new HashMap();
-    map.put(id, new Long(10));
-    idm.setAgeedForAu(mau, map);
-
-    String repairUrl = "http://example.com/blah.html";
-    MyRepairCrawler crawler =
-      new MyRepairCrawler(mau, spec, aus, ListUtil.list(repairUrl),0);
-    crawler.setCrawlManager(crawlMgr);
-
-    ConfigurationUtil.addFromArgs(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHES_ONLY, "true");
-
-    assertFalse("doCrawl() returned true", crawler.doCrawl());
-    assertEquals("Tried to fetch from a cache", 0, crawler.getFetchCacheCnt());
-    assertEquals("Fetch from publisher occured", 0, crawler.getFetchPubCnt());
-  }
-
-  public void testFetchFromCacheLocalHost()
-      throws MalformedIdentityKeyException {
-    Map map = new HashMap();
-    MockPeerIdentity id = null;
-    for (int ix = 0; ix < 3; ix++) {
-      id = new MockPeerIdentity("127.0.0."+ix);
-      map.put(id, new Long(10+ix));
-    }
-    idm.setLocalIdentity(id);
-    idm.setAgeedForAu(mau, map);
-
-
-    String repairUrl = "http://example.com/blah.html";
-    MyRepairCrawler crawler =
-      new MyRepairCrawler(mau, spec, aus, ListUtil.list(repairUrl),0);
-    crawler.setCrawlManager(crawlMgr);
-    crawler.setTimesToThrow(3);
-
-    ConfigurationUtil.addFromArgs(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHES_ONLY, "true");
-
-    assertFalse("doCrawl() returned true", crawler.doCrawl());
-    assertEquals("Tried to fetch from more than 2 caches",
-                 2, crawler.getFetchCacheCnt());
-    assertEquals("Fetch from publisher occured", 0, crawler.getFetchPubCnt());
-  }
-
-  public void testFetchFromCacheLocalHostOnlyOne()
-      throws MalformedIdentityKeyException {
-    Map map = new HashMap();
-    MockPeerIdentity id = new MockPeerIdentity("127.0.0.0");
-    map.put(id, new Long(10));
-    idm.setLocalIdentity(id);
-    idm.setAgeedForAu(mau, map);
-
-
-    String repairUrl = "http://example.com/blah.html";
-    MyRepairCrawler crawler =
-      new MyRepairCrawler(mau, spec, aus, ListUtil.list(repairUrl),0);
-    crawler.setCrawlManager(crawlMgr);
-    crawler.setTimesToThrow(1);
-
-    ConfigurationUtil.addFromArgs(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHES_ONLY, "true");
-
-    assertFalse("doCrawl() returned true", crawler.doCrawl());
-    assertEquals("Tried to fetch from more than a cache",
-                 0, crawler.getFetchCacheCnt());
-    assertEquals("Fetch from publisher occured", 0, crawler.getFetchPubCnt());
-  }
-
-  public void testFetchFromOtherCachesOnlyWithoutRetryLimit()
-      throws MalformedIdentityKeyException {
-
-    setAgreeingPeers(3);
-
-    String repairUrl = "http://example.com/blah.html";
-    MyRepairCrawler crawler =
-      new MyRepairCrawler(mau, spec, aus, ListUtil.list(repairUrl),0);
-    crawler.setCrawlManager(crawlMgr);
-    crawler.setTimesToThrow(3);
-
-    ConfigurationUtil.addFromArgs(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHES_ONLY, "true");
-
-    assertFalse("doCrawl() returned true", crawler.doCrawl());
-    assertTrue("Fetch from caches occur, fetchCacheCnt = " +
-                 crawler.getFetchCacheCnt() , crawler.getFetchCacheCnt() == 3);
-    assertTrue("Fetch from publisher should never occur, yet FetchPubCnt = " +
-               crawler.getFetchPubCnt(), crawler.getFetchPubCnt() == 0);
-  }
-
-  public void testFetchFromOtherCachesOnlyWithRetryLimit()
-      throws MalformedIdentityKeyException {
-    setAgreeingPeers(3);
-
-    String repairUrl = "http://example.com/blah.html";
-    MyRepairCrawler crawler =
-      new MyRepairCrawler(mau, spec, aus, ListUtil.list(repairUrl),0);
-    crawler.setCrawlManager(crawlMgr);
-    crawler.setTimesToThrow(3);
-
-    ConfigurationUtil.addFromArgs(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHES_ONLY, "true");
-    ConfigurationUtil.addFromArgs(RepairCrawler.PARAM_NUM_RETRIES_FROM_CACHES, ""+2);
-
-    assertFalse("doCrawl() returned true", crawler.doCrawl());
-    assertTrue("Fetch from caches occur, fetchCacheCnt = " +
-               crawler.getFetchCacheCnt() , crawler.getFetchCacheCnt() == 2);
-    assertTrue("Fetch from publisher never occur",
-               crawler.getFetchPubCnt() == 0);
-  }
-
-  public void testFetchFromCacheFailureNoMap() {
-    idm.setAgeedForAu(mau, null);
-
-    String repairUrl = "http://example.com/blah.html";
-    MyRepairCrawler crawler =
-      makeCrawlerWPermission(mau, spec, aus, ListUtil.list(repairUrl),0);
-    crawler.setCrawlManager(crawlMgr);
-
-    ConfigurationUtil.addFromArgs(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHES_ONLY, "true");
-
-    assertFalse(crawler.doCrawl());
-    CrawlerStatus status = crawler.getStatus();
-    assertEquals(Crawler.STATUS_FETCH_ERROR, status.getCrawlStatus());
-  }
-
-  public void testFetchFromCacheFailureEmptyMap() {
-    idm.setAgeedForAu(mau, new HashMap());
-
-    String repairUrl = "http://example.com/blah.html";
-    MyRepairCrawler crawler =
-      makeCrawlerWPermission(mau, spec, aus, ListUtil.list(repairUrl),0);
-    crawler.setCrawlManager(crawlMgr);
-
-    ConfigurationUtil.addFromArgs(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHES_ONLY, "true");
-
-    assertFalse(crawler.doCrawl());
-    CrawlerStatus status = crawler.getStatus();
-    assertEquals(Crawler.STATUS_FETCH_ERROR, status.getCrawlStatus());
-  }
 
   public void testFetchFromPublisherOnly()
       throws MalformedIdentityKeyException {
     String repairUrl1 = "http://example.com/blah.html";
     String repairUrl2 = "http://example.com/flurb.html";
-    MyRepairCrawler crawler =
-      makeCrawlerWPermission(mau, spec, aus,
-			     ListUtil.list(repairUrl1, repairUrl2),
-			     0);
+    TestableRepairCrawler crawler =
+      makeCrawlerWPermission(mau, aus,
+			     ListUtil.list(repairUrl1, repairUrl2));
     crawler.setCrawlManager(crawlMgr);
 
     mau.addUrl(repairUrl1).setContentSize(4321);
@@ -581,13 +379,10 @@ public class TestRepairCrawler extends LockssTestCase {
     crawlRule.addUrlToCrawl(repairUrl1);
     crawlRule.addUrlToCrawl(repairUrl2);
 
-    //ConfigurationUtil.addFromArgs(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHES_ONLY, "false");
-    ConfigurationUtil.addFromArgs(RepairCrawler.PARAM_FETCH_FROM_PUBLISHER_ONLY, "true");
-
     assertTrue("doCrawl() returned false", crawler.doCrawl());
     assertEquals(0, crawler.getFetchCacheCnt());
     assertEquals(2, crawler.getFetchPubCnt());
-    CrawlerStatus status = crawler.getStatus();
+    CrawlerStatus status = crawler.getCrawlerStatus();
     assertEquals(ListUtil.list("Publisher"), status.getSources());
     assertEquals(4321+1357, status.getContentBytesFetched());
   }
@@ -597,13 +392,11 @@ public class TestRepairCrawler extends LockssTestCase {
     setAgreeingPeers(3);
 
     String repairUrl = "http://example.com/blah.html";
-    MyRepairCrawler crawler =
-      new MyRepairCrawler(mau, spec, aus, ListUtil.list(repairUrl),0);
+    TestableRepairCrawler crawler =
+      new TestableRepairCrawler(mau, aus, ListUtil.list(repairUrl));
     crawler.setCrawlManager(crawlMgr);
     crawler.setTimesToThrow(3);
-
-    ConfigurationUtil.addFromArgs(RepairCrawler.PARAM_FETCH_FROM_PUBLISHER_ONLY, "true");
-
+    
     assertFalse("doCrawl() returned true", crawler.doCrawl());
     assertTrue("Fetch from caches occur, fetchCacheCnt = " +
                 crawler.getFetchCacheCnt() , crawler.getFetchCacheCnt() == 0);
@@ -611,103 +404,8 @@ public class TestRepairCrawler extends LockssTestCase {
                crawler.getFetchPubCnt(), crawler.getFetchPubCnt() == 1);
   }
 
-  public void testFetchFromOtherCachesThenPublisher()
-      throws MalformedIdentityKeyException {
-    setAgreeingPeers(3);
-
-
-    String repairUrl = "http://example.com/blah.html";
-    MyRepairCrawler crawler =
-      makeCrawlerWPermission(mau, spec, aus, ListUtil.list(repairUrl),1);
-    crawler.setCrawlManager(crawlMgr);
-    crawler.setTimesToThrow(2);
-
-    //ConfigurationUtil.addFromArgs(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHES_ONLY, "false");
-    ConfigurationUtil.addFromArgs(RepairCrawler.PARAM_NUM_RETRIES_FROM_CACHES, ""+2);
-
-    assertTrue("doCrawl() returned false", crawler.doCrawl());
-    assertTrue("Fail fetch from other caches count, fetchCacheCnt = " +
-               crawler.getFetchCacheCnt() , crawler.getFetchCacheCnt() == 2);
-    assertTrue("Fail fetch from publisher count, fetchPubCnt = " +
-               crawler.getFetchPubCnt(), crawler.getFetchPubCnt() == 1);
-    assertTrue("Fail: sequence in caching from",
-               crawler.getCacheLastCall() < crawler.getPubLastCall() );
-  }
-
-  public void testFetchFromOtherCachesThenPublisherFailure()
-      throws MalformedIdentityKeyException {
-    setAgreeingPeers(3);
-
-
-    String repairUrl = "http://example.com/blah.html";
-    MyRepairCrawler crawler =
-      new MyRepairCrawler(mau, spec, aus, ListUtil.list(repairUrl),1);
-    crawler.setCrawlManager(crawlMgr);
-    crawler.setTimesToThrow(3);
-
-    //ConfigurationUtil.addFromArgs(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHES_ONLY, "false");
-    ConfigurationUtil.addFromArgs(RepairCrawler.PARAM_NUM_RETRIES_FROM_CACHES, ""+2);
-
-    assertFalse("doCrawl() returned true", crawler.doCrawl());
-    assertTrue("Fail fetch from other caches count, fetchCacheCnt = " +
-               crawler.getFetchCacheCnt() , crawler.getFetchCacheCnt() == 2);
-    assertTrue("Fail fetch from publisher count, fetchPubCnt = " +
-               crawler.getFetchPubCnt(), crawler.getFetchPubCnt() == 1);
-    assertTrue("Fail: sequence in caching from",
-               crawler.getCacheLastCall() < crawler.getPubLastCall() );
-  }
-
-  public void testFetchFromPublisherThenOtherCaches()
-      throws MalformedIdentityKeyException {
-    setAgreeingPeers(3);
-
-    String repairUrl = "http://example.com/blah.html";
-    MyRepairCrawler crawler =
-      makeCrawlerWPermission(mau, spec, aus, ListUtil.list(repairUrl),0);
-    crawler.setCrawlManager(crawlMgr);
-    crawler.setTimesToThrow(2); //first publisher, then first other cache
-
-    mau.addUrl(repairUrl);
-    MockUrlCacher muc = (MockUrlCacher)mau.makeUrlCacher(repairUrl);
-    muc.setUncachedInputStream(new StringInputStream("blah"));
-    muc.setUncachedProperties(new CIProperties());
-    crawlRule.addUrlToCrawl(repairUrl);
-
-    ConfigurationUtil.addFromArgs(RepairCrawler.PARAM_NUM_RETRIES_FROM_CACHES, ""+2);
-
-    assertTrue("doCrawl() returned false", crawler.doCrawl());
-    assertTrue("Fail fetch from publisher count, fetchPubCnt = " +
-               crawler.getFetchPubCnt(), crawler.getFetchPubCnt() == 1);
-    assertTrue("Fail fetch from other caches count, fetchCacheCnt = " +
-               crawler.getFetchCacheCnt() , crawler.getFetchCacheCnt() == 2);
-    assertTrue("Fail: sequence in caching from",
-               crawler.getCacheLastCall() > crawler.getPubLastCall() );
-  }
-
-  public void testFetchFromPublisherThenOtherCachesFailure()
-      throws MalformedIdentityKeyException {
-    setAgreeingPeers(3);
-
-    String repairUrl = "http://example.com/blah.html";
-    MyRepairCrawler crawler =
-      new MyRepairCrawler(mau, spec, aus, ListUtil.list(repairUrl),0);
-    crawler.setCrawlManager(crawlMgr);
-    crawler.setTimesToThrow(3); //first publisher, then first other cache
-
-    ConfigurationUtil.addFromArgs(RepairCrawler.PARAM_NUM_RETRIES_FROM_CACHES, ""+2);
-
-    assertFalse("doCrawl() returned true", crawler.doCrawl());
-    assertTrue("Fail fetch from publisher count, fetchPubCnt = " +
-               crawler.getFetchPubCnt(), crawler.getFetchPubCnt() == 1);
-    assertTrue("Fail fetch from other caches count, fetchCacheCnt = " +
-               crawler.getFetchCacheCnt() , crawler.getFetchCacheCnt() == 2);
-    assertTrue("Fail: sequence in caching from",
-               crawler.getCacheLastCall() > crawler.getPubLastCall() );
-  }
-
   //Status tests
   public void testRepairedUrlsNotedInStatus() {
-    ConfigurationUtil.addFromArgs(RepairCrawler.PARAM_FETCH_FROM_PUBLISHER_ONLY, "true");
     ConfigurationUtil.addFromArgs(RepairCrawler.PARAM_REPAIR_NEEDS_PERMISSION, "true");
 
     String repairUrl1 = "http://example.com/blah.html";
@@ -716,30 +414,31 @@ public class TestRepairCrawler extends LockssTestCase {
     crawlRule.addUrlToCrawl(repairUrl1);
     crawlRule.addUrlToCrawl(repairUrl2);
 
-    MyRepairCrawler crawler =
-      makeCrawlerWPermission(mau, spec, aus,
-                             ListUtil.list(repairUrl1, repairUrl2), 0);
+    TestableRepairCrawler crawler =
+      makeCrawlerWPermission(mau, aus,
+                             ListUtil.list(repairUrl1, repairUrl2));
     crawler.setCrawlManager(crawlMgr);
-    ((BaseCrawler)crawler).daemonPermissionCheckers =
-      ListUtil.list(new MockPermissionChecker(100));
+    crawler.setDaemonPermissionCheckers(
+      ListUtil.list(new MockPermissionChecker(100)));
 
     mau.addUrl(repairUrl1);
-    MockUrlCacher muc = (MockUrlCacher)mau.makeUrlCacher(repairUrl1);
-    muc.setUncachedInputStream(new StringInputStream("blah"));
-    muc.setUncachedProperties(new CIProperties());
+    MockUrlFetcher muf = 
+        (MockUrlFetcher)crawler.makeRepairUrlFetcher(repairUrl1);
+    muf.setUncachedInputStream(new StringInputStream("blah"));
+    muf.setUncachedProperties(new CIProperties());
     crawlRule.addUrlToCrawl(repairUrl1);
 
     mau.addUrl(repairUrl2);
-    muc = (MockUrlCacher)mau.makeUrlCacher(repairUrl2);
-    muc.setUncachedInputStream(new StringInputStream("blah"));
-    muc.setUncachedProperties(new CIProperties());
+    muf = (MockUrlFetcher)crawler.makeRepairUrlFetcher(repairUrl1);
+    muf.setUncachedInputStream(new StringInputStream("blah"));
+    muf.setUncachedProperties(new CIProperties());
     crawlRule.addUrlToCrawl(repairUrl2);
 
     assertTrue("doCrawl() returned false", crawler.doCrawl());
-    CrawlerStatus crawlStatus = crawler.getStatus();
-//    assertEquals(3, crawlStatus.getNumFetched()); //2 repairs & permission page
+    CrawlerStatus crawlStatus = crawler.getCrawlerStatus();
+    assertEquals(3, crawlStatus.getNumFetched()); //2 repairs & permission page
     assertEquals(0, crawlStatus.getNumParsed());
-    assertEquals(SetUtil.set(repairUrl1, repairUrl2, permissionPage),
+    assertEquals(SetUtil.set(permissionPage, repairUrl1, repairUrl2),
                  SetUtil.theSet(crawlStatus.getUrlsFetched()));
   }
 
@@ -749,15 +448,18 @@ public class TestRepairCrawler extends LockssTestCase {
     mau.addUrl(repairUrl, new ExpectedRuntimeException("Test exception"), 1);
     List repairUrls = ListUtil.list(repairUrl);
     crawlRule.addUrlToCrawl(repairUrl);
-    spec = new SpiderCrawlSpec(startUrls, permissionPages, crawlRule, 1);
-    crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
+    mau.setStartUrls(startUrls);
+		mau.setPermissionUrls( permissionPages);
+		mau.setCrawlRule(crawlRule);
+		mau.setRefetchDepth( 1);
+    crawler = new MyRepairCrawler(mau, aus, repairUrls);
     crawler.setCrawlManager(crawlMgr);
-    ((BaseCrawler)crawler).daemonPermissionCheckers =
-      ListUtil.list(new MockPermissionChecker(100));
+    crawler.setDaemonPermissionCheckers(
+      ListUtil.list(new MockPermissionChecker(100)));
 
     crawler.doCrawl();
 
-    CrawlerStatus crawlStatus = crawler.getStatus();
+    CrawlerStatus crawlStatus = crawler.getCrawlerStatus();
     assertEquals(1, crawlStatus.getNumFetched()); //permission page
     assertEquals(0, crawlStatus.getNumParsed());
     Map errorUrls = crawlStatus.getUrlsWithErrors();
@@ -765,43 +467,37 @@ public class TestRepairCrawler extends LockssTestCase {
     assertEquals(ListUtil.list(permissionPage), crawlStatus.getUrlsFetched());
   }
 
-  private MyRepairCrawler makeCrawlerWPermission(ArchivalUnit au,
-                                                 CrawlSpec spec,
+  private TestableRepairCrawler makeCrawlerWPermission(ArchivalUnit au,
                                                  AuState aus,
-                                                 Collection repairUrls,
-                                                 float percentFetchFromCache) {
-    MyRepairCrawler crawler =
-      new MyRepairCrawler(au, spec, aus, repairUrls, percentFetchFromCache);
-    ((BaseCrawler)crawler).daemonPermissionCheckers =
-      ListUtil.list(new MockPermissionChecker(100));
+                                                 Collection repairUrls) {
+    TestableRepairCrawler crawler =
+      new TestableRepairCrawler(au, aus, repairUrls);
+    crawler.setDaemonPermissionCheckers(
+      ListUtil.list(new MockPermissionChecker(100)));
     return crawler;
   }
 
   public void testFailedFetchDoesntUpdateStatus()
       throws MalformedIdentityKeyException {
-    ConfigurationUtil.addFromArgs(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHES_ONLY, "true");
     ConfigurationUtil.addFromArgs(RepairCrawler.PARAM_REPAIR_NEEDS_PERMISSION, "true");
 
     String repairUrl = "http://example.com/blah.html";
-    MyRepairCrawler crawler =
-      makeCrawlerWPermission(mau, spec, aus, ListUtil.list(repairUrl),0);
+    TestableRepairCrawler crawler =
+      makeCrawlerWPermission(mau, aus, ListUtil.list(repairUrl));
     crawler.setCrawlManager(crawlMgr);
-    ((BaseCrawler)crawler).daemonPermissionCheckers =
-      ListUtil.list(new MockPermissionChecker(100));
+    crawler.setDaemonPermissionCheckers(
+      ListUtil.list(new MockPermissionChecker(100)));
 
     crawler.setTimesToThrow(3);
 
-
-
     crawler.doCrawl();
 
-    CrawlerStatus crawlStatus = crawler.getStatus();
+    CrawlerStatus crawlStatus = crawler.getCrawlerStatus();
     assertEquals(1, crawlStatus.getNumFetched()); //permission page
     assertEquals(0, crawlStatus.getNumParsed());
 
     Map errorUrls = crawlStatus.getUrlsWithErrors();
-    assertEquals(repairUrl + " couldn't repair from other caches",
-		 errorUrls.get(repairUrl));
+    assertNotNull(errorUrls.get(repairUrl));
     assertEquals(ListUtil.list(permissionPage), crawlStatus.getUrlsFetched());
   }
   /**
@@ -818,15 +514,11 @@ public class TestRepairCrawler extends LockssTestCase {
     setRepairNeedsPermission(true);
     Set cachedUrls = cus.getCachedUrls();
     assertSameElements(ListUtil.list(), cachedUrls);
-
-    PermissionMap pMap = crawler.getPermissionMap();
+    crawler.populatePermissionMap();
+    PermissionMap pMap = crawler.permissionMap;
     assertNotNull(pMap);
-    assertEquals(PermissionRecord.PERMISSION_OK,
+    assertEquals(PermissionStatus.PERMISSION_OK,
                  pMap.getStatus("http://example.com/blah.html"));
-
-    //verify that it fetched the permission page
-    cachedUrls = cus.getCachedUrls();
-    assertSameElements(ListUtil.list(permissionPage), cachedUrls);
   }
 
   /**
@@ -835,8 +527,7 @@ public class TestRepairCrawler extends LockssTestCase {
   public void testGetPermissionMapDefault() throws MalformedURLException {
     Set cachedUrls = cus.getCachedUrls();
     assertSameElements(ListUtil.list(), cachedUrls);
-
-    PermissionMap pMap = crawler.getPermissionMap();
+    PermissionMap pMap = crawler.permissionMap;
     assertNull(pMap);
   }
 
@@ -849,8 +540,8 @@ public class TestRepairCrawler extends LockssTestCase {
 
     String repairUrl1 = "http://www.example.com/url1.html";
     String repairUrl2 = "http://www.example.com/url2.html";
-    ((BaseCrawler)crawler).daemonPermissionCheckers =
-      ListUtil.list(new MockPermissionChecker(0));
+    crawler.setDaemonPermissionCheckers(
+      ListUtil.list(new MockPermissionChecker(0)));
     mau.addUrl(repairUrl1);
     mau.addUrl(repairUrl2);
 
@@ -858,8 +549,11 @@ public class TestRepairCrawler extends LockssTestCase {
     crawlRule.addUrlToCrawl(repairUrl2);
 
     List repairUrls = ListUtil.list(repairUrl1, repairUrl2);
-    spec = new SpiderCrawlSpec(startUrls, startUrls, crawlRule, 1);
-    crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
+    mau.setStartUrls(startUrls);
+		mau.setPermissionUrls( startUrls);
+		mau.setCrawlRule(crawlRule);
+		mau.setRefetchDepth( 1);
+    crawler = new MyRepairCrawler(mau, aus, repairUrls);
     crawler.setCrawlManager(crawlMgr);
 
     crawler.doCrawl();
@@ -876,8 +570,8 @@ public class TestRepairCrawler extends LockssTestCase {
 
     String repairUrl1 = "http://www.example.com/url1.html";
     String repairUrl2 = "http://www.example.com/url2.html";
-    ((BaseCrawler)crawler).daemonPermissionCheckers =
-      ListUtil.list(new MockPermissionChecker(0));
+    crawler.setDaemonPermissionCheckers(
+      ListUtil.list(new MockPermissionChecker(0)));
     mau.addUrl(repairUrl1);
     mau.addUrl(repairUrl2);
 
@@ -885,8 +579,11 @@ public class TestRepairCrawler extends LockssTestCase {
     crawlRule.addUrlToCrawl(repairUrl2);
 
     List repairUrls = ListUtil.list(repairUrl1, repairUrl2);
-    spec = new SpiderCrawlSpec(startUrls, startUrls, crawlRule, 1);
-    crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
+    mau.setStartUrls(startUrls);
+		mau.setPermissionUrls( startUrls);
+		mau.setCrawlRule(crawlRule);
+		mau.setRefetchDepth( 1);
+    crawler = new MyRepairCrawler(mau, aus, repairUrls);
     crawler.setCrawlManager(crawlMgr);
 
     crawler.doCrawl();
@@ -901,8 +598,8 @@ public class TestRepairCrawler extends LockssTestCase {
   public void testIgnorePermissionDefault() {
     String repairUrl1 = "http://www.example.com/url1.html";
     String repairUrl2 = "http://www.example.com/url2.html";
-    ((BaseCrawler)crawler).daemonPermissionCheckers =
-      ListUtil.list(new MockPermissionChecker(0));
+    crawler.setDaemonPermissionCheckers(
+      ListUtil.list(new MockPermissionChecker(0)));
     mau.addUrl(repairUrl1);
     mau.addUrl(repairUrl2);
 
@@ -910,8 +607,11 @@ public class TestRepairCrawler extends LockssTestCase {
     crawlRule.addUrlToCrawl(repairUrl2);
 
     List repairUrls = ListUtil.list(repairUrl1, repairUrl2);
-    spec = new SpiderCrawlSpec(startUrls, startUrls, crawlRule, 1);
-    crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
+    mau.setStartUrls(startUrls);
+		mau.setPermissionUrls( startUrls);
+		mau.setCrawlRule(crawlRule);
+		mau.setRefetchDepth( 1);
+    crawler = new MyRepairCrawler(mau, aus, repairUrls);
     crawler.setCrawlManager(crawlMgr);
 
     crawler.doCrawl();
@@ -929,8 +629,29 @@ public class TestRepairCrawler extends LockssTestCase {
       return canCrawl();
     }
   }
-
+  
   private class MyRepairCrawler extends RepairCrawler {
+    List<PermissionChecker> daemonPermissionCheckers;
+    
+    public MyRepairCrawler(ArchivalUnit au, AuState aus,
+        Collection<String> repairUrls) {
+      super(au, aus, repairUrls);
+    }
+    
+    List<PermissionChecker> getDaemonPermissionCheckers() {
+      if(daemonPermissionCheckers != null) {
+        return daemonPermissionCheckers;
+      } else {
+        return super.getDaemonPermissionCheckers();
+      }
+    }
+    
+    public void setDaemonPermissionCheckers(List<PermissionChecker> pc) {
+      this.daemonPermissionCheckers = pc;
+    }
+  }
+  
+  private class TestableRepairCrawler extends MyRepairCrawler {
     private Map contentMap = new HashMap();
     private int fetchCacheCnt = 0;
     private int fetchPubCnt = 0;
@@ -938,24 +659,11 @@ public class TestRepairCrawler extends LockssTestCase {
     private int cacheLastCall = 0;
     private int pubLastCall = 0;
     private int timesToThrow = 0;
+    
 
-    public MyRepairCrawler(ArchivalUnit au, CrawlSpec spec,
-                           AuState aus, Collection repairUrls,
-                           float percentFetchFromCache) {
-      super(au, spec, aus, repairUrls, percentFetchFromCache);
-    }
-
-    protected void fetchFromCache(String url, PeerIdentity id)
-        throws IOException {
-      fetchCacheCnt++;
-      cacheLastCall = ++fetchSequence;
-      contentMap.put(url,id);
-      UrlCacher uc = makeRepairUrlCacher(url);
-      if (timesToThrow > 0) {
-        timesToThrow--;
-        ((MockUrlCacher)uc).setCachingException(new LockssUrlConnection.CantProxyException("Expected from cache"), 1);
-      }
-      fetchFromCache(uc, id);
+    public TestableRepairCrawler(ArchivalUnit au,
+                           AuState aus, Collection repairUrls) {
+      super(au, aus, repairUrls);
     }
 
     /**
@@ -970,17 +678,24 @@ public class TestRepairCrawler extends LockssTestCase {
       return fetchCacheCnt;
     }
 
+    @Override
     protected void fetchFromPublisher(String url) throws IOException {
-      UrlCacher uc = makeRepairUrlCacher(url);
       fetchPubCnt++;
       pubLastCall = ++fetchSequence;
 
+      super.fetchFromPublisher(url);
+    }
+    
+    @Override
+    protected UrlFetcher makeRepairUrlFetcher(String url) {
       if (timesToThrow > 0) {
         timesToThrow--;
-        ((MockUrlCacher)uc).setCachingException(new CacheException("Expected from publisher"), 1);
+        MockUrlFetcher uf = new MockUrlFetcher(this.getCrawlerFacade(), url);
+        uf.setCachingException(new CacheException("Expected from publisher"), 1);
+        return uf;
+      } else {
+        return super.makePermissionUrlFetcher(url);
       }
-
-      fetchFromPublisher(uc);
     }
 
     protected int getFetchPubCnt(){
@@ -1004,26 +719,5 @@ public class TestRepairCrawler extends LockssTestCase {
       return (PeerIdentity)contentMap.get(url);
     }
 
-  }
-  public class MyMockUrlCacher extends MockUrlCacher {
-
-    public MyMockUrlCacher(String url, MockArchivalUnit mau) {
-      super(url, mau);
-    }
-
-    public boolean shouldBeCached(){
-      return true;
-    }
-
-    public void setProxy(String proxyHost, int proxyPort) {
-    }
-
-    public InputStream getUncachedInputStream() throws IOException {
-      throw new IOException("Expected Exception");
-    }
-
-    public CIProperties getUncachedProperties(){
-      return new CIProperties();
-    }
   }
 }

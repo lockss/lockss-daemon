@@ -1,5 +1,5 @@
 /*
- * $Id: TestOnixBooksSourceArchivalUnit.java,v 1.4 2014-02-24 19:21:57 alexandraohlson Exp $
+ * $Id: TestOnixBooksSourceArchivalUnit.java,v 1.5 2014-11-12 20:11:54 wkwilson Exp $
  */
 
 /*
@@ -131,8 +131,7 @@ public class TestOnixBooksSourceArchivalUnit extends LockssTestCase {
   
   private void shouldCacheTest(String url, boolean shouldCache,
       ArchivalUnit au, CachedUrlSet cus) {
-    UrlCacher uc = au.makeUrlCacher(url);
-    assertEquals(shouldCache, uc.shouldBeCached());
+    assertEquals(shouldCache, au.shouldBeCached(url));
   }
   
   

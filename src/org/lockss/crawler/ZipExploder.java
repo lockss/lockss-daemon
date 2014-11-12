@@ -1,5 +1,5 @@
 /*
- * $Id: ZipExploder.java,v 1.15 2012-09-06 03:59:41 tlipkis Exp $
+ * $Id: ZipExploder.java,v 1.16 2014-11-12 20:11:24 wkwilson Exp $
  */
 
 /*
@@ -35,11 +35,12 @@ package org.lockss.crawler;
 import java.util.*;
 import java.util.zip.*;
 import java.io.*;
+
 import org.lockss.daemon.*;
+import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.ExploderHelper;
 import org.lockss.plugin.base.*;
 import org.lockss.plugin.exploded.*;
 import org.lockss.crawler.BaseCrawler;
@@ -57,9 +58,8 @@ import org.lockss.state.*;
 public class ZipExploder extends Exploder {
 
   private static Logger logger = Logger.getLogger("ZipExploder");
-  protected ExploderHelper helper = null;
-  protected int reTry = 0;
-  protected CIProperties arcProps = null;
+  protected CIProperties zipProps;
+  protected InputStream zipStream;
 
   /**
    * Constructor
@@ -70,20 +70,17 @@ public class ZipExploder extends Exploder {
    * @param explode true to explode the archives
    * @param store true to store the archive as well
    */
-  protected ZipExploder(UrlCacher uc, int maxRetries, CrawlSpec crawlSpec,
-		     BaseCrawler crawler, boolean explode, boolean store) {
-    super(uc, maxRetries, crawlSpec, crawler, explode, store);
-    helper = crawlSpec.getExploderHelper();
-    if (helper == null) {
-      helper = new DefaultExploderHelper(uc, crawlSpec, crawler);
-    }
+  public ZipExploder(FetchedUrlData toExplode, CrawlerFacade crawlFacade,
+      ExploderHelper helper) {
+    super(toExplode, crawlFacade, helper);
+    zipStream = toExplode.input;
+    zipProps = toExplode.headers;
   }
 
   /**
    * Explode the archive into its constituent elements
    */
-  protected void explodeUrl() throws CacheException {
-    InputStream arcStream = null;
+  public void explode() throws CacheException {
     CachedUrl cachedUrl = null;
     ZipInputStream zis = null;
     int goodEntries = 0;
@@ -91,89 +88,87 @@ public class ZipExploder extends Exploder {
     int entriesBetweenSleep = 0;
     String zipArchiveUrl = archiveUrl;
     logger.info((storeArchive ? "Storing" : "Fetching") + " a ZIP file: " +
-		archiveUrl + (explodeFiles ? " will" : " won't") + " explode");
-    while (++reTry < maxRetries) try {
+		archiveUrl + " will explode");
+    try {
       goodEntries = 0;
       badEntries = 0;
-      if (storeArchive) {
-	crawler.cacheWithRetries(urlCacher);
-	// Get a stream from which the ZIP data can be read
-	logger.debug3("About to get ZIP stream from " + urlCacher.toString());
-	cachedUrl = urlCacher.getCachedUrl();
-	arcStream = cachedUrl.getUnfilteredInputStream();
-      } else {
-	arcStream = urlCacher.getUncachedInputStream();
-	arcProps = urlCacher.getUncachedProperties();
+      if(storeArchive) {
+        UrlCacher uc = au.makeUrlCacher(
+            new UrlData(zipStream, zipProps, fetchUrl));
+        BitSet bs = new BitSet();
+        bs.set(UrlCacher.DONT_CLOSE_INPUT_STREAM_FLAG);
+        uc.setFetchFlags(bs);
+        uc.storeContent();
+        archiveData.resetInputStream();
+        zipStream = archiveData.input;
       }
-      zis = new ZipInputStream(arcStream);
+      zis = new ZipInputStream(zipStream);
       ZipEntry ze;
       while ((ze = zis.getNextEntry()) != null) {
-	// XXX probably not necessary
-	crawler.pokeWDog();
-	if ((++entriesBetweenSleep % sleepAfter) == 0) {
-	  long pauseTime =
-            CurrentConfig.getTimeIntervalParam(PARAM_RETRY_PAUSE,
-                                               DEFAULT_RETRY_PAUSE);
-	  Deadline pause = Deadline.in(pauseTime);
-	  logger.debug3("Sleeping for " +
-			StringUtil.timeIntervalToString(pauseTime));
-	  while (!pause.expired()) {
-	    try {
-	      pause.sleep();
-	    } catch (InterruptedException ie) {
-	      // no action
-	    }
-	  }
-	}
-	if (!ze.isDirectory()) {
-	  ArchiveEntry ae = new ArchiveEntry(ze.getName(),
-					     ze.getSize(),
-					     ze.getTime(),
-					     zis,
-					     crawlSpec,
-					     this,
-					     urlCacher.getUrl());
-	  long bytesStored = ae.getSize();
-	  logger.debug3("ArchiveEntry: " + ae.getName()
-			+ " bytes "  + bytesStored);
-          try {
-	    helper.process(ae);
-          } catch (PluginException ex) {
-	    throw new CacheException.ExploderException("helper.process() threw " +
-						   ex);
-          }
-	  if (ae.getBaseUrl() != null &&
-	      ae.getRestOfUrl() != null &&
-	      ae.getHeaderFields() != null) {
-	    storeEntry(ae);
-	    handleAddText(ae);
-	    goodEntries++;
-	    crawler.getCrawlerStatus().addContentBytesFetched(bytesStored);
-	  } else {
-	    badEntries++;
-	    logger.debug2("Can't map " + ze.getName() + " from " + archiveUrl);
-	  }
-	} else {
-	  logger.debug2("Directory " + ze.getName() + " in " + archiveUrl);
-	}
+      	// XXX probably not necessary
+      	helper.pokeWDog();
+      	if ((++entriesBetweenSleep % sleepAfter) == 0) {
+      	  long pauseTime =
+                  CurrentConfig.getTimeIntervalParam(PARAM_RETRY_PAUSE,
+                                                     DEFAULT_RETRY_PAUSE);
+      	  Deadline pause = Deadline.in(pauseTime);
+      	  logger.debug3("Sleeping for " +
+      			StringUtil.timeIntervalToString(pauseTime));
+      	  while (!pause.expired()) {
+      	    try {
+      	      pause.sleep();
+      	    } catch (InterruptedException ie) {
+      	      // no action
+      	    }
+      	  }
+      	}
+      	if (!ze.isDirectory()) {
+      	  ArchiveEntry ae = new ArchiveEntry(ze.getName(),
+      					     ze.getSize(),
+      					     ze.getTime(),
+      					     zis,
+      					     this,
+      					     fetchUrl);
+      	  long bytesStored = ae.getSize();
+      	  logger.debug3("ArchiveEntry: " + ae.getName()
+      			+ " bytes "  + bytesStored);
+                try {
+      	    helper.process(ae);
+                } catch (PluginException ex) {
+      	    throw new CacheException.ExploderException("helper.process() threw " +
+      						   ex);
+                }
+      	  if (ae.getBaseUrl() != null &&
+      	      ae.getRestOfUrl() != null &&
+      	      ae.getHeaderFields() != null) {
+      	    storeEntry(ae);
+      	    handleAddText(ae);
+      	    goodEntries++;
+      	    crawlFacade.getCrawlerStatus().addContentBytesFetched(bytesStored);
+      	  } else {
+      	    badEntries++;
+      	    logger.debug2("Can't map " + ze.getName() + " from " + archiveUrl);
+      	  }
+      	} else {
+      	  logger.debug2("Directory " + ze.getName() + " in " + archiveUrl);
+      	}
       }
-      // Success
-      addText();
-      if (badEntries > 0) {
-	String msg = archiveUrl + " had " + badEntries + "/" +
-	  (goodEntries + badEntries) + " bad entries";
-	throw new CacheException.ExploderException(msg);
-      } else {
-	logger.info(archiveUrl + " had " + goodEntries + " entries");
-	if (!storeArchive) {
-	  // Leave stub archive behind to prevent re-fetch
-	  byte[] dummy = { 0, };
-	  urlCacher.storeContent(new ByteArrayInputStream(dummy), arcProps);
-	  // XXX update stats
-	}
-	reTry = maxRetries+1;
+            // Success
+            addText();
+            if (badEntries > 0) {
+      	String msg = archiveUrl + " had " + badEntries + "/" +
+      	  (goodEntries + badEntries) + " bad entries";
+      	throw new CacheException.ExploderException(msg);
+            } else {
+      	logger.info(archiveUrl + " had " + goodEntries + " entries");
+      	if (!storeArchive) {
+      	  // Leave stub archive behind to prevent re-fetch
+      	  byte[] dummy = { 0, };
+          UrlCacher uc = au.makeUrlCacher(
+              new UrlData(new ByteArrayInputStream(dummy), zipProps, fetchUrl));
+          uc.storeContent();
+      	}
       }
-      break;
     } catch (IOException ex) {
       throw new CacheException.ExploderException(ex);
     } finally {
@@ -181,22 +176,20 @@ public class ZipExploder extends Exploder {
 	cachedUrl.release();
       }
       IOUtil.safeClose(zis);
-      IOUtil.safeClose(arcStream);
+      IOUtil.safeClose(zipStream);
     }
-    if (badEntries == 0) {
-      if (reTry >= maxRetries && goodEntries > 0) {
-	// Make it look like a new crawl finished on each AU to which
-	// URLs were added.
-	for (Iterator it = touchedAus.iterator(); it.hasNext(); ) {
-	  ArchivalUnit au = (ArchivalUnit)it.next();
-	  logger.debug3(archiveUrl + " touching " + au.toString());
-	  crawler.getDaemon().getNodeManager(au).newContentCrawlFinished();
-	}
-      }
+    if (badEntries == 0 && goodEntries > 0) {
+    	// Make it look like a new crawl finished on each AU to which
+    	// URLs were added.
+    	for (Iterator it = touchedAus.iterator(); it.hasNext(); ) {
+    	  ArchivalUnit au = (ArchivalUnit)it.next();
+    	  logger.debug3(archiveUrl + " touching " + au.toString());
+    	  AuUtil.getDaemon(au).getNodeManager(au).newContentCrawlFinished();
+    	}
     } else {
-      ArchivalUnit au = crawler.getAu();
+      ArchivalUnit au = crawlFacade.getAu();
       String msg = archiveUrl + ": " + badEntries + "/" +
-	goodEntries + " bad entries";
+          goodEntries + " bad entries";
       throw new CacheException.UnretryableException(msg);
     }
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.77 2014-03-23 17:10:11 tlipkis Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.78 2014-11-12 20:11:37 wkwilson Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.io.File;
 
 import org.lockss.config.*;
 import org.lockss.daemon.*;
+import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
@@ -55,7 +56,8 @@ import org.lockss.state.*;
  * @version 0.0
  */
 
-public class SimulatedArchivalUnit extends BaseArchivalUnit {
+public class SimulatedArchivalUnit extends BaseArchivalUnit 
+    implements ExplodableArchivalUnit {
   static final Logger log = Logger.getLogger("SAU");
 
   private static final String SIMULATED_URL_BASE = "http://www.example.com/";
@@ -95,6 +97,10 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
   String simRoot; //sim root dir returned by content generator
   String baseUrlNoSlash;
   private boolean doFilter = false;
+  private Collection<String> startUrls;
+  private ExploderHelper exploderHelper;
+  private String exploderPattern;
+  private UrlConsumerFactory ucf;
 
   Set toBeDamaged = new HashSet();
 
@@ -111,9 +117,14 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
     log.debug2("Null plugin");
   }
 
-  public UrlCacher makeUrlCacher(String url) {
+  public UrlCacher makeUrlCacher(UrlData ud) {
     String fileRoot = getRootDir();
-    return new SimulatedUrlCacher(this, url, fileRoot);
+    return new SimulatedUrlCacher(this, ud, fileRoot);
+  }
+  
+  public UrlFetcher makeUrlFetcher(CrawlerFacade facade, String url) {
+    String fileRoot = getRootDir();
+    return new SimulatedUrlFetcher(facade, url, fileRoot);
   }
 
 
@@ -434,15 +445,23 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
     titleDbChanged();
   }
 
-  protected CrawlRule makeRules() throws LockssRegexpException {
-    CrawlRule rule1 =
-      new CrawlRules.RE("xxxexclude", CrawlRules.RE.MATCH_EXCLUDE);
-    CrawlRule rule2 =
-      new CrawlRules.RE(paramMap.getUrl(KEY_AU_BASE_URL) + ".*",
-			CrawlRules.RE.MATCH_INCLUDE);
-    return new CrawlRules.FirstMatch(ListUtil.list(rule1, rule2));
+  protected CrawlRule makeRule() throws ConfigurationException {
+    try {
+      CrawlRule rule1 =
+        new CrawlRules.RE("xxxexclude", CrawlRules.RE.MATCH_EXCLUDE);
+      CrawlRule rule2 =
+        new CrawlRules.RE(paramMap.getUrl(KEY_AU_BASE_URL) + ".*",
+  			CrawlRules.RE.MATCH_INCLUDE);
+      return new CrawlRules.FirstMatch(ListUtil.list(rule1, rule2));
+    } catch(LockssRegexpException ex) {
+      throw new ConfigurationException("problem making crawl rules", ex);
+    }
   }
-
+  
+  public void setRule(CrawlRule rule) {
+    this.rule = rule;
+  }
+  
   /** No longer effective */
   public RateLimiter findFetchRateLimiter() {
     return RateLimiter.UNLIMITED;
@@ -461,13 +480,79 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
   }
 
   boolean isUrlToBeDamaged(String url) {
-    String file = StringUtil.replaceString(url, baseUrlNoSlash, "");
-    if (toBeDamaged.contains(file)) {
-      boolean x = toBeDamaged.remove(file);
-      return true;
-    }
-    else {
-      return false;
-    }
+	    String file = StringUtil.replaceString(url, baseUrlNoSlash, "");
+	    if (toBeDamaged.contains(file)) {
+	      boolean x = toBeDamaged.remove(file);
+	      return true;
+	    }
+	    else {
+	      return false;
+	    }
+	  }
+  
+  @Override
+  public List<PermissionChecker> makePermissionCheckers() {
+    // TODO Auto-generated method stub
+    return null;
   }
+
+  @Override
+  public Collection<String> getStartUrls() {
+    if(startUrls != null) {
+      return startUrls;
+    }
+    return ListUtil.list(makeStartUrl());
+  }
+  
+  public void setStartUrls(Collection<String> startUrls) {
+    this.startUrls = startUrls;
+  }
+  
+  @Override
+  public int getRefetchDepth() {
+    return 1;
+  }
+
+  @Override
+  public LoginPageChecker getLoginPageChecker() {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  @Override
+  public String getCookiePolicy() {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  @Override
+  public String getExploderPattern() {
+    return exploderPattern;
+  }
+  
+  public void setExploderPattern(String exPat) {
+    this.exploderPattern = exPat;
+  }
+
+  @Override
+  public ExploderHelper getExploderHelper() {
+    return exploderHelper;
+  }
+  
+  public void setExploderHelper(ExploderHelper eh) {
+    this.exploderHelper = eh;
+  }
+  
+  public void setUrlConsumerFactory(UrlConsumerFactory ucf){
+    this.ucf = ucf;
+  }
+  
+  @Override
+  public UrlConsumerFactory getUrlConsumerFactory(){
+    if(ucf != null) {
+      return ucf;
+    }
+    return super.getUrlConsumerFactory();
+  }
+
 }

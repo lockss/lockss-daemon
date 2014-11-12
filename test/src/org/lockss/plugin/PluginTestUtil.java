@@ -1,5 +1,5 @@
 /*
- * $Id: PluginTestUtil.java,v 1.7 2014-07-21 03:17:23 tlipkis Exp $
+ * $Id: PluginTestUtil.java,v 1.8 2014-11-12 20:11:54 wkwilson Exp $
  *
 
 Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
@@ -254,9 +254,8 @@ public class PluginTestUtil {
       sau.generateContentTree();
     }
     log.debug("Crawling simulated content");
-    CrawlSpec spec = new SpiderCrawlSpec(sau.getNewContentCrawlUrls(), null);
-    NoCrawlEndActionsNewContentCrawler crawler =
-      new NoCrawlEndActionsNewContentCrawler(sau, spec, new MockAuState());
+    NoCrawlEndActionsFollowLinkCrawler crawler =
+      new NoCrawlEndActionsFollowLinkCrawler(sau, new MockAuState());
     //crawler.setCrawlManager(crawlMgr);
     crawler.doCrawl();
   }
@@ -294,34 +293,35 @@ public class PluginTestUtil {
     }
     for (CachedUrl cu : fromCus.getCuIterable()) {
       try {
-	String fromUrl = cu.getUrl();
-	String toUrl = fromUrl;
-	if (ifMatchPat != null) {
-	  Matcher mat = ifMatchPat.matcher(fromUrl);
-	  if (!mat.find()) {
-	    log.debug3("no match: " + fromUrl + ", " + ifMatchPat);
-	    continue;
-	  }
-	}
-	if (pattern != null) {
-	  Matcher mat = pattern.matcher(fromUrl);
-	  toUrl = mat.replaceAll(rep);
-	}
-	UrlCacher uc = toAu.makeUrlCacher(toUrl);
-	CIProperties props = cu.getProperties();
-	if (props == null) {
-	}
-	uc.storeContent(cu.getUnfilteredInputStream(), props);
-	if (!toUrl.equals(fromUrl)) {
-	  log.debug2("Copied " + fromUrl + " to " + toUrl);
-	} else {
-	  log.debug2("Copied " + fromUrl);
-	}
+        String fromUrl = cu.getUrl();
+        String toUrl = fromUrl;
+        if (ifMatchPat != null) {
+          Matcher mat = ifMatchPat.matcher(fromUrl);
+          if (!mat.find()) {
+            log.debug3("no match: " + fromUrl + ", " + ifMatchPat);
+            continue;
+          }
+        }
+        if (pattern != null) {
+          Matcher mat = pattern.matcher(fromUrl);
+          toUrl = mat.replaceAll(rep);
+        }
+        CIProperties props = cu.getProperties();
+        if (props == null) {
+        }
+        UrlCacher uc = toAu.makeUrlCacher(
+            new UrlData(cu.getUnfilteredInputStream(), props, toUrl));
+        uc.storeContent();
+        if (!toUrl.equals(fromUrl)) {
+          log.debug2("Copied " + fromUrl + " to " + toUrl);
+        } else {
+          log.debug2("Copied " + fromUrl);
+        }
       } catch (Exception e) {
-	log.error("Couldn't copy " + cu.getUrl(), e);
-	res = false;
+        log.error("Couldn't copy " + cu.getUrl(), e);
+        res = false;
       } finally {
-	cu.release();
+        cu.release();
       }
     }
     return res;

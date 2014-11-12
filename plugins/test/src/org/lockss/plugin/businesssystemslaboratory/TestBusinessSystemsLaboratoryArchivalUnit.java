@@ -1,5 +1,5 @@
 /*
- * $Id: TestBusinessSystemsLaboratoryArchivalUnit.java,v 1.5 2014-09-10 18:44:29 thib_gc Exp $
+ * $Id: TestBusinessSystemsLaboratoryArchivalUnit.java,v 1.6 2014-11-12 20:11:36 wkwilson Exp $
  */
 
 /*
@@ -41,7 +41,6 @@ import org.lockss.daemon.RangeCachedUrlSetSpec;
 import org.lockss.extractor.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrlSet;
-import org.lockss.plugin.UrlCacher;
 import org.lockss.plugin.base.BaseCachedUrlSet;
 import org.lockss.plugin.definable.DefinableArchivalUnit;
 import org.lockss.plugin.definable.DefinablePlugin;
@@ -160,23 +159,20 @@ public class TestBusinessSystemsLaboratoryArchivalUnit extends LockssTestCase {
   private void shouldCacheTest(String url, boolean shouldCache,
                                ArchivalUnit au, CachedUrlSet cus) {
     log.info ("shouldCacheTest url: " + url);
-
-    UrlCacher uc = au.makeUrlCacher(url);
-    assertEquals(shouldCache, uc.shouldBeCached());
+    assertEquals(shouldCache, au.shouldBeCached(url));
   }
   
   public void testStartUrlConstruction() throws Exception {
     String expected = ROOT_URL + "bsr_archive.htm";
     assertEquals(ListUtil.list(expected), 
-                 bslAu.getNewContentCrawlUrls());
+                 bslAu.getStartUrls());
   }
   
   public void testShouldNotCachePageFromOtherSite() throws Exception {
     theDaemon.getLockssRepository(bslAu);
     theDaemon.getNodeManager(bslAu);
-    UrlCacher uc = bslAu.makeUrlCacher(
-        "http://shadow2.stanford.edu/bsr_archive.htm");
-    assertFalse(uc.shouldBeCached());
+    assertFalse(bslAu.shouldBeCached(
+        "http://shadow2.stanford.edu/bsr_archive.htm"));
   }
 
   public void testShouldDoNewContentCrawlTooEarly() throws Exception {

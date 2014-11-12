@@ -28,7 +28,9 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.medknow;
 
+import java.io.InputStream;
 import java.util.regex.Pattern;
+
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.ConfigParamDescr;
@@ -40,6 +42,7 @@ import org.lockss.plugin.simulated.SimulatedArchivalUnit;
 import org.lockss.plugin.simulated.SimulatedContentGenerator;
 import org.lockss.test.*;
 import org.lockss.util.*;
+
 import java.util.Iterator;
 
 /*
@@ -171,12 +174,18 @@ public class TestMedknowArticleIteratorFactory extends ArticleIteratorTestCase {
     UrlCacher uc;
     for (String url : urls) {
       //log.info("url: " + url);
-      uc = au.makeUrlCacher(url);
+      InputStream input = null;
+      CIProperties props = null;
       if (url.contains("type=0")) {
-        uc.storeContent(cuAbs.getUnfilteredInputStream(), cuAbs.getProperties());
+        input = cuAbs.getUnfilteredInputStream();
+        props = cuAbs.getProperties();
       } else if (url.contains("type=2")) {
-        uc.storeContent(cuPdf.getUnfilteredInputStream(), cuPdf.getProperties());
+        input = cuPdf.getUnfilteredInputStream();
+        props = cuPdf.getProperties();
       }
+      UrlData ud = new UrlData(input, props, url);
+      uc = au.makeUrlCacher(ud);
+      uc.storeContent();
     }
  
     // get article iterator, get article files and the appropriate urls according

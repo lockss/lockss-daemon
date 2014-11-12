@@ -1,5 +1,5 @@
 /*
- * $Id: TestProbePermissionChecker.java,v 1.10 2012-03-12 05:26:37 tlipkis Exp $
+ * $Id: TestProbePermissionChecker.java,v 1.11 2014-11-12 20:11:37 wkwilson Exp $
  */
 
 /*
@@ -33,19 +33,23 @@ package org.lockss.daemon;
 
 import java.io.*;
 import java.util.*;
+
 import org.lockss.test.*;
+import org.lockss.test.MockCrawler.MockCrawlerFacade;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.plugin.*;
 import org.lockss.config.*;
 import org.lockss.crawler.*;
 import org.lockss.crawler.BaseCrawler.StorePermissionScheme;
+import org.lockss.daemon.ProbePermissionChecker;
 
 public class TestProbePermissionChecker extends LockssTestCase {
 
-  private ProbePermissionChecker pc;
+  private TestableProbePermissionChecker pc;
   MockArchivalUnit mau;
-  MyPermissionHelper helper;
+  MockCrawlerFacade mcf;
+  MockCrawler crawler;
 
   private static String htmlSourceWOLinkTag =
     "<html>\n"+
@@ -92,27 +96,21 @@ public class TestProbePermissionChecker extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     mau = new MockArchivalUnit();
-    helper = new MyPermissionHelper(mau);
-  }
-
-  public void testConstructorNullArchivalUnit() {
-    try {
-      new ProbePermissionChecker(null);
-      fail("Calling ProbePermissionChecker constructor with a null Archival Unit should throw");
-    } catch (NullPointerException ex) {
-    }
+    crawler = new MockCrawler(mau);
+    mcf = crawler.new MockCrawlerFacade(mau);
   }
 
   public void testNoLinkTag() {
     String url = "http://www.example.com";
     mau.addUrl(url, true, true);
     mau.addContent(url, htmlSourceWOProbe);
-
-    pc = new ProbePermissionChecker(mau);
-    assertFalse("Incorrectly gave permission when there was no probe",
-		pc.checkPermission(helper,
+    
+    pc = new TestableProbePermissionChecker();
+    assertTrue("Incorrectly gave permission when there was no probe",
+		pc.checkPermission(mcf,
 				   new StringReader(htmlSourceWOLinkTag),
 				   url));
+    assertNull(pc.getProbeUrl());
   }
 
   public void testNoProbe() {
@@ -120,10 +118,11 @@ public class TestProbePermissionChecker extends LockssTestCase {
     mau.addUrl(url, true, true);
     mau.addContent(url, htmlSourceWOProbe);
 
-    pc = new ProbePermissionChecker(mau);
-    assertFalse("Incorrectly gave permission when there was no probe",
-		pc.checkPermission(helper, new StringReader(htmlSourceWOProbe),
+    pc = new TestableProbePermissionChecker();
+    assertTrue("Incorrectly gave permission when there was no probe",
+		pc.checkPermission(mcf, new StringReader(htmlSourceWOProbe),
 				   url));
+    assertNull(pc.getProbeUrl());
   }
 
   StorePermissionScheme getConfigPermissionScheme() {
@@ -143,16 +142,31 @@ public class TestProbePermissionChecker extends LockssTestCase {
     mau.addUrl(probeUrl, true, true);
     mau.addContent(probeUrl, "");
 
-    pc = new ProbePermissionChecker(mau);
+    pc = new TestableProbePermissionChecker();
     assertTrue("Didn't give permission when there was a probe",
-		pc.checkPermission(helper, new StringReader(htmlSourceWProbe),
+		pc.checkPermission(mcf, new StringReader(htmlSourceWProbe),
 				   "http://www.example.com"));
+    assertEquals(probeUrl, pc.getProbeUrl());
+    assertTrue(mcf.permProbe.contains(probeUrl));
+  }
+  
+  public void testProbeHasPermissionNotInCrawlRule() {
+    String probeUrl = "http://www.example.com/cgi/content/full/14/9/1109";
 
-    assertEquals(StorePermissionScheme.Legacy, getConfigPermissionScheme());
-    assertEquals(0, helper.storeCnt);
+    String url = "http://www.example.com";
+    mau.addUrl(url, true, true);
+    mau.addContent(url, htmlSourceWProbe);
+    mau.addUrl(probeUrl, true, false);
+    mau.addContent(probeUrl, "");
+
+    pc = new TestableProbePermissionChecker();
+    assertFalse("Gave permission when probe was not in rules",
+    pc.checkPermission(mcf, new StringReader(htmlSourceWProbe),
+           "http://www.example.com"));
+    assertEquals(probeUrl, pc.getProbeUrl());
   }
 
-  public void testProbeHasPermissionWithStore() {
+  public void testProbeHasPermission2() {
     ConfigurationUtil.addFromArgs(BaseCrawler.PARAM_STORE_PERMISSION_SCHEME,
 				  StorePermissionScheme.StoreAllInSpec.toString());
     String probeUrl = "http://www.example.com/cgi/content/full/14/9/1109";
@@ -163,50 +177,18 @@ public class TestProbePermissionChecker extends LockssTestCase {
     mau.addUrl(probeUrl, true, true);
     mau.addContent(probeUrl, "");
 
-    pc = new ProbePermissionChecker(mau);
+    pc = new TestableProbePermissionChecker();
     assertTrue("Didn't give permission when there was a probe",
-		pc.checkPermission(helper, new StringReader(htmlSourceWProbe),
+		pc.checkPermission(mcf, new StringReader(htmlSourceWProbe),
 				   "http://www.example.com"));
-    assertEquals(1, helper.storeCnt);
+    assertEquals(probeUrl, pc.getProbeUrl());
+    assertTrue(mcf.permProbe.contains(probeUrl));
   }
 
-  public void testProbeNoPermission() {
-    ConfigurationUtil.addFromArgs(BaseCrawler.PARAM_STORE_PERMISSION_SCHEME,
-				  StorePermissionScheme.StoreAllInSpec.toString());
-    String probeUrl = "http://www.example.com/cgi/content/full/14/9/1109";
-
-    String url = "http://www.example.com";
-    mau.addUrl(url, true, true);
-    mau.addContent(url, htmlSourceWProbe);
-    mau.addUrl(probeUrl, true, true);
-    MockUrlCacher muc = (MockUrlCacher)mau.makeUrlCacher(probeUrl);
-    muc.setCachingException(new CacheException.PermissionException("test"),
-			    1);
-
-    pc = new ProbePermissionChecker(mau);
-    assertFalse("Gave permission when the nested checker denied it",
-	       pc.checkPermission(helper, new StringReader(htmlSourceWProbe),
-				  "http://www.example.com"));
-    assertEquals(0, helper.storeCnt);
-  }
-
-  static class MyPermissionHelper extends MockPermissionHelper {
-    ArchivalUnit au;
-    int storeCnt = 0;
-
-    MyPermissionHelper(ArchivalUnit au) {
-      this.au = au;
-    }
-
-    @Override
-    public UrlCacher makePermissionUrlCacher(String url) {
-      return au.makeUrlCacher(url);
-    }
-
-    @Override
-    public void storePermissionPage(UrlCacher uc, BufferedInputStream is)
-	throws IOException {
-      storeCnt++;
+  
+  public class TestableProbePermissionChecker extends ProbePermissionChecker {
+    public String getProbeUrl() {
+      return probeUrl;
     }
   }
 }

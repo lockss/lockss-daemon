@@ -1,5 +1,5 @@
 /*
- * $Id: TestGeorgThiemeVerlagPlugin.java,v 1.7 2014-03-25 21:39:58 etenbrink Exp $
+ * $Id: TestGeorgThiemeVerlagPlugin.java,v 1.8 2014-11-12 20:11:36 wkwilson Exp $
  */
 
 /*
@@ -232,8 +232,7 @@ public class TestGeorgThiemeVerlagPlugin extends LockssTestCase {
   
   private void shouldCacheTest(String url, boolean shouldCache, ArchivalUnit au) {
     log.info ("shouldCacheTest url: " + url);
-    UrlCacher uc = au.makeUrlCacher(url);
-    assertEquals(shouldCache, uc.shouldBeCached());
+    assertEquals(shouldCache, au.shouldBeCached(url));
   }
   
 }

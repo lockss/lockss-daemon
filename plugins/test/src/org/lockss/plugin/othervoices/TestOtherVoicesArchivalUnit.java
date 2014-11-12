@@ -1,5 +1,5 @@
 /*
- * $Id: TestOtherVoicesArchivalUnit.java,v 1.7 2012-08-08 07:19:51 tlipkis Exp $
+ * $Id: TestOtherVoicesArchivalUnit.java,v 1.8 2014-11-12 20:12:02 wkwilson Exp $
  */
 
 /*
@@ -165,8 +165,7 @@ public class TestOtherVoicesArchivalUnit extends LockssTestCase {
 
   private void shouldCacheTest(String url, boolean shouldCache,
 			       ArchivalUnit au, CachedUrlSet cus) {
-    UrlCacher uc = au.makeUrlCacher(url);
-    assertTrue(uc.shouldBeCached()==shouldCache);
+    assertTrue(au.shouldBeCached(url)==shouldCache);
   }
 
   public void testStartUrlConstruction() throws Exception {
@@ -174,7 +173,7 @@ public class TestOtherVoicesArchivalUnit extends LockssTestCase {
 
     String expectedStr = ROOT_URL+"lockss-volume2.html";
     DefinableArchivalUnit ovAu = makeAu(url, 2);
-    assertEquals(ListUtil.list(expectedStr), ovAu.getNewContentCrawlUrls());
+    assertEquals(ListUtil.list(expectedStr), ovAu.getStartUrls());
   }
 
   public void testGetUrlStems() throws Exception {

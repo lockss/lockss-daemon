@@ -1,5 +1,5 @@
 /*
- * $Id: LockssPermissionCheckerTestCase.java,v 1.1 2007-10-04 09:43:40 tlipkis Exp $
+ * $Id: LockssPermissionCheckerTestCase.java,v 1.2 2014-11-12 20:11:38 wkwilson Exp $
  */
 
 /*
@@ -36,11 +36,12 @@ import java.util.*;
 import org.lockss.state.*;
 import org.lockss.clockss.*;
 import org.lockss.test.*;
+import org.lockss.test.MockCrawler.MockCrawlerFacade;
 
 public class LockssPermissionCheckerTestCase extends LockssTestCase {
 
   protected MockArchivalUnit mau;
-  protected MockPermissionHelper pHelper;
+  protected MockCrawlerFacade mcf;
   protected MockAuState aus;
 
   public void setUp() throws Exception {
@@ -53,7 +54,7 @@ public class LockssPermissionCheckerTestCase extends LockssTestCase {
     MockNodeManager nm = new MockNodeManager();
     nm.setAuState(aus);
     daemon.setNodeManager(nm, mau);
-    pHelper = new MockPermissionHelper();
-    pHelper.setAu(mau);
+    mcf = new MockCrawler().new MockCrawlerFacade();
+    mcf.setAu(mau);
   }
 }

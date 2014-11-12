@@ -1,5 +1,5 @@
 /*
- * $Id: TestHindawiArticleIteratorFactory.java,v 1.2 2013-06-20 00:05:48 thib_gc Exp $
+ * $Id: TestHindawiArticleIteratorFactory.java,v 1.3 2014-11-12 20:11:54 wkwilson Exp $
  */
 
 /*
@@ -88,7 +88,7 @@ public class TestHindawiArticleIteratorFactory extends ArticleIteratorTestCase {
             case FLAG_FULL_TEXT_EPUB: url = String.format("%sjournals/%s/%s/%08d.epub", DOWNLOAD_URL, JOURNAL_ID, VOLUME_NAME, counter); break;
             default: fail(String.format("Internal error: counter=0x%x, flag=0x%x", counter, flag));
           }
-          au.makeUrlCacher(url).storeContent(new StringInputStream(url), new CIProperties());
+          au.makeUrlCacher(new UrlData(new StringInputStream(url), new CIProperties(), url)).storeContent();
         }
       }
     }

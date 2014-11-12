@@ -1,5 +1,5 @@
 /*
- * $Id: TestAmericanMathematicalSocietyPlugin.java,v 1.2 2014-05-14 22:50:34 etenbrink Exp $
+ * $Id: TestAmericanMathematicalSocietyPlugin.java,v 1.3 2014-11-12 20:12:01 wkwilson Exp $
  */
 
 /*
@@ -204,8 +204,7 @@ public class TestAmericanMathematicalSocietyPlugin extends LockssTestCase {
   
   private void shouldCacheTest(String url, boolean shouldCache, ArchivalUnit au) {
     log.info ("shouldCacheTest url: " + url);
-    UrlCacher uc = au.makeUrlCacher(url);
-    assertEquals(shouldCache, uc.shouldBeCached());
+    assertEquals(shouldCache, au.shouldBeCached(url));
   }
   
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestASCEArticleIteratorFactory.java,v 1.3 2014-08-29 17:22:37 alexandraohlson Exp $
+ * $Id: TestASCEArticleIteratorFactory.java,v 1.4 2014-11-12 20:11:58 wkwilson Exp $
  */
 
 /*
@@ -32,7 +32,9 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.atypon.americansocietyofcivilengineers;
 
+import java.io.InputStream;
 import java.util.regex.Pattern;
+
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.ConfigParamDescr;
@@ -44,12 +46,16 @@ import org.lockss.plugin.CachedUrlSetNode;
 import org.lockss.plugin.PluginTestUtil;
 import org.lockss.plugin.SubTreeArticleIterator;
 import org.lockss.plugin.UrlCacher;
+import org.lockss.plugin.UrlData;
 import org.lockss.plugin.simulated.SimulatedArchivalUnit;
 import org.lockss.plugin.simulated.SimulatedContentGenerator;
 import org.lockss.test.ArticleIteratorTestCase;
+import org.lockss.util.CIProperties;
 import org.lockss.util.ListUtil;
 import org.lockss.util.Logger;
+
 import java.util.Iterator;
+
 import org.lockss.util.Constants;
 
 /*
@@ -188,16 +194,24 @@ public class TestASCEArticleIteratorFactory extends ArticleIteratorTestCase {
     UrlCacher uc;
     for (String url : urls) {
       //log.info("url: " + url);
-      uc = au.makeUrlCacher(url);
+      InputStream input = null;
+      CIProperties props = null;
       if(url.contains("abs")){
-        uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
+        input = cuHtml.getUnfilteredInputStream();
+        props = cuHtml.getProperties();
       } else if (url.contains("full")) {
-        uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
+        input = cuHtml.getUnfilteredInputStream();
+        props = cuHtml.getProperties();
       } else if (url.contains("ref")) {
-        uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
+        input = cuHtml.getUnfilteredInputStream();
+        props = cuHtml.getProperties();
       } else if (url.contains("pdf")) {
-        uc.storeContent(cuPdf.getUnfilteredInputStream(), cuPdf.getProperties());
+        input = cuPdf.getUnfilteredInputStream();
+        props = cuPdf.getProperties();
       }
+      UrlData ud = new UrlData(input, props, url);
+      uc = au.makeUrlCacher(ud);
+      uc.storeContent();
     }
         
     // get article iterator, get article files and the appropriate urls according

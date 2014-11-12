@@ -28,8 +28,10 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.metapress;
 
+import java.io.InputStream;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.extractor.ArticleMetadataExtractor;
@@ -40,6 +42,7 @@ import org.lockss.plugin.simulated.SimulatedArchivalUnit;
 import org.lockss.plugin.simulated.SimulatedContentGenerator;
 import org.lockss.test.*;
 import org.lockss.util.*;
+
 import java.util.Iterator;
 
 public class TestMetaPressArticleIteratorFactory extends ArticleIteratorTestCase {
@@ -165,11 +168,12 @@ public class TestMetaPressArticleIteratorFactory extends ArticleIteratorTestCase
     UrlCacher uc;
     for (String url : urls) {
       //log.info("url: " + url);
-      uc = au.makeUrlCacher(url);
       if (url.contains("full")) {
-        uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
+        storeContent(cuHtml.getUnfilteredInputStream(),
+            cuHtml.getProperties(), url);
       } else if (url.contains("pdf")) {
-        uc.storeContent(cuPdf.getUnfilteredInputStream(), cuPdf.getProperties());
+        storeContent(cuPdf.getUnfilteredInputStream(),
+            cuPdf.getProperties(), url);
       }
     }
  

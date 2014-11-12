@@ -164,8 +164,8 @@ public class TestMassachusettsMedicalSocietyPlugin extends LockssPluginTestCase 
 
 	  private void assertShouldCache(String url, boolean shouldCache,
 				       ArchivalUnit au, CachedUrlSet cus) {
-	    UrlCacher uc = au.makeUrlCacher(url);
-	    assertEquals("AU crawl rules applied incorrectly to " + url + " ", shouldCache, uc.shouldBeCached());
+	    assertEquals("AU crawl rules applied incorrectly to " + url + " ",
+	        shouldCache, au.shouldBeCached(url));
 	  }
 
   public void testSubstancePatterns() throws Exception {
@@ -183,7 +183,7 @@ public class TestMassachusettsMedicalSocietyPlugin extends LockssPluginTestCase 
 	  public void testStartUrlConstruction() throws Exception {
 	    String expectedStartUrl = BASE_URL + "lockss/" + JOURNAL_ID + "/" + VOLUME_NAME + "/index.html";
 	    ArchivalUnit au = createAu();
-	    assertEquals(ListUtil.list(expectedStartUrl), au.getNewContentCrawlUrls());
+	    assertEquals(ListUtil.list(expectedStartUrl), au.getStartUrls());
 	  }
 
 	  public void testGetUrlStems() throws Exception {

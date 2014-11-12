@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.106 2013-03-19 04:26:14 tlipkis Exp $
+ * $Id: MockArchivalUnit.java,v 1.107 2014-11-12 20:11:43 wkwilson Exp $
  */
 
 /*
@@ -34,15 +34,17 @@ package org.lockss.test;
 
 import java.io.*;
 import java.util.*;
-import org.apache.oro.text.regex.*;
 
+import org.apache.oro.text.regex.*;
 import org.lockss.app.*;
 import org.lockss.daemon.*;
 import org.lockss.config.*;
 import org.lockss.crawler.*;
+import org.lockss.test.MockCrawler.MockCrawlerFacade;
 import org.lockss.util.*;
 import org.lockss.state.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.base.SimpleUrlConsumerFactory;
 import org.lockss.rewriter.*;
 import org.lockss.extractor.*;
 
@@ -51,31 +53,33 @@ import org.lockss.extractor.*;
  */
 public class MockArchivalUnit implements ArchivalUnit {
   private Configuration config = ConfigManager.EMPTY_CONFIGURATION;
-  private CrawlSpec spec;
+  private CrawlRule rule;
   private String pluginId = "mock";
   private TitleConfig tc = null;
   private String auId = null;
   private String defaultAUId = StringUtil.gensym("MockAU_");
   private CachedUrlSet cus = null;
-  private List newContentUrls = null;
   private List<Pattern> excludeUrlFromPollPatterns = null;
   private List<Pattern> nonSubstanceUrlPatterns = null;
   private List<Pattern> substanceUrlPatterns = null;
   private SubstancePredicate substancePred = null;
-
+  private CrawlWindow window;
+  private int refetchDepth = 1;
+  
   private boolean shouldCrawlForNewContent = true;
   private boolean shouldCallTopLevelPoll = true;
   private static Logger log = Logger.getLogger("MockArchivalUnit");
-  private List permissionPages;
   private Map<String,String> urlNormalizeMap;
 
   private HashSet urlsToCache = new HashSet();
 
   private Plugin plugin = new MockPlugin();
   private String name = "MockAU";
+  private String cookiePolicy = null;
   private Hashtable ucHash = new Hashtable();
   private Hashtable cuHash = new Hashtable();
-
+  private Hashtable ufHash = new Hashtable();
+  
   private FilterRule filterRule = null;
   private FilterFactory hashFilterFactory = null;
   private FilterFactory crawlFilterFactory = null;
@@ -92,7 +96,11 @@ public class MockArchivalUnit implements ArchivalUnit {
   private RateLimiterInfo rateInfo = new RateLimiterInfo("foo", "unlimited");
   private List<String> cookies = new ArrayList<String>();
   private List<String> requestHeaders = new ArrayList<String>();
-
+  private Collection<String> startUrls;
+  private Collection<String> permUrls;
+  private LoginPageChecker loginPageChecker;
+  private boolean shouldRefetchOnCookies = true;
+  
   private String perHostPermissionPath;
   private Comparator<CrawlUrl> crawlUrlCmp;
 
@@ -129,16 +137,16 @@ public class MockArchivalUnit implements ArchivalUnit {
     this.auId = auId;
   }
 
-  public MockArchivalUnit(CrawlSpec spec) {
-    this.spec = spec;
+  public MockArchivalUnit(CrawlRule rule) {
+    this.rule = rule;
   }
 
-  public CrawlSpec getCrawlSpec() {
-    return spec;
+  public CrawlRule getCrawlRule() {
+    return rule;
   }
 
-  public void setCrawlSpec(CrawlSpec spec) {
-    this.spec = spec;
+  public void setCrawlRule(CrawlRule rule) {
+    this.rule = rule;
   }
 
   public Collection getUrlStems() {
@@ -162,10 +170,6 @@ public class MockArchivalUnit implements ArchivalUnit {
 
   public void setAuCachedUrlSet(CachedUrlSet cus) {
     this.cus = cus;
-  }
-
-  public List getNewContentCrawlUrls() {
-    return newContentUrls;
   }
 
   public List<Pattern> makeExcludeUrlsFromPollsPatterns()
@@ -211,10 +215,6 @@ public class MockArchivalUnit implements ArchivalUnit {
 
   public void setTitleConfig(TitleConfig tc) {
     this.tc = tc;
-  }
-
-  public void setNewContentCrawlUrls(List urls) {
-    newContentUrls = urls;
   }
 
   public void setConfiguration(Configuration config)
@@ -273,10 +273,10 @@ public class MockArchivalUnit implements ArchivalUnit {
     return cu;
   }
 
- public UrlCacher makeUrlCacher(String url) {
+ public UrlCacher makeUrlCacher(UrlData ud) {
     UrlCacher uc = null;
     if (ucHash != null) {
-      uc = (UrlCacher)ucHash.get(url);
+      uc = (UrlCacher)ucHash.get(ud.url);
       // MockUrlCacher checks that getUncachedInputStream() isn't called
       // more than once.  But we return the same UrlCacher multiple times
       // here, so make it ok to call getUncachedInputStream() again.  The
@@ -289,6 +289,25 @@ public class MockArchivalUnit implements ArchivalUnit {
     }
     return uc;
   }
+ 
+ public UrlFetcher makeUrlFetcher(Crawler.CrawlerFacade cf, String url) {
+   UrlFetcher uf = null;
+   if (ufHash != null) {
+     uf = (UrlFetcher)ufHash.get(url);
+     // MockUrlFetcher checks that getUncachedInputStream() isn't called
+     // more than once.  But we return the same UrlFetcher multiple times
+     // here, so make it ok to call getUncachedInputStream() again.  The
+     // semantics of makeUrlFetcher() is that it makes a new one each
+     // time.)
+     ((MockUrlFetcher)uf).setNotExecuted();
+     logger.debug(uf+" came from ufHash");
+     uf.setUrlConsumerFactory(new SimpleUrlConsumerFactory());
+     uf.setFetchFlags(new BitSet());
+   } else {
+     logger.debug("ufHash is null, so makeUrlFetcher is returning null");
+   }
+   return uf;
+ }
 
   /**
    * @deprecated
@@ -301,8 +320,13 @@ public class MockArchivalUnit implements ArchivalUnit {
   }
 
 
-  protected MockUrlCacher makeMockUrlCacher(String url) {
-    return new MockUrlCacher(url, this);
+  protected MockUrlCacher makeMockUrlCacher(UrlData ud) {
+    return new MockUrlCacher(this, ud);
+  }
+  
+  protected MockUrlFetcher makeMockUrlFetcher(MockCrawlerFacade mcf, 
+      String url) {
+    return new MockUrlFetcher(mcf, url);
   }
 
   /**
@@ -314,8 +338,21 @@ public class MockArchivalUnit implements ArchivalUnit {
    * @return MockArchivalUnit with urls in rootUrls in its list
    */
   public static MockArchivalUnit createFromListOfRootUrls(String[] rootUrls){
-    CrawlSpec rootSpec = new SpiderCrawlSpec(ListUtil.fromArray(rootUrls), null);
-    return new MockArchivalUnit(rootSpec);
+    MockArchivalUnit au = new MockArchivalUnit();
+    au.setStartUrls(ListUtil.fromArray(rootUrls));
+    return au;
+  }
+
+  public void setStartUrls(Collection<String> startUrls) {
+    this.startUrls = startUrls;
+  }
+  
+  public void setPermissionUrls(Collection<String> urls) {
+    this.permUrls = urls;
+  }
+  
+  public void setRefetchDepth(int refetchDepth) {
+    this.refetchDepth = refetchDepth;
   }
 
   /**
@@ -368,7 +405,7 @@ public class MockArchivalUnit implements ArchivalUnit {
     return addUrl(url, exists, shouldCache, props);
   }
 
-  /* allow setting the  content-type /Mime type to any strin-value while adding URL */
+  /* allow setting the  content-type /Mime type to any string-value while adding URL */
   public MockCachedUrl addUrlContype(String url, boolean exists, 
                                      boolean shouldCache, String contentType) {
     MockCachedUrl cu = addUrl(url,  exists, shouldCache);
@@ -386,8 +423,9 @@ public class MockArchivalUnit implements ArchivalUnit {
     MockCachedUrl cu = new MockCachedUrl(url, this);
     cu.setProperties(props);
     cu.setExists(exists);
-
-    MockUrlCacher uc = makeMockUrlCacher(url);
+    MockCrawlerFacade mcf = new MockCrawler().new MockCrawlerFacade(this);
+    MockUrlCacher uc = makeMockUrlCacher(new UrlData(null, props, url));
+    MockUrlFetcher uf = makeMockUrlFetcher(mcf, url);
     uc.setShouldBeCached(shouldCache);
     if (shouldCache) {
       addUrlToBeCached(url);
@@ -396,14 +434,17 @@ public class MockArchivalUnit implements ArchivalUnit {
     if (cacheException != null) {
       if (cacheException instanceof IOException) {
         uc.setCachingException((IOException)cacheException, timesToThrow);
+        uf.setCachingException((IOException)cacheException, timesToThrow);
       } else if (cacheException instanceof RuntimeException) {
         uc.setCachingException((RuntimeException)cacheException, timesToThrow);
+        uf.setCachingException((RuntimeException)cacheException, timesToThrow);
       }
     }
     logger.debug2(this + "Adding "+url+" to cuHash and ucHash");
 
     cuHash.put(url, cu);
     ucHash.put(url, uc);
+    ufHash.put(url, uf);
     return cu;
   }
  
@@ -659,6 +700,80 @@ public class MockArchivalUnit implements ArchivalUnit {
     sb.append(getAuId());
     sb.append("]");
     return sb.toString();
+  }
+
+  @Override
+  public CrawlSeed makeCrawlSeed() {
+    return new BaseCrawlSeed(this);
+  }
+
+  @Override
+  public boolean inCrawlWindow() {
+    return (window == null) ? true : window.canCrawl();
+  }
+
+  @Override
+  public List<PermissionChecker> makePermissionCheckers() {
+    return null;
+  }
+
+  @Override
+  public Collection<String> getStartUrls() {
+    return startUrls;
+  }
+
+  @Override
+  public Collection<String> getPermissionUrls() {
+    if(permUrls != null) {
+      return permUrls;
+    }
+    return startUrls;
+  }
+
+  @Override
+  public int getRefetchDepth() {
+    return refetchDepth;
+  }
+
+  public void setLoginPageChecker(LoginPageChecker lpc) {
+    loginPageChecker = lpc;
+  }
+  
+  @Override
+  public LoginPageChecker getLoginPageChecker() {
+    return loginPageChecker;
+  }
+  
+  public void setCookiePolicy(String cp) {
+    cookiePolicy = cp;
+  }
+
+  @Override
+  public String getCookiePolicy() {
+    return cookiePolicy;
+  }
+  
+  public void setShouldRefetchOnCookies(boolean sroc) {
+    shouldRefetchOnCookies = sroc;
+  }
+
+  @Override
+  public boolean shouldRefetchOnCookies() {
+    return shouldRefetchOnCookies;
+  }
+
+  @Override
+  public CrawlWindow getCrawlWindow() {
+    return window;
+  }
+
+  public void setCrawlWindow(CrawlWindow window) {
+    this.window = window;
+  }
+
+  @Override
+  public UrlConsumerFactory getUrlConsumerFactory() {
+    return new SimpleUrlConsumerFactory();
   }
 
 }

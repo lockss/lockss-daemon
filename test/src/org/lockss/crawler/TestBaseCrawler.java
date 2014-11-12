@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCrawler.java,v 1.22 2014-07-11 23:32:59 tlipkis Exp $
+ * $Id: TestBaseCrawler.java,v 1.23 2014-11-12 20:11:27 wkwilson Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.net.*;
 
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
+import org.lockss.daemon.LockssPermissionCheckerTestCase;
 import org.lockss.config.*;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;
@@ -46,6 +47,7 @@ import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.clockss.*;
 import org.lockss.test.*;
+import org.lockss.test.MockCrawler.MockCrawlerFacade;
 import org.lockss.crawler.BaseCrawler.StorePermissionScheme;
 
 /**
@@ -66,8 +68,6 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
 //   private Crawler crawler = null;
   private TestableBaseCrawler crawler = null;
 
-  private CrawlSpec spec = null;
-
   public static final String EMPTY_PAGE = "";
   public static final String LINKLESS_PAGE = "Nothing here";
 
@@ -85,7 +85,9 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
   private MockCachedUrlSet cus;
   private String permissionPage = "http://example.com/permission.html";
   private String permissionPage2 = "http://example.com/permission2.html";
-
+  private MockCrawlerFacade mcf;
+  private MockNodeManager nodeMgr;
+  
   public static Class testedClasses[] = {
     org.lockss.crawler.BaseCrawler.class
   };
@@ -100,9 +102,9 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
     crawlMgr.initService(theDaemon);
 
     theDaemon.getAlertManager();
-
+    
     mau = new MockArchivalUnit();
-    mau.setPlugin(new MockPlugin(getMockLockssDaemon()));
+    mau.setPlugin(new MockPlugin(theDaemon));
 
     startUrls = ListUtil.list(startUrl);
     cus = new MyMockCachedUrlSet(mau, null);
@@ -110,46 +112,34 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
     crawlRule = new MockCrawlRule();
     crawlRule.addUrlToCrawl(startUrl);
     crawlRule.addUrlToCrawl(permissionPage);
+    mau.setStartUrls(startUrls);
+    mau.setPermissionUrls(ListUtil.list(permissionPage));
+    mau.setCrawlRule(crawlRule);
 
-    spec = new SpiderCrawlSpec(startUrls, ListUtil.list(permissionPage),
-			       crawlRule, 1);
-    mau.setCrawlSpec(spec);
-
-    crawler = new TestableBaseCrawler(mau, spec, aus);
+    crawler = new TestableBaseCrawler(mau, aus);
+    mcf = new MockCrawler().new MockCrawlerFacade(mau);
     List checkers = ListUtil.list(new MyMockPermissionChecker(true));
-    setDaemonPermissionCheckers(checkers);
+    crawler.setDaemonPermissionCheckers(checkers);
 
     mau.setLinkExtractor("text/html", extractor);
     mau.addUrl(startUrl);
     mau.addUrl(permissionPage);
     Properties p = new Properties();
-    p.setProperty(NewContentCrawler.PARAM_DEFAULT_RETRY_DELAY, "0");
+    p.setProperty(BaseCrawler.PARAM_DEFAULT_RETRY_DELAY, "0");
     ConfigurationUtil.setCurrentConfigFromProps(p);
-  }
-
-  void setDaemonPermissionCheckers(List lst) {
-    ((BaseCrawler)crawler).daemonPermissionCheckers = lst;
   }
 
   public void testConstructorNullAu() {
     try {
-      new TestableBaseCrawler(null, spec, aus);
+      new TestableBaseCrawler(null, aus);
       fail("Trying to create a BaseCrawler with a null au should throw");
-    } catch (IllegalArgumentException e) {
-    }
-  }
-
-  public void testConstructorNullSpec() {
-    try {
-      new TestableBaseCrawler(mau, null, aus);
-      fail("Trying to create a BaseCrawler with a null spec should throw");
     } catch (IllegalArgumentException e) {
     }
   }
 
   public void testConstructorNullAuState() {
     try {
-      new TestableBaseCrawler(mau, spec, null);
+      new TestableBaseCrawler(mau, null);
       fail("Trying to create a BaseCrawler with a null aus should throw");
     } catch (IllegalArgumentException e) {
     }
@@ -174,21 +164,21 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
   }
 
   public void testDoCrawlSignalsEndOfCrawl() {
-    TestableBaseCrawler crawler = new TestableBaseCrawler(mau, spec, aus);
+    TestableBaseCrawler crawler = new TestableBaseCrawler(mau, aus);
     crawler.doCrawl();
-    MockCrawlStatus status = (MockCrawlStatus)crawler.getStatus();
+    MockCrawlStatus status = (MockCrawlStatus)crawler.getCrawlerStatus();
     assertTrue(status.crawlEndSignaled());
   }
 
   public void testDoCrawlSignalsEndOfCrawlExceptionThrown() {
-    TestableBaseCrawler crawler = new TestableBaseCrawler(mau, spec, aus);
+    TestableBaseCrawler crawler = new TestableBaseCrawler(mau, aus);
     crawler.setDoCrawlThrowException(new ExpectedRuntimeException("Blah"));
     try {
       crawler.doCrawl();
     } catch (RuntimeException e) {
       //don't do anything with it, since we're causing it to be thrown
     }
-    MockCrawlStatus status = (MockCrawlStatus)crawler.getStatus();
+    MockCrawlStatus status = (MockCrawlStatus)crawler.getCrawlerStatus();
     assertTrue(status.crawlEndSignaled());
   }
 
@@ -201,7 +191,7 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
   public void testWholeCrawlUpdatesLastCrawlTime() {
     setupAuState();
     long lastCrawlTime = aus.getLastCrawlTime();
-    TestableBaseCrawler crawler = new TestableBaseCrawler(mau, spec, aus);
+    TestableBaseCrawler crawler = new TestableBaseCrawler(mau, aus);
     crawler.setWholeAu(true);
     crawler.doCrawl();
     assertNotEquals(lastCrawlTime, aus.getLastCrawlTime());
@@ -210,7 +200,7 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
   public void testPartialCrawlDoesntUpdateLastCrawlTime() {
     setupAuState();
     long lastCrawlTime = aus.getLastCrawlTime();
-    TestableBaseCrawler crawler = new TestableBaseCrawler(mau, spec, aus);
+    TestableBaseCrawler crawler = new TestableBaseCrawler(mau, aus);
     crawler.setWholeAu(false);
     crawler.doCrawl();
     assertEquals(lastCrawlTime, aus.getLastCrawlTime());
@@ -219,7 +209,7 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
   public void testFailedCrawlDoesntUpdateLastCrawlTime() {
     setupAuState();
     long lastCrawlTime = aus.getLastCrawlTime();
-    TestableBaseCrawler crawler = new TestableBaseCrawler(mau, spec, aus);
+    TestableBaseCrawler crawler = new TestableBaseCrawler(mau, aus);
     crawler.setWholeAu(true);
     crawler.setResult(false);
     crawler.doCrawl();
@@ -229,7 +219,7 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
   public void testThrowingCrawlDoesntUpdateLastCrawlTime() {
     setupAuState();
     long lastCrawlTime = aus.getLastCrawlTime();
-    TestableBaseCrawler crawler = new TestableBaseCrawler(mau, spec, aus);
+    TestableBaseCrawler crawler = new TestableBaseCrawler(mau, aus);
     crawler.setWholeAu(true);
     crawler.setDoCrawlThrowException(new ExpectedRuntimeException("Blah"));
     try {
@@ -243,7 +233,7 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
   public void testWholeCrawlUpdatesLastCrawlAttempt() {
     setupAuState();
     long lastCrawlAttempt = aus.getLastCrawlAttempt();
-    TestableBaseCrawler crawler = new TestableBaseCrawler(mau, spec, aus);
+    TestableBaseCrawler crawler = new TestableBaseCrawler(mau, aus);
     crawler.setWholeAu(true);
     crawler.doCrawl();
     assertNotEquals(lastCrawlAttempt, aus.getLastCrawlAttempt());
@@ -252,7 +242,7 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
   public void testPartialCrawlDoesntUpdateLastCrawlAttempt() {
     setupAuState();
     long lastCrawlAttempt = aus.getLastCrawlAttempt();
-    TestableBaseCrawler crawler = new TestableBaseCrawler(mau, spec, aus);
+    TestableBaseCrawler crawler = new TestableBaseCrawler(mau, aus);
     crawler.setWholeAu(false);
     crawler.doCrawl();
     assertEquals(lastCrawlAttempt, aus.getLastCrawlAttempt());
@@ -261,7 +251,7 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
   public void testFailedCrawlUpdatesLastCrawlAttempt() {
     setupAuState();
     long lastCrawlAttempt = aus.getLastCrawlAttempt();
-    TestableBaseCrawler crawler = new TestableBaseCrawler(mau, spec, aus);
+    TestableBaseCrawler crawler = new TestableBaseCrawler(mau, aus);
     crawler.setWholeAu(true);
     crawler.setResult(false);
     crawler.doCrawl();
@@ -271,7 +261,7 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
   public void testThrowingCrawlUpdatesLastCrawlAttempt() {
     setupAuState();
     long lastCrawlAttempt = aus.getLastCrawlAttempt();
-    TestableBaseCrawler crawler = new TestableBaseCrawler(mau, spec, aus);
+    TestableBaseCrawler crawler = new TestableBaseCrawler(mau, aus);
     crawler.setWholeAu(true);
     crawler.setDoCrawlThrowException(new ExpectedRuntimeException("Blah"));
     try {
@@ -288,21 +278,17 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
    */
   public void testSetWatchDog() {
     LockssWatchdog wdog = new MockLockssWatchdog();
-    TestableBaseCrawler crawler = new TestableBaseCrawler(mau, spec, aus);
+    TestableBaseCrawler crawler = new TestableBaseCrawler(mau, aus);
     crawler.setWatchdog(wdog);
     assertSame(wdog, crawler.wdog);
   }
 
   public void testMakeUrlCacher() {
     crawler.setCrawlConfig(ConfigManager.getCurrentConfig());
-    UrlCacher uc = crawler.makeUrlCacher(startUrl);
+    UrlCacher uc = crawler.makeUrlCacher(new UrlData(null, null, startUrl));
     assertNotNull(uc);
-    assertFalse("UrlCacher shouldn't be a ClockssUrlCacher",
-		uc instanceof ClockssUrlCacher);
     MockUrlCacher muc = (MockUrlCacher)uc;
-    assertSame(crawler, muc.getPermissionMapSource());
-    assertNull(muc.getLocalAddress());
-    assertNotNull(muc.getCrawlRateLimiter());
+    assertSame(crawler.getAu(), muc.getArchivalUnit());
   }
 
   StorePermissionScheme getConfigPermissionScheme() {
@@ -313,67 +299,51 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
 		     BaseCrawler.DEFAULT_STORE_PERMISSION_SCHEME);
   }
 
-  public void testMakePermissionUrlCacherLegacy() {
+  public void testMakePermissionUrlFetcherLegacy() {
     assertEquals(StorePermissionScheme.Legacy, getConfigPermissionScheme());
+    crawlMgr.newCrawlRateLimiter(mau);
     crawler.setCrawlConfig(ConfigManager.getCurrentConfig());
-    UrlCacher uc = crawler.makePermissionUrlCacher(startUrl);
-    assertNotNull(uc);
-    assertFalse("UrlCacher shouldn't be a ClockssUrlCacher",
-		uc instanceof ClockssUrlCacher);
-    MockUrlCacher muc = (MockUrlCacher)uc;
-    assertSame(crawler, muc.getPermissionMapSource());
-    assertNull(muc.getLocalAddress());
-    assertNotNull(muc.getCrawlRateLimiter());
-    assertEquals(UrlCacher.REDIRECT_SCHEME_FOLLOW_ON_HOST,
-		 muc.getRedirectScheme());
+    UrlFetcher uf = crawler.makePermissionUrlFetcher(startUrl);
+    assertNotNull(uf);
+    assertFalse("UrlFetcher shouldn't be a ClockssUrlFetcher",
+		uf instanceof ClockssUrlFetcher);
+    MockUrlFetcher muf = (MockUrlFetcher)uf;
+    assertSame(crawler.getAu(), muf.getArchivalUnit());
+    assertNull(muf.getLocalAddress());
+    assertNotNull(muf.getCrawlRateLimiter());
+    assertEquals(UrlFetcher.REDIRECT_SCHEME_FOLLOW_ON_HOST,
+		 muf.getRedirectScheme());
   }
 
-  public void testMakePermissionUrlCacherStoreAllInSpec() {
-    ConfigurationUtil.addFromArgs(BaseCrawler.PARAM_STORE_PERMISSION_SCHEME,
-				  StorePermissionScheme.StoreAllInSpec.toString());
-    crawler.setCrawlConfig(ConfigManager.getCurrentConfig());
-    UrlCacher uc = crawler.makePermissionUrlCacher(startUrl);
-    assertNotNull(uc);
-    assertFalse("UrlCacher shouldn't be a ClockssUrlCacher",
-		uc instanceof ClockssUrlCacher);
-    MockUrlCacher muc = (MockUrlCacher)uc;
-    assertSame(crawler, muc.getPermissionMapSource());
-    assertNull(muc.getLocalAddress());
-    assertNotNull(muc.getCrawlRateLimiter());
-    assertEquals(UrlCacher.REDIRECT_SCHEME_STORE_ALL_IN_SPEC,
-		 muc.getRedirectScheme());
-  }
-
-  public void testMakeUrlCacherCrawlFromAddr() {
+  public void testMakeUrlFetcherCrawlFromAddr() {
     ConfigurationUtil.addFromArgs(BaseCrawler.PARAM_CRAWL_FROM_ADDR,
 				  "127.3.1.4");
     crawler.setCrawlConfig(ConfigManager.getCurrentConfig());
-    UrlCacher uc = crawler.makeUrlCacher(startUrl);
-    assertNotNull(uc);
-    assertFalse("UrlCacher shouldn't be a ClockssUrlCacher",
-		uc instanceof ClockssUrlCacher);
-    MockUrlCacher muc = (MockUrlCacher)uc;
-    assertSame(crawler, muc.getPermissionMapSource());
-    assertEquals("127.3.1.4", muc.getLocalAddress().getHostAddress());
+    UrlFetcher uf = crawler.makeUrlFetcher(startUrl);
+    assertNotNull(uf);
+    assertFalse("UrlFetcher shouldn't be a ClockssUrlFetcher",
+		uf instanceof ClockssUrlFetcher);
+    MockUrlFetcher muf = (MockUrlFetcher)uf;
+    assertSame(crawler.getAu(), muf.getArchivalUnit());
+    assertEquals("127.3.1.4", muf.getLocalAddress().getHostAddress());
   }
 
-  public void testMakeUrlCacherCrawlFromLocalAddr() {
+  public void testMakeUrlFetcherCrawlFromLocalAddr() {
     ConfigurationUtil.addFromArgs(BaseCrawler.PARAM_CRAWL_FROM_LOCAL_ADDR,
 				  "true",
 				  IdentityManager.PARAM_LOCAL_IP,
 				  "127.1.2.3");
 
     crawler.setCrawlConfig(ConfigManager.getCurrentConfig());
-    UrlCacher uc = crawler.makeUrlCacher(startUrl);
-    assertNotNull(uc);
-    assertFalse("UrlCacher shouldn't be a ClockssUrlCacher",
-		uc instanceof ClockssUrlCacher);
-    MockUrlCacher muc = (MockUrlCacher)uc;
-    assertSame(crawler, muc.getPermissionMapSource());
-    assertEquals("127.1.2.3", muc.getLocalAddress().getHostAddress());
+    UrlFetcher uf = crawler.makeUrlFetcher(startUrl);
+    assertNotNull(uf);
+    assertFalse("UrlFetcher shouldn't be a ClockssUrlFetcher",
+		uf instanceof ClockssUrlFetcher);
+    MockUrlFetcher muf = (MockUrlFetcher)uf;
+    assertEquals("127.1.2.3", muf.getLocalAddress().getHostAddress());
   }
 
-  public void testMakeUrlCacherCrawlFromAddrPrecedence() {
+  public void testMakeUrlFetcherCrawlFromAddrPrecedence() {
     ConfigurationUtil.addFromArgs(BaseCrawler.PARAM_CRAWL_FROM_ADDR,
 				  "127.3.1.4",
 				  BaseCrawler.PARAM_CRAWL_FROM_LOCAL_ADDR,
@@ -382,72 +352,72 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
 				  "127.1.2.3");
 
     crawler.setCrawlConfig(ConfigManager.getCurrentConfig());
-    UrlCacher uc = crawler.makeUrlCacher(startUrl);
-    assertNotNull(uc);
-    assertFalse("UrlCacher shouldn't be a ClockssUrlCacher",
-		uc instanceof ClockssUrlCacher);
-    MockUrlCacher muc = (MockUrlCacher)uc;
-    assertSame(crawler, muc.getPermissionMapSource());
-    assertNull(muc.getPreviousContentType());
-    assertEquals("127.3.1.4", muc.getLocalAddress().getHostAddress());
+    UrlFetcher uf = crawler.makeUrlFetcher(startUrl);
+    assertNotNull(uf);
+    assertFalse("UrlFetcher shouldn't be a ClockssUrlFetcher",
+		uf instanceof ClockssUrlFetcher);
+    MockUrlFetcher muf = (MockUrlFetcher)uf;
+    assertNull(muf.getPreviousContentType());
+    assertEquals("127.3.1.4", muf.getLocalAddress().getHostAddress());
   }
 
-  public void testMakeUrlCacherClockss() {
+  public void testMakeUrlFetcherClockss() {
     ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_PROJECT,
 				  "clockss");
     crawler.setCrawlConfig(ConfigManager.getCurrentConfig());
-    UrlCacher uc = crawler.makeUrlCacher(startUrl);
-    assertNotNull(uc);
-    assertTrue("UrlCacher should be a ClockssUrlCacher",
-	       uc instanceof ClockssUrlCacher);
+    UrlFetcher uf = crawler.makeUrlFetcher(startUrl);
+    assertNotNull(uf);
+    assertTrue("UrlFetcher should be a ClockssUrlFetcher",
+	       uf instanceof ClockssUrlFetcher);
   }
 
-  public void testMakeUrlCacherWithMimeType() {
+  public void testMakeUrlFetcherWithMimeType() {
     crawler.previousContentType = "app/foo";
-    UrlCacher uc = crawler.makeUrlCacher(startUrl);
-    assertNotNull(uc);
-    assertFalse("UrlCacher shouldn't be a ClockssUrlCacher",
-		uc instanceof ClockssUrlCacher);
-    MockUrlCacher muc = (MockUrlCacher)uc;
-    assertSame(crawler, muc.getPermissionMapSource());
-    assertEquals("app/foo", muc.getPreviousContentType());
-
-    UrlCacher uc2 = crawler.makeUrlCacher(permissionPage);
-    assertEquals("app/foo", ((MockUrlCacher)uc2).getPreviousContentType());
+    UrlFetcher uf = crawler.makeUrlFetcher(startUrl);
+    assertNotNull(uf);
+    assertFalse("UrlFetcher shouldn't be a ClockssUrlFetcher",
+		uf instanceof ClockssUrlFetcher);
+    MockUrlFetcher muf = (MockUrlFetcher)uf;
+    assertEquals("app/foo", muf.getPreviousContentType());
+    UrlFetcher uf2 = crawler.makeUrlFetcher(permissionPage);
+    assertEquals("app/foo", ((MockUrlFetcher)uf2).getPreviousContentType());
   }
 
-  public void testGetPermissionMap() throws MalformedURLException {
-    Set cachedUrls = cus.getCachedUrls();
-    assertSameElements(ListUtil.list(), cachedUrls);
-
-    PermissionMap pMap = crawler.getPermissionMap();
-    assertNotNull(pMap);
-    assertEquals(PermissionRecord.PERMISSION_OK,
-		 pMap.getStatus("http://example.com/blah.html"));
-
-    //verify that it fetched the permission page
-    cachedUrls = cus.getCachedUrls();
-    assertSameElements(ListUtil.list(permissionPage), cachedUrls);
-  }
+//  public void testGetPermissionMap() throws MalformedURLException {
+//    Set cachedUrls = cus.getCachedUrls();
+//    assertSameElements(ListUtil.list(), cachedUrls);
+//
+//    PermissionMap pMap = crawler.getPermissionMap();
+//    assertNotNull(pMap);
+//    assertEquals(PermissionRecord.PERMISSION_OK,
+//		 pMap.getStatus("http://example.com/blah.html"));
+//
+//    //verify that it fetched the permission page
+//    cachedUrls = cus.getCachedUrls();
+//    assertSameElements(ListUtil.list(permissionPage), cachedUrls);
+//  }
 
   private boolean hasPermission(String page) throws IOException {
     return MiscTestUtil.hasPermission(crawler.getDaemonPermissionCheckers(),
-				      page, pHelper);
+				      page, mcf);
   }
 
   public void testGetDaemonPermissionCheckers() throws IOException {
-    setDaemonPermissionCheckers(null);
-
+    nodeMgr = new MockNodeManager();
+    nodeMgr.setAuState(aus);
+    theDaemon.setNodeManager(new MockNodeManager(), mau);
+    
+    crawler.setDaemonPermissionCheckers(null);
     assertTrue(hasPermission(LockssPermission.LOCKSS_PERMISSION_STRING));
     assertFalse(hasPermission(ClockssPermission.CLOCKSS_PERMISSION_STRING));
     ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_PROJECT,
 				  "clockss");
-    setDaemonPermissionCheckers(null);
+    crawler.setDaemonPermissionCheckers(null);
     assertFalse(hasPermission(LockssPermission.LOCKSS_PERMISSION_STRING));
     assertTrue(hasPermission(ClockssPermission.CLOCKSS_PERMISSION_STRING));
     ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_PROJECT,
 				  "lockss");
-    setDaemonPermissionCheckers(null);
+    crawler.setDaemonPermissionCheckers(null);
     assertTrue(hasPermission(LockssPermission.LOCKSS_PERMISSION_STRING));
     assertFalse(hasPermission(ClockssPermission.CLOCKSS_PERMISSION_STRING));
   }
@@ -634,7 +604,7 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
 
 
   public void testGetStatusCrawlNotStarted() {
-    CrawlerStatus crawlStatus = crawler.getStatus();
+    CrawlerStatus crawlStatus = crawler.getCrawlerStatus();
     assertEquals(-1, crawlStatus.getStartTime());
     assertEquals(-1, crawlStatus.getEndTime());
     assertEquals(0, crawlStatus.getNumFetched());
@@ -659,7 +629,7 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
     long expectedStart = TimeBase.nowMs();
     crawler.doCrawl();
     long expectedEnd = TimeBase.nowMs();
-    CrawlerStatus crawlStatus = crawler.getStatus();
+    CrawlerStatus crawlStatus = crawler.getCrawlerStatus();
     assertEquals(expectedStart, crawlStatus.getStartTime());
     assertEquals(expectedEnd, crawlStatus.getEndTime());
 //     assertEquals(5, crawlStatus.getNumFetched());
@@ -765,7 +735,7 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
      * @param reader Reader
      * @return boolean
      */
-    public boolean checkPermission(Crawler.PermissionHelper pHelper,
+    public boolean checkPermission(Crawler.CrawlerFacade crawlFacade,
 				   Reader reader, String permissionUrl) {
       return permission;
     }
@@ -810,22 +780,18 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
     }
     protected MockUrlCacher makeMockUrlCacher(String url,
 					      MockArchivalUnit parent) {
-      return new MockUrlCacherThatStepsTimebase(url, parent);
+      return new MockUrlCacherThatStepsTimebase(parent, new UrlData(null, null, url));
     }
 
   }
 
   private class MockUrlCacherThatStepsTimebase extends MockUrlCacher {
-    public MockUrlCacherThatStepsTimebase(String url, MockArchivalUnit au) {
-      super(url, au);
+    public MockUrlCacherThatStepsTimebase(MockArchivalUnit au, UrlData ud) {
+      super(au, ud);
     }
-    public int cache() throws IOException {
+    public void storeContent() throws IOException {
       TimeBase.step();
-      return super.cache();
-    }
-
-    public InputStream getUncachedInputStream() {
-      return new StringInputStream("");
+      super.storeContent();
     }
   }
 
@@ -833,10 +799,10 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
     RuntimeException crawlExceptionToThrow = null;
     boolean isWholeAU = false;
     boolean result = true;
+    List<PermissionChecker> daemonPermissionCheckers;
 
-    protected TestableBaseCrawler(ArchivalUnit au,
-				  CrawlSpec spec, AuState aus) {
-      super(au, spec, aus);
+    protected TestableBaseCrawler(ArchivalUnit au, AuState aus) {
+      super(au, aus);
       crawlStatus = new MockCrawlStatus();
       setCrawlManager(TestBaseCrawler.this.crawlMgr);
     }
@@ -866,6 +832,17 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
 
     public void setResult(boolean val) {
       result = val;
+    }
+    
+    List<PermissionChecker> getDaemonPermissionCheckers() {
+      if(daemonPermissionCheckers != null) {
+        return daemonPermissionCheckers;
+      }
+      return super.getDaemonPermissionCheckers();
+    }
+    
+    public void setDaemonPermissionCheckers(List<PermissionChecker> pc) {
+      this.daemonPermissionCheckers = pc;
     }
 
     public void setDoCrawlThrowException(RuntimeException e) {

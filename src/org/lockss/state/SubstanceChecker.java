@@ -1,5 +1,5 @@
 /*
- * $Id: SubstanceChecker.java,v 1.9 2014-05-14 04:12:16 tlipkis Exp $
+ * $Id: SubstanceChecker.java,v 1.10 2014-11-12 20:11:54 wkwilson Exp $
  */
 
 /*
@@ -371,9 +371,8 @@ public class SubstanceChecker {
 
     private Set<String> getAdditionalNonSubstanceUrls() {
       Set<String> res = new HashSet<String>();
-      CrawlSpec spec = au.getCrawlSpec();
-      addImplicitUrls(spec.getPermissionPages(), res);
-      addImplicitUrls(spec.getStartingUrls(), res);
+      addImplicitUrls(au.getPermissionUrls(), res);
+      addImplicitUrls(au.getStartUrls(), res);
       return res;
     }
 

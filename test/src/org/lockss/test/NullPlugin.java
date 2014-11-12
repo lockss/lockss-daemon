@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.126 2014-08-25 08:57:02 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.127 2014-11-12 20:11:43 wkwilson Exp $
  */
 
 /*
@@ -35,13 +35,15 @@ package org.lockss.test;
 import java.io.*;
 import java.security.*;
 import java.util.*;
-import org.apache.oro.text.regex.*;
 
+import org.apache.oro.text.regex.*;
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.crawler.*;
+import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.UrlFetcher.RedirectScheme;
 import org.lockss.plugin.base.*;
 import org.lockss.rewriter.*;
 import org.lockss.state.*;
@@ -341,8 +343,7 @@ public class NullPlugin {
     public void setCrawlRateLimiter(CrawlRateLimiter crl) {
     }
 
-    public int cache() throws IOException {
-      return CACHE_RESULT_NOT_MODIFIED;
+    public void storeContent() throws IOException {
     }
 
     public void storeContent(InputStream input,
@@ -377,6 +378,10 @@ public class NullPlugin {
     }
 
     public void setPermissionMapSource(PermissionMapSource source) {
+      throw new UnsupportedOperationException();
+    }
+
+    public void setRedirectUrls(List<String> redirectUrls) {
       throw new UnsupportedOperationException();
     }
 
@@ -500,10 +505,6 @@ public class NullPlugin {
     }
 
     public org.lockss.plugin.CachedUrlSet getAuCachedUrlSet() {
-      return null;
-    }
-
-    public CrawlSpec getCrawlSpec() {
       return null;
     }
 
@@ -656,6 +657,59 @@ public class NullPlugin {
     }
 
     public ArchiveFileTypes getArchiveFileTypes() {
+      return null;
+    }
+
+    public org.lockss.plugin.UrlCacher makeUrlCacher(UrlData ud) {
+      return null;
+    }
+
+    public CrawlSeed makeCrawlSeed() {
+      return null;
+    }
+
+    public UrlFetcher makeUrlFetcher(CrawlerFacade facade, String url) {
+      return null;
+    }
+
+    public boolean inCrawlWindow() {
+      return false;
+    }
+
+    public List<PermissionChecker> makePermissionCheckers() {
+      return null;
+    }
+
+    public Collection<String> getStartUrls() {
+      return null;
+    }
+
+    public Collection<String> getPermissionUrls() {
+      return null;
+    }
+
+
+    public int getRefetchDepth() {
+      return 0;
+    }
+
+    public LoginPageChecker getLoginPageChecker() {
+      return null;
+    }
+
+    public String getCookiePolicy() {
+      return null;
+    }
+
+    public boolean shouldRefetchOnCookies() {
+      return false;
+    }
+
+    public CrawlWindow getCrawlWindow() {
+      return null;
+    }
+
+    public UrlConsumerFactory getUrlConsumerFactory() {
       return null;
     }
   }

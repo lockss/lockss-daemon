@@ -1,5 +1,5 @@
 /*
- * $Id: PluginUtil.java,v 1.3 2009-06-17 06:59:33 tlipkis Exp $
+ * $Id: PluginUtil.java,v 1.4 2014-11-12 20:11:50 wkwilson Exp $
  */
 
 /*
@@ -32,8 +32,10 @@ in this Software without prior written authorization from Stanford University.
 
 import java.io.*;
 import java.util.*;
+
 import org.lockss.util.*;
 import org.lockss.config.*;
+import org.lockss.crawler.CrawlSeed;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.definable.*;
@@ -117,22 +119,24 @@ public class PluginUtil {
 	if (auConfig != null) {
 	  ArchivalUnit au = plug.createAu(auConfig);
 	  if (!attributes.isEmpty()) {
+	    CrawlSeed ci = null;
 	    for (String attr : attributes) {
 	      if ("start-url".equals(attr)) {
-		CrawlSpec spec = au.getCrawlSpec();
-		if (!(spec instanceof SpiderCrawlSpec)) {
-		  System.err.println("Error: plugin pname doesn't have a start URL");
-		  continue;
-		}
-		SpiderCrawlSpec sspec = (SpiderCrawlSpec)spec;
-		pout.println("Start urls: " + sspec.getStartingUrls());
+	        ci = au.makeCrawlSeed();
+          pout.println("Start urls: " + ci.getStartUrls());
+          continue;
+	      }
+  		}
+	    if(ci == null && plug.findAuConfigDescr(
+	        DefinablePlugin.KEY_PLUGIN_CRAWL_SEED_FACTORY) == null){
+	      System.err.println("Error: plugin pname doesn't have "
+	          + "a start URL or CrawlInitializer");
+	    }
 		
 	      }
 	    }
 	  }
 	}
-      }
-    }
     if (err) {
       System.exit(1);
     }

@@ -42,7 +42,6 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArticleFiles;
 import org.lockss.plugin.PluginTestUtil;
 import org.lockss.plugin.SubTreeArticleIterator;
-import org.lockss.plugin.UrlCacher;
 import org.lockss.plugin.UrlNormalizer;
 import org.lockss.test.ArticleIteratorTestCase;
 import org.lockss.test.ConfigurationUtil;
@@ -121,16 +120,21 @@ public class TestMaffeyArticleIteratorFactory extends ArticleIteratorTestCase {
     
     for (String url : urls) {
       UrlNormalizer norm = new MaffeyUrlNormalizer();
-      UrlCacher uc = au.makeUrlCacher(norm.normalizeUrl(UrlUtil.minimallyEncodeUrl(url), null));
-      
+      String normUrl = norm.normalizeUrl(UrlUtil.minimallyEncodeUrl(url), null);
       if(url.contains("-article-a1234")) {
-	uc.storeContent(getAbsAlteredInputStream("http://la-press.com/redirect_file.php?fileId=2222&filename=1234-Foo-Bar-(Hello.pdf&fileType=pdf"), getAbsProperties());
+        storeContent(getAbsAlteredInputStream(
+            "http://la-press.com/redirect_file.php?fileId=2222&filename=1234"
+            + "-Foo-Bar-(Hello.pdf&fileType=pdf"), getAbsProperties(), normUrl);
       } else if(url.contains("-article-a12")){
-	uc.storeContent(getAbsAlteredInputStream("http://la-press.com/redirect_file.php?fileType=pdf&fileId=1111&filename= Hello World ( Foo "), getAbsProperties());
+        storeContent(getAbsAlteredInputStream("http://la-press.com/redirect_fi"
+            + "le.php?fileType=pdf&fileId=1111&filename= Hello World ( Foo "),
+            getAbsProperties(), normUrl);
       } else if(url.contains("-article-a22")) {
-	uc.storeContent(getAbsAlteredInputStream("http://la-press.com/redirect_file.php?fileId=3333&filename=Bad-PDF.pdf&fileType=pdf"), getAbsProperties());
+        storeContent(getAbsAlteredInputStream("http://la-press.com/redire"
+            + "ct_file.php?fileId=3333&filename=Bad-PDF.pdf&fileType=pdf"),
+            getAbsProperties(), normUrl);
       } else {
-	uc.storeContent(getAbsAlteredInputStream(null), getAbsProperties());
+        storeContent(getAbsAlteredInputStream(null), getAbsProperties(), normUrl);
       }
     }
     

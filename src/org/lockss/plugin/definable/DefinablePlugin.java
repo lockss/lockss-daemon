@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.81 2014-10-01 08:11:56 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.82 2014-11-12 20:11:59 wkwilson Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import org.lockss.rewriter.*;
 import org.lockss.config.Configuration;
 import org.lockss.app.*;
 import org.lockss.daemon.*;
+import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.crawler.*;
 import org.lockss.extractor.*;
 import org.lockss.util.*;
@@ -97,6 +98,16 @@ public class DefinablePlugin extends BasePlugin {
 
   public static final String KEY_PLUGIN_ARTICLE_ITERATOR_FACTORY =
     "plugin_article_iterator_factory";
+ 
+  public static final String KEY_PLUGIN_CRAWL_SEED_FACTORY = 
+    "plugin_crawl_seed_factory";
+  
+  public static final String KEY_PLUGIN_URL_FETCHER_FACTORY = 
+      "plugin_url_fetcher_factory";
+  
+  public static final String KEY_PLUGIN_URL_CONSUMER_FACTORY = 
+	      "plugin_url_fetcher_factory";
+
 
   public static final String KEY_PLUGIN_ARTICLE_METADATA_EXTRACTOR_FACTORY =
     "plugin_article_metadata_extractor_factory";
@@ -915,6 +926,74 @@ public class DefinablePlugin extends BasePlugin {
       }
     }
     return exploderHelper;
+  }
+  
+  protected CrawlSeedFactory crawlSeedFactory = null;
+
+  protected CrawlSeedFactory getCrawlSeedFactory() {
+    if (crawlSeedFactory == null) {
+      String factClass =
+    definitionMap.getString(DefinablePlugin.KEY_PLUGIN_CRAWL_SEED_FACTORY,
+				null);
+      if (factClass != null) {
+    	crawlSeedFactory =
+    	(CrawlSeedFactory)newAuxClass(factClass, CrawlSeedFactory.class);
+      }
+    }
+    
+    return crawlSeedFactory;
+  }
+  
+  protected UrlFetcher makeUrlFetcher(CrawlerFacade facade, String url) {
+	UrlFetcherFactory fact = getUrlFetcherFactory();
+	  if (fact == null) {
+	    return null;
+	  }
+	  return fact.createUrlFetcher(facade, url);
+  }
+  
+  protected UrlFetcherFactory urlFetcherFactory = null;
+
+  protected UrlFetcherFactory getUrlFetcherFactory() {
+    if (urlFetcherFactory == null) {
+      String factClass =
+    definitionMap.getString(DefinablePlugin.KEY_PLUGIN_URL_FETCHER_FACTORY,
+        null);
+      if (factClass != null) {
+      urlFetcherFactory =
+      (UrlFetcherFactory)newAuxClass(factClass, UrlFetcherFactory.class);
+      } else {
+        return new SimpleUrlFetcherFactory();
+      }
+    }
+    
+    return urlFetcherFactory;
+  }
+  
+  protected CrawlSeed getCrawlSeed(ArchivalUnit au) {
+    CrawlSeedFactory fact = getCrawlSeedFactory();
+    if (fact == null) {
+      return null;
+    }
+    return fact.createCrawlSeed(au);
+  }
+  
+  protected UrlConsumerFactory urlConsumerFactory = null;
+
+  protected UrlConsumerFactory getUrlConsumerFactory() {
+    if (urlConsumerFactory == null) {
+      String factClass =
+    definitionMap.getString(DefinablePlugin.KEY_PLUGIN_URL_CONSUMER_FACTORY,
+        null);
+      if (factClass != null) {
+      urlConsumerFactory =
+      (UrlConsumerFactory)newAuxClass(factClass, UrlConsumerFactory.class);
+      } else {
+        return new SimpleUrlConsumerFactory();
+      }
+    }
+    
+    return urlConsumerFactory;
   }
 
   protected CrawlUrlComparatorFactory crawlUrlComparatorFactory = null;

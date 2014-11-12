@@ -1,5 +1,5 @@
 /*
- * $Id: PollerActions.java,v 1.36 2014-05-14 04:11:33 tlipkis Exp $
+ * $Id: PollerActions.java,v 1.37 2014-11-12 20:11:49 wkwilson Exp $
  */
 
 /*
@@ -37,7 +37,8 @@ import java.util.*;
 
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.UrlCacher;
-import org.lockss.plugin.base.BaseUrlCacher;
+import org.lockss.plugin.UrlData;
+import org.lockss.plugin.base.DefaultUrlCacher;
 import org.lockss.protocol.V3LcapMessage.PollNak;
 import org.lockss.protocol.psm.*;
 import org.lockss.protocol.*;
@@ -290,8 +291,6 @@ public class PollerActions {
                + msg.getTargetUrl());
     // Apply the repair
     String repairTarget = msg.getTargetUrl();
-    UrlCacher uc =
-      ud.getCachedUrlSet().getArchivalUnit().makeUrlCacher(repairTarget);
     try {
       CIProperties props = msg.getRepairProperties();
       if (props == null) {
@@ -302,8 +301,11 @@ public class PollerActions {
       props.setProperty(CachedUrl.PROPERTY_REPAIR_FROM, pid.getIdString());
       props.setProperty(CachedUrl.PROPERTY_REPAIR_DATE,
 			Long.toString(TimeBase.nowMs()));
-      uc.storeContent(msg.getRepairDataInputStream(),
-                      props);
+      UrlData urlData = 
+          new UrlData(msg.getRepairDataInputStream(), props, repairTarget);
+      UrlCacher uc =
+          ud.getCachedUrlSet().getArchivalUnit().makeUrlCacher(urlData);
+      uc.storeContent();
       ud.getPoller().receivedRepair(msg.getTargetUrl());
     } catch (IOException ex) {
       log.error("Error attempting to store repair", ex);

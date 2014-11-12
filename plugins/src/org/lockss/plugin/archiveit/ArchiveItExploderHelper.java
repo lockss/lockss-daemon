@@ -1,5 +1,5 @@
 /*
- * $Id: ArchiveItExploderHelper.java,v 1.3 2011-05-18 04:09:55 tlipkis Exp $
+ * $Id: ArchiveItExploderHelper.java,v 1.4 2014-11-12 20:11:26 wkwilson Exp $
  */
 
 /*
@@ -34,10 +34,11 @@ package org.lockss.plugin.archiveit;
 
 import java.util.*;
 import java.net.*;
+
 import org.lockss.daemon.*;
-import org.lockss.daemon.ExploderHelper;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.base.BaseExploderHelper;
 import org.lockss.crawler.Exploder;
 
 /**
@@ -51,7 +52,7 @@ import org.lockss.crawler.Exploder;
  * Otherwise, they are left null.  This conforms to the assumption in
  * Exploder that there is one AU per base URL.
  */
-public class ArchiveItExploderHelper implements ExploderHelper {
+public class ArchiveItExploderHelper extends BaseExploderHelper {
   static Logger logger = Logger.getLogger("ArchiveItExploderHelper");
 
   public ArchiveItExploderHelper() {

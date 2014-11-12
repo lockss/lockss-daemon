@@ -1,5 +1,5 @@
 /*
- * $Id: StaticContentPlugin.java,v 1.31 2006-07-18 19:14:09 tlipkis Exp $
+ * $Id: StaticContentPlugin.java,v 1.32 2014-11-12 20:11:44 wkwilson Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.*;
 import java.util.*;
 import java.net.*;
 import java.security.MessageDigest;
+
 import org.lockss.app.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
@@ -121,10 +122,6 @@ public class StaticContentPlugin extends BasePlugin implements PluginTestable {
       return cuMap.containsKey(url);
     }
 
-    public List getNewContentCrawlUrls() {
-      throw new UnsupportedOperationException("Not implemented");
-    }
-
     public Collection getUrlStems() {
       throw new UnsupportedOperationException("Not implemented");
     }
@@ -172,7 +169,7 @@ public class StaticContentPlugin extends BasePlugin implements PluginTestable {
       return "[sau: " + cuMap + "]";
     }
 
-    protected CrawlRule makeRules() {
+    protected CrawlRule makeRule() {
       throw new UnsupportedOperationException("Not implemented");
     }
 
@@ -182,6 +179,26 @@ public class StaticContentPlugin extends BasePlugin implements PluginTestable {
      * @param config Configuration
      */
     protected void loadAuConfigDescrs(Configuration config) {
+    }
+
+    public List<PermissionChecker> makePermissionCheckers() {
+      throw new UnsupportedOperationException("Not implemented");
+    }
+
+    public Collection<String> getStartUrls() {
+      throw new UnsupportedOperationException("Not implemented");
+    }
+
+    public int getRefetchDepth() {
+      throw new UnsupportedOperationException("Not implemented");
+    }
+
+    public LoginPageChecker getLoginPageChecker() {
+      throw new UnsupportedOperationException("Not implemented");
+    }
+
+    public String getCookiePolicy() {
+      throw new UnsupportedOperationException("Not implemented");
     }
 
   }

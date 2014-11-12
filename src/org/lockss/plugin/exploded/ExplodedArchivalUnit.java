@@ -1,5 +1,5 @@
 /*
- * $Id: ExplodedArchivalUnit.java,v 1.10 2013-03-16 22:04:01 tlipkis Exp $
+ * $Id: ExplodedArchivalUnit.java,v 1.11 2014-11-12 20:12:00 wkwilson Exp $
  */
 
 /*
@@ -141,15 +141,6 @@ public class ExplodedArchivalUnit extends DefinableArchivalUnit {
       return EXCLUDE;
     }
   }
-  /**
-   * Return a new CrawlSpec with the appropriate collect AND redistribute
-   * permissions, and with the maximum refetch depth.
-   *
-   * @return CrawlSpec
-   */
-  protected CrawlSpec makeCrawlSpec() throws LockssRegexpException {
-    return new ExplodedCrawlSpec(getNewContentCrawlUrls());
-  }
 
   /**
    * ExplodedArchivalUnits should never be crawled.
@@ -173,16 +164,6 @@ public class ExplodedArchivalUnit extends DefinableArchivalUnit {
       }
     } catch (MalformedURLException ex) {
       logger.debug3("addUrlStemToAU(" + url + ") threw " + ex);
-    }
-  }
-
-  // Exploded AU crawl spec implementation
-  private class ExplodedCrawlSpec extends BaseCrawlSpec {
-    ExplodedCrawlSpec(List startUrls) {
-      // null CrawlRule is always INCLUDE
-      // null PermissionChecker is XXX
-      // null loginPageChecker is always false
-      super(startUrls, null, null, null);
     }
   }
 }

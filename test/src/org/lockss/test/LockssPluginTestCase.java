@@ -1,5 +1,5 @@
 /*
- * $Id: LockssPluginTestCase.java,v 1.4 2012-07-09 07:53:42 tlipkis Exp $
+ * $Id: LockssPluginTestCase.java,v 1.5 2014-11-12 20:11:44 wkwilson Exp $
  */
 
 /*
@@ -70,9 +70,8 @@ public class LockssPluginTestCase extends LockssTestCase {
   }
 
   public void assertShouldCache(String url, ArchivalUnit au) {
-    UrlCacher uc = au.makeUrlCacher(url);
     assertTrue(url+" incorrectly marked as shouldn't cache",
-               uc.shouldBeCached());
+        au.shouldBeCached(url));
   }
 
   public void assertShouldNotCache(String url, 
@@ -81,9 +80,8 @@ public class LockssPluginTestCase extends LockssTestCase {
   }
 
   public void assertShouldNotCache(String url, ArchivalUnit au) {
-     UrlCacher uc = au.makeUrlCacher(url);
      assertFalse(url+" incorrectly marked as should cache",
-                 uc.shouldBeCached());
+         au.shouldBeCached(url));
    }
 
   

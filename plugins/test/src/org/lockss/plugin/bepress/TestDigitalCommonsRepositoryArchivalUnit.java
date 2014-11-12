@@ -1,5 +1,5 @@
 /*
- * $Id: TestDigitalCommonsRepositoryArchivalUnit.java,v 1.1 2013-11-19 21:43:08 ldoan Exp $
+ * $Id: TestDigitalCommonsRepositoryArchivalUnit.java,v 1.2 2014-11-12 20:11:59 wkwilson Exp $
  */
 
 /*
@@ -152,23 +152,21 @@ public class TestDigitalCommonsRepositoryArchivalUnit extends LockssTestCase {
   private void shouldCacheTest(String url, boolean shouldCache,
                                ArchivalUnit au, CachedUrlSet cus) {
     log.debug3 ("shouldCacheTest url: " + url);
-    UrlCacher uc = au.makeUrlCacher(url);
-    assertEquals(shouldCache, uc.shouldBeCached());
+    assertEquals(shouldCache, au.shouldBeCached(url));
   }
   
   public void testStartUrlConstruction() throws Exception {
     String expected = ROOT_URL + COLLECTION + "/lockss-" + COLLECTION_TYPE 
                       + "-" + COLLECTION + ".html";
     assertEquals(ListUtil.list(expected), 
-                 dcrAu.getNewContentCrawlUrls());
+                 dcrAu.getStartUrls());
   }
   
   public void testShouldNotCachePageFromOtherSite() throws Exception {
     theDaemon.getLockssRepository(dcrAu);
     theDaemon.getNodeManager(dcrAu);
-    UrlCacher uc = dcrAu.makeUrlCacher(
-        "http://shadow2.stanford.edu/toc/dcr/2013/2");
-    assertFalse(uc.shouldBeCached());
+    assertFalse(dcrAu.shouldBeCached(
+        "http://shadow2.stanford.edu/toc/dcr/2013/2"));
   }
 
   public void testShouldDoNewContentCrawlTooEarly() throws Exception {

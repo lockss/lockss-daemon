@@ -1,5 +1,5 @@
 /*
- * $Id: NoPauseCrawlManagerImpl.java,v 1.4 2012-05-17 17:58:06 tlipkis Exp $
+ * $Id: NoPauseCrawlManagerImpl.java,v 1.5 2014-11-12 20:11:28 wkwilson Exp $
  */
 
 /*
@@ -62,8 +62,8 @@ public class NoPauseCrawlManagerImpl extends CrawlManagerImpl {
   public CrawlRateLimiter getCrawlRateLimiter(Crawler crawler) {
     ArchivalUnit au = crawler.getAu();
     CrawlRateLimiter crl = limiterMap.get(au);
-    if (crl == null) {
-      crl = super.getCrawlRateLimiter(crawler);
+    if(crl == null) {
+      crl = newCrawlRateLimiter(au);
     }
     return crl;
   }

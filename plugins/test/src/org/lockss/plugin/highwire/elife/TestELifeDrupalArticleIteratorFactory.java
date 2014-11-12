@@ -1,5 +1,5 @@
 /*
- * $Id: TestELifeDrupalArticleIteratorFactory.java,v 1.1 2014-09-12 00:31:43 etenbrink Exp $
+ * $Id: TestELifeDrupalArticleIteratorFactory.java,v 1.2 2014-11-12 20:11:59 wkwilson Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.highwire.elife;
 
+import java.io.InputStream;
 import java.util.Iterator;
 import java.util.Stack;
 import java.util.regex.Pattern;
@@ -42,6 +43,7 @@ import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.*;
 import org.lockss.test.*;
+import org.lockss.util.CIProperties;
 import org.lockss.util.Constants;
 import org.lockss.util.ListUtil;
 
@@ -246,16 +248,23 @@ public class TestELifeDrupalArticleIteratorFactory extends ArticleIteratorTestCa
     }
     
     for (String url : urls) {
-      UrlCacher uc = au.makeUrlCacher(url);
+      InputStream input = null;
+      CIProperties props = null;
       if (url.contains("pdf+html")) {
-        uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
+        input = cuHtml.getUnfilteredInputStream();
+        props = cuHtml.getProperties();
       }
       else if (url.contains("pdf")) {
-        uc.storeContent(cuPdf.getUnfilteredInputStream(), cuPdf.getProperties());
+        input = cuPdf.getUnfilteredInputStream();
+        props = cuPdf.getProperties();
       }
       else {
-        uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
+        input = cuHtml.getUnfilteredInputStream();
+        props = cuHtml.getProperties();
       }
+      UrlData ud = new UrlData(input, props, url);
+      UrlCacher uc = au.makeUrlCacher(ud);
+      uc.storeContent();
     }
     
     Stack<String[]> expStack = new Stack<String[]>();

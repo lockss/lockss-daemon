@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.168 2014-08-25 08:57:03 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.169 2014-11-12 20:11:52 wkwilson Exp $
  */
 
 /*
@@ -42,7 +42,9 @@ import org.lockss.config.*;
 import org.lockss.crawler.*;
 import org.lockss.extractor.*;
 import org.lockss.daemon.*;
+import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.plugin.*;
+import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 import org.lockss.rewriter.*;
 import org.lockss.state.AuState;
 import org.lockss.util.*;
@@ -74,6 +76,10 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    * what else they specify.  Can be "au" or "plugin"". */
   public static final String PARAM_OVERRIDE_FETCH_RATE_LIMITER_SOURCE =
     Configuration.PREFIX+"baseau.overrideFetchRateLimiterSource";
+  
+  private static final String SHOULD_REFETCH_ON_SET_COOKIE =
+      "refetch_on_set_cookie";
+  private static final boolean DEFAULT_SHOULD_REFETCH_ON_SET_COOKIE = true;
 
   //Short term conf parameter to get around the fact that DefinablePlugins
   //don't load crawl windows
@@ -100,10 +106,8 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   protected static final long DEFAULT_AU_MAX_FILE_SIZE = 0;
 
   protected BasePlugin plugin;
-  protected CrawlSpec crawlSpec;
-
+  protected boolean shouldRefetchOnCookies;
   protected long defaultFetchDelay = DEFAULT_FETCH_DELAY;
-  protected List<String> startUrls;
   protected List<String> urlStems;
   protected long newContentCrawlIntv;
   protected long defaultContentCrawlIntv = DEFAULT_NEW_CONTENT_CRAWL_INTERVAL;
@@ -113,6 +117,8 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   protected String auTitle;   // the title of the AU (from titledb, if any)
   protected Configuration auConfig;
   protected String auId = null;
+  protected CrawlRule rule;
+  protected CrawlWindow window;
 
   protected TypedEntryMap paramMap;
 
@@ -178,12 +184,25 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     return new BaseCachedUrl(this, url);
   }
 
-  public UrlCacher makeUrlCacher(String url) {
-    ArchiveMemberSpec ams = ArchiveMemberSpec.fromUrl(this, url);
+  public UrlCacher makeUrlCacher(UrlData ud) {
+    ArchiveMemberSpec ams = ArchiveMemberSpec.fromUrl(this, ud.url);
     if (ams != null) {
-      throw new IllegalArgumentException("Cannot make a UrlCacher for an archive member: " + url);
+      throw new IllegalArgumentException("Cannot make a UrlCacher for an"
+          + " archive member: " + ud.url);
     }
-    return new BaseUrlCacher(this, url);
+    return new DefaultUrlCacher(this, ud);
+  }
+  
+  public CrawlSeed makeCrawlSeed() {
+    return new BaseCrawlSeed(this);
+  }
+  
+  public UrlFetcher makeUrlFetcher(CrawlerFacade facade, String url) {
+    return new BaseUrlFetcher(facade, url);
+  }
+  
+  public UrlConsumerFactory getUrlConsumerFactory() {
+    return new SimpleUrlConsumerFactory();
   }
 
   private void checkLegalConfigChange(Configuration newConfig)
@@ -262,27 +281,14 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     logger.debug2("Setting new content crawl interval to " +
 		  StringUtil.timeIntervalToString(newContentCrawlIntv));
     paramMap.putLong(KEY_AU_NEW_CONTENT_CRAWL_INTERVAL, newContentCrawlIntv);
-
-    // make the start urls
-    startUrls = makeStartUrls();
-
-
-    // make our crawl spec
-    try {
-      crawlSpec = makeCrawlSpec();
-      if (CurrentConfig.getBooleanParam(PARAM_USE_CRAWL_WINDOW,
-					DEFAULT_USE_CRAWL_WINDOW)) {
-        CrawlWindow window = makeCrawlWindow();
-	//XXX need to get rid of setCrawlWindow and set that in constructor
-        logger.debug3("Setting crawl window to "+window);
-        crawlSpec.setCrawlWindow(window);
-      }
-    } catch (LockssRegexpException e) {
-      throw new ConfigurationException("Illegal regexp in crawl rules: " +
-				       e.getMessage(), e);
-    }
-    paramMap.setMapElement(KEY_AU_CRAWL_SPEC, crawlSpec);
-
+    
+    rule = makeRule();
+    paramMap.setMapElement(KEY_AU_CRAWL_RULE, rule);
+    
+    shouldRefetchOnCookies = paramMap.getBoolean(SHOULD_REFETCH_ON_SET_COOKIE,
+        DEFAULT_SHOULD_REFETCH_ON_SET_COOKIE);
+    window = makeCrawlWindow();
+    
     titleDbChanged();
   }
 
@@ -399,16 +405,10 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     return plugin.getPluginId();
   }
 
-  /**
-   * Return the CrawlSpec.
-   * @return the spec
-   */
-  public CrawlSpec getCrawlSpec() {
-    // for speed we return the cached value
-    return crawlSpec;
-    //return (CrawlSpec)paramMap.getMapElement(AU_CRAWL_SPEC);
+  public Collection<String> getPermissionUrls() {
+    return getStartUrls();
   }
-
+  
   /**
    * Return the Url stems (proto, host & port) of potential content within
    * this AU
@@ -417,7 +417,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   public Collection<String> getUrlStems() {
     if (urlStems == null) {
       try {
-	List<String> perms = getPermissionPages();
+	Collection<String> perms = getPermissionUrls();
 	Set<String> set = new HashSet<String>();
 	if (perms != null) {
 	  for (String url : perms) {
@@ -445,12 +445,16 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    * Determine whether the url falls within the CrawlSpec.
    * @param url the url
    * @return true if it is included
+   * @throws LockssRegexpException 
    */
   public boolean shouldBeCached(String url) {
-    boolean val = getCrawlSpec().isIncluded(url);
-    return val;
+    return (rule == null) ? true : (rule.match(url) == CrawlRule.INCLUDE);
   }
-
+  
+  public boolean shouldRefetchOnCookies() {
+    return shouldRefetchOnCookies;
+  }
+  
   public boolean isLoginPageUrl(String url) {
     return false;
   }
@@ -458,7 +462,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   public String siteNormalizeUrl(String url) {
     return plugin.siteNormalizeUrl(url, this);
   }
-
+  
   public Comparator<CrawlUrl> getCrawlUrlComparator()
       throws PluginException.LinkageError {
     return plugin.getCrawlUrlComparator(this);
@@ -564,21 +568,17 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     return sb.toString();
   }
 
-  protected List<String> getPermissionPages() {
-    return startUrls;
-  }
-
   /** Override to provide permission path */
   public String getPerHostPermissionPath() {
     return null;
   }
 
   public List<String> getHttpCookies() {
-    return Collections.EMPTY_LIST;
+    return Collections.emptyList();
   }
 
   public List<String> getHttpRequestHeaders() {
-    return Collections.EMPTY_LIST;
+    return Collections.emptyList();
   }
 
   public String getName() {
@@ -606,29 +606,22 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   }
 
   /**
-   * Use the starting url and the crawl rules to make the crawl spec needed
-   * to crawl this au.
-   *
-   * By default, it is assumed we are doing a new content crawl, thus this method
-   * will return SpiderCrawlSpec which implements CrawlSpec.
-   * If people are using the plugin tools and configurate it to do an Oai Crawl
-   * the DefinableArchivalUnit is overriding this method to return an OaiCrawlSpec
-   * which also implements CrawlSpec.
-   * If one is not using plugin tools, but want to do an Oai crawl, he should
-   * change this method to return OaiCrawlSpec instead of SpiderCrawlSpec
-   * @return the CrawlSpec need by this au.
-   * @throws LockssRegexpException if the CrawlRules contain an invalid
-   * regular expression
+   * Returns the CrawlWindow by default null which means crawl anytime
+   * @return CrawlWindow or null
    */
-  protected CrawlSpec makeCrawlSpec() throws LockssRegexpException {
-    CrawlRule rule = makeRules();
-    return new SpiderCrawlSpec(startUrls, rule);
-  }
-
   protected CrawlWindow makeCrawlWindow() {
-    return null;
+	  return null;
   }
 
+  public boolean inCrawlWindow() {
+    return (window == null) ? true : window.canCrawl();
+  }
+  
+  public CrawlWindow getCrawlWindow() {
+    return window;
+  }
+
+  
   /**
    * subclasses must implement this method to make and return the Crawl Rules
    * needed to crawl content.
@@ -636,29 +629,12 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    * @throws LockssRegexpException if the rules contain an unacceptable
    * regular expression.
    */
-  abstract protected CrawlRule makeRules() throws LockssRegexpException;
-
-  /**
-   * Compute the AU's single start URL.  (Subclasses must implement either
-   * makeStartUrl() or makeStartUrls().)
-   * @return the URL from which a crawl of this au should start
-   */
-  protected String makeStartUrl() throws ConfigurationException {
-    throw new UnsupportedOperationException("Plugin must implement makeStartUrl() or makeStartUrls()");
+  abstract protected CrawlRule makeRule() throws ConfigurationException;
+  
+  public CrawlRule getRule() {
+    return rule;
   }
-
-  /**
-   * Compute the AU's starting URL list.  (Subclasses must implement either
-   * makeStartUrl() or makeStartUrls().)
-   * @return the list of URLs from which a crawl of this au should start
-   */
-  protected List<String> makeStartUrls() throws ConfigurationException {
-    ArrayList<String> res = new ArrayList<String>(1);
-    res.add(makeStartUrl());
-    res.trimToSize();
-    return res;
-  }
-
+  
   /**
    * subclasses must implement to make and return the name for this au
    * @return the au name as a String
@@ -806,11 +782,6 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
       ret++;
     }
     return ret;
-  }
-
-
-  public List<String> getNewContentCrawlUrls() {
-    return startUrls;
   }
 
   // utility methods for configuration management

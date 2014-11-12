@@ -1,5 +1,5 @@
 /*
- * $Id: MockPermissionChecker.java,v 1.5 2011-06-20 07:09:44 tlipkis Exp $
+ * $Id: MockPermissionChecker.java,v 1.6 2014-11-12 20:11:43 wkwilson Exp $
  */
 
 /*
@@ -69,7 +69,7 @@ public class MockPermissionChecker implements PermissionChecker {
    * @param reader Reader
    * @return boolean
    */
-  public boolean checkPermission(Crawler.PermissionHelper pHelper,
+  public boolean checkPermission(Crawler.CrawlerFacade pHelper,
 				 Reader reader, String permissionUrl) {
     numCalls++;
     this.permissionUrl = permissionUrl;

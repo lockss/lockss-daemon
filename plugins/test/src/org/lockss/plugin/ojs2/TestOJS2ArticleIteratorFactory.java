@@ -1,4 +1,4 @@
-/* $Id: TestOJS2ArticleIteratorFactory.java,v 1.6 2014-07-11 18:56:15 etenbrink Exp $
+/* $Id: TestOJS2ArticleIteratorFactory.java,v 1.7 2014-11-12 20:12:00 wkwilson Exp $
 
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -119,25 +119,27 @@ public class TestOJS2ArticleIteratorFactory extends ArticleIteratorTestCase {
   }
   
   // Simulated content URLs stored in the UrlCacher object.
-  public void storeTestContent(String url, UrlCacher urlca) throws Exception {
+  public void storeTestContent(String url) throws Exception {
     log.info("storeTestContent() url: " + url);
+    InputStream input = null;
+    CIProperties props = null;
     // issue table of content
     if (url.contains("478")) { 
-      urlca.storeContent(getTestTocInputStream(), getHtmlProperties());
-      return;
-    } 
-    // abs/full-text html
-    if (url.endsWith("8110") || url.endsWith("8120")
-        || url.endsWith("8514") || url.endsWith("8515")) { 
-      urlca.storeContent(new StringInputStream("<html></html>"), 
-                         getHtmlProperties());
-      return;
+      input = getTestTocInputStream();
+      props = getHtmlProperties();
+    } else if (url.endsWith("8110") || url.endsWith("8120")
+        || url.endsWith("8514") || url.endsWith("8515")) {
+      // abs/full-text html
+      input = new StringInputStream("<html></html>");
+      props = getHtmlProperties();
+    } else if (url.endsWith("8601") || url.endsWith("8602")) {
+      // pdf
+      input = new StringInputStream("");
+      props = getPdfProperties();
     }
-    // pdf
-    if (url.endsWith("8601") || url.endsWith("8602")) { 
-      urlca.storeContent(new StringInputStream(""), getPdfProperties());
-      return;
-    }
+    UrlData ud = new UrlData(input, props, url);
+    UrlCacher uc = au.makeUrlCacher(ud);
+    uc.storeContent();
   }  
   
   // Create simulated article files for testing. Store them in UrlCacher object
@@ -169,8 +171,7 @@ public class TestOJS2ArticleIteratorFactory extends ArticleIteratorTestCase {
     while (itr.hasNext()) {
       String url = itr.next();
       log.info("testCreateArticleFiles() url: " + url);
-      UrlCacher urlca = au.makeUrlCacher(url);
-      storeTestContent(url, urlca);
+      storeTestContent(url);
     }
     
     // access OJS2ArticleItrerator

@@ -1,5 +1,5 @@
 /*
- * $Id: ArcExploder.java,v 1.14 2012-09-06 03:59:41 tlipkis Exp $
+ * $Id: ArcExploder.java,v 1.15 2014-11-12 20:11:26 wkwilson Exp $
  */
 
 /*
@@ -34,17 +34,15 @@ package org.lockss.crawler;
 
 import java.util.*;
 import java.io.*;
+
 import org.archive.io.*;
 import org.archive.io.arc.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
+import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.plugin.*;
-import org.lockss.plugin.ExploderHelper;
-import org.lockss.plugin.base.*;
-import org.lockss.plugin.exploded.*;
-import org.lockss.state.*;
 
 /**
  * An Exploder that ingests Internet Archive ARC files,  and behaves
@@ -58,11 +56,9 @@ import org.lockss.state.*;
 public class ArcExploder extends Exploder {
 
   private static Logger logger = Logger.getLogger("ArcExploder");
-  protected ExploderHelper helper = null;
-  protected int reTry = 0;
-  protected CIProperties arcProps = null;
+  protected CIProperties arcProps;
+  protected InputStream arcStream;
 
-  private String arcUrl = null;
 
   /**
    * Constructor
@@ -73,146 +69,134 @@ public class ArcExploder extends Exploder {
    * @param explode true to explode the archives
    * @param store true to store the archive as well
    */
-  protected ArcExploder(UrlCacher uc, int maxRetries, CrawlSpec crawlSpec,
-		     BaseCrawler crawler, boolean explode, boolean store) {
-    super(uc, maxRetries, crawlSpec, crawler, explode, store);
-    arcUrl = uc.getUrl();
-    helper = crawlSpec.getExploderHelper();
-    if (helper == null) {
-      helper = new DefaultExploderHelper(uc, crawlSpec, crawler);
-    }
+  public ArcExploder(FetchedUrlData toExplode, CrawlerFacade crawlFacade,
+      ExploderHelper helper) {
+    super(toExplode, crawlFacade, helper);
+    arcStream = toExplode.input;
+    arcProps = toExplode.headers;
   }
 
-  /**
+/**
    * Explode the archive into its constituent elements
    */
-  protected void explodeUrl() throws CacheException {
-    InputStream arcStream = null;
+  public void explode() throws CacheException {
     CachedUrl cachedUrl = null;
     int goodEntries = 0;
     int badEntries = 0;
     int ignoredEntries = 0;
     int entriesBetweenSleep = 0;
+    long pauseTime =
+        CurrentConfig.getTimeIntervalParam(PARAM_RETRY_PAUSE,
+                                           DEFAULT_RETRY_PAUSE);
     ArchiveReader arcReader = null;
-
-    logger.info((storeArchive ? "Storing" : "Fetching") + " ARC file: " +
-		arcUrl + (explodeFiles ? " will" : " won't") + " explode");
-    while (++reTry < maxRetries) try {
-      cachedUrl = urlCacher.getCachedUrl();
-      if (storeArchive) {
-	crawler.cacheWithRetries(urlCacher);
-	// Get a stream from which the ARC data can be read
-	logger.debug3("About to get ARC stream from " + urlCacher.toString());
-	arcStream = cachedUrl.getUnfilteredInputStream();
-      } else {
-	arcStream = urlCacher.getUncachedInputStream();
-	arcProps = urlCacher.getUncachedProperties();
+    try {
+      if(storeArchive) {
+        UrlCacher uc = au.makeUrlCacher(
+            new UrlData(arcStream, arcProps, fetchUrl));
+        BitSet bs = new BitSet();
+        bs.set(UrlCacher.DONT_CLOSE_INPUT_STREAM_FLAG);
+        uc.setFetchFlags(bs);
+        uc.storeContent();
+        archiveData.resetInputStream();
+        arcStream = archiveData.input;
       }
       // Wrap it in an ArchiveReader
       logger.debug3("About to wrap stream");
-      arcReader = wrapStream(urlCacher, arcStream);
+      arcReader = wrapStream(fetchUrl, arcStream);
       logger.debug3("wrapStream() returns " +
-		    (arcReader == null ? "null" : "non-null"));
+  	    (arcReader == null ? "null" : "non-null"));
       // Explode it
       if (arcReader == null) {
-	throw new CacheException.ExploderException("no ArcReader for " +
-						   urlCacher.toString());
+        throw new CacheException.ExploderException("no ArcReader for " +
+  					   fetchUrl);
       }
-      ArchivalUnit au = urlCacher.getArchivalUnit();
       Set stemSet = new HashSet();
-      logger.debug("Exploding " + arcUrl);
+      logger.debug("Exploding " + fetchUrl);
       // Iterate through the elements in the ARC file, except the first
       Iterator i = arcReader.iterator();
       // Skip first record
       for (i.next(); i.hasNext(); ) {
-	// XXX probably not necessary
-	crawler.pokeWDog();
-	if ((++entriesBetweenSleep % sleepAfter) == 0) {
-	  long pauseTime =
-            CurrentConfig.getTimeIntervalParam(PARAM_RETRY_PAUSE,
-                                               DEFAULT_RETRY_PAUSE);
-	  Deadline pause = Deadline.in(pauseTime);
-	  logger.debug3("Sleeping for " +
-			StringUtil.timeIntervalToString(pauseTime));
-	  while (!pause.expired()) {
-	    try {
-	      pause.sleep();
-	    } catch (InterruptedException ie) {
-	      // no action
-	    }
-	  }
-	}
-	ArchiveRecord element = (ArchiveRecord)i.next();
-	// Each element is a URL to be cached in a suitable AU
-	ArchiveRecordHeader elementHeader = element.getHeader();
-	String elementUrl = elementHeader.getUrl();
-	String elementMimeType = elementHeader.getMimetype();
-	long elementLength = elementHeader.getLength();
-	logger.debug2("ARC url " + elementUrl + " mime " + elementMimeType);
-	if (elementUrl.startsWith("http:")) {
-	  ArchiveEntry ae =
-	    new ArchiveEntry(elementUrl,
-			     elementLength,
-			     0, // XXX need to convert getDate string to long
-			     element, // ArchiveRecord extends InputStream
-			     crawlSpec,
-			     this,
-			     urlCacher.getUrl());
-	  ae.setHeaderFields(makeCIProperties(elementHeader));
-	  long bytesStored = elementLength;
-	  logger.debug3("ArchiveEntry: " + ae.getName()
-			+ " bytes "  + bytesStored);
-          try {
-	    helper.process(ae);
-          } catch (PluginException ex) {
-	    throw new CacheException.ExploderException("helper.process() threw",
-						       ex);
-          }
-	  if (ae.getBaseUrl() != null) {
-	    if (ae.getRestOfUrl() != null &&
-		ae.getHeaderFields() != null) {
-	      storeEntry(ae);
-	      handleAddText(ae);
-	      goodEntries++;
-	      crawler.getCrawlerStatus().addContentBytesFetched(bytesStored);
-	    } else {
-	      ignoredEntries++;
-	    }
-	  } else {
-	    badEntries++;
-	    logger.debug2("Can't map " + elementUrl + " from " + archiveUrl);
-	  }
-	}
+      	// XXX probably not necessary
+    	  helper.pokeWDog();
+    	  if ((++entriesBetweenSleep % sleepAfter) == 0) {
+    	    Deadline pause = Deadline.in(pauseTime);
+    	    logger.debug3("Sleeping for " +
+    	      StringUtil.timeIntervalToString(pauseTime));
+    	    while (!pause.expired()) {
+    	      try {
+    	        pause.sleep();
+    	      } catch (InterruptedException ie) {
+    	        // no action
+    	      }
+    	    }
+    	  }
+      	ArchiveRecord element = (ArchiveRecord)i.next();
+      	// Each element is a URL to be cached in a suitable AU
+      	ArchiveRecordHeader elementHeader = element.getHeader();
+      	String elementUrl = elementHeader.getUrl();
+      	String elementMimeType = elementHeader.getMimetype();
+      	long elementLength = elementHeader.getLength();
+      	logger.debug2("ARC url " + elementUrl + " mime " + elementMimeType);
+      	if (elementUrl.startsWith("http:")) {
+      	  ArchiveEntry ae =
+      	    new ArchiveEntry(elementUrl,
+      			     elementLength,
+      			     0, // XXX need to convert getDate string to long
+      			     element, // ArchiveRecord extends InputStream
+      			     this,
+      			     fetchUrl);
+      	  ae.setHeaderFields(makeCIProperties(elementHeader));
+      	  long bytesStored = elementLength;
+      	  logger.debug3("ArchiveEntry: " + ae.getName()
+      			+ " bytes "  + bytesStored);
+                try {
+      	    helper.process(ae);
+                } catch (PluginException ex) {
+      	    throw new CacheException.ExploderException("helper.process() threw",
+      						       ex);
+                }
+      	  if (ae.getBaseUrl() != null) {
+      	    if (ae.getRestOfUrl() != null &&
+      	        ae.getHeaderFields() != null) {
+      	      storeEntry(ae);
+      	      handleAddText(ae);
+      	      goodEntries++;
+      	      crawlFacade.getCrawlerStatus()
+      	          .addContentBytesFetched(bytesStored);
+      	    } else {
+      	      ignoredEntries++;
+      	    }
+      	  } else {
+      	    badEntries++;
+      	    logger.debug2("Can't map " + elementUrl + " from " + archiveUrl);
+      	  }
+      	}
       }
-      break;
     } catch (IOException ex) {
       throw new CacheException.ExploderException(ex);
     } finally {
       if (arcReader != null) try {
-	arcReader.close();
-	arcReader = null;
+      	arcReader.close();
+      	arcReader = null;
       } catch (IOException ex) {
-	throw new CacheException.ExploderException(ex);
+      	throw new CacheException.ExploderException(ex);
       }
       if (cachedUrl != null) {
-	cachedUrl.release();
+      	cachedUrl.release();
       }
       IOUtil.safeClose(arcStream);
     }
-    if (badEntries == 0) {
-      if (reTry >= maxRetries && goodEntries > 0) {
-	// Make it look like a new crawl finished on each AU to which
-	// URLs were added.
-	for (Iterator it = touchedAus.iterator(); it.hasNext(); ) {
-	  ArchivalUnit au = (ArchivalUnit)it.next();
-	  logger.debug3(archiveUrl + " touching " + au.toString());
-	  crawler.getDaemon().getNodeManager(au).newContentCrawlFinished();
-	}
-      }
+    if (badEntries == 0 && goodEntries > 0) {
+    	// Make it look like a new crawl finished on each AU to which
+    	// URLs were added.
+    	for (Iterator it = touchedAus.iterator(); it.hasNext(); ) {
+    	  ArchivalUnit au = (ArchivalUnit)it.next();
+    	  logger.debug3(archiveUrl + " touching " + au.toString());
+    	  AuUtil.getDaemon(au).getNodeManager(au).newContentCrawlFinished();
+    	}
     } else {
-      ArchivalUnit au = crawler.getAu();
       String msg = archiveUrl + ": " + badEntries + "/" +
-	goodEntries + " bad entries";
+          goodEntries + " bad entries";
       throw new CacheException.UnretryableException(msg);
     }
   }
@@ -236,21 +220,19 @@ public class ArcExploder extends Exploder {
       	}
 
       } catch (ClassCastException ex) {
-	logger.error("makeCIProperties: " + key + " threw ", ex);
-	throw new CacheException.ExploderException(ex);
+      	logger.error("makeCIProperties: " + key + " threw ", ex);
+      	throw new CacheException.ExploderException(ex);
       }
     }
     return (ret);
   }
 
-  protected ArchiveReader wrapStream(UrlCacher uc, InputStream arcStream) throws IOException {
+  protected ArchiveReader wrapStream(String url, InputStream arcStream) throws IOException {
     ArchiveReader ret = null;
-    if (explodeFiles) {
-	logger.debug3("Getting an ArchiveReader");
-      ret = ArchiveReaderFactory.get(urlCacher.getUrl(), arcStream, true);
-      // Just don't ask why the next line is necessary
-      ((ARCReader)ret).setParseHttpHeaders(false);
-    }
+    logger.debug3("Getting an ArchiveReader");
+    ret = ArchiveReaderFactory.get(url, arcStream, true);
+    // Just don't ask why the next line is necessary
+    ((ARCReader)ret).setParseHttpHeaders(false);
     return (ret);
   }
 

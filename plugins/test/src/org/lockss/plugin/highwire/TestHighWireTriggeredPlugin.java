@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireTriggeredPlugin.java,v 1.5 2012-12-18 16:12:57 pgust Exp $
+ * $Id: TestHighWireTriggeredPlugin.java,v 1.6 2014-11-12 20:11:41 wkwilson Exp $
  */
 
 /*
@@ -139,7 +139,7 @@ public class TestHighWireTriggeredPlugin extends LockssTestCase {
 
   public void testHandles404Result() throws Exception {
     assertClass(RetryDeadLinkException.class, 
-        ( (HttpResultMap) plugin.getCacheResultMap()).mapException(null, null, 404, null));
+        ( (HttpResultMap) plugin.getCacheResultMap()).mapException(null, "", 404, null));
 
   }
   public void testGetArticleMetadataExtractor() { 

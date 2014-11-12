@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireDrupalPlugin.java,v 1.1 2014-02-19 22:37:23 etenbrink Exp $
+ * $Id: TestHighWireDrupalPlugin.java,v 1.2 2014-11-12 20:11:41 wkwilson Exp $
  */
 
 /*
@@ -99,8 +99,7 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
     DefinableArchivalUnit au = makeAuFromProps(props);
     assertEquals("HighWire Drupal Plugin, Base URL http://www.example.com/, Volume 303",
         au.getName());
-    SpiderCrawlSpec spec = (SpiderCrawlSpec)au.getCrawlSpec();
-    assertEquals(ListUtil.list(starturl), spec.getStartingUrls());
+    assertEquals(ListUtil.list(starturl), au.getStartUrls());
   }
   
   public void testGetPluginId() {

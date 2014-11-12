@@ -1,5 +1,5 @@
 /*
- * $Id: FuncWarcRoundtrip.java,v 1.6 2013-10-23 04:25:24 tlipkis Exp $
+ * $Id: FuncWarcRoundtrip.java,v 1.7 2014-11-12 20:12:02 wkwilson Exp $
  */
 
 /*
@@ -40,12 +40,10 @@ import org.archive.io.*;
 import org.archive.io.warc.*;
 import org.apache.commons.collections.Bag;
 import org.apache.commons.collections.bag.*;
-
 import org.lockss.daemon.*;
 import org.lockss.config.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.ExploderHelper;
 import org.lockss.plugin.simulated.*;
 import org.lockss.plugin.exploded.*;
 import org.lockss.repository.*;
@@ -128,7 +126,6 @@ public class FuncWarcRoundtrip extends LockssTestCase {
     Properties props = new Properties();
     props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
 		      tempDirPath);
-    props.setProperty(FollowLinkCrawler.PARAM_EXPLODE_ARCHIVES, "true");
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
     daemon.getPluginManager();
@@ -137,6 +134,7 @@ public class FuncWarcRoundtrip extends LockssTestCase {
     daemon.getPluginManager().startLoadablePlugins();
 
     sau = PluginTestUtil.createAndStartSimAu(simAuConfig(tempDirPath));
+    sau.setUrlConsumerFactory(new ExplodingUrlConsumerFactory());
   }
 
   public void tearDown() throws Exception {
@@ -310,18 +308,14 @@ public class FuncWarcRoundtrip extends LockssTestCase {
   }
 
   protected void crawlContent() {
-    List urls = sau.getNewContentCrawlUrls();
-    CrawlSpec spec =
-      new SpiderCrawlSpec(urls,
-          urls, // permissionUrls
-          new MyCrawlRule(), // crawl rules
-          1,    // refetch depth
-          null, // PermissionChecker
-          null, // LoginPageChecker
-          ".warc.gz$", // exploder pattern
-          new MyExploderHelper(null) );
+    Collection<String> urls = sau.getStartUrls();
+    sau.setStartUrls(urls);
+    sau.setRule(new MyCrawlRule());
+    sau.setExploderPattern(".warc.gz$");
+    sau.setExploderHelper(new MyExploderHelper(null));
+    
     AuState maus = new MyMockAuState();
-    Crawler crawler = new NoCrawlEndActionsNewContentCrawler(sau, spec, maus);
+    Crawler crawler = new NoCrawlEndActionsFollowLinkCrawler(sau, maus);
     boolean res = crawler.doCrawl();
     lastCrawlResult = maus.getLastCrawlResult();
     lastCrawlMessage = maus.getLastCrawlResultMsg();
@@ -420,8 +414,20 @@ public class FuncWarcRoundtrip extends LockssTestCase {
       props.put(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
       ae.setAuProps(props);
     }
-  }
 
+    @Override
+    public void setWatchdog(LockssWatchdog wdog) {
+      //Do nothing
+      
+    }
+
+    @Override
+    public void pokeWDog() {
+      //Do nothing
+      
+    }
+  }
+  
   public static class MyPluginManager extends PluginManager {
     MyPluginManager() {
       super();

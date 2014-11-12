@@ -1,5 +1,5 @@
 /*
- * $Id: TestBioMedCentralPluginArchivalUnit.java,v 1.1 2014-08-08 17:09:32 alexandraohlson Exp $
+ * $Id: TestBioMedCentralPluginArchivalUnit.java,v 1.2 2014-11-12 20:11:36 wkwilson Exp $
  */
 
 /*
@@ -196,9 +196,8 @@ public class TestBioMedCentralPluginArchivalUnit extends LockssTestCase {
   
   private void shouldCacheTest(String url, boolean shouldCache,
       ArchivalUnit au, CachedUrlSet cus) {
-    UrlCacher uc = au.makeUrlCacher(url);
     log.debug3("testing: " + url);
-    assertEquals(shouldCache, uc.shouldBeCached());
+    assertEquals(shouldCache, au.shouldBeCached(url));
   }
 
   public void testCheckSubstanceRules() throws Exception {

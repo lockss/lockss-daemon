@@ -1,5 +1,5 @@
 /*
- * $Id: TestUbiquityPressArchivalUnit.java,v 1.6 2013-01-11 19:46:29 ldoan Exp $
+ * $Id: TestUbiquityPressArchivalUnit.java,v 1.7 2014-11-12 20:11:58 wkwilson Exp $
  */
 
 /*
@@ -126,8 +126,7 @@ public class TestUbiquityPressArchivalUnit extends LockssTestCase {
 
   private void shouldCacheTest(String url, boolean shouldCache,
                                ArchivalUnit au, CachedUrlSet cus) {
-    UrlCacher uc = au.makeUrlCacher(url);
-    assertEquals(shouldCache, uc.shouldBeCached());
+    assertEquals(shouldCache, au.shouldBeCached(url));
   }
 
   public void testStartUrlConstruction() throws Exception {
@@ -136,7 +135,7 @@ public class TestUbiquityPressArchivalUnit extends LockssTestCase {
     // 4 digit
     String expected = ROOT_URL+"index.php/pp/gateway/lockss?year=2003";
     DefinableArchivalUnit pmAu = makeAu(url, "pp","2003");
-    assertEquals(ListUtil.list(expected), pmAu.getNewContentCrawlUrls());
+    assertEquals(ListUtil.list(expected), pmAu.getStartUrls());
   }
 
 

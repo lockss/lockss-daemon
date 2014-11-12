@@ -316,7 +316,7 @@ public class TestTaylorAndFrancisMetadataExtractor extends LockssTestCase {
   String badIdentifierContent =
       "<meta name=\"dc.Identifier\" scheme=\"publisher-id\" content=\"567009\"></meta>" +
 "<meta name=\"dc.Identifier\" scheme=\"doi\" content=\"10.1080/13567888.2011.567009\"></meta>" + 
-"<meta name=\"dc.Identifier\" scheme=\"coden\" content=\"Volume 17, Comment 1 Ð January 2011\"></meta>";
+"<meta name=\"dc.Identifier\" scheme=\"coden\" content=\"Volume 17, Comment 1 ï¿½ January 2011\"></meta>";
   
   public void testbadIdentifierContent() throws Exception {
    List<ArticleMetadata> mdlist;
@@ -405,8 +405,9 @@ public class TestTaylorAndFrancisMetadataExtractor extends LockssTestCase {
     String goodContent = createGoodRisContent();
     log.debug3(goodContent);
     String url = BASE_URL + "action/downloadCitation?doi=" + goodDOI_pt1 + "%2F" + goodDOI_pt2 + "&format=ris&include=cit";  
-    UrlCacher uc = tfau1.makeUrlCacher(url);
-    uc.storeContent(IOUtils.toInputStream(goodContent, "utf-8"),getContentRisProperties());
+    UrlData ud = new UrlData(IOUtils.toInputStream(goodContent, "utf-8"),getContentRisProperties(),url);
+    UrlCacher uc = tfau1.makeUrlCacher(ud);
+    uc.storeContent();
     CachedUrl cu = uc.getCachedUrl();
     
     FileMetadataExtractor me = new TaylorAndFrancisRisMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/plain");
@@ -459,8 +460,9 @@ public class TestTaylorAndFrancisMetadataExtractor extends LockssTestCase {
     String wrongContent = createWrongAURisContent();
     log.debug3(wrongContent);
     String url = BASE_URL + "action/downloadCitation?doi=" + goodDOI_pt1 + "%2F" + goodDOI_pt2 + "&format=ris&include=cit";  
-    UrlCacher uc = tfau1.makeUrlCacher(url);
-    uc.storeContent(IOUtils.toInputStream(wrongContent, "utf-8"),getContentRisProperties());
+    UrlData ud = new UrlData(IOUtils.toInputStream(wrongContent, "utf-8"),getContentRisProperties(),url);
+    UrlCacher uc = tfau1.makeUrlCacher(ud);
+    uc.storeContent();
     CachedUrl cu = uc.getCachedUrl();
     
     FileMetadataExtractor me = new TaylorAndFrancisRisMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/plain");
@@ -498,8 +500,9 @@ public class TestTaylorAndFrancisMetadataExtractor extends LockssTestCase {
   /* private support methods */
   
   private List<ArticleMetadata> setupContentForAU(ArchivalUnit au, String url, String content) throws IOException, PluginException {
-    UrlCacher uc = au.makeUrlCacher(url);
-    uc.storeContent(IOUtils.toInputStream(content, "utf-8"),getContentHtmlProperties());
+    UrlData ud = new UrlData(IOUtils.toInputStream(content, "utf-8"),getContentHtmlProperties(),url);
+    UrlCacher uc = au.makeUrlCacher(ud);
+    uc.storeContent();
     CachedUrl cu = uc.getCachedUrl();
     FileMetadataExtractor me = new TaylorAndFrancisHtmlMetadataExtractorFactory.TaylorAndFrancisHtmlMetadataExtractor();
     FileMetadataListExtractor mle = new FileMetadataListExtractor(me);

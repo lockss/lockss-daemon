@@ -1,5 +1,5 @@
 /*
- * $Id: TestMediaWikiArchivalUnit.java,v 1.2 2014-03-07 20:05:43 wkwilson Exp $
+ * $Id: TestMediaWikiArchivalUnit.java,v 1.3 2014-11-12 20:11:59 wkwilson Exp $
  */
 
 /*
@@ -148,8 +148,7 @@ public class TestMediaWikiArchivalUnit extends LockssTestCase {
   
   private void shouldCacheTest(String url, boolean shouldCache,
       ArchivalUnit au, CachedUrlSet cus) {
-    UrlCacher uc = au.makeUrlCacher(url);
-    assertEquals(shouldCache, uc.shouldBeCached());
+    assertEquals(shouldCache, au.shouldBeCached(url));
   }
   
   public void testStartUrlConstruction() throws Exception {
@@ -157,7 +156,7 @@ public class TestMediaWikiArchivalUnit extends LockssTestCase {
     String expected = ROOT_URL+DEFAULT_START;
     DefinableArchivalUnit NAu = makeAu(url, DEFAULT_START, DEFAULT_PERMISSION);
     
-    assertEquals(ListUtil.list(expected), NAu.getNewContentCrawlUrls());
+    assertEquals(ListUtil.list(expected), NAu.getStartUrls());
   }
   
   public void testShouldNotCachePageFromOtherSite() throws Exception {
@@ -167,9 +166,8 @@ public class TestMediaWikiArchivalUnit extends LockssTestCase {
     theDaemon.getNodeManager(NAu);
     CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(base.toString());
     BaseCachedUrlSet cus = new BaseCachedUrlSet(NAu, spec);
-    UrlCacher uc = NAu.makeUrlCacher("http://shadow2.stanford.edu/" + DEFAULT_START);
-
-    assertFalse(uc.shouldBeCached());
+    assertFalse(NAu.shouldBeCached(
+        "http://shadow2.stanford.edu/" + DEFAULT_START));
   }
 
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestRegistryPlugin.java,v 1.9 2014-07-11 23:34:25 tlipkis Exp $
+ * $Id: TestRegistryPlugin.java,v 1.10 2014-11-12 20:11:54 wkwilson Exp $
  */
 
 /*
@@ -84,10 +84,10 @@ public class TestRegistryPlugin extends LockssTestCase {
   public void testResultMap() throws Exception {
     CacheResultMap crm = m_plugin.getCacheResultMap();
     assertClass(CacheException.NoRetryDeadLinkException.class,
-		crm.mapException(null, null, 404, null));
-    assertNull(crm.mapException(null, null, 200, null));
+		crm.mapException(null, "", 404, null));
+    assertNull(crm.mapException(null, "", 200, null));
     assertEquals(null,
-		 crm.mapException(null, null,
+		 crm.mapException(null, "",
 				  new ContentValidationException.EmptyFile(),
 				  null));
   }

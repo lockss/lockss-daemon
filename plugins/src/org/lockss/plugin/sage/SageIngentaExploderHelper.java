@@ -1,5 +1,5 @@
 /*
- * $Id: SageIngentaExploderHelper.java,v 1.6 2009-09-05 18:03:27 dshr Exp $
+ * $Id: SageIngentaExploderHelper.java,v 1.7 2014-11-12 20:11:26 wkwilson Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.sage;
 
 import org.lockss.daemon.*;
+import org.lockss.plugin.base.BaseExploderHelper;
 import org.lockss.util.*;
 import org.lockss.crawler.Exploder;
 
@@ -64,7 +65,7 @@ import org.lockss.crawler.Exploder;
  * baseUrl, restOfUrl, headerFields fields are set.  Otherwise,
  * they are left null.
  */
-public class SageIngentaExploderHelper implements ExploderHelper {
+public class SageIngentaExploderHelper extends BaseExploderHelper {
   protected static final int ISSUE_AND_EXTENSION_INDEX = 3;
   protected static final int INDEX_VOLUME = 2;
   protected static final int INDEX_YEAR = 1;

@@ -1,5 +1,5 @@
 /*
- * $Id: CreativeCommonsRdfPermissionChecker.java,v 1.2 2013-11-29 11:08:09 thib_gc Exp $
+ * $Id: CreativeCommonsRdfPermissionChecker.java,v 1.3 2014-11-12 20:11:45 wkwilson Exp $
  */
 
 /*
@@ -43,7 +43,6 @@ import org.w3c.rdf.model.*;
 import org.w3c.rdf.syntax.*;
 import org.w3c.rdf.util.*;
 import org.xml.sax.*;
-
 import org.lockss.util.*;
 import org.lockss.state.*;
 
@@ -114,7 +113,7 @@ public class CreativeCommonsRdfPermissionChecker extends BasePermissionChecker {
    * Check for "Distribution" permission granted by a Creative Commons
    * License.
    */
-  public boolean checkPermission(Crawler.PermissionHelper pHelper,
+  public boolean checkPermission(Crawler.CrawlerFacade crawlFacade,
 				 Reader reader, String permissionUrl) {
     if (reader == null) {
       throw new NullPointerException("Called with null reader");
@@ -175,7 +174,7 @@ public class CreativeCommonsRdfPermissionChecker extends BasePermissionChecker {
       boolean res = model.contains(permitsDistribution)
 	|| model.contains(requiresDistribution);
       if (res) {
-	setAuAccessType(pHelper, AuState.AccessType.OpenAccess);
+        setAuAccessType(crawlFacade, AuState.AccessType.OpenAccess);
       }
       return res;
     } catch (ModelException ex) {

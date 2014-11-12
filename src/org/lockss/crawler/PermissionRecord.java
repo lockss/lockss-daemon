@@ -1,5 +1,5 @@
 /*
- * $Id: PermissionRecord.java,v 1.7 2007-01-22 22:10:09 troberts Exp $
+ * $Id: PermissionRecord.java,v 1.8 2014-11-12 20:11:23 wkwilson Exp $
  */
 
 /*
@@ -39,18 +39,15 @@ package org.lockss.crawler;
  * @version 0.0
  */
 public class PermissionRecord {
-  public static final int PERMISSION_UNCHECKED = 0;
-  public static final int PERMISSION_OK = 1;
-  public static final int PERMISSION_NOT_OK = 2;
-  public static final int PERMISSION_FETCH_FAILED = 3;
-  public static final int PERMISSION_MISSING = 4;
-  public static final int PERMISSION_REPOSITORY_ERROR = 5;
-  public static final int PERMISSION_NOT_IN_CRAWL_SPEC = 6;
-  public static final int PERMISSION_CRAWL_WINDOW_CLOSED = 7;
+  public enum PermissionStatus { PERMISSION_UNCHECKED, PERMISSION_OK,
+    PERMISSION_NOT_OK, PERMISSION_FETCH_FAILED, PERMISSION_MISSING,
+    PERMISSION_REPOSITORY_ERROR, PERMISSION_NOT_IN_CRAWL_SPEC,
+    PERMISSION_CRAWL_WINDOW_CLOSED}
 
   private String url;
   private String host;
-  private int status = PERMISSION_UNCHECKED;
+  private PermissionStatus status = 
+      PermissionStatus.PERMISSION_UNCHECKED;
 
   public PermissionRecord(String url, String host){
     if (url == null) {
@@ -71,11 +68,11 @@ public class PermissionRecord {
     return host;
   }
 
-  public int getStatus() {
+  public PermissionStatus getStatus() {
     return status;
   }
 
-  public void setStatus(int status) {
+  public void setStatus(PermissionStatus status) {
     this.status=status;
   }
 }

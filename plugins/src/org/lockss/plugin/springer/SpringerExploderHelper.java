@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerExploderHelper.java,v 1.8 2011-05-18 04:09:55 tlipkis Exp $
+ * $Id: SpringerExploderHelper.java,v 1.9 2014-11-12 20:11:42 wkwilson Exp $
  */
 
 /*
@@ -33,10 +33,11 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.springer;
 
 import java.util.*;
+
 import org.lockss.daemon.*;
-import org.lockss.daemon.ExploderHelper;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.base.BaseExploderHelper;
 import org.lockss.crawler.Exploder;
 
 /**
@@ -77,7 +78,7 @@ import org.lockss.crawler.Exploder;
  * baseUrl, restOfUrl, headerFields fields are set.  Otherwise,
  * they are left null.
  */
-public class SpringerExploderHelper implements ExploderHelper {
+public class SpringerExploderHelper extends BaseExploderHelper {
   private static final String BASE_URL_STEM = "http://springer.clockss.org/";
   static final String[] tags = { "JOU=", "VOL=", "ISU=", "ART=" };
   private static final String PUB_FLAG = "PUB=";

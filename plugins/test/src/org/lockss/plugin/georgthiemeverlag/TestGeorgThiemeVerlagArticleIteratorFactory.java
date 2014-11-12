@@ -1,5 +1,5 @@
 /*
- * $Id: TestGeorgThiemeVerlagArticleIteratorFactory.java,v 1.8 2014-07-21 03:28:30 tlipkis Exp $
+ * $Id: TestGeorgThiemeVerlagArticleIteratorFactory.java,v 1.9 2014-11-12 20:11:36 wkwilson Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.georgthiemeverlag;
 
+import java.io.InputStream;
 import java.util.Iterator;
 import java.util.Stack;
 import java.util.regex.Pattern;
@@ -41,6 +42,7 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.*;
 import org.lockss.test.*;
+import org.lockss.util.CIProperties;
 import org.lockss.util.Constants;
 import org.lockss.util.ListUtil;
 
@@ -175,29 +177,32 @@ public class TestGeorgThiemeVerlagArticleIteratorFactory extends ArticleIterator
     CachedUrl cuHtml = null;
     for (CachedUrl cu : AuUtil.getCuIterable(sau)) {
       if (cuPdf == null && 
-	  cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_PDF))
-	{
-	  cuPdf = cu;
-	}
+          cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_PDF))
+    	{
+    	  cuPdf = cu;
+    	}
       else if (cuHtml == null && 
-	       cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_HTML))
-	{
-	  cuHtml = cu;
-	}
+          cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_HTML))
+    	{
+    	  cuHtml = cu;
+    	}
       if (cuPdf != null && cuHtml != null) {
-	break;
+        break;
       }
     }
+      
     for (String url : urls) {
-      UrlCacher uc = au.makeUrlCacher(url);
       if (url.contains("html")) {
-	uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
+        storeContent(cuHtml.getUnfilteredInputStream(),
+            cuHtml.getProperties(), url);
       }
       else if (url.contains("pdf")) {
-	uc.storeContent(cuPdf.getUnfilteredInputStream(), cuPdf.getProperties());
+        storeContent(cuPdf.getUnfilteredInputStream(),
+            cuPdf.getProperties(), url);
       }
       else if (url.contains("abstract")) {
-	uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
+        storeContent(cuHtml.getUnfilteredInputStream(),
+            cuHtml.getProperties(), url);
       }
     }
     

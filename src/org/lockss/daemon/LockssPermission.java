@@ -1,5 +1,5 @@
 /*
- * $Id: LockssPermission.java,v 1.9 2013-11-29 11:17:59 thib_gc Exp $
+ * $Id: LockssPermission.java,v 1.10 2014-11-12 20:11:45 wkwilson Exp $
  */
 
 /*
@@ -32,7 +32,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.daemon;
 
 import java.util.*;
-import org.lockss.plugin.*;
 import org.lockss.state.*;
 
 /** The acceptable permission statements, one of which LOCKSS needs to see
@@ -49,10 +48,10 @@ public class LockssPermission {
   public static final String LOCKSS_OJS_PERMISSION_STRING =
     "This journal utilizes the LOCKSS system to create a distributed archiving system among participating libraries and permits those libraries to create permanent archives of the journal for purposes of preservation and restoration";
 
-  List permissionList;
+  List<PermissionChecker> permissionList;
 
   public LockssPermission() {
-    ArrayList lst = new ArrayList();
+    ArrayList<PermissionChecker> lst = new ArrayList<PermissionChecker>();
     StringPermissionChecker spc;
 
     spc = new StringPermissionChecker(LOCKSS_PERMISSION_STRING,
@@ -76,7 +75,7 @@ public class LockssPermission {
     permissionList = Collections.unmodifiableList(lst);
   }
 
-  public List getCheckers() {
+  public List<PermissionChecker> getCheckers() {
     return permissionList;
   }
 }

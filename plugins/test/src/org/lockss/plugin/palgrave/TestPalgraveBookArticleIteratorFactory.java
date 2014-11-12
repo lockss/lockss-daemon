@@ -1,4 +1,4 @@
-/* $Id: TestPalgraveBookArticleIteratorFactory.java,v 1.6 2014-10-30 20:59:56 aishizaki Exp $
+/* $Id: TestPalgraveBookArticleIteratorFactory.java,v 1.7 2014-11-12 20:11:58 wkwilson Exp $
  
 Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -28,7 +28,9 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.palgrave;
 
+import java.io.InputStream;
 import java.util.regex.Pattern;
+
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.ConfigParamDescr;
@@ -40,11 +42,15 @@ import org.lockss.plugin.CachedUrlSetNode;
 import org.lockss.plugin.PluginTestUtil;
 import org.lockss.plugin.SubTreeArticleIterator;
 import org.lockss.plugin.UrlCacher;
+import org.lockss.plugin.UrlData;
 import org.lockss.plugin.simulated.SimulatedArchivalUnit;
 import org.lockss.plugin.simulated.SimulatedContentGenerator;
 import org.lockss.test.ArticleIteratorTestCase;
+import org.lockss.util.CIProperties;
 import org.lockss.util.ListUtil;
+
 import java.util.Iterator;
+
 import org.lockss.util.Constants;
 
 /*
@@ -141,29 +147,30 @@ public class TestPalgraveBookArticleIteratorFactory extends ArticleIteratorTestC
     CachedUrl cuPdf = null;
     CachedUrl cuHtml = null;
     for (CachedUrl cu : AuUtil.getCuIterable(sau)) {
-        if (cuPdf == null 
-            && cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_PDF)) {
-          //log.info("pdf contenttype: " + cu.getContentType());
-          cuPdf = cu;
-        } else if (cuHtml == null 
-            && cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_HTML)) {
-          //log.info("html contenttype: " + cu.getContentType());
-          cuHtml = cu;
-        }
-	if (cuPdf != null && cuHtml != null) {
-	  break;
-	}
+      if (cuPdf == null
+          && cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_PDF)) {
+        //log.info("pdf contenttype: " + cu.getContentType());
+        cuPdf = cu;
+      } else if (cuHtml == null 
+          && cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_HTML)) {
+        //log.info("html contenttype: " + cu.getContentType());
+        cuHtml = cu;
+      }
+    	if (cuPdf != null && cuHtml != null) {
+    	  break;
+    	}
     }
+    CachedUrl cu;
     // store content using cached url content type and properties
-    UrlCacher uc;
     for (String url : urls) {
-      uc = au.makeUrlCacher(url);
       if(url.contains("pdf")){
-        uc.storeContent(cuPdf.getUnfilteredInputStream(), cuPdf.getProperties());
+        storeContent(cuPdf.getUnfilteredInputStream(), cuPdf.getProperties(), url);
       } else if (url.contains("html")) {
-        uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
+        storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties(), url);
       }
     }
+
+    
         
     // get article iterator, get article files and the appropriate urls according
     // to their roles.

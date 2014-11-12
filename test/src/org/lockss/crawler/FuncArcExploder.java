@@ -1,5 +1,5 @@
 /*
- * $Id: FuncArcExploder.java,v 1.13 2013-11-11 20:02:15 tlipkis Exp $
+ * $Id: FuncArcExploder.java,v 1.14 2014-11-12 20:11:27 wkwilson Exp $
  */
 
 /*
@@ -40,8 +40,9 @@ import org.apache.commons.collections.Bag;
 import org.apache.commons.collections.bag.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
+import org.lockss.exporter.FuncWarcRoundtrip.MyCrawlRule;
+import org.lockss.exporter.FuncWarcRoundtrip.MyExploderHelper;
 import org.lockss.plugin.*;
-import org.lockss.plugin.ExploderHelper;
 import org.lockss.plugin.simulated.*;
 import org.lockss.plugin.exploded.*;
 import org.lockss.repository.*;
@@ -165,7 +166,6 @@ public class FuncArcExploder extends LockssTestCase {
 
     props.setProperty("org.lockss.plugin.simulated.SimulatedContentGenerator.doArcFile", "true");
 
-    props.setProperty(FollowLinkCrawler.PARAM_EXPLODE_ARCHIVES, "true");
     props.setProperty(FollowLinkCrawler.PARAM_STORE_ARCHIVES, "true");
     String explodedPluginName =
       "org.lockss.crawler.FuncTarExploderMockExplodedPlugin";
@@ -183,7 +183,7 @@ public class FuncArcExploder extends LockssTestCase {
     crawlMgr = new NoPauseCrawlManagerImpl();
     theDaemon.setCrawlManager(crawlMgr);
     crawlMgr.initService(theDaemon);
-
+    
     // pluginMgr.setLoadablePluginsReady(true);
     theDaemon.setDaemonInited(true);
     pluginMgr.startService();
@@ -194,6 +194,7 @@ public class FuncArcExploder extends LockssTestCase {
 
     sau = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin.class,
 					     simAuConfig(tempDirPath));
+    sau.setUrlConsumerFactory(new ExplodingUrlConsumerFactory());
   }
 
   public void tearDown() throws Exception {
@@ -257,15 +258,8 @@ public class FuncArcExploder extends LockssTestCase {
     boolean res = crawlContent(good ? null : url[url.length - 1]);
     if (good) {
       assertTrue("Crawl failed", res);
-      if (false) assertTrue("Crawl should succeed but got " + lastCrawlResult +
-		 (lastCrawlMessage == null ? "" : " with " + lastCrawlMessage),
-		 lastCrawlResult == Crawler.STATUS_SUCCESSFUL);
     } else {
       assertFalse("Crawl succeeded", res);
-      if (false) assertTrue("Crawl should get STATUS_PLUGIN_ERROR but got " +
-		 lastCrawlResult +
-		 (lastCrawlMessage == null ? "" : " with " + lastCrawlMessage),
-		 lastCrawlResult == Crawler.STATUS_PLUGIN_ERROR);
       return;
     }
 
@@ -307,7 +301,7 @@ public class FuncArcExploder extends LockssTestCase {
       b.remove(iter.next(), 1);
     }
     // Permission pages get checked twice.  Hard to avoid that, so allow it
-    b.removeAll(sau.getCrawlSpec().getPermissionPages());
+    b.removeAll(sau.getPermissionUrls());
     // archives get checked twice - from checkThruFileTree & checkExplodedUrls
     b.remove(url2[url2.length - 1]);
     // This test is screwed up by the use of shouldBeCached() in
@@ -465,18 +459,15 @@ public class FuncArcExploder extends LockssTestCase {
 
   private boolean crawlContent(String bad) {
     log.debug("Crawling tree..." + (bad == null ? "" : " fail at " + bad));
-    List urls = sau.getNewContentCrawlUrls();
-    CrawlSpec spec =
-      new SpiderCrawlSpec(urls,
-			  urls, // permissionUrls
-			  new MyCrawlRule(), // crawl rules
-			  1,    // refetch depth
-			  null, // PermissionChecker
-			  null, // LoginPageChecker
-			  ".arc.gz$", // exploder pattern
-			  new MyExploderHelper(bad) );
+    Collection<String> urls = sau.getStartUrls();
+    sau.setStartUrls(urls);
+    sau.setRule(new MyCrawlRule());
+    sau.setExploderPattern(".arc.gz$");
+    sau.setExploderHelper(new MyExploderHelper(bad));
+    
     AuState maus = new MyMockAuState();
-    NewContentCrawler crawler = new NewContentCrawler(sau, spec, maus);
+    TestableFollowLinkCrawler crawler = new TestableFollowLinkCrawler(sau, maus);
+    crawler.setDaemonPermissionCheckers(ListUtil.list(new MockPermissionChecker(99)));
     crawler.setCrawlManager(crawlMgr);
     boolean res = crawler.doCrawl();
     lastCrawlResult = maus.getLastCrawlResult();
@@ -597,8 +588,39 @@ public class FuncArcExploder extends LockssTestCase {
       props.put(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
       ae.setAuProps(props);
     }
-  }
 
+    @Override
+    public void setWatchdog(LockssWatchdog wdog) {
+      //do nothing
+      
+    }
+
+    @Override
+    public void pokeWDog() {
+      //do nothing
+      
+    }
+  }
+  public class TestableFollowLinkCrawler extends FollowLinkCrawler {
+    public TestableFollowLinkCrawler(ArchivalUnit au, AuState aus) {
+      super(au, aus);    }
+
+    List<PermissionChecker> daemonPermissionCheckers;
+    
+    @Override
+    List<PermissionChecker> getDaemonPermissionCheckers() {
+      if(daemonPermissionCheckers != null) {
+        return daemonPermissionCheckers;
+      } else {
+        return super.getDaemonPermissionCheckers();
+      }
+    }
+    
+    public void setDaemonPermissionCheckers(List<PermissionChecker> pc) {
+      this.daemonPermissionCheckers = pc;
+    }
+  }
+  
   public static class MyPluginManager extends PluginManager {
     MyPluginManager() {
       super();

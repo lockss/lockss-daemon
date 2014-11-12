@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCachedUrlSet.java,v 1.19 2014-07-21 03:21:34 tlipkis Exp $
+ * $Id: TestBaseCachedUrlSet.java,v 1.20 2014-11-12 20:11:56 wkwilson Exp $
  */
 
 /*
@@ -700,8 +700,8 @@ public class TestBaseCachedUrlSet extends LockssTestCase {
       return new BaseCachedUrl(this, url);
     }
 
-    public UrlCacher makeUrlCacher(String url) {
-      return new BaseUrlCacher(this,url);
+    public UrlCacher makeUrlCacher(UrlData ud) {
+      return new DefaultUrlCacher(this, ud);
     }
 
     public FilterRule getFilterRule(String mimeType) {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestNationalWeatherAssociationArchivalUnit.java,v 1.1 2014-01-28 17:56:46 ldoan Exp $
+ * $Id: TestNationalWeatherAssociationArchivalUnit.java,v 1.2 2014-11-12 20:11:57 wkwilson Exp $
  */
 
 /*
@@ -158,22 +158,19 @@ public class TestNationalWeatherAssociationArchivalUnit
   private void shouldCacheTest(String url, boolean shouldCache,
                                ArchivalUnit au, CachedUrlSet cus) {
     log.info ("shouldCacheTest url: " + url);
-
-    UrlCacher uc = au.makeUrlCacher(url);
-    assertEquals(shouldCache, uc.shouldBeCached());
+    assertEquals(shouldCache, au.shouldBeCached(url));
   }
   
   public void testStartUrlConstruction() throws Exception {
     String expected = ROOT_URL + JID + "/include/publications" + YR + ".php";
-    assertEquals(ListUtil.list(expected), nwaAu.getNewContentCrawlUrls());
+    assertEquals(ListUtil.list(expected), nwaAu.getStartUrls());
   }
   
   public void testShouldNotCachePageFromOtherSite() throws Exception {
     theDaemon.getLockssRepository(nwaAu);
     theDaemon.getNodeManager(nwaAu);
-    UrlCacher uc = nwaAu.makeUrlCacher("http://shadow2.stanford.edu/"
-                               + JID + "/include/publications" + YR + ".php");
-    assertFalse(uc.shouldBeCached());
+    assertFalse(nwaAu.shouldBeCached("http://shadow2.stanford.edu/"
+        + JID + "/include/publications" + YR + ".php"));
   }
 
   public void testShouldDoNewContentCrawlTooEarly() throws Exception {

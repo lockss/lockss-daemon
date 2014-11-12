@@ -32,6 +32,7 @@ import java.util.Iterator;
 import java.util.Stack;
 import java.util.regex.Pattern;
 
+import org.apache.commons.io.IOUtils;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.ConfigParamDescr;
@@ -159,8 +160,9 @@ public class TestIgiGlobalBooksArticleIteratorFactory extends ArticleIteratorTes
     // add a URL with content to the "real" au
     // oddly, they'll all be html...the PDF URLs have an thml frameset so this is okay
     for (String url : urls) {
-      UrlCacher uc = au.makeUrlCacher(url);
-      uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
+      UrlData ud = new UrlData(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties(),url);
+      UrlCacher uc = au.makeUrlCacher(ud);
+      uc.storeContent();
     }
     
     Stack<String[]> expStack = new Stack<String[]>();

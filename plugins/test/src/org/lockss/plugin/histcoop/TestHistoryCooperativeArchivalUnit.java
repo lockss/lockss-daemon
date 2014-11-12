@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryCooperativeArchivalUnit.java,v 1.7 2012-08-08 07:19:52 tlipkis Exp $
+ * $Id: TestHistoryCooperativeArchivalUnit.java,v 1.8 2014-11-12 20:11:56 wkwilson Exp $
  */
 
 /*
@@ -158,8 +158,7 @@ public class TestHistoryCooperativeArchivalUnit extends LockssTestCase {
 
   private void shouldCacheTest(String url, boolean shouldCache,
 			       ArchivalUnit au, CachedUrlSet cus) {
-    UrlCacher uc = au.makeUrlCacher(url);
-    assertTrue(uc.shouldBeCached()==shouldCache);
+    assertTrue(au.shouldBeCached(url)==shouldCache);
   }
 
   public void testStartUrlConstruction() throws Exception {
@@ -167,7 +166,7 @@ public class TestHistoryCooperativeArchivalUnit extends LockssTestCase {
 
     String expectedStr = ROOT_URL+"journals/"+DIR+"/lockss-volume108.html";
     DefinableArchivalUnit hcAu = makeAu(url, 108, DIR);
-    assertEquals(ListUtil.list(expectedStr), hcAu.getNewContentCrawlUrls());
+    assertEquals(ListUtil.list(expectedStr), hcAu.getStartUrls());
   }
 
   public void testGetUrlStems() throws Exception {

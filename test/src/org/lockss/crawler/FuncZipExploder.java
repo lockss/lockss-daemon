@@ -1,5 +1,5 @@
 /*
- * $Id: FuncZipExploder.java,v 1.13 2012-08-08 07:15:46 tlipkis Exp $
+ * $Id: FuncZipExploder.java,v 1.14 2014-11-12 20:11:28 wkwilson Exp $
  */
 
 /*
@@ -38,10 +38,9 @@ import java.util.*;
 import org.apache.commons.collections.Bag;
 import org.apache.commons.collections.bag.*;
 import org.lockss.config.*;
+import org.lockss.crawler.FuncArcExploder.MyCrawlRule;
+import org.lockss.crawler.FuncArcExploder.MyExploderHelper;
 import org.lockss.daemon.*;
-// During conversion use old ExploderHelper interface in tests to ensure
-// daemon compatibility with old plugins
-import org.lockss.daemon.ExploderHelper;
 import org.lockss.plugin.*;
 // import org.lockss.plugin.ExploderHelper;
 import org.lockss.plugin.simulated.*;
@@ -132,7 +131,6 @@ public class FuncZipExploder extends LockssTestCase {
 
     props.setProperty("org.lockss.plugin.simulated.SimulatedContentGenerator.doZipFile", "true");
 
-    props.setProperty(FollowLinkCrawler.PARAM_EXPLODE_ARCHIVES, "true");
     props.setProperty(FollowLinkCrawler.PARAM_STORE_ARCHIVES, "true");
     String explodedPluginName =
       "org.lockss.crawler.FuncZipExploderMockExplodedPlugin";
@@ -157,6 +155,7 @@ String explodedPluginKey = pluginMgr.pluginKeyFromName(explodedPluginName);
 
     sau = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin.class,
 					     simAuConfig(tempDirPath));
+    sau.setUrlConsumerFactory(new ExplodingUrlConsumerFactory());
   }
 
   public void tearDown() throws Exception {
@@ -245,7 +244,7 @@ String explodedPluginKey = pluginMgr.pluginKeyFromName(explodedPluginName);
       b.remove(iter.next(), 1);
     }
     // Permission pages get checked twice.  Hard to avoid that, so allow it
-    b.removeAll(sau.getCrawlSpec().getPermissionPages());
+    b.removeAll(sau.getPermissionUrls());
     // archives get checked twice - from checkThruFileTree & checkExplodedUrls
     b.remove("http://www.example.com/content.zip");
     // This test is screwed up by the use of shouldBeCached() in
@@ -337,18 +336,14 @@ String explodedPluginKey = pluginMgr.pluginKeyFromName(explodedPluginName);
 
   private boolean crawlContent(String bad) {
     log.debug("Crawling tree..." + (bad == null ? "" : " fail at " + bad));
-    List urls = sau.getNewContentCrawlUrls();
-    CrawlSpec spec =
-      new SpiderCrawlSpec(urls,
-			  urls, // permissionUrls
-			  new MyCrawlRule(), // crawl rules
-			  1,    // refetch depth
-			  null, // PermissionChecker
-			  null, // LoginPageChecker
-			  ".zip$", // exploder pattern
-			  new MyExploderHelper(bad) );
+    Collection<String> urls = sau.getStartUrls();
+    sau.setStartUrls(urls);
+    sau.setRule(new MyCrawlRule());
+    sau.setExploderPattern(".zip$");
+    sau.setExploderHelper(new MyExploderHelper(bad));
+    
     AuState maus = new MyMockAuState();
-    NewContentCrawler crawler = new NewContentCrawler(sau, spec, maus);
+    FollowLinkCrawler crawler = new FollowLinkCrawler(sau, maus);
     crawler.setCrawlManager(crawlMgr);
     boolean res = crawler.doCrawl();
     lastCrawlResult = maus.getLastCrawlResult();
@@ -462,6 +457,18 @@ String explodedPluginKey = pluginMgr.pluginKeyFromName(explodedPluginName);
       ae.setBaseUrl(baseUrl);
       ae.setRestOfUrl(restOfUrl);
       ae.setHeaderFields(headerFields);
+    }
+
+    @Override
+    public void setWatchdog(LockssWatchdog wdog) {
+      // do nothing
+      
+    }
+
+    @Override
+    public void pokeWDog() {
+      // do nothing
+      
     }
   }
 

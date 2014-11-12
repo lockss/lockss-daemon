@@ -1,5 +1,5 @@
 /*
-n * $Id: PluginWellformednessTests.java,v 1.8 2014-10-15 06:46:00 tlipkis Exp $
+n * $Id: PluginWellformednessTests.java,v 1.9 2014-11-12 20:11:43 wkwilson Exp $
  */
 
 /*
@@ -158,7 +158,8 @@ public final class PluginWellformednessTests extends LockssTestCase {
     au.shouldBeCached(URL1);
     au.isLoginPageUrl(URL1);
     au.makeCachedUrl(URL1);
-    au.makeUrlCacher(URL1);
+    au.makeUrlCacher(
+        new UrlData(new StringInputStream(""), new CIProperties(), URL1));
     assertNotNull(au.siteNormalizeUrl(URL1));
 
     au.getUrlStems();
@@ -177,8 +178,8 @@ public final class PluginWellformednessTests extends LockssTestCase {
     RateLimiterInfo rli = au.getRateLimiterInfo();
     new RateLimiter(rli.getDefaultRate());
     au.getFetchRateLimiterKey();
-
-    assertNotNull(au.getNewContentCrawlUrls());
+    au.getPermissionUrls();
+    au.getStartUrls();
     au.getPerHostPermissionPath();
     au.makeExcludeUrlsFromPollsPatterns();
     au.makeNonSubstanceUrlPatterns();
@@ -186,16 +187,10 @@ public final class PluginWellformednessTests extends LockssTestCase {
     au.makeSubstancePredicate();
     au.getCrawlUrlComparator();
 
-    CrawlSpec cspec = au.getCrawlSpec();
-    cspec.getCrawlWindow();
-    cspec.getCrawlRule();
-    cspec.getStartingUrls();
-    cspec.getPermissionPages();
-    cspec.getPermissionChecker();
-    cspec.getLoginPageChecker();
-    cspec.getExploderPattern();
-    cspec.getCookiePolicy();
-    cspec.getExploderHelper();
+    au.getCrawlWindow();
+    au.makePermissionCheckers();
+    au.getLoginPageChecker();
+    au.getCookiePolicy();
 
     AuUtil.getConfigUserMessage(au);
     AuUtil.getProtocolVersion(au);

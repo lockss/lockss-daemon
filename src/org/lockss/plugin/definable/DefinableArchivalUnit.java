@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.102 2014-10-15 06:44:15 tlipkis Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.103 2014-11-12 20:11:59 wkwilson Exp $
  */
 
 /*
@@ -39,14 +39,15 @@ import org.apache.oro.text.regex.*;
 import org.lockss.config.*;
 import org.lockss.crawler.*;
 import org.lockss.daemon.*;
+import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.plugin.*;
-import org.lockss.plugin.ExploderHelper;
 import org.lockss.plugin.base.*;
 import org.lockss.util.*;
 import org.lockss.util.Constants.RegexpContext;
 import org.lockss.plugin.definable.DefinablePlugin.*;
-import org.lockss.oai.*;
+import org.lockss.plugin.exploded.ExplodingUrlConsumerFactory;
 import org.lockss.state.AuState;
+
 import static org.lockss.plugin.PrintfConverter.PrintfContext;
 
 /**
@@ -56,7 +57,8 @@ import static org.lockss.plugin.PrintfConverter.PrintfContext;
  * @author claire griffin
  * @version 1.0
  */
-public class DefinableArchivalUnit extends BaseArchivalUnit {
+public class DefinableArchivalUnit extends BaseArchivalUnit 
+    implements ExplodableArchivalUnit {
   static Logger log = Logger.getLogger("DefinableArchivalUnit");
 
   /** If true, crawl rules in definable plugins are case-independent by
@@ -75,7 +77,6 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   static final int CRAWL_RULE_CONTAINS_SET_THRESHOLD = 12;
 
   public static final String PREFIX_NUMERIC = "numeric_";
-  public static final String DEFAULT_AU_EXPLODER_PATTERN = null;
   public static final String KEY_AU_NAME = "au_name";
   public static final String KEY_AU_CRAWL_RULES = "au_crawlrules";
   public static final String KEY_AU_CRAWL_RULES_IGNORE_CASE =
@@ -157,6 +158,9 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   public static final String AU_COVERAGE_DEPTH_ATTR = "au_coverage_depth";
 
   protected ExternalizableMap definitionMap;
+  protected LoginPageChecker loginPageChecker;
+  protected String cookiePolicy;
+  protected int refetchDepth = -1;
 
   /** Context in which various printf templates are interpreted, for
    * argument type checking */
@@ -198,10 +202,10 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     return (DefinablePlugin)plugin;
   }
 
-  protected List<String> getPermissionPages() {
-    List res = convertUrlListList(KEY_AU_PERMISSION_URL);
+  public Collection<String> getPermissionUrls() {
+    List<String> res = convertUrlListList(KEY_AU_PERMISSION_URL);
     if (res == null) {
-      return super.getPermissionPages();
+      return super.getPermissionUrls();
     }
     return res;
   }
@@ -261,14 +265,8 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   }
 
   @Override
-  protected List<String> makeStartUrls() throws ConfigurationException {
+  public Collection<String> getStartUrls() {
     List<String> res = convertUrlListList(KEY_AU_START_URL);
-    if (res == null) {
-      String msg = "Bad start url pattern: "
-	+ getElementList(KEY_AU_START_URL);
-      log.error(msg);
-      throw new ConfigurationException(msg);
-    }
     log.debug2("Setting start urls " + res);
     return res;
   }
@@ -360,6 +358,15 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 						      AU_COVERAGE_DEPTH_ATTR),
 			     RegexpContext.Url);
   }
+  
+  public String getExploderPattern() {
+    return definitionMap.getString(KEY_AU_EXPLODER_PATTERN,
+        null);
+  }
+  
+  public ExploderHelper getExploderHelper() {
+    return getDefinablePlugin().getExploderHelper();
+  }
 
   public SubstancePredicate makeSubstancePredicate()
       throws ArchivalUnit.ConfigurationException, PluginException.LinkageError {
@@ -385,7 +392,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     Map<String,?> plugFeatureUrlMap =
       definitionMap.getMap(KEY_AU_FEATURE_URL_MAP, null);
     if (plugFeatureUrlMap == null) {
-      return Collections.EMPTY_MAP;
+      return Collections.emptyMap();
     } else {
       Map<String,List<String>> res = new HashMap<String,List<String>>();
       for (Map.Entry<String,?> ent : plugFeatureUrlMap.entrySet()) {
@@ -487,8 +494,14 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     return name;
   }
 
-  protected CrawlRule makeRules() throws LockssRegexpException {
-    CrawlRule rule = makeRules0();
+  protected CrawlRule makeRule() throws ConfigurationException {
+    CrawlRule rule;
+    try {
+      rule = makeRule0();
+    } catch(LockssRegexpException e) {
+      throw new ConfigurationException("Illegal regexp in crawl rules: " +
+          e.getMessage(), e);
+    }
     if (rule == null
 	|| !CurrentConfig.getBooleanParam(PARAM_CRAWL_RULES_INCLUDE_START,
 					  DEFAULT_CRAWL_RULES_INCLUDE_START)) {
@@ -500,7 +513,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 
     Collection<String> expUrls = new HashSet<String>();
 
-    List<String> perms = getPermissionPages();
+    Collection<String> perms = getPermissionUrls();
     if (perms != null) {
       for (String url : perms) {
 	if (rule.match(url) != CrawlRule.INCLUDE) {
@@ -508,7 +521,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 	}
       }
     }
-    List<String> starts = getNewContentCrawlUrls();
+    Collection<String> starts = getStartUrls();
     if (starts != null) {
       for (String url : starts) {
 	if (rule.match(url) != CrawlRule.INCLUDE) {
@@ -538,7 +551,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 				    defaultIgnoreCase);
   }
 
-  CrawlRule makeRules0() throws LockssRegexpException {
+  CrawlRule makeRule0() throws LockssRegexpException {
     Object rule = definitionMap.getMapElement(KEY_AU_CRAWL_RULES);
 
     if (rule instanceof String) {
@@ -569,77 +582,60 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     return null;
   }
 
-  protected OaiRequestData makeOaiData() {
-    URL oai_request_url =
-      paramMap.getUrl(ConfigParamDescr.OAI_REQUEST_URL.getKey());
-    String oaiRequestUrlStr = oai_request_url.toString();
-    String oai_au_spec = null;
-    try {
-      oai_au_spec = paramMap.getString(ConfigParamDescr.OAI_SPEC.getKey());
-    } catch (NoSuchElementException ex) {
-      // This is acceptable.  Null value will fetch all entries.
-      log.debug("No oai_spec for this plugin.");
+  public LoginPageChecker getLoginPageChecker() {
+    if(loginPageChecker == null) {
+      loginPageChecker = getDefinablePlugin().makeLoginPageChecker();
     }
-    log.debug3("Creating OaiRequestData with oaiRequestUrlStr" +
-	       oaiRequestUrlStr + " and oai_au_spec " + oai_au_spec);
-    return new OaiRequestData(oaiRequestUrlStr,
-                      "http://purl.org/dc/elements/1.1/",
-                      "identifier",
-                      oai_au_spec,
-                      "oai_dc"
-                      );
-
+    return loginPageChecker;
   }
-
-  protected CrawlSpec makeCrawlSpec() throws LockssRegexpException {
-    CrawlSpec res;
-    CrawlRule rule = makeRules();
-    String crawl_type = definitionMap.getString(DefinablePlugin.KEY_CRAWL_TYPE,
-                                                DefinablePlugin.DEFAULT_CRAWL_TYPE);
-    //XXX put makePermissionCheckersHere
-
-    if(crawl_type.equals(DefinablePlugin.CRAWL_TYPE_OAI)) {
-      boolean follow_links =
-          definitionMap.getBoolean(DefinablePlugin.KEY_FOLLOW_LINKS, true);
-      res = new OaiCrawlSpec(makeOaiData(), getPermissionPages(),
-			     null, rule, follow_links,
-			     makeLoginPageChecker());
-    } else { // for now use the default spider crawl spec
-      int depth = definitionMap.getInt(KEY_AU_REFETCH_DEPTH,
-				       DEFAULT_AU_REFETCH_DEPTH);
-      String exploderPattern = definitionMap.getString(KEY_AU_EXPLODER_PATTERN,
-						  DEFAULT_AU_EXPLODER_PATTERN);
-      ExploderHelper eh = getDefinablePlugin().getExploderHelper();
-
-      res = new SpiderCrawlSpec(getNewContentCrawlUrls(),
-				getPermissionPages(), rule, depth,
-				makePermissionChecker(),
-				makeLoginPageChecker(), exploderPattern, eh);
-      String cookiePolicy =
-          definitionMap.getString(KEY_AU_CRAWL_COOKIE_POLICY, null);
-      if (cookiePolicy != null) {
-	res.setCookiePolicy(cookiePolicy);
-      }
+  
+  public String getCookiePolicy() {
+    if(cookiePolicy == null) {
+      cookiePolicy = definitionMap.getString(KEY_AU_CRAWL_COOKIE_POLICY, null);
     }
-    
-    return res;
+    return cookiePolicy;
+  }
+  
+  public int getRefetchDepth() {
+    if(refetchDepth == -1) {
+      refetchDepth = definitionMap.getInt(KEY_AU_REFETCH_DEPTH,
+          DEFAULT_AU_REFETCH_DEPTH);
+    }
+    return refetchDepth;
+  }
+  
+  @Override
+  public UrlConsumerFactory getUrlConsumerFactory() {
+    if(getExploderPattern() != null) {
+      return new ExplodingUrlConsumerFactory();
+    }
+    return getDefinablePlugin().getUrlConsumerFactory();
+  }
+  
+  @Override
+  public UrlFetcher makeUrlFetcher(CrawlerFacade facade, String url) {
+    return getDefinablePlugin().makeUrlFetcher(facade, url);
+  }
+  
+  @Override
+  public CrawlSeed makeCrawlSeed() {
+    CrawlSeed ret;
+    ret = getDefinablePlugin().getCrawlSeed(this);
+    if(ret == null) {
+      ret = new BaseCrawlSeed(this);
+    }
+    return ret;
   }
 
-  protected LoginPageChecker makeLoginPageChecker() {
-    return getDefinablePlugin().makeLoginPageChecker();
-  }
-
-  protected PermissionChecker makePermissionChecker() {
+  public List<PermissionChecker> makePermissionCheckers() {
     PermissionCheckerFactory fact =
       getDefinablePlugin().getPermissionCheckerFactory();
     if (fact != null) {
       try {
-	List permissionCheckers = fact.createPermissionCheckers(this);
-	if (permissionCheckers.size() > 1) {
-	  log.error("Plugin specifies multiple permission checkers, but we " +
-		    "only support one: " + this);
-	}
-	return (PermissionChecker)permissionCheckers.get(0);
+    	List<PermissionChecker> permissionCheckers = fact.createPermissionCheckers(this);
+    	if(!permissionCheckers.isEmpty()) {
+    		return permissionCheckers;
+    	}
       } catch (PluginException e) {
 	throw new RuntimeException(e);
       }

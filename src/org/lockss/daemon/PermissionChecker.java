@@ -1,5 +1,5 @@
 /*
- * $Id: PermissionChecker.java,v 1.4 2014-06-05 20:16:34 tlipkis Exp $
+ * $Id: PermissionChecker.java,v 1.5 2014-11-12 20:11:45 wkwilson Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.daemon;
 
 import java.io.*;
+
 import org.lockss.util.urlconn.*;
 
 public interface PermissionChecker {
@@ -42,7 +43,7 @@ public interface PermissionChecker {
    * @param url url of the permission page we're checking
    * @return boolean true iff the permission object is found.
    */
-  public boolean checkPermission(Crawler.PermissionHelper pHelper,
+  public boolean checkPermission(Crawler.CrawlerFacade crawlFacade,
 				 Reader inputReader, String url)
       throws CacheException;
 }

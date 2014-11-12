@@ -1,5 +1,5 @@
 /*
- * $Id: TestSubstanceChecker.java,v 1.2 2012-07-09 07:53:42 tlipkis Exp $
+ * $Id: TestSubstanceChecker.java,v 1.3 2014-11-12 20:12:00 wkwilson Exp $
  */
 
 /*
@@ -34,8 +34,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.state;
 
 import java.util.*;
-import org.apache.oro.text.regex.*;
 
+import org.apache.oro.text.regex.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
@@ -51,16 +51,16 @@ public class TestSubstanceChecker extends LockssTestCase {
 
   MockArchivalUnit mau;
   SubstanceChecker checker;
-  CrawlSpec spec1 = new SpiderCrawlSpec(STARTS, PERMS, null, 1);
 
 
   public void setUp() throws Exception {
     super.setUp();
     mau = new MockArchivalUnit();
+    mau.setStartUrls(STARTS);
+    mau.setPermissionUrls(PERMS);
   }
 
   public void testConfig() throws Exception {
-    mau.setCrawlSpec(spec1);
     ConfigurationUtil.addFromArgs(SubstanceChecker.PARAM_DETECT_NO_SUBSTANCE_MODE,
 				  "None");
     checker = new SubstanceChecker(mau);
@@ -121,7 +121,6 @@ public class TestSubstanceChecker extends LockssTestCase {
   }
 
   public void testNonSubst() throws Exception {
-    mau.setCrawlSpec(spec1);
     mau.setNonSubstanceUrlPatterns(compileRegexps(ListUtil.list("one",
 								"two" )));
     checker = new SubstanceChecker(mau);
@@ -213,7 +212,6 @@ public class TestSubstanceChecker extends LockssTestCase {
   }
 
   public void testRedirNonSubstLast() throws Exception {
-    mau.setCrawlSpec(spec1);
     mau.setNonSubstanceUrlPatterns(compileRegexps(ListUtil.list("one", "redd" )));
     checker = new SubstanceChecker(mau);
     assertEquals(State.No, checker.hasSubstance());
@@ -227,7 +225,6 @@ public class TestSubstanceChecker extends LockssTestCase {
 
   public void testRedirNonSubstFirst() throws Exception {
     ConfigurationUtil.setFromArgs(SubstanceChecker.PARAM_DETECT_NO_SUBSTANCE_REDIRECT_URL, "First");
-    mau.setCrawlSpec(spec1);
     mau.setNonSubstanceUrlPatterns(compileRegexps(ListUtil.list("one", "redd" )));
     checker = new SubstanceChecker(mau);
     assertEquals(State.No, checker.hasSubstance());
@@ -241,7 +238,6 @@ public class TestSubstanceChecker extends LockssTestCase {
 
   public void testRedirNonSubstAll() throws Exception {
     ConfigurationUtil.setFromArgs(SubstanceChecker.PARAM_DETECT_NO_SUBSTANCE_REDIRECT_URL, "All");
-    mau.setCrawlSpec(spec1);
     mau.setNonSubstanceUrlPatterns(compileRegexps(ListUtil.list("one",
 								"redd",
 								"green")));

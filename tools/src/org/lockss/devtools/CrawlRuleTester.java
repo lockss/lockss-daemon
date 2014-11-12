@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRuleTester.java,v 1.37 2014-07-29 22:02:50 tlipkis Exp $
+ * $Id: CrawlRuleTester.java,v 1.38 2014-11-12 20:11:26 wkwilson Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import org.lockss.crawler.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
+import org.lockss.plugin.definable.DefinableArchivalUnit;
 import org.lockss.extractor.*;
 import org.lockss.rewriter.*;
 import org.lockss.util.*;
@@ -71,10 +72,10 @@ public class CrawlRuleTester extends Thread {
   public static final int TEST_SUMMARY_MESSAGE = 4;
 
   private String m_baseUrl;
-  private CrawlSpec m_crawlSpec;
   private int m_crawlDepth;
   private long m_crawlDelay;
   private int m_curDepth;
+  private ArchivalUnit m_au;
   private String m_outputFile = null;
   private  BufferedWriter m_outWriter = null;
   private Deadline fetchDeadline = Deadline.in(0);
@@ -93,7 +94,7 @@ public class CrawlRuleTester extends Thread {
   private TreeSet m_reported = new TreeSet();
 
   public CrawlRuleTester(int crawlDepth, long crawlDelay, String baseUrl,
-                         CrawlSpec crawlSpec) {
+                         ArchivalUnit au) {
     super("crawlrule tester");
     m_crawlDepth = crawlDepth;
     long minFetchDelay =
@@ -101,7 +102,7 @@ public class CrawlRuleTester extends Thread {
 				 BaseArchivalUnit.DEFAULT_MIN_FETCH_DELAY);
     m_crawlDelay = Math.max(crawlDelay, minFetchDelay);
     m_baseUrl = baseUrl;
-    m_crawlSpec = crawlSpec;
+    m_au = au;
 
   }
   /**
@@ -114,9 +115,9 @@ public class CrawlRuleTester extends Thread {
    * @param crawlSpec CrawlSpec
    */
   public CrawlRuleTester(String outFile, int crawlDepth, long crawlDelay,
-                  String baseUrl, CrawlSpec crawlSpec) {
+                  String baseUrl, ArchivalUnit au) {
 
-    this(crawlDepth, crawlDelay,baseUrl,crawlSpec);
+    this(crawlDepth, crawlDelay,baseUrl,au);
     m_outputFile = outFile;
   }
 
@@ -131,8 +132,8 @@ public class CrawlRuleTester extends Thread {
    */
   public CrawlRuleTester(BufferedWriter outWriter, int crawlDepth,
                          long crawlDelay,
-                         String baseUrl, CrawlSpec crawlSpec) {
-    this(crawlDepth, crawlDelay, baseUrl, crawlSpec);
+                         String baseUrl, ArchivalUnit au) {
+    this(crawlDepth, crawlDelay, baseUrl, au);
     m_outWriter = outWriter;
   }
 
@@ -147,8 +148,8 @@ public class CrawlRuleTester extends Thread {
    */
   public CrawlRuleTester(MessageHandler msgHandler, int crawlDepth,
                          long crawlDelay,
-                         String baseUrl, CrawlSpec crawlSpec) {
-    this(crawlDepth, crawlDelay, baseUrl, crawlSpec);
+                         String baseUrl, ArchivalUnit au) {
+    this(crawlDepth, crawlDelay, baseUrl, au);
     m_msgHandler = msgHandler;
   }
 
@@ -464,7 +465,7 @@ public class CrawlRuleTester extends Thread {
       try {
 	String normUrl = UrlUtil.normalizeUrl(url);
 	if (BaseCrawler.isSupportedUrlProtocol(normUrl) &&
-	    m_crawlSpec.isIncluded(normUrl)) {
+	    m_au.shouldBeCached(normUrl)) {
 	  m_incls.add(normUrl);
 	}
 	else {

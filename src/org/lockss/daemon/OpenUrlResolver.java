@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.61 2014-10-22 19:39:38 thib_gc Exp $
+ * $Id: OpenUrlResolver.java,v 1.62 2014-11-12 20:11:45 wkwilson Exp $
  */
 
 /*
@@ -1174,12 +1174,9 @@ public class OpenUrlResolver {
     // (not for OAICrawlSpec or other types of CrawlSpec)
     ArchivalUnit au = pluginMgr.getAuFromId(auid);
     if (au != null) {
-      CrawlSpec spec = au.getCrawlSpec();
-      if (spec instanceof SpiderCrawlSpec) {
-        List<String> urls = ((SpiderCrawlSpec)spec).getStartingUrls();
-        if (urls.size() > 0) {
-          return "rft_id=" + urls.get(0);
-        }
+      Collection<String> urls = au.getStartUrls();
+      if (urls.size() > 0) {
+        return "rft_id=" + urls.iterator().next();
       }
     }
     

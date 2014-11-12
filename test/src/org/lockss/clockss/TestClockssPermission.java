@@ -1,5 +1,5 @@
 /*
- * $Id: TestClockssPermission.java,v 1.6 2014-10-22 19:39:36 thib_gc Exp $
+ * $Id: TestClockssPermission.java,v 1.7 2014-11-12 20:11:56 wkwilson Exp $
  */
 
 /*
@@ -52,7 +52,7 @@ public class TestClockssPermission extends LockssPermissionCheckerTestCase {
 
   private boolean hasPermission(String page) throws IOException {
     return MiscTestUtil.hasPermission(new ClockssPermission().getCheckers(),
-				      page, pHelper);
+				      page, mcf);
   }
 
   public void testNoPermission() throws IOException {

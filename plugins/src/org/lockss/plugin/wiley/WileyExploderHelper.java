@@ -1,5 +1,5 @@
 /*
- * $Id: WileyExploderHelper.java,v 1.6 2011-05-18 04:09:55 tlipkis Exp $
+ * $Id: WileyExploderHelper.java,v 1.7 2014-11-12 20:11:59 wkwilson Exp $
  */
 
 /*
@@ -33,10 +33,11 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.wiley;
 
 import java.util.*;
+
 import org.lockss.daemon.*;
-import org.lockss.daemon.ExploderHelper;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.base.BaseExploderHelper;
 import org.lockss.crawler.Exploder;
 
 /**
@@ -78,7 +79,7 @@ import org.lockss.crawler.Exploder;
  * baseUrl, restOfUrl, headerFields fields are set.  Otherwise,
  * they are left null.
  */
-public class WileyExploderHelper implements ExploderHelper {
+public class WileyExploderHelper extends BaseExploderHelper {
   public static final String BASE_URL_STEM = "http://wiley.clockss.org/";
   private static final int JOU_INDEX = 0;
   private static final int YER_INDEX = 1;

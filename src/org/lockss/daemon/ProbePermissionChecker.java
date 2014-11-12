@@ -1,5 +1,5 @@
 /*
- * $Id: ProbePermissionChecker.java,v 1.25 2014-06-05 20:17:12 tlipkis Exp $
+ * $Id: ProbePermissionChecker.java,v 1.26 2014-11-12 20:11:45 wkwilson Exp $
  */
 
 /*
@@ -36,9 +36,8 @@ import java.io.*;
 
 import org.lockss.plugin.*;
 import org.lockss.util.*;
-import org.lockss.config.*;
 import org.lockss.crawler.*;
-import org.lockss.crawler.BaseCrawler.StorePermissionScheme;
+import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.extractor.*;
 
 /**
@@ -48,29 +47,34 @@ import org.lockss.extractor.*;
  */
 
 public class ProbePermissionChecker implements PermissionChecker {
-
+  private static final Logger logger = 
+      Logger.getLogger(ProbePermissionChecker.class);
   protected String probeUrl = null;
-
-  private static Logger logger = Logger.getLogger(ProbePermissionChecker.class);
-
   protected ArchivalUnit au;
 
+  
+
+  public ProbePermissionChecker() {
+  }
+  
+  /** @deprecated use the no arg version */
   public ProbePermissionChecker(ArchivalUnit au) {
-    if (au == null) {
-      throw new NullPointerException("Called with null archival unit");
-    }
-    this.au = au;
   }
 
   // For compatibility with plugins that supply a LoginPageChecker (which
   // is not used)
-  /** @deprecated use the single arg version */
+  /** @deprecated use the no arg version */
   public ProbePermissionChecker(LoginPageChecker checker, ArchivalUnit au) {
-    this(au);
   }
-
-  public boolean checkPermission(Crawler.PermissionHelper pHelper,
+  
+  public boolean checkPermission(Crawler.PermissionHelper crawlFacade,
+      Reader inputReader, String permissionUrl) {
+    return checkPermission((CrawlerFacade)crawlFacade, inputReader, permissionUrl);
+  }
+  
+  public boolean checkPermission(CrawlerFacade crawlFacade,
 				 Reader inputReader, String permissionUrl) {
+    au = crawlFacade.getAu();
     probeUrl = null;
     CustomHtmlLinkExtractor extractor = new CustomHtmlLinkExtractor();
     logger.debug3("Checking permission on "+permissionUrl);
@@ -80,42 +84,23 @@ public class ProbePermissionChecker implements PermissionChecker {
       extractor.extractUrls(au, new ReaderInputStream(inputReader), null,
 			       permissionUrl, new MyLinkExtractorCallback());
     } catch (IOException ex) {
-      logger.error("Exception trying to parse permission url "+permissionUrl,
+      logger.error("Exception trying to parse permission url " + permissionUrl,
 		   ex);
-      return false;
+      return true;
     }
     if (probeUrl != null) {
-      logger.debug3("Found probeUrl "+probeUrl);
-      BufferedInputStream is = null;
-      try {
-	UrlCacher uc = pHelper.makePermissionUrlCacher(probeUrl);
- 	is = new BufferedInputStream(uc.getUncachedInputStream());
-	logger.debug3("Non-login page: " + probeUrl);
-
-	// Retain compatibility with legacy behavior of not storing probe
-	// permission pages.
-	Configuration config = ConfigManager.getCurrentConfig();
-	StorePermissionScheme sps =
-	  (StorePermissionScheme)config.getEnum(StorePermissionScheme.class,
-						BaseCrawler.PARAM_STORE_PERMISSION_SCHEME,
-						BaseCrawler.DEFAULT_STORE_PERMISSION_SCHEME);
- 	if (StorePermissionScheme.Legacy != sps) {
-	  pHelper.storePermissionPage(uc, is);
-	}
-	return true;
-      } catch (org.lockss.util.urlconn.CacheException.PermissionException ex) {
-	logger.debug3("Found a login page");
-	return false;
-      } catch (IOException ex) {
-	logger.error("Exception trying to check for login page "+probeUrl, ex);
-	return false;
-      } finally {
-	IOUtil.safeClose(is);
-      }	
+      if (au.shouldBeCached(probeUrl)) {
+        crawlFacade.addToPermissionProbeQueue(probeUrl);
+        return true;
+      } else {
+        logger.warning("Probe url outside of crawl spec counting as no"
+            + " permission on " + permissionUrl);
+        return false;
+      }
     } else {
-      logger.warning("Didn't find a probe URL on "+permissionUrl);
+      logger.warning("Unable to find probe url on " + permissionUrl);
+      return true;
     }
-    return false;
   }
 
 

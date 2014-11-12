@@ -1,5 +1,5 @@
 /*
- * $Id: TestMichiganStateUniversityExtensionArticleIteratorFactory.java,v 1.3 2014-07-21 03:28:29 tlipkis Exp $
+ * $Id: TestMichiganStateUniversityExtensionArticleIteratorFactory.java,v 1.4 2014-11-12 20:12:02 wkwilson Exp $
  */
 
 /*
@@ -136,13 +136,15 @@ public class TestMichiganStateUniversityExtensionArticleIteratorFactory
     CachedUrl cuPdf = null;
     for (CachedUrl cu : AuUtil.getCuIterable(sau)) {
       if (cuPdf == null && cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_PDF)) {
-	cuPdf = cu;
-	break;
+        cuPdf = cu;
+        break;
       }
     }
-    for (String url : urls) {
-      UrlCacher uc = au.makeUrlCacher(url);
-      uc.storeContent(cuPdf.getUnfilteredInputStream(), cuPdf.getProperties());
+    for(String url : urls) {
+      UrlCacher uc = au.makeUrlCacher(
+          new UrlData(cuPdf.getUnfilteredInputStream(),
+              cuPdf.getProperties(), url));
+      uc.storeContent();
     }
     
     Stack<String[]> expStack = new Stack<String[]>();

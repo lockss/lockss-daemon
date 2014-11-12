@@ -1,5 +1,5 @@
 /*
- * $Id: ClockssPermission.java,v 1.4 2013-11-29 11:17:59 thib_gc Exp $
+ * $Id: ClockssPermission.java,v 1.5 2014-11-12 20:11:27 wkwilson Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ public class ClockssPermission {
   public static final String CLOCKSS_PERMISSION_STRING =
   "CLOCKSS system has permission to ingest, preserve, and serve this Archival Unit";
 
-  ArrayList permissionList = new ArrayList();
+  ArrayList<PermissionChecker> permissionList = new ArrayList<PermissionChecker>();
 
   public ClockssPermission() {
     StringPermissionChecker spc =
@@ -53,7 +53,7 @@ public class ClockssPermission {
     permissionList.add(new CreativeCommonsPermissionChecker());
   }
 
-  public List getCheckers() {
+  public List<PermissionChecker> getCheckers() {
     return Collections.unmodifiableList(permissionList);
   }
 }

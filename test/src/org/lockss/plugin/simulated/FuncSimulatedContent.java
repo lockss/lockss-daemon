@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedContent.java,v 1.81 2014-07-21 03:19:12 tlipkis Exp $
+ * $Id: FuncSimulatedContent.java,v 1.82 2014-11-12 20:11:37 wkwilson Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.repository.*;
 import org.lockss.plugin.*;
-import org.lockss.crawler.NewContentCrawler;
+import org.lockss.crawler.FollowLinkCrawler;
 import org.lockss.state.HistoryRepositoryImpl;
 import junit.framework.*;
 
@@ -143,11 +143,9 @@ public class FuncSimulatedContent extends LockssTestCase {
     createContent(sau1);
     crawlContent(sau1);
     checkContent(sau1);
-    doDamageRemoveTest(sau1);	       // must be before content read again
     checkFilter(sau1);
     hashContent(sau1);
 
-    // this resets AU's config, do last to avoid messing up toBeDamaged set
   }
 
   public void testDualContentHash() throws Exception {
@@ -250,10 +248,8 @@ public class FuncSimulatedContent extends LockssTestCase {
 
   protected void crawlContent(SimulatedArchivalUnit sau) {
     log.debug("crawlContent()");
-    CrawlSpec spec =
-      new SpiderCrawlSpec(sau.getNewContentCrawlUrls(), null);
     Crawler crawler =
-      new NoCrawlEndActionsNewContentCrawler(sau, spec, new MockAuState());
+      new NoCrawlEndActionsFollowLinkCrawler(sau, new MockAuState());
     crawler.doCrawl();
   }
 
@@ -416,18 +412,6 @@ public class FuncSimulatedContent extends LockssTestCase {
       throws IOException {
     checkUrlContent(sau, "/001file.txt", 1, 0, 0, false, false);
     checkUrlContent(sau, "/branch1/branch1/001file.txt", 1, 2, 1, true, false);
-    checkUrlContent(sau, DAMAGED_CACHED_URL, 2, 2, 2, false, true);
-  }
-
-  protected void doDamageRemoveTest(SimulatedArchivalUnit sau)
-      throws Exception {
-    /* Cache the file again; this time the damage should be gone */
-    String file = sau.getUrlRoot() + DAMAGED_CACHED_URL;
-    UrlCacher uc = sau.makeUrlCacher(file);
-    BitSet fetchFlags = new BitSet();
-    fetchFlags.set(UrlCacher.REFETCH_FLAG);
-    uc.setFetchFlags(fetchFlags);
-    uc.cache();
     checkUrlContent(sau, DAMAGED_CACHED_URL, 2, 2, 2, false, false);
   }
 

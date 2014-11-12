@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.127 2014-10-22 19:39:34 thib_gc Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.128 2014-11-12 20:11:54 wkwilson Exp $
  */
 
 /*
@@ -809,13 +809,7 @@ public class ArchivalUnitStatus
 	numRows = defaultNumRows;
       }
 
-      CrawlSpec spec = au.getCrawlSpec();
-      List<String> startUrls;
-      if (spec instanceof SpiderCrawlSpec) {
-	startUrls = ((SpiderCrawlSpec)spec).getStartingUrls();
-      } else {
-	startUrls = Collections.EMPTY_LIST;
-      }
+      Collection<String> startUrls = au.getStartUrls();
 
       List rowL = new ArrayList();
       Iterator cusIter = au.getAuCachedUrlSet().contentHashIterator();
@@ -869,7 +863,7 @@ public class ArchivalUnitStatus
     }
 
     private Map makeRow(ArchivalUnit au, RepositoryNode node,
-			CachedUrl cu, List<String> startUrls) {
+			CachedUrl cu, Collection<String> startUrls) {
       boolean hasContent = node.hasContent();
       String url = null;
       boolean isStartUrl = false;
@@ -1093,7 +1087,7 @@ public class ArchivalUnitStatus
 					    disp));
       }
 
-      CrawlWindow window = au.getCrawlSpec().getCrawlWindow();
+      CrawlWindow window = au.getCrawlWindow();
       if (window != null) {
 	String wmsg = window.toString();
 	if (wmsg.length() > 140) {

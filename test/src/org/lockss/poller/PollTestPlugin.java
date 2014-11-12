@@ -1,5 +1,5 @@
 /*
- * $Id: PollTestPlugin.java,v 1.15 2006-06-04 06:27:17 tlipkis Exp $
+ * $Id: PollTestPlugin.java,v 1.16 2014-11-12 20:11:54 wkwilson Exp $
  */
 
 /*
@@ -134,14 +134,13 @@ public class PollTestPlugin {
 
   public static class PTArchivalUnit extends MockArchivalUnit {
 
-    public PTArchivalUnit(CrawlSpec spec) {
-      super(spec);
+    public PTArchivalUnit() {
     }
 
     public static MockArchivalUnit createFromListOfRootUrls(String[] rootUrls) {
-      CrawlSpec rootSpec =
-	new SpiderCrawlSpec(ListUtil.fromArray(rootUrls), null);
-      return new PTArchivalUnit(rootSpec);
+      PTArchivalUnit pta = new PTArchivalUnit();
+      pta.setStartUrls(ListUtil.fromArray(rootUrls));
+      return pta;
     }
 
      public CachedUrlSet makeCachedUrlSet(CachedUrlSetSpec cuss) {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestSEGArchivalUnit.java,v 1.1 2014-09-04 03:16:35 ldoan Exp $
+ * $Id: TestSEGArchivalUnit.java,v 1.2 2014-11-12 20:12:00 wkwilson Exp $
  */
 
 /*
@@ -165,24 +165,21 @@ public class TestSEGArchivalUnit
   private void shouldCacheTest(String url, boolean shouldCache,
                                ArchivalUnit au, CachedUrlSet cus) {
     log.info ("shouldCacheTest url: " + url);
-
-    UrlCacher uc = au.makeUrlCacher(url);
-    assertEquals(shouldCache, uc.shouldBeCached());
+    assertEquals(shouldCache, au.shouldBeCached(url));
   }
   
   public void testStartUrlConstruction() throws Exception {
     String expected = ROOT_URL + "clockss/" + JOURNAL_ID + "/" 
                       + VOLUME_NAME + "/index.html";
     assertEquals(ListUtil.list(expected), 
-                 segAu.getNewContentCrawlUrls());
+                 segAu.getStartUrls());
   }
   
   public void testShouldNotCachePageFromOtherSite() throws Exception {
     theDaemon.getLockssRepository(segAu);
     theDaemon.getNodeManager(segAu);
-    UrlCacher uc = segAu.makeUrlCacher(
-        "http://shadow2.stanford.edu/toc/segj/2013/2");
-    assertFalse(uc.shouldBeCached());
+    assertFalse(segAu.shouldBeCached(
+        "http://shadow2.stanford.edu/toc/segj/2013/2"));
   }
 
   public void testShouldDoNewContentCrawlTooEarly() throws Exception {

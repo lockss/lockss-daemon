@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockHasher.java,v 1.28 2014-10-22 19:39:36 thib_gc Exp $
+ * $Id: TestBlockHasher.java,v 1.29 2014-11-12 20:11:56 wkwilson Exp $
  */
 
 /*
@@ -462,7 +462,7 @@ public class TestBlockHasher extends LockssTestCase {
 
   void enableLocalHash(String blockHasherAlg, String urlCacherAlg) {
     enableLocalHash(blockHasherAlg);
-    ConfigurationUtil.addFromArgs(BaseUrlCacher.PARAM_CHECKSUM_ALGORITHM,
+    ConfigurationUtil.addFromArgs(DefaultUrlCacher.PARAM_CHECKSUM_ALGORITHM,
 				  urlCacherAlg);
   }
 

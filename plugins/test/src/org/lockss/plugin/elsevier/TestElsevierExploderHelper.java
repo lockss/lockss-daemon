@@ -1,7 +1,7 @@
 package org.lockss.plugin.elsevier;
 
 import java.io.*;
-import org.lockss.daemon.CrawlSpec;
+
 import org.lockss.test.LockssTestCase;
 import org.lockss.daemon.ArchiveEntry;
 import org.lockss.util.CIProperties;
@@ -46,7 +46,6 @@ public class TestElsevierExploderHelper extends LockssTestCase {
 	  ArchiveEntry ae = new ArchiveEntry(issuePath[j] + articlePath[k] +
 					     pdfPath, (long)7654, (long)0,
 					     (InputStream) null,
-					     (CrawlSpec) null,
 					     (Exploder) null,
 					     archiveName);
 	  ElsevierExploderHelper eeh = new ElsevierExploderHelper();
@@ -73,7 +72,6 @@ public class TestElsevierExploderHelper extends LockssTestCase {
 	  ArchiveEntry ae = new ArchiveEntry(issuePath[j] + articlePath[k] +
 					     xmlPath, (long)76543, (long)0,
 					     (InputStream) null,
-					     (CrawlSpec) null,
 					     (Exploder) null,
 					     archiveName);
 	  ElsevierExploderHelper eeh = new ElsevierExploderHelper();
@@ -98,7 +96,6 @@ public class TestElsevierExploderHelper extends LockssTestCase {
 	  ArchiveEntry ae = new ArchiveEntry(issuePath[j] + articlePath[k] +
 					     jpgPath, (long)7, (long)0,
 					     (InputStream) null,
-					     (CrawlSpec) null,
 					     (Exploder) null,
 					     archiveName);
 	  ElsevierExploderHelper eeh = new ElsevierExploderHelper();
@@ -123,7 +120,6 @@ public class TestElsevierExploderHelper extends LockssTestCase {
 					     issuePath[j] + articlePath[k] +
 					     pdfPath, (long)123456, (long)0,
 					     (InputStream) null,
-					     (CrawlSpec) null,
 					     (Exploder) null,
 					     archiveName);
 	  ElsevierExploderHelper eeh = new ElsevierExploderHelper();
@@ -145,7 +141,7 @@ public class TestElsevierExploderHelper extends LockssTestCase {
 
   public void testProcessShortName() throws Exception {
     String archiveName = "http://www.exmp.com/" + journalPath[0] + ".tar";
-    ArchiveEntry ae = new ArchiveEntry(shortPath, 7, 0, null, null, null,
+    ArchiveEntry ae = new ArchiveEntry(shortPath, 7, 0, null, null,
 				       archiveName);
     ElsevierExploderHelper eeh = new ElsevierExploderHelper();
 
@@ -158,7 +154,7 @@ public class TestElsevierExploderHelper extends LockssTestCase {
   public void testProcessIgnoredName() throws Exception {
     for (int i = 0; i < ignorePath.length; i++) {
       String archiveName = "http://www.exmp.com/" + journalPath[0] + ".tar";
-      ArchiveEntry ae = new ArchiveEntry(ignorePath[i], 7, 0, null, null, null,
+      ArchiveEntry ae = new ArchiveEntry(ignorePath[i], 7, 0, null, null,
 					 archiveName);
       ElsevierExploderHelper eeh = new ElsevierExploderHelper();
       

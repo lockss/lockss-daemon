@@ -1,5 +1,5 @@
 /*
- * $Id: TestEditableDefinablePlugin.java,v 1.41 2014-07-11 23:32:58 tlipkis Exp $
+ * $Id: TestEditableDefinablePlugin.java,v 1.42 2014-11-12 20:11:54 wkwilson Exp $
  */
 
 /*
@@ -112,7 +112,7 @@ public class TestEditableDefinablePlugin
         "org.lockss.util.urlconn.CacheException$NoRetryDeadLinkException";
     Class expected = Class.forName(name);
     Class actual = ( (HttpResultMap) edPlugin.getCacheResultMap()).
-      mapException(null, null, 404, null).getClass();
+      mapException(null, "", 404, null).getClass();
     assertEquals("default 404", expected, actual);
 
     // test remapping a 404

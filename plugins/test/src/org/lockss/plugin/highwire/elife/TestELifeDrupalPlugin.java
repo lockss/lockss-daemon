@@ -1,5 +1,5 @@
 /*
- * $Id: TestELifeDrupalPlugin.java,v 1.1 2014-06-07 02:32:51 etenbrink Exp $
+ * $Id: TestELifeDrupalPlugin.java,v 1.2 2014-11-12 20:11:59 wkwilson Exp $
  */
 
 /*
@@ -99,8 +99,7 @@ public class TestELifeDrupalPlugin extends LockssTestCase {
     DefinableArchivalUnit au = makeAuFromProps(props);
     assertEquals("HighWire eLife Drupal Plugin, Base URL http://www.example.com/, Volume 2013",
         au.getName());
-    SpiderCrawlSpec spec = (SpiderCrawlSpec)au.getCrawlSpec();
-    assertEquals(ListUtil.list(starturl), spec.getStartingUrls());
+    assertEquals(ListUtil.list(starturl), au.getStartUrls());
   }
   
   public void testGetPluginId() {

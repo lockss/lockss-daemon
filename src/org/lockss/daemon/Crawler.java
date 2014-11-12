@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.60 2014-07-28 21:18:06 clairegriffin Exp $
+ * $Id: Crawler.java,v 1.61 2014-11-12 20:11:45 wkwilson Exp $
  */
 
 /*
@@ -33,13 +33,14 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.daemon;
 
 import java.io.*;
-import java.io.BufferedInputStream;
 import java.util.*;
 
 import org.apache.commons.collections.set.ListOrderedSet;
 import org.apache.commons.collections.map.LinkedMap;
 import org.lockss.util.*;
+import org.lockss.util.urlconn.CacheException;
 import org.lockss.plugin.*;
+import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 import org.lockss.crawler.*;
 
 /**
@@ -55,8 +56,6 @@ public interface Crawler {
   public enum Type {
     NEW_CONTENT("New Content"),
     REPAIR("Repair"),
-    BACKGROUND("Background"),		// not used
-    OAI("OAI"),
     AJAX("AJAX");
 
     final String printString;
@@ -130,14 +129,13 @@ public interface Crawler {
   /**
    * Returns an int representing the status of this crawler
    */
-  public CrawlerStatus getStatus();
+  public CrawlerStatus getCrawlerStatus();
 
   /** Store the crawl pool key */
   public void setCrawlPool(String key);
 
   /** Return the previously stored crawl pool key */
   public String getCrawlPool();
-
 
   /**
    * Encapsulation for the methods that the PermissionMap needs from a
@@ -157,18 +155,45 @@ public interface Crawler {
      * @param url
      * @return UrlCacher for the given URL
      */
-    public UrlCacher makePermissionUrlCacher(String url);
-
-    public BufferedInputStream resetInputStream(BufferedInputStream is,
-						String url)
-	throws IOException;
-
-    public void storePermissionPage(UrlCacher uc, BufferedInputStream is)
-	throws IOException;
+    public UrlFetcher makePermissionUrlFetcher(String url);
 
     public void setPreviousContentType(String previousContentType);
 
     public CrawlerStatus getCrawlerStatus();
 
   }
+  
+  public static interface CrawlerFacade extends PermissionHelper {
+    
+    public void addToFailedUrls(String url);
+    
+    public void addToFetchQueue(CrawlUrlData curl);
+    
+    public void addToParseQueue(CrawlUrlData curl);
+    
+    public void addToPermissionProbeQueue(String probeUrl);
+
+    public void setPreviousContentType(String previousContentType);
+    
+    public CrawlerStatus getCrawlerStatus();
+    
+    public ArchivalUnit getAu();
+
+    public boolean isAborted();
+
+    public UrlFetcher makePermissionUrlFetcher(String url);
+
+    public UrlCacher makeUrlCacher(UrlData ud);
+    
+    public boolean hasPermission(String url);
+    
+    public long getRetryDelay(CacheException ce);
+    
+    public int getRetryCount(CacheException ce);
+    
+    public int permissonStreamResetMax();
+    
+  }
+  
+
 }

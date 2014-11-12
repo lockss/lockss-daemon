@@ -1,5 +1,5 @@
 /*
- * $Id: TestJstorArchivalUnit.java,v 1.6 2014-08-27 20:43:55 alexandraohlson Exp $
+ * $Id: TestJstorArchivalUnit.java,v 1.7 2014-11-12 20:12:02 wkwilson Exp $
  */
 
 /*
@@ -197,8 +197,7 @@ public class TestJstorArchivalUnit extends LockssTestCase {
   
   private void shouldCacheTest(String url, boolean shouldCache,
       ArchivalUnit au, CachedUrlSet cus) {
-    UrlCacher uc = au.makeUrlCacher(url);
-    assertEquals(shouldCache, uc.shouldBeCached());
+    assertEquals(shouldCache, au.shouldBeCached(url));
   }
   
   public void testStartUrlConstruction() throws Exception {
@@ -206,7 +205,7 @@ public class TestJstorArchivalUnit extends LockssTestCase {
     // 4 digit
     String expected = ROOT_URL+"lockss/xxxx/123/index.html";
     DefinableArchivalUnit JSAu = makeAu(true, 123, "xxxx");
-    assertEquals(ListUtil.list(expected), JSAu.getNewContentCrawlUrls());
+    assertEquals(ListUtil.list(expected), JSAu.getStartUrls());
   }
   
   public void testShouldNotCachePageFromOtherSite() throws Exception {
@@ -218,9 +217,8 @@ public class TestJstorArchivalUnit extends LockssTestCase {
     theDaemon.getNodeManager(JSAu);
     CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(ROOT_URL);
     BaseCachedUrlSet cus = new BaseCachedUrlSet(JSAu, spec);
-    UrlCacher uc = JSAu.makeUrlCacher("http://shadow2.stanford.edu/lockss/xxxx/123/index.html");
-
-    assertFalse(uc.shouldBeCached());
+    assertFalse(JSAu.shouldBeCached(
+        "http://shadow2.stanford.edu/lockss/xxxx/123/index.html"));
   }
 
 

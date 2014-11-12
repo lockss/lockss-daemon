@@ -1,5 +1,5 @@
 /*
- * $Id: TestCulturalLogicArchivalUnit.java,v 1.6 2012-08-08 07:19:52 tlipkis Exp $
+ * $Id: TestCulturalLogicArchivalUnit.java,v 1.7 2014-11-12 20:11:53 wkwilson Exp $
  */
 
 /*
@@ -138,8 +138,7 @@ public class TestCulturalLogicArchivalUnit extends LockssTestCase {
 
   private void shouldCacheTest(String url, boolean shouldCache,
 			       ArchivalUnit au, CachedUrlSet cus) {
-    UrlCacher uc = au.makeUrlCacher(url);
-    assertTrue(uc.shouldBeCached()==shouldCache);
+    assertTrue(au.shouldBeCached(url)==shouldCache);
   }
 
   public void testStartUrlConstruction() throws Exception {
@@ -147,7 +146,7 @@ public class TestCulturalLogicArchivalUnit extends LockssTestCase {
 
     String expectedStr = ROOT_URL+"lockss-2003.html";
     DefinableArchivalUnit clAu = makeAu(url, "2003");
-    assertEquals(ListUtil.list(expectedStr), clAu.getNewContentCrawlUrls());
+    assertEquals(ListUtil.list(expectedStr), clAu.getStartUrls());
   }
 
   public void testGetUrlStems() throws Exception {

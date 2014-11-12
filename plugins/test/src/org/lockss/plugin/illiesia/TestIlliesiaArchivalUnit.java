@@ -1,5 +1,5 @@
 /*
- * $Id: TestIlliesiaArchivalUnit.java,v 1.1 2014-02-01 19:09:09 ldoan Exp $
+ * $Id: TestIlliesiaArchivalUnit.java,v 1.2 2014-11-12 20:11:58 wkwilson Exp $
  */
 
 /*
@@ -137,21 +137,19 @@ public class TestIlliesiaArchivalUnit extends LockssTestCase {
   private void shouldCacheTest(String url, boolean shouldCache,
                                ArchivalUnit au, CachedUrlSet cus) {
     log.debug3 ("shouldCacheTest url: " + url);
-    UrlCacher uc = au.makeUrlCacher(url);
-    assertEquals(shouldCache, uc.shouldBeCached());
+    assertEquals(shouldCache, au.shouldBeCached(url));
   }
   
   public void testStartUrlConstruction() throws Exception {
     String expected = BASE_URL + "html/" + YEAR + ".html";
-    assertEquals(ListUtil.list(expected), iau.getNewContentCrawlUrls());
+    assertEquals(ListUtil.list(expected), iau.getStartUrls());
   }
   
   public void testShouldNotCachePageFromOtherSite() throws Exception {
     theDaemon.getLockssRepository(iau);
     theDaemon.getNodeManager(iau);
-    UrlCacher uc = iau.makeUrlCacher(
-        "http://shadow2.stanford.edu/toc/i/2013/2");
-    assertFalse(uc.shouldBeCached());
+    assertFalse(iau.shouldBeCached(
+        "http://shadow2.stanford.edu/toc/i/2013/2"));
   }
 
   public void testShouldDoNewContentCrawlTooEarly() throws Exception {

@@ -1,5 +1,5 @@
 /*
- * $Id: AuUtil.java,v 1.48 2014-08-25 08:57:03 tlipkis Exp $
+ * $Id: AuUtil.java,v 1.49 2014-11-12 20:11:23 wkwilson Exp $
  */
 
 /*
@@ -663,8 +663,7 @@ public class AuUtil {
 
   /** Return the charset specified in the UC's response headers, or the
    * default charset.  Never returns null. */
-  public static String getCharsetOrDefault(UrlCacher uc) {
-    CIProperties props = uc.getUncachedProperties();
+  public static String getCharsetOrDefault(CIProperties props) {
     if (props == null) {
       return Constants.DEFAULT_ENCODING;
     }

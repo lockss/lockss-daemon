@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssPermission.java,v 1.10 2014-10-22 19:39:34 thib_gc Exp $
+ * $Id: TestLockssPermission.java,v 1.11 2014-11-12 20:11:37 wkwilson Exp $
  */
 
 /*
@@ -37,6 +37,10 @@ import java.util.*;
 
 import org.lockss.state.*;
 import org.lockss.clockss.*;
+import org.lockss.daemon.CreativeCommonsPermissionChecker;
+import org.lockss.daemon.CreativeCommonsRdfPermissionChecker;
+import org.lockss.daemon.LockssPermission;
+import org.lockss.daemon.StringPermissionChecker;
 import org.lockss.test.*;
 
 public class TestLockssPermission extends LockssPermissionCheckerTestCase {
@@ -60,7 +64,7 @@ public class TestLockssPermission extends LockssPermissionCheckerTestCase {
 
   private boolean hasPermission(String page) throws IOException {
     return MiscTestUtil.hasPermission(new LockssPermission().getCheckers(),
-				      page, pHelper);
+				      page, mcf);
   }
 
   public void testNoPermission() throws IOException {

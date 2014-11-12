@@ -1,5 +1,5 @@
 /*
- * $Id: TestNatureArchivalUnit.java,v 1.1 2013-06-22 00:00:20 alexandraohlson Exp $
+ * $Id: TestNatureArchivalUnit.java,v 1.2 2014-11-12 20:11:41 wkwilson Exp $
  */
 
 /*
@@ -155,8 +155,7 @@ public class TestNatureArchivalUnit extends LockssTestCase {
   
   private void shouldCacheTest(String url, boolean shouldCache,
       ArchivalUnit au, CachedUrlSet cus) {
-    UrlCacher uc = au.makeUrlCacher(url);
-    assertEquals(shouldCache, uc.shouldBeCached());
+    assertEquals(shouldCache, au.shouldBeCached(url));
   }
   
   public void testStartUrlConstruction() throws Exception {
@@ -165,7 +164,7 @@ public class TestNatureArchivalUnit extends LockssTestCase {
     // 4 digit
     String expected = ROOT_URL+"xxxx/clockss/xxxx_clockss_2009.html";
     DefinableArchivalUnit NAu = makeAu(url, 123, "xxxx", "2009");
-    assertEquals(ListUtil.list(expected), NAu.getNewContentCrawlUrls());
+    assertEquals(ListUtil.list(expected), NAu.getStartUrls());
   }
   
   public void testShouldNotCachePageFromOtherSite() throws Exception {
@@ -179,9 +178,8 @@ public class TestNatureArchivalUnit extends LockssTestCase {
     theDaemon.getNodeManager(NAu);
     CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(base.toString());
     BaseCachedUrlSet cus = new BaseCachedUrlSet(NAu, spec);
-    UrlCacher uc = NAu.makeUrlCacher("http://shadow2.stanford.edu/clockss/xxxx_clockss_2009.html");
-
-    assertFalse(uc.shouldBeCached());
+    assertFalse(NAu.shouldBeCached(
+        "http://shadow2.stanford.edu/clockss/xxxx_clockss_2009.html"));
   }
 
 

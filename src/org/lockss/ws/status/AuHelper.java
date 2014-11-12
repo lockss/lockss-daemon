@@ -1,5 +1,5 @@
 /*
- * $Id: AuHelper.java,v 1.6 2014-09-15 23:42:39 fergaloy-sf Exp $
+ * $Id: AuHelper.java,v 1.7 2014-11-12 20:11:45 wkwilson Exp $
  */
 
 /*
@@ -256,7 +256,7 @@ public class AuHelper {
       result.setCrawlProxy(disp);
     }
 
-    CrawlWindow window = au.getCrawlSpec().getCrawlWindow();
+    CrawlWindow window = au.getCrawlWindow();
 
     if (window != null) {
       String wmsg = window.toString();

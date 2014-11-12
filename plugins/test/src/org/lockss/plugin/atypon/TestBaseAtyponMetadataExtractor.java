@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseAtyponMetadataExtractor.java,v 1.5 2014-10-08 16:11:25 alexandraohlson Exp $
+ * $Id: TestBaseAtyponMetadataExtractor.java,v 1.6 2014-11-12 20:11:54 wkwilson Exp $
  */
 /*
 
@@ -34,6 +34,7 @@
 package org.lockss.plugin.atypon;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.*;
 
 import org.apache.commons.io.IOUtils;
@@ -318,15 +319,21 @@ public class TestBaseAtyponMetadataExtractor extends LockssTestCase {
       String content,
       boolean isHtmlExtractor) throws IOException, PluginException {
     FileMetadataExtractor me;
-
-    UrlCacher uc = au.makeUrlCacher(url);
+    
+    InputStream input = null;
+    CIProperties props = null;
     if (isHtmlExtractor) {
-      uc.storeContent(IOUtils.toInputStream(content, "utf-8"),getContentHtmlProperties());
+      input = IOUtils.toInputStream(content, "utf-8");
+      props = getContentHtmlProperties();
       me = new BaseAtyponHtmlMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/html");
     } else {
-      uc.storeContent(IOUtils.toInputStream(content, "utf-8"),getContentRisProperties());
+      input = IOUtils.toInputStream(content, "utf-8");
+      props = getContentRisProperties();
       me = new BaseAtyponRisMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/plain");
     }
+    UrlData ud = new UrlData(input, props, url);
+    UrlCacher uc = au.makeUrlCacher(ud);
+    uc.storeContent();
     CachedUrl cu = uc.getCachedUrl();
     FileMetadataListExtractor mle = new FileMetadataListExtractor(me);
     return mle.extract(MetadataTarget.Any(), cu);

@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedArcContent.java,v 1.8 2012-08-08 07:15:46 tlipkis Exp $
+ * $Id: FuncSimulatedArcContent.java,v 1.9 2014-11-12 20:11:37 wkwilson Exp $
  */
 
 /*
@@ -151,10 +151,8 @@ public class FuncSimulatedArcContent extends LockssTestCase {
 
   protected void crawlContent() {
     log.debug("crawlContent()");
-    CrawlSpec spec =
-      new SpiderCrawlSpec(sau.getNewContentCrawlUrls(), null);
     Crawler crawler =
-      new NoCrawlEndActionsNewContentCrawler(sau, spec, new MockAuState());
+      new NoCrawlEndActionsFollowLinkCrawler(sau, new MockAuState());
     crawler.doCrawl();
   }
 

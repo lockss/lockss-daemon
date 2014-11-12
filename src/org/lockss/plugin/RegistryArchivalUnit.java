@@ -1,5 +1,5 @@
 /*
- * $Id: RegistryArchivalUnit.java,v 1.32 2014-04-23 20:45:28 tlipkis Exp $
+ * $Id: RegistryArchivalUnit.java,v 1.33 2014-11-12 20:11:23 wkwilson Exp $
  */
 
 /*
@@ -34,17 +34,22 @@ package org.lockss.plugin;
 
 import java.io.FileNotFoundException;
 import java.net.*;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 import org.htmlparser.*;
 import org.htmlparser.tags.TitleTag;
 import org.htmlparser.filters.NodeClassFilter;
 import org.htmlparser.util.*;
-
 import org.lockss.config.*;
-import org.lockss.crawler.NewContentCrawler;
+import org.lockss.crawler.BaseCrawlSeed;
+import org.lockss.crawler.CrawlSeed;
+import org.lockss.crawler.FollowLinkCrawler;
 import org.lockss.daemon.*;
+import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.plugin.base.BaseArchivalUnit;
+import org.lockss.plugin.definable.DefinableArchivalUnit;
 import org.lockss.state.*;
 import org.lockss.util.*;
 
@@ -87,7 +92,7 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
   static final boolean DEFAULT_ENABLE_REGISTRY_POLLS = true;
 
   private String m_registryUrl = null;
-  private int m_refetchDepth = NewContentCrawler.DEFAULT_MAX_CRAWL_DEPTH;
+  private int m_refetchDepth = FollowLinkCrawler.DEFAULT_MAX_CRAWL_DEPTH;
   private boolean recomputeRegName = true;
   private boolean enablePolls = DEFAULT_ENABLE_REGISTRY_POLLS;
   private String regName = null;
@@ -102,8 +107,8 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
 			   Configuration prevConfig,
 			   Configuration.Differences changedKeys) {
     m_refetchDepth =
-      config.getInt(NewContentCrawler.PARAM_MAX_CRAWL_DEPTH,
-		    NewContentCrawler.DEFAULT_MAX_CRAWL_DEPTH);
+      config.getInt(FollowLinkCrawler.PARAM_MAX_CRAWL_DEPTH,
+          FollowLinkCrawler.DEFAULT_MAX_CRAWL_DEPTH);
     fetchRateLimiter = recomputeFetchRateLimiter(fetchRateLimiter);
     enablePolls = config.getBoolean(PARAM_ENABLE_REGISTRY_POLLS,
 				    DEFAULT_ENABLE_REGISTRY_POLLS);
@@ -196,8 +201,8 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
    * @return a string that points to the plugin registry page for
    * this registry.  This is just the base URL.
    */
-  protected String makeStartUrl() {
-    return m_registryUrl;
+  public Collection<String> getStartUrls() {
+    return ListUtil.list(m_registryUrl);
   }
 
   /** Call top level polls iff configured to do so.
@@ -210,33 +215,20 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
   }
 
   /**
-   * Return a new CrawlSpec with the appropriate collect AND redistribute
-   * permissions, and with the maximum refetch depth.
-   *
-   * @return CrawlSpec
-   */
-  protected CrawlSpec makeCrawlSpec() throws LockssRegexpException {
-    CrawlRule rule = makeRules();
-    List startUrls = getNewContentCrawlUrls();
-    return new SpiderCrawlSpec(startUrls, startUrls, rule,
-			       m_refetchDepth, null, null);
-  }
-
-  /**
    * return the collection of crawl rules used to crawl and cache a
    * list of Plugin JAR files.
    * @return CrawlRule
    */
-  protected CrawlRule makeRules() {
+  protected CrawlRule makeRule() {
     return new RegistryRule();
   }
 
   // Might need to recompute name if refetch start page
-  public UrlCacher makeUrlCacher(String url) {
-    if (url.equals(m_registryUrl)) {
+  public UrlCacher makeUrlCacher(UrlData ud) {
+    if (ud.url.equals(m_registryUrl)) {
       recomputeRegName = true;
     }
-    return super.makeUrlCacher(url);
+    return super.makeUrlCacher(ud);
   }
 
   public RateLimiterInfo getRateLimiterInfo() {
@@ -276,4 +268,22 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
       }
     }
   }
+
+  public List<PermissionChecker> makePermissionCheckers() {
+    return null;
+  }
+
+  public int getRefetchDepth() {
+    return DefinableArchivalUnit.DEFAULT_AU_REFETCH_DEPTH;
+  }
+
+  public LoginPageChecker getLoginPageChecker() {
+    return null;
+  }
+
+  @Override
+  public String getCookiePolicy() {
+    return null;
+  }
+
 }

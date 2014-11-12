@@ -37,6 +37,7 @@ import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.PluginTestUtil;
 import org.lockss.plugin.SubTreeArticleIterator;
 import org.lockss.plugin.UrlCacher;
+import org.lockss.plugin.UrlData;
 import org.lockss.test.ArticleIteratorTestCase;
 import org.lockss.test.ConfigurationUtil;
 import org.lockss.util.CIProperties;
@@ -122,9 +123,11 @@ public class TestWileyArticleIteratorFactory extends ArticleIteratorTestCase {
     assertNotNull(zipCu);
     
     // make url cacher, then store content of the zip file as inputstream
-    UrlCacher uc = au.makeUrlCacher(zipUrl);
-    uc.storeContent(getResourceAsStream("XXXX27.14.zip"), getZipHeader());
     
+    UrlData ud = new UrlData(
+        getResourceAsStream("XXXX27.14.zip"), getZipHeader(), zipUrl);
+    UrlCacher uc = au.makeUrlCacher(ud);
+    uc.storeContent();
     int i = 0;
     for (SubTreeArticleIterator artIter = 
                           createSubTreeIter(); artIter.hasNext(); ) {

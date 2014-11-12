@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinablePlugin.java,v 1.50 2014-08-25 08:57:02 tlipkis Exp $
+ * $Id: TestDefinablePlugin.java,v 1.51 2014-11-12 20:12:01 wkwilson Exp $
  */
 
 /*
@@ -476,13 +476,13 @@ public class TestDefinablePlugin extends LockssTestCase {
 
     // nothing installed, should give the default
     assertClass(CacheException.NoRetryDeadLinkException.class,
-		getHttpResultMap(plugin).mapException(null, null,
+		getHttpResultMap(plugin).mapException(null, "",
 						      404, null));
     assertClass(CacheException.RetryableNetworkException_3_30S.class,
-		getHttpResultMap(plugin).mapException(null, null,
+		getHttpResultMap(plugin).mapException(null, "",
 						      ioe1, null));
     assertClass(CacheException.RetryableNetworkException_3_30S.class,
-		getHttpResultMap(plugin).mapException(null, null,
+		getHttpResultMap(plugin).mapException(null, "",
 						      ioe2, null));
 
     String spec1 =
@@ -500,22 +500,22 @@ public class TestDefinablePlugin extends LockssTestCase {
     plugin.initResultMap();
 
     assertClass(CacheException.RetryDeadLinkException.class,
-		getHttpResultMap(plugin).mapException(null, null,
+		getHttpResultMap(plugin).mapException(null, "",
 						      404, null));
     // changing just SocketException should change result for
     // ConnectException as well
     assertClass(CacheException.RetryableNetworkException_2_5M.class,
-		getHttpResultMap(plugin).mapException(null, null,
+		getHttpResultMap(plugin).mapException(null, "",
 						      ioe1, null));
     assertClass(CacheException.RetryableNetworkException_2_5M.class,
-		getHttpResultMap(plugin).mapException(null, null,
+		getHttpResultMap(plugin).mapException(null, "",
 						      ioe2, null));
 
     assertClass(RecordingCacheException.class,
-		getHttpResultMap(plugin).mapException(null, null,
+		getHttpResultMap(plugin).mapException(null, "",
 						      407, null));
     assertClass(RecordingCacheException.class,
-		getHttpResultMap(plugin).mapException(null, null,
+		getHttpResultMap(plugin).mapException(null, "",
 						      new FileNotFoundException("foo"), null));
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestIUMJArticleIteratorFactory.java,v 1.5 2014-07-21 03:28:29 tlipkis Exp $
+ * $Id: TestIUMJArticleIteratorFactory.java,v 1.6 2014-11-12 20:11:59 wkwilson Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.iumj;
 
+import java.io.InputStream;
 import java.util.Iterator;
 import java.util.Stack;
 import java.util.regex.Pattern;
@@ -184,39 +185,44 @@ public class TestIUMJArticleIteratorFactory extends ArticleIteratorTestCase {
     CachedUrl cuXml = null;
     for (CachedUrl cu : AuUtil.getCuIterable(sau)) {
       if (cuPdf == null && 
-	  cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_PDF))
-	{
-	  cuPdf = cu;
-	}
+          cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_PDF))
+    	{
+    	  cuPdf = cu;
+    	}
       else if (cuHtml == null && 
-	       cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_HTML))
-	{
-	  cuHtml = cu;
-	}
+	        cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_HTML))
+    	{
+    	  cuHtml = cu;
+    	}
       else if (cuXml == null && 
-	       cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_XML))
-	{
-	  cuXml = cu;
-	}
+	        cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_XML))
+    	{
+    	  cuXml = cu;
+    	}
       if (cuPdf != null && cuHtml != null && cuXml != null) {
-	break;
+        break;
       }
     }
+      
     for (String url : urls) {
-      UrlCacher uc = au.makeUrlCacher(url);
       if (url.contains("IUMJ/FULLTEXT")) {
-	uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
+        storeContent(cuHtml.getUnfilteredInputStream(),
+        cuHtml.getProperties(), url);
       }
       else if (url.contains("/pdf")) {
-	uc.storeContent(cuPdf.getUnfilteredInputStream(), cuPdf.getProperties());
+        storeContent(cuPdf.getUnfilteredInputStream(),
+        cuPdf.getProperties(), url);
       }
       else if (url.contains("META")) {
-	uc.storeContent(cuXml.getUnfilteredInputStream(), cuXml.getProperties());
+        storeContent(cuXml.getUnfilteredInputStream(),
+        cuXml.getProperties(), url);
       }
       else {
-	uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
+        storeContent(cuHtml.getUnfilteredInputStream(),
+        cuHtml.getProperties(), url);
       }
     }
+    
     
     Stack<String[]> expStack = new Stack<String[]>();
     String [] af1 = {

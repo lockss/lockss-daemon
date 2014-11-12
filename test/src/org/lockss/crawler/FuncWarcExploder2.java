@@ -1,5 +1,5 @@
 /*
- * $Id: FuncWarcExploder2.java,v 1.6 2014-08-19 05:24:10 tlipkis Exp $
+ * $Id: FuncWarcExploder2.java,v 1.7 2014-11-12 20:11:28 wkwilson Exp $
  */
 
 /*
@@ -39,9 +39,10 @@ import java.net.*;
 import org.apache.commons.collections.Bag;
 import org.apache.commons.collections.bag.*;
 import org.lockss.config.*;
+import org.lockss.crawler.FuncWarcExploder.MyCrawlRule;
+import org.lockss.crawler.FuncWarcExploder.MyExploderHelper;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.ExploderHelper;
 import org.lockss.plugin.simulated.*;
 import org.lockss.plugin.exploded.*;
 import org.lockss.repository.*;
@@ -254,7 +255,6 @@ public class FuncWarcExploder2 extends LockssTestCase {
     props.setProperty("org.lockss.plugin.simulated.SimulatedContentGenerator.doWarcFile", "true");
     props.setProperty("org.lockss.plugin.simulated.SimulatedContentGenerator.actualWarcFile", "true");
 
-    props.setProperty(FollowLinkCrawler.PARAM_EXPLODE_ARCHIVES, "true");
     props.setProperty(FollowLinkCrawler.PARAM_STORE_ARCHIVES, "true");
     String explodedPluginName =
       "org.lockss.crawler.FuncArcExploder2MockExplodedPlugin";
@@ -279,6 +279,7 @@ public class FuncWarcExploder2 extends LockssTestCase {
 
     sau = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin.class,
 					     simAuConfig(tempDirPath));
+    sau.setUrlConsumerFactory(new ExplodingUrlConsumerFactory());
   }
 
   public void tearDown() throws Exception {
@@ -361,7 +362,7 @@ public class FuncWarcExploder2 extends LockssTestCase {
       b.remove(iter.next(), 1);
     }
     // Permission pages get checked twice.  Hard to avoid that, so allow it
-    b.removeAll(sau.getCrawlSpec().getPermissionPages());
+    b.removeAll(sau.getPermissionUrls());
     // archives get checked twice - from checkThruFileTree & checkExplodedUrls
     b.remove(url2[url2.length - 1]);
     // This test is screwed up by the use of shouldBeCached() in
@@ -434,18 +435,11 @@ public class FuncWarcExploder2 extends LockssTestCase {
 
   private boolean crawlContent(String bad) {
     log.debug("Crawling tree..." + (bad == null ? "" : " fail at " + bad));
-    List urls = sau.getNewContentCrawlUrls();
-    CrawlSpec spec =
-      new SpiderCrawlSpec(urls,
-          urls, // permissionUrls
-          new MyCrawlRule(), // crawl rules
-          1,    // refetch depth
-          null, // PermissionChecker
-          null, // LoginPageChecker
-          ".warc.gz$", // exploder pattern
-          new MyExploderHelper(bad) );
+    sau.setRule(new MyCrawlRule());
+    sau.setExploderPattern(".warc.gz$");
+    sau.setExploderHelper(new MyExploderHelper(bad));
     AuState maus = new MyMockAuState();
-    NewContentCrawler crawler = new NewContentCrawler(sau, spec, maus);
+    FollowLinkCrawler crawler = new FollowLinkCrawler(sau, maus);
     crawler.setCrawlManager(crawlMgr);
     boolean res = crawler.doCrawl();
     lastCrawlResult = maus.getLastCrawlResult();
@@ -566,6 +560,18 @@ public class FuncWarcExploder2 extends LockssTestCase {
       CIProperties props = new CIProperties();
       props.put(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
       ae.setAuProps(props);
+    }
+
+    @Override
+    public void setWatchdog(LockssWatchdog wdog) {
+      //do nothing
+      
+    }
+
+    @Override
+    public void pokeWDog() {
+      //do nothing
+      
     }
   }
 

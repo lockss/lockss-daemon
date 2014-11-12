@@ -137,9 +137,12 @@ public class TestPsychiatryOnlineArticleIteratorFactory extends ArticleIteratorT
     UrlCacher uc;
     for (String url : urls) {
       //log.info("url: " + url);
-      uc = au.makeUrlCacher(url);
+      
       if (url.contains("full")) {
-        uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
+        UrlData ud = new UrlData(
+            cuHtml.getUnfilteredInputStream(), cuHtml.getProperties(),url);
+        uc = au.makeUrlCacher(ud);
+        uc.storeContent();
       }
     }
     

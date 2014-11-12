@@ -1,5 +1,5 @@
 /*
- * $Id: AuWsSource.java,v 1.6 2014-09-15 23:42:39 fergaloy-sf Exp $
+ * $Id: AuWsSource.java,v 1.7 2014-11-12 20:11:45 wkwilson Exp $
  */
 
 /*
@@ -311,7 +311,7 @@ public class AuWsSource extends AuWsResult {
   @Override
   public String getCrawlWindow() {
     if (!crawlWindowPopulated) {
-      CrawlWindow window = au.getCrawlSpec().getCrawlWindow();
+      CrawlWindow window = au.getCrawlWindow();
 
       if (window != null) {
   	String wmsg = window.toString();
@@ -534,7 +534,7 @@ public class AuWsSource extends AuWsResult {
   @Override
   public List<String> getNewContentCrawlUrls() {
     if (!newContentCrawlUrlsPopulated) {
-      setNewContentCrawlUrls(au.getNewContentCrawlUrls());
+      setNewContentCrawlUrls(new ArrayList<String>(au.getStartUrls()));
       newContentCrawlUrlsPopulated = true;
     }
 

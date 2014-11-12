@@ -29,6 +29,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.massachusettsmedicalsociety;
 
 import java.io.File;
+import java.io.InputStream;
 import java.util.Iterator;
 import java.util.Stack;
 import java.util.regex.Pattern;
@@ -175,13 +176,14 @@ public class TestMassachusettsMedicalSocietyArticleIteratorFactory extends Artic
 
     for(String url : urls)
       {
-	UrlCacher uc = au.makeUrlCacher(url);
-	if(url.contains("pdf")){
-	  uc.storeContent(cuPdf.getUnfilteredInputStream(), cuPdf.getProperties());
-	}
-	else if(url.contains("full") || url.contains("ris")){
-	  uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
-	}
+      	if(url.contains("pdf")){
+      	  storeContent(cuPdf.getUnfilteredInputStream(),
+      	      cuPdf.getProperties(), url);
+      	}
+      	else if(url.contains("full") || url.contains("ris")){
+      	  storeContent(cuHtml.getUnfilteredInputStream(),
+      	      cuHtml.getProperties(), url);
+      	}
       }
     
     Stack<String[]> expStack = new Stack<String[]>();

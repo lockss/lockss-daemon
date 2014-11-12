@@ -1,5 +1,5 @@
 /*
- * $Id: TestExploderHelperWrapper.java,v 1.3 2011-08-09 04:17:30 tlipkis Exp $
+ * $Id: TestExploderHelperWrapper.java,v 1.4 2014-11-12 20:12:02 wkwilson Exp $
  */
 
 /*
@@ -83,6 +83,16 @@ public class TestExploderHelperWrapper extends LockssTestCase {
 	  if (error != null) {
 	      throw error;
 	  }
+      }
+
+      @Override
+      public void setWatchdog(LockssWatchdog wdog) {
+        //Do nothing
+      }
+
+      @Override
+      public void pokeWDog() {
+        //Do nothing
       }
   }
 }

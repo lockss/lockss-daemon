@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireArchivalUnit.java,v 1.15 2014-06-09 20:36:49 thib_gc Exp $
+ * $Id: TestHighWireArchivalUnit.java,v 1.16 2014-11-12 20:11:41 wkwilson Exp $
  */
 
 /*
@@ -113,8 +113,7 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
     theDaemon.getNodeManager(hwAu);
     CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(base.toString());
     BaseCachedUrlSet cus = new BaseCachedUrlSet(hwAu, spec);
-    UrlCacher uc = hwAu.makeUrlCacher("http://shadow1.stanford.edu/");
-    assertFalse(uc.shouldBeCached());
+    assertFalse(hwAu.shouldBeCached("http://shadow1.stanford.edu/"));
   }
 
   public void testShouldNotCachePageFromOtherSite() throws Exception {
@@ -126,16 +125,15 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
     theDaemon.getNodeManager(hwAu);
     CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(base.toString());
     BaseCachedUrlSet cus = new BaseCachedUrlSet(hwAu, spec);
-    UrlCacher uc = hwAu.makeUrlCacher("http://shadow2.stanford.edu/lockss-manifest/vol_322_manifest.dtl");
-
-    assertFalse(uc.shouldBeCached());
+    assertFalse(hwAu.shouldBeCached(
+        "http://shadow2.stanford.edu/lockss-manifest/vol_322_manifest.dtl"));
   }
 
   public void testStartUrlConstruction() throws Exception {
     URL url = new URL("http://www.example.com/");
     String expectedStr = "http://www.example.com/lockss-manifest/vol_10_manifest.dtl";
     DefinableArchivalUnit hwau = makeAu(url, 10);
-    assertEquals(ListUtil.list(expectedStr), hwau.getNewContentCrawlUrls());
+    assertEquals(ListUtil.list(expectedStr), hwau.getStartUrls());
   }
 
   public void testPermissionPageConstruction() throws Exception {
@@ -143,7 +141,7 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
     String expectedStr = "http://www.example.com/lockss-manifest/vol_10_manifest.dtl";
 
     DefinableArchivalUnit hwau = makeAu(url, 10);
-    assertEquals(ListUtil.list(expectedStr), hwau.getNewContentCrawlUrls());
+    assertEquals(ListUtil.list(expectedStr), hwau.getStartUrls());
   }
 
   public void testGetUrlStems() throws Exception {
@@ -159,7 +157,7 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
     URL url = new URL("http://www.example.com/");
     String expectedStr = "http://www.example.com/lockss-manifest/vol_10_manifest.dtl";
     DefinableArchivalUnit hwau = makeAu(url, 10);
-    assertEquals(expectedStr, hwau.getNewContentCrawlUrls().get(0));
+    assertEquals(expectedStr, hwau.getStartUrls().iterator().next());
   }
 
   public void testShouldDoNewContentCrawlTooEarly() throws Exception {
@@ -226,7 +224,7 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
 
     DefinableArchivalUnit au =
       makeAu(new URL("http://shadow1.stanford.edu/"), 42);
-    CrawlWindow window = au.getCrawlSpec().getCrawlWindow();
+    CrawlWindow window = au.getCrawlWindow();
     assertNull(window);
   }
 
@@ -236,7 +234,7 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
 
     DefinableArchivalUnit au =
       makeAu(new URL("http://shadow1.stanford.edu/"), 42);
-    CrawlWindow window = au.getCrawlSpec().getCrawlWindow();
+    CrawlWindow window = au.getCrawlWindow();
     assertNull(window); // currently the case
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.90 2014-10-22 19:39:33 thib_gc Exp $
+ * $Id: ServeContent.java,v 1.91 2014-11-12 20:12:00 wkwilson Exp $
  */
 
 /*
@@ -58,7 +58,7 @@ import org.lockss.exporter.counter.CounterReportsRequestRecorder.PublisherContac
 import org.lockss.plugin.*;
 import org.lockss.plugin.AuUtil.AuProxyInfo;
 import org.lockss.plugin.PluginManager.CuContentReq;
-import org.lockss.plugin.base.BaseUrlCacher;
+import org.lockss.plugin.base.BaseUrlFetcher;
 import org.lockss.proxy.ProxyManager;
 import org.lockss.rewriter.LinkRewriterFactory;
 import org.lockss.state.AuState;
@@ -530,10 +530,9 @@ public class ServeContent extends LockssServlet {
 	// If open URL resultion fails fall back to first start page
         au = pluginMgr.getAuFromId(auid);
 	if (au != null) {
-	  CrawlSpec spec = au.getCrawlSpec();
-	  List<String> starts = spec.getStartingUrls();
+	  Collection<String> starts = au.getStartUrls();
 	  if (!starts.isEmpty()) {
-	    url = starts.get(0);
+	    url = starts.iterator().next();
 	    handleUrlRequest();
 	    return;
 	  }
@@ -1086,14 +1085,14 @@ public class ServeContent extends LockssServlet {
   private InputStream checkLoginPage(InputStream input, CIProperties headers)
       throws CacheException.PermissionException, IOException {
 
-    LoginPageChecker checker = au.getCrawlSpec().getLoginPageChecker();
+    LoginPageChecker checker = au.getLoginPageChecker();
     if (checker != null) {
       InputStream oldInput = input;
 
       // buffer html page stream to allow login page checker to read it
       int limit = CurrentConfig.getIntParam(
-          BaseUrlCacher.PARAM_LOGIN_CHECKER_MARK_LIMIT,
-          BaseUrlCacher.DEFAULT_LOGIN_CHECKER_MARK_LIMIT);
+          BaseUrlFetcher.PARAM_LOGIN_CHECKER_MARK_LIMIT,
+          BaseUrlFetcher.DEFAULT_LOGIN_CHECKER_MARK_LIMIT);
       DeferredTempFileOutputStream dos =
           new DeferredTempFileOutputStream(limit);
       try {

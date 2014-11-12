@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.69 2014-10-15 06:44:15 tlipkis Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.70 2014-11-12 20:12:01 wkwilson Exp $
  */
 
 /*
@@ -33,10 +33,11 @@ package org.lockss.plugin.definable;
 
 import java.util.*;
 import java.io.*;
-import org.apache.oro.text.regex.*;
 
+import org.apache.oro.text.regex.*;
 import org.lockss.config.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 import org.lockss.plugin.base.*;
 import org.lockss.plugin.wrapper.*;
 import org.lockss.daemon.*;
@@ -45,7 +46,7 @@ import org.lockss.util.*;
 import org.lockss.util.Constants.RegexpContext;
 import org.lockss.util.urlconn.*;
 import org.lockss.crawler.*;
-import org.lockss.oai.*;
+import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.rewriter.*;
 import org.lockss.extractor.*;
 
@@ -534,8 +535,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     auConf.put("volume", "43");
     cau.setConfiguration(auConf);
 
-    SpiderCrawlSpec spec = (SpiderCrawlSpec)cau.getCrawlSpec();
-    CrawlRule rule = spec.getCrawlRule();
+    CrawlRule rule = cau.getRule();
     assertEquals(CrawlRule.INCLUDE,
                  rule.match("http://www.example.com/mygif.gif"));
     assertEquals(CrawlRule.INCLUDE,
@@ -566,7 +566,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 		      true);
     setupAu(additionalAuConfig);
 
-    CrawlRule rules = cau.makeRules();
+    CrawlRule rules = cau.makeRule();
     assertEquals(CrawlRule.INCLUDE,
                  rules.match("http://www.example.com/mygif.gif"));
     assertEquals(CrawlRule.INCLUDE,
@@ -577,14 +577,15 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
                  rules.match("http://www.example.com/path/"));
   }
 
-  public void testMakeRulesDontIgnCase() throws LockssRegexpException {
+  public void testMakeRulesDontIgnCase() 
+      throws LockssRegexpException, ConfigurationException {
     additionalAuConfig.putString("base_url", "http://www.example.com/");
     defMap.putCollection(DefinableArchivalUnit.KEY_AU_CRAWL_RULES, crawlRules);
     defMap.putBoolean(DefinableArchivalUnit.KEY_AU_CRAWL_RULES_IGNORE_CASE,
 		      false);
     setupAu(additionalAuConfig);
 
-    CrawlRule rules = cau.makeRules();
+    CrawlRule rules = cau.makeRule();
     assertEquals(CrawlRule.INCLUDE,
                  rules.match("http://www.example.com/mygif.gif"));
     assertEquals(CrawlRule.IGNORE,
@@ -603,7 +604,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     setupAu(additionalAuConfig);
 
     assertEquals(ListUtil.list("http://www.example.com/lockss-volume/43.html"),
-		 cau.makeStartUrls());
+		 cau.getStartUrls());
   }
 
   public void testMakeStartUrlList() throws Exception {
@@ -616,7 +617,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 
     assertEquals(ListUtil.list("http://www.example.com/l-volume/43.html",
 			       "http://www.example.com/unl-vol/43.html"),
-		 cau.makeStartUrls());
+		 cau.getStartUrls());
   }
 
   public void xxxxtestMakeStartUrlListWithSet() throws Exception {
@@ -628,7 +629,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 
     assertEquals(ListUtil.list("http://www.example.com/l-volume/43.html",
 			       "http://www.example.com/unl-vol/43.html"),
-		 cau.makeStartUrls());
+		 cau.getStartUrls());
   }
 
   public void testMakeStartUrlListNoVal() throws Exception {
@@ -641,7 +642,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     setupAu(additionalAuConfig);
 
     assertEquals(ListUtil.list("http://www.example.com/volume/43.html"),
-		 cau.makeStartUrls());
+		 cau.getStartUrls());
   }
 
   void setStdConfigProps() {
@@ -710,7 +711,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     props.put(volKey, "2003");
     cau.setConfiguration(ConfigurationUtil.fromProps(props));
     String expected = "http://www.example.com/contents-by-date.2003.shtml";
-    assertEquals(ListUtil.list(expected), cau.getPermissionPages());
+    assertEquals(ListUtil.list(expected), cau.getPermissionUrls());
     assertSameElements(ListUtil.list("http://www.example.com/"),
 		       cau.getUrlStems());
   }
@@ -732,7 +733,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     cau.setConfiguration(ConfigurationUtil.fromProps(props));
     String exp1 = "http://www.example.com/foo/";
     String exp2 = "http://mmm.example.org/bar/";
-    assertEquals(ListUtil.list(exp1, exp2), cau.getPermissionPages());
+    assertEquals(ListUtil.list(exp1, exp2), cau.getPermissionUrls());
     assertSameElements(ListUtil.list("http://www.example.com/",
 			       "http://mmm.example.org/"),
 		 cau.getUrlStems());
@@ -813,9 +814,8 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     DefinableArchivalUnit au = (DefinableArchivalUnit)plug.createAu(auConfig);
 
     assertEquals(ListUtil.list("http://base.foo/base_path/perm.page"),
-		 au.getPermissionPages());
-    SpiderCrawlSpec cspec = (SpiderCrawlSpec)au.getCrawlSpec();
-    assertEquals(4, cspec.getRefetchDepth());
+		 au.getPermissionUrls());
+    assertEquals(4, au.getRefetchDepth());
   }
 
   public void testIsNotBulkContent() throws Exception {
@@ -879,12 +879,13 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 	       extractor instanceof MockLinkExtractor);
   }
 
-  public void testGetCrawlRule() throws LockssRegexpException {
-    setupAu();
+  public void testGetCrawlRule() 
+      throws LockssRegexpException, ConfigurationException {
     defMap.putString(DefinableArchivalUnit.KEY_AU_CRAWL_RULES,
  		  "org.lockss.plugin.definable.TestDefinableArchivalUnit$NegativeCrawlRuleFactory");
-
-    CrawlRule rules = cau.makeRules();
+    setupAu();
+    
+    CrawlRule rules = cau.makeRule();
     assertEquals(CrawlRule.EXCLUDE,
                  rules.match("http://www.example.com/mygif.gif"));
     assertEquals(CrawlRule.EXCLUDE,
@@ -893,7 +894,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     defMap.putString(DefinableArchivalUnit.KEY_AU_CRAWL_RULES,
 		  "org.lockss.plugin.definable.TestDefinableArchivalUnit$PositiveCrawlRuleFactory");
 
-    rules = cau.makeRules();
+    rules = cau.makeRule();
     assertEquals(CrawlRule.INCLUDE,
                  rules.match("http://www.example.com/mygif.gif"));
     assertEquals(CrawlRule.INCLUDE,
@@ -909,13 +910,14 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     }
   }
 
-  public void testGetCrawlRuleThrowsOnBadClass() throws LockssRegexpException {
+  public void testGetCrawlRuleThrowsOnBadClass()
+      throws LockssRegexpException, ConfigurationException {
     setupAu();
     defMap.putString(DefinableArchivalUnit.KEY_AU_CRAWL_RULES,
 		  "org.lockss.bogus.ExpectedClassNotFound");
 
     try {
-      CrawlRule rules = cau.makeRules();
+      CrawlRule rules = cau.makeRule();
       fail("Should have thrown on a non-existant class");
     } catch (PluginException.InvalidDefinition e){
     }
@@ -924,7 +926,8 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 
   public void testMakePermissionCheckersNone() {
     setupAu();
-    PermissionChecker permissionChecker = cau.makePermissionChecker();
+    List<PermissionChecker> permissionChecker = 
+        cau.makePermissionCheckers();
     assertNull(permissionChecker);
   }
 
@@ -936,7 +939,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     setupAu();
     defMap.putString(DefinableArchivalUnit.KEY_AU_PERMISSION_CHECKER_FACTORY,
  		  "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyPermissionCheckerFactory");
-    PermissionChecker permissionChecker = cau.makePermissionChecker();
+    PermissionChecker permissionChecker = cau.makePermissionCheckers().get(0);
     assertTrue(permissionChecker instanceof MockPermissionChecker);
   }
 
@@ -950,18 +953,20 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   }
 
   private static class MockPermissionChecker implements PermissionChecker {
-    public boolean checkPermission(Crawler.PermissionHelper pHelper,
-				   Reader inputReader, String url) {
+
+    @Override
+    public boolean checkPermission(CrawlerFacade crawlFacade,
+        Reader inputReader, String url) throws CacheException {
       throw new UnsupportedOperationException("not implemented");
     }
   }
 
   public void testMakeLoginPageChecker() {
     setupAu();
-    assertNull(cau.makeLoginPageChecker());
+    assertNull(cau.getLoginPageChecker());
     defMap.putString(DefinableArchivalUnit.KEY_AU_LOGIN_PAGE_CHECKER,
  		  "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyLoginPageChecker");
-    LoginPageChecker lpc = cau.makeLoginPageChecker();
+    LoginPageChecker lpc = cau.getLoginPageChecker();
     assertTrue(lpc instanceof LoginPageCheckerWrapper);
     assertTrue(WrapperUtil.unwrap(lpc) instanceof MyLoginPageChecker);
   }
@@ -1307,12 +1312,9 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 
     assertEquals(auConfig, au.getConfiguration());
     // normalize
-    SpiderCrawlSpec cspec = (SpiderCrawlSpec)au.getCrawlSpec();
-    assertEquals(3, cspec.getRefetchDepth());
-    assertEquals(null, cspec.getPermissionChecker());
-    assertEquals(null, cspec.getExploderPattern());
-    assertEquals(null, cspec.getExploderHelper());
-    assertEquals(makeExpRule(), cspec.getCrawlRule());
+    assertEquals(3, au.getRefetchDepth());
+    assertEquals(null, au.makePermissionCheckers());
+    assertEquals(makeExpRule(), au.getRule());
     
     assertEquals(ListUtil.list("http://base.foo/base_path/publishing/journals/lockss/?journalcode=J47&year=1984",
 			       "http://resolv.er/path/lockss.htm",
@@ -1321,7 +1323,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 			       "http://resolv.er/path//issue-5/issue.htm",
 			       "http://resolv.er/path//issue-6/issue.htm",
 			       "http://resolv.er/path//issue-7/issue.htm"),
-		 cspec.getPermissionPages());
+		 au.getPermissionUrls());
 
     List expStartUrls =
       ListUtil.list("http://base.foo/base_path/publishing/journals/lockss/?journalcode=J47&year=1984",
@@ -1329,8 +1331,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 		    "http://base.foo/base_path/issuestart/issue-2/",
 		    "http://base.foo/base_path/issuestart/issue-3/",
 		    "http://base.foo/base_path/issuestart/issue-3a/");
-    assertEquals(expStartUrls, cspec.getStartingUrls());
-    assertEquals(expStartUrls, au.getNewContentCrawlUrls());
+    assertEquals(expStartUrls, au.getStartUrls());
     assertEquals("Large Plugin AU, Base URL http://base.foo/base_path/, Resolver URL http://resolv.er/path/, Journal Code J47, Year 1984, Issues 1, 2, 3, 3a, Range 3-7",
 		 au.makeName());
 
@@ -1371,7 +1372,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertTrue(""+WrapperUtil.unwrap(mfact3),
 	       WrapperUtil.unwrap(mfact3) instanceof MockFactories.XmlRindMetaExtFact);
 
-    CrawlWindow window = cspec.getCrawlWindow();
+    CrawlWindow window = au.getCrawlWindow();
     CrawlWindows.Interval intr = (CrawlWindows.Interval)window;
     assertNotNull(window);
     long testTime = new Date("Jan 1 2010, 11:59:00 EST").getTime();
@@ -1387,21 +1388,21 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 
     CacheResultMap resultMap = defplug.getCacheResultMap();
     assertClass(CacheException.NoRetryDeadLinkException.class,
-		getHttpResultMap(defplug).mapException(null, null, 404, null));
+		getHttpResultMap(defplug).mapException(null, "", 404, null));
     assertClass(CacheException.PermissionException.class,
-		getHttpResultMap(defplug).mapException(null, null, 300, null));
+		getHttpResultMap(defplug).mapException(null, "", 300, null));
     assertClass(CacheException.RetryableNetworkException_5_60S.class,
-		getHttpResultMap(defplug).mapException(null, null, 500, null));
+		getHttpResultMap(defplug).mapException(null, "", 500, null));
     assertClass(CacheException.RetryableNetworkException_5_30S.class,
-		getHttpResultMap(defplug).mapException(null, null,
+		getHttpResultMap(defplug).mapException(null, "",
 						       new IOException("foo"),
 						       null));
     assertClass(CacheException.NoRetryHostException.class,
-		getHttpResultMap(defplug).mapException(null, null,
+		getHttpResultMap(defplug).mapException(null, "",
 						       new ContentValidationException.EmptyFile("empty"),
 						       null));
     CacheException ex =
-      getHttpResultMap(defplug).mapException(null, null, 522, null);
+      getHttpResultMap(defplug).mapException(null, "", 522, null);
     assertClass(CacheException.RetryDeadLinkException.class, ex);
     assertEquals("522 from handler", ex.getMessage());
 
@@ -1625,49 +1626,6 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 
   }
 
-  public void testOaiDefaultDC() throws Exception {
-    MyPluginManager pmgr = new MyPluginManager();
-    getMockLockssDaemon().setPluginManager(pmgr);
-    pmgr.initService(getMockLockssDaemon());
-
-    // Load an OAI plugin definition
-    String pname = "org.lockss.plugin.definable.OaiTestPlugin1";
-    String key = PluginManager.pluginKeyFromId(pname);
-    assertTrue("Plugin was not successfully loaded",
-	       pmgr.ensurePluginLoaded(key));
-    Plugin plug = pmgr.getPlugin(key);
-    assertTrue(plug.toString() + " not a DefinablePlugin",
-	       plug instanceof DefinablePlugin);
-    MyDefinablePlugin defplug = (MyDefinablePlugin)plug;
-
-    // Configure and create an AU
-    Properties p = new Properties();
-    p.put("base_url", "http://base.foo/base_path/");
-    p.put("resolver_url", "http://resolv.er/path/");
-    p.put("oai_request_url", "http://oai.meta/path/");
-    p.put("journal_code", "J47");
-    p.put("year", "1984");
-    p.put("issue_set", "1,2,3,3a");
-    p.put("num_issue_range", "3-7");
-    p.put("oai_spec", "http://oai.spec/specspec");
-    Configuration auConfig = ConfigManager.fromProperties(p);
-    DefinableArchivalUnit au = (DefinableArchivalUnit)plug.createAu(auConfig);
-
-    assertSame(plug, au.getPlugin());
-
-    assertTrue(au.getCrawlSpec() instanceof OaiCrawlSpec);
-    OaiCrawlSpec cspec = (OaiCrawlSpec)au.getCrawlSpec();
-    OaiRequestData reqdata = cspec.getOaiRequestData();
-    assertEquals("http://oai.meta/path/", reqdata.getOaiRequestHandlerUrl());
-    assertEquals("http://purl.org/dc/elements/1.1/", reqdata.getMetadataNamespaceUrl());
-    assertEquals("identifier", reqdata.getUrlContainerTagName());
-    assertEquals("http://oai.spec/specspec", reqdata.getAuSetSpec());
-    assertEquals("oai_dc", reqdata.getMetadataPrefix());
-
-    // XXX more tests when OaiRequestData and handler creation driven by
-    // plugin.
-  }
-
   HttpResultMap getHttpResultMap(DefinablePlugin plugin) {
     return (HttpResultMap)plugin.getCacheResultMap();
   }
@@ -1868,6 +1826,14 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     TimeBase.setSimulated("2013/03/25 12:00:00"); // will adjust to EARLIER than 8am in America/Los_Angeles
     assertEquals("10/2s", crl.getRateLimiterFor("file.html", null).getRate());
     assertEquals("10/300ms", crl.getRateLimiterFor("file.html", "text/html").getRate()); //2nd argument is previous content type
+  }
+
+  public void testCookiePolicy() throws LockssRegexpException {
+    setupAu();
+    assertNull(cau.getCookiePolicy());
+    defMap.putString(
+        DefinableArchivalUnit.KEY_AU_CRAWL_COOKIE_POLICY, "compatibility");
+    assertEquals("compatibility", cau.getCookiePolicy());
   }
 
   public static class PositiveCrawlRuleFactory

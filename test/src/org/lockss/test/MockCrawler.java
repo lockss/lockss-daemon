@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawler.java,v 1.16 2012-10-30 00:11:05 tlipkis Exp $
+ * $Id: MockCrawler.java,v 1.17 2014-11-12 20:11:44 wkwilson Exp $
  */
 
 /*
@@ -32,9 +32,18 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.test;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import org.lockss.util.Deadline;
+import org.lockss.util.urlconn.CacheException;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.UrlCacher;
+import org.lockss.plugin.UrlData;
+import org.lockss.plugin.UrlFetcher;
 import org.lockss.daemon.*;
 import org.lockss.crawler.*;
 
@@ -126,7 +135,7 @@ public class MockCrawler extends NullCrawler {
     return isWholeAU;
   }
 
-  public Collection getStartUrls() {
+  public Collection<String> getStartUrls() {
     return urls;
   }
 
@@ -166,11 +175,125 @@ public class MockCrawler extends NullCrawler {
     this.status = status;
   }
 
-  public CrawlerStatus getStatus() {
+  public CrawlerStatus getCrawlerStatus() {
     if (status == null) {
       status = new MockCrawlStatus();
     }
     return status;
+  }
+  
+  public class MockCrawlerFacade implements Crawler.CrawlerFacade {
+    private ArchivalUnit au;
+    private CrawlerStatus cs;
+    private Map<String, UrlFetcher> ufMap;
+    public List fetchQueue = new ArrayList();
+    public List permProbe = new ArrayList();
+    private PermissionMap permissionMap;
+    public MockCrawlerFacade() {
+      au = new MockArchivalUnit();
+    }
+    
+    public MockCrawlerFacade(MockArchivalUnit mau) {
+      au = mau;
+    }
+    
+    public ArchivalUnit getAu() {
+      return au;
+    }
+
+    public void setAu(ArchivalUnit au) {
+      this.au = au;
+    }
+    
+    public void setCrawlerStatus(CrawlerStatus status) {
+      this.cs = status;
+    }
+    
+    public CrawlerStatus getCrawlerStatus() {
+      if(cs == null) {
+        cs = new MockCrawlStatus();
+      }
+      return cs;
+    }
+
+    @Override
+    public void addToFailedUrls(String url) {
+      //Not used for testing
+    }
+
+    @Override
+    public void addToFetchQueue(CrawlUrlData curl) {
+      fetchQueue.add(curl.getUrl());
+      
+    }
+
+    @Override
+    public void addToParseQueue(CrawlUrlData curl) {
+      throw new UnsupportedOperationException("not implemented");
+      
+    }
+
+    @Override
+    public void addToPermissionProbeQueue(String probeUrl) {
+      permProbe.add(probeUrl);
+      
+    }
+
+    @Override
+    public void setPreviousContentType(String previousContentType) {
+      throw new UnsupportedOperationException("not implemented");
+      
+    }
+
+    @Override
+    public boolean isAborted() {
+      return wasAborted;
+    }
+
+    public void setPermissionUrlFetcher(UrlFetcher uf) {
+      if(ufMap == null) {
+        ufMap = new HashMap();
+      }
+      ufMap.put(uf.getUrl(), uf);
+    }
+    
+    @Override
+    public UrlFetcher makePermissionUrlFetcher(String url) {
+      return ufMap.get(url);
+    }
+
+    @Override
+    public UrlCacher makeUrlCacher(UrlData ud) {
+      return new MockUrlCacher((MockArchivalUnit)au, ud);
+    }
+
+    @Override
+    public boolean hasPermission(String url) {
+      if(permissionMap != null) {
+        permissionMap.hasPermission(url);
+      }
+      return true;
+    }
+    
+    public void setPermissionMap(PermissionMap permMap) {
+      permissionMap = permMap;
+    }
+    
+    @Override
+    public long getRetryDelay(CacheException ce) {
+      return BaseCrawler.DEFAULT_DEFAULT_RETRY_DELAY;
+    }
+
+    @Override
+    public int getRetryCount(CacheException ce) {
+      return BaseCrawler.DEFAULT_DEFAULT_RETRY_COUNT;
+    }
+
+    @Override
+    public int permissonStreamResetMax() {
+      return BaseCrawler.DEFAULT_PERMISSION_BUF_MAX;
+    }
+
   }
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: ExploderHelperWrapper.java,v 1.5 2011-05-18 04:09:55 tlipkis Exp $
+ * $Id: ExploderHelperWrapper.java,v 1.6 2014-11-12 20:11:53 wkwilson Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.wrapper;
 import java.io.*;
+
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.ExploderHelper;
@@ -66,5 +67,13 @@ public class ExploderHelperWrapper
     public Object wrap(Object obj) {
       return new ExploderHelperWrapper((ExploderHelper)obj);
     }
+  }
+
+  public void setWatchdog(LockssWatchdog wdog) {
+    inst.setWatchdog(wdog);
+  }
+
+  public void pokeWDog() {
+    inst.pokeWDog();
   }
 }

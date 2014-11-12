@@ -1,5 +1,5 @@
 /*
- * $Id: FuncTarExploder2.java,v 1.23 2014-08-19 05:24:10 tlipkis Exp $
+ * $Id: FuncTarExploder2.java,v 1.24 2014-11-12 20:11:35 wkwilson Exp $
  */
 
 /*
@@ -40,6 +40,8 @@ import org.apache.commons.collections.Bag;
 import org.apache.commons.collections.bag.*;
 import org.apache.commons.collections.map.*;
 import org.lockss.config.*;
+import org.lockss.crawler.FuncWarcExploder.MyCrawlRule;
+import org.lockss.crawler.FuncWarcExploder.MyExploderHelper;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.*;
@@ -155,7 +157,6 @@ public class FuncTarExploder2 extends LockssTestCase {
     props.setProperty("org.lockss.plugin.simulated.SimulatedContentGenerator.actualTarFile", "true");
     props.setProperty("org.lockss.plugin.simulated.SimulatedContentGenerator.actualTarFileName", issn + ".tar");
 
-    props.setProperty(FollowLinkCrawler.PARAM_EXPLODE_ARCHIVES, "true");
     props.setProperty(FollowLinkCrawler.PARAM_STORE_ARCHIVES, "true");
     props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
     String explodedPluginName =
@@ -183,6 +184,7 @@ public class FuncTarExploder2 extends LockssTestCase {
     sau = PluginTestUtil.createAndStartSimAu(simAuConfig(tempDirPath));
     ArticleIteratorFactory aif = new MyArticleIteratorFactory();
     sau.setArticleIteratorFactory(aif);
+    sau.setUrlConsumerFactory(new ExplodingUrlConsumerFactory());
   }
 
   public void tearDown() throws Exception {
@@ -252,7 +254,7 @@ public class FuncTarExploder2 extends LockssTestCase {
 	b.remove(iter.next(), 1);
       }
       // Permission pages get checked twice.  Hard to avoid that, so allow it
-      b.removeAll(sau.getCrawlSpec().getPermissionPages());
+      b.removeAll(sau.getPermissionUrls());
       // archives get checked twice - from checkThruFileTree & checkExplodedUrls
       b.remove("http://www.example.com/issn.tar");
       // This test is screwed up by the use of shouldBeCached() in
@@ -382,19 +384,11 @@ public class FuncTarExploder2 extends LockssTestCase {
 
   private void crawlContent() {
     log.debug("Crawling tree...");
-    List urls = sau.getNewContentCrawlUrls();
-    CrawlSpec spec =
-      new SpiderCrawlSpec(urls,
-			  urls, // permissionUrls
-			  new MyCrawlRule(), // crawl rules
-			  1,    // refetch depth
-			  null, // PermissionChecker
-			  null, // LoginPageChecker
-			  ".tar$", // exploder pattern
-			  new MyExploderHelper()
-			  );
-    NewContentCrawler crawler = new
-      NewContentCrawler(sau, spec, new MockAuState());
+    sau.setRule(new MyCrawlRule());
+    sau.setExploderPattern(".tar$");
+    sau.setExploderHelper(new MyExploderHelper());
+    FollowLinkCrawler crawler = 
+        new FollowLinkCrawler(sau, new MockAuState());
     crawler.setCrawlManager(crawlMgr);
     crawler.doCrawl();
   }
@@ -663,6 +657,18 @@ public class FuncTarExploder2 extends LockssTestCase {
 	log.error("Null archive name");
       }
       return ret;
+    }
+
+    @Override
+    public void setWatchdog(LockssWatchdog wdog) {
+      //do nothing
+      
+    }
+
+    @Override
+    public void pokeWDog() {
+      //do nothing
+      
     }
   }
 

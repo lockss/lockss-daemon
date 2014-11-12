@@ -1,5 +1,5 @@
 /*
- * $Id: TestArchiveMembers.java,v 1.10 2013-10-23 04:25:23 tlipkis Exp $
+ * $Id: TestArchiveMembers.java,v 1.11 2014-11-12 20:11:56 wkwilson Exp $
  */
 
 /*
@@ -383,12 +383,12 @@ public class TestArchiveMembers extends LockssTestCase {
 
   void copyCu(String fromUrl, String toUrl) throws IOException {
     CachedUrl cu = simau.makeCachedUrl(fromUrl);
-    UrlCacher uc = simau.makeUrlCacher(toUrl);
     InputStream ins = cu.getUnfilteredInputStream();
     CIProperties props = cu.getProperties();
     props.setProperty(CachedUrl.PROPERTY_FETCH_TIME,
 		      Long.toString(TimeBase.nowMs()));
-    uc.storeContent(ins, props);
+    UrlCacher uc = simau.makeUrlCacher(new UrlData(ins, props, toUrl));
+    uc.storeContent();
   }
 
   // Sample of URLs in recent archives 

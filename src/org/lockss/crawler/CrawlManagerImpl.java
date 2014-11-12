@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.150 2014-10-22 19:39:35 thib_gc Exp $
+ * $Id: CrawlManagerImpl.java,v 1.151 2014-11-12 20:11:23 wkwilson Exp $
  */
 
 /*
@@ -39,9 +39,12 @@ import org.apache.commons.collections.*;
 import org.apache.commons.collections.map.*;
 import org.apache.commons.collections.bag.HashBag; // needed to disambiguate
 import org.apache.oro.text.regex.*;
+
 import EDU.oswego.cs.dl.util.concurrent.*;
+
 import org.lockss.config.*;
 import org.lockss.daemon.*;
+import org.lockss.daemon.Crawler;
 import org.lockss.daemon.status.*;
 import org.lockss.util.*;
 import org.lockss.app.*;
@@ -790,11 +793,11 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     synchronized (runningCrawlersLock) {
       PoolCrawlers pc = poolMap.get(crawler.getCrawlPool());
       if (pc == null) {
-	return null;
+        return null;
       }
       CrawlRateLimiter res = pc.crlMap.get(crawler);
       if (res == null) {
-	throw new RuntimeException("No CrawlRateLimiter for: " + crawler);
+        throw new RuntimeException("No CrawlRateLimiter for: " + crawler);
       }
       return res;
     }
@@ -923,11 +926,10 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       if (locks.size() < urls.size()) {
 	cb = new FailingCallbackWrapper(cb);
       }
-      crawler = makeRepairCrawler(au, au.getCrawlSpec(),
-				  locks.keySet(), percentRepairFromCache);
+      crawler = makeRepairCrawler(au, locks.keySet());
       CrawlRunner runner =
-	new CrawlRunner(crawler, null, cb, cookie, locks.values(), limiter);
-      cmStatus.addCrawlStatus(crawler.getStatus());
+	new CrawlRunner(crawler, cb, cookie, locks.values(), limiter);
+      cmStatus.addCrawlStatus(crawler.getCrawlerStatus());
       addToRunningCrawls(au, crawler);
       new Thread(runner).start();
     } catch (RuntimeException re) {
@@ -1014,17 +1016,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 
   public void checkEligibleForNewContentCrawl(ArchivalUnit au)
       throws NotEligibleException {
-    CrawlSpec spec;
-    try {
-      spec = au.getCrawlSpec();
-    } catch (RuntimeException e) {
-      // not clear this can ever happen in real use, but some tests force
-      // getCrawlSpec() to throw
-      String msg = "Couldn't get CrawlSpec for: " + au.getName();
-      logger.error(msg, e);
-      throw new NotEligibleException(msg);
-    }
-    if (spec != null && !windowOkToStart(spec.getCrawlWindow())) {
+    if (!windowOkToStart(au.getCrawlWindow())) {
       throw new NotEligibleException("Crawl window is closed");
     }
     checkEligibleToQueueNewContentCrawl(au);
@@ -1081,8 +1073,8 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       enqueueHighPriorityCrawl(req);
     } else {
       if (!isEligibleForNewContentCrawl(req.getAu())) {
-	callCallback(req.getCb(), req.getCookie(), false, null);
-	return;
+        callCallback(req.getCb(), req.getCookie(), false, null);
+        return;
       }
       handReqToPool(req);
     }
@@ -1106,13 +1098,12 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       callCallback(cb, cookie, false, null);
       return;
     }
-    CrawlSpec spec = au.getCrawlSpec();
     Crawler crawler = null;
     CrawlRunner runner = null;
     try {
-      crawler = makeNewContentCrawler(au, spec);
+      crawler = makeFollowLinkCrawler(au);
       crawler.setCrawlReq(req);
-      runner = new CrawlRunner(crawler, spec, cb, cookie, SetUtil.set(lock),
+      runner = new CrawlRunner(crawler, cb, cookie, SetUtil.set(lock),
 			       getNewContentRateLimiter(au),
 			       newContentStartRateLimiter);
       // To avoid race, must add to running crawls before starting
@@ -1121,14 +1112,14 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       if (paramOdc) {
 	// Add status first.  execute might not return for a long time, and
 	// we're expecting this crawl to be accepted.
-	cmStatus.addCrawlStatus(crawler.getStatus());
+	cmStatus.addCrawlStatus(crawler.getCrawlerStatus());
 	execute(runner);
 	return;
       } else {
 	// Add to status only if successfully queued or started.  (No
 	// race here; appearance in status might be delayed.)
 	execute(runner);
-	cmStatus.addCrawlStatus(crawler.getStatus());
+	cmStatus.addCrawlStatus(crawler.getCrawlerStatus());
 	return;
       }
     } catch (InterruptedException e) {
@@ -1184,28 +1175,18 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     }
   }
 
-  protected Crawler makeNewContentCrawler(ArchivalUnit au, CrawlSpec spec) {
-    //check CrawlSpec if it is Oai Type then create OaiCrawler Instead of NewContentCrawler
-    if (spec instanceof OaiCrawlSpec) {
-      logger.debug("Creating OaiCrawler for " + au);
-      OaiCrawler oc = new OaiCrawler(au, spec, AuUtil.getAuState(au));
-      oc.setCrawlManager(this);
-      return oc;
-    } else {
-      logger.debug("Creating NewContentCrawler for " + au);
-      NewContentCrawler nc =
-	new NewContentCrawler(au, spec, AuUtil.getAuState(au));
-      nc.setCrawlManager(this);
-      return nc;
-    }
+  protected Crawler makeFollowLinkCrawler(ArchivalUnit au) {
+    logger.debug("Creating FollowLinkCrawler for " + au);
+    FollowLinkCrawler nc =
+    		new FollowLinkCrawler(au, AuUtil.getAuState(au));
+    nc.setCrawlManager(this);
+    return nc;
   }
 
   protected Crawler makeRepairCrawler(ArchivalUnit au,
-				      CrawlSpec spec,
-				      Collection  repairUrls,
-				      float percentRepairFromCache) {
-    RepairCrawler rc = new RepairCrawler(au, spec, AuUtil.getAuState(au),
-					 repairUrls, percentRepairFromCache);
+				      Collection<String>  repairUrls) {
+    RepairCrawler rc = new RepairCrawler(au, AuUtil.getAuState(au),
+					 repairUrls);
     rc.setCrawlManager(this);
     return rc;
   }
@@ -1228,17 +1209,16 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     private Collection locks;
     private RateLimiter auRateLimiter;
     private RateLimiter startRateLimiter;
-    private CrawlSpec spec;
     private int sortOrder;
 
-    private CrawlRunner(Crawler crawler, CrawlSpec spec,
+    private CrawlRunner(Crawler crawler,
 			CrawlManager.Callback cb,
 			Object cookie, Collection locks,
 			RateLimiter auRateLimiter) {
-      this(crawler, spec, cb, cookie, locks, auRateLimiter, null);
+      this(crawler, cb, cookie, locks, auRateLimiter, null);
     }
 
-    private CrawlRunner(Crawler crawler, CrawlSpec spec,
+    private CrawlRunner(Crawler crawler,
 			CrawlManager.Callback cb,
 			Object cookie, Collection locks,
 			RateLimiter auRateLimiter,
@@ -1250,7 +1230,6 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       this.locks = locks;
       this.auRateLimiter = auRateLimiter;
       this.startRateLimiter = startRateLimiter;
-      this.spec = spec;
       // queue in order created
       this.sortOrder = ++createIndex;
       if (crawler.getAu() instanceof RegistryArchivalUnit) {
@@ -1277,7 +1256,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       if (logger.isDebug3()) logger.debug3("Runner started");
       try {
 	if (!crawlerEnabled) {
-	  crawler.getStatus().setCrawlStatus(Crawler.STATUS_ABORTED,
+	  crawler.getCrawlerStatus().setCrawlStatus(Crawler.STATUS_ABORTED,
 					     "Crawler disabled");
 	  nowRunning();
 	  // exit immediately
@@ -1286,7 +1265,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	  crawler.setWatchdog(this);
 	  startWDog(WDOG_PARAM_CRAWLER, WDOG_DEFAULT_CRAWLER);
 	  // don't record event if crawl is going to abort immediately
-	  if (spec == null || spec.inCrawlWindow()) {
+	  if (crawler.getAu().inCrawlWindow()) {
 	    if (auRateLimiter != null) {
 	      auRateLimiter.event();
 	    }
@@ -1309,7 +1288,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	  }
 	  crawlSuccessful = crawler.doCrawl();
 
-	  if (!crawlSuccessful && spec != null && !spec.inCrawlWindow()) {
+	  if (!crawlSuccessful && !crawler.getAu().inCrawlWindow()) {
 	    // If aborted due to crawl window, undo the charge against its
 	    // rate limiter so it can start again when window opens
 	    if (auRateLimiter != null) {
@@ -1334,7 +1313,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
         }
 	removeFromRunningCrawls(crawler);
 	cmStatus.incrFinished(crawlSuccessful);
-	CrawlerStatus cs = crawler.getStatus();
+	CrawlerStatus cs = crawler.getCrawlerStatus();
 	cmStatus.touchCrawlStatus(cs);
 	signalAuEvent(crawler, cs);
 	// must call callback before sealing counters.  V3Poller relies

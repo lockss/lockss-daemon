@@ -1,5 +1,5 @@
 /*
- * $Id: NullCrawler.java,v 1.12 2012-11-08 06:21:40 tlipkis Exp $
+ * $Id: NullCrawler.java,v 1.13 2014-11-12 20:11:42 wkwilson Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.test;
 
 import java.util.Collection;
+
 import org.lockss.daemon.*;
 import org.lockss.crawler.*;
 import org.lockss.plugin.ArchivalUnit;
@@ -65,7 +66,7 @@ public class NullCrawler implements Crawler {
 //     throw new UnsupportedOperationException("Not implemented");
 //   }
 
-  public Collection getStartUrls() {
+  public Collection<String> getStartUrls() {
     throw new UnsupportedOperationException("Not implemented");
   }
 
@@ -77,7 +78,7 @@ public class NullCrawler implements Crawler {
     throw new UnsupportedOperationException("Not implemented");
   }
 
-  public CrawlerStatus getStatus() {
+  public CrawlerStatus getCrawlerStatus() {
     throw new UnsupportedOperationException("Not implemented");
   }
 

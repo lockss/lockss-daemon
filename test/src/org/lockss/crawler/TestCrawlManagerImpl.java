@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.97 2014-10-01 08:35:36 tlipkis Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.98 2014-11-12 20:11:28 wkwilson Exp $
 */
 
 /*
@@ -53,7 +53,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
   protected MockActivityRegulator activityRegulator;
   protected MockCrawler crawler;
   protected CachedUrlSet cus;
-  protected CrawlSpec crawlSpec;
+  protected CrawlRule rule;
   protected CrawlManager.StatusSource statusSource;
   protected MyPluginManager pluginMgr;
   protected MockAuState maus;
@@ -69,7 +69,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     cprops.put(CrawlManagerImpl.PARAM_START_CRAWLS_INTERVAL, "0");
 
     plugin = new MockPlugin(getMockLockssDaemon());
-    crawlSpec = new SpiderCrawlSpec("blah", new MockCrawlRule());
+    rule = new MockCrawlRule();
 
     theDaemon = getMockLockssDaemon();
     crawlManager = new TestableCrawlManagerImpl();
@@ -88,7 +88,9 @@ public class TestCrawlManagerImpl extends LockssTestCase {
   void setUpMockAu() {
     mau = new MockArchivalUnit();
     mau.setPlugin(plugin);
-    mau.setCrawlSpec(crawlSpec);
+    mau.setCrawlRule(rule);
+    mau.setStartUrls(ListUtil.list("blah"));
+    mau.setCrawlWindow(new MockCrawlWindow(true));
     theDaemon.setNodeManager(nodeManager, mau);
 
     PluginTestUtil.registerArchivalUnit(plugin, mau);
@@ -322,7 +324,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       crawlManager.startNewContentCrawl(mau, new TestCrawlCB(sem), null, null);
       waitForCrawlToFinish(sem);
       assertTrue("doCrawl() not called at time " + TimeBase.nowMs(),
-		 crawler.doCrawlCalled());
+          crawler.doCrawlCalled());
     }
 
     private void assertDoesCrawlNew() {
@@ -427,20 +429,12 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       crawlManager.setRunningNCCrawl(mau, false);
       assertQueueable(mau);
       assertEligible(mau);
-      crawlSpec.setCrawlWindow(new CrawlWindows.Never());
+      mau.setCrawlWindow(new CrawlWindows.Never());
       assertQueueable(mau);
       assertNotEligible("window.*closed", mau);
-      crawlSpec.setCrawlWindow(new CrawlWindows.Always());
+      mau.setCrawlWindow(new CrawlWindows.Always());
       assertQueueable(mau);
       assertEligible(mau);
-
-      assertNotEligible("Can't crawl ExplodedArchivalUnit",
-			new ExplodedArchivalUnit(new ExplodedPlugin(),
-						 new ExternalizableMap()));
-
-      assertNotQueueable("Can't crawl ExplodedArchivalUnit",
-			 new ExplodedArchivalUnit(new ExplodedPlugin(),
-						  new ExternalizableMap()));
 
       RateLimiter limit = crawlManager.getNewContentRateLimiter(mau);
       makeRateLimiterReturn(limit, false);
@@ -463,7 +457,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     }
 
     public void testDoesntNCCrawlWhenOutsideWindow() {
-      crawlSpec.setCrawlWindow(new ClosedCrawlWindow());
+      mau.setCrawlWindow(new ClosedCrawlWindow());
       assertDoesNotCrawlNew();
     }
 
@@ -518,8 +512,8 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
     public void testNewContentRateLimiterWindowClose() {
       TimeBase.setSimulated(100);
-      CrawlSpec cspec2 = new SpiderCrawlSpec("two", new MockCrawlRule());
-      mau.setCrawlSpec(cspec2);
+      mau.setStartUrls(ListUtil.list("two"));
+      mau.setCrawlRule(new MockCrawlRule());
       setNewContentRateLimit("1/10", "unlimited", "1/100000");
       assertDoesCrawlNew();
       assertDoesNotCrawlNew();
@@ -531,9 +525,6 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       MockCrawler c2 = new CloseWindowCrawler();
       crawlManager.setTestCrawler(mau, c2);
       assertDoesCrawlNew(c2);
-      cspec2.setCrawlWindow(null);
-      crawlManager.setTestCrawler(mau, null);
-      assertDoesCrawlNew();
     }
 
     public void testRepairRateLimiter() {
@@ -897,7 +888,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       crawlManager.startRepair(mau, ListUtil.list(GENERIC_URL),
 			       new TestCrawlCB(sem), null, null);
       List actual = statusSource.getStatus().getCrawlerStatusList();
-      List expected = ListUtil.list(crawler.getStatus());
+      List expected = ListUtil.list(crawler.getCrawlerStatus());
 
       assertEquals(expected, actual);
       waitForCrawlToFinish(sem);
@@ -907,7 +898,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
       crawlManager.startNewContentCrawl(mau, new TestCrawlCB(sem), null, null);
       List actual = statusSource.getStatus().getCrawlerStatusList();
-      List expected = ListUtil.list(crawler.getStatus());
+      List expected = ListUtil.list(crawler.getCrawlerStatus());
       assertEquals(expected, actual);
       waitForCrawlToFinish(sem);
     }
@@ -927,7 +918,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       // this test it might be moved to the most-recently-used position of
       // the LRUMap, so the order here is unpredictable
       List actual = statusSource.getStatus().getCrawlerStatusList();
-      Set expected = SetUtil.set(crawler.getStatus(), crawler2.getStatus());
+      Set expected = SetUtil.set(crawler.getCrawlerStatus(), crawler2.getCrawlerStatus());
       assertEquals(expected, SetUtil.theSet(actual));
       waitForCrawlToFinish(sem1);
       waitForCrawlToFinish(sem2);
@@ -1020,7 +1011,8 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 	crawler[ix] = new HangingCrawler("testNoQueuePoolSize " + ix,
 						 startSem[ix], endSem[ix]);
 	MockArchivalUnit au = newMockArchivalUnit("mau" + ix);
-	au.setCrawlSpec(crawlSpec);
+	au.setCrawlRule(rule);
+	au.setStartUrls(ListUtil.list("blah"));
 	PluginTestUtil.registerArchivalUnit(plugin, au);
 	setupAuToCrawl(au, crawler[ix]);
 	semToGive(endSem[ix]);
@@ -1090,7 +1082,8 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 	crawler[ix] = new HangingCrawler("testQueuedPool " + ix,
 					 startSem[ix], endSem[ix]);
 	MockArchivalUnit au = newMockArchivalUnit("mau" + ix);
-	au.setCrawlSpec(crawlSpec);
+	au.setCrawlRule(rule);
+	au.setStartUrls(ListUtil.list("blah"));
 	PluginTestUtil.registerArchivalUnit(plugin, au);
 	setupAuToCrawl(au, crawler[ix]);
 	semToGive(endSem[ix]);
@@ -1183,7 +1176,8 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 	crawler[ix] = new HangingCrawler("testQueuedPool " + ix,
 					 null, endSem);
 	MockArchivalUnit au = newMockArchivalUnit("mau" + ix);
-	au.setCrawlSpec(crawlSpec);
+	au.setCrawlRule(rule);
+	au.setStartUrls(ListUtil.list("blah"));
 	setupAuToCrawl(au, crawler[ix]);
 	PluginTestUtil.registerArchivalUnit(plugin, au);
       }
@@ -1691,7 +1685,8 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 	} else {
 	  crawler[ix] = new HangingCrawler("testOdcCrawlStarter " + ix,
 					   startSem[ix], endSem[ix]);
-	  aus[ix].setCrawlSpec(crawlSpec);
+	  aus[ix].setCrawlRule(rule);
+	  aus[ix].setStartUrls(ListUtil.list("blah"));
 	  setupAuToCrawl(aus[ix], crawler[ix]);
 	}
 	semToGive(endSem[ix]);
@@ -1849,20 +1844,18 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     private Map<ArchivalUnit,Crawler> auCrawlerMap =
       new HashMap<ArchivalUnit,Crawler>();
 
-    protected Crawler makeNewContentCrawler(ArchivalUnit au, CrawlSpec spec) {
+    protected Crawler makeFollowLinkCrawler(ArchivalUnit au) {
       MockCrawler crawler = getCrawler(au);
       crawler.setAu(au);
-      SpiderCrawlSpec cs = (SpiderCrawlSpec) spec;
-      crawler.setUrls(cs.getStartingUrls());
+      crawler.setUrls(au.getStartUrls());
       crawler.setFollowLinks(true);
       crawler.setType(Crawler.Type.NEW_CONTENT);
       crawler.setIsWholeAU(true);
       return crawler;
     }
 
-    protected Crawler makeRepairCrawler(ArchivalUnit au, CrawlSpec spec,
-					Collection repairUrls,
-					float percentRepairFromCache) {
+    protected Crawler makeRepairCrawler(ArchivalUnit au,
+					Collection repairUrls) {
       MockCrawler crawler = getCrawler(au);
       crawler.setAu(au);
       crawler.setUrls(repairUrls);
@@ -2036,8 +2029,8 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
     public boolean doCrawl() {
       super.doCrawl();
-      CrawlSpec spec = getAu().getCrawlSpec();
-      spec.setCrawlWindow(new ClosedCrawlWindow());
+      MockArchivalUnit au = (MockArchivalUnit)getAu();
+      au.setCrawlWindow(new ClosedCrawlWindow());
       return false;
     }
   }
@@ -2064,16 +2057,16 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
     public boolean doCrawl() {
       for (List<String> pair : urls) {
-	getStatus().signalUrlFetched(pair.get(0));
-	String mime = HeaderUtil.getMimeTypeFromContentType(pair.get(1));
-	getStatus().signalMimeTypeOfUrl(mime, pair.get(0)); 
+        getCrawlerStatus().signalUrlFetched(pair.get(0));
+        String mime = HeaderUtil.getMimeTypeFromContentType(pair.get(1));
+	      getCrawlerStatus().signalMimeTypeOfUrl(mime, pair.get(0)); 
       }
       if (super.doCrawl()) {
-	getStatus().setCrawlStatus(Crawler.STATUS_SUCCESSFUL);
-	return true;
+        getCrawlerStatus().setCrawlStatus(Crawler.STATUS_SUCCESSFUL);
+        return true;
       } else {
-	getStatus().setCrawlStatus(Crawler.STATUS_ERROR);
-	return false;
+        getCrawlerStatus().setCrawlStatus(Crawler.STATUS_ERROR);
+        return false;
       }
     }
   }
@@ -2093,10 +2086,6 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     }
 
     public CachedUrlSet getAuCachedUrlSet() {
-      throw new ExpectedRuntimeException("I throw");
-    }
-
-    public CrawlSpec getCrawlSpec() {
       throw new ExpectedRuntimeException("I throw");
     }
 

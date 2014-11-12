@@ -1,5 +1,5 @@
 /*
- * $Id: FuncNewContentCrawler.java,v 1.30 2014-07-22 07:55:25 tlipkis Exp $
+ * $Id: FuncNewContentCrawler.java,v 1.31 2014-11-12 20:11:35 wkwilson Exp $
  */
 
 /*
@@ -79,7 +79,7 @@ public class FuncNewContentCrawler extends LockssTestCase {
 
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     Properties props = new Properties();
-    props.setProperty(NewContentCrawler.PARAM_MAX_CRAWL_DEPTH, ""+max);
+    props.setProperty(FollowLinkCrawler.PARAM_MAX_CRAWL_DEPTH, ""+max);
     maxDepth=max;
     props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
 		      tempDirPath);
@@ -136,7 +136,7 @@ public class FuncNewContentCrawler extends LockssTestCase {
     // get the root of the simContent
     String simDir = sau.getSimRoot();
 
-    NoCrawlEndActionsNewContentCrawler crawler = crawlContent();
+    NoCrawlEndActionsFollowLinkCrawler crawler = crawlContent();
 
     // read all the files links from the root of the simcontent
     // check the link level of the file and see if it contains
@@ -168,12 +168,12 @@ public class FuncNewContentCrawler extends LockssTestCase {
       b.remove(iter.next(), 1);
     }
     // Permission pages get checked twice.  Hard to avoid that, so allow it
-    b.removeAll(sau.getCrawlSpec().getPermissionPages());
+    b.removeAll(sau.getPermissionUrls());
     assertEmpty("shouldBeCached() called multiple times on same URLs.", b);
 
     String th = "text/html";
     String tp = "text/plain";
-    String[] ct = {null, th, th, tp, tp, th, th, tp, tp, th, tp};
+    String[] ct = {null, null, null, null, tp, tp, th, th, tp, tp, th, tp};
     Bag ctb = new HashBag(ListUtil.fromArray(ct));
     CrawlRateLimiter crl = crawlMgr.getCrawlRateLimiter(crawler);
     assertEquals(ctb, new HashBag(crawlMgr.getPauseContentTypes(crawler)));
@@ -213,11 +213,10 @@ public class FuncNewContentCrawler extends LockssTestCase {
     sau.generateContentTree();
   }
 
-  private NoCrawlEndActionsNewContentCrawler crawlContent() {
+  private NoCrawlEndActionsFollowLinkCrawler crawlContent() {
     log.debug("Crawling tree...");
-    CrawlSpec spec = new SpiderCrawlSpec(sau.getNewContentCrawlUrls(), null);
-    NoCrawlEndActionsNewContentCrawler crawler =
-      new NoCrawlEndActionsNewContentCrawler(sau, spec, new MockAuState());
+    NoCrawlEndActionsFollowLinkCrawler crawler =
+      new NoCrawlEndActionsFollowLinkCrawler(sau, new MockAuState());
     crawler.setCrawlManager(crawlMgr);
     crawlMgr.addToRunningCrawls(crawler.getAu(), crawler);
     crawler.doCrawl();

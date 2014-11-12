@@ -1,5 +1,5 @@
 /*
- * $Id: MiscTestUtil.java,v 1.3 2009-10-08 02:12:03 tlipkis Exp $
+ * $Id: MiscTestUtil.java,v 1.4 2014-11-12 20:11:43 wkwilson Exp $
  */
 
 /*
@@ -34,20 +34,18 @@ package org.lockss.test;
 
 import java.util.*;
 import java.io.*;
-import java.net.*;
 import java.security.*;
 
-import org.lockss.test.*;
+import org.lockss.test.MockCrawler.MockCrawlerFacade;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
-import org.lockss.crawler.*;
 
 /** Miscellaneous testing utilities */
 public class MiscTestUtil {
   protected static Logger log = Logger.getLogger("MiscTestUtil");
 
   public static boolean hasPermission(List checkers, String page,
-				      Crawler.PermissionHelper pHelper)
+				      MockCrawlerFacade mcf)
       throws IOException {
     int len = page.length() * 2;
     Reader rdr = new BufferedReader(new StringReader(page), len);
@@ -55,7 +53,7 @@ public class MiscTestUtil {
     for (Iterator it = checkers.iterator(); it.hasNext(); ) {
       PermissionChecker checker = (PermissionChecker)it.next();
       rdr.mark(len);
-      if (checker.checkPermission(pHelper, rdr, null)) {
+      if (checker.checkPermission(mcf, rdr, null)) {
 	return true;
       }
       rdr.reset();

@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWirePressPlugin.java,v 1.1 2013-11-12 23:20:42 etenbrink Exp $
+ * $Id: TestHighWirePressPlugin.java,v 1.2 2014-11-12 20:11:41 wkwilson Exp $
  */
 
 /*
@@ -98,8 +98,7 @@ public class TestHighWirePressPlugin extends LockssTestCase {
     DefinableArchivalUnit au = makeAuFromProps(props);
     assertEquals("HighWire Press Plugin (H10c), Base URL http://www.example.com/, Volume 322", 
         au.getName());
-    SpiderCrawlSpec spec = (SpiderCrawlSpec)au.getCrawlSpec();
-    assertEquals(ListUtil.list(starturl), spec.getStartingUrls());
+    assertEquals(ListUtil.list(starturl), au.getStartUrls());
   }
   
   public void testGetPluginId() {
@@ -115,7 +114,7 @@ public class TestHighWirePressPlugin extends LockssTestCase {
   
   public void testHandles404Result() throws Exception {
     CacheException exc =
-        ((HttpResultMap) plugin.getCacheResultMap()).mapException(null, null,
+        ((HttpResultMap) plugin.getCacheResultMap()).mapException(null, "",
             404, "foo");
     assertEquals(RetryDeadLinkException.class, exc.getClass() );
   }

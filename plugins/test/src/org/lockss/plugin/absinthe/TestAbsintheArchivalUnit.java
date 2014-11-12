@@ -1,5 +1,5 @@
 /*
- * $Id: TestAbsintheArchivalUnit.java,v 1.9 2012-08-08 07:19:52 tlipkis Exp $
+ * $Id: TestAbsintheArchivalUnit.java,v 1.10 2014-11-12 20:11:40 wkwilson Exp $
  */
 
 /*
@@ -173,8 +173,7 @@ public class TestAbsintheArchivalUnit extends LockssTestCase {
 
   private void shouldCacheTest(String url, boolean shouldCache,
                                ArchivalUnit au, CachedUrlSet cus) {
-    UrlCacher uc = au.makeUrlCacher(url);
-    assertEquals(shouldCache, uc.shouldBeCached());
+    assertEquals(shouldCache, au.shouldBeCached(url));
   }
 
   public void testStartUrlConstruction() throws Exception {
@@ -183,7 +182,7 @@ public class TestAbsintheArchivalUnit extends LockssTestCase {
     // 4 digit
     String expected = ROOT_URL+"archives04.htm";
     DefinableArchivalUnit pmAu = makeAu(url, "2004");
-    assertEquals(ListUtil.list(expected), pmAu.getNewContentCrawlUrls());
+    assertEquals(ListUtil.list(expected), pmAu.getStartUrls());
   }
 
   public void testGetUrlStems() throws Exception {

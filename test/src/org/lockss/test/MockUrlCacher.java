@@ -1,5 +1,5 @@
 /*
- * $Id: MockUrlCacher.java,v 1.42 2014-07-11 23:32:58 tlipkis Exp $
+ * $Id: MockUrlCacher.java,v 1.43 2014-11-12 20:11:43 wkwilson Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.test;
 
 import java.io.*;
 import java.util.*;
+
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.daemon.*;
@@ -58,18 +59,18 @@ public class MockUrlCacher implements UrlCacher {
   private IOException cachingException = null;
   private RuntimeException cachingRuntimException = null;
   private int numTimesToThrow = 1;
-  private IPAddr localAddr = null;
   private BitSet fetchFlags = new BitSet();
-  private PermissionMapSource permissionMapSource;
   private String previousContentType;
   private byte[] storedContent;
-  private CrawlRateLimiter crl;
-  private RedirectScheme redirScheme;
   private CacheException infoException;
+  private CIProperties headers;
+  private InputStream input;
 
-  public MockUrlCacher(String url, MockArchivalUnit au){
-    this.url = url;
+  public MockUrlCacher(MockArchivalUnit au, UrlData ud){
+    this.url = ud.url;
     this.au = au;
+    this.headers = ud.headers;
+    this.input = ud.input;
     this.cus = (MockCachedUrlSet)au.getAuCachedUrlSet();
   }
 
@@ -112,14 +113,6 @@ public class MockUrlCacher implements UrlCacher {
   public void setProxy(String proxyHost, int proxyPort) {
   }
 
-  public void setLocalAddress(IPAddr addr) {
-    localAddr = addr;
-  }
-
-  public IPAddr getLocalAddress() {
-    return localAddr;
-  }
-
   public void setFetchFlags(BitSet fetchFlags) {
     this.fetchFlags = fetchFlags;
   }
@@ -135,24 +128,8 @@ public class MockUrlCacher implements UrlCacher {
   public String getPreviousContentType() {
     return previousContentType;
   }
-
-  public void setCrawlRateLimiter(CrawlRateLimiter crl) {
-    this.crl = crl;
-  }
-
-  public CrawlRateLimiter getCrawlRateLimiter() {
-    return crl;
-  }
-
+  
   public void setRequestProperty(String key, String value) {
-  }
-
-  public void setRedirectScheme(RedirectScheme scheme) {
-    redirScheme = scheme;
-  }
-
-  public RedirectScheme getRedirectScheme() {
-    return redirScheme;
   }
 
   public void setWatchdog(LockssWatchdog wdog) {
@@ -160,7 +137,7 @@ public class MockUrlCacher implements UrlCacher {
 
   public void setupCachedUrl(String contents) {
     MockCachedUrl cu = new MockCachedUrl(url);
-    cu.setProperties(getUncachedProperties());
+    cu.setProperties(headers);
     if (contents != null) {
       cu.setContent(contents);
     }
@@ -168,18 +145,20 @@ public class MockUrlCacher implements UrlCacher {
   }
 
     // Write interface - used by the crawler.
-
   public void storeContent(InputStream input,
-			   CIProperties headers) throws IOException{
+      CIProperties headers) throws IOException{
+    storeContent();
+  }
+  public void storeContent() throws IOException{
     MockCachedUrl cu = (MockCachedUrl)getCachedUrl();
     if (cu != null) {
       cu.setExists(true);
     }
     if (cus != null) {
       if (fetchFlags.get(UrlCacher.REFETCH_FLAG)) {
-	cus.addForceCachedUrl(url);
+        cus.addForceCachedUrl(url);
       } else {
-	cus.addCachedUrl(url);
+        cus.addCachedUrl(url);
       }
     }
     ByteArrayOutputStream baos = new ByteArrayOutputStream();
@@ -224,66 +203,10 @@ public class MockUrlCacher implements UrlCacher {
     }
   }
 
-  public int cache() throws IOException {
-    int resultCode;
-
-    if(cus == null) System.out.println("Warning cache() called with null cus");
-    if (cus != null) {
-      cus.signalCacheAttempt(url);
-    }
-
-    getUncachedInputStream();
-
-    if (cus != null) {
-      if (fetchFlags.get(UrlCacher.REFETCH_FLAG)) {
-	cus.addForceCachedUrl(url);
-      } else {
-	cus.addCachedUrl(url);
-      }
-    }
-
-
-    //XXX messy
-    //content already there, so we should be doing a not modified response
-    if (cu.hasContent()) {
-      return CACHE_RESULT_NOT_MODIFIED;
-    }
-
-    //otherwise, mark that there is content and send a fetched response
-
-    if (cu != null) {
-      cu.setExists(true);
-    }
-    return CACHE_RESULT_FETCHED;
-  }
-
   private boolean executed = false;
 
   void setNotExecuted() {
     executed = false;
-  }
-
-  public InputStream getUncachedInputStream() throws IOException {
-    if (executed) {
-      throw new IllegalStateException("getUncachedInputStream() called twice");
-    }
-    pauseBeforeFetch();
-    executed = true;
-    throwExceptionIfSet();
-    if (uncachedIS == null && cu != null) {
-      return cu.getUnfilteredInputStream();
-    }
-    return uncachedIS;
-  }
-
-  public CIProperties getUncachedProperties() {
-    return uncachedProp;
-  }
-
-  private void pauseBeforeFetch() {
-    if (crl != null) {
-      crl.pauseBeforeFetch(url, previousContentType);
-    }
   }
 
   public void reset() {
@@ -315,16 +238,9 @@ public class MockUrlCacher implements UrlCacher {
     return sb.toString();
   }
 
-  /**
-   * setPermissionMap
-   *
-   * @param pmSource PermissionMap source
-   */
-  public void setPermissionMapSource(PermissionMapSource pmSource) {
-    this.permissionMapSource = pmSource;
+  public void setRedirectUrls(List<String> redirectUrls) {
+    throw new UnsupportedOperationException(
+        "MockUrlCacher does not suppert redirect lists");
   }
 
-  public PermissionMapSource getPermissionMapSource() {
-    return permissionMapSource;
-  }
 }

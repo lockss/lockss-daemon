@@ -1,5 +1,5 @@
 /*
- * $Id: TestProjectMuseArchivalUnit.java,v 1.13 2012-08-08 07:19:51 tlipkis Exp $
+ * $Id: TestProjectMuseArchivalUnit.java,v 1.14 2014-11-12 20:11:51 wkwilson Exp $
  */
 
 /*
@@ -175,8 +175,7 @@ public class TestProjectMuseArchivalUnit extends LockssTestCase {
 
   private void shouldCacheTest(String url, boolean shouldCache,
 			       ArchivalUnit au, CachedUrlSet cus) {
-    UrlCacher uc = au.makeUrlCacher(url);
-    assertTrue(uc.shouldBeCached()==shouldCache);
+    assertTrue(au.shouldBeCached(url)==shouldCache);
   }
 
   public void testStartUrlConstruction() throws Exception {
@@ -185,17 +184,17 @@ public class TestProjectMuseArchivalUnit extends LockssTestCase {
     // 2 digit
     String expectedStr = ROOT_URL+"journals/"+DIR+"/v060/";
     DefinableArchivalUnit pmAu = makeAu(url, 60, DIR);
-    assertEquals(ListUtil.list(expectedStr), pmAu.getNewContentCrawlUrls());
+    assertEquals(ListUtil.list(expectedStr), pmAu.getStartUrls());
 
     // 3 digit
     expectedStr = ROOT_URL+"journals/"+DIR+"/v601/";
     pmAu = makeAu(url, 601, DIR);
-    assertEquals(ListUtil.list(expectedStr), pmAu.getNewContentCrawlUrls());
+    assertEquals(ListUtil.list(expectedStr), pmAu.getStartUrls());
 
     // 1 digit
     expectedStr = ROOT_URL+"journals/"+DIR+"/v006/";
     pmAu = makeAu(url, 6, DIR);
-    assertEquals(ListUtil.list(expectedStr), pmAu.getNewContentCrawlUrls());
+    assertEquals(ListUtil.list(expectedStr), pmAu.getStartUrls());
   }
 
   public void testGetUrlStems() throws Exception {

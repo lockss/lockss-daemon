@@ -155,26 +155,25 @@ public class TestIOPScienceArticleIteratorFactory extends ArticleIteratorTestCas
     CachedUrl cuHtml = null;
     for (CachedUrl cu : AuUtil.getCuIterable(sau)) {
       if (cuPdf == null && 
-	  cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_PDF))
-	{
-	  cuPdf = cu;
-	}
+          cu.getContentType().toLowerCase().startsWith(
+              Constants.MIME_TYPE_PDF)) {
+    	  cuPdf = cu;
+    	}
       else if (cuHtml == null && 
-	       cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_HTML))
-	{
-	  cuHtml = cu;
-	}
+          cu.getContentType().toLowerCase().startsWith(
+              Constants.MIME_TYPE_HTML)) {
+      	cuHtml = cu;
+      }
       if (cuPdf != null && cuHtml != null) {
-	break;
+      	break;
       }
     }
     for (String url : urls) {
-      UrlCacher uc = au.makeUrlCacher(url);
       if (url.contains("pdf")) {
-	uc.storeContent(cuPdf.getUnfilteredInputStream(), cuPdf.getProperties());
+        storeContent(cuPdf.getUnfilteredInputStream(), cuPdf.getProperties(), url);
       }
       else {
-	uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
+        storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties(), url);
       }
     }
     

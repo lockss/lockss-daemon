@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlackbirdArchivalUnit.java,v 1.9 2012-06-25 05:48:07 tlipkis Exp $
+ * $Id: TestBlackbirdArchivalUnit.java,v 1.10 2014-11-12 20:12:02 wkwilson Exp $
  */
 
 /*
@@ -142,7 +142,7 @@ public class TestBlackbirdArchivalUnit extends LockssPluginTestCase {
     assertShouldCache(baseUrl+"gallery/burnside_c_091603/lucy1.ram", bbAu, cus);
 
     assertShouldCache(ROOT_URL+"lockss_media/v2n2/gallery/burnside_c/interview_part1.rm",
-		    bbAu, cus);
+        bbAu, cus);
 
     assertShouldNotCache(ROOT_URL+"v1n2/gallery/burnside_c/interview_part1.ram",
 		    bbAu, cus);
@@ -171,7 +171,7 @@ public class TestBlackbirdArchivalUnit extends LockssPluginTestCase {
 
     String expectedStr = ROOT_URL+"lockss/lockss-volume2.htm";
     DefinableArchivalUnit bbAu = makeAu(url, 2);
-    assertEquals(ListUtil.list(expectedStr), bbAu.getNewContentCrawlUrls());
+    assertEquals(ListUtil.list(expectedStr), bbAu.getStartUrls());
   }
 
   public void testGetUrlStems() throws Exception {

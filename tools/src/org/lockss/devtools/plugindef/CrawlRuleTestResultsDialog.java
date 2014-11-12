@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRuleTestResultsDialog.java,v 1.15 2006-09-06 16:38:41 thib_gc Exp $
+ * $Id: CrawlRuleTestResultsDialog.java,v 1.16 2014-11-12 20:11:54 wkwilson Exp $
  */
 
 /*
@@ -125,7 +125,7 @@ public class CrawlRuleTestResultsDialog extends JDialog {
   public CrawlRuleTestResultsDialog(ArchivalUnit au) {
     this();
     m_au = au;
-    String startUrl = (String)m_au.getNewContentCrawlUrls().get(0);
+    String startUrl = (String)m_au.getStartUrls().iterator().next();
     startUrlTextField.setText(startUrl);
     checkButton.setEnabled(!StringUtil.isNullString(startUrl));
   }
@@ -242,7 +242,7 @@ public class CrawlRuleTestResultsDialog extends JDialog {
         stop();
         m_msgHandler = new MyMessageHandler();
         crawlRuleTesterThread = new CrawlRuleTester(m_msgHandler, depth, delay,
-                                                    startUrl, m_au.getCrawlSpec());
+                                                    startUrl, m_au);
         stopButton.setEnabled(true);
         crawlRuleTesterThread.start();
       }

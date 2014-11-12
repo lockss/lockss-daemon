@@ -1,5 +1,5 @@
 /*
- * $Id: TestServletUtil.java,v 1.10 2014-10-15 06:43:32 tlipkis Exp $
+ * $Id: TestServletUtil.java,v 1.11 2014-11-12 20:11:57 wkwilson Exp $
  */
 
 /*
@@ -64,7 +64,8 @@ public class TestServletUtil extends LockssTestCase {
     MockArchivalUnit mau = new MockArchivalUnit();
     mau.setName(name);
     mau.setPlugin(pl);
-    mau.setCrawlSpec(new SpiderCrawlSpec(manifest, new MockCrawlRule()));
+    mau.setStartUrls(ListUtil.list(manifest));
+    mau.setCrawlRule(new MockCrawlRule());
     PluginTestUtil.registerArchivalUnit(pl, mau);
     MockNodeManager nm = new MockNodeManager();
     daemon.setNodeManager(nm, mau);

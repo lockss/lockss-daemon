@@ -1,5 +1,5 @@
 /*
- * $Id: WarcExploder.java,v 1.5 2012-09-06 03:59:41 tlipkis Exp $
+ * $Id: WarcExploder.java,v 1.6 2014-11-12 20:11:26 wkwilson Exp $
  */
 
 /*
@@ -34,14 +34,15 @@ package org.lockss.crawler;
 
 import java.util.*;
 import java.io.*;
+
 import org.archive.io.*;
 import org.archive.io.warc.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
+import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.plugin.*;
-import org.lockss.plugin.ExploderHelper;
 import org.lockss.plugin.base.*;
 import org.lockss.plugin.exploded.*;
 import org.lockss.state.*;
@@ -59,12 +60,9 @@ import org.lockss.state.*;
 public class WarcExploder extends Exploder {
 
   private static Logger logger = Logger.getLogger("WarcExploder");
-  protected ExploderHelper helper = null;
-  protected int reTry = 0;
-  protected CIProperties arcProps = null;
-
-  private String arcUrl = null;
-
+  protected InputStream arcStream;
+  protected CIProperties arcProps;
+  
   /**
    * Constructor
    * @param uc UrlCacher for the archive
@@ -74,21 +72,17 @@ public class WarcExploder extends Exploder {
    * @param explode true to explode the archives
    * @param store true to store the archive as well
    */
-  protected WarcExploder(UrlCacher uc, int maxRetries, CrawlSpec crawlSpec,
-      BaseCrawler crawler, boolean explode, boolean store) {
-    super(uc, maxRetries, crawlSpec, crawler, explode, store);
-    arcUrl = uc.getUrl();
-    helper = crawlSpec.getExploderHelper();
-    if (helper == null) {
-      helper = new DefaultExploderHelper(uc, crawlSpec, crawler);
-    }
+  public WarcExploder(FetchedUrlData toExplode, CrawlerFacade crawlFacade,
+      ExploderHelper helper) {
+    super(toExplode, crawlFacade, helper);
+    arcStream = toExplode.input;
+    arcProps = toExplode.headers;
   }
 
   /**
    * Explode the archive into its constituent elements
    */
-  protected void explodeUrl() throws CacheException {
-    InputStream arcStream = null;
+  public void explode() throws CacheException {
     CachedUrl cachedUrl = null;
     int goodEntries = 0;
     int badEntries = 0;
@@ -97,37 +91,37 @@ public class WarcExploder extends Exploder {
     ArchiveReader arcReader = null;
 
     logger.info((storeArchive ? "Storing" : "Fetching") + " WARC file: " +
-        arcUrl + (explodeFiles ? " will" : " won't") + " explode");
-    while (++reTry < maxRetries) try {
-      cachedUrl = urlCacher.getCachedUrl();
+        origUrl + " will explode");
+     try {
       if (storeArchive) {
-        crawler.cacheWithRetries(urlCacher);
-        // Get a stream from which the WARC data can be read
-        logger.debug3("About to get WARC stream from " + urlCacher.toString());
-        arcStream = cachedUrl.getUnfilteredInputStream();
-      } else {
-        arcStream = urlCacher.getUncachedInputStream();
-        arcProps = urlCacher.getUncachedProperties();
+        UrlCacher uc = au.makeUrlCacher(
+            new UrlData(arcStream, arcProps, fetchUrl));
+        BitSet bs = new BitSet();
+        bs.set(UrlCacher.DONT_CLOSE_INPUT_STREAM_FLAG);
+        uc.setFetchFlags(bs);
+        uc.storeContent();
+        archiveData.resetInputStream();
+        arcStream = archiveData.input;
       }
       // Wrap it in an ArchiveReader
       logger.debug3("About to wrap stream");
-      arcReader = wrapStream(urlCacher, arcStream);
+      arcReader = wrapStream(fetchUrl, arcStream);
       logger.debug3("wrapStream() returns " +
           (arcReader == null ? "null" : "non-null"));
       // Explode it
       if (arcReader == null) {
         throw new CacheException.ExploderException("no WarcReader for " +
-            urlCacher.toString());
+            origUrl);
       }
-      ArchivalUnit au = urlCacher.getArchivalUnit();
+      ArchivalUnit au = crawlFacade.getAu();
       Set stemSet = new HashSet();
-      logger.debug("Exploding " + arcUrl);
+      logger.debug("Exploding " + fetchUrl);
       // Iterate through the elements in the WARC file, except the first
       Iterator i = arcReader.iterator();
       // Skip first record
       for (i.next(); i.hasNext(); ) {
         // XXX probably not necessary
-	crawler.pokeWDog();
+        helper.pokeWDog();
         if ((++entriesBetweenSleep % sleepAfter) == 0) {
           long pauseTime =
             CurrentConfig.getTimeIntervalParam(PARAM_RETRY_PAUSE,
@@ -156,9 +150,8 @@ public class WarcExploder extends Exploder {
                 elementLength,
                 0, // XXX need to convert getDate string to long
                 element, // ArchiveRecord extends InputStream
-                crawlSpec,
                 this,
-                urlCacher.getUrl());
+                fetchUrl);
           ae.setHeaderFields(makeCIProperties(elementHeader));
           long bytesStored = elementLength;
           logger.debug3("ArchiveEntry: " + ae.getName()
@@ -175,7 +168,7 @@ public class WarcExploder extends Exploder {
               storeEntry(ae);
               handleAddText(ae);
               goodEntries++;
-              crawler.getCrawlerStatus().addContentBytesFetched(bytesStored);
+              crawlFacade.getCrawlerStatus().addContentBytesFetched(bytesStored);
             } else {
               ignoredEntries++;
             }
@@ -185,7 +178,6 @@ public class WarcExploder extends Exploder {
           }
         }
       }
-      break;
     } catch (IOException ex) {
       throw new CacheException.ExploderException(ex);
     } finally {
@@ -200,18 +192,16 @@ public class WarcExploder extends Exploder {
       }
       IOUtil.safeClose(arcStream);
     }
-    if (badEntries == 0) {
-      if (reTry >= maxRetries && goodEntries > 0) {
+    if (badEntries == 0 && goodEntries > 0) {
         // Make it look like a new crawl finished on each AU to which
         // URLs were added.
         for (Iterator it = touchedAus.iterator(); it.hasNext(); ) {
           ArchivalUnit au = (ArchivalUnit)it.next();
           logger.debug3(archiveUrl + " touching " + au.toString());
-          crawler.getDaemon().getNodeManager(au).newContentCrawlFinished();
+          AuUtil.getDaemon(au).getNodeManager(au).newContentCrawlFinished();
         }
-      }
     } else {
-      ArchivalUnit au = crawler.getAu();
+      ArchivalUnit au = crawlFacade.getAu();
       String msg = archiveUrl + ": " + badEntries + "/" +
         goodEntries + " bad entries";
       throw new CacheException.UnretryableException(msg);
@@ -244,13 +234,10 @@ public class WarcExploder extends Exploder {
       return (ret);
     }
 
-  protected ArchiveReader wrapStream(UrlCacher uc, InputStream arcStream) throws IOException {
+  protected ArchiveReader wrapStream(String url, InputStream arcStream) throws IOException {
     ArchiveReader ret = null;
-    if (explodeFiles) {
-      logger.debug3("Getting an ArchiveReader");
-      ret = ArchiveReaderFactory.get(urlCacher.getUrl(), arcStream, true);
-    }
+    logger.debug3("Getting an ArchiveReader");
+    ret = ArchiveReaderFactory.get(url, arcStream, true);
     return (ret);
   }
-
 }

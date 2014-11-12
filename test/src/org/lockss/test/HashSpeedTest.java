@@ -1,5 +1,5 @@
 /*
- * $Id: HashSpeedTest.java,v 1.35 2012-08-08 07:15:45 tlipkis Exp $
+ * $Id: HashSpeedTest.java,v 1.36 2014-11-12 20:11:44 wkwilson Exp $
  */
 
 /*
@@ -34,15 +34,15 @@ package org.lockss.test;
 
 import java.io.File;
 import java.security.MessageDigest;
+
 import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.*;
-import org.lockss.repository.LockssRepositoryImpl;
-import org.lockss.poller.PollManager;
-import org.lockss.crawler.NewContentCrawler;
+import org.lockss.crawler.FollowLinkCrawler;
 import org.lockss.protocol.*;
+
 import java.util.Properties;
 
 public class HashSpeedTest extends LockssTestCase {
@@ -130,9 +130,7 @@ public class HashSpeedTest extends LockssTestCase {
 
   private void crawlContent() {
     System.out.println("Crawling tree...");
-    CrawlSpec spec = 
-      new SpiderCrawlSpec(sau.getNewContentCrawlUrls(), null);
-    Crawler crawler = new NewContentCrawler(sau, spec, new MockAuState());
+    Crawler crawler = new FollowLinkCrawler(sau, new MockAuState());
     crawler.doCrawl();
   }
 

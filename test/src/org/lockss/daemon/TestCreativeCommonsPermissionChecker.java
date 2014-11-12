@@ -1,5 +1,5 @@
 /*
- * $Id: TestCreativeCommonsPermissionChecker.java,v 1.12 2014-06-30 04:58:14 tlipkis Exp $
+ * $Id: TestCreativeCommonsPermissionChecker.java,v 1.13 2014-11-12 20:11:40 wkwilson Exp $
  */
 
 /*
@@ -33,8 +33,10 @@ package org.lockss.daemon;
 
 import java.io.*;
 import java.util.*;
+
 import org.lockss.test.*;
 import org.lockss.util.*;
+import org.lockss.daemon.CreativeCommonsPermissionChecker;
 import org.lockss.state.*;
 
 /**
@@ -78,7 +80,7 @@ public class TestCreativeCommonsPermissionChecker
     CreativeCommonsPermissionChecker checker =
       new CreativeCommonsPermissionChecker();
     assertTrue(tag + " expected permission, wasn't",
-	       checker.checkPermission(pHelper,
+	       checker.checkPermission(mcf,
 				       new StringReader(text), TEST_URL));
     assertEquals(AuState.AccessType.OpenAccess, aus.getAccessType());
   }
@@ -88,7 +90,7 @@ public class TestCreativeCommonsPermissionChecker
     CreativeCommonsPermissionChecker checker =
       new CreativeCommonsPermissionChecker();
     assertFalse(tag + " expected no permission, but was",
-	       checker.checkPermission(pHelper,
+	       checker.checkPermission(mcf,
 				       new StringReader(text), TEST_URL));
   }
 

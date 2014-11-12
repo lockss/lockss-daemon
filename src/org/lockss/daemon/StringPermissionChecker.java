@@ -1,5 +1,5 @@
 /*
- * $Id: StringPermissionChecker.java,v 1.11 2007-10-04 09:43:41 tlipkis Exp $
+ * $Id: StringPermissionChecker.java,v 1.12 2014-11-12 20:11:45 wkwilson Exp $
  */
 
 /*
@@ -79,16 +79,16 @@ public class StringPermissionChecker extends BasePermissionChecker {
     setAccessType = true;
   }
 
-  public boolean checkPermission(Crawler.PermissionHelper pHelper,
+  public boolean checkPermission(Crawler.CrawlerFacade crawlFacade,
 				 Reader reader, String permissionUrl) {
-    boolean res =  checkPermission0(pHelper, reader, permissionUrl);
+    boolean res =  checkPermission0(crawlFacade, reader, permissionUrl);
     if (res && setAccessType) {
-      setAuAccessType(pHelper,accessType);
+      setAuAccessType(crawlFacade, accessType);
     }
     return res;
   }
 
-  private boolean checkPermission0(Crawler.PermissionHelper pHelper,
+  private boolean checkPermission0(Crawler.CrawlerFacade crawlFacade,
 				  Reader reader, String permissionUrl) {
     if (m_filter != null) {
       try {

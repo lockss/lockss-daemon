@@ -1,5 +1,5 @@
 /*
- * $Id: ValidatePluginResultsDialog.java,v 1.11 2010-10-02 22:25:22 tlipkis Exp $
+ * $Id: ValidatePluginResultsDialog.java,v 1.12 2014-11-12 20:11:54 wkwilson Exp $
  */
 
 /*
@@ -33,11 +33,15 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.devtools.plugindef;
 
 import java.awt.*;
+
 import javax.swing.*;
 import javax.swing.text.*;
+
 import java.awt.event.*;
 
 import org.lockss.plugin.*;
+import org.lockss.plugin.definable.DefinableArchivalUnit;
+import org.lockss.plugin.definable.DefinablePlugin;
 import org.lockss.util.Logger;
 
 /**********************************************************************
@@ -183,14 +187,14 @@ public class ValidatePluginResultsDialog extends JDialog {
 
   public boolean testStartingUrl(){
       String output = "";
-      String startingUrl = (String)m_au.getNewContentCrawlUrls().get(0);
+      String startingUrl = (String)m_au.getStartUrls().iterator().next();
       boolean succeeded = true;
       int output_color;
-
+      
       output += "Validating Starting Url (" + startingUrl + ")...\n";
 
       //Checks if the Crawl Rules have been set
-      if(m_au.getCrawlSpec().getCrawlRule() == null){
+      if(((DefinablePlugin)((DefinableArchivalUnit)m_au).getPlugin()).getDefinitionMap().containsKey(DefinableArchivalUnit.KEY_AU_CRAWL_RULE) == false){
 	  succeeded = false;
 	  output += "  Validation Error:      Crawl Rules have not been set for plugin\n";
       }

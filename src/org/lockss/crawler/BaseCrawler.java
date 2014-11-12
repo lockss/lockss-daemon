@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.53 2014-07-11 23:32:59 tlipkis Exp $
+ * $Id: BaseCrawler.java,v 1.54 2014-11-12 20:11:25 wkwilson Exp $
  */
 
 /*
@@ -32,7 +32,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.crawler;
 
-import java.io.*;
 import java.net.*;
 import java.util.*;
 
@@ -40,7 +39,10 @@ import org.lockss.app.*;
 import org.lockss.alert.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
+import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.plugin.*;
+import org.lockss.plugin.ArchivalUnit.ConfigurationException;
+import org.lockss.plugin.UrlFetcher.FetchResult;
 import org.lockss.protocol.*;
 import org.lockss.state.*;
 import org.lockss.util.*;
@@ -48,21 +50,12 @@ import org.lockss.util.urlconn.*;
 import org.lockss.clockss.*;
 
 /**
- * The crawler.
+ * The base crawler extended by repair crawler and follow link crawler contains
+ * proxy, retry and basic crawling logic.
  *
- * @author  Thomas S. Robertson
- * @version 0.0
  */
-public abstract class BaseCrawler
-       implements Crawler, PermissionMapSource, Crawler.PermissionHelper {
-  /**
-   * TODO
-   * 1) write state to harddrive using whatever system we come up for for the
-   * rest of LOCKSS
-   * 2) check deadline and die if we run too long
-   */
-
-  static Logger logger = Logger.getLogger("BaseCrawler");
+public abstract class BaseCrawler implements Crawler {
+  static Logger logger = Logger.getLogger(BaseCrawler.class);
 
   public static final String PREFIX = Configuration.PREFIX + "crawler.";
 
@@ -85,7 +78,7 @@ public abstract class BaseCrawler
   public static final String PARAM_DATA_TIMEOUT =
     PREFIX + "timeout.data";
   public static final long DEFAULT_DATA_TIMEOUT = 30 * Constants.MINUTE;
-
+  
   public static final String PARAM_DEFAULT_RETRY_COUNT =
     PREFIX + "retryCount";
   public static final int DEFAULT_DEFAULT_RETRY_COUNT = 3;
@@ -101,10 +94,10 @@ public abstract class BaseCrawler
   public static final String PARAM_MIN_RETRY_DELAY =
     PREFIX + "minRetryDelay";
   public static final long DEFAULT_MIN_RETRY_DELAY = 1 * Constants.SECOND;
-
-  public static final String PARAM_EXPLODER_RETRY_COUNT =
-    PREFIX + "exploderRetryCount";
-  public static final int DEFAULT_EXPLODER_RETRY_COUNT = 3;
+  
+  public static final String PARAM_PERMISSION_BUF_MAX =
+      Configuration.PREFIX + "permissionBuf.max";
+  public static final int DEFAULT_PERMISSION_BUF_MAX = 50 * 1024;
 
   /** The source address for crawler connections, or null to use the
    * machine's primary IP address.  Allows multiple daemons on a machine
@@ -119,20 +112,26 @@ public abstract class BaseCrawler
     PREFIX + "crawlFromLocalAddr";
   public static final boolean DEFAULT_CRAWL_FROM_LOCAL_ADDR = false;
 
-  /** Proxy crawls if true (except repair-from-cache) */
+  /** Proxy crawls if true */
   public static final String PARAM_PROXY_ENABLED =
     PREFIX + "proxy.enabled";
   public static final boolean DEFAULT_PROXY_ENABLED = false;
 
-  /** Proxy host for crawls (except repair-from-cache) */
+  /** Proxy host for crawls */
   public static final String PARAM_PROXY_HOST =
     PREFIX + "proxy.host";
 
-  /** Proxy port for crawls (except repair-from-cache) */
+  /** Proxy port for crawls */
   public static final String PARAM_PROXY_PORT =
     PREFIX + "proxy.port";
   public static final int DEFAULT_PROXY_PORT = -1;
-
+  
+  protected int streamResetMax = DEFAULT_PERMISSION_BUF_MAX;
+  protected int defaultRetries = DEFAULT_DEFAULT_RETRY_COUNT;
+  protected int maxRetries = DEFAULT_MAX_RETRY_COUNT;
+  protected long defaultRetryDelay = DEFAULT_DEFAULT_RETRY_DELAY;
+  protected long minRetryDelay = DEFAULT_MIN_RETRY_DELAY;
+  
   public enum StorePermissionScheme {Legacy, StoreAllInSpec};
 
   /**  the crawl queues are sorted.  <code>CrawlDate</code>:
@@ -156,16 +155,7 @@ public abstract class BaseCrawler
     PREFIX + "storePermissionScheme";
   public static final StorePermissionScheme DEFAULT_STORE_PERMISSION_SCHEME =
     StorePermissionScheme.Legacy;
-
-  public static final String PARAM_REFETCH_PERMISSION_PAGE =
-    PREFIX + "storePermissionRefetch";
-  public static final boolean DEFAULT_REFETCH_PERMISSION_PAGE = false;
-
-  public static final String PARAM_ABORT_ON_FIRST_NO_PERMISSION =
-    PREFIX + "abortOnFirstNoPermission";
-  public static final boolean DEFAULT_ABORT_ON_FIRST_NO_PERMISSION =
-    true;
-
+  
   public static final String PARAM_MIME_TYPE_PAUSE_AFTER_304 =
     PREFIX + "mimeTypePauseAfter304";
   public static final boolean DEFAULT_MIME_TYPE_PAUSE_AFTER_304 =
@@ -176,80 +166,50 @@ public abstract class BaseCrawler
   public static final boolean DEFAULT_THROW_IF_RATE_LIMITER_NOT_USED =
     true;
 
-  protected ArchivalUnit au;
-
-  protected LockssUrlConnectionPool connectionPool =
-    new LockssUrlConnectionPool();
-
-  protected CrawlerStatus crawlStatus = null;
-
-  protected CrawlSpec spec = null;
-
-  protected AuState aus = null;
-
-  protected CrawlManager crawlMgr = null;
-  protected AlertManager alertMgr;
-
-  protected boolean crawlAborted = false;
-
-  protected LockssWatchdog wdog = null;
-
-  protected boolean mimeTypePauseAfter304 = DEFAULT_MIME_TYPE_PAUSE_AFTER_304;
-
-  protected boolean throwIfRateLimiterNotUsed =
-    DEFAULT_THROW_IF_RATE_LIMITER_NOT_USED;
-
-  protected abstract boolean doCrawl0();
-  public abstract Crawler.Type getType();
-
-  protected PermissionChecker pluginPermissionChecker;
-  protected List daemonPermissionCheckers = null;
+  protected boolean mimeTypePauseAfter304 = 
+      DEFAULT_MIME_TYPE_PAUSE_AFTER_304;
   protected StorePermissionScheme paramStorePermissionScheme =
-    DEFAULT_STORE_PERMISSION_SCHEME;
-
-  protected IPAddr crawlFromAddr = null;
-
-  protected String proxyHost = null;
+      DEFAULT_STORE_PERMISSION_SCHEME;
+  protected boolean throwIfRateLimiterNotUsed =
+      DEFAULT_THROW_IF_RATE_LIMITER_NOT_USED;
+  
+  protected int pauseCounter = 0;
+  protected ArchivalUnit au;
+  protected LockssUrlConnectionPool connectionPool;
+  protected CrawlerStatus crawlStatus;
+  protected AuState aus;
+  protected CrawlManager crawlMgr;
+  protected AlertManager alertMgr;
+  protected boolean crawlAborted = false;
+  protected LockssWatchdog wdog;
+  protected IPAddr crawlFromAddr;
+  protected String proxyHost;
   protected int proxyPort;
-
-  protected PermissionMap permissionMap = null;
-
+  protected PermissionMap permissionMap;
   protected CrawlRateLimiter crl;
   protected String previousContentType;
-  protected int pauseCounter = 0;
   protected String crawlPoolKey;
   protected CrawlReq req;
+  protected CrawlerFacade facade;
+  protected CrawlSeed crawlSeed;
 
-  protected BaseCrawler(ArchivalUnit au, CrawlSpec spec, AuState aus) {
+  protected BaseCrawler(ArchivalUnit au, AuState aus) {
     if (au == null) {
       throw new IllegalArgumentException("Called with null au");
-    } else if (spec == null) {
-      throw new IllegalArgumentException("Called with null spec");
     } else if (aus == null) {
       throw new IllegalArgumentException("Called with null aus");
     }
     this.au = au;
-    this.spec = spec;
     this.aus = aus;
-
-    /**
-     There are two types of checkers: daemon and plug-in. The daemon ones are
-     required, in that you must satisfy one of them to crawl a site.  The
-     plug-in ones are optional, in that you don't need to specify any.
-     However, you must satisfy each plug-in permission checker that is
-     specified.
-
-     The idea is that the plug-in can make the permission requirements more
-     restrictive, but not less.
-    */
-
-    //Specified by the plug-in, this can be a null set.  We must satisfy
-    //all of these to crawl a site.
-    pluginPermissionChecker = spec.getPermissionChecker();
-
     alertMgr = getDaemon().getAlertManager();
+    connectionPool = new LockssUrlConnectionPool();
+    crawlSeed = au.makeCrawlSeed();
   }
-
+  
+  protected abstract boolean doCrawl0();
+  
+  public abstract Crawler.Type getType();
+  
   protected LockssDaemon getDaemon() {
     return AuUtil.getDaemon(au);
   }
@@ -261,8 +221,19 @@ public abstract class BaseCrawler
   public void setCrawlReq(CrawlReq req) {
     this.req = req;
   }
-
+  
   protected void setCrawlConfig(Configuration config) {
+    defaultRetries = config.getInt(PARAM_DEFAULT_RETRY_COUNT,
+        DEFAULT_DEFAULT_RETRY_COUNT);
+    maxRetries = config.getInt(PARAM_MAX_RETRY_COUNT,
+        DEFAULT_MAX_RETRY_COUNT);
+    defaultRetryDelay = config.getLong(PARAM_DEFAULT_RETRY_DELAY,
+        DEFAULT_DEFAULT_RETRY_DELAY);
+    minRetryDelay = config.getLong(PARAM_MIN_RETRY_DELAY,
+        DEFAULT_MIN_RETRY_DELAY);
+
+    streamResetMax =
+      config.getInt(PARAM_PERMISSION_BUF_MAX, DEFAULT_PERMISSION_BUF_MAX);
     long connectTimeout = config.getTimeInterval(PARAM_CONNECT_TIMEOUT,
                                                  DEFAULT_CONNECT_TIMEOUT);
     long dataTimeout = config.getTimeInterval(PARAM_DATA_TIMEOUT,
@@ -271,11 +242,11 @@ public abstract class BaseCrawler
     connectionPool.setDataTimeout(dataTimeout);
 
     throwIfRateLimiterNotUsed =
-      config.getBoolean(PARAM_THROW_IF_RATE_LIMITER_NOT_USED,
-			DEFAULT_THROW_IF_RATE_LIMITER_NOT_USED);
+        config.getBoolean(PARAM_THROW_IF_RATE_LIMITER_NOT_USED,
+            DEFAULT_THROW_IF_RATE_LIMITER_NOT_USED);
 
     paramStorePermissionScheme =
-      (StorePermissionScheme)config.getEnum(StorePermissionScheme.class,
+        (StorePermissionScheme)config.getEnum(StorePermissionScheme.class,
 					    PARAM_STORE_PERMISSION_SCHEME,
 					    DEFAULT_STORE_PERMISSION_SCHEME);
 
@@ -284,17 +255,18 @@ public abstract class BaseCrawler
     if (StringUtil.isNullString(crawlFrom)) {
       if (config.getBoolean(PARAM_CRAWL_FROM_LOCAL_ADDR,
 			    DEFAULT_CRAWL_FROM_LOCAL_ADDR)) {
-	crawlFrom = config.get(IdentityManager.PARAM_LOCAL_IP);
+        crawlFrom = config.get(IdentityManager.PARAM_LOCAL_IP);
       }
     }
     if (crawlFrom == null) {
       crawlFromAddr = null;
     } else {
       try {
-	crawlFromAddr = IPAddr.getByName(crawlFrom);
+        crawlFromAddr = IPAddr.getByName(crawlFrom);
       } catch (UnknownHostException e) {
-	logger.error("crawlFromAddr (" + crawlFrom + ") not found, so not used.", e);
-	crawlFromAddr = null;
+        logger.error("crawlFromAddr (" + crawlFrom + 
+            ") not found, so not used.", e);
+        crawlFromAddr = null;
       }
     }
 
@@ -303,12 +275,12 @@ public abstract class BaseCrawler
     proxyPort = aupinfo.getPort();
     if (aupinfo.isAuOverride()) {
       if (aupinfo.getHost() == null) {
-	logger.info("AU overrides crawl proxy with DIRECT");
+        logger.info("AU overrides crawl proxy with DIRECT");
       } else {
-	if (logger.isDebug()) {
-	  logger.debug("Using AU crawl_proxy: " + aupinfo.getHost()
-		       + ":" + aupinfo.getPort());
-	}
+        if (logger.isDebug()) {
+          logger.debug("Using AU crawl_proxy: " + aupinfo.getHost()
+              + ":" + aupinfo.getPort());
+        }
       }
     } else if (proxyHost != null) {
       if (logger.isDebug()) logger.debug("Proxying through " + proxyHost
@@ -330,31 +302,27 @@ public abstract class BaseCrawler
   protected CrawlRateLimiter getCrawlRateLimiter() {
     if (crl == null) {
       if (crawlMgr != null) {
-	crl = crawlMgr.getCrawlRateLimiter(this);
+        crl = crawlMgr.getCrawlRateLimiter(this);
+      } else {
+        crl = CrawlRateLimiter.Util.forAu(au);
       }
-    }
-    if (crl == null) {
-      crl = CrawlRateLimiter.Util.forAu(au);
     }
     return crl;
   }
 
-  List getDaemonPermissionCheckers() {
-    if (daemonPermissionCheckers == null) {
-      if (getDaemon().isClockss()) {
-	daemonPermissionCheckers = new ClockssPermission().getCheckers();
-      } else {
-	daemonPermissionCheckers = new LockssPermission().getCheckers();
-      }
+  List<PermissionChecker> getDaemonPermissionCheckers() {
+    if (getDaemon().isClockss()) {
+      return new ClockssPermission().getCheckers();
+    } else {
+      return new LockssPermission().getCheckers();
     }
-    return daemonPermissionCheckers;
   }
 
   public ArchivalUnit getAu() {
     return au;
   }
 
-  public CrawlerStatus getStatus() {
+  public CrawlerStatus getCrawlerStatus() {
     return crawlStatus;
   }
 
@@ -362,6 +330,10 @@ public abstract class BaseCrawler
     crawlAborted = true;
   }
 
+  public boolean isAborted(){
+    return crawlAborted;
+  }
+  
   /**
    * Main method of the crawler; it loops through crawling and caching
    * urls.
@@ -377,59 +349,58 @@ public abstract class BaseCrawler
     crawlStatus.signalCrawlStarted();
     try {
       if (crawlAborted) {
-	//don't start an aborted crawl
-	return aborted();
+        //don't start an aborted crawl
+        return aborted();
       }
       logger.info("Beginning crawl of "+au);
       boolean res = doCrawl0();
       if (!res && !crawlStatus.isCrawlError()) {
-	crawlStatus.setCrawlStatus(Crawler.STATUS_ERROR);
+        crawlStatus.setCrawlStatus(Crawler.STATUS_ERROR);
       }
       if (isWholeAU()) {
-
-	// Raise end of crawl alert
-	Alert alert;
-	StringBuilder sb = new StringBuilder();
-	sb.append("Crawl finished ");
-	if (res) {
-	  alert = Alert.CRAWL_FINISHED;
-	  sb.append("successfully: ");
-	} else {
-	  alert = Alert.CRAWL_FAILED;
-	  sb.append("with error: ");
-	  sb.append(crawlStatus.getCrawlErrorMsg());
-	  sb.append(": ");
-	}
-	sb.append(StringUtil.numberOfUnits(crawlStatus.getNumFetched(),
-					   "file"));
-	sb.append(" fetched, ");
-	int warn =
-	  crawlStatus.getNumUrlsWithErrorsOfSeverity(CrawlerStatus.Severity.Warning);
-	sb.append(StringUtil.numberOfUnits(warn, "warning"));
-	if (!res) {
-	  sb.append(", ");
-	  int err =
-	    crawlStatus.getNumUrlsWithErrorsOfSeverity(CrawlerStatus.Severity.Error) +
-	    crawlStatus.getNumUrlsWithErrorsOfSeverity(CrawlerStatus.Severity.Fatal);
-	  sb.append(StringUtil.numberOfUnits(err, "error"));
-	}
-	appendAlertInfo(sb);
-	raiseAlert(Alert.auAlert(alert, au), sb.toString());
-
-	NodeManager nodeManager = getDaemon().getNodeManager(au);
-	if (res) {
-	  nodeManager.newContentCrawlFinished(Crawler.STATUS_SUCCESSFUL, null);
-	  } else {
-	  nodeManager.newContentCrawlFinished(crawlStatus.getCrawlStatus(),
-					      crawlStatus.getCrawlErrorMsg());
-	}
+      	// Raise end of crawl alert
+      	Alert alert;
+      	StringBuilder sb = new StringBuilder();
+      	sb.append("Crawl finished ");
+      	if (res) {
+      	  alert = Alert.CRAWL_FINISHED;
+      	  sb.append("successfully: ");
+      	} else {
+      	  alert = Alert.CRAWL_FAILED;
+      	  sb.append("with error: ");
+      	  sb.append(crawlStatus.getCrawlErrorMsg());
+      	  sb.append(": ");
+      	}
+      	sb.append(StringUtil.numberOfUnits(crawlStatus.getNumFetched(),
+      					   "file"));
+      	sb.append(" fetched, ");
+      	int warn =
+      	  crawlStatus.getNumUrlsWithErrorsOfSeverity(CrawlerStatus.Severity.Warning);
+      	sb.append(StringUtil.numberOfUnits(warn, "warning"));
+      	if (!res) {
+      	  sb.append(", ");
+      	  int err =
+      	    crawlStatus.getNumUrlsWithErrorsOfSeverity(CrawlerStatus.Severity.Error) +
+      	    crawlStatus.getNumUrlsWithErrorsOfSeverity(CrawlerStatus.Severity.Fatal);
+      	  sb.append(StringUtil.numberOfUnits(err, "error"));
+      	}
+      	appendAlertInfo(sb);
+      	raiseAlert(Alert.auAlert(alert, au), sb.toString());
+      
+      	NodeManager nodeManager = getDaemon().getNodeManager(au);
+      	if (res) {
+      	  nodeManager.newContentCrawlFinished(Crawler.STATUS_SUCCESSFUL, null);
+      	} else {
+      	  nodeManager.newContentCrawlFinished(crawlStatus.getCrawlStatus(),
+      					      crawlStatus.getCrawlErrorMsg());
+      	}
       }
       return res;
     } catch (RuntimeException e) {
       logger.error("doCrawl0()", e);
       raiseAlert(Alert.auAlert(Alert.CRAWL_FAILED, au),
-		 "Crawl of " + au.getName() +
-		 " threw " + e.getMessage());
+          "Crawl of " + au.getName() +
+          " threw " + e.getMessage());
       setThrownStatus(e);
       throw e;
     } catch (OutOfMemoryError e) {
@@ -439,12 +410,12 @@ public abstract class BaseCrawler
     } finally {
       crawlStatus.signalCrawlEnded();
       if (connectionPool != null) {
-	try {
-	  connectionPool.closeIdleConnections(0);
-	  connectionPool = null;
-	} catch (RuntimeException e) {
-	  logger.warning("closeIdleConnections", e);
-	}
+      	try {
+      	  connectionPool.closeIdleConnections(0);
+      	  connectionPool = null;
+      	} catch (RuntimeException e) {
+      	  logger.warning("closeIdleConnections", e);
+      	}
       }
     }
   }
@@ -470,110 +441,102 @@ public abstract class BaseCrawler
   }
 
   protected boolean populatePermissionMap() {
-      // get the permission list from crawl spec
-    permissionMap = new PermissionMap(au, this, getDaemonPermissionCheckers(),
-				      pluginPermissionChecker);
-    String perHost = au.getPerHostPermissionPath();
-    if (perHost != null) {
-      try {
-	permissionMap.setPerHostPermissionPath(perHost);
-      } catch (MalformedURLException e) {
-	logger.error("Plugin error", e);
-      }
-    }
-    return permissionMap.init();
-  }
-
-  /**
-   * Try to reset the provided input stream, if we can't then return
-   * new input stream for the given url
-   */
-  public BufferedInputStream resetInputStream(BufferedInputStream is,
-					      String url) throws IOException {
     try {
-      is.reset();
-    } catch (IOException e) {
-      logger.debug("Couldn't reset input stream, so getting new one for " +
-		   url + " : " + e);
-      IOUtil.safeClose(is);
-      pokeWDog();
-      UrlCacher uc = makeUrlCacher(url);
-      uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW_ON_HOST);
-      is = new BufferedInputStream(uc.getUncachedInputStream());
-//       crawlStatus.signalUrlFetched(uc.getUrl());
-
+      permissionMap = new PermissionMap(getCrawlerFacade(), getDaemonPermissionCheckers(),
+          au.makePermissionCheckers(), crawlSeed.getPermissionUrls());
+      String perHost = au.getPerHostPermissionPath();
+      if (perHost != null) {
+        try {
+          permissionMap.setPerHostPermissionPath(perHost);
+        } catch (MalformedURLException e) {
+          logger.error("Plugin error", e);
+        }
+      }
+    } catch (ConfigurationException e) {
+      logger.error("Unable to start crawl due to invalid configuration" + e);
+      crawlStatus.setCrawlStatus(Crawler.STATUS_NO_PUB_PERMISSION);
+      return false;
+    } catch (PluginException e) {
+      logger.error("Unable to start crawl due to invalid plugin parameters" + e);
+      crawlStatus.setCrawlStatus(Crawler.STATUS_NO_PUB_PERMISSION);
+      return false;
     }
-    return is;
+    return permissionMap.populate();
+  }
+  
+  /**
+   * using the permission map check for permission on a given url
+   * @param url
+   * @return permission state and false is permission map is not initialized
+   */
+  public boolean hasPermission(String url) {
+    if(permissionMap != null) {
+      return permissionMap.hasPermission(url);
+    }
+    return false;
   }
 
-  public UrlCacher makePermissionUrlCacher(String url) {
-    UrlCacher uc = makeUrlCacher(url);
-    switch (paramStorePermissionScheme) {
-    case Legacy:
-      uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW_ON_HOST);
-      break;
-    case StoreAllInSpec:
-      uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL_IN_SPEC);
-      break;
-    }
-    return uc;
-  }
-
-  public void storePermissionPage(UrlCacher uc, BufferedInputStream is)
-      throws IOException {
-    if (CurrentConfig.getBooleanParam(PARAM_REFETCH_PERMISSION_PAGE,
-				      DEFAULT_REFETCH_PERMISSION_PAGE)) {
-      // XXX can't reuse UrlCacher
-      uc = makePermissionUrlCacher(uc.getUrl());
-      updateCacheStats(uc.cache(), uc);
-    } else {
-      is = resetInputStream(is, uc.getUrl());
-      uc.storeContent(is, uc.getUncachedProperties());
-      updateCacheStats(UrlCacher.CACHE_RESULT_FETCHED, uc);
-    }
-    reportInfoException(uc);
-  }
-
-  protected void updateCacheStats(int cacheResult, UrlCacher uc) {
-
+  protected void updateCacheStats(FetchResult res, CrawlUrlData curl) {
     // Paranoia - assert that the rate limiter was actually used
     CrawlRateLimiter crl = getCrawlRateLimiter();
-    if (pauseCounter == crl.getPauseCounter()) {
-      logger.critical("CrawlRateLimiter not used after " + uc, new Throwable());
+    if(pauseCounter == crl.getPauseCounter()) {
+      logger.critical("CrawlRateLimiter not used after " + curl, new Throwable());
       if (throwIfRateLimiterNotUsed) {
-	throw new RuntimeException("CrawlRateLimiter not used");
+        throw new RuntimeException("CrawlRateLimiter not used");
       }
     }
     pauseCounter = crl.getPauseCounter();
-
-    switch (cacheResult) {
-    case UrlCacher.CACHE_RESULT_FETCHED:
-      crawlStatus.signalUrlFetched(uc.getUrl());
-      // XXX add getCachedProperties() to UrlCacher so don't have to create
-      // CachedUrl (read props, open InputStream)
+    
+    switch (res) {
+    case FETCHED:
+      crawlStatus.signalUrlFetched(curl.getUrl());
       {
-	CachedUrl cu = uc.getCachedUrl();
-	updateStatusMimeType(cu);
-	if (cu.hasContent()) {
-	  crawlStatus.addContentBytesFetched(cu.getContentSize());
-	  previousContentType = cu.getContentType();
-	}
-	cu.release();
+        curl.setFetched(true);
+        CachedUrl cu = au.makeCachedUrl(curl.getUrl());
+
+        if (cu.hasContent()) {
+          updateStatusMimeType(cu);
+          crawlStatus.addContentBytesFetched(cu.getContentSize());
+          previousContentType = cu.getContentType();
+        }
+        cu.release();
       }
       break;
-    case UrlCacher.CACHE_RESULT_NOT_MODIFIED:
-      crawlStatus.signalUrlNotModified(uc.getUrl());
+    case FETCHED_NOT_MODIFIED:
+      crawlStatus.signalUrlNotModified(curl.getUrl());
+      curl.setFetched(true);
       if (mimeTypePauseAfter304) {
-	CachedUrl cu = uc.getCachedUrl();
-	if (cu.hasContent()) {
-	  previousContentType = cu.getContentType();
-	}
-	cu.release();
+        CachedUrl cu = au.makeCachedUrl(curl.getUrl());
+        if (cu.hasContent()) {
+          previousContentType = cu.getContentType();
+        }
+        cu.release();
       }
       break;
+    case NOT_FETCHED:
+      curl.setFetched(false);
+      break;
+    default:
+      throw new ShouldNotHappenException(
+          "A switch on UrlFetcher.FetchResult hit an unkown value");
     }
   }
 
+  protected boolean checkGloballyExcludedUrl(ArchivalUnit au, String url) {
+    if (crawlMgr != null) {
+      if (crawlMgr.isGloballyExcludedUrl(au, url)) {
+        crawlStatus.signalErrorForUrl(url, "Excluded (probable recursion)");
+        String msg = "URL excluded (probable recursion): " + url;
+        logger.siteWarning(msg);
+        if (alertMgr != null) {
+          alertMgr.raiseAlert(Alert.auAlert(Alert.CRAWL_EXCLUDED_URL, au), msg);
+        }
+        return true;
+      }
+    }
+    return false;
+  }
+  
   protected boolean isIgnoredException(Exception ex) {
     return (ex == null || ex instanceof CacheSuccess);
   }
@@ -588,28 +551,68 @@ public abstract class BaseCrawler
   public void setPreviousContentType(String previousContentType) {
     this.previousContentType = previousContentType;
   }
+  
+  // Overridable for testing
+  protected CrawlUrlData newCrawlUrlData(String url, int depth) {
+    return new CrawlUrlData(url, depth);
+  }
+  
+  // Default Set impl overridden for some tests
+  protected Set newSet() {
+    return new HashSet();
+  }
+  
+  protected boolean withinCrawlWindow() {
+    return au.inCrawlWindow();
+  }
 
   /** All UrlCachers should be made via this method, so they get their
-   * connection pool set. */
-  public UrlCacher makeUrlCacher(String url) {
-    UrlCacher uc = au.makeUrlCacher(url);
-    if (getDaemon().isClockss()) {
-      uc = new ClockssUrlCacher(uc);
-    }
-    uc.setConnectionPool(connectionPool);
-    uc.setPermissionMapSource(this);
+   * watchdog set. */
+  public UrlCacher makeUrlCacher(UrlData ud) {
+    UrlCacher uc = au.makeUrlCacher(ud);
     uc.setWatchdog(wdog);
-    if (previousContentType != null) {
-      uc.setPreviousContentType(previousContentType);
-//       previousContentType = null;
-    }
-    CrawlRateLimiter crl = getCrawlRateLimiter();
-    uc.setCrawlRateLimiter(crl);
-    if (crawlFromAddr != null) {
-      uc.setLocalAddress(crawlFromAddr);
-    }
     return uc;
   }
+
+  /** All UrlFetchers should be made via this method, so they get their
+   * connection pool set. */
+  public UrlFetcher makeUrlFetcher(String url) {
+    UrlFetcher uf = au.makeUrlFetcher(getCrawlerFacade(), url);
+    if (getDaemon().isClockss()) {
+      uf = new ClockssUrlFetcher(uf);
+    }
+    uf.setConnectionPool(connectionPool);
+    if (previousContentType != null) {
+      uf.setPreviousContentType(previousContentType);
+    }
+    CrawlRateLimiter crl = getCrawlRateLimiter();
+    uf.setCrawlRateLimiter(crl);
+    if (crawlFromAddr != null) {
+      uf.setLocalAddress(crawlFromAddr);
+    }
+    uf.setRedirectScheme(UrlFetcher.REDIRECT_SCHEME_STORE_ALL_IN_SPEC);
+    if (proxyHost != null) {
+      uf.setProxy(proxyHost, proxyPort);
+    }
+    return uf;
+  }
+  
+  public UrlFetcher makePermissionUrlFetcher(String url) {
+    UrlFetcher uf = makeUrlFetcher(url);
+    switch (paramStorePermissionScheme) {
+    case Legacy:
+      uf.setRedirectScheme(UrlFetcher.REDIRECT_SCHEME_FOLLOW_ON_HOST);
+      break;
+    case StoreAllInSpec:
+      uf.setRedirectScheme(UrlFetcher.REDIRECT_SCHEME_STORE_ALL_IN_SPEC);
+      break;
+    }
+    BitSet permFetchFlags = uf.getFetchFlags();
+    permFetchFlags.set(UrlCacher.REFETCH_FLAG);
+    uf.setFetchFlags(permFetchFlags);
+    return uf;
+  }
+  
   /**  
    * update the crawl.status to keep record of urls 
    * found with different types of mime-types 
@@ -639,35 +642,12 @@ public abstract class BaseCrawler
     }
   }
 
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("[BaseCrawler: ");
-    sb.append(au.toString());
-    sb.append("]");
-    return sb.toString();
-  }
-
-/**
- * Get the permission map from the crawler, creating it if it doesn't exist already
- */
-  //PermissionMapSource method
-  public PermissionMap getPermissionMap() {
-    if (permissionMap == null) {
-      populatePermissionMap();
-    }
-    return permissionMap;
-  }
-
   protected boolean aborted() {
     logger.info("Crawl aborted: "+au);
     if (!crawlStatus.isCrawlError()) {
       crawlStatus.setCrawlStatus(Crawler.STATUS_ABORTED);
     }
     return false;
-  }
-
-  public CrawlerStatus getCrawlerStatus() {
-    return crawlStatus;
   }
 
   public void setCrawlPool(String key) {
@@ -678,7 +658,95 @@ public abstract class BaseCrawler
     return crawlPoolKey;
   }
 
-  protected void cacheWithRetries(UrlCacher uc) throws IOException {
-    throw new UnsupportedOperationException("BaseCrawler doesn't do cacheWithRetries()");
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("[BaseCrawler: ");
+    sb.append(au.toString());
+    sb.append("]");
+    return sb.toString();
   }
+  
+  protected CrawlerFacade getCrawlerFacade() {
+    if(facade == null) {
+      facade = new BaseCrawlerFacade(this);
+    }
+    return facade;
+  };
+
+  public class BaseCrawlerFacade 
+  implements Crawler.CrawlerFacade, Crawler.PermissionHelper {
+    BaseCrawler crawler;
+    public BaseCrawlerFacade(BaseCrawler crawler) {
+      this.crawler = crawler;
+    }
+    
+    public CrawlerStatus getCrawlerStatus() {
+      return crawler.getCrawlerStatus();
+    }
+    
+    public ArchivalUnit getAu() {
+      return crawler.getAu();
+    }
+
+    public UrlFetcher makePermissionUrlFetcher(String url) {
+      return crawler.makePermissionUrlFetcher(url);
+    }
+    
+    public UrlCacher makeUrlCacher(UrlData ud) {
+      return crawler.makeUrlCacher(ud);
+    }
+
+    public void setPreviousContentType(String previousContentType) {
+      crawler.setPreviousContentType(previousContentType);
+    }
+    
+    public boolean isAborted() {
+      return crawler.isAborted();
+    }
+
+    public boolean hasPermission(String url) {
+      return crawler.hasPermission(url);
+    }
+
+    public void addToFailedUrls(String url) {
+      throw new UnsupportedOperationException(
+          "This crawler has no failed urls set");
+    }
+
+    public void addToFetchQueue(CrawlUrlData curl) {
+      throw new UnsupportedOperationException(
+          "This crawler has no fetch queue");
+    }
+
+    public void addToParseQueue(CrawlUrlData curl) {
+      throw new UnsupportedOperationException(
+          "This crawler has no parse queue");
+    }
+
+    public void addToPermissionProbeQueue(String probeUrl) {
+      throw new UnsupportedOperationException(
+          "This crawler has no permission probe url set");      
+    }
+
+    public long getRetryDelay(CacheException ce) {
+      long delay = ce.getRetryDelay();
+      if (delay < 0) {
+        delay = defaultRetryDelay;
+      }
+      return Math.max(delay, minRetryDelay);
+    }
+
+    public int getRetryCount(CacheException ce) {
+      int res = ce.getRetryCount();
+      if (res < 0) {
+        res = defaultRetries;
+      }
+      return Math.min(res, maxRetries);
+    }
+
+    public int permissonStreamResetMax() {
+      return streamResetMax;
+    }
+  }
+  
 }

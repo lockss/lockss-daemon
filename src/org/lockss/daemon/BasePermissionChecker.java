@@ -1,5 +1,5 @@
 /*
- * $Id: BasePermissionChecker.java,v 1.1 2007-10-04 09:43:41 tlipkis Exp $
+ * $Id: BasePermissionChecker.java,v 1.2 2014-11-12 20:11:45 wkwilson Exp $
  */
 
 /*
@@ -31,17 +31,14 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.daemon;
 
-import java.io.*;
-
 import org.lockss.plugin.*;
 import org.lockss.state.*;
-import org.lockss.util.*;
 
 public abstract class BasePermissionChecker implements PermissionChecker {
 
-  protected void setAuAccessType(Crawler.PermissionHelper pHelper,
+  protected void setAuAccessType(Crawler.CrawlerFacade crawlFacade,
 				 AuState.AccessType accessType) {
-    ArchivalUnit au = pHelper.getAu();
+    ArchivalUnit au = crawlFacade.getAu();
     AuState aus = AuUtil.getAuState(au);
     aus.setAccessType(accessType);
   }

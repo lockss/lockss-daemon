@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.88 2014-10-22 19:39:33 thib_gc Exp $
+ * $Id: ServletUtil.java,v 1.89 2014-11-12 20:12:00 wkwilson Exp $
  */
 
 /*
@@ -2069,15 +2069,13 @@ public class ServletUtil {
       if (pred != null && !pred.evaluate(au)) {
 	continue;
       }
-      CrawlSpec spec = au.getCrawlSpec();
       tbl.newRow();
       tbl.newCell(ALIGN_LEFT);
       tbl.add(encodeText(au.getName()));
       tbl.newCell("width=8");
       tbl.add("&nbsp;");
       tbl.newCell(ALIGN_LEFT);
-      if (spec instanceof SpiderCrawlSpec) {
-	List urls = ((SpiderCrawlSpec)spec).getStartingUrls();
+	Collection<String> urls = au.getStartUrls();
 	for (Iterator uiter = urls.iterator(); uiter.hasNext(); ) {
 	  String url = (String)uiter.next();
 	  tbl.add(xform.transformUrl(url, au));
@@ -2088,11 +2086,6 @@ public class ServletUtil {
 	    tbl.add("<br>");
 	  }
 	}
-      } else if (spec instanceof OaiCrawlSpec) {
-	tbl.add("(OAI)");
-      } else {
-	tbl.add("(Unknown CrawlSpec type)");
-      }
     }
     return tbl;
   }

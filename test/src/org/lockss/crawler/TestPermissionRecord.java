@@ -1,5 +1,5 @@
 /*
- * $Id: TestPermissionRecord.java,v 1.4 2006-09-22 06:23:02 tlipkis Exp $
+ * $Id: TestPermissionRecord.java,v 1.5 2014-11-12 20:11:35 wkwilson Exp $
  */
 
 /*
@@ -33,6 +33,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.crawler;
 import java.util.*;
 import java.io.*;
+
+import org.lockss.crawler.PermissionRecord.PermissionStatus;
 import org.lockss.test.*;
 
 public class TestPermissionRecord extends LockssTestCase {
@@ -66,9 +68,9 @@ public class TestPermissionRecord extends LockssTestCase {
   public void testStatus() {
     PermissionRecord record = new PermissionRecord(URL, HOST);
     assertEquals(record.getStatus(),
-		 PermissionRecord.PERMISSION_UNCHECKED);
-    record.setStatus(PermissionRecord.PERMISSION_OK);
-    assertEquals(PermissionRecord.PERMISSION_OK, record.getStatus());
+		 PermissionStatus.PERMISSION_UNCHECKED);
+    record.setStatus(PermissionStatus.PERMISSION_OK);
+    assertEquals(PermissionStatus.PERMISSION_OK, record.getStatus());
   }
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPeerJArchivalUnit.java,v 1.6 2014-10-17 22:49:51 ldoan Exp $
+ * $Id: TestPeerJArchivalUnit.java,v 1.7 2014-11-12 20:12:01 wkwilson Exp $
  */
 
 /*
@@ -145,23 +145,21 @@ public class TestPeerJArchivalUnit extends LockssTestCase {
   private void shouldCacheTest(String url, boolean shouldCache,
       ArchivalUnit au, CachedUrlSet cus) {
     //log.info ("shouldCacheTest url: " + url);
-    UrlCacher uc = au.makeUrlCacher(url);
-    assertEquals(shouldCache, uc.shouldBeCached());
+    assertEquals(shouldCache, au.shouldBeCached(url));
   }
   
   public void testStartUrlConstruction(DefinableArchivalUnit au,
       String peerjSite) throws Exception {
     String expected = BASE_URL + peerjSite + "/?year=2013";
-    assertEquals(ListUtil.list(expected), au.getNewContentCrawlUrls());
+    assertEquals(ListUtil.list(expected), au.getStartUrls());
   }
   
   public void testShouldNotCachePageFromOtherSite(DefinableArchivalUnit au,
       String peerjSite) throws Exception {
     daemon.getLockssRepository(au);
     daemon.getNodeManager(au);
-    UrlCacher uc = au.makeUrlCacher("http://shadow2.stanford.edu/" +
-    		peerjSite + "/?year=2013");
-    assertFalse(uc.shouldBeCached());
+    assertFalse(au.shouldBeCached("http://shadow2.stanford.edu/" +
+        peerjSite + "/?year=2013"));
   }
 
   public void testShouldDoNewContentCrawlTooEarly(DefinableArchivalUnit au) 

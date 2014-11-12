@@ -1,5 +1,5 @@
 /*
- * $Id: OJS2PermissionCheckerFactory.java,v 1.1 2014-10-21 01:55:51 etenbrink Exp $
+ * $Id: OJS2PermissionCheckerFactory.java,v 1.2 2014-11-12 20:11:57 wkwilson Exp $
  */
 
 /*
@@ -39,8 +39,8 @@ import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.daemon.*;
-import org.lockss.daemon.Crawler.PermissionHelper;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 
@@ -57,7 +57,7 @@ public class OJS2PermissionCheckerFactory
     static final int READ_LIMIT = 40960;
     
     @Override
-    public boolean checkPermission(PermissionHelper pHelper, Reader inputReader,
+    public boolean checkPermission(CrawlerFacade crawlFacade, Reader inputReader,
         String permissionUrl) {
       
       BufferedReader in = new BufferedReader(inputReader, READ_LIMIT);

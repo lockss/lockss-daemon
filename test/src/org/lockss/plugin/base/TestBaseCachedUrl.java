@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCachedUrl.java,v 1.29 2014-10-22 19:39:37 thib_gc Exp $
+ * $Id: TestBaseCachedUrl.java,v 1.30 2014-11-12 20:11:57 wkwilson Exp $
  */
 
 /*
@@ -551,8 +551,8 @@ public class TestBaseCachedUrl extends LockssTestCase {
       return new BaseCachedUrl(this, url);
     }
 
-    public UrlCacher makeUrlCacher(String url) {
-      return new BaseUrlCacher(this, url);
+    public UrlCacher makeUrlCacher(UrlData ud) {
+      return new DefaultUrlCacher(this, ud);
     }
   }
 

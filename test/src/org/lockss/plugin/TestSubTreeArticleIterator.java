@@ -1,5 +1,5 @@
 /*
- * $Id: TestSubTreeArticleIterator.java,v 1.13 2014-07-21 03:19:12 tlipkis Exp $
+ * $Id: TestSubTreeArticleIterator.java,v 1.14 2014-11-12 20:11:54 wkwilson Exp $
  */
 
 /*
@@ -96,10 +96,11 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
     CachedUrl cu = sau.makeCachedUrl(url);
     assertTrue(cu.hasContent());
     String url2 = url + "/child.html";
-    UrlCacher uc = sau.makeUrlCacher(url2);
     CIProperties props =
-      CIProperties.fromProperties(PropUtil.fromArgs(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html"));
-    uc.storeContent(new StringInputStream("child content"), props);
+        CIProperties.fromProperties(PropUtil.fromArgs(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html"));
+    UrlCacher uc = sau.makeUrlCacher(
+        new UrlData(new StringInputStream("child content"), props, url2));
+    uc.storeContent();
   }
 
   // Multiple tests combined just to avoid recreating simulated content

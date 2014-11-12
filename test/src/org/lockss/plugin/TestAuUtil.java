@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuUtil.java,v 1.28 2014-10-15 06:46:00 tlipkis Exp $
+ * $Id: TestAuUtil.java,v 1.29 2014-11-12 20:11:54 wkwilson Exp $
  */
 
 /*
@@ -501,12 +501,11 @@ public class TestAuUtil extends LockssTestCase {
   }
 
   public void assertGetCharsetOrDefault(String expCharset, Properties props) {
-    MockUrlCacher muc = new MockUrlCacher("url", new MockArchivalUnit());
+    CIProperties cip  = null;
     if (props != null) {
-      CIProperties cip = CIProperties.fromProperties(props);
-      muc.setUncachedProperties(cip);
+      cip = CIProperties.fromProperties(props);
     }
-    assertEquals(expCharset, AuUtil.getCharsetOrDefault(muc));
+    assertEquals(expCharset, AuUtil.getCharsetOrDefault(cip));
   }
 
   static String DEF = Constants.DEFAULT_ENCODING;

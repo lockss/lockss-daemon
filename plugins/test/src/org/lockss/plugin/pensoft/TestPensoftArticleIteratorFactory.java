@@ -1,4 +1,4 @@
-/* $Id: TestPensoftArticleIteratorFactory.java,v 1.4 2014-07-21 03:28:28 tlipkis Exp $  */
+/* $Id: TestPensoftArticleIteratorFactory.java,v 1.5 2014-11-12 20:12:02 wkwilson Exp $  */
 /*
 
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
@@ -30,6 +30,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.pensoft;
 
 import java.io.File;
+import java.io.InputStream;
 import java.util.Iterator;
 import java.util.Stack;
 import java.util.regex.Pattern;
@@ -160,15 +161,15 @@ public class TestPensoftArticleIteratorFactory extends ArticleIteratorTestCase {
 	break;
       }
     }
-    for(String url : urls)
-      {
-	UrlCacher uc = au.makeUrlCacher(url);
-	if(url.contains("pdf")){
-	  uc.storeContent(cuPdf.getUnfilteredInputStream(), cuPdf.getProperties());
-	}
-	else if(url.contains("full") || url.contains("ris")){
-	  uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
-	}
+      for(String url : urls) {
+        if(url.contains("pdf")){
+          storeContent(cuPdf.getUnfilteredInputStream(),
+              cuPdf.getProperties(), url);
+        }
+        else if(url.contains("full") || url.contains("ris")){
+          storeContent(cuHtml.getUnfilteredInputStream(), 
+              cuHtml.getProperties(), url);
+        }
       }
     /*
 

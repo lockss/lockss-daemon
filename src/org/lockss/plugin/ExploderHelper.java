@@ -1,5 +1,5 @@
 /*
- * $Id: ExploderHelper.java,v 1.1 2011-05-18 04:09:55 tlipkis Exp $
+ * $Id: ExploderHelper.java,v 1.2 2014-11-12 20:11:22 wkwilson Exp $
  */
 
 /*
@@ -53,5 +53,9 @@ public interface ExploderHelper {
    * @param ae the entry to be processed
    */
   public void process(ArchiveEntry ae) throws PluginException;
+  
+  public void setWatchdog(LockssWatchdog wdog);
+  
+  public void pokeWDog();
 
 }

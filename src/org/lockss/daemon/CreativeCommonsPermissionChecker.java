@@ -1,5 +1,5 @@
 /*
- * $Id: CreativeCommonsPermissionChecker.java,v 1.14 2014-01-14 04:28:00 tlipkis Exp $
+ * $Id: CreativeCommonsPermissionChecker.java,v 1.15 2014-11-12 20:11:45 wkwilson Exp $
  */
 
 /*
@@ -53,19 +53,19 @@ public class CreativeCommonsPermissionChecker extends BasePermissionChecker {
   private static Logger logger =
     Logger.getLogger(CreativeCommonsPermissionChecker.class);
 
-  static final String PREFIX =
+  public static final String PREFIX =
     Configuration.PREFIX + "creativeCommonsPermission.";
 
   /** List of Creative Commons license types that are accepted */
-  static final String PARAM_VALID_LICENSE_TYPES =
+  public static final String PARAM_VALID_LICENSE_TYPES =
     PREFIX + "validLicenseTypes";
-  static final List DEFAULT_VALID_LICENSE_TYPES =
+  public static final List DEFAULT_VALID_LICENSE_TYPES =
     ListUtil.list("by", "by-sa", "by-nc", "by-nd", "by-nc-sa", "by-nc-nd");
 
   /** List of Creative Commons license versions that are accepted */
-  static final String PARAM_VALID_LICENSE_VERSIONS =
+  public static final String PARAM_VALID_LICENSE_VERSIONS =
     PREFIX + "validLicenseVersions";
-  static final List DEFAULT_VALID_LICENSE_VERSIONS =
+  public static final List DEFAULT_VALID_LICENSE_VERSIONS =
     ListUtil.list("1.0", "2.0", "2.5", "3.0", "4.0");
 
   private static Set<String> validLicenseTypes =
@@ -94,7 +94,7 @@ public class CreativeCommonsPermissionChecker extends BasePermissionChecker {
   public CreativeCommonsPermissionChecker() {
   }
 
-  public boolean checkPermission(Crawler.PermissionHelper pHelper,
+  public boolean checkPermission(Crawler.CrawlerFacade crawlFacade,
 				 Reader inputReader, String permissionUrl) {
     licenseUrl = null;
     logger.debug3("Checking permission on "+permissionUrl);
@@ -102,10 +102,10 @@ public class CreativeCommonsPermissionChecker extends BasePermissionChecker {
       return false;
     }
     ArchivalUnit au = null;
-    if (pHelper != null) {
-      au = pHelper.getAu();
+    if (crawlFacade != null) {
+      au = crawlFacade.getAu();
       if (logger.isDebug3()) {
-	logger.debug3("pHelper: " + pHelper);
+	logger.debug3("crawlFacade: " + crawlFacade);
 	logger.debug3("AU: " + au);
       }
     }
@@ -122,7 +122,7 @@ public class CreativeCommonsPermissionChecker extends BasePermissionChecker {
     }
     if (licenseUrl != null) {
       logger.debug3("Found licenseUrl "+licenseUrl);
-      setAuAccessType(pHelper, AuState.AccessType.OpenAccess);
+      setAuAccessType(crawlFacade, AuState.AccessType.OpenAccess);
       return true;
     }
     return false;

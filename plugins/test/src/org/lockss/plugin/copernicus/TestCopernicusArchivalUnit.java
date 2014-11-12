@@ -1,5 +1,5 @@
 /*
- * $Id: TestCopernicusArchivalUnit.java,v 1.1 2014-05-08 18:42:58 alexandraohlson Exp $
+ * $Id: TestCopernicusArchivalUnit.java,v 1.2 2014-11-12 20:12:00 wkwilson Exp $
  */
 
 /*
@@ -153,8 +153,7 @@ public class TestCopernicusArchivalUnit extends LockssTestCase {
   
   private void shouldCacheTest(String url, boolean shouldCache,
       ArchivalUnit au, CachedUrlSet cus) {
-    UrlCacher uc = au.makeUrlCacher(url);
-    assertEquals(shouldCache, uc.shouldBeCached());
+    assertEquals(shouldCache, au.shouldBeCached(url));
   }
   
   public void testStartUrlConstruction() throws Exception {
@@ -163,7 +162,7 @@ public class TestCopernicusArchivalUnit extends LockssTestCase {
     // 4 digit
     String expected = ROOT_URL+"123/index.html";
     DefinableArchivalUnit ABAu = makeAu(url, url, 123, "2010");
-    assertEquals(ListUtil.list(expected), ABAu.getNewContentCrawlUrls());
+    assertEquals(ListUtil.list(expected), ABAu.getStartUrls());
   }
   
   public void testShouldNotCachePageFromOtherSite() throws Exception {
@@ -175,9 +174,9 @@ public class TestCopernicusArchivalUnit extends LockssTestCase {
     theDaemon.getNodeManager(ABAu);
     CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(base.toString());
     BaseCachedUrlSet cus = new BaseCachedUrlSet(ABAu, spec);
-    UrlCacher uc = ABAu.makeUrlCacher("http://shadow2.stanford.edu/123/index.html");
 
-    assertFalse(uc.shouldBeCached());
+    assertFalse(ABAu.shouldBeCached(
+        "http://shadow2.stanford.edu/123/index.html"));
   }
 
   public void testgetName() throws Exception {

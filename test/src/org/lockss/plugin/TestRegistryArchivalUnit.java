@@ -1,5 +1,5 @@
 /*
- * $Id: TestRegistryArchivalUnit.java,v 1.19 2014-04-23 20:45:28 tlipkis Exp $
+ * $Id: TestRegistryArchivalUnit.java,v 1.20 2014-11-12 20:11:54 wkwilson Exp $
  */
 
 /*
@@ -194,7 +194,7 @@ public class TestRegistryArchivalUnit extends LockssTestCase {
     MyRegistryArchivalUnit au = new MyRegistryArchivalUnit(regPlugin);
     au.setConfiguration(auConfig);
     PluginTestUtil.registerArchivalUnit(regPlugin, au);
-    au.addContent(au.getNewContentCrawlUrls().get(0),
+    au.addContent(au.getStartUrls().iterator().next(),
 		  "<html><head><h2>foobar</h2>\n" +
 		  "<title>This Title No Verb</title></head></html>");
     assertEquals("This Title No Verb", au.recomputeRegName());
@@ -207,7 +207,7 @@ public class TestRegistryArchivalUnit extends LockssTestCase {
     MyRegistryArchivalUnit au = new MyRegistryArchivalUnit(regPlugin);
     au.setConfiguration(auConfig);
     PluginTestUtil.registerArchivalUnit(regPlugin, au);
-    au.addContent(au.getNewContentCrawlUrls().get(0),
+    au.addContent(au.getStartUrls().iterator().next(),
 		  "<html><head><h2>foobar</h2>\n" +
 		  "<title>First Title No Verb</title>" +
 		  "<title>Second Title No Verb</title></head></html>");
@@ -221,7 +221,7 @@ public class TestRegistryArchivalUnit extends LockssTestCase {
     MyRegistryArchivalUnit au = new MyRegistryArchivalUnit(regPlugin);
     au.setConfiguration(auConfig);
     PluginTestUtil.registerArchivalUnit(regPlugin, au);
-    au.addContent(au.getNewContentCrawlUrls().get(0),
+    au.addContent(au.getStartUrls().iterator().next(),
 		  "<html><h3>This Page No Title</h3></html>");
     assertEquals(null, au.recomputeRegName());
   }

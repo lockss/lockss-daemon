@@ -1,5 +1,5 @@
 /*
- * $Id: ArchiveEntry.java,v 1.7 2009-09-05 18:03:27 dshr Exp $
+ * $Id: ArchiveEntry.java,v 1.8 2014-11-12 20:11:45 wkwilson Exp $
  */
 
 /*
@@ -34,8 +34,8 @@ package org.lockss.daemon;
 
 import java.io.*;
 import java.util.*;
+
 import org.lockss.util.CIProperties;
-import org.lockss.daemon.CrawlSpec;
 import org.lockss.crawler.Exploder;
 
 /**
@@ -53,7 +53,6 @@ public class ArchiveEntry {
   private long bytes;
   private long date;
   private InputStream is;
-  private CrawlSpec crawlSpec;
   private Exploder exploder;
   private String archiveName;
   private String explodedAUBaseUrlStem;
@@ -64,25 +63,22 @@ public class ArchiveEntry {
   private CIProperties auProps;
   private Hashtable addText;
 
-  public ArchiveEntry(String name, long bytes, long date, InputStream is,
-		      CrawlSpec crawlSpec) {
-    setup(name, bytes, date, is, crawlSpec, (Exploder) null, null);
+  public ArchiveEntry(String name, long bytes, long date, InputStream is) {
+    setup(name, bytes, date, is, (Exploder) null, null);
   }
 
   public ArchiveEntry(String name, long bytes, long date, InputStream is,
-		      CrawlSpec crawlSpec, Exploder exploder) {
-    setup(name, bytes, date, is, crawlSpec, exploder, null);
+		      Exploder exploder) {
+    setup(name, bytes, date, is, exploder, null);
   }
 
   public ArchiveEntry(String name, long bytes, long date, InputStream is,
-		      CrawlSpec crawlSpec, Exploder exploder,
-		      String archiveName) {
-    setup(name, bytes, date, is, crawlSpec, exploder, archiveName);
+		       Exploder exploder, String archiveName) {
+    setup(name, bytes, date, is, exploder, archiveName);
   }
 
   private void setup(String name, long bytes, long date, InputStream is,
-		     CrawlSpec crawlSpec, Exploder exploder,
-		     String archiveName) {
+		     Exploder exploder, String archiveName) {
     if (name.startsWith("./")) {
       this.name = name.substring(2);
     } else {
@@ -91,7 +87,6 @@ public class ArchiveEntry {
     this.bytes = bytes;
     this.date = date;
     this.is = is;
-    this.crawlSpec = crawlSpec;
     this.exploder = exploder;
     this.archiveName = archiveName;
     baseUrl = null;
@@ -117,10 +112,6 @@ public class ArchiveEntry {
 
   public InputStream getInputStream() {
     return is;
-  }
-
-  public CrawlSpec getCrawlSpec() {
-    return crawlSpec;
   }
 
   public Exploder getExploder() {

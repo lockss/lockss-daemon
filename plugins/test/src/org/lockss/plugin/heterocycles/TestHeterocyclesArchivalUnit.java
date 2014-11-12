@@ -1,5 +1,5 @@
 /*
- * $Id: TestHeterocyclesArchivalUnit.java,v 1.1 2013-10-15 23:26:31 ldoan Exp $
+ * $Id: TestHeterocyclesArchivalUnit.java,v 1.2 2014-11-12 20:12:02 wkwilson Exp $
  */
 
 /*
@@ -163,23 +163,20 @@ public class TestHeterocyclesArchivalUnit extends LockssTestCase {
   private void shouldCacheTest(String url, boolean shouldCache,
                                ArchivalUnit au, CachedUrlSet cus) {
     log.info ("shouldCacheTest url: " + url);
-
-    UrlCacher uc = au.makeUrlCacher(url);
-    assertEquals(shouldCache, uc.shouldBeCached());
+    assertEquals(shouldCache, au.shouldBeCached(url));
   }
   
   public void testStartUrlConstruction() throws Exception {
     String expected = ROOT_URL + "clockss/manifest/vol/" + VOLUME_NAME;
     assertEquals(ListUtil.list(expected), 
-                 heterocyclesAu.getNewContentCrawlUrls());
+                 heterocyclesAu.getStartUrls());
   }
   
   public void testShouldNotCachePageFromOtherSite() throws Exception {
     theDaemon.getLockssRepository(heterocyclesAu);
     theDaemon.getNodeManager(heterocyclesAu);
-    UrlCacher uc = heterocyclesAu.makeUrlCacher(
-        "http://shadow2.stanford.edu/lockss/manifest/vol/2");
-    assertFalse(uc.shouldBeCached());
+    assertFalse(heterocyclesAu.shouldBeCached(
+        "http://shadow2.stanford.edu/lockss/manifest/vol/2"));
   }
 
   public void testShouldDoNewContentCrawlTooEarly() throws Exception {

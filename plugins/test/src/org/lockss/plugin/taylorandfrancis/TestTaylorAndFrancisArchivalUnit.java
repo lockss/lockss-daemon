@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaylorAndFrancisArchivalUnit.java,v 1.9 2014-07-10 17:17:39 alexandraohlson Exp $
+ * $Id: TestTaylorAndFrancisArchivalUnit.java,v 1.10 2014-11-12 20:11:26 wkwilson Exp $
  */
 
 /*
@@ -197,8 +197,7 @@ public class TestTaylorAndFrancisArchivalUnit extends LockssTestCase {
   
   private void shouldCacheTest(String url, boolean shouldCache,
       ArchivalUnit au, CachedUrlSet cus) {
-    UrlCacher uc = au.makeUrlCacher(url);
-    assertEquals(shouldCache, uc.shouldBeCached());
+    assertEquals(shouldCache, au.shouldBeCached(url));
   }
   
   public void testStartUrlConstruction() throws Exception {
@@ -207,7 +206,7 @@ public class TestTaylorAndFrancisArchivalUnit extends LockssTestCase {
     // 4 digit
     String expected = ROOT_URL+keyword+"/uytj20/24/index.html";
     DefinableArchivalUnit tfAu = makeAu(url, 24, "uytj20");
-    assertEquals(ListUtil.list(expected), tfAu.getNewContentCrawlUrls());
+    assertEquals(ListUtil.list(expected), tfAu.getStartUrls());
   }
   
   public void testShouldNotCachePageFromOtherSite() throws Exception {
@@ -220,9 +219,8 @@ public class TestTaylorAndFrancisArchivalUnit extends LockssTestCase {
     theDaemon.getNodeManager(tfAu);
     CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(base.toString());
     BaseCachedUrlSet cus = new BaseCachedUrlSet(tfAu, spec);
-    UrlCacher uc = tfAu.makeUrlCacher("http://shadow2.stanford.edu/lockss/uytj20/24/index.html");
-
-    assertFalse(uc.shouldBeCached());
+    assertFalse(tfAu.shouldBeCached(
+        "http://shadow2.stanford.edu/lockss/uytj20/24/index.html"));
   }
 
 

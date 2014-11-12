@@ -29,6 +29,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.igiglobal;
 
 import java.io.ByteArrayInputStream;
+import java.io.InputStream;
 import java.util.Iterator;
 import java.util.Stack;
 import java.util.regex.Pattern;
@@ -142,45 +143,50 @@ public class TestIgiGlobalArticleIteratorFactory extends ArticleIteratorTestCase
     CachedUrl cuHtml = null;
     for (CachedUrl cu : AuUtil.getCuIterable(sau)) {
       if (cuPdf == null && 
-	  cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_PDF))
-	{
-	  cuPdf = cu;
-	}
+          cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_PDF))
+    	{
+    	  cuPdf = cu;
+    	}
       else if (cuHtml == null && 
-	       cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_HTML))
-	{
-	  cuHtml = cu;
-	}
+	        cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_HTML))
+    	{
+    	  cuHtml = cu;
+    	}
       if (cuPdf != null && cuHtml != null) {
-	break;
+        break;
       }
     }
+    
     byte[] b = new byte [512];
     cuHtml.getUnfilteredInputStream().read(b, 0, 350);
     String landingPage = new String(b);
     landingPage = landingPage.replace("</BODY>", "xxxx <iframe random=\"stuff\" " +
-				      "src=\"/pdf.aspx?tid%3d20212%26ptid%3d464%26ctid%3d3%26t%3dArticle+Title\">" +
-				      "xxxx\n</BODY>");
+        "src=\"/pdf.aspx?tid%3d20212%26ptid%3d464%26ctid%3d3%26t%3dArticle+Title\">" +
+        "xxxx\n</BODY>");
+    
     for (String url : urls) {
-      UrlCacher uc = au.makeUrlCacher(url);
       if (url.contains("full-text-html")) {
-	uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
+        storeContent(cuHtml.getUnfilteredInputStream(),
+        cuHtml.getProperties(), url);
       }
       else if (url.contains("articles/full-text-pdf")) {
-	uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
-	url = url.replace("full-text-pdf", "pdf");
-	uc = au.makeUrlCacher(url);
-	uc.storeContent(cuPdf.getUnfilteredInputStream(), cuPdf.getProperties());
+        storeContent(cuHtml.getUnfilteredInputStream(),
+        cuHtml.getProperties(), url);
+        url = url.replace("full-text-pdf", "pdf");
+        storeContent(cuPdf.getUnfilteredInputStream(),
+        cuPdf.getProperties(), url);
       }
       else if (url.contains("full-text-pdf")) {
-	uc.storeContent(new ByteArrayInputStream(landingPage.getBytes()),
-			cuHtml.getProperties());
+        storeContent(new ByteArrayInputStream(landingPage.getBytes()),
+        cuHtml.getProperties(), url);
       }
       else if (url.contains("/pdf.aspx")) {
-	uc.storeContent(cuPdf.getUnfilteredInputStream(), cuPdf.getProperties());
+        storeContent(cuPdf.getUnfilteredInputStream(),
+        cuPdf.getProperties(), url);
       }
       else if (url.matches(".*gateway/article/[0-9]+$")) {
-	uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
+        storeContent(cuHtml.getUnfilteredInputStream(),
+        cuHtml.getProperties(), url);
       }
     }
     

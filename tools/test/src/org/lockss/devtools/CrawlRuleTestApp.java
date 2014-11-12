@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRuleTestApp.java,v 1.7 2006-02-04 05:34:57 tlipkis Exp $
+ * $Id: CrawlRuleTestApp.java,v 1.8 2014-11-12 20:11:50 wkwilson Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.*;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
+import org.lockss.test.MockArchivalUnit;
 import org.lockss.util.*;
 
 
@@ -118,12 +119,11 @@ public class CrawlRuleTestApp {
       long delay = config.getLong(CRAWL_DELAY_PROP, DEFAULT_CRAWL_DELAY);
       String base_url = config.get(BASE_URL_PROP);
       CrawlRule rule = makeRules(config, base_url);
-      CrawlSpec spec =
-	new SpiderCrawlSpec(base_url, rule,
-			    config.getInt("BASE_CRAWL_DEPTH", 1));
-
+      MockArchivalUnit mau = new MockArchivalUnit(rule);
+      mau.addUrl(base_url);
+      
       CrawlRuleTester tester = new CrawlRuleTester(output_file, crawl_depth,
-          delay, base_url, spec);
+          delay, base_url, mau);
       tester.run();
     }
     catch (Exception ex) {

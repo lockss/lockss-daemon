@@ -144,14 +144,14 @@ public class TestIgiGlobalPlugin extends LockssPluginTestCase {
 
 	  private void assertShouldCache(String url, boolean shouldCache,
 				       ArchivalUnit au, CachedUrlSet cus) {
-	    UrlCacher uc = au.makeUrlCacher(url);
-	    assertEquals("AU crawl rules applied incorrectly to " + url + " ", shouldCache, uc.shouldBeCached());
+	    assertEquals("AU crawl rules applied incorrectly to " + url + " ",
+	        shouldCache, au.shouldBeCached(url));
 	  }
 
 	  public void testStartUrlConstruction() throws Exception {
 	    String expectedStartUrl = BASE_URL + "lockss/journal-issues.aspx?issn=" + JOURNAL_ISSN + "&volume=" + VOLUME;
 	    ArchivalUnit au = createAu();
-	    assertEquals(ListUtil.list(expectedStartUrl), au.getNewContentCrawlUrls());
+	    assertEquals(ListUtil.list(expectedStartUrl), au.getStartUrls());
 	  }
 
 	  public void testGetUrlStems() throws Exception {

@@ -1,5 +1,5 @@
 /*
- * $Id: ClockssSubscriptionProbe.java,v 1.2 2007-04-30 04:52:46 tlipkis Exp $
+ * $Id: ClockssSubscriptionProbe.java,v 1.3 2014-11-12 20:11:27 wkwilson Exp $
  */
 
 /*
@@ -32,14 +32,9 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.clockss;
 
-import java.io.*;
-import java.util.*;
 import org.lockss.util.*;
-import org.lockss.util.urlconn.*;
-import org.lockss.daemon.*;
 import org.lockss.state.*;
 import org.lockss.plugin.*;
-import org.lockss.crawler.PermissionMap;
 
 /**
  * Logic for 2-IP-address CLOCKSS subscription probe.
@@ -65,7 +60,7 @@ public class ClockssSubscriptionProbe {
   // getUncachedInputStream().  The wrappers for those methods call
   // setupAddr before forwarding the call.
 
-  boolean setupAddr(UrlCacher uc) {
+  boolean setupAddr(UrlFetcher uf) {
     if (executed) {
       // already succeeded or failed, don't change state, don't retry
       return false;
@@ -79,11 +74,11 @@ public class ClockssSubscriptionProbe {
     case AuState.CLOCKSS_SUB_NOT_MAINTAINED:
       switch (probeState) {
       case PROBE_NONE:
-	uc.setLocalAddress(mgr.getInstitutionSubscriptionAddr());
+	uf.setLocalAddress(mgr.getInstitutionSubscriptionAddr());
 	probeState = PROBE_INST;
 	return true;
       case PROBE_INST:
-	uc.setLocalAddress(mgr.getClockssSubscriptionAddr());
+	uf.setLocalAddress(mgr.getClockssSubscriptionAddr());
 	probeState = PROBE_CLOCKSS;
 	return true;
       case PROBE_CLOCKSS:
@@ -98,7 +93,7 @@ public class ClockssSubscriptionProbe {
     case AuState.CLOCKSS_SUB_NO:
       switch (probeState) {
       case PROBE_NONE:
-	uc.setLocalAddress(mgr.getClockssSubscriptionAddr());
+	uf.setLocalAddress(mgr.getClockssSubscriptionAddr());
 	probeState = PROBE_CLOCKSS;
 	return true;
       case PROBE_CLOCKSS:

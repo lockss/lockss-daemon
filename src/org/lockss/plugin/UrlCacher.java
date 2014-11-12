@@ -1,5 +1,5 @@
 /*
- * $Id: UrlCacher.java,v 1.32 2014-07-11 23:32:59 tlipkis Exp $
+ * $Id: UrlCacher.java,v 1.33 2014-11-12 20:11:22 wkwilson Exp $
  */
 
 /*
@@ -36,7 +36,6 @@ import java.io.*;
 import java.util.*;
 
 import org.lockss.daemon.*;
-import org.lockss.crawler.CrawlRateLimiter;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 
@@ -48,46 +47,7 @@ import org.lockss.util.urlconn.*;
  */
 public interface UrlCacher {
 
-  /** Follow redirects */
-  public static final int REDIRECT_OPTION_FOLLOW_AUTO = 1;
-  /** Follow redirects only if match crawl spec */
-  public static final int REDIRECT_OPTION_IF_CRAWL_SPEC = 2;
-  /** Store content under all redirected names */
-  public static final int REDIRECT_OPTION_STORE_ALL = 4;
-  /** Follow redirects only within same host */
-  public static final int REDIRECT_OPTION_ON_HOST_ONLY = 8;
-
-  /** Don't follow redirects; throw CacheException.RetryNewUrlException if
-   * redirect response received */
-  public static final RedirectScheme REDIRECT_SCHEME_DONT_FOLLOW =
-    new RedirectScheme(0);
-  /** Automatically follow all redirects */
-  public static final RedirectScheme REDIRECT_SCHEME_FOLLOW =
-    new RedirectScheme(REDIRECT_OPTION_FOLLOW_AUTO);
-  /** Follow redirects only in crawl spec */
-  public static final RedirectScheme REDIRECT_SCHEME_FOLLOW_IN_SPEC =
-    new RedirectScheme(REDIRECT_OPTION_IF_CRAWL_SPEC);
-  /** Follow redirects only on same host */
-  public static final RedirectScheme REDIRECT_SCHEME_FOLLOW_ON_HOST =
-    new RedirectScheme(REDIRECT_OPTION_ON_HOST_ONLY);
-  /** Follow redirects only in crawl spec and on host */
-  public static final RedirectScheme REDIRECT_SCHEME_FOLLOW_IN_SPEC_ON_HOST =
-    new RedirectScheme(REDIRECT_OPTION_IF_CRAWL_SPEC +
-		       REDIRECT_OPTION_ON_HOST_ONLY);
-  /** Follow redirects iff within the crawl spec, store under all names */
-  public static final RedirectScheme REDIRECT_SCHEME_STORE_ALL_IN_SPEC =
-    new RedirectScheme(REDIRECT_OPTION_IF_CRAWL_SPEC +
-		       REDIRECT_OPTION_STORE_ALL);
-
-  // Return codes from cache()
-  /** 304 not modified */
-  public static final int CACHE_RESULT_NOT_MODIFIED = 1;
-  /** fetched */
-  public static final int CACHE_RESULT_FETCHED = 2;
-
-  public static final int REFETCH_FLAG = 0;
-  public static final int CLEAR_DAMAGE_FLAG = 1;
-  public static final int REFETCH_IF_DAMAGE_FLAG = 2;
+  public static final int REFETCH_FLAG = 1;
   public static final int DONT_CLOSE_INPUT_STREAM_FLAG = 4;
 
 
@@ -104,43 +64,16 @@ public interface UrlCacher {
   public String getUrl();
 
   /**
-   * Return the {@link CachedUrlSet} to which this UrlCacher belongs.
-   * @return the parent set
-   * @deprecated Not used, kept only for plugin binary compatibility
-   */
-  public CachedUrlSet getCachedUrlSet();
-
-  /**
-   * Return <code>true</code> if the underlying url is one that
-   * the plug-in believes should be preserved.
-   * @return <code>true</code> if the underlying url is one that
-   *         the plug-in believes should be preserved.
-   */
-  public boolean shouldBeCached();
-
-  /**
    * Return a {@link CachedUrl} for the content stored.  May be
    * called only after the content is completely written.
    * @return {@link CachedUrl} for the content stored.
    */
   public CachedUrl getCachedUrl();
 
-  /** Set the shared connection pool object to be used by this UrlCacher */
-  public void setConnectionPool(LockssUrlConnectionPool connectionPool);
-
-  /** For multihomed machines, determines which local address will be the
-   * sorce of outgoing URL connections */
-  public void setLocalAddress(IPAddr localAddr);
-
-  /** Set the host and port the UrlCacher should proxy through */
-  public void setProxy(String proxyHost, int proxyPort);
-
   /**
    * Sets various attributes of the fetch operation
    * Currently these are:
    * refetch - refetch the content even if it's already present and up to date
-   * clear damage - clear the damage flag for this node if we fetch it
-   * refetch if damage - refetch this content if damaged
    * don't close input stream - needed for archives
    * @param fetchFlags BitSet encapsulating the fetch flags
    */
@@ -151,25 +84,12 @@ public interface UrlCacher {
    */
   public BitSet getFetchFlags();
 
-  /** Set a request header, overwriting any previous value */
-  public void setRequestProperty(String key, String value);
-
-  /** Determines the behavior if a redirect response is received. */
-  public void setRedirectScheme(RedirectScheme scheme);
-
+  
   /** Set a LockssWatchdog that should be poked periodically while copying
    * the content from the network input stream to the repository.
    * @see StreamUtil#copy(InputStream, OutputStream, long, LockssWatchdog)
    */
   public void setWatchdog(LockssWatchdog wdog);
-
-  /** Set a CrawlRateLimiter, which should be consulted before every fetch
-   * request */
-  public void setCrawlRateLimiter(CrawlRateLimiter crl);
-
-  /** Set the content type just fetched, for MIME-type dependent rate
-   * limiters */
-  public void setPreviousContentType(String prevContentType);
 
   /**
    * Copies the content and properties from the source into the cache.
@@ -179,61 +99,19 @@ public interface UrlCacher {
    * unmodified.
    * @throws java.io.IOException on many possible I/O problems.
    */
-  public int cache() throws IOException;
-
-  /**
-   * Gets an InputStream for this URL, issuing a request if not already
-   * done.  This may only be called once!
-   * @return the InputStream
-   * @throws IOException
-   */
-  public InputStream getUncachedInputStream() throws IOException;
-
-  /**
-   * Gets the header properties in the server response.  Must be called
-   * only after getUncachedInputStream() has succeeded.
-   * @return the {@link CIProperties}
-   * @throws UnsupportedOperationException if called before
-   * getUncachedInputStream() or cache()
-   */
-  public CIProperties getUncachedProperties();
-
-  /**
-   * Stores the content and headers into the repository.
-   * @param input the InputStream from which the content will be read. OK
-   * to close the stream unless DONT_CLOSE_INPUT_STREAM_FLAG is set
-   * @param headers the server's response headers, augmented with
-   * LOCKSS-specific properties
-   * @throws IOException if can't open connection, get error reponse or can't
-   * store in repository.  See {@link CacheException}
-   */
-  public void storeContent(InputStream input, CIProperties headers)
+  public void storeContent()
       throws IOException;
-
-  /**
-   * Reset the UrlCacher to its pre-opened state, so that it can be
-   * reopened.
-   */
-  public void reset();
 
   /**
    * Return an exception with info to be reported in the crawl status along
    * with the URL (presumably produced by a validator), or null.
    */
   public CacheException getInfoException();
+  
+  /**
+   * If we want to store under every redirect url set the list
+   * @param redirectUrls
+   */
+  public void setRedirectUrls(List<String> redirectUrls);
 
-  public void setPermissionMapSource(PermissionMapSource permissionMapSource);
-
-  public static class RedirectScheme {
-    private int options = 0;
-    private RedirectScheme(int options) {
-      this.options = options;
-    }
-    public int getOptions() {
-      return options;
-    }
-    public String toString() {
-      return Integer.toString(options);
-    }
-  }
 }

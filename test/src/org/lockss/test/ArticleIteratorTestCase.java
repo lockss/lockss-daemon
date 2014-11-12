@@ -1,5 +1,5 @@
 /*
- * $Id: ArticleIteratorTestCase.java,v 1.3 2013-06-20 00:03:35 thib_gc Exp $
+ * $Id: ArticleIteratorTestCase.java,v 1.4 2014-11-12 20:11:43 wkwilson Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import java.util.regex.*;
 
 import org.lockss.config.*;
 import org.lockss.plugin.*;
+import org.lockss.util.CIProperties;
 import org.lockss.extractor.*;
 
 /** Framework for ArticleIterator tests. */
@@ -106,6 +107,12 @@ public abstract class ArticleIteratorTestCase extends LockssTestCase {
       throw new RuntimeException(e);
     }
 
+  }
+  
+  protected void storeContent(InputStream input, CIProperties props, String url) throws IOException {
+    UrlData ud = new UrlData(input, props, url);
+    UrlCacher uc = au.makeUrlCacher(ud);
+    uc.storeContent();
   }
 
 }

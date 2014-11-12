@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.68 2014-08-25 08:57:38 tlipkis Exp $
+ * $Id: ArchivalUnit.java,v 1.69 2014-11-12 20:11:22 wkwilson Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import org.lockss.config.*;
 import org.lockss.crawler.*;
 import org.lockss.extractor.*;
 import org.lockss.daemon.*;
+import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.state.*;
 import org.lockss.util.*;
 import org.lockss.plugin.base.*;
@@ -72,7 +73,7 @@ public interface ArchivalUnit {
     "au_fetch_rate_limiter_source";
   static final String KEY_AU_USE_CRAWL_WINDOW = "au_use_crawl_window";
   static final String KEY_AU_NEW_CONTENT_CRAWL_INTERVAL = "au_new_crawl_interval";
-  static final String KEY_AU_CRAWL_SPEC = "au_crawl_spec";
+  static final String KEY_AU_CRAWL_RULE = "au_crawl_rule";
   static final String KEY_AU_URL_NORMALIZER = "au_url_normalizer";
   static final String KEY_AU_MAX_SIZE = "au_maxsize";
   static final String KEY_AU_MAX_FILE_SIZE = "au_max_file_size";
@@ -137,12 +138,6 @@ public interface ArchivalUnit {
   public CachedUrlSet getAuCachedUrlSet();
 
   /**
-   * Return the {@link CrawlSpec}
-   * @return the {@link CrawlSpec} for the AU
-   */
-  public CrawlSpec getCrawlSpec();
-
-  /**
    * Return stems (protocol and host) of URLs in the AU.  Used for external
    * proxy configuration.  All URLs in the AU much match at least one stem;
    * it's okay for there to be matching URLs that aren't in the AU.
@@ -197,12 +192,6 @@ public interface ArchivalUnit {
 
   public RateLimiterInfo getRateLimiterInfo();
 
-  /**
-   * Return a list of urls which need to be recrawled during a new content
-   * crawl.
-   * @return the {@link List} of urls to crawl
-   */
-  public List<String> getNewContentCrawlUrls();
 
   /**
    * Return the host-independent path to look for permission pages on hosts
@@ -376,10 +365,10 @@ public interface ArchivalUnit {
 
   /**
    * Create a {@link UrlCacher} object within the set.
-   * @param url the url of interest
+   * @param ud the url data of interest
    * @return a {@link UrlCacher} object representing the url.
    */
-  public UrlCacher makeUrlCacher(String url);
+  public UrlCacher makeUrlCacher(UrlData ud);
 
   /**
    * Return the {@link TitleConfig} that was (or might have been) used to
@@ -400,7 +389,40 @@ public interface ArchivalUnit {
    * Returns a list of URLs that may contain the desired feature (e.g.,
    * au_title, au_volume, au_issue) */
   public List<String> getAuFeatureUrls(String auFeature);
-
+  
+  /**
+   * Return genaric or plugin specific crawl seed to begin crawl from
+   */
+  public CrawlSeed makeCrawlSeed();
+  
+  public UrlFetcher makeUrlFetcher(CrawlerFacade facade, String url);
+  
+  public boolean inCrawlWindow();
+  
+  public List<PermissionChecker> makePermissionCheckers();
+  
+  /**
+   * Collection of start urls may be null
+   */
+  public Collection<String> getStartUrls();
+  
+  /**
+   * Collection of permission urls may be null 
+   */
+  public Collection<String> getPermissionUrls();
+  
+  public int getRefetchDepth();
+  
+  public LoginPageChecker getLoginPageChecker();
+  
+  public String getCookiePolicy();
+  
+  public boolean shouldRefetchOnCookies();
+  
+  public CrawlWindow getCrawlWindow();
+  
+  public UrlConsumerFactory getUrlConsumerFactory();
+  
   @SuppressWarnings("serial")
   public class ConfigurationException extends Exception {
 
