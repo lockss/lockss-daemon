@@ -192,7 +192,12 @@ http://press.endocrine.org/templates/jsp/images/free.gif
 ** From analysis review: The images are handled using window.figureViewer and the support for this is waiting on 1.67. 
 I will put it in to BaseAtypon at that point and this plugin will get the correct link extraction automatically 
 but the plugin cannot go to smoke test until this is happens (same as Maney, BritishInstituteofRadiology).
-This means that until Daemon1.67, the medium and large images are collected.
+This means that until Daemon1.67, the medium and large images are not collected.
+Example: http://press.endocrine.org/doi/full/10.1210/en.2012-2147
+<a title="Open Figure Viewer" onclick="showFigures(this,event); 
+return false;" href="JavaScript:void(0);" class="thumbnail">
+<img alt="figure" src="/na101/home/literatum/publisher/endo/journals/content/endo/2013/endo.2013.154.issue-10/en.2012-2147/20140211/images/small/zee9991371920002.g.gif">
+<span class="overlay"></span></a>
 
 Javasripts files:
 http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
