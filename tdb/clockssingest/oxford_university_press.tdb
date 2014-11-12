@@ -3655,7 +3655,7 @@
     au < finished ; crawling ; 2011 ; Cerebral Cortex Volume 21 ; 21 ; >
     au < finished ; crawling ; 2012 ; Cerebral Cortex Volume 22 ; 22 ; >
     au < crawling ; exists ; 2013 ; Cerebral Cortex Volume 23 ; 23 ; >
-    au < testing ; exists ; 2014 ; Cerebral Cortex Volume 24 ; 24 ; >
+    au < ready ; exists ; 2014 ; Cerebral Cortex Volume 24 ; 24 ; >
 
     }
 
@@ -7103,7 +7103,7 @@
     au < finished ; crawling ; 2011 ; Health Education Research Volume 26 ; 26 ; >
     au < finished ; crawling ; 2012 ; Health Education Research Volume 27 ; 27 ; >
     au < crawling ; exists ; 2013 ; Health Education Research Volume 28 ; 28 ; >
-    au < testing ; exists ; 2014 ; Health Education Research Volume 29 ; 29 ; >
+    au < ready ; exists ; 2014 ; Health Education Research Volume 29 ; 29 ; >
 
     }
 
@@ -8847,7 +8847,7 @@
     au < crawling ; crawling ; 2011 ; International Journal of Lexicography Volume 24 ; 24 ; >
     au < finished ; frozen ; 2012 ; International Journal of Lexicography Volume 25 ; 25 ; >
     au < crawling ; exists ; 2013 ; International Journal of Lexicography Volume 26 ; 26 ; >
-    au < testing ; exists ; 2014 ; International Journal of Lexicography Volume 27 ; 27 ; >
+    au < ready ; exists ; 2014 ; International Journal of Lexicography Volume 27 ; 27 ; >
 
     }
 
@@ -8885,7 +8885,7 @@
     au < finished ; frozen ; 2011 ; International Journal of Low-Carbon Technologies Volume 6 ; 6 ; >
     au < finished ; frozen ; 2012 ; International Journal of Low-Carbon Technologies Volume 7 ; 7 ; >
     au < crawling ; exists ; 2013 ; International Journal of Low-Carbon Technologies Volume 8 ; 8 ; >
-    au < testing ; exists ; 2014 ; International Journal of Low-Carbon Technologies Volume 9 ; 9 ; >
+    au < ready ; exists ; 2014 ; International Journal of Low-Carbon Technologies Volume 9 ; 9 ; >
 
     }
 
@@ -8914,12 +8914,12 @@
     au < exists ; exists ; 2006 ; International Journal of Neuropsychopharmacology Volume 9 ; 9 ; >
     au < exists ; exists ; 2007 ; International Journal of Neuropsychopharmacology Volume 10 ; 10 ; >
     au < exists ; exists ; 2008 ; International Journal of Neuropsychopharmacology Volume 11 ; 11 ; >
-    au < manifest ; exists ; 2009 ; International Journal of Neuropsychopharmacology Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2010 ; International Journal of Neuropsychopharmacology Volume 13 ; 13 ; >
-    au < manifest ; exists ; 2011 ; International Journal of Neuropsychopharmacology Volume 14 ; 14 ; >
-    au < manifest ; exists ; 2012 ; International Journal of Neuropsychopharmacology Volume 15 ; 15 ; >
-    au < manifest ; exists ; 2013 ; International Journal of Neuropsychopharmacology Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2014 ; International Journal of Neuropsychopharmacology Volume 17 ; 17 ; >
+    au < testing ; exists ; 2009 ; International Journal of Neuropsychopharmacology Volume 12 ; 12 ; >
+    au < testing ; exists ; 2010 ; International Journal of Neuropsychopharmacology Volume 13 ; 13 ; >
+    au < testing ; exists ; 2011 ; International Journal of Neuropsychopharmacology Volume 14 ; 14 ; >
+    au < testing ; exists ; 2012 ; International Journal of Neuropsychopharmacology Volume 15 ; 15 ; >
+    au < testing ; exists ; 2013 ; International Journal of Neuropsychopharmacology Volume 16 ; 16 ; >
+    au < testing ; exists ; 2014 ; International Journal of Neuropsychopharmacology Volume 17 ; 17 ; >
   }
 
   {
@@ -9118,7 +9118,7 @@
     au < crawling ; crawling ; 2011 ; International Journal of Transitional Justice Volume 5 ; 5 ; >
     au < finished ; crawling ; 2012 ; International Journal of Transitional Justice Volume 6 ; 6 ; >
     au < crawling ; exists ; 2013 ; International Journal of Transitional Justice Volume 7 ; 7 ; >
-    au < testing ; exists ; 2014 ; International Journal of Transitional Justice Volume 8 ; 8 ; >
+    au < ready ; exists ; 2014 ; International Journal of Transitional Justice Volume 8 ; 8 ; >
 
     }
 
@@ -10273,7 +10273,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < crawling ; exists ; 2013 ; Journal of Complex Networks Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2014 ; Journal of Complex Networks Volume 2 ; 2 ; >
+    au < testing ; exists ; 2014 ; Journal of Complex Networks Volume 2 ; 2 ; >
 
     }
 
@@ -10312,7 +10312,7 @@
     au < finished ; frozen ; 2011 ; Journal of Competition Law & Economics Volume 7 ; 7 ; >
     au < finished ; crawling ; 2012 ; Journal of Competition Law & Economics Volume 8 ; 8 ; >
     au < crawling ; exists ; 2013 ; Journal of Competition Law & Economics Volume 9 ; 9 ; >
-    au < manifest ; exists ; 2014 ; Journal of Competition Law & Economics Volume 10 ; 10 ; >
+    au < testing ; exists ; 2014 ; Journal of Competition Law & Economics Volume 10 ; 10 ; >
 
     }
 
@@ -10360,7 +10360,7 @@
     au < finished ; crawling ; 2011 ; Journal of Conflict and Security Law Volume 16 ; 16 ; >
     au < finished ; frozen ; 2012 ; Journal of Conflict and Security Law Volume 17 ; 17 ; >
     au < crawling ; exists ; 2013 ; Journal of Conflict and Security Law Volume 18 ; 18 ; >
-    au < manifest ; exists ; 2014 ; Journal of Conflict and Security Law Volume 19 ; 19 ; >
+    au < testing ; exists ; 2014 ; Journal of Conflict and Security Law Volume 19 ; 19 ; >
 
     }
 
@@ -10379,12 +10379,12 @@
     
     au < manifest ; exists ; 2007 ; Journal of Crohn's and Colitis Volume 1 ; 1 ; >
     au < manifest ; exists ; 2008 ; Journal of Crohn's and Colitis Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2009 ; Journal of Crohn's and Colitis Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2010 ; Journal of Crohn's and Colitis Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2011 ; Journal of Crohn's and Colitis Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2012 ; Journal of Crohn's and Colitis Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2013 ; Journal of Crohn's and Colitis Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2014 ; Journal of Crohn's and Colitis Volume 8 ; 8 ; >
+    au < testing ; exists ; 2009 ; Journal of Crohn's and Colitis Volume 3 ; 3 ; >
+    au < testing ; exists ; 2010 ; Journal of Crohn's and Colitis Volume 4 ; 4 ; >
+    au < testing ; exists ; 2011 ; Journal of Crohn's and Colitis Volume 5 ; 5 ; >
+    au < testing ; exists ; 2012 ; Journal of Crohn's and Colitis Volume 6 ; 6 ; >
+    au < testing ; exists ; 2013 ; Journal of Crohn's and Colitis Volume 7 ; 7 ; >
+    au < testing ; exists ; 2014 ; Journal of Crohn's and Colitis Volume 8 ; 8 ; >
     
   }
 
