@@ -1,5 +1,5 @@
 /*
- * $Id: ElsevierDTD5XmlSourceMetadataExtractorFactory.java,v 1.1 2014-11-07 23:32:09 alexandraohlson Exp $
+ * $Id: ElsevierDTD5XmlSourceMetadataExtractorFactory.java,v 1.2 2014-11-12 00:08:48 alexandraohlson Exp $
  */
 
 /*
@@ -33,7 +33,6 @@
 package org.lockss.plugin.elsevier;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
@@ -43,8 +42,6 @@ import java.util.regex.Pattern;
 
 import javax.xml.xpath.XPathExpressionException;
 
-import org.apache.commons.io.FilenameUtils;
-import org.apache.commons.lang.StringUtils;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.FileMetadataExtractor;
@@ -68,7 +65,7 @@ public class ElsevierDTD5XmlSourceMetadataExtractorFactory extends SourceXmlMeta
 
   // Used in modifyAMList to identify the name for the current SET of tar files 
   Pattern TOP_METADATA_PATTERN = Pattern.compile("(.*/)[^/]+A\\.tar!/([^/]+)/dataset\\.xml$", Pattern.CASE_INSENSITIVE);
-  
+
   // Use this map to determine which node to use for underlying article schema
   static private final Map<String, String> SchemaMap =
       new HashMap<String,String>();
@@ -76,6 +73,7 @@ public class ElsevierDTD5XmlSourceMetadataExtractorFactory extends SourceXmlMeta
     SchemaMap.put("JA 5.2.0 ARTICLE", "/article/head");
     SchemaMap.put("JA 5.2.0 SIMPLE-ARTICLE", "/simple-article/simple-head"); 
     SchemaMap.put("JA 5.2.0 BOOK-REVIEW", "/book-review/book-review-head");
+    // will need to add support for JA 5.2.0 BOOK, once we have examples
   }
 
   private static SourceXmlSchemaHelper ElsevierDTD5PublishingHelper = null;
@@ -94,7 +92,6 @@ public class ElsevierDTD5XmlSourceMetadataExtractorFactory extends SourceXmlMeta
 
   private static final Pattern XML_PATTERN = Pattern.compile("/(.*)\\.xml$", Pattern.CASE_INSENSITIVE);
   private static final String XML_REPLACEMENT = "/$1.xml";
-  private static final Map<String,String> TarContentsMap = new HashMap<String, String>();
 
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
@@ -104,6 +101,17 @@ public class ElsevierDTD5XmlSourceMetadataExtractorFactory extends SourceXmlMeta
   }
 
   public class ElsevierDTD5XmlSourceMetadataExtractor extends SourceXmlMetadataExtractor {
+
+
+
+    /* 
+     * This must live in the extractor, not the extractor factory
+     * There must be one for each SET of related tar files, not per AU
+     */
+    private final Map<String,String> TarContentsMap;
+    public ElsevierDTD5XmlSourceMetadataExtractor() {
+      TarContentsMap = new HashMap<String, String>();
+    }
 
     /*
      * This version of the method is abstract and must be implemented but should
@@ -144,29 +152,43 @@ public class ElsevierDTD5XmlSourceMetadataExtractorFactory extends SourceXmlMeta
 
       // Use the map created earlier to locate the file from it's relative path
       String full_article_md_file = TarContentsMap.get(thisAM.getRaw(key_for_filename));
-      log.debug3("fule_article_md_file is : " + thisAM.getRaw(key_for_filename));
+      log.debug3("full_article_md_file is : " + thisAM.getRaw(key_for_filename));
+      if (full_article_md_file == null) {
+        return false;
+      }
 
       /*
        * 1. Check for existence of PDF file; otherwise return false & don't emit
        */
-      // create the parallel name for the PDF file
-      String full_base = FilenameUtils.getFullPath(full_article_md_file);
-      CachedUrl fileCu = B_au.makeCachedUrl(full_base + "main.pdf");
-      log.debug3("Check for existence of " + full_base + "main.pdf");
-      if(fileCu != null && (fileCu.hasContent())) {
-        thisAM.put(MetadataField.FIELD_ACCESS_URL, fileCu.getUrl());
-        /* 
-         * 2. Now get remaining metadata from the article xml file 
-         */
-        CachedUrl mdCu = B_au.makeCachedUrl(full_article_md_file);
-        if(mdCu == null || !(mdCu.hasContent())) {
-          log.debug3("No article MD, but emitting anyway");
-          return true; 
+      // pdf file has the same name as the xml file, but with ".pdf" suffix
+
+      CachedUrl fileCu = null;
+      CachedUrl mdCu = null;;
+      try {
+        String full_article_pdf = full_article_md_file.substring(0,full_article_md_file.length() - 3) + "pdf"; 
+        fileCu = B_au.makeCachedUrl(full_article_pdf);
+        log.debug3("Check for existence of " + full_article_pdf);
+        if(fileCu != null && (fileCu.hasContent())) {
+          thisAM.put(MetadataField.FIELD_ACCESS_URL, fileCu.getUrl());
+          /* 
+           * 2. Now get remaining metadata from the article xml file 
+           */
+          mdCu = B_au.makeCachedUrl(full_article_md_file);
+          /*
+           * This is defensive programming. It's not clear how this could happen.
+           * Since we got the full_article_md_file from the map, we know it's in
+           * the AU. So an error here is a sign of a big problem.
+           */
+          if(mdCu == null || !(mdCu.hasContent())) {
+            log.siteWarning("The stored article XML file is no longer accessible");
+            return true; 
+          }
+          extractRemainingMetadata(thisAM, mdCu);
+          return true;
         }
-        extractRemainingMetadata(thisAM, mdCu);
+      } finally {
         AuUtil.safeRelease(fileCu);
         AuUtil.safeRelease(mdCu);
-        return true;
       }
       log.debug3("No pdf file exists associated with this record - don't emit");
       return false; 
@@ -197,7 +219,10 @@ public class ElsevierDTD5XmlSourceMetadataExtractorFactory extends SourceXmlMeta
                 top_node,
                 ElsevierDTD5XmlSchemaHelper.articleLevelMDMap,
                 false).extractMetadata(MetadataTarget.Any(), mdCu);
-        // We should have one and only one AM from this file
+        /*
+         * There should only be ONE top_node per main.xml; don't verify
+         * but just access first one.
+         */
         if (amList.size() > 0) {
           log.debug3("found article level metadata...");
           ArticleMetadata oneAM = amList.get(0);
@@ -238,8 +263,9 @@ public class ElsevierDTD5XmlSourceMetadataExtractorFactory extends SourceXmlMeta
       Matcher mat = TOP_METADATA_PATTERN.matcher(cu.getUrl());
       Pattern ARTICLE_METADATA_PATTERN = null;
       if (mat.matches()) {
-        log.debug3("Iterate and find the pattern: " + mat.group(1) + mat.group(2) + "[A-Z]\\.tar!/" + mat.group(2) + "/.*/main\\.xml$");
-        ARTICLE_METADATA_PATTERN = Pattern.compile(mat.group(1) + mat.group(2) + "[A-Z]\\.tar!/" + mat.group(2) + "/.*/main\\.xml$", Pattern.CASE_INSENSITIVE);
+        String pattern_string = mat.group(1) + mat.group(2) + "[A-Z]\\.tar!/" + mat.group(2) + "/.*/main\\.xml$";
+        log.debug3("Iterate and find the pattern: " + pattern_string);
+        ARTICLE_METADATA_PATTERN = Pattern.compile(pattern_string, Pattern.CASE_INSENSITIVE);
 
         // Now create the map of files to the tarfile they're in
         ArchivalUnit au = cu.getArchivalUnit();
@@ -260,8 +286,8 @@ public class ElsevierDTD5XmlSourceMetadataExtractorFactory extends SourceXmlMeta
           log.debug3("tar map iterator found: " + article_xml_url);
           int tarspot = StringUtil.indexOfIgnoreCase(article_xml_url, ".tar!/");
           int dividespot = StringUtil.indexOfIgnoreCase(article_xml_url, "/", tarspot+6);
-          TarContentsMap.put(StringUtils.substring(article_xml_url,  dividespot + 1), article_xml_url);
-          log.debug3("TarContentsMap add key: " + StringUtils.substring(article_xml_url,dividespot + 1));
+          TarContentsMap.put(article_xml_url.substring(dividespot + 1), article_xml_url);
+          log.debug3("TarContentsMap add key: " + article_xml_url.substring(dividespot + 1));
         }
       } else {
         log.warning("ElsevierDTD5: Unable to create article-level map for " + cu.getUrl() + " - metadata will not include article titles or useful access.urls");

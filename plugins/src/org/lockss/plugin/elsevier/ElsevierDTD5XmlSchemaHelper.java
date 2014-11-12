@@ -1,5 +1,5 @@
 /*
- * $Id: ElsevierDTD5XmlSchemaHelper.java,v 1.1 2014-11-07 23:32:09 alexandraohlson Exp $
+ * $Id: ElsevierDTD5XmlSchemaHelper.java,v 1.2 2014-11-12 00:08:49 alexandraohlson Exp $
  */
 
 /*
@@ -56,16 +56,16 @@ import java.util.*;
  *  2.  We are iterating over only the A tarball, which contains a "dataset.xml" file describing
  *       all the contents for related tarballs
  *  3. We pick up almost all the metadata we need from top dataset.xml but we need to 
- *       open an article level "main.xml" file to get the article title and author info
- *       the dataset.xml will tell us the relative link to the needed main.xml but NOT
+ *       open an article level "main.xml" file to get the article title and author information.
+ *       The dataset.xml will tell us the relative link to the needed main.xml but NOT
  *       which tarball it lives in.
  *       
  *   The approach will be thus
  *       - use the dataset.xml to get the easy-to-get metadata for the delivery
- *       - make a table of <article_no>/main.xml with which tarball each is in
+ *       - make a table of relative_path/main.xml with which absolute tarball location
  *       - post-process the ArticleMetadata record list and open each of the 
  *            needed main.xml files one at a time to get the remaining information
- *            and add it to the AM before emitting.             
+ *            and add it to the AM before cooking and emitting.             
  *  @author alexohlson
  */
 public class ElsevierDTD5XmlSchemaHelper
@@ -92,16 +92,12 @@ implements SourceXmlSchemaHelper {
   private static final String dataset_article_metadata = "files-info/ml/pathname";
   public static final String dataset_dtd_metadata = "files-info/ml/dtd-version";
   private static final String dataset_article_pdf = "files-info/web-pdf/pathname";
-  // and this ones tricky - get the journal title from the closest preceeding journal-info node
+  // get the journal title from the closest preceeding journal-info node
   private static final String dataset_journal_title = "preceding-sibling::journal-issue/journal-issue-properties/collection-title";
   
-  /* These match the equivalent in the mini-schema for article level metadata
-   * found in the MetadataExtractor
-   */
+  /* These are used for article level metadata */
   static public final String common_title = "title";
   static public final String common_author_group = "author-group";
-  
-
   
   static private final NodeValue DATE_VALUE = new NodeValue() {
     @Override
@@ -113,13 +109,6 @@ implements SourceXmlSchemaHelper {
     }
   };
 
-
-  // WHAT WORKS FOR BOOKS and BOOK-SERIES??
-  
-  /*
-   *  The following 3 variables are needed to construct the XPathXmlMetadataParser
-   */
-  
   /* 1.  MAP associating xpath with value type with evaluator */
   static private final Map<String,XPathValue> articleMap = 
       new HashMap<String,XPathValue>();
@@ -127,7 +116,6 @@ implements SourceXmlSchemaHelper {
     articleMap.put(dataset_article_doi, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(dataset_article_issn, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(dataset_article_jid, XmlDomMetadataExtractor.TEXT_VALUE);
-    // write an evaluator later
     articleMap.put(dataset_article_date, DATE_VALUE);
     articleMap.put(dataset_article_metadata, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(dataset_dtd_metadata, XmlDomMetadataExtractor.TEXT_VALUE);
@@ -151,8 +139,8 @@ implements SourceXmlSchemaHelper {
     cookMap.put(dataset_article_issn, MetadataField.FIELD_ISSN);
     cookMap.put(dataset_journal_title, MetadataField.FIELD_PUBLICATION_TITLE);
     cookMap.put(dataset_article_date, MetadataField.FIELD_DATE);
-    // add in the date after we are evaluating it for formatting
-    // the access.url, author information and article title are set in MetadataExtractor
+    // the author information and article title are set in MetadataExtractor
+    // but cooked with the rest
     cookMap.put(common_title, MetadataField.FIELD_ARTICLE_TITLE);
     cookMap.put(common_author_group, 
        new MetadataField(MetadataField.FIELD_AUTHOR, MetadataField.splitAt(AUTHOR_SPLIT_CHAR)));  
@@ -163,7 +151,10 @@ implements SourceXmlSchemaHelper {
  *  the remaining metadata from the article metadata file 
  */
 
-  /* This are used for direct comparison with node-name. Need the "ce:" portion */
+  /* "ce:blah" - the 'ce' portion would not be needed for xpath as it just 
+   * defines a namespace. But since these are used for direct comparison with 
+   * node-name. Need the "ce:" portion 
+   * */
   static public final String authorNodeName = "ce:author";
   static public final String subtitleNodeName = "ce:subtitle";
   static public final String surnameNodeName = "ce:surname";
@@ -216,10 +207,6 @@ static private final NodeValue TITLE_VALUE = new NodeValue() {
 
   /*
    * AUTHOR GROUP
-   */
-  /*
-   * AUTHOR information
-   * 
    * We have to process the entire group at once since the articleMDMap is a hashmap and you only 
    * get the option to put in a value once. Subsequent puts would overwrite the previous
    * author, if you did them one at a time.
@@ -336,6 +323,7 @@ static private final NodeValue TITLE_VALUE = new NodeValue() {
 
   /**
    * The filenames are the same as the XML filenames with .pdf suffix
+   * Use the raw metadata for the article level main.xml
    */
   @Override
   public String getFilenameXPathKey() {

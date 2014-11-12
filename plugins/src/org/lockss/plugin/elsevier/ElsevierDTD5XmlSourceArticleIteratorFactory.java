@@ -1,4 +1,4 @@
-/* $Id: ElsevierDTD5XmlSourceArticleIteratorFactory.java,v 1.1 2014-11-07 23:32:09 alexandraohlson Exp $
+/* $Id: ElsevierDTD5XmlSourceArticleIteratorFactory.java,v 1.2 2014-11-12 00:08:49 alexandraohlson Exp $
 
 Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -28,9 +28,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.elsevier;
 
-import java.util.HashMap;
 import java.util.Iterator;
-import java.util.Map;
 import java.util.regex.*;
 
 import org.lockss.daemon.PluginException;
@@ -50,7 +48,7 @@ public class ElsevierDTD5XmlSourceArticleIteratorFactory
 
   // iterate over the top level "dataset.xml" file that lives in the first (the "A") tar of 
   // any given set of related tarballs
-  //http://content5.lockss.org/sourcefiles/elsevierjats-released/2014/CLKS0000000000003A.tar!/CLKS0000000000003/dataset.xml
+  // BASE_URL/2014/CLKS0000000000003A.tar!/CLKS0000000000003/dataset.xml
   protected static final String TOP_METADATA_PATTERN_TEMPLATE = "\"(%s%d/[^/]+)A\\.tar!/([^/]+)/dataset\\.xml$\",base_url,year";
   
   public static final Pattern XML_PATTERN = Pattern.compile("/(.*)\\.xml$", Pattern.CASE_INSENSITIVE);
