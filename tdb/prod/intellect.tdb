@@ -237,11 +237,12 @@
       param[journal_id] = cost
       param[journal_issn] = 2040-610X
       
-      au < released ; 2010 ; Comedy Studies Volume 1 ; 1 >
-      au < released ; 2011 ; Comedy Studies Volume 2 ; 2 >
-      au < released ; 2012 ; Comedy Studies Volume 3 ; 3 >
-      au < released ; 2013 ; Comedy Studies Volume 4 ; 4 >
-      au < expected ; 2014 ; Comedy Studies Volume 5 ; 5 >
+      comment[moved] = moved to Routledge/T&F
+      
+      au < down ; 2010 ; Comedy Studies Volume 1 ; 1 >
+      au < down ; 2011 ; Comedy Studies Volume 2 ; 2 >
+      au < down ; 2012 ; Comedy Studies Volume 3 ; 3 >
+      au < down ; 2013 ; Comedy Studies Volume 4 ; 4 >
 
     }
 
@@ -273,13 +274,14 @@
       param[journal_id] = cij
       param[journal_issn] = 1751-0694
       
-      au < released ; 2008-2009 ; Creative Industries Journal Volume 1 ; 1 >
-      au < released ; 2009 ; Creative Industries Journal Volume 2 ; 2 >
-      au < released ; 2010-2011 ; Creative Industries Journal Volume 3 ; 3 >
-      au < released ; 2011-2012 ; Creative Industries Journal Volume 4 ; 4 >
-      au < released ; 2012 ; Creative Industries Journal Volume 5 ; 5 >
-      au < released ; 2013 ; Creative Industries Journal Volume 6 ; 6 >
-      au < expected ; 2014 ; Creative Industries Journal Volume 7 ; 7 >
+      comment[moved] = moved to Routledge/T&F.
+      
+      au < down ; 2008-2009 ; Creative Industries Journal Volume 1 ; 1 >
+      au < down ; 2009 ; Creative Industries Journal Volume 2 ; 2 >
+      au < down ; 2010-2011 ; Creative Industries Journal Volume 3 ; 3 >
+      au < down ; 2011-2012 ; Creative Industries Journal Volume 4 ; 4 >
+      au < down ; 2012 ; Creative Industries Journal Volume 5 ; 5 >
+      au < down ; 2013 ; Creative Industries Journal Volume 6 ; 6 >
 
     }
 
@@ -688,18 +690,17 @@
       param[journal_id] = padm
       param[journal_issn] = 1479-4713
       
-      comment[0] = No subscription to volume 1. No manifest pages at all. Moved to Routledge? http://www.ingentaconnect.com/content/1479-4713
+      comment[0] = No manifest pages at all. Moved to Routledge. http://www.ingentaconnect.com/content/1479-4713
 
-      au < released ; 2005 ; International Journal of Performance Arts and Digital Media Volume 1 ; 1 >
-      au < released ; 2006-2007 ; International Journal of Performance Arts and Digital Media Volume 2 ; 2 >
-      au < released ; 2007 ; International Journal of Performance Arts and Digital Media Volume 3 ; 3 >
-      au < released ; 2008 ; International Journal of Performance Arts and Digital Media Volume 4 ; 4 >
-      au < released ; 2009 ; International Journal of Performance Arts and Digital Media Volume 5 ; 5 >
-      au < released ; 2010 ; International Journal of Performance Arts and Digital Media Volume 6 ; 6 >
-      au < released ; 2011 ; International Journal of Performance Arts and Digital Media Volume 7 ; 7 >
-      au < released ; 2012 ; International Journal of Performance Arts and Digital Media Volume 8 ; 8 >
-      au < released ; 2013 ; International Journal of Performance Arts and Digital Media Volume 9 ; 9 >
-      au < expected ; 2014 ; International Journal of Performance Arts and Digital media Volume 10 ; 10 >
+      au < down ; 2005 ; International Journal of Performance Arts and Digital Media Volume 1 ; 1 >
+      au < down ; 2006-2007 ; International Journal of Performance Arts and Digital Media Volume 2 ; 2 >
+      au < down ; 2007 ; International Journal of Performance Arts and Digital Media Volume 3 ; 3 >
+      au < down ; 2008 ; International Journal of Performance Arts and Digital Media Volume 4 ; 4 >
+      au < down ; 2009 ; International Journal of Performance Arts and Digital Media Volume 5 ; 5 >
+      au < down ; 2010 ; International Journal of Performance Arts and Digital Media Volume 6 ; 6 >
+      au < down ; 2011 ; International Journal of Performance Arts and Digital Media Volume 7 ; 7 >
+      au < down ; 2012 ; International Journal of Performance Arts and Digital Media Volume 8 ; 8 >
+      au < down ; 2013 ; International Journal of Performance Arts and Digital Media Volume 9 ; 9 >
 
     }
 
@@ -845,15 +846,16 @@
       >
       param[journal_id] = jcc
       param[journal_issn] = 1750-8061
+      
+      comment[moved] = moved to Routledge/T&F
 
-      au < released ; 2006-2007 ; Journal of Chinese Cinemas Volume 1 ; 1 >
-      au < released ; 2008 ; Journal of Chinese Cinemas Volume 2 ; 2 >
-      au < released ; 2009 ; Journal of Chinese Cinemas Volume 3 ; 3 >
-      au < released ; 2010 ; Journal of Chinese Cinemas Volume 4 ; 4 >
-      au < released ; 2011 ; Journal of Chinese Cinemas Volume 5 ; 5 >
-      au < released ; 2012 ; Journal of Chinese Cinemas Volume 6 ; 6 >
-      au < released ; 2013 ; Journal of Chinese Cinemas Volume 7 ; 7 >
-      au < expected ; 2014 ; Journal of Chinese Cinemas Volume 8 ; 8 >
+      au < down ; 2006-2007 ; Journal of Chinese Cinemas Volume 1 ; 1 >
+      au < down ; 2008 ; Journal of Chinese Cinemas Volume 2 ; 2 >
+      au < down ; 2009 ; Journal of Chinese Cinemas Volume 3 ; 3 >
+      au < down ; 2010 ; Journal of Chinese Cinemas Volume 4 ; 4 >
+      au < down ; 2011 ; Journal of Chinese Cinemas Volume 5 ; 5 >
+      au < down ; 2012 ; Journal of Chinese Cinemas Volume 6 ; 6 >
+      au < down ; 2013 ; Journal of Chinese Cinemas Volume 7 ; 7 >
 
     }
 
@@ -967,13 +969,14 @@
       
       param[journal_id] = jjkc
       param[journal_issn] = 1756-4905
+      
+      comment[moved] = moved to Routledge/T&F
 
-      au < released ; 2009 ; Journal of Japanese and Korean Cinema Volume 1 ; 1 >
-      au < released ; 2010-2011 ; Journal of Japanese and Korean Cinema Volume 2 ; 2 >
-      au < released ; 2012 ; Journal of Japanese and Korean Cinema Volume 3 ; 3 >
-      au < released ; 2012 ; Journal of Japanese and Korean Cinema Volume 4 ; 4 >
-      au < released ; 2013 ; Journal of Japanese and Korean Cinema Volume 5 ; 5 >
-      au < expected ; 2014 ; Journal of Japanese and Korean Cinema Volume 6 ; 6 >
+      au < down ; 2009 ; Journal of Japanese and Korean Cinema Volume 1 ; 1 >
+      au < down ; 2010-2011 ; Journal of Japanese and Korean Cinema Volume 2 ; 2 >
+      au < down ; 2012 ; Journal of Japanese and Korean Cinema Volume 3 ; 3 >
+      au < down ; 2012 ; Journal of Japanese and Korean Cinema Volume 4 ; 4 >
+      au < down ; 2013 ; Journal of Japanese and Korean Cinema Volume 5 ; 5 >
 
     }
 
@@ -987,20 +990,21 @@
       param[journal_id] = jmp
       param[journal_issn] = 1468-2753
 
-      au < released ; 2001-2002 ; Journal of Media Practice Volume 2 ; 2 >
-      au < released ; 2002-2003 ; Journal of Media Practice Volume 3 ; 3 >
-      au < released ; 2003-2004 ; Journal of Media Practice Volume 4 ; 4 >
-      au < released ; 2004 ; Journal of Media Practice Volume 5 ; 5 >
-      au < released ; 2005 ; Journal of Media Practice Volume 6 ; 6 >
-      au < released ; 2006-2007 ; Journal of Media Practice Volume 7 ; 7 >
-      au < released ; 2007 ; Journal of Media Practice Volume 8 ; 8 >
-      au < released ; 2008 ; Journal of Media Practice Volume 9 ; 9 >
-      au < released ; 2009 ; Journal of Media Practice Volume 10 ; 10 >
-      au < released ; 2010 ; Journal of Media Practice Volume 11 ; 11 >
-      au < released ; 2011 ; Journal of Media Practice Volume 12 ; 12 >
-      au < released ; 2012 ; Journal of Media Practice Volume 13 ; 13 >
-      au < released ; 2013 ; Journal of Media Practice Volume 14 ; 14 >
-      au < expected ; 2014 ; Journal of Media Practice Volume 15 ; 15 >
+      comment[0] = No manifest pages at all. Moved to Routledge. http://www.ingentaconnect.com/content/1468-2753
+
+      au < down ; 2001-2002 ; Journal of Media Practice Volume 2 ; 2 >
+      au < down ; 2002-2003 ; Journal of Media Practice Volume 3 ; 3 >
+      au < down ; 2003-2004 ; Journal of Media Practice Volume 4 ; 4 >
+      au < down ; 2004 ; Journal of Media Practice Volume 5 ; 5 >
+      au < down ; 2005 ; Journal of Media Practice Volume 6 ; 6 >
+      au < down ; 2006-2007 ; Journal of Media Practice Volume 7 ; 7 >
+      au < down ; 2007 ; Journal of Media Practice Volume 8 ; 8 >
+      au < down ; 2008 ; Journal of Media Practice Volume 9 ; 9 >
+      au < down ; 2009 ; Journal of Media Practice Volume 10 ; 10 >
+      au < down ; 2010 ; Journal of Media Practice Volume 11 ; 11 >
+      au < down ; 2011 ; Journal of Media Practice Volume 12 ; 12 >
+      au < down ; 2012 ; Journal of Media Practice Volume 13 ; 13 >
+      au < down ; 2013 ; Journal of Media Practice Volume 14 ; 14 >
 
     }
 
@@ -1109,27 +1113,27 @@
 
     {
       title <
-        name = Journal of Visual Art Practice ;
+        name = Journal of Visual Arts Practice ;
         issn = 1470-2029 ;
         eissn = 1758-9185  
       >
       param[journal_id] = jvap
       param[journal_issn] = 1470-2029
       
-      comment[publisher] = Journal moved to T&F.
+      comment[publisher] = Journal moved to Routledge/T&F. Still on Ingenta.
 
-      au < down ; 2001-2002 ; Journal of Visual Art Practice Volume 1 ; 1 >
-      au < down ; 2002-2003 ; Journal of Visual Art Practice Volume 2 ; 2 >
-      au < down ; 2004 ; Journal of Visual Art Practice Volume 3 ; 3 >
-      au < down ; 2005 ; Journal of Visual Art Practice Volume 4 ; 4 >
-      au < down ; 2006 ; Journal of Visual Art Practice Volume 5 ; 5 >
-      au < down ; 2007 ; Journal of Visual Art Practice Volume 6 ; 6 >
-      au < down ; 2008 ; Journal of Visual Art Practice Volume 7 ; 7 >
-      au < down ; 2009 ; Journal of Visual Art Practice Volume 8 ; 8 >
-      au < down ; 2010 ; Journal of Visual Art Practice Volume 9 ; 9 >
-      au < down ; 2011-2012 ; Journal of Visual Art Practice Volume 10 ; 10 >
-      au < down ; 2012 ; Journal of Visual Art Practice Volume 11 ; 11 >
-      au < down ; 2013 ; Journal of Visual Art Practice Volume 12 ; 12 >
+      au < down ; 2001-2002 ; Journal of Visual Arts Practice Volume 1 ; 1 >
+      au < down ; 2002-2003 ; Journal of Visual Arts Practice Volume 2 ; 2 >
+      au < down ; 2004 ; Journal of Visual Arts Practice Volume 3 ; 3 >
+      au < down ; 2005 ; Journal of Visual Arts Practice Volume 4 ; 4 >
+      au < down ; 2006 ; Journal of Visual Arts Practice Volume 5 ; 5 >
+      au < down ; 2007 ; Journal of Visual Arts Practice Volume 6 ; 6 >
+      au < down ; 2008 ; Journal of Visual Arts Practice Volume 7 ; 7 >
+      au < down ; 2009 ; Journal of Visual Arts Practice Volume 8 ; 8 >
+      au < down ; 2010 ; Journal of Visual Arts Practice Volume 9 ; 9 >
+      au < down ; 2011-2012 ; Journal of Visual Arts Practice Volume 10 ; 10 >
+      au < down ; 2012 ; Journal of Visual Arts Practice Volume 11 ; 11 >
+      au < down ; 2013 ; Journal of Visual Arts Practice Volume 12 ; 12 >
 
     }
             
@@ -1476,16 +1480,15 @@
       param[journal_id] = sac
       param[journal_issn] = 1750-3175
       
-      comment[publisher] = journal moved to Routledge? No subscription for us. http://www.ingentaconnect.com/content/1750-3175
+      comment[publisher] = journal moved to Routledge. http://www.ingentaconnect.com/content/1750-3175
     
-      au < released ; 2007 ; Studies in Australasian Cinema Volume 1 ; 1 >
-      au < released ; 2008 ; Studies in Australasian Cinema Volume 2 ; 2 >
-      au < released ; 2009 ; Studies in Australasian Cinema Volume 3 ; 3 >
-      au < released ; 2010 ; Studies in Australasian Cinema Volume 4 ; 4 >
-      au < released ; 2011 ; Studies in Australasian Cinema Volume 5 ; 5 >
-      au < released ; 2012 ; Studies in Australasian Cinema Volume 6 ; 6 >
-      au < released ; 2013 ; Studies in Australasian Cinema Volume 7 ; 7 >
-      au < expected ; 2014 ; Studies in Australasian Cinema Volume 8 ; 8 >
+      au < down ; 2007 ; Studies in Australasian Cinema Volume 1 ; 1 >
+      au < down ; 2008 ; Studies in Australasian Cinema Volume 2 ; 2 >
+      au < down ; 2009 ; Studies in Australasian Cinema Volume 3 ; 3 >
+      au < down ; 2010 ; Studies in Australasian Cinema Volume 4 ; 4 >
+      au < down ; 2011 ; Studies in Australasian Cinema Volume 5 ; 5 >
+      au < down ; 2012 ; Studies in Australasian Cinema Volume 6 ; 6 >
+      au < down ; 2013 ; Studies in Australasian Cinema Volume 7 ; 7 >
 
     }
 
@@ -1515,15 +1518,16 @@
 
       param[journal_id] = sdf
       param[journal_issn] = 1750-3280
+      
+      comment[moved] = Moved to Routledge/T&F. 
     
-      au < released ; 2007 ; Studies in Documentary Film Volume 1 ; 1 >
-      au < released ; 2008 ; Studies in Documentary Film Volume 2 ; 2 >
-      au < released ; 2009 ; Studies in Documentary Film Volume 3 ; 3 >
-      au < released ; 2010 ; Studies in Documentary Film Volume 4 ; 4 >
-      au < released ; 2011 ; Studies in Documentary Film Volume 5 ; 5 >
-      au < released ; 2012 ; Studies in Documentary Film Volume 6 ; 6 >
-      au < released ; 2013 ; Studies in Documentary Film Volume 7 ; 7 >
-      au < expected ; 2014 ; Studies in Documentary Film Volume 8 ; 8 >
+      au < down ; 2007 ; Studies in Documentary Film Volume 1 ; 1 >
+      au < down ; 2008 ; Studies in Documentary Film Volume 2 ; 2 >
+      au < down ; 2009 ; Studies in Documentary Film Volume 3 ; 3 >
+      au < down ; 2010 ; Studies in Documentary Film Volume 4 ; 4 >
+      au < down ; 2011 ; Studies in Documentary Film Volume 5 ; 5 >
+      au < down ; 2012 ; Studies in Documentary Film Volume 6 ; 6 >
+      au < down ; 2013 ; Studies in Documentary Film Volume 7 ; 7 >
 
     }
 
@@ -1536,12 +1540,13 @@
 
       param[journal_id] = seec
       param[journal_issn] = 2040-350X
+      
+      comment[moved] = moved to Routledge/T&F
     
-      au < released ; 2010 ; Studies in Eastern European Cinema Volume 1 ; 1 >
-      au < released ; 2011 ; Studies in Eastern European Cinema Volume 2 ; 2 >
-      au < released ; 2012 ; Studies in Eastern European Cinema Volume 3 ; 3 >
-      au < released ; 2013 ; Studies in Eastern European Cinema Volume 4 ; 4 >
-      au < expected ; 2014 ; Studies in Eastern European Cinema Volume 5 ; 5 >
+      au < down ; 2010 ; Studies in Eastern European Cinema Volume 1 ; 1 >
+      au < down ; 2011 ; Studies in Eastern European Cinema Volume 2 ; 2 >
+      au < down ; 2012 ; Studies in Eastern European Cinema Volume 3 ; 3 >
+      au < down ; 2013 ; Studies in Eastern European Cinema Volume 4 ; 4 >
 
     }
 
@@ -1554,18 +1559,19 @@
 
       param[journal_id] = sec
       param[journal_issn] = 1741-1548
+      
+      comment[moved] = Moved to Routledge/T&F.
     
-      au < released ; 2004 ; Studies in European Cinema Volume 1 ; 1 >
-      au < released ; 2005 ; Studies in European Cinema Volume 2 ; 2 >
-      au < released ; 2006-2007 ; Studies in European Cinema Volume 3 ; 3 >
-      au < released ; 2007 ; Studies in European Cinema Volume 4 ; 4 >
-      au < released ; 2008-2009 ; Studies in European Cinema Volume 5 ; 5 >
-      au < released ; 2009 ; Studies in European Cinema Volume 6 ; 6 >
-      au < released ; 2010 ; Studies in European Cinema Volume 7 ; 7 >
-      au < released ; 2011-2012 ; Studies in European Cinema Volume 8 ; 8 >
-      au < released ; 2012 ; Studies in European Cinema Volume 9 ; 9 >
-      au < released ; 2013 ; Studies in European Cinema Volume 10 ; 10 >
-      au < expected ; 2014 ; Studies in European Cinema Volume 11 ; 11 >
+      au < down ; 2004 ; Studies in European Cinema Volume 1 ; 1 >
+      au < down ; 2005 ; Studies in European Cinema Volume 2 ; 2 >
+      au < down ; 2006-2007 ; Studies in European Cinema Volume 3 ; 3 >
+      au < down ; 2007 ; Studies in European Cinema Volume 4 ; 4 >
+      au < down ; 2008-2009 ; Studies in European Cinema Volume 5 ; 5 >
+      au < down ; 2009 ; Studies in European Cinema Volume 6 ; 6 >
+      au < down ; 2010 ; Studies in European Cinema Volume 7 ; 7 >
+      au < down ; 2011-2012 ; Studies in European Cinema Volume 8 ; 8 >
+      au < down ; 2012 ; Studies in European Cinema Volume 9 ; 9 >
+      au < down ; 2013 ; Studies in European Cinema Volume 10 ; 10 >
 
     }
 
@@ -1576,25 +1582,24 @@
         eissn = 1758-9517
       >
 
-      comment[publisher] = still on Ingenta, but moved to Routledge. No manifest pages. http://www.ingentaconnect.com/content/1471-5880
+      comment[publisher] = Moved to Routledge. No manifest pages. http://www.ingentaconnect.com/content/1471-5880
 
       param[journal_id] = sfc
       param[journal_issn] = 1471-5880
     
-      au < released ; 2001 ; Studies in French Cinema Volume 1 ; 1 >
-      au < released ; 2002 ; Studies in French Cinema Volume 2 ; 2 >
-      au < released ; 2003 ; Studies in French Cinema Volume 3 ; 3 >
-      au < released ; 2004 ; Studies in French Cinema Volume 4 ; 4 >
-      au < released ; 2005 ; Studies in French Cinema Volume 5 ; 5 >
-      au < released ; 2006 ; Studies in French Cinema Volume 6 ; 6 >
-      au < released ; 2007 ; Studies in French Cinema Volume 7 ; 7 >
-      au < released ; 2008 ; Studies in French Cinema Volume 8 ; 8 >
-      au < released ; 2009 ; Studies in French Cinema Volume 9 ; 9 >
-      au < released ; 2010 ; Studies in French Cinema Volume 10 ; 10 >
-      au < released ; 2011 ; Studies in French Cinema Volume 11 ; 11 >
-      au < released ; 2012 ; Studies in French Cinema Volume 12 ; 12 >
-      au < released ; 2013 ; Studies in French Cinema Volume 13 ; 13 >
-      au < expected ; 2014 ; Studies in French Cinema Volume 14 ; 14 >
+      au < down ; 2001 ; Studies in French Cinema Volume 1 ; 1 >
+      au < down ; 2002 ; Studies in French Cinema Volume 2 ; 2 >
+      au < down ; 2003 ; Studies in French Cinema Volume 3 ; 3 >
+      au < down ; 2004 ; Studies in French Cinema Volume 4 ; 4 >
+      au < down ; 2005 ; Studies in French Cinema Volume 5 ; 5 >
+      au < down ; 2006 ; Studies in French Cinema Volume 6 ; 6 >
+      au < down ; 2007 ; Studies in French Cinema Volume 7 ; 7 >
+      au < down ; 2008 ; Studies in French Cinema Volume 8 ; 8 >
+      au < down ; 2009 ; Studies in French Cinema Volume 9 ; 9 >
+      au < down ; 2010 ; Studies in French Cinema Volume 10 ; 10 >
+      au < down ; 2011 ; Studies in French Cinema Volume 11 ; 11 >
+      au < down ; 2012 ; Studies in French Cinema Volume 12 ; 12 >
+      au < down ; 2013 ; Studies in French Cinema Volume 13 ; 13 >
 
     }
 
@@ -1653,16 +1658,15 @@
       param[journal_id] = srcs
       param[journal_issn] = 1750-3132
       
-      comment[publisher] = journal is still on Ingenta, but moved to Routledge, and we don't have a subscription.
+      comment[publisher] = moved to Routledge, but still on Ingenta.
       
-      au < released ; 2007 ; Studies in Russian and Soviet Cinema Volume 1 ; 1 >
-      au < released ; 2008 ; Studies in Russian and Soviet Cinema Volume 2 ; 2 >
-      au < released ; 2009 ; Studies in Russian and Soviet Cinema Volume 3 ; 3 >
-      au < released ; 2010 ; Studies in Russian and Soviet Cinema Volume 4 ; 4 >
-      au < released ; 2011-2012 ; Studies in Russian and Soviet Cinema Volume 5 ; 5 >
-      au < released ; 2012 ; Studies in Russian and Soviet Cinema Volume 6 ; 6 >
-      au < released ; 2013 ; Studies in Russian and Soviet Cinema Volume 7 ; 7 >
-      au < expected ; 2014 ; Studies in Russian and Soviet Cinema Volume 8 ; 8 >
+      au < down ; 2007 ; Studies in Russian and Soviet Cinema Volume 1 ; 1 >
+      au < down ; 2008 ; Studies in Russian and Soviet Cinema Volume 2 ; 2 >
+      au < down ; 2009 ; Studies in Russian and Soviet Cinema Volume 3 ; 3 >
+      au < down ; 2010 ; Studies in Russian and Soviet Cinema Volume 4 ; 4 >
+      au < down ; 2011-2012 ; Studies in Russian and Soviet Cinema Volume 5 ; 5 >
+      au < down ; 2012 ; Studies in Russian and Soviet Cinema Volume 6 ; 6 >
+      au < down ; 2013 ; Studies in Russian and Soviet Cinema Volume 7 ; 7 >
 
     }
 
@@ -1693,7 +1697,7 @@
       param[journal_id] = stp
       param[journal_issn] = 1468-2761
       
-      comment[moved] = journal moved to Taylor and Francis.
+      comment[moved] = journal moved to Routledge/Taylor and Francis.
     
       au < down ; 2001-2002 ; Studies in Theatre and Performance Volume 21 ; 21 >
       au < down ; 2002-2003 ; Studies in Theatre and Performance Volume 22 ; 22 >
@@ -1748,11 +1752,10 @@
       
       comment[publisher] = moved to Routledge. No subscription. http://www.ingentaconnect.com/content/2040-3526
       
-      au < released ; 2010 ; Transnational Cinemas Volume 1 ; 1 >
-      au < released ; 2011-2012 ; Transnational Cinemas Volume 2 ; 2 >
-      au < released ; 2012 ; Transnational Cinemas Volume 3 ; 3 >
-      au < released ; 2013 ; Transnational Cinemas Volume 4 ; 4 >
-      au < expected ; 2014 ; Transnational Cinemas Volume 5 ; 5 >
+      au < down ; 2010 ; Transnational Cinemas Volume 1 ; 1 >
+      au < down ; 2011-2012 ; Transnational Cinemas Volume 2 ; 2 >
+      au < down ; 2012 ; Transnational Cinemas Volume 3 ; 3 >
+      au < down ; 2013 ; Transnational Cinemas Volume 4 ; 4 >
 
     }
 
