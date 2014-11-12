@@ -1,7 +1,7 @@
 <map>
   <entry>
    <string>plugin_status</string>
-   <string>testing - Evan/Collin</string>
+   <string>ready</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>8</string>
+    <string>9</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>7</string>
+        <string>8</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -196,8 +196,9 @@
     <long>6000</long>
   </entry>
   <entry>
-    <string>au_crawl_depth</string>
-    <int>2</int>
+    <!-- manifest to volume to issue to articles -->
+    <string>au_refetch_depth</string>
+    <int>3</int>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
