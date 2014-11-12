@@ -130,7 +130,7 @@
 
       param[base_url] = http://cancerres.aacrjournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-      comment[notReady] = crawl depth exceeded.
+      comment[notReady] = crawl depth exceeded. Retested 2014 nov
 
       au < HighWirePressPlugin ; down ; 1941 ; Cancer Research Volume 1 ; 1 >
       au < HighWirePressPlugin ; down ; 1942 ; Cancer Research Volume 2 ; 2 >
