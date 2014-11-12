@@ -1,5 +1,5 @@
 /*
- * $Id: TdbQueryBuilder.java,v 1.6 2014-11-06 01:30:15 thib_gc Exp $
+ * $Id: TdbQueryBuilder.java,v 1.7 2014-11-12 00:15:40 thib_gc Exp $
  */
 
 /*
@@ -46,15 +46,16 @@ import org.lockss.tdb.TdbQueryParser.*;
 /**
  * <p>
  * A module to parse TDB queries, based on the ANTLR-generated
- * <code>TdbQueryLexer.g4</code> and <code>TdbQueryParser.g4</code> grammars. 
+ * <code>TdbQueryLexer.g4</code> and <code>TdbQueryParser.g4</code> grammars.
  * </p>
  * <p>
  * If options created by {@link #addOptions(Options)} are requested on the
- * command line processed by {@link #processCommandLine(Map, CommandLine)},
+ * command line processed by
+ * {@link #processCommandLine(Map, CommandLineAccessor)},
  * {@link #getAuPredicate(Map)} will return a predicate that selects AUs based
- * on criteria supplied by the client. If no options relevant to this module
- * are requested, the returned predicate will always return <code>true</code>
- * (i.e. the return value will never be <code>null</code>).
+ * on criteria supplied by the client. If no options relevant to this module are
+ * requested, the returned predicate will always return <code>true</code> (i.e.
+ * the return value will never be <code>null</code>).
  * </p>
  * <p>
  * <i>This class does not depend on class files found in the daemon's JAR
@@ -1122,17 +1123,17 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
   
   /**
    * <p>
-   * Processes a Commons CLI {@link CommandLine} instance and stores appropriate
+   * Processes a {@link CommandLineAccessor} instance and stores appropriate
    * information in the given options map.
    * </p>
    * 
    * @param options
    *          An options map.
    * @param cmd
-   *          A Commons CLI {@link CommandLine} instance.
+   *          A {@link CommandLineAccessor} instance.
    * @since 1.67
    */
-  public void processCommandLine(Map<String, Object> map, CommandLine cmd) {
+  public void processCommandLine(Map<String, Object> options, CommandLineAccessor cmd) {
     // Parse primary query into predicate
     Predicate<Au> queryPredicate = null;
     if (cmd.hasOption(KEY_QUERY)) {
@@ -1274,7 +1275,7 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
     if (predicate == null) {
       predicate = new TruePredicate<Au>();
     }
-    map.put(KEY_QUERY, predicate);
+    options.put(KEY_QUERY, predicate);
   }
   
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: OutputOption.java,v 1.5 2014-10-23 22:51:15 thib_gc Exp $
+ * $Id: OutputOption.java,v 1.6 2014-11-12 00:15:41 thib_gc Exp $
  */
 
 /*
@@ -43,7 +43,8 @@ import org.apache.commons.cli.*;
  * </p>
  * <p>
  * If the output option created by {@link #addOptions(Options)} is requested on
- * the command line processed by {@link #processCommandLine(Map, CommandLine)},
+ * the command line processed by
+ * {@link #processCommandLine(Map, CommandLineAccessor)},
  * {@link #getOutput(Map)} will return an open {@link PrintStream} into which
  * output should be written. If the output option is not requested or if the
  * file name used is <code>"-"</code>, this is a wrapper for {@link System#out}
@@ -132,18 +133,18 @@ public class OutputOption {
 
   /**
    * <p>
-   * Processes a Commons CLI {@link CommandLine} instance and stores appropriate
+   * Processes a {@link CommandLineAccessor} instance and stores appropriate
    * information in the given options map.
    * </p>
    * 
    * @param options
    *          An options map.
    * @param cmd
-   *          A Commons CLI {@link CommandLine} instance.
+   *          A {@link CommandLineAccessor} instance.
    * @since 1.67
    */
   public static void processCommandLine(Map<String, Object> options,
-                                        CommandLine cmd) {
+                                        CommandLineAccessor cmd) {
     options.put(KEY_OUTPUT_REQUESTED, Boolean.valueOf(cmd.hasOption(KEY_OUTPUT)));
     String f = cmd.getOptionValue(KEY_OUTPUT);
     if (f == null || "-".equals(f)) {

@@ -1,5 +1,5 @@
 /*
- * $Id: Publisher.java,v 1.1 2014-09-03 20:35:58 thib_gc Exp $
+ * $Id: Publisher.java,v 1.2 2014-11-12 00:15:41 thib_gc Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.tdb;
 
-import java.util.Map;
+import java.util.*;
 
 /**
  * <p>
@@ -43,6 +43,17 @@ import java.util.Map;
  * @since 1.67
  */
 public class Publisher {
+  
+  /**
+   * <p>
+   * Makes a new publisher instance (useful for tests).
+   * </p>
+   * 
+   * @since 1.67
+   */
+  protected Publisher() {
+    this(new HashMap<String, String>());
+  }
   
   /**
    * <p>

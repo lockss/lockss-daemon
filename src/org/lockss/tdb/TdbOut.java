@@ -1,5 +1,5 @@
 /*
- * $Id: TdbOut.java,v 1.6 2014-10-20 23:19:01 thib_gc Exp $
+ * $Id: TdbOut.java,v 1.7 2014-11-12 00:15:41 thib_gc Exp $
  */
 
 /*
@@ -483,17 +483,18 @@ public class TdbOut {
   
   /**
    * <p>
-   * Processes a Commons CLI {@link CommandLine} instance and stores appropriate
+   * Processes a {@link CommandLineAccessor} instance and stores appropriate
    * information in the given options map.
    * </p>
    * 
    * @param options
    *          An options map.
    * @param cmd
-   *          A Commons CLI {@link CommandLine} instance.
+   *          A {@link CommandLineAccessor} instance.
    * @since 1.67
    */
-  public Map<String, Object> processCommandLine(CommandLine cmd, Map<String, Object> options) {
+  public Map<String, Object> processCommandLine(CommandLineAccessor cmd,
+                                                Map<String, Object> options) {
     // Options from other modules
     VerboseOption.processCommandLine(options, cmd);
     KeepGoingOption.processCommandLine(options, cmd);
@@ -726,7 +727,7 @@ public class TdbOut {
    *           if an I/O error occurs.
    * @since 1.67
    */
-  public void run(CommandLine cmd) throws IOException {
+  public void run(CommandLineAccessor cmd) throws IOException {
     Map<String, Object> options = new HashMap<String, Object>();
     processCommandLine(cmd, options);
     Tdb tdb = processFiles(options);
@@ -752,26 +753,27 @@ public class TdbOut {
     AppUtil.fixMainArgsForCommonsCli(mainArgs);
     Options options = new Options();
     addOptions(options);
-    CommandLine cmd = new PosixParser().parse(options, mainArgs);
+    CommandLine clicmd = new PosixParser().parse(options, mainArgs);
+    CommandLineAccessor cmd = new CommandLineAdapter(clicmd);
     HelpOption.processCommandLine(cmd, options, getClass());
     run(cmd);
   }
   
   /**
    * <p>
-   * Counts how many of the strings in a given set appear in a Commons CLI
-   * {@link Options} instance.
+   * Counts how many of the strings in a given set appear in a
+   * {@link CommandLineAccessor} instance.
    * </p>
    * 
    * @param cmd
-   *          A Commons CLI {@link Options} instance.
+   *          A {@link CommandLineAccessor} instance.
    * @param optionStrings
    *          The set of strings to be counted in the options.
    * @return The number of strings from the set that appeared on the command
    *         line.
    * @since 1.67
    */
-  protected static int count(CommandLine cmd, List<String> optionStrings) {
+  protected static int count(CommandLineAccessor cmd, List<String> optionStrings) {
     int c = 0;
     for (String optionString : optionStrings) {
       if (cmd.hasOption(optionString)) {

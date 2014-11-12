@@ -1,5 +1,5 @@
 /*
- * $Id: InputOption.java,v 1.3 2014-09-09 19:44:54 thib_gc Exp $
+ * $Id: InputOption.java,v 1.4 2014-11-12 00:15:41 thib_gc Exp $
  */
 
 /*
@@ -42,14 +42,15 @@ import org.apache.commons.cli.*;
  * </p>
  * <p>
  * If the input option created by {@link #addOptions(Options)} is requested on
- * the command line processed by {@link #processCommandLine(Map, CommandLine)},
- * {@link #getInput(Map)} will return a list of strings representing files from
- * which input should be read. If the input option itself is used, the list will
- * contain its argument as the only element, otherwise the list will contain one
- * or more arguments from the invoking program's command line. It is an error if
- * no input file are specified or if input files are specified both via the
- * input option and arguments to the invoking program. To request input from
- * {@link System#in}, use <code>"-"</code> as a file name.
+ * the command line processed by
+ * {@link #processCommandLine(Map, CommandLineAccessor)}, {@link #getInput(Map)}
+ * will return a list of strings representing files from which input should be
+ * read. If the input option itself is used, the list will contain its argument
+ * as the only element, otherwise the list will contain one or more arguments
+ * from the invoking program's command line. It is an error if no input file are
+ * specified or if input files are specified both via the input option and
+ * arguments to the invoking program. To request input from {@link System#in},
+ * use <code>"-"</code> as a file name.
  * </p>
  * 
  * @author Thib Guicherd-Callin
@@ -125,18 +126,18 @@ public class InputOption {
 
   /**
    * <p>
-   * Processes a Commons CLI {@link CommandLine} instance and stores appropriate
+   * Processes a {@link CommandLineAccessor} instance and stores appropriate
    * information in the given options map.
    * </p>
    * 
    * @param options
    *          An options map.
    * @param cmd
-   *          A Commons CLI {@link CommandLine} instance.
+   *          A {@link CommandLineAccessor} instance.
    * @since 1.67
    */
   public static void processCommandLine(Map<String, Object> options,
-                                        CommandLine cmd) {
+                                        CommandLineAccessor cmd) {
     String[] args = cmd.getArgs();
     if (cmd.hasOption(KEY_INPUT) && args.length > 0) {
       AppUtil.error("--%s cannot be used with a list of input files", KEY_INPUT);

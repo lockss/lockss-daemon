@@ -1,5 +1,5 @@
 /*
- * $Id: HelpOption.java,v 1.1 2014-09-03 20:35:58 thib_gc Exp $
+ * $Id: HelpOption.java,v 1.2 2014-11-12 00:15:40 thib_gc Exp $
  */
 
 /*
@@ -42,9 +42,10 @@ import org.apache.commons.cli.*;
  * </p>
  * <p>
  * If the help option created by {@link #addOptions(Options)} is requested on
- * the command line, {@link #processCommandLine(CommandLine, Options, Class)}
- * will display a usage and help message to {@link System#out} <b>and then will
- * exit with {@link System#exit(int)}</b>.
+ * the command line,
+ * {@link #processCommandLine(CommandLineAccessor, Options, Class)} will display
+ * a usage and help message to {@link System#out} <b>and then will exit with
+ * {@link System#exit(int)}</b>.
  * </p>
  * 
  * @author Thib Guicherd-Callin
@@ -114,14 +115,14 @@ public class HelpOption {
    * </p>
    * 
    * @param cmd
-   *          A Commons CLI {@link CommandLine} instance.
+   *          A {@link CommandLineAccessor} instance.
    * @param options
    *          A Commons CLI {@link Options} instance (not an options map).
    * @param clazz
    *          The {@link Class} instance of the program with a main method.
    * @since 1.67
    */
-  public static void processCommandLine(CommandLine cmd,
+  public static void processCommandLine(CommandLineAccessor cmd,
                                         Options options,
                                         Class<?> clazz) {
     if (cmd.hasOption(KEY_HELP)) {

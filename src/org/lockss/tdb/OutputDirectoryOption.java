@@ -1,5 +1,5 @@
 /*
- * $Id: OutputDirectoryOption.java,v 1.1 2014-10-17 22:14:57 thib_gc Exp $
+ * $Id: OutputDirectoryOption.java,v 1.2 2014-11-12 00:15:41 thib_gc Exp $
  */
 
 /*
@@ -44,10 +44,11 @@ import org.apache.commons.cli.*;
  * <p>
  * If the directory output option created by {@link #addOptions(Options)} is
  * requested on the command line processed by
- * {@link #processCommandLine(Map, CommandLine)}, {@link #isMultipleOutput(Map)}
- * will return true and {@link #getMultipleOutput(Map, String, String)} will
- * return an open {@link PrintStream} into which output should be written for
- * the given input file.
+ * {@link #processCommandLine(Map, CommandLineAccessor)},
+ * {@link #isMultipleOutput(Map)} will return true and
+ * {@link #getMultipleOutput(Map, String, String)} will return an open
+ * {@link PrintStream} into which output should be written for the given input
+ * file.
  * </p>
  * 
  * @author Thib Guicherd-Callin
@@ -103,18 +104,18 @@ public class OutputDirectoryOption {
 
   /**
    * <p>
-   * Processes a Commons CLI {@link CommandLine} instance and stores appropriate
+   * Processes a {@link CommandLineAccessor} instance and stores appropriate
    * information in the given options map.
    * </p>
    * 
    * @param options
    *          An options map.
    * @param cmd
-   *          A Commons CLI {@link CommandLine} instance.
+   *          A {@link CommandLineAccessor} instance.
    * @since 1.67
    */
   public static void processCommandLine(Map<String, Object> options,
-                                        CommandLine cmd) {
+                                        CommandLineAccessor cmd) {
     if (cmd.hasOption(KEY_OUTPUT_DIRECTORY)) {
       File dir = new File(cmd.getOptionValue(KEY_OUTPUT_DIRECTORY));
       if (!dir.exists()) {

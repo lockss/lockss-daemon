@@ -1,5 +1,5 @@
 /*
- * $Id: Au.java,v 1.5 2014-10-29 20:35:36 thib_gc Exp $
+ * $Id: Au.java,v 1.6 2014-11-12 00:15:41 thib_gc Exp $
  */
 
 /*
@@ -47,10 +47,26 @@ import org.lockss.util.*;
  */
 public class Au {
 
+  /**
+   * <p>
+   * Make a new root AU instance.
+   * </p>
+   * 
+   * @since 1.67 
+   */
   public Au() {
     // Intentionally left blank
   }
-  
+
+  /**
+   * <p>
+   * Makes a new AU instance based on the given AU instance.
+   * </p>
+   * 
+   * @param other
+   *          An existing AU instance.
+   * @since 1.67
+   */
   public Au(Au other) {
     this.eisbn = other.eisbn;
     this.implicit = other.implicit;
@@ -74,8 +90,33 @@ public class Au {
     }
   }
   
+  /**
+   * <p>
+   * Makes a new AU instance with the given parent title based on the given AU
+   * instance.
+   * </p>
+   * 
+   * @param title
+   *          A parent title.
+   * @param other
+   *          An existing AU instance.
+   * @since 1.67
+   */
   public Au(Title title, Au other) {
     this(other);
+    this.title = title;
+  }
+  
+  /**
+   * <p>
+   * Makes a new AU instance with the given parent title (useful for tests).
+   * </p>
+   * 
+   * @param title
+   *          A parent title.
+   * @since 1.67
+   */
+  protected Au(Title title) {
     this.title = title;
   }
   
@@ -174,7 +215,11 @@ public class Au {
         }
       } break;
       case 'e': {
-        if (EISBN.equals(key)) {
+        if (EDITION.equals(key)) {
+          edition = value;
+          return;
+        }
+        else if (EISBN.equals(key)) {
           eisbn = value;
           return;
         }
@@ -329,7 +374,9 @@ public class Au {
     if (auid == null) {
       String plugin = getPlugin();
       Map<String, String> params = getParams();
-      auid = PluginManager.generateAuId(plugin, PropUtil.propsToCanonicalEncodedString(params));
+      if (plugin != null && params != null && params.size() > 0) {
+        auid = PluginManager.generateAuId(plugin, PropUtil.propsToCanonicalEncodedString(params));
+      }
     }
     return auid;
   }
@@ -354,24 +401,36 @@ public class Au {
   public String getAuidPlus() {
     if (auidplus == null) {
       String auid = getAuid();
-      Map<String, String> nondefParams = getNondefParams();
-      if (nondefParams == null || nondefParams.size() == 0) {
-        auidplus = auid;
-      }
-      else {
-        StringBuilder sb = new StringBuilder(auid);
-        boolean first = true;
-        for (Map.Entry<String, String> param : nondefParams.entrySet()) {
-          sb.append(first ? "@@@NONDEF@@@" : "&");
-          sb.append(PropKeyEncoder.encode(param.getKey()));
-          sb.append("~");
-          sb.append(PropKeyEncoder.encode(param.getValue()));
+      if (auid != null) {
+        Map<String, String> nondefParams = getNondefParams();
+        if (nondefParams == null || nondefParams.size() == 0) {
+          auidplus = auid;
         }
-        auidplus = sb.toString();
+        else {
+          StringBuilder sb = new StringBuilder(auid);
+          boolean first = true;
+          for (String nondefkey : new TreeSet<String>(nondefParams.keySet())) {
+            sb.append(first ? "@@@NONDEF@@@" : "&");
+            sb.append(PropKeyEncoder.encode(nondefkey));
+            sb.append("~");
+            sb.append(PropKeyEncoder.encode(nondefParams.get(nondefkey)));
+            first = false;
+          }
+          auidplus = sb.toString();
+        }
       }
     }
     return auidplus;
   }
+  
+  /**
+   * <p>
+   * The AU's edition (key).
+   * </p>
+   * 
+   * @since 1.67
+   */
+  protected static final String EDITION = "edition";
   
   /**
    * <p>
@@ -899,6 +958,34 @@ public class Au {
    */
   public static final String STATUS_ZAPPED = "zapped";
 
+  /**
+   * <p>
+   * An unmodifiable list of the "standard" AU statuses.
+   * </p>
+   * 
+   * @since 1.67
+   */
+  public static final List<String> STATUSES = AppUtil.ul(STATUS_DOES_NOT_EXIST,
+                                                         STATUS_DO_NOT_PROCESS,
+                                                         STATUS_EXISTS,
+                                                         STATUS_EXPECTED,
+                                                         STATUS_MANIFEST,
+                                                         STATUS_WANTED,
+                                                         STATUS_TESTING,
+                                                         STATUS_NOT_READY,
+                                                         STATUS_READY,
+                                                         STATUS_READY_SOURCE,
+                                                         STATUS_CRAWLING,
+                                                         STATUS_DEEP_CRAWL,
+                                                         STATUS_FROZEN,
+                                                         STATUS_ING_NOT_READY,
+                                                         STATUS_FINISHED,
+                                                         STATUS_RELEASING,
+                                                         STATUS_RELEASED,
+                                                         STATUS_DOWN,
+                                                         STATUS_SUPERSEDED,
+                                                         STATUS_ZAPPED);
+  
   /**
    * <p>
    * Retrieves the AU's status.

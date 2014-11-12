@@ -1,5 +1,5 @@
 /*
- * $Id: TdbXml.java,v 1.6 2014-10-29 20:22:31 thib_gc Exp $
+ * $Id: TdbXml.java,v 1.7 2014-11-12 00:15:41 thib_gc Exp $
  */
 
 /*
@@ -265,7 +265,7 @@ public class TdbXml {
 
   /**
    * <p>
-   * Processes a Commons CLI {@link CommandLine} instance and stores appropriate
+   * Processes a {@link CommandLineAccessor} instance and stores appropriate
    * information in the given options map.
    * </p>
    * 
@@ -276,7 +276,7 @@ public class TdbXml {
    * @since 1.67
    */
   public Map<String, Object> processCommandLine(Map<String, Object> options,
-                                                CommandLine cmd) {
+                                                CommandLineAccessor cmd) {
     // Options from other modules
     VerboseOption.processCommandLine(options, cmd);
     KeepGoingOption.processCommandLine(options, cmd);
@@ -731,7 +731,7 @@ public class TdbXml {
    *           if an I/O error occurs.
    * @since 1.67
    */
-  public void run(CommandLine cmd) throws IOException {
+  public void run(CommandLineAccessor cmd) throws IOException {
     Map<String, Object> options = new HashMap<String, Object>();
     processCommandLine(options, cmd);
     if (OutputDirectoryOption.isMultipleOutput(options)) {
@@ -756,7 +756,8 @@ public class TdbXml {
     AppUtil.fixMainArgsForCommonsCli(mainArgs);
     Options options = new Options();
     addOptions(options);
-    CommandLine cmd = new PosixParser().parse(options, mainArgs);
+    CommandLine clicmd = new PosixParser().parse(options, mainArgs);
+    CommandLineAccessor cmd = new CommandLineAdapter(clicmd);
     HelpOption.processCommandLine(cmd, options, getClass());
     run(cmd);
   }

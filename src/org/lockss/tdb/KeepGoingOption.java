@@ -1,5 +1,5 @@
 /*
- * $Id: KeepGoingOption.java,v 1.1 2014-09-09 19:44:54 thib_gc Exp $
+ * $Id: KeepGoingOption.java,v 1.2 2014-11-12 00:15:41 thib_gc Exp $
  */
 
 /*
@@ -43,9 +43,10 @@ import org.apache.commons.cli.*;
  * <p>
  * If the keep-going option created by {@link #addOptions(Options)} is requested
  * on the command line processed by
- * {@link #processCommandLine(Map, CommandLine)}, {@link #isKeepGoing(Map)} will
- * return <code>true</code> to indicate it; one can then add errors to the list
- * of errors via {@link #addError(Map, Exception)} and retrieve them later via
+ * {@link #processCommandLine(Map, CommandLineAccessor)},
+ * {@link #isKeepGoing(Map)} will return <code>true</code> to indicate it; one
+ * can then add errors to the list of errors via
+ * {@link #addError(Map, Exception)} and retrieve them later via
  * {@link #getErrors(Map)}.
  * </p>
  * 
@@ -121,18 +122,18 @@ public class KeepGoingOption {
 
   /**
    * <p>
-   * Processes a Commons CLI {@link CommandLine} instance and stores appropriate
+   * Processes a {@link CommandLineAccessor} instance and stores appropriate
    * information in the given options map.
    * </p>
    * 
    * @param options
    *          An options map.
    * @param cmd
-   *          A Commons CLI {@link CommandLine} instance.
+   *          A {@link CommandLineAccessor} instance.
    * @since 1.67
    */
   public static void processCommandLine(Map<String, Object> options,
-                                        CommandLine cmd) {
+                                        CommandLineAccessor cmd) {
     options.put(KEY_KEEP_GOING, Boolean.valueOf(cmd.hasOption(KEY_KEEP_GOING)));
     options.put(KEY_KEEP_GOING_ERRORS, new ArrayList<Exception>());
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: Title.java,v 1.1 2014-09-03 20:35:59 thib_gc Exp $
+ * $Id: Title.java,v 1.2 2014-11-12 00:15:41 thib_gc Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.tdb;
 
-import java.util.Map;
+import java.util.*;
 
 /**
  * <p>
@@ -44,6 +44,19 @@ import java.util.Map;
  */
 public class Title {
 
+  /**
+   * <p>
+   * Makes a new title instance with the given parent publisher (useful for
+   * tests).
+   * </p>
+   * 
+   * @param publisher A parent publisher for the title.
+   * @since 1.67
+   */
+  protected Title(Publisher publisher) {
+    this(publisher, new HashMap<String, String>());
+  }
+  
   /**
    * <p>
    * Makes a new title instance with the given parent publisher and map.
