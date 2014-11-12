@@ -893,6 +893,32 @@
     
   {
     title <
+      name = Primate Biology ;
+      issn = 
+    >
+      attr[journal_id] = PB
+      param[base_url] = http://www.primate-biol.net/
+      param[home_url] = http://www.primate-biology.net/
+
+      au < exists ; exists ; 2014 ; 2014 ; Primate Biology Volume 1 ; 1 >
+    
+   }
+
+  {
+    title <
+      name = Proceedings of the International Association of Hydrological Sciences ;
+      issn = 
+    >
+      attr[journal_id] = PIAHS
+      param[base_url] = http://www.proc-iahs.net/
+      param[home_url] = http://www.proceedings-international-association-of-hydrological-sciences.net/
+
+      au < exists ; exists ; 2014 ; 2014 ; Proceedings of the International Association of Hydrological Sciences Volume 364 ; 364 >
+    
+   }
+
+  {
+    title <
       name = Scientific Drilling ;
       issn = 1816-8957 ;
       eissn = 1816-3459

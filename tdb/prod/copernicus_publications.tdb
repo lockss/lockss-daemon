@@ -886,6 +886,19 @@
     
   {
     title <
+      name = Primate Biology ;
+      issn = 
+    >
+      attr[journal_id] = PB
+      param[base_url] = http://www.primate-biol.net/
+      param[home_url] = http://www.primate-biology.net/
+
+      au < exists ; 2014 ; 2014 ; Primate Biology Volume 1 ; 1 >
+    
+   }
+
+  {
+    title <
       name = Scientific Drilling ;
       issn = 1816-8957 ;
       eissn = 1816-3459
