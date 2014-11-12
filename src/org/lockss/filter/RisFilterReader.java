@@ -1,5 +1,5 @@
 /*
- * $Id: RisFilterReader.java,v 1.1 2014-07-22 02:09:03 thib_gc Exp $
+ * $Id: RisFilterReader.java,v 1.2 2014-11-12 00:13:20 thib_gc Exp $
  */
 
 /*
@@ -56,7 +56,7 @@ public class RisFilterReader extends LineRewritingReader {
    * 
    * @since 1.66
    */
-  protected static final Pattern TAG_PATTERN = Pattern.compile("^([A-Z]{2})  - ");
+  protected static final Pattern TAG_PATTERN = Pattern.compile("^([A-Z][A-Z0-9])  - ");
   
   /**
    * <p>
@@ -117,7 +117,7 @@ public class RisFilterReader extends LineRewritingReader {
   
   /**
    * <p>
-   * Adds tags top the setof tags to be removed.
+   * Adds tags top the set of tags to be removed.
    * </p>
    * 
    * @param tags Zero or more additional tags to be removed.

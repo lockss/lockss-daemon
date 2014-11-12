@@ -1,5 +1,5 @@
 /*
- * $Id: TestRisFilterReader.java,v 1.1 2014-07-22 02:09:03 thib_gc Exp $
+ * $Id: TestRisFilterReader.java,v 1.2 2014-11-12 00:13:19 thib_gc Exp $
  */
 
 /*
@@ -42,17 +42,34 @@ public class TestRisFilterReader extends LockssTestCase {
   public void testFilter() throws Exception {
     Reader r = new StringReader("KA  - keep single line\r\n" +
                                 "RB  - remove single line\r\n" +
+                                "K1  - keep single line with digit\r\n" +
+                                "R2  - remove single line with digit\r\n" +
                                 "KC  - keep multiple lines\r\n" +
                                 "      keep multiple lines (continued)\r\n" +
                                 "      keep multiple lines (continued)\r\n" +
                                 "RD  - remove multiple lines\r\n" +
                                 "      remove multiple lines (continued)\r\n" +
                                 "      remove multiple lines (continued)\r\n" +
+                                "K3  - keep multiple lines with digit\r\n" +
+                                "      keep multiple lines with digit (continued)\r\n" +
+                                "      keep multiple lines with digit (continued)\r\n" +
+                                "R4  - remove multiple lines with digit\r\n" +
+                                "      remove multiple lines with digit (continued)\r\n" +
+                                "      remove multiple lines with digit (continued)\r\n" +
                                 "KE  - keep single line\r\n");
-    BufferedReader br = new BufferedReader(new RisFilterReader(r, "RA", "RB", "RC", "RD", "RE"));
+    BufferedReader br = new BufferedReader(new RisFilterReader(r, "RA", "RB", "RC", "RD", "RE", "R2", "R4"));
+    int keptLines = 0;
+    int keptTags = 0;
     for (String line = br.readLine() ; line != null ; line = br.readLine()) {
       assertTrue(line.contains("keep"));
+      assertFalse(line.contains("remove"));
+      ++keptLines;
+      if (line.startsWith("K")) {
+        ++keptTags;
+      }
     }
+    assertEquals(9, keptLines);
+    assertEquals(5, keptTags);
   }
   
 }
