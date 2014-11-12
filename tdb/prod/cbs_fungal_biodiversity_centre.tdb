@@ -16,34 +16,33 @@
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://studiesinmycology.org/
       implicit < status ; year ; name ; param[volume_name] >
+      
+      comment[moved] = moved to Elsevier
 
-      au < released ; 2005 ; Studies in Mycology Volume 53 ; 53 >
-      au < released ; 2006 ; Studies in Mycology Volume 54 ; 54 >
-      au < released ; 2006 ; Studies in Mycology Volume 55 ; 55 >
-      au < released ; 2006 ; Studies in Mycology Volume 56 ; 56 >
-      au < released ; 2007 ; Studies in Mycology Volume 57 ; 57 >
-      au < released ; 2007 ; Studies in Mycology Volume 58 ; 58 >
-      au < released ; 2007 ; Studies in Mycology Volume 59 ; 59 >
-      au < released ; 2008 ; Studies in Mycology Volume 60 ; 60 >
-      au < released ; 2008 ; Studies in Mycology Volume 61 ; 61 >
-      au < released ; 2008 ; Studies in Mycology Volume 62 ; 62 >
-      au < released ; 2009 ; Studies in Mycology Volume 63 ; 63 >
-      au < released ; 2009 ; Studies in Mycology Volume 64 ; 64 >
-      au < released ; 2010 ; Studies in Mycology Volume 65 ; 65 >
-      au < released ; 2010 ; Studies in Mycology Volume 66 ; 66 >
-      au < released ; 2010 ; Studies in Mycology Volume 67 ; 67 >
-      au < released ; 2011 ; Studies in Mycology Volume 68 ; 68 >
-      au < released ; 2011 ; Studies in Mycology Volume 69 ; 69 >
-      au < released ; 2011 ; Studies in Mycology Volume 70 ; 70 >
-      au < released ; 2012 ; Studies in Mycology Volume 71 ; 71 >
-      au < released ; 2012 ; Studies in Mycology Volume 72 ; 72 >
-      au < released ; 2012 ; Studies in Mycology Volume 73 ; 73 >
-      au < released ; 2013 ; Studies in Mycology Volume 74 ; 74 >
-      au < released ; 2013 ; Studies in Mycology Volume 75 ; 75 >
-      au < released ; 2013 ; Studies in Mycology Volume 76 ; 76 >
-      au < manifest ; 2014 ; Studies in Mycology Volume 77 ; 77 >
-      au < expected ; 2014 ; Studies in Mycology Volume 78 ; 78 >
-      au < expected ; 2014 ; Studies in Mycology Volume 79 ; 79 >
+      au < down ; 2005 ; Studies in Mycology Volume 53 ; 53 >
+      au < down ; 2006 ; Studies in Mycology Volume 54 ; 54 >
+      au < down ; 2006 ; Studies in Mycology Volume 55 ; 55 >
+      au < down ; 2006 ; Studies in Mycology Volume 56 ; 56 >
+      au < down ; 2007 ; Studies in Mycology Volume 57 ; 57 >
+      au < down ; 2007 ; Studies in Mycology Volume 58 ; 58 >
+      au < down ; 2007 ; Studies in Mycology Volume 59 ; 59 >
+      au < down ; 2008 ; Studies in Mycology Volume 60 ; 60 >
+      au < down ; 2008 ; Studies in Mycology Volume 61 ; 61 >
+      au < down ; 2008 ; Studies in Mycology Volume 62 ; 62 >
+      au < down ; 2009 ; Studies in Mycology Volume 63 ; 63 >
+      au < down ; 2009 ; Studies in Mycology Volume 64 ; 64 >
+      au < down ; 2010 ; Studies in Mycology Volume 65 ; 65 >
+      au < down ; 2010 ; Studies in Mycology Volume 66 ; 66 >
+      au < down ; 2010 ; Studies in Mycology Volume 67 ; 67 >
+      au < down ; 2011 ; Studies in Mycology Volume 68 ; 68 >
+      au < down ; 2011 ; Studies in Mycology Volume 69 ; 69 >
+      au < down ; 2011 ; Studies in Mycology Volume 70 ; 70 >
+      au < down ; 2012 ; Studies in Mycology Volume 71 ; 71 >
+      au < down ; 2012 ; Studies in Mycology Volume 72 ; 72 >
+      au < down ; 2012 ; Studies in Mycology Volume 73 ; 73 >
+      au < down ; 2013 ; Studies in Mycology Volume 74 ; 74 >
+      au < down ; 2013 ; Studies in Mycology Volume 75 ; 75 >
+      au < down ; 2013 ; Studies in Mycology Volume 76 ; 76 >
 
     }
 
