@@ -23272,6 +23272,19 @@
   {
   
     title <
+      name = Journal of Rehabilitation and Assistive Technologies Engineering ;
+      eissn = 2055-6683 
+    >
+
+    param[base_url] = http://jrt.sagepub.com/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < exists ; exists ; 2014 ; Journal of Rehabilitation and Assistive Technologies Engineering Volume 1 ; 1 ; >
+  }
+
+  {
+  
+    title <
       name = Journal of the Renin-Angiotensin-Aldosterone System ;
       issn = 1470-3203 ;
       eissn = 1752-8976 

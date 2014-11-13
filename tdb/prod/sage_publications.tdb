@@ -26191,6 +26191,20 @@ comment[mpj] = now published by Brill
     }
 
     {
+    
+      title <
+        name = Journal of Rehabilitation and Assistive Technologies Engineering ;
+        eissn = 2055-6683 
+      >
+  
+      param[base_url] = http://jrt.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+  
+      au < exists ; 2014 ; Journal of Rehabilitation and Assistive Technologies Engineering Volume 1 ; 1 >
+    }
+
+    {
 
       title <
         name = Journal of Research in Crime and Delinquency ;
