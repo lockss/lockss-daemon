@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponHtmlHashFilterFactory.java,v 1.8 2014-10-22 21:51:12 alexandraohlson Exp $
+ * $Id: BaseAtyponHtmlHashFilterFactory.java,v 1.9 2014-11-13 23:57:37 alexandraohlson Exp $
  */
 
 /*
@@ -95,7 +95,7 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttribute("span", "class", "fileSize"),
   };
 
-  HtmlTransform xform = new HtmlTransform() {
+  HtmlTransform xform_spanID = new HtmlTransform() {
     //; The "id" attribute of <span> tags can have a gensym
     @Override
     public NodeList transform(NodeList nodeList) throws IOException {
@@ -105,8 +105,8 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
           public void visitTag(Tag tag) {
             if (tag instanceof Span && tag.getAttribute("id") != null) {
               tag.removeAttribute("id");
-            // some size notes are just text children of the link tag
-            // eg <a ..> PDF Plus (123 kb)</a>
+              // some size notes are just text children of the link tag
+              // eg <a ..> PDF Plus (123 kb)</a>
             } else if 
             (tag instanceof LinkTag && ((CompositeTag) tag).getChildCount() == 1 &&
             ((CompositeTag) tag).getFirstChild() instanceof Text) {
@@ -126,6 +126,37 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
     }
   };   
 
+  HtmlTransform xform_allIDs = new HtmlTransform() {
+    //; The "id" attribute of <span> tags can have a gensym
+    @Override
+    public NodeList transform(NodeList nodeList) throws IOException {
+      try {
+        nodeList.visitAllNodesWith(new NodeVisitor() {
+          @Override
+          public void visitTag(Tag tag) {
+            if (tag.getAttribute("id") != null) {
+              tag.removeAttribute("id");
+            }
+            if (tag instanceof LinkTag && ((CompositeTag) tag).getChildCount() == 1 &&
+                ((CompositeTag) tag).getFirstChild() instanceof Text) {
+              if (SIZE_PATTERN.matcher(((CompositeTag) tag).getStringText()).find()) {
+                log.debug3("removing link child text : " + ((CompositeTag) tag).getStringText());
+                ((CompositeTag) tag).removeChild(0);
+              } 
+            }
+          }
+        });
+      } catch (ParserException pe) {
+        IOException ioe = new IOException();
+        ioe.initCause(pe);
+        throw ioe;
+      }
+      return nodeList;
+    }
+  };   
+
+
+
   /** Create an array of NodeFilters that combines the atyponBaseFilters with
    *  the given array
    *  @param nodes The array of NodeFilters to add
@@ -135,8 +166,8 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
     System.arraycopy(nodes, 0, result, baseAtyponFilters.length, nodes.length);
     return result;
   }
-  
-  /** Create a FilteredInputStream that excludes the the atyponBaseFilters
+
+  /** Create a FilteredInputStream that excludes only the atyponBaseFilters
    * @param au  The archival unit
    * @param in  Incoming input stream
    * @param encoding  The encoding
@@ -144,10 +175,9 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
   public InputStream createFilteredInputStream(ArchivalUnit au,
       InputStream in, String encoding) {
 
-    return new HtmlFilterInputStream(in, encoding,
-        new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(baseAtyponFilters)), xform));
+    return doFiltering(in, encoding, null, doWSFiltering());
   }
-  
+
   /** Create a FilteredInputStream that excludes the the atyponBaseFilters and
    * moreNodes
    * @param au  The archival unit
@@ -157,11 +187,36 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
    */ 
   public InputStream createFilteredInputStream(ArchivalUnit au,
       InputStream in, String encoding, NodeFilter[] moreNodes) {
-    NodeFilter[] bothFilters = addTo(moreNodes);
-    return new HtmlFilterInputStream(in, encoding,
-        new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(bothFilters)), xform));
+
+    return doFiltering(in, encoding, moreNodes, doWSFiltering());
   }
-  
+
+  /* the shared portion of the filtering
+   * pick up the extra nodes from the child if there are any
+   * Use the correct xform, depending on the return value of the getter.
+   *  
+   */
+  private InputStream doFiltering(InputStream in, String encoding, NodeFilter[] moreNodes, boolean doWS) {
+    NodeFilter[] bothFilters = baseAtyponFilters;
+    if (moreNodes != null) {
+      bothFilters = addTo(moreNodes);
+    }
+    InputStream combinedFiltered;
+    if (doTagIDFiltering()) {
+      combinedFiltered = new HtmlFilterInputStream(in, encoding,
+          new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(bothFilters)), xform_allIDs));
+    } else {
+      combinedFiltered = new HtmlFilterInputStream(in, encoding,
+          new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(bothFilters)), xform_spanID));
+    }
+    if (doWS) {
+      Reader reader = FilterUtil.getReader(combinedFiltered, encoding);
+      return new ReaderInputStream(new WhiteSpaceFilter(reader)); 
+    } else { 
+      return combinedFiltered;
+    }
+  }
+
   /** Create a FilteredInputStream that excludes the the atyponBaseFilters and
    * moreNodes as specified in the params, also do a WhiteSpace filter if boolean set
    * @param au  The archival unit
@@ -169,21 +224,39 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
    * @param encoding  The encoding
    * @param moreNodes An array of NodeFilters to be excluded with atyponBaseFilters
    * @param doWhiteSpace A boolean to indicate if returned stream should also have  white spaces consolidated
-   */ 
+   * 
+   * Create an override of the method doWSFiltering() returning a boolean and use
+   * the createFilteredInputStream call that doesn't take the boolean for whitespace
+   */
+  @Deprecated
   public InputStream createFilteredInputStream(ArchivalUnit au,
       InputStream in, String encoding, NodeFilter[] moreNodes, boolean doWS) {
-    NodeFilter[] bothFilters = addTo(moreNodes);
-    
-    InputStream combinedFiltered = new HtmlFilterInputStream(in, encoding,
-        new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(bothFilters)), xform));
-    if (doWS == true) {
-      Reader reader = FilterUtil.getReader(combinedFiltered, encoding);
-      return new ReaderInputStream(new WhiteSpaceFilter(reader)); 
-    } else { 
-       return combinedFiltered;
-    }
+
+    return doFiltering(in, encoding, moreNodes, doWS);
   }
-  
-  
-  
+
+  /*
+   * BaseAtypon children can turn on/off extra levels of filtering
+   * by overriding the getting/setter methods.
+   * The BaseAtypon filter will query this method and if it is true,
+   * will remove the values associated with all "id" attributes on all tags
+   * after using the node filters that rely on id attributes.
+   * That is, <div id="foo" class="blah"> will become <div class="blah">
+   * default is false;
+   */
+  public boolean doTagIDFiltering() {
+    return false;
+  }
+
+  /*
+   * BaseAtypon children can turn on/off extra levels of filtering
+   * by overriding the getting/setter methods.
+   * The BaseAtypon filter will query this method and if it is true,
+   * will remove extra WS
+   * default is false;
+   */
+  public boolean doWSFiltering() {
+    return false;
+  }
+
 }

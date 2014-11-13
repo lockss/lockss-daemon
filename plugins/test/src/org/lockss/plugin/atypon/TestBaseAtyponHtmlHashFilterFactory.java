@@ -1,4 +1,4 @@
-/*  $Id: TestBaseAtyponHtmlHashFilterFactory.java,v 1.2 2014-10-22 21:51:12 alexandraohlson Exp $
+/*  $Id: TestBaseAtyponHtmlHashFilterFactory.java,v 1.3 2014-11-13 23:57:38 alexandraohlson Exp $
  
  Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
 
@@ -294,4 +294,121 @@ public class TestBaseAtyponHtmlHashFilterFactory extends LockssTestCase {
         Constants.DEFAULT_ENCODING);
     assertEquals(fileSizeFiltered, StringUtil.fromInputStream(actIn));    
   }
+  
+  /* This section tests variants that the child plugins can turn on or not */
+  private static final String wsVariant = 
+      "<html>" +
+      "<body><h2>  This is a title      lots of spaces   </h2>" +
+      "<div>   foo</div>" +
+      "</body>  </html>";
+  private static final String wsVariant_withfilter = 
+  "<html>" +
+  "<body><h2> This is a title lots of spaces </h2>" +
+  "<div> foo</div>" +
+  "</body> </html>";
+
+  private static final String tagIDVariant = 
+      "<div id=\"blah\">" +
+          "<div id=\"123\" class=\"mainMenu\">" +
+          "  <ul class=\"xxx menu\">" +
+          "             <li class=\"\" id=\"hoho\">"+
+          "    <a href=\"/journals\">Journals</a>"+
+          "</li>" +       
+          "<li class=\"\">" +
+          "    <a href=\"/ebooks\">E-Books</a>" +
+          "</li></ul>"+
+          "<span id=\"gensym_here\">" +
+          " inside the span" +
+          "</span>" +
+          "</div>" +
+          "</div>Hello World";
+  private static final String tagIDVariant_defaultfilter = 
+      "<div id=\"blah\">" +
+          "<div id=\"123\" class=\"mainMenu\">" +
+          " <ul class=\"xxx menu\">" +
+          " <li class=\"\" id=\"hoho\">"+
+          " <a href=\"/journals\">Journals</a>"+
+          "</li>" +       
+          "<li class=\"\">" +
+          " <a href=\"/ebooks\">E-Books</a>" +
+          "</li></ul>"+
+          "<span >" +
+          " inside the span" +
+          "</span>" +
+          "</div>" +
+          "</div>Hello World";
+
+  private static final String tagIDVariant_allfilter = 
+      "<div >" +
+          "<div class=\"mainMenu\">" +
+          " <ul class=\"xxx menu\">" +
+          " <li class=\"\" >"+
+          " <a href=\"/journals\">Journals</a>"+
+          "</li>" +       
+          "<li class=\"\">" +
+          " <a href=\"/ebooks\">E-Books</a>" +
+          "</li></ul>"+
+          "<span >" +
+          " inside the span" +
+          "</span>" +
+          "</div>" +
+          "</div>Hello World";
+      
+  
+  
+  public void test_WSVariations() throws Exception {
+    TestRigHashFilterFactory rigFact = new TestRigHashFilterFactory();
+
+    InputStream actIn;
+    //1. test WS - first with no ws filtering; default settings
+    actIn = rigFact.createFilteredInputStream(mau,
+        new StringInputStream(wsVariant), Constants.DEFAULT_ENCODING);
+    assertEquals(wsVariant, StringUtil.fromInputStream(actIn));
+    // 2. test WS - with ws filtering
+    rigFact.setWSFiltering(true);
+    actIn = rigFact.createFilteredInputStream(mau,
+        new StringInputStream(wsVariant), Constants.DEFAULT_ENCODING);
+    assertEquals(wsVariant_withfilter, StringUtil.fromInputStream(actIn));
+    
+    // 3. leave WS on, now test tag ids - default behavior
+    actIn = rigFact.createFilteredInputStream(mau,
+        new StringInputStream(tagIDVariant), Constants.DEFAULT_ENCODING);
+    assertEquals(tagIDVariant_defaultfilter, StringUtil.fromInputStream(actIn));
+
+    // 4. leave WS on, test tag ids - strips all tag ids
+    rigFact.setTagFiltering(true);
+    actIn = rigFact.createFilteredInputStream(mau,
+        new StringInputStream(tagIDVariant), Constants.DEFAULT_ENCODING);
+    assertEquals(tagIDVariant_allfilter, StringUtil.fromInputStream(actIn));
+  }
+  
+  /*
+   * PRIVATE class created just for testing - create a child hash filter that can 
+   * test variations in types of filtering
+   */
+  private class TestRigHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
+    private boolean do_ws_filtering = false;
+    private boolean do_all_tag_id_filtering = false;
+    
+    public void setWSFiltering(boolean ws) {
+      this.do_ws_filtering = ws;
+    }
+
+    public void setTagFiltering(boolean tag) {
+      this.do_all_tag_id_filtering = tag;
+    }
+
+
+    @Override
+    public boolean doWSFiltering() {
+      return this.do_ws_filtering;
+    }
+
+    @Override
+    public boolean doTagIDFiltering() {
+      return this.do_all_tag_id_filtering;
+    }
+
+  }
+
 }
