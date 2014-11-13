@@ -27,7 +27,7 @@
       au < HighWirePressH20Plugin ; released ; 2010 ; The Oncologist Volume 15 ; 15 >
       au < HighWirePressH20Plugin ; released ; 2011 ; The Oncologist Volume 16 ; 16 >
       au < HighWirePressH20Plugin ; released ; 2012 ; The Oncologist Volume 17 ; 17 >
-      au < HighWirePressH20Plugin ; manifest ; 2013 ; The Oncologist Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; testing ; 2013 ; The Oncologist Volume 18 ; 18 >
       au < HighWirePressH20Plugin ; manifest ; 2014 ; The Oncologist Volume 19 ; 19 >
       
     }
@@ -46,7 +46,7 @@
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < manifest ; 2012 ; Stem Cells: Translational Medicine Volume 1 ; 1 >
+    au < testing ; 2012 ; Stem Cells: Translational Medicine Volume 1 ; 1 >
     au < expected ; 2013 ; Stem Cells: Translational Medicine Volume 2 ; 2 >
     au < expected ; 2014 ; Stem Cells: Translational Medicine Volume 3 ; 3 >
 
