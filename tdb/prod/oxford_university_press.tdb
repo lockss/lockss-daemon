@@ -5914,32 +5914,32 @@
     param[base_url] = http://eurpub.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; manifest ; 1991 ; European Journal of Public Health Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 1992 ; European Journal of Public Health Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 1993 ; European Journal of Public Health Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; manifest ; 1994 ; European Journal of Public Health Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; manifest ; 1995 ; European Journal of Public Health Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; manifest ; 1996 ; European Journal of Public Health Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; manifest ; 1997 ; European Journal of Public Health Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; manifest ; 1998 ; European Journal of Public Health Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; manifest ; 1999 ; European Journal of Public Health Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; manifest ; 2000 ; European Journal of Public Health Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; manifest ; 2001 ; European Journal of Public Health Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; manifest ; 2002 ; European Journal of Public Health Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; manifest ; 2003 ; European Journal of Public Health Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; manifest ; 2004 ; European Journal of Public Health Volume 14 ; 14 >
+    au < HighWireDrupalPlugin ; exists ; 1991 ; European Journal of Public Health Volume 1 ; 1 >
+    au < HighWireDrupalPlugin ; exists ; 1992 ; European Journal of Public Health Volume 2 ; 2 >
+    au < HighWireDrupalPlugin ; exists ; 1993 ; European Journal of Public Health Volume 3 ; 3 >
+    au < HighWireDrupalPlugin ; exists ; 1994 ; European Journal of Public Health Volume 4 ; 4 >
+    au < HighWireDrupalPlugin ; exists ; 1995 ; European Journal of Public Health Volume 5 ; 5 >
+    au < HighWireDrupalPlugin ; exists ; 1996 ; European Journal of Public Health Volume 6 ; 6 >
+    au < HighWireDrupalPlugin ; exists ; 1997 ; European Journal of Public Health Volume 7 ; 7 >
+    au < HighWireDrupalPlugin ; exists ; 1998 ; European Journal of Public Health Volume 8 ; 8 >
+    au < HighWireDrupalPlugin ; exists ; 1999 ; European Journal of Public Health Volume 9 ; 9 >
+    au < HighWireDrupalPlugin ; exists ; 2000 ; European Journal of Public Health Volume 10 ; 10 >
+    au < HighWireDrupalPlugin ; exists ; 2001 ; European Journal of Public Health Volume 11 ; 11 >
+    au < HighWireDrupalPlugin ; exists ; 2002 ; European Journal of Public Health Volume 12 ; 12 >
+    au < HighWireDrupalPlugin ; exists ; 2003 ; European Journal of Public Health Volume 13 ; 13 >
+    au < HighWireDrupalPlugin ; exists ; 2004 ; European Journal of Public Health Volume 14 ; 14 >
     au < HighWireStrVolPlugin ; superseded ; 2005 ; European Journal of Public Health Volume 15 [superseded] ; 15 >
-    au < HighWirePressH20Plugin ; released ; 2005 ; European Journal of Public Health Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; released ; 2006 ; European Journal of Public Health Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; down ; 2005 ; European Journal of Public Health Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; down ; 2006 ; European Journal of Public Health Volume 16 ; 16 >
     au < HighWireStrVolPlugin ; superseded ; 2007 ; European Journal of Public Health Volume 17 [superseded] ; 17 >
-    au < HighWirePressH20Plugin ; released ; 2007 ; European Journal of Public Health Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; released ; 2008 ; European Journal of Public Health Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; released ; 2009 ; European Journal of Public Health Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; released ; 2010 ; European Journal of Public Health Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; released ; 2011 ; European Journal of Public Health Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; released ; 2012 ; European Journal of Public Health Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; manifest ; 2013 ; European Journal of Public Health Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; manifest ; 2014 ; European Journal of Public Health Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; down ; 2007 ; European Journal of Public Health Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; down ; 2008 ; European Journal of Public Health Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; down ; 2009 ; European Journal of Public Health Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; down ; 2010 ; European Journal of Public Health Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; down ; 2011 ; European Journal of Public Health Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; down ; 2012 ; European Journal of Public Health Volume 22 ; 22 >
+    au < HighWireDrupalPlugin ; exists ; 2013 ; European Journal of Public Health Volume 23 ; 23 >
+    au < HighWireDrupalPlugin ; exists ; 2014 ; European Journal of Public Health Volume 24 ; 24 >
 
     }
 
