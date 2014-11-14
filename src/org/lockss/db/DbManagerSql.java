@@ -1,5 +1,5 @@
 /*
- * $Id: DbManagerSql.java,v 1.7 2014-10-13 22:21:28 fergaloy-sf Exp $
+ * $Id: DbManagerSql.java,v 1.8 2014-11-14 19:42:37 fergaloy-sf Exp $
  */
 
 /*
@@ -545,7 +545,7 @@ public class DbManagerSql {
       + " REFERENCES " + PLATFORM_TABLE + " on delete cascade"
       + ")";
 
-  // Query to create the table for subscriptions.
+  // Query to create the table for subscriptions for MySQL.
   private static final String CREATE_SUBSCRIPTION_TABLE_MYSQL_QUERY = "create "
       + "table " + SUBSCRIPTION_TABLE + " ("
       + SUBSCRIPTION_SEQ_COLUMN + " --BigintSerialPk--,"
@@ -673,7 +673,7 @@ public class DbManagerSql {
     }
   };
 
-  // The SQL code used to create the necessary version 1 database tables.
+  // The SQL code used to create the necessary version 1 MySQL database tables.
   @SuppressWarnings("serial")
   private static final Map<String, String> VERSION_1_TABLE_CREATE_MYSQL_QUERIES
   = new LinkedHashMap<String, String>() {
@@ -956,7 +956,7 @@ public class DbManagerSql {
     	}
   };
 
-  // The SQL code used to create the necessary version2 database tables.
+  // The SQL code used to create the necessary version 2 MySQL database tables.
   @SuppressWarnings("serial")
   private static final Map<String, String> VERSION_2_TABLE_CREATE_MYSQL_QUERIES
   = new LinkedHashMap<String, String>() {
@@ -2058,6 +2058,17 @@ public class DbManagerSql {
 
     "create unique index idx2_" + PROVIDER_TABLE + " on " + PROVIDER_TABLE
       + "(" + PROVIDER_NAME_COLUMN + ")"
+    };
+
+  // SQL statements that create the necessary MySQL version 19 indices.
+  private static final String[] VERSION_19_INDEX_CREATE_MYSQL_QUERIES =
+    new String[] {
+    "create index idx1_" + PROVIDER_TABLE + " on " + PROVIDER_TABLE
+      + "(" + PROVIDER_LID_COLUMN + ")",
+
+    // TODO: Make the index unique when MySQL is fixed.
+    "create unique index idx2_" + PROVIDER_TABLE + " on " + PROVIDER_TABLE
+      + "(" + PROVIDER_NAME_COLUMN + "(255))"
     };
 
   // The SQL code used to add the necessary version 19 database table columns.
@@ -4757,7 +4768,11 @@ public class DbManagerSql {
    *          A String with the name of the column to be dropped.
    * @return a String with the query used to drop the column.
    */
-  private static String dropColumnQuery(String tableName, String columnName) {
+  private String dropColumnQuery(String tableName, String columnName) {
+    if (isTypeMysql()) {
+      return "alter table " + tableName + " drop column " + columnName;
+    }
+
     return "alter table " + tableName
 	+ " drop column " + columnName + " restrict";
   }
@@ -6532,7 +6547,11 @@ public class DbManagerSql {
     createTablesIfMissing(conn, VERSION_19_TABLE_CREATE_QUERIES);
 
     // Create the necessary indices.
-    executeDdlQueries(conn, VERSION_19_INDEX_CREATE_QUERIES);
+    if (isTypeMysql()) {
+      executeDdlQueries(conn, VERSION_19_INDEX_CREATE_MYSQL_QUERIES);
+    } else {
+      executeDdlQueries(conn, VERSION_19_INDEX_CREATE_QUERIES);
+    }
 
     // Add the new columns.
     executeDdlQueries(conn, VERSION_19_COLUMN_ADD_QUERIES);
@@ -6546,6 +6565,9 @@ public class DbManagerSql {
       // of a foreign key column.
       executeDdlQuery(conn, dropConstraintQuery(SUBSCRIPTION_TABLE,
 	  "FK_PLATFORM_SEQ_SUBSCRIPTION"));
+    } else if (isTypeMysql()) {
+      executeDdlQuery(conn, dropMysqlForeignKeyQuery(SUBSCRIPTION_TABLE,
+	  "subscription_ibfk_2"));
     }
 
     // Drop the now obsolete subscription platform reference column.
@@ -7058,6 +7080,22 @@ public class DbManagerSql {
   private static String dropConstraintQuery(String tableName,
       String constraintName) {
     return "alter table " + tableName + " drop constraint " + constraintName;
+  }
+
+  /**
+   * Provides the query used to drop a MySQL foreign key constraint.
+   * 
+   * @param tableName
+   *          A String with the name of the table to which the constraint to be
+   *          dropped belongs.
+   * @param foreignKeyIndexName
+   *          A String with the name used to index the foreign key.
+   * @return a String with the query used to drop the constraint.
+   */
+  private static String dropMysqlForeignKeyQuery(String tableName,
+      String foreignKeyIndexName) {
+    return "alter table " + tableName
+	+ " drop foreign key " + foreignKeyIndexName;
   }
 
   /**
