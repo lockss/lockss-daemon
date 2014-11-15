@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetadataManager.java,v 1.10 2014-10-13 22:21:28 fergaloy-sf Exp $
+ * $Id: TestMetadataManager.java,v 1.11 2014-11-15 02:41:24 fergaloy-sf Exp $
  */
 
 /*
@@ -210,6 +210,7 @@ public class TestMetadataManager extends LockssTestCase {
     runTestPriorityPatterns();
     runTestDisabledIndexingAu();
     runTestFailedIndexingAu();
+    runTestFindPublication();
   }
 
   private void runCreateMetadataTest() throws Exception {
@@ -627,6 +628,618 @@ public class TestMetadataManager extends LockssTestCase {
     // Make sure that it is there.
     assertEquals(1, metadataManager.findFailedIndexingPendingAus(con).size());
     DbManager.safeRollbackAndClose(con);
+  }
+
+  private void runTestFindPublication() throws Exception {
+    Connection conn = dbManager.getConnection();
+
+    List<Long> journals = new ArrayList<Long>();
+    List<Long> books = new ArrayList<Long>();
+    Map<Long, Long> publishers = new HashMap<Long, Long>();
+    Map<Long, Long> mdItems = new HashMap<Long, Long>();
+    Map<Long, String> names = new HashMap<Long, String>();
+
+    String query = "select p." + PUBLICATION_SEQ_COLUMN
+	+ ", p." + PUBLISHER_SEQ_COLUMN
+	+ ", p." + MD_ITEM_SEQ_COLUMN
+	+ ", mt." + TYPE_NAME_COLUMN
+	+ ", n." + NAME_COLUMN
+	+ " from " + MD_ITEM_TYPE_TABLE + " mt"
+	+ ", " + MD_ITEM_NAME_TABLE + " n"
+	+ ", " + MD_ITEM_TABLE + " m"
+	+ ", " + PUBLICATION_TABLE + " p"
+	+ " where mt." + MD_ITEM_TYPE_SEQ_COLUMN
+	+ " = m." + MD_ITEM_TYPE_SEQ_COLUMN
+	+ " and m." + MD_ITEM_SEQ_COLUMN + " = p." + MD_ITEM_SEQ_COLUMN
+	+ " and n." + MD_ITEM_SEQ_COLUMN + " = p." + MD_ITEM_SEQ_COLUMN;
+
+    PreparedStatement stmt = dbManager.prepareStatement(conn, query);
+    ResultSet resultSet = dbManager.executeQuery(stmt);
+
+    while (resultSet.next()) {
+      Long publicationSeq = resultSet.getLong(PUBLICATION_SEQ_COLUMN);
+      String typeName = resultSet.getString(TYPE_NAME_COLUMN);
+
+      if (MD_ITEM_TYPE_JOURNAL.equals(typeName)) {
+	journals.add(publicationSeq);
+      } else if (MD_ITEM_TYPE_BOOK.equals(typeName)) {
+	books.add(publicationSeq);
+      }
+
+      publishers.put(publicationSeq, resultSet.getLong(PUBLISHER_SEQ_COLUMN));
+      mdItems.put(publicationSeq, resultSet.getLong(MD_ITEM_SEQ_COLUMN));
+      names.put(publicationSeq, resultSet.getString(NAME_COLUMN));
+    }
+
+    Map<Long, String> pIssns = new HashMap<Long, String>();
+    Map<Long, String> eIssns = new HashMap<Long, String>();
+
+    query = "select p." + PUBLICATION_SEQ_COLUMN
+	+ ", i." + ISSN_COLUMN
+	+ ", i." + ISSN_TYPE_COLUMN
+	+ " from " + ISSN_TABLE + " i"
+	+ ", " + PUBLICATION_TABLE + " p"
+	+ " where i." + MD_ITEM_SEQ_COLUMN + " = p." + MD_ITEM_SEQ_COLUMN;
+
+    stmt = dbManager.prepareStatement(conn, query);
+    resultSet = dbManager.executeQuery(stmt);
+
+    while (resultSet.next()) {
+      if (P_ISSN_TYPE.equals(resultSet.getString(ISSN_TYPE_COLUMN))) {
+	pIssns.put(resultSet.getLong(PUBLICATION_SEQ_COLUMN),
+	    resultSet.getString(ISSN_COLUMN));
+      } else if (E_ISSN_TYPE.equals(resultSet.getString(ISSN_TYPE_COLUMN))) {
+	eIssns.put(resultSet.getLong(PUBLICATION_SEQ_COLUMN),
+	    resultSet.getString(ISSN_COLUMN));
+      }
+    }
+
+    Map<Long, String> pIsbns = new HashMap<Long, String>();
+    Map<Long, String> eIsbns = new HashMap<Long, String>();
+
+    query = "select p." + PUBLICATION_SEQ_COLUMN
+	+ ", i." + ISBN_COLUMN
+	+ ", i." + ISBN_TYPE_COLUMN
+	+ " from " + ISBN_TABLE + " i"
+	+ ", " + PUBLICATION_TABLE + " p"
+	+ " where i." + MD_ITEM_SEQ_COLUMN + " = p." + MD_ITEM_SEQ_COLUMN;
+
+    stmt = dbManager.prepareStatement(conn, query);
+    resultSet = dbManager.executeQuery(stmt);
+
+    while (resultSet.next()) {
+      if (P_ISBN_TYPE.equals(resultSet.getString(ISBN_TYPE_COLUMN))) {
+	pIsbns.put(resultSet.getLong(PUBLICATION_SEQ_COLUMN),
+	    resultSet.getString(ISBN_COLUMN));
+      } else if (E_ISBN_TYPE.equals(resultSet.getString(ISBN_TYPE_COLUMN))) {
+	eIsbns.put(resultSet.getLong(PUBLICATION_SEQ_COLUMN),
+	    resultSet.getString(ISBN_COLUMN));
+      }
+    }
+
+    runTestFindJournal(conn, journals, publishers, names, pIssns, eIssns,
+	pIsbns, eIsbns);
+
+    runTestFindBook(conn, books, publishers, names, pIssns, eIssns, pIsbns,
+	eIsbns);
+
+    runTestFindBookSeries(conn, journals, mdItems, publishers, names, pIssns,
+	eIssns,	pIsbns, eIsbns);
+  }
+
+  private void runTestFindJournal(Connection conn, List<Long> journals,
+      Map<Long, Long> publishers, Map<Long, String> names,
+      Map<Long, String> pIssns, Map<Long, String> eIssns,
+      Map<Long, String> pIsbns, Map<Long, String> eIsbns) throws Exception {
+
+    for (Long publicationSeq : journals) {
+      // Exact match.
+      Long matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), names.get(publicationSeq),
+	  pIssns.get(publicationSeq), eIssns.get(publicationSeq),
+	  pIsbns.get(publicationSeq), eIsbns.get(publicationSeq),
+	  MD_ITEM_TYPE_JOURNAL);
+
+      assertEquals(publicationSeq, matchedPublicationSeq);
+
+      // Match with same ISSNs and no name.
+      matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), null,
+	  pIssns.get(publicationSeq), eIssns.get(publicationSeq),
+	  pIsbns.get(publicationSeq), eIsbns.get(publicationSeq),
+	  MD_ITEM_TYPE_JOURNAL);
+
+      assertEquals(publicationSeq, matchedPublicationSeq);
+
+      // Match with same ISSNs and and alternate name.
+      matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), "Alternate Name",
+	  pIssns.get(publicationSeq), eIssns.get(publicationSeq),
+	  pIsbns.get(publicationSeq), eIsbns.get(publicationSeq),
+	  MD_ITEM_TYPE_JOURNAL);
+
+      assertEquals(publicationSeq, matchedPublicationSeq);
+
+      // Match with reversed print and electronic ISSNs.
+      matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), names.get(publicationSeq),
+	  eIssns.get(publicationSeq), pIssns.get(publicationSeq),
+	  pIsbns.get(publicationSeq), eIsbns.get(publicationSeq),
+	  MD_ITEM_TYPE_JOURNAL);
+
+      assertEquals(publicationSeq, matchedPublicationSeq);
+
+      // Match with no print ISSN.
+      matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), names.get(publicationSeq),
+	  null, pIssns.get(publicationSeq), pIsbns.get(publicationSeq),
+	  eIsbns.get(publicationSeq), MD_ITEM_TYPE_JOURNAL);
+
+      assertEquals(publicationSeq, matchedPublicationSeq);
+
+      // Match with no electronic ISSN.
+      matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), names.get(publicationSeq),
+	  eIssns.get(publicationSeq), null, pIsbns.get(publicationSeq),
+	  eIsbns.get(publicationSeq), MD_ITEM_TYPE_JOURNAL);
+
+      assertEquals(publicationSeq, matchedPublicationSeq);
+
+      // Match by name and no ISSNs.
+      matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), names.get(publicationSeq),
+	  null, null, pIsbns.get(publicationSeq), eIsbns.get(publicationSeq),
+	  MD_ITEM_TYPE_JOURNAL);
+
+      assertEquals(publicationSeq, matchedPublicationSeq);
+
+      boolean existingHasIssns = pIssns.get(publicationSeq) != null
+	  || eIssns.get(publicationSeq) != null;
+
+      // No match for new print ISSN when the existing one has an ISSN even if
+      // the name matches, unless the electronic ISSN matches.
+      matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), names.get(publicationSeq),
+	  "12345678", eIssns.get(publicationSeq),
+	  pIsbns.get(publicationSeq), eIsbns.get(publicationSeq),
+	  MD_ITEM_TYPE_JOURNAL);
+
+      if (existingHasIssns && eIssns.get(publicationSeq) == null) {
+	assertNull(matchedPublicationSeq);
+      } else {
+	assertEquals(publicationSeq, matchedPublicationSeq);
+      }
+
+      // No match for new electronic ISSN when the existing one has an ISSN even
+      // if the name matches, unless the print ISSN matches.
+      matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), names.get(publicationSeq),
+	  pIssns.get(publicationSeq), "98765432",
+	  pIsbns.get(publicationSeq), eIsbns.get(publicationSeq),
+	  MD_ITEM_TYPE_JOURNAL);
+
+      if (existingHasIssns && pIssns.get(publicationSeq) == null) {
+	assertNull(matchedPublicationSeq);
+      } else {
+	assertEquals(publicationSeq, matchedPublicationSeq);
+      }
+
+      // No match for new print ISSN when the existing one has an ISSN even if
+      // the name matches.
+      matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), names.get(publicationSeq),
+	  "12345678", null, pIsbns.get(publicationSeq),
+	  eIsbns.get(publicationSeq), MD_ITEM_TYPE_JOURNAL);
+
+      if (existingHasIssns) {
+	assertNull(matchedPublicationSeq);
+      } else {
+	assertEquals(publicationSeq, matchedPublicationSeq);
+      }
+
+      // No match for new electronic ISBN when the existing one has an ISBN even
+      // if the name matches.
+      matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), names.get(publicationSeq), null,
+	  "98765432", pIsbns.get(publicationSeq), eIsbns.get(publicationSeq),
+	  MD_ITEM_TYPE_JOURNAL);
+
+      if (existingHasIssns) {
+	assertNull(matchedPublicationSeq);
+      } else {
+	assertEquals(publicationSeq, matchedPublicationSeq);
+      }
+
+      // No match for different publication type.
+      matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), names.get(publicationSeq),
+	  pIssns.get(publicationSeq), eIssns.get(publicationSeq),
+	  pIsbns.get(publicationSeq), eIsbns.get(publicationSeq),
+	  MD_ITEM_TYPE_BOOK);
+
+      assertNull(matchedPublicationSeq);
+    }
+  }
+
+  private void runTestFindBook(Connection conn, List<Long> books,
+      Map<Long, Long> publishers, Map<Long, String> names,
+      Map<Long, String> pIssns, Map<Long, String> eIssns,
+      Map<Long, String> pIsbns, Map<Long, String> eIsbns) throws Exception {
+
+    for (Long publicationSeq : books) {
+      // Exact match.
+      Long matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), names.get(publicationSeq),
+	  pIssns.get(publicationSeq), eIssns.get(publicationSeq),
+	  pIsbns.get(publicationSeq), eIsbns.get(publicationSeq),
+	  MD_ITEM_TYPE_BOOK);
+
+      assertEquals(publicationSeq, matchedPublicationSeq);
+
+      // Match with same ISBNs and no name.
+      matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), null,
+	  pIssns.get(publicationSeq), eIssns.get(publicationSeq),
+	  pIsbns.get(publicationSeq), eIsbns.get(publicationSeq),
+	  MD_ITEM_TYPE_BOOK);
+
+      assertEquals(publicationSeq, matchedPublicationSeq);
+
+      // Match with same ISBNs and and alternate name.
+      matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), "Alternate Name",
+	  pIssns.get(publicationSeq), eIssns.get(publicationSeq),
+	  pIsbns.get(publicationSeq), eIsbns.get(publicationSeq),
+	  MD_ITEM_TYPE_BOOK);
+
+      assertEquals(publicationSeq, matchedPublicationSeq);
+
+      // Match with reversed print and electronic ISBNs.
+      matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), names.get(publicationSeq),
+	  pIssns.get(publicationSeq), eIssns.get(publicationSeq),
+	  eIsbns.get(publicationSeq), pIsbns.get(publicationSeq),
+	  MD_ITEM_TYPE_BOOK);
+
+      assertEquals(publicationSeq, matchedPublicationSeq);
+
+      // Match with no print ISBN.
+      matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), names.get(publicationSeq),
+	  pIssns.get(publicationSeq), eIssns.get(publicationSeq),
+	  null, pIsbns.get(publicationSeq), MD_ITEM_TYPE_BOOK);
+
+      assertEquals(publicationSeq, matchedPublicationSeq);
+
+      // Match with no electronic ISBN.
+      matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), names.get(publicationSeq),
+	  pIssns.get(publicationSeq), eIssns.get(publicationSeq),
+	  eIsbns.get(publicationSeq), null, MD_ITEM_TYPE_BOOK);
+
+      assertEquals(publicationSeq, matchedPublicationSeq);
+
+      // Match by name and no ISBNs.
+      matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), names.get(publicationSeq),
+	  pIssns.get(publicationSeq), eIssns.get(publicationSeq),
+	  null, null, MD_ITEM_TYPE_BOOK);
+
+      assertEquals(publicationSeq, matchedPublicationSeq);
+
+      boolean existingHasIsbns = pIsbns.get(publicationSeq) != null
+	  || eIsbns.get(publicationSeq) != null;
+
+      // No match for new print ISBN when the existing one has an ISBN even if
+      // the name matches, unless the electronic ISBN matches.
+      matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), names.get(publicationSeq),
+	  pIssns.get(publicationSeq), eIssns.get(publicationSeq),
+	  "9876543210987", eIsbns.get(publicationSeq), MD_ITEM_TYPE_BOOK);
+
+      if (existingHasIsbns && eIsbns.get(publicationSeq) == null) {
+	assertNull(matchedPublicationSeq);
+      } else {
+	assertEquals(publicationSeq, matchedPublicationSeq);
+      }
+
+      // No match for new electronic ISBN when the existing one has an ISBN even
+      // if the name matches, unless the print ISBN matches.
+      matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), names.get(publicationSeq),
+	  pIssns.get(publicationSeq), eIssns.get(publicationSeq),
+	  pIsbns.get(publicationSeq), "9876543210987", MD_ITEM_TYPE_BOOK);
+
+      if (existingHasIsbns && pIsbns.get(publicationSeq) == null) {
+	assertNull(matchedPublicationSeq);
+      } else {
+	assertEquals(publicationSeq, matchedPublicationSeq);
+      }
+
+      // No match for new print ISBN when the existing one has an ISBN even if
+      // the name matches.
+      matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), names.get(publicationSeq),
+	  pIssns.get(publicationSeq), eIssns.get(publicationSeq),
+	  "9876543210987", null, MD_ITEM_TYPE_BOOK);
+
+      if (existingHasIsbns) {
+	assertNull(matchedPublicationSeq);
+      } else {
+	assertEquals(publicationSeq, matchedPublicationSeq);
+      }
+
+      // No match for new electronic ISBN when the existing one has an ISBN even
+      // if the name matches.
+      matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), names.get(publicationSeq),
+	  pIssns.get(publicationSeq), eIssns.get(publicationSeq),
+	  null, "9876543210987", MD_ITEM_TYPE_BOOK);
+
+      if (existingHasIsbns) {
+	assertNull(matchedPublicationSeq);
+      } else {
+	assertEquals(publicationSeq, matchedPublicationSeq);
+      }
+
+      // No match for different publication type.
+      matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), names.get(publicationSeq),
+	  pIssns.get(publicationSeq), eIssns.get(publicationSeq),
+	  pIsbns.get(publicationSeq), eIsbns.get(publicationSeq),
+	  MD_ITEM_TYPE_JOURNAL);
+
+      assertNull(matchedPublicationSeq);
+    }
+  }
+
+  private void runTestFindBookSeries(Connection conn, List<Long> journals,
+      Map<Long, Long> mdItems, Map<Long, Long> publishers,
+      Map<Long, String> names, Map<Long, String> pIssns,
+      Map<Long, String> eIssns, Map<Long, String> pIsbns,
+      Map<Long, String> eIsbns) throws Exception {
+
+    for (Long publicationSeq : journals) {
+      metadataManager.addMdItemIsbns(conn, mdItems.get(publicationSeq),
+	  "9781585623174", "9781585623177");
+      pIsbns.put(publicationSeq, "9781585623174");
+      eIsbns.put(publicationSeq, "9781585623177");
+
+      String query = "update " + MD_ITEM_TABLE
+  	+ " set " + MD_ITEM_TYPE_SEQ_COLUMN + " = 1"
+  	+ " where " + MD_ITEM_SEQ_COLUMN + " = " + mdItems.get(publicationSeq);
+
+      PreparedStatement stmt = dbManager.prepareStatement(conn, query);
+      dbManager.executeUpdate(stmt);
+    }
+
+    for (Long publicationSeq : journals) {
+      // Exact match.
+      Long matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), names.get(publicationSeq),
+	  pIssns.get(publicationSeq), eIssns.get(publicationSeq),
+	  pIsbns.get(publicationSeq), eIsbns.get(publicationSeq),
+	  MD_ITEM_TYPE_BOOK_SERIES);
+
+      assertEquals(publicationSeq, matchedPublicationSeq);
+
+      // Match with same ISSNs and ISBNs and no name.
+      matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), null,
+	  pIssns.get(publicationSeq), eIssns.get(publicationSeq),
+	  pIsbns.get(publicationSeq), eIsbns.get(publicationSeq),
+	  MD_ITEM_TYPE_BOOK_SERIES);
+
+      assertEquals(publicationSeq, matchedPublicationSeq);
+
+      // Match with same ISSNs and no ISBNs and no name.
+      matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), null,
+	  pIssns.get(publicationSeq), eIssns.get(publicationSeq), null,null,
+	  MD_ITEM_TYPE_BOOK_SERIES);
+
+      assertEquals(publicationSeq, matchedPublicationSeq);
+
+      // Match with same ISBNs and no ISSNs and no name.
+      matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), null, null,null,
+	  pIsbns.get(publicationSeq), eIsbns.get(publicationSeq),
+	  MD_ITEM_TYPE_BOOK_SERIES);
+
+      assertEquals(publicationSeq, matchedPublicationSeq);
+
+      // Match with same ISSNs and ISBNs and and alternate name.
+      matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), "Alternate Name",
+	  pIssns.get(publicationSeq), eIssns.get(publicationSeq),
+	  pIsbns.get(publicationSeq), eIsbns.get(publicationSeq),
+	  MD_ITEM_TYPE_BOOK_SERIES);
+
+      assertEquals(publicationSeq, matchedPublicationSeq);
+
+      // Match with same ISSNs and no ISBNs and no name.
+      matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), "Alternate Name",
+	  pIssns.get(publicationSeq), eIssns.get(publicationSeq), null,null,
+	  MD_ITEM_TYPE_BOOK_SERIES);
+
+      assertEquals(publicationSeq, matchedPublicationSeq);
+
+      // Match with same ISBNs and no ISSNs and no name.
+      matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), "Alternate Name", null,null,
+	  pIsbns.get(publicationSeq), eIsbns.get(publicationSeq),
+	  MD_ITEM_TYPE_BOOK_SERIES);
+
+      assertEquals(publicationSeq, matchedPublicationSeq);
+
+      // Match with reversed print and electronic ISSNs.
+      matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), names.get(publicationSeq),
+	  eIssns.get(publicationSeq), pIssns.get(publicationSeq), null, null,
+	  MD_ITEM_TYPE_BOOK_SERIES);
+
+      assertEquals(publicationSeq, matchedPublicationSeq);
+
+      // Match with no print ISSN.
+      matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), names.get(publicationSeq), null,
+	  eIssns.get(publicationSeq), null, null, MD_ITEM_TYPE_BOOK_SERIES);
+
+      assertEquals(publicationSeq, matchedPublicationSeq);
+
+      // Match with no electronic ISSN.
+      matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), names.get(publicationSeq),
+	  eIssns.get(publicationSeq), null, null, null,
+	  MD_ITEM_TYPE_BOOK_SERIES);
+
+      assertEquals(publicationSeq, matchedPublicationSeq);
+
+      // Match with reversed print and electronic ISBNs.
+      matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), names.get(publicationSeq), null, null,
+	  eIsbns.get(publicationSeq), pIsbns.get(publicationSeq),
+	  MD_ITEM_TYPE_BOOK_SERIES);
+
+      assertEquals(publicationSeq, matchedPublicationSeq);
+
+      // Match with no print ISBN.
+      matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), names.get(publicationSeq), null, null,
+	  null, eIsbns.get(publicationSeq), MD_ITEM_TYPE_BOOK_SERIES);
+
+      assertEquals(publicationSeq, matchedPublicationSeq);
+
+      // Match with no electronic ISSN.
+      matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), names.get(publicationSeq), null, null,
+	  pIsbns.get(publicationSeq), null, MD_ITEM_TYPE_BOOK_SERIES);
+
+      assertEquals(publicationSeq, matchedPublicationSeq);
+
+      // Match by name and no ISBNs and no ISSNs.
+      matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), names.get(publicationSeq), null, null,
+	  null, null, MD_ITEM_TYPE_BOOK_SERIES);
+
+      assertEquals(publicationSeq, matchedPublicationSeq);
+
+      boolean existingHasIssns = pIssns.get(publicationSeq) != null
+	  || eIssns.get(publicationSeq) != null;
+
+      // No match for new print ISSN when the existing one has an ISSN even if
+      // the name matches, unless the electronic ISSN matches.
+      matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), names.get(publicationSeq),
+	  "12345678", eIssns.get(publicationSeq), null, null,
+	  MD_ITEM_TYPE_BOOK_SERIES);
+
+      if (existingHasIssns && eIssns.get(publicationSeq) == null) {
+	assertNull(matchedPublicationSeq);
+      } else {
+	assertEquals(publicationSeq, matchedPublicationSeq);
+      }
+
+      // No match for new electronic ISSN when the existing one has an ISSN even
+      // if the name matches, unless the print ISSN matches.
+      matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), names.get(publicationSeq),
+	  pIssns.get(publicationSeq), "98765432", null, null,
+	  MD_ITEM_TYPE_BOOK_SERIES);
+
+      if (existingHasIssns && pIssns.get(publicationSeq) == null) {
+	assertNull(matchedPublicationSeq);
+      } else {
+	assertEquals(publicationSeq, matchedPublicationSeq);
+      }
+
+      // No match for new print ISSN when the existing one has an ISSN even if
+      // the name matches.
+      matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), names.get(publicationSeq),
+	  "12345678", null, null, null, MD_ITEM_TYPE_BOOK_SERIES);
+
+      if (existingHasIssns) {
+	assertNull(matchedPublicationSeq);
+      } else {
+	assertEquals(publicationSeq, matchedPublicationSeq);
+      }
+
+      // No match for new electronic ISSN when the existing one has an ISSN even
+      // if the name matches.
+      matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), names.get(publicationSeq), null,
+	  "98765432", null, null, MD_ITEM_TYPE_BOOK_SERIES);
+
+      if (existingHasIssns) {
+	assertNull(matchedPublicationSeq);
+      } else {
+	assertEquals(publicationSeq, matchedPublicationSeq);
+      }
+
+      boolean existingHasIsbns = pIsbns.get(publicationSeq) != null
+	  || eIsbns.get(publicationSeq) != null;
+
+      // No match for new print ISBN when the existing one has an ISBN even if
+      // the name matches, unless the electronic ISBN matches.
+      matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), names.get(publicationSeq), null, null,
+	  "9876543210987", eIsbns.get(publicationSeq),
+	  MD_ITEM_TYPE_BOOK_SERIES);
+
+      if (existingHasIsbns && eIsbns.get(publicationSeq) == null) {
+	assertNull(matchedPublicationSeq);
+      } else {
+	assertEquals(publicationSeq, matchedPublicationSeq);
+      }
+
+      // No match for new electronic ISBN when the existing one has an ISBN even
+      // if the name matches, unless the print ISBN matches.
+      matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), names.get(publicationSeq), null, null,
+	  pIsbns.get(publicationSeq), "1234567890123",
+	  MD_ITEM_TYPE_BOOK_SERIES);
+
+      if (existingHasIsbns && pIsbns.get(publicationSeq) == null) {
+	assertNull(matchedPublicationSeq);
+      } else {
+	assertEquals(publicationSeq, matchedPublicationSeq);
+      }
+
+      // No match for new print ISBN when the existing one has an ISBN even if
+      // the name matches.
+      matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), names.get(publicationSeq), null, null,
+	  "9876543210987", null, MD_ITEM_TYPE_BOOK_SERIES);
+
+      if (existingHasIsbns) {
+	assertNull(matchedPublicationSeq);
+      } else {
+	assertEquals(publicationSeq, matchedPublicationSeq);
+      }
+
+      // No match for new electronic ISBN when the existing one has an ISBN even
+      // if the name matches.
+      matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), names.get(publicationSeq), null, null,
+	  null, "1234567890123", MD_ITEM_TYPE_BOOK_SERIES);
+
+      if (existingHasIsbns) {
+	assertNull(matchedPublicationSeq);
+      } else {
+	assertEquals(publicationSeq, matchedPublicationSeq);
+      }
+
+      // No match for different publication type.
+      matchedPublicationSeq = metadataManager.findPublication(conn,
+	  publishers.get(publicationSeq), names.get(publicationSeq),
+	  pIssns.get(publicationSeq), eIssns.get(publicationSeq),
+	  pIsbns.get(publicationSeq), eIsbns.get(publicationSeq),
+	  MD_ITEM_TYPE_BOOK);
+
+      assertNull(matchedPublicationSeq);
+    }
   }
 
   public static class MySubTreeArticleIteratorFactory

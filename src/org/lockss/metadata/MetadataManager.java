@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.34 2014-10-03 23:04:43 fergaloy-sf Exp $
+ * $Id: MetadataManager.java,v 1.35 2014-11-15 02:41:24 fergaloy-sf Exp $
  */
 
 /*
@@ -854,6 +854,22 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       + PROPRIETARY_ID_COLUMN
       + " from " + PROPRIETARY_ID_TABLE
       + " where " + MD_ITEM_SEQ_COLUMN + " = ?";
+  
+  // Query to count the ISBNs of a publication.
+  private static final String COUNT_PUBLICATION_ISBNS_QUERY = "select "
+      + "count(*)"
+      + " from " + ISBN_TABLE + " i"
+      + "," + PUBLICATION_TABLE + " p"
+      + " where p." + PUBLICATION_SEQ_COLUMN + " = ?"
+      + " and p." + MD_ITEM_SEQ_COLUMN + " = i." + MD_ITEM_SEQ_COLUMN;
+  
+  // Query to count the ISSNs of a publication.
+  private static final String COUNT_PUBLICATION_ISSNS_QUERY = "select "
+      + "count(*)"
+      + " from " + ISSN_TABLE + " i"
+      + "," + PUBLICATION_TABLE + " p"
+      + " where p." + PUBLICATION_SEQ_COLUMN + " = ?"
+      + " and p." + MD_ITEM_SEQ_COLUMN + " = i." + MD_ITEM_SEQ_COLUMN;
 
   /**
    * Map of running reindexing tasks keyed by their AuIds
@@ -2726,7 +2742,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       pubTitle = 
           pubName.substring(0, Math.min(pubName.length(), MAX_NAME_COLUMN));
     }
-    log.debug3(DEBUG_HEADER + "pubTitle = " + pubTitle);
+
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pubTitle = " + pubTitle);
 
     // Check whether it is a book series.
     if (   MetadataField.PUBLICATION_TYPE_BOOKSERIES.equals(pubType)
@@ -3156,10 +3173,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  private Long findPublication(Connection conn, Long publisherSeq,
-      String title, String pIssn, String eIssn, 
-      String pIsbn, String eIsbn, String mdItemType)
-	  throws DbException {
+  Long findPublication(Connection conn, Long publisherSeq, String title,
+      String pIssn, String eIssn, String pIsbn, String eIsbn, String mdItemType)
+      throws DbException {
     final String DEBUG_HEADER = "findPublication(): ";
     if (log.isDebug2()) {
       log.debug2(DEBUG_HEADER + "title = " + title);
@@ -3186,17 +3202,14 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     }
 
     if (hasIssns && hasIsbns && hasName) {
-      publicationSeq =
-	  findPublicationByIssnsOrIsbnsOrName(conn, title, publisherSeq, pIssn,
-					      eIssn, pIsbn, eIsbn, mdItemType);
+      publicationSeq = findPublicationByIssnsOrIsbnsOrName(conn, title,
+	  publisherSeq, pIssn, eIssn, pIsbn, eIsbn, mdItemType);
     } else if (hasIssns && hasName) {
-      publicationSeq =
-	  findPublicationByIssnsOrName(conn, publisherSeq, 
-	      title, pIssn, eIssn, mdItemType);
+      publicationSeq = findPublicationByIssnsOrName(conn, publisherSeq, title,
+	  pIssn, eIssn, mdItemType);
     } else if (hasIsbns && hasName) {
-      publicationSeq =
-	  findPublicationByIsbnsOrName(conn, 
-	      publisherSeq, title, pIsbn, eIsbn, mdItemType);
+      publicationSeq = findPublicationByIsbnsOrName(conn, publisherSeq, title,
+	  pIsbn, eIsbn, mdItemType, false);
     } else if (hasIssns) {
       publicationSeq =
 	  findPublicationByIssns(conn, publisherSeq, pIssn, eIssn, mdItemType);
@@ -3450,7 +3463,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  private void addMdItemIsbns(Connection conn, Long mdItemSeq, String pIsbn,
+  void addMdItemIsbns(Connection conn, Long mdItemSeq, String pIsbn,
       String eIsbn) throws DbException {
     final String DEBUG_HEADER = "addMdItemIsbns(): ";
     if (log.isDebug2()) {
@@ -3918,15 +3931,29 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   private Long findPublicationByIssnsOrIsbnsOrName(Connection conn,
       String title, Long publisherSeq, String pIssn, String eIssn, String pIsbn,
       String eIsbn, String mdItemType) throws DbException {
-    Long publicationSeq =
-	findPublicationByIssns(conn, publisherSeq, pIssn, eIssn, mdItemType);
-
-    if (publicationSeq == null) {
-      publicationSeq =
-	  findPublicationByIsbnsOrName(conn, publisherSeq, 
-	      title, pIsbn, eIsbn, mdItemType);
+    final String DEBUG_HEADER = "findPublicationByIssnsOrIsbnsOrName(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "title = " + title);
+      log.debug2(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
+      log.debug2(DEBUG_HEADER + "pIssn = " + pIssn);
+      log.debug2(DEBUG_HEADER + "eIssn = " + eIssn);
+      log.debug2(DEBUG_HEADER + "pIsbn = " + pIsbn);
+      log.debug2(DEBUG_HEADER + "eIsbn = " + eIsbn);
+      log.debug2(DEBUG_HEADER + "mdItemType = " + mdItemType);
     }
 
+    Long publicationSeq =
+	findPublicationByIssns(conn, publisherSeq, pIssn, eIssn, mdItemType);
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
+
+    if (publicationSeq == null) {
+      publicationSeq = findPublicationByIsbnsOrName(conn, publisherSeq, title,
+	  pIsbn, eIsbn, mdItemType, true);
+    }
+
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
     return publicationSeq;
   }
 
@@ -3953,14 +3980,38 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   private Long findPublicationByIssnsOrName(Connection conn, Long publisherSeq, 
       String title, String pIssn, String eIssn, String mdItemType)
 	  throws DbException {
+    final String DEBUG_HEADER = "findPublicationByIssnsOrName(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
+      log.debug2(DEBUG_HEADER + "title = " + title);
+      log.debug2(DEBUG_HEADER + "pIssn = " + pIssn);
+      log.debug2(DEBUG_HEADER + "eIssn = " + eIssn);
+      log.debug2(DEBUG_HEADER + "mdItemType = " + mdItemType);
+    }
+
     Long publicationSeq =
 	findPublicationByIssns(conn, publisherSeq, pIssn, eIssn, mdItemType);
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
 
     if (publicationSeq == null) {
       publicationSeq =
 	  findPublicationByName(conn, publisherSeq, title, mdItemType);
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
+
+      // Disqualify this matched publication if it already has some ISSN.
+      if (publicationSeq != null && publicationHasIssns(conn, publicationSeq)) {
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "Potential match of publicationSeq = "
+	      + publicationSeq + " disqualified - publicationHasIssns = "
+	      + publicationHasIssns(conn, publicationSeq));
+	publicationSeq = null;
+      }
     }
 
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
     return publicationSeq;
   }
 
@@ -3980,21 +4031,54 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    *          A String with the electronic ISBN of the publication.
    * @param mdItemType
    *          A String with the type of publication to be identified.
+   * @param newHasIssns
+   *          A boolean with the indication of whether the data of the
+   *          publication to be matched contains also some ISSN.
    * @return a Long with the identifier of the publication.
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
   private Long findPublicationByIsbnsOrName(Connection conn, Long publisherSeq, 
-      String title, String pIsbn, String eIsbn, String mdItemType)
-      throws DbException {
+      String title, String pIsbn, String eIsbn, String mdItemType,
+      boolean newHasIssns) throws DbException {
+    final String DEBUG_HEADER = "findPublicationByIsbnsOrName(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
+      log.debug2(DEBUG_HEADER + "title = " + title);
+      log.debug2(DEBUG_HEADER + "pIsbn = " + pIsbn);
+      log.debug2(DEBUG_HEADER + "eIsbn = " + eIsbn);
+      log.debug2(DEBUG_HEADER + "mdItemType = " + mdItemType);
+      log.debug2(DEBUG_HEADER + "newHasIssns = " + newHasIssns);
+    }
+
     Long publicationSeq =
 	findPublicationByIsbns(conn, publisherSeq, pIsbn, eIsbn, mdItemType);
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
 
     if (publicationSeq == null) {
       publicationSeq =
 	  findPublicationByName(conn, publisherSeq, title, mdItemType);
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
+
+      // Disqualify this matched publication if it already has some ISBN or if
+      // it has some ISSN and the incoming data also contained some ISSN.
+      if (publicationSeq != null
+	  && (publicationHasIsbns(conn, publicationSeq)
+	      || (newHasIssns && publicationHasIssns(conn, publicationSeq)))) {
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "Potential match of publicationSeq = "
+	      + publicationSeq + " disqualified - publicationHasIsbns = "
+	      + publicationHasIsbns(conn, publicationSeq) + ", newHasIssns = "
+	      + newHasIssns + ", publicationHasIssns = "
+	      + publicationHasIssns(conn, publicationSeq));
+	publicationSeq = null;
+      }
     }
 
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
     return publicationSeq;
   }
 
@@ -4178,6 +4262,98 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     if (log.isDebug2())
       log.debug2(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
     return publicationSeq;
+  }
+
+  /**
+   * Provides an indication of whether a publication has ISBNs in the database.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param publicationSeq
+   *          A Long with the publication identifier.
+   * @return a boolean with <code>true</code> if the publication has ISBNs,
+   *         <code>false</code> otherwise.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public boolean publicationHasIsbns(Connection conn, Long publicationSeq)
+      throws DbException {
+    final String DEBUG_HEADER = "publicationHasIsbns(): ";
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
+
+    long rowCount = -1;
+    ResultSet results = null;
+    PreparedStatement countIsbns =
+	dbManager.prepareStatement(conn, COUNT_PUBLICATION_ISBNS_QUERY);
+
+    try {
+      countIsbns.setLong(1, publicationSeq);
+
+      // Find the ISBNs.
+      results = dbManager.executeQuery(countIsbns);
+      results.next();
+      rowCount = results.getLong(1);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "rowCount = " + rowCount);
+    } catch (SQLException sqle) {
+      log.error("Cannot count publication ISBNs", sqle);
+      log.error("SQL = '" + COUNT_PUBLICATION_ISBNS_QUERY + "'.");
+      log.error("publicationSeq = " + publicationSeq);
+      throw new DbException("Cannot count publication ISBNs", sqle);
+    } finally {
+      DbManager.safeCloseResultSet(results);
+      DbManager.safeCloseStatement(countIsbns);
+    }
+
+    boolean result = rowCount > 0;
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+    return result;
+  }
+
+  /**
+   * Provides an indication of whether a publication has ISSNs in the database.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param publicationSeq
+   *          A Long with the publication identifier.
+   * @return a boolean with <code>true</code> if the publication has ISSNs,
+   *         <code>false</code> otherwise.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public boolean publicationHasIssns(Connection conn, Long publicationSeq)
+      throws DbException {
+    final String DEBUG_HEADER = "publicationHasIssns(): ";
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
+
+    long rowCount = -1;
+    ResultSet results = null;
+    PreparedStatement countIssns =
+	dbManager.prepareStatement(conn, COUNT_PUBLICATION_ISSNS_QUERY);
+
+    try {
+      countIssns.setLong(1, publicationSeq);
+
+      // Find the ISSNs.
+      results = dbManager.executeQuery(countIssns);
+      results.next();
+      rowCount = results.getLong(1);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "rowCount = " + rowCount);
+    } catch (SQLException sqle) {
+      log.error("Cannot count publication ISSNs", sqle);
+      log.error("SQL = '" + COUNT_PUBLICATION_ISSNS_QUERY + "'.");
+      log.error("publicationSeq = " + publicationSeq);
+      throw new DbException("Cannot count publication ISSNs", sqle);
+    } finally {
+      DbManager.safeCloseResultSet(results);
+      DbManager.safeCloseStatement(countIssns);
+    }
+
+    boolean result = rowCount > 0;
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+    return result;
   }
 
   /**
