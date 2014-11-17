@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>99</string>
+    <string>100</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>25</string>
+        <string>26</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -204,6 +204,15 @@
       <entry>
         <string>application/pdf,text/html,application/vnd.ms-powerpoint</string>
         <string>1/3000</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>content-testing_override</string>
+    <map>
+      <entry>
+        <string>au_http_request_header</string>
+        <string>X-Lockss-Source:publisher</string>
       </entry>
     </map>
   </entry>
