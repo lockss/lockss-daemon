@@ -1,5 +1,5 @@
 /*
- * $Id: Au.java,v 1.6 2014-11-12 00:15:41 thib_gc Exp $
+ * $Id: Au.java,v 1.7 2014-11-17 22:30:40 thib_gc Exp $
  */
 
 /*
@@ -1139,6 +1139,7 @@ public class Au {
     }
     m.put("au:auid", new A() { @Override String a(Au a) { return a.getAuid(); } });
     m.put("au:auidplus", new A() { @Override String a(Au a) { return a.getAuidPlus(); } });
+    m.put("au:edition", new A() { @Override String a(Au a) { return a.getEdition(); } });
     m.put("au:eisbn", new A() { @Override String a(Au a) { return a.getEisbn(); } });
     m.put("au:isbn", new A() { @Override String a(Au a) { return a.getIsbn(); } });
     m.put("au:name", new A() { @Override String a(Au a) { return a.getName(); } });
@@ -1173,6 +1174,7 @@ public class Au {
     m.put("auid", m.get("au:auid"));
     m.put("auidplus", m.get("au:auidplus"));
     m.put("doi", m.get("title:doi"));
+    m.put("edition", m.get("au:edition"));
     m.put("eisbn", m.get("au:eisbn"));
     m.put("eissn", m.get("title:eissn"));
     m.put("isbn", m.get("au:isbn"));
