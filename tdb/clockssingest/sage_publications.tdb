@@ -4794,7 +4794,7 @@
       param[base_url] = http://cno.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2014 ; Child Neurology Open Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2014 ; Child Neurology Open Volume 1 ; 1 ; >
   }
 
   {
@@ -38337,7 +38337,7 @@
       au < finished ; frozen ; 2012 ; Urban Studies Volume 49 ; 49 ; >
       au < crawling ; exists ; 2013 ; Urban Studies Volume 50 ; 50 ; >
       au < manifest ; exists ; 2014 ; Urban Studies Volume 51 ; 51 ; >
-      au < expected ; exists ; 2015 ; Urban Studies Volume 52 ; 52 ; >
+      au < manifest ; exists ; 2015 ; Urban Studies Volume 52 ; 52 ; >
 
     }
 
