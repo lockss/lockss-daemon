@@ -1,5 +1,5 @@
 /*
- * $Id: TestPublisher.java,v 1.1 2014-11-12 00:16:04 thib_gc Exp $
+ * $Id: TestPublisher.java,v 1.2 2014-11-17 22:29:04 thib_gc Exp $
  */
 
 /*
@@ -40,8 +40,8 @@ public class TestPublisher extends LockssTestCase {
 
   public static final String NAME_VALUE = "Publisher Name";
 
-  public static final String FOO_KEY = "fookey";
-  public static final String FOO_VALUE = "fooval";
+  public static final String FOO_KEY = "publisherfookey";
+  public static final String FOO_VALUE = "publisherfooval";
 
   public void testKeys() throws Exception {
     assertEquals("name", Publisher.NAME);
@@ -55,10 +55,10 @@ public class TestPublisher extends LockssTestCase {
   
   public void testPublisher() throws Exception {
     Map<String, String> map = new HashMap<String, String>();
-    map.put(Publisher.NAME, NAME_VALUE);
-    map.put(FOO_KEY, FOO_VALUE);
     Publisher publisher = new Publisher(map);
+    map.put(Publisher.NAME, NAME_VALUE);
     assertEquals(NAME_VALUE, publisher.getName());
+    map.put(FOO_KEY, FOO_VALUE);
     assertEquals(FOO_VALUE, publisher.getArbitraryValue(FOO_KEY));
     assertNull(publisher.getArbitraryValue("X" + FOO_KEY));
   }

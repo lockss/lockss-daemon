@@ -1,5 +1,5 @@
 /*
- * $Id: TestTitle.java,v 1.1 2014-11-12 00:16:03 thib_gc Exp $
+ * $Id: TestTitle.java,v 1.2 2014-11-17 22:28:55 thib_gc Exp $
  */
 
 /*
@@ -45,8 +45,8 @@ public class TestTitle extends LockssTestCase {
   public static final String ISSNL_VALUE = "ISSN-L Value";
   public static final String TYPE_VALUE = "Type Value";
   
-  public static final String FOO_KEY = "fookey";
-  public static final String FOO_VALUE = "fooval";
+  public static final String FOO_KEY = "titlefookey";
+  public static final String FOO_VALUE = "titlefooval";
 
   public void testKeys() throws Exception {
     assertEquals("doi", Title.DOI);
@@ -77,23 +77,23 @@ public class TestTitle extends LockssTestCase {
   }
   
   public void testTitle() throws Exception {
-    Map<String, String> map = new HashMap<String, String>();
-    map.put(Title.NAME, NAME_VALUE);
-    map.put(Title.DOI, DOI_VALUE);
-    map.put(Title.EISSN, EISSN_VALUE);
-    map.put(Title.ISSN, ISSN_VALUE);
-    map.put(Title.ISSNL, ISSNL_VALUE);
-    map.put(Title.TYPE, TYPE_VALUE);
-    map.put(FOO_KEY, FOO_VALUE);
     Publisher publisher = new Publisher();
+    Map<String, String> map = new HashMap<String, String>();
     Title title = new Title(publisher, map);
     assertSame(publisher, title.getPublisher());
+    map.put(Title.NAME, NAME_VALUE);
     assertEquals(NAME_VALUE, title.getName());
+    map.put(Title.DOI, DOI_VALUE);
     assertEquals(DOI_VALUE, title.getDoi());
+    map.put(Title.EISSN, EISSN_VALUE);
     assertEquals(EISSN_VALUE, title.getEissn());
+    map.put(Title.ISSN, ISSN_VALUE);
     assertEquals(ISSN_VALUE, title.getIssn());
+    map.put(Title.ISSNL, ISSNL_VALUE);
     assertEquals(ISSNL_VALUE, title.getIssnl());
+    map.put(Title.TYPE, TYPE_VALUE);
     assertEquals(TYPE_VALUE, title.getType());
+    map.put(FOO_KEY, FOO_VALUE);
     assertEquals(FOO_VALUE, title.getArbitraryValue(FOO_KEY));
     assertNull(title.getArbitraryValue("X" + FOO_KEY));
   }
