@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponHtmlHashFilterFactory.java,v 1.9 2014-11-13 23:57:37 alexandraohlson Exp $
+ * $Id: BaseAtyponHtmlHashFilterFactory.java,v 1.10 2014-11-18 20:06:29 thib_gc Exp $
  */
 
 /*
@@ -223,10 +223,11 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
    * @param in  Incoming input stream
    * @param encoding  The encoding
    * @param moreNodes An array of NodeFilters to be excluded with atyponBaseFilters
-   * @param doWhiteSpace A boolean to indicate if returned stream should also have  white spaces consolidated
+   * @param doWS A boolean to indicate if returned stream should also have  white spaces consolidated
    * 
-   * Create an override of the method doWSFiltering() returning a boolean and use
-   * the createFilteredInputStream call that doesn't take the boolean for whitespace
+   * @deprecated Use {@link #createFilteredInputStream(ArchivalUnit, InputStream, String, NodeFilter[])}
+   *  and override {@link #doWSFiltering()} to return the desired value for
+   *  <code>doWS</code> instead.
    */
   @Deprecated
   public InputStream createFilteredInputStream(ArchivalUnit au,
