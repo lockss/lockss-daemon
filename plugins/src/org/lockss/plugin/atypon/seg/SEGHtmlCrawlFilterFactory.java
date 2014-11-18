@@ -1,5 +1,5 @@
 /*
- * $Id: SEGHtmlCrawlFilterFactory.java,v 1.5 2014-10-08 16:11:25 alexandraohlson Exp $
+ * $Id: SEGHtmlCrawlFilterFactory.java,v 1.6 2014-11-18 20:15:29 thib_gc Exp $
  */
 
 /*
@@ -48,12 +48,15 @@ public class SEGHtmlCrawlFilterFactory
   static NodeFilter[] filters = new NodeFilter[] {
     // prev-next article is handled by parent
     
-    // left column of an article - all except Download Citations
+    // The bottom of the left column has a Session History tab which then may
+    // contain links to articles (not distinguished by crawl rules). But the
+    // link to showCitFormats (the RIS file download page) needs to be
+    // picked up.
     HtmlNodeFilters.allExceptSubtree(
-        HtmlNodeFilters.tagWithAttribute( 
-            "div", "class", "yui3-u yui3-u-1-4 leftColumn"),
-            HtmlNodeFilters.tagWithAttributeRegex(
-                "a", "href", "/action/showCitFormats\\?")),
+        HtmlNodeFilters.tagWithAttributeRegex( 
+            "div", "class", "leftColumn"),
+        HtmlNodeFilters.tagWithAttributeRegex(
+            "a", "href", "/action/showCitFormats\\?")),
 
     // external links within References section
     // Volume 17, Issue 1

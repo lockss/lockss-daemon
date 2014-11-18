@@ -1,5 +1,5 @@
 /*
- * $Id: SEGHtmlHashFilterFactory.java,v 1.4 2014-10-31 23:17:00 ldoan Exp $
+ * $Id: SEGHtmlHashFilterFactory.java,v 1.5 2014-11-18 20:15:29 thib_gc Exp $
  */
 
 /*
@@ -66,10 +66,10 @@ public class SEGHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
         
         // left column - all except Download Citations
         HtmlNodeFilters.allExceptSubtree(
-            HtmlNodeFilters.tagWithAttribute(
-                "div", "class", "yui3-u yui3-u-1-4 leftColumn"),
-                HtmlNodeFilters.tagWithAttributeRegex(
-                    "a", "href", "/action/showCitFormats\\?")),                           
+            HtmlNodeFilters.tagWithAttributeRegex(
+                "div", "class", "leftColumn"),
+            HtmlNodeFilters.tagWithAttributeRegex(
+                "a", "href", "/action/showCitFormats\\?")),                           
                 	    
 	// right column ads - <div class="mainAd">
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "mainAd"),
@@ -84,8 +84,12 @@ public class SEGHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
     // super.createFilteredInputStream adds segFilters to the baseAtyponFilters
     // and returns the filtered input stream using an array of NodeFilters that 
     // combine the two arrays of NodeFilters.
-    boolean doWS = true;
-    return super.createFilteredInputStream(au, in, encoding, segFilters, doWS);
+    return super.createFilteredInputStream(au, in, encoding, segFilters);
     }
+  
+  @Override
+  public boolean doWSFiltering() {
+    return true;
+  }
     
 }
