@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.385 2014-11-12 20:12:01 wkwilson Exp $
+ $Id: build.xml,v 1.386 2014-11-18 00:02:08 thib_gc Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -239,12 +239,14 @@ Args:
   				  value="${lib}/commons-cli-1.2.jar"/>
   <property name="commons.collections.jar"
   				  value="${lib}/commons-collections-3.2.1.jar"/>
+  <property name="commons.collections4.jar"
+	 			  value="${lib}/commons-collections4-4.0.jar"/>
   <property name="commons.configuration.jar"
                   value="${lib}/commons-configuration-1.10.jar"/>
   <property name="commons.logging.jar"
   				  value="${lib}/commons-logging-1.2.jar"/>
   <property name="commons.codec.jar"
-  				  value="${lib}/commons-codec-1.9.jar"/>
+  				  value="${lib}/commons-codec-1.10.jar"/>
   <property name="commons.compress.jar"
   				  value="${lib}/commons-compress-1.9.jar"/>
   <property name="commons.httpclient.jar"
@@ -437,6 +439,7 @@ Args:
     <pathelement path="${commons.lang.jar}" />
     <pathelement path="${commons.lang3.jar}" /><!-- @since 1.67 -->
     <pathelement path="${commons.collections.jar}" />
+    <pathelement path="${commons.collections4.jar}" />
     <pathelement path="${commons.logging.jar}" />
     <pathelement path="${commons.cli.jar}" />
     <pathelement path="${commons.codec.jar}" />
