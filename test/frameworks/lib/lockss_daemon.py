@@ -1,6 +1,6 @@
 """LOCKSS daemon interface library."""
 
-# $Id: lockss_daemon.py,v 1.39 2013-04-09 19:12:37 dshr Exp $
+# $Id: lockss_daemon.py,v 1.40 2014-11-19 08:19:59 tlipkis Exp $
 
 __copyright__ = '''\
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
@@ -397,7 +397,7 @@ class Node:
         try:
             return open( self.filename() ).read()
         except IOError:
-            raise LockssError( 'File is not readable: ' + content_path )
+            raise LockssError( 'File is not readable: ' + self.filename() )
 
 
 class Client:
