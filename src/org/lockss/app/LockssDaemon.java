@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.126 2014-10-24 19:43:32 thib_gc Exp $
+ * $Id: LockssDaemon.java,v 1.127 2014-11-19 08:18:08 tlipkis Exp $
  */
 
 /*
@@ -994,6 +994,19 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     return new StartupOptions(propUrls, groupNames);
   }
 
+
+  /** ImageIO gets invoked on user-supplied content (by (nyi) format
+   * conversion and PDFBox).  Disable native code libraries to avoid any
+   * possibility of exploiting vulnerabilities */
+  public static String IMAGEIO_DISABLE_NATIVE_CODE =
+    "com.sun.media.imageio.disableCodecLib";
+
+  // static so can run before instantiating this class, which causes more
+  // classes to be loaded
+  protected static void setSystemProperties() {
+    System.setProperty(IMAGEIO_DISABLE_NATIVE_CODE, "true");
+  }
+
   /**
    * Main entry to the daemon.  Startup arguments:
    *
@@ -1015,6 +1028,8 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     }
 
     StartupOptions opts = getStartupOptions(args);
+
+    setSystemProperties();
 
     try {
       daemon = new LockssDaemon(opts.getPropUrls(),
