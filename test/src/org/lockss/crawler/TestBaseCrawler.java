@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCrawler.java,v 1.23 2014-11-12 20:11:27 wkwilson Exp $
+ * $Id: TestBaseCrawler.java,v 1.24 2014-11-19 22:46:24 wkwilson Exp $
  */
 
 /*
@@ -38,7 +38,6 @@ import java.net.*;
 
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
-import org.lockss.daemon.LockssPermissionCheckerTestCase;
 import org.lockss.config.*;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;
@@ -289,6 +288,24 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
     assertNotNull(uc);
     MockUrlCacher muc = (MockUrlCacher)uc;
     assertSame(crawler.getAu(), muc.getArchivalUnit());
+  }
+  
+  public void testUrlCacherWatchDog() {
+    MockLockssWatchdog wdog = new MockLockssWatchdog();
+    TestableBaseCrawler crawler = new TestableBaseCrawler(mau, aus);
+    crawler.setWatchdog(wdog);
+    UrlCacher uc = crawler.makeUrlCacher(
+        new UrlData(new StringInputStream("hello"),
+        new CIProperties(), startUrl));
+    assertSame(wdog, uc.getWatchdog());
+  }
+  
+  public void testUrlFetcherWatchDog() {
+    MockLockssWatchdog wdog = new MockLockssWatchdog();
+    TestableBaseCrawler crawler = new TestableBaseCrawler(mau, aus);
+    crawler.setWatchdog(wdog);
+    UrlFetcher uf = crawler.makeUrlFetcher(startUrl);
+    assertSame(wdog, uf.getWatchdog());
   }
 
   StorePermissionScheme getConfigPermissionScheme() {

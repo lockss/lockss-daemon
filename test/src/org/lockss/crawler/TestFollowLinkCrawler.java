@@ -1,5 +1,5 @@
 /*
- * $Id: TestFollowLinkCrawler.java,v 1.45 2014-11-12 20:11:28 wkwilson Exp $
+ * $Id: TestFollowLinkCrawler.java,v 1.46 2014-11-19 22:46:24 wkwilson Exp $
  */
 
 /*
@@ -624,26 +624,6 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 
     ce = new MyMockRetryableCacheException("Test exception");
     assertEquals(765432, cf.getRetryDelay(ce));
-  }
-
-  public void testWillNotParseExistingPagesForUrls() {
-
-    String url1 = "http://www.example.com/link3.html";
-    String url2 = "http://www.example.com/link4.html";
-    startUrls = ListUtil.list(startUrl);
-    crawler.setUrlsToFollow(ListUtil.list(url1));
-    extractor.addUrlsToReturn(url1, SetUtil.set(url2));
-
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
-    mau.addUrl(startUrl, true, true);
-    mau.addUrl(url1, true, true);
-    mau.addUrl(url2);
-    crawlRule.addUrlToCrawl(url1);
-    crawlRule.addUrlToCrawl(url2);
-
-    assertTrue(crawler.doCrawl());
-    Set expected = SetUtil.set(startUrl);
-    assertEquals(expected, cus.getCachedUrls());
   }
 
   private static final String CW_URL1 = "http://www.example.com/link1.html";

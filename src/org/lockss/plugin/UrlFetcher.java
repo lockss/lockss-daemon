@@ -1,5 +1,5 @@
 /*
- * $Id: UrlFetcher.java,v 1.1 2014-11-12 20:11:23 wkwilson Exp $
+ * $Id: UrlFetcher.java,v 1.2 2014-11-19 22:46:24 wkwilson Exp $
  */
 
 /*
@@ -157,6 +157,8 @@ public interface UrlFetcher {
   public void reset();
   
   public void setWatchdog(LockssWatchdog wdog);
+  
+  public LockssWatchdog getWatchdog();
   
   public static class RedirectScheme {
     /** Follow redirects */

@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.127 2014-11-12 20:11:43 wkwilson Exp $
+ * $Id: NullPlugin.java,v 1.128 2014-11-19 22:46:24 wkwilson Exp $
  */
 
 /*
@@ -335,6 +335,10 @@ public class NullPlugin {
     }
 
     public void setWatchdog(LockssWatchdog wdog) {
+    }
+    
+    public LockssWatchdog getWatchdog() {
+      return null;
     }
 
     public void setPreviousContentType(String previousContentType) {

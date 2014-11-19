@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlFetcher.java,v 1.1 2014-11-12 20:11:53 wkwilson Exp $
+ * $Id: BaseUrlFetcher.java,v 1.2 2014-11-19 22:46:24 wkwilson Exp $
  */
 
 /*
@@ -103,6 +103,13 @@ public class BaseUrlFetcher implements UrlFetcher {
   private static final String SHOULD_REFETCH_ON_SET_COOKIE =
       "refetch_on_set_cookie";
   private static final boolean DEFAULT_SHOULD_REFETCH_ON_SET_COOKIE = true;
+  
+  /** If true, any thread watchdog will be stopped while waiting on a rate
+   * limiter. */
+  public static final String PARAM_STOP_WATCHDOG_DURING_PAUSE =
+    Configuration.PREFIX + "baseuc.stopWatchdogDuringPause";
+  public static final boolean DEFAULT_STOP_WATCHDOG_DURING_PAUSE = false;
+
   
   protected final String origUrl;		// URL with which I was created
   protected String fetchUrl;		// possibly affected by redirects
@@ -568,7 +575,22 @@ public class BaseUrlFetcher implements UrlFetcher {
   
   protected void pauseBeforeFetch() {
     if (crl != null) {
-      crl.pauseBeforeFetch(fetchUrl, previousContentType);
+      long wDogInterval = 0;
+      if (wdog != null &&
+    CurrentConfig.getBooleanParam(PARAM_STOP_WATCHDOG_DURING_PAUSE,
+          DEFAULT_STOP_WATCHDOG_DURING_PAUSE)) {
+  wDogInterval = wdog.getWDogInterval();
+      }
+      try {
+  if (wDogInterval > 0) {
+    wdog.stopWDog();
+  }
+  crl.pauseBeforeFetch(fetchUrl, previousContentType);
+      } finally {
+  if (wDogInterval > 0) {
+    wdog.startWDog(wDogInterval);
+  }
+      }
     }
   }
   
@@ -736,6 +758,10 @@ public class BaseUrlFetcher implements UrlFetcher {
   @Override
   public void setWatchdog(LockssWatchdog wdog) {
     this.wdog = wdog;
+  }
+  
+  public LockssWatchdog getWatchdog() {
+    return wdog;
   }
  
 }

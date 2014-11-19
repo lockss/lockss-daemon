@@ -1,5 +1,5 @@
 /*
- * $Id: DefaultUrlCacher.java,v 1.1 2014-11-12 20:11:53 wkwilson Exp $
+ * $Id: DefaultUrlCacher.java,v 1.2 2014-11-19 22:46:24 wkwilson Exp $
  */
 
 /*
@@ -87,7 +87,7 @@ public class DefaultUrlCacher implements UrlCacher {
   public DefaultUrlCacher(ArchivalUnit owner, UrlData ud) {
     if(ud.headers == null) {
       throw new NullPointerException(
-          "Unable to store conent with null headers");
+          "Unable to store content with null headers");
     }
     origUrl = ud.url;
     headers = ud.headers;
@@ -134,6 +134,10 @@ public class DefaultUrlCacher implements UrlCacher {
 
   public void setWatchdog(LockssWatchdog wdog) {
     this.wdog = wdog;
+  }
+  
+  public LockssWatchdog getWatchdog() {
+    return wdog;
   }
   
   public void setRedirectUrls(List<String> redirectUrls) {

@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.105 2014-11-12 20:11:23 wkwilson Exp $
+ * $Id: FollowLinkCrawler.java,v 1.106 2014-11-19 22:46:25 wkwilson Exp $
  */
 
 /*
@@ -548,6 +548,9 @@ public class FollowLinkCrawler extends BaseCrawler {
     } else {
       // If didn't fetch, check for existing substance file
       checkSubstanceCollected(au.makeCachedUrl(url));
+      
+      parseQueue.put(curl);
+      
       return true;
     }
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: UrlCacher.java,v 1.33 2014-11-12 20:11:22 wkwilson Exp $
+ * $Id: UrlCacher.java,v 1.34 2014-11-19 22:46:24 wkwilson Exp $
  */
 
 /*
@@ -90,6 +90,8 @@ public interface UrlCacher {
    * @see StreamUtil#copy(InputStream, OutputStream, long, LockssWatchdog)
    */
   public void setWatchdog(LockssWatchdog wdog);
+  
+  public LockssWatchdog getWatchdog();
 
   /**
    * Copies the content and properties from the source into the cache.

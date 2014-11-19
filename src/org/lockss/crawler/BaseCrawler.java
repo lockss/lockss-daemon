@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.55 2014-11-19 08:22:22 tlipkis Exp $
+ * $Id: BaseCrawler.java,v 1.56 2014-11-19 22:46:25 wkwilson Exp $
  */
 
 /*
@@ -594,6 +594,7 @@ public abstract class BaseCrawler implements Crawler {
     if (proxyHost != null) {
       uf.setProxy(proxyHost, proxyPort);
     }
+    uf.setWatchdog(wdog);
     return uf;
   }
   

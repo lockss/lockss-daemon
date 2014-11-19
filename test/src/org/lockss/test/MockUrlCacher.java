@@ -1,5 +1,5 @@
 /*
- * $Id: MockUrlCacher.java,v 1.43 2014-11-12 20:11:43 wkwilson Exp $
+ * $Id: MockUrlCacher.java,v 1.44 2014-11-19 22:46:24 wkwilson Exp $
  */
 
 /*
@@ -65,6 +65,7 @@ public class MockUrlCacher implements UrlCacher {
   private CacheException infoException;
   private CIProperties headers;
   private InputStream input;
+  private LockssWatchdog wdog;
 
   public MockUrlCacher(MockArchivalUnit au, UrlData ud){
     this.url = ud.url;
@@ -133,6 +134,11 @@ public class MockUrlCacher implements UrlCacher {
   }
 
   public void setWatchdog(LockssWatchdog wdog) {
+    this.wdog = wdog;
+  }
+  
+  public LockssWatchdog getWatchdog() {
+    return wdog;
   }
 
   public void setupCachedUrl(String contents) {

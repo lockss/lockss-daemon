@@ -1,5 +1,5 @@
 /*
- * $Id: ClockssUrlFetcher.java,v 1.1 2014-11-12 20:11:26 wkwilson Exp $
+ * $Id: ClockssUrlFetcher.java,v 1.2 2014-11-19 22:46:24 wkwilson Exp $
  */
 
 /*
@@ -99,6 +99,10 @@ public class ClockssUrlFetcher implements UrlFetcher {
 
   public void setWatchdog(LockssWatchdog wdog) {
     uf.setWatchdog(wdog);
+  }
+  
+  public LockssWatchdog getWatchdog() {
+    return uf.getWatchdog();
   }
 
   public void setCrawlRateLimiter(CrawlRateLimiter crl) {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestFollowLinkCrawler2.java,v 1.1 2014-11-12 20:11:28 wkwilson Exp $
+ * $Id: TestFollowLinkCrawler2.java,v 1.2 2014-11-19 22:46:24 wkwilson Exp $
  */
 
 /*
@@ -410,7 +410,7 @@ public class TestFollowLinkCrawler2 extends LockssTestCase {
     MyCrawlerStatus crawlStatus = (MyCrawlerStatus)crawler.getCrawlerStatus();
     assertEquals(Crawler.STATUS_SUCCESSFUL, crawlStatus.getCrawlStatus());
     assertEquals(0, crawlStatus.getNumUrlsWithErrors());
-    assertEquals(1, crawlStatus.getNumParsed());    
+    assertEquals(5, crawlStatus.getNumParsed());    
     assertEquals(0, crawlStatus.getNumPending());    
     assertEquals(ListUtil.fromArray(new String[] {
       "add", startUrl,
@@ -840,7 +840,7 @@ public class TestFollowLinkCrawler2 extends LockssTestCase {
     }
     assertEquals(expResult, crawler.doCrawl());
     List actualFetched = crawler.getFetchedUrls();
-    actualFetched.retainAll(crawler.getParsedUrls());
+
     assertEquals(permuteBy(urls, expFetched), actualFetched);
   }
 
@@ -1156,10 +1156,14 @@ public class TestFollowLinkCrawler2 extends LockssTestCase {
     protected void doCrawlEndActions() {
     }
 
+    /**
+     * This is weird, but updateCacheStats is the only method 
+     * that is only called when a file is fetched
+     */
     @Override
-    protected boolean fetch(CrawlUrlData curl) {
+    protected void updateCacheStats(FetchResult res, CrawlUrlData curl) {
       fetchedUrls.add(curl.getUrl());
-      return super.fetch(curl);
+      super.updateCacheStats(res, curl);
     }
     
     @Override

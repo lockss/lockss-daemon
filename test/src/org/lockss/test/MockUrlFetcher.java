@@ -1,5 +1,5 @@
 /*
- * $Id: MockUrlFetcher.java,v 1.1 2014-11-12 20:11:43 wkwilson Exp $
+ * $Id: MockUrlFetcher.java,v 1.2 2014-11-19 22:46:24 wkwilson Exp $
  */
 
 /*
@@ -150,6 +150,10 @@ public class MockUrlFetcher implements UrlFetcher {
 
   public void setWatchdog(LockssWatchdog wdog) {
     this.wdog = wdog;
+  }
+  
+  public LockssWatchdog getWatchdog() {
+    return wdog;
   }
 
   public void setCachingException(IOException e, int numTimesToThrow) {
