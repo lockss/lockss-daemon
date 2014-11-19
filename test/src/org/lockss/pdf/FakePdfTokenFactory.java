@@ -1,10 +1,10 @@
 /*
- * $Id: FakePdfTokenFactory.java,v 1.3 2012-07-19 08:01:55 thib_gc Exp $
+ * $Id: FakePdfTokenFactory.java,v 1.4 2014-11-19 01:02:07 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,7 +39,7 @@ public class FakePdfTokenFactory implements PdfTokenFactory {
   @Override
   public PdfToken makeArray() {
     return new FakePdfToken() {
-      @Override public List<PdfToken> getArray() { return new ArrayList<PdfToken>(); }
+      @Override public List<PdfToken> getArray() { return Collections.<PdfToken>emptyList(); }
       @Override public boolean isArray() { return true; }
     };
   }
@@ -63,7 +63,7 @@ public class FakePdfTokenFactory implements PdfTokenFactory {
   @Override
   public PdfToken makeDictionary() {
     return new FakePdfToken() {
-      @Override public Map<String, PdfToken> getDictionary() { return new HashMap<String, PdfToken>(); }
+      @Override public Map<String, PdfToken> getDictionary() { return Collections.<String, PdfToken>emptyMap(); }
       @Override public boolean isDictionary() { return true; }
     };
   }
@@ -71,7 +71,7 @@ public class FakePdfTokenFactory implements PdfTokenFactory {
   @Override
   public PdfToken makeDictionary(final Map<String, PdfToken> mapping) {
     return new FakePdfToken() {
-      @Override public Map<String, PdfToken> getDictionary() { return mapping; }
+      @Override public Map<String, PdfToken> getDictionary() { return new HashMap<String, PdfToken>(mapping); }
       @Override public boolean isDictionary() { return true; }
     };
   }
