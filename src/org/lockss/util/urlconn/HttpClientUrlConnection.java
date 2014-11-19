@@ -1,5 +1,5 @@
 /*
- * $Id: HttpClientUrlConnection.java,v 1.39 2014-10-15 22:40:56 clairegriffin Exp $
+ * $Id: HttpClientUrlConnection.java,v 1.40 2014-11-19 08:19:41 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -51,6 +51,11 @@ import org.lockss.util.*;
 public class HttpClientUrlConnection extends BaseLockssUrlConnection {
   private static Logger log = Logger.getLogger("HttpClientUrlConnection");
 
+  /* Accept header value.  Can be overridden by plugin. */
+  static final String PARAM_ACCEPT_HEADER = PREFIX + "acceptHeader";
+  static final String DEFAULT_ACCEPT_HEADER =
+    "text/html, image/gif, image/jpeg; q=.2, */*; q=.2";
+
   /* If true, the InputStream returned from getResponseInputStream() will
    * be wrapped in an EofBugInputStream */
   static final String PARAM_USE_WRAPPER_STREAM = PREFIX + "useWrapperStream";
@@ -94,6 +99,7 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
   }
 
   private static ServerTrustLevel serverTrustLevel;
+  private static String acceptHeader = DEFAULT_ACCEPT_HEADER;
 
   private static SecureProtocolSocketFactory
     getDefaultSocketFactory(ServerTrustLevel stl) {
@@ -114,6 +120,8 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
 			       Configuration oldConfig,
 			       Configuration.Differences diffs) {
     if (diffs.contains(PREFIX)) {
+      acceptHeader = config.get(PARAM_ACCEPT_HEADER, DEFAULT_ACCEPT_HEADER);
+
       HttpParams params = DefaultHttpParams.getDefaultParams();
       if (diffs.contains(PARAM_COOKIE_POLICY)) {
 	String policy = config.get(PARAM_COOKIE_POLICY, DEFAULT_COOKIE_POLICY);
@@ -467,14 +475,10 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     }
   }
 
-  /** Copied from sun.net.www.protocol.http.HttpURLConnection */
-  static final String ACCEPT_STRING =
-    "text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2";
-
   /** Mimic Java 1.3 HttpURLConnection default request header behavior */
   private void mimicSunRequestHeaders() {
     if (!isHeaderSet(method.getRequestHeader("Accept"))) {
-      setRequestProperty("Accept", ACCEPT_STRING);
+      setRequestProperty("Accept", acceptHeader);
     }
     if (!isHeaderSet(method.getRequestHeader("Connection"))) {
       setRequestProperty("Connection", "keep-alive");

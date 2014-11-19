@@ -1,5 +1,5 @@
 /*
- * $Id: TestHttpClientUrlConnection.java,v 1.26 2014-07-01 18:04:24 tlipkis Exp $
+ * $Id: TestHttpClientUrlConnection.java,v 1.27 2014-11-19 08:19:41 tlipkis Exp $
  */
 
 /*
@@ -194,7 +194,7 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     hdr = method.getRequestHeader("connection");
     assertEquals("keep-alive", hdr.getValue());
     hdr = method.getRequestHeader("accept");
-    assertEquals(HttpClientUrlConnection.ACCEPT_STRING, hdr.getValue());
+    assertEquals(HttpClientUrlConnection.DEFAULT_ACCEPT_HEADER, hdr.getValue());
 
   }
 
@@ -353,7 +353,7 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     hdr = method.getRequestHeader("connection");
     assertEquals("keep-alive", hdr.getValue());
     hdr = method.getRequestHeader("accept");
-    assertEquals(HttpClientUrlConnection.ACCEPT_STRING, hdr.getValue());
+    assertEquals(HttpClientUrlConnection.DEFAULT_ACCEPT_HEADER, hdr.getValue());
     HostConfiguration hc = client.getHostConfiguration();
     assertEquals("phost", hc.getProxyHost());
     assertEquals(9009, hc.getProxyPort());
@@ -367,7 +367,7 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     hdr = method.getRequestHeader("connection");
     assertEquals("keep-alive", hdr.getValue());
     hdr = method.getRequestHeader("accept");
-    assertEquals(HttpClientUrlConnection.ACCEPT_STRING, hdr.getValue());
+    assertEquals(HttpClientUrlConnection.DEFAULT_ACCEPT_HEADER, hdr.getValue());
     hc = client.getHostConfiguration();
     assertEquals(null, hc.getProxyHost());
     assertEquals(-1, hc.getProxyPort());
@@ -411,7 +411,7 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     hdr = method.getRequestHeader("connection");
     assertEquals("keep-alive", hdr.getValue());
     hdr = method.getRequestHeader("accept");
-    assertEquals(HttpClientUrlConnection.ACCEPT_STRING, hdr.getValue());
+    assertEquals(HttpClientUrlConnection.DEFAULT_ACCEPT_HEADER, hdr.getValue());
     HostConfiguration hc = client.getHostConfiguration();
     assertEquals(InetAddress.getByName(local), hc.getLocalAddress());
 
@@ -423,7 +423,7 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     hdr = method.getRequestHeader("connection");
     assertEquals("keep-alive", hdr.getValue());
     hdr = method.getRequestHeader("accept");
-    assertEquals(HttpClientUrlConnection.ACCEPT_STRING, hdr.getValue());
+    assertEquals(HttpClientUrlConnection.DEFAULT_ACCEPT_HEADER, hdr.getValue());
     hc = client.getHostConfiguration();
     assertEquals(null, hc.getLocalAddress());
   }
