@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.128 2014-11-12 20:11:54 wkwilson Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.129 2014-11-19 08:19:16 tlipkis Exp $
  */
 
 /*
@@ -1386,10 +1386,10 @@ public class ArchivalUnitStatus
       Set<String> other = new TreeSet<String>();
       for (Map.Entry entry : paramMap.entrySet()) {
 	String key = (String)entry.getKey();
-	String val = entry.getValue().toString();
+	Object val = entry.getValue();
 	Map row = new HashMap();
 	row.put("key", key);
-	row.put("val", val);
+	row.put("val", val != null ? val.toString() : "(null)");
 	putTypeSort(row, key, au, plug);
 	rows.add(row);
       }
