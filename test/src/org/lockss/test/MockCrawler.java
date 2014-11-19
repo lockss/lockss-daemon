@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawler.java,v 1.17 2014-11-12 20:11:44 wkwilson Exp $
+ * $Id: MockCrawler.java,v 1.18 2014-11-19 08:22:22 tlipkis Exp $
  */
 
 /*
@@ -32,11 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.test;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import org.lockss.util.Deadline;
 import org.lockss.util.urlconn.CacheException;
@@ -189,6 +185,8 @@ public class MockCrawler extends NullCrawler {
     public List fetchQueue = new ArrayList();
     public List permProbe = new ArrayList();
     private PermissionMap permissionMap;
+    private List<String> globallyPermittedHosts = Collections.EMPTY_LIST;
+
     public MockCrawlerFacade() {
       au = new MockArchivalUnit();
     }
@@ -292,6 +290,15 @@ public class MockCrawler extends NullCrawler {
     @Override
     public int permissonStreamResetMax() {
       return BaseCrawler.DEFAULT_PERMISSION_BUF_MAX;
+    }
+
+    public void setGloballyPermittedHosts(List<String> hosts) {
+      globallyPermittedHosts = hosts;
+    }
+
+    @Override
+    public boolean isGloballyPermittedHost(String host) {
+      return globallyPermittedHosts.contains(host);
     }
 
   }

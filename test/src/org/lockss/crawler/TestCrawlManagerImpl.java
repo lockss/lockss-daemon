@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.98 2014-11-12 20:11:28 wkwilson Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.99 2014-11-19 08:22:22 tlipkis Exp $
 */
 
 /*
@@ -977,6 +977,13 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
       assertTrue(crawlManager.isGloballyExcludedUrl(null,
 						    "http://bjo.bmj.com/content/93/2/176.abstract/reports/most-read/reports/most-read/reports/most-read/reports/most-read/reply"));
+    }
+
+    public void testGloballyPermittedHosts() {
+      assertFalse(crawlManager.isGloballyPermittedHost("foo27.com"));
+      ConfigurationUtil.addFromArgs(CrawlManagerImpl.PARAM_PERMITTED_HOSTS,
+				    "foo[0-9]+\\.com");
+      assertTrue(crawlManager.isGloballyPermittedHost("foo27.com"));
     }
   }
 

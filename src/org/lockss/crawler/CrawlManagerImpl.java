@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.151 2014-11-12 20:11:23 wkwilson Exp $
+ * $Id: CrawlManagerImpl.java,v 1.152 2014-11-19 08:22:22 tlipkis Exp $
  */
 
 /*
@@ -257,6 +257,13 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     PREFIX + "globallyExcludedUrlPattern";
   static final String DEFAULT_EXCLUDE_URL_PATTERN = null;
 
+  /** Regexp matching hosts from which collection is permitted without
+   * explicit permission on the host.  Intended for distribution sites for
+   * standard vss, js, etc. libraries. */
+  public static final String PARAM_PERMITTED_HOSTS =
+    PREFIX + "globallyPermittedHosts";
+  static final String DEFAULT_PERMITTED_HOSTS = null;
+
   static final String WDOG_PARAM_CRAWLER = "Crawler";
   static final long WDOG_DEFAULT_CRAWLER = 2 * Constants.HOUR;
 
@@ -307,8 +314,10 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   private long paramMinWindowOpenFor = DEFAULT_MIN_WINDOW_OPEN_FOR;
   private boolean paramRestartAfterCrash = DEFAULT_RESTART_AFTER_CRASH;
   
-  /** Note that this is an Apache ORO Pattern, not a Java Pattern */
+  /** Note that these are Apache ORO Patterns, not Java Patterns */
   private Pattern globallyExcludedUrlPattern;
+  
+  private Pattern globallyPermittedHostPattern;;
   
   private PatternIntMap crawlPriorityAuidMap;
 
@@ -525,6 +534,11 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 			      DEFAULT_EXCLUDE_URL_PATTERN);
       }
 
+      if (changedKeys.contains(PARAM_PERMITTED_HOSTS)) {
+	setGloballyPermittedHostPattern(config.get(PARAM_PERMITTED_HOSTS,
+						   DEFAULT_PERMITTED_HOSTS));
+      }
+
       if (changedKeys.contains(PARAM_MAX_REPAIR_RATE)) {
 	repairRateLimiters.resetRateLimiters(config);
       }
@@ -590,6 +604,29 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     logger.debug("No global exclude pattern");
   }
 
+  public boolean isGloballyPermittedHost(String host) {
+    if (globallyPermittedHostPattern == null) {
+      return false;
+    }
+    return RegexpUtil.getMatcher().contains(host, globallyPermittedHostPattern);
+  }
+
+  void setGloballyPermittedHostPattern(String pat) {
+    if (pat != null) {
+      int flags =
+	Perl5Compiler.READ_ONLY_MASK | Perl5Compiler.CASE_INSENSITIVE_MASK;
+      try {
+	globallyPermittedHostPattern = RegexpUtil.getCompiler().compile(pat,
+									flags);
+	logger.info("Globally permitted host pattern: " + pat);
+	return;
+      } catch (MalformedPatternException e) {
+	logger.error("Illegal globally permitted host pattern: " + pat, e);
+      }
+    }
+    globallyPermittedHostPattern = null;
+    logger.debug("No global exclude pattern");
+  }
 
   static final Runnable NULL_RUNNER = new Runnable() {
       public void run() {}

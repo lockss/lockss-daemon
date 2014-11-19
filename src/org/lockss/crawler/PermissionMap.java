@@ -1,5 +1,5 @@
 /*
- * $Id: PermissionMap.java,v 1.35 2014-11-12 20:11:23 wkwilson Exp $
+ * $Id: PermissionMap.java,v 1.36 2014-11-19 08:22:22 tlipkis Exp $
  */
 
 /*
@@ -98,17 +98,27 @@ public class PermissionMap {
    * @return PermissionRecord for the host
    */
   private PermissionRecord get(String url) throws MalformedURLException{
-    String key = UrlUtil.getHost(url).toLowerCase();
+    String host = UrlUtil.getHost(url).toLowerCase();
     
-    PermissionRecord res = permissionAtUrl.get(key);
-    String perHostPath;
-    if (res == null && (perHostPath = getPerHostPermissionPath()) != null) {
-      // if no PermissionRecord for this host, but we have a permission
-      // path to use on "unknown" hosts, create a record for it
-      String permUrl = UrlUtil.resolveUri(UrlUtil.getUrlPrefix(url),
-					  perHostPath);
-      logger.debug2("Creating PermissionRecord: " + permUrl);
-      res = createRecord(permUrl);
+    PermissionRecord res = permissionAtUrl.get(host);
+    if (res == null) {
+      if (crawlFacade.isGloballyPermittedHost(host)) {
+	logger.debug2("Creating globally permitted host PermissionRecord: "
+		      + url);
+	res = createRecord(url);
+	res.setStatus(PermissionStatus.PERMISSION_OK);
+	return res;
+      }
+	
+      String perHostPath;
+      if ((perHostPath = getPerHostPermissionPath()) != null) {
+	// if no PermissionRecord for this host, but we have a permission
+	// path to use on "unknown" hosts, create a record for it
+	String permUrl = UrlUtil.resolveUri(UrlUtil.getUrlPrefix(url),
+					    perHostPath);
+	logger.debug2("Creating per-host PermissionRecord: " + permUrl);
+	res = createRecord(permUrl);
+      }
     }
     return res;
   }

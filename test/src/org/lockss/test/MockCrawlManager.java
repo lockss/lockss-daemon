@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawlManager.java,v 1.27 2012-05-17 17:58:05 tlipkis Exp $
+ * $Id: MockCrawlManager.java,v 1.28 2014-11-19 08:22:22 tlipkis Exp $
  */
 
 /*
@@ -114,6 +114,10 @@ public class MockCrawlManager implements CrawlManager, LockssManager {
   }
 
   public boolean isGloballyExcludedUrl(ArchivalUnit au, String url) {
+    return false;
+  }
+
+  public boolean isGloballyPermittedHost(String hoat) {
     return false;
   }
 

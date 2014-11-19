@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.54 2014-11-12 20:11:25 wkwilson Exp $
+ * $Id: BaseCrawler.java,v 1.55 2014-11-19 08:22:22 tlipkis Exp $
  */
 
 /*
@@ -747,6 +747,11 @@ public abstract class BaseCrawler implements Crawler {
     public int permissonStreamResetMax() {
       return streamResetMax;
     }
-  }
   
+    @Override
+    public boolean isGloballyPermittedHost(String host) {
+      return crawlMgr.isGloballyPermittedHost(host);
+    }
+  }
+
 }

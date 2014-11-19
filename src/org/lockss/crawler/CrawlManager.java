@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManager.java,v 1.37 2012-05-17 17:58:06 tlipkis Exp $
+ * $Id: CrawlManager.java,v 1.38 2014-11-19 08:22:22 tlipkis Exp $
  */
 
 /*
@@ -98,6 +98,8 @@ public interface CrawlManager {
 
   /** Hook to apply patterns to exclude recursive URLs, etc. */
   public boolean isGloballyExcludedUrl(ArchivalUnit au, String url);
+
+  public boolean isGloballyPermittedHost(String host);
 
   public interface Callback {
     /**

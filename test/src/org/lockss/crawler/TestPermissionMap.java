@@ -1,5 +1,5 @@
 /*
- * $Id: TestPermissionMap.java,v 1.16 2014-11-12 20:11:28 wkwilson Exp $
+ * $Id: TestPermissionMap.java,v 1.17 2014-11-19 08:22:22 tlipkis Exp $
  */
 
 /*
@@ -200,5 +200,19 @@ public class TestPermissionMap extends LockssTestCase {
     assertEquals(permissionUrl1, pMap.getPermissionUrl(url1));
     assertEquals(PermissionStatus.PERMISSION_OK, pMap.getStatus(url1));
   }
+
+  public void testGloballyPermittedHost() throws Exception {
+    ConfigurationUtil.addFromArgs(CrawlManagerImpl.PARAM_PERMITTED_HOSTS,
+				  "www.css-host.com");
+    mcf.setGloballyPermittedHosts(ListUtil.list("www.css-host.com"));
+    PermissionMap map =
+      new PermissionMap(mcf, ListUtil.list(new MockPermissionChecker(999)),
+                        null, permUrls);
+    assertTrue(map.populate());
+    assertFalse(map.hasPermission("http://www.not-example.com/"));
+    assertTrue(map.hasPermission("http://www.css-host.com/"));
+    assertFalse(mcf.getCrawlerStatus().isCrawlError());
+  }
+
 
 }
