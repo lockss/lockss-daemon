@@ -284,7 +284,7 @@
   
         title <
           name = mUX: The Journal of Mobile User Experience ;
-          issn = 2192-1121 
+          issn = 2196-873X 
         >
   
         param[base_url] = http://www.muxjournal.com/
@@ -292,7 +292,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; exists ; 2012 ; mUX: The Journal of Mobile User Experience 1 ; 1 >
-        au < testing ; exists ; 2013 ; mUX: The Journal of Mobile User Experience 2 ; 2 >
+        au < ready ; exists ; 2013 ; mUX: The Journal of Mobile User Experience 2 ; 2 >
         au < expected ; exists ; 2014 ; mUX: The Journal of Mobile User Experience 3 ; 3 >
   
     }
