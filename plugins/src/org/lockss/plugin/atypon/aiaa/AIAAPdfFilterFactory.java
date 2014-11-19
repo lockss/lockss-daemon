@@ -1,10 +1,10 @@
 /*
- * $Id: AIAAPdfFilterFactory.java,v 1.3 2014-10-08 16:11:28 alexandraohlson Exp $
+ * $Id: AIAAPdfFilterFactory.java,v 1.4 2014-11-19 01:05:52 thib_gc Exp $
  */
 
 /*
 
- Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -44,6 +44,9 @@ import org.lockss.plugin.atypon.BaseAtyponPdfDocumentFactory;
  */
 public class AIAAPdfFilterFactory extends ExtractingPdfFilterFactory {
 
+  /*
+   * FIXME 1.67: extend PdfTokenStreamStateMachine
+   */
   protected static class CitedByWorker extends PdfTokenStreamWorker {
     
     protected boolean result;
@@ -68,7 +71,7 @@ public class AIAAPdfFilterFactory extends ExtractingPdfFilterFactory {
   }
 
   public AIAAPdfFilterFactory() {
-    super(new BaseAtyponPdfDocumentFactory()); // FIXME 1.66
+    super(new BaseAtyponPdfDocumentFactory()); // FIXME 1.67
   }
   
   @Override
@@ -80,7 +83,7 @@ public class AIAAPdfFilterFactory extends ExtractingPdfFilterFactory {
     PdfUtil.normalizeTrailerId(pdfDocument);
 
     CitedByWorker worker = new CitedByWorker();
-    for (int p = 0 ; p < pdfDocument.getNumberOfPages() ; ++p) {
+    for (int p = pdfDocument.getNumberOfPages() - 1 ; p >= 0 ; --p) {
       worker.process(pdfDocument.getPage(p).getPageTokenStream());
       if (worker.result) {
         for (int r = pdfDocument.getNumberOfPages() - 1 ; r >= p ; --r) {
