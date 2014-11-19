@@ -1,5 +1,5 @@
 /*
- * $Id: TestLogger.java,v 1.31 2014-09-24 00:33:10 tlipkis Exp $
+ * $Id: TestLogger.java,v 1.32 2014-11-19 08:21:04 tlipkis Exp $
  */
 
 /*
@@ -216,7 +216,7 @@ public class TestLogger extends LockssTestCase {
     l.setLevel(Logger.LEVEL_WARNING);
     target.resetMessages();
     l.info("msg1 info");
-    l.warning(" msg2 warning");
+    l.warning(" msg2 warning\r\n");
     l.error("msg3 error\n");
     l.setLevel(Logger.LEVEL_CRITICAL);
     l.error("msg4 error");
