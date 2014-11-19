@@ -1,5 +1,5 @@
 /*
- * $Id: PlatformConfigurationWsResult.java,v 1.2 2014-06-05 05:48:47 fergaloy-sf Exp $
+ * $Id: PlatformConfigurationWsResult.java,v 1.3 2014-11-19 08:23:08 tlipkis Exp $
  */
 
 /*
@@ -49,6 +49,7 @@ public class PlatformConfigurationWsResult {
   private long currentTime;
   private long uptime;
   private DaemonVersionWsResult daemonVersion;
+  private JavaVersionWsResult javaVersion;
   private PlatformWsResult platform;
   private String currentWorkingDirectory;
   private List<String> properties;
@@ -189,6 +190,18 @@ public class PlatformConfigurationWsResult {
   }
 
   /**
+   * Provides the java version information.
+   * 
+   * @return a JavaVersionWsResult with the java version.
+   */
+  public JavaVersionWsResult getJavaVersion() {
+    return javaVersion;
+  }
+  public void setJavaVersion(JavaVersionWsResult javaVersion) {
+    this.javaVersion = javaVersion;
+  }
+
+  /**
    * Provides the platform information.
    * 
    * @return a PlatformWsResult with the platform information.
@@ -251,12 +264,14 @@ public class PlatformConfigurationWsResult {
 
   @Override
   public String toString() {
-    return "PlatformConfigurationWsResult [hostName=" + hostName
+    return "[PlatformConfigurationWsResult hostName=" + hostName
 	+ ", ipAddress=" + ipAddress + ", groups=" + groups + ", project="
 	+ project + ", v3Identity=" + v3Identity + ", mailRelay=" + mailRelay
 	+ ", adminEmail=" + adminEmail + ", disks=" + disks + ", currentTime="
-	+ currentTime + ", uptime=" + uptime + ", daemonVersion="
-	+ daemonVersion + ", platform=" + platform
+	+ currentTime + ", uptime=" + uptime
+        + ", daemonVersion=" + daemonVersion
+        + ", javaVersion=" + javaVersion
+        + ", platform=" + platform
 	+ ", currentWorkingDirectory=" + currentWorkingDirectory
 	+ ", properties=" + properties + ", buildHost=" + buildHost
 	+ ", buildTimestamp=" + buildTimestamp + "]";

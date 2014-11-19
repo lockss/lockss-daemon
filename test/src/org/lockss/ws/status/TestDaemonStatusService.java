@@ -1,5 +1,5 @@
 /*
- * $Id: TestDaemonStatusService.java,v 1.5 2014-05-30 21:45:27 fergaloy-sf Exp $
+ * $Id: TestDaemonStatusService.java,v 1.6 2014-11-19 08:23:07 tlipkis Exp $
  */
 
 /*
@@ -57,13 +57,16 @@ import org.lockss.protocol.IdentityManager;
 import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockLockssDaemon;
-import org.lockss.util.ExternalizableMap;
-import org.lockss.util.Logger;
+import org.lockss.util.*;
 import org.lockss.ws.entities.AuWsResult;
 import org.lockss.ws.entities.IdNamePair;
 import org.lockss.ws.entities.PluginWsResult;
+import org.lockss.ws.entities.PlatformConfigurationWsResult;
 import org.lockss.ws.entities.RepositorySpaceWsResult;
 import org.lockss.ws.entities.RepositoryWsResult;
+import org.lockss.ws.entities.DaemonVersionWsResult;
+import org.lockss.ws.entities.JavaVersionWsResult;
+import org.lockss.ws.entities.PlatformWsResult;
 
 /**
  * Test class for org.lockss.ws.status.DaemonStatusService
@@ -81,13 +84,9 @@ public class TestDaemonStatusService extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
 
-    tempDirPath = getTempDir().getAbsolutePath();
+    tempDirPath = setUpDiskSpace();
 
-    Properties props = new Properties();
-    props.setProperty(IdentityManager.PARAM_LOCAL_IP, TEST_LOCAL_IP);
-    props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
-		      tempDirPath);
-    ConfigurationUtil.setCurrentConfigFromProps(props);
+    ConfigurationUtil.addFromArgs(IdentityManager.PARAM_LOCAL_IP, TEST_LOCAL_IP);
 
     theDaemon = getMockLockssDaemon();
     theDaemon.setDaemonInited(true);
@@ -97,7 +96,7 @@ public class TestDaemonStatusService extends LockssTestCase {
 
     SimulatedArchivalUnit sau0 =
 	PluginTestUtil.createAndStartSimAu(MySimulatedPlugin0.class,
-	    simAuConfig(tempDirPath + "/0"));
+	    simAuConfig(tempDirPath + "0"));
 
     PluginTestUtil.crawlSimAu(sau0);
 
@@ -132,6 +131,60 @@ public class TestDaemonStatusService extends LockssTestCase {
   public void testGetAuIds() throws Exception {
     Collection<IdNamePair> auIds = service.getAuIds();
     assertEquals(2, auIds.size());
+  }
+
+  public void testGetPlatformConfiguration() throws Exception {
+    Properties p = new Properties();
+    p.setProperty(ConfigManager.PARAM_PLATFORM_FQDN, "host.foo");
+    p.setProperty(ConfigManager.PARAM_PLATFORM_IP_ADDRESS, "2.3.4.1");
+    p.setProperty(ConfigManager.PARAM_DAEMON_GROUPS, "foogroup");
+    p.setProperty(ConfigManager.PARAM_PLATFORM_PROJECT, "mercury");
+    p.setProperty(ConfigManager.PARAM_PLATFORM_LOCAL_V3_IDENTITY,
+		  "TCP:[127.0.0.1]:9720");
+    p.setProperty(ConfigManager.PARAM_PLATFORM_SMTP_HOST, "smtphost");
+    p.setProperty(ConfigManager.PARAM_PLATFORM_SMTP_PORT, "25");
+    p.setProperty(ConfigManager.PARAM_PLATFORM_ADMIN_EMAIL, "admin@host");
+    p.setProperty(ConfigManager.PARAM_PLATFORM_VERSION, "Linux RPM-1-2");
+    ConfigurationUtil.addFromProps(p);
+
+    PlatformConfigurationWsResult platConf = service.getPlatformConfiguration();
+    assertEquals("host.foo", platConf.getHostName());
+    assertEquals("2.3.4.1", platConf.getIpAddress());
+    assertEquals(ListUtil.list("foogroup"), platConf.getGroups());
+    assertEquals("mercury", platConf.getProject());
+    assertEquals("TCP:[127.0.0.1]:9720", platConf.getV3Identity());
+    assertEquals("smtphost:25", platConf.getMailRelay());
+    assertEquals("admin@host", platConf.getAdminEmail());
+    assertEquals(ListUtil.list(tempDirPath), platConf.getDisks());
+    assertTrue("Uptime should be <= current time",
+	       platConf.getUptime() <= platConf.getCurrentTime());
+    assertNotNull(platConf.getCurrentWorkingDirectory());
+    assertEquals(ConfigManager.getConfigManager().getConfigUrlList(),
+		 platConf.getProperties());
+    assertEquals(BuildInfo.getBuildProperty(BuildInfo.BUILD_HOST),
+		 platConf.getBuildHost());
+
+    DaemonVersionWsResult dver = platConf.getDaemonVersion();
+    DaemonVersion daemonVersion = ConfigManager.getDaemonVersion();
+    assertEquals(daemonVersion.displayString(), dver.getFullVersion());
+    assertEquals(daemonVersion.getMajorVersion(), dver.getMajorVersion());
+    assertEquals(daemonVersion.getMinorVersion(), dver.getMinorVersion());
+    assertEquals(daemonVersion.getBuildVersion(), dver.getBuildVersion());
+
+    JavaVersionWsResult jver = platConf.getJavaVersion();
+    // Change this when we support 1.8
+    String specVar = jver.getSpecificationVersion();
+    assertTrue("Java version expected to be 1.6 or 1.7",
+	       ListUtil.list("1.6", "1.7").contains(specVar));
+    assertTrue("java version s.b. initial substring of java spec version",
+	       jver.getSpecificationVersion().startsWith(specVar));
+    assertTrue("java version s.b. initial substring of java runtime version",
+	       jver.getRuntimeVersion().startsWith(specVar));
+
+    PlatformWsResult plat = platConf.getPlatform();
+    assertEquals("Linux RPM", plat.getName());
+    assertEquals("1", plat.getVersion());
+    assertEquals("2", plat.getSuffix());
   }
 
   /**

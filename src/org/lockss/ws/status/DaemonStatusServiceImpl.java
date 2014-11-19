@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatusServiceImpl.java,v 1.10 2014-07-11 20:08:57 fergaloy-sf Exp $
+ * $Id: DaemonStatusServiceImpl.java,v 1.11 2014-11-19 08:23:08 tlipkis Exp $
  */
 
 /*
@@ -52,6 +52,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Properties;
 import java.util.Set;
 import javax.jws.WebService;
 import org.josql.Query;
@@ -74,6 +75,7 @@ import org.lockss.ws.entities.AuStatus;
 import org.lockss.ws.entities.AuWsResult;
 import org.lockss.ws.entities.CrawlWsResult;
 import org.lockss.ws.entities.DaemonVersionWsResult;
+import org.lockss.ws.entities.JavaVersionWsResult;
 import org.lockss.ws.entities.IdNamePair;
 import org.lockss.ws.entities.LockssWebServicesFault;
 import org.lockss.ws.entities.LockssWebServicesFaultInfo;
@@ -721,6 +723,16 @@ public class DaemonStatusServiceImpl implements DaemonStatusService {
     daemonVersionResult.setBuildVersion(daemonVersion.getBuildVersion());
 
     result.setDaemonVersion(daemonVersionResult);
+
+    JavaVersionWsResult javaVersionResult = new JavaVersionWsResult();
+
+    Properties sprops = System.getProperties();
+    javaVersionResult.setVersion(sprops.getProperty("java.version"));
+    javaVersionResult.setSpecificationVersion(sprops.getProperty("java.specification.version"));
+    javaVersionResult.setRuntimeVersion(sprops.getProperty("java.runtime.version"));
+    javaVersionResult.setRuntimeName(sprops.getProperty("java.runtime.name"));
+
+    result.setJavaVersion(javaVersionResult);
 
     PlatformVersion platformVersion = Configuration.getPlatformVersion();
     PlatformWsResult platform = new PlatformWsResult();
