@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.169 2014-11-12 20:11:52 wkwilson Exp $
+ * $Id: BaseArchivalUnit.java,v 1.170 2014-11-19 08:18:53 tlipkis Exp $
  */
 
 /*
@@ -650,19 +650,18 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    */
   public boolean shouldCrawlForNewContent(AuState aus) {
     if (AuUtil.isPubDown(this)) {
-      logger.debug2("Pub down: no new content crawl possible for "+aus);
+      if (logger.isDebug2()) {
+	logger.debug2("Pub down: no new content crawl possible for "+aus);
+      }
       return false;
     }
     long timeDiff = TimeBase.msSince(aus.getLastCrawlTime());
+    boolean res = !aus.hasCrawled() || timeDiff > (newContentCrawlIntv);
     if (logger.isDebug2()) {
-      logger.debug2("Deciding whether to do new content crawl for "+aus);
+      logger.debug2("New content crawl" + (res ? "" : " not") +
+		    " needed for "+ aus);
     }
-    if (!aus.hasCrawled() || timeDiff > (newContentCrawlIntv)) {
-      logger.debug2("New content crawl needed for "+aus);
-      return true;
-    }
-    logger.debug2("No new content crawl needed for "+aus);
-    return false;
+    return res;
   }
 
 
