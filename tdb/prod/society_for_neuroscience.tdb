@@ -5,6 +5,21 @@
 
   {
     title <
+      name = eNeuro ;
+      eissn = 2373-2822 ;
+      issnl = 2373-2822
+    >
+
+      plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
+      param[base_url] = http://eneuro.org/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2014 ; eNeuro Volume 1 ; 1 >
+
+  }
+  
+  {
+    title <
       name = Journal of Neuroscience ;
       issn = 0270-6474 ;
       eissn = 1529-2401 ;
