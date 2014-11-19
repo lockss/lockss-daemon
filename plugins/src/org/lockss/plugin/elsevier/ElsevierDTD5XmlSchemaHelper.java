@@ -1,5 +1,5 @@
 /*
- * $Id: ElsevierDTD5XmlSchemaHelper.java,v 1.2 2014-11-12 00:08:49 alexandraohlson Exp $
+ * $Id: ElsevierDTD5XmlSchemaHelper.java,v 1.3 2014-11-19 00:50:18 alexandraohlson Exp $
  */
 
 /*
@@ -93,8 +93,7 @@ implements SourceXmlSchemaHelper {
   public static final String dataset_dtd_metadata = "files-info/ml/dtd-version";
   private static final String dataset_article_pdf = "files-info/web-pdf/pathname";
   // get the journal title from the closest preceeding journal-info node
-  private static final String dataset_journal_title = "preceding-sibling::journal-issue/journal-issue-properties/collection-title";
-  
+  private static final String dataset_journal_title = "preceding-sibling::journal-issue[1]";
   /* These are used for article level metadata */
   static public final String common_title = "title";
   static public final String common_author_group = "author-group";
@@ -109,6 +108,40 @@ implements SourceXmlSchemaHelper {
     }
   };
 
+  
+  /* 
+   * <journal-issue>
+   *   <journal-issue-properties>
+   *     <collection-title>
+   *  the reason we can't just have used the full path to the node we want
+   *  as our xpath expression and just picked up its text content is because
+   *  we had to find the closest previous "journal-issue" preceeding sibling
+   *  and that meant we had to search on a <journal-issue> and not the lower
+   *  down child node we wanted.  
+   */
+  static private final NodeValue JOURNAL_ISSUE_TITLE_VALUE = new NodeValue() {
+    @Override
+    public String getValue(Node node) {
+      log.debug3("get value of previous journal-issue sibling");
+      NodeList groupChildNodes = node.getChildNodes();
+      for (int n = 0; n< groupChildNodes.getLength(); n++) {
+        Node cNode = groupChildNodes.item(n);
+        if ("journal-issue-properties".equals(cNode.getNodeName())) {
+          NodeList propChildNodes = cNode.getChildNodes();
+          for (int m = 0; m< propChildNodes.getLength(); m++) {
+            Node pNode = propChildNodes.item(m);
+            if ("collection-title".equals(pNode.getNodeName())) {
+              return pNode.getTextContent();
+            }
+          }
+        }
+      }
+      log.debug3("No publication title found");
+      return null;
+    }
+  };
+
+  
   /* 1.  MAP associating xpath with value type with evaluator */
   static private final Map<String,XPathValue> articleMap = 
       new HashMap<String,XPathValue>();
@@ -120,7 +153,7 @@ implements SourceXmlSchemaHelper {
     articleMap.put(dataset_article_metadata, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(dataset_dtd_metadata, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(dataset_article_pdf, XmlDomMetadataExtractor.TEXT_VALUE);
-    articleMap.put(dataset_journal_title, XmlDomMetadataExtractor.TEXT_VALUE);
+    articleMap.put(dataset_journal_title, JOURNAL_ISSUE_TITLE_VALUE);
   }
 
   /* 2. Each item for this initial metadata starts at "journal-item" */

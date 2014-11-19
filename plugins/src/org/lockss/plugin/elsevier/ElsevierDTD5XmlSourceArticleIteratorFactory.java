@@ -1,4 +1,4 @@
-/* $Id: ElsevierDTD5XmlSourceArticleIteratorFactory.java,v 1.2 2014-11-12 00:08:49 alexandraohlson Exp $
+/* $Id: ElsevierDTD5XmlSourceArticleIteratorFactory.java,v 1.3 2014-11-19 00:50:18 alexandraohlson Exp $
 
 Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -83,6 +83,7 @@ public class ElsevierDTD5XmlSourceArticleIteratorFactory
     SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
     
     // no need to limit to ROOT_TEMPLATE
+    // Do not need to worry about excluding underlying archive files because our pattern is top-anchored 
     SubTreeArticleIterator.Spec theSpec = builder.newSpec();
     theSpec.setTarget(target);
     theSpec.setPatternTemplate(TOP_METADATA_PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);

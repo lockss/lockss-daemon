@@ -7,16 +7,26 @@
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.elsevier.ClockssElsevierDTD5SourcePlugin</string>
   </entry>
+<!--  REMOVE DEBUGGING ONLY -->
+<!--<entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,"^%s", base_url</string>
+      <string>2,"^%s%d/.*;O=[AD]$", base_url, year</string>
+      <string>1,"^%s%d/CLKS0000000000003", base_url, year</string>
+    </list>
+  </entry>  
+  -->
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Poll</string>

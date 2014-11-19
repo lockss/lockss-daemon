@@ -1,5 +1,5 @@
 /*
- * $Id: ElsevierDTD5XmlSourceMetadataExtractorFactory.java,v 1.2 2014-11-12 00:08:48 alexandraohlson Exp $
+ * $Id: ElsevierDTD5XmlSourceMetadataExtractorFactory.java,v 1.3 2014-11-19 00:50:18 alexandraohlson Exp $
  */
 
 /*
@@ -64,7 +64,10 @@ public class ElsevierDTD5XmlSourceMetadataExtractorFactory extends SourceXmlMeta
   static Logger log = Logger.getLogger(ElsevierDTD5XmlSourceMetadataExtractorFactory.class);
 
   // Used in modifyAMList to identify the name for the current SET of tar files 
-  Pattern TOP_METADATA_PATTERN = Pattern.compile("(.*/)[^/]+A\\.tar!/([^/]+)/dataset\\.xml$", Pattern.CASE_INSENSITIVE);
+  static final Pattern TOP_METADATA_PATTERN = Pattern.compile("(.*/)[^/]+A\\.tar!/([^/]+)/dataset\\.xml$", Pattern.CASE_INSENSITIVE);
+  // used to exclude underlying archives so we don't open them
+  static final Pattern NESTED_ARCHIVE_PATTERN = Pattern.compile(".*/[^/]+[A-Z]\\.tar!/.+\\.(zip|tar|gz|tgz|tar\\.gz)$", Pattern.CASE_INSENSITIVE);
+  
 
   // Use this map to determine which node to use for underlying article schema
   static private final Map<String, String> SchemaMap =
@@ -110,6 +113,7 @@ public class ElsevierDTD5XmlSourceMetadataExtractorFactory extends SourceXmlMeta
      */
     private final Map<String,String> TarContentsMap;
     public ElsevierDTD5XmlSourceMetadataExtractor() {
+      //log.setLevel("debug3");
       TarContentsMap = new HashMap<String, String>();
     }
 
@@ -272,7 +276,8 @@ public class ElsevierDTD5XmlSourceMetadataExtractorFactory extends SourceXmlMeta
         SubTreeArticleIteratorBuilder articlebuilder = new SubTreeArticleIteratorBuilder(au);
         SubTreeArticleIterator.Spec artSpec = articlebuilder.newSpec();
         // Limit it just to this group of tar files
-        artSpec.setPattern(ARTICLE_METADATA_PATTERN);
+        artSpec.setPattern(ARTICLE_METADATA_PATTERN); // look for url-ending "main.xml" files
+        artSpec.setExcludeSubTreePattern(NESTED_ARCHIVE_PATTERN); //but do not descend in to any underlying archives
         artSpec.setVisitArchiveMembers(true);
         articlebuilder.setSpec(artSpec);
         articlebuilder.addAspect(XML_PATTERN,
