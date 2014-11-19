@@ -283,18 +283,17 @@
     {
   
         title <
-          name = Communications in Mobile Computing ;
+          name = mUX: The Journal of Mobile User Experience ;
           issn = 2192-1121 
         >
   
-        param[base_url] = http://www.comcjournal.com/
-        param[journal_issn] = 2192-1121 
+        param[base_url] = http://www.muxjournal.com/
+        param[journal_issn] = 2196-873X 
         comment[platform] = BioMedCentralPlugin
-        comment[notReady] = can't fetch permission page (even though it appears to be live)
   
-        au < manifest ; exists ; 2012 ; Communications in Mobile Computing Volume 1 ; 1 >
-        au < notReady ; exists ; 2013 ; Communications in Mobile Computing Volume 2 ; 2 >
-        au < expected ; exists ; 2014 ; Communications in Mobile Computing Volume 3 ; 3 >
+        au < manifest ; exists ; 2012 ; mUX: The Journal of Mobile User Experience 1 ; 1 >
+        au < testing ; exists ; 2013 ; mUX: The Journal of Mobile User Experience 2 ; 2 >
+        au < expected ; exists ; 2014 ; mUX: The Journal of Mobile User Experience 3 ; 3 >
   
     }
   
