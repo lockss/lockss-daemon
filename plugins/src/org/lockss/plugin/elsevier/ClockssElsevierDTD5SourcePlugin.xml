@@ -8,18 +8,25 @@
     <string>org.lockss.plugin.elsevier.ClockssElsevierDTD5SourcePlugin</string>
   </entry>
 <!--  REMOVE DEBUGGING ONLY -->
-<!--<entry>
+   <entry>
     <string>au_crawlrules</string>
     <list>
       <string>4,"^%s", base_url</string>
       <string>2,"^%s%d/.*;O=[AD]$", base_url, year</string>
-      <string>1,"^%s%d/CLKS0000000000003", base_url, year</string>
+<!--  <string>1,"^%s%d/CLKS0000000000003([A-Z]\.tar)", base_url, year</string> -->
+      <string>1,"^%s%d/CLKS000000000000[1-3]([A-Z]\.tar)", base_url, year</string>
+      <string>1,"^%s%d/CLKSOA0000000000[1-3]([A-Z]\.tar)", base_url, year</string>
+      <string>1,"^%s%d/CLKSOA0010000000[1-3]([A-Z]\.tar)", base_url, year</string>
+      <string>1,"^%s%d/CLKSOA0020000000[1-3]([A-Z]\.tar)", base_url, year</string>
+      <string>1,"^%s%d/CLKSOA0030000000[1-3]([A-Z]\.tar)", base_url, year</string>
+<!--  this one is for the local test files -->
+      <string>1,"^%s%d/CLKS003", base_url, year</string>
     </list>
-  </entry>  
-  -->
+  </entry>
+<!-- END OF DEBUGGIN ONLY -->    
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>

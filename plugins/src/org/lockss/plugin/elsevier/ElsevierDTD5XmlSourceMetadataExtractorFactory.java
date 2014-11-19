@@ -1,5 +1,5 @@
 /*
- * $Id: ElsevierDTD5XmlSourceMetadataExtractorFactory.java,v 1.3 2014-11-19 00:50:18 alexandraohlson Exp $
+ * $Id: ElsevierDTD5XmlSourceMetadataExtractorFactory.java,v 1.4 2014-11-19 23:20:39 alexandraohlson Exp $
  */
 
 /*
@@ -100,6 +100,7 @@ public class ElsevierDTD5XmlSourceMetadataExtractorFactory extends SourceXmlMeta
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
       String contentType)
           throws PluginException {
+    log.debug2("createFileMetadtaExtractor for ");
     return new ElsevierDTD5XmlSourceMetadataExtractor();
   }
 
@@ -114,6 +115,7 @@ public class ElsevierDTD5XmlSourceMetadataExtractorFactory extends SourceXmlMeta
     private final Map<String,String> TarContentsMap;
     public ElsevierDTD5XmlSourceMetadataExtractor() {
       //log.setLevel("debug3");
+      log.debug2("Creating a new TarContentsMap for this instance of a DTDextractor");
       TarContentsMap = new HashMap<String, String>();
     }
 
