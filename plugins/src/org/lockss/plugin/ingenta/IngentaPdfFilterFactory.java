@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaPdfFilterFactory.java,v 1.15 2014-09-10 22:09:44 etenbrink Exp $
+ * $Id: IngentaPdfFilterFactory.java,v 1.16 2014-11-19 01:08:32 thib_gc Exp $
  */ 
 
 /*
@@ -80,6 +80,9 @@ public class IngentaPdfFilterFactory implements FilterFactory {
   private FilterFactory paafFiltFact = new PacificAffairsPdfFilterFactory();
   private FilterFactory whpFiltFact = new WhiteHorsePressPdfFilterFactory();
   
+  /*
+   * FIXME 1.67: extend PdfTokenStreamStateMachine
+   */
   protected static class WhiteHorsePressPdfFilterFactory extends SimplePdfFilterFactory {
     
     protected static class WhiteHorsePressWorker extends PdfTokenStreamWorker {
@@ -179,6 +182,9 @@ public class IngentaPdfFilterFactory implements FilterFactory {
     
   }
   
+  /*
+   * FIXME 1.67: extend PdfTokenStreamStateMachine
+   */
   protected static class ManeyPublishingPdfFilterFactory extends ExtractingPdfFilterFactory {
     
     protected static class ManeyPublishingWorker extends PdfTokenStreamWorker {
@@ -274,19 +280,23 @@ public class IngentaPdfFilterFactory implements FilterFactory {
    * Filter factory for each different transform because some publisher transforms are
    * simple transforms and some extracting.
    */
-  private static class PacificAffairsPdfFilterFactory extends SimplePdfFilterFactory {
+  
+  /*
+   * FIXME 1.67: extends PdfTokenStreamStateMachine
+   */
+  protected static class PacificAffairsPdfFilterFactory extends SimplePdfFilterFactory {
     
-    public static class DeliveredByWorkerTransform extends PdfTokenStreamWorker {
+    public static class PacificAffairsWorker extends PdfTokenStreamWorker {
       
-      private boolean result;
+      protected boolean result;
       
-      private int state;
+      protected int state;
       
-      private int beginIndex;
+      protected int beginIndex;
       
-      private int endIndex;
+      protected int endIndex;
       
-      public DeliveredByWorkerTransform() {
+      public PacificAffairsWorker() {
         super(Direction.BACKWARD);
       }
       
@@ -303,9 +313,9 @@ public class IngentaPdfFilterFactory implements FilterFactory {
       public void operatorCallback()
           throws PdfException {
         if (logger.isDebug3()) {
-          logger.debug3("DeliveredByWorkerTransform: initial: " + state);
-          logger.debug3("DeliveredByWorkerTransform: index: " + getIndex());
-          logger.debug3("DeliveredByWorkerTransform: operator: " + getOpcode());
+          logger.debug3("PacificAffairsWorker: initial: " + state);
+          logger.debug3("PacificAffairsWorker: index: " + getIndex());
+          logger.debug3("PacificAffairsWorker: operator: " + getOpcode());
         }
         
         switch (state) {
@@ -335,14 +345,14 @@ public class IngentaPdfFilterFactory implements FilterFactory {
         } break;
         
         default: {
-          throw new PdfException("Invalid state in DeliveredByWorkerTransform: " + state);
+          throw new PdfException("Invalid state in PacificAffairsWorker: " + state);
         }
         
         }
         
         if (logger.isDebug3()) {
-          logger.debug3("DeliveredByWorkerTransform: final: " + state);
-          logger.debug3("DeliveredByFromWorkerTransform: result: " + result);
+          logger.debug3("PacificAffairsWorker: final: " + state);
+          logger.debug3("PacificAffairsWorker: result: " + result);
         }
       }
       
@@ -351,7 +361,7 @@ public class IngentaPdfFilterFactory implements FilterFactory {
     public void transform(ArchivalUnit au, PdfDocument pdfDocument)
         throws PdfException {
       
-      DeliveredByWorkerTransform worker = new DeliveredByWorkerTransform();
+      PacificAffairsWorker worker = new PacificAffairsWorker();
       for (PdfPage pdfPage : pdfDocument.getPages()) {
         PdfTokenStream pdfTokenStream = pdfPage.getPageTokenStream();
         worker.process(pdfTokenStream);
