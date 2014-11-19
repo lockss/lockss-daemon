@@ -1,10 +1,10 @@
 /*
- * $Id: EmeraldPdfFilterFactory.java,v 1.4 2013-02-28 01:55:28 thib_gc Exp $
+ * $Id: EmeraldPdfFilterFactory.java,v 1.5 2014-11-19 22:44:16 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -53,8 +53,11 @@ import org.lockss.util.Logger;
  */
 public class EmeraldPdfFilterFactory extends ExtractingPdfFilterFactory {
 
-  protected static final Logger logger = Logger.getLogger(EmeraldPdfFilterFactory.class); 
+  private static final Logger logger = Logger.getLogger(EmeraldPdfFilterFactory.class);
   
+  /*
+   * FIXME 1.67: extend PdfTokenStreamStateMachine
+   */
   public static class FrontPageWorker extends PdfTokenStreamWorker {
 
     protected boolean result;
@@ -63,24 +66,36 @@ public class EmeraldPdfFilterFactory extends ExtractingPdfFilterFactory {
     
     @Override
     public void operatorCallback() throws PdfException {
+      if (logger.isDebug3()) {
+        logger.debug3("FrontPageWorker: initial: " + state);
+        logger.debug3("FrontPageWorker: index: " + getIndex());
+        logger.debug3("FrontPageWorker: operator: " + getOpcode());
+      }
+      
       switch (state) {
 
         case 0: case 3: {
-          // FIXME 1.60
-          if (PdfOpcodes.SAVE_GRAPHICS_STATE.equals(getOpcode())) { ++state; }
-          else { stop(); }
+          if (isSaveGraphicsState()) {
+            ++state;
+          }
+          else {
+            stop();
+          }
         } break;
         
         case 1: case 4: {
-          // FIXME 1.60
-          if (PdfOpcodes.RESTORE_GRAPHICS_STATE.equals(getOpcode())) { stop(); }
-          // FIXME 1.60
-          else if (PdfOpcodes.INVOKE_XOBJECT.equals(getOpcode())) { ++state; }
+          if (isRestoreGraphicsState()) {
+            stop();
+          }
+          else if (isInvokeXObject()) {
+            ++state; 
+          }
         } break;
         
         case 2: case 5: {
-          // FIXME 1.60
-          if (PdfOpcodes.RESTORE_GRAPHICS_STATE.equals(getOpcode())) { ++state; }
+          if (isRestoreGraphicsState()) {
+            ++state;
+          }
         } break;
         
         // case 3: see case 0
@@ -90,39 +105,43 @@ public class EmeraldPdfFilterFactory extends ExtractingPdfFilterFactory {
         // case 5: see case 2
         
         case 6: {
-          // FIXME 1.60
-          if (PdfOpcodes.BEGIN_TEXT_OBJECT.equals(getOpcode())) { ++state; }
+          if (isBeginTextObject()) {
+            ++state;
+          }
         } break;
         
         case 7: {
-          // FIXME 1.60
-          if (PdfOpcodes.END_TEXT_OBJECT.equals(getOpcode())) { state = 6; }
-          // FIXME 1.60
-          if (   PdfOpcodes.SHOW_TEXT.equals(getOpcode())
-              && getTokens().get(getIndex() - 1).getString().startsWith("Downloaded on: ")) { ++state; }
+          if (isShowTextStartsWith("Downloaded on: ")) {
+            ++state;
+          }
+          else if (isEndTextObject()) {
+            state = 6;
+          }
         } break;
         
         case 8: {
-          // FIXME 1.60
-          if (PdfOpcodes.END_TEXT_OBJECT.equals(getOpcode())) { ++state; }
+          if (isEndTextObject()) {
+            ++state;
+          }
         } break;
 
         case 9: {
-          // FIXME 1.60
-          if (PdfOpcodes.BEGIN_TEXT_OBJECT.equals(getOpcode())) { ++state; }
+          if (isBeginTextObject()) {
+            ++state;
+          }
         } break;
         
         case 10: {
-          // FIXME 1.60
-          if (PdfOpcodes.END_TEXT_OBJECT.equals(getOpcode())) { state = 9; }
-          // FIXME 1.60
-          if (   PdfOpcodes.SHOW_TEXT.equals(getOpcode())
-              && getTokens().get(getIndex() - 1).getString().startsWith("Access to this document was granted through an Emerald subscription provided by ")) { ++state; }
+          if (isShowTextStartsWith("Access to this document was granted through an Emerald subscription provided by ")) {
+            ++state;
+          }
+          else if (isEndTextObject()) {
+            state = 9;
+          }
         } break;
         
         case 11: {
-          // FIXME 1.60
-          if (PdfOpcodes.END_TEXT_OBJECT.equals(getOpcode())) {
+          if (isEndTextObject()) {
             result = true;
             stop();
           }
@@ -131,6 +150,11 @@ public class EmeraldPdfFilterFactory extends ExtractingPdfFilterFactory {
         default: {
           throw new PdfException("Invalid state in " + getClass().getName() + ": " + state);
         }
+      }
+      
+      if (logger.isDebug3()) {
+        logger.debug3("FrontPageWorker: final: " + state);
+        logger.debug3("FrontPageWorker: result: " + result);
       }
     }
     
@@ -143,15 +167,14 @@ public class EmeraldPdfFilterFactory extends ExtractingPdfFilterFactory {
     
   }
   
-  public EmeraldPdfFilterFactory() {
-    super();
-  }
-  
   @Override
   public PdfTransform<PdfDocument> getDocumentTransform(ArchivalUnit au,
                                                         OutputStream os) {
     // Override the document-level transform to skip all document-level strings
     return new BaseDocumentExtractingTransform(os) {
+      /*
+       * FIXME 1.67: override outputDocumentInformation() instead
+       */
       @Override
       public void transform(ArchivalUnit au, PdfDocument pdfDocument) throws PdfException {
         this.au = au;
