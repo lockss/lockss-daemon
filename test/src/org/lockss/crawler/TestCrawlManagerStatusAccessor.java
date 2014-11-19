@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerStatusAccessor.java,v 1.16 2014-01-14 04:26:56 tlipkis Exp $
+ * $Id: TestCrawlManagerStatusAccessor.java,v 1.17 2014-11-19 08:20:44 tlipkis Exp $
  */
 
 /*
@@ -453,10 +453,12 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
     return status;
   }
 
+  static int aunum = 0;
+
   private MockCrawlStatus makeStatus(String type, int code) {
     MockCrawlStatus status = new MockCrawlStatus();
     status.setType(type);
-    status.setAu(makeMockAuWithId("foo"));
+    status.setAu(makeMockAuWithId("foo" + aunum++));
     status.setCrawlStatus(code);
     return status;
   }
@@ -465,7 +467,7 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
 				     String crawlStatus) {
     MockCrawlStatus status = new MockCrawlStatus();
     status.setType(type);
-    status.setAu(makeMockAuWithId("foo"));
+    status.setAu(makeMockAuWithId("foo" + aunum++));
     status.setCrawlStatus(code, crawlStatus);
     return status;
   }
