@@ -1,10 +1,10 @@
 /*
- * $Id: AnnualReviewsPdfFilterFactory.java,v 1.4 2013-06-12 02:34:30 thib_gc Exp $
+ * $Id: AnnualReviewsPdfFilterFactory.java,v 1.5 2014-11-19 01:02:59 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package uk.org.lockss.plugin.annualreviews;
 
-import java.util.List;
+import java.util.*;
 import java.util.regex.Pattern;
 
 import org.lockss.filter.pdf.SimplePdfFilterFactory;
@@ -47,6 +47,9 @@ public class AnnualReviewsPdfFilterFactory extends SimplePdfFilterFactory {
    */
   private static final Logger logger = Logger.getLogger(AnnualReviewsPdfFilterFactory.class);
 
+  /*
+   * FIXME 1.67: extend PdfTokenstreamStateMachine
+   */
   protected static class DownloadedFromWorker extends PdfTokenStreamWorker {
 
     public DownloadedFromWorker() {
@@ -55,23 +58,17 @@ public class AnnualReviewsPdfFilterFactory extends SimplePdfFilterFactory {
     
     // FIXME 1.62
     protected static final Pattern DOWNLOADED_FROM_PATTERN =
-        Pattern.compile(".*Downloaded from (?:http://)?[-0-9A-Za-z]+(?:\\.[-0-9A-Za-z]+)+");
+        Pattern.compile("Downloaded from (?:http://)?[-0-9A-Za-z]+(?:\\.[-0-9A-Za-z]+)+");
     
-    private int state;
+    protected int state;
     
-    private int beginIndex;
-    
-    private int endIndex;
-    
-    private boolean result;
+    protected boolean result;
     
     @Override
     public void setUp() throws PdfException {
       super.setUp();
       this.result = false;
       this.state = 0;
-      this.beginIndex = -1;
-      this.endIndex = -1;
     }
     
     @Override
@@ -86,7 +83,6 @@ public class AnnualReviewsPdfFilterFactory extends SimplePdfFilterFactory {
         
         case 0: {
           if (getIndex() == getTokens().size() - 1 && isEndTextObject()) {
-            endIndex = getIndex();
             ++state;
           }
           else {
@@ -95,8 +91,7 @@ public class AnnualReviewsPdfFilterFactory extends SimplePdfFilterFactory {
         } break;
         
         case 1: {
-          // FIXME 1.62
-          if (isShowTextMatches(DOWNLOADED_FROM_PATTERN)) {
+          if (isShowTextFind(DOWNLOADED_FROM_PATTERN)) {
             ++state;
           }
           else if (isBeginTextObject()) {
@@ -105,8 +100,7 @@ public class AnnualReviewsPdfFilterFactory extends SimplePdfFilterFactory {
         } break;
         
         case 2: {
-          // FIXME 1.62
-          if ("Tm".equals(getOpcode())) {
+          if (isSetTextMatrix()) {
             ++state;
           }
           else if (isBeginTextObject()) {
@@ -116,7 +110,6 @@ public class AnnualReviewsPdfFilterFactory extends SimplePdfFilterFactory {
         
         case 3: {
           if (getIndex() == 0 && isBeginTextObject()) {
-            beginIndex = getIndex();
             result = true;
             stop();
           }
@@ -147,21 +140,15 @@ public class AnnualReviewsPdfFilterFactory extends SimplePdfFilterFactory {
     protected static final Pattern FOR_PERSONAL_USE_PATTERN =
         Pattern.compile("by .* on [0-9]{2}/[0-9]{2}/[0-9]{2}. For personal use only.");
     
-    private int state;
+    protected int state;
     
-    private int beginIndex;
-    
-    private int endIndex;
-    
-    private boolean result;
+    protected boolean result;
     
     @Override
     public void setUp() throws PdfException {
       super.setUp();
       this.result = false;
       this.state = 0;
-      this.beginIndex = -1;
-      this.endIndex = -1;
     }
     
     @Override
@@ -176,14 +163,12 @@ public class AnnualReviewsPdfFilterFactory extends SimplePdfFilterFactory {
         
         case 0: {
           if (getIndex() == getTokens().size() - 1 && isEndTextObject()) {
-            endIndex = getIndex();
             ++state;
           }
         } break;
         
         case 1: {
-          // FIXME 1.62
-          if (isShowTextMatches(FOR_PERSONAL_USE_PATTERN)) {
+          if (isShowTextFind(FOR_PERSONAL_USE_PATTERN)) {
             ++state;
           }
           else if (isBeginTextObject()) {
@@ -192,8 +177,7 @@ public class AnnualReviewsPdfFilterFactory extends SimplePdfFilterFactory {
         } break;
         
         case 2: {
-          // FIXME 1.62
-          if ("Tm".equals(getOpcode())) {
+          if (isSetTextMatrix()) {
             ++state;
           }
           else if (isBeginTextObject()) {
@@ -203,7 +187,6 @@ public class AnnualReviewsPdfFilterFactory extends SimplePdfFilterFactory {
         
         case 3: {
           if (getIndex() == 0 && isBeginTextObject()) {
-            beginIndex = getIndex();
             result = true;
             stop();
           }
@@ -238,20 +221,16 @@ public class AnnualReviewsPdfFilterFactory extends SimplePdfFilterFactory {
         downloadedFromWorker.process(pdfTokenStream);
         if (downloadedFromWorker.result) {
           hasDoneSomething = true;
-          List<PdfToken> tokens = pdfTokenStream.getTokens();
-          tokens.subList(downloadedFromWorker.beginIndex, downloadedFromWorker.endIndex).clear();
-          pdfTokenStream.setTokens(tokens);
+          pdfTokenStream.setTokens(Collections.<PdfToken>emptyList());
         }
         forPersonalUseWorker.process(pdfTokenStream);
         if (forPersonalUseWorker.result) {
           hasDoneSomething = true;
-          List<PdfToken> tokens = pdfTokenStream.getTokens();
-          tokens.subList(forPersonalUseWorker.beginIndex, forPersonalUseWorker.endIndex).clear();
-          pdfTokenStream.setTokens(tokens);
+          pdfTokenStream.setTokens(Collections.<PdfToken>emptyList());
         }
       }
       if (firstPage && !hasDoneSomething) {
-        return; // no need to try the other pages
+        break; // no need to try the other pages
       }
       else {
         firstPage = false;
