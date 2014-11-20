@@ -1,5 +1,5 @@
 /*
- * $Id: DbManagerSql.java,v 1.8 2014-11-14 19:42:37 fergaloy-sf Exp $
+ * $Id: DbManagerSql.java,v 1.9 2014-11-20 18:20:30 fergaloy-sf Exp $
  */
 
 /*
@@ -7210,30 +7210,8 @@ public class DbManagerSql {
 	  if (log.isDebug3())
 	    log.debug3(DEBUG_HEADER + "auKey = '" + auKey + "'");
 
-	  // Get the AU identifier.
-	  String auId = PluginManager.generateAuId(pluginId, auKey);
-	  if (log.isDebug3())
-	    log.debug3(DEBUG_HEADER + "auId = '" + auId + "'");
-
-	  // Get the AU.
-	  TdbAu tdbAu = LockssDaemon.getLockssDaemon().getPluginManager()
-	      .getAuFromId(auId).getTdbAu();
-	  if (log.isDebug3()) log.debug3(DEBUG_HEADER + "tdbAu = " + tdbAu);
-
-	  // Get the provider LOCKSS identifier.
-	  // TODO: Replace with tdbAu.getProvider().getLid() when available.
-	  String providerLid = null;
-	  if (log.isDebug3())
-	    log.debug3(DEBUG_HEADER + "providerLid = '" + providerLid + "'");
-
-	  // Get the provider name.
-	  String providerName = tdbAu.getProviderName();
-	  if (log.isDebug3())
-	    log.debug3(DEBUG_HEADER + "providerName = '" + providerName + "'");
-
 	  // Determine the provider.
-	  Long providerSeq =
-	      findOrCreateProvider(conn, providerLid, providerName);
+	  Long providerSeq = getAuProvider(conn, pluginId, auKey);
 	  if (log.isDebug3())
 	    log.debug3(DEBUG_HEADER + "providerSeq = " + providerSeq);
 
@@ -7275,6 +7253,88 @@ public class DbManagerSql {
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Provides the identifier of an Archival Unit provider.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param pluginId
+   *          A String with the Archival Unit plugin identifier.
+   * @param auKey
+   *          A String with the Archival Unit key.
+   * @return a Long with the provider identifier, or null if it cannot be
+   *         determined.
+   */
+  Long getAuProvider(Connection conn, String pluginId, String auKey) {
+    final String DEBUG_HEADER = "getAuProvider(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "pluginId = " + pluginId);
+      log.debug2(DEBUG_HEADER + "auKey = " + auKey);
+    }
+
+    Long providerSeq = null;
+    String auId = null;
+    ArchivalUnit au = null;
+    TdbAu tdbAu = null;
+    String providerLid = null;
+    String providerName = null;
+
+    try {
+      // Get the AU identifier.
+      auId = PluginManager.generateAuId(pluginId, auKey);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auId = '" + auId + "'");
+
+      // Get the AU.
+      au = LockssDaemon.getLockssDaemon().getPluginManager().getAuFromId(auId);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "au = " + au);
+
+      if (au != null) {
+	tdbAu = au.getTdbAu();
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "tdbAu = " + tdbAu);
+
+	// Get the provider LOCKSS identifier.
+	// TODO: Replace with tdbAu.getProvider().getLid() when available.
+	providerLid = null;
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "providerLid = '" + providerLid + "'");
+
+	// Get the provider name.
+	providerName = tdbAu.getProviderName();
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "providerName = '" + providerName + "'");
+
+	// Determine the provider.
+	providerSeq = findOrCreateProvider(conn, providerLid, providerName);
+      } else {
+	if (log.isDebug()) log.debug("Cannot find archival unit for pluginId = "
+	    + pluginId + ", auKey = " + auKey);
+      }
+    } catch (SQLException sqle) {
+      log.error("Cannot find the provider identifier", sqle);
+      log.error("pluginId = " + pluginId);
+      log.error("auKey = " + auKey);
+      log.error("auId = " + auId);
+      log.error("au = " + au);
+      log.error("tdbAu = " + tdbAu);
+      log.error("providerLid = " + providerLid);
+      log.error("providerName = " + providerName);
+    } catch (RuntimeException re) {
+      log.error("Cannot find the provider identifier", re);
+      log.error("pluginId = " + pluginId);
+      log.error("auKey = " + auKey);
+      log.error("auId = " + auId);
+      log.error("au = " + au);
+      log.error("tdbAu = " + tdbAu);
+      log.error("providerLid = " + providerLid);
+      log.error("providerName = " + providerName);
+    }
+
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "providerSeq = " + providerSeq);
+
+    return providerSeq;
   }
 
   /**

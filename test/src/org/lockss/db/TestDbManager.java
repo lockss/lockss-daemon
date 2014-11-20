@@ -1,5 +1,5 @@
 /*
- * $Id: TestDbManager.java,v 1.13 2014-10-13 22:21:28 fergaloy-sf Exp $
+ * $Id: TestDbManager.java,v 1.14 2014-11-20 18:20:30 fergaloy-sf Exp $
  */
 
 /*
@@ -585,6 +585,10 @@ public class TestDbManager extends LockssTestCase {
 	dbManager.findOrCreateProvider(conn, "providerLid2", "providerName2");
     assertNotEquals(providerSeq1, providerSeq3);
     checkProvider(conn, providerSeq3, "providerLid2", "providerName2");
+
+    Long providerSeq4 =
+	dbManager.getDbManagerSql().getAuProvider(conn, "bogusP", "bogusK");
+    assertNull(providerSeq4);
 
     DbManager.commitOrRollback(conn, log);
     DbManager.safeCloseConnection(conn);
