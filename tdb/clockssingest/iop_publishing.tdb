@@ -13,12 +13,10 @@
   
   comment[doNotInclude0] = RT2955 do not include: 
   comment[doNotInclude1] = Astronomical Journal 0004-637X, Astrophysical Journal Letters 2041-8205,
-  comment[doNotInclude2] = Chinese Physics B 1674-1056, Izvestiya: Mathematics 1064-5632,
+  comment[doNotInclude2] = Izvestiya: Mathematics 1064-5632,
   comment[doNotInclude3] = Physics-Uspekhi 1063-7869, Quantum Electronics 1063-7818,
   comment[doNotInclude4] = Russian Chemical Reviews 0036-021X, Russian Mathematical Surveys 0036-0279,
   comment[doNotInclude5] = Sbornik: Mathematics 1064-5616, Science Foundation in China 1005-0841,
-  comment[doNotInclude6] = Laser Physics Letters 1612-2011, Laser Physics 1054-660X,
-  comment[doNotInclude7] = Methods and Applications in Fluorescence 2050-6120,
   
   
   
@@ -32,10 +30,12 @@
 
     title <
       name = 2D Materials ;
-      eissn = 2053-1583
+      eissn = 2053-1583 ;
+      issnl = 2053-1583
     >
     
     param[journal_issn] = 2053-1583
+    comment[param] = eissn preferred
 
     au < exists ; exists ; 2014 ; 2D Materials Volume 1 ; 1 > 
 
@@ -58,6 +58,28 @@
     au < finished ; crawling ; 2012 ; Advances in Natural Science: Nanoscience and Nanotechnology Volume 3 ; 3 > 
     au < crawling ; exists ; 2013 ; Advances in Natural Science: Nanoscience and Nanotechnology Volume 4 ; 4 > 
     au < ready ; exists ; 2014 ; Advances in Natural Science: Nanoscience and Nanotechnology Volume 5 ; 5 > 
+
+  }
+
+  {
+
+    title <
+      name = Applied Physics Express ;
+      issn = 1882-0778 ;
+      eissn = 1882-0786 ;
+      issnl = 1882-0778 
+    >
+    
+    param[journal_issn] = 1882-0786
+    comment[param] = eissn preferred
+
+    au < exists ; exists ; 2008 ; Applied Physics Express Volume 1 ; 1 >
+    au < exists ; exists ; 2009 ; Applied Physics Express Volume 2 ; 2 >
+    au < exists ; exists ; 2010 ; Applied Physics Express Volume 3 ; 3 >
+    au < exists ; exists ; 2011 ; Applied Physics Express Volume 4 ; 4 >
+    au < exists ; exists ; 2012 ; Applied Physics Express Volume 5 ; 5 >
+    au < exists ; exists ; 2013 ; Applied Physics Express Volume 6 ; 6 >
+    au < exists ; exists ; 2014 ; Applied Physics Express Volume 7 ; 7 >
 
   }
 
@@ -134,10 +156,12 @@
 
     title <
       name = British Journal of Applied Physics ;
-      issn = 0508-3443
+      issn = 0508-3443 ;
+      issnl = 0508-3443
     >
 
     param[journal_issn] = 0508-3443
+    comment[param] = print issn preferred
 
     au < manifest ; exists ; 1950 ; British Journal of Applied Physics Volume 1 ; 1 > 
     au < manifest ; exists ; 1951 ; British Journal of Applied Physics Volume 2 ; 2 > 
@@ -165,7 +189,8 @@
 
     title <
       name = Chinese Journal of Astronomy and Astrophysics ;
-      issn = 1009-9271
+      issn = 1009-9271 ;
+      issnl = 1009-9271
     >
 
     param[journal_issn] = 1009-9271
@@ -186,7 +211,8 @@
 
     title <
       name = Chinese Journal of Chemical Physics ;
-      issn = 1674-0068
+      issn = 1674-0068 ;
+      issnl = 1674-0068
     >
     
     comment[moved] = As of start 2013 published by AIP.
@@ -206,7 +232,8 @@
 
     title <
       name = Chinese Journal of Chemical Physics ;
-      issn = 1003-7713
+      issn = 1003-7713 ;
+      issnl = 1003-7713
     >
 
     param[journal_issn] = 1003-7713
@@ -220,8 +247,44 @@
   {
 
     title <
+      name = Chinese Physics B ;
+      issn = 1674-1056 ;
+      issnl = 1674-1056
+    >
+
+    param[journal_issn] = 1674-1056
+
+    au < exists ; exists ; 1992 ; Chinese Physics B Volume 1 ; 1 >
+    au < exists ; exists ; 1993 ; Chinese Physics B Volume 2 ; 2 >
+    au < exists ; exists ; 1994 ; Chinese Physics B Volume 3 ; 3 >
+    au < exists ; exists ; 1995 ; Chinese Physics B Volume 4 ; 4 >
+    au < exists ; exists ; 1996 ; Chinese Physics B Volume 5 ; 5 >
+    au < exists ; exists ; 1997 ; Chinese Physics B Volume 6 ; 6 >
+    au < exists ; exists ; 1998 ; Chinese Physics B Volume 7 ; 7 >
+    au < exists ; exists ; 1999 ; Chinese Physics B Volume 8 ; 8 >
+    au < exists ; exists ; 2000 ; Chinese Physics B Volume 9 ; 9 >
+    au < exists ; exists ; 2001 ; Chinese Physics B Volume 10 ; 10 >
+    au < exists ; exists ; 2002 ; Chinese Physics B Volume 11 ; 11 >
+    au < exists ; exists ; 2003 ; Chinese Physics B Volume 12 ; 12 >
+    au < exists ; exists ; 2004 ; Chinese Physics B Volume 13 ; 13 >
+    au < exists ; exists ; 2005 ; Chinese Physics B Volume 14 ; 14 >
+    au < exists ; exists ; 2006 ; Chinese Physics B Volume 15 ; 15 >
+    au < exists ; exists ; 2007 ; Chinese Physics B Volume 16 ; 16 >
+    au < exists ; exists ; 2008 ; Chinese Physics B Volume 17 ; 17 >
+    au < exists ; exists ; 2009 ; Chinese Physics B Volume 18 ; 18 >
+    au < exists ; exists ; 2010 ; Chinese Physics B Volume 19 ; 19 >
+    au < exists ; exists ; 2011 ; Chinese Physics B Volume 20 ; 20 >
+    au < exists ; exists ; 2012 ; Chinese Physics B Volume 21 ; 21 >
+    au < exists ; exists ; 2013 ; Chinese Physics B Volume 22 ; 22 >
+    au < exists ; exists ; 2014 ; Chinese Physics B Volume 23 ; 23 >
+  }
+
+  {
+
+    title <
       name = Chinese Physics C ;
-      issn = 1674-1137
+      issn = 1674-1137 ;
+      issnl = 1674-1137
     >
 
     param[journal_issn] = 1674-1137
@@ -333,7 +396,8 @@
 
     title <
       name = Clinical Physics and Physiological Measurement ;
-      issn = 0143-0815 
+      issn = 0143-0815 ;
+      issnl = 0143-0815
     >
 
     param[journal_issn] = 0143-0815
@@ -359,7 +423,8 @@
 
     title <
       name = Communications in Theoretical Physics ;
-      issn = 0253-6102
+      issn = 0253-6102 ;
+      issnl = 0253-6102
     >
     
     param[journal_issn] = 0253-6102
@@ -434,7 +499,8 @@
 
     title <
       name = Environmental Research Letters ;
-      issn = 1748-9326
+      issn = 1748-9326 ;
+      issnl = 1748-9326
     >
 
     param[journal_issn] = 1748-9326
@@ -834,6 +900,75 @@
   {
 
     title <
+      name = Japanese Journal of Applied Physics ;
+      issn = 0021-4922;
+      eissn = 1347-4065 ;
+      issnl = 0021-4922
+    >
+
+    param[journal_issn] = 1347-4065
+    comment[param] = eissn preferred
+
+    au < exists ; exists ; 1962 ; Japanese Journal of Applied Physics Volume 1 ; 1 >
+    au < exists ; exists ; 1963 ; Japanese Journal of Applied Physics Volume 2 ; 2 >
+    au < exists ; exists ; 1964 ; Japanese Journal of Applied Physics Volume 3 ; 3 >
+    au < exists ; exists ; 1965 ; Japanese Journal of Applied Physics Volume 4 ; 4 >
+    au < exists ; exists ; 1966 ; Japanese Journal of Applied Physics Volume 5 ; 5 >
+    au < exists ; exists ; 1967 ; Japanese Journal of Applied Physics Volume 6 ; 6 >
+    au < exists ; exists ; 1968 ; Japanese Journal of Applied Physics Volume 7 ; 7 >
+    au < exists ; exists ; 1969 ; Japanese Journal of Applied Physics Volume 8 ; 8 >
+    au < exists ; exists ; 1970 ; Japanese Journal of Applied Physics Volume 9 ; 9 >
+    au < exists ; exists ; 1971 ; Japanese Journal of Applied Physics Volume 10 ; 10 >
+    au < exists ; exists ; 1972 ; Japanese Journal of Applied Physics Volume 11 ; 11 >
+    au < exists ; exists ; 1973 ; Japanese Journal of Applied Physics Volume 12 ; 12 >
+    au < exists ; exists ; 1974 ; Japanese Journal of Applied Physics Volume 13 ; 13 >
+    au < exists ; exists ; 1975 ; Japanese Journal of Applied Physics Volume 14 ; 14 >
+    au < exists ; exists ; 1976 ; Japanese Journal of Applied Physics Volume 15 ; 15 >
+    au < exists ; exists ; 1977 ; Japanese Journal of Applied Physics Volume 16 ; 16 >
+    au < exists ; exists ; 1978 ; Japanese Journal of Applied Physics Volume 17 ; 17 >
+    au < exists ; exists ; 1979 ; Japanese Journal of Applied Physics Volume 18 ; 18 >
+    au < exists ; exists ; 1980 ; Japanese Journal of Applied Physics Volume 19 ; 19 >
+    au < exists ; exists ; 1981 ; Japanese Journal of Applied Physics Volume 20 ; 20 >
+    au < exists ; exists ; 1982 ; Japanese Journal of Applied Physics Volume 21 ; 21 >
+    au < exists ; exists ; 1983 ; Japanese Journal of Applied Physics Volume 22 ; 22 >
+    au < exists ; exists ; 1984 ; Japanese Journal of Applied Physics Volume 23 ; 23 >
+    au < exists ; exists ; 1985 ; Japanese Journal of Applied Physics Volume 24 ; 24 >
+    au < exists ; exists ; 1986 ; Japanese Journal of Applied Physics Volume 25 ; 25 >
+    au < exists ; exists ; 1987 ; Japanese Journal of Applied Physics Volume 26 ; 26 >
+    au < exists ; exists ; 1988 ; Japanese Journal of Applied Physics Volume 27 ; 27 >
+    au < exists ; exists ; 1989 ; Japanese Journal of Applied Physics Volume 28 ; 28 >
+    au < exists ; exists ; 1990 ; Japanese Journal of Applied Physics Volume 29 ; 29 >
+    au < exists ; exists ; 1991 ; Japanese Journal of Applied Physics Volume 30 ; 30 >
+    au < exists ; exists ; 1992 ; Japanese Journal of Applied Physics Volume 31 ; 31 >
+    au < exists ; exists ; 1993 ; Japanese Journal of Applied Physics Volume 32 ; 32 >
+    au < exists ; exists ; 1994 ; Japanese Journal of Applied Physics Volume 33 ; 33 >
+    au < exists ; exists ; 1995 ; Japanese Journal of Applied Physics Volume 34 ; 34 >
+    au < exists ; exists ; 1996 ; Japanese Journal of Applied Physics Volume 35 ; 35 >
+    au < exists ; exists ; 1997 ; Japanese Journal of Applied Physics Volume 36 ; 36 >
+    au < exists ; exists ; 1998 ; Japanese Journal of Applied Physics Volume 37 ; 37 >
+    au < exists ; exists ; 1999 ; Japanese Journal of Applied Physics Volume 38 ; 38 >
+    au < exists ; exists ; 2000 ; Japanese Journal of Applied Physics Volume 39 ; 39 >
+    au < exists ; exists ; 2001 ; Japanese Journal of Applied Physics Volume 40 ; 40 >
+    au < exists ; exists ; 2002 ; Japanese Journal of Applied Physics Volume 41 ; 41 >
+    au < exists ; exists ; 2003 ; Japanese Journal of Applied Physics Volume 42 ; 42 >
+    au < exists ; exists ; 2004 ; Japanese Journal of Applied Physics Volume 43 ; 43 >
+    au < exists ; exists ; 2005 ; Japanese Journal of Applied Physics Volume 44 ; 44 >
+    au < exists ; exists ; 2006 ; Japanese Journal of Applied Physics Volume 45 ; 45 >
+    au < exists ; exists ; 2007 ; Japanese Journal of Applied Physics Volume 46 ; 46 >
+    au < exists ; exists ; 2008 ; Japanese Journal of Applied Physics Volume 47 ; 47 >
+    au < exists ; exists ; 2009 ; Japanese Journal of Applied Physics Volume 48 ; 48 >
+    au < exists ; exists ; 2010 ; Japanese Journal of Applied Physics Volume 49 ; 49 >
+    au < exists ; exists ; 2011 ; Japanese Journal of Applied Physics Volume 50 ; 50 >
+    au < exists ; exists ; 2012 ; Japanese Journal of Applied Physics Volume 51 ; 51 >
+    au < exists ; exists ; 2013 ; Japanese Journal of Applied Physics Volume 52 ; 52 >
+    au < exists ; exists ; 2014 ; Japanese Journal of Applied Physics Volume 53 ; 53 >
+    au < exists ; exists ; 2015 ; Japanese Journal of Applied Physics Volume 54 ; 54 >
+    
+  }
+
+  {
+
+    title <
       name = Journal of Breath Research ;
       issn = 1752-7155 ;
       eissn = 1752-7163 ;
@@ -858,7 +993,8 @@
 
     title <
       name = Journal of Cosmology and Astroparticle Physics ;
-      issn = 1475-7516
+      issn = 1475-7516 ;
+      issnl = 1475-7516
     >
     
     param[journal_issn] = 1475-7516
@@ -951,7 +1087,8 @@
 
     title <
       name = Journal of Instrumentation ;
-      issn = 1748-0221
+      issn = 1748-0221 ;
+      issnl = 1748-0221
     >
     
     param[journal_issn] = 1748-0221
@@ -1038,7 +1175,8 @@
 
     title <
       name = Journal of Nuclear Energy. Part C, Plasma Physics, Accelerators, Thermonuclear Research ;
-      issn = 0368-3281
+      issn = 0368-3281 ;
+      issnl = 0368-3281
     >
 
     param[journal_issn] = 0368-3281
@@ -1085,7 +1223,8 @@
 
     title <
       name = Journal of Optics (1970-1998) ;
-      issn = 0150-536X
+      issn = 0150-536X ;
+      issnl = 0150-536X
     >
 
     param[journal_issn] = 0150-536X
@@ -1177,7 +1316,8 @@
 
     title <
       name = Journal of Physics A: General Physics ;
-      issn = 0022-3689 
+      issn = 0022-3689 ;
+      issnl = 0022-3689
     >
 
     param[journal_issn] = 0022-3689
@@ -1268,7 +1408,8 @@
 
     title <
       name = Journal of Physics A: Mathematical, Nuclear and General ;
-      issn = 0301-0015
+      issn = 0301-0015 ;
+      issnl = 0301-0015
     >
 
     param[journal_issn] = 0301-0015
@@ -1284,7 +1425,8 @@
 
     title <
       name = Journal of Physics B: Atomic and Molecular Physics ;
-      issn = 0022-3700
+      issn = 0022-3700 ;
+      issnl = 0022-3700
     >
 
     param[journal_issn] = 0022-3700
@@ -1360,7 +1502,8 @@
 
     title <
       name = Journal of Physics C: Solid State Physics ;
-      issn = 0022-3719
+      issn = 0022-3719 ;
+      issnl = 0022-3719
     >
 
     param[journal_issn] = 0022-3719
@@ -1455,7 +1598,8 @@
 
     title <
       name = Journal of Physics E: Scientific Instruments ;
-      issn = 0022-3735 
+      issn = 0022-3735 ;
+      issnl = 0022-3735
     >
 
     param[journal_issn] = 0022-3735
@@ -1489,7 +1633,8 @@
 
     title <
       name = Journal of Physics F: Metal Physics ;
-      issn = 0305-4608 
+      issn = 0305-4608 ;
+      issnl = 0305-4608
     >
 
     param[journal_issn] = 0305-4608
@@ -1563,7 +1708,8 @@
 
     title <
       name = Journal of Physics G: Nuclear Physics ;
-      issn = 0305-4616
+      issn = 0305-4616 ;
+      issnl = 0305-4616
     >
 
     param[journal_issn] = 0305-4616
@@ -2231,7 +2377,8 @@
 
     title <
       name = Journal of Scientific Instruments ;
-      issn = 0950-7671
+      issn = 0950-7671 ;
+      issnl = 0950-7671
     >
 
     param[journal_issn] = 0950-7671
@@ -2287,10 +2434,11 @@
 
     title <
       name = Journal of Semiconductors ;
-      issn = 1674-4926
+      issn = 1674-4926 ;
+      issnl = 1674-4926
     >
     
-    comment[0] = Formerly 'Chinese Journal of Semiconductors' 0253-4177
+    comment[0] = Formerly 'Chinese Journal of Semiconductors' 0253-4177, content not online
 
     param[journal_issn] = 1674-4926
 
@@ -2307,7 +2455,8 @@
 
     title <
       name = Journal of Statistical Mechanics: Theory and Experiment ;
-      issn = 1742-5468
+      issn = 1742-5468 ;
+      issnl = 1742-5468
     >
     
     param[journal_issn] = 1742-5468
@@ -2331,7 +2480,8 @@
 
     title <
       name = Journal of the Society for Radiological Protection ;
-      issn = 0260-2814
+      issn = 0260-2814 ;
+      issnl = 0260-2814
     >
 
     param[journal_issn] = 0260-2814
@@ -2350,11 +2500,58 @@
   {
 
     title <
+      name = Laser Physics ;
+      issn = 1054-660X ;
+      eissn = 1555-6611 ;
+      issnl = 1054-660X
+    >
+    
+    param[journal_issn] = 1555-6611
+    comment[param] = eissn preferred
+
+    au < exists ; exists ; 2013 ; Laser Physics Volume 23 ; 23 >
+    au < exists ; exists ; 2014 ; Laser Physics Volume 24 ; 24 >
+    au < exists ; exists ; 2015 ; Laser Physics Volume 25 ; 25 >
+
+  }
+
+  {
+
+    title <
+      name = Laser Physics Letters ;
+      issn = 1612-2011 ;
+      eissn = 1612-202X ;
+      issnl = 1612-2011
+    >
+    
+    param[journal_issn] = 1612-202X
+    comment[param] = eissn preferred
+
+    au < exists ; exists ; 2004 ; Laser Physics Letters Volume 1 ; 1 >
+    au < exists ; exists ; 2005 ; Laser Physics Letters Volume 2 ; 2 >
+    au < exists ; exists ; 2006 ; Laser Physics Letters Volume 3 ; 3 >
+    au < exists ; exists ; 2007 ; Laser Physics Letters Volume 4 ; 4 >
+    au < exists ; exists ; 2008 ; Laser Physics Letters Volume 5 ; 5 >
+    au < exists ; exists ; 2009 ; Laser Physics Letters Volume 6 ; 6 >
+    au < exists ; exists ; 2010 ; Laser Physics Letters Volume 7 ; 7 >
+    au < exists ; exists ; 2011 ; Laser Physics Letters Volume 8 ; 8 >
+    au < exists ; exists ; 2012 ; Laser Physics Letters Volume 9 ; 9 >
+    au < exists ; exists ; 2013 ; Laser Physics Letters Volume 10 ;10 >
+    au < exists ; exists ; 2014 ; Laser Physics Letters Volume 11 ;11 >
+    au < exists ; exists ; 2015 ; Laser Physics Letters Volume 12 ;12 >
+
+  }
+
+  {
+
+    title <
       name = Materials Research Express ;
-      eissn = 2053-1591
+      eissn = 2053-1591 ;
+      issnl = 2053-1591
     >
     
     param[journal_issn] = 2053-1591
+    comment[param] = eissn preferred
 
     au < exists ; exists ; 2014 ; Materials Research Express Volume 1 ; 1 > 
 
@@ -2398,6 +2595,22 @@
     au < ingNotReady ; exists ; 2012 ; Measurement Science and Technology Volume 23 ; 23 > 
     au < crawling ; exists ; 2013 ; Measurement Science and Technology Volume 24 ; 24 > 
     au < manifest ; exists ; 2014 ; Measurement Science and Technology Volume 25 ; 25 > 
+
+  }
+
+  {
+
+    title <
+      name = Methods and Applications in Fluorescence ;
+      eissn = 2050-6120 ;
+      issnl = 2050-6120
+    >
+
+    param[journal_issn] = 2050-6120
+    comment[param] = eissn preferred
+
+    au < exists ; exists ; 2013 ; Methods and Applications in Fluorescence Volume 1 ; 1 >
+    au < exists ; exists ; 2014 ; Methods and Applications in Fluorescence Volume 2 ; 2 >
 
   }
 
@@ -2549,7 +2762,8 @@
 
     title <
       name = New Journal of Physics ;
-      issn = 1367-2630
+      issn = 1367-2630 ;
+      issnl = 1367-2630
     >
     
     param[journal_issn] = 1367-2630
@@ -2620,7 +2834,8 @@
 
     title <
       name = Nouvelle Revue d'Optique ;
-      issn = 0335-7368
+      issn = 0335-7368 ;
+      issnl = 0335-7368
     >
 
     param[journal_issn] = 0335-7368
@@ -2638,7 +2853,8 @@
 
     title <
       name = Nouvelle Revue d'Optique Appliquée ;
-      issn = 0029-4780
+      issn = 0029-4780 ;
+      issnl = 0029-4780
     >
 
     param[journal_issn] = 0029-4780
@@ -2995,7 +3211,8 @@
 
     title <
       name = Physics in Technology ;
-      issn = 0305-4624
+      issn = 0305-4624 ;
+      issnl = 0305-4624
     >
 
     param[journal_issn] = 0305-4624
@@ -3062,7 +3279,8 @@
 
     title <
       name = Plasma Physics ;
-      issn = 0032-1028
+      issn = 0032-1028 ;
+      issnl = 0032-1028
     >
 
     param[journal_issn] = 0032-1028
@@ -3141,7 +3359,8 @@
 
     title <
       name = Plasma Science and Technology ;
-      issn = 1009-0630
+      issn = 1009-0630 ;
+      issnl = 1009-0630
     >
     
     param[journal_issn] = 1009-0630
@@ -3207,7 +3426,8 @@
 
     title <
       name = Proceedings of the Physical Society ;
-      issn = 0370-1328
+      issn = 0370-1328 ;
+      issnl = 0370-1328
     >
 
     param[journal_issn] = 0370-1328
@@ -3242,7 +3462,8 @@
 
     title <
       name = Proceedings of the Physical Society ;
-      issn = 0959-5309
+      issn = 0959-5309 ;
+      issnl = 0959-5309
     >
 
     param[journal_issn] = 0959-5309
@@ -3279,7 +3500,8 @@
 
     title <
       name = Proceedings of the Physical Society of London ;
-      issn = 1478-7814
+      issn = 1478-7814 ;
+      issnl = 1478-7814
     >
 
     param[journal_issn] = 1478-7814
@@ -3330,7 +3552,8 @@
 
     title <
       name = Proceedings of the Physical Society. Section A ;
-      issn = 0370-1298
+      issn = 0370-1298 ;
+      issnl = 0370-1298
     >
 
     param[journal_issn] = 0370-1298
@@ -3353,7 +3576,8 @@
 
     title <
       name = Proceedings of the Physical Society. Section B ;
-      issn = 0370-1301
+      issn = 0370-1301 ;
+      issnl = 0370-1301
     >
 
     param[journal_issn] = 0370-1301
@@ -3419,7 +3643,8 @@
 
     title <
       name = Quantum Optics: Journal of the European Optical Society Part B ;
-      issn = 0954-8998
+      issn = 0954-8998 ;
+      issnl = 0954-8998
     >
 
     param[journal_issn] = 0954-8998
@@ -3529,7 +3754,8 @@
 
     title <
       name = Research in Astronomy and Astrophysics ;
-      issn = 1674-4527
+      issn = 1674-4527 ;
+      issnl = 1674-4527
     >
     
     param[journal_issn] = 1674-4527
@@ -3548,7 +3774,8 @@
 
     title <
       name = Review of Physics in Technology ;
-      issn = 0034-6683
+      issn = 0034-6683 ;
+      issnl = 0034-6683
     >
 
     param[journal_issn] = 0034-6683
@@ -3718,11 +3945,29 @@
   {
 
     title <
+      name = Surface Topography: Metrology and Properties ;
+      eissn = 2051-672X ;
+      issnl = 2051-672X
+    >
+
+    param[journal_issn] = 2051-672X
+    comment[param] = eissn preferred
+
+    au < exists ; exists ; 2013 ; Surface Topography: Metrology and Properties Volume 1 ; 1 >
+    au < exists ; exists ; 2014 ; Surface Topography: Metrology and Properties Volume 2 ; 2 >
+
+  }
+
+  {
+
+    title <
       name = Transactions of the Optical Society ;
-      issn = 1475-4878
+      issn = 1475-4878 ;
+      issnl = 1475-4878
     >
 
     param[journal_issn] = 1475-4878
+    comment[param] = print issn preferred
 
     au < manifest ; exists ; 1899 ; Transactions of the Optical Society Volume 1 ; 1  > 
     au < manifest ; exists ; 1900 ; Transactions of the Optical Society Volume 2 ; 2  > 
@@ -3764,10 +4009,12 @@
 
     title <
       name = Translational Materials Research ;
-      eissn = 2053-1613
+      eissn = 2053-1613 ;
+      issnl = 2053-1613
     >
     
     param[journal_issn] = 2053-1613
+    comment[param] = eissn preferred
 
     au < exists ; exists ; 2014 ; Translational Materials Research Volume 1 ; 1 > 
 
