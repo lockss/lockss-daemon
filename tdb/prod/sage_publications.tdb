@@ -26279,7 +26279,7 @@ comment[mpj] = now published by Brill
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
   
-      au < exists ; 2014 ; Journal of Rehabilitation and Assistive Technologies Engineering Volume 1 ; 1 >
+      au < manifest ; 2014 ; Journal of Rehabilitation and Assistive Technologies Engineering Volume 1 ; 1 >
     }
 
     {
@@ -41748,7 +41748,7 @@ comment[mpj] = now published by Brill
         au < released ; 2012 ; Urban Studies Volume 49 ; 49 >
         au < manifest ; 2013 ; Urban Studies Volume 50 ; 50 >
         au < manifest ; 2014 ; Urban Studies Volume 51 ; 51 >
-        au < expected ; 2015 ; Urban Studies Volume 52 ; 52 >
+        au < manifest ; 2015 ; Urban Studies Volume 52 ; 52 >
 
       }
 
