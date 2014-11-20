@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleUrlConsumer.java,v 1.1 2014-11-12 20:11:53 wkwilson Exp $
+ * $Id: SimpleUrlConsumer.java,v 1.2 2014-11-20 01:53:01 wkwilson Exp $
  */
 
 /*
@@ -64,6 +64,9 @@ public class SimpleUrlConsumer implements UrlConsumer {
   public void consume() throws IOException{
     if(cacher == null) {
       cacher = au.makeUrlCacher(fud.getUrlData());
+    }
+    if(fud.fetchUrl != null) {
+      cacher.setFetchUrl(fud.fetchUrl);
     }
     if(fud.storeRedirects() && fud.redirectUrls != null) {
       cacher.setRedirectUrls(fud.redirectUrls);

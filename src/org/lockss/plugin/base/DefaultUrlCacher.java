@@ -1,5 +1,5 @@
 /*
- * $Id: DefaultUrlCacher.java,v 1.2 2014-11-19 22:46:24 wkwilson Exp $
+ * $Id: DefaultUrlCacher.java,v 1.3 2014-11-20 01:53:01 wkwilson Exp $
  */
 
 /*
@@ -142,6 +142,13 @@ public class DefaultUrlCacher implements UrlCacher {
   
   public void setRedirectUrls(List<String> redirectUrls) {
     this.redirectUrls = redirectUrls;
+    if(fetchUrl == null) {
+      this.fetchUrl = redirectUrls.get(redirectUrls.size()-1);
+    }
+  }
+  
+  public void setFetchUrl(String fetchUrl) {
+    this.fetchUrl = fetchUrl;
   }
 
   public void storeContent() throws IOException {
@@ -160,7 +167,7 @@ public class DefaultUrlCacher implements UrlCacher {
       if (logger.isDebug3()) {
         logger.debug3("redirectUrls: " + redirectUrls);
       }
-      if (redirectUrls != null) {
+      if (redirectUrls != null && fetchUrl != null) {
         CachedUrl cu = getCachedUrl();
         CIProperties headerCopy  = CIProperties.fromProperties(headers);
         int last = redirectUrls.size() - 1;

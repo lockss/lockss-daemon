@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.128 2014-11-19 22:46:24 wkwilson Exp $
+ * $Id: NullPlugin.java,v 1.129 2014-11-20 01:53:01 wkwilson Exp $
  */
 
 /*
@@ -386,6 +386,10 @@ public class NullPlugin {
     }
 
     public void setRedirectUrls(List<String> redirectUrls) {
+      throw new UnsupportedOperationException();
+    }
+    
+    public void setFetchUrl(String fetchUrl) {
       throw new UnsupportedOperationException();
     }
 

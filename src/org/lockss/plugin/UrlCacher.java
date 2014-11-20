@@ -1,5 +1,5 @@
 /*
- * $Id: UrlCacher.java,v 1.34 2014-11-19 22:46:24 wkwilson Exp $
+ * $Id: UrlCacher.java,v 1.35 2014-11-20 01:53:01 wkwilson Exp $
  */
 
 /*
@@ -115,5 +115,11 @@ public interface UrlCacher {
    * @param redirectUrls
    */
   public void setRedirectUrls(List<String> redirectUrls);
+  
+  /**
+   * If the fetchUrl is different from the origUrl
+   * @param fetchUrl
+   */
+  public void setFetchUrl(String fetchUrl);
 
 }
