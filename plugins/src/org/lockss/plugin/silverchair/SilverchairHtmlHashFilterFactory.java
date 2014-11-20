@@ -1,5 +1,5 @@
 /*
- * $Id: SilverchairHtmlHashFilterFactory.java,v 1.5 2014-09-22 22:16:44 thib_gc Exp $
+ * $Id: SilverchairHtmlHashFilterFactory.java,v 1.6 2014-11-20 21:54:29 thib_gc Exp $
  */
 
 /*
@@ -112,10 +112,10 @@ public class SilverchairHtmlHashFilterFactory implements FilterFactory {
          * Broad area filtering 
          */
         // Document header (e.g. <meta> tags added over time)
-        new TagNameFilter("head"),
+        HtmlNodeFilters.tag("head"),
         // Scripts
-        new TagNameFilter("script"),
-        new TagNameFilter("noscript"),
+        HtmlNodeFilters.tag("script"),
+        HtmlNodeFilters.tag("noscript"),
         // Comments
         HtmlNodeFilters.comment(),
         // Header
@@ -155,6 +155,8 @@ public class SilverchairHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "divSignInSubscriptionUpsell"), // [AMA]
         HtmlNodeFilters.tagWithAttribute("div", "class", "relatedArticlesMobile"), // [AMA]
         HtmlNodeFilters.tagWithAttribute("div", "class", "collectionsMobile"), // [AMA]
+        // Articles might get tagged "free" later
+        HtmlNodeFilters.tagWithAttribute("span", "id", "scm6MainContent_lblFreeArticle"), // [AMA]
     };
     
     HtmlFilterInputStream htmlFilterInputStream =
