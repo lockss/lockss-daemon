@@ -1,5 +1,5 @@
 /*
- * $Id: TestKnowlegeXmlMetadataExtractor.java,v 1.1 2014-08-14 21:22:52 alexandraohlson Exp $
+ * $Id: TestKnowlegeXmlMetadataExtractor.java,v 1.2 2014-11-20 18:31:25 alexandraohlson Exp $
  */
 /*
 
@@ -33,14 +33,11 @@
 
 package org.lockss.plugin.clockss.knowledge;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.*;
 
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
-import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 
@@ -103,6 +100,7 @@ public class TestKnowlegeXmlMetadataExtractor extends LockssTestCase {
   private static final String DATE_1 = "2013";
   private static final String WONKY_DATE = "Jun-14";
   private static final String PUB_1 = "Publishing, Inc.";
+  private static final String PROVIDER = "Knowledge Unlatched";
 
   private static final String XML_FRAME_START =
       "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>" +
@@ -127,6 +125,8 @@ public class TestKnowlegeXmlMetadataExtractor extends LockssTestCase {
     assertEquals(ISBN_1,mdRecord.get(MetadataField.FIELD_ISBN));
     assertEquals(TITLE_1 + " : " + SUBTITLE_1,mdRecord.get(MetadataField.FIELD_PUBLICATION_TITLE));
     assertEquals(DATE_1,mdRecord.get(MetadataField.FIELD_DATE));
+    //TODO 1.67
+    //assertEquals(PROVIDER, mdRecord.get(MetadataField.FIELD_PROVIDER));
   }
   
   public void testISBN_issues() throws Exception
@@ -155,6 +155,9 @@ public class TestKnowlegeXmlMetadataExtractor extends LockssTestCase {
     mdRecord = getMDFromXMLString(xml_string);
     printMetadata(mdRecord);
     assertEquals(TEST_FILENAME,mdRecord.get(MetadataField.FIELD_ISBN));
+    //TODO 1.67
+    //assertEquals(PROVIDER, mdRecord.get(MetadataField.FIELD_PROVIDER));
+    
   }
   
   public void testTitle_issues() throws Exception
@@ -182,6 +185,8 @@ public class TestKnowlegeXmlMetadataExtractor extends LockssTestCase {
     mdRecord = getMDFromXMLString(xml_string);
     printMetadata(mdRecord);
     assertEquals(TITLE_1,mdRecord.get(MetadataField.FIELD_PUBLICATION_TITLE));
+    //TODO 1.67
+    //assertEquals(PROVIDER, mdRecord.get(MetadataField.FIELD_PROVIDER));
   }
   
   public void testDate_issues() throws Exception
@@ -217,6 +222,8 @@ public class TestKnowlegeXmlMetadataExtractor extends LockssTestCase {
     mdRecord = getMDFromXMLString(xml_string);
     printMetadata(mdRecord);
     assertEquals(WONKY_DATE,mdRecord.get(MetadataField.FIELD_DATE));   
+    //TODO 1.67
+    //assertEquals(PROVIDER, mdRecord.get(MetadataField.FIELD_PROVIDER));
   }
   
 
@@ -246,6 +253,8 @@ public class TestKnowlegeXmlMetadataExtractor extends LockssTestCase {
     assertEquals(AUTHOR_1, authors.get(0));
     assertEquals(AUTHOR_2, authors.get(1));
     assertEquals(AUTHOR_3, authors.get(2));
+    //TODO 1.67
+    //assertEquals(PROVIDER, mdRecord.get(MetadataField.FIELD_PROVIDER));
   }
   
   

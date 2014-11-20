@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>down - initial development</string>
+    <string>testing</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -9,14 +9,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -27,6 +27,8 @@
   <entry>
     <string>required_daemon_version</string>
     <string>1.62.0</string>
+<!--  TODO: as soon as provider is turned on  -->
+<!--    <string>1.67.0</string> -->
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -34,7 +36,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>8</string>
+    <string>10</string>
   </entry>
   <entry>
     <string>au_name</string>
