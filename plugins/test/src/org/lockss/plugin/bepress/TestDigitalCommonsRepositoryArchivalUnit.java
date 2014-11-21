@@ -1,5 +1,5 @@
 /*
- * $Id: TestDigitalCommonsRepositoryArchivalUnit.java,v 1.2 2014-11-12 20:11:59 wkwilson Exp $
+ * $Id: TestDigitalCommonsRepositoryArchivalUnit.java,v 1.3 2014-11-21 18:55:21 thib_gc Exp $
  */
 
 /*
@@ -179,16 +179,16 @@ public class TestDigitalCommonsRepositoryArchivalUnit extends LockssTestCase {
     assertTrue(dcrAu.shouldCrawlForNewContent(aus));
   }
 
-  public void testgetName() throws Exception {
+  public void testGetName() throws Exception {
     DefinableArchivalUnit au1 =
       makeAu(new URL("http://www.example1.com/"), "aaadept", "aaatype", "2012");
     assertEquals(PLUGIN_NAME + ", Base URL http://www.example1.com/,"
-                 + " Collection aaadept, Collection Type aaatype,"
+                 + " Collection Type aaatype, Collection aaadept,"
                  + " Year 2012", au1.getName());
     DefinableArchivalUnit au2 =
       makeAu(new URL("http://www.example2.com/"), "bbbdept", "bbbtype", "2013");
     assertEquals(PLUGIN_NAME + ", Base URL http://www.example2.com/,"
-                 + " Collection bbbdept, Collection Type bbbtype,"
+                 + " Collection Type bbbtype, Collection bbbdept,"
                  + " Year 2013", au2.getName());
   }
 

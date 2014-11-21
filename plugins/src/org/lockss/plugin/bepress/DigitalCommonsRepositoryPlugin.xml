@@ -38,7 +38,7 @@
       <org.lockss.daemon.ConfigParamDescr>
         <key>collection</key>
         <displayName>Collection</displayName>
-        <description>Name of the collection in the URL structure</description>
+        <description>Name of the collection</description>
         <type>1</type>
         <size>10</size>
         <definitional>true</definitional>
@@ -47,7 +47,7 @@
       <org.lockss.daemon.ConfigParamDescr>
         <key>collection_type</key>
         <displayName>Collection Type</displayName>
-        <description>Name of the collection type in the URL structure</description>
+        <description>Collection type (one of: ir_series, ir_etd, ir_book, ir_gallery)</description>
         <type>1</type>
         <size>10</size>
         <definitional>true</definitional>
@@ -75,7 +75,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Digital Commons Repository Plugin, Base URL %s, Collection %s, Collection Type %s, Year %d", base_url, collection, collection_type, year</string>
+    <string>"Digital Commons Repository Plugin, Base URL %s, Collection Type %s, Collection %s, Year %d", base_url, collection_type, collection, year</string>
   </entry>
   <entry>
     <string>au_permission_checker_factory</string>
