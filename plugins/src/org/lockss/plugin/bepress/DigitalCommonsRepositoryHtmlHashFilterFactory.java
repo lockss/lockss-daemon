@@ -1,10 +1,10 @@
 /*
- * $Id: DigitalCommonsRepositoryHtmlHashFilterFactory.java,v 1.1 2013-11-19 21:40:57 ldoan Exp $
+ * $Id: DigitalCommonsRepositoryHtmlHashFilterFactory.java,v 1.2 2014-11-21 00:08:59 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,7 +35,6 @@ package org.lockss.plugin.bepress;
 import java.io.InputStream;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.OrFilter;
-import org.htmlparser.filters.TagNameFilter;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.HtmlFilterInputStream;
 import org.lockss.filter.html.HtmlNodeFilterTransform;
@@ -44,28 +43,29 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.FilterFactory;
 import org.lockss.util.Logger;
 
-public class DigitalCommonsRepositoryHtmlHashFilterFactory
-  implements FilterFactory {
+public class DigitalCommonsRepositoryHtmlHashFilterFactory implements FilterFactory {
 
+  private static final Logger log =
+      Logger.getLogger(DigitalCommonsRepositoryHtmlHashFilterFactory.class);
+  
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
-                                               InputStream in, String encoding)
+                                               InputStream in,
+                                               String encoding)
       throws PluginException {
-    
-    Logger log = Logger.getLogger(
-        DigitalCommonsRepositoryHtmlHashFilterFactory.class);
-    
     NodeFilter[] filters = new NodeFilter[] {
         // filter out javascript
-        new TagNameFilter("script"),
-        //filter out comments
-        HtmlNodeFilters.commentWithRegex(".*"),
+        HtmlNodeFilters.tag("script"),
+        // filter out comments
+        HtmlNodeFilters.comment(),
         // stylesheets
         HtmlNodeFilters.tagWithAttribute("link", "rel", "stylesheet"),
         // top banner
         HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
-        // breadcrumb - Home > Dietrich College > Statistics
+        // breadcrumb and accompanying backlinks
         HtmlNodeFilters.tagWithAttribute("div", "id", "breadcrumb"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "series-header"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "series-home"),
         // skip to main
         HtmlNodeFilters.tagWithAttribute("a", "class", "skiplink"),
         // near top - navigation
@@ -75,19 +75,26 @@ public class DigitalCommonsRepositoryHtmlHashFilterFactory
         // top right of the article for the year - <previous> and <next>
         // http://repository.cmu.edu/statistics/68/
         HtmlNodeFilters.tagWithAttribute("ul", "id", "pager"),
+        // collections of type ir_book have covers of the books in other years
+        // (other than those contained in e.g. <li class="lockss_2013">)
+        HtmlNodeFilters.tagWithAttribute("div", "class", "gallery-tools"),
+        // books can have a purchase button
+        // e.g. http://docs.lib.purdue.edu/purduepress_ebooks/29/
+        HtmlNodeFilters.tagWithAttribute("div", "id", "buy-link"),
         // footer
         HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
-        // publication 'follow'
+        // 'follow' publication or 'follow' author buttons
         HtmlNodeFilters.tagWithAttribute("a", "rel", "nofollow"),
-        // right side box 'Include in'
+        // right side box 'Included in'
         HtmlNodeFilters.tagWithAttribute("div", "id", "beta-disciplines"),
         // social media - share
         HtmlNodeFilters.tagWithAttribute("div", "id", "share"),
-        // some strange class named Z3988
+        // hidden Z39.88 field
         HtmlNodeFilters.tagWithAttribute("span", "class", "Z3988")
     };
-    return new HtmlFilterInputStream(
-        in, encoding,HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    return new HtmlFilterInputStream(in,
+                                     encoding,
+                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
   }
-
+  
 }

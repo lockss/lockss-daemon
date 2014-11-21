@@ -1,10 +1,10 @@
 /*
- * $Id: DigitalCommonsRepositoryHtmlCrawlFilterFactory.java,v 1.1 2013-11-19 21:40:57 ldoan Exp $
+ * $Id: DigitalCommonsRepositoryHtmlCrawlFilterFactory.java,v 1.2 2014-11-21 00:08:59 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,23 +39,21 @@ import org.htmlparser.filters.*;
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
+import org.lockss.filter.html.HtmlNodeFilters.HasAttributeRegexFilter;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 
-public class DigitalCommonsRepositoryHtmlCrawlFilterFactory
-  implements FilterFactory {
+public class DigitalCommonsRepositoryHtmlCrawlFilterFactory implements FilterFactory {
 
+  private static final Logger log =
+      Logger.getLogger(DigitalCommonsRepositoryHtmlCrawlFilterFactory.class);
+  
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
-                                               InputStream in, String encoding)
+                                               InputStream in,
+                                               String encoding)
       throws PluginException {
-    
-    Logger log = Logger.getLogger(
-        DigitalCommonsRepositoryHtmlCrawlFilterFactory.class);
-    
-    String paramYear = 
-        au.getConfiguration().get(ConfigParamDescr.YEAR.getKey());
-    
+    String paramYear = au.getConfiguration().get(ConfigParamDescr.YEAR.getKey());
     log.debug3("param year: " + paramYear);
     
     String regexStr = "^lockss_(?!" + paramYear + ")[0-9]{4}$";
@@ -63,23 +61,30 @@ public class DigitalCommonsRepositoryHtmlCrawlFilterFactory
     NodeFilter[] filters = new NodeFilter[] {
         // filter out all years except the AU's year 		
         // <div class="lockss_2013">
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", regexStr),
+        // <li class="lockss_2013">
+        new HasAttributeRegexFilter("class", regexStr),
+        // top right of the article for the year - <previous> and <next>
+        // e.g. http://repository.cmu.edu/statistics/68/
+        HtmlNodeFilters.tagWithAttribute("ul", "id", "pager"),
+        // collections of type ir_book have covers of the books in other years
+        // (other than those contained in e.g. <li class="lockss_2013">)
+        HtmlNodeFilters.tagWithAttribute("div", "class", "gallery-tools"),
+        /* Unknown if following clauses are really necessary */
         // top banner
         HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
         // breadcrumb - Home > Dietrich College > Statistics
         HtmlNodeFilters.tagWithAttribute("div", "id", "breadcrumb"),
         // left sidebar
         HtmlNodeFilters.tagWithAttribute("div", "id", "sidebar"),
-        // top right of the article for the year - <previous> and <next>
-        // http://repository.cmu.edu/statistics/68/
-        HtmlNodeFilters.tagWithAttribute("ul", "id", "pager"),
         // footer
         HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
         // lockss-probe from manifest pages
         HtmlNodeFilters.tagWithAttribute("link", "lockss-probe")
     };
-    return new HtmlFilterInputStream(
-        in, encoding, HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    
+    return new HtmlFilterInputStream(in,
+                                     encoding,
+                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
   }
 
 }
