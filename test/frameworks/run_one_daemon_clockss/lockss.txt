@@ -69,7 +69,7 @@ org.lockss.platform.project=CLOCKSS
 # So that we don't hash on no-longer-relevant URLs
 org.lockss.blockHasher.ignoreFilesOutsideCrawlSpec=true
 
-org.lockss.baseau.minFetchDelay=3250
+org.lockss.baseau.minFetchDelay=3000
 org.lockss.plugin.restartAusWithNewPlugin=true
 
 # UI username-passwd = lockss-u/lockss-p
