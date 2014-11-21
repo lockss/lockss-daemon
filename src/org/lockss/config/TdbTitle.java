@@ -1,5 +1,5 @@
 /*
- * $Id: TdbTitle.java,v 1.23 2014-10-13 22:45:34 pgust Exp $
+ * $Id: TdbTitle.java,v 1.24 2014-11-21 20:24:36 thib_gc Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import org.lockss.util.*;
  * This class represents a title database title.
  *
  * @author  Philip Gust
- * @version $Id: TdbTitle.java,v 1.23 2014-10-13 22:45:34 pgust Exp $
+ * @version $Id: TdbTitle.java,v 1.24 2014-11-21 20:24:36 thib_gc Exp $
  */
 public class TdbTitle {
   /**
@@ -238,8 +238,8 @@ public class TdbTitle {
 
   /**
    * Return best coverage depth of the content in this title. Values include 
-   * "fulltext" for full-text coverage, and "abstracts" for primarily or only 
-   * "abstracts" coverage.
+   * "fulltext" for full-text coverage, "abstracts" for abstracts-only 
+   * coverage, and "tablesofcontents" for tables of contents-only coverage.
    * 
    * @return best coverage depth this title
    */

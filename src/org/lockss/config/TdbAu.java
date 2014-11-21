@@ -1,5 +1,5 @@
 /*
- * $Id: TdbAu.java,v 1.35 2014-10-03 23:04:46 fergaloy-sf Exp $
+ * $Id: TdbAu.java,v 1.36 2014-11-21 20:24:36 thib_gc Exp $
  */
 
 /*
@@ -798,8 +798,8 @@ public class TdbAu implements BibliographicItem, Comparable<TdbAu> {
   
   /**
    * Return coverage depth of the content in this AU. Values include "fulltext"
-   * for full-text coverage, and "abstracts" for primarily or only "abstracts"
-   * coverage.
+   * for full-text coverage, "abstracts" for abstracts-only coverage, and
+   * "tablesofcontents" for tables of contents-only coverage.
    * 
    * @return coverage depth this AU or "fulltext" if not specified
    */
