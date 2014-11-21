@@ -1,5 +1,5 @@
 /*
- * $Id: HttpResultMap.java,v 1.16 2014-11-12 20:11:57 wkwilson Exp $
+ * $Id: HttpResultMap.java,v 1.17 2014-11-21 22:36:29 tlipkis Exp $
  */
 
 /*
@@ -56,8 +56,8 @@ public class HttpResultMap implements CacheResultMap {
   int[] RetryDeadLinkCodes = {};
   int[] NoRetryDeadLinkCodes= {204, 300, 400, 404, 405, 406, 410};
   int[] UnexpectedFailCodes = {
-      201, 202, 205, 206, 306,
-      411, 412, 416, 417, 501, 505};
+    201, 202, 205, 206, 306,
+    411, 412, 416, 417, 501, 505};
   int[] UnexpectedNoFailCodes = { 414, 415 };
 
 
@@ -86,9 +86,9 @@ public class HttpResultMap implements CacheResultMap {
     
     /** Invoke the handler on the result (responseCode or Exception) */
     abstract CacheException invokeHandler(CacheResultHandler handler,
-            ArchivalUnit au,
-            String url)
-  throws PluginException;
+					  ArchivalUnit au,
+					  String url)
+	throws PluginException;
   }
 
   /**  HTTP response event */
@@ -106,9 +106,9 @@ public class HttpResultMap implements CacheResultMap {
     
     @Deprecated
     CacheException invokeHandler(CacheResultHandler handler,
-        ArchivalUnit au,
-        LockssUrlConnection conn)
- throws PluginException {
+				 ArchivalUnit au,
+				 LockssUrlConnection conn)
+	throws PluginException {
       return invokeHandler(handler, au, getConnUrl(conn));
     }
     
@@ -141,10 +141,10 @@ public class HttpResultMap implements CacheResultMap {
     }
     
     CacheException invokeHandler(CacheResultHandler handler, ArchivalUnit au,
-        String url)
- throws PluginException {
-     return handler.handleResult(au, url, fetchException);
-   }
+				 String url)
+	throws PluginException {
+      return handler.handleResult(au, url, fetchException);
+    }
   }
 
   static String getConnUrl(LockssUrlConnection conn) {
@@ -172,9 +172,9 @@ public class HttpResultMap implements CacheResultMap {
 	throws Exception;
     
     abstract CacheException makeException(ArchivalUnit au,
-        String url,
-        Event evt)
-throws Exception;
+					  String url,
+					  Event evt)
+	throws Exception;
 
     String fmtMsg(String s, String msg) {
       if (fmt != null) {
@@ -188,8 +188,8 @@ throws Exception;
     
     @Deprecated
     CacheException getCacheException(ArchivalUnit au,
-        LockssUrlConnection connection,
-        Event evt) {
+				     LockssUrlConnection connection,
+				     Event evt) {
       return getCacheException(au, getConnUrl(connection), evt);
     }
 
@@ -225,11 +225,11 @@ throws Exception;
 
       @Deprecated
       CacheException makeException(ArchivalUnit au,
-          LockssUrlConnection connection,
-          Event evt)
-   throws PluginException {
- return makeException(au, getConnUrl(connection), evt);
-     }
+				   LockssUrlConnection connection,
+				   Event evt)
+	  throws PluginException {
+	return makeException(au, getConnUrl(connection), evt);
+      }
       
       CacheException makeException(ArchivalUnit au,
 				   String url,
@@ -258,9 +258,9 @@ throws Exception;
 
       @Deprecated
       CacheException makeException(ArchivalUnit au,
-          LockssUrlConnection connection,
-          Event evt)
-   throws Exception {
+				   LockssUrlConnection connection,
+				   Event evt)
+	  throws Exception {
         return makeException(au, getConnUrl(connection), evt);
       }
       
@@ -452,11 +452,11 @@ throws Exception;
     }
   }
   public CacheException mapException(ArchivalUnit au,
-      LockssUrlConnection connection,
-      int responseCode,
-      String message)  {
+				     LockssUrlConnection connection,
+				     int responseCode,
+				     String message)  {
     return mapException(au, getConnUrl(connection),
-        responseCode, message);
+			responseCode, message);
   }
   public CacheException mapException(ArchivalUnit au,
 				     String url,
@@ -485,11 +485,11 @@ throws Exception;
   }
 
   public CacheException mapException(ArchivalUnit au,
-      LockssUrlConnection connection,
-      Exception fetchException,
-      String message)  {
+				     LockssUrlConnection connection,
+				     Exception fetchException,
+				     String message)  {
     return mapException(au, getConnUrl(connection),
-        fetchException, message);
+			fetchException, message);
   }
   public CacheException mapException(ArchivalUnit au,
 				     String url,
