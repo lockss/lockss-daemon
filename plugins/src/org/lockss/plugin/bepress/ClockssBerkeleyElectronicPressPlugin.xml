@@ -1,21 +1,15 @@
-<!--  $Id: ClockssBerkeleyElectronicPressPlugin.xml,v 1.24 2014-09-09 02:15:19 mellen22 Exp $ -->
 <map>
-  <!-- ClockssBePressPlugin.xml inherits from BePressPlugin.xml. --> 
   <entry>
-   <string>plugin_status</string>
-   <string>ready</string>
+    <string>plugin_status</string>
+    <string>ready</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin</string>
   </entry>
   <entry>
-    <string>required_daemon_version</string>
-    <string>1.48.0</string>
-  </entry>
-  <entry>
     <string>plugin_version</string>
-    <string>30</string>
+    <string>31</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -27,7 +21,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>30</string>
+    <string>31</string>
   </entry>
   <entry>
     <string>au_name</string>

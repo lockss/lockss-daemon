@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>30</string>
+    <string>31</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -46,7 +46,7 @@
   </entry>
   <entry>
     <string>plugin_fetch_rate_limiter_source</string>
-    <string>key:BePress</string>
+    <string>host:base_url</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
@@ -92,6 +92,15 @@
     <string>plugin_config_props</string>
     <list>
       <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
         <key>journal_abbr</key>
         <displayName>Journal Abbreviation</displayName>
         <description>Abbreviation for journal (often used as part of file names).</description>
@@ -105,15 +114,6 @@
         <displayName>Volume No.</displayName>
         <type>6</type>
         <size>8</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>base_url</key>
-        <displayName>Base URL</displayName>
-        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
-        <type>3</type>
-        <size>40</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>

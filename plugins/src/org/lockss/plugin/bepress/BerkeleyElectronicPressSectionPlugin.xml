@@ -13,14 +13,18 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>29</string>
+    <string>31</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
+        <string>Poll</string>
+        <string>3</string>
+      </entry>
+      <entry>
         <string>Metadata</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -30,7 +34,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Berkeley Electronic Press Section Plugin, Base URL %s, Journal Code %s, Journal Section %s, Volume %d&quot;, base_url, journal_abbr, journal_section, volume</string>
+    <string>"Berkeley Electronic Press Section Plugin, Base URL %s, Journal Code %s, Journal Section %s, Volume %d", base_url, journal_abbr, journal_section, volume</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -42,45 +46,45 @@
   </entry>
   <entry>
     <string>plugin_fetch_rate_limiter_source</string>
-    <string>key:BePress</string>
+    <string>host:base_url</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%s%s/(%s/)?lockss-volume%d.html$&quot;, base_url, journal_abbr, journal_section, volume</string>
-      <string>1,&quot;^%s%s/%s/([^/]+/)?vol%d&quot;, base_url, journal_abbr, journal_section, volume</string>
-      <string>1,&quot;^%s%s/%s/%d/&quot;, base_url, journal_abbr, journal_section, volume</string>
-      <string>1,&quot;^%scgi/viewcontent\.cgi\?.*context=%s&quot;, base_url, journal_abbr</string>
+      <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%s%s/(%s/)?lockss-volume%d.html$", base_url, journal_abbr, journal_section, volume</string>
+      <string>1,"^%s%s/%s/([^/]+/)?vol%d", base_url, journal_abbr, journal_section, volume</string>
+      <string>1,"^%s%s/%s/%d/", base_url, journal_abbr, journal_section, volume</string>
+      <string>1,"^%scgi/viewcontent\.cgi\?.*context=%s", base_url, journal_abbr</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%s%s/%s/lockss-volume%d.html&quot;, base_url, journal_abbr, journal_section, volume</string>
+    <string>"%s%s/%s/lockss-volume%d.html", base_url, journal_abbr, journal_section, volume</string>
   </entry>
   <entry>
     <string>au_manifest</string>
-    <string>&quot;%s%s/lockss-volume%d.html&quot;, base_url, journal_abbr, volume</string>
+    <string>"%s%s/lockss-volume%d.html", base_url, journal_abbr, volume</string>
   </entry>
   <entry>
     <string>au_feature_urls</string>
     <map>
       <entry>
         <string>au_title</string>
-        <string>&quot;%s%s/%s&quot;, base_url, journal_abbr, journal_section</string>
+        <string>"%s%s/%s", base_url, journal_abbr, journal_section</string>
       </entry>
       <entry>
         <string>au_volume</string>
-        <string>&quot;%s%s/%s/vol%d&quot;, base_url, journal_abbr, journal_section, volume</string>
+        <string>"%s%s/%s/vol%d", base_url, journal_abbr, journal_section, volume</string>
       </entry>
       <entry>
         <string>au_issue</string>
-        <string>&quot;%s%s/%s/vol%d/iss%s&quot;, base_url, journal_abbr, journal_section, volume, issue</string>
+        <string>"%s%s/%s/vol%d/iss%s", base_url, journal_abbr, journal_section, volume, issue</string>
       </entry>
       <entry>
         <string>au_article</string>
-        <string>&quot;%s%s/%s/vol%d/iss%s/art%s&quot;, base_url, journal_abbr, journal_section, volume, issue, article</string>
+        <string>"%s%s/%s/vol%d/iss%s/art%s", base_url, journal_abbr, journal_section, volume, issue, article</string>
       </entry>
     </map>
   </entry>
@@ -91,6 +95,15 @@
   <entry>
     <string>plugin_config_props</string>
     <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
         <key>journal_abbr</key>
         <displayName>Journal Abbreviation</displayName>
@@ -103,7 +116,7 @@
       <org.lockss.daemon.ConfigParamDescr>
         <key>journal_section</key>
         <displayName>Journal Section</displayName>
-        <description>A section within the journal, e.g. &quot;topics&quot; or &quot;advances&quot;.</description>
+        <description>A section within the journal, e.g. "topics" or "advances".</description>
         <type>1</type>
         <size>20</size>
         <definitional>true</definitional>
@@ -117,20 +130,11 @@
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>base_url</key>
-        <displayName>Base URL</displayName>
-        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
-        <type>3</type>
-        <size>40</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
     </list>
   </entry>
   <entry>
     <string>au_redirect_to_login_url_pattern</string>
-    <string>&quot;%scgi/login\.cgi&quot;, base_url</string>
+    <string>"%scgi/login\.cgi", base_url</string>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
@@ -160,7 +164,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>&quot;^%scgi/viewcontent\.cgi\?.*context=%s&quot;, base_url, journal_abbr</string>
+      <string>"^%scgi/viewcontent\.cgi\?.*context=%s", base_url, journal_abbr</string>
     </list>
   </entry>
 </map>
