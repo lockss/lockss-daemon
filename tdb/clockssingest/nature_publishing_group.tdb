@@ -48,8 +48,8 @@
     param[journal_id] = ajg
     comment[notReady] = fetch error on ingest 3 RT 4106
 
-    au < manifest ; exists ; 1998 ; American Journal of Gastroenterology Volume 93 ; 1998 ; 93 >
-    au < manifest ; exists ; 1999 ; American Journal of Gastroenterology Volume 94 ; 1999 ; 94 >
+    au < doNotProcess ; doNotProcess ; 1998 ; American Journal of Gastroenterology Volume 93 ; 1998 ; 93 >
+    au < doNotProcess ; doNotProcess ; 1999 ; American Journal of Gastroenterology Volume 94 ; 1999 ; 94 >
     au < manifest ; exists ; 2000 ; American Journal of Gastroenterology Volume 95 ; 2000 ; 95 >
     au < manifest ; exists ; 2001 ; American Journal of Gastroenterology Volume 96 ; 2001 ; 96 >
     au < manifest ; exists ; 2002 ; American Journal of Gastroenterology Volume 97 ; 2002 ; 97 >
@@ -166,12 +166,12 @@
 
     param[journal_id] = bmt
 
-    au < manifest ; exists ; 1997 ; Bone Marrow Transplantation Volume 19 ; 1997 ; 19 >
-    au < manifest ; exists ; 1997 ; Bone Marrow Transplantation Volume 20 ; 1997 ; 20 >
-    au < manifest ; exists ; 1998 ; Bone Marrow Transplantation Volume 21 ; 1998 ; 21 >
-    au < manifest ; exists ; 1998 ; Bone Marrow Transplantation Volume 22 ; 1998 ; 22 >
-    au < manifest ; exists ; 1999 ; Bone Marrow Transplantation Volume 23 ; 1999 ; 23 >
-    au < manifest ; exists ; 1999 ; Bone Marrow Transplantation Volume 24 ; 1999 ; 24 >
+    au < doNotProcess ; doNotProcess ; 1997 ; Bone Marrow Transplantation Volume 19 ; 1997 ; 19 >
+    au < doNotProcess ; doNotProcess ; 1997 ; Bone Marrow Transplantation Volume 20 ; 1997 ; 20 >
+    au < doNotProcess ; doNotProcess ; 1998 ; Bone Marrow Transplantation Volume 21 ; 1998 ; 21 >
+    au < doNotProcess ; doNotProcess ; 1998 ; Bone Marrow Transplantation Volume 22 ; 1998 ; 22 >
+    au < doNotProcess ; doNotProcess ; 1999 ; Bone Marrow Transplantation Volume 23 ; 1999 ; 23 >
+    au < doNotProcess ; doNotProcess ; 1999 ; Bone Marrow Transplantation Volume 24 ; 1999 ; 24 >
     au < manifest ; exists ; 2000 ; Bone Marrow Transplantation Volume 25 ; 2000 ; 25 >
     au < manifest ; exists ; 2000 ; Bone Marrow Transplantation Volume 26 ; 2000 ; 26 >
     au < manifest ; exists ; 2001 ; Bone Marrow Transplantation Volume 27 ; 2001 ; 27 >
@@ -236,66 +236,66 @@
     
     param[journal_id] = bdj
 
-    au < manifest ; exists ; 1970 ; British Dental Journal Volume 128 ; 1970 ; 128 >
-    au < manifest ; exists ; 1970 ; British Dental Journal Volume 129 ; 1970 ; 129 >
-    au < manifest ; exists ; 1971 ; British Dental Journal Volume 130 ; 1971 ; 130 >
-    au < manifest ; exists ; 1971 ; British Dental Journal Volume 131 ; 1971 ; 131 >
-    au < manifest ; exists ; 1972 ; British Dental Journal Volume 132 ; 1972 ; 132 >
-    au < manifest ; exists ; 1972 ; British Dental Journal Volume 133 ; 1972 ; 133 >
-    au < manifest ; exists ; 1973 ; British Dental Journal Volume 134 ; 1973 ; 134 >
-    au < manifest ; exists ; 1973 ; British Dental Journal Volume 135 ; 1973 ; 135 >
-    au < manifest ; exists ; 1974 ; British Dental Journal Volume 136 ; 1974 ; 136 >
-    au < manifest ; exists ; 1974 ; British Dental Journal Volume 137 ; 1974 ; 137 >
-    au < manifest ; exists ; 1975 ; British Dental Journal Volume 138 ; 1975 ; 138 >
-    au < manifest ; exists ; 1975 ; British Dental Journal Volume 139 ; 1975 ; 139 >
-    au < manifest ; exists ; 1976 ; British Dental Journal Volume 140 ; 1976 ; 140 >
-    au < manifest ; exists ; 1976 ; British Dental Journal Volume 141 ; 1976 ; 141 >
-    au < manifest ; exists ; 1977 ; British Dental Journal Volume 142 ; 1977 ; 142 >
-    au < manifest ; exists ; 1977 ; British Dental Journal Volume 143 ; 1977 ; 143 >
-    au < manifest ; exists ; 1978 ; British Dental Journal Volume 144 ; 1978 ; 144 >
-    au < manifest ; exists ; 1978 ; British Dental Journal Volume 145 ; 1978 ; 145 >
-    au < manifest ; exists ; 1979 ; British Dental Journal Volume 146 ; 1979 ; 146 >
-    au < manifest ; exists ; 1979 ; British Dental Journal Volume 147 ; 1979 ; 147 >
-    au < manifest ; exists ; 1980 ; British Dental Journal Volume 148 ; 1980 ; 148 >
-    au < manifest ; exists ; 1980 ; British Dental Journal Volume 149 ; 1980 ; 149 >
-    au < manifest ; exists ; 1981 ; British Dental Journal Volume 150 ; 1981 ; 150 >
-    au < manifest ; exists ; 1981 ; British Dental Journal Volume 151 ; 1981 ; 151 >
-    au < manifest ; exists ; 1982 ; British Dental Journal Volume 152 ; 1982 ; 152 >
-    au < manifest ; exists ; 1982 ; British Dental Journal Volume 153 ; 1982 ; 153 >
-    au < manifest ; exists ; 1983 ; British Dental Journal Volume 154 ; 1983 ; 154 >
-    au < manifest ; exists ; 1983 ; British Dental Journal Volume 155 ; 1983 ; 155 >
-    au < manifest ; exists ; 1984 ; British Dental Journal Volume 156 ; 1984 ; 156 >
-    au < manifest ; exists ; 1984 ; British Dental Journal Volume 157 ; 1984 ; 157 >
-    au < manifest ; exists ; 1985 ; British Dental Journal Volume 158 ; 1985 ; 158 >
-    au < manifest ; exists ; 1985 ; British Dental Journal Volume 159 ; 1985 ; 159 >
-    au < manifest ; exists ; 1986 ; British Dental Journal Volume 160 ; 1986 ; 160 >
-    au < manifest ; exists ; 1986 ; British Dental Journal Volume 161 ; 1986 ; 161 >
-    au < manifest ; exists ; 1987 ; British Dental Journal Volume 162 ; 1987 ; 162 >
-    au < manifest ; exists ; 1987 ; British Dental Journal Volume 163 ; 1987 ; 163 >
-    au < manifest ; exists ; 1988 ; British Dental Journal Volume 164 ; 1988 ; 164 >
-    au < manifest ; exists ; 1988 ; British Dental Journal Volume 165 ; 1988 ; 165 >
-    au < manifest ; exists ; 1989 ; British Dental Journal Volume 166 ; 1989 ; 166 >
-    au < manifest ; exists ; 1989 ; British Dental Journal Volume 167 ; 1989 ; 167 >
-    au < manifest ; exists ; 1990 ; British Dental Journal Volume 168 ; 1990 ; 168 >
-    au < manifest ; exists ; 1990 ; British Dental Journal Volume 169 ; 1990 ; 169 >
-    au < manifest ; exists ; 1991 ; British Dental Journal Volume 170 ; 1991 ; 170 >
-    au < manifest ; exists ; 1991 ; British Dental Journal Volume 171 ; 1991 ; 171 >
-    au < manifest ; exists ; 1992 ; British Dental Journal Volume 172 ; 1992 ; 172 >
-    au < manifest ; exists ; 1992 ; British Dental Journal Volume 173 ; 1992 ; 173 >
-    au < manifest ; exists ; 1993 ; British Dental Journal Volume 174 ; 1993 ; 174 >
-    au < manifest ; exists ; 1993 ; British Dental Journal Volume 175 ; 1993 ; 175 >
-    au < manifest ; exists ; 1994 ; British Dental Journal Volume 176 ; 1994 ; 176 >
-    au < manifest ; exists ; 1994 ; British Dental Journal Volume 177 ; 1994 ; 177 >
-    au < manifest ; exists ; 1995 ; British Dental Journal Volume 178 ; 1995 ; 178 >
-    au < manifest ; exists ; 1995 ; British Dental Journal Volume 179 ; 1995 ; 179 >
-    au < manifest ; exists ; 1996 ; British Dental Journal Volume 180 ; 1996 ; 180 >
-    au < manifest ; exists ; 1996 ; British Dental Journal Volume 181 ; 1996 ; 181 >
-    au < manifest ; exists ; 1997 ; British Dental Journal Volume 182 ; 1997 ; 182 >
-    au < manifest ; exists ; 1997 ; British Dental Journal Volume 183 ; 1997 ; 183 >
-    au < manifest ; exists ; 1998 ; British Dental Journal Volume 184 ; 1998 ; 184 >
-    au < manifest ; exists ; 1998 ; British Dental Journal Volume 185 ; 1998 ; 185 >
-    au < manifest ; exists ; 1999 ; British Dental Journal Volume 186 ; 1999 ; 186 >
-    au < manifest ; exists ; 1999 ; British Dental Journal Volume 187 ; 1999 ; 187 >
+    au < doNotProcess ; doNotProcess ; 1970 ; British Dental Journal Volume 128 ; 1970 ; 128 >
+    au < doNotProcess ; doNotProcess ; 1970 ; British Dental Journal Volume 129 ; 1970 ; 129 >
+    au < doNotProcess ; doNotProcess ; 1971 ; British Dental Journal Volume 130 ; 1971 ; 130 >
+    au < doNotProcess ; doNotProcess ; 1971 ; British Dental Journal Volume 131 ; 1971 ; 131 >
+    au < doNotProcess ; doNotProcess ; 1972 ; British Dental Journal Volume 132 ; 1972 ; 132 >
+    au < doNotProcess ; doNotProcess ; 1972 ; British Dental Journal Volume 133 ; 1972 ; 133 >
+    au < doNotProcess ; doNotProcess ; 1973 ; British Dental Journal Volume 134 ; 1973 ; 134 >
+    au < doNotProcess ; doNotProcess ; 1973 ; British Dental Journal Volume 135 ; 1973 ; 135 >
+    au < doNotProcess ; doNotProcess ; 1974 ; British Dental Journal Volume 136 ; 1974 ; 136 >
+    au < doNotProcess ; doNotProcess ; 1974 ; British Dental Journal Volume 137 ; 1974 ; 137 >
+    au < doNotProcess ; doNotProcess ; 1975 ; British Dental Journal Volume 138 ; 1975 ; 138 >
+    au < doNotProcess ; doNotProcess ; 1975 ; British Dental Journal Volume 139 ; 1975 ; 139 >
+    au < doNotProcess ; doNotProcess ; 1976 ; British Dental Journal Volume 140 ; 1976 ; 140 >
+    au < doNotProcess ; doNotProcess ; 1976 ; British Dental Journal Volume 141 ; 1976 ; 141 >
+    au < doNotProcess ; doNotProcess ; 1977 ; British Dental Journal Volume 142 ; 1977 ; 142 >
+    au < doNotProcess ; doNotProcess ; 1977 ; British Dental Journal Volume 143 ; 1977 ; 143 >
+    au < doNotProcess ; doNotProcess ; 1978 ; British Dental Journal Volume 144 ; 1978 ; 144 >
+    au < doNotProcess ; doNotProcess ; 1978 ; British Dental Journal Volume 145 ; 1978 ; 145 >
+    au < doNotProcess ; doNotProcess ; 1979 ; British Dental Journal Volume 146 ; 1979 ; 146 >
+    au < doNotProcess ; doNotProcess ; 1979 ; British Dental Journal Volume 147 ; 1979 ; 147 >
+    au < doNotProcess ; doNotProcess ; 1980 ; British Dental Journal Volume 148 ; 1980 ; 148 >
+    au < doNotProcess ; doNotProcess ; 1980 ; British Dental Journal Volume 149 ; 1980 ; 149 >
+    au < doNotProcess ; doNotProcess ; 1981 ; British Dental Journal Volume 150 ; 1981 ; 150 >
+    au < doNotProcess ; doNotProcess ; 1981 ; British Dental Journal Volume 151 ; 1981 ; 151 >
+    au < doNotProcess ; doNotProcess ; 1982 ; British Dental Journal Volume 152 ; 1982 ; 152 >
+    au < doNotProcess ; doNotProcess ; 1982 ; British Dental Journal Volume 153 ; 1982 ; 153 >
+    au < doNotProcess ; doNotProcess ; 1983 ; British Dental Journal Volume 154 ; 1983 ; 154 >
+    au < doNotProcess ; doNotProcess ; 1983 ; British Dental Journal Volume 155 ; 1983 ; 155 >
+    au < doNotProcess ; doNotProcess ; 1984 ; British Dental Journal Volume 156 ; 1984 ; 156 >
+    au < doNotProcess ; doNotProcess ; 1984 ; British Dental Journal Volume 157 ; 1984 ; 157 >
+    au < doNotProcess ; doNotProcess ; 1985 ; British Dental Journal Volume 158 ; 1985 ; 158 >
+    au < doNotProcess ; doNotProcess ; 1985 ; British Dental Journal Volume 159 ; 1985 ; 159 >
+    au < doNotProcess ; doNotProcess ; 1986 ; British Dental Journal Volume 160 ; 1986 ; 160 >
+    au < doNotProcess ; doNotProcess ; 1986 ; British Dental Journal Volume 161 ; 1986 ; 161 >
+    au < doNotProcess ; doNotProcess ; 1987 ; British Dental Journal Volume 162 ; 1987 ; 162 >
+    au < doNotProcess ; doNotProcess ; 1987 ; British Dental Journal Volume 163 ; 1987 ; 163 >
+    au < doNotProcess ; doNotProcess ; 1988 ; British Dental Journal Volume 164 ; 1988 ; 164 >
+    au < doNotProcess ; doNotProcess ; 1988 ; British Dental Journal Volume 165 ; 1988 ; 165 >
+    au < doNotProcess ; doNotProcess ; 1989 ; British Dental Journal Volume 166 ; 1989 ; 166 >
+    au < doNotProcess ; doNotProcess ; 1989 ; British Dental Journal Volume 167 ; 1989 ; 167 >
+    au < doNotProcess ; doNotProcess ; 1990 ; British Dental Journal Volume 168 ; 1990 ; 168 >
+    au < doNotProcess ; doNotProcess ; 1990 ; British Dental Journal Volume 169 ; 1990 ; 169 >
+    au < doNotProcess ; doNotProcess ; 1991 ; British Dental Journal Volume 170 ; 1991 ; 170 >
+    au < doNotProcess ; doNotProcess ; 1991 ; British Dental Journal Volume 171 ; 1991 ; 171 >
+    au < doNotProcess ; doNotProcess ; 1992 ; British Dental Journal Volume 172 ; 1992 ; 172 >
+    au < doNotProcess ; doNotProcess ; 1992 ; British Dental Journal Volume 173 ; 1992 ; 173 >
+    au < doNotProcess ; doNotProcess ; 1993 ; British Dental Journal Volume 174 ; 1993 ; 174 >
+    au < doNotProcess ; doNotProcess ; 1993 ; British Dental Journal Volume 175 ; 1993 ; 175 >
+    au < doNotProcess ; doNotProcess ; 1994 ; British Dental Journal Volume 176 ; 1994 ; 176 >
+    au < doNotProcess ; doNotProcess ; 1994 ; British Dental Journal Volume 177 ; 1994 ; 177 >
+    au < doNotProcess ; doNotProcess ; 1995 ; British Dental Journal Volume 178 ; 1995 ; 178 >
+    au < doNotProcess ; doNotProcess ; 1995 ; British Dental Journal Volume 179 ; 1995 ; 179 >
+    au < doNotProcess ; doNotProcess ; 1996 ; British Dental Journal Volume 180 ; 1996 ; 180 >
+    au < doNotProcess ; doNotProcess ; 1996 ; British Dental Journal Volume 181 ; 1996 ; 181 >
+    au < doNotProcess ; doNotProcess ; 1997 ; British Dental Journal Volume 182 ; 1997 ; 182 >
+    au < doNotProcess ; doNotProcess ; 1997 ; British Dental Journal Volume 183 ; 1997 ; 183 >
+    au < doNotProcess ; doNotProcess ; 1998 ; British Dental Journal Volume 184 ; 1998 ; 184 >
+    au < doNotProcess ; doNotProcess ; 1998 ; British Dental Journal Volume 185 ; 1998 ; 185 >
+    au < doNotProcess ; doNotProcess ; 1999 ; British Dental Journal Volume 186 ; 1999 ; 186 >
+    au < doNotProcess ; doNotProcess ; 1999 ; British Dental Journal Volume 187 ; 1999 ; 187 >
     au < manifest ; exists ; 2000 ; British Dental Journal Volume 188 ; 2000 ; 188 >
     au < manifest ; exists ; 2000 ; British Dental Journal Volume 189 ; 2000 ; 189 >
     au < manifest ; exists ; 2001 ; British Dental Journal Volume 190 ; 2001 ; 190 >
@@ -337,87 +337,87 @@
 
     param[journal_id] = bjc
 
-    au < manifest ; exists ; 1947 ; British Journal of Cancer Volume 1 ; 1947 ; 1 >
-    au < manifest ; exists ; 1948 ; British Journal of Cancer Volume 2 ; 1948 ; 2 >
-    au < manifest ; exists ; 1949 ; British Journal of Cancer Volume 3 ; 1949 ; 3 >
-    au < manifest ; exists ; 1950 ; British Journal of Cancer Volume 4 ; 1950 ; 4 >
-    au < manifest ; exists ; 1951 ; British Journal of Cancer Volume 5 ; 1951 ; 5 >
-    au < manifest ; exists ; 1952 ; British Journal of Cancer Volume 6 ; 1952 ; 6 >
-    au < manifest ; exists ; 1953 ; British Journal of Cancer Volume 7 ; 1953 ; 7 >
-    au < manifest ; exists ; 1954 ; British Journal of Cancer Volume 8 ; 1954 ; 8 >
-    au < manifest ; exists ; 1955 ; British Journal of Cancer Volume 9 ; 1955 ; 9 >
-    au < manifest ; exists ; 1956 ; British Journal of Cancer Volume 10 ; 1956 ; 10 >
-    au < manifest ; exists ; 1957 ; British Journal of Cancer Volume 11 ; 1957 ; 11 >
-    au < manifest ; exists ; 1958 ; British Journal of Cancer Volume 12 ; 1958 ; 12 >
-    au < manifest ; exists ; 1959 ; British Journal of Cancer Volume 13 ; 1959 ; 13 >
-    au < manifest ; exists ; 1960 ; British Journal of Cancer Volume 14 ; 1960 ; 14 >
-    au < manifest ; exists ; 1961 ; British Journal of Cancer Volume 15 ; 1961 ; 15 >
-    au < manifest ; exists ; 1962 ; British Journal of Cancer Volume 16 ; 1962 ; 16 >
-    au < manifest ; exists ; 1963 ; British Journal of Cancer Volume 17 ; 1963 ; 17 >
-    au < manifest ; exists ; 1964 ; British Journal of Cancer Volume 18 ; 1964 ; 18 >
-    au < manifest ; exists ; 1965 ; British Journal of Cancer Volume 19 ; 1965 ; 19 >
-    au < manifest ; exists ; 1966 ; British Journal of Cancer Volume 20 ; 1966 ; 20 >
-    au < manifest ; exists ; 1967 ; British Journal of Cancer Volume 21 ; 1967 ; 21 >
-    au < manifest ; exists ; 1968 ; British Journal of Cancer Volume 22 ; 1968 ; 22 >
-    au < manifest ; exists ; 1969 ; British Journal of Cancer Volume 23 ; 1969 ; 23 >
-    au < manifest ; exists ; 1970 ; British Journal of Cancer Volume 24 ; 1970 ; 24 >
-    au < manifest ; exists ; 1971 ; British Journal of Cancer Volume 25 ; 1971 ; 25 >
-    au < manifest ; exists ; 1972 ; British Journal of Cancer Volume 26 ; 1972 ; 26 >
-    au < manifest ; exists ; 1973 ; British Journal of Cancer Volume 27 ; 1973 ; 27 >
-    au < manifest ; exists ; 1973 ; British Journal of Cancer Volume 28 ; 1973 ; 28 >
-    au < manifest ; exists ; 1974 ; British Journal of Cancer Volume 29 ; 1974 ; 29 >
-    au < manifest ; exists ; 1974 ; British Journal of Cancer Volume 30 ; 1974 ; 30 >
-    au < manifest ; exists ; 1975 ; British Journal of Cancer Volume 31 ; 1975 ; 31 >
-    au < manifest ; exists ; 1975 ; British Journal of Cancer Volume 32 ; 1975 ; 32 >
-    au < manifest ; exists ; 1976 ; British Journal of Cancer Volume 33 ; 1976 ; 33 >
-    au < manifest ; exists ; 1976 ; British Journal of Cancer Volume 34 ; 1976 ; 34 >
-    au < manifest ; exists ; 1977 ; British Journal of Cancer Volume 35 ; 1977 ; 35 >
-    au < manifest ; exists ; 1977 ; British Journal of Cancer Volume 36 ; 1977 ; 36 >
-    au < manifest ; exists ; 1978 ; British Journal of Cancer Volume 37 ; 1978 ; 37 >
-    au < manifest ; exists ; 1978 ; British Journal of Cancer Volume 38 ; 1978 ; 38 >
-    au < manifest ; exists ; 1979 ; British Journal of Cancer Volume 39 ; 1979 ; 39 >
-    au < manifest ; exists ; 1979 ; British Journal of Cancer Volume 40 ; 1979 ; 40 >
-    au < manifest ; exists ; 1980 ; British Journal of Cancer Volume 41 ; 1980 ; 41 >
-    au < manifest ; exists ; 1980 ; British Journal of Cancer Volume 42 ; 1980 ; 42 >
-    au < manifest ; exists ; 1981 ; British Journal of Cancer Volume 43 ; 1981 ; 43 >
-    au < manifest ; exists ; 1981 ; British Journal of Cancer Volume 44 ; 1981 ; 44 >
-    au < manifest ; exists ; 1982 ; British Journal of Cancer Volume 45 ; 1982 ; 45 >
-    au < manifest ; exists ; 1982 ; British Journal of Cancer Volume 46 ; 1982 ; 46 >
-    au < manifest ; exists ; 1983 ; British Journal of Cancer Volume 47 ; 1983 ; 47 >
-    au < manifest ; exists ; 1983 ; British Journal of Cancer Volume 48 ; 1983 ; 48 >
-    au < manifest ; exists ; 1984 ; British Journal of Cancer Volume 49 ; 1984 ; 49 >
-    au < manifest ; exists ; 1984 ; British Journal of Cancer Volume 50 ; 1984 ; 50 >
-    au < manifest ; exists ; 1985 ; British Journal of Cancer Volume 51 ; 1985 ; 51 >
-    au < manifest ; exists ; 1985 ; British Journal of Cancer Volume 52 ; 1985 ; 52 >
-    au < manifest ; exists ; 1986 ; British Journal of Cancer Volume 53 ; 1986 ; 53 >
-    au < manifest ; exists ; 1986 ; British Journal of Cancer Volume 54 ; 1986 ; 54 >
-    au < manifest ; exists ; 1987 ; British Journal of Cancer Volume 55 ; 1987 ; 55 >
-    au < manifest ; exists ; 1987 ; British Journal of Cancer Volume 56 ; 1987 ; 56 >
-    au < manifest ; exists ; 1988 ; British Journal of Cancer Volume 57 ; 1988 ; 57 >
-    au < manifest ; exists ; 1988 ; British Journal of Cancer Volume 58 ; 1988 ; 58 >
-    au < manifest ; exists ; 1989 ; British Journal of Cancer Volume 59 ; 1989 ; 59 >
-    au < manifest ; exists ; 1989 ; British Journal of Cancer Volume 60 ; 1989 ; 60 >
-    au < manifest ; exists ; 1990 ; British Journal of Cancer Volume 61 ; 1990 ; 61 >
-    au < manifest ; exists ; 1990 ; British Journal of Cancer Volume 62 ; 1990 ; 62 >
-    au < manifest ; exists ; 1991 ; British Journal of Cancer Volume 63 ; 1991 ; 63 >
-    au < manifest ; exists ; 1991 ; British Journal of Cancer Volume 64 ; 1991 ; 64 >
-    au < manifest ; exists ; 1992 ; British Journal of Cancer Volume 65 ; 1992 ; 65 >
-    au < manifest ; exists ; 1992 ; British Journal of Cancer Volume 66 ; 1992 ; 66 >
-    au < manifest ; exists ; 1993 ; British Journal of Cancer Volume 67 ; 1993 ; 67 >
-    au < manifest ; exists ; 1993 ; British Journal of Cancer Volume 68 ; 1993 ; 68 >
-    au < manifest ; exists ; 1994 ; British Journal of Cancer Volume 69 ; 1994 ; 69 >
-    au < manifest ; exists ; 1994 ; British Journal of Cancer Volume 70 ; 1994 ; 70 >
-    au < manifest ; exists ; 1995 ; British Journal of Cancer Volume 71 ; 1995 ; 71 >
-    au < manifest ; exists ; 1995 ; British Journal of Cancer Volume 72 ; 1995 ; 72 >
-    au < manifest ; exists ; 1996 ; British Journal of Cancer Volume 73 ; 1996 ; 73 >
-    au < manifest ; exists ; 1996 ; British Journal of Cancer Volume 74 ; 1996 ; 74 >
-    au < manifest ; exists ; 1997 ; British Journal of Cancer Volume 75 ; 1997 ; 75 >
-    au < manifest ; exists ; 1997 ; British Journal of Cancer Volume 76 ; 1997 ; 76 >
-    au < manifest ; exists ; 1998 ; British Journal of Cancer Volume 77 ; 1998 ; 77 >
-    au < manifest ; exists ; 1998 ; British Journal of Cancer Volume 78 ; 1998 ; 78 >
-    au < manifest ; exists ; 1999 ; British Journal of Cancer Volume 79 ; 1999 ; 79 >
-    au < manifest ; exists ; 1999 ; British Journal of Cancer Volume 80 ; 1999 ; 80 >
-    au < manifest ; exists ; 1999 ; British Journal of Cancer Volume 81 ; 1999 ; 81 >
+    au < doNotProcess ; doNotProcess ; 1947 ; British Journal of Cancer Volume 1 ; 1947 ; 1 >
+    au < doNotProcess ; doNotProcess ; 1948 ; British Journal of Cancer Volume 2 ; 1948 ; 2 >
+    au < doNotProcess ; doNotProcess ; 1949 ; British Journal of Cancer Volume 3 ; 1949 ; 3 >
+    au < doNotProcess ; doNotProcess ; 1950 ; British Journal of Cancer Volume 4 ; 1950 ; 4 >
+    au < doNotProcess ; doNotProcess ; 1951 ; British Journal of Cancer Volume 5 ; 1951 ; 5 >
+    au < doNotProcess ; doNotProcess ; 1952 ; British Journal of Cancer Volume 6 ; 1952 ; 6 >
+    au < doNotProcess ; doNotProcess ; 1953 ; British Journal of Cancer Volume 7 ; 1953 ; 7 >
+    au < doNotProcess ; doNotProcess ; 1954 ; British Journal of Cancer Volume 8 ; 1954 ; 8 >
+    au < doNotProcess ; doNotProcess ; 1955 ; British Journal of Cancer Volume 9 ; 1955 ; 9 >
+    au < doNotProcess ; doNotProcess ; 1956 ; British Journal of Cancer Volume 10 ; 1956 ; 10 >
+    au < doNotProcess ; doNotProcess ; 1957 ; British Journal of Cancer Volume 11 ; 1957 ; 11 >
+    au < doNotProcess ; doNotProcess ; 1958 ; British Journal of Cancer Volume 12 ; 1958 ; 12 >
+    au < doNotProcess ; doNotProcess ; 1959 ; British Journal of Cancer Volume 13 ; 1959 ; 13 >
+    au < doNotProcess ; doNotProcess ; 1960 ; British Journal of Cancer Volume 14 ; 1960 ; 14 >
+    au < doNotProcess ; doNotProcess ; 1961 ; British Journal of Cancer Volume 15 ; 1961 ; 15 >
+    au < doNotProcess ; doNotProcess ; 1962 ; British Journal of Cancer Volume 16 ; 1962 ; 16 >
+    au < doNotProcess ; doNotProcess ; 1963 ; British Journal of Cancer Volume 17 ; 1963 ; 17 >
+    au < doNotProcess ; doNotProcess ; 1964 ; British Journal of Cancer Volume 18 ; 1964 ; 18 >
+    au < doNotProcess ; doNotProcess ; 1965 ; British Journal of Cancer Volume 19 ; 1965 ; 19 >
+    au < doNotProcess ; doNotProcess ; 1966 ; British Journal of Cancer Volume 20 ; 1966 ; 20 >
+    au < doNotProcess ; doNotProcess ; 1967 ; British Journal of Cancer Volume 21 ; 1967 ; 21 >
+    au < doNotProcess ; doNotProcess ; 1968 ; British Journal of Cancer Volume 22 ; 1968 ; 22 >
+    au < doNotProcess ; doNotProcess ; 1969 ; British Journal of Cancer Volume 23 ; 1969 ; 23 >
+    au < doNotProcess ; doNotProcess ; 1970 ; British Journal of Cancer Volume 24 ; 1970 ; 24 >
+    au < doNotProcess ; doNotProcess ; 1971 ; British Journal of Cancer Volume 25 ; 1971 ; 25 >
+    au < doNotProcess ; doNotProcess ; 1972 ; British Journal of Cancer Volume 26 ; 1972 ; 26 >
+    au < doNotProcess ; doNotProcess ; 1973 ; British Journal of Cancer Volume 27 ; 1973 ; 27 >
+    au < doNotProcess ; doNotProcess ; 1973 ; British Journal of Cancer Volume 28 ; 1973 ; 28 >
+    au < doNotProcess ; doNotProcess ; 1974 ; British Journal of Cancer Volume 29 ; 1974 ; 29 >
+    au < doNotProcess ; doNotProcess ; 1974 ; British Journal of Cancer Volume 30 ; 1974 ; 30 >
+    au < doNotProcess ; doNotProcess ; 1975 ; British Journal of Cancer Volume 31 ; 1975 ; 31 >
+    au < doNotProcess ; doNotProcess ; 1975 ; British Journal of Cancer Volume 32 ; 1975 ; 32 >
+    au < doNotProcess ; doNotProcess ; 1976 ; British Journal of Cancer Volume 33 ; 1976 ; 33 >
+    au < doNotProcess ; doNotProcess ; 1976 ; British Journal of Cancer Volume 34 ; 1976 ; 34 >
+    au < doNotProcess ; doNotProcess ; 1977 ; British Journal of Cancer Volume 35 ; 1977 ; 35 >
+    au < doNotProcess ; doNotProcess ; 1977 ; British Journal of Cancer Volume 36 ; 1977 ; 36 >
+    au < doNotProcess ; doNotProcess ; 1978 ; British Journal of Cancer Volume 37 ; 1978 ; 37 >
+    au < doNotProcess ; doNotProcess ; 1978 ; British Journal of Cancer Volume 38 ; 1978 ; 38 >
+    au < doNotProcess ; doNotProcess ; 1979 ; British Journal of Cancer Volume 39 ; 1979 ; 39 >
+    au < doNotProcess ; doNotProcess ; 1979 ; British Journal of Cancer Volume 40 ; 1979 ; 40 >
+    au < doNotProcess ; doNotProcess ; 1980 ; British Journal of Cancer Volume 41 ; 1980 ; 41 >
+    au < doNotProcess ; doNotProcess ; 1980 ; British Journal of Cancer Volume 42 ; 1980 ; 42 >
+    au < doNotProcess ; doNotProcess ; 1981 ; British Journal of Cancer Volume 43 ; 1981 ; 43 >
+    au < doNotProcess ; doNotProcess ; 1981 ; British Journal of Cancer Volume 44 ; 1981 ; 44 >
+    au < doNotProcess ; doNotProcess ; 1982 ; British Journal of Cancer Volume 45 ; 1982 ; 45 >
+    au < doNotProcess ; doNotProcess ; 1982 ; British Journal of Cancer Volume 46 ; 1982 ; 46 >
+    au < doNotProcess ; doNotProcess ; 1983 ; British Journal of Cancer Volume 47 ; 1983 ; 47 >
+    au < doNotProcess ; doNotProcess ; 1983 ; British Journal of Cancer Volume 48 ; 1983 ; 48 >
+    au < doNotProcess ; doNotProcess ; 1984 ; British Journal of Cancer Volume 49 ; 1984 ; 49 >
+    au < doNotProcess ; doNotProcess ; 1984 ; British Journal of Cancer Volume 50 ; 1984 ; 50 >
+    au < doNotProcess ; doNotProcess ; 1985 ; British Journal of Cancer Volume 51 ; 1985 ; 51 >
+    au < doNotProcess ; doNotProcess ; 1985 ; British Journal of Cancer Volume 52 ; 1985 ; 52 >
+    au < doNotProcess ; doNotProcess ; 1986 ; British Journal of Cancer Volume 53 ; 1986 ; 53 >
+    au < doNotProcess ; doNotProcess ; 1986 ; British Journal of Cancer Volume 54 ; 1986 ; 54 >
+    au < doNotProcess ; doNotProcess ; 1987 ; British Journal of Cancer Volume 55 ; 1987 ; 55 >
+    au < doNotProcess ; doNotProcess ; 1987 ; British Journal of Cancer Volume 56 ; 1987 ; 56 >
+    au < doNotProcess ; doNotProcess ; 1988 ; British Journal of Cancer Volume 57 ; 1988 ; 57 >
+    au < doNotProcess ; doNotProcess ; 1988 ; British Journal of Cancer Volume 58 ; 1988 ; 58 >
+    au < doNotProcess ; doNotProcess ; 1989 ; British Journal of Cancer Volume 59 ; 1989 ; 59 >
+    au < doNotProcess ; doNotProcess ; 1989 ; British Journal of Cancer Volume 60 ; 1989 ; 60 >
+    au < doNotProcess ; doNotProcess ; 1990 ; British Journal of Cancer Volume 61 ; 1990 ; 61 >
+    au < doNotProcess ; doNotProcess ; 1990 ; British Journal of Cancer Volume 62 ; 1990 ; 62 >
+    au < doNotProcess ; doNotProcess ; 1991 ; British Journal of Cancer Volume 63 ; 1991 ; 63 >
+    au < doNotProcess ; doNotProcess ; 1991 ; British Journal of Cancer Volume 64 ; 1991 ; 64 >
+    au < doNotProcess ; doNotProcess ; 1992 ; British Journal of Cancer Volume 65 ; 1992 ; 65 >
+    au < doNotProcess ; doNotProcess ; 1992 ; British Journal of Cancer Volume 66 ; 1992 ; 66 >
+    au < doNotProcess ; doNotProcess ; 1993 ; British Journal of Cancer Volume 67 ; 1993 ; 67 >
+    au < doNotProcess ; doNotProcess ; 1993 ; British Journal of Cancer Volume 68 ; 1993 ; 68 >
+    au < doNotProcess ; doNotProcess ; 1994 ; British Journal of Cancer Volume 69 ; 1994 ; 69 >
+    au < doNotProcess ; doNotProcess ; 1994 ; British Journal of Cancer Volume 70 ; 1994 ; 70 >
+    au < doNotProcess ; doNotProcess ; 1995 ; British Journal of Cancer Volume 71 ; 1995 ; 71 >
+    au < doNotProcess ; doNotProcess ; 1995 ; British Journal of Cancer Volume 72 ; 1995 ; 72 >
+    au < doNotProcess ; doNotProcess ; 1996 ; British Journal of Cancer Volume 73 ; 1996 ; 73 >
+    au < doNotProcess ; doNotProcess ; 1996 ; British Journal of Cancer Volume 74 ; 1996 ; 74 >
+    au < doNotProcess ; doNotProcess ; 1997 ; British Journal of Cancer Volume 75 ; 1997 ; 75 >
+    au < doNotProcess ; doNotProcess ; 1997 ; British Journal of Cancer Volume 76 ; 1997 ; 76 >
+    au < doNotProcess ; doNotProcess ; 1998 ; British Journal of Cancer Volume 77 ; 1998 ; 77 >
+    au < doNotProcess ; doNotProcess ; 1998 ; British Journal of Cancer Volume 78 ; 1998 ; 78 >
+    au < doNotProcess ; doNotProcess ; 1999 ; British Journal of Cancer Volume 79 ; 1999 ; 79 >
+    au < doNotProcess ; doNotProcess ; 1999 ; British Journal of Cancer Volume 80 ; 1999 ; 80 >
+    au < doNotProcess ; doNotProcess ; 1999 ; British Journal of Cancer Volume 81 ; 1999 ; 81 >
     au < manifest ; exists ; 2000 ; British Journal of Cancer Volume 82 ; 2000 ; 82 >
     au < manifest ; exists ; 2000 ; British Journal of Cancer Volume 83 ; 2000 ; 83 >
     au < manifest ; exists ; 2001 ; British Journal of Cancer Volume 84 ; 2001 ; 84 >
@@ -461,7 +461,7 @@
 
     param[journal_id] = cgt
 
-    au < manifest ; exists ; 1999 ; Cancer Gene Therapy Volume 6 ; 1999 ; 6 >
+    au < doNotProcess ; doNotProcess ; 1999 ; Cancer Gene Therapy Volume 6 ; 1999 ; 6 >
     au < manifest ; exists ; 2000 ; Cancer Gene Therapy Volume 7 ; 2000 ; 7 >
     au < manifest ; exists ; 2001 ; Cancer Gene Therapy Volume 8 ; 2001 ; 8 >
     au < manifest ; exists ; 2002 ; Cancer Gene Therapy Volume 9 ; 2002 ; 9 >
@@ -492,9 +492,9 @@
 
     param[journal_id] = cdd
 
-    au < manifest ; exists ; 1997 ; Cell Death and Differentiation Volume 4 ; 1997 ; 4 >
-    au < manifest ; exists ; 1998 ; Cell Death and Differentiation Volume 5 ; 1998 ; 5 >
-    au < manifest ; exists ; 1999 ; Cell Death and Differentiation Volume 6 ; 1999 ; 6 >
+    au < doNotProcess ; doNotProcess ; 1997 ; Cell Death and Differentiation Volume 4 ; 1997 ; 4 >
+    au < doNotProcess ; doNotProcess ; 1998 ; Cell Death and Differentiation Volume 5 ; 1998 ; 5 >
+    au < doNotProcess ; doNotProcess ; 1999 ; Cell Death and Differentiation Volume 6 ; 1999 ; 6 >
     au < manifest ; exists ; 2000 ; Cell Death and Differentiation Volume 7 ; 2000 ; 7 >
     au < manifest ; exists ; 2001 ; Cell Death and Differentiation Volume 8 ; 2001 ; 8 >
     au < manifest ; exists ; 2002 ; Cell Death and Differentiation Volume 9 ; 2002 ; 9 >
@@ -541,7 +541,7 @@
 
     param[journal_id] = cr
 
-    au < manifest ; exists ; 1999 ; Cell Research Volume 9 ; 1999 ; 9 >
+    au < doNotProcess ; doNotProcess ; 1999 ; Cell Research Volume 9 ; 1999 ; 9 >
     au < manifest ; exists ; 2000 ; Cell Research Volume 10 ; 2000 ; 10 >
     au < manifest ; exists ; 2001 ; Cell Research Volume 11 ; 2001 ; 11 >
     au < manifest ; exists ; 2002 ; Cell Research Volume 12 ; 2002 ; 12 >
@@ -613,46 +613,46 @@
     param[journal_id] = clpt
     comment[publisher] = moving to Wiley Blackwell, effective on 2015-01-01
 
-    au < exists ; exists ; 1980 ; Clinical Pharmacology & Therapeutics Volume 27 ; 1980 ; 27 >
-    au < exists ; exists ; 1980 ; Clinical Pharmacology & Therapeutics Volume 28 ; 1980 ; 28 >
-    au < exists ; exists ; 1981 ; Clinical Pharmacology & Therapeutics Volume 29 ; 1981 ; 29 >
-    au < exists ; exists ; 1981 ; Clinical Pharmacology & Therapeutics Volume 30 ; 1981 ; 30 >
-    au < exists ; exists ; 1982 ; Clinical Pharmacology & Therapeutics Volume 31 ; 1982 ; 31 >
-    au < exists ; exists ; 1982 ; Clinical Pharmacology & Therapeutics Volume 32 ; 1982 ; 32 >
-    au < exists ; exists ; 1983 ; Clinical Pharmacology & Therapeutics Volume 33 ; 1983 ; 33 >
-    au < exists ; exists ; 1983 ; Clinical Pharmacology & Therapeutics Volume 34 ; 1983 ; 34 >
-    au < exists ; exists ; 1984 ; Clinical Pharmacology & Therapeutics Volume 35 ; 1984 ; 35 >
-    au < exists ; exists ; 1984 ; Clinical Pharmacology & Therapeutics Volume 36 ; 1984 ; 36 >
-    au < exists ; exists ; 1985 ; Clinical Pharmacology & Therapeutics Volume 37 ; 1985 ; 37 >
-    au < exists ; exists ; 1985 ; Clinical Pharmacology & Therapeutics Volume 38 ; 1985 ; 38 >
-    au < exists ; exists ; 1986 ; Clinical Pharmacology & Therapeutics Volume 39 ; 1986 ; 39 >
-    au < exists ; exists ; 1986 ; Clinical Pharmacology & Therapeutics Volume 40 ; 1986 ; 40 >
-    au < exists ; exists ; 1987 ; Clinical Pharmacology & Therapeutics Volume 41 ; 1987 ; 41 >
-    au < exists ; exists ; 1987 ; Clinical Pharmacology & Therapeutics Volume 42 ; 1987 ; 42 >
-    au < exists ; exists ; 1988 ; Clinical Pharmacology & Therapeutics Volume 43 ; 1988 ; 43 >
-    au < exists ; exists ; 1988 ; Clinical Pharmacology & Therapeutics Volume 44 ; 1988 ; 44 >
-    au < exists ; exists ; 1989 ; Clinical Pharmacology & Therapeutics Volume 45 ; 1989 ; 45 >
-    au < exists ; exists ; 1989 ; Clinical Pharmacology & Therapeutics Volume 46 ; 1989 ; 46 >
-    au < exists ; exists ; 1990 ; Clinical Pharmacology & Therapeutics Volume 47 ; 1990 ; 47 >
-    au < exists ; exists ; 1990 ; Clinical Pharmacology & Therapeutics Volume 48 ; 1990 ; 48 >
-    au < exists ; exists ; 1991 ; Clinical Pharmacology & Therapeutics Volume 49 ; 1991 ; 49 >
-    au < exists ; exists ; 1991 ; Clinical Pharmacology & Therapeutics Volume 50 ; 1991 ; 50 >
-    au < exists ; exists ; 1992 ; Clinical Pharmacology & Therapeutics Volume 51 ; 1992 ; 51 >
-    au < exists ; exists ; 1992 ; Clinical Pharmacology & Therapeutics Volume 52 ; 1992 ; 52 >
-    au < exists ; exists ; 1993 ; Clinical Pharmacology & Therapeutics Volume 53 ; 1993 ; 53 >
-    au < exists ; exists ; 1993 ; Clinical Pharmacology & Therapeutics Volume 54 ; 1993 ; 54 >
-    au < exists ; exists ; 1994 ; Clinical Pharmacology & Therapeutics Volume 55 ; 1994 ; 55 >
-    au < exists ; exists ; 1994 ; Clinical Pharmacology & Therapeutics Volume 56 ; 1994 ; 56 >
-    au < exists ; exists ; 1995 ; Clinical Pharmacology & Therapeutics Volume 57 ; 1995 ; 57 >
-    au < exists ; exists ; 1995 ; Clinical Pharmacology & Therapeutics Volume 58 ; 1995 ; 58 >
-    au < exists ; exists ; 1996 ; Clinical Pharmacology & Therapeutics Volume 59 ; 1996 ; 59 >
-    au < exists ; exists ; 1996 ; Clinical Pharmacology & Therapeutics Volume 60 ; 1996 ; 60 >
-    au < exists ; exists ; 1997 ; Clinical Pharmacology & Therapeutics Volume 61 ; 1997 ; 61 >
-    au < exists ; exists ; 1997 ; Clinical Pharmacology & Therapeutics Volume 62 ; 1997 ; 62 >
-    au < exists ; exists ; 1998 ; Clinical Pharmacology & Therapeutics Volume 63 ; 1998 ; 63 >
-    au < exists ; exists ; 1998 ; Clinical Pharmacology & Therapeutics Volume 64 ; 1998 ; 64 >
-    au < exists ; exists ; 1999 ; Clinical Pharmacology & Therapeutics Volume 65 ; 1999 ; 65 >
-    au < exists ; exists ; 1999 ; Clinical Pharmacology & Therapeutics Volume 66 ; 1999 ; 66 >
+    au < doNotProcess ; doNotProcess ; 1980 ; Clinical Pharmacology & Therapeutics Volume 27 ; 1980 ; 27 >
+    au < doNotProcess ; doNotProcess ; 1980 ; Clinical Pharmacology & Therapeutics Volume 28 ; 1980 ; 28 >
+    au < doNotProcess ; doNotProcess ; 1981 ; Clinical Pharmacology & Therapeutics Volume 29 ; 1981 ; 29 >
+    au < doNotProcess ; doNotProcess ; 1981 ; Clinical Pharmacology & Therapeutics Volume 30 ; 1981 ; 30 >
+    au < doNotProcess ; doNotProcess ; 1982 ; Clinical Pharmacology & Therapeutics Volume 31 ; 1982 ; 31 >
+    au < doNotProcess ; doNotProcess ; 1982 ; Clinical Pharmacology & Therapeutics Volume 32 ; 1982 ; 32 >
+    au < doNotProcess ; doNotProcess ; 1983 ; Clinical Pharmacology & Therapeutics Volume 33 ; 1983 ; 33 >
+    au < doNotProcess ; doNotProcess ; 1983 ; Clinical Pharmacology & Therapeutics Volume 34 ; 1983 ; 34 >
+    au < doNotProcess ; doNotProcess ; 1984 ; Clinical Pharmacology & Therapeutics Volume 35 ; 1984 ; 35 >
+    au < doNotProcess ; doNotProcess ; 1984 ; Clinical Pharmacology & Therapeutics Volume 36 ; 1984 ; 36 >
+    au < doNotProcess ; doNotProcess ; 1985 ; Clinical Pharmacology & Therapeutics Volume 37 ; 1985 ; 37 >
+    au < doNotProcess ; doNotProcess ; 1985 ; Clinical Pharmacology & Therapeutics Volume 38 ; 1985 ; 38 >
+    au < doNotProcess ; doNotProcess ; 1986 ; Clinical Pharmacology & Therapeutics Volume 39 ; 1986 ; 39 >
+    au < doNotProcess ; doNotProcess ; 1986 ; Clinical Pharmacology & Therapeutics Volume 40 ; 1986 ; 40 >
+    au < doNotProcess ; doNotProcess ; 1987 ; Clinical Pharmacology & Therapeutics Volume 41 ; 1987 ; 41 >
+    au < doNotProcess ; doNotProcess ; 1987 ; Clinical Pharmacology & Therapeutics Volume 42 ; 1987 ; 42 >
+    au < doNotProcess ; doNotProcess ; 1988 ; Clinical Pharmacology & Therapeutics Volume 43 ; 1988 ; 43 >
+    au < doNotProcess ; doNotProcess ; 1988 ; Clinical Pharmacology & Therapeutics Volume 44 ; 1988 ; 44 >
+    au < doNotProcess ; doNotProcess ; 1989 ; Clinical Pharmacology & Therapeutics Volume 45 ; 1989 ; 45 >
+    au < doNotProcess ; doNotProcess ; 1989 ; Clinical Pharmacology & Therapeutics Volume 46 ; 1989 ; 46 >
+    au < doNotProcess ; doNotProcess ; 1990 ; Clinical Pharmacology & Therapeutics Volume 47 ; 1990 ; 47 >
+    au < doNotProcess ; doNotProcess ; 1990 ; Clinical Pharmacology & Therapeutics Volume 48 ; 1990 ; 48 >
+    au < doNotProcess ; doNotProcess ; 1991 ; Clinical Pharmacology & Therapeutics Volume 49 ; 1991 ; 49 >
+    au < doNotProcess ; doNotProcess ; 1991 ; Clinical Pharmacology & Therapeutics Volume 50 ; 1991 ; 50 >
+    au < doNotProcess ; doNotProcess ; 1992 ; Clinical Pharmacology & Therapeutics Volume 51 ; 1992 ; 51 >
+    au < doNotProcess ; doNotProcess ; 1992 ; Clinical Pharmacology & Therapeutics Volume 52 ; 1992 ; 52 >
+    au < doNotProcess ; doNotProcess ; 1993 ; Clinical Pharmacology & Therapeutics Volume 53 ; 1993 ; 53 >
+    au < doNotProcess ; doNotProcess ; 1993 ; Clinical Pharmacology & Therapeutics Volume 54 ; 1993 ; 54 >
+    au < doNotProcess ; doNotProcess ; 1994 ; Clinical Pharmacology & Therapeutics Volume 55 ; 1994 ; 55 >
+    au < doNotProcess ; doNotProcess ; 1994 ; Clinical Pharmacology & Therapeutics Volume 56 ; 1994 ; 56 >
+    au < doNotProcess ; doNotProcess ; 1995 ; Clinical Pharmacology & Therapeutics Volume 57 ; 1995 ; 57 >
+    au < doNotProcess ; doNotProcess ; 1995 ; Clinical Pharmacology & Therapeutics Volume 58 ; 1995 ; 58 >
+    au < doNotProcess ; doNotProcess ; 1996 ; Clinical Pharmacology & Therapeutics Volume 59 ; 1996 ; 59 >
+    au < doNotProcess ; doNotProcess ; 1996 ; Clinical Pharmacology & Therapeutics Volume 60 ; 1996 ; 60 >
+    au < doNotProcess ; doNotProcess ; 1997 ; Clinical Pharmacology & Therapeutics Volume 61 ; 1997 ; 61 >
+    au < doNotProcess ; doNotProcess ; 1997 ; Clinical Pharmacology & Therapeutics Volume 62 ; 1997 ; 62 >
+    au < doNotProcess ; doNotProcess ; 1998 ; Clinical Pharmacology & Therapeutics Volume 63 ; 1998 ; 63 >
+    au < doNotProcess ; doNotProcess ; 1998 ; Clinical Pharmacology & Therapeutics Volume 64 ; 1998 ; 64 >
+    au < doNotProcess ; doNotProcess ; 1999 ; Clinical Pharmacology & Therapeutics Volume 65 ; 1999 ; 65 >
+    au < doNotProcess ; doNotProcess ; 1999 ; Clinical Pharmacology & Therapeutics Volume 66 ; 1999 ; 66 >
     au < exists ; exists ; 2000 ; Clinical Pharmacology & Therapeutics Volume 67 ; 2000 ; 67 >
     au < exists ; exists ; 2000 ; Clinical Pharmacology & Therapeutics Volume 68 ; 2000 ; 68 >
     au < exists ; exists ; 2001 ; Clinical Pharmacology & Therapeutics Volume 69 ; 2001 ; 69 >
@@ -786,9 +786,9 @@
 
     param[journal_id] = ejcn
 
-    au < manifest ; exists ; 1997 ; European Journal of Clinical Nutrition Volume 51 ; 1997 ; 51 >
-    au < manifest ; exists ; 1998 ; European Journal of Clinical Nutrition Volume 52 ; 1998 ; 52 >
-    au < manifest ; exists ; 1999 ; European Journal of Clinical Nutrition Volume 53 ; 1999 ; 53 >
+    au < doNotProcess ; doNotProcess ; 1997 ; European Journal of Clinical Nutrition Volume 51 ; 1997 ; 51 >
+    au < doNotProcess ; doNotProcess ; 1998 ; European Journal of Clinical Nutrition Volume 52 ; 1998 ; 52 >
+    au < doNotProcess ; doNotProcess ; 1999 ; European Journal of Clinical Nutrition Volume 53 ; 1999 ; 53 >
     au < manifest ; exists ; 2000 ; European Journal of Clinical Nutrition Volume 54 ; 2000 ; 54 >
     au < manifest ; exists ; 2001 ; European Journal of Clinical Nutrition Volume 55 ; 2001 ; 55 >
     au < manifest ; exists ; 2002 ; European Journal of Clinical Nutrition Volume 56 ; 2002 ; 56 >
@@ -818,8 +818,8 @@
     
     param[journal_id] = ejhg
 
-    au < manifest ; exists ; 1998 ; European Journal of Human Genetics Volume 6 ; 1998 ; 6 >
-    au < manifest ; exists ; 1999 ; European Journal of Human Genetics Volume 7 ; 1999 ; 7 >
+    au < doNotProcess ; doNotProcess ; 1998 ; European Journal of Human Genetics Volume 6 ; 1998 ; 6 >
+    au < doNotProcess ; doNotProcess ; 1999 ; European Journal of Human Genetics Volume 7 ; 1999 ; 7 >
     au < manifest ; exists ; 2000 ; European Journal of Human Genetics Volume 8 ; 2000 ; 8 >
     au < manifest ; exists ; 2001 ; European Journal of Human Genetics Volume 9 ; 2001 ; 9 >
     au < manifest ; exists ; 2002 ; European Journal of Human Genetics Volume 10 ; 2002 ; 10 >
@@ -890,19 +890,19 @@
 
     param[journal_id] = eye
 
-    au < manifest ; exists ; 1987 ; Eye Volume 1 ; 1987 ; 1 >
-    au < manifest ; exists ; 1988 ; Eye Volume 2 ; 1988 ; 2 >
-    au < manifest ; exists ; 1989 ; Eye Volume 3 ; 1989 ; 3 >
-    au < manifest ; exists ; 1990 ; Eye Volume 4 ; 1990 ; 4 >
-    au < manifest ; exists ; 1991 ; Eye Volume 5 ; 1991 ; 5 >
-    au < manifest ; exists ; 1992 ; Eye Volume 6 ; 1992 ; 6 >
-    au < manifest ; exists ; 1993 ; Eye Volume 7 ; 1993 ; 7 >
-    au < manifest ; exists ; 1994 ; Eye Volume 8 ; 1994 ; 8 >
-    au < manifest ; exists ; 1995 ; Eye Volume 9 ; 1995 ; 9 >
-    au < manifest ; exists ; 1996 ; Eye Volume 10 ; 1996 ; 10 >
-    au < manifest ; exists ; 1997 ; Eye Volume 11 ; 1997 ; 11 >
-    au < manifest ; exists ; 1998 ; Eye Volume 12 ; 1998 ; 12 >
-    au < manifest ; exists ; 1999 ; Eye Volume 13 ; 1999 ; 13 >
+    au < doNotProcess ; doNotProcess ; 1987 ; Eye Volume 1 ; 1987 ; 1 >
+    au < doNotProcess ; doNotProcess ; 1988 ; Eye Volume 2 ; 1988 ; 2 >
+    au < doNotProcess ; doNotProcess ; 1989 ; Eye Volume 3 ; 1989 ; 3 >
+    au < doNotProcess ; doNotProcess ; 1990 ; Eye Volume 4 ; 1990 ; 4 >
+    au < doNotProcess ; doNotProcess ; 1991 ; Eye Volume 5 ; 1991 ; 5 >
+    au < doNotProcess ; doNotProcess ; 1992 ; Eye Volume 6 ; 1992 ; 6 >
+    au < doNotProcess ; doNotProcess ; 1993 ; Eye Volume 7 ; 1993 ; 7 >
+    au < doNotProcess ; doNotProcess ; 1994 ; Eye Volume 8 ; 1994 ; 8 >
+    au < doNotProcess ; doNotProcess ; 1995 ; Eye Volume 9 ; 1995 ; 9 >
+    au < doNotProcess ; doNotProcess ; 1996 ; Eye Volume 10 ; 1996 ; 10 >
+    au < doNotProcess ; doNotProcess ; 1997 ; Eye Volume 11 ; 1997 ; 11 >
+    au < doNotProcess ; doNotProcess ; 1998 ; Eye Volume 12 ; 1998 ; 12 >
+    au < doNotProcess ; doNotProcess ; 1999 ; Eye Volume 13 ; 1999 ; 13 >
     au < manifest ; exists ; 2000 ; Eye Volume 14 ; 2000 ; 14 >
     au < manifest ; exists ; 2001 ; Eye Volume 15 ; 2001 ; 15 >
     au < manifest ; exists ; 2002 ; Eye Volume 16 ; 2002 ; 16 >
@@ -933,9 +933,9 @@
 
     param[journal_id] = gt
 
-    au < manifest ; exists ; 1997 ; Gene Therapy Volume 4 ; 1997 ; 4 >
-    au < manifest ; exists ; 1998 ; Gene Therapy Volume 5 ; 1998 ; 5 >
-    au < manifest ; exists ; 1999 ; Gene Therapy Volume 6 ; 1999 ; 6 >
+    au < doNotProcess ; doNotProcess ; 1997 ; Gene Therapy Volume 4 ; 1997 ; 4 >
+    au < doNotProcess ; doNotProcess ; 1998 ; Gene Therapy Volume 5 ; 1998 ; 5 >
+    au < doNotProcess ; doNotProcess ; 1999 ; Gene Therapy Volume 6 ; 1999 ; 6 >
     au < manifest ; exists ; 2000 ; Gene Therapy Volume 7 ; 2000 ; 7 >
     au < manifest ; exists ; 2001 ; Gene Therapy Volume 8 ; 2001 ; 8 >
     au < manifest ; exists ; 2002 ; Gene Therapy Volume 9 ; 2002 ; 9 >
@@ -1014,89 +1014,89 @@
 
     param[journal_id] = hdy
 
-    au < manifest ; exists ; 1947 ; Heredity Volume 1 ; 1947 ; 1 >
-    au < manifest ; exists ; 1948 ; Heredity Volume 2 ; 1948 ; 2 >
-    au < manifest ; exists ; 1949 ; Heredity Volume 3 ; 1949 ; 3 >
-    au < manifest ; exists ; 1950 ; Heredity Volume 4 ; 1950 ; 4 >
-    au < manifest ; exists ; 1951 ; Heredity Volume 5 ; 1951 ; 5 >
-    au < manifest ; exists ; 1952 ; Heredity Volume 6 ; 1952 ; 6 >
-    au < manifest ; exists ; 1953 ; Heredity Volume 7 ; 1953 ; 7 >
-    au < manifest ; exists ; 1954 ; Heredity Volume 8 ; 1954 ; 8 >
-    au < manifest ; exists ; 1955 ; Heredity Volume 9 ; 1955 ; 9 >
-    au < manifest ; exists ; 1956 ; Heredity Volume 10 ; 1956 ; 10 >
-    au < manifest ; exists ; 1957 ; Heredity Volume 11 ; 1957 ; 11 >
-    au < manifest ; exists ; 1958 ; Heredity Volume 12 ; 1958 ; 12 >
-    au < manifest ; exists ; 1959 ; Heredity Volume 13 ; 1959 ; 13 >
-    au < manifest ; exists ; 1960 ; Heredity Volume 14 ; 1960 ; 14 >
-    au < manifest ; exists ; 1960 ; Heredity Volume 15 ; 1960 ; 15 >
-    au < manifest ; exists ; 1961 ; Heredity Volume 16 ; 1961 ; 16 >
-    au < manifest ; exists ; 1962 ; Heredity Volume 17 ; 1962 ; 17 >
-    au < manifest ; exists ; 1963 ; Heredity Volume 18 ; 1963 ; 18 >
-    au < manifest ; exists ; 1964 ; Heredity Volume 19 ; 1964 ; 19 >
-    au < manifest ; exists ; 1965 ; Heredity Volume 20 ; 1965 ; 20 >
-    au < manifest ; exists ; 1966 ; Heredity Volume 21 ; 1966 ; 21 >
-    au < manifest ; exists ; 1967 ; Heredity Volume 22 ; 1967 ; 22 >
-    au < manifest ; exists ; 1968 ; Heredity Volume 23 ; 1968 ; 23 >
-    au < manifest ; exists ; 1969 ; Heredity Volume 24 ; 1969 ; 24 >
-    au < manifest ; exists ; 1970 ; Heredity Volume 25 ; 1970 ; 25 >
-    au < manifest ; exists ; 1971 ; Heredity Volume 26 ; 1971 ; 26 >
-    au < manifest ; exists ; 1971 ; Heredity Volume 27 ; 1971 ; 27 >
-    au < manifest ; exists ; 1972 ; Heredity Volume 28 ; 1972 ; 28 >
-    au < manifest ; exists ; 1972 ; Heredity Volume 29 ; 1972 ; 29 >
-    au < manifest ; exists ; 1973 ; Heredity Volume 30 ; 1973 ; 30 >
-    au < manifest ; exists ; 1973 ; Heredity Volume 31 ; 1973 ; 31 >
-    au < manifest ; exists ; 1974 ; Heredity Volume 32 ; 1974 ; 32 >
-    au < manifest ; exists ; 1974 ; Heredity Volume 33 ; 1974 ; 33 >
-    au < manifest ; exists ; 1975 ; Heredity Volume 34 ; 1975 ; 34 >
-    au < manifest ; exists ; 1975 ; Heredity Volume 35 ; 1975 ; 35 >
-    au < manifest ; exists ; 1976 ; Heredity Volume 36 ; 1976 ; 36 >
-    au < manifest ; exists ; 1976 ; Heredity Volume 37 ; 1976 ; 37 >
-    au < manifest ; exists ; 1977 ; Heredity Volume 38 ; 1977 ; 38 >
-    au < manifest ; exists ; 1977 ; Heredity Volume 39 ; 1977 ; 39 >
-    au < manifest ; exists ; 1978 ; Heredity Volume 40 ; 1978 ; 40 >
-    au < manifest ; exists ; 1978 ; Heredity Volume 41 ; 1978 ; 41 >
-    au < manifest ; exists ; 1979 ; Heredity Volume 42 ; 1979 ; 42 >
-    au < manifest ; exists ; 1979 ; Heredity Volume 43 ; 1979 ; 43 >
-    au < manifest ; exists ; 1980 ; Heredity Volume 44 ; 1980 ; 44 >
-    au < manifest ; exists ; 1980 ; Heredity Volume 45 ; 1980 ; 45 >
-    au < manifest ; exists ; 1981 ; Heredity Volume 46 ; 1981 ; 46 >
-    au < manifest ; exists ; 1981 ; Heredity Volume 47 ; 1981 ; 47 >
-    au < manifest ; exists ; 1982 ; Heredity Volume 48 ; 1982 ; 48 >
-    au < manifest ; exists ; 1982 ; Heredity Volume 49 ; 1982 ; 49 >
-    au < manifest ; exists ; 1983 ; Heredity Volume 50 ; 1983 ; 50 >
-    au < manifest ; exists ; 1983 ; Heredity Volume 51 ; 1983 ; 51 >
-    au < manifest ; exists ; 1984 ; Heredity Volume 52 ; 1984 ; 52 >
-    au < manifest ; exists ; 1984 ; Heredity Volume 53 ; 1984 ; 53 >
-    au < manifest ; exists ; 1985 ; Heredity Volume 54 ; 1985 ; 54 >
-    au < manifest ; exists ; 1985 ; Heredity Volume 55 ; 1985 ; 55 >
-    au < manifest ; exists ; 1986 ; Heredity Volume 56 ; 1986 ; 56 >
-    au < manifest ; exists ; 1986 ; Heredity Volume 57 ; 1986 ; 57 >
-    au < manifest ; exists ; 1987 ; Heredity Volume 58 ; 1987 ; 58 >
-    au < manifest ; exists ; 1987 ; Heredity Volume 59 ; 1987 ; 59 >
-    au < manifest ; exists ; 1988 ; Heredity Volume 60 ; 1988 ; 60 >
-    au < manifest ; exists ; 1988 ; Heredity Volume 61 ; 1988 ; 61 >
-    au < manifest ; exists ; 1989 ; Heredity Volume 62 ; 1989 ; 62 >
-    au < manifest ; exists ; 1989 ; Heredity Volume 63 ; 1989 ; 63 >
-    au < manifest ; exists ; 1990 ; Heredity Volume 64 ; 1990 ; 64 >
-    au < manifest ; exists ; 1990 ; Heredity Volume 65 ; 1990 ; 65 >
-    au < manifest ; exists ; 1991 ; Heredity Volume 66 ; 1991 ; 66 >
-    au < manifest ; exists ; 1991 ; Heredity Volume 67 ; 1991 ; 67 >
-    au < manifest ; exists ; 1992 ; Heredity Volume 68 ; 1992 ; 68 >
-    au < manifest ; exists ; 1992 ; Heredity Volume 69 ; 1992 ; 69 >
-    au < manifest ; exists ; 1993 ; Heredity Volume 70 ; 1993 ; 70 >
-    au < manifest ; exists ; 1993 ; Heredity Volume 71 ; 1993 ; 71 >
-    au < manifest ; exists ; 1994 ; Heredity Volume 72 ; 1994 ; 72 >
-    au < manifest ; exists ; 1994 ; Heredity Volume 73 ; 1994 ; 73 >
-    au < manifest ; exists ; 1995 ; Heredity Volume 74 ; 1995 ; 74 >
-    au < manifest ; exists ; 1995 ; Heredity Volume 75 ; 1995 ; 75 >
-    au < manifest ; exists ; 1996 ; Heredity Volume 76 ; 1996 ; 76 >
-    au < manifest ; exists ; 1996 ; Heredity Volume 77 ; 1996 ; 77 >
-    au < manifest ; exists ; 1997 ; Heredity Volume 78 ; 1997 ; 78 >
-    au < manifest ; exists ; 1997 ; Heredity Volume 79 ; 1997 ; 79 >
-    au < manifest ; exists ; 1998 ; Heredity Volume 80 ; 1998 ; 80 >
-    au < manifest ; exists ; 1998 ; Heredity Volume 81 ; 1998 ; 81 >
-    au < manifest ; exists ; 1999 ; Heredity Volume 82 ; 1999 ; 82 >
-    au < manifest ; exists ; 1999 ; Heredity Volume 83 ; 1999 ; 83 >
+    au < doNotProcess ; doNotProcess ; 1947 ; Heredity Volume 1 ; 1947 ; 1 >
+    au < doNotProcess ; doNotProcess ; 1948 ; Heredity Volume 2 ; 1948 ; 2 >
+    au < doNotProcess ; doNotProcess ; 1949 ; Heredity Volume 3 ; 1949 ; 3 >
+    au < doNotProcess ; doNotProcess ; 1950 ; Heredity Volume 4 ; 1950 ; 4 >
+    au < doNotProcess ; doNotProcess ; 1951 ; Heredity Volume 5 ; 1951 ; 5 >
+    au < doNotProcess ; doNotProcess ; 1952 ; Heredity Volume 6 ; 1952 ; 6 >
+    au < doNotProcess ; doNotProcess ; 1953 ; Heredity Volume 7 ; 1953 ; 7 >
+    au < doNotProcess ; doNotProcess ; 1954 ; Heredity Volume 8 ; 1954 ; 8 >
+    au < doNotProcess ; doNotProcess ; 1955 ; Heredity Volume 9 ; 1955 ; 9 >
+    au < doNotProcess ; doNotProcess ; 1956 ; Heredity Volume 10 ; 1956 ; 10 >
+    au < doNotProcess ; doNotProcess ; 1957 ; Heredity Volume 11 ; 1957 ; 11 >
+    au < doNotProcess ; doNotProcess ; 1958 ; Heredity Volume 12 ; 1958 ; 12 >
+    au < doNotProcess ; doNotProcess ; 1959 ; Heredity Volume 13 ; 1959 ; 13 >
+    au < doNotProcess ; doNotProcess ; 1960 ; Heredity Volume 14 ; 1960 ; 14 >
+    au < doNotProcess ; doNotProcess ; 1960 ; Heredity Volume 15 ; 1960 ; 15 >
+    au < doNotProcess ; doNotProcess ; 1961 ; Heredity Volume 16 ; 1961 ; 16 >
+    au < doNotProcess ; doNotProcess ; 1962 ; Heredity Volume 17 ; 1962 ; 17 >
+    au < doNotProcess ; doNotProcess ; 1963 ; Heredity Volume 18 ; 1963 ; 18 >
+    au < doNotProcess ; doNotProcess ; 1964 ; Heredity Volume 19 ; 1964 ; 19 >
+    au < doNotProcess ; doNotProcess ; 1965 ; Heredity Volume 20 ; 1965 ; 20 >
+    au < doNotProcess ; doNotProcess ; 1966 ; Heredity Volume 21 ; 1966 ; 21 >
+    au < doNotProcess ; doNotProcess ; 1967 ; Heredity Volume 22 ; 1967 ; 22 >
+    au < doNotProcess ; doNotProcess ; 1968 ; Heredity Volume 23 ; 1968 ; 23 >
+    au < doNotProcess ; doNotProcess ; 1969 ; Heredity Volume 24 ; 1969 ; 24 >
+    au < doNotProcess ; doNotProcess ; 1970 ; Heredity Volume 25 ; 1970 ; 25 >
+    au < doNotProcess ; doNotProcess ; 1971 ; Heredity Volume 26 ; 1971 ; 26 >
+    au < doNotProcess ; doNotProcess ; 1971 ; Heredity Volume 27 ; 1971 ; 27 >
+    au < doNotProcess ; doNotProcess ; 1972 ; Heredity Volume 28 ; 1972 ; 28 >
+    au < doNotProcess ; doNotProcess ; 1972 ; Heredity Volume 29 ; 1972 ; 29 >
+    au < doNotProcess ; doNotProcess ; 1973 ; Heredity Volume 30 ; 1973 ; 30 >
+    au < doNotProcess ; doNotProcess ; 1973 ; Heredity Volume 31 ; 1973 ; 31 >
+    au < doNotProcess ; doNotProcess ; 1974 ; Heredity Volume 32 ; 1974 ; 32 >
+    au < doNotProcess ; doNotProcess ; 1974 ; Heredity Volume 33 ; 1974 ; 33 >
+    au < doNotProcess ; doNotProcess ; 1975 ; Heredity Volume 34 ; 1975 ; 34 >
+    au < doNotProcess ; doNotProcess ; 1975 ; Heredity Volume 35 ; 1975 ; 35 >
+    au < doNotProcess ; doNotProcess ; 1976 ; Heredity Volume 36 ; 1976 ; 36 >
+    au < doNotProcess ; doNotProcess ; 1976 ; Heredity Volume 37 ; 1976 ; 37 >
+    au < doNotProcess ; doNotProcess ; 1977 ; Heredity Volume 38 ; 1977 ; 38 >
+    au < doNotProcess ; doNotProcess ; 1977 ; Heredity Volume 39 ; 1977 ; 39 >
+    au < doNotProcess ; doNotProcess ; 1978 ; Heredity Volume 40 ; 1978 ; 40 >
+    au < doNotProcess ; doNotProcess ; 1978 ; Heredity Volume 41 ; 1978 ; 41 >
+    au < doNotProcess ; doNotProcess ; 1979 ; Heredity Volume 42 ; 1979 ; 42 >
+    au < doNotProcess ; doNotProcess ; 1979 ; Heredity Volume 43 ; 1979 ; 43 >
+    au < doNotProcess ; doNotProcess ; 1980 ; Heredity Volume 44 ; 1980 ; 44 >
+    au < doNotProcess ; doNotProcess ; 1980 ; Heredity Volume 45 ; 1980 ; 45 >
+    au < doNotProcess ; doNotProcess ; 1981 ; Heredity Volume 46 ; 1981 ; 46 >
+    au < doNotProcess ; doNotProcess ; 1981 ; Heredity Volume 47 ; 1981 ; 47 >
+    au < doNotProcess ; doNotProcess ; 1982 ; Heredity Volume 48 ; 1982 ; 48 >
+    au < doNotProcess ; doNotProcess ; 1982 ; Heredity Volume 49 ; 1982 ; 49 >
+    au < doNotProcess ; doNotProcess ; 1983 ; Heredity Volume 50 ; 1983 ; 50 >
+    au < doNotProcess ; doNotProcess ; 1983 ; Heredity Volume 51 ; 1983 ; 51 >
+    au < doNotProcess ; doNotProcess ; 1984 ; Heredity Volume 52 ; 1984 ; 52 >
+    au < doNotProcess ; doNotProcess ; 1984 ; Heredity Volume 53 ; 1984 ; 53 >
+    au < doNotProcess ; doNotProcess ; 1985 ; Heredity Volume 54 ; 1985 ; 54 >
+    au < doNotProcess ; doNotProcess ; 1985 ; Heredity Volume 55 ; 1985 ; 55 >
+    au < doNotProcess ; doNotProcess ; 1986 ; Heredity Volume 56 ; 1986 ; 56 >
+    au < doNotProcess ; doNotProcess ; 1986 ; Heredity Volume 57 ; 1986 ; 57 >
+    au < doNotProcess ; doNotProcess ; 1987 ; Heredity Volume 58 ; 1987 ; 58 >
+    au < doNotProcess ; doNotProcess ; 1987 ; Heredity Volume 59 ; 1987 ; 59 >
+    au < doNotProcess ; doNotProcess ; 1988 ; Heredity Volume 60 ; 1988 ; 60 >
+    au < doNotProcess ; doNotProcess ; 1988 ; Heredity Volume 61 ; 1988 ; 61 >
+    au < doNotProcess ; doNotProcess ; 1989 ; Heredity Volume 62 ; 1989 ; 62 >
+    au < doNotProcess ; doNotProcess ; 1989 ; Heredity Volume 63 ; 1989 ; 63 >
+    au < doNotProcess ; doNotProcess ; 1990 ; Heredity Volume 64 ; 1990 ; 64 >
+    au < doNotProcess ; doNotProcess ; 1990 ; Heredity Volume 65 ; 1990 ; 65 >
+    au < doNotProcess ; doNotProcess ; 1991 ; Heredity Volume 66 ; 1991 ; 66 >
+    au < doNotProcess ; doNotProcess ; 1991 ; Heredity Volume 67 ; 1991 ; 67 >
+    au < doNotProcess ; doNotProcess ; 1992 ; Heredity Volume 68 ; 1992 ; 68 >
+    au < doNotProcess ; doNotProcess ; 1992 ; Heredity Volume 69 ; 1992 ; 69 >
+    au < doNotProcess ; doNotProcess ; 1993 ; Heredity Volume 70 ; 1993 ; 70 >
+    au < doNotProcess ; doNotProcess ; 1993 ; Heredity Volume 71 ; 1993 ; 71 >
+    au < doNotProcess ; doNotProcess ; 1994 ; Heredity Volume 72 ; 1994 ; 72 >
+    au < doNotProcess ; doNotProcess ; 1994 ; Heredity Volume 73 ; 1994 ; 73 >
+    au < doNotProcess ; doNotProcess ; 1995 ; Heredity Volume 74 ; 1995 ; 74 >
+    au < doNotProcess ; doNotProcess ; 1995 ; Heredity Volume 75 ; 1995 ; 75 >
+    au < doNotProcess ; doNotProcess ; 1996 ; Heredity Volume 76 ; 1996 ; 76 >
+    au < doNotProcess ; doNotProcess ; 1996 ; Heredity Volume 77 ; 1996 ; 77 >
+    au < doNotProcess ; doNotProcess ; 1997 ; Heredity Volume 78 ; 1997 ; 78 >
+    au < doNotProcess ; doNotProcess ; 1997 ; Heredity Volume 79 ; 1997 ; 79 >
+    au < doNotProcess ; doNotProcess ; 1998 ; Heredity Volume 80 ; 1998 ; 80 >
+    au < doNotProcess ; doNotProcess ; 1998 ; Heredity Volume 81 ; 1998 ; 81 >
+    au < doNotProcess ; doNotProcess ; 1999 ; Heredity Volume 82 ; 1999 ; 82 >
+    au < doNotProcess ; doNotProcess ; 1999 ; Heredity Volume 83 ; 1999 ; 83 >
     au < manifest ; exists ; 2000 ; Heredity Volume 84 ; 2000 ; 84 >
     au < manifest ; exists ; 2000 ; Heredity Volume 85 ; 2000 ; 85 >
     au < manifest ; exists ; 2001 ; Heredity Volume 86 ; 2001 ; 86 >
@@ -1184,83 +1184,83 @@
 
     param[journal_id] = icb
 
-    au < manifest ; exists ; 1924 ; Australian Journal of Experimental Biology and Medical Science Volume 1 ; 1924 ; 1 >
-    au < manifest ; exists ; 1925 ; Australian Journal of Experimental Biology and Medical Science Volume 2 ; 1925 ; 2 >
-    au < manifest ; exists ; 1926 ; Australian Journal of Experimental Biology and Medical Science Volume 3 ; 1926 ; 3 >
-    au < manifest ; exists ; 1927 ; Australian Journal of Experimental Biology and Medical Science Volume 4 ; 1927 ; 4 >
-    au < manifest ; exists ; 1928 ; Australian Journal of Experimental Biology and Medical Science Volume 5 ; 1928 ; 5 >
-    au < manifest ; exists ; 1929 ; Australian Journal of Experimental Biology and Medical Science Volume 6 ; 1929 ; 6 >
-    au < manifest ; exists ; 1930 ; Australian Journal of Experimental Biology and Medical Science Volume 7 ; 1930 ; 7 >
-    au < manifest ; exists ; 1931 ; Australian Journal of Experimental Biology and Medical Science Volume 8 ; 1931 ; 8 >
-    au < manifest ; exists ; 1932 ; Australian Journal of Experimental Biology and Medical Science Volume 9 ; 1932 ; 9 >
-    au < manifest ; exists ; 1932 ; Australian Journal of Experimental Biology and Medical Science Volume 10 ; 1932 ; 10 >
-    au < manifest ; exists ; 1933 ; Australian Journal of Experimental Biology and Medical Science Volume 11 ; 1933 ; 11 >
-    au < manifest ; exists ; 1934 ; Australian Journal of Experimental Biology and Medical Science Volume 12 ; 1934 ; 12 >
-    au < manifest ; exists ; 1935 ; Australian Journal of Experimental Biology and Medical Science Volume 13 ; 1935 ; 13 >
-    au < manifest ; exists ; 1936 ; Australian Journal of Experimental Biology and Medical Science Volume 14 ; 1936 ; 14 >
-    au < manifest ; exists ; 1937 ; Australian Journal of Experimental Biology and Medical Science Volume 15 ; 1937 ; 15 >
-    au < manifest ; exists ; 1938 ; Australian Journal of Experimental Biology and Medical Science Volume 16 ; 1938 ; 16 >
-    au < manifest ; exists ; 1939 ; Australian Journal of Experimental Biology and Medical Science Volume 17 ; 1939 ; 17 >
-    au < manifest ; exists ; 1940 ; Australian Journal of Experimental Biology and Medical Science Volume 18 ; 1940 ; 18 >
-    au < manifest ; exists ; 1941 ; Australian Journal of Experimental Biology and Medical Science Volume 19 ; 1941 ; 19 >
-    au < manifest ; exists ; 1942 ; Australian Journal of Experimental Biology and Medical Science Volume 20 ; 1942 ; 20 >
-    au < manifest ; exists ; 1943 ; Australian Journal of Experimental Biology and Medical Science Volume 21 ; 1943 ; 21 >
-    au < manifest ; exists ; 1944 ; Australian Journal of Experimental Biology and Medical Science Volume 22 ; 1944 ; 22 >
-    au < manifest ; exists ; 1945 ; Australian Journal of Experimental Biology and Medical Science Volume 23 ; 1945 ; 23 >
-    au < manifest ; exists ; 1946 ; Australian Journal of Experimental Biology and Medical Science Volume 24 ; 1946 ; 24 >
-    au < manifest ; exists ; 1947 ; Australian Journal of Experimental Biology and Medical Science Volume 25 ; 1947 ; 25 >
-    au < manifest ; exists ; 1948 ; Australian Journal of Experimental Biology and Medical Science Volume 26 ; 1948 ; 26 >
-    au < manifest ; exists ; 1949 ; Australian Journal of Experimental Biology and Medical Science Volume 27 ; 1949 ; 27 >
-    au < manifest ; exists ; 1950 ; Australian Journal of Experimental Biology and Medical Science Volume 28 ; 1950 ; 28 >
-    au < manifest ; exists ; 1951 ; Australian Journal of Experimental Biology and Medical Science Volume 29 ; 1951 ; 29 >
-    au < manifest ; exists ; 1952 ; Australian Journal of Experimental Biology and Medical Science Volume 30 ; 1952 ; 30 >
-    au < manifest ; exists ; 1953 ; Australian Journal of Experimental Biology and Medical Science Volume 31 ; 1953 ; 31 >
-    au < manifest ; exists ; 1954 ; Australian Journal of Experimental Biology and Medical Science Volume 32 ; 1954 ; 32 >
-    au < manifest ; exists ; 1955 ; Australian Journal of Experimental Biology and Medical Science Volume 33 ; 1955 ; 33 >
-    au < manifest ; exists ; 1956 ; Australian Journal of Experimental Biology and Medical Science Volume 34 ; 1956 ; 34 >
-    au < manifest ; exists ; 1957 ; Australian Journal of Experimental Biology and Medical Science Volume 35 ; 1957 ; 35 >
-    au < manifest ; exists ; 1958 ; Australian Journal of Experimental Biology and Medical Science Volume 36 ; 1958 ; 36 >
-    au < manifest ; exists ; 1959 ; Australian Journal of Experimental Biology and Medical Science Volume 37 ; 1959 ; 37 >
-    au < manifest ; exists ; 1960 ; Australian Journal of Experimental Biology and Medical Science Volume 38 ; 1960 ; 38 >
-    au < manifest ; exists ; 1961 ; Australian Journal of Experimental Biology and Medical Science Volume 39 ; 1961 ; 39 >
-    au < manifest ; exists ; 1962 ; Australian Journal of Experimental Biology and Medical Science Volume 40 ; 1962 ; 40 >
-    au < manifest ; exists ; 1963 ; Australian Journal of Experimental Biology and Medical Science Volume 41 ; 1963 ; 41 >
-    au < manifest ; exists ; 1964 ; Australian Journal of Experimental Biology and Medical Science Volume 42 ; 1964 ; 42 >
-    au < manifest ; exists ; 1965 ; Australian Journal of Experimental Biology and Medical Science Volume 43 ; 1965 ; 43 >
-    au < manifest ; exists ; 1966 ; Australian Journal of Experimental Biology and Medical Science Volume 44 ; 1966 ; 44 >
-    au < manifest ; exists ; 1967 ; Australian Journal of Experimental Biology and Medical Science Volume 45 ; 1967 ; 45 >
-    au < manifest ; exists ; 1968 ; Australian Journal of Experimental Biology and Medical Science Volume 46 ; 1968 ; 46 >
-    au < manifest ; exists ; 1969 ; Australian Journal of Experimental Biology and Medical Science Volume 47 ; 1969 ; 47 >
-    au < manifest ; exists ; 1970 ; Australian Journal of Experimental Biology and Medical Science Volume 48 ; 1970 ; 48 >
-    au < manifest ; exists ; 1971 ; Australian Journal of Experimental Biology and Medical Science Volume 49 ; 1971 ; 49 >
-    au < manifest ; exists ; 1972 ; Australian Journal of Experimental Biology and Medical Science Volume 50 ; 1972 ; 50 >
-    au < manifest ; exists ; 1973 ; Australian Journal of Experimental Biology and Medical Science Volume 51 ; 1973 ; 51 >
-    au < manifest ; exists ; 1974 ; Australian Journal of Experimental Biology and Medical Science Volume 52 ; 1974 ; 52 >
-    au < manifest ; exists ; 1975 ; Australian Journal of Experimental Biology and Medical Science Volume 53 ; 1975 ; 53 >
-    au < manifest ; exists ; 1976 ; Australian Journal of Experimental Biology and Medical Science Volume 54 ; 1976 ; 54 >
-    au < manifest ; exists ; 1977 ; Australian Journal of Experimental Biology and Medical Science Volume 55 ; 1977 ; 55 >
-    au < manifest ; exists ; 1978 ; Australian Journal of Experimental Biology and Medical Science Volume 56 ; 1978 ; 56 >
-    au < manifest ; exists ; 1979 ; Australian Journal of Experimental Biology and Medical Science Volume 57 ; 1979 ; 57 >
-    au < manifest ; exists ; 1980 ; Australian Journal of Experimental Biology and Medical Science Volume 58 ; 1980 ; 58 >
-    au < manifest ; exists ; 1981 ; Australian Journal of Experimental Biology and Medical Science Volume 59 ; 1981 ; 59 >
-    au < manifest ; exists ; 1982 ; Australian Journal of Experimental Biology and Medical Science Volume 60 ; 1982 ; 60 >
-    au < manifest ; exists ; 1983 ; Australian Journal of Experimental Biology and Medical Science Volume 61 ; 1983 ; 61 >
-    au < manifest ; exists ; 1984 ; Australian Journal of Experimental Biology and Medical Science Volume 62 ; 1984 ; 62 >
-    au < manifest ; exists ; 1985 ; Australian Journal of Experimental Biology and Medical Science Volume 63 ; 1985 ; 63 >
-    au < manifest ; exists ; 1986 ; Australian Journal of Experimental Biology and Medical Science Volume 64 ; 1986 ; 64 >
-    au < manifest ; exists ; 1987 ; Immunology & Cell Biology Volume 65 ; 1987 ; 65 >
-    au < manifest ; exists ; 1988 ; Immunology & Cell Biology Volume 66 ; 1988 ; 66 >
-    au < manifest ; exists ; 1989 ; Immunology & Cell Biology Volume 67 ; 1989 ; 67 >
-    au < manifest ; exists ; 1990 ; Immunology & Cell Biology Volume 68 ; 1990 ; 68 >
-    au < manifest ; exists ; 1991 ; Immunology & Cell Biology Volume 69 ; 1991 ; 69 >
-    au < manifest ; exists ; 1992 ; Immunology & Cell Biology Volume 70 ; 1992 ; 70 >
-    au < manifest ; exists ; 1993 ; Immunology & Cell Biology Volume 71 ; 1993 ; 71 >
-    au < manifest ; exists ; 1994 ; Immunology & Cell Biology Volume 72 ; 1994 ; 72 >
-    au < manifest ; exists ; 1995 ; Immunology & Cell Biology Volume 73 ; 1995 ; 73 >
-    au < manifest ; exists ; 1996 ; Immunology & Cell Biology Volume 74 ; 1996 ; 74 >
-    au < manifest ; exists ; 1997 ; Immunology & Cell Biology Volume 75 ; 1997 ; 75 >
-    au < manifest ; exists ; 1998 ; Immunology & Cell Biology Volume 76 ; 1998 ; 76 >
-    au < manifest ; exists ; 1999 ; Immunology & Cell Biology Volume 77 ; 1999 ; 77 >
+    au < doNotProcess ; doNotProcess ; 1924 ; Australian Journal of Experimental Biology and Medical Science Volume 1 ; 1924 ; 1 >
+    au < doNotProcess ; doNotProcess ; 1925 ; Australian Journal of Experimental Biology and Medical Science Volume 2 ; 1925 ; 2 >
+    au < doNotProcess ; doNotProcess ; 1926 ; Australian Journal of Experimental Biology and Medical Science Volume 3 ; 1926 ; 3 >
+    au < doNotProcess ; doNotProcess ; 1927 ; Australian Journal of Experimental Biology and Medical Science Volume 4 ; 1927 ; 4 >
+    au < doNotProcess ; doNotProcess ; 1928 ; Australian Journal of Experimental Biology and Medical Science Volume 5 ; 1928 ; 5 >
+    au < doNotProcess ; doNotProcess ; 1929 ; Australian Journal of Experimental Biology and Medical Science Volume 6 ; 1929 ; 6 >
+    au < doNotProcess ; doNotProcess ; 1930 ; Australian Journal of Experimental Biology and Medical Science Volume 7 ; 1930 ; 7 >
+    au < doNotProcess ; doNotProcess ; 1931 ; Australian Journal of Experimental Biology and Medical Science Volume 8 ; 1931 ; 8 >
+    au < doNotProcess ; doNotProcess ; 1932 ; Australian Journal of Experimental Biology and Medical Science Volume 9 ; 1932 ; 9 >
+    au < doNotProcess ; doNotProcess ; 1932 ; Australian Journal of Experimental Biology and Medical Science Volume 10 ; 1932 ; 10 >
+    au < doNotProcess ; doNotProcess ; 1933 ; Australian Journal of Experimental Biology and Medical Science Volume 11 ; 1933 ; 11 >
+    au < doNotProcess ; doNotProcess ; 1934 ; Australian Journal of Experimental Biology and Medical Science Volume 12 ; 1934 ; 12 >
+    au < doNotProcess ; doNotProcess ; 1935 ; Australian Journal of Experimental Biology and Medical Science Volume 13 ; 1935 ; 13 >
+    au < doNotProcess ; doNotProcess ; 1936 ; Australian Journal of Experimental Biology and Medical Science Volume 14 ; 1936 ; 14 >
+    au < doNotProcess ; doNotProcess ; 1937 ; Australian Journal of Experimental Biology and Medical Science Volume 15 ; 1937 ; 15 >
+    au < doNotProcess ; doNotProcess ; 1938 ; Australian Journal of Experimental Biology and Medical Science Volume 16 ; 1938 ; 16 >
+    au < doNotProcess ; doNotProcess ; 1939 ; Australian Journal of Experimental Biology and Medical Science Volume 17 ; 1939 ; 17 >
+    au < doNotProcess ; doNotProcess ; 1940 ; Australian Journal of Experimental Biology and Medical Science Volume 18 ; 1940 ; 18 >
+    au < doNotProcess ; doNotProcess ; 1941 ; Australian Journal of Experimental Biology and Medical Science Volume 19 ; 1941 ; 19 >
+    au < doNotProcess ; doNotProcess ; 1942 ; Australian Journal of Experimental Biology and Medical Science Volume 20 ; 1942 ; 20 >
+    au < doNotProcess ; doNotProcess ; 1943 ; Australian Journal of Experimental Biology and Medical Science Volume 21 ; 1943 ; 21 >
+    au < doNotProcess ; doNotProcess ; 1944 ; Australian Journal of Experimental Biology and Medical Science Volume 22 ; 1944 ; 22 >
+    au < doNotProcess ; doNotProcess ; 1945 ; Australian Journal of Experimental Biology and Medical Science Volume 23 ; 1945 ; 23 >
+    au < doNotProcess ; doNotProcess ; 1946 ; Australian Journal of Experimental Biology and Medical Science Volume 24 ; 1946 ; 24 >
+    au < doNotProcess ; doNotProcess ; 1947 ; Australian Journal of Experimental Biology and Medical Science Volume 25 ; 1947 ; 25 >
+    au < doNotProcess ; doNotProcess ; 1948 ; Australian Journal of Experimental Biology and Medical Science Volume 26 ; 1948 ; 26 >
+    au < doNotProcess ; doNotProcess ; 1949 ; Australian Journal of Experimental Biology and Medical Science Volume 27 ; 1949 ; 27 >
+    au < doNotProcess ; doNotProcess ; 1950 ; Australian Journal of Experimental Biology and Medical Science Volume 28 ; 1950 ; 28 >
+    au < doNotProcess ; doNotProcess ; 1951 ; Australian Journal of Experimental Biology and Medical Science Volume 29 ; 1951 ; 29 >
+    au < doNotProcess ; doNotProcess ; 1952 ; Australian Journal of Experimental Biology and Medical Science Volume 30 ; 1952 ; 30 >
+    au < doNotProcess ; doNotProcess ; 1953 ; Australian Journal of Experimental Biology and Medical Science Volume 31 ; 1953 ; 31 >
+    au < doNotProcess ; doNotProcess ; 1954 ; Australian Journal of Experimental Biology and Medical Science Volume 32 ; 1954 ; 32 >
+    au < doNotProcess ; doNotProcess ; 1955 ; Australian Journal of Experimental Biology and Medical Science Volume 33 ; 1955 ; 33 >
+    au < doNotProcess ; doNotProcess ; 1956 ; Australian Journal of Experimental Biology and Medical Science Volume 34 ; 1956 ; 34 >
+    au < doNotProcess ; doNotProcess ; 1957 ; Australian Journal of Experimental Biology and Medical Science Volume 35 ; 1957 ; 35 >
+    au < doNotProcess ; doNotProcess ; 1958 ; Australian Journal of Experimental Biology and Medical Science Volume 36 ; 1958 ; 36 >
+    au < doNotProcess ; doNotProcess ; 1959 ; Australian Journal of Experimental Biology and Medical Science Volume 37 ; 1959 ; 37 >
+    au < doNotProcess ; doNotProcess ; 1960 ; Australian Journal of Experimental Biology and Medical Science Volume 38 ; 1960 ; 38 >
+    au < doNotProcess ; doNotProcess ; 1961 ; Australian Journal of Experimental Biology and Medical Science Volume 39 ; 1961 ; 39 >
+    au < doNotProcess ; doNotProcess ; 1962 ; Australian Journal of Experimental Biology and Medical Science Volume 40 ; 1962 ; 40 >
+    au < doNotProcess ; doNotProcess ; 1963 ; Australian Journal of Experimental Biology and Medical Science Volume 41 ; 1963 ; 41 >
+    au < doNotProcess ; doNotProcess ; 1964 ; Australian Journal of Experimental Biology and Medical Science Volume 42 ; 1964 ; 42 >
+    au < doNotProcess ; doNotProcess ; 1965 ; Australian Journal of Experimental Biology and Medical Science Volume 43 ; 1965 ; 43 >
+    au < doNotProcess ; doNotProcess ; 1966 ; Australian Journal of Experimental Biology and Medical Science Volume 44 ; 1966 ; 44 >
+    au < doNotProcess ; doNotProcess ; 1967 ; Australian Journal of Experimental Biology and Medical Science Volume 45 ; 1967 ; 45 >
+    au < doNotProcess ; doNotProcess ; 1968 ; Australian Journal of Experimental Biology and Medical Science Volume 46 ; 1968 ; 46 >
+    au < doNotProcess ; doNotProcess ; 1969 ; Australian Journal of Experimental Biology and Medical Science Volume 47 ; 1969 ; 47 >
+    au < doNotProcess ; doNotProcess ; 1970 ; Australian Journal of Experimental Biology and Medical Science Volume 48 ; 1970 ; 48 >
+    au < doNotProcess ; doNotProcess ; 1971 ; Australian Journal of Experimental Biology and Medical Science Volume 49 ; 1971 ; 49 >
+    au < doNotProcess ; doNotProcess ; 1972 ; Australian Journal of Experimental Biology and Medical Science Volume 50 ; 1972 ; 50 >
+    au < doNotProcess ; doNotProcess ; 1973 ; Australian Journal of Experimental Biology and Medical Science Volume 51 ; 1973 ; 51 >
+    au < doNotProcess ; doNotProcess ; 1974 ; Australian Journal of Experimental Biology and Medical Science Volume 52 ; 1974 ; 52 >
+    au < doNotProcess ; doNotProcess ; 1975 ; Australian Journal of Experimental Biology and Medical Science Volume 53 ; 1975 ; 53 >
+    au < doNotProcess ; doNotProcess ; 1976 ; Australian Journal of Experimental Biology and Medical Science Volume 54 ; 1976 ; 54 >
+    au < doNotProcess ; doNotProcess ; 1977 ; Australian Journal of Experimental Biology and Medical Science Volume 55 ; 1977 ; 55 >
+    au < doNotProcess ; doNotProcess ; 1978 ; Australian Journal of Experimental Biology and Medical Science Volume 56 ; 1978 ; 56 >
+    au < doNotProcess ; doNotProcess ; 1979 ; Australian Journal of Experimental Biology and Medical Science Volume 57 ; 1979 ; 57 >
+    au < doNotProcess ; doNotProcess ; 1980 ; Australian Journal of Experimental Biology and Medical Science Volume 58 ; 1980 ; 58 >
+    au < doNotProcess ; doNotProcess ; 1981 ; Australian Journal of Experimental Biology and Medical Science Volume 59 ; 1981 ; 59 >
+    au < doNotProcess ; doNotProcess ; 1982 ; Australian Journal of Experimental Biology and Medical Science Volume 60 ; 1982 ; 60 >
+    au < doNotProcess ; doNotProcess ; 1983 ; Australian Journal of Experimental Biology and Medical Science Volume 61 ; 1983 ; 61 >
+    au < doNotProcess ; doNotProcess ; 1984 ; Australian Journal of Experimental Biology and Medical Science Volume 62 ; 1984 ; 62 >
+    au < doNotProcess ; doNotProcess ; 1985 ; Australian Journal of Experimental Biology and Medical Science Volume 63 ; 1985 ; 63 >
+    au < doNotProcess ; doNotProcess ; 1986 ; Australian Journal of Experimental Biology and Medical Science Volume 64 ; 1986 ; 64 >
+    au < doNotProcess ; doNotProcess ; 1987 ; Immunology & Cell Biology Volume 65 ; 1987 ; 65 >
+    au < doNotProcess ; doNotProcess ; 1988 ; Immunology & Cell Biology Volume 66 ; 1988 ; 66 >
+    au < doNotProcess ; doNotProcess ; 1989 ; Immunology & Cell Biology Volume 67 ; 1989 ; 67 >
+    au < doNotProcess ; doNotProcess ; 1990 ; Immunology & Cell Biology Volume 68 ; 1990 ; 68 >
+    au < doNotProcess ; doNotProcess ; 1991 ; Immunology & Cell Biology Volume 69 ; 1991 ; 69 >
+    au < doNotProcess ; doNotProcess ; 1992 ; Immunology & Cell Biology Volume 70 ; 1992 ; 70 >
+    au < doNotProcess ; doNotProcess ; 1993 ; Immunology & Cell Biology Volume 71 ; 1993 ; 71 >
+    au < doNotProcess ; doNotProcess ; 1994 ; Immunology & Cell Biology Volume 72 ; 1994 ; 72 >
+    au < doNotProcess ; doNotProcess ; 1995 ; Immunology & Cell Biology Volume 73 ; 1995 ; 73 >
+    au < doNotProcess ; doNotProcess ; 1996 ; Immunology & Cell Biology Volume 74 ; 1996 ; 74 >
+    au < doNotProcess ; doNotProcess ; 1997 ; Immunology & Cell Biology Volume 75 ; 1997 ; 75 >
+    au < doNotProcess ; doNotProcess ; 1998 ; Immunology & Cell Biology Volume 76 ; 1998 ; 76 >
+    au < doNotProcess ; doNotProcess ; 1999 ; Immunology & Cell Biology Volume 77 ; 1999 ; 77 >
     au < manifest ; exists ; 2000 ; Immunology & Cell Biology Volume 78 ; 2000 ; 78 >
     au < manifest ; exists ; 2001 ; Immunology & Cell Biology Volume 79 ; 2001 ; 79 >
     au < manifest ; exists ; 2002 ; Immunology & Cell Biology Volume 80 ; 2002 ; 80 >
@@ -1289,9 +1289,9 @@
 
     param[journal_id] = ijir
 
-    au < manifest ; exists ; 1997 ; International Journal of Impotence Research Volume 9 ; 1997 ; 9 >
-    au < manifest ; exists ; 1998 ; International Journal of Impotence Research Volume 10 ; 1998 ; 10 >
-    au < manifest ; exists ; 1999 ; International Journal of Impotence Research Volume 11 ; 1999 ; 11 >
+    au < doNotProcess ; doNotProcess ; 1997 ; International Journal of Impotence Research Volume 9 ; 1997 ; 9 >
+    au < doNotProcess ; doNotProcess ; 1998 ; International Journal of Impotence Research Volume 10 ; 1998 ; 10 >
+    au < doNotProcess ; doNotProcess ; 1999 ; International Journal of Impotence Research Volume 11 ; 1999 ; 11 >
     au < manifest ; exists ; 2000 ; International Journal of Impotence Research Volume 12 ; 2000 ; 12 >
     au < manifest ; exists ; 2001 ; International Journal of Impotence Research Volume 13 ; 2001 ; 13 >
     au < manifest ; exists ; 2002 ; International Journal of Impotence Research Volume 14 ; 2002 ; 14 >
@@ -1321,9 +1321,9 @@
 
     param[journal_id] = ijo
 
-    au < manifest ; exists ; 1997 ; International Journal of Obesity Volume 21 ; 1997 ; 21 >
-    au < manifest ; exists ; 1998 ; International Journal of Obesity Volume 22 ; 1998 ; 22 >
-    au < manifest ; exists ; 1999 ; International Journal of Obesity Volume 23 ; 1999 ; 23 >
+    au < doNotProcess ; doNotProcess ; 1997 ; International Journal of Obesity Volume 21 ; 1997 ; 21 >
+    au < doNotProcess ; doNotProcess ; 1998 ; International Journal of Obesity Volume 22 ; 1998 ; 22 >
+    au < doNotProcess ; doNotProcess ; 1999 ; International Journal of Obesity Volume 23 ; 1999 ; 23 >
     au < manifest ; exists ; 2000 ; International Journal of Obesity Volume 24 ; 2000 ; 24 >
     au < manifest ; exists ; 2001 ; International Journal of Obesity Volume 25 ; 2001 ; 25 >
     au < manifest ; exists ; 2002 ; International Journal of Obesity Volume 26 ; 2002 ; 26 >
@@ -1458,25 +1458,25 @@
 
     param[journal_id] = jcbfm
 
-    au < exists ; exists ; 1981 ; Journal of Cerebral Blood Flow and Metabolism Volume 1 ; 1981 ; 1 >
-    au < exists ; exists ; 1982 ; Journal of Cerebral Blood Flow and Metabolism Volume 2 ; 1982 ; 2 >
-    au < exists ; exists ; 1983 ; Journal of Cerebral Blood Flow and Metabolism Volume 3 ; 1983 ; 3 >
-    au < exists ; exists ; 1984 ; Journal of Cerebral Blood Flow and Metabolism Volume 4 ; 1984 ; 4 >
-    au < exists ; exists ; 1985 ; Journal of Cerebral Blood Flow and Metabolism Volume 5 ; 1985 ; 5 >
-    au < exists ; exists ; 1986 ; Journal of Cerebral Blood Flow and Metabolism Volume 6 ; 1986 ; 6 >
-    au < manifest ; exists ; 1987 ; Journal of Cerebral Blood Flow and Metabolism Volume 7 ; 1987 ; 7 >
-    au < exists ; exists ; 1988 ; Journal of Cerebral Blood Flow and Metabolism Volume 8 ; 1988 ; 8 >
-    au < exists ; exists ; 1989 ; Journal of Cerebral Blood Flow and Metabolism Volume 9 ; 1989 ; 9 >
-    au < exists ; exists ; 1990 ; Journal of Cerebral Blood Flow and Metabolism Volume 10 ; 1990 ; 10 >
-    au < exists ; exists ; 1991 ; Journal of Cerebral Blood Flow and Metabolism Volume 11 ; 1991 ; 11 >
-    au < exists ; exists ; 1992 ; Journal of Cerebral Blood Flow and Metabolism Volume 12 ; 1992 ; 12 >
-    au < exists ; exists ; 1993 ; Journal of Cerebral Blood Flow and Metabolism Volume 13 ; 1993 ; 13 >
-    au < exists ; exists ; 1994 ; Journal of Cerebral Blood Flow and Metabolism Volume 14 ; 1994 ; 14 >
-    au < manifest ; exists ; 1995 ; Journal of Cerebral Blood Flow and Metabolism Volume 15 ; 1995 ; 15 >
-    au < exists ; exists ; 1996 ; Journal of Cerebral Blood Flow and Metabolism Volume 16 ; 1996 ; 16 >
-    au < exists ; exists ; 1997 ; Journal of Cerebral Blood Flow and Metabolism Volume 17 ; 1997 ; 17 >
-    au < exists ; exists ; 1998 ; Journal of Cerebral Blood Flow and Metabolism Volume 18 ; 1998 ; 18 >
-    au < exists ; exists ; 1999 ; Journal of Cerebral Blood Flow and Metabolism Volume 19 ; 1999 ; 19 >
+    au < doNotProcess ; doNotProcess ; 1981 ; Journal of Cerebral Blood Flow and Metabolism Volume 1 ; 1981 ; 1 >
+    au < doNotProcess ; doNotProcess ; 1982 ; Journal of Cerebral Blood Flow and Metabolism Volume 2 ; 1982 ; 2 >
+    au < doNotProcess ; doNotProcess ; 1983 ; Journal of Cerebral Blood Flow and Metabolism Volume 3 ; 1983 ; 3 >
+    au < doNotProcess ; doNotProcess ; 1984 ; Journal of Cerebral Blood Flow and Metabolism Volume 4 ; 1984 ; 4 >
+    au < doNotProcess ; doNotProcess ; 1985 ; Journal of Cerebral Blood Flow and Metabolism Volume 5 ; 1985 ; 5 >
+    au < doNotProcess ; doNotProcess ; 1986 ; Journal of Cerebral Blood Flow and Metabolism Volume 6 ; 1986 ; 6 >
+    au < doNotProcess ; doNotProcess ; 1987 ; Journal of Cerebral Blood Flow and Metabolism Volume 7 ; 1987 ; 7 >
+    au < doNotProcess ; doNotProcess ; 1988 ; Journal of Cerebral Blood Flow and Metabolism Volume 8 ; 1988 ; 8 >
+    au < doNotProcess ; doNotProcess ; 1989 ; Journal of Cerebral Blood Flow and Metabolism Volume 9 ; 1989 ; 9 >
+    au < doNotProcess ; doNotProcess ; 1990 ; Journal of Cerebral Blood Flow and Metabolism Volume 10 ; 1990 ; 10 >
+    au < doNotProcess ; doNotProcess ; 1991 ; Journal of Cerebral Blood Flow and Metabolism Volume 11 ; 1991 ; 11 >
+    au < doNotProcess ; doNotProcess ; 1992 ; Journal of Cerebral Blood Flow and Metabolism Volume 12 ; 1992 ; 12 >
+    au < doNotProcess ; doNotProcess ; 1993 ; Journal of Cerebral Blood Flow and Metabolism Volume 13 ; 1993 ; 13 >
+    au < doNotProcess ; doNotProcess ; 1994 ; Journal of Cerebral Blood Flow and Metabolism Volume 14 ; 1994 ; 14 >
+    au < doNotProcess ; doNotProcess ; 1995 ; Journal of Cerebral Blood Flow and Metabolism Volume 15 ; 1995 ; 15 >
+    au < doNotProcess ; doNotProcess ; 1996 ; Journal of Cerebral Blood Flow and Metabolism Volume 16 ; 1996 ; 16 >
+    au < doNotProcess ; doNotProcess ; 1997 ; Journal of Cerebral Blood Flow and Metabolism Volume 17 ; 1997 ; 17 >
+    au < doNotProcess ; doNotProcess ; 1998 ; Journal of Cerebral Blood Flow and Metabolism Volume 18 ; 1998 ; 18 >
+    au < doNotProcess ; doNotProcess ; 1999 ; Journal of Cerebral Blood Flow and Metabolism Volume 19 ; 1999 ; 19 >
     au < exists ; exists ; 2000 ; Journal of Cerebral Blood Flow and Metabolism Volume 20 ; 2000 ; 20 >
     au < exists ; exists ; 2001 ; Journal of Cerebral Blood Flow and Metabolism Volume 21 ; 2001 ; 21 >
     au < exists ; exists ; 2002 ; Journal of Cerebral Blood Flow and Metabolism Volume 22 ; 2002 ; 22 >
@@ -1529,29 +1529,29 @@
 
     param[journal_id] = jhg
 
-    au < manifest ; exists ; 1977 ; Journal of Human Genetics Volume 22 ; 1977 ; 22 >
-    au < manifest ; exists ; 1978 ; Journal of Human Genetics Volume 23 ; 1978 ; 23 >
-    au < manifest ; exists ; 1979 ; Journal of Human Genetics Volume 24 ; 1979 ; 24 >
-    au < manifest ; exists ; 1980 ; Journal of Human Genetics Volume 25 ; 1980 ; 25 >
-    au < manifest ; exists ; 1981 ; Journal of Human Genetics Volume 26 ; 1981 ; 26 >
-    au < manifest ; exists ; 1982 ; Journal of Human Genetics Volume 27 ; 1982 ; 27 >
-    au < manifest ; exists ; 1983 ; Journal of Human Genetics Volume 28 ; 1983 ; 28 >
-    au < manifest ; exists ; 1984 ; Journal of Human Genetics Volume 29 ; 1984 ; 29 >
-    au < manifest ; exists ; 1985 ; Journal of Human Genetics Volume 30 ; 1985 ; 30 >
-    au < manifest ; exists ; 1986 ; Journal of Human Genetics Volume 31 ; 1986 ; 31 >
-    au < manifest ; exists ; 1987 ; Journal of Human Genetics Volume 32 ; 1987 ; 32 >
-    au < manifest ; exists ; 1988 ; Journal of Human Genetics Volume 33 ; 1988 ; 33 >
-    au < manifest ; exists ; 1989 ; Journal of Human Genetics Volume 34 ; 1989 ; 34 >
-    au < manifest ; exists ; 1990 ; Journal of Human Genetics Volume 35 ; 1990 ; 35 >
-    au < manifest ; exists ; 1991 ; Journal of Human Genetics Volume 36 ; 1991 ; 36 >
-    au < manifest ; exists ; 1992 ; Journal of Human Genetics Volume 37 ; 1992 ; 37 >
-    au < manifest ; exists ; 1993 ; Journal of Human Genetics Volume 38 ; 1993 ; 38 >
-    au < manifest ; exists ; 1994 ; Journal of Human Genetics Volume 39 ; 1994 ; 39 >
-    au < manifest ; exists ; 1995 ; Journal of Human Genetics Volume 40 ; 1995 ; 40 >
-    au < manifest ; exists ; 1996 ; Journal of Human Genetics Volume 41 ; 1996 ; 41 >
-    au < manifest ; exists ; 1997 ; Journal of Human Genetics Volume 42 ; 1997 ; 42 >
-    au < manifest ; exists ; 1998 ; Journal of Human Genetics Volume 43 ; 1998 ; 43 >
-    au < manifest ; exists ; 1999 ; Journal of Human Genetics Volume 44 ; 1999 ; 44 >
+    au < doNotProcess ; doNotProcess ; 1977 ; Journal of Human Genetics Volume 22 ; 1977 ; 22 >
+    au < doNotProcess ; doNotProcess ; 1978 ; Journal of Human Genetics Volume 23 ; 1978 ; 23 >
+    au < doNotProcess ; doNotProcess ; 1979 ; Journal of Human Genetics Volume 24 ; 1979 ; 24 >
+    au < doNotProcess ; doNotProcess ; 1980 ; Journal of Human Genetics Volume 25 ; 1980 ; 25 >
+    au < doNotProcess ; doNotProcess ; 1981 ; Journal of Human Genetics Volume 26 ; 1981 ; 26 >
+    au < doNotProcess ; doNotProcess ; 1982 ; Journal of Human Genetics Volume 27 ; 1982 ; 27 >
+    au < doNotProcess ; doNotProcess ; 1983 ; Journal of Human Genetics Volume 28 ; 1983 ; 28 >
+    au < doNotProcess ; doNotProcess ; 1984 ; Journal of Human Genetics Volume 29 ; 1984 ; 29 >
+    au < doNotProcess ; doNotProcess ; 1985 ; Journal of Human Genetics Volume 30 ; 1985 ; 30 >
+    au < doNotProcess ; doNotProcess ; 1986 ; Journal of Human Genetics Volume 31 ; 1986 ; 31 >
+    au < doNotProcess ; doNotProcess ; 1987 ; Journal of Human Genetics Volume 32 ; 1987 ; 32 >
+    au < doNotProcess ; doNotProcess ; 1988 ; Journal of Human Genetics Volume 33 ; 1988 ; 33 >
+    au < doNotProcess ; doNotProcess ; 1989 ; Journal of Human Genetics Volume 34 ; 1989 ; 34 >
+    au < doNotProcess ; doNotProcess ; 1990 ; Journal of Human Genetics Volume 35 ; 1990 ; 35 >
+    au < doNotProcess ; doNotProcess ; 1991 ; Journal of Human Genetics Volume 36 ; 1991 ; 36 >
+    au < doNotProcess ; doNotProcess ; 1992 ; Journal of Human Genetics Volume 37 ; 1992 ; 37 >
+    au < doNotProcess ; doNotProcess ; 1993 ; Journal of Human Genetics Volume 38 ; 1993 ; 38 >
+    au < doNotProcess ; doNotProcess ; 1994 ; Journal of Human Genetics Volume 39 ; 1994 ; 39 >
+    au < doNotProcess ; doNotProcess ; 1995 ; Journal of Human Genetics Volume 40 ; 1995 ; 40 >
+    au < doNotProcess ; doNotProcess ; 1996 ; Journal of Human Genetics Volume 41 ; 1996 ; 41 >
+    au < doNotProcess ; doNotProcess ; 1997 ; Journal of Human Genetics Volume 42 ; 1997 ; 42 >
+    au < doNotProcess ; doNotProcess ; 1998 ; Journal of Human Genetics Volume 43 ; 1998 ; 43 >
+    au < doNotProcess ; doNotProcess ; 1999 ; Journal of Human Genetics Volume 44 ; 1999 ; 44 >
     au < manifest ; exists ; 2000 ; Journal of Human Genetics Volume 45 ; 2000 ; 45 >
     au < manifest ; exists ; 2001 ; Journal of Human Genetics Volume 46 ; 2001 ; 46 >
     au < manifest ; exists ; 2002 ; Journal of Human Genetics Volume 47 ; 2002 ; 47 >
@@ -1581,9 +1581,9 @@
 
     param[journal_id] = jhh
 
-    au < manifest ; exists ; 1997 ; Journal of Human Hypertension Volume 11 ; 1997 ; 11 >
-    au < manifest ; exists ; 1998 ; Journal of Human Hypertension Volume 12 ; 1998 ; 12 >
-    au < manifest ; exists ; 1999 ; Journal of Human Hypertension Volume 13 ; 1999 ; 13 >
+    au < doNotProcess ; doNotProcess ; 1997 ; Journal of Human Hypertension Volume 11 ; 1997 ; 11 >
+    au < doNotProcess ; doNotProcess ; 1998 ; Journal of Human Hypertension Volume 12 ; 1998 ; 12 >
+    au < doNotProcess ; doNotProcess ; 1999 ; Journal of Human Hypertension Volume 13 ; 1999 ; 13 >
     au < manifest ; exists ; 2000 ; Journal of Human Hypertension Volume 14 ; 2000 ; 14 >
     au < manifest ; exists ; 2001 ; Journal of Human Hypertension Volume 15 ; 2001 ; 15 >
     au < manifest ; exists ; 2002 ; Journal of Human Hypertension Volume 16 ; 2002 ; 16 >
@@ -1613,119 +1613,119 @@
 
     param[journal_id] = jid
 
-    au < manifest ; exists ; 1938 ; The Journal of Investigative Dermatology Volume 1 ; 1938 ; 1 >
-    au < manifest ; exists ; 1939 ; The Journal of Investigative Dermatology Volume 2 ; 1939 ; 2 >
-    au < exists ; exists ; 1940 ; The Journal of Investigative Dermatology Volume 3 ; 1940 ; 3 >
-    au < exists ; exists ; 1941 ; The Journal of Investigative Dermatology Volume 4 ; 1941 ; 4 >
-    au < exists ; exists ; 1942 ; The Journal of Investigative Dermatology Volume 5 ; 1942 ; 5 >
-    au < manifest ; exists ; 1945 ; The Journal of Investigative Dermatology Volume 6 ; 1945 ; 6 >
-    au < exists ; exists ; 1946 ; The Journal of Investigative Dermatology Volume 7 ; 1946 ; 7 >
-    au < manifest ; exists ; 1947 ; The Journal of Investigative Dermatology Volume 8 (1947) ; 1947 ; 8 >
-    au < manifest ; exists ; 1947 ; The Journal of Investigative Dermatology Volume 9 (1947) ; 1947 ; 9 >
-    au < manifest ; exists ; 1948 ; The Journal of Investigative Dermatology Volume 10 (1948) ; 1948 ; 10 >
-    au < manifest ; exists ; 1948 ; The Journal of Investigative Dermatology Volume 11 (1948) ; 1948 ; 11 >
-    au < exists ; exists ; 1949 ; The Journal of Investigative Dermatology Volume 12 (1949) ; 1949 ; 12 >
-    au < exists ; exists ; 1949 ; The Journal of Investigative Dermatology Volume 13 (1949) ; 1949 ; 13 >
-    au < manifest ; exists ; 1950 ; The Journal of Investigative Dermatology Volume 14 ; 1950 ; 14 >
-    au < manifest ; exists ; 1950 ; The Journal of Investigative Dermatology Volume 15 ; 1950 ; 15 >
-    au < manifest ; exists ; 1951 ; The Journal of Investigative Dermatology Volume 16 ; 1951 ; 16 >
-    au < manifest ; exists ; 1951 ; The Journal of Investigative Dermatology Volume 17 ; 1951 ; 17 >
-    au < manifest ; exists ; 1952 ; The Journal of Investigative Dermatology Volume 18 ; 1952 ; 18 >
-    au < manifest ; exists ; 1952 ; The Journal of Investigative Dermatology Volume 19 ; 1952 ; 19 >
-    au < manifest ; exists ; 1953 ; The Journal of Investigative Dermatology Volume 20 ; 1953 ; 20 >
-    au < manifest ; exists ; 1953 ; The Journal of Investigative Dermatology Volume 21 ; 1953 ; 21 >
-    au < manifest ; exists ; 1954 ; The Journal of Investigative Dermatology Volume 22 ; 1954 ; 22 >
-    au < manifest ; exists ; 1954 ; The Journal of Investigative Dermatology Volume 23 ; 1954 ; 23 >
-    au < manifest ; exists ; 1955 ; The Journal of Investigative Dermatology Volume 24 ; 1955 ; 24 >
-    au < manifest ; exists ; 1955 ; The Journal of Investigative Dermatology Volume 25 ; 1955 ; 25 >
-    au < manifest ; exists ; 1956 ; The Journal of Investigative Dermatology Volume 26 ; 1956 ; 26 >
-    au < manifest ; exists ; 1956 ; The Journal of Investigative Dermatology Volume 27 ; 1956 ; 27 >
-    au < manifest ; exists ; 1957 ; The Journal of Investigative Dermatology Volume 28 ; 1957 ; 28 >
-    au < manifest ; exists ; 1957 ; The Journal of Investigative Dermatology Volume 29 ; 1957 ; 29 >
-    au < manifest ; exists ; 1958 ; The Journal of Investigative Dermatology Volume 30 ; 1958 ; 30 >
-    au < manifest ; exists ; 1958 ; The Journal of Investigative Dermatology Volume 31 ; 1958 ; 31 >
-    au < manifest ; exists ; 1959 ; The Journal of Investigative Dermatology Volume 32 ; 1959 ; 32 >
-    au < manifest ; exists ; 1959 ; The Journal of Investigative Dermatology Volume 33 ; 1959 ; 33 >
-    au < manifest ; exists ; 1960 ; The Journal of Investigative Dermatology Volume 34 ; 1960 ; 34 >
-    au < manifest ; exists ; 1960 ; The Journal of Investigative Dermatology Volume 35 ; 1960 ; 35 >
-    au < manifest ; exists ; 1961 ; The Journal of Investigative Dermatology Volume 36 ; 1961 ; 36 >
-    au < manifest ; exists ; 1961 ; The Journal of Investigative Dermatology Volume 37 ; 1961 ; 37 >
-    au < manifest ; exists ; 1962 ; The Journal of Investigative Dermatology Volume 38 ; 1962 ; 38 >
-    au < manifest ; exists ; 1962 ; The Journal of Investigative Dermatology Volume 39 ; 1962 ; 39 >
-    au < manifest ; exists ; 1963 ; The Journal of Investigative Dermatology Volume 40 ; 1963 ; 40 >
-    au < manifest ; exists ; 1963 ; The Journal of Investigative Dermatology Volume 41 ; 1963 ; 41 >
-    au < manifest ; exists ; 1964 ; The Journal of Investigative Dermatology Volume 42 ; 1964 ; 42 >
-    au < manifest ; exists ; 1964 ; The Journal of Investigative Dermatology Volume 43 ; 1964 ; 43 >
-    au < manifest ; exists ; 1965 ; The Journal of Investigative Dermatology Volume 44 ; 1965 ; 44 >
-    au < manifest ; exists ; 1965 ; The Journal of Investigative Dermatology Volume 45 ; 1965 ; 45 >
-    au < manifest ; exists ; 1966 ; The Journal of Investigative Dermatology Volume 46 ; 1966 ; 46 >
-    au < manifest ; exists ; 1966 ; The Journal of Investigative Dermatology Volume 47 ; 1966 ; 47 >
-    au < exists ; exists ; 1967 ; The Journal of Investigative Dermatology Volume 48 ; 1967 ; 48 >
-    au < exists ; exists ; 1967 ; The Journal of Investigative Dermatology Volume 49 ; 1967 ; 49 >
-    au < manifest ; exists ; 1968 ; The Journal of Investigative Dermatology Volume 50 ; 1968 ; 50 >
-    au < manifest ; exists ; 1968 ; The Journal of Investigative Dermatology Volume 51 ; 1968 ; 51 >
-    au < manifest ; exists ; 1969 ; The Journal of Investigative Dermatology Volume 52 ; 1969 ; 52 >
-    au < manifest ; exists ; 1969 ; The Journal of Investigative Dermatology Volume 53 ; 1969 ; 53 >
-    au < manifest ; exists ; 1970 ; The Journal of Investigative Dermatology Volume 54 ; 1970 ; 54 >
-    au < manifest ; exists ; 1970 ; The Journal of Investigative Dermatology Volume 55 ; 1970 ; 55 >
-    au < manifest ; exists ; 1971 ; The Journal of Investigative Dermatology Volume 56 ; 1971 ; 56 >
-    au < manifest ; exists ; 1971 ; The Journal of Investigative Dermatology Volume 57 ; 1971 ; 57 >
-    au < manifest ; exists ; 1972 ; The Journal of Investigative Dermatology Volume 58 ; 1972 ; 58 >
-    au < manifest ; exists ; 1972 ; The Journal of Investigative Dermatology Volume 59 ; 1972 ; 59 >
-    au < manifest ; exists ; 1973 ; The Journal of Investigative Dermatology Volume 60 ; 1973 ; 60 >
-    au < manifest ; exists ; 1973 ; The Journal of Investigative Dermatology Volume 61 ; 1973 ; 61 >
-    au < manifest ; exists ; 1974 ; The Journal of Investigative Dermatology Volume 62 ; 1974 ; 62 >
-    au < manifest ; exists ; 1974 ; The Journal of Investigative Dermatology Volume 63 ; 1974 ; 63 >
-    au < manifest ; exists ; 1975 ; The Journal of Investigative Dermatology Volume 64 ; 1975 ; 64 >
-    au < manifest ; exists ; 1975 ; The Journal of Investigative Dermatology Volume 65 ; 1975 ; 65 >
-    au < manifest ; exists ; 1976 ; The Journal of Investigative Dermatology Volume 66 ; 1976 ; 66 >
-    au < manifest ; exists ; 1976 ; The Journal of Investigative Dermatology Volume 67 ; 1976 ; 67 >
-    au < manifest ; exists ; 1977 ; The Journal of Investigative Dermatology Volume 68 ; 1977 ; 68 >
-    au < manifest ; exists ; 1977 ; The Journal of Investigative Dermatology Volume 69 ; 1977 ; 69 >
-    au < manifest ; exists ; 1978 ; The Journal of Investigative Dermatology Volume 70 ; 1978 ; 70 >
-    au < manifest ; exists ; 1978 ; The Journal of Investigative Dermatology Volume 71 ; 1978 ; 71 >
-    au < manifest ; exists ; 1979 ; The Journal of Investigative Dermatology Volume 72 ; 1979 ; 72 >
-    au < manifest ; exists ; 1979 ; The Journal of Investigative Dermatology Volume 73 ; 1979 ; 73 >
-    au < manifest ; exists ; 1980 ; The Journal of Investigative Dermatology Volume 74 ; 1980 ; 74 >
-    au < manifest ; exists ; 1980 ; The Journal of Investigative Dermatology Volume 75 ; 1980 ; 75 >
-    au < manifest ; exists ; 1981 ; The Journal of Investigative Dermatology Volume 76 ; 1981 ; 76 >
-    au < manifest ; exists ; 1981 ; The Journal of Investigative Dermatology Volume 77 ; 1981 ; 77 >
-    au < manifest ; exists ; 1982 ; The Journal of Investigative Dermatology Volume 78 ; 1982 ; 78 >
-    au < manifest ; exists ; 1982 ; The Journal of Investigative Dermatology Volume 79 ; 1982 ; 79 >
-    au < manifest ; exists ; 1983 ; The Journal of Investigative Dermatology Volume 80 ; 1983 ; 80 >
-    au < manifest ; exists ; 1983 ; The Journal of Investigative Dermatology Volume 81 ; 1983 ; 81 >
-    au < manifest ; exists ; 1984 ; The Journal of Investigative Dermatology Volume 82 ; 1984 ; 82 >
-    au < manifest ; exists ; 1984 ; The Journal of Investigative Dermatology Volume 83 ; 1984 ; 83 >
-    au < manifest ; exists ; 1985 ; The Journal of Investigative Dermatology Volume 84 ; 1985 ; 84 >
-    au < manifest ; exists ; 1985 ; The Journal of Investigative Dermatology Volume 85 ; 1985 ; 85 >
-    au < manifest ; exists ; 1986 ; The Journal of Investigative Dermatology Volume 86 ; 1986 ; 86 >
-    au < manifest ; exists ; 1986 ; The Journal of Investigative Dermatology Volume 87 ; 1986 ; 87 >
-    au < manifest ; exists ; 1987 ; The Journal of Investigative Dermatology Volume 88 ; 1987 ; 88 >
-    au < manifest ; exists ; 1987 ; The Journal of Investigative Dermatology Volume 89 ; 1987 ; 89 >
-    au < manifest ; exists ; 1988 ; The Journal of Investigative Dermatology Volume 90 ; 1988 ; 90 >
-    au < manifest ; exists ; 1988 ; The Journal of Investigative Dermatology Volume 91 ; 1988 ; 91 >
-    au < manifest ; exists ; 1989 ; The Journal of Investigative Dermatology Volume 92 ; 1989 ; 92 >
-    au < manifest ; exists ; 1989 ; The Journal of Investigative Dermatology Volume 93 ; 1989 ; 93 >
-    au < manifest ; exists ; 1990 ; The Journal of Investigative Dermatology Volume 94 ; 1990 ; 94 >
-    au < manifest ; exists ; 1990 ; The Journal of Investigative Dermatology Volume 95 ; 1990 ; 95 >
-    au < manifest ; exists ; 1991 ; The Journal of Investigative Dermatology Volume 96 ; 1991 ; 96 >
-    au < manifest ; exists ; 1991 ; The Journal of Investigative Dermatology Volume 97 ; 1991 ; 97 >
-    au < manifest ; exists ; 1992 ; The Journal of Investigative Dermatology Volume 98 ; 1992 ; 98 >
-    au < manifest ; exists ; 1992 ; The Journal of Investigative Dermatology Volume 99 ; 1992 ; 99 >
-    au < manifest ; exists ; 1993 ; The Journal of Investigative Dermatology Volume 100 ; 1993 ; 100 >
-    au < manifest ; exists ; 1993 ; The Journal of Investigative Dermatology Volume 101 ; 1993 ; 101 >
-    au < manifest ; exists ; 1994 ; The Journal of Investigative Dermatology Volume 102 ; 1994 ; 102 >
-    au < manifest ; exists ; 1994 ; The Journal of Investigative Dermatology Volume 103 ; 1994 ; 103 >
-    au < manifest ; exists ; 1995 ; The Journal of Investigative Dermatology Volume 104 ; 1995 ; 104 >
-    au < manifest ; exists ; 1995 ; The Journal of Investigative Dermatology Volume 105 ; 1995 ; 105 >
-    au < manifest ; exists ; 1996 ; The Journal of Investigative Dermatology Volume 106 ; 1996 ; 106 >
-    au < manifest ; exists ; 1996 ; The Journal of Investigative Dermatology Volume 107 ; 1996 ; 107 >
-    au < manifest ; exists ; 1997 ; The Journal of Investigative Dermatology Volume 108 ; 1997 ; 108 >
-    au < manifest ; exists ; 1997 ; The Journal of Investigative Dermatology Volume 109 ; 1997 ; 109 >
-    au < manifest ; exists ; 1998 ; The Journal of Investigative Dermatology Volume 110 ; 1998 ; 110 >
-    au < manifest ; exists ; 1998 ; The Journal of Investigative Dermatology Volume 111 ; 1998 ; 111 >
-    au < manifest ; exists ; 1999 ; The Journal of Investigative Dermatology Volume 112 ; 1999 ; 112 >
-    au < manifest ; exists ; 1999 ; The Journal of Investigative Dermatology Volume 113 ; 1999 ; 113 >
+    au < doNotProcess ; doNotProcess ; 1938 ; The Journal of Investigative Dermatology Volume 1 ; 1938 ; 1 >
+    au < doNotProcess ; doNotProcess ; 1939 ; The Journal of Investigative Dermatology Volume 2 ; 1939 ; 2 >
+    au < doNotProcess ; doNotProcess ; 1940 ; The Journal of Investigative Dermatology Volume 3 ; 1940 ; 3 >
+    au < doNotProcess ; doNotProcess ; 1941 ; The Journal of Investigative Dermatology Volume 4 ; 1941 ; 4 >
+    au < doNotProcess ; doNotProcess ; 1942 ; The Journal of Investigative Dermatology Volume 5 ; 1942 ; 5 >
+    au < doNotProcess ; doNotProcess ; 1945 ; The Journal of Investigative Dermatology Volume 6 ; 1945 ; 6 >
+    au < doNotProcess ; doNotProcess ; 1946 ; The Journal of Investigative Dermatology Volume 7 ; 1946 ; 7 >
+    au < doNotProcess ; doNotProcess ; 1947 ; The Journal of Investigative Dermatology Volume 8 (1947) ; 1947 ; 8 >
+    au < doNotProcess ; doNotProcess ; 1947 ; The Journal of Investigative Dermatology Volume 9 (1947) ; 1947 ; 9 >
+    au < doNotProcess ; doNotProcess ; 1948 ; The Journal of Investigative Dermatology Volume 10 (1948) ; 1948 ; 10 >
+    au < doNotProcess ; doNotProcess ; 1948 ; The Journal of Investigative Dermatology Volume 11 (1948) ; 1948 ; 11 >
+    au < doNotProcess ; doNotProcess ; 1949 ; The Journal of Investigative Dermatology Volume 12 (1949) ; 1949 ; 12 >
+    au < doNotProcess ; doNotProcess ; 1949 ; The Journal of Investigative Dermatology Volume 13 (1949) ; 1949 ; 13 >
+    au < doNotProcess ; doNotProcess ; 1950 ; The Journal of Investigative Dermatology Volume 14 ; 1950 ; 14 >
+    au < doNotProcess ; doNotProcess ; 1950 ; The Journal of Investigative Dermatology Volume 15 ; 1950 ; 15 >
+    au < doNotProcess ; doNotProcess ; 1951 ; The Journal of Investigative Dermatology Volume 16 ; 1951 ; 16 >
+    au < doNotProcess ; doNotProcess ; 1951 ; The Journal of Investigative Dermatology Volume 17 ; 1951 ; 17 >
+    au < doNotProcess ; doNotProcess ; 1952 ; The Journal of Investigative Dermatology Volume 18 ; 1952 ; 18 >
+    au < doNotProcess ; doNotProcess ; 1952 ; The Journal of Investigative Dermatology Volume 19 ; 1952 ; 19 >
+    au < doNotProcess ; doNotProcess ; 1953 ; The Journal of Investigative Dermatology Volume 20 ; 1953 ; 20 >
+    au < doNotProcess ; doNotProcess ; 1953 ; The Journal of Investigative Dermatology Volume 21 ; 1953 ; 21 >
+    au < doNotProcess ; doNotProcess ; 1954 ; The Journal of Investigative Dermatology Volume 22 ; 1954 ; 22 >
+    au < doNotProcess ; doNotProcess ; 1954 ; The Journal of Investigative Dermatology Volume 23 ; 1954 ; 23 >
+    au < doNotProcess ; doNotProcess ; 1955 ; The Journal of Investigative Dermatology Volume 24 ; 1955 ; 24 >
+    au < doNotProcess ; doNotProcess ; 1955 ; The Journal of Investigative Dermatology Volume 25 ; 1955 ; 25 >
+    au < doNotProcess ; doNotProcess ; 1956 ; The Journal of Investigative Dermatology Volume 26 ; 1956 ; 26 >
+    au < doNotProcess ; doNotProcess ; 1956 ; The Journal of Investigative Dermatology Volume 27 ; 1956 ; 27 >
+    au < doNotProcess ; doNotProcess ; 1957 ; The Journal of Investigative Dermatology Volume 28 ; 1957 ; 28 >
+    au < doNotProcess ; doNotProcess ; 1957 ; The Journal of Investigative Dermatology Volume 29 ; 1957 ; 29 >
+    au < doNotProcess ; doNotProcess ; 1958 ; The Journal of Investigative Dermatology Volume 30 ; 1958 ; 30 >
+    au < doNotProcess ; doNotProcess ; 1958 ; The Journal of Investigative Dermatology Volume 31 ; 1958 ; 31 >
+    au < doNotProcess ; doNotProcess ; 1959 ; The Journal of Investigative Dermatology Volume 32 ; 1959 ; 32 >
+    au < doNotProcess ; doNotProcess ; 1959 ; The Journal of Investigative Dermatology Volume 33 ; 1959 ; 33 >
+    au < doNotProcess ; doNotProcess ; 1960 ; The Journal of Investigative Dermatology Volume 34 ; 1960 ; 34 >
+    au < doNotProcess ; doNotProcess ; 1960 ; The Journal of Investigative Dermatology Volume 35 ; 1960 ; 35 >
+    au < doNotProcess ; doNotProcess ; 1961 ; The Journal of Investigative Dermatology Volume 36 ; 1961 ; 36 >
+    au < doNotProcess ; doNotProcess ; 1961 ; The Journal of Investigative Dermatology Volume 37 ; 1961 ; 37 >
+    au < doNotProcess ; doNotProcess ; 1962 ; The Journal of Investigative Dermatology Volume 38 ; 1962 ; 38 >
+    au < doNotProcess ; doNotProcess ; 1962 ; The Journal of Investigative Dermatology Volume 39 ; 1962 ; 39 >
+    au < doNotProcess ; doNotProcess ; 1963 ; The Journal of Investigative Dermatology Volume 40 ; 1963 ; 40 >
+    au < doNotProcess ; doNotProcess ; 1963 ; The Journal of Investigative Dermatology Volume 41 ; 1963 ; 41 >
+    au < doNotProcess ; doNotProcess ; 1964 ; The Journal of Investigative Dermatology Volume 42 ; 1964 ; 42 >
+    au < doNotProcess ; doNotProcess ; 1964 ; The Journal of Investigative Dermatology Volume 43 ; 1964 ; 43 >
+    au < doNotProcess ; doNotProcess ; 1965 ; The Journal of Investigative Dermatology Volume 44 ; 1965 ; 44 >
+    au < doNotProcess ; doNotProcess ; 1965 ; The Journal of Investigative Dermatology Volume 45 ; 1965 ; 45 >
+    au < doNotProcess ; doNotProcess ; 1966 ; The Journal of Investigative Dermatology Volume 46 ; 1966 ; 46 >
+    au < doNotProcess ; doNotProcess ; 1966 ; The Journal of Investigative Dermatology Volume 47 ; 1966 ; 47 >
+    au < doNotProcess ; doNotProcess ; 1967 ; The Journal of Investigative Dermatology Volume 48 ; 1967 ; 48 >
+    au < doNotProcess ; doNotProcess ; 1967 ; The Journal of Investigative Dermatology Volume 49 ; 1967 ; 49 >
+    au < doNotProcess ; doNotProcess ; 1968 ; The Journal of Investigative Dermatology Volume 50 ; 1968 ; 50 >
+    au < doNotProcess ; doNotProcess ; 1968 ; The Journal of Investigative Dermatology Volume 51 ; 1968 ; 51 >
+    au < doNotProcess ; doNotProcess ; 1969 ; The Journal of Investigative Dermatology Volume 52 ; 1969 ; 52 >
+    au < doNotProcess ; doNotProcess ; 1969 ; The Journal of Investigative Dermatology Volume 53 ; 1969 ; 53 >
+    au < doNotProcess ; doNotProcess ; 1970 ; The Journal of Investigative Dermatology Volume 54 ; 1970 ; 54 >
+    au < doNotProcess ; doNotProcess ; 1970 ; The Journal of Investigative Dermatology Volume 55 ; 1970 ; 55 >
+    au < doNotProcess ; doNotProcess ; 1971 ; The Journal of Investigative Dermatology Volume 56 ; 1971 ; 56 >
+    au < doNotProcess ; doNotProcess ; 1971 ; The Journal of Investigative Dermatology Volume 57 ; 1971 ; 57 >
+    au < doNotProcess ; doNotProcess ; 1972 ; The Journal of Investigative Dermatology Volume 58 ; 1972 ; 58 >
+    au < doNotProcess ; doNotProcess ; 1972 ; The Journal of Investigative Dermatology Volume 59 ; 1972 ; 59 >
+    au < doNotProcess ; doNotProcess ; 1973 ; The Journal of Investigative Dermatology Volume 60 ; 1973 ; 60 >
+    au < doNotProcess ; doNotProcess ; 1973 ; The Journal of Investigative Dermatology Volume 61 ; 1973 ; 61 >
+    au < doNotProcess ; doNotProcess ; 1974 ; The Journal of Investigative Dermatology Volume 62 ; 1974 ; 62 >
+    au < doNotProcess ; doNotProcess ; 1974 ; The Journal of Investigative Dermatology Volume 63 ; 1974 ; 63 >
+    au < doNotProcess ; doNotProcess ; 1975 ; The Journal of Investigative Dermatology Volume 64 ; 1975 ; 64 >
+    au < doNotProcess ; doNotProcess ; 1975 ; The Journal of Investigative Dermatology Volume 65 ; 1975 ; 65 >
+    au < doNotProcess ; doNotProcess ; 1976 ; The Journal of Investigative Dermatology Volume 66 ; 1976 ; 66 >
+    au < doNotProcess ; doNotProcess ; 1976 ; The Journal of Investigative Dermatology Volume 67 ; 1976 ; 67 >
+    au < doNotProcess ; doNotProcess ; 1977 ; The Journal of Investigative Dermatology Volume 68 ; 1977 ; 68 >
+    au < doNotProcess ; doNotProcess ; 1977 ; The Journal of Investigative Dermatology Volume 69 ; 1977 ; 69 >
+    au < doNotProcess ; doNotProcess ; 1978 ; The Journal of Investigative Dermatology Volume 70 ; 1978 ; 70 >
+    au < doNotProcess ; doNotProcess ; 1978 ; The Journal of Investigative Dermatology Volume 71 ; 1978 ; 71 >
+    au < doNotProcess ; doNotProcess ; 1979 ; The Journal of Investigative Dermatology Volume 72 ; 1979 ; 72 >
+    au < doNotProcess ; doNotProcess ; 1979 ; The Journal of Investigative Dermatology Volume 73 ; 1979 ; 73 >
+    au < doNotProcess ; doNotProcess ; 1980 ; The Journal of Investigative Dermatology Volume 74 ; 1980 ; 74 >
+    au < doNotProcess ; doNotProcess ; 1980 ; The Journal of Investigative Dermatology Volume 75 ; 1980 ; 75 >
+    au < doNotProcess ; doNotProcess ; 1981 ; The Journal of Investigative Dermatology Volume 76 ; 1981 ; 76 >
+    au < doNotProcess ; doNotProcess ; 1981 ; The Journal of Investigative Dermatology Volume 77 ; 1981 ; 77 >
+    au < doNotProcess ; doNotProcess ; 1982 ; The Journal of Investigative Dermatology Volume 78 ; 1982 ; 78 >
+    au < doNotProcess ; doNotProcess ; 1982 ; The Journal of Investigative Dermatology Volume 79 ; 1982 ; 79 >
+    au < doNotProcess ; doNotProcess ; 1983 ; The Journal of Investigative Dermatology Volume 80 ; 1983 ; 80 >
+    au < doNotProcess ; doNotProcess ; 1983 ; The Journal of Investigative Dermatology Volume 81 ; 1983 ; 81 >
+    au < doNotProcess ; doNotProcess ; 1984 ; The Journal of Investigative Dermatology Volume 82 ; 1984 ; 82 >
+    au < doNotProcess ; doNotProcess ; 1984 ; The Journal of Investigative Dermatology Volume 83 ; 1984 ; 83 >
+    au < doNotProcess ; doNotProcess ; 1985 ; The Journal of Investigative Dermatology Volume 84 ; 1985 ; 84 >
+    au < doNotProcess ; doNotProcess ; 1985 ; The Journal of Investigative Dermatology Volume 85 ; 1985 ; 85 >
+    au < doNotProcess ; doNotProcess ; 1986 ; The Journal of Investigative Dermatology Volume 86 ; 1986 ; 86 >
+    au < doNotProcess ; doNotProcess ; 1986 ; The Journal of Investigative Dermatology Volume 87 ; 1986 ; 87 >
+    au < doNotProcess ; doNotProcess ; 1987 ; The Journal of Investigative Dermatology Volume 88 ; 1987 ; 88 >
+    au < doNotProcess ; doNotProcess ; 1987 ; The Journal of Investigative Dermatology Volume 89 ; 1987 ; 89 >
+    au < doNotProcess ; doNotProcess ; 1988 ; The Journal of Investigative Dermatology Volume 90 ; 1988 ; 90 >
+    au < doNotProcess ; doNotProcess ; 1988 ; The Journal of Investigative Dermatology Volume 91 ; 1988 ; 91 >
+    au < doNotProcess ; doNotProcess ; 1989 ; The Journal of Investigative Dermatology Volume 92 ; 1989 ; 92 >
+    au < doNotProcess ; doNotProcess ; 1989 ; The Journal of Investigative Dermatology Volume 93 ; 1989 ; 93 >
+    au < doNotProcess ; doNotProcess ; 1990 ; The Journal of Investigative Dermatology Volume 94 ; 1990 ; 94 >
+    au < doNotProcess ; doNotProcess ; 1990 ; The Journal of Investigative Dermatology Volume 95 ; 1990 ; 95 >
+    au < doNotProcess ; doNotProcess ; 1991 ; The Journal of Investigative Dermatology Volume 96 ; 1991 ; 96 >
+    au < doNotProcess ; doNotProcess ; 1991 ; The Journal of Investigative Dermatology Volume 97 ; 1991 ; 97 >
+    au < doNotProcess ; doNotProcess ; 1992 ; The Journal of Investigative Dermatology Volume 98 ; 1992 ; 98 >
+    au < doNotProcess ; doNotProcess ; 1992 ; The Journal of Investigative Dermatology Volume 99 ; 1992 ; 99 >
+    au < doNotProcess ; doNotProcess ; 1993 ; The Journal of Investigative Dermatology Volume 100 ; 1993 ; 100 >
+    au < doNotProcess ; doNotProcess ; 1993 ; The Journal of Investigative Dermatology Volume 101 ; 1993 ; 101 >
+    au < doNotProcess ; doNotProcess ; 1994 ; The Journal of Investigative Dermatology Volume 102 ; 1994 ; 102 >
+    au < doNotProcess ; doNotProcess ; 1994 ; The Journal of Investigative Dermatology Volume 103 ; 1994 ; 103 >
+    au < doNotProcess ; doNotProcess ; 1995 ; The Journal of Investigative Dermatology Volume 104 ; 1995 ; 104 >
+    au < doNotProcess ; doNotProcess ; 1995 ; The Journal of Investigative Dermatology Volume 105 ; 1995 ; 105 >
+    au < doNotProcess ; doNotProcess ; 1996 ; The Journal of Investigative Dermatology Volume 106 ; 1996 ; 106 >
+    au < doNotProcess ; doNotProcess ; 1996 ; The Journal of Investigative Dermatology Volume 107 ; 1996 ; 107 >
+    au < doNotProcess ; doNotProcess ; 1997 ; The Journal of Investigative Dermatology Volume 108 ; 1997 ; 108 >
+    au < doNotProcess ; doNotProcess ; 1997 ; The Journal of Investigative Dermatology Volume 109 ; 1997 ; 109 >
+    au < doNotProcess ; doNotProcess ; 1998 ; The Journal of Investigative Dermatology Volume 110 ; 1998 ; 110 >
+    au < doNotProcess ; doNotProcess ; 1998 ; The Journal of Investigative Dermatology Volume 111 ; 1998 ; 111 >
+    au < doNotProcess ; doNotProcess ; 1999 ; The Journal of Investigative Dermatology Volume 112 ; 1999 ; 112 >
+    au < doNotProcess ; doNotProcess ; 1999 ; The Journal of Investigative Dermatology Volume 113 ; 1999 ; 113 >
     au < manifest ; exists ; 2000 ; The Journal of Investigative Dermatology Volume 114 ; 2000 ; 114 >
     au < manifest ; exists ; 2000 ; The Journal of Investigative Dermatology Volume 115 ; 2000 ; 115 >
     au < manifest ; exists ; 2001 ; The Journal of Investigative Dermatology Volume 116 ; 2001 ; 116 >
@@ -1761,7 +1761,7 @@
 
     param[journal_id] = jp
 
-    au < manifest ; exists ; 1999 ; Journal of Perinatology Volume 19 ; 1999 ; 19 >
+    au < doNotProcess ; doNotProcess ; 1999 ; Journal of Perinatology Volume 19 ; 1999 ; 19 >
     au < manifest ; exists ; 2000 ; Journal of Perinatology Volume 20 ; 2000 ; 20 >
     au < manifest ; exists ; 2001 ; Journal of Perinatology Volume 21 ; 2001 ; 21 >
     au < manifest ; exists ; 2002 ; Journal of Perinatology Volume 22 ; 2002 ; 22 >
@@ -1859,9 +1859,9 @@
 
     param[journal_id] = leu
 
-    au < manifest ; exists ; 1997 ; Leukemia Volume 11 ; 1997 ; 11 >
-    au < manifest ; exists ; 1998 ; Leukemia Volume 12 ; 1998 ; 12 >
-    au < manifest ; exists ; 1999 ; Leukemia Volume 13 ; 1999 ; 13 >
+    au < doNotProcess ; doNotProcess ; 1997 ; Leukemia Volume 11 ; 1997 ; 11 >
+    au < doNotProcess ; doNotProcess ; 1998 ; Leukemia Volume 12 ; 1998 ; 12 >
+    au < doNotProcess ; doNotProcess ; 1999 ; Leukemia Volume 13 ; 1999 ; 13 >
     au < manifest ; exists ; 2000 ; Leukemia Volume 14 ; 2000 ; 14 >
     au < manifest ; exists ; 2001 ; Leukemia Volume 15 ; 2001 ; 15 >
     au < manifest ; exists ; 2002 ; Leukemia Volume 16 ; 2002 ; 16 >
@@ -1920,9 +1920,9 @@
 
     param[journal_id] = mp
 
-    au < manifest ; exists ; 1997 ; Molecular Psychiatry Volume 2 ; 1997 ; 2 >
-    au < manifest ; exists ; 1998 ; Molecular Psychiatry Volume 3 ; 1998 ; 3 >
-    au < manifest ; exists ; 1999 ; Molecular Psychiatry Volume 4 ; 1999 ; 4 >
+    au < doNotProcess ; doNotProcess ; 1997 ; Molecular Psychiatry Volume 2 ; 1997 ; 2 >
+    au < doNotProcess ; doNotProcess ; 1998 ; Molecular Psychiatry Volume 3 ; 1998 ; 3 >
+    au < doNotProcess ; doNotProcess ; 1999 ; Molecular Psychiatry Volume 4 ; 1999 ; 4 >
     au < manifest ; exists ; 2000 ; Molecular Psychiatry Volume 5 ; 2000 ; 5 >
     au < manifest ; exists ; 2001 ; Molecular Psychiatry Volume 6 ; 2001 ; 6 >
     au < manifest ; exists ; 2002 ; Molecular Psychiatry Volume 7 ; 2002 ; 7 >
@@ -2039,245 +2039,245 @@
 
     param[journal_id] = nature
 
-    au < manifest ; exists ; 1950 ; Nature Volume 165 ; 1950 ; 165 >
-    au < manifest ; exists ; 1950 ; Nature Volume 166 ; 1950 ; 166 >
-    au < exists ; exists ; 1951 ; Nature Volume 167 ; 1951 ; 167 >
-    au < exists ; exists ; 1951 ; Nature Volume 168 ; 1951 ; 168 >
-    au < exists ; exists ; 1952 ; Nature Volume 169 ; 1952 ; 169 >
-    au < exists ; exists ; 1952 ; Nature Volume 170 ; 1952 ; 170 >
-    au < exists ; exists ; 1953 ; Nature Volume 171 ; 1953 ; 171 >
-    au < exists ; exists ; 1953 ; Nature Volume 172 ; 1953 ; 172 >
-    au < exists ; exists ; 1954 ; Nature Volume 173 ; 1954 ; 173 >
-    au < exists ; exists ; 1954 ; Nature Volume 174 ; 1954 ; 174 >
-    au < exists ; exists ; 1955 ; Nature Volume 175 ; 1955 ; 175 >
-    au < exists ; exists ; 1955 ; Nature Volume 176 ; 1955 ; 176 >
-    au < exists ; exists ; 1956 ; Nature Volume 177 ; 1956 ; 177 >
-    au < exists ; exists ; 1956 ; Nature Volume 178 ; 1956 ; 178 >
-    au < exists ; exists ; 1957 ; Nature Volume 179 ; 1957 ; 179 >
-    au < exists ; exists ; 1957 ; Nature Volume 180 ; 1957 ; 180 >
-    au < exists ; exists ; 1958 ; Nature Volume 181 ; 1958 ; 181 >
-    au < exists ; exists ; 1958 ; Nature Volume 182 ; 1958 ; 182 >
-    au < exists ; exists ; 1959 ; Nature Volume 183 ; 1959 ; 183 >
-    au < exists ; exists ; 1959 ; Nature Volume 184 ; 1959 ; 184 >
-    au < exists ; exists ; 1960 ; Nature Volume 185 ; 1960 ; 185 >
-    au < exists ; exists ; 1960 ; Nature Volume 186 ; 1960 ; 186 >
-    au < exists ; exists ; 1960 ; Nature Volume 187 ; 1960 ; 187 >
-    au < exists ; exists ; 1960 ; Nature Volume 188 ; 1960 ; 188 >
-    au < exists ; exists ; 1961 ; Nature Volume 189 ; 1961 ; 189 >
-    au < exists ; exists ; 1961 ; Nature Volume 190 ; 1961 ; 190 >
-    au < exists ; exists ; 1961 ; Nature Volume 191 ; 1961 ; 191 >
-    au < exists ; exists ; 1961 ; Nature Volume 192 ; 1961 ; 192 >
-    au < exists ; exists ; 1962 ; Nature Volume 193 ; 1962 ; 193 >
-    au < exists ; exists ; 1962 ; Nature Volume 194 ; 1962 ; 194 >
-    au < exists ; exists ; 1962 ; Nature Volume 195 ; 1962 ; 195 >
-    au < exists ; exists ; 1962 ; Nature Volume 196 ; 1962 ; 196 >
-    au < exists ; exists ; 1963 ; Nature Volume 197 ; 1963 ; 197 >
-    au < exists ; exists ; 1963 ; Nature Volume 198 ; 1963 ; 198 >
-    au < exists ; exists ; 1963 ; Nature Volume 199 ; 1963 ; 199 >
-    au < exists ; exists ; 1963 ; Nature Volume 200 ; 1963 ; 200 >
-    au < exists ; exists ; 1964 ; Nature Volume 201 ; 1964 ; 201 >
-    au < exists ; exists ; 1964 ; Nature Volume 202 ; 1964 ; 202 >
-    au < exists ; exists ; 1964 ; Nature Volume 203 ; 1964 ; 203 >
-    au < exists ; exists ; 1964 ; Nature Volume 204 ; 1964 ; 204 >
-    au < exists ; exists ; 1965 ; Nature Volume 205 ; 1965 ; 205 >
-    au < exists ; exists ; 1965 ; Nature Volume 206 ; 1965 ; 206 >
-    au < exists ; exists ; 1965 ; Nature Volume 207 ; 1965 ; 207 >
-    au < exists ; exists ; 1965 ; Nature Volume 208 ; 1965 ; 208 >
-    au < exists ; exists ; 1966 ; Nature Volume 209 ; 1966 ; 209 >
-    au < exists ; exists ; 1966 ; Nature Volume 210 ; 1966 ; 210 >
-    au < exists ; exists ; 1966 ; Nature Volume 211 ; 1966 ; 211 >
-    au < exists ; exists ; 1966 ; Nature Volume 212 ; 1966 ; 212 >
-    au < exists ; exists ; 1967 ; Nature Volume 213 ; 1967 ; 213 >
-    au < exists ; exists ; 1967 ; Nature Volume 214 ; 1967 ; 214 >
-    au < exists ; exists ; 1967 ; Nature Volume 215 ; 1967 ; 215 >
-    au < exists ; exists ; 1967 ; Nature Volume 216 ; 1967 ; 216 >
-    au < manifest ; exists ; 1968 ; Nature Volume 217 ; 1968 ; 217 >
-    au < manifest ; exists ; 1968 ; Nature Volume 218 ; 1968 ; 218 >
-    au < manifest ; exists ; 1968 ; Nature Volume 219 ; 1968 ; 219 >
-    au < manifest ; exists ; 1968 ; Nature Volume 220 ; 1968 ; 220 >
-    au < exists ; exists ; 1969 ; Nature Volume 221 ; 1969 ; 221 >
-    au < exists ; exists ; 1969 ; Nature Volume 222 ; 1969 ; 222 >
-    au < exists ; exists ; 1969 ; Nature Volume 223 ; 1969 ; 223 >
-    au < exists ; exists ; 1969 ; Nature Volume 224 ; 1969 ; 224 >
-    au < exists ; exists ; 1970 ; Nature Volume 225 ; 1970 ; 225 >
-    au < exists ; exists ; 1970 ; Nature Volume 226 ; 1970 ; 226 >
-    au < exists ; exists ; 1970 ; Nature Volume 227 ; 1970 ; 227 >
-    au < exists ; exists ; 1970 ; Nature Volume 228 ; 1970 ; 228 >
-    au < exists ; exists ; 1971 ; Nature Volume 229 ; 1971 ; 229 >
-    au < exists ; exists ; 1971 ; Nature Volume 230 ; 1971 ; 230 >
-    au < exists ; exists ; 1971 ; Nature Volume 231 ; 1971 ; 231 >
-    au < exists ; exists ; 1971 ; Nature Volume 232 ; 1971 ; 232 >
-    au < exists ; exists ; 1971 ; Nature Volume 233 ; 1971 ; 233 >
-    au < exists ; exists ; 1971 ; Nature Volume 234 ; 1971 ; 234 >
-    au < exists ; exists ; 1972 ; Nature Volume 235 ; 1972 ; 235 >
-    au < exists ; exists ; 1972 ; Nature Volume 236 ; 1972 ; 236 >
-    au < exists ; exists ; 1972 ; Nature Volume 237 ; 1972 ; 237 >
-    au < exists ; exists ; 1972 ; Nature Volume 238 ; 1972 ; 238 >
-    au < exists ; exists ; 1972 ; Nature Volume 239 ; 1972 ; 239 >
-    au < exists ; exists ; 1972 ; Nature Volume 240 ; 1972 ; 240 >
-    au < exists ; exists ; 1973 ; Nature Volume 241 ; 1973 ; 241 >
-    au < exists ; exists ; 1973 ; Nature Volume 242 ; 1973 ; 242 >
-    au < exists ; exists ; 1973 ; Nature Volume 243 ; 1973 ; 243 >
-    au < exists ; exists ; 1973 ; Nature Volume 244 ; 1973 ; 244 >
-    au < exists ; exists ; 1973 ; Nature Volume 245 ; 1973 ; 245 >
-    au < exists ; exists ; 1973 ; Nature Volume 246 ; 1973 ; 246 >
-    au < exists ; exists ; 1974 ; Nature Volume 247 ; 1974 ; 247 >
-    au < exists ; exists ; 1974 ; Nature Volume 248 ; 1974 ; 248 >
-    au < exists ; exists ; 1974 ; Nature Volume 249 ; 1974 ; 249 >
-    au < exists ; exists ; 1974 ; Nature Volume 250 ; 1974 ; 250 >
-    au < exists ; exists ; 1974 ; Nature Volume 251 ; 1974 ; 251 >
-    au < exists ; exists ; 1974 ; Nature Volume 252 ; 1974 ; 252 >
-    au < exists ; exists ; 1975 ; Nature Volume 253 ; 1975 ; 253 >
-    au < exists ; exists ; 1975 ; Nature Volume 254 ; 1975 ; 254 >
-    au < exists ; exists ; 1975 ; Nature Volume 255 ; 1975 ; 255 >
-    au < exists ; exists ; 1975 ; Nature Volume 256 ; 1975 ; 256 >
-    au < exists ; exists ; 1975 ; Nature Volume 257 ; 1975 ; 257 >
-    au < exists ; exists ; 1975 ; Nature Volume 258 ; 1975 ; 258 >
-    au < exists ; exists ; 1976 ; Nature Volume 259 ; 1976 ; 259 >
-    au < exists ; exists ; 1976 ; Nature Volume 260 ; 1976 ; 260 >
-    au < exists ; exists ; 1976 ; Nature Volume 261 ; 1976 ; 261 >
-    au < exists ; exists ; 1976 ; Nature Volume 262 ; 1976 ; 262 >
-    au < exists ; exists ; 1976 ; Nature Volume 263 ; 1976 ; 263 >
-    au < exists ; exists ; 1976 ; Nature Volume 264 ; 1976 ; 264 >
-    au < exists ; exists ; 1977 ; Nature Volume 265 ; 1977 ; 265 >
-    au < exists ; exists ; 1977 ; Nature Volume 266 ; 1977 ; 266 >
-    au < exists ; exists ; 1977 ; Nature Volume 267 ; 1977 ; 267 >
-    au < exists ; exists ; 1977 ; Nature Volume 268 ; 1977 ; 268 >
-    au < exists ; exists ; 1977 ; Nature Volume 269 ; 1977 ; 269 >
-    au < exists ; exists ; 1977 ; Nature Volume 270 ; 1977 ; 270 >
-    au < exists ; exists ; 1978 ; Nature Volume 271 ; 1978 ; 271 >
-    au < exists ; exists ; 1978 ; Nature Volume 272 ; 1978 ; 272 >
-    au < exists ; exists ; 1978 ; Nature Volume 273 ; 1978 ; 273 >
-    au < exists ; exists ; 1978 ; Nature Volume 274 ; 1978 ; 274 >
-    au < exists ; exists ; 1978 ; Nature Volume 275 ; 1978 ; 275 >
-    au < exists ; exists ; 1978 ; Nature Volume 276 ; 1978 ; 276 >
-    au < exists ; exists ; 1979 ; Nature Volume 277 ; 1979 ; 277 >
-    au < exists ; exists ; 1979 ; Nature Volume 278 ; 1979 ; 278 >
-    au < exists ; exists ; 1979 ; Nature Volume 279 ; 1979 ; 279 >
-    au < exists ; exists ; 1979 ; Nature Volume 280 ; 1979 ; 280 >
-    au < exists ; exists ; 1979 ; Nature Volume 281 ; 1979 ; 281 >
-    au < exists ; exists ; 1979 ; Nature Volume 282 ; 1979 ; 282 >
-    au < exists ; exists ; 1980 ; Nature Volume 283 ; 1980 ; 283 >
-    au < exists ; exists ; 1980 ; Nature Volume 284 ; 1980 ; 284 >
-    au < exists ; exists ; 1980 ; Nature Volume 285 ; 1980 ; 285 >
-    au < exists ; exists ; 1980 ; Nature Volume 286 ; 1980 ; 286 >
-    au < exists ; exists ; 1980 ; Nature Volume 287 ; 1980 ; 287 >
-    au < exists ; exists ; 1980 ; Nature Volume 288 ; 1980 ; 288 >
-    au < exists ; exists ; 1981 ; Nature Volume 289 ; 1981 ; 289 >
-    au < exists ; exists ; 1981 ; Nature Volume 290 ; 1981 ; 290 >
-    au < exists ; exists ; 1981 ; Nature Volume 291 ; 1981 ; 291 >
-    au < exists ; exists ; 1981 ; Nature Volume 292 ; 1981 ; 292 >
-    au < exists ; exists ; 1981 ; Nature Volume 293 ; 1981 ; 293 >
-    au < exists ; exists ; 1981 ; Nature Volume 294 ; 1981 ; 294 >
-    au < exists ; exists ; 1982 ; Nature Volume 295 ; 1982 ; 295 >
-    au < exists ; exists ; 1982 ; Nature Volume 296 ; 1982 ; 296 >
-    au < exists ; exists ; 1982 ; Nature Volume 297 ; 1982 ; 297 >
-    au < exists ; exists ; 1982 ; Nature Volume 298 ; 1982 ; 298 >
-    au < exists ; exists ; 1982 ; Nature Volume 299 ; 1982 ; 299 >
-    au < exists ; exists ; 1982 ; Nature Volume 300 ; 1982 ; 300 >
-    au < manifest ; exists ; 1983 ; Nature Volume 301 ; 1983 ; 301 >
-    au < manifest ; exists ; 1983 ; Nature Volume 302 ; 1983 ; 302 >
-    au < manifest ; exists ; 1983 ; Nature Volume 303 ; 1983 ; 303 >
-    au < manifest ; exists ; 1983 ; Nature Volume 304 ; 1983 ; 304 >
-    au < manifest ; exists ; 1983 ; Nature Volume 305 ; 1983 ; 305 >
-    au < manifest ; exists ; 1983 ; Nature Volume 306 ; 1983 ; 306 >
-    au < manifest ; exists ; 1984 ; Nature Volume 307 ; 1984 ; 307 >
-    au < manifest ; exists ; 1984 ; Nature Volume 308 ; 1984 ; 308 >
-    au < manifest ; exists ; 1984 ; Nature Volume 309 ; 1984 ; 309 >
-    au < manifest ; exists ; 1984 ; Nature Volume 310 ; 1984 ; 310 >
-    au < manifest ; exists ; 1984 ; Nature Volume 311 ; 1984 ; 311 >
-    au < manifest ; exists ; 1984 ; Nature Volume 312 ; 1984 ; 312 >
-    au < exists ; exists ; 1985 ; Nature Volume 313 ; 1985 ; 313 >
-    au < exists ; exists ; 1985 ; Nature Volume 314 ; 1985 ; 314 >
-    au < exists ; exists ; 1985 ; Nature Volume 315 ; 1985 ; 315 >
-    au < exists ; exists ; 1985 ; Nature Volume 316 ; 1985 ; 316 >
-    au < exists ; exists ; 1985 ; Nature Volume 317 ; 1985 ; 317 >
-    au < exists ; exists ; 1985 ; Nature Volume 318 ; 1985 ; 318 >
-    au < exists ; exists ; 1986 ; Nature Volume 319 ; 1986 ; 319 >
-    au < exists ; exists ; 1986 ; Nature Volume 320 ; 1986 ; 320 >
-    au < exists ; exists ; 1986 ; Nature Volume 321 ; 1986 ; 321 >
-    au < exists ; exists ; 1986 ; Nature Volume 322 ; 1986 ; 322 >
-    au < exists ; exists ; 1986 ; Nature Volume 323 ; 1986 ; 323 >
-    au < exists ; exists ; 1986 ; Nature Volume 324 ; 1986 ; 324 >
-    au < exists ; exists ; 1987 ; Nature Volume 325 ; 1987 ; 325 >
-    au < exists ; exists ; 1987 ; Nature Volume 326 ; 1987 ; 326 >
-    au < exists ; exists ; 1987 ; Nature Volume 327 ; 1987 ; 327 >
-    au < exists ; exists ; 1987 ; Nature Volume 328 ; 1987 ; 328 >
-    au < exists ; exists ; 1987 ; Nature Volume 329 ; 1987 ; 329 >
-    au < exists ; exists ; 1987 ; Nature Volume 330 ; 1987 ; 330 >
-    au < exists ; exists ; 1988 ; Nature Volume 331 ; 1988 ; 331 >
-    au < exists ; exists ; 1988 ; Nature Volume 332 ; 1988 ; 332 >
-    au < exists ; exists ; 1988 ; Nature Volume 333 ; 1988 ; 333 >
-    au < exists ; exists ; 1988 ; Nature Volume 334 ; 1988 ; 334 >
-    au < exists ; exists ; 1988 ; Nature Volume 335 ; 1988 ; 335 >
-    au < exists ; exists ; 1988 ; Nature Volume 336 ; 1988 ; 336 >
-    au < exists ; exists ; 1988 ; Nature Volume 395 (1988) ; 1988 ; 395 >
-    au < exists ; exists ; 1989 ; Nature Volume 337 ; 1989 ; 337 >
-    au < exists ; exists ; 1989 ; Nature Volume 338 ; 1989 ; 338 >
-    au < exists ; exists ; 1989 ; Nature Volume 339 ; 1989 ; 339 >
-    au < exists ; exists ; 1989 ; Nature Volume 340 ; 1989 ; 340 >
-    au < exists ; exists ; 1989 ; Nature Volume 341 ; 1989 ; 341 >
-    au < exists ; exists ; 1989 ; Nature Volume 342 ; 1989 ; 342 >
-    au < exists ; exists ; 1990 ; Nature Volume 343 ; 1990 ; 343 >
-    au < exists ; exists ; 1990 ; Nature Volume 344 ; 1990 ; 344 >
-    au < exists ; exists ; 1990 ; Nature Volume 345 ; 1990 ; 345 >
-    au < exists ; exists ; 1990 ; Nature Volume 346 ; 1990 ; 346 >
-    au < exists ; exists ; 1990 ; Nature Volume 347 ; 1990 ; 347 >
-    au < exists ; exists ; 1990 ; Nature Volume 348 ; 1990 ; 348 >
-    au < exists ; exists ; 1991 ; Nature Volume 349 ; 1991 ; 349 >
-    au < exists ; exists ; 1991 ; Nature Volume 350 ; 1991 ; 350 >
-    au < exists ; exists ; 1991 ; Nature Volume 351 ; 1991 ; 351 >
-    au < exists ; exists ; 1991 ; Nature Volume 352 ; 1991 ; 352 >
-    au < exists ; exists ; 1991 ; Nature Volume 353 ; 1991 ; 353 >
-    au < exists ; exists ; 1991 ; Nature Volume 354 ; 1991 ; 354 >
-    au < exists ; exists ; 1992 ; Nature Volume 355 ; 1992 ; 355 >
-    au < exists ; exists ; 1992 ; Nature Volume 356 ; 1992 ; 356 >
-    au < exists ; exists ; 1992 ; Nature Volume 357 ; 1992 ; 357 >
-    au < exists ; exists ; 1992 ; Nature Volume 358 ; 1992 ; 358 >
-    au < exists ; exists ; 1992 ; Nature Volume 359 ; 1992 ; 359 >
-    au < exists ; exists ; 1992 ; Nature Volume 360 ; 1992 ; 360 >
-    au < exists ; exists ; 1993 ; Nature Volume 361 ; 1993 ; 361 >
-    au < exists ; exists ; 1993 ; Nature Volume 362 ; 1993 ; 362 >
-    au < exists ; exists ; 1993 ; Nature Volume 363 ; 1993 ; 363 >
-    au < exists ; exists ; 1993 ; Nature Volume 364 ; 1993 ; 364 >
-    au < exists ; exists ; 1993 ; Nature Volume 365 ; 1993 ; 365 >
-    au < exists ; exists ; 1993 ; Nature Volume 366 ; 1993 ; 366 >
-    au < exists ; exists ; 1994 ; Nature Volume 367 ; 1994 ; 367 >
-    au < exists ; exists ; 1994 ; Nature Volume 368 ; 1994 ; 368 >
-    au < exists ; exists ; 1994 ; Nature Volume 369 ; 1994 ; 369 >
-    au < exists ; exists ; 1994 ; Nature Volume 370 ; 1994 ; 370 >
-    au < exists ; exists ; 1994 ; Nature Volume 371 ; 1994 ; 371 >
-    au < exists ; exists ; 1994 ; Nature Volume 372 ; 1994 ; 372 >
-    au < manifest ; exists ; 1995 ; Nature Volume 373 ; 1995 ; 373 >
-    au < manifest ; exists ; 1995 ; Nature Volume 374 ; 1995 ; 374 >
-    au < manifest ; exists ; 1995 ; Nature Volume 375 ; 1995 ; 375 >
-    au < manifest ; exists ; 1995 ; Nature Volume 376 ; 1995 ; 376 >
-    au < manifest ; exists ; 1995 ; Nature Volume 377 ; 1995 ; 377 >
-    au < manifest ; exists ; 1995 ; Nature Volume 378 ; 1995 ; 378 >
-    au < exists ; exists ; 1996 ; Nature Volume 379 ; 1996 ; 379 >
-    au < exists ; exists ; 1996 ; Nature Volume 380 ; 1996 ; 380 >
-    au < exists ; exists ; 1996 ; Nature Volume 381 ; 1996 ; 381 >
-    au < exists ; exists ; 1996 ; Nature Volume 382 ; 1996 ; 382 >
-    au < exists ; exists ; 1996 ; Nature Volume 383 ; 1996 ; 383 >
-    au < exists ; exists ; 1996 ; Nature Volume 384 ; 1996 ; 384 >
-    au < exists ; exists ; 1997 ; Nature Volume 385 ; 1997 ; 385 >
-    au < exists ; exists ; 1997 ; Nature Volume 386 ; 1997 ; 386 >
-    au < exists ; exists ; 1997 ; Nature Volume 387 ; 1997 ; 387 >
-    au < exists ; exists ; 1997 ; Nature Volume 388 ; 1997 ; 388 >
-    au < exists ; exists ; 1997 ; Nature Volume 389 ; 1997 ; 389 >
-    au < exists ; exists ; 1997 ; Nature Volume 390 ; 1997 ; 390 >
-    au < exists ; exists ; 1998 ; Nature Volume 391 ; 1998 ; 391 >
-    au < exists ; exists ; 1998 ; Nature Volume 392 ; 1998 ; 392 >
-    au < exists ; exists ; 1998 ; Nature Volume 393 ; 1998 ; 393 >
-    au < exists ; exists ; 1998 ; Nature Volume 394 ; 1998 ; 394 >
-    au < exists ; exists ; 1998 ; Nature Volume 395 (1998) ; 1998 ; 395 >
-    au < exists ; exists ; 1998 ; Nature Volume 396 ; 1998 ; 396 >
-    au < exists ; exists ; 1999 ; Nature Volume 397 ; 1999 ; 397 >
-    au < exists ; exists ; 1999 ; Nature Volume 398 ; 1999 ; 398 >
-    au < exists ; exists ; 1999 ; Nature Volume 399 ; 1999 ; 399 >
-    au < exists ; exists ; 1999 ; Nature Volume 400 ; 1999 ; 400 >
-    au < exists ; exists ; 1999 ; Nature Volume 401 ; 1999 ; 401 >
-    au < exists ; exists ; 1999 ; Nature Volume 402 ; 1999 ; 402 >
+    au < doNotProcess ; doNotProcess ; 1950 ; Nature Volume 165 ; 1950 ; 165 >
+    au < doNotProcess ; doNotProcess ; 1950 ; Nature Volume 166 ; 1950 ; 166 >
+    au < doNotProcess ; doNotProcess ; 1951 ; Nature Volume 167 ; 1951 ; 167 >
+    au < doNotProcess ; doNotProcess ; 1951 ; Nature Volume 168 ; 1951 ; 168 >
+    au < doNotProcess ; doNotProcess ; 1952 ; Nature Volume 169 ; 1952 ; 169 >
+    au < doNotProcess ; doNotProcess ; 1952 ; Nature Volume 170 ; 1952 ; 170 >
+    au < doNotProcess ; doNotProcess ; 1953 ; Nature Volume 171 ; 1953 ; 171 >
+    au < doNotProcess ; doNotProcess ; 1953 ; Nature Volume 172 ; 1953 ; 172 >
+    au < doNotProcess ; doNotProcess ; 1954 ; Nature Volume 173 ; 1954 ; 173 >
+    au < doNotProcess ; doNotProcess ; 1954 ; Nature Volume 174 ; 1954 ; 174 >
+    au < doNotProcess ; doNotProcess ; 1955 ; Nature Volume 175 ; 1955 ; 175 >
+    au < doNotProcess ; doNotProcess ; 1955 ; Nature Volume 176 ; 1955 ; 176 >
+    au < doNotProcess ; doNotProcess ; 1956 ; Nature Volume 177 ; 1956 ; 177 >
+    au < doNotProcess ; doNotProcess ; 1956 ; Nature Volume 178 ; 1956 ; 178 >
+    au < doNotProcess ; doNotProcess ; 1957 ; Nature Volume 179 ; 1957 ; 179 >
+    au < doNotProcess ; doNotProcess ; 1957 ; Nature Volume 180 ; 1957 ; 180 >
+    au < doNotProcess ; doNotProcess ; 1958 ; Nature Volume 181 ; 1958 ; 181 >
+    au < doNotProcess ; doNotProcess ; 1958 ; Nature Volume 182 ; 1958 ; 182 >
+    au < doNotProcess ; doNotProcess ; 1959 ; Nature Volume 183 ; 1959 ; 183 >
+    au < doNotProcess ; doNotProcess ; 1959 ; Nature Volume 184 ; 1959 ; 184 >
+    au < doNotProcess ; doNotProcess ; 1960 ; Nature Volume 185 ; 1960 ; 185 >
+    au < doNotProcess ; doNotProcess ; 1960 ; Nature Volume 186 ; 1960 ; 186 >
+    au < doNotProcess ; doNotProcess ; 1960 ; Nature Volume 187 ; 1960 ; 187 >
+    au < doNotProcess ; doNotProcess ; 1960 ; Nature Volume 188 ; 1960 ; 188 >
+    au < doNotProcess ; doNotProcess ; 1961 ; Nature Volume 189 ; 1961 ; 189 >
+    au < doNotProcess ; doNotProcess ; 1961 ; Nature Volume 190 ; 1961 ; 190 >
+    au < doNotProcess ; doNotProcess ; 1961 ; Nature Volume 191 ; 1961 ; 191 >
+    au < doNotProcess ; doNotProcess ; 1961 ; Nature Volume 192 ; 1961 ; 192 >
+    au < doNotProcess ; doNotProcess ; 1962 ; Nature Volume 193 ; 1962 ; 193 >
+    au < doNotProcess ; doNotProcess ; 1962 ; Nature Volume 194 ; 1962 ; 194 >
+    au < doNotProcess ; doNotProcess ; 1962 ; Nature Volume 195 ; 1962 ; 195 >
+    au < doNotProcess ; doNotProcess ; 1962 ; Nature Volume 196 ; 1962 ; 196 >
+    au < doNotProcess ; doNotProcess ; 1963 ; Nature Volume 197 ; 1963 ; 197 >
+    au < doNotProcess ; doNotProcess ; 1963 ; Nature Volume 198 ; 1963 ; 198 >
+    au < doNotProcess ; doNotProcess ; 1963 ; Nature Volume 199 ; 1963 ; 199 >
+    au < doNotProcess ; doNotProcess ; 1963 ; Nature Volume 200 ; 1963 ; 200 >
+    au < doNotProcess ; doNotProcess ; 1964 ; Nature Volume 201 ; 1964 ; 201 >
+    au < doNotProcess ; doNotProcess ; 1964 ; Nature Volume 202 ; 1964 ; 202 >
+    au < doNotProcess ; doNotProcess ; 1964 ; Nature Volume 203 ; 1964 ; 203 >
+    au < doNotProcess ; doNotProcess ; 1964 ; Nature Volume 204 ; 1964 ; 204 >
+    au < doNotProcess ; doNotProcess ; 1965 ; Nature Volume 205 ; 1965 ; 205 >
+    au < doNotProcess ; doNotProcess ; 1965 ; Nature Volume 206 ; 1965 ; 206 >
+    au < doNotProcess ; doNotProcess ; 1965 ; Nature Volume 207 ; 1965 ; 207 >
+    au < doNotProcess ; doNotProcess ; 1965 ; Nature Volume 208 ; 1965 ; 208 >
+    au < doNotProcess ; doNotProcess ; 1966 ; Nature Volume 209 ; 1966 ; 209 >
+    au < doNotProcess ; doNotProcess ; 1966 ; Nature Volume 210 ; 1966 ; 210 >
+    au < doNotProcess ; doNotProcess ; 1966 ; Nature Volume 211 ; 1966 ; 211 >
+    au < doNotProcess ; doNotProcess ; 1966 ; Nature Volume 212 ; 1966 ; 212 >
+    au < doNotProcess ; doNotProcess ; 1967 ; Nature Volume 213 ; 1967 ; 213 >
+    au < doNotProcess ; doNotProcess ; 1967 ; Nature Volume 214 ; 1967 ; 214 >
+    au < doNotProcess ; doNotProcess ; 1967 ; Nature Volume 215 ; 1967 ; 215 >
+    au < doNotProcess ; doNotProcess ; 1967 ; Nature Volume 216 ; 1967 ; 216 >
+    au < doNotProcess ; doNotProcess ; 1968 ; Nature Volume 217 ; 1968 ; 217 >
+    au < doNotProcess ; doNotProcess ; 1968 ; Nature Volume 218 ; 1968 ; 218 >
+    au < doNotProcess ; doNotProcess ; 1968 ; Nature Volume 219 ; 1968 ; 219 >
+    au < doNotProcess ; doNotProcess ; 1968 ; Nature Volume 220 ; 1968 ; 220 >
+    au < doNotProcess ; doNotProcess ; 1969 ; Nature Volume 221 ; 1969 ; 221 >
+    au < doNotProcess ; doNotProcess ; 1969 ; Nature Volume 222 ; 1969 ; 222 >
+    au < doNotProcess ; doNotProcess ; 1969 ; Nature Volume 223 ; 1969 ; 223 >
+    au < doNotProcess ; doNotProcess ; 1969 ; Nature Volume 224 ; 1969 ; 224 >
+    au < doNotProcess ; doNotProcess ; 1970 ; Nature Volume 225 ; 1970 ; 225 >
+    au < doNotProcess ; doNotProcess ; 1970 ; Nature Volume 226 ; 1970 ; 226 >
+    au < doNotProcess ; doNotProcess ; 1970 ; Nature Volume 227 ; 1970 ; 227 >
+    au < doNotProcess ; doNotProcess ; 1970 ; Nature Volume 228 ; 1970 ; 228 >
+    au < doNotProcess ; doNotProcess ; 1971 ; Nature Volume 229 ; 1971 ; 229 >
+    au < doNotProcess ; doNotProcess ; 1971 ; Nature Volume 230 ; 1971 ; 230 >
+    au < doNotProcess ; doNotProcess ; 1971 ; Nature Volume 231 ; 1971 ; 231 >
+    au < doNotProcess ; doNotProcess ; 1971 ; Nature Volume 232 ; 1971 ; 232 >
+    au < doNotProcess ; doNotProcess ; 1971 ; Nature Volume 233 ; 1971 ; 233 >
+    au < doNotProcess ; doNotProcess ; 1971 ; Nature Volume 234 ; 1971 ; 234 >
+    au < doNotProcess ; doNotProcess ; 1972 ; Nature Volume 235 ; 1972 ; 235 >
+    au < doNotProcess ; doNotProcess ; 1972 ; Nature Volume 236 ; 1972 ; 236 >
+    au < doNotProcess ; doNotProcess ; 1972 ; Nature Volume 237 ; 1972 ; 237 >
+    au < doNotProcess ; doNotProcess ; 1972 ; Nature Volume 238 ; 1972 ; 238 >
+    au < doNotProcess ; doNotProcess ; 1972 ; Nature Volume 239 ; 1972 ; 239 >
+    au < doNotProcess ; doNotProcess ; 1972 ; Nature Volume 240 ; 1972 ; 240 >
+    au < doNotProcess ; doNotProcess ; 1973 ; Nature Volume 241 ; 1973 ; 241 >
+    au < doNotProcess ; doNotProcess ; 1973 ; Nature Volume 242 ; 1973 ; 242 >
+    au < doNotProcess ; doNotProcess ; 1973 ; Nature Volume 243 ; 1973 ; 243 >
+    au < doNotProcess ; doNotProcess ; 1973 ; Nature Volume 244 ; 1973 ; 244 >
+    au < doNotProcess ; doNotProcess ; 1973 ; Nature Volume 245 ; 1973 ; 245 >
+    au < doNotProcess ; doNotProcess ; 1973 ; Nature Volume 246 ; 1973 ; 246 >
+    au < doNotProcess ; doNotProcess ; 1974 ; Nature Volume 247 ; 1974 ; 247 >
+    au < doNotProcess ; doNotProcess ; 1974 ; Nature Volume 248 ; 1974 ; 248 >
+    au < doNotProcess ; doNotProcess ; 1974 ; Nature Volume 249 ; 1974 ; 249 >
+    au < doNotProcess ; doNotProcess ; 1974 ; Nature Volume 250 ; 1974 ; 250 >
+    au < doNotProcess ; doNotProcess ; 1974 ; Nature Volume 251 ; 1974 ; 251 >
+    au < doNotProcess ; doNotProcess ; 1974 ; Nature Volume 252 ; 1974 ; 252 >
+    au < doNotProcess ; doNotProcess ; 1975 ; Nature Volume 253 ; 1975 ; 253 >
+    au < doNotProcess ; doNotProcess ; 1975 ; Nature Volume 254 ; 1975 ; 254 >
+    au < doNotProcess ; doNotProcess ; 1975 ; Nature Volume 255 ; 1975 ; 255 >
+    au < doNotProcess ; doNotProcess ; 1975 ; Nature Volume 256 ; 1975 ; 256 >
+    au < doNotProcess ; doNotProcess ; 1975 ; Nature Volume 257 ; 1975 ; 257 >
+    au < doNotProcess ; doNotProcess ; 1975 ; Nature Volume 258 ; 1975 ; 258 >
+    au < doNotProcess ; doNotProcess ; 1976 ; Nature Volume 259 ; 1976 ; 259 >
+    au < doNotProcess ; doNotProcess ; 1976 ; Nature Volume 260 ; 1976 ; 260 >
+    au < doNotProcess ; doNotProcess ; 1976 ; Nature Volume 261 ; 1976 ; 261 >
+    au < doNotProcess ; doNotProcess ; 1976 ; Nature Volume 262 ; 1976 ; 262 >
+    au < doNotProcess ; doNotProcess ; 1976 ; Nature Volume 263 ; 1976 ; 263 >
+    au < doNotProcess ; doNotProcess ; 1976 ; Nature Volume 264 ; 1976 ; 264 >
+    au < doNotProcess ; doNotProcess ; 1977 ; Nature Volume 265 ; 1977 ; 265 >
+    au < doNotProcess ; doNotProcess ; 1977 ; Nature Volume 266 ; 1977 ; 266 >
+    au < doNotProcess ; doNotProcess ; 1977 ; Nature Volume 267 ; 1977 ; 267 >
+    au < doNotProcess ; doNotProcess ; 1977 ; Nature Volume 268 ; 1977 ; 268 >
+    au < doNotProcess ; doNotProcess ; 1977 ; Nature Volume 269 ; 1977 ; 269 >
+    au < doNotProcess ; doNotProcess ; 1977 ; Nature Volume 270 ; 1977 ; 270 >
+    au < doNotProcess ; doNotProcess ; 1978 ; Nature Volume 271 ; 1978 ; 271 >
+    au < doNotProcess ; doNotProcess ; 1978 ; Nature Volume 272 ; 1978 ; 272 >
+    au < doNotProcess ; doNotProcess ; 1978 ; Nature Volume 273 ; 1978 ; 273 >
+    au < doNotProcess ; doNotProcess ; 1978 ; Nature Volume 274 ; 1978 ; 274 >
+    au < doNotProcess ; doNotProcess ; 1978 ; Nature Volume 275 ; 1978 ; 275 >
+    au < doNotProcess ; doNotProcess ; 1978 ; Nature Volume 276 ; 1978 ; 276 >
+    au < doNotProcess ; doNotProcess ; 1979 ; Nature Volume 277 ; 1979 ; 277 >
+    au < doNotProcess ; doNotProcess ; 1979 ; Nature Volume 278 ; 1979 ; 278 >
+    au < doNotProcess ; doNotProcess ; 1979 ; Nature Volume 279 ; 1979 ; 279 >
+    au < doNotProcess ; doNotProcess ; 1979 ; Nature Volume 280 ; 1979 ; 280 >
+    au < doNotProcess ; doNotProcess ; 1979 ; Nature Volume 281 ; 1979 ; 281 >
+    au < doNotProcess ; doNotProcess ; 1979 ; Nature Volume 282 ; 1979 ; 282 >
+    au < doNotProcess ; doNotProcess ; 1980 ; Nature Volume 283 ; 1980 ; 283 >
+    au < doNotProcess ; doNotProcess ; 1980 ; Nature Volume 284 ; 1980 ; 284 >
+    au < doNotProcess ; doNotProcess ; 1980 ; Nature Volume 285 ; 1980 ; 285 >
+    au < doNotProcess ; doNotProcess ; 1980 ; Nature Volume 286 ; 1980 ; 286 >
+    au < doNotProcess ; doNotProcess ; 1980 ; Nature Volume 287 ; 1980 ; 287 >
+    au < doNotProcess ; doNotProcess ; 1980 ; Nature Volume 288 ; 1980 ; 288 >
+    au < doNotProcess ; doNotProcess ; 1981 ; Nature Volume 289 ; 1981 ; 289 >
+    au < doNotProcess ; doNotProcess ; 1981 ; Nature Volume 290 ; 1981 ; 290 >
+    au < doNotProcess ; doNotProcess ; 1981 ; Nature Volume 291 ; 1981 ; 291 >
+    au < doNotProcess ; doNotProcess ; 1981 ; Nature Volume 292 ; 1981 ; 292 >
+    au < doNotProcess ; doNotProcess ; 1981 ; Nature Volume 293 ; 1981 ; 293 >
+    au < doNotProcess ; doNotProcess ; 1981 ; Nature Volume 294 ; 1981 ; 294 >
+    au < doNotProcess ; doNotProcess ; 1982 ; Nature Volume 295 ; 1982 ; 295 >
+    au < doNotProcess ; doNotProcess ; 1982 ; Nature Volume 296 ; 1982 ; 296 >
+    au < doNotProcess ; doNotProcess ; 1982 ; Nature Volume 297 ; 1982 ; 297 >
+    au < doNotProcess ; doNotProcess ; 1982 ; Nature Volume 298 ; 1982 ; 298 >
+    au < doNotProcess ; doNotProcess ; 1982 ; Nature Volume 299 ; 1982 ; 299 >
+    au < doNotProcess ; doNotProcess ; 1982 ; Nature Volume 300 ; 1982 ; 300 >
+    au < doNotProcess ; doNotProcess ; 1983 ; Nature Volume 301 ; 1983 ; 301 >
+    au < doNotProcess ; doNotProcess ; 1983 ; Nature Volume 302 ; 1983 ; 302 >
+    au < doNotProcess ; doNotProcess ; 1983 ; Nature Volume 303 ; 1983 ; 303 >
+    au < doNotProcess ; doNotProcess ; 1983 ; Nature Volume 304 ; 1983 ; 304 >
+    au < doNotProcess ; doNotProcess ; 1983 ; Nature Volume 305 ; 1983 ; 305 >
+    au < doNotProcess ; doNotProcess ; 1983 ; Nature Volume 306 ; 1983 ; 306 >
+    au < doNotProcess ; doNotProcess ; 1984 ; Nature Volume 307 ; 1984 ; 307 >
+    au < doNotProcess ; doNotProcess ; 1984 ; Nature Volume 308 ; 1984 ; 308 >
+    au < doNotProcess ; doNotProcess ; 1984 ; Nature Volume 309 ; 1984 ; 309 >
+    au < doNotProcess ; doNotProcess ; 1984 ; Nature Volume 310 ; 1984 ; 310 >
+    au < doNotProcess ; doNotProcess ; 1984 ; Nature Volume 311 ; 1984 ; 311 >
+    au < doNotProcess ; doNotProcess ; 1984 ; Nature Volume 312 ; 1984 ; 312 >
+    au < doNotProcess ; doNotProcess ; 1985 ; Nature Volume 313 ; 1985 ; 313 >
+    au < doNotProcess ; doNotProcess ; 1985 ; Nature Volume 314 ; 1985 ; 314 >
+    au < doNotProcess ; doNotProcess ; 1985 ; Nature Volume 315 ; 1985 ; 315 >
+    au < doNotProcess ; doNotProcess ; 1985 ; Nature Volume 316 ; 1985 ; 316 >
+    au < doNotProcess ; doNotProcess ; 1985 ; Nature Volume 317 ; 1985 ; 317 >
+    au < doNotProcess ; doNotProcess ; 1985 ; Nature Volume 318 ; 1985 ; 318 >
+    au < doNotProcess ; doNotProcess ; 1986 ; Nature Volume 319 ; 1986 ; 319 >
+    au < doNotProcess ; doNotProcess ; 1986 ; Nature Volume 320 ; 1986 ; 320 >
+    au < doNotProcess ; doNotProcess ; 1986 ; Nature Volume 321 ; 1986 ; 321 >
+    au < doNotProcess ; doNotProcess ; 1986 ; Nature Volume 322 ; 1986 ; 322 >
+    au < doNotProcess ; doNotProcess ; 1986 ; Nature Volume 323 ; 1986 ; 323 >
+    au < doNotProcess ; doNotProcess ; 1986 ; Nature Volume 324 ; 1986 ; 324 >
+    au < doNotProcess ; doNotProcess ; 1987 ; Nature Volume 325 ; 1987 ; 325 >
+    au < doNotProcess ; doNotProcess ; 1987 ; Nature Volume 326 ; 1987 ; 326 >
+    au < doNotProcess ; doNotProcess ; 1987 ; Nature Volume 327 ; 1987 ; 327 >
+    au < doNotProcess ; doNotProcess ; 1987 ; Nature Volume 328 ; 1987 ; 328 >
+    au < doNotProcess ; doNotProcess ; 1987 ; Nature Volume 329 ; 1987 ; 329 >
+    au < doNotProcess ; doNotProcess ; 1987 ; Nature Volume 330 ; 1987 ; 330 >
+    au < doNotProcess ; doNotProcess ; 1988 ; Nature Volume 331 ; 1988 ; 331 >
+    au < doNotProcess ; doNotProcess ; 1988 ; Nature Volume 332 ; 1988 ; 332 >
+    au < doNotProcess ; doNotProcess ; 1988 ; Nature Volume 333 ; 1988 ; 333 >
+    au < doNotProcess ; doNotProcess ; 1988 ; Nature Volume 334 ; 1988 ; 334 >
+    au < doNotProcess ; doNotProcess ; 1988 ; Nature Volume 335 ; 1988 ; 335 >
+    au < doNotProcess ; doNotProcess ; 1988 ; Nature Volume 336 ; 1988 ; 336 >
+    au < doNotProcess ; doNotProcess ; 1988 ; Nature Volume 395 (1988) ; 1988 ; 395 >
+    au < doNotProcess ; doNotProcess ; 1989 ; Nature Volume 337 ; 1989 ; 337 >
+    au < doNotProcess ; doNotProcess ; 1989 ; Nature Volume 338 ; 1989 ; 338 >
+    au < doNotProcess ; doNotProcess ; 1989 ; Nature Volume 339 ; 1989 ; 339 >
+    au < doNotProcess ; doNotProcess ; 1989 ; Nature Volume 340 ; 1989 ; 340 >
+    au < doNotProcess ; doNotProcess ; 1989 ; Nature Volume 341 ; 1989 ; 341 >
+    au < doNotProcess ; doNotProcess ; 1989 ; Nature Volume 342 ; 1989 ; 342 >
+    au < doNotProcess ; doNotProcess ; 1990 ; Nature Volume 343 ; 1990 ; 343 >
+    au < doNotProcess ; doNotProcess ; 1990 ; Nature Volume 344 ; 1990 ; 344 >
+    au < doNotProcess ; doNotProcess ; 1990 ; Nature Volume 345 ; 1990 ; 345 >
+    au < doNotProcess ; doNotProcess ; 1990 ; Nature Volume 346 ; 1990 ; 346 >
+    au < doNotProcess ; doNotProcess ; 1990 ; Nature Volume 347 ; 1990 ; 347 >
+    au < doNotProcess ; doNotProcess ; 1990 ; Nature Volume 348 ; 1990 ; 348 >
+    au < doNotProcess ; doNotProcess ; 1991 ; Nature Volume 349 ; 1991 ; 349 >
+    au < doNotProcess ; doNotProcess ; 1991 ; Nature Volume 350 ; 1991 ; 350 >
+    au < doNotProcess ; doNotProcess ; 1991 ; Nature Volume 351 ; 1991 ; 351 >
+    au < doNotProcess ; doNotProcess ; 1991 ; Nature Volume 352 ; 1991 ; 352 >
+    au < doNotProcess ; doNotProcess ; 1991 ; Nature Volume 353 ; 1991 ; 353 >
+    au < doNotProcess ; doNotProcess ; 1991 ; Nature Volume 354 ; 1991 ; 354 >
+    au < doNotProcess ; doNotProcess ; 1992 ; Nature Volume 355 ; 1992 ; 355 >
+    au < doNotProcess ; doNotProcess ; 1992 ; Nature Volume 356 ; 1992 ; 356 >
+    au < doNotProcess ; doNotProcess ; 1992 ; Nature Volume 357 ; 1992 ; 357 >
+    au < doNotProcess ; doNotProcess ; 1992 ; Nature Volume 358 ; 1992 ; 358 >
+    au < doNotProcess ; doNotProcess ; 1992 ; Nature Volume 359 ; 1992 ; 359 >
+    au < doNotProcess ; doNotProcess ; 1992 ; Nature Volume 360 ; 1992 ; 360 >
+    au < doNotProcess ; doNotProcess ; 1993 ; Nature Volume 361 ; 1993 ; 361 >
+    au < doNotProcess ; doNotProcess ; 1993 ; Nature Volume 362 ; 1993 ; 362 >
+    au < doNotProcess ; doNotProcess ; 1993 ; Nature Volume 363 ; 1993 ; 363 >
+    au < doNotProcess ; doNotProcess ; 1993 ; Nature Volume 364 ; 1993 ; 364 >
+    au < doNotProcess ; doNotProcess ; 1993 ; Nature Volume 365 ; 1993 ; 365 >
+    au < doNotProcess ; doNotProcess ; 1993 ; Nature Volume 366 ; 1993 ; 366 >
+    au < doNotProcess ; doNotProcess ; 1994 ; Nature Volume 367 ; 1994 ; 367 >
+    au < doNotProcess ; doNotProcess ; 1994 ; Nature Volume 368 ; 1994 ; 368 >
+    au < doNotProcess ; doNotProcess ; 1994 ; Nature Volume 369 ; 1994 ; 369 >
+    au < doNotProcess ; doNotProcess ; 1994 ; Nature Volume 370 ; 1994 ; 370 >
+    au < doNotProcess ; doNotProcess ; 1994 ; Nature Volume 371 ; 1994 ; 371 >
+    au < doNotProcess ; doNotProcess ; 1994 ; Nature Volume 372 ; 1994 ; 372 >
+    au < doNotProcess ; doNotProcess ; 1995 ; Nature Volume 373 ; 1995 ; 373 >
+    au < doNotProcess ; doNotProcess ; 1995 ; Nature Volume 374 ; 1995 ; 374 >
+    au < doNotProcess ; doNotProcess ; 1995 ; Nature Volume 375 ; 1995 ; 375 >
+    au < doNotProcess ; doNotProcess ; 1995 ; Nature Volume 376 ; 1995 ; 376 >
+    au < doNotProcess ; doNotProcess ; 1995 ; Nature Volume 377 ; 1995 ; 377 >
+    au < doNotProcess ; doNotProcess ; 1995 ; Nature Volume 378 ; 1995 ; 378 >
+    au < doNotProcess ; doNotProcess ; 1996 ; Nature Volume 379 ; 1996 ; 379 >
+    au < doNotProcess ; doNotProcess ; 1996 ; Nature Volume 380 ; 1996 ; 380 >
+    au < doNotProcess ; doNotProcess ; 1996 ; Nature Volume 381 ; 1996 ; 381 >
+    au < doNotProcess ; doNotProcess ; 1996 ; Nature Volume 382 ; 1996 ; 382 >
+    au < doNotProcess ; doNotProcess ; 1996 ; Nature Volume 383 ; 1996 ; 383 >
+    au < doNotProcess ; doNotProcess ; 1996 ; Nature Volume 384 ; 1996 ; 384 >
+    au < doNotProcess ; doNotProcess ; 1997 ; Nature Volume 385 ; 1997 ; 385 >
+    au < doNotProcess ; doNotProcess ; 1997 ; Nature Volume 386 ; 1997 ; 386 >
+    au < doNotProcess ; doNotProcess ; 1997 ; Nature Volume 387 ; 1997 ; 387 >
+    au < doNotProcess ; doNotProcess ; 1997 ; Nature Volume 388 ; 1997 ; 388 >
+    au < doNotProcess ; doNotProcess ; 1997 ; Nature Volume 389 ; 1997 ; 389 >
+    au < doNotProcess ; doNotProcess ; 1997 ; Nature Volume 390 ; 1997 ; 390 >
+    au < doNotProcess ; doNotProcess ; 1998 ; Nature Volume 391 ; 1998 ; 391 >
+    au < doNotProcess ; doNotProcess ; 1998 ; Nature Volume 392 ; 1998 ; 392 >
+    au < doNotProcess ; doNotProcess ; 1998 ; Nature Volume 393 ; 1998 ; 393 >
+    au < doNotProcess ; doNotProcess ; 1998 ; Nature Volume 394 ; 1998 ; 394 >
+    au < doNotProcess ; doNotProcess ; 1998 ; Nature Volume 395 (1998) ; 1998 ; 395 >
+    au < doNotProcess ; doNotProcess ; 1998 ; Nature Volume 396 ; 1998 ; 396 >
+    au < doNotProcess ; doNotProcess ; 1999 ; Nature Volume 397 ; 1999 ; 397 >
+    au < doNotProcess ; doNotProcess ; 1999 ; Nature Volume 398 ; 1999 ; 398 >
+    au < doNotProcess ; doNotProcess ; 1999 ; Nature Volume 399 ; 1999 ; 399 >
+    au < doNotProcess ; doNotProcess ; 1999 ; Nature Volume 400 ; 1999 ; 400 >
+    au < doNotProcess ; doNotProcess ; 1999 ; Nature Volume 401 ; 1999 ; 401 >
+    au < doNotProcess ; doNotProcess ; 1999 ; Nature Volume 402 ; 1999 ; 402 >
     au < exists ; exists ; 2000 ; Nature Volume 403 ; 2000 ; 403 >
     au < exists ; exists ; 2000 ; Nature Volume 404 ; 2000 ; 404 >
     au < exists ; exists ; 2000 ; Nature Volume 405 ; 2000 ; 405 >
@@ -2408,23 +2408,23 @@
 
     param[journal_id] = nbt
 
-    au < manifest ; exists ; 1983 ; Nature Biotechnology Volume 1 ; 1983 ; 1 >
-    au < manifest ; exists ; 1984 ; Nature Biotechnology Volume 2 ; 1984 ; 2 >
-    au < manifest ; exists ; 1985 ; Nature Biotechnology Volume 3 ; 1985 ; 3 >
-    au < manifest ; exists ; 1986 ; Nature Biotechnology Volume 4 ; 1986 ; 4 >
-    au < manifest ; exists ; 1987 ; Nature Biotechnology Volume 5 ; 1987 ; 5 >
-    au < manifest ; exists ; 1988 ; Nature Biotechnology Volume 6 ; 1988 ; 6 >
-    au < manifest ; exists ; 1989 ; Nature Biotechnology Volume 7 ; 1989 ; 7 >
-    au < manifest ; exists ; 1990 ; Nature Biotechnology Volume 8 ; 1990 ; 8 >
-    au < manifest ; exists ; 1991 ; Nature Biotechnology Volume 9 ; 1991 ; 9 >
-    au < manifest ; exists ; 1992 ; Nature Biotechnology Volume 10 ; 1992 ; 10 >
-    au < manifest ; exists ; 1993 ; Nature Biotechnology Volume 11 ; 1993 ; 11 >
-    au < manifest ; exists ; 1994 ; Nature Biotechnology Volume 12 ; 1994 ; 12 >
-    au < manifest ; exists ; 1995 ; Nature Biotechnology Volume 13 ; 1995 ; 13 >
-    au < manifest ; exists ; 1996 ; Nature Biotechnology Volume 14 ; 1996 ; 14 >
-    au < manifest ; exists ; 1997 ; Nature Biotechnology Volume 15 ; 1997 ; 15 >
-    au < manifest ; exists ; 1998 ; Nature Biotechnology Volume 16 ; 1998 ; 16 >
-    au < manifest ; exists ; 1999 ; Nature Biotechnology Volume 17 ; 1999 ; 17 >
+    au < doNotProcess ; doNotProcess ; 1983 ; Nature Biotechnology Volume 1 ; 1983 ; 1 >
+    au < doNotProcess ; doNotProcess ; 1984 ; Nature Biotechnology Volume 2 ; 1984 ; 2 >
+    au < doNotProcess ; doNotProcess ; 1985 ; Nature Biotechnology Volume 3 ; 1985 ; 3 >
+    au < doNotProcess ; doNotProcess ; 1986 ; Nature Biotechnology Volume 4 ; 1986 ; 4 >
+    au < doNotProcess ; doNotProcess ; 1987 ; Nature Biotechnology Volume 5 ; 1987 ; 5 >
+    au < doNotProcess ; doNotProcess ; 1988 ; Nature Biotechnology Volume 6 ; 1988 ; 6 >
+    au < doNotProcess ; doNotProcess ; 1989 ; Nature Biotechnology Volume 7 ; 1989 ; 7 >
+    au < doNotProcess ; doNotProcess ; 1990 ; Nature Biotechnology Volume 8 ; 1990 ; 8 >
+    au < doNotProcess ; doNotProcess ; 1991 ; Nature Biotechnology Volume 9 ; 1991 ; 9 >
+    au < doNotProcess ; doNotProcess ; 1992 ; Nature Biotechnology Volume 10 ; 1992 ; 10 >
+    au < doNotProcess ; doNotProcess ; 1993 ; Nature Biotechnology Volume 11 ; 1993 ; 11 >
+    au < doNotProcess ; doNotProcess ; 1994 ; Nature Biotechnology Volume 12 ; 1994 ; 12 >
+    au < doNotProcess ; doNotProcess ; 1995 ; Nature Biotechnology Volume 13 ; 1995 ; 13 >
+    au < doNotProcess ; doNotProcess ; 1996 ; Nature Biotechnology Volume 14 ; 1996 ; 14 >
+    au < doNotProcess ; doNotProcess ; 1997 ; Nature Biotechnology Volume 15 ; 1997 ; 15 >
+    au < doNotProcess ; doNotProcess ; 1998 ; Nature Biotechnology Volume 16 ; 1998 ; 16 >
+    au < doNotProcess ; doNotProcess ; 1999 ; Nature Biotechnology Volume 17 ; 1999 ; 17 >
     au < manifest ; exists ; 2000 ; Nature Biotechnology Volume 18 ; 2000 ; 18 >
     au < manifest ; exists ; 2001 ; Nature Biotechnology Volume 19 ; 2001 ; 19 >
     au < manifest ; exists ; 2002 ; Nature Biotechnology Volume 20 ; 2002 ; 20 >
@@ -2455,7 +2455,7 @@
     param[journal_id] = ncb
     comment[notReady] = low agreement 
 
-    au < manifest ; exists ; 1999 ; Nature Cell Biology Volume 1 ; 1999 ; 1 >
+    au < doNotProcess ; doNotProcess ; 1999 ; Nature Cell Biology Volume 1 ; 1999 ; 1 >
     au < manifest ; exists ; 2000 ; Nature Cell Biology Volume 2 ; 2000 ; 2 >
     au < manifest ; exists ; 2001 ; Nature Cell Biology Volume 3 ; 2001 ; 3 >
     au < manifest ; exists ; 2002 ; Nature Cell Biology Volume 4 ; 2002 ; 4 >
@@ -2601,29 +2601,29 @@
 
     param[journal_id] = ng
 
-    au < manifest ; exists ; 1993 ; Nature Genetics Volume 1 ; 1992 ; 1 >
-    au < manifest ; exists ; 1993 ; Nature Genetics Volume 2 ; 1992 ; 2 >
-    au < manifest ; exists ; 1993 ; Nature Genetics Volume 3 ; 1993 ; 3 >
-    au < manifest ; exists ; 1993 ; Nature Genetics Volume 4 ; 1993 ; 4 >
-    au < manifest ; exists ; 1993 ; Nature Genetics Volume 5 ; 1993 ; 5 >
-    au < manifest ; exists ; 1994 ; Nature Genetics Volume 6 ; 1994 ; 6 >
-    au < manifest ; exists ; 1994 ; Nature Genetics Volume 7 ; 1994 ; 7 >
-    au < manifest ; exists ; 1994 ; Nature Genetics Volume 8 ; 1994 ; 8 >
-    au < manifest ; exists ; 1995 ; Nature Genetics Volume 9 ; 1995 ; 9 >
-    au < manifest ; exists ; 1995 ; Nature Genetics Volume 10 ; 1995 ; 10 >
-    au < manifest ; exists ; 1995 ; Nature Genetics Volume 11 ; 1995 ; 11 >
-    au < manifest ; exists ; 1996 ; Nature Genetics Volume 12 ; 1996 ; 12 >
-    au < manifest ; exists ; 1996 ; Nature Genetics Volume 13 ; 1996 ; 13 >
-    au < manifest ; exists ; 1996 ; Nature Genetics Volume 14 ; 1996 ; 14 >
-    au < manifest ; exists ; 1997 ; Nature Genetics Volume 15 ; 1997 ; 15 >
-    au < manifest ; exists ; 1997 ; Nature Genetics Volume 16 ; 1997 ; 16 >
-    au < manifest ; exists ; 1997 ; Nature Genetics Volume 17 ; 1997 ; 17 >
-    au < manifest ; exists ; 1998 ; Nature Genetics Volume 18 ; 1998 ; 18 >
-    au < manifest ; exists ; 1998 ; Nature Genetics Volume 19 ; 1998 ; 19 >
-    au < manifest ; exists ; 1998 ; Nature Genetics Volume 20 ; 1998 ; 20 >
-    au < manifest ; exists ; 1999 ; Nature Genetics Volume 21 ; 1999 ; 21 >
-    au < manifest ; exists ; 1999 ; Nature Genetics Volume 22 ; 1999 ; 22 >
-    au < manifest ; exists ; 1999 ; Nature Genetics Volume 23 ; 1999 ; 23 >
+    au < doNotProcess ; doNotProcess ; 1993 ; Nature Genetics Volume 1 ; 1992 ; 1 >
+    au < doNotProcess ; doNotProcess ; 1993 ; Nature Genetics Volume 2 ; 1992 ; 2 >
+    au < doNotProcess ; doNotProcess ; 1993 ; Nature Genetics Volume 3 ; 1993 ; 3 >
+    au < doNotProcess ; doNotProcess ; 1993 ; Nature Genetics Volume 4 ; 1993 ; 4 >
+    au < doNotProcess ; doNotProcess ; 1993 ; Nature Genetics Volume 5 ; 1993 ; 5 >
+    au < doNotProcess ; doNotProcess ; 1994 ; Nature Genetics Volume 6 ; 1994 ; 6 >
+    au < doNotProcess ; doNotProcess ; 1994 ; Nature Genetics Volume 7 ; 1994 ; 7 >
+    au < doNotProcess ; doNotProcess ; 1994 ; Nature Genetics Volume 8 ; 1994 ; 8 >
+    au < doNotProcess ; doNotProcess ; 1995 ; Nature Genetics Volume 9 ; 1995 ; 9 >
+    au < doNotProcess ; doNotProcess ; 1995 ; Nature Genetics Volume 10 ; 1995 ; 10 >
+    au < doNotProcess ; doNotProcess ; 1995 ; Nature Genetics Volume 11 ; 1995 ; 11 >
+    au < doNotProcess ; doNotProcess ; 1996 ; Nature Genetics Volume 12 ; 1996 ; 12 >
+    au < doNotProcess ; doNotProcess ; 1996 ; Nature Genetics Volume 13 ; 1996 ; 13 >
+    au < doNotProcess ; doNotProcess ; 1996 ; Nature Genetics Volume 14 ; 1996 ; 14 >
+    au < doNotProcess ; doNotProcess ; 1997 ; Nature Genetics Volume 15 ; 1997 ; 15 >
+    au < doNotProcess ; doNotProcess ; 1997 ; Nature Genetics Volume 16 ; 1997 ; 16 >
+    au < doNotProcess ; doNotProcess ; 1997 ; Nature Genetics Volume 17 ; 1997 ; 17 >
+    au < doNotProcess ; doNotProcess ; 1998 ; Nature Genetics Volume 18 ; 1998 ; 18 >
+    au < doNotProcess ; doNotProcess ; 1998 ; Nature Genetics Volume 19 ; 1998 ; 19 >
+    au < doNotProcess ; doNotProcess ; 1998 ; Nature Genetics Volume 20 ; 1998 ; 20 >
+    au < doNotProcess ; doNotProcess ; 1999 ; Nature Genetics Volume 21 ; 1999 ; 21 >
+    au < doNotProcess ; doNotProcess ; 1999 ; Nature Genetics Volume 22 ; 1999 ; 22 >
+    au < doNotProcess ; doNotProcess ; 1999 ; Nature Genetics Volume 23 ; 1999 ; 23 >
     au < manifest ; exists ; 2000 ; Nature Genetics Volume 24 ; 2000 ; 24 >
     au < manifest ; exists ; 2000 ; Nature Genetics Volume 25 ; 2000 ; 25 >
     au < manifest ; exists ; 2000 ; Nature Genetics Volume 26 ; 2000 ; 26 >
@@ -2738,11 +2738,11 @@
 
     param[journal_id] = nm
 
-    au < manifest ; exists ; 1995 ; Nature Medicine Volume 1 ; 1995 ; 1 >
-    au < manifest ; exists ; 1996 ; Nature Medicine Volume 2 ; 1996 ; 2 >
-    au < manifest ; exists ; 1997 ; Nature Medicine Volume 3 ; 1997 ; 3 >
-    au < manifest ; exists ; 1998 ; Nature Medicine Volume 4 ; 1998 ; 4 >
-    au < manifest ; exists ; 1999 ; Nature Medicine Volume 5 ; 1999 ; 5 >
+    au < doNotProcess ; doNotProcess ; 1995 ; Nature Medicine Volume 1 ; 1995 ; 1 >
+    au < doNotProcess ; doNotProcess ; 1996 ; Nature Medicine Volume 2 ; 1996 ; 2 >
+    au < doNotProcess ; doNotProcess ; 1997 ; Nature Medicine Volume 3 ; 1997 ; 3 >
+    au < doNotProcess ; doNotProcess ; 1998 ; Nature Medicine Volume 4 ; 1998 ; 4 >
+    au < doNotProcess ; doNotProcess ; 1999 ; Nature Medicine Volume 5 ; 1999 ; 5 >
     au < manifest ; exists ; 2000 ; Nature Medicine Volume 6 ; 2000 ; 6 >
     au < manifest ; exists ; 2001 ; Nature Medicine Volume 7 ; 2001 ; 7 >
     au < manifest ; exists ; 2002 ; Nature Medicine Volume 8 ; 2002 ; 8 >
@@ -2820,8 +2820,8 @@
 
     param[journal_id] = neuro
 
-    au < manifest ; exists ; 1998 ; Nature Neuroscience Volume 1 ; 1998 ; 1 >
-    au < manifest ; exists ; 1999 ; Nature Neuroscience Volume 2 ; 1999 ; 2 >
+    au < doNotProcess ; doNotProcess ; 1998 ; Nature Neuroscience Volume 1 ; 1998 ; 1 >
+    au < doNotProcess ; doNotProcess ; 1999 ; Nature Neuroscience Volume 2 ; 1999 ; 2 >
     au < manifest ; exists ; 2000 ; Nature Neuroscience Volume 3 ; 2000 ; 3 >
     au < manifest ; exists ; 2001 ; Nature Neuroscience Volume 4 ; 2001 ; 4 >
     au < manifest ; exists ; 2002 ; Nature Neuroscience Volume 5 ; 2002 ; 5 >
@@ -3312,12 +3312,12 @@
 
     param[journal_id] = nsmb
 
-    au < manifest ; exists ; 1994 ; Nature Structural and Molecular Biology Volume 1 ; 1994 ; 1 >
-    au < manifest ; exists ; 1995 ; Nature Structural and Molecular Biology Volume 2 ; 1995 ; 2 >
-    au < manifest ; exists ; 1996 ; Nature Structural and Molecular Biology Volume 3 ; 1996 ; 3 >
-    au < manifest ; exists ; 1997 ; Nature Structural and Molecular Biology Volume 4 ; 1997 ; 4 >
-    au < manifest ; exists ; 1998 ; Nature Structural and Molecular Biology Volume 5 ; 1998 ; 5 >
-    au < manifest ; exists ; 1999 ; Nature Structural and Molecular Biology Volume 6 ; 1999 ; 6 >
+    au < doNotProcess ; doNotProcess ; 1994 ; Nature Structural and Molecular Biology Volume 1 ; 1994 ; 1 >
+    au < doNotProcess ; doNotProcess ; 1995 ; Nature Structural and Molecular Biology Volume 2 ; 1995 ; 2 >
+    au < doNotProcess ; doNotProcess ; 1996 ; Nature Structural and Molecular Biology Volume 3 ; 1996 ; 3 >
+    au < doNotProcess ; doNotProcess ; 1997 ; Nature Structural and Molecular Biology Volume 4 ; 1997 ; 4 >
+    au < doNotProcess ; doNotProcess ; 1998 ; Nature Structural and Molecular Biology Volume 5 ; 1998 ; 5 >
+    au < doNotProcess ; doNotProcess ; 1999 ; Nature Structural and Molecular Biology Volume 6 ; 1999 ; 6 >
     au < manifest ; exists ; 2000 ; Nature Structural and Molecular Biology Volume 7 ; 2000 ; 7 >
     au < manifest ; exists ; 2001 ; Nature Structural and Molecular Biology Volume 8 ; 2001 ; 8 >
     au < manifest ; exists ; 2002 ; Nature Structural and Molecular Biology Volume 9 ; 2002 ; 9 >
@@ -3347,17 +3347,17 @@
     
     param[journal_id] = npp
 
-    au < manifest ; exists ; 1994 ; Neuropsychopharmacology Volume 11 ; 1994 ; 11 >
-    au < manifest ; exists ; 1995 ; Neuropsychopharmacology Volume 12 (1995) ; 1995 ; 12 >
-    au < manifest ; exists ; 1995 ; Neuropsychopharmacology Volume 13 (1995) ; 1995 ; 13 >
-    au < manifest ; exists ; 1996 ; Neuropsychopharmacology Volume 14 (1996) ; 1996 ; 14 >
-    au < manifest ; exists ; 1996 ; Neuropsychopharmacology Volume 15 (1996) ; 1996 ; 15 >
-    au < exists ; exists ; 1997 ; Neuropsychopharmacology Volume 16 (1997) ; 1997 ; 16 >
-    au < exists ; exists ; 1997 ; Neuropsychopharmacology Volume 17 (1997) ; 1997 ; 17 >
-    au < exists ; exists ; 1998 ; Neuropsychopharmacology Volume 18 (1998) ; 1998 ; 18 >
-    au < exists ; exists ; 1998 ; Neuropsychopharmacology Volume 19 (1998) ; 1998 ; 19 >
-    au < exists ; exists ; 1999 ; Neuropsychopharmacology Volume 20 (1999) ; 1999 ; 20 >
-    au < exists ; exists ; 1999 ; Neuropsychopharmacology Volume 21 (1999) ; 1999 ; 21 >
+    au < doNotProcess ; doNotProcess ; 1994 ; Neuropsychopharmacology Volume 11 ; 1994 ; 11 >
+    au < doNotProcess ; doNotProcess ; 1995 ; Neuropsychopharmacology Volume 12 (1995) ; 1995 ; 12 >
+    au < doNotProcess ; doNotProcess ; 1995 ; Neuropsychopharmacology Volume 13 (1995) ; 1995 ; 13 >
+    au < doNotProcess ; doNotProcess ; 1996 ; Neuropsychopharmacology Volume 14 (1996) ; 1996 ; 14 >
+    au < doNotProcess ; doNotProcess ; 1996 ; Neuropsychopharmacology Volume 15 (1996) ; 1996 ; 15 >
+    au < doNotProcess ; doNotProcess ; 1997 ; Neuropsychopharmacology Volume 16 (1997) ; 1997 ; 16 >
+    au < doNotProcess ; doNotProcess ; 1997 ; Neuropsychopharmacology Volume 17 (1997) ; 1997 ; 17 >
+    au < doNotProcess ; doNotProcess ; 1998 ; Neuropsychopharmacology Volume 18 (1998) ; 1998 ; 18 >
+    au < doNotProcess ; doNotProcess ; 1998 ; Neuropsychopharmacology Volume 19 (1998) ; 1998 ; 19 >
+    au < doNotProcess ; doNotProcess ; 1999 ; Neuropsychopharmacology Volume 20 (1999) ; 1999 ; 20 >
+    au < doNotProcess ; doNotProcess ; 1999 ; Neuropsychopharmacology Volume 21 (1999) ; 1999 ; 21 >
     au < exists ; exists ; 2000 ; Neuropsychopharmacology Volume 22 (2000) ; 2000 ; 22 >
     au < exists ; exists ; 2000 ; Neuropsychopharmacology Volume 23 (2000) ; 2000 ; 23 >
     au < manifest ; exists ; 2001 ; Neuropsychopharmacology Volume 24 (2001) ; 2001 ; 24 >
@@ -3457,11 +3457,11 @@
     au < down ; exists ; 2012 ; Oncogenesis Volume 1 [to delete] ; 2012 ; 1 >
     au < down ; exists ; 2013 ; Oncogenesis Volume 2 [to delete] ; 2013 ; 2 >
 
-    au < manifest ; exists ; 1997 ; Oncogene Volume 14 ; 1997 ; 14 >
-    au < manifest ; exists ; 1997 ; Oncogene Volume 15 ; 1997 ; 15 >
-    au < manifest ; exists ; 1998 ; Oncogene Volume 16 ; 1998 ; 16 >
-    au < manifest ; exists ; 1998 ; Oncogene Volume 17 ; 1998 ; 17 >
-    au < manifest ; exists ; 1999 ; Oncogene Volume 18 ; 1999 ; 18 >
+    au < doNotProcess ; doNotProcess ; 1997 ; Oncogene Volume 14 ; 1997 ; 14 >
+    au < doNotProcess ; doNotProcess ; 1997 ; Oncogene Volume 15 ; 1997 ; 15 >
+    au < doNotProcess ; doNotProcess ; 1998 ; Oncogene Volume 16 ; 1998 ; 16 >
+    au < doNotProcess ; doNotProcess ; 1998 ; Oncogene Volume 17 ; 1998 ; 17 >
+    au < doNotProcess ; doNotProcess ; 1999 ; Oncogene Volume 18 ; 1999 ; 18 >
     au < manifest ; exists ; 2000 ; Oncogene Volume 19 ; 2000 ; 19 >
     au < manifest ; exists ; 2001 ; Oncogene Volume 20 ; 2001 ; 20 >
     au < manifest ; exists ; 2002 ; Oncogene Volume 21 ; 2002 ; 21 >
@@ -3504,52 +3504,52 @@
 
     param[journal_id] = pr
     
-    au < manifest ; exists ; 1967 ; Pediatric Research Volume 1 ; 1967 ; 1 >
-    au < manifest ; exists ; 1968 ; Pediatric Research Volume 2 ; 1968 ; 2 >
-    au < manifest ; exists ; 1969 ; Pediatric Research Volume 3 ; 1969 ; 3 >
-    au < manifest ; exists ; 1970 ; Pediatric Research Volume 4 ; 1970 ; 4 >
-    au < manifest ; exists ; 1971 ; Pediatric Research Volume 5 ; 1971 ; 5 >
-    au < manifest ; exists ; 1972 ; Pediatric Research Volume 6 ; 1972 ; 6 >
-    au < manifest ; exists ; 1973 ; Pediatric Research Volume 7 ; 1973 ; 7 >
-    au < manifest ; exists ; 1974 ; Pediatric Research Volume 8 ; 1974 ; 8 >
-    au < manifest ; exists ; 1975 ; Pediatric Research Volume 9 ; 1975 ; 9 >
-    au < manifest ; exists ; 1976 ; Pediatric Research Volume 10 ; 1976 ; 10 >
-    au < manifest ; exists ; 1977 ; Pediatric Research Volume 11 ; 1977 ; 11 >
-    au < manifest ; exists ; 1978 ; Pediatric Research Volume 12 ; 1978 ; 12 >
-    au < manifest ; exists ; 1979 ; Pediatric Research Volume 13 ; 1979 ; 13 >
-    au < manifest ; exists ; 1980 ; Pediatric Research Volume 14 ; 1980 ; 14 >
-    au < manifest ; exists ; 1981 ; Pediatric Research Volume 15 ; 1981 ; 15 >
-    au < manifest ; exists ; 1982 ; Pediatric Research Volume 16 ; 1982 ; 16 >
-    au < manifest ; exists ; 1983 ; Pediatric Research Volume 17 ; 1983 ; 17 >
-    au < manifest ; exists ; 1984 ; Pediatric Research Volume 18 ; 1984 ; 18 >
-    au < manifest ; exists ; 1985 ; Pediatric Research Volume 19 ; 1985 ; 19 >
-    au < manifest ; exists ; 1986 ; Pediatric Research Volume 20 ; 1986 ; 20 >
-    au < manifest ; exists ; 1987 ; Pediatric Research Volume 21 ; 1987 ; 21 >
-    au < manifest ; exists ; 1987 ; Pediatric Research Volume 22 ; 1987 ; 22 >
-    au < manifest ; exists ; 1988 ; Pediatric Research Volume 23 ; 1988 ; 23 >
-    au < manifest ; exists ; 1988 ; Pediatric Research Volume 24 ; 1988 ; 24 >
-    au < manifest ; exists ; 1989 ; Pediatric Research Volume 25 ; 1989 ; 25 >
-    au < manifest ; exists ; 1989 ; Pediatric Research Volume 26 ; 1989 ; 26 >
-    au < manifest ; exists ; 1990 ; Pediatric Research Volume 27 ; 1990 ; 27 >
-    au < manifest ; exists ; 1990 ; Pediatric Research Volume 28 ; 1990 ; 28 >
-    au < manifest ; exists ; 1991 ; Pediatric Research Volume 29 ; 1991 ; 29 >
-    au < manifest ; exists ; 1991 ; Pediatric Research Volume 30 ; 1991 ; 30 >
-    au < manifest ; exists ; 1992 ; Pediatric Research Volume 31 ; 1992 ; 31 >
-    au < manifest ; exists ; 1992 ; Pediatric Research Volume 32 ; 1992 ; 32 >
-    au < manifest ; exists ; 1993 ; Pediatric Research Volume 33 ; 1993 ; 33 >
-    au < manifest ; exists ; 1993 ; Pediatric Research Volume 34 ; 1993 ; 34 >
-    au < manifest ; exists ; 1994 ; Pediatric Research Volume 35 ; 1994 ; 35 >
-    au < manifest ; exists ; 1994 ; Pediatric Research Volume 36 ; 1994 ; 36 >
-    au < manifest ; exists ; 1995 ; Pediatric Research Volume 37 ; 1995 ; 37 >
-    au < manifest ; exists ; 1995 ; Pediatric Research Volume 38 ; 1995 ; 38 >
-    au < manifest ; exists ; 1996 ; Pediatric Research Volume 39 ; 1996 ; 39 >
-    au < manifest ; exists ; 1996 ; Pediatric Research Volume 40 ; 1996 ; 40 >
-    au < manifest ; exists ; 1997 ; Pediatric Research Volume 41 ; 1997 ; 41 >
-    au < manifest ; exists ; 1997 ; Pediatric Research Volume 42 ; 1997 ; 42 >
-    au < manifest ; exists ; 1998 ; Pediatric Research Volume 43 ; 1998 ; 43 >
-    au < manifest ; exists ; 1998 ; Pediatric Research Volume 44 ; 1998 ; 44 >
-    au < manifest ; exists ; 1999 ; Pediatric Research Volume 45 ; 1999 ; 45 >
-    au < manifest ; exists ; 1999 ; Pediatric Research Volume 46 ; 1999 ; 46 >
+    au < doNotProcess ; doNotProcess ; 1967 ; Pediatric Research Volume 1 ; 1967 ; 1 >
+    au < doNotProcess ; doNotProcess ; 1968 ; Pediatric Research Volume 2 ; 1968 ; 2 >
+    au < doNotProcess ; doNotProcess ; 1969 ; Pediatric Research Volume 3 ; 1969 ; 3 >
+    au < doNotProcess ; doNotProcess ; 1970 ; Pediatric Research Volume 4 ; 1970 ; 4 >
+    au < doNotProcess ; doNotProcess ; 1971 ; Pediatric Research Volume 5 ; 1971 ; 5 >
+    au < doNotProcess ; doNotProcess ; 1972 ; Pediatric Research Volume 6 ; 1972 ; 6 >
+    au < doNotProcess ; doNotProcess ; 1973 ; Pediatric Research Volume 7 ; 1973 ; 7 >
+    au < doNotProcess ; doNotProcess ; 1974 ; Pediatric Research Volume 8 ; 1974 ; 8 >
+    au < doNotProcess ; doNotProcess ; 1975 ; Pediatric Research Volume 9 ; 1975 ; 9 >
+    au < doNotProcess ; doNotProcess ; 1976 ; Pediatric Research Volume 10 ; 1976 ; 10 >
+    au < doNotProcess ; doNotProcess ; 1977 ; Pediatric Research Volume 11 ; 1977 ; 11 >
+    au < doNotProcess ; doNotProcess ; 1978 ; Pediatric Research Volume 12 ; 1978 ; 12 >
+    au < doNotProcess ; doNotProcess ; 1979 ; Pediatric Research Volume 13 ; 1979 ; 13 >
+    au < doNotProcess ; doNotProcess ; 1980 ; Pediatric Research Volume 14 ; 1980 ; 14 >
+    au < doNotProcess ; doNotProcess ; 1981 ; Pediatric Research Volume 15 ; 1981 ; 15 >
+    au < doNotProcess ; doNotProcess ; 1982 ; Pediatric Research Volume 16 ; 1982 ; 16 >
+    au < doNotProcess ; doNotProcess ; 1983 ; Pediatric Research Volume 17 ; 1983 ; 17 >
+    au < doNotProcess ; doNotProcess ; 1984 ; Pediatric Research Volume 18 ; 1984 ; 18 >
+    au < doNotProcess ; doNotProcess ; 1985 ; Pediatric Research Volume 19 ; 1985 ; 19 >
+    au < doNotProcess ; doNotProcess ; 1986 ; Pediatric Research Volume 20 ; 1986 ; 20 >
+    au < doNotProcess ; doNotProcess ; 1987 ; Pediatric Research Volume 21 ; 1987 ; 21 >
+    au < doNotProcess ; doNotProcess ; 1987 ; Pediatric Research Volume 22 ; 1987 ; 22 >
+    au < doNotProcess ; doNotProcess ; 1988 ; Pediatric Research Volume 23 ; 1988 ; 23 >
+    au < doNotProcess ; doNotProcess ; 1988 ; Pediatric Research Volume 24 ; 1988 ; 24 >
+    au < doNotProcess ; doNotProcess ; 1989 ; Pediatric Research Volume 25 ; 1989 ; 25 >
+    au < doNotProcess ; doNotProcess ; 1989 ; Pediatric Research Volume 26 ; 1989 ; 26 >
+    au < doNotProcess ; doNotProcess ; 1990 ; Pediatric Research Volume 27 ; 1990 ; 27 >
+    au < doNotProcess ; doNotProcess ; 1990 ; Pediatric Research Volume 28 ; 1990 ; 28 >
+    au < doNotProcess ; doNotProcess ; 1991 ; Pediatric Research Volume 29 ; 1991 ; 29 >
+    au < doNotProcess ; doNotProcess ; 1991 ; Pediatric Research Volume 30 ; 1991 ; 30 >
+    au < doNotProcess ; doNotProcess ; 1992 ; Pediatric Research Volume 31 ; 1992 ; 31 >
+    au < doNotProcess ; doNotProcess ; 1992 ; Pediatric Research Volume 32 ; 1992 ; 32 >
+    au < doNotProcess ; doNotProcess ; 1993 ; Pediatric Research Volume 33 ; 1993 ; 33 >
+    au < doNotProcess ; doNotProcess ; 1993 ; Pediatric Research Volume 34 ; 1993 ; 34 >
+    au < doNotProcess ; doNotProcess ; 1994 ; Pediatric Research Volume 35 ; 1994 ; 35 >
+    au < doNotProcess ; doNotProcess ; 1994 ; Pediatric Research Volume 36 ; 1994 ; 36 >
+    au < doNotProcess ; doNotProcess ; 1995 ; Pediatric Research Volume 37 ; 1995 ; 37 >
+    au < doNotProcess ; doNotProcess ; 1995 ; Pediatric Research Volume 38 ; 1995 ; 38 >
+    au < doNotProcess ; doNotProcess ; 1996 ; Pediatric Research Volume 39 ; 1996 ; 39 >
+    au < doNotProcess ; doNotProcess ; 1996 ; Pediatric Research Volume 40 ; 1996 ; 40 >
+    au < doNotProcess ; doNotProcess ; 1997 ; Pediatric Research Volume 41 ; 1997 ; 41 >
+    au < doNotProcess ; doNotProcess ; 1997 ; Pediatric Research Volume 42 ; 1997 ; 42 >
+    au < doNotProcess ; doNotProcess ; 1998 ; Pediatric Research Volume 43 ; 1998 ; 43 >
+    au < doNotProcess ; doNotProcess ; 1998 ; Pediatric Research Volume 44 ; 1998 ; 44 >
+    au < doNotProcess ; doNotProcess ; 1999 ; Pediatric Research Volume 45 ; 1999 ; 45 >
+    au < doNotProcess ; doNotProcess ; 1999 ; Pediatric Research Volume 46 ; 1999 ; 46 >
     au < manifest ; exists ; 2000 ; Pediatric Research Volume 47 ; 2000 ; 47 >
     au < manifest ; exists ; 2000 ; Pediatric Research Volume 48 ; 2000 ; 48 >
     au < manifest ; exists ; 2001 ; Pediatric Research Volume 49 ; 2001 ; 49 >
@@ -3644,9 +3644,9 @@
 
     param[journal_id] = pcan
 
-    au < manifest ; exists ; 1997 ; Prostate Cancer and Prostatic Diseases Volume 1 (1997) ; 1997 ; 1 >
-    au < manifest ; exists ; 1998 ; Prostate Cancer and Prostatic Diseases Volume 1 (1998) ; 1998 ; 1 >
-    au < manifest ; exists ; 1999 ; Prostate Cancer and Prostatic Diseases Volume 2 ; 1999 ; 2 >
+    au < doNotProcess ; doNotProcess ; 1997 ; Prostate Cancer and Prostatic Diseases Volume 1 (1997) ; 1997 ; 1 >
+    au < doNotProcess ; doNotProcess ; 1998 ; Prostate Cancer and Prostatic Diseases Volume 1 (1998) ; 1998 ; 1 >
+    au < doNotProcess ; doNotProcess ; 1999 ; Prostate Cancer and Prostatic Diseases Volume 2 ; 1999 ; 2 >
     au < manifest ; exists ; 2000 ; Prostate Cancer and Prostatic Diseases Volume 3 ; 2000 ; 3 >
     au < manifest ; exists ; 2001 ; Prostate Cancer and Prostatic Diseases Volume 4 ; 2001 ; 4 >
     au < manifest ; exists ; 2002 ; Prostate Cancer and Prostatic Diseases Volume 5 ; 2002 ; 5 >
@@ -3710,59 +3710,59 @@
 
     param[journal_id] = sc
 
-    au < manifest ; exists ; 1963 ; Spinal Cord Volume 1 (1963) ; 1963 ; 1 >
-    au < manifest ; exists ; 1964 ; Spinal Cord Volume 1 (1964) ; 1964 ; 1 >
-    au < manifest ; exists ; 1964 ; Spinal Cord Volume 2 (1964) ; 1964 ; 2 >
-    au < manifest ; exists ; 1965 ; Spinal Cord Volume 2 (1965) ; 1965 ; 2 >
-    au < manifest ; exists ; 1965 ; Spinal Cord Volume 3 (1965) ; 1965 ; 3 >
-    au < manifest ; exists ; 1966 ; Spinal Cord Volume 3 (1966) ; 1966 ; 3 >
-    au < manifest ; exists ; 1966 ; Spinal Cord Volume 4 (1966) ; 1966 ; 4 >
-    au < manifest ; exists ; 1967 ; Spinal Cord Volume 4 (1967) ; 1967 ; 4 >
-    au < manifest ; exists ; 1967 ; Spinal Cord Volume 5 (1967) ; 1967 ; 5 >
-    au < manifest ; exists ; 1968 ; Spinal Cord Volume 5 (1968) ; 1968 ; 5 >
-    au < manifest ; exists ; 1968 ; Spinal Cord Volume 6 (1968) ; 1968 ; 6 >
-    au < manifest ; exists ; 1969 ; Spinal Cord Volume 6 (1969) ; 1969 ; 6 >
-    au < manifest ; exists ; 1969 ; Spinal Cord Volume 7 (1969) ; 1969 ; 7 >
-    au < manifest ; exists ; 1970 ; Spinal Cord Volume 7 (1970) ; 1970 ; 7 >
-    au < manifest ; exists ; 1970 ; Spinal Cord Volume 8 (1970) ; 1970 ; 8 >
-    au < manifest ; exists ; 1971 ; Spinal Cord Volume 8 (1971) ; 1971 ; 8 >
-    au < manifest ; exists ; 1971 ; Spinal Cord Volume 9 (1971) ; 1971 ; 9 >
-    au < manifest ; exists ; 1972 ; Spinal Cord Volume 9 (1972) ; 1972 ; 9 >
-    au < manifest ; exists ; 1972 ; Spinal Cord Volume 10 (1972) ; 1972 ; 10 >
-    au < manifest ; exists ; 1973 ; Spinal Cord Volume 10 (1973) ; 1973 ; 10 >
-    au < manifest ; exists ; 1973 ; Spinal Cord Volume 11 (1973) ; 1973 ; 11 >
-    au < manifest ; exists ; 1974 ; Spinal Cord Volume 11 (1974) ; 1974 ; 11 >
-    au < manifest ; exists ; 1974 ; Spinal Cord Volume 12 (1974) ; 1974 ; 12 >
-    au < manifest ; exists ; 1975 ; Spinal Cord Volume 12 (1975) ; 1975 ; 12 >
-    au < manifest ; exists ; 1975 ; Spinal Cord Volume 13 (1975) ; 1975 ; 13 >
-    au < manifest ; exists ; 1976 ; Spinal Cord Volume 13 (1976) ; 1976 ; 13 >
-    au < manifest ; exists ; 1976 ; Spinal Cord Volume 14 (1976) ; 1976 ; 14 >
-    au < manifest ; exists ; 1977 ; Spinal Cord Volume 14 (1977) ; 1977 ; 14 >
-    au < manifest ; exists ; 1977 ; Spinal Cord Volume 15 (1977) ; 1977 ; 15 >
-    au < manifest ; exists ; 1978 ; Spinal Cord Volume 15 (1978) ; 1978 ; 15 >
-    au < manifest ; exists ; 1978 ; Spinal Cord Volume 16 (1978) ; 1978 ; 16 >
-    au < manifest ; exists ; 1979 ; Spinal Cord Volume 16 (1979) ; 1979 ; 16 >
-    au < manifest ; exists ; 1979 ; Spinal Cord Volume 17 ; 1979 ; 17 >
-    au < manifest ; exists ; 1980 ; Spinal Cord Volume 18 ; 1980 ; 18 >
-    au < manifest ; exists ; 1981 ; Spinal Cord Volume 19 ; 1981 ; 19 >
-    au < manifest ; exists ; 1982 ; Spinal Cord Volume 20 ; 1982 ; 20 >
-    au < manifest ; exists ; 1983 ; Spinal Cord Volume 21 ; 1983 ; 21 >
-    au < manifest ; exists ; 1984 ; Spinal Cord Volume 22 ; 1984 ; 22 >
-    au < manifest ; exists ; 1985 ; Spinal Cord Volume 23 ; 1985 ; 23 >
-    au < manifest ; exists ; 1986 ; Spinal Cord Volume 24 ; 1986 ; 24 >
-    au < manifest ; exists ; 1987 ; Spinal Cord Volume 25 ; 1987 ; 25 >
-    au < manifest ; exists ; 1988 ; Spinal Cord Volume 26 ; 1988 ; 26 >
-    au < manifest ; exists ; 1989 ; Spinal Cord Volume 27 ; 1989 ; 27 >
-    au < manifest ; exists ; 1990 ; Spinal Cord Volume 28 ; 1990 ; 28 >
-    au < manifest ; exists ; 1991 ; Spinal Cord Volume 29 ; 1991 ; 29 >
-    au < manifest ; exists ; 1992 ; Spinal Cord Volume 30 ; 1992 ; 30 >
-    au < manifest ; exists ; 1993 ; Spinal Cord Volume 31 ; 1993 ; 31 >
-    au < manifest ; exists ; 1994 ; Spinal Cord Volume 32 ; 1994 ; 32 >
-    au < manifest ; exists ; 1995 ; Spinal Cord Volume 33 ; 1995 ; 33 >
-    au < manifest ; exists ; 1996 ; Spinal Cord Volume 34 ; 1996 ; 34 >
-    au < manifest ; exists ; 1997 ; Spinal Cord Volume 35 ; 1997 ; 35 >
-    au < manifest ; exists ; 1998 ; Spinal Cord Volume 36 ; 1998 ; 36 >
-    au < manifest ; exists ; 1999 ; Spinal Cord Volume 37 ; 1999 ; 37 >
+    au < doNotProcess ; doNotProcess ; 1963 ; Spinal Cord Volume 1 (1963) ; 1963 ; 1 >
+    au < doNotProcess ; doNotProcess ; 1964 ; Spinal Cord Volume 1 (1964) ; 1964 ; 1 >
+    au < doNotProcess ; doNotProcess ; 1964 ; Spinal Cord Volume 2 (1964) ; 1964 ; 2 >
+    au < doNotProcess ; doNotProcess ; 1965 ; Spinal Cord Volume 2 (1965) ; 1965 ; 2 >
+    au < doNotProcess ; doNotProcess ; 1965 ; Spinal Cord Volume 3 (1965) ; 1965 ; 3 >
+    au < doNotProcess ; doNotProcess ; 1966 ; Spinal Cord Volume 3 (1966) ; 1966 ; 3 >
+    au < doNotProcess ; doNotProcess ; 1966 ; Spinal Cord Volume 4 (1966) ; 1966 ; 4 >
+    au < doNotProcess ; doNotProcess ; 1967 ; Spinal Cord Volume 4 (1967) ; 1967 ; 4 >
+    au < doNotProcess ; doNotProcess ; 1967 ; Spinal Cord Volume 5 (1967) ; 1967 ; 5 >
+    au < doNotProcess ; doNotProcess ; 1968 ; Spinal Cord Volume 5 (1968) ; 1968 ; 5 >
+    au < doNotProcess ; doNotProcess ; 1968 ; Spinal Cord Volume 6 (1968) ; 1968 ; 6 >
+    au < doNotProcess ; doNotProcess ; 1969 ; Spinal Cord Volume 6 (1969) ; 1969 ; 6 >
+    au < doNotProcess ; doNotProcess ; 1969 ; Spinal Cord Volume 7 (1969) ; 1969 ; 7 >
+    au < doNotProcess ; doNotProcess ; 1970 ; Spinal Cord Volume 7 (1970) ; 1970 ; 7 >
+    au < doNotProcess ; doNotProcess ; 1970 ; Spinal Cord Volume 8 (1970) ; 1970 ; 8 >
+    au < doNotProcess ; doNotProcess ; 1971 ; Spinal Cord Volume 8 (1971) ; 1971 ; 8 >
+    au < doNotProcess ; doNotProcess ; 1971 ; Spinal Cord Volume 9 (1971) ; 1971 ; 9 >
+    au < doNotProcess ; doNotProcess ; 1972 ; Spinal Cord Volume 9 (1972) ; 1972 ; 9 >
+    au < doNotProcess ; doNotProcess ; 1972 ; Spinal Cord Volume 10 (1972) ; 1972 ; 10 >
+    au < doNotProcess ; doNotProcess ; 1973 ; Spinal Cord Volume 10 (1973) ; 1973 ; 10 >
+    au < doNotProcess ; doNotProcess ; 1973 ; Spinal Cord Volume 11 (1973) ; 1973 ; 11 >
+    au < doNotProcess ; doNotProcess ; 1974 ; Spinal Cord Volume 11 (1974) ; 1974 ; 11 >
+    au < doNotProcess ; doNotProcess ; 1974 ; Spinal Cord Volume 12 (1974) ; 1974 ; 12 >
+    au < doNotProcess ; doNotProcess ; 1975 ; Spinal Cord Volume 12 (1975) ; 1975 ; 12 >
+    au < doNotProcess ; doNotProcess ; 1975 ; Spinal Cord Volume 13 (1975) ; 1975 ; 13 >
+    au < doNotProcess ; doNotProcess ; 1976 ; Spinal Cord Volume 13 (1976) ; 1976 ; 13 >
+    au < doNotProcess ; doNotProcess ; 1976 ; Spinal Cord Volume 14 (1976) ; 1976 ; 14 >
+    au < doNotProcess ; doNotProcess ; 1977 ; Spinal Cord Volume 14 (1977) ; 1977 ; 14 >
+    au < doNotProcess ; doNotProcess ; 1977 ; Spinal Cord Volume 15 (1977) ; 1977 ; 15 >
+    au < doNotProcess ; doNotProcess ; 1978 ; Spinal Cord Volume 15 (1978) ; 1978 ; 15 >
+    au < doNotProcess ; doNotProcess ; 1978 ; Spinal Cord Volume 16 (1978) ; 1978 ; 16 >
+    au < doNotProcess ; doNotProcess ; 1979 ; Spinal Cord Volume 16 (1979) ; 1979 ; 16 >
+    au < doNotProcess ; doNotProcess ; 1979 ; Spinal Cord Volume 17 ; 1979 ; 17 >
+    au < doNotProcess ; doNotProcess ; 1980 ; Spinal Cord Volume 18 ; 1980 ; 18 >
+    au < doNotProcess ; doNotProcess ; 1981 ; Spinal Cord Volume 19 ; 1981 ; 19 >
+    au < doNotProcess ; doNotProcess ; 1982 ; Spinal Cord Volume 20 ; 1982 ; 20 >
+    au < doNotProcess ; doNotProcess ; 1983 ; Spinal Cord Volume 21 ; 1983 ; 21 >
+    au < doNotProcess ; doNotProcess ; 1984 ; Spinal Cord Volume 22 ; 1984 ; 22 >
+    au < doNotProcess ; doNotProcess ; 1985 ; Spinal Cord Volume 23 ; 1985 ; 23 >
+    au < doNotProcess ; doNotProcess ; 1986 ; Spinal Cord Volume 24 ; 1986 ; 24 >
+    au < doNotProcess ; doNotProcess ; 1987 ; Spinal Cord Volume 25 ; 1987 ; 25 >
+    au < doNotProcess ; doNotProcess ; 1988 ; Spinal Cord Volume 26 ; 1988 ; 26 >
+    au < doNotProcess ; doNotProcess ; 1989 ; Spinal Cord Volume 27 ; 1989 ; 27 >
+    au < doNotProcess ; doNotProcess ; 1990 ; Spinal Cord Volume 28 ; 1990 ; 28 >
+    au < doNotProcess ; doNotProcess ; 1991 ; Spinal Cord Volume 29 ; 1991 ; 29 >
+    au < doNotProcess ; doNotProcess ; 1992 ; Spinal Cord Volume 30 ; 1992 ; 30 >
+    au < doNotProcess ; doNotProcess ; 1993 ; Spinal Cord Volume 31 ; 1993 ; 31 >
+    au < doNotProcess ; doNotProcess ; 1994 ; Spinal Cord Volume 32 ; 1994 ; 32 >
+    au < doNotProcess ; doNotProcess ; 1995 ; Spinal Cord Volume 33 ; 1995 ; 33 >
+    au < doNotProcess ; doNotProcess ; 1996 ; Spinal Cord Volume 34 ; 1996 ; 34 >
+    au < doNotProcess ; doNotProcess ; 1997 ; Spinal Cord Volume 35 ; 1997 ; 35 >
+    au < doNotProcess ; doNotProcess ; 1998 ; Spinal Cord Volume 36 ; 1998 ; 36 >
+    au < doNotProcess ; doNotProcess ; 1999 ; Spinal Cord Volume 37 ; 1999 ; 37 >
     au < manifest ; exists ; 2000 ; Spinal Cord Volume 38 ; 2000 ; 38 >
     au < manifest ; exists ; 2001 ; Spinal Cord Volume 39 ; 2001 ; 39 >
     au < manifest ; exists ; 2002 ; Spinal Cord Volume 40 ; 2002 ; 40 >
