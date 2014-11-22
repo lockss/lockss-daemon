@@ -1,5 +1,5 @@
 /*
- * $Id: DigitalCommonsRepositoryHtmlCrawlFilterFactory.java,v 1.2 2014-11-21 00:08:59 thib_gc Exp $
+ * $Id: DigitalCommonsRepositoryHtmlCrawlFilterFactory.java,v 1.3 2014-11-22 00:56:46 thib_gc Exp $
  */
 
 /*
@@ -66,8 +66,8 @@ public class DigitalCommonsRepositoryHtmlCrawlFilterFactory implements FilterFac
         // top right of the article for the year - <previous> and <next>
         // e.g. http://repository.cmu.edu/statistics/68/
         HtmlNodeFilters.tagWithAttribute("ul", "id", "pager"),
-        // collections of type ir_book have covers of the books in other years
-        // (other than those contained in e.g. <li class="lockss_2013">)
+        // collections of type ir_book and ir_gallery have covers of the books
+        // in other years (other than those in e.g. <li class="lockss_2013">)
         HtmlNodeFilters.tagWithAttribute("div", "class", "gallery-tools"),
         /* Unknown if following clauses are really necessary */
         // top banner

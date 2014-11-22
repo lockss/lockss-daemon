@@ -1,5 +1,5 @@
 /*
- * $Id: DigitalCommonsRepositoryHtmlHashFilterFactory.java,v 1.2 2014-11-21 00:08:59 thib_gc Exp $
+ * $Id: DigitalCommonsRepositoryHtmlHashFilterFactory.java,v 1.3 2014-11-22 00:56:46 thib_gc Exp $
  */
 
 /*
@@ -62,10 +62,11 @@ public class DigitalCommonsRepositoryHtmlHashFilterFactory implements FilterFact
         HtmlNodeFilters.tagWithAttribute("link", "rel", "stylesheet"),
         // top banner
         HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
-        // breadcrumb and accompanying backlinks
+        // breadcrumb and accompanying backlinks/decorations
         HtmlNodeFilters.tagWithAttribute("div", "id", "breadcrumb"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "series-header"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "series-home"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "series-title"),
         // skip to main
         HtmlNodeFilters.tagWithAttribute("a", "class", "skiplink"),
         // near top - navigation
@@ -75,8 +76,8 @@ public class DigitalCommonsRepositoryHtmlHashFilterFactory implements FilterFact
         // top right of the article for the year - <previous> and <next>
         // http://repository.cmu.edu/statistics/68/
         HtmlNodeFilters.tagWithAttribute("ul", "id", "pager"),
-        // collections of type ir_book have covers of the books in other years
-        // (other than those contained in e.g. <li class="lockss_2013">)
+        // collections of type ir_book and ir_gallery have covers of the books
+        // in other years (other than those in e.g. <li class="lockss_2013">)
         HtmlNodeFilters.tagWithAttribute("div", "class", "gallery-tools"),
         // books can have a purchase button
         // e.g. http://docs.lib.purdue.edu/purduepress_ebooks/29/
