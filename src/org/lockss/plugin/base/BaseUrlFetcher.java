@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlFetcher.java,v 1.2 2014-11-19 22:46:24 wkwilson Exp $
+ * $Id: BaseUrlFetcher.java,v 1.3 2014-11-22 08:41:50 tlipkis Exp $
  */
 
 /*
@@ -386,7 +386,7 @@ public class BaseUrlFetcher implements UrlFetcher {
           return null;
         }
       }
-      input = conn.getResponseInputStream();
+      input = conn.getUncompressedResponseInputStream();
       if (input == null) {
         logger.warning("Got null input stream back from conn.getResponseInputStream");
       }

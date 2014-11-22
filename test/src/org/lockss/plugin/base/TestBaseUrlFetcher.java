@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlFetcher.java,v 1.1 2014-11-12 20:11:56 wkwilson Exp $
+ * $Id: TestBaseUrlFetcher.java,v 1.2 2014-11-22 08:41:50 tlipkis Exp $
  */
 
 /*
@@ -398,6 +398,18 @@ public class TestBaseUrlFetcher extends LockssTestCase {
     Properties props = muf.getUncachedProperties();
     assertEquals(null, props.get(CachedUrl.PROPERTY_CONTENT_TYPE));
     assertEquals("555666", props.get(CachedUrl.PROPERTY_FETCH_TIME));
+  }
+
+  public void testGzippedFetch() throws IOException {
+    String testString = "test gzipped content";
+    MockConnectionBaseUrlFetcher muf =
+      new MockConnectionBaseUrlFetcher(mcf, TEST_URL);
+    MyMockLockssUrlConnection mconn =
+      makeConn(200, "", null, new GZIPpedInputStream(testString));
+    mconn.setResponseContentEncoding("gzip");
+    muf.addConnection(mconn);
+    InputStream is = muf.getUncachedInputStream();
+    assertReaderMatchesString(testString, new InputStreamReader(is));
   }
 
   public void testMalformedUrlException() throws IOException {
