@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssUrlConnection.java,v 1.10 2013-01-06 02:54:49 tlipkis Exp $
+ * $Id: MockLockssUrlConnection.java,v 1.11 2014-11-22 08:42:32 tlipkis Exp $
  */
 
 /*
@@ -149,10 +149,7 @@ public class MockLockssUrlConnection extends BaseLockssUrlConnection {
   }
 
   public String getResponseContentEncoding() {
-    if (respContentEncoding != null) {
-      return respContentEncoding;
-    }
-    throw new UnsupportedOperationException();
+    return respContentEncoding;
   }
 
   public String getResponseHeaderValue(String name) {
