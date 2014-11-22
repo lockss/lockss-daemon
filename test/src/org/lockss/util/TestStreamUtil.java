@@ -1,5 +1,5 @@
 /*
- * $Id: TestStreamUtil.java,v 1.17 2011-03-06 00:12:34 tlipkis Exp $
+ * $Id: TestStreamUtil.java,v 1.18 2014-11-22 08:42:08 tlipkis Exp $
  */
 
 /*
@@ -404,6 +404,7 @@ public class TestStreamUtil extends LockssTestCase {
     assertSame(in, StreamUtil.getUncompressedInputStream(in, "identity"));
     assertSame(in, StreamUtil.getUncompressedInputStream(in, "IDENTITY"));
     assertSame(in, StreamUtil.getUncompressedInputStream(in, null));
+    assertSame(in, StreamUtil.getUncompressedInputStream(in, ""));
   }
 
   public void testGetUncompressedInputStreamIll() throws IOException {

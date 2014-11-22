@@ -1,5 +1,5 @@
 /*
- * $Id: StreamUtil.java,v 1.20 2013-07-16 13:53:39 easyonthemayo Exp $
+ * $Id: StreamUtil.java,v 1.21 2014-11-22 08:42:08 tlipkis Exp $
  */
 
 /*
@@ -341,7 +341,7 @@ public class StreamUtil {
 						       String contentEncoding)
       throws IOException, UnsupportedEncodingException {
     InputStream res;
-    if (contentEncoding == null ||
+    if (StringUtil.isNullString(contentEncoding) ||
 	contentEncoding.equalsIgnoreCase("identity")) {
       res = instr;
     } else if (contentEncoding.equalsIgnoreCase("gzip") ||
