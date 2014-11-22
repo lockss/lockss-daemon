@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,11 +24,11 @@
       </entry>
       <entry>
         <string>Substance</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Poll</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
     </map>
   </entry>
@@ -36,11 +36,11 @@
     <string>plugin_config_props</string>
     <list>
       <org.lockss.daemon.ConfigParamDescr>
-        <key>collection</key>
-        <displayName>Collection</displayName>
-        <description>Name of the collection</description>
-        <type>1</type>
-        <size>10</size>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
@@ -49,7 +49,16 @@
         <displayName>Collection Type</displayName>
         <description>Collection type (one of: ir_series, ir_etd, ir_book, ir_gallery)</description>
         <type>1</type>
-        <size>10</size>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>collection</key>
+        <displayName>Collection</displayName>
+        <description>Name of the collection</description>
+        <type>1</type>
+        <size>20</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
@@ -59,15 +68,6 @@
         <description>Four digit year (e.g., 2004)</description>
         <type>4</type>
         <size>4</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>base_url</key>
-        <displayName>Base URL</displayName>
-        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
-        <type>3</type>
-        <size>40</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
@@ -95,7 +95,7 @@
   </entry>
   <entry>
     <string>plugin_fetch_rate_limiter_source</string>
-    <string>key:BePress</string>
+    <string>host:base_url</string>
   </entry>
   <entry>
     <string>au_start_url</string>
@@ -116,9 +116,30 @@
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
-    <list>
-      <string>"^%scgi/viewcontent\.cgi\?.*context=%s", base_url, collection</string>
-    </list>
+    <map>
+      <entry>
+        <string>tablesofcontents</string>
+        <list>
+          <string>"^%s%s/?$", base_url, collection</string>
+          <string>"^%s%s/index(\.[0-9]+)\.html$", base_url, collection</string>
+        </list>
+      </entry>
+      <entry>
+        <string>abstracts</string>
+        <list>
+          <string>"^%s%s/[0-9]+$", base_url, collection</string>
+        </list>
+      </entry>
+      <entry>
+        <string>*</string><!-- 'fulltext' and others -->
+        <list>
+          <!-- ir_series, ir_etd, ir_book -->
+          <string>"^%scgi/viewcontent\.cgi\?.*context=%s", base_url, collection</string>
+          <!-- ir_gallery -->
+          <string>"^%scontext/%s/article/[^/]+/type/native/viewcontent$", base_url, collection</string>
+        </list>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
