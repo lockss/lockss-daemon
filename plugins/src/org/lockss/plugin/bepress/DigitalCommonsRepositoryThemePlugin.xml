@@ -1,0 +1,119 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>testing</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.bepress.DigitalCommonsRepositoryThemePlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Digital Commons Repository Theme Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>collection</key>
+        <displayName>Collection</displayName>
+        <description>Name of the collection</description>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>collection_theme</key>
+        <displayName>Collection Theme</displayName>
+        <description>Name of the theme/track within the collection</description>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Digital Commons Repository Theme Plugin, Base URL %s, Collection %s, Collection Theme %s", base_url, collection, collection_theme</string>
+  </entry>
+  <entry>
+    <string>au_permission_checker_factory</string>
+    <string>org.lockss.plugin.bepress.BePressPermissionCheckerFactory</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_refetch_depth</string>
+    <int>99</int>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+  <entry>
+    <string>plugin_fetch_rate_limiter_source</string>
+    <string>host:base_url</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%s%s/lockss-theme-%s.html", base_url, collection, collection_theme</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|svg|tif?f)$", base_url_host</string>
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%s%s/%s$", base_url, collection, collection_theme</string>
+      <string>1,"^%s%s/%s/", base_url, collection, collection_theme</string>
+      <string>1,"^%scgi/viewcontent\.cgi\?.*context=%s", base_url, collection</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^%scgi/viewcontent\.cgi\?.*context=%s", base_url, collection</string>
+    </list>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.bepress.DigitalCommonsRepositoryHtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.bepress.DigitalCommonsRepositoryHtmlCrawlFilterFactory</string>
+  </entry>
+    <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.bepress.DigitalCommonsRepositoryArticleIteratorFactory</string>
+  </entry>
+</map>
