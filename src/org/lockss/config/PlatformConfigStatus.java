@@ -1,5 +1,5 @@
 /*
- * $Id: PlatformConfigStatus.java,v 1.6 2012-01-18 04:03:55 tlipkis Exp $
+ * $Id: PlatformConfigStatus.java,v 1.7 2014-11-22 08:27:27 tlipkis Exp $
  */
 
 /*
@@ -129,6 +129,10 @@ public class PlatformConfigStatus extends BaseLockssDaemonManager {
 					  TimeBase.msSince(daemon.getStartDate().getTime())));
       addSum(res, "Daemon Version", 
 	     ConfigManager.getDaemonVersion().displayString());
+
+      addSum(res, "Java Version",
+	     System.getProperty("java.specification.version"));
+      addSum(res, "Java Runtime", daemon.getJavaVersionInfo());
 
       // The configuration may not be set in development environments
       PlatformVersion version = Configuration.getPlatformVersion();
