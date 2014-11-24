@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedPlugin.java,v 1.30 2010-06-22 09:01:43 tlipkis Exp $
+ * $Id: SimulatedPlugin.java,v 1.31 2014-11-24 10:18:39 tlipkis Exp $
  */
 
 /*
@@ -34,7 +34,7 @@ package org.lockss.plugin.simulated;
 
 import java.util.*;
 import org.lockss.app.*;
-import org.lockss.config.Configuration;
+import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
@@ -316,6 +316,9 @@ public class SimulatedPlugin extends BasePlugin implements PluginTestable {
 
   public String getPluginName() {
     return "Simulated Content";
+  }
+
+  protected void setTitleConfigs(Tdb tdb) {
   }
 
   /**

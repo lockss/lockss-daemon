@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.87 2014-08-25 08:57:03 tlipkis Exp $
+ * $Id: BasePlugin.java,v 1.88 2014-11-24 10:18:39 tlipkis Exp $
  */
 
 /*
@@ -216,7 +216,7 @@ public abstract class BasePlugin
    * Set TitleConfigs from the title database
    * @param tdb the Tdb used to set TitleConfigs.
    */
-  private void setTitleConfigs(Tdb tdb) {
+  protected void setTitleConfigs(Tdb tdb) {
     String myId = getPluginId();
     Map<String, TitleConfig> titleMap = new HashMap<String,TitleConfig>();
     Map<String, TitleConfig> auidMap = new HashMap<String,TitleConfig>();
