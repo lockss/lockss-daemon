@@ -291,9 +291,9 @@
         param[journal_issn] = 2196-873X 
         comment[platform] = BioMedCentralPlugin
   
-        au < manifest ; exists ; 2012 ; mUX: The Journal of Mobile User Experience 1 ; 1 >
-        au < ready ; exists ; 2013 ; mUX: The Journal of Mobile User Experience 2 ; 2 >
-        au < expected ; exists ; 2014 ; mUX: The Journal of Mobile User Experience 3 ; 3 >
+        au < manifest ; exists ; 2012 ; mUX: The Journal of Mobile User Experience Volume 1 ; 1 >
+        au < ready ; exists ; 2013 ; mUX: The Journal of Mobile User Experience Volume 2 ; 2 >
+        au < expected ; exists ; 2014 ; mUX: The Journal of Mobile User Experience Volume 3 ; 3 >
   
     }
   
