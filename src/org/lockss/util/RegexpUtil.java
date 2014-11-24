@@ -1,5 +1,5 @@
 /*
- * $Id: RegexpUtil.java,v 1.11 2013-01-09 09:39:27 tlipkis Exp $
+ * $Id: RegexpUtil.java,v 1.12 2014-11-24 10:18:10 tlipkis Exp $
  */
 
 /*
@@ -118,6 +118,17 @@ public class RegexpUtil {
       res.add(comp.compile(re));
     }
     return res;
+  }
+
+  /** Return true if string matches any of a list of Patterns */
+  public static boolean isMatch(String url, List<Pattern> pats) {
+    Perl5Matcher matcher = RegexpUtil.getMatcher();
+    for (Pattern pat : pats) {
+      if (matcher.contains(url, pat)) {
+	return true;
+      }
+    }
+    return false;
   }
 
   private static class REInst {

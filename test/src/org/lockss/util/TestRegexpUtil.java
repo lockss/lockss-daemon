@@ -1,5 +1,5 @@
 /*
- * $Id: TestRegexpUtil.java,v 1.6 2013-01-09 09:39:27 tlipkis Exp $
+ * $Id: TestRegexpUtil.java,v 1.7 2014-11-24 10:18:10 tlipkis Exp $
  */
 
 /*
@@ -88,6 +88,22 @@ public class TestRegexpUtil extends LockssTestCase {
     assertFalse(RegexpUtil.isMatchRe("foobar", "^obar"));
     // repeat
     assertFalse(RegexpUtil.isMatchRe("foobar", "^obar"));
+  }
+
+  public void testCompileRegexps() throws Exception {
+    List<Pattern> pats = RegexpUtil.compileRegexps(ListUtil.list("fo+l",
+								 "ba*h"));
+    assertEquals(ListUtil.list("fo+l", "ba*h"),
+		 RegexpUtil.regexpCollection(pats));
+  }
+
+  public void testIsMatch() throws Exception {
+    List<Pattern> pats = RegexpUtil.compileRegexps(ListUtil.list("fo+l",
+								 "ba*h"));
+    assertTrue(RegexpUtil.isMatch("foool", pats));
+    assertFalse(RegexpUtil.isMatch("fl", pats));
+    assertTrue(RegexpUtil.isMatch("bh", pats));
+    assertTrue(RegexpUtil.isMatch("bah", pats));
   }
 
   public void testXPathIsMatchRe() throws Exception {

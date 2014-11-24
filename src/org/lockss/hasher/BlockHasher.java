@@ -1,5 +1,5 @@
 /*
- * $Id: BlockHasher.java,v 1.36 2014-10-22 19:39:37 thib_gc Exp $
+ * $Id: BlockHasher.java,v 1.37 2014-11-24 10:18:10 tlipkis Exp $
  */
 
 /*
@@ -263,7 +263,7 @@ public class BlockHasher extends GenericHasher {
       if (isTrace) log.debug3("isIncluded(" + url + "): not in spec");
       return false;
     }
-    if (excludeUrlPats != null && isMatch(url, excludeUrlPats)) {
+    if (excludeUrlPats != null && RegexpUtil.isMatch(url, excludeUrlPats)) {
       excludedByPlugin++;
       if (isTrace) log.debug3("isIncluded(" + url + "): excluded by plugin");
       return false;
@@ -281,16 +281,6 @@ public class BlockHasher extends GenericHasher {
       }
     }
     return res;
-  }
-
-  boolean isMatch(String url, List<Pattern> pats) {
-    Perl5Matcher matcher = RegexpUtil.getMatcher();
-    for (Pattern pat : pats) {
-      if (matcher.contains(url, pat)) {
-	return true;
-      }
-    }
-    return false;
   }
 
   public MessageDigest[] getDigests() {
