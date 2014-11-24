@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawler.java,v 1.18 2014-11-19 08:22:22 tlipkis Exp $
+ * $Id: MockCrawler.java,v 1.19 2014-11-24 10:17:45 tlipkis Exp $
  */
 
 /*
@@ -186,6 +186,7 @@ public class MockCrawler extends NullCrawler {
     public List permProbe = new ArrayList();
     private PermissionMap permissionMap;
     private List<String> globallyPermittedHosts = Collections.EMPTY_LIST;
+    private List<String> allowedPluginPermittedHost = Collections.EMPTY_LIST;
 
     public MockCrawlerFacade() {
       au = new MockArchivalUnit();
@@ -296,11 +297,18 @@ public class MockCrawler extends NullCrawler {
       globallyPermittedHosts = hosts;
     }
 
+    public void setAllowedPluginPermittedHosts(List<String> hosts) {
+      allowedPluginPermittedHost = hosts;
+    }
+
     @Override
     public boolean isGloballyPermittedHost(String host) {
       return globallyPermittedHosts.contains(host);
     }
 
+    @Override
+    public boolean isAllowedPluginPermittedHost(String host) {
+      return allowedPluginPermittedHost.contains(host);
+    }
   }
-
 }

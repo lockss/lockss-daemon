@@ -1,5 +1,5 @@
 /*
- * $Id: PermissionMap.java,v 1.36 2014-11-19 08:22:22 tlipkis Exp $
+ * $Id: PermissionMap.java,v 1.37 2014-11-24 10:17:46 tlipkis Exp $
  */
 
 /*
@@ -31,6 +31,7 @@
  */
 package org.lockss.crawler;
 import java.util.*;
+import org.apache.oro.text.regex.*;
 
 import org.lockss.app.*;
 import org.lockss.alert.Alert;
@@ -63,6 +64,7 @@ public class PermissionMap {
   private Collection<String> pUrls;
   private Collection<PermissionChecker> daemonPermissionCheckers;
   private Collection<PermissionChecker> pluginPermissionCheckers;
+  private List<Pattern> pluginPermittedHostPatterns;
   
   public PermissionMap(Crawler.CrawlerFacade crawlFacade,
       Collection<PermissionChecker> daemonPermissionCheckers,
@@ -81,6 +83,12 @@ public class PermissionMap {
     this.crawlFacade = crawlFacade;
     this.au = crawlFacade.getAu();
     this.pucFactory = new PermissionUrlConsumerFactory(this);
+    try {
+      pluginPermittedHostPatterns = au.makePermittedHostPatterns();
+    } catch (ArchivalUnit.ConfigurationException e) {
+      logger.error("Malformed plugin permitted host pattern", e);
+      pluginPermittedHostPatterns = null;
+    }
   }
   
   protected PermissionRecord createRecord(String pUrl)
@@ -109,6 +117,14 @@ public class PermissionMap {
 	res.setStatus(PermissionStatus.PERMISSION_OK);
 	return res;
       }
+      if (crawlFacade.isAllowedPluginPermittedHost(host) &&
+	  isPluginPermittedHost(host)) {
+	logger.debug2("Creating plugin permitted host PermissionRecord: "
+		      + url);
+	res = createRecord(url);
+	res.setStatus(PermissionStatus.PERMISSION_OK);
+	return res;
+      }
 	
       String perHostPath;
       if ((perHostPath = getPerHostPermissionPath()) != null) {
@@ -121,6 +137,13 @@ public class PermissionMap {
       }
     }
     return res;
+  }
+
+  boolean isPluginPermittedHost(String host) {
+    if (pluginPermittedHostPatterns != null) {
+      return RegexpUtil.isMatch(host, pluginPermittedHostPatterns);
+    }
+    return false;
   }
 
   /**

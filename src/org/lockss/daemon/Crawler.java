@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.62 2014-11-19 08:22:22 tlipkis Exp $
+ * $Id: Crawler.java,v 1.63 2014-11-24 10:17:46 tlipkis Exp $
  */
 
 /*
@@ -194,6 +194,8 @@ public interface Crawler {
     public int permissonStreamResetMax();
     
     public boolean isGloballyPermittedHost(String host);
+
+    public boolean isAllowedPluginPermittedHost(String host);
   }
   
 

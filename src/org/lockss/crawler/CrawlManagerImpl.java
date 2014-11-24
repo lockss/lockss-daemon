@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.152 2014-11-19 08:22:22 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.153 2014-11-24 10:17:47 tlipkis Exp $
  */
 
 /*
@@ -264,6 +264,14 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     PREFIX + "globallyPermittedHosts";
   static final String DEFAULT_PERMITTED_HOSTS = null;
 
+  /** Regexp matching hosts from which plugins are allowed to permit
+   * collection without explicit permission on the host.  I.e., this is a
+   * filter on what plugins are allowed to permit via
+   * au_permitted_host_pattern */
+  public static final String PARAM_ALLOWED_PLUGIN_PERMITTED_HOSTS =
+    PREFIX + "allowedPluginPermittedHosts";
+  static final String DEFAULT_ALLOWED_PLUGIN_PERMITTED_HOSTS = null;
+
   static final String WDOG_PARAM_CRAWLER = "Crawler";
   static final long WDOG_DEFAULT_CRAWLER = 2 * Constants.HOUR;
 
@@ -318,7 +326,8 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   private Pattern globallyExcludedUrlPattern;
   
   private Pattern globallyPermittedHostPattern;;
-  
+  private Pattern allowedPluginPermittedHosts;
+
   private PatternIntMap crawlPriorityAuidMap;
 
   private Map<String,Integer> concurrentCrawlLimitMap;
@@ -539,6 +548,11 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 						   DEFAULT_PERMITTED_HOSTS));
       }
 
+      if (changedKeys.contains(PARAM_ALLOWED_PLUGIN_PERMITTED_HOSTS)) {
+	setAllowedPluginPermittedHostPattern(config.get(PARAM_ALLOWED_PLUGIN_PERMITTED_HOSTS,
+							DEFAULT_ALLOWED_PLUGIN_PERMITTED_HOSTS));
+      }
+
       if (changedKeys.contains(PARAM_MAX_REPAIR_RATE)) {
 	repairRateLimiters.resetRateLimiters(config);
       }
@@ -626,6 +640,31 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     }
     globallyPermittedHostPattern = null;
     logger.debug("No global exclude pattern");
+  }
+
+  public boolean isAllowedPluginPermittedHost(String host) {
+    if (allowedPluginPermittedHosts == null) {
+      return false;
+    }
+    return RegexpUtil.getMatcher().contains(host, allowedPluginPermittedHosts);
+  }
+
+  void setAllowedPluginPermittedHostPattern(String pat) {
+    if (pat != null) {
+      int flags =
+	Perl5Compiler.READ_ONLY_MASK | Perl5Compiler.CASE_INSENSITIVE_MASK;
+      try {
+	allowedPluginPermittedHosts = RegexpUtil.getCompiler().compile(pat,
+								       flags);
+	logger.info("Allowed plugin permitted host pattern: " + pat);
+	return;
+      } catch (MalformedPatternException e) {
+	logger.error("Illegal allowed plugin permitted host pattern: " + pat,
+		     e);
+      }
+    }
+    allowedPluginPermittedHosts = null;
+    logger.debug("No allowed plugin permitted hosts");
   }
 
   static final Runnable NULL_RUNNER = new Runnable() {

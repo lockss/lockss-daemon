@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawlManager.java,v 1.28 2014-11-19 08:22:22 tlipkis Exp $
+ * $Id: MockCrawlManager.java,v 1.29 2014-11-24 10:17:45 tlipkis Exp $
  */
 
 /*
@@ -118,6 +118,10 @@ public class MockCrawlManager implements CrawlManager, LockssManager {
   }
 
   public boolean isGloballyPermittedHost(String hoat) {
+    return false;
+  }
+
+  public boolean isAllowedPluginPermittedHost(String hoat) {
     return false;
   }
 

@@ -207,6 +207,14 @@
     <string>"%sfluff/", base_url</string>
   </entry>
   <entry>
+    <string>au_permitted_host_pattern</string>
+    <list>
+      <string>".*\.cdn\.%s", url_host(base_url)</string>
+      <string>".*\.cdn\.net"</string>
+    </list>
+  </entry>
+
+  <entry>
     <!-- Crawl window open from midnight to 6:00AM EST -->
     <string>au_crawlwindow_ser</string>
     <org.lockss.daemon.CrawlWindows-Interval>

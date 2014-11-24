@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.129 2014-11-20 01:53:01 wkwilson Exp $
+ * $Id: NullPlugin.java,v 1.130 2014-11-24 10:17:45 tlipkis Exp $
  */
 
 /*
@@ -529,6 +529,10 @@ public class NullPlugin {
     }
 
     public SubstancePredicate makeSubstancePredicate() {
+      return null;
+    }
+
+    public List<Pattern> makePermittedHostPatterns() {
       return null;
     }
 

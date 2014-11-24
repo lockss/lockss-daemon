@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.70 2014-11-12 20:12:01 wkwilson Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.71 2014-11-24 10:17:46 tlipkis Exp $
  */
 
 /*
@@ -773,6 +773,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertNull(au.makeNonSubstanceUrlPatterns());
     assertNull(au.makeSubstanceUrlPatterns());
     assertNull(au.makeSubstancePredicate());
+    assertNull(au.makePermittedHostPatterns());
 
     assertNull(au.getCrawlUrlComparator());
     assertClass(GoslingHtmlLinkExtractor.class,
@@ -1102,6 +1103,18 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     }
   }
 
+  public void testMakePermittedHostPatterns() throws Exception {
+    defMap.putCollection(DefinableArchivalUnit.KEY_AU_PERMITTED_HOST_PATTERN,
+			 ListUtil.list("www\\.mathjax\\.org",
+				       "\".*\\.%s\", url_host(base_url)"));
+    additionalAuConfig.putString("base_url", "http://cdn.net/foo");
+    setupAu(additionalAuConfig);
+
+    assertIsomorphic(ListUtil.list("www\\.mathjax\\.org",
+				   ".*\\.cdn\\.net"),
+		     RegexpUtil.regexpCollection(cau.makePermittedHostPatterns()));
+  }
+
   /*
   public void testMakeCrawlSpec() throws Exception {
     setupAu();
@@ -1423,6 +1436,9 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertEquals(ListUtil.list("http\\:\\/\\/base\\.foo\\/base_path\\/.*/rotating_ad.*",
 			       "http\\:\\/\\/base\\.foo\\/base_path\\/.*\\.css"),
 		 RegexpUtil.regexpCollection(au.makeExcludeUrlsFromPollsPatterns()));
+    assertEquals(ListUtil.list(".*\\.cdn\\.base\\.foo",
+				   ".*\\.cdn\\.net"),
+		 RegexpUtil.regexpCollection(au.makePermittedHostPatterns()));
   }
 
   public void testFeatureUrls() throws Exception {

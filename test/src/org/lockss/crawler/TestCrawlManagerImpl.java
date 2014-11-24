@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.99 2014-11-19 08:22:22 tlipkis Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.100 2014-11-24 10:17:46 tlipkis Exp $
 */
 
 /*
@@ -984,6 +984,18 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       ConfigurationUtil.addFromArgs(CrawlManagerImpl.PARAM_PERMITTED_HOSTS,
 				    "foo[0-9]+\\.com");
       assertTrue(crawlManager.isGloballyPermittedHost("foo27.com"));
+    }
+
+    public void testAllowedPluginPermittedHosts() {
+      assertFalse(crawlManager.isAllowedPluginPermittedHost("foo27.com"));
+      ConfigurationUtil.addFromArgs(CrawlManagerImpl.PARAM_PERMITTED_HOSTS,
+				    "foo[0-9]+\\.com");
+      assertFalse(crawlManager.isAllowedPluginPermittedHost("foo27.com"));
+      ConfigurationUtil.addFromArgs(CrawlManagerImpl.PARAM_ALLOWED_PLUGIN_PERMITTED_HOSTS,
+				    "foo[0-9]+\\.com");
+      assertTrue(crawlManager.isAllowedPluginPermittedHost("foo27.com"));
+      ConfigurationUtil.removeKey(CrawlManagerImpl.PARAM_PERMITTED_HOSTS);
+      assertTrue(crawlManager.isAllowedPluginPermittedHost("foo27.com"));
     }
   }
 

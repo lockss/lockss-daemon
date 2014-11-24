@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManager.java,v 1.38 2014-11-19 08:22:22 tlipkis Exp $
+ * $Id: CrawlManager.java,v 1.39 2014-11-24 10:17:47 tlipkis Exp $
  */
 
 /*
@@ -99,7 +99,13 @@ public interface CrawlManager {
   /** Hook to apply patterns to exclude recursive URLs, etc. */
   public boolean isGloballyExcludedUrl(ArchivalUnit au, String url);
 
+  /** Return true if collection from the host is permitted by the global
+   * configuration */
   public boolean isGloballyPermittedHost(String host);
+
+  /** Return true if plugins are allowed to permit collection from the
+   * host */
+  public boolean isAllowedPluginPermittedHost(String host);
 
   public interface Callback {
     /**

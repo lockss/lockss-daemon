@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.107 2014-11-12 20:11:43 wkwilson Exp $
+ * $Id: MockArchivalUnit.java,v 1.108 2014-11-24 10:17:46 tlipkis Exp $
  */
 
 /*
@@ -62,6 +62,7 @@ public class MockArchivalUnit implements ArchivalUnit {
   private List<Pattern> excludeUrlFromPollPatterns = null;
   private List<Pattern> nonSubstanceUrlPatterns = null;
   private List<Pattern> substanceUrlPatterns = null;
+  private List<Pattern> permittedHostPatterns = null;
   private SubstancePredicate substancePred = null;
   private CrawlWindow window;
   private int refetchDepth = 1;
@@ -203,6 +204,14 @@ public class MockArchivalUnit implements ArchivalUnit {
 
   public void setSubstancePredicate(SubstancePredicate pred) {
     substancePred = pred;
+  }
+
+  public List<Pattern> makePermittedHostPatterns() {
+    return permittedHostPatterns;
+  }
+
+  public void setPermittedHostPatterns(List<Pattern> pats) {
+    permittedHostPatterns = pats;
   }
 
   public TitleConfig getTitleConfig() {

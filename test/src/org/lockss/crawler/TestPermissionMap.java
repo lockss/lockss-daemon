@@ -1,5 +1,5 @@
 /*
- * $Id: TestPermissionMap.java,v 1.17 2014-11-19 08:22:22 tlipkis Exp $
+ * $Id: TestPermissionMap.java,v 1.18 2014-11-24 10:17:46 tlipkis Exp $
  */
 
 /*
@@ -39,7 +39,7 @@ import org.lockss.daemon.*;
 import org.lockss.test.*;
 import org.lockss.test.MockCrawler.MockCrawlerFacade;
 import org.lockss.plugin.*;
-import org.lockss.util.ListUtil;
+import org.lockss.util.*;
 
 public class TestPermissionMap extends LockssTestCase {
   private PermissionMap pMap;
@@ -202,8 +202,6 @@ public class TestPermissionMap extends LockssTestCase {
   }
 
   public void testGloballyPermittedHost() throws Exception {
-    ConfigurationUtil.addFromArgs(CrawlManagerImpl.PARAM_PERMITTED_HOSTS,
-				  "www.css-host.com");
     mcf.setGloballyPermittedHosts(ListUtil.list("www.css-host.com"));
     PermissionMap map =
       new PermissionMap(mcf, ListUtil.list(new MockPermissionChecker(999)),
@@ -214,5 +212,27 @@ public class TestPermissionMap extends LockssTestCase {
     assertFalse(mcf.getCrawlerStatus().isCrawlError());
   }
 
+  public void testPluginPermittedHostNot() throws Exception {
+    mau.setPermittedHostPatterns(RegexpUtil.compileRegexps(ListUtil.list(".*")));
+    PermissionMap map =
+      new PermissionMap(mcf, ListUtil.list(new MockPermissionChecker(999)),
+                        null, permUrls);
+    assertTrue(map.populate());
+    assertFalse(map.hasPermission("http://anything.net/"));
+  }
 
+  public void testPluginPermittedHost() throws Exception {
+    mcf.setAllowedPluginPermittedHosts(ListUtil.list("foo.cdn.net",
+						     "bar.cdn.net",
+						     "xxx.net"));
+    mau.setPermittedHostPatterns(RegexpUtil.compileRegexps(ListUtil.list(".*\\.cdn\\.net")));
+    PermissionMap map =
+      new PermissionMap(mcf, ListUtil.list(new MockPermissionChecker(999)),
+                        null, permUrls);
+    assertTrue(map.populate());
+    assertTrue(map.hasPermission("http://foo.cdn.net/bar"));
+    assertTrue(map.hasPermission("http://bar.cdn.net/bar"));
+    assertFalse(map.hasPermission("http://baz.cdn.net/bar"));
+    assertFalse(map.hasPermission("http://xxx.net/"));
+  }
 }

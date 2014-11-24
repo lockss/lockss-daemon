@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.56 2014-11-19 22:46:25 wkwilson Exp $
+ * $Id: BaseCrawler.java,v 1.57 2014-11-24 10:17:47 tlipkis Exp $
  */
 
 /*
@@ -752,6 +752,11 @@ public abstract class BaseCrawler implements Crawler {
     @Override
     public boolean isGloballyPermittedHost(String host) {
       return crawlMgr.isGloballyPermittedHost(host);
+    }
+
+    @Override
+    public boolean isAllowedPluginPermittedHost(String host) {
+      return crawlMgr.isAllowedPluginPermittedHost(host);
     }
   }
 

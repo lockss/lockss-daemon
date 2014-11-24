@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.170 2014-11-19 08:18:53 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.171 2014-11-24 10:17:46 tlipkis Exp $
  */
 
 /*
@@ -603,6 +603,11 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   public SubstancePredicate makeSubstancePredicate()
       throws ArchivalUnit.ConfigurationException, PluginException.LinkageError {
     return null;
+  }
+
+  public List<Pattern> makePermittedHostPatterns()
+    throws ArchivalUnit.ConfigurationException {
+      return null;
   }
 
   /**

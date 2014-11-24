@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.103 2014-11-12 20:11:59 wkwilson Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.104 2014-11-24 10:17:46 tlipkis Exp $
  */
 
 /*
@@ -108,6 +108,9 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
     "au_substance_url_pattern";
   public static final String KEY_AU_NON_SUBSTANCE_URL_PATTERN =
     "au_non_substance_url_pattern";
+  public static final String KEY_AU_PERMITTED_HOST_PATTERN =
+    "au_permitted_host_pattern";
+
   public static final String KEY_AU_CRAWL_COOKIE_POLICY =
     "au_crawl_cookie_policy";
   public static final String KEY_AU_URL_RATE_LIMITER_MAP =
@@ -178,6 +181,8 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
 			  PrintfContext.Regexp);
     printfKeysContext.put(KEY_AU_SUBSTANCE_URL_PATTERN, PrintfContext.Regexp);
     printfKeysContext.put(KEY_AU_NON_SUBSTANCE_URL_PATTERN,
+			  PrintfContext.Regexp);
+    printfKeysContext.put(KEY_AU_PERMITTED_HOST_PATTERN,
 			  PrintfContext.Regexp);
     printfKeysContext.put(KEY_AU_NAME, PrintfContext.Display);
     // XXX These may use params supplied by OpenUrlResolver, need to inject
@@ -359,6 +364,12 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
 			     RegexpContext.Url);
   }
   
+  public List<Pattern> makePermittedHostPatterns()
+      throws ArchivalUnit.ConfigurationException {
+    return compileRegexpList(KEY_AU_PERMITTED_HOST_PATTERN,
+			     RegexpContext.Url);
+  }
+
   public String getExploderPattern() {
     return definitionMap.getString(KEY_AU_EXPLODER_PATTERN,
         null);

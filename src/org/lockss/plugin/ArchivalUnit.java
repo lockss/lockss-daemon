@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.69 2014-11-12 20:11:22 wkwilson Exp $
+ * $Id: ArchivalUnit.java,v 1.70 2014-11-24 10:17:46 tlipkis Exp $
  */
 
 /*
@@ -240,6 +240,13 @@ public interface ArchivalUnit {
    */
   public SubstancePredicate makeSubstancePredicate()
       throws ArchivalUnit.ConfigurationException, PluginException.LinkageError;
+
+  /**
+   * Construct a list of Patterns of hosts that should be granted implicit
+   * permission for collection.
+   */
+  public List<Pattern> makePermittedHostPatterns()
+      throws ArchivalUnit.ConfigurationException;
 
   /**
    * Query the {@link AuState} object to determine if this is the proper

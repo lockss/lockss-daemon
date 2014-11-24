@@ -1,5 +1,5 @@
 /*
-n * $Id: PluginWellformednessTests.java,v 1.9 2014-11-12 20:11:43 wkwilson Exp $
+n * $Id: PluginWellformednessTests.java,v 1.10 2014-11-24 10:17:45 tlipkis Exp $
  */
 
 /*
@@ -185,6 +185,7 @@ public final class PluginWellformednessTests extends LockssTestCase {
     au.makeNonSubstanceUrlPatterns();
     au.makeSubstanceUrlPatterns();
     au.makeSubstancePredicate();
+    au.makePermittedHostPatterns();
     au.getCrawlUrlComparator();
 
     au.getCrawlWindow();
