@@ -213,7 +213,7 @@
         param[base_url] = http://archderm.jamanetwork.com/
         param[resource_id] = 68
         
-        au < testing ; exists ; 2012 ; JAMA Dermatology Volume 148 ; 2012 >
+        au < ready ; exists ; 2012 ; JAMA Dermatology Volume 148 ; 2012 >
         au < crawling ; exists ; 2013 ; JAMA Dermatology Volume 149 ; 2013 >
         au < crawling ; exists ; 2014 ; JAMA Dermatology Volume 150 ; 2014 >
     
@@ -623,7 +623,7 @@
         param[base_url] = http://archinte.jamanetwork.com/
         param[resource_id] = 71
         
-        au < testing ; exists ; 2012 ; JAMA Internal Medicine Volume 172 ; 2012 >
+        au < ready ; exists ; 2012 ; JAMA Internal Medicine Volume 172 ; 2012 >
         au < crawling ; exists ; 2013 ; JAMA Internal Medicine Volume 173 ; 2013 >
         au < crawling ; exists ; 2014 ; JAMA Internal Medicine Volume 174 ; 2014 >
     
@@ -995,7 +995,7 @@
         param[base_url] =  http://archopht.jamanetwork.com/
         param[resource_id] = 73
         
-        au < testing ; exists ; 2012 ; JAMA Ophthalmology Volume 130 ; 2012 >
+        au < ready ; exists ; 2012 ; JAMA Ophthalmology Volume 130 ; 2012 >
         au < crawling ; exists ; 2013 ; JAMA Ophthalmology Volume 131 ; 2013 >
         au < crawling ; exists ; 2014 ; JAMA Ophthalmology Volume 132 ; 2014 >
     
@@ -1170,7 +1170,7 @@
         param[base_url] =  http://archotol.jamanetwork.com/
         param[resource_id] = 74
         
-        au < testing ; exists ; 2012 ; JAMA Otolaryngology - Head & Neck Surgery Volume 138 ; 2012 >
+        au < ready ; exists ; 2012 ; JAMA Otolaryngology - Head & Neck Surgery Volume 138 ; 2012 >
         au < crawling ; exists ; 2013 ; JAMA Otolaryngology - Head & Neck Surgery Volume 139 ; 2013 >
         au < crawling ; exists ; 2014 ; JAMA Otolaryngology - Head & Neck Surgery Volume 140 ; 2014 >
     
@@ -1372,7 +1372,7 @@
         param[base_url] = http://archpedi.jamanetwork.com/
         param[resource_id] = 75
         
-        au < testing ; exists ; 2012 ; JAMA Pediatrics Volume 166 ; 2012 >
+        au < ready ; exists ; 2012 ; JAMA Pediatrics Volume 166 ; 2012 >
         au < testing ; exists ; 2013 ; JAMA Pediatrics Volume 167 ; 2013 >
         au < exists ; exists ; 2014 ; JAMA Pediatrics Volume 168 ; 2014 >
     
