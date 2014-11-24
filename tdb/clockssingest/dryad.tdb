@@ -11,7 +11,7 @@
     comment[base_url] = urls on manifest pages use above base url, not www.datadryad.org
     implicit < status ; status2 ; param[volume_name] ; name >
     
-    comment[manifest] = while new plugin is developed.
+    comment[doNotProcess] = while new plugin is developed.
 
   {
   
@@ -19,11 +19,11 @@
       name = Dryad Digital Repository
      >
      
-     au < testing ; exists ; 1 ; Dryad Digital Repository URL List 1 >
-     au < testing ; exists ; 2 ; Dryad Digital Repository URL List 2 >
-     au < testing ; exists ; 3 ; Dryad Digital Repository URL List 3 >
-     au < testing ; exists ; 4 ; Dryad Digital Repository URL List 4 >
-     au < exists ; exists ; 5 ; Dryad Digital Repository URL List 5 >
+     au < doNotProcess ; exists ; 1 ; Dryad Digital Repository URL List 1 >
+     au < doNotProcess ; exists ; 2 ; Dryad Digital Repository URL List 2 >
+     au < doNotProcess ; exists ; 3 ; Dryad Digital Repository URL List 3 >
+     au < doNotProcess ; exists ; 4 ; Dryad Digital Repository URL List 4 >
+     au < doNotProcess ; exists ; 5 ; Dryad Digital Repository URL List 5 >
      
   }
 }
