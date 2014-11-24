@@ -1,5 +1,5 @@
 /*
- * $Id: FuncNewContentCrawler.java,v 1.31 2014-11-12 20:11:35 wkwilson Exp $
+ * $Id: FuncNewContentCrawler.java,v 1.32 2014-11-24 20:38:54 wkwilson Exp $
  */
 
 /*
@@ -173,7 +173,7 @@ public class FuncNewContentCrawler extends LockssTestCase {
 
     String th = "text/html";
     String tp = "text/plain";
-    String[] ct = {null, null, null, null, tp, tp, th, th, tp, tp, th, tp};
+    String[] ct = { null, null, null, tp, tp, th, th, tp, tp, th, tp};
     Bag ctb = new HashBag(ListUtil.fromArray(ct));
     CrawlRateLimiter crl = crawlMgr.getCrawlRateLimiter(crawler);
     assertEquals(ctb, new HashBag(crawlMgr.getPauseContentTypes(crawler)));

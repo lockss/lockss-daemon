@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.106 2014-11-19 22:46:25 wkwilson Exp $
+ * $Id: FollowLinkCrawler.java,v 1.107 2014-11-24 20:38:54 wkwilson Exp $
  */
 
 /*
@@ -522,14 +522,17 @@ public class FollowLinkCrawler extends BaseCrawler {
           try {
             res = fetcher.fetch();
             updateCacheStats(res, curl);
-            if (res == FetchResult.NOT_FETCHED && 
-                curl.isStartUrl() && isFailOnStartUrlError()) {
-              // fail if cannot fetch a StartUrl
-              String msg = "Failed to cache start url: "+ curl.getUrl();
-              logger.error(msg);
-              crawlStatus.setCrawlStatus(Crawler.STATUS_ABORTED, msg);
-              abortCrawl();
-              return false;
+            if (res == FetchResult.NOT_FETCHED) {
+              if(curl.isStartUrl() && isFailOnStartUrlError()) {
+                // fail if cannot fetch a StartUrl
+                String msg = "Failed to cache start url: "+ curl.getUrl();
+                logger.error(msg);
+                crawlStatus.setCrawlStatus(Crawler.STATUS_ABORTED, msg);
+                abortCrawl();
+                return false;
+              }
+            } else {
+              checkSubstanceCollected(au.makeCachedUrl(url));
             }
           } catch (CacheException ex) {
             
@@ -538,19 +541,14 @@ public class FollowLinkCrawler extends BaseCrawler {
                 "Fatal error fetching url " + url);
             crawlAborted = true;
             return false;
-          }
-          checkSubstanceCollected(au.makeCachedUrl(url));
-          
+          }   
           parseQueue.put(curl);
-          
           return true;
         }
     } else {
       // If didn't fetch, check for existing substance file
       checkSubstanceCollected(au.makeCachedUrl(url));
-      
       parseQueue.put(curl);
-      
       return true;
     }
   }

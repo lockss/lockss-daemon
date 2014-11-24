@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlFetcher.java,v 1.2 2014-11-22 08:41:50 tlipkis Exp $
+ * $Id: TestBaseUrlFetcher.java,v 1.3 2014-11-24 20:38:54 wkwilson Exp $
  */
 
 /*
@@ -123,6 +123,7 @@ public class TestBaseUrlFetcher extends LockssTestCase {
     pauseBeforeFetchCounter = 0;
     fetcher._input = new StringInputStream("test stream");
     fetcher._headers = new CIProperties();
+    fetcher.setUrlConsumerFactory(new PassiveMockUrlConsumerFactory());
     // should cache
     assertEquals(UrlFetcher.FetchResult.FETCHED, fetcher.fetch());
     assertEquals(1, pauseBeforeFetchCounter);
@@ -134,6 +135,7 @@ public class TestBaseUrlFetcher extends LockssTestCase {
 
     fetcher._input = new StringInputStream("");
     fetcher._headers = new CIProperties();
+    fetcher.setUrlConsumerFactory(new PassiveMockUrlConsumerFactory());
     // should cache
     assertEquals(UrlFetcher.FetchResult.FETCHED, fetcher.fetch());
     assertEquals(1, pauseBeforeFetchCounter);
@@ -151,6 +153,7 @@ public class TestBaseUrlFetcher extends LockssTestCase {
 
     fetcher._input = new StringInputStream("");
     fetcher._headers = new CIProperties();
+    fetcher.setUrlConsumerFactory(new PassiveMockUrlConsumerFactory());
     // should cache
     assertEquals(UrlFetcher.FetchResult.FETCHED, fetcher.fetch());
     assertEquals(1, pauseBeforeFetchCounter);
@@ -164,6 +167,7 @@ public class TestBaseUrlFetcher extends LockssTestCase {
     CIProperties headers = new CIProperties();
     headers.put(BaseUrlFetcher.SET_COOKIE_HEADER, "blah");
     fetcher._headers = headers;
+    fetcher.setUrlConsumerFactory(new PassiveMockUrlConsumerFactory());
     // should cache
     assertEquals(UrlFetcher.FetchResult.FETCHED, fetcher.fetch());
     assertEquals(2, fetcher.getUncachedInputStreamCount);
@@ -178,6 +182,7 @@ public class TestBaseUrlFetcher extends LockssTestCase {
     CIProperties headers = new CIProperties();
     headers.put(BaseUrlFetcher.SET_COOKIE_HEADER, "blah");
     fetcher._headers = headers;
+    fetcher.setUrlConsumerFactory(new PassiveMockUrlConsumerFactory());
     // should cache
     assertEquals(UrlFetcher.FetchResult.FETCHED, fetcher.fetch());
     assertEquals(1, fetcher.getUncachedInputStreamCount);
@@ -186,6 +191,7 @@ public class TestBaseUrlFetcher extends LockssTestCase {
 
   public void testLastModifiedfetch() throws IOException {
     // add the 'cached' version
+    fetcher.setUrlConsumerFactory(new PassiveMockUrlConsumerFactory());
     CIProperties cachedProps = new CIProperties();
     cachedProps.setProperty(CachedUrl.PROPERTY_LAST_MODIFIED,
 			    GMT_DATE_FORMATTER.format(new Date(12345)));
@@ -208,6 +214,7 @@ public class TestBaseUrlFetcher extends LockssTestCase {
   }
 
   public void testForcefetch() throws IOException {
+    fetcher.setUrlConsumerFactory(new PassiveMockUrlConsumerFactory());
     // add the 'cached' version
     CIProperties cachedProps = new CIProperties();
     cachedProps.setProperty(CachedUrl.PROPERTY_LAST_MODIFIED,
@@ -228,6 +235,7 @@ public class TestBaseUrlFetcher extends LockssTestCase {
   }
 
   public void testNullExceptions() throws IOException {
+    fetcher.setUrlConsumerFactory(new PassiveMockUrlConsumerFactory());
     fetcher._input = new StringInputStream("test stream");
     fetcher._headers = null;
     try {
@@ -257,6 +265,7 @@ public class TestBaseUrlFetcher extends LockssTestCase {
   }
 
   public void testFileFetch() throws IOException {
+    fetcher.setUrlConsumerFactory(new PassiveMockUrlConsumerFactory());
     fetcher._input = new StringInputStream("test content");
     CIProperties props = new CIProperties();
     props.setProperty("test1", "value1");
@@ -467,6 +476,7 @@ public class TestBaseUrlFetcher extends LockssTestCase {
   public void testNoProxy() throws Exception {
     MockConnectionBaseUrlFetcher muf =
       new MockConnectionBaseUrlFetcher(mcf, TEST_URL);
+    muf.setUrlConsumerFactory(new PassiveMockUrlConsumerFactory());
     MyMockLockssUrlConnection mconn = makeConn(200, "", null, "foo");
     muf.addConnection(mconn);
     muf.fetch();
@@ -477,6 +487,7 @@ public class TestBaseUrlFetcher extends LockssTestCase {
   public void testProxy() throws Exception {
     MockConnectionBaseUrlFetcher muf =
       new MockConnectionBaseUrlFetcher(mcf, TEST_URL);
+    muf.setUrlConsumerFactory(new PassiveMockUrlConsumerFactory());
     MyMockLockssUrlConnection mconn = makeConn(200, "", null, "foo");
     muf.addConnection(mconn);
     muf.setProxy("phost", 126);
@@ -490,6 +501,7 @@ public class TestBaseUrlFetcher extends LockssTestCase {
     IPAddr addr = IPAddr.getByName("127.7.42.33");
     MockConnectionBaseUrlFetcher muf =
       new MockConnectionBaseUrlFetcher(mcf, TEST_URL);
+    muf.setUrlConsumerFactory(new PassiveMockUrlConsumerFactory());
     MyMockLockssUrlConnection mconn = makeConn(200, "", null, "foo");
     muf.addConnection(mconn);
     muf.setLocalAddress(addr);
@@ -501,6 +513,7 @@ public class TestBaseUrlFetcher extends LockssTestCase {
   public void testNoLocalAddr() throws Exception {
     MockConnectionBaseUrlFetcher muf =
       new MockConnectionBaseUrlFetcher(mcf, TEST_URL);
+    muf.setUrlConsumerFactory(new PassiveMockUrlConsumerFactory());
     MyMockLockssUrlConnection mconn = makeConn(200, "", null, "foo");
     muf.addConnection(mconn);
     muf.fetch();
@@ -511,6 +524,7 @@ public class TestBaseUrlFetcher extends LockssTestCase {
   public void testCredentials() throws Exception {
     MockConnectionBaseUrlFetcher muf =
       new MockConnectionBaseUrlFetcher(mcf, TEST_URL);
+    muf.setUrlConsumerFactory(new PassiveMockUrlConsumerFactory());
     Configuration auConfig = mau.getConfiguration();
     auConfig.put(ConfigParamDescr.USER_CREDENTIALS.getKey(), "uuu:ppp");
     MyMockLockssUrlConnection mconn = makeConn(200, "", null, "foo");
@@ -523,6 +537,7 @@ public class TestBaseUrlFetcher extends LockssTestCase {
   public void testSetReqProp() throws Exception {
     MockConnectionBaseUrlFetcher muf =
       new MockConnectionBaseUrlFetcher(mcf, TEST_URL);
+    muf.setUrlConsumerFactory(new PassiveMockUrlConsumerFactory());
     MyMockLockssUrlConnection mconn = makeConn(200, "", null, "foo");
     muf.addConnection(mconn);
     muf.setRequestProperty("foo-bar", "47");
@@ -535,6 +550,7 @@ public class TestBaseUrlFetcher extends LockssTestCase {
   public void testIfModifiedConnectionNoContent() throws Exception {
     MockConnectionBaseUrlFetcher muf =
       new MockConnectionBaseUrlFetcher(mcf, TEST_URL);
+    muf.setUrlConsumerFactory(new PassiveMockUrlConsumerFactory());
     MockLockssUrlConnection mconn = makeConn(200, "", null, "foo");
     muf.addConnection(mconn);
     BitSet fetchFlags = new BitSet();
@@ -894,6 +910,7 @@ public class TestBaseUrlFetcher extends LockssTestCase {
     muf.addConnection(makeConn(200, "Ok", null, "bar"));
     muf.setRedirectScheme(UrlFetcher.REDIRECT_SCHEME_STORE_ALL_IN_SPEC);
     mau.addUrlToBeCached(redTo);
+    mau.addUrlToBeCached(TEST_URL);
     muf.fetch();
     CIProperties p = muf.getUncachedProperties();
     assertNull(p.getProperty("location"));
@@ -926,6 +943,7 @@ public class TestBaseUrlFetcher extends LockssTestCase {
     mau.addUrlToBeCached(redTo1);
     mau.addUrlToBeCached(redTo2);
     mau.addUrlToBeCached(redTo3);
+    mau.addUrlToBeCached(TEST_URL);
     muf.fetch();
     CIProperties p = muf.getUncachedProperties();
     assertNull(p.getProperty("location"));
@@ -950,6 +968,7 @@ public class TestBaseUrlFetcher extends LockssTestCase {
     muf.addConnection(makeConn(200, "Ok", null, content));
     muf.setRedirectScheme(UrlFetcher.REDIRECT_SCHEME_STORE_ALL_IN_SPEC);
     mau.addUrlToBeCached(redTo);
+    mau.addUrlToBeCached(url);
     muf.fetch();
     CIProperties p = muf.getUncachedProperties();
     assertNull(p.getProperty("location"));
@@ -1004,6 +1023,7 @@ public class TestBaseUrlFetcher extends LockssTestCase {
     muf.setRedirectScheme(UrlFetcher.REDIRECT_SCHEME_STORE_ALL_IN_SPEC);
     mau.addUrlToBeCached(redTo1);
     mau.addUrlToBeCached(redTo2);
+    mau.addUrlToBeCached(url);
     muf.fetch();
     CIProperties p = muf.getUncachedProperties();
     assertNull(p.getProperty("location"));
@@ -1025,7 +1045,7 @@ public class TestBaseUrlFetcher extends LockssTestCase {
     mau.setPermissionUrls(urls);
     mau.setLoginPageChecker(loginPageChecker);
     mau.setRefetchDepth(99);
-
+    fetcher.setUrlConsumerFactory(new PassiveMockUrlConsumerFactory());
     fetcher._input = new StringInputStream("test stream");
     fetcher._headers = new CIProperties();
     // should cache
@@ -1051,6 +1071,7 @@ public class TestBaseUrlFetcher extends LockssTestCase {
     mau.addUrl(TEST_URL, true, true, cachedProps);
 
     TimeBase.setSimulated(10000);
+    fetcher.setUrlConsumerFactory(new PassiveMockUrlConsumerFactory());
     fetcher._input = new StringInputStream("test stream");
     fetcher._headers = new CIProperties();
     // shouldn't cache
@@ -1066,7 +1087,8 @@ public class TestBaseUrlFetcher extends LockssTestCase {
     mau.setLoginPageChecker(loginPageChecker);
     mau.setRefetchDepth(99);
 
-    MyStringInputStream inStrm = new MyStringInputStream("test stream");;
+    MyStringInputStream inStrm = new MyStringInputStream("test stream");
+    fetcher.setUrlConsumerFactory(new PassiveMockUrlConsumerFactory());
     fetcher._input = inStrm;
     fetcher._headers = new CIProperties();
     // should cache
@@ -1093,6 +1115,7 @@ public class TestBaseUrlFetcher extends LockssTestCase {
 
 
     MyStringInputStream inStrm = new MyStringInputStream("test stream");;
+    fetcher.setUrlConsumerFactory(new PassiveMockUrlConsumerFactory());
     fetcher._input = inStrm;
     fetcher._headers = new CIProperties();
     // should cache
@@ -1142,7 +1165,7 @@ public class TestBaseUrlFetcher extends LockssTestCase {
     mau.setPermissionUrls(urls);
     mau.setLoginPageChecker(loginPageChecker);
     mau.setRefetchDepth(99);
-
+    fetcher.setUrlConsumerFactory(new PassiveMockUrlConsumerFactory());
     fetcher._input = new StringInputStream("test stream");
     fetcher._headers = new CIProperties();
     // should cache
@@ -1171,6 +1194,7 @@ public class TestBaseUrlFetcher extends LockssTestCase {
 
     MyStringInputStream inStrm =
       new MyStringInputStreamMarkNotSupported("test stream");
+    fetcher.setUrlConsumerFactory(new PassiveMockUrlConsumerFactory());
     fetcher._input = inStrm;
     fetcher._headers = new CIProperties();
     // should cache
@@ -1346,8 +1370,10 @@ public class TestBaseUrlFetcher extends LockssTestCase {
     public CachedUrlSet makeCachedUrlSet(CachedUrlSetSpec cuss) {
       return new BaseCachedUrlSet(this, cuss);
     }
-
-
+    
+    public UrlCacher makeUrlCacher(UrlData ud) {
+      return new MockUrlCacher(mau, ud);
+    }
 
     public CachedUrl makeCachedUrl(String url) {
       if (returnRealCachedUrl) {

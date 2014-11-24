@@ -1,5 +1,5 @@
 /*
- * $Id: MockUrlCacher.java,v 1.45 2014-11-20 01:53:01 wkwilson Exp $
+ * $Id: MockUrlCacher.java,v 1.46 2014-11-24 20:38:54 wkwilson Exp $
  */
 
 /*
@@ -67,6 +67,7 @@ public class MockUrlCacher implements UrlCacher {
   private InputStream input;
   private LockssWatchdog wdog;
   private String fetchUrl;
+  private List<String> redirectUrls;
 
   public MockUrlCacher(MockArchivalUnit au, UrlData ud){
     this.url = ud.url;
@@ -246,8 +247,7 @@ public class MockUrlCacher implements UrlCacher {
   }
 
   public void setRedirectUrls(List<String> redirectUrls) {
-    throw new UnsupportedOperationException(
-        "MockUrlCacher does not suppert redirect lists");
+    this.redirectUrls = redirectUrls;
   }
   
   public void setFetchUrl(String fetchUrl) {

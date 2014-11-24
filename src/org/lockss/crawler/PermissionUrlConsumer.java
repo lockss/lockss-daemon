@@ -1,5 +1,5 @@
 /*
- * $Id: PermissionUrlConsumer.java,v 1.1 2014-11-12 20:11:23 wkwilson Exp $
+ * $Id: PermissionUrlConsumer.java,v 1.2 2014-11-24 20:38:54 wkwilson Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.crawler;
 
 import java.io.BufferedInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.util.Collection;
@@ -95,10 +96,10 @@ public class PermissionUrlConsumer extends SimpleUrlConsumer {
       }
     }
     if (permOk) {
-      fud.resetInputStream();
-      super.consume();
       permMap.setPermissionResult(fud.fetchUrl,
           PermissionStatus.PERMISSION_OK);
+      fud.resetInputStream();
+      super.consume();
     }
   }
   
@@ -106,10 +107,13 @@ public class PermissionUrlConsumer extends SimpleUrlConsumer {
       Collection<PermissionChecker> permCheckers, PermissionLogic logic)
           throws IOException {
     PermissionChecker checker;
-    BufferedInputStream is = new BufferedInputStream(fud.input);
     // check the lockss checkers and find at least one checker that matches
     for (Iterator<PermissionChecker> it = permCheckers.iterator();
         it.hasNext(); ) {
+      InputStream is = fud.input;
+      if(!is.markSupported()) {
+        is = new BufferedInputStream(is);
+      }
       // allow us to reread contents if reasonable size
       is.mark(crawlFacade.permissonStreamResetMax());
       checker = it.next();
@@ -129,7 +133,6 @@ public class PermissionUrlConsumer extends SimpleUrlConsumer {
       }
       if (it.hasNext()) {
         fud.resetInputStream();
-        is = new BufferedInputStream(fud.input);
       } else if(logic == PermissionLogic.AND_CHECKER) {
         //All permissions have been successfull and we reached the end
         //An empty and checker will return true
