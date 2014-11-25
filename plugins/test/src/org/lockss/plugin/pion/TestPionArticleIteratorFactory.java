@@ -1,6 +1,6 @@
-/* $Id: TestPionArticleIteratorFactory.java,v 1.1 2014-03-28 18:50:58 pgust Exp $
+/* $Id: TestPionArticleIteratorFactory.java,v 1.2 2014-11-25 18:37:11 aishizaki Exp $
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -208,11 +208,12 @@ public class TestPionArticleIteratorFactory
       }
       cu = af.getRoleCu(ArticleFiles.ROLE_ABSTRACT);
       if (cu != null) {
-        ++countAbstract;
+        ++countAbstract; 
       }
       cu = af.getRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA);
       if (cu != null) {
         ++countArticleMetadata;
+
       }
       cu = af.getRoleCu(ArticleFiles.ROLE_CITATION + "_Ris");
       if (cu != null) {
@@ -234,7 +235,7 @@ public class TestPionArticleIteratorFactory
 
     assertEquals(7, count);
     assertEquals(7, countAbstract);
-    assertEquals(6, countArticleMetadata);
+    assertEquals(7, countArticleMetadata);
     assertEquals(6, countCitation);
     assertEquals(7, countFullText);
     assertEquals(7, countFullTextPdf);

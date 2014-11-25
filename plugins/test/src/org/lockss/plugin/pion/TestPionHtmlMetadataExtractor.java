@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -199,7 +199,7 @@ public class TestPionHtmlMetadataExtractor extends LockssTestCase {
     assertNull(md.get(MetadataField.FIELD_ISSN));
     assertNull(md.get(MetadataField.FIELD_AUTHOR));
     assertNull(md.get(MetadataField.FIELD_ARTICLE_TITLE));
-    assertNull(md.get(MetadataField.FIELD_JOURNAL_TITLE));
+    assertNull(md.get(MetadataField.FIELD_PUBLICATION_TITLE));
     assertNull(md.get(MetadataField.FIELD_DATE));
     assertEquals(1, md.rawSize());
     assertEquals("bar", md.getRaw("foo"));
@@ -222,6 +222,64 @@ public class TestPionHtmlMetadataExtractor extends LockssTestCase {
     }
 
   }
+  /*
+  String realHtmlFile = "i0552.html";
+
+  public void testFromRealHtmlFile() throws Exception {
+    CIProperties risHeader = new CIProperties();
+    InputStream file_input = null;
+    MockArchivalUnit mau; // source au
+    mau = new MockArchivalUnit();
+    mau.setConfiguration(pionAuConfig());
+    log.info("testing Real RIS File");
+    try {
+      file_input = getResourceAsStream(realHtmlFile);
+      //String string_input = StringUtil.fromInputStream(file_input);
+      String string_input = StringUtil.fromReader(new InputStreamReader(file_input, Constants.ENCODING_UTF_8));
+ log.info("string: "+string_input);     
+      IOUtil.safeClose(file_input);
+
+      String ris_url = BASE_URL + realHtmlFile;
+      risHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "application/ris");
+      MockCachedUrl ris_cu = mau.addUrl(ris_url, true, true, risHeader);
+      // need to check for this file before emitting
+      
+      ris_cu.setContent(string_input);
+      ris_cu.setContentSize(string_input.length());
+      ris_cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/ris");
+      
+      
+      file_input = getResourceAsStream(realHtmlFile);
+      string_input = StringUtil.fromReader(new InputStreamReader(file_input, Constants.ENCODING_UTF_8));
+      String pdf_url = BASE_URL + realHtmlFile;
+      MockCachedUrl pdf_cu = mau.addUrl(pdf_url, true, true, risHeader);
+      // need to check for this file before emitting
+      
+      pdf_cu.setContent(string_input);
+      pdf_cu.setContentSize(string_input.length());
+      pdf_cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/pdf");
+
+      FileMetadataExtractor me = new PionHtmlMetadataExtractorFactory.PionHtmlMetadataExtractor();
+
+      FileMetadataListExtractor mle =
+          new FileMetadataListExtractor(me);
+      List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), ris_cu);
+      assertNotEmpty(mdlist);
+
+      // check each returned md against expected values
+      Iterator<ArticleMetadata> mdIt = mdlist.iterator();
+      ArticleMetadata mdRecord = null;
+      while (mdIt.hasNext()) {
+        mdRecord = (ArticleMetadata) mdIt.next();
+log.info("mdRecord: "+mdRecord.toString());  
+log.info("pub title: " + mdRecord.get(MetadataField.FIELD_ARTICLE_TITLE));
+
+      }
+    }finally {
+      IOUtil.safeClose(file_input);
+    }
+  }
+  */
   
   /**
    * Inner class to create a html source code simulated content

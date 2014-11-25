@@ -1,6 +1,6 @@
-/* $Id: TestPionRisMetadataExtractorFactory.java,v 1.1 2014-03-28 18:51:51 pgust Exp $
+/* $Id: TestPionRisMetadataExtractorFactory.java,v 1.2 2014-11-25 18:37:11 aishizaki Exp $
 
- Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -28,6 +28,8 @@
 
 package org.lockss.plugin.pion;
 
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.*;
 
 import org.lockss.test.*;
@@ -66,7 +68,7 @@ public class TestPionRisMetadataExtractorFactory extends LockssTestCase {
   private static final String PLUGIN_NAME = 
       "org.lockss.plugin.pion.ClockssPionPlugin";
   
-  private static final String BASE_URL = "http://www.www.envplan.com/";
+  private static final String BASE_URL = "http://i-perception.perceptionweb.com/";
   private static final String JOURNAL_CODE = "epa";
   private static final String SHORT_JOURNAL_CODE = "A";
   private static final String VOLUME_NAME = "2013";
@@ -80,7 +82,7 @@ public class TestPionRisMetadataExtractorFactory extends LockssTestCase {
     theDaemon.setDaemonInited(true);
     theDaemon.getPluginManager().startService();
     theDaemon.getCrawlManager();
-
+    
     pjau = PluginTestUtil.createAndStartAu(PLUGIN_NAME, pionAuConfig());
   }
 
@@ -158,7 +160,7 @@ public class TestPionRisMetadataExtractorFactory extends LockssTestCase {
     cu.setContentSize(goodContent.length());
     cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, Constants.MIME_TYPE_RIS);
     
-    // Create FileMetadataExtractor object through PeerJRisMetadataExtractor()
+    // Create FileMetadataExtractor object through PionRisMetadataExtractor()
     FileMetadataExtractor me = 
         new PionRisMetadataExtractorFactory()
                 .createFileMetadataExtractor(MetadataTarget.Any(), 
@@ -178,9 +180,68 @@ public class TestPionRisMetadataExtractorFactory extends LockssTestCase {
     assertEquals(goodAbstract, md.get(MetadataField.FIELD_ABSTRACT));
     assertEquals(goodVolume, md.get(MetadataField.FIELD_VOLUME));
     assertEquals(goodStartPage, md.get(MetadataField.FIELD_START_PAGE));
-    assertEquals(goodJournalTitle, md.get(MetadataField.FIELD_JOURNAL_TITLE));
+    assertEquals(goodJournalTitle, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
     assertEquals(goodIssn, md.get(MetadataField.FIELD_ISSN));
     assertEquals(goodAccessUrl, md.get(MetadataField.FIELD_ACCESS_URL));
   }
-  
+  /*
+  String realRISFile = "pion.ris";
+  String realPDFFile = "pion.pdf";
+
+  public void testFromRealRISFile() throws Exception {
+    CIProperties risHeader = new CIProperties();
+    InputStream file_input = null;
+    MockArchivalUnit mau; // source au
+    mau = new MockArchivalUnit();
+    mau.setConfiguration(pionAuConfig());
+    log.info("testing Real RIS File");
+    try {
+      file_input = getResourceAsStream(realRISFile);
+      //String string_input = StringUtil.fromInputStream(file_input);
+      String string_input = StringUtil.fromReader(new InputStreamReader(file_input, Constants.ENCODING_UTF_8));
+ log.info("string: "+string_input);     
+      IOUtil.safeClose(file_input);
+
+      String ris_url = BASE_URL + realRISFile;
+      risHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "application/ris");
+      MockCachedUrl ris_cu = mau.addUrl(ris_url, true, true, risHeader);
+      // need to check for this file before emitting
+      
+      ris_cu.setContent(string_input);
+      ris_cu.setContentSize(string_input.length());
+      ris_cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/ris");
+      
+      
+      file_input = getResourceAsStream(realRISFile);
+      string_input = StringUtil.fromReader(new InputStreamReader(file_input, Constants.ENCODING_UTF_8));
+      String pdf_url = BASE_URL + realRISFile;
+      MockCachedUrl pdf_cu = mau.addUrl(pdf_url, true, true, risHeader);
+      // need to check for this file before emitting
+      
+      pdf_cu.setContent(string_input);
+      pdf_cu.setContentSize(string_input.length());
+      pdf_cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/pdf");
+
+      FileMetadataExtractor me = new PionRisMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "application/ris");
+
+      FileMetadataListExtractor mle =
+          new FileMetadataListExtractor(me);
+      List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), ris_cu);
+      assertNotEmpty(mdlist);
+
+      // check each returned md against expected values
+      Iterator<ArticleMetadata> mdIt = mdlist.iterator();
+      ArticleMetadata mdRecord = null;
+      while (mdIt.hasNext()) {
+        mdRecord = (ArticleMetadata) mdIt.next();
+log.info("mdRecord: "+mdRecord.toString());  
+log.info("pub title: " + mdRecord.get(MetadataField.FIELD_ARTICLE_TITLE));
+
+      }
+    }finally {
+      IOUtil.safeClose(file_input);
+    }
+
+  }
+  */
 }
