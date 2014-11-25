@@ -198,7 +198,12 @@
     >
     
     comment[base_url] = http://www.school-nursing.co.uk/
+    param[journal_id] = bjsn
 
+    au < exists ; exists ; 2011 ; British Journal of School Nursing Volume 6 ; 6 >
+    au < exists ; exists ; 2012 ; British Journal of School Nursing Volume 7 ; 7 >
+    au < exists ; exists ; 2013 ; British Journal of School Nursing Volume 8 ; 8 >
+    au < exists ; exists ; 2014 ; British Journal of School Nursing Volume 9 ; 9 >
     
   }
 
@@ -223,7 +228,13 @@
     >
     
     comment[base_url] = http://www.dental-nursing.co.uk/
-    
+    param[journal_id] = denn
+
+    au < exists ; exists ; 2011 ; Dental Nursing Volume 7 ; 7 >
+    au < exists ; exists ; 2012 ; Dental Nursing Volume 8 ; 8 >
+    au < exists ; exists ; 2013 ; Dental Nursing Volume 9 ; 9 >
+    au < exists ; exists ; 2014 ; Dental Nursing Volume 10 ; 10 >
+
   }
 
   {
@@ -234,7 +245,12 @@
     >
     
     comment[base_url] = http://www.gastrointestinalnursing.co.uk/
+    param[journal_id] = gasn
 
+    au < exists ; exists ; 2011 ; Gastrointestinal Nursing Volume 9 ; 9 >
+    au < exists ; exists ; 2012 ; Gastrointestinal Nursing Volume 10 ; 10 >
+    au < exists ; exists ; 2013 ; Gastrointestinal Nursing Volume 11 ; 11 >
+    au < exists ; exists ; 2014 ; Gastrointestinal Nursing Volume 12 ; 12 >
     
   }
 
@@ -246,7 +262,12 @@
     >
     
     comment[base_url] = http://www.independentnurse.co.uk/
+    param[journal_id] = indn
 
+    au < exists ; exists ; 2011 ; Independent Nurse Volume 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Independent Nurse Volume 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Independent Nurse Volume 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Independent Nurse Volume 2014 ; 2014 >
     
   }
 
@@ -258,7 +279,12 @@
     >
     
     comment[base_url] = http://www.ijop.co.uk/
+    param[journal_id] = ijop
 
+    au < exists ; exists ; 2011 ; International Journal of Ophthalmic Practice Volume 2 ; 2 >
+    au < exists ; exists ; 2012 ; International Journal of Ophthalmic Practice Volume 3 ; 3 >
+    au < exists ; exists ; 2013 ; International Journal of Ophthalmic Practice Volume 4 ; 4 >
+    au < exists ; exists ; 2014 ; International Journal of Ophthalmic Practice Volume 5 ; 5 >
     
   }
 
