@@ -1,10 +1,10 @@
 /*
- * $Id: PionHtmlMetadataExtractorFactory.java,v 1.3 2014-11-25 00:26:44 aishizaki Exp $
+ * $Id: PionHtmlMetadataExtractorFactory.java,v 1.4 2014-11-25 18:38:47 aishizaki Exp $
  */
 
 /*
 
- Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -82,12 +82,13 @@ public class PionHtmlMetadataExtractorFactory
                                    MetadataField.splitAt(";")));
       tagMap.put("citation_title", MetadataField.DC_FIELD_TITLE);
       tagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
-      tagMap.put("citation_journal_title", MetadataField.FIELD_JOURNAL_TITLE);
+      tagMap.put("citation_journal_title", MetadataField.FIELD_PUBLICATION_TITLE);
       
       tagMap.put("citation_lastpage", MetadataField.DC_FIELD_CITATION_EPAGE);
       tagMap.put("citation_abstract_html_url", MetadataField.FIELD_ACCESS_URL);
-      tagMap.put("citation_publisher", MetadataField.DC_FIELD_PUBLISHER);
-      tagMap.put("citation_publisher", MetadataField.FIELD_PUBLISHER);
+      // for consistency, let tdb set publisher
+      //tagMap.put("citation_publisher", MetadataField.DC_FIELD_PUBLISHER);
+      //tagMap.put("citation_publisher", MetadataField.FIELD_PUBLISHER);
     }
     
     /**
@@ -98,7 +99,7 @@ public class PionHtmlMetadataExtractorFactory
     public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
       throws IOException {
     	log.debug("The MetadataExtractor attempted to extract metadata from cu: "+cu);
-      ArticleMetadata am = 
+    	ArticleMetadata am = 
         new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
       am.cook(tagMap);
 

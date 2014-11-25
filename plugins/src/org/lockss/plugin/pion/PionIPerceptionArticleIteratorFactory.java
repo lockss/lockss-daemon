@@ -1,10 +1,10 @@
 /*
- * $Id: PionIPerceptionArticleIteratorFactory.java,v 1.4 2014-11-25 00:26:44 aishizaki Exp $
+ * $Id: PionIPerceptionArticleIteratorFactory.java,v 1.5 2014-11-25 18:38:47 aishizaki Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -51,7 +51,17 @@ public class PionIPerceptionArticleIteratorFactory
   protected static final String ROOT_TEMPLATE = "\"%sjournal/%s/volume/%s\", base_url, journal_code, volume_name";
   	
   protected static final String PATTERN_TEMPLATE = "\"%sjournal/%s/volume/%s/article/[^/]+\", base_url, journal_code, volume_name, journal_code";
-
+  /* 
+   *  ClockssPionIPerception examples:
+    primary:
+    PdfFile:      http://i-perception.perceptionweb.com/fulltext/i04/i0512.pdf 
+    secondary:
+    Abstract:     http://i-perception.perceptionweb.com/journal/I/volume/4/article/i0512
+    Metadata:     http://i-perception.perceptionweb.com/journal/I/volume/4/article/i0512
+    Citation_Ris: http://www.perceptionweb.com/ris.cgi?id=i0512
+   * 
+   */
+  
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
 						      MetadataTarget target)
       throws PluginException {
@@ -97,14 +107,11 @@ public class PionIPerceptionArticleIteratorFactory
     protected ArticleFiles processAbstract(CachedUrl abstractCu, Matcher absMat) {
         ArticleFiles af = new ArticleFiles();
         af.setRoleCu(ArticleFiles.ROLE_ABSTRACT,abstractCu);
-        af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, abstractCu);
+        //af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, abstractCu);
         af.setFullTextCu(abstractCu);
         
-        if(true)//spec.getTarget() != MetadataTarget.Article)
-        {
-        	guessPdf(af, absMat);
-			guessRisCitation(af, absMat);
-        }
+        guessPdf(af, absMat);
+        guessRisCitation(af, absMat, abstractCu);
         
         return af;
       }
@@ -116,7 +123,7 @@ public class PionIPerceptionArticleIteratorFactory
       log.debug("pdfCu2 generated is: "+pdfCu2.getUrl());
       if (pdfCu != null && pdfCu.hasContent()) {
     	  log.debug("pdf Cu stored");
-			//af.setFullTextCu(pdfCu);
+			af.setFullTextCu(pdfCu);
 			af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
 		}
       else if(pdfCu2 != null && pdfCu2.hasContent()) {
@@ -126,18 +133,21 @@ public class PionIPerceptionArticleIteratorFactory
       }
     }
     
-    protected void guessRisCitation(ArticleFiles af, Matcher mat) {
+    protected void guessRisCitation(ArticleFiles af, Matcher mat, CachedUrl absCu) {
       CachedUrl risCu = au.makeCachedUrl(mat.replaceFirst(base_url2+"ris.cgi?id=$1"));
       log.debug("risCu generated is: "+risCu.getUrl());
       if (risCu != null && risCu.hasContent()) {
     	  log.debug("risCu stored");
+        af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, risCu);
         af.setRoleCu(ArticleFiles.ROLE_CITATION + "_" + "Ris", risCu);
+      } else {
+        af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, absCu);
       }
     }
   }
   
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
       throws PluginException {
-    return new BaseArticleMetadataExtractor(null);
+    return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
   }
 }
