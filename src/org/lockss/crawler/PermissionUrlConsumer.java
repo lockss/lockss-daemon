@@ -1,5 +1,5 @@
 /*
- * $Id: PermissionUrlConsumer.java,v 1.2 2014-11-24 20:38:54 wkwilson Exp $
+ * $Id: PermissionUrlConsumer.java,v 1.3 2014-11-25 01:41:43 wkwilson Exp $
  */
 
 /*
@@ -98,7 +98,6 @@ public class PermissionUrlConsumer extends SimpleUrlConsumer {
     if (permOk) {
       permMap.setPermissionResult(fud.fetchUrl,
           PermissionStatus.PERMISSION_OK);
-      fud.resetInputStream();
       super.consume();
     }
   }
@@ -107,13 +106,13 @@ public class PermissionUrlConsumer extends SimpleUrlConsumer {
       Collection<PermissionChecker> permCheckers, PermissionLogic logic)
           throws IOException {
     PermissionChecker checker;
+    InputStream is = fud.input;
+    if(!is.markSupported()) {
+      is = new BufferedInputStream(is);
+    }
     // check the lockss checkers and find at least one checker that matches
     for (Iterator<PermissionChecker> it = permCheckers.iterator();
         it.hasNext(); ) {
-      InputStream is = fud.input;
-      if(!is.markSupported()) {
-        is = new BufferedInputStream(is);
-      }
       // allow us to reread contents if reasonable size
       is.mark(crawlFacade.permissonStreamResetMax());
       checker = it.next();
@@ -122,7 +121,15 @@ public class PermissionUrlConsumer extends SimpleUrlConsumer {
       // workaround until they're fixed.
       Reader reader = new InputStreamReader(new IgnoreCloseInputStream(is),
               charset);
-      if (checker.checkPermission(crawlFacade, reader, fud.fetchUrl)) {
+      boolean perm = checker.checkPermission(crawlFacade, reader, fud.fetchUrl);
+      try {
+        is.reset();
+      } catch(IOException ex) {
+        //unable to reset for some reason
+        fud.resetInputStream();
+        is = fud.input;
+      }
+      if (perm) {
         if(logic == PermissionLogic.OR_CHECKER){
           logger.debug3("Found permission on "+checker);
           return true; //we just need one permission to be successful here
@@ -131,9 +138,7 @@ public class PermissionUrlConsumer extends SimpleUrlConsumer {
         //All permissions must be successful fail
         return false;
       }
-      if (it.hasNext()) {
-        fud.resetInputStream();
-      } else if(logic == PermissionLogic.AND_CHECKER) {
+      if (!it.hasNext() && logic == PermissionLogic.AND_CHECKER) {
         //All permissions have been successfull and we reached the end
         //An empty and checker will return true
         return true;

@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.107 2014-11-24 20:38:54 wkwilson Exp $
+ * $Id: FollowLinkCrawler.java,v 1.108 2014-11-25 01:41:43 wkwilson Exp $
  */
 
 /*
@@ -158,6 +158,14 @@ public class FollowLinkCrawler extends BaseCrawler {
     super(au, aus);
     crawlStatus = new CrawlerStatus(au, au.getStartUrls(),
         getTypeString());
+    try {
+      urlOrderComparator = au.getCrawlUrlComparator();
+    } catch (PluginException e) {
+      logger.error("Plugin CrawlUrlComparatorFactory error, using breadth-first", e);
+    }
+    fetchQueue = new CrawlQueue(urlOrderComparator);
+    parseQueue = new FifoQueue();
+    permissionProbeUrls = new LinkedList<CrawlUrlData>();
   }
 
   /** Return true if crawler should follow links from collected files */
@@ -279,16 +287,8 @@ public class FollowLinkCrawler extends BaseCrawler {
       }
     }
 
-    try {
-      urlOrderComparator = au.getCrawlUrlComparator();
-    } catch (PluginException e) {
-      logger.error("Plugin CrawlUrlComparatorFactory error, using breadth-first", e);
-    }
-
     // get the Urls to follow 
     try {
-      fetchQueue = new CrawlQueue(urlOrderComparator);
-      parseQueue = new FifoQueue();
       enqueueStartUrls();
     } catch (RuntimeException e) {
       logger.warning("Unexpected exception, should have been caught lower", e);
@@ -859,9 +859,6 @@ public class FollowLinkCrawler extends BaseCrawler {
 
     @Override
     public void addToPermissionProbeQueue(String probeUrl) {
-      if(permissionProbeUrls == null) {
-        permissionProbeUrls = new LinkedList<CrawlUrlData>();
-      }
       permissionProbeUrls.add(new CrawlUrlData(probeUrl, 0));
     }
 

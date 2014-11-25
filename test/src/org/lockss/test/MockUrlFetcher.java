@@ -1,5 +1,5 @@
 /*
- * $Id: MockUrlFetcher.java,v 1.2 2014-11-19 22:46:24 wkwilson Exp $
+ * $Id: MockUrlFetcher.java,v 1.3 2014-11-25 01:41:43 wkwilson Exp $
  */
 
 /*
@@ -205,7 +205,7 @@ public class MockUrlFetcher implements UrlFetcher {
     executed = true;
     throwExceptionIfSet();
     if (uncachedIS == null && cu != null) {
-      return cu.getUnfilteredInputStream();
+      return new BufferedInputStream(cu.getUnfilteredInputStream());
     }
     return uncachedIS;
   }
@@ -281,11 +281,14 @@ public class MockUrlFetcher implements UrlFetcher {
     return FetchResult.FETCHED;
   }
 
-  @Override
-  public InputStream resetInputStream(InputStream input, String lastModified)
-      throws IOException {
-    // TODO Auto-generated method stub
-    return null;
+  public InputStream resetInputStream(InputStream is, 
+      String lastModified) throws IOException {
+    try {
+      is.reset();
+    } catch (IOException e) {
+      return getUncachedInputStream();
+    }
+    return is;
   }
 
   @Override
