@@ -4808,35 +4808,35 @@
     plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 1985-1986 ; Economic Policy Volume 1 ; 1 >
-    au < exists ; 1987 ; Economic Policy Volume 2 ; 2 >
-    au < exists ; 1988 ; Economic Policy Volume 3 ; 3 >
-    au < exists ; 1989 ; Economic Policy Volume 4 ; 4 >
-    au < exists ; 1990 ; Economic Policy Volume 5 ; 5 >
-    au < exists ; 1991 ; Economic Policy Volume 6 ; 6 >
-    au < exists ; 1992 ; Economic Policy Volume 7 ; 7 >
-    au < exists ; 1993 ; Economic Policy Volume 8 ; 8 >
-    au < exists ; 1994 ; Economic Policy Volume 9 ; 9 >
-    au < exists ; 1995 ; Economic Policy Volume 10 ; 10 >
-    au < exists ; 1996 ; Economic Policy Volume 11 ; 11 >
-    au < exists ; 1997 ; Economic Policy Volume 12 ; 12 >
-    au < exists ; 1998 ; Economic Policy Volume 13 ; 13 >
-    au < exists ; 1999 ; Economic Policy Volume 14 ; 14 >
-    au < exists ; 2000 ; Economic Policy Volume 15 ; 15 >
-    au < exists ; 2001 ; Economic Policy Volume 16 ; 16 >
-    au < exists ; 2002 ; Economic Policy Volume 17 ; 17 >
-    au < exists ; 2003 ; Economic Policy Volume 18 ; 18 >
-    au < exists ; 2004 ; Economic Policy Volume 19 ; 19 >
-    au < exists ; 2005 ; Economic Policy Volume 20 ; 20 >
-    au < exists ; 2006 ; Economic Policy Volume 21 ; 21 >
-    au < exists ; 2007 ; Economic Policy Volume 22 ; 22 >
-    au < exists ; 2008 ; Economic Policy Volume 23 ; 23 >
-    au < exists ; 2009 ; Economic Policy Volume 24 ; 24 >
-    au < exists ; 2010 ; Economic Policy Volume 25 ; 25 >
-    au < exists ; 2011 ; Economic Policy Volume 26 ; 26 >
-    au < exists ; 2012 ; Economic Policy Volume 27 ; 27 >
-    au < exists ; 2013 ; Economic Policy Volume 28 ; 28 >
-    au < exists ; 2014 ; Economic Policy Volume 29 ; 29 >
+    au < manifest ; 1985-1986 ; Economic Policy Volume 1 ; 1 >
+    au < manifest ; 1987 ; Economic Policy Volume 2 ; 2 >
+    au < manifest ; 1988 ; Economic Policy Volume 3 ; 3 >
+    au < manifest ; 1989 ; Economic Policy Volume 4 ; 4 >
+    au < manifest ; 1990 ; Economic Policy Volume 5 ; 5 >
+    au < manifest ; 1991 ; Economic Policy Volume 6 ; 6 >
+    au < manifest ; 1992 ; Economic Policy Volume 7 ; 7 >
+    au < manifest ; 1993 ; Economic Policy Volume 8 ; 8 >
+    au < manifest ; 1994 ; Economic Policy Volume 9 ; 9 >
+    au < manifest ; 1995 ; Economic Policy Volume 10 ; 10 >
+    au < manifest ; 1996 ; Economic Policy Volume 11 ; 11 >
+    au < manifest ; 1997 ; Economic Policy Volume 12 ; 12 >
+    au < manifest ; 1998 ; Economic Policy Volume 13 ; 13 >
+    au < manifest ; 1999 ; Economic Policy Volume 14 ; 14 >
+    au < manifest ; 2000 ; Economic Policy Volume 15 ; 15 >
+    au < manifest ; 2001 ; Economic Policy Volume 16 ; 16 >
+    au < manifest ; 2002 ; Economic Policy Volume 17 ; 17 >
+    au < manifest ; 2003 ; Economic Policy Volume 18 ; 18 >
+    au < manifest ; 2004 ; Economic Policy Volume 19 ; 19 >
+    au < manifest ; 2005 ; Economic Policy Volume 20 ; 20 >
+    au < manifest ; 2006 ; Economic Policy Volume 21 ; 21 >
+    au < manifest ; 2007 ; Economic Policy Volume 22 ; 22 >
+    au < manifest ; 2008 ; Economic Policy Volume 23 ; 23 >
+    au < manifest ; 2009 ; Economic Policy Volume 24 ; 24 >
+    au < manifest ; 2010 ; Economic Policy Volume 25 ; 25 >
+    au < manifest ; 2011 ; Economic Policy Volume 26 ; 26 >
+    au < manifest ; 2012 ; Economic Policy Volume 27 ; 27 >
+    au < manifest ; 2013 ; Economic Policy Volume 28 ; 28 >
+    au < manifest ; 2014 ; Economic Policy Volume 29 ; 29 >
     
   }
 
@@ -9325,17 +9325,17 @@
     plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 1998 ; International Journal of Neuropsychopharmacology Volume 1 ; 1 >
-    au < exists ; 1999 ; International Journal of Neuropsychopharmacology Volume 2 ; 2 >
-    au < exists ; 2000 ; International Journal of Neuropsychopharmacology Volume 3 ; 3 >
-    au < exists ; 2001 ; International Journal of Neuropsychopharmacology Volume 4 ; 4 >
-    au < exists ; 2002 ; International Journal of Neuropsychopharmacology Volume 5 ; 5 >
-    au < exists ; 2003 ; International Journal of Neuropsychopharmacology Volume 6 ; 6 >
-    au < exists ; 2004 ; International Journal of Neuropsychopharmacology Volume 7 ; 7 >
-    au < exists ; 2005 ; International Journal of Neuropsychopharmacology Volume 8 ; 8 >
-    au < exists ; 2006 ; International Journal of Neuropsychopharmacology Volume 9 ; 9 >
-    au < exists ; 2007 ; International Journal of Neuropsychopharmacology Volume 10 ; 10 >
-    au < exists ; 2008 ; International Journal of Neuropsychopharmacology Volume 11 ; 11 >
+    au < manifest ; 1998 ; International Journal of Neuropsychopharmacology Volume 1 ; 1 >
+    au < manifest ; 1999 ; International Journal of Neuropsychopharmacology Volume 2 ; 2 >
+    au < manifest ; 2000 ; International Journal of Neuropsychopharmacology Volume 3 ; 3 >
+    au < manifest ; 2001 ; International Journal of Neuropsychopharmacology Volume 4 ; 4 >
+    au < manifest ; 2002 ; International Journal of Neuropsychopharmacology Volume 5 ; 5 >
+    au < manifest ; 2003 ; International Journal of Neuropsychopharmacology Volume 6 ; 6 >
+    au < manifest ; 2004 ; International Journal of Neuropsychopharmacology Volume 7 ; 7 >
+    au < manifest ; 2005 ; International Journal of Neuropsychopharmacology Volume 8 ; 8 >
+    au < manifest ; 2006 ; International Journal of Neuropsychopharmacology Volume 9 ; 9 >
+    au < manifest ; 2007 ; International Journal of Neuropsychopharmacology Volume 10 ; 10 >
+    au < manifest ; 2008 ; International Journal of Neuropsychopharmacology Volume 11 ; 11 >
     au < manifest ; 2009 ; International Journal of Neuropsychopharmacology Volume 12 ; 12 >
     au < manifest ; 2010 ; International Journal of Neuropsychopharmacology Volume 13 ; 13 >
     au < manifest ; 2011 ; International Journal of Neuropsychopharmacology Volume 14 ; 14 >
@@ -12119,20 +12119,20 @@
     param[base_url] = http://jinsectscience.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2001 ; Journal of Insect Science Volume 1 ; 1 >
-    au < exists ; 2002 ; Journal of Insect Science Volume 2 ; 2 >
-    au < exists ; 2003 ; Journal of Insect Science Volume 3 ; 3 >
-    au < exists ; 2004 ; Journal of Insect Science Volume 4 ; 4 >
-    au < exists ; 2005 ; Journal of Insect Science Volume 5 ; 5 >
-    au < exists ; 2006 ; Journal of Insect Science Volume 6 ; 6 >
-    au < exists ; 2007 ; Journal of Insect Science Volume 7 ; 7 >
-    au < exists ; 2008 ; Journal of Insect Science Volume 8 ; 8 >
-    au < exists ; 2009 ; Journal of Insect Science Volume 9 ; 9 >
-    au < exists ; 2010 ; Journal of Insect Science Volume 10 ; 10 >
-    au < exists ; 2011 ; Journal of Insect Science Volume 11 ; 11 >
-    au < exists ; 2012 ; Journal of Insect Science Volume 12 ; 12 >
-    au < exists ; 2013 ; Journal of Insect Science Volume 13 ; 13 >
-    au < exists ; 2014 ; Journal of Insect Science Volume 14 ; 14 >
+    au < manifest ; 2001 ; Journal of Insect Science Volume 1 ; 1 >
+    au < manifest ; 2002 ; Journal of Insect Science Volume 2 ; 2 >
+    au < manifest ; 2003 ; Journal of Insect Science Volume 3 ; 3 >
+    au < manifest ; 2004 ; Journal of Insect Science Volume 4 ; 4 >
+    au < manifest ; 2005 ; Journal of Insect Science Volume 5 ; 5 >
+    au < manifest ; 2006 ; Journal of Insect Science Volume 6 ; 6 >
+    au < manifest ; 2007 ; Journal of Insect Science Volume 7 ; 7 >
+    au < manifest ; 2008 ; Journal of Insect Science Volume 8 ; 8 >
+    au < manifest ; 2009 ; Journal of Insect Science Volume 9 ; 9 >
+    au < manifest ; 2010 ; Journal of Insect Science Volume 10 ; 10 >
+    au < manifest ; 2011 ; Journal of Insect Science Volume 11 ; 11 >
+    au < manifest ; 2012 ; Journal of Insect Science Volume 12 ; 12 >
+    au < manifest ; 2013 ; Journal of Insect Science Volume 13 ; 13 >
+    au < manifest ; 2014 ; Journal of Insect Science Volume 14 ; 14 >
 
     }
 
@@ -12150,11 +12150,11 @@
     implicit < status ; year ; name ; param[volume_name] >
     param[base_url] = http://jipm.oxfordjournals.org/
     
-    au < exists ; 2010 ; Journal of Integrated Pest Management Volume 1 ; 1 >
-    au < exists ; 2011 ; Journal of Integrated Pest Management Volume 2 ; 2 >
-    au < exists ; 2012 ; Journal of Integrated Pest Management Volume 3 ; 3 >
-    au < exists ; 2013 ; Journal of Integrated Pest Management Volume 4 ; 4 >
-    au < exists ; 2014 ; Journal of Integrated Pest Management Volume 5 ; 5 >
+    au < manifest ; 2010 ; Journal of Integrated Pest Management Volume 1 ; 1 >
+    au < manifest ; 2011 ; Journal of Integrated Pest Management Volume 2 ; 2 >
+    au < manifest ; 2012 ; Journal of Integrated Pest Management Volume 3 ; 3 >
+    au < manifest ; 2013 ; Journal of Integrated Pest Management Volume 4 ; 4 >
+    au < manifest ; 2014 ; Journal of Integrated Pest Management Volume 5 ; 5 >
   }
 
   {
@@ -16702,46 +16702,46 @@
     param[base_url] = http://nutritionreviews.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 1975 ; Nutrition Reviews Volume 33 ; 33 >
-    au < exists ; 1976 ; Nutrition Reviews Volume 34 ; 34 >
-    au < exists ; 1977 ; Nutrition Reviews Volume 35 ; 35 >
-    au < exists ; 1978 ; Nutrition Reviews Volume 36 ; 36 >
-    au < exists ; 1979 ; Nutrition Reviews Volume 37 ; 37 >
-    au < exists ; 1980 ; Nutrition Reviews Volume 38 ; 38 >
-    au < exists ; 1981 ; Nutrition Reviews Volume 39 ; 39 >
-    au < exists ; 1982 ; Nutrition Reviews Volume 40 ; 40 >
-    au < exists ; 1983 ; Nutrition Reviews Volume 41 ; 41 >
-    au < exists ; 1984 ; Nutrition Reviews Volume 42 ; 42 >
-    au < exists ; 1985 ; Nutrition Reviews Volume 43 ; 43 >
-    au < exists ; 1986 ; Nutrition Reviews Volume 44 ; 44 >
-    au < exists ; 1987 ; Nutrition Reviews Volume 45 ; 45 >
-    au < exists ; 1988 ; Nutrition Reviews Volume 46 ; 46 >
-    au < exists ; 1989 ; Nutrition Reviews Volume 47 ; 47 >
-    au < exists ; 1990 ; Nutrition Reviews Volume 48 ; 48 >
-    au < exists ; 1991 ; Nutrition Reviews Volume 49 ; 49 >
-    au < exists ; 1992 ; Nutrition Reviews Volume 50 ; 50 >
-    au < exists ; 1993 ; Nutrition Reviews Volume 51 ; 51 >
-    au < exists ; 1994 ; Nutrition Reviews Volume 52 ; 52 >
-    au < exists ; 1995 ; Nutrition Reviews Volume 53 ; 53 >
-    au < exists ; 1996 ; Nutrition Reviews Volume 54 ; 54 >
-    au < exists ; 1997 ; Nutrition Reviews Volume 55 ; 55 >
-    au < exists ; 1998 ; Nutrition Reviews Volume 56 ; 56 >
-    au < exists ; 1999 ; Nutrition Reviews Volume 57 ; 57 >
-    au < exists ; 2000 ; Nutrition Reviews Volume 58 ; 58 >
-    au < exists ; 2001 ; Nutrition Reviews Volume 59 ; 59 >
-    au < exists ; 2002 ; Nutrition Reviews Volume 60 ; 60 >
-    au < exists ; 2003 ; Nutrition Reviews Volume 61 ; 61 >
-    au < exists ; 2004 ; Nutrition Reviews Volume 62 ; 62 >
-    au < exists ; 2005 ; Nutrition Reviews Volume 63 ; 63 >
-    au < exists ; 2006 ; Nutrition Reviews Volume 64 ; 64 >
-    au < exists ; 2007 ; Nutrition Reviews Volume 65 ; 65 >
-    au < exists ; 2008 ; Nutrition Reviews Volume 66 ; 66 >
-    au < exists ; 2009 ; Nutrition Reviews Volume 67 ; 67 >
-    au < exists ; 2010 ; Nutrition Reviews Volume 68 ; 68 >
-    au < exists ; 2011 ; Nutrition Reviews Volume 69 ; 69 >
-    au < exists ; 2012 ; Nutrition Reviews Volume 70 ; 70 >
-    au < exists ; 2013 ; Nutrition Reviews Volume 71 ; 71 >
-    au < exists ; 2014 ; Nutrition Reviews Volume 72 ; 72 >
+    au < manifest ; 1975 ; Nutrition Reviews Volume 33 ; 33 >
+    au < manifest ; 1976 ; Nutrition Reviews Volume 34 ; 34 >
+    au < manifest ; 1977 ; Nutrition Reviews Volume 35 ; 35 >
+    au < manifest ; 1978 ; Nutrition Reviews Volume 36 ; 36 >
+    au < manifest ; 1979 ; Nutrition Reviews Volume 37 ; 37 >
+    au < manifest ; 1980 ; Nutrition Reviews Volume 38 ; 38 >
+    au < manifest ; 1981 ; Nutrition Reviews Volume 39 ; 39 >
+    au < manifest ; 1982 ; Nutrition Reviews Volume 40 ; 40 >
+    au < manifest ; 1983 ; Nutrition Reviews Volume 41 ; 41 >
+    au < manifest ; 1984 ; Nutrition Reviews Volume 42 ; 42 >
+    au < manifest ; 1985 ; Nutrition Reviews Volume 43 ; 43 >
+    au < manifest ; 1986 ; Nutrition Reviews Volume 44 ; 44 >
+    au < manifest ; 1987 ; Nutrition Reviews Volume 45 ; 45 >
+    au < manifest ; 1988 ; Nutrition Reviews Volume 46 ; 46 >
+    au < manifest ; 1989 ; Nutrition Reviews Volume 47 ; 47 >
+    au < manifest ; 1990 ; Nutrition Reviews Volume 48 ; 48 >
+    au < manifest ; 1991 ; Nutrition Reviews Volume 49 ; 49 >
+    au < manifest ; 1992 ; Nutrition Reviews Volume 50 ; 50 >
+    au < manifest ; 1993 ; Nutrition Reviews Volume 51 ; 51 >
+    au < manifest ; 1994 ; Nutrition Reviews Volume 52 ; 52 >
+    au < manifest ; 1995 ; Nutrition Reviews Volume 53 ; 53 >
+    au < manifest ; 1996 ; Nutrition Reviews Volume 54 ; 54 >
+    au < manifest ; 1997 ; Nutrition Reviews Volume 55 ; 55 >
+    au < manifest ; 1998 ; Nutrition Reviews Volume 56 ; 56 >
+    au < manifest ; 1999 ; Nutrition Reviews Volume 57 ; 57 >
+    au < manifest ; 2000 ; Nutrition Reviews Volume 58 ; 58 >
+    au < manifest ; 2001 ; Nutrition Reviews Volume 59 ; 59 >
+    au < manifest ; 2002 ; Nutrition Reviews Volume 60 ; 60 >
+    au < manifest ; 2003 ; Nutrition Reviews Volume 61 ; 61 >
+    au < manifest ; 2004 ; Nutrition Reviews Volume 62 ; 62 >
+    au < manifest ; 2005 ; Nutrition Reviews Volume 63 ; 63 >
+    au < manifest ; 2006 ; Nutrition Reviews Volume 64 ; 64 >
+    au < manifest ; 2007 ; Nutrition Reviews Volume 65 ; 65 >
+    au < manifest ; 2008 ; Nutrition Reviews Volume 66 ; 66 >
+    au < manifest ; 2009 ; Nutrition Reviews Volume 67 ; 67 >
+    au < manifest ; 2010 ; Nutrition Reviews Volume 68 ; 68 >
+    au < manifest ; 2011 ; Nutrition Reviews Volume 69 ; 69 >
+    au < manifest ; 2012 ; Nutrition Reviews Volume 70 ; 70 >
+    au < manifest ; 2013 ; Nutrition Reviews Volume 71 ; 71 >
+    au < manifest ; 2014 ; Nutrition Reviews Volume 72 ; 72 >
 
   }
 
