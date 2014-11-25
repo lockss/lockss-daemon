@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.153 2014-11-24 10:17:47 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.154 2014-11-25 05:13:08 tlipkis Exp $
  */
 
 /*
@@ -271,6 +271,14 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   public static final String PARAM_ALLOWED_PLUGIN_PERMITTED_HOSTS =
     PREFIX + "allowedPluginPermittedHosts";
   static final String DEFAULT_ALLOWED_PLUGIN_PERMITTED_HOSTS = null;
+
+  // Defined here because it makes more sense for the name to be associated
+  // with the crawler even though it's currently used in BaseUrlFetcher.
+  /** Headers that should be added to all HTTP requests from the
+   * crawler. */
+  public static final String PARAM_REQUEST_HEADERS =
+    PREFIX + "httpRequestHeaders";
+  public static final List<String> DEFAULT_REQUEST_HEADERS = null;
 
   static final String WDOG_PARAM_CRAWLER = "Crawler";
   static final long WDOG_DEFAULT_CRAWLER = 2 * Constants.HOUR;

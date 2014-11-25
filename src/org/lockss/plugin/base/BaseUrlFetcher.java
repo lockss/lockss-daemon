@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlFetcher.java,v 1.5 2014-11-25 03:47:26 tlipkis Exp $
+ * $Id: BaseUrlFetcher.java,v 1.6 2014-11-25 05:13:08 tlipkis Exp $
  */
 
 /*
@@ -48,8 +48,7 @@ import java.util.Properties;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.Configuration;
 import org.lockss.config.CurrentConfig;
-import org.lockss.crawler.CrawlRateLimiter;
-import org.lockss.crawler.CrawlerStatus;
+import org.lockss.crawler.*;
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.Crawler;
 import org.lockss.daemon.LockssWatchdog;
@@ -111,6 +110,7 @@ public class BaseUrlFetcher implements UrlFetcher {
   public static final boolean DEFAULT_STOP_WATCHDOG_DURING_PAUSE = false;
 
   
+
   protected final String origUrl;	// URL with which I was created
   protected String fetchUrl;		// possibly affected by redirects
   protected RedirectScheme redirectScheme = REDIRECT_SCHEME_FOLLOW;
@@ -470,6 +470,8 @@ public class BaseUrlFetcher implements UrlFetcher {
           conn.setCredentials(lst.get(0), lst.get(1));
         }
       }
+      // Add global request headers first so plugin can override
+      addRequestHeaders();
       addPluginRequestHeaders();
       if (reqProps != null) {
         for (Iterator iter = reqProps.keySet().iterator(); iter.hasNext(); ) {
@@ -611,15 +613,38 @@ public class BaseUrlFetcher implements UrlFetcher {
     }
   }
   
-  protected void addPluginRequestHeaders() {
-    for (String hdr : au.getHttpRequestHeaders()) {
-      int pos = hdr.indexOf(":");
-      if (pos > 0 && pos < hdr.length() - 1) {
-	setRequestProperty(hdr.substring(0, pos), hdr.substring(pos + 1));
+  protected void addRequestHeaders() {
+    List<String> hdrs =
+      CurrentConfig.getList(CrawlManagerImpl.PARAM_REQUEST_HEADERS,
+			    CrawlManagerImpl.DEFAULT_REQUEST_HEADERS);
+    if (hdrs != null) {
+      for (String hdr : hdrs) {
+	addHdr(hdr);
       }
     }
   }
   
+  protected void addPluginRequestHeaders() {
+    for (String hdr : au.getHttpRequestHeaders()) {
+      addHdr(hdr);
+    }
+  }
+  
+  /** Add request header if string is <tt>key:val</tt>, remove if juat
+   * <tt>key:</tt> */
+  private void addHdr(String hdr) {
+    int pos = hdr.indexOf(":");
+    if (pos > 0) {
+      String key = hdr.substring(0, pos);
+      if (pos < hdr.length() - 1) {
+	setRequestProperty(key, hdr.substring(pos + 1));
+      } else if (reqProps != null) {
+	reqProps.remove(key);
+      }
+    }
+  }
+
+
   /** Handle a single redirect response: determine whether it should be
    * followed and change the state (fetchUrl) to set up for the next fetch.
    * @return true if another request should be issued, false if not. */

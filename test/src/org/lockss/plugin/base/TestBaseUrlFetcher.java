@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlFetcher.java,v 1.3 2014-11-24 20:38:54 wkwilson Exp $
+ * $Id: TestBaseUrlFetcher.java,v 1.4 2014-11-25 05:13:08 tlipkis Exp $
  */
 
 /*
@@ -366,8 +366,21 @@ public class TestBaseUrlFetcher extends LockssTestCase {
 		 mconn.getCookies());
   }
 
+  public void testGlobalRequestHeaders() throws IOException {
+    ConfigurationUtil.addFromArgs(CrawlManagerImpl.PARAM_REQUEST_HEADERS,
+				  "foo:baz;a:c;ill");
+    MockConnectionBaseUrlFetcher muf =
+      new MockConnectionBaseUrlFetcher(mcf, TEST_URL);
+    MyMockLockssUrlConnection mconn = makeConn(200, "", null, "foo");
+    muf.addConnection(mconn);
+    muf.getUncachedInputStream();
+    assertEquals(PropUtil.fromArgs("user-agent", "LOCKSS cache",
+				   "foo", "baz",
+				   "a", "c"),
+		 mconn.getRequestProperties());
+  }
+
   public void testPluginRequestHeaders() throws IOException {
-    TimeBase.setSimulated(555666);
     mau.setHttpRequestHeaders(ListUtil.list("foo:bar",
 					    "Accept-Languege:da, en-gb;q=0.8, en;q=0.7",
 					    "a:b",
@@ -380,6 +393,25 @@ public class TestBaseUrlFetcher extends LockssTestCase {
     assertEquals(PropUtil.fromArgs("user-agent", "LOCKSS cache",
 				   "accept-languege", "da, en-gb;q=0.8, en;q=0.7",
 				   "a", "b",
+				   "foo", "bar"),
+		 mconn.getRequestProperties());
+  }
+
+  // Ensure plugin request headers override global
+  public void testBothRequestHeaders() throws IOException {
+    ConfigurationUtil.addFromArgs(CrawlManagerImpl.PARAM_REQUEST_HEADERS,
+				  "foo:baz;a:c;ill");
+    mau.setHttpRequestHeaders(ListUtil.list("foo:bar",
+					    "Accept-Languege:da, en-gb;q=0.8, en;q=0.7",
+					    "a:",
+					    "illegal"));
+    MockConnectionBaseUrlFetcher muf =
+      new MockConnectionBaseUrlFetcher(mcf, TEST_URL);
+    MyMockLockssUrlConnection mconn = makeConn(200, "", null, "foo");
+    muf.addConnection(mconn);
+    muf.getUncachedInputStream();
+    assertEquals(PropUtil.fromArgs("user-agent", "LOCKSS cache",
+				   "accept-languege", "da, en-gb;q=0.8, en;q=0.7",
 				   "foo", "bar"),
 		 mconn.getRequestProperties());
   }
