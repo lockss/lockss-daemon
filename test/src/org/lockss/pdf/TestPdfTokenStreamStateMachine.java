@@ -1,5 +1,5 @@
 /*
- * $Id: TestPdfTokenStreamStateMachine.java,v 1.1 2014-11-17 22:39:59 thib_gc Exp $
+ * $Id: TestPdfTokenStreamStateMachine.java,v 1.2 2014-11-25 02:12:14 thib_gc Exp $
  */
 
 /*
@@ -120,7 +120,7 @@ public class TestPdfTokenStreamStateMachine extends LockssTestCase {
 
     }
     
-    FakePdfTokenFactory tf = new FakePdfTokenFactory();
+    MockPdfTokenFactory tf = new MockPdfTokenFactory();
     MyPdfTokenStreamStateMachine sm = new MyPdfTokenStreamStateMachine();
     sm.process(Arrays.asList(tf.makeOperator("op0"),
                              tf.makeOperator("op1"),

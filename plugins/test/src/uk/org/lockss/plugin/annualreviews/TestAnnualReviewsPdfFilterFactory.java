@@ -1,5 +1,5 @@
 /*
- * $Id: TestAnnualReviewsPdfFilterFactory.java,v 1.1 2014-11-19 01:03:21 thib_gc Exp $
+ * $Id: TestAnnualReviewsPdfFilterFactory.java,v 1.2 2014-11-25 02:11:33 thib_gc Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ public class TestAnnualReviewsPdfFilterFactory extends LockssTestCase {
   @Override
   protected void setUp() throws Exception {
     super.setUp();
-    this.tf = new FakePdfTokenFactory();
+    this.tf = new MockPdfTokenFactory();
   }
   
   public void testDownloadedFromWorker() throws Exception {

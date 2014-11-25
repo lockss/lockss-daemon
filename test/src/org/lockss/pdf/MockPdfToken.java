@@ -1,10 +1,10 @@
 /*
- * $Id: FakePdfToken.java,v 1.3 2012-07-19 08:01:55 thib_gc Exp $
+ * $Id: MockPdfToken.java,v 1.1 2014-11-25 02:11:33 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,7 +36,7 @@ import java.util.*;
 
 import org.lockss.pdf.PdfToken;
 
-public class FakePdfToken implements PdfToken {
+public class MockPdfToken implements PdfToken {
 
   @Override
   public List<PdfToken> getArray() {

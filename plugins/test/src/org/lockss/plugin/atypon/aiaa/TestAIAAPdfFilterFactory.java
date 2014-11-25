@@ -1,5 +1,5 @@
 /*
- * $Id: TestAIAAPdfFilterFactory.java,v 1.1 2014-11-19 01:06:05 thib_gc Exp $
+ * $Id: TestAIAAPdfFilterFactory.java,v 1.2 2014-11-25 02:11:33 thib_gc Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ public class TestAIAAPdfFilterFactory extends LockssTestCase {
   @Override
   protected void setUp() throws Exception {
     super.setUp();
-    this.tf = new FakePdfTokenFactory();
+    this.tf = new MockPdfTokenFactory();
   }
 
   public void testCitedByWorker() throws Exception {

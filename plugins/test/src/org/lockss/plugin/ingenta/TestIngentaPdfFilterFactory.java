@@ -1,5 +1,5 @@
 /*
- * $Id: TestIngentaPdfFilterFactory.java,v 1.1 2014-11-19 01:08:42 thib_gc Exp $
+ * $Id: TestIngentaPdfFilterFactory.java,v 1.2 2014-11-25 02:11:33 thib_gc Exp $
  */ 
 
 /*
@@ -45,7 +45,7 @@ public class TestIngentaPdfFilterFactory extends LockssTestCase {
 
   @Override
   protected void setUp() throws Exception {
-    this.tf = new FakePdfTokenFactory();
+    this.tf = new MockPdfTokenFactory();
   }
   
   public void testWhiteHorsePressWorker() throws Exception {

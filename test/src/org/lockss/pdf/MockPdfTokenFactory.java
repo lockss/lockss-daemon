@@ -1,5 +1,5 @@
 /*
- * $Id: FakePdfTokenFactory.java,v 1.4 2014-11-19 01:02:07 thib_gc Exp $
+ * $Id: MockPdfTokenFactory.java,v 1.1 2014-11-25 02:11:33 thib_gc Exp $
  */
 
 /*
@@ -34,11 +34,11 @@ package org.lockss.pdf;
 
 import java.util.*;
 
-public class FakePdfTokenFactory implements PdfTokenFactory {
+public class MockPdfTokenFactory implements PdfTokenFactory {
 
   @Override
   public PdfToken makeArray() {
-    return new FakePdfToken() {
+    return new MockPdfToken() {
       @Override public List<PdfToken> getArray() { return Collections.<PdfToken>emptyList(); }
       @Override public boolean isArray() { return true; }
     };
@@ -46,7 +46,7 @@ public class FakePdfTokenFactory implements PdfTokenFactory {
 
   @Override
   public PdfToken makeArray(final List<PdfToken> arrayElements) {
-    return new FakePdfToken() {
+    return new MockPdfToken() {
       @Override public List<PdfToken> getArray() { return new ArrayList<PdfToken>(arrayElements); }
       @Override public boolean isArray() { return true; }
     };
@@ -54,7 +54,7 @@ public class FakePdfTokenFactory implements PdfTokenFactory {
 
   @Override
   public PdfToken makeBoolean(final boolean value) {
-    return new FakePdfToken() {
+    return new MockPdfToken() {
       @Override public boolean getBoolean() { return value; }
       @Override public boolean isBoolean() { return true; }
     };
@@ -62,7 +62,7 @@ public class FakePdfTokenFactory implements PdfTokenFactory {
 
   @Override
   public PdfToken makeDictionary() {
-    return new FakePdfToken() {
+    return new MockPdfToken() {
       @Override public Map<String, PdfToken> getDictionary() { return Collections.<String, PdfToken>emptyMap(); }
       @Override public boolean isDictionary() { return true; }
     };
@@ -70,7 +70,7 @@ public class FakePdfTokenFactory implements PdfTokenFactory {
 
   @Override
   public PdfToken makeDictionary(final Map<String, PdfToken> mapping) {
-    return new FakePdfToken() {
+    return new MockPdfToken() {
       @Override public Map<String, PdfToken> getDictionary() { return new HashMap<String, PdfToken>(mapping); }
       @Override public boolean isDictionary() { return true; }
     };
@@ -78,7 +78,7 @@ public class FakePdfTokenFactory implements PdfTokenFactory {
 
   @Override
   public PdfToken makeFloat(final float value) {
-    return new FakePdfToken() {
+    return new MockPdfToken() {
       @Override public float getFloat() { return value; }
       @Override public boolean isFloat() { return true; }
     };
@@ -86,7 +86,7 @@ public class FakePdfTokenFactory implements PdfTokenFactory {
 
   @Override
   public PdfToken makeInteger(final long value) {
-    return new FakePdfToken() {
+    return new MockPdfToken() {
       @Override public long getInteger() { return value; }
       @Override public boolean isInteger() { return true; }
     };
@@ -94,7 +94,7 @@ public class FakePdfTokenFactory implements PdfTokenFactory {
 
   @Override
   public PdfToken makeName(final String value) {
-    return new FakePdfToken() {
+    return new MockPdfToken() {
       @Override public String getString() { return value; }
       @Override public boolean isString() { return true; }
     };
@@ -102,14 +102,14 @@ public class FakePdfTokenFactory implements PdfTokenFactory {
 
   @Override
   public PdfToken makeNull() {
-    return new FakePdfToken() {
+    return new MockPdfToken() {
       @Override public boolean isNull() { return true; }
     };
   }
 
   @Override
   public PdfToken makeObject(final PdfToken value) {
-    return new FakePdfToken() {
+    return new MockPdfToken() {
       @Override public PdfToken getObject() { return value; }
       @Override public boolean isObject() { return true; }
     };
@@ -117,7 +117,7 @@ public class FakePdfTokenFactory implements PdfTokenFactory {
   
   @Override
   public PdfToken makeOperator(final String operator) {
-    return new FakePdfToken() {
+    return new MockPdfToken() {
       @Override public String getOperator() { return operator; }
       @Override public boolean isOperator() { return true; }
     };
@@ -125,7 +125,7 @@ public class FakePdfTokenFactory implements PdfTokenFactory {
 
   @Override
   public PdfToken makeString(final String value) {
-    return new FakePdfToken() {
+    return new MockPdfToken() {
       @Override public String getString() { return value; }
       @Override public boolean isString() { return true; }
     };

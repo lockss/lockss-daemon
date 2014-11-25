@@ -1,5 +1,5 @@
 /*
- * $Id: TestEmeraldPdfFilterFactory.java,v 1.3 2014-11-19 22:44:25 thib_gc Exp $
+ * $Id: TestEmeraldPdfFilterFactory.java,v 1.4 2014-11-25 02:11:33 thib_gc Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ public class TestEmeraldPdfFilterFactory extends LockssTestCase {
   @Override
   protected void setUp() throws Exception {
     super.setUp();
-    this.tf = new FakePdfTokenFactory();
+    this.tf = new MockPdfTokenFactory();
   }
 
   public void testFrontPageWorker() throws Exception {
