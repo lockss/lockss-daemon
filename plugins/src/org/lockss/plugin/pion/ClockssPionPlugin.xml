@@ -38,7 +38,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Pion Plugin (CLOCKSS), Base URL %s, Journal Code %s, Short Journal Code %s, Volume %s&quot;, base_url, journal_code, short_journal_code, volume_name</string>
+    <string>"Pion Plugin (CLOCKSS), Base URL %s, Journal Code %s, Short Journal Code %s, Volume %s", base_url, journal_code, short_journal_code, volume_name</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -51,44 +51,47 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%scontents\.cgi\?journal=%s&amp;volume=%s&quot;, base_url, short_journal_code, volume_name</string>
-      <string>1,&quot;^%s(abstract|misc|ref|ris)\.cgi\?id=%s&quot;, base_url, short_journal_code</string>
-      <string>1,&quot;^%s%s/fulltext/%s0?%s/&quot;, base_url, journal_code, short_journal_code, volume_name</string>
-      <string>1,&quot;^%s%s/editorials/%s&quot;, base_url, journal_code, short_journal_code</string>
-      <string>1,&quot;^%s[^/]+/misc/&quot;, base_url, short_journal_code, volume_name</string>
+      <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%scontents\.cgi\?journal=%s&amp;volume=%s", base_url, short_journal_code, volume_name</string>
+      <string>1,"^%s(misc|ref|ris)\.cgi\?id=%s", base_url, short_journal_code</string>
+      <!-- found an abstract that must be in multiple journals, so it's name does not have the short journal code -->
+      <string>1,"^%sabstract\.cgi\?id=", base_url</string>
+      <string>1,"^%s%s/fulltext/%s0?%s/", base_url, journal_code, short_journal_code, volume_name</string>
+      <string>1,"^%s%s/editorials/%s", base_url, journal_code, short_journal_code</string>
+      <string>1,"^%sopenaccess/", base_url</string>
+      <string>1,"^%s[^/]+/misc/", base_url, short_journal_code, volume_name</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%scontents.cgi?journal=%s&amp;volume=%s&quot;, base_url, short_journal_code, volume_name</string>
+    <string>"%scontents.cgi?journal=%s&amp;volume=%s", base_url, short_journal_code, volume_name</string>
   </entry>
   <entry>
     <string>au_feature_urls</string>
     <map>
     <entry>
       <string>au_title</string>
-      <string>&quot;%sallvols.cgi?journal=%s&quot;, base_url, short_journal_code</string>
+      <string>"%sallvols.cgi?journal=%s", base_url, short_journal_code</string>
     </entry>
     <entry>
       <string>au_volume</string>
-      <string>&quot;%scontents.cgi?journal=%s&amp;volume=%s&quot;, base_url, short_journal_code, volume_name</string>
+      <string>"%scontents.cgi?journal=%s&amp;volume=%s", base_url, short_journal_code, volume_name</string>
     </entry>
     <entry>
       <string>au_issue</string>
-      <string>&quot;%scontents.cgi?journal=%s&amp;volume=%s&amp;issue=%s&quot;, base_url, short_journal_code, volume_name, issue</string>
+      <string>"%scontents.cgi?journal=%s&amp;volume=%s&amp;issue=%s", base_url, short_journal_code, volume_name, issue</string>
     </entry>
     <entry>
       <string>au_article</string>
-      <string>&quot;%sabstract.cgi?id=%s%02d%04d&quot;, base_url, short_journal_code_lc, issue, article</string>
+      <string>"%sabstract.cgi?id=%s%02d%04d", base_url, short_journal_code_lc, issue, article</string>
     </entry>
     </map>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
       <list>
-        <string>&quot;^%s%s/fulltext/[^/]+/[^/]+.pdf$&quot;, base_url, journal_code</string>
+        <string>"^%s%s/fulltext/[^/]+/[^/]+.pdf$", base_url, journal_code</string>
       </list>
   </entry>
   <entry>
@@ -148,6 +151,15 @@
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.pion.PionArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.pion.PionHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>application/ris_metadata_extractor_factory_map</string>

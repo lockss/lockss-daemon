@@ -29,15 +29,15 @@
     <map>
       <entry>
         <string>au_title</string>
-        <string>&quot;%sjournal/%s&quot;, base_url, journal_code</string>
+        <string>"%sjournal/%s", base_url, journal_code</string>
       </entry>
       <entry>
         <string>au_volume</string>
-        <string>&quot;%sjournal/%s/volume/%s&quot;, base_url, journal_code, volume_name</string>
+        <string>"%sjournal/%s/volume/%s", base_url, journal_code, volume_name</string>
       </entry>
       <entry>
         <string>au_issue</string>
-        <string>&quot;%sjournal/%s/volume/%s/issue/%s&quot;, base_url, journal_code, volume_name, issue</string>
+        <string>"%sjournal/%s/volume/%s/issue/%s", base_url, journal_code, volume_name, issue</string>
       </entry>
     </map>
   </entry>
@@ -47,7 +47,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Pion i-Perception Plugin (CLOCKSS), Base URL %s, Journal Code %s, Volume %s&quot;, base_url, journal_code, volume_name</string>
+    <string>"Pion i-Perception Plugin (CLOCKSS), Base URL %s, Journal Code %s, Volume %s", base_url, journal_code, volume_name</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -60,27 +60,27 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
-      <string>4,&quot;^(%s|%s)&quot;, base_url, base_url2</string>
-      <string>1,&quot;^%sjournal/%s/volume/%s$&quot;, base_url, journal_code, volume_name</string>
-      <string>1,&quot;^%sjournal/%s/volume/%s/&quot;, base_url, journal_code, volume_name</string>
-      <string>1,&quot;^%sjournal/%s/article/%s&quot;, base_url, journal_code, journal_code</string>
-      <string>1,&quot;^%sfulltext/%s0?%s/%s.*\.pdf&quot;, base_url, journal_code, volume_name, journal_code</string>
-      <string>1,&quot;^%smisc/%s0?%s/%s.*(_s|-supp)&quot;, base_url, journal_code, volume_name, journal_code</string>
-      <string>1,&quot;^%sris\.cgi\?id=&quot;, base_url2</string>
+      <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
+      <string>4,"^(%s|%s)", base_url, base_url2</string>
+      <string>1,"^%sjournal/%s/volume/%s$", base_url, journal_code, volume_name</string>
+      <string>1,"^%sjournal/%s/volume/%s/", base_url, journal_code, volume_name</string>
+      <string>1,"^%sjournal/%s/article/%s", base_url, journal_code, journal_code</string>
+      <string>1,"^%sfulltext/%s0?%s/%s.*\.pdf", base_url, journal_code, volume_name, journal_code</string>
+      <string>1,"^%smisc/%s0?%s/%s.*(_s|-supp)", base_url, journal_code, volume_name, journal_code</string>
+      <string>1,"^%sris\.cgi\?id=", base_url2</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
     <list>
-        <string>&quot;%sjournal/%s/volume/%s&quot;, base_url, journal_code, volume_name</string>
-        <string>&quot;%slockss.txt&quot;, base_url2</string>
+        <string>"%sjournal/%s/volume/%s", base_url, journal_code, volume_name</string>
+        <string>"%slockss.txt", base_url2</string>
     </list>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
       <list>
-        <string>&quot;^%sfulltext/[^/]+/[^/]+.pdf$&quot;, base_url</string>
+        <string>"^%sfulltext/[^/]+/[^/]+.pdf$", base_url</string>
       </list>
   </entry>
   <entry>
@@ -142,6 +142,15 @@
         <string>*;DublinCore</string>
         <string>org.lockss.plugin.pion.PionHtmlMetadataExtractorFactory</string>
       </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>application/ris_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;RIS</string>
+        <string>org.lockss.plugin.pion.PionRisMetadataExtractorFactory</string>
+       </entry>
     </map>
   </entry>
   <entry>
