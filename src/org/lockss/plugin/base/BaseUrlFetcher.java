@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlFetcher.java,v 1.4 2014-11-24 20:38:54 wkwilson Exp $
+ * $Id: BaseUrlFetcher.java,v 1.5 2014-11-25 03:47:26 tlipkis Exp $
  */
 
 /*
@@ -101,7 +101,7 @@ public class BaseUrlFetcher implements UrlFetcher {
   
   public static final String SET_COOKIE_HEADER = "Set-Cookie";
   private static final String SHOULD_REFETCH_ON_SET_COOKIE =
-      "refetch_on_set_cookie";
+    "refetch_on_set_cookie";
   private static final boolean DEFAULT_SHOULD_REFETCH_ON_SET_COOKIE = true;
   
   /** If true, any thread watchdog will be stopped while waiting on a rate
@@ -111,7 +111,7 @@ public class BaseUrlFetcher implements UrlFetcher {
   public static final boolean DEFAULT_STOP_WATCHDOG_DURING_PAUSE = false;
 
   
-  protected final String origUrl;		// URL with which I was created
+  protected final String origUrl;	// URL with which I was created
   protected String fetchUrl;		// possibly affected by redirects
   protected RedirectScheme redirectScheme = REDIRECT_SCHEME_FOLLOW;
   protected LockssUrlConnectionPool connectionPool;
@@ -133,14 +133,14 @@ public class BaseUrlFetcher implements UrlFetcher {
   protected LockssWatchdog wdog;
   
   public BaseUrlFetcher(Crawler.CrawlerFacade crawlFacade, String url) {
-		this.origUrl = url;
-		this.fetchUrl = url;
-		this.crawlFacade = crawlFacade;
-		this.au = crawlFacade.getAu();
-		Plugin plugin = au.getPlugin();
-		resultMap = plugin.getCacheResultMap();
-		crawlStatus = crawlFacade.getCrawlerStatus();
-		fetchFlags = new BitSet();
+    this.origUrl = url;
+    this.fetchUrl = url;
+    this.crawlFacade = crawlFacade;
+    this.au = crawlFacade.getAu();
+    Plugin plugin = au.getPlugin();
+    resultMap = plugin.getCacheResultMap();
+    crawlStatus = crawlFacade.getCrawlerStatus();
+    fetchFlags = new BitSet();
   }
   
   public void setUrlConsumerFactory(UrlConsumerFactory cunsumer){
@@ -148,7 +148,7 @@ public class BaseUrlFetcher implements UrlFetcher {
   }
   
   protected UrlConsumerFactory getUrlConsumerFactory() {
-    if(urlConsumerFactory == null) {
+    if (urlConsumerFactory == null) {
       urlConsumerFactory = au.getUrlConsumerFactory();
     }
     return urlConsumerFactory;
@@ -157,7 +157,7 @@ public class BaseUrlFetcher implements UrlFetcher {
   public FetchResult fetch() throws CacheException {
     String lastModified = null;
     try{
-      if(!forceRefetch()) {
+      if (!forceRefetch()) {
         lastModified = getLastModified();
       }
       return fetchWithRetries(lastModified);
@@ -166,8 +166,8 @@ public class BaseUrlFetcher implements UrlFetcher {
       crawlFacade.addToFailedUrls(origUrl);
       logger.error("Repository error with "+this, ex);
       crawlStatus.signalErrorForUrl(origUrl,
-            "Can't store page: " + ex.getMessage(),
-            Crawler.STATUS_REPO_ERR);
+				    "Can't store page: " + ex.getMessage(),
+				    Crawler.STATUS_REPO_ERR);
     } catch (CacheException.RedirectOutsideCrawlSpecException ex) {
       // Count this as an excluded URL
       crawlStatus.signalUrlExcluded(origUrl, ex.getMessage());
@@ -178,7 +178,7 @@ public class BaseUrlFetcher implements UrlFetcher {
       if (ex.isAttributeSet(CacheException.ATTRIBUTE_FAIL)) {
         logger.siteError("Problem caching "+this+". Continuing", ex);
         crawlStatus.signalErrorForUrl(origUrl, ex.getMessage(),
-            Crawler.STATUS_FETCH_ERROR);
+				      Crawler.STATUS_FETCH_ERROR);
       } else {
         crawlStatus.signalErrorForUrl(origUrl, ex.getMessage());
       }
@@ -191,7 +191,7 @@ public class BaseUrlFetcher implements UrlFetcher {
       } else {
         crawlFacade.addToFailedUrls(origUrl);
         crawlStatus.signalErrorForUrl(origUrl, ex.toString(),
-            Crawler.STATUS_FETCH_ERROR);
+				      Crawler.STATUS_FETCH_ERROR);
         //XXX not expected
         logger.error("Unexpected Exception during crawl, continuing", ex);
       }
@@ -213,16 +213,16 @@ public class BaseUrlFetcher implements UrlFetcher {
         }
         input = getUncachedInputStream(lastModified);
         headers = getUncachedProperties();
-        if(input == null){
+        if (input == null){
           //If input is null then ifModifiedSince returned not modified
           return FetchResult.FETCHED_NOT_MODIFIED;
         } else if (headers == null) {
           return FetchResult.NOT_FETCHED;
         } else {
-          FetchedUrlData fud = new FetchedUrlData(origUrl, fetchUrl, input, headers,
-              redirectUrls, this);
-          fud.setStoreRedirects(redirectScheme.isRedirectOption(
-              RedirectScheme.REDIRECT_OPTION_STORE_ALL));
+          FetchedUrlData fud = new FetchedUrlData(origUrl, fetchUrl,
+						  input, headers,
+						  redirectUrls, this);
+          fud.setStoreRedirects(redirectScheme.isRedirectOption(RedirectScheme.REDIRECT_OPTION_STORE_ALL));
           fud.setFetchFlags(fetchFlags);
           getUrlConsumerFactory().createUrlConsumer(crawlFacade, fud).consume();
           return FetchResult.FETCHED;
@@ -237,17 +237,17 @@ public class BaseUrlFetcher implements UrlFetcher {
         }
         if (logger.isDebug2()) {
           logger.debug("Retryable (" + retriesLeft + ") exception caching "
-              + origUrl, e);
+		       + origUrl, e);
         } else {
           logger.debug("Retryable (" + retriesLeft + ") exception caching "
-              + origUrl + ": " + e.toString());
+		       + origUrl + ": " + e.toString());
         }
         if (--retriesLeft > 0) {
           long delayTime = crawlFacade.getRetryDelay(e);
           Deadline wait = Deadline.in(delayTime);
           logger.debug3("Waiting " +
-              StringUtil.timeIntervalToString(delayTime) +
-              " before retry");
+			StringUtil.timeIntervalToString(delayTime) +
+			" before retry");
           while (!wait.expired()) {
             try {
               wait.sleep();
@@ -258,7 +258,7 @@ public class BaseUrlFetcher implements UrlFetcher {
           reset();
         } else {
           logger.warning("Failed to cache (" + totalRetries + "), skipping: "
-              + origUrl);
+			 + origUrl);
           throw e;
         }
       } finally {
@@ -273,7 +273,7 @@ public class BaseUrlFetcher implements UrlFetcher {
     if ((cachedVersion!=null) && cachedVersion.hasContent()) {
       CIProperties cachedProps = cachedVersion.getProperties();
       lastModified =
-          cachedProps.getProperty(CachedUrl.PROPERTY_LAST_MODIFIED);
+	cachedProps.getProperty(CachedUrl.PROPERTY_LAST_MODIFIED);
       cachedVersion.release();
     }
     return lastModified;
@@ -335,7 +335,7 @@ public class BaseUrlFetcher implements UrlFetcher {
   public final InputStream getUncachedInputStream()
       throws IOException {
     String lastModified = null;
-    if(!forceRefetch()) {
+    if (!forceRefetch()) {
       lastModified = getLastModified();
     }
     return getUncachedInputStream(lastModified);
@@ -360,7 +360,7 @@ public class BaseUrlFetcher implements UrlFetcher {
         input = getUncachedInputStreamOnly(lastModified);
         if (input == null) {
           logger.warning("Got null input stream on second call to "
-              + "getUncachedInputStream");
+			 + "getUncachedInputStream");
         }
         headers = getUncachedProperties();
       }
@@ -373,7 +373,7 @@ public class BaseUrlFetcher implements UrlFetcher {
   }
   
   protected InputStream getUncachedInputStreamOnly(String lastModified)
-	      throws IOException {
+      throws IOException {
     InputStream input = null;
     try {
       openConnection(lastModified);
@@ -382,7 +382,7 @@ public class BaseUrlFetcher implements UrlFetcher {
         int code = conn.getResponseCode();
         if (code == HttpURLConnection.HTTP_NOT_MODIFIED) {
           logger.debug2("Unmodified content not cached for url '" +
-              origUrl + "'");
+			origUrl + "'");
           return null;
         }
       }
@@ -409,9 +409,8 @@ public class BaseUrlFetcher implements UrlFetcher {
    */
   protected void openConnection(String lastModified) throws IOException {
     if (conn==null) {
-      if (redirectScheme.isRedirectOption(
-          RedirectScheme.REDIRECT_OPTION_IF_CRAWL_SPEC +
-          RedirectScheme.REDIRECT_OPTION_ON_HOST_ONLY)) {
+      if (redirectScheme.isRedirectOption(RedirectScheme.REDIRECT_OPTION_IF_CRAWL_SPEC +
+					  RedirectScheme.REDIRECT_OPTION_ON_HOST_ONLY)) {
         openWithRedirects(lastModified);
       } else {
         openOneConnection(lastModified);
@@ -428,7 +427,7 @@ public class BaseUrlFetcher implements UrlFetcher {
       } catch (CacheException.NoRetryNewUrlException e) {
         if (++retry >= MAX_REDIRECTS) {
           logger.warning("Max redirects hit, not redirecting " + origUrl +
-              " past " + fetchUrl);
+			 " past " + fetchUrl);
           throw e;
         } else if (!processRedirectResponse()) {
           throw e;
@@ -444,8 +443,7 @@ public class BaseUrlFetcher implements UrlFetcher {
    */
   protected void openOneConnection(String lastModified) throws IOException {
     if (conn != null) {
-      throw new IllegalStateException(
-    		  "Must call reset() before reusing UrlCacher");
+      throw new IllegalStateException("Must call reset() before reusing UrlCacher");
     }
     try {
       conn = makeConnection(fetchUrl, connectionPool);
@@ -479,8 +477,7 @@ public class BaseUrlFetcher implements UrlFetcher {
           conn.setRequestProperty(key, reqProps.getProperty(key));
         }
       }
-      conn.setFollowRedirects(redirectScheme.isRedirectOption(
-          RedirectScheme.REDIRECT_OPTION_FOLLOW_AUTO));
+      conn.setFollowRedirects(redirectScheme.isRedirectOption(RedirectScheme.REDIRECT_OPTION_FOLLOW_AUTO));
       conn.setRequestProperty("user-agent", LockssDaemon.getUserAgent());
 
       if (lastModified != null) {
@@ -502,8 +499,8 @@ public class BaseUrlFetcher implements UrlFetcher {
   }
   
   protected InputStream checkLoginPage(InputStream input, Properties headers,
-		     String lastModified)
-		    		 throws IOException {
+				       String lastModified)
+      throws IOException {
     LoginPageChecker checker = au.getLoginPageChecker();
     if (checker != null) {
       logger.debug3("Found a login page checker");
@@ -511,9 +508,10 @@ public class BaseUrlFetcher implements UrlFetcher {
         input = new BufferedInputStream(input);
       }
       input.mark(CurrentConfig.getIntParam(PARAM_LOGIN_CHECKER_MARK_LIMIT,
-			   DEFAULT_LOGIN_CHECKER_MARK_LIMIT));
-      Reader reader = new InputStreamReader(input,
-			    AuUtil.getCharsetOrDefault(uncachedProperties));
+					   DEFAULT_LOGIN_CHECKER_MARK_LIMIT));
+      Reader reader =
+	new InputStreamReader(input,
+			      AuUtil.getCharsetOrDefault(uncachedProperties));
       try {
         if (checker.isLoginPage(headers, reader)) {
           throw new CacheException.PermissionException("Found a login page");
@@ -535,7 +533,7 @@ public class BaseUrlFetcher implements UrlFetcher {
    * new input stream for the given url
    */
   public InputStream resetInputStream(InputStream is, 
-      String lastModified) throws IOException {
+				      String lastModified) throws IOException {
     try {
       if (wdog != null) {
         wdog.pokeWDog();
@@ -572,39 +570,39 @@ public class BaseUrlFetcher implements UrlFetcher {
     Configuration auConfig = au.getConfiguration();
     if (auConfig != null) {		// can be null in unit tests
       return auConfig.get(ConfigParamDescr.USER_CREDENTIALS.getKey());
-	}
-	return null;
+    }
+    return null;
   }
   
   protected void pauseBeforeFetch() {
     if (crl != null) {
       long wDogInterval = 0;
       if (wdog != null &&
-    CurrentConfig.getBooleanParam(PARAM_STOP_WATCHDOG_DURING_PAUSE,
-          DEFAULT_STOP_WATCHDOG_DURING_PAUSE)) {
-  wDogInterval = wdog.getWDogInterval();
+	  CurrentConfig.getBooleanParam(PARAM_STOP_WATCHDOG_DURING_PAUSE,
+					DEFAULT_STOP_WATCHDOG_DURING_PAUSE)) {
+	wDogInterval = wdog.getWDogInterval();
       }
       try {
-  if (wDogInterval > 0) {
-    wdog.stopWDog();
-  }
-  crl.pauseBeforeFetch(fetchUrl, previousContentType);
+	if (wDogInterval > 0) {
+	  wdog.stopWDog();
+	}
+	crl.pauseBeforeFetch(fetchUrl, previousContentType);
       } finally {
-  if (wDogInterval > 0) {
-    wdog.startWDog(wDogInterval);
-  }
+	if (wDogInterval > 0) {
+	  wdog.startWDog(wDogInterval);
+	}
       }
     }
   }
   
   protected void checkConnectException(LockssUrlConnection conn) throws IOException {
-    if(conn.isHttp()) {
+    if (conn.isHttp()) {
       if (logger.isDebug3()) {
         logger.debug3("Response: " + conn.getResponseCode() + ": " +
-            conn.getResponseMessage());
+		      conn.getResponseMessage());
       }
       CacheException c_ex = resultMap.checkResult(au, conn);
-      if(c_ex != null) {
+      if (c_ex != null) {
         // The stack below here is misleading.  Makes more sense for it
         // to reflect the point at which it's thrown
         c_ex.fillInStackTrace();
@@ -615,11 +613,11 @@ public class BaseUrlFetcher implements UrlFetcher {
   
   protected void addPluginRequestHeaders() {
     for (String hdr : au.getHttpRequestHeaders()) {
-	  int pos = hdr.indexOf(":");
-	  if (pos > 0 && pos < hdr.length() - 1) {
-		setRequestProperty(hdr.substring(0, pos), hdr.substring(pos + 1));
-	  }
-	}
+      int pos = hdr.indexOf(":");
+      if (pos > 0 && pos < hdr.length() - 1) {
+	setRequestProperty(hdr.substring(0, pos), hdr.substring(pos + 1));
+      }
+    }
   }
   
   /** Handle a single redirect response: determine whether it should be
@@ -656,8 +654,7 @@ public class BaseUrlFetcher implements UrlFetcher {
         String msg = "Redirected to login page: " + newUrlString;
         throw new CacheException.PermissionException(msg);
       }
-      if (redirectScheme.isRedirectOption(
-          RedirectScheme.REDIRECT_OPTION_IF_CRAWL_SPEC)) {
+      if (redirectScheme.isRedirectOption(RedirectScheme.REDIRECT_OPTION_IF_CRAWL_SPEC)) {
         if (!au.shouldBeCached(newUrlString)) {
           String msg = "Redirected to excluded URL: " + newUrlString;
           logger.warning(msg + " redirected from: " + origUrl);
@@ -665,13 +662,12 @@ public class BaseUrlFetcher implements UrlFetcher {
         }
       }
 
-      if(!UrlUtil.isSameHost(fetchUrl, newUrlString)) {
-        if (redirectScheme.isRedirectOption(
-            RedirectScheme.REDIRECT_OPTION_ON_HOST_ONLY)) {
+      if (!UrlUtil.isSameHost(fetchUrl, newUrlString)) {
+        if (redirectScheme.isRedirectOption(RedirectScheme.REDIRECT_OPTION_ON_HOST_ONLY)) {
           logger.warning("Redirect to different host: " + newUrlString +
-              " from: " + origUrl);
+			 " from: " + origUrl);
           return false;
-        } else if(!crawlFacade.hasPermission(newUrlString)) {
+        } else if (!crawlFacade.hasPermission(newUrlString)) {
           logger.warning("No permission for redirect to different host: "
                          + newUrlString + " from: " + origUrl);
           return false;
@@ -696,48 +692,48 @@ public class BaseUrlFetcher implements UrlFetcher {
       return true;
     } catch (MalformedURLException e) {
       logger.siteWarning("Redirected location '" + location +
-          "' is malformed", e);
+			 "' is malformed", e);
       return false;
     }
   }
   
   public CIProperties getUncachedProperties()
-	      throws UnsupportedOperationException {
-	  if (conn == null) {
-	    throw new UnsupportedOperationException("Called getUncachedProperties "
-	        + "before calling getUncachedInputStream.");
-	  }
-	  if (uncachedProperties == null) {
-	    CIProperties props = new CIProperties();
-	    // set header properties in which we have interest
-	    String ctype = conn.getResponseContentType();
-	    if (ctype != null) {
-	      props.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, ctype);
-	    }
-	    props.setProperty(CachedUrl.PROPERTY_FETCH_TIME,
-	        Long.toString(TimeBase.nowMs()));
-	    if (origUrl != fetchUrl &&
-	        !UrlUtil.isDirectoryRedirection(origUrl, fetchUrl)) {
-	      // XXX this property does not have consistent semantics.  It will be
-	      // set to the first url in a chain of redirects that led to content,
-	      // which could be different depending on fetch order.
-	      props.setProperty(CachedUrl.PROPERTY_ORIG_URL, origUrl);
-	    }
-	    conn.storeResponseHeaderInto(props, CachedUrl.HEADER_PREFIX);
-	    String actualURL = conn.getActualUrl();
-	    if (!origUrl.equals(actualURL)) {
-	      props.setProperty(CachedUrl.PROPERTY_CONTENT_URL, actualURL);
-	    }
-	    if (redirectUrls != null && !redirectUrls.isEmpty()) {
-	      props.setProperty(CachedUrl.PROPERTY_REDIRECTED_TO,
-				redirectUrls.get(0));
-	    } else if (!origUrl.equals(actualURL)) {
-	      props.setProperty(CachedUrl.PROPERTY_REDIRECTED_TO, actualURL);
-	    }
-	    uncachedProperties = props;
-	  }
-	  return uncachedProperties;
-	}
+      throws UnsupportedOperationException {
+    if (conn == null) {
+      throw new UnsupportedOperationException("Called getUncachedProperties "
+					      + "before calling getUncachedInputStream.");
+    }
+    if (uncachedProperties == null) {
+      CIProperties props = new CIProperties();
+      // set header properties in which we have interest
+      String ctype = conn.getResponseContentType();
+      if (ctype != null) {
+	props.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, ctype);
+      }
+      props.setProperty(CachedUrl.PROPERTY_FETCH_TIME,
+			Long.toString(TimeBase.nowMs()));
+      if (origUrl != fetchUrl &&
+	  !UrlUtil.isDirectoryRedirection(origUrl, fetchUrl)) {
+	// XXX this property does not have consistent semantics.  It will be
+	// set to the first url in a chain of redirects that led to content,
+	// which could be different depending on fetch order.
+	props.setProperty(CachedUrl.PROPERTY_ORIG_URL, origUrl);
+      }
+      conn.storeResponseHeaderInto(props, CachedUrl.HEADER_PREFIX);
+      String actualURL = conn.getActualUrl();
+      if (!origUrl.equals(actualURL)) {
+	props.setProperty(CachedUrl.PROPERTY_CONTENT_URL, actualURL);
+      }
+      if (redirectUrls != null && !redirectUrls.isEmpty()) {
+	props.setProperty(CachedUrl.PROPERTY_REDIRECTED_TO,
+			  redirectUrls.get(0));
+      } else if (!origUrl.equals(actualURL)) {
+	props.setProperty(CachedUrl.PROPERTY_REDIRECTED_TO, actualURL);
+      }
+      uncachedProperties = props;
+    }
+    return uncachedProperties;
+  }
   
   protected void releaseConnection() {
     if (conn != null) {
