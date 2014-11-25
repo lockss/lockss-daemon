@@ -1,5 +1,5 @@
 /*
- * $Id: MockPdfTokenStream.java,v 1.2 2012-07-19 04:01:53 thib_gc Exp $
+ * $Id: MockPdfTokenStream.java,v 1.3 2014-11-25 02:18:26 thib_gc Exp $
  */
 
 /*
@@ -60,7 +60,7 @@ public class MockPdfTokenStream implements PdfTokenStream {
 
   @Override
   public PdfTokenFactory getTokenFactory() throws PdfException {
-    return new FakePdfTokenFactory();
+    return new MockPdfTokenFactory();
   }
 
   @Override
