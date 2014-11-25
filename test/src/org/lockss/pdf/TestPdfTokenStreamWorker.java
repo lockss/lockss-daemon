@@ -1,10 +1,10 @@
 /*
- * $Id: TestPdfTokenStreamWorker.java,v 1.2 2012-07-19 04:01:53 thib_gc Exp $
+ * $Id: TestPdfTokenStreamWorker.java,v 1.3 2014-11-25 02:11:59 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -140,14 +140,11 @@ public class TestPdfTokenStreamWorker extends LockssTestCase {
   
   private List<PdfToken> lot;
   
-  private MockPdfTokenStream mpts;
-  
   private PdfTokenFactory tf;
   
   public void setUp() {
-    this.tf = new FakePdfTokenFactory();
+    this.tf = new MockPdfTokenFactory();
     this.lot = new ArrayList<PdfToken>();
-    this.mpts = new MockPdfTokenStream(lot);
   }
   
   public void testStartsWithNoneEndsWithNone() throws PdfException {
@@ -191,9 +188,9 @@ public class TestPdfTokenStreamWorker extends LockssTestCase {
     }
 
     TwoWayStateMachineWorker forward = new MyPdfTokenStreamWorker(Direction.FORWARD);
-    forward.process(mpts);
+    forward.process(lot, tf);
     TwoWayStateMachineWorker backward = new MyPdfTokenStreamWorker(Direction.BACKWARD);
-    backward.process(mpts);
+    backward.process(lot, tf);
   }
   
   public void testStartsWithNoneEndsWithOperands() throws PdfException {
@@ -240,9 +237,9 @@ public class TestPdfTokenStreamWorker extends LockssTestCase {
     }
 
     TwoWayStateMachineWorker forward = new MyPdfTokenStreamWorker(Direction.FORWARD);
-    forward.process(mpts);
+    forward.process(lot, tf);
     TwoWayStateMachineWorker backward = new MyPdfTokenStreamWorker(Direction.BACKWARD);
-    backward.process(mpts);
+    backward.process(lot, tf);
   }
 
   public void testStartsWithOperandsEndsWithNone() throws PdfException {
@@ -287,9 +284,9 @@ public class TestPdfTokenStreamWorker extends LockssTestCase {
     }
 
     TwoWayStateMachineWorker forward = new MyPdfTokenStreamWorker(Direction.FORWARD);
-    forward.process(mpts);
+    forward.process(lot, tf);
     TwoWayStateMachineWorker backward = new MyPdfTokenStreamWorker(Direction.BACKWARD);
-    backward.process(mpts);
+    backward.process(lot, tf);
   }
   
   public void testStartsWithOperandsEndsWithOperands() throws PdfException {
@@ -337,9 +334,9 @@ public class TestPdfTokenStreamWorker extends LockssTestCase {
     }
 
     TwoWayStateMachineWorker forward = new MyPdfTokenStreamWorker(Direction.FORWARD);
-    forward.process(mpts);
+    forward.process(lot, tf);
     TwoWayStateMachineWorker backward = new MyPdfTokenStreamWorker(Direction.BACKWARD);
-    backward.process(mpts);
+    backward.process(lot, tf);
   }
   
 }

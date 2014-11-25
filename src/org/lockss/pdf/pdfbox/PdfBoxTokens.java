@@ -1,5 +1,5 @@
 /*
- * $Id: PdfBoxTokens.java,v 1.5 2014-05-29 01:27:55 thib_gc Exp $
+ * $Id: PdfBoxTokens.java,v 1.6 2014-11-25 02:11:05 thib_gc Exp $
  */
 
 /*
@@ -853,16 +853,17 @@ public class PdfBoxTokens {
    * (e.g. {@link COSInteger}, {@link PDFOperator}, etc.) into a list
    * of {@link PdfToken} instances.
    * </p>
+   * 
    * @param listObj A list of objects to be wrapped.
    * @return A list of wrapped objects.
    * @since 1.56
    */
-  protected static List<PdfToken> convertList(final List<Object> listObj) {
-    return new ArrayList<PdfToken>() {{
-      for (Object obj : listObj) {
-        add(convertOne(obj));
-      }
-    }};
+  protected static List<PdfToken> convertList(List<Object> listObj) {
+    List<PdfToken> ret = new ArrayList<PdfToken>(listObj.size());
+    for (Object obj : listObj) {
+      ret.add(convertOne(obj));
+    }
+    return ret;
   }
   
   /**
@@ -1553,16 +1554,17 @@ public class PdfBoxTokens {
    * Unwraps a list of PDF tokens (that are really of type
    * {@link Token}) into a list of the inner objects.
    * </p>
+   * 
    * @param listTokens A list of PDF tokens of type {@link Token}.
    * @return The list of the objects wrapped in the argument list.
    * @since 1.56.3
    */
   protected static List<Object> unwrapList(final List<PdfToken> listTokens) {
-    return new ArrayList<Object>() {{
-      for (PdfToken tok : listTokens) {
-        add(unwrapOne(tok));
-      }
-    }};
+    List<Object> ret = new ArrayList<Object>(listTokens.size());
+    for (PdfToken tok : listTokens) {
+      ret.add(unwrapOne(tok));
+    }
+    return ret;
   }
   
   /**
