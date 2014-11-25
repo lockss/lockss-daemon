@@ -1,5 +1,5 @@
 /*
- * $Id: TestIngentaPdfFilterFactory.java,v 1.2 2014-11-25 02:11:33 thib_gc Exp $
+ * $Id: TestIngentaPdfFilterFactory.java,v 1.3 2014-11-25 22:50:26 thib_gc Exp $
  */ 
 
 /*
@@ -46,6 +46,56 @@ public class TestIngentaPdfFilterFactory extends LockssTestCase {
   @Override
   protected void setUp() throws Exception {
     this.tf = new MockPdfTokenFactory();
+  }
+  
+  public void testManeyPublishingWorker() throws Exception {
+    ManeyPublishingWorker worker = new ManeyPublishingWorker();
+    worker.process(Arrays.asList(/* 00 */ tf.makeString("This is irrelevant."),
+                                 /* 01 */ tf.makeOperator(PdfOpcodes.SHOW_TEXT),
+                                 /* 02 */ tf.makeOperator(PdfOpcodes.BEGIN_TEXT_OBJECT),
+                                 /* 03 */ tf.makeString("This is irrelevant."),
+                                 /* 04 */ tf.makeOperator(PdfOpcodes.SHOW_TEXT),
+                                 /* 05 */ tf.makeString("Published by Maney Publishing."),
+                                 /* 06 */ tf.makeOperator(PdfOpcodes.SHOW_TEXT),
+                                 /* 07 */ tf.makeString("This is irrelevant."),
+                                 /* 08 */ tf.makeOperator(PdfOpcodes.SHOW_TEXT),
+                                 /* 09 */ tf.makeOperator(PdfOpcodes.END_TEXT_OBJECT),
+                                 /* 10 */ tf.makeString("This is irrelevant."),
+                                 /* 11 */ tf.makeOperator(PdfOpcodes.SHOW_TEXT)),
+                   tf);
+    assertTrue(worker.result);
+    assertEquals(2, worker.beginIndex); // inclusive
+    assertEquals(9, worker.endIndex); // inclusive
+    worker.process(Arrays.asList(tf.makeString("This is irrelevant."),
+                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
+                                 tf.makeOperator(PdfOpcodes.BEGIN_TEXT_OBJECT),
+                                 tf.makeString("This is irrelevant."),
+                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
+                                 tf.makeString("Not the right string."),
+                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
+                                 tf.makeString("This is irrelevant."),
+                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
+                                 tf.makeOperator(PdfOpcodes.END_TEXT_OBJECT),
+                                 tf.makeString("This is irrelevant."),
+                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT)),
+                   tf);
+    assertFalse(worker.result);
+    worker.process(Arrays.asList(tf.makeString("This is irrelevant."),
+                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
+                                 tf.makeOperator(PdfOpcodes.BEGIN_TEXT_OBJECT),
+                                 tf.makeString("This is irrelevant."),
+                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
+                                 tf.makeString("Published by Maney Publishing."),
+                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
+                                 tf.makeOperator(PdfOpcodes.END_TEXT_OBJECT),
+                                 tf.makeString("This is irrelevant."),
+                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
+                                 tf.makeOperator(PdfOpcodes.BEGIN_TEXT_OBJECT),
+                                 tf.makeString("This is irrelevant."),
+                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
+                                 tf.makeOperator(PdfOpcodes.END_TEXT_OBJECT)),
+                   tf);
+    assertFalse(worker.result);
   }
   
   public void testWhiteHorsePressWorker() throws Exception {
@@ -116,56 +166,6 @@ public class TestIngentaPdfFilterFactory extends LockssTestCase {
                                  tf.makeOperator(PdfOpcodes.END_TEXT_OBJECT),
                                  tf.makeString("This is irrelevant."),
                                  tf.makeOperator(PdfOpcodes.SHOW_TEXT)),
-                   tf);
-    assertFalse(worker.result);
-  }
-  
-  public void testManeyPublishingWorker() throws Exception {
-    ManeyPublishingWorker worker = new ManeyPublishingWorker();
-    worker.process(Arrays.asList(/* 00 */ tf.makeString("This is irrelevant."),
-                                 /* 01 */ tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 /* 02 */ tf.makeOperator(PdfOpcodes.BEGIN_TEXT_OBJECT),
-                                 /* 03 */ tf.makeString("This is irrelevant."),
-                                 /* 04 */ tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 /* 05 */ tf.makeString("Published by Maney Publishing."),
-                                 /* 06 */ tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 /* 07 */ tf.makeString("This is irrelevant."),
-                                 /* 08 */ tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 /* 09 */ tf.makeOperator(PdfOpcodes.END_TEXT_OBJECT),
-                                 /* 10 */ tf.makeString("This is irrelevant."),
-                                 /* 11 */ tf.makeOperator(PdfOpcodes.SHOW_TEXT)),
-                   tf);
-    assertTrue(worker.result);
-    assertEquals(2, worker.beginIndex); // inclusive
-    assertEquals(9, worker.endIndex); // inclusive
-    worker.process(Arrays.asList(tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeOperator(PdfOpcodes.BEGIN_TEXT_OBJECT),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeString("Not the right string."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeOperator(PdfOpcodes.END_TEXT_OBJECT),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT)),
-                   tf);
-    assertFalse(worker.result);
-    worker.process(Arrays.asList(tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeOperator(PdfOpcodes.BEGIN_TEXT_OBJECT),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeString("Published by Maney Publishing."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeOperator(PdfOpcodes.END_TEXT_OBJECT),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeOperator(PdfOpcodes.BEGIN_TEXT_OBJECT),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeOperator(PdfOpcodes.END_TEXT_OBJECT)),
                    tf);
     assertFalse(worker.result);
   }
