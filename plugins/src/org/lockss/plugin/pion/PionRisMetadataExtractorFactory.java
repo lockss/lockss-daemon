@@ -1,10 +1,10 @@
 /*
- * $Id: PionRisMetadataExtractorFactory.java,v 1.3 2014-11-25 00:06:14 aishizaki Exp $
+ * $Id: PionRisMetadataExtractorFactory.java,v 1.4 2014-11-25 00:26:44 aishizaki Exp $
  */
 
 /*
 
- Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,7 +34,6 @@ package org.lockss.plugin.pion;
 
 import java.io.IOException;
 
-import org.lockss.config.TdbAu;
 import org.lockss.daemon.*;
 
 import org.lockss.extractor.*;
@@ -74,10 +73,30 @@ public class PionRisMetadataExtractorFactory
     
     log.debug3("Inside Pion Metadata extractor factory");
     
-    PionRisMetadataExtractor ris = new PionRisMetadataExtractor();
-
+    RisMetadataExtractor ris = new RisMetadataExtractor() {
+      public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
+          throws IOException, PluginException {
+        ArticleMetadata md = extract(target, cu);
+        if (md != null) {
+          if (!md.hasValidValue(MetadataField.FIELD_DOI)) {
+            // fill in DOI from accessURL
+            // http://www.envplan.com/abstract.cgi?id=a42117
+            // -> doi=10.1068/a42117
+            String accessUrl = md.get(MetadataField.FIELD_ACCESS_URL);
+            if (accessUrl != null) {
+              int i = accessUrl.indexOf("id=");
+              if (i > 0) {
+                String doi = "10.1068/" +accessUrl.substring(i+3);
+                md.put(MetadataField.FIELD_DOI, doi);
+              }
+            }
+          }
+          emitter.emitMetadata(cu, md);
+        }
+      }       
+    };
     /* Pion seems to use different tags for these RIS fields */
-    ris.addRisTag("JO", MetadataField.FIELD_PUBLICATION_TITLE); // requires
+    ris.addRisTag("JO", MetadataField.FIELD_JOURNAL_TITLE);
     ris.addRisTag("A1", MetadataField.FIELD_AUTHOR);
     ris.addRisTag("Y1", MetadataField.FIELD_DATE);
     ris.addRisTag("UR", MetadataField.FIELD_ACCESS_URL);
@@ -88,58 +107,5 @@ public class PionRisMetadataExtractorFactory
 
      return ris;
   }
-  public static class PionRisMetadataExtractor
-  extends RisMetadataExtractor {
 
-    // override this to do some additional attempts to get valid data before emitting
-    @Override
-    public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
-        throws IOException, PluginException {
-      ArticleMetadata md = extract(target, cu);
-      
-      if (md != null) {
-        if (!md.hasValidValue(MetadataField.FIELD_DOI)) {
-          // fill in DOI from accessURL
-          // http://www.envplan.com/abstract.cgi?id=a42117
-          // -> doi=10.1068/a42117
-          String accessUrl = md.get(MetadataField.FIELD_ACCESS_URL);
-          if (accessUrl != null) {
-            int i = accessUrl.indexOf("id=");
-            if (i > 0) {
-              String doi = "10.1068/" +accessUrl.substring(i+3);
-              md.put(MetadataField.FIELD_DOI, doi);
-            }
-          }
-        }
-        completeMetadata(cu, md);
-        emitter.emitMetadata(cu, md);
-      }
-    }       
-  };
-  
-  public static void completeMetadata(CachedUrl cu, ArticleMetadata am) {
-    // Pick up some information from the TDB if not in the cooked data
-    TdbAu tdbau = cu.getArchivalUnit().getTdbAu(); // returns null if titleConfig is null 
-    if (tdbau != null) {
-      if (am.get(MetadataField.FIELD_PUBLISHER) == null) {
-        // We can try to get the publishger from the tdb file.  This would be the most accurate
-        String publisher = tdbau.getPublisherName();
-        if (publisher != null) {
-          am.put(MetadataField.FIELD_PUBLISHER, publisher);
-        }
-      }
-      if (am.get(MetadataField.FIELD_PUBLICATION_TITLE) == null) {
-        String journal_title = tdbau.getPublicationTitle();
-        if (journal_title != null) {
-          am.put(MetadataField.FIELD_PUBLICATION_TITLE, journal_title);
-        }
-      }
-/*      
-      String access_url = am.get(MetadataField.FIELD_ACCESS_URL);
-      if (access_url.isEmpty() || access_url.equals("unknown")){
-        am.put(MetadataField.FIELD_ACCESS_URL, cu.getUrl());
-      }
-*/
-    }
-  }
 }

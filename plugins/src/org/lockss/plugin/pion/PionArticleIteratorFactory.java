@@ -1,10 +1,10 @@
 /*
- * $Id: PionArticleIteratorFactory.java,v 1.6 2014-11-25 00:06:14 aishizaki Exp $
+ * $Id: PionArticleIteratorFactory.java,v 1.7 2014-11-25 00:26:44 aishizaki Exp $
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -42,25 +42,6 @@ import org.lockss.extractor.BaseArticleMetadataExtractor;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
-
-/*
- * The Pion Article Iterator supports two different plugins: 
- *   ClockssPionPlugin: 
-  Full text CU: http://www.envplan.com/epd/editorials/d12107.pdf
-  Abstract:     http://www.envplan.com/abstract.cgi?id=d12107
-  Metadata:     http://www.envplan.com/ris.cgi?id=d12107
-  Citation_Ris: http://www.envplan.com/ris.cgi?id=d12107
-  PdfFile:      http://www.envplan.com/epd/editorials/d12107.pdf
-  References:  http://www.envplan.com/ref.cgi?id=d12107
- * 
- *  and ClockssPionIPerception:
-  Full text CU: http://i-perception.perceptionweb.com/journal/I/volume/4/article/i0512
-  Abstract:     http://i-perception.perceptionweb.com/journal/I/volume/4/article/i0512
-  Metadata:     http://i-perception.perceptionweb.com/journal/I/volume/4/article/i0512
-  Citation_Ris: http://www.perceptionweb.com/ris.cgi?id=i0512
-  PdfFile:      http://i-perception.perceptionweb.com/fulltext/i04/i0512.pdf 
- * 
- */
 
 public class PionArticleIteratorFactory 
   implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
@@ -106,13 +87,12 @@ public class PionArticleIteratorFactory
       af.setFullTextCu(pdfCu);
       af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
       
-      if(spec.getTarget() != MetadataTarget.Article) {
+      if(spec.getTarget() != MetadataTarget.Article)
+      {
 		guessAbstract(af, pdfMat);
 		guessReferences(af, pdfMat);
 		guessRisCitation(af, pdfMat);
 		guessSupplementaryMaterials(af, pdfMat);
-      } else {
-        log.info ("not an article");
       }
       return af;
     }
@@ -134,15 +114,8 @@ public class PionArticleIteratorFactory
     protected void guessRisCitation(ArticleFiles af, Matcher mat) {
       CachedUrl risCu = au.makeCachedUrl(mat.replaceFirst("/ris.cgi?id=$3"));
       if (risCu != null && risCu.hasContent()) {
-log.info("setting METADATA role to : " +risCu);
         af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, risCu);
         af.setRoleCu(ArticleFiles.ROLE_CITATION + "_" + "Ris", risCu);
-      } else {
-        CachedUrl absCu = au.makeCachedUrl(mat.replaceFirst("/abstract.cgi?id=$3"));
-        if (absCu != null && absCu.hasContent()) {
-log.info("setting METADATA role to : " +absCu);
-          af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, absCu);
-        }
       }
     }
     
