@@ -1,5 +1,5 @@
 /*
- * $Id: PionArticleIteratorFactory.java,v 1.9 2014-11-26 17:52:31 aishizaki Exp $
+ * $Id: PionArticleIteratorFactory.java,v 1.10 2014-11-26 18:24:24 aishizaki Exp $
  */
 
 /*
@@ -100,12 +100,12 @@ public class PionArticleIteratorFactory
       af.setFullTextCu(pdfCu);
       af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
       metadataCu = null;
-      
-      if(spec.getTarget().isArticle()) {
+      if(spec.getTarget() != MetadataTarget.Article()) {
         guessAbstract(af, pdfMat);
         guessReferences(af, pdfMat);
         guessRisCitation(af, pdfMat);
         guessSupplementaryMaterials(af, pdfMat);
+        log.debug("setting role_article_metadata to: "+ metadataCu);
         if (metadataCu != null) {
           af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, metadataCu);
         }
