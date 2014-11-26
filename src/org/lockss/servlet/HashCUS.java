@@ -1,5 +1,5 @@
 /*
- * $Id: HashCUS.java,v 1.57 2014-11-04 18:46:22 fergaloy-sf Exp $
+ * $Id: HashCUS.java,v 1.58 2014-11-26 20:51:40 fergaloy-sf Exp $
  */
 
 /*
@@ -246,6 +246,10 @@ public class HashCUS extends LockssServlet {
 	    SimpleHasher.isV3(result.getHashType())) {
 	  returnDirectResponse(resType, reqId, params, result);
 	} else {
+	  if (params.isAsynchronous()) {
+	    reqId = result.getRequestId();
+	  }
+
 	  displayPage(resType, reqId, params, result);
 	}
 	return;

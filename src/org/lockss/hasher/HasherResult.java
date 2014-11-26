@@ -1,5 +1,5 @@
 /*
- * $Id: HasherResult.java,v 1.3 2014-11-05 19:57:04 fergaloy-sf Exp $
+ * $Id: HasherResult.java,v 1.4 2014-11-26 20:51:41 fergaloy-sf Exp $
  */
 
 /*
@@ -49,6 +49,7 @@ public class HasherResult {
   private byte[] challenge;
   private byte[] verifier;
   private CachedUrlSet cus;
+  private String requestId;
   private boolean showResult = false;
   private long requestTime;
   private File recordFile;
@@ -109,6 +110,14 @@ public class HasherResult {
 
   public void setCus(CachedUrlSet cus) {
     this.cus = cus;
+  }
+
+  public String getRequestId() {
+    return requestId;
+  }
+
+  public void setRequestId(String requestId) {
+    this.requestId = requestId;
   }
 
   public boolean isShowResult() {
@@ -222,6 +231,7 @@ public class HasherResult {
     setChallenge(source.getChallenge());
     setVerifier(source.getVerifier());
     setCus(source.getCus());
+    setRequestId(source.getRequestId());
     setShowResult(source.isShowResult());
     setRequestTime(source.getRequestTime());
     setRecordFile(source.getRecordFile());
@@ -241,12 +251,13 @@ public class HasherResult {
     return "[HasherResult: hashType=" + hashType + ", resultEncoding="
 	+ resultEncoding + ", au=" + au + ", challenge="
 	+ Arrays.toString(challenge) + ", verifier=" + Arrays.toString(verifier)
-	+ ", cus=" + cus + ", showResult=" + showResult + ", requestTime="
-	+ requestTime + ", recordFile="	+ recordFile + ", recordStream="
-	+ recordStream + ", blockFile=" + blockFile + ", future=" + future
-	+ ", runnerError=" + runnerError + ", runnerStatus=" + runnerStatus
-	+ ", hashResult=" + Arrays.toString(hashResult) + ", bytesHashed="
-	+ bytesHashed + ", filesHashed=" + filesHashed + ", startTime="
-	+ startTime + ", elapsedTime=" + elapsedTime + "]";
+	+ ", cus=" + cus + ", requestId=" + requestId + ", showResult="
+	+ showResult + ", requestTime=" + requestTime + ", recordFile="
+	+ recordFile + ", recordStream=" + recordStream + ", blockFile="
+	+ blockFile + ", future=" + future + ", runnerError=" + runnerError
+	+ ", runnerStatus=" + runnerStatus + ", hashResult="
+	+ Arrays.toString(hashResult) + ", bytesHashed=" + bytesHashed
+	+ ", filesHashed=" + filesHashed + ", startTime=" + startTime
+	+ ", elapsedTime=" + elapsedTime + "]";
   }
 }

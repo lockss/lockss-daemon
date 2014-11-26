@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleHasher.java,v 1.14 2014-11-10 18:53:19 fergaloy-sf Exp $
+ * $Id: SimpleHasher.java,v 1.15 2014-11-26 20:51:41 fergaloy-sf Exp $
  */
 
 /*
@@ -904,6 +904,7 @@ public class SimpleHasher {
 	String key =
 	    org.apache.commons.lang3.RandomStringUtils.randomAlphabetic(5);
 	if (!requestMap.containsKey(key)) {
+	  result.setRequestId(key);
 	  requestMap.put(key, new ParamsAndResult(params, result));
 	  return key;
 	}
