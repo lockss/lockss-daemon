@@ -1,5 +1,5 @@
 /*
- * $Id: OJS2ArticleIteratorFactory.java,v 1.13 2014-07-11 19:00:38 etenbrink Exp $
+ * $Id: OJS2ArticleIteratorFactory.java,v 1.14 2014-11-26 23:50:53 etenbrink Exp $
  */
 
 /*
@@ -139,7 +139,7 @@ public class OJS2ArticleIteratorFactory
     }
     
     // otherwise try SubTreeArticleIteratorBuilder 
-    log.info("Using SubTreeArticleIteratorBuilder");
+    log.debug3("Using SubTreeArticleIteratorBuilder");
     SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
     
     builder.setSpec(target,
