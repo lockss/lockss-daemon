@@ -1,5 +1,5 @@
 /*
- * $Id: ElsevierDTD5XmlSourceMetadataExtractorFactory.java,v 1.4 2014-11-19 23:20:39 alexandraohlson Exp $
+ * $Id: ElsevierDTD5XmlSourceMetadataExtractorFactory.java,v 1.5 2014-11-26 20:46:46 alexandraohlson Exp $
  */
 
 /*
@@ -67,16 +67,19 @@ public class ElsevierDTD5XmlSourceMetadataExtractorFactory extends SourceXmlMeta
   static final Pattern TOP_METADATA_PATTERN = Pattern.compile("(.*/)[^/]+A\\.tar!/([^/]+)/dataset\\.xml$", Pattern.CASE_INSENSITIVE);
   // used to exclude underlying archives so we don't open them
   static final Pattern NESTED_ARCHIVE_PATTERN = Pattern.compile(".*/[^/]+[A-Z]\\.tar!/.+\\.(zip|tar|gz|tgz|tar\\.gz)$", Pattern.CASE_INSENSITIVE);
+  static final Pattern DTD_PATTERN = Pattern.compile("^([A-Z]{2})\\s5\\.\\d(\\.\\d)?\\s([A-Z-]+)$", Pattern.CASE_INSENSITIVE);
+  private static final String JOURNAL_ARTICLE = "JA";
+
   
 
   // Use this map to determine which node to use for underlying article schema
-  static private final Map<String, String> SchemaMap =
+  static private final Map<String, String> JASchemaMap =
       new HashMap<String,String>();
   static {
-    SchemaMap.put("JA 5.2.0 ARTICLE", "/article/head");
-    SchemaMap.put("JA 5.2.0 SIMPLE-ARTICLE", "/simple-article/simple-head"); 
-    SchemaMap.put("JA 5.2.0 BOOK-REVIEW", "/book-review/book-review-head");
-    // will need to add support for JA 5.2.0 BOOK, once we have examples
+    JASchemaMap.put("ARTICLE", "/article/head");
+    JASchemaMap.put("SIMPLE-ARTICLE", "/simple-article/simple-head"); 
+    JASchemaMap.put("EXAM", "/exam/simple-head");
+    JASchemaMap.put("BOOK-REVIEW", "/book-review/book-review-head");
   }
 
   private static SourceXmlSchemaHelper ElsevierDTD5PublishingHelper = null;
@@ -213,11 +216,16 @@ public class ElsevierDTD5XmlSourceMetadataExtractorFactory extends SourceXmlMeta
         CachedUrl mdCu) {
 
       // Which top node is appropriate for this specific dtd
+      String top_node = null;
       String dtdString = thisAM.getRaw(ElsevierDTD5XmlSchemaHelper.dataset_dtd_metadata);
-      String top_node = SchemaMap.get(dtdString);
+      Matcher mat = DTD_PATTERN.matcher(dtdString);
+      if (mat.matches() && JOURNAL_ARTICLE.equals(mat.group(1))) {
+        top_node = JASchemaMap.get(mat.group(3));
+      }
+      //String top_node = SchemaMap.get(dtdString);
       if (top_node == null) {
-        log.debug3("unknown dtd for article level metadata");
-        return; // we can't extract
+        log.siteWarning("Unknown type of Elsevier DTD provided for article" + dtdString);
+        return; // we can't extract article level metadata (author & title)
       }
       try {
         List<ArticleMetadata> amList = 
