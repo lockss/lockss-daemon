@@ -1,5 +1,5 @@
 /*
- * $Id: OJS2PermissionCheckerFactory.java,v 1.2 2014-11-12 20:11:57 wkwilson Exp $
+ * $Id: OJS2PermissionCheckerFactory.java,v 1.3 2014-11-26 23:48:50 etenbrink Exp $
  */
 
 /*
@@ -54,13 +54,12 @@ public class OJS2PermissionCheckerFactory
     protected String au_year;
     protected Pattern au_year_paren;
     protected Pattern au_year_colon;
-    static final int READ_LIMIT = 40960;
     
     @Override
     public boolean checkPermission(CrawlerFacade crawlFacade, Reader inputReader,
         String permissionUrl) {
       
-      BufferedReader in = new BufferedReader(inputReader, READ_LIMIT);
+      BufferedReader in = new BufferedReader(inputReader);
       boolean ret = false;
       try {
         String str = null;
