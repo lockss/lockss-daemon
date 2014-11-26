@@ -1,5 +1,5 @@
 /*
- * $Id: TestPdfTokenStreamStateMachine.java,v 1.2 2014-11-25 02:12:14 thib_gc Exp $
+ * $Id: TestPdfTokenStreamStateMachine.java,v 1.3 2014-11-26 23:45:30 thib_gc Exp $
  */
 
 /*
@@ -58,10 +58,10 @@ public class TestPdfTokenStreamStateMachine extends LockssTestCase {
       public void setUp() throws PdfException {
         super.setUp();
         stateCounter = 0;
-        assertEquals(0, state);
-        assertFalse(result);
-        assertEquals(-1, begin);
-        assertEquals(-1, end);
+        assertEquals(0, getState());
+        assertFalse(getResult());
+        assertEquals(-1, getBegin());
+        assertEquals(-1, getEnd());
       }
       
       @Override
@@ -112,9 +112,9 @@ public class TestPdfTokenStreamStateMachine extends LockssTestCase {
       @Override
       public void state9() throws PdfException {
         doStateTest();
-        result = true;
-        begin = 123;
-        end = 456;
+        setResult(true);
+        setBegin(123);
+        setEnd(456);
         stop();
       }
 
@@ -134,9 +134,9 @@ public class TestPdfTokenStreamStateMachine extends LockssTestCase {
                              tf.makeOperator("op9")),
                tf);
     assertEquals(10, sm.stateCounter);
-    assertTrue(sm.result);
-    assertEquals(123, sm.begin);
-    assertEquals(456, sm.end);
+    assertTrue(sm.getResult());
+    assertEquals(123, sm.getBegin());
+    assertEquals(456, sm.getEnd());
   }
   
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: PdfTokenStreamStateMachine.java,v 1.1 2014-11-05 01:19:38 thib_gc Exp $
+ * $Id: PdfTokenStreamStateMachine.java,v 1.2 2014-11-26 23:45:30 thib_gc Exp $
  */
 
 /*
@@ -187,6 +187,106 @@ public class PdfTokenStreamStateMachine extends PdfTokenStreamWorker {
     this.end = -1;
   }  
 
+  /**
+   * <p>
+   * Retrieves the result flag.
+   * </p>
+   * 
+   * @return The result flag.
+   * @since 1.67
+   */
+  public boolean getResult() {
+    return result;
+  }
+
+  /**
+   * <p>
+   * Sets the result flag.
+   * </p>
+   * 
+   * @param result
+   *          Value of the result flag.
+   * @since 1.67
+   */
+  public void setResult(boolean result) {
+    this.result = result;
+  }
+
+  /**
+   * <p>
+   * Retrieves the state variable.
+   * </p>
+   * 
+   * @return The state variable.
+   * @since 1.67
+   */
+  public int getState() {
+    return state;
+  }
+
+  /**
+   * <p>
+   * Sets the state variable.
+   * </p>
+   * 
+   * @param state
+   *          Value of the state variable.
+   * @since 1.67
+   */
+  public void setState(int state) {
+    this.state = state;
+  }
+
+  /**
+   * <p>
+   * Retrieves the beginning index.
+   * </p>
+   * 
+   * @return The beginning index.
+   * @since 1.67
+   */
+  public int getBegin() {
+    return begin;
+  }
+
+  /**
+   * <p>
+   * Sets the beginning index.
+   * </p>
+   * 
+   * @param begin
+   *          Value of the beginning index.
+   * @since 1.67
+   */
+  public void setBegin(int begin) {
+    this.begin = begin;
+  }
+
+  /**
+   * <p>
+   * Retrieves the ending index.
+   * </p>
+   * 
+   * @return The ending index.
+   * @since 1.67
+   */
+  public int getEnd() {
+    return end;
+  }
+
+  /**
+   * <p>
+   * Sets the ending index.
+   * </p>
+   * 
+   * @param end
+   *          Value of the ending index.
+   * @since 1.67
+   */
+  public void setEnd(int end) {
+    this.end = end;
+  }
+
   @Override
   public void operatorCallback() throws PdfException {
     if (logger != null && logger.isDebug3()) {
@@ -204,11 +304,11 @@ public class PdfTokenStreamStateMachine extends PdfTokenStreamWorker {
   @Override
   public void process(List<PdfToken> tokens, PdfTokenFactory factory) throws PdfException {
     if (logger == defaultLogger) {
-      logger.debug3("actual class:" + getClass().getName());
+      logger.debug3("actual class: " + getClass().getName());
     }
     super.process(tokens, factory);
   }
-
+  
   /**
    * <p>
    * Portion of {@link #operatorCallback()} that simply switches on the state
