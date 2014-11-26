@@ -1,5 +1,5 @@
 /*
- * $Id: PionArticleIteratorFactory.java,v 1.8 2014-11-25 18:38:47 aishizaki Exp $
+ * $Id: PionArticleIteratorFactory.java,v 1.9 2014-11-26 17:52:31 aishizaki Exp $
  */
 
 /*
@@ -44,28 +44,21 @@ import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 
 /*
- * The Pion Article Iterator supports two different plugins: 
- *   ClockssPionPlugin: 
+ * The Pion Article Iterator supports ClockssPionPlugin: 
   Full text CU: http://www.envplan.com/epd/editorials/d12107.pdf
   Abstract:     http://www.envplan.com/abstract.cgi?id=d12107
   Metadata:     http://www.envplan.com/ris.cgi?id=d12107
   Citation_Ris: http://www.envplan.com/ris.cgi?id=d12107
   PdfFile:      http://www.envplan.com/epd/editorials/d12107.pdf
   References:  http://www.envplan.com/ref.cgi?id=d12107
- * 
- *  and ClockssPionIPerception:
-  Full text CU: http://i-perception.perceptionweb.com/journal/I/volume/4/article/i0512
-  Abstract:     http://i-perception.perceptionweb.com/journal/I/volume/4/article/i0512
-  Metadata:     http://i-perception.perceptionweb.com/journal/I/volume/4/article/i0512
-  Citation_Ris: http://www.perceptionweb.com/ris.cgi?id=i0512
-  PdfFile:      http://i-perception.perceptionweb.com/fulltext/i04/i0512.pdf 
- * 
+  There are instances of abstracts only (no pdf or RIS file - in that case,
+  default to metadata in the abstract)
  */
 
 public class PionArticleIteratorFactory 
   implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
-  protected static Logger log = Logger.getLogger("PionArticleIteratorFactory");
+  protected static Logger log = Logger.getLogger(PionArticleIteratorFactory.class);
 
   protected static final String ROOT_TEMPLATE = "\"%s%s/\", base_url, journal_code";
   
@@ -84,7 +77,8 @@ public class PionArticleIteratorFactory
   protected static class PionArticleIterator extends SubTreeArticleIterator {
     
     protected static Pattern PATTERN = Pattern.compile("(/[^/]+/(editorials|fulltext/[^/]+)/)([^/]+)\\.pdf$", Pattern.CASE_INSENSITIVE);
-    
+    private static CachedUrl metadataCu = null;
+
     protected PionArticleIterator(ArchivalUnit au,
                                   SubTreeArticleIterator.Spec spec) {
       super(au, spec);
@@ -105,14 +99,16 @@ public class PionArticleIteratorFactory
       ArticleFiles af = new ArticleFiles();
       af.setFullTextCu(pdfCu);
       af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
+      metadataCu = null;
       
-      if(spec.getTarget() != MetadataTarget.Article) {
-		guessAbstract(af, pdfMat);
-		guessReferences(af, pdfMat);
-		guessRisCitation(af, pdfMat);
-		guessSupplementaryMaterials(af, pdfMat);
-      } else {
-        log.debug ("not an article");
+      if(spec.getTarget().isArticle()) {
+        guessAbstract(af, pdfMat);
+        guessReferences(af, pdfMat);
+        guessRisCitation(af, pdfMat);
+        guessSupplementaryMaterials(af, pdfMat);
+        if (metadataCu != null) {
+          af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, metadataCu);
+        }
       }
       return af;
     }
@@ -121,6 +117,7 @@ public class PionArticleIteratorFactory
       CachedUrl absCu = au.makeCachedUrl(mat.replaceFirst("/abstract.cgi?id=$3"));
       if (absCu != null && absCu.hasContent()) {
         af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, absCu);
+        metadataCu = absCu;
       }
     }
     
@@ -134,13 +131,8 @@ public class PionArticleIteratorFactory
     protected void guessRisCitation(ArticleFiles af, Matcher mat) {
       CachedUrl risCu = au.makeCachedUrl(mat.replaceFirst("/ris.cgi?id=$3"));
       if (risCu != null && risCu.hasContent()) {
-        af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, risCu);
         af.setRoleCu(ArticleFiles.ROLE_CITATION + "_" + "Ris", risCu);
-      } else {
-        CachedUrl absCu = au.makeCachedUrl(mat.replaceFirst("/abstract.cgi?id=$3"));
-        if (absCu != null && absCu.hasContent()) {
-          af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, absCu);
-        }
+        metadataCu = risCu;
       }
     }
     

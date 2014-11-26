@@ -1,5 +1,5 @@
 /*
- * $Id: PionHtmlMetadataExtractorFactory.java,v 1.4 2014-11-25 18:38:47 aishizaki Exp $
+ * $Id: PionHtmlMetadataExtractorFactory.java,v 1.5 2014-11-26 17:52:31 aishizaki Exp $
  */
 
 /*
@@ -49,7 +49,7 @@ import org.lockss.plugin.*;
  */
 public class PionHtmlMetadataExtractorFactory
   implements FileMetadataExtractorFactory {
-  static Logger log = Logger.getLogger("PionHtmlMetadataExtractorFactory");
+  static Logger log = Logger.getLogger(PionHtmlMetadataExtractorFactory.class);
 
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
 							   String contentType)
@@ -86,9 +86,9 @@ public class PionHtmlMetadataExtractorFactory
       
       tagMap.put("citation_lastpage", MetadataField.DC_FIELD_CITATION_EPAGE);
       tagMap.put("citation_abstract_html_url", MetadataField.FIELD_ACCESS_URL);
-      // for consistency, let tdb set publisher
-      //tagMap.put("citation_publisher", MetadataField.DC_FIELD_PUBLISHER);
-      //tagMap.put("citation_publisher", MetadataField.FIELD_PUBLISHER);
+      // Pion returns "Pion Ltd" in metadata, our tdb returns "Pion"
+      tagMap.put("citation_publisher", MetadataField.DC_FIELD_PUBLISHER);
+      tagMap.put("citation_publisher", MetadataField.FIELD_PUBLISHER);
     }
     
     /**

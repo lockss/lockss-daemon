@@ -1,5 +1,5 @@
 /*
- * $Id: PionIPerceptionArticleIteratorFactory.java,v 1.5 2014-11-25 18:38:47 aishizaki Exp $
+ * $Id: PionIPerceptionArticleIteratorFactory.java,v 1.6 2014-11-26 17:52:31 aishizaki Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ public class PionIPerceptionArticleIteratorFactory
   implements ArticleIteratorFactory,
 	     ArticleMetadataExtractorFactory {
   
-  protected static Logger log = Logger.getLogger("PionIPerceptionArticleIteratorFactory");
+  protected static Logger log = Logger.getLogger(PionIPerceptionArticleIteratorFactory.class);
 	  
   protected static final String ROOT_TEMPLATE = "\"%sjournal/%s/volume/%s\", base_url, journal_code, volume_name";
   	
@@ -93,7 +93,7 @@ public class PionIPerceptionArticleIteratorFactory
     
     @Override
     protected ArticleFiles createArticleFiles(CachedUrl cu) {
-    	log.debug("Attempting to pattern match cu: "+cu);
+      log.debug("Attempting to pattern match cu: "+cu);
       String url = cu.getUrl();
       Matcher mat = pattern.matcher(url);
       if (mat.find()) {
@@ -107,7 +107,6 @@ public class PionIPerceptionArticleIteratorFactory
     protected ArticleFiles processAbstract(CachedUrl abstractCu, Matcher absMat) {
         ArticleFiles af = new ArticleFiles();
         af.setRoleCu(ArticleFiles.ROLE_ABSTRACT,abstractCu);
-        //af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, abstractCu);
         af.setFullTextCu(abstractCu);
         
         guessPdf(af, absMat);
