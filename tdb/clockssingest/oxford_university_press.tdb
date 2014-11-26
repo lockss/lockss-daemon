@@ -6172,6 +6172,55 @@
   {
 
     title <
+      name = FEMS Immunology & Medical Microbiology ;
+      issn = 0928-8244 ;
+      eissn = 1574-695X ;
+      issnl = 0928-8244 
+    >
+
+    param[base_url] = http://femsim.oxfordjournals.org/
+    pluginSuffix = ClockssHighWireDrupalPlugin
+    comment[backcontent] = 1993 volume 6 to 1999 volume 26
+
+    au < exists ; exists ; 2000 ; FEMS Immunology & Medical Microbiology Volume 27 ; 27 ; >
+    au < exists ; exists ; 2000 ; FEMS Immunology & Medical Microbiology Volume 28 ; 28 ; >
+    au < exists ; exists ; 2000 ; FEMS Immunology & Medical Microbiology Volume 29 ; 29 ; >
+    au < exists ; exists ; 2001 ; FEMS Immunology & Medical Microbiology Volume 30 ; 30 ; >
+    au < exists ; exists ; 2001 ; FEMS Immunology & Medical Microbiology Volume 31 ; 31 ; >
+    au < exists ; exists ; 2001-2002 ; FEMS Immunology & Medical Microbiology Volume 32 ; 32 ; >
+    au < exists ; exists ; 2002 ; FEMS Immunology & Medical Microbiology Volume 33 ; 33 ; >
+    au < doesNotExist ; doesNotExist ; 2002 ; FEMS Immunology & Medical Microbiology Volume 34 ; 34 ; >
+    au < exists ; exists ; 2003 ; FEMS Immunology & Medical Microbiology Volume 35 ; 35 ; >
+    au < exists ; exists ; 2003 ; FEMS Immunology & Medical Microbiology Volume 36 ; 36 ; >
+    au < exists ; exists ; 2003 ; FEMS Immunology & Medical Microbiology Volume 37 ; 37 ; >
+    au < exists ; exists ; 2005 ; FEMS Immunology & Medical Microbiology Volume 45 ; 45 ; >
+    au < exists ; exists ; 2006 ; FEMS Immunology & Medical Microbiology Volume 46 ; 46 ; >
+    au < exists ; exists ; 2006 ; FEMS Immunology & Medical Microbiology Volume 47 ; 47 ; >
+    au < exists ; exists ; 2006 ; FEMS Immunology & Medical Microbiology Volume 48 ; 48 ; >
+    au < exists ; exists ; 2007 ; FEMS Immunology & Medical Microbiology Volume 49 ; 49 ; >
+    au < exists ; exists ; 2007 ; FEMS Immunology & Medical Microbiology Volume 50 ; 50 ; >
+    au < exists ; exists ; 2007 ; FEMS Immunology & Medical Microbiology Volume 51 ; 51 ; >
+    au < exists ; exists ; 2008 ; FEMS Immunology & Medical Microbiology Volume 52 ; 52 ; >
+    au < exists ; exists ; 2008 ; FEMS Immunology & Medical Microbiology Volume 53 ; 53 ; >
+    au < exists ; exists ; 2008 ; FEMS Immunology & Medical Microbiology Volume 54 ; 54 ; >
+    au < exists ; exists ; 2009 ; FEMS Immunology & Medical Microbiology Volume 55 ; 55 ; >
+    au < exists ; exists ; 2009 ; FEMS Immunology & Medical Microbiology Volume 56 ; 56 ; >
+    au < exists ; exists ; 2009 ; FEMS Immunology & Medical Microbiology Volume 57 ; 57 ; >
+    au < exists ; exists ; 2010 ; FEMS Immunology & Medical Microbiology Volume 58 ; 58 ; >
+    au < exists ; exists ; 2010 ; FEMS Immunology & Medical Microbiology Volume 59 ; 59 ; >
+    au < exists ; exists ; 2010 ; FEMS Immunology & Medical Microbiology Volume 60 ; 60 ; >
+    au < exists ; exists ; 2011 ; FEMS Immunology & Medical Microbiology Volume 61 ; 61 ; >
+    au < exists ; exists ; 2011 ; FEMS Immunology & Medical Microbiology Volume 62 ; 62 ; >
+    au < exists ; exists ; 2011 ; FEMS Immunology & Medical Microbiology Volume 63 ; 63 ; >
+    au < exists ; exists ; 2012 ; FEMS Immunology & Medical Microbiology Volume 64 ; 64 ; >
+    au < exists ; exists ; 2012 ; FEMS Immunology & Medical Microbiology Volume 65 ; 65 ; >
+    au < exists ; exists ; 2012 ; FEMS Immunology & Medical Microbiology Volume 66 ; 66 ; >
+
+  }
+
+  {
+
+    title <
       name = FEMS Microbiology Ecology ;
       eissn = 1574-6941 ;
       issnl = 1574-6941
@@ -6274,6 +6323,209 @@
   {
 
     title <
+      name = FEMS Microbiology Immunology ;
+      eissn = 0920-8534 ;
+      issnl = 0920-8534 
+    >
+
+    param[base_url] = http://femsmi.oxfordjournals.org/
+    pluginSuffix = ClockssHighWireDrupalPlugin
+
+    au < exists ; exists ; 1988-1989 ; FEMS Microbiology Ecology Volume 1 ; 1 ; >
+    au < exists ; exists ; 1990 ; FEMS Microbiology Ecology Volume 2 ; 2 ; >
+    au < exists ; exists ; 1991 ; FEMS Microbiology Ecology Volume 3 ; 3 ; >
+    au < exists ; exists ; 1991-1992 ; FEMS Microbiology Ecology Volume 4 ; 4 ; >
+    au < exists ; exists ; 1992 ; FEMS Microbiology Ecology Volume 5 ; 5 ; >
+
+  }
+
+  {
+
+    title <
+      name = FEMS Microbiology Letters ;
+      eissn = 1574-6968 ;
+      issnl = 1574-6968 
+    >
+
+    param[base_url] = http://femsle.oxfordjournals.org/
+    pluginSuffix = ClockssHighWireDrupalPlugin
+    comment[backcontent] = 1977 volume 1 to 1999 volume 181
+
+    au < exists ; exists ; 2000 ; FEMS Microbiology Letters Volume 182 ; 182 ; >
+    au < exists ; exists ; 2000 ; FEMS Microbiology Letters Volume 183 ; 183 ; >
+    au < exists ; exists ; 2000 ; FEMS Microbiology Letters Volume 184 ; 184 ; >
+    au < exists ; exists ; 2000 ; FEMS Microbiology Letters Volume 185 ; 185 ; >
+    au < exists ; exists ; 2000 ; FEMS Microbiology Letters Volume 186 ; 186 ; >
+    au < exists ; exists ; 2000 ; FEMS Microbiology Letters Volume 187 ; 187 ; >
+    au < exists ; exists ; 2000 ; FEMS Microbiology Letters Volume 188 ; 188 ; >
+    au < exists ; exists ; 2000 ; FEMS Microbiology Letters Volume 189 ; 189 ; >
+    au < exists ; exists ; 2000 ; FEMS Microbiology Letters Volume 190 ; 190 ; >
+    au < exists ; exists ; 2000 ; FEMS Microbiology Letters Volume 191 ; 191 ; >
+    au < exists ; exists ; 2000 ; FEMS Microbiology Letters Volume 192 ; 192 ; >
+    au < exists ; exists ; 2000 ; FEMS Microbiology Letters Volume 193 ; 193 ; >
+    au < exists ; exists ; 2001 ; FEMS Microbiology Letters Volume 194 ; 194 ; >
+    au < exists ; exists ; 2001 ; FEMS Microbiology Letters Volume 195 ; 195 ; >
+    au < exists ; exists ; 2001 ; FEMS Microbiology Letters Volume 196 ; 196 ; >
+    au < exists ; exists ; 2001 ; FEMS Microbiology Letters Volume 197 ; 197 ; >
+    au < exists ; exists ; 2001 ; FEMS Microbiology Letters Volume 198 ; 198 ; >
+    au < exists ; exists ; 2001 ; FEMS Microbiology Letters Volume 199 ; 199 ; >
+    au < exists ; exists ; 2001 ; FEMS Microbiology Letters Volume 200 ; 200 ; >
+    au < exists ; exists ; 2001 ; FEMS Microbiology Letters Volume 201 ; 201 ; >
+    au < exists ; exists ; 2001 ; FEMS Microbiology Letters Volume 202 ; 202 ; >
+    au < exists ; exists ; 2001 ; FEMS Microbiology Letters Volume 203 ; 203 ; >
+    au < exists ; exists ; 2001 ; FEMS Microbiology Letters Volume 204 ; 204 ; >
+    au < exists ; exists ; 2001 ; FEMS Microbiology Letters Volume 205 ; 205 ; >
+    au < exists ; exists ; 2002 ; FEMS Microbiology Letters Volume 206 ; 206 ; >
+    au < exists ; exists ; 2002 ; FEMS Microbiology Letters Volume 207 ; 207 ; >
+    au < exists ; exists ; 2002 ; FEMS Microbiology Letters Volume 208 ; 208 ; >
+    au < exists ; exists ; 2002 ; FEMS Microbiology Letters Volume 209 ; 209 ; >
+    au < exists ; exists ; 2002 ; FEMS Microbiology Letters Volume 210 ; 210 ; >
+    au < exists ; exists ; 2002 ; FEMS Microbiology Letters Volume 211 ; 211 ; >
+    au < exists ; exists ; 2002 ; FEMS Microbiology Letters Volume 212 ; 212 ; >
+    au < exists ; exists ; 2002 ; FEMS Microbiology Letters Volume 213 ; 213 ; >
+    au < exists ; exists ; 2002 ; FEMS Microbiology Letters Volume 214 ; 214 ; >
+    au < exists ; exists ; 2002 ; FEMS Microbiology Letters Volume 215 ; 215 ; >
+    au < exists ; exists ; 2002 ; FEMS Microbiology Letters Volume 216 ; 216 ; >
+    au < exists ; exists ; 2002 ; FEMS Microbiology Letters Volume 217 ; 217 ; >
+    au < exists ; exists ; 2003 ; FEMS Microbiology Letters Volume 218 ; 218 ; >
+    au < exists ; exists ; 2003 ; FEMS Microbiology Letters Volume 219 ; 219 ; >
+    au < exists ; exists ; 2003 ; FEMS Microbiology Letters Volume 220 ; 220 ; >
+    au < exists ; exists ; 2003 ; FEMS Microbiology Letters Volume 221 ; 221 ; >
+    au < exists ; exists ; 2003 ; FEMS Microbiology Letters Volume 222 ; 222 ; >
+    au < exists ; exists ; 2003 ; FEMS Microbiology Letters Volume 223 ; 223 ; >
+    au < exists ; exists ; 2003 ; FEMS Microbiology Letters Volume 224 ; 224 ; >
+    au < exists ; exists ; 2003 ; FEMS Microbiology Letters Volume 225 ; 225 ; >
+    au < exists ; exists ; 2003 ; FEMS Microbiology Letters Volume 226 ; 226 ; >
+    au < exists ; exists ; 2003 ; FEMS Microbiology Letters Volume 227 ; 227 ; >
+    au < exists ; exists ; 2003 ; FEMS Microbiology Letters Volume 228 ; 228 ; >
+    au < exists ; exists ; 2003 ; FEMS Microbiology Letters Volume 229 ; 229 ; >
+    au < exists ; exists ; 2004 ; FEMS Microbiology Letters Volume 230 ; 230 ; >
+    au < exists ; exists ; 2004 ; FEMS Microbiology Letters Volume 231 ; 231 ; >
+    au < exists ; exists ; 2004 ; FEMS Microbiology Letters Volume 232 ; 232 ; >
+    au < exists ; exists ; 2004 ; FEMS Microbiology Letters Volume 233 ; 233 ; >
+    au < exists ; exists ; 2004 ; FEMS Microbiology Letters Volume 234 ; 234 ; >
+    au < exists ; exists ; 2004 ; FEMS Microbiology Letters Volume 235 ; 235 ; >
+    au < exists ; exists ; 2004 ; FEMS Microbiology Letters Volume 236 ; 236 ; >
+    au < exists ; exists ; 2004 ; FEMS Microbiology Letters Volume 237 ; 237 ; >
+    au < exists ; exists ; 2004 ; FEMS Microbiology Letters Volume 238 ; 238 ; >
+    au < exists ; exists ; 2004 ; FEMS Microbiology Letters Volume 239 ; 239 ; >
+    au < exists ; exists ; 2004 ; FEMS Microbiology Letters Volume 240 ; 240 ; >
+    au < exists ; exists ; 2004 ; FEMS Microbiology Letters Volume 241 ; 241 ; >
+    au < exists ; exists ; 2005 ; FEMS Microbiology Letters Volume 242 ; 242 ; >
+    au < exists ; exists ; 2005 ; FEMS Microbiology Letters Volume 243 ; 243 ; >
+    au < exists ; exists ; 2005 ; FEMS Microbiology Letters Volume 244 ; 244 ; >
+    au < exists ; exists ; 2005 ; FEMS Microbiology Letters Volume 245 ; 245 ; >
+    au < exists ; exists ; 2005 ; FEMS Microbiology Letters Volume 246 ; 246 ; >
+    au < exists ; exists ; 2005 ; FEMS Microbiology Letters Volume 247 ; 247 ; >
+    au < exists ; exists ; 2005 ; FEMS Microbiology Letters Volume 248 ; 248 ; >
+    au < exists ; exists ; 2005 ; FEMS Microbiology Letters Volume 249 ; 249 ; >
+    au < exists ; exists ; 2005 ; FEMS Microbiology Letters Volume 250 ; 250 ; >
+    au < exists ; exists ; 2005 ; FEMS Microbiology Letters Volume 251 ; 251 ; >
+    au < exists ; exists ; 2005 ; FEMS Microbiology Letters Volume 252 ; 252 ; >
+    au < exists ; exists ; 2005 ; FEMS Microbiology Letters Volume 253 ; 253 ; >
+    au < exists ; exists ; 2006 ; FEMS Microbiology Letters Volume 254 ; 254 ; >
+    au < exists ; exists ; 2006 ; FEMS Microbiology Letters Volume 255 ; 255 ; >
+    au < exists ; exists ; 2006 ; FEMS Microbiology Letters Volume 256 ; 256 ; >
+    au < exists ; exists ; 2006 ; FEMS Microbiology Letters Volume 257 ; 257 ; >
+    au < exists ; exists ; 2006 ; FEMS Microbiology Letters Volume 258 ; 258 ; >
+    au < exists ; exists ; 2006 ; FEMS Microbiology Letters Volume 259 ; 259 ; >
+    au < exists ; exists ; 2006 ; FEMS Microbiology Letters Volume 260 ; 260 ; >
+    au < exists ; exists ; 2006 ; FEMS Microbiology Letters Volume 261 ; 261 ; >
+    au < exists ; exists ; 2006 ; FEMS Microbiology Letters Volume 262 ; 262 ; >
+    au < exists ; exists ; 2006 ; FEMS Microbiology Letters Volume 263 ; 263 ; >
+    au < exists ; exists ; 2006 ; FEMS Microbiology Letters Volume 264 ; 264 ; >
+    au < exists ; exists ; 2006 ; FEMS Microbiology Letters Volume 265 ; 265 ; >
+    au < exists ; exists ; 2007 ; FEMS Microbiology Letters Volume 266 ; 266 ; >
+    au < exists ; exists ; 2008 ; FEMS Microbiology Letters Volume 278 ; 278 ; >
+    au < exists ; exists ; 2008 ; FEMS Microbiology Letters Volume 279 ; 279 ; >
+    au < exists ; exists ; 2008 ; FEMS Microbiology Letters Volume 280 ; 280 ; >
+    au < exists ; exists ; 2008 ; FEMS Microbiology Letters Volume 281 ; 281 ; >
+    au < exists ; exists ; 2008 ; FEMS Microbiology Letters Volume 282 ; 282 ; >
+    au < exists ; exists ; 2008 ; FEMS Microbiology Letters Volume 283 ; 283 ; >
+    au < exists ; exists ; 2008 ; FEMS Microbiology Letters Volume 284 ; 284 ; >
+    au < exists ; exists ; 2008 ; FEMS Microbiology Letters Volume 285 ; 285 ; >
+    au < exists ; exists ; 2008 ; FEMS Microbiology Letters Volume 286 ; 286 ; >
+    au < exists ; exists ; 2008 ; FEMS Microbiology Letters Volume 287 ; 287 ; >
+    au < exists ; exists ; 2008 ; FEMS Microbiology Letters Volume 288 ; 288 ; >
+    au < exists ; exists ; 2008 ; FEMS Microbiology Letters Volume 289 ; 289 ; >
+    au < exists ; exists ; 2009 ; FEMS Microbiology Letters Volume 290 ; 290 ; >
+    au < exists ; exists ; 2009 ; FEMS Microbiology Letters Volume 291 ; 291 ; >
+    au < exists ; exists ; 2009 ; FEMS Microbiology Letters Volume 292 ; 292 ; >
+    au < exists ; exists ; 2009 ; FEMS Microbiology Letters Volume 293 ; 293 ; >
+    au < exists ; exists ; 2009 ; FEMS Microbiology Letters Volume 294 ; 294 ; >
+    au < exists ; exists ; 2009 ; FEMS Microbiology Letters Volume 295 ; 295 ; >
+    au < exists ; exists ; 2009 ; FEMS Microbiology Letters Volume 296 ; 296 ; >
+    au < exists ; exists ; 2009 ; FEMS Microbiology Letters Volume 297 ; 297 ; >
+    au < exists ; exists ; 2009 ; FEMS Microbiology Letters Volume 298 ; 298 ; >
+    au < exists ; exists ; 2009 ; FEMS Microbiology Letters Volume 299 ; 299 ; >
+    au < exists ; exists ; 2009 ; FEMS Microbiology Letters Volume 300 ; 300 ; >
+    au < exists ; exists ; 2009 ; FEMS Microbiology Letters Volume 301 ; 301 ; >
+    au < exists ; exists ; 2010 ; FEMS Microbiology Letters Volume 302 ; 302 ; >
+    au < exists ; exists ; 2010 ; FEMS Microbiology Letters Volume 303 ; 303 ; >
+    au < exists ; exists ; 2010 ; FEMS Microbiology Letters Volume 304 ; 304 ; >
+    au < exists ; exists ; 2010 ; FEMS Microbiology Letters Volume 305 ; 305 ; >
+    au < exists ; exists ; 2010 ; FEMS Microbiology Letters Volume 306 ; 306 ; >
+    au < exists ; exists ; 2010 ; FEMS Microbiology Letters Volume 307 ; 307 ; >
+    au < exists ; exists ; 2010 ; FEMS Microbiology Letters Volume 308 ; 308 ; >
+    au < exists ; exists ; 2010 ; FEMS Microbiology Letters Volume 309 ; 309 ; >
+    au < exists ; exists ; 2010 ; FEMS Microbiology Letters Volume 310 ; 310 ; >
+    au < exists ; exists ; 2010 ; FEMS Microbiology Letters Volume 311 ; 311 ; >
+    au < exists ; exists ; 2010 ; FEMS Microbiology Letters Volume 312 ; 312 ; >
+    au < exists ; exists ; 2010 ; FEMS Microbiology Letters Volume 313 ; 313 ; >
+    au < exists ; exists ; 2011 ; FEMS Microbiology Letters Volume 314 ; 314 ; >
+    au < exists ; exists ; 2011 ; FEMS Microbiology Letters Volume 315 ; 315 ; >
+    au < exists ; exists ; 2011 ; FEMS Microbiology Letters Volume 316 ; 316 ; >
+    au < exists ; exists ; 2011 ; FEMS Microbiology Letters Volume 317 ; 317 ; >
+    au < exists ; exists ; 2011 ; FEMS Microbiology Letters Volume 318 ; 318 ; >
+    au < exists ; exists ; 2011 ; FEMS Microbiology Letters Volume 319 ; 319 ; >
+    au < exists ; exists ; 2011 ; FEMS Microbiology Letters Volume 320 ; 320 ; >
+    au < exists ; exists ; 2011 ; FEMS Microbiology Letters Volume 321 ; 321 ; >
+    au < exists ; exists ; 2011 ; FEMS Microbiology Letters Volume 322 ; 322 ; >
+    au < exists ; exists ; 2011 ; FEMS Microbiology Letters Volume 323 ; 323 ; >
+    au < exists ; exists ; 2011 ; FEMS Microbiology Letters Volume 324 ; 324 ; >
+    au < exists ; exists ; 2011 ; FEMS Microbiology Letters Volume 325 ; 325 ; >
+    au < exists ; exists ; 2012 ; FEMS Microbiology Letters Volume 326 ; 326 ; >
+    au < exists ; exists ; 2012 ; FEMS Microbiology Letters Volume 327 ; 327 ; >
+    au < exists ; exists ; 2012 ; FEMS Microbiology Letters Volume 328 ; 328 ; >
+    au < exists ; exists ; 2012 ; FEMS Microbiology Letters Volume 329 ; 329 ; >
+    au < exists ; exists ; 2012 ; FEMS Microbiology Letters Volume 330 ; 330 ; >
+    au < exists ; exists ; 2012 ; FEMS Microbiology Letters Volume 331 ; 331 ; >
+    au < exists ; exists ; 2012 ; FEMS Microbiology Letters Volume 332 ; 332 ; >
+    au < exists ; exists ; 2012 ; FEMS Microbiology Letters Volume 333 ; 333 ; >
+    au < exists ; exists ; 2012 ; FEMS Microbiology Letters Volume 334 ; 334 ; >
+    au < exists ; exists ; 2012 ; FEMS Microbiology Letters Volume 335 ; 335 ; >
+    au < exists ; exists ; 2012 ; FEMS Microbiology Letters Volume 336 ; 336 ; >
+    au < exists ; exists ; 2012 ; FEMS Microbiology Letters Volume 337 ; 337 ; >
+    au < exists ; exists ; 2013 ; FEMS Microbiology Letters Volume 338 ; 338 ; >
+    au < exists ; exists ; 2013 ; FEMS Microbiology Letters Volume 339 ; 339 ; >
+    au < exists ; exists ; 2013 ; FEMS Microbiology Letters Volume 340 ; 340 ; >
+    au < exists ; exists ; 2013 ; FEMS Microbiology Letters Volume 341 ; 341 ; >
+    au < exists ; exists ; 2013 ; FEMS Microbiology Letters Volume 342 ; 342 ; >
+    au < exists ; exists ; 2013 ; FEMS Microbiology Letters Volume 343 ; 343 ; >
+    au < exists ; exists ; 2013 ; FEMS Microbiology Letters Volume 344 ; 344 ; >
+    au < exists ; exists ; 2013 ; FEMS Microbiology Letters Volume 345 ; 345 ; >
+    au < exists ; exists ; 2013 ; FEMS Microbiology Letters Volume 346 ; 346 ; >
+    au < exists ; exists ; 2013 ; FEMS Microbiology Letters Volume 347 ; 347 ; >
+    au < exists ; exists ; 2013 ; FEMS Microbiology Letters Volume 348 ; 348 ; >
+    au < exists ; exists ; 2013 ; FEMS Microbiology Letters Volume 349 ; 349 ; >
+    au < exists ; exists ; 2014 ; FEMS Microbiology Letters Volume 350 ; 350 ; >
+    au < exists ; exists ; 2014 ; FEMS Microbiology Letters Volume 351 ; 351 ; >
+    au < exists ; exists ; 2014 ; FEMS Microbiology Letters Volume 352 ; 352 ; >
+    au < exists ; exists ; 2014 ; FEMS Microbiology Letters Volume 353 ; 353 ; >
+    au < exists ; exists ; 2014 ; FEMS Microbiology Letters Volume 354 ; 354 ; >
+    au < exists ; exists ; 2014 ; FEMS Microbiology Letters Volume 355 ; 355 ; >
+    au < exists ; exists ; 2014 ; FEMS Microbiology Letters Volume 356 ; 356 ; >
+    au < expected ; exists ; 2014 ; FEMS Microbiology Letters Volume 357 ; 357 ; >
+    au < expected ; exists ; 2014 ; FEMS Microbiology Letters Volume 358 ; 358 ; >
+    au < expected ; exists ; 2014 ; FEMS Microbiology Letters Volume 359 ; 359 ; >
+    au < expected ; exists ; 2014 ; FEMS Microbiology Letters Volume 360 ; 360 ; >
+    au < expected ; exists ; 2014 ; FEMS Microbiology Letters Volume 361 ; 361 ; >
+
+  }
+
+  {
+
+    title <
       name = FEMS Microbiology Reviews ;
       eissn = 1574-6976 ;
       issnl = 1574-6976
@@ -6320,6 +6572,34 @@
     au < exists ; exists ; 2012 ; FEMS Microbiology Reviews Volume 36 ; 36 ; >
     au < exists ; exists ; 2013 ; FEMS Microbiology Reviews Volume 37 ; 37 ; >
     au < exists ; exists ; 2014 ; FEMS Microbiology Reviews Volume 38 ; 38 ; >
+
+  }
+
+  {
+
+    title <
+      name = FEMS Yeast Research ;
+      eissn = 1567-1364 ;
+      issnl = 1567-1364
+    >
+
+    param[base_url] = http://femsyr.oxfordjournals.org/
+    pluginSuffix = ClockssHighWireDrupalPlugin
+
+    au < exists ; exists ; 2001-2002 ; FEMS Yeast Research Volume 1 ; 1 ; >
+    au < exists ; exists ; 2002 ; FEMS Yeast Research Volume 2 ; 2 ; >
+    au < exists ; exists ; 2003-2006 ; FEMS Yeast Research Volume 3 ; 3 ; >
+    au < exists ; exists ; 2003-2004 ; FEMS Yeast Research Volume 4 ; 4 ; >
+    au < exists ; exists ; 2004-2005 ; FEMS Yeast Research Volume 5 ; 5 ; >
+    au < exists ; exists ; 2006 ; FEMS Yeast Research Volume 6 ; 6 ; >
+    au < exists ; exists ; 2007 ; FEMS Yeast Research Volume 7 ; 7 ; >
+    au < exists ; exists ; 2008 ; FEMS Yeast Research Volume 8 ; 8 ; >
+    au < exists ; exists ; 2009 ; FEMS Yeast Research Volume 9 ; 9 ; >
+    au < exists ; exists ; 2009-2010 ; FEMS Yeast Research Volume 10 ; 10 ; >
+    au < exists ; exists ; 2011 ; FEMS Yeast Research Volume 11 ; 11 ; >
+    au < exists ; exists ; 2012 ; FEMS Yeast Research Volume 12 ; 12 ; >
+    au < exists ; exists ; 2013 ; FEMS Yeast Research Volume 13 ; 13 ; >
+    au < exists ; exists ; 2014 ; FEMS Yeast Research Volume 14 ; 14 ; >
   }
 
   {
@@ -9425,7 +9705,7 @@
     au < finished ; frozen ; 2011 ; International Mathematics Research Notices Volume 2011 ; 2011 ; >
     au < finished ; frozen ; 2012 ; International Mathematics Research Notices Volume 2012 ; 2012 ; >
     au < crawling ; exists ; 2013 ; International Mathematics Research Notices Volume 2013 ; 2013 ; >
-    au < testing ; exists ; 2014 ; International Mathematics Research Notices Volume 2014 ; 2014 ; >
+    au < ready ; exists ; 2014 ; International Mathematics Research Notices Volume 2014 ; 2014 ; >
 
     }
 
@@ -16997,6 +17277,26 @@
     au < manifest ; exists ; 2014 ; Oxford Review of Economic Policy Volume 30 ; 30 ; >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = Pathogens and Disease ;
+      eissn = 2049-632X  ;
+      issnl = 2049-632X 
+    >
+
+    param[base_url] = http://femspd.oxfordjournals.org/
+    pluginSuffix = ClockssHighWireDrupalPlugin
+
+    au < exists ; exists ; 2013 ; Pathogens and Disease Volume 67 ; 67 ; >
+    au < exists ; exists ; 2013 ; Pathogens and Disease Volume 68 ; 68 ; >
+    au < exists ; exists ; 2013 ; Pathogens and Disease Volume 69 ; 69 ; >
+    au < exists ; exists ; 2014 ; Pathogens and Disease Volume 70 ; 70 ; >
+    au < exists ; exists ; 2014 ; Pathogens and Disease Volume 71 ; 71 ; >
+    au < expected ; exists ; 2014 ; Pathogens and Disease Volume 72 ; 72 ; >
 
   }
 
