@@ -1,5 +1,5 @@
 /*
- * $Id: JatsPublishingSchemaHelper.java,v 1.1 2014-04-17 21:12:11 alexandraohlson Exp $
+ * $Id: JatsPublishingSchemaHelper.java,v 1.2 2014-11-26 20:28:15 alexandraohlson Exp $
  */
 
 /*
@@ -91,11 +91,15 @@ implements SourceXmlSchemaHelper {
         Node checkNode = elementChildren.item(j);
         String nodeName = checkNode.getNodeName();
         if ("journal-title".equals(nodeName) | "article-title".equals(nodeName)) {
-          tTitle = checkNode.getTextContent();
+          tTitle = checkNode.getTextContent();  
+          // they deliver newlines in their XML titles
+          tTitle = tTitle.replace("\n", " ");
         } else if ("subtitle".equals(nodeName) | "journal-subtitle".equals(nodeName)) {
           tSubtitle = checkNode.getTextContent();
+          tSubtitle = tSubtitle.replace("\n", " ");
         } else if ("alt-title".equals(nodeName)) {
           tAltTitle = checkNode.getTextContent();
+          tAltTitle = tAltTitle.replace("\n",  " ");
         }
       }
 
@@ -278,7 +282,7 @@ implements SourceXmlSchemaHelper {
     cookMap.put(JATS_atitle, MetadataField.FIELD_ARTICLE_TITLE);
     cookMap.put(JATS_doi, MetadataField.FIELD_DOI);
     cookMap.put(JATS_issn, MetadataField.FIELD_ISSN);
-    cookMap.put(JATS_pubname, MetadataField.FIELD_PUBLISHER);
+    //cookMap.put(JATS_pubname, MetadataField.FIELD_PUBLISHER);
     cookMap.put(JATS_volume, MetadataField.FIELD_VOLUME);
     cookMap.put(JATS_issue, MetadataField.FIELD_ISSUE);
     cookMap.put(JATS_fpage, MetadataField.FIELD_START_PAGE);

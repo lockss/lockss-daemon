@@ -1,5 +1,5 @@
 /*
- * $Id: TestJatsPublishingXmlMetadataExtractor.java,v 1.1 2014-04-17 21:12:12 alexandraohlson Exp $
+ * $Id: TestJatsPublishingXmlMetadataExtractor.java,v 1.2 2014-11-26 20:28:15 alexandraohlson Exp $
  */
 /*
 
@@ -183,7 +183,7 @@ public class TestJatsPublishingXmlMetadataExtractor extends LockssTestCase {
       "[Foo, Firstie]",
       "Excellent Journal - Smart: With a Subtitle",
       "1998-01-05",
-      "Single Title of Article",
+      "Single Title of Article across Multiple lines",
       "172",
       "2-3",
       "309",
@@ -205,7 +205,7 @@ public class TestJatsPublishingXmlMetadataExtractor extends LockssTestCase {
     //assertEquals(expected.get(AUTHOR_INDEX), AM.getList(MetadataField.FIELD_AUTHOR).toString());
     assertEquals(expected.get(JOURNAL_TITLE), AM.get(MetadataField.FIELD_PUBLICATION_TITLE));
     //assertEquals(expected.get(ARTICLE_DATE), AM.get(MetadataField.FIELD_DATE));
-    //assertEquals(expected.get(ARTICLE_TITLE), AM.get(MetadataField.FIELD_ARTICLE_TITLE));
+    assertEquals(expected.get(ARTICLE_TITLE), AM.get(MetadataField.FIELD_ARTICLE_TITLE));
     assertEquals(expected.get(VOLUME), AM.get(MetadataField.FIELD_VOLUME));
     assertEquals(expected.get(ISSUE), AM.get(MetadataField.FIELD_ISSUE));
     assertEquals(expected.get(SPAGE), AM.get(MetadataField.FIELD_START_PAGE));

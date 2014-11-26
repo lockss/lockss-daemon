@@ -1,5 +1,5 @@
 /*
- * $Id: JatsPublishingSourceXmlMetadataExtractorFactory.java,v 1.1 2014-04-17 21:12:11 alexandraohlson Exp $
+ * $Id: JatsPublishingSourceXmlMetadataExtractorFactory.java,v 1.2 2014-11-26 20:28:15 alexandraohlson Exp $
  */
 
 /*
@@ -42,6 +42,13 @@ import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 
+
+/*
+ * A helper to handle JATS publishing schema.
+ * This provides support for the simplest case - where the pdf substance file is
+ * in the same directory as, and has the same filename as the xml file.
+ * eg - foo.xml maps to foo.pdf
+ */
 
 public class JatsPublishingSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
   static Logger log = Logger.getLogger(JatsPublishingSourceXmlMetadataExtractorFactory.class);
