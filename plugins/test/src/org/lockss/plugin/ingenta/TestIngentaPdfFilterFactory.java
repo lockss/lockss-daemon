@@ -1,5 +1,5 @@
 /*
- * $Id: TestIngentaPdfFilterFactory.java,v 1.3 2014-11-25 22:50:26 thib_gc Exp $
+ * $Id: TestIngentaPdfFilterFactory.java,v 1.4 2014-11-27 00:06:03 thib_gc Exp $
  */ 
 
 /*
@@ -32,164 +32,282 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.ingenta;
 
-import java.util.Arrays;
-
 import org.lockss.pdf.*;
 import org.lockss.plugin.ingenta.IngentaPdfFilterFactory.ManeyPublishingPdfFilterFactory.ManeyPublishingWorker;
+import org.lockss.plugin.ingenta.IngentaPdfFilterFactory.PacificAffairsPdfFilterFactory.PacificAffairsWorker;
 import org.lockss.plugin.ingenta.IngentaPdfFilterFactory.WhiteHorsePressPdfFilterFactory.WhiteHorsePressWorker;
 import org.lockss.test.LockssTestCase;
 
 public class TestIngentaPdfFilterFactory extends LockssTestCase {
 
-  protected PdfTokenFactory tf;
-
-  @Override
-  protected void setUp() throws Exception {
-    this.tf = new MockPdfTokenFactory();
-  }
-  
+  /*
+   * Example: http://api.ingentaconnect.com/content/maney/aac/2012/00000111/00000003/art00002?crawler=true&mimetype=application/pdf
+   */
   public void testManeyPublishingWorker() throws Exception {
     ManeyPublishingWorker worker = new ManeyPublishingWorker();
-    worker.process(Arrays.asList(/* 00 */ tf.makeString("This is irrelevant."),
-                                 /* 01 */ tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 /* 02 */ tf.makeOperator(PdfOpcodes.BEGIN_TEXT_OBJECT),
-                                 /* 03 */ tf.makeString("This is irrelevant."),
-                                 /* 04 */ tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 /* 05 */ tf.makeString("Published by Maney Publishing."),
-                                 /* 06 */ tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 /* 07 */ tf.makeString("This is irrelevant."),
-                                 /* 08 */ tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 /* 09 */ tf.makeOperator(PdfOpcodes.END_TEXT_OBJECT),
-                                 /* 10 */ tf.makeString("This is irrelevant."),
-                                 /* 11 */ tf.makeOperator(PdfOpcodes.SHOW_TEXT)),
-                   tf);
+    worker.process(MockPdfTokenStream.parse(
+// ---- begin PDF stream ----
+/* 00 */ "q " +
+/* 01 */ "BT " +
+/* 02 */ "36 805.89 Td " +
+/* 05 */ "ET " +
+/* 06 */ "Q " +
+/* 07 */ "0.86275 0.86275 0.86275 rg " +
+/* 11 */ "/F1 10 Tf " +
+/* 14 */ "0 1 -1 0 0 0 cm " +
+/* 21 */ "BT " +
+/* 22 */ "1 0 0 1 286.45 -15 Tm " +
+/* 29 */ "/F1 10 Tf " +
+/* 32 */ "(Published by Maney Publishing \\(c\\) IOM Communications Ltd)Tj " +
+/* 34 */ "ET " +
+/* 35 */ "0 -1 1 0 0 0 cm " +
+/* 42 */ "q 1 0 0 1 0 0 cm /Xf1 Do Q"
+// ---- end PDF stream ----
+    ));
     assertTrue(worker.result);
-    assertEquals(2, worker.beginIndex); // inclusive
-    assertEquals(9, worker.endIndex); // inclusive
-    worker.process(Arrays.asList(tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeOperator(PdfOpcodes.BEGIN_TEXT_OBJECT),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeString("Not the right string."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeOperator(PdfOpcodes.END_TEXT_OBJECT),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT)),
-                   tf);
+    assertEquals(21, worker.beginIndex); // inclusive
+    assertEquals(34, worker.endIndex); // inclusive
+    worker.process(MockPdfTokenStream.parse(
+// ---- begin PDF stream ----
+"q " +
+"BT " +
+"36 805.89 Td " +
+"ET " +
+"Q " +
+"0.86275 0.86275 0.86275 rg " +
+"/F1 10 Tf " +
+"0 1 -1 0 0 0 cm " +
+"BT " +
+"1 0 0 1 286.45 -15 Tm " +
+"/F1 10 Tf " +
+"(This is not the right string.) Tj " +
+"ET " +
+"0 -1 1 0 0 0 cm " +
+"q 1 0 0 1 0 0 cm /Xf1 Do Q"
+// ---- end PDF stream ----
+    ));
     assertFalse(worker.result);
-    worker.process(Arrays.asList(tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeOperator(PdfOpcodes.BEGIN_TEXT_OBJECT),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeString("Published by Maney Publishing."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeOperator(PdfOpcodes.END_TEXT_OBJECT),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeOperator(PdfOpcodes.BEGIN_TEXT_OBJECT),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeOperator(PdfOpcodes.END_TEXT_OBJECT)),
-                   tf);
+    worker.process(MockPdfTokenStream.parse(
+// ---- begin PDf stream ----
+"q " +
+"BT " +
+"36 805.89 Td " +
+"ET " +
+"Q " +
+"0.86275 0.86275 0.86275 rg " +
+"/F1 10 Tf " +
+"0 1 -1 0 0 0 cm " +
+"BT " +
+"1 0 0 1 286.45 -15 Tm " +
+"/F1 10 Tf " +
+"(Published by Maney Publishing \\(c\\) IOM Communications Ltd) Tj " +
+"ET " +
+"(This is irrelevant.) Tj " +
+"BT " +
+"(This is irrelevant.) Tj " +
+"ET " +
+"0 -1 1 0 0 0 cm " +
+"q 1 0 0 1 0 0 cm /Xf1 Do Q"
+// ---- end PDF stream ----
+    ));
     assertFalse(worker.result);
   }
   
+  public void testPacificAffairsWorker() throws Exception {
+    PacificAffairsWorker worker = new PacificAffairsWorker();
+    // Example: http://api.ingentaconnect.com/content/paaf/paaf/2013/00000086/00000003/art00006?crawler=true ingest1 15:20:29 09/10/13
+    worker.process(MockPdfTokenStream.parse(
+// ---- begin PDF stream ----
+/* 00 */ "q " +
+/* 01 */ "BT " +
+/* 02 */ "36 612 Td " +
+/* 05 */ "ET " +
+/* 06 */ "Q " +
+/* 07 */ "0.78431 0.78431 0.78431 rg " +
+/* 11 */ "/F1 6 Tf " +
+/* 14 */ "0 1 -1 0 0 0 cm " +
+/* 21 */ "BT " +
+/* 22 */ "1 0 0 1 263.32 -44 Tm " +
+/* 29 */ "/F1 6 Tf " +
+/* 32 */ "(Copyright \\(c\\) Pacific Affairs. All rights reserved.)Tj " +
+/* 34 */ "1 0 0 1 207.43 -50 Tm " +
+/* 41 */ "(Delivered by Publishing Technology to: ?  IP: 93.91.26.11 on: Tue, 10 Sep 2013 22:20:28)Tj " +
+/* 43 */ "ET " +
+/* 44 */ "0 -1 1 0 0 0 cm " +
+/* 51 */ "q 1 0 0 1 0 0 cm /Xf1 Do Q"
+// ---- send PDF stream ----
+    ));
+    assertTrue(worker.result);
+    assertEquals(21, worker.beginIndex);
+    assertEquals(43, worker.endIndex);
+    // Example: http://api.ingentaconnect.com/content/paaf/paaf/2013/00000086/00000003/art00006?crawler=true 11/25/14
+    worker.process(MockPdfTokenStream.parse(
+// ---- begin PDF stream ----
+/* 00 */ "q " +
+/* 01 */ "0.78431 0.78431 0.78431 rg " +
+/* 05 */ "/Xi0 6 Tf " +
+/* 08 */ "0 1 -1 0 0 0 cm " +
+/* 15 */ "BT " +
+/* 16 */ "1 0 0 1 263.32 -44 Tm " +
+/* 23 */ "/Xi0 6 Tf " +
+/* 26 */ "(Copyright \\(c\\) Pacific Affairs. All rights reserved.)Tj " +
+/* 28 */ "1 0 0 1 179.42 -50 Tm " +
+/* 35 */ "(Delivered by Publishing Technology to: <something>  IP: <something> on: <something>)Tj " +
+/* 37 */ "ET " +
+/* 38 */ "0 -1 1 0 0 0 cm " +
+/* 45 */ "Q " +
+/* 46 */ "q " +
+/* 47 */ "q " +
+/* 48 */ "BT " +
+/* 49 */ "36 612 Td " +
+/* 52 */ "ET " +
+/* 53 */ "Q " +
+/* 54 */ "q 1 0 0 1 0 0 cm /Xf1 Do Q " +
+/* 65 */ "Q " +
+/* 66 */ "q " +
+/* 67 */ "Q"
+// ---- send PDF stream ----
+    ));
+    assertTrue(worker.result);
+    assertEquals(15, worker.beginIndex);
+    assertEquals(37, worker.endIndex);
+    worker.process(MockPdfTokenStream.parse(
+// ---- begin PDF stream ----
+"q " +
+"0.78431 0.78431 0.78431 rg " +
+"/Xi0 6 Tf " +
+"0 1 -1 0 0 0 cm " +
+"BT " +
+"1 0 0 1 263.32 -44 Tm " +
+"/Xi0 6 Tf " +
+"(Copyright \\(c\\) Pacific Affairs. All rights reserved.)Tj " +
+"1 0 0 1 179.42 -50 Tm " +
+"(Not the right string.) Tj " +
+"ET " +
+"0 -1 1 0 0 0 cm " +
+"Q " +
+"q " +
+"q " +
+"BT " +
+"36 612 Td " +
+"ET " +
+"Q " +
+"q 1 0 0 1 0 0 cm /Xf1 Do Q " +
+"Q " +
+"q " +
+"Q"
+// ---- send PDF stream ----
+    ));
+    assertFalse(worker.result);
+    worker.process(MockPdfTokenStream.parse(
+// ---- begin PDF stream ----
+"q " +
+"0.78431 0.78431 0.78431 rg " +
+"/Xi0 6 Tf " +
+"0 1 -1 0 0 0 cm " +
+"1 0 0 1 263.32 -44 Tm " +
+"/Xi0 6 Tf " +
+"(Copyright \\(c\\) Pacific Affairs. All rights reserved.)Tj " +
+"1 0 0 1 179.42 -50 Tm " +
+"(Delivered by Publishing Technology to: <something>  IP: <something> on: <something>)Tj " +
+"0 -1 1 0 0 0 cm " +
+"Q " +
+"q " +
+"q " +
+"BT " +
+"36 612 Td " +
+"ET " +
+"Q " +
+"q 1 0 0 1 0 0 cm /Xf1 Do Q " +
+"Q " +
+"q " +
+"Q"
+// ---- send PDF stream ----
+    ));
+    assertFalse(worker.result);
+  }  
+  
+  /*
+   * Example: PDF from http://www.ingentaconnect.com/content/whp/eh/2014/00000020/00000001/art00005
+   */
   public void testWhiteHorsePressWorker() throws Exception {
     WhiteHorsePressWorker worker = new WhiteHorsePressWorker();
-    worker.process(Arrays.asList(/* 00 */ tf.makeString("This is irrelevant."),
-                                 /* 01 */ tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 /* 02 */ tf.makeOperator(PdfOpcodes.BEGIN_TEXT_OBJECT),
-                                 /* 03 */ tf.makeString("This is irrelevant."),
-                                 /* 04 */ tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 /* 05 */ tf.makeString("<some IP address> = IP address"),
-                                 /* 06 */ tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 /* 07 */ tf.makeString("This is irrelevant."),
-                                 /* 08 */ tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 /* 09 */ tf.makeString("<some timestamp> = Date & Time"),
-                                 /* 10 */ tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 /* 11 */ tf.makeString("This is irrelevant."),
-                                 /* 12 */ tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 /* 13 */ tf.makeOperator(PdfOpcodes.END_TEXT_OBJECT),
-                                 /* 14 */ tf.makeString("This is irrelevant."),
-                                 /* 15 */ tf.makeOperator(PdfOpcodes.SHOW_TEXT)),
-                   tf);
+    worker.process(MockPdfTokenStream.parse(
+// ---- begin PDF stream ----
+/* 00 */ "q " +
+/* 01 */ "0.86275 0.86275 0.86275 rg " +
+/* 05 */ "/Xi0 10 Tf " +
+/* 08 */ "BT " +
+/* 09 */ "1 0 0 1 149.51 25 Tm " +
+/* 16 */ "/Xi0 10 Tf " +
+/* 19 */ "(<something> = username)Tj " +
+/* 21 */ "1 0 0 1 149.51 15 Tm " +
+/* 28 */ "(<something> = IP address)Tj " +
+/* 30 */ "1 0 0 1 125.6 5 Tm " +
+/* 37 */ "(<something> = Date & Time)Tj " +
+/* 39 */ "ET " +
+/* 40 */ "Q " +
+/* 41 */ "q"
+// ---- end PDF stream ----
+    ));
     assertTrue(worker.result);
-    assertEquals(2, worker.beginIndex); // inclusive
-    assertEquals(13, worker.endIndex); // inclusive
-    worker.process(Arrays.asList(tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeOperator(PdfOpcodes.BEGIN_TEXT_OBJECT),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeString("<some timestamp> = Date & Time"),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeOperator(PdfOpcodes.END_TEXT_OBJECT),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT)),
-                   tf);
+    assertEquals(8, worker.beginIndex); // inclusive
+    assertEquals(39, worker.endIndex); // inclusive
+    worker.process(MockPdfTokenStream.parse(
+// ---- begin PDF stream ----
+"q " +
+"0.86275 0.86275 0.86275 rg " +
+"/Xi0 10 Tf " +
+"BT " +
+"1 0 0 1 149.51 25 Tm " +
+"/Xi0 10 Tf " +
+"(<something> = username)Tj " +
+"1 0 0 1 149.51 15 Tm " +
+"(<something> = IP address)Tj " +
+"1 0 0 1 125.6 5 Tm " +
+"(<something> = Not the Right String)Tj " +
+"ET " +
+"Q " +
+"q"
+// ---- end PDF stream ----
+    ));
     assertFalse(worker.result);
-    worker.process(Arrays.asList(tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeOperator(PdfOpcodes.BEGIN_TEXT_OBJECT),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeOperator(PdfOpcodes.END_TEXT_OBJECT),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT)),
-                   tf);
+    worker.process(MockPdfTokenStream.parse(
+// ---- begin PDF stream ----
+"q " +
+"0.86275 0.86275 0.86275 rg " +
+"/Xi0 10 Tf " +
+"BT " +
+"1 0 0 1 149.51 25 Tm " +
+"/Xi0 10 Tf " +
+"(<something> = username)Tj " +
+"1 0 0 1 149.51 15 Tm " +
+"(<something> = Not the Right String)Tj " +
+"1 0 0 1 125.6 5 Tm " +
+"(<something> = Date & Time)Tj " +
+"ET " +
+"Q " +
+"q"
+// ---- end PDF stream ----
+    ));
     assertFalse(worker.result);
-    worker.process(Arrays.asList(tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeOperator(PdfOpcodes.BEGIN_TEXT_OBJECT),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeString("<some IP address> = IP address"),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeString("<some timestamp> = Date & Time"),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeOperator(PdfOpcodes.END_TEXT_OBJECT),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeOperator(PdfOpcodes.BEGIN_TEXT_OBJECT),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeOperator(PdfOpcodes.END_TEXT_OBJECT),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT)),
-                   tf);
+    worker.process(MockPdfTokenStream.parse(
+// ---- begin PDF stream ----
+"q " +
+"0.86275 0.86275 0.86275 rg " +
+"/Xi0 10 Tf " +
+"1 0 0 1 149.51 25 Tm " +
+"/Xi0 10 Tf " +
+"(<something> = username)Tj " +
+"1 0 0 1 149.51 15 Tm " +
+"(<something> = IP address)Tj " +
+"1 0 0 1 125.6 5 Tm " +
+"(<something> = Date & Time)Tj " +
+"Q " +
+"q"
+// ---- end PDF stream ----
+    ));
     assertFalse(worker.result);
   }
-  
-//  public void testPacificAffairsWorker() throws Exception {
-//    PacificAffairsWorker worker = new PacificAffairsWorker();
-//    worker.process(Arrays.asList(tf.makeOperator(PdfOpcodes.SAVE_GRAPHICS_STATE),
-//                                 tf.makeString("This is irrelevant."),
-//                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-//                                 tf.makeOperator(PdfOpcodes.RESTORE_GRAPHICS_STATE),
-//                                 tf.makeOperator(PdfOpcodes.SAVE_GRAPHICS_STATE),
-//                                 tf.makeString("This is irrelevant."),
-//                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-//                                 tf.makeString("   \t\t\t   Delivered by <something something> to: <something something>   \t\t\t   "),
-//                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-//                                 tf.makeString("This is irrelevant."),
-//                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-//                                 tf.makeOperator(PdfOpcodes.RESTORE_GRAPHICS_STATE),
-//                                 tf.makeOperator(PdfOpcodes.SAVE_GRAPHICS_STATE),
-//                                 tf.makeString("This is irrelevant."),
-//                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-//                                 tf.makeOperator(PdfOpcodes.RESTORE_GRAPHICS_STATE)),
-//                   tf);
-//    assertTrue(worker.result);
-//  }
   
 }

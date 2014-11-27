@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>49</string>
+    <string>50</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,13 +24,13 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>21</string>
+        <string>22</string>
       </entry>
     </map>
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.60.0</string>
+    <string>1.62.0</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>

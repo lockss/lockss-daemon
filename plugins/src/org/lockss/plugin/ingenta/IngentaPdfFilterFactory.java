@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaPdfFilterFactory.java,v 1.16 2014-11-19 01:08:32 thib_gc Exp $
+ * $Id: IngentaPdfFilterFactory.java,v 1.17 2014-11-27 00:06:03 thib_gc Exp $
  */ 
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.plugin.ingenta;
 
 import java.io.*;
 import java.util.*;
+import java.util.regex.Pattern;
 
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.pdf.*;
@@ -82,6 +83,9 @@ public class IngentaPdfFilterFactory implements FilterFactory {
   
   /*
    * FIXME 1.67: extend PdfTokenStreamStateMachine
+   */
+  /*
+   * Example: PDF from http://www.ingentaconnect.com/content/whp/eh/2014/00000020/00000001/art00005
    */
   protected static class WhiteHorsePressPdfFilterFactory extends SimplePdfFilterFactory {
     
@@ -185,6 +189,9 @@ public class IngentaPdfFilterFactory implements FilterFactory {
   /*
    * FIXME 1.67: extend PdfTokenStreamStateMachine
    */
+  /*
+   * Example: http://api.ingentaconnect.com/content/maney/aac/2012/00000111/00000003/art00002?crawler=true&mimetype=application/pdf
+   */
   protected static class ManeyPublishingPdfFilterFactory extends ExtractingPdfFilterFactory {
     
     protected static class ManeyPublishingWorker extends PdfTokenStreamWorker {
@@ -284,9 +291,17 @@ public class IngentaPdfFilterFactory implements FilterFactory {
   /*
    * FIXME 1.67: extends PdfTokenStreamStateMachine
    */
-  protected static class PacificAffairsPdfFilterFactory extends SimplePdfFilterFactory {
+  /*
+   * Examples:
+   * http://api.ingentaconnect.com/content/paaf/paaf/2013/00000086/00000003/art00006?crawler=true ingest1 15:20:29 09/10/13
+   * http://api.ingentaconnect.com/content/paaf/paaf/2013/00000086/00000003/art00006?crawler=true 11/25/14
+   */
+  protected static class PacificAffairsPdfFilterFactory extends ExtractingPdfFilterFactory {
     
     public static class PacificAffairsWorker extends PdfTokenStreamWorker {
+      
+      protected static final Pattern DELIVERED_BY =
+          Pattern.compile("Delivered by .* to: .* IP: .* on:");
       
       protected boolean result;
       
@@ -295,10 +310,6 @@ public class IngentaPdfFilterFactory implements FilterFactory {
       protected int beginIndex;
       
       protected int endIndex;
-      
-      public PacificAffairsWorker() {
-        super(Direction.BACKWARD);
-      }
       
       @Override
       public void setUp() throws PdfException {
@@ -321,24 +332,24 @@ public class IngentaPdfFilterFactory implements FilterFactory {
         switch (state) {
         
         case 0: {
-          if (isSaveGraphicsState()) {
-            endIndex = getIndex();
-            ++state; 
+          if (isBeginTextObject()) {
+            beginIndex = getIndex();
+            state = 1;
           }
         } break;
         
         case 1: {
-          if (isShowTextMatches("\\s*Delivered by .* to: .*")) {
-            ++state;
+          if (isShowTextFind(DELIVERED_BY)) {
+            state = 2;
           }
-          else if (isRestoreGraphicsState() || isSaveGraphicsState()) {
-            stop();
+          else if (isEndTextObject()) {
+            state = 0;
           }
         } break;
         
         case 2: {
-          if (isRestoreGraphicsState()) {
-            beginIndex = getIndex();
+          if (isEndTextObject()) {
+            endIndex = getIndex();
             result = true;
             stop(); 
           }
@@ -358,22 +369,42 @@ public class IngentaPdfFilterFactory implements FilterFactory {
       
     }
     
-    public void transform(ArchivalUnit au, PdfDocument pdfDocument)
-        throws PdfException {
-      
+    public void transform(ArchivalUnit au, PdfDocument pdfDocument) throws PdfException {
+      /* FIXME 1.67: use the getDocumentTransform/outputDocumentInformation override instead */
+      pdfDocument.unsetCreationDate();
+      pdfDocument.unsetModificationDate();
+      pdfDocument.unsetMetadata();
+      pdfDocument.unsetCreator();
+      pdfDocument.unsetProducer();
+      pdfDocument.unsetAuthor();
+      pdfDocument.unsetTitle();
+      pdfDocument.unsetSubject();
+      pdfDocument.unsetKeywords();
+      /* end FIXME 1.67 */
       PacificAffairsWorker worker = new PacificAffairsWorker();
       for (PdfPage pdfPage : pdfDocument.getPages()) {
         PdfTokenStream pdfTokenStream = pdfPage.getPageTokenStream();
         worker.process(pdfTokenStream);
         if (worker.result) {
           List<PdfToken> tokens = pdfTokenStream.getTokens();
-          // clear only the parts between the markers (exclusive)
-          tokens.subList(worker.beginIndex + 1, worker.endIndex).clear();
+          tokens.subList(worker.beginIndex, worker.endIndex + 1).clear();
           pdfTokenStream.setTokens(tokens);
         }
       }
-      doNormalizeMetadata(pdfDocument);
     }
+
+    /* FIXME 1.67 */
+//    @Override
+//    public PdfTransform<PdfDocument> getDocumentTransform(ArchivalUnit au, OutputStream os) {
+//      return new BaseDocumentExtractingTransform(os) {
+//        @Override
+//        public void outputDocumentInformation() throws PdfException {
+//          // Intentionally left blank
+//        }
+//      };
+//    }
+    /* end FIXME 1.67 */
+    
   }
   
   private class NormalizingExtractingPdfFilterFactory extends ExtractingPdfFilterFactory {
@@ -433,5 +464,5 @@ public class IngentaPdfFilterFactory implements FilterFactory {
         return in;
     }
   }
-  
+
 }
