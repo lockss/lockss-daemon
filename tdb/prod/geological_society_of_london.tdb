@@ -734,25 +734,25 @@
       param[base_url] = http://trned.lyellcollection.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 1868-1871 ; Transactions of the Edinburgh Geological Society Volume 1 ; 1 >
-      au < exists ; 1872-1876 ; Transactions of the Edinburgh Geological Society Volume 2 ; 2 >
-      au < exists ; 1877-1880 ; Transactions of the Edinburgh Geological Society Volume 3 ; 3 >
-      au < exists ; 1881-1884 ; Transactions of the Edinburgh Geological Society Volume 4 ; 4 >
-      au < exists ; 1885-1889 ; Transactions of the Edinburgh Geological Society Volume 5 ; 5 >
-      au < exists ; 1890-1893 ; Transactions of the Edinburgh Geological Society Volume 6 ; 6 >
-      au < exists ; 1894-1900 ; Transactions of the Edinburgh Geological Society Volume 7 ; 7 >
-      au < exists ; 1901-1906 ; Transactions of the Edinburgh Geological Society Volume 8 ; 8 >
-      au < exists ; 1907-1911 ; Transactions of the Edinburgh Geological Society Volume 9 ; 9 >
-      au < exists ; 1912-1919 ; Transactions of the Edinburgh Geological Society Volume 10 ; 10 >
-      au < exists ; 1920-1927 ; Transactions of the Edinburgh Geological Society Volume 11 ; 11 >
-      au < exists ; 1928-1933 ; Transactions of the Edinburgh Geological Society Volume 12 ; 12 >
-      au < exists ; 1934-1944 ; Transactions of the Edinburgh Geological Society Volume 13 ; 13 >
-      au < exists ; 1945-1952 ; Transactions of the Edinburgh Geological Society Volume 14 ; 14 >
-      au < exists ; 1952-1953 ; Transactions of the Edinburgh Geological Society Volume 15 ; 15 >
-      au < exists ; 1954-1956 ; Transactions of the Edinburgh Geological Society Volume 16 ; 16 >
-      au < exists ; 1957-1959 ; Transactions of the Edinburgh Geological Society Volume 17 ; 17 >
-      au < exists ; 1960-1961 ; Transactions of the Edinburgh Geological Society Volume 18 ; 18 >
-      au < exists ; 1962-1963 ; Transactions of the Edinburgh Geological Society Volume 19 ; 19 >
+      au < doNotProcess ; 1868-1871 ; Transactions of the Edinburgh Geological Society Volume 1 ; 1 >
+      au < doNotProcess ; 1872-1876 ; Transactions of the Edinburgh Geological Society Volume 2 ; 2 >
+      au < doNotProcess ; 1877-1880 ; Transactions of the Edinburgh Geological Society Volume 3 ; 3 >
+      au < doNotProcess ; 1881-1884 ; Transactions of the Edinburgh Geological Society Volume 4 ; 4 >
+      au < doNotProcess ; 1885-1889 ; Transactions of the Edinburgh Geological Society Volume 5 ; 5 >
+      au < doNotProcess ; 1890-1893 ; Transactions of the Edinburgh Geological Society Volume 6 ; 6 >
+      au < doNotProcess ; 1894-1900 ; Transactions of the Edinburgh Geological Society Volume 7 ; 7 >
+      au < doNotProcess ; 1901-1906 ; Transactions of the Edinburgh Geological Society Volume 8 ; 8 >
+      au < doNotProcess ; 1907-1911 ; Transactions of the Edinburgh Geological Society Volume 9 ; 9 >
+      au < doNotProcess ; 1912-1919 ; Transactions of the Edinburgh Geological Society Volume 10 ; 10 >
+      au < doNotProcess ; 1920-1927 ; Transactions of the Edinburgh Geological Society Volume 11 ; 11 >
+      au < doNotProcess ; 1928-1933 ; Transactions of the Edinburgh Geological Society Volume 12 ; 12 >
+      au < doNotProcess ; 1934-1944 ; Transactions of the Edinburgh Geological Society Volume 13 ; 13 >
+      au < doNotProcess ; 1945-1952 ; Transactions of the Edinburgh Geological Society Volume 14 ; 14 >
+      au < doNotProcess ; 1952-1953 ; Transactions of the Edinburgh Geological Society Volume 15 ; 15 >
+      au < doNotProcess ; 1954-1956 ; Transactions of the Edinburgh Geological Society Volume 16 ; 16 >
+      au < doNotProcess ; 1957-1959 ; Transactions of the Edinburgh Geological Society Volume 17 ; 17 >
+      au < doNotProcess ; 1960-1961 ; Transactions of the Edinburgh Geological Society Volume 18 ; 18 >
+      au < doNotProcess ; 1962-1963 ; Transactions of the Edinburgh Geological Society Volume 19 ; 19 >
 
     }
 
@@ -770,31 +770,31 @@
     param[base_url] = http://trngl.lyellcollection.org/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 1860-1863 ; Transactions of the Geological Society of Glasgow Volume 1 ; 1 >
-    au < exists ; 1865-1867 ; Transactions of the Geological Society of Glasgow Volume 2 ; 2 >
-    au < exists ; 1868-1871 ; Transactions of the Geological Society of Glasgow Volume 3 ; 3 >
-    au < exists ; 1871-1874 ; Transactions of the Geological Society of Glasgow Volume 4 ; 4 >
-    au < exists ; 1875-1877 ; Transactions of the Geological Society of Glasgow Volume 5 ; 5 >
-    au < exists ; 1879-1882 ; Transactions of the Geological Society of Glasgow Volume 6 ; 6 >
-    au < exists ; 1883-1885 ; Transactions of the Geological Society of Glasgow Volume 7 ; 7 >
-    au < exists ; 1886-1888 ; Transactions of the Geological Society of Glasgow Volume 8 ; 8 >
-    au < exists ; 1891-1893 ; Transactions of the Geological Society of Glasgow Volume 9 ; 9 >
-    au < exists ; 1895-1896 ; Transactions of the Geological Society of Glasgow Volume 10 ; 10 >
-    au < exists ; 1898-1900 ; Transactions of the Geological Society of Glasgow Volume 11 ; 11 >
-    au < exists ; 1902-1906 ; Transactions of the Geological Society of Glasgow Volume 12 ; 12 >
-    au < exists ; 1907-1909 ; Transactions of the Geological Society of Glasgow Volume 13 ; 13 >
-    au < exists ; 1910-1913 ; Transactions of the Geological Society of Glasgow Volume 14 ; 14 >
-    au < exists ; 1914-1916 ; Transactions of the Geological Society of Glasgow Volume 15 ; 15 >
-    au < exists ; 1916-1920 ; Transactions of the Geological Society of Glasgow Volume 16 ; 16 >
-    au < exists ; 1922-1927 ; Transactions of the Geological Society of Glasgow Volume 17 ; 17 >
-    au < exists ; 1928-1931 ; Transactions of the Geological Society of Glasgow Volume 18 ; 18 >
-    au < exists ; 1932-1937 ; Transactions of the Geological Society of Glasgow Volume 19 ; 19 >
-    au < exists ; 1940-1945 ; Transactions of the Geological Society of Glasgow Volume 20 ; 20 >
-    au < exists ; 1947-1954 ; Transactions of the Geological Society of Glasgow Volume 21 ; 21 >
-    au < exists ; 1956-1957 ; Transactions of the Geological Society of Glasgow Volume 22 ; 22 >
-    au < exists ; 1958 ; Transactions of the Geological Society of Glasgow Volume 23 ; 23 >
-    au < exists ; 1960-1962 ; Transactions of the Geological Society of Glasgow Volume 24 ; 24 >
-    au < exists ; 1963 ; Transactions of the Geological Society of Glasgow Volume 25 ; 25 >
+    au < doNotProcess ; 1860-1863 ; Transactions of the Geological Society of Glasgow Volume 1 ; 1 >
+    au < doNotProcess ; 1865-1867 ; Transactions of the Geological Society of Glasgow Volume 2 ; 2 >
+    au < doNotProcess ; 1868-1871 ; Transactions of the Geological Society of Glasgow Volume 3 ; 3 >
+    au < doNotProcess ; 1871-1874 ; Transactions of the Geological Society of Glasgow Volume 4 ; 4 >
+    au < doNotProcess ; 1875-1877 ; Transactions of the Geological Society of Glasgow Volume 5 ; 5 >
+    au < doNotProcess ; 1879-1882 ; Transactions of the Geological Society of Glasgow Volume 6 ; 6 >
+    au < doNotProcess ; 1883-1885 ; Transactions of the Geological Society of Glasgow Volume 7 ; 7 >
+    au < doNotProcess ; 1886-1888 ; Transactions of the Geological Society of Glasgow Volume 8 ; 8 >
+    au < doNotProcess ; 1891-1893 ; Transactions of the Geological Society of Glasgow Volume 9 ; 9 >
+    au < doNotProcess ; 1895-1896 ; Transactions of the Geological Society of Glasgow Volume 10 ; 10 >
+    au < doNotProcess ; 1898-1900 ; Transactions of the Geological Society of Glasgow Volume 11 ; 11 >
+    au < doNotProcess ; 1902-1906 ; Transactions of the Geological Society of Glasgow Volume 12 ; 12 >
+    au < doNotProcess ; 1907-1909 ; Transactions of the Geological Society of Glasgow Volume 13 ; 13 >
+    au < doNotProcess ; 1910-1913 ; Transactions of the Geological Society of Glasgow Volume 14 ; 14 >
+    au < doNotProcess ; 1914-1916 ; Transactions of the Geological Society of Glasgow Volume 15 ; 15 >
+    au < doNotProcess ; 1916-1920 ; Transactions of the Geological Society of Glasgow Volume 16 ; 16 >
+    au < doNotProcess ; 1922-1927 ; Transactions of the Geological Society of Glasgow Volume 17 ; 17 >
+    au < doNotProcess ; 1928-1931 ; Transactions of the Geological Society of Glasgow Volume 18 ; 18 >
+    au < doNotProcess ; 1932-1937 ; Transactions of the Geological Society of Glasgow Volume 19 ; 19 >
+    au < doNotProcess ; 1940-1945 ; Transactions of the Geological Society of Glasgow Volume 20 ; 20 >
+    au < doNotProcess ; 1947-1954 ; Transactions of the Geological Society of Glasgow Volume 21 ; 21 >
+    au < doNotProcess ; 1956-1957 ; Transactions of the Geological Society of Glasgow Volume 22 ; 22 >
+    au < doNotProcess ; 1958 ; Transactions of the Geological Society of Glasgow Volume 23 ; 23 >
+    au < doNotProcess ; 1960-1962 ; Transactions of the Geological Society of Glasgow Volume 24 ; 24 >
+    au < doNotProcess ; 1963 ; Transactions of the Geological Society of Glasgow Volume 25 ; 25 >
 
   }
 

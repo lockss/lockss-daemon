@@ -7266,7 +7266,7 @@
     param[base_url] = http://gji.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 1958 ; Geophysical Journal International Volume 1 ; 1 >
+    au < doNotProcess ; 1958 ; Geophysical Journal International Volume 1 ; 1 >
     au < manifest ; 1959 ; Geophysical Journal International Volume 2 ; 2 >
     au < manifest ; 1960 ; Geophysical Journal International Volume 3 ; 3 >
     au < manifest ; 1961 ; Geophysical Journal International Volume 4 ; 4 >
@@ -21852,28 +21852,28 @@
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 1973 ; Uniform Law Review - Revue de droit uniforme Volume os-1 ; os-1 >
-    au < exists ; 1974 ; Uniform Law Review - Revue de droit uniforme Volume os-2 ; os-2 >
-    au < exists ; 1975 ; Uniform Law Review - Revue de droit uniforme Volume os-3 ; os-3 >
-    au < exists ; 1976 ; Uniform Law Review - Revue de droit uniforme Volume os-4 ; os-4 >
-    au < exists ; 1978 ; Uniform Law Review - Revue de droit uniforme Volume os-5 ; os-5 >
-    au < exists ; 1979 ; Uniform Law Review - Revue de droit uniforme Volume os-6 ; os-6 >
-    au < exists ; 1979 ; Uniform Law Review - Revue de droit uniforme Volume os-7 ; os-7 >
-    au < exists ; 1980 ; Uniform Law Review - Revue de droit uniforme Volume os-8 ; os-8 >
-    au < exists ; 1981 ; Uniform Law Review - Revue de droit uniforme Volume os-9 ; os-9 >
-    au < exists ; 1982 ; Uniform Law Review - Revue de droit uniforme Volume os-10 ; os-10 >
-    au < exists ; 1983 ; Uniform Law Review - Revue de droit uniforme Volume os-11 ; os-11 >
-    au < exists ; 1984 ; Uniform Law Review - Revue de droit uniforme Volume os-12 ; os-12 >
-    au < exists ; 1985 ; Uniform Law Review - Revue de droit uniforme Volume os-13 ; os-13 >
-    au < exists ; 1986 ; Uniform Law Review - Revue de droit uniforme Volume os-14 ; os-14 >
-    au < exists ; 1988 ; Uniform Law Review - Revue de droit uniforme Volume os-15 ; os-15 >
-    au < exists ; 1989 ; Uniform Law Review - Revue de droit uniforme Volume os-16 ; os-16 >
-    au < exists ; 1989 ; Uniform Law Review - Revue de droit uniforme Volume os-17 ; os-17 >
-    au < exists ; 1990 ; Uniform Law Review - Revue de droit uniforme Volume os-18 ; os-18 >
+    au < doNotProcess ; 1973 ; Uniform Law Review - Revue de droit uniforme Volume os-1 ; os-1 >
+    au < doNotProcess ; 1974 ; Uniform Law Review - Revue de droit uniforme Volume os-2 ; os-2 >
+    au < doNotProcess ; 1975 ; Uniform Law Review - Revue de droit uniforme Volume os-3 ; os-3 >
+    au < doNotProcess ; 1976 ; Uniform Law Review - Revue de droit uniforme Volume os-4 ; os-4 >
+    au < doNotProcess ; 1978 ; Uniform Law Review - Revue de droit uniforme Volume os-5 ; os-5 >
+    au < doNotProcess ; 1979 ; Uniform Law Review - Revue de droit uniforme Volume os-6 ; os-6 >
+    au < doNotProcess ; 1979 ; Uniform Law Review - Revue de droit uniforme Volume os-7 ; os-7 >
+    au < doNotProcess ; 1980 ; Uniform Law Review - Revue de droit uniforme Volume os-8 ; os-8 >
+    au < doNotProcess ; 1981 ; Uniform Law Review - Revue de droit uniforme Volume os-9 ; os-9 >
+    au < doNotProcess ; 1982 ; Uniform Law Review - Revue de droit uniforme Volume os-10 ; os-10 >
+    au < doNotProcess ; 1983 ; Uniform Law Review - Revue de droit uniforme Volume os-11 ; os-11 >
+    au < doNotProcess ; 1984 ; Uniform Law Review - Revue de droit uniforme Volume os-12 ; os-12 >
+    au < doNotProcess ; 1985 ; Uniform Law Review - Revue de droit uniforme Volume os-13 ; os-13 >
+    au < doNotProcess ; 1986 ; Uniform Law Review - Revue de droit uniforme Volume os-14 ; os-14 >
+    au < doNotProcess ; 1988 ; Uniform Law Review - Revue de droit uniforme Volume os-15 ; os-15 >
+    au < doNotProcess ; 1989 ; Uniform Law Review - Revue de droit uniforme Volume os-16 ; os-16 >
+    au < doNotProcess ; 1989 ; Uniform Law Review - Revue de droit uniforme Volume os-17 ; os-17 >
+    au < doNotProcess ; 1990 ; Uniform Law Review - Revue de droit uniforme Volume os-18 ; os-18 >
     au < manifest ; 1991 ; Uniform Law Review - Revue de droit uniforme Volume os-19 ; os-19 >
-    au < exists ; 1992 ; Uniform Law Review - Revue de droit uniforme Volume os-20 ; os-20 >
-    au < exists ; 1993 ; Uniform Law Review - Revue de droit uniforme Volume os-21 ; os-21 >
-    au < exists ; 1994 ; Uniform Law Review - Revue de droit uniforme Volume os-22 ; os-22 >
+    au < doNotProcess ; 1992 ; Uniform Law Review - Revue de droit uniforme Volume os-20 ; os-20 >
+    au < doNotProcess ; 1993 ; Uniform Law Review - Revue de droit uniforme Volume os-21 ; os-21 >
+    au < doNotProcess ; 1994 ; Uniform Law Review - Revue de droit uniforme Volume os-22 ; os-22 >
     au < manifest ; 1996 ; Uniform Law Review - Revue de droit uniforme Volume 1 ; 1 >
     au < manifest ; 1997 ; Uniform Law Review - Revue de droit uniforme Volume 2 ; 2 >
     au < manifest ; 1998 ; Uniform Law Review - Revue de droit uniforme Volume 3 ; 3 >
@@ -22980,42 +22980,42 @@
     implicit < status ; year ; name ; param[volume_name] >
     comment[continues] = 0096-7645
 
-    au < exists ; 1964 ; BioScience Volume 14 ; 14 >
-    au < exists ; 1965 ; BioScience Volume 15 ; 15 >
-    au < exists ; 1966 ; BioScience Volume 16 ; 16 >
-    au < exists ; 1967 ; BioScience Volume 17 ; 17 >
-    au < exists ; 1968 ; BioScience Volume 18 ; 18 >
-    au < exists ; 1969 ; BioScience Volume 19 ; 19 >
-    au < exists ; 1970 ; BioScience Volume 20 ; 20 >
-    au < exists ; 1971 ; BioScience Volume 21 ; 21 >
-    au < exists ; 1972 ; BioScience Volume 22 ; 22 >
-    au < exists ; 1973 ; BioScience Volume 23 ; 23 >
-    au < exists ; 1974 ; BioScience Volume 24 ; 24 >
-    au < exists ; 1975 ; BioScience Volume 25 ; 25 >
-    au < exists ; 1976 ; BioScience Volume 26 ; 26 >
-    au < exists ; 1977 ; BioScience Volume 27 ; 27 >
-    au < exists ; 1978 ; BioScience Volume 28 ; 28 >
-    au < exists ; 1979 ; BioScience Volume 29 ; 29 >
-    au < exists ; 1980 ; BioScience Volume 30 ; 30 >
-    au < exists ; 1981 ; BioScience Volume 31 ; 31 >
-    au < exists ; 1982 ; BioScience Volume 32 ; 32 >
-    au < exists ; 1983 ; BioScience Volume 33 ; 33 >
-    au < exists ; 1984 ; BioScience Volume 34 ; 34 >
-    au < exists ; 1985 ; BioScience Volume 35 ; 35 >
-    au < exists ; 1986 ; BioScience Volume 36 ; 36 >
-    au < exists ; 1987 ; BioScience Volume 37 ; 37 >
-    au < exists ; 1988 ; BioScience Volume 38 ; 38 >
-    au < exists ; 1989 ; BioScience Volume 39 ; 39 >
-    au < exists ; 1990 ; BioScience Volume 40 ; 40 >
-    au < exists ; 1991 ; BioScience Volume 41 ; 41 >
-    au < exists ; 1992 ; BioScience Volume 42 ; 42 >
-    au < exists ; 1993 ; BioScience Volume 43 ; 43 >
-    au < exists ; 1994 ; BioScience Volume 44 ; 44 >
-    au < exists ; 1995 ; BioScience Volume 45 ; 45 >
-    au < exists ; 1996 ; BioScience Volume 46 ; 46 >
-    au < exists ; 1997 ; BioScience Volume 47 ; 47 >
-    au < exists ; 1998 ; BioScience Volume 48 ; 48 >
-    au < exists ; 1999 ; BioScience Volume 49 ; 49 >
+    au < doNotProcess ; 1964 ; BioScience Volume 14 ; 14 >
+    au < doNotProcess ; 1965 ; BioScience Volume 15 ; 15 >
+    au < doNotProcess ; 1966 ; BioScience Volume 16 ; 16 >
+    au < doNotProcess ; 1967 ; BioScience Volume 17 ; 17 >
+    au < doNotProcess ; 1968 ; BioScience Volume 18 ; 18 >
+    au < doNotProcess ; 1969 ; BioScience Volume 19 ; 19 >
+    au < doNotProcess ; 1970 ; BioScience Volume 20 ; 20 >
+    au < doNotProcess ; 1971 ; BioScience Volume 21 ; 21 >
+    au < doNotProcess ; 1972 ; BioScience Volume 22 ; 22 >
+    au < doNotProcess ; 1973 ; BioScience Volume 23 ; 23 >
+    au < doNotProcess ; 1974 ; BioScience Volume 24 ; 24 >
+    au < doNotProcess ; 1975 ; BioScience Volume 25 ; 25 >
+    au < doNotProcess ; 1976 ; BioScience Volume 26 ; 26 >
+    au < doNotProcess ; 1977 ; BioScience Volume 27 ; 27 >
+    au < doNotProcess ; 1978 ; BioScience Volume 28 ; 28 >
+    au < doNotProcess ; 1979 ; BioScience Volume 29 ; 29 >
+    au < doNotProcess ; 1980 ; BioScience Volume 30 ; 30 >
+    au < doNotProcess ; 1981 ; BioScience Volume 31 ; 31 >
+    au < doNotProcess ; 1982 ; BioScience Volume 32 ; 32 >
+    au < doNotProcess ; 1983 ; BioScience Volume 33 ; 33 >
+    au < doNotProcess ; 1984 ; BioScience Volume 34 ; 34 >
+    au < doNotProcess ; 1985 ; BioScience Volume 35 ; 35 >
+    au < doNotProcess ; 1986 ; BioScience Volume 36 ; 36 >
+    au < doNotProcess ; 1987 ; BioScience Volume 37 ; 37 >
+    au < doNotProcess ; 1988 ; BioScience Volume 38 ; 38 >
+    au < doNotProcess ; 1989 ; BioScience Volume 39 ; 39 >
+    au < doNotProcess ; 1990 ; BioScience Volume 40 ; 40 >
+    au < doNotProcess ; 1991 ; BioScience Volume 41 ; 41 >
+    au < doNotProcess ; 1992 ; BioScience Volume 42 ; 42 >
+    au < doNotProcess ; 1993 ; BioScience Volume 43 ; 43 >
+    au < doNotProcess ; 1994 ; BioScience Volume 44 ; 44 >
+    au < doNotProcess ; 1995 ; BioScience Volume 45 ; 45 >
+    au < doNotProcess ; 1996 ; BioScience Volume 46 ; 46 >
+    au < doNotProcess ; 1997 ; BioScience Volume 47 ; 47 >
+    au < doNotProcess ; 1998 ; BioScience Volume 48 ; 48 >
+    au < doNotProcess ; 1999 ; BioScience Volume 49 ; 49 >
     au < exists ; 2000 ; BioScience Volume 50 ; 50 >
     au < exists ; 2001 ; BioScience Volume 51 ; 51 >
     au < exists ; 2002 ; BioScience Volume 52 ; 52 >
