@@ -1,5 +1,5 @@
 /*
- * $Id: MockPdfTokenStream.java,v 1.4 2014-11-26 23:56:05 thib_gc Exp $
+ * $Id: MockPdfTokenStream.java,v 1.5 2014-11-27 00:23:24 thib_gc Exp $
  */
 
 /*
@@ -52,8 +52,8 @@ public class MockPdfTokenStream implements PdfTokenStream {
    * 
    * @param inputStream
    *          An input stream of PDF token stream source.
-   * @throws IOExceptionfails
-   *           or an I/O error occurs.
+   * @throws IOException
+   *           if parsing fails or an I/O error occurs.
    * @since 1.67
    */
   public MockPdfTokenStream(InputStream inputStream) throws IOException {
