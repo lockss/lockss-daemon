@@ -1,5 +1,5 @@
 /*
- * $Id: TestEmeraldPdfFilterFactory.java,v 1.4 2014-11-25 02:11:33 thib_gc Exp $
+ * $Id: TestEmeraldPdfFilterFactory.java,v 1.5 2014-11-27 00:02:26 thib_gc Exp $
  */
 
 /*
@@ -32,153 +32,163 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.emerald;
 
-import java.util.Arrays;
-
 import org.lockss.pdf.*;
 import org.lockss.plugin.emerald.EmeraldPdfFilterFactory.FrontPageWorker;
 import org.lockss.test.LockssTestCase;
 
 public class TestEmeraldPdfFilterFactory extends LockssTestCase {
 
-  protected PdfTokenFactory tf;
-  
-  @Override
-  protected void setUp() throws Exception {
-    super.setUp();
-    this.tf = new MockPdfTokenFactory();
-  }
-
   public void testFrontPageWorker() throws Exception {
     FrontPageWorker worker = new FrontPageWorker();
-    worker.process(Arrays.asList(tf.makeOperator(PdfOpcodes.SAVE_GRAPHICS_STATE),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeName("Name1"),
-                                 tf.makeOperator(PdfOpcodes.INVOKE_XOBJECT),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeOperator(PdfOpcodes.RESTORE_GRAPHICS_STATE),
-                                 tf.makeOperator(PdfOpcodes.SAVE_GRAPHICS_STATE),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeName("Name2"),
-                                 tf.makeOperator(PdfOpcodes.INVOKE_XOBJECT),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeOperator(PdfOpcodes.RESTORE_GRAPHICS_STATE),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeOperator(PdfOpcodes.BEGIN_TEXT_OBJECT),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeString("Downloaded on: <something>"),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeOperator(PdfOpcodes.END_TEXT_OBJECT),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeOperator(PdfOpcodes.BEGIN_TEXT_OBJECT),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeString("Access to this document was granted through an Emerald subscription provided by <something>"),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeOperator(PdfOpcodes.END_TEXT_OBJECT),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT)),
-                   tf);
+    worker.process(MockPdfTokenStream.parse(
+// ---- begin PDF stream ----
+"q " +
+"(This is irrelevant.) Tj " +
+"/Name1 Do " +
+"(This is irrelevant.) Tj " +
+"Q " +
+"q " +
+"(This is irrelevant.) Tj " +
+"/Name2 Do " +
+"(This is irrelevant.) Tj " +
+"Q " +
+"(This is irrelevant.) Tj " +
+"BT " +
+"(This is irrelevant.) Tj " +
+"(Downloaded on: <something>) Tj " +
+"(This is irrelevant.) Tj " +
+"ET " +
+"(This is irrelevant.) Tj " +
+"BT " +
+"(This is irrelevant.) Tj " +
+"(Access to this document was granted through an Emerald subscription provided by <something>) Tj " +
+"(This is irrelevant.) Tj " +
+"ET " +
+"(This is irrelevant.) Tj"
+// ---- end PDF stream ----
+    ));
     assertTrue(worker.result);
-    worker.process(Arrays.asList(tf.makeOperator(PdfOpcodes.SAVE_GRAPHICS_STATE),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeName("Name1"),
-                                 tf.makeOperator(PdfOpcodes.INVOKE_XOBJECT),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeOperator(PdfOpcodes.RESTORE_GRAPHICS_STATE),
-                                 tf.makeOperator(PdfOpcodes.SAVE_GRAPHICS_STATE),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeName("Name2"),
-                                 tf.makeOperator(PdfOpcodes.INVOKE_XOBJECT),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeOperator(PdfOpcodes.RESTORE_GRAPHICS_STATE),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeOperator(PdfOpcodes.BEGIN_TEXT_OBJECT),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeString("Downloaded on: <something>"),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeOperator(PdfOpcodes.END_TEXT_OBJECT),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeOperator(PdfOpcodes.BEGIN_TEXT_OBJECT),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeString("Not the right string."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeOperator(PdfOpcodes.END_TEXT_OBJECT)),
-                   tf);
+    worker.process(MockPdfTokenStream.parse(
+// ---- begin PDF stream ----
+"q " +
+"(This is irrelevant.) Tj " +
+"/Name1 Do " +
+"(This is irrelevant.) Tj " +
+"Q " +
+"q " +
+"(This is irrelevant.) Tj " +
+"/Name2 Do " +
+"(This is irrelevant.) Tj " +
+"Q " +
+"(This is irrelevant.) Tj " +
+"BT " +
+"(This is irrelevant.) Tj " +
+"(Downloaded on: <something>) Tj " +
+"(This is irrelevant.) Tj " +
+"ET " +
+"(This is irrelevant.) Tj " +
+"BT " +
+"(This is irrelevant.) Tj " +
+"(Not the right string.) Tj " +
+"(This is irrelevant.) Tj " +
+"ET " +
+"(This is irrelevant.) Tj"
+// ---- end PDF stream ----
+    ));
     assertFalse(worker.result);
-    worker.process(Arrays.asList(tf.makeOperator(PdfOpcodes.SAVE_GRAPHICS_STATE),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeName("Name1"),
-                                 tf.makeOperator(PdfOpcodes.INVOKE_XOBJECT),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeOperator(PdfOpcodes.RESTORE_GRAPHICS_STATE),
-                                 tf.makeOperator(PdfOpcodes.SAVE_GRAPHICS_STATE),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeName("Name2"),
-                                 tf.makeOperator(PdfOpcodes.INVOKE_XOBJECT),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeOperator(PdfOpcodes.RESTORE_GRAPHICS_STATE),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeOperator(PdfOpcodes.BEGIN_TEXT_OBJECT),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeString("Not the right string."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeOperator(PdfOpcodes.END_TEXT_OBJECT)),
-                   tf);
+    worker.process(MockPdfTokenStream.parse(
+// ---- begin PDF stream ----
+"q " +
+"(This is irrelevant.) Tj " +
+"/Name1 Do " +
+"(This is irrelevant.) Tj " +
+"Q " +
+"q " +
+"(This is irrelevant.) Tj " +
+"/Name2 Do " +
+"(This is irrelevant.) Tj " +
+"Q " +
+"(This is irrelevant.) Tj " +
+"BT " +
+"(This is irrelevant.) Tj " +
+"(Downloaded on: <something>) Tj " +
+"(This is irrelevant.) Tj " +
+"ET " +
+"(This is irrelevant.) Tj"
+// ---- end PDF stream ----
+    ));
     assertFalse(worker.result);
-    worker.process(Arrays.asList(tf.makeOperator(PdfOpcodes.SAVE_GRAPHICS_STATE),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeName("Name1"),
-                                 tf.makeOperator(PdfOpcodes.INVOKE_XOBJECT),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeOperator(PdfOpcodes.RESTORE_GRAPHICS_STATE),
-                                 tf.makeOperator(PdfOpcodes.SAVE_GRAPHICS_STATE),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeOperator(PdfOpcodes.RESTORE_GRAPHICS_STATE)),
-                   tf);
+    worker.process(MockPdfTokenStream.parse(
+// ---- begin PDF stream ----
+"q " +
+"(This is irrelevant.) Tj " +
+"/Name1 Do " +
+"(This is irrelevant.) Tj " +
+"Q " +
+"q " +
+"(This is irrelevant.) Tj " +
+"/Name2 Do " +
+"(This is irrelevant.) Tj " +
+"Q " +
+"(This is irrelevant.) Tj " +
+"BT " +
+"(This is irrelevant.) Tj " +
+"(Not the right string.) Tj " +
+"(This is irrelevant.) Tj " +
+"ET " +
+"(This is irrelevant.) Tj"
+// ---- end PDF stream ----
+    ));
     assertFalse(worker.result);
-    worker.process(Arrays.asList(tf.makeOperator(PdfOpcodes.SAVE_GRAPHICS_STATE),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeString("This is irrelevant."),
-                                 tf.makeOperator(PdfOpcodes.SHOW_TEXT),
-                                 tf.makeOperator(PdfOpcodes.RESTORE_GRAPHICS_STATE)),
-                   tf);
+    worker.process(MockPdfTokenStream.parse(
+// ---- begin PDF stream ----
+"q " +
+"(This is irrelevant.) Tj " +
+"/Name1 Do " +
+"(This is irrelevant.) Tj " +
+"Q " +
+"q " +
+"(This is irrelevant.) Tj " +
+"/Name2 Do " +
+"(This is irrelevant.) Tj " +
+"Q " +
+"(This is irrelevant.) Tj"
+// ---- end PDF stream ----
+    ));
+    assertFalse(worker.result);
+    worker.process(MockPdfTokenStream.parse(
+// ---- begin PDF stream ----
+"q " +
+"(This is irrelevant.) Tj " +
+"/Name1 Do " +
+"(This is irrelevant.) Tj " +
+"Q " +
+"q " +
+"(This is irrelevant.) Tj " +
+"Q " +
+"(This is irrelevant.) Tj"
+// ---- end PDF stream ----
+    ));
+    assertFalse(worker.result);
+    worker.process(MockPdfTokenStream.parse(
+// ---- begin PDF stream ----
+"q " +
+"(This is irrelevant.) Tj " +
+"/Name1 Do " +
+"(This is irrelevant.) Tj " +
+"Q " +
+"(This is irrelevant.) Tj"
+// ---- end PDF stream ----
+    ));
+    assertFalse(worker.result);
+    worker.process(MockPdfTokenStream.parse(
+// ---- begin PDF stream ----
+"q " +
+"(This is irrelevant.) Tj " +
+"Q " +
+"(This is irrelevant.) Tj"
+// ---- end PDF stream ----
+    ));
     assertFalse(worker.result);
   }
   
