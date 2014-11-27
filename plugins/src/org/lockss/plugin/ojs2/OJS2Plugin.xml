@@ -51,6 +51,10 @@
     </map>
   </entry>
   <entry>
+    <string>required_daemon_version</string>
+    <string>1.67.0</string>
+  </entry>
+  <entry>
     <string>au_name</string>
     <string>"Open Journal Systems Plugin (OJS 2.x), Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
   </entry>
