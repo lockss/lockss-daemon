@@ -1,5 +1,5 @@
 /*
- * $Id: AnnualReviewsPdfFilterFactory.java,v 1.5 2014-11-19 01:02:59 thib_gc Exp $
+ * $Id: AnnualReviewsPdfFilterFactory.java,v 1.6 2014-11-26 23:57:25 thib_gc Exp $
  */
 
 /*
@@ -48,7 +48,7 @@ public class AnnualReviewsPdfFilterFactory extends SimplePdfFilterFactory {
   private static final Logger logger = Logger.getLogger(AnnualReviewsPdfFilterFactory.class);
 
   /*
-   * FIXME 1.67: extend PdfTokenstreamStateMachine
+   * FIXME 1.67: extend PdfTokenStreamStateMachine instead
    */
   protected static class DownloadedFromWorker extends PdfTokenStreamWorker {
 
@@ -56,7 +56,6 @@ public class AnnualReviewsPdfFilterFactory extends SimplePdfFilterFactory {
       super(Direction.BACKWARD);
     }
     
-    // FIXME 1.62
     protected static final Pattern DOWNLOADED_FROM_PATTERN =
         Pattern.compile("Downloaded from (?:http://)?[-0-9A-Za-z]+(?:\\.[-0-9A-Za-z]+)+");
     
@@ -130,13 +129,15 @@ public class AnnualReviewsPdfFilterFactory extends SimplePdfFilterFactory {
     
   }
   
+  /*
+   * FIXME 1.67: extend PdfTokenStreamStateMachine instead
+   */
   protected static class ForPersonalUseWorker extends PdfTokenStreamWorker {
 
     public ForPersonalUseWorker() {
       super(Direction.BACKWARD);
     }
     
-    // FIXME 1.62
     protected static final Pattern FOR_PERSONAL_USE_PATTERN =
         Pattern.compile("by .* on [0-9]{2}/[0-9]{2}/[0-9]{2}. For personal use only.");
     

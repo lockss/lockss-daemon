@@ -1,5 +1,5 @@
 /*
- * $Id: SEGPdfFilterFactory.java,v 1.3 2014-11-01 00:17:47 thib_gc Exp $
+ * $Id: SEGPdfFilterFactory.java,v 1.4 2014-11-27 00:01:00 thib_gc Exp $
  */
 
 /*
@@ -32,11 +32,9 @@
 
 package org.lockss.plugin.atypon.seg;
 
-import java.io.*;
 import java.util.List;
 import java.util.regex.Pattern;
 
-import org.apache.commons.io.IOUtils;
 import org.lockss.filter.pdf.ExtractingPdfFilterFactory;
 import org.lockss.pdf.*;
 import org.lockss.plugin.ArchivalUnit;
@@ -44,6 +42,10 @@ import org.lockss.util.Logger;
 
 public class SEGPdfFilterFactory extends ExtractingPdfFilterFactory {
 
+  // FIXME 1.67: extend PdfTokenStreamStateMachine instead
+  /*
+   * Example: http://library.seg.org/doi/pdfplus/10.1190/geo2012-0531.1
+   */
   public static class Worker extends PdfTokenStreamWorker {
 
     private static final Logger logger = Logger.getLogger(Worker.class);
@@ -112,6 +114,7 @@ public class SEGPdfFilterFactory extends ExtractingPdfFilterFactory {
   @Override
   public void transform(ArchivalUnit au, PdfDocument pdfDocument) throws PdfException {
     // Metadata completely rewritten when file is watermarked, can't compare to original
+    /* FIXME 1.67: use the getDocumentTransform/outputDocumentInformation override instead */
     pdfDocument.unsetCreationDate();
     pdfDocument.unsetModificationDate();
     pdfDocument.unsetMetadata();
@@ -121,6 +124,7 @@ public class SEGPdfFilterFactory extends ExtractingPdfFilterFactory {
     pdfDocument.unsetTitle();
     pdfDocument.unsetSubject();
     pdfDocument.unsetKeywords();
+    /* end FIXME 1.67 */
     
     Worker worker = new Worker();
     page_loop: for (int i = 0 ; i < pdfDocument.getNumberOfPages() ; ++i) {
@@ -142,5 +146,17 @@ public class SEGPdfFilterFactory extends ExtractingPdfFilterFactory {
       }
     }
   }
-  
+ 
+  /* FIXME 1.67 */
+//  @Override
+//  public PdfTransform<PdfDocument> getDocumentTransform(ArchivalUnit au, OutputStream os) {
+//    return new BaseDocumentExtractingTransform(os) {
+//      @Override
+//      public void outputDocumentInformation() throws PdfException {
+//        // Intentionally left blank
+//      }
+//    };
+//  }
+/* end FIXME 1.67 */
+
 }

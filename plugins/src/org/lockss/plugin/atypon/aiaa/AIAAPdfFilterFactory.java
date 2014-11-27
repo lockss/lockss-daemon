@@ -1,5 +1,5 @@
 /*
- * $Id: AIAAPdfFilterFactory.java,v 1.4 2014-11-19 01:05:52 thib_gc Exp $
+ * $Id: AIAAPdfFilterFactory.java,v 1.5 2014-11-26 23:58:15 thib_gc Exp $
  */
 
 /*
@@ -46,6 +46,9 @@ public class AIAAPdfFilterFactory extends ExtractingPdfFilterFactory {
 
   /*
    * FIXME 1.67: extend PdfTokenStreamStateMachine
+   */
+  /*
+   * Example URL: http://arc.aiaa.org/doi/pdfplus/10.2514/3.59603
    */
   protected static class CitedByWorker extends PdfTokenStreamWorker {
     
