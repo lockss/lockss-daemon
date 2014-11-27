@@ -3791,7 +3791,7 @@
         au < doesNotExist ; 0 ; Biblical Theology Bulletin: Journal of Bible and Theology Volume 1 ; 1 >
         au < doesNotExist ; 0 ; Biblical Theology Bulletin: Journal of Bible and Theology Volume 2 ; 2 >
         au < manifest ; 1973 ; Biblical Theology Bulletin: Journal of Bible and Theology Volume 3 ; 3 >
-        au < exists ; 1874 ; Biblical Theology Bulletin: Journal of Bible and Theology Volume 4 ; 4 >
+        au < doNotProcess ; 1874 ; Biblical Theology Bulletin: Journal of Bible and Theology Volume 4 ; 4 >
         au < manifest ; 1975 ; Biblical Theology Bulletin: Journal of Bible and Theology Volume 5 ; 5 >
         au < manifest ; 1976 ; Biblical Theology Bulletin: Journal of Bible and Theology Volume 6 ; 6 >
         au < manifest ; 1977 ; Biblical Theology Bulletin: Journal of Bible and Theology Volume 7 ; 7 >
@@ -43348,63 +43348,63 @@ comment[mpj] = now published by Brill
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
   
-        au < exists ; 1847-1849 ; Proceedings of the Institution of Mechanical Engineers Volume 1 ; 1 >
-        au < exists ; 1850-1851 ; Proceedings of the Institution of Mechanical Engineers Volume 2 ; 2 >
-        au < exists ; 1852 ; Proceedings of the Institution of Mechanical Engineers Volume 3 ; 3 >
-        au < exists ; 1853 ; Proceedings of the Institution of Mechanical Engineers Volume 4 ; 4 >
-        au < exists ; 1854 ; Proceedings of the Institution of Mechanical Engineers Volume 5 ; 5 >
-        au < exists ; 1855 ; Proceedings of the Institution of Mechanical Engineers Volume 6 ; 6 >
-        au < exists ; 1856 ; Proceedings of the Institution of Mechanical Engineers Volume 7 ; 7 >
-        au < exists ; 1857 ; Proceedings of the Institution of Mechanical Engineers Volume 8 ; 8 >
-        au < exists ; 1858 ; Proceedings of the Institution of Mechanical Engineers Volume 9 ; 9 >
-        au < exists ; 1859 ; Proceedings of the Institution of Mechanical Engineers Volume 10 ; 10 >
-        au < exists ; 1860 ; Proceedings of the Institution of Mechanical Engineers Volume 11 ; 11 >
-        au < exists ; 1861 ; Proceedings of the Institution of Mechanical Engineers Volume 12 ; 12 >
-        au < exists ; 1862 ; Proceedings of the Institution of Mechanical Engineers Volume 13 ; 13 >
-        au < exists ; 1863 ; Proceedings of the Institution of Mechanical Engineers Volume 14 ; 14 >
-        au < exists ; 1864 ; Proceedings of the Institution of Mechanical Engineers Volume 15 ; 15 >
-        au < exists ; 1865 ; Proceedings of the Institution of Mechanical Engineers Volume 16 ; 16 >
-        au < exists ; 1866 ; Proceedings of the Institution of Mechanical Engineers Volume 17 ; 17 >
-        au < exists ; 1867 ; Proceedings of the Institution of Mechanical Engineers Volume 18 ; 18 >
-        au < exists ; 1868 ; Proceedings of the Institution of Mechanical Engineers Volume 19 ; 19 >
-        au < exists ; 1869 ; Proceedings of the Institution of Mechanical Engineers Volume 20 ; 20 >
-        au < exists ; 1870 ; Proceedings of the Institution of Mechanical Engineers Volume 21 ; 21 >
-        au < exists ; 1871 ; Proceedings of the Institution of Mechanical Engineers Volume 22 ; 22 >
-        au < exists ; 1872 ; Proceedings of the Institution of Mechanical Engineers Volume 23 ; 23 >
-        au < exists ; 1873 ; Proceedings of the Institution of Mechanical Engineers Volume 24 ; 24 >
-        au < exists ; 1874 ; Proceedings of the Institution of Mechanical Engineers Volume 25 ; 25 >
-        au < exists ; 1875 ; Proceedings of the Institution of Mechanical Engineers Volume 26 ; 26 >
-        au < exists ; 1876 ; Proceedings of the Institution of Mechanical Engineers Volume 27 ; 27 >
-        au < exists ; 1877 ; Proceedings of the Institution of Mechanical Engineers Volume 28 ; 28 >
-        au < exists ; 1878 ; Proceedings of the Institution of Mechanical Engineers Volume 29 ; 29 >
-        au < exists ; 1879 ; Proceedings of the Institution of Mechanical Engineers Volume 30 ; 30 >
-        au < exists ; 1880 ; Proceedings of the Institution of Mechanical Engineers Volume 31 ; 31 >
-        au < exists ; 1881 ; Proceedings of the Institution of Mechanical Engineers Volume 32 ; 32 >
-        au < exists ; 1882 ; Proceedings of the Institution of Mechanical Engineers Volume 33 ; 33 >
-        au < exists ; 1883 ; Proceedings of the Institution of Mechanical Engineers Volume 34 ; 34 >
-        au < exists ; 1884 ; Proceedings of the Institution of Mechanical Engineers Volume 35 ; 35 >
-        au < exists ; 1885 ; Proceedings of the Institution of Mechanical Engineers Volume 36 ; 36 >
-        au < exists ; 1886 ; Proceedings of the Institution of Mechanical Engineers Volume 37 ; 37 >
-        au < exists ; 1887 ; Proceedings of the Institution of Mechanical Engineers Volume 38 ; 38 >
-        au < exists ; 1888 ; Proceedings of the Institution of Mechanical Engineers Volume 39 ; 39 >
-        au < exists ; 1889 ; Proceedings of the Institution of Mechanical Engineers Volume 40 ; 40 >
-        au < exists ; 1890 ; Proceedings of the Institution of Mechanical Engineers Volume 41 ; 41 >
-        au < exists ; 1891 ; Proceedings of the Institution of Mechanical Engineers Volume 42 ; 42 >
-        au < exists ; 1892 ; Proceedings of the Institution of Mechanical Engineers Volume 43 ; 43 >
-        au < exists ; 1893 ; Proceedings of the Institution of Mechanical Engineers Volume 44 ; 44 >
-        au < exists ; 1893 ; Proceedings of the Institution of Mechanical Engineers Volume 45 ; 45 >
-        au < exists ; 1894 ; Proceedings of the Institution of Mechanical Engineers Volume 46 ; 46 >
-        au < exists ; 1894 ; Proceedings of the Institution of Mechanical Engineers Volume 47 ; 47 >
-        au < exists ; 1895 ; Proceedings of the Institution of Mechanical Engineers Volume 48 ; 48 >
-        au < exists ; 1895 ; Proceedings of the Institution of Mechanical Engineers Volume 49 ; 49 >
-        au < exists ; 1896 ; Proceedings of the Institution of Mechanical Engineers Volume 50 ; 50 >
-        au < exists ; 1896 ; Proceedings of the Institution of Mechanical Engineers Volume 51 ; 51 >
-        au < exists ; 1897 ; Proceedings of the Institution of Mechanical Engineers Volume 52 ; 52 >
-        au < exists ; 1897 ; Proceedings of the Institution of Mechanical Engineers Volume 53 ; 53 >
-        au < exists ; 1898 ; Proceedings of the Institution of Mechanical Engineers Volume 54 ; 54 >
-        au < exists ; 1898 ; Proceedings of the Institution of Mechanical Engineers Volume 55 ; 55 >
-        au < exists ; 1899 ; Proceedings of the Institution of Mechanical Engineers Volume 56 ; 56 >
-        au < exists ; 1899 ; Proceedings of the Institution of Mechanical Engineers Volume 57 ; 57 >
+        au < doNotProcess ; 1847-1849 ; Proceedings of the Institution of Mechanical Engineers Volume 1 ; 1 >
+        au < doNotProcess ; 1850-1851 ; Proceedings of the Institution of Mechanical Engineers Volume 2 ; 2 >
+        au < doNotProcess ; 1852 ; Proceedings of the Institution of Mechanical Engineers Volume 3 ; 3 >
+        au < doNotProcess ; 1853 ; Proceedings of the Institution of Mechanical Engineers Volume 4 ; 4 >
+        au < doNotProcess ; 1854 ; Proceedings of the Institution of Mechanical Engineers Volume 5 ; 5 >
+        au < doNotProcess ; 1855 ; Proceedings of the Institution of Mechanical Engineers Volume 6 ; 6 >
+        au < doNotProcess ; 1856 ; Proceedings of the Institution of Mechanical Engineers Volume 7 ; 7 >
+        au < doNotProcess ; 1857 ; Proceedings of the Institution of Mechanical Engineers Volume 8 ; 8 >
+        au < doNotProcess ; 1858 ; Proceedings of the Institution of Mechanical Engineers Volume 9 ; 9 >
+        au < doNotProcess ; 1859 ; Proceedings of the Institution of Mechanical Engineers Volume 10 ; 10 >
+        au < doNotProcess ; 1860 ; Proceedings of the Institution of Mechanical Engineers Volume 11 ; 11 >
+        au < doNotProcess ; 1861 ; Proceedings of the Institution of Mechanical Engineers Volume 12 ; 12 >
+        au < doNotProcess ; 1862 ; Proceedings of the Institution of Mechanical Engineers Volume 13 ; 13 >
+        au < doNotProcess ; 1863 ; Proceedings of the Institution of Mechanical Engineers Volume 14 ; 14 >
+        au < doNotProcess ; 1864 ; Proceedings of the Institution of Mechanical Engineers Volume 15 ; 15 >
+        au < doNotProcess ; 1865 ; Proceedings of the Institution of Mechanical Engineers Volume 16 ; 16 >
+        au < doNotProcess ; 1866 ; Proceedings of the Institution of Mechanical Engineers Volume 17 ; 17 >
+        au < doNotProcess ; 1867 ; Proceedings of the Institution of Mechanical Engineers Volume 18 ; 18 >
+        au < doNotProcess ; 1868 ; Proceedings of the Institution of Mechanical Engineers Volume 19 ; 19 >
+        au < doNotProcess ; 1869 ; Proceedings of the Institution of Mechanical Engineers Volume 20 ; 20 >
+        au < doNotProcess ; 1870 ; Proceedings of the Institution of Mechanical Engineers Volume 21 ; 21 >
+        au < doNotProcess ; 1871 ; Proceedings of the Institution of Mechanical Engineers Volume 22 ; 22 >
+        au < doNotProcess ; 1872 ; Proceedings of the Institution of Mechanical Engineers Volume 23 ; 23 >
+        au < doNotProcess ; 1873 ; Proceedings of the Institution of Mechanical Engineers Volume 24 ; 24 >
+        au < doNotProcess ; 1874 ; Proceedings of the Institution of Mechanical Engineers Volume 25 ; 25 >
+        au < doNotProcess ; 1875 ; Proceedings of the Institution of Mechanical Engineers Volume 26 ; 26 >
+        au < doNotProcess ; 1876 ; Proceedings of the Institution of Mechanical Engineers Volume 27 ; 27 >
+        au < doNotProcess ; 1877 ; Proceedings of the Institution of Mechanical Engineers Volume 28 ; 28 >
+        au < doNotProcess ; 1878 ; Proceedings of the Institution of Mechanical Engineers Volume 29 ; 29 >
+        au < doNotProcess ; 1879 ; Proceedings of the Institution of Mechanical Engineers Volume 30 ; 30 >
+        au < doNotProcess ; 1880 ; Proceedings of the Institution of Mechanical Engineers Volume 31 ; 31 >
+        au < doNotProcess ; 1881 ; Proceedings of the Institution of Mechanical Engineers Volume 32 ; 32 >
+        au < doNotProcess ; 1882 ; Proceedings of the Institution of Mechanical Engineers Volume 33 ; 33 >
+        au < doNotProcess ; 1883 ; Proceedings of the Institution of Mechanical Engineers Volume 34 ; 34 >
+        au < doNotProcess ; 1884 ; Proceedings of the Institution of Mechanical Engineers Volume 35 ; 35 >
+        au < doNotProcess ; 1885 ; Proceedings of the Institution of Mechanical Engineers Volume 36 ; 36 >
+        au < doNotProcess ; 1886 ; Proceedings of the Institution of Mechanical Engineers Volume 37 ; 37 >
+        au < doNotProcess ; 1887 ; Proceedings of the Institution of Mechanical Engineers Volume 38 ; 38 >
+        au < doNotProcess ; 1888 ; Proceedings of the Institution of Mechanical Engineers Volume 39 ; 39 >
+        au < doNotProcess ; 1889 ; Proceedings of the Institution of Mechanical Engineers Volume 40 ; 40 >
+        au < doNotProcess ; 1890 ; Proceedings of the Institution of Mechanical Engineers Volume 41 ; 41 >
+        au < doNotProcess ; 1891 ; Proceedings of the Institution of Mechanical Engineers Volume 42 ; 42 >
+        au < doNotProcess ; 1892 ; Proceedings of the Institution of Mechanical Engineers Volume 43 ; 43 >
+        au < doNotProcess ; 1893 ; Proceedings of the Institution of Mechanical Engineers Volume 44 ; 44 >
+        au < doNotProcess ; 1893 ; Proceedings of the Institution of Mechanical Engineers Volume 45 ; 45 >
+        au < doNotProcess ; 1894 ; Proceedings of the Institution of Mechanical Engineers Volume 46 ; 46 >
+        au < doNotProcess ; 1894 ; Proceedings of the Institution of Mechanical Engineers Volume 47 ; 47 >
+        au < doNotProcess ; 1895 ; Proceedings of the Institution of Mechanical Engineers Volume 48 ; 48 >
+        au < doNotProcess ; 1895 ; Proceedings of the Institution of Mechanical Engineers Volume 49 ; 49 >
+        au < doNotProcess ; 1896 ; Proceedings of the Institution of Mechanical Engineers Volume 50 ; 50 >
+        au < doNotProcess ; 1896 ; Proceedings of the Institution of Mechanical Engineers Volume 51 ; 51 >
+        au < doNotProcess ; 1897 ; Proceedings of the Institution of Mechanical Engineers Volume 52 ; 52 >
+        au < doNotProcess ; 1897 ; Proceedings of the Institution of Mechanical Engineers Volume 53 ; 53 >
+        au < doNotProcess ; 1898 ; Proceedings of the Institution of Mechanical Engineers Volume 54 ; 54 >
+        au < doNotProcess ; 1898 ; Proceedings of the Institution of Mechanical Engineers Volume 55 ; 55 >
+        au < doNotProcess ; 1899 ; Proceedings of the Institution of Mechanical Engineers Volume 56 ; 56 >
+        au < doNotProcess ; 1899 ; Proceedings of the Institution of Mechanical Engineers Volume 57 ; 57 >
         au < doNotProcess ; 1900 ; Proceedings of the Institution of Mechanical Engineers Volume 58 ; 58 >
         au < doNotProcess ; 1900 ; Proceedings of the Institution of Mechanical Engineers Volume 59 ; 59 >
         au < doNotProcess ; 1901 ; Proceedings of the Institution of Mechanical Engineers Volume 60 ; 60 >
@@ -43452,7 +43452,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 1922 ; Proceedings of the Institution of Mechanical Engineers Volume 102 ; 102 >
         au < doNotProcess ; 1922 ; Proceedings of the Institution of Mechanical Engineers Volume 103 ; 103 >
         au < doNotProcess ; 1923 ; Proceedings of the Institution of Mechanical Engineers Volume 104 ; 104 >
-        au < manifest ; 1923 ; Proceedings of the Institution of Mechanical Engineers Volume 105 ; 105 >
+        au < doNotProcess ; 1923 ; Proceedings of the Institution of Mechanical Engineers Volume 105 ; 105 >
         au < doNotProcess ; 1924 ; Proceedings of the Institution of Mechanical Engineers Volume 106 ; 106 >
         au < doNotProcess ; 1924 ; Proceedings of the Institution of Mechanical Engineers Volume 107 ; 107 >
         au < doNotProcess ; 1925 ; Proceedings of the Institution of Mechanical Engineers Volume 108 ; 108 >
@@ -43528,7 +43528,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 1964 ; Proceedings of the Institution of Mechanical Engineers Volume 179 ; 179 >
         au < doNotProcess ; 1965 ; Proceedings of the Institution of Mechanical Engineers Volume 180 ; 180 >
         au < doNotProcess ; 1966 ; Proceedings of the Institution of Mechanical Engineers Volume 181 ; 181 >
-        au < manifest ; 1967 ; Proceedings of the Institution of Mechanical Engineers Volume 182 ; 182 >
+        au < doNotProcess ; 1967 ; Proceedings of the Institution of Mechanical Engineers Volume 182 ; 182 >
         au < doNotProcess ; 1968 ; Proceedings of the Institution of Mechanical Engineers Volume 183 ; 183 >
         au < doNotProcess ; 1969 ; Proceedings of the Institution of Mechanical Engineers Volume 184 ; 184 >
         au < doNotProcess ; 1970 ; Proceedings of the Institution of Mechanical Engineers Volume 185 ; 185 >
@@ -43542,7 +43542,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 1979 ; Proceedings of the Institution of Mechanical Engineers Volume 193 ; 193 >
         au < doNotProcess ; 1980 ; Proceedings of the Institution of Mechanical Engineers Volume 194 ; 194 >
         au < doNotProcess ; 1981 ; Proceedings of the Institution of Mechanical Engineers Volume 195 ; 195 >
-        au < manifest ; 1982 ; Proceedings of the Institution of Mechanical Engineers Volume 196 ; 196 >
+        au < doNotProcess ; 1982 ; Proceedings of the Institution of Mechanical Engineers Volume 196 ; 196 >
   
       }
   
@@ -43584,9 +43584,9 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 1964 ; Proceedings of the Institution of Mechanical Engineers: Automobile Division Volume 179 ; 179 >
         au < doNotProcess ; 1965 ; Proceedings of the Institution of Mechanical Engineers: Automobile Division Volume 180 ; 180 >
         au < doNotProcess ; 1966 ; Proceedings of the Institution of Mechanical Engineers: Automobile Division Volume 181 ; 181 >
-        au < manifest ; 1967 ; Proceedings of the Institution of Mechanical Engineers: Automobile Division Volume 182 ; 182 >
+        au < doNotProcess ; 1967 ; Proceedings of the Institution of Mechanical Engineers: Automobile Division Volume 182 ; 182 >
         au < doNotProcess ; 1968 ; Proceedings of the Institution of Mechanical Engineers: Automobile Division Volume 183 ; 183 >
-        au < manifest ; 1969 ; Proceedings of the Institution of Mechanical Engineers: Automobile Division Volume 184 ; 184 >
+        au < doNotProcess ; 1969 ; Proceedings of the Institution of Mechanical Engineers: Automobile Division Volume 184 ; 184 >
   
       }
   
@@ -43612,7 +43612,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 1966 ; Proceedings of the Institution of Mechanical Engineers, Conference Proceedings Volume 181 ; 181 >
         au < doNotProcess ; 1967 ; Proceedings of the Institution of Mechanical Engineers, Conference Proceedings Volume 182 ; 182 >
         au < doNotProcess ; 1968 ; Proceedings of the Institution of Mechanical Engineers, Conference Proceedings Volume 183 ; 183 >
-        au < manifest ; 1969 ; Proceedings of the Institution of Mechanical Engineers, Conference Proceedings Volume 184 ; 184 >
+        au < doNotProcess ; 1969 ; Proceedings of the Institution of Mechanical Engineers, Conference Proceedings Volume 184 ; 184 >
   
       }
   
@@ -43820,9 +43820,9 @@ comment[mpj] = now published by Brill
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
   
-        au < manifest ; 1997 ; Vision: The Journal of Business Perspective Volume 1 ; 1 >
-        au < manifest ; 1998 ; Vision: The Journal of Business Perspective Volume 2 ; 2 >
-        au < manifest ; 1999 ; Vision: The Journal of Business Perspective Volume 3 ; 3 >
+        au < doNotProcess ; 1997 ; Vision: The Journal of Business Perspective Volume 1 ; 1 >
+        au < doNotProcess ; 1998 ; Vision: The Journal of Business Perspective Volume 2 ; 2 >
+        au < doNotProcess ; 1999 ; Vision: The Journal of Business Perspective Volume 3 ; 3 >
         au < manifest ; 2000 ; Vision: The Journal of Business Perspective Volume 4 ; 4 >
         au < manifest ; 2001 ; Vision: The Journal of Business Perspective Volume 5 ; 5 >
         au < manifest ; 2002 ; Vision: The Journal of Business Perspective Volume 6 ; 6 >
@@ -44219,62 +44219,62 @@ comment[mpj] = now published by Brill
     param[base_url] = http://cjo.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < manifest ; 1933-1934 ; Canadian Journal of Occupational Therapy Volume 1 ; 1 >
-    au < manifest ; 1934-1935 ; Canadian Journal of Occupational Therapy Volume 2 ; 2 >
-    au < manifest ; 1935-1936 ; Canadian Journal of Occupational Therapy Volume 3 ; 3 >
-    au < manifest ; 1937 ; Canadian Journal of Occupational Therapy Volume 4 ; 4 >
-    au < manifest ; 1938 ; Canadian Journal of Occupational Therapy Volume 5 ; 5 >
-    au < manifest ; 1939 ; Canadian Journal of Occupational Therapy Volume 6 ; 6 >
-    au < manifest ; 1940 ; Canadian Journal of Occupational Therapy Volume 7 ; 7 >
-    au < manifest ; 1941 ; Canadian Journal of Occupational Therapy Volume 8 ; 8 >
-    au < manifest ; 1942 ; Canadian Journal of Occupational Therapy Volume 9 ; 9 >
-    au < manifest ; 1943 ; Canadian Journal of Occupational Therapy Volume 10 ; 10 >
-    au < manifest ; 1944 ; Canadian Journal of Occupational Therapy Volume 11 ; 11 >
-    au < manifest ; 1945 ; Canadian Journal of Occupational Therapy Volume 12 ; 12 >
-    au < manifest ; 1946 ; Canadian Journal of Occupational Therapy Volume 13 ; 13 >
-    au < manifest ; 1947 ; Canadian Journal of Occupational Therapy Volume 14 ; 14 >
-    au < manifest ; 1948 ; Canadian Journal of Occupational Therapy Volume 15 ; 15 >
-    au < manifest ; 1949 ; Canadian Journal of Occupational Therapy Volume 16 ; 16 >
-    au < manifest ; 1950 ; Canadian Journal of Occupational Therapy Volume 17 ; 17 >
-    au < manifest ; 1951 ; Canadian Journal of Occupational Therapy Volume 18 ; 18 >
-    au < manifest ; 1952 ; Canadian Journal of Occupational Therapy Volume 19 ; 19 >
-    au < manifest ; 1953 ; Canadian Journal of Occupational Therapy Volume 20 ; 20 >
-    au < manifest ; 1954 ; Canadian Journal of Occupational Therapy Volume 21 ; 21 >
-    au < manifest ; 1955 ; Canadian Journal of Occupational Therapy Volume 22 ; 22 >
-    au < manifest ; 1956 ; Canadian Journal of Occupational Therapy Volume 23 ; 23 >
-    au < manifest ; 1957 ; Canadian Journal of Occupational Therapy Volume 24 ; 24 >
-    au < manifest ; 1958 ; Canadian Journal of Occupational Therapy Volume 25 ; 25 >
-    au < manifest ; 1959 ; Canadian Journal of Occupational Therapy Volume 26 ; 26 >
-    au < manifest ; 1960 ; Canadian Journal of Occupational Therapy Volume 27 ; 27 >
-    au < manifest ; 1961 ; Canadian Journal of Occupational Therapy Volume 28 ; 28 >
-    au < manifest ; 1962 ; Canadian Journal of Occupational Therapy Volume 29 ; 29 >
-    au < manifest ; 1963 ; Canadian Journal of Occupational Therapy Volume 30 ; 30 >
-    au < manifest ; 1964 ; Canadian Journal of Occupational Therapy Volume 31 ; 31 >
-    au < manifest ; 1965 ; Canadian Journal of Occupational Therapy Volume 32 ; 32 >
-    au < manifest ; 1966 ; Canadian Journal of Occupational Therapy Volume 33 ; 33 >
-    au < manifest ; 1967 ; Canadian Journal of Occupational Therapy Volume 34 ; 34 >
-    au < manifest ; 1968 ; Canadian Journal of Occupational Therapy Volume 35 ; 35 >
-    au < manifest ; 1969 ; Canadian Journal of Occupational Therapy Volume 36 ; 36 >
-    au < manifest ; 1970 ; Canadian Journal of Occupational Therapy Volume 37 ; 37 >
-    au < manifest ; 1971 ; Canadian Journal of Occupational Therapy Volume 38 ; 38 >
-    au < manifest ; 1972 ; Canadian Journal of Occupational Therapy Volume 39 ; 39 >
-    au < manifest ; 1973 ; Canadian Journal of Occupational Therapy Volume 40 ; 40 >
-    au < manifest ; 1974 ; Canadian Journal of Occupational Therapy Volume 41 ; 41 >
-    au < manifest ; 1975 ; Canadian Journal of Occupational Therapy Volume 42 ; 42 >
-    au < manifest ; 1976 ; Canadian Journal of Occupational Therapy Volume 43 ; 43 >
-    au < manifest ; 1977 ; Canadian Journal of Occupational Therapy Volume 44 ; 44 >
-    au < manifest ; 1978 ; Canadian Journal of Occupational Therapy Volume 45 ; 45 >
-    au < manifest ; 1979 ; Canadian Journal of Occupational Therapy Volume 46 ; 46 >
-    au < manifest ; 1980 ; Canadian Journal of Occupational Therapy Volume 47 ; 47 >
-    au < manifest ; 1981 ; Canadian Journal of Occupational Therapy Volume 48 ; 48 >
-    au < manifest ; 1982 ; Canadian Journal of Occupational Therapy Volume 49 ; 49 >
-    au < manifest ; 1983 ; Canadian Journal of Occupational Therapy Volume 50 ; 50 >
-    au < manifest ; 1984 ; Canadian Journal of Occupational Therapy Volume 51 ; 51 >
-    au < manifest ; 1985 ; Canadian Journal of Occupational Therapy Volume 52 ; 52 >
-    au < manifest ; 1986 ; Canadian Journal of Occupational Therapy Volume 53 ; 53 >
-    au < manifest ; 1987 ; Canadian Journal of Occupational Therapy Volume 54 ; 54 >
-    au < manifest ; 1988 ; Canadian Journal of Occupational Therapy Volume 55 ; 55 >
-    au < manifest ; 1989 ; Canadian Journal of Occupational Therapy Volume 56 ; 56 >
+    au < doNotProcess ; 1933-1934 ; Canadian Journal of Occupational Therapy Volume 1 ; 1 >
+    au < doNotProcess ; 1934-1935 ; Canadian Journal of Occupational Therapy Volume 2 ; 2 >
+    au < doNotProcess ; 1935-1936 ; Canadian Journal of Occupational Therapy Volume 3 ; 3 >
+    au < doNotProcess ; 1937 ; Canadian Journal of Occupational Therapy Volume 4 ; 4 >
+    au < doNotProcess ; 1938 ; Canadian Journal of Occupational Therapy Volume 5 ; 5 >
+    au < doNotProcess ; 1939 ; Canadian Journal of Occupational Therapy Volume 6 ; 6 >
+    au < doNotProcess ; 1940 ; Canadian Journal of Occupational Therapy Volume 7 ; 7 >
+    au < doNotProcess ; 1941 ; Canadian Journal of Occupational Therapy Volume 8 ; 8 >
+    au < doNotProcess ; 1942 ; Canadian Journal of Occupational Therapy Volume 9 ; 9 >
+    au < doNotProcess ; 1943 ; Canadian Journal of Occupational Therapy Volume 10 ; 10 >
+    au < doNotProcess ; 1944 ; Canadian Journal of Occupational Therapy Volume 11 ; 11 >
+    au < doNotProcess ; 1945 ; Canadian Journal of Occupational Therapy Volume 12 ; 12 >
+    au < doNotProcess ; 1946 ; Canadian Journal of Occupational Therapy Volume 13 ; 13 >
+    au < doNotProcess ; 1947 ; Canadian Journal of Occupational Therapy Volume 14 ; 14 >
+    au < doNotProcess ; 1948 ; Canadian Journal of Occupational Therapy Volume 15 ; 15 >
+    au < doNotProcess ; 1949 ; Canadian Journal of Occupational Therapy Volume 16 ; 16 >
+    au < doNotProcess ; 1950 ; Canadian Journal of Occupational Therapy Volume 17 ; 17 >
+    au < doNotProcess ; 1951 ; Canadian Journal of Occupational Therapy Volume 18 ; 18 >
+    au < doNotProcess ; 1952 ; Canadian Journal of Occupational Therapy Volume 19 ; 19 >
+    au < doNotProcess ; 1953 ; Canadian Journal of Occupational Therapy Volume 20 ; 20 >
+    au < doNotProcess ; 1954 ; Canadian Journal of Occupational Therapy Volume 21 ; 21 >
+    au < doNotProcess ; 1955 ; Canadian Journal of Occupational Therapy Volume 22 ; 22 >
+    au < doNotProcess ; 1956 ; Canadian Journal of Occupational Therapy Volume 23 ; 23 >
+    au < doNotProcess ; 1957 ; Canadian Journal of Occupational Therapy Volume 24 ; 24 >
+    au < doNotProcess ; 1958 ; Canadian Journal of Occupational Therapy Volume 25 ; 25 >
+    au < doNotProcess ; 1959 ; Canadian Journal of Occupational Therapy Volume 26 ; 26 >
+    au < doNotProcess ; 1960 ; Canadian Journal of Occupational Therapy Volume 27 ; 27 >
+    au < doNotProcess ; 1961 ; Canadian Journal of Occupational Therapy Volume 28 ; 28 >
+    au < doNotProcess ; 1962 ; Canadian Journal of Occupational Therapy Volume 29 ; 29 >
+    au < doNotProcess ; 1963 ; Canadian Journal of Occupational Therapy Volume 30 ; 30 >
+    au < doNotProcess ; 1964 ; Canadian Journal of Occupational Therapy Volume 31 ; 31 >
+    au < doNotProcess ; 1965 ; Canadian Journal of Occupational Therapy Volume 32 ; 32 >
+    au < doNotProcess ; 1966 ; Canadian Journal of Occupational Therapy Volume 33 ; 33 >
+    au < doNotProcess ; 1967 ; Canadian Journal of Occupational Therapy Volume 34 ; 34 >
+    au < doNotProcess ; 1968 ; Canadian Journal of Occupational Therapy Volume 35 ; 35 >
+    au < doNotProcess ; 1969 ; Canadian Journal of Occupational Therapy Volume 36 ; 36 >
+    au < doNotProcess ; 1970 ; Canadian Journal of Occupational Therapy Volume 37 ; 37 >
+    au < doNotProcess ; 1971 ; Canadian Journal of Occupational Therapy Volume 38 ; 38 >
+    au < doNotProcess ; 1972 ; Canadian Journal of Occupational Therapy Volume 39 ; 39 >
+    au < doNotProcess ; 1973 ; Canadian Journal of Occupational Therapy Volume 40 ; 40 >
+    au < doNotProcess ; 1974 ; Canadian Journal of Occupational Therapy Volume 41 ; 41 >
+    au < doNotProcess ; 1975 ; Canadian Journal of Occupational Therapy Volume 42 ; 42 >
+    au < doNotProcess ; 1976 ; Canadian Journal of Occupational Therapy Volume 43 ; 43 >
+    au < doNotProcess ; 1977 ; Canadian Journal of Occupational Therapy Volume 44 ; 44 >
+    au < doNotProcess ; 1978 ; Canadian Journal of Occupational Therapy Volume 45 ; 45 >
+    au < doNotProcess ; 1979 ; Canadian Journal of Occupational Therapy Volume 46 ; 46 >
+    au < doNotProcess ; 1980 ; Canadian Journal of Occupational Therapy Volume 47 ; 47 >
+    au < doNotProcess ; 1981 ; Canadian Journal of Occupational Therapy Volume 48 ; 48 >
+    au < doNotProcess ; 1982 ; Canadian Journal of Occupational Therapy Volume 49 ; 49 >
+    au < doNotProcess ; 1983 ; Canadian Journal of Occupational Therapy Volume 50 ; 50 >
+    au < doNotProcess ; 1984 ; Canadian Journal of Occupational Therapy Volume 51 ; 51 >
+    au < doNotProcess ; 1985 ; Canadian Journal of Occupational Therapy Volume 52 ; 52 >
+    au < doNotProcess ; 1986 ; Canadian Journal of Occupational Therapy Volume 53 ; 53 >
+    au < doNotProcess ; 1987 ; Canadian Journal of Occupational Therapy Volume 54 ; 54 >
+    au < doNotProcess ; 1988 ; Canadian Journal of Occupational Therapy Volume 55 ; 55 >
+    au < doNotProcess ; 1989 ; Canadian Journal of Occupational Therapy Volume 56 ; 56 >
     au < manifest ; 1990 ; Canadian Journal of Occupational Therapy Volume 57 ; 57 >
     au < manifest ; 1991 ; Canadian Journal of Occupational Therapy Volume 58 ; 58 >
     au < manifest ; 1992 ; Canadian Journal of Occupational Therapy Volume 59 ; 59 >
@@ -45117,9 +45117,9 @@ comment[mpj] = now published by Brill
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
         param[base_url] = http://jtt.sagepub.com/
         
-        au < HighWirePressH20Plugin ; exists ; 1997 ; Annals of Clinical Biochemistry Volume 34 ; 34 >
-        au < HighWirePressH20Plugin ; exists ; 1998 ; Annals of Clinical Biochemistry Volume 35 ; 35 >
-        au < HighWirePressH20Plugin ; exists ; 1999 ; Annals of Clinical Biochemistry Volume 36 ; 36 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1997 ; Annals of Clinical Biochemistry Volume 34 ; 34 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1998 ; Annals of Clinical Biochemistry Volume 35 ; 35 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1999 ; Annals of Clinical Biochemistry Volume 36 ; 36 >
         au < HighWirePressH20Plugin ; doNotProcess ; 2000 ; Annals of Clinical Biochemistry Volume 37 ; 37 >
         au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; Annals of Clinical Biochemistry Volume 38 ; 38 >
         au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; Annals of Clinical Biochemistry Volume 39 ; 39 >
