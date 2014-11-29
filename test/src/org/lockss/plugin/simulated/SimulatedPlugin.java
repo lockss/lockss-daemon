@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedPlugin.java,v 1.32 2014-11-25 05:13:21 tlipkis Exp $
+ * $Id: SimulatedPlugin.java,v 1.33 2014-11-29 19:54:13 tlipkis Exp $
  */
 
 /*
@@ -318,13 +318,14 @@ public class SimulatedPlugin extends BasePlugin implements PluginTestable {
     return "Simulated Content";
   }
 
-  // Suppress TitleConfig creation.  SimulatedPlugin's only definitional
-  // param is the root directory, typically a temp dir, so Tdb entries &
-  // TitleConfig aren't useful for defining AUs.  But some OpenUrl tests
-  // use SimulatedPlugin because they need a plugin, and the root-less
-  // TdbEntries cause errors attempting to create AUIDs.
+  // SimulatedPlugin's only definitional param is the root directory,
+  // typically a temp dir, so Tdb entries & TitleConfig don't really make
+  // sense, and cause (harmless) NPEs in some unit test.  However, stf
+  // currently marks AUs down by creating a tdb entry, so this can't be
+  // suppressed.  stf should be changed to
   @Override
   protected void setTitleConfigs(Tdb tdb) {
+    super.setTitleConfigs(tdb);
   }
 
   /**

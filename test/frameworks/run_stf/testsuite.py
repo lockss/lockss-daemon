@@ -781,7 +781,12 @@ class TotalLossRecoveryV3Tests( V3TestCases ):
         self.victim.simulateDiskFailure()
         log.info( 'Deleted entire contents of cache on stopped daemon' )
 
-        # Write a TitleDB entry for the simulated AU so it will be marked 'publisher down' when restored.
+        # Write a TitleDB entry for the simulated AU so it will be marked
+        # 'publisher down' when restored.
+
+        # XXX This should be changed to add pub_down=true to the AU config
+        # rather than relying on a tdb entry for a simulated AU
+
         self.framework.appendLocalConfig( { 'org.lockss.auconfig.allowEditDefaultOnlyParams': True,
                                             'org.lockss.title.sim1.journalTitle': 'Simulated Content',
                                             'org.lockss.title.sim1.param.1.key': 'root',
