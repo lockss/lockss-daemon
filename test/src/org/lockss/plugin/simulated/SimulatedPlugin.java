@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedPlugin.java,v 1.33 2014-11-29 19:54:13 tlipkis Exp $
+ * $Id: SimulatedPlugin.java,v 1.34 2014-11-29 21:40:44 tlipkis Exp $
  */
 
 /*
@@ -322,7 +322,8 @@ public class SimulatedPlugin extends BasePlugin implements PluginTestable {
   // typically a temp dir, so Tdb entries & TitleConfig don't really make
   // sense, and cause (harmless) NPEs in some unit test.  However, stf
   // currently marks AUs down by creating a tdb entry, so this can't be
-  // suppressed.  stf should be changed to
+  // suppressed.  stf should be changed to mark AUs down by changing their
+  // config instead
   @Override
   protected void setTitleConfigs(Tdb tdb) {
     super.setTitleConfigs(tdb);
