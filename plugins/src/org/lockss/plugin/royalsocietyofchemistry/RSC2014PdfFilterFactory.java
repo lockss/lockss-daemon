@@ -1,5 +1,5 @@
 /*
- * $Id: RSC2014PdfFilterFactory.java,v 1.5 2014-05-28 20:48:48 etenbrink Exp $
+ * $Id: RSC2014PdfFilterFactory.java,v 1.6 2014-11-30 23:21:34 etenbrink Exp $
  */
 
 /*
@@ -56,6 +56,9 @@ public class RSC2014PdfFilterFactory extends SimplePdfFilterFactory {
       // XXX talked thru with W, may need to revisit if problems appear, but for now no problems
       log.warning("caught/ignore exception from pdf framework", e);
     }
+    
+    pdfDocument.unsetMetadata();
+    pdfDocument.unsetModificationDate();
     PdfUtil.normalizeTrailerId(pdfDocument);
   }
   
