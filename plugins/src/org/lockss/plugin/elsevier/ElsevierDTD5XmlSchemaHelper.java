@@ -1,5 +1,5 @@
 /*
- * $Id: ElsevierDTD5XmlSchemaHelper.java,v 1.3 2014-11-19 00:50:18 alexandraohlson Exp $
+ * $Id: ElsevierDTD5XmlSchemaHelper.java,v 1.4 2014-12-01 22:49:31 alexandraohlson Exp $
  */
 
 /*
@@ -78,7 +78,7 @@ implements SourceXmlSchemaHelper {
   /*
    * XPATH DEFINITIONS WE CARE ABOUT
    */
-  
+
   private static final String dataset_content = "/dataset/dataset-content";
   // Each article starts at its only unique "dataset_article" node
 
@@ -97,7 +97,8 @@ implements SourceXmlSchemaHelper {
   /* These are used for article level metadata */
   static public final String common_title = "title";
   static public final String common_author_group = "author-group";
-  
+  static public final String common_dochead = "dochead/textfn";
+
   static private final NodeValue DATE_VALUE = new NodeValue() {
     @Override
     public String getValue(Node node) {
@@ -108,7 +109,6 @@ implements SourceXmlSchemaHelper {
     }
   };
 
-  
   /* 
    * <journal-issue>
    *   <journal-issue-properties>
@@ -141,7 +141,7 @@ implements SourceXmlSchemaHelper {
     }
   };
 
-  
+
   /* 1.  MAP associating xpath with value type with evaluator */
   static private final Map<String,XPathValue> articleMap = 
       new HashMap<String,XPathValue>();
@@ -176,13 +176,13 @@ implements SourceXmlSchemaHelper {
     // but cooked with the rest
     cookMap.put(common_title, MetadataField.FIELD_ARTICLE_TITLE);
     cookMap.put(common_author_group, 
-       new MetadataField(MetadataField.FIELD_AUTHOR, MetadataField.splitAt(AUTHOR_SPLIT_CHAR)));  
+        new MetadataField(MetadataField.FIELD_AUTHOR, MetadataField.splitAt(AUTHOR_SPLIT_CHAR)));  
   }
 
-/*
- *  article-level main.xml  - definitions used in the MetadataExtraactor to pull
- *  the remaining metadata from the article metadata file 
- */
+  /*
+   *  article-level main.xml  - definitions used in the MetadataExtraactor to pull
+   *  the remaining metadata from the article metadata file 
+   */
 
   /* "ce:blah" - the 'ce' portion would not be needed for xpath as it just 
    * defines a namespace. But since these are used for direct comparison with 
@@ -192,12 +192,15 @@ implements SourceXmlSchemaHelper {
   static public final String subtitleNodeName = "ce:subtitle";
   static public final String surnameNodeName = "ce:surname";
   static public final String givennameNodeName = "ce:given-name";
+  static public final String commonText = "ce:text";
+  static public final String authorCollaborator = "ce:collaboration";
+
   /* 
    * TITLE INFORMATION
    * <ce:title>
    * see if the <ce:subtitle> sibling exists and has information
    */
-static private final NodeValue TITLE_VALUE = new NodeValue() {
+  static private final NodeValue TITLE_VALUE = new NodeValue() {
     @Override
     public String getValue(Node node) {
       log.debug3("getValue of article title");
@@ -260,9 +263,10 @@ static private final NodeValue TITLE_VALUE = new NodeValue() {
       NodeList groupChildNodes = node.getChildNodes();
       for (int n = 0; n< groupChildNodes.getLength(); n++) {
         Node nextNode = groupChildNodes.item(n);
+        String surName = null;
+        String givenName = null;
         if (authorNodeName.equals(nextNode.getNodeName())) {
-          String surName = null;
-          String givenName = null;
+          // an author node
           NodeList childNodes = nextNode.getChildNodes();
           for (int m = 0; m < childNodes.getLength(); m++) {
             Node infoNode = childNodes.item(m);
@@ -273,38 +277,49 @@ static private final NodeValue TITLE_VALUE = new NodeValue() {
               givenName = infoNode.getTextContent();
             }
           }
-          // We may choose to limit the type of roles, but not sure which yet
-          if  (surName != null) {
-            valbuilder.append(surName);
-            if (givenName != null) {
-              valbuilder.append(ElsevierDTD5XmlSchemaHelper.AUTHOR_SEPARATOR +  " " + givenName);
+        } else if (authorCollaborator.equals(nextNode.getNodeName())) {
+          // instead of an author, you might have a collaboration name
+          NodeList childNodes = nextNode.getChildNodes();
+          for (int m = 0; m < childNodes.getLength(); m++) {
+            Node infoNode = childNodes.item(m);
+            String nodeName = infoNode.getNodeName();
+            if (commonText.equals(nodeName)) {
+              surName = infoNode.getTextContent();
             }
-            valbuilder.append(ElsevierDTD5XmlSchemaHelper.AUTHOR_SPLIT_CHAR); 
           }
+        }
+        // We may choose to limit the type of roles, but not sure which yet
+        if  (surName != null) {
+          valbuilder.append(surName);
+          if (givenName != null) {
+            valbuilder.append(ElsevierDTD5XmlSchemaHelper.AUTHOR_SEPARATOR +  " " + givenName);
+          }
+          valbuilder.append(ElsevierDTD5XmlSchemaHelper.AUTHOR_SPLIT_CHAR);
         }
       }
       int vlen;
       if ( (vlen = valbuilder.length()) > 0) {
         valbuilder.deleteCharAt(vlen-1); // remove final splitter ";"
-        log.debug3("title found: " + valbuilder.toString());
+        log.debug3("author found: " + valbuilder.toString());
         return valbuilder.toString();
       }
       log.debug3("No valid contributor in this contributor node.");
       return null;
     }
   };
-    
-    static public final Map<String,XPathValue> articleLevelMDMap = 
-        new HashMap<String,XPathValue>();
-    {
-      articleLevelMDMap.put(ElsevierDTD5XmlSchemaHelper.common_title, TITLE_VALUE);
-      articleLevelMDMap.put(ElsevierDTD5XmlSchemaHelper.common_author_group, AUTHOR_VALUE);
-    }
-    /*
-     * END OF DEFINITION OF SCHEMA FOR LOW-LEVEL ARTICLE XML
-     */
-  
-  
+
+  static public final Map<String,XPathValue> articleLevelMDMap = 
+      new HashMap<String,XPathValue>();
+  {
+    articleLevelMDMap.put(ElsevierDTD5XmlSchemaHelper.common_title, TITLE_VALUE);
+    articleLevelMDMap.put(ElsevierDTD5XmlSchemaHelper.common_author_group, AUTHOR_VALUE);
+    articleLevelMDMap.put(ElsevierDTD5XmlSchemaHelper.common_dochead, XmlDomMetadataExtractor.TEXT_VALUE);
+  }
+  /*
+   * END OF DEFINITION OF SCHEMA FOR LOW-LEVEL ARTICLE XML
+   */
+
+
   /**
    * 
    * return NULL

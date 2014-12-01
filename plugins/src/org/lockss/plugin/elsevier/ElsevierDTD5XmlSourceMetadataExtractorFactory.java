@@ -1,5 +1,5 @@
 /*
- * $Id: ElsevierDTD5XmlSourceMetadataExtractorFactory.java,v 1.5 2014-11-26 20:46:46 alexandraohlson Exp $
+ * $Id: ElsevierDTD5XmlSourceMetadataExtractorFactory.java,v 1.6 2014-12-01 22:49:31 alexandraohlson Exp $
  */
 
 /*
@@ -243,6 +243,13 @@ public class ElsevierDTD5XmlSourceMetadataExtractorFactory extends SourceXmlMeta
           String rawVal = oneAM.getRaw(ElsevierDTD5XmlSchemaHelper.common_title);
           if (rawVal != null) {
             thisAM.putRaw(ElsevierDTD5XmlSchemaHelper.common_title, rawVal);
+          } else {
+            // a simple-article might use document heading, like "Book Review" as title
+            rawVal = oneAM.getRaw(ElsevierDTD5XmlSchemaHelper.common_dochead);
+            if (rawVal != null) {
+              // store it in the title anyway, it only exists if title doesn't
+              thisAM.putRaw(ElsevierDTD5XmlSchemaHelper.common_title, rawVal);
+            }
           }
           rawVal = oneAM.getRaw(ElsevierDTD5XmlSchemaHelper.common_author_group);
           if ( rawVal != null) {
