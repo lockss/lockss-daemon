@@ -78,7 +78,7 @@
     
       param[journal_id] = critphilrace
 
-      au < testing ; exists ; 2013 ; Comparative Literature Studies Volume 1 ; 1 >
+      au < ready ; exists ; 2013 ; Comparative Literature Studies Volume 1 ; 1 >
       au < ready ; exists ; 2014 ; Comparative Literature Studies Volume 2 ; 2 >
       
   }
@@ -152,7 +152,7 @@
 
       au < manifest ; exists ; 2010 ; The Good Society Volume 19 ; 19 >
       au < manifest ; exists ; 2011 ; The Good Society Volume 20 ; 20 >
-      au < testing ; exists ; 2012 ; The Good Society Volume 21 ; 21 >
+      au < ready ; exists ; 2012 ; The Good Society Volume 21 ; 21 >
       au < crawling ; exists ; 2013 ; The Good Society Volume 22 ; 22 >
       au < ready ; exists ; 2014 ; The Good Society Volume 23 ; 23 >
       
@@ -224,7 +224,7 @@
       param[journal_id] = jaynrandstud
 
       au < crawling ; exists ; 2011 ; The Journal of Ayn Rand Studies Volume 11 ; 11 >
-      au < testing ; exists ; 2012 ; The Journal of Ayn Rand Studies Volume 12 ; 12 >
+      au < ready ; exists ; 2012 ; The Journal of Ayn Rand Studies Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; The Journal of Ayn Rand Studies Volume 13 ; 13 >
       au < ready ; exists ; 2014 ; The Journal of Ayn Rand Studies Volume 14 ; 14 >
       
@@ -298,7 +298,7 @@
 
       au < manifest ; exists ; 2010 ; Journal of Modern Periodical Studies Volume 1 ; 1 >
       au < manifest ; exists ; 2011 ; Journal of Modern Periodical Studies Volume 2 ; 2 >
-      au < testing ; exists ; 2012 ; Journal of Modern Periodical Studies Volume 3 ; 3 >
+      au < ready ; exists ; 2012 ; Journal of Modern Periodical Studies Volume 3 ; 3 >
       au < crawling ; exists ; 2013-2014 ; Journal of Modern Periodical Studies Volume 4 ; 4 >
       
   }
@@ -357,7 +357,7 @@
 
       au < manifest ; exists ; 2010 ; The Journal of Speculative Philosophy Volume 24 ; 24 >
       au < manifest ; exists ; 2011 ; The Journal of Speculative Philosophy Volume 25 ; 25 >
-      au < testing ; exists ; 2012 ; The Journal of Speculative Philosophy Volume 26 ; 26 >
+      au < ready ; exists ; 2012 ; The Journal of Speculative Philosophy Volume 26 ; 26 >
       au < crawling ; exists ; 2013 ; The Journal of Speculative Philosophy Volume 27 ; 27 >
       au < ready ; exists ; 2014 ; The Journal of Speculative Philosophy Volume 28 ; 28 >
       
@@ -468,7 +468,7 @@
 
       au < manifest ; exists ; 2010 ; Philosophy and Rhetoric Volume 43 ; 43 >
       au < manifest ; exists ; 2011 ; Philosophy and Rhetoric Volume 44 ; 44 >
-      au < testing ; exists ; 2012 ; Philosophy and Rhetoric Volume 45 ; 45 >
+      au < ready ; exists ; 2012 ; Philosophy and Rhetoric Volume 45 ; 45 >
       au < crawling ; exists ; 2013 ; Philosophy and Rhetoric Volume 46 ; 46 >
       au < ready ; exists ; 2014 ; Philosophy and Rhetoric Volume 47 ; 47 >
       
@@ -485,7 +485,7 @@
 
       param[journal_id] = preternature
 
-      au < testing ; exists ; 2012 ; Preternature: Critical and Historical Studies on the Preternatural Volume 1 ; 1 >
+      au < ready ; exists ; 2012 ; Preternature: Critical and Historical Studies on the Preternatural Volume 1 ; 1 >
       au < crawling ; exists ; 2013 ; Preternature: Critical and Historical Studies on the Preternatural Volume 2 ; 2 >
       au < ready ; exists ; 2014 ; Preternature: Critical and Historical Studies on the Preternatural Volume 3 ; 3 >
       
@@ -525,7 +525,7 @@
 
       au < notReady ; exists ; 2010 ; SHAW Volume 30 ; 30 >
       au < manifest ; exists ; 2011 ; SHAW Volume 31 ; 31 >
-      au < testing ; exists ; 2012 ; SHAW Volume 32 ; 32 >
+      au < ready ; exists ; 2012 ; SHAW Volume 32 ; 32 >
       au < crawling ; exists ; 2013 ; SHAW Volume 33 ; 33 >
       au < ready ; exists ; 2014 ; SHAW Volume 34 ; 34 >
       
@@ -563,9 +563,9 @@
 
       au < manifest ; exists ; 2010 ; Steinbeck Review Volume 7 ; 7 >
       au < manifest ; exists ; 2011 ; Steinbeck Review Volume 8 ; 8 >
-      au < testing ; exists ; 2012 ; Steinbeck Review Volume 9 ; 9 >
+      au < ready ; exists ; 2012 ; Steinbeck Review Volume 9 ; 9 >
       au < crawling ; exists ; 2013 ; Steinbeck Review Volume 10 ; 10 >
-      au < testing ; exists ; 2014 ; Steinbeck Review Volume 11 ; 11 >
+      au < ready ; exists ; 2014 ; Steinbeck Review Volume 11 ; 11 >
       
   }
 
