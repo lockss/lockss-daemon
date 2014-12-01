@@ -713,7 +713,7 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
+      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/$param{book_isbn}.pdf/)) {
         if ($man_contents =~ m/<h1\s*>\s*(.*)\s*<\/h1>/si) {
           $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
