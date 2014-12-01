@@ -1,5 +1,5 @@
 /*
- * $Id: TestAnnualReviewsPdfFilterFactory.java,v 1.3 2014-11-26 23:57:48 thib_gc Exp $
+ * $Id: TestAnnualReviewsPdfFilterFactory.java,v 1.4 2014-12-01 19:29:36 thib_gc Exp $
  */
 
 /*
@@ -97,6 +97,7 @@ public class TestAnnualReviewsPdfFilterFactory extends LockssTestCase {
 // ---- end PDF stream ----
     ));
     assertFalse(worker.result);
+    
     worker.process(MockPdfTokenStream.parse(
 // ---- begin PDF stream ----
 "(This is irrelevant.) Tj" +
