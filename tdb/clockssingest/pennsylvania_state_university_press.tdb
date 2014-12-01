@@ -41,7 +41,7 @@
       au < crawling ; exists ; 2009-2010 ; The Chaucer Review Volume 44 ; 44 >
       au < manifest ; exists ; 2010-2011 ; The Chaucer Review Volume 45 ; 45 >
       au < manifest ; exists ; 2011-2012 ; The Chaucer Review Volume 46 ; 46 >
-      au < testing ; exists ; 2012-2013 ; The Chaucer Review Volume 47 ; 47 >
+      au < ready ; exists ; 2012-2013 ; The Chaucer Review Volume 47 ; 47 >
       au < testing ; exists ; 2013-2014 ; The Chaucer Review Volume 48 ; 48 >
       
   }
@@ -95,7 +95,7 @@
 
       au < manifest ; exists ; 2010 ; The Edgar Allen Poe Review Volume 11 ; 11 >
       au < manifest ; exists ; 2011 ; The Edgar Allen Poe Review Volume 12 ; 12 >
-      au < testing ; exists ; 2012 ; The Edgar Allen Poe Review Volume 13 ; 13 >
+      au < ready ; exists ; 2012 ; The Edgar Allen Poe Review Volume 13 ; 13 >
       au < crawling ; exists ; 2013 ; The Edgar Allen Poe Review Volume 14 ; 14 >
       au < ready ; exists ; 2014 ; The Edgar Allen Poe Review Volume 15 ; 15 >
       
@@ -172,7 +172,7 @@
       au < manifest ; exists ; 2009-2010 ; Interdisciplinary Literary Studies Volume 11 ; 11 >
       au < manifest ; exists ; 2010-2011 ; Interdisciplinary Literary Studies Volume 12 ; 12 >
       au < manifest ; exists ; 2011 ; Interdisciplinary Literary Studies Volume 13 ; 13 >
-      au < testing ; exists ; 2012 ; Interdisciplinary Literary Studies Volume 14 ; 14 >
+      au < ready ; exists ; 2012 ; Interdisciplinary Literary Studies Volume 14 ; 14 >
       au < crawling ; exists ; 2013 ; Interdisciplinary Literary Studies Volume 15 ; 15 >
       au < ready ; exists ; 2014 ; Interdisciplinary Literary Studies Volume 16 ; 16 >
       
@@ -318,7 +318,7 @@
       au < manifest ; exists ; 2010 ; Journal of Moravian History Volume 9 ; 9 >
       au < manifest ; exists ; 2011 ; Journal of Moravian History Volume 10 ; 10 >
       au < crawling ; exists ; 2011 ; Journal of Moravian History Volume 11 ; 11 >
-      au < testing ; exists ; 2012 ; Journal of Moravian History Volume 12 ; 12 >
+      au < ready ; exists ; 2012 ; Journal of Moravian History Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; Journal of Moravian History Volume 13 ; 13 >
       au < notReady ; exists ; 2014 ; Journal of Moravian History Volume 14 ; 14 >
       
@@ -338,7 +338,7 @@
 
       au < manifest ; exists ; 2011 ; The Journal of Nietzsche Studies Volume 41 ; 41 >
       au < manifest ; exists ; 2011 ; The Journal of Nietzsche Studies Volume 42 ; 42 >
-      au < testing ; exists ; 2012 ; The Journal of Nietzsche Studies Volume 43 ; 43 >
+      au < ready ; exists ; 2012 ; The Journal of Nietzsche Studies Volume 43 ; 43 >
       au < crawling ; exists ; 2013 ; The Journal of Nietzsche Studies Volume 44 ; 44 >
       au < ready ; exists ; 2014 ; The Journal of Nietzsche Studies Volume 45 ; 45 >
       
@@ -394,7 +394,7 @@
       param[journal_id] = mediterraneanstu
 
       au < manifest ; exists ; 2010 ; Mediterranean Studies Volume 19 ; 19 >
-      au < testing ; exists ; 2012 ; Mediterranean Studies Volume 20 ; 20 >
+      au < ready ; exists ; 2012 ; Mediterranean Studies Volume 20 ; 20 >
       au < crawling ; exists ; 2013 ; Mediterranean Studies Volume 21 ; 21 >
       au < testing ; exists ; 2014 ; Mediterranean Studies Volume 22 ; 22 >
       
@@ -544,7 +544,7 @@
 
       au < manifest ; exists ; 2010 ; Soundings: An Interdisciplinary Journal Volume 93 ; 93 >
       au < manifest ; exists ; 2011 ; Soundings: An Interdisciplinary Journal Volume 94 ; 94 >
-      au < testing ; exists ; 2012 ; Soundings: An Interdisciplinary Journal Volume 95 ; 95 >
+      au < ready ; exists ; 2012 ; Soundings: An Interdisciplinary Journal Volume 95 ; 95 >
       au < crawling ; exists ; 2013 ; Soundings: An Interdisciplinary Journal Volume 96 ; 96 >
       au < ready ; exists ; 2014 ; Soundings: An Interdisciplinary Journal Volume 97 ; 97 >
       
@@ -582,7 +582,7 @@
 
       au < manifest ; exists ; 2010 ; Studies in American Jewish Literature Volume 29 ; 29 >
       au < manifest ; exists ; 2011 ; Studies in American Jewish Literature Volume 30 ; 30 >
-      au < testing ; exists ; 2012 ; Studies in American Jewish Literature Volume 31 ; 31 >
+      au < ready ; exists ; 2012 ; Studies in American Jewish Literature Volume 31 ; 31 >
       au < crawling ; exists ; 2013 ; Studies in American Jewish Literature Volume 32 ; 32 >
       au < ready ; exists ; 2014 ; Studies in American Jewish Literature Volume 33 ; 33 >
       
@@ -620,9 +620,9 @@
 
       au < manifest ; exists ; 2010 ; Utopian Studies Volume 21 ; 21 >
       au < manifest ; exists ; 2011 ; Utopian Studies Volume 22 ; 22 >
-      au < testing ; exists ; 2012 ; Utopian Studies Volume 23 ; 23 >
+      au < ready ; exists ; 2012 ; Utopian Studies Volume 23 ; 23 >
       au < crawling ; exists ; 2013 ; Utopian Studies Volume 24 ; 24 >
-      au < testing ; exists ; 2014 ; Utopian Studies Volume 25 ; 25 >
+      au < ready ; exists ; 2014 ; Utopian Studies Volume 25 ; 25 >
       
   }
 
