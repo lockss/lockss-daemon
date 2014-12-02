@@ -1,4 +1,4 @@
-/* $Id: ElsevierDTD5XmlSourceArticleIteratorFactory.java,v 1.3 2014-11-19 00:50:18 alexandraohlson Exp $
+/* $Id: ElsevierDTD5XmlSourceArticleIteratorFactory.java,v 1.4 2014-12-02 21:00:36 alexandraohlson Exp $
 
 Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -51,7 +51,7 @@ public class ElsevierDTD5XmlSourceArticleIteratorFactory
   // BASE_URL/2014/CLKS0000000000003A.tar!/CLKS0000000000003/dataset.xml
   protected static final String TOP_METADATA_PATTERN_TEMPLATE = "\"(%s%d/[^/]+)A\\.tar!/([^/]+)/dataset\\.xml$\",base_url,year";
   
-  public static final Pattern XML_PATTERN = Pattern.compile("/(.*)\\.xml$", Pattern.CASE_INSENSITIVE);
+  public static final Pattern DATASET_XML_PATTERN = Pattern.compile("/(dataset)\\.xml$", Pattern.CASE_INSENSITIVE);
   public static final String XML_REPLACEMENT = "/$1.xml";
   
   //
@@ -95,7 +95,7 @@ public class ElsevierDTD5XmlSourceArticleIteratorFactory
     // ultimately the metadata extractor needs to set the entire facet map 
 
     // set up XML to be an aspect that will trigger an ArticleFiles to feed the metadata extractor
-    builder.addAspect(XML_PATTERN,
+    builder.addAspect(DATASET_XML_PATTERN,
                       XML_REPLACEMENT,
                       ArticleFiles.ROLE_ARTICLE_METADATA);
 

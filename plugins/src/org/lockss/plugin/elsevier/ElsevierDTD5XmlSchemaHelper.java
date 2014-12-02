@@ -1,5 +1,5 @@
 /*
- * $Id: ElsevierDTD5XmlSchemaHelper.java,v 1.4 2014-12-01 22:49:31 alexandraohlson Exp $
+ * $Id: ElsevierDTD5XmlSchemaHelper.java,v 1.5 2014-12-02 21:00:36 alexandraohlson Exp $
  */
 
 /*
@@ -99,6 +99,11 @@ implements SourceXmlSchemaHelper {
   static public final String common_author_group = "author-group";
   static public final String common_dochead = "dochead/textfn";
 
+  /* 
+   * Date values look like this: 2014-09-22T00:54:27Z
+   * and we need them to look like this: 2014-09-22 to be acceptable to our
+   * metadata database
+   */
   static private final NodeValue DATE_VALUE = new NodeValue() {
     @Override
     public String getValue(Node node) {

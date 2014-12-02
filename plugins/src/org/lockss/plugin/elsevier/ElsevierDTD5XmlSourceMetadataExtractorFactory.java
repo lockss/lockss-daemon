@@ -1,5 +1,5 @@
 /*
- * $Id: ElsevierDTD5XmlSourceMetadataExtractorFactory.java,v 1.6 2014-12-01 22:49:31 alexandraohlson Exp $
+ * $Id: ElsevierDTD5XmlSourceMetadataExtractorFactory.java,v 1.7 2014-12-02 21:00:36 alexandraohlson Exp $
  */
 
 /*
@@ -96,14 +96,13 @@ public class ElsevierDTD5XmlSourceMetadataExtractorFactory extends SourceXmlMeta
   // and to extract the final necessary metadata - article title and authors
 
 
-  private static final Pattern XML_PATTERN = Pattern.compile("/(.*)\\.xml$", Pattern.CASE_INSENSITIVE);
+  private static final Pattern MAIN_XML_PATTERN = Pattern.compile("/(main)\\.xml$", Pattern.CASE_INSENSITIVE);
   private static final String XML_REPLACEMENT = "/$1.xml";
 
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
       String contentType)
           throws PluginException {
-    log.debug2("createFileMetadtaExtractor for ");
     return new ElsevierDTD5XmlSourceMetadataExtractor();
   }
 
@@ -117,8 +116,6 @@ public class ElsevierDTD5XmlSourceMetadataExtractorFactory extends SourceXmlMeta
      */
     private final Map<String,String> TarContentsMap;
     public ElsevierDTD5XmlSourceMetadataExtractor() {
-      //log.setLevel("debug3");
-      log.debug2("Creating a new TarContentsMap for this instance of a DTDextractor");
       TarContentsMap = new HashMap<String, String>();
     }
 
@@ -135,10 +132,9 @@ public class ElsevierDTD5XmlSourceMetadataExtractorFactory extends SourceXmlMeta
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
       // Once you have it, just keep returning the same one. It won't change.
-      if (ElsevierDTD5PublishingHelper != null) {
-        return ElsevierDTD5PublishingHelper;
+      if (ElsevierDTD5PublishingHelper == null) {
+        ElsevierDTD5PublishingHelper = new ElsevierDTD5XmlSchemaHelper();
       }
-      ElsevierDTD5PublishingHelper = new ElsevierDTD5XmlSchemaHelper();
       return ElsevierDTD5PublishingHelper;
     }
 
@@ -279,9 +275,9 @@ public class ElsevierDTD5XmlSourceMetadataExtractorFactory extends SourceXmlMeta
      *   the results to just the set of tar files with the same unique file number.  
      */
     protected Collection<ArticleMetadata> modifyAMList(SourceXmlSchemaHelper helper,
-        CachedUrl cu, List<ArticleMetadata> allAMs) {
+        CachedUrl datasetCu, List<ArticleMetadata> allAMs) {
 
-      Matcher mat = TOP_METADATA_PATTERN.matcher(cu.getUrl());
+      Matcher mat = TOP_METADATA_PATTERN.matcher(datasetCu.getUrl());
       Pattern ARTICLE_METADATA_PATTERN = null;
       if (mat.matches()) {
         String pattern_string = mat.group(1) + mat.group(2) + "[A-Z]\\.tar!/" + mat.group(2) + "/.*/main\\.xml$";
@@ -289,7 +285,7 @@ public class ElsevierDTD5XmlSourceMetadataExtractorFactory extends SourceXmlMeta
         ARTICLE_METADATA_PATTERN = Pattern.compile(pattern_string, Pattern.CASE_INSENSITIVE);
 
         // Now create the map of files to the tarfile they're in
-        ArchivalUnit au = cu.getArchivalUnit();
+        ArchivalUnit au = datasetCu.getArchivalUnit();
         SubTreeArticleIteratorBuilder articlebuilder = new SubTreeArticleIteratorBuilder(au);
         SubTreeArticleIterator.Spec artSpec = articlebuilder.newSpec();
         // Limit it just to this group of tar files
@@ -297,7 +293,7 @@ public class ElsevierDTD5XmlSourceMetadataExtractorFactory extends SourceXmlMeta
         artSpec.setExcludeSubTreePattern(NESTED_ARCHIVE_PATTERN); //but do not descend in to any underlying archives
         artSpec.setVisitArchiveMembers(true);
         articlebuilder.setSpec(artSpec);
-        articlebuilder.addAspect(XML_PATTERN,
+        articlebuilder.addAspect(MAIN_XML_PATTERN,
             XML_REPLACEMENT,
             ArticleFiles.ROLE_ARTICLE_METADATA);
 
@@ -312,7 +308,7 @@ public class ElsevierDTD5XmlSourceMetadataExtractorFactory extends SourceXmlMeta
           log.debug3("TarContentsMap add key: " + article_xml_url.substring(dividespot + 1));
         }
       } else {
-        log.warning("ElsevierDTD5: Unable to create article-level map for " + cu.getUrl() + " - metadata will not include article titles or useful access.urls");
+        log.warning("ElsevierDTD5: Unable to create article-level map for " + datasetCu.getUrl() + " - metadata will not include article titles or useful access.urls");
       }
       return  allAMs;
     }
