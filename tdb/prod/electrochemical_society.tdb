@@ -22,6 +22,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of the Electrochemical Society Volume 159 ; 159 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Journal of the Electrochemical Society Volume 160 ; 160 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Journal of the Electrochemical Society Volume 161 ; 161 >
+    au < HighWirePressH20Plugin ; expected ; 2015 ; Journal of the Electrochemical Society Volume 162 ; 162 >
     
   }
 
@@ -36,6 +37,7 @@
 
     param[base_url] = http://esl.ecsdl.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    comment[ended] = no longer published after 2012
 
     au < HighWirePressH20Plugin ; exists ; 1998 ; Electrochemical and Solid State Letters Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; exists ; 1999 ; Electrochemical and Solid State Letters Volume 2 ; 2 >
@@ -52,8 +54,6 @@
     au < HighWirePressH20Plugin ; exists ; 2010 ; Electrochemical and Solid State Letters Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; exists ; 2011 ; Electrochemical and Solid State Letters Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Electrochemical and Solid State Letters Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Electrochemical and Solid State Letters Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; expected ; 2014 ; Electrochemical and Solid State Letters Volume 17 ; 17 >
     
   }
   
@@ -72,6 +72,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; ECS Solid State Letters Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; released ; 2013 ; ECS Solid State Letters Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; ECS Solid State Letters Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; expected ; 2015 ; ECS Solid State Letters Volume 4 ; 4 >
     
   }
 
@@ -90,6 +91,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; ECS Electrochemistry Letters Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; released ; 2013 ; ECS Electrochemistry Letters Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; ECS Electrochemistry Letters Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; exists ; 2015 ; ECS Electrochemistry Letters Volume 4 ; 4 >
     
   }
 
@@ -108,6 +110,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; ECS Journal of Solid State Science and Technology Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; released ; 2013 ; ECS Journal of Solid State Science and Technology Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; ECS Journal of Solid State Science and Technology Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; expected ; 2015 ; ECS Journal of Solid State Science and Technology Volume 4 ; 4 >
     
   }
 
@@ -149,6 +152,8 @@
     au < HighWirePressH20Plugin ; released ; 2013 ; ECS Meeting Abstracts Volume MA2013-02 ; MA2013-02 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; ECS Meeting Abstracts Volume MA2014-01 ; MA2014-01 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; ECS Meeting Abstracts Volume MA2014-02 ; MA2014-02 >
+    au < HighWirePressH20Plugin ; expected ; 2015 ; ECS Meeting Abstracts Volume MA2015-01 ; MA2015-01 >
+    au < HighWirePressH20Plugin ; expected ; 2015 ; ECS Meeting Abstracts Volume MA2015-02 ; MA2015-02 >
     
     }
     
@@ -231,6 +236,7 @@
     au < HighWirePressH20Plugin ; expected ; 2014 ; ECS Transactions Volume 63 ; 63 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; ECS Transactions Volume 64 ; 64 >
     au < HighWirePressH20Plugin ; expected ; 2014 ; ECS Transactions Volume 65 ; 65 >
+    au < HighWirePressH20Plugin ; expected ; 2014 ; ECS Transactions Volume 66 ; 66 >
     
   }
 
