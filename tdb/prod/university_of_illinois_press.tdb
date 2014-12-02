@@ -25,7 +25,7 @@
       au < released ; 2011 ; American Journal of Theology & Philosophy Volume 32 ; 32 >
       au < released ; 2012 ; American Journal of Theology & Philosophy Volume 33 ; 33 >
       au < released ; 2013 ; American Journal of Theology & Philosophy Volume 34 ; 34 >
-      au < doNotProcess ; 2014 ; American Journal of Theology & Philosophy Volume 35 ; 35 >
+      au < expected ; 2014 ; American Journal of Theology & Philosophy Volume 35 ; 35 >
 
     }
 
@@ -66,7 +66,7 @@
       au < released ; 2011 ; American Music Volume 29 ; 29 >
       au < released ; 2012 ; American Music Volume 30 ; 30 >
       au < released ; 2013 ; American Music Volume 31 ; 31 >
-      au < doNotProcess ; 2014 ; American Music Volume 32 ; 32 >
+      au < expected ; 2014 ; American Music Volume 32 ; 32 >
 
     }
 
@@ -85,7 +85,7 @@
       au < released ; 2011 ; Black Music Research Journal Volume 31 ; 31 >
       au < released ; 2012 ; Black Music Research Journal Volume 32 ; 32 >
       au < released ; 2013 ; Black Music Research Journal Volume 33 ; 33 >
-      au < doNotProcess ; 2014 ; Black Music Research Journal Volume 34 ; 34 >
+      au < expected ; 2014 ; Black Music Research Journal Volume 34 ; 34 >
 
     }
 
@@ -145,7 +145,7 @@
       au < released ; 2011 ; JEGP, Journal of English and Germanic Philology Volume 110 ; 110 >
       au < released ; 2012 ; JEGP, Journal of English and Germanic Philology Volume 111 ; 111 >
       au < released ; 2013 ; JEGP, Journal of English and Germanic Philology Volume 112 ; 112 >
-      au < doNotProcess ; 2014 ; JEGP, Journal of English and Germanic Philology Volume 113 ; 113 >
+      au < expected ; 2014 ; JEGP, Journal of English and Germanic Philology Volume 113 ; 113 >
 
     }
 
@@ -171,7 +171,7 @@
       au < released ; 2011 ; The Journal of Aesthetic Education Volume 45 ; 45 >
       au < released ; 2012 ; The Journal of Aesthetic Education Volume 46 ; 46 >
       au < released ; 2013 ; The Journal of Aesthetic Education Volume 47 ; 47 >
-      au < doNotProcess ; 2014 ; The Journal of Aesthetic Education Volume 48 ; 48 >
+      au < expected ; 2014 ; The Journal of Aesthetic Education Volume 48 ; 48 >
 
     }
 
@@ -191,7 +191,7 @@
       au < released ; 2011 ; Journal of Education Finance Volume 37 ; 37 >
       au < released ; 2012 ; Journal of Education Finance Volume 38 ; 38 >
       au < released ; 2013 ; Journal of Education Finance Volume 39 ; 39 >
-      au < doNotProcess ; 2014 ; Journal of Education Finance Volume 40 ; 40 >
+      au < expected ; 2014 ; Journal of Education Finance Volume 40 ; 40 >
 
     }
 
@@ -212,7 +212,7 @@
       au < released ; 2011 ; Journal of Film and Video Volume 63 ; 63 >
       au < released ; 2012 ; Journal of Film and Video Volume 64 ; 64 >
       au < released ; 2013 ; Journal of Film and Video Volume 65 ; 65 >
-      au < doNotProcess ; 2014 ; Journal of Film and Video Volume 66 ; 66 >
+      au < expected ; 2014 ; Journal of Film and Video Volume 66 ; 66 >
 
     }
 
@@ -232,7 +232,7 @@
       au < released ; 2011 ; The Pluralist Volume 6 ; 6 >
       au < released ; 2012 ; The Pluralist Volume 7 ; 7 >
       au < released ; 2013 ; The Pluralist Volume 8 ; 8 >
-      au < doNotProcess ; 2014 ; The Pluralist Volume 9 ; 9 >
+      au < expected ; 2014 ; The Pluralist Volume 9 ; 9 >
 
     }
     
@@ -263,7 +263,7 @@
       au < released ; 2012 ; Radical Teacher Number 94 ; 94 >
       au < released ; 2012 ; Radical Teacher Number 95 ; 95 >
       au < expected ; 2013 ; Radical Teacher Number 96 ; 96 >
-      au < doNotProcess ; 2014 ; Radical Teacher Number 97 ; 97 >
+      au < expected ; 2014 ; Radical Teacher Number 97 ; 97 >
 
     }
 
@@ -282,7 +282,7 @@
       au < released ; 2011 ; Visual Arts Research Volume 37 ; 37 >
       au < released ; 2012 ; Visual Arts Research Volume 38 ; 38 >
       au < released ; 2013 ; Visual Arts Research Volume 39 ; 39 >
-      au < doNotProcess ; 2014 ; Visual Arts Research Volume 40 ; 40 >
+      au < expected ; 2014 ; Visual Arts Research Volume 40 ; 40 >
 
     }
   
@@ -298,7 +298,7 @@
       attr[journal_id] = wgf
 
       au < released ; 2013 ; Women, Gender, and Families of Color Volume 1 ; 1 >
-      au < doNotProcess ; 2014 ; Women, Gender, and Families of Color Volume 2 ; 2 >
+      au < expected ; 2014 ; Women, Gender, and Families of Color Volume 2 ; 2 >
 
     }
     

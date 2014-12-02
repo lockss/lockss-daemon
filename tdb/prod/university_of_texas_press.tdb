@@ -27,7 +27,7 @@
     au < released ; 2011 ; Asian Music Volume 42 ; 42 >
     au < released ; 2012 ; Asian Music Volume 43 ; 43 >
     au < released ; 2013 ; Asian Music Volume 44 ; 44 >
-    au < doNotProcess ; 2014 ; Asian Music Volume 45 ; 45 >
+    au < expected ; 2014 ; Asian Music Volume 45 ; 45 >
 
   }
 
@@ -84,7 +84,7 @@
     au < released ; 2011 ; Journal of the History of Sexuality Volume 20 ; 20 >
     au < released ; 2012 ; Journal of the History of Sexuality Volume 21 ; 21 >
     au < released ; 2013 ; Journal of the History of Sexuality Volume 22 ; 22 >
-    au < doNotProcess ; 2014 ; Journal of the History of Sexuality Volume 23 ; 23 >
+    au < expected ; 2014 ; Journal of the History of Sexuality Volume 23 ; 23 >
 
   }
 
@@ -100,7 +100,7 @@
     param[journal_dir] = the_journal_of_individual_psychology
     attr[journal_id] = jip
 
-    au < doNotProcess ; 2014 ; Journal of Individual Psychology Volume 70 ; 70 >
+    au < expected ; 2014 ; Journal of Individual Psychology Volume 70 ; 70 >
 
   }
 
@@ -128,7 +128,7 @@
     au < released ; 2011 ; Latin American Music Review Volume 32 ; 32 >
     au < released ; 2012 ; Latin American Music Review Volume 33 ; 33 >
     au < released ; 2013 ; Latin American Music Review Volume 34 ; 34 >
-    au < doNotProcess ; 2014 ; Latin American Music Review Volume 35 ; 35 >
+    au < expected ; 2014 ; Latin American Music Review Volume 35 ; 35 >
 
   }
 
@@ -172,7 +172,7 @@
     au < released ; 2011 ; Information & Culture: A Journal of History Volume 46 ; 46 >
     au < released ; 2012 ; Information & Culture: A Journal of History Volume 47 ; 47 >
     au < released ; 2013 ; Information & Culture: A Journal of History Volume 48 ; 48 >
-    au < doNotProcess ; 2014 ; Information & Culture: A Journal of History Volume 49 ; 49 >
+    au < expected ; 2014 ; Information & Culture: A Journal of History Volume 49 ; 49 >
 
   }
 
@@ -191,7 +191,7 @@
     au < released ; 2011 ; Studies in Latin American Popular Culture Volume 29 ; 29 >
     au < released ; 2012 ; Studies in Latin American Popular Culture Volume 30 ; 30 >
     au < released ; 2013 ; Studies in Latin American Popular Culture Volume 31 ; 31 >
-    au < doNotProcess ; 2014 ; Studies in Latin American Popular Culture Volume 32 ; 32 >
+    au < expected ; 2014 ; Studies in Latin American Popular Culture Volume 32 ; 32 >
 
   }
 
@@ -219,7 +219,7 @@
     au < released ; 2011 ; Texas Studies in Literature and Language Volume 53 ; 53 >
     au < released ; 2012 ; Texas Studies in Literature and Language Volume 54 ; 54 >
     au < released ; 2013 ; Texas Studies in Literature and Language Volume 55 ; 55 >
-    au < doNotProcess ; 2014 ; Texas Studies in Literature and Language Volume 56 ; 56 >
+    au < expected ; 2014 ; Texas Studies in Literature and Language Volume 56 ; 56 >
 
   }
 
@@ -256,8 +256,8 @@
     au < released ; 2012 ; The Velvet Light Trap Number 70 ; 70 >
     au < released ; 2013 ; The Velvet Light Trap Number 71 ; 71 >
     au < released ; 2013 ; The Velvet Light Trap Number 72 ; 72 >
-    au < doNotProcess ; 2014 ; The Velvet Light Trap Number 73 ; 73 >
-    au < doNotProcess ; 2014 ; The Velvet Light Trap Number 74 ; 74 >
+    au < expected ; 2014 ; The Velvet Light Trap Number 73 ; 73 >
+    au < expected ; 2014 ; The Velvet Light Trap Number 74 ; 74 >
 
   }
 
