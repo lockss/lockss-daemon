@@ -373,10 +373,12 @@
     >
 
       param[journal_id] = marktwaij
+      
+      comment[format] = AUs with no date in the title typically do not have manifest page. See http://www.jstor.org/action/showPublication?journalCode=marktwaij
 
-      au < manifest ; exists ; 2010 ; The Mark Twain Annual Volume 8 ; 8 >
-      au < manifest ; exists ; 2011 ; The Mark Twain Annual Volume 9 ; 9 >
-      au < testing ; exists ; 2012 ; The Mark Twain Annual Volume 10 ; 10 >
+      au < doNotProcess ; exists ; 2010 ; The Mark Twain Annual Volume 8 ; 8 >
+      au < doNotProcess ; exists ; 2011 ; The Mark Twain Annual Volume 9 ; 9 >
+      au < doNotProcess ; exists ; 2012 ; The Mark Twain Annual Volume 10 ; 10 >
       au < crawling ; exists ; 2013 ; The Mark Twain Annual Volume 11 ; 11 >
       au < ready ; exists ; 2014 ; The Mark Twain Annual Volume 12 ; 12 >
       
