@@ -41206,8 +41206,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://seo.sagepub.com/
 
-    au < expected ; exists ; 2014 ; SAGE Open Engineering Volume 1 ; 1 ; >
-    au < expected ; exists ; 2015 ; SAGE Open Engineering Volume 2 ; 2 ; >
+    au < expected ; exists ; 2015 ; SAGE Open Engineering Volume 1 ; 1 ; >
 
     }
 
