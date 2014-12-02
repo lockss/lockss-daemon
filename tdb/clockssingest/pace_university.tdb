@@ -12,14 +12,14 @@
   param[base_url] = http://digitalcommons.pace.edu/ 
   implicit < status ; status2 ; year ; name ; param[volume] >
   
-  comment[doNotInclude] = Pace International Law Review Online Companion. See RT ticket 3743 and roundup issue 3679. http://digitalcommons.pace.edu/pilronline/
+  comment[doNotInclude] = Pace International Law Review Online Companion. eissn/lissn 2164-9960 See RT ticket 3743 and roundup issue 3679. http://digitalcommons.pace.edu/pilronline/
   
 
   {
 
     title <
       name = Pace Environmental Law Review ;
-      issn = 0738-6206
+      eissn = 0738-6206
     >
 
     param[journal_abbr] = pelr
@@ -78,7 +78,7 @@
 
     title <
       name = Pace International Law Review ;
-      issn = 1553-7897
+      eissn = 1553-7897
     >
 
     param[journal_abbr] = pilr
@@ -116,7 +116,7 @@
 
     title <
       name = Pace Law Review ;
-      issn = 0272-2410
+      eissn = 0272-2410
     >
 
     param[journal_abbr] = plr
