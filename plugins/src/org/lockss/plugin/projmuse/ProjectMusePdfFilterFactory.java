@@ -1,5 +1,5 @@
 /*
- * $Id: ProjectMusePdfFilterFactory.java,v 1.8 2014-10-06 22:44:01 thib_gc Exp $
+ * $Id: ProjectMusePdfFilterFactory.java,v 1.9 2014-12-02 00:51:56 thib_gc Exp $
  */
 
 /*
@@ -43,6 +43,13 @@ public class ProjectMusePdfFilterFactory extends ExtractingPdfFilterFactory {
   
   private static final Logger logger = Logger.getLogger(ProjectMusePdfFilterFactory.class);
   
+  /*
+   * FIXME 1.67: extend PdfTokenStreamStateMachine instead
+   */
+  /*
+   * Examples:
+   * http://muse.jhu.edu/journals/perspectives_on_science/v022/22.4.oberdan.pdf 12/01/14
+   */
   public static class FrontPageWorker extends PdfTokenStreamWorker {
     
     public static final Pattern ADDITIONAL_INFORMATION =
@@ -51,9 +58,9 @@ public class ProjectMusePdfFilterFactory extends ExtractingPdfFilterFactory {
     public static final Pattern PROVIDED_BY =
         Pattern.compile("Access provided by", Pattern.CASE_INSENSITIVE);
     
-    private boolean result;
+    protected boolean result;
     
-    private int state;
+    protected int state;
     
     public FrontPageWorker() {
       super(Direction.FORWARD);
