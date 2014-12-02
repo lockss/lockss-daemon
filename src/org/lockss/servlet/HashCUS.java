@@ -1,5 +1,5 @@
 /*
- * $Id: HashCUS.java,v 1.58 2014-11-26 20:51:40 fergaloy-sf Exp $
+ * $Id: HashCUS.java,v 1.59 2014-12-02 20:43:55 fergaloy-sf Exp $
  */
 
 /*
@@ -962,7 +962,7 @@ public class HashCUS extends LockssServlet {
 
   private String hashAsynchronously(final HasherParams params,
       final SimpleHasher hasher, final HasherResult result) {
-    final String DEBUG_HEADER = "hashSynchronously(): ";
+    final String DEBUG_HEADER = "hashAsynchronously(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
     String errorMessage = null;
 
@@ -972,6 +972,7 @@ public class HashCUS extends LockssServlet {
 
       hasher.startHashingThread(params, result);
       statusMsg = "Queued background hash, Req Id: " + reqId;
+      result.setShowResult(true);
     } catch (RuntimeException e) {
       log.warning("hashAsynchronously()", e);
       errorMessage = "Error starting background hash thread: " + e.toString();
@@ -1009,6 +1010,12 @@ public class HashCUS extends LockssServlet {
   }
 
   private Element makeV3Result(HasherParams params, HasherResult result) {
+    final String DEBUG_HEADER = "makeV3Result(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "params = " + params);
+      log.debug2(DEBUG_HEADER + "result = " + result);
+    }
+
     Table tbl = new Table(0, "align=center");
     tbl.newRow();
     tbl.addHeading("Hash Result", COL2);
@@ -1022,6 +1029,14 @@ public class HashCUS extends LockssServlet {
     addResultRow(tbl, "Size", Long.toString(result.getBytesHashed()));
     addResultRow(tbl, "Time",
 	getElapsedString(result.getBytesHashed(), result.getElapsedTime()));
+
+    if (log.isDebug3()) {
+      log.debug3(DEBUG_HEADER + "result.getBlockFile() = "
+	  + result.getBlockFile());
+      log.debug3(DEBUG_HEADER + "result.getBlockFile().exists() = "
+	  + result.getBlockFile().exists());
+    }
+
     if (result.getBlockFile() != null && result.getBlockFile().exists()) {
       tbl.newRow();
       tbl.newCell();
@@ -1033,6 +1048,8 @@ public class HashCUS extends LockssServlet {
       tbl.add(div("HashFile", link, false));
     }
     addRecordFile(result.getBytesHashed(), result.getRecordFile(), params, tbl);
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "tbl = " + tbl);
     return tbl;
   }
 
