@@ -1,10 +1,10 @@
 /*
- * $Id: IOPScienceArticleIteratorFactory.java,v 1.7 2013-11-13 02:00:08 thib_gc Exp $
+ * $Id: IOPScienceArticleIteratorFactory.java,v 1.8 2014-12-03 21:07:08 etenbrink Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -51,7 +51,7 @@ public class IOPScienceArticleIteratorFactory
       "\"%s%s/%s\", base_url, journal_issn, volume_name";
   
   protected static final String PATTERN_TEMPLATE =
-      "\"^%s%s/%s/[^/]+/[^/]+(?:/(?:fulltext|pdf/[^/]+[.]pdf))?$\"," +
+      "\"^%s%s/%s/[^/]+/[^/.?]+(?:/(?:fulltext|pdf/[^/]+[.]pdf))?$\"," +
       " base_url, journal_issn, volume_name";
   
   // various aspects of an article
@@ -60,6 +60,8 @@ public class IOPScienceArticleIteratorFactory
   // http://iopscience.iop.org/1478-3975/8/1/015001/cites
   // http://iopscience.iop.org/1478-3975/8/1/015001/fulltext
   // http://iopscience.iop.org/1478-3975/8/1/015001/pdf/1478-3975_8_1_015001.pdf
+  // http://iopscience.iop.org/1478-3975/8/1/015001?foo (exclude)
+  // http://iopscience.iop.org/1478-3975/8/1/015001.foo (exclude)
   
   protected static final Pattern ABSTRACT_PATTERN =
       Pattern.compile("/([0-9]{4}-[0-9]{3}[0-9X])/([^/]+)/([^/]+)/([^/]+)$",
@@ -93,14 +95,6 @@ public class IOPScienceArticleIteratorFactory
     builder.setSpec(target,
         ROOT_TEMPLATE, PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
     
-    // set up abstract to be an aspect that will trigger an ArticleFiles
-    // NOTE - for the moment this also means it is considered a FULL_TEXT_CU
-    // until this fulltext concept is deprecated
-    builder.addAspect(
-        ABSTRACT_PATTERN, ABSTRACT_REPLACEMENT,
-        ArticleFiles.ROLE_ABSTRACT,
-        ArticleFiles.ROLE_ARTICLE_METADATA);
-    
     // set up fulltext to be an aspect that will trigger an ArticleFiles
     builder.addAspect(
         HTML_PATTERN, HTML_REPLACEMENT,
@@ -110,6 +104,14 @@ public class IOPScienceArticleIteratorFactory
     builder.addAspect(
         PDF_PATTERN, PDF_REPLACEMENT,
         ArticleFiles.ROLE_FULL_TEXT_PDF);
+    
+    // set up abstract to be an aspect that will trigger an ArticleFiles
+    // NOTE - for the moment this also means it is considered a FULL_TEXT_CU
+    // until this fulltext concept is deprecated
+    builder.addAspect(
+        ABSTRACT_PATTERN, ABSTRACT_REPLACEMENT,
+        ArticleFiles.ROLE_ABSTRACT,
+        ArticleFiles.ROLE_ARTICLE_METADATA);
     
     builder.addAspect(
         REFS_REPLACEMENT,
