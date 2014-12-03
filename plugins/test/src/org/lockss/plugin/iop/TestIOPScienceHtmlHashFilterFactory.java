@@ -1,5 +1,5 @@
 /*
- * $Id: TestIOPScienceHtmlHashFilterFactory.java,v 1.5 2014-10-24 22:59:13 etenbrink Exp $
+ * $Id: TestIOPScienceHtmlHashFilterFactory.java,v 1.6 2014-12-03 22:48:15 etenbrink Exp $
  */
 
 /*
@@ -175,6 +175,12 @@ public class TestIOPScienceHtmlHashFilterFactory extends LockssTestCase {
       "                <strong>408</strong>\n" + 
       "                \n" + 
       "          </p>\n" + 
+      "        <p>\n" + 
+      "          <a href=\"\" id=\"abstractMoreMetricsId\">More metrics</a>\n" + 
+      "        </p>\n" + 
+      "      </dd>\n" + 
+      "        <dd>\n" + 
+      "                Download data unavailable\n" + 
       "        <p>\n" + 
       "          <a href=\"\" id=\"abstractMoreMetricsId\">More metrics</a>\n" + 
       "        </p>\n" + 
