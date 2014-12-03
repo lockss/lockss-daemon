@@ -30,8 +30,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.iop;
 
-import java.io.ByteArrayInputStream;
-import java.util.Iterator;
 import java.util.Stack;
 import java.util.regex.Pattern;
 
