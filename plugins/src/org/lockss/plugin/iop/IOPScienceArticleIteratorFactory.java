@@ -1,5 +1,5 @@
 /*
- * $Id: IOPScienceArticleIteratorFactory.java,v 1.8 2014-12-03 21:07:08 etenbrink Exp $
+ * $Id: IOPScienceArticleIteratorFactory.java,v 1.9 2014-12-03 22:59:30 etenbrink Exp $
  */
 
 /*
@@ -98,8 +98,7 @@ public class IOPScienceArticleIteratorFactory
     // set up fulltext to be an aspect that will trigger an ArticleFiles
     builder.addAspect(
         HTML_PATTERN, HTML_REPLACEMENT,
-        ArticleFiles.ROLE_FULL_TEXT_HTML,
-        ArticleFiles.ROLE_ARTICLE_METADATA);
+        ArticleFiles.ROLE_FULL_TEXT_HTML);
     
     builder.addAspect(
         PDF_PATTERN, PDF_REPLACEMENT,
@@ -110,8 +109,7 @@ public class IOPScienceArticleIteratorFactory
     // until this fulltext concept is deprecated
     builder.addAspect(
         ABSTRACT_PATTERN, ABSTRACT_REPLACEMENT,
-        ArticleFiles.ROLE_ABSTRACT,
-        ArticleFiles.ROLE_ARTICLE_METADATA);
+        ArticleFiles.ROLE_ABSTRACT);
     
     builder.addAspect(
         REFS_REPLACEMENT,
@@ -126,6 +124,10 @@ public class IOPScienceArticleIteratorFactory
     builder.setFullTextFromRoles(
         ArticleFiles.ROLE_FULL_TEXT_HTML, 
         ArticleFiles.ROLE_FULL_TEXT_PDF);
+    
+    // The order in which to find ROLE_ARTICLE_METADATA
+    builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA, 
+        ArticleFiles.ROLE_ABSTRACT, ArticleFiles.ROLE_FULL_TEXT_HTML);
     
     return builder.getSubTreeArticleIterator();
   }
