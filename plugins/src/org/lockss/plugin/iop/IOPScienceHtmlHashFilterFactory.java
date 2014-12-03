@@ -1,10 +1,10 @@
 /*
- * $Id: IOPScienceHtmlHashFilterFactory.java,v 1.13 2014-11-01 00:49:29 etenbrink Exp $
+ * $Id: IOPScienceHtmlHashFilterFactory.java,v 1.14 2014-12-03 21:02:26 etenbrink Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -38,7 +38,6 @@ import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.OrFilter;
 import org.htmlparser.filters.TagNameFilter;
-import org.htmlparser.tags.CompositeTag;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.*;
 import org.lockss.filter.html.*;
@@ -97,7 +96,7 @@ public class IOPScienceHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("form", "action", "jsessionid"),
         
         // <div class="sideTabBar">
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sideTabBar"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sideTab(Bar|Box)"),
         // <p class="viewingLinks">
         HtmlNodeFilters.tagWithAttributeRegex("p", "class", "viewingLinks"),
         // <div class=" metrics-panel">
@@ -106,17 +105,24 @@ public class IOPScienceHtmlHashFilterFactory implements FilterFactory {
         new TagNameFilter("dd") {
           @Override
           public boolean accept(Node node) {
+            boolean ret = false;
             if (super.accept(node)) {
-              String allText = ((CompositeTag)node).toPlainTextString();
-              return allText.toLowerCase().contains("total article downloads");
+              String allText = node.toPlainTextString().toLowerCase();
+              ret = allText.contains("total article downloads") ||
+                   (allText.contains("download data unavailable") &&
+                    allText.contains("more metrics"));
+              return ret;
             }
-            return false;
+            return ret;
           }
         },
         // next/previous can change
         HtmlNodeFilters.tagWithAttribute("div", "class", "jnlTocIssueNav"),
         // <span class="boxBut free-article">
         HtmlNodeFilters.tagWithAttributeRegex("span", "class", "free-article"),
+        // citation link was always not present, and display link is not content
+        HtmlNodeFilters.tagWithAttributeRegex("a", "id", "DisplayLink"),
+        // <div class="sideTabBlock citBlock">
     };
     
     InputStream filtered = new HtmlFilterInputStream(in,
