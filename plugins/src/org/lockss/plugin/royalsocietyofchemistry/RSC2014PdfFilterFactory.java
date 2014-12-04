@@ -1,5 +1,5 @@
 /*
- * $Id: RSC2014PdfFilterFactory.java,v 1.6 2014-11-30 23:21:34 etenbrink Exp $
+ * $Id: RSC2014PdfFilterFactory.java,v 1.7 2014-12-04 23:11:25 etenbrink Exp $
  */
 
 /*
@@ -59,6 +59,7 @@ public class RSC2014PdfFilterFactory extends SimplePdfFilterFactory {
     
     pdfDocument.unsetMetadata();
     pdfDocument.unsetModificationDate();
+    pdfDocument.unsetProducer();
     PdfUtil.normalizeTrailerId(pdfDocument);
   }
   
