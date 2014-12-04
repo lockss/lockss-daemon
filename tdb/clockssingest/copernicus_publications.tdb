@@ -363,7 +363,7 @@
       au < manifest ; exists ; 2011 ; 2011 ; Earth System Science Data Volume 3 ; 3 >
       au < finished ; crawling ; 2012 ; 2012 ; Earth System Science Data Volume 4 ; 4 >
       au < crawling ; exists ; 2013 ; 2013 ; Earth System Science Data Volume 5 ; 5 >
-      au < ready ; exists ; 2014 ; 2014 ; Earth System Science Data Volume 6 ; 6 >
+      au < crawling ; exists ; 2014 ; 2014 ; Earth System Science Data Volume 6 ; 6 >
     
    }
     
@@ -849,7 +849,7 @@
       param[base_url] = http://www.nonlin-processes-geophys-discuss.net/
       param[home_url] = http://www.nonlinear-processes-in-geophysics.net/
 
-      au < ready ; exists ; 2014 ; 2014 ; Nonlinear Processes in Geophysics Discussions Volume 1 ; 1 >
+      au < crawling ; exists ; 2014 ; 2014 ; Nonlinear Processes in Geophysics Discussions Volume 1 ; 1 >
 
    }
     
@@ -985,7 +985,7 @@
       param[base_url] = http://www.soil-discuss.net/
       param[home_url] = http://www.soil-discuss.net/
 
-      au < ready ; exists ; 2014 ; 2014 ; SOIL Discussions Volume 1 ; 1 >
+      au < crawling ; exists ; 2014 ; 2014 ; SOIL Discussions Volume 1 ; 1 >
 
    }
     

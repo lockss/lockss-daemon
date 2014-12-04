@@ -64,7 +64,7 @@
       au < finished ; crawling ; 2011 ; BMC Biochemistry Volume 12 ; 12 >
       au < crawling ; exists ; 2012 ; BMC Biochemistry Volume 13 ; 13 >
       au < crawling ; exists ; 2013 ; BMC Biochemistry Volume 14 ; 14 >
-      au < ready ; exists ; 2014 ; BMC Biochemistry Volume 15 ; 15 >
+      au < crawling ; exists ; 2014 ; BMC Biochemistry Volume 15 ; 15 >
 
     }
 
@@ -941,7 +941,7 @@
       param[journal_issn] = 1755-8794
       comment[journal_code] = bmcmedgenomics
 
-      au < ready ; exists ; 2008 ; BMC Medical Genomics Volume 1 ; 1 >
+      au < crawling ; exists ; 2008 ; BMC Medical Genomics Volume 1 ; 1 >
       au < crawling ; exists ; 2009 ; BMC Medical Genomics Volume 2 ; 2 >
       au < crawling ; exists ; 2010 ; BMC Medical Genomics Volume 3 ; 3 >
       au < crawling ; exists ; 2011 ; BMC Medical Genomics Volume 4 ; 4 >
@@ -1676,10 +1676,10 @@
       {
         param[journal_issn] = 1758-2555
 
-        au < ready ; exists ; 2009 ; BMC Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 1 ; 1 >
-        au < ingNotReady ; exists ; 2010 ; BMC Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 2 ; 2 >
-        au < ingNotReady ; exists ; 2011 ; BMC Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 3 ; 3 >
-        au < ingNotReady ; exists ; 2012 ; BMC Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 4 ; 4 >
+        au < crawling ; exists ; 2009 ; BMC Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 1 ; 1 >
+        au < crawling ; exists ; 2010 ; BMC Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 2 ; 2 >
+        au < crawling ; exists ; 2011 ; BMC Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 3 ; 3 >
+        au < crawling ; exists ; 2012 ; BMC Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 4 ; 4 >
       }
       
       {
@@ -1989,7 +1989,7 @@
       au < manifest ; exists ; 2004-2005 ; Allergy, Asthma & Clinical Immunology Volume 1 ; 1 >
       au < manifest ; exists ; 2006 ; Allergy, Asthma & Clinical Immunology Volume 2 ; 2 >
       au < manifest ; exists ; 2007 ; Allergy, Asthma & Clinical Immunology Volume 3 ; 3 >
-      au < ready ; exists ; 2008 ; Allergy, Asthma & Clinical Immunology Volume 4 ; 4 >
+      au < crawling ; exists ; 2008 ; Allergy, Asthma & Clinical Immunology Volume 4 ; 4 >
       au < crawling ; exists ; 2009 ; Allergy, Asthma & Clinical Immunology Volume 5 ; 5 >
       au < crawling ; exists ; 2010 ; Allergy, Asthma & Clinical Immunology Volume 6 ; 6 >
       au < finished ; crawling ; 2011 ; Allergy, Asthma & Clinical Immunology Volume 7 ; 7 >
@@ -4761,7 +4761,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.jfootankleres.com/
       param[journal_issn] = 1757-1146
 
-      au < ready ; exists ; 2008 ; Journal of Foot and Ankle Research Volume 1 ; 1 >
+      au < crawling ; exists ; 2008 ; Journal of Foot and Ankle Research Volume 1 ; 1 >
       au < crawling ; exists ; 2009 ; Journal of Foot and Ankle Research Volume 2 ; 2 >
       au < crawling ; exists ; 2010 ; Journal of Foot and Ankle Research Volume 3 ; 3 >
       au < crawling ; exists ; 2011 ; Journal of Foot and Ankle Research Volume 4 ; 4 >
