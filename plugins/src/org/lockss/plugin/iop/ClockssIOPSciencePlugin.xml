@@ -169,4 +169,8 @@
     <string>au_refetch_depth</string>
     <int>2</int>
   </entry>
+  <entry>
+    <string>au_exclude_urls_from_polls_pattern</string>
+    <string>/(css|js)/.+[.](css|js)$</string>
+  </entry>
 </map>
