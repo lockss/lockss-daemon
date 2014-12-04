@@ -4099,6 +4099,22 @@
     {
 
       title <
+        name = The British Journal of Occupational Therapy ;
+        issn = 0308-0226 ;
+        eissn = 1477-6006 ;
+        issnl = 0308-0226
+      >
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://bjo.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+        comment[0] = content not online, website not ready
+        
+    }
+
+    {
+
+      title <
         name = British Journal of Pain ;
         issn = 2049-4637 ;
         eissn = 2049-4645 ;
@@ -4110,7 +4126,6 @@
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://bjp.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-
 
         au < released ; 2007-2008 ; British Journal of Pain Volume 1 ; 1 >
         au < released ; 2008 ; British Journal of Pain Volume 2 ; 2 >
@@ -9269,6 +9284,33 @@
   
     }
   
+  {
+  
+    title <
+      name = E-Learning and Digital Media ;
+      eissn = 2042-7530 ;
+      issnl = 2042-7530
+    >
+
+      param[base_url] = http://ldm.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+      
+      au < exists ; 2004 ; E-Learning and Digital Media Volume 1 ; 1 >
+      au < exists ; 2005 ; E-Learning and Digital Media Volume 2 ; 2 >
+      au < exists ; 2006 ; E-Learning and Digital Media Volume 3 ; 3 >
+      au < exists ; 2007 ; E-Learning and Digital Media Volume 4 ; 4 >
+      au < exists ; 2008 ; E-Learning and Digital Media Volume 5 ; 5 >
+      au < exists ; 2009 ; E-Learning and Digital Media Volume 6 ; 6 >
+      au < exists ; 2010 ; E-Learning and Digital Media Volume 7 ; 7 >
+      au < exists ; 2011 ; E-Learning and Digital Media Volume 8 ; 8 >
+      au < exists ; 2012 ; E-Learning and Digital Media Volume 9 ; 9 >
+      au < exists ; 2013 ; E-Learning and Digital Media Volume 10 ; 10 >
+      au < exists ; 2014 ; E-Learning and Digital Media Volume 11 ; 11 >
+      au < expected ; 2015 ; E-Learning and Digital Media Volume 12 ; 12 >
+
+  }
+
     {
 
       title <
@@ -10608,20 +10650,49 @@
       }
 
     }
+
+  {
+  
+    title <
+      name = European Educational Research Journal ;
+      eissn = 1474-9041 ;
+      issnl = 1474-9041
+    >
+
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://eer.sagepub.com/
+
+      au < exists ; 2002 ; European Educational Research Journal Volume 1 ; 1 >
+      au < exists ; 2003 ; European Educational Research Journal Volume 2 ; 2 >
+      au < exists ; 2004 ; European Educational Research Journal Volume 3 ; 3 >
+      au < exists ; 2005 ; European Educational Research Journal Volume 4 ; 4 >
+      au < exists ; 2006 ; European Educational Research Journal Volume 5 ; 5 >
+      au < exists ; 2007 ; European Educational Research Journal Volume 6 ; 6 >
+      au < exists ; 2008 ; European Educational Research Journal Volume 7 ; 7 >
+      au < exists ; 2009 ; European Educational Research Journal Volume 8 ; 8 >
+      au < exists ; 2010 ; European Educational Research Journal Volume 9 ; 9 >
+      au < exists ; 2011 ; European Educational Research Journal Volume 10 ; 10 >
+      au < exists ; 2012 ; European Educational Research Journal Volume 11 ; 11 >
+      au < exists ; 2013 ; European Educational Research Journal Volume 12 ; 12 >
+      au < exists ; 2014 ; European Educational Research Journal Volume 13 ; 13 >
+      au < expected ; 2015 ; European Educational Research Journal Volume 14 ; 14 >
+
+  }
+
     
-{
+  {
   
     title <
       name = European Heart Journal: Acute Cardiovascular Care ;
       issn = 2048-8726 ;
-      eissn = 2048-8734 
+      eissn = 2048-8734 ;
+      issnl = 2048-8726 
     >
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
         param[base_url] = http://acc.sagepub.com/
     
-
-
       au < released ; 2012 ; European Heart Journal: Acute Cardiovascular Care Volume 1 ; 1 >
       au < manifest ; 2013 ; European Heart Journal: Acute Cardiovascular Care Volume 2 ; 2 >
       au < manifest ; 2014 ; European Heart Journal: Acute Cardiovascular Care Volume 3 ; 3 >
@@ -33008,6 +33079,33 @@ comment[mpj] = now published by Brill
       }
 
     }
+
+  {
+  
+    title <
+      name = Policy Futures in Education ;
+      eissn = 1478-2103 ;
+      issnl = 1478-2103
+    >
+
+      param[base_url] = http://pfe.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2003 ; Policy Futures in Education Volume 1 ; 1 >
+      au < exists ; 2004 ; Policy Futures in Education Volume 2 ; 2 >
+      au < exists ; 2005 ; Policy Futures in Education Volume 3 ; 3 >
+      au < exists ; 2006 ; Policy Futures in Education Volume 4 ; 4 >
+      au < exists ; 2007 ; Policy Futures in Education Volume 5 ; 5 >
+      au < exists ; 2008 ; Policy Futures in Education Volume 6 ; 6 >
+      au < exists ; 2009 ; Policy Futures in Education Volume 7 ; 7 >
+      au < exists ; 2010 ; Policy Futures in Education Volume 8 ; 8 >
+      au < exists ; 2011 ; Policy Futures in Education Volume 9 ; 9 >
+      au < exists ; 2012 ; Policy Futures in Education Volume 10 ; 10 >
+      au < exists ; 2013 ; Policy Futures in Education Volume 11 ; 11 >
+      au < exists ; 2014 ; Policy Futures in Education Volume 12 ; 12 >
+      au < expected ; 2015 ; Policy Futures in Education Volume 13 ; 13 >
+  }
 
     {
 
