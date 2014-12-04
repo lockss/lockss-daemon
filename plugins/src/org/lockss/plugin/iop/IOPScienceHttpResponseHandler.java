@@ -1,5 +1,5 @@
 /*
- * $Id: IOPScienceHttpResponseHandler.java,v 1.1 2014-12-03 20:59:20 etenbrink Exp $
+ * $Id: IOPScienceHttpResponseHandler.java,v 1.2 2014-12-04 19:52:31 etenbrink Exp $
  */
 
 /*
@@ -42,7 +42,11 @@ import org.lockss.util.urlconn.*;
 public class IOPScienceHttpResponseHandler implements CacheResultHandler {
   
   protected static Logger logger = Logger.getLogger(IOPScienceHttpResponseHandler.class);
-  protected static Pattern PAT_MAL_URL = Pattern.compile("^https?://[^/]+/.+/[a-z]+[^.]*[.].{2,}[.].{2,}");
+  // Want to match on URLs that contain another host in error (relative should have been absolute)
+  // these URLs are invalid and should not cause fatal errors
+  // Host string is one alpha + 0 or more chars dot 2 or more chars dot 2 or more chars (excluding slash)
+  protected static Pattern PAT_MAL_URL =
+      Pattern.compile("^https?://[^/]+/.+/[a-z]+[^./]*[.][^/]{2,}[.][^/]{2,}");
   
   public void init(CacheResultMap crmap) {
     logger.warning("Unexpected call to init()");
