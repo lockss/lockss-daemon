@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>testing</string>
+    <string>ready</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>28</string>
+    <string>29</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -142,6 +142,15 @@
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.hindawi.HindawiArticleIteratorFactory</string>
   </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.hindawi.HindawiHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>  
   <entry>
     <string>application/xhtml+xml_metadata_extractor_factory_map</string>
     <map>

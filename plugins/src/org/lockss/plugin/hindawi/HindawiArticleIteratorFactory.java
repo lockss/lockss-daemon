@@ -1,5 +1,5 @@
 /*
- * $Id: HindawiArticleIteratorFactory.java,v 1.3 2014-10-17 17:57:36 alexandraohlson Exp $
+ * $Id: HindawiArticleIteratorFactory.java,v 1.4 2014-12-04 18:31:34 alexandraohlson Exp $
  */
 
 /*
@@ -95,6 +95,11 @@ public class HindawiArticleIteratorFactory
 
     builder.addAspect(REFERENCES_REPLACEMENT,
                       ArticleFiles.ROLE_REFERENCES);
+    
+    // Use the abstract preferentially to extract metadata
+    builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA,
+        ArticleFiles.ROLE_ABSTRACT,
+        ArticleFiles.ROLE_FULL_TEXT_HTML);    
     
     return builder.getSubTreeArticleIterator();
   }
