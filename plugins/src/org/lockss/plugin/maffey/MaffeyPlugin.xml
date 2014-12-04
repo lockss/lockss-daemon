@@ -46,6 +46,7 @@
       <string>1,"^%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(\?[0-9]+)?$", base_url</string>
       <string>4,"^%s", base_url</string>
       <string>1,"^%sredirect_file\.php\?.*fileType=pdf.*$", base_url</string>
+      <!--  this is not the same as the start_url; it is for articles -->
       <string>1,"^%slockss\.php\?(t=[c]?lockss&amp;)?pa=article&amp;i_id=[0-9]+$", base_url</string>
       <string>1,"^%s[^/]+-article-a[0-9]+$", base_url</string>
     </list>
