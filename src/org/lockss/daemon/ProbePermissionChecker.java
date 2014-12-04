@@ -1,5 +1,5 @@
 /*
- * $Id: ProbePermissionChecker.java,v 1.26 2014-11-12 20:11:45 wkwilson Exp $
+ * $Id: ProbePermissionChecker.java,v 1.27 2014-12-04 00:33:55 wkwilson Exp $
  */
 
 /*
@@ -86,7 +86,7 @@ public class ProbePermissionChecker implements PermissionChecker {
     } catch (IOException ex) {
       logger.error("Exception trying to parse permission url " + permissionUrl,
 		   ex);
-      return true;
+      return false;
     }
     if (probeUrl != null) {
       if (au.shouldBeCached(probeUrl)) {
@@ -99,7 +99,7 @@ public class ProbePermissionChecker implements PermissionChecker {
       }
     } else {
       logger.warning("Unable to find probe url on " + permissionUrl);
-      return true;
+      return false;
     }
   }
 

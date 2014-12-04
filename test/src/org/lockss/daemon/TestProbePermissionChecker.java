@@ -1,5 +1,5 @@
 /*
- * $Id: TestProbePermissionChecker.java,v 1.11 2014-11-12 20:11:37 wkwilson Exp $
+ * $Id: TestProbePermissionChecker.java,v 1.12 2014-12-04 00:33:55 wkwilson Exp $
  */
 
 /*
@@ -106,7 +106,7 @@ public class TestProbePermissionChecker extends LockssTestCase {
     mau.addContent(url, htmlSourceWOProbe);
     
     pc = new TestableProbePermissionChecker();
-    assertTrue("Incorrectly gave permission when there was no probe",
+    assertFalse("Incorrectly gave permission when there was no probe",
 		pc.checkPermission(mcf,
 				   new StringReader(htmlSourceWOLinkTag),
 				   url));
@@ -119,7 +119,7 @@ public class TestProbePermissionChecker extends LockssTestCase {
     mau.addContent(url, htmlSourceWOProbe);
 
     pc = new TestableProbePermissionChecker();
-    assertTrue("Incorrectly gave permission when there was no probe",
+    assertFalse("Incorrectly gave permission when there was no probe",
 		pc.checkPermission(mcf, new StringReader(htmlSourceWOProbe),
 				   url));
     assertNull(pc.getProbeUrl());

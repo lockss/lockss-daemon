@@ -1,5 +1,5 @@
 /*
- * $Id: PermissionMap.java,v 1.37 2014-11-24 10:17:46 tlipkis Exp $
+ * $Id: PermissionMap.java,v 1.38 2014-12-04 00:33:55 wkwilson Exp $
  */
 
 /*
@@ -357,7 +357,7 @@ public class PermissionMap {
         uf.fetch();
         if (rec.getStatus() == PermissionStatus.PERMISSION_NOT_OK) {
           logger.siteError("No permission statement at " + pUrl);
-          crawlStatus.signalErrorForUrl(pUrl,
+          signalErrorForUrlNoOverride(pUrl,
               "No permission statement on manifest page.",
               Crawler.STATUS_NO_PUB_PERMISSION);
 
@@ -396,7 +396,7 @@ public class PermissionMap {
       if(rec.getStatus() == PermissionStatus.PERMISSION_UNCHECKED) {
         logger.error("Permission page unchecked");
         rec.setStatus(PermissionStatus.PERMISSION_FETCH_FAILED);
-        crawlStatus.signalErrorForUrl(pUrl, "Permission check failed",
+        signalErrorForUrlNoOverride(pUrl, "Permission check failed",
             Crawler.STATUS_NO_PUB_PERMISSION);
         raiseAlert(Alert.auAlert(Alert.PERMISSION_PAGE_FETCH_ERROR, au).
             setAttribute(Alert.ATTR_TEXT,
@@ -405,6 +405,14 @@ public class PermissionMap {
       }
     }
     return rec.getStatus();
+  }
+  
+  private void signalErrorForUrlNoOverride(String url, 
+                                           String urlMsg, 
+                                           int status) {
+    if(crawlStatus.getErrorInfoForUrl(url) == null) {
+      crawlStatus.signalErrorForUrl(url, urlMsg, status);
+    }
   }
 
   /**
