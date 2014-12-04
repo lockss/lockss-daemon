@@ -19,6 +19,8 @@
 
     param[journal_dir] = franciscan_studies
     attr[journal_id] = frc
+    
+    comment[notReady] = volume 71 has XX on pdf. To be fixed in daemon 1.67.
 
     au < manifest ; 1990 ; Franciscan Studies Volume 50 ; 50 >
     au < manifest ; 1991 ; Franciscan Studies Volume 51 ; 51 >
@@ -41,7 +43,7 @@
     au < released ; 2010 ; Franciscan Studies Volume 68 ; 68 >
     au < released ; 2011 ; Franciscan Studies Volume 69 ; 69 >
     au < released ; 2012 ; Franciscan Studies Volume 70 ; 70 >
-    au < testing ; 2013 ; Franciscan Studies Volume 71 ; 71 >
+    au < notReady ; 2013 ; Franciscan Studies Volume 71 ; 71 >
     au < expected ; 2014 ; Franciscan Studies Volume 72 ; 72 >
 
   }

@@ -17,6 +17,8 @@
 
     param[journal_dir] = james_joyce_quarterly
     attr[journal_id] = jjq
+    
+    comment[notReady] = volume 50 has XX on pdf. To be fixed in daemon 1.67.
 
     au < released ; 2006-2007 ; James Joyce Quarterly Volume 44 ; 44 >
     au < released ; 2007-2008 ; James Joyce Quarterly Volume 45 ; 45 >
@@ -24,7 +26,7 @@
     au < released ; 2009-2010 ; James Joyce Quarterly Volume 47 ; 47 >
     au < released ; 2010 ; James Joyce Quarterly Volume 48 ; 48 >
     au < released ; 2011 ; James Joyce Quarterly Volume 49 ; 49 >
-    au < testing ; 2012-2013 ; James Joyce Quarterly Volume 50 ; 50 >
+    au < notReady ; 2012-2013 ; James Joyce Quarterly Volume 50 ; 50 >
     au < expected ; 2014 ; James Joyce Quarterly Volume 51 ; 51 >
 
   }
