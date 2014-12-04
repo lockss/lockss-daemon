@@ -1,5 +1,5 @@
 /*
- * $Id: TestWsInfrastructure.java,v 1.1 2014-11-18 18:22:52 fergaloy-sf Exp $
+ * $Id: TestWsInfrastructure.java,v 1.2 2014-12-04 19:33:59 fergaloy-sf Exp $
  */
 
 /*
@@ -31,70 +31,14 @@
  */
 package org.lockss.ws;
 
-import java.net.Authenticator;
-import java.net.PasswordAuthentication;
-import java.util.Properties;
-import org.lockss.config.ConfigManager;
-import org.lockss.plugin.PluginManager;
-import org.lockss.servlet.AdminServletManager;
-import org.lockss.servlet.ServletManager;
-import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
-import org.lockss.test.MockLockssDaemon;
-import org.lockss.test.TcpTestUtil;
-import org.lockss.util.Logger;
 
 /**
- * Test class for the web services infrastructure.
+ * [OBSOLETE] Test class for the web services infrastructure.
  * 
  * @author Fernando Garcia-Loygorri
  */
 public class TestWsInfrastructure extends LockssTestCase {
-  static Logger log = Logger.getLogger(TestWsInfrastructure.class);
-
-  private static final String USER_NAME = "lockss-u";
-  private static final String PASSWORD = "lockss-p";
-  private static final String PASSWORD_SHA1 =
-      "SHA1:ac4fc8fa9930a24c8d002d541c37ca993e1bc40f";
-
-  private MockLockssDaemon theDaemon;
-
-  public void setUp() throws Exception {
-    super.setUp();
-
-    String tempDirPath = getTempDir().getAbsolutePath();
-    int port = TcpTestUtil.findUnboundTcpPort();
-
-    Properties props = new Properties();
-    props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
-	tempDirPath);
-
-    props.setProperty(AdminServletManager.PARAM_PORT, "" + port);
-    props.setProperty(ServletManager.PARAM_PLATFORM_USERNAME, USER_NAME);
-    props.setProperty(ServletManager.PARAM_PLATFORM_PASSWORD, PASSWORD_SHA1);
-
-    ConfigurationUtil.setCurrentConfigFromProps(props);
-
-    theDaemon = getMockLockssDaemon();
-    theDaemon.setDaemonInited(true);
-
-    PluginManager pluginManager = theDaemon.getPluginManager();
-    pluginManager.startService();
-
-    try {
-      theDaemon.getServletManager().startService();
-
-      Authenticator.setDefault(new Authenticator() {
-        @Override
-        protected PasswordAuthentication getPasswordAuthentication() {
-  	return new PasswordAuthentication(USER_NAME, PASSWORD.toCharArray());
-        }
-      });
-    } catch (Exception e) {
-      fail(e.toString());
-    }
-  }
-
   /**
    * Dummy test.
    * 
