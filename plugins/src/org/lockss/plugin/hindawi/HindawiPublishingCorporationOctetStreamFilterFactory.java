@@ -1,10 +1,10 @@
 /*
- * $Id: HindawiPublishingCorporationOctetStreamFilterFactory.java,v 1.1 2013-10-22 20:51:20 thib_gc Exp $
+ * $Id: HindawiPublishingCorporationOctetStreamFilterFactory.java,v 1.2 2014-12-04 18:17:01 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -105,25 +105,20 @@ public class HindawiPublishingCorporationOctetStreamFilterFactory implements Fil
                                                InputStream in,
                                                String encoding)
       throws PluginException {
-      try {
-        PdfPeekInputStream pdfpeek = new PdfPeekInputStream(in);
-        if (pdfpeek.isPdf) {
-          logger.debug2("Detected PDF"); // expected to be PDF
-          return pdfFilterFactory.createFilteredInputStream(au, pdfpeek, encoding);
-        }
-        else {
-          logger.debug2("Unfiltered"); // expected to be EPUB
-          return pdfpeek;
-        }
+    try {
+      PdfPeekInputStream pdfpeek = new PdfPeekInputStream(in);
+      if (pdfpeek.isPdf) {
+        logger.debug2("Detected PDF"); // expected to be PDF
+        return pdfFilterFactory.createFilteredInputStream(au, pdfpeek, encoding);
       }
-      catch (IOException ioe) {
-        throw new PluginException("Error while peeking into the input stream", ioe);
+      else {
+        logger.debug2("Unfiltered"); // expected to be EPUB
+        return pdfpeek;
       }
+    }
+    catch (IOException ioe) {
+      throw new PluginException("Error while peeking into the input stream", ioe);
+    }
   }
 
-  public static void main(String[] args) throws Exception {
-    PdfPeekInputStream pdfpeek = new PdfPeekInputStream(new FileInputStream("/tmp/f0.pdf"));
-    new HindawiPublishingCorporationPdfFilterFactory().createFilteredInputStream(null, pdfpeek, null);
-  }
-  
 }
