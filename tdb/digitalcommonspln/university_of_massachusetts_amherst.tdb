@@ -1,0 +1,241 @@
+{
+
+  publisher <
+    name = University of Massachusetts Amherst
+  >
+  
+  # This instance is not properly set up for year markup
+  
+  {
+  
+    title <
+      name = African Diaspora Archaeology Newsletter ;
+      issn = 1933-8651
+    >
+    
+    plugin = org.lockss.plugin.bepress.BePressPlugin
+    param[base_url] = http://scholarworks.umass.edu/
+    param[journal_abbr] = adan
+    implicit < status ; year ; volume ; name ; param[volume] >
+    
+    au < manifest ; 1994 ; 1 ; African Diaspora Archaeology Newsletter Volume 1 ; 1 >
+    au < manifest ; 1995 ; 2 ; African Diaspora Archaeology Newsletter Volume 2 ; 2 >
+    au < manifest ; 1996 ; 3 ; African Diaspora Archaeology Newsletter Volume 3 ; 3 >
+    au < manifest ; 1997 ; 4 ; African Diaspora Archaeology Newsletter Volume 4 ; 4 >
+    au < manifest ; 1998 ; 5 ; African Diaspora Archaeology Newsletter Volume 5 ; 5 >
+    au < manifest ; 1999 ; 6 ; African Diaspora Archaeology Newsletter Volume 6 ; 6 >
+    au < manifest ; 2000 ; 7 ; African Diaspora Archaeology Newsletter Volume 7 ; 7 >
+    au < manifest ; 2005 ; 8 ; African Diaspora Archaeology Newsletter Volume 8 ; 8 >
+    au < manifest ; 2006 ; 9 ; African Diaspora Archaeology Newsletter Volume 9 ; 9 >
+    au < manifest ; 2007 ; 10 ; African Diaspora Archaeology Newsletter Volume 10 ; 10 >
+    au < manifest ; 2008 ; 11 ; African Diaspora Archaeology Newsletter Volume 11 ; 11 >
+    au < manifest ; 2009 ; 12 ; African Diaspora Archaeology Newsletter Volume 12 ; 12 >
+    au < manifest ; 2010 ; 13 ; African Diaspora Archaeology Newsletter Volume 13 ; 13 >
+    au < manifest ; 2011 ; 14 ; African Diaspora Archaeology Newsletter Volume 14 ; 14 >
+  
+  }
+
+  {
+  
+    title <
+      name = Contributions in Black Studies
+    >
+    
+    plugin = org.lockss.plugin.bepress.BePressPlugin
+    param[base_url] = http://scholarworks.umass.edu/
+    param[journal_abbr] = cibs
+    implicit < status ; year ; volume ; name ; param[volume] >
+    
+    au < manifest ; 1977 ; 1 ; Contributions in Black Studies Volume 1 ; 1 >
+    au < manifest ; 1978 ; 2 ; Contributions in Black Studies Volume 2 ; 2 >
+    au < manifest ; 1979 ; 3 ; Contributions in Black Studies Volume 3 ; 3 >
+    au < manifest ; 1980 ; 4 ; Contributions in Black Studies Volume 4 ; 4 >
+    au < manifest ; 1981 ; 5 ; Contributions in Black Studies Volume 5 ; 5 >
+    au < manifest ; 1983 ; 6 ; Contributions in Black Studies Volume 6 ; 6 >
+    au < manifest ; 1985 ; 7 ; Contributions in Black Studies Volume 7 ; 7 >
+    au < manifest ; 1986 ; 8 ; Contributions in Black Studies Volume 8 ; 8 >
+    au < manifest ; 1990-1992 ; 9-10 ; Contributions in Black Studies Volume 9-10 ; 9 >
+    au < manifest ; 1993 ; 11 ; Contributions in Black Studies Volume 11 ; 11 >
+    au < manifest ; 1994 ; 12 ; Contributions in Black Studies Volume 12 ; 12 >
+    au < manifest ; 1995 ; 13-14 ; Contributions in Black Studies Volume 13-14 ; 13 >
+    au < manifest ; 1997 ; 15 ; Contributions in Black Studies Volume 15 ; 15 >
+  
+  }
+
+  {
+  
+    title <
+      name = Communication +1
+    >
+    
+    plugin = org.lockss.plugin.bepress.BePressPlugin
+    param[base_url] = http://scholarworks.umass.edu/
+    param[journal_abbr] = cpo
+    implicit < status ; year ; volume ; name ; param[volume] >
+    
+    au < manifest ; 2012 ; 1 ; Communication +1 Volume 1 ; 1 >
+    au < manifest ; 2013 ; 2 ; Communication +1 Volume 2 ; 2 >
+    au < manifest ; 2014 ; 3 ; Communication +1 Volume 3 ; 3 >
+  
+  }
+  
+  {
+  
+    title <
+      name = Dose-Response: An International Journal
+    >
+    
+    plugin = org.lockss.plugin.bepress.BePressPlugin
+    param[base_url] = http://scholarworks.umass.edu/
+    param[journal_abbr] = dose_response
+    implicit < status ; year ; volume ; name ; param[volume] >
+    
+    # The actual year of volume 1 is unclear; guessing 2003
+    au < manifest ; 2003 ; 1 ; Dose-Response: An International Journal Volume 1 ; 1 >
+    # No volume 2 found
+    au < manifest ; 2005 ; 3 ; Dose-Response: An International Journal Volume 3 ; 3 >
+    au < manifest ; 2006 ; 4 ; Dose-Response: An International Journal Volume 4 ; 4 >
+    au < manifest ; 2007 ; 5 ; Dose-Response: An International Journal Volume 5 ; 5 >
+    au < manifest ; 2008 ; 6 ; Dose-Response: An International Journal Volume 6 ; 6 >
+    au < manifest ; 2009 ; 7 ; Dose-Response: An International Journal Volume 7 ; 7 >
+    au < manifest ; 2010 ; 8 ; Dose-Response: An International Journal Volume 8 ; 8 >
+    au < manifest ; 2011 ; 9 ; Dose-Response: An International Journal Volume 9 ; 9 >
+    au < manifest ; 2012 ; 10 ; Dose-Response: An International Journal Volume 10 ; 10 >
+    au < manifest ; 2013 ; 11 ; Dose-Response: An International Journal Volume 11 ; 11 >
+    au < manifest ; 2014 ; 12 ; Dose-Response: An International Journal Volume 12 ; 12 >
+  
+  }
+  
+  {
+  
+    title <
+      name = University of Massachusetts Amherst Adjunct Faculty Author Gallery
+    >
+    
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://scholarworks.umass.edu/
+    param[collection_type] = ir_series
+    param[collection] = adjunct_sw
+    implicit < status ; year ; name ; param[year] >
+  
+    au < doNotProcess ; 1993 ; University of Massachusetts Amherst Adjunct Faculty Author Gallery 1993 ; 1993 >
+    au < doNotProcess ; 1994 ; University of Massachusetts Amherst Adjunct Faculty Author Gallery 1995 ; 1995 >
+    au < doNotProcess ; 1995 ; University of Massachusetts Amherst Adjunct Faculty Author Gallery 1995 ; 1995 >
+    au < doNotProcess ; 2003 ; University of Massachusetts Amherst Adjunct Faculty Author Gallery 2003 ; 2003 >
+    au < doNotProcess ; 2008 ; University of Massachusetts Amherst Adjunct Faculty Author Gallery 2008 ; 2008 >
+    au < doNotProcess ; 2010 ; University of Massachusetts Amherst Adjunct Faculty Author Gallery 2010 ; 2010 >
+  
+  }
+
+  {
+  
+    title <
+      name = University of Massachusetts Amherst Afro-American Studies Faculty Publication Series
+    >
+    
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://scholarworks.umass.edu/
+    param[collection_type] = ir_series
+    param[collection] = afroam_faculty_pubs
+    implicit < status ; year ; name ; param[year] >
+  
+    au < doNotProcess ; 1975 ; University of Massachusetts Amherst Afro-American Studies Faculty Publication Series 1975 ; 1975 >
+    au < doNotProcess ; 1979 ; University of Massachusetts Amherst Afro-American Studies Faculty Publication Series 1979 ; 1979 >
+    au < doNotProcess ; 1994 ; University of Massachusetts Amherst Afro-American Studies Faculty Publication Series 1994 ; 1994 >
+    au < doNotProcess ; 1995 ; University of Massachusetts Amherst Afro-American Studies Faculty Publication Series 1995 ; 1995 >
+    au < doNotProcess ; 1996 ; University of Massachusetts Amherst Afro-American Studies Faculty Publication Series 1996 ; 1996 >
+    au < doNotProcess ; 1998 ; University of Massachusetts Amherst Afro-American Studies Faculty Publication Series 1998 ; 1998 >
+    au < doNotProcess ; 2000 ; University of Massachusetts Amherst Afro-American Studies Faculty Publication Series 2000 ; 2000 >
+    au < doNotProcess ; 2001 ; University of Massachusetts Amherst Afro-American Studies Faculty Publication Series 2001 ; 2001 >
+    au < doNotProcess ; 2002 ; University of Massachusetts Amherst Afro-American Studies Faculty Publication Series 2002 ; 2002 >
+    au < doNotProcess ; 2003 ; University of Massachusetts Amherst Afro-American Studies Faculty Publication Series 2003 ; 2003 >
+    au < doNotProcess ; 2004 ; University of Massachusetts Amherst Afro-American Studies Faculty Publication Series 2004 ; 2004 >
+    au < doNotProcess ; 2005 ; University of Massachusetts Amherst Afro-American Studies Faculty Publication Series 2005 ; 2005 >
+    au < doNotProcess ; 2006 ; University of Massachusetts Amherst Afro-American Studies Faculty Publication Series 2006 ; 2006 >
+    au < doNotProcess ; 2007 ; University of Massachusetts Amherst Afro-American Studies Faculty Publication Series 2007 ; 2007 >
+    au < doNotProcess ; 2008 ; University of Massachusetts Amherst Afro-American Studies Faculty Publication Series 2008 ; 2008 >
+    au < doNotProcess ; 2009 ; University of Massachusetts Amherst Afro-American Studies Faculty Publication Series 2009 ; 2009 >
+    au < doNotProcess ; 2010 ; University of Massachusetts Amherst Afro-American Studies Faculty Publication Series 2010 ; 2010 >
+  
+  }
+
+  {
+  
+    title <
+      name = University of Massachusetts Amherst Anthropology Department Faculty Publication Series
+    >
+    
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://scholarworks.umass.edu/
+    param[collection_type] = ir_series
+    param[collection] = anthro_faculty_pubs
+    implicit < status ; year ; name ; param[year] >
+  
+    au < doNotProcess ; 1950 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 1950 ; 1950 >
+    au < doNotProcess ; 1951 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 1951 ; 1951 >
+    au < doNotProcess ; 1952 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 1952 ; 1952 >
+    au < doNotProcess ; 1956 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 1956 ; 1956 >
+    au < doNotProcess ; 1958 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 1958 ; 1958 >
+    au < doNotProcess ; 1960 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 1960 ; 1960 >
+    au < doNotProcess ; 1961 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 1961 ; 1961 >
+    au < doNotProcess ; 1964 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 1964 ; 1964 >
+    au < doNotProcess ; 1965 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 1965 ; 1965 >
+    au < doNotProcess ; 1966 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 1966 ; 1966 >
+    au < doNotProcess ; 1967 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 1967 ; 1967 >
+    au < doNotProcess ; 1969 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 1969 ; 1969 >
+    au < doNotProcess ; 1970 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 1970 ; 1970 >
+    au < doNotProcess ; 1972 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 1972 ; 1972 >
+    au < doNotProcess ; 1975 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 1975 ; 1975 >
+    au < doNotProcess ; 1977 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 1977 ; 1977 >
+    au < doNotProcess ; 1978 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 1978 ; 1978 >
+    au < doNotProcess ; 1980 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 1980 ; 1980 >
+    au < doNotProcess ; 1981 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 1981 ; 1981 >
+    au < doNotProcess ; 1982 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 1982 ; 1982 >
+    au < doNotProcess ; 1983 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 1983 ; 1983 >
+    au < doNotProcess ; 1984 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 1984 ; 1984 >
+    au < doNotProcess ; 1985 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 1985 ; 1985 >
+    au < doNotProcess ; 1986 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 1986 ; 1986 >
+    au < doNotProcess ; 1987 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 1987 ; 1987 >
+    au < doNotProcess ; 1988 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 1988 ; 1988 >
+    au < doNotProcess ; 1989 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 1989 ; 1989 >
+    au < doNotProcess ; 1990 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 1990 ; 1990 >
+    au < doNotProcess ; 1991 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 1991 ; 1991 >
+    au < doNotProcess ; 1992 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 1992 ; 1992 >
+    au < doNotProcess ; 1993 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 1993 ; 1993 >
+    au < doNotProcess ; 1994 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 1994 ; 1994 >
+    au < doNotProcess ; 1995 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 1995 ; 1995 >
+    au < doNotProcess ; 1996 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 1996 ; 1996 >
+    au < doNotProcess ; 1997 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 1997 ; 1997 >
+    au < doNotProcess ; 1998 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 1998 ; 1998 >
+    au < doNotProcess ; 1999 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 1999 ; 1999 >
+    au < doNotProcess ; 2000 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 2000 ; 2000 >
+    au < doNotProcess ; 2001 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 2001 ; 2001 >
+    au < doNotProcess ; 2002 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 2002 ; 2002 >
+    au < doNotProcess ; 2003 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 2003 ; 2003 >
+    au < doNotProcess ; 2004 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 2004 ; 2004 >
+    au < doNotProcess ; 2005 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 2005 ; 2005 >
+    au < doNotProcess ; 2006 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 2006 ; 2006 >
+    au < doNotProcess ; 2007 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 2007 ; 2007 >
+    au < doNotProcess ; 2008 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 2008 ; 2008 >
+    au < doNotProcess ; 2009 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 2009 ; 2009 >
+    au < doNotProcess ; 2010 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 2010 ; 2010 >
+  
+  }
+
+  {
+  
+    title <
+      name = University of Massachusetts Amherst Anthropology Department Research Reports
+    >
+    
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://scholarworks.umass.edu/
+    param[collection_type] = ir_series
+    implicit < status ; year ; name ; param[collection] ; param[year] >
+  
+    au < doNotProcess ; 1968 ; University of Massachusetts Amherst Anthropology Department Research Report 01: Reports on Achievement Motivation ; anthro_res_rpt1 ; 1968 >
+    au < doNotProcess ; 1968 ; University of Massachusetts Amherst Anthropology Department Research Report 02: An Archaeological Survey of the Nepeña Valley, Peru ; anthro_res_rpt2 ; 1968 >
+  
+  }
+
+}
