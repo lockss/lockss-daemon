@@ -57,6 +57,7 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
+#      printf("Req:%s\nResp:%s\n",$req->url,$resp->request->uri);
       if ($req->url ne $resp->request->uri) {
         $result = "Redirected";
       }
