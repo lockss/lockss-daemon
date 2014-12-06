@@ -2439,7 +2439,7 @@ comment[bdr5] = volume 5 has 500 error.  http://www.biology-direct.com/content/s
         issnl = 1477-044X
       >
 
-comment[bmr] = journal archive available, but no new volumes
+comment[bmr] = journal archive available, but no new volumes. Last volume is 2008.
 
       param[base_url] = http://www.biomagres.com/
       param[journal_issn] = 1477-044X
@@ -2450,7 +2450,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2006 ; BioMagnetic Research and Technology Volume 4 ; 4 >
       au < manifest ; exists ; 2007 ; BioMagnetic Research and Technology Volume 5 ; 5 >
       au < finished ; crawling ; 2008 ; BioMagnetic Research and Technology Volume 6 ; 6 >
-      au < crawling ; exists ; 2009 ; BioMagnetic Research and Technology Volume 7 ; 7 >
+      au < superseded ; exists ; 2009 ; BioMagnetic Research and Technology Volume 7 [to delete] ; 7 >
 
     }
 
