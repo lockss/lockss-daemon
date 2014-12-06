@@ -4307,14 +4307,23 @@ comment[bmr] = journal archive available, but no new volumes
         eissn = 1735-1979
       >
 
-      param[base_url] = http://ijehse.com/
       param[journal_issn] = 1735-1979
+      {
+        param[base_url] = http://ijehse.com/
+        comment[url] = url incorrect
 
-      au < crawling ; exists ; 2012 ; Iranian Journal of Environmental Health Science & Engineering Volume 9 ; 9 >
-      au < crawling ; exists ; 2013 ; Iranian Journal of Environmental Health Science & Engineering Volume 10 ; 10 >
-      au < crawling ; exists ; 2013 ; Iranian Journal of Environmental Health Science & Engineering Volume 11 ; 11 >
-      au < manifest ; exists ; 2014 ; Iranian Journal of Environmental Health Science & Engineering Volume 12 ; 12 >
+        au < superseded ; exists ; 2012 ; Iranian Journal of Environmental Health Science & Engineering Volume 9 [superseded] ; 9 >
+        au < superseded ; exists ; 2013 ; Iranian Journal of Environmental Health Science & Engineering Volume 10 [superseded] ; 10 >
+        au < superseded ; exists ; 2013 ; Iranian Journal of Environmental Health Science & Engineering Volume 11 [superseded] ; 11 >
+      }
+      {
+        param[base_url] = http://www.ijehse.com/
 
+        au < exists ; exists ; 2012 ; Iranian Journal of Environmental Health Science & Engineering Volume 9 ; 9 >
+        au < exists ; exists ; 2013 ; Iranian Journal of Environmental Health Science & Engineering Volume 10 ; 10 >
+        au < exists ; exists ; 2013 ; Iranian Journal of Environmental Health Science & Engineering Volume 11 ; 11 >
+        au < exists ; exists ; 2014 ; Iranian Journal of Environmental Health Science & Engineering Volume 12 ; 12 >
+      }
     }
 
     {
