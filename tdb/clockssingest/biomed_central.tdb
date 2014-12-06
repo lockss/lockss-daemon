@@ -2349,20 +2349,33 @@
         issnl = 1745-6150
       >
 
-comment[bdr5] = volume 5 has 500 error.  http://www.biology-direct.com/content/supplementary/OST-HTH_Supp.html
+comment[bdr5] = volume 5 has 500 error.  http://www.biology-direct.com/content/supplementary/OST-HTH_Supp.html. http://www.biologydirect.com/
 
-      param[base_url] = http://www.biology-direct.com/
       param[journal_issn] = 1745-6150
+      {
+        param[base_url] = http://www.biology-direct.com/
+        comment[url] = now incorrect.
 
-      au < manifest ; exists ; 2006 ; Biology Direct Volume 1 ; 1 >
-      au < manifest ; exists ; 2007 ; Biology Direct Volume 2 ; 2 >
-      au < finished ; crawling ; 2008 ; Biology Direct Volume 3 ; 3 >
-      au < crawling ; exists ; 2009 ; Biology Direct Volume 4 ; 4 >
-      au < crawling ; exists ; 2010 ; Biology Direct Volume 5 ; 5 >
-      au < finished ; crawling ; 2011 ; Biology Direct Volume 6 ; 6 >
-      au < crawling ; exists ; 2012 ; Biology Direct Volume 7 ; 7 >
-      au < crawling ; exists ; 2013 ; Biology Direct Volume 8 ; 8 >
-      au < manifest ; exists ; 2014 ; Biology Direct Volume 9 ; 9 >
+        au < superseded ; down   ; 2008 ; Biology Direct Volume 3 [superseded] ; 3 >
+        au < superseded ; exists ; 2009 ; Biology Direct Volume 4 [superseded] ; 4 >
+        au < superseded ; exists ; 2010 ; Biology Direct Volume 5 [superseded] ; 5 >
+        au < superseded ; down   ; 2011 ; Biology Direct Volume 6 [superseded] ; 6 >
+        au < superseded ; exists ; 2012 ; Biology Direct Volume 7 [superseded] ; 7 >
+        au < superseded ; exists ; 2013 ; Biology Direct Volume 8 [superseded] ; 8 >
+      }
+      {
+        param[base_url] = http://www.biologydirect.com/
+
+        au < exists ; exists ; 2006 ; Biology Direct Volume 1 ; 1 >
+        au < exists ; exists ; 2007 ; Biology Direct Volume 2 ; 2 >
+        au < exists ; exists ; 2008 ; Biology Direct Volume 3 ; 3 >
+        au < exists ; exists ; 2009 ; Biology Direct Volume 4 ; 4 >
+        au < exists ; exists ; 2010 ; Biology Direct Volume 5 ; 5 >
+        au < exists ; exists ; 2011 ; Biology Direct Volume 6 ; 6 >
+        au < exists ; exists ; 2012 ; Biology Direct Volume 7 ; 7 >
+        au < exists ; exists ; 2013 ; Biology Direct Volume 8 ; 8 >
+        au < exists ; exists ; 2014 ; Biology Direct Volume 9 ; 9 >
+      }
 
     }
 
