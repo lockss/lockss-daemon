@@ -1,5 +1,5 @@
 /*
- * $Id: CharsetUtils.java,v 1.1 2014-12-06 02:06:19 clairegriffin Exp $
+ * $Id: CharsetUtil.java,v 1.1 2014-12-06 03:15:46 clairegriffin Exp $
  */
 
 /*
@@ -52,7 +52,7 @@ import org.apache.commons.lang3.tuple.Pair;
 /**
  * A class meant to encapsulate static character encoding/decoding using icu4j
  */
-public class CharsetUtils {
+public class CharsetUtil {
   private static final String UTF8 = "UTF-8";
   private static final String UTF16BE = "UTF-16BE";
   private static final String UTF16LE = "UTF-16LE";
@@ -62,55 +62,59 @@ public class CharsetUtils {
   private static final String UTF1 = "UTF-1";
   private static final String ISO_8859_1 = "ISO-8859-1";
 
+  /**
+   * This will guess the charset of an inputstream but will consume the fir
+   * @param in an input stream which we will be checking
+   * @return the charset or null if nothing could be determined with greater
+   * than 50% accuracy
+   * @throws IOException if mark() not supported or read fails
+   */
   public static String guessCharsetName(InputStream in) throws IOException
   {
     ByteArrayOutputStream buffered = new ByteArrayOutputStream();
     byte[] buf = new byte[1024];
+    in.mark(2048);
     int len = in.read(buf);
     if (len <= 0) {
-      return UTF8;
+      return UTF8; // this is just a default for 0 len stream
     }
+    // If the charset is specified in the document, use that.
     String charset = findCharset(buf, len);
-    if (charset != null) {
-      // If the charset is specified in the document, use that.
-      buffered.write(buf, 0, len);
-      // Otherwise, look for a BOM at the start of the content.
-    } else if (hasUtf8BOM(buf, len)) {
-      charset = UTF8;
-      buffered.write(buf, 3, len - 3);
-      // Check UTF32 before UTF16 since a little endian UTF16 BOM is a prefix of
-      // a little endian UTF32 BOM.
-    } else if (hasUtf32BEBOM(buf, len)) {
-      charset = UTF32BE;
-      buffered.write(buf, 4, len - 4);
-    } else if (hasUtf32LEBOM(buf, len)) {
-      charset = UTF32LE;
-      buffered.write(buf, 4, len - 4);
-    } else if (hasUtf16BEBOM(buf, len)) {
-      charset = UTF16BE;
-      buffered.write(buf, 2, len - 2);
-    } else if (hasUtf16LEBOM(buf, len)) {
-      charset = UTF16LE;
-      buffered.write(buf, 2, len - 2);
-    } else if (hasUtf7BOM(buf, len)) {
-      charset = UTF7;
-      buffered.write(buf, 4, len - 4);
-    } else if (hasUtf1BOM(buf, len)) {
-      charset = UTF1;
-      buffered.write(buf, 3, len - 3);
-    } else {
-      // Use icu4j to choose an  encoding.
-      buffered.write(buf, 0, len);
-      charset = guessCharset(buf);
+    if (charset == null) {  // we didn't find it check BOM
+      if (hasUtf8BOM(buf, len)) {
+        charset = UTF8;
+        // Check UTF32 before UTF16 since a little endian UTF16 BOM is a prefix of
+        // a little endian UTF32 BOM.
+      } else if (hasUtf32BEBOM(buf, len)) {
+        charset = UTF32BE;
+      } else if (hasUtf32LEBOM(buf, len)) {
+        charset = UTF32LE;
+      } else if (hasUtf16BEBOM(buf, len)) {
+        charset = UTF16BE;
+      } else if (hasUtf16LEBOM(buf, len)) {
+        charset = UTF16LE;
+      } else if (hasUtf7BOM(buf, len)) {
+        charset = UTF7;
+      } else if (hasUtf1BOM(buf, len)) {
+        charset = UTF1;
+      } else {
+        // Use icu4j to guess an encoding.
+        charset = guessCharset(buf);
+      }
     }
     if (charset != null) { charset = supportedCharsetName(charset); }
     if (charset == null) { charset = UTF8; }
+    in.reset();
     return charset;
   }
 
   /**
    * Given a byte stream, figure out an encoding and return a character stream
    * and the encoding used to convert bytes to characters.
+   * @param in  the InputStream from which to determine the encoding
+   * @return a JoinedReader containing the consumed bytes and the inputstream
+   * and a new a String containing the name of the character encoding.
+   * @throws IOException
    */
   public static Pair<Reader, String> getCharsetReader(InputStream in)
     throws IOException {
@@ -149,15 +153,76 @@ public class CharsetUtils {
       charset = UTF1;
       buffered.write(buf, 3, len - 3);
     } else {
-      // Use universalchardet to choose an  encoding.
+      // Use icu4j to choose an  encoding.
       buffered.write(buf, 0, len);
       charset = guessCharset(buf);
     }
     if (charset != null) { charset = supportedCharsetName(charset); }
     if (charset == null) { charset = UTF8; }
     return new ImmutablePair<Reader,String>(
-      joinStreamsWithCharset(buffered.toByteArray(), in,charset), charset);
+                                             joinStreamsWithCharset(buffered.toByteArray(), in,charset), charset);
   }
+
+  /**
+   * given a sampling of bytes determine the charset with the best match
+   * @param in the byte array containing a sampling of bytes
+   * @param expected the expected encoding, null if unknown
+   * @return the charset with > 50% confidence or null
+   */
+  public static String guessCharset(byte[] in, String expected)
+  {
+    CharsetDetector detector = new CharsetDetector();
+    if(expected != null) {
+      detector.setDeclaredEncoding(expected);
+    }
+    detector.setText(in);
+    CharsetMatch match = detector.detect();
+    if(match.getConfidence() > 50) {// we want at least a 50% match
+      return match.getName();
+    }
+    else {
+      return null;
+    }
+  }
+
+  public static String guessCharset(byte[] bytes) {
+    return guessCharset(bytes, null);
+  }
+
+  /**
+   * given an input stream determine the charset with the best match
+   * @param in the inputstream containing the bytes m
+   * @param expected the expected or anticipated match
+   * @return charset with > 50% confidence or null
+   * @throws IOException if InputStream cannot be reset
+   */
+  public static String guessCharset(InputStream in, String expected)
+    throws IOException
+  {
+    CharsetDetector detector = new CharsetDetector();
+    if(expected != null) {
+      detector.setDeclaredEncoding(expected);
+    }
+    detector.setText(in);
+    CharsetMatch match = detector.detect();
+    if(match.getConfidence() > 50) {// we want at least a 50% match
+      return match.getName();
+    }
+    else {
+      return null;
+    }
+
+  }
+
+  /**
+   * given an input stream determine the charset with the best match
+   * @param in the inputstream containing the bytes
+   * @return charset with > 50% confidence or null
+   */
+  public static String guessCharset(InputStream in) throws IOException{
+    return guessCharset(in, null);
+  }
+
 
 
   private static final byte[] CHARSET_BYTES;
@@ -275,7 +340,7 @@ public class CharsetUtils {
    *     tail.
    */
   private static Reader joinStreamsWithCharset(
-                          byte[] buffered, InputStream tail, String charset)
+                                                byte[] buffered, InputStream tail, String charset)
     throws IOException {
 
     class JoinedStream extends InputStream {
@@ -340,32 +405,6 @@ public class CharsetUtils {
     return b <= ' '
            && (b == ' ' || b == '\r' || b == '\n' || b == '\t' || b == '\f');
   }
-  /**
-   * given a sampling of bytes determine the possible charsets
-   * @param in the byte array containing a sampling of bytes
-   * @param expected the expected encoding, null if unknown
-   * @return the charset with > 50% confidence or null
-   */
-  public static String guessCharset(byte[] in, String expected)
-  {
-    CharsetDetector detector = new CharsetDetector();
-    if(expected != null) {
-      detector.setDeclaredEncoding(expected);
-    }
-    detector.setText(in);
-    CharsetMatch match = detector.detect();
-    if(match.getConfidence() > 50) {// we want at least a 50% match
-      return match.getName();
-    }
-    else {
-      return null;
-    }
-  }
-
-  public static String guessCharset(byte[] bytes) {
-    return guessCharset(bytes, null);
-  }
-
 
   static String supportedCharsetName(String s) {
     try {
