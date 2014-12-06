@@ -1,5 +1,5 @@
 /*
- * $Id: TestDigitalCommonsRepositoryArchivalUnit.java,v 1.3 2014-11-21 18:55:21 thib_gc Exp $
+ * $Id: TestDigitalCommonsRepositoryArchivalUnit.java,v 1.4 2014-12-06 01:33:11 thib_gc Exp $
  */
 
 /*
@@ -70,16 +70,16 @@ public class TestDigitalCommonsRepositoryArchivalUnit extends LockssTestCase {
       "org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin";
   
   private static final String PLUGIN_NAME = 
-      "Digital Commons Repository Plugin";
+      "Digital Commons Plugin (Series, ETDs, Galleries, Book Series)";
 
   private static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
-  private static final String YEAR_KEY = ConfigParamDescr.YEAR.getKey();
-  private static final String COLLECTION_KEY = "collection";
   private static final String COLLECTION_TYPE_KEY = "collection_type";
+  private static final String COLLECTION_KEY = "collection";
+  private static final String COLLECTION_HEADING_KEY = "collection_heading";
   private static final String ROOT_URL = "http://www.example.com/";
-  private static final String COLLECTION = "xxxdept";  
   private static final String COLLECTION_TYPE = "xxxtype";  
-  private static final String YEAR = "2013";  
+  private static final String COLLECTION = "xxxdept";  
+  private static final String COLLECTION_HEADING = "xxxheading";  
   
   public void setUp() throws Exception {
     super.setUp();
@@ -87,7 +87,7 @@ public class TestDigitalCommonsRepositoryArchivalUnit extends LockssTestCase {
     theDaemon = getMockLockssDaemon();
     theDaemon.getHashService();
     baseUrl = new URL(ROOT_URL);
-    dcrAu = makeAu(baseUrl, COLLECTION, COLLECTION_TYPE, YEAR);
+    dcrAu = makeAu(baseUrl, COLLECTION, COLLECTION_TYPE, COLLECTION_HEADING);
   }
 
   public void tearDown() throws Exception {
@@ -100,7 +100,7 @@ public class TestDigitalCommonsRepositoryArchivalUnit extends LockssTestCase {
     Properties props = new Properties();
     props.setProperty(COLLECTION_KEY, collection);
     props.setProperty(COLLECTION_TYPE_KEY, collectionType);
-    props.setProperty(YEAR_KEY, year);
+    props.setProperty(COLLECTION_HEADING_KEY, year);
     if (url != null) {
       props.setProperty(BASE_URL_KEY, url.toString());
     }
@@ -114,7 +114,7 @@ public class TestDigitalCommonsRepositoryArchivalUnit extends LockssTestCase {
 
   public void testConstructNullUrl() throws Exception {
     try {
-      makeAu(null, "yyydept", "yyytype", "2013");
+      makeAu(null, "yyydept", "yyytype", "yyyheading");
       fail("Should have thrown ArchivalUnit.ConfigurationException");
     } catch (ArchivalUnit.ConfigurationException e) {
     }
@@ -181,15 +181,15 @@ public class TestDigitalCommonsRepositoryArchivalUnit extends LockssTestCase {
 
   public void testGetName() throws Exception {
     DefinableArchivalUnit au1 =
-      makeAu(new URL("http://www.example1.com/"), "aaadept", "aaatype", "2012");
+      makeAu(new URL("http://www.example1.com/"), "aaadept", "aaatype", "aaaheading");
     assertEquals(PLUGIN_NAME + ", Base URL http://www.example1.com/,"
                  + " Collection Type aaatype, Collection aaadept,"
-                 + " Year 2012", au1.getName());
+                 + " Collection Heading aaaheading", au1.getName());
     DefinableArchivalUnit au2 =
-      makeAu(new URL("http://www.example2.com/"), "bbbdept", "bbbtype", "2013");
+      makeAu(new URL("http://www.example2.com/"), "bbbdept", "bbbtype", "bbbheading");
     assertEquals(PLUGIN_NAME + ", Base URL http://www.example2.com/,"
                  + " Collection Type bbbtype, Collection bbbdept,"
-                 + " Year 2013", au2.getName());
+                 + " Collection Heading bbbheading", au2.getName());
   }
 
 }

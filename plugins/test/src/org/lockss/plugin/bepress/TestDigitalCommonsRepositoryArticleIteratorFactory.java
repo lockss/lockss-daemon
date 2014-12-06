@@ -1,9 +1,9 @@
 /* 
- * $Id: TestDigitalCommonsRepositoryArticleIteratorFactory.java,v 1.2 2014-07-21 03:28:30 tlipkis Exp $
+ * $Id: TestDigitalCommonsRepositoryArticleIteratorFactory.java,v 1.3 2014-12-06 01:33:11 thib_gc Exp $
  */
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -72,9 +72,9 @@ public class TestDigitalCommonsRepositoryArticleIteratorFactory
       "org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin";
    
   private static final String BASE_URL = "http://www.example.com/";
-  private static final String COLLECTION = "xxxdept";  
   private static final String COLLECTION_TYPE = "xxxtype";  
-  private static final String YEAR = "2013";
+  private static final String COLLECTION = "xxxdept";  
+  private static final String COLLECTION_HEADING = "xxxheading";
   private static final int DEFAULT_FILESIZE = 3000;
   private static final int EXP_DELETED_FILE_COUNT = 2;
   private static final int EXP_FULL_TEXT_COUNT = 3; // full text pdf
@@ -114,9 +114,9 @@ public class TestDigitalCommonsRepositoryArticleIteratorFactory
   private Configuration dcrAuConfig() {
     Configuration conf = ConfigManager.newConfiguration();
     conf.put("base_url", BASE_URL);
-    conf.put("collection", COLLECTION);
     conf.put("collection_type", COLLECTION_TYPE);
-    conf.put("year", YEAR);
+    conf.put("collection", COLLECTION);
+    conf.put("collection_heading", COLLECTION_HEADING);
     return conf;
   }
   

@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Digital Commons Repository Theme Plugin</string>
+    <string>Digital Commons Plugin (Event Communities)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -62,7 +62,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Digital Commons Repository Theme Plugin, Base URL %s, Collection %s, Collection Theme %s", base_url, collection, collection_theme</string>
+    <string>"Digital Commons Plugin (Event Communities), Base URL %s, Collection %s, Collection Theme %s", base_url, collection, collection_theme</string>
   </entry>
   <entry>
     <string>au_permission_checker_factory</string>

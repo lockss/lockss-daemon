@@ -1,5 +1,5 @@
 /*
- * $Id: DigitalCommonsRepositoryHtmlCrawlFilterFactory.java,v 1.3 2014-11-22 00:56:46 thib_gc Exp $
+ * $Id: DigitalCommonsRepositoryHtmlCrawlFilterFactory.java,v 1.4 2014-12-06 01:33:11 thib_gc Exp $
  */
 
 /*
@@ -53,10 +53,10 @@ public class DigitalCommonsRepositoryHtmlCrawlFilterFactory implements FilterFac
                                                InputStream in,
                                                String encoding)
       throws PluginException {
-    String paramYear = au.getConfiguration().get(ConfigParamDescr.YEAR.getKey());
-    log.debug3("param year: " + paramYear);
+    String collectionHeading = au.getConfiguration().get("collection_heading");
+    log.debug3("param collection_heading: " + collectionHeading);
     
-    String regexStr = "^lockss_(?!" + paramYear + ")[0-9]{4}$";
+    String regexStr = "^lockss_(?!" + collectionHeading + ")";
 
     NodeFilter[] filters = new NodeFilter[] {
         // filter out all years except the AU's year 		

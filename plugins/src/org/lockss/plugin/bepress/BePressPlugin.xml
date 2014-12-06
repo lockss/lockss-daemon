@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>31</string>
+    <string>32</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -34,11 +34,11 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Berkeley Electronic Press Plugin, Base URL %s, Journal Code %s, Volume %d", base_url, journal_abbr, volume</string>
+    <string>"Digital Commons Plugin (Serials), Base URL %s, Journal Code %s, Volume %d", base_url, journal_abbr, volume</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Berkeley Electronic Press Plugin</string>
+    <string>Digital Commons Plugin (Serials)</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>

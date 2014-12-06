@@ -1,5 +1,5 @@
 /*
- * $Id: TestDigitalCommonsRepositoryHtmlFilterFactory.java,v 1.1 2013-11-19 21:43:08 ldoan Exp $
+ * $Id: TestDigitalCommonsRepositoryHtmlFilterFactory.java,v 1.2 2014-12-06 01:33:11 thib_gc Exp $
  */
 
 /*
@@ -61,23 +61,23 @@ public class TestDigitalCommonsRepositoryHtmlFilterFactory
   private static final String filteredStr = 
       "<div class=\"block\"></div>";
         
-  private static final String with2012and2013 = 
+  private static final String withFirstAndSecond = 
       "<div class=\"block\">"
-          + "<div class=\"lockss_2013\">"
-          + "<h4 id=\"year_2013\">Submissions from 2013</h4>"
+          + "<div class=\"lockss_year_or_keyword_heading\">"
+          + "<h4 id=\"year_or_keyword_heading\">Administrative Agency Documents</h4>"
 	  + "<p class=\"pdf\"><a href=\"http://blah\">PDF</a></p>"
 	  + "<p><a href=\"http://blah122\">A Data</a></p>"
 	  + "</div>"
-	  + "<div class=\"lockss_2012\">"
-	  + "<h4 id=\"year_2012\">Submissions from 2012</h4>" 
+	  + "<div class=\"lockss_other_year_or_other_keyword_heading\">"
+	  + "<h4 id=\"other_year_or_other_keyword_heading\">Archival Materials</h4>" 
 	  + "<p class=\"pdf\"><a href=\"http://statistics\">PDF</a></p>"
 	  + "</div>"
 	  + "</div>";
 
-  private static final String without2012 = 
+  private static final String withoutSecond = 
       "<div class=\"block\">"
-          + "<div class=\"lockss_2013\">"
-          + "<h4 id=\"year_2013\">Submissions from 2013</h4>"
+          + "<div class=\"lockss_year_or_keyword_heading\">"
+          + "<h4 id=\"year_or_keyword_heading\">Administrative Agency Documents</h4>"
 	  + "<p class=\"pdf\"><a href=\"http://blah\">PDF</a></p>"
 	  + "<p><a href=\"http://blah122\">A Data</a></p>"
 	  + "</div>"
@@ -204,9 +204,9 @@ public class TestDigitalCommonsRepositoryHtmlFilterFactory
   private Configuration dcpAuConfig() {
     Configuration conf = ConfigManager.newConfiguration();
     conf.put("base_url", "http://www.example.com/");
-    conf.put("collection", "abc");
     conf.put("collection_type", "abctype");
-    conf.put("year", "2013");
+    conf.put("collection", "abc");
+    conf.put("collection_heading", "year_or_keyword_heading");
     return conf;
   }
   
@@ -240,7 +240,7 @@ public class TestDigitalCommonsRepositoryHtmlFilterFactory
       variantAu = createAu();
     }    
     public void testFiltering() throws Exception {
-      doFilterTest(variantAu, variantFact, with2012and2013, without2012);
+      doFilterTest(variantAu, variantFact, withFirstAndSecond, withoutSecond);
       doFilterTest(variantAu, variantFact, withHeader, filteredStr);
       doFilterTest(variantAu, variantFact, withBreadcrumb, filteredStr);
       doFilterTest(variantAu, variantFact, withSidebar, filteredStr);

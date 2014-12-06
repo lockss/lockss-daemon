@@ -9,26 +9,26 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Digital Commons Repository Plugin</string>
+    <string>Digital Commons Plugin (Series, ETDs, Galleries, Book Series)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>1</string>
-      </entry>
-      <entry>
-        <string>Substance</string>
         <string>2</string>
       </entry>
       <entry>
-        <string>Poll</string>
+        <string>Substance</string>
         <string>3</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>4</string>
       </entry>
     </map>
   </entry>
@@ -63,11 +63,11 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
-        <key>year</key>
-        <displayName>Year</displayName>
-        <description>Four digit year (e.g., 2004)</description>
-        <type>4</type>
-        <size>4</size>
+        <key>collection_heading</key>
+        <displayName>Collection Heading</displayName>
+        <description>Name of the internal heading within the collection (usually a four-digit year, but can be an arbitrary string, associated with the heading under which objects are listed within the collection)</description>
+        <type>1</type>
+        <size>20</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
@@ -75,7 +75,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Digital Commons Repository Plugin, Base URL %s, Collection Type %s, Collection %s, Year %d", base_url, collection_type, collection, year</string>
+    <string>"Digital Commons Plugin (Series, ETDs, Galleries, Book Series), Base URL %s, Collection Type %s, Collection %s, Collection Heading %s", base_url, collection_type, collection, collection_heading</string>
   </entry>
   <entry>
     <string>au_permission_checker_factory</string>
@@ -104,14 +104,17 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|svg|tif?f)$", base_url_host</string>
+      <string>1,"^https?://%s/.*\.(bmp|css|oet|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)$", base_url_host</string>
       <string>4,"^%s", base_url</string>
       <!-- http://repository.cmu.edu/statistics -->
       <string>1,"^%s%s$", base_url, collection</string>
       <!-- http://repository.cmu.edu/statistics/122/ -->
       <string>1,"^%s%s/", base_url, collection</string>
       <!-- http://repository.cmu.edu/cgi/viewcontent.cgi?article=1108&context=statistics -->
-      <string>1,"^%scgi/viewcontent\.cgi\?.*context=%s", base_url, collection</string>
+      <!-- http://docs.lib.purdue.edu/context/ecetheses/article/1017/type/native/viewcontent -> http://docs.lib.purdue.edu/cgi/viewcontent.cgi?params=/context/ecetheses/article/1017/type/native/&path_info= -->
+      <string>1,"^%scgi/viewcontent\.cgi\?.*(context=|/context/)%s", base_url, collection</string>
+      <!-- http://docs.lib.purdue.edu/ecetheses/10/ -> http://docs.lib.purdue.edu/context/ecetheses/article/1017/type/native/viewcontent -->
+      <string>1,"^%scontext/%s/", base_url, collection</string>
     </list>
   </entry>
   <entry>
@@ -137,6 +140,7 @@
           <string>"^%scgi/viewcontent\.cgi\?.*context=%s", base_url, collection</string>
           <!-- ir_gallery -->
           <string>"^%scontext/%s/article/[^/]+/type/native/viewcontent$", base_url, collection</string>
+          <string>"^%scgi/viewcontent\.cgi\?.*/context/%s", base_url, collection</string>
         </list>
       </entry>
     </map>

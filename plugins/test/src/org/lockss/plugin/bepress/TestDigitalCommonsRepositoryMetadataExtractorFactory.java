@@ -54,9 +54,9 @@ public class TestDigitalCommonsRepositoryMetadataExtractorFactory
       "org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin";
 
   private static final String BASE_URL = "http://www.example.com/";
-  private static final String COLLECTION = "xxxdept";  
   private static final String COLLECTION_TYPE = "xxxtype";  
-  private static final String YEAR = "2013";
+  private static final String COLLECTION = "xxxdept";  
+  private static final String COLLECTION_HEADING = "year_or_keyword_heading";
  
   public void setUp() throws Exception {
     super.setUp();
@@ -79,9 +79,9 @@ public class TestDigitalCommonsRepositoryMetadataExtractorFactory
   private Configuration dcrAuConfig() {
     Configuration conf = ConfigManager.newConfiguration();
     conf.put("base_url", BASE_URL);
-    conf.put("collection", COLLECTION);
     conf.put("collection_type", COLLECTION_TYPE);
-    conf.put("year", YEAR);
+    conf.put("collection", COLLECTION);
+    conf.put("collection_heading", COLLECTION_HEADING);
     return conf;
   }
   

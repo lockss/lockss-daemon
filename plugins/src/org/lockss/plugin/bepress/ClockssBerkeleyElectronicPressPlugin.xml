@@ -9,11 +9,11 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>31</string>
+    <string>32</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Berkeley Electronic Press Plugin (CLOCKSS)</string>
+    <string>Digital Commons Plugin (Serials for CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -21,11 +21,11 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>31</string>
+    <string>32</string>
   </entry>
   <entry>
     <string>au_name</string>
-     <string>"Berkeley Electronic Press Plugin (CLOCKSS), Base URL %s, Journal Code %s, Volume %d", base_url, journal_abbr, volume</string>
+     <string>"Digital Commons Plugin (Serials for CLOCKSS), Base URL %s, Journal Code %s, Volume %d", base_url, journal_abbr, volume</string>
   </entry>
   <entry>
     <string>clockss_override</string>
