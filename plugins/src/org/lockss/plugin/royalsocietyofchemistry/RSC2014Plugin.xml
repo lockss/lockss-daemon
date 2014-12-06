@@ -204,8 +204,4 @@
     <string>au_def_new_content_crawl</string>
     <long>1209600000</long>
   </entry>
-  <entry>
-    <string>au_exclude_urls_from_polls_pattern</string>
-    <string>[.](js[?]ver=v|css[?])</string>
-  </entry>
 </map>
