@@ -11,6 +11,7 @@
 
   {
 	implicit < status ; status2 ; year ; eisbn ; param[book_isbn] ; doi ; param[volume] ; name ; author >
+	comment[ingNotReady] = content not online
   
     {
         title <
