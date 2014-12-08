@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.180 2014-09-24 21:50:08 thib_gc Exp $
+ * $Id: V3Poller.java,v 1.181 2014-12-08 04:15:55 tlipkis Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.net.MalformedURLException;
 import java.security.*;
 import java.util.*;
 import org.apache.commons.collections.*;
+import org.apache.oro.text.regex.*;
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.crawler.*;
@@ -413,9 +414,11 @@ public class V3Poller extends BasePoll {
   public static final boolean DEFAULT_V3_REPAIR_FROM_PUBLISHER_WHEN_TOO_CLOSE =
     false;
   
-  /** ULRs with fewer than quorum votes, which do not exist on the poller,
-   * may be repaired fromo a peer if the publisher is down and there are at
-   * least this many identical replicas (based on plain hash). */
+  /** URLs matching a plugin's
+   * au_no_quorum_repair_from_peer_url_pattern(s), which have fewer than
+   * quorum votes and do not exist on the poller, may be repaired from a
+   * peer if there are at least this many identical replicas (based on
+   * plain hash). */
   public static final String PARAM_MIN_REPLICAS_FOR_NO_QUORUM_PEER_REPAIR =
     PREFIX + "minReplicasForNoQuorumPeerRepair";
   public static final int DEFAULT_MIN_REPLICAS_FOR_NO_QUORUM_PEER_REPAIR = -1;
@@ -582,6 +585,8 @@ public class V3Poller extends BasePoll {
   private int minReplicasForNoQuorumPeerRepair =
     V3Poller.DEFAULT_MIN_REPLICAS_FOR_NO_QUORUM_PEER_REPAIR;
 
+  private List<Pattern> repairFromPeerIfMissingUrlPatterns;
+
   // CR: Factor out common elements of the two constructors
   /**
    * <p>Create a new Poller to call a V3 Poll.</p>
@@ -644,6 +649,14 @@ public class V3Poller extends BasePoll {
 				      hashAlg, modulus, pvar,
 				      maxRepairs);
     
+    try {
+      repairFromPeerIfMissingUrlPatterns =
+	getAu().makeRepairFromPeerIfMissingUrlPatterns();
+    } catch (ArchivalUnit.ConfigurationException e) {
+      log.warning("Error building repairFromPeerIfMissingUrlPatterns, disabling",
+		  e);
+    }
+
     this.inclusionPolicy = createInclusionPolicy();
 
     long estimatedHashTime = getCachedUrlSet().estimatedHashDuration();
@@ -1905,10 +1918,11 @@ public class V3Poller extends BasePoll {
 	}
 	break;
       case TOO_CLOSE:
-	if (AuUtil.isRepairFromPublisherWhenTooClose(
-	      getAu(),
-	      repairFromPublisherWhenTooClose) &&
-	    publisherAvailableForRepair()) {
+	if (tally.isVoterOnly() && isRepairFromPeerIfMissingUrl(url)) {
+	  requestRepair(url, tally.getSortedRepairCandidates(1));
+	} else if (AuUtil.isRepairFromPublisherWhenTooClose(getAu(),
+							    repairFromPublisherWhenTooClose) &&
+		   publisherAvailableForRepair()) {
 	  requestRepairFromPublisher(url);
 	}
 	break;
@@ -1916,6 +1930,14 @@ public class V3Poller extends BasePoll {
 	log.warning("Unexpected results from tallying block " + url + ": "
 		    + tallyResult.printString);
       }
+    }
+  }
+
+  private boolean isRepairFromPeerIfMissingUrl(String url) {
+    if (repairFromPeerIfMissingUrlPatterns != null) {
+      return RegexpUtil.isMatch(url, repairFromPeerIfMissingUrlPatterns);
+    } else {
+      return false;
     }
   }
 

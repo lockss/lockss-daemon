@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.171 2014-11-24 10:17:46 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.172 2014-12-08 04:15:56 tlipkis Exp $
  */
 
 /*
@@ -606,8 +606,13 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   }
 
   public List<Pattern> makePermittedHostPatterns()
-    throws ArchivalUnit.ConfigurationException {
-      return null;
+      throws ArchivalUnit.ConfigurationException {
+    return null;
+  }
+
+  public List<Pattern> makeRepairFromPeerIfMissingUrlPatterns()
+      throws ArchivalUnit.ConfigurationException {
+    return null;
   }
 
   /**

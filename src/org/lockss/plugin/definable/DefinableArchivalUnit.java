@@ -1,9 +1,9 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.104 2014-11-24 10:17:46 tlipkis Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.105 2014-12-08 04:15:56 tlipkis Exp $
  */
 
 /*
- Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -110,6 +110,8 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
     "au_non_substance_url_pattern";
   public static final String KEY_AU_PERMITTED_HOST_PATTERN =
     "au_permitted_host_pattern";
+  public static final String KEY_AU_REPAIR_FROM_PEER_IF_MISSING_URL_PATTERN =
+    "au_repair_from_peer_if_missing_url_pattern";
 
   public static final String KEY_AU_CRAWL_COOKIE_POLICY =
     "au_crawl_cookie_policy";
@@ -183,6 +185,8 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
     printfKeysContext.put(KEY_AU_NON_SUBSTANCE_URL_PATTERN,
 			  PrintfContext.Regexp);
     printfKeysContext.put(KEY_AU_PERMITTED_HOST_PATTERN,
+			  PrintfContext.Regexp);
+    printfKeysContext.put(KEY_AU_REPAIR_FROM_PEER_IF_MISSING_URL_PATTERN,
 			  PrintfContext.Regexp);
     printfKeysContext.put(KEY_AU_NAME, PrintfContext.Display);
     // XXX These may use params supplied by OpenUrlResolver, need to inject
@@ -367,6 +371,12 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
   public List<Pattern> makePermittedHostPatterns()
       throws ArchivalUnit.ConfigurationException {
     return compileRegexpList(KEY_AU_PERMITTED_HOST_PATTERN,
+			     RegexpContext.Url);
+  }
+
+  public List<Pattern> makeRepairFromPeerIfMissingUrlPatterns()
+      throws ArchivalUnit.ConfigurationException {
+    return compileRegexpList(KEY_AU_REPAIR_FROM_PEER_IF_MISSING_URL_PATTERN,
 			     RegexpContext.Url);
   }
 

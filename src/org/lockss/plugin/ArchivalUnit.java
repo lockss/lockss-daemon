@@ -1,10 +1,10 @@
 /*
- * $Id: ArchivalUnit.java,v 1.70 2014-11-24 10:17:46 tlipkis Exp $
+ * $Id: ArchivalUnit.java,v 1.71 2014-12-08 04:15:56 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -246,6 +246,13 @@ public interface ArchivalUnit {
    * permission for collection.
    */
   public List<Pattern> makePermittedHostPatterns()
+      throws ArchivalUnit.ConfigurationException;
+
+  /**
+   * Construct a list of Patterns of URLs that should be repaired from 
+   * a peer if missing on the poller, even if vote is too close.
+   */
+  public List<Pattern> makeRepairFromPeerIfMissingUrlPatterns()
       throws ArchivalUnit.ConfigurationException;
 
   /**

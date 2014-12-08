@@ -1,10 +1,10 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.108 2014-11-24 10:17:46 tlipkis Exp $
+ * $Id: MockArchivalUnit.java,v 1.109 2014-12-08 04:15:55 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -63,6 +63,7 @@ public class MockArchivalUnit implements ArchivalUnit {
   private List<Pattern> nonSubstanceUrlPatterns = null;
   private List<Pattern> substanceUrlPatterns = null;
   private List<Pattern> permittedHostPatterns = null;
+  private List<Pattern> repairFromPeerIfMissingUrlPatterns = null;
   private SubstancePredicate substancePred = null;
   private CrawlWindow window;
   private int refetchDepth = 1;
@@ -212,6 +213,14 @@ public class MockArchivalUnit implements ArchivalUnit {
 
   public void setPermittedHostPatterns(List<Pattern> pats) {
     permittedHostPatterns = pats;
+  }
+
+  public List<Pattern> makeRepairFromPeerIfMissingUrlPatterns() {
+    return repairFromPeerIfMissingUrlPatterns;
+  }
+
+  public void setRepairFromPeerIfMissingUrlPatterns(List<Pattern> pats) {
+    repairFromPeerIfMissingUrlPatterns = pats;
   }
 
   public TitleConfig getTitleConfig() {

@@ -1,10 +1,10 @@
 /*
-n * $Id: PluginWellformednessTests.java,v 1.10 2014-11-24 10:17:45 tlipkis Exp $
+n * $Id: PluginWellformednessTests.java,v 1.11 2014-12-08 04:15:55 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -100,7 +100,7 @@ public final class PluginWellformednessTests extends LockssTestCase {
 
   /** This test expects to find a semicolon-separated list in the System
    * property org.lockss.test.TestPluginNames .  It runs {@link
-   * testWellFormed(String)} on each one. */
+   * #testWellFormed(String)} on each one. */
   public void testPlugins() throws Exception {
     String args = System.getProperty(PLUGIN_NAME_PROP);
     if (StringUtil.isNullString(args)) {
@@ -186,6 +186,7 @@ public final class PluginWellformednessTests extends LockssTestCase {
     au.makeSubstanceUrlPatterns();
     au.makeSubstancePredicate();
     au.makePermittedHostPatterns();
+    au.makeRepairFromPeerIfMissingUrlPatterns();
     au.getCrawlUrlComparator();
 
     au.getCrawlWindow();

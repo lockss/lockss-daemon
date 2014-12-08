@@ -213,6 +213,13 @@
       <string>".*\.cdn\.net"</string>
     </list>
   </entry>
+  <entry>
+    <string>au_repair_from_peer_if_missing_url_pattern</string>
+    <list>
+      <string>".*\.css$"</string>
+      <string>"%simg/", base_url</string>
+    </list>
+  </entry>
 
   <entry>
     <!-- Crawl window open from midnight to 6:00AM EST -->

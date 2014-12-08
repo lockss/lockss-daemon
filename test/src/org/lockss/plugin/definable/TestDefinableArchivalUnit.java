@@ -1,10 +1,10 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.71 2014-11-24 10:17:46 tlipkis Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.72 2014-12-08 04:15:55 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -774,6 +774,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertNull(au.makeSubstanceUrlPatterns());
     assertNull(au.makeSubstancePredicate());
     assertNull(au.makePermittedHostPatterns());
+    assertNull(au.makeRepairFromPeerIfMissingUrlPatterns());
 
     assertNull(au.getCrawlUrlComparator());
     assertClass(GoslingHtmlLinkExtractor.class,
@@ -1115,6 +1116,18 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 		     RegexpUtil.regexpCollection(cau.makePermittedHostPatterns()));
   }
 
+  public void testMakeRepairFromPeerIfMissingUrlPatterns() throws Exception {
+    defMap.putCollection(DefinableArchivalUnit.KEY_AU_REPAIR_FROM_PEER_IF_MISSING_URL_PATTERN,
+			 ListUtil.list(".*\\.css$",
+				       "\"%simages/\", base_url"));
+    additionalAuConfig.putString("base_url", "http://foo.net/");
+    setupAu(additionalAuConfig);
+
+    assertIsomorphic(ListUtil.list(".*\\.css$",
+				   "http\\:\\/\\/foo\\.net\\/images/"),
+		     RegexpUtil.regexpCollection(cau.makeRepairFromPeerIfMissingUrlPatterns()));
+  }
+
   /*
   public void testMakeCrawlSpec() throws Exception {
     setupAu();
@@ -1439,6 +1452,9 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertEquals(ListUtil.list(".*\\.cdn\\.base\\.foo",
 				   ".*\\.cdn\\.net"),
 		 RegexpUtil.regexpCollection(au.makePermittedHostPatterns()));
+    assertEquals(ListUtil.list(".*\\.css$",
+				   "http\\:\\/\\/base\\.foo\\/base_path\\/img/"),
+		 RegexpUtil.regexpCollection(au.makeRepairFromPeerIfMissingUrlPatterns()));
   }
 
   public void testFeatureUrls() throws Exception {

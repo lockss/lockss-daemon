@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.130 2014-11-24 10:17:45 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.131 2014-12-08 04:15:55 tlipkis Exp $
  */
 
 /*
@@ -533,6 +533,10 @@ public class NullPlugin {
     }
 
     public List<Pattern> makePermittedHostPatterns() {
+      return null;
+    }
+
+    public List<Pattern> makeRepairFromPeerIfMissingUrlPatterns() {
       return null;
     }
 
