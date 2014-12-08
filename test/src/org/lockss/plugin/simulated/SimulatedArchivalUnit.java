@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.78 2014-11-12 20:11:37 wkwilson Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.79 2014-12-08 04:17:06 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.plugin.simulated;
 import java.net.*;
 import java.util.*;
 import java.io.File;
+import org.apache.oro.text.regex.*;
 
 import org.lockss.config.*;
 import org.lockss.daemon.*;
@@ -101,6 +102,7 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit
   private ExploderHelper exploderHelper;
   private String exploderPattern;
   private UrlConsumerFactory ucf;
+  private List<String> repairFromPeerIfMissingUrlPatterns;
 
   Set toBeDamaged = new HashSet();
 
@@ -414,6 +416,14 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit
       } else if (scgen != null && !scgen.isContentTree()) {
 	simRoot = scgen.generateContentTree();
       }
+
+      String peerRepairPats =
+	config.get(SimulatedPlugin.AU_PARAM_REPAIR_FROM_PEER_PATS);
+      if (!StringUtil.isNullString(peerRepairPats)) {
+	repairFromPeerIfMissingUrlPatterns =
+	  StringUtil.breakAt(peerRepairPats, ";");
+      }
+
     } catch (Configuration.InvalidParam e) {
       throw new ArchivalUnit.ConfigurationException("Bad config value", e);
     }
@@ -470,6 +480,19 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit
   @Override
   public RateLimiterInfo getRateLimiterInfo() {
     return new RateLimiterInfo(getFetchRateLimiterKey(), "unlimited");
+  }
+
+  @Override
+  public List<Pattern> makeRepairFromPeerIfMissingUrlPatterns()
+      throws ArchivalUnit.ConfigurationException {
+    if (repairFromPeerIfMissingUrlPatterns != null) {
+      try {
+	return RegexpUtil.compileRegexps(repairFromPeerIfMissingUrlPatterns);
+      } catch (MalformedPatternException e) {
+	throw new ArchivalUnit.ConfigurationException("Malformed repairFromPeerIfMissingUrlPatterns", e);
+      }
+    }
+    return null;
   }
 
   public FilterRule getFilterRule(String contentType) {

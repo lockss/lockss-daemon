@@ -1,10 +1,10 @@
 /*
- * $Id: SimulatedPlugin.java,v 1.34 2014-11-29 21:40:44 tlipkis Exp $
+ * $Id: SimulatedPlugin.java,v 1.35 2014-12-08 04:17:06 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -284,6 +284,21 @@ public class SimulatedPlugin extends BasePlugin implements PluginTestable {
   public static final String AU_PARAM_MIXED_CASE =
     PD_MIXED_CASE.getKey();
 
+  /**
+   * Patterns of URLs that should be repaired from peer if vote it too close
+   */
+  static final ConfigParamDescr PD_REPAIR_FROM_PEER_PATS =
+    new ConfigParamDescr();
+  static {
+    PD_REPAIR_FROM_PEER_PATS.setKey("repairFromPeerIfMissingUrlPatterns");
+    PD_REPAIR_FROM_PEER_PATS.setDefinitional(false);
+    PD_REPAIR_FROM_PEER_PATS.setDisplayName("Repair from peer if missing url patterns");
+    PD_REPAIR_FROM_PEER_PATS.setType(ConfigParamDescr.TYPE_STRING);
+    PD_REPAIR_FROM_PEER_PATS.setSize(20);
+  }
+  public static final String AU_PARAM_REPAIR_FROM_PEER_PATS =
+    PD_REPAIR_FROM_PEER_PATS.getKey();
+
   private String pluginId = "SimulatedPlugin";
   private int initCtr = 0;
   private int stopCtr = 0;
@@ -319,14 +334,10 @@ public class SimulatedPlugin extends BasePlugin implements PluginTestable {
   }
 
   // SimulatedPlugin's only definitional param is the root directory,
-  // typically a temp dir, so Tdb entries & TitleConfig don't really make
-  // sense, and cause (harmless) NPEs in some unit test.  However, stf
-  // currently marks AUs down by creating a tdb entry, so this can't be
-  // suppressed.  stf should be changed to mark AUs down by changing their
-  // config instead
+  // typically a temp dir, so Tdb entries & TitleConfig don't make sense.
+  // Suppress them, as they cause (harmless) NPEs in some unit tests.
   @Override
   protected void setTitleConfigs(Tdb tdb) {
-    super.setTitleConfigs(tdb);
   }
 
   /**
@@ -341,7 +352,8 @@ public class SimulatedPlugin extends BasePlugin implements PluginTestable {
 			 PD_BIN_FILE_SIZE, PD_BIN_RANDOM_SEED,
 			 PD_MAXFILE_NAME,
 			 PD_FILE_TYPES, PD_ODD_BRANCH_CONTENT,
-                         PD_BAD_FILE_LOC, PD_BAD_FILE_NUM);
+                         PD_BAD_FILE_LOC, PD_BAD_FILE_NUM,
+			 PD_REPAIR_FROM_PEER_PATS);
   }
 
   /**
