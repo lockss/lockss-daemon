@@ -28,7 +28,7 @@
     <string>au_name</string>
     <string>"Open Journal Systems Plugin (OJS 2.x for CLOCKSS), Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
   </entry>
-    <entry>
+  <entry>
     <string>au_permission_url</string>
     <string>"%sindex.php/%s/about/editorialPolicies", base_url, journal_id</string>
   </entry>

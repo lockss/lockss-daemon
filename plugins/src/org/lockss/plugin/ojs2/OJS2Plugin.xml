@@ -52,7 +52,7 @@
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.67.0</string>
+    <string>1.65.0</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -143,7 +143,7 @@
         <!--  new - making index.php and journal_id optional -->
         <!--  adding pdf for Electronic Journal of Combinatorics; 
               viewFile for KwaZulu Natal Museum -->
-        <string>"^%s(?:index[.]php/)?(?:%s/)?article/(?:view(?:File)?|download)/[^/]+/[^/]+$", base_url, journal_id</string>
+        <string>"^%s(?:index[.]php/)?(?:%s/)?article/(?:view(?:File)?|download)/[^/]+/[^/?#@amp;]+$", base_url, journal_id</string>
       </list>
   </entry>
   <entry>
@@ -193,4 +193,13 @@
       <string>500=org.lockss.util.urlconn.CacheException$NoRetryDeadLinkException</string>
     </list>
   </entry>
+  <entry>
+    <!-- manifest to issue to articles -->
+    <string>au_refetch_depth</string>
+    <int>2</int>
+  </entry>
+  <!-- entry>
+    <string>au_exclude_urls_from_polls_pattern</string>
+    <string>/(lib|site|images|js|public|ads)/.+[.](css|png|gif|js)$</string>
+  </entry -->
 </map>
