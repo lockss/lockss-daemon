@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockHasher.java,v 1.29 2014-11-12 20:11:56 wkwilson Exp $
+ * $Id: TestBlockHasher.java,v 1.30 2014-12-08 21:46:36 tlipkis Exp $
  */
 
 /*
@@ -407,6 +407,31 @@ public class TestBlockHasher extends LockssTestCase {
     mau.setExcludeUrlsFromPollsPatterns(RegexpUtil.compileRegexps(pats));
     hasher = new MyBlockHasher(cus, digs, inits, null);
     assertFalse(hasher.isIncluded(cu));
+  }
+
+  public void testIsExcludedByPlugin() throws Exception {
+    // Need CrawlManager to check global exclusion below
+    CrawlManager cm = getMockLockssDaemon().getCrawlManager();
+    MockArchivalUnit mau = MockArchivalUnit.newInited(getMockLockssDaemon());
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    cus.setHashItSource(Collections.EMPTY_LIST);
+    MessageDigest[] digs = { dig };
+    byte[][] inits = {null};
+    BlockHasher hasher = new MyBlockHasher(cus, digs, inits, null);
+    CachedUrl cu2 = mau.addUrl(urls[2], false, true);
+    CachedUrl cu4 = mau.addUrl(urls[4], false, true);
+    CachedUrl cu6 = mau.addUrl(urls[6], false, true);
+    addContent(mau, urls[2], s1);
+    addContent(mau, urls[4], s1);
+    addContent(mau, urls[6], s1);
+    assertTrue(hasher.isIncluded(cu2));
+    assertTrue(hasher.isIncluded(cu4));
+    assertTrue(hasher.isIncluded(cu6));
+    mau.setExcludeUrlsFromPollsPatterns(RegexpUtil.compileRegexps(ListUtil.list("/2/")));
+    hasher = new MyBlockHasher(cus, digs, inits, null);
+    assertTrue(hasher.isIncluded(cu2));
+    assertTrue(hasher.isIncluded(cu4));
+    assertFalse(hasher.isIncluded(cu6));
   }
 
   public void testNoContent() throws Exception {
