@@ -3071,7 +3071,7 @@
     au < ready ; exists ; 2014 ; British Medical Bulletin Volume 109 ; 109 ; >
     au < ready ; exists ; 2014 ; British Medical Bulletin Volume 110 ; 110 ; >
     au < ready ; exists ; 2014 ; British Medical Bulletin Volume 111 ; 111 ; >
-    au < expected ; exists ; 2014 ; British Medical Bulletin Volume 112 ; 112 ; >
+    au < manifest ; exists ; 2014 ; British Medical Bulletin Volume 112 ; 112 ; >
 
     }
 
@@ -3126,7 +3126,7 @@
     au < finished ; crawling ; 2010 ; British Yearbook of International Law Volume 81 ; 81 ; >
     au < crawling ; exists ; 2011 ; British Yearbook of International Law Volume 82 ; 82 ; >
     au < crawling ; exists ; 2012 ; British Yearbook of International Law Volume 83 ; 83 ; >
-    au < expected ; exists ; 2013 ; British Yearbook of International Law Volume 84 ; 84 ; >
+    au < manifest ; exists ; 2013 ; British Yearbook of International Law Volume 84 ; 84 ; >
 
   }
 
@@ -7526,7 +7526,7 @@
     au < finished ; frozen ; 2012 ; Glycobiology Volume 22 ; 22 ; >
     au < crawling ; exists ; 2013 ; Glycobiology Volume 23 ; 23 ; >
     au < ready ; exists ; 2014 ; Glycobiology Volume 24 ; 24 ; >
-    au < exists ; exists ; 2015 ; Glycobiology Volume 25 ; 25 ; >
+    au < manifest ; exists ; 2015 ; Glycobiology Volume 25 ; 25 ; >
 
     }
 
@@ -19312,7 +19312,7 @@
     au < ready ; exists ; 2014 ; Radiation Protection Dosimetry Volume 159 ; 159 ; >
     au < testing ; exists ; 2014 ; Radiation Protection Dosimetry Volume 160 ; 160 ; >
     au < testing ; exists ; 2014 ; Radiation Protection Dosimetry Volume 161 ; 161 ; >
-    au < expected ; exists ; 2014 ; Radiation Protection Dosimetry Volume 162 ; 162 ; >
+    au < manifest ; exists ; 2014 ; Radiation Protection Dosimetry Volume 162 ; 162 ; >
 
     }
 
@@ -20489,7 +20489,7 @@
     au < exists ; exists ; 2003 ; Social Problems Volume 50 ; 50 ; >
     au < exists ; exists ; 2004 ; Social Problems Volume 51 ; 51 ; >
     au < exists ; exists ; 2005 ; Social Problems Volume 52 ; 52 ; >
-    au < exists ; exists ; 2006 ; Social Problems Volume 53 ; 53 ; >
+    au < manifest ; exists ; 2006 ; Social Problems Volume 53 ; 53 ; >
     au < exists ; exists ; 2007 ; Social Problems Volume 54 ; 54 ; >
     au < exists ; exists ; 2008 ; Social Problems Volume 55 ; 55 ; >
     au < exists ; exists ; 2009 ; Social Problems Volume 56 ; 56 ; >
