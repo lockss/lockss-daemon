@@ -536,11 +536,10 @@
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = cultural_politics
       attr[journal_id] = cup
-      comment[2014] = manifest page up
 
       au < released ; 2012 ; Cultural Politics Volume 8 ; 8 >
       au < released ; 2013 ; Cultural Politics Volume 9 ; 9 >
-      au < expected ; 2014 ; Cultural Politics Volume 10 ; 10 >
+      au < manifest ; 2014 ; Cultural Politics Volume 10 ; 10 >
 
     }
     
