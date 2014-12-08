@@ -1,10 +1,10 @@
 /*
- * $Id: TestConfigParamDescr.java,v 1.18 2014-08-25 08:57:02 tlipkis Exp $
+ * $Id: TestConfigParamDescr.java,v 1.19 2014-12-08 04:10:28 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -260,6 +260,7 @@ public class TestConfigParamDescr extends LockssTestCase {
     assertNotEquals(d1, d);
     assertEquals(d.getType(), d1.getType());
     assertFalse(d1.isDefinitional());
+    assertEquals("base_url_host (derived from Base URL)", d1.getDisplayName());
     // Should always get same one back
     ConfigParamDescr d2 = d.getDerivedDescr("base_url_host");
     assertSame(d2, d1);

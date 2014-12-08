@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.53 2014-10-22 19:39:39 thib_gc Exp $
+ * $Id: ConfigParamDescr.java,v 1.54 2014-12-08 04:10:28 tlipkis Exp $
  */
 
 /*
@@ -526,7 +526,7 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
       .setDerived(true)
       .setDefinitional(false)
       .setDefaultOnly(false)
-      .setDisplayName("Derived from " + getDisplayName())
+      .setDisplayName(derivedKey + " (derived from " + getDisplayName() + ")")
       .setType(getType());
     return uniqueInstance(res);
   }
