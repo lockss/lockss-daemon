@@ -1,5 +1,5 @@
 /*
- * $Id: OJS2PermissionCheckerFactory.java,v 1.4 2014-12-08 06:37:21 etenbrink Exp $
+ * $Id: OJS2PermissionCheckerFactory.java,v 1.5 2014-12-08 21:30:29 alexandraohlson Exp $
  */
 
 /*
@@ -100,8 +100,9 @@ public class OJS2PermissionCheckerFactory
       return ret;
     }
     
+    
     public OJS2PermissionChecker(ArchivalUnit au) {
-      this.au = au;
+      super(au);
       au_year = au.getConfiguration().get(ConfigParamDescr.YEAR.getKey());
       au_year_paren = Pattern.compile("[(]" + au_year + "[)]");
       au_year_colon = Pattern.compile(":\\s+" + au_year + "[^0-9]");
