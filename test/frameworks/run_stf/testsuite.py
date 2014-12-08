@@ -3,6 +3,34 @@
 build frameworks.  If desired, optional parameters may also be set to change
 the default behavior.  See testsuite.props for details."""
 
+# $Id: testsuite.py,v 1.76 2014-12-08 04:17:40 tlipkis Exp $
+
+__copyright__ = '''\
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+all rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the name of Stanford University shall not
+be used in advertising or otherwise to promote the sale, use or other dealings
+in this Software without prior written authorization from Stanford University.
+'''
+
 import filecmp
 import os
 import re
@@ -480,7 +508,6 @@ class TooCloseV3Tests( V3TestCases ):
 
     def __init__( self, methodName = 'runTest' ):
         V3TestCases.__init__( self, methodName )
-        self.local_configuration = { 'org.lockss.poll.v3.repairFromPublisherWhenTooClose': 'true' }
         self.simulated_AU_parameters = { 'numFiles': 15 }
             
     def _damage_AU( self ):
@@ -772,37 +799,19 @@ class TotalLossRecoveryV3Tests( V3TestCases ):
 
     def _damage_AU( self ):
         nodes = self.victim.getAuNodesWithContent( self.AU )
+        log.info( 'Setting victim AU to pub_down' )
+        self.victim.setPublisherDown( self.AU )
         log.info( 'Backing up cache configuration on victim cache...' )
         self.victim.backupConfiguration()
         log.info( 'Backed up successfully' )
 
+        log.info( 'Stopping victim daemon' )
         self.victim.daemon.stop()
         log.info( 'Stopped daemon running on UI port %s' % self.victim.port )
         self.victim.simulateDiskFailure()
         log.info( 'Deleted entire contents of cache on stopped daemon' )
 
-        # Write a TitleDB entry for the simulated AU so it will be marked
-        # 'publisher down' when restored.
-
-        # XXX This should be changed to add pub_down=true to the AU config
-        # rather than relying on a tdb entry for a simulated AU
-
-        self.framework.appendLocalConfig( { 'org.lockss.auconfig.allowEditDefaultOnlyParams': True,
-                                            'org.lockss.title.sim1.journalTitle': 'Simulated Content',
-                                            'org.lockss.title.sim1.param.1.key': 'root',
-                                            'org.lockss.title.sim1.param.1.value': 'simContent',
-                                            'org.lockss.title.sim1.param.2.key': 'depth',
-                                            'org.lockss.title.sim1.param.2.value': 0,
-                                            'org.lockss.title.sim1.param.3.key': 'branch',
-                                            'org.lockss.title.sim1.param.3.value': 0,
-                                            'org.lockss.title.sim1.param.4.key': 'numFiles',
-                                            'org.lockss.title.sim1.param.4.value': 30,
-                                            'org.lockss.title.sim1.param.pub_down.key': 'pub_down',
-                                            'org.lockss.title.sim1.param.pub_down.value': True,
-                                            'org.lockss.title.sim1.plugin': 'org.lockss.plugin.simulated.SimulatedPlugin',
-                                            'org.lockss.title.sim1.title': 'Simulated Content: simContent' }, self.victim )
-        time.sleep( 5 ) # Settling time
-
+        log.info( 'Starting victim daemon' )
         self.victim.daemon.start()
         # Wait for the client to come up
         self.assert_( self.victim.waitForDaemonReady(), 'Daemon is not ready' )
@@ -1025,6 +1034,59 @@ class RepairFromPeerWithDeactivateV3TestCase( RepairFromPeerV3Tests ):
         self.local_configuration[ 'org.lockss.poll.pollStarterAdditionalDelayBetweenPolls' ] = '20s'    # XXX
         self.toggle_AU_activation = True
 
+class RepairFromPeerWhenTooCloseV3TestCase( RepairFromPeerV3Tests ):
+    """Ensure that selected voter-only too-close URLs are repaired from peer"""
+
+    def __init__( self, methodName = 'runTest' ):
+        RepairFromPeerV3Tests.__init__( self, methodName )
+        self.simulated_AU_parameters = { 'depth': 1, 'branch': 1, 'repairFromPeerIfMissingUrlPatterns' : '.*' }    # Reasonably complex AU for testing
+
+    def _damage_AU( self ):
+        self.delnode = self.victim.getRandomContentNode( self.AU )
+        url = self.delnode.url
+        self.delnode2 = self.victim2.getAuNode( self.AU, url )
+        self.delnode3 = self.victim3.getAuNode( self.AU, url )
+        self.victim.deleteNode( self.delnode )
+        self.victim2.deleteNode( self.delnode2 )
+        self.victim3.deleteNode( self.delnode3 )
+        log.debug( 'deleted: %s on poller and 2 peers' % self.delnode.url )
+
+        nodes = [ self.delnode ]
+        self._set_expected_agreement_from_damaged( nodes )
+        self._update_configuration()
+        return nodes
+
+    def _verify_damage( self, nodes ):
+        self._ensure_victim_node_deleted( self.delnode )
+        self._ensure_victim_node_deleted( self.delnode2 )
+        self._ensure_victim_node_deleted( self.delnode3 )
+
+        log.info( 'Waiting for a V3 poll to be called...' )
+        # Ignores first victim poll
+        self.assert_( self.victim.waitForV3Poller( self.AU, [ self.victim_first_poll_key ] ), 'Timed out while waiting for V3 poll' )
+        log.info( 'Successfully called a V3 poll' )
+
+        self.victim_second_poll_key = self.victim.getV3PollKey( self.AU, self.victim_first_poll_key )
+        log.debug( "Victim's second poll key: " + self.victim_second_poll_key )
+        invitees = self.victim.getV3PollInvitedPeers( self.victim_second_poll_key )
+        log.debug( 'invitedPeers: %s' % invitees )
+        self.assertFalse( self.client_without_AU.getV3Identity() in invitees, 'Peer without AU invited in 2nd poll' )
+
+    def _check_v3_result( self, nodes ):
+        log.info( 'Waiting for poll to complete...' )
+        self.victim.waitForThisCompletedV3Poll( self.AU, self.victim_second_poll_key )
+        log.info( 'Poll %s complete' % self.victim_second_poll_key )
+        self._verify_poll_results()
+        log.info( 'AU repair verified' )
+
+    def _verify_poll_results( self ):
+        summary = self.victim.getPollSummaryFromKey( self.victim_second_poll_key )
+        self.assertEqual( int( summary[ 'Agreeing URLs' ][ 'value' ] ), 41 )
+        self.assertEqual( int( summary[ 'Too Close URLs' ][ 'value' ] ), 1 )
+        self.assertEqual( int( summary[ 'Completed Repairs' ][ 'value' ] ), 1 )
+        self.assertTrue( os.path.isfile( self.delnode.filename() ), 'File was not repaired: %s' % self.delnode.url )
+
+
 class AuditDemo3( RepairFromPeerV3Tests ):
     """Demo a basic V3 poll with repair via previous agreement"""
 
@@ -1151,7 +1213,8 @@ simpleV3Tests = unittest.TestSuite( ( FormatExpectedAgreementTestCase(),
                                       TotalLossRecoveryV3TestCase(),
                                       RepairFromPublisherV3TestCase(),
                                       RepairFromPeerV3TestCase(),
-                                      RepairFromPeerWithDeactivateV3TestCase() ) )
+                                      RepairFromPeerWithDeactivateV3TestCase(),
+                                      RepairFromPeerWhenTooCloseV3TestCase() ) )
 
 symmetricV3Tests = unittest.TestSuite( ( SimpleV3SymmetricTestCase(),
                                          NoQuorumSymmetricV3TestCase(),
