@@ -1,10 +1,10 @@
 /*
- * $Id: TestBlockingSslStreamComm1.java,v 1.17 2014-03-23 17:08:46 tlipkis Exp $
+ * $Id: TestBlockingSslStreamComm1.java,v 1.18 2014-12-08 04:11:21 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2006-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -38,6 +38,7 @@ import java.net.*;
 import junit.framework.*;
 import java.security.*;
 import java.security.cert.*;
+import javax.net.*;
 import javax.net.ssl.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
@@ -249,9 +250,9 @@ public class TestBlockingSslStreamComm1 extends TestBlockingStreamComm {
 	Object hs = hsq1.get(TIMEOUT_SHOULDNT);
 	assertNotNull("Expected handShake event didn't occur", hs);
 	if (expectedSuccess) {
-	  assertTrue(hs instanceof SSLSocket);
+	  assertTrue("hs is " + hs.getClass(), hs instanceof SSLSocket);
 	} else {
-	  assertTrue(hs instanceof SSLPeerUnverifiedException);
+	  assertTrue("hs is " + hs.getClass(), hs instanceof SSLPeerUnverifiedException);
 	}
       } else {
 	assertEquals(null, hsq1.get(TIMEOUT_SHOULD));

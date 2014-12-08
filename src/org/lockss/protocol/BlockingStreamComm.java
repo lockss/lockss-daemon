@@ -1,10 +1,10 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.57 2014-03-23 17:08:46 tlipkis Exp $
+ * $Id: BlockingStreamComm.java,v 1.58 2014-12-08 04:11:21 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -88,9 +88,26 @@ public class BlockingStreamComm
   public static final String PARAM_SSL_PUBLIC_KEYSTORE_NAME =
     PREFIX + "sslPublicKeystoreName";
 
-  /** SSL protocol to use **/
+  /** An SSLContext that supports this protocol will be obtained.  Note
+   * that this is just passed to <code>SSLContent.getInstance()</code>;
+   * sockets obtained from resulting factory will likely support other
+   * protocols.  To ensure that other protocols are not used they should be
+   * included in <code>org.lockss.scomm.disableSslServerProtocols</code>
+   * and <code>org.lockss.scomm.disableSslClientProtocols</code> */
   public static final String PARAM_SSL_PROTOCOL = PREFIX + "sslProtocol";
   public static final String DEFAULT_SSL_PROTOCOL = "TLSv1";
+
+  /** SSL protocols to disable in server sockets. */
+  public static final String PARAM_DISABLE_SSL_SERVER_PROTOCOLS =
+    PREFIX + "disableSslServerProtocols";
+  public static final List DEFAULT_DISABLE_SSL_SERVER_PROTOCOLS =
+    ListUtil.list("SSLv3", "SSLv2Hello");
+
+  /** SSL protocols to disable in client sockets. */
+  public static final String PARAM_DISABLE_SSL_CLIENT_PROTOCOLS =
+    PREFIX + "disableSslClientProtocols";
+  public static final List DEFAULT_DISABLE_SSL_CLIENT_PROTOCOLS =
+    ListUtil.list("SSLv3", "SSLv2Hello");
 
   /** If true, listen socket will be bound only to the configured local IP
    * address **/
@@ -287,6 +304,10 @@ public class BlockingStreamComm
   private String paramSslPrivateKeyStoreName;
   private String paramSslPublicKeyStoreName;
   private String paramSslProtocol = DEFAULT_SSL_PROTOCOL;
+  private List<String> paramDisableSslServerProtocols =
+    DEFAULT_DISABLE_SSL_SERVER_PROTOCOLS;
+  private List<String> paramDisableSslClientProtocols =
+    DEFAULT_DISABLE_SSL_CLIENT_PROTOCOLS;
   private int paramMinFileMessageSize = DEFAULT_MIN_FILE_MESSAGE_SIZE;
   private long paramMaxMessageSize = DEFAULT_MAX_MESSAGE_SIZE;
   private long paramMinMeasuredMessageSize =
@@ -973,6 +994,12 @@ public class BlockingStreamComm
 	paramSslHandshakeTimeout =
 	  config.getTimeInterval(PARAM_SSL_HANDSHAKE_TIMEOUT,
 				 DEFAULT_SSL_HANDSHAKE_TIMEOUT);
+	paramDisableSslServerProtocols =
+	  config.getList(PARAM_DISABLE_SSL_SERVER_PROTOCOLS,
+			 DEFAULT_DISABLE_SSL_SERVER_PROTOCOLS);
+	paramDisableSslClientProtocols =
+	  config.getList(PARAM_DISABLE_SSL_CLIENT_PROTOCOLS,
+			 DEFAULT_DISABLE_SSL_CLIENT_PROTOCOLS);
 	paramSoKeepAlive = config.getBoolean(PARAM_SOCKET_KEEPALIVE,
 					     DEFAULT_SOCKET_KEEPALIVE);
 	paramSendWakeupTime = config.getTimeInterval(PARAM_SEND_WAKEUP_TIME,
@@ -1750,6 +1777,30 @@ public class BlockingStreamComm
     }
   }
 
+  private void disableSelectedProtocols(SSLServerSocket sock) {
+    if (paramDisableSslServerProtocols == null) return;
+    Set<String> enaprotos = new HashSet<String>();
+    for (String s : sock.getEnabledProtocols()) {
+      if (paramDisableSslServerProtocols.contains(s)) {
+	continue;
+      }
+      enaprotos.add(s);
+    }
+    sock.setEnabledProtocols(enaprotos.toArray(new String[0]));
+  }
+
+  private void disableSelectedProtocols(SSLSocket sock) {
+    if (paramDisableSslClientProtocols == null) return;
+    Set<String> enaprotos = new HashSet<String>();
+    for (String s : sock.getEnabledProtocols()) {
+      if (paramDisableSslClientProtocols.contains(s)) {
+	continue;
+      }
+      enaprotos.add(s);
+    }
+    sock.setEnabledProtocols(enaprotos.toArray(new String[0]));
+  }
+
   // Listen thread
   private class ListenThread extends CommThread {
     private volatile boolean goOn = true;
@@ -1965,26 +2016,12 @@ public class BlockingStreamComm
 	s = (SSLServerSocket)
 	  sslServerSocketFactory.createServerSocket(port, backlog);
       }
+      disableSelectedProtocols(s);
       s.setNeedClientAuth(paramSslClientAuth);
       log.debug("New SSL server socket: " + port + " backlog " + backlog +
 		" clientAuth " + paramSslClientAuth);
-      String cs[] = s.getEnabledCipherSuites();
-      for (int i = 0; i < cs.length; i++) {
-	log.debug2(cs[i] + " enabled cipher suite");
-      }
-      cs = s.getSupportedCipherSuites();
-      for (int i = 0; i < cs.length; i++) {
-	log.debug2(cs[i] + " supported cipher suite");
-      }
-      cs = s.getEnabledProtocols();
-      for (int i = 0; i < cs.length; i++) {
-	log.debug2(cs[i] + " enabled protocol");
-      }
-      cs = s.getSupportedProtocols();
-      for (int i = 0; i < cs.length; i++) {
-	log.debug2(cs[i] + " supported protocol");
-      }
-      log.debug2("enable session creation " + s.getEnableSessionCreation());
+
+      if (log.isDebug2()) logSSLSocketDetails(s);
       return s;
     }
 
@@ -1999,6 +2036,7 @@ public class BlockingStreamComm
       } else {
 	s = (SSLSocket)sslSocketFactory.createSocket(addr.getInetAddr(), port);
       }
+      disableSelectedProtocols(s);
       log.debug2("New SSL client socket: " + port + "@" + addr.toString());
       // Setup socket (SO_TIMEOUT, etc.) before SSL handshake
       setupOpenSocket(s);
@@ -2006,6 +2044,18 @@ public class BlockingStreamComm
 	handshake(s);
       }
       return s;
+    }
+
+    private void logSSLSocketDetails(SSLServerSocket s) {
+      log.debug2("Supported cipher suites: " +
+		 ListUtil.fromArray(s.getSupportedCipherSuites()));
+      log.debug2("Enabled cipher suites: " +
+		 ListUtil.fromArray(s.getEnabledCipherSuites()));
+      log.debug2("Supported protocols: " +
+		 ListUtil.fromArray(s.getSupportedProtocols()));
+      log.debug2("Enabled protocols: " +
+		 ListUtil.fromArray(s.getEnabledProtocols()));
+      log.debug2("Enable session creation: " + s.getEnableSessionCreation());
     }
 
     public BlockingPeerChannel newPeerChannel(BlockingStreamComm comm,

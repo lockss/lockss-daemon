@@ -1,10 +1,10 @@
 /*
- * $Id: TestBlockingStreamComm.java,v 1.39 2014-03-23 17:08:46 tlipkis Exp $
+ * $Id: TestBlockingStreamComm.java,v 1.40 2014-12-08 04:11:21 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -81,6 +81,9 @@ public class TestBlockingStreamComm extends LockssTestCase {
   static final int HEADER_OFF_PROTO = PeerChannel.HEADER_OFF_PROTO;
   static final byte OP_PEERID = PeerChannel.OP_PEERID;
   static final byte OP_DATA = PeerChannel.OP_DATA;
+
+  // SSL tests check that bad protocols have been disabled
+  static final String BAD_PROTO = "SSLv3";
 
   // Arrays store multiple instances of test objects (ports, PeerIds,
   // queues, etc).  Usually used in parallel (comms[n] has local id
@@ -1881,6 +1884,7 @@ public class TestBlockingStreamComm extends LockssTestCase {
 	if (isCheckSocketType()) {
 	  if (isSsl()) {
 	    assertClass(SSLServerSocket.class, ss);
+	    assertFalse(ListUtil.fromArray(((SSLServerSocket)ss).getEnabledProtocols()).contains(BAD_PROTO));
 	  } else {
 	    assertNotClass(SSLServerSocket.class, ss);
 	  }
@@ -1900,6 +1904,7 @@ public class TestBlockingStreamComm extends LockssTestCase {
 	if (isCheckSocketType()) {
 	  if (isSsl()) {
 	    assertTrue(s instanceof SSLSocket);
+	    assertFalse(ListUtil.fromArray(((SSLSocket)s).getEnabledProtocols()).contains(BAD_PROTO));
 	  } else {
 	    assertFalse(s instanceof SSLSocket);
 	  }
