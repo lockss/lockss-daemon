@@ -1,9 +1,9 @@
 """LOCKSS daemon interface library."""
 
-# $Id: lockss_daemon.py,v 1.40 2014-11-19 08:19:59 tlipkis Exp $
+# $Id: lockss_daemon.py,v 1.41 2014-12-08 04:17:22 tlipkis Exp $
 
 __copyright__ = '''\
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -731,6 +731,9 @@ class Client:
     def getPollSummary( self, poll ):
         return self.getV3PollerDetail( poll[ 'pollId' ][ 'key' ] )[ 0 ]
 
+    def getPollSummaryFromKey( self, pollKey ):
+        return self.getV3PollerDetail( pollKey )[ 0 ]
+
     def getV3PollerDetail( self, key ):
         """Returns both the summary and table."""
         return self._getStatusTable( 'V3PollerDetailTable', key )
@@ -885,6 +888,10 @@ class Client:
             return summary and summary[ 'Status' ] in ( 'No Time Available', 'Complete', 'No Quorum', 'Error', 'Expired', 'Aborted' )
         else: return False
 
+    def isCompletedV3Poll( self, AU, poll_key ):
+        summary = self.getV3PollerDetail( poll_key )[ 0 ]
+        return summary and summary[ 'Status' ] in ( 'No Time Available', 'Complete', 'No Quorum', 'Error', 'Expired', 'Aborted' )
+
     ###
     ### Methods that block while waiting for various events
     ###
@@ -923,6 +930,10 @@ class Client:
     def waitForCompletedV3Poll( self, AU, excluded_polls = [], timeout = DEF_TIMEOUT, sleep = DEF_SLEEP ):
         """Wait until a poll not in excluded_polls has completed."""
         return self.wait( lambda: self.hasCompletedV3Poll( AU, excluded_polls ), timeout, sleep )
+
+    def waitForThisCompletedV3Poll( self, AU, poll_key, timeout = DEF_TIMEOUT, sleep = DEF_SLEEP ):
+        """Wait until the poll with the specified key has completed."""
+        return self.wait( lambda: self.isCompletedV3Poll( AU, poll_key ), timeout, sleep )
 
     def waitForV3Poller(self, AU, excluded_poll_keys = [], timeout = DEF_TIMEOUT, sleep = DEF_SLEEP):
         return self.wait( lambda: self.hasV3Poller( AU, excluded_poll_keys ), timeout, sleep )
@@ -1384,7 +1395,8 @@ class Simulated_AU( AU ):
     SIMULATED_PLUGIN = 'org.lockss.plugin.simulated.SimulatedPlugin'
 
     def __init__( self, root = 'simContent', depth = 0, branch = 0, numFiles = 10,
-                  binFileSize = 1024, binRandomSeed = None, fileTypes = FILE_TYPE_TEXT | FILE_TYPE_BIN ):
+                  binFileSize = 1024, binRandomSeed = None, fileTypes = FILE_TYPE_TEXT | FILE_TYPE_BIN,
+                  repairFromPeerIfMissingUrlPatterns = ''):
         self.root = root
         self.depth = depth
         self.branch = branch
@@ -1392,6 +1404,7 @@ class Simulated_AU( AU ):
         self.binFileSize = binFileSize
         self.binRandomSeed = int( time.time() ) if binRandomSeed is None else binRandomSeed
         self.fileTypes = fileTypes
+        self.repairFromPeerIfMissingUrlPatterns = repairFromPeerIfMissingUrlPatterns
         self.pluginId = Simulated_AU.SIMULATED_PLUGIN
         self.auId = "%s&root~%s" % ( self.pluginId.replace( '.', '|' ), self.root )
         self.title = "Simulated Content: " + root
