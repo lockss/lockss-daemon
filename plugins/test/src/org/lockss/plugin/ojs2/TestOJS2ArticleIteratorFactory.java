@@ -1,4 +1,4 @@
-/* $Id: TestOJS2ArticleIteratorFactory.java,v 1.7 2014-11-12 20:12:00 wkwilson Exp $
+/* $Id: TestOJS2ArticleIteratorFactory.java,v 1.8 2014-12-08 23:31:28 etenbrink Exp $
 
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -87,7 +87,7 @@ public class TestOJS2ArticleIteratorFactory extends ArticleIteratorTestCase {
   private final String EXPECTED_FULL_TEXT_HTML_URL_2 = 
     "http://www.ojs2articleiteratortest.com/index.php/lq/article/view/8120/8515";
   private final String EXPECTED_PDF_URL_2 = 
-    "http://www.ojs2articleiteratortest.com/index.php/lq/article/view/8120/8602";
+    "http://www.ojs2articleiteratortest.com/index.php/lq/article/download/8120/8602";
   private final String EXPECTED_FULL_TEXT_URL_2 = EXPECTED_FULL_TEXT_HTML_URL_2;
   
   String [] expectedUrls2 = { EXPECTED_ABS_URL_2,
@@ -163,7 +163,7 @@ public class TestOJS2ArticleIteratorFactory extends ArticleIteratorTestCase {
                                   BASE_URL, JOURNAL_ID)); // abstract
     articleUrls.add(String.format("%sindex.php/%s/article/view/8120/8515",
                                   BASE_URL, JOURNAL_ID)); // full-text html
-    articleUrls.add(String.format("%sindex.php/%s/article/view/8120/8602",
+    articleUrls.add(String.format("%sindex.php/%s/article/download/8120/8602",
                                   BASE_URL, JOURNAL_ID)); // pdf
     
     // Store test cases - articleUrls
