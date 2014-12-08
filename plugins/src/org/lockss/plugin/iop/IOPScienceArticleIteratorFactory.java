@@ -1,5 +1,5 @@
 /*
- * $Id: IOPScienceArticleIteratorFactory.java,v 1.9 2014-12-03 22:59:30 etenbrink Exp $
+ * $Id: IOPScienceArticleIteratorFactory.java,v 1.10 2014-12-08 05:20:36 etenbrink Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.iop;
 
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.regex.*;
 
@@ -51,13 +52,14 @@ public class IOPScienceArticleIteratorFactory
       "\"%s%s/%s\", base_url, journal_issn, volume_name";
   
   protected static final String PATTERN_TEMPLATE =
-      "\"^%s%s/%s/[^/]+/[^/.?]+(?:/(?:fulltext|pdf/[^/]+[.]pdf))?$\"," +
+      "\"^%s%s/%s/[^/]+/[^/.?]+(?:/(?:article|fulltext|pdf/[^/]+[.]pdf))?$\"," +
       " base_url, journal_issn, volume_name";
   
   // various aspects of an article
   // http://iopscience.iop.org/1478-3975/8/1/015001
   // http://iopscience.iop.org/1478-3975/8/1/015001/refs
   // http://iopscience.iop.org/1478-3975/8/1/015001/cites
+  // http://iopscience.iop.org/1478-3975/8/1/015001/article
   // http://iopscience.iop.org/1478-3975/8/1/015001/fulltext
   // http://iopscience.iop.org/1478-3975/8/1/015001/pdf/1478-3975_8_1_015001.pdf
   // http://iopscience.iop.org/1478-3975/8/1/015001?foo (exclude)
@@ -68,7 +70,7 @@ public class IOPScienceArticleIteratorFactory
                       Pattern.CASE_INSENSITIVE);
                                                
   protected static final Pattern HTML_PATTERN =
-      Pattern.compile("/([0-9]{4}-[0-9]{3}[0-9X])/([^/]+)/([^/]+)/([^/]+)/fulltext$",
+      Pattern.compile("/([0-9]{4}-[0-9]{3}[0-9X])/([^/]+)/([^/]+)/([^/]+)(?:/fulltext|/article)$",
                       Pattern.CASE_INSENSITIVE);
                                                
   protected static final Pattern PDF_PATTERN =
@@ -82,6 +84,7 @@ public class IOPScienceArticleIteratorFactory
   // how to change from one form (aspect) of article to another
   protected static final String ABSTRACT_REPLACEMENT = "/$1/$2/$3/$4";
   protected static final String HTML_REPLACEMENT = "/$1/$2/$3/$4/fulltext";
+  protected static final String HTML_REPLACEMENT2 = "/$1/$2/$3/$4/article";
   protected static final String PDF_REPLACEMENT = "/$1/$2/$3/$4/pdf/$1_$2_$3_$4.pdf";
   protected static final String REFS_REPLACEMENT = "/$1/$2/$3/$4/refs";
   protected static final String SUPPL_REPLACEMENT = "/$1/$2/$3/$4/media";
@@ -97,7 +100,7 @@ public class IOPScienceArticleIteratorFactory
     
     // set up fulltext to be an aspect that will trigger an ArticleFiles
     builder.addAspect(
-        HTML_PATTERN, HTML_REPLACEMENT,
+        HTML_PATTERN, Arrays.asList(HTML_REPLACEMENT, HTML_REPLACEMENT2),
         ArticleFiles.ROLE_FULL_TEXT_HTML);
     
     builder.addAspect(
