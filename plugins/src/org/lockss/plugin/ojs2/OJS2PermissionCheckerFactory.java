@@ -1,5 +1,5 @@
 /*
- * $Id: OJS2PermissionCheckerFactory.java,v 1.5 2014-12-08 21:30:29 alexandraohlson Exp $
+ * $Id: OJS2PermissionCheckerFactory.java,v 1.6 2014-12-08 21:40:16 alexandraohlson Exp $
  */
 
 /*
@@ -55,7 +55,6 @@ public class OJS2PermissionCheckerFactory
   public class OJS2PermissionChecker extends ProbePermissionChecker {
     
     private final Logger logger = Logger.getLogger(OJS2PermissionCheckerFactory.class);
-    protected ArchivalUnit au;
     protected String au_year;
     protected Pattern au_year_paren;
     protected Pattern au_year_colon;
