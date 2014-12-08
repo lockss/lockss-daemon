@@ -1,5 +1,5 @@
 /*
- * $Id: OJS2PermissionCheckerFactory.java,v 1.3 2014-11-26 23:48:50 etenbrink Exp $
+ * $Id: OJS2PermissionCheckerFactory.java,v 1.4 2014-12-08 06:37:21 etenbrink Exp $
  */
 
 /*
@@ -39,7 +39,7 @@ import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.lockss.daemon.Crawler.CrawlerFacade;
+import org.lockss.daemon.Crawler.PermissionHelper;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
@@ -47,7 +47,12 @@ import org.lockss.util.Logger;
 public class OJS2PermissionCheckerFactory
   implements PermissionCheckerFactory{
   
-  public class OJS2PermissionChecker implements PermissionChecker {
+  /*
+   * So while this not really extending the ProbePermissionChecker
+   * the ProbePermissionChecker does have the PermissionHelper pHelper param
+   * rather than the new in 1.67 CrawlerFacade crawlFacade param
+   */
+  public class OJS2PermissionChecker extends ProbePermissionChecker {
     
     private final Logger logger = Logger.getLogger(OJS2PermissionCheckerFactory.class);
     protected ArchivalUnit au;
@@ -56,8 +61,14 @@ public class OJS2PermissionCheckerFactory
     protected Pattern au_year_colon;
     
     @Override
-    public boolean checkPermission(CrawlerFacade crawlFacade, Reader inputReader,
+    public boolean checkPermission(PermissionHelper pHelper, Reader inputReader,
         String permissionUrl) {
+      
+      // if the permissionUrl is for CLOCKSS, then just return True
+      // XXX FIXME replace the entire PremissionChecker with CrawlSeed?
+      if (permissionUrl.contains("about/editorialPolicies")) {
+        return true;
+      }
       
       BufferedReader in = new BufferedReader(inputReader);
       boolean ret = false;
