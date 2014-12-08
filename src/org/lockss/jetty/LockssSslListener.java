@@ -1,10 +1,10 @@
 /*
- * $Id: LockssSslListener.java,v 1.2 2009-09-03 00:53:40 tlipkis Exp $
+ * $Id: LockssSslListener.java,v 1.3 2014-12-08 04:10:59 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -31,12 +31,14 @@ in this Software without prior written authorization from Stanford University.
 */
 // Some portions of this code are:
 // ========================================================================
-// Copyright 199-2004 Mort Bay Consulting Pty. Ltd.
+// Copyright 1999-2004 Mort Bay Consulting Pty. Ltd.
 
 package org.lockss.jetty;
 
+import java.io.IOException;
 import java.net.*;
 import java.security.*;
+import java.util.*;
 import javax.net.ssl.*;
 
 import org.mortbay.http.*;
@@ -56,6 +58,8 @@ public class LockssSslListener extends SslListener {
 
   private KeyManagerFactory _keyManagerFactory;
 
+  private List<String> disableProtocols;
+
   public LockssSslListener() {
     super();
   }
@@ -72,6 +76,7 @@ public class LockssSslListener extends SslListener {
     return _keyManagerFactory;
   }
 
+  @Override
   protected SSLServerSocketFactory createFactory() throws Exception {
     if (_keyManagerFactory == null) {
       return super.createFactory();
@@ -83,5 +88,32 @@ public class LockssSslListener extends SslListener {
     context.init(_keyManagerFactory.getKeyManagers(),
 		 null, rng);
     return context.getServerSocketFactory();
+  }
+
+  @Override
+  protected ServerSocket newServerSocket(InetAddrPort p_address,
+					 int p_acceptQueueSize)
+      throws IOException {
+    ServerSocket sock = super.newServerSocket(p_address, p_acceptQueueSize);
+    if (sock instanceof SSLServerSocket) {
+      disableSelectedProtocols((SSLServerSocket)sock);
+    }
+    return sock;
+  }
+
+  public void setDisableProtocols(List<String> protos) {
+    disableProtocols = protos;
+  }
+
+  private void disableSelectedProtocols(SSLServerSocket sock) {
+    if (disableProtocols == null) return;
+    Set<String> enaprotos = new HashSet<String>();
+    for (String s : sock.getEnabledProtocols()) {
+      if (disableProtocols.contains(s)) {
+	continue;
+      }
+      enaprotos.add(s);
+    }
+    sock.setEnabledProtocols(enaprotos.toArray(new String[0]));
   }
 }

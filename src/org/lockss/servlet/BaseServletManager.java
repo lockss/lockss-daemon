@@ -1,10 +1,10 @@
 /*
- * $Id: BaseServletManager.java,v 1.42 2014-07-14 00:53:21 tlipkis Exp $
+ * $Id: BaseServletManager.java,v 1.43 2014-12-08 04:10:59 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2004-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -144,6 +144,14 @@ public abstract class BaseServletManager
   public static final String PARAM_SSL_REDIR_FROM =
     DOC_PREFIX + SUFFIX_SSL_REDIR_FROM;
 
+  public static final String SUFFIX_DISABLE_SSL_SERVER_PROTOCOLS =
+    "disableSslServerProtocols";
+  /** SSL protocols to disable in HTTPS server sockets. */
+  public static final String PARAM_DISABLE_SSL_SERVER_PROTOCOLS =
+    DOC_PREFIX + SUFFIX_DISABLE_SSL_SERVER_PROTOCOLS;
+  public static final List DEFAULT_DISABLE_SSL_SERVER_PROTOCOLS =
+    ListUtil.list("SSLv3", "SSLv2Hello");
+
   public static final String SUFFIX_AUTH_TYPE = "authType";
   /** User authentication type: Basic or Form */
   public static final String PARAM_AUTH_TYPE = DOC_PREFIX + SUFFIX_AUTH_TYPE;
@@ -233,6 +241,8 @@ public abstract class BaseServletManager
   protected String warningMsg;
   protected String sslKeystoreName;
   protected int sslRedirFromPort;
+  protected List<String> disableSslServerProtocols =
+    DEFAULT_DISABLE_SSL_SERVER_PROTOCOLS;;
   protected AuthType authType = DEFAULT_AUTH_TYPE;
   protected String formLoginUrl = DEFAULT_FORM_LOGIN_URL;
   protected String formLoginErrorUrl = DEFAULT_FORM_LOGIN_ERROR_URL;
@@ -302,6 +312,9 @@ public abstract class BaseServletManager
       if (useSsl) {
  	sslKeystoreName = config.get(mi.prefix + SUFFIX_SSL_KEYSTORE_NAME);
 	sslRedirFromPort = config.getInt(mi.prefix + SUFFIX_SSL_REDIR_FROM, -1);
+	disableSslServerProtocols =
+	  config.getList(mi.prefix + SUFFIX_DISABLE_SSL_SERVER_PROTOCOLS,
+			 DEFAULT_DISABLE_SSL_SERVER_PROTOCOLS);
       }
       authType = (AuthType)config.getEnum(AuthType.class,
 					  mi.prefix + SUFFIX_AUTH_TYPE,
@@ -487,6 +500,7 @@ public abstract class BaseServletManager
 	    super.handleConnection(socket);
 	  }};
       lsl.setKeyManagerFactory(kmf);
+      lsl.setDisableProtocols(disableSslServerProtocols);
       listener = lsl;
 
       if (sslRedirFromPort > 0) {
