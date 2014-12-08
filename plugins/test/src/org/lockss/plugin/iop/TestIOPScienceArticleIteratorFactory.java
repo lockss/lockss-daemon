@@ -114,6 +114,7 @@ public class TestIOPScienceArticleIteratorFactory extends ArticleIteratorTestCas
     assertNotMatchesRE(PATTERN_FAIL_MSG, pat, AU_URL + "/1/010201/pdf");
     assertNotMatchesRE(PATTERN_FAIL_MSG, pat, AU_URL + "/1/010201/pdf/");
     assertNotMatchesRE(PATTERN_FAIL_MSG, pat, AU_URL + "/2/55656/full");
+    assertNotMatchesRE(PATTERN_FAIL_MSG, pat, AU_URL + "/2/55656/abstract");
     assertNotMatchesRE(PATTERN_FAIL_MSG, pat, AU_URL + "/2/55656/fulltextual");
     assertNotMatchesRE(PATTERN_FAIL_MSG, pat, AU_URL + "/3/010201/pdf/" + 
         JOURNAL_ISSN + "_" + VOLUME_NAME + "_3_010201");
@@ -121,6 +122,7 @@ public class TestIOPScienceArticleIteratorFactory extends ArticleIteratorTestCas
         JOURNAL_ISSN + "_" + VOLUME_NAME + "_3_010201");
     assertMatchesRE(PATTERN_FAIL_MSG, pat, AU_URL + "/4/010201");
     assertMatchesRE(PATTERN_FAIL_MSG, pat, AU_URL + "/4/010201/fulltext");
+    assertMatchesRE(PATTERN_FAIL_MSG, pat, AU_URL + "/4/010201/article");
     assertMatchesRE(PATTERN_FAIL_MSG, pat, AU_URL + "/5/010201/pdf/" +
         JOURNAL_ISSN + "_" + VOLUME_NAME + "_5_010201.pdf");
   }
@@ -147,6 +149,8 @@ public class TestIOPScienceArticleIteratorFactory extends ArticleIteratorTestCas
         AU_URL + "/4/44444",
         AU_URL + "/4/44444/cites",
         AU_URL + "/5/5/fulltext",
+        AU_URL + "/6/6/article",
+        AU_URL + "/6/6/pdf/1758-5090_2_6_6.pdf",
         AU_URL
     };
     CachedUrl cuPdf = null;
@@ -217,6 +221,15 @@ public class TestIOPScienceArticleIteratorFactory extends ArticleIteratorTestCas
         null,
         null};
     
+    String [] af6 = {
+        AU_URL + "/6/6/article",
+        AU_URL + "/6/6/article",
+        AU_URL + "/6/6/pdf/1758-5090_2_6_6.pdf",
+        AU_URL + "/6/6/article",
+        null,
+        null};
+    
+    expStack.push(af6);
     expStack.push(af5);
     expStack.push(af4);
     expStack.push(af3);
