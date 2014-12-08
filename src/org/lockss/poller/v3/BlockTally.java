@@ -1,10 +1,10 @@
 /*
- * $Id: BlockTally.java,v 1.32 2014-04-23 20:47:11 tlipkis Exp $
+ * $Id: BlockTally.java,v 1.33 2014-12-08 04:16:26 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -280,5 +280,9 @@ public class BlockTally implements VoteBlockTallier.VoteBlockTally {
 
   boolean isVoterOnly() {
     return disagreeVoters.size() == voterOnlyVoters.size();
+  }
+
+  public String toString() {
+    return "[BlockTally: a/d/po/vo: " + votes() + "]";
   }
 }
