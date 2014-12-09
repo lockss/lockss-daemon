@@ -62,5 +62,30 @@
 
   }
 
+  {
+    title <
+      name = Neurographics ;
+      issn = 1541-6593 
+    >
+
+    {
+    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    param[base_url] = http://www.ingentaconnect.com/
+    param[api_url] = http://api.ingentaconnect.com/
+    param[graphics_url] = http://graphics.ingentaconnect.com/
+    param[publisher_id] = asnr
+    param[journal_id] = ng 
+    param[journal_issn] = 1541-6593
+    implicit < status ; year ; name ; param[volume_name] >
+ 
+      au < exists ; 2011 ; Neurographics Volume 1 ; 1 >
+      au < exists ; 2012 ; Neurographics Volume 2 ; 2 >
+      au < exists ; 2013 ; Neurographics Volume 3 ; 3 >
+      au < exists ; 2014 ; Neurographics Volume 4 ; 4 >
+
+    }
+
+  }
+
 }
 
