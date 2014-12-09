@@ -1,0 +1,264 @@
+{
+
+  publisher <
+    name = Southern Illinois University
+  >
+  
+  {
+  
+    title <
+      name = Cooperative Wildlife Research Laboratory Final Reports
+    >
+    
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = cwrl_fr
+    implicit < status ; year ; name ; param[collection_heading] >
+  
+    au < manifest ; 1995 ; Cooperative Wildlife Research Laboratory Final Reports 1995 ; 1995 >
+    au < manifest ; 1997 ; Cooperative Wildlife Research Laboratory Final Reports 1997 ; 1997 >
+    au < manifest ; 1998 ; Cooperative Wildlife Research Laboratory Final Reports 1998 ; 1998 >
+    au < manifest ; 1999 ; Cooperative Wildlife Research Laboratory Final Reports 1999 ; 1999 >
+    au < manifest ; 2001 ; Cooperative Wildlife Research Laboratory Final Reports 2001 ; 2001 >
+    au < manifest ; 2002 ; Cooperative Wildlife Research Laboratory Final Reports 2002 ; 2002 >
+    au < manifest ; 2003 ; Cooperative Wildlife Research Laboratory Final Reports 2003 ; 2003 >
+    au < manifest ; 2005 ; Cooperative Wildlife Research Laboratory Final Reports 2005 ; 2005 >
+    au < manifest ; 2008 ; Cooperative Wildlife Research Laboratory Final Reports 2008 ; 2008 >
+    au < manifest ; 2009 ; Cooperative Wildlife Research Laboratory Final Reports 2009 ; 2009 >
+    au < manifest ; 2010 ; Cooperative Wildlife Research Laboratory Final Reports 2010 ; 2010 >
+  
+  }
+
+  {
+  
+    title <
+      name = Higher Education Policy Commentary
+    >
+    
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = arch_hepc
+    implicit < status ; year ; name ; param[collection_heading] >
+  
+    au < manifest ; 2009 ; Higher Education Policy Commentary 2009 ; 2009 >
+    au < manifest ; 2010 ; Higher Education Policy Commentary 2010 ; 2010 >
+    au < manifest ; 2011 ; Higher Education Policy Commentary 2011 ; 2011 >
+    au < manifest ; 2012 ; Higher Education Policy Commentary 2012 ; 2012 >
+    au < manifest ; 2013 ; Higher Education Policy Commentary 2013 ; 2013 >
+  
+  }
+
+  {
+  
+    title <
+      name = Southern Illinois University Board of Trustees Annual Report
+    >
+    
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = bot_ar
+    implicit < status ; year ; name ; param[collection_heading] >
+  
+    au < manifest ; 2006 ; Southern Illinois University Board of Trustees Annual Report 2006 ; 2006 >
+    au < manifest ; 2007 ; Southern Illinois University Board of Trustees Annual Report 2007 ; 2007 >
+    au < manifest ; 2008 ; Southern Illinois University Board of Trustees Annual Report 2008 ; 2008 >
+    au < manifest ; 2009 ; Southern Illinois University Board of Trustees Annual Report 2009 ; 2009 >
+    au < manifest ; 2010 ; Southern Illinois University Board of Trustees Annual Report 2010 ; 2010 >
+    au < manifest ; 2011 ; Southern Illinois University Board of Trustees Annual Report 2011 ; 2011 >
+    au < manifest ; 2012 ; Southern Illinois University Board of Trustees Annual Report 2012 ; 2012 >
+    au < manifest ; 2013 ; Southern Illinois University Board of Trustees Annual Report 2013 ; 2013 >
+  
+  }
+
+  {
+  
+    title <
+      name = Southern Illinois University Department of Agribusiness Economics Articles
+    >
+    
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = agecon_articles
+    implicit < status ; year ; name ; param[collection_heading] >
+  
+    au < manifest ; 2005 ; Southern Illinois University Department of Agribusiness Economics Articles 2005 ; 2005 >
+    au < manifest ; 2007 ; Southern Illinois University Department of Agribusiness Economics Articles 2007 ; 2007 >
+    au < manifest ; 2010 ; Southern Illinois University Department of Agribusiness Economics Articles 2010 ; 2010 >
+    au < manifest ; 2011 ; Southern Illinois University Department of Agribusiness Economics Articles 2011 ; 2011 >
+  
+  }
+
+  {
+  
+    title <
+      name = Southern Illinois University Department of Anatomy Publications
+    >
+    
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = anat_pubs
+    implicit < status ; year ; name ; param[collection_heading] >
+  
+    au < manifest ; 1983 ; Southern Illinois University Department of Anatomy Publications 1983 ; 1983 >
+    au < manifest ; 2006 ; Southern Illinois University Department of Anatomy Publications 2006 ; 2006 >
+    au < manifest ; 2007 ; Southern Illinois University Department of Anatomy Publications 2007 ; 2007 >
+    au < manifest ; 2009 ; Southern Illinois University Department of Anatomy Publications 2009 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Southern Illinois University Department of Animal Science, Food and Nutrition Peer-Reviewed Articles
+    >
+    
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = asfn_articles
+    implicit < status ; year ; name ; param[collection_heading] >
+  
+    au < manifest ; 2007 ; Southern Illinois University Department of Animal Science, Food and Nutrition Peer-Reviewed Articles 2007 ; 2007 >
+    au < manifest ; 2013 ; Southern Illinois University Department of Animal Science, Food and Nutrition Peer-Reviewed Articles 2013 ; 2013 >
+  
+  }
+
+  {
+  
+    title <
+      name = Southern Illinois University Department of Anthropology Publications
+    >
+    
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = anthro_pubs
+    implicit < status ; year ; name ; param[collection_heading] >
+  
+    au < manifest ; 1999 ; Southern Illinois University Department of Anthropology Publications 1999 ; 1999 >
+    au < manifest ; 2004 ; Southern Illinois University Department of Anthropology Publications 2004 ; 2004 >
+    au < manifest ; 2005 ; Southern Illinois University Department of Anthropology Publications 2005 ; 2005 >
+  
+  }
+
+  {
+  
+    title <
+      name = Southern Illinois University Department of Automotive Technology Presentations
+    >
+    
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = auto_pres
+    implicit < status ; year ; name ; param[collection_heading] >
+  
+    au < manifest ; 2008 ; Southern Illinois University Department of Automotive Technology Presentations 2008 ; 2008 >
+    au < manifest ; 2009 ; Southern Illinois University Department of Automotive Technology Presentations 2009 ; 2009 >
+    au < manifest ; 2010 ; Southern Illinois University Department of Automotive Technology Presentations 2010 ; 2010 >
+    au < manifest ; 2011 ; Southern Illinois University Department of Automotive Technology Presentations 2011 ; 2011 >
+    au < manifest ; 2012 ; Southern Illinois University Department of Automotive Technology Presentations 2012 ; 2012 >
+    au < manifest ; 2013 ; Southern Illinois University Department of Automotive Technology Presentations 2013 ; 2013 >
+  
+  }
+
+  {
+  
+    title <
+      name = Southern Illinois University Department of Civil and Environmental Engineering Publications
+    >
+    
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = ccj_articles
+    implicit < status ; year ; name ; param[collection_heading] >
+  
+    au < manifest ; 2002 ; Southern Illinois University Department of Civil and Environmental Engineering Publications 2002 ; 2002 >
+    au < manifest ; 2006 ; Southern Illinois University Department of Civil and Environmental Engineering Publications 2006 ; 2006 >
+    au < manifest ; 2008 ; Southern Illinois University Department of Civil and Environmental Engineering Publications 2008 ; 2008 >
+  
+  }
+
+  {
+  
+    title <
+      name = Southern Illinois University Department of Chemistry and Biochemistry Microarray Data Sets
+    >
+    
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = chem_mdata
+    implicit < status ; year ; name ; param[collection_heading] >
+  
+    au < manifest ; 2010 ; Southern Illinois University Department of Chemistry and Biochemistry Microarray Data Sets 2010 ; 2010 >
+  
+  }
+
+  {
+  
+    title <
+      name = Southern Illinois University Department of Computer Science Publications
+    >
+    
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = cs_pubs
+    implicit < status ; year ; name ; param[collection_heading] >
+  
+    au < manifest ; 2002 ; Southern Illinois University Department of Computer Science Publications 2002 ; 2002 >
+    au < manifest ; 2003 ; Southern Illinois University Department of Computer Science Publications 2003 ; 2003 >
+    au < manifest ; 2004 ; Southern Illinois University Department of Computer Science Publications 2004 ; 2004 >
+    au < manifest ; 2005 ; Southern Illinois University Department of Computer Science Publications 2005 ; 2005 >
+    au < manifest ; 2006 ; Southern Illinois University Department of Computer Science Publications 2006 ; 2006 >
+    au < manifest ; 2007 ; Southern Illinois University Department of Computer Science Publications 2007 ; 2007 >
+    au < manifest ; 2008 ; Southern Illinois University Department of Computer Science Publications 2008 ; 2008 >
+    au < manifest ; 2009 ; Southern Illinois University Department of Computer Science Publications 2009 ; 2009 >
+    au < manifest ; 2010 ; Southern Illinois University Department of Computer Science Publications 2010 ; 2010 >
+    au < manifest ; 2012 ; Southern Illinois University Department of Computer Science Publications 2012 ; 2012 >
+  
+  }
+
+  {
+  
+    title <
+      name = Southern Illinois University School of Art and Design Publications
+    >
+    
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = ad_pubs
+    implicit < status ; year ; name ; param[collection_heading] >
+  
+    au < manifest ; 2005 ; Southern Illinois University School of Art and Design Publications 2005 ; 2005 >
+    au < manifest ; 2006 ; Southern Illinois University School of Art and Design Publications 2006 ; 2006 >
+    au < manifest ; 2008 ; Southern Illinois University School of Art and Design Publications 2008 ; 2008 >
+    au < manifest ; 2011 ; Southern Illinois University School of Art and Design Publications 2011 ; 2011 >
+  
+  }
+
+  {
+  
+    title <
+      name = Southern Illinois University School of Architecture Videos
+    >
+    
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = arch_videos
+    implicit < status ; year ; name ; param[collection_heading] >
+  
+    au < manifest ; 2011 ; Southern Illinois University School of Architecture Videos 2011 ; 2011 >
+  
+  }
+
+}

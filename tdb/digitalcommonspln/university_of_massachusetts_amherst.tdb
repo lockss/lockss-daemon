@@ -4,8 +4,6 @@
     name = University of Massachusetts Amherst
   >
   
-  # This instance is not properly set up for year markup
-  
   {
   
     title <
@@ -109,6 +107,257 @@
   {
   
     title <
+      name = EDGE: A Graduate Journal for German and Scandinavian Studies
+    >
+    
+    plugin = org.lockss.plugin.bepress.BePressPlugin
+    param[base_url] = http://scholarworks.umass.edu/
+    param[journal_abbr] = edge
+    implicit < status ; year ; volume ; name ; param[volume] >
+    
+    au < manifest ; 2009 ; 1 ; EDGE: A Graduate Journal for German and Scandinavian Studies Volume 1 ; 1 >
+    au < manifest ; 2011 ; 2 ; EDGE: A Graduate Journal for German and Scandinavian Studies Volume 2 ; 2 >
+    au < manifest ; 2013 ; 3 ; EDGE: A Graduate Journal for German and Scandinavian Studies Volume 3 ; 3 >
+    au < manifest ; 2014 ; 4 ; EDGE: A Graduate Journal for German and Scandinavian Studies Volume 4 ; 4 >
+  
+  }
+  
+  {
+  
+    title <
+      name = Heliotropia: An Online Journal of Research to Boccaccio Scholars
+    >
+    
+    plugin = org.lockss.plugin.bepress.BePressPlugin
+    param[base_url] = http://scholarworks.umass.edu/
+    param[journal_abbr] = heliotropia
+    implicit < status ; year ; volume ; name ; param[volume] >
+    
+    au < manifest ; 2003 ; 1 ; Heliotropia: An Online Journal of Research to Boccaccio Scholars Volume 1 ; 1 >
+    au < manifest ; 2004 ; 2 ; Heliotropia: An Online Journal of Research to Boccaccio Scholars Volume 2 ; 2 >
+    au < manifest ; 2006 ; 3 ; Heliotropia: An Online Journal of Research to Boccaccio Scholars Volume 3 ; 3 >
+    au < manifest ; 2007 ; 4 ; Heliotropia: An Online Journal of Research to Boccaccio Scholars Volume 4 ; 4 >
+    au < manifest ; 2008 ; 5 ; Heliotropia: An Online Journal of Research to Boccaccio Scholars Volume 5 ; 5 >
+    au < manifest ; 2009 ; 6 ; Heliotropia: An Online Journal of Research to Boccaccio Scholars Volume 6 ; 6 >
+    au < manifest ; 2010 ; 7 ; Heliotropia: An Online Journal of Research to Boccaccio Scholars Volume 7 ; 7 >
+    au < manifest ; 2011 ; 8 ; Heliotropia: An Online Journal of Research to Boccaccio Scholars Volume 8 ; 8 >
+  
+  }
+  
+  {
+  
+    title <
+      name = International Journal of Soil, Sediment and Water ;
+      issn = 1940-3259
+    >
+    
+    plugin = org.lockss.plugin.bepress.BePressPlugin
+    param[base_url] = http://scholarworks.umass.edu/
+    param[journal_abbr] = intljssw
+    implicit < status ; year ; volume ; name ; param[volume] >
+    
+    au < manifest ; 2008 ; 1 ; International Journal of Soil, Sediment and Water Volume 1 ; 1 >
+    au < manifest ; 2009 ; 2 ; International Journal of Soil, Sediment and Water Volume 2 ; 2 >
+    au < manifest ; 2010 ; 3 ; International Journal of Soil, Sediment and Water Volume 3 ; 3 >
+ 
+  }
+  
+  {
+  
+    title <
+      name = Journal of Hospitality Financial Management ;
+      eissn = 2152-2790
+    >
+    
+    plugin = org.lockss.plugin.bepress.BePressPlugin
+    param[base_url] = http://scholarworks.umass.edu/
+    param[journal_abbr] = jhfm
+    implicit < status ; year ; volume ; name ; param[volume] >
+    
+    au < manifest ; 1997 ; 5 ; Journal of Hospitality Financial Management Volume 5 ; 5 >
+    au < manifest ; 1998 ; 6 ; Journal of Hospitality Financial Management Volume 6 ; 6 >
+    au < manifest ; 1999 ; 7 ; Journal of Hospitality Financial Management Volume 7 ; 7 >
+    au < manifest ; 2000 ; 8 ; Journal of Hospitality Financial Management Volume 8 ; 8 >
+    au < manifest ; 2001 ; 9 ; Journal of Hospitality Financial Management Volume 9 ; 9 >
+    au < manifest ; 2002 ; 10 ; Journal of Hospitality Financial Management Volume 10 ; 10 >
+    au < manifest ; 2003 ; 11 ; Journal of Hospitality Financial Management Volume 11 ; 11 >
+    au < manifest ; 2004 ; 12 ; Journal of Hospitality Financial Management Volume 12 ; 12 >
+    au < manifest ; 2005 ; 13 ; Journal of Hospitality Financial Management Volume 13 ; 13 >
+    au < manifest ; 2006 ; 14 ; Journal of Hospitality Financial Management Volume 14 ; 14 >
+    au < manifest ; 2007 ; 15 ; Journal of Hospitality Financial Management Volume 15 ; 15 >
+    au < manifest ; 2008 ; 16 ; Journal of Hospitality Financial Management Volume 16 ; 16 >
+    au < manifest ; 2009 ; 17 ; Journal of Hospitality Financial Management Volume 17 ; 17 >
+    au < manifest ; 2010 ; 18 ; Journal of Hospitality Financial Management Volume 18 ; 18 >
+    au < manifest ; 2011 ; 19 ; Journal of Hospitality Financial Management Volume 19 ; 19 >
+    au < manifest ; 2012 ; 20 ; Journal of Hospitality Financial Management Volume 20 ; 20 >
+  
+  }
+
+  {
+  
+    title <
+      name = Journal of Medicinally Active Plants ;
+      issn = 2159-7200
+    >
+    
+    plugin = org.lockss.plugin.bepress.BePressPlugin
+    param[base_url] = http://scholarworks.umass.edu/
+    param[journal_abbr] = jmap
+    implicit < status ; year ; volume ; name ; param[volume] >
+    
+    au < manifest ; 2012 ; 1 ; Journal of Medicinally Active Plants Volume 1 ; 1 >
+    au < manifest ; 2013 ; 2 ; Journal of Medicinally Active Plants Volume 2 ; 2 >
+ 
+  }
+  
+  {
+  
+    title <
+      name = Landscapes of Violence ;
+      issn = 2159-7200
+    >
+    
+    plugin = org.lockss.plugin.bepress.BePressPlugin
+    param[base_url] = http://scholarworks.umass.edu/
+    param[journal_abbr] = lov
+    implicit < status ; year ; volume ; name ; param[volume] >
+    
+    au < manifest ; 2010 ; 1 ; Landscapes of Violence Volume 1 ; 1 >
+    au < manifest ; 2012 ; 2 ; Landscapes of Violence Volume 2 ; 2 >
+ 
+  }
+  
+  {
+  
+    title <
+      name = mOthertongue: A Multilingual Journal of the Arts
+    >
+    
+    plugin = org.lockss.plugin.bepress.BePressPlugin
+    param[base_url] = http://scholarworks.umass.edu/
+    param[journal_abbr] = mot
+    implicit < status ; year ; volume ; name ; param[volume] >
+
+    # no volumes 1-18 found    
+    au < manifest ; 2014 ; 1 ; mOthertongue: A Multilingual Journal of the Arts Volume 19 ; 19 >
+ 
+  }
+  
+  {
+  
+    title <
+      name = Portuguese Cultural Studies ;
+      issn = 1874-6969
+    >
+    
+    plugin = org.lockss.plugin.bepress.BePressPlugin
+    param[base_url] = http://scholarworks.umass.edu/
+    param[journal_abbr] = p
+    implicit < status ; year ; volume ; name ; param[volume] >
+    
+    au < manifest ; 2006 ; 0 ; Portuguese Cultural Studies Volume 0 ; 0 >
+    au < manifest ; 2007 ; 1 ; Portuguese Cultural Studies Volume 1 ; 1 >
+    au < manifest ; 2009 ; 2 ; Portuguese Cultural Studies Volume 2 ; 2 >
+    au < manifest ; 2010 ; 3 ; Portuguese Cultural Studies Volume 3 ; 3 >
+    au < manifest ; 2012 ; 4 ; Portuguese Cultural Studies Volume 4 ; 4 >
+    au < manifest ; 2014 ; 5 ; Portuguese Cultural Studies Volume 5 ; 5 >
+  
+  }
+  
+  {
+  
+    title <
+      name = Perspectives in Asian Leisure and Tourism
+    >
+    
+    plugin = org.lockss.plugin.bepress.BePressPlugin
+    param[base_url] = http://scholarworks.umass.edu/
+    param[journal_abbr] = palat
+    implicit < status ; year ; volume ; name ; param[volume] >
+
+    au < manifest ; 2008 ; 1 ; Perspectives in Asian Leisure and Tourism Volume 1 ; 1 >
+ 
+  }
+  
+  {
+  
+    title <
+      name = Proceedings of the Annual International Conference on Soils, Sediments, Water and Energy
+    >
+    
+    plugin = org.lockss.plugin.bepress.BePressPlugin
+    param[base_url] = http://scholarworks.umass.edu/
+    param[journal_abbr] = soilsproceedings
+    implicit < status ; year ; volume ; name ; param[volume] >
+    
+    # This actually looks like a book series, with ISBNs -- add those in later
+    
+    au < manifest ; 2006 ; 11 ; Proceedings of the Annual International Conference on Soils, Sediments, Water and Energy Volume 11 ; 11 >
+    au < manifest ; 2007 ; 12 ; Proceedings of the Annual International Conference on Soils, Sediments, Water and Energy Volume 12 ; 12 >
+    au < manifest ; 2008 ; 13 ; Proceedings of the Annual International Conference on Soils, Sediments, Water and Energy Volume 13 ; 13 >
+    au < manifest ; 2009 ; 14 ; Proceedings of the Annual International Conference on Soils, Sediments, Water and Energy Volume 14 ; 14 >
+    au < manifest ; 2010 ; 15 ; Proceedings of the Annual International Conference on Soils, Sediments, Water and Energy Volume 15 ; 15 >
+    au < manifest ; 2011 ; 16 ; Proceedings of the Annual International Conference on Soils, Sediments, Water and Energy Volume 16 ; 16 >
+    au < manifest ; 2012 ; 17 ; Proceedings of the Annual International Conference on Soils, Sediments, Water and Energy Volume 17 ; 17 >
+  
+  }
+
+  {
+  
+    title <
+      name = Rasenna: Journal of the Center for Etruscan Studies ;
+      issn = 1940-073X
+    >
+    
+    plugin = org.lockss.plugin.bepress.BePressPlugin
+    param[base_url] = http://scholarworks.umass.edu/
+    param[journal_abbr] = rasenna
+    implicit < status ; year ; volume ; name ; param[volume] >
+    
+    au < manifest ; 2007 ; 1 ; Rasenna: Journal of the Center for Etruscan Studies Volume 1 ; 1 >
+    au < manifest ; 2009 ; 2 ; Rasenna: Journal of the Center for Etruscan Studies Volume 2 ; 2 >
+    au < manifest ; 2011 ; 3 ; Rasenna: Journal of the Center for Etruscan Studies Volume 3 ; 3 >
+    au < manifest ; 2014 ; 4 ; Rasenna: Journal of the Center for Etruscan Studies Volume 4 ; 4 >
+  
+  }
+  
+  {
+  
+    title <
+      name = SHARP News
+    >
+    
+    plugin = org.lockss.plugin.bepress.BePressPlugin
+    param[base_url] = http://scholarworks.umass.edu/
+    param[journal_abbr] = sharp_news
+    implicit < status ; year ; volume ; name ; param[volume] >
+    
+    au < manifest ; 1992 ; 1 ; SHARP News Volume 1 ; 1 >
+    au < manifest ; 1993 ; 2 ; SHARP News Volume 2 ; 2 >
+    au < manifest ; 1994 ; 3 ; SHARP News Volume 3 ; 3 >
+    au < manifest ; 1995 ; 4 ; SHARP News Volume 4 ; 4 >
+    au < manifest ; 1996 ; 5 ; SHARP News Volume 5 ; 5 >
+    au < manifest ; 1997 ; 6 ; SHARP News Volume 6 ; 6 >
+    au < manifest ; 1998 ; 7 ; SHARP News Volume 7 ; 7 >
+    au < manifest ; 1999 ; 8 ; SHARP News Volume 8 ; 8 >
+    au < manifest ; 2000 ; 9 ; SHARP News Volume 9 ; 9 >
+    au < manifest ; 2001 ; 10 ; SHARP News Volume 10 ; 10 >
+    au < manifest ; 2002 ; 11 ; SHARP News Volume 11 ; 11 >
+    au < manifest ; 2003 ; 12 ; SHARP News Volume 12 ; 12 >
+    au < manifest ; 2004 ; 13 ; SHARP News Volume 13 ; 13 >
+    au < manifest ; 2005 ; 14 ; SHARP News Volume 14 ; 14 >
+    au < manifest ; 2006 ; 15 ; SHARP News Volume 15 ; 15 >
+    au < manifest ; 2007 ; 16 ; SHARP News Volume 16 ; 16 >
+    au < manifest ; 2008 ; 17 ; SHARP News Volume 17 ; 17 >
+    au < manifest ; 2009 ; 18 ; SHARP News Volume 18 ; 18 >
+    au < manifest ; 2010 ; 19 ; SHARP News Volume 19 ; 19 >
+    au < manifest ; 2011 ; 20 ; SHARP News Volume 20 ; 20 >
+  
+  }
+
+  {
+  
+    title <
       name = University of Massachusetts Amherst Adjunct Faculty Author Gallery
     >
     
@@ -116,14 +365,14 @@
     param[base_url] = http://scholarworks.umass.edu/
     param[collection_type] = ir_series
     param[collection] = adjunct_sw
-    implicit < status ; year ; name ; param[year] >
+    implicit < status ; year ; name ; param[collection_heading] >
   
-    au < doNotProcess ; 1993 ; University of Massachusetts Amherst Adjunct Faculty Author Gallery 1993 ; 1993 >
-    au < doNotProcess ; 1994 ; University of Massachusetts Amherst Adjunct Faculty Author Gallery 1995 ; 1995 >
-    au < doNotProcess ; 1995 ; University of Massachusetts Amherst Adjunct Faculty Author Gallery 1995 ; 1995 >
-    au < doNotProcess ; 2003 ; University of Massachusetts Amherst Adjunct Faculty Author Gallery 2003 ; 2003 >
-    au < doNotProcess ; 2008 ; University of Massachusetts Amherst Adjunct Faculty Author Gallery 2008 ; 2008 >
-    au < doNotProcess ; 2010 ; University of Massachusetts Amherst Adjunct Faculty Author Gallery 2010 ; 2010 >
+    au < manifest ; 1993 ; University of Massachusetts Amherst Adjunct Faculty Author Gallery 1993 ; 1993 >
+    au < manifest ; 1994 ; University of Massachusetts Amherst Adjunct Faculty Author Gallery 1995 ; 1995 >
+    au < manifest ; 1995 ; University of Massachusetts Amherst Adjunct Faculty Author Gallery 1995 ; 1995 >
+    au < manifest ; 2003 ; University of Massachusetts Amherst Adjunct Faculty Author Gallery 2003 ; 2003 >
+    au < manifest ; 2008 ; University of Massachusetts Amherst Adjunct Faculty Author Gallery 2008 ; 2008 >
+    au < manifest ; 2010 ; University of Massachusetts Amherst Adjunct Faculty Author Gallery 2010 ; 2010 >
   
   }
 
@@ -137,7 +386,7 @@
     param[base_url] = http://scholarworks.umass.edu/
     param[collection_type] = ir_series
     param[collection] = afroam_faculty_pubs
-    implicit < status ; year ; name ; param[year] >
+    implicit < status ; year ; name ; param[collection_heading] >
   
     au < doNotProcess ; 1975 ; University of Massachusetts Amherst Afro-American Studies Faculty Publication Series 1975 ; 1975 >
     au < doNotProcess ; 1979 ; University of Massachusetts Amherst Afro-American Studies Faculty Publication Series 1979 ; 1979 >
@@ -169,7 +418,7 @@
     param[base_url] = http://scholarworks.umass.edu/
     param[collection_type] = ir_series
     param[collection] = anthro_faculty_pubs
-    implicit < status ; year ; name ; param[year] >
+    implicit < status ; year ; name ; param[collection_heading] >
   
     au < doNotProcess ; 1950 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 1950 ; 1950 >
     au < doNotProcess ; 1951 ; University of Massachusetts Amherst Anthropology Department Faculty Publication Series 1951 ; 1951 >
@@ -231,10 +480,13 @@
     plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
     param[base_url] = http://scholarworks.umass.edu/
     param[collection_type] = ir_series
-    implicit < status ; year ; name ; param[collection] ; param[year] >
+    implicit < status ; year ; name ; param[collection] ; param[collection_heading] >
   
     au < doNotProcess ; 1968 ; University of Massachusetts Amherst Anthropology Department Research Report 01: Reports on Achievement Motivation ; anthro_res_rpt1 ; 1968 >
     au < doNotProcess ; 1968 ; University of Massachusetts Amherst Anthropology Department Research Report 02: An Archaeological Survey of the Nepeña Valley, Peru ; anthro_res_rpt2 ; 1968 >
+    au < doNotProcess ; 1969 ; University of Massachusetts Amherst Anthropology Department Research Report 03: Bibliography of English Language Sources on Yugoslavia ; anthro_res_rpt3 ; 1969 >
+    au < doNotProcess ; 1970 ; University of Massachusetts Amherst Anthropology Department Research Report 04: A Contribution to the Study of Value Orientations Among the Czechs and Slovaks ; anthro_res_rpt4 ; 1970 >
+    # to be continued
   
   }
 
