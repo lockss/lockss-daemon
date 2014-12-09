@@ -316,8 +316,9 @@
     >
 
     param[journal_id] = ac
+    comment[notReady] = X X pdf issue. Double-checked that PDF is there. Still issue after deep recrawl.
 
-    au < testing ; exists ; 2014 ; Advances in Chemistry Volume 2014 ; 2014 ; 2014 >
+    au < notReady ; exists ; 2014 ; Advances in Chemistry Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -351,7 +352,7 @@
 
     param[journal_id] = aceng
 
-    au < testing ; exists ; 2014 ; Advances in Computer Engineering Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Advances in Computer Engineering Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -385,7 +386,7 @@
 
     param[journal_id] = acc
 
-    au < testing ; exists ; 2014 ; Advances in Critical Care Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Advances in Critical Care Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -416,7 +417,7 @@
     au < manifest ; exists ; 2011 ; Advances in Decision Sciences Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Advances in Decision Sciences Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Advances in Decision Sciences Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Advances in Decision Sciences Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Advances in Decision Sciences Volume 2014 ; 2014 ; 2014 >
     
   }
 
@@ -430,7 +431,7 @@
 
     param[journal_id] = ae
 
-    au < testing ; exists ; 2014 ; Advances in Ecology Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Advances in Ecology Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -444,7 +445,7 @@
 
     param[journal_id] = aee
 
-    au < testing ; exists ; 2014 ; Advances in Electrical Engineering Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Advances in Electrical Engineering Volume 2014 ; 2014 ; 2014 >
 
   }
 
