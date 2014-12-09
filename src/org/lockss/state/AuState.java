@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.52 2014-01-14 04:32:05 tlipkis Exp $
+ * $Id: AuState.java,v 1.53 2014-12-09 04:53:23 tlipkis Exp $
  */
 
 /*
@@ -44,7 +44,11 @@ import org.lockss.poller.v3.*;
 import org.lockss.repository.*;
 
 /**
- * AuState contains the state information for an au.
+ * AuState contains the state information for an au.<br>
+ *
+ * In this class, default values *will* be present after deserialization,
+ * for fields that did not exist when the object was serialized.  {@see
+ * org.lockss.util.XStreamSerializer#CLASSES_NEEDING_CONSTRUCTOR}
  */
 public class AuState implements LockssSerializable {
 
@@ -108,6 +112,10 @@ public class AuState implements LockssSerializable {
   protected transient String lastPollResultMsg;   // result of last poll
 
   transient int urlUpdateCntr = 0;
+
+  /** No-arg constructor required for pure-Java deserialization. */
+  private AuState() {
+  }
 
   public AuState(ArchivalUnit au, HistoryRepository historyRepo) {
     this(au,
