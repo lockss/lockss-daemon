@@ -299,7 +299,8 @@
     au < finished ; frozen ; 2011 ; Age and Ageing Volume 40 ; 40 ; >
     au < finished ; crawling ; 2012 ; Age and Ageing Volume 41 ; 41 ; >
     au < crawling ; exists ; 2013 ; Age and Ageing Volume 42 ; 42 ; >
-    au < doNotProcess ; exists ; 2014 ; Age and Ageing Volume 43 ; 43 ; >
+    au < manifest ; exists ; 2014 ; Age and Ageing Volume 43 ; 43 ; >
+    au < manifest ; exists ; 2015 ; Age and Ageing Volume 44 ; 44 ; >
 
     }
 
@@ -3715,6 +3716,7 @@
     au < finished ; crawling ; 2012 ; Cerebral Cortex Volume 22 ; 22 ; >
     au < crawling ; exists ; 2013 ; Cerebral Cortex Volume 23 ; 23 ; >
     au < crawling ; exists ; 2014 ; Cerebral Cortex Volume 24 ; 24 ; >
+    au < manifest ; exists ; 2015 ; Cerebral Cortex Volume 25 ; 25 ; >
 
     }
 
@@ -8074,7 +8076,8 @@
     au < finished ; crawling ; 2011 ; Human Reproduction Update Volume 17 ; 17 ; >
     au < finished ; crawling ; 2012 ; Human Reproduction Update Volume 18 ; 18 ; >
     au < crawling ; exists ; 2013 ; Human Reproduction Update Volume 19 ; 19 ; >
-    au < doNotProcess ; exists ; 2014 ; Human Reproduction Update Volume 20 ; 20 ; >
+    au < manifest ; exists ; 2014 ; Human Reproduction Update Volume 20 ; 20 ; >
+    au < manifest ; exists ; 2015 ; Human Reproduction Update Volume 21 ; 21 ; >
 
     }
 
@@ -8559,6 +8562,7 @@
     au < finished ; frozen ; 2012 ; IMA Journal of Management Mathematics Volume 23 ; 23 ; >
     au < crawling ; exists ; 2013 ; IMA Journal of Management Mathematics Volume 24 ; 24 ; >
     au < ready ; exists ; 2014 ; IMA Journal of Management Mathematics Volume 25 ; 25 ; >
+    au < manifest ; exists ; 2015 ; IMA Journal of Management Mathematics Volume 26 ; 26 ; >
 
     }
 
@@ -12398,7 +12402,8 @@
     au < finished ; crawling ; 2011 ; Journal of Islamic Studies Volume 22 ; 22 ; >
     au < finished ; frozen ; 2012 ; Journal of Islamic Studies Volume 23 ; 23 ; >
     au < crawling ; exists ; 2013 ; Journal of Islamic Studies Volume 24 ; 24 ; >
-    au < doNotProcess ; exists ; 2014 ; Journal of Islamic Studies Volume 25 ; 25 ; >
+    au < manifest ; exists ; 2014 ; Journal of Islamic Studies Volume 25 ; 25 ; >
+    au < manifest ; exists ; 2015 ; Journal of Islamic Studies Volume 26 ; 26 ; >
 
     }
 
