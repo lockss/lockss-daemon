@@ -1,10 +1,10 @@
 /*
- * $Id: XStreamSerializer.java,v 1.29 2013-07-16 04:59:47 tlipkis Exp $
+ * $Id: XStreamSerializer.java,v 1.30 2014-12-09 04:30:14 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -38,6 +38,7 @@ import java.text.ParseException;
 import java.util.*;
 
 import org.lockss.app.LockssApp;
+import org.lockss.hasher.HashResult;
 import org.lockss.util.SerializationException;
 
 import com.thoughtworks.xstream.XStream;
@@ -48,6 +49,7 @@ import com.thoughtworks.xstream.converters.reflection.*;
 import com.thoughtworks.xstream.core.*;
 import com.thoughtworks.xstream.io.*;
 import com.thoughtworks.xstream.io.xml.DomDriver;
+import com.thoughtworks.xstream.mapper.*;
 
 /**
  * <p>An implementation of {@link ObjectSerializer} based on
@@ -104,7 +106,7 @@ public class XStreamSerializer extends ObjectSerializer {
   private static class LockssDateConverter implements Converter {
 
     public boolean canConvert(Class type) {
-      return type.equals(Date.class);
+      return Date.class.equals(type);
     }
 
     public void marshal(Object obj,
@@ -153,25 +155,25 @@ public class XStreamSerializer extends ObjectSerializer {
   private static class LockssHashResultConverter implements Converter {
 
     public boolean canConvert(Class type) {
-      return type.equals(org.lockss.hasher.HashResult.class);
+      return HashResult.class.equals(type);
     }
 
     public void marshal(Object obj,
                         HierarchicalStreamWriter writer,
                         MarshallingContext context) {
       
-      org.lockss.hasher.HashResult hr = (org.lockss.hasher.HashResult)obj;
+      HashResult hr = (HashResult)obj;
       if (hr.getAlgorithm() == null) {
 	throw new ConversionException("Can't serialize HashResult with no algorithm");
       }
-      writer.setValue(((org.lockss.hasher.HashResult)obj).toString());
+      writer.setValue(((HashResult)obj).toString());
     }
 
     public Object unmarshal(HierarchicalStreamReader reader,
                             UnmarshallingContext context) {
       String value = reader.getValue();
       try {
-	return org.lockss.hasher.HashResult.make(value);
+	return HashResult.make(value);
       } catch (Exception e) {
 	throw new ConversionException("Cannot parse HashResult: " + value);
       }
@@ -181,6 +183,34 @@ public class XStreamSerializer extends ObjectSerializer {
    * end PRIVATE STATIC INNER CLASS
    * ==============================
    */
+
+  /** These are the classes that should have their no-arg constructor run
+   * before unmarshalling */
+  private static final Class[] CLASSES_NEEDING_CONSTRUCTOR = new Class[] {
+    org.lockss.state.AuState.class,
+  };
+
+  /** This converter causes the class's no-arg constructor to be called
+   * prior to unmarshalling, so that default field values are stored for
+   * fields that don't exist in the serialized file.  This makes it
+   * possible to use marker values to signal the need to initialize new
+   * fields. */
+  private static class LockssConstructingConverter extends ReflectionConverter {
+    
+    public LockssConstructingConverter(Mapper mapper) {
+      super(mapper, new PureJavaReflectionProvider());
+    }
+    
+    @Override
+    public boolean canConvert(Class type) {
+      for (int ix = 0; ix < CLASSES_NEEDING_CONSTRUCTOR.length; ix++) {
+	if (type == CLASSES_NEEDING_CONSTRUCTOR[ix]) {
+	  return true;
+	}
+      }
+      return false;
+    }
+  }
 
   /*
    * begin PRIVATE STATIC INNER CLASS
@@ -770,6 +800,7 @@ public class XStreamSerializer extends ObjectSerializer {
       xs.setMarshallingStrategy(new LockssReferenceByXPathMarshallingStrategy(lockssContext));
       xs.registerConverter(new LockssDateConverter());
       xs.registerConverter(new LockssHashResultConverter());
+      xs.registerConverter(new LockssConstructingConverter(xs.getClassMapper()));
       initialized = true;
     }
   }
@@ -777,6 +808,6 @@ public class XStreamSerializer extends ObjectSerializer {
   /**
    * <p>A logger for use by this serializer.</p>
    */
-  private static Logger logger = Logger.getLogger("XStreamSerializer");
+  private static Logger logger = Logger.getLogger(XStreamSerializer.class);
 
 }
