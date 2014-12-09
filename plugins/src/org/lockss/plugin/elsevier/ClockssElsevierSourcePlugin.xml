@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>13</string>
+    <string>14</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -30,7 +30,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>6</string>
+    <string>10</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -58,11 +58,11 @@
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.elsevier.ElsevierFTPArticleIteratorFactory</string>
+    <string>org.lockss.plugin.elsevier.ElsevierSourceArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.elsevier.ElsevierFTPArticleIteratorFactory</string>
+    <string>org.lockss.plugin.elsevier.ElsevierSourceArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>application/pdf_metadata_extractor_factory_map</string>

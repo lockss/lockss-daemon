@@ -1,6 +1,10 @@
 /*
+ * $Id: ElsevierSourceArticleIteratorFactory.java,v 1.1 2014-12-09 00:50:51 thib_gc Exp $
+ */
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+/*
+
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -38,9 +42,9 @@ import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 
-public class ElsevierFTPArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
+public class ElsevierSourceArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
-  protected static Logger log = Logger.getLogger("ElsevierFTPArticleIteratorFactory");
+  private static final Logger log = Logger.getLogger(ElsevierSourceArticleIteratorFactory.class);
   
   protected static final String ROOT_TEMPLATE = "\"%s%d\",base_url,year";
   
@@ -59,7 +63,7 @@ public class ElsevierFTPArticleIteratorFactory implements ArticleIteratorFactory
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
                                                       MetadataTarget target)
       throws PluginException {
-    return new ElsevierFTPArticleIterator(au, new SubTreeArticleIterator.Spec()
+    return new ElsevierSourceArticleIterator(au, new SubTreeArticleIterator.Spec()
                                        .setTarget(target)
                                        .setVisitArchiveMembers(true)
                                        .setRootTemplate(ROOT_TEMPLATE)
@@ -68,11 +72,11 @@ public class ElsevierFTPArticleIteratorFactory implements ArticleIteratorFactory
 //                                       .setIncludeSubTreePatternTemplate(INCLUDE_SUBTREE_TEMPLATE, Pattern.CASE_INSENSITIVE));
   }
   
-  protected static class ElsevierFTPArticleIterator extends SubTreeArticleIterator {
+  protected static class ElsevierSourceArticleIterator extends SubTreeArticleIterator {
 	 
     protected static Pattern PATTERN = Pattern.compile("([^/]+[\\d]+)(/[\\d]+[^/]+/[\\d]+/[\\d]+/main.)pdf$", Pattern.CASE_INSENSITIVE);
     
-    protected ElsevierFTPArticleIterator(ArchivalUnit au,
+    protected ElsevierSourceArticleIterator(ArchivalUnit au,
                                   SubTreeArticleIterator.Spec spec) {
       super(au, spec);
     }
