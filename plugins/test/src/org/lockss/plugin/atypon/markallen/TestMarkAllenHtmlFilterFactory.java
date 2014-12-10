@@ -1,5 +1,5 @@
 /*
- * $Id: TestMarkAllenHtmlFilterFactory.java,v 1.2 2014-11-07 23:04:48 ldoan Exp $
+ * $Id: TestMarkAllenHtmlFilterFactory.java,v 1.3 2014-12-10 05:40:30 ldoan Exp $
  */
 
 /*
@@ -65,85 +65,77 @@ public class TestMarkAllenHtmlFilterFactory
   // http://www.magonlinelibrary.com/doi/ref/10.12968/bjom.2013.21.10.701
   private static final String withLiteratumInstitutionBanner =
       "<div class=\"block\">" + 
-          "<section id=\"da3\" class=\"widget literatumInstitutionBanner none slogan widget-none\">" +
+          "<div id=\"da3\" class=\"widget literatumInstitutionBanner none slogan widget-none\">" +
           "<div class=\"wrapped \">" +
           "<div class=\"widget-body body body-none \">" +
           "<div class=\"welcome\"> </div>" +
-          "</div>" +
-          "</div>" +
-          "</section>" +
+          "</div></div></div>" +
           "</div>";
 
   // from toc - ad panel has link to other issue 
   // http://www.magonlinelibrary.com/toc/bjom/21/10
   private static final String withGenericSlideshow =
       "<div class=\"block\">" +  
-          "<section class=\"widget genericSlideshow none  widget-none  widget-compact-all\" id=\"b98\">" +
+          "<div class=\"widget genericSlideshow none  widget-none  widget-compact-all\" id=\"b98\">" +
           "<div class=\"widget-body body body-none  body-compact-all\">" +
           "<div class=\"slides\">" +
           "<div class=\"widget-body body body-none \"><img src=\"/rawimage/jid-22-10.gif\"</div>" +
           "<p><a href=\"http://www.magonlinelibrary.com/doi/full/10.12968/bjom.2014.22.10.694\" id=\"jidlink\">read</a></p>" +
-          "</div></div>" +
-          "</section>" +
+          "</div></div></div>" +
           "</div>";  
   
   // toc, abs, full, text and ref right column - most read 
   // http://www.magonlinelibrary.com/doi/full/10.12968/bjom.2013.21.10.688
-  private static final String withLayoutTabs =
+  private static final String withLiteratumMostReadWidget =
       "<div class=\"block\">" +
-          "<section class=\"widget layout-tabs none \" id=\"6e3\">" +
-          "<div class=\"widget-body body body-none \">" +
-          "<div class=\"tabs tabs-widget\">" +
-          "<ul class=\"tab-nav\">" +
-          "<li class=\"active \">" +
-          "<a href=\"#69a\">Most Read</a>" +
-          "</li>" +
-          "</ul>" +
+          "<div id=\"7e1\" class=\"widget literatumMostReadWidget alignLeft " +
+          "widget-none widget-compact-all\">" +
+          "<div class=\"widget-body body body-none body-compact-all\">" +
+          "<section class=\"popular\">" +
+          "<div class=\"mostRead\">" +
+          "<ul><li><div class=\"title\">" +
+          "<a href=\"/doi/abs/10.12968/bjom.2013.21.6.454\">Effective communication in midwifery</a>" +
+          "</div></li></ul></div></section>" +
           "</div></div>" +
-          "</section>" +
           "</div>";
   
   // top page ad and all other ads with class LiteratumAd
   private static final String withLiteratumAd =
       "<div class=\"block\">" +
-          "<section class=\"widget literatumAd alignCenter  widget-none\" " +
+          "<div class=\"widget literatumAd alignCenter  widget-none\" " +
           "id=\"bac8\">" +
           "<div class=\"wrapped 00_00\">" +
           "<div class=\"widget-body body body-none \">" +
           "<div class=\"pb-ad\">" +
           "<iframe width=\"728\" height=\"90\" frameborder=\"0\" " +
           "src=\"http://ad-link\">blah blah;</iframe>" +
-          "</div></div></div>" +
-          "</section>" +
+          "</div></div></div></div>" +
           "</div>";
   
   // pageHeader - has links to current issue
   // <section class="widget pageHeader   widget-none" id="pageHeader">
   private static final String withPageHeader =
       "<div class=\"block\">" +
-          "<section class=\"widget pageHeader \" id=\"pageHeader\">" +
+          "<div class=\"widget pageHeader \" id=\"pageHeader\">" +
           "<div class=\"widget-body body body-none \">" +
           "<div data-pb-dropzone=\"main\">" +
           "<div class=\"widget-body body body-none \">" +
           "<div class=\"width_1_2\">" +
-          "<section class=\"widget general-image \" id=\"3f2\">" +
+          "<div class=\"widget general-image \" id=\"3f2\">" +
           "<div class=\"widget-body body body-none \">" +
           "<a href=\"/toc/jid/current\"><img src=\"/logos.png\"></a></div>" +
-          "</section>" +
-          "</div></div></div></div>" +
-          "</section>" +
+          "</div></div></div></div></div></div>" +
           "</div>";     
   
   // for toc - social media
   private static final String withSocialMedia =  
       "<div class=\"block\">" +
-          "<section class=\"widget general-bookmark-share alignCenter " +
+          "<div class=\"widget general-bookmark-share alignCenter " +
           "addthisborder widget-none\" id=\"d62\">" +
           "<div class=\"addthis_toolbox addthis_default_style\">" +
           "<a class=\"addthis_button_facebook\"></a>" +
           "<a class=\"addthis_button_twitter\"></a>" +
-          "</div>" +
-          "</section>" +
+          "</div></div>" +
           "</div>";
   
   // from toc - access icon container 
@@ -157,52 +149,46 @@ public class TestMarkAllenHtmlFilterFactory
   // http://www.magonlinelibrary.com/doi/abs/10.12968/bjom.2013.21.10.701
   private static final String withArticleToolsWidgetExceptDownloadCitation = 
       "<div class=\"block\">" +
-          "<section class=\"widget literatumArticleToolsWidget\" id=\"5ce\">" +
+          "<div class=\"widget literatumArticleToolsWidget\" id=\"5ce\">" +
           "<ul class=\"linkList blockLinks separators centered\">" +
           "<li class=\"addToFavs\"><a href=\"/action/fav-link\">Fav</a></li>" +
           "<li class=\"downloadCitations\">" +
           "<a href=\"/action/showCitFormats?" +
-          "doi=11.11111%2Fjid.2013.111\">Download citation</a>" +
-          "</li>" +
+          "doi=11.11111%2Fjid.2013.111\">Download citation</a></li>" +
           "<li class=\"trackCitations\">" +
           "<a href=\"/action/addCitationAlert?" +
-          "doi=11.11111%2Fjid.2013.11.11.711\">Track citations</a>" +
-          "</li>" +
-          "</ul>" +
-          "</section>" +
+          "doi=11.11111%2Fjid.2013.11.11.711\">Track citations</a></li>" +
+          "</ul></div>" +
           "</div>";
-  
-  // from full text - Downloaded count
- private static final String withLiteratumContentItemDownloadCount = 
-     "<div class=\"block\">" +
-         "<section class=\"widget literatumContentItemDownloadCount widget-box\" id=\"33f\">" +
-            "<div class=\"widget-body\">Downloaded 22 times</div>" +
-            "</section>" +
-            "</div>";
   
   private static final String ArticleToolsWidgetFiltered = 
       "<div class=\"block\">" +
-          "<section class=\"widget literatumArticleToolsWidget\" id=\"5ce\">" +
+          "<div class=\"widget literatumArticleToolsWidget\" >" +
           "<ul class=\"linkList blockLinks separators centered\">" +
           "<li class=\"downloadCitations\">" +
           "<a href=\"/action/showCitFormats?" +
-          "doi=11.11111%2Fjid.2013.111\">Download citation</a>" +
-          "</li>" +
-          "</ul>" +
-          "</section>" +
+          "doi=11.11111%2Fjid.2013.111\">Download citation</a></li></ul>" +
+          "</div>" +
           "</div>";  
    
+  // from full text - Downloaded count
+  // http://www.magonlinelibrary.com/doi/full/10.12968/bjom.2013.21.10.692
+  private static final String withLiteratumContentItemDownloadCount = 
+     "<div class=\"block\">" +
+         "<div class=\"widget literatumContentItemDownloadCount widget-box\" id=\"33f\">" +
+         "<div class=\"widget-body\">Downloaded 22 times</div></div>" +
+         "</div>";
+  
   // pageFooter
   private static final String withPageFooter =  
       "<div class=\"block\">" +
-          "<section class=\"widget pageFooter \" id=\"pageFooter\">" +
+          "<div class=\"widget pageFooter \" id=\"pageFooter\">" +
           "<div class=\"widget-body body body-none \">" +
           "<div class=\"page-footer\">" +
           "<div data-pb-dropzone=\"main\">" +
           "<h3>ABOUT</h3>" +
           "<ul><li><a href=\"/page/privacy\">Site privacy</a></li></ul>" +
-          "<div><div><div>" +
-          "</section>" +
+          "</div></div></div></div>" +
           "</div>";     
   
 
@@ -251,7 +237,7 @@ public class TestMarkAllenHtmlFilterFactory
     public void testFiltering() throws Exception {
       variantFact = new MarkAllenHtmlCrawlFilterFactory();
       doFilterTest(maau, variantFact, withGenericSlideshow, filteredStr); 
-      doFilterTest(maau, variantFact, withLayoutTabs, filteredStr);    
+      doFilterTest(maau, variantFact, withLiteratumMostReadWidget, filteredStr);    
     }    
   }
 
@@ -260,18 +246,18 @@ public class TestMarkAllenHtmlFilterFactory
      public void testFiltering() throws Exception {
       variantFact = new MarkAllenHtmlHashFilterFactory();
       doFilterTest(maau, variantFact, withLiteratumInstitutionBanner, 
-          filteredStr);
+                   filteredStr);
       doFilterTest(maau, variantFact, withLiteratumAd, filteredStr);
       doFilterTest(maau, variantFact, withPageHeader, filteredStr);
       doFilterTest(maau, variantFact, withGenericSlideshow, filteredStr); 
       doFilterTest(maau, variantFact, withSocialMedia, filteredStr);
       doFilterTest(maau, variantFact, withAccessIconContainer, filteredStr);
       doFilterTest(maau, variantFact, 
-          withArticleToolsWidgetExceptDownloadCitation, 
-          ArticleToolsWidgetFiltered);
+                   withArticleToolsWidgetExceptDownloadCitation, 
+                   ArticleToolsWidgetFiltered);
       doFilterTest(maau, variantFact, withLiteratumContentItemDownloadCount, 
-          filteredStr);
-      doFilterTest(maau, variantFact, withLayoutTabs, filteredStr);
+                   filteredStr);
+      doFilterTest(maau, variantFact, withLiteratumMostReadWidget, filteredStr);
       doFilterTest(maau, variantFact, withPageFooter, filteredStr);
     }
   }

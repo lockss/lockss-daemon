@@ -1,5 +1,5 @@
 /*
- * $Id: MarkAllenHtmlCrawlFilterFactory.java,v 1.2 2014-11-07 23:03:57 ldoan Exp $
+ * $Id: MarkAllenHtmlCrawlFilterFactory.java,v 1.3 2014-12-10 05:40:06 ldoan Exp $
  */
 
 /*
@@ -41,25 +41,26 @@ import org.lockss.plugin.*;
 import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
 
 // be sure not to CRAWL filter action/showCitFormats link
-// might be in left or right colum
+// might be in left or right column
 
 public class MarkAllenHtmlCrawlFilterFactory 
   extends BaseAtyponHtmlCrawlFilterFactory {
   static NodeFilter[] filters = new NodeFilter[] {
 
-    // previous and next of toc is handled by parent
+    // handled by parent:
+    // previous and next of toc
     // <td class="journalNavLeftTd">
     // <td class="journalNavRightTd">
     
     // from toc - below pageHeader, ad panel has link to other issue
     // http://www.magonlinelibrary.com/toc/bjom/21/10
-    HtmlNodeFilters.tagWithAttributeRegex("section", "class", 
-        "genericSlideshow"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
+                                          "genericSlideshow"),
     
     // toc, abs, full, text and ref right column - most read 
     // http://www.magonlinelibrary.com/doi/full/10.12968/bjom.2013.21.10.688
-    HtmlNodeFilters.tagWithAttributeRegex("section", "class", 
-        "layout-tabs"),                     
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
+                                          "literatumMostReadWidget")                     
                 
   };
 

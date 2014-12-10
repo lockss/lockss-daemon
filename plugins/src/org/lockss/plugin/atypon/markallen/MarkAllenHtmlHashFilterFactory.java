@@ -1,5 +1,5 @@
 /*
- * $Id: MarkAllenHtmlHashFilterFactory.java,v 1.3 2014-11-07 23:03:57 ldoan Exp $
+ * $Id: MarkAllenHtmlHashFilterFactory.java,v 1.4 2014-12-10 05:40:06 ldoan Exp $
  */
 
 /*
@@ -48,27 +48,25 @@ public class MarkAllenHtmlHashFilterFactory
     
     NodeFilter[] filters = new NodeFilter[] {
         
-        // institution banner
-        // <section class="widget literatumInstitutionBanner none slogan widget-none" id="dad9d09a-eaed-4707-a2cb-23c70f92032e">
+        // from toc - institution banner
         // http://www.magonlinelibrary.com/doi/ref/10.12968/bjom.2013.21.10.701
-        HtmlNodeFilters.tagWithAttributeRegex("section", "class", 
-            "literatumInstitutionBanner"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
+                                              "literatumInstitutionBanner"),
         
-        // top page ad and all other ads with class LiteratumAd
-        HtmlNodeFilters.tagWithAttributeRegex("section", "class", 
-            "literatumAd"),
+        // from toc - top page ad and all other ads with class LiteratumAd
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumAd"),
         
-        // pageHeader - has links to current issue
-        HtmlNodeFilters.tagWithAttribute("section", "id", "pageHeader"),
+        // from toc - pageHeader - has links to current issue
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "pageHeader"),
         
         // from toc - ad panel has link to other issue 
         // http://www.magonlinelibrary.com/toc/bjom/21/10
-        HtmlNodeFilters.tagWithAttributeRegex("section", "class", 
-            "genericSlideshow"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
+                                              "genericSlideshow"),
             
         // for toc - social media
-        HtmlNodeFilters.tagWithAttributeRegex("section", "class",
-            "general-bookmark-share"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class",
+                                              "general-bookmark-share"),
             
         // from toc - access icon container 
         HtmlNodeFilters.tagWithAttribute("td", "class", "accessIconContainer"),      
@@ -78,31 +76,39 @@ public class MarkAllenHtmlHashFilterFactory
         // http://www.magonlinelibrary.com/doi/abs/10.12968/bjom.2013.21.10.701
         HtmlNodeFilters.allExceptSubtree(
             HtmlNodeFilters.tagWithAttributeRegex( 
-                "section", "class", "literatumArticleToolsWidget"),
+                "div", "class", "literatumArticleToolsWidget"),
                 HtmlNodeFilters.tagWithAttributeRegex(
                     "a", "href", "/action/showCitFormats\\?")),   
                     
         // from full text - Downloaded count
-        // <section class="widget literatumContentItemDownloadCount alignCenter addthisborder widget-box" 
-        //      id="3309a539-fe1c-4047-8e2c-68582ab6ff73">
-        HtmlNodeFilters.tagWithAttributeRegex("section", "class",
-            "literatumContentItemDownloadCount"),            
+        // http://www.magonlinelibrary.com/doi/full/10.12968/bjom.2013.21.10.692            
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class",
+                                              "literatumContentItemDownloadCount"),            
                     
         // toc, abs, full, text and ref right column - most read 
         // http://www.magonlinelibrary.com/doi/full/10.12968/bjom.2013.21.10.688
-        HtmlNodeFilters.tagWithAttributeRegex("section", "class", 
-            "layout-tabs"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
+                                              "literatumMostReadWidget"),
         
         // pageFooter
-        HtmlNodeFilters.tagWithAttribute("section", "id", "pageFooter"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "pageFooter"),
         
     };
     
     // super.createFilteredInputStream adds filters to the baseAtyponFilters
     // and returns the filtered input stream using an array of NodeFilters that 
     // combine the two arrays of NodeFilters.
-    boolean doWS = true;
-    return super.createFilteredInputStream(au, in, encoding, filters, doWS);
+    return super.createFilteredInputStream(au, in, encoding, filters);
+  }
+  
+  @Override
+  public boolean doTagIDFiltering() {
+    return true;
+  }
+   
+  @Override
+  public boolean doWSFiltering() {
+    return true;
   }
     
 }
