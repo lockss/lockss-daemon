@@ -213,7 +213,7 @@
         param[base_url] = http://archderm.jamanetwork.com/
         param[resource_id] = 68
         
-        au < ready ; exists ; 2012 ; JAMA Dermatology Volume 148 ; 2012 >
+        au < notReady ; exists ; 2012 ; JAMA Dermatology Volume 148 ; 2012 >
         au < crawling ; exists ; 2013 ; JAMA Dermatology Volume 149 ; 2013 >
         au < crawling ; exists ; 2014 ; JAMA Dermatology Volume 150 ; 2014 >
     
@@ -623,7 +623,7 @@
         param[base_url] = http://archinte.jamanetwork.com/
         param[resource_id] = 71
         
-        au < ready ; exists ; 2012 ; JAMA Internal Medicine Volume 172 ; 2012 >
+        au < notReady ; exists ; 2012 ; JAMA Internal Medicine Volume 172 ; 2012 >
         au < crawling ; exists ; 2013 ; JAMA Internal Medicine Volume 173 ; 2013 >
         au < crawling ; exists ; 2014 ; JAMA Internal Medicine Volume 174 ; 2014 >
     
@@ -729,7 +729,7 @@
         param[resource_id] = 72
         comment[notReady] = multiple base_url used for png
         
-        au < ready ; exists ; 2012 ; JAMA Neurology Volume 69 ; 2012 >
+        au < notReady ; exists ; 2012 ; JAMA Neurology Volume 69 ; 2012 >
         au < notReady ; exists ; 2013 ; JAMA Neurology Volume 70 ; 2013 >
         au < exists ; exists ; 2014 ; JAMA Neurology Volume 71 ; 2014 >
     
@@ -996,7 +996,7 @@
         param[base_url] =  http://archopht.jamanetwork.com/
         param[resource_id] = 73
         
-        au < ready ; exists ; 2012 ; JAMA Ophthalmology Volume 130 ; 2012 >
+        au < notReady ; exists ; 2012 ; JAMA Ophthalmology Volume 130 ; 2012 >
         au < crawling ; exists ; 2013 ; JAMA Ophthalmology Volume 131 ; 2013 >
         au < crawling ; exists ; 2014 ; JAMA Ophthalmology Volume 132 ; 2014 >
     
@@ -1171,7 +1171,7 @@
         param[base_url] =  http://archotol.jamanetwork.com/
         param[resource_id] = 74
         
-        au < ready ; exists ; 2012 ; JAMA Otolaryngology - Head & Neck Surgery Volume 138 ; 2012 >
+        au < notReady ; exists ; 2012 ; JAMA Otolaryngology - Head & Neck Surgery Volume 138 ; 2012 >
         au < crawling ; exists ; 2013 ; JAMA Otolaryngology - Head & Neck Surgery Volume 139 ; 2013 >
         au < crawling ; exists ; 2014 ; JAMA Otolaryngology - Head & Neck Surgery Volume 140 ; 2014 >
     
@@ -1374,7 +1374,7 @@
         param[resource_id] = 75
         comment[notReady] = multiple base_url used for png
         
-        au < ready ; exists ; 2012 ; JAMA Pediatrics Volume 166 ; 2012 >
+        au < notReady ; exists ; 2012 ; JAMA Pediatrics Volume 166 ; 2012 >
         au < notReady ; exists ; 2013 ; JAMA Pediatrics Volume 167 ; 2013 >
         au < exists ; exists ; 2014 ; JAMA Pediatrics Volume 168 ; 2014 >
     
@@ -1558,7 +1558,7 @@
         param[base_url] = http://archsurg.jamanetwork.com/
         param[resource_id] = 76
         
-        au < ready ; exists ; 2012 ; JAMA Surgery Volume 147 ; 2012 >
+        au < notReady ; exists ; 2012 ; JAMA Surgery Volume 147 ; 2012 >
         au < crawling ; exists ; 2013 ; JAMA Surgery Volume 148 ; 2013 >
         au < crawling ; exists ; 2014 ; JAMA Surgery Volume 149 ; 2014 >
     
@@ -1938,7 +1938,7 @@
         au < crawling ; exists ; 2011 ; JAMA: The Journal of the American Medical Association Volume 305-306 ; 2011 >
         au < crawling ; exists ; 2012 ; JAMA: The Journal of the American Medical Association Volume 307-308 ; 2012 >
         au < crawling ; exists ; 2013 ; JAMA: The Journal of the American Medical Association Volume 309-310 ; 2013 >
-        au < ready ; exists ; 2014 ; JAMA: The Journal of the American Medical Association Volume 311-312 ; 2014 >
+        au < notReady ; exists ; 2014 ; JAMA: The Journal of the American Medical Association Volume 311-312 ; 2014 >
     
       }
 
