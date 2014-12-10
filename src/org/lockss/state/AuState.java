@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.53 2014-12-09 04:53:23 tlipkis Exp $
+ * $Id: AuState.java,v 1.53.2.1 2014-12-10 22:07:57 dshr Exp $
  */
 
 /*
@@ -82,6 +82,8 @@ public class AuState implements LockssSerializable {
   protected long lastPoPPoll;		// last completed PoP poll time
   protected int lastPoPPollResult;	// result of last PoP poll
   protected long lastLocalHashScan;	// last completed local hash scan
+  protected int numAgreePeersLastPoR = -1; // Number of agreeing peers last PoR
+  protected int numWillingRepairers = -1; // Number of willing repairers
 
   // XXX not used in 1.62 - made transient so not committed to having it in
   // state file
@@ -143,6 +145,8 @@ public class AuState implements LockssSerializable {
 	 -1, // lastPoPPollResult
 	 -1, // lastLocalHashScan
 	 -1, // lastLocalHashMismatch
+	 0,  // numAgreePeersLastPoR
+	 0,  // numWillingRepairers
 	 historyRepo);
   }
 
@@ -167,7 +171,7 @@ public class AuState implements LockssSerializable {
 	 null,				// metadataFeatureVersion
 	 -1,				// lastMetadataIndex
 	 TimeBase.nowMs(),              // lastContentChange
-	 -1, -1, -1, -1,
+	 -1, -1, -1, -1, -1, 0,
 	 historyRepo);
   }
 
@@ -191,6 +195,8 @@ public class AuState implements LockssSerializable {
 		 int lastPoPPollResult,
 		 long lastLocalHashScan,
 		 long lastLocalHashMismatch,
+		 int numAgreePeersLastPoR,
+		 int numWillingRepairers,
 		 HistoryRepository historyRepo) {
     this.au = au;
     this.lastCrawlTime = lastCrawlTime;
@@ -217,6 +223,8 @@ public class AuState implements LockssSerializable {
     this.lastPoPPollResult = lastPoPPollResult;
     this.lastLocalHashScan = lastLocalHashScan;
     this.lastLocalHashMismatch = lastLocalHashMismatch;
+    this.numAgreePeersLastPoR = numAgreePeersLastPoR;
+    this.numWillingRepairers = numWillingRepairers;
     this.historyRepo = historyRepo;
   }
 
@@ -419,6 +427,22 @@ public class AuState implements LockssSerializable {
     }
   }
 
+  public int getNumAgreePeersLastPoR() {
+    return numAgreePeersLastPoR;
+  }
+
+  public void setNumAgreePeersLastPoR(int n) {
+    numAgreePeersLastPoR = n;
+  }
+
+  public int getNumWillingRepairers() {
+    return numWillingRepairers;
+  }
+
+  public void setNumWillingRepairers(int n) {
+    numWillingRepairers = n;
+  }
+
   /**
    * Returns the running average poll duration, or 0 if unknown
    */
@@ -521,6 +545,8 @@ public class AuState implements LockssSerializable {
 		       lastPoPPoll, lastPoPPollResult,
 		       lastLocalHashScan,
 		       lastLocalHashMismatch,
+		       numAgreePeersLastPoR,
+		       numWillingRepairers,
 		       null);
   }
 

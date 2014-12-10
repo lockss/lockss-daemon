@@ -3,7 +3,7 @@
 build frameworks.  If desired, optional parameters may also be set to change
 the default behavior.  See testsuite.props for details."""
 
-# $Id: testsuite.py,v 1.76 2014-12-08 04:17:40 tlipkis Exp $
+# $Id: testsuite.py,v 1.76.2.1 2014-12-10 22:07:57 dshr Exp $
 
 __copyright__ = '''\
 Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
@@ -303,6 +303,7 @@ class V3TestCases( LockssTestCases ):
                           'org.lockss.dbManager.enabled': False,
                           'org.lockss.poll.v3.enableV3Poller': False,
                           'org.lockss.poll.v3.enableV3Voter': True,
+			  'org.lockss.poll.v3.minTimeBetweenAnyPoll': '6s',
                           'org.lockss.poll.pollStarterInitialDelay': '30s'}
             extraConf.update( self.local_configuration )
             self.framework.appendLocalConfig( extraConf, client )

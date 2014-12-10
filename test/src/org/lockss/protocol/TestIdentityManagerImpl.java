@@ -1,5 +1,5 @@
 /*
- * $Id: TestIdentityManagerImpl.java,v 1.33 2013-08-30 20:28:09 barry409 Exp $
+ * $Id: TestIdentityManagerImpl.java,v 1.33.12.1 2014-12-10 22:07:58 dshr Exp $
  */
 
 /*
@@ -117,6 +117,8 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
     theDaemon.setIdentityManager(idmgr);
     theDaemon.setHistoryRepository(new MockHistoryRepository(), mau);
     idmgr.startService();
+    MockPlugin plug = new MockPlugin(theDaemon);
+    mau.setPlugin(plug);
   }
 
   public void tearDown() throws Exception {
@@ -767,6 +769,9 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
 
     MockArchivalUnit mau1 = new MockArchivalUnit();
     MockArchivalUnit mau2 = new MockArchivalUnit();
+    MockPlugin plug = new MockPlugin(theDaemon);
+    mau1.setPlugin(plug);
+    mau2.setPlugin(plug);
     log.info("auid1: " + mau1.getAuId());
     log.info("auid2: " + mau2.getAuId());
     theDaemon.setHistoryRepository(new MockHistoryRepository(), mau1);
