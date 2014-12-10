@@ -13113,7 +13113,13 @@
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < expected ; 2014 ; Journal of Mammalogy Volume 95 ; 95 >
+    au < exists ; 2008 ; Journal of Mammalogy Volume 89 ; 89 >
+    au < exists ; 2009 ; Journal of Mammalogy Volume 90 ; 90 >
+    au < exists ; 2010 ; Journal of Mammalogy Volume 91 ; 91 >
+    au < exists ; 2011 ; Journal of Mammalogy Volume 92 ; 92 >
+    au < exists ; 2012 ; Journal of Mammalogy Volume 93 ; 93 >
+    au < exists ; 2013 ; Journal of Mammalogy Volume 94 ; 94 >
+    au < exists ; 2014 ; Journal of Mammalogy Volume 95 ; 95 >
 
   }
 
