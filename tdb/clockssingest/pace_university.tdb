@@ -12,8 +12,27 @@
   param[base_url] = http://digitalcommons.pace.edu/ 
   implicit < status ; status2 ; year ; name ; param[volume] >
   
-  comment[doNotInclude] = Pace International Law Review Online Companion. eissn/lissn 2164-9960 See RT ticket 3743 and roundup issue 3679. http://digitalcommons.pace.edu/pilronline/
-  
+  {
+
+    title <
+      name = Pace International Law Review Online Companion ;
+      eissn = 2164-9960
+    >
+
+    plugin = org.lockss.plugin.bepress.ClockssDigitalCommonsRepositoryPlugin
+    param[base_url] = http://digitalcommons.pace.edu/ 
+    param[collection_type] = ir_series
+    param[collection] = pilronline 
+    implicit < status ; status2 ; year ; name ; param[collection_heading] >
+
+    au < exists ; exists ; 2009 ; Pace International Law Review Online Companion Volume 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; Pace International Law Review Online Companion Volume 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Pace International Law Review Online Companion Volume 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Pace International Law Review Online Companion Volume 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Pace International Law Review Online Companion Volume 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Pace International Law Review Online Companion Volume 2014 ; 2014 >
+
+  }
 
   {
 
