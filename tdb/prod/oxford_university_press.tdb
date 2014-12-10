@@ -5982,7 +5982,7 @@
   {
 
     title <
-      name = The European Journal of Public Health ;
+      name = European Journal of Public Health ;
       issn = 1101-1262 ;
       eissn = 1464-360X ;
       issnl = 1101-1262
@@ -6004,20 +6004,20 @@
     param[base_url] = http://eurpub.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWireDrupalPlugin ; manifest ; 1991 ; The European Journal of Public Health Volume 1 ; 1 >
-    au < HighWireDrupalPlugin ; manifest ; 1992 ; The European Journal of Public Health Volume 2 ; 2 >
-    au < HighWireDrupalPlugin ; manifest ; 1993 ; The European Journal of Public Health Volume 3 ; 3 >
-    au < HighWireDrupalPlugin ; manifest ; 1994 ; The European Journal of Public Health Volume 4 ; 4 >
-    au < HighWireDrupalPlugin ; manifest ; 1995 ; The European Journal of Public Health Volume 5 ; 5 >
-    au < HighWireDrupalPlugin ; manifest ; 1996 ; The European Journal of Public Health Volume 6 ; 6 >
-    au < HighWireDrupalPlugin ; manifest ; 1997 ; The European Journal of Public Health Volume 7 ; 7 >
-    au < HighWireDrupalPlugin ; manifest ; 1998 ; The European Journal of Public Health Volume 8 ; 8 >
-    au < HighWireDrupalPlugin ; manifest ; 1999 ; The European Journal of Public Health Volume 9 ; 9 >
-    au < HighWireDrupalPlugin ; manifest ; 2000 ; The European Journal of Public Health Volume 10 ; 10 >
-    au < HighWireDrupalPlugin ; manifest ; 2001 ; The European Journal of Public Health Volume 11 ; 11 >
-    au < HighWireDrupalPlugin ; manifest ; 2002 ; The European Journal of Public Health Volume 12 ; 12 >
-    au < HighWireDrupalPlugin ; manifest ; 2003 ; The European Journal of Public Health Volume 13 ; 13 >
-    au < HighWireDrupalPlugin ; manifest ; 2004 ; The European Journal of Public Health Volume 14 ; 14 >
+    au < HighWireDrupalPlugin ; manifest ; 1991 ; European Journal of Public Health Volume 1 ; 1 >
+    au < HighWireDrupalPlugin ; manifest ; 1992 ; European Journal of Public Health Volume 2 ; 2 >
+    au < HighWireDrupalPlugin ; manifest ; 1993 ; European Journal of Public Health Volume 3 ; 3 >
+    au < HighWireDrupalPlugin ; manifest ; 1994 ; European Journal of Public Health Volume 4 ; 4 >
+    au < HighWireDrupalPlugin ; manifest ; 1995 ; European Journal of Public Health Volume 5 ; 5 >
+    au < HighWireDrupalPlugin ; manifest ; 1996 ; European Journal of Public Health Volume 6 ; 6 >
+    au < HighWireDrupalPlugin ; manifest ; 1997 ; European Journal of Public Health Volume 7 ; 7 >
+    au < HighWireDrupalPlugin ; manifest ; 1998 ; European Journal of Public Health Volume 8 ; 8 >
+    au < HighWireDrupalPlugin ; manifest ; 1999 ; European Journal of Public Health Volume 9 ; 9 >
+    au < HighWireDrupalPlugin ; manifest ; 2000 ; European Journal of Public Health Volume 10 ; 10 >
+    au < HighWireDrupalPlugin ; manifest ; 2001 ; European Journal of Public Health Volume 11 ; 11 >
+    au < HighWireDrupalPlugin ; manifest ; 2002 ; European Journal of Public Health Volume 12 ; 12 >
+    au < HighWireDrupalPlugin ; manifest ; 2003 ; European Journal of Public Health Volume 13 ; 13 >
+    au < HighWireDrupalPlugin ; manifest ; 2004 ; European Journal of Public Health Volume 14 ; 14 >
     au < HighWireStrVolPlugin ; superseded ; 2005 ; European Journal of Public Health Volume 15 [superseded] ; 15 >
     au < HighWirePressH20Plugin ; down ; 2005 ; European Journal of Public Health Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; down ; 2006 ; European Journal of Public Health Volume 16 ; 16 >
@@ -6028,8 +6028,8 @@
     au < HighWirePressH20Plugin ; down ; 2010 ; European Journal of Public Health Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; down ; 2011 ; European Journal of Public Health Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; down ; 2012 ; European Journal of Public Health Volume 22 ; 22 >
-    au < HighWireDrupalPlugin ; manifest ; 2013 ; The European Journal of Public Health Volume 23 ; 23 >
-    au < HighWireDrupalPlugin ; manifest ; 2014 ; The European Journal of Public Health Volume 24 ; 24 >
+    au < HighWireDrupalPlugin ; manifest ; 2013 ; European Journal of Public Health Volume 23 ; 23 >
+    au < HighWireDrupalPlugin ; manifest ; 2014 ; European Journal of Public Health Volume 24 ; 24 >
 
     }
 
