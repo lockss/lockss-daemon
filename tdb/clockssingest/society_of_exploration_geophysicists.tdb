@@ -85,7 +85,7 @@
     au < manifest ; exists ; 2011 ; Geophysics Volume 76 ; 76 >
     au < manifest ; exists ; 2012 ; Geophysics Volume 77 ; 77 >
     au < ready ; exists ; 2013 ; Geophysics Volume 78 ; 78 >
-    au < manifest ; exists ; 2014 ; Geophysics Volume 79 ; 79 >
+    au < testing ; exists ; 2014 ; Geophysics Volume 79 ; 79 >
     
   }
 
@@ -131,7 +131,7 @@
     au < manifest ; exists ; 2011 ; The Leading Edge Volume 30 ; 30 >
     au < manifest ; exists ; 2012 ; The Leading Edge Volume 31 ; 31 >
     au < ready ; exists ; 2013 ; The Leading Edge Volume 32 ; 32 >
-    au < manifest ; exists ; 2014 ; The Leading Edge Volume 33 ; 33 >
+    au < testing ; exists ; 2014 ; The Leading Edge Volume 33 ; 33 >
 
   }
 
@@ -146,7 +146,7 @@
     param[journal_id] = inteio
 
     au < ready ; exists ; 2013 ; Interpretation Volume 1 ; 1 >
-    au < manifest ; exists ; 2014 ; Interpretation Volume 2 ; 2 >
+    au < testing ; exists ; 2014 ; Interpretation Volume 2 ; 2 >
 
    
   }
@@ -179,7 +179,7 @@
     au < manifest ; exists ; 2011 ; Journal of Environmental and Engineering Geophysics Volume 16 ; 16 >
     au < manifest ; exists ; 2012 ; Journal of Environmental and Engineering Geophysics Volume 17 ; 17 >
     au < ready ; exists ; 2013 ; Journal of Environmental and Engineering Geophysics Volume 18 ; 18 >
-    au < manifest ; exists ; 2014 ; Journal of Environmental and Engineering Geophysics Volume 19 ; 19 >
+    au < testing ; exists ; 2014 ; Journal of Environmental and Engineering Geophysics Volume 19 ; 19 >
    
   }
 
