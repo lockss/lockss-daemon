@@ -1,5 +1,5 @@
 /*
- * $Id: PollSpec.java,v 1.39 2012-03-15 08:52:03 tlipkis Exp $
+ * $Id: PollSpec.java,v 1.40 2014-12-10 22:08:23 dshr Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;
+import org.lockss.poller.v3.V3Poller;
 import org.lockss.util.*;
 
 /**
@@ -65,6 +66,7 @@ public class PollSpec {
   private PluginManager pluginMgr = null;
   private int protocolVersion; // poll protocol version
   private int pollType; // One of the types defined by Poll
+  private V3Poller.PollVariant variant = V3Poller.PollVariant.PoR;
 
   /**
    * Construct a PollSpec from a CachedUrlSet and an upper and lower bound
@@ -225,6 +227,14 @@ public class PollSpec {
 
   public int getPollType() {
     return pollType;
+  }
+
+  public V3Poller.PollVariant getPollVariant() {
+    return variant;
+  }
+
+  public void setPollVariant(V3Poller.PollVariant v) {
+    variant = v;
   }
 
   private PluginManager getPluginManager() {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.85 2014-01-14 04:32:04 tlipkis Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.86 2014-12-10 22:08:24 dshr Exp $
  */
 
 /*
@@ -309,6 +309,8 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
 				    7, // lastPoPPollResult
 				    222333, // lastLocalHashScan
 				    222444, // lastLocalHashMismatch
+				    444777, // numAgreePeersLastPoR
+				    777444, // numWillingRepairers
 				    repository);
 
     assertEquals("SubstVer3",
@@ -342,6 +344,8 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     // Disabled for 1.62
 //     assertEquals(222444, loadedState.getLastLocalHashMismatch());
 
+    assertEquals(444777, loadedState.getNumAgreePeersLastPoR());
+    assertEquals(777444, loadedState.getNumWillingRepairers());
     assertEquals(12345, loadedState.getPollDuration());
     assertEquals(2, loadedState.getClockssSubscriptionStatus());
     assertEquals(AuState.AccessType.OpenAccess, loadedState.getAccessType());
@@ -440,6 +444,8 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
 				  8, // lastPoPPollResult
 				  -1, // lastLocalHashScan
 				  -1, // lastLocalHashMismatch
+				  27, // numAgreePeersLastPoR
+				  72, // numWillingRepirers
 				  repository);
 
     repository.storeAuState(auState);
@@ -478,12 +484,16 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
 			  -1, // lastPoPPollResult
 			  -1, // lastLocalHashScan
 			  -1, // lastLocalHashMismatch
+			  13, // numAgreePeersLastPoR
+			  31, // numWillingRepairers
 			  repository);
     repository.storeAuState(auState);
     assertEquals(1234, auState.getLastCrawlTime());
     assertEquals(4321, auState.getLastCrawlAttempt());
     assertEquals(4321, auState.getLastTopLevelPollTime());
     assertEquals(5555, auState.getLastPollStart());
+    assertEquals(13, auState.getNumAgreePeersLastPoR());
+    assertEquals(31, auState.getNumWillingRepairers());
     assertEquals(mau.getAuId(), auState.getArchivalUnit().getAuId());
 
     fis = new FileInputStream(xmlFile);
@@ -498,6 +508,8 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     assertEquals(4321, auState.getLastCrawlAttempt());
     assertEquals(4321, auState.getLastTopLevelPollTime());
     assertEquals(5555, auState.getLastPollStart());
+    assertEquals(13, auState.getNumAgreePeersLastPoR());
+    assertEquals(31, auState.getNumWillingRepairers());
     assertEquals(mau.getAuId(), auState.getArchivalUnit().getAuId());
 
     auState = new AuState(mau,
@@ -525,6 +537,8 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
 			  8, // lastPoPPollResult
 			  -1, // lastLocalHashScan
 			  -1, // lastLocalHashMismatch
+			  27, // numAgreePeersLastPoR
+			  72, // numWillingRepairers
 			  repository);
     repository.storeAuState(auState);
     fis = new FileInputStream(xmlFile);

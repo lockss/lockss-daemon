@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.113 2013-03-20 03:24:04 tlipkis Exp $
+ * $Id: TestPollManager.java,v 1.114 2014-12-10 22:08:24 dshr Exp $
  */
 
 /*
@@ -406,6 +406,7 @@ public class TestPollManager extends LockssTestCase {
     p.put(PollManager.PARAM_POLL_INTERVAL_AGREEMENT_LAST_RESULT, "1;6");
     p.put(PollManager.PARAM_TOPLEVEL_POLL_INTERVAL, "300");
     p.put(PollManager.PARAM_MIN_POLL_ATTEMPT_INTERVAL, "1");
+    p.put(PollManager.PARAM_MIN_TIME_BETWEEN_ANY_POLL, "1");
 
     ConfigurationUtil.addFromProps(p);
     theDaemon.setAusStarted(true);
@@ -494,14 +495,15 @@ public class TestPollManager extends LockssTestCase {
   }
 
   List<ArchivalUnit> weightOrder() {
-    final Map<ArchivalUnit,Double> weightMap =
+    final Map<ArchivalUnit,PollManager.PollWeight> weightMap =
       pollmanager.getWeightMap();
+    assertNotNull(weightMap);
     ArrayList<ArchivalUnit> queued = new ArrayList(weightMap.keySet());
     log.critical("weightMap: " + weightMap.toString());
     Collections.sort(queued, new Comparator<ArchivalUnit>() {
 	public int compare(ArchivalUnit au1,
 			   ArchivalUnit au2) {
-	  int res = - weightMap.get(au1).compareTo(weightMap.get(au2)); 
+	  int res = - weightMap.get(au1).value().compareTo(weightMap.get(au2).value()); 
 	  if (res == 0) {
 	    res = au1.getAuId().compareTo(au2.getAuId());
 	  }
@@ -691,7 +693,7 @@ public class TestPollManager extends LockssTestCase {
     }
 
     @Override
-      protected List<ArchivalUnit> weightedRandomSelection(Map<ArchivalUnit, Double> weightMap, int n) {
+      protected List<ArchivalUnit> weightedRandomSelection(Map<ArchivalUnit, PollManager.PollWeight> weightMap, int n) {
       log.debug("weightMap: " + weightMap);
       this.weightMap = weightMap;
       return super.weightedRandomSelection(weightMap, n);

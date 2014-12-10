@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerImpl.java,v 1.49 2013-09-18 05:38:47 tlipkis Exp $
+ * $Id: IdentityManagerImpl.java,v 1.50 2014-12-10 22:08:24 dshr Exp $
  */
 
 /*
@@ -45,6 +45,8 @@ import org.lockss.poller.*;
 import org.lockss.protocol.IdentityManager.MalformedIdentityKeyException;
 import org.lockss.repository.*;
 import org.lockss.state.HistoryRepository;
+import org.lockss.state.AuState;
+import org.lockss.plugin.AuUtil;
 import org.lockss.util.*;
 import org.lockss.util.SerializationException.FileNotFound;
 import org.lockss.hasher.*;
@@ -1125,6 +1127,21 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
 				   "0.0 and 1.0. It was: "+agreement);
     }
     AuAgreements auAgreements = findAuAgreements(au);
+    if (auAgreements == null) {
+      log.error("auAgreements null");
+    } else if (agreementType == AgreementType.POR &&
+	       agreement >= minPercentPartialAgreement &&
+	       !auAgreements.hasAgreed(pid, minPercentPartialAgreement)) {
+      // A new willing repairer
+      AuState aus = AuUtil.getAuState(au);
+      if (aus != null) {
+	log.debug3("New willing repairer for AU " + au);
+	int willingRepairers = aus.getNumWillingRepairers();
+	aus.setNumWillingRepairers(++willingRepairers);
+      } else {
+	log.debug3("No AU state");
+      }
+    }
     auAgreements.signalPartialAgreement(pid, agreementType, agreement,
 					  TimeBase.nowMs());
     auAgreements.store(getHistoryRepository(au));

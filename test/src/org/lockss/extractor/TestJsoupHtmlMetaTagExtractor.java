@@ -131,6 +131,7 @@ public class TestJsoupHtmlMetaTagExtractor extends
   }
 
   public void testProblemFile() throws Exception {
+    if (isSkipNetworkTests()) return;
     String prob_url = "http://msp.org/ant/2007/1-3/p03.xhtml";
     System.out.println(Charset.defaultCharset());
     InputStream istr = UrlUtil.openInputStream(prob_url);

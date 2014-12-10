@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.271 2014-10-22 19:39:36 thib_gc Exp $
+ * $Id: PollManager.java,v 1.272 2014-12-10 22:08:23 dshr Exp $
  */
 
 /*
@@ -225,6 +225,62 @@ public class PollManager
   public static final String PARAM_TOPLEVEL_POLL_INTERVAL =
     V3PREFIX + "toplevelPollInterval";
   public static final long DEFAULT_TOPLEVEL_POLL_INTERVAL = 10 * WEEK;
+
+    /** If true, enable sampled (Proof of Possession) polls.
+   */
+  public static final String PARAM_V3_ENABLE_POP_POLLS =
+    V3PREFIX + "enablePoPPolls";
+  public static final boolean DEFAULT_V3_ENABLE_POP_POLLS = false;
+  
+  /** For testing, if true, all polls are sampled.
+   */
+  public static final String PARAM_V3_ALL_POP_POLLS =
+    V3PREFIX + "allPoPPolls";
+  public static final boolean DEFAULT_V3_ALL_POP_POLLS = false;
+
+  /** If true, enable local polls (i.e. polls that do not invite any
+   * voters but depend on local hashes.
+   */
+  public static final String PARAM_V3_ENABLE_LOCAL_POLLS =
+    V3PREFIX + "enableLocalPolls";
+  public static final boolean DEFAULT_V3_ENABLE_LOCAL_POLLS = false;
+
+  /** For testing, if true, all polls are local.
+   */
+  public static final String PARAM_V3_ALL_LOCAL_POLLS =
+    V3PREFIX + "allLocalPolls";
+  public static final boolean DEFAULT_V3_ALL_LOCAL_POLLS = false;
+
+  /**
+   * Minimum time between polls of any kind on an AU.
+   */
+  public static final String PARAM_MIN_TIME_BETWEEN_ANY_POLL =
+    V3PREFIX + "minTimeBetweenAnyPoll";
+  public static final long DEFAULT_MIN_TIME_BETWEEN_ANY_POLL = 1 * DAY;
+
+  /**
+   * Maximum delay between PoR polls
+   */
+  public static final String PARAM_MAX_DELAY_BETWEEN_POR =
+    V3PREFIX + "maxDelayBetweenPoR";
+  public static final long DEFAULT_MAX_DELAY_BETWEEN_POR =
+    DEFAULT_TOPLEVEL_POLL_INTERVAL * 10;
+
+  /**
+   * Minimum agreeing peers in last PoR poll to allow for PoP poll.
+   * XXX should be dynamic not static.
+   */
+  public static final String PARAM_MIN_AGREE_PEERS_LAST_POR_POLL =
+    V3PREFIX + "minAgreePeersLastPoRPoll";
+  public static final int DEFAULT_MIN_AGREE_PEERS_LAST_POR_POLL = 3;
+
+  /**
+   * Minimum number of willing repairers to allow for local poll
+   * XXX Should be dynamic not static.
+   */
+  public static final String PARAM_REPAIRER_THRESHOLD =
+    V3PREFIX + "repairerThreshold";
+  public static final int DEFAULT_REPAIRER_THRESHOLD = 3;
 
   public static class AuPeersMap extends HashMap<String,Set<PeerIdentity>> {}
 
@@ -702,6 +758,14 @@ public class PollManager
   // our configuration variables
   protected long m_recentPollExpireTime = DEFAULT_RECENT_EXPIRATION;
 
+  private boolean enableLocalPolls = DEFAULT_V3_ENABLE_LOCAL_POLLS;
+  private boolean allLocalPolls = DEFAULT_V3_ALL_LOCAL_POLLS;
+  private boolean enablePoPPolls = DEFAULT_V3_ENABLE_POP_POLLS;
+  private boolean allPoPPolls = DEFAULT_V3_ALL_POP_POLLS;
+  private long minTimeSinceAnyPoll = DEFAULT_MIN_TIME_BETWEEN_ANY_POLL;
+  private long maxDelayBetweenPoR = DEFAULT_MAX_DELAY_BETWEEN_POR;
+  private int minAgreePeersLastPoRPoll = DEFAULT_MIN_AGREE_PEERS_LAST_POR_POLL;
+  private int repairerThresholdForLocal = DEFAULT_REPAIRER_THRESHOLD;
 
   Deadline startOneWait = Deadline.in(0);
 
@@ -723,7 +787,11 @@ public class PollManager
       this.spec = spec; 	 
       return this; 	 
     } 	 
-	 
+
+    public PollSpec getPollSpec() {
+      return spec;
+    }
+
     public ArchivalUnit getAu() {
       return au;
     }
@@ -899,8 +967,8 @@ public class PollManager
 	}
 	int availablePollCount = paramPollQueueMax - pollQueue.size();
 	if (availablePollCount > 0) {
-	  Map<ArchivalUnit, Double> weightMap =
-	    new HashMap<ArchivalUnit, Double>();
+	  Map<ArchivalUnit, PollWeight> weightMap =
+	    new HashMap<ArchivalUnit, PollWeight>();
 	  for (ArchivalUnit au : pluginMgr.getAllAus()) {
 	    try {
 	      if (highPriorityAus.contains(au)) {
@@ -908,8 +976,8 @@ public class PollManager
 		continue;
 	      }
 	      try {
-		double weight = pollWeight(au);
-		if (weight > 0.0) {
+		PollWeight weight = pollWeight(au);
+		if (weight.value > 0.0) {
 		  weightMap.put(au, weight);
 		}
 	      } catch (NotEligibleException e) {
@@ -1836,6 +1904,25 @@ public class PollManager
 	installPollPriorityAuidMap(newConfig.getList(PARAM_POLL_PRIORITY_AUID_MAP,
 						     DEFAULT_POLL_PRIORITY_AUID_MAP));
       }
+      if (changedKeys.contains(V3PREFIX)) {
+	enableLocalPolls = newConfig.getBoolean(PARAM_V3_ENABLE_LOCAL_POLLS,
+						DEFAULT_V3_ENABLE_LOCAL_POLLS);
+	allLocalPolls = newConfig.getBoolean(PARAM_V3_ALL_LOCAL_POLLS,
+					     DEFAULT_V3_ALL_LOCAL_POLLS);
+	enablePoPPolls = newConfig.getBoolean(PARAM_V3_ENABLE_POP_POLLS,
+					      DEFAULT_V3_ENABLE_POP_POLLS);
+	allPoPPolls = newConfig.getBoolean(PARAM_V3_ALL_POP_POLLS,
+					      DEFAULT_V3_ALL_POP_POLLS);
+	minTimeSinceAnyPoll =
+	  newConfig.getTimeInterval(PARAM_MIN_TIME_BETWEEN_ANY_POLL,
+				    DEFAULT_MIN_TIME_BETWEEN_ANY_POLL);
+	minAgreePeersLastPoRPoll =
+	  newConfig.getInt(PARAM_MIN_AGREE_PEERS_LAST_POR_POLL,
+			   DEFAULT_MIN_AGREE_PEERS_LAST_POR_POLL);
+	repairerThresholdForLocal =
+	  newConfig.getInt(PARAM_REPAIRER_THRESHOLD,
+			   DEFAULT_REPAIRER_THRESHOLD);
+      }
 
       needRebuildPollQueue();
     }
@@ -2731,9 +2818,13 @@ public class PollManager
 
   // testing will override.
   protected List<ArchivalUnit>
-      weightedRandomSelection(Map<ArchivalUnit, Double> weightMap, int n) {
+      weightedRandomSelection(Map<ArchivalUnit, PollWeight> weightMap, int n) {
+    HashMap<ArchivalUnit, Double> tempMap = new HashMap<ArchivalUnit, Double>();
+    for (ArchivalUnit au : weightMap.keySet()) {
+      tempMap.put(au, weightMap.get(au).value());
+    }
     return (List<ArchivalUnit>)CollectionUtil.
-      weightedRandomSelection(weightMap, n);
+      weightedRandomSelection(tempMap, n);
   }
 
   /** Used to convey reason an AU is ineligible to be polled to clients for
@@ -2833,7 +2924,7 @@ public class PollManager
 
   /** Return a number proportional to the desirability of calling a poll on
    * the AU. */
-  double pollWeight(ArchivalUnit au) throws NotEligibleException {
+  PollWeight pollWeight(ArchivalUnit au) throws NotEligibleException {
     checkEligibleForPoll(au);
     AuState auState = AuUtil.getAuState(au);
     long lastEnd = auState.getLastTopLevelPollTime();
@@ -2853,7 +2944,8 @@ public class PollManager
       }
     }
     if (lastEnd + pollInterval > TimeBase.nowMs()) {
-      return 0.0;
+      theLog.debug3("Not ready for poll on AU " + au);
+      return new PollWeight(PollVariant.PoR, 0.0);
     }
     long num = TimeBase.msSince(lastEnd);
     long denom = pollInterval + auState.getPollDuration();
@@ -2864,7 +2956,7 @@ public class PollManager
     if (pollPriorityAuidMap != null) {
       weight *= pollPriorityAuidMap.getMatch(au.getAuId(), 1.0f);
     }
-    return weight;
+    return new PollWeight(choosePollVariant(au), weight);
   }
 
   int numPeersWithAuAtRisk(ArchivalUnit au) {
@@ -2875,6 +2967,143 @@ public class PollManager
     return peers.size();
   }
 
+  /**
+   * Decide which variant of the poll to call. NB - this is called
+   * for every AU every time the queue is rebuilt, so it needs to
+   * be as fast as possible.
+   * @return the code for the variant of the poll to call.
+   * @param au the AU to poll on
+   *
+   * XXX DSHR should be protected but this requires moving the
+   * XXX test code from TestV3Poller.
+   */
+  public PollVariant choosePollVariant(ArchivalUnit au) {
+    // Poll is PoR unless conditions fulfilled
+    PollVariant ret = PollVariant.PoR;
+    AuState aus = AuUtil.getAuState(au);
+    // This is now time of last PoR time, not last poll
+    long lastPollTime = aus.getLastTopLevelPollTime();
+    // XXX TAL says changes on successful fetch even if unchanged,
+    // XXX docs say changes when new version created.
+    long lastContentChange = aus.getLastContentChange();
+    int agreePeersLastPoll = aus.getNumAgreePeersLastPoR();
+    long timeSinceAnyPoll = TimeBase.nowMs() - aus.getLastPollStart();
+    int countSuspectVersionsNotGivenUp = 0; // XXX need to record this
+    int minAgreePeersLastPoll = minAgreePeersLastPoRPoll; // XXX
+    int willingRepairers = aus.getNumWillingRepairers(); 
+    int repairerThreshold = repairerThresholdForLocal;
+
+    if (agreePeersLastPoll < 0) {
+      // This AuState has not been initialized with this field before.
+      // We initialize it here rather than in AuState because doing this
+      // for every AU will take a long time and thrash the agreeMap cache,
+      // so doing it in the constructor is a bad idea. Doing it here
+      // means that the first queue rebuild will be slow, but that is OK.
+      agreePeersLastPoll = countLastPoRAgreePeers(au, aus);
+      aus.setNumAgreePeersLastPoR(agreePeersLastPoll);
+    }
+    if (willingRepairers < 0) {
+      // Same for willingRepairers
+      willingRepairers = theIDManager.getCachesToRepairFrom(au).size();
+      aus.setNumWillingRepairers(willingRepairers);
+    }
+    // XXX BH When we track the agreement from different variant polls
+    // XXX separately minAgreePeersLastPoll can be the quorum, but until
+    // XXX then there is a possibility of undercounting. DSHR hack
+    // XXX set it to quorum-1.
+    theLog.debug3("Last content change " + lastContentChange +
+		  " Agree last poll " + agreePeersLastPoll +
+		  " Time since poll " + timeSinceAnyPoll +
+		  " Time since PoR " + lastPollTime +
+		  " Min time since poll " + minTimeSinceAnyPoll +
+		  " Suspect versions " + countSuspectVersionsNotGivenUp +
+		  " Min agree last poll " + minAgreePeersLastPoll +
+		  " Repairers " + willingRepairers +
+		  " Repair thresh " + repairerThreshold +
+		  " Enable local " + enableLocalPolls +
+		  " Enable PoP " + enablePoPPolls);
+    if (timeSinceAnyPoll < minTimeSinceAnyPoll) {
+      // Too soon to do anything
+      ret = PollVariant.NoPoll;
+      log.debug3("Too soon for next poll of any kind");
+    } else if (enablePoPPolls && allPoPPolls) {
+      // For testing
+      ret = PollVariant.PoP;
+      log.debug3("PoP poll forced");
+    } else if (enableLocalPolls && allLocalPolls) {
+      // For testing
+      ret = PollVariant.Local;
+      log.debug3("Local poll forced");
+    } else if (countSuspectVersionsNotGivenUp > 0 ||
+	       (TimeBase.nowMs() - lastPollTime) > maxDelayBetweenPoR) {
+      // Local "polling" found suspect version(s)
+      ret = PollVariant.PoR; // XXX should be high priority
+      log.debug3("Suspect versions not given up on - PoR poll");
+    } else if (lastContentChange > lastPollTime) {
+      // AU has changed since last PoR - PoR poll
+      ret = PollVariant.PoR;
+      log.debug3("New content since last PoR - PoR poll");
+    } else if (agreePeersLastPoll >= minAgreePeersLastPoll) {
+      // AU was in good shape the last time we looked
+      if (willingRepairers < repairerThreshold) {
+	// But it needs repairers
+	if (enablePoPPolls) {
+	  ret = PollVariant.PoP;
+	}
+	log.debug3("AU OK but needs repairers - PoP poll");
+      } else if (enableLocalPolls) {
+	// Good shape and enough repairers
+	ret = PollVariant.Local;
+	log.debug3("AU OK, has repairers - Local poll");
+      }
+    } else {
+      // AU not in good shape
+      if (log.isDebug3()) {
+	long lastCrawlTime = aus.getLastCrawlTime();
+	log.debug3("Last (poll/crawl) times: (" + lastPollTime + "/" +
+		   lastCrawlTime + ") last agree" + agreePeersLastPoll +
+		 " threshold " + minAgreePeersLastPoll);
+      }
+    }
+    log.debug2("Poll variant: " + ret);
+    return ret;
+  }
+
+  /**
+   * @return an estimate of the number of peers that agreed in the
+   * last PoR poll.
+   * @param au the ArchvalUnit being polled
+   * @param aus the state of the AU
+   * XXX this needs to be changed when we are tracking the agreement
+   * XXX from different poll variants separately to only count agreement
+   * XXX PoR polls. Until then there is a possibility that the same peer's
+   * XXX agreement in a subsequent PoP poll could result in an undercount.
+   *
+   * XXX DSHR should be protected
+   */
+  public int countLastPoRAgreePeers(ArchivalUnit au, AuState aus) {
+    int ret = 0;
+    // agreeMap maps peer ID to last agree time
+    Map agreeMap = theIDManager.getAgreed(au);
+    long lastPoRPoll = aus.getLastTopLevelPollTime();
+    long threshold = aus.getPollDuration();
+    theLog.debug3("Last PoR: " + lastPoRPoll + " thresh: " + threshold +
+	       " map size " + agreeMap.size());
+    // Iterate through the agreeMap counting the number of agreeing
+    // peers whose times are threshold or less before lastPoRPoll
+    for (Iterator it = agreeMap.entrySet().iterator(); it.hasNext(); ) {
+      Map.Entry ent = (Map.Entry)it.next();
+      long agreeTime = ((Long)ent.getValue()).longValue();
+      long delta = lastPoRPoll - agreeTime;
+      theLog.debug3("agreeTime: " + agreeTime + " delta " + delta);
+      PeerIdentity pid = (PeerIdentity)ent.getKey();
+      if (delta >= 0 && delta < threshold) {
+	ret++;
+      }
+    }
+    return ret;
+  }
+
   boolean startPoll(PollReq req) {
     ArchivalUnit au = req.getAu();
     if (entryManager.isPollRunning(au)) {
@@ -2883,9 +3112,8 @@ public class PollManager
       return false;
     }
 
-    // todo(bhayes): Should this be using the spec from the request?
-    PollSpec spec = new PollSpec(au.getAuCachedUrlSet(), Poll.V3_POLL);
-    theLog.debug("Calling a V3 poll on AU " + au);
+    PollSpec spec = req.getPollSpec();
+    theLog.debug("Calling a V3 " + spec.getPollVariant() + " poll on AU " + au);
 
     if (callPoll(au, spec) == null) {
       theLog.debug("pollManager.callPoll returned null. Failed to call "
@@ -2998,4 +3226,25 @@ public class PollManager
     return entryManager.countCurrentV3Pollers();
   }
 
+  static class PollWeight {
+    V3Poller.PollVariant pollVariant;
+    double value;
+
+    PollWeight(V3Poller.PollVariant v, double w) {
+      pollVariant = v;
+      if (v != V3Poller.PollVariant.NoPoll) {
+	value = w;
+      } else {
+	value = 0.0;
+      }
+    }
+
+    V3Poller.PollVariant pollVariant() {
+      return pollVariant;
+    }
+
+    Double value() {
+      return new Double(value);
+    }
+  }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.66 2014-05-19 05:39:12 tlipkis Exp $
+ * $Id: TestV3Poller.java,v 1.67 2014-12-10 22:08:24 dshr Exp $
  */
 
 /*
@@ -126,6 +126,8 @@ public class TestV3Poller extends LockssTestCase {
     this.nominates = makeNominateMessages();
     this.votes = makeVoteMessages();
     this.repairs = makeRepairMessages();
+    ConfigurationUtil.addFromArgs(PollManager.PARAM_MIN_TIME_BETWEEN_ANY_POLL,
+				  "" + (1 * SECOND));
   }
 
   private MockArchivalUnit setupAu() {
@@ -633,6 +635,10 @@ public class TestV3Poller extends LockssTestCase {
     return ud;
   }
 
+  /*
+   * XXX DSHR this should be in TestPollManager since that's
+   * XXX where the code is now.
+   */
   public void testCountLastPoRAgreePeers() throws Exception {
     TimeBase.setSimulated(1000L);
     V3Poller v3Poller = makeV3Poller("testing poll key");
@@ -663,26 +669,30 @@ public class TestV3Poller extends LockssTestCase {
     assertFalse(p5.isLocalIdentity());
     // Add local ID - local poll finished at 900
     agreeMap.put(pollerId, 900L);
-    assertEquals(0, v3Poller.countLastPoRAgreePeers(mau, maus));
+    assertEquals(0, pollmanager.countLastPoRAgreePeers(mau, maus));
     // Add result of PoP poll finished at 700
     agreeMap.put(p5, 700L);
     agreeMap.put(p4, 700L);
-    assertEquals(0, v3Poller.countLastPoRAgreePeers(mau, maus));
+    assertEquals(0, pollmanager.countLastPoRAgreePeers(mau, maus));
     // Add result of PoR poll between 0 and 100
     agreeMap.put(p3, 10L);
     agreeMap.put(p2, 20L);
     agreeMap.put(p1, 30L);
-    assertEquals(0, v3Poller.countLastPoRAgreePeers(mau, maus));
+    assertEquals(0, pollmanager.countLastPoRAgreePeers(mau, maus));
     // Add result of PoR poll between 100 and 200
     agreeMap.put(p3, 150L);
     agreeMap.put(p2, 160L);
     agreeMap.put(p1, 170L);
-    assertEquals(3, v3Poller.countLastPoRAgreePeers(mau, maus));
+    assertEquals(3, pollmanager.countLastPoRAgreePeers(mau, maus));
     // Make it look like p1 subsequently agreed in a PoP poll
     agreeMap.put(p3, 500L);
-    assertEquals(2, v3Poller.countLastPoRAgreePeers(mau, maus));
+    assertEquals(2, pollmanager.countLastPoRAgreePeers(mau, maus));
   }
 
+  /*
+   * XXX DSHR these should be in TestPollManager since that's
+   * XXX where the code is now.
+   */
   public void testChoosePollVariantPorOnly() throws Exception {
     testChoosePollVariant(false, false);
   }
@@ -699,15 +709,27 @@ public class TestV3Poller extends LockssTestCase {
     testChoosePollVariant(true, true);
   }
 
+  /*
+   * The choosePollVariant() logic has the following cases:
+   * A) Too soon to call poll - NoPoll
+   * B) PoP poll forced - PoP
+   * C) Local poll forced - Local
+   * D) suspect versions found - PoR
+   * E) content changed since last PoR - PoR
+   * F) good agreement last PoR & too few repairers - PoP
+   * G) good agreement last PoR & enough repairers - Local
+   * H) poor agreement last PoR - PoR
+   */
   public void testChoosePollVariant(boolean enablePoPPolls,
 				    boolean enableLocalPolls) throws Exception {
     ConfigurationUtil.addFromArgs(V3Poller.PARAM_V3_ENABLE_POP_POLLS,
 				  "" + enablePoPPolls,
 				  V3Poller.PARAM_V3_ENABLE_LOCAL_POLLS,
-				  "" + enableLocalPolls);
-
-    ConfigurationUtil.addFromArgs(V3Poller.PARAM_THRESHOLD_REPAIRERS_LOCAL_POLLS,
-				 "3");
+				  "" + enableLocalPolls,
+				  V3Poller.PARAM_THRESHOLD_REPAIRERS_LOCAL_POLLS,
+				  "3",
+				  PollManager.PARAM_MIN_AGREE_PEERS_LAST_POR_POLL,
+				  "2");
     TimeBase.setSimulated(1000L);
     V3Poller v3Poller = makeV3Poller("testing poll key");
     ArchivalUnit au = v3Poller.getAu();
@@ -733,48 +755,82 @@ public class TestV3Poller extends LockssTestCase {
     assertFalse(p4.isLocalIdentity());
     PeerIdentity p5 = findPeerIdentity("TCP:[4.5.6.2]:1111");
     assertFalse(p5.isLocalIdentity());
-    // First poll is PoR
-    assertEquals(V3Poller.PollVariant.PoR, v3Poller.choosePollVariant(ps, 3));
+    // First poll is PoR - case H
+    assertEquals(V3Poller.PollVariant.PoR, pollmanager.choosePollVariant(au));
     // Now crawl and get content
     maus.setLastContentChange(100);
     maus.setLastCrawlTime(100);
-    assertEquals(V3Poller.PollVariant.PoR, v3Poller.choosePollVariant(ps, 3));
+    // Case A
+    maus.setLastPollStart(1000L);
+    assertEquals(V3Poller.PollVariant.NoPoll,
+		 pollmanager.choosePollVariant(au));
+    maus.setLastPollStart(0L);
+    // Case E
+    assertEquals(V3Poller.PollVariant.PoR, pollmanager.choosePollVariant(au));
     // Now poll but get disagreement
     maus.setLastTopLevelPollTime(200);
     maus.setPollDuration(100L);
-    assertEquals(V3Poller.PollVariant.PoR, v3Poller.choosePollVariant(ps, 3));
+    // Case H
+    assertEquals(V3Poller.PollVariant.PoR, pollmanager.choosePollVariant(au));
     // Now get 2 agreements, repairer threshold is 3
     agreeMap.put(p3, 150L);
     agreeMap.put(p2, 160L);
+    // We have to update the AuState too
+    aus.setNumAgreePeersLastPoR(2);
+    aus.setNumWillingRepairers(2);
+    // Case F
     assertEquals(  enablePoPPolls
 		   ? V3Poller.PollVariant.PoP : V3Poller.PollVariant.PoR,
-		 v3Poller.choosePollVariant(ps, 3));
+		 pollmanager.choosePollVariant(au));
     // Add another agreement
     agreeMap.put(p1, 170L);
+    aus.setNumAgreePeersLastPoR(3);
+    aus.setNumWillingRepairers(3);
+    // Case G
     assertEquals(  enableLocalPolls
 		   ? V3Poller.PollVariant.Local : V3Poller.PollVariant.PoR,
-		 v3Poller.choosePollVariant(ps, 3));
+		 pollmanager.choosePollVariant(au));
     // Now crawl again, but get no content
     maus.setLastCrawlTime(300);
+    // Case G
     assertEquals(  enableLocalPolls
 		   ? V3Poller.PollVariant.Local : V3Poller.PollVariant.PoR,
-		 v3Poller.choosePollVariant(ps, 3));
+		 pollmanager.choosePollVariant(au));
     // Now crawl again, get content
     maus.setLastCrawlTime(300);
     maus.setLastContentChange(300);
+    // Case E
     assertEquals(V3Poller.PollVariant.PoR,
-		 v3Poller.choosePollVariant(ps, 3));
+		 pollmanager.choosePollVariant(au));
     // Now poll but get disagreement
     maus.setLastTopLevelPollTime(500);
     maus.setPollDuration(100L);
-    assertEquals(V3Poller.PollVariant.PoR, v3Poller.choosePollVariant(ps, 3));
+    aus.setNumAgreePeersLastPoR(0);
+    // Case H
+    assertEquals(V3Poller.PollVariant.PoR, pollmanager.choosePollVariant(au));
     // Now get 3 agreement, repairer threshold is 3
     agreeMap.put(p3, 450L);
     agreeMap.put(p2, 460L);
     agreeMap.put(p1, 460L);
+    aus.setNumAgreePeersLastPoR(3);
+    // Case G
     assertEquals(  enableLocalPolls
 		   ? V3Poller.PollVariant.Local : V3Poller.PollVariant.PoR,
-		 v3Poller.choosePollVariant(ps, 3));
+		 pollmanager.choosePollVariant(au));
+    // Case D - XXX not yet implemented
+    if (enableLocalPolls) {
+      // Case C
+      ConfigurationUtil.addFromArgs(V3Poller.PARAM_V3_ALL_LOCAL_POLLS, "true");
+      assertEquals(V3Poller.PollVariant.Local,
+		   pollmanager.choosePollVariant(au));
+    }
+    if (enablePoPPolls) {
+      // Case B
+      ConfigurationUtil.addFromArgs(V3Poller.PARAM_V3_ALL_POP_POLLS, "true");
+      assertEquals(V3Poller.PollVariant.PoP,
+		   pollmanager.choosePollVariant(au));
+    }
+
   }
 
   public void testIsPeerEligible() throws Exception {

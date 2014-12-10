@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuState.java,v 1.23 2014-01-14 04:32:04 tlipkis Exp $
+ * $Id: TestAuState.java,v 1.24 2014-12-10 22:08:24 dshr Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.state;
 
+import java.io.*;
 import java.util.*;
 import org.lockss.test.*;
 import org.lockss.daemon.*;
@@ -40,7 +41,7 @@ import org.lockss.crawler.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.v3.*;
 import org.lockss.poller.v3.V3Poller.PollVariant;
-import org.lockss.util.TimeBase;
+import org.lockss.util.*;
 
 public class TestAuState extends LockssTestCase {
   MockHistoryRepository historyRepo;
@@ -435,6 +436,32 @@ public class TestAuState extends LockssTestCase {
     assertEquals(50,aus.getLastContentChange());
   }
     
+  // Return the serialized representation of the object
+  String ser(LockssSerializable o) throws Exception {
+    File tf = getTempFile("ser", ".xml");
+    new XStreamSerializer().serialize(tf, o);
+    return StringUtil.fromFile(tf);
+  }
+
+  // Deserialize and return a Holder from the string
+  AuState deser(String s) throws Exception {
+    return (AuState)(new XStreamSerializer().deserialize(new StringReader(s)));
+  }
+
+  // Ensure that fields added to AuState get their default value when
+  // deserialized from old files not containing the field
+  public void testNewField() throws Exception {
+    AuState aus = new AuState(mau, -1, -1, -1, -1, 123, null,
+			      1, -1.0, 1.0, historyRepo);
+
+    String ser = ser(aus);
+    String edser = ser.replaceAll(".*numAgreePeersLastPoR.*", "");
+    log.debug2("old: " + ser);
+    log.debug2("new: " + edser);
+    AuState newaus = deser(edser);
+    assertEquals(-1, newaus.getNumAgreePeersLastPoR());
+  }
+
   public static void main(String[] argv) {
     String[] testCaseList = { TestAuState.class.getName()};
     junit.swingui.TestRunner.main(testCaseList);
