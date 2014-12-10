@@ -90,14 +90,14 @@
    title <
      name = Aesthetic Surgery Journal ;
      issn = 1090-820X ;
-     eissn = 1527-330X 
+     eissn = 1527-330X ;
+     issnl = 1090-820X
    >
 
-    comment[0] = move from Sage 2015-01-01
     param[base_url] = http://asj.oxfordjournals.org/ 
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < expected ; exists ; 2014 ; Aesthetic Surgery Journal Volume 34 ; 34 ; >
+    au < exists ; exists ; 2014 ; Aesthetic Surgery Journal Volume 34 ; 34 ; >
     au < expected ; exists ; 2015 ; Aesthetic Surgery Journal Volume 35 ; 35 ; >
   }
 
@@ -7968,7 +7968,7 @@
     au < finished ; crawling ; 2011 ; Human Molecular Genetics Volume 20 ; 20 ; >
     au < finished ; frozen ; 2012 ; Human Molecular Genetics Volume 21 ; 21 ; >
     au < crawling ; exists ; 2013 ; Human Molecular Genetics Volume 22 ; 22 ; >
-    au < testing ; exists ; 2014 ; Human Molecular Genetics Volume 23 ; 23 ; >
+    au < ready ; exists ; 2014 ; Human Molecular Genetics Volume 23 ; 23 ; >
 
     }
 

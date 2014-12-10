@@ -68,15 +68,15 @@
    title <
      name = Aesthetic Surgery Journal ;
      issn = 1090-820X ;
-     eissn = 1527-330X 
+     eissn = 1527-330X ;
+     issnl = 1090-820X
    >
 
-    comment[0] = move from Sage 2015-01-01
     param[base_url] = http://asj.oxfordjournals.org/ 
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < expected ; 2014 ; Aesthetic Surgery Journal Volume 34 ; 34 >
+    au < exists ; 2014 ; Aesthetic Surgery Journal Volume 34 ; 34 >
     au < expected ; 2015 ; Aesthetic Surgery Journal Volume 35 ; 35 >
 
   }
