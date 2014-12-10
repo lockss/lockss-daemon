@@ -1,0 +1,505 @@
+{
+
+  publisher <
+    name = Southern Illinois University
+  >
+
+  {
+  
+    title <
+      name = ABO: Interactive Journal for Women in the Arts, 1640-1830 ;
+      issn = 2157-7129
+    >
+    
+    plugin = org.lockss.plugin.bepress.BePressPlugin
+    param[base_url] = http://scholarcommons.usf.edu/
+    param[journal_abbr] = abo
+    implicit < status ; year ; volume ; name ; param[volume] >
+    
+    au < manifest ; 2011 ; 1 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 1 ; 1 >
+    au < manifest ; 2012 ; 2 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 2 ; 2 >
+    au < manifest ; 2013 ; 3 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 3 ; 3 >
+    au < manifest ; 2014 ; 4 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 4 ; 4 >
+  
+  }
+
+  {
+  
+    title <
+      name = Alambique: Revista académica de ciencia ficción y fantasia / Jornal acadêmico de ficção científica e fantasía ;
+      issn = 2167-6577
+    >
+    
+    plugin = org.lockss.plugin.bepress.BePressPlugin
+    param[base_url] = http://scholarcommons.usf.edu/
+    param[journal_abbr] = alambique
+    implicit < status ; year ; volume ; name ; param[volume] >
+    
+    au < manifest ; 2013 ; 1 ; Alambique: Revista académica de ciencia ficción y fantasia / Jornal acadêmico de ficção científica e fantasía Volume 1 ; 1 >
+    au < manifest ; 2014 ; 2 ; Alambique: Revista académica de ciencia ficción y fantasia / Jornal acadêmico de ficção científica e fantasía Volume 2 ; 2 >
+  
+  }
+
+  {
+
+    title <
+      name = Tampa Bay Area Study Group Project Data Sets
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://scholarcommons.usf.edu/
+    param[collection_type] = ir_series
+    param[collection] = basgp_data
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 1986 ; Tampa Bay Area Study Group Project Data Sets 1986 ; 1986 >
+    au < manifest ; 1987 ; Tampa Bay Area Study Group Project Data Sets 1987 ; 1987 >
+    au < manifest ; 1988 ; Tampa Bay Area Study Group Project Data Sets 1988 ; 1988 >
+    au < manifest ; 1989 ; Tampa Bay Area Study Group Project Data Sets 1989 ; 1989 >
+    au < manifest ; 1990 ; Tampa Bay Area Study Group Project Data Sets 1990 ; 1990 >
+    au < manifest ; 1991 ; Tampa Bay Area Study Group Project Data Sets 1991 ; 1991 >
+    au < manifest ; 1992 ; Tampa Bay Area Study Group Project Data Sets 1992 ; 1992 >
+    au < manifest ; 1993 ; Tampa Bay Area Study Group Project Data Sets 1993 ; 1993 >
+    au < manifest ; 1994 ; Tampa Bay Area Study Group Project Data Sets 1994 ; 1994 >
+    au < manifest ; 1995 ; Tampa Bay Area Study Group Project Data Sets 1995 ; 1995 >
+    au < manifest ; 1996 ; Tampa Bay Area Study Group Project Data Sets 1996 ; 1996 >
+    au < manifest ; 1997 ; Tampa Bay Area Study Group Project Data Sets 1997 ; 1997 >
+    au < manifest ; 1998 ; Tampa Bay Area Study Group Project Data Sets 1998 ; 1998 >
+    au < manifest ; 1999 ; Tampa Bay Area Study Group Project Data Sets 1999 ; 1999 >
+    au < manifest ; 2000 ; Tampa Bay Area Study Group Project Data Sets 2000 ; 2000 >
+    au < manifest ; 2001 ; Tampa Bay Area Study Group Project Data Sets 2001 ; 2001 >
+    au < manifest ; 2002 ; Tampa Bay Area Study Group Project Data Sets 2002 ; 2002 >
+    au < manifest ; 2003 ; Tampa Bay Area Study Group Project Data Sets 2003 ; 2003 >
+    au < manifest ; 2004 ; Tampa Bay Area Study Group Project Data Sets 2004 ; 2004 >
+    au < manifest ; 2010 ; Tampa Bay Area Study Group Project Data Sets 2010 ; 2010 >
+    au < manifest ; 2011 ; Tampa Bay Area Study Group Project Data Sets 2011 ; 2011 >
+
+  }
+
+  {
+
+    title <
+      name = Tampa Bay Area Study Group Project Images
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://scholarcommons.usf.edu/
+    param[collection_type] = ir_series
+    param[collection] = basgp_images
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 1986 ; Tampa Bay Area Study Group Project Images 1986 ; 1986 >
+    au < manifest ; 1987 ; Tampa Bay Area Study Group Project Images 1987 ; 1987 >
+    au < manifest ; 1988 ; Tampa Bay Area Study Group Project Images 1988 ; 1988 >
+    au < manifest ; 1989 ; Tampa Bay Area Study Group Project Images 1989 ; 1989 >
+    au < manifest ; 1990 ; Tampa Bay Area Study Group Project Images 1990 ; 1990 >
+    au < manifest ; 1991 ; Tampa Bay Area Study Group Project Images 1991 ; 1991 >
+    au < manifest ; 1992 ; Tampa Bay Area Study Group Project Images 1992 ; 1992 >
+    au < manifest ; 1993 ; Tampa Bay Area Study Group Project Images 1993 ; 1993 >
+    au < manifest ; 1994 ; Tampa Bay Area Study Group Project Images 1994 ; 1994 >
+    au < manifest ; 1995 ; Tampa Bay Area Study Group Project Images 1995 ; 1995 >
+    au < manifest ; 1996 ; Tampa Bay Area Study Group Project Images 1996 ; 1996 >
+    au < manifest ; 1997 ; Tampa Bay Area Study Group Project Images 1997 ; 1997 >
+    au < manifest ; 1998 ; Tampa Bay Area Study Group Project Images 1998 ; 1998 >
+    au < manifest ; 1999 ; Tampa Bay Area Study Group Project Images 1999 ; 1999 >
+    au < manifest ; 2000 ; Tampa Bay Area Study Group Project Images 2000 ; 2000 >
+    au < manifest ; 2001 ; Tampa Bay Area Study Group Project Images 2001 ; 2001 >
+    au < manifest ; 2002 ; Tampa Bay Area Study Group Project Images 2002 ; 2002 >
+    au < manifest ; 2003 ; Tampa Bay Area Study Group Project Images 2003 ; 2003 >
+    au < manifest ; 2004 ; Tampa Bay Area Study Group Project Images 2004 ; 2004 >
+    au < manifest ; 2010 ; Tampa Bay Area Study Group Project Images 2010 ; 2010 >
+
+  }
+
+  {
+
+    title <
+      name = Tampa Bay Area Study Group Project Reports
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://scholarcommons.usf.edu/
+    param[collection_type] = ir_series
+    param[collection] = basgp_report
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 1969 ; Tampa Bay Area Study Group Project Reports 1969 ; 1969 >
+    au < manifest ; 1971 ; Tampa Bay Area Study Group Project Reports 1971 ; 1971 >
+    au < manifest ; 1972 ; Tampa Bay Area Study Group Project Reports 1972 ; 1972 >
+    au < manifest ; 1973 ; Tampa Bay Area Study Group Project Reports 1973 ; 1973 >
+    au < manifest ; 1975 ; Tampa Bay Area Study Group Project Reports 1975 ; 1975 >
+    au < manifest ; 1976 ; Tampa Bay Area Study Group Project Reports 1976 ; 1976 >
+    au < manifest ; 1977 ; Tampa Bay Area Study Group Project Reports 1977 ; 1977 >
+    au < manifest ; 1978 ; Tampa Bay Area Study Group Project Reports 1978 ; 1978 >
+    au < manifest ; 1979 ; Tampa Bay Area Study Group Project Reports 1979 ; 1979 >
+    au < manifest ; 1980 ; Tampa Bay Area Study Group Project Reports 1980 ; 1980 >
+    au < manifest ; 1981 ; Tampa Bay Area Study Group Project Reports 1981 ; 1981 >
+    au < manifest ; 1982 ; Tampa Bay Area Study Group Project Reports 1982 ; 1982 >
+    au < manifest ; 1983 ; Tampa Bay Area Study Group Project Reports 1983 ; 1983 >
+    au < manifest ; 1984 ; Tampa Bay Area Study Group Project Reports 1984 ; 1984 >
+    au < manifest ; 1985 ; Tampa Bay Area Study Group Project Reports 1985 ; 1985 >
+    au < manifest ; 1986 ; Tampa Bay Area Study Group Project Reports 1986 ; 1986 >
+    au < manifest ; 1987 ; Tampa Bay Area Study Group Project Reports 1987 ; 1987 >
+    au < manifest ; 1988 ; Tampa Bay Area Study Group Project Reports 1988 ; 1988 >
+    au < manifest ; 1989 ; Tampa Bay Area Study Group Project Reports 1989 ; 1989 >
+    au < manifest ; 1990 ; Tampa Bay Area Study Group Project Reports 1990 ; 1990 >
+    au < manifest ; 1991 ; Tampa Bay Area Study Group Project Reports 1991 ; 1991 >
+    au < manifest ; 1992 ; Tampa Bay Area Study Group Project Reports 1992 ; 1992 >
+    au < manifest ; 1993 ; Tampa Bay Area Study Group Project Reports 1993 ; 1993 >
+    au < manifest ; 1994 ; Tampa Bay Area Study Group Project Reports 1994 ; 1994 >
+    au < manifest ; 1995 ; Tampa Bay Area Study Group Project Reports 1995 ; 1995 >
+    au < manifest ; 1996 ; Tampa Bay Area Study Group Project Reports 1996 ; 1996 >
+    au < manifest ; 1997 ; Tampa Bay Area Study Group Project Reports 1997 ; 1997 >
+    au < manifest ; 1998 ; Tampa Bay Area Study Group Project Reports 1998 ; 1998 >
+    au < manifest ; 1999 ; Tampa Bay Area Study Group Project Reports 1999 ; 1999 >
+    au < manifest ; 2000 ; Tampa Bay Area Study Group Project Reports 2000 ; 2000 >
+    au < manifest ; 2001 ; Tampa Bay Area Study Group Project Reports 2001 ; 2001 >
+    au < manifest ; 2002 ; Tampa Bay Area Study Group Project Reports 2002 ; 2002 >
+    au < manifest ; 2003 ; Tampa Bay Area Study Group Project Reports 2003 ; 2003 >
+    au < manifest ; 2004 ; Tampa Bay Area Study Group Project Reports 2004 ; 2004 >
+    au < manifest ; 2005 ; Tampa Bay Area Study Group Project Reports 2005 ; 2005 >
+    au < manifest ; 2006 ; Tampa Bay Area Study Group Project Reports 2006 ; 2006 >
+    au < manifest ; 2007 ; Tampa Bay Area Study Group Project Reports 2007 ; 2007 >
+    au < manifest ; 2008 ; Tampa Bay Area Study Group Project Reports 2008 ; 2008 >
+    au < manifest ; 2009 ; Tampa Bay Area Study Group Project Reports 2009 ; 2009 >
+    au < manifest ; 2010 ; Tampa Bay Area Study Group Project Reports 2010 ; 2010 >
+
+  }
+
+  {
+
+    title <
+      name = University of South Florida Anthropology Faculty Publications
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://scholarcommons.usf.edu/
+    param[collection_type] = ir_series
+    param[collection] = ant_facpub
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 1962 ; University of South Florida Anthropology Faculty Publications 1962 ; 1962 >
+    au < manifest ; 1963 ; University of South Florida Anthropology Faculty Publications 1963 ; 1963 >
+    au < manifest ; 1966 ; University of South Florida Anthropology Faculty Publications 1966 ; 1966 >
+    au < manifest ; 1967 ; University of South Florida Anthropology Faculty Publications 1967 ; 1967 >
+    au < manifest ; 1970 ; University of South Florida Anthropology Faculty Publications 1970 ; 1970 >
+    au < manifest ; 1977 ; University of South Florida Anthropology Faculty Publications 1977 ; 1977 >
+    au < manifest ; 1979 ; University of South Florida Anthropology Faculty Publications 1979 ; 1979 >
+    au < manifest ; 1980 ; University of South Florida Anthropology Faculty Publications 1980 ; 1980 >
+    au < manifest ; 1986 ; University of South Florida Anthropology Faculty Publications 1986 ; 1986 >
+    au < manifest ; 1987 ; University of South Florida Anthropology Faculty Publications 1987 ; 1987 >
+    au < manifest ; 2005 ; University of South Florida Anthropology Faculty Publications 2005 ; 2005 >
+    au < manifest ; 2006 ; University of South Florida Anthropology Faculty Publications 2006 ; 2006 >
+    au < manifest ; 2011 ; University of South Florida Anthropology Faculty Publications 2011 ; 2011 >
+
+  }
+
+  {
+
+    title <
+      name = University of South Florida Campus Recreation Exercise Library
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://scholarcommons.usf.edu/
+    param[collection_type] = ir_series
+    param[collection] = camprec_exlib
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 2012 ; University of South Florida Campus Recreation Exercise Library 2012 ; 2012 >
+
+  }
+
+  {
+
+    title <
+      name = University of South Florida Cell Biology, Microbiology, and Molecular Biology Faculty Publications
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://scholarcommons.usf.edu/
+    param[collection_type] = ir_series
+    param[collection] = bcm_facpub
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 2006 ; University of South Florida Cell Biology, Microbiology, and Molecular Biology Faculty Publications 2006 ; 2006 >
+    au < manifest ; 2008 ; University of South Florida Cell Biology, Microbiology, and Molecular Biology Faculty Publications 2008 ; 2008 >
+    au < manifest ; 2010 ; University of South Florida Cell Biology, Microbiology, and Molecular Biology Faculty Publications 2010 ; 2010 >
+    au < manifest ; 2012 ; University of South Florida Cell Biology, Microbiology, and Molecular Biology Faculty Publications 2012 ; 2012 >
+
+  }
+
+  {
+
+    title <
+      name = University of South Florida Center for Leadership in Public Health Practice: Community-Based Disaster Coalitions
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://scholarcommons.usf.edu/
+    param[collection_type] = ir_series
+    param[collection] = clphp_cbdc
+    implicit < status ; name ; param[collection_heading] >  
+
+    au < manifest ; University of South Florida Center for Leadership in Public Health Practice: Community-Based Disaster Coalitions Articles ; article >
+    au < manifest ; University of South Florida Center for Leadership in Public Health Practice: Community-Based Disaster Coalitions Moving Images ; movingimage >
+
+  }
+
+  {
+
+    title <
+      name = University of South Florida Center for Leadership in Public Health Practice: Florida Public Health Training Center
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://scholarcommons.usf.edu/
+    param[collection_type] = ir_series
+    param[collection] = clphp_fphtc
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 2013 ; University of South Florida Center for Leadership in Public Health Practice: Florida Public Health Training Center 2013 ; 2013 >
+
+  }
+
+  {
+
+    title <
+      name = University of South Florida Center for Leadership in Public Health Practice: Preparedness and Emergency Response Learning Center
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://scholarcommons.usf.edu/
+    param[collection_type] = ir_series
+    param[collection] = clphp_perlc
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 2013 ; University of South Florida Center for Leadership in Public Health Practice: Preparedness and Emergency Response Learning Center 2013 ; 2013 >
+
+  }
+
+  {
+
+    title <
+      name = University of South Florida Chemistry Faculty Publications
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://scholarcommons.usf.edu/
+    param[collection_type] = ir_series
+    param[collection] = chm_facpub
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 2007 ; University of South Florida Chemistry Faculty Publications 2007 ; 2007 >
+    au < manifest ; 2012 ; University of South Florida Chemistry Faculty Publications 2012 ; 2012 >
+    au < manifest ; 2013 ; University of South Florida Chemistry Faculty Publications 2013 ; 2013 >
+
+  }
+
+  {
+
+    title <
+      name = University of South Florida College of Business Publications
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://scholarcommons.usf.edu/
+    param[collection_type] = ir_series
+    param[collection] = business_pub
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 1997 ; University of South Florida College of Business Publications 1997 ; 1997 >
+    au < manifest ; 1999 ; University of South Florida College of Business Publications 1999 ; 1999 >
+    au < manifest ; 2000 ; University of South Florida College of Business Publications 2000 ; 2000 >
+    au < manifest ; 2001 ; University of South Florida College of Business Publications 2001 ; 2001 >
+    au < manifest ; 2002 ; University of South Florida College of Business Publications 2002 ; 2002 >
+    au < manifest ; 2003 ; University of South Florida College of Business Publications 2003 ; 2003 >
+    au < manifest ; 2004 ; University of South Florida College of Business Publications 2004 ; 2004 >
+    au < manifest ; 2005 ; University of South Florida College of Business Publications 2005 ; 2005 >
+    au < manifest ; 2006 ; University of South Florida College of Business Publications 2006 ; 2006 >
+    au < manifest ; 2007 ; University of South Florida College of Business Publications 2007 ; 2007 >
+
+  }
+
+  {
+
+    title <
+      name = University of South Florida College of Education Publications
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://scholarcommons.usf.edu/
+    param[collection_type] = ir_series
+    param[collection] = coedu_pub
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 1973 ; University of South Florida College of Education Publications 1973 ; 1973 >
+    au < manifest ; 1974 ; University of South Florida College of Education Publications 1974 ; 1974 >
+    au < manifest ; 1975 ; University of South Florida College of Education Publications 1975 ; 1975 >
+    au < manifest ; 1976 ; University of South Florida College of Education Publications 1976 ; 1976 >
+    au < manifest ; 1977 ; University of South Florida College of Education Publications 1977 ; 1977 >
+    au < manifest ; 1978 ; University of South Florida College of Education Publications 1978 ; 1978 >
+    au < manifest ; 1979 ; University of South Florida College of Education Publications 1979 ; 1979 >
+    au < manifest ; 1980 ; University of South Florida College of Education Publications 1980 ; 1980 >
+    au < manifest ; 1981 ; University of South Florida College of Education Publications 1981 ; 1981 >
+    au < manifest ; 1982 ; University of South Florida College of Education Publications 1982 ; 1982 >
+    au < manifest ; 1983 ; University of South Florida College of Education Publications 1983 ; 1983 >
+    au < manifest ; 1984 ; University of South Florida College of Education Publications 1984 ; 1984 >
+    au < manifest ; 1985 ; University of South Florida College of Education Publications 1985 ; 1985 >
+    au < manifest ; 1986 ; University of South Florida College of Education Publications 1986 ; 1986 >
+    au < manifest ; 1987 ; University of South Florida College of Education Publications 1987 ; 1987 >
+    au < manifest ; 1988 ; University of South Florida College of Education Publications 1988 ; 1988 >
+    au < manifest ; 1989 ; University of South Florida College of Education Publications 1989 ; 1989 >
+    au < manifest ; 1990 ; University of South Florida College of Education Publications 1990 ; 1990 >
+    au < manifest ; 1991 ; University of South Florida College of Education Publications 1991 ; 1991 >
+    au < manifest ; 1992 ; University of South Florida College of Education Publications 1992 ; 1992 >
+    au < manifest ; 1993 ; University of South Florida College of Education Publications 1993 ; 1993 >
+    au < manifest ; 1994 ; University of South Florida College of Education Publications 1994 ; 1994 >
+    au < manifest ; 1995 ; University of South Florida College of Education Publications 1995 ; 1995 >
+    au < manifest ; 1996 ; University of South Florida College of Education Publications 1996 ; 1996 >
+    au < manifest ; 1997 ; University of South Florida College of Education Publications 1997 ; 1997 >
+    au < manifest ; 1998 ; University of South Florida College of Education Publications 1998 ; 1998 >
+    au < manifest ; 1999 ; University of South Florida College of Education Publications 1999 ; 1999 >
+    au < manifest ; 2000 ; University of South Florida College of Education Publications 2000 ; 2000 >
+    au < manifest ; 2001 ; University of South Florida College of Education Publications 2001 ; 2001 >
+    au < manifest ; 2002 ; University of South Florida College of Education Publications 2002 ; 2002 >
+    au < manifest ; 2003 ; University of South Florida College of Education Publications 2003 ; 2003 >
+    au < manifest ; 2004 ; University of South Florida College of Education Publications 2004 ; 2004 >
+    au < manifest ; 2005 ; University of South Florida College of Education Publications 2005 ; 2005 >
+    au < manifest ; 2006 ; University of South Florida College of Education Publications 2006 ; 2006 >
+    au < manifest ; 2007 ; University of South Florida College of Education Publications 2007 ; 2007 >
+    au < manifest ; 2008 ; University of South Florida College of Education Publications 2008 ; 2008 >
+    au < manifest ; 2009 ; University of South Florida College of Education Publications 2009 ; 2009 >
+    au < manifest ; 2010 ; University of South Florida College of Education Publications 2010 ; 2010 >
+    au < manifest ; 2011 ; University of South Florida College of Education Publications 2011 ; 2011 >
+    au < manifest ; 2012 ; University of South Florida College of Education Publications 2012 ; 2012 >
+
+  }
+
+  {
+
+    title <
+      name = University of South Florida College of The Arts Publications
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://scholarcommons.usf.edu/
+    param[collection_type] = ir_series
+    param[collection] = arts_pub
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 1986 ; University of South Florida College of The Arts Publications 1986 ; 1986 >
+    au < manifest ; 1987 ; University of South Florida College of The Arts Publications 1987 ; 1987 >
+    au < manifest ; 1988 ; University of South Florida College of The Arts Publications 1988 ; 1988 >
+    au < manifest ; 1989 ; University of South Florida College of The Arts Publications 1989 ; 1989 >
+    au < manifest ; 1990 ; University of South Florida College of The Arts Publications 1990 ; 1990 >
+    au < manifest ; 1991 ; University of South Florida College of The Arts Publications 1991 ; 1991 >
+    au < manifest ; 1992 ; University of South Florida College of The Arts Publications 1992 ; 1992 >
+    au < manifest ; 1993 ; University of South Florida College of The Arts Publications 1993 ; 1993 >
+    au < manifest ; 1994 ; University of South Florida College of The Arts Publications 1994 ; 1994 >
+    au < manifest ; 1995 ; University of South Florida College of The Arts Publications 1995 ; 1995 >
+    au < manifest ; 1996 ; University of South Florida College of The Arts Publications 1996 ; 1996 >
+    au < manifest ; 1999 ; University of South Florida College of The Arts Publications 1999 ; 1999 >
+    au < manifest ; 2001 ; University of South Florida College of The Arts Publications 2001 ; 2001 >
+    au < manifest ; 2004 ; University of South Florida College of The Arts Publications 2004 ; 2004 >
+
+  }
+
+  {
+
+    title <
+      name = University of South Florida Community and Family Health Faculty Publications
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://scholarcommons.usf.edu/
+    param[collection_type] = ir_series
+    param[collection] = cfh_facpub
+    implicit < status ; year ; name ; param[collection_heading] ; attr[au_coverage_depth] >  
+
+    au < manifest ; 1997 ; University of South Florida Community and Family Health Faculty Publications 1997 ; 1997 ; fulltext >
+    au < manifest ; 1998 ; University of South Florida Community and Family Health Faculty Publications 1998 ; 1998 ; fulltext >
+    au < manifest ; 1999 ; University of South Florida Community and Family Health Faculty Publications 1999 ; 1999 ; fulltext >
+    au < manifest ; 2000 ; University of South Florida Community and Family Health Faculty Publications 2000 ; 2000 ; fulltext >
+    au < manifest ; 2001 ; University of South Florida Community and Family Health Faculty Publications 2001 ; 2001 ; fulltext >
+    au < manifest ; 2003 ; University of South Florida Community and Family Health Faculty Publications 2003 [abstracts only] ; 2003 ; abstracts >
+    au < manifest ; 2004 ; University of South Florida Community and Family Health Faculty Publications 2004 [abstracts only] ; 2004 ; abstracts >
+    au < manifest ; 2005 ; University of South Florida Community and Family Health Faculty Publications 2005 [abstracts only] ; 2005 ; abstracts >
+    au < manifest ; 2008 ; University of South Florida Community and Family Health Faculty Publications 2008 [abstracts only] ; 2008 ; abstracts >
+    au < manifest ; 2010 ; University of South Florida Community and Family Health Faculty Publications 2010 [abstracts only] ; 2010 ; abstracts >
+    au < manifest ; 2011 ; University of South Florida Community and Family Health Faculty Publications 2011 [abstracts only] ; 2011 ; abstracts >
+
+  }
+
+  {
+
+    title <
+      name = University of South Florida Criminology Faculty Publications
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://scholarcommons.usf.edu/
+    param[collection_type] = ir_series
+    param[collection] = cjp_facpub
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 2013 ; University of South Florida Criminology Faculty Publications 2013 ; 2013 >
+
+  }
+
+  {
+
+    title <
+      name = University of South Florida Integrative Biology Faculty and Staff Publications
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://scholarcommons.usf.edu/
+    param[collection_type] = ir_series
+    param[collection] = bin_facpub
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 1974 ; University of South Florida Integrative Biology Faculty and Staff Publications 1974 ; 1974 >
+    au < manifest ; 1975 ; University of South Florida Integrative Biology Faculty and Staff Publications 1975 ; 1975 >
+    au < manifest ; 1976 ; University of South Florida Integrative Biology Faculty and Staff Publications 1976 ; 1976 >
+    au < manifest ; 1977 ; University of South Florida Integrative Biology Faculty and Staff Publications 1977 ; 1977 >
+    au < manifest ; 1978 ; University of South Florida Integrative Biology Faculty and Staff Publications 1978 ; 1978 >
+    au < manifest ; 1979 ; University of South Florida Integrative Biology Faculty and Staff Publications 1979 ; 1979 >
+    au < manifest ; 1980 ; University of South Florida Integrative Biology Faculty and Staff Publications 1980 ; 1980 >
+    au < manifest ; 1981 ; University of South Florida Integrative Biology Faculty and Staff Publications 1981 ; 1981 >
+    au < manifest ; 1982 ; University of South Florida Integrative Biology Faculty and Staff Publications 1982 ; 1982 >
+    au < manifest ; 1983 ; University of South Florida Integrative Biology Faculty and Staff Publications 1983 ; 1983 >
+    au < manifest ; 1984 ; University of South Florida Integrative Biology Faculty and Staff Publications 1984 ; 1984 >
+    au < manifest ; 1985 ; University of South Florida Integrative Biology Faculty and Staff Publications 1985 ; 1985 >
+    au < manifest ; 1986 ; University of South Florida Integrative Biology Faculty and Staff Publications 1986 ; 1986 >
+    au < manifest ; 1987 ; University of South Florida Integrative Biology Faculty and Staff Publications 1987 ; 1987 >
+    au < manifest ; 1988 ; University of South Florida Integrative Biology Faculty and Staff Publications 1988 ; 1988 >
+    au < manifest ; 1989 ; University of South Florida Integrative Biology Faculty and Staff Publications 1989 ; 1989 >
+    au < manifest ; 1990 ; University of South Florida Integrative Biology Faculty and Staff Publications 1990 ; 1990 >
+    au < manifest ; 1991 ; University of South Florida Integrative Biology Faculty and Staff Publications 1991 ; 1991 >
+    au < manifest ; 1992 ; University of South Florida Integrative Biology Faculty and Staff Publications 1992 ; 1992 >
+    au < manifest ; 1993 ; University of South Florida Integrative Biology Faculty and Staff Publications 1993 ; 1993 >
+    au < manifest ; 1994 ; University of South Florida Integrative Biology Faculty and Staff Publications 1994 ; 1994 >
+    au < manifest ; 1995 ; University of South Florida Integrative Biology Faculty and Staff Publications 1995 ; 1995 >
+    au < manifest ; 1996 ; University of South Florida Integrative Biology Faculty and Staff Publications 1996 ; 1996 >
+    au < manifest ; 1997 ; University of South Florida Integrative Biology Faculty and Staff Publications 1997 ; 1997 >
+    au < manifest ; 1998 ; University of South Florida Integrative Biology Faculty and Staff Publications 1998 ; 1998 >
+    au < manifest ; 1999 ; University of South Florida Integrative Biology Faculty and Staff Publications 1999 ; 1999 >
+    au < manifest ; 2000 ; University of South Florida Integrative Biology Faculty and Staff Publications 2000 ; 2000 >
+    au < manifest ; 2001 ; University of South Florida Integrative Biology Faculty and Staff Publications 2001 ; 2001 >
+    au < manifest ; 2002 ; University of South Florida Integrative Biology Faculty and Staff Publications 2002 ; 2002 >
+    au < manifest ; 2003 ; University of South Florida Integrative Biology Faculty and Staff Publications 2003 ; 2003 >
+    au < manifest ; 2004 ; University of South Florida Integrative Biology Faculty and Staff Publications 2004 ; 2004 >
+    au < manifest ; 2005 ; University of South Florida Integrative Biology Faculty and Staff Publications 2005 ; 2005 >
+    au < manifest ; 2006 ; University of South Florida Integrative Biology Faculty and Staff Publications 2006 ; 2006 >
+    au < manifest ; 2007 ; University of South Florida Integrative Biology Faculty and Staff Publications 2007 ; 2007 >
+    au < manifest ; 2008 ; University of South Florida Integrative Biology Faculty and Staff Publications 2008 ; 2008 >
+    au < manifest ; 2009 ; University of South Florida Integrative Biology Faculty and Staff Publications 2009 ; 2009 >
+    au < manifest ; 2010 ; University of South Florida Integrative Biology Faculty and Staff Publications 2010 ; 2010 >
+    au < manifest ; 2011 ; University of South Florida Integrative Biology Faculty and Staff Publications 2011 ; 2011 >
+    au < manifest ; 2012 ; University of South Florida Integrative Biology Faculty and Staff Publications 2012 ; 2012 >
+    au < manifest ; 2013 ; University of South Florida Integrative Biology Faculty and Staff Publications 2013 ; 2013 >
+
+  }
+
+}

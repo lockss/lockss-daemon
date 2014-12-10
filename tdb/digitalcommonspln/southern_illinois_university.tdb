@@ -16,17 +16,17 @@
     param[collection] = cwrl_fr
     implicit < status ; year ; name ; param[collection_heading] >
   
-    au < manifest ; 1995 ; Cooperative Wildlife Research Laboratory Final Reports 1995 ; 1995 >
-    au < manifest ; 1997 ; Cooperative Wildlife Research Laboratory Final Reports 1997 ; 1997 >
-    au < manifest ; 1998 ; Cooperative Wildlife Research Laboratory Final Reports 1998 ; 1998 >
-    au < manifest ; 1999 ; Cooperative Wildlife Research Laboratory Final Reports 1999 ; 1999 >
-    au < manifest ; 2001 ; Cooperative Wildlife Research Laboratory Final Reports 2001 ; 2001 >
-    au < manifest ; 2002 ; Cooperative Wildlife Research Laboratory Final Reports 2002 ; 2002 >
-    au < manifest ; 2003 ; Cooperative Wildlife Research Laboratory Final Reports 2003 ; 2003 >
-    au < manifest ; 2005 ; Cooperative Wildlife Research Laboratory Final Reports 2005 ; 2005 >
-    au < manifest ; 2008 ; Cooperative Wildlife Research Laboratory Final Reports 2008 ; 2008 >
-    au < manifest ; 2009 ; Cooperative Wildlife Research Laboratory Final Reports 2009 ; 2009 >
-    au < manifest ; 2010 ; Cooperative Wildlife Research Laboratory Final Reports 2010 ; 2010 >
+    au < ready ; 1995 ; Cooperative Wildlife Research Laboratory Final Reports 1995 ; 1995 >
+    au < ready ; 1997 ; Cooperative Wildlife Research Laboratory Final Reports 1997 ; 1997 >
+    au < ready ; 1998 ; Cooperative Wildlife Research Laboratory Final Reports 1998 ; 1998 >
+    au < ready ; 1999 ; Cooperative Wildlife Research Laboratory Final Reports 1999 ; 1999 >
+    au < ready ; 2001 ; Cooperative Wildlife Research Laboratory Final Reports 2001 ; 2001 >
+    au < ready ; 2002 ; Cooperative Wildlife Research Laboratory Final Reports 2002 ; 2002 >
+    au < ready ; 2003 ; Cooperative Wildlife Research Laboratory Final Reports 2003 ; 2003 >
+    au < ready ; 2005 ; Cooperative Wildlife Research Laboratory Final Reports 2005 ; 2005 >
+    au < ready ; 2008 ; Cooperative Wildlife Research Laboratory Final Reports 2008 ; 2008 >
+    au < ready ; 2009 ; Cooperative Wildlife Research Laboratory Final Reports 2009 ; 2009 >
+    au < ready ; 2010 ; Cooperative Wildlife Research Laboratory Final Reports 2010 ; 2010 >
   
   }
 
@@ -42,11 +42,11 @@
     param[collection] = arch_hepc
     implicit < status ; year ; name ; param[collection_heading] >
   
-    au < manifest ; 2009 ; Higher Education Policy Commentary 2009 ; 2009 >
-    au < manifest ; 2010 ; Higher Education Policy Commentary 2010 ; 2010 >
-    au < manifest ; 2011 ; Higher Education Policy Commentary 2011 ; 2011 >
-    au < manifest ; 2012 ; Higher Education Policy Commentary 2012 ; 2012 >
-    au < manifest ; 2013 ; Higher Education Policy Commentary 2013 ; 2013 >
+    au < ready ; 2009 ; Higher Education Policy Commentary 2009 ; 2009 >
+    au < ready ; 2010 ; Higher Education Policy Commentary 2010 ; 2010 >
+    au < ready ; 2011 ; Higher Education Policy Commentary 2011 ; 2011 >
+    au < ready ; 2012 ; Higher Education Policy Commentary 2012 ; 2012 >
+    au < ready ; 2013 ; Higher Education Policy Commentary 2013 ; 2013 >
   
   }
 
@@ -85,10 +85,10 @@
     param[collection] = agecon_articles
     implicit < status ; year ; name ; param[collection_heading] >
   
-    au < manifest ; 2005 ; Southern Illinois University Department of Agribusiness Economics Articles 2005 ; 2005 >
-    au < manifest ; 2007 ; Southern Illinois University Department of Agribusiness Economics Articles 2007 ; 2007 >
-    au < manifest ; 2010 ; Southern Illinois University Department of Agribusiness Economics Articles 2010 ; 2010 >
-    au < manifest ; 2011 ; Southern Illinois University Department of Agribusiness Economics Articles 2011 ; 2011 >
+    au < ready ; 2005 ; Southern Illinois University Department of Agribusiness Economics Articles 2005 ; 2005 >
+    au < ready ; 2007 ; Southern Illinois University Department of Agribusiness Economics Articles 2007 ; 2007 >
+    au < ready ; 2010 ; Southern Illinois University Department of Agribusiness Economics Articles 2010 ; 2010 >
+    au < ready ; 2011 ; Southern Illinois University Department of Agribusiness Economics Articles 2011 ; 2011 >
   
   }
 
@@ -104,10 +104,10 @@
     param[collection] = anat_pubs
     implicit < status ; year ; name ; param[collection_heading] >
   
-    au < manifest ; 1983 ; Southern Illinois University Department of Anatomy Publications 1983 ; 1983 >
-    au < manifest ; 2006 ; Southern Illinois University Department of Anatomy Publications 2006 ; 2006 >
-    au < manifest ; 2007 ; Southern Illinois University Department of Anatomy Publications 2007 ; 2007 >
-    au < manifest ; 2009 ; Southern Illinois University Department of Anatomy Publications 2009 ; 2009 >
+    au < ready ; 1983 ; Southern Illinois University Department of Anatomy Publications 1983 ; 1983 >
+    au < ready ; 2006 ; Southern Illinois University Department of Anatomy Publications 2006 ; 2006 >
+    au < ready ; 2007 ; Southern Illinois University Department of Anatomy Publications 2007 ; 2007 >
+    au < ready ; 2009 ; Southern Illinois University Department of Anatomy Publications 2009 ; 2009 >
   
   }
 
@@ -123,8 +123,8 @@
     param[collection] = asfn_articles
     implicit < status ; year ; name ; param[collection_heading] >
   
-    au < manifest ; 2007 ; Southern Illinois University Department of Animal Science, Food and Nutrition Peer-Reviewed Articles 2007 ; 2007 >
-    au < manifest ; 2013 ; Southern Illinois University Department of Animal Science, Food and Nutrition Peer-Reviewed Articles 2013 ; 2013 >
+    au < ready ; 2007 ; Southern Illinois University Department of Animal Science, Food and Nutrition Peer-Reviewed Articles 2007 ; 2007 >
+    au < ready ; 2013 ; Southern Illinois University Department of Animal Science, Food and Nutrition Peer-Reviewed Articles 2013 ; 2013 >
   
   }
 
@@ -140,9 +140,9 @@
     param[collection] = anthro_pubs
     implicit < status ; year ; name ; param[collection_heading] >
   
-    au < manifest ; 1999 ; Southern Illinois University Department of Anthropology Publications 1999 ; 1999 >
-    au < manifest ; 2004 ; Southern Illinois University Department of Anthropology Publications 2004 ; 2004 >
-    au < manifest ; 2005 ; Southern Illinois University Department of Anthropology Publications 2005 ; 2005 >
+    au < ready ; 1999 ; Southern Illinois University Department of Anthropology Publications 1999 ; 1999 >
+    au < ready ; 2004 ; Southern Illinois University Department of Anthropology Publications 2004 ; 2004 >
+    au < ready ; 2005 ; Southern Illinois University Department of Anthropology Publications 2005 ; 2005 >
   
   }
 
@@ -158,12 +158,12 @@
     param[collection] = auto_pres
     implicit < status ; year ; name ; param[collection_heading] >
   
-    au < manifest ; 2008 ; Southern Illinois University Department of Automotive Technology Presentations 2008 ; 2008 >
-    au < manifest ; 2009 ; Southern Illinois University Department of Automotive Technology Presentations 2009 ; 2009 >
-    au < manifest ; 2010 ; Southern Illinois University Department of Automotive Technology Presentations 2010 ; 2010 >
-    au < manifest ; 2011 ; Southern Illinois University Department of Automotive Technology Presentations 2011 ; 2011 >
-    au < manifest ; 2012 ; Southern Illinois University Department of Automotive Technology Presentations 2012 ; 2012 >
-    au < manifest ; 2013 ; Southern Illinois University Department of Automotive Technology Presentations 2013 ; 2013 >
+    au < ready ; 2008 ; Southern Illinois University Department of Automotive Technology Presentations 2008 ; 2008 >
+    au < ready ; 2009 ; Southern Illinois University Department of Automotive Technology Presentations 2009 ; 2009 >
+    au < ready ; 2010 ; Southern Illinois University Department of Automotive Technology Presentations 2010 ; 2010 >
+    au < ready ; 2011 ; Southern Illinois University Department of Automotive Technology Presentations 2011 ; 2011 >
+    au < ready ; 2012 ; Southern Illinois University Department of Automotive Technology Presentations 2012 ; 2012 >
+    au < ready ; 2013 ; Southern Illinois University Department of Automotive Technology Presentations 2013 ; 2013 >
   
   }
 
@@ -197,7 +197,7 @@
     param[collection] = chem_mdata
     implicit < status ; year ; name ; param[collection_heading] >
   
-    au < manifest ; 2010 ; Southern Illinois University Department of Chemistry and Biochemistry Microarray Data Sets 2010 ; 2010 >
+    au < ready ; 2010 ; Southern Illinois University Department of Chemistry and Biochemistry Microarray Data Sets 2010 ; 2010 >
   
   }
 
@@ -213,16 +213,16 @@
     param[collection] = cs_pubs
     implicit < status ; year ; name ; param[collection_heading] >
   
-    au < manifest ; 2002 ; Southern Illinois University Department of Computer Science Publications 2002 ; 2002 >
-    au < manifest ; 2003 ; Southern Illinois University Department of Computer Science Publications 2003 ; 2003 >
-    au < manifest ; 2004 ; Southern Illinois University Department of Computer Science Publications 2004 ; 2004 >
-    au < manifest ; 2005 ; Southern Illinois University Department of Computer Science Publications 2005 ; 2005 >
-    au < manifest ; 2006 ; Southern Illinois University Department of Computer Science Publications 2006 ; 2006 >
-    au < manifest ; 2007 ; Southern Illinois University Department of Computer Science Publications 2007 ; 2007 >
-    au < manifest ; 2008 ; Southern Illinois University Department of Computer Science Publications 2008 ; 2008 >
-    au < manifest ; 2009 ; Southern Illinois University Department of Computer Science Publications 2009 ; 2009 >
-    au < manifest ; 2010 ; Southern Illinois University Department of Computer Science Publications 2010 ; 2010 >
-    au < manifest ; 2012 ; Southern Illinois University Department of Computer Science Publications 2012 ; 2012 >
+    au < ready ; 2002 ; Southern Illinois University Department of Computer Science Publications 2002 ; 2002 >
+    au < ready ; 2003 ; Southern Illinois University Department of Computer Science Publications 2003 ; 2003 >
+    au < ready ; 2004 ; Southern Illinois University Department of Computer Science Publications 2004 ; 2004 >
+    au < ready ; 2005 ; Southern Illinois University Department of Computer Science Publications 2005 ; 2005 >
+    au < ready ; 2006 ; Southern Illinois University Department of Computer Science Publications 2006 ; 2006 >
+    au < ready ; 2007 ; Southern Illinois University Department of Computer Science Publications 2007 ; 2007 >
+    au < ready ; 2008 ; Southern Illinois University Department of Computer Science Publications 2008 ; 2008 >
+    au < ready ; 2009 ; Southern Illinois University Department of Computer Science Publications 2009 ; 2009 >
+    au < ready ; 2010 ; Southern Illinois University Department of Computer Science Publications 2010 ; 2010 >
+    au < ready ; 2012 ; Southern Illinois University Department of Computer Science Publications 2012 ; 2012 >
   
   }
 
@@ -246,6 +246,199 @@
   }
 
   {
+
+    title <
+      name = Southern Illinois University Department of Dental Hygiene Journal Articles
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = dh_articles
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 2005 ; Southern Illinois University Department of Dental Hygiene Journal Articles 2005 ; 2005 >
+    au < manifest ; 2010 ; Southern Illinois University Department of Dental Hygiene Journal Articles 2010 ; 2010 >
+    au < manifest ; 2012 ; Southern Illinois University Department of Dental Hygiene Journal Articles 2012 ; 2012 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University Department of Economics Discussion Papers
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = econ_dp
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 2001 ; Southern Illinois University Department of Economics Discussion Papers 2001 ; 2001 >
+    au < manifest ; 2002 ; Southern Illinois University Department of Economics Discussion Papers 2002 ; 2002 >
+    au < manifest ; 2004 ; Southern Illinois University Department of Economics Discussion Papers 2004 ; 2004 >
+    au < manifest ; 2005 ; Southern Illinois University Department of Economics Discussion Papers 2005 ; 2005 >
+    au < manifest ; 2006 ; Southern Illinois University Department of Economics Discussion Papers 2006 ; 2006 >
+    au < manifest ; 2007 ; Southern Illinois University Department of Economics Discussion Papers 2007 ; 2007 >
+    au < manifest ; 2008 ; Southern Illinois University Department of Economics Discussion Papers 2008 ; 2008 >
+    au < manifest ; 2009 ; Southern Illinois University Department of Economics Discussion Papers 2009 ; 2009 >
+    au < manifest ; 2010 ; Southern Illinois University Department of Economics Discussion Papers 2010 ; 2010 >
+    au < manifest ; 2011 ; Southern Illinois University Department of Economics Discussion Papers 2011 ; 2011 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University Department of Educational Psychology and Special Education Book Chapters
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = epse_books
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 2013 ; Southern Illinois University Department of Educational Psychology and Special Education Book Chapters 2013 ; 2013 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University Department of Educational Psychology and Special Education Conference Proceedings
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = epse_confs
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 2013 ; Southern Illinois University Department of Educational Psychology and Special Education Conference Proceedings 2013 ; 2013 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University Department of Educational Psychology and Special Education Publications
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = epse_pubs
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 2001 ; Southern Illinois University Department of Educational Psychology and Special Education Publications 2001 ; 2001 >
+    au < manifest ; 2002 ; Southern Illinois University Department of Educational Psychology and Special Education Publications 2002 ; 2002 >
+    au < manifest ; 2003 ; Southern Illinois University Department of Educational Psychology and Special Education Publications 2003 ; 2003 >
+    au < manifest ; 2004 ; Southern Illinois University Department of Educational Psychology and Special Education Publications 2004 ; 2004 >
+    au < manifest ; 2006 ; Southern Illinois University Department of Educational Psychology and Special Education Publications 2006 ; 2006 >
+    au < manifest ; 2007 ; Southern Illinois University Department of Educational Psychology and Special Education Publications 2007 ; 2007 >
+    au < manifest ; 2008 ; Southern Illinois University Department of Educational Psychology and Special Education Publications 2008 ; 2008 >
+    au < manifest ; 2009 ; Southern Illinois University Department of Educational Psychology and Special Education Publications 2009 ; 2009 >
+    au < manifest ; 2010 ; Southern Illinois University Department of Educational Psychology and Special Education Publications 2010 ; 2010 >
+    au < manifest ; 2011 ; Southern Illinois University Department of Educational Psychology and Special Education Publications 2011 ; 2011 >
+    au < manifest ; 2012 ; Southern Illinois University Department of Educational Psychology and Special Education Publications 2012 ; 2012 >
+    au < manifest ; 2013 ; Southern Illinois University Department of Educational Psychology and Special Education Publications 2013 ; 2013 >
+    au < manifest ; 2014 ; Southern Illinois University Department of Educational Psychology and Special Education Publications 2014 ; 2014 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University Department of Electrical and Computer Engineering Articles
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = ece_articles
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 1970 ; Southern Illinois University Department of Electrical and Computer Engineering Articles 1970 ; 1970 >
+    au < manifest ; 1974 ; Southern Illinois University Department of Electrical and Computer Engineering Articles 1974 ; 1974 >
+    au < manifest ; 1983 ; Southern Illinois University Department of Electrical and Computer Engineering Articles 1983 ; 1983 >
+    au < manifest ; 1984 ; Southern Illinois University Department of Electrical and Computer Engineering Articles 1984 ; 1984 >
+    au < manifest ; 1985 ; Southern Illinois University Department of Electrical and Computer Engineering Articles 1985 ; 1985 >
+    au < manifest ; 1986 ; Southern Illinois University Department of Electrical and Computer Engineering Articles 1986 ; 1986 >
+    au < manifest ; 1987 ; Southern Illinois University Department of Electrical and Computer Engineering Articles 1987 ; 1987 >
+    au < manifest ; 1988 ; Southern Illinois University Department of Electrical and Computer Engineering Articles 1988 ; 1988 >
+    au < manifest ; 1989 ; Southern Illinois University Department of Electrical and Computer Engineering Articles 1989 ; 1989 >
+    au < manifest ; 1992 ; Southern Illinois University Department of Electrical and Computer Engineering Articles 1992 ; 1992 >
+    au < manifest ; 1993 ; Southern Illinois University Department of Electrical and Computer Engineering Articles 1993 ; 1993 >
+    au < manifest ; 1994 ; Southern Illinois University Department of Electrical and Computer Engineering Articles 1994 ; 1994 >
+    au < manifest ; 1995 ; Southern Illinois University Department of Electrical and Computer Engineering Articles 1995 ; 1995 >
+    au < manifest ; 1996 ; Southern Illinois University Department of Electrical and Computer Engineering Articles 1996 ; 1996 >
+    au < manifest ; 1997 ; Southern Illinois University Department of Electrical and Computer Engineering Articles 1997 ; 1997 >
+    au < manifest ; 1998 ; Southern Illinois University Department of Electrical and Computer Engineering Articles 1998 ; 1998 >
+    au < manifest ; 1999 ; Southern Illinois University Department of Electrical and Computer Engineering Articles 1999 ; 1999 >
+    au < manifest ; 2000 ; Southern Illinois University Department of Electrical and Computer Engineering Articles 2000 ; 2000 >
+    au < manifest ; 2002 ; Southern Illinois University Department of Electrical and Computer Engineering Articles 2002 ; 2002 >
+    au < manifest ; 2005 ; Southern Illinois University Department of Electrical and Computer Engineering Articles 2005 ; 2005 >
+    au < manifest ; 2006 ; Southern Illinois University Department of Electrical and Computer Engineering Articles 2006 ; 2006 >
+    au < manifest ; 2008 ; Southern Illinois University Department of Electrical and Computer Engineering Articles 2008 ; 2008 >
+    au < manifest ; 2009 ; Southern Illinois University Department of Electrical and Computer Engineering Articles 2009 ; 2009 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University Department of Electrical and Computer Engineering Books
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = ece_books
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 2010 ; Southern Illinois University Department of Electrical and Computer Engineering Books 2010 ; 2010 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University Department of Electrical and Computer Engineering Conference Proceedings
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = ece_confs
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 1987 ; Southern Illinois University Department of Electrical and Computer Engineering Conference Proceedings 1987 ; 1987 >
+    au < manifest ; 1988 ; Southern Illinois University Department of Electrical and Computer Engineering Conference Proceedings 1988 ; 1988 >
+    au < manifest ; 1990 ; Southern Illinois University Department of Electrical and Computer Engineering Conference Proceedings 1990 ; 1990 >
+    au < manifest ; 1991 ; Southern Illinois University Department of Electrical and Computer Engineering Conference Proceedings 1991 ; 1991 >
+    au < manifest ; 1992 ; Southern Illinois University Department of Electrical and Computer Engineering Conference Proceedings 1992 ; 1992 >
+    au < manifest ; 1993 ; Southern Illinois University Department of Electrical and Computer Engineering Conference Proceedings 1993 ; 1993 >
+    au < manifest ; 1994 ; Southern Illinois University Department of Electrical and Computer Engineering Conference Proceedings 1994 ; 1994 >
+    au < manifest ; 1995 ; Southern Illinois University Department of Electrical and Computer Engineering Conference Proceedings 1995 ; 1995 >
+    au < manifest ; 1996 ; Southern Illinois University Department of Electrical and Computer Engineering Conference Proceedings 1996 ; 1996 >
+    au < manifest ; 1997 ; Southern Illinois University Department of Electrical and Computer Engineering Conference Proceedings 1997 ; 1997 >
+    au < manifest ; 1998 ; Southern Illinois University Department of Electrical and Computer Engineering Conference Proceedings 1998 ; 1998 >
+    au < manifest ; 1999 ; Southern Illinois University Department of Electrical and Computer Engineering Conference Proceedings 1999 ; 1999 >
+    au < manifest ; 2000 ; Southern Illinois University Department of Electrical and Computer Engineering Conference Proceedings 2000 ; 2000 >
+    au < manifest ; 2002 ; Southern Illinois University Department of Electrical and Computer Engineering Conference Proceedings 2002 ; 2002 >
+    au < manifest ; 2003 ; Southern Illinois University Department of Electrical and Computer Engineering Conference Proceedings 2003 ; 2003 >
+    au < manifest ; 2004 ; Southern Illinois University Department of Electrical and Computer Engineering Conference Proceedings 2004 ; 2004 >
+    au < manifest ; 2005 ; Southern Illinois University Department of Electrical and Computer Engineering Conference Proceedings 2005 ; 2005 >
+    au < manifest ; 2006 ; Southern Illinois University Department of Electrical and Computer Engineering Conference Proceedings 2006 ; 2006 >
+    au < manifest ; 2007 ; Southern Illinois University Department of Electrical and Computer Engineering Conference Proceedings 2007 ; 2007 >
+    au < manifest ; 2008 ; Southern Illinois University Department of Electrical and Computer Engineering Conference Proceedings 2008 ; 2008 >
+    au < manifest ; 2009 ; Southern Illinois University Department of Electrical and Computer Engineering Conference Proceedings 2009 ; 2009 >
+
+  }
+
+  {
   
     title <
       name = Southern Illinois University School of Art and Design Publications
@@ -257,10 +450,10 @@
     param[collection] = ad_pubs
     implicit < status ; year ; name ; param[collection_heading] >
   
-    au < manifest ; 2005 ; Southern Illinois University School of Art and Design Publications 2005 ; 2005 >
-    au < manifest ; 2006 ; Southern Illinois University School of Art and Design Publications 2006 ; 2006 >
-    au < manifest ; 2008 ; Southern Illinois University School of Art and Design Publications 2008 ; 2008 >
-    au < manifest ; 2011 ; Southern Illinois University School of Art and Design Publications 2011 ; 2011 >
+    au < ready ; 2005 ; Southern Illinois University School of Art and Design Publications 2005 ; 2005 >
+    au < ready ; 2006 ; Southern Illinois University School of Art and Design Publications 2006 ; 2006 >
+    au < ready ; 2008 ; Southern Illinois University School of Art and Design Publications 2008 ; 2008 >
+    au < ready ; 2011 ; Southern Illinois University School of Art and Design Publications 2011 ; 2011 >
   
   }
 
@@ -276,7 +469,7 @@
     param[collection] = arch_videos
     implicit < status ; year ; name ; param[collection_heading] >
   
-    au < manifest ; 2011 ; Southern Illinois University School of Architecture Videos 2011 ; 2011 >
+    au < ready ; 2011 ; Southern Illinois University School of Architecture Videos 2011 ; 2011 >
   
   }
 

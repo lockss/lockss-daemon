@@ -44,19 +44,19 @@
     param[journal_abbr] = cibs
     implicit < status ; year ; volume ; name ; param[volume] >
     
-    au < manifest ; 1977 ; 1 ; Contributions in Black Studies Volume 1 ; 1 >
-    au < manifest ; 1978 ; 2 ; Contributions in Black Studies Volume 2 ; 2 >
-    au < manifest ; 1979 ; 3 ; Contributions in Black Studies Volume 3 ; 3 >
-    au < manifest ; 1980 ; 4 ; Contributions in Black Studies Volume 4 ; 4 >
-    au < manifest ; 1981 ; 5 ; Contributions in Black Studies Volume 5 ; 5 >
-    au < manifest ; 1983 ; 6 ; Contributions in Black Studies Volume 6 ; 6 >
-    au < manifest ; 1985 ; 7 ; Contributions in Black Studies Volume 7 ; 7 >
-    au < manifest ; 1986 ; 8 ; Contributions in Black Studies Volume 8 ; 8 >
-    au < manifest ; 1990-1992 ; 9-10 ; Contributions in Black Studies Volume 9-10 ; 9 >
-    au < manifest ; 1993 ; 11 ; Contributions in Black Studies Volume 11 ; 11 >
-    au < manifest ; 1994 ; 12 ; Contributions in Black Studies Volume 12 ; 12 >
-    au < manifest ; 1995 ; 13-14 ; Contributions in Black Studies Volume 13-14 ; 13 >
-    au < manifest ; 1997 ; 15 ; Contributions in Black Studies Volume 15 ; 15 >
+    au < ready ; 1977 ; 1 ; Contributions in Black Studies Volume 1 ; 1 >
+    au < ready ; 1978 ; 2 ; Contributions in Black Studies Volume 2 ; 2 >
+    au < ready ; 1979 ; 3 ; Contributions in Black Studies Volume 3 ; 3 >
+    au < ready ; 1980 ; 4 ; Contributions in Black Studies Volume 4 ; 4 >
+    au < ready ; 1981 ; 5 ; Contributions in Black Studies Volume 5 ; 5 >
+    au < ready ; 1983 ; 6 ; Contributions in Black Studies Volume 6 ; 6 >
+    au < ready ; 1985 ; 7 ; Contributions in Black Studies Volume 7 ; 7 >
+    au < ready ; 1986 ; 8 ; Contributions in Black Studies Volume 8 ; 8 >
+    au < ready ; 1990-1992 ; 9-10 ; Contributions in Black Studies Volume 9-10 ; 9 >
+    au < ready ; 1993 ; 11 ; Contributions in Black Studies Volume 11 ; 11 >
+    au < ready ; 1994 ; 12 ; Contributions in Black Studies Volume 12 ; 12 >
+    au < ready ; 1995 ; 13-14 ; Contributions in Black Studies Volume 13-14 ; 13 >
+    au < ready ; 1997 ; 15 ; Contributions in Black Studies Volume 15 ; 15 >
   
   }
 
@@ -71,9 +71,9 @@
     param[journal_abbr] = cpo
     implicit < status ; year ; volume ; name ; param[volume] >
     
-    au < manifest ; 2012 ; 1 ; Communication +1 Volume 1 ; 1 >
-    au < manifest ; 2013 ; 2 ; Communication +1 Volume 2 ; 2 >
-    au < manifest ; 2014 ; 3 ; Communication +1 Volume 3 ; 3 >
+    au < ready ; 2012 ; 1 ; Communication +1 Volume 1 ; 1 >
+    au < ready ; 2013 ; 2 ; Communication +1 Volume 2 ; 2 >
+    au < ready ; 2014 ; 3 ; Communication +1 Volume 3 ; 3 >
   
   }
   
@@ -89,18 +89,18 @@
     implicit < status ; year ; volume ; name ; param[volume] >
     
     # The actual year of volume 1 is unclear; guessing 2003
-    au < manifest ; 2003 ; 1 ; Dose-Response: An International Journal Volume 1 ; 1 >
+    au < ready ; 2003 ; 1 ; Dose-Response: An International Journal Volume 1 ; 1 >
     # No volume 2 found
-    au < manifest ; 2005 ; 3 ; Dose-Response: An International Journal Volume 3 ; 3 >
-    au < manifest ; 2006 ; 4 ; Dose-Response: An International Journal Volume 4 ; 4 >
-    au < manifest ; 2007 ; 5 ; Dose-Response: An International Journal Volume 5 ; 5 >
-    au < manifest ; 2008 ; 6 ; Dose-Response: An International Journal Volume 6 ; 6 >
-    au < manifest ; 2009 ; 7 ; Dose-Response: An International Journal Volume 7 ; 7 >
-    au < manifest ; 2010 ; 8 ; Dose-Response: An International Journal Volume 8 ; 8 >
-    au < manifest ; 2011 ; 9 ; Dose-Response: An International Journal Volume 9 ; 9 >
-    au < manifest ; 2012 ; 10 ; Dose-Response: An International Journal Volume 10 ; 10 >
-    au < manifest ; 2013 ; 11 ; Dose-Response: An International Journal Volume 11 ; 11 >
-    au < manifest ; 2014 ; 12 ; Dose-Response: An International Journal Volume 12 ; 12 >
+    au < ready ; 2005 ; 3 ; Dose-Response: An International Journal Volume 3 ; 3 >
+    au < ready ; 2006 ; 4 ; Dose-Response: An International Journal Volume 4 ; 4 >
+    au < ready ; 2007 ; 5 ; Dose-Response: An International Journal Volume 5 ; 5 >
+    au < ready ; 2008 ; 6 ; Dose-Response: An International Journal Volume 6 ; 6 >
+    au < ready ; 2009 ; 7 ; Dose-Response: An International Journal Volume 7 ; 7 >
+    au < ready ; 2010 ; 8 ; Dose-Response: An International Journal Volume 8 ; 8 >
+    au < ready ; 2011 ; 9 ; Dose-Response: An International Journal Volume 9 ; 9 >
+    au < ready ; 2012 ; 10 ; Dose-Response: An International Journal Volume 10 ; 10 >
+    au < ready ; 2013 ; 11 ; Dose-Response: An International Journal Volume 11 ; 11 >
+    au < ready ; 2014 ; 12 ; Dose-Response: An International Journal Volume 12 ; 12 >
   
   }
   
@@ -115,10 +115,10 @@
     param[journal_abbr] = edge
     implicit < status ; year ; volume ; name ; param[volume] >
     
-    au < manifest ; 2009 ; 1 ; EDGE: A Graduate Journal for German and Scandinavian Studies Volume 1 ; 1 >
-    au < manifest ; 2011 ; 2 ; EDGE: A Graduate Journal for German and Scandinavian Studies Volume 2 ; 2 >
-    au < manifest ; 2013 ; 3 ; EDGE: A Graduate Journal for German and Scandinavian Studies Volume 3 ; 3 >
-    au < manifest ; 2014 ; 4 ; EDGE: A Graduate Journal for German and Scandinavian Studies Volume 4 ; 4 >
+    au < ready ; 2009 ; 1 ; EDGE: A Graduate Journal for German and Scandinavian Studies Volume 1 ; 1 >
+    au < ready ; 2011 ; 2 ; EDGE: A Graduate Journal for German and Scandinavian Studies Volume 2 ; 2 >
+    au < ready ; 2013 ; 3 ; EDGE: A Graduate Journal for German and Scandinavian Studies Volume 3 ; 3 >
+    au < ready ; 2014 ; 4 ; EDGE: A Graduate Journal for German and Scandinavian Studies Volume 4 ; 4 >
   
   }
   
@@ -133,14 +133,14 @@
     param[journal_abbr] = heliotropia
     implicit < status ; year ; volume ; name ; param[volume] >
     
-    au < manifest ; 2003 ; 1 ; Heliotropia: An Online Journal of Research to Boccaccio Scholars Volume 1 ; 1 >
-    au < manifest ; 2004 ; 2 ; Heliotropia: An Online Journal of Research to Boccaccio Scholars Volume 2 ; 2 >
-    au < manifest ; 2006 ; 3 ; Heliotropia: An Online Journal of Research to Boccaccio Scholars Volume 3 ; 3 >
-    au < manifest ; 2007 ; 4 ; Heliotropia: An Online Journal of Research to Boccaccio Scholars Volume 4 ; 4 >
-    au < manifest ; 2008 ; 5 ; Heliotropia: An Online Journal of Research to Boccaccio Scholars Volume 5 ; 5 >
-    au < manifest ; 2009 ; 6 ; Heliotropia: An Online Journal of Research to Boccaccio Scholars Volume 6 ; 6 >
-    au < manifest ; 2010 ; 7 ; Heliotropia: An Online Journal of Research to Boccaccio Scholars Volume 7 ; 7 >
-    au < manifest ; 2011 ; 8 ; Heliotropia: An Online Journal of Research to Boccaccio Scholars Volume 8 ; 8 >
+    au < ready ; 2003 ; 1 ; Heliotropia: An Online Journal of Research to Boccaccio Scholars Volume 1 ; 1 >
+    au < ready ; 2004 ; 2 ; Heliotropia: An Online Journal of Research to Boccaccio Scholars Volume 2 ; 2 >
+    au < ready ; 2006 ; 3 ; Heliotropia: An Online Journal of Research to Boccaccio Scholars Volume 3 ; 3 >
+    au < ready ; 2007 ; 4 ; Heliotropia: An Online Journal of Research to Boccaccio Scholars Volume 4 ; 4 >
+    au < ready ; 2008 ; 5 ; Heliotropia: An Online Journal of Research to Boccaccio Scholars Volume 5 ; 5 >
+    au < ready ; 2009 ; 6 ; Heliotropia: An Online Journal of Research to Boccaccio Scholars Volume 6 ; 6 >
+    au < ready ; 2010 ; 7 ; Heliotropia: An Online Journal of Research to Boccaccio Scholars Volume 7 ; 7 >
+    au < ready ; 2011 ; 8 ; Heliotropia: An Online Journal of Research to Boccaccio Scholars Volume 8 ; 8 >
   
   }
   
@@ -156,9 +156,9 @@
     param[journal_abbr] = intljssw
     implicit < status ; year ; volume ; name ; param[volume] >
     
-    au < manifest ; 2008 ; 1 ; International Journal of Soil, Sediment and Water Volume 1 ; 1 >
-    au < manifest ; 2009 ; 2 ; International Journal of Soil, Sediment and Water Volume 2 ; 2 >
-    au < manifest ; 2010 ; 3 ; International Journal of Soil, Sediment and Water Volume 3 ; 3 >
+    au < ready ; 2008 ; 1 ; International Journal of Soil, Sediment and Water Volume 1 ; 1 >
+    au < ready ; 2009 ; 2 ; International Journal of Soil, Sediment and Water Volume 2 ; 2 >
+    au < ready ; 2010 ; 3 ; International Journal of Soil, Sediment and Water Volume 3 ; 3 >
  
   }
   
@@ -174,22 +174,22 @@
     param[journal_abbr] = jhfm
     implicit < status ; year ; volume ; name ; param[volume] >
     
-    au < manifest ; 1997 ; 5 ; Journal of Hospitality Financial Management Volume 5 ; 5 >
-    au < manifest ; 1998 ; 6 ; Journal of Hospitality Financial Management Volume 6 ; 6 >
-    au < manifest ; 1999 ; 7 ; Journal of Hospitality Financial Management Volume 7 ; 7 >
-    au < manifest ; 2000 ; 8 ; Journal of Hospitality Financial Management Volume 8 ; 8 >
-    au < manifest ; 2001 ; 9 ; Journal of Hospitality Financial Management Volume 9 ; 9 >
-    au < manifest ; 2002 ; 10 ; Journal of Hospitality Financial Management Volume 10 ; 10 >
-    au < manifest ; 2003 ; 11 ; Journal of Hospitality Financial Management Volume 11 ; 11 >
-    au < manifest ; 2004 ; 12 ; Journal of Hospitality Financial Management Volume 12 ; 12 >
-    au < manifest ; 2005 ; 13 ; Journal of Hospitality Financial Management Volume 13 ; 13 >
-    au < manifest ; 2006 ; 14 ; Journal of Hospitality Financial Management Volume 14 ; 14 >
-    au < manifest ; 2007 ; 15 ; Journal of Hospitality Financial Management Volume 15 ; 15 >
-    au < manifest ; 2008 ; 16 ; Journal of Hospitality Financial Management Volume 16 ; 16 >
-    au < manifest ; 2009 ; 17 ; Journal of Hospitality Financial Management Volume 17 ; 17 >
-    au < manifest ; 2010 ; 18 ; Journal of Hospitality Financial Management Volume 18 ; 18 >
-    au < manifest ; 2011 ; 19 ; Journal of Hospitality Financial Management Volume 19 ; 19 >
-    au < manifest ; 2012 ; 20 ; Journal of Hospitality Financial Management Volume 20 ; 20 >
+    au < ready ; 1997 ; 5 ; Journal of Hospitality Financial Management Volume 5 ; 5 >
+    au < ready ; 1998 ; 6 ; Journal of Hospitality Financial Management Volume 6 ; 6 >
+    au < ready ; 1999 ; 7 ; Journal of Hospitality Financial Management Volume 7 ; 7 >
+    au < ready ; 2000 ; 8 ; Journal of Hospitality Financial Management Volume 8 ; 8 >
+    au < ready ; 2001 ; 9 ; Journal of Hospitality Financial Management Volume 9 ; 9 >
+    au < ready ; 2002 ; 10 ; Journal of Hospitality Financial Management Volume 10 ; 10 >
+    au < ready ; 2003 ; 11 ; Journal of Hospitality Financial Management Volume 11 ; 11 >
+    au < ready ; 2004 ; 12 ; Journal of Hospitality Financial Management Volume 12 ; 12 >
+    au < ready ; 2005 ; 13 ; Journal of Hospitality Financial Management Volume 13 ; 13 >
+    au < ready ; 2006 ; 14 ; Journal of Hospitality Financial Management Volume 14 ; 14 >
+    au < ready ; 2007 ; 15 ; Journal of Hospitality Financial Management Volume 15 ; 15 >
+    au < ready ; 2008 ; 16 ; Journal of Hospitality Financial Management Volume 16 ; 16 >
+    au < ready ; 2009 ; 17 ; Journal of Hospitality Financial Management Volume 17 ; 17 >
+    au < ready ; 2010 ; 18 ; Journal of Hospitality Financial Management Volume 18 ; 18 >
+    au < ready ; 2011 ; 19 ; Journal of Hospitality Financial Management Volume 19 ; 19 >
+    au < ready ; 2012 ; 20 ; Journal of Hospitality Financial Management Volume 20 ; 20 >
   
   }
 
@@ -205,8 +205,8 @@
     param[journal_abbr] = jmap
     implicit < status ; year ; volume ; name ; param[volume] >
     
-    au < manifest ; 2012 ; 1 ; Journal of Medicinally Active Plants Volume 1 ; 1 >
-    au < manifest ; 2013 ; 2 ; Journal of Medicinally Active Plants Volume 2 ; 2 >
+    au < ready ; 2012 ; 1 ; Journal of Medicinally Active Plants Volume 1 ; 1 >
+    au < ready ; 2013 ; 2 ; Journal of Medicinally Active Plants Volume 2 ; 2 >
  
   }
   
@@ -222,8 +222,8 @@
     param[journal_abbr] = lov
     implicit < status ; year ; volume ; name ; param[volume] >
     
-    au < manifest ; 2010 ; 1 ; Landscapes of Violence Volume 1 ; 1 >
-    au < manifest ; 2012 ; 2 ; Landscapes of Violence Volume 2 ; 2 >
+    au < ready ; 2010 ; 1 ; Landscapes of Violence Volume 1 ; 1 >
+    au < ready ; 2012 ; 2 ; Landscapes of Violence Volume 2 ; 2 >
  
   }
   
@@ -239,7 +239,7 @@
     implicit < status ; year ; volume ; name ; param[volume] >
 
     # no volumes 1-18 found    
-    au < manifest ; 2014 ; 1 ; mOthertongue: A Multilingual Journal of the Arts Volume 19 ; 19 >
+    au < ready ; 2014 ; 1 ; mOthertongue: A Multilingual Journal of the Arts Volume 19 ; 19 >
  
   }
   
@@ -255,12 +255,12 @@
     param[journal_abbr] = p
     implicit < status ; year ; volume ; name ; param[volume] >
     
-    au < manifest ; 2006 ; 0 ; Portuguese Cultural Studies Volume 0 ; 0 >
-    au < manifest ; 2007 ; 1 ; Portuguese Cultural Studies Volume 1 ; 1 >
-    au < manifest ; 2009 ; 2 ; Portuguese Cultural Studies Volume 2 ; 2 >
-    au < manifest ; 2010 ; 3 ; Portuguese Cultural Studies Volume 3 ; 3 >
-    au < manifest ; 2012 ; 4 ; Portuguese Cultural Studies Volume 4 ; 4 >
-    au < manifest ; 2014 ; 5 ; Portuguese Cultural Studies Volume 5 ; 5 >
+    au < ready ; 2006 ; 0 ; Portuguese Cultural Studies Volume 0 ; 0 >
+    au < ready ; 2007 ; 1 ; Portuguese Cultural Studies Volume 1 ; 1 >
+    au < ready ; 2009 ; 2 ; Portuguese Cultural Studies Volume 2 ; 2 >
+    au < ready ; 2010 ; 3 ; Portuguese Cultural Studies Volume 3 ; 3 >
+    au < ready ; 2012 ; 4 ; Portuguese Cultural Studies Volume 4 ; 4 >
+    au < ready ; 2014 ; 5 ; Portuguese Cultural Studies Volume 5 ; 5 >
   
   }
   
@@ -275,7 +275,7 @@
     param[journal_abbr] = palat
     implicit < status ; year ; volume ; name ; param[volume] >
 
-    au < manifest ; 2008 ; 1 ; Perspectives in Asian Leisure and Tourism Volume 1 ; 1 >
+    au < ready ; 2008 ; 1 ; Perspectives in Asian Leisure and Tourism Volume 1 ; 1 >
  
   }
   
@@ -292,13 +292,13 @@
     
     # This actually looks like a book series, with ISBNs -- add those in later
     
-    au < manifest ; 2006 ; 11 ; Proceedings of the Annual International Conference on Soils, Sediments, Water and Energy Volume 11 ; 11 >
-    au < manifest ; 2007 ; 12 ; Proceedings of the Annual International Conference on Soils, Sediments, Water and Energy Volume 12 ; 12 >
-    au < manifest ; 2008 ; 13 ; Proceedings of the Annual International Conference on Soils, Sediments, Water and Energy Volume 13 ; 13 >
-    au < manifest ; 2009 ; 14 ; Proceedings of the Annual International Conference on Soils, Sediments, Water and Energy Volume 14 ; 14 >
-    au < manifest ; 2010 ; 15 ; Proceedings of the Annual International Conference on Soils, Sediments, Water and Energy Volume 15 ; 15 >
-    au < manifest ; 2011 ; 16 ; Proceedings of the Annual International Conference on Soils, Sediments, Water and Energy Volume 16 ; 16 >
-    au < manifest ; 2012 ; 17 ; Proceedings of the Annual International Conference on Soils, Sediments, Water and Energy Volume 17 ; 17 >
+    au < ready ; 2006 ; 11 ; Proceedings of the Annual International Conference on Soils, Sediments, Water and Energy Volume 11 ; 11 >
+    au < ready ; 2007 ; 12 ; Proceedings of the Annual International Conference on Soils, Sediments, Water and Energy Volume 12 ; 12 >
+    au < ready ; 2008 ; 13 ; Proceedings of the Annual International Conference on Soils, Sediments, Water and Energy Volume 13 ; 13 >
+    au < ready ; 2009 ; 14 ; Proceedings of the Annual International Conference on Soils, Sediments, Water and Energy Volume 14 ; 14 >
+    au < ready ; 2010 ; 15 ; Proceedings of the Annual International Conference on Soils, Sediments, Water and Energy Volume 15 ; 15 >
+    au < ready ; 2011 ; 16 ; Proceedings of the Annual International Conference on Soils, Sediments, Water and Energy Volume 16 ; 16 >
+    au < ready ; 2012 ; 17 ; Proceedings of the Annual International Conference on Soils, Sediments, Water and Energy Volume 17 ; 17 >
   
   }
 
@@ -314,10 +314,10 @@
     param[journal_abbr] = rasenna
     implicit < status ; year ; volume ; name ; param[volume] >
     
-    au < manifest ; 2007 ; 1 ; Rasenna: Journal of the Center for Etruscan Studies Volume 1 ; 1 >
-    au < manifest ; 2009 ; 2 ; Rasenna: Journal of the Center for Etruscan Studies Volume 2 ; 2 >
-    au < manifest ; 2011 ; 3 ; Rasenna: Journal of the Center for Etruscan Studies Volume 3 ; 3 >
-    au < manifest ; 2014 ; 4 ; Rasenna: Journal of the Center for Etruscan Studies Volume 4 ; 4 >
+    au < ready ; 2007 ; 1 ; Rasenna: Journal of the Center for Etruscan Studies Volume 1 ; 1 >
+    au < ready ; 2009 ; 2 ; Rasenna: Journal of the Center for Etruscan Studies Volume 2 ; 2 >
+    au < ready ; 2011 ; 3 ; Rasenna: Journal of the Center for Etruscan Studies Volume 3 ; 3 >
+    au < ready ; 2014 ; 4 ; Rasenna: Journal of the Center for Etruscan Studies Volume 4 ; 4 >
   
   }
   
@@ -332,26 +332,26 @@
     param[journal_abbr] = sharp_news
     implicit < status ; year ; volume ; name ; param[volume] >
     
-    au < manifest ; 1992 ; 1 ; SHARP News Volume 1 ; 1 >
-    au < manifest ; 1993 ; 2 ; SHARP News Volume 2 ; 2 >
-    au < manifest ; 1994 ; 3 ; SHARP News Volume 3 ; 3 >
-    au < manifest ; 1995 ; 4 ; SHARP News Volume 4 ; 4 >
-    au < manifest ; 1996 ; 5 ; SHARP News Volume 5 ; 5 >
-    au < manifest ; 1997 ; 6 ; SHARP News Volume 6 ; 6 >
-    au < manifest ; 1998 ; 7 ; SHARP News Volume 7 ; 7 >
-    au < manifest ; 1999 ; 8 ; SHARP News Volume 8 ; 8 >
-    au < manifest ; 2000 ; 9 ; SHARP News Volume 9 ; 9 >
-    au < manifest ; 2001 ; 10 ; SHARP News Volume 10 ; 10 >
-    au < manifest ; 2002 ; 11 ; SHARP News Volume 11 ; 11 >
-    au < manifest ; 2003 ; 12 ; SHARP News Volume 12 ; 12 >
-    au < manifest ; 2004 ; 13 ; SHARP News Volume 13 ; 13 >
-    au < manifest ; 2005 ; 14 ; SHARP News Volume 14 ; 14 >
-    au < manifest ; 2006 ; 15 ; SHARP News Volume 15 ; 15 >
-    au < manifest ; 2007 ; 16 ; SHARP News Volume 16 ; 16 >
-    au < manifest ; 2008 ; 17 ; SHARP News Volume 17 ; 17 >
-    au < manifest ; 2009 ; 18 ; SHARP News Volume 18 ; 18 >
-    au < manifest ; 2010 ; 19 ; SHARP News Volume 19 ; 19 >
-    au < manifest ; 2011 ; 20 ; SHARP News Volume 20 ; 20 >
+    au < ready ; 1992 ; 1 ; SHARP News Volume 1 ; 1 >
+    au < ready ; 1993 ; 2 ; SHARP News Volume 2 ; 2 >
+    au < ready ; 1994 ; 3 ; SHARP News Volume 3 ; 3 >
+    au < ready ; 1995 ; 4 ; SHARP News Volume 4 ; 4 >
+    au < ready ; 1996 ; 5 ; SHARP News Volume 5 ; 5 >
+    au < ready ; 1997 ; 6 ; SHARP News Volume 6 ; 6 >
+    au < ready ; 1998 ; 7 ; SHARP News Volume 7 ; 7 >
+    au < ready ; 1999 ; 8 ; SHARP News Volume 8 ; 8 >
+    au < ready ; 2000 ; 9 ; SHARP News Volume 9 ; 9 >
+    au < ready ; 2001 ; 10 ; SHARP News Volume 10 ; 10 >
+    au < ready ; 2002 ; 11 ; SHARP News Volume 11 ; 11 >
+    au < ready ; 2003 ; 12 ; SHARP News Volume 12 ; 12 >
+    au < ready ; 2004 ; 13 ; SHARP News Volume 13 ; 13 >
+    au < ready ; 2005 ; 14 ; SHARP News Volume 14 ; 14 >
+    au < ready ; 2006 ; 15 ; SHARP News Volume 15 ; 15 >
+    au < ready ; 2007 ; 16 ; SHARP News Volume 16 ; 16 >
+    au < ready ; 2008 ; 17 ; SHARP News Volume 17 ; 17 >
+    au < ready ; 2009 ; 18 ; SHARP News Volume 18 ; 18 >
+    au < ready ; 2010 ; 19 ; SHARP News Volume 19 ; 19 >
+    au < ready ; 2011 ; 20 ; SHARP News Volume 20 ; 20 >
   
   }
 
