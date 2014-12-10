@@ -212,6 +212,7 @@
         pluginSuffix = ClockssSilverchairJournalsPlugin
         param[base_url] = http://archderm.jamanetwork.com/
         param[resource_id] = 68
+        comment[notReady] = images shift to CDN
         
         au < notReady ; exists ; 2012 ; JAMA Dermatology Volume 148 ; 2012 >
         au < crawling ; exists ; 2013 ; JAMA Dermatology Volume 149 ; 2013 >
@@ -622,6 +623,7 @@
         pluginSuffix = ClockssSilverchairJournalsPlugin
         param[base_url] = http://archinte.jamanetwork.com/
         param[resource_id] = 71
+        comment[notReady] = images shift to CDN
         
         au < notReady ; exists ; 2012 ; JAMA Internal Medicine Volume 172 ; 2012 >
         au < crawling ; exists ; 2013 ; JAMA Internal Medicine Volume 173 ; 2013 >
@@ -727,7 +729,7 @@
         pluginSuffix = ClockssSilverchairJournalsPlugin
         param[base_url] =  http://archneur.jamanetwork.com/
         param[resource_id] = 72
-        comment[notReady] = multiple base_url used for png
+        comment[notReady] = images shift to CDN
         
         au < notReady ; exists ; 2012 ; JAMA Neurology Volume 69 ; 2012 >
         au < notReady ; exists ; 2013 ; JAMA Neurology Volume 70 ; 2013 >
@@ -995,6 +997,7 @@
         pluginSuffix = ClockssSilverchairJournalsPlugin
         param[base_url] =  http://archopht.jamanetwork.com/
         param[resource_id] = 73
+        comment[notReady] = images shift to CDN
         
         au < notReady ; exists ; 2012 ; JAMA Ophthalmology Volume 130 ; 2012 >
         au < crawling ; exists ; 2013 ; JAMA Ophthalmology Volume 131 ; 2013 >
@@ -1170,6 +1173,7 @@
         pluginSuffix = ClockssSilverchairJournalsPlugin
         param[base_url] =  http://archotol.jamanetwork.com/
         param[resource_id] = 74
+        comment[notReady] = images shift to CDN
         
         au < notReady ; exists ; 2012 ; JAMA Otolaryngology - Head & Neck Surgery Volume 138 ; 2012 >
         au < crawling ; exists ; 2013 ; JAMA Otolaryngology - Head & Neck Surgery Volume 139 ; 2013 >
@@ -1372,7 +1376,7 @@
         pluginSuffix = ClockssSilverchairJournalsPlugin
         param[base_url] = http://archpedi.jamanetwork.com/
         param[resource_id] = 75
-        comment[notReady] = multiple base_url used for png
+        comment[notReady] = images shift to CDN
         
         au < notReady ; exists ; 2012 ; JAMA Pediatrics Volume 166 ; 2012 >
         au < notReady ; exists ; 2013 ; JAMA Pediatrics Volume 167 ; 2013 >
@@ -1557,6 +1561,7 @@
         pluginSuffix = ClockssSilverchairJournalsPlugin
         param[base_url] = http://archsurg.jamanetwork.com/
         param[resource_id] = 76
+        comment[notReady] = images shift to CDN
         
         au < notReady ; exists ; 2012 ; JAMA Surgery Volume 147 ; 2012 >
         au < crawling ; exists ; 2013 ; JAMA Surgery Volume 148 ; 2013 >
@@ -1934,6 +1939,7 @@
         pluginSuffix = ClockssSilverchairJournalsPlugin
         param[base_url] = http://jama.jamanetwork.com/
         param[resource_id] = 67
+        comment[notReady] = images shift to CDN
         
         au < crawling ; exists ; 2011 ; JAMA: The Journal of the American Medical Association Volume 305-306 ; 2011 >
         au < crawling ; exists ; 2012 ; JAMA: The Journal of the American Medical Association Volume 307-308 ; 2012 >
