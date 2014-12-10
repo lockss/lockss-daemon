@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -91,11 +91,12 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|svg|tif?f)$", base_url_host</string>
+      <string>1,"^https?://%s/.*\.(bmp|css|oet|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)$", base_url_host</string>
       <string>4,"^%s", base_url</string>
       <string>1,"^%s%s/%s$", base_url, collection, collection_theme</string>
       <string>1,"^%s%s/%s/", base_url, collection, collection_theme</string>
-      <string>1,"^%scgi/viewcontent\.cgi\?.*context=%s", base_url, collection</string>
+      <string>1,"^%scgi/viewcontent\.cgi\?.*(context=|/context/)%s", base_url, collection</string>
+      <string>1,"^%scontext/%s/", base_url, collection</string>
     </list>
   </entry>
   <entry>
