@@ -372,7 +372,7 @@
     au < manifest ; exists ; 2011 ; Advances in Condensed Matter Physics Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Advances in Condensed Matter Physics Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Advances in Condensed Matter Physics Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Advances in Condensed Matter Physics Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Advances in Condensed Matter Physics Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -459,7 +459,7 @@
 
     param[journal_id] = aelc
 
-    au < testing ; exists ; 2014 ; Advances in Electronics Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Advances in Electronics Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -473,7 +473,7 @@
 
     param[journal_id] = aem
 
-    au < testing ; exists ; 2014 ; Advances in Emergency Medicine Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Advances in Emergency Medicine Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -487,7 +487,7 @@
 
     param[journal_id] = aen
 
-    au < testing ; exists ; 2014 ; Advances in Endocrinology Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Advances in Endocrinology Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -501,7 +501,7 @@
 
     param[journal_id] = aec
 
-    au < testing ; exists ; 2014 ; Advances in Environmental Chemistry Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Advances in Environmental Chemistry Volume 2014 ; 2014 ; 2014 >
 
   }
 
