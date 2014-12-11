@@ -1174,7 +1174,7 @@
       au < finished ; frozen ; 2011 ; American Journal of Lifestyle Medicine Volume 5 ; 5 ; >
       au < finished ; frozen ; 2012 ; American Journal of Lifestyle Medicine Volume 6 ; 6 ; >
       au < crawling ; exists ; 2013 ; American Journal of Lifestyle Medicine Volume 7 ; 7 ; >
-      au < manifest ; exists ; 2014 ; American Journal of Lifestyle Medicine Volume 8 ; 8 ; >
+      au < testing ; exists ; 2014 ; American Journal of Lifestyle Medicine Volume 8 ; 8 ; >
       au < expected ; exists ; 2015 ; American Journal of Lifestyle Medicine Volume 9 ; 9 ; >
 
     }
@@ -1233,7 +1233,7 @@
       au < finished ; crawling ; 2011 ; American Journal of Medical Quality Volume 26 ; 26 ; >
       au < finished ; frozen ; 2012 ; American Journal of Medical Quality Volume 27 ; 27 ; >
       au < crawling ; exists ; 2013 ; American Journal of Medical Quality Volume 28 ; 28 ; >
-      au < manifest ; exists ; 2014 ; American Journal of Medical Quality Volume 29 ; 29 ; >
+      au < testing ; exists ; 2014 ; American Journal of Medical Quality Volume 29 ; 29 ; >
       au < expected ; exists ; 2015 ; American Journal of Medical Quality Volume 30 ; 30 ; >
 
     }
@@ -1271,7 +1271,7 @@
       au < finished ; crawling ; 2011 ; American Journal of Men's Health Volume 5 ; 5 ; >
       au < finished ; frozen ; 2012 ; American Journal of Men's Health Volume 6 ; 6 ; >
       au < crawling ; exists ; 2013 ; American Journal of Men's Health Volume 7 ; 7 ; >
-      au < manifest ; exists ; 2014 ; American Journal of Men's Health Volume 8 ; 8 ; >
+      au < testing ; exists ; 2014 ; American Journal of Men's Health Volume 8 ; 8 ; >
       au < manifest ; exists ; 2015 ; American Journal of Men's Health Volume 9 ; 9 ; >
 
     }
@@ -2333,7 +2333,7 @@
       au < crawling ; exists ; 2013 ; The Annals of the American Academy of Political and Social Science Volume 648 ; 648 ; >
       au < crawling ; exists ; 2013 ; The Annals of the American Academy of Political and Social Science Volume 649 ; 649 ; >
       au < crawling ; exists ; 2013 ; The Annals of the American Academy of Political and Social Science Volume 650 ; 650 ; >
-      au < manifest ; exists ; 2014 ; The Annals of the American Academy of Political and Social Science Volume 651 ; 651 ; >
+      au < testing ; exists ; 2014 ; The Annals of the American Academy of Political and Social Science Volume 651 ; 651 ; >
       au < manifest ; exists ; 2014 ; The Annals of the American Academy of Political and Social Science Volume 652 ; 652 ; >
       au < expected ; exists ; 2014 ; The Annals of the American Academy of Political and Social Science Volume 653 ; 653 ; >
       au < manifest ; exists ; 2014 ; The Annals of the American Academy of Political and Social Science Volume 654 ; 654 ; >
@@ -2453,6 +2453,7 @@
       au < zapped ; finished ; 2012 ; Anthropological Theory Volume 12 ; 12 ; >
       au < crawling ; exists ; 2013 ; Anthropological Theory Volume 13 ; 13 ; >
       au < manifest ; exists ; 2014 ; Anthropological Theory Volume 14 ; 14 ; >
+      au < expected ; exists ; 2015 ; Anthropological Theory Volume 15 ; 15 ; >
  
     }
 
@@ -10688,7 +10689,7 @@
       au < crawling ; exists ; 2010-2011 ; Exceptional Children Volume 77 ; 77 ; >
       au < crawling ; exists ; 2011-2012 ; Exceptional Children Volume 78 ; 78 ; >
       au < exists ; exists ; 2012-2013 ; Exceptional Children Volume 79 ; 79 ; >
-      au < manifest ; exists ; 2013-2014 ; Exceptional Children Volume 80 ; 80 ; >
+      au < testing ; exists ; 2013-2014 ; Exceptional Children Volume 80 ; 80 ; >
       au < manifest ; exists ; 2014-2015 ; Exceptional Children Volume 81 ; 81 ; >
 
   }
@@ -16338,7 +16339,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://jnr.sagepub.com/
 
-      au < manifest ; exists ; 2013 ; Jadavpur Journal of International Relations Volume 17 ; 17 ; >
+      au < testing ; exists ; 2013 ; Jadavpur Journal of International Relations Volume 17 ; 17 ; >
       au < expected ; exists ; 2014 ; Jadavpur Journal of International Relations Volume 18 ; 18 ; >
       au < expected ; exists ; 2015 ; Jadavpur Journal of International Relations Volume 19 ; 19 ; >
 
@@ -36214,7 +36215,7 @@
       au < exists ; exists ; 2010-2011 ; TEACHING Exceptional Children Volume 43 ; 43 ; >
       au < exists ; exists ; 2011-2012 ; TEACHING Exceptional Children Volume 44 ; 44 ; >
       au < exists ; exists ; 2012-2013 ; TEACHING Exceptional Children Volume 45 ; 45 ; >
-      au < manifest ; exists ; 2013-2014 ; TEACHING Exceptional Children Volume 46 ; 46 ; >
+      au < testing ; exists ; 2013-2014 ; TEACHING Exceptional Children Volume 46 ; 46 ; >
       au < manifest ; exists ; 2014-2015 ; TEACHING Exceptional Children Volume 47 ; 47 ; >
     
   }
@@ -40953,7 +40954,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://ani.sagepub.com/
 
-    au < manifest ; exists ; 2013 ; Annals of the ICRP Volume 43 ; 43 ; >
+    au < testing ; exists ; 2013 ; Annals of the ICRP Volume 43 ; 43 ; >
     au < expected ; exists ; 2014 ; Annals of the ICRP Volume 44 ; 44 ; >
     au < expected ; exists ; 2015 ; Annals of the ICRP Volume 45 ; 45 ; >
 
@@ -40984,7 +40985,10 @@
     au < exists ; exists ; 1986 ; Sociological Perspectives Volume 29 ; 29 ; >
     au < exists ; exists ; 1987 ; Sociological Perspectives Volume 30 ; 30 ; >
     au < exists ; exists ; 1988 ; Sociological Perspectives Volume 31 ; 31 ; >
-    au < manifest ; exists ; 2014 ; Sociological Perspectives Volume 57 ; 57 ; >
+    au < exists ; exists ; 2011 ; Sociological Perspectives Volume 54 ; 54 ; >
+    au < exists ; exists ; 2012 ; Sociological Perspectives Volume 55 ; 55 ; >
+    au < exists ; exists ; 2013 ; Sociological Perspectives Volume 56 ; 56 ; >
+    au < testing ; exists ; 2014 ; Sociological Perspectives Volume 57 ; 57 ; >
     au < expected ; exists ; 2015 ; Sociological Perspectives Volume 58 ; 58 ; >
 
     }
