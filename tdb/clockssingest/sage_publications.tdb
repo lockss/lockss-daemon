@@ -37451,7 +37451,7 @@
       param[base_url] = http://tav.sagepub.com/
 
       au < exists ; exists ; 2013 ; Therapeutic Advances in Vaccines Volume 1 ; 1 ; >
-      au < expected ; exists ; 2014 ; Therapeutic Advances in Vaccines Volume 2 ; 2 ; >
+      au < exists ; exists ; 2014 ; Therapeutic Advances in Vaccines Volume 2 ; 2 ; >
       au < expected ; exists ; 2015 ; Therapeutic Advances in Vaccines Volume 3 ; 3 ; >
 
     }
@@ -41176,9 +41176,8 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://dsp.sagepub.com/
 
-    au < exists ; exists ; 2013 ; Drug Science, Policy and Law Volume 1 ; 1 ; >
-    au < expected ; exists ; 2014 ; Drug Science, Policy and Law Volume 2 ; 2 ; >
-    au < expected ; exists ; 2015 ; Drug Science, Policy and Law Volume 3 ; 3 ; >
+    au < exists ; exists ; 2014 ; Drug Science, Policy and Law Volume 1 ; 1 ; >
+    au < expected ; exists ; 2015 ; Drug Science, Policy and Law Volume 2 ; 2 ; >
 
     }
 
@@ -42292,8 +42291,7 @@
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://nan.sagepub.com/
   
-        au < exists ; exists ; 2013 ; International Journal of Green Nanotechnology Volume 1 ; 1 ; >
-        au < expected ; exists ; 2014 ; International Journal of Green Nanotechnology Volume 2 ; 2 ; >
+        au < exists ; exists ; 2014 ; International Journal of Green Nanotechnology Volume 1 ; 1 ; >
   
       }
   
