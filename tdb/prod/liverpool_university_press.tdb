@@ -379,14 +379,12 @@
       param[journal_dir] = journal_of_literary_and_cultural_disability_studies
       attr[journal_id] = jlc
 
-      au < doesNotExist ; 0 ; Journal of Literary & Cultural Disability Studies Volume 1 ; 1 >
-      au < doesNotExist ; 0 ; Journal of Literary & Cultural Disability Studies Volume 2 ; 2 >
       au < released ; 2009 ; Journal of Literary & Cultural Disability Studies Volume 3 ; 3 >
       au < released ; 2010 ; Journal of Literary & Cultural Disability Studies Volume 4 ; 4 >
       au < released ; 2011 ; Journal of Literary & Cultural Disability Studies Volume 5 ; 5 >
       au < released ; 2012 ; Journal of Literary & Cultural Disability Studies Volume 6 ; 6 >
       au < released ; 2013 ; Journal of Literary & Cultural Disability Studies Volume 7 ; 7 >
-      au < expected ; 2014 ; Journal of Literary & Cultural Disability Studies Volume 8 ; 8 >
+      au < manifest ; 2014 ; Journal of Literary & Cultural Disability Studies Volume 8 ; 8 >
     
     }
     
