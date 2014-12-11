@@ -100,7 +100,7 @@
     au < finished ; frozen ; 2011 ; Biochemistry Insights Volume 4 ; 4 ; 2011 >
     au < crawling ; crawling ; 2012 ; Biochemistry Insights Volume 5 ; 5 ; 2012 >
     au < crawling ; exists ; 2013 ; Biochemistry Insights Volume 6 ; 6 ; 2013 >
-    au < testing ; exists ; 2014 ; Biochemistry Insights Volume 7 ; 7 ; 2014 >
+    au < ready ; exists ; 2014 ; Biochemistry Insights Volume 7 ; 7 ; 2014 >
   }
   
   {
@@ -216,7 +216,7 @@
     au < manifest ; exists ; 2009 ; Bone and Tissue Regeneration Insights Volume 2 ; 2 ; 2009 >
     au < manifest ; exists ; 2010 ; Bone and Tissue Regeneration Insights Volume 3 ; 3 ; 2010 >
     au < crawling ; exists ; 2013 ; Bone and Tissue Regeneration Insights Volume 4 ; 4 ; 2013 >
-    au < testing ; exists ; 2014 ; Bone and Tissue Regeneration Insights Volume 5 ; 5 ; 2014 >
+    au < ready ; exists ; 2014 ; Bone and Tissue Regeneration Insights Volume 5 ; 5 ; 2014 >
     
     
 
@@ -337,7 +337,7 @@
     au < manifest ; exists ; 2010 ; Cell Communication Insights Volume 3 ; 3 ; 2010 >
     au < finished ; frozen ; 2012 ; Cell Communication Insights Volume 4 ; 4 ; 2012 >
     au < crawling ; exists ; 2013 ; Cell Communication Insights Volume 5 ; 5 ; 2013 >
-    au < testing ; exists ; 2014 ; Cell Communication Insights Volume 6 ; 6 ; 2014 >
+    au < ready ; exists ; 2014 ; Cell Communication Insights Volume 6 ; 6 ; 2014 >
 
   }
   
@@ -1102,7 +1102,7 @@
     au < finished ; frozen ; 2011 ; Indian Journal of Clinical Medicine Volume 2 ; 2 ; 2011 >
     au < finished ; frozen ; 2012 ; Indian Journal of Clinical Medicine Volume 3 ; 3 ; 2012 >
     au < crawling ; exists ; 2013 ; Indian Journal of Clinical Medicine Volume 4 ; 4 ; 2013 >
-    au < testing ; exists ; 2014 ; Indian Journal of Clinical Medicine Volume 5 ; 5 ; 2014 >
+    au < ready ; exists ; 2014 ; Indian Journal of Clinical Medicine Volume 5 ; 5 ; 2014 >
 
   }
   
@@ -1545,7 +1545,7 @@
     au < manifest ; exists ; 2009 ; Primary Prevention Insights Volume 1 ; 1 ; 2009 >
     au < manifest ; exists ; 2010 ; Primary Prevention Insights Volume 2 ; 2 ; 2010 >
     au < finished ; frozen ; 2012 ; Primary Prevention Insights Volume 3 ; 3 ; 2012 >
-    au < testing ; exists ; 2014 ; Primary Prevention Insights Volume 4 ; 4 ; 2014 >
+    au < ready ; exists ; 2014 ; Primary Prevention Insights Volume 4 ; 4 ; 2014 >
     
   }
   
@@ -1697,7 +1697,7 @@
     au < manifest ; exists ; 2008 ; Translational Oncogenomics Volume 3 ; 3 ; 2008 >
     au < manifest ; exists ; 2010 ; Translational Oncogenomics Volume 4 ; 4 ; 2010 >
     au < finished ; frozen ; 2012 ; Translational Oncogenomics Volume 5 ; 5 ; 2012 >
-    au < testing ; exists ; 2014 ; Translational Oncogenomics Volume 6 ; 6 ; 2014 >
+    au < ready ; exists ; 2014 ; Translational Oncogenomics Volume 6 ; 6 ; 2014 >
     
   }
   
