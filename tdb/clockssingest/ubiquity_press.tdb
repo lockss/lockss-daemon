@@ -72,8 +72,8 @@
     
     comment[manifest] = manifest page at http://journal.eahn.org/gateway/lockss?year=2013  instead of http://journal.eahn.org/index.php/ah/gateway/lockss?year=2013 
 
-    au < exists ; exists ; 2013 ; Architectural Histories Volume 1 ; 1 ; 2013 >
-    au < exists ; exists ; 2014 ; Architectural Histories Volume 2 ; 2 ; 2014 >
+    au < notReady ; exists ; 2013 ; Architectural Histories Volume 1 ; 1 ; 2013 >
+    au < notReady ; exists ; 2014 ; Architectural Histories Volume 2 ; 2 ; 2014 >
     
   }
   
