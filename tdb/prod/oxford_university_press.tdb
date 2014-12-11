@@ -1073,7 +1073,7 @@
     au < released ; 2011 ; American Literary History Volume 23 ; 23 >
     au < released ; 2012 ; American Literary History Volume 24 ; 24 >
     au < released ; 2013 ; American Literary History Volume 25 ; 25 >
-    au < expected ; 2014 ; American Literary History Volume 26 ; 26 >
+    au < manifest ; 2014 ; American Literary History Volume 26 ; 26 >
 
     }
 
@@ -3077,7 +3077,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2014 ; British Medical Bulletin Volume 109 ; 109 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; British Medical Bulletin Volume 110 ; 110 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; British Medical Bulletin Volume 111 ; 111 >
-    au < HighWirePressH20Plugin ; expected ; 2014 ; British Medical Bulletin Volume 112 ; 112 >
+    au < HighWirePressH20Plugin ; manifest ; 2014 ; British Medical Bulletin Volume 112 ; 112 >
 
     }
 
@@ -3095,6 +3095,7 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://bybil.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    comment[0] = no issue in 2013
 
     au < HighWirePressH20Plugin ; manifest ; 1976 ; British Yearbook of International Law Volume 47 ; 47 >
     au < HighWirePressH20Plugin ; manifest ; 1977 ; British Yearbook of International Law Volume 48 ; 48 >
@@ -3133,7 +3134,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; British Yearbook of International Law Volume 81 ; 81 >
     au < HighWirePressH20Plugin ; manifest ; 2011 ; British Yearbook of International Law Volume 82 ; 82 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; British Yearbook of International Law Volume 83 ; 83 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; British Yearbook of International Law Volume 84 ; 84 >
+    au < HighWirePressH20Plugin ; manifest ; 2014 ; British Yearbook of International Law Volume 84 ; 84 >
 
   }
 
@@ -3429,7 +3430,7 @@
     au < released ; 2011 ; The Cambridge Quarterly Volume 40 ; 40 >
     au < released ; 2012 ; The Cambridge Quarterly Volume 41 ; 41 >
     au < released ; 2013 ; The Cambridge Quarterly Volume 42 ; 42 >
-    au < expected ; 2014 ; The Cambridge Quarterly Volume 43 ; 43 >
+    au < manifest ; 2014 ; The Cambridge Quarterly Volume 43 ; 43 >
     
     }
 
@@ -5243,7 +5244,7 @@
     au < released ; 2011 ; Enterprise & Society Volume 12 ; 12 >
     au < released ; 2012 ; Enterprise & Society Volume 13 ; 13 >
     au < released ; 2013 ; Enterprise & Society Volume 14 ; 14 >
-    au < expected ; 2014 ; Enterprise & Society Volume 15 ; 15 >
+    au < manifest ; 2014 ; Enterprise & Society Volume 15 ; 15 >
 
     }
 
@@ -7151,7 +7152,7 @@
     au < released ; 2011 ; French Studies: A Quarterly Review Volume 65 ; 65 >
     au < released ; 2012 ; French Studies: A Quarterly Review Volume 66 ; 66 >
     au < released ; 2013 ; French Studies: A Quarterly Review Volume 67 ; 67 >
-    au < expected ; 2014 ; French Studies: A Quarterly Review Volume 68 ; 68 >
+    au < manifest ; 2014 ; French Studies: A Quarterly Review Volume 68 ; 68 >
 
     }
 
@@ -7670,7 +7671,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Glycobiology Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Glycobiology Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Glycobiology Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; exists ; 2015 ; Glycobiology Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Glycobiology Volume 25 ; 25 >
 
     }
 
@@ -8041,8 +8042,8 @@
     au < released ; 2012 ; History Workshop Journal Issue 74 ; 74 >
     au < released ; 2013 ; History Workshop Journal Issue 75 ; 75 >
     au < released ; 2013 ; History Workshop Journal Issue 76 ; 76 >
-    au < expected ; 2014 ; History Workshop Journal Issue 77 ; 77 >
-    au < expected ; 2014 ; History Workshop Journal Issue 78 ; 78 >
+    au < manifest ; 2014 ; History Workshop Journal Issue 77 ; 77 >
+    au < manifest ; 2014 ; History Workshop Journal Issue 78 ; 78 >
 
     }
 
@@ -8114,7 +8115,7 @@
     au < released ; 2011 ; Holocaust and Genocide Studies Volume 25 ; 25 >
     au < released ; 2012 ; Holocaust and Genocide Studies Volume 26 ; 26 >
     au < released ; 2013 ; Holocaust and Genocide Studies Volume 27 ; 27 >
-    au < expected ; 2014 ; Holocaust and Genocide Studies Voluem 28 ; 28 >
+    au < manifest ; 2014 ; Holocaust and Genocide Studies Voluem 28 ; 28 >
 
     }
 
@@ -12231,7 +12232,7 @@
     au < released ; 2011 ; Journal of the History of Medicine and Allied Sciences Volume 66 ; 66 >
     au < released ; 2012 ; Journal of the History of Medicine and Allied Sciences Volume 67 ; 67 >
     au < released ; 2013 ; Journal of the History of Medicine and Allied Sciences Volume 68 ; 68 >
-    au < expected ; 2014 ; Journal of the History of Medicine and Allied Sciences Volume 69 ; 69 >
+    au < manifest ; 2014 ; Journal of the History of Medicine and Allied Sciences Volume 69 ; 69 >
 
     }
 
@@ -14818,7 +14819,7 @@
     au < released ; 2011 ; The Library: The Transactions of the Bibliographical Society Volume 12 ; 12 >
     au < released ; 2012 ; The Library: The Transactions of the Bibliographical Society Volume 13 ; 13 >
     au < released ; 2013 ; The Library: The Transactions of the Bibliographical Society Volume 14 ; 14 >
-    au < expected ; 2014 ; The Library: The Transactions of the Bibliographical Society Volume 15 ; 15 >
+    au < manifest ; 2014 ; The Library: The Transactions of the Bibliographical Society Volume 15 ; 15 >
 
     }
 
@@ -15579,7 +15580,7 @@
     au < released ; 2011 ; Modern Judaism Volume 31 ; 31 >
     au < released ; 2012 ; Modern Judaism Volume 32 ; 32 >
     au < released ; 2013 ; Modern Judaism Volume 33 ; 33 >
-    au < expected ; 2014 ; Modern Judaism Volume 34 ; 34 >
+    au < manifest ; 2014 ; Modern Judaism Volume 34 ; 34 >
 
     }
 
@@ -15919,7 +15920,7 @@
     au < manifest ; 2014 ; Monthly Notices of the Royal Astronomical Society Volume 443 ; 443 >
     au < manifest ; 2014 ; Monthly Notices of the Royal Astronomical Society Volume 444 ; 444 >
     au < manifest ; 2014 ; Monthly Notices of the Royal Astronomical Society Volume 445 ; 445 >
-    au < exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 446 ; 446 >
+    au < manifest ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 446 ; 446 >
     au < manifest ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 447 ; 447 >
     au < manifest ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 448 ; 448 >
     au < manifest ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 449 ; 449 >
@@ -16034,7 +16035,7 @@
     au < manifest ; 2014 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 443 ; 443 >
     au < manifest ; 2014 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 444 ; 444 >
     au < manifest ; 2014 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 445 ; 445 >
-    au < exists ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 446 ; 446 >
+    au < manifest ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 446 ; 446 >
     au < expected ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 447 ; 447 >
     au < expected ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 448 ; 448 >
     au < expected ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 449 ; 449 >
@@ -17500,7 +17501,7 @@
     au < released ; 2011 ; The Oral History Review Volume 38 ; 38 >
     au < released ; 2012 ; The Oral History Review Volume 39 ; 39 >
     au < released ; 2013 ; The Oral History Review Volume 40 ; 40 >
-    au < expected ; 2014 ; The Oral History Review Volume 41 ; 41 >
+    au < manifest ; 2014 ; The Oral History Review Volume 41 ; 41 >
 
     }
 
@@ -17855,11 +17856,11 @@
     plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2013 ; Pathogens and Disease Volume 67 ; 67 >
-    au < exists ; 2013 ; Pathogens and Disease Volume 68 ; 68 >
-    au < exists ; 2013 ; Pathogens and Disease Volume 69 ; 69 >
-    au < exists ; 2014 ; Pathogens and Disease Volume 70 ; 70 >
-    au < exists ; 2014 ; Pathogens and Disease Volume 71 ; 71 >
+    au < manifest ; 2013 ; Pathogens and Disease Volume 67 ; 67 >
+    au < manifest ; 2013 ; Pathogens and Disease Volume 68 ; 68 >
+    au < manifest ; 2013 ; Pathogens and Disease Volume 69 ; 69 >
+    au < manifest ; 2014 ; Pathogens and Disease Volume 70 ; 70 >
+    au < manifest ; 2014 ; Pathogens and Disease Volume 71 ; 71 >
     au < expected ; 2014 ; Pathogens and Disease Volume 72 ; 72 >
 
   }
@@ -20946,7 +20947,7 @@
     au < released ; 2011 ; Social Politics: International Studies in Gender, State and Society Volume 18 ; 18 >
     au < released ; 2012 ; Social Politics: International Studies in Gender, State and Society Volume 19 ; 19 >
     au < released ; 2013 ; Social Politics: International Studies in Gender, State and Society Volume 20 ; 20 >
-    au < expected ; 2014 ; Social Politics: International Studies in Gender, State and Society Volume 21 ; 21 >
+    au < manifest ; 2014 ; Social Politics: International Studies in Gender, State and Society Volume 21 ; 21 >
 
 
     }
@@ -21017,7 +21018,7 @@
     au < exists ; 2003 ; Social Problems Volume 50 ; 50 >
     au < exists ; 2004 ; Social Problems Volume 51 ; 51 >
     au < exists ; 2005 ; Social Problems Volume 52 ; 52 >
-    au < exists ; 2006 ; Social Problems Volume 53 ; 53 >
+    au < manifest ; 2006 ; Social Problems Volume 53 ; 53 >
     au < exists ; 2007 ; Social Problems Volume 54 ; 54 >
     au < exists ; 2008 ; Social Problems Volume 55 ; 55 >
     au < exists ; 2009 ; Social Problems Volume 56 ; 56 >
