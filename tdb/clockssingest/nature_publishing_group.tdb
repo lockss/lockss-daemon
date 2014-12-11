@@ -315,9 +315,9 @@
     au < manifest ; exists ; 2008 ; British Dental Journal Volume 204 ; 2008 ; 204 >
     au < manifest ; exists ; 2008 ; British Dental Journal Volume 205 ; 2008 ; 205 >
     au < crawling ; exists ; 2009 ; British Dental Journal Volume 206 ; 2009 ; 206 >
-    au < testing ; exists ; 2009 ; British Dental Journal Volume 207 ; 2009 ; 207 >
-    au < testing ; exists ; 2010 ; British Dental Journal Volume 208 ; 2010 ; 208 >
-    au < testing ; exists ; 2010 ; British Dental Journal Volume 209 ; 2010 ; 209 >
+    au < exists ; exists ; 2009 ; British Dental Journal Volume 207 ; 2009 ; 207 >
+    au < exists ; exists ; 2010 ; British Dental Journal Volume 208 ; 2010 ; 208 >
+    au < exists ; exists ; 2010 ; British Dental Journal Volume 209 ; 2010 ; 209 >
     au < crawling ; exists ; 2011 ; British Dental Journal Volume 210 ; 2011 ; 210 >
     au < crawling ; exists ; 2011 ; British Dental Journal Volume 211 ; 2011 ; 211 >
     au < finished ; frozen ; 2012 ; British Dental Journal Volume 212 ; 2012 ; 212 >
@@ -1410,7 +1410,7 @@
       issnl = 1087-0024
     >
 
-    comment[1] = 2010 does not exist, 2013 is the last issue as of 9/10/14
+    comment[1] = 2010 does not exist, 2013 is the last issue as of 9/10/14. Open access through 2012.
     param[journal_id] = jidsp
 
 
@@ -2380,9 +2380,9 @@
     au < crawling ; exists ; 2013 ; Nature Volume 499 ; 2013 ; 499 >
     au < crawling ; exists ; 2013 ; Nature Volume 500 ; 2013 ; 500 >
     au < crawling ; exists ; 2013 ; Nature Volume 501 ; 2013 ; 501 >
-    au < testing ; exists ; 2013 ; Nature Volume 502 ; 2013 ; 502 >
-    au < testing ; exists ; 2013 ; Nature Volume 503 ; 2013 ; 503 >
-    au < testing ; exists ; 2013 ; Nature Volume 504 ; 2013 ; 504 >
+    au < manifest ; exists ; 2013 ; Nature Volume 502 ; 2013 ; 502 >
+    au < manifest ; exists ; 2013 ; Nature Volume 503 ; 2013 ; 503 >
+    au < manifest ; exists ; 2013 ; Nature Volume 504 ; 2013 ; 504 >
     au < manifest ; exists ; 2014 ; Nature Volume 505 ; 2014 ; 505 >
     au < manifest ; exists ; 2014 ; Nature Volume 506 ; 2014 ; 506 >
     au < manifest ; exists ; 2014 ; Nature Volume 507 ; 2014 ; 507 >
