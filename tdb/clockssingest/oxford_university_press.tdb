@@ -3089,6 +3089,7 @@
 
     param[base_url] = http://bybil.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
+    comment[0] = no issue in 2013
 
     au < manifest ; exists ; 1976 ; British Yearbook of International Law Volume 47 ; 47 ; >
     au < manifest ; exists ; 1977 ; British Yearbook of International Law Volume 48 ; 48 ; >
@@ -3127,7 +3128,7 @@
     au < finished ; crawling ; 2010 ; British Yearbook of International Law Volume 81 ; 81 ; >
     au < crawling ; exists ; 2011 ; British Yearbook of International Law Volume 82 ; 82 ; >
     au < crawling ; exists ; 2012 ; British Yearbook of International Law Volume 83 ; 83 ; >
-    au < manifest ; exists ; 2013 ; British Yearbook of International Law Volume 84 ; 84 ; >
+    au < manifest ; exists ; 2014 ; British Yearbook of International Law Volume 84 ; 84 ; >
 
   }
 
