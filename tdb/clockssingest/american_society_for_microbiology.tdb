@@ -18,6 +18,8 @@
         eissn = 2324-6200
       >
       
+      comment[structure] = this seems to be organized as a reference, not as a journal.
+      
       param[journal_id] = ecosalplus
       
       au < exists ; exists ; 2004 ; EcoSal Plus 2004 ; 2004 >
@@ -40,8 +42,10 @@
         eissn = 2165-0497
       >
       
-      param[journal_id] = 
+      param[journal_id] = cm
       
+      au < exists ; exists ; 2013 ; Microbiology Spectrum 2013 ; 2013 >
+      au < exists ; exists ; 2014 ; Microbiology Spectrum 2014 ; 2014 >
 
     }
 
