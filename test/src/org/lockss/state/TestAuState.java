@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuState.java,v 1.23.10.1 2014-12-10 22:07:58 dshr Exp $
+ * $Id: TestAuState.java,v 1.23.10.2 2014-12-14 04:16:23 dshr Exp $
  */
 
 /*
@@ -58,6 +58,50 @@ public class TestAuState extends LockssTestCase {
   public void tearDown() throws Exception {
     TimeBase.setReal();
     super.tearDown();
+  }
+
+  /*
+   * Abbreviate the verbose constructor
+   */
+  private AuState makeAuState(ArchivalUnit au,
+			      long lastCrawlTime,
+			      long lastCrawlAttempt,
+			      long lastTopLevelPoll,
+			      long lastPollStart,
+			      long lastTreeWalk,
+			      HashSet crawlUrls,
+			      int clockssSubscriptionStatus,
+			      double v3Agreement,
+			      double highestV3Agreement,
+			      HistoryRepository historyRepo) {
+    return new AuState(au,
+		       lastCrawlTime,
+		       lastCrawlAttempt,
+		       -1,
+		       null,
+		       lastTopLevelPoll,
+		       lastPollStart,
+		       -1,
+		       null,
+		       0,
+		       lastTreeWalk,
+		       crawlUrls,
+		       null,
+		       clockssSubscriptionStatus,
+		       v3Agreement,
+		       highestV3Agreement,
+		       SubstanceChecker.State.Unknown,
+		       null,                          // substanceFeatureVersion
+		       null,                          // metadataFeatureVersion
+		       -1,                            // lastMetadataIndex
+		       TimeBase.nowMs(),              // lastContentChange
+		       -1,
+		       -1,
+		       -1,
+		       -1,
+		       -1,
+		       0,
+		       historyRepo);
   }
 
   int t1 = 456;
@@ -292,7 +336,7 @@ public class TestAuState extends LockssTestCase {
   }
 
   public void testTreeWalkFinished() {
-    AuState auState = new AuState(mau, -1, -1, -1, -1, 123, null,
+    AuState auState = makeAuState(mau, -1, -1, -1, -1, 123, null,
 				  1, -1.0, 1.0, historyRepo);
     assertEquals(123, auState.getLastTreeWalkTime());
 
@@ -305,9 +349,8 @@ public class TestAuState extends LockssTestCase {
     HashSet stringCollection = new HashSet();
     stringCollection.add("test");
 
-    AuState auState =
-      new AuState(mau, -1, -1, -1, -1, 123,
-		  stringCollection, 1, -1.0, 1.0, historyRepo);
+    AuState auState = makeAuState(mau, -1, -1, -1, -1, 123,
+				  stringCollection, 1, -1.0, 1.0, historyRepo);
     Collection col = auState.getCrawlUrls();
     Iterator colIter = col.iterator();
     assertTrue(colIter.hasNext());
@@ -451,7 +494,7 @@ public class TestAuState extends LockssTestCase {
   // Ensure that fields added to AuState get their default value when
   // deserialized from old files not containing the field
   public void testNewField() throws Exception {
-    AuState aus = new AuState(mau, -1, -1, -1, -1, 123, null,
+    AuState aus = makeAuState(mau, -1, -1, -1, -1, 123, null,
 			      1, -1.0, 1.0, historyRepo);
 
     String ser = ser(aus);

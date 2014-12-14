@@ -1,5 +1,5 @@
 /*
- * $Id: MockAuState.java,v 1.26 2013-07-18 21:58:04 dshr Exp $
+ * $Id: MockAuState.java,v 1.26.14.1 2014-12-14 04:16:23 dshr Exp $
  */
 
 /*
@@ -75,8 +75,34 @@ public class MockAuState extends AuState {
 		     long lastPollTime, long lastPollStart,
                      long lastTreeWalk, HashSet crawlUrls,
                      HistoryRepository historyRepo) {
-    super(au, lastCrawlTime, lastCrawlAttempt, lastPollTime, lastPollStart,
-	  lastTreeWalk, crawlUrls, 0, -1.0, -1.0, historyRepo);
+    super(au,
+	  lastCrawlTime,
+	  lastCrawlAttempt,
+	  -1, //lastCrawlResult
+	  null, // lastCrawlResultMsg
+	  lastPollTime, //lastTopLevelPoll
+	  lastPollStart,
+	  -1, // lastPollResult
+	  null, // lastPollResultMsg
+	  0L, // pollDuration
+	  lastTreeWalk,
+	  crawlUrls,
+	  null, // accessType
+	  CLOCKSS_SUB_UNKNOWN, // clockssSubscriptionState
+	  -1.0, // v3Agreement
+	  -1.0, // highestV3Agreement
+	  SubstanceChecker.State.Unknown,
+	  null, // substanceVersion
+	  null, // metadataVersion
+	  -1, //lastMetadataIndex
+	  0L, // lastContentChange
+	  -1L, // lastPoPPoll
+	  -1, // lastPoPPollResult
+	  -1L, // lastLocalHashScan
+	  -1, // lastLocalHashMismatch
+	  -1, // numAgreePeersLastPoR
+	  -1, // numWillingRepairers
+	  historyRepo);
   }
 
   public long getAuCreationTime() {
