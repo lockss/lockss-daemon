@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.54 2014-12-10 22:08:24 dshr Exp $
+ * $Id: AuState.java,v 1.55 2014-12-14 04:14:33 dshr Exp $
  */
 
 /*
@@ -147,31 +147,6 @@ public class AuState implements LockssSerializable {
 	 -1, // lastLocalHashMismatch
 	 0,  // numAgreePeersLastPoR
 	 0,  // numWillingRepairers
-	 historyRepo);
-  }
-
-  /**
-   * DSHR believes this constructor is obsolete and should be removed
-   */
-  protected AuState(ArchivalUnit au,
-		 long lastCrawlTime, long lastCrawlAttempt,
-		 long lastTopLevelPoll, long lastPollStart,
-		 long lastTreeWalk, HashSet crawlUrls,
-		 int clockssSubscriptionStatus,
-		 double v3Agreement, double highestV3Agreement,
-		 HistoryRepository historyRepo) {
-    this(au,
-	 lastCrawlTime, lastCrawlAttempt, -1, null,
-	 lastTopLevelPoll, lastPollStart, -1, null, 0,
-	 lastTreeWalk,
-	 crawlUrls, null, clockssSubscriptionStatus,
-	 v3Agreement, highestV3Agreement,
-	 SubstanceChecker.State.Unknown,
-	 null,				// substanceFeatureVersion
-	 null,				// metadataFeatureVersion
-	 -1,				// lastMetadataIndex
-	 TimeBase.nowMs(),              // lastContentChange
-	 -1, -1, -1, -1, -1, 0,
 	 historyRepo);
   }
 
@@ -432,7 +407,10 @@ public class AuState implements LockssSerializable {
   }
 
   public void setNumAgreePeersLastPoR(int n) {
-    numAgreePeersLastPoR = n;
+    if (numAgreePeersLastPoR != n) {
+      numAgreePeersLastPoR = n;
+      historyRepo.storeAuState(this);
+    }
   }
 
   public int getNumWillingRepairers() {
@@ -440,7 +418,10 @@ public class AuState implements LockssSerializable {
   }
 
   public void setNumWillingRepairers(int n) {
-    numWillingRepairers = n;
+    if (numWillingRepairers != n) {
+      numWillingRepairers = n;
+      historyRepo.storeAuState(this);
+    }
   }
 
   /**
