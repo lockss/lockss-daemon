@@ -8,7 +8,7 @@
   
   comment[platform1] = Atypon
 
-  plugin = org.lockss.plugin.atypon.cys.ClockssCYSPlugin
+  plugin = org.lockss.plugin.atypon.nrcresearchpress.ClockssNRCResearchPressPlugin
   comment[plugin] = org.lockss.plugin.atypon.canadianyoungscientist.ClockssCanadianYoungScientistPlugin
   param[base_url] = http://www.cysjournal.ca/
   implicit < status ; status2 ; year ; name ; param[volume_name] >
