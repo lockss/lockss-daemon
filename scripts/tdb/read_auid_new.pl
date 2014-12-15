@@ -517,6 +517,26 @@ while (my $line = <>) {
     }
     sleep(4);
         
+  } elsif ($plugin eq "ClockssMathematicalSciencesPublishersPlugin") {
+    $url = sprintf("%s%s/%d/manifest", 
+      $param{base_url}, $param{journal_id}, $param{year});
+    $man_url = uri_unescape($url);
+    #printf("\nUrl: %s\n", $man_url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/\/$param{journal_id}\/$param{year}/)) {
+        $vol_title = $param{journal_id};
+        $result = "Manifest";
+      } else {
+        $result = "--"
+      }
+    } else {
+      $result = "--"
+    }
+    sleep(4);
+        
   } elsif ($plugin eq "ClockssPionPlugin") {
     $url = sprintf("%scontents.cgi?journal=%s&amp;volume=%s", 
       $param{base_url}, $param{short_journal_code}, $param{volume_name});
