@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireDrupalPlugin.java,v 1.2 2014-11-12 20:11:41 wkwilson Exp $
+ * $Id: TestHighWireDrupalPlugin.java,v 1.3 2014-12-15 21:23:36 etenbrink Exp $
  */
 
 /*
@@ -43,7 +43,6 @@ import org.lockss.plugin.definable.*;
 import org.lockss.test.*;
 import org.lockss.util.ListUtil;
 import org.lockss.util.urlconn.CacheException;
-import org.lockss.util.urlconn.CacheException.NoRetryDeadLinkException;
 import org.lockss.util.urlconn.CacheException.RetrySameUrlException;
 import org.lockss.util.urlconn.HttpResultMap;
 
@@ -78,8 +77,7 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
     Properties props = new Properties();
     props.setProperty(BASE_URL_KEY, "http://www.example.com/");
     props.setProperty(VOL_KEY, "32");
-    DefinableArchivalUnit au = makeAuFromProps(props);
-    
+    makeAuFromProps(props);
   }
   
   private DefinableArchivalUnit makeAuFromProps(Properties props)
@@ -126,7 +124,7 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
     CacheException exc =
         ((HttpResultMap)plugin.getCacheResultMap()).mapException(au, conn,
             500, "foo");
-    assertClass(NoRetryDeadLinkException.class, exc);
+    assertClass(HighWireDrupalHttpResponseHandler.NoFailRetryableNetworkException_3_60S.class, exc);
     
     conn.setURL(starturl);
     exc = ((HttpResultMap)plugin.getCacheResultMap()).mapException(au, conn,

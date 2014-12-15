@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireDrupalUrlNormalizer.java,v 1.4 2014-07-04 04:03:28 etenbrink Exp $
+ * $Id: TestHighWireDrupalUrlNormalizer.java,v 1.5 2014-12-15 21:25:48 etenbrink Exp $
  */
 
 /*
@@ -32,7 +32,14 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.highwire;
 
+import java.util.Properties;
+
+import org.lockss.config.Configuration;
+import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.plugin.UrlNormalizer;
+import org.lockss.plugin.definable.DefinableArchivalUnit;
+import org.lockss.plugin.definable.DefinablePlugin;
+import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
 /*
  * UrlNormalizer removes  suffixes
@@ -52,7 +59,25 @@ import org.lockss.test.LockssTestCase;
  */
 
 public class TestHighWireDrupalUrlNormalizer extends LockssTestCase {
-
+  
+  static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
+  static final String VOL_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
+  private DefinablePlugin plugin;
+  private DefinableArchivalUnit au;
+  
+  public void setUp() throws Exception {
+    super.setUp();
+    plugin = new DefinablePlugin();
+    plugin.initPlugin(getMockLockssDaemon(),
+        "org.lockss.plugin.highwire.HighWireDrupalPlugin");
+    Properties props = new Properties();
+    props.setProperty(VOL_KEY, "303");
+    props.setProperty(BASE_URL_KEY, "http://www.example.com/");
+    
+    Configuration config = ConfigurationUtil.fromProps(props);
+    au = (DefinableArchivalUnit)plugin.configureAu(config, null);
+    }
+  
   public void testUrlNormalizer() throws Exception {
     UrlNormalizer normalizer = new HighWireDrupalUrlNormalizer();
     

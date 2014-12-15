@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireDrupalArticleIteratorFactory.java,v 1.4 2014-11-12 20:11:41 wkwilson Exp $
+ * $Id: TestHighWireDrupalArticleIteratorFactory.java,v 1.5 2014-12-15 21:21:59 etenbrink Exp $
  */
 
 /*
@@ -119,8 +119,9 @@ public class TestHighWireDrupalArticleIteratorFactory extends ArticleIteratorTes
     Pattern pat = getPattern(artIter);
     
     assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1");
-    assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1");
     // but not to ...
+    assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1");
+    assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/ajpendo/1/1");
     assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/ajpendo/1/1/1");
     assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1.full");
     assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1.full.pdf");
