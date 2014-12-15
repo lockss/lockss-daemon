@@ -614,7 +614,7 @@
     param[journal_issn] = 2166-7292
 
     au < crawling ; exists ; 2013 ; International Journal of Conceptual Structures and Smart Applications (IJCSSA) Volume 1 ; 1 > 
-    au < expected ; exists ; 2014 ; International Journal of Conceptual Structures and Smart Applications (IJCSSA) Volume 2 ; 2 > 
+    au < manifest ; exists ; 2014 ; International Journal of Conceptual Structures and Smart Applications (IJCSSA) Volume 2 ; 2 > 
 
   }
 
@@ -998,7 +998,7 @@
     au < finished ; crawling ; 2011 ; International Journal of Embedded and Real-Time Communication Systems (IJERTCS) Volume 2 ; 2 > 
     au < finished ; crawling ; 2012 ; International Journal of Embedded and Real-Time Communication Systems (IJERTCS) Volume 3 ; 3 > 
     au < crawling ; exists ; 2013 ; International Journal of Embedded and Real-Time Communication Systems (IJERTCS) Volume 4 ; 4 > 
-    au < expected ; exists ; 2014 ; International Journal of Embedded and Real-Time Communication Systems (IJERTCS) Volume 5 ; 5 > 
+    au < manifest ; exists ; 2014 ; International Journal of Embedded and Real-Time Communication Systems (IJERTCS) Volume 5 ; 5 > 
 
   }
 
@@ -1619,7 +1619,7 @@
     au < finished ; crawling ; 2011 ; International Journal of Interdisciplinary Telecommunications and Networking (IJITN) Volume 3 ; 3 > 
     au < finished ; crawling ; 2012 ; International Journal of Interdisciplinary Telecommunications and Networking (IJITN) Volume 4 ; 4 > 
     au < crawling ; exists ; 2013 ; International Journal of Interdisciplinary Telecommunications and Networking (IJITN) Volume 5 ; 5 > 
-    au < expected ; exists ; 2014 ; International Journal of Interdisciplinary Telecommunications and Networking (IJITN) Volume 6 ; 6 > 
+    au < manifest ; exists ; 2014 ; International Journal of Interdisciplinary Telecommunications and Networking (IJITN) Volume 6 ; 6 > 
 
   }
 
@@ -2024,7 +2024,8 @@
     title <
       name = International Journal of Pharmacology and Pharmaceutical Technology (IJPPT) ;
       issn = 2166-7276 ;
-      eissn = 2166-7284
+      eissn = 2166-7284 ;
+      issnl = 2166-7276
     >
 
     comment[0] = forthcoming in 2014 as of 9-18-2013
@@ -2046,7 +2047,7 @@
     param[journal_issn] = 2155-5621
 
     au < crawling ; exists ; 2013 ; International Journal of Privacy and Health Information Management (IJPHIM) Volume 1 ; 1 > 
-    au < expected ; exists ; 2014 ; International Journal of Privacy and Health Information Management (IJPHIM) Volume 2 ; 2 > 
+    au < manifest ; exists ; 2014 ; International Journal of Privacy and Health Information Management (IJPHIM) Volume 2 ; 2 > 
 
   }
 
