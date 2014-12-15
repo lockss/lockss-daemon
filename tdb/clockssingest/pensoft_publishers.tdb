@@ -8,7 +8,8 @@
   
     rights = openaccess
     implicit < status ; status2 ; year ; param[year] ; name ; volume >
-    plugin = org.lockss.plugin.pensoft.ClockssPensoftPlugin
+    comment[old_plugin] = org.lockss.plugin.pensoft.ClockssPensoftPlugin
+    plugin = needs.plugin
     param[base_url] = http://www.pensoft.net/
     
 
