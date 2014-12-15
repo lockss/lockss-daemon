@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>down - for all publishers</string>
+    <string>development - Evan</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -11,24 +11,36 @@
     <string>plugin_name</string>
     <string>HighWire Drupal Plugin</string>
   </entry>
+  <!--  
+        This is a list of HighWire Drupal Child plugins - be sure to update
+        the child's plugin_parent_version number to match, then
+        update the child's plugin_version number:
+        aps.APSDrupalPlugin
+        elife.ELifeDrupalPlugin
+        
+        Note: the LOCKSS child is the parent of the CLOCKSS child plugin, therefore
+        update the CLOCKSS child plugin_version & plugin_parent_version with 
+        the LOCKSS child's new version
+        
+   -->
   <entry>
     <string>plugin_version</string>
-    <string>13</string>
+    <string>14</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Substance</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Poll</string>
-        <string>7</string>
+        <string>8</string>
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
     </map>
   </entry>
@@ -100,13 +112,10 @@
     <string>au_crawlrules</string>
     <list>
       <!-- no gifs from other volumes -->
-      <string>2,"^%scontent/(?!([^/]+/)?%s)[^?]*[.](?:gif)", base_url, volume_name</string>
+      <string>2,"^%scontent/(?!([^/]+/)?%s)[^?]*[.]gif", base_url, volume_name</string>
       <!-- all fonts, images, resources, css, js, etc. -->
       <string>1,"^https?://%s/[^?]*[.](?:eot|svg|ttf|woff|bmp|gif|ico|jpe?g|png|tif?f|(css|js)(?:[?].*)?)$", base_url_host</string>
       <string>1,"^https?://%s[^?]*/highwire/jcore", base_url_host</string>
-      <!-- permission page on any cloudfront host
-      <string>1,"^https?://[^.]+[.]cloudfront[.]net/lockss[.]htm$"</string>
-       -->
       <!-- Do not crawl unless from base url -->
       <string>4,"^%s", base_url</string>
       <!-- Do not crawl these BMJ variations -->
@@ -114,7 +123,7 @@
       <!-- filter links with '{' like http://ajprenal.physiology.org/content/299/4/{openurl}?query=rft... -->
       <string>2,"^%s(?:[^?]+([?](sort|tab|form)|most-(cited|read)|featured_article|featured-podcasts|(back-matter|ed-board)[.]pdf)|content/(by/|early/|[^{]+[{]))", base_url</string>
       <string>1,"^%s(?:content(?:/[^/]+)?/(?:%s|suppl)|highwire/(?:filestream|markup|article_citation_preview))/", base_url, volume_name</string>
-      <string>1,"^%shighwire/citation/[^/]+/ris$", base_url</string>
+      <string>1,"^%shighwire/citation/[^/]+/(ris|bibtex|endnote.?)$", base_url</string>
     </list>
   </entry>
   <entry>
@@ -126,9 +135,14 @@
     <string>org.lockss.plugin.highwire.HighWireDrupalHtmlFilterFactory</string>
   </entry>
   <entry>
+    <string>plugin_crawl_url_comparator_factory</string>
+    <string>org.lockss.plugin.highwire.HighWirePressH20CrawlUrlComparatorFactory</string>
+  </entry>
+  <entry>
     <string>plugin_cache_result_list</string>
     <list>
       <string>500=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
+      <string>504=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
     </list>
   </entry>
   <entry>
@@ -163,7 +177,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%scontent/%s/[^/]+/.*(?:[.](?:full(?:[.]pdf([+]html)?)?))$", base_url, volume_name</string>
+      <string>"^%scontent(?:/[^/]+)?/%s/[^/]+/[^/.?]+(?:[.]full(?:[.]pdf)?)?$", base_url, volume_name</string>
     </list>
   </entry>
   <entry>
@@ -174,9 +188,13 @@
     <string>au_permission_checker_factory</string>
     <string>org.lockss.plugin.highwire.HighWireDrupalPermissionCheckerFactory</string>
   </entry>
-  <entry>
+  <!-- entry>
     <string>plugin_per_host_permission_path</string>
     <string>/lockss.htm</string>
+  </entry -->
+  <entry>
+    <string>au_http_request_header</string>
+    <string>Accept:text/html, image/gif, image/jpeg; q=.2, */*; q=.2</string>
   </entry>
   <entry>
     <string>plugin_fetch_rate_limiter_source</string>
@@ -192,6 +210,20 @@
       <entry>
         <string>application/pdf,text/html,application/vnd.ms-powerpoint</string>
         <string>1/3000</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <!-- manifest to volume to issue -->
+    <string>au_refetch_depth</string>
+    <int>2</int>
+  </entry>
+  <entry>
+    <string>content-testing_override</string>
+    <map>
+      <entry>
+        <string>au_http_request_header</string>
+        <string>X-Lockss-Source:publisher</string>
       </entry>
     </map>
   </entry>
