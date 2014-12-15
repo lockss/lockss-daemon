@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireDrupalUrlNormalizer.java,v 1.6 2014-07-04 04:06:47 etenbrink Exp $
+ * $Id: HighWireDrupalUrlNormalizer.java,v 1.7 2014-12-15 21:52:09 etenbrink Exp $
  */
 
 /*
@@ -43,9 +43,15 @@ import org.lockss.util.StringUtil;
 public class HighWireDrupalUrlNormalizer implements UrlNormalizer {
   
   protected static Logger log = Logger.getLogger(HighWireDrupalUrlNormalizer.class);
+  
   protected static final String WEB_VIEWER =
       "/sites/all/libraries/pdfjs/web/viewer.html?file=/";
   protected static final Pattern URL_PAT = Pattern.compile("/content/[^/0-9]+/");
+  
+  protected static final String CITATION = "/highwire/citation/";
+  protected static final Pattern RIS_PAT = Pattern.compile(
+      "/(ris|bookends|easybib|mendeley|papers|reference-manager|refworks|zotero)$");
+  
   protected static final String LARGE_JPG = ".large.jpg?";
   protected static final String JS_SUFFIX = ".js?";
   protected static final String CSS_SUFFIX = ".css?";
@@ -55,6 +61,10 @@ public class HighWireDrupalUrlNormalizer implements UrlNormalizer {
   protected static final String PDF = ".pdf";
   protected static final String FT_PDF = ".full-text.pdf";
   protected static final String FULL_PDF_SUFFIX = ".full.pdf";
+  
+  protected static final String RSS_PARAM = "?rss=";
+  protected static final String IJKEY_PARAM = "?ijkey=";
+  
   
   public String normalizeUrl(String url, ArchivalUnit au)
       throws PluginException {
@@ -80,11 +90,25 @@ public class HighWireDrupalUrlNormalizer implements UrlNormalizer {
     // http://ajprenal.physiology.org/sites/all/libraries/pdfjs/web/viewer.html
     //  ?file=/content/ajprenal/304/1/F33.full.pdf
     // to http://ajprenal.physiology.org/content/304/1/F33.full.pdf
+    // 
+    // map 
+    // http://ajpcell.physiology.org/highwire/citation/1814/bookends
+    // http://ajpcell.physiology.org/highwire/citation/1814/easybib
+    // http://ajpcell.physiology.org/highwire/citation/1814/mendeley
+    // http://ajpcell.physiology.org/highwire/citation/1814/papers
+    // http://ajpcell.physiology.org/highwire/citation/1814/reference-manager
+    // http://ajpcell.physiology.org/highwire/citation/1814/zotero
+    // to http://ajpcell.physiology.org/highwire/citation/1814/ris
     
     if (url.contains(WEB_VIEWER)) { 
       url = url.replace(WEB_VIEWER, "/");
       Matcher  mat = URL_PAT.matcher(url);
       url = mat.replaceFirst("/content/");
+    }
+    
+    if (url.contains(CITATION)) { 
+      Matcher  mat = RIS_PAT.matcher(url);
+      url = mat.replaceFirst("/ris");
     }
     
     if (url.contains(LARGE_JPG) ||
@@ -100,8 +124,12 @@ public class HighWireDrupalUrlNormalizer implements UrlNormalizer {
       }
     }
     
-    return(url);
+    if (url.contains(RSS_PARAM) ||
+        url.contains(IJKEY_PARAM)) {
+      url = url.replaceFirst("[?].+$", "");
+    }
     
+    return(url);
   }
   
 }
