@@ -57,16 +57,17 @@
     param[journal_abbr] = gsp
     implicit < status ; year ; volume ; name ; param[volume] >
 
-    au < manifest ; 2006 ; 1  ; Genocide Studies and Prevention Volume 1 ; 1 >
-    au < manifest ; 2007 ; 2  ; Genocide Studies and Prevention Volume 2 ; 2 >
-    au < manifest ; 2008 ; 3  ; Genocide Studies and Prevention Volume 3 ; 3 >
-    au < manifest ; 2009 ; 4  ; Genocide Studies and Prevention Volume 4 ; 4 >
-    au < manifest ; 2010 ; 5  ; Genocide Studies and Prevention Volume 5 ; 5 >
-    au < manifest ; 2011 ; 6  ; Genocide Studies and Prevention Volume 6 ; 6 >
-    au < manifest ; 2012 ; 7  ; Genocide Studies and Prevention Volume 7 ; 7 >
-    au < manifest ; 2013-2014 ; 8 ; Genocide Studies and Prevention Volume 8 ; 8 >
+    au < ready ; 2006 ; 1  ; Genocide Studies and Prevention Volume 1 ; 1 >
+    au < ready ; 2007 ; 2  ; Genocide Studies and Prevention Volume 2 ; 2 >
+    au < ready ; 2008 ; 3  ; Genocide Studies and Prevention Volume 3 ; 3 >
+    au < ready ; 2009 ; 4  ; Genocide Studies and Prevention Volume 4 ; 4 >
+    au < ready ; 2010 ; 5  ; Genocide Studies and Prevention Volume 5 ; 5 >
+    au < ready ; 2011 ; 6  ; Genocide Studies and Prevention Volume 6 ; 6 >
+    au < ready ; 2012 ; 7  ; Genocide Studies and Prevention Volume 7 ; 7 >
+    au < ready ; 2013-2014 ; 8 ; Genocide Studies and Prevention Volume 8 ; 8 >
 
   }
+  
   {
   
     title <
@@ -81,21 +82,21 @@
     param[journal_abbr] = geologia
     implicit < status ; year ; name ; param[volume] >
 
-    au < manifest ; 2000 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 45 ; 45 >
-    au < manifest ; 2001 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 46 ; 46 >
-    au < manifest ; 2002 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 47 ; 47 >
-    au < manifest ; 2003 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 48 ; 48 >
-    au < manifest ; 2004 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 49 ; 49 >
-    au < manifest ; 2005 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 50 ; 50 >
-    au < manifest ; 2006 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 51 ; 51 >
-    au < manifest ; 2007 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 52 ; 52 >
-    au < manifest ; 2008 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 53 ; 53 >
-    au < manifest ; 2009 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 54 ; 54 >
-    au < manifest ; 2010 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 55 ; 55 >
-    au < manifest ; 2011 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 56 ; 56 >
-    au < manifest ; 2012 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 57 ; 57 >
-    au < manifest ; 2013 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 58 ; 58 >
-    au < manifest ; 2014 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 59 ; 59 >
+    au < ready ; 2000 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 45 ; 45 >
+    au < ready ; 2001 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 46 ; 46 >
+    au < ready ; 2002 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 47 ; 47 >
+    au < ready ; 2003 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 48 ; 48 >
+    au < ready ; 2004 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 49 ; 49 >
+    au < ready ; 2005 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 50 ; 50 >
+    au < ready ; 2006 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 51 ; 51 >
+    au < ready ; 2007 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 52 ; 52 >
+    au < ready ; 2008 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 53 ; 53 >
+    au < ready ; 2009 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 54 ; 54 >
+    au < ready ; 2010 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 55 ; 55 >
+    au < ready ; 2011 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 56 ; 56 >
+    au < ready ; 2012 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 57 ; 57 >
+    au < ready ; 2013 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 58 ; 58 >
+    au < ready ; 2014 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 59 ; 59 >
 
   }
 
@@ -131,7 +132,7 @@
     au < ready ; 2003 ; Tampa Bay Area Study Group Project Data Sets 2003 ; 2003 ; fulltext >
     au < ready ; 2004 ; Tampa Bay Area Study Group Project Data Sets 2004 ; 2004 ; fulltext >
     au < ready ; 2010 ; Tampa Bay Area Study Group Project Data Sets 2010 ; 2010 ; fulltext >
-    au < manifest ; 2011 ; Tampa Bay Area Study Group Project Data Sets 2011 [abstracts only] ; 2011 ; abstracts >
+    au < ready ; 2011 ; Tampa Bay Area Study Group Project Data Sets 2011 [abstracts only] ; 2011 ; abstracts >
 
   }
 
@@ -426,19 +427,19 @@
     param[collection] = dean_cbcs
     implicit < status ; year ; name ; param[collection_heading] ; attr[au_coverage_depth] >  
 
-    au < manifest ; 1997 ; University of South Florida College of Behavioral and Community Sciences Dean's Office Publications 1997 [abstracts only] ; 1997 ; abstracts >
-    au < manifest ; 1998 ; University of South Florida College of Behavioral and Community Sciences Dean's Office Publications 1998 [abstracts only] ; 1998 ; abstracts >
-    au < manifest ; 1999 ; University of South Florida College of Behavioral and Community Sciences Dean's Office Publications 1999 ; 1999 ; fulltext >
-    au < manifest ; 2000 ; University of South Florida College of Behavioral and Community Sciences Dean's Office Publications 2000 ; 2000 ; fulltext >
-    au < manifest ; 2001 ; University of South Florida College of Behavioral and Community Sciences Dean's Office Publications 2001 ; 2001 ; fulltext >
-    au < manifest ; 2003 ; University of South Florida College of Behavioral and Community Sciences Dean's Office Publications 2003 ; 2003 ; fulltext >
-    au < manifest ; 2007 ; University of South Florida College of Behavioral and Community Sciences Dean's Office Publications 2007 [abstracts only] ; 2007 ; abstracts >
-    au < manifest ; 2008 ; University of South Florida College of Behavioral and Community Sciences Dean's Office Publications 2008 [abstracts only] ; 2008 ; abstracts >
-    au < manifest ; 2009 ; University of South Florida College of Behavioral and Community Sciences Dean's Office Publications 2009 [abstracts only] ; 2009 ; abstracts >
-    au < manifest ; 2010 ; University of South Florida College of Behavioral and Community Sciences Dean's Office Publications 2010 [abstracts only] ; 2010 ; abstracts >
-    au < manifest ; 2011 ; University of South Florida College of Behavioral and Community Sciences Dean's Office Publications 2011 [abstracts only] ; 2011 ; abstracts >
-    au < manifest ; 2012 ; University of South Florida College of Behavioral and Community Sciences Dean's Office Publications 2012 ; 2012 ; fulltext >
-    au < manifest ; 2013 ; University of South Florida College of Behavioral and Community Sciences Dean's Office Publications 2013 [abstracts only] ; 2013 ; abstracts >
+    au < ready ; 1997 ; University of South Florida College of Behavioral and Community Sciences Dean's Office Publications 1997 [abstracts only] ; 1997 ; abstracts >
+    au < ready ; 1998 ; University of South Florida College of Behavioral and Community Sciences Dean's Office Publications 1998 [abstracts only] ; 1998 ; abstracts >
+    au < ready ; 1999 ; University of South Florida College of Behavioral and Community Sciences Dean's Office Publications 1999 ; 1999 ; fulltext >
+    au < ready ; 2000 ; University of South Florida College of Behavioral and Community Sciences Dean's Office Publications 2000 ; 2000 ; fulltext >
+    au < ready ; 2001 ; University of South Florida College of Behavioral and Community Sciences Dean's Office Publications 2001 ; 2001 ; fulltext >
+    au < ready ; 2003 ; University of South Florida College of Behavioral and Community Sciences Dean's Office Publications 2003 ; 2003 ; fulltext >
+    au < ready ; 2007 ; University of South Florida College of Behavioral and Community Sciences Dean's Office Publications 2007 [abstracts only] ; 2007 ; abstracts >
+    au < ready ; 2008 ; University of South Florida College of Behavioral and Community Sciences Dean's Office Publications 2008 [abstracts only] ; 2008 ; abstracts >
+    au < ready ; 2009 ; University of South Florida College of Behavioral and Community Sciences Dean's Office Publications 2009 [abstracts only] ; 2009 ; abstracts >
+    au < ready ; 2010 ; University of South Florida College of Behavioral and Community Sciences Dean's Office Publications 2010 [abstracts only] ; 2010 ; abstracts >
+    au < ready ; 2011 ; University of South Florida College of Behavioral and Community Sciences Dean's Office Publications 2011 [abstracts only] ; 2011 ; abstracts >
+    au < ready ; 2012 ; University of South Florida College of Behavioral and Community Sciences Dean's Office Publications 2012 ; 2012 ; fulltext >
+    au < ready ; 2013 ; University of South Florida College of Behavioral and Community Sciences Dean's Office Publications 2013 [abstracts only] ; 2013 ; abstracts >
 
   }
 
@@ -534,20 +535,20 @@
     param[collection] = arts_pub
     implicit < status ; year ; name ; param[collection_heading] >  
 
-    au < manifest ; 1986 ; University of South Florida College of The Arts Publications 1986 ; 1986 >
-    au < manifest ; 1987 ; University of South Florida College of The Arts Publications 1987 ; 1987 >
-    au < manifest ; 1988 ; University of South Florida College of The Arts Publications 1988 ; 1988 >
-    au < manifest ; 1989 ; University of South Florida College of The Arts Publications 1989 ; 1989 >
-    au < manifest ; 1990 ; University of South Florida College of The Arts Publications 1990 ; 1990 >
-    au < manifest ; 1991 ; University of South Florida College of The Arts Publications 1991 ; 1991 >
-    au < manifest ; 1992 ; University of South Florida College of The Arts Publications 1992 ; 1992 >
-    au < manifest ; 1993 ; University of South Florida College of The Arts Publications 1993 ; 1993 >
-    au < manifest ; 1994 ; University of South Florida College of The Arts Publications 1994 ; 1994 >
-    au < manifest ; 1995 ; University of South Florida College of The Arts Publications 1995 ; 1995 >
-    au < manifest ; 1996 ; University of South Florida College of The Arts Publications 1996 ; 1996 >
-    au < manifest ; 1999 ; University of South Florida College of The Arts Publications 1999 ; 1999 >
-    au < manifest ; 2001 ; University of South Florida College of The Arts Publications 2001 ; 2001 >
-    au < manifest ; 2004 ; University of South Florida College of The Arts Publications 2004 ; 2004 >
+    au < ready ; 1986 ; University of South Florida College of The Arts Publications 1986 ; 1986 >
+    au < ready ; 1987 ; University of South Florida College of The Arts Publications 1987 ; 1987 >
+    au < ready ; 1988 ; University of South Florida College of The Arts Publications 1988 ; 1988 >
+    au < ready ; 1989 ; University of South Florida College of The Arts Publications 1989 ; 1989 >
+    au < ready ; 1990 ; University of South Florida College of The Arts Publications 1990 ; 1990 >
+    au < ready ; 1991 ; University of South Florida College of The Arts Publications 1991 ; 1991 >
+    au < ready ; 1992 ; University of South Florida College of The Arts Publications 1992 ; 1992 >
+    au < ready ; 1993 ; University of South Florida College of The Arts Publications 1993 ; 1993 >
+    au < ready ; 1994 ; University of South Florida College of The Arts Publications 1994 ; 1994 >
+    au < ready ; 1995 ; University of South Florida College of The Arts Publications 1995 ; 1995 >
+    au < ready ; 1996 ; University of South Florida College of The Arts Publications 1996 ; 1996 >
+    au < ready ; 1999 ; University of South Florida College of The Arts Publications 1999 ; 1999 >
+    au < ready ; 2001 ; University of South Florida College of The Arts Publications 2001 ; 2001 >
+    au < ready ; 2004 ; University of South Florida College of The Arts Publications 2004 ; 2004 >
 
   }
 
@@ -605,14 +606,14 @@
     param[collection] = els_facpub
     implicit < status ; year ; name ; param[collection_heading] ; attr[au_coverage_depth] >  
 
-    au < manifest ; 2006 ; University of South Florida Educational Leadership and Policy Studies Faculty Publications 2006 ; 2006 ; fulltext >
-    au < manifest ; 2007 ; University of South Florida Educational Leadership and Policy Studies Faculty Publications 2007 ; 2007 ; fulltext >
-    au < manifest ; 2008 ; University of South Florida Educational Leadership and Policy Studies Faculty Publications 2008 ; 2008 ; fulltext >
-    au < manifest ; 2009 ; University of South Florida Educational Leadership and Policy Studies Faculty Publications 2009 [abstracts only] ; 2009 ; abstracts >
-    au < manifest ; 2010 ; University of South Florida Educational Leadership and Policy Studies Faculty Publications 2010 ; 2010 ; fulltext >
-    au < manifest ; 2011 ; University of South Florida Educational Leadership and Policy Studies Faculty Publications 2011 ; 2011 ; fulltext >
-    au < manifest ; 2012 ; University of South Florida Educational Leadership and Policy Studies Faculty Publications 2012 ; 2012 ; fulltext >
-    au < manifest ; 2013 ; University of South Florida Educational Leadership and Policy Studies Faculty Publications 2013 ; 2013 ; fulltext >
+    au < ready ; 2006 ; University of South Florida Educational Leadership and Policy Studies Faculty Publications 2006 ; 2006 ; fulltext >
+    au < ready ; 2007 ; University of South Florida Educational Leadership and Policy Studies Faculty Publications 2007 ; 2007 ; fulltext >
+    au < ready ; 2008 ; University of South Florida Educational Leadership and Policy Studies Faculty Publications 2008 ; 2008 ; fulltext >
+    au < ready ; 2009 ; University of South Florida Educational Leadership and Policy Studies Faculty Publications 2009 [abstracts only] ; 2009 ; abstracts >
+    au < ready ; 2010 ; University of South Florida Educational Leadership and Policy Studies Faculty Publications 2010 ; 2010 ; fulltext >
+    au < ready ; 2011 ; University of South Florida Educational Leadership and Policy Studies Faculty Publications 2011 ; 2011 ; fulltext >
+    au < ready ; 2012 ; University of South Florida Educational Leadership and Policy Studies Faculty Publications 2012 ; 2012 ; fulltext >
+    au < ready ; 2013 ; University of South Florida Educational Leadership and Policy Studies Faculty Publications 2013 ; 2013 ; fulltext >
 
   }
 
@@ -628,35 +629,35 @@
     param[collection] = eng_facpub
     implicit < status ; year ; name ; param[collection_heading] ; attr[au_coverage_depth] >  
 
-    au < manifest ; 1984 ; University of South Florida English Faculty Publications 1984 [abstracts only] ; 1984 ; abstracts >
-    au < manifest ; 1985 ; University of South Florida English Faculty Publications 1985 ; 1985 ; fulltext >
-    au < manifest ; 1986 ; University of South Florida English Faculty Publications 1986 ; 1986 ; fulltext >
-    au < manifest ; 1987 ; University of South Florida English Faculty Publications 1987 ; 1987 ; fulltext >
-    au < manifest ; 1989 ; University of South Florida English Faculty Publications 1989 ; 1989 ; fulltext >
-    au < manifest ; 1990 ; University of South Florida English Faculty Publications 1990 ; 1990 ; fulltext >
-    au < manifest ; 1991 ; University of South Florida English Faculty Publications 1991 ; 1991 ; fulltext >
-    au < manifest ; 1992 ; University of South Florida English Faculty Publications 1992 ; 1992 ; fulltext >
-    au < manifest ; 1993 ; University of South Florida English Faculty Publications 1993 ; 1993 ; fulltext >
-    au < manifest ; 1994 ; University of South Florida English Faculty Publications 1994 ; 1994 ; fulltext >
-    au < manifest ; 1995 ; University of South Florida English Faculty Publications 1995 ; 1995 ; fulltext >
-    au < manifest ; 1996 ; University of South Florida English Faculty Publications 1996 ; 1996 ; fulltext >
-    au < manifest ; 1997 ; University of South Florida English Faculty Publications 1997 ; 1997 ; fulltext >
-    au < manifest ; 1998 ; University of South Florida English Faculty Publications 1998 [abstracts only] ; 1998 ; abstracts >
-    au < manifest ; 1999 ; University of South Florida English Faculty Publications 1999 [abstracts only] ; 1999 ; abstracts >
-    au < manifest ; 2000 ; University of South Florida English Faculty Publications 2000 ; 2000 ; fulltext >
-    au < manifest ; 2001 ; University of South Florida English Faculty Publications 2001 ; 2001 ; fulltext >
-    au < manifest ; 2002 ; University of South Florida English Faculty Publications 2002 ; 2002 ; fulltext >
-    au < manifest ; 2003 ; University of South Florida English Faculty Publications 2003 ; 2003 ; fulltext >
-    au < manifest ; 2004 ; University of South Florida English Faculty Publications 2004 ; 2004 ; fulltext >
-    au < manifest ; 2005 ; University of South Florida English Faculty Publications 2005 [abstracts only] ; 2005 ; abstracts >
-    au < manifest ; 2006 ; University of South Florida English Faculty Publications 2006 [abstracts only] ; 2006 ; abstracts >
-    au < manifest ; 2007 ; University of South Florida English Faculty Publications 2007 [abstracts only] ; 2007 ; abstracts >
-    au < manifest ; 2008 ; University of South Florida English Faculty Publications 2008 ; 2008 ; fulltext >
-    au < manifest ; 2009 ; University of South Florida English Faculty Publications 2009 [abstracts only] ; 2009 ; abstracts >
-    au < manifest ; 2010 ; University of South Florida English Faculty Publications 2010 ; 2010 ; fulltext >
-    au < manifest ; 2011 ; University of South Florida English Faculty Publications 2011 [abstracts only]  ; 2011 ; abstracts >
-    au < manifest ; 2012 ; University of South Florida English Faculty Publications 2012 ; 2012 ; fulltext >
-    au < manifest ; 2013 ; University of South Florida English Faculty Publications 2013 ; 2013 ; fulltext >
+    au < ready ; 1984 ; University of South Florida English Faculty Publications 1984 [abstracts only] ; 1984 ; abstracts >
+    au < ready ; 1985 ; University of South Florida English Faculty Publications 1985 ; 1985 ; fulltext >
+    au < ready ; 1986 ; University of South Florida English Faculty Publications 1986 ; 1986 ; fulltext >
+    au < ready ; 1987 ; University of South Florida English Faculty Publications 1987 ; 1987 ; fulltext >
+    au < ready ; 1989 ; University of South Florida English Faculty Publications 1989 ; 1989 ; fulltext >
+    au < ready ; 1990 ; University of South Florida English Faculty Publications 1990 ; 1990 ; fulltext >
+    au < ready ; 1991 ; University of South Florida English Faculty Publications 1991 ; 1991 ; fulltext >
+    au < ready ; 1992 ; University of South Florida English Faculty Publications 1992 ; 1992 ; fulltext >
+    au < ready ; 1993 ; University of South Florida English Faculty Publications 1993 ; 1993 ; fulltext >
+    au < ready ; 1994 ; University of South Florida English Faculty Publications 1994 ; 1994 ; fulltext >
+    au < ready ; 1995 ; University of South Florida English Faculty Publications 1995 ; 1995 ; fulltext >
+    au < ready ; 1996 ; University of South Florida English Faculty Publications 1996 ; 1996 ; fulltext >
+    au < ready ; 1997 ; University of South Florida English Faculty Publications 1997 ; 1997 ; fulltext >
+    au < ready ; 1998 ; University of South Florida English Faculty Publications 1998 [abstracts only] ; 1998 ; abstracts >
+    au < ready ; 1999 ; University of South Florida English Faculty Publications 1999 [abstracts only] ; 1999 ; abstracts >
+    au < ready ; 2000 ; University of South Florida English Faculty Publications 2000 ; 2000 ; fulltext >
+    au < ready ; 2001 ; University of South Florida English Faculty Publications 2001 ; 2001 ; fulltext >
+    au < ready ; 2002 ; University of South Florida English Faculty Publications 2002 ; 2002 ; fulltext >
+    au < ready ; 2003 ; University of South Florida English Faculty Publications 2003 ; 2003 ; fulltext >
+    au < ready ; 2004 ; University of South Florida English Faculty Publications 2004 ; 2004 ; fulltext >
+    au < ready ; 2005 ; University of South Florida English Faculty Publications 2005 [abstracts only] ; 2005 ; abstracts >
+    au < ready ; 2006 ; University of South Florida English Faculty Publications 2006 [abstracts only] ; 2006 ; abstracts >
+    au < ready ; 2007 ; University of South Florida English Faculty Publications 2007 [abstracts only] ; 2007 ; abstracts >
+    au < ready ; 2008 ; University of South Florida English Faculty Publications 2008 ; 2008 ; fulltext >
+    au < ready ; 2009 ; University of South Florida English Faculty Publications 2009 [abstracts only] ; 2009 ; abstracts >
+    au < ready ; 2010 ; University of South Florida English Faculty Publications 2010 ; 2010 ; fulltext >
+    au < ready ; 2011 ; University of South Florida English Faculty Publications 2011 [abstracts only]  ; 2011 ; abstracts >
+    au < ready ; 2012 ; University of South Florida English Faculty Publications 2012 ; 2012 ; fulltext >
+    au < ready ; 2013 ; University of South Florida English Faculty Publications 2013 ; 2013 ; fulltext >
 
   }
 
@@ -672,14 +673,14 @@
     param[collection] = fs_pubs
     implicit < status ; name ; param[collection_heading] >  
 
-    au < manifest ; University of South Florida Faculty Senate Archives Agendas/Minutes ; agendasminutes >
-    au < manifest ; University of South Florida Faculty Senate Archives Articles ; article >
-    au < manifest ; University of South Florida Faculty Senate Archives Council Vacancies ; councilvacancies >
-    au < manifest ; University of South Florida Faculty Senate Archives Forms ; forms >
-    au < manifest ; University of South Florida Faculty Senate Archives News Articles ; news >
-    au < manifest ; University of South Florida Faculty Senate Archives Rosters ; roster >
-    au < manifest ; University of South Florida Faculty Senate Archives Schedule ; schedule >
-    au < manifest ; University of South Florida Faculty Senate Archives Statistical Reports ; report >
+    au < ready ; University of South Florida Faculty Senate Archives Agendas/Minutes ; agendasminutes >
+    au < ready ; University of South Florida Faculty Senate Archives Articles ; article >
+    au < ready ; University of South Florida Faculty Senate Archives Council Vacancies ; councilvacancies >
+    au < ready ; University of South Florida Faculty Senate Archives Forms ; forms >
+    au < ready ; University of South Florida Faculty Senate Archives News Articles ; news >
+    au < ready ; University of South Florida Faculty Senate Archives Rosters ; roster >
+    au < ready ; University of South Florida Faculty Senate Archives Schedule ; schedule >
+    au < ready ; University of South Florida Faculty Senate Archives Statistical Reports ; report >
 
   }
 
@@ -695,35 +696,35 @@
     param[collection] = gly_facpub
     implicit < status ; year ; name ; param[collection_heading] ; attr[au_coverage_depth] >  
 
-    au < manifest ; 1978 ; University of South Florida Geology Faculty Publications 1978 [abstracts only] ; 1978 ; abstracts >
-    au < manifest ; 1983 ; University of South Florida Geology Faculty Publications 1983 [abstracts only] ; 1983 ; abstracts >
-    au < manifest ; 1986 ; University of South Florida Geology Faculty Publications 1986 ; 1986 ; fulltext >
-    au < manifest ; 1987 ; University of South Florida Geology Faculty Publications 1987 [abstracts only] ; 1987 ; abstracts >
-    au < manifest ; 1988 ; University of South Florida Geology Faculty Publications 1988 [abstracts only] ; 1988 ; abstracts >
-    au < manifest ; 1989 ; University of South Florida Geology Faculty Publications 1989 [abstracts only] ; 1989 ; abstracts >
-    au < manifest ; 1991 ; University of South Florida Geology Faculty Publications 1991 [abstracts only] ; 1991 ; abstracts >
-    au < manifest ; 1992 ; University of South Florida Geology Faculty Publications 1992 [abstracts only] ; 1992 ; abstracts >
-    au < manifest ; 1993 ; University of South Florida Geology Faculty Publications 1993 [abstracts only] ; 1993 ; abstracts >
-    au < manifest ; 1994 ; University of South Florida Geology Faculty Publications 1994 [abstracts only] ; 1994 ; abstracts >
-    au < manifest ; 1995 ; University of South Florida Geology Faculty Publications 1995 [abstracts only] ; 1995 ; abstracts >
-    au < manifest ; 1996 ; University of South Florida Geology Faculty Publications 1996 [abstracts only] ; 1996 ; abstracts >
-    au < manifest ; 1997 ; University of South Florida Geology Faculty Publications 1997 ; 1997 ; fulltext >
-    au < manifest ; 1998 ; University of South Florida Geology Faculty Publications 1998 ; 1998 ; fulltext >
-    au < manifest ; 1999 ; University of South Florida Geology Faculty Publications 1999 ; 1999 ; fulltext >
-    au < manifest ; 2000 ; University of South Florida Geology Faculty Publications 2000 ; 2000 ; fulltext >
-    au < manifest ; 2001 ; University of South Florida Geology Faculty Publications 2001 ; 2001 ; fulltext >
-    au < manifest ; 2002 ; University of South Florida Geology Faculty Publications 2002 ; 2002 ; fulltext >
-    au < manifest ; 2003 ; University of South Florida Geology Faculty Publications 2003 ; 2003 ; fulltext >
-    au < manifest ; 2004 ; University of South Florida Geology Faculty Publications 2004 ; 2004 ; fulltext >
-    au < manifest ; 2005 ; University of South Florida Geology Faculty Publications 2005 ; 2005 ; fulltext >
-    au < manifest ; 2006 ; University of South Florida Geology Faculty Publications 2006 ; 2006 ; fulltext >
-    au < manifest ; 2007 ; University of South Florida Geology Faculty Publications 2007 ; 2007 ; fulltext >
-    au < manifest ; 2008 ; University of South Florida Geology Faculty Publications 2008 ; 2008 ; fulltext >
-    au < manifest ; 2009 ; University of South Florida Geology Faculty Publications 2009 ; 2009 ; fulltext >
-    au < manifest ; 2010 ; University of South Florida Geology Faculty Publications 2010 ; 2010 ; fulltext >
-    au < manifest ; 2011 ; University of South Florida Geology Faculty Publications 2011 ; 2011 ; fulltext >
-    au < manifest ; 2012 ; University of South Florida Geology Faculty Publications 2012 ; 2012 ; fulltext >
-    au < manifest ; 2013 ; University of South Florida Geology Faculty Publications 2013 [abstracts only] ; 2013 ; abstracts >
+    au < ready ; 1978 ; University of South Florida Geology Faculty Publications 1978 [abstracts only] ; 1978 ; abstracts >
+    au < ready ; 1983 ; University of South Florida Geology Faculty Publications 1983 [abstracts only] ; 1983 ; abstracts >
+    au < ready ; 1986 ; University of South Florida Geology Faculty Publications 1986 ; 1986 ; fulltext >
+    au < ready ; 1987 ; University of South Florida Geology Faculty Publications 1987 [abstracts only] ; 1987 ; abstracts >
+    au < ready ; 1988 ; University of South Florida Geology Faculty Publications 1988 [abstracts only] ; 1988 ; abstracts >
+    au < ready ; 1989 ; University of South Florida Geology Faculty Publications 1989 [abstracts only] ; 1989 ; abstracts >
+    au < ready ; 1991 ; University of South Florida Geology Faculty Publications 1991 [abstracts only] ; 1991 ; abstracts >
+    au < ready ; 1992 ; University of South Florida Geology Faculty Publications 1992 [abstracts only] ; 1992 ; abstracts >
+    au < ready ; 1993 ; University of South Florida Geology Faculty Publications 1993 [abstracts only] ; 1993 ; abstracts >
+    au < ready ; 1994 ; University of South Florida Geology Faculty Publications 1994 [abstracts only] ; 1994 ; abstracts >
+    au < ready ; 1995 ; University of South Florida Geology Faculty Publications 1995 [abstracts only] ; 1995 ; abstracts >
+    au < ready ; 1996 ; University of South Florida Geology Faculty Publications 1996 [abstracts only] ; 1996 ; abstracts >
+    au < ready ; 1997 ; University of South Florida Geology Faculty Publications 1997 ; 1997 ; fulltext >
+    au < ready ; 1998 ; University of South Florida Geology Faculty Publications 1998 ; 1998 ; fulltext >
+    au < ready ; 1999 ; University of South Florida Geology Faculty Publications 1999 ; 1999 ; fulltext >
+    au < ready ; 2000 ; University of South Florida Geology Faculty Publications 2000 ; 2000 ; fulltext >
+    au < ready ; 2001 ; University of South Florida Geology Faculty Publications 2001 ; 2001 ; fulltext >
+    au < ready ; 2002 ; University of South Florida Geology Faculty Publications 2002 ; 2002 ; fulltext >
+    au < ready ; 2003 ; University of South Florida Geology Faculty Publications 2003 ; 2003 ; fulltext >
+    au < ready ; 2004 ; University of South Florida Geology Faculty Publications 2004 ; 2004 ; fulltext >
+    au < ready ; 2005 ; University of South Florida Geology Faculty Publications 2005 ; 2005 ; fulltext >
+    au < ready ; 2006 ; University of South Florida Geology Faculty Publications 2006 ; 2006 ; fulltext >
+    au < ready ; 2007 ; University of South Florida Geology Faculty Publications 2007 ; 2007 ; fulltext >
+    au < ready ; 2008 ; University of South Florida Geology Faculty Publications 2008 ; 2008 ; fulltext >
+    au < ready ; 2009 ; University of South Florida Geology Faculty Publications 2009 ; 2009 ; fulltext >
+    au < ready ; 2010 ; University of South Florida Geology Faculty Publications 2010 ; 2010 ; fulltext >
+    au < ready ; 2011 ; University of South Florida Geology Faculty Publications 2011 ; 2011 ; fulltext >
+    au < ready ; 2012 ; University of South Florida Geology Faculty Publications 2012 ; 2012 ; fulltext >
+    au < ready ; 2013 ; University of South Florida Geology Faculty Publications 2013 [abstracts only] ; 2013 ; abstracts >
 
   }
 
@@ -739,7 +740,7 @@
     param[collection] = grad_facpub
     implicit < status ; year ; name ; param[collection_heading] >  
 
-    au < manifest ; 2003 ; University of South Florida Graduate School Faculty and Staff Publications 2003 ; 2003 >
+    au < ready ; 2003 ; University of South Florida Graduate School Faculty and Staff Publications 2003 ; 2003 >
 
   }
 
@@ -753,40 +754,40 @@
     param[base_url] = http://scholarcommons.usf.edu/
     param[collection_type] = ir_series
     param[collection] = gia_facpub
-    implicit < status ; year ; name ; param[collection_heading] >  
+    implicit < status ; year ; name ; param[collection_heading] ; attr[au_coverage_depth] >  
 
-    au < manifest ; 1975 ; University of South Florida Government and International Affairs Faculty Publications 1975 ; 1975 >
-    au < manifest ; 1976 ; University of South Florida Government and International Affairs Faculty Publications 1976 ; 1976 >
-    au < manifest ; 1978 ; University of South Florida Government and International Affairs Faculty Publications 1978 ; 1978 >
-    au < manifest ; 1980 ; University of South Florida Government and International Affairs Faculty Publications 1980 ; 1980 >
-    au < manifest ; 1982 ; University of South Florida Government and International Affairs Faculty Publications 1982 ; 1982 >
-    au < manifest ; 1983 ; University of South Florida Government and International Affairs Faculty Publications 1983 ; 1983 >
-    au < manifest ; 1985 ; University of South Florida Government and International Affairs Faculty Publications 1985 ; 1985 >
-    au < manifest ; 1986 ; University of South Florida Government and International Affairs Faculty Publications 1986 ; 1986 >
-    au < manifest ; 1987 ; University of South Florida Government and International Affairs Faculty Publications 1987 ; 1987 >
-    au < manifest ; 1988 ; University of South Florida Government and International Affairs Faculty Publications 1988 ; 1988 >
-    au < manifest ; 1989 ; University of South Florida Government and International Affairs Faculty Publications 1989 ; 1989 >
-    au < manifest ; 1990 ; University of South Florida Government and International Affairs Faculty Publications 1990 ; 1990 >
-    au < manifest ; 1991 ; University of South Florida Government and International Affairs Faculty Publications 1991 ; 1991 >
-    au < manifest ; 1993 ; University of South Florida Government and International Affairs Faculty Publications 1993 ; 1993 >
-    au < manifest ; 1994 ; University of South Florida Government and International Affairs Faculty Publications 1994 ; 1994 >
-    au < manifest ; 1996 ; University of South Florida Government and International Affairs Faculty Publications 1996 ; 1996 >
-    au < manifest ; 1997 ; University of South Florida Government and International Affairs Faculty Publications 1997 ; 1997 >
-    au < manifest ; 1998 ; University of South Florida Government and International Affairs Faculty Publications 1998 ; 1998 >
-    au < manifest ; 1999 ; University of South Florida Government and International Affairs Faculty Publications 1999 ; 1999 >
-    au < manifest ; 2000 ; University of South Florida Government and International Affairs Faculty Publications 2000 ; 2000 >
-    au < manifest ; 2002 ; University of South Florida Government and International Affairs Faculty Publications 2002 ; 2002 >
-    au < manifest ; 2004 ; University of South Florida Government and International Affairs Faculty Publications 2004 ; 2004 >
-    au < manifest ; 2005 ; University of South Florida Government and International Affairs Faculty Publications 2005 ; 2005 >
-    au < manifest ; 2006 ; University of South Florida Government and International Affairs Faculty Publications 2006 ; 2006 >
-    au < manifest ; 2007 ; University of South Florida Government and International Affairs Faculty Publications 2007 ; 2007 >
-    au < manifest ; 2008 ; University of South Florida Government and International Affairs Faculty Publications 2008 ; 2008 >
-    au < manifest ; 2009 ; University of South Florida Government and International Affairs Faculty Publications 2009 ; 2009 >
-    au < manifest ; 2010 ; University of South Florida Government and International Affairs Faculty Publications 2010 ; 2010 >
-    au < manifest ; 2011 ; University of South Florida Government and International Affairs Faculty Publications 2011 ; 2011 >
-    au < manifest ; 2012 ; University of South Florida Government and International Affairs Faculty Publications 2012 ; 2012 >
-    au < manifest ; 2013 ; University of South Florida Government and International Affairs Faculty Publications 2013 ; 2013 >
-    au < manifest ; 2014 ; University of South Florida Government and International Affairs Faculty Publications 2014 ; 2014 >
+    au < ready ; 1975 ; University of South Florida Government and International Affairs Faculty Publications 1975 [abstracts only] ; 1975 ; abstracts >
+    au < ready ; 1976 ; University of South Florida Government and International Affairs Faculty Publications 1976 [abstracts only] ; 1976 ; abstracts >
+    au < ready ; 1978 ; University of South Florida Government and International Affairs Faculty Publications 1978 ; 1978 ; fulltext >
+    au < ready ; 1980 ; University of South Florida Government and International Affairs Faculty Publications 1980 [abstracts only] ; 1980 ; abstracts >
+    au < ready ; 1982 ; University of South Florida Government and International Affairs Faculty Publications 1982 [abstracts only] ; 1982 ; abstracts >
+    au < ready ; 1983 ; University of South Florida Government and International Affairs Faculty Publications 1983 [abstracts only] ; 1983 ; abstracts >
+    au < ready ; 1985 ; University of South Florida Government and International Affairs Faculty Publications 1985 ; 1985 ; fulltext >
+    au < ready ; 1986 ; University of South Florida Government and International Affairs Faculty Publications 1986 [abstracts only] ; 1986 ; abstracts >
+    au < ready ; 1987 ; University of South Florida Government and International Affairs Faculty Publications 1987 [abstracts only] ; 1987 ; abstracts >
+    au < ready ; 1988 ; University of South Florida Government and International Affairs Faculty Publications 1988 [abstracts only] ; 1988 ; abstracts >
+    au < ready ; 1989 ; University of South Florida Government and International Affairs Faculty Publications 1989 [abstracts only] ; 1989 ; abstracts >
+    au < ready ; 1990 ; University of South Florida Government and International Affairs Faculty Publications 1990 [abstracts only] ; 1990 ; abstracts >
+    au < ready ; 1991 ; University of South Florida Government and International Affairs Faculty Publications 1991 [abstracts only] ; 1991 ; abstracts >
+    au < ready ; 1993 ; University of South Florida Government and International Affairs Faculty Publications 1993 ; 1993 ; fulltext >
+    au < ready ; 1994 ; University of South Florida Government and International Affairs Faculty Publications 1994 [abstracts only] ; 1994 ; abstracts >
+    au < ready ; 1996 ; University of South Florida Government and International Affairs Faculty Publications 1996 ; 1996 ; fulltext >
+    au < ready ; 1997 ; University of South Florida Government and International Affairs Faculty Publications 1997 [abstracts only] ; 1997 ; abstracts >
+    au < ready ; 1998 ; University of South Florida Government and International Affairs Faculty Publications 1998 [abstracts only] ; 1998 ; abstracts >
+    au < ready ; 1999 ; University of South Florida Government and International Affairs Faculty Publications 1999 [abstracts only] ; 1999 ; abstracts >
+    au < ready ; 2000 ; University of South Florida Government and International Affairs Faculty Publications 2000 ; 2000 ; fulltext >
+    au < ready ; 2002 ; University of South Florida Government and International Affairs Faculty Publications 2002 [abstracts only] ; 2002 ; abstracts >
+    au < ready ; 2004 ; University of South Florida Government and International Affairs Faculty Publications 2004 ; 2004 ; fulltext >
+    au < ready ; 2005 ; University of South Florida Government and International Affairs Faculty Publications 2005 [abstracts only] ; 2005 ; abstracts >
+    au < ready ; 2006 ; University of South Florida Government and International Affairs Faculty Publications 2006 ; 2006 ; fulltext >
+    au < ready ; 2007 ; University of South Florida Government and International Affairs Faculty Publications 2007 ; 2007 ; fulltext >
+    au < ready ; 2008 ; University of South Florida Government and International Affairs Faculty Publications 2008 ; 2008 ; fulltext >
+    au < ready ; 2009 ; University of South Florida Government and International Affairs Faculty Publications 2009 ; 2009 ; fulltext >
+    au < ready ; 2010 ; University of South Florida Government and International Affairs Faculty Publications 2010 [abstracts only] ; 2010 ; abstracts >
+    au < ready ; 2011 ; University of South Florida Government and International Affairs Faculty Publications 2011 [abstracts only] ; 2011 ; abstracts >
+    au < ready ; 2012 ; University of South Florida Government and International Affairs Faculty Publications 2012 ; 2012 ; fulltext >
+    au < ready ; 2013 ; University of South Florida Government and International Affairs Faculty Publications 2013 ; 2013 ; fulltext >
+    au < ready ; 2014 ; University of South Florida Government and International Affairs Faculty Publications 2014 ; 2014 ; fulltext >
 
   }
 
@@ -802,24 +803,24 @@
     param[collection] = etd
     implicit < status ; year ; name ; param[collection_heading] >  
 
-    au < manifest ; 1983 ; University of South Florida Graduate Theses and Dissertations 1983 ; 1983 >
-    au < manifest ; 1998 ; University of South Florida Graduate Theses and Dissertations 1998 ; 1998 >
-    au < manifest ; 1999 ; University of South Florida Graduate Theses and Dissertations 1999 ; 1999 >
-    au < manifest ; 2000 ; University of South Florida Graduate Theses and Dissertations 2000 ; 2000 >
-    au < manifest ; 2001 ; University of South Florida Graduate Theses and Dissertations 2001 ; 2001 >
-    au < manifest ; 2002 ; University of South Florida Graduate Theses and Dissertations 2002 ; 2002 >
-    au < manifest ; 2003 ; University of South Florida Graduate Theses and Dissertations 2003 ; 2003 >
-    au < manifest ; 2004 ; University of South Florida Graduate Theses and Dissertations 2004 ; 2004 >
-    au < manifest ; 2005 ; University of South Florida Graduate Theses and Dissertations 2005 ; 2005 >
-    au < manifest ; 2006 ; University of South Florida Graduate Theses and Dissertations 2006 ; 2006 >
-    au < manifest ; 2007 ; University of South Florida Graduate Theses and Dissertations 2007 ; 2007 >
-    au < manifest ; 2008 ; University of South Florida Graduate Theses and Dissertations 2008 ; 2008 >
-    au < manifest ; 2009 ; University of South Florida Graduate Theses and Dissertations 2009 ; 2009 >
-    au < manifest ; 2010 ; University of South Florida Graduate Theses and Dissertations 2010 ; 2010 >
-    au < manifest ; 2011 ; University of South Florida Graduate Theses and Dissertations 2011 ; 2011 >
-    au < manifest ; 2012 ; University of South Florida Graduate Theses and Dissertations 2012 ; 2012 >
-    au < manifest ; 2013 ; University of South Florida Graduate Theses and Dissertations 2013 ; 2013 >
-    au < manifest ; 2014 ; University of South Florida Graduate Theses and Dissertations 2014 ; 2014 >
+    au < ready ; 1983 ; University of South Florida Graduate Theses and Dissertations 1983 ; 1983 >
+    au < ready ; 1998 ; University of South Florida Graduate Theses and Dissertations 1998 ; 1998 >
+    au < ready ; 1999 ; University of South Florida Graduate Theses and Dissertations 1999 ; 1999 >
+    au < ready ; 2000 ; University of South Florida Graduate Theses and Dissertations 2000 ; 2000 >
+    au < ready ; 2001 ; University of South Florida Graduate Theses and Dissertations 2001 ; 2001 >
+    au < ready ; 2002 ; University of South Florida Graduate Theses and Dissertations 2002 ; 2002 >
+    au < ready ; 2003 ; University of South Florida Graduate Theses and Dissertations 2003 ; 2003 >
+    au < ready ; 2004 ; University of South Florida Graduate Theses and Dissertations 2004 ; 2004 >
+    au < ready ; 2005 ; University of South Florida Graduate Theses and Dissertations 2005 ; 2005 >
+    au < ready ; 2006 ; University of South Florida Graduate Theses and Dissertations 2006 ; 2006 >
+    au < ready ; 2007 ; University of South Florida Graduate Theses and Dissertations 2007 ; 2007 >
+    au < ready ; 2008 ; University of South Florida Graduate Theses and Dissertations 2008 ; 2008 >
+    au < ready ; 2009 ; University of South Florida Graduate Theses and Dissertations 2009 ; 2009 >
+    au < ready ; 2010 ; University of South Florida Graduate Theses and Dissertations 2010 ; 2010 >
+    au < ready ; 2011 ; University of South Florida Graduate Theses and Dissertations 2011 ; 2011 >
+    au < ready ; 2012 ; University of South Florida Graduate Theses and Dissertations 2012 ; 2012 >
+    au < ready ; 2013 ; University of South Florida Graduate Theses and Dissertations 2013 ; 2013 >
+    au < ready ; 2014 ; University of South Florida Graduate Theses and Dissertations 2014 ; 2014 >
 
   }
 
@@ -854,7 +855,7 @@
     au < manifest ; 1990 ; University of South Florida Integrative Biology Faculty and Staff Publications 1990 ; 1990 ; fulltext >
     au < manifest ; 1991 ; University of South Florida Integrative Biology Faculty and Staff Publications 1991 ; 1991 ; fulltext >
     au < manifest ; 1992 ; University of South Florida Integrative Biology Faculty and Staff Publications 1992 ; 1992 ; fulltext >
-    au < manifest ; 1993 ; University of South Florida Integrative Biology Faculty and Staff Publications 1993 ; 1993 ; fulltext >
+    au < manifest ; 1993 ; University of South Florida Integrative Biology Faculty and Staff Publications 1993 [abstracts only] ; 1993 ; abstracts >
     au < manifest ; 1994 ; University of South Florida Integrative Biology Faculty and Staff Publications 1994 ; 1994 ; fulltext >
     au < manifest ; 1995 ; University of South Florida Integrative Biology Faculty and Staff Publications 1995 ; 1995 ; fulltext >
     au < manifest ; 1996 ; University of South Florida Integrative Biology Faculty and Staff Publications 1996 ; 1996 ; fulltext >
@@ -890,7 +891,7 @@
     param[collection] = fmhi_el
     implicit < status ; year ; name ; param[collection_heading] >  
 
-    au < manifest ; 2008 ; University of South Florida Louis de la Parte Florida Mental Health Institute Events and Lectures 2008 ; 2008 >
+    au < ready ; 2008 ; University of South Florida Louis de la Parte Florida Mental Health Institute Events and Lectures 2008 ; 2008 >
 
   }
 
@@ -906,27 +907,27 @@
     param[collection] = fmhi_pub
     implicit < status ; year ; name ; param[collection_heading] >  
 
-    au < manifest ; 1968 ; University of South Florida Louis de la Parte Florida Mental Health Institute Publications 1968 ; 1968 >
-    au < manifest ; 1982 ; University of South Florida Louis de la Parte Florida Mental Health Institute Publications 1982 ; 1982 >
-    au < manifest ; 1983 ; University of South Florida Louis de la Parte Florida Mental Health Institute Publications 1983 ; 1983 >
-    au < manifest ; 1984 ; University of South Florida Louis de la Parte Florida Mental Health Institute Publications 1984 ; 1984 >
-    au < manifest ; 1985 ; University of South Florida Louis de la Parte Florida Mental Health Institute Publications 1985 ; 1985 >
-    au < manifest ; 1986 ; University of South Florida Louis de la Parte Florida Mental Health Institute Publications 1986 ; 1986 >
-    au < manifest ; 1987 ; University of South Florida Louis de la Parte Florida Mental Health Institute Publications 1987 ; 1987 >
-    au < manifest ; 1988 ; University of South Florida Louis de la Parte Florida Mental Health Institute Publications 1988 ; 1988 >
-    au < manifest ; 1989 ; University of South Florida Louis de la Parte Florida Mental Health Institute Publications 1989 ; 1989 >
-    au < manifest ; 1990 ; University of South Florida Louis de la Parte Florida Mental Health Institute Publications 1990 ; 1990 >
-    au < manifest ; 1991 ; University of South Florida Louis de la Parte Florida Mental Health Institute Publications 1991 ; 1991 >
-    au < manifest ; 1992 ; University of South Florida Louis de la Parte Florida Mental Health Institute Publications 1992 ; 1992 >
-    au < manifest ; 1993 ; University of South Florida Louis de la Parte Florida Mental Health Institute Publications 1993 ; 1993 >
-    au < manifest ; 1994 ; University of South Florida Louis de la Parte Florida Mental Health Institute Publications 1994 ; 1994 >
-    au < manifest ; 1995 ; University of South Florida Louis de la Parte Florida Mental Health Institute Publications 1995 ; 1995 >
-    au < manifest ; 1996 ; University of South Florida Louis de la Parte Florida Mental Health Institute Publications 1996 ; 1996 >
-    au < manifest ; 1997 ; University of South Florida Louis de la Parte Florida Mental Health Institute Publications 1997 ; 1997 >
-    au < manifest ; 1999 ; University of South Florida Louis de la Parte Florida Mental Health Institute Publications 1999 ; 1999 >
-    au < manifest ; 2000 ; University of South Florida Louis de la Parte Florida Mental Health Institute Publications 2000 ; 2000 >
-    au < manifest ; 2004 ; University of South Florida Louis de la Parte Florida Mental Health Institute Publications 2004 ; 2004 >
-    au < manifest ; 2009 ; University of South Florida Louis de la Parte Florida Mental Health Institute Publications 2009 ; 2009 >
+    au < ready ; 1968 ; University of South Florida Louis de la Parte Florida Mental Health Institute Publications 1968 ; 1968 >
+    au < ready ; 1982 ; University of South Florida Louis de la Parte Florida Mental Health Institute Publications 1982 ; 1982 >
+    au < ready ; 1983 ; University of South Florida Louis de la Parte Florida Mental Health Institute Publications 1983 ; 1983 >
+    au < ready ; 1984 ; University of South Florida Louis de la Parte Florida Mental Health Institute Publications 1984 ; 1984 >
+    au < ready ; 1985 ; University of South Florida Louis de la Parte Florida Mental Health Institute Publications 1985 ; 1985 >
+    au < ready ; 1986 ; University of South Florida Louis de la Parte Florida Mental Health Institute Publications 1986 ; 1986 >
+    au < ready ; 1987 ; University of South Florida Louis de la Parte Florida Mental Health Institute Publications 1987 ; 1987 >
+    au < ready ; 1988 ; University of South Florida Louis de la Parte Florida Mental Health Institute Publications 1988 ; 1988 >
+    au < ready ; 1989 ; University of South Florida Louis de la Parte Florida Mental Health Institute Publications 1989 ; 1989 >
+    au < ready ; 1990 ; University of South Florida Louis de la Parte Florida Mental Health Institute Publications 1990 ; 1990 >
+    au < ready ; 1991 ; University of South Florida Louis de la Parte Florida Mental Health Institute Publications 1991 ; 1991 >
+    au < ready ; 1992 ; University of South Florida Louis de la Parte Florida Mental Health Institute Publications 1992 ; 1992 >
+    au < ready ; 1993 ; University of South Florida Louis de la Parte Florida Mental Health Institute Publications 1993 ; 1993 >
+    au < ready ; 1994 ; University of South Florida Louis de la Parte Florida Mental Health Institute Publications 1994 ; 1994 >
+    au < ready ; 1995 ; University of South Florida Louis de la Parte Florida Mental Health Institute Publications 1995 ; 1995 >
+    au < ready ; 1996 ; University of South Florida Louis de la Parte Florida Mental Health Institute Publications 1996 ; 1996 >
+    au < ready ; 1997 ; University of South Florida Louis de la Parte Florida Mental Health Institute Publications 1997 ; 1997 >
+    au < ready ; 1999 ; University of South Florida Louis de la Parte Florida Mental Health Institute Publications 1999 ; 1999 >
+    au < ready ; 2000 ; University of South Florida Louis de la Parte Florida Mental Health Institute Publications 2000 ; 2000 >
+    au < ready ; 2004 ; University of South Florida Louis de la Parte Florida Mental Health Institute Publications 2004 ; 2004 >
+    au < ready ; 2009 ; University of South Florida Louis de la Parte Florida Mental Health Institute Publications 2009 ; 2009 >
 
   }
 
@@ -971,48 +972,45 @@
     param[collection] = geo_facpub
     implicit < status ; year ; name ; param[collection_heading] ; attr[au_coverage_depth] >  
 
-    # 14 pages of tables of contents: hard to spot sparse PDFs
-    # Mark all as abstracts only and use AUtest results to figure out which are which
-
-    au < manifest ; 1896 ; University of South Florida School of Geosciences Faculty and Staff Publications 1896 [abstracts only] ; 1896 ; abstracts >
-    au < manifest ; 1976 ; University of South Florida School of Geosciences Faculty and Staff Publications 1976 [abstracts only] ; 1976 ; abstracts >
-    au < manifest ; 1978 ; University of South Florida School of Geosciences Faculty and Staff Publications 1978 [abstracts only] ; 1978 ; abstracts >
-    au < manifest ; 1979 ; University of South Florida School of Geosciences Faculty and Staff Publications 1979 [abstracts only] ; 1979 ; abstracts >
-    au < manifest ; 1980 ; University of South Florida School of Geosciences Faculty and Staff Publications 1980 [abstracts only] ; 1980 ; abstracts >
-    au < manifest ; 1981 ; University of South Florida School of Geosciences Faculty and Staff Publications 1981 [abstracts only] ; 1981 ; abstracts >
-    au < manifest ; 1982 ; University of South Florida School of Geosciences Faculty and Staff Publications 1982 [abstracts only] ; 1982 ; abstracts >
-    au < manifest ; 1983 ; University of South Florida School of Geosciences Faculty and Staff Publications 1983 [abstracts only] ; 1983 ; abstracts >
-    au < manifest ; 1984 ; University of South Florida School of Geosciences Faculty and Staff Publications 1984 [abstracts only] ; 1984 ; abstracts >
-    au < manifest ; 1985 ; University of South Florida School of Geosciences Faculty and Staff Publications 1985 [abstracts only] ; 1985 ; abstracts >
-    au < manifest ; 1986 ; University of South Florida School of Geosciences Faculty and Staff Publications 1986 [abstracts only] ; 1986 ; abstracts >
-    au < manifest ; 1987 ; University of South Florida School of Geosciences Faculty and Staff Publications 1987 [abstracts only] ; 1987 ; abstracts >
-    au < manifest ; 1988 ; University of South Florida School of Geosciences Faculty and Staff Publications 1988 [abstracts only] ; 1988 ; abstracts >
-    au < manifest ; 1989 ; University of South Florida School of Geosciences Faculty and Staff Publications 1989 [abstracts only] ; 1989 ; abstracts >
-    au < manifest ; 1990 ; University of South Florida School of Geosciences Faculty and Staff Publications 1990 [abstracts only] ; 1990 ; abstracts >
-    au < manifest ; 1991 ; University of South Florida School of Geosciences Faculty and Staff Publications 1991 [abstracts only] ; 1991 ; abstracts >
-    au < manifest ; 1992 ; University of South Florida School of Geosciences Faculty and Staff Publications 1992 [abstracts only] ; 1992 ; abstracts >
-    au < manifest ; 1993 ; University of South Florida School of Geosciences Faculty and Staff Publications 1993 [abstracts only] ; 1993 ; abstracts >
-    au < manifest ; 1994 ; University of South Florida School of Geosciences Faculty and Staff Publications 1994 [abstracts only] ; 1994 ; abstracts >
-    au < manifest ; 1995 ; University of South Florida School of Geosciences Faculty and Staff Publications 1995 [abstracts only] ; 1995 ; abstracts >
-    au < manifest ; 1996 ; University of South Florida School of Geosciences Faculty and Staff Publications 1996 [abstracts only] ; 1996 ; abstracts >
-    au < manifest ; 1997 ; University of South Florida School of Geosciences Faculty and Staff Publications 1997 [abstracts only] ; 1997 ; abstracts >
-    au < manifest ; 1998 ; University of South Florida School of Geosciences Faculty and Staff Publications 1998 [abstracts only] ; 1998 ; abstracts >
-    au < manifest ; 1999 ; University of South Florida School of Geosciences Faculty and Staff Publications 1999 [abstracts only] ; 1999 ; abstracts >
-    au < manifest ; 2000 ; University of South Florida School of Geosciences Faculty and Staff Publications 2000 [abstracts only] ; 2000 ; abstracts >
-    au < manifest ; 2001 ; University of South Florida School of Geosciences Faculty and Staff Publications 2001 [abstracts only] ; 2001 ; abstracts >
-    au < manifest ; 2002 ; University of South Florida School of Geosciences Faculty and Staff Publications 2002 [abstracts only] ; 2002 ; abstracts >
-    au < manifest ; 2003 ; University of South Florida School of Geosciences Faculty and Staff Publications 2003 [abstracts only] ; 2003 ; abstracts >
-    au < manifest ; 2004 ; University of South Florida School of Geosciences Faculty and Staff Publications 2004 [abstracts only] ; 2004 ; abstracts >
-    au < manifest ; 2005 ; University of South Florida School of Geosciences Faculty and Staff Publications 2005 [abstracts only] ; 2005 ; abstracts >
-    au < manifest ; 2006 ; University of South Florida School of Geosciences Faculty and Staff Publications 2006 [abstracts only] ; 2006 ; abstracts >
-    au < manifest ; 2007 ; University of South Florida School of Geosciences Faculty and Staff Publications 2007 [abstracts only] ; 2007 ; abstracts >
-    au < manifest ; 2008 ; University of South Florida School of Geosciences Faculty and Staff Publications 2008 [abstracts only] ; 2008 ; abstracts >
-    au < manifest ; 2009 ; University of South Florida School of Geosciences Faculty and Staff Publications 2009 [abstracts only] ; 2009 ; abstracts >
-    au < manifest ; 2010 ; University of South Florida School of Geosciences Faculty and Staff Publications 2010 [abstracts only] ; 2010 ; abstracts >
-    au < manifest ; 2011 ; University of South Florida School of Geosciences Faculty and Staff Publications 2011 [abstracts only] ; 2011 ; abstracts >
-    au < manifest ; 2012 ; University of South Florida School of Geosciences Faculty and Staff Publications 2012 [abstracts only] ; 2012 ; abstracts >
-    au < manifest ; 2013 ; University of South Florida School of Geosciences Faculty and Staff Publications 2013 [abstracts only] ; 2013 ; abstracts >
-    au < manifest ; 2014 ; University of South Florida School of Geosciences Faculty and Staff Publications 2014 [abstracts only] ; 2014 ; abstracts >
+    au < ready ; 1896 ; University of South Florida School of Geosciences Faculty and Staff Publications 1896 [abstracts only] ; 1896 ; abstracts >
+    au < ready ; 1976 ; University of South Florida School of Geosciences Faculty and Staff Publications 1976 [abstracts only] ; 1976 ; abstracts >
+    au < ready ; 1978 ; University of South Florida School of Geosciences Faculty and Staff Publications 1978 [abstracts only] ; 1978 ; abstracts >
+    au < ready ; 1979 ; University of South Florida School of Geosciences Faculty and Staff Publications 1979 [abstracts only] ; 1979 ; abstracts >
+    au < ready ; 1980 ; University of South Florida School of Geosciences Faculty and Staff Publications 1980 [abstracts only] ; 1980 ; abstracts >
+    au < ready ; 1981 ; University of South Florida School of Geosciences Faculty and Staff Publications 1981 [abstracts only] ; 1981 ; abstracts >
+    au < ready ; 1982 ; University of South Florida School of Geosciences Faculty and Staff Publications 1982 [abstracts only] ; 1982 ; abstracts >
+    au < ready ; 1983 ; University of South Florida School of Geosciences Faculty and Staff Publications 1983 [abstracts only] ; 1983 ; abstracts >
+    au < ready ; 1984 ; University of South Florida School of Geosciences Faculty and Staff Publications 1984 [abstracts only] ; 1984 ; abstracts >
+    au < ready ; 1985 ; University of South Florida School of Geosciences Faculty and Staff Publications 1985 [abstracts only] ; 1985 ; abstracts >
+    au < ready ; 1986 ; University of South Florida School of Geosciences Faculty and Staff Publications 1986 [abstracts only] ; 1986 ; abstracts >
+    au < ready ; 1987 ; University of South Florida School of Geosciences Faculty and Staff Publications 1987 [abstracts only] ; 1987 ; abstracts >
+    au < ready ; 1988 ; University of South Florida School of Geosciences Faculty and Staff Publications 1988 [abstracts only] ; 1988 ; abstracts >
+    au < ready ; 1989 ; University of South Florida School of Geosciences Faculty and Staff Publications 1989 [abstracts only] ; 1989 ; abstracts >
+    au < ready ; 1990 ; University of South Florida School of Geosciences Faculty and Staff Publications 1990 [abstracts only] ; 1990 ; abstracts >
+    au < ready ; 1991 ; University of South Florida School of Geosciences Faculty and Staff Publications 1991 [abstracts only] ; 1991 ; abstracts >
+    au < ready ; 1992 ; University of South Florida School of Geosciences Faculty and Staff Publications 1992 [abstracts only] ; 1992 ; abstracts >
+    au < ready ; 1993 ; University of South Florida School of Geosciences Faculty and Staff Publications 1993 [abstracts only] ; 1993 ; abstracts >
+    au < ready ; 1994 ; University of South Florida School of Geosciences Faculty and Staff Publications 1994 [abstracts only] ; 1994 ; abstracts >
+    au < ready ; 1995 ; University of South Florida School of Geosciences Faculty and Staff Publications 1995 [abstracts only] ; 1995 ; abstracts >
+    au < ready ; 1996 ; University of South Florida School of Geosciences Faculty and Staff Publications 1996 [abstracts only] ; 1996 ; abstracts >
+    au < ready ; 1997 ; University of South Florida School of Geosciences Faculty and Staff Publications 1997 [abstracts only] ; 1997 ; abstracts >
+    au < ready ; 1998 ; University of South Florida School of Geosciences Faculty and Staff Publications 1998 [abstracts only] ; 1998 ; abstracts >
+    au < ready ; 1999 ; University of South Florida School of Geosciences Faculty and Staff Publications 1999 [abstracts only] ; 1999 ; abstracts >
+    au < ready ; 2000 ; University of South Florida School of Geosciences Faculty and Staff Publications 2000 [abstracts only] ; 2000 ; abstracts >
+    au < ready ; 2001 ; University of South Florida School of Geosciences Faculty and Staff Publications 2001 [abstracts only] ; 2001 ; abstracts >
+    au < ready ; 2002 ; University of South Florida School of Geosciences Faculty and Staff Publications 2002 [abstracts only] ; 2002 ; abstracts >
+    au < ready ; 2003 ; University of South Florida School of Geosciences Faculty and Staff Publications 2003 [abstracts only] ; 2003 ; abstracts >
+    au < ready ; 2004 ; University of South Florida School of Geosciences Faculty and Staff Publications 2004 [abstracts only] ; 2004 ; abstracts >
+    au < ready ; 2005 ; University of South Florida School of Geosciences Faculty and Staff Publications 2005 [abstracts only] ; 2005 ; abstracts >
+    au < ready ; 2006 ; University of South Florida School of Geosciences Faculty and Staff Publications 2006 [abstracts only] ; 2006 ; abstracts >
+    au < ready ; 2007 ; University of South Florida School of Geosciences Faculty and Staff Publications 2007 [abstracts only] ; 2007 ; abstracts >
+    au < ready ; 2008 ; University of South Florida School of Geosciences Faculty and Staff Publications 2008 [abstracts only] ; 2008 ; abstracts >
+    au < ready ; 2009 ; University of South Florida School of Geosciences Faculty and Staff Publications 2009 [abstracts only] ; 2009 ; abstracts >
+    au < ready ; 2010 ; University of South Florida School of Geosciences Faculty and Staff Publications 2010 [abstracts only] ; 2010 ; abstracts >
+    au < ready ; 2011 ; University of South Florida School of Geosciences Faculty and Staff Publications 2011 [abstracts only] ; 2011 ; abstracts >
+    au < ready ; 2012 ; University of South Florida School of Geosciences Faculty and Staff Publications 2012 [abstracts only] ; 2012 ; abstracts >
+    au < ready ; 2013 ; University of South Florida School of Geosciences Faculty and Staff Publications 2013 [abstracts only] ; 2013 ; abstracts >
+    au < ready ; 2014 ; University of South Florida School of Geosciences Faculty and Staff Publications 2014 [abstracts only] ; 2014 ; abstracts >
 
   }
 
@@ -1027,7 +1025,7 @@
     param[collection] = compaccountability-2013
     implicit < status ; year ; name ; param[collection_theme] >  
 
-    au < manifest ; 2013 ; University of South Florida Summer Workshop on the Comparative History of School Accountability: Papers ; Papers >
+    au < ready ; 2013 ; University of South Florida Summer Workshop on the Comparative History of School Accountability: Papers ; Papers >
 
   }
 
