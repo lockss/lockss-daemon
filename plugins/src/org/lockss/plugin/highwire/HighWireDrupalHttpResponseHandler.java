@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireDrupalHttpResponseHandler.java,v 1.1 2014-02-12 03:57:24 etenbrink Exp $
+ * $Id: HighWireDrupalHttpResponseHandler.java,v 1.2 2014-12-15 21:27:48 etenbrink Exp $
  */
 
 /*
@@ -46,6 +46,21 @@ public class HighWireDrupalHttpResponseHandler implements CacheResultHandler {
     throw new UnsupportedOperationException();
   }
   
+  public static class NoFailRetryableNetworkException_3_60S
+  extends CacheException.RetryableNetworkException_3_60S {
+    
+    private static final long serialVersionUID = 1L;
+    
+    public NoFailRetryableNetworkException_3_60S(String message) {
+      super(message);
+    }
+    
+    protected void setAttributes() {
+      super.setAttributes();
+      attributeBits.clear(ATTRIBUTE_FAIL);
+    }
+  }
+  
   public CacheException handleResult(ArchivalUnit au,
                                      String url,
                                      int responseCode) {
@@ -58,7 +73,15 @@ public class HighWireDrupalHttpResponseHandler implements CacheResultHandler {
           return new CacheException.RetrySameUrlException("500 Internal Server Error");
         }
         else {
-          return new CacheException.NoRetryDeadLinkException("500 Internal Server Error (non-fatal)");
+          return new NoFailRetryableNetworkException_3_60S("500 Internal Server Error (non-fatal)");
+        }
+      case 504:
+        logger.debug2("504");
+        if (url.contains("/content/")) {
+          return new CacheException.RetryableNetworkException_3_60S("504 Gateway Time-out Error");
+        }
+        else {
+          return new NoFailRetryableNetworkException_3_60S("504 Gateway Time-out Error (non-fatal)");
         }
       default:
         logger.debug2("default");
