@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireDrupalArticleIteratorFactory.java,v 1.4 2014-08-21 00:50:27 etenbrink Exp $
+ * $Id: HighWireDrupalArticleIteratorFactory.java,v 1.5 2014-12-15 20:35:26 etenbrink Exp $
  */
 
 /*
@@ -51,10 +51,11 @@ public class HighWireDrupalArticleIteratorFactory
   protected static final String ROOT_TEMPLATE =
     "\"%scontent/%s/\", base_url, volume_name";
   
+  // <base_url>/content/<v>/<i>/<pg>
   protected static final String PATTERN_TEMPLATE =
-    "\"^%scontent/%s/(?:[^/]+/)?(?:[^./?&]+)$\", " +
+    "\"^%scontent/%s/(?:[^/]+/)(?:[^./?&]+)$\", " +
     "base_url, volume_name";
-  // various aspects of an article
+  // various aspects of a HighWire article
   // http://ajpcell.physiology.org/content/302/1/C1
   // http://ajpcell.physiology.org/content/302/1/C1.article-info
   // http://ajpcell.physiology.org/content/302/1/C1.figures-only
