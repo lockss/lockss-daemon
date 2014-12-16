@@ -420,6 +420,7 @@
 
     param[journal_dir] = genocide_studies_and_prevention
     attr[journal_id] = gsp
+    comment[continued_by] = 2291-1847
 
     au < released ; 2006 ; Genocide Studies and Prevention Volume 1 ; 1 >
     au < released ; 2007 ; Genocide Studies and Prevention Volume 2 ; 2 >
@@ -428,8 +429,23 @@
     au < released ; 2010 ; Genocide Studies and Prevention Volume 5 ; 5 >
     au < released ; 2011 ; Genocide Studies and Prevention Volume 6 ; 6 >
     au < released ; 2012 ; Genocide Studies and Prevention Volume 7 ; 7 >
-    au < released ; 2013 ; Genocide Studies and Prevention Volume 8 ; 8 >
-    au < expected ; 2014 ; Genocide Studies and Prevention Volume 9 ; 9 >
+
+  }
+
+  {
+  
+    title <
+      name = Genocide Studies International ;
+      issn = 2291-1847 ;
+      eissn = 2291-1855 ;
+      issnl = 2291-1847
+    >
+
+    param[journal_dir] = genocide_studies_and_prevention
+    attr[journal_id] = gsp
+    comment[continues] = 1911-0359
+
+    au < released ; 2014 ; Genocide Studies International Volume 8 ; 8 >
 
   }
 
