@@ -504,6 +504,18 @@
 
   {
     title <
+      name = BMJ Simulation & Technology Enhanced Learning ;
+      eissn = 2056-6697
+    >
+
+    param[base_url] = http://stel.bmj.com/
+    
+    au < HighWirePressH20Plugin ; exists ; 2014 ; BMJ Simulation & Technology Enhanced Learning Volume 1 ; 1 >
+
+  }
+
+  {
+    title <
       name = BMJ Supportive & Palliative Care ;
       issn = 2045-435X ;
       eissn = 2045-4368
