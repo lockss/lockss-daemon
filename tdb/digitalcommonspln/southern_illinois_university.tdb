@@ -575,6 +575,118 @@
   }
 
   {
+  
+    title <
+      name = Journal of Contemporary Water Research and Education
+    >
+    
+    plugin = org.lockss.plugin.bepress.BePressPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[journal_abbr] = jcwre
+    implicit < status ; year ; volume ; name ; param[volume] >
+
+    # Some of these manifests were found by a script but had no entry in lockss-sitemap.html
+
+    au < manifest ; 1988 ; 77 ; Water Resources Update Volume 77 ; 77 >
+    au < manifest ; 1988 ; 78 ; Water Resources Update Volume 78 ; 78 >
+    au < manifest ; 1989 ; 79 ; Water Resources Update Volume 79 ; 79 >
+    au < manifest ; 1989 ; 80 ; Water Resources Update Volume 80 ; 80 >
+    au < manifest ; 1990 ; 81 ; Water Resources Update Volume 81 ; 81 >
+    au < manifest ; 1990 ; 82 ; Water Resources Update Volume 82 ; 82 >
+    au < manifest ; 1990 ; 83 ; Water Resources Update Volume 83 ; 83 >
+    au < manifest ; 1991 ; 84 ; Water Resources Update Volume 84 ; 84 >
+    au < manifest ; 1991 ; 85 ; Water Resources Update Volume 85 ; 85 >
+    au < manifest ; 1991 ; 86 ; Water Resources Update Volume 86 ; 86 >
+    au < manifest ; 1992 ; 87 ; Water Resources Update Volume 87 ; 87 >
+    au < manifest ; 1992 ; 88 ; Water Resources Update Volume 88 ; 88 >
+    au < manifest ; 1992 ; 89 ; Water Resources Update Volume 89 ; 89 >
+    au < manifest ; 1993 ; 90 ; Water Resources Update Volume 90 ; 90 >
+    au < manifest ; 1993 ; 91 ; Water Resources Update Volume 91 ; 91 >
+    au < manifest ; 1993 ; 92 ; Water Resources Update Volume 92 ; 92 >
+    au < manifest ; 1993 ; 93 ; Water Resources Update Volume 93 ; 93 >
+    au < manifest ; 1994 ; 94 ; Water Resources Update Volume 94 ; 94 >
+    au < manifest ; 1994 ; 95 ; Water Resources Update Volume 95 ; 95 >
+    au < manifest ; 1994 ; 96 ; Water Resources Update Volume 96 ; 96 >
+    au < manifest ; 1994 ; 97 ; Water Resources Update Volume 97 ; 97 >
+    au < manifest ; 1995 ; 98 ; Water Resources Update Volume 98 ; 98 >
+    au < manifest ; 1995 ; 99 ; Water Resources Update Volume 99 ; 99 >
+    au < manifest ; 1995 ; 100 ; Water Resources Update Volume 100 ; 100 >
+    au < manifest ; 1995 ; 101 ; Water Resources Update Volume 101 ; 101 >
+    au < manifest ; 1996 ; 102 ; Water Resources Update Volume 102 ; 102 >
+    au < manifest ; 1996 ; 103 ; Water Resources Update Volume 103 ; 103 >
+    au < manifest ; 1996 ; 104 ; Water Resources Update Volume 104 ; 104 >
+    au < manifest ; 1996 ; 105 ; Water Resources Update Volume 105 ; 105 >
+    au < manifest ; 1997 ; 106 ; Water Resources Update Volume 106 ; 106 >
+    au < manifest ; 1997 ; 107 ; Water Resources Update Volume 107 ; 107 >
+    au < doesNotExist ; 1997 ; 108 ; Water Resources Update Volume 108 ; 108 >
+    au < doesNotExist ; 1997 ; 109 ; Water Resources Update Volume 109 ; 109 >
+    au < doesNotExist ; 1998 ; 110 ; Water Resources Update Volume 110 ; 110 >
+    au < doesNotExist ; 1998 ; 111 ; Water Resources Update Volume 111 ; 111 >
+    au < manifest ; 1998 ; 112 ; Water Resources Update Volume 112 ; 112 >
+    au < manifest ; 1998 ; 113 ; Water Resources Update Volume 113 ; 113 >
+    au < manifest ; 1999 ; 114 ; Water Resources Update Volume 114 ; 114 >
+    au < manifest ; 1999 ; 115 ; Water Resources Update Volume 115 ; 115 >
+    au < manifest ; 2000 ; 116 ; Water Resources Update Volume 116 ; 116 >
+    au < manifest ; 2000 ; 117 ; Water Resources Update Volume 117 ; 117 >
+    au < manifest ; 2001 ; 118 ; Water Resources Update Volume 118 ; 118 >
+    au < manifest ; 2001 ; 119 ; Water Resources Update Volume 119 ; 119 >
+    au < manifest ; 2001 ; 120 ; Water Resources Update Volume 120 ; 120 >
+    au < manifest ; 2002 ; 121 ; Water Resources Update Volume 121 ; 121 >
+    au < manifest ; 2002 ; 122 ; Water Resources Update Volume 122 ; 122 >
+    au < manifest ; 2002 ; 123 ; Water Resources Update Volume 123 ; 123 >
+    au < manifest ; 2011 ; 124 ; Water Resources Update Volume 124 ; 124 > # (year sic; should be 2003?)
+    au < doesNotExist ; 2003 ; 125 ; Water Resources Update Volume 125 ; 125 >
+    au < manifest ; 2003 ; 126 ; Water Resources Update Volume 126 ; 126 >
+    au < manifest ; 2004 ; 127 ; Water Resources Update Volume 127 ; 127 >
+    au < manifest ; 2004 ; 128 ; Journal of Contemporary Water Research and Education Volume 128 ; 128 >
+    au < manifest ; 2004 ; 129 ; Journal of Contemporary Water Research and Education Volume 129 ; 129 >
+    au < manifest ; 2005 ; 130 ; Journal of Contemporary Water Research and Education Volume 130 ; 130 >
+    au < manifest ; 2005 ; 131 ; Journal of Contemporary Water Research and Education Volume 131 ; 131 >
+    au < manifest ; 2005 ; 132 ; Journal of Contemporary Water Research and Education Volume 132 ; 132 >
+    au < manifest ; 2006 ; 133 ; Journal of Contemporary Water Research and Education Volume 133 ; 133 >
+    au < manifest ; 2006 ; 134 ; Journal of Contemporary Water Research and Education Volume 134 ; 134 >
+    au < manifest ; 2006 ; 135 ; Journal of Contemporary Water Research and Education Volume 135 ; 135 >
+    au < manifest ; 2007 ; 136 ; Journal of Contemporary Water Research and Education Volume 136 ; 136 >
+    au < manifest ; 2007 ; 137 ; Journal of Contemporary Water Research and Education Volume 137 ; 137 >
+
+  }
+
+  {
+  
+    title <
+      name = Kaleidoscope: A Graduate Journal of Qualitative Communication Research
+    >
+    
+    plugin = org.lockss.plugin.bepress.BePressPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[journal_abbr] = kaleidoscope
+    implicit < status ; year ; volume ; name ; param[volume] >
+
+    au < manifest ; 2009 ; 8 ; Kaleidoscope: A Graduate Journal of Qualitative Communication Research Volume 8 ; 8 >
+    au < manifest ; 2010 ; 9 ; Kaleidoscope: A Graduate Journal of Qualitative Communication Research Volume 9 ; 9 >
+    au < manifest ; 2011 ; 10 ; Kaleidoscope: A Graduate Journal of Qualitative Communication Research Volume 10 ; 10 >
+    au < manifest ; 2012 ; 11 ; Kaleidoscope: A Graduate Journal of Qualitative Communication Research Volume 11 ; 11 >
+    au < manifest ; 2013 ; 12 ; Kaleidoscope: A Graduate Journal of Qualitative Communication Research Volume 12 ; 12 >
+    
+  }
+    
+  {
+  
+    title <
+      name = Legacy: A Journal of Student Research
+    >
+    
+    plugin = org.lockss.plugin.bepress.BePressPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[journal_abbr] = legacy
+    implicit < status ; year ; volume ; name ; param[volume] >
+
+    au < manifest ; 2010 ; 10 ; Legacy: A Journal of Student Research Volume 10 ; 10 >
+    au < manifest ; 2011 ; 11 ; Legacy: A Journal of Student Research Volume 11 ; 11 >
+    
+  }
+    
+  {
 
     title <
       name = Neoliberalism and Media
@@ -587,6 +699,118 @@
     implicit < status ; year ; name ; param[collection_heading] >  
 
     au < released ; 2012 ; Neoliberalism and Media 2012 ; 2012 >
+
+  }
+
+  {
+  
+    title <
+      name = Online Journal for Workforce Education and Development
+    >
+    
+    plugin = org.lockss.plugin.bepress.BePressPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[journal_abbr] = ojwed
+    implicit < status ; year ; volume ; name ; param[volume] >
+
+    # Volume 8 has a manifest page that is not listed in lockss-sitemap.html
+
+    au < manifest ; 2005-2006 ; 1 ; Online Journal for Workforce Education and Development Volume 1 ; 1 >
+    au < manifest ; 2006-2007 ; 2 ; Online Journal for Workforce Education and Development Volume 2 ; 2 >
+    au < manifest ; 2007-2009 ; 3 ; Online Journal for Workforce Education and Development Volume 3 ; 3 >
+    au < manifest ; 2009-2010 ; 4 ; Online Journal for Workforce Education and Development Volume 4 ; 4 >
+    au < manifest ; 2011-2012 ; 5 ; Online Journal for Workforce Education and Development Volume 5 ; 5 >
+    au < manifest ; 2013 ; 6 ; Online Journal for Workforce Education and Development Volume 6 ; 6 >
+    au < manifest ; 2014 ; 7 ; Online Journal for Workforce Education and Development Volume 7 ; 7 >
+    au < manifest ; 2015 ; 8 ; Online Journal for Workforce Education and Development Volume 8 ; 8 >
+    
+  }
+    
+  {
+  
+    title <
+      name = The Open Court
+    >
+    
+    plugin = org.lockss.plugin.bepress.BePressPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[journal_abbr] = ocj
+    implicit < status ; year ; volume ; name ; param[volume] >
+
+    # Some manifests were found by a script but had no entry in lockss-sitemap.html
+
+    au < manifest ; 1887 ; 1887 ; The Open Court Volume 1887 ; 1887 >
+    au < manifest ; 1888 ; 1888 ; The Open Court Volume 1888 ; 1888 >
+    au < manifest ; 1889 ; 1889 ; The Open Court Volume 1889 ; 1889 >
+    au < manifest ; 1890 ; 1890 ; The Open Court Volume 1890 ; 1890 >
+    au < manifest ; 1891 ; 1891 ; The Open Court Volume 1891 ; 1891 >
+    au < manifest ; 1892 ; 1892 ; The Open Court Volume 1892 ; 1892 >
+    au < doesNotExist ; 1893 ; 1893 ; The Open Court Volume 1893 ; 1893 >
+    au < doesNotExist ; 1894 ; 1894 ; The Open Court Volume 1894 ; 1894 >
+    au < doesNotExist ; 1895 ; 1895 ; The Open Court Volume 1895 ; 1895 >
+    au < doesNotExist ; 1896 ; 1896 ; The Open Court Volume 1896 ; 1896 >
+    au < doesNotExist ; 1897 ; 1897 ; The Open Court Volume 1897 ; 1897 >
+    au < doesNotExist ; 1898 ; 1898 ; The Open Court Volume 1898 ; 1898 >
+    au < manifest ; 1899 ; 1899 ; The Open Court Volume 1899 ; 1899 >
+    au < manifest ; 1900 ; 1900 ; The Open Court Volume 1900 ; 1900 >
+    au < manifest ; 1901 ; 1901 ; The Open Court Volume 1901 ; 1901 >
+    au < manifest ; 1902 ; 1902 ; The Open Court Volume 1902 ; 1902 >
+    au < manifest ; 1903 ; 1903 ; The Open Court Volume 1903 ; 1903 >
+    au < manifest ; 1904 ; 1904 ; The Open Court Volume 1904 ; 1904 >
+    au < manifest ; 1905 ; 1905 ; The Open Court Volume 1905 ; 1905 >
+    au < manifest ; 1906 ; 1906 ; The Open Court Volume 1906 ; 1906 >
+    au < manifest ; 1907 ; 1907 ; The Open Court Volume 1907 ; 1907 >
+    au < manifest ; 1908 ; 1908 ; The Open Court Volume 1908 ; 1908 >
+    au < manifest ; 1909 ; 1909 ; The Open Court Volume 1909 ; 1909 >
+    au < manifest ; 1910 ; 1910 ; The Open Court Volume 1910 ; 1910 >
+    au < manifest ; 1911 ; 1911 ; The Open Court Volume 1911 ; 1911 >
+    au < manifest ; 1912 ; 1912 ; The Open Court Volume 1912 ; 1912 >
+    au < manifest ; 1913 ; 1913 ; The Open Court Volume 1913 ; 1913 >
+    au < manifest ; 1914 ; 1914 ; The Open Court Volume 1914 ; 1914 >
+    au < manifest ; 1915 ; 1915 ; The Open Court Volume 1915 ; 1915 >
+    au < manifest ; 1916 ; 1916 ; The Open Court Volume 1916 ; 1916 >
+    au < manifest ; 1917 ; 1917 ; The Open Court Volume 1917 ; 1917 >
+    au < manifest ; 1918 ; 1918 ; The Open Court Volume 1918 ; 1918 >
+    au < manifest ; 1919 ; 1919 ; The Open Court Volume 1919 ; 1919 >
+    au < manifest ; 1920 ; 1920 ; The Open Court Volume 1920 ; 1920 >
+    au < manifest ; 1921 ; 1921 ; The Open Court Volume 1921 ; 1921 >
+    au < manifest ; 1922 ; 1922 ; The Open Court Volume 1922 ; 1922 >
+    au < manifest ; 1923 ; 1923 ; The Open Court Volume 1923 ; 1923 >
+    au < manifest ; 1924 ; 1924 ; The Open Court Volume 1924 ; 1924 >
+    au < manifest ; 1925 ; 1925 ; The Open Court Volume 1925 ; 1925 >
+    au < manifest ; 1926 ; 1926 ; The Open Court Volume 1926 ; 1926 >
+    au < manifest ; 1927 ; 1927 ; The Open Court Volume 1927 ; 1927 >
+    au < manifest ; 1928 ; 1928 ; The Open Court Volume 1928 ; 1928 >
+    au < manifest ; 1929 ; 1929 ; The Open Court Volume 1929 ; 1929 >
+    au < manifest ; 1930 ; 1930 ; The Open Court Volume 1930 ; 1930 >
+    au < manifest ; 1931 ; 1931 ; The Open Court Volume 1931 ; 1931 >
+    au < manifest ; 1932 ; 1932 ; The Open Court Volume 1932 ; 1932 >
+    au < manifest ; 1933 ; 1933 ; The Open Court Volume 1933 ; 1933 >
+    au < manifest ; 1934 ; 1934 ; The Open Court Volume 1934 ; 1934 >
+    au < manifest ; 1935 ; 1935 ; The Open Court Volume 1935 ; 1935 >
+    au < manifest ; 1936 ; 1936 ; The Open Court Volume 1936 ; 1936 >
+    
+  }
+    
+  {
+
+    title <
+      name = Perspectives: Research and Creative Activities at Southern Illinois University Carbondale
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = orda_pers
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 2003 ; Perspectives: Research and Creative Activities at Southern Illinois University Carbondale 2003 ; 2003 >
+    au < manifest ; 2004 ; Perspectives: Research and Creative Activities at Southern Illinois University Carbondale 2004 ; 2004 >
+    au < manifest ; 2005 ; Perspectives: Research and Creative Activities at Southern Illinois University Carbondale 2005 ; 2005 >
+    au < manifest ; 2006 ; Perspectives: Research and Creative Activities at Southern Illinois University Carbondale 2006 ; 2006 >
+    au < manifest ; 2007 ; Perspectives: Research and Creative Activities at Southern Illinois University Carbondale 2007 ; 2007 >
+    au < manifest ; 2008 ; Perspectives: Research and Creative Activities at Southern Illinois University Carbondale 2008 ; 2008 >
+    au < manifest ; 2009 ; Perspectives: Research and Creative Activities at Southern Illinois University Carbondale 2009 ; 2009 >
 
   }
 
@@ -604,6 +828,32 @@
 
     # Type book
     # No LOCKSS markup found
+
+  }
+
+  {
+
+    title <
+      name = The Simon Review: Occasional Papers of the Paul Simon Public Policy Institute
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = ppi_papers
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 2004 ; The Simon Review: Occasional Papers of the Paul Simon Public Policy Institute 2004 ; 2004 >
+    au < manifest ; 2005 ; The Simon Review: Occasional Papers of the Paul Simon Public Policy Institute 2005 ; 2005 >
+    au < manifest ; 2006 ; The Simon Review: Occasional Papers of the Paul Simon Public Policy Institute 2006 ; 2006 >
+    au < manifest ; 2007 ; The Simon Review: Occasional Papers of the Paul Simon Public Policy Institute 2007 ; 2007 >
+    au < manifest ; 2008 ; The Simon Review: Occasional Papers of the Paul Simon Public Policy Institute 2008 ; 2008 >
+    au < manifest ; 2009 ; The Simon Review: Occasional Papers of the Paul Simon Public Policy Institute 2009 ; 2009 >
+    au < manifest ; 2010 ; The Simon Review: Occasional Papers of the Paul Simon Public Policy Institute 2010 ; 2010 >
+    au < manifest ; 2011 ; The Simon Review: Occasional Papers of the Paul Simon Public Policy Institute 2011 ; 2011 >
+    au < manifest ; 2012 ; The Simon Review: Occasional Papers of the Paul Simon Public Policy Institute 2012 ; 2012 >
+    au < manifest ; 2013 ; The Simon Review: Occasional Papers of the Paul Simon Public Policy Institute 2013 ; 2013 >
+    au < manifest ; 2014 ; The Simon Review: Occasional Papers of the Paul Simon Public Policy Institute 2014 ; 2014 >
 
   }
 
@@ -1078,6 +1328,21 @@
   {
 
     title <
+      name = Southern Illinois University Department of Geography and Environmental Resources Student Research Showcase
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    implicit < status ; year ; name ; param[collection] ; param[collection_heading] >  
+
+    au < manifest ; 2009 ; Southern Illinois University Department of Geography and Environmental Resources Student Research Showcase 2009 ; srs_2009 ; 2009 >
+
+  }
+
+  {
+
+    title <
       name = Southern Illinois University Department of Geology Computer Programs and Code
     >
 
@@ -1093,6 +1358,39 @@
     au < released ; 2009 ; Southern Illinois University Department of Geology Computer Programs and Code 2009 [abstracts only] ; 2009 >
     au < released ; 2011 ; Southern Illinois University Department of Geology Computer Programs and Code 2011 [abstracts only] ; 2011 >
     au < released ; 2014 ; Southern Illinois University Department of Geology Computer Programs and Code 2014 [abstracts only] ; 2014 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University Department of Health Education and Recreation, Division of Public Health Education Presentations
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = phe_pres
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 2009 ; Southern Illinois University Department of Health Education and Recreation, Division of Public Health Education Presentations 2009 ; 2009 >
+    au < manifest ; 2010 ; Southern Illinois University Department of Health Education and Recreation, Division of Public Health Education Presentations 2010 ; 2010 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University Department of Health Education and Recreation, Division of Public Health Education Publications
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = phe_pubs
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 2009 ; Southern Illinois University Department of Health Education and Recreation, Division of Public Health Education Publications 2009 ; 2009 >
 
   }
 
@@ -1133,6 +1431,232 @@
   {
 
     title <
+      name = Southern Illinois University Department of Mathematics Articles and Preprints
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = math_articles
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 1993 ; Southern Illinois University Department of Mathematics Articles and Preprints 1993 ; 1993 >
+    au < manifest ; 1994 ; Southern Illinois University Department of Mathematics Articles and Preprints 1994 ; 1994 >
+    au < manifest ; 1995 ; Southern Illinois University Department of Mathematics Articles and Preprints 1995 ; 1995 >
+    au < manifest ; 1996 ; Southern Illinois University Department of Mathematics Articles and Preprints 1996 ; 1996 >
+    au < manifest ; 1997 ; Southern Illinois University Department of Mathematics Articles and Preprints 1997 ; 1997 >
+    au < manifest ; 1998 ; Southern Illinois University Department of Mathematics Articles and Preprints 1998 ; 1998 >
+    au < manifest ; 1999 ; Southern Illinois University Department of Mathematics Articles and Preprints 1999 ; 1999 >
+    au < manifest ; 2000 ; Southern Illinois University Department of Mathematics Articles and Preprints 2000 ; 2000 >
+    au < manifest ; 2001 ; Southern Illinois University Department of Mathematics Articles and Preprints 2001 ; 2001 >
+    au < manifest ; 2002 ; Southern Illinois University Department of Mathematics Articles and Preprints 2002 ; 2002 >
+    au < manifest ; 2003 ; Southern Illinois University Department of Mathematics Articles and Preprints 2003 ; 2003 >
+    au < manifest ; 2004 ; Southern Illinois University Department of Mathematics Articles and Preprints 2004 ; 2004 >
+    au < manifest ; 2005 ; Southern Illinois University Department of Mathematics Articles and Preprints 2005 ; 2005 >
+    au < manifest ; 2006 ; Southern Illinois University Department of Mathematics Articles and Preprints 2006 ; 2006 >
+    au < manifest ; 2007 ; Southern Illinois University Department of Mathematics Articles and Preprints 2007 ; 2007 >
+    au < manifest ; 2008 ; Southern Illinois University Department of Mathematics Articles and Preprints 2008 ; 2008 >
+    au < manifest ; 2009 ; Southern Illinois University Department of Mathematics Articles and Preprints 2009 ; 2009 >
+    au < manifest ; 2010 ; Southern Illinois University Department of Mathematics Articles and Preprints 2010 ; 2010 >
+    au < manifest ; 2012 ; Southern Illinois University Department of Mathematics Articles and Preprints 2012 ; 2012 >
+    au < manifest ; 2014 ; Southern Illinois University Department of Mathematics Articles and Preprints 2014 ; 2014 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University Department of Mathematics Books, Monographs and Lecture Notes
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = math_books
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 1997 ; Southern Illinois University Department of Mathematics Books, Monographs and Lecture Notes 1997 ; 1997 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University Department of Mathematics Miscellaneous
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = math_misc
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 1996 ; Southern Illinois University Department of Mathematics Miscellaneous 1996 ; 1996 >
+    au < manifest ; 1997 ; Southern Illinois University Department of Mathematics Miscellaneous 1997 ; 1997 >
+    au < manifest ; 1998 ; Southern Illinois University Department of Mathematics Miscellaneous 1998 ; 1998 >
+    au < manifest ; 1999 ; Southern Illinois University Department of Mathematics Miscellaneous 1999 ; 1999 >
+    au < manifest ; 2000 ; Southern Illinois University Department of Mathematics Miscellaneous 2000 ; 2000 >
+    au < manifest ; 2001 ; Southern Illinois University Department of Mathematics Miscellaneous 2001 ; 2001 >
+    au < manifest ; 2002 ; Southern Illinois University Department of Mathematics Miscellaneous 2002 ; 2002 >
+    au < manifest ; 2003 ; Southern Illinois University Department of Mathematics Miscellaneous 2003 ; 2003 >
+    au < manifest ; 2004 ; Southern Illinois University Department of Mathematics Miscellaneous 2004 ; 2004 >
+    au < manifest ; 2005 ; Southern Illinois University Department of Mathematics Miscellaneous 2005 ; 2005 >
+    au < manifest ; 2006 ; Southern Illinois University Department of Mathematics Miscellaneous 2006 ; 2006 >
+    au < manifest ; 2007 ; Southern Illinois University Department of Mathematics Miscellaneous 2007 ; 2007 >
+    au < manifest ; 2008 ; Southern Illinois University Department of Mathematics Miscellaneous 2008 ; 2008 >
+    au < manifest ; 2009 ; Southern Illinois University Department of Mathematics Miscellaneous 2009 ; 2009 >
+    au < manifest ; 2010 ; Southern Illinois University Department of Mathematics Miscellaneous 2010 ; 2010 >
+    au < manifest ; 2011 ; Southern Illinois University Department of Mathematics Miscellaneous 2011 ; 2011 >
+    au < manifest ; 2012 ; Southern Illinois University Department of Mathematics Miscellaneous 2012 ; 2012 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University Department of Mechanical Engineering and Energy Processes Articles
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = meep_articles
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 2001 ; Southern Illinois University Department of Mechanical Engineering and Energy Processes Articles 2001 ; 2001 >
+    au < manifest ; 2007 ; Southern Illinois University Department of Mechanical Engineering and Energy Processes Articles 2007 ; 2007 >
+    au < manifest ; 2008 ; Southern Illinois University Department of Mechanical Engineering and Energy Processes Articles 2008 ; 2008 >
+    au < manifest ; 2009 ; Southern Illinois University Department of Mechanical Engineering and Energy Processes Articles 2009 ; 2009 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University Department of Medical Education Book Chapters
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = meded_books
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 1996 ; Southern Illinois University Department of Medical Education Book Chapters 1996 ; 1996 >
+    au < manifest ; 2000 ; Southern Illinois University Department of Medical Education Book Chapters 2000 ; 2000 >
+    au < manifest ; 2001 ; Southern Illinois University Department of Medical Education Book Chapters 2001 ; 2001 >
+    au < manifest ; 2007 ; Southern Illinois University Department of Medical Education Book Chapters 2007 ; 2007 >
+    au < manifest ; 2012 ; Southern Illinois University Department of Medical Education Book Chapters 2012 ; 2012 >
+    au < manifest ; 2013 ; Southern Illinois University Department of Medical Education Book Chapters 2013 ; 2013 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University Department of Medical Education Conference Proceedings
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = meded_confs
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 2001 ; Southern Illinois University Department of Medical Education Conference Proceedings 2001 ; 2001 >
+    au < manifest ; 2003 ; Southern Illinois University Department of Medical Education Conference Proceedings 2003 ; 2003 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University Department of Medical Education Publications
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = meded_pubs
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 1988 ; Southern Illinois University Department of Medical Education Publications 1988 ; 1988 >
+    au < manifest ; 1997 ; Southern Illinois University Department of Medical Education Publications 1997 ; 1997 >
+    au < manifest ; 2002 ; Southern Illinois University Department of Medical Education Publications 2002 ; 2002 >
+    au < manifest ; 2007 ; Southern Illinois University Department of Medical Education Publications 2007 ; 2007 >
+    au < manifest ; 2008 ; Southern Illinois University Department of Medical Education Publications 2008 ; 2008 >
+    au < manifest ; 2009 ; Southern Illinois University Department of Medical Education Publications 2009 ; 2009 >
+    au < manifest ; 2010 ; Southern Illinois University Department of Medical Education Publications 2010 ; 2010 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University Department of Microbiology Publications
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = micro_pubs
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 2006 ; Southern Illinois University Department of Microbiology Publications 2006 ; 2006 >
+    au < manifest ; 2014 ; Southern Illinois University Department of Microbiology Publications 2014 ; 2014 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University Department of Physics Publications
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = phys_pubs
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 1997 ; Southern Illinois University Department of Physics Publications 1997 ; 1997 >
+    au < manifest ; 1999 ; Southern Illinois University Department of Physics Publications 1999 ; 1999 >
+    au < manifest ; 2000 ; Southern Illinois University Department of Physics Publications 2000 ; 2000 >
+    au < manifest ; 2001 ; Southern Illinois University Department of Physics Publications 2001 ; 2001 >
+    au < manifest ; 2002 ; Southern Illinois University Department of Physics Publications 2002 ; 2002 >
+    au < manifest ; 2003 ; Southern Illinois University Department of Physics Publications 2003 ; 2003 >
+    au < manifest ; 2004 ; Southern Illinois University Department of Physics Publications 2004 ; 2004 >
+    au < manifest ; 2005 ; Southern Illinois University Department of Physics Publications 2005 ; 2005 >
+    au < manifest ; 2006 ; Southern Illinois University Department of Physics Publications 2006 ; 2006 >
+    au < manifest ; 2007 ; Southern Illinois University Department of Physics Publications 2007 ; 2007 >
+    au < manifest ; 2008 ; Southern Illinois University Department of Physics Publications 2008 ; 2008 >
+    au < manifest ; 2009 ; Southern Illinois University Department of Physics Publications 2009 ; 2009 >
+    au < manifest ; 2010 ; Southern Illinois University Department of Physics Publications 2010 ; 2010 >
+    au < manifest ; 2011 ; Southern Illinois University Department of Physics Publications 2011 ; 2011 >
+    au < manifest ; 2012 ; Southern Illinois University Department of Physics Publications 2012 ; 2012 >
+    au < manifest ; 2013 ; Southern Illinois University Department of Physics Publications 2013 ; 2013 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University Department of Physics Videos
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = phys_vids
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 2008 ; Southern Illinois University Department of Physics Videos 2008 ; 2008 >
+
+  }
+
+  {
+
+    title <
       name = Southern Illinois University Dissertations
     >
 
@@ -1143,6 +1667,147 @@
     implicit < status ; year ; name ; param[collection_heading] >  
 
     # No LOCKSS markup found
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University Department of Plant Biology Publications
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = pb_pubs
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 1994 ; Southern Illinois University Department of Plant Biology Publications 1994 ; 1994 >
+    au < manifest ; 1995 ; Southern Illinois University Department of Plant Biology Publications 1995 ; 1995 >
+    au < manifest ; 1998 ; Southern Illinois University Department of Plant Biology Publications 1998 ; 1998 >
+    au < manifest ; 2001 ; Southern Illinois University Department of Plant Biology Publications 2001 ; 2001 >
+    au < manifest ; 2002 ; Southern Illinois University Department of Plant Biology Publications 2002 ; 2002 >
+    au < manifest ; 2005 ; Southern Illinois University Department of Plant Biology Publications 2005 ; 2005 >
+    au < manifest ; 2007 ; Southern Illinois University Department of Plant Biology Publications 2007 ; 2007 >
+    au < manifest ; 2008 ; Southern Illinois University Department of Plant Biology Publications 2008 ; 2008 >
+    au < manifest ; 2013 ; Southern Illinois University Department of Plant Biology Publications 2013 ; 2013 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University Department of Plant Biology Reports
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = pb_reports
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 2006 ; Southern Illinois University Department of Plant Biology Reports 2006 ; 2006 >
+    au < manifest ; 2008 ; Southern Illinois University Department of Plant Biology Reports 2008 ; 2008 >
+    au < manifest ; 2011 ; Southern Illinois University Department of Plant Biology Reports 2011 ; 2011 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University Department of Plant, Soils, and Agricultural Systems Articles
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = psas_articles
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 2003 ; Southern Illinois University Department of Plant, Soils, and Agricultural Systems Articles 2003 ; 2003 >
+    au < manifest ; 2005 ; Southern Illinois University Department of Plant, Soils, and Agricultural Systems Articles 2005 ; 2005 >
+    au < manifest ; 2007 ; Southern Illinois University Department of Plant, Soils, and Agricultural Systems Articles 2007 ; 2007 >
+    au < manifest ; 2008 ; Southern Illinois University Department of Plant, Soils, and Agricultural Systems Articles 2008 ; 2008 >
+    au < manifest ; 2009 ; Southern Illinois University Department of Plant, Soils, and Agricultural Systems Articles 2009 ; 2009 >
+    au < manifest ; 2010 ; Southern Illinois University Department of Plant, Soils, and Agricultural Systems Articles 2010 ; 2010 >
+    au < manifest ; 2012 ; Southern Illinois University Department of Plant, Soils, and Agricultural Systems Articles 2012 ; 2012 >
+    au < manifest ; 2013 ; Southern Illinois University Department of Plant, Soils, and Agricultural Systems Articles 2013 ; 2013 >
+    au < manifest ; 2014 ; Southern Illinois University Department of Plant, Soils, and Agricultural Systems Articles 2014 ; 2014 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University Department of Political Science Data Repository
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = ps_dr
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    attr[au_coverage_depth] = abstracts
+
+    au < manifest ; 2010 ; Southern Illinois University Department of Political Science Data Repository 2010 [abstracts only] ; 2010 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University Department of Political Science Publications
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = ps_pubs
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 2003 ; Southern Illinois University Department of Political Science Publications 2003 ; 2003 >
+    au < manifest ; 2004 ; Southern Illinois University Department of Political Science Publications 2004 ; 2004 >
+    au < manifest ; 2005 ; Southern Illinois University Department of Political Science Publications 2005 ; 2005 >
+    au < manifest ; 2007 ; Southern Illinois University Department of Political Science Publications 2007 ; 2007 >
+    au < manifest ; 2009 ; Southern Illinois University Department of Political Science Publications 2009 ; 2009 >
+    au < manifest ; 2010 ; Southern Illinois University Department of Political Science Publications 2010 ; 2010 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University Department of Political Science Working Papers
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = ps_wp
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 2009 ; Southern Illinois University Department of Political Science Working Papers 2009 ; 2009 >
+    au < manifest ; 2012 ; Southern Illinois University Department of Political Science Working Papers 2012 ; 2012 >
+    au < manifest ; 2013 ; Southern Illinois University Department of Political Science Working Papers 2013 ; 2013 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University Department of Psychology Publications
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = psych_pubs
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 1988 ; Southern Illinois University Department of Psychology Publications 1988 ; 1988 >
+    au < manifest ; 2013 ; Southern Illinois University Department of Psychology Publications 2013 ; 2013 >
+    au < manifest ; 2014 ; Southern Illinois University Department of Psychology Publications 2014 ; 2014 >
 
   }
 
@@ -1330,6 +1995,304 @@
   {
   
     title <
+      name = Southern Illinois University Law Journal
+    >
+    
+    plugin = org.lockss.plugin.bepress.BePressPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[journal_abbr] = siulj
+    implicit < status ; year ; volume ; name ; param[volume] >
+
+    au < manifest ; 2003 ; 28 ; Southern Illinois University Law Journal Volume 28 ; 28 >
+    
+  }
+    
+  {
+
+    title <
+      name = Southern Illinois University Morris Library Articles
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = morris_articles
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 1996 ; Southern Illinois University Morris Library Articles 1996 ; 1996 >
+    au < manifest ; 2005 ; Southern Illinois University Morris Library Articles 2005 ; 2005 >
+    au < manifest ; 2006 ; Southern Illinois University Morris Library Articles 2006 ; 2006 >
+    au < manifest ; 2007 ; Southern Illinois University Morris Library Articles 2007 ; 2007 >
+    au < manifest ; 2008 ; Southern Illinois University Morris Library Articles 2008 ; 2008 >
+    au < manifest ; 2009 ; Southern Illinois University Morris Library Articles 2009 ; 2009 >
+    au < manifest ; 2010 ; Southern Illinois University Morris Library Articles 2010 ; 2010 >
+    au < manifest ; 2011 ; Southern Illinois University Morris Library Articles 2011 ; 2011 >
+    au < manifest ; 2012 ; Southern Illinois University Morris Library Articles 2012 ; 2012 >
+    au < manifest ; 2013 ; Southern Illinois University Morris Library Articles 2013 ; 2013 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University Morris Library Conference Papers and Presentations
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = morris_confs
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 2005 ; Southern Illinois University Morris Library Conference Papers and Presentations 2005 ; 2005 >
+    au < manifest ; 2006 ; Southern Illinois University Morris Library Conference Papers and Presentations 2006 ; 2006 >
+    au < manifest ; 2009 ; Southern Illinois University Morris Library Conference Papers and Presentations 2009 ; 2009 >
+    au < manifest ; 2010 ; Southern Illinois University Morris Library Conference Papers and Presentations 2010 ; 2010 >
+    au < manifest ; 2011 ; Southern Illinois University Morris Library Conference Papers and Presentations 2011 ; 2011 >
+    au < manifest ; 2012 ; Southern Illinois University Morris Library Conference Papers and Presentations 2012 ; 2012 >
+    au < manifest ; 2013 ; Southern Illinois University Morris Library Conference Papers and Presentations 2013 ; 2013 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University Morris Library Cornerstone
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = morrisnews_cornerstone
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 2005 ; Southern Illinois University Morris Library Cornerstone 2005 ; 2005 >
+    au < manifest ; 2006 ; Southern Illinois University Morris Library Cornerstone 2006 ; 2006 >
+    au < manifest ; 2007 ; Southern Illinois University Morris Library Cornerstone 2007 ; 2007 >
+    au < manifest ; 2008 ; Southern Illinois University Morris Library Cornerstone 2008 ; 2008 >
+    au < manifest ; 2009 ; Southern Illinois University Morris Library Cornerstone 2009 ; 2009 >
+    au < manifest ; 2010 ; Southern Illinois University Morris Library Cornerstone 2010 ; 2010 >
+    au < manifest ; 2011 ; Southern Illinois University Morris Library Cornerstone 2011 ; 2011 >
+    au < manifest ; 2012 ; Southern Illinois University Morris Library Cornerstone 2012 ; 2012 >
+    au < manifest ; 2013 ; Southern Illinois University Morris Library Cornerstone 2013 ; 2013 >
+    au < manifest ; 2014 ; Southern Illinois University Morris Library Cornerstone 2014 ; 2014 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University Morris Library Events
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = morris_events
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 2010 ; Southern Illinois University Morris Library Events 2010 ; 2010 >
+    au < manifest ; 2011 ; Southern Illinois University Morris Library Events 2011 ; 2011 >
+    au < manifest ; 2014 ; Southern Illinois University Morris Library Events 2014 ; 2014 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University Morris Library Strategic Planning Documents
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = morris_sp
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 2011 ; Southern Illinois University Morris Library Strategic Planning Documents 2011 ; 2011 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University Morris Library Surveys
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = morris_surveys
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 2010 ; Southern Illinois University Morris Library Surveys 2010 ; 2010 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University Morris Library Videos
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = morris_vids
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 2009 ; Southern Illinois University Morris Library Videos 2009 ; 2009 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University OpenSIUC Documents
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = morris_opensiuc
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 2008 ; Southern Illinois University OpenSIUC Documents 2008 ; 2008 >
+    au < manifest ; 2009 ; Southern Illinois University OpenSIUC Documents 2009 ; 2009 >
+    au < manifest ; 2010 ; Southern Illinois University OpenSIUC Documents 2010 ; 2010 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University Paul Simon Public Policy Institute: Southern Illinois Polls
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = ppi_sipolls
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 2010 ; Southern Illinois University Paul Simon Public Policy Institute: Southern Illinois Polls 2010 ; 2010 >
+    au < manifest ; 2011 ; Southern Illinois University Paul Simon Public Policy Institute: Southern Illinois Polls 2011 ; 2011 >
+    au < manifest ; 2012 ; Southern Illinois University Paul Simon Public Policy Institute: Southern Illinois Polls 2012 ; 2012 >
+    au < manifest ; 2013 ; Southern Illinois University Paul Simon Public Policy Institute: Southern Illinois Polls 2013 ; 2013 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University Paul Simon Public Policy Institute: Statewide Polls
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = ppi_statepolls
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 2008 ; Southern Illinois University Paul Simon Public Policy Institute: Statewide Polls 2008 ; 2008 >
+    au < manifest ; 2009 ; Southern Illinois University Paul Simon Public Policy Institute: Statewide Polls 2009 ; 2009 >
+    au < manifest ; 2010 ; Southern Illinois University Paul Simon Public Policy Institute: Statewide Polls 2010 ; 2010 >
+    au < manifest ; 2011 ; Southern Illinois University Paul Simon Public Policy Institute: Statewide Polls 2011 ; 2011 >
+    au < manifest ; 2012 ; Southern Illinois University Paul Simon Public Policy Institute: Statewide Polls 2012 ; 2012 >
+    au < manifest ; 2013 ; Southern Illinois University Paul Simon Public Policy Institute: Statewide Polls 2013 ; 2013 >
+    au < manifest ; 2014 ; Southern Illinois University Paul Simon Public Policy Institute: Statewide Polls 2014 ; 2014 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University Political Networks Paper Archive: Conference Proceedings
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    implicit < status ; year ; name ; param[collection] ; param[collection_heading] >  
+
+    au < manifest ; 2010 ; Southern Illinois University Political Networks Paper Archive: Conference Proceedings 2010 ; pnconfs_2010 ; 2010 >
+    au < manifest ; 2011 ; Southern Illinois University Political Networks Paper Archive: Conference Proceedings 2011 ; pnconfs_2011 ; 2011 >
+    au < manifest ; 2012 ; Southern Illinois University Political Networks Paper Archive: Conference Proceedings 2012 ; pnconfs_2012 ; 2012 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University Political Networks Paper Archive: Working Papers
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = pn_wp
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 2008 ; Southern Illinois University Political Networks Paper Archive: Working Papers 2008 ; 2008 >
+    au < manifest ; 2009 ; Southern Illinois University Political Networks Paper Archive: Working Papers 2009 ; 2009 >
+    au < manifest ; 2010 ; Southern Illinois University Political Networks Paper Archive: Working Papers 2010 ; 2010 >
+    au < manifest ; 2011 ; Southern Illinois University Political Networks Paper Archive: Working Papers 2011 ; 2011 >
+    au < manifest ; 2012 ; Southern Illinois University Political Networks Paper Archive: Working Papers 2012 ; 2012 >
+    au < manifest ; 2013 ; Southern Illinois University Political Networks Paper Archive: Working Papers 2013 ; 2013 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University REACH Posters
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = reach_posters
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 2010 ; Southern Illinois University REACH Posters 2010 ; 2010 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University Rehabilitation Institute Publications
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = rehab_pubs
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 2009 ; Southern Illinois University Rehabilitation Institute Publications 2009 ; 2009 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University Research Matters
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = orda_rema
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 2008 ; Southern Illinois University Research Matters 2008 ; 2008 >
+
+  }
+
+  {
+  
+    title <
       name = Southern Illinois University School of Art and Design Publications
     >
     
@@ -1360,6 +2323,112 @@
   
     au < released ; 2011 ; Southern Illinois University School of Architecture Videos 2011 ; 2011 >
   
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University School of Law Publications
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = law_pubs
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 2001 ; Southern Illinois University School of Law Publications 2001 ; 2001 >
+    au < manifest ; 2002 ; Southern Illinois University School of Law Publications 2002 ; 2002 >
+    au < manifest ; 2005 ; Southern Illinois University School of Law Publications 2005 ; 2005 >
+    au < manifest ; 2006 ; Southern Illinois University School of Law Publications 2006 ; 2006 >
+    au < manifest ; 2007 ; Southern Illinois University School of Law Publications 2007 ; 2007 >
+    au < manifest ; 2008 ; Southern Illinois University School of Law Publications 2008 ; 2008 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University School of Music Graduate Student Work
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = music_gradworks
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 2009 ; Southern Illinois University School of Music Graduate Student Work 2009 ; 2009 >
+    au < manifest ; 2011 ; Southern Illinois University School of Music Graduate Student Work 2011 ; 2011 >
+    au < manifest ; 2012 ; Southern Illinois University School of Music Graduate Student Work 2012 ; 2012 >
+    au < manifest ; 2013 ; Southern Illinois University School of Music Graduate Student Work 2013 ; 2013 >
+    au < manifest ; 2014 ; Southern Illinois University School of Music Graduate Student Work 2014 ; 2014 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University Semiotics Analysis Forum: Music Faculty Charts
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = safmusiccharts_faculty
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 2008 ; Southern Illinois University Semiotics Analysis Forum: Music Faculty Charts 2008 ; 2008 >
+    au < manifest ; 2010 ; Southern Illinois University Semiotics Analysis Forum: Music Faculty Charts 2010 ; 2010 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University Semiotics Analysis Forum: Music Faculty Papers
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = safmusicpapers_faculty
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 2010 ; Southern Illinois University Semiotics Analysis Forum: Music Faculty Papers 2010 ; 2010 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University Semiotics Analysis Forum: Music Student Charts
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = safmusiccharts_students
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < manifest ; 2010 ; Southern Illinois University Semiotics Analysis Forum: Music Student Charts 2010 ; 2010 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University Theses
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_etd
+    param[collection] = theses
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    # No LOCKSS markup found
+
   }
 
 }
