@@ -753,9 +753,11 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
+      
+      comment[error] = manifest page has no links for V2. http://ags.sagepub.com/clockss-manifest/vol_2_manifest.dtl
 
       au < finished ; frozen ; 2012 ; Agrarian South: Journal of Political Economy Volume 1 ; 1 ; >
-      au < crawling ; exists ; 2013 ; Agrarian South: Journal of Political Economy Volume 2 ; 2 ; >
+      au < ingNotReady ; exists ; 2013 ; Agrarian South: Journal of Political Economy Volume 2 ; 2 ; >
       au < crawling ; exists ; 2014 ; Agrarian South: Journal of Political Economy Volume 3 ; 3 ; >
       au < expected ; exists ; 2015 ; Agrarian South: Journal of Political Economy Volume 4 ; 4 ; >
 
