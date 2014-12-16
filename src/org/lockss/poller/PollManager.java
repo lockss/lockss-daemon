@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.271.2.1 2014-12-10 22:07:55 dshr Exp $
+ * $Id: PollManager.java,v 1.271.2.2 2014-12-16 23:22:01 dshr Exp $
  */
 
 /*
@@ -3014,14 +3014,15 @@ public class PollManager
     theLog.debug3("Last content change " + lastContentChange +
 		  " Agree last poll " + agreePeersLastPoll +
 		  " Time since poll " + timeSinceAnyPoll +
-		  " Time since PoR " + lastPollTime +
+		  " Time of last PoR " + lastPollTime +
 		  " Min time since poll " + minTimeSinceAnyPoll +
 		  " Suspect versions " + countSuspectVersionsNotGivenUp +
 		  " Min agree last poll " + minAgreePeersLastPoll +
 		  " Repairers " + willingRepairers +
 		  " Repair thresh " + repairerThreshold +
 		  " Enable local " + enableLocalPolls +
-		  " Enable PoP " + enablePoPPolls);
+		  " Enable PoP " + enablePoPPolls +
+		  " AU " + au);
     if (timeSinceAnyPoll < minTimeSinceAnyPoll) {
       // Too soon to do anything
       ret = PollVariant.NoPoll;
