@@ -1217,8 +1217,9 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
   {
     title <
       name = JAMIA ;
+      issn = 1067-5027 ;
       eissn = 1527-974X ;
-      issnl = 1527-974X
+      issnl = 1067-5027
     >
 
     param[base_url] = http://jamia.bmj.com/
