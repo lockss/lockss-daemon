@@ -14800,6 +14800,23 @@
       
     }
     
+    {
+      title <
+        name = International Journal of Electrical Engineering Education ;
+        issn = 0020-7209 ;
+        eissn = 2050-4578 ;
+        issnl = 0020-7209
+      >
+
+        pluginSuffix = ClockssHighWirePressH20Plugin
+        param[base_url] = http://ije.sagepub.com/
+
+
+     au < exists ; exists ; 2014 ; International Journal of Electrical Engineering Education Volume 51 ; 51 ; >
+     au < expected ; exists ; 2015 ; International Journal of Electrical Engineering Education Volume 52 ; 52 ; >
+     
+    }
+    
   {
 
     title <
