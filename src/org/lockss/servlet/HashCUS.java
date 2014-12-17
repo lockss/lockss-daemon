@@ -1,5 +1,5 @@
 /*
- * $Id: HashCUS.java,v 1.59 2014-12-02 20:43:55 fergaloy-sf Exp $
+ * $Id: HashCUS.java,v 1.60 2014-12-17 09:21:32 tlipkis Exp $
  */
 
 /*
@@ -61,6 +61,12 @@ public class HashCUS extends LockssServlet {
     PREFIX + "globalBackgroundRequests";
   static final boolean DEFAULT_GLOBAL_BACKGROUND_REQUESTS = true;
 
+  /** If true, hash files of background requests are deleted after being
+   * fetched.  If false they remain until the request is deleted. */
+  static final String PARAM_AUTO_DELETE_HASH_FILES = 
+    PREFIX + "autoDeleteHashFiles";
+  static final boolean DEFAULT_AUTO_DELETE_HASH_FILES = true;
+
   static final String KEY_AUID = "auid";
   static final String KEY_URL = "url";
   static final String KEY_LOWER = "lb";
@@ -118,6 +124,9 @@ public class HashCUS extends LockssServlet {
 
   private static boolean isGlobalBackgroundRequests =
     DEFAULT_GLOBAL_BACKGROUND_REQUESTS;
+
+  private static boolean isAutoDeleteHashFiles =
+    DEFAULT_AUTO_DELETE_HASH_FILES;
 
   private static final Map<String, SimpleHasher.ParamsAndResult>
   GLOBAL_REQUESTS = new LinkedHashMap<String, SimpleHasher.ParamsAndResult>();
@@ -341,7 +350,8 @@ public class HashCUS extends LockssServlet {
 	}
 
 	tbl.newCell();
-	tbl.add(pluginMgr.getAuFromId(entryRequest.getAuId()).getName());
+	ArchivalUnit au = pluginMgr.getAuFromId(entryRequest.getAuId());
+	tbl.add(au != null ? au.getName() : "(Deleted AU)");
       }
       Page page = newPage();
       layoutErrorBlock(page);
@@ -455,7 +465,7 @@ public class HashCUS extends LockssServlet {
     }
 
     File fileToStream = new File(file);
-    if (fileToStream == null || !fileToStream.exists()) {
+    if (!fileToStream.exists()) {
       errMsg = "The result file of the previous hashing operation has been "
 	  + "deleted.<br />To view it, please perform the hashing operation "
 	  + "again.";
@@ -469,8 +479,13 @@ public class HashCUS extends LockssServlet {
       if (mime != null) {
 	resp.setContentType(mime);
       }
-      InputStream in = new BufferedInputStream(
-	  new DeleteFileOnCloseInputStream(new File(file)));
+      InputStream in;
+      if (isAutoDeleteHashFiles) {
+	in = new DeleteFileOnCloseInputStream(fileToStream);
+      } else {
+	in = new FileInputStream(fileToStream);
+      }
+      in = new BufferedInputStream(in);
       OutputStream out = resp.getOutputStream();
       org.mortbay.util.IO.copy(in, out);
       in.close();
@@ -919,6 +934,9 @@ public class HashCUS extends LockssServlet {
     isGlobalBackgroundRequests =
       config.getBoolean(PARAM_GLOBAL_BACKGROUND_REQUESTS,
 			DEFAULT_GLOBAL_BACKGROUND_REQUESTS);
+    isAutoDeleteHashFiles =
+      config.getBoolean(PARAM_AUTO_DELETE_HASH_FILES,
+			DEFAULT_AUTO_DELETE_HASH_FILES);
   }
 
   private Map<String, SimpleHasher.ParamsAndResult> getRequestMap() {
@@ -942,14 +960,16 @@ public class HashCUS extends LockssServlet {
   private HasherParams getParamsData(String reqId) {
     Map<String, SimpleHasher.ParamsAndResult> map = getRequestMap();
     synchronized (map) {
-      return map.get(reqId).params;
+      SimpleHasher.ParamsAndResult par = map.get(reqId);
+      return par != null ? par.params : null;
     }
   }
 
   private HasherResult getResultData(String reqId) {
     Map<String, SimpleHasher.ParamsAndResult> map = getRequestMap();
     synchronized (map) {
-      return map.get(reqId).result;
+      SimpleHasher.ParamsAndResult par = map.get(reqId);
+      return par != null ? par.result : null;
     }
   }
 
