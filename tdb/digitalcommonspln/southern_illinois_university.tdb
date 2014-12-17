@@ -510,22 +510,6 @@
   }
 
   {
-
-    title <
-      name = Global Cinema
-    >
-
-    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
-    param[base_url] = http://opensiuc.lib.siu.edu/
-    param[collection_type] = ir_series
-    param[collection] = gmrc_gc
-    implicit < status ; year ; name ; param[collection_heading] >  
-
-    au < released ; 2013 ; Global Cinema 2013 ; 2013 >
-
-  }
-
-  {
   
     title <
       name = Ethnobotanical Leaflets
@@ -552,6 +536,22 @@
     au < released ; 2009 ; 2009 ; Ethnobotanical Leaflets Volume 2009 ; 2009 >
     au < released ; 2010 ; 2010 ; Ethnobotanical Leaflets Volume 2010 ; 2010 >
   
+  }
+
+  {
+
+    title <
+      name = Global Cinema
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = gmrc_gc
+    implicit < status ; year ; name ; param[collection_heading] >  
+
+    au < released ; 2013 ; Global Cinema 2013 ; 2013 >
+
   }
 
   {
