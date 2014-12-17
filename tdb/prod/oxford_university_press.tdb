@@ -370,6 +370,47 @@
   {
 
     title <
+        name = American Entomologist ;
+        issn = 1046-2821 ;
+        eissn = 2155-9902 ;
+        issnl = 1046-2821
+      >
+
+    param[base_url] = http://ae.oxfordjournals.org/
+    plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 1990 ; American Entomologist Volume 36 ; 36 >
+    au < exists ; 1991 ; American Entomologist Volume 37 ; 37 >
+    au < exists ; 1992 ; American Entomologist Volume 38 ; 38 >
+    au < exists ; 1993 ; American Entomologist Volume 39 ; 39 >
+    au < exists ; 1994 ; American Entomologist Volume 40 ; 40 >
+    au < exists ; 1995 ; American Entomologist Volume 41 ; 41 >
+    au < exists ; 1996 ; American Entomologist Volume 42 ; 42 >
+    au < exists ; 1997 ; American Entomologist Volume 43 ; 43 >
+    au < exists ; 1998 ; American Entomologist Volume 44 ; 44 >
+    au < exists ; 1999 ; American Entomologist Volume 45 ; 45 >
+    au < exists ; 2000 ; American Entomologist Volume 46 ; 46 >
+    au < exists ; 2001 ; American Entomologist Volume 47 ; 47 >
+    au < exists ; 2002 ; American Entomologist Volume 48 ; 48 >
+    au < exists ; 2003 ; American Entomologist Volume 49 ; 49 >
+    au < exists ; 2004 ; American Entomologist Volume 50 ; 50 >
+    au < exists ; 2005 ; American Entomologist Volume 51 ; 51 >
+    au < exists ; 2006 ; American Entomologist Volume 52 ; 52 >
+    au < exists ; 2007 ; American Entomologist Volume 53 ; 53 >
+    au < exists ; 2008 ; American Entomologist Volume 54 ; 54 >
+    au < exists ; 2009 ; American Entomologist Volume 55 ; 55 >
+    au < exists ; 2010 ; American Entomologist Volume 56 ; 56 >
+    au < exists ; 2011 ; American Entomologist Volume 57 ; 57 >
+    au < exists ; 2012 ; American Entomologist Volume 58 ; 58 >
+    au < exists ; 2013 ; American Entomologist Volume 59 ; 59 >
+    au < exists ; 2014 ; American Entomologist Volume 60 ; 60 >
+
+  }
+
+  {
+
+    title <
         name = The American Historical Review ;
         issn = 0002-8762 ;
         eissn = 1937-5239 ;
@@ -1364,6 +1405,48 @@
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Annals of Botany Volume 114 ; 114 >
 
    }
+
+  }
+
+  {
+
+    title <
+      name = Annals of the Entomological Society of America ;
+      issn = 0013-8746 ;
+      eissn = 1938-2901 ;
+      issnl = 0013-8746
+    >
+
+    param[base_url] = http://aesa.oxfordjournals.org/
+    plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
+    implicit < status ; year ; name ; param[volume_name] >
+    comment[0] = content from 1908 volume 1 to 1989 volume 82 is available 
+
+    au < exists ; 1990 ; Annals of the Entomological Society of America Volume 83 ; 83 >
+    au < exists ; 1991 ; Annals of the Entomological Society of America Volume 84 ; 84 >
+    au < exists ; 1992 ; Annals of the Entomological Society of America Volume 85 ; 85 >
+    au < exists ; 1993 ; Annals of the Entomological Society of America Volume 86 ; 86 >
+    au < exists ; 1994 ; Annals of the Entomological Society of America Volume 87 ; 87 >
+    au < exists ; 1995 ; Annals of the Entomological Society of America Volume 88 ; 88 >
+    au < exists ; 1996 ; Annals of the Entomological Society of America Volume 89 ; 89 >
+    au < exists ; 1997 ; Annals of the Entomological Society of America Volume 90 ; 90 >
+    au < exists ; 1998 ; Annals of the Entomological Society of America Volume 91 ; 91 >
+    au < exists ; 1999 ; Annals of the Entomological Society of America Volume 92 ; 92 >
+    au < exists ; 2000 ; Annals of the Entomological Society of America Volume 93 ; 93 >
+    au < exists ; 2001 ; Annals of the Entomological Society of America Volume 94 ; 94 >
+    au < exists ; 2002 ; Annals of the Entomological Society of America Volume 95 ; 95 >
+    au < exists ; 2003 ; Annals of the Entomological Society of America Volume 96 ; 96 >
+    au < exists ; 2004 ; Annals of the Entomological Society of America Volume 97 ; 97 >
+    au < exists ; 2005 ; Annals of the Entomological Society of America Volume 98 ; 98 >
+    au < exists ; 2006 ; Annals of the Entomological Society of America Volume 99 ; 99 >
+    au < exists ; 2007 ; Annals of the Entomological Society of America Volume 100 ; 100 >
+    au < exists ; 2008 ; Annals of the Entomological Society of America Volume 101 ; 101 >
+    au < exists ; 2009 ; Annals of the Entomological Society of America Volume 102 ; 102 >
+    au < exists ; 2010 ; Annals of the Entomological Society of America Volume 103 ; 103 >
+    au < exists ; 2011 ; Annals of the Entomological Society of America Volume 104 ; 104 >
+    au < exists ; 2012 ; Annals of the Entomological Society of America Volume 105 ; 105 >
+    au < exists ; 2013 ; Annals of the Entomological Society of America Volume 106 ; 106 >
+    au < exists ; 2014 ; Annals of the Entomological Society of America Volume 107 ; 107 >
 
   }
 
@@ -13111,7 +13194,7 @@
     >
 
     param[base_url] = http://jmammal.oxfordjournals.org/
-    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2008 ; Journal of Mammalogy Volume 89 ; 89 >
@@ -13121,6 +13204,48 @@
     au < exists ; 2012 ; Journal of Mammalogy Volume 93 ; 93 >
     au < exists ; 2013 ; Journal of Mammalogy Volume 94 ; 94 >
     au < exists ; 2014 ; Journal of Mammalogy Volume 95 ; 95 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Medical Entomology ;
+      issn = 0022-2858 ;
+      eissn = 1938-2928 ;
+      issnl = 0022-2858 
+    >
+
+    param[base_url] = http://jme.oxfordjournals.org/
+    plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
+    implicit < status ; year ; name ; param[volume_name] >
+    comment[0] = content from 1976 volume 13 to 1989 volume 27 is available 
+    
+    au < exists ; 1990 ; Journal of Medical Entomology Volume 27 ; 27 >
+    au < exists ; 1991 ; Journal of Medical Entomology Volume 28 ; 28 >
+    au < exists ; 1992 ; Journal of Medical Entomology Volume 29 ; 29 >
+    au < exists ; 1993 ; Journal of Medical Entomology Volume 30 ; 30 >
+    au < exists ; 1994 ; Journal of Medical Entomology Volume 31 ; 31 >
+    au < exists ; 1995 ; Journal of Medical Entomology Volume 32 ; 32 >
+    au < exists ; 1996 ; Journal of Medical Entomology Volume 33 ; 33 >
+    au < exists ; 1997 ; Journal of Medical Entomology Volume 34 ; 34 >
+    au < exists ; 1998 ; Journal of Medical Entomology Volume 35 ; 35 >
+    au < exists ; 1999 ; Journal of Medical Entomology Volume 36 ; 36 >
+    au < exists ; 2000 ; Journal of Medical Entomology Volume 37 ; 37 >
+    au < exists ; 2001 ; Journal of Medical Entomology Volume 38 ; 38 >
+    au < exists ; 2002 ; Journal of Medical Entomology Volume 39 ; 39 >
+    au < exists ; 2003 ; Journal of Medical Entomology Volume 40 ; 40 >
+    au < exists ; 2004 ; Journal of Medical Entomology Volume 41 ; 41 >
+    au < exists ; 2005 ; Journal of Medical Entomology Volume 42 ; 42 >
+    au < exists ; 2006 ; Journal of Medical Entomology Volume 43 ; 43 >
+    au < exists ; 2007 ; Journal of Medical Entomology Volume 44 ; 44 >
+    au < exists ; 2008 ; Journal of Medical Entomology Volume 45 ; 45 >
+    au < exists ; 2009 ; Journal of Medical Entomology Volume 46 ; 46 >
+    au < exists ; 2010 ; Journal of Medical Entomology Volume 47 ; 47 >
+    au < exists ; 2011 ; Journal of Medical Entomology Volume 48 ; 48 >
+    au < exists ; 2012 ; Journal of Medical Entomology Volume 49 ; 49 >
+    au < exists ; 2013 ; Journal of Medical Entomology Volume 50 ; 50 >
+    au < exists ; 2014 ; Journal of Medical Entomology Volume 51 ; 51 >
 
   }
 
@@ -15040,10 +15165,14 @@
     >
 
     param[base_url] = http://mspecies.oxfordjournals.org/
-    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < expected ; 2014 ; Mammalian Species Volume 50 ; 50 >
+    au < exists ; 2010 ; Mammalian Species Volume 42 ; 42 >
+    au < exists ; 2011 ; Mammalian Species Volume 43 ; 43 >
+    au < exists ; 2012 ; Mammalian Species Volume 44 ; 44 >
+    au < exists ; 2013 ; Mammalian Species Volume 45 ; 45 >
+    au < exists ; 2014 ; Mammalian Species Volume 46 ; 46 >
     
   }
 
