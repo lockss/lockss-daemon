@@ -1403,12 +1403,13 @@
     implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     comment[1] = ceased publication in 2011
+    comment[error] = on ingest machines, AUs have picked up manifest page with no links.
     
     au < doNotProcess ; doNotProcess ; 2007 ; The Hardy Review Volume 9 ; 9 >
     au < doNotProcess ; doNotProcess ; 2008 ; The Hardy Review Volume 10 ; 10 >
     au < doNotProcess ; doNotProcess ; 2009 ; The Hardy Review Volume 11 ; 11 >
-    au < finished ; crawling ; 2010 ; The Hardy Review Volume 12 ; 12 >
-    au < finished ; crawling ; 2011 ; The Hardy Review Volume 13 ; 13 >
+    au < ingNotReady ; crawling ; 2010 ; The Hardy Review Volume 12 ; 12 >
+    au < ingNotReady ; crawling ; 2011 ; The Hardy Review Volume 13 ; 13 >
 
   }
 
