@@ -1,5 +1,5 @@
 /*
- * $Id: RegistryArchivalUnit.java,v 1.33 2014-11-12 20:11:23 wkwilson Exp $
+ * $Id: RegistryArchivalUnit.java,v 1.34 2014-12-17 00:18:58 tlipkis Exp $
  */
 
 /*
@@ -274,7 +274,7 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
   }
 
   public int getRefetchDepth() {
-    return DefinableArchivalUnit.DEFAULT_AU_REFETCH_DEPTH;
+    return m_refetchDepth;
   }
 
   public LoginPageChecker getLoginPageChecker() {

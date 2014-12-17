@@ -1,5 +1,5 @@
 /*
- * $Id: TestRegistryArchivalUnit.java,v 1.21 2014-12-10 22:08:24 dshr Exp $
+ * $Id: TestRegistryArchivalUnit.java,v 1.22 2014-12-17 00:18:58 tlipkis Exp $
  */
 
 /*
@@ -120,6 +120,17 @@ public class TestRegistryArchivalUnit extends LockssTestCase {
     aupinfo = AuUtil.getAuProxyInfo(au);
     assertNull(aupinfo.getHost());
     assertEquals(0, aupinfo.getPort());
+  }
+
+  public void testRefetchDepth() throws Exception {
+    Configuration auConfig =
+      ConfigurationUtil.fromArgs(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+    ArchivalUnit au = regPlugin.createAu(auConfig);
+    assertEquals(org.lockss.crawler.FollowLinkCrawler.DEFAULT_MAX_CRAWL_DEPTH,
+		 au.getRefetchDepth());
+    // ensure FollowLinkCrawler.DEFAULT_MAX_CRAWL_DEPTH is an appropriate
+    // depth
+    assertTrue(au.getRefetchDepth() >= 100);
   }
 
   public void testRateLimiter() throws Exception {
