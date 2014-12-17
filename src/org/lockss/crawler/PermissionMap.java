@@ -1,5 +1,5 @@
 /*
- * $Id: PermissionMap.java,v 1.38 2014-12-04 00:33:55 wkwilson Exp $
+ * $Id: PermissionMap.java,v 1.38.2.1 2014-12-17 23:21:31 tlipkis Exp $
  */
 
 /*
@@ -117,15 +117,19 @@ public class PermissionMap {
 	res.setStatus(PermissionStatus.PERMISSION_OK);
 	return res;
       }
-      if (crawlFacade.isAllowedPluginPermittedHost(host) &&
-	  isPluginPermittedHost(host)) {
-	logger.debug2("Creating plugin permitted host PermissionRecord: "
-		      + url);
-	res = createRecord(url);
-	res.setStatus(PermissionStatus.PERMISSION_OK);
-	return res;
+      if (isPluginPermittedHost(host)) {
+	if (crawlFacade.isAllowedPluginPermittedHost(host)) {
+	  logger.debug2("Creating plugin permitted host PermissionRecord: "
+			+ url);
+	  res = createRecord(url);
+	  res.setStatus(PermissionStatus.PERMISSION_OK);
+	  return res;
+	} else {
+	  logger.warning("Plugin permitted host not allowed by " +
+			 CrawlManagerImpl.PARAM_ALLOWED_PLUGIN_PERMITTED_HOSTS +
+			 ": " + url);
+	}
       }
-	
       String perHostPath;
       if ((perHostPath = getPerHostPermissionPath()) != null) {
 	// if no PermissionRecord for this host, but we have a permission
