@@ -1,5 +1,5 @@
 /*
- * $Id: XPathXmlMetadataParser.java,v 1.11 2014-10-10 14:07:54 aishizaki Exp $
+ * $Id: XPathXmlMetadataParser.java,v 1.12 2014-12-17 21:46:09 thib_gc Exp $
  */
 
 /*
@@ -229,7 +229,7 @@ public class XPathXmlMetadataParser  {
       throw new IllegalArgumentException("Null CachedUrl");
     }
     if (!cu.hasContent()) {
-      throw new IllegalArgumentException("CachedUrl has no content" + cu.getUrl());
+      throw new IllegalArgumentException("CachedUrl has no content: " + cu.getUrl());
     }
     List<ArticleMetadata> amList = makeNewAMList();
     ArticleMetadata globalAM = null;
