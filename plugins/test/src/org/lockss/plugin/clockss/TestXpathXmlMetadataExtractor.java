@@ -1,5 +1,5 @@
 /*
- * $Id: TestXpathXmlMetadataExtractor.java,v 1.2 2014-07-08 01:41:13 thib_gc Exp $
+ * $Id: TestXpathXmlMetadataExtractor.java,v 1.3 2014-12-18 23:00:43 alexandraohlson Exp $
  */
 
 /*
@@ -51,52 +51,15 @@ import org.lockss.util.Logger;
  *  xml file when
  *      - no global map; article map with one article node
  *      - global map; no article map nor article node
- *  Set up two schema helpers and then use both and verify the results are the same
- *  Still to write - generic XML parser testing to catch edge cases
+ *  Set up two basic helpers and then use both and verify the results are the same
  */
 public class TestXpathXmlMetadataExtractor
-extends LockssTestCase {
+extends SourceXmlMetadataExtractorTest {
   
   private static Logger log = Logger.getLogger(TestXpathXmlMetadataExtractor.class);
 
-  private MockLockssDaemon theDaemon;
-  private ArchivalUnit cau;
-  private static String PLUGIN_NAME = "org.lockss.plugin.clockss.ClockssSourcePlugin";
-  private static String BASE_URL = "http://www.source.org/";
-  private static String YEAR = "2013";
   private static final Pattern schemaAPATTERN = Pattern.compile("schemaA\\.xml$");
 
-
-  public void setUp() throws Exception {
-    super.setUp();
-    setUpDiskSpace(); // you need this to have startService work properly...
-
-    theDaemon = getMockLockssDaemon();
-    theDaemon.getAlertManager();
-    theDaemon.getPluginManager().setLoadablePluginsReady(true);
-    theDaemon.setDaemonInited(true);
-    theDaemon.getPluginManager().startService();
-    theDaemon.getCrawlManager();
-
-    cau = PluginTestUtil.createAndStartAu(PLUGIN_NAME, auConfig());
-  }
-
-  public void tearDown() throws Exception {
-    theDaemon.stopDaemon();
-    super.tearDown();
-  }
-
-  /**
-   * Configuration method. 
-   * @return
-   */
-  Configuration auConfig() {
-    Configuration conf = ConfigManager.newConfiguration();
-    conf.put("base_url", BASE_URL);
-    conf.put("year", YEAR);
-    return conf;
-  }
-  
   private static String goodPublisher = "Publisher Co.";
   private static String goodJournalTitle = "A Journal Title";
   private static String goodTitle = "A Good Title";
@@ -118,15 +81,12 @@ extends LockssTestCase {
   
   // SchemaA takes in all the values from a globalMap
   public void testExtractXmlSchemaA() throws Exception {
-    String xml_url = BASE_URL + YEAR + "/schemaA.xml";
-    MockCachedUrl cu = new MockCachedUrl(xml_url, cau);
-    cu.setContent(singleArticleContent);
-    cu.setContentSize(singleArticleContent.length());
-    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
+
+    String xml_url = getBaseUrl() + getYear() + "/schemaA.xml";
     FileMetadataExtractor me = new MyXmlMetadataExtractor();
     FileMetadataListExtractor mle =
       new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
+    List<ArticleMetadata> mdlist = extractFromContent(xml_url, "text/xml", singleArticleContent, mle);
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
@@ -139,15 +99,11 @@ extends LockssTestCase {
   
   // SchemaB takes in all the values from a articleMap
   public void testExtractXmlSchemaB() throws Exception {
-    String xml_url = BASE_URL + YEAR + "/schemaB.xml";
-    MockCachedUrl cu = new MockCachedUrl(xml_url, cau);
-    cu.setContent(singleArticleContent);
-    cu.setContentSize(singleArticleContent.length());
-    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
+    String xml_url = getBaseUrl() + getYear() + "/schemaB.xml";
     FileMetadataExtractor me = new MyXmlMetadataExtractor();
     FileMetadataListExtractor mle =
       new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
+    List<ArticleMetadata> mdlist = extractFromContent(xml_url, "text/xml", singleArticleContent, mle);
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
@@ -158,29 +114,22 @@ extends LockssTestCase {
     assertEquals(goodJournalTitle, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
   }
   
+  
+  // Set up a test version of a source extractor in order to define/control
+  // a basic schema for testing
   private class MyXmlMetadataExtractor extends SourceXmlMetadataExtractor {
 
-    // This must be implemented because it is abstract in the parent
-    // but we don't actually use it. There is an alternate with a "cu" 
-    // argument which we also override so that we can base the schema on 
-    // URL of the XML.
-    // This publisher was inconsistent in choice of XML schema within the AU
+
     @Override
     protected SourceXmlSchemaHelper setUpSchema() {
       // Once you have it, just keep returning the same one. It won't change.
- 
       return new schemaAXmlSchemaHelper();
     }
-    
 
-    // If the URL matches that for "UACP volume16" we know they used an 
-    // entirely different XML schema ("tfdoc") and we must provide a different
-    // helper. Otherwise use the default ("article/unarticle").
+    // choose the schema based on the URL - for publishers that use > 1
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
       // Once you have it created, just keep returning the same one. It won't change.
-
-      // First - are we processing volume 16? - if so, use other schema
       Matcher AMat = schemaAPATTERN.matcher(cu.getUrl()); 
       if (AMat.find()) {
         log.debug3("using schemaA - globalMap only");
@@ -191,6 +140,8 @@ extends LockssTestCase {
       return new schemaBXmlSchemaHelper();
     }
     
+    // Make this do nothing so that we don't need to add actual content files
+    // for testing
     @Override
     protected boolean preEmitCheck(SourceXmlSchemaHelper schemaHelper, 
         CachedUrl cu, ArticleMetadata thisAM) {

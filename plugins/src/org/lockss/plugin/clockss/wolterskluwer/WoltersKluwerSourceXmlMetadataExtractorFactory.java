@@ -1,5 +1,5 @@
 /*
- * $Id: WoltersKluwerSourceXmlMetadataExtractorFactory.java,v 1.6 2014-10-21 18:41:09 aishizaki Exp $
+ * $Id: WoltersKluwerSourceXmlMetadataExtractorFactory.java,v 1.7 2014-12-18 23:00:43 alexandraohlson Exp $
  */
 
 /*
@@ -73,10 +73,9 @@ public class WoltersKluwerSourceXmlMetadataExtractorFactory extends SourceXmlMet
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
     // Once you have it, just keep returning the same one. It won't change.
-      if (WKHelper != null) {
-        return WKHelper;
+      if (WKHelper == null) {
+        WKHelper = new WoltersKluwerSourceXmlSchemaHelper();
       }
-      WKHelper = new WoltersKluwerSourceXmlSchemaHelper();
       return WKHelper;
     }
        

@@ -1,5 +1,5 @@
 /*
- * $Id: WoltersKluwerSourceXmlSchemaHelper.java,v 1.9 2014-10-27 19:30:15 aishizaki Exp $
+ * $Id: WoltersKluwerSourceXmlSchemaHelper.java,v 1.10 2014-12-18 23:00:43 alexandraohlson Exp $
  */
 
 /*
@@ -41,6 +41,8 @@ import org.lockss.extractor.XmlDomMetadataExtractor.XPathValue;
 
 import java.text.ParseException;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.w3c.dom.Node;
@@ -138,7 +140,7 @@ implements SourceXmlSchemaHelper {
       String month = null;
       String day = null;
       String nodeName = null;
-      
+
       for (int m = 0; m < childNodes.getLength(); m++) {
         Node childNode = childNodes.item(m);
         nodeName = childNode.getNodeName();
@@ -150,7 +152,7 @@ implements SourceXmlSchemaHelper {
           year = childNode.getTextContent();
         }
       }
-      
+
       // make it W3C format YYYY or YYYY-MM or YYYY-MM-DD
       StringBuilder dBuilder = new StringBuilder();
       if (year == null) return EMPTY_DATE;
@@ -190,7 +192,7 @@ implements SourceXmlSchemaHelper {
    *  STI= with an equally valid subtitle
    * we will take one or both
    */
-  
+
   static private final NodeValue WK_ARTICLE_TITLE_VALUE = new NodeValue() {
     @Override
     public String getValue(Node node) {
@@ -205,14 +207,14 @@ implements SourceXmlSchemaHelper {
       for (int m = 0; m < childNodes.getLength(); m++) {
         Node infoNode = childNodes.item(m);
         nodeName = infoNode.getNodeName();
-        
+
         if (WK_TITLE.equals(nodeName)) {
           title = infoNode.getTextContent();
         } else if(WK_SUBTITLE.equals(nodeName)){
           subtitle = infoNode.getTextContent();
         }
       }
-      
+
       StringBuilder titleVal = new StringBuilder();
       if (title != null) {
         titleVal.append(title);
@@ -229,79 +231,82 @@ implements SourceXmlSchemaHelper {
       }
     }
   };
-  
-  /*
-   * Some of the WK metadata files have the DOI appearing as:
-   * "DOI: 10.7123/01.ASJA.0000423116.36109.eb" - need to strip off
-   * the "DOI:" and any preceding white space
-   */ 
-static private final String DOI_ATTR_NAME = "XDB";
 
+  /*
+   * The xpath limits us to exactly the node we want, but we need
+   * to do some cleanup of the doi, which is somewhat variable
+   * 
+   * good value: 10.1097/NCC.0b013e3181ef77a0
+   * others that we can figure out:
+   *   DOI: 10.1097/NCC.0b013e3181ef77a0
+   *      10.1097/NCC.0b013e3181ef77a0 // leading space
+   *   DOI : 10.1097/NCC.0b013e3181ef77a0
+   *   DOI 10.1097/NCC.0b013e3181ef77a0 // : was &colon; which disappears
+   *   http://10.1097/AOG.0b013e31827c60e1
+   *   //10.1097/AOG.0b013e318292aea4
+   * some we just have to let go, too risky to guess at intent
+   *   110.1097/HJH.0000000000000289
+   *   10.231/JIM.0b013e318255e8fd
+   *   00.0000/000.000010.1097/BRS.0000000000000341
+   *   TA.0b013e3182754654
+   */
+  
+  // really? you can have 6 after the dot?? This is from MetadataField isDoi() validator
+  private static final String STD_DOI_PATTERN = "10[.][0-9a-z]{4,6}\\/.*";
+  private static Pattern DOI_PATTERN = Pattern.compile("^\\s*(DOI\\s*(:)?|http:\\/\\/|\\/\\/)?\\s*(" + STD_DOI_PATTERN + ")\\s*$", Pattern.CASE_INSENSITIVE);
   static private final NodeValue WK_DOI_VALUE = new NodeValue() {
-    static final String DOI_UPPER = "DOI:";
-    static final String DOI_LOWER = "doi:";
-    static final String XDB_ATTR = "XDB";
-    static final String XDB_TYPE = "pub-doi";
-    static final String UI_ATTR = "UI";
 
     @Override
     public String getValue(Node node) {
-      log.debug3("getValue of WOLTERSKLUWER DOI");
-      String doi = null;
-      NamedNodeMap attributes = node.getAttributes();
-      if (attributes == null) return null;
-
-      if(node.hasAttributes() ){
-        // is this the correct node?
-        Node xdbNode = attributes.getNamedItem(XDB_ATTR);
-        if (xdbNode != null) {
-          String uiType = xdbNode.getTextContent();
-          // check to see if we have the right node...
-          if (uiType.equals(XDB_TYPE)) {
-            // now get the attribute with the doi info
-            Node doiNode = attributes.getNamedItem(UI_ATTR);
-            if (doiNode != null) {
-              doi = doiNode.getTextContent();
-            }
-          }    
-        }
+      log.debug3("getValue of  DOI");
+      String doiVal = node.getTextContent();
+      Matcher iMat = DOI_PATTERN.matcher(doiVal); 
+      if(!iMat.matches()){
+        log.debug3("no match");
+        return null;
       }
-      int cp = 0;
-      if (doi != null) {
-        // strip off any leading whitespace
-        cp = findNextNonWhiteSpace(doi);
-        // strip off leading "DOI:" phrase, if needed
-        if (doi.length() == cp) return null;    // if only whitespace, return null
-        char c = Character.toUpperCase(doi.charAt(cp));
-        if ((c == 'D') && ((doi.substring(cp)).startsWith(DOI_UPPER) || (doi.substring(cp)).startsWith(DOI_LOWER))){
-          cp += DOI_UPPER.length();
-          // strip off any more leading whitespace
-          cp += findNextNonWhiteSpace(doi.substring(cp));
-        }
-      }
-      String doiVal = null;
-      if (cp == 0) {
-        doiVal = doi;
-      } else {
-        doiVal = doi.substring(cp);
-      }
-      return doiVal;   
-  }
-  
-   private int findNextNonWhiteSpace(String s) {
-     int result = 0;
-     if (s != null) {
-       for( ; result < s.length(); result++) {
-         if (Character.isWhitespace(s.charAt(result))) {
-           continue;
-         } else
-           break;
-       }
-     }
-     return result;
-  }
+      log.debug3("returning " + iMat.group(3));
+      return iMat.group(3);
+    }
   };
   
+  /*
+   * ISSN evaluator:
+   * We are at ./BB/SO/ISN
+   * 
+   * Do our best to pull a valid ISSN from given text. The following
+   * has shown up:
+   * 1070-8022 //correct
+   * 1110 -1148
+   * in these the &sol; disappears leaving a too long number
+   * so just take the first 4-4
+   * 0041-1337&sol;12&sol;9402-139
+   * 0195-7910&sol;11&sol;0000&ndash;0000
+   * 0017-907812&sol;0
+   */
+  private static final String STD_ISSN_PATTERN_STRING = "(\\d{4})\\s*(-)?\\s*(\\d{3}[\\dXx])";
+  private static Pattern ISSN_PATTERN =  Pattern.compile("^\\s*" + STD_ISSN_PATTERN_STRING, Pattern.CASE_INSENSITIVE);
+
+  static private final NodeValue WK_ISSN_VALUE = new NodeValue() {
+
+    @Override
+    public String getValue(Node node) {
+      log.debug3("getValue of WOLTERSKLUWER ISSN");
+      String issnVal = node.getTextContent();
+      Matcher iMat = ISSN_PATTERN.matcher(issnVal); 
+      if(!iMat.find()){ //use find not match to ignore trailing stuff
+        log.debug3("no match");
+        return null;
+      }
+      StringBuilder retVal = new StringBuilder();
+      retVal.append(iMat.group(1));
+      retVal.append("-");
+      retVal.append(iMat.group(3));
+      log.debug3("returning " + retVal.toString());
+      return retVal.toString();
+    }
+  };  
+
   /* 
    *  WoltersKluwer specific XPATH key definitions that we care about
    */
@@ -322,7 +327,7 @@ static private final String DOI_ATTR_NAME = "XDB";
   private static String WK_SUBTITLE = "STI";
   private static String WK_article_title = "./BB/"+WK_TITLENODE;
   /* doi */
-  private static String WK_doi = "./BB/XUI[@XDB='pub-doi']";
+  private static String WK_doi = "./BB/XUI[@XDB='pub-doi']/@UI"; 
   /* published date */
   private static String WK_DY = "DY";
   private static String WK_MO = "MO";
@@ -343,7 +348,7 @@ static private final String DOI_ATTR_NAME = "XDB";
   WK_articleMap = new HashMap<String,XPathValue>();
   static {
     WK_articleMap.put(WK_pdf, XmlDomMetadataExtractor.TEXT_VALUE); 
-    WK_articleMap.put(WK_issn, XmlDomMetadataExtractor.TEXT_VALUE);
+    WK_articleMap.put(WK_issn, WK_ISSN_VALUE);
     WK_articleMap.put(WK_journal_title, XmlDomMetadataExtractor.TEXT_VALUE); 
     WK_articleMap.put(WK_doi, WK_DOI_VALUE); 
     WK_articleMap.put(WK_article_title, WK_ARTICLE_TITLE_VALUE); 

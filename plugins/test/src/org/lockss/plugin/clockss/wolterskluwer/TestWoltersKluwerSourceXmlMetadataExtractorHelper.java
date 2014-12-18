@@ -1,4 +1,4 @@
-/* $Id: TestWoltersKluwerSourceXmlMetadataExtractorHelper.java,v 1.4 2014-10-27 19:31:09 aishizaki Exp $
+/* $Id: TestWoltersKluwerSourceXmlMetadataExtractorHelper.java,v 1.5 2014-12-18 23:00:43 alexandraohlson Exp $
 
 Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -24,49 +24,46 @@ Except as contained in this notice, the name of Stanford University shall not
 be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
-*/
+ */
 
 package org.lockss.plugin.clockss.wolterskluwer;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.*;
-import org.lockss.test.*;
 import org.lockss.util.*;
-import org.lockss.config.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
-import org.apache.commons.io.input.BOMInputStream;
-
-//import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
-
-/*
- * Test file used to extract metadata:
- * <base_url>2013/JAP/v114/i18/183704_1/Markup/VOR_10.1063_1.4829703.xml
- *      basic examples to test metadata extraction
- */
+import org.lockss.plugin.clockss.SourceXmlMetadataExtractorTest;
+import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 
 public class TestWoltersKluwerSourceXmlMetadataExtractorHelper
-  extends LockssTestCase {
-  
+extends SourceXmlMetadataExtractorTest {
+
   static Logger log = 
       Logger.getLogger(TestWoltersKluwerSourceXmlMetadataExtractorHelper.class);
 
-  private MockLockssDaemon theDaemon;
-  private MockArchivalUnit mau; 
+  static FileMetadataListExtractor wk_mle;
+  static FileMetadataListExtractor nocheck_mle;
 
-  private static final String YEAR = "2013";
 
-  private static final String BASE_URL = 
-      "http://content5.lockss.org/sourcefiles/wolterskluwer-released/"+ YEAR + "/";
-  
+  public void setUp() throws Exception {
+    super.setUp();
+    // for tests that also check for content
+    wk_mle =
+        new FileMetadataListExtractor(new WoltersKluwerSourceXmlMetadataExtractorFactory.WoltersKluwerSourceXmlMetadataExtractor());
+    // for tests that use a no-check-for-pdf version of the extractor
+    nocheck_mle = new FileMetadataListExtractor(new TestWKSourceXmlMetadataExtractor());
+
+
+  }
+
   private static final String BASIC_XML_FILENAME = "20140615.0";
   private static final String ACCESS_URL = "0125480-201406150-00002";
   private static final String BASIC_PDF_FILENAME = ACCESS_URL+".pdf";
-   
-  private static final String TEST_XML_URL = BASE_URL + "ADAPA20140615.0/" + BASIC_XML_FILENAME;
+
+  private static final String TEST_XML_URL = "ADAPA20140615.0/" + BASIC_XML_FILENAME;
   // need to add a "0" to precede the BASIC_PDF_FILENAME... GRRR
-  private static final String TEST_PDF_URL = BASE_URL + "ADAPA20140615.0/" + "0"+BASIC_PDF_FILENAME;
+  private static final String TEST_PDF_URL = "ADAPA20140615.0/" + "0"+BASIC_PDF_FILENAME;
+  private static final String wk_mime = "application/sgml";
 
   // expected metadata
   private static final String GOOD_JOURNAL_TITLE = "Hello Oligarchy: With Songs & Dances";
@@ -91,36 +88,35 @@ public class TestWoltersKluwerSourceXmlMetadataExtractorHelper
   private static ArrayList goodAuthors = (ArrayList) ListUtil.list(
       A1_SN + ", " + A1_FN + " " + A1_MN,
       A2_SN + ", " + A2_FN);
-   
- 
+
   private static final String BASIC_CONTENT =
-    "<!DOCTYPE dg SYSTEM \"ovidbase.dtd\">" +
-    "<DG><COVER NAME=\"G0256406-201406150-00000\">" +
-    "<D V=\"2009.2F\" AN=\""+ACCESS_URL+"\" FILE=\"G0256406-201406150-00001\" CME=\"CME\">" +
-    "<BB>" +
-    "<TG>" +
-    "<TI>" + GOOD_ARTICLE_TITLE + "</TI>" +
-    "<STI>" + GOOD_ARTICLE_SUBTITLE + "</STI></TG>" +
-    "<BY>" +
-    "<PN><FN>"+A1_FN+"</FN><MN>"+A1_MN+"</MN><SN>"+A1_SN+"</SN><DEG>MD</DEG></PN>" +
-    "<PN><FN>"+A2_FN+"</FN><SN>"+A2_SN+"</SN><DEG>MD, MSc</DEG></PN>" +
-    "</BY>" +
-    "<SO>" +
-    "<PB>"+GOOD_JOURNAL_TITLE+"</PB>" +
-    "<ISN>"+GOOD_ISSN+"</ISN>" +
-    "<DA>"+"<MO>"+GOOD_PUB_MONTH+"</MO><YR>"+GOOD_PUB_YEAR+"</YR></DA>" +
-//    "<DA><DY>"+GOOD_PUB_DAY+"</DY><MO>"+GOOD_PUB_MONTH+"</MO><YR>"+GOOD_PUB_YEAR+"</YR></DA>" +
-    "<V>"+GOOD_VOLUME+"</V>" +
-    "<IS><IP>"+GOOD_ISSUE+"</IP></IS>" +
-    "<PG>1&ndash;6</PG></SO>" +
-    "<CP>&copy; 2014 Lippincott Williams &amp; Wilkins.</CP>" +
-    "<DT>Article</DT><XUI XDB=\"pub-doi\" UI=\""+GOOD_DOI+"\"></BB>" +
-    "</D></DG>";
-  
+      "<!DOCTYPE dg SYSTEM \"ovidbase.dtd\">" +
+          "<DG><COVER NAME=\"G0256406-201406150-00000\">" +
+          "<D V=\"2009.2F\" AN=\""+ACCESS_URL+"\" FILE=\"G0256406-201406150-00001\" CME=\"CME\">" +
+          "<BB>" +
+          "<TG>" +
+          "<TI>" + GOOD_ARTICLE_TITLE + "</TI>" +
+          "<STI>" + GOOD_ARTICLE_SUBTITLE + "</STI></TG>" +
+          "<BY>" +
+          "<PN><FN>"+A1_FN+"</FN><MN>"+A1_MN+"</MN><SN>"+A1_SN+"</SN><DEG>MD</DEG></PN>" +
+          "<PN><FN>"+A2_FN+"</FN><SN>"+A2_SN+"</SN><DEG>MD, MSc</DEG></PN>" +
+          "</BY>" +
+          "<SO>" +
+          "<PB>"+GOOD_JOURNAL_TITLE+"</PB>" +
+          "<ISN>"+GOOD_ISSN+"</ISN>" +
+          "<DA>"+"<MO>"+GOOD_PUB_MONTH+"</MO><YR>"+GOOD_PUB_YEAR+"</YR></DA>" +
+          //    "<DA><DY>"+GOOD_PUB_DAY+"</DY><MO>"+GOOD_PUB_MONTH+"</MO><YR>"+GOOD_PUB_YEAR+"</YR></DA>" +
+          "<V>"+GOOD_VOLUME+"</V>" +
+          "<IS><IP>"+GOOD_ISSUE+"</IP></IS>" +
+          "<PG>1&ndash;6</PG></SO>" +
+          "<CP>&copy; 2014 Lippincott Williams &amp; Wilkins.</CP>" +
+          "<DT>Article</DT><XUI XDB=\"pub-doi\" UI=\""+GOOD_DOI+"\"></BB>" +
+          "</D></DG>";
+
   private static final String EMPTY_CONTENT =
-    "<!DOCTYPE dg SYSTEM \"ovidbase.dtd\">"+
-    "<DG>"+
-    "</DG>";
+      "<!DOCTYPE dg SYSTEM \"ovidbase.dtd\">"+
+          "<DG>"+
+          "</DG>";
   // Try some disallowed content: 
   // Bad date: date without a year
   private static final String BAD_PUB_DAY = "77";
@@ -141,285 +137,290 @@ public class TestWoltersKluwerSourceXmlMetadataExtractorHelper
   private static ArrayList badAuthors = (ArrayList) ListUtil.list(
       BAD1_SN + ", " + BAD1_FN + " " + BAD1_MN,
       ", " + BAD2_FN);
-  
+
   private static final String BAD_CONTENT =
-    "<!DOCTYPE dg SYSTEM \"ovidbase.dtd\">" +
-    "<DG><COVER NAME=\"G0256406-201406150-00000\">" +
-    "<D V=\"2009.2F\" AN=\""+ACCESS_URL+"\" FILE=\"G0256406-201406150-00001\" CME=\"CME\">" +
-    "<BB>" +
-    "<TG>" +
-    "<TI></TI>" +
-    "<STI>" + BAD_ARTICLE_SUBTITLE + "</STI></TG>" +
-    "<BY>" +
-    "<PN><FN>"+BAD1_FN+"</FN><MN>"+BAD1_MN+"</MN><SN>"+BAD1_SN+"</SN><DEG>MD</DEG></PN>" +
-    "<PN><FN>"+BAD2_FN+"</FN><SN>"+BAD2_SN+"</SN><DEG>MD, MSc</DEG></PN>" +
-    "</BY>" +
-    "<SO>" +
-    "<PB>"+GOOD_JOURNAL_TITLE+"</PB>" +
-    "<ISN>"+GOOD_ISSN+"</ISN>" +
-    "<DA><DY>"+BAD_PUB_DAY+"</DY><MO>"+BAD_PUB_MONTH+"</MO><YR>"+BAD_PUB_YEAR+"</YR></DA>" +
-    "<V>"+GOOD_VOLUME+"</V>" +
-    "<IS><IP>"+GOOD_ISSUE+"</IP></IS>" +
-    "<PG>1&ndash;6</PG></SO>" +
-    "<CP>&copy; 2014 Lippincott Williams &amp; Wilkins.</CP>" +
-    "<DT>Article</DT><XUI XDB=\"pub-doi\" UI=\""+BAD_DOI+"\"></BB>" +
-    "</D>" +
-    // 
-    "<D V=\"2009.2F\" AN=\""+ACCESS_URL+"\" FILE=\"G0256406-201406150-00002\" CME=\"CME\">" +
-    "<BB>" +
-    "<TG>" +
-    "<TI></TI>" +
-    "<STI>" + BAD_ARTICLE_SUBTITLE + "1"+ "</STI></TG>" +
-    "<BY>" +
-    "<PN><FN>"+BAD1_FN+"</FN><MN>"+BAD1_MN+"</MN><SN>"+BAD1_SN+"</SN><DEG>MD</DEG></PN>" +
-    "<PN><FN>"+BAD2_FN+"</FN><SN>"+BAD2_SN+"</SN><DEG>MD, MSc</DEG></PN>" +
-    "</BY>" +
-    "<SO>" +
-    "<PB>"+GOOD_JOURNAL_TITLE+"1"+"</PB>" +
-    "<ISN>"+GOOD_ISSN+"1"+"</ISN>" +
-    "<DA><DY>"+BAD_PUB_DAY+"</DY><MO>"+BAD_PUB_MONTH+"</MO><YR>"+BAD_PUB_YEAR+"</YR></DA>" +
-    "<V>"+GOOD_VOLUME+"</V>" +
-    "<IS><IP>"+GOOD_ISSUE+"</IP></IS>" +
-    "<PG>1&ndash;6</PG></SO>" +
-    "<CP>&copy; 2014 Lippincott Williams &amp; Wilkins.</CP>" +
-    "<DT>Article</DT><XUI XDB=\"pub-doi\" UI=\" \"></BB>" +
-    "</D>" +
-    "</DG>";
+      "<!DOCTYPE dg SYSTEM \"ovidbase.dtd\">" +
+          "<DG><COVER NAME=\"G0256406-201406150-00000\">" +
+          "<D V=\"2009.2F\" AN=\""+ACCESS_URL+"\" FILE=\"G0256406-201406150-00001\" CME=\"CME\">" +
+          "<BB>" +
+          "<TG>" +
+          "<TI></TI>" +
+          "<STI>" + BAD_ARTICLE_SUBTITLE + "</STI></TG>" +
+          "<BY>" +
+          "<PN><FN>"+BAD1_FN+"</FN><MN>"+BAD1_MN+"</MN><SN>"+BAD1_SN+"</SN><DEG>MD</DEG></PN>" +
+          "<PN><FN>"+BAD2_FN+"</FN><SN>"+BAD2_SN+"</SN><DEG>MD, MSc</DEG></PN>" +
+          "</BY>" +
+          "<SO>" +
+          "<PB>"+GOOD_JOURNAL_TITLE+"</PB>" +
+          "<ISN>"+GOOD_ISSN+"</ISN>" +
+          "<DA><DY>"+BAD_PUB_DAY+"</DY><MO>"+BAD_PUB_MONTH+"</MO><YR>"+BAD_PUB_YEAR+"</YR></DA>" +
+          "<V>"+GOOD_VOLUME+"</V>" +
+          "<IS><IP>"+GOOD_ISSUE+"</IP></IS>" +
+          "<PG>1&ndash;6</PG></SO>" +
+          "<CP>&copy; 2014 Lippincott Williams &amp; Wilkins.</CP>" +
+          "<DT>Article</DT><XUI XDB=\"pub-doi\" UI=\""+BAD_DOI+"\"></BB>" +
+          "</D>" +
+          // 
+          "<D V=\"2009.2F\" AN=\""+ACCESS_URL+"\" FILE=\"G0256406-201406150-00002\" CME=\"CME\">" +
+          "<BB>" +
+          "<TG>" +
+          "<TI></TI>" +
+          "<STI>" + BAD_ARTICLE_SUBTITLE + "</STI></TG>" +
+          "<BY>" +
+          "<PN><FN>"+BAD1_FN+"</FN><MN>"+BAD1_MN+"</MN><SN>"+BAD1_SN+"</SN><DEG>MD</DEG></PN>" +
+          "<PN><FN>"+BAD2_FN+"</FN><SN>"+BAD2_SN+"</SN><DEG>MD, MSc</DEG></PN>" +
+          "</BY>" +
+          "<SO>" +
+          "<PB>"+GOOD_JOURNAL_TITLE+"</PB>" +
+          "<ISN>"+GOOD_ISSN+"</ISN>" +
+          "<DA><DY>"+BAD_PUB_DAY+"</DY><MO>"+BAD_PUB_MONTH+"</MO><YR>"+BAD_PUB_YEAR+"</YR></DA>" +
+          "<V>"+GOOD_VOLUME+"</V>" +
+          "<IS><IP>"+GOOD_ISSUE+"</IP></IS>" +
+          "<PG>1&ndash;6</PG></SO>" +
+          "<CP>&copy; 2014 Lippincott Williams &amp; Wilkins.</CP>" +
+          "<DT>Article</DT><XUI XDB=\"pub-doi\" UI=\"" + BAD_DOI + "\"></BB>" +
+          "</D>" +
+          "</DG>";
 
-
-  public void setUp() throws Exception {
-    super.setUp();
-    setUpDiskSpace(); // you need this to have startService work properly...
-
-    theDaemon = getMockLockssDaemon();
-    mau = new MockArchivalUnit();
-
-    theDaemon.getAlertManager();
-    theDaemon.getPluginManager().setLoadablePluginsReady(true);
-    theDaemon.setDaemonInited(true);
-    theDaemon.getPluginManager().startService();
-    theDaemon.getCrawlManager();
-    mau.setConfiguration(auConfig());
-    
-  }
-  public void tearDown() throws Exception {
-    theDaemon.stopDaemon();
-    super.tearDown();
-  }
-
-  /**
-   * Configuration method. 
-   * @return
-   */
-  Configuration auConfig() {
-    Configuration conf = ConfigManager.newConfiguration();
-    conf.put("base_url", BASE_URL);
-    conf.put("year", YEAR);
-    return conf;
-  }
-  
-  public TestWoltersKluwerSourceXmlMetadataExtractorHelper() throws Exception {
-    super.setUp();
-
-    setUp();
-  }
 
   public void testExtractFromEmptyContent() throws Exception {
-    String xml_url = TEST_XML_URL;
-    String pdf_url = TEST_PDF_URL;
+    String xml_url = getBaseUrl() + getYear() + "/" + TEST_XML_URL;
+    String pdf_url = getBaseUrl() + getYear() + "/" + TEST_PDF_URL;
 
-    CIProperties xmlHeader = new CIProperties();
+    ArrayList<String> pdfList = new ArrayList<String>();
+    pdfList.add(pdf_url);
 
-    MockCachedUrl xml_cu = mau.addUrl(xml_url, true, true, xmlHeader);
-    xml_cu.setContent(EMPTY_CONTENT);
-    xml_cu.setContentSize(EMPTY_CONTENT.length());
-    MockCachedUrl pdf_cu = mau.addUrl(pdf_url, true, true, xmlHeader);
-    pdf_cu.setContent(EMPTY_CONTENT);
-    pdf_cu.setContentSize(EMPTY_CONTENT.length());
-    
-    FileMetadataExtractor me = new WoltersKluwerSourceXmlMetadataExtractorFactory
-                                  .WoltersKluwerSourceXmlMetadataExtractor();
-    assertNotNull(me);
-    log.debug3("Extractor: " + me.toString());
-    FileMetadataListExtractor mle =
-      new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), xml_cu);
-    assertEmpty(mdlist);
+    //FileMetadataExtractor me = new WoltersKluwerSourceXmlMetadataExtractorFactory
+    //.WoltersKluwerSourceXmlMetadataExtractor();
+    //FileMetadataListExtractor mle =
+    //  new FileMetadataListExtractor(me);
+    List<ArticleMetadata> mdList = extractFromContent(xml_url, wk_mime, 
+        EMPTY_CONTENT, wk_mle, pdfList);
+    assertEmpty(mdList);
 
   }
-  
+
+  static private final Map<MetadataField, String> expectedBadMD =
+      new HashMap<MetadataField,String>();
+  static {
+    expectedBadMD.put(MetadataField.FIELD_DOI, GOOD_DOI);
+    expectedBadMD.put(MetadataField.FIELD_ARTICLE_TITLE, BAD_ARTICLE_TITLE);
+    expectedBadMD.put(MetadataField.FIELD_DATE, null);
+    expectedBadMD.put(MetadataField.FIELD_AUTHOR, badAuthors.toString());
+  }
+
   public void testExtractFromBadContent() throws Exception {
-    String xml_url = TEST_XML_URL;
-    String pdf_url = TEST_PDF_URL;
+    String xml_url = getBaseUrl() + getYear() + "/" + TEST_XML_URL;
+    String pdf_url = getBaseUrl() + getYear() + "/" + TEST_PDF_URL;
 
-    CIProperties xmlHeader = new CIProperties();
+    ArrayList<String> pdfList = new ArrayList<String>();
+    pdfList.add(pdf_url);
 
-    MockCachedUrl xml_cu = mau.addUrl(xml_url, true, true, xmlHeader);
-    //MockCachedUrl cu = new MockCachedUrl(url, mau);
-    xml_cu.setContent(BAD_CONTENT);
-    xml_cu.setContentSize(BAD_CONTENT.length());
-    MockCachedUrl pdf_cu = mau.addUrl(pdf_url, true, true, xmlHeader);
-    pdf_cu.setContent(BAD_CONTENT);
-    pdf_cu.setContentSize(BAD_CONTENT.length());
-
-    
-    FileMetadataExtractor me = new WoltersKluwerSourceXmlMetadataExtractorFactory
-                                  .WoltersKluwerSourceXmlMetadataExtractor();
-    assertNotNull(me);
-    log.debug3("Extractor: " + me.toString());
-    FileMetadataListExtractor mle =
-      new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), xml_cu);
-    assertNotEmpty(mdlist);
-        ArticleMetadata md = null;
-
-    //for (int i = 0; i< mdlist.size(); i++) {
-      md = mdlist.get(0);
-      assertNotNull(md);
-
-      // checking how the "bad" inputs (date, title, authors) are handled
-      assertEquals(badAuthors.toString(), md.getList(MetadataField.FIELD_AUTHOR).toString());
-      assertEquals(null, md.get(MetadataField.FIELD_DATE));
-      assertEquals(BAD_ARTICLE_TITLE, md.get(MetadataField.FIELD_ARTICLE_TITLE));
-      assertEquals(GOOD_DOI,md.get(MetadataField.FIELD_DOI));
-    //}
-  
+    //FileMetadataExtractor me = new WoltersKluwerSourceXmlMetadataExtractorFactory
+    //.WoltersKluwerSourceXmlMetadataExtractor();
+    //FileMetadataListExtractor mle =
+    //new FileMetadataListExtractor(me);
+    List<ArticleMetadata> mdList = extractFromContent(xml_url, wk_mime, 
+        BAD_CONTENT, wk_mle, pdfList);
+    log.setLevel("debug3");
+    debug3_MDList(mdList);
+    for (int i = 0; i< mdList.size(); i++) {
+      ArticleMetadata md = mdList.get(i);
+      checkOneMD(md, expectedBadMD);
+    }
   }
-  
+
   // original xml file from the publisher
+
+  static private final Map<MetadataField, String> expectedBasicMD =
+      new HashMap<MetadataField,String>();
+  static {
+    expectedBasicMD.put(MetadataField.FIELD_ISSN, GOOD_ISSN);
+    expectedBasicMD.put(MetadataField.FIELD_ACCESS_URL, TEST_PDF_URL);
+    expectedBasicMD.put(MetadataField.FIELD_PUBLICATION_TITLE, GOOD_JOURNAL_TITLE);
+    expectedBasicMD.put(MetadataField.FIELD_DOI, GOOD_DOI);
+    expectedBasicMD.put(MetadataField.FIELD_DATE, GOOD_PUB_DATE);
+    expectedBasicMD.put(MetadataField.FIELD_VOLUME, GOOD_VOLUME);
+    expectedBasicMD.put(MetadataField.FIELD_ISSUE, GOOD_ISSUE);
+    expectedBasicMD.put(MetadataField.FIELD_ARTICLE_TITLE, GOOD_TITLE);
+    expectedBasicMD.put(MetadataField.FIELD_AUTHOR, goodAuthors.toString());
+  }
+
   public void testExtractFromBasicContent() throws Exception {
-    CIProperties xmlHeader = new CIProperties();
-    try {
-      String xml_url = TEST_XML_URL;
-      String pdf_url = TEST_PDF_URL;
-      xmlHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
-      MockCachedUrl cu = mau.addUrl(xml_url, true, true, xmlHeader);
-      // need to check for this file before emitting
-      MockCachedUrl pcu = mau.addUrl(pdf_url, true, true, xmlHeader);
+    String xml_url = getBaseUrl() + getYear() + "/" + TEST_XML_URL;
+    String pdf_url = getBaseUrl() + getYear() + "/" + TEST_PDF_URL;
+    ArrayList<String> pdfList = new ArrayList<String>();
+    pdfList.add(pdf_url);
 
-      String string_input = BASIC_CONTENT;
+    //FileMetadataExtractor me = new WoltersKluwerSourceXmlMetadataExtractorFactory.WoltersKluwerSourceXmlMetadataExtractor();
+    //FileMetadataListExtractor mle = new FileMetadataListExtractor(me);
+    List<ArticleMetadata> mdList = extractFromContent(xml_url, wk_mime,
+        BASIC_CONTENT, wk_mle, pdfList);
 
-      cu.setContent(string_input);
-      cu.setContentSize(string_input.length());
-      // the CU does not recognize the sgml (yet- maybe by 1.67?)
-      cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/sgml");
-
-      // setting content (non-pdf) just so the check can find content
-      pcu.setContent(string_input);
-      pcu.setContentSize(string_input.length());
-      pcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/pdf");
-
-      FileMetadataExtractor me = new WoltersKluwerSourceXmlMetadataExtractorFactory.WoltersKluwerSourceXmlMetadataExtractor();
-      assertNotNull(me);
-      log.debug3("Extractor: " + me.toString());
- 
-      FileMetadataListExtractor mle = new FileMetadataListExtractor(me);
-      List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
-      assertNotEmpty(mdlist);
-      ArticleMetadata md = null;
-
-      for (int i = 0; i< mdlist.size(); i++) {
-       md = mdlist.get(i);
-       assertNotNull(md);
-
-       assertEquals(GOOD_ISSN, md.get(MetadataField.FIELD_ISSN));
-       assertEquals(TEST_PDF_URL, md.get(MetadataField.FIELD_ACCESS_URL));
-       assertEquals(GOOD_JOURNAL_TITLE, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
-       assertEquals(GOOD_DOI, md.get(MetadataField.FIELD_DOI));
-       assertEquals(GOOD_ISSUE, md.get(MetadataField.FIELD_ISSUE));
-       assertEquals(GOOD_VOLUME, md.get(MetadataField.FIELD_VOLUME));
-       assertEquals(GOOD_PUB_DATE, md.get(MetadataField.FIELD_DATE));
-       assertEquals(GOOD_TITLE, md.get(MetadataField.FIELD_ARTICLE_TITLE));
-       assertEquals(goodAuthors.toString(), md.getList(MetadataField.FIELD_AUTHOR).toString());
-      }
-    } finally {
-      //IOUtil.safeClose(file_input);
+    // Need to correct the expectedBasicMD to include baseUrl/Year
+    expectedBasicMD.put(MetadataField.FIELD_ACCESS_URL, pdf_url);
+    for (int i = 0; i< mdList.size(); i++) {
+      ArticleMetadata md = mdList.get(i);
+      checkOneMD(md, expectedBasicMD);
     }
   }
 
-/*
-  // get test input files from current directory
-private String getInputFile(String filename) {
-  String fileStr;
-  try {
-    InputStream jatsIn = getClass().getResourceAsStream(filename);
-log.info("filename:"+filename);
-    fileStr = StringUtil.fromInputStream(jatsIn);
+  public static final String wkLeader = "<!DOCTYPE dg SYSTEM \"ovidbase.dtd\">" + 
+      "<DG>";
+
+  public static final String wkArticleTop = 
+      "<D AN=\"000\" V=\"000.2\" PDF-ONLY=\"YES\" PUBSTATE=\"POST-AUTHOR-CORRECTIONS\" FILE=\"G000\">" +
+          "<BB>" +
+          "<TG>" +
+          "<TI>Testing and Other Purposes</TI></TG>";
+
+  public static final String wkBY = 
+      "<BY>" +
+          "<PN><FN>Fred</FN><MN>Q.</MN><SN>Writer</SN><DEG>M.D., Ph.D.</DEG></PN>" +
+          "<PN><FN>Suzie</FN><SN>Floobitz</SN><DEG>M.D.</DEG></PN>" +
+          "<AF><P>Information about hte authors first part</P></AF>" +
+          "<BT><P>Accepted August 21, 2009.</P><P>This work was supported by various grants</P><P>Correspondence to the authors</P></BT>" +
+          "</BY>";
+  public static final String wkISNDate = 
+      "<SO>" +
+          "<PB>Journal of the Testing</PB>" +
+          "<ISN>0000-1111</ISN>" +
+          "<DA><DY>23</DY><MO>October</MO><YR>2009</YR></DA>" +
+          "<V>Publish Ahead of Print</V>" +
+          "<IS><IP>&NA;</IP></IS>" +
+          "<PG>&NA;</PG></SO>";
+
+  public static final String wkXUI = 
+      "<DT>RESEARCH ARTICLE</DT><XUI XDB=\"pub-doi\" UI=\"10.1111/TEST.0000\"><XUI XDB=\"pub-sub-type\" UI=\"PAP-NEW\">";
+
+  public static final String wkArtBottom = 
+      "</BB>" +
+      "<AB><HD>ABSTRACT</HD>" +
+          "<ABS><HD>Objective&colon;</HD>" +
+          "<P>Despite the known association between testing and good outcomes</P></ABS>" +
+          "<ABS><HD>Method&colon;</HD>" +
+          "<P>People don't always test well.</P></ABS>" +
+          "<ABS><HD>Results&colon;</HD>" +
+          " <P>Test more rigorously</P></ABS>" +
+          "<ABS><HD>Conclusions&colon;</HD>" +
+          "<P>This plugin works.</P>" +
+          "<P>Clinical trial of this plugin.  URL&colon; <URL>http&colon;//www.lockss.org</URL>. Unique identifier&colon; TEST000.</P></ABS></AB>" +
+          "<KWS><HD>Key Words&colon;</HD><KW>testing</KW><KW>depression</KW><KW>treatment</KW></KWS>" +
+          "</D>";
+
+  public static final String wkEnder = "</DG>";
+
+
+  // Run this test using the test version of WK md extractor which doesn't
+  // need content PDF files to emit
+  public void testDOIEvaluator() throws Exception {
+    String good_doi = "10.1234/floobitz";
+    String difficult_doi = "DOI : 10.1234/floobitz";
+    String difficult_doi_result = "10.1234/floobitz";
+    String impossible_doi = "0.1234/floobitz";
+    String xui_doi = 
+        "<DT>RESEARCH ARTICLE</DT><XUI XDB=\"pub-doi\" UI=\"" + 
+            good_doi + 
+            "\"><XUI XDB=\"pub-sub-type\" UI=\"PAP-NEW\">";
+
+    String xmlDoc = 
+        wkLeader + 
+        wkArticleTop + wkBY + wkISNDate + xui_doi + wkArtBottom + 
+        wkEnder;
+
+    //FileMetadataExtractor me = new TestWKSourceXmlMetadataExtractor();
+    //assertNotNull(me);
+    //    FileMetadataListExtractor mle = new FileMetadataListExtractor(me);
+
+    // Use test version of extractor - no PDFs needed
+    List<ArticleMetadata> mdList = extractFromContent(xmlDoc, nocheck_mle);
+    checkOneMD(mdList, MetadataField.FIELD_DOI, good_doi);
+
+    // evaluator figures it out
+    xui_doi = 
+        "<DT>RESEARCH ARTICLE</DT><XUI XDB=\"pub-doi\" UI=\"" + 
+            difficult_doi + 
+            "\"><XUI XDB=\"pub-sub-type\" UI=\"PAP-NEW\">";
+    xmlDoc = 
+        wkLeader + 
+        wkArticleTop + wkBY + wkISNDate + xui_doi + wkArtBottom + 
+        wkEnder;
+    mdList = extractFromContent(xmlDoc, nocheck_mle);
+    checkOneMD(mdList, MetadataField.FIELD_DOI, difficult_doi_result);
+
+    // we have to let this one go
+    xui_doi = 
+        "<DT>RESEARCH ARTICLE</DT><XUI XDB=\"pub-doi\" UI=\"" + 
+            impossible_doi + 
+            "\"><XUI XDB=\"pub-sub-type\" UI=\"PAP-NEW\">";
+    xmlDoc = 
+        wkLeader + 
+        wkArticleTop + wkBY + wkISNDate + xui_doi + wkArtBottom + 
+        wkEnder;
+    mdList = extractFromContent(xmlDoc, nocheck_mle);
+    checkOneMD(mdList, MetadataField.FIELD_DOI, null);
   }
-  catch (IOException e) {
-     throw new RuntimeException(e);
-  }
-  return (fileStr);
-}
-/* 
-  // Use when getting test content locally
-  // original xml file from the publisher
-  final static String baseDir = "/Users/audreyishizaki/Desktop/LOCKSS/lockss-daemon/plugins/test/src/org/lockss/plugin/clockss/wolterskluwer/";
-  final static String testXmlFile = "JHYPE_20121000.0"; // "20120500.0"; //"90000000.0"; //"20120500.0";
-  final static String testPdfFile = "00004872-201210000-00001.pdf"; //"00000539-201205000-00033.pdf"; //"00004583-900000000-99789.pdf"; //"00000441-201205000-00001.pdf";
-  public void testExtractFromRealContent() throws Exception {
-    //String xml_url = getInputFile(testXmlFile);
-    //String pdf_url = getInputFile(testPdfFile);
 
-    CIProperties xmlHeader = new CIProperties();
-    InputStream xml_istream = null;
-    InputStream pdf_istream = null;
-    BOMInputStream bom_istream = null;
-    try {
-      xmlHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
-      MockCachedUrl xcu = mau.addUrl(baseDir+testXmlFile, true, true, xmlHeader);
-      // need to check for this file before emitting
-      MockCachedUrl pcu = mau.addUrl(baseDir+testPdfFile, true, true, xmlHeader);
+  // Run this test using the test version of WK md extractor which doesn't
+  // need content PDF files to emit
+  public void testISSNEvaluator() throws Exception {
 
-      xml_istream = getResourceAsStream(testXmlFile);
-      bom_istream = new BOMInputStream(xml_istream, false);
-      String xml_input = StringUtil.fromInputStream(bom_istream);
-      IOUtil.safeClose(bom_istream);
-      IOUtil.safeClose(xml_istream);
+    String issn_good = "1070-8022";
+    String issn_1 = "1070 -8022";
+    String issn_2 = "1070- 8022";
+    String issn_3 = "1070-8022&sol;11&sol;0000&ndash;0000";
+    String issn_4 = "10708022";
+    String issn_bad = "J Nurses Staff Dev"; //yup. really happened
 
-      //MockCachedUrl pcu = new MockCachedUrl(pdf_url, mau);
-      // really not going to be read other than to check .hasContent()
-      pdf_istream = getResourceAsStream(testPdfFile);
-      String pdf_input = StringUtil.fromInputStream(pdf_istream);
-      IOUtil.safeClose(pdf_istream);
-      
-      xcu.setContent(xml_input);
-      xcu.setContentSize(xml_input.length());
-      xcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/xml");
-      pcu.setContent(pdf_input);
-      pcu.setContentSize(pdf_input.length());
-      pcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/pdf");
+    String isn_start = "<SO>" +
+        "<PB>Journal of the Testing</PB>" +
+        "<ISN>";
 
-      FileMetadataExtractor me = new WoltersKluwerSourceXmlMetadataExtractorFactory.WoltersKluwerSourceXmlMetadataExtractor();
-      assertNotNull(me);
-      log.debug3("Extractor: " + me.toString());
-      log.info("Extractor: " + me.toString());
+    String isn_end = "</ISN>" +
+        "<DA><DY>23</DY><MO>October</MO><YR>2009</YR></DA>" +
+        "<V>Publish Ahead of Print</V>" +
+        "<IS><IP>&NA;</IP></IS>" +
+        "<PG>&NA;</PG></SO>";    
 
-      FileMetadataListExtractor mle = new FileMetadataListExtractor(me);
-      List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), xcu);
-      assertNotEmpty(mdlist);
-      ArticleMetadata md = null;
-      for (int i = 0; i< mdlist.size(); i++) {
-       md = mdlist.get(i);
-       assertNotNull(md);
-      log.info("metadata["+i+"]: ");
-      log.info(md.get(MetadataField.FIELD_ISSN));
-      log.info(md.get(MetadataField.FIELD_PUBLICATION_TITLE));
-      log.info(md.get(MetadataField.FIELD_ARTICLE_TITLE));
-      log.info(md.get(MetadataField.FIELD_ACCESS_URL));
-      log.info(md.get(MetadataField.FIELD_ISSUE));
-      log.info(md.get(MetadataField.FIELD_VOLUME));
-      log.info(md.get(MetadataField.FIELD_DATE));
-      log.info(md.get(MetadataField.FIELD_ARTICLE_TITLE));
-      log.info(md.getList(MetadataField.FIELD_AUTHOR).toString());
-      log.info(md.get(MetadataField.FIELD_DOI));
-      }
-    } finally {
-      IOUtil.safeClose(bom_istream);
-      IOUtil.safeClose(xml_istream);
-      IOUtil.safeClose(pdf_istream);
+    String xmlDoc = 
+        wkLeader + 
+        wkArticleTop + isn_start + issn_good + isn_end + wkArtBottom + 
+        wkArticleTop + isn_start + issn_1 + isn_end + wkArtBottom + 
+        wkArticleTop + isn_start + issn_2 + isn_end + wkArtBottom + 
+        wkArticleTop + isn_start + issn_3 + isn_end + wkArtBottom + 
+        wkArticleTop + isn_start + issn_4 + isn_end + wkArtBottom + 
+        wkEnder;
+
+    // Use test version of extractor - no PDFs needed
+    List<ArticleMetadata> mdList = extractFromContent(xmlDoc, nocheck_mle);
+    Iterator<ArticleMetadata> mdIt = mdList.iterator();
+    // each one of these should have been evaluated and become a "good" issn
+    while (mdIt.hasNext()) {
+      checkOneMD(mdIt.next(), MetadataField.FIELD_ISSN, issn_good);
     }
+
+    xmlDoc = 
+        wkLeader + 
+        wkArticleTop + isn_start + issn_bad + isn_end + wkArtBottom + 
+        wkEnder;
+    mdList = extractFromContent(xmlDoc, nocheck_mle);
+    checkOneMD(mdList, MetadataField.FIELD_ISSN, null);
   }
-  */
-  
+
+
+  public class TestWKSourceXmlMetadataExtractor extends WoltersKluwerSourceXmlMetadataExtractorFactory.WoltersKluwerSourceXmlMetadataExtractor {
+    // 
+    // Override implementation of getFilenamesAssociatedWithRecord to force
+    // emit for testing purposes - while allowing use of WK extractor.
+    // If a null list is returned, preEmitCheck no files to check and returns "true"
+    // allowing emit.
+    //
+    protected ArrayList<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, 
+        CachedUrl cu,
+        ArticleMetadata oneAM) {
+      return null;
+    }
+
+  }
+
 }
