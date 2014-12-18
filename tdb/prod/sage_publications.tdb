@@ -9366,8 +9366,7 @@
   
     title <
       name = E-Learning and Digital Media ;
-      eissn = 2042-7530 ;
-      issnl = 2042-7530
+      eissn = 2042-7530 
     >
 
       param[base_url] = http://ldm.sagepub.com/
@@ -33258,8 +33257,7 @@ comment[mpj] = now published by Brill
   
     title <
       name = Policy Futures in Education ;
-      eissn = 1478-2103 ;
-      issnl = 1478-2103
+      eissn = 1478-2103 
     >
 
       param[base_url] = http://pfe.sagepub.com/
@@ -41536,6 +41534,22 @@ comment[mpj] = now published by Brill
       }
 
     }
+
+  {
+  
+    title <
+      name = Translational Epigenomics ;
+      issn = 2334-4865 
+    >
+
+      param[base_url] = http://epi.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2014 ; Translational Epigenomics Volume 1 ; 1 >
+      au < expected ; 2015 ; Translational Epigenomics Volume 2 ; 2 >
+      
+  }
 
     {
 
