@@ -1,5 +1,5 @@
 /*
- * $Id: HashCUS.java,v 1.60 2014-12-17 09:21:32 tlipkis Exp $
+ * $Id: HashCUS.java,v 1.61 2014-12-18 18:41:51 tlipkis Exp $
  */
 
 /*
@@ -987,7 +987,11 @@ public class HashCUS extends LockssServlet {
     String errorMessage = null;
 
     try {
-      String reqId = SimpleHasher.getReqId(params, result, getRequestMap());
+      Map<String, SimpleHasher.ParamsAndResult> requestMap = getRequestMap();
+      String reqId;
+      synchronized (requestMap) {
+	reqId = SimpleHasher.getReqId(params, result, getRequestMap());
+      }
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "reqId = " + reqId);
 
       hasher.startHashingThread(params, result);

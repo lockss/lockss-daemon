@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleHasher.java,v 1.15 2014-11-26 20:51:41 fergaloy-sf Exp $
+ * $Id: SimpleHasher.java,v 1.16 2014-12-18 18:41:51 tlipkis Exp $
  */
 
 /*
@@ -886,6 +886,7 @@ public class SimpleHasher {
 
   /**
    * Provides an unused identifier for a new asynchronous hashing operation.
+   * Must be called from a block synchronized on the requestMap.
    * 
    * @param params
    *          A HasherParams with the parameters that define the hashing
@@ -899,20 +900,18 @@ public class SimpleHasher {
    */
   public static String getReqId(HasherParams params, HasherResult result,
       Map<String, ParamsAndResult> requestMap) {
-    synchronized (requestMap) {
-      for (int i = 0; i < MAX_RANDOM_SEARCH; i++) {
-	String key =
-	    org.apache.commons.lang3.RandomStringUtils.randomAlphabetic(5);
-	if (!requestMap.containsKey(key)) {
-	  result.setRequestId(key);
-	  requestMap.put(key, new ParamsAndResult(params, result));
-	  return key;
-	}
+    for (int i = 0; i < MAX_RANDOM_SEARCH; i++) {
+      String key =
+	org.apache.commons.lang3.RandomStringUtils.randomAlphabetic(5);
+      if (!requestMap.containsKey(key)) {
+	result.setRequestId(key);
+	requestMap.put(key, new ParamsAndResult(params, result));
+	return key;
       }
-
-      throw new IllegalStateException("Couldn't find an unused request key in "
-	  + MAX_RANDOM_SEARCH + " tries");
     }
+
+    throw new IllegalStateException("Couldn't find an unused request key in "
+				    + MAX_RANDOM_SEARCH + " tries");
   }
 
   /**
