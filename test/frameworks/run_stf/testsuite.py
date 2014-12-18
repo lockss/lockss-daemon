@@ -3,7 +3,7 @@
 build frameworks.  If desired, optional parameters may also be set to change
 the default behavior.  See testsuite.props for details."""
 
-# $Id: testsuite.py,v 1.78 2014-12-14 04:14:33 dshr Exp $
+# $Id: testsuite.py,v 1.79 2014-12-18 21:47:21 dshr Exp $
 
 __copyright__ = '''\
 Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
@@ -303,8 +303,6 @@ class V3TestCases( LockssTestCases ):
                           'org.lockss.dbManager.enabled': False,
                           'org.lockss.poll.v3.enableV3Poller': False,
                           'org.lockss.poll.v3.enableV3Voter': True,
-                          'org.lockss.poll.v3.enablePoPPolls': True,
-                          'org.lockss.poll.v3.enableLocalPolls': True,
 			  'org.lockss.poll.v3.minTimeBetweenAnyPoll': '6s',
                           'org.lockss.poll.pollStarterInitialDelay': '30s'}
             extraConf.update( self.local_configuration )
@@ -428,6 +426,9 @@ class SimpleV3LocalTestCase( V3TestCases ):
             }
         self.simulated_AU_parameters = { 'numFiles': 3 }
 
+    def _check_v3_result( self , nodes ):
+        self.assert_(self.victim.hasWonV3Poll( self.AU ))
+
     def _damage_AU( self ):
         return [ ]
 
@@ -445,6 +446,9 @@ class SimpleDamageV3LocalTestCase( V3TestCases ):
             'org.lockss.blockHasher.localHashAlgorithm': 'SHA-1'
             }
         self.simulated_AU_parameters = { 'numFiles': 3 }
+
+    def _check_v3_result( self , nodes ):
+        self.assert_(self.victim.hasWonV3Poll( self.AU ))
 
     def _damage_AU( self ):
         nodes = [ self.victim.randomDamageSingleNode( self.AU ) ]
