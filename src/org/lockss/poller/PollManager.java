@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.271.2.2 2014-12-16 23:22:01 dshr Exp $
+ * $Id: PollManager.java,v 1.271.2.3 2014-12-18 21:39:48 dshr Exp $
  */
 
 /*
@@ -999,6 +999,7 @@ public class PollManager
 	    for (ArchivalUnit au : selected) {
 	      PollSpec spec =
 		new PollSpec(au.getAuCachedUrlSet(), Poll.V3_POLL);
+	      spec.setPollVariant(weightMap.get(au).pollVariant());
 	      PollReq req = new PollReq(au).setPollSpec(spec);
 	      pollQueue.add(req);
 	    }
@@ -2000,10 +2001,10 @@ public class PollManager
     } else {
       try {
 	pollPriorityAuidMap = new PatternFloatMap(patternPairs);
-	log.debug("Installing poll priority map: " + pollPriorityAuidMap);
+	theLog.debug("Installing poll priority map: " + pollPriorityAuidMap);
       } catch (IllegalArgumentException e) {
-	log.error("Illegal poll priority map, ignoring", e);
-	log.error("Poll priority map unchanged, still: " +
+	theLog.error("Illegal poll priority map, ignoring", e);
+	theLog.error("Poll priority map unchanged, still: " +
 		  pollPriorityAuidMap);
       }
     }
@@ -3026,24 +3027,24 @@ public class PollManager
     if (timeSinceAnyPoll < minTimeSinceAnyPoll) {
       // Too soon to do anything
       ret = PollVariant.NoPoll;
-      log.debug3("Too soon for next poll of any kind");
+      theLog.debug3("Too soon for next poll of any kind");
     } else if (enablePoPPolls && allPoPPolls) {
       // For testing
       ret = PollVariant.PoP;
-      log.debug3("PoP poll forced");
+      theLog.debug3("PoP poll forced");
     } else if (enableLocalPolls && allLocalPolls) {
       // For testing
       ret = PollVariant.Local;
-      log.debug3("Local poll forced");
+      theLog.debug3("Local poll forced");
     } else if (countSuspectVersionsNotGivenUp > 0 ||
 	       (TimeBase.nowMs() - lastPollTime) > maxDelayBetweenPoR) {
       // Local "polling" found suspect version(s)
       ret = PollVariant.PoR; // XXX should be high priority
-      log.debug3("Suspect versions not given up on - PoR poll");
+      theLog.debug3("Suspect versions not given up on - PoR poll");
     } else if (lastContentChange > lastPollTime) {
       // AU has changed since last PoR - PoR poll
       ret = PollVariant.PoR;
-      log.debug3("New content since last PoR - PoR poll");
+      theLog.debug3("New content since last PoR - PoR poll");
     } else if (agreePeersLastPoll >= minAgreePeersLastPoll) {
       // AU was in good shape the last time we looked
       if (willingRepairers < repairerThreshold) {
@@ -3051,22 +3052,22 @@ public class PollManager
 	if (enablePoPPolls) {
 	  ret = PollVariant.PoP;
 	}
-	log.debug3("AU OK but needs repairers - PoP poll");
+	theLog.debug3("AU OK but needs repairers - PoP poll");
       } else if (enableLocalPolls) {
 	// Good shape and enough repairers
 	ret = PollVariant.Local;
-	log.debug3("AU OK, has repairers - Local poll");
+	theLog.debug3("AU OK, has repairers - Local poll");
       }
     } else {
       // AU not in good shape
       if (log.isDebug3()) {
 	long lastCrawlTime = aus.getLastCrawlTime();
-	log.debug3("Last (poll/crawl) times: (" + lastPollTime + "/" +
+	theLog.debug3("Last (poll/crawl) times: (" + lastPollTime + "/" +
 		   lastCrawlTime + ") last agree" + agreePeersLastPoll +
 		 " threshold " + minAgreePeersLastPoll);
       }
     }
-    log.debug2("Poll variant: " + ret);
+    theLog.debug2("Poll variant: " + ret);
     return ret;
   }
 
