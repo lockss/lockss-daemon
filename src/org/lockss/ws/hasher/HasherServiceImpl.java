@@ -1,5 +1,5 @@
 /*
- * $Id: HasherServiceImpl.java,v 1.1 2014-11-10 20:52:24 fergaloy-sf Exp $
+ * $Id: HasherServiceImpl.java,v 1.2 2014-12-18 18:42:15 tlipkis Exp $
  */
 
 /*
@@ -221,7 +221,10 @@ public class HasherServiceImpl implements HasherService {
 	wsResult.setRequestTime(requestTime);
 
 	// Obtain a request identifier.
-	String requestId = SimpleHasher.getReqId(params, result, HASH_REQUESTS);
+	String requestId;
+	synchronized (HASH_REQUESTS) {
+	  requestId = SimpleHasher.getReqId(params, result, HASH_REQUESTS);
+	}
         if (log.isDebug3())
           log.debug3(DEBUG_HEADER + "requestId = " + requestId);
 
@@ -308,8 +311,10 @@ public class HasherServiceImpl implements HasherService {
     }
 
     // Get the hash request data.
-    ParamsAndResult paramsAndResult = HASH_REQUESTS.get(requestId);
-
+    ParamsAndResult paramsAndResult;
+    synchronized (HASH_REQUESTS) {
+      paramsAndResult = HASH_REQUESTS.get(requestId);
+    }
     // Handle a missing request.
     if (paramsAndResult == null) {
       String errorMessage = "Cannot find asynchronous hash request '"
@@ -347,22 +352,23 @@ public class HasherServiceImpl implements HasherService {
 	  new ArrayList<HasherWsAsynchronousResult>();
 
       // Loop through all the existing requests.
-      for (String requestId : HASH_REQUESTS.keySet()) {
-	HasherWsAsynchronousResult wsResult = new HasherWsAsynchronousResult();
-	wsResult.setRequestId(requestId);
+      synchronized (HASH_REQUESTS) {
+	for (String requestId : HASH_REQUESTS.keySet()) {
+	  HasherWsAsynchronousResult wsResult = new HasherWsAsynchronousResult();
+	  wsResult.setRequestId(requestId);
 
-	// Get the result.
-	HasherResult result = HASH_REQUESTS.get(requestId).result;
-	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "result = " + result);
+	  // Get the result.
+	  HasherResult result = HASH_REQUESTS.get(requestId).result;
+	  if (log.isDebug3()) log.debug3(DEBUG_HEADER + "result = " + result);
 
-	// Prepare the result to be returned.
-	transferResult(result, wsResult);
-	wsResult.setRequestTime(result.getStartTime());
+	  // Prepare the result to be returned.
+	  transferResult(result, wsResult);
+	  wsResult.setRequestTime(result.getStartTime());
 
-	// Add the result to the response.  
-	wsResults.add(wsResult);
+	  // Add the result to the response.  
+	  wsResults.add(wsResult);
+	}
       }
-
       if (log.isDebug2()) log.debug2(DEBUG_HEADER + "wsResults = " + wsResults);
       return wsResults;
     } catch (Exception e) {
