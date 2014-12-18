@@ -832,6 +832,35 @@
   }
 
   {
+  
+    title <
+      name = The Psychological Record
+    >
+    
+    plugin = org.lockss.plugin.bepress.BePressPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[journal_abbr] = tpr
+    implicit < status ; year ; volume ; name ; param[volume] >
+
+    au < manifest ; 1997 ; 47 ; The Psychological Record Volume 47 ; 47 >
+    au < manifest ; 1998 ; 48 ; The Psychological Record Volume 48 ; 48 >
+    au < manifest ; 1999 ; 49 ; The Psychological Record Volume 49 ; 49 >
+    au < manifest ; 2000 ; 50 ; The Psychological Record Volume 50 ; 50 >
+    au < manifest ; 2001 ; 51 ; The Psychological Record Volume 51 ; 51 >
+    au < manifest ; 2002 ; 52 ; The Psychological Record Volume 52 ; 52 >
+    au < manifest ; 2003 ; 53 ; The Psychological Record Volume 53 ; 53 >
+    au < manifest ; 2004 ; 54 ; The Psychological Record Volume 54 ; 54 >
+    au < manifest ; 2005 ; 55 ; The Psychological Record Volume 55 ; 55 >
+    au < manifest ; 2006 ; 56 ; The Psychological Record Volume 56 ; 56 >
+    au < manifest ; 2007 ; 57 ; The Psychological Record Volume 57 ; 57 >
+    au < manifest ; 2008 ; 58 ; The Psychological Record Volume 58 ; 58 >
+    au < manifest ; 2009 ; 59 ; The Psychological Record Volume 59 ; 59 >
+    au < manifest ; 2010 ; 60 ; The Psychological Record Volume 60 ; 60 >
+    au < manifest ; 2011 ; 61 ; The Psychological Record Volume 61 ; 61 >
+    
+  }
+    
+  {
 
     title <
       name = The Simon Review: Occasional Papers of the Paul Simon Public Policy Institute
@@ -854,6 +883,22 @@
     au < manifest ; 2012 ; The Simon Review: Occasional Papers of the Paul Simon Public Policy Institute 2012 ; 2012 >
     au < manifest ; 2013 ; The Simon Review: Occasional Papers of the Paul Simon Public Policy Institute 2013 ; 2013 >
     au < manifest ; 2014 ; The Simon Review: Occasional Papers of the Paul Simon Public Policy Institute 2014 ; 2014 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University Accreditation 2010
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = uc_accred2010
+    implicit < status ; year ; name ; param[collection_heading] >
+
+    au < manifest ; 2010 ; Southern Illinois University Accreditation 2010 2010 ; 2010 >
 
   }
 
@@ -1945,6 +1990,47 @@
   {
 
     title <
+      name = Southern Illinois University Honors Theses
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_etd
+    param[collection] = uhp_theses
+    implicit < status ; year ; name ; param[collection_heading] >
+
+    au < manifest ; 1987 ; Southern Illinois University Honors Theses 1987 ; 1987 >
+    au < manifest ; 1988 ; Southern Illinois University Honors Theses 1988 ; 1988 >
+    au < manifest ; 1989 ; Southern Illinois University Honors Theses 1989 ; 1989 >
+    au < manifest ; 1990 ; Southern Illinois University Honors Theses 1990 ; 1990 >
+    au < manifest ; 1991 ; Southern Illinois University Honors Theses 1991 ; 1991 >
+    au < manifest ; 1992 ; Southern Illinois University Honors Theses 1992 ; 1992 >
+    au < manifest ; 1993 ; Southern Illinois University Honors Theses 1993 ; 1993 >
+    au < manifest ; 1994 ; Southern Illinois University Honors Theses 1994 ; 1994 >
+    au < manifest ; 1995 ; Southern Illinois University Honors Theses 1995 ; 1995 >
+    au < manifest ; 1996 ; Southern Illinois University Honors Theses 1996 ; 1996 >
+    au < manifest ; 1997 ; Southern Illinois University Honors Theses 1997 ; 1997 >
+    au < manifest ; 1998 ; Southern Illinois University Honors Theses 1998 ; 1998 >
+    au < manifest ; 1999 ; Southern Illinois University Honors Theses 1999 ; 1999 >
+    au < manifest ; 2000 ; Southern Illinois University Honors Theses 2000 ; 2000 >
+    au < manifest ; 2001 ; Southern Illinois University Honors Theses 2001 ; 2001 >
+    au < manifest ; 2002 ; Southern Illinois University Honors Theses 2002 ; 2002 >
+    au < manifest ; 2003 ; Southern Illinois University Honors Theses 2003 ; 2003 >
+    au < manifest ; 2004 ; Southern Illinois University Honors Theses 2004 ; 2004 >
+    au < manifest ; 2005 ; Southern Illinois University Honors Theses 2005 ; 2005 >
+    au < manifest ; 2006 ; Southern Illinois University Honors Theses 2006 ; 2006 >
+    au < manifest ; 2007 ; Southern Illinois University Honors Theses 2007 ; 2007 >
+    au < manifest ; 2009 ; Southern Illinois University Honors Theses 2009 ; 2009 >
+    au < manifest ; 2011 ; Southern Illinois University Honors Theses 2011 ; 2011 >
+    au < manifest ; 2012 ; Southern Illinois University Honors Theses 2012 ; 2012 >
+    au < manifest ; 2013 ; Southern Illinois University Honors Theses 2013 ; 2013 >
+    au < manifest ; 2014 ; Southern Illinois University Honors Theses 2014 ; 2014 >
+
+  }
+
+  {
+
+    title <
       name = Southern Illinois University Illinois Junior Science and Humanities Symposium
     >
 
@@ -2007,6 +2093,23 @@
     
   }
     
+  {
+
+    title <
+      name = Southern Illinois University McNair Scholars Journal
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = ugr_mcnair
+    implicit < status ; year ; name ; param[collection_heading] >
+
+    au < manifest ; 2006 ; Southern Illinois University McNair Scholars Journal 2006 ; 2006 >
+    au < manifest ; 2009 ; Southern Illinois University McNair Scholars Journal 2009 ; 2009 >
+
+  }
+
   {
 
     title <
@@ -2142,6 +2245,24 @@
     implicit < status ; year ; name ; param[collection_heading] >  
 
     au < manifest ; 2009 ; Southern Illinois University Morris Library Videos 2009 ; 2009 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University News and Newsletters
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = ua_news
+    implicit < status ; year ; name ; param[collection_heading] >
+
+    au < manifest ; 1949 ; Southern Illinois University News and Newsletters 1949 ; 1949 >
+    au < manifest ; 1963 ; Southern Illinois University News and Newsletters 1963 ; 1963 >
+    au < manifest ; 1969 ; Southern Illinois University News and Newsletters 1969 ; 1969 >
 
   }
 
@@ -2428,6 +2549,62 @@
     implicit < status ; year ; name ; param[collection_heading] >  
 
     # No LOCKSS markup found
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University: Undergraduate Research at SIUC
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    param[collection] = ugr_ugr
+    implicit < status ; year ; name ; param[collection_heading] >
+
+    au < manifest ; 2006 ; Southern Illinois University: Undergraduate Research at SIUC 2006 ; 2006 >
+    au < manifest ; 2007 ; Southern Illinois University: Undergraduate Research at SIUC 2007 ; 2007 >
+    au < manifest ; 2008 ; Southern Illinois University: Undergraduate Research at SIUC 2008 ; 2008 >
+    au < manifest ; 2009 ; Southern Illinois University: Undergraduate Research at SIUC 2009 ; 2009 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University: Universities Council on Water Resources Conference Proceedings
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    implicit < status ; year ; name ; param[collection] ; param[collection_heading] >
+
+    au < manifest ; 2003 ; Southern Illinois University: Universities Council on Water Resources Conference Proceedings 2003 ; ucowrconfs_2003 ; 2003 >
+    au < manifest ; 2004 ; Southern Illinois University: Universities Council on Water Resources Conference Proceedings 2004 ; ucowrconfs_2004 ; 2004 >
+    au < manifest ; 2005 ; Southern Illinois University: Universities Council on Water Resources Conference Proceedings 2005 ; ucowrconfs_2005 ; 2005 >
+    au < manifest ; 2006 ; Southern Illinois University: Universities Council on Water Resources Conference Proceedings 2006 ; ucowrconfs_2006 ; 2006 >
+    au < manifest ; 2007 ; Southern Illinois University: Universities Council on Water Resources Conference Proceedings 2007 ; ucowrconfs_2007 ; 2007 >
+    au < manifest ; 2008 ; Southern Illinois University: Universities Council on Water Resources Conference Proceedings 2008 ; ucowrconfs_2008 ; 2008 >
+    au < manifest ; 2009 ; Southern Illinois University: Universities Council on Water Resources Conference Proceedings 2009 ; ucowrconfs_2009 ; 2009 >
+
+  }
+
+  {
+
+    title <
+      name = Southern Illinois University World River Day 2011
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://opensiuc.lib.siu.edu/
+    param[collection_type] = ir_series
+    implicit < status ; year ; name ; param[collection] ; param[collection_heading] >
+
+    au < manifest ; 2011 ; Southern Illinois University World River Day 2011: Keynote Presentation ; wrd2011_keynote ; 2011 >
+    au < manifest ; 2011 ; Southern Illinois University World River Day 2011: World Rivers in the 21st Century ; wrd2011_pres ; 2011 >
 
   }
 
