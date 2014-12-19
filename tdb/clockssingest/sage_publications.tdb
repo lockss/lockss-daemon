@@ -34345,7 +34345,7 @@
       au < exists ; exists ; 2010 ; Shoulder & Elbow Volume 2 ; 2 ; >
       au < exists ; exists ; 2011 ; Shoulder & Elbow Volume 3 ; 3 ; >
       au < exists ; exists ; 2012 ; Shoulder & Elbow Volume 4 ; 4 ; >
-      au < exists ; exists ; 2013 ; Shoulder & Elbow Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2013 ; Shoulder & Elbow Volume 5 ; 5 ; >
       au < manifest ; exists ; 2014 ; Shoulder & Elbow Volume 6 ; 6 ; >
       au < expected ; exists ; 2015 ; Shoulder & Elbow Volume 7 ; 7 ; >
 
@@ -36365,7 +36365,7 @@
       au < exists ; exists ; 2010 ; Technology in Cancer Research & Treatment Volume 9 ; 9 ; >
       au < exists ; exists ; 2011 ; Technology in Cancer Research & Treatment Volume 10 ; 10 ; >
       au < exists ; exists ; 2012 ; Technology in Cancer Research & Treatment Volume 11 ; 11 ; >
-      au < exists ; exists ; 2013 ; Technology in Cancer Research & Treatment Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2013 ; Technology in Cancer Research & Treatment Volume 12 ; 12 ; >
       au < exists ; exists ; 2014 ; Technology in Cancer Research & Treatment Volume 13 ; 13 ; >
       au < expected ; exists ; 2015 ; Technology in Cancer Research & Treatment Volume 14 ; 14 ; >
 
@@ -36614,7 +36614,7 @@
     au < exists ; exists ; 2010 ; Theological Studies Volume 71 ; 71 ; >
     au < exists ; exists ; 2011 ; Theological Studies Volume 72 ; 72 ; >
     au < exists ; exists ; 2012 ; Theological Studies Volume 73 ; 73 ; >
-    au < exists ; exists ; 2013 ; Theological Studies Volume 74 ; 74 ; >
+    au < manifest ; exists ; 2013 ; Theological Studies Volume 74 ; 74 ; >
     au < manifest ; exists ; 2014 ; Theological Studies Volume 75 ; 75 ; >
     au < expected ; exists ; 2015 ; Theological Studies Volume 76 ; 76 ; >
 
@@ -37468,7 +37468,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://tav.sagepub.com/
 
-      au < exists ; exists ; 2013 ; Therapeutic Advances in Vaccines Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2013 ; Therapeutic Advances in Vaccines Volume 1 ; 1 ; >
       au < exists ; exists ; 2014 ; Therapeutic Advances in Vaccines Volume 2 ; 2 ; >
       au < expected ; exists ; 2015 ; Therapeutic Advances in Vaccines Volume 3 ; 3 ; >
 
@@ -40914,7 +40914,7 @@
     au < exists ; exists ; 2010 ; ASN NEURO Volume 2 ; 2 ; >
     au < exists ; exists ; 2011 ; ASN NEURO Volume 3 ; 3 ; >
     au < exists ; exists ; 2012 ; ASN NEURO Volume 4 ; 4 ; >
-    au < exists ; exists ; 2013 ; ASN NEURO Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2013 ; ASN NEURO Volume 5 ; 5 ; >
     au < manifest ; exists ; 2014 ; ASN NEURO Volume 6 ; 6 ; >
     
     }
@@ -41281,7 +41281,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://ftr.sagepub.com/
 
-    au < exists ; exists ; 2013 ; Foreign Trade Review Volume 48 ; 48 ; >
+    au < manifest ; exists ; 2013 ; Foreign Trade Review Volume 48 ; 48 ; >
     au < expected ; exists ; 2014 ; Foreign Trade Review Volume 49 ; 49 ; >
     au < expected ; exists ; 2015 ; Foreign Trade Review Volume 50 ; 50 ; >
 
@@ -41815,7 +41815,7 @@
         au < exists ; exists ; 2010 ; Clinical Ethics Volume 5 ; 5 ; >
         au < exists ; exists ; 2011 ; Clinical Ethics Volume 6 ; 6 ; >
         au < exists ; exists ; 2012 ; Clinical Ethics Volume 7 ; 7 ; >
-        au < exists ; exists ; 2013 ; Clinical Ethics Volume 8 ; 8 ; >
+        au < manifest ; exists ; 2013 ; Clinical Ethics Volume 8 ; 8 ; >
         au < expected ; exists ; 2014 ; Clinical Ethics Volume 9 ; 9 ; >
         au < expected ; exists ; 2015 ; Clinical Ethics Volume 10 ; 10 ; >
 
@@ -42868,7 +42868,7 @@
         au < exists ; exists ; 2010 ; Laboratory Animals Volume 44 ; 44 ; >
         au < exists ; exists ; 2011 ; Laboratory Animals Volume 45 ; 45 ; >
         au < exists ; exists ; 2012 ; Laboratory Animals Volume 46 ; 46 ; >
-        au < exists ; exists ; 2013 ; Laboratory Animals Volume 47 ; 47 ; >
+        au < manifest ; exists ; 2013 ; Laboratory Animals Volume 47 ; 47 ; >
         au < expected ; exists ; 2014 ; Laboratory Animals Volume 48 ; 48 ; >
   
       }
