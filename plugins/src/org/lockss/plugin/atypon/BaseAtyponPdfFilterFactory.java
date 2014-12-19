@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponPdfFilterFactory.java,v 1.5 2014-10-15 16:29:00 alexandraohlson Exp $
+ * $Id: BaseAtyponPdfFilterFactory.java,v 1.6 2014-12-19 21:18:20 alexandraohlson Exp $
  */
 
 /*
@@ -70,6 +70,7 @@ public class BaseAtyponPdfFilterFactory extends SimplePdfFilterFactory {
    throws PdfException {
     pdfDocument.unsetCreationDate();
     pdfDocument.unsetModificationDate();
+    pdfDocument.unsetMetadata();
     PdfUtil.normalizeTrailerId(pdfDocument);
   }
 
