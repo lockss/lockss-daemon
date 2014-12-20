@@ -81,19 +81,19 @@
     param[journal_abbr] = ijs
     implicit < status ; year ; volume ; name ; param[volume] >
     
-    au < releasing ; 2002 ; 31 ; International Journal of Speleology Volume 31 ; 31 >
-    au < releasing ; 2003 ; 32 ; International Journal of Speleology Volume 32 ; 32 >
-    au < releasing ; 2004 ; 33 ; International Journal of Speleology Volume 33 ; 33 >
-    au < releasing ; 2005 ; 34 ; International Journal of Speleology Volume 34 ; 34 >
-    au < releasing ; 2006 ; 35 ; International Journal of Speleology Volume 35 ; 35 >
-    au < releasing ; 2007 ; 36 ; International Journal of Speleology Volume 36 ; 36 >
-    au < releasing ; 2008 ; 37 ; International Journal of Speleology Volume 37 ; 37 >
-    au < releasing ; 2009 ; 38 ; International Journal of Speleology Volume 38 ; 38 >
-    au < releasing ; 2010 ; 39 ; International Journal of Speleology Volume 39 ; 39 >
-    au < releasing ; 2011 ; 40 ; International Journal of Speleology Volume 40 ; 40 >
-    au < releasing ; 2012 ; 41 ; International Journal of Speleology Volume 41 ; 41 >
-    au < releasing ; 2013 ; 42 ; International Journal of Speleology Volume 42 ; 42 >
-    au < releasing ; 2014 ; 43 ; International Journal of Speleology Volume 43 ; 43 >
+    au < released ; 2002 ; 31 ; International Journal of Speleology Volume 31 ; 31 >
+    au < released ; 2003 ; 32 ; International Journal of Speleology Volume 32 ; 32 >
+    au < released ; 2004 ; 33 ; International Journal of Speleology Volume 33 ; 33 >
+    au < released ; 2005 ; 34 ; International Journal of Speleology Volume 34 ; 34 >
+    au < released ; 2006 ; 35 ; International Journal of Speleology Volume 35 ; 35 >
+    au < released ; 2007 ; 36 ; International Journal of Speleology Volume 36 ; 36 >
+    au < released ; 2008 ; 37 ; International Journal of Speleology Volume 37 ; 37 >
+    au < released ; 2009 ; 38 ; International Journal of Speleology Volume 38 ; 38 >
+    au < released ; 2010 ; 39 ; International Journal of Speleology Volume 39 ; 39 >
+    au < released ; 2011 ; 40 ; International Journal of Speleology Volume 40 ; 40 >
+    au < released ; 2012 ; 41 ; International Journal of Speleology Volume 41 ; 41 >
+    au < released ; 2013 ; 42 ; International Journal of Speleology Volume 42 ; 42 >
+    au < released ; 2014 ; 43 ; International Journal of Speleology Volume 43 ; 43 >
   
   }
 
@@ -109,8 +109,8 @@
     param[journal_abbr] = jacaps
     implicit < status ; year ; volume ; name ; param[volume] >
     
-    au < releasing ; 2008-2009 ; 1 ; Journal of African Conflicts and Peace Studies Volume 1 ; 1 >
-    au < releasing ; 2013 ; 2 ; Journal of African Conflicts and Peace Studies Volume 2 ; 2 >
+    au < released ; 2008-2009 ; 1 ; Journal of African Conflicts and Peace Studies Volume 1 ; 1 >
+    au < released ; 2013 ; 2 ; Journal of African Conflicts and Peace Studies Volume 2 ; 2 >
   
   }
 
@@ -127,23 +127,23 @@
     param[journal_abbr] = jea
     implicit < status ; year ; volume ; name ; param[volume] >
     
-    au < releasing ; 1997 ; 1 ; Journal of Ecological Anthropology Volume 1 ; 1 >
-    au < releasing ; 1998 ; 2 ; Journal of Ecological Anthropology Volume 2 ; 2 >
-    au < releasing ; 1999 ; 3 ; Journal of Ecological Anthropology Volume 3 ; 3 >
-    au < releasing ; 2000 ; 4 ; Journal of Ecological Anthropology Volume 4 ; 4 >
-    au < releasing ; 2001 ; 5 ; Journal of Ecological Anthropology Volume 5 ; 5 >
-    au < releasing ; 2002 ; 6 ; Journal of Ecological Anthropology Volume 6 ; 6 >
-    au < releasing ; 2003 ; 7 ; Journal of Ecological Anthropology Volume 7 ; 7 >
-    au < releasing ; 2004 ; 8 ; Journal of Ecological Anthropology Volume 8 ; 8 >
-    au < releasing ; 2005 ; 9 ; Journal of Ecological Anthropology Volume 9 ; 9 >
-    au < releasing ; 2006 ; 10 ; Journal of Ecological Anthropology Volume 10 ; 10 >
-    au < releasing ; 2007 ; 11 ; Journal of Ecological Anthropology Volume 11 ; 11 >
-    au < releasing ; 2008 ; 12 ; Journal of Ecological Anthropology Volume 12 ; 12 >
-    au < releasing ; 2009 ; 13 ; Journal of Ecological Anthropology Volume 13 ; 13 >
-    au < releasing ; 2010 ; 14 ; Journal of Ecological Anthropology Volume 14 ; 14 >
-    au < releasing ; 2012 ; 15 ; Journal of Ecological Anthropology Volume 15 ; 15 >
-    au < releasing ; 2013 ; 16 ; Journal of Ecological Anthropology Volume 16 ; 16 >
-    au < releasing ; 2014 ; 17 ; Journal of Ecological Anthropology Volume 17 ; 17 >
+    au < released ; 1997 ; 1 ; Journal of Ecological Anthropology Volume 1 ; 1 >
+    au < released ; 1998 ; 2 ; Journal of Ecological Anthropology Volume 2 ; 2 >
+    au < released ; 1999 ; 3 ; Journal of Ecological Anthropology Volume 3 ; 3 >
+    au < released ; 2000 ; 4 ; Journal of Ecological Anthropology Volume 4 ; 4 >
+    au < released ; 2001 ; 5 ; Journal of Ecological Anthropology Volume 5 ; 5 >
+    au < released ; 2002 ; 6 ; Journal of Ecological Anthropology Volume 6 ; 6 >
+    au < released ; 2003 ; 7 ; Journal of Ecological Anthropology Volume 7 ; 7 >
+    au < released ; 2004 ; 8 ; Journal of Ecological Anthropology Volume 8 ; 8 >
+    au < released ; 2005 ; 9 ; Journal of Ecological Anthropology Volume 9 ; 9 >
+    au < released ; 2006 ; 10 ; Journal of Ecological Anthropology Volume 10 ; 10 >
+    au < released ; 2007 ; 11 ; Journal of Ecological Anthropology Volume 11 ; 11 >
+    au < released ; 2008 ; 12 ; Journal of Ecological Anthropology Volume 12 ; 12 >
+    au < released ; 2009 ; 13 ; Journal of Ecological Anthropology Volume 13 ; 13 >
+    au < released ; 2010 ; 14 ; Journal of Ecological Anthropology Volume 14 ; 14 >
+    au < released ; 2012 ; 15 ; Journal of Ecological Anthropology Volume 15 ; 15 >
+    au < released ; 2013 ; 16 ; Journal of Ecological Anthropology Volume 16 ; 16 >
+    au < released ; 2014 ; 17 ; Journal of Ecological Anthropology Volume 17 ; 17 >
   
   }
 
@@ -160,13 +160,13 @@
     param[journal_abbr] = jss
     implicit < status ; year ; volume ; name ; param[volume] >
     
-    au < releasing ; 2008 ; 1 ; Journal of Strategic Security Volume 1 ; 1 >
-    au < releasing ; 2009 ; 2 ; Journal of Strategic Security Volume 2 ; 2 >
-    au < releasing ; 2010 ; 3 ; Journal of Strategic Security Volume 3 ; 3 >
-    au < releasing ; 2011 ; 4 ; Journal of Strategic Security Volume 4 ; 4 >
-    au < releasing ; 2012 ; 5 ; Journal of Strategic Security Volume 5 ; 5 >
-    au < releasing ; 2013 ; 6 ; Journal of Strategic Security Volume 6 ; 6 >
-    au < releasing ; 2014 ; 7 ; Journal of Strategic Security Volume 7 ; 7 >
+    au < released ; 2008 ; 1 ; Journal of Strategic Security Volume 1 ; 1 >
+    au < released ; 2009 ; 2 ; Journal of Strategic Security Volume 2 ; 2 >
+    au < released ; 2010 ; 3 ; Journal of Strategic Security Volume 3 ; 3 >
+    au < released ; 2011 ; 4 ; Journal of Strategic Security Volume 4 ; 4 >
+    au < released ; 2012 ; 5 ; Journal of Strategic Security Volume 5 ; 5 >
+    au < released ; 2013 ; 6 ; Journal of Strategic Security Volume 6 ; 6 >
+    au < released ; 2014 ; 7 ; Journal of Strategic Security Volume 7 ; 7 >
   
   }
 
@@ -182,13 +182,13 @@
     param[journal_abbr] = numeracy
     implicit < status ; year ; volume ; name ; param[volume] >
     
-    au < releasing ; 2008 ; 1 ; Numeracy Volume 1 ; 1 >
-    au < releasing ; 2009 ; 2 ; Numeracy Volume 2 ; 2 >
-    au < releasing ; 2010 ; 3 ; Numeracy Volume 3 ; 3 >
-    au < releasing ; 2011 ; 4 ; Numeracy Volume 4 ; 4 >
-    au < releasing ; 2012 ; 5 ; Numeracy Volume 5 ; 5 >
-    au < releasing ; 2013 ; 6 ; Numeracy Volume 6 ; 6 >
-    au < releasing ; 2014 ; 7 ; Numeracy Volume 7 ; 7 >
+    au < released ; 2008 ; 1 ; Numeracy Volume 1 ; 1 >
+    au < released ; 2009 ; 2 ; Numeracy Volume 2 ; 2 >
+    au < released ; 2010 ; 3 ; Numeracy Volume 3 ; 3 >
+    au < released ; 2011 ; 4 ; Numeracy Volume 4 ; 4 >
+    au < released ; 2012 ; 5 ; Numeracy Volume 5 ; 5 >
+    au < released ; 2013 ; 6 ; Numeracy Volume 6 ; 6 >
+    au < released ; 2014 ; 7 ; Numeracy Volume 7 ; 7 >
   
   }
 
@@ -204,9 +204,9 @@
     param[journal_abbr] = pcmr
     implicit < status ; year ; volume ; name ; param[volume] >
     
-    au < releasing ; 2008 ; 1 ; Peace and Conflict Management Review Volume 1 ; 1 >
-    au < releasing ; 2010-2013 ; 2 ; Peace and Conflict Management Review Volume 2 ; 2 >
-    au < releasing ; 2013 ; 3 ; Peace and Conflict Management Review Volume 3 ; 3 >
+    au < released ; 2008 ; 1 ; Peace and Conflict Management Review Volume 1 ; 1 >
+    au < released ; 2010-2013 ; 2 ; Peace and Conflict Management Review Volume 2 ; 2 >
+    au < released ; 2013 ; 3 ; Peace and Conflict Management Review Volume 3 ; 3 >
   
   }
 
@@ -223,10 +223,10 @@
     param[journal_abbr] = surcosur
     implicit < status ; year ; volume ; name ; param[volume] >
     
-    au < releasing ; 2010 ; 1 ; Revista Surco Sur Volume 1 ; 1 >
-    au < releasing ; 2011 ; 2 ; Revista Surco Sur Volume 2 ; 2 >
-    au < releasing ; 2013 ; 3 ; Revista Surco Sur Volume 3 ; 3 >
-    au < releasing ; 2014 ; 4 ; Revista Surco Sur Volume 4 ; 4 >
+    au < released ; 2010 ; 1 ; Revista Surco Sur Volume 1 ; 1 >
+    au < released ; 2011 ; 2 ; Revista Surco Sur Volume 2 ; 2 >
+    au < released ; 2013 ; 3 ; Revista Surco Sur Volume 3 ; 3 >
+    au < released ; 2014 ; 4 ; Revista Surco Sur Volume 4 ; 4 >
   
   }
 
@@ -241,7 +241,7 @@
     param[journal_abbr] = siv
     implicit < status ; year ; volume ; name ; param[volume] >
     
-    au < releasing ; 2013-2014 ; 1 ; Statistics in Volcanology Volume 1 ; 1 >
+    au < released ; 2013-2014 ; 1 ; Statistics in Volcanology Volume 1 ; 1 >
   
   }
 
@@ -289,8 +289,8 @@
     param[journal_abbr] = subsust
     implicit < status ; year ; volume ; name ; param[volume] >
     
-    au < releasing ; 2013 ; 1 ; Suburban Sustainability Volume 1 ; 1 >
-    au < releasing ; 2014 ; 2 ; Suburban Sustainability Volume 2 ; 2 >
+    au < released ; 2013 ; 1 ; Suburban Sustainability Volume 1 ; 1 >
+    au < released ; 2014 ; 2 ; Suburban Sustainability Volume 2 ; 2 >
   
   }
 
@@ -435,11 +435,11 @@
     param[journal_abbr] = ujmm
     implicit < status ; year ; volume ; name ; param[volume] >
     
-    au < releasing ; 2008-2009 ; 1 ; Undergraduate Journal of Mathematical Modeling: One + Two Volume 1 ; 1 >
-    au < releasing ; 2009-2010 ; 2 ; Undergraduate Journal of Mathematical Modeling: One + Two Volume 2 ; 2 >
-    au < releasing ; 2010-2011 ; 3 ; Undergraduate Journal of Mathematical Modeling: One + Two Volume 3 ; 3 >
-    au < releasing ; 2011-2012 ; 4 ; Undergraduate Journal of Mathematical Modeling: One + Two Volume 4 ; 4 >
-    au < releasing ; 2012-2013 ; 5 ; Undergraduate Journal of Mathematical Modeling: One + Two Volume 5 ; 5 >
+    au < released ; 2008-2009 ; 1 ; Undergraduate Journal of Mathematical Modeling: One + Two Volume 1 ; 1 >
+    au < released ; 2009-2010 ; 2 ; Undergraduate Journal of Mathematical Modeling: One + Two Volume 2 ; 2 >
+    au < released ; 2010-2011 ; 3 ; Undergraduate Journal of Mathematical Modeling: One + Two Volume 3 ; 3 >
+    au < released ; 2011-2012 ; 4 ; Undergraduate Journal of Mathematical Modeling: One + Two Volume 4 ; 4 >
+    au < released ; 2012-2013 ; 5 ; Undergraduate Journal of Mathematical Modeling: One + Two Volume 5 ; 5 >
   
   }
 
@@ -479,9 +479,9 @@
     param[collection] = tlar
     implicit < status ; name ; param[collection_heading] >
 
-    au < releasing ; University of South Florida Academic Resources Publications: Articles ; article >
-    au < releasing ; University of South Florida Academic Resources Publications: Poster Sessions ; poster >
-    au < releasing ; University of South Florida Academic Resources Publications: Presentations ; presentation >
+    au < released ; University of South Florida Academic Resources Publications: Articles ; article >
+    au < released ; University of South Florida Academic Resources Publications: Poster Sessions ; poster >
+    au < released ; University of South Florida Academic Resources Publications: Presentations ; presentation >
 
   }
 
@@ -497,28 +497,28 @@
     param[collection] = tlas_pub
     implicit < status ; year ; name ; param[collection_heading] ; attr[au_coverage_depth] >
     
-    au < releasing ; 1974 ; University of South Florida Academic Services Faculty and Staff Publications 1974 [abstracts only] ; 1974 ; abstracts >
-    au < releasing ; 1976 ; University of South Florida Academic Services Faculty and Staff Publications 1976 ; 1976 ; fulltext >
-    au < releasing ; 1978 ; University of South Florida Academic Services Faculty and Staff Publications 1978 [abstracts only] ; 1978 ; abstracts >
-    au < releasing ; 1994 ; University of South Florida Academic Services Faculty and Staff Publications 1994 [abstracts only] ; 1994 ; abstracts >
-    au < releasing ; 1997 ; University of South Florida Academic Services Faculty and Staff Publications 1997 [abstracts only] ; 1997 ; abstracts >
-    au < releasing ; 1998 ; University of South Florida Academic Services Faculty and Staff Publications 1998 [abstracts only] ; 1998 ; abstracts >
-    au < releasing ; 1999 ; University of South Florida Academic Services Faculty and Staff Publications 1999 [abstracts only] ; 1999 ; abstracts >
-    au < releasing ; 2000 ; University of South Florida Academic Services Faculty and Staff Publications 2000 [abstracts only] ; 2000 ; abstracts >
-    au < releasing ; 2001 ; University of South Florida Academic Services Faculty and Staff Publications 2001 [abstracts only] ; 2001 ; abstracts >
-    au < releasing ; 2002 ; University of South Florida Academic Services Faculty and Staff Publications 2002 [abstracts only] ; 2002 ; abstracts >
-    au < releasing ; 2003 ; University of South Florida Academic Services Faculty and Staff Publications 2003 [abstracts only] ; 2003 ; abstracts >
-    au < releasing ; 2004 ; University of South Florida Academic Services Faculty and Staff Publications 2004 [abstracts only] ; 2004 ; abstracts >
-    au < releasing ; 2005 ; University of South Florida Academic Services Faculty and Staff Publications 2005 [abstracts only] ; 2005 ; abstracts >
-    au < releasing ; 2006 ; University of South Florida Academic Services Faculty and Staff Publications 2006 [abstracts only] ; 2006 ; abstracts >
-    au < releasing ; 2007 ; University of South Florida Academic Services Faculty and Staff Publications 2007 ; 2007 ; fulltext >
-    au < releasing ; 2008 ; University of South Florida Academic Services Faculty and Staff Publications 2008 ; 2008 ; fulltext >
-    au < releasing ; 2009 ; University of South Florida Academic Services Faculty and Staff Publications 2009 ; 2009 ; fulltext >
-    au < releasing ; 2010 ; University of South Florida Academic Services Faculty and Staff Publications 2010 ; 2010 ; fulltext >
-    au < releasing ; 2011 ; University of South Florida Academic Services Faculty and Staff Publications 2011 ; 2011 ; fulltext >
-    au < releasing ; 2012 ; University of South Florida Academic Services Faculty and Staff Publications 2012 ; 2012 ; fulltext >
-    au < releasing ; 2013 ; University of South Florida Academic Services Faculty and Staff Publications 2013 ; 2013 ; fulltext >
-    au < releasing ; 2014 ; University of South Florida Academic Services Faculty and Staff Publications 2014 [abstracts only] ; 2014 ; abstracts >
+    au < released ; 1974 ; University of South Florida Academic Services Faculty and Staff Publications 1974 [abstracts only] ; 1974 ; abstracts >
+    au < released ; 1976 ; University of South Florida Academic Services Faculty and Staff Publications 1976 ; 1976 ; fulltext >
+    au < released ; 1978 ; University of South Florida Academic Services Faculty and Staff Publications 1978 [abstracts only] ; 1978 ; abstracts >
+    au < released ; 1994 ; University of South Florida Academic Services Faculty and Staff Publications 1994 [abstracts only] ; 1994 ; abstracts >
+    au < released ; 1997 ; University of South Florida Academic Services Faculty and Staff Publications 1997 [abstracts only] ; 1997 ; abstracts >
+    au < released ; 1998 ; University of South Florida Academic Services Faculty and Staff Publications 1998 [abstracts only] ; 1998 ; abstracts >
+    au < released ; 1999 ; University of South Florida Academic Services Faculty and Staff Publications 1999 [abstracts only] ; 1999 ; abstracts >
+    au < released ; 2000 ; University of South Florida Academic Services Faculty and Staff Publications 2000 [abstracts only] ; 2000 ; abstracts >
+    au < released ; 2001 ; University of South Florida Academic Services Faculty and Staff Publications 2001 [abstracts only] ; 2001 ; abstracts >
+    au < released ; 2002 ; University of South Florida Academic Services Faculty and Staff Publications 2002 [abstracts only] ; 2002 ; abstracts >
+    au < released ; 2003 ; University of South Florida Academic Services Faculty and Staff Publications 2003 [abstracts only] ; 2003 ; abstracts >
+    au < released ; 2004 ; University of South Florida Academic Services Faculty and Staff Publications 2004 [abstracts only] ; 2004 ; abstracts >
+    au < released ; 2005 ; University of South Florida Academic Services Faculty and Staff Publications 2005 [abstracts only] ; 2005 ; abstracts >
+    au < released ; 2006 ; University of South Florida Academic Services Faculty and Staff Publications 2006 [abstracts only] ; 2006 ; abstracts >
+    au < released ; 2007 ; University of South Florida Academic Services Faculty and Staff Publications 2007 ; 2007 ; fulltext >
+    au < released ; 2008 ; University of South Florida Academic Services Faculty and Staff Publications 2008 ; 2008 ; fulltext >
+    au < released ; 2009 ; University of South Florida Academic Services Faculty and Staff Publications 2009 ; 2009 ; fulltext >
+    au < released ; 2010 ; University of South Florida Academic Services Faculty and Staff Publications 2010 ; 2010 ; fulltext >
+    au < released ; 2011 ; University of South Florida Academic Services Faculty and Staff Publications 2011 ; 2011 ; fulltext >
+    au < released ; 2012 ; University of South Florida Academic Services Faculty and Staff Publications 2012 ; 2012 ; fulltext >
+    au < released ; 2013 ; University of South Florida Academic Services Faculty and Staff Publications 2013 ; 2013 ; fulltext >
+    au < released ; 2014 ; University of South Florida Academic Services Faculty and Staff Publications 2014 [abstracts only] ; 2014 ; abstracts >
 
   }
 
@@ -619,9 +619,9 @@
 
     attr[au_coverage_depth] = abstracts
 
-    au < releasing ; 2012 ; University of South Florida Catalyst 2012 [abstracts only] ; 2012 >
-    au < releasing ; 2013 ; University of South Florida Catalyst 2013 [abstracts only] ; 2013 >
-    au < releasing ; 2014 ; University of South Florida Catalyst 2014 [abstracts only] ; 2014 >
+    au < released ; 2012 ; University of South Florida Catalyst 2012 [abstracts only] ; 2012 >
+    au < released ; 2013 ; University of South Florida Catalyst 2013 [abstracts only] ; 2013 >
+    au < released ; 2014 ; University of South Florida Catalyst 2014 [abstracts only] ; 2014 >
 
   }
 
@@ -877,49 +877,49 @@
     param[collection] = spe_facpub
     implicit < status ; year ; name ; param[collection_heading] ; attr[au_coverage_depth] >
 
-    au < releasing ; 1905 ; University of South Florida Communication Faculty Publications 1905 [abstracts only] ; 1905 ; abstracts >
-    au < releasing ; 1972 ; University of South Florida Communication Faculty Publications 1972 [abstracts only] ; 1972 ; abstracts >
-    au < releasing ; 1973 ; University of South Florida Communication Faculty Publications 1973 [abstracts only] ; 1973 ; abstracts >
-    au < releasing ; 1974 ; University of South Florida Communication Faculty Publications 1974 [abstracts only] ; 1974 ; abstracts >
-    au < releasing ; 1975 ; University of South Florida Communication Faculty Publications 1975 [abstracts only] ; 1975 ; abstracts >
-    au < releasing ; 1976 ; University of South Florida Communication Faculty Publications 1976 [abstracts only] ; 1976 ; abstracts >
-    au < releasing ; 1977 ; University of South Florida Communication Faculty Publications 1977 [abstracts only] ; 1977 ; abstracts >
-    au < releasing ; 1978 ; University of South Florida Communication Faculty Publications 1978 [abstracts only] ; 1978 ; abstracts >
-    au < releasing ; 1979 ; University of South Florida Communication Faculty Publications 1979 [abstracts only] ; 1979 ; abstracts >
-    au < releasing ; 1980 ; University of South Florida Communication Faculty Publications 1980 [abstracts only] ; 1980 ; abstracts >
-    au < releasing ; 1981 ; University of South Florida Communication Faculty Publications 1981 [abstracts only] ; 1981 ; abstracts >
-    au < releasing ; 1982 ; University of South Florida Communication Faculty Publications 1982 [abstracts only] ; 1982 ; abstracts >
-    au < releasing ; 1983 ; University of South Florida Communication Faculty Publications 1983 [abstracts only] ; 1983 ; abstracts >
-    au < releasing ; 1984 ; University of South Florida Communication Faculty Publications 1984 [abstracts only] ; 1984 ; abstracts >
-    au < releasing ; 1985 ; University of South Florida Communication Faculty Publications 1985 [abstracts only] ; 1985 ; abstracts >
-    au < releasing ; 1986 ; University of South Florida Communication Faculty Publications 1986 [abstracts only] ; 1986 ; abstracts >
-    au < releasing ; 1987 ; University of South Florida Communication Faculty Publications 1987 [abstracts only] ; 1987 ; abstracts >
-    au < releasing ; 1988 ; University of South Florida Communication Faculty Publications 1988 [abstracts only] ; 1988 ; abstracts >
-    au < releasing ; 1989 ; University of South Florida Communication Faculty Publications 1989 [abstracts only] ; 1989 ; abstracts >
-    au < releasing ; 1990 ; University of South Florida Communication Faculty Publications 1990 [abstracts only] ; 1990 ; abstracts >
-    au < releasing ; 1991 ; University of South Florida Communication Faculty Publications 1991 [abstracts only] ; 1991 ; abstracts >
-    au < releasing ; 1992 ; University of South Florida Communication Faculty Publications 1992 [abstracts only] ; 1992 ; abstracts >
-    au < releasing ; 1993 ; University of South Florida Communication Faculty Publications 1993 [abstracts only] ; 1993 ; abstracts >
-    au < releasing ; 1994 ; University of South Florida Communication Faculty Publications 1994 [abstracts only] ; 1994 ; abstracts >
-    au < releasing ; 1995 ; University of South Florida Communication Faculty Publications 1995 [abstracts only] ; 1995 ; abstracts >
-    au < releasing ; 1996 ; University of South Florida Communication Faculty Publications 1996 [abstracts only] ; 1996 ; abstracts >
-    au < releasing ; 1997 ; University of South Florida Communication Faculty Publications 1997 ; 1997 ; fulltext >
-    au < releasing ; 1998 ; University of South Florida Communication Faculty Publications 1998 [abstracts only] ; 1998 ; abstracts >
-    au < releasing ; 1999 ; University of South Florida Communication Faculty Publications 1999 [abstracts only] ; 1999 ; abstracts >
-    au < releasing ; 2000 ; University of South Florida Communication Faculty Publications 2000 ; 2000 ; fulltext >
-    au < releasing ; 2001 ; University of South Florida Communication Faculty Publications 2001 ; 2001 ; fulltext >
-    au < releasing ; 2002 ; University of South Florida Communication Faculty Publications 2002 ; 2002 ; fulltext >
-    au < releasing ; 2003 ; University of South Florida Communication Faculty Publications 2003 [abstracts only] ; 2003 ; abstracts >
-    au < releasing ; 2004 ; University of South Florida Communication Faculty Publications 2004 [abstracts only] ; 2004 ; abstracts >
-    au < releasing ; 2005 ; University of South Florida Communication Faculty Publications 2005 [abstracts only] ; 2005 ; abstracts >
-    au < releasing ; 2006 ; University of South Florida Communication Faculty Publications 2006 [abstracts only] ; 2006 ; abstracts >
-    au < releasing ; 2007 ; University of South Florida Communication Faculty Publications 2007 [abstracts only] ; 2007 ; abstracts >
-    au < releasing ; 2008 ; University of South Florida Communication Faculty Publications 2008 [abstracts only] ; 2008 ; abstracts >
-    au < releasing ; 2009 ; University of South Florida Communication Faculty Publications 2009 ; 2009 ; fulltext >
-    au < releasing ; 2010 ; University of South Florida Communication Faculty Publications 2010 [abstracts only] ; 2010 ; abstracts >
-    au < releasing ; 2011 ; University of South Florida Communication Faculty Publications 2011 [abstracts only] ; 2011 ; abstracts >
-    au < releasing ; 2012 ; University of South Florida Communication Faculty Publications 2012 ; 2012 ; fulltext >
-    au < releasing ; 2013 ; University of South Florida Communication Faculty Publications 2013 [abstracts only] ; 2013 ; abstracts >
+    au < released ; 1905 ; University of South Florida Communication Faculty Publications 1905 [abstracts only] ; 1905 ; abstracts >
+    au < released ; 1972 ; University of South Florida Communication Faculty Publications 1972 [abstracts only] ; 1972 ; abstracts >
+    au < released ; 1973 ; University of South Florida Communication Faculty Publications 1973 [abstracts only] ; 1973 ; abstracts >
+    au < released ; 1974 ; University of South Florida Communication Faculty Publications 1974 [abstracts only] ; 1974 ; abstracts >
+    au < released ; 1975 ; University of South Florida Communication Faculty Publications 1975 [abstracts only] ; 1975 ; abstracts >
+    au < released ; 1976 ; University of South Florida Communication Faculty Publications 1976 [abstracts only] ; 1976 ; abstracts >
+    au < released ; 1977 ; University of South Florida Communication Faculty Publications 1977 [abstracts only] ; 1977 ; abstracts >
+    au < released ; 1978 ; University of South Florida Communication Faculty Publications 1978 [abstracts only] ; 1978 ; abstracts >
+    au < released ; 1979 ; University of South Florida Communication Faculty Publications 1979 [abstracts only] ; 1979 ; abstracts >
+    au < released ; 1980 ; University of South Florida Communication Faculty Publications 1980 [abstracts only] ; 1980 ; abstracts >
+    au < released ; 1981 ; University of South Florida Communication Faculty Publications 1981 [abstracts only] ; 1981 ; abstracts >
+    au < released ; 1982 ; University of South Florida Communication Faculty Publications 1982 [abstracts only] ; 1982 ; abstracts >
+    au < released ; 1983 ; University of South Florida Communication Faculty Publications 1983 [abstracts only] ; 1983 ; abstracts >
+    au < released ; 1984 ; University of South Florida Communication Faculty Publications 1984 [abstracts only] ; 1984 ; abstracts >
+    au < released ; 1985 ; University of South Florida Communication Faculty Publications 1985 [abstracts only] ; 1985 ; abstracts >
+    au < released ; 1986 ; University of South Florida Communication Faculty Publications 1986 [abstracts only] ; 1986 ; abstracts >
+    au < released ; 1987 ; University of South Florida Communication Faculty Publications 1987 [abstracts only] ; 1987 ; abstracts >
+    au < released ; 1988 ; University of South Florida Communication Faculty Publications 1988 [abstracts only] ; 1988 ; abstracts >
+    au < released ; 1989 ; University of South Florida Communication Faculty Publications 1989 [abstracts only] ; 1989 ; abstracts >
+    au < released ; 1990 ; University of South Florida Communication Faculty Publications 1990 [abstracts only] ; 1990 ; abstracts >
+    au < released ; 1991 ; University of South Florida Communication Faculty Publications 1991 [abstracts only] ; 1991 ; abstracts >
+    au < released ; 1992 ; University of South Florida Communication Faculty Publications 1992 [abstracts only] ; 1992 ; abstracts >
+    au < released ; 1993 ; University of South Florida Communication Faculty Publications 1993 [abstracts only] ; 1993 ; abstracts >
+    au < released ; 1994 ; University of South Florida Communication Faculty Publications 1994 [abstracts only] ; 1994 ; abstracts >
+    au < released ; 1995 ; University of South Florida Communication Faculty Publications 1995 [abstracts only] ; 1995 ; abstracts >
+    au < released ; 1996 ; University of South Florida Communication Faculty Publications 1996 [abstracts only] ; 1996 ; abstracts >
+    au < released ; 1997 ; University of South Florida Communication Faculty Publications 1997 ; 1997 ; fulltext >
+    au < released ; 1998 ; University of South Florida Communication Faculty Publications 1998 [abstracts only] ; 1998 ; abstracts >
+    au < released ; 1999 ; University of South Florida Communication Faculty Publications 1999 [abstracts only] ; 1999 ; abstracts >
+    au < released ; 2000 ; University of South Florida Communication Faculty Publications 2000 ; 2000 ; fulltext >
+    au < released ; 2001 ; University of South Florida Communication Faculty Publications 2001 ; 2001 ; fulltext >
+    au < released ; 2002 ; University of South Florida Communication Faculty Publications 2002 ; 2002 ; fulltext >
+    au < released ; 2003 ; University of South Florida Communication Faculty Publications 2003 [abstracts only] ; 2003 ; abstracts >
+    au < released ; 2004 ; University of South Florida Communication Faculty Publications 2004 [abstracts only] ; 2004 ; abstracts >
+    au < released ; 2005 ; University of South Florida Communication Faculty Publications 2005 [abstracts only] ; 2005 ; abstracts >
+    au < released ; 2006 ; University of South Florida Communication Faculty Publications 2006 [abstracts only] ; 2006 ; abstracts >
+    au < released ; 2007 ; University of South Florida Communication Faculty Publications 2007 [abstracts only] ; 2007 ; abstracts >
+    au < released ; 2008 ; University of South Florida Communication Faculty Publications 2008 [abstracts only] ; 2008 ; abstracts >
+    au < released ; 2009 ; University of South Florida Communication Faculty Publications 2009 ; 2009 ; fulltext >
+    au < released ; 2010 ; University of South Florida Communication Faculty Publications 2010 [abstracts only] ; 2010 ; abstracts >
+    au < released ; 2011 ; University of South Florida Communication Faculty Publications 2011 [abstracts only] ; 2011 ; abstracts >
+    au < released ; 2012 ; University of South Florida Communication Faculty Publications 2012 ; 2012 ; fulltext >
+    au < released ; 2013 ; University of South Florida Communication Faculty Publications 2013 [abstracts only] ; 2013 ; abstracts >
 
   }
 
@@ -1044,7 +1044,7 @@
     param[collection] = tles_pub
     implicit < status ; year ; name ; param[collection_heading] >
 
-    au < releasing ; 2014 ; University of South Florida Environmental Sustainability Books 2014 ; 2014 >
+    au < released ; 2014 ; University of South Florida Environmental Sustainability Books 2014 ; 2014 >
 
   }
 
@@ -1060,7 +1060,7 @@
     param[collection] = tles_gallery
     implicit < status ; year ; name ; param[collection_heading] >
 
-    au < releasing ; 2011 ; University of South Florida Environmental Sustainability Gallery 2011 ; 2011 >
+    au < released ; 2011 ; University of South Florida Environmental Sustainability Gallery 2011 ; 2011 >
 
   }
 
@@ -1076,8 +1076,8 @@
     param[collection] = tles_oh
     implicit < status ; year ; name ; param[collection_heading] >
 
-    au < releasing ; 2007 ; University of South Florida Environmental Sustainability Oral Histories 2007 ; 2007 >
-    au < releasing ; 2008 ; University of South Florida Environmental Sustainability Oral Histories 2008 ; 2008 >
+    au < released ; 2007 ; University of South Florida Environmental Sustainability Oral Histories 2007 ; 2007 >
+    au < released ; 2008 ; University of South Florida Environmental Sustainability Oral Histories 2008 ; 2008 >
 
   }
 
@@ -1162,8 +1162,8 @@
     
     attr[au_coverage_depth] = abstracts
 
-    au < releasing ; 2011 ; University of South Florida GIS Map Service Links 2011 [abstracts only] ; 2011 >
-    au < releasing ; 2012 ; University of South Florida GIS Map Service Links 2012 [abstracts only] ; 2012 >
+    au < released ; 2011 ; University of South Florida GIS Map Service Links 2011 [abstracts only] ; 2011 >
+    au < released ; 2012 ; University of South Florida GIS Map Service Links 2012 [abstracts only] ; 2012 >
 
   }
 
@@ -1242,8 +1242,8 @@
     param[collection] = honors_gast
     implicit < status ; year ; name ; param[collection_heading] >  
 
-    au < releasing ; 2008 ; University of South Florida Grace Allen Scholars Theses 2008 ; 2008 >
-    au < releasing ; 2009 ; University of South Florida Grace Allen Scholars Theses 2009 ; 2009 >
+    au < released ; 2008 ; University of South Florida Grace Allen Scholars Theses 2008 ; 2008 >
+    au < released ; 2009 ; University of South Florida Grace Allen Scholars Theses 2009 ; 2009 >
 
   }
 
@@ -1291,11 +1291,11 @@
     param[collection] = las_hhfc
     implicit < status ; year ; name ; param[collection_theme] >  
 
-    au < releasing ; 2012 ; University of South Florida Hispanic Heritage of Florida Conference 2012: Community Events ; community_events >
-    au < releasing ; 2012 ; University of South Florida Hispanic Heritage of Florida Conference 2012: K-12 Curriculum Materials ; K-12_Curriculum_Materials >
-    au < releasing ; 2012 ; University of South Florida Hispanic Heritage of Florida Conference 2012: Program ; conference_program >
-    au < releasing ; 2012 ; University of South Florida Hispanic Heritage of Florida Conference 2012: Scholarly Contribution ; Scholarly_Contribution >
-    au < releasing ; 2012 ; University of South Florida Hispanic Heritage of Florida Conference 2012: Teacher Workshop ; Workshop >
+    au < released ; 2012 ; University of South Florida Hispanic Heritage of Florida Conference 2012: Community Events ; community_events >
+    au < released ; 2012 ; University of South Florida Hispanic Heritage of Florida Conference 2012: K-12 Curriculum Materials ; K-12_Curriculum_Materials >
+    au < released ; 2012 ; University of South Florida Hispanic Heritage of Florida Conference 2012: Program ; conference_program >
+    au < released ; 2012 ; University of South Florida Hispanic Heritage of Florida Conference 2012: Scholarly Contribution ; Scholarly_Contribution >
+    au < released ; 2012 ; University of South Florida Hispanic Heritage of Florida Conference 2012: Teacher Workshop ; Workshop >
 
   }
 
@@ -1313,7 +1313,7 @@
 
     attr[au_coverage_depth] = abstracts
 
-    au < releasing ; 2013 ; University of South Florida History Faculty Publications 2013 [abstracts only] ; 2013 >
+    au < released ; 2013 ; University of South Florida History Faculty Publications 2013 [abstracts only] ; 2013 >
 
   }
 
@@ -1329,9 +1329,9 @@
     param[collection] = usf_gallery
     implicit < status ; year ; name ; param[collection_heading] >
 
-    au < releasing ; 2011 ; University of South Florida Homepage Gallery 2011 ; 2011 >
-    au < releasing ; 2012 ; University of South Florida Homepage Gallery 2012 ; 2012 >
-    au < releasing ; 2014 ; University of South Florida Homepage Gallery 2014 ; 2014 >
+    au < released ; 2011 ; University of South Florida Homepage Gallery 2011 ; 2011 >
+    au < released ; 2012 ; University of South Florida Homepage Gallery 2012 ; 2012 >
+    au < released ; 2014 ; University of South Florida Homepage Gallery 2014 ; 2014 >
 
   }
 
@@ -1416,8 +1416,8 @@
     param[collection] = iwic
     implicit < status ; year ; name ; param[collection_theme] >  
 
-    au < releasing ; 2014 ; University of South Florida International Workshop on Ice Caves: Proceedings ; Proceedings >
-    au < releasing ; 2014 ; University of South Florida International Workshop on Ice Caves: Program ; Program >
+    au < released ; 2014 ; University of South Florida International Workshop on Ice Caves: Proceedings ; Proceedings >
+    au < released ; 2014 ; University of South Florida International Workshop on Ice Caves: Program ; Program >
 
   }
 
@@ -1433,12 +1433,12 @@
     param[collection] = into_facpub
     implicit < status ; year ; name ; param[collection_heading] ; attr[au_coverage_depth] >  
 
-    au < releasing ; 2007 ; University of South Florida INTO Faculty and Staff Publications 2007 [abstracts only] ; 2007 ; abstracts >
-    au < releasing ; 2008 ; University of South Florida INTO Faculty and Staff Publications 2008 ; 2008 ; fulltext >
-    au < releasing ; 2010 ; University of South Florida INTO Faculty and Staff Publications 2010 [abstracts only] ; 2010 ; abstracts >
-    au < releasing ; 2011 ; University of South Florida INTO Faculty and Staff Publications 2011 ; 2011 ; fulltext >
-    au < releasing ; 2012 ; University of South Florida INTO Faculty and Staff Publications 2012 ; 2012 ; fulltext >
-    au < releasing ; 2013 ; University of South Florida INTO Faculty and Staff Publications 2013 ; 2013 ; fulltext >
+    au < released ; 2007 ; University of South Florida INTO Faculty and Staff Publications 2007 [abstracts only] ; 2007 ; abstracts >
+    au < released ; 2008 ; University of South Florida INTO Faculty and Staff Publications 2008 ; 2008 ; fulltext >
+    au < released ; 2010 ; University of South Florida INTO Faculty and Staff Publications 2010 [abstracts only] ; 2010 ; abstracts >
+    au < released ; 2011 ; University of South Florida INTO Faculty and Staff Publications 2011 ; 2011 ; fulltext >
+    au < released ; 2012 ; University of South Florida INTO Faculty and Staff Publications 2012 ; 2012 ; fulltext >
+    au < released ; 2013 ; University of South Florida INTO Faculty and Staff Publications 2013 ; 2013 ; fulltext >
 
   }
 
