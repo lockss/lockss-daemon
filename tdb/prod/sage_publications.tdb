@@ -655,7 +655,8 @@
         au < released ; 2012 ; Adult Learning Volume 23 ; 23 >
         au < manifest ; 2013 ; Adult Learning Volume 24 ; 24 >
         au < manifest ; 2014 ; Adult Learning Volume 25 ; 25 >
-      
+        au < manifest ; 2015 ; Adult Learning Volume 26 ; 26 >
+
       }
       
     }  
@@ -3137,6 +3138,7 @@
       param[base_url] = http://aan.sagepub.com/
       implicit < status ; year ; name ; param[volume_name] >
 
+      au < exists ; 2003 ; Asian Cardiovascular and Thoracic Annals Volume 11 ; 11 >
       au < exists ; 2004 ; Asian Cardiovascular and Thoracic Annals Volume 12 ; 12 >
       au < exists ; 2005 ; Asian Cardiovascular and Thoracic Annals Volume 13 ; 13 >
       au < exists ; 2006 ; Asian Cardiovascular and Thoracic Annals Volume 14 ; 14 >
@@ -3548,7 +3550,8 @@
         au < released ; 2012 ; Australian & New Zealand Journal of Psychiatry Volume 46 ; 46 >
         au < manifest ; 2013 ; Australian & New Zealand Journal of Psychiatry Volume 47 ; 47 >
         au < manifest ; 2014 ; Australian & New Zealand Journal of Psychiatry Volume 48 ; 48 >
-      
+        au < manifest ; 2015 ; Australian & New Zealand Journal of Psychiatry Volume 49 ; 49 >
+
       }
       
     }
@@ -4768,7 +4771,8 @@
         au < released ; 2012 ; Business & Society Volume 51 ; 51 >
         au < manifest ; 2013 ; Business & Society Volume 52 ; 52 >
         au < manifest ; 2014 ; Business & Society Volume 53 ; 53 >
-        
+        au < manifest ; 2015 ; Business & Society Volume 54 ; 54 >
+
       }
 
     }
@@ -5682,6 +5686,7 @@
     au < exists ; 2011-2012 ; Christianity & Literature Volume 61 ; 61 >
     au < exists ; 2012-2013 ; Christianity & Literature Volume 62 ; 62 >
     au < manifest ; 2013-2014 ; Christianity & Literature Volume 63 ; 63 >
+    au < manifest ; 2014-2015 ; Christianity & Literature Volume 64 ; 64 >
 
   }
 
@@ -15909,6 +15914,8 @@
         au < exists ; 2012 ; ILRReview: Industrial & Labor Relations Review Volume 65 ; 65 >
         au < exists ; 2013 ; ILRReview: Industrial & Labor Relations Review Volume 66 ; 66 >
         au < manifest ; 2014 ; ILRReview: Industrial & Labor Relations Review Volume 67 ; 67 >
+        au < manifest ; 2015 ; ILRReview: Industrial & Labor Relations Review Volume 68 ; 68 >
+
     }
 
     {
@@ -17893,7 +17900,8 @@
         au < released ; 2012 ; International Review of Victimology Volume 18 ; 18 >
         au < manifest ; 2013 ; International Review of Victimology Volume 19 ; 19 >
         au < manifest ; 2014 ; International Review of Victimology Volume 20 ; 20 >
-  
+        au < manifest ; 2015 ; International Review of Victimology Volume 21 ; 21 >
+
       }
   
     }
@@ -23037,7 +23045,8 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2012 ; Journal of Feline Medicine and Surgery Volume 14 ; 14 >
         au < manifest ; 2013 ; Journal of Feline Medicine and Surgery Volume 15 ; 15 >
         au < manifest ; 2014 ; Journal of Feline Medicine and Surgery Volume 16 ; 16 >
-  
+        au < manifest ; 2015 ; Journal of Feline Medicine and Surgery Volume 17 ; 17 >
+
       }
   
     }
@@ -43325,7 +43334,8 @@ comment[mpj] = now published by Brill
         au < released ; 2012 ; Interpretation: A Journal of Bible and Theology Volume 66 ; 66 >
         au < manifest ; 2013 ; Interpretation: A Journal of Bible and Theology Volume 67 ; 67 >
         au < manifest ; 2014 ; Interpretation: A Journal of Bible and Theology Volume 68 ; 68 >
-  
+        au < manifest ; 2015 ; Interpretation: A Journal of Bible and Theology Volume 69 ; 69 >
+
       }
   
     }
@@ -45364,7 +45374,8 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2012 ; Acta Radiologica Volume 53 ; 53 >
         au < manifest ; 2013 ; Acta Radiologica Volume 54 ; 54 >
         au < manifest ; 2014 ; Acta Radiologica Volume 55 ; 55 >
-        
+        au < manifest ; 2015 ; Acta Radiologica Volume 56 ; 56 >
+
       }
   
     }    
@@ -46420,7 +46431,8 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; released ; 2012 ; International Journal of STD & AIDS Volume 23 ; 23 >
         au < HighWirePressH20Plugin ; manifest ; 2013 ; International Journal of STD & AIDS Volume 24 ; 24 >
         au < HighWirePressH20Plugin ; manifest ; 2014 ; International Journal of STD & AIDS Volume 25 ; 25 >
-  
+        au < HighWirePressH20Plugin ; manifest ; 2015 ; International Journal of STD & AIDS Volume 26 ; 26 >
+
       }
   
     }
