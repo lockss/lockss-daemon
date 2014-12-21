@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.94 2014-10-22 19:39:37 thib_gc Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.94.2.1 2014-12-21 14:30:00 dshr Exp $
  */
 
 /*
@@ -404,6 +404,15 @@ public class LockssRepositoryImpl
    * used in iteration over AUs.
    */
   public boolean hasSuspectUrlVersions(ArchivalUnit au) {
+    // XXX DSHR For testing - should fix test instead
+    if (repoMgr == null) {
+      return false;
+    }
+    UniqueRefLruCache cache = repoMgr.getSuspectVersionsCache();
+    if (cache == null) {
+      return false;
+    }
+    // XXX end DSHR
     AuSuspectUrlVersions asuv =
       (AuSuspectUrlVersions)repoMgr.getSuspectVersionsCache().get(au);
     if (asuv != null) {
