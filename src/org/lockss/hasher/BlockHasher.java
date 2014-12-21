@@ -1,5 +1,5 @@
 /*
- * $Id: BlockHasher.java,v 1.37 2014-11-24 10:18:10 tlipkis Exp $
+ * $Id: BlockHasher.java,v 1.38 2014-12-21 14:22:19 dshr Exp $
  */
 
 /*
@@ -708,7 +708,14 @@ public class BlockHasher extends GenericHasher {
     void blockDone(HashBlock hblock);
   }
 
-
-
+  /* XXX DSHR - this should probably be temporary */
+  public static Boolean isConfiguredForLocalPolls() {
+    Boolean ret = true;
+    if (!CurrentConfig.getBooleanParam(PARAM_ENABLE_LOCAL_HASH, false) ||
+	CurrentConfig.getParam(PARAM_LOCAL_HASH_ALGORITHM, null) == null) {
+      ret = false;
+    }
+    return ret;
+  }
 
 }

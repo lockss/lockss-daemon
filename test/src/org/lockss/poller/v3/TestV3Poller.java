@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.67 2014-12-10 22:08:24 dshr Exp $
+ * $Id: TestV3Poller.java,v 1.68 2014-12-21 14:22:20 dshr Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.config.ConfigManager;
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.ShouldNotHappenException;
 import org.lockss.plugin.*;
+import org.lockss.plugin.base.DefaultUrlCacher;
 import org.lockss.protocol.*;
 import org.lockss.util.*;
 import org.lockss.poller.*;
@@ -730,6 +731,13 @@ public class TestV3Poller extends LockssTestCase {
 				  "3",
 				  PollManager.PARAM_MIN_AGREE_PEERS_LAST_POR_POLL,
 				  "2");
+    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_ENABLE_LOCAL_HASH,
+				  "true",
+				  BlockHasher.PARAM_LOCAL_HASH_ALGORITHM,
+				  BlockHasher.DEFAULT_LOCAL_HASH_ALGORITHM,
+				  DefaultUrlCacher.PARAM_CHECKSUM_ALGORITHM,
+				  BlockHasher.DEFAULT_LOCAL_HASH_ALGORITHM,
+				  V3Poller.PARAM_V3_MODULUS, "2");
     TimeBase.setSimulated(1000L);
     V3Poller v3Poller = makeV3Poller("testing poll key");
     ArchivalUnit au = v3Poller.getAu();

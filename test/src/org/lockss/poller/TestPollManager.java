@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.114 2014-12-10 22:08:24 dshr Exp $
+ * $Id: TestPollManager.java,v 1.115 2014-12-21 14:22:20 dshr Exp $
  */
 
 /*
@@ -66,6 +66,7 @@ public class TestPollManager extends LockssTestCase {
 
   protected static MockArchivalUnit testau;
   private MockLockssDaemon theDaemon;
+  private RepositoryManager repoMgr;
   private Plugin plugin;
 
 
@@ -747,6 +748,8 @@ public class TestPollManager extends LockssTestCase {
       (MockArchivalUnit)PollTestPlugin.PTArchivalUnit.createFromListOfRootUrls(rooturls);
     testau.setPlugin(new MockPlugin(theDaemon));
     PluginTestUtil.registerArchivalUnit(testau);
+
+    repoMgr = theDaemon.getRepositoryManager();
 
     Properties p = new Properties();
     addRequiredConfig(p);

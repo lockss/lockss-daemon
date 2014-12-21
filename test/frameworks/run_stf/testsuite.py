@@ -3,7 +3,7 @@
 build frameworks.  If desired, optional parameters may also be set to change
 the default behavior.  See testsuite.props for details."""
 
-# $Id: testsuite.py,v 1.79 2014-12-18 21:47:21 dshr Exp $
+# $Id: testsuite.py,v 1.80 2014-12-21 14:22:19 dshr Exp $
 
 __copyright__ = '''\
 Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
@@ -254,6 +254,7 @@ class V3TestCases( LockssTestCases ):
 
     def _verify_repair( self, nodes ):
         for node in nodes:
+            log.debug('super verify repair of node %s' % node )
             self.assert_( self._content_matches( node ), 'File not repaired: %s' % node.url )
 
     def _verify_poll_results( self ):
@@ -303,6 +304,10 @@ class V3TestCases( LockssTestCases ):
                           'org.lockss.dbManager.enabled': False,
                           'org.lockss.poll.v3.enableV3Poller': False,
                           'org.lockss.poll.v3.enableV3Voter': True,
+                          'org.lockss.poll.v3.enableLocalPolls': 'true',
+                          'org.lockss.poll.v3.enablePoPPolls': 'true',
+                          'org.lockss.poll.v3.allLocalPolls': 'false',
+                          'org.lockss.poll.v3.allPoPPolls': 'false',
 			  'org.lockss.poll.v3.minTimeBetweenAnyPoll': '6s',
                           'org.lockss.poll.pollStarterInitialDelay': '30s'}
             extraConf.update( self.local_configuration )
@@ -325,14 +330,22 @@ class V3TestCases( LockssTestCases ):
         log.info( 'Successfully called a V3 poll' )
         self._check_v3_result( nodes )
 
-    def _check_v3_result( self, nodes ):
+    def _check_v3_result( self, nodes, variant = u'Proof of Retrievability'):
         log.info( 'Waiting for V3 repair...' )
         self._await_repair( nodes )
         self._verify_repair( nodes )
+        self._verify_poll_type( variant )
         self._verify_poll_results()
         self._verify_voter_agreements()
         self._verify_voters_counts()
         log.info( 'AU successfully repaired' )
+
+    def _verify_poll_type( self, variant ):
+        self.poll_key = self.victim.getV3PollKey( self.AU )
+        log.debug( "Victim's poll key: " + self.poll_key )
+        summary = self.victim.getPollSummaryFromKey( self.poll_key )
+        self.assertEqual(summary[ 'Type' ], variant )
+
 
 class FormatExpectedAgreementTestCase( V3TestCases ):
     """Test the expected agreement format."""
@@ -362,6 +375,64 @@ class SimpleV3TestCase( V3TestCases ):
 
     def _damage_AU( self ):
         return [ ]
+
+class PollPolicyTestCases( V3TestCases ):
+    """ Abstract Class """
+
+    def _damage_AU( self ):
+        return [ ]
+
+    def _check_v3_result( self, nodes ):
+        victim_first_poll_key = self.victim.getV3PollKey( self.AU )
+        log.info( 'First poll key: ' + victim_first_poll_key )
+        V3TestCases._check_v3_result( self, nodes )
+        log.info( 'V3 result checked - was PoR' )
+        # Now wait for the next poll
+        log.info( 'self.poll_key: ' + self.poll_key )
+        self.assert_( self.victim.waitForV3Poller( self.AU, [ victim_first_poll_key ] ), 'Timed out while waiting for V3 poll' )
+        log.info( 'Successfully called a V3 poll' )
+        victim_second_poll_key = self.victim.getV3PollKey( self.AU, victim_first_poll_key )
+        log.debug( "Victim's second poll key: " + victim_second_poll_key )
+        summary = self.victim.getPollSummaryFromKey( victim_second_poll_key )
+        self.assertEqual(summary[ 'Type' ], self.expectedSecondType )
+        log.info( 'Second poll was ' + self.expectedSecondType)
+
+class PoRThenLocalV3TestCase( PollPolicyTestCases ):
+    """Test that an initial PoR with agreement is followed by a Local"""
+
+    def __init__( self, methodName = 'runTest' ):
+        V3TestCases.__init__( self, methodName )
+	self.local_configuration = {
+            'org.lockss.poll.v3.enablePoPPolls': True,
+            'org.lockss.poll.v3.enableLocalPolls': True,
+            'org.lockss.baseuc.checksumAlgorithm': 'SHA-1',
+            'org.lockss.blockHasher.enableLocalHash': 'true',
+            'org.lockss.blockHasher.localHashAlgorithm': 'SHA-1',
+            'org.lockss.poll.v3.modulus': 2,
+            'org.lockss.poll.v3.toplevelPollInterval': 1000,
+            'org.lockss.poll.minPollAttemptInterval': 500
+	}
+        self.simulated_AU_parameters = { 'numFiles': 3 }
+        self.expectedSecondType = 'Local'
+
+class PoRThenPoPV3TestCase( PollPolicyTestCases ):
+    """Test that an initial PoR lacking repairers is followed by a PoP"""
+
+    def __init__( self, methodName = 'runTest' ):
+        V3TestCases.__init__( self, methodName )
+	self.local_configuration = {
+            'org.lockss.poll.v3.enablePoPPolls': True,
+            'org.lockss.poll.v3.enableLocalPolls': True,
+            'org.lockss.baseuc.checksumAlgorithm': 'SHA-1',
+            'org.lockss.blockHasher.enableLocalHash': 'true',
+            'org.lockss.blockHasher.localHashAlgorithm': 'SHA-1',
+            'org.lockss.poll.v3.modulus': 2,
+            'org.lockss.poll.v3.toplevelPollInterval': 1000,
+            'org.lockss.poll.v3.repairerThreshold': 100,
+            'org.lockss.poll.minPollAttemptInterval': 500
+	}
+        self.simulated_AU_parameters = { 'numFiles': 3 }
+        self.expectedSecondType = 'Proof of Possession'
 
 class AuditDemo1( V3TestCases ):
     """Demo a V3 poll with no disagreement"""
@@ -412,6 +483,7 @@ class AuditDemo2( V3TestCases ):
                         log.info( 'Asymmetric client %s repairers OK' % client )
 
 
+
 class SimpleV3LocalTestCase( V3TestCases ):
     """Test a V3 local poll with no disagreement"""
 
@@ -427,14 +499,25 @@ class SimpleV3LocalTestCase( V3TestCases ):
         self.simulated_AU_parameters = { 'numFiles': 3 }
 
     def _check_v3_result( self , nodes ):
-        self.assert_(self.victim.hasWonV3Poll( self.AU ))
+        self._verify_poll_type( 'Local' )
+        self.poll_key = self.victim.getV3PollKey( self.AU )
+        log.debug( "Victim's poll key: " + self.poll_key )
+        self.victim.waitForThisCompletedV3Poll( self.AU, self.poll_key )
+        summary = self.victim.getPollSummaryFromKey( self.poll_key )
+        log.debug( "Summary[Type]: " + summary[ 'Type' ] )
+        log.debug( "Summary[Status]: " + summary[ 'Status' ] )
+        self.assertEqual(summary[ 'Status' ], u'Complete' )
+        self.assertEqual(summary[ 'Total URLs In Vote' ], u'7' )
+        agreeURL = summary[ 'Agreeing URLs' ]
+        self.assertEqual(summary[ 'Total URLs In Vote' ],
+                         agreeURL[ 'value' ] )
 
     def _damage_AU( self ):
         return [ ]
 
 
 class SimpleDamageV3LocalTestCase( V3TestCases ):
-    """Test a V3 local poll with no disagreement"""
+    """Test a V3 local poll with one disagreement"""
 
     def __init__( self, methodName = 'runTest' ):
         V3TestCases.__init__( self, methodName )
@@ -448,12 +531,25 @@ class SimpleDamageV3LocalTestCase( V3TestCases ):
         self.simulated_AU_parameters = { 'numFiles': 3 }
 
     def _check_v3_result( self , nodes ):
-        self.assert_(self.victim.hasWonV3Poll( self.AU ))
+        self._verify_poll_type( 'Local' )
+        self.poll_key = self.victim.getV3PollKey( self.AU )
+        log.debug( "Victim's poll key: " + self.poll_key )
+        self.victim.waitForThisCompletedV3Poll( self.AU, self.poll_key )
+        summary = self.victim.getPollSummaryFromKey( self.poll_key )
+        log.debug( "Summary[Type]: " + summary[ 'Type' ] )
+        self.assertEqual(summary[ 'Type' ], u'Local' )
+        log.debug( "Summary[Status]: " + summary[ 'Status' ] )
+        self.assertEqual(summary[ 'Status' ], u'Complete' )
+        self.assertEqual(summary[ 'Total URLs In Vote' ], u'7' )
+        agreeURL = summary[ 'Agreeing URLs' ]
+        # XXX this should be int(agreeURL['value']-1)
+        self.assertEqual( int(summary[ 'Total URLs In Vote' ] ),
+                         ( int(agreeURL[ 'value' ])) )
 
     def _damage_AU( self ):
         nodes = [ self.victim.randomDamageSingleNode( self.AU ) ]
         self._set_expected_agreement_from_damaged( nodes )
-        return [ ]
+        return nodes
 
 
 class SimpleDamageV3TestCase( V3TestCases ):
@@ -903,6 +999,7 @@ class TotalLossRecoveryPoPV3TestCase( TotalLossRecoveryV3Tests ):
         TotalLossRecoveryV3Tests.__init__( self, methodName )
         self.local_configuration = { 'org.lockss.poll.v3.enableV3Poller': True,
                                      'org.lockss.poll.v3.modulus': 2,
+                                     'org.lockss.poll.v3.enableLocalPolls': False,
                                      'org.lockss.poll.v3.allPoPPolls': True,
                                      'org.lockss.poll.v3.enablePoPVoting': True,
                                      'org.lockss.poll.v3.enablePoPPolls': True}
@@ -928,6 +1025,17 @@ class TotalLossRecoveryPoPV3TestCase( TotalLossRecoveryV3Tests ):
         # a false negative, about the chance of tossing 120 heads in a row
         self.assert_( repair_count > 0 )
         self.assert_( repair_count < node_count )
+
+    def _check_v3_result( self, nodes, variant = u'Proof of Retrievability'):
+        log.info( 'Waiting for V3 repair...' )
+        self._await_repair( nodes )
+        self._verify_repair( nodes )
+        self._verify_poll_type( 'Proof of Possession' )
+        self._verify_poll_results()
+        self._verify_voter_agreements()
+        self._verify_voters_counts()
+        log.info( 'AU successfully repaired' )
+
 
 class RepairFromPublisherV3TestCase( V3TestCases ):
     """Ensure that repair from publisher works correctly in V3"""
@@ -957,10 +1065,6 @@ class RepairFromPeerV3Tests( V3TestCases ):
         self.timeout = 2*60*60
         self.daemon_count += 1
         # ALWAYS repair from a cache; enable polling on all peers.
-        self.local_configuration = { 'org.lockss.poll.minPollAttemptInterval': 10,
-                                     'org.lockss.poll.v3.enableV3Poller': False,
-                                     'org.lockss.poll.v3.repairFromCachePercent': 100,
-                                     'org.lockss.poll.v3.toplevelPollInterval': '1d' }
         self.simulated_AU_parameters = { 'depth': 1, 'branch': 1 }    # Reasonably complex AU for testing
         self.toggle_AU_activation = False
         self.expected_voter_agreement = '100.00'
@@ -972,6 +1076,7 @@ class RepairFromPeerV3Tests( V3TestCases ):
         
         V3TestCases._setup_AU( self )
         self.framework.appendExtraConfig( { 'org.lockss.poll.v3.enableV3Poller': True } )
+        # self.framework.appendExtraConfig( { 'org.lockss.poll.v3.enableLocalPolls': False } )
         self.framework.reloadAllConfiguration()
 
         # Agreement is required from all peers before continuing
@@ -1022,23 +1127,92 @@ class RepairFromPeerV3Tests( V3TestCases ):
     def _verify_repair( self, nodes ):
         # Verify that all repairs came from peers
         for node in nodes:
+            log.debug('verify repair of node %s' % node )
             self.assert_( self.victim.isNodeRepairedFromServerByV3( self.AU, node, False ), 'Node %s was not repaired from a peer!' % node )
-        V3TestCases._verify_repair( self, nodes )        
-
+        log.debug('Calling V3TestCases._verify_repair')
+        V3TestCases._verify_repair( self, nodes )
 
 class RepairFromPeerV3TestCase( RepairFromPeerV3Tests ):
-    """Ensure that repairing from a V3 peer works correctly"""
+    """Ensure that repairing from a V3 peer works correctly with Local polls disabled"""
 
     def __init__( self, methodName = 'runTest' ):
         RepairFromPeerV3Tests.__init__( self, methodName )
-        self.local_configuration[ 'org.lockss.poll.pollStarterAdditionalDelayBetweenPolls' ] = '20s'    # XXX
+        self.local_configuration = { 'org.lockss.poll.minPollAttemptInterval': 10,
+                                     'org.lockss.poll.v3.enableV3Poller': False,
+                                     'org.lockss.poll.v3.repairFromCachePercent': 100,
+                                     'org.lockss.poll.v3.enableLocalPolls': False,
+                                     'org.lockss.poll.pollStarterAdditionalDelayBetweenPolls': '20s',
+                                     'org.lockss.poll.v3.toplevelPollInterval': '1d' }
+
+class RepairFromPeerV3LocalTestCase( RepairFromPeerV3Tests ):
+    """Ensure that repairing from a V3 peer works correctly with Local polls enabled"""
+
+    def __init__( self, methodName = 'runTest' ):
+        RepairFromPeerV3Tests.__init__( self, methodName )
+	self.local_configuration = {
+            'org.lockss.poll.pollStarterAdditionalDelayBetweenPolls': '20s',
+            'org.lockss.poll.v3.enablePoPPolls': True,
+            'org.lockss.poll.v3.enableLocalPolls': True,
+            'org.lockss.poll.v3.toplevelPollInterval': 5000,
+            'org.lockss.baseuc.checksumAlgorithm': 'SHA-1',
+            'org.lockss.blockHasher.enableLocalHash': 'true',
+            'org.lockss.blockHasher.localHashAlgorithm': 'SHA-1',
+            'org.lockss.poll.v3.enableV3Poller': False,
+            'org.lockss.poll.v3.repairFromCachePercent': 100,
+            'org.lockss.poll.minPollAttemptInterval': 500
+	}
+
+    def _damage_AU( self ):
+        nodes = self.victim.randomDamageRandomNodes( self.AU, 15, 20 )
+        self.local_configuration['org.lockss.poll.v3.enableLocalPolls'] = True;
+        self._update_configuration()
+        return nodes
+
+    def _verify_damage( self, nodes ):
+        V3TestCases._verify_damage( self, nodes )
+        
+        log.debug( 'victim.getNoAuPeers( self.AU ): %s' % self.victim.getNoAuPeers( self.AU ) )
+        self.assertEqual( self.victim.getNoAuPeers( self.AU ), [ self.client_without_AU.getV3Identity() ], 'Peer without AU disappeared!' )
+
+        log.info( 'Waiting for a V3 poll to be called...' )
+        # Ignores first victim poll
+        self.assert_( self.victim.waitForV3Poller( self.AU, [ self.victim_first_poll_key ] ), 'Timed out while waiting for V3 poll' )
+        log.info( 'Successfully called a V3 poll' )
+        summary = self.victim.getPollSummaryFromKey( self.victim_first_poll_key )
+        self.assertEqual(summary[ 'Type' ], 'Proof of Retrievability' )
+
+        victim_second_poll_key = self.victim.getV3PollKey( self.AU, self.victim_first_poll_key )
+        log.debug( "Victim's second poll key: " + victim_second_poll_key )
+        log.info( 'Waiting for a V3 poll to be called...' )
+        # Ignores second victim poll
+        self.assert_( self.victim.waitForV3Poller( self.AU, [ self.victim_first_poll_key, victim_second_poll_key ] ), 'Timed out while waiting for V3 poll' )
+        log.info( 'Successfully called a V3 poll' )
+        summary = self.victim.getPollSummaryFromKey( victim_second_poll_key )
+        self.assertEqual(summary[ 'Type' ], 'Local' )
+
+        self.victim_third_poll_key = self.victim.getV3PollKey( self.AU, [ self.victim_first_poll_key, victim_second_poll_key ] )
+        log.debug( "Victim's third poll key: " + self.victim_third_poll_key )
+        invitees = self.victim.getV3PollInvitedPeers( self.victim_third_poll_key )
+        log.debug( 'invitedPeers: %s' % invitees )
+        self.assertFalse( self.client_without_AU.getV3Identity() in invitees, 'Peer without AU invited in 3rd poll' )
+
+    def _verify_voter_agreements( self ):
+        summary = self.victim.getPollSummaryFromKey( self.victim_third_poll_key )
+        self.assertEqual(summary[ 'Type' ], 'Proof of Retrievability' )
+        log.debug('3rd poll type verified')
+
 
 class RepairFromPeerWithDeactivateV3TestCase( RepairFromPeerV3Tests ):
     """Ensure that repairing from a V3 peer after AU deactivate/reactivate works correctly"""
 
     def __init__( self, methodName = 'runTest' ):
         RepairFromPeerV3Tests.__init__( self, methodName )
-        self.local_configuration[ 'org.lockss.poll.pollStarterAdditionalDelayBetweenPolls' ] = '20s'    # XXX
+        self.local_configuration = { 'org.lockss.poll.minPollAttemptInterval': 10,
+                                     'org.lockss.poll.v3.enableV3Poller': False,
+                                     'org.lockss.poll.v3.repairFromCachePercent': 100,
+                                     'org.lockss.poll.v3.enableLocalPolls': False,
+                                     'org.lockss.poll.pollStarterAdditionalDelayBetweenPolls': '20s',
+                                     'org.lockss.poll.v3.toplevelPollInterval': '1d' }
         self.toggle_AU_activation = True
 
 class RepairFromPeerWhenTooCloseV3TestCase( RepairFromPeerV3Tests ):
@@ -1046,6 +1220,12 @@ class RepairFromPeerWhenTooCloseV3TestCase( RepairFromPeerV3Tests ):
 
     def __init__( self, methodName = 'runTest' ):
         RepairFromPeerV3Tests.__init__( self, methodName )
+        self.local_configuration = { 'org.lockss.poll.minPollAttemptInterval': 10,
+                                     'org.lockss.poll.v3.enableV3Poller': False,
+                                     'org.lockss.poll.v3.repairFromCachePercent': 100,
+                                     'org.lockss.poll.v3.enableLocalPolls': False,
+                                     'org.lockss.poll.pollStarterAdditionalDelayBetweenPolls': '20s',
+                                     'org.lockss.poll.v3.toplevelPollInterval': '1d' }
         self.simulated_AU_parameters = { 'depth': 1, 'branch': 1, 'repairFromPeerIfMissingUrlPatterns' : '.*' }    # Reasonably complex AU for testing
 
     def _damage_AU( self ):
@@ -1220,6 +1400,7 @@ simpleV3Tests = unittest.TestSuite( ( FormatExpectedAgreementTestCase(),
                                       TotalLossRecoveryV3TestCase(),
                                       RepairFromPublisherV3TestCase(),
                                       RepairFromPeerV3TestCase(),
+                                      RepairFromPeerV3LocalTestCase(),
                                       RepairFromPeerWithDeactivateV3TestCase(),
                                       RepairFromPeerWhenTooCloseV3TestCase() ) )
 
@@ -1232,6 +1413,9 @@ popV3Tests = unittest.TestSuite( ( SimpleV3PoPTestCase(),
                                    SimpleV3PoPCompatibilityTestCase(),
                                    TotalLossRecoveryPoPV3TestCase() ) )
 
+pollPolicyV3Tests = unittest.TestSuite( ( PoRThenLocalV3TestCase(),
+                                           PoRThenPoPV3TestCase() ) )
+
 randomV3Tests = unittest.TestSuite( ( RandomDamageV3TestCase(),
                                       RandomDeleteV3TestCase(),
                                       RandomExtraFileV3TestCase() ) )
@@ -1239,6 +1423,7 @@ randomV3Tests = unittest.TestSuite( ( RandomDamageV3TestCase(),
 v3Tests = unittest.TestSuite( ( simpleV3Tests,
                                 symmetricV3Tests,
                                 popV3Tests,
+                                pollPolicyV3Tests,
                                 randomV3Tests ) )
 
 # Release-candidate tests
