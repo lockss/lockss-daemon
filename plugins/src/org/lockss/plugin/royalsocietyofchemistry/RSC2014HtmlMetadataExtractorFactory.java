@@ -1,5 +1,5 @@
 /*
- * $Id: RSC2014HtmlMetadataExtractorFactory.java,v 1.1 2014-05-07 00:59:52 etenbrink Exp $
+ * $Id: RSC2014HtmlMetadataExtractorFactory.java,v 1.2 2014-12-22 22:59:18 etenbrink Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ import org.lockss.util.Logger;
 
 public class RSC2014HtmlMetadataExtractorFactory implements FileMetadataExtractorFactory{
   
-  static Logger log = Logger.getLogger(RSC2014HtmlMetadataExtractorFactory.class);
+  private static final Logger log = Logger.getLogger(RSC2014HtmlMetadataExtractorFactory.class);
   
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
       String contentType) throws PluginException {
@@ -77,7 +77,8 @@ public class RSC2014HtmlMetadataExtractorFactory implements FileMetadataExtracto
       tagMap.put("citation_firstpage", MetadataField.FIELD_START_PAGE);
       tagMap.put("citation_lastpage", MetadataField.FIELD_END_PAGE);
       tagMap.put("citation_doi", MetadataField.FIELD_DOI);
-      tagMap.put("citation_fulltext_html_url", MetadataField.FIELD_ACCESS_URL);
+      // citation_fulltext_html_url is not collected, so use metadata URL
+      // tagMap.put("citation_fulltext_html_url", MetadataField.FIELD_ACCESS_URL);
     } // static
     
     /**
@@ -93,6 +94,7 @@ public class RSC2014HtmlMetadataExtractorFactory implements FileMetadataExtracto
       
       ArticleMetadata am = super.extract(target, cu);
       am.cook(tagMap);
+      am.replace(MetadataField.FIELD_ACCESS_URL, cu.getUrl());
       return am;
     } // extract
     
