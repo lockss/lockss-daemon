@@ -18,8 +18,8 @@
     comment[journal_issn] = 1012-8255
     param[journal_id] = arla
 
-    au < exists ; 2013 ; Academia Revista Latinoamericana de Administración Volume 26 ; 26 >
-    au < exists ; 2014 ; Academia Revista Latinoamericana de Administración Volume 27 ; 27 >
+    au < manifest ; 2013 ; Academia Revista Latinoamericana de Administración Volume 26 ; 26 >
+    au < manifest ; 2014 ; Academia Revista Latinoamericana de Administración Volume 27 ; 27 >
 
   }
 
@@ -33,8 +33,8 @@
     comment[journal_issn] = 1055-4769
     param[journal_id] = alc
 
-    au < exists ; 1991 ; Academic and Library Computing Volume 8 ; 8 >
-    au < exists ; 1992 ; Academic and Library Computing Volume 9 ; 9 >
+    au < manifest ; 1991 ; Academic and Library Computing Volume 8 ; 8 >
+    au < manifest ; 1992 ; Academic and Library Computing Volume 9 ; 9 >
 
   }
 
@@ -476,7 +476,7 @@
     au < doNotProcess ; 2011 ; Arts Marketing: An International Journal Volume 1 ; 1 >
     au < doNotProcess ; 2012 ; Arts Marketing: An International Journal Volume 2 ; 2 >
     au < manifest ; 2013 ; Arts Marketing: An International Journal Volume 3 ; 3 >
-    au < exists ; 2014 ; Arts Marketing: An International Journal Volume 4 ; 4 >
+    au < manifest ; 2014 ; Arts Marketing: An International Journal Volume 4 ; 4 >
 
   }
 
@@ -566,7 +566,7 @@
     param[journal_id] = aeds
 
     au < doNotProcess ; 2012 ; Asian Education and Development Studies Volume 1 ; 1 >
-    au < exists ; 2013 ; Asian Education and Development Studies Volume 2 ; 2 >
+    au < manifest ; 2013 ; Asian Education and Development Studies Volume 2 ; 2 >
     au < manifest ; 2014 ; Asian Education and Development Studies Volume 3 ; 3 >
 
   }
@@ -855,7 +855,7 @@
     au < doNotProcess ; 2010 ; Benchmarking: An International Journal Volume 17 ; 17 >
     au < doNotProcess ; 2011 ; Benchmarking: An International Journal Volume 18 ; 18 >
     au < doNotProcess ; 2012 ; Benchmarking: An International Journal Volume 19 ; 19 >
-    au < exists ; 2013 ; Benchmarking: An International Journal Volume 20 ; 20 >
+    au < manifest ; 2013 ; Benchmarking: An International Journal Volume 20 ; 20 >
     au < manifest ; 2014 ; Benchmarking: An International Journal Volume 21 ; 21 >
 
   }
@@ -1129,7 +1129,7 @@
     au < doNotProcess ; 2010 ; Business Process Management Journal Volume 16 ; 16 >
     au < doNotProcess ; 2011 ; Business Process Management Journal Volume 17 ; 17 >
     au < doNotProcess ; 2012 ; Business Process Management Journal Volume 18 ; 18 >
-    au < exists ; 2013 ; Business Process Management Journal Volume 19 ; 19 >
+    au < manifest ; 2013 ; Business Process Management Journal Volume 19 ; 19 >
     au < manifest ; 2014 ; Business Process Management Journal Volume 20 ; 20 >
 
   }
@@ -1865,8 +1865,8 @@
     au < doNotProcess ; 2010 ; Education, Business and Society: Contemporary Middle Eastern Issues Volume 3 ; 3 >
     au < doNotProcess ; 2011 ; Education, Business and Society: Contemporary Middle Eastern Issues Volume 4 ; 4 >
     au < doNotProcess ; 2012 ; Education, Business and Society: Contemporary Middle Eastern Issues Volume 5 ; 5 >
-    au < exists ; 2013 ; Education, Business and Society: Contemporary Middle Eastern Issues Volume 6 ; 6 >
-    au < exists ; 2014 ; Education, Business and Society: Contemporary Middle Eastern issues Volume 7 ; 7 >
+    au < manifest ; 2013 ; Education, Business and Society: Contemporary Middle Eastern Issues Volume 6 ; 6 >
+    au < manifest ; 2014 ; Education, Business and Society: Contemporary Middle Eastern issues Volume 7 ; 7 >
 
   }
 
@@ -2216,7 +2216,7 @@
     au < doNotProcess ; 2011 ; EuroMed Journal of Business Volume 6 ; 6 >
     au < doNotProcess ; 2012 ; EuroMed Journal of Business Volume 7 ; 7 >
     au < manifest ; 2013 ; EuroMed Journal of Business Volume 8 ; 8 >
-    au < exists ; 2014 ; EuroMed Journal of Business Volume 9 ; 9 >
+    au < manifest ; 2014 ; EuroMed Journal of Business Volume 9 ; 9 >
 
   }
 
@@ -2488,7 +2488,7 @@
 
     au < doNotProcess ; 2011 ; Grey Systems: Theory and Application Volume 1 ; 1 >
     au < doNotProcess ; 2012 ; Grey Systems: Theory and Application Volume 2 ; 2 >
-    au < exists ; 2013 ; Grey Systems: Theory and Application Volume 3 ; 3 >
+    au < manifest ; 2013 ; Grey Systems: Theory and Application Volume 3 ; 3 >
     au < manifest ; 2014 ; Grey Systems: Theory and Application Volume 4 ; 4 >
 
   }
@@ -2712,7 +2712,7 @@
     au < doNotProcess ; 2010 ; Humanomics Volume 26 ; 26 >
     au < doNotProcess ; 2011 ; Humanomics Volume 27 ; 27 >
     au < doNotProcess ; 2012 ; Humanomics Volume 28 ; 28 >
-    au < exists ; 2013 ; Humanomics Volume 29 ; 29 >
+    au < manifest ; 2013 ; Humanomics Volume 29 ; 29 >
     au < manifest ; 2014 ; Humanomics Volume 30 ; 30 >
 
   }
@@ -2875,7 +2875,7 @@
     au < doNotProcess ; 2011 ; Industrial Lubrication and Tribology Volume 63 ; 63 >
     au < doNotProcess ; 2012 ; Industrial Lubrication and Tribology Volume 64 ; 64 >
     au < manifest ; 2013 ; Industrial Lubrication and Tribology Volume 65 ; 65 >
-    au < exists ; 2014 ; Industrial Lubrication and Tribology Volume 66 ; 66 >
+    au < manifest ; 2014 ; Industrial Lubrication and Tribology Volume 66 ; 66 >
 
   }
 
@@ -2934,7 +2934,7 @@
     au < doNotProcess ; 2010 ; Industrial Management & Data Systems Volume 110 ; 110 >
     au < doNotProcess ; 2011 ; Industrial Management & Data Systems Volume 111 ; 111 >
     au < doNotProcess ; 2012 ; Industrial Management & Data Systems Volume 112 ; 112 >
-    au < exists ; 2013 ; Industrial Management & Data Systems Volume 113 ; 113 >
+    au < manifest ; 2013 ; Industrial Management & Data Systems Volume 113 ; 113 >
     au < manifest ; 2014 ; Industrial Management & Data Systems Volume 114 ; 114 >
 
   }
@@ -3153,7 +3153,7 @@
     au < doNotProcess ; 2010 ; Interactive Technology and Smart Education Volume 7 ; 7 >
     au < doNotProcess ; 2011 ; Interactive Technology and Smart Education Volume 8 ; 8 >
     au < doNotProcess ; 2012 ; Interactive Technology and Smart Education Volume 9 ; 9 >
-    au < exists ; 2013 ; Interactive Technology and Smart Education Volume 10 ; 10 >
+    au < manifest ; 2013 ; Interactive Technology and Smart Education Volume 10 ; 10 >
     au < manifest ; 2014 ; Interactive Technology and Smart Education Volume 11 ; 11 >
 
   }
@@ -3848,7 +3848,7 @@
     au < doNotProcess ; 2010 ; International Journal of Intelligent Computing and Cybernetics Volume 3 ; 3 >
     au < doNotProcess ; 2011 ; International Journal of Intelligent Computing and Cybernetics Volume 4 ; 4 >
     au < doNotProcess ; 2012 ; International Journal of Intelligent Computing and Cybernetics Volume 5 ; 5 >
-    au < exists ; 2013 ; International Journal of Intelligent Computing and Cybernetics Volume 6 ; 6 >
+    au < manifest ; 2013 ; International Journal of Intelligent Computing and Cybernetics Volume 6 ; 6 >
     au < manifest ; 2014 ; International Journal of Intelligent Computing and Cybernetics Volume 7 ; 7 >
 
   }
@@ -3953,7 +3953,7 @@
     au < doNotProcess ; 2010 ; International Journal of Lean Six Sigma Volume 1 ; 1 >
     au < doNotProcess ; 2011 ; International Journal of Lean Six Sigma Volume 2 ; 2 >
     au < doNotProcess ; 2012 ; International Journal of Lean Six Sigma Volume 3 ; 3 >
-    au < exists ; 2013 ; International Journal of Lean Six Sigma Volume 4 ; 4 >
+    au < manifest ; 2013 ; International Journal of Lean Six Sigma Volume 4 ; 4 >
     au < manifest ; 2014 ; International Journal of Lean Six Sigma Volume 5 ; 5 >
 
   }
@@ -4128,7 +4128,7 @@
     au < doNotProcess ; 2011 ; International Journal of Migration, Health and Social Care Volume 7 ; 7 >
     au < doNotProcess ; 2012 ; International Journal of Migration, Health and Social Care Volume 8 ; 8 >
     au < manifest ; 2013 ; International Journal of Migration, Health and Social Care Volume 9 ; 9 >
-    au < exists ; 2014 ; International Journal of Migration, Health and Social Care Volume 10 ; 10 >
+    au < manifest ; 2014 ; International Journal of Migration, Health and Social Care Volume 10 ; 10 >
 
   }
 
@@ -4494,7 +4494,7 @@
     au < doNotProcess ; 2011 ; International Journal of Quality & Reliability Management Volume 28 ; 28 >
     au < doNotProcess ; 2012 ; International Journal of Quality & Reliability Management Volume 29 ; 29 >
     au < manifest ; 2013 ; International Journal of Quality & Reliability Management Volume 30 ; 30 >
-    au < exists ; 2014 ; International Journal of Quality & Reliability Management Volume 31 ; 31 >
+    au < manifest ; 2014 ; International Journal of Quality & Reliability Management Volume 31 ; 31 >
 
   }
 
@@ -4513,8 +4513,8 @@
     au < doNotProcess ; 2010 ; International Journal of Quality and Service Sciences Volume 2 ; 2 >
     au < doNotProcess ; 2011 ; International Journal of Quality and Service Sciences Volume 3 ; 3 >
     au < doNotProcess ; 2012 ; International Journal of Quality and Service Sciences Volume 4 ; 4 >
-    au < exists ; 2013 ; International Journal of Quality and Service Sciences Volume 5 ; 5 >
-    au < exists ; 2014 ; International Journal of Quality and Service Sciences Volume 6 ; 6 >
+    au < manifest ; 2013 ; International Journal of Quality and Service Sciences Volume 5 ; 5 >
+    au < manifest ; 2014 ; International Journal of Quality and Service Sciences Volume 6 ; 6 >
 
   }
 
@@ -4872,8 +4872,8 @@
     au < doNotProcess ; 2010 ; International Journal of Workplace Health Management Volume 3 ; 3 >
     au < doNotProcess ; 2011 ; International Journal of Workplace Health Management Volume 4 ; 4 >
     au < doNotProcess ; 2012 ; International Journal of Workplace Health Management Volume 5 ; 5 >
-    au < exists ; 2013 ; International Journal of Workplace Health Management Volume 6 ; 6 >
-    au < exists ; 2014 ; International Journal of Workplace Health Management Volume 7 ; 7 >
+    au < manifest ; 2013 ; International Journal of Workplace Health Management Volume 6 ; 6 >
+    au < manifest ; 2014 ; International Journal of Workplace Health Management Volume 7 ; 7 >
 
   }
 
@@ -4969,7 +4969,7 @@
     au < doNotProcess ; 2010 ; Internet Research Volume 20 ; 20 >
     au < doNotProcess ; 2011 ; Internet Research Volume 21 ; 21 >
     au < doNotProcess ; 2012 ; Internet Research Volume 22 ; 22 >
-    au < exists ; 2013 ; Internet Research Volume 23 ; 23 >
+    au < manifest ; 2013 ; Internet Research Volume 23 ; 23 >
     au < manifest ; 2014 ; Internet Research Volume 24 ; 24 >
 
   }
@@ -5010,7 +5010,7 @@
     au < doNotProcess ; 2011 ; Journal of Accounting in Emerging Economies Volume 1 ; 1 >
     au < doNotProcess ; 2012 ; Journal of Accounting in Emerging Economies Volume 2 ; 2 >
     au < manifest ; 2013 ; Journal of Accounting in Emerging Economies Volume 3 ; 3 >
-    au < exists ; 2014 ; Journal of Accounting in Emerging Economies Volume 4 ; 4 >
+    au < manifest ; 2014 ; Journal of Accounting in Emerging Economies Volume 4 ; 4 >
 
   }
 
@@ -5103,8 +5103,8 @@
 
     au < doNotProcess ; 2011 ; Journal of Agribusiness in Developing and Emerging Economies Volume 1 ; 1 >
     au < doNotProcess ; 2012 ; Journal of Agribusiness in Developing and Emerging Economies Volume 2 ; 2 >
-    au < exists ; 2013 ; Journal of Agribusiness in Developing and Emerging Economies Volume 3 ; 3 >
-    au < exists ; 2014 ; Journal of Agribusiness in Developing and Emerging Economies Volume 4 ; 4 >
+    au < manifest ; 2013 ; Journal of Agribusiness in Developing and Emerging Economies Volume 3 ; 3 >
+    au < manifest ; 2014 ; Journal of Agribusiness in Developing and Emerging Economies Volume 4 ; 4 >
 
   }
 
@@ -5152,7 +5152,7 @@
     au < doNotProcess ; 2010 ; Journal of Applied Research in Higher Education Volume 2 ; 2 >
     au < doNotProcess ; 2011 ; Journal of Applied Research in Higher Education Volume 3 ; 3 >
     au < doNotProcess ; 2012 ; Journal of Applied Research in Higher Education Volume 4 ; 4 >
-    au < exists ; 2013 ; Journal of Applied Research in Higher Education Volume 5 ; 5 >
+    au < manifest ; 2013 ; Journal of Applied Research in Higher Education Volume 5 ; 5 >
     au < manifest ; 2014 ; Journal of Applied Research in Higher Education Volume 6 ; 6 >
     }
   }
@@ -5174,8 +5174,8 @@
     au < doNotProcess ; 2010 ; Journal of Asia Business Studies Volume 4 ; 4 >
     au < doNotProcess ; 2011 ; Journal of Asia Business Studies Volume 5 ; 5 >
     au < doNotProcess ; 2012 ; Journal of Asia Business Studies Volume 6 ; 6 >
-    au < exists ; 2013 ; Journal of Asia Business Studies Volume 7 ; 7 >
-    au < exists ; 2014 ; Journal of Aisa Business Studies Volume 8 ; 8 >
+    au < manifest ; 2013 ; Journal of Asia Business Studies Volume 7 ; 7 >
+    au < manifest ; 2014 ; Journal of Aisa Business Studies Volume 8 ; 8 >
 
   }
 
@@ -5618,7 +5618,7 @@
     au < doesNotExist ; 0 ; Journal of Economic and Administrative Sciences Volume 27 ; 27 >
     au < doNotProcess ; 2012 ; Journal of Economic and Administrative Sciences Volume 28 ; 28 >
     au < manifest ; 2013 ; Journal of Economic and Administrative Sciences Volume 29 ; 29 >
-    au < exists ; 2014 ; Journal of Economic and Administrative Sciences Volume 30 ; 30 >
+    au < manifest ; 2014 ; Journal of Economic and Administrative Sciences Volume 30 ; 30 >
 
   }
 
@@ -5828,7 +5828,7 @@
     param[journal_id] = jepp
 
     au < doNotProcess ; 2012 ; Journal of Entrepreneurship and Public Policy Volume 1 ; 1 >
-    au < exists ; 2013 ; Journal of Entrepreneurship and Public Policy Volume 2 ; 2 >
+    au < manifest ; 2013 ; Journal of Entrepreneurship and Public Policy Volume 2 ; 2 >
     au < manifest ; 2014 ; Journal of Entrepreneurship and Public Policy Volume 3 ; 3 >
 
   }
@@ -6091,8 +6091,8 @@
     au < doNotProcess ; 2010 ; Journal of Financial Regulation and Compliance Volume 18 ; 18 >
     au < doNotProcess ; 2011 ; Journal of Financial Regulation and Compliance Volume 19 ; 19 >
     au < doNotProcess ; 2012 ; Journal of Financial Regulation and Compliance Volume 20 ; 20 >
-    au < exists ; 2013 ; Journal of Financial Regulation and Compliance Volume 21 ; 21 >
-    au < exists ; 2014 ; Journal of Financial Regulation and Compliance Volume 22 ; 22 >
+    au < manifest ; 2013 ; Journal of Financial Regulation and Compliance Volume 21 ; 21 >
+    au < manifest ; 2014 ; Journal of Financial Regulation and Compliance Volume 22 ; 22 >
 
   }
 
@@ -6118,7 +6118,7 @@
     au < doNotProcess ; 2011 ; Journal of Financial Reporting & Accounting Volume 9 ; 9 >
     au < doNotProcess ; 2012 ; Journal of Financial Reporting & Accounting Volume 10 ; 10 >
     au < manifest ; 2013 ; Journal of Financial Reporting & Accounting Volume 11 ; 11 >
-    au < exists ; 2014 ; Journal of Financial Reporting & Accounting Volume 12 ; 12 >
+    au < manifest ; 2014 ; Journal of Financial Reporting & Accounting Volume 12 ; 12 >
 
   }
 
@@ -6203,7 +6203,7 @@
     au < doNotProcess ; 2011 ; Journal of Hospitality and Tourism Technology Volume 2 ; 2 >
     au < doNotProcess ; 2012 ; Journal of Hospitality and Tourism Technology Volume 3 ; 3 >
     au < manifest ; 2013 ; Journal of Hospitality and Tourism Technology Volume 4 ; 4 >
-    au < exists ; 2014 ; Journal of Hospitality and Tourism Technology Volume 5 ; 5 >
+    au < manifest ; 2014 ; Journal of Hospitality and Tourism Technology Volume 5 ; 5 >
 
   }
 
@@ -6296,7 +6296,7 @@
     au < doNotProcess ; 2010 ; Journal of Information, Communication and Ethics in Society Volume 8 ; 8 >
     au < doNotProcess ; 2011 ; Journal of Information, Communication and Ethics in Society Volume 9 ; 9 >
     au < doNotProcess ; 2012 ; Journal of Information, Communication and Ethics in Society Volume 10 ; 10 >
-    au < exists ; 2013 ; Journal of Information, Communication and Ethics in Society Volume 11 ; 11 >
+    au < manifest ; 2013 ; Journal of Information, Communication and Ethics in Society Volume 11 ; 11 >
     au < manifest ; 2014 ; Journal of Information, Communication and Ethics in Society Volume 12 ; 12 >
 
   }
@@ -6379,7 +6379,7 @@
     au < doNotProcess ; 2011 ; Journal of International Education in Business Volume 4 ; 4 >
     au < manifest ; 2012 ; Journal of International Education in Business Volume 5 ; 5 >
     au < manifest ; 2013 ; Journal of International Education in Business Volume 6 ; 6 >
-    au < exists ; 2014 ; Journal of International Education in Business Volume 7 ; 7 >
+    au < manifest ; 2014 ; Journal of International Education in Business Volume 7 ; 7 >
 
   }
 
@@ -6504,7 +6504,7 @@
     au < doNotProcess ; 2010 ; Journal of Knowledge Management Volume 14 ; 14 >
     au < doNotProcess ; 2011 ; Journal of Knowledge Management Volume 15 ; 15 >
     au < doNotProcess ; 2012 ; Journal of Knowledge Management Volume 16 ; 16 >
-    au < exists ; 2013 ; Journal of Knowledge Management Volume 17 ; 17 >
+    au < manifest ; 2013 ; Journal of Knowledge Management Volume 17 ; 17 >
     au < manifest ; 2014 ; Journal of Knowledge Management Volume 18 ; 18 >
 
   }
@@ -7358,7 +7358,7 @@
     au < doNotProcess ; 2011 ; Journal of Systems and Information Technology Volume 13 ; 13 >
     au < doNotProcess ; 2012 ; Journal of Systems and Information Technology Volume 14 ; 14 >
     au < manifest ; 2013 ; Journal of Systems and Information Technology Volume 15 ; 15 >
-    au < exists ; 2014 ; Journal of Systems and Information Technology Volume 16 ; 16 >
+    au < manifest ; 2014 ; Journal of Systems and Information Technology Volume 16 ; 16 >
 
   }
 
@@ -7527,7 +7527,7 @@
     au < doNotProcess ; 2011 ; Leadership & Organization Development Journal Volume 32 ; 32 >
     au < doNotProcess ; 2012 ; Leadership & Organization Development Journal Volume 33 ; 33 >
     au < manifest ; 2013 ; Leadership & Organization Development Journal Volume 34 ; 34 >
-    au < exists ; 2014 ; Leadership & Organization Development Journal Volume 35 ; 35 >
+    au < manifest ; 2014 ; Leadership & Organization Development Journal Volume 35 ; 35 >
 
   }
 
@@ -7595,7 +7595,7 @@
     au < doNotProcess ; 2011 ; The Learning Organization Volume 18 ; 18 >
     au < doNotProcess ; 2012 ; The Learning Organization Volume 19 ; 19 >
     au < manifest ; 2013 ; The Learning Organization Volume 20 ; 20 >
-    au < exists ; 2014 ; The Learning Organization Volume 21 ; 21 >
+    au < manifest ; 2014 ; The Learning Organization Volume 21 ; 21 >
 
   }
 
@@ -7756,7 +7756,7 @@
     au < doNotProcess ; 2011 ; Library Management Volume 32 ; 32 >
     au < doNotProcess ; 2012 ; Library Management Volume 33 ; 33 >
     au < manifest ; 2013 ; Library Management Volume 34 ; 34 >
-    au < exists ; 2014 ; Library Management Volume 35 ; 35 >
+    au < manifest ; 2014 ; Library Management Volume 35 ; 35 >
 
   }
 
@@ -8375,9 +8375,9 @@
     comment[journal_issn] = 2049-372X
     param[journal_id] = medar
 
-    au < exists ; 2012 ; Meditari Accountancy Research Volume 20 ; 20 >
+    au < manifest ; 2012 ; Meditari Accountancy Research Volume 20 ; 20 >
     au < manifest ; 2013 ; Meditari Accountancy Research Volume 21 ; 21 >
-    au < exists ; 2014 ; Meditari Accountancy Research Volume 22 ; 22 >
+    au < manifest ; 2014 ; Meditari Accountancy Research Volume 22 ; 22 >
     }
 
   }
@@ -8444,7 +8444,7 @@
     au < doNotProcess ; 2011 ; Mental Health Review Journal: Research, Policy and Practice Volume 16 ; 16 >
     au < doNotProcess ; 2012 ; Mental Health Review Journal: Research, Policy and Practice Volume 17 ; 17 >
     au < manifest ; 2013 ; Mental Health Review Journal: Research, Policy and Practice Volume 18 ; 18 >
-    au < exists ; 2014 ; Mental Health Review Journal: Research, Policy and Practice Volume 19 ; 19 >
+    au < manifest ; 2014 ; Mental Health Review Journal: Research, Policy and Practice Volume 19 ; 19 >
 
   }
 
@@ -8489,7 +8489,7 @@
     au < doNotProcess ; 2011 ; Microelectronics International Volume 28 ; 28 >
     au < doNotProcess ; 2012 ; Microelectronics International Volume 29 ; 29 >
     au < manifest ; 2013 ; Microelectronics International Volume 30 ; 30 >
-    au < exists ; 2014 ; Microelectronics International Volume 31 ; 31 >
+    au < manifest ; 2014 ; Microelectronics International Volume 31 ; 31 >
 
   }
 
@@ -8535,8 +8535,8 @@
     au < doNotProcess ; 2010 ; Multidiscipline Modeling in Materials and Structures Volume 6 ; 6 >
     au < doNotProcess ; 2011 ; Multidiscipline Modeling in Materials and Structures Volume 7 ; 7 >
     au < doNotProcess ; 2012 ; Multidiscipline Modeling in Materials and Structures Volume 8 ; 8 >
-    au < exists ; 2013 ; Multidiscipline Modeling in Materials and Structures Volume 9 ; 9 >
-    au < exists ; 2014 ; Multidiscipline Modeling in Materials and Structures Volume 10 ; 10 >
+    au < manifest ; 2013 ; Multidiscipline Modeling in Materials and Structures Volume 9 ; 9 >
+    au < manifest ; 2014 ; Multidiscipline Modeling in Materials and Structures Volume 10 ; 10 >
 
   }
 
@@ -8577,7 +8577,7 @@
     au < doNotProcess ; 2011 ; Nankai Business Review International Volume 2 ; 2 >
     au < doNotProcess ; 2012 ; Nankai Business Review International Volume 3 ; 3 >
     au < manifest ; 2013 ; Nankai Business Review International Volume 4 ; 4 >
-    au < exists ; 2014 ; Nankai Business Review International Volume 5 ; 5 >
+    au < manifest ; 2014 ; Nankai Business Review International Volume 5 ; 5 >
 
   }
 
@@ -8838,7 +8838,7 @@
     au < doNotProcess ; 2010 ; On The Horizon Volume 18 ; 18 >
     au < doNotProcess ; 2011 ; On The Horizon Volume 19 ; 19 >
     au < doNotProcess ; 2012 ; On The Horizon Volume 20 ; 20 >
-    au < exists ; 2013 ; On The Horizon Volume 21 ; 21 >
+    au < manifest ; 2013 ; On The Horizon Volume 21 ; 21 >
     au < manifest ; 2014 ; On The Horizon Volume 22 ; 22 >
 
   }
@@ -9081,7 +9081,7 @@
     au < doNotProcess ; 2011 ; Pigment & Resin Technology Volume 40 ; 40 >
     au < doNotProcess ; 2012 ; Pigment & Resin Technology Volume 41 ; 41 >
     au < manifest ; 2013 ; Pigment & Resin Technology Volume 42 ; 42 >
-    au < exists ; 2014 ; Pigment & Resin Technology Volume 43 ; 43 >
+    au < manifest ; 2014 ; Pigment & Resin Technology Volume 43 ; 43 >
 
   }
 
@@ -9209,7 +9209,7 @@
     au < doNotProcess ; 2010 ; Program: Electronic Library and Information Systems Volume 44 ; 44 >
     au < doNotProcess ; 2011 ; Program: Electronic Library and Information Systems Volume 45 ; 45 >
     au < doNotProcess ; 2012 ; Program: Electronic Library and Information Systems Volume 46 ; 46 >
-    au < exists ; 2013 ; Program: Electronic Library and Information Systems Volume 47 ; 47 >
+    au < manifest ; 2013 ; Program: Electronic Library and Information Systems Volume 47 ; 47 >
     au < manifest ; 2014 ; Program: Electronic Library and Information Systems Volume 48 ; 48 >
 
   }
@@ -9367,12 +9367,12 @@
     comment[journal_issn] = 1443-9883
     param[journal_id] = qrj
 
-    au < exists ; 2006 ; Qualitative Research Journal Volume 6 ; 6 >
-    au < exists ; 2007 ; Qualitative Research Journal Volume 7 ; 7 >
-    au < exists ; 2008 ; Qualitative Research Journal Volume 8 ; 8 >
-    au < exists ; 2009 ; Qualitative Research Journal Volume 9 ; 9 >
-    au < exists ; 2010 ; Qualitative Research Journal Volume 10 ; 10 >
-    au < exists ; 2011 ; Qualitative Research Journal Volume 11 ; 11 >
+    au < manifest ; 2006 ; Qualitative Research Journal Volume 6 ; 6 >
+    au < manifest ; 2007 ; Qualitative Research Journal Volume 7 ; 7 >
+    au < manifest ; 2008 ; Qualitative Research Journal Volume 8 ; 8 >
+    au < manifest ; 2009 ; Qualitative Research Journal Volume 9 ; 9 >
+    au < manifest ; 2010 ; Qualitative Research Journal Volume 10 ; 10 >
+    au < manifest ; 2011 ; Qualitative Research Journal Volume 11 ; 11 >
     au < manifest ; 2012 ; Qualitative Research Journal Volume 12 ; 12 >
     au < manifest ; 2013 ; Qualitative Research Journal Volume 13 ; 13 >
     au < manifest ; 2014 ; Qualitative Research Journal Volume 14 ; 14 >
@@ -9648,7 +9648,7 @@
     au < doNotProcess ; 2011 ; Review of Behavioral Finance Volume 3 ; 3 >
     au < doNotProcess ; 2012 ; Review of Behavioral Finance Volume 4 ; 4 >
     au < manifest ; 2013 ; Review of Behavioral Finance Volume 5 ; 5 >
-    au < exists ; 2014 ; Review of Behavioral Finance Volume 6 ; 6 >
+    au < manifest ; 2014 ; Review of Behavioral Finance Volume 6 ; 6 >
 
   }
 
@@ -9980,7 +9980,7 @@
     au < doNotProcess ; 2011 ; Strategic Outsourcing: An international Journal Volume 4 ; 4 >
     au < doNotProcess ; 2012 ; Strategic Outsourcing: An international Journal Volume 5 ; 5 >
     au < manifest ; 2013 ; Strategic Outsourcing: An international Journal Volume 6 ; 6 >
-    au < exists ; 2014 ; Strategic Outsourcing: An international Journal Volume 7 ; 7 >
+    au < manifest ; 2014 ; Strategic Outsourcing: An international Journal Volume 7 ; 7 >
 
   }
 
@@ -10522,7 +10522,7 @@
     au < doNotProcess ; 2010 ; VINE Volume 40 ; 40 >
     au < doNotProcess ; 2011 ; VINE Volume 41 ; 41 >
     au < doNotProcess ; 2012 ; VINE Volume 42 ; 42 >
-    au < exists ; 2013 ; VINE Volume 43 ; 43 >
+    au < manifest ; 2013 ; VINE Volume 43 ; 43 >
     au < manifest ; 2014 ; VINE Volume 44 ; 44 >
 
   }
@@ -10686,9 +10686,9 @@
     param[journal_id] = wjemsd
 
     au < doNotProcess ; 2010 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 6 ; 6 >
-    au < exists ; 2011 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 7 ; 7 >
+    au < manifest ; 2011 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 7 ; 7 >
     au < doNotProcess ; 2012 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 8 ; 8 >
-    au < exists ; 2013 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 9 ; 9 >
+    au < manifest ; 2013 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 9 ; 9 >
     au < manifest ; 2014 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 10 ; 10 >
 
   }
@@ -10706,7 +10706,7 @@
       au < doNotProcess ; 2010 ; World Journal of Science, Technology and Sustainable Development Volume 7 ; 7 >
       au < doNotProcess ; 2011 ; World Journal of Science, Technology and Sustainable Development Volume 8 ; 8 >
       au < doNotProcess ; 2012 ; World Journal of Science, Technology and Sustainable Development Volume 9 ; 9 >
-      au < exists ; 2013 ; World Journal of Science, Technology and Sustainable Development Volume 10 ; 10 >
+      au < manifest ; 2013 ; World Journal of Science, Technology and Sustainable Development Volume 10 ; 10 >
       au < manifest ; 2014 ; World Journal of Science, Technology and Sustainable Development Volume 11 ; 11 >
 
   }
