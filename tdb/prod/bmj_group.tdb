@@ -449,7 +449,7 @@
 
     param[base_url] = http://innovations.bmj.com/
 
-    au < HighWirePressH20Plugin ; exists ; 2015 ; BMJ Innovations Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; BMJ Innovations Volume 1 ; 1 >
 
   }
   
@@ -524,7 +524,7 @@
 
     param[base_url] = http://stel.bmj.com/
     
-    au < HighWirePressH20Plugin ; exists ; 2014 ; BMJ Simulation & Technology Enhanced Learning Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 2014 ; BMJ Simulation & Technology Enhanced Learning Volume 1 ; 1 >
 
   }
 
