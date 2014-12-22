@@ -1,5 +1,5 @@
 /*
- * $Id: RSC2014ArticleIteratorFactory.java,v 1.3 2014-09-27 01:27:55 etenbrink Exp $
+ * $Id: RSC2014ArticleIteratorFactory.java,v 1.4 2014-12-22 22:55:34 etenbrink Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.royalsocietyofchemistry;
 
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.regex.*;
 
@@ -44,13 +45,12 @@ public class RSC2014ArticleIteratorFactory
     implements ArticleIteratorFactory,
                ArticleMetadataExtractorFactory {
   
-  protected static Logger log = Logger.getLogger(RSC2014ArticleIteratorFactory.class);
+  private static final Logger log = Logger.getLogger(RSC2014ArticleIteratorFactory.class);
   
-  protected static final String ROOT_TEMPLATE = "\"%sen/content/\", base_url";
-  
-  protected static final String PATTERN_TEMPLATE =
-      "\"^%sen/content/article(?:landing|pdf)/%d/%s/\", " +
-      "base_url, year, journal_code";
+  protected static final String ROOT_TEMPLATE1 =
+      "\"%sen/content/articlelanding/%d/%s/\", base_url, year, journal_code";
+  protected static final String ROOT_TEMPLATE2 =
+      "\"%sen/content/articlepdf/%d/%s/\", base_url, year, journal_code";
   
   /*
    * various aspects of an article
@@ -61,27 +61,34 @@ public class RSC2014ArticleIteratorFactory
    */
   
   // Identify groups in the pattern "/article(landing|html|pdf)/(<year>/<journalcode>)/(<doi>).*
-  static final Pattern ABSTRACT_PATTERN = Pattern.compile(
+  protected static final Pattern ABSTRACT_PATTERN = Pattern.compile(
       "/articlelanding/([0-9]{4}/[^/]+)/([^/?&]+)$",
       Pattern.CASE_INSENSITIVE);
   
-  static final Pattern PDF_PATTERN = Pattern.compile(
+  protected static final Pattern PDF_PATTERN = Pattern.compile(
       "/articlepdf/([0-9]{4}/[^/]+)/([^/?&]+)$",
       Pattern.CASE_INSENSITIVE);
   
   // how to change from one form (aspect) of article to another
-  static final String ABSTRACT_REPLACEMENT = "/articlelanding/$1/$2";
-  static final String PDF_REPLACEMENT = "/articlepdf/$1/$2";
+  protected static final String ABSTRACT_REPLACEMENT = "/articlelanding/$1/$2";
+  protected static final String PDF_REPLACEMENT = "/articlepdf/$1/$2";
   
   public Iterator<ArticleFiles> createArticleIterator(
       ArchivalUnit au, MetadataTarget target) throws PluginException {
     
     SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
     
-    builder.setSpec(target,
-        ROOT_TEMPLATE, PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
+    builder.setSpec(target, Arrays.asList(ROOT_TEMPLATE1, ROOT_TEMPLATE2), null);
     
-    // set up pdf or html fulltext to be an aspect that will trigger an ArticleFiles
+    // set up abstract to be an aspect that will trigger an ArticleFiles
+    // NOTE - for the moment this also means it is considered a FULL_TEXT_CU
+    // until this fulltext concept is deprecated
+    // NOTE: pdf will take precedence over abstract
+    builder.addAspect(
+        ABSTRACT_PATTERN, ABSTRACT_REPLACEMENT,
+        ArticleFiles.ROLE_ABSTRACT, ArticleFiles.ROLE_ARTICLE_METADATA);
+    
+    // set up pdf to be an aspect that will trigger an ArticleFiles
     builder.addAspect(
         PDF_PATTERN, PDF_REPLACEMENT,
         ArticleFiles.ROLE_FULL_TEXT_PDF);
@@ -91,15 +98,8 @@ public class RSC2014ArticleIteratorFactory
     //        HTML_PATTERN, HTML_REPLACEMENT,
     //        ArticleFiles.ROLE_FULL_TEXT_HTML);
     
-    // set up abstract to be an aspect that will trigger an ArticleFiles
-    // NOTE - for the moment this also means it is considered a FULL_TEXT_CU
-    // until this fulltext concept is deprecated
-    // NOTE: pdf or html full text will take precedence over abstract
-    builder.addAspect(
-        ABSTRACT_PATTERN, ABSTRACT_REPLACEMENT,
-        ArticleFiles.ROLE_ABSTRACT);
-    
-    builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA,
+    builder.setFullTextFromRoles(
+        ArticleFiles.ROLE_FULL_TEXT_PDF,
         ArticleFiles.ROLE_ABSTRACT);
     
     return builder.getSubTreeArticleIterator();
