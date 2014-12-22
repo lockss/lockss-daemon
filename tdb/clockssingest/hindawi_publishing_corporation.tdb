@@ -711,7 +711,7 @@
     au < manifest ; exists ; 2011 ; Advances in Mechanical Engineering Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Advances in Mechanical Engineering Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Advances in Mechanical Engineering Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Advances in Mechanical Engineering Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Advances in Mechanical Engineering Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -725,7 +725,7 @@
 
     param[journal_id] = amed
 
-    au < testing ; exists ; 2014 ; Advances in Medicine Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Advances in Medicine Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -841,7 +841,7 @@
 
     param[journal_id] = anurs
 
-    au < testing ; exists ; 2014 ; Advances in Nursing Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Advances in Nursing Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -855,7 +855,7 @@
 
     param[journal_id] = aocean
 
-    au < testing ; exists ; 2014 ; Advances in Oceanography Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Advances in Oceanography Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -874,7 +874,7 @@
     au < manifest ; exists ; 2011 ; Advances in Operations Research Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Advances in Operations Research Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Advances in Operations Research Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Advances in Operations Research Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Advances in Operations Research Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -894,7 +894,7 @@
     au < manifest ; exists ; 2011 ; Advances in Optical Technologies Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Advances in Optical Technologies Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Advances in Optical Technologies Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Advances in Optical Technologies Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Advances in Optical Technologies Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -908,7 +908,7 @@
 
     param[journal_id] = ao
 
-    au < testing ; exists ; 2014 ; Advances in Optics Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Advances in Optics Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -929,7 +929,7 @@
     au < manifest ; exists ; 2011 ; Advances in OptoElectronics Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Advances in OptoElectronics Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Advances in OptoElectronics Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Advances in OptoElectronics Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Advances in OptoElectronics Volume 2014 ; 2014 ; 2014 >
 
   }
  
@@ -943,7 +943,7 @@
 
     param[journal_id] = aos
 
-    au < testing ; exists ; 2014 ; Advances in Orthopedic Surgery Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Advances in Orthopedic Surgery Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -960,7 +960,7 @@
     au < manifest ; exists ; 2011 ; Advances in Orthopedics Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Advances in Orthopedics Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Advances in Orthopedics Volume 2013 ; 2013 ; 2013 >
-    au < testing ; exists ; 2014 ; Advances in Orthopedics Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Advances in Orthopedics Volume 2014 ; 2014 ; 2014 >
     
   }
  
@@ -974,7 +974,7 @@
 
     param[journal_id] = aoto
 
-    au < testing ; exists ; 2014 ; Advances in Otolaryngology Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Advances in Otolaryngology Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -988,7 +988,7 @@
 
     param[journal_id] = ap
 
-    au < testing ; exists ; 2014 ; Advances in Pharmaceutics Volume 2014 ; 2014 ; 2014 >
+    au < ready ; exists ; 2014 ; Advances in Pharmaceutics Volume 2014 ; 2014 ; 2014 >
 
   }
 
