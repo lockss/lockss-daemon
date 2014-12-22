@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.109 2014-12-22 20:47:37 wkwilson Exp $
+ * $Id: FollowLinkCrawler.java,v 1.110 2014-12-22 21:15:59 etenbrink Exp $
  */
 
 /*
@@ -211,7 +211,7 @@ public class FollowLinkCrawler extends BaseCrawler {
   protected void setCrawlConfig(Configuration config) {
     super.setCrawlConfig(config);
     
-    // Do *not* requre that maxDepth be greater than refetchDepth.  Plugin
+    // Do *not* require that maxDepth be greater than refetchDepth.  Plugin
     // writers set refetchDepth high to mean infinite.
     maxDepth = config.getInt(PARAM_MAX_CRAWL_DEPTH, DEFAULT_MAX_CRAWL_DEPTH);
 
