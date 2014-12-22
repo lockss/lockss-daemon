@@ -56,15 +56,15 @@
       param[base_url] = http://jbsge.vu.edu.au/ 
       param[journal_id] = jbsge
 
-      au < exists ; exists ; 2006 ; 2006 ; Journal of Business Systems, Governance & Ethics Volume 1 ; 1 >
-      au < exists ; exists ; 2007 ; 2007 ; Journal of Business Systems, Governance & Ethics Volume 2 ; 2 >
-      au < exists ; exists ; 2008 ; 2008 ; Journal of Business Systems, Governance & Ethics Volume 3 ; 3 >
-      au < exists ; exists ; 2009 ; 2009 ; Journal of Business Systems, Governance & Ethics Volume 4 ; 4 >
-      au < exists ; exists ; 2010 ; 2010 ; Journal of Business Systems, Governance & Ethics Volume 5 ; 5 >
-      au < exists ; exists ; 2011 ; 2011 ; Journal of Business Systems, Governance & Ethics Volume 6 ; 6 >
-      au < exists ; exists ; 2012 ; 2012 ; Journal of Business Systems, Governance & Ethics Volume 7 ; 7 >
-      au < exists ; exists ; 2013 ; 2013 ; Journal of Business Systems, Governance & Ethics Volume 8 ; 8 >
-      au < exists ; exists ; 2014 ; 2014 ; Journal of Business Systems, Governance & Ethics Volume 9 ; 9 >
+      au < manifest ; exists ; 2006 ; 2006 ; Journal of Business Systems, Governance & Ethics Volume 1 ; 1 >
+      au < manifest ; exists ; 2007 ; 2007 ; Journal of Business Systems, Governance & Ethics Volume 2 ; 2 >
+      au < manifest ; exists ; 2008 ; 2008 ; Journal of Business Systems, Governance & Ethics Volume 3 ; 3 >
+      au < manifest ; exists ; 2009 ; 2009 ; Journal of Business Systems, Governance & Ethics Volume 4 ; 4 >
+      au < manifest ; exists ; 2010 ; 2010 ; Journal of Business Systems, Governance & Ethics Volume 5 ; 5 >
+      au < manifest ; exists ; 2011 ; 2011 ; Journal of Business Systems, Governance & Ethics Volume 6 ; 6 >
+      au < manifest ; exists ; 2012 ; 2012 ; Journal of Business Systems, Governance & Ethics Volume 7 ; 7 >
+      au < manifest ; exists ; 2013 ; 2013 ; Journal of Business Systems, Governance & Ethics Volume 8 ; 8 >
+      au < manifest ; exists ; 2014 ; 2014 ; Journal of Business Systems, Governance & Ethics Volume 9 ; 9 >
       
   }
 
@@ -79,12 +79,12 @@
       param[base_url] = http://offsetartsjournal.vu.edu.au/ 
       param[journal_id] = offset
 
-      au < exists ; exists ; 2009 ; 2009 ; Offset Volume 9 ; 9 >
-      au < exists ; exists ; 2010 ; 2010 ; Offset Volume 10 ; 10 >
-      au < exists ; exists ; 2011 ; 2011 ; Offset Volume 11 ; 11 >
-      au < exists ; exists ; 2012 ; 2012 ; Offset Volume 12 ; 12 >
-      au < exists ; exists ; 2013 ; 2013 ; Offset Volume 13 ; 13 >
-      au < exists ; exists ; 2014 ; 2014 ; Offset Volume 14 ; 14 >
+      au < manifest ; exists ; 2009 ; 2009 ; Offset Volume 9 ; 9 >
+      au < manifest ; exists ; 2010 ; 2010 ; Offset Volume 10 ; 10 >
+      au < manifest ; exists ; 2011 ; 2011 ; Offset Volume 11 ; 11 >
+      au < manifest ; exists ; 2012 ; 2012 ; Offset Volume 12 ; 12 >
+      au < manifest ; exists ; 2013 ; 2013 ; Offset Volume 13 ; 13 >
+      au < manifest ; exists ; 2014 ; 2014 ; Offset Volume 14 ; 14 >
       
   }
 

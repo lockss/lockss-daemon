@@ -786,7 +786,7 @@
       au < finished ; crawling ; 2011 ; Alternatives: Global, Local, Political Volume 36 ; 36 ; >
       au < finished ; frozen ; 2012 ; Alternatives: Global, Local, Political Volume 37 ; 37 ; >
       au < crawling ; exists ; 2013 ; Alternatives: Global, Local, Political Volume 38 ; 38 ; >
-      au < expected ; exists ; 2014 ; Alternatives: Global, Local, Political Volume 39 ; 39 ; >
+      au < manifest ; exists ; 2014 ; Alternatives: Global, Local, Political Volume 39 ; 39 ; >
       au < expected ; exists ; 2015 ; Alternatives: Global, Local, Political Volume 40 ; 40 ; >
 
     }
@@ -2377,7 +2377,7 @@
       au < crawling ; exists ; 2012 ; Annals of Pharmacotherapy Volume 46 ; 46 ; >
       au < crawling ; exists ; 2013 ; Annals of Pharmacotherapy Volume 47 ; 47 ; >
       au < manifest ; exists ; 2014 ; Annals of Pharmacotherapy Volume 48 ; 48 ; >
-      au < expected ; exists ; 2015 ; Annals of Pharmacotherapy Volume 49 ; 49 ; >
+      au < manifest ; exists ; 2015 ; Annals of Pharmacotherapy Volume 49 ; 49 ; >
 
     }
 
@@ -2395,7 +2395,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < manifest ; exists ; 2014 ; Annals of Otology, Rhinology & Laryngology Volume 123 ; 123 ; >
-      au < expected ; exists ; 2015 ; Annals of Otology, Rhinology & Laryngology Volume 124 ; 124 ; >
+      au < manifest ; exists ; 2015 ; Annals of Otology, Rhinology & Laryngology Volume 124 ; 124 ; >
 
   }
 
@@ -2592,7 +2592,7 @@
       au < finished ; frozen ; 2012 ; Armed Forces & Society Volume 38 ; 38 ; >
       au < crawling ; exists ; 2013 ; Armed Forces & Society Volume 39 ; 39 ; >
       au < manifest ; exists ; 2014 ; Armed Forces & Society Volume 40 ; 40 ; >
-      au < expected ; exists ; 2015 ; Armed Forces & Society Volume 41 ; 41 ; >
+      au < manifest ; exists ; 2015 ; Armed Forces & Society Volume 41 ; 41 ; >
 
     }
 
@@ -2652,18 +2652,18 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://aan.sagepub.com/
 
-    au < exists ; exists ; 2004 ; Asian Cardiovascular and Thoracic Annals Volume 12 ; 12 ; >
-    au < exists ; exists ; 2005 ; Asian Cardiovascular and Thoracic Annals Volume 13 ; 13 ; >
-    au < exists ; exists ; 2006 ; Asian Cardiovascular and Thoracic Annals Volume 14 ; 14 ; >
-    au < exists ; exists ; 2007 ; Asian Cardiovascular and Thoracic Annals Volume 15 ; 15 ; >
-    au < exists ; exists ; 2008 ; Asian Cardiovascular and Thoracic Annals Volume 16 ; 16 ; >
-    au < exists ; exists ; 2009 ; Asian Cardiovascular and Thoracic Annals Volume 17 ; 17 ; >
-    au < exists ; exists ; 2010 ; Asian Cardiovascular and Thoracic Annals Volume 18 ; 18 ; >
-    au < exists ; exists ; 2011 ; Asian Cardiovascular and Thoracic Annals Volume 19 ; 19 ; >
-    au < exists ; exists ; 2012 ; Asian Cardiovascular and Thoracic Annals Volume 20 ; 20 ; >
+    au < manifest ; exists ; 2004 ; Asian Cardiovascular and Thoracic Annals Volume 12 ; 12 ; >
+    au < manifest ; exists ; 2005 ; Asian Cardiovascular and Thoracic Annals Volume 13 ; 13 ; >
+    au < manifest ; exists ; 2006 ; Asian Cardiovascular and Thoracic Annals Volume 14 ; 14 ; >
+    au < manifest ; exists ; 2007 ; Asian Cardiovascular and Thoracic Annals Volume 15 ; 15 ; >
+    au < manifest ; exists ; 2008 ; Asian Cardiovascular and Thoracic Annals Volume 16 ; 16 ; >
+    au < manifest ; exists ; 2009 ; Asian Cardiovascular and Thoracic Annals Volume 17 ; 17 ; >
+    au < manifest ; exists ; 2010 ; Asian Cardiovascular and Thoracic Annals Volume 18 ; 18 ; >
+    au < manifest ; exists ; 2011 ; Asian Cardiovascular and Thoracic Annals Volume 19 ; 19 ; >
+    au < manifest ; exists ; 2012 ; Asian Cardiovascular and Thoracic Annals Volume 20 ; 20 ; >
     au < manifest ; exists ; 2013 ; Asian Cardiovascular and Thoracic Annals Volume 21 ; 21 ; >
-    au < expected ; exists ; 2014 ; Asian Cardiovascular and Thoracic Annals Volume 22 ; 22 ; >
-    au < expected ; exists ; 2015 ; Asian Cardiovascular and Thoracic Annals Volume 23 ; 23 ; >
+    au < manifest ; exists ; 2014 ; Asian Cardiovascular and Thoracic Annals Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2015 ; Asian Cardiovascular and Thoracic Annals Volume 23 ; 23 ; >
 
   }
     
@@ -2928,7 +2928,7 @@
       au < finished ; crawling ; 2012 ; Assessment Volume 19 ; 19 ; >
       au < crawling ; exists ; 2013 ; Assessment Volume 20 ; 20 ; >
       au < manifest ; exists ; 2014 ; Assessment Volume 21 ; 21 ; >
-      au < expected ; exists ; 2015 ; Assessment Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2015 ; Assessment Volume 22 ; 22 ; >
 
     }
 
@@ -3126,7 +3126,7 @@
         au < finished ; crawling ; 2012 ; Australian & New Zealand Journal of Psychiatry Volume 46 ; 46 ; >
         au < crawling ; exists ; 2013 ; Australian & New Zealand Journal of Psychiatry Volume 47 ; 47 ; >
         au < manifest ; exists ; 2014 ; Australian & New Zealand Journal of Psychiatry Volume 48 ; 48 ; >
-        au < expected ; exists ; 2015 ; Australian & New Zealand Journal of Psychiatry Volume 49 ; 49 ; >
+        au < manifest ; exists ; 2015 ; Australian & New Zealand Journal of Psychiatry Volume 49 ; 49 ; >
 
     }
 
@@ -3232,7 +3232,7 @@
       au < finished ; crawling ; 2012 ; Autism Volume 16 ; 16 ; >
       au < crawling ; exists ; 2013 ; Autism Volume 17 ; 17 ; >
       au < manifest ; exists ; 2014 ; Autism Volume 18 ; 18 ; >
-      au < expected ; exists ; 2015 ; Autism Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2015 ; Autism Volume 19 ; 19 ; >
 
     }
 
@@ -3684,83 +3684,83 @@
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://bjo.sagepub.com/
         
-        au < exists ; exists ; 1938 ; The British Journal of Occupational Therapy Volume 1 ; 1 ; >
-        au < exists ; exists ; 1939 ; The British Journal of Occupational Therapy Volume 2 ; 2 ; >
-        au < exists ; exists ; 1940 ; The British Journal of Occupational Therapy Volume 3 ; 3 ; >
-        au < exists ; exists ; 1941 ; The British Journal of Occupational Therapy Volume 4 ; 4 ; >
-        au < exists ; exists ; 1942 ; The British Journal of Occupational Therapy Volume 5 ; 5 ; >
-        au < exists ; exists ; 1943 ; The British Journal of Occupational Therapy Volume 6 ; 6 ; >
-        au < exists ; exists ; 1944 ; The British Journal of Occupational Therapy Volume 7 ; 7 ; >
-        au < exists ; exists ; 1945 ; The British Journal of Occupational Therapy Volume 8 ; 8 ; >
-        au < exists ; exists ; 1946 ; The British Journal of Occupational Therapy Volume 9 ; 9 ; >
-        au < exists ; exists ; 1947 ; The British Journal of Occupational Therapy Volume 10 ; 10 ; >
-        au < exists ; exists ; 1948 ; The British Journal of Occupational Therapy Volume 11 ; 11 ; >
-        au < exists ; exists ; 1949 ; The British Journal of Occupational Therapy Volume 12 ; 12 ; >
-        au < exists ; exists ; 1950 ; The British Journal of Occupational Therapy Volume 13 ; 13 ; >
-        au < exists ; exists ; 1951 ; The British Journal of Occupational Therapy Volume 14 ; 14 ; >
-        au < exists ; exists ; 1952 ; The British Journal of Occupational Therapy Volume 15 ; 15 ; >
-        au < exists ; exists ; 1953 ; The British Journal of Occupational Therapy Volume 16 ; 16 ; >
-        au < exists ; exists ; 1954 ; The British Journal of Occupational Therapy Volume 17 ; 17 ; >
-        au < exists ; exists ; 1955 ; The British Journal of Occupational Therapy Volume 18 ; 18 ; >
-        au < exists ; exists ; 1956 ; The British Journal of Occupational Therapy Volume 19 ; 19 ; >
-        au < exists ; exists ; 1957 ; The British Journal of Occupational Therapy Volume 20 ; 20 ; >
-        au < exists ; exists ; 1958 ; The British Journal of Occupational Therapy Volume 21 ; 21 ; >
-        au < exists ; exists ; 1959 ; The British Journal of Occupational Therapy Volume 22 ; 22 ; >
-        au < exists ; exists ; 1960 ; The British Journal of Occupational Therapy Volume 23 ; 23 ; >
-        au < exists ; exists ; 1961 ; The British Journal of Occupational Therapy Volume 24 ; 24 ; >
-        au < exists ; exists ; 1962 ; The British Journal of Occupational Therapy Volume 25 ; 25 ; >
-        au < exists ; exists ; 1963 ; The British Journal of Occupational Therapy Volume 26 ; 26 ; >
-        au < exists ; exists ; 1964 ; The British Journal of Occupational Therapy Volume 27 ; 27 ; >
-        au < exists ; exists ; 1965 ; The British Journal of Occupational Therapy Volume 28 ; 28 ; >
-        au < exists ; exists ; 1966 ; The British Journal of Occupational Therapy Volume 29 ; 29 ; >
-        au < exists ; exists ; 1967 ; The British Journal of Occupational Therapy Volume 30 ; 30 ; >
-        au < exists ; exists ; 1968 ; The British Journal of Occupational Therapy Volume 31 ; 31 ; >
-        au < exists ; exists ; 1969 ; The British Journal of Occupational Therapy Volume 32 ; 32 ; >
-        au < exists ; exists ; 1970 ; The British Journal of Occupational Therapy Volume 33 ; 33 ; >
-        au < exists ; exists ; 1971 ; The British Journal of Occupational Therapy Volume 34 ; 34 ; >
-        au < exists ; exists ; 1972 ; The British Journal of Occupational Therapy Volume 35 ; 35 ; >
-        au < exists ; exists ; 1973 ; The British Journal of Occupational Therapy Volume 36 ; 36 ; >
-        au < exists ; exists ; 1974 ; The British Journal of Occupational Therapy Volume 37 ; 37 ; >
-        au < exists ; exists ; 1975 ; The British Journal of Occupational Therapy Volume 38 ; 38 ; >
-        au < exists ; exists ; 1976 ; The British Journal of Occupational Therapy Volume 39 ; 39 ; >
-        au < exists ; exists ; 1977 ; The British Journal of Occupational Therapy Volume 40 ; 40 ; >
-        au < exists ; exists ; 1978 ; The British Journal of Occupational Therapy Volume 41 ; 41 ; >
-        au < exists ; exists ; 1979 ; The British Journal of Occupational Therapy Volume 42 ; 42 ; >
-        au < exists ; exists ; 1980 ; The British Journal of Occupational Therapy Volume 43 ; 43 ; >
-        au < exists ; exists ; 1981 ; The British Journal of Occupational Therapy Volume 44 ; 44 ; >
-        au < exists ; exists ; 1982 ; The British Journal of Occupational Therapy Volume 45 ; 45 ; >
-        au < exists ; exists ; 1983 ; The British Journal of Occupational Therapy Volume 46 ; 46 ; >
-        au < exists ; exists ; 1984 ; The British Journal of Occupational Therapy Volume 47 ; 47 ; >
-        au < exists ; exists ; 1985 ; The British Journal of Occupational Therapy Volume 48 ; 48 ; >
-        au < exists ; exists ; 1986 ; The British Journal of Occupational Therapy Volume 49 ; 49 ; >
-        au < exists ; exists ; 1987 ; The British Journal of Occupational Therapy Volume 50 ; 50 ; >
-        au < exists ; exists ; 1988 ; The British Journal of Occupational Therapy Volume 51 ; 51 ; >
-        au < exists ; exists ; 1989 ; The British Journal of Occupational Therapy Volume 52 ; 52 ; >
-        au < exists ; exists ; 1990 ; The British Journal of Occupational Therapy Volume 53 ; 53 ; >
-        au < exists ; exists ; 1991 ; The British Journal of Occupational Therapy Volume 54 ; 54 ; >
-        au < exists ; exists ; 1992 ; The British Journal of Occupational Therapy Volume 55 ; 55 ; >
-        au < exists ; exists ; 1993 ; The British Journal of Occupational Therapy Volume 56 ; 56 ; >
-        au < exists ; exists ; 1994 ; The British Journal of Occupational Therapy Volume 57 ; 57 ; >
-        au < exists ; exists ; 1995 ; The British Journal of Occupational Therapy Volume 58 ; 58 ; >
-        au < exists ; exists ; 1996 ; The British Journal of Occupational Therapy Volume 59 ; 59 ; >
-        au < exists ; exists ; 1997 ; The British Journal of Occupational Therapy Volume 60 ; 60 ; >
-        au < exists ; exists ; 1998 ; The British Journal of Occupational Therapy Volume 61 ; 61 ; >
-        au < exists ; exists ; 1999 ; The British Journal of Occupational Therapy Volume 62 ; 62 ; >
-        au < exists ; exists ; 2000 ; The British Journal of Occupational Therapy Volume 63 ; 63 ; >
-        au < exists ; exists ; 2001 ; The British Journal of Occupational Therapy Volume 64 ; 64 ; >
-        au < exists ; exists ; 2002 ; The British Journal of Occupational Therapy Volume 65 ; 65 ; >
-        au < exists ; exists ; 2003 ; The British Journal of Occupational Therapy Volume 66 ; 66 ; >
-        au < exists ; exists ; 2004 ; The British Journal of Occupational Therapy Volume 67 ; 67 ; >
-        au < exists ; exists ; 2005 ; The British Journal of Occupational Therapy Volume 68 ; 68 ; >
-        au < exists ; exists ; 2006 ; The British Journal of Occupational Therapy Volume 69 ; 69 ; >
-        au < exists ; exists ; 2007 ; The British Journal of Occupational Therapy Volume 70 ; 70 ; >
-        au < exists ; exists ; 2008 ; The British Journal of Occupational Therapy Volume 71 ; 71 ; >
-        au < exists ; exists ; 2009 ; The British Journal of Occupational Therapy Volume 72 ; 72 ; >
-        au < exists ; exists ; 2010 ; The British Journal of Occupational Therapy Volume 73 ; 73 ; >
-        au < exists ; exists ; 2011 ; The British Journal of Occupational Therapy Volume 74 ; 74 ; >
-        au < exists ; exists ; 2012 ; The British Journal of Occupational Therapy Volume 75 ; 75 ; >
+        au < manifest ; exists ; 1938 ; The British Journal of Occupational Therapy Volume 1 ; 1 ; >
+        au < manifest ; exists ; 1939 ; The British Journal of Occupational Therapy Volume 2 ; 2 ; >
+        au < manifest ; exists ; 1940 ; The British Journal of Occupational Therapy Volume 3 ; 3 ; >
+        au < manifest ; exists ; 1941 ; The British Journal of Occupational Therapy Volume 4 ; 4 ; >
+        au < manifest ; exists ; 1942 ; The British Journal of Occupational Therapy Volume 5 ; 5 ; >
+        au < manifest ; exists ; 1943 ; The British Journal of Occupational Therapy Volume 6 ; 6 ; >
+        au < manifest ; exists ; 1944 ; The British Journal of Occupational Therapy Volume 7 ; 7 ; >
+        au < manifest ; exists ; 1945 ; The British Journal of Occupational Therapy Volume 8 ; 8 ; >
+        au < manifest ; exists ; 1946 ; The British Journal of Occupational Therapy Volume 9 ; 9 ; >
+        au < manifest ; exists ; 1947 ; The British Journal of Occupational Therapy Volume 10 ; 10 ; >
+        au < manifest ; exists ; 1948 ; The British Journal of Occupational Therapy Volume 11 ; 11 ; >
+        au < manifest ; exists ; 1949 ; The British Journal of Occupational Therapy Volume 12 ; 12 ; >
+        au < manifest ; exists ; 1950 ; The British Journal of Occupational Therapy Volume 13 ; 13 ; >
+        au < manifest ; exists ; 1951 ; The British Journal of Occupational Therapy Volume 14 ; 14 ; >
+        au < manifest ; exists ; 1952 ; The British Journal of Occupational Therapy Volume 15 ; 15 ; >
+        au < manifest ; exists ; 1953 ; The British Journal of Occupational Therapy Volume 16 ; 16 ; >
+        au < manifest ; exists ; 1954 ; The British Journal of Occupational Therapy Volume 17 ; 17 ; >
+        au < manifest ; exists ; 1955 ; The British Journal of Occupational Therapy Volume 18 ; 18 ; >
+        au < manifest ; exists ; 1956 ; The British Journal of Occupational Therapy Volume 19 ; 19 ; >
+        au < manifest ; exists ; 1957 ; The British Journal of Occupational Therapy Volume 20 ; 20 ; >
+        au < manifest ; exists ; 1958 ; The British Journal of Occupational Therapy Volume 21 ; 21 ; >
+        au < manifest ; exists ; 1959 ; The British Journal of Occupational Therapy Volume 22 ; 22 ; >
+        au < manifest ; exists ; 1960 ; The British Journal of Occupational Therapy Volume 23 ; 23 ; >
+        au < manifest ; exists ; 1961 ; The British Journal of Occupational Therapy Volume 24 ; 24 ; >
+        au < manifest ; exists ; 1962 ; The British Journal of Occupational Therapy Volume 25 ; 25 ; >
+        au < manifest ; exists ; 1963 ; The British Journal of Occupational Therapy Volume 26 ; 26 ; >
+        au < manifest ; exists ; 1964 ; The British Journal of Occupational Therapy Volume 27 ; 27 ; >
+        au < manifest ; exists ; 1965 ; The British Journal of Occupational Therapy Volume 28 ; 28 ; >
+        au < manifest ; exists ; 1966 ; The British Journal of Occupational Therapy Volume 29 ; 29 ; >
+        au < manifest ; exists ; 1967 ; The British Journal of Occupational Therapy Volume 30 ; 30 ; >
+        au < manifest ; exists ; 1968 ; The British Journal of Occupational Therapy Volume 31 ; 31 ; >
+        au < manifest ; exists ; 1969 ; The British Journal of Occupational Therapy Volume 32 ; 32 ; >
+        au < manifest ; exists ; 1970 ; The British Journal of Occupational Therapy Volume 33 ; 33 ; >
+        au < manifest ; exists ; 1971 ; The British Journal of Occupational Therapy Volume 34 ; 34 ; >
+        au < manifest ; exists ; 1972 ; The British Journal of Occupational Therapy Volume 35 ; 35 ; >
+        au < manifest ; exists ; 1973 ; The British Journal of Occupational Therapy Volume 36 ; 36 ; >
+        au < manifest ; exists ; 1974 ; The British Journal of Occupational Therapy Volume 37 ; 37 ; >
+        au < manifest ; exists ; 1975 ; The British Journal of Occupational Therapy Volume 38 ; 38 ; >
+        au < manifest ; exists ; 1976 ; The British Journal of Occupational Therapy Volume 39 ; 39 ; >
+        au < manifest ; exists ; 1977 ; The British Journal of Occupational Therapy Volume 40 ; 40 ; >
+        au < manifest ; exists ; 1978 ; The British Journal of Occupational Therapy Volume 41 ; 41 ; >
+        au < manifest ; exists ; 1979 ; The British Journal of Occupational Therapy Volume 42 ; 42 ; >
+        au < manifest ; exists ; 1980 ; The British Journal of Occupational Therapy Volume 43 ; 43 ; >
+        au < manifest ; exists ; 1981 ; The British Journal of Occupational Therapy Volume 44 ; 44 ; >
+        au < manifest ; exists ; 1982 ; The British Journal of Occupational Therapy Volume 45 ; 45 ; >
+        au < manifest ; exists ; 1983 ; The British Journal of Occupational Therapy Volume 46 ; 46 ; >
+        au < manifest ; exists ; 1984 ; The British Journal of Occupational Therapy Volume 47 ; 47 ; >
+        au < manifest ; exists ; 1985 ; The British Journal of Occupational Therapy Volume 48 ; 48 ; >
+        au < manifest ; exists ; 1986 ; The British Journal of Occupational Therapy Volume 49 ; 49 ; >
+        au < manifest ; exists ; 1987 ; The British Journal of Occupational Therapy Volume 50 ; 50 ; >
+        au < manifest ; exists ; 1988 ; The British Journal of Occupational Therapy Volume 51 ; 51 ; >
+        au < manifest ; exists ; 1989 ; The British Journal of Occupational Therapy Volume 52 ; 52 ; >
+        au < manifest ; exists ; 1990 ; The British Journal of Occupational Therapy Volume 53 ; 53 ; >
+        au < manifest ; exists ; 1991 ; The British Journal of Occupational Therapy Volume 54 ; 54 ; >
+        au < manifest ; exists ; 1992 ; The British Journal of Occupational Therapy Volume 55 ; 55 ; >
+        au < manifest ; exists ; 1993 ; The British Journal of Occupational Therapy Volume 56 ; 56 ; >
+        au < manifest ; exists ; 1994 ; The British Journal of Occupational Therapy Volume 57 ; 57 ; >
+        au < manifest ; exists ; 1995 ; The British Journal of Occupational Therapy Volume 58 ; 58 ; >
+        au < manifest ; exists ; 1996 ; The British Journal of Occupational Therapy Volume 59 ; 59 ; >
+        au < manifest ; exists ; 1997 ; The British Journal of Occupational Therapy Volume 60 ; 60 ; >
+        au < manifest ; exists ; 1998 ; The British Journal of Occupational Therapy Volume 61 ; 61 ; >
+        au < manifest ; exists ; 1999 ; The British Journal of Occupational Therapy Volume 62 ; 62 ; >
+        au < manifest ; exists ; 2000 ; The British Journal of Occupational Therapy Volume 63 ; 63 ; >
+        au < manifest ; exists ; 2001 ; The British Journal of Occupational Therapy Volume 64 ; 64 ; >
+        au < manifest ; exists ; 2002 ; The British Journal of Occupational Therapy Volume 65 ; 65 ; >
+        au < manifest ; exists ; 2003 ; The British Journal of Occupational Therapy Volume 66 ; 66 ; >
+        au < manifest ; exists ; 2004 ; The British Journal of Occupational Therapy Volume 67 ; 67 ; >
+        au < manifest ; exists ; 2005 ; The British Journal of Occupational Therapy Volume 68 ; 68 ; >
+        au < manifest ; exists ; 2006 ; The British Journal of Occupational Therapy Volume 69 ; 69 ; >
+        au < manifest ; exists ; 2007 ; The British Journal of Occupational Therapy Volume 70 ; 70 ; >
+        au < manifest ; exists ; 2008 ; The British Journal of Occupational Therapy Volume 71 ; 71 ; >
+        au < manifest ; exists ; 2009 ; The British Journal of Occupational Therapy Volume 72 ; 72 ; >
+        au < manifest ; exists ; 2010 ; The British Journal of Occupational Therapy Volume 73 ; 73 ; >
+        au < manifest ; exists ; 2011 ; The British Journal of Occupational Therapy Volume 74 ; 74 ; >
+        au < manifest ; exists ; 2012 ; The British Journal of Occupational Therapy Volume 75 ; 75 ; >
         au < manifest ; exists ; 2013 ; The British Journal of Occupational Therapy Volume 76 ; 76 ; >
-        au < exists ; exists ; 2014 ; The British Journal of Occupational Therapy Volume 77 ; 77 ; >
+        au < manifest ; exists ; 2014 ; The British Journal of Occupational Therapy Volume 77 ; 77 ; >
         au < expected ; exists ; 2015 ; The British Journal of Occupational Therapy Volume 78 ; 78 ; >
   }
 
@@ -3785,7 +3785,7 @@
         au < zapped ; finished ; 2011 ; British Journal of Pain Volume 5 ; 5 ; >
         au < zapped ; finished ; 2012 ; British Journal of Pain Volume 6 ; 6 ; >
         au < manifest ; exists ; 2013 ; British Journal of Pain Volume 7 ; 7 ; >
-        au < expected ; exists ; 2014 ; British Journal of Pain Volume 8 ; 8 ; >
+        au < manifest ; exists ; 2014 ; British Journal of Pain Volume 8 ; 8 ; >
         au < expected ; exists ; 2015 ; British Journal of Pain Volume 9 ; 9 ; >
 
       }
@@ -5442,7 +5442,7 @@
       au < finished ; crawling ; 2012 ; Clinical Child Psychology and Psychiatry Volume 17 ; 17 ; >
       au < crawling ; exists ; 2013 ; Clinical Child Psychology and Psychiatry Volume 18 ; 18 ; >
       au < manifest ; exists ; 2014 ; Clinical Child Psychology and Psychiatry Volume 19 ; 19 ; >
-      au < expected ; exists ; 2015 ; Clinical Child Psychology and Psychiatry Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2015 ; Clinical Child Psychology and Psychiatry Volume 20 ; 20 ; >
 
     }
 
@@ -7093,7 +7093,7 @@
       au < finished ; frozen ; 2012 ; Criminal Justice and Behavior Volume 39 ; 39 ; >
       au < crawling ; exists ; 2013 ; Criminal Justice and Behavior Volume 40 ; 40 ; >
       au < manifest ; exists ; 2014 ; Criminal Justice and Behavior Volume 41 ; 41 ; >
-      au < expected ; exists ; 2015 ; Criminal Justice and Behavior Volume 42 ; 42 ; >
+      au < manifest ; exists ; 2015 ; Criminal Justice and Behavior Volume 42 ; 42 ; >
 
     }
 
@@ -7945,7 +7945,7 @@
       au < finished ; crawling ; 2012 ; Current Sociology Volume 60 ; 60 ; >
       au < crawling ; exists ; 2013 ; Current Sociology Volume 61 ; 61 ; >
       au < manifest ; exists ; 2014 ; Current Sociology Volume 62 ; 62 ; >
-      au < expected ; exists ; 2015 ; Current Sociology Volume 63 ; 63 ; >
+      au < manifest ; exists ; 2015 ; Current Sociology Volume 63 ; 63 ; >
 
     }
 
@@ -8343,7 +8343,7 @@
       au < finished ; crawling ; 2012 ; Discourse & Society Volume 23 ; 23 ; >
       au < crawling ; exists ; 2013 ; Discourse & Society Volume 24 ; 24 ; >
       au < manifest ; exists ; 2014 ; Discourse & Society Volume 25 ; 25 ; >
-      au < expected ; exists ; 2015 ; Discourse & Society Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2015 ; Discourse & Society Volume 26 ; 26 ; >
 
     }
 
@@ -8502,7 +8502,7 @@
       au < exists ; exists ; 2011 ; E-Learning and Digital Media Volume 8 ; 8 ; >
       au < exists ; exists ; 2012 ; E-Learning and Digital Media Volume 9 ; 9 ; >
       au < manifest ; exists ; 2013 ; E-Learning and Digital Media Volume 10 ; 10 ; >
-      au < exists ; exists ; 2014 ; E-Learning and Digital Media Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2014 ; E-Learning and Digital Media Volume 11 ; 11 ; >
       au < expected ; exists ; 2015 ; E-Learning and Digital Media Volume 12 ; 12 ; >
 
   }
@@ -9691,7 +9691,7 @@
       au < exists ; exists ; 2011 ; European Educational Research Journal Volume 10 ; 10 ; >
       au < exists ; exists ; 2012 ; European Educational Research Journal Volume 11 ; 11 ; >
       au < manifest ; exists ; 2013 ; European Educational Research Journal Volume 12 ; 12 ; >
-      au < exists ; exists ; 2014 ; European Educational Research Journal Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2014 ; European Educational Research Journal Volume 13 ; 13 ; >
       au < expected ; exists ; 2015 ; European Educational Research Journal Volume 14 ; 14 ; >
 
   }
@@ -9783,7 +9783,7 @@
       au < finished ; frozen ; 2012 ; European History Quarterly Volume 42 ; 42 ; >
       au < crawling ; exists ; 2013 ; European History Quarterly Volume 43 ; 43 ; >
       au < manifest ; exists ; 2014 ; European History Quarterly Volume 44 ; 44 ; >
-      au < expected ; exists ; 2015 ; European History Quarterly Volume 45 ; 45 ; >
+      au < manifest ; exists ; 2015 ; European History Quarterly Volume 45 ; 45 ; >
 
     }
 
@@ -9922,7 +9922,7 @@
         au < finished ; frozen ; 2012 ; European Journal of Preventive Cardiology Volume 19 ; 19 ; >
         au < crawling ; exists ; 2013 ; European Journal of Preventive Cardiology Volume 20 ; 20 ; >
         au < manifest ; exists ; 2014 ; European Journal of Preventive Cardiology Volume 21 ; 21 ; >
-        au < expected ; exists ; 2015 ; European Journal of Preventive Cardiology Volume 22 ; 22 ; >
+        au < manifest ; exists ; 2015 ; European Journal of Preventive Cardiology Volume 22 ; 22 ; >
 
       }
 
@@ -10022,7 +10022,7 @@
       au < finished ; frozen ; 2012 ; European Journal of Criminology Volume 9 ; 9 ; >
       au < crawling ; exists ; 2013 ; European Journal of Criminology Volume 10 ; 10 ; >
       au < manifest ; exists ; 2014 ; European Journal of Criminology Volume 11 ; 11 ; >
-      au < expected ; exists ; 2015 ; European Journal of Criminology Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2015 ; European Journal of Criminology Volume 12 ; 12 ; >
 
     }
 
@@ -12312,7 +12312,7 @@
       au < finished ; crawling ; 2012 ; Group Processes & Intergroup Relations Volume 15 ; 15 ; >
       au < crawling ; exists ; 2013 ; Group Processes & Intergroup Relations Volume 16 ; 16 ; >
       au < manifest ; exists ; 2014 ; Group Processes & Intergroup Relations Volume 17 ; 17 ; >
-      au < expected ; exists ; 2015 ; Group Processes & Intergroup Relations Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2015 ; Group Processes & Intergroup Relations Volume 18 ; 18 ; >
 
     }
 
@@ -12667,7 +12667,7 @@
       au < finished ; crawling ; 2012 ; Health: An Interdisciplinary Journal for the Social Study of Health, Illness and Medicine Volume 16 ; 16 ; >
       au < crawling ; exists ; 2013 ; Health: An Interdisciplinary Journal for the Social Study of Health, Illness and Medicine Volume 17 ; 17 ; >
       au < manifest ; exists ; 2014 ; Health: An Interdisciplinary Journal for the Social Study of Health, Illness and Medicine Volume 18 ; 18 ; >
-      au < expected ; exists ; 2015 ; Health: An Interdisciplinary Journal for the Social Study of Health, Illness and Medicine Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2015 ; Health: An Interdisciplinary Journal for the Social Study of Health, Illness and Medicine Volume 19 ; 19 ; >
 
     }
 
@@ -13180,7 +13180,7 @@
       au < finished ; crawling ; 2012 ; Human & Experimental Toxicology Volume 31 ; 31 ; >
       au < crawling ; exists ; 2013 ; Human & Experimental Toxicology Volume 32 ; 32 ; >
       au < manifest ; exists ; 2014 ; Human & Experimental Toxicology Volume 33 ; 33 ; >
-      au < expected ; exists ; 2015 ; Human & Experimental Toxicology Volume 34 ; 34 ; >
+      au < manifest ; exists ; 2015 ; Human & Experimental Toxicology Volume 34 ; 34 ; >
 
     }
 
@@ -13384,7 +13384,7 @@
       au < finished ; crawling ; 2012 ; Human Relations Volume 65 ; 65 ; >
       au < crawling ; exists ; 2013 ; Human Relations Volume 66 ; 66 ; >
       au < manifest ; exists ; 2014 ; Human Relations Volume 67 ; 67 ; >
-      au < expected ; exists ; 2015 ; Human Relations Volume 68 ; 68 ; >
+      au < manifest ; exists ; 2015 ; Human Relations Volume 68 ; 68 ; >
 
     }
 
@@ -14486,7 +14486,7 @@
       au < finished ; crawling ; 2012 ; International Journal of Behavioral Development Volume 36 ; 36 ; >
       au < crawling ; exists ; 2013 ; International Journal of Behavioral Development Volume 37 ; 37 ; >
       au < manifest ; exists ; 2014 ; International Journal of Behavioral Development Volume 38 ; 38 ; >
-      au < expected ; exists ; 2015 ; International Journal of Behavioral Development Volume 39 ; 39 ; >
+      au < manifest ; exists ; 2015 ; International Journal of Behavioral Development Volume 39 ; 39 ; >
 
     }
 
@@ -16101,7 +16101,7 @@
       au < finished ; frozen ; 2012 ; International Sociology Volume 27 ; 27 ; >
       au < crawling ; exists ; 2013 ; International Sociology Volume 28 ; 28 ; >
       au < manifest ; exists ; 2014 ; International Sociology Volume 29 ; 29 ; >
-      au < expected ; exists ; 2015 ; International Sociology Volume 30 ; 30 ; >
+      au < manifest ; exists ; 2015 ; International Sociology Volume 30 ; 30 ; >
 
     }
 
@@ -17076,7 +17076,7 @@
       au < finished ; crawling ; 2012 ; Journal of Attention Disorders Volume 16 ; 16 ; >
       au < crawling ; exists ; 2013 ; Journal of Attention Disorders Volume 17 ; 17 ; >
       au < manifest ; exists ; 2014 ; Journal of Attention Disorders Volume 18 ; 18 ; >
-      au < expected ; exists ; 2015 ; Journal of Attention Disorders Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2015 ; Journal of Attention Disorders Volume 19 ; 19 ; >
 
     }
 
@@ -17670,7 +17670,7 @@
     {
       pluginSuffix = ClockssHighWirePressH20Plugin
       au < manifest ; exists ; 2014 ; International Journal of Business Communication Volume 51 ; 51 ; >
-      au < expected ; exists ; 2015 ; International Journal of Business Communication Volume 52 ; 52 ; >
+      au < manifest ; exists ; 2015 ; International Journal of Business Communication Volume 52 ; 52 ; >
 
     }
 
@@ -17967,7 +17967,7 @@
       au < finished ; frozen ; 2012 ; Journal of Cellular Plastics Volume 48 ; 48 ; >
       au < crawling ; exists ; 2013 ; Journal of Cellular Plastics Volume 49 ; 49 ; >
       au < manifest ; exists ; 2014 ; Journal of Cellular Plastics Volume 50 ; 50 ; >
-      au < expected ; exists ; 2015 ; Journal of Cellular Plastics Volume 51 ; 51 ; >
+      au < manifest ; exists ; 2015 ; Journal of Cellular Plastics Volume 51 ; 51 ; >
 
     }
 
@@ -18994,7 +18994,7 @@
       au < finished ; crawling ; 2012 ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 9 ; 9 ; >
       au < crawling ; exists ; 2013 ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 10 ; 10 ; >
       au < manifest ; exists ; 2014 ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 11 ; 11 ; >
-      au < expected ; exists ; 2015 ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2015 ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 12 ; 12 ; >
 
     }
 
@@ -19141,7 +19141,7 @@
       au < finished ; frozen ; 2012 ; Journal of Dental Research Volume 91 ; 91 ; >
       au < crawling ; exists ; 2013 ; Journal of Dental Research Volume 92 ; 92 ; >
       au < manifest ; exists ; 2014 ; Journal of Dental Research Volume 93 ; 93 ; >
-      au < expected ; exists ; 2015 ; Journal of Dental Research Volume 94 ; 94 ; >
+      au < manifest ; exists ; 2015 ; Journal of Dental Research Volume 94 ; 94 ; >
 
     }
 
@@ -19421,7 +19421,7 @@
       au < finished ; frozen ; 2012 ; The Journal of Early Adolescence Volume 32 ; 32 ; >
       au < crawling ; exists ; 2013 ; The Journal of Early Adolescence Volume 33 ; 33 ; >
       au < manifest ; exists ; 2014 ; The Journal of Early Adolescence Volume 34 ; 34 ; >
-      au < expected ; exists ; 2015 ; The Journal of Early Adolescence Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2015 ; The Journal of Early Adolescence Volume 35 ; 35 ; >
 
     }
 
@@ -20406,7 +20406,7 @@
       au < finished ; crawling ; 2012 ; Journal of Feline Medicine and Surgery Volume 14 ; 14 ; >
       au < crawling ; exists ; 2013 ; Journal of Feline Medicine and Surgery Volume 15 ; 15 ; >
       au < manifest ; exists ; 2014 ; Journal of Feline Medicine and Surgery Volume 16 ; 16 ; >
-      au < expected ; exists ; 2015 ; Journal of Feline Medicine and Surgery Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2015 ; Journal of Feline Medicine and Surgery Volume 17 ; 17 ; >
 
     }
 
@@ -21661,7 +21661,7 @@
       au < finished ; crawling ; 2012 ; Journal of Intelligent Material Systems and Structures Volume 23 ; 23 ; >
       au < crawling ; exists ; 2013 ; Journal of Intelligent Material Systems and Structures Volume 24 ; 24 ; >
       au < manifest ; exists ; 2014 ; Journal of Intelligent Material Systems and Structures Volume 25 ; 25 ; >
-      au < expected ; exists ; 2015 ; Journal of Intelligent Material Systems and Structures Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2015 ; Journal of Intelligent Material Systems and Structures Volume 26 ; 26 ; >
 
     }
 
@@ -21748,7 +21748,7 @@
       au < exists ; exists ; 2011 ; Journal of the Intensive Care Society Volume 12 ; 12 ; >
       au < exists ; exists ; 2012 ; Journal of the Intensive Care Society Volume 13 ; 13 ; >
       au < manifest ; exists ; 2013 ; Journal of the Intensive Care Society Volume 14 ; 14 ; >
-      au < exists ; exists ; 2014 ; Journal of the Intensive Care Society Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2014 ; Journal of the Intensive Care Society Volume 15 ; 15 ; >
       au < expected ; exists ; 2015 ; Journal of the Intensive Care Society Volume 16 ; 16 ; >
 
   }
@@ -23058,7 +23058,7 @@
       au < crawling ; exists ; 2012 ; Journal of Pharmacy Technology Volume 28 ; 28 ; >
       au < crawling ; exists ; 2013 ; Journal of Pharmacy Technology Volume 29 ; 29 ; >
       au < manifest ; exists ; 2014 ; Journal of Pharmacy Technology Volume 30 ; 30 ; >
-      au < expected ; exists ; 2015 ; Journal of Pharmacy Technology Volume 31 ; 31 ; >
+      au < manifest ; exists ; 2015 ; Journal of Pharmacy Technology Volume 31 ; 31 ; >
 
     }
 
@@ -24547,7 +24547,7 @@
       au < finished ; frozen ; 2012 ; Journal of Strain Analysis for Engineering Design Volume 47 ; 47 ; >
       au < crawling ; exists ; 2013 ; Journal of Strain Analysis for Engineering Design Volume 48 ; 48 ; >
       au < manifest ; exists ; 2014 ; Journal of Strain Analysis for Engineering Design Volume 49 ; 49 ; >
-      au < expected ; exists ; 2015 ; Journal of Strain Analysis for Engineering Design Volume 50 ; 50 ; >
+      au < manifest ; exists ; 2015 ; Journal of Strain Analysis for Engineering Design Volume 50 ; 50 ; >
 
     }
 
@@ -24690,7 +24690,7 @@
       au < finished ; frozen ; 2012 ; Journal of Teacher Education Volume 63 ; 63 ; >
       au < crawling ; exists ; 2013 ; Journal of Teacher Education Volume 64 ; 64 ; >
       au < manifest ; exists ; 2014 ; Journal of Teacher Education Volume 65 ; 65 ; >
-      au < expected ; exists ; 2015 ; Journal of Teacher Education Volume 66 ; 66 ; >
+      au < manifest ; exists ; 2015 ; Journal of Teacher Education Volume 66 ; 66 ; >
 
     }
 
@@ -25492,7 +25492,7 @@
       au < finished ; frozen ; 2012 ; Journal of Veterinary Diagnostic Investigation Volume 24 ; 24 ; >
       au < crawling ; exists ; 2013 ; Journal of Veterinary Diagnostic Investigation Volume 25 ; 25 ; >
       au < manifest ; exists ; 2014 ; Journal of Veterinary Diagnostic Investigation Volume 26 ; 26 ; >
-      au < expected ; exists ; 2015 ; Journal of Veterinary Diagnostic Investigation Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2015 ; Journal of Veterinary Diagnostic Investigation Volume 27 ; 27 ; >
 
     }
 
@@ -27239,7 +27239,7 @@
       au < finished ; crawling ; 2012 ; Medical Decision Making Volume 32 ; 32 ; >
       au < crawling ; exists ; 2013 ; Medical Decision Making Volume 33 ; 33 ; >
       au < manifest ; exists ; 2014 ; Medical Decision Making Volume 34 ; 34 ; >
-      au < expected ; exists ; 2015 ; Medical Decision Making Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2015 ; Medical Decision Making Volume 35 ; 35 ; >
 
     }
 
@@ -27687,7 +27687,7 @@
       au < finished ; frozen ; 2012 ; Modern China Volume 38 ; 38 ; >
       au < crawling ; exists ; 2013 ; Modern China Volume 39 ; 39 ; >
       au < manifest ; exists ; 2014 ; Modern China Volume 40 ; 40 ; >
-      au < expected ; exists ; 2015 ; Modern China Volume 41 ; 41 ; >
+      au < manifest ; exists ; 2015 ; Modern China Volume 41 ; 41 ; >
 
     }
 
@@ -27978,7 +27978,7 @@
       au < finished ; crawling ; 2012 ; NASN School Nurse Volume 27 ; 27 ; >
       au < crawling ; exists ; 2013 ; NASN School Nurse Volume 28 ; 28 ; >
       au < manifest ; exists ; 2014 ; NASN School Nurse Volume 29 ; 29 ; >
-      au < expected ; exists ; 2015 ; NASN School Nurse Volume 30 ; 30 ; >
+      au < manifest ; exists ; 2015 ; NASN School Nurse Volume 30 ; 30 ; >
 
     }
 
@@ -28396,7 +28396,7 @@
       au < finished ; frozen ; 2012 ; The Neurohospitalist Volume 2 ; 2 ; >
       au < crawling ; exists ; 2013 ; The Neurohospitalist Volume 3 ; 3 ; >
       au < manifest ; exists ; 2014 ; The Neurohospitalist Volume 4 ; 4 ; >
-      au < expected ; exists ; 2015 ; The Neurohospitalist Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2015 ; The Neurohospitalist Volume 5 ; 5 ; >
 
     }
 
@@ -28752,7 +28752,7 @@
       au < finished ; frozen ; 2012 ; Nursing Science Quarterly Volume 25 ; 25 ; >
       au < crawling ; exists ; 2013 ; Nursing Science Quarterly Volume 26 ; 26 ; >
       au < manifest ; exists ; 2014 ; Nursing Science Quarterly Volume 27 ; 27 ; >
-      au < expected ; exists ; 2015 ; Nursing Science Quarterly Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2015 ; Nursing Science Quarterly Volume 28 ; 28 ; >
 
     }
 
@@ -28954,7 +28954,7 @@
       au < finished ; frozen ; 2012 ; Organization Volume 19 ; 19 ; >
       au < crawling ; exists ; 2013 ; Organization Volume 20 ; 20 ; >
       au < manifest ; exists ; 2014 ; Organization Volume 21 ; 21 ; >
-      au < expected ; exists ; 2015 ; Organization Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2015 ; Organization Volume 22 ; 22 ; >
 
     }
 
@@ -29265,7 +29265,7 @@
       au < finished ; frozen ; 2012 ; Palliative Medicine Volume 26 ; 26 ; >
       au < crawling ; exists ; 2013 ; Palliative Medicine Volume 27 ; 27 ; >
       au < manifest ; exists ; 2014 ; Palliative Medicine Volume 28 ; 28 ; >
-      au < expected ; exists ; 2015 ; Palliative Medicine Volume 29 ; 29 ; >
+      au < manifest ; exists ; 2015 ; Palliative Medicine Volume 29 ; 29 ; >
 
     }
 
@@ -29328,7 +29328,7 @@
       au < finished ; crawling ; 2012 ; Party Politics Volume 18 ; 18 ; >
       au < crawling ; exists ; 2013 ; Party Politics Volume 19 ; 19 ; >
       au < manifest ; exists ; 2014 ; Party Politics Volume 20 ; 20 ; >
-      au < expected ; exists ; 2015 ; Party Politics Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2015 ; Party Politics Volume 21 ; 21 ; >
 
     }
 
@@ -30122,7 +30122,7 @@
       au < exists ; exists ; 2011 ; Policy Futures in Education Volume 9 ; 9 ; >
       au < exists ; exists ; 2012 ; Policy Futures in Education Volume 10 ; 10 ; >
       au < manifest ; exists ; 2013 ; Policy Futures in Education Volume 11 ; 11 ; >
-      au < exists ; exists ; 2014 ; Policy Futures in Education Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2014 ; Policy Futures in Education Volume 12 ; 12 ; >
       au < expected ; exists ; 2015 ; Policy Futures in Education Volume 13 ; 13 ; >
   }
 
@@ -30901,7 +30901,7 @@
       au < finished ; frozen ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 226 ; 226 ; >
       au < crawling ; exists ; 2013 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 227 ; 227 ; >
       au < manifest ; exists ; 2014 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 228 ; 228 ; >
-      au < expected ; exists ; 2015 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 229 ; 229 ; >
+      au < manifest ; exists ; 2015 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 229 ; 229 ; >
 
     }
 
@@ -30993,7 +30993,7 @@
       au < finished ; frozen ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 226 ; 226 ; >
       au < crawling ; exists ; 2013 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 227 ; 227 ; >
       au < manifest ; exists ; 2014 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 228 ; 228 ; >
-      au < expected ; exists ; 2015 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 229 ; 229 ; >
+      au < manifest ; exists ; 2015 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 229 ; 229 ; >
 
     }
 
@@ -31808,7 +31808,7 @@
       au < finished ; frozen ; 2012 ; Psychology of Music Volume 40 ; 40 ; >
       au < crawling ; exists ; 2013 ; Psychology of Music Volume 41 ; 41 ; >
       au < manifest ; exists ; 2014 ; Psychology of Music Volume 42 ; 42 ; >
-      au < expected ; exists ; 2015 ; Psychology of Music Volume 43 ; 43 ; >
+      au < manifest ; exists ; 2015 ; Psychology of Music Volume 43 ; 43 ; >
 
     }
 
@@ -32861,7 +32861,7 @@
       au < finished ; frozen ; 2012 ; Reproductive Sciences Volume 19 ; 19 ; >
       au < crawling ; exists ; 2013 ; Reproductive Sciences Volume 20 ; 20 ; >
       au < manifest ; exists ; 2014 ; Reproductive Sciences Volume 21 ; 21 ; >
-      au < expected ; exists ; 2015 ; Reproductive Sciences Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2015 ; Reproductive Sciences Volume 22 ; 22 ; >
 
     }
 
@@ -33026,7 +33026,7 @@
       au < finished ; frozen ; 2012 ; Research on Social Work Practice Volume 22 ; 22 ; >
       au < crawling ; exists ; 2013 ; Research on Social Work Practice Volume 23 ; 23 ; >
       au < manifest ; exists ; 2014 ; Research on Social Work Practice Volume 24 ; 24 ; >
-      au < expected ; exists ; 2015 ; Research on Social Work Practice Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2015 ; Research on Social Work Practice Volume 25 ; 25 ; >
 
     }
 
@@ -34806,7 +34806,7 @@
       au < finished ; frozen ; 2012 ; Social Psychological and Personality Science Volume 3 ; 3 ; >
       au < crawling ; exists ; 2013 ; Social Psychological and Personality Science Volume 4 ; 4 ; >
       au < manifest ; exists ; 2014 ; Social Psychological and Personality Science Volume 5 ; 5 ; >
-      au < expected ; exists ; 2015 ; Social Psychological and Personality Science Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2015 ; Social Psychological and Personality Science Volume 6 ; 6 ; >
 
     }
 
@@ -35574,7 +35574,7 @@
       au < finished ; crawling ; 2012 ; Sports Health: A Multidisciplinary Approach Volume 4 ; 4 ; >
       au < crawling ; exists ; 2013 ; Sports Health: A Multidisciplinary Approach Volume 5 ; 5 ; >
       au < manifest ; exists ; 2014 ; Sports Health: A Multidisciplinary Approach Volume 6 ; 6 ; >
-      au < expected ; exists ; 2015 ; Sports Health: A Multidisciplinary Approach Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2015 ; Sports Health: A Multidisciplinary Approach Volume 7 ; 7 ; >
 
     }
 
@@ -35828,7 +35828,7 @@
       au < finished ; frozen ; 2012 ; Structural Health Monitoring Volume 11 ; 11 ; >
       au < crawling ; exists ; 2013 ; Structural Health Monitoring Volume 12 ; 12 ; >
       au < manifest ; exists ; 2014 ; Structural Health Monitoring Volume 13 ; 13 ; >
-      au < expected ; exists ; 2015 ; Structural Health Monitoring Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2015 ; Structural Health Monitoring Volume 14 ; 14 ; >
 
     }
 
@@ -36366,7 +36366,7 @@
       au < exists ; exists ; 2011 ; Technology in Cancer Research & Treatment Volume 10 ; 10 ; >
       au < exists ; exists ; 2012 ; Technology in Cancer Research & Treatment Volume 11 ; 11 ; >
       au < manifest ; exists ; 2013 ; Technology in Cancer Research & Treatment Volume 12 ; 12 ; >
-      au < exists ; exists ; 2014 ; Technology in Cancer Research & Treatment Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2014 ; Technology in Cancer Research & Treatment Volume 13 ; 13 ; >
       au < expected ; exists ; 2015 ; Technology in Cancer Research & Treatment Volume 14 ; 14 ; >
 
   }
@@ -36613,7 +36613,7 @@
     au < exists ; exists ; 2009 ; Theological Studies Volume 70 ; 70 ; >
     au < exists ; exists ; 2010 ; Theological Studies Volume 71 ; 71 ; >
     au < exists ; exists ; 2011 ; Theological Studies Volume 72 ; 72 ; >
-    au < exists ; exists ; 2012 ; Theological Studies Volume 73 ; 73 ; >
+    au < manifest ; exists ; 2012 ; Theological Studies Volume 73 ; 73 ; >
     au < manifest ; exists ; 2013 ; Theological Studies Volume 74 ; 74 ; >
     au < manifest ; exists ; 2014 ; Theological Studies Volume 75 ; 75 ; >
     au < expected ; exists ; 2015 ; Theological Studies Volume 76 ; 76 ; >
@@ -36751,7 +36751,7 @@
       au < finished ; frozen ; 2012 ; Theology Volume 115 ; 115 ; >
       au < crawling ; exists ; 2013 ; Theology Volume 116 ; 116 ; >
       au < manifest ; exists ; 2014 ; Theology Volume 117 ; 117 ; >
-      au < expected ; exists ; 2015 ; Theology Volume 118 ; 118 ; >
+      au < manifest ; exists ; 2015 ; Theology Volume 118 ; 118 ; >
 
     }
 
@@ -37142,7 +37142,7 @@
       au < finished ; frozen ; 2012 ; Therapeutic Advances in Chronic Disease Volume 3 ; 3 ; >
       au < crawling ; exists ; 2013 ; Therapeutic Advances in Chronic Disease Volume 4 ; 4 ; >
       au < manifest ; exists ; 2014 ; Therapeutic Advances in Chronic Disease Volume 5 ; 5 ; >
-      au < expected ; exists ; 2015 ; Therapeutic Advances in Chronic Disease Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2015 ; Therapeutic Advances in Chronic Disease Volume 6 ; 6 ; >
 
     }
 
@@ -37469,8 +37469,8 @@
       param[base_url] = http://tav.sagepub.com/
 
       au < manifest ; exists ; 2013 ; Therapeutic Advances in Vaccines Volume 1 ; 1 ; >
-      au < exists ; exists ; 2014 ; Therapeutic Advances in Vaccines Volume 2 ; 2 ; >
-      au < expected ; exists ; 2015 ; Therapeutic Advances in Vaccines Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2014 ; Therapeutic Advances in Vaccines Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2015 ; Therapeutic Advances in Vaccines Volume 3 ; 3 ; >
 
     }
 
@@ -37774,7 +37774,7 @@
       au < finished ; crawling ; 2012 ; Tourism and Hospitality Research Volume 12 ; 12 ; >
       au < crawling ; exists ; 2013 ; Tourism and Hospitality Research Volume 13 ; 13 ; >
       au < manifest ; exists ; 2014 ; Tourism and Hospitality Research Volume 14 ; 14 ; >
-      au < expected ; exists ; 2015 ; Tourism and Hospitality Research Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2015 ; Tourism and Hospitality Research Volume 15 ; 15 ; >
 
     }
 
@@ -38014,7 +38014,7 @@
       au < finished ; frozen ; 2012 ; Transactions of the Institute of Measurement and Control Volume 34 ; 34 ; >
       au < crawling ; exists ; 2013 ; Transactions of the Institute of Measurement and Control Volume 35 ; 35 ; >
       au < manifest ; exists ; 2014 ; Transactions of the Institute of Measurement and Control Volume 36 ; 36 ; >
-      au < expected ; exists ; 2015 ; Transactions of the Institute of Measurement and Control Volume 37 ; 37 ; >
+      au < manifest ; exists ; 2015 ; Transactions of the Institute of Measurement and Control Volume 37 ; 37 ; >
 
     }
 
@@ -38194,7 +38194,7 @@
       au < finished ; frozen ; 2012 ; Transformation: An International Journal of Holistic Mission Studies Volume 29 ; 29 ; >
       au < crawling ; exists ; 2013 ; Transformation: An International Journal of Holistic Mission Studies Volume 30 ; 30 ; >
       au < manifest ; exists ; 2014 ; Transformation: An International Journal of Holistic Mission Studies Volume 31 ; 31 ; >
-      au < expected ; exists ; 2015 ; Transformation: An International Journal of Holistic Mission Studies Volume 32 ; 32 ; >
+      au < manifest ; exists ; 2015 ; Transformation: An International Journal of Holistic Mission Studies Volume 32 ; 32 ; >
 
     }
 
@@ -39066,7 +39066,7 @@
       au < finished ; frozen ; 2012 ; War in History Volume 19 ; 19 ; >
       au < crawling ; exists ; 2013 ; War in History Volume 20 ; 20 ; >
       au < manifest ; exists ; 2014 ; War in History Volume 21 ; 21 ; >
-      au < expected ; exists ; 2015 ; War in History Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2015 ; War in History Volume 22 ; 22 ; >
 
 
     }
@@ -39930,7 +39930,7 @@
       au < finished ; frozen ; 2012 ; Interpretation: A Journal of Bible and Theology Volume 66 ; 66 ; >
       au < crawling ; exists ; 2013 ; Interpretation: A Journal of Bible and Theology Volume 67 ; 67 ; >
       au < manifest ; exists ; 2014 ; Interpretation: A Journal of Bible and Theology Volume 68 ; 68 ; >
-      au < expected ; exists ; 2015 ; Interpretation: A Journal of Bible and Theology Volume 69 ; 69 ; >
+      au < manifest ; exists ; 2015 ; Interpretation: A Journal of Bible and Theology Volume 69 ; 69 ; >
 
 
     }
@@ -40971,7 +40971,7 @@
 
     au < crawling ; exists ; 2013 ; AADE in Practice Volume 1 ; 1 ; >
     au < manifest ; exists ; 2014 ; AADE in Practice Volume 2 ; 2 ; >
-    au < expected ; exists ; 2015 ; AADE in Practice Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2015 ; AADE in Practice Volume 3 ; 3 ; >
 
     }
 
@@ -41212,7 +41212,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://dsp.sagepub.com/
 
-    au < exists ; exists ; 2014 ; Drug Science, Policy and Law Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2014 ; Drug Science, Policy and Law Volume 1 ; 1 ; >
     au < expected ; exists ; 2015 ; Drug Science, Policy and Law Volume 2 ; 2 ; >
 
     }
@@ -41282,7 +41282,7 @@
     param[base_url] = http://ftr.sagepub.com/
 
     au < manifest ; exists ; 2013 ; Foreign Trade Review Volume 48 ; 48 ; >
-    au < expected ; exists ; 2014 ; Foreign Trade Review Volume 49 ; 49 ; >
+    au < manifest ; exists ; 2014 ; Foreign Trade Review Volume 49 ; 49 ; >
     au < expected ; exists ; 2015 ; Foreign Trade Review Volume 50 ; 50 ; >
 
     }
@@ -41426,7 +41426,7 @@
     au < crawling ; exists ; 2012 ; Missiology: An International Review Volume 40 ; 40 ; >
     au < crawling ; exists ; 2013 ; Missiology: An International Review Volume 41 ; 41 ; >
     au < manifest ; exists ; 2014 ; Missiology: An International Review Volume 42 ; 42 ; >
-    au < expected ; exists ; 2015 ; Missiology: An International Review Volume 43 ; 43 ; >
+    au < manifest ; exists ; 2015 ; Missiology: An International Review Volume 43 ; 43 ; >
 
     }
 
@@ -41816,7 +41816,7 @@
         au < exists ; exists ; 2011 ; Clinical Ethics Volume 6 ; 6 ; >
         au < exists ; exists ; 2012 ; Clinical Ethics Volume 7 ; 7 ; >
         au < manifest ; exists ; 2013 ; Clinical Ethics Volume 8 ; 8 ; >
-        au < expected ; exists ; 2014 ; Clinical Ethics Volume 9 ; 9 ; >
+        au < manifest ; exists ; 2014 ; Clinical Ethics Volume 9 ; 9 ; >
         au < expected ; exists ; 2015 ; Clinical Ethics Volume 10 ; 10 ; >
 
     }
@@ -42327,7 +42327,7 @@
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://nan.sagepub.com/
   
-        au < exists ; exists ; 2014 ; International Journal of Green Nanotechnology Volume 1 ; 1 ; >
+        au < manifest ; exists ; 2014 ; International Journal of Green Nanotechnology Volume 1 ; 1 ; >
   
       }
   
@@ -42869,7 +42869,7 @@
         au < exists ; exists ; 2011 ; Laboratory Animals Volume 45 ; 45 ; >
         au < exists ; exists ; 2012 ; Laboratory Animals Volume 46 ; 46 ; >
         au < manifest ; exists ; 2013 ; Laboratory Animals Volume 47 ; 47 ; >
-        au < expected ; exists ; 2014 ; Laboratory Animals Volume 48 ; 48 ; >
+        au < manifest ; exists ; 2014 ; Laboratory Animals Volume 48 ; 48 ; >
   
       }
   
