@@ -1,5 +1,5 @@
 /*
- * $Id: RSC2014HtmlHashFilterFactory.java,v 1.5 2014-08-26 19:51:24 etenbrink Exp $
+ * $Id: RSC2014HtmlHashFilterFactory.java,v 1.6 2014-12-22 22:58:01 etenbrink Exp $
  */
 
 /*
@@ -38,11 +38,12 @@ import java.io.Reader;
 import java.util.Vector;
 
 import org.htmlparser.Attribute;
-import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.Tag;
 import org.htmlparser.filters.OrFilter;
 import org.htmlparser.util.NodeList;
+import org.htmlparser.util.ParserException;
+import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.FilterUtil;
 import org.lockss.filter.WhiteSpaceFilter;
@@ -53,7 +54,51 @@ import org.lockss.util.ReaderInputStream;
 
 public class RSC2014HtmlHashFilterFactory implements FilterFactory {
   
-  Logger log = Logger.getLogger(RSC2014HtmlHashFilterFactory.class);
+  private static final Logger log = Logger.getLogger(RSC2014HtmlHashFilterFactory.class);
+  
+  // Transform to remove attributes from html and other tags
+  // some tag attributes changed based on IP or other status
+  // some attributes changed over time, either arbitrarily or sequentially
+  protected static HtmlTransform xform = new HtmlTransform() {
+    @Override
+    public NodeList transform(NodeList nodeList) throws IOException {
+      try {
+        nodeList.visitAllNodesWith(new NodeVisitor() {
+          @Override
+          public void visitTag(Tag tag) {
+            String tagName = tag.getTagName().toLowerCase();
+            try {
+              if ("html".equals(tagName) ||
+                  "span".equals(tagName) ||
+                  "div".equals(tagName) ||
+                  "h1".equals(tagName) ||
+                  "h2".equals(tagName) ||
+                  "h3".equals(tagName) ||
+                  "a".equals(tagName)) {
+                Attribute a = tag.getAttributeEx(tagName);
+                Vector<Attribute> v = new Vector<Attribute>();
+                v.add(a);
+                if (tag.isEmptyXmlTag()) {
+                  Attribute end = tag.getAttributeEx("/");
+                  v.add(end);
+                }
+                tag.setAttributesEx(v);
+              }
+            }
+            catch (Exception exc) {
+              log.debug2("Internal error (visitor)", exc); // Ignore this tag and move on
+            }
+            // Always
+            super.visitTag(tag);
+          }
+        });
+      }
+      catch (ParserException pe) {
+        log.debug2("Internal error (parser)", pe); // Bail
+      }
+      return nodeList;
+    }
+  };
   
   public InputStream createFilteredInputStream(ArchivalUnit au, InputStream in,
                                                String encoding)
@@ -67,47 +112,6 @@ public class RSC2014HtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tag("script"),
         // remove head for metadata changes and JS/CSS version number
         HtmlNodeFilters.tag("head"),
-    };
-    
-    // Transform to remove attributes from html and other tags
-    // some tag attributes changed based on IP or other status
-    // some attributes changed over time, either arbitrarily or sequentially
-    HtmlTransform xform = new HtmlTransform() {
-      @Override
-      public NodeList transform(NodeList nodeList) throws IOException {
-        NodeList nl = new NodeList();
-        for (int sx = 0; sx < nodeList.size(); sx++) {
-          Node snode = nodeList.elementAt(sx);
-          if (snode instanceof Tag) {
-            Tag tag = (Tag) snode;
-            if (tag.isEmptyXmlTag()) {
-              continue;
-            }
-            String tagName = tag.getTagName().toLowerCase();
-            NodeList knl = tag.getChildren();
-            if (knl != null) {
-              tag.setChildren(transform(knl));
-            }
-            if ("html".equals(tagName) ||
-                "span".equals(tagName) ||
-                "div".equals(tagName) ||
-                "h1".equals(tagName) ||
-                "h2".equals(tagName) ||
-                "h3".equals(tagName) ||
-                "a".equals(tagName)) {
-              Attribute a = tag.getAttributeEx(tagName);
-              Vector<Attribute> v = new Vector<Attribute>();
-              v.add(a);
-              tag.setAttributesEx(v);
-            }
-            nl.add(tag);
-          }
-          else {
-            nl.add(snode);
-          }
-        }
-        return nl;
-      }
     };
     
     InputStream filtered =  new HtmlFilterInputStream(in, encoding,
