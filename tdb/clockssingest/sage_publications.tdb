@@ -28904,7 +28904,7 @@
         au < exists ; exists ; 2010 ; OTJR: Occupation, Participation and Health Volume 30 ; 30 ; >
         au < exists ; exists ; 2011 ; OTJR: Occupation, Participation and Health Volume 31 ; 31 ; >
         au < exists ; exists ; 2012 ; OTJR: Occupation, Participation and Health Volume 32 ; 32 ; >
-        au < exists ; exists ; 2013 ; OTJR: Occupation, Participation and Health Volume 33 ; 33 ; >
+        au < manifest ; exists ; 2013 ; OTJR: Occupation, Participation and Health Volume 33 ; 33 ; >
         au < exists ; exists ; 2014 ; OTJR: Occupation, Participation and Health Volume 34 ; 34 ; >
         au < expected ; exists ; 2015 ; OTJR: Occupation, Participation and Health Volume 35 ; 35 ; >
     }
@@ -33240,7 +33240,7 @@
     au < exists ; exists ; 2010 ; Review & Expositor Volume 107 ; 107 ; >
     au < exists ; exists ; 2011 ; Review & Expositor Volume 108 ; 108 ; >
     au < exists ; exists ; 2012 ; Review & Expositor Volume 109 ; 109 ; >
-    au < exists ; exists ; 2013 ; Review & Expositor Volume 110 ; 110 ; >
+    au < manifest ; exists ; 2013 ; Review & Expositor Volume 110 ; 110 ; >
     au < manifest ; exists ; 2014 ; Review & Expositor Volume 111 ; 111 ; >
     au < expected ; exists ; 2015 ; Review & Expositor Volume 112 ; 112 ; >
 
@@ -41019,7 +41019,7 @@
     au < exists ; exists ; 1988 ; Sociological Perspectives Volume 31 ; 31 ; >
     au < exists ; exists ; 2011 ; Sociological Perspectives Volume 54 ; 54 ; >
     au < exists ; exists ; 2012 ; Sociological Perspectives Volume 55 ; 55 ; >
-    au < exists ; exists ; 2013 ; Sociological Perspectives Volume 56 ; 56 ; >
+    au < manifest ; exists ; 2013 ; Sociological Perspectives Volume 56 ; 56 ; >
     au < testing ; exists ; 2014 ; Sociological Perspectives Volume 57 ; 57 ; >
     au < expected ; exists ; 2015 ; Sociological Perspectives Volume 58 ; 58 ; >
 
@@ -41317,7 +41317,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://imr.sagepub.com/
 
-    au < exists ; exists ; 2013 ; Journal of International Medical Research Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2013 ; Journal of International Medical Research Volume 1 ; 1 ; >
     au < expected ; exists ; 2014 ; Journal of International Medical Research Volume 2 ; 2 ; >
     au < expected ; exists ; 2015 ; Journal of International Medical Research Volume 3 ; 3 ; >
 
