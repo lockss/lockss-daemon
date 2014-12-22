@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.57 2014-11-24 10:17:47 tlipkis Exp $
+ * $Id: BaseCrawler.java,v 1.58 2014-12-22 20:47:37 wkwilson Exp $
  */
 
 /*
@@ -674,7 +674,7 @@ public abstract class BaseCrawler implements Crawler {
     return facade;
   };
 
-  public class BaseCrawlerFacade 
+  public static class BaseCrawlerFacade 
   implements Crawler.CrawlerFacade, Crawler.PermissionHelper {
     BaseCrawler crawler;
     public BaseCrawlerFacade(BaseCrawler crawler) {
@@ -732,31 +732,31 @@ public abstract class BaseCrawler implements Crawler {
     public long getRetryDelay(CacheException ce) {
       long delay = ce.getRetryDelay();
       if (delay < 0) {
-        delay = defaultRetryDelay;
+        delay = crawler.defaultRetryDelay;
       }
-      return Math.max(delay, minRetryDelay);
+      return Math.max(delay, crawler.minRetryDelay);
     }
 
     public int getRetryCount(CacheException ce) {
       int res = ce.getRetryCount();
       if (res < 0) {
-        res = defaultRetries;
+        res = crawler.defaultRetries;
       }
-      return Math.min(res, maxRetries);
+      return Math.min(res, crawler.maxRetries);
     }
 
     public int permissonStreamResetMax() {
-      return streamResetMax;
+      return crawler.streamResetMax;
     }
   
     @Override
     public boolean isGloballyPermittedHost(String host) {
-      return crawlMgr.isGloballyPermittedHost(host);
+      return crawler.crawlMgr.isGloballyPermittedHost(host);
     }
 
     @Override
     public boolean isAllowedPluginPermittedHost(String host) {
-      return crawlMgr.isAllowedPluginPermittedHost(host);
+      return crawler.crawlMgr.isAllowedPluginPermittedHost(host);
     }
   }
 

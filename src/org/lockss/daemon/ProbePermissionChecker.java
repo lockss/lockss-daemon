@@ -1,5 +1,5 @@
 /*
- * $Id: ProbePermissionChecker.java,v 1.27 2014-12-04 00:33:55 wkwilson Exp $
+ * $Id: ProbePermissionChecker.java,v 1.28 2014-12-22 20:47:37 wkwilson Exp $
  */
 
 /*
@@ -69,11 +69,17 @@ public class ProbePermissionChecker implements PermissionChecker {
   
   public boolean checkPermission(Crawler.PermissionHelper crawlFacade,
       Reader inputReader, String permissionUrl) {
-    return checkPermission((CrawlerFacade)crawlFacade, inputReader, permissionUrl);
+    return checkPermission0((CrawlerFacade)crawlFacade, inputReader, permissionUrl);
   }
   
   public boolean checkPermission(CrawlerFacade crawlFacade,
 				 Reader inputReader, String permissionUrl) {
+    Crawler.PermissionHelper pHelper = (Crawler.PermissionHelper)crawlFacade;
+    return checkPermission(pHelper, inputReader, permissionUrl);
+  }
+  
+  public boolean checkPermission0(CrawlerFacade crawlFacade,
+                                 Reader inputReader, String permissionUrl) {
     au = crawlFacade.getAu();
     probeUrl = null;
     CustomHtmlLinkExtractor extractor = new CustomHtmlLinkExtractor();

@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.108 2014-11-25 01:41:43 wkwilson Exp $
+ * $Id: FollowLinkCrawler.java,v 1.109 2014-12-22 20:47:37 wkwilson Exp $
  */
 
 /*
@@ -819,7 +819,7 @@ public class FollowLinkCrawler extends BaseCrawler {
     return facade;
   }
   
-  public class FollowLinkCrawlerFacade extends BaseCrawler.BaseCrawlerFacade {
+  public static class FollowLinkCrawlerFacade extends BaseCrawler.BaseCrawlerFacade {
     protected Set<String> failedUrls;
     protected Queue<CrawlUrlData> permissionProbeUrls;
     protected CrawlQueue fetchQueue;
