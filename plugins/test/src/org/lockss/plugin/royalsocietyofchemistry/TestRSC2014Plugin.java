@@ -1,5 +1,5 @@
 /*
- * $Id: TestRSC2014Plugin.java,v 1.1 2014-05-07 01:00:16 etenbrink Exp $
+ * $Id: TestRSC2014Plugin.java,v 1.2 2014-12-22 22:53:06 etenbrink Exp $
  */
 
 /*
@@ -133,6 +133,7 @@ public class TestRSC2014Plugin extends LockssTestCase {
     DefinableArchivalUnit au = makeAuFromProps(props);
     assertEquals("Royal Society of Chemistry 2014 Plugin (CLOCKSS), " +
         "Base URL http://pubs.example.com/, " +
+        "Base URL2 http://www.example.com/, " +
         "Resolver URL http://xlink.example.com/, " +
         "Journal Code an, Volume 123, Year 2013", au.getName());
   }

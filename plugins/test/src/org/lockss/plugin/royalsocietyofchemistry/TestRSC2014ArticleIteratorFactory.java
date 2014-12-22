@@ -1,5 +1,5 @@
 /*
- * $Id: TestRSC2014ArticleIteratorFactory.java,v 1.3 2014-09-27 01:26:36 etenbrink Exp $
+ * $Id: TestRSC2014ArticleIteratorFactory.java,v 1.4 2014-12-22 22:53:06 etenbrink Exp $
  */
 
 /*
@@ -126,15 +126,16 @@ public class TestRSC2014ArticleIteratorFactory extends ArticleIteratorTestCase {
   
   public void testRoots() throws Exception {
     SubTreeArticleIterator artIter = createSubTreeIter();
-    assertEquals(ListUtil.list(BASE_URL + "en/content/"),
+    assertEquals(ListUtil.list(BASE_URL + "en/content/articlelanding/2013/an/",
+        BASE_URL + "en/content/articlepdf/2013/an/"),
         getRootUrls(artIter));
   }
   
   //
   // We are set up to match any of <journal_id>/<year>/p.*
   //
-  
-  public void testUrls() throws Exception {
+  // Removing this test as there is no Pattern now
+  public void deletetestUrls() throws Exception {
     SubTreeArticleIterator artIter = createSubTreeIter();
     Pattern pat = getPattern(artIter);
     

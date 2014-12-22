@@ -1,5 +1,5 @@
 /*
- * $Id: TestRSC2014HtmlHashFilterFactory.java,v 1.6 2014-08-26 19:33:13 etenbrink Exp $
+ * $Id: TestRSC2014HtmlHashFilterFactory.java,v 1.7 2014-12-22 22:53:06 etenbrink Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.plugin.royalsocietyofchemistry;
 import java.io.InputStream;
 
 import org.lockss.util.*;
+import org.lockss.plugin.ArchivalUnit;
 import org.lockss.test.*;
 
 public class TestRSC2014HtmlHashFilterFactory extends LockssTestCase {
@@ -101,22 +102,21 @@ public class TestRSC2014HtmlHashFilterFactory extends LockssTestCase {
   
   private static final String genError = "" +
       "<html><body>" +
-      "<span id=\"top\"/>" +
-      "</body></html>";
-  
-  private static final String genError2 = "" +
-      "<html><body>" +
-      "<span id=\"top\"/>" +
+      "<span id=\"1\" />" +
       "</body></html>";
   
   private static final String noError = "" +
       "<html><body>" +
+      "<span/>" +
       "</body></html>";
   
   
   public void testFiltering() throws Exception {
-    assertFilterToSame(genError, noError);
-    assertFilterToSame(genError2, noError);
+    try {
+      assertFilterToSame(genError, noError);
+      fail("Didn't throw Exception");
+    } catch (Exception e) {
+    }
     assertFilterToSame(withScript, withoutScript);
     assertFilterToSame(withStuff, withoutStuff);
     assertFilterToSame(withLinks, withoutLinks);

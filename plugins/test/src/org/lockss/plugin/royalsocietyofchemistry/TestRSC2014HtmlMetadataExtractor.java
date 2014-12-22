@@ -1,5 +1,5 @@
 /*
- * $Id: TestRSC2014HtmlMetadataExtractor.java,v 1.1 2014-05-07 01:00:15 etenbrink Exp $
+ * $Id: TestRSC2014HtmlMetadataExtractor.java,v 1.2 2014-12-22 22:53:06 etenbrink Exp $
  */
 
 /*
@@ -185,7 +185,7 @@ public class TestRSC2014HtmlMetadataExtractor extends LockssTestCase {
     assertEquals(goodIssue, md.get(MetadataField.FIELD_ISSUE));
     assertEquals(goodStartPage, md.get(MetadataField.FIELD_START_PAGE));
     assertEquals(goodDOI, md.get(MetadataField.FIELD_DOI));
-    assertEquals(goodURL, md.get(MetadataField.FIELD_ACCESS_URL));
+    assertEquals(url, md.get(MetadataField.FIELD_ACCESS_URL));
   }
   
   // a chunk of HTML source code from where the HtmlMetadataExtractorFactory 
