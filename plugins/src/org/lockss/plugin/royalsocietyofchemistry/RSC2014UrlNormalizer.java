@@ -1,5 +1,5 @@
 /*
- * $Id: RSC2014UrlNormalizer.java,v 1.1 2014-05-07 00:59:52 etenbrink Exp $
+ * $Id: RSC2014UrlNormalizer.java,v 1.2 2014-12-22 23:01:20 etenbrink Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.plugin.royalsocietyofchemistry;
 import org.apache.commons.lang.StringUtils;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.*;
+import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 
 /*
@@ -48,8 +49,10 @@ import org.lockss.util.StringUtil;
 
 public class RSC2014UrlNormalizer implements UrlNormalizer {
   
-  private String content_url = "";
-  private String resolver_url = "";
+  private static final Logger log = Logger.getLogger(RSC2014PdfFilterFactory.class);
+  
+  private static String content_url = "";
+  private static String resolver_url = "";
   
   public String normalizeUrl(String url, ArchivalUnit au)
       throws PluginException {
