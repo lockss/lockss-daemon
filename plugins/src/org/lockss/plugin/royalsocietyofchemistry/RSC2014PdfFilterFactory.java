@@ -1,5 +1,5 @@
 /*
- * $Id: RSC2014PdfFilterFactory.java,v 1.7 2014-12-04 23:11:25 etenbrink Exp $
+ * $Id: RSC2014PdfFilterFactory.java,v 1.8 2014-12-22 23:00:32 etenbrink Exp $
  */
 
 /*
@@ -39,7 +39,7 @@ import org.lockss.util.Logger;
 
 public class RSC2014PdfFilterFactory extends SimplePdfFilterFactory {
   
-  static Logger log = Logger.getLogger(RSC2014PdfFilterFactory.class);
+  private static final Logger log = Logger.getLogger(RSC2014PdfFilterFactory.class);
   
   public RSC2014PdfFilterFactory() {
     super();
@@ -52,9 +52,9 @@ public class RSC2014PdfFilterFactory extends SimplePdfFilterFactory {
       PdfUtil.normalizeAllTokenStreams(pdfDocument);
     }
     catch (NullPointerException e) {
-      // catch Exception that was thrown, but when ignored did not seem to be a problem
-      // XXX talked thru with W, may need to revisit if problems appear, but for now no problems
-      log.warning("caught/ignore exception from pdf framework", e);
+      // catch Exception that was thrown, log and re-throw
+      // XXX may need to revisit if problems persist
+      log.warning("caught/log/re-throw exception from pdf framework", e);
     }
     
     pdfDocument.unsetMetadata();
