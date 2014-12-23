@@ -45415,7 +45415,7 @@ comment[mpj] = now published by Brill
   
         pluginPrefix = org.lockss.plugin.highwire.
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-        param[base_url] = http://jtt.sagepub.com/
+        param[base_url] = http://acb.sagepub.com/
         
         au < HighWirePressH20Plugin ; doNotProcess ; 1997 ; Annals of Clinical Biochemistry Volume 34 ; 34 >
         au < HighWirePressH20Plugin ; doNotProcess ; 1998 ; Annals of Clinical Biochemistry Volume 35 ; 35 >
