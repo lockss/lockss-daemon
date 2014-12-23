@@ -1008,7 +1008,7 @@
     au < manifest ; exists ; 2011 ; Advances in Pharmacological Sciences Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Advances in Pharmacological Sciences Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Advances in Pharmacological Sciences Volume 2013 ; 2013 ; 2013 >
-    au < manifest ; exists ; 2014 ; Advances in Pharmacological Sciences Volume 2014 ; 2014 ; 2014 >
+    au < testing ; exists ; 2014 ; Advances in Pharmacological Sciences Volume 2014 ; 2014 ; 2014 >
 
   }
  
@@ -1029,7 +1029,7 @@
     au < manifest ; exists ; 2011 ; Advances in Physical Chemistry Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Advances in Physical Chemistry Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Advances in Physical Chemistry Volume 2013 ; 2013 ; 2013 >
-    au < manifest ; exists ; 2014 ; Advances in Physical Chemistry Volume 2014 ; 2014 ; 2014 >
+    au < testing ; exists ; 2014 ; Advances in Physical Chemistry Volume 2014 ; 2014 ; 2014 >
 
   }
  
@@ -1049,7 +1049,7 @@
     au < manifest ; exists ; 2011 ; Advances in Power Electronics Volume 2011 (2011) ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Advances in Power Electronics Volume 2012 (2012) ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Advances in Power Electronics Volume 2013 (2013) ; 2013 ; 2013 >
-    au < manifest ; exists ; 2014 ; Advances in Power Electronics Volume 2014 (2014) ; 2014 ; 2014 >
+    au < testing ; exists ; 2014 ; Advances in Power Electronics Volume 2014 (2014) ; 2014 ; 2014 >
 
     
   }
@@ -1067,7 +1067,7 @@
     au < manifest ; exists ; 2011 ; Advances in Preventive Medicine Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Advances in Preventive Medicine Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Advances in Preventive Medicine Volume 2013 ; 2013 ; 2013 >
-    au < manifest ; exists ; 2014 ; Advances in Preventive Medicine Volume 2014 ; 2014 ; 2014 >
+    au < testing ; exists ; 2014 ; Advances in Preventive Medicine Volume 2014 ; 2014 ; 2014 >
     
   }
  
@@ -1081,7 +1081,7 @@
 
     param[journal_id] = apsy
 
-    au < manifest ; exists ; 2014 ; Advances in Psychiatry Volume 2014 ; 2014 ; 2014 >
+    au < testing ; exists ; 2014 ; Advances in Psychiatry Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -1095,7 +1095,7 @@
 
     param[journal_id] = aph
 
-    au < manifest ; exists ; 2014 ; Advances in Public Health Volume 2014 ; 2014 ; 2014 >
+    au < testing ; exists ; 2014 ; Advances in Public Health Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -1109,7 +1109,7 @@
 
     param[journal_id] = ara
 
-    au < manifest ; exists ; 2014 ; Advances in Radiology Volume 2014 ; 2014 ; 2014 >
+    au < testing ; exists ; 2014 ; Advances in Radiology Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -1123,7 +1123,7 @@
 
     param[journal_id] = arm
 
-    au < manifest ; exists ; 2014 ; Advances in Regenerative Medicine Volume 2014 ; 2014 ; 2014 >
+    au < testing ; exists ; 2014 ; Advances in Regenerative Medicine Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -1142,7 +1142,7 @@
     au < manifest ; exists ; 2011 ; Advances in Software Engineering Volume 2011 ; 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; Advances in Software Engineering Volume 2012 ; 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; Advances in Software Engineering Volume 2013 ; 2013 ; 2013 >
-    au < manifest ; exists ; 2014 ; Advances in Software Engineering Volume 2014 ; 2014 ; 2014 >
+    au < testing ; exists ; 2014 ; Advances in Software Engineering Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -1156,7 +1156,7 @@
 
     param[journal_id] = as
 
-    au < manifest ; exists ; 2014 ; Advances in Statistics Volume 2014 ; 2014 ; 2014 >
+    au < testing ; exists ; 2014 ; Advances in Statistics Volume 2014 ; 2014 ; 2014 >
 
   }
 
