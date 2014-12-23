@@ -1,5 +1,5 @@
 /*
- * $Id: DefaultUrlCacher.java,v 1.3 2014-11-20 01:53:01 wkwilson Exp $
+ * $Id: DefaultUrlCacher.java,v 1.4 2014-12-23 21:02:23 wkwilson Exp $
  */
 
 /*
@@ -77,7 +77,8 @@ public class DefaultUrlCacher implements UrlCacher {
   private BitSet fetchFlags = new BitSet();
   private InputStream input;
   private CIProperties headers;
-
+  private boolean markLastContentChanged = true;
+  
   /**
    * Uncached url object and Archival Unit owner 
    * 
@@ -162,6 +163,11 @@ public class DefaultUrlCacher implements UrlCacher {
   public void storeContent(InputStream input, CIProperties headers)
       throws IOException {
     if(input != null) {
+      Collection<String> startUrls = au.getStartUrls();
+      if(startUrls != null && !startUrls.isEmpty() 
+          && startUrls.contains(origUrl)) {
+        markLastContentChanged = false;
+      }
       if (logger.isDebug2()) logger.debug2("Storing url '"+ origUrl +"'");
       storeContentIn(origUrl, input, headers);
       if (logger.isDebug3()) {
@@ -259,7 +265,7 @@ public class DefaultUrlCacher implements UrlCacher {
       leaf.setNewProperties(headers);
       leaf.sealNewVersion();
       AuState aus = AuUtil.getAuState(au);
-      if (aus != null) {
+      if (aus != null && markLastContentChanged) {
         aus.contentChanged();
       }
     } catch (StreamUtil.OutputException ex) {
