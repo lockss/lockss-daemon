@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseAtyponUrlNormalizer.java,v 1.5 2014-09-05 19:40:34 alexandraohlson Exp $
+ * $Id: TestBaseAtyponUrlNormalizer.java,v 1.6 2014-12-23 19:16:30 alexandraohlson Exp $
  */
 
 /*
@@ -56,6 +56,9 @@ public class TestBaseAtyponUrlNormalizer extends LockssTestCase {
     assertEquals("http://www.tandfonline.com/doi/abs/10.5504/50YRTIMB.2011.0036",
         normalizer.normalizeUrl("http://www.tandfonline.com/doi/abs/10.5504/50YRTIMB.2011.0036?queryID=%24%7BresultBean.queryID%7D", null));
     
+    assertEquals("http://www.tandfonline.com/doi/abs/10.1080/10610271003736871",
+        normalizer.normalizeUrl("http://www.tandfonline.com/doi/abs/10.1080/10610271003736871?queryID=%24%7BresultBean.queryID%7D", null));
+    
     /* 
      * citation download stuff : each child has a slightly different starting URL
      * add to this section as you add children - in lieu of a full child URL normalization test
@@ -78,6 +81,12 @@ public class TestBaseAtyponUrlNormalizer extends LockssTestCase {
     // AMetSoc type citation download
     assertEquals("http://journals.ametsoc.org/action/downloadCitation?doi=10.1175%2FJCLI-D-11-00582.1&format=ris&include=cit",
         normalizer.normalizeUrl("http://journals.ametsoc.org/action/downloadCitation?direct=true&doi=10.1175%2FJCLI-D-11-00582.1&downloadFileName=ams_clim25_4476&include=cit&submit=Download+citation+data", null));  
+
+    assertEquals("http://www.ajronline.org/action/downloadCitation?doi=10.2214%2FAJR.12.9692&format=ris&include=cit",
+        normalizer.normalizeUrl("http://www.ajronline.org/action/downloadCitation?direct=true&doi=10.2214%2FAJR.12.9692&downloadFileName=arrs_ajr200_1197&include=cit&submit=Download+publication+citation+data", null));
+
+    assertEquals("http://www.ajronline.org/action/downloadCitation?doi=10.2214%2FAJR.12.10039&format=ris&include=cit",
+        normalizer.normalizeUrl("http://www.ajronline.org/action/downloadCitation?direct=true&doi=10.2214%2FAJR.12.10039&downloadFileName=arrs_ajr201_1204&include=cit&submit=Download+publication+citation+data", null));
   }
   
   public void testCssArgumentNormalizer() throws Exception {

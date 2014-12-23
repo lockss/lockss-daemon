@@ -1,4 +1,4 @@
-/* $Id: AIAAHtmlLinkExtractorFactory.java,v 1.1 2013-09-10 22:28:07 alexandraohlson Exp $
+/* $Id: AIAAHtmlLinkExtractorFactory.java,v 1.2 2014-12-23 19:16:30 alexandraohlson Exp $
  */
 
 /*
@@ -35,38 +35,44 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.jsoup.nodes.Node;
-import org.lockss.extractor.JsoupHtmlLinkExtractor;
-import org.lockss.extractor.JsoupHtmlLinkExtractor.SimpleTagLinkExtractor;
+import org.lockss.extractor.JsoupHtmlLinkExtractor.LinkExtractor;
 import org.lockss.extractor.LinkExtractor.Callback;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.atypon.BaseAtyponHtmlLinkExtractorFactory;
 import org.lockss.util.Logger;
 
+
+/*
+ *  extend this class in order to use the AIAA specific link tag 
+ *  link extractor 
+ */
 public class AIAAHtmlLinkExtractorFactory 
 extends BaseAtyponHtmlLinkExtractorFactory {
 
   private static final String HREF_NAME = "href";
 
-  public org.lockss.extractor.LinkExtractor createLinkExtractor(String mimeType) {
-
-    JsoupHtmlLinkExtractor extractor = new JsoupHtmlLinkExtractor();
-    // we will do some additional processing on anchor tags to catch citation download URLs
-    extractor.registerTagExtractor("a", new AIAASimpleTagLinkExtractor(HREF_NAME));
-    return extractor;
+  @Override
+  protected LinkExtractor createLinkTagExtractor(String attr) {
+    return new AIAALinkTagLinkExtractor(attr);
   }
 
+  /*
+   *  Extend the BaseAtyponLinkTagLinkExtractor to handle the additional
+   *  AIAA-unique case of
+   *  <a href="javascript:submitArticles"
+   *      in order to generate the citation download URL
+   *  all other link tag cases are handled as per BaseAtypon and Jsoup      
+   */
+  public static class AIAALinkTagLinkExtractor extends BaseAtyponLinkTagLinkExtractor {
 
-
-  public static class AIAASimpleTagLinkExtractor extends SimpleTagLinkExtractor {
-
-    private static Logger log = Logger.getLogger(AIAASimpleTagLinkExtractor.class);
+    private static Logger log = Logger.getLogger(AIAALinkTagLinkExtractor.class);
 
     protected Pattern SUBMIT_ARTICLES_PATTERN = Pattern.compile("javascript:submitArticles\\(([^,]+),([^,]+),*", Pattern.CASE_INSENSITIVE);
     protected Pattern DOI_URL_PATTERN = Pattern.compile("^(https?://.*/)doi/(abs|full)/([.0-9]+)/([^/]+)$");
     private static final String CIT_FORMATS_ACTION = "action/showCitFormats";
 
     // nothing needed in the constructor - just call the parent
-    public AIAASimpleTagLinkExtractor(String attr) {
+    public AIAALinkTagLinkExtractor(String attr) {
       super(attr);
     }
 
@@ -78,7 +84,8 @@ extends BaseAtyponHtmlLinkExtractorFactory {
      * In this case we create a link to the citations download page by pulling the DOI from the srcUrl
      * and generating a link like this:
      *     <base_url>action/showCitFormats?doi=xx.xxx/yyyyyy         
-     * In any case other than this one, fall back to standard Jsoup implementation    
+     * In any case other than this one, fall back to standard JSoup implementation
+     *  which is the "super" of the tagBegin definition    
      */
     public void tagBegin(Node node, ArchivalUnit au, Callback cb) {
       Boolean tagDone = false;
@@ -97,11 +104,11 @@ extends BaseAtyponHtmlLinkExtractorFactory {
           }
         }
       }
-      // for one reason or another, we didn't handle this. Fall back to standard Jsoup
+      // for one reason or another, we didn't handle this. Fall back to BaseAtypon and thence to Jsoup
       if (tagDone != true) {
         super.tagBegin(node, au, cb);
       }
     }
   }
-  
+
 }

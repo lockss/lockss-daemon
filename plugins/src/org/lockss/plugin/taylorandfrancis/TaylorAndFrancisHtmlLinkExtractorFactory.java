@@ -1,4 +1,4 @@
-/* $Id: TaylorAndFrancisHtmlLinkExtractorFactory.java,v 1.2 2014-04-07 21:52:55 alexandraohlson Exp $
+/* $Id: TaylorAndFrancisHtmlLinkExtractorFactory.java,v 1.3 2014-12-23 19:16:30 alexandraohlson Exp $
  */
 
 /*
@@ -37,7 +37,6 @@ import java.util.regex.Pattern;
 import org.jsoup.nodes.Node;
 import org.lockss.extractor.JsoupHtmlLinkExtractor;
 import org.lockss.extractor.JsoupHtmlLinkExtractor.SimpleTagLinkExtractor;
-import org.lockss.extractor.LinkExtractor;
 import org.lockss.extractor.LinkExtractor.Callback;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.atypon.BaseAtyponHtmlLinkExtractorFactory;
@@ -49,21 +48,19 @@ extends BaseAtyponHtmlLinkExtractorFactory {
 
   private static final String ONCLICK_NAME = "onclick";
 
-  public LinkExtractor createLinkExtractor(String mimeType) {
+  /* in addition to the default extractors set up by BaseAtypon,
+   * add one for "p" tag
+   */
+  protected void registerExtractors(JsoupHtmlLinkExtractor extractor) {
 
-    // The parent (BaseAtypon) creates a Jsoup Link Extractor and sets default
-    // restrictions on it which we need
-    JsoupHtmlLinkExtractor extractor = (JsoupHtmlLinkExtractor) super.createLinkExtractor(mimeType);
+    super.registerExtractors(extractor);
     // register extractor for 'onclick' attribute of 'p' tag 
     extractor.registerTagExtractor (
         "p", new TaylorAndFrancisSimpleTagLinkExtractor(ONCLICK_NAME));
-    return extractor;
   }
 
-
-
   public static class TaylorAndFrancisSimpleTagLinkExtractor 
-    extends SimpleTagLinkExtractor {
+  extends SimpleTagLinkExtractor {
 
     private static final Logger log = 
         Logger.getLogger(TaylorAndFrancisSimpleTagLinkExtractor.class);
@@ -108,5 +105,5 @@ extends BaseAtyponHtmlLinkExtractorFactory {
       super.tagBegin(node, au, cb);
     }
   }
-  
+
 }

@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>8</string>
   </entry>  
   <entry>
     <string>plugin_name</string>
@@ -25,7 +25,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>18</string>
+    <string>22</string>
   </entry>    
    <entry>
     <string>plugin_publishing_platform</string>
@@ -41,7 +41,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>15</string>
+        <string>16</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -60,10 +60,6 @@
   <entry>
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.atypon.maney.ManeyAtyponHtmlCrawlFilterFactory</string>
-  </entry>
-  <entry>
-    <string>text/html_link_extractor_factory</string>
-    <string>org.lockss.plugin.atypon.maney.ManeyAtyponHtmlLinkExtractorFactory</string>
   </entry>
   <entry>
     <string>plugin_au_config_user_msg</string>
