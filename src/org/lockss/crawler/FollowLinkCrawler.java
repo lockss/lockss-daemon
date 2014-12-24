@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.110 2014-12-22 21:15:59 etenbrink Exp $
+ * $Id: FollowLinkCrawler.java,v 1.111 2014-12-24 00:25:12 wkwilson Exp $
  */
 
 /*
@@ -63,6 +63,7 @@ import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.ContentValidationException;
 import org.lockss.plugin.UrlFetcher;
 import org.lockss.plugin.UrlFetcher.FetchResult;
+import org.lockss.plugin.base.PassiveUrlConsumerFactory;
 import org.lockss.state.AuState;
 import org.lockss.state.SubstanceChecker;
 import org.lockss.util.Constants;
@@ -273,6 +274,9 @@ public class FollowLinkCrawler extends BaseCrawler {
     } else if (permissionProbeUrls != null) {
       for(CrawlUrlData pud : permissionProbeUrls) {
         UrlFetcher uf = makePermissionUrlFetcher(pud.getUrl());
+        if(!au.storeProbePermission()) {
+          uf.setUrlConsumerFactory(new PassiveUrlConsumerFactory());
+        }
         try {
           if(uf.fetch() != FetchResult.FETCHED) {
             crawlStatus.setCrawlStatus(Crawler.STATUS_NO_PUB_PERMISSION);

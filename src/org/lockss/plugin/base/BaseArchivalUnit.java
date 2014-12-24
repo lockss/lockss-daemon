@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.172 2014-12-08 04:15:56 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.173 2014-12-24 00:25:12 wkwilson Exp $
  */
 
 /*
@@ -449,6 +449,10 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    */
   public boolean shouldBeCached(String url) {
     return (rule == null) ? true : (rule.match(url) == CrawlRule.INCLUDE);
+  }
+  
+  public boolean storeProbePermission() {
+    return plugin.storeProbePermission();
   }
   
   public boolean shouldRefetchOnCookies() {

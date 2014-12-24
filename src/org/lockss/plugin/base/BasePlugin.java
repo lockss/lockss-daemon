@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.88 2014-11-24 10:18:39 tlipkis Exp $
+ * $Id: BasePlugin.java,v 1.89 2014-12-24 00:25:12 wkwilson Exp $
  */
 
 /*
@@ -155,6 +155,14 @@ public abstract class BasePlugin
    */
   public String getPublishingPlatform() {
     return null;
+  }
+  
+  /**
+   * Should we store the probe permission page
+   * @return true
+   */
+  public boolean storeProbePermission() {
+    return true;
   }
 
   /**

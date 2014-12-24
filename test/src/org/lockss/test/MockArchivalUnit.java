@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.109 2014-12-08 04:15:55 tlipkis Exp $
+ * $Id: MockArchivalUnit.java,v 1.110 2014-12-24 00:25:10 wkwilson Exp $
  */
 
 /*
@@ -789,9 +789,12 @@ public class MockArchivalUnit implements ArchivalUnit {
     this.window = window;
   }
 
-  @Override
   public UrlConsumerFactory getUrlConsumerFactory() {
     return new SimpleUrlConsumerFactory();
+  }
+
+  public boolean storeProbePermission() {
+    return true;
   }
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: ProbePermissionChecker.java,v 1.28 2014-12-22 20:47:37 wkwilson Exp $
+ * $Id: ProbePermissionChecker.java,v 1.29 2014-12-24 00:25:12 wkwilson Exp $
  */
 
 /*
@@ -51,6 +51,7 @@ public class ProbePermissionChecker implements PermissionChecker {
       Logger.getLogger(ProbePermissionChecker.class);
   protected String probeUrl = null;
   protected ArchivalUnit au;
+  protected CrawlerStatus crawlStatus;
 
   
 
@@ -78,9 +79,10 @@ public class ProbePermissionChecker implements PermissionChecker {
     return checkPermission(pHelper, inputReader, permissionUrl);
   }
   
-  public boolean checkPermission0(CrawlerFacade crawlFacade,
+  private boolean checkPermission0(CrawlerFacade crawlFacade,
                                  Reader inputReader, String permissionUrl) {
     au = crawlFacade.getAu();
+    crawlStatus = crawlFacade.getCrawlerStatus();
     probeUrl = null;
     CustomHtmlLinkExtractor extractor = new CustomHtmlLinkExtractor();
     logger.debug3("Checking permission on "+permissionUrl);
@@ -92,6 +94,9 @@ public class ProbePermissionChecker implements PermissionChecker {
     } catch (IOException ex) {
       logger.error("Exception trying to parse permission url " + permissionUrl,
 		   ex);
+      crawlStatus.signalErrorForUrl(permissionUrl, 
+                                    "Exception trying to parse permission url "
+                                        + permissionUrl);
       return false;
     }
     if (probeUrl != null) {
@@ -99,12 +104,15 @@ public class ProbePermissionChecker implements PermissionChecker {
         crawlFacade.addToPermissionProbeQueue(probeUrl);
         return true;
       } else {
-        logger.warning("Probe url outside of crawl spec counting as no"
-            + " permission on " + permissionUrl);
+        String errorMsg = "Probe url: " + probeUrl + " outside of crawl spec counting as no"
+            + " permission on " + permissionUrl;
+        logger.warning(errorMsg);
+        crawlStatus.signalErrorForUrl(permissionUrl, errorMsg);
         return false;
       }
     } else {
       logger.warning("Unable to find probe url on " + permissionUrl);
+      crawlStatus.signalErrorForUrl(permissionUrl, "Unable to find probe url on " + permissionUrl);
       return false;
     }
   }
