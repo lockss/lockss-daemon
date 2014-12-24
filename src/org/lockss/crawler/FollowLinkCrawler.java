@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.108 2014-11-25 01:41:43 wkwilson Exp $
+ * $Id: FollowLinkCrawler.java,v 1.108.2.1 2014-12-24 01:04:45 wkwilson Exp $
  */
 
 /*
@@ -63,6 +63,7 @@ import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.ContentValidationException;
 import org.lockss.plugin.UrlFetcher;
 import org.lockss.plugin.UrlFetcher.FetchResult;
+import org.lockss.plugin.base.PassiveUrlConsumerFactory;
 import org.lockss.state.AuState;
 import org.lockss.state.SubstanceChecker;
 import org.lockss.util.Constants;
@@ -211,7 +212,7 @@ public class FollowLinkCrawler extends BaseCrawler {
   protected void setCrawlConfig(Configuration config) {
     super.setCrawlConfig(config);
     
-    // Do *not* requre that maxDepth be greater than refetchDepth.  Plugin
+    // Do *not* require that maxDepth be greater than refetchDepth.  Plugin
     // writers set refetchDepth high to mean infinite.
     maxDepth = config.getInt(PARAM_MAX_CRAWL_DEPTH, DEFAULT_MAX_CRAWL_DEPTH);
 
@@ -273,6 +274,9 @@ public class FollowLinkCrawler extends BaseCrawler {
     } else if (permissionProbeUrls != null) {
       for(CrawlUrlData pud : permissionProbeUrls) {
         UrlFetcher uf = makePermissionUrlFetcher(pud.getUrl());
+        if(!au.storeProbePermission()) {
+          uf.setUrlConsumerFactory(new PassiveUrlConsumerFactory());
+        }
         try {
           if(uf.fetch() != FetchResult.FETCHED) {
             crawlStatus.setCrawlStatus(Crawler.STATUS_NO_PUB_PERMISSION);
@@ -819,7 +823,7 @@ public class FollowLinkCrawler extends BaseCrawler {
     return facade;
   }
   
-  public class FollowLinkCrawlerFacade extends BaseCrawler.BaseCrawlerFacade {
+  public static class FollowLinkCrawlerFacade extends BaseCrawler.BaseCrawlerFacade {
     protected Set<String> failedUrls;
     protected Queue<CrawlUrlData> permissionProbeUrls;
     protected CrawlQueue fetchQueue;

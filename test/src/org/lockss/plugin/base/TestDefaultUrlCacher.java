@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefaultUrlCacher.java,v 1.1 2014-11-12 20:11:56 wkwilson Exp $
+ * $Id: TestDefaultUrlCacher.java,v 1.1.2.1 2014-12-24 01:04:45 wkwilson Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import java.text.*;
 
 import org.lockss.plugin.*;
 import org.lockss.daemon.*;
+import org.lockss.state.AuState;
 import org.lockss.test.*;
 import org.lockss.app.*;
 import org.lockss.util.*;
@@ -77,6 +78,7 @@ public class TestDefaultUrlCacher extends LockssTestCase {
   private int pauseBeforeFetchCounter;
   private UrlData ud;
   private MockNodeManager nodeMgr = new MockNodeManager();
+  private AuState maus;
 
   private static final String TEST_URL = "http://www.example.com/testDir/leaf1";
   private boolean saveDefaultSuppressStackTrace;
@@ -113,6 +115,9 @@ public class TestDefaultUrlCacher extends LockssTestCase {
     saveDefaultSuppressStackTrace =
       CacheException.setDefaultSuppressStackTrace(false);
     getMockLockssDaemon().getAlertManager();
+    
+    maus = nodeMgr.getAuState();
+    theDaemon.setNodeManager(nodeMgr, mau);
   }
 
   public void tearDown() throws Exception {
@@ -120,14 +125,28 @@ public class TestDefaultUrlCacher extends LockssTestCase {
     CacheException.setDefaultSuppressStackTrace(saveDefaultSuppressStackTrace);
     super.tearDown();
   }
+  
+  public void testCacheStartUrl() throws IOException {
+    ud = new UrlData(new StringInputStream("test stream"), 
+                     new CIProperties(), TEST_URL);
+    mau.setStartUrls(ListUtil.list(TEST_URL));
+    long origChange = maus.getLastContentChange();
+    cacher = new MyMockBaseUrlCacher(mau, ud);
+    cacher.storeContent();
+    long finalChange = maus.getLastContentChange();
+    assertEquals(origChange, finalChange);
+  }
 
   public void testCache() throws IOException {
     ud = new UrlData(new StringInputStream("test stream"), 
         new CIProperties(), TEST_URL);
+    long origChange = maus.getLastContentChange();
     cacher = new MyMockBaseUrlCacher(mau, ud);
     // should cache
     cacher.storeContent();
+    long finalChange = maus.getLastContentChange();
     assertTrue(cacher.wasStored);
+    assertNotEquals(origChange, finalChange);
   }
 
   public void testCacheEmpty() throws IOException {

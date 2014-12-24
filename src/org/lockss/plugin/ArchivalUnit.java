@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.71 2014-12-08 04:15:56 tlipkis Exp $
+ * $Id: ArchivalUnit.java,v 1.71.2.1 2014-12-24 01:04:46 wkwilson Exp $
  */
 
 /*
@@ -122,6 +122,12 @@ public interface ArchivalUnit {
    * @return true if it should be cached
    */
   public boolean shouldBeCached(String url);
+  
+  /**
+   * Does the associated plugin want to store probe pages
+   * @return true if probe page should be stored
+   */
+  public boolean storeProbePermission();
 
   /**
    * Return true if the URL is that of a login page.

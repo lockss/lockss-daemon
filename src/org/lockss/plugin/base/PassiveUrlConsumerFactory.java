@@ -1,4 +1,4 @@
-package org.lockss.test;
+package org.lockss.plugin.base;
 
 import java.io.IOException;
 
@@ -8,9 +8,9 @@ import org.lockss.plugin.FetchedUrlData;
 import org.lockss.plugin.UrlConsumer;
 import org.lockss.plugin.UrlConsumerFactory;
 
-public class PassiveMockUrlConsumerFactory implements UrlConsumerFactory {
+public class PassiveUrlConsumerFactory implements UrlConsumerFactory {
 
-  public class PassiveMockUrlConsumer implements UrlConsumer {
+  public class PassiveUrlConsumer implements UrlConsumer {
   
     @Override
     public void consume() throws IOException {
@@ -28,6 +28,6 @@ public class PassiveMockUrlConsumerFactory implements UrlConsumerFactory {
   @Override
   public UrlConsumer createUrlConsumer(CrawlerFacade crawlFacade,
       FetchedUrlData fud) {
-    return new PassiveMockUrlConsumer();
+    return new PassiveUrlConsumer();
   }
 }

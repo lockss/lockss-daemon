@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.82 2014-11-12 20:11:59 wkwilson Exp $
+ * $Id: DefinablePlugin.java,v 1.82.2.1 2014-12-24 01:04:47 wkwilson Exp $
  */
 
 /*
@@ -135,6 +135,12 @@ public class DefinablePlugin extends BasePlugin {
 
   public static final String KEY_PLUGIN_REWRITE_HTML_META_URLS =
     "plugin_rewrite_html_meta_urls";
+  
+  public static final String KEY_PLUGIN_STORE_PROBE_PERMISSION =
+      "plugin_store_probe_permission";
+  
+  public static final boolean DEFAULT_PLUGIN_STORE_PROBE_PERMISSION =
+      true;
 
   public static final String DEFAULT_PLUGIN_VERSION = "1";
   public static final String DEFAULT_REQUIRED_DAEMON_VERSION = "0.0.0";
@@ -463,6 +469,11 @@ public class DefinablePlugin extends BasePlugin {
 
   public String getPublishingPlatform() {
     return definitionMap.getString(KEY_PUBLISHING_PLATFORM, null);
+  }
+  
+  public boolean shouldStoreProbePermission() {
+    return definitionMap.getBoolean(KEY_PLUGIN_STORE_PROBE_PERMISSION,
+                                    DEFAULT_PLUGIN_STORE_PROBE_PERMISSION);
   }
 
   public String getPluginNotes() {

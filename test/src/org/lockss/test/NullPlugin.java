@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.131 2014-12-08 04:15:55 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.131.2.1 2014-12-24 01:04:45 wkwilson Exp $
  */
 
 /*
@@ -727,6 +727,10 @@ public class NullPlugin {
 
     public UrlConsumerFactory getUrlConsumerFactory() {
       return null;
+    }
+
+    public boolean storeProbePermission() {
+      return false;
     }
   }
 
