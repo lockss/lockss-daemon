@@ -1,5 +1,5 @@
 /*
- * $Id: FuncArcExploder2.java,v 1.10 2014-11-12 20:11:35 wkwilson Exp $
+ * $Id: FuncArcExploder2.java,v 1.10.2.1 2014-12-27 03:33:00 tlipkis Exp $
  */
 
 /*
@@ -141,6 +141,8 @@ public class FuncArcExploder2 extends LockssTestCase {
     crawlMgr = new NoPauseCrawlManagerImpl();
     theDaemon.setCrawlManager(crawlMgr);
     crawlMgr.initService(theDaemon);
+    theDaemon.getRepositoryManager().startService();
+    theDaemon.suppressStartAuManagers(false);
 
     // pluginMgr.setLoadablePluginsReady(true);
     theDaemon.setDaemonInited(true);
