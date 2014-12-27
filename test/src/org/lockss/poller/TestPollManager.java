@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.115 2014-12-21 14:22:20 dshr Exp $
+ * $Id: TestPollManager.java,v 1.116 2014-12-27 03:41:16 tlipkis Exp $
  */
 
 /*
@@ -80,13 +80,10 @@ public class TestPollManager extends LockssTestCase {
   protected void setUp() throws Exception {
     super.setUp();
 
-    File tempDir = getTempDir();
-    String tempDirPath = tempDir.getAbsolutePath() + File.separator;
-    Properties p = new Properties();
-    p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
-    p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.1.2.3");
-    p.setProperty(LcapDatagramComm.PARAM_ENABLED, "false");
-    ConfigurationUtil.setCurrentConfigFromProps(p);
+    String tempDirPath = setUpDiskSpace();
+    ConfigurationUtil.addFromArgs(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb",
+				  IdentityManager.PARAM_LOCAL_IP, "127.1.2.3",
+				  LcapDatagramComm.PARAM_ENABLED, "false");
     plugin = new MockPlugin(getMockLockssDaemon());
     TimeBase.setSimulated();
     initRequiredServices();
@@ -370,13 +367,17 @@ public class TestPollManager extends LockssTestCase {
     MockArchivalUnit mau = new MockArchivalUnit(plugin, auid);
     MockNodeManager nodeMgr = new MockNodeManager();
     theDaemon.setNodeManager(nodeMgr, mau);
+    MockLockssRepository repo = new MockLockssRepository();
+    theDaemon.setLockssRepository(repo, mau);
+    
     return mau;
   }
 
   void setAu(MockArchivalUnit mau,
 	     long lastPollStart, long lastTopLevelPoll, int lastPollResult,
 	     long pollDuration, double agreement) {
-    MockAuState aus = (MockAuState)AuUtil.getAuState(mau);
+    MockAuState aus = new MockAuState(mau);
+    ((MockNodeManager)theDaemon.getNodeManager(mau)).setAuState(aus);
     aus.setLastCrawlTime(100);
     aus.setLastPollStart(lastPollStart);
     aus.setLastToplevalPoll(lastTopLevelPoll);
@@ -500,7 +501,7 @@ public class TestPollManager extends LockssTestCase {
       pollmanager.getWeightMap();
     assertNotNull(weightMap);
     ArrayList<ArchivalUnit> queued = new ArrayList(weightMap.keySet());
-    log.critical("weightMap: " + weightMap.toString());
+    log.debug("weightMap: " + weightMap.toString());
     Collections.sort(queued, new Comparator<ArchivalUnit>() {
 	public int compare(ArchivalUnit au1,
 			   ArchivalUnit au2) {
@@ -591,7 +592,7 @@ public class TestPollManager extends LockssTestCase {
     MockArchivalUnit mau = new MockArchivalUnit(plugin, auid);
     MockNodeManager nodeMgr = new MockNodeManager();
     theDaemon.setNodeManager(nodeMgr, mau);
-    MockAuState maus = new MockAuState();
+    MockAuState maus = new MockAuState(mau);
     nodeMgr.setAuState(maus);
     File file = FileTestUtil.tempFile("noau");
     DatedPeerIdSet noAuSet = new DatedPeerIdSetImpl(file, idmanager);
@@ -750,6 +751,7 @@ public class TestPollManager extends LockssTestCase {
     PluginTestUtil.registerArchivalUnit(testau);
 
     repoMgr = theDaemon.getRepositoryManager();
+    repoMgr.startService();
 
     Properties p = new Properties();
     addRequiredConfig(p);
