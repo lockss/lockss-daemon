@@ -1,5 +1,5 @@
 /*
- * $Id: DefaultUrlCacher.java,v 1.3.2.1 2014-12-24 01:04:46 wkwilson Exp $
+ * $Id: DefaultUrlCacher.java,v 1.3.2.2 2014-12-27 03:27:44 tlipkis Exp $
  */
 
 /*
@@ -58,7 +58,7 @@ import org.lockss.crawler.*;
  * preserved.
  */
 public class DefaultUrlCacher implements UrlCacher {
-  protected static Logger logger = Logger.getLogger("BaseUrlCacher.class");
+  protected static Logger logger = Logger.getLogger(DefaultUrlCacher.class);
 
   /** The algorithm to use for content checksum calculation. 
    * An empty value disables checksums 
@@ -214,11 +214,48 @@ public class DefaultUrlCacher implements UrlCacher {
     }
   }
 
+  private boolean isCurrentVersionSuspect() {
+    // Inefficient to call AuSuspectUrlVersions.isSuspect(url, version)
+    // here as would have to find version number for each URL, which
+    // require disk access.  This loop first filters on URL so finds
+    // version number only when necessary.  Also, in some tests
+    // getCachedUrl() will get NPE on other URLs due to MockArchivalUnit
+    // not having been set up with a corresponding MockCachedUrl.
+
+    Collection <AuSuspectUrlVersions.SuspectUrlVersion> suspects =
+      AuUtil.getSuspectUrlVersions(au).getSuspectList();
+    if (logger.isDebug2()) {
+      logger.debug2("Checking for current suspect version: " + getUrl());
+    }
+    int curVer = -1;
+    for (AuSuspectUrlVersions.SuspectUrlVersion suv : suspects ) {
+      if (suv.getUrl().equals(getUrl())) {
+	if (curVer == -1) {
+	  curVer = getCachedUrl().getVersion();
+	}
+	if (suv.getVersion() == curVer) {
+	  if (logger.isDebug3()) {
+	    logger.debug3("Found suspect current version " +
+			  curVer + ": " + getUrl());
+	  }
+	  return true;
+	} else {
+	  if (logger.isDebug3()) {
+	    logger.debug3("Found suspect non-current version " +
+			  suv.getVersion() + " != " + curVer + ": " + getUrl());
+	  }
+	}
+      }
+    }
+    return false;
+  }
+
   public void storeContentIn(String url, InputStream input,
 			     CIProperties headers)
       throws IOException {
     RepositoryNode leaf = null;
     OutputStream os = null;
+    boolean currentWasSuspect = isCurrentVersionSuspect();
     try {
       leaf = repository.createNewNode(url);
       leaf.makeNewVersion();
@@ -265,6 +302,9 @@ public class DefaultUrlCacher implements UrlCacher {
       leaf.setNewProperties(headers);
       leaf.sealNewVersion();
       AuState aus = AuUtil.getAuState(au);
+      if (aus != null && currentWasSuspect) {
+	aus.incrementNumCurrentSuspectVersions(-1);
+      }
       if (aus != null && markLastContentChanged) {
         aus.contentChanged();
       }

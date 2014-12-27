@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuState.java,v 1.23.10.2 2014-12-14 04:16:23 dshr Exp $
+ * $Id: TestAuState.java,v 1.23.10.3 2014-12-27 03:27:43 tlipkis Exp $
  */
 
 /*
@@ -41,17 +41,22 @@ import org.lockss.crawler.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.v3.*;
 import org.lockss.poller.v3.V3Poller.PollVariant;
+import org.lockss.repository.*;
 import org.lockss.util.*;
 
 public class TestAuState extends LockssTestCase {
-  MockHistoryRepository historyRepo;
+  MockLockssDaemon daemon;
+  MyMockHistoryRepository historyRepo;
+  MockPlugin mplug;
   MockArchivalUnit mau;
 
   public void setUp() throws Exception {
     super.setUp();
+    daemon = getMockLockssDaemon();
 
-    historyRepo = new MockHistoryRepository();
-    mau = new MockArchivalUnit();
+    historyRepo = new MyMockHistoryRepository();
+    mplug = new MockPlugin(daemon);
+    mau = new MockArchivalUnit(mplug);
   }
 
 
@@ -99,7 +104,8 @@ public class TestAuState extends LockssTestCase {
 		       -1,
 		       -1,
 		       -1,
-		       -1,
+		       -1, // numWillingRepairers
+		       -1, // numCurrentSuspectVersions
 		       0,
 		       historyRepo);
   }
@@ -120,6 +126,7 @@ public class TestAuState extends LockssTestCase {
     assertFalse(aus.isCrawlActive());
     assertFalse(aus.hasCrawled());
     assertNull(historyRepo.theAuState);
+    assertEquals(0, historyRepo.getAuStateStoreCount());
 
     TimeBase.setSimulated(t1);
     aus.newCrawlStarted();
@@ -130,6 +137,7 @@ public class TestAuState extends LockssTestCase {
     assertTrue(aus.isCrawlActive());
     assertFalse(aus.hasCrawled());
     assertNotNull(historyRepo.theAuState);
+    assertEquals(1, historyRepo.getAuStateStoreCount());
 
     TimeBase.setSimulated(t2);
     aus.newCrawlFinished(Crawler.STATUS_ERROR, "Plorg");
@@ -139,6 +147,7 @@ public class TestAuState extends LockssTestCase {
     assertEquals("Plorg", aus.getLastCrawlResultMsg());
     assertFalse(aus.isCrawlActive());
     assertFalse(aus.hasCrawled());
+    assertEquals(2, historyRepo.getAuStateStoreCount());
 
     TimeBase.setSimulated(t3);
     aus.newCrawlFinished(Crawler.STATUS_SUCCESSFUL, "Syrah");
@@ -148,6 +157,7 @@ public class TestAuState extends LockssTestCase {
     assertEquals("Syrah", aus.getLastCrawlResultMsg());
     assertFalse(aus.isCrawlActive());
     assertTrue(aus.hasCrawled());
+    assertEquals(3, historyRepo.getAuStateStoreCount());
 
     aus = aus.simulateStoreLoad();
     assertEquals(t3, aus.getLastCrawlTime());
@@ -434,11 +444,21 @@ public class TestAuState extends LockssTestCase {
     assertEquals(SubstanceChecker.State.Unknown, aus.getSubstanceState());
     assertFalse(aus.hasNoSubstance());
     aus.setSubstanceState(SubstanceChecker.State.Yes);
+    assertEquals(1, historyRepo.getAuStateStoreCount());
     assertEquals(SubstanceChecker.State.Yes, aus.getSubstanceState());
     assertFalse(aus.hasNoSubstance());
     aus.setSubstanceState(SubstanceChecker.State.No);
+    assertEquals(2, historyRepo.getAuStateStoreCount());
     assertEquals(SubstanceChecker.State.No, aus.getSubstanceState());
     assertTrue(aus.hasNoSubstance());
+    assertNotEquals("2", aus.getFeatureVersion(Plugin.Feature.Substance));
+    mplug.setFeatureVersionMap(MapUtil.map(Plugin.Feature.Substance, "2"));
+    aus.setSubstanceState(SubstanceChecker.State.Yes);
+    // changing both the substance state and feature version should store
+    // only once
+    assertEquals(3, historyRepo.getAuStateStoreCount());
+    assertEquals(SubstanceChecker.State.Yes, aus.getSubstanceState());
+    assertEquals("2", aus.getFeatureVersion(Plugin.Feature.Substance));
   }
 
   public void testFeatureVersion() {
@@ -479,6 +499,59 @@ public class TestAuState extends LockssTestCase {
     assertEquals(50,aus.getLastContentChange());
   }
     
+  public void testNumCurrentSuspectVersions() {
+    MyMockLockssRepository repo = new MyMockLockssRepository();
+    MyAuSuspectUrlVersions asuv = new MyAuSuspectUrlVersions();
+    repo.setAsuv(asuv);
+
+    daemon.setLockssRepository(repo, mau);
+    AuState aus = new AuState(mau, historyRepo);
+    assertEquals(0, aus.getNumCurrentSuspectVersions());
+    // ensure this isn't automatically recomputed, as that would happen
+    // when historyRepo loads the object during startAuManagers, before the
+    // AU is fully created.
+    aus.setNumCurrentSuspectVersions(-1);
+    assertEquals(-1, aus.getNumCurrentSuspectVersions());
+    asuv.setCountResult(17);
+    aus.recomputeNumCurrentSuspectVersions();
+    assertEquals(17, aus.getNumCurrentSuspectVersions());
+    aus.incrementNumCurrentSuspectVersions(-1);
+    assertEquals(16, aus.getNumCurrentSuspectVersions());
+
+    aus.setNumCurrentSuspectVersions(-1);
+    asuv.setCountResult(6);
+    aus.incrementNumCurrentSuspectVersions(-1);
+    assertEquals(5, aus.getNumCurrentSuspectVersions());
+  }
+
+  public void testBatch() {
+    AuState aus = new AuState(mau, historyRepo);
+    assertEquals(0, historyRepo.getAuStateStoreCount());
+    aus.setNumAgreePeersLastPoR(1);
+    aus.setNumWillingRepairers(3);
+    aus.setNumCurrentSuspectVersions(5);
+    assertEquals(3, historyRepo.getAuStateStoreCount());
+
+    aus.batchSaves();
+    aus.setNumAgreePeersLastPoR(2);
+    aus.setNumWillingRepairers(4);
+    aus.setNumCurrentSuspectVersions(6);
+    assertEquals(3, historyRepo.getAuStateStoreCount());
+    aus.unBatchSaves();
+    assertEquals(4, historyRepo.getAuStateStoreCount());
+
+    aus.batchSaves();
+    aus.setNumAgreePeersLastPoR(4);
+    aus.batchSaves();
+    aus.setNumWillingRepairers(8);
+    aus.setNumCurrentSuspectVersions(12);
+    assertEquals(4, historyRepo.getAuStateStoreCount());
+    aus.unBatchSaves();
+    assertEquals(4, historyRepo.getAuStateStoreCount());
+    aus.unBatchSaves();
+    assertEquals(5, historyRepo.getAuStateStoreCount());
+  }
+
   // Return the serialized representation of the object
   String ser(LockssSerializable o) throws Exception {
     File tf = getTempFile("ser", ".xml");
@@ -521,4 +594,50 @@ public class TestAuState extends LockssTestCase {
       return ret;
     }
   }
+
+  static class MyMockHistoryRepository extends MockHistoryRepository {
+    int auStateStoreCount = 0;
+
+    @Override
+    public void storeAuState(AuState auState) {
+      super.storeAuState(auState);
+      auStateStoreCount++;
+    }
+
+    public int getAuStateStoreCount() {
+      return auStateStoreCount;
+    }
+  }
+
+  static class MyMockLockssRepository extends MockLockssRepository {
+    AuSuspectUrlVersions asuv;
+
+    @Override
+    public AuSuspectUrlVersions getSuspectUrlVersions(ArchivalUnit au) {
+      return asuv;
+    }
+
+    @Override
+    public boolean hasSuspectUrlVersions(ArchivalUnit au) {
+      return asuv != null;
+    }
+
+    public void setAsuv(AuSuspectUrlVersions asuv) {
+      this.asuv = asuv;
+    }
+  }
+
+  static class MyAuSuspectUrlVersions extends AuSuspectUrlVersions {
+    int countResult;
+
+    @Override
+    public int countCurrentSuspectVersions(ArchivalUnit au) {
+      return countResult;
+    }
+
+    public void setCountResult(int n) {
+      countResult = n;
+    }
+  }
+
 }

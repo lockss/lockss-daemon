@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.97 2014-05-14 04:12:46 tlipkis Exp $
+ * $Id: V3Voter.java,v 1.97.6.1 2014-12-27 03:27:44 tlipkis Exp $
  */
 
 /*
@@ -1195,11 +1195,11 @@ public class V3Voter extends BasePoll {
     if (sc != null) {
       SubstanceChecker.State oldSub = aus.getSubstanceState();
       SubstanceChecker.State newSub = sc.hasSubstance();
-      if (newSub != oldSub) {
+      if (newSub != oldSub && log.isDebug2()) {
 	log.debug2("Change substance state: " + oldSub + " => " + newSub);
-	aus.setSubstanceState(newSub);
-	aus.storeAuState();
       }
+      // update AuState unconditionally to record possible FeatureVersion change
+      aus.setSubstanceState(newSub);
       switch (newSub) {
       case No:
 	if (oldSub != SubstanceChecker.State.No) {

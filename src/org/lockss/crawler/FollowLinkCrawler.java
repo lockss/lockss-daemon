@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.108.2.1 2014-12-24 01:04:45 wkwilson Exp $
+ * $Id: FollowLinkCrawler.java,v 1.108.2.2 2014-12-27 03:27:44 tlipkis Exp $
  */
 
 /*
@@ -406,9 +406,11 @@ public class FollowLinkCrawler extends BaseCrawler {
             alertMgr.raiseAlert(Alert.auAlert(Alert.CRAWL_NO_SUBSTANCE, au),
                 msg);
           }
-          aus.setSubstanceState(SubstanceChecker.State.No);
+	  logger.siteWarning("" + au + ": " + msg);
         }
-        logger.siteWarning("" + au + ": " + msg);
+	// update AuState unconditionally to record possible FeatureVersion
+	// change
+	aus.setSubstanceState(SubstanceChecker.State.No);
         break;
       case Yes:
         if (isAbbreviatedCrawlTest) {

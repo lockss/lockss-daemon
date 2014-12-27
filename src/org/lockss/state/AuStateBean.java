@@ -1,5 +1,5 @@
 /*
- * $Id: AuStateBean.java,v 1.33.10.1 2014-12-10 22:07:57 dshr Exp $
+ * $Id: AuStateBean.java,v 1.33.10.2 2014-12-27 03:27:44 tlipkis Exp $
  */
 
 /*
@@ -77,6 +77,7 @@ public class AuStateBean extends AuState {
 				      auState.lastLocalHashMismatch,
 				      auState.numAgreePeersLastPoR,
 				      auState.numWillingRepairers,
+				      auState.numCurrentSuspectVersions,
 				      null);
   }
 

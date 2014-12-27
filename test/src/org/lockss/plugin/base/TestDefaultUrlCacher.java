@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefaultUrlCacher.java,v 1.1.2.1 2014-12-24 01:04:45 wkwilson Exp $
+ * $Id: TestDefaultUrlCacher.java,v 1.1.2.2 2014-12-27 03:27:43 tlipkis Exp $
  */
 
 /*
@@ -78,7 +78,7 @@ public class TestDefaultUrlCacher extends LockssTestCase {
   private int pauseBeforeFetchCounter;
   private UrlData ud;
   private MockNodeManager nodeMgr = new MockNodeManager();
-  private AuState maus;
+  private MockAuState maus;
 
   private static final String TEST_URL = "http://www.example.com/testDir/leaf1";
   private boolean saveDefaultSuppressStackTrace;
@@ -94,6 +94,7 @@ public class TestDefaultUrlCacher extends LockssTestCase {
     theDaemon = getMockLockssDaemon();
     theDaemon.getHashService();
 
+    theDaemon.getRepositoryManager();
     mau = new MyMockArchivalUnit();
 
     mau.setConfiguration(ConfigManager.newConfiguration());
@@ -106,6 +107,7 @@ public class TestDefaultUrlCacher extends LockssTestCase {
       (LockssRepository)theDaemon.newAuManager(LockssDaemon.LOCKSS_REPOSITORY,
                                                mau);
     theDaemon.setLockssRepository(repo, mau);
+    repo.startService();
 
     theDaemon.setNodeManager(nodeMgr, mau);
 
@@ -116,8 +118,9 @@ public class TestDefaultUrlCacher extends LockssTestCase {
       CacheException.setDefaultSuppressStackTrace(false);
     getMockLockssDaemon().getAlertManager();
     
-    maus = nodeMgr.getAuState();
     theDaemon.setNodeManager(nodeMgr, mau);
+    maus = new MockAuState(mau);
+    nodeMgr.setAuState(maus);
   }
 
   public void tearDown() throws Exception {
@@ -232,6 +235,38 @@ public class TestDefaultUrlCacher extends LockssTestCase {
     props = url.getProperties();
     assertEquals("value1", props.getProperty("test1"));
     assertEquals("SHA-1:1EEBDF4FDC9FC7BF283031B93F9AEF3338DE9052", props.getProperty(CachedUrl.PROPERTY_CHECKSUM));
+  }
+
+  public void testSubstanceCount() throws IOException {
+    ud = new UrlData(new StringInputStream("test stream"), 
+		     new CIProperties(), TEST_URL);
+    cacher = new MyMockBaseUrlCacher(mau, ud);
+    cacher.storeContent();
+    CachedUrl cu = new BaseCachedUrl(mau, TEST_URL);
+    mau.addCu(cu);
+    AuSuspectUrlVersions asuv = repo.getSuspectUrlVersions(mau);
+    assertTrue(asuv.isEmpty());
+    AuState aus = AuUtil.getAuState(mau);
+    assertEquals(0, aus.recomputeNumCurrentSuspectVersions());
+    asuv.markAsSuspect(TEST_URL, 1);
+    assertEquals(1, aus.recomputeNumCurrentSuspectVersions());
+    ud = new UrlData(new StringInputStream("different content"), 
+		     new CIProperties(), TEST_URL);
+    cacher = new MyMockBaseUrlCacher(mau, ud);
+    cacher.storeContent();
+    assertFalse(asuv.isEmpty());
+    assertTrue(asuv.isSuspect(TEST_URL, 1));
+    // suspect version no longer current
+    assertEquals(0, aus.getNumCurrentSuspectVersions());
+
+    aus.setNumCurrentSuspectVersions(4);
+    assertEquals(4, aus.getNumCurrentSuspectVersions());
+    ud = new UrlData(new StringInputStream("more different content"), 
+		     new CIProperties(), TEST_URL);
+    cacher = new MyMockBaseUrlCacher(mau, ud);
+    cacher.storeContent();
+    // previously current version wasn't suspect, count should not decrease
+    assertEquals(4, aus.getNumCurrentSuspectVersions());
   }
 
   // Should throw exception derived from IOException thrown by InputStream
