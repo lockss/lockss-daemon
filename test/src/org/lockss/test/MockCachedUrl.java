@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrl.java,v 1.56 2014-07-29 22:02:50 tlipkis Exp $
+ * $Id: MockCachedUrl.java,v 1.56.2.1 2014-12-27 03:33:36 tlipkis Exp $
  */
 
 /*
@@ -362,6 +362,8 @@ public class MockCachedUrl implements CachedUrl {
     StringBuffer sb = new StringBuffer(url.length()+17);
     sb.append("[MockCachedUrl: ");
     sb.append(url);
+    sb.append(", v: ");
+    sb.append(version);
     sb.append("]");
     return sb.toString();
   }
