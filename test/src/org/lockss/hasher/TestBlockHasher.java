@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockHasher.java,v 1.30 2014-12-08 21:46:36 tlipkis Exp $
+ * $Id: TestBlockHasher.java,v 1.31 2014-12-27 03:37:16 tlipkis Exp $
  */
 
 /*
@@ -70,6 +70,7 @@ public class TestBlockHasher extends LockssTestCase {
   private MockLockssDaemon daemon;
   private RepositoryManager repoMgr;
   private LockssRepositoryImpl repo;
+  private MockAuState maus;
   private String tempDirPath;
 
   public void setUp() throws Exception {
@@ -85,6 +86,10 @@ public class TestBlockHasher extends LockssTestCase {
     daemon.setLockssRepository(repo, mau);
     repo.initService(daemon);
     repo.startService();
+    MockNodeManager nodeMgr = new MockNodeManager();
+    daemon.setNodeManager(nodeMgr, mau);
+    maus = new MockAuState(mau);
+    nodeMgr.setAuState(maus);
   }
 
   MockArchivalUnit setupContentTree() {
@@ -479,6 +484,18 @@ public class TestBlockHasher extends LockssTestCase {
     testOneContent(100, true);
   }
   
+  public void testDefaultLocalHashAlgorithm() {
+    String defHashAlg = BlockHasher.DEFAULT_LOCAL_HASH_ALGORITHM;
+    String msg = "BlockHasher.DEFAULT_LOCAL_HASH_ALGORITHM must be set to a " +
+      "valid hash algorithm - see PollManager.processConfigMacros()";
+    assertFalse(msg, StringUtil.isNullString(defHashAlg));
+    try {
+      MessageDigest.getInstance(defHashAlg);
+    } catch (NoSuchAlgorithmException ex) {
+      fail(msg);
+    }
+  }
+
   void enableLocalHash(String blockHasherAlg) {
     ConfigurationUtil.addFromArgs(BlockHasher.PARAM_ENABLE_LOCAL_HASH, "true",
 				  BlockHasher.PARAM_LOCAL_HASH_ALGORITHM,
@@ -542,6 +559,8 @@ public class TestBlockHasher extends LockssTestCase {
     assertEquals(0, lhr.getNewlyHashedVersions());
     AuSuspectUrlVersions asuv = AuUtil.getSuspectUrlVersions(mau);
     assertFalse(asuv.isSuspect(urls[4], 0));
+    maus.recomputeNumCurrentSuspectVersions();
+    assertEquals(0, maus.getNumCurrentSuspectVersions());
   }
   
   public void testOneContentLocalHashBad(int stepSize)
@@ -568,6 +587,7 @@ public class TestBlockHasher extends LockssTestCase {
     assertEquals(0, lhr.getMatchingVersions());
     assertEquals(1, lhr.getNewlySuspectVersions());
     assertEquals(0, lhr.getNewlyHashedVersions());
+    assertEquals(1, maus.getNumCurrentSuspectVersions());
   }
   
   public void testOneContentLocalHashSuspect(int stepSize, int urlIndex)
@@ -870,7 +890,9 @@ public class TestBlockHasher extends LockssTestCase {
     // and isn't hashed next time
     testOneContentLocalHashSuspect(1, 4);
     testOneContentLocalHashSuspect(3, 5);
+    assertEquals(2, maus.getNumCurrentSuspectVersions());
     testOneContentLocalHashSuspect(100, 6);
+    assertEquals(3, maus.getNumCurrentSuspectVersions());
   }
   
   public void testOneContentLocalHashMissing() throws Exception {

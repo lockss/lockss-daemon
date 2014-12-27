@@ -1,5 +1,5 @@
 /*
- * $Id: BlockHasher.java,v 1.38 2014-12-21 14:22:19 dshr Exp $
+ * $Id: BlockHasher.java,v 1.39 2014-12-27 03:37:16 tlipkis Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ import org.apache.oro.text.regex.*;
 import org.lockss.config.*;
 import org.lockss.plugin.*;
 import org.lockss.repository.AuSuspectUrlVersions;
-import org.lockss.state.SubstanceChecker;
+import org.lockss.state.*;
 import org.lockss.util.*;
 
 /**
@@ -66,6 +66,7 @@ public class BlockHasher extends GenericHasher {
   /** Algorithm to use for newly-generated stored local hashes */
   public static final String PARAM_LOCAL_HASH_ALGORITHM =
     Configuration.PREFIX + "blockHasher.localHashAlgorithm";
+  // This MUST NOT be null - see PollManager.processConfigMacros()
   public static final String DEFAULT_LOCAL_HASH_ALGORITHM = "SHA-1";
 
   private static final Logger log = Logger.getLogger(BlockHasher.class);
@@ -103,6 +104,7 @@ public class BlockHasher extends GenericHasher {
   // private LocalHashHandler localHashHandler = null;
   private AuSuspectUrlVersions asuv = null;
   private CuIterator cuIter;
+  private boolean needSaveSuspectUrlVersions = false;
 
   LocalHashResult lhr = null;
 
@@ -668,14 +670,15 @@ public class BlockHasher extends GenericHasher {
 				      byte[] contentHash,
 				      byte[] storedHash) {
     ensureAuSuspectUrlVersions();
-    log.critical("isExcludeSuspectVersions: " + isExcludeSuspectVersions);
-    log.critical("isSuspect: " + cu + ": " + asuv.isSuspect(cu.getUrl(), cu.getVersion()));
+    if (log.isDebug2()) {
+      log.debug2("isExcludeSuspectVersions: " + isExcludeSuspectVersions);
+      log.debug2("isSuspect: " + cu + ": " + asuv.isSuspect(cu.getUrl(), cu.getVersion()));
+    }
     if (isExcludeSuspectVersions ||
 	!asuv.isSuspect(cu.getUrl(), cu.getVersion())) {
       asuv.markAsSuspect(cu.getUrl(), cu.getVersion(), alg,
 			 contentHash, storedHash);
-      // save on each change.  Should have option to save only at end of hash?
-      saveAuSuspectUrlVersions();
+      needSaveSuspectUrlVersions = true;
       lhr.newlySuspect(cu.getUrl());
     }
   }
@@ -684,6 +687,20 @@ public class BlockHasher extends GenericHasher {
     if (asuv == null) {
       asuv = AuUtil.getSuspectUrlVersions(cus.getArchivalUnit());
     }
+  }
+
+  @Override
+  protected void done() {
+    super.done();
+    if (needSaveSuspectUrlVersions) {
+      log.debug("Saving suspect URL versions");
+      saveAuSuspectUrlVersions();
+    }
+    // Recompute numCurrentSuspectVersions here even if no new suspect
+    // versions, to avoid dependence on long-term accuracy of incremental
+    // changes.
+    AuState aus = AuUtil.getAuState(cus.getArchivalUnit());
+    aus.recomputeNumCurrentSuspectVersions();
   }
 
   private void saveAuSuspectUrlVersions() {
@@ -707,15 +724,4 @@ public class BlockHasher extends GenericHasher {
      */
     void blockDone(HashBlock hblock);
   }
-
-  /* XXX DSHR - this should probably be temporary */
-  public static Boolean isConfiguredForLocalPolls() {
-    Boolean ret = true;
-    if (!CurrentConfig.getBooleanParam(PARAM_ENABLE_LOCAL_HASH, false) ||
-	CurrentConfig.getParam(PARAM_LOCAL_HASH_ALGORITHM, null) == null) {
-      ret = false;
-    }
-    return ret;
-  }
-
 }

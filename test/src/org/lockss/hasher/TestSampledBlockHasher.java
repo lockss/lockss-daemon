@@ -1,5 +1,5 @@
 /*
- * $Id: TestSampledBlockHasher.java,v 1.9 2014-07-21 03:19:12 tlipkis Exp $
+ * $Id: TestSampledBlockHasher.java,v 1.10 2014-12-27 03:37:16 tlipkis Exp $
  */
 
 /*
@@ -82,6 +82,9 @@ public class TestSampledBlockHasher extends LockssTestCase {
     initByteArrays = new byte[][]{ testContent };
     mau = new MockArchivalUnit(new MockPlugin(daemon), TEST_URL_BASE);
     cus = makeFakeCachedUrlSet(1);
+    MockNodeManager nodeMgr = new MockNodeManager();
+    daemon.setNodeManager(nodeMgr, mau);
+    nodeMgr.setAuState(new MockAuState(mau));
 
     ConfigurationUtil.addFromArgs(LcapMessage.PARAM_HASH_ALGORITHM,
                                   LcapMessage.DEFAULT_HASH_ALGORITHM);
@@ -245,6 +248,9 @@ public class TestSampledBlockHasher extends LockssTestCase {
     daemon.setLockssRepository(repo, mau);
     repo.initService(daemon);
     repo.startService();
+    MockNodeManager nodeMgr = new MockNodeManager();
+    daemon.setNodeManager(nodeMgr, mau);
+    nodeMgr.setAuState(new MockAuState(mau));
     return mau;
   }
 
