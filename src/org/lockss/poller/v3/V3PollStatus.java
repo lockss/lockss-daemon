@@ -1,5 +1,5 @@
 /*
-* $Id: V3PollStatus.java,v 1.51 2014-03-23 17:10:11 tlipkis Exp $
+* $Id: V3PollStatus.java,v 1.52 2014-12-27 03:38:58 tlipkis Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ import org.lockss.plugin.*;
 import org.lockss.poller.*;
 import org.lockss.poller.PollManager.*;
 import org.lockss.poller.v3.*;
+import org.lockss.hasher.LocalHashResult;
 import org.lockss.state.*;
 import org.lockss.protocol.*;
 import org.lockss.protocol.psm.*;
@@ -689,11 +690,12 @@ public class V3PollStatus {
                                     ColumnDescriptor.TYPE_STRING,
                                     pollerState.getErrorDetail()));
       }
-      if (poll.getStatus() == POLLER_STATUS_COMPLETE
-	  && !poll.isLocalPoll()) {
-	summary.add(new SummaryInfo("Agreement",
-				    ColumnDescriptor.TYPE_AGREEMENT,
-				    poll.getPercentAgreement()));
+      if (poll.getStatus() == POLLER_STATUS_COMPLETE) {
+	if (!poll.isLocalPoll()) {
+	  summary.add(new SummaryInfo("Agreement",
+				      ColumnDescriptor.TYPE_AGREEMENT,
+				      poll.getPercentAgreement()));
+	}
       }
       if (isDebug && pollerState.getAdditionalInfo() != null) {
         summary.add(new SummaryInfo("Info",
@@ -738,61 +740,94 @@ public class V3PollStatus {
 				      stateDir));
 	}
       }
-
-      int activeRepairs = poll.getActiveRepairs().size();
-      int talliedUrls = poll.getTalliedUrls().size();
-      int agreeUrls = poll.getAgreedUrls().size();
-      int disagreeUrls = poll.getDisagreedUrls().size();
-      int noQuorumUrls = poll.getNoQuorumUrls().size();
-      int tooCloseUrls = poll.getTooCloseUrls().size();
-      int completedRepairs = poll.getCompletedRepairs().size();
+      if (!poll.isLocalPoll()) {
+	int activeRepairs = poll.getActiveRepairs().size();
+	int talliedUrls = poll.getTalliedUrls().size();
+	int agreeUrls = poll.getAgreedUrls().size();
+	int disagreeUrls = poll.getDisagreedUrls().size();
+	int noQuorumUrls = poll.getNoQuorumUrls().size();
+	int tooCloseUrls = poll.getTooCloseUrls().size();
+	int completedRepairs = poll.getCompletedRepairs().size();
         
-      summary.add(new SummaryInfo("Total URLs In Vote",
-                                  ColumnDescriptor.TYPE_INT,
-                                  new Integer(talliedUrls)));
-      if (agreeUrls > 0) {
-        summary.add(new SummaryInfo("Agreeing URLs",
-                                    ColumnDescriptor.TYPE_INT,
-                                    new StatusTable.Reference(new Integer(agreeUrls),
-                                                              "V3AgreeURLsTable",
-                                                              poll.getKey())));
-      }
-      if (disagreeUrls > 0) {
-        summary.add(new SummaryInfo("Disagreeing URLs",
-                                    ColumnDescriptor.TYPE_INT,
-                                    new StatusTable.Reference(new Integer(disagreeUrls),
-                                                              "V3DisagreeURLsTable",
-                                                              poll.getKey())));
-      }
-      if (noQuorumUrls > 0) {
-        summary.add(new SummaryInfo("No Quorum URLs",
-                                    ColumnDescriptor.TYPE_INT,
-                                    new StatusTable.Reference(new Integer(noQuorumUrls),
-                                                              "V3NoQuorumURLsTable",
-                                                              poll.getKey())));
-      }
-      if (tooCloseUrls > 0) {
-        summary.add(new SummaryInfo("Too Close URLs",
-                                    ColumnDescriptor.TYPE_INT,
-                                    new StatusTable.Reference(new Integer(tooCloseUrls),
-                                                              "V3TooCloseURLsTable",
-                                                              poll.getKey())));
-      }
-      if (completedRepairs > 0) {
-        summary.add(new SummaryInfo("Completed Repairs",
-                                    ColumnDescriptor.TYPE_INT,
-                                    new StatusTable.Reference(new Integer(completedRepairs),
-                                                              "V3CompletedRepairsTable",
-                                                              poll.getKey())));
-      }
-      if (activeRepairs > 0) {
-        String message = poll.isPollActive() ? "Queued Repairs" : "Incomplete Repairs";
-        summary.add(new SummaryInfo("Queued Repairs",
-                                    ColumnDescriptor.TYPE_INT,
-                                    new StatusTable.Reference(new Integer(activeRepairs),
-                                                              "V3ActiveRepairsTable",
-                                                              poll.getKey())));
+	summary.add(new SummaryInfo("Total URLs In Vote",
+				    ColumnDescriptor.TYPE_INT,
+				    new Integer(talliedUrls)));
+	if (agreeUrls > 0) {
+	  summary.add(new SummaryInfo("Agreeing URLs",
+				      ColumnDescriptor.TYPE_INT,
+				      new StatusTable.Reference(new Integer(agreeUrls),
+								"V3AgreeURLsTable",
+								poll.getKey())));
+	}
+	if (disagreeUrls > 0) {
+	  summary.add(new SummaryInfo("Disagreeing URLs",
+				      ColumnDescriptor.TYPE_INT,
+				      new StatusTable.Reference(new Integer(disagreeUrls),
+								"V3DisagreeURLsTable",
+								poll.getKey())));
+	}
+	if (noQuorumUrls > 0) {
+	  summary.add(new SummaryInfo("No Quorum URLs",
+				      ColumnDescriptor.TYPE_INT,
+				      new StatusTable.Reference(new Integer(noQuorumUrls),
+								"V3NoQuorumURLsTable",
+								poll.getKey())));
+	}
+	if (tooCloseUrls > 0) {
+	  summary.add(new SummaryInfo("Too Close URLs",
+				      ColumnDescriptor.TYPE_INT,
+				      new StatusTable.Reference(new Integer(tooCloseUrls),
+								"V3TooCloseURLsTable",
+								poll.getKey())));
+	}
+	if (completedRepairs > 0) {
+	  summary.add(new SummaryInfo("Completed Repairs",
+				      ColumnDescriptor.TYPE_INT,
+				      new StatusTable.Reference(new Integer(completedRepairs),
+								"V3CompletedRepairsTable",
+								poll.getKey())));
+	}
+	if (activeRepairs > 0) {
+	  String message = poll.isPollActive() ? "Queued Repairs" : "Incomplete Repairs";
+	  summary.add(new SummaryInfo("Queued Repairs",
+				      ColumnDescriptor.TYPE_INT,
+				      new StatusTable.Reference(new Integer(activeRepairs),
+								"V3ActiveRepairsTable",
+								poll.getKey())));
         
+	}
+      }
+      LocalHashResult lhr = poll.getLocalHashResult();
+      if (lhr != null) {
+	int matchingUrls = lhr.getMatchingUrls();
+	int newlySuspectUrls = lhr.getNewlySuspectUrls();
+	int newlyHashedUrls = lhr.getNewlyHashedUrls();
+	int skippedUrls = lhr.getSkippedUrls();
+	int totalUrls = matchingUrls + newlySuspectUrls + newlyHashedUrls
+	  + skippedUrls;
+	summary.add(new SummaryInfo("Total checked URLs",
+				    ColumnDescriptor.TYPE_INT,
+				    new Integer(totalUrls)));
+	if (matchingUrls > 0) {
+	  summary.add(new SummaryInfo("Matching URLs",
+				      ColumnDescriptor.TYPE_INT,
+				      new Integer(matchingUrls)));
+	}
+	if (newlySuspectUrls > 0) {
+	  summary.add(new SummaryInfo("Newly Suspect URLs",
+				      ColumnDescriptor.TYPE_INT,
+				      new Integer(newlySuspectUrls)));
+	}
+	if (newlyHashedUrls > 0) {
+	  summary.add(new SummaryInfo("Newly Hashed URLs",
+				      ColumnDescriptor.TYPE_INT,
+				      new Integer(newlyHashedUrls)));
+	}
+	if (skippedUrls > 0) {
+	  summary.add(new SummaryInfo("Already Suspect URLs",
+				      ColumnDescriptor.TYPE_INT,
+				      new Integer(skippedUrls)));
+	}
       }
       if (poll.isEnableHashStats()) {
         summary.add(new SummaryInfo("Bytes Hashed",
