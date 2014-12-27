@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.68 2014-12-21 14:22:20 dshr Exp $
+ * $Id: TestV3Poller.java,v 1.69 2014-12-27 03:41:35 tlipkis Exp $
  */
 
 /*
@@ -710,6 +710,13 @@ public class TestV3Poller extends LockssTestCase {
     testChoosePollVariant(true, true);
   }
 
+  private V3Poller.PollVariant choosePollVariant(ArchivalUnit au) {
+    long maxDelayBetweenPoR =
+      PollManager.DEFAULT_MAX_DELAY_BETWEEN_POR_MULTIPLIER *
+      PollManager.DEFAULT_TOPLEVEL_POLL_INTERVAL;
+    return pollmanager.choosePollVariant(au, maxDelayBetweenPoR);
+  }
+
   /*
    * The choosePollVariant() logic has the following cases:
    * A) Too soon to call poll - NoPoll
@@ -764,22 +771,22 @@ public class TestV3Poller extends LockssTestCase {
     PeerIdentity p5 = findPeerIdentity("TCP:[4.5.6.2]:1111");
     assertFalse(p5.isLocalIdentity());
     // First poll is PoR - case H
-    assertEquals(V3Poller.PollVariant.PoR, pollmanager.choosePollVariant(au));
+    assertEquals(V3Poller.PollVariant.PoR, choosePollVariant(au));
     // Now crawl and get content
     maus.setLastContentChange(100);
     maus.setLastCrawlTime(100);
     // Case A
     maus.setLastPollStart(1000L);
     assertEquals(V3Poller.PollVariant.NoPoll,
-		 pollmanager.choosePollVariant(au));
+		 choosePollVariant(au));
     maus.setLastPollStart(0L);
     // Case E
-    assertEquals(V3Poller.PollVariant.PoR, pollmanager.choosePollVariant(au));
+    assertEquals(V3Poller.PollVariant.PoR, choosePollVariant(au));
     // Now poll but get disagreement
     maus.setLastTopLevelPollTime(200);
     maus.setPollDuration(100L);
     // Case H
-    assertEquals(V3Poller.PollVariant.PoR, pollmanager.choosePollVariant(au));
+    assertEquals(V3Poller.PollVariant.PoR, choosePollVariant(au));
     // Now get 2 agreements, repairer threshold is 3
     agreeMap.put(p3, 150L);
     agreeMap.put(p2, 160L);
@@ -789,7 +796,7 @@ public class TestV3Poller extends LockssTestCase {
     // Case F
     assertEquals(  enablePoPPolls
 		   ? V3Poller.PollVariant.PoP : V3Poller.PollVariant.PoR,
-		 pollmanager.choosePollVariant(au));
+		 choosePollVariant(au));
     // Add another agreement
     agreeMap.put(p1, 170L);
     aus.setNumAgreePeersLastPoR(3);
@@ -797,25 +804,25 @@ public class TestV3Poller extends LockssTestCase {
     // Case G
     assertEquals(  enableLocalPolls
 		   ? V3Poller.PollVariant.Local : V3Poller.PollVariant.PoR,
-		 pollmanager.choosePollVariant(au));
+		 choosePollVariant(au));
     // Now crawl again, but get no content
     maus.setLastCrawlTime(300);
     // Case G
     assertEquals(  enableLocalPolls
 		   ? V3Poller.PollVariant.Local : V3Poller.PollVariant.PoR,
-		 pollmanager.choosePollVariant(au));
+		 choosePollVariant(au));
     // Now crawl again, get content
     maus.setLastCrawlTime(300);
     maus.setLastContentChange(300);
     // Case E
     assertEquals(V3Poller.PollVariant.PoR,
-		 pollmanager.choosePollVariant(au));
+		 choosePollVariant(au));
     // Now poll but get disagreement
     maus.setLastTopLevelPollTime(500);
     maus.setPollDuration(100L);
     aus.setNumAgreePeersLastPoR(0);
     // Case H
-    assertEquals(V3Poller.PollVariant.PoR, pollmanager.choosePollVariant(au));
+    assertEquals(V3Poller.PollVariant.PoR, choosePollVariant(au));
     // Now get 3 agreement, repairer threshold is 3
     agreeMap.put(p3, 450L);
     agreeMap.put(p2, 460L);
@@ -824,19 +831,19 @@ public class TestV3Poller extends LockssTestCase {
     // Case G
     assertEquals(  enableLocalPolls
 		   ? V3Poller.PollVariant.Local : V3Poller.PollVariant.PoR,
-		 pollmanager.choosePollVariant(au));
+		 choosePollVariant(au));
     // Case D - XXX not yet implemented
     if (enableLocalPolls) {
       // Case C
       ConfigurationUtil.addFromArgs(V3Poller.PARAM_V3_ALL_LOCAL_POLLS, "true");
       assertEquals(V3Poller.PollVariant.Local,
-		   pollmanager.choosePollVariant(au));
+		   choosePollVariant(au));
     }
     if (enablePoPPolls) {
       // Case B
       ConfigurationUtil.addFromArgs(V3Poller.PARAM_V3_ALL_POP_POLLS, "true");
       assertEquals(V3Poller.PollVariant.PoP,
-		   pollmanager.choosePollVariant(au));
+		   choosePollVariant(au));
     }
 
   }
