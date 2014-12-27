@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerImpl.java,v 1.50 2014-12-10 22:08:24 dshr Exp $
+ * $Id: IdentityManagerImpl.java,v 1.51 2014-12-27 03:39:31 tlipkis Exp $
  */
 
 /*
@@ -1128,10 +1128,11 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
     }
     AuAgreements auAgreements = findAuAgreements(au);
     if (auAgreements == null) {
-      log.error("auAgreements null");
+      log.error("No auAgreements: " + au.getName());
     } else if (agreementType == AgreementType.POR &&
 	       agreement >= minPercentPartialAgreement &&
 	       !auAgreements.hasAgreed(pid, minPercentPartialAgreement)) {
+      // XXX ER/EE AuState s.b. updated with repairer count, not repairee.
       // A new willing repairer
       AuState aus = AuUtil.getAuState(au);
       if (aus != null) {
