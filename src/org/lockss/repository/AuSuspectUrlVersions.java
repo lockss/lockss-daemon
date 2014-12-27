@@ -1,5 +1,5 @@
 /*
- * $Id: AuSuspectUrlVersions.java,v 1.5 2014-07-28 07:15:59 tlipkis Exp $
+ * $Id: AuSuspectUrlVersions.java,v 1.5.2.1 2014-12-27 03:30:28 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.repository;
 
 import java.util.*;
 import org.lockss.util.*;
+import org.lockss.plugin.ArchivalUnit;
 import org.lockss.hasher.HashResult;
 
 /**
@@ -43,6 +44,9 @@ import org.lockss.hasher.HashResult;
  * stored hash is corrupt.  This class is thread safe.
  */
 public class AuSuspectUrlVersions implements LockssSerializable {
+  private static final Logger log =
+    Logger.getLogger(AuSuspectUrlVersions.class);
+
   public class SuspectUrlVersion implements LockssSerializable {
     private final String url;
     private final int version;
@@ -86,14 +90,14 @@ public class AuSuspectUrlVersions implements LockssSerializable {
     public long getCreated() {
       return created;
     }
-    public int hashCode() {
-      return url.hashCode() + version;
-    }
     public HashResult getComputedHash() {
       return computedHash;
     }
     public HashResult getStoredHash() {
       return storedHash;
+    }
+    public int hashCode() {
+      return url.hashCode() + version;
     }
     public boolean equals(Object obj) {
       if (obj instanceof SuspectUrlVersion) {
@@ -170,4 +174,26 @@ public class AuSuspectUrlVersions implements LockssSerializable {
     return new ArrayList(suspectVersions);
   }
 
+  /**
+   * Count the URLs whose current version in the AU is suspect
+   * @return the number of URLs whose current version is suspect
+   * @param au the ArchivalUnit
+   */
+  // Unit test is in TestLockssRepositoryImpl
+  public int countCurrentSuspectVersions(ArchivalUnit au) {
+    int ret = 0;
+    for (SuspectUrlVersion suv : suspectVersions) {
+      int currentVersion = au.makeCachedUrl(suv.getUrl()).getVersion();
+      if (suv.getVersion() == currentVersion) {
+	ret++;
+	if (log.isDebug3()) {
+	  log.debug3(suv.getUrl() + ": current suspect " + suv.getVersion());
+	}
+      } else if (log.isDebug3()) {
+	log.debug3(suv.getUrl() + ": current " + currentVersion +
+		   " suspect " + suv.getVersion());
+      }
+    }
+    return ret;
+  }
 }

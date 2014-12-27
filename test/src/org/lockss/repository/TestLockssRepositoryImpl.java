@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.69 2014-07-28 07:15:27 tlipkis Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.69.2.1 2014-12-27 03:30:28 tlipkis Exp $
  */
 
 /*
@@ -166,6 +166,13 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
                "test stream 4", null);
     repo.startService();
 
+    MockCachedUrl cu1 = new MockCachedUrl(url1, mau);
+    cu1.setVersion(1);
+    mau.addCu(cu1);
+    MockCachedUrl cu2 = new MockCachedUrl(url2, mau);
+    cu2.setVersion(1);
+    mau.addCu(cu2);
+
     assertFalse(repo.hasSuspectUrlVersions(mau));
 
     AuSuspectUrlVersions asuv = repo.getSuspectUrlVersions(mau);
@@ -178,6 +185,7 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     assertFalse(asuv.isSuspect(url2, 0));
     assertFalse(asuv.isSuspect(url2, 1));
     assertFalse(repo.hasSuspectUrlVersions(mau));
+    assertEquals(0, asuv.countCurrentSuspectVersions(mau));
     asuv.markAsSuspect(url1, 1);
     assertFalse(asuv.isEmpty());
     assertFalse(asuv.isSuspect(url1, 0));
@@ -185,12 +193,16 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     assertFalse(asuv.isSuspect(url2, 0));
     assertFalse(asuv.isSuspect(url2, 1));
     assertTrue(repo.hasSuspectUrlVersions(mau));
+    assertEquals(1, asuv.countCurrentSuspectVersions(mau));
+    cu1.setVersion(2);
+    assertEquals(0, asuv.countCurrentSuspectVersions(mau));
     asuv.markAsSuspect(url2, 0);
     assertFalse(asuv.isSuspect(url1, 0));
     assertTrue(asuv.isSuspect(url1, 1));
     assertTrue(asuv.isSuspect(url2, 0));
     assertFalse(asuv.isSuspect(url2, 1));
     assertTrue(repo.hasSuspectUrlVersions(mau));
+    assertEquals(0, asuv.countCurrentSuspectVersions(mau));
 
     HashResult res1 = HashResult.make(ByteArray.makeRandomBytes(8), "Al");
     HashResult res2 = HashResult.make(ByteArray.makeRandomBytes(8), "Al");
