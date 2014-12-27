@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.182 2014-12-10 22:08:23 dshr Exp $
+ * $Id: V3Poller.java,v 1.183 2014-12-27 03:39:17 tlipkis Exp $
  */
 
 /*
@@ -1447,7 +1447,9 @@ public class V3Poller extends BasePoll {
    */
   BlockTally tallyBlock(HashBlock hashBlock) {
     setStatus(V3Poller.POLLER_STATUS_TALLYING);
-
+    if (isLocalPoll()) {
+      return null;
+    }
     final String pollerUrl = hashBlock.getUrl();
     log.debug3("Opening block " + pollerUrl + " to tally.");
     if (logUniqueVersions) {
@@ -2433,6 +2435,7 @@ public class V3Poller extends BasePoll {
                   + getKey());
       return;
     }
+    AuState auState = getAuState();
     reportLocalHashResult();
     completeVotersAndUpdateRepairers();
 
@@ -2446,7 +2449,6 @@ public class V3Poller extends BasePoll {
       stats.setLastPollTime(auId, TimeBase.nowMs());
       stats.incrementNumPolls(auId);
       // Update the AU's agreement if PoR poll
-      AuState auState = getAuState();
       if (getPollVariant() == PollVariant.PoR) {
 	auState.setV3Agreement(getPercentAgreement());
       }
@@ -3359,11 +3361,11 @@ public class V3Poller extends BasePoll {
       AuState aus = AuUtil.getAuState(getAu());
       SubstanceChecker.State newSub = sc.hasSubstance();
       SubstanceChecker.State oldSub = aus.getSubstanceState();
-      if (newSub != oldSub) {
+      if (newSub != oldSub && log.isDebug2()) {
 	log.debug2("Change substance state: " + oldSub + " => " + newSub);
-	aus.setSubstanceState(newSub);
-	aus.storeAuState();
       }
+      // update AuState unconditionally to record possible FeatureVersion change
+      aus.setSubstanceState(newSub);
       switch (sc.hasSubstance()) {
       case No:
 	if (oldSub != SubstanceChecker.State.No) {
@@ -3514,6 +3516,13 @@ public class V3Poller extends BasePoll {
     return pollerState.getPollVariant();
   }
   
+  /**
+   * Return the LocalHashResult or null.
+   */
+  public LocalHashResult getLocalHashResult() {
+    return lhr;
+  }
+
   /**
    * Return the ID Manager.
    */
