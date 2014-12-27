@@ -1,6 +1,6 @@
 """LOCKSS daemon interface library."""
 
-# $Id: lockss_daemon.py,v 1.41 2014-12-08 04:17:22 tlipkis Exp $
+# $Id: lockss_daemon.py,v 1.42 2014-12-27 03:40:59 tlipkis Exp $
 
 __copyright__ = '''\
 Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
@@ -658,6 +658,8 @@ class Client:
             if self.isAuIdOrRef( poll[ 'auId' ], au ) and poll[ 'status' ] == 'Complete':
                 # Found the right entry
                 summary = self.getV3PollerDetail( poll[ 'pollId' ][ 'key' ] )[ 0 ]
+                if  summary[ 'Type' ] == 'Local':
+                    continue
                 URL_total = int( summary[ 'Total URLs In Vote' ] )
                 agreed_total = int( summary[ 'Agreeing URLs' ][ 'value' ] )
                 repaired_total = int( summary.get( 'Completed Repairs', { 'value': 0 } )[ 'value' ] )
