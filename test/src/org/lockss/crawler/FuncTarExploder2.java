@@ -1,5 +1,5 @@
 /*
- * $Id: FuncTarExploder2.java,v 1.24 2014-11-12 20:11:35 wkwilson Exp $
+ * $Id: FuncTarExploder2.java,v 1.25 2014-12-27 03:41:51 tlipkis Exp $
  */
 
 /*
@@ -173,6 +173,8 @@ public class FuncTarExploder2 extends LockssTestCase {
     crawlMgr = new NoPauseCrawlManagerImpl();
     theDaemon.setCrawlManager(crawlMgr);
     crawlMgr.initService(theDaemon);
+    theDaemon.getRepositoryManager().startService();
+    theDaemon.suppressStartAuManagers(false);
 
     // pluginMgr.setLoadablePluginsReady(true);
     theDaemon.setDaemonInited(true);

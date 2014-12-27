@@ -1,5 +1,5 @@
 /*
- * $Id: FuncWarcExploder2.java,v 1.7 2014-11-12 20:11:28 wkwilson Exp $
+ * $Id: FuncWarcExploder2.java,v 1.8 2014-12-27 03:41:51 tlipkis Exp $
  */
 
 /*
@@ -269,6 +269,8 @@ public class FuncWarcExploder2 extends LockssTestCase {
     crawlMgr = new NoPauseCrawlManagerImpl();
     theDaemon.setCrawlManager(crawlMgr);
     crawlMgr.initService(theDaemon);
+    theDaemon.getRepositoryManager().startService();
+    theDaemon.suppressStartAuManagers(false);
 
     // pluginMgr.setLoadablePluginsReady(true);
     theDaemon.setDaemonInited(true);
