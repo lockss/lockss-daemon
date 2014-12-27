@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.101 2014-10-22 19:39:39 thib_gc Exp $
+ * $Id: ConfigManager.java,v 1.102 2014-12-27 03:35:32 tlipkis Exp $
  */
 
 /*
@@ -1312,6 +1312,8 @@ public class ConfigManager implements LockssManager {
     setIfNotSet(config, fromParam, ProxyManager.PARAM_BIND_ADDRS);
     setIfNotSet(config, fromParam, AuditProxyManager.PARAM_BIND_ADDRS);
 //     setIfNotSet(config, fromParam, IcpManager.PARAM_ICP_BIND_ADDRS);
+
+    org.lockss.poller.PollManager.processConfigMacros(config);
   }
 
   // Backward compatibility for param settings
