@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.98 2014-12-10 22:08:24 dshr Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.99 2014-12-27 03:38:27 tlipkis Exp $
  */
 
 /*
@@ -284,6 +284,7 @@ public class HistoryRepositoryImpl
 				auState.getLastLocalHashMismatch(),
 				auState.getNumAgreePeersLastPoR(),
 				auState.getNumWillingRepairers(),
+				auState.getNumCurrentSuspectVersions(),
 				this);
       return res;
     }

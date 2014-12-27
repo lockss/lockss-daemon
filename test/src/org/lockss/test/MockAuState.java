@@ -1,5 +1,5 @@
 /*
- * $Id: MockAuState.java,v 1.27 2014-12-14 04:14:34 dshr Exp $
+ * $Id: MockAuState.java,v 1.28 2014-12-27 03:38:26 tlipkis Exp $
  */
 
 /*
@@ -102,6 +102,7 @@ public class MockAuState extends AuState {
 	  -1, // lastLocalHashMismatch
 	  -1, // numAgreePeersLastPoR
 	  -1, // numWillingRepairers
+	  -1, // numCurrentSuspectVersions
 	  historyRepo);
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.86 2014-12-10 22:08:24 dshr Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.87 2014-12-27 03:38:26 tlipkis Exp $
  */
 
 /*
@@ -311,6 +311,7 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
 				    222444, // lastLocalHashMismatch
 				    444777, // numAgreePeersLastPoR
 				    777444, // numWillingRepairers
+				    747474, // numCurrentSuspectVersions
 				    repository);
 
     assertEquals("SubstVer3",
@@ -446,6 +447,7 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
 				  -1, // lastLocalHashMismatch
 				  27, // numAgreePeersLastPoR
 				  72, // numWillingRepirers
+				  19, // numCurrentSuspectVersions
 				  repository);
 
     repository.storeAuState(auState);
@@ -486,6 +488,7 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
 			  -1, // lastLocalHashMismatch
 			  13, // numAgreePeersLastPoR
 			  31, // numWillingRepairers
+			  91, // numCurrentSuspectVersions
 			  repository);
     repository.storeAuState(auState);
     assertEquals(1234, auState.getLastCrawlTime());
@@ -494,6 +497,7 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     assertEquals(5555, auState.getLastPollStart());
     assertEquals(13, auState.getNumAgreePeersLastPoR());
     assertEquals(31, auState.getNumWillingRepairers());
+    assertEquals(91, auState.getNumCurrentSuspectVersions());
     assertEquals(mau.getAuId(), auState.getArchivalUnit().getAuId());
 
     fis = new FileInputStream(xmlFile);
@@ -510,6 +514,7 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     assertEquals(5555, auState.getLastPollStart());
     assertEquals(13, auState.getNumAgreePeersLastPoR());
     assertEquals(31, auState.getNumWillingRepairers());
+    assertEquals(91, auState.getNumCurrentSuspectVersions());
     assertEquals(mau.getAuId(), auState.getArchivalUnit().getAuId());
 
     auState = new AuState(mau,
@@ -539,6 +544,7 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
 			  -1, // lastLocalHashMismatch
 			  27, // numAgreePeersLastPoR
 			  72, // numWillingRepairers
+			  19, // numCurrentSuspectVersions
 			  repository);
     repository.storeAuState(auState);
     fis = new FileInputStream(xmlFile);

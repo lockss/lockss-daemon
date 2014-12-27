@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.55 2014-12-14 04:14:33 dshr Exp $
+ * $Id: AuState.java,v 1.56 2014-12-27 03:38:27 tlipkis Exp $
  */
 
 /*
@@ -34,8 +34,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.state;
 
 import java.util.*;
-import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.Plugin;
+import org.lockss.plugin.*;
 import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
@@ -84,6 +83,7 @@ public class AuState implements LockssSerializable {
   protected long lastLocalHashScan;	// last completed local hash scan
   protected int numAgreePeersLastPoR = -1; // Number of agreeing peers last PoR
   protected int numWillingRepairers = -1; // Number of willing repairers
+  protected int numCurrentSuspectVersions = -1; // # URLs w/ current version suspect
 
   // XXX not used in 1.62 - made transient so not committed to having it in
   // state file
@@ -102,6 +102,8 @@ public class AuState implements LockssSerializable {
   // Runtime (non-state) vars
   protected transient ArchivalUnit au;
   private transient HistoryRepository historyRepo;
+  private transient boolean needSave = false;
+  private transient int batchSaveDepth = 0;
 
   // deprecated, kept for compatibility with old state files
   protected transient long lastTreeWalk = -1;
@@ -147,6 +149,7 @@ public class AuState implements LockssSerializable {
 	 -1, // lastLocalHashMismatch
 	 0,  // numAgreePeersLastPoR
 	 0,  // numWillingRepairers
+	 0,  // numCurrentSuspectVersions
 	 historyRepo);
   }
 
@@ -172,6 +175,7 @@ public class AuState implements LockssSerializable {
 		 long lastLocalHashMismatch,
 		 int numAgreePeersLastPoR,
 		 int numWillingRepairers,
+		 int numCurrentSuspectVersions,
 		 HistoryRepository historyRepo) {
     this.au = au;
     this.lastCrawlTime = lastCrawlTime;
@@ -200,6 +204,7 @@ public class AuState implements LockssSerializable {
     this.lastLocalHashMismatch = lastLocalHashMismatch;
     this.numAgreePeersLastPoR = numAgreePeersLastPoR;
     this.numWillingRepairers = numWillingRepairers;
+    this.numCurrentSuspectVersions = numCurrentSuspectVersions;
     this.historyRepo = historyRepo;
   }
 
@@ -279,10 +284,11 @@ public class AuState implements LockssSerializable {
   }
 
   /**
-   * @return last time metadata indexing was completed.
+   * Set last time metadata indexing was completed.
    */
-  public void setLastMetadataIndex(long time) {
+  public synchronized void setLastMetadataIndex(long time) {
     lastMetadataIndex = time;
+    needSave();
   }
 
   /**
@@ -406,10 +412,10 @@ public class AuState implements LockssSerializable {
     return numAgreePeersLastPoR;
   }
 
-  public void setNumAgreePeersLastPoR(int n) {
+  public synchronized void setNumAgreePeersLastPoR(int n) {
     if (numAgreePeersLastPoR != n) {
       numAgreePeersLastPoR = n;
-      historyRepo.storeAuState(this);
+      needSave();
     }
   }
 
@@ -417,12 +423,53 @@ public class AuState implements LockssSerializable {
     return numWillingRepairers;
   }
 
-  public void setNumWillingRepairers(int n) {
+  public synchronized void setNumWillingRepairers(int n) {
     if (numWillingRepairers != n) {
+      if (logger.isDebug3()) {
+	logger.debug3("setNumWillingRepairers: " +
+		      numWillingRepairers + " -> " + n);
+      }
       numWillingRepairers = n;
-      historyRepo.storeAuState(this);
+      needSave();
     }
   }
+
+  public int getNumCurrentSuspectVersions() {
+    return numCurrentSuspectVersions;
+  }
+
+  public synchronized void setNumCurrentSuspectVersions(int n) {
+    if (numCurrentSuspectVersions != n) {
+      if (logger.isDebug3()) {
+	logger.debug3("setNumCurrentSuspectVersions: " +
+		      numCurrentSuspectVersions + " -> " + n);
+      }
+      numCurrentSuspectVersions = n;
+      needSave();
+    }
+  }
+
+  public synchronized void incrementNumCurrentSuspectVersions(int n) {
+    if (numCurrentSuspectVersions < 0) {
+      // If -1, this object was deserialized from a file written before
+      // this field existed, so it needs to be computed.
+      recomputeNumCurrentSuspectVersions();
+    }
+    setNumCurrentSuspectVersions(getNumCurrentSuspectVersions() + n);
+  }
+
+  public synchronized int recomputeNumCurrentSuspectVersions() {
+    int n = 0;
+    if (AuUtil.hasSuspectUrlVersions(au)) {
+      AuSuspectUrlVersions asuv = AuUtil.getSuspectUrlVersions(au);
+      n = asuv.countCurrentSuspectVersions(au);
+    }
+    logger.debug2("recomputeNumCurrentSuspectVersions(" + au + "): " +
+		  numCurrentSuspectVersions + " -> " + n);
+    setNumCurrentSuspectVersions(n);
+    return n;
+  }
+
 
   /**
    * Returns the running average poll duration, or 0 if unknown
@@ -462,18 +509,18 @@ public class AuState implements LockssSerializable {
   /**
    * Sets the last time a crawl was attempted.
    */
-  public void newCrawlStarted() {
+  public synchronized void newCrawlStarted() {
     saveLastCrawl();
     lastCrawlAttempt = TimeBase.nowMs();
     lastCrawlResult = Crawler.STATUS_RUNNING_AT_CRASH;
     lastCrawlResultMsg = null;
-    historyRepo.storeAuState(this);
+    needSave();
   }
 
   /**
    * Sets the last crawl time to the current time.  Saves itself to disk.
    */
-  public void newCrawlFinished(int result, String resultMsg) {
+  public synchronized void newCrawlFinished(int result, String resultMsg) {
     lastCrawlResultMsg = resultMsg;
     switch (result) {
     case Crawler.STATUS_SUCCESSFUL:
@@ -488,13 +535,13 @@ public class AuState implements LockssSerializable {
       break;
     }
     previousCrawlState = null;
-    historyRepo.storeAuState(this);
+    needSave();
   }
 
   /**
    * Records a content change
    */
-  public void contentChanged() {
+  public synchronized void contentChanged() {
     // Is a crawl in progress?
     if (previousCrawlState != null) {
       // Is the previous content change after the start of this
@@ -506,7 +553,7 @@ public class AuState implements LockssSerializable {
     }
     // Yes - this is the first change in this crawl.
     lastContentChange = TimeBase.nowMs();
-    historyRepo.storeAuState(this);
+    needSave();
   }
 
   private AuState copy() {
@@ -528,28 +575,31 @@ public class AuState implements LockssSerializable {
 		       lastLocalHashMismatch,
 		       numAgreePeersLastPoR,
 		       numWillingRepairers,
+		       numCurrentSuspectVersions,
 		       null);
   }
 
   /**
    * Sets the last time a poll was started.
    */
-  public void pollStarted() {
+  public synchronized void pollStarted() {
     lastPollStart = TimeBase.nowMs();
-    historyRepo.storeAuState(this);
+    needSave();
   }
 
   /**
    * Sets the last time a poll was attempted.
    */
-  public void pollAttempted() {
+  public synchronized void pollAttempted() {
     lastPollAttempt = TimeBase.nowMs();
+    needSave();
   }
 
   /**
-   * Sets the last poll time to the current time.  Saves itself to disk.
+   * Sets the last poll time to the current time.
    */
-  public void pollFinished(int result, V3Poller.PollVariant variant) {
+  public synchronized void pollFinished(int result,
+					V3Poller.PollVariant variant) {
     long now = TimeBase.nowMs();
     boolean complete = result == V3Poller.POLLER_STATUS_COMPLETE;
     switch (variant) {
@@ -572,7 +622,7 @@ public class AuState implements LockssSerializable {
       }
       break;
     }
-    historyRepo.storeAuState(this);
+    needSave();
   }
 
   /**
@@ -583,12 +633,12 @@ public class AuState implements LockssSerializable {
 		 V3Poller.PollVariant.PoR); // XXX Bogus!
   }
 
-  public void setV3Agreement(double d) {
+  public synchronized void setV3Agreement(double d) {
     v3Agreement = d;
     if (v3Agreement > highestV3Agreement) {
       highestV3Agreement = v3Agreement;
     }
-    historyRepo.storeAuState(this);
+    needSave();
   }
 
   /**
@@ -603,15 +653,20 @@ public class AuState implements LockssSerializable {
     return v3Agreement > highestV3Agreement ? v3Agreement : highestV3Agreement;
   }
   
-  public void setSubstanceState(SubstanceChecker.State state) {
-    hasSubstance = state;
+  public synchronized void setSubstanceState(SubstanceChecker.State state) {
+    batchSaves();
     setFeatureVersion(Plugin.Feature.Substance,
 		      au.getPlugin().getFeatureVersion(Plugin.Feature.Substance));
+    if (getSubstanceState() != state) {
+      hasSubstance = state;
+      needSave();
+    }
+    unBatchSaves();
   }
 
   public SubstanceChecker.State getSubstanceState() {
     if (hasSubstance == null) {
-      hasSubstance = SubstanceChecker.State.Unknown;
+      return SubstanceChecker.State.Unknown;
     }
     return hasSubstance;
   }
@@ -623,27 +678,31 @@ public class AuState implements LockssSerializable {
   /** Get the version string that was last set for the given feature */
   public String getFeatureVersion(Plugin.Feature feat) {
     switch (feat) {
-    case Substance: ;return substanceVersion;
-    case Metadata: ;return metadataVersion;
+    case Substance: return substanceVersion;
+    case Metadata: return metadataVersion;
     default: return null;
     }
   }
 
   /** Set the version of the feature that was just used to process the
    * AU */
-  public void setFeatureVersion(Plugin.Feature feat, String ver) {
-    switch (feat) {
-    case Substance: substanceVersion = ver; break;
-    case Metadata: metadataVersion = ver; break;
-    default:
+  public synchronized void setFeatureVersion(Plugin.Feature feat, String ver) {
+    String over = getFeatureVersion(feat);
+    if (!StringUtil.equalStrings(ver, over)) {
+      switch (feat) {
+      case Substance: substanceVersion = ver; break;
+      case Metadata: metadataVersion = ver; break;
+      default:
+      }
+      needSave();
     }
-    storeAuState();
   }
 
   /**
    * Sets the last treewalk time to the current time.  Does not save itself
    * to disk, as it is desireable for the treewalk to run every time the
    * server restarts.  Consequently, it is non-persistent.
+   * @deprecated
    */
   void setLastTreeWalkTime() {
     lastTreeWalk = TimeBase.nowMs();
@@ -652,6 +711,7 @@ public class AuState implements LockssSerializable {
   /**
    * Gets the collection of crawl urls.
    * @return a {@link Collection}
+   * @deprecated
    */
   public HashSet getCrawlUrls() {
     if (crawlUrls==null) {
@@ -665,11 +725,12 @@ public class AuState implements LockssSerializable {
    * until URL_UPDATE_LIMIT updates have been made, then writes the state to
    * file.
    * @param forceWrite forces state storage if true
+   * @deprecated
    */
   public void updatedCrawlUrls(boolean forceWrite) {
     urlUpdateCntr++;
     if (forceWrite || (urlUpdateCntr >= URL_UPDATE_LIMIT)) {
-      historyRepo.storeAuState(this);
+      needSave();
       urlUpdateCntr = 0;
     }
   }
@@ -715,15 +776,48 @@ public class AuState implements LockssSerializable {
     }
   }
 
-  public void setClockssSubscriptionStatus(int val) {
+  public synchronized void setClockssSubscriptionStatus(int val) {
     if (clockssSubscriptionStatus != val) {
       clockssSubscriptionStatus = val;
-      historyRepo.storeAuState(this);
+      needSave();
     }
   }
 
-  public void storeAuState() {
+  /** Start a batch of updates, deferring saving until unBatchSaves() is
+   * called. */
+  public synchronized void batchSaves() {
+    if (logger.isDebug3()) {
+      logger.debug3("Start batch: " + (batchSaveDepth + 1));
+    }
+    ++batchSaveDepth;
+  }
+
+  /** End the update batch, saving if any changes have been made. */
+  public synchronized void unBatchSaves() {
+    if (batchSaveDepth == 0) {
+      logger.warning("unBatchSaves() called when no batch in progress",
+		     new Throwable());
+      return;
+    }
+    if (logger.isDebug3()) {
+      logger.debug3("End batch: " + batchSaveDepth);
+    }
+    if (--batchSaveDepth == 0 && needSave) {
+      storeAuState();
+    }
+  }
+
+  private void needSave() {
+    if (batchSaveDepth == 0) {
+      storeAuState();
+    } else {
+      needSave = true;
+    }
+  } 
+
+  public synchronized void storeAuState() {
     historyRepo.storeAuState(this);
+    needSave = false;
   }
 
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: TestRegistryArchivalUnit.java,v 1.22 2014-12-17 00:18:58 tlipkis Exp $
+ * $Id: TestRegistryArchivalUnit.java,v 1.23 2014-12-27 03:38:26 tlipkis Exp $
  */
 
 /*
@@ -192,6 +192,7 @@ public class TestRegistryArchivalUnit extends LockssTestCase {
 			      -1, // lastLocalHashMismatch
 			      -1, // numAgreePeersLastPoR
 			      -1, // numWillingRepairers
+			      -1, // numCurrentSuspectVersions
 			      (HistoryRepository)null);
     assertFalse(au.shouldCallTopLevelPoll(aus));
     ConfigurationUtil.setFromArgs(RegistryArchivalUnit.PARAM_ENABLE_REGISTRY_POLLS,
