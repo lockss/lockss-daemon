@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimpleHasher.java,v 1.15 2014-11-10 18:53:19 fergaloy-sf Exp $
+ * $Id: TestSimpleHasher.java,v 1.15.2.1 2014-12-27 03:23:49 tlipkis Exp $
  */
 
 /*
@@ -82,6 +82,9 @@ public class TestSimpleHasher extends LockssTestCase {
     daemon = getMockLockssDaemon();
     tempDirPath = setUpDiskSpace();
     mau = new MockArchivalUnit(new MockPlugin(daemon));
+    MockNodeManager nodeMgr = new MockNodeManager();
+    daemon.setNodeManager(nodeMgr, mau);
+    nodeMgr.setAuState(new MockAuState(mau));
   }
 
   MockArchivalUnit setupContentTree() {

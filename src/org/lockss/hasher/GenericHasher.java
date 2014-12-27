@@ -1,5 +1,5 @@
 /*
- * $Id: GenericHasher.java,v 1.27 2013-08-10 20:48:54 tlipkis Exp $
+ * $Id: GenericHasher.java,v 1.27.12.1 2014-12-27 03:23:49 tlipkis Exp $
  */
 
 /*
@@ -174,7 +174,7 @@ public abstract class GenericHasher implements CachedUrlSetHasher {
 	}
 	else {
 	  if (isTrace) log.debug3("No more elements to hash");
-	  this.isFinished = true;
+	  done();
 	  return numBytes - bytesLeftToHash;
 	}
       }
@@ -184,6 +184,11 @@ public abstract class GenericHasher implements CachedUrlSetHasher {
       totalBytesHashed += numBytesHashed;
     }
     return totalBytesHashed;
+  }
+
+  /** Called when hash is complete */
+  protected void done() {
+    this.isFinished = true;
   }
 
   protected CachedUrlSetNode getNextNode() {
