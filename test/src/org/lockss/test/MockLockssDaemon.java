@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.75 2013-05-22 23:59:24 fergaloy-sf Exp $
+ * $Id: MockLockssDaemon.java,v 1.76 2014-12-27 03:42:40 tlipkis Exp $
  */
 
 /*
@@ -100,6 +100,7 @@ public class MockLockssDaemon extends LockssDaemon {
   CounterReportsManager counterReportsManager = null;
   SubscriptionManager subscriptionManager = null;
   Cron cron = null;
+  private boolean suppressStartAuManagers = true;
 
   /** Unit tests that need a MockLockssDaemon should use {@link
    * LockssTestCase#getMockLockssDaemon()} rather than calling this
@@ -886,10 +887,20 @@ public class MockLockssDaemon extends LockssDaemon {
     auMgrMap.put(desc.getKey(), mgr);
   }
 
-  /** Overridden to prevent manager from being started */
+  /** AU managers are normally not started on AU creation.  Call this with
+   * false to cause them to be started. */
+  public void suppressStartAuManagers(boolean val) {
+    suppressStartAuManagers = val;
+  }
+
+  /** Overridden to prevent managers from being started.  See {@link
+   * #suppressStartAuManagers(boolean)} to cause them to be started. */
   public void startOrReconfigureAuManagers(ArchivalUnit au,
 					   Configuration auConfig)
       throws Exception {
+    if (!suppressStartAuManagers) {
+      super.startOrReconfigureAuManagers(au, auConfig);
+    }
   }
 
   /** For tests that override startOrReconfigureAuManagers and want to
