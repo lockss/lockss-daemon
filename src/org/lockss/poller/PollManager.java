@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.275 2014-12-21 14:22:19 dshr Exp $
+ * $Id: PollManager.java,v 1.276 2014-12-27 03:38:46 tlipkis Exp $
  */
 
 /*
@@ -58,6 +58,7 @@ import org.lockss.protocol.V3LcapMessage.PollNak;
 import org.lockss.protocol.psm.PsmManager;
 import org.lockss.state.*;
 import org.lockss.util.*;
+import org.lockss.repository.*;
 
 /**
  * <p>Class that manages the polling process.</p>
@@ -261,12 +262,13 @@ public class PollManager
   public static final long DEFAULT_MIN_TIME_BETWEEN_ANY_POLL = 1 * DAY;
 
   /**
-   * Maximum delay between PoR polls
+   * Maximum delay between PoR polls, expressed as a multiplier for the
+   * AU's poll interval as determined by pollIntervalAgreementLastResult or
+   * toplevelPollInterval.
    */
-  public static final String PARAM_MAX_DELAY_BETWEEN_POR =
-    V3PREFIX + "maxDelayBetweenPoR";
-  public static final long DEFAULT_MAX_DELAY_BETWEEN_POR =
-    DEFAULT_TOPLEVEL_POLL_INTERVAL * 10;
+  public static final String PARAM_MAX_DELAY_BETWEEN_POR_MULTIPLIER =
+    V3PREFIX + "maxDelayBetweenPoRMultiplier";
+  public static final long DEFAULT_MAX_DELAY_BETWEEN_POR_MULTIPLIER = 10;
 
   /**
    * Minimum agreeing peers in last PoR poll to allow for PoP poll.
@@ -765,7 +767,8 @@ public class PollManager
   private boolean enablePoPPolls = DEFAULT_V3_ENABLE_POP_POLLS;
   private boolean allPoPPolls = DEFAULT_V3_ALL_POP_POLLS;
   private long minTimeSinceAnyPoll = DEFAULT_MIN_TIME_BETWEEN_ANY_POLL;
-  private long maxDelayBetweenPoR = DEFAULT_MAX_DELAY_BETWEEN_POR;
+  private long maxDelayBetweenPoRMultiplier =
+    DEFAULT_MAX_DELAY_BETWEEN_POR_MULTIPLIER;
   private int minAgreePeersLastPoRPoll = DEFAULT_MIN_AGREE_PEERS_LAST_POR_POLL;
   private int repairerThresholdForLocal = DEFAULT_REPAIRER_THRESHOLD;
 
@@ -1718,6 +1721,25 @@ public class PollManager
     return theRepairPolicy;
   }
 
+  public static void processConfigMacros(Configuration config) {
+    // If local polls are enabled, ensure that BlockHasher computes and
+    // checks hashes and DefaultUrlCacher computes hashes.
+
+    if (config.getBoolean(PollManager.PARAM_V3_ENABLE_LOCAL_POLLS,
+			  PollManager.DEFAULT_V3_ENABLE_LOCAL_POLLS)) {
+      config.put(BlockHasher.PARAM_ENABLE_LOCAL_HASH, "true");
+      if (config.get(BlockHasher.PARAM_LOCAL_HASH_ALGORITHM, null) == null) {
+	config.put(BlockHasher.PARAM_LOCAL_HASH_ALGORITHM,
+		   BlockHasher.DEFAULT_LOCAL_HASH_ALGORITHM);
+      }
+      if (config.get(DefaultUrlCacher.PARAM_CHECKSUM_ALGORITHM,
+		     DefaultUrlCacher.DEFAULT_CHECKSUM_ALGORITHM) == null) {
+	config.put(DefaultUrlCacher.PARAM_CHECKSUM_ALGORITHM,
+		   config.get(BlockHasher.PARAM_LOCAL_HASH_ALGORITHM));
+      }
+    }
+  }
+
   public void setConfig(Configuration newConfig,
 			Configuration oldConfig,
 			Configuration.Differences changedKeys) {
@@ -1907,38 +1929,24 @@ public class PollManager
 	installPollPriorityAuidMap(newConfig.getList(PARAM_POLL_PRIORITY_AUID_MAP,
 						     DEFAULT_POLL_PRIORITY_AUID_MAP));
       }
-      if (changedKeys.contains(PARAM_V3_ENABLE_LOCAL_POLLS)) {
+      if (changedKeys.contains(V3PREFIX)) {
 	enableLocalPolls = newConfig.getBoolean(PARAM_V3_ENABLE_LOCAL_POLLS,
 						DEFAULT_V3_ENABLE_LOCAL_POLLS);
-      }
-      if (changedKeys.contains(PARAM_V3_ALL_LOCAL_POLLS)) {
 	allLocalPolls = newConfig.getBoolean(PARAM_V3_ALL_LOCAL_POLLS,
 					     DEFAULT_V3_ALL_LOCAL_POLLS);
-      }
-      if (changedKeys.contains(PARAM_V3_ENABLE_POP_POLLS)) {
 	enablePoPPolls = newConfig.getBoolean(PARAM_V3_ENABLE_POP_POLLS,
 					      DEFAULT_V3_ENABLE_POP_POLLS);
-      }
-      if (changedKeys.contains(PARAM_V3_ALL_POP_POLLS)) {
 	allPoPPolls = newConfig.getBoolean(PARAM_V3_ALL_POP_POLLS,
 					   DEFAULT_V3_ALL_POP_POLLS);
-      }
-      if (changedKeys.contains(PARAM_MIN_TIME_BETWEEN_ANY_POLL)) {
 	minTimeSinceAnyPoll =
 	  newConfig.getTimeInterval(PARAM_MIN_TIME_BETWEEN_ANY_POLL,
 				    DEFAULT_MIN_TIME_BETWEEN_ANY_POLL);
-      }
-      if (changedKeys.contains(PARAM_MAX_DELAY_BETWEEN_POR)) {
-	maxDelayBetweenPoR =
-	  newConfig.getTimeInterval(PARAM_MAX_DELAY_BETWEEN_POR,
-				    DEFAULT_MAX_DELAY_BETWEEN_POR);
-      }
-      if (changedKeys.contains(PARAM_MIN_AGREE_PEERS_LAST_POR_POLL)) {
+	maxDelayBetweenPoRMultiplier =
+	  newConfig.getTimeInterval(PARAM_MAX_DELAY_BETWEEN_POR_MULTIPLIER,
+				    DEFAULT_MAX_DELAY_BETWEEN_POR_MULTIPLIER);
 	minAgreePeersLastPoRPoll =
 	  newConfig.getInt(PARAM_MIN_AGREE_PEERS_LAST_POR_POLL,
 			   DEFAULT_MIN_AGREE_PEERS_LAST_POR_POLL);
-      }
-      if (changedKeys.contains(PARAM_REPAIRER_THRESHOLD)) {
 	repairerThresholdForLocal =
 	  newConfig.getInt(PARAM_REPAIRER_THRESHOLD,
 			   DEFAULT_REPAIRER_THRESHOLD);
@@ -2980,7 +2988,8 @@ public class PollManager
     if (pollPriorityAuidMap != null) {
       weight *= pollPriorityAuidMap.getMatch(au.getAuId(), 1.0f);
     }
-    return new PollWeight(choosePollVariant(au), weight);
+    long maxDelayBetweenPoR = pollInterval * maxDelayBetweenPoRMultiplier;
+    return new PollWeight(choosePollVariant(au, maxDelayBetweenPoR), weight);
   }
 
   int numPeersWithAuAtRisk(ArchivalUnit au) {
@@ -3001,7 +3010,8 @@ public class PollManager
    * XXX DSHR should be protected but this requires moving the
    * XXX test code from TestV3Poller.
    */
-  public PollVariant choosePollVariant(ArchivalUnit au) {
+  public PollVariant choosePollVariant(ArchivalUnit au,
+				       long maxDelayBetweenPoR) {
     // Poll is PoR unless conditions fulfilled
     PollVariant ret = PollVariant.PoR;
     AuState aus = AuUtil.getAuState(au);
@@ -3012,10 +3022,12 @@ public class PollManager
     long lastContentChange = aus.getLastContentChange();
     int agreePeersLastPoll = aus.getNumAgreePeersLastPoR();
     long timeSinceAnyPoll = TimeBase.msSince(aus.getLastPollStart());
-    int countSuspectVersionsNotGivenUp = 0; // XXX need to record this
+    int numCurrentSuspectVersions = aus.getNumCurrentSuspectVersions();
     int minAgreePeersLastPoll = minAgreePeersLastPoRPoll; // XXX
     int willingRepairers = aus.getNumWillingRepairers(); 
     int repairerThreshold = repairerThresholdForLocal;
+
+    aus.batchSaves();
 
     if (agreePeersLastPoll < 0) {
       // This AuState has not been initialized with this field before.
@@ -3023,20 +3035,26 @@ public class PollManager
       // for every AU will take a long time and thrash the agreeMap cache,
       // so doing it in the constructor is a bad idea. Doing it here
       // means that the first queue rebuild will be slow, but that is OK.
+
+      // XXX ER/EE this count s.b. derived from symmetric voters' agreement
+      // value, not pollers.  (Likely the same except in cases where poller
+      // has only a small subset of voter's files.)
       agreePeersLastPoll = countLastPoRAgreePeers(au, aus);
       aus.setNumAgreePeersLastPoR(agreePeersLastPoll);
     }
     if (willingRepairers < 0) {
       // Same for willingRepairers
       willingRepairers = theIDManager.getCachesToRepairFrom(au).size();
+      theLog.debug3("initializing willing repairers to " + willingRepairers);
       aus.setNumWillingRepairers(willingRepairers);
     }
-    if (AuUtil.hasSuspectUrlVersions(au)) {
-      // XXX DSHR - need to implement "given up on" mechanism.
-      // XXX for now, count URLs with >0 suspect versions
-      countSuspectVersionsNotGivenUp =
-	AuUtil.getSuspectUrlVersions(au).getSuspectList().size();
+    if (numCurrentSuspectVersions < 0) {
+      numCurrentSuspectVersions = countCurrentSuspectVersions(au, aus);
+      aus.setNumCurrentSuspectVersions(numCurrentSuspectVersions);
     }
+
+    aus.unBatchSaves();
+
     // XXX BH When we track the agreement from different variant polls
     // XXX separately minAgreePeersLastPoll can be the quorum, but until
     // XXX then there is a possibility of undercounting. DSHR hack
@@ -3046,7 +3064,7 @@ public class PollManager
 		  " Time since poll " + timeSinceAnyPoll +
 		  " Time since last PoR " + TimeBase.msSince(lastPollTime) +
 		  " Min time since poll " + minTimeSinceAnyPoll +
-		  " Suspect versions " + countSuspectVersionsNotGivenUp +
+		  " Suspect versions " + numCurrentSuspectVersions +
 		  " Min agree last poll " + minAgreePeersLastPoll +
 		  " Repairers " + willingRepairers +
 		  " Repair thresh " + repairerThreshold +
@@ -3065,10 +3083,10 @@ public class PollManager
       // For testing
       ret = PollVariant.Local;
       theLog.debug3("Local poll forced");
-    } else if (countSuspectVersionsNotGivenUp > 0) {
+    } else if (numCurrentSuspectVersions > 0) {
       // Local "polling" found suspect version(s)
       ret = PollVariant.PoR; // XXX should be high priority
-      theLog.debug3("Suspect versions not given up on - PoR poll");
+      theLog.debug3("Current suspect versions - PoR poll");
     } else if (TimeBase.msSince(lastPollTime) > maxDelayBetweenPoR) {
       ret = PollVariant.PoR; // XXX should be high priority
       theLog.debug3("Too long (" + TimeBase.msSince(lastPollTime) + ") since PoR poll");
@@ -3104,14 +3122,6 @@ public class PollManager
      * XXX isn't sufficient. But it helps catch setup problems in
      * XXX unit tests and STF,
      */
-    if (ret == PollVariant.Local) {
-      if (!BlockHasher.isConfiguredForLocalPolls() ||
-	  CurrentConfig.getParam(DefaultUrlCacher.PARAM_CHECKSUM_ALGORITHM)
-	  == null) {
-	theLog.error("Not configured for local polls");
-	ret = PollVariant.PoR;
-      }
-    }
     if (ret == PollVariant.PoP) {
       if (CurrentConfig.getIntParam(V3Poller.PARAM_V3_MODULUS, 0) == 0) {
 	theLog.error("Not configured for PoP polls");
@@ -3153,6 +3163,20 @@ public class PollManager
       if (delta >= 0 && delta < threshold) {
 	ret++;
       }
+    }
+    return ret;
+  }
+
+  /**
+   * @return the number of URLs whose current version is suspect
+   * @param au the ArchvalUnit being polled
+   * @param aus the state of the AU
+   */
+  public static int countCurrentSuspectVersions(ArchivalUnit au, AuState aus) {
+    int ret = 0;
+    if (AuUtil.hasSuspectUrlVersions(au)) {
+      AuSuspectUrlVersions asuv = AuUtil.getSuspectUrlVersions(au);
+      ret = asuv.countCurrentSuspectVersions(au);
     }
     return ret;
   }
