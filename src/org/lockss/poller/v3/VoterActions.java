@@ -1,5 +1,5 @@
 /*
- * $Id: VoterActions.java,v 1.36 2014-06-10 08:43:24 tlipkis Exp $
+ * $Id: VoterActions.java,v 1.36.4.1 2014-12-28 08:38:55 tlipkis Exp $
  */
 
 /*
@@ -307,6 +307,10 @@ public class VoterActions {
       if (! Arrays.equals(nonce2, ud.getVoterNonce2())) {
 	log.error("Nonce2 from poller did not match our nonce2");
       } else {
+	if (msg.getVoteBlocks() == null) {
+	  log.warning("Poller sent no vote blocks, so no symmetric result to record.");
+	  return V3Events.evtReceiptOk;
+	}	  
 	VoteBlocksTallier vbt = VoteBlocksTallier.make();
 	try {
 	  vbt.tallyVoteBlocks(ud.getSymmetricVoteBlocks(),
