@@ -1,5 +1,5 @@
 /*
- * $Id: LocalHashResult.java,v 1.2 2013-08-19 20:24:49 tlipkis Exp $
+ * $Id: LocalHashResult.java,v 1.3 2014-12-28 08:42:57 tlipkis Exp $
  */
 
 /*
@@ -45,44 +45,35 @@ public class LocalHashResult {
   private int skippedVersions = 0;
   private int skippedUrls = 0;
 
-  private String prevMatchingUrl = null;
-  private String prevSuspectUrl = null;
-  private String prevHashedUrl = null;
-  private String prevSkippedUrl = null;
-
   /** Record a match between computed and stored hash */
-  public void match(String url) {
+  public void match(String url, boolean isCurrent) {
     matchingVersions++;
-    if (!url.equals(prevMatchingUrl)) {
-      prevMatchingUrl = url;
+    if (isCurrent) {
       matchingUrls++;
     }
   }
 
   /** Record a newly discovered mismatch between computed and stored hash */
-  public void newlySuspect(String url) {
+  public void newlySuspect(String url, boolean isCurrent) {
     newlySuspectVersions++;
-    if (!url.equals(prevSuspectUrl)) {
-      prevSuspectUrl = url;
+    if (isCurrent) {
       newlySuspectUrls++;
     }
   }
 
   /** Record that a hash was computed and stored */
-  public void newlyHashed(String url) {
+  public void newlyHashed(String url, boolean isCurrent) {
     newlyHashedVersions++;
-    if (!url.equals(prevHashedUrl)) {
-      prevHashedUrl = url;
+    if (isCurrent) {
       newlyHashedUrls++;
     }
   }
 
   /** Record that a CU version was skipped becuase it is already marked
    * suspect */
-  public void skipped(String url) {
+  public void skipped(String url, boolean isCurrent) {
     skippedVersions++;
-    if (!url.equals(prevHashedUrl)) {
-      prevHashedUrl = url;
+    if (isCurrent) {
       skippedUrls++;
     }
   }
@@ -129,6 +120,18 @@ public class LocalHashResult {
    * marked suspect */
   public int getSkippedUrls() {
     return skippedUrls;
+  }
+
+  /** Return the total number of CU versions recorded */
+  public int getTotalVersions() {
+    return matchingVersions + newlySuspectVersions
+      + newlyHashedVersions + skippedVersions;
+  }
+
+  /** Return the total number of URLs recorded */
+  public int getTotalUrls() {
+    return matchingUrls + newlySuspectUrls
+      + newlyHashedUrls + skippedUrls;
   }
 
   public String toString() {

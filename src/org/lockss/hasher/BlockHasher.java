@@ -1,5 +1,5 @@
 /*
- * $Id: BlockHasher.java,v 1.39 2014-12-27 03:37:16 tlipkis Exp $
+ * $Id: BlockHasher.java,v 1.40 2014-12-28 08:42:57 tlipkis Exp $
  */
 
 /*
@@ -625,7 +625,11 @@ public class BlockHasher extends GenericHasher {
       log.debug3(cu.getUrl() + ":" + cu.getVersion() +
 		 " local hash OK");
     }
-    lhr.match(cu.getUrl());
+    lhr.match(cu.getUrl(), isHighestVersion(cu));
+  }
+
+  boolean isHighestVersion(CachedUrl cu) {
+    return curCu.getVersion() == cu.getVersion();
   }
 
   /**
@@ -651,7 +655,7 @@ public class BlockHasher extends GenericHasher {
   protected void missing(CachedUrl cu, String alg, byte[] hash) {
     String hashStr = alg + ":" + ByteArray.toHexString(hash);
     log.debug3("Storing checksum: " + hashStr);
-    lhr.newlyHashed(cu.getUrl());
+    lhr.newlyHashed(cu.getUrl(), isHighestVersion(cu));
     try {
       cu.addProperty(CachedUrl.PROPERTY_CHECKSUM, hashStr);
     } catch (UnsupportedOperationException ex) {
@@ -662,7 +666,7 @@ public class BlockHasher extends GenericHasher {
   /** Skipped because already suspect */
   protected void skipped(CachedUrl cu) {
     if (isTrace) log.debug3("Skipped (already suspect): " + cu);
-    lhr.skipped(cu.getUrl());
+    lhr.skipped(cu.getUrl(), isHighestVersion(cu));
   }
 
   // Overridable for testing
@@ -679,7 +683,7 @@ public class BlockHasher extends GenericHasher {
       asuv.markAsSuspect(cu.getUrl(), cu.getVersion(), alg,
 			 contentHash, storedHash);
       needSaveSuspectUrlVersions = true;
-      lhr.newlySuspect(cu.getUrl());
+      lhr.newlySuspect(cu.getUrl(), isHighestVersion(cu));
     }
   }
 
