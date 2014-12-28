@@ -1,5 +1,5 @@
 /*
-* $Id: MockIdentityManager.java,v 1.23 2013-08-19 22:33:22 barry409 Exp $
+* $Id: MockIdentityManager.java,v 1.24 2014-12-28 08:42:34 tlipkis Exp $
  */
 
 /*
@@ -308,6 +308,11 @@ public class MockIdentityManager implements IdentityManager {
     Map map = getAgreed(au);
     if (map == null) return Collections.EMPTY_LIST;
     return new ArrayList(map.keySet());
+  }
+
+  @Override
+  public int countCachesToRepairFrom(ArchivalUnit au) {
+    return getCachesToRepairFrom(au).size();
   }
 
   @Override

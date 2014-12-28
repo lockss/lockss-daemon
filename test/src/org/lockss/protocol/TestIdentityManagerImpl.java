@@ -1,5 +1,5 @@
 /*
- * $Id: TestIdentityManagerImpl.java,v 1.34 2014-12-10 22:08:24 dshr Exp $
+ * $Id: TestIdentityManagerImpl.java,v 1.35 2014-12-28 08:42:34 tlipkis Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ import org.lockss.daemon.status.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.*;
 import org.lockss.repository.*;
+import org.lockss.state.*;
 import org.lockss.hasher.*;
 import org.lockss.test.*;
 
@@ -107,11 +108,11 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
 
-    mau = new MockArchivalUnit();
+    theDaemon = getMockLockssDaemon();
+    mau = newMockArchivalUnit();
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     ConfigurationUtil.setCurrentConfigFromProps(commonConfig());
 
-    theDaemon = getMockLockssDaemon();
     idmgr = new TestableIdentityManager();
     idmgr.initService(theDaemon);
     theDaemon.setIdentityManager(idmgr);
@@ -127,6 +128,15 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
       idmgr = null;
     }
     super.tearDown();
+  }
+
+  MockArchivalUnit newMockArchivalUnit() {
+    MockArchivalUnit res = new MockArchivalUnit();
+    MockNodeManager nodeMgr = new MockNodeManager();
+    theDaemon.setNodeManager(nodeMgr, res);
+    MockAuState aus = new MockAuState(res);
+    nodeMgr.setAuState(aus);
+    return res;
   }
 
   Properties commonConfig() {
@@ -601,10 +611,14 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
     assertFalse(idmgr.hasAgreed(peer3, mau));
 
     idmgr.signalPartialAgreement(peer1, mau, 0.49f);
+    AuState aus = AuUtil.getAuState(mau);
+    assertEquals(0, aus.getNumWillingRepairers());
     TimeBase.step();
     idmgr.signalPartialAgreement(peer2, mau, 0.50f);
+    assertEquals(1, aus.getNumWillingRepairers());
     TimeBase.step();
     idmgr.signalPartialAgreement(peer3, mau, 0.51f);
+    assertEquals(2, aus.getNumWillingRepairers());
 
     Map expectedDisagree = new HashMap();
     expectedDisagree.put(peer1, new Long(10));
@@ -683,7 +697,7 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
     assertFalse(nonExistingFile.exists());
   }
 
-  // ensure that deactivating and reactivating an AU gets it's old data
+  // ensure that deactivating and reactivating an AU gets its old data
   // back (i.e., uses auid not au as key in maps
   public void testAgreedUsesAuid() throws Exception {
     TimeBase.setSimulated(10);
@@ -696,7 +710,7 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
     expected.put(peer1, new Long(10));
     expected.put(peer2, new Long(11));
     assertEquals(expected, idmgr.getAgreed(mau));
-    MockArchivalUnit mau2 = new MockArchivalUnit();
+    MockArchivalUnit mau2 = newMockArchivalUnit();
     // simulate desctivating and reactivating an AU, which creates a new AU
     // instance with the same auid
     mau2.setAuId(mau.getAuId());
@@ -733,7 +747,7 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
     assertEmpty(idmgr.getCachesToRepairFrom(mau));
   }
 
-  public void testCachesToRepairFrom() throws Exception {
+  public void testGetCachesToRepairFrom() throws Exception {
     TimeBase.setSimulated(10);
     setupPeer123();
 
@@ -746,6 +760,31 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
     List toRepair = idmgr.getCachesToRepairFrom(mau);
     assertSameElements(ListUtil.list(peer1, peer2, peer3), toRepair);
     // List order is unspecified.
+  }
+
+  public void testCountCachesToRepairFromThrowsOnNullAu()
+      throws Exception {
+    try {
+      idmgr.countCachesToRepairFrom(null);
+      fail("Should have thrown on a null au");
+    } catch (IllegalArgumentException e) {
+      // expected
+    }
+  }
+
+  public void testCountCachesToRepairFromNoneSet() throws Exception {
+    assertEquals(0, idmgr.countCachesToRepairFrom(mau));
+  }
+
+  public void testCountCachesToRepairFrom() throws Exception {
+    setupPeer123();
+
+    idmgr.signalAgreed(peer1, mau);
+    idmgr.signalDisagreed(peer2, mau);
+    idmgr.signalDisagreed(peer1, mau);
+    idmgr.signalAgreed(peer2, mau);
+    idmgr.signalAgreed(peer3, mau);
+    assertEquals(3, idmgr.countCachesToRepairFrom(mau));
   }
 
   public void testAgreeUpdatesTime() throws Exception {
@@ -767,8 +806,8 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
     TimeBase.setSimulated(10);
     setupPeer123();
 
-    MockArchivalUnit mau1 = new MockArchivalUnit();
-    MockArchivalUnit mau2 = new MockArchivalUnit();
+    MockArchivalUnit mau1 = newMockArchivalUnit();
+    MockArchivalUnit mau2 = newMockArchivalUnit();
     MockPlugin plug = new MockPlugin(theDaemon);
     mau1.setPlugin(plug);
     mau2.setPlugin(plug);

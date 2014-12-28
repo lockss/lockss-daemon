@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.91 2013-08-19 22:33:18 barry409 Exp $
+ * $Id: IdentityManager.java,v 1.92 2014-12-28 08:42:34 tlipkis Exp $
  */
 
 /*
@@ -475,6 +475,18 @@ public interface IdentityManager extends LockssManager {
    *         AU.
    */
   public List<PeerIdentity> getCachesToRepairFrom(ArchivalUnit au);
+
+  /**
+   * Count the peers with whom we have had a POR poll and a result
+   * above the minimum threshold for repair.
+   *
+   * NOTE: This does NOT use the "hint", which would be more reasonable.
+   *
+   * @param au ArchivalUnit to look up PeerIdentities for.
+   * @return Count of peers we believe are willing to send us repairs for
+   * this AU.
+   */
+  public int countCachesToRepairFrom(ArchivalUnit au);
 
   /**
    * Return a mapping for each peer for which we have an agreement of
