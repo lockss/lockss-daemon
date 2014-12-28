@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.271.2.5 2014-12-27 03:29:10 tlipkis Exp $
+ * $Id: PollManager.java,v 1.271.2.6 2014-12-28 08:37:57 tlipkis Exp $
  */
 
 /*
@@ -1977,6 +1977,10 @@ public class PollManager
     }
   }
 
+  public boolean isV3PollPolicyEnabled() {
+    return enablePoPPolls || enableLocalPolls;
+  }
+
   AuPeersMap makeAuPeersMap(Collection<String> auPeersList,
 			    IdentityManager idMgr) {
     AuPeersMap res = new AuPeersMap();
@@ -3044,7 +3048,7 @@ public class PollManager
     }
     if (willingRepairers < 0) {
       // Same for willingRepairers
-      willingRepairers = theIDManager.getCachesToRepairFrom(au).size();
+      willingRepairers = theIDManager.countCachesToRepairFrom(au);
       theLog.debug3("initializing willing repairers to " + willingRepairers);
       aus.setNumWillingRepairers(willingRepairers);
     }
@@ -3098,7 +3102,7 @@ public class PollManager
       // AU was in good shape the last time we looked
       if (willingRepairers < repairerThreshold) {
 	// But it needs repairers
-	if (enablePoPPolls) {
+	if (enablePoPPolls && isAuEligibleForPoPPoll(au)) {
 	  ret = PollVariant.PoP;
 	}
 	theLog.debug3("AU OK but needs repairers - PoP poll");
@@ -3130,6 +3134,10 @@ public class PollManager
     }	
     theLog.debug2("Poll variant: " + ret);
     return ret;
+  }
+
+  boolean isAuEligibleForPoPPoll(ArchivalUnit au) {
+    return !pluginMgr.isRegistryAu(au);
   }
 
   /**
