@@ -1,5 +1,5 @@
 /*
- * $Id: AuAgreements.java,v 1.3 2013-09-18 05:38:33 tlipkis Exp $
+ * $Id: AuAgreements.java,v 1.3.14.1 2014-12-28 08:36:36 tlipkis Exp $
  */
 
 /*
@@ -403,5 +403,27 @@ public class AuAgreements implements LockssSerializable {
       }
     }
     return agreements;
+  }
+
+  /**
+   * Count the number of peers with at least threshold agreement of the
+   * specified type.
+   * @param type The {@link AgreementType} to look for.
+   * @param threshold The minimum agreement value to count
+   * @return count of peers with at least specified agreement of specified
+   * type.
+   */
+  public synchronized int countAgreements(AgreementType type,
+					  float threshold) {
+    int res = 0;
+    for (Map.Entry<PeerIdentity, PeerAgreements> ent: map.entrySet()) {
+      PeerAgreements peerAgreements = ent.getValue();
+      PeerAgreement peerAgreement = peerAgreements.getPeerAgreement(type);
+      if (peerAgreement != PeerAgreement.NO_AGREEMENT &&
+	  (peerAgreement.getHighestPercentAgreement() >= threshold)) {
+	res++;
+      }
+    }
+    return res;
   }
 }

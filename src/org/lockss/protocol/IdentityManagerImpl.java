@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerImpl.java,v 1.49.12.2 2014-12-27 03:29:58 tlipkis Exp $
+ * $Id: IdentityManagerImpl.java,v 1.49.12.3 2014-12-28 08:36:36 tlipkis Exp $
  */
 
 /*
@@ -1124,28 +1124,22 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
     }
     if (agreement < 0.0f || agreement > 1.0f) {
       throw new IllegalArgumentException("pecentAgreement must be between "+
-				   "0.0 and 1.0. It was: "+agreement);
+					 "0.0 and 1.0. It was: "+agreement);
     }
     AuAgreements auAgreements = findAuAgreements(au);
     if (auAgreements == null) {
       log.error("No auAgreements: " + au.getName());
-    } else if (agreementType == AgreementType.POR &&
-	       agreement >= minPercentPartialAgreement &&
-	       !auAgreements.hasAgreed(pid, minPercentPartialAgreement)) {
-      // XXX ER/EE AuState s.b. updated with repairer count, not repairee.
-      // A new willing repairer
-      AuState aus = AuUtil.getAuState(au);
-      if (aus != null) {
-	log.debug3("New willing repairer for AU " + au);
-	int willingRepairers = aus.getNumWillingRepairers();
-	aus.setNumWillingRepairers(++willingRepairers);
-      } else {
-	log.debug3("No AU state");
-      }
-    }
-    auAgreements.signalPartialAgreement(pid, agreementType, agreement,
+    } else {
+      auAgreements.signalPartialAgreement(pid, agreementType, agreement,
 					  TimeBase.nowMs());
-    auAgreements.store(getHistoryRepository(au));
+      auAgreements.store(getHistoryRepository(au));
+      AuState aus = AuUtil.getAuState(au);
+      // XXX ER/EE AuState s.b. updated with repairer count, not repairee.
+      int willingRepairers =
+	auAgreements.countAgreements(AgreementType.POR,
+				     minPercentPartialAgreement);
+      aus.setNumWillingRepairers(willingRepairers);
+    }
   }
 
   /**
@@ -1202,6 +1196,25 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
     // NOTE: some tests rely on the MockIdentityManager changing
     // getAgreed() and having that change getCachesToRepairFrom
     return new ArrayList(getAgreed(au).keySet());
+  }
+
+  /**
+   * Count the peers with whom we have had a POR poll and a result
+   * above the minimum threshold for repair.
+   *
+   * NOTE: This does NOT use the "hint", which would be more reasonable.
+   *
+   * @param au ArchivalUnit to look up PeerIdentities for.
+   * @return Count of peers we believe are willing to send us repairs for
+   * this AU.
+   */
+  public int countCachesToRepairFrom(ArchivalUnit au) {
+    if (au == null) {
+      throw new IllegalArgumentException("Called with null au");
+    }
+    AuAgreements auAgreements = findAuAgreements(au);
+    return auAgreements.countAgreements(AgreementType.POR,
+					minPercentPartialAgreement);
   }
 
   /**

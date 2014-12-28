@@ -1,5 +1,5 @@
 /*
- * $Id: AuHealthMetric.java,v 1.7 2013-08-19 22:33:16 barry409 Exp $
+ * $Id: AuHealthMetric.java,v 1.7.12.1 2014-12-28 08:36:36 tlipkis Exp $
  */
 
 /*
@@ -355,8 +355,7 @@ public class AuHealthMetric {
   /** Return the estimated number of peers willing to repair this AU */
   public int getNumberOfRepairers() {
     IdentityManager idMgr = AuUtil.getDaemon(au).getIdentityManager();
-    Collection repairers = idMgr.getCachesToRepairFrom(au);
-    return repairers.size();
+    return idMgr.countCachesToRepairFrom(au);
   }
 
   /** Return true if the AU has at least one successful crawl */

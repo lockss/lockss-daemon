@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuAgreements.java,v 1.2 2013-08-30 20:28:09 barry409 Exp $
+ * $Id: TestAuAgreements.java,v 1.2.14.1 2014-12-28 08:36:36 tlipkis Exp $
  */
 
 /*
@@ -444,6 +444,10 @@ public class TestAuAgreements extends LockssTestCase {
       assertNotNull(peerAgreement);
       assertEquals(100+i, peerAgreement.getPercentAgreementTime());
     }
+    assertEquals(3, auAgreements.countAgreements(AgreementType.POR_HINT, 0.0f));
+    assertEquals(2, auAgreements.countAgreements(AgreementType.POR_HINT, 0.1f));
+    assertEquals(1, auAgreements.countAgreements(AgreementType.POR_HINT, 0.2f));
+    assertEquals(0, auAgreements.countAgreements(AgreementType.POR_HINT, 0.3f));
 
     map = auAgreements.getAgreements(AgreementType.POR);
     assertEquals(2, map.size());
@@ -453,6 +457,9 @@ public class TestAuAgreements extends LockssTestCase {
       assertNotNull(peerAgreement);
       assertEquals(200+i, peerAgreement.getPercentAgreementTime());
     }
+    assertEquals(2, auAgreements.countAgreements(AgreementType.POR, 0.0f));
+    assertEquals(1, auAgreements.countAgreements(AgreementType.POR, 0.1f));
+    assertEquals(0, auAgreements.countAgreements(AgreementType.POR, 0.2f));
 
     map = auAgreements.getAgreements(AgreementType.SYMMETRIC_POR);
     assertTrue(map.isEmpty());
