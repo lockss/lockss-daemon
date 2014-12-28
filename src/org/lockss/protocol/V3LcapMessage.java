@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessage.java,v 1.53 2013-07-18 19:28:20 tlipkis Exp $
+ * $Id: V3LcapMessage.java,v 1.54 2014-12-28 08:44:27 tlipkis Exp $
  */
 
 /*
@@ -655,7 +655,7 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     if (m_repairProps != null) {
       m_props.putEncodedProperty("repairProps", m_repairProps);
     }
-    if (m_agreementHint > 0.0) {
+    if (m_agreementHint >= 0.0) {
       m_props.putDouble("agreementHint", m_agreementHint);
     }
   }
