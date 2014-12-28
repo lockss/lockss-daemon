@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockHasher.java,v 1.30.2.1 2014-12-27 03:23:49 tlipkis Exp $
+ * $Id: TestBlockHasher.java,v 1.30.2.2 2014-12-28 08:37:36 tlipkis Exp $
  */
 
 /*
@@ -1040,6 +1040,9 @@ public class TestBlockHasher extends LockssTestCase {
     assertEquals(3, lhr.getMatchingVersions());
     assertEquals(0, lhr.getNewlySuspectVersions());
     assertEquals(0, lhr.getNewlyHashedVersions());
+    assertEquals(1, lhr.getMatchingUrls());
+    assertEquals(0, lhr.getNewlySuspectUrls());
+    assertEquals(0, lhr.getNewlyHashedUrls());
   }
 
   public void testOneContentThreeVersionsLocalHashGood() throws Exception {
