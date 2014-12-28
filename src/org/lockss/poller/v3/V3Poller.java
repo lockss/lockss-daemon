@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.183 2014-12-27 03:39:17 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.184 2014-12-28 08:43:54 tlipkis Exp $
  */
 
 /*
@@ -116,19 +116,25 @@ public class V3Poller extends BasePoll {
   };
 
   public enum PollVariant {
-    PoR("Proof of Retrievability"),
-      PoP("Proof of Possession"),
-      Local("Local"),
-      NoPoll("NoPoll");
+    PoR("Proof of Retrievability", "PoR"),
+    PoP("Proof of Possession", "PoP"),
+    Local("Local", "Local"),
+    NoPoll("NoPoll", "None");
 
     final String printString;
+    final String shortName;
 
-    PollVariant(String printString) {
+    PollVariant(String printString, String shortName) {
       this.printString = printString;
+      this.shortName = shortName;
     }
 
     public String toString() {
       return printString;
+    }
+
+    public String shortName() {
+      return shortName;
     }
   }
     
@@ -1156,41 +1162,70 @@ public class V3Poller extends BasePoll {
     return StringUtil.numberOfUnits(n, s);
   }
 
+  private void appendNum(StringBuilder sb, int n, String s) {
+    sb.append(n);
+    sb.append(" ");
+    sb.append(s);
+  }
+
   protected void raisePollEndAlert() {
     // Raise Poll finished alert
     StringBuilder sb = new StringBuilder();
-    sb.append("Poll finished: ");
+    sb.append(getPollVariant());
+    sb.append(" poll finished: ");
     sb.append(getStatusString());
     sb.append("\n\n");
 
-    sb.append(numOf(getTalliedUrls().size(), "URL"));
-    sb.append(" tallied");
-    if (getStatus() == POLLER_STATUS_COMPLETE) {
-      sb.append(", ");
-      DisplayConverter dispConverter = new DisplayConverter();
-      String agmnt =
-	dispConverter.convertDisplayString(getPercentAgreement(),
-					   ColumnDescriptor.TYPE_AGREEMENT);
-      sb.append(agmnt);
-      sb.append(" agreement");
-      if (lhr != null) {
+    if (!isLocalPoll()) {
+      sb.append(numOf(getTalliedUrls().size(), "URL"));
+      sb.append(" tallied");
+      if (getStatus() == POLLER_STATUS_COMPLETE) {
 	sb.append(", ");
-	sb.append(numOf(lhr.getNewlySuspectVersions(), "new suspect file"));
-      }
-      PollerStateBean.RepairQueue repairQueue = pollerState.getRepairQueue();
-      // If any repairs were queued, include repair stats
-      if (repairQueue.size() > 0) {
-	sb.append("\n");
-	sb.append(numOf(repairQueue.getCompletedRepairs().size(), "repair"));
-	sb.append(" received, ");
-	sb.append(repairQueue.getActiveRepairs().size());
-	sb.append(" not received.");
-	if (repairQueue.getNumFailedRepair() > 0) {
-	  sb.append("\n\n");
-	  sb.append(numOf(repairQueue.getNumFailedRepair(), "repair"));
-	  sb.append(" didn't resolve disagreement");
-	  raisePersistentDisagreementAlert();
+	DisplayConverter dispConverter = new DisplayConverter();
+	String agmnt =
+	  dispConverter.convertDisplayString(getPercentAgreement(),
+					     ColumnDescriptor.TYPE_AGREEMENT);
+	sb.append(agmnt);
+	sb.append(" agreement");
+	if (lhr != null) {
+	  sb.append(", ");
+	  sb.append(numOf(lhr.getNewlySuspectVersions(), "new suspect file"));
 	}
+	PollerStateBean.RepairQueue repairQueue = pollerState.getRepairQueue();
+	// If any repairs were queued, include repair stats
+	if (repairQueue.size() > 0) {
+	  sb.append("\n");
+	  sb.append(numOf(repairQueue.getCompletedRepairs().size(), "repair"));
+	  sb.append(" received, ");
+	  sb.append(repairQueue.getActiveRepairs().size());
+	  sb.append(" not received.");
+	  if (repairQueue.getNumFailedRepair() > 0) {
+	    sb.append("\n\n");
+	    sb.append(numOf(repairQueue.getNumFailedRepair(), "repair"));
+	    sb.append(" didn't resolve disagreement");
+	    raisePersistentDisagreementAlert();
+	  }
+	}
+      }
+    }
+    LocalHashResult lhr = getLocalHashResult();
+    if (lhr != null) {
+      if (!isLocalPoll()) {
+	sb.append("\n\n");
+      }
+      sb.append("LocalHash URLs: ");
+      appendNum(sb, lhr.getTotalUrls(), "total, ");
+      appendNum(sb, lhr.getMatchingUrls(), "matching, ");
+      appendNum(sb, lhr.getNewlySuspectUrls(), "newly suspect, ");
+      appendNum(sb, lhr.getNewlyHashedUrls(), "newly hashed, ");
+      appendNum(sb, lhr.getSkippedUrls(), "already suspect");
+      if (lhr.getTotalUrls() != lhr.getTotalVersions()) {
+	sb.append("\n      Versions: ");
+	appendNum(sb, lhr.getTotalVersions(), "total, ");
+	appendNum(sb, lhr.getMatchingVersions(), "matching, ");
+	appendNum(sb, lhr.getNewlySuspectVersions(), "newly suspect, ");
+	appendNum(sb, lhr.getNewlyHashedVersions(), "newly hashed, ");
+	appendNum(sb, lhr.getSkippedVersions(), "already suspect");
       }
     }
     pollManager.raiseAlert(Alert.auAlert(Alert.POLL_FINISHED, getAu()),
