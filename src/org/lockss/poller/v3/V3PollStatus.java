@@ -1,5 +1,5 @@
 /*
-* $Id: V3PollStatus.java,v 1.52 2014-12-27 03:38:58 tlipkis Exp $
+* $Id: V3PollStatus.java,v 1.53 2014-12-28 08:43:25 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,8 @@ package org.lockss.poller.v3;
 import java.util.*;
 import java.text.*;
 import java.io.*;
+import org.apache.commons.collections.ListUtils;
+
 import org.lockss.daemon.status.*;
 import org.lockss.daemon.status.StatusService.*;
 import org.lockss.daemon.status.StatusTable.SummaryInfo;
@@ -136,6 +138,8 @@ public class V3PollStatus {
     private final List colDescs =
       ListUtil.list(new ColumnDescriptor("auId", "Volume",
                                          ColumnDescriptor.TYPE_STRING),
+                    new ColumnDescriptor("variant", "Type",
+                                         ColumnDescriptor.TYPE_STRING),
                     new ColumnDescriptor("participants", "Participants",
                                          ColumnDescriptor.TYPE_INT),
                     new ColumnDescriptor("status", "Status",
@@ -164,6 +168,7 @@ public class V3PollStatus {
     private static final List<String> defaultCols =
       ListUtil.list(
 		    "auId",
+		    "variant",
 		    "participants",
 		    "status",
 		    "talliedUrls",
@@ -175,6 +180,8 @@ public class V3PollStatus {
 		    "pollId"
 		    );
 
+    private static final List<String> pollPolicyOnlyCols =
+      ListUtil.list("variant");
 
     public V3PollerStatus(PollManager pollManager) {
       super(pollManager);
@@ -187,12 +194,20 @@ public class V3PollStatus {
     public void populateTable(StatusTable table)
         throws StatusService.NoSuchTableException {
       String key = table.getKey();
-      table.setColumnDescriptors(colDescs, defaultCols);
+      table.setColumnDescriptors(colDescs, getDefaultCols(table));
       table.setSummaryInfo(getSummary(pollManager, table));
       table.setDefaultSortRules(sortRules);
       table.setRows(getRows(key));
     }
     
+    private List<String> getDefaultCols(StatusTable table) {
+      if (pollManager.isV3PollPolicyEnabled()) {
+	return defaultCols;
+      } else {
+	return ListUtils.subtract(defaultCols, pollPolicyOnlyCols);
+      }
+    }
+
     private List getSummary(PollManager pollManager, StatusTable table) {
       boolean isDebug = table.getOptions().get(StatusTable.OPTION_DEBUG_USER);
       List summary = new ArrayList();
@@ -278,19 +293,27 @@ public class V3PollStatus {
       Map row = new HashMap();
       ArchivalUnit au = poller.getAu();
       row.put("auId", makeAuRef(au, ArchivalUnitStatus.AU_STATUS_TABLE_NAME));
-      row.put("participants", new Integer(poller.getPollSize()));
+      row.put("variant", poller.getPollVariant().shortName());
       row.put("status", poller.getStatusString());
-      row.put("talliedUrls", new Integer(poller.getTalliedUrls().size()));
-      if (poller.getErrorUrls() != null) {
-        row.put("hashErrors", new Integer(poller.getErrorUrls().size()));
+      if (poller.isLocalPoll()) {
+	LocalHashResult lhr = poller.getLocalHashResult();
+	if (lhr != null) {
+	  row.put("talliedUrls", new Integer(lhr.getTotalUrls()));
+	}
       } else {
-        row.put("hashErrors", "--");
+	row.put("participants", new Integer(poller.getPollSize()));
+	row.put("talliedUrls", new Integer(poller.getTalliedUrls().size()));
+	if (poller.getErrorUrls() != null) {
+	  row.put("hashErrors", new Integer(poller.getErrorUrls().size()));
+	} else {
+	  row.put("hashErrors", "--");
+	}
+	row.put("completedRepairs", new Integer(poller.getCompletedRepairs().size()));
+	Object agmt = (poller.getStatus() == V3Poller.POLLER_STATUS_COMPLETE)
+	  ? poller.getPercentAgreement()
+	  : new StatusTable.DisplayedValue(StatusTable.NO_VALUE, "--");
+	row.put("agreement", agmt);
       }
-      row.put("completedRepairs", new Integer(poller.getCompletedRepairs().size()));
-      Object agmt = (poller.getStatus() == V3Poller.POLLER_STATUS_COMPLETE)
-	? poller.getPercentAgreement()
-	: new StatusTable.DisplayedValue(StatusTable.NO_VALUE, "--");
-      row.put("agreement", agmt);
       row.put("start", new Long(poller.getCreateTime()));
       row.put("deadline", poller.getDeadline());
       if (poller.isPollActive()) {
@@ -803,28 +826,26 @@ public class V3PollStatus {
 	int newlySuspectUrls = lhr.getNewlySuspectUrls();
 	int newlyHashedUrls = lhr.getNewlyHashedUrls();
 	int skippedUrls = lhr.getSkippedUrls();
-	int totalUrls = matchingUrls + newlySuspectUrls + newlyHashedUrls
-	  + skippedUrls;
-	summary.add(new SummaryInfo("Total checked URLs",
+	summary.add(new SummaryInfo("LocalHash Checked URLs",
 				    ColumnDescriptor.TYPE_INT,
-				    new Integer(totalUrls)));
+				    new Integer(lhr.getTotalUrls())));
 	if (matchingUrls > 0) {
-	  summary.add(new SummaryInfo("Matching URLs",
+	  summary.add(new SummaryInfo("LocalHash Matching URLs",
 				      ColumnDescriptor.TYPE_INT,
 				      new Integer(matchingUrls)));
 	}
 	if (newlySuspectUrls > 0) {
-	  summary.add(new SummaryInfo("Newly Suspect URLs",
+	  summary.add(new SummaryInfo("LocalHash Newly Suspect URLs",
 				      ColumnDescriptor.TYPE_INT,
 				      new Integer(newlySuspectUrls)));
 	}
 	if (newlyHashedUrls > 0) {
-	  summary.add(new SummaryInfo("Newly Hashed URLs",
+	  summary.add(new SummaryInfo("LocalHash Newly Hashed URLs",
 				      ColumnDescriptor.TYPE_INT,
 				      new Integer(newlyHashedUrls)));
 	}
 	if (skippedUrls > 0) {
-	  summary.add(new SummaryInfo("Already Suspect URLs",
+	  summary.add(new SummaryInfo("LocalHash Already Suspect URLs",
 				      ColumnDescriptor.TYPE_INT,
 				      new Integer(skippedUrls)));
 	}
