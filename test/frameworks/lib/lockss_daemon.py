@@ -1,6 +1,6 @@
 """LOCKSS daemon interface library."""
 
-# $Id: lockss_daemon.py,v 1.41.2.1 2014-12-27 03:31:52 tlipkis Exp $
+# $Id: lockss_daemon.py,v 1.41.2.2 2014-12-28 08:39:38 tlipkis Exp $
 
 __copyright__ = '''\
 Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
@@ -320,6 +320,11 @@ class Framework:
             daemon.requestThreadDump()
         time.sleep( 1 ) # Horrible kludge: pause to allow the VM's to flush the daemon log files.
         return [ daemon.logfile.name for daemon in self.daemonList if 'FOUND A JAVA LEVEL DEADLOCK' in open( daemon.logfile.name ).read() ]
+
+    def checkForLogErrors(self):
+        """Look for NPEs and IllegalArgumentException in daemon logs.
+        Returns a list of log files, or an empty list if no errors are found."""
+        return [ daemon.logfile.name for daemon in self.daemonList if re.search('UnsupportedOperationException|IllegalArgumentException|NullPointerException', open( daemon.logfile.name ).read()) ]
 
     def __makeClasspath(self):
         """Return a list of the jar and zip files in self.localLibDir and self.projectDir/lib."""

@@ -3,7 +3,7 @@
 build frameworks.  If desired, optional parameters may also be set to change
 the default behavior.  See testsuite.props for details."""
 
-# $Id: testsuite.py,v 1.76.2.5 2014-12-27 03:31:36 tlipkis Exp $
+# $Id: testsuite.py,v 1.76.2.6 2014-12-28 08:39:37 tlipkis Exp $
 
 __copyright__ = '''\
 Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
@@ -80,6 +80,10 @@ class LockssTestCases( unittest.TestCase ):
         frameworkList.append( self.framework )
 
     def tearDown( self ):
+        errorLogs = self.framework.checkForLogErrors()
+        if errorLogs:
+            log.error( 'Errors detected in log!' )
+            self.fail( 'Failing due to log errors.  Check the following log file(s): ' + ', '.join( errorLogs ) )
         # Dump threads and look for deadlocks (independent of success)
         deadlockLogs = self.framework.checkForDeadlock()
         if deadlockLogs:
