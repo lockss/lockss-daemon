@@ -1435,8 +1435,8 @@
     >
 
     param[base_url] = http://aesa.oxfordjournals.org/
-    pluginSuffix = ClockssHighWirePressH20Plugin
-    comment[0] = content available from 1908 volume 1 to 1989 volume 82 is 
+    pluginSuffix = ClockssHighWireDrupalPlugin
+    comment[0] = content available from 1908 volume 1 to 1989 volume 82
 
     au < exists ; exists ; 1990 ; Annals of the Entomological Society of America Volume 83 ; 83 ; >
     au < exists ; exists ; 1991 ; Annals of the Entomological Society of America Volume 84 ; 84 ; >
@@ -4618,7 +4618,7 @@
     au < finished ; frozen ; 2011 ; Database: The Journal of Biological Databases and Curation Volume 2011 ; 2011 ; >
     au < finished ; frozen ; 2012 ; Database: The Journal of Biological Databases and Curation Volume 2012 ; 2012 ; >
     au < exists ; exists ; 2013 ; Database: The Journal of Biological Databases and Curation Volume 2013 ; 2013 ; >
-    au < expected ; exists ; 2014 ; Database: The Journal of Biological Databases and Curation Volume 2014 ; 2014 ; >
+    au < exists ; exists ; 2014 ; Database: The Journal of Biological Databases and Curation Volume 2014 ; 2014 ; >
 
   }
 
@@ -7224,7 +7224,7 @@
     param[base_url] = http://gastro.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
     
-    comment[status] = This AU does not yet have a manifest. 12/2013
+    comment[status] = This AU does not yet have a manifest. 12/2014
       
     au < exists ; exists ; 2013 ; Gastroenterology Report Volume 1 ; 1 ; >
     au < doNotProcess ; exists ; 2014 ; Gastroenterology Report Volume 2 ; 2 ; >
