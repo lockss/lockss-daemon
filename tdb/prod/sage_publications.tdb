@@ -4,12 +4,12 @@
     name = SAGE Publications ;
     info[tester] = 8
   >
-  
+
   {
-  
+
     pluginPrefix = org.lockss.plugin.highwire.
     attr[au_feature_key]=pdf
-      
+
     {
 
       title <
@@ -27,7 +27,7 @@
         implicit < status ; year ; name ; param[volume] >
 
         au < down ; 2000 ; Accounting History Volume 5 ; 5 >
-        
+
       }
 
 
@@ -37,15 +37,15 @@
         attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      
+
         au < HighWireStrVolPlugin ; down ; 2005 ; Accounting History Volume 10 ; 10 >
         au < HighWireStrVolPlugin ; down ; 2006 ; Accounting History Volume 11 ; 11 >
         au < HighWireStrVolPlugin ; down ; 2007 ; Accounting History Volume 12 ; 12 >
         au < HighWirePressPlugin ; down ; 2008 ; Accounting History Volume 13 ; 13 >
         au < HighWirePressPlugin ; down ; 2009 ; Accounting History Volume 14 ; 14 >
-        
+
       }
-      
+
       {
 
         pluginSuffix = HighWirePressH20Plugin
@@ -109,11 +109,11 @@
         au < HighWireStrVolPlugin ; down ; 2007 ; Acta Sociologica Volume 50 ; 50 >
         au < HighWirePressPlugin ; down ; 2008 ; Acta Sociologica Volume 51 ; 51 >
         au < HighWirePressPlugin ; down ; 2009 ; Acta Sociologica Volume 52 ; 52 >
-        
+
       }
-      
+
       {
-      
+
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://asj.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
@@ -181,22 +181,22 @@
       }
 
     }
-    
+
     {
-    
+
      title <
        name = Acta Radiologica Short Reports ;
        eissn =  2047-9816
      >
-       
+
        pluginSuffix = HighWirePressH20Plugin
        param[base_url] = http://arr.sagepub.com/
        implicit < status ; year ; name ; param[volume_name] >
-       
+
        au < exists ; 2012 ; Acta Radiologica Short Reports Volume 1 ; 1 >
        au < manifest ; 2013 ; Acta Radiologica Short Reports Volume 2 ; 2 >
        au < manifest ; 2014 ; Acta Radiologica Short Reports Volume 3 ; 3 >
-       
+
     }
 
     {
@@ -230,11 +230,11 @@
         au < HighWireStrVolPlugin ; down ; 2007 ; Action Research Volume 5 ; 5 >
         au < HighWirePressPlugin ; down ; 2008 ; Action Research Volume 6 ; 6 >
         au < HighWirePressPlugin ; down ; 2009 ; Action Research Volume 7 ; 7 >
-        
+
       }
-      
+
       {
-      
+
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://arj.sagepub.com/
         attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
@@ -258,7 +258,7 @@
 
     }
   {
-  
+
     title <
       name = Active Learning in Higher Education ;
       issn = 1469-7874 ;
@@ -273,7 +273,7 @@
       pluginSuffix = HighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
       implicit < status ; year ; name ; param[volume] >
-      
+
       au < down ; 2005 ; Active Learning in Higher Education Volume 6 ; 6 >
 
     }
@@ -297,7 +297,7 @@
 
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
-      
+
       au < released ; 2000 ; Active Learning in Higher Education Volume 1 ; 1 >
       au < released ; 2001 ; Active Learning in Higher Education Volume 2 ; 2 >
       au < released ; 2002 ; Active Learning in Higher Education Volume 3 ; 3 >
@@ -357,7 +357,7 @@
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://adb.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-        
+
 
         au < released ; 1992 ; Adaptive Behavior Volume 1 ; 1 >
         au < released ; 1993 ; Adaptive Behavior Volume 2 ; 2 >
@@ -483,7 +483,7 @@
 
       title <
         name = Administrative Science Quarterly ;
-        issn = 0001-8392 
+        issn = 0001-8392
       >
 
       {
@@ -554,60 +554,60 @@
         param[base_url] = http://aeq.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-	    au < released ; 1950-1951 ; Adult Education Quarterly Volume 1 ; 1 >
-	    au < released ; 1951-1952 ; Adult Education Quarterly Volume 2 ; 2 >
-	    au < released ; 1952-1953 ; Adult Education Quarterly Volume 3 ; 3 >
-	    au < released ; 1953-1954 ; Adult Education Quarterly Volume 4 ; 4 >
-	    au < released ; 1954-1955 ; Adult Education Quarterly Volume 5 ; 5 >
-	    au < released ; 1955-1956 ; Adult Education Quarterly Volume 6 ; 6 >
-	    au < released ; 1956-1957 ; Adult Education Quarterly Volume 7 ; 7 >
-	    au < released ; 1957-1958 ; Adult Education Quarterly Volume 8 ; 8 >
-	    au < released ; 1958-1959 ; Adult Education Quarterly Volume 9 ; 9 >
-	    au < released ; 1959-1960 ; Adult Education Quarterly Volume 10 ; 10 >
-	    au < released ; 1960-1961 ; Adult Education Quarterly Volume 11 ; 11 >
-	    au < released ; 1961-1962 ; Adult Education Quarterly Volume 12 ; 12 >
-	    au < released ; 1962-1963 ; Adult Education Quarterly Volume 13 ; 13 >
-	    au < released ; 1963-1964 ; Adult Education Quarterly Volume 14 ; 14 >
-	    au < released ; 1964-1965 ; Adult Education Quarterly Volume 15 ; 15 >
-	    au < released ; 1965-1966 ; Adult Education Quarterly Volume 16 ; 16 >
-	    au < released ; 1966-1967 ; Adult Education Quarterly Volume 17 ; 17 >
-	    au < released ; 1967-1968 ; Adult Education Quarterly Volume 18 ; 18 >
-	    au < released ; 1968-1969 ; Adult Education Quarterly Volume 19 ; 19 >
-	    au < released ; 1969-1970 ; Adult Education Quarterly Volume 20 ; 20 >
-	    au < released ; 1970-1971 ; Adult Education Quarterly Volume 21 ; 21 >
-	    au < released ; 1971-1972 ; Adult Education Quarterly Volume 22 ; 22 >
-	    au < released ; 1972-1973 ; Adult Education Quarterly Volume 23 ; 23 >
-	    au < released ; 1973-1974 ; Adult Education Quarterly Volume 24 ; 24 >
-	    au < released ; 1974-1975 ; Adult Education Quarterly Volume 25 ; 25 >
-	    au < released ; 1975-1976 ; Adult Education Quarterly Volume 26 ; 26 >
-	    au < released ; 1976-1977 ; Adult Education Quarterly Volume 27 ; 27 >
-	    au < released ; 1977-1978 ; Adult Education Quarterly Volume 28 ; 28 >
-	    au < released ; 1978-1979 ; Adult Education Quarterly Volume 29 ; 29 >
-	    au < released ; 1979-1980 ; Adult Education Quarterly Volume 30 ; 30 >
-	    au < released ; 1980-1981 ; Adult Education Quarterly Volume 31 ; 31 >
-	    au < released ; 1981-1982 ; Adult Education Quarterly Volume 32 ; 32 >
-	    au < released ; 1982-1983 ; Adult Education Quarterly Volume 33 ; 33 >
-	    au < released ; 1983-1984 ; Adult Education Quarterly Volume 34 ; 34 >
-	    au < released ; 1984-1985 ; Adult Education Quarterly Volume 35 ; 35 >
-	    au < released ; 1985-1986 ; Adult Education Quarterly Volume 36 ; 36 >
-	    au < released ; 1986-1987 ; Adult Education Quarterly Volume 37 ; 37 >
-	    au < released ; 1987-1988 ; Adult Education Quarterly Volume 38 ; 38 >
-	    au < released ; 1988-1989 ; Adult Education Quarterly Volume 39 ; 39 >
-	    au < released ; 1990-1990 ; Adult Education Quarterly Volume 40 ; 40 >
-	    au < released ; 1990-1991 ; Adult Education Quarterly Volume 41 ; 41 >
-	    au < released ; 1992-1992 ; Adult Education Quarterly Volume 42 ; 42 >
-	    au < released ; 1992-1993 ; Adult Education Quarterly Volume 43 ; 43 >
-	    au < released ; 1993-1994 ; Adult Education Quarterly Volume 44 ; 44 >
-	    au < released ; 1994-1995 ; Adult Education Quarterly Volume 45 ; 45 >
-	    au < released ; 1995-1996 ; Adult Education Quarterly Volume 46 ; 46 >
-	    au < released ; 1996-1997 ; Adult Education Quarterly Volume 47 ; 47 >
-	    au < released ; 1997-1998 ; Adult Education Quarterly Volume 48 ; 48 >
-	    au < released ; 1998-1999 ; Adult Education Quarterly Volume 49 ; 49 >
-	    au < released ; 1999-2000 ; Adult Education Quarterly Volume 50 ; 50 >
-	    au < released ; 2000-2001 ; Adult Education Quarterly Volume 51 ; 51 >
-	    au < released ; 2001-2002 ; Adult Education Quarterly Volume 52 ; 52 >
-	    au < released ; 2002-2003 ; Adult Education Quarterly Volume 53 ; 53 >
-	    au < released ; 2003-2004 ; Adult Education Quarterly Volume 54 ; 54 >
+        au < released ; 1950-1951 ; Adult Education Quarterly Volume 1 ; 1 >
+        au < released ; 1951-1952 ; Adult Education Quarterly Volume 2 ; 2 >
+        au < released ; 1952-1953 ; Adult Education Quarterly Volume 3 ; 3 >
+        au < released ; 1953-1954 ; Adult Education Quarterly Volume 4 ; 4 >
+        au < released ; 1954-1955 ; Adult Education Quarterly Volume 5 ; 5 >
+        au < released ; 1955-1956 ; Adult Education Quarterly Volume 6 ; 6 >
+        au < released ; 1956-1957 ; Adult Education Quarterly Volume 7 ; 7 >
+        au < released ; 1957-1958 ; Adult Education Quarterly Volume 8 ; 8 >
+        au < released ; 1958-1959 ; Adult Education Quarterly Volume 9 ; 9 >
+        au < released ; 1959-1960 ; Adult Education Quarterly Volume 10 ; 10 >
+        au < released ; 1960-1961 ; Adult Education Quarterly Volume 11 ; 11 >
+        au < released ; 1961-1962 ; Adult Education Quarterly Volume 12 ; 12 >
+        au < released ; 1962-1963 ; Adult Education Quarterly Volume 13 ; 13 >
+        au < released ; 1963-1964 ; Adult Education Quarterly Volume 14 ; 14 >
+        au < released ; 1964-1965 ; Adult Education Quarterly Volume 15 ; 15 >
+        au < released ; 1965-1966 ; Adult Education Quarterly Volume 16 ; 16 >
+        au < released ; 1966-1967 ; Adult Education Quarterly Volume 17 ; 17 >
+        au < released ; 1967-1968 ; Adult Education Quarterly Volume 18 ; 18 >
+        au < released ; 1968-1969 ; Adult Education Quarterly Volume 19 ; 19 >
+        au < released ; 1969-1970 ; Adult Education Quarterly Volume 20 ; 20 >
+        au < released ; 1970-1971 ; Adult Education Quarterly Volume 21 ; 21 >
+        au < released ; 1971-1972 ; Adult Education Quarterly Volume 22 ; 22 >
+        au < released ; 1972-1973 ; Adult Education Quarterly Volume 23 ; 23 >
+        au < released ; 1973-1974 ; Adult Education Quarterly Volume 24 ; 24 >
+        au < released ; 1974-1975 ; Adult Education Quarterly Volume 25 ; 25 >
+        au < released ; 1975-1976 ; Adult Education Quarterly Volume 26 ; 26 >
+        au < released ; 1976-1977 ; Adult Education Quarterly Volume 27 ; 27 >
+        au < released ; 1977-1978 ; Adult Education Quarterly Volume 28 ; 28 >
+        au < released ; 1978-1979 ; Adult Education Quarterly Volume 29 ; 29 >
+        au < released ; 1979-1980 ; Adult Education Quarterly Volume 30 ; 30 >
+        au < released ; 1980-1981 ; Adult Education Quarterly Volume 31 ; 31 >
+        au < released ; 1981-1982 ; Adult Education Quarterly Volume 32 ; 32 >
+        au < released ; 1982-1983 ; Adult Education Quarterly Volume 33 ; 33 >
+        au < released ; 1983-1984 ; Adult Education Quarterly Volume 34 ; 34 >
+        au < released ; 1984-1985 ; Adult Education Quarterly Volume 35 ; 35 >
+        au < released ; 1985-1986 ; Adult Education Quarterly Volume 36 ; 36 >
+        au < released ; 1986-1987 ; Adult Education Quarterly Volume 37 ; 37 >
+        au < released ; 1987-1988 ; Adult Education Quarterly Volume 38 ; 38 >
+        au < released ; 1988-1989 ; Adult Education Quarterly Volume 39 ; 39 >
+        au < released ; 1990-1990 ; Adult Education Quarterly Volume 40 ; 40 >
+        au < released ; 1990-1991 ; Adult Education Quarterly Volume 41 ; 41 >
+        au < released ; 1992-1992 ; Adult Education Quarterly Volume 42 ; 42 >
+        au < released ; 1992-1993 ; Adult Education Quarterly Volume 43 ; 43 >
+        au < released ; 1993-1994 ; Adult Education Quarterly Volume 44 ; 44 >
+        au < released ; 1994-1995 ; Adult Education Quarterly Volume 45 ; 45 >
+        au < released ; 1995-1996 ; Adult Education Quarterly Volume 46 ; 46 >
+        au < released ; 1996-1997 ; Adult Education Quarterly Volume 47 ; 47 >
+        au < released ; 1997-1998 ; Adult Education Quarterly Volume 48 ; 48 >
+        au < released ; 1998-1999 ; Adult Education Quarterly Volume 49 ; 49 >
+        au < released ; 1999-2000 ; Adult Education Quarterly Volume 50 ; 50 >
+        au < released ; 2000-2001 ; Adult Education Quarterly Volume 51 ; 51 >
+        au < released ; 2001-2002 ; Adult Education Quarterly Volume 52 ; 52 >
+        au < released ; 2002-2003 ; Adult Education Quarterly Volume 53 ; 53 >
+        au < released ; 2003-2004 ; Adult Education Quarterly Volume 54 ; 54 >
         au < doNotProcess ; 2004-2005 ; Adult Education Quarterly Volume 55 ; 55 >
         au < doNotProcess ; 2005-2006 ; Adult Education Quarterly Volume 56 ; 56 >
         au < doNotProcess ; 2006-2007 ; Adult Education Quarterly Volume 57 ; 57 >
@@ -623,22 +623,22 @@
       }
 
     }
-    
+
     {
-    
+
       title <
         name = Adult Learning ;
         issn = 1045-1595 ;
         eissn = 2162-4070 ;
         issnl = 1045-1595
       >
-      
+
       {
-      
+
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://alx.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-        
+
         au < released ; 1998-1999 ; Adult Learning Volume 10 ; 10 >
         au < released ; 1999-2000 ; Adult Learning Volume 11 ; 11 >
         au < released ; 2001 ; Adult Learning Volume 12 ; 12 >
@@ -658,8 +658,8 @@
         au < manifest ; 2015 ; Adult Learning Volume 26 ; 26 >
 
       }
-      
-    }  
+
+    }
 
     {
 
@@ -786,7 +786,7 @@
       title <
         name = Aesthetic Surgery Journal ;
         issn = 1090-820X ;
-        eissn = 1527-330X 
+        eissn = 1527-330X
       >
 
       {
@@ -901,7 +901,7 @@
         name = Agrarian South: Journal of Political Economy ;
         issn = 2277-9760
       >
-	  
+
       {
 
         pluginSuffix = HighWirePressH20Plugin
@@ -922,7 +922,7 @@
         name = Alternatives: Global, Local, Political ;
         issn = 0304-3754
       >
-	  
+
       {
 
         pluginSuffix = HighWirePressH20Plugin
@@ -1752,7 +1752,7 @@
       title <
         name = American Sociological Review ;
         issn = 0003-1224 ;
-        eissn = 1939-8271 
+        eissn = 1939-8271
       >
 
       {
@@ -1983,7 +1983,7 @@
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://ann.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-        
+
         comment[ann181] = manifest page exists, but there is no content.
         comment[ann347] = manifest page exists, but there is no content.
 
@@ -2650,11 +2650,11 @@
     }
 
   {
-  
+
     title <
       name = Annals of Otology, Rhinology & Laryngology ;
       issn = 0003-4894 ;
-      eissn = 1943-572X 
+      eissn = 1943-572X
     >
 
       param[base_url] = http://aor.sagepub.com/
@@ -2667,11 +2667,11 @@
   }
 
   {
-  
+
     title <
       name = Annals of Pharmacotherapy ;
       issn = 1060-0280 ;
-      eissn = 1542-6270 
+      eissn = 1542-6270
     >
 
 
@@ -2680,7 +2680,7 @@
         param[base_url] = http://aop.sagepub.com/
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
-        
+
         comment[moved] = this journal is processed through 2012. Moved from http://www.theannals.com/
 
         au < doNotProcess ; 1998 ; Annals of Pharmacotherapy Volume 32 ; 32 >
@@ -3010,7 +3010,7 @@
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://apj.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-        
+
         Comment[moved] = to Whiley but content through 2011 remains here.
 
         au < manifest ; 1966 ; Asia Pacific Journal of Human Resources Volume 1 ; 1 >
@@ -3062,7 +3062,7 @@
         au < doNotProcess ; 2009 ; Asia Pacific Journal of Human Resources Volume 47 ; 47 >
         au < released ; 2010 ; Asia Pacific Journal of Human Resources Volume 48 ; 48 >
         au < released ; 2011 ; Asia Pacific Journal of Human Resources Volume 49 ; 49 >
-        
+
       }
 
     }
@@ -3131,7 +3131,7 @@
       title <
         name = Asian Cardiovascular and Thoracic Annals ;
         issn = 0218-4923 ;
-        eissn = 1816-5370 
+        eissn = 1816-5370
     >
 
       pluginSuffix = HighWirePressH20Plugin
@@ -3153,7 +3153,7 @@
       au < manifest ; 2015 ; Asian Cardiovascular and Thoracic Annals Volume 23 ; 23 >
 
     }
-    
+
     {
 
       title <
@@ -3171,7 +3171,7 @@
         au < expected ; 2015 ; Asian Journal of Legal Education Volume 2 ; 2 >
 
     }
-    
+
     {
 
       title <
@@ -3194,7 +3194,7 @@
         au < HighWirePressPlugin ; down ; 2009 ; Asian Journal of Management Cases Volume 6 ; 6 >
 
       }
-      
+
       {
 
         pluginSuffix = HighWirePressH20Plugin
@@ -3305,9 +3305,9 @@
         eissn = 1938-7458 ;
         issnl = 1534-5084
       >
-      
+
       {
-      
+
         param[base_url] = http://aei.sagepub.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
@@ -3315,10 +3315,10 @@
         au < HighWirePressPlugin ; down ; 2007-2008 ; Assessment for Effective Intervention Volume 33 ; 33 >
         au < HighWirePressPlugin ; down ; 2008-2009 ; Assessment for Effective Intervention Volume 34 ; 34 >
         au < HighWirePressPlugin ; down ; 2009-2010 ; Assessment for Effective Intervention Volume 35 ; 35 >
-        
+
 
       }
-     
+
       {
 
         pluginSuffix = HighWirePressH20Plugin
@@ -3416,7 +3416,7 @@
         au < manifest ; 2015 ; Autism Volume 19 ; 19 >
 
       }
-      
+
     }
 
     {
@@ -3427,7 +3427,7 @@
         eissn = 1440-1665 ;
         issnl = 1039-8562
       >
-      
+
       {
 
         pluginSuffix = HighWirePressH20Plugin
@@ -3459,7 +3459,7 @@
         au < expected ; 2015 ; Australasian Psychiatry Volume 23 ; 23 >
 
       }
-      
+
     }
 
     {
@@ -3469,7 +3469,7 @@
         issn = 0004-8658 ;
         eissn = 1837-9273
       >
-      
+
       {
 
         pluginSuffix = HighWirePressH20Plugin
@@ -3484,7 +3484,7 @@
         au < expected ; 2015 ; Australian & New Zealand Journal of Criminology Volume 48 ; 48 >
 
       }
-      
+
     }
 
     {
@@ -3495,7 +3495,7 @@
         eissn = 1440-1614 ;
         issnl = 0004-8674
       >
-      
+
       {
 
         pluginSuffix = HighWirePressH20Plugin
@@ -3553,7 +3553,7 @@
         au < manifest ; 2015 ; Australian & New Zealand Journal of Psychiatry Volume 49 ; 49 >
 
       }
-      
+
     }
 
     {
@@ -3561,7 +3561,7 @@
       title <
         name = Australian Journal of Management ;
         issn = 0312-8962 ;
-        eissn = 1327-2020 
+        eissn = 1327-2020
       >
 
       {
@@ -3696,7 +3696,7 @@
         au < expected ; 2015 ; Behavior Modification Volume 39 ; 39 >
 
       }
-      
+
     }
 
     {
@@ -3707,7 +3707,7 @@
         eissn = 1552-4159 ;
         issnl = 1534-5823
       >
-      
+
       comment[bcn5] = Ended publication in 2006, Vol 5.
 
       {
@@ -3925,7 +3925,7 @@
       title <
         name = BioScope: South Asian Screen Studies ;
         issn = 0974-9276 ;
-        eissn = 0976-352X 
+        eissn = 0976-352X
       >
 
       {
@@ -4065,7 +4065,7 @@
         eissn = 1754-7156 ;
         issnl = 1469-0446
       >
-      
+
       comment[continued_by] = Journal of Infection Prevention 1999-2008, 1757-1774
 
       {
@@ -4111,7 +4111,7 @@
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://bjo.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-        
+
         au < manifest ; 1938 ; The British Journal of Occupational Therapy Volume 1 ; 1 >
         au < manifest ; 1939 ; The British Journal of Occupational Therapy Volume 2 ; 2 >
         au < manifest ; 1940 ; The British Journal of Occupational Therapy Volume 3 ; 3 >
@@ -4220,7 +4220,7 @@
 
       }
 
-    }  
+    }
 
     {
 
@@ -4504,7 +4504,7 @@
       title <
         name = Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique ;
         issn = 0759-1063 ;
-        eissn = 2070-2779 
+        eissn = 2070-2779
       >
 
       {
@@ -4512,7 +4512,7 @@
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://bms.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-        
+
         au < manifest ; 1983 ; Bulletin de Méthodologie Sociologique Volume 1 ; 1 >
         au < manifest ; 1984 ; Bulletin de Méthodologie Sociologique Volume 2 ; 2 >
         au < manifest ; 1984 ; Bulletin de Méthodologie Sociologique Volume 3 ; 3 >
@@ -5008,7 +5008,7 @@
       title <
         name = Capital & Class ;
         issn = 0309-8168 ;
-        eissn = 2041-0980 
+        eissn = 2041-0980
       >
 
       {
@@ -5073,7 +5073,7 @@
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://ccl.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-        
+
         comment[0] = Ceasing publication but still online as of Jan 2012.
 
         au < released ; 2011 ; Cardiac Cath Lab Director Volume 1 ; 1 >
@@ -5156,7 +5156,7 @@
       >
 
        comment[previously] = Career Development for Exceptional Individuals
-       
+
       {
 
         pluginSuffix = HighWirePressH20Plugin
@@ -5180,9 +5180,9 @@
         eissn = 1947-6043 ;
         issnl = 1947-6035
       >
-      
+
       {
-      
+
         param[base_url] = http://car.sagepub.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
@@ -5612,7 +5612,7 @@
     }
 
   {
-  
+
     title <
       name = Christianity & Literature ;
       issn = 0148-3331 ;
@@ -5772,7 +5772,7 @@
         au < released ; 2012 ; Chronic Respiratory Disease Volume 9 ; 9 >
         au < manifest ; 2013 ; Chronic Respiratory Disease Volume 10 ; 10 >
         au < manifest ; 2014 ; Chronic Respiratory Disease Volume 11 ; 11 >
-        
+
       }
 
     }
@@ -5859,7 +5859,7 @@
         au < released ; 2012 ; Clin-Alert Volume 50 ; 50 >
         au < manifest ; 2013 ; Clin-Alert Volume 51 ; 51 >
         au < manifest ; 2014 ; Clin-Alert Volume 52 ; 52 >
-        
+
       }
 
     }
@@ -6072,9 +6072,9 @@
         au < released ; 2012 ; Clinical EEG and Neuroscience Volume 43 ; 43 >
         au < manifest ; 2013 ; Clinical EEG and Neuroscience Volume 44 ; 44 >
         au < manifest ; 2014 ; Clinical EEG and Neuroscience Volume 45 ; 45 >
-      
+
     }
- 
+
     {
 
       title <
@@ -6242,17 +6242,17 @@
       >
 
       {
-      
+
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
         param[base_url] = http://cpd.sagepub.com/
-        
+
         comment[publisher] = Moving to Wiley Blackwell in 2013.
 
         au < down ; 2012 ; Clinical Pharmacology in Drug Development Volume 1 ; 1 >
 
       }
-      
+
     }
 
     {
@@ -6261,7 +6261,7 @@
         issn = 2167-7026 ;
         eissn = 2167-7034
       >
-	  
+
       {
 
         pluginSuffix = HighWirePressH20Plugin
@@ -6448,13 +6448,13 @@
       }
 
     }
-    
+
     {
 
       title <
         name = Communication Disorders Quarterly ;
         issn = 1525-7401 ;
-        eissn = 1538-4837 
+        eissn = 1538-4837
       >
 
       {
@@ -6501,7 +6501,7 @@
         au < manifest ; 2014-2015 ; Communication Disorders Quarterly Volume 36 ; 36 >
 
       }
-      
+
     }
 
     {
@@ -6574,7 +6574,7 @@
         au < released ; 2012 ; Communication Research Volume 39 ; 39 >
         au < manifest ; 2013 ; Communication Research Volume 40 ; 40 >
         au < manifest ; 2014 ; Communication Research Volume 41 ; 41 >
-        
+
       }
 
     }
@@ -7054,7 +7054,7 @@
         au < expected ; 2015 ; Conflict Management and Peace Science Volume 32 ; 32 >
 
       }
-      
+
     }
 
     {
@@ -7092,7 +7092,7 @@
       title <
         name = Contemporary Review of the Middle East ;
         issn = 2347-7989 ;
-        eissn = 2349-0055 
+        eissn = 2349-0055
       >
 
         pluginSuffix = HighWirePressH20Plugin
@@ -7109,7 +7109,7 @@
       title <
         name = Contemporary Sociology: A Journal of Reviews ;
         issn = 0094-3061 ;
-        eissn = 1939-8638 
+        eissn = 1939-8638
       >
 
       {
@@ -7168,7 +7168,7 @@
       }
 
     }
-    
+
     {
 
       title <
@@ -7421,7 +7421,7 @@
         eissn = 1938-9663 ;
         issnl = 1938-9655
       >
-      
+
       comment[chq0] = formerly Cornell Hotel and Restaurant Administration Quarterly
 
       {
@@ -7521,7 +7521,7 @@
       title <
         name = Counseling Outcome Research and Evaluation ;
         issn = 2150-1378 ;
-        eissn = 2150-1386 
+        eissn = 2150-1386
       >
 
       {
@@ -8044,7 +8044,7 @@
       title <
         name = Critical Reviews in Oral Biology & Medicine ;
         issn = 1045-4411 ;
-        eissn = 1544-1113 
+        eissn = 1544-1113
       >
 
       {
@@ -8088,7 +8088,7 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-		comment[csp7] = manifest page is malformed (date?). Now appears to be repaired 2011-05-30.
+        comment[csp7] = manifest page is malformed (date?). Now appears to be repaired 2011-05-30.
 
         au < HighWireStrVolPlugin ; down ; 2005 ; Critical Social Policy Volume 25 ; 25 >
         au < HighWireStrVolPlugin ; down ; 2006 ; Critical Social Policy Volume 26 ; 26 >
@@ -8143,14 +8143,14 @@
       }
 
     }
-    
+
     {
       title <
         name = Critical Sociology ;
         issn = 0896-9205 ;
         eissn = 1569-1632
       >
-      
+
       {
 
         pluginSuffix = HighWirePressH20Plugin
@@ -8200,7 +8200,7 @@
         au < manifest ; 2015 ; Critical Sociology Volume 41 ; 41 >
 
       }
-    
+
     }
 
     {
@@ -8654,7 +8654,7 @@
       title <
         name = Current Directions in Psychological Science ;
         issn = 0963-7214 ;
-        eissn = 1467-8721 
+        eissn = 1467-8721
       >
 
       {
@@ -8901,7 +8901,7 @@
         issn = 1479-1641 ;
         eissn = 1752-8984
       >
-      
+
       {
 
         pluginSuffix = HighWirePressH20Plugin
@@ -8922,9 +8922,9 @@
         au < manifest ; 2015 ; Diabetes and Vascular Disease Research Volume 12 ; 12 >
 
       }
-      
+
     }
-    
+
     {
 
       title <
@@ -8964,7 +8964,7 @@
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://tde.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-        
+
         comment[tde7] = Issues 7:2 & 7:3 in the publ website are marked as 1984, but likely are from 1981.
 
         au < doesNotExist ; 0 ; The Diabetes Educator Volume 5 ; 5 >
@@ -9030,7 +9030,7 @@
 
       }
 
-    } 
+    }
 
     {
 
@@ -9281,21 +9281,21 @@
     }
 
     {
-  
+
         title <
           name = Drug Information Journal ;
           issn = 0092-8615 ;
           eissn = 2164-9200
       >
-  
+
       {
-  
+
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://dij.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-        
+
         comment[0] = Jan 2013 name changed from Drug Information Journal to Therapeutic Innovation & Regulatory Science
-        
+
         au < manifest ; 1970 ; Drug Information Journal Volume 4 ; 4 >
         au < doesNotExist ; 0 ; Drug Information Journal Volume 5 ; 5 >
         au < manifest ; 1972 ; Drug Information Journal Volume 6 ; 6 >
@@ -9339,45 +9339,45 @@
         au < released ; 2010 ; Drug Information Journal Volume 44 ; 44 >
         au < released ; 2011 ; Drug Information Journal Volume 45 ; 45 >
         au < released ; 2012 ; Drug Information Journal Volume 46 ; 46 >
-  
+
       }
-  
+
     }
-  
+
     {
-  
+
         title <
           name = Therapeutic Innovation & Regulatory Science ;
           issn = 2168-4790 ;
           eissn = 2168-4804
       >
-  
+
       {
-  
+
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://dij.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-        
+
         comment[0] = Jan 2013 name changed from Drug Information Journal to Therapeutic Innovation & Regulatory Science
-        
+
         au < manifest ; 2013 ; Therapeutic Innovation & Regulatory Science Volume 47 ; 47 >
         au < manifest ; 2014 ; Therapeutic Innovation & Regulatory Science Volume 48 ; 48 >
-  
+
       }
-  
+
     }
-  
+
   {
-  
+
     title <
       name = E-Learning and Digital Media ;
-      eissn = 2042-7530 
+      eissn = 2042-7530
     >
 
       param[base_url] = http://ldm.sagepub.com/
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
-      
+
       au < exists ; 2004 ; E-Learning and Digital Media Volume 1 ; 1 >
       au < exists ; 2005 ; E-Learning and Digital Media Volume 2 ; 2 >
       au < exists ; 2006 ; E-Learning and Digital Media Volume 3 ; 3 >
@@ -10071,23 +10071,23 @@
     }
 
     {
-    
+
       title <
         name = Educational Horizons ;
         issn = 0013-175X ;
         eissn = 2162-3163
       >
-  
+
       param[base_url] = http://ehm.sagepub.com/
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
-  
+
       au < exists ; 2011 ; Educational Horizons Volume 89 ; 89 >
       au < exists ; 2011-2012 ; Educational Horizons Volume 90 ; 90 >
       au < exists ; 2012-2013 ; Educational Horizons Volume 91 ; 91 >
       au < exists ; 2013-2014 ; Educational Horizons Volume 92 ; 92 >
       au < manifest ; 2014-2015 ; Educational Horizons Volume 93 ; 93 >
-  
+
     }
 
     {
@@ -10322,7 +10322,7 @@
       title <
         name = Electronic News ;
         issn = 1931-2431 ;
-        eissn = 1931-244X 
+        eissn = 1931-244X
       >
 
       {
@@ -10351,7 +10351,7 @@
         issn = 1754-0739 ;
         eissn = 1754-0747
       >
-      
+
       {
 
         pluginSuffix = HighWirePressH20Plugin
@@ -10369,14 +10369,14 @@
       }
 
     }
-    
+
     {
       title <
         name = Emotional & Behavioural Difficulties ;
         issn = 1363-2752 ;
         eissn = 1741-2692
       >
-		
+
       {
 
         pluginSuffix = HighWirePlugin
@@ -10384,7 +10384,7 @@
         param[base_url] = http://ebd.sagepub.com/
         implicit < status ; year ; name ; param[volume] >
 
-     
+
         comment[ebd] = now published by Taylor & Francis
 
         au < down ; 2006 ; Emotional & Behavioural Difficulties Volume 10 ; 10 >
@@ -10563,7 +10563,7 @@
       title <
         name = Environment and Urbanization Asia ;
         issn = 0975-4253 ;
-        eissn = 0976-3546 
+        eissn = 0976-3546
       >
 
       {
@@ -10734,7 +10734,7 @@
     }
 
   {
-  
+
     title <
       name = European Educational Research Journal ;
       eissn = 1474-9041 ;
@@ -10762,19 +10762,19 @@
 
   }
 
-    
+
   {
-  
+
     title <
       name = European Heart Journal: Acute Cardiovascular Care ;
       issn = 2048-8726 ;
       eissn = 2048-8734 ;
-      issnl = 2048-8726 
+      issnl = 2048-8726
     >
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
         param[base_url] = http://acc.sagepub.com/
-    
+
       au < released ; 2012 ; European Heart Journal: Acute Cardiovascular Care Volume 1 ; 1 >
       au < manifest ; 2013 ; European Heart Journal: Acute Cardiovascular Care Volume 2 ; 2 >
       au < manifest ; 2014 ; European Heart Journal: Acute Cardiovascular Care Volume 3 ; 3 >
@@ -10929,21 +10929,21 @@
       }
 
     }
-    
+
     {
-  
+
         title <
           name = European Journal of Cardiovascular Nursing ;
           issn = 1474-5151 ;
-          eissn = 1873-1953 
+          eissn = 1873-1953
       >
-  
+
       {
-  
+
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://cnu.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-  
+
         au < manifest ; 2002 ; European Journal of Cardiovascular Nursing Volume 1 ; 1 >
         au < manifest ; 2003 ; European Journal of Cardiovascular Nursing Volume 2 ; 2 >
         au < manifest ; 2004 ; European Journal of Cardiovascular Nursing Volume 3 ; 3 >
@@ -10957,9 +10957,9 @@
         au < released ; 2012 ; European Journal of Cardiovascular Nursing Volume 11 ; 11 >
         au < manifest ; 2013 ; European Journal of Cardiovascular Nursing Volume 12 ; 12 >
         au < manifest ; 2014 ; European Journal of Cardiovascular Nursing Volume 13 ; 13 >
-  
+
       }
-  
+
     }
 
     {
@@ -10974,7 +10974,7 @@
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://cpr.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-        
+
         comment[continued_by] = European Journal of Preventive Cardiology, 2047-4873
         comment[need_review] = This needs review, see the metadata in articles from say volume 1
 
@@ -11016,10 +11016,10 @@
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://cpr.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-        
+
         comment[continues] = European Journal of Cardiovascular Prevention & Rehabilitation, 1741-8267
         comment[0] = Previous issues are at the same url.
-        
+
         au < released ; 2012 ; European Journal of Preventive Cardiology Volume 19 ; 19 >
         au < manifest ; 2013 ; European Journal of Preventive Cardiology Volume 20 ; 20 >
         au < manifest ; 2014 ; European Journal of Preventive Cardiology Volume 21 ; 21 >
@@ -11383,7 +11383,7 @@
     }
 
   {
-  
+
     title <
       name = European Journal of Probation ;
       eissn = 2066-2203
@@ -11922,12 +11922,12 @@
       }
 
     }
-    
+
   {
 
     title <
       name = Exceptional Children ;
-      issn = 0014-4029 
+      issn = 0014-4029
     >
 
     {
@@ -11955,7 +11955,7 @@
     }
 
   }
-  
+
     {
 
       title <
@@ -11979,7 +11979,7 @@
       }
 
     }
-    
+
     {
 
       title <
@@ -12159,7 +12159,7 @@
         eissn = 1552-3934 ;
         issnl = 1077-727X
       >
-      
+
       comment[fcsrj] = Family and Consumer Sciences Research Journal has moved to Wiley.
 
       {
@@ -12184,7 +12184,7 @@
         issn = 0894-4865 ;
         eissn = 1741-6248
       >
-      
+
       {
 
         pluginSuffix = HighWirePressH20Plugin
@@ -12223,7 +12223,7 @@
       }
 
     }
-    
+
     {
 
       title <
@@ -12774,7 +12774,7 @@
         au < HighWirePressPlugin ; down ; 2009 ; Foot & Ankle Specialist Volume 2 ; 2 >
 
       }
-  
+
       {
 
         pluginSuffix = HighWirePressH20Plugin
@@ -13039,7 +13039,7 @@
       title <
         name = General Music Today ;
         issn = 1048-3713 ;
-        eissn = 1931-3756 
+        eissn = 1931-3756
       >
 
       {
@@ -13082,7 +13082,7 @@
       title <
         name = Genes & Cancer ;
         issn = 1947-6019 ;
-        eissn = 1947-6027 
+        eissn = 1947-6027
       >
 
       {
@@ -13244,19 +13244,19 @@
     }
 
     {
-  
+
         title <
           name = Gifted Education International ;
           issn = 0261-4294 ;
-          eissn = 2047-9077 
+          eissn = 2047-9077
       >
-  
+
       {
-  
+
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://gei.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-  
+
         au < manifest ; 1982-1983 ; Gifted Education International Volume 1 ; 1 >
         au < manifest ; 1983-1984 ; Gifted Education International Volume 2 ; 2 >
         au < manifest ; 1985 ; Gifted Education International Volume 3 ; 3 >
@@ -13287,11 +13287,11 @@
         au < released ; 2012 ; Gifted Education International Volume 28 ; 28 >
         au < manifest ; 2013 ; Gifted Education International Volume 29 ; 29 >
         au < manifest ; 2014 ; Gifted Education International Volume 30 ; 30 >
-  
+
       }
-  
+
     }
-  
+
     {
 
       title <
@@ -13360,7 +13360,7 @@
         au < HighWirePressPlugin ; down ; 2009 ; Global Health Promotion Volume 16 ; 16 >
 
       }
-      
+
       {
 
         pluginSuffix = HighWirePressH20Plugin
@@ -13477,17 +13477,17 @@
     }
 
     {
-  
+
       title <
         name = Global Pediatric Health ;
         eissn = 2333-794X ;
         issnl = 2333-794X
       >
-  
+
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
         param[base_url] = http://gph.sagepub.com/
-  
+
         au < manifest ; 2014 ; Global Pediatric Health Volume 1 ; 1 >
     }
 
@@ -13559,9 +13559,9 @@
 
       title <
         name = Graft: Organ and Cell Transplantation ;
-        issn = 1522-1628 
+        issn = 1522-1628
       >
-    
+
       rights = openaccess
       plugin = org.lockss.plugin.highwire.HighWireTriggeredPlugin
       param[base_url] = http://graft.stanford.clockss.org/
@@ -13570,11 +13570,11 @@
       attr[title_url] = http://www.clockss.org/clockss/Graft
 
       implicit < status ; year ; name ; param[volume_name] ; proxy >
-     
+
       au < manifest ; 2001 ; Graft: Organ and Cell Transplantation Volume 4 ; 4 ; reingest.lockss.org:80 >
       au < released ; 2002 ; Graft: Organ and Cell Transplantation Volume 5 ; 5 ; reingest.lockss.org:80 >
       au < released ; 2003 ; Graft: Organ and Cell Transplantation Volume 6 ; 6 ; reingest.lockss.org:80 >
-    
+
     }
 
     {
@@ -13810,7 +13810,7 @@
     {
       title <
         name = INQUIRY: The Journal of Health Care Organization, Provision, and Financing ;
-        issn = 0046-9580 
+        issn = 0046-9580
       >
 
       pluginSuffix = HighWirePressH20Plugin
@@ -13841,7 +13841,7 @@
         issn = 1367-0069 ;
         eissn = 1756-6878
       >
-      
+
       {
 
         pluginSuffix = HighWirePressH20Plugin
@@ -13871,7 +13871,7 @@
       }
 
     }
-    
+
     {
 
       title <
@@ -13931,7 +13931,7 @@
         au < released ; 2012 ; The International Journal of Press/Politics Volume 17 ; 17 >
         au < manifest ; 2013 ; The International Journal of Press/Politics Volume 18 ; 18 >
         au < manifest ; 2014 ; The International Journal of Press/Politics Volume 19 ; 19 >
-        
+
       }
 
     }
@@ -13942,7 +13942,7 @@
         issn = 1091-5818 ;
         eissn = 1092-874X
       >
-      
+
       {
 
         pluginSuffix = HighWirePressH20Plugin
@@ -13987,12 +13987,12 @@
       }
 
     }
-    
+
     {
 
       title <
         name = Intervention in School and Clinic ;
-        issn = 1053-4512 
+        issn = 1053-4512
       >
 
       {
@@ -14517,7 +14517,7 @@
     }
 
    {
-  
+
     title <
       name = Higher Education for the Future ;
       issn = 2347-6311 ;
@@ -14529,9 +14529,9 @@
         implicit < status ; year ; name ; param[volume_name] >
 
       au < manifest ; 2014 ; Higher Education for the Future Volume 1 ; 1 >
-      
+
     }
-  
+
     {
 
       title <
@@ -14725,7 +14725,7 @@
     title <
       name = History of Science ;
       issn = 0073-2753 ;
-      eissn = 1753-8564 
+      eissn = 1753-8564
     >
 
     {
@@ -15070,7 +15070,7 @@
       title <
         name = Human Factors: The Journal of the Human Factors and Ergonomics Society ;
         issn = 0018-7208 ;
-        eissn = 1547-8181 
+        eissn = 1547-8181
       >
 
       {
@@ -15145,7 +15145,7 @@
 
       title <
         name = Human Genomics and Proteomics ;
-        eissn = 1757-4242 
+        eissn = 1757-4242
       >
 
       {
@@ -15337,18 +15337,18 @@
     }
 
     {
-    
+
       title <
         name = Humanity & Society ;
-        issn = 0160-5976 
+        issn = 0160-5976
       >
-  
+
       {
 
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://has.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-        
+
         au < manifest ; 2003 ; Humanity & Society Volume 27 ; 27 >
         au < manifest ; 2004 ; Humanity & Society Volume 28 ; 28 >
         au < manifest ; 2005 ; Humanity & Society Volume 29 ; 29 >
@@ -15361,9 +15361,9 @@
         au < released ; 2012 ; Humanity & Society Volume 36 ; 36 >
         au < manifest ; 2013 ; Humanity & Society Volume 37 ; 37 >
         au < manifest ; 2014 ; Humanity & Society Volume 38 ; 38 >
-  
+
       }
-      
+
     }
 
     {
@@ -15543,7 +15543,7 @@
       title <
         name = Index on Censorship ;
         issn = 0306-4220 ;
-        eissn = 1746-6067 
+        eissn = 1746-6067
       >
 
       {
@@ -15606,7 +15606,7 @@
       title <
         name = India Quarterly: A Journal of International Affairs ;
         issn = 0974-9284 ;
-        eissn = 0975-2684 
+        eissn = 0975-2684
       >
 
       {
@@ -15732,7 +15732,7 @@
       title <
         name = Indian Historical Review ;
         issn = 0376-9836 ;
-        eissn = 0975-5977 
+        eissn = 0975-5977
       >
 
       {
@@ -15904,7 +15904,7 @@
       title <
         name = ILRReview: Industrial & Labor Relations Review ;
         issn = 0019-7939 ;
-        eissn = 2162-271X 
+        eissn = 2162-271X
       >
 
         pluginSuffix = HighWirePressH20Plugin
@@ -15923,7 +15923,7 @@
       title <
         name = ICAN: Infant, Child, & Adolescent Nutrition ;
         issn = 1941-4064 ;
-        eissn = 1941-4072 
+        eissn = 1941-4072
       >
 
       {
@@ -15949,7 +15949,7 @@
       title <
         name = ICU Director ;
         issn = 1944-4516 ;
-        eissn = 1944-4524 
+        eissn = 1944-4524
       >
 
       {
@@ -15970,7 +15970,7 @@
     }
 
     {
-    
+
       title <
         name = Information Development ;
         issn = 0266-6669 ;
@@ -16082,7 +16082,7 @@
     title <
       name = Insight on Africa ;
       issn = 0975-0878 ;
-      eissn = 0976-3465 
+      eissn = 0976-3465
     >
 
     {
@@ -16163,20 +16163,20 @@
     }
 
     {
-    
+
       title <
         name = International Area Studies Review ;
         issn = 2233-8659 ;
         eissn = 2049-1123
-        
+
       >
-    
+
       {
-      
+
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://ias.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-        
+
         au < manifest ; 1997-1998 ; International Area Studies Review Volume 1 ; 1 >
         au < manifest ; 1999 ; International Area Studies Review Volume 2 ; 2 >
         au < manifest ; 2000 ; International Area Studies Review Volume 3 ; 3 >
@@ -16194,11 +16194,11 @@
         au < released ; 2012 ; International Area Studies Review Volume 15 ; 15 >
         au < manifest ; 2013 ; International Area Studies Review Volume 16 ; 16 >
         au < manifest ; 2014 ; International Area Studies Review Volume 17 ; 17 >
-        
+
       }
-    
+
     }
-    
+
     {
 
       title <
@@ -16783,7 +16783,7 @@
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://jdi.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-        
+
         au < manifest ; 1995-1996 ; International Journal of Discrimination and the Law Volume 1 ; 1 >
         au < manifest ; 1996-1997 ; International Journal of Discrimination and the Law Volume 2 ; 2 >
         au < manifest ; 1998-1999 ; International Journal of Discrimination and the Law Volume 3 ; 3 >
@@ -16801,9 +16801,9 @@
         au < expected ; 2015 ; International Journal of Discrimination and the Law Volume 15 ; 15 >
 
       }
-      
+
     }
-    
+
     {
       title <
         name = International Journal of Electrical Engineering Education ;
@@ -16819,9 +16819,9 @@
 
      au < exists ; 2014 ; International Journal of Electrical Engineering Education Volume 51 ; 51 >
      au < expected ; 2015 ; International Journal of Electrical Engineering Education Volume 52 ; 52 >
-     
+
     }
-    
+
     {
       title <
         name = International Journal of Engine Research ;
@@ -16993,7 +16993,7 @@
 
         param[base_url] = http://ijm.sagepub.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-        
+
         comment[notReady] = Original series ended at vol 40, and issue numbering started at 22 again in 2004. Manifests exist, but are malformed.
 
         au < HighWirePressH20Plugin ; manifest ; 1983 ; International Journal of Music Education: Original Series Volume os-1 ; os-1 >
@@ -17143,7 +17143,7 @@
         au < manifest ; 2013 ; International Journal of Offender Therapy and Comparative Criminology Volume 57 ; 57 >
         au < manifest ; 2014 ; International Journal of Offender Therapy and Comparative Criminology Volume 58 ; 58 >
         au < manifest ; 2015 ; International Journal of Offender Therapy and Comparative Criminology Volume 59 ; 59 >
-        
+
       }
 
 
@@ -17868,18 +17868,18 @@
     }
 
     {
-  
+
         title <
           name = International Review of Victimology ;
-          issn = 0269-7580 
+          issn = 0269-7580
       >
-  
+
       {
-  
+
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://irv.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-  
+
         au < manifest ; 1990-1991 ; International Review of Victimology Volume 1 ; 1 >
         au < manifest ; 1991-1993 ; International Review of Victimology Volume 2 ; 2 >
         au < manifest ; 1994-1995 ; International Review of Victimology Volume 3 ; 3 >
@@ -17903,9 +17903,9 @@
         au < manifest ; 2015 ; International Review of Victimology Volume 21 ; 21 >
 
       }
-  
+
     }
-    
+
     {
 
       title <
@@ -18298,7 +18298,7 @@
       }
 
     }
-    
+
     {
 
       title <
@@ -18316,7 +18316,7 @@
       au < expected ; 2015 ; Jadavpur Journal of International Relations Volume 19 ; 19 >
 
     }
-    
+
     {
 
       title <
@@ -18534,7 +18534,7 @@
         au < released ; 2012-2013 ; Journal for the Study of the Pseudepigrapha Volume 22 ; 22 >
         au < manifest ; 2013-2014 ; Journal for the Study of the Pseudepigrapha Volume 23 ; 23 >
         au < manifest ; 2014-2015 ; Journal for the Study of the Pseudepigrapha Volume 24 ; 24 >
-        
+
       }
 
     }
@@ -18665,7 +18665,7 @@
 
       title <
         name = Journal of Advanced Academics ;
-        issn = 1932-202X 
+        issn = 1932-202X
       >
 
       {
@@ -18972,7 +18972,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         issn = 1936-7244 ;
         eissn = 1937-0245
         >
-        
+
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://jax.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
@@ -19088,7 +19088,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       title <
         name = Journal of Asian Security and International Affairs ;
         issn = 2347-7970 ;
-        eissn = 2349-0039 
+        eissn = 2349-0039
       >
 
         pluginSuffix = HighWirePressH20Plugin
@@ -19105,7 +19105,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       title <
         name = Journal of Asthma & Allergy Educators ;
         issn = 2150-1297 ;
-        eissn = 2150-1300 
+        eissn = 2150-1300
       >
 
       {
@@ -19371,7 +19371,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2014-2015 ; Journal of Biomaterials Applications Volume 29 ; 29 >
 
       }
-      
+
     }
 
     {
@@ -19764,7 +19764,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         name = Journal of Dental Biomechanics ;
         eissn = 1758-7360
       >
-    
+
       {
 
         pluginSuffix = HighWirePressH20Plugin
@@ -19777,11 +19777,11 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2012 ; Journal of Dental Biomechanics Volume 3 ; 3 >
         au < manifest ; 2013 ; Journal of Dental Biomechanics Volume 4 ; 4 >
         au < expected ; 2014 ; Journal of Dental Biomechanics Volume 5 ; 5 >
-        
+
       }
-      
+
     }
-    
+
     {
 
       title <
@@ -19790,7 +19790,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         eissn = 1544-0591 ;
         issnl = 0022-0345
       >
-    
+
       {
 
         pluginSuffix = HighWirePressH20Plugin
@@ -19895,7 +19895,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       }
 
     }
-  
+
     {
 
       title <
@@ -19993,7 +19993,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
     }
 
   {
-  
+
     title <
       name = International Journal of Business Communication ;
       issn = 2329-4884 ;
@@ -20563,7 +20563,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://jcp.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-        
+
         comment[publisher] = moving to Wiley Blackwell in 2013
 
         au < down ; 1961 ; The Journal of Clinical Pharmacology Volume 1 ; 1 >
@@ -20822,7 +20822,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < expected ; 2015 ; Journal of Communication Inquiry Volume 39 ; 39 >
 
       }
-      
+
     }
 
     {
@@ -21417,17 +21417,17 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
     }
 
     {
-    
+
       title <
         name = The Journal of Criminal Law ;
         issn = 0022-0183 ;
         eissn = 1740-5580
       >
-  
+
       param[base_url] = http://clj.sagepub.com/
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
-  
+
       au < manifest ; 2014 ; The Journal of Criminal Law Volume 78 ; 78 >
     }
 
@@ -21462,7 +21462,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       }
 
     }
-    
+
     {
 
       title <
@@ -21605,7 +21605,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
       title <
         name = Journal of Diabetes Science and Technology ;
-        eissn = 1932-2968 
+        eissn = 1932-2968
       >
 
       {
@@ -21699,18 +21699,18 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         eissn = 1538-4802 ;
         issnl = 1044-2073
       >
-      
+
       {
 
-        param[base_url] = http://dps.sagepub.com/       
+        param[base_url] = http://dps.sagepub.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
         au < HighWirePressPlugin ; down ; 2008 ; Journal of Disability Policy Studies Volume 19 ; 19 >
         au < HighWirePressPlugin ; down ; 2009 ; Journal of Disability Policy Studies Volume 20 ; 20 >
 
-      } 
-      
+      }
+
       {
 
         pluginSuffix = HighWirePressH20Plugin
@@ -21747,22 +21747,22 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       }
 
     }
-    
+
       {
-    
+
      title <
       name = Journal of Drug Issues;
       issn = 0022-0426 ;
       eissn = 1945-1369
-      
+
     >
-    
+
     {
-    
+
       pluginSuffix = HighWirePressH20Plugin
       param[base_url] = http://jod.sagepub.com/
       implicit < status ; year ; name ; param[volume_name] >
-      
+
       au < manifest ; 2001 ; Journal of Drug Issues Volume 31 ; 31 >
       au < manifest ; 2002 ; Journal of Drug Issues Volume 32 ; 32 >
       au < manifest ; 2003 ; Journal of Drug Issues Volume 33 ; 33 >
@@ -21778,11 +21778,11 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < manifest ; 2013 ; Journal of Drug Issues Volume 43 ; 43 >
       au < manifest ; 2014 ; Journal of Drug Issues Volume 44 ; 44 >
       au < manifest ; 2015 ; Journal of Drug Issues Volume 45 ; 45 >
-    
+
     }
-    
+
   }
-  
+
     {
 
       title <
@@ -22015,7 +22015,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       }
 
     }
-    
+
     {
 
       title <
@@ -22265,7 +22265,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         eissn = 1743-2839 ;
         issnl = 0968-0519
       >
-      
+
       comment[continued_by] = 1753-4259
       comment[ini] = Discontinued in 2007. Continued by Innate Immunity.
 
@@ -22291,7 +22291,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < HighWirePressPlugin ; down ; 2008 ; Journal of Endotoxin Research Volume 14 ; 14 >
 
       }
-      
+
     }
 
     {
@@ -22299,7 +22299,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       title <
         name = Innate Immunity ;
         issn = 1753-4259 ;
-        eissn = 1753-4267 
+        eissn = 1753-4267
       >
 
       comment[continues] = 1743-2839
@@ -22335,7 +22335,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       >
 
       {
-    
+
         param[base_url] = http://ebx.sagepub.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
@@ -22344,7 +22344,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < HighWirePressPlugin ; down ; 2009 ; Journal of Emotional and Behavioral Disorders Volume 17 ; 17 >
 
       }
-      
+
       {
 
         pluginSuffix = HighWirePressH20Plugin
@@ -22378,7 +22378,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       }
 
     }
-  
+
     {
 
       title <
@@ -22770,7 +22770,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       title <
         name = Journal of Experiential Education ;
         issn = 1053-8259 ;
-        eissn = 2169-009X 
+        eissn = 2169-009X
     >
 
       pluginSuffix = HighWirePressH20Plugin
@@ -22791,7 +22791,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < exists ; 2012 ; Journal of Experiential Education Volume 35 ; 35 >
       au < manifest ; 2013 ; Journal of Experiential Education Volume 36 ; 36 >
       au < manifest ; 2014 ; Journal of Experiential Education Volume 37 ; 37 >
-      
+
     }
 
     {
@@ -23016,19 +23016,19 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
     }
 
     {
-  
+
         title <
           name = Journal of Feline Medicine and Surgery ;
           issn = 1098-612X ;
-          eissn = 1532-2750 
+          eissn = 1532-2750
       >
-  
+
       {
-  
+
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://jfm.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-        
+
         au < manifest ; 1999 ; Journal of Feline Medicine and Surgery Volume 1 ; 1 >
         au < manifest ; 2000 ; Journal of Feline Medicine and Surgery Volume 2 ; 2 >
         au < manifest ; 2001 ; Journal of Feline Medicine and Surgery Volume 3 ; 3 >
@@ -23048,7 +23048,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2015 ; Journal of Feline Medicine and Surgery Volume 17 ; 17 >
 
       }
-  
+
     }
 
     {
@@ -23285,7 +23285,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       title <
         name = Journal of Health and Social Behavior ;
         issn = 0022-1465 ;
-        eissn = 2150-6000 
+        eissn = 2150-6000
       >
 
       {
@@ -23421,7 +23421,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       }
 
     }
-  
+
     {
 
       title <
@@ -23475,9 +23475,9 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       }
 
     }
-    
+
     {
-        
+
       title <
         name = Journal of Hispanic Higher Education ;
         issn = 1538-1927 ;
@@ -23549,7 +23549,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://jhc.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-        
+
         comment[base_url] = journal moved from http://www.jhc.org/
 
         au < manifest ; 1953 ; Journal of Histochemistry and Cytochemistry Volume 1 ; 1 >
@@ -23617,7 +23617,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < expected ; 2015 ; Journal of Histochemistry and Cytochemistry Volume 63 ; 63 >
 
       }
-      
+
     }
 
     {
@@ -24191,13 +24191,13 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       }
 
     }
-    
+
     {
 
       title <
         name = Journal of Infection Prevention ;
         issn = 1757-1774 ;
-        eissn = 1757-1782 
+        eissn = 1757-1782
       >
 
       comment[continues] = British Journal of Infection Control 2009-, 1469-0446
@@ -24226,7 +24226,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < expected ; 2015 ; Journal of Infection Prevention Volume 16 ; 16 >
 
       }
-      
+
     }
 
     {
@@ -24521,17 +24521,17 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://jie.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-        
+
         au < manifest ; 2012 ; Journal of Interdisciplinary Economics Volume 24 ; 24 >
         au < manifest ; 2013 ; Journal of Interdisciplinary Economics Volume 25 ; 25 >
         au < manifest ; 2014 ; Journal of Interdisciplinary Economics Volume 26 ; 26 >
-        
+
       }
-      
+
     }
 
   {
-  
+
     title <
       name = Journal of International Political Theory ;
       issn = 1755-0882 ;
@@ -24621,20 +24621,20 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
     }
 
     {
-  
+
         title <
           name = JALA (Charlottesville, Va.) ;
           issn = 1535-5535 ;
           eissn = 1540-2452 ;
-          issnl = 1535-5535 
+          issnl = 1535-5535
       >
-  
+
       {
-  
+
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://jla.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-  
+
         au < manifest ; 1999 ; JALA (Charlottesville, Va.) Volume 4 ; 4 >
         au < manifest ; 2000 ; JALA (Charlottesville, Va.) Volume 5 ; 5 >
         au < manifest ; 2001 ; JALA (Charlottesville, Va.) Volume 6 ; 6 >
@@ -24647,51 +24647,51 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2008 ; JALA (Charlottesville, Va.) Volume 13 ; 13 >
         au < released ; 2009 ; JALA (Charlottesville, Va.) Volume 14 ; 14 >
         au < released ; 2010 ; JALA (Charlottesville, Va.) Volume 15 ; 15 >
-  
+
       }
-  
+
     }
 
     {
-  
+
         title <
           name = Journal of Laboratory Automation ;
-          issn = 2211-0682 
+          issn = 2211-0682
       >
-  
+
       {
-  
+
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://jla.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-  
+
         au < released ; 2011 ; Journal of Laboratory Automation Volume 16 ; 16 >
         au < released ; 2012 ; Journal of Laboratory Automation Volume 17 ; 17 >
         au < manifest ; 2013 ; Journal of Laboratory Automation Volume 18 ; 18 >
         au < manifest ; 2014 ; Journal of Laboratory Automation Volume 19 ; 19 >
-  
+
       }
-  
+
     }
 
     {
-  
+
         title <
           name = Journal of Land and Rural Studies ;
-          issn = 2321-0249 
+          issn = 2321-0249
       >
-  
+
       {
-  
+
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://lrs.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-  
+
         au < manifest ; 2013 ; Journal of Land and Rural Studies Volume 1 ; 1 >
         au < manifest ; 2014 ; Journal of Land and Rural Studies Volume 2 ; 2 >
-  
+
       }
-  
+
     }
 
     {
@@ -24821,7 +24821,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
       title <
         name = Journal of Learning Disabilities ;
-        issn = 0022-2194 
+        issn = 0022-2194
       >
 
       {
@@ -25431,7 +25431,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       }
 
     }
-    
+
     {
       title <
         name = Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing ;
@@ -25537,7 +25537,7 @@ comment[mpj] = now published by Brill
       title <
         name = Journal of Music Teacher Education ;
         issn = 1057-0837 ;
-        eissn = 1945-0079 
+        eissn = 1945-0079
       >
 
       {
@@ -25724,7 +25724,7 @@ comment[mpj] = now published by Brill
         eissn = 1941-2444 ;
         issnl = 0148-6071
       >
-    
+
       {
 
         param[base_url] = http://pen.sagepub.com/
@@ -25734,7 +25734,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; 2009 ; Journal of Parenteral and Enteral Nutrition Volume 33 ; 33 >
 
       }
-    
+
       {
 
         pluginSuffix = HighWirePressH20Plugin
@@ -25784,7 +25784,7 @@ comment[mpj] = now published by Brill
       }
 
     }
-  
+
     {
 
       title <
@@ -25914,11 +25914,11 @@ comment[mpj] = now published by Brill
     }
 
   {
-  
+
     title <
       name = Journal of Pharmacy Technology ;
       issn = 8755-1225 ;
-      eissn = 1549-4810 
+      eissn = 1549-4810
     >
 
     param[base_url] = http://pmt.sagepub.com/
@@ -26201,7 +26201,7 @@ comment[mpj] = now published by Brill
         eissn = 1538-4772 ;
         issnl = 1098-3007
       >
-    
+
       {
 
         param[base_url] = http://pbi.sagepub.com/
@@ -26212,7 +26212,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; 2009 ; Journal of Positive Behavior Interventions Volume 11 ; 11 >
 
       }
-  
+
       {
 
         pluginSuffix = HighWirePressH20Plugin
@@ -26240,13 +26240,13 @@ comment[mpj] = now published by Brill
       }
 
     }
-  
+
     {
 
       title <
         name = Journal of Primary Care & Community Health ;
         issn = 2150-1319 ;
-        eissn = 2150-1327 
+        eissn = 2150-1327
       >
 
       {
@@ -26475,16 +26475,16 @@ comment[mpj] = now published by Brill
     }
 
     {
-    
+
       title <
         name = Journal of Rehabilitation and Assistive Technologies Engineering ;
-        eissn = 2055-6683 
+        eissn = 2055-6683
       >
-  
+
       param[base_url] = http://jrt.sagepub.com/
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
-  
+
       au < manifest ; 2014 ; Journal of Rehabilitation and Assistive Technologies Engineering Volume 1 ; 1 >
     }
 
@@ -26627,7 +26627,7 @@ comment[mpj] = now published by Brill
       title <
         name = Journal of Research in Music Education ;
         issn = 0022-4294 ;
-        eissn = 1945-0095 
+        eissn = 1945-0095
       >
 
       {
@@ -26844,7 +26844,7 @@ comment[mpj] = now published by Brill
       title <
         name = The Journal of School Nursing ;
         issn = 1059-8405 ;
-        eissn = 1546-8364 
+        eissn = 1546-8364
       >
 
       {
@@ -27468,7 +27468,7 @@ comment[mpj] = now published by Brill
       title <
         name = The Journal of Special Education ;
         issn = 0022-4669 ;
-        eissn = 1538-4764 
+        eissn = 1538-4764
       >
 
       {
@@ -27636,7 +27636,7 @@ comment[mpj] = now published by Brill
       title <
         name = Journal of the Academy of Marketing Science ;
         issn = 0092-0703 ;
-        eissn = 1552-7824 
+        eissn = 1552-7824
       >
 
       {
@@ -27689,7 +27689,7 @@ comment[mpj] = now published by Brill
       title <
         name = Journal of the American Psychiatric Nurses Association ;
         issn = 1078-3903 ;
-        eissn = 1532-5725 
+        eissn = 1532-5725
       >
 
       {
@@ -27741,9 +27741,9 @@ comment[mpj] = now published by Brill
 
         au < HighWirePressPlugin ; down ; 2008 ; Journal of the American Psychoanalytic Association Volume 56 ; 56 >
         au < HighWirePressPlugin ; down ; 2009 ; Journal of the American Psychoanalytic Association Volume 57 ; 57 >
- 
+
       }
- 
+
       {
 
         pluginSuffix = HighWirePressH20Plugin
@@ -27823,7 +27823,7 @@ comment[mpj] = now published by Brill
     title <
       name = Journal for the History of Astronomy ;
       issn = 0021-8286 ;
-      eissn = 1753-8556 
+      eissn = 1753-8556
     >
 
 
@@ -27914,7 +27914,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 1969 ; Journal of the Institution of Locomotive Engineers Volume 59 ; 59 >
 
       }
-      
+
     }
 
     {
@@ -27972,7 +27972,7 @@ comment[mpj] = now published by Brill
       title <
         name = Journal of the Renin-Angiotensin-Aldosterone System ;
         issn = 1470-3203 ;
-        eissn = 1752-8976 
+        eissn = 1752-8976
       >
 
       {
@@ -28010,7 +28010,7 @@ comment[mpj] = now published by Brill
         eissn = 1476-9042 ;
         issnl = 1466-4240
       >
-      
+
       comment[continued_by] = 1757-9139
       comment[rsh] = journal name changed to Perspectives in Public Health
 
@@ -28150,17 +28150,17 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; 2008 ; The Journal of the Royal Society for the Promotion of Health Volume 128 ; 128 >
 
       }
-    
+
     }
-    
+
     {
-    
+
       title <
         name = Perspectives in Public Health ;
         issn = 1757-9139 ;
         eissn = 1757-9147
       >
-      
+
       comment[continues] = 1466-4240
       comment[pph] = name changed from The Journal of the Royal Society for the Promotion of Health
 
@@ -28185,7 +28185,7 @@ comment[mpj] = now published by Brill
       title <
         name = Perspectives on Psychological Science ;
         issn = 1745-6916 ;
-        eissn = 1745-6924 
+        eissn = 1745-6924
       >
 
       {
@@ -28333,28 +28333,28 @@ comment[mpj] = now published by Brill
     }
 
     {
-  
+
         title <
           name = Journal of Tissue Engineering ;
-          eissn = 2041-7314 
+          eissn = 2041-7314
       >
-  
+
       {
-  
+
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://tej.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-  
+
         au < manifest ; 2010 ; Journal of Tissue Engineering Volume 1 ; 1 >
         au < released ; 2011 ; Journal of Tissue Engineering Volume 2 ; 2 >
         au < released ; 2012 ; Journal of Tissue Engineering Volume 3 ; 3 >
         au < manifest ; 2013 ; Journal of Tissue Engineering Volume 4 ; 4 >
         au < manifest ; 2014 ; Journal of Tissue Engineering Volume 5 ; 5 >
-  
+
       }
-  
+
     }
-    
+
     {
 
       title <
@@ -28664,7 +28664,7 @@ comment[mpj] = now published by Brill
 
       title <
         name = Journal of Veterinary Diagnostic Investigation ;
-        issn = 1040-6387 
+        issn = 1040-6387
       >
 
       {
@@ -28856,7 +28856,7 @@ comment[mpj] = now published by Brill
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://jmc.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-        
+
         au < manifest ; 1967 ; Journalism & Mass Communication Educator Volume 22 ; 22 >
         au < manifest ; 1968 ; Journalism & Mass Communication Educator Volume 23 ; 23 >
         au < doesNotExist ; 0 ; Journalism & Mass Communication Educator Volume 24 ; 24 >
@@ -28925,7 +28925,7 @@ comment[mpj] = now published by Brill
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://jmo.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-        
+
         au < manifest ; 1999 ; Journalism & Communication Monographs Volume 1 ; 1 >
         au < manifest ; 2000 ; Journalism & Communication Monographs Volume 2 ; 2 >
         au < manifest ; 2001 ; Journalism & Communication Monographs Volume 3 ; 3 >
@@ -29128,7 +29128,7 @@ comment[mpj] = now published by Brill
       }
 
     }
-    
+
     {
 
       title <
@@ -29214,7 +29214,7 @@ comment[mpj] = now published by Brill
       title <
         name = Language and Speech ;
         issn = 0023-8309 ;
-        eissn = 1756-6053 
+        eissn = 1756-6053
       >
 
       {
@@ -29761,7 +29761,7 @@ comment[mpj] = now published by Brill
       >
 
       {
-      
+
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://mls.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
@@ -30184,7 +30184,7 @@ comment[mpj] = now published by Brill
       title <
         name = Measurement and Control ;
         issn = 0020-2940 ;
-        eissn = 2051-8730 
+        eissn = 2051-8730
       >
 
       {
@@ -30250,7 +30250,7 @@ comment[mpj] = now published by Brill
 
       title <
         name = Measurement and Evaluation in Counseling and Development ;
-        issn = 0748-1756 
+        issn = 0748-1756
       >
 
       {
@@ -30347,7 +30347,7 @@ comment[mpj] = now published by Brill
       title <
         name = Media, War & Conflict ;
         issn = 1750-6352 ;
-        eissn = 1750-6360 
+        eissn = 1750-6360
       >
 
       {
@@ -30553,11 +30553,11 @@ comment[mpj] = now published by Brill
       >
 
      {
-      
+
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://mli.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-        
+
         au < manifest ; 1993-1995 ; Medical Law International Volume 1 ; 1 >
         au < manifest ; 1995-1997 ; Medical Law International Volume 2 ; 2 >
         au < manifest ; 1997-1998 ; Medical Law International Volume 3 ; 3 >
@@ -30572,33 +30572,33 @@ comment[mpj] = now published by Brill
         au < released ; 2012 ; Medical Law International Volume 12 ; 12 >
         au < manifest ; 2013 ; Medical Law International Volume 13 ; 13 >
         au < manifest ; 2014 ; Medical Law International Volume 14 ; 14 >
-        
+
       }
-      
+
     }
-    
+
     {
-    
+
      title <
        name = Medico-Legal Journal ;
        issn =  0025-8172 ;
        eissn =  2042-1834
      >
-     
+
       comment[RSM] = from Royal Society of Medicine. http://mlj.rsmjournals.com/
 
       {
-      
+
         pluginPrefix = org.lockss.plugin.highwire.
         param[base_url] = http://mlj.rsmjournals.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-  
+
         au < HighWirePressH20Plugin ; down ; 2011 ; Medico-Legal Journal Volume 79 [superseded] ; 79 >
-  
+
       }
-  
+
       {
-      pluginSuffix = HighWirePressH20Plugin      
+      pluginSuffix = HighWirePressH20Plugin
       param[base_url] = http://mlj.sagepub.com/
       implicit < status ; year ; name ; param[volume_name] >
       comment[0] = no issue MLST-24
@@ -30710,11 +30710,11 @@ comment[mpj] = now published by Brill
         au < released ; 2012 ; Medico-Legal Journal Volume 80 ; 80 >
         au < manifest ; 2013 ; Medico-Legal Journal Volume 81 ; 81 >
         au < manifest ; 2014 ; Medico-Legal Journal Volume 82 ; 82 >
-    
+
       }
-  
+
     }
-    
+
     {
 
       title <
@@ -30770,7 +30770,7 @@ comment[mpj] = now published by Brill
       title <
         name = Memory Studies ;
         issn = 1750-6980 ;
-        eissn = 1750-6999 
+        eissn = 1750-6999
       >
 
       {
@@ -30873,7 +30873,7 @@ comment[mpj] = now published by Brill
       title <
         name = Millennium - Journal of International Studies ;
         issn = 0305-8298 ;
-        eissn = 1477-9021 
+        eissn = 1477-9021
       >
 
       {
@@ -31065,7 +31065,7 @@ comment[mpj] = now published by Brill
       title <
         name = Music and Medicine ;
         issn = 1943-8621 ;
-        eissn = 1943-863X 
+        eissn = 1943-863X
       >
 
       {
@@ -31091,7 +31091,7 @@ comment[mpj] = now published by Brill
       title <
         name = Music Educators Journal ;
         issn = 0027-4321 ;
-        eissn = 1945-0087 
+        eissn = 1945-0087
       >
 
       {
@@ -31240,7 +31240,7 @@ comment[mpj] = now published by Brill
       title <
         name = NASN School Nurse ;
         issn = 1942-602X ;
-        eissn = 1942-6038 
+        eissn = 1942-6038
       >
 
       {
@@ -31747,15 +31747,15 @@ comment[mpj] = now published by Brill
       title <
         name = The Neurohospitalist ;
         issn = 1941-8744 ;
-        eissn = 1941-8752 
+        eissn = 1941-8752
       >
-      
+
       {
-      
+
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://nho.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-        
+
         au < released ; 2011 ; The Neurohospitalist Volume 1 ; 1 >
         au < released ; 2012 ; The Neurohospitalist Volume 2 ; 2 >
         au < manifest ; 2013 ; The Neurohospitalist Volume 3 ; 3 >
@@ -31765,7 +31765,7 @@ comment[mpj] = now published by Brill
       }
 
     }
-    
+
     {
 
       title <
@@ -32090,19 +32090,19 @@ comment[mpj] = now published by Brill
     }
 
     {
-  
+
         title <
           name = Nutrition and Health ;
           issn = 0260-1060 ;
-          eissn = 2047-945X 
+          eissn = 2047-945X
       >
-  
+
       {
-  
+
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://nah.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-  
+
         au < manifest ; 1982-1983 ; Nutrition and Health Volume 1 ; 1 >
         au < manifest ; 1983 ; Nutrition and Health Volume 2 ; 2 >
         au < manifest ; 1984 ; Nutrition and Health Volume 3 ; 3 >
@@ -32126,17 +32126,17 @@ comment[mpj] = now published by Brill
         au < released ; 2012 ; Nutrition and Health Volume 21 ; 21 >
         au < manifest ; 2013 ; Nutrition and Health Volume 22 ; 22 >
         au < expected ; 2014 ; Nutrition and Health Volume 23 ; 23 >
-  
+
       }
-  
+
     }
-  
+
     {
 
       title <
         name = Nutrition in Clinical Practice ;
         issn = 0884-5336 ;
-        eissn = 1941-2452 
+        eissn = 1941-2452
       >
 
       {
@@ -32181,7 +32181,7 @@ comment[mpj] = now published by Brill
     }
 
     {
-  
+
     title <
       name = OTJR: Occupation, Participation and Health ;
       issn = 1539-4492 ;
@@ -32228,7 +32228,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2014 ; OTJR: Occupation, Participation and Health Volume 34 ; 34 >
         au < expected ; 2015 ; OTJR: Occupation, Participation and Health Volume 35 ; 35 >
     }
-  
+
     {
 
       title <
@@ -32505,7 +32505,7 @@ comment[mpj] = now published by Brill
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://oto.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-        
+
         au < manifest ; 1995 ; Otolaryngology -- Head and Neck Surgery Volume 112 ; 112 >
         au < manifest ; 1995 ; Otolaryngology -- Head and Neck Surgery Volume 113 ; 113 >
         au < manifest ; 1996 ; Otolaryngology -- Head and Neck Surgery Volume 114 ; 114 >
@@ -32616,16 +32616,16 @@ comment[mpj] = now published by Brill
     }
 
     {
-    
+
       title <
         name = Paradigm ;
         issn = 0971-8907
       >
-  
+
       param[base_url] = http://par.sagepub.com/
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
-  
+
       au < manifest ; 2014 ; Paradigm Volume 18 ; 18 >
     }
 
@@ -33263,10 +33263,10 @@ comment[mpj] = now published by Brill
     }
 
   {
-  
+
     title <
       name = Policy Futures in Education ;
-      eissn = 1478-2103 
+      eissn = 1478-2103
     >
 
       param[base_url] = http://pfe.sagepub.com/
@@ -33871,7 +33871,7 @@ comment[mpj] = now published by Brill
       }
 
     }
-    
+
     {
 
     title <
@@ -33895,7 +33895,7 @@ comment[mpj] = now published by Brill
       title <
         name = Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy ;
         issn = 0957-6509 ;
-        eissn = 2041-2967 
+        eissn = 2041-2967
       >
 
       {
@@ -33947,7 +33947,7 @@ comment[mpj] = now published by Brill
       title <
         name = Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture ;
         issn = 0954-4054 ;
-        eissn = 2041-2975 
+        eissn = 2041-2975
       >
 
       {
@@ -33999,7 +33999,7 @@ comment[mpj] = now published by Brill
       title <
         name = Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science ;
         issn = 0954-4062 ;
-        eissn = 2041-2983 
+        eissn = 2041-2983
       >
 
       {
@@ -34051,7 +34051,7 @@ comment[mpj] = now published by Brill
       title <
         name = Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering ;
         issn = 0954-4070 ;
-        eissn = 2041-2991 
+        eissn = 2041-2991
       >
 
       {
@@ -34102,7 +34102,7 @@ comment[mpj] = now published by Brill
       title <
         name = Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering ;
         issn = 0954-4089 ;
-        eissn = 2041-3009 
+        eissn = 2041-3009
       >
 
       {
@@ -34148,7 +34148,7 @@ comment[mpj] = now published by Brill
       title <
         name = Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit ;
         issn = 0954-4097 ;
-        eissn = 2041-3017 
+        eissn = 2041-3017
       >
 
       {
@@ -34194,7 +34194,7 @@ comment[mpj] = now published by Brill
       title <
         name = Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering ;
         issn = 0954-4100 ;
-        eissn = 2041-3025 
+        eissn = 2041-3025
       >
 
       {
@@ -34240,7 +34240,7 @@ comment[mpj] = now published by Brill
       title <
         name = Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine ;
         issn = 0954-4119 ;
-        eissn = 2041-3033 
+        eissn = 2041-3033
       >
 
       {
@@ -34286,7 +34286,7 @@ comment[mpj] = now published by Brill
       title <
         name = Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering ;
         issn = 0959-6518 ;
-        eissn = 2041-3041 
+        eissn = 2041-3041
       >
 
       {
@@ -34324,14 +34324,14 @@ comment[mpj] = now published by Brill
       }
 
     }
-    
+
 
     {
 
       title <
         name = Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology ;
         issn = 1350-6501 ;
-        eissn = 2041-305X 
+        eissn = 2041-305X
       >
 
       {
@@ -34372,7 +34372,7 @@ comment[mpj] = now published by Brill
       title <
         name = Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics ;
         issn = 1464-4193 ;
-        eissn = 2041-3068 
+        eissn = 2041-3068
       >
 
       {
@@ -34408,7 +34408,7 @@ comment[mpj] = now published by Brill
       title <
         name = Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications ;
         issn = 1464-4207 ;
-        eissn = 2041-3076 
+        eissn = 2041-3076
       >
 
       {
@@ -34444,7 +34444,7 @@ comment[mpj] = now published by Brill
       title <
         name = Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment ;
         issn = 1475-0902 ;
-        eissn = 2041-3084 
+        eissn = 2041-3084
       >
 
       {
@@ -34477,7 +34477,7 @@ comment[mpj] = now published by Brill
       title <
         name = Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems ;
         issn = 1740-3499 ;
-        eissn = 2041-3092 
+        eissn = 2041-3092
       >
 
       {
@@ -34508,7 +34508,7 @@ comment[mpj] = now published by Brill
       title <
         name = Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability ;
         issn = 1748-006X ;
-        eissn = 1748-0078 
+        eissn = 1748-0078
       >
 
       {
@@ -34537,7 +34537,7 @@ comment[mpj] = now published by Brill
       title <
         name = Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology ;
         issn = 1754-3371 ;
-        eissn = 1754-338X 
+        eissn = 1754-338X
       >
 
       {
@@ -34813,7 +34813,7 @@ comment[mpj] = now published by Brill
       title <
         name = Psychological Science ;
         issn = 0956-7976 ;
-        eissn = 1467-9280 
+        eissn = 1467-9280
       >
 
       {
@@ -34858,7 +34858,7 @@ comment[mpj] = now published by Brill
       title <
         name = Psychological Science in the Public Interest ;
         issn = 1529-1006 ;
-        eissn = 1539-6053 
+        eissn = 1539-6053
       >
 
       {
@@ -35035,7 +35035,7 @@ comment[mpj] = now published by Brill
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://pwq.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-        
+
         au < manifest ; 1976-1977 ; Psychology of Women Quarterly Volume 1 ; 1 >
         au < manifest ; 1978 ; Psychology of Women Quarterly Volume 2 ; 2 >
         au < manifest ; 1979 ; Psychology of Women Quarterly Volume 3 ; 3 >
@@ -35159,7 +35159,7 @@ comment[mpj] = now published by Brill
 
       title <
         name = Public Personnel Management ;
-        issn = 0091-0260 
+        issn = 0091-0260
     >
 
       pluginSuffix = HighWirePressH20Plugin
@@ -35211,7 +35211,7 @@ comment[mpj] = now published by Brill
       au < expected ; 2015 ; Public Personnel Management Volume 44 ; 44 >
 
     }
-    
+
     {
 
       title <
@@ -35276,27 +35276,27 @@ comment[mpj] = now published by Brill
     }
 
     {
-  
+
         title <
           name = Public Relations Inquiry ;
           issn = 2046-147X ;
-          eissn = 2046-1488 
+          eissn = 2046-1488
       >
-  
+
       {
-  
+
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://pri.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-        
+
         au < released ; 2012 ; Public Relations Inquiry Volume 1 ; 1 >
         au < manifest ; 2013 ; Public Relations Inquiry Volume 2 ; 2 >
         au < manifest ; 2014 ; Public Relations Inquiry Volume 3 ; 3 >
-  
+
       }
-  
+
     }
-  
+
     {
 
       title <
@@ -35846,7 +35846,7 @@ comment[mpj] = now published by Brill
 
       title <
         name = Recherche et Applications en Marketing (English Edition) ;
-        eissn = 2051-5707 
+        eissn = 2051-5707
       >
 
       {
@@ -35874,7 +35874,7 @@ comment[mpj] = now published by Brill
       title <
         name = Recherche et Applications en Marketing ;
         issn = 0767-3701 ;
-        eissn = 2051-2821 
+        eissn = 2051-2821
       >
 
       {
@@ -35902,7 +35902,7 @@ comment[mpj] = now published by Brill
       title <
         name = Rehabilitation Counseling Bulletin ;
         issn = 0034-3552 ;
-        eissn = 1538-4853 
+        eissn = 1538-4853
       >
 
       {
@@ -36016,7 +36016,7 @@ comment[mpj] = now published by Brill
       title <
         name = Remedial and Special Education ;
         issn = 0741-9325 ;
-        eissn = 1538-4756 
+        eissn = 1538-4756
       >
 
       {
@@ -36116,34 +36116,34 @@ comment[mpj] = now published by Brill
     }
 
     {
-  
+
         title <
           name = Research & Politics ;
-          eissn = 2053-1680 
+          eissn = 2053-1680
       >
-  
+
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://rap.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-  
+
         au < manifest ; 2014 ; Research & Politics Volume 1 ; 1 >
-  
+
     }
 
     {
-  
+
         title <
           name = Research Ethics ;
           issn = 1747-0161 ;
-          eissn = 2047-6094 
+          eissn = 2047-6094
       >
-  
+
       {
-  
+
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://rea.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-  
+
         au < manifest ; 2005 ; Research Ethics Volume 1 ; 1 >
         au < manifest ; 2006 ; Research Ethics Volume 2 ; 2 >
         au < manifest ; 2007 ; Research Ethics Volume 3 ; 3 >
@@ -36154,11 +36154,11 @@ comment[mpj] = now published by Brill
         au < released ; 2012 ; Research Ethics Volume 8 ; 8 >
         au < manifest ; 2013 ; Research Ethics Volume 9 ; 9 >
         au < manifest ; 2014 ; Research Ethics Volume 10 ; 10 >
-  
+
       }
-  
+
     }
-  
+
     {
 
       title <
@@ -36387,7 +36387,7 @@ comment[mpj] = now published by Brill
     }
 
   {
-  
+
     title <
       name = Review & Expositor ;
       issn = 0034-6373 ;
@@ -36635,7 +36635,7 @@ comment[mpj] = now published by Brill
       title <
         name = Review of Market Integration ;
         issn = 0974-9292 ;
-        eissn = 0975-4709 
+        eissn = 0975-4709
       >
 
       {
@@ -36881,7 +36881,7 @@ comment[mpj] = now published by Brill
 
       title <
         name = Reviews of Human Factors and Ergonomics ;
-        issn = 1557-234X 
+        issn = 1557-234X
       >
 
       {
@@ -36889,7 +36889,7 @@ comment[mpj] = now published by Brill
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://rev.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-        
+
         comment[rhfe] = Manifest pages have incorrect URLs
 
         au < manifest ; 2005 ; Reviews of Human Factors and Ergonomics Volume 1 ; 1 >
@@ -36913,28 +36913,28 @@ comment[mpj] = now published by Brill
         name = Sage Open ;
         eissn = 2158-2440
       >
-      
+
         param[base_url] = http://sgo.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-        
+
         {
-        
+
           pluginSuffix = HighWirePressH20Plugin
 
           au < down ; 2011 ; Sage Open Volume 1 ; 1 >
           au < down ; 2012 ; Sage Open Volume 2 ; 2 >
-          
+
         }
 
         {
-        
+
           pluginSuffix = HighWireDrupalPlugin
 
           au < doNotProcess ; 2011 ; Sage Open Volume 1 ; 1 >
           au < doNotProcess ; 2012 ; Sage Open Volume 2 ; 2 >
           au < manifest ; 2013 ; Sage Open Volume 3 ; 3 >
           au < manifest ; 2014 ; Sage Open Volume 4 ; 4 >
-          
+
         }
 
     }
@@ -36944,7 +36944,7 @@ comment[mpj] = now published by Brill
       title <
         name = Scandinavian Journal of Public Health ;
         issn = 1403-4948 ;
-        eissn = 1651-1905 
+        eissn = 1651-1905
       >
 
       {
@@ -37002,17 +37002,17 @@ comment[mpj] = now published by Brill
     }
 
     {
-    
+
       title <
         name = Scandinavian Journal of Surgery ;
         issn = 1457-4969 ;
         eissn = 1799-7267
       >
-  
+
       pluginSuffix = HighWirePressH20Plugin
       param[base_url] = http://sjs.sagepub.com/
       implicit < status ; year ; name ; param[volume_name] >
-      
+
       au < exists ; 2002 ; Scandinavian Journal of Surgery Volume 91 ; 91 >
       au < exists ; 2003 ; Scandinavian Journal of Surgery Volume 92 ; 92 >
       au < exists ; 2004 ; Scandinavian Journal of Surgery Volume 93 ; 93 >
@@ -37026,7 +37026,7 @@ comment[mpj] = now published by Brill
       au < manifest ; 2012 ; Scandinavian Journal of Surgery Volume 101 ; 101 >
       au < manifest ; 2013 ; Scandinavian Journal of Surgery Volume 102 ; 102 >
       au < manifest ; 2014 ; Scandinavian Journal of Surgery Volume 103 ; 103 >
-  
+
     }
 
     {
@@ -37481,7 +37481,7 @@ comment[mpj] = now published by Brill
         au < released ; 2012 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 16 ; 16 >
         au < manifest ; 2013 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 17 ; 17 >
         au < manifest ; 2014 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 18 ; 18 >
-        
+
       }
 
     }
@@ -37491,7 +37491,7 @@ comment[mpj] = now published by Brill
       title <
         name = Sexual Abuse: A Journal of Research and Treatment ;
         issn = 1079-0632 ;
-        eissn = 1573-286X 
+        eissn = 1573-286X
       >
 
       {
@@ -37546,7 +37546,7 @@ comment[mpj] = now published by Brill
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://sex.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-        
+
         comment[base_url] = Use sex.sagepub.com.  Both sex.sagepub.com and sexualities.sagepub.com will work.
         comment[sexualities] = manifest pages reference sex base_url after V12.
 
@@ -38059,7 +38059,7 @@ comment[mpj] = now published by Brill
       title <
         name = Social Currents ;
         issn = 2329-4965 ;
-        eissn = 2329-4973 
+        eissn = 2329-4973
       >
 
       {
@@ -38080,7 +38080,7 @@ comment[mpj] = now published by Brill
       title <
         name = Social Psychological and Personality Science ;
         issn = 1948-5506 ;
-        eissn = 1948-5514 
+        eissn = 1948-5514
       >
 
       {
@@ -38105,7 +38105,7 @@ comment[mpj] = now published by Brill
       title <
         name = Social Psychology Quarterly ;
         issn = 0190-2725 ;
-        eissn = 1939-8999 
+        eissn = 1939-8999
       >
 
       {
@@ -38365,7 +38365,7 @@ comment[mpj] = now published by Brill
       title <
         name = Society and Mental Health ;
         issn = 2156-8693 ;
-        eissn = 2156-8731 
+        eissn = 2156-8731
       >
 
       {
@@ -38546,7 +38546,7 @@ comment[mpj] = now published by Brill
       title <
         name = Sociology of Education ;
         issn = 0038-0407 ;
-        eissn = 1939-8573 
+        eissn = 1939-8573
       >
 
       {
@@ -38673,7 +38673,7 @@ comment[mpj] = now published by Brill
         name = South Asian Journal of Business and Management Cases ;
         issn = 2277-9779
       >
-	  
+
       {
 
         pluginSuffix = HighWirePressH20Plugin
@@ -38692,18 +38692,18 @@ comment[mpj] = now published by Brill
     {
       title <
         name = South Asian Journal of Human Resources Management ;
-        issn = 2322-0937 ; 
+        issn = 2322-0937 ;
         eissn = 2349-5790
       >
-  
+
         param[base_url] = http://hrm.sagepub.com/
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
-  
+
         au < manifest ; 2014 ; South Asian Journal of Human Resources Management Volume 1 ; 1 >
-  
+
     }
-    
+
     {
 
       title <
@@ -38878,7 +38878,7 @@ comment[mpj] = now published by Brill
       title <
         name = Sports Health: A Multidisciplinary Approach ;
         issn = 1941-7381 ;
-        eissn = 1941-0921 
+        eissn = 1941-0921
       >
 
       {
@@ -38904,7 +38904,7 @@ comment[mpj] = now published by Brill
       title <
         name = State and Local Government Review ;
         issn = 0160-323X ;
-        eissn = 1943-3409 
+        eissn = 1943-3409
       >
 
       {
@@ -38944,13 +38944,13 @@ comment[mpj] = now published by Brill
         issn = 1532-4400 ;
         eissn = 1946-1607
       >
-      
+
       {
-      
+
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://spa.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-        
+
         au < manifest ; 2001 ; State Politics & Policy Quarterly Volume 1 ; 1 >
         au < manifest ; 2002 ; State Politics & Policy Quarterly Volume 2 ; 2 >
         au < manifest ; 2003 ; State Politics & Policy Quarterly Volume 3 ; 3 >
@@ -38968,7 +38968,7 @@ comment[mpj] = now published by Brill
         au < expected ; 2015 ; State Politics & Policy Quarterly Volume 15 ; 15 >
 
       }
-      
+
     }
 
     {
@@ -39032,7 +39032,7 @@ comment[mpj] = now published by Brill
       title <
         name = Statistical Modelling ;
         issn = 1471-082X ;
-        eissn = 1477-0342 
+        eissn = 1477-0342
       >
 
       {
@@ -39345,7 +39345,7 @@ comment[mpj] = now published by Brill
       title <
         name = Studies in Religion/Sciences Religieuses ;
         issn = 0008-4298 ;
-        eissn = 2042-0587 
+        eissn = 2042-0587
       >
 
       {
@@ -39463,7 +39463,7 @@ comment[mpj] = now published by Brill
       title <
         name = Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children ;
         issn = 0888-4064 ;
-        eissn = 1944-4931 
+        eissn = 1944-4931
       >
 
       {
@@ -39574,7 +39574,7 @@ comment[mpj] = now published by Brill
         au < exists ; 2012-2013 ; TEACHING Exceptional Children Volume 45 ; 45 >
         au < manifest ; 2013-2014 ; TEACHING Exceptional Children Volume 46 ; 46 >
         au < manifest ; 2014-2015 ; TEACHING Exceptional Children Volume 47 ; 47 >
-      
+
     }
 
     {
@@ -39599,24 +39599,24 @@ comment[mpj] = now published by Brill
         au < expected ; 2015 ; Teaching of Psychology Volume 42 ; 42 >
 
       }
-      
+
     }
-    
+
     {
-  
+
         title <
           name = Teaching Public Administration ;
           issn = 0144-7394 ;
-          eissn = 2047-8720 
+          eissn = 2047-8720
       >
-  
+
       {
-  
+
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://tpa.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
         comment[0] = no issue in 1981, 2008-2011
-  
+
         au < manifest ; 1977-1980 ; Teaching Public Administration Volume 1 ; 1 >
         au < manifest ; 1982 ; Teaching Public Administration Volume 2 ; 2 >
         au < manifest ; 1983 ; Teaching Public Administration Volume 3 ; 3 >
@@ -39647,17 +39647,17 @@ comment[mpj] = now published by Brill
         au < manifest ; 2012 ; Teaching Public Administration Volume 30 ; 30 >
         au < manifest ; 2013 ; Teaching Public Administration Volume 31 ; 31 >
         au < manifest ; 2014 ; Teaching Public Administration Volume 32 ; 32 >
-  
+
       }
-  
+
     }
-  
+
     {
 
       title <
         name = Teaching Sociology ;
         issn = 0092-055X ;
-        eissn = 1939-862X 
+        eissn = 1939-862X
       >
 
       {
@@ -39684,17 +39684,17 @@ comment[mpj] = now published by Brill
     }
 
     {
-    
+
       title <
         name = Technology in Cancer Research & Treatment ;
         issn = 1533-0346 ;
         eissn = 1533-0338
       >
-  
+
         param[base_url] = http://tct.sagepub.com/
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
-  
+
         au < exists ; 2002 ; Technology in Cancer Research & Treatment Volume 1 ; 1 >
         au < exists ; 2003 ; Technology in Cancer Research & Treatment Volume 2 ; 2 >
         au < exists ; 2004 ; Technology in Cancer Research & Treatment Volume 3 ; 3 >
@@ -39708,7 +39708,7 @@ comment[mpj] = now published by Brill
         au < exists ; 2012 ; Technology in Cancer Research & Treatment Volume 11 ; 11 >
         au < manifest ; 2013 ; Technology in Cancer Research & Treatment Volume 12 ; 12 >
         au < manifest ; 2014 ; Technology in Cancer Research & Treatment Volume 13 ; 13 >
-  
+
     }
 
     {
@@ -39883,7 +39883,7 @@ comment[mpj] = now published by Brill
     title <
       name = Theological Studies ;
       issn = 0040-5639 ;
-      eissn = 2169-1304 
+      eissn = 2169-1304
     >
 
     param[base_url] = http://tsj.sagepub.com/
@@ -39974,7 +39974,7 @@ comment[mpj] = now published by Brill
       title <
         name = Theology ;
         issn = 0040-571X ;
-        eissn = 2044-2696 
+        eissn = 2044-2696
       >
 
       {
@@ -39982,9 +39982,9 @@ comment[mpj] = now published by Brill
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://tjx.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-        
+
         comment[doNotProcess_v90] = V90 has a dead link for the first issue. 2011-12-07
-        
+
         au < manifest ; 1920 ; Theology Volume 1 ; 1 >
         au < manifest ; 1921 ; Theology Volume 2 ; 2 >
         au < manifest ; 1921 ; Theology Volume 3 ; 3 >
@@ -40149,11 +40149,11 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2005-2006 ; Theology & Sexuality Volume 12 ; 12 >
         au < manifest ; 2006-2007 ; Theology & Sexuality Volume 13 ; 13 >
         au < doNotProcess ; 2007-2008 ; Theology & Sexuality Volume 14 ; 14 >
-        
+
       }
 
     }
-    
+
     {
       title <
           name = Theology Today ;
@@ -40508,7 +40508,7 @@ comment[mpj] = now published by Brill
       title <
         name = Therapeutic Advances in Drug Safety ;
         issn = 2042-0986 ;
-        eissn = 2042-0994 
+        eissn = 2042-0994
       >
 
       {
@@ -40533,7 +40533,7 @@ comment[mpj] = now published by Brill
       title <
         name = Therapeutic Advances in Chronic Disease ;
         issn = 2040-6223 ;
-        eissn = 2040-6231 
+        eissn = 2040-6231
       >
 
       {
@@ -40558,7 +40558,7 @@ comment[mpj] = now published by Brill
       title <
         name = Therapeutic Advances in Endocrinology and Metabolism ;
         issn = 2042-0188 ;
-        eissn = 2042-0196 
+        eissn = 2042-0196
       >
 
       {
@@ -40583,7 +40583,7 @@ comment[mpj] = now published by Brill
       title <
         name = Therapeutic Advances in Gastroenterology ;
         issn = 1756-283X ;
-        eissn = 1756-2848 
+        eissn = 1756-2848
       >
 
       {
@@ -40610,7 +40610,7 @@ comment[mpj] = now published by Brill
       title <
         name = Therapeutic Advances in Hematology ;
         issn = 2040-6207 ;
-        eissn = 2040-6215 
+        eissn = 2040-6215
       >
 
       {
@@ -40635,7 +40635,7 @@ comment[mpj] = now published by Brill
       title <
         name = Therapeutic Advances in Medical Oncology ;
         issn = 1758-8340 ;
-        eissn = 1758-8359 
+        eissn = 1758-8359
       >
 
       {
@@ -40661,7 +40661,7 @@ comment[mpj] = now published by Brill
       title <
         name = Therapeutic Advances in Musculoskeletal Disease ;
         issn = 1759-720X ;
-        eissn = 1759-7218 
+        eissn = 1759-7218
       >
 
       {
@@ -40687,7 +40687,7 @@ comment[mpj] = now published by Brill
       title <
         name = Therapeutic Advances in Neurological Disorders ;
         issn = 1756-2856 ;
-        eissn = 1756-2864 
+        eissn = 1756-2864
       >
 
       {
@@ -40726,7 +40726,7 @@ comment[mpj] = now published by Brill
         au < released ; 2012 ; Therapeutic Advances in Psychopharmacology Volume 2 ; 2 >
         au < manifest ; 2013 ; Therapeutic Advances in Psychopharmacology Volume 3 ; 3 >
         au < manifest ; 2014 ; Therapeutic Advances in Psychopharmacology Volume 4 ; 4 >
-        
+
       }
 
     }
@@ -40776,7 +40776,7 @@ comment[mpj] = now published by Brill
       title <
         name = Therapeutic Advances in Urology ;
         issn = 1756-2872 ;
-        eissn = 1756-2880 
+        eissn = 1756-2880
       >
 
       {
@@ -40802,7 +40802,7 @@ comment[mpj] = now published by Brill
       title <
         name = Therapeutic Advances in Vaccines  ;
         issn = 2051-0136 ;
-        eissn = 2051-0144 
+        eissn = 2051-0144
       >
 
       {
@@ -41049,7 +41049,7 @@ comment[mpj] = now published by Brill
       title <
         name = Topics in Early Childhood Special Education ;
         issn = 0271-1214 ;
-        eissn = 1538-4845 
+        eissn = 1538-4845
       >
 
       {
@@ -41103,7 +41103,7 @@ comment[mpj] = now published by Brill
       title <
         name = Tourism and Hospitality Research ;
         issn = 1467-3584 ;
-        eissn = 1742-9692 
+        eissn = 1742-9692
       >
 
       {
@@ -41245,7 +41245,7 @@ comment[mpj] = now published by Brill
       title <
         name = Toxicologic Pathology ;
         issn = 0192-6233 ;
-        eissn = 1533-1601 
+        eissn = 1533-1601
       >
 
       {
@@ -41459,7 +41459,7 @@ comment[mpj] = now published by Brill
       title <
         name = Transfer: European Review of Labour and Research ;
         issn = 1024-2589 ;
-        eissn = 1996-7284 
+        eissn = 1996-7284
       >
 
       {
@@ -41498,7 +41498,7 @@ comment[mpj] = now published by Brill
 
       title <
         name = Transformation: An International Journal of Holistic Mission Studies ;
-        issn = 0265-3788 
+        issn = 0265-3788
       >
 
       {
@@ -41545,10 +41545,10 @@ comment[mpj] = now published by Brill
     }
 
   {
-  
+
     title <
       name = Translational Epigenomics ;
-      issn = 2334-4865 
+      issn = 2334-4865
     >
 
       param[base_url] = http://epi.sagepub.com/
@@ -41557,7 +41557,7 @@ comment[mpj] = now published by Brill
 
       au < exists ; 2014 ; Translational Epigenomics Volume 1 ; 1 >
       au < expected ; 2015 ; Translational Epigenomics Volume 2 ; 2 >
-      
+
   }
 
     {
@@ -41766,7 +41766,7 @@ comment[mpj] = now published by Brill
       title <
         name = Update: Applications of Research in Music Education ;
         issn = 8755-1233 ;
-        eissn = 1945-0109 
+        eissn = 1945-0109
       >
 
       {
@@ -41986,7 +41986,7 @@ comment[mpj] = now published by Brill
       title <
         name = Urban Studies ;
         issn = 0042-0980 ;
-        eissn = 1360-063X 
+        eissn = 1360-063X
       >
 
       {
@@ -42190,11 +42190,11 @@ comment[mpj] = now published by Brill
       title <
         name = Pathologia veterinaria ;
         issn = 0031-2975 ;
-        issnl = 0031-2975 
+        issnl = 0031-2975
       >
 
         comment[continued_by] = 0300-9858 Veterinary Pathology
-        
+
       {
 
         pluginSuffix = HighWirePressH20Plugin
@@ -42219,11 +42219,11 @@ comment[mpj] = now published by Brill
         name = Veterinary Pathology ;
         issn = 0300-9858 ;
         eissn = 1544-2217 ;
-        issnl = 0300-9858 
+        issnl = 0300-9858
       >
-       
+
        comment[continues] = 0031-2975 Pathologia veterinaria
-       
+
       {
 
         pluginSuffix = HighWirePressH20Plugin
@@ -42582,7 +42582,7 @@ comment[mpj] = now published by Brill
         eissn = 2154-3941 ;
         issnl = 1048-3950
       >
-      
+
       {
 
         param[base_url] = http://wom.sagepub.com/
@@ -42793,7 +42793,7 @@ comment[mpj] = now published by Brill
       }
 
     }
-    
+
     {
       title <
           name = World Policy Journal ;
@@ -42949,7 +42949,7 @@ comment[mpj] = now published by Brill
 
       title <
         name = Young Exceptional Children ;
-        issn = 1096-2506 
+        issn = 1096-2506
       >
 
       {
@@ -43160,19 +43160,19 @@ comment[mpj] = now published by Brill
     }
 
     {
-  
+
       title <
         name = Engineering in Medicine ;
-        issn = 0046-2039 
+        issn = 0046-2039
       >
-  
+
       param[base_url] = http://eim.sagepub.com/
-  
+
       {
-  
+
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
-  
+
         au < doNotProcess ; 1971-1972 ; Engineering in Medicine Volume 1 ; 1 >
         au < doNotProcess ; 1973 ; Engineering in Medicine Volume 2 ; 2 >
         au < doNotProcess ; 1974 ; Engineering in Medicine Volume 3 ; 3 >
@@ -43190,25 +43190,25 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 1986 ; Engineering in Medicine Volume 15 ; 15 >
         au < doNotProcess ; 1987 ; Engineering in Medicine Volume 16 ; 16 >
         au < manifest ; 1988 ; Engineering in Medicine Volume 17 ; 17 >
-  
+
       }
-  
+
     }
-  
+
     {
-  
+
       title <
         name = Gifted Child Today ;
-        issn = 1076-2175 
+        issn = 1076-2175
       >
-  
+
       param[base_url] = http://gct.sagepub.com/
-  
+
       {
-  
+
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
-        
+
         au < doNotProcess ; 1978 ; Gifted Child Today Volume 1 ; 1 >
         au < doNotProcess ; 1979 ; Gifted Child Today Volume 2 ; 2 >
         au < doNotProcess ; 1980 ; Gifted Child Today Volume 3 ; 3 >
@@ -43246,26 +43246,26 @@ comment[mpj] = now published by Brill
         au < released ; 2012 ; Gifted Child Today Volume 35 ; 35 >
         au < manifest ; 2013 ; Gifted Child Today Volume 36 ; 36 >
         au < manifest ; 2014 ; Gifted Child Today Volume 37 ; 37 >
-  
+
       }
-  
+
     }
-  
+
     {
-  
+
       title <
         name = Interpretation: A Journal of Bible and Theology ;
         issn = 0020-9643 ;
-        eissn = 2159-340X 
+        eissn = 2159-340X
       >
-  
+
       param[base_url] = http://int.sagepub.com/
-  
+
       {
-  
+
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
-  
+
         au < manifest ; 1947 ; Interpretation: A Journal of Bible and Theology Volume 1 ; 1 >
         au < manifest ; 1948 ; Interpretation: A Journal of Bible and Theology Volume 2 ; 2 >
         au < manifest ; 1949 ; Interpretation: A Journal of Bible and Theology Volume 3 ; 3 >
@@ -43337,23 +43337,23 @@ comment[mpj] = now published by Brill
         au < manifest ; 2015 ; Interpretation: A Journal of Bible and Theology Volume 69 ; 69 >
 
       }
-  
+
     }
-  
+
     {
-  
+
       title <
         name = Journal for the Education of the Gifted ;
-        issn = 0162-3532 
+        issn = 0162-3532
       >
-  
+
       param[base_url] = http://jeg.sagepub.com/
-  
+
       {
-  
+
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
-  
+
         au < doNotProcess ; 1993-1994 ; Journal for the Education of the Gifted Volume 17 ; 17 >
         au < doNotProcess ; 1995 ; Journal for the Education of the Gifted Volume 18 ; 18 >
         au < doNotProcess ; 1996 ; Journal for the Education of the Gifted Volume 19 ; 19 >
@@ -43375,51 +43375,51 @@ comment[mpj] = now published by Brill
         au < released ; 2012 ; Journal for the Education of the Gifted Volume 35 ; 35 >
         au < manifest ; 2013 ; Journal for the Education of the Gifted Volume 36 ; 36 >
         au < manifest ; 2014 ; Journal for the Education of the Gifted Volume 37 ; 37 >
-  
+
       }
-  
+
     }
-  
+
     {
-  
+
       title <
         name = Journal of Infrastructure Development ;
         issn = 0974-9306 ;
-        eissn = 0975-5969 
+        eissn = 0975-5969
       >
-  
+
       param[base_url] = http://joi.sagepub.com/
-  
+
       {
-  
+
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
-  
+
         au < released ; 2009 ; Journal of Infrastructure Development Volume 1 ; 1 >
         au < released ; 2010 ; Journal of Infrastructure Development Volume 2 ; 2 >
         au < released ; 2011 ; Journal of Infrastructure Development Volume 3 ; 3 >
         au < released ; 2012 ; Journal of Infrastructure Development Volume 4 ; 4 >
         au < manifest ; 2013 ; Journal of Infrastructure Development Volume 5 ; 5 >
         au < manifest ; 2014 ; Journal of Infrastructure Development Volume 6 ; 6 >
-  
+
       }
-  
+
     }
-  
+
     {
-  
+
       title <
         name = Journal of Mechanical Engineering Science ;
-        issn = 0022-2542 
+        issn = 0022-2542
       >
-  
+
       param[base_url] = http://jms.sagepub.com/
-  
+
       {
-  
+
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
-  
+
         au < doNotProcess ; 1959 ; Journal of Mechanical Engineering Science Volume 1 ; 1 >
         au < doNotProcess ; 1960 ; Journal of Mechanical Engineering Science Volume 2 ; 2 >
         au < doNotProcess ; 1961 ; Journal of Mechanical Engineering Science Volume 3 ; 3 >
@@ -43444,25 +43444,25 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 1980 ; Journal of Mechanical Engineering Science Volume 22 ; 22 >
         au < doNotProcess ; 1981 ; Journal of Mechanical Engineering Science Volume 23 ; 23 >
         au < manifest ; 1982 ; Journal of Mechanical Engineering Science Volume 24 ; 24 >
-  
+
       }
-  
+
     }
-  
+
     {
-  
+
       title <
         name = Learning Disability Quarterly ;
-        issn = 0731-9487 
+        issn = 0731-9487
       >
-  
+
       param[base_url] = http://ldq.sagepub.com/
-  
+
       {
-  
+
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
-  
+
         au < doNotProcess ; 1996 ; Learning Disability Quarterly Volume 19 ; 19 >
         au < doNotProcess ; 1997 ; Learning Disability Quarterly Volume 20 ; 20 >
         au < doNotProcess ; 1998 ; Learning Disability Quarterly Volume 21 ; 21 >
@@ -43482,26 +43482,26 @@ comment[mpj] = now published by Brill
         au < released ; 2012 ; Learning Disability Quarterly Volume 35 ; 35 >
         au < manifest ; 2013 ; Learning Disability Quarterly Volume 36 ; 36 >
         au < manifest ; 2014 ; Learning Disability Quarterly Volume 37 ; 37 >
-  
+
       }
-  
+
     }
-  
+
     {
-  
+
       title <
         name = Political Science ;
         issn = 0032-3187 ;
-        eissn = 2041-0611 
+        eissn = 2041-0611
       >
-  
+
       param[base_url] = http://pnz.sagepub.com/
-  
+
       {
-  
+
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
-  
+
         au < doNotProcess ; 1948-1949 ; Political Science Volume 1 ; 1 >
         au < doNotProcess ; 1950 ; Political Science Volume 2 ; 2 >
         au < doNotProcess ; 1951 ; Political Science Volume 3 ; 3 >
@@ -43568,25 +43568,25 @@ comment[mpj] = now published by Brill
         au < released ; 2012 ; Political Science Volume 64 ; 64 >
         au < manifest ; 2013 ; Political Science Volume 65 ; 65 >
         au < manifest ; 2014 ; Political Science Volume 66 ; 66 >
-  
+
       }
-  
+
     }
-  
+
     {
-  
+
       title <
         name = Proceedings of the Institution of Automobile Engineers ;
-        issn = 0369-9838 
+        issn = 0369-9838
       >
-  
+
       param[base_url] = http://pau.sagepub.com/
-  
+
       {
-  
+
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
-  
+
         au < doNotProcess ; 1906 ; Proceedings of the Institution of Automobile Engineers Volume 1 ; 1 >
         au < doNotProcess ; 1907 ; Proceedings of the Institution of Automobile Engineers Volume 2 ; 2 >
         au < doNotProcess ; 1908 ; Proceedings of the Institution of Automobile Engineers Volume 3 ; 3 >
@@ -43628,25 +43628,25 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 1944 ; Proceedings of the Institution of Automobile Engineers Volume 39 ; 39 >
         au < doNotProcess ; 1945 ; Proceedings of the Institution of Automobile Engineers Volume 40 ; 40 >
         au < manifest ; 1946 ; Proceedings of the Institution of Automobile Engineers Volume 41 ; 41 >
-  
+
       }
-  
+
     }
-  
+
     {
-  
+
       title <
         name = Proceedings of the Institution of Mechanical Engineers ;
-        issn = 0020-3483 
+        issn = 0020-3483
       >
-  
+
       param[base_url] = http://pme.sagepub.com/
-  
+
       {
-  
+
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
-  
+
         au < doNotProcess ; 1847-1849 ; Proceedings of the Institution of Mechanical Engineers Volume 1 ; 1 >
         au < doNotProcess ; 1850-1851 ; Proceedings of the Institution of Mechanical Engineers Volume 2 ; 2 >
         au < doNotProcess ; 1852 ; Proceedings of the Institution of Mechanical Engineers Volume 3 ; 3 >
@@ -43842,27 +43842,27 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 1980 ; Proceedings of the Institution of Mechanical Engineers Volume 194 ; 194 >
         au < doNotProcess ; 1981 ; Proceedings of the Institution of Mechanical Engineers Volume 195 ; 195 >
         au < doNotProcess ; 1982 ; Proceedings of the Institution of Mechanical Engineers Volume 196 ; 196 >
-  
+
       }
-  
+
     }
-  
+
     {
-  
+
       title <
         name = Proceedings of the Institution of Mechanical Engineers: Automobile Division ;
-        issn = 0367-8822 
+        issn = 0367-8822
       >
-  
+
       param[base_url] = http://pad.sagepub.com/
-  
+
       {
-  
+
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
-        
+
         comment[0] = Volume numbering jumps from V16 in 1962 to V178 in 1963
-  
+
         au < doNotProcess ; 1947 ; Proceedings of the Institution of Mechanical Engineers: Automobile Division Volume 1 ; 1 >
         au < doNotProcess ; 1948 ; Proceedings of the Institution of Mechanical Engineers: Automobile Division Volume 2 ; 2 >
         au < doNotProcess ; 1949 ; Proceedings of the Institution of Mechanical Engineers: Automobile Division Volume 3 ; 3 >
@@ -43886,25 +43886,25 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 1967 ; Proceedings of the Institution of Mechanical Engineers: Automobile Division Volume 182 ; 182 >
         au < doNotProcess ; 1968 ; Proceedings of the Institution of Mechanical Engineers: Automobile Division Volume 183 ; 183 >
         au < doNotProcess ; 1969 ; Proceedings of the Institution of Mechanical Engineers: Automobile Division Volume 184 ; 184 >
-  
+
       }
-  
+
     }
-  
+
     {
-  
+
       title <
         name = Proceedings of the Institution of Mechanical Engineers, Conference Proceedings ;
-        issn = 0367-8849 
+        issn = 0367-8849
       >
-  
+
       param[base_url] = http://pcp.sagepub.com/
-  
+
       {
-  
+
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
-  
+
         au < doNotProcess ; 1963 ; Proceedings of the Institution of Mechanical Engineers, Conference Proceedings Volume 178 ; 178 >
         au < doNotProcess ; 1964 ; Proceedings of the Institution of Mechanical Engineers, Conference Proceedings Volume 179 ; 179 >
         au < doNotProcess ; 1965 ; Proceedings of the Institution of Mechanical Engineers, Conference Proceedings Volume 180 ; 180 >
@@ -43912,26 +43912,26 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 1967 ; Proceedings of the Institution of Mechanical Engineers, Conference Proceedings Volume 182 ; 182 >
         au < doNotProcess ; 1968 ; Proceedings of the Institution of Mechanical Engineers, Conference Proceedings Volume 183 ; 183 >
         au < doNotProcess ; 1969 ; Proceedings of the Institution of Mechanical Engineers, Conference Proceedings Volume 184 ; 184 >
-  
+
       }
-  
+
     }
-  
+
     {
-  
+
       title <
         name = Social Change ;
         issn = 0049-0857 ;
-        eissn = 0976-3538 
+        eissn = 0976-3538
       >
-  
+
       param[base_url] = http://sch.sagepub.com/
-  
+
       {
-  
+
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
-  
+
         au < doNotProcess ; 1999 ; Social Change Volume 29 ; 29 >
         au < manifest ; 2000 ; Social Change Volume 30 ; 30 >
         au < manifest ; 2001 ; Social Change Volume 31 ; 31 >
@@ -43948,26 +43948,26 @@ comment[mpj] = now published by Brill
         au < released ; 2012 ; Social Change Volume 42 ; 42 >
         au < manifest ; 2013 ; Social Change Volume 43 ; 43 >
         au < manifest ; 2014 ; Social Change Volume 44 ; 44 >
-  
+
       }
-  
+
     }
-  
+
     {
-  
+
       title <
         name = Social Marketing Quarterly ;
         issn = 1524-5004 ;
-        eissn = 1539-4093 
+        eissn = 1539-4093
       >
-  
+
       param[base_url] = http://smq.sagepub.com/
-  
+
       {
-  
+
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
-  
+
         au < doNotProcess ; 1997-1998 ; Social Marketing Quarterly Volume 4 ; 4 >
         au < doNotProcess ; 1999 ; Social Marketing Quarterly Volume 5 ; 5 >
         au < manifest ; 2000 ; Social Marketing Quarterly Volume 6 ; 6 >
@@ -43985,26 +43985,26 @@ comment[mpj] = now published by Brill
         au < released ; 2012 ; Social Marketing Quarterly Volume 18 ; 18 >
         au < manifest ; 2013 ; Social Marketing Quarterly Volume 19 ; 19 >
         au < manifest ; 2014 ; Social Marketing Quarterly Volume 20 ; 20 >
-  
+
       }
-  
+
     }
-  
+
     {
-  
+
       title <
         name = Sociological Methodology ;
         issn = 0081-1750 ;
-        eissn = 1467-9531 
+        eissn = 1467-9531
       >
-  
+
       param[base_url] = http://smx.sagepub.com/
-  
+
       {
-  
+
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
-  
+
         au < manifest ; 2006 ; Sociological Methodology Volume 36 ; 36 >
         au < manifest ; 2007 ; Sociological Methodology Volume 37 ; 37 >
         au < manifest ; 2008 ; Sociological Methodology Volume 38 ; 38 >
@@ -44014,26 +44014,26 @@ comment[mpj] = now published by Brill
         au < released ; 2012 ; Sociological Methodology Volume 42 ; 42 >
         au < manifest ; 2013 ; Sociological Methodology Volume 43 ; 43 >
         au < manifest ; 2014 ; Sociological Methodology Volume 44 ; 44 >
-        
+
       }
-  
+
     }
-  
+
     {
-  
+
       title <
         name = Sociological Theory ;
         issn = 0735-2751 ;
-        eissn = 1467-9558 
+        eissn = 1467-9558
       >
-  
+
       param[base_url] = http://stx.sagepub.com/
-  
+
       {
-  
+
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
-  
+
         au < manifest ; 2006 ; Sociological Theory Volume 24 ; 24 >
         au < manifest ; 2007 ; Sociological Theory Volume 25 ; 25 >
         au < manifest ; 2008 ; Sociological Theory Volume 26 ; 26 >
@@ -44043,26 +44043,26 @@ comment[mpj] = now published by Brill
         au < released ; 2012 ; Sociological Theory Volume 30 ; 30 >
         au < manifest ; 2013 ; Sociological Theory Volume 31 ; 31 >
         au < manifest ; 2014 ; Sociological Theory Volume 32 ; 32 >
-  
+
       }
-  
+
     }
-  
+
     {
-  
+
       title <
         name = Ultrasonic Imaging ;
         issn = 0161-7346 ;
-        eissn = 1096-0910 
+        eissn = 1096-0910
       >
-  
+
       param[base_url] = http://uix.sagepub.com/
-  
+
       {
-  
+
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
-  
+
         au < doNotProcess ; 1979 ; Ultrasonic Imaging Volume 1 ; 1 >
         au < doNotProcess ; 1980 ; Ultrasonic Imaging Volume 2 ; 2 >
         au < doNotProcess ; 1981 ; Ultrasonic Imaging Volume 3 ; 3 >
@@ -44100,26 +44100,26 @@ comment[mpj] = now published by Brill
         au < manifest ; 2013 ; Ultrasonic Imaging Volume 35 ; 35 >
         au < manifest ; 2014 ; Ultrasonic Imaging Volume 36 ; 36 >
         au < manifest ; 2015 ; Ultrasonic Imaging Volume 37 ; 37 >
-  
+
       }
-  
+
     }
-  
+
     {
-  
+
       title <
         name = Vision: The Journal of Business Perspective ;
         issn = 0972-2629 ;
-        eissn = 2249-5304 
+        eissn = 2249-5304
       >
-  
+
       param[base_url] = http://vis.sagepub.com/
-  
+
       {
-  
+
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
-  
+
         au < doNotProcess ; 1997 ; Vision: The Journal of Business Perspective Volume 1 ; 1 >
         au < doNotProcess ; 1998 ; Vision: The Journal of Business Perspective Volume 2 ; 2 >
         au < doNotProcess ; 1999 ; Vision: The Journal of Business Perspective Volume 3 ; 3 >
@@ -44138,9 +44138,9 @@ comment[mpj] = now published by Brill
         au < manifest ; 2012 ; Vision: The Journal of Business Perspective Volume 16 ; 16 >
         au < manifest ; 2013 ; Vision: The Journal of Business Perspective Volume 17 ; 17 >
         au < manifest ; 2014 ; Vision: The Journal of Business Perspective Volume 18 ; 18 >
-  
+
       }
-  
+
     }
 
     {
@@ -44299,7 +44299,7 @@ comment[mpj] = now published by Brill
     pluginSuffix = HighWirePressH20Plugin
     param[base_url] = http://abr.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
-    
+
     comment[0] = Jan 2012 name changed from Asia Pacific Business Review to Asia-Pacific Journal of Management Research and Innovation
 
     au < manifest ; 2005 ; Asia Pacific Business Review Volume 1 ; 1 >
@@ -44317,10 +44317,10 @@ comment[mpj] = now published by Brill
     }
 
     {
-  
+
       title <
         name = ASN NEURO ;
-        eissn = 1759-0914 
+        eissn = 1759-0914
       >
 
       pluginSuffix = HighWirePressH20Plugin
@@ -44333,9 +44333,9 @@ comment[mpj] = now published by Brill
       au < exists ; 2012 ; ASN NEURO Volume 4 ; 004 >
       au < exists ; 2013 ; ASN NEURO Volume 5 ; 005 >
       au < expected ; 2014 ; ASN NEURO Volume 6 ; 006 >
-    
+
     }
-    
+
     {
 
       title <
@@ -44609,7 +44609,7 @@ comment[mpj] = now published by Brill
       title <
         name = Canadian Pharmacists Journal / Revue des Pharmaciens du Canada ;
         issn = 1715-1635 ;
-        eissn = 1913-701X 
+        eissn = 1913-701X
       >
 
     pluginSuffix = HighWirePressH20Plugin
@@ -44826,7 +44826,7 @@ comment[mpj] = now published by Brill
 
       title <
         name = Foreign Trade Review ;
-        issn = 0015-7325 
+        issn = 0015-7325
       >
 
     pluginSuffix = HighWirePressH20Plugin
@@ -44890,7 +44890,7 @@ comment[mpj] = now published by Brill
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://rcgp-innovait.oxfordjournals.org/
         implicit < status ; year ; name ; param[volume_name] >
-    
+
         au < superseded ; 2008 ; InnovAiT: The RCGP Journal for Associates in Training Volume 1 [superseded] ; 1 >
         au < superseded ; 2009 ; InnovAiT: The RCGP Journal for Associates in Training Volume 2 [superseded] ; 2 >
         au < superseded ; 2010 ; InnovAiT: The RCGP Journal for Associates in Training Volume 3 [superseded] ; 3 >
@@ -44912,7 +44912,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2012 ; InnovAiT: The RCGP Journal for Associates in Training Volume 5 ; 5 >
         au < manifest ; 2013 ; InnovAiT: The RCGP Journal for Associates in Training Volume 6 ; 6 >
         au < manifest ; 2014 ; InnovAiT: The RCGP Journal for Associates in Training Volume 7 ; 7 >
-        
+
       }
 
     }
@@ -45156,9 +45156,9 @@ comment[mpj] = now published by Brill
       pluginSuffix = HighWirePressH20Plugin
       param[base_url] = http://uro.sagepub.com/
       implicit < status ; year ; name ; param[volume_name] >
-      
+
       comment[0] = Jan 2013 name changed from British Journal of Medical and Surgical Urology to Journal of Clinical Urology
-      
+
       au < manifest ; 2008 ; British Journal of Medical and Surgical Urology Volume 1 ; 1 >
       au < manifest ; 2009 ; British Journal of Medical and Surgical Urology Volume 2 ; 2 >
       au < manifest ; 2010 ; British Journal of Medical and Surgical Urology Volume 3 ; 3 >
@@ -45191,12 +45191,12 @@ comment[mpj] = now published by Brill
     au < expected ; 2015 ; World Future Review Volume 7 ; 7 >
 
     }
-    
+
     {
 
       title <
         name = Orthopaedic Journal of Sports Medicine ;
-        eissn = 2325-9671 
+        eissn = 2325-9671
       >
 
     pluginSuffix = HighWirePressH20Plugin
@@ -45213,7 +45213,7 @@ comment[mpj] = now published by Brill
 
       title <
         name = Transactional Analysis Journal ;
-        eissn = 0362-1537 
+        eissn = 0362-1537
       >
 
     pluginSuffix = HighWirePressH20Plugin
@@ -45267,31 +45267,31 @@ comment[mpj] = now published by Brill
     au < expected ; 2015 ; Transactional Analysis Journal Volume 45 ; 45 >
 
     }
-    
+
     {
-    
-      comment[publisher] = old publisher is Royal Society of Medicine Press  
+
+      comment[publisher] = old publisher is Royal Society of Medicine Press
       comment[moved_publishers] = Royal Society of Medicine Press has been acquired by Sage.
       comment[moving_urls] = urls for these publications will be changing in 2013.
-      
+
     }
-    
+
     {
-    
+
       title <
         name = Acta Radiologica ;
         issn = 0284-1851 ;
         eissn = 1600-0455 ;
         issnl = 0284-1851
       >
-  
+
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
       {
-      
+
         param[base_url] = http://ar.rsmjournals.com/
-  
+
         au < down ; 1997 ; Acta Radiologica Volume 38 [superseded] ; 38 >
         au < down ; 1998 ; Acta Radiologica Volume 39 [superseded] ; 39 >
         au < down ; 1999 ; Acta Radiologica Volume 40 [superseded] ; 40 >
@@ -45308,13 +45308,13 @@ comment[mpj] = now published by Brill
         au < down ; 2010 ; Acta Radiologica Volume 51 [superseded] ; 51 >
         au < down ; 2011 ; Acta Radiologica Volume 52 [superseded] ; 52 >
         au < down ; 2012 ; Acta Radiologica Volume 53 [superseded] ; 53 >
-        
+
       }
-  
+
       {
-      
+
         param[base_url] = http://acr.sagepub.com/
-  
+
         au < doNotProcess ; 1961 ; Acta Radiologica Volume volos-55 ; volos-55 >
         au < doNotProcess ; 1961 ; Acta Radiologica Volume volos-56 ; volos-56 >
         au < doNotProcess ; 1962 ; Acta Radiologica Volume volos-57 ; volos-57 >
@@ -45377,24 +45377,24 @@ comment[mpj] = now published by Brill
         au < manifest ; 2015 ; Acta Radiologica Volume 56 ; 56 >
 
       }
-  
-    }    
-          
+
+    }
+
     {
-  
+
       title <
         name = Annals of Clinical Biochemistry ;
         issn = 0004-5632 ;
         eissn = 1758-1001 ;
         issnl = 0004-5632
       >
-  
+
       {
-  
+
         pluginPrefix = org.lockss.plugin.highwire.
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
         param[base_url] = http://acb.rsmjournals.com/
-        
+
         au < HighWirePressPlugin ; down ; 2000 ; Annals of Clinical Biochemistry Volume 37 [superseded] ; 37 >
         au < HighWirePressPlugin ; down ; 2001 ; Annals of Clinical Biochemistry Volume 38 [superseded] ; 38 >
         au < HighWirePressPlugin ; down ; 2002 ; Annals of Clinical Biochemistry Volume 39 [superseded] ; 39 >
@@ -45408,15 +45408,15 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; 2010 ; Annals of Clinical Biochemistry Volume 47 [superseded] ; 47 >
         au < HighWirePressPlugin ; down ; 2011 ; Annals of Clinical Biochemistry Volume 48 [superseded] ; 48 >
         au < HighWirePressH20Plugin ; down ; 2012 ; Annals of Clinical Biochemistry Volume 49 [superseded] ; 49 >
-  
+
       }
-  
+
       {
-  
+
         pluginPrefix = org.lockss.plugin.highwire.
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
         param[base_url] = http://acb.sagepub.com/
-        
+
         au < HighWirePressH20Plugin ; doNotProcess ; 1997 ; Annals of Clinical Biochemistry Volume 34 ; 34 >
         au < HighWirePressH20Plugin ; doNotProcess ; 1998 ; Annals of Clinical Biochemistry Volume 35 ; 35 >
         au < HighWirePressH20Plugin ; doNotProcess ; 1999 ; Annals of Clinical Biochemistry Volume 36 ; 36 >
@@ -45435,29 +45435,29 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; doNotProcess ; 2012 ; Annals of Clinical Biochemistry Volume 49 ; 49 >
         au < HighWirePressH20Plugin ; exists ; 2013 ; Annals of Clinical Biochemistry Volume 50 ; 50 >
         au < HighWirePressH20Plugin ; expected ; 2014 ; Annals of Clinical Biochemistry Volume 51 ; 51 >
-  
+
       }
-  
+
     }
-  
+
     {
-    
+
       title <
         name = Clinical Ethics ;
         issn = 1477-7509 ;
         eissn = 1758-101X ;
         issnl = 1477-7509
       >
-  
+
       {
-  
+
         pluginPrefix = org.lockss.plugin.highwire.
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       {
 
         param[base_url] = http://ce.rsmjournals.com/
-  
+
         au < HighWirePressPlugin ; down ; 2006 ; Clinical Ethics Volume 1 [superseded] ; 1 >
         au < HighWirePressPlugin ; down ; 2007 ; Clinical Ethics Volume 2 [superseded] ; 2 >
         au < HighWirePressPlugin ; down ; 2008 ; Clinical Ethics Volume 3 [superseded] ; 3 >
@@ -45465,13 +45465,13 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; 2010 ; Clinical Ethics Volume 5 [superseded] ; 5 >
         au < HighWirePressPlugin ; doesNotExist ; 2011 ; Clinical Ethics Volume 6 ; 6 >
         au < HighWirePressH20Plugin ; down ; 2012 ; Clinical Ethics Volume 7 [superseded] ; 7 >
-        
+
       }
-  
+
       {
 
         param[base_url] = http://cet.sagepub.com/
-  
+
         au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Clinical Ethics Volume 1 ; 1 >
         au < HighWirePressH20Plugin ; doNotProcess ; 2007 ; Clinical Ethics Volume 2 ; 2 >
         au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; Clinical Ethics Volume 3 ; 3 >
@@ -45481,29 +45481,29 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; exists ; 2012 ; Clinical Ethics Volume 7 ; 7 >
         au < HighWirePressH20Plugin ; manifest ; 2013 ; Clinical Ethics Volume 8 ; 8 >
         au < HighWirePressH20Plugin ; manifest ; 2014 ; Clinical Ethics Volume 9 ; 9 >
-        
+
       }
-  
+
       }
-  
+
     }
-  
+
     {
-    
+
       title <
         name = Clinical Risk ;
         issn = 1356-2622 ;
         eissn = 1758-1028 ;
         issnl = 1356-2622
       >
-  
+
         pluginPrefix = org.lockss.plugin.highwire.
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       {
-  
+
         param[base_url] = http://cr.rsmjournals.com/
-  
+
         au < HighWirePressPlugin ; doesNotExist ; 2001 ; Clinical Risk Volume 7 ; 7 >
         au < HighWirePressPlugin ; doesNotExist ; 2002 ; Clinical Risk Volume 8 ; 8 >
         au < HighWirePressPlugin ; doesNotExist ; 2003 ; Clinical Risk Volume 9 ; 9 >
@@ -45516,13 +45516,13 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; doesNotExist ; 2010 ; Clinical Risk Volume 16 ; 16 >
         au < HighWirePressPlugin ; doesNotExist ; 2011 ; Clinical Risk Volume 17 ; 17 >
         au < HighWirePressH20Plugin ; down ; 2012 ; Clinical Risk Volume 18 [superseded] ; 18 >
-  
+
       }
-  
+
       {
-  
+
         param[base_url] = http://cri.sagepub.com/
-  
+
         au < HighWirePressH20Plugin ; exists ; 2001 ; Clinical Risk Volume 7 ; 7 >
         au < HighWirePressH20Plugin ; exists ; 2002 ; Clinical Risk Volume 8 ; 8 >
         au < HighWirePressH20Plugin ; exists ; 2003 ; Clinical Risk Volume 9 ; 9 >
@@ -45537,25 +45537,25 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; manifest ; 2012 ; Clinical Risk Volume 18 ; 18 >
         au < HighWirePressH20Plugin ; manifest ; 2013 ; Clinical Risk Volume 19 ; 19 >
         au < HighWirePressH20Plugin ; manifest ; 2014 ; Clinical Risk Volume 20 ; 20 >
-  
+
       }
-  
+
     }
-  
+
     {
-    
+
       title <
         name = Experimental Biology and Medicine ;
         issn = 1535-3702 ;
         eissn = 1535-3699
       >
-  
+
       {
-  
+
         plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
         param[base_url] = http://ebm.rsmjournals.com/
-  
+
         au < down ; 1903 ; Experimental Biology and Medicine Volume 1 [superseded] ; 1 >
         au < down ; 1904 ; Experimental Biology and Medicine Volume 2 [superseded] ; 2 >
         au < down ; 1905 ; Experimental Biology and Medicine Volume 3 [superseded] ; 3 >
@@ -45793,15 +45793,15 @@ comment[mpj] = now published by Brill
         au < down ; 2010 ; Experimental Biology and Medicine Volume 235 [superseded] ; 235 >
         au < down ; 2011 ; Experimental Biology and Medicine Volume 236 [superseded] ; 236 >
         au < down ; 2012 ; Experimental Biology and Medicine Volume 237 [superseded] ; 237 >
-  
+
       }
-  
+
       {
-  
+
         plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
         param[base_url] = http://ebm.sagepub.com/
-  
+
         au < doNotProcess ; 1903 ; Experimental Biology and Medicine Volume 1 ; 1 >
         au < doNotProcess ; 1904 ; Experimental Biology and Medicine Volume 2 ; 2 >
         au < doNotProcess ; 1905 ; Experimental Biology and Medicine Volume 3 ; 3 >
@@ -46041,27 +46041,27 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2012 ; Experimental Biology and Medicine Volume 237 ; 237 >
         au < manifest ; 2013 ; Experimental Biology and Medicine Volume 238 ; 238 >
         au < manifest ; 2014 ; Experimental Biology and Medicine Volume 239 ; 239 >
-  
+
       }
-  
+
     }
-  
+
     {
-    
+
       title <
         name = Hand Therapy ;
         issn = 1758-9983 ;
         eissn = 1758-9991 ;
         issnl = 1758-9991
       >
-  
+
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
       pluginPrefix = org.lockss.plugin.highwire.
-  
+
       {
-      
+
         param[base_url] = http://ht.rsmjournals.com/
-  
+
         au < HighWirePressH20Plugin ; down ; 2001 ; Hand Therapy Volume 6 ; 6 >
         au < HighWirePressH20Plugin ; down ; 2002 ; Hand Therapy Volume 7 ; 7 >
         au < HighWirePressH20Plugin ; down ; 2003 ; Hand Therapy Volume 8 ; 8 >
@@ -46073,13 +46073,13 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; doesNotExist ; 2009 ; Hand Therapy Volume 14 ; 14 >
         au < HighWirePressPlugin ; doesNotExist ; 2010 ; Hand Therapy Volume 15 ; 15 >
         au < HighWirePressPlugin ; doesNotExist ; 2011 ; Hand Therapy Volume 16 ; 16 >
-      
+
       }
-      
+
       {
-      
+
         param[base_url] = http://hth.sagepub.com/
-  
+
         au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; Hand Therapy Volume 6 ; 6 >
         au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; Hand Therapy Volume 7 ; 7 >
         au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; Hand Therapy Volume 8 ; 8 >
@@ -46094,43 +46094,43 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; manifest ; 2012 ; Hand Therapy Volume 17 ; 17 >
         au < HighWirePressH20Plugin ; manifest ; 2013 ; Hand Therapy Volume 18 ; 18 >
         au < HighWirePressH20Plugin ; manifest ; 2014 ; Hand Therapy Volume 19 ; 19 >
-      
+
       }
-      
+
     }
-  
+
     {
-    
+
       title <
         name = Handbook of Practice Management ;
         type = bookSeries ;
         issn = 0962-144X ;
         eissn = 2047-718X
       >
-      
+
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://hpm.sagepub.com/
       implicit < status ; year ; isbn ; name ; param[volume_name] >
-      
+
       au < manifest ; 2009 ; 0-443-04576-3 ; Handbook of Practice Management Volume 71 ; 71 >
-  
+
     }
-  
+
     {
-    
+
       title <
         name = Health Services Management Research ;
         issn = 0951-4848 ;
         eissn = 1758-1044 ;
         issnl = 0951-4848
       >
-  
+
       {
-  
+
         pluginPrefix = org.lockss.plugin.highwire.
         param[base_url] = http://hsmr.rsmjournals.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-  
+
         au < HighWirePressPlugin ; down ; 2001 ; Health Services Management Research Volume 14 [superseded] ; 14 >
         au < HighWirePressPlugin ; down ; 2002 ; Health Services Management Research Volume 15 [superseded] ; 15 >
         au < HighWirePressPlugin ; down ; 2003 ; Health Services Management Research Volume 16 [superseded] ; 16 >
@@ -46142,15 +46142,15 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; 2009 ; Health Services Management Research Volume 22 [superseded] ; 22 >
         au < HighWirePressPlugin ; down ; 2010 ; Health Services Management Research Volume 23 [superseded] ; 23 >
         au < HighWirePressPlugin ; down ; 2011 ; Health Services Management Research Volume 24 [superseded] ; 24 >
-  
+
       }
-  
+
       {
-  
+
         pluginPrefix = org.lockss.plugin.highwire.
         param[base_url] = http://hsm.sagepub.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-  
+
         au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; Health Services Management Research Volume 14 [superseded] ; 14 >
         au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; Health Services Management Research Volume 15 [superseded] ; 15 >
         au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; Health Services Management Research Volume 16 [superseded] ; 16 >
@@ -46165,25 +46165,25 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; manifest ; 2012 ; Health Services Management Research Volume 25 ; 25 >
         au < HighWirePressH20Plugin ; manifest ; 2013 ; Health Services Management Research Volume 26 ; 26 >
         au < HighWirePressH20Plugin ; manifest ; 2014 ; Health Services Management Research Volume 27 ; 27 >
-  
+
       }
-  
+
     }
-  
+
     {
-    
+
       title <
         name = International Journal: Canada's Journal of Global Policy Analysis ;
         issn = 0020-7020 ;
         eissn = 2052-465X
       >
-  
+
       {
-  
+
         plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
         param[base_url] = http://ijx.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-  
+
         au < manifest ; 1946 ; International Journal: Canada's Journal of Global Policy Analysis Volume 1 ; 1 >
         au < manifest ; 1947 ; International Journal: Canada's Journal of Global Policy Analysis Volume 2 ; 2 >
         au < manifest ; 1948 ; International Journal: Canada's Journal of Global Policy Analysis Volume 3 ; 3 >
@@ -46253,48 +46253,48 @@ comment[mpj] = now published by Brill
         au < manifest ; 2012 ; International Journal: Canada's Journal of Global Policy Analysis Volume 67 ; 67 >
         au < manifest ; 2013 ; International Journal: Canada's Journal of Global Policy Analysis Volume 68 ; 68 >
         au < manifest ; 2014 ; International Journal: Canada's Journal of Global Policy Analysis Volume 69 ; 69 >
-  
+
       }
-  
+
     }
-  
+
     {
-    
+
       title <
         name = International Journal of Care Coordination ;
         eissn = 2053-4353 ;
         issnl = 2053-4353
       >
-  
+
         plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
         param[base_url] = http://icp.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-        
+
         comment[continues] = 2040-4026
-  
+
         au < manifest ; 2014 ; International Journal of Care Coordination Volume 17 ; 17 >
-  
+
     }
-  
+
     {
-    
+
       title <
         name = International Journal of Care Pathways ;
         issn = 2040-4026 ;
         eissn = 2040-4034 ;
         issnl = 2040-4026
       >
-  
+
       comment[RSM] = from Royal Society of Medicine. http://ijcp.rsmjournals.com/
 
       {
-  
+
         pluginPrefix = org.lockss.plugin.highwire.
         param[base_url] = http://icp.sagepub.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
         comment[continued_by] = 2053-4354
-  
+
         au < HighWirePressH20Plugin ; manifest ; 2005 ; International Journal of Care Pathways Volume 9 ; 9 >
         au < HighWirePressH20Plugin ; manifest ; 2006 ; International Journal of Care Pathways Volume 10 ; 10 >
         au < HighWirePressH20Plugin ; manifest ; 2007 ; International Journal of Care Pathways Volume 11 ; 11 >
@@ -46303,42 +46303,42 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; manifest ; 2010 ; International Journal of Care Pathways Volume 14 ; 14 >
         au < HighWirePressH20Plugin ; manifest ; 2011 ; International Journal of Care Pathways Volume 15 ; 15 >
         au < HighWirePressH20Plugin ; released ; 2012 ; International Journal of Care Pathways Volume 16 ; 16 >
-  
+
       }
-  
+
     }
-  
+
     {
-    
+
       title <
         name = International Journal of Green Nanotechnology ;
         issn = 1943-0892 ;
         eissn = 1943-0906 ;
         issnl = 1943-0892
       >
-  
+
       {
-  
+
         pluginPrefix = org.lockss.plugin.highwire.
         param[base_url] = http://nan.sagepub.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-  
+
         au < HighWirePressH20Plugin ; manifest ; 2013 ; International Journal of Green Nanotechnology Volume 1 ; 1 >
         au < HighWirePressH20Plugin ; manifest ; 2014 ; International Journal of Green Nanotechnology Volume 2 ; 2 >
-  
+
       }
-  
+
     }
 
     {
-    
+
       title <
         name = International Journal of Maritime History ;
         issn = 0843-8714 ;
         eissn = 2052-7756 ;
         issnl = 0843-8714
       >
-  
+
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://ijh.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
@@ -46374,21 +46374,21 @@ comment[mpj] = now published by Brill
   }
 
     {
-    
+
       title <
         name = International Journal of STD & AIDS ;
         issn = 0956-4624 ;
         eissn = 1758-1052 ;
         issnl = 0956-4624
       >
-  
+
         pluginPrefix = org.lockss.plugin.highwire.
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       {
-  
+
         param[base_url] = http://ijsa.rsmjournals.com/
-  
+
         au < HighWirePressPlugin ; down ; 1996 ; International Journal of STD & AIDS Volume 7 [superseded] ; 7 >
         au < HighWirePressPlugin ; down ; 1997 ; International Journal of STD & AIDS Volume 8 [superseded] ; 8 >
         au < HighWirePressPlugin ; down ; 1998 ; International Journal of STD & AIDS Volume 9 [superseded] ; 9 >
@@ -46405,13 +46405,13 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; 2009 ; International Journal of STD & AIDS Volume 20 [superseded] ; 20 >
         au < HighWirePressPlugin ; down ; 2010 ; International Journal of STD & AIDS Volume 21 [superseded] ; 21 >
         au < HighWirePressPlugin ; down ; 2011 ; International Journal of STD & AIDS Volume 22 [superseded] ; 22 >
-  
+
       }
-  
+
       {
-  
+
         param[base_url] = http://std.sagepub.com/
-  
+
         au < HighWirePressH20Plugin ; doNotProcess ; 1996 ; International Journal of STD & AIDS Volume 7 ; 7 >
         au < HighWirePressH20Plugin ; doNotProcess ; 1997 ; International Journal of STD & AIDS Volume 8 ; 8 >
         au < HighWirePressH20Plugin ; doNotProcess ; 1998 ; International Journal of STD & AIDS Volume 9 ; 9 >
@@ -46434,27 +46434,27 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; manifest ; 2015 ; International Journal of STD & AIDS Volume 26 ; 26 >
 
       }
-  
+
     }
-  
+
     {
-    
+
       title <
         name = Journal of Health Services Research & Policy ;
         issn = 1355-8196 ;
         eissn = 1758-1060 ;
         issnl = 1355-8196
       >
-  
+
         pluginPrefix = org.lockss.plugin.highwire.
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
         comment[RSM] = from Royal Society of Medicine. http://jhsrp.rsmjournals.com/
 
       {
-  
+
         param[base_url] = http://hsr.sagepub.com/
-  
+
         au < HighWirePressH20Plugin ; manifest ; 2001 ; Journal of Health Services Research & Policy Volume 6 ; 6 >
         au < HighWirePressH20Plugin ; manifest ; 2002 ; Journal of Health Services Research & Policy Volume 7 ; 7 >
         au < HighWirePressH20Plugin ; manifest ; 2003 ; Journal of Health Services Research & Policy Volume 8 ; 8 >
@@ -46469,27 +46469,27 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Health Services Research & Policy Volume 17 ; 17 >
         au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Health Services Research & Policy Volume 18 ; 18 >
         au < HighWirePressH20Plugin ; manifest ; 2014 ; Journal of Health Services Research & Policy Volume 19 ; 19 >
-  
+
       }
-  
+
     }
-  
+
     {
-    
+
       title <
         name = Journal of Medical Biography ;
         issn = 0967-7720 ;
         eissn = 1758-1087 ;
         issnl = 0967-7720
       >
-      
+
       comment[RSM] = from Royal Society of Medicine. http://jmb.rsmjournals.com/
-  
+
       {
         pluginPrefix = org.lockss.plugin.highwire.
         param[base_url] = http://jmb.sagepub.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-  
+
         au < HighWirePressH20Plugin ; manifest ; 2005 ; Journal of Medical Biography Volume 13 ; 13 >
         au < HighWirePressH20Plugin ; manifest ; 2006 ; Journal of Medical Biography Volume 14 ; 14 >
         au < HighWirePressH20Plugin ; manifest ; 2007 ; Journal of Medical Biography Volume 15 ; 15 >
@@ -46500,13 +46500,13 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Medical Biography Volume 20 ; 20 >
         au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Medical Biography Volume 21 ; 21 >
         au < HighWirePressH20Plugin ; manifest ; 2014 ; Journal of Medical Biography Volume 22 ; 22 >
-  
+
       }
-  
+
     }
-  
+
     {
-    
+
       title <
         name = Journal of Medical Screening ;
         issn = 0969-1413 ;
@@ -46520,7 +46520,7 @@ comment[mpj] = now published by Brill
       {
 
         param[base_url] = http://msc.sagepub.com/
-  
+
         au < HighWirePressH20Plugin ; manifest ; 1994 ; Journal of Medical Screening Volume 1 ; 1 >
         au < HighWirePressH20Plugin ; manifest ; 1995 ; Journal of Medical Screening Volume 2 ; 2 >
         au < HighWirePressH20Plugin ; manifest ; 1996 ; Journal of Medical Screening Volume 3 ; 3 >
@@ -46542,28 +46542,28 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Medical Screening Volume 19 ; 19 >
         au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Medical Screening Volume 20 ; 20 >
         au < HighWirePressH20Plugin ; manifest ; 2014 ; Journal of Medical Screening Volume 21 ; 21 >
-  
+
       }
-  
+
     }
-  
+
     {
-    
+
       title <
         name = Journal of Telemedicine and Telecare ;
         issn = 1357-633X ;
         eissn = 1758-1109 ;
         issnl = 1357-633X
       >
-      
+
       comment[RSM] = from Royal Society of Medicine. http://jtt.rsmjournals.com/
 
       {
-  
+
         pluginPrefix = org.lockss.plugin.highwire.
         param[base_url] = http://jtt.sagepub.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-  
+
         au < HighWirePressH20Plugin ; manifest ; 1995 ; Journal of Telemedicine and Telecare Volume 1 ; 1 >
         au < HighWirePressH20Plugin ; manifest ; 1996 ; Journal of Telemedicine and Telecare Volume 2 ; 2 >
         au < HighWirePressH20Plugin ; manifest ; 1997 ; Journal of Telemedicine and Telecare Volume 3 ; 3 >
@@ -46584,29 +46584,29 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Telemedicine and Telecare Volume 18 ; 18 >
         au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Telemedicine and Telecare Volume 19 ; 19 >
         au < HighWirePressH20Plugin ; manifest ; 2014 ; Journal of Telemedicine and Telecare Volume 20 ; 20 >
-  
+
       }
-  
+
     }
-  
+
     {
-    
+
       title <
         name = Journal of the Royal Society of Medicine ;
         issn = 0141-0768 ;
         eissn = 1758-1095 ;
         issnl = 0141-0768
       >
-  
+
         pluginPrefix = org.lockss.plugin.highwire.
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-  
+
         comment[RSM] = from Royal Society of Medicine. http://jrsm.rsmjournals.com/
 
       {
-  
+
         param[base_url] = http://jrs.sagepub.com/
-  
+
         au < HighWirePressH20Plugin ; manifest ; 1809 ; Journal of the Royal Society of Medicine Volume MCT-1 ; MCT-1 >
         au < HighWirePressH20Plugin ; manifest ; 1811 ; Journal of the Royal Society of Medicine Volume MCT-2 ; MCT-2 >
         au < HighWirePressH20Plugin ; manifest ; 1812 ; Journal of the Royal Society of Medicine Volume MCT-3 ; MCT-3 >
@@ -46804,94 +46804,94 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of the Royal Society of Medicine Volume 105 ; 105 >
         au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of the Royal Society of Medicine Volume 106 ; 106 >
         au < HighWirePressH20Plugin ; manifest ; 2014 ; Journal of the Royal Society of Medicine Volume 107 ; 107 >
-  
+
       }
-  
+
     }
-  
+
     {
-    
+
       title <
         name = JRSM Cardiovascular Disease ;
         eissn = 2048-0040
       >
-  
+
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://cvd.sagepub.com/
       implicit < status ; year ; name ; param[volume_name] >
-  
+
       au < exists ; 2012 ; JRSM Cardiovascular Disease Volume 1 ; 1 >
       au < manifest ; 2013 ; JRSM Cardiovascular Disease Volume 2 ; 2 >
       au < manifest ; 2014 ; JRSM Cardiovascular Disease Volume 3 ; 3 >
-  
+
     }
-  
+
     {
-    
+
       title <
         name = JRSM Short Reports ;
         eissn = 2042-5333
       >
-      
+
         plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
-  
+
       {
-      
+
         param[base_url] = http://shortreports.rsmjournals.com/
-  
+
         au < down ; 2010 ; JRSM Short Reports Volume 1 ; 1 >
         au < down ; 2011 ; JRSM Short Reports Volume 2 ; 2 >
-      
+
       }
-  
+
       {
-      
+
         param[base_url] = http://shr.sagepub.com/
         comment[0] = Title change in 2014, same base_url
         comment[continued_by] = 2054-2704
-  
+
         au < doNotProcess ; 2010 ; JRSM Short Reports Volume 1 ; 1 >
         au < doNotProcess ; 2011 ; JRSM Short Reports Volume 2 ; 2 >
         au < exists ; 2012 ; JRSM Short Reports Volume 3 ; 3 >
         au < manifest ; 2013 ; JRSM Short Reports Volume 4 ; 4 >
-      
+
       }
-  
+
     }
-  
+
     {
-    
+
       title <
         name = JRSM Open ;
         eissn = 2054-2704
       >
-      
+
         plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
         param[base_url] = http://shr.sagepub.com/
         comment[continues] = 2042-5333
-  
+
         au < manifest ; 2014 ; JRSM Open Volume 5 ; 5 >
-  
+
     }
-  
+
     {
-    
+
       title <
         name = Laboratory Animals ;
         issn = 0023-6772 ;
         eissn = 1758-1117 ;
         issnl = 0023-6772
       >
-  
+
         pluginPrefix = org.lockss.plugin.highwire.
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       {
-  
+
         param[base_url] = http://la.rsmjournals.com/
-  
+
         au < HighWirePressPlugin ; down ; 1967 ; Laboratory Animals Volume 1 [superseded] ; 1 >
         au < HighWirePressPlugin ; down ; 1968 ; Laboratory Animals Volume 2 [superseded] ; 2 >
         au < HighWirePressPlugin ; down ; 1969 ; Laboratory Animals Volume 3 [superseded] ; 3 >
@@ -46937,13 +46937,13 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; 2009 ; Laboratory Animals Volume 43 [superseded] ; 43 >
         au < HighWirePressPlugin ; down ; 2010 ; Laboratory Animals Volume 44 [superseded] ; 44 >
         au < HighWirePressPlugin ; down ; 2011 ; Laboratory Animals Volume 45 [superseded] ; 45 >
-  
+
       }
-  
+
       {
-  
+
         param[base_url] = http://lan.sagepub.com/
-  
+
         au < HighWirePressH20Plugin ; doNotProcess ; 1967 ; Laboratory Animals Volume 1 ; 1 >
         au < HighWirePressH20Plugin ; doNotProcess ; 1968 ; Laboratory Animals Volume 2 ; 2 >
         au < HighWirePressH20Plugin ; doNotProcess ; 1969 ; Laboratory Animals Volume 3 ; 3 >
@@ -46992,26 +46992,26 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; exists ; 2012 ; Laboratory Animals Volume 46 ; 46 >
         au < HighWirePressH20Plugin ; manifest ; 2013 ; Laboratory Animals Volume 47 ; 47 >
         au < HighWirePressH20Plugin ; manifest ; 2014 ; Laboratory Animals Volume 48 ; 48 >
-  
+
       }
-  
+
     }
-  
+
     {
-    
+
       title <
         name = Medicine, Science and the Law ;
         issn = 0025-8024 ;
         eissn = 2042-1818
       >
-  
+
         plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
-  
+
       {
-  
-        param[base_url] = http://msl.rsmjournals.com/ 
-  
+
+        param[base_url] = http://msl.rsmjournals.com/
+
         au < down ; 2003 ; Medicine, Science and the Law Volume 43 ; 43 >
         au < down ; 2004 ; Medicine, Science and the Law Volume 44 ; 44 >
         au < down ; 2005 ; Medicine, Science and the Law Volume 45 ; 45 >
@@ -47021,13 +47021,13 @@ comment[mpj] = now published by Brill
         au < down ; 2009 ; Medicine, Science and the Law Volume 49 ; 49 >
         au < down ; 2010 ; Medicine, Science and the Law Volume 50 ; 50 >
         au < down ; 2011 ; Medicine, Science and the Law Volume 51 ; 51 >
-  
+
       }
-  
+
       {
-  
+
         param[base_url] = http://msl.sagepub.com/
-  
+
         au < doNotProcess ; 2003 ; Medicine, Science and the Law Volume 43 ; 43 >
         au < doNotProcess ; 2004 ; Medicine, Science and the Law Volume 44 ; 44 >
         au < doNotProcess ; 2005 ; Medicine, Science and the Law Volume 45 ; 45 >
@@ -47040,27 +47040,27 @@ comment[mpj] = now published by Brill
         au < exists ; 2012 ; Medicine, Science and the Law Volume 52 ; 52 >
         au < manifest ; 2013 ; Medicine, Science and the Law Volume 53 ; 53 >
         au < manifest ; 2014 ; Medicine, Science and the Law Volume 54 ; 54 >
-  
+
       }
-  
+
     }
-  
+
     {
-    
+
       title <
         name = Menopause International ;
         issn = 1754-0453 ;
         eissn = 1754-0461 ;
         issnl = 1754-0453
       >
-  
+
         pluginPrefix = org.lockss.plugin.highwire.
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-  
+
       {
-  
+
         param[base_url] = http://mi.rsmjournals.com/
-  
+
         au < HighWirePressPlugin ; down ; 2000 ; Menopause International Volume 6 [superseded] ; 6 >
         au < HighWirePressPlugin ; down ; 2001 ; Menopause International Volume 7 [superseded] ; 7 >
         au < HighWirePressPlugin ; down ; 2002 ; Menopause International Volume 8 [superseded] ; 8 >
@@ -47073,13 +47073,13 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; 2009 ; Menopause International Volume 15 [superseded] ; 15 >
         au < HighWirePressPlugin ; down ; 2010 ; Menopause International Volume 16 [superseded] ; 16 >
         au < HighWirePressPlugin ; down ; 2011 ; Menopause International Volume 17 [superseded] ; 17 >
-  
+
       }
-  
+
       {
-  
+
         param[base_url] = http://min.sagepub.com/
-  
+
         au < HighWirePressH20Plugin ; doNotProcess ; 2000 ; Menopause International Volume 6 ; 6 >
         au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; Menopause International Volume 7 ; 7 >
         au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; Menopause International Volume 8 ; 8 >
@@ -47094,57 +47094,57 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; Menopause International Volume 17 ; 17 >
         au < HighWirePressH20Plugin ; manifest ; 2012 ; Menopause International Volume 18 ; 18 >
         au < HighWirePressH20Plugin ; manifest ; 2013 ; Menopause International Volume 19 ; 19 >
-  
+
       }
-  
+
     }
-  
+
     {
-    
+
       title <
         name = Post Reproductive Health ;
         issn = 2053-3691 ;
         eissn = 2053-3705 ;
         issnl = 2053-3691
       >
-  
+
         plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
         param[base_url] = http://min.sagepub.com/
         comment[continues] = 1754-0453
-  
+
         au < manifest ; 2014 ; Post Reproductive Health Volume 20 ; 20 >
-  
+
     }
-  
+
     {
-    
+
       title <
         name = Obstetric Medicine ;
         issn = 1753-495X ;
         eissn = 1753-4968 ;
         issnl = 1753-495X
       >
-  
+
       {
 
         pluginPrefix = org.lockss.plugin.highwire.
         param[base_url] = http://obmed.rsmjournals.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-  
+
         au < HighWirePressPlugin ; down ; 2008 ; Obstetric Medicine Volume 1 [superseded] ; 1 >
         au < HighWirePressPlugin ; down ; 2009 ; Obstetric Medicine Volume 2 [superseded] ; 2 >
         au < HighWirePressPlugin ; down ; 2010 ; Obstetric Medicine Volume 3 [superseded] ; 3 >
         au < HighWirePressPlugin ; down ; 2011 ; Obstetric Medicine Volume 4 [superseded] ; 4 >
-  
+
       }
-  
+
       {
 
         pluginPrefix = org.lockss.plugin.highwire.
         param[base_url] = http://obm.sagepub.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-  
+
         au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; Obstetric Medicine Volume 1 ; 1 >
         au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; Obstetric Medicine Volume 2 ; 2 >
         au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; Obstetric Medicine Volume 3 ; 3 >
@@ -47152,27 +47152,27 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; exists ; 2012 ; Obstetric Medicine Volume 5 ; 5 >
         au < HighWirePressH20Plugin ; manifest ; 2013 ; Obstetric Medicine Volume 6 ; 6 >
         au < HighWirePressH20Plugin ; manifest ; 2014 ; Obstetric Medicine Volume 7 ; 7 >
-  
+
       }
-  
+
     }
-  
+
     {
-    
+
       title <
         name = Phlebology ;
         issn = 0268-3555 ;
         eissn = 1758-1125 ;
         issnl = 0268-3555
       >
-  
+
         pluginPrefix = org.lockss.plugin.highwire.
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       {
-  
+
         param[base_url] = http://phleb.rsmjournals.com/
-  
+
         au < HighWirePressPlugin ; down ; 2003 ; Phlebology Volume 18 [superseded] ; 18 >
         au < HighWirePressPlugin ; down ; 2004 ; Phlebology Volume 19 [superseded] ; 19 >
         au < HighWirePressPlugin ; down ; 2005 ; Phlebology Volume 20 [superseded] ; 20 >
@@ -47182,13 +47182,13 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; 2009 ; Phlebology Volume 24 [superseded] ; 24 >
         au < HighWirePressPlugin ; down ; 2010 ; Phlebology Volume 25 [superseded] ; 25 >
         au < HighWirePressPlugin ; down ; 2011 ; Phlebology Volume 26 [superseded] ; 26 >
-  
+
       }
-  
+
       {
-  
+
         param[base_url] = http://phl.sagepub.com/
-  
+
         au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; Phlebology Volume 18 ; 18 >
         au < HighWirePressH20Plugin ; doNotProcess ; 2004 ; Phlebology Volume 19 ; 19 >
         au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Phlebology Volume 20 ; 20 >
@@ -47201,40 +47201,40 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; exists ; 2012 ; Phlebology Volume 27 ; 27 >
         au < HighWirePressH20Plugin ; manifest ; 2013 ; Phlebology Volume 28 ; 28 >
         au < HighWirePressH20Plugin ; manifest ; 2014 ; Phlebology Volume 29 ; 29 >
-  
+
       }
-  
+
     }
-  
+
     {
-    
+
       title <
         name = Scottish Medical Journal ;
         issn = 0036-9330 ;
         eissn = 2045-6441
       >
-  
+
       {
-      
+
         plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
         param[base_url] = http://smj.rsmjournals.com/
         implicit < status ; year ; name ; param[volume_name] >
-  
+
         au < down ; 2006 ; Scottish Medical Journal Volume 51 [superseded] ; 51 >
         au < down ; 2007 ; Scottish Medical Journal Volume 52 [superseded] ; 52 >
         au < down ; 2008 ; Scottish Medical Journal Volume 53 [superseded] ; 53 >
         au < down ; 2009 ; Scottish Medical Journal Volume 54 [superseded] ; 54 >
         au < down ; 2010 ; Scottish Medical Journal Volume 55 [superseded] ; 55 >
         au < down ; 2011 ; Scottish Medical Journal Volume 56 [superseded] ; 56 >
-      
+
       }
-  
+
       {
-      
+
         plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
         param[base_url] = http://scm.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-  
+
         au < doNotProcess ; 2006 ; Scottish Medical Journal Volume 51 ; 51 >
         au < doNotProcess ; 2007 ; Scottish Medical Journal Volume 52 ; 52 >
         au < doNotProcess ; 2008 ; Scottish Medical Journal Volume 53 ; 53 >
@@ -47244,13 +47244,13 @@ comment[mpj] = now published by Brill
         au < expected ; 2012 ; Scottish Medical Journal Volume 57 ; 57 >
         au < manifest ; 2013 ; Scottish Medical Journal Volume 58 ; 58 >
         au < manifest ; 2014 ; Scottish Medical Journal Volume 59 ; 59 >
-      
+
       }
-  
+
     }
-  
+
     {
-    
+
       title <
         name = Tropical Doctor ;
         issn = 0049-4755 ;
@@ -47259,11 +47259,11 @@ comment[mpj] = now published by Brill
       >
         pluginPrefix = org.lockss.plugin.highwire.
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-        
+
       {
 
         param[base_url] = http://td.rsmjournals.com/
-  
+
         au < HighWirePressPlugin ; down ; 2005 ; Tropical Doctor Volume 35 [superseded] ; 35 >
         au < HighWirePressPlugin ; down ; 2006 ; Tropical Doctor Volume 36 [superseded] ; 36 >
         au < HighWirePressPlugin ; down ; 2007 ; Tropical Doctor Volume 37 [superseded] ; 37 >
@@ -47271,13 +47271,13 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; 2009 ; Tropical Doctor Volume 39 [superseded] ; 39 >
         au < HighWirePressPlugin ; down ; 2010 ; Tropical Doctor Volume 40 [superseded] ; 40 >
         au < HighWirePressPlugin ; down ; 2011 ; Tropical Doctor Volume 41 [superseded] ; 41 >
-  
+
       }
-  
+
       {
 
         param[base_url] = http://tdo.sagepub.com/
-  
+
         au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Tropical Doctor Volume 35 ; 35 >
         au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Tropical Doctor Volume 36 ; 36 >
         au < HighWirePressH20Plugin ; doNotProcess ; 2007 ; Tropical Doctor Volume 37 ; 37 >
@@ -47288,25 +47288,25 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; exists ; 2012 ; Tropical Doctor Volume 42 ; 42 >
         au < HighWirePressH20Plugin ; manifest ; 2013 ; Tropical Doctor Volume 43 ; 43 >
         au < HighWirePressH20Plugin ; manifest ; 2014 ; Tropical Doctor Volume 44 ; 44 >
-  
+
       }
-  
+
     }
-  
+
     {
-    
+
       title <
         name = Ultrasound ;
         issn = 1742-271X ;
         eissn = 1743-1344
       >
-  
+
       {
-      
+
         plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
         param[base_url] = http://ult.rsmjournals.com/
         implicit < status ; year ; name ; param[volume_name] >
-  
+
         au < down ; 2004 ; Ultrasound Volume 12 [superseded] ; 12 >
         au < down ; 2005 ; Ultrasound Volume 13 [superseded] ; 13 >
         au < down ; 2006 ; Ultrasound Volume 14 [superseded] ; 14 >
@@ -47315,15 +47315,15 @@ comment[mpj] = now published by Brill
         au < down ; 2009 ; Ultrasound Volume 17 [superseded] ; 17 >
         au < down ; 2010 ; Ultrasound Volume 18 [superseded] ; 18 >
         au < down ; 2011 ; Ultrasound Volume 19 [superseded] ; 19 >
-  
+
       }
-  
+
       {
-      
+
         plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
         param[base_url] = http://ult.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-  
+
         au < doNotProcess ; 2004 ; Ultrasound Volume 12 ; 12 >
         au < doNotProcess ; 2005 ; Ultrasound Volume 13 ; 13 >
         au < doNotProcess ; 2006 ; Ultrasound Volume 14 ; 14 >
@@ -47335,25 +47335,25 @@ comment[mpj] = now published by Brill
         au < exists ; 2012 ; Ultrasound Volume 20 ; 20 >
         au < manifest ; 2013 ; Ultrasound Volume 21 ; 21 >
         au < manifest ; 2014 ; Ultrasound Volume 22 ; 22 >
-  
+
       }
-  
+
     }
-  
+
     {
-    
+
       title <
         name = Vascular ;
         issn = 1708-5381 ;
         eissn = 1708-539X
       >
-      
+
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
      {
       param[base_url] = http://vascular.rsmjournals.com/
-  
+
       au < down ; 2004 ; Vascular Volume 12 ; 12 >
       au < down ; 2005 ; Vascular Volume 13 ; 13 >
       au < down ; 2006 ; Vascular Volume 14 ; 14 >
@@ -47363,10 +47363,10 @@ comment[mpj] = now published by Brill
       au < down ; 2011 ; Vascular Volume 19 ; 19 >
 
      }
-     
+
      {
       param[base_url] = http://vas.sagepub.com/
-  
+
       au < doNotProcess ; 2004 ; Vascular Volume 12 ; 12 >
       au < doNotProcess ; 2005 ; Vascular Volume 13 ; 13 >
       au < doNotProcess ; 2006 ; Vascular Volume 14 ; 14 >
@@ -47379,7 +47379,7 @@ comment[mpj] = now published by Brill
       au < manifest ; 2013 ; Vascular Volume 21 ; 21 >
       au < manifest ; 2014 ; Vascular Volume 22 ; 22 >
      }
-     
+
     }
 
   }
