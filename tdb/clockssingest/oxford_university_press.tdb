@@ -684,6 +684,7 @@
     au < finished ; frozen ; 2012 ; American Journal of Agricultural Economics Volume 94 ; 94 ; >
     au < crawling ; exists ; 2013 ; American Journal of Agricultural Economics Volume 95 ; 95 ; >
     au < crawling ; exists ; 2014 ; American Journal of Agricultural Economics Volume 96 ; 96 ; >
+    au < manifest ; exists ; 2015 ; American Journal of Agricultural Economics Volume 97 ; 97 ; >
 
     }
 
@@ -895,8 +896,9 @@
     au < finished ; crawling ; 2012 ; American Journal of Epidemiology Volume 176 ; 176 ; >
     au < crawling ; exists ; 2013 ; American Journal of Epidemiology Volume 177 ; 177 ; >
     au < crawling ; exists ; 2013 ; American Journal of Epidemiology Volume 178 ; 178 ; >
-    au < doNotProcess ; exists ; 2014 ; American Journal of Epidemiology Volume 179 ; 179 ; >
+    au < manifest ; exists ; 2014 ; American Journal of Epidemiology Volume 179 ; 179 ; >
     au < doNotProcess ; exists ; 2014 ; American Journal of Epidemiology Volume 180 ; 180 ; >
+    au < doNotProcess ; exists ; 2015 ; American Journal of Epidemiology Volume 181 ; 181 ; >
 
     }
 
@@ -942,7 +944,8 @@
     au < crawling ; exists ; 2011 ; American Journal of Hypertension Volume 24 ; 24 ; >
     au < crawling ; exists ; 2012 ; American Journal of Hypertension Volume 25 ; 25 ; >
     au < crawling ; exists ; 2013 ; American Journal of Hypertension Volume 26 ; 26 ; >
-    au < doNotProcess ; exists ; 2014 ; American Journal of Hypertension Volume 27 ; 27 ; >
+    au < manifest ; exists ; 2014 ; American Journal of Hypertension Volume 27 ; 27 ; >
+    au < doNotProcess ; exists ; 2015 ; American Journal of Hypertension Volume 28 ; 28 ; >
 
   }
 
@@ -1216,7 +1219,8 @@
     au < finished ; frozen ; 2011 ; Analysis Volume 71 ; 71 ; >
     au < finished ; frozen ; 2012 ; Analysis Volume 72 ; 72 ; >
     au < crawling ; exists ; 2013 ; Analysis Volume 73 ; 73 ; >
-    au < doNotProcess ; exists ; 2014 ; Analysis Volume 74 ; 74 ; >
+    au < manifest ; exists ; 2014 ; Analysis Volume 74 ; 74 ; >
+    au < doNotProcess ; exists ; 2015 ; Analysis Volume 75 ; 75 ; >
 
     }
 
@@ -1595,7 +1599,8 @@
     au < finished ; crawling ; 2011 ; Annals of Oncology Volume 22 ; 22 ; >
     au < finished ; frozen ; 2012 ; Annals of Oncology Volume 23 ; 23 ; >
     au < ingNotReady ; exists ; 2013 ; Annals of Oncology Volume 24 ; 24 ; >
-    au < doNotProcess ; exists ; 2014 ; Annals of Oncology Volume 25 ; 25 ; >
+    au < manifest ; exists ; 2014 ; Annals of Oncology Volume 25 ; 25 ; >
+    au < doNotProcess ; exists ; 2015 ; Annals of Oncology Volume 26 ; 26 ; >
 
     }
 
