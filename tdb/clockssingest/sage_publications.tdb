@@ -1334,7 +1334,7 @@
       au < finished ; frozen ; 2010 ; The American Journal of Sports Medicine Volume 38 ; 38 ; >
       au < finished ; frozen ; 2011 ; The American Journal of Sports Medicine Volume 39 ; 39 ; >
       au < zapped ; finished ; 2012 ; The American Journal of Sports Medicine Volume 40 ; 40 ; >
-      au < manifest ; exists ; 2013 ; The American Journal of Sports Medicine Volume 41 ; 41 ; >
+      au < ready ; exists ; 2013 ; The American Journal of Sports Medicine Volume 41 ; 41 ; >
       au < manifest ; exists ; 2014 ; The American Journal of Sports Medicine Volume 42 ; 42 ; >
       au < expected ; exists ; 2015 ; The American Journal of Sports Medicine Volume 43 ; 43 ; >
 
@@ -2663,7 +2663,7 @@
     au < manifest ; exists ; 2010 ; Asian Cardiovascular and Thoracic Annals Volume 18 ; 18 ; >
     au < manifest ; exists ; 2011 ; Asian Cardiovascular and Thoracic Annals Volume 19 ; 19 ; >
     au < manifest ; exists ; 2012 ; Asian Cardiovascular and Thoracic Annals Volume 20 ; 20 ; >
-    au < manifest ; exists ; 2013 ; Asian Cardiovascular and Thoracic Annals Volume 21 ; 21 ; >
+    au < ready ; exists ; 2013 ; Asian Cardiovascular and Thoracic Annals Volume 21 ; 21 ; >
     au < manifest ; exists ; 2014 ; Asian Cardiovascular and Thoracic Annals Volume 22 ; 22 ; >
     au < manifest ; exists ; 2015 ; Asian Cardiovascular and Thoracic Annals Volume 23 ; 23 ; >
 
@@ -3761,7 +3761,7 @@
         au < manifest ; exists ; 2010 ; The British Journal of Occupational Therapy Volume 73 ; 73 ; >
         au < manifest ; exists ; 2011 ; The British Journal of Occupational Therapy Volume 74 ; 74 ; >
         au < manifest ; exists ; 2012 ; The British Journal of Occupational Therapy Volume 75 ; 75 ; >
-        au < manifest ; exists ; 2013 ; The British Journal of Occupational Therapy Volume 76 ; 76 ; >
+        au < ready ; exists ; 2013 ; The British Journal of Occupational Therapy Volume 76 ; 76 ; >
         au < manifest ; exists ; 2014 ; The British Journal of Occupational Therapy Volume 77 ; 77 ; >
         au < expected ; exists ; 2015 ; The British Journal of Occupational Therapy Volume 78 ; 78 ; >
   }
@@ -3786,7 +3786,7 @@
         au < zapped ; finished ; 2010 ; British Journal of Pain Volume 4 ; 4 ; >
         au < zapped ; finished ; 2011 ; British Journal of Pain Volume 5 ; 5 ; >
         au < zapped ; finished ; 2012 ; British Journal of Pain Volume 6 ; 6 ; >
-        au < manifest ; exists ; 2013 ; British Journal of Pain Volume 7 ; 7 ; >
+        au < ready ; exists ; 2013 ; British Journal of Pain Volume 7 ; 7 ; >
         au < manifest ; exists ; 2014 ; British Journal of Pain Volume 8 ; 8 ; >
         au < expected ; exists ; 2015 ; British Journal of Pain Volume 9 ; 9 ; >
 
@@ -5144,7 +5144,7 @@
     au < exists ; exists ; 2010-2011 ; Christianity & Literature Volume 60 ; 60 ; >
     au < exists ; exists ; 2011-2012 ; Christianity & Literature Volume 61 ; 61 ; >
     au < exists ; exists ; 2012-2013 ; Christianity & Literature Volume 62 ; 62 ; >
-    au < manifest ; exists ; 2013-2014 ; Christianity & Literature Volume 63 ; 63 ; >
+    au < ready ; exists ; 2013-2014 ; Christianity & Literature Volume 63 ; 63 ; >
     au < manifest ; exists ; 2014-2015 ; Christianity & Literature Volume 64 ; 64 ; >
 
   }
@@ -8504,7 +8504,7 @@
       au < exists ; exists ; 2010 ; E-Learning and Digital Media Volume 7 ; 7 ; >
       au < exists ; exists ; 2011 ; E-Learning and Digital Media Volume 8 ; 8 ; >
       au < exists ; exists ; 2012 ; E-Learning and Digital Media Volume 9 ; 9 ; >
-      au < manifest ; exists ; 2013 ; E-Learning and Digital Media Volume 10 ; 10 ; >
+      au < ready ; exists ; 2013 ; E-Learning and Digital Media Volume 10 ; 10 ; >
       au < manifest ; exists ; 2014 ; E-Learning and Digital Media Volume 11 ; 11 ; >
       au < expected ; exists ; 2015 ; E-Learning and Digital Media Volume 12 ; 12 ; >
 
@@ -9116,7 +9116,7 @@
     au < exists ; exists ; 2011 ; Educational Horizons Volume 89 ; 89 ; >
     au < exists ; exists ; 2011-2012 ; Educational Horizons Volume 90 ; 90 ; >
     au < exists ; exists ; 2012-2013 ; Educational Horizons Volume 91 ; 91 ; >
-    au < manifest ; exists ; 2013-2014 ; Educational Horizons Volume 92 ; 92 ; >
+    au < ready ; exists ; 2013-2014 ; Educational Horizons Volume 92 ; 92 ; >
     au < manifest ; exists ; 2014-2015 ; Educational Horizons Volume 93 ; 93 ; >
 
   }
@@ -9694,7 +9694,7 @@
       au < exists ; exists ; 2010 ; European Educational Research Journal Volume 9 ; 9 ; >
       au < exists ; exists ; 2011 ; European Educational Research Journal Volume 10 ; 10 ; >
       au < exists ; exists ; 2012 ; European Educational Research Journal Volume 11 ; 11 ; >
-      au < manifest ; exists ; 2013 ; European Educational Research Journal Volume 12 ; 12 ; >
+      au < ready ; exists ; 2013 ; European Educational Research Journal Volume 12 ; 12 ; >
       au < manifest ; exists ; 2014 ; European Educational Research Journal Volume 13 ; 13 ; >
       au < expected ; exists ; 2015 ; European Educational Research Journal Volume 14 ; 14 ; >
 
@@ -13481,7 +13481,7 @@
       param[base_url] = http://ilr.sagepub.com/
 
       au < exists ; exists ; 2012 ; ILRReview: Industrial & Labor Relations Review Volume 65 ; 65 ; >
-      au < manifest ; exists ; 2013 ; ILRReview: Industrial & Labor Relations Review Volume 66 ; 66 ; >
+      au < ready ; exists ; 2013 ; ILRReview: Industrial & Labor Relations Review Volume 66 ; 66 ; >
       au < manifest ; exists ; 2014 ; ILRReview: Industrial & Labor Relations Review Volume 67 ; 67 ; >
   }
 
@@ -14112,7 +14112,7 @@
       param[base_url] = http://ioa.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 2013 ; Insight on Africa Volume 5 ; 5 ; >
+      au < ready ; exists ; 2013 ; Insight on Africa Volume 5 ; 5 ; >
       au < manifest ; exists ; 2014 ; Insight on Africa Volume 6 ; 6 ; >
       au < expected ; exists ; 2015 ; Insight on Africa Volume 7 ; 7 ; >
 
@@ -21756,7 +21756,7 @@
       au < exists ; exists ; 2010 ; Journal of the Intensive Care Society Volume 11 ; 11 ; >
       au < exists ; exists ; 2011 ; Journal of the Intensive Care Society Volume 12 ; 12 ; >
       au < exists ; exists ; 2012 ; Journal of the Intensive Care Society Volume 13 ; 13 ; >
-      au < manifest ; exists ; 2013 ; Journal of the Intensive Care Society Volume 14 ; 14 ; >
+      au < ready ; exists ; 2013 ; Journal of the Intensive Care Society Volume 14 ; 14 ; >
       au < manifest ; exists ; 2014 ; Journal of the Intensive Care Society Volume 15 ; 15 ; >
       au < expected ; exists ; 2015 ; Journal of the Intensive Care Society Volume 16 ; 16 ; >
 
@@ -21804,7 +21804,7 @@
     au < exists ; exists ; 2010 ; Journal of International Political Theory Volume 6 ; 6 ; >
     au < exists ; exists ; 2011 ; Journal of International Political Theory Volume 7 ; 7 ; >
     au < exists ; exists ; 2012 ; Journal of International Political Theory Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2013 ; Journal of International Political Theory Volume 9 ; 9 ; >
+    au < ready ; exists ; 2013 ; Journal of International Political Theory Volume 9 ; 9 ; >
     au < manifest ; exists ; 2014 ; Journal of International Political Theory Volume 10 ; 10 ; >
     au < expected ; exists ; 2015 ; Journal of International Political Theory Volume 11 ; 11 ; >
 
@@ -27403,7 +27403,7 @@
         au < crawling ; exists ; 2010 ; Medico-Legal Journal Volume 78 ; 78 ; >
         au < crawling ; exists ; 2011 ; Medico-Legal Journal Volume 79 ; 79 ; >
         au < finished ; frozen ; 2012 ; Medico-Legal Journal Volume 80 ; 80 ; >
-        au < manifest ; exists ; 2013 ; Medico-Legal Journal Volume 81 ; 81 ; >
+        au < ready ; exists ; 2013 ; Medico-Legal Journal Volume 81 ; 81 ; >
         au < manifest ; exists ; 2014 ; Medico-Legal Journal Volume 82 ; 82 ; >
         au < expected ; exists ; 2015 ; Medico-Legal Journal Volume 83 ; 83 ; >
 
@@ -30133,7 +30133,7 @@
       au < exists ; exists ; 2010 ; Policy Futures in Education Volume 8 ; 8 ; >
       au < exists ; exists ; 2011 ; Policy Futures in Education Volume 9 ; 9 ; >
       au < exists ; exists ; 2012 ; Policy Futures in Education Volume 10 ; 10 ; >
-      au < manifest ; exists ; 2013 ; Policy Futures in Education Volume 11 ; 11 ; >
+      au < ready ; exists ; 2013 ; Policy Futures in Education Volume 11 ; 11 ; >
       au < manifest ; exists ; 2014 ; Policy Futures in Education Volume 12 ; 12 ; >
       au < expected ; exists ; 2015 ; Policy Futures in Education Volume 13 ; 13 ; >
   }
@@ -33252,7 +33252,7 @@
     au < exists ; exists ; 2010 ; Review & Expositor Volume 107 ; 107 ; >
     au < exists ; exists ; 2011 ; Review & Expositor Volume 108 ; 108 ; >
     au < exists ; exists ; 2012 ; Review & Expositor Volume 109 ; 109 ; >
-    au < manifest ; exists ; 2013 ; Review & Expositor Volume 110 ; 110 ; >
+    au < ready ; exists ; 2013 ; Review & Expositor Volume 110 ; 110 ; >
     au < manifest ; exists ; 2014 ; Review & Expositor Volume 111 ; 111 ; >
     au < expected ; exists ; 2015 ; Review & Expositor Volume 112 ; 112 ; >
 
@@ -34358,7 +34358,7 @@
       au < exists ; exists ; 2010 ; Shoulder & Elbow Volume 2 ; 2 ; >
       au < exists ; exists ; 2011 ; Shoulder & Elbow Volume 3 ; 3 ; >
       au < exists ; exists ; 2012 ; Shoulder & Elbow Volume 4 ; 4 ; >
-      au < manifest ; exists ; 2013 ; Shoulder & Elbow Volume 5 ; 5 ; >
+      au < ready ; exists ; 2013 ; Shoulder & Elbow Volume 5 ; 5 ; >
       au < manifest ; exists ; 2014 ; Shoulder & Elbow Volume 6 ; 6 ; >
       au < manifest ; exists ; 2015 ; Shoulder & Elbow Volume 7 ; 7 ; >
 
@@ -36379,7 +36379,7 @@
       au < exists ; exists ; 2010 ; Technology in Cancer Research & Treatment Volume 9 ; 9 ; >
       au < exists ; exists ; 2011 ; Technology in Cancer Research & Treatment Volume 10 ; 10 ; >
       au < exists ; exists ; 2012 ; Technology in Cancer Research & Treatment Volume 11 ; 11 ; >
-      au < manifest ; exists ; 2013 ; Technology in Cancer Research & Treatment Volume 12 ; 12 ; >
+      au < ready ; exists ; 2013 ; Technology in Cancer Research & Treatment Volume 12 ; 12 ; >
       au < manifest ; exists ; 2014 ; Technology in Cancer Research & Treatment Volume 13 ; 13 ; >
       au < expected ; exists ; 2015 ; Technology in Cancer Research & Treatment Volume 14 ; 14 ; >
 
@@ -36628,7 +36628,7 @@
     au < exists ; exists ; 2010 ; Theological Studies Volume 71 ; 71 ; >
     au < exists ; exists ; 2011 ; Theological Studies Volume 72 ; 72 ; >
     au < manifest ; exists ; 2012 ; Theological Studies Volume 73 ; 73 ; >
-    au < manifest ; exists ; 2013 ; Theological Studies Volume 74 ; 74 ; >
+    au < ready ; exists ; 2013 ; Theological Studies Volume 74 ; 74 ; >
     au < manifest ; exists ; 2014 ; Theological Studies Volume 75 ; 75 ; >
     au < expected ; exists ; 2015 ; Theological Studies Volume 76 ; 76 ; >
 
@@ -37482,7 +37482,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://tav.sagepub.com/
 
-      au < manifest ; exists ; 2013 ; Therapeutic Advances in Vaccines Volume 1 ; 1 ; >
+      au < ready ; exists ; 2013 ; Therapeutic Advances in Vaccines Volume 1 ; 1 ; >
       au < manifest ; exists ; 2014 ; Therapeutic Advances in Vaccines Volume 2 ; 2 ; >
       au < manifest ; exists ; 2015 ; Therapeutic Advances in Vaccines Volume 3 ; 3 ; >
 
@@ -40928,7 +40928,7 @@
     au < exists ; exists ; 2010 ; ASN NEURO Volume 2 ; 2 ; >
     au < exists ; exists ; 2011 ; ASN NEURO Volume 3 ; 3 ; >
     au < exists ; exists ; 2012 ; ASN NEURO Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2013 ; ASN NEURO Volume 5 ; 5 ; >
+    au < ready ; exists ; 2013 ; ASN NEURO Volume 5 ; 5 ; >
     au < manifest ; exists ; 2014 ; ASN NEURO Volume 6 ; 6 ; >
     au < expected ; exists ; 2015 ; ASN NEURO Volume 7 ; 7 ; >
 
@@ -41034,7 +41034,7 @@
     au < exists ; exists ; 1988 ; Sociological Perspectives Volume 31 ; 31 ; >
     au < exists ; exists ; 2011 ; Sociological Perspectives Volume 54 ; 54 ; >
     au < exists ; exists ; 2012 ; Sociological Perspectives Volume 55 ; 55 ; >
-    au < manifest ; exists ; 2013 ; Sociological Perspectives Volume 56 ; 56 ; >
+    au < ready ; exists ; 2013 ; Sociological Perspectives Volume 56 ; 56 ; >
     au < testing ; exists ; 2014 ; Sociological Perspectives Volume 57 ; 57 ; >
     au < expected ; exists ; 2015 ; Sociological Perspectives Volume 58 ; 58 ; >
 
@@ -41296,7 +41296,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://ftr.sagepub.com/
 
-    au < manifest ; exists ; 2013 ; Foreign Trade Review Volume 48 ; 48 ; >
+    au < ready ; exists ; 2013 ; Foreign Trade Review Volume 48 ; 48 ; >
     au < manifest ; exists ; 2014 ; Foreign Trade Review Volume 49 ; 49 ; >
     au < expected ; exists ; 2015 ; Foreign Trade Review Volume 50 ; 50 ; >
 
@@ -41332,7 +41332,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://imr.sagepub.com/
 
-    au < manifest ; exists ; 2013 ; Journal of International Medical Research Volume 1 ; 1 ; >
+    au < ready ; exists ; 2013 ; Journal of International Medical Research Volume 1 ; 1 ; >
     au < expected ; exists ; 2014 ; Journal of International Medical Research Volume 2 ; 2 ; >
     au < expected ; exists ; 2015 ; Journal of International Medical Research Volume 3 ; 3 ; >
 
@@ -41808,7 +41808,7 @@
         au < exists ; exists ; 2010 ; Annals of Clinical Biochemistry Volume 47 ; 47 ; >
         au < exists ; exists ; 2011 ; Annals of Clinical Biochemistry Volume 48 ; 48 ; >
         au < exists ; exists ; 2012 ; Annals of Clinical Biochemistry Volume 49 ; 49 ; >
-        au < manifest ; exists ; 2013 ; Annals of Clinical Biochemistry Volume 50 ; 50 ; >
+        au < ready ; exists ; 2013 ; Annals of Clinical Biochemistry Volume 50 ; 50 ; >
         au < manifest ; exists ; 2014 ; Annals of Clinical Biochemistry Volume 51 ; 51 ; >
         au < exists ; exists ; 2015 ; Annals of Clinical Biochemistry Volume 52 ; 52 ; >
 
