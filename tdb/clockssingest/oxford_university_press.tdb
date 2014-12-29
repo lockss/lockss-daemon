@@ -391,6 +391,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Alcohol and Alcoholism Volume 47 ; 47 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Alcohol and Alcoholism Volume 48 ; 48 ; >
     au < manifest ; exists ; 2014 ; Alcohol and Alcoholism Volume 49 ; 49 ; >
+    au < expected ; exists ; 2015 ; Alcohol and Alcoholism Volume 50 ; 50 ; >
 
     }
 
@@ -3159,6 +3160,7 @@
     au < crawling ; exists ; 2014 ; British Medical Bulletin Volume 110 ; 110 ; >
     au < crawling ; exists ; 2014 ; British Medical Bulletin Volume 111 ; 111 ; >
     au < manifest ; exists ; 2014 ; British Medical Bulletin Volume 112 ; 112 ; >
+    au < expected ; exists ; 2015 ; British Medical Bulletin Volume 113 ; 113 ; >
 
     }
 
@@ -3215,6 +3217,7 @@
     au < crawling ; exists ; 2011 ; British Yearbook of International Law Volume 82 ; 82 ; >
     au < crawling ; exists ; 2012 ; British Yearbook of International Law Volume 83 ; 83 ; >
     au < manifest ; exists ; 2014 ; British Yearbook of International Law Volume 84 ; 84 ; >
+    au < expected ; exists ; 2015 ; British Yearbook of International Law Volume 85 ; 85 ; >
 
   }
 
@@ -6039,6 +6042,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; European Journal of Public Health Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; European Journal of Public Health Volume 23 ; 23 ; >
     au < manifest ; exists ; 2014 ; European Journal of Public Health Volume 24 ; 24 ; >
+    au < expected ; exists ; 2015 ; European Journal of Public Health Volume 25 ; 25 ; >
 
     }
 
@@ -6446,6 +6450,7 @@
     au < manifest ; exists ; 2013 ; FEMS Microbiology Ecology Volume 86 ; 86 ; >
     au < manifest ; exists ; 2014 ; FEMS Microbiology Ecology Volume 87 ; 87 ; >
     au < manifest ; exists ; 2014 ; FEMS Microbiology Ecology Volume 88 ; 88 ; >
+    au < expected ; exists ; 2015 ; FEMS Microbiology Ecology Volume 89 ; 89 ; >
 
   }
 
@@ -6701,6 +6706,7 @@
     au < manifest ; exists ; 2012 ; FEMS Microbiology Reviews Volume 36 ; 36 ; >
     au < manifest ; exists ; 2013 ; FEMS Microbiology Reviews Volume 37 ; 37 ; >
     au < manifest ; exists ; 2014 ; FEMS Microbiology Reviews Volume 38 ; 38 ; >
+    au < expected ; exists ; 2015 ; FEMS Microbiology Reviews Volume 39 ; 39 ; >
 
   }
 
@@ -12355,6 +12361,7 @@
     au < manifest ; exists ; 2012 ; Journal of Insect Science Volume 12 ; 12 ; >
     au < manifest ; exists ; 2013 ; Journal of Insect Science Volume 13 ; 13 ; >
     au < manifest ; exists ; 2014 ; Journal of Insect Science Volume 14 ; 14 ; >
+    au < expected ; exists ; 2015 ; Journal of Insect Science Volume 15 ; 15 ; >
 
     }
 
@@ -12918,6 +12925,7 @@
     au < manifest ; exists ; 2012 ; Journal of Mammalogy Volume 93 ; 93 ; >
     au < manifest ; exists ; 2013 ; Journal of Mammalogy Volume 94 ; 94 ; >
     au < manifest ; exists ; 2014 ; Journal of Mammalogy Volume 95 ; 95 ; >
+    au < expected ; exists ; 2015 ; Journal of Mammalogy Volume 96 ; 96 ; >
 
   }
 
@@ -16965,6 +16973,7 @@
     au < manifest ; exists ; 2012 ; Nutrition Reviews Volume 70 ; 70 ; >
     au < manifest ; exists ; 2013 ; Nutrition Reviews Volume 71 ; 71 ; >
     au < manifest ; exists ; 2014 ; Nutrition Reviews Volume 72 ; 72 ; >
+    au < expected ; exists ; 2015 ; Nutrition Reviews Volume 73 ; 73 ; >
 
   }
 
@@ -19574,6 +19583,7 @@
     au < ready ; exists ; 2014 ; Radiation Protection Dosimetry Volume 160 ; 160 ; >
     au < ready ; exists ; 2014 ; Radiation Protection Dosimetry Volume 161 ; 161 ; >
     au < manifest ; exists ; 2014 ; Radiation Protection Dosimetry Volume 162 ; 162 ; >
+    au < expected ; exists ; 2015 ; Radiation Protection Dosimetry Volume 163 ; 163 ; >
 
     }
 
@@ -19654,6 +19664,7 @@
     pluginSuffix = ClockssHighWireDrupalPlugin
 
     au < manifest ; exists ; 2014 ; Regenerative Biomaterials Volume 1 ; 1 ; >
+    au < expected ; exists ; 2015 ; Regenerative Biomaterials Volume 2 ; 2 ; >
 
   }
 
