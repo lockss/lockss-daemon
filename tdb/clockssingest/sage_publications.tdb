@@ -30136,6 +30136,24 @@
       au < ready ; exists ; 2013 ; Policy Futures in Education Volume 11 ; 11 ; >
       au < manifest ; exists ; 2014 ; Policy Futures in Education Volume 12 ; 12 ; >
       au < expected ; exists ; 2015 ; Policy Futures in Education Volume 13 ; 13 ; >
+
+  }
+
+  {
+
+    title <
+      name = Policy Insights from the Behavioral and Brain Sciences ;
+      issn = 2372-7322 ;
+      eissn = 2372-7330 ;
+      issnl = 2372-7322
+    >
+
+      param[base_url] = http://bbs.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2014 ; Policy Insights from the Behavioral and Brain Sciences Volume 1 ; 1 ; >
+      au < expected ; exists ; 2015 ; Policy Insights from the Behavioral and Brain Sciences Volume 2 ; 2 ; >
+
   }
 
   {
