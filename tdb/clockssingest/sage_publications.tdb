@@ -9,10 +9,10 @@
   pluginPrefix = org.lockss.plugin.highwire.
   implicit < status ; status2 ; year ; name ; param[volume_name] ; comment[proxy] >
   attr[au_feature_key]=pdf
-  
+
 
   {
-  
+
     title <
 
       name = Accounting History ;
@@ -61,7 +61,7 @@
   }
 
   {
-  
+
     title <
       name = Acta Sociologica ;
       issn = 0001-6993 ;
@@ -145,25 +145,25 @@
     }
 
   }
-  
+
      {
-    
+
      title <
        name = Acta Radiologica Short Reports ;
        eissn =  2047-9816
      >
-       
+
        param[base_url] = http://arr.sagepub.com/
        pluginSuffix = ClockssHighWirePressH20Plugin
-       
+
        au < exists ; exists ; 2012 ; Acta Radiologica Short Reports Volume 1 ; 1 ; >
        au < crawling ; exists ; 2013 ; Acta Radiologica Short Reports Volume 2 ; 2 ; >
        au < crawling ; exists ; 2014 ; Acta Radiologica Short Reports Volume 3 ; 3 ; >
-       
+
   }
-    
+
   {
-  
+
     title <
       name = Action Research ;
       issn = 1476-7503 ;
@@ -205,7 +205,7 @@
   }
 
   {
-  
+
     title <
       name = Active Learning in Higher Education ;
       issn = 1469-7874 ;
@@ -250,7 +250,7 @@
   }
 
   {
-  
+
     title <
       name = Adaptive Behavior ;
       issn = 1059-7123 ;
@@ -302,7 +302,7 @@
   }
 
   {
-  
+
     title <
       name = Administration & Society ;
       issn = 0095-3997 ;
@@ -381,7 +381,7 @@
 
     title <
       name = Administrative Science Quarterly ;
-      issn = 0001-8392 
+      issn = 0001-8392
     >
 
     param[base_url] = http://asq.sagepub.com/
@@ -413,7 +413,7 @@
   }
 
   {
-  
+
     title <
       name = Adult Education Quarterly ;
       issn = 0741-7136 ;
@@ -505,22 +505,22 @@
     }
 
   }
-  
+
   {
-    
+
       title <
         name = Adult Learning ;
         issn = 1045-1595 ;
         eissn = 2162-4070
-        
+
       >
-      
+
       param[base_url] = http://alx.sagepub.com/
-      
+
       {
-      
+
         pluginSuffix = ClockssHighWirePressH20Plugin
-        
+
         au < zapped ; finished ; 1998-1999 ; Adult Learning Volume 10 ; 10 ; >
         au < zapped ; finished ; 1999-2000 ; Adult Learning Volume 11 ; 11 ; >
         au < finished ; frozen ; 2001 ; Adult Learning Volume 12 ; 12 ; >
@@ -537,13 +537,13 @@
         au < zapped ; finished ; 2012 ; Adult Learning Volume 23 ; 23 ; >
         au < crawling ; exists ; 2013 ; Adult Learning Volume 24 ; 24 ; >
         au < crawling ; exists ; 2014 ; Adult Learning Volume 25 ; 25 ; >
-      
+
       }
-      
+
     }
 
   {
-  
+
     title <
       name = Advances in Dental Research ;
       issn = 0895-9374 ;
@@ -599,7 +599,7 @@
   }
 
   {
-  
+
     title <
       name = Advances in Developing Human Resources ;
       issn = 1523-4223 ;
@@ -649,7 +649,7 @@
     title <
       name = Aesthetic Surgery Journal ;
       issn = 1090-820X ;
-      eissn = 1527-330X 
+      eissn = 1527-330X
     >
 
     param[base_url] = http://aes.sagepub.com/
@@ -684,7 +684,7 @@
   }
 
   {
-  
+
     title <
       name = Affilia ;
       issn = 0886-1099 ;
@@ -753,7 +753,7 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
-      
+
       comment[error] = manifest page has no links for V2. http://ags.sagepub.com/clockss-manifest/vol_2_manifest.dtl
 
       au < finished ; frozen ; 2012 ; Agrarian South: Journal of Political Economy Volume 1 ; 1 ; >
@@ -794,7 +794,7 @@
   }
 
   {
-  
+
     title <
       name = American Behavioral Scientist ;
       issn = 0002-7642 ;
@@ -882,7 +882,7 @@
   }
 
   {
-  
+
     title <
       name = American Educational Research Journal ;
       issn = 0002-8312 ;
@@ -962,7 +962,7 @@
   }
 
   {
-  
+
     title <
       name = American Journal of Alzheimer's Disease and Other Dementias ;
       issn = 1533-3175 ;
@@ -1020,7 +1020,7 @@
   }
 
   {
-  
+
     title <
       name = American Journal of Evaluation ;
       issn = 1098-2140 ;
@@ -1085,7 +1085,7 @@
   }
 
   {
-  
+
     title <
       name = American Journal of Hospice and Palliative Medicine ;
       issn = 1049-9091 ;
@@ -1146,7 +1146,7 @@
   }
 
   {
-  
+
     title <
       name = American Journal of Lifestyle Medicine ;
       issn = 1559-8276 ;
@@ -1184,7 +1184,7 @@
   }
 
   {
-  
+
     title <
       name = American Journal of Medical Quality ;
       issn = 1062-8606 ;
@@ -1243,7 +1243,7 @@
   }
 
   {
-  
+
     title <
       name = American Journal of Men's Health ;
       issn = 1557-9883 ;
@@ -1285,7 +1285,7 @@
     title <
       name = The American Journal of Sports Medicine ;
       issn = 0363-5465 ;
-      eissn = 1552-3365 
+      eissn = 1552-3365
     >
 
     param[base_url] = http://ajs.sagepub.com/
@@ -1343,7 +1343,7 @@
   }
 
   {
-  
+
     title <
       name = American Politics Research ;
       issn = 1532-673X ;
@@ -1408,13 +1408,13 @@
       au < finished ; crawling ; 2012 ; American Politics Research Volume 40 ; 40 ; >
       au < crawling ; exists ; 2013 ; American Politics Research Volume 41 ; 41 ; >
       au < manifest ; exists ; 2014 ; American Politics Research Volume 42 ; 42 ; >
- 
+
     }
 
   }
 
   {
-  
+
     title <
       name = The American Review of Public Administration ;
       issn = 0275-0740 ;
@@ -1492,7 +1492,7 @@
     title <
       name = American Sociological Review ;
       issn = 0003-1224 ;
-      eissn = 1939-8271 
+      eissn = 1939-8271
     >
 
     param[base_url] = http://asr.sagepub.com/
@@ -1519,7 +1519,7 @@
   }
 
   {
-  
+
     title <
       name = Angiology ;
       issn = 0003-3197 ;
@@ -1614,7 +1614,7 @@
   }
 
   {
-  
+
     title <
       name = Animation ;
       issn = 1746-8477 ;
@@ -1653,7 +1653,7 @@
   }
 
   {
-  
+
     title <
       name = The Annals of the American Academy of Political and Social Science ;
       issn = 0002-7162 ;
@@ -2341,17 +2341,17 @@
       au < manifest ; exists ; 2014 ; The Annals of the American Academy of Political and Social Science Volume 654 ; 654 ; >
       au < manifest ; exists ; 2014 ; The Annals of the American Academy of Political and Social Science Volume 655 ; 655 ; >
       au < manifest ; exists ; 2014 ; The Annals of the American Academy of Political and Social Science Volume 656 ; 656 ; >
- 
+
     }
 
   }
 
   {
-  
+
     title <
       name = Annals of Pharmacotherapy ;
       issn = 1060-0280 ;
-      eissn = 1542-6270 
+      eissn = 1542-6270
     >
 
     param[base_url] = http://aop.sagepub.com/
@@ -2384,11 +2384,11 @@
   }
 
   {
-  
+
     title <
       name = Annals of Otology, Rhinology & Laryngology ;
       issn = 0003-4894 ;
-      eissn = 1943-572X 
+      eissn = 1943-572X
     >
 
       param[base_url] = http://aor.sagepub.com/
@@ -2418,7 +2418,7 @@
   }
 
   {
-  
+
     title <
       name = Anthropological Theory ;
       issn = 1463-4996 ;
@@ -2456,13 +2456,13 @@
       au < crawling ; exists ; 2013 ; Anthropological Theory Volume 13 ; 13 ; >
       au < manifest ; exists ; 2014 ; Anthropological Theory Volume 14 ; 14 ; >
       au < expected ; exists ; 2015 ; Anthropological Theory Volume 15 ; 15 ; >
- 
+
     }
 
   }
 
   {
-  
+
     title <
       name = Applied Psychological Measurement ;
       issn = 0146-6216 ;
@@ -2530,7 +2530,7 @@
   }
 
   {
-  
+
     title <
       name = Armed Forces & Society ;
       issn = 0095-327X ;
@@ -2599,7 +2599,7 @@
   }
 
   {
-  
+
     title <
       name = Arts and Humanities in Higher Education ;
       issn = 1474-0222 ;
@@ -2646,7 +2646,7 @@
     title <
       name = Asian Cardiovascular and Thoracic Annals ;
       issn = 0218-4923 ;
-      eissn = 1816-5370 
+      eissn = 1816-5370
     >
 
     pluginSuffix = ClockssHighWirePressH20Plugin
@@ -2666,7 +2666,7 @@
     au < manifest ; exists ; 2015 ; Asian Cardiovascular and Thoracic Annals Volume 23 ; 23 ; >
 
   }
-    
+
     {
 
     title <
@@ -2683,9 +2683,9 @@
     au < expected ; exists ; 2015 ; Asian Journal of Legal Education Volume 2 ; 2 ; >
 
   }
-    
+
   {
-  
+
     title <
       name = Asian Journal of Management Cases ;
       issn = 0972-8201 ;
@@ -2726,7 +2726,7 @@
   }
 
   {
-  
+
     title <
       name = Asia Pacific Journal of Human Resources ;
       issn = 1038-4111 ;
@@ -2748,7 +2748,7 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
-      
+
         Comment[moved] = to Whiley but content through 2011 remains here.
 
       au < manifest ; exists ; 1966 ; Asia Pacific Journal of Human Resources Volume 1 ; 1 ; >
@@ -2806,7 +2806,7 @@
   }
 
   {
-  
+
     title <
       name = Asia-Pacific Journal of Public Health ;
       issn = 1010-5395 ;
@@ -2885,7 +2885,7 @@
     }
 
   {
-  
+
     title <
       name = Assessment ;
       issn = 1073-1911 ;
@@ -2935,7 +2935,7 @@
   }
 
   {
-  
+
     title <
       name = Assessment for Effective Intervention ;
       issn = 1534-5084 ;
@@ -3005,7 +3005,7 @@
       issn = 0004-8658 ;
       eissn = 1837-9273
     >
-   
+
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
@@ -3061,7 +3061,7 @@
       au < expected ; exists ; 2015 ; Australian & New Zealand Journal of Criminology Volume 48 ; 48 ; >
 
     }
-   
+
   }
 
   {
@@ -3069,7 +3069,7 @@
     title <
       name = Australian & New Zealand Journal of Psychiatry ;
       issn = 0004-8674 ;
-      eissn = 1440-1614 
+      eissn = 1440-1614
     >
 
     param[base_url] = http://anp.sagepub.com/
@@ -3136,7 +3136,7 @@
     title <
       name = Australian Journal of Management ;
       issn = 0312-8962 ;
-      eissn = 1327-2020 
+      eissn = 1327-2020
     >
 
     param[base_url] = http://aum.sagepub.com/
@@ -3191,7 +3191,7 @@
   }
 
   {
-  
+
     title <
       name = Autism ;
       issn = 1362-3613 ;
@@ -3247,12 +3247,12 @@
       issnl = 0967-5507
     >
 
-    rights = openaccess 
+    rights = openaccess
     plugin = org.lockss.plugin.autobiography.ClockssAutoBiographyPlugin
     param[base_url] = http://autobiography.stanford.clockss.org/
     param[journal_id] = aub
     implicit < status ; status2 ; year ; name ; param[volume_name] >
-      
+
     au < finished ; crawling ; 2004 ; Auto/Biography Volume 12 ; 12 >
     au < finished ; crawling ; 2005 ; Auto/Biography Volume 13 ; 13 >
     au < finished ; crawling ; 2006-2007 ; Auto/Biography Volume 14 ; 14 >
@@ -3264,7 +3264,7 @@
     title <
       name = Australasian Psychiatry ;
       issn = 1039-8562 ;
-      eissn = 1440-1665 
+      eissn = 1440-1665
     >
 
     param[base_url] = http://apy.sagepub.com/
@@ -3302,7 +3302,7 @@
   }
 
   {
-  
+
     title <
       name = Behavior Modification ;
       issn = 0145-4455 ;
@@ -3374,7 +3374,7 @@
     title <
       name = Behavioral and Cognitive Neuroscience Reviews ;
       issn = 1534-5823 ;
-      eissn = 1552-4159 
+      eissn = 1552-4159
     >
 
     param[base_url] = http://bcn.sagepub.com/
@@ -3421,7 +3421,7 @@
     }
 
   {
-  
+
     title <
       name = Biblical Theology Bulletin: Journal of Bible and Theology ;
       issn = 0146-1079 ;
@@ -3509,7 +3509,7 @@
   }
 
   {
-  
+
     title <
       name = Biological Research For Nursing ;
       issn = 1099-8004 ;
@@ -3558,7 +3558,7 @@
     title <
       name = BioScope: South Asian Screen Studies ;
       issn = 0974-9276 ;
-      eissn = 0976-352X 
+      eissn = 0976-352X
     >
 
     param[base_url] = http://bio.sagepub.com/
@@ -3579,7 +3579,7 @@
   }
 
   {
-  
+
     title <
       name = Body & Society ;
       issn = 1357-034X ;
@@ -3628,7 +3628,7 @@
   }
 
   {
-  
+
     title <
       name = The British Journal of Diabetes & Vascular Disease ;
       issn = 1474-6514 ;
@@ -3683,7 +3683,7 @@
 
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://bjo.sagepub.com/
-        
+
         au < manifest ; exists ; 1938 ; The British Journal of Occupational Therapy Volume 1 ; 1 ; >
         au < manifest ; exists ; 1939 ; The British Journal of Occupational Therapy Volume 2 ; 2 ; >
         au < manifest ; exists ; 1940 ; The British Journal of Occupational Therapy Volume 3 ; 3 ; >
@@ -3789,11 +3789,11 @@
         au < expected ; exists ; 2015 ; British Journal of Pain Volume 9 ; 9 ; >
 
       }
-      
-    }    
+
+    }
 
   {
-  
+
     title <
       name = British Journal of Visual Impairment ;
       issn = 0264-6196 ;
@@ -3855,7 +3855,7 @@
   }
 
   {
-  
+
     title <
       name = British Journalism Review ;
       issn = 0956-4748 ;
@@ -3910,7 +3910,7 @@
   }
 
   {
-  
+
     title <
       name = Building Services Engineering Research and Technology ;
       issn = 0143-6244 ;
@@ -3975,7 +3975,7 @@
   }
 
   {
-  
+
     title <
       name = Bulletin of Science, Technology & Society ;
       issn = 0270-4676 ;
@@ -4043,7 +4043,7 @@
     title <
       name = Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique ;
       issn = 0759-1063 ;
-      eissn = 2070-2779 
+      eissn = 2070-2779
     >
 
     param[base_url] = http://bms.sagepub.com/
@@ -4187,7 +4187,7 @@
     title <
       name = Bulletin of the Atomic Scientists ;
       issn = 0096-3402 ;
-      eissn = 1938-3282 
+      eissn = 1938-3282
     >
 
     param[base_url] = http://bos.sagepub.com/
@@ -4219,7 +4219,7 @@
   }
 
   {
-  
+
     title <
       name = Business & Society ;
       issn = 0007-6503 ;
@@ -4302,7 +4302,7 @@
   }
 
   {
-  
+
     title <
       name = Business Communication Quarterly ;
       issn = 1080-5699 ;
@@ -4400,7 +4400,7 @@
   }
 
   {
-  
+
     title <
       name = Business Information Review ;
       issn = 0266-3821 ;
@@ -4461,7 +4461,7 @@
   }
 
   {
-  
+
     title <
       name = Canadian Journal of School Psychology ;
       issn = 0829-5735 ;
@@ -4516,7 +4516,7 @@
     title <
       name = Capital & Class ;
       issn = 0309-8168 ;
-      eissn = 2041-0980 
+      eissn = 2041-0980
     >
 
     param[base_url] = http://cnc.sagepub.com/
@@ -4574,13 +4574,13 @@
     title <
       name = Cardiac Cath Lab Director ;
       issn = 2150-1335 ;
-      eissn = 2150-0134 
+      eissn = 2150-0134
     >
 
     param[base_url] = http://ccl.sagepub.com/
 
     {
-    
+
       comment[0] = Ceasing publication but still online as of Jan 2012.
 
       pluginSuffix = ClockssHighWirePressH20Plugin
@@ -4592,7 +4592,7 @@
   }
 
   {
-  
+
     title <
       name = Career Development for Exceptional Individuals ;
       issn = 0885-7288 ;
@@ -4601,7 +4601,7 @@
     >
 
     param[base_url] = http://cde.sagepub.com/
-    
+
     comment[continued_by] = Name/ISSN changed after 2011 to 2165-1434 Career Development and Transition for Exceptional Individuals
 
     {
@@ -4667,7 +4667,7 @@
       >
 
        comment[previously] = Career Development for Exceptional Individuals
-       
+
       {
 
         pluginSuffix = ClockssHighWirePressH20Plugin
@@ -4682,7 +4682,7 @@
 
     }
   {
-  
+
     title <
       name = Cartilage ;
       issn = 1947-6035 ;
@@ -4720,7 +4720,7 @@
     title <
       name = Cephalalgia ;
       issn = 0333-1024 ;
-      eissn = 1468-2982 
+      eissn = 1468-2982
     >
 
     param[base_url] = http://cep.sagepub.com/
@@ -4770,7 +4770,7 @@
   }
 
   {
-  
+
     title <
       name = Child Language Teaching and Therapy ;
       issn = 0265-6590 ;
@@ -4830,7 +4830,7 @@
   }
 
   {
-  
+
     title <
       name = Child Maltreatment ;
       issn = 1077-5595 ;
@@ -4893,7 +4893,7 @@
   }
 
   {
-  
+
     title <
       name = Childhood ;
       issn = 0907-5682 ;
@@ -4943,7 +4943,7 @@
   }
 
   {
-  
+
     title <
       name = China Information ;
       issn = 0920-203X ;
@@ -5000,7 +5000,7 @@
   }
 
   {
-  
+
     title <
       name = China Report ;
       issn = 0009-4455 ;
@@ -5070,7 +5070,7 @@
   }
 
   {
-  
+
     title <
       name = Christianity & Literature ;
       issn = 0148-3331 ;
@@ -5148,7 +5148,7 @@
   }
 
   {
-  
+
     title <
       name = Chronic Illness ;
       issn = 1742-3953 ;
@@ -5187,7 +5187,7 @@
   }
 
   {
-  
+
     title <
       name = Chronic Respiratory Disease ;
       issn = 1479-9723 ;
@@ -5227,7 +5227,7 @@
   }
 
   {
-  
+
     title <
       name = Clin-Alert ;
       issn = 0069-4770 ;
@@ -5309,7 +5309,7 @@
   }
 
   {
-  
+
     title <
       name = Clinical and Applied Thrombosis/Hemostasis ;
       issn = 1076-0296 ;
@@ -5358,7 +5358,7 @@
   }
 
   {
-  
+
     title <
       name = Clinical Case Studies ;
       issn = 1534-6501 ;
@@ -5400,7 +5400,7 @@
   }
 
   {
-  
+
     title <
       name = Clinical Child Psychology and Psychiatry ;
       issn = 1359-1045 ;
@@ -5486,11 +5486,11 @@
         au < finished ; frozen ; 2012 ; Clinical EEG and Neuroscience Volume 43 ; 43 ; >
         au < crawling ; exists ; 2013 ; Clinical EEG and Neuroscience Volume 44 ; 44 ; >
         au < manifest ; exists ; 2014 ; Clinical EEG and Neuroscience Volume 45 ; 45 ; >
-      
+
     }
-    
+
   {
-  
+
     title <
       name = Clinical Nursing Research ;
       issn = 1054-7738 ;
@@ -5543,7 +5543,7 @@
   }
 
   {
-  
+
     title <
       name = Clinical Pediatrics ;
       issn = 0009-9228 ;
@@ -5638,14 +5638,14 @@
 
 
     {
-    
+
       pluginSuffix = ClockssHighWirePressH20Plugin
       comment[publisher] = Moving to Wiley Blackwell in 2013
 
       au < down ; frozen ; 2012 ; Clinical Pharmacology in Drug Development Volume 1 ; 1 ; >
 
     }
-    
+
   }
 
   {
@@ -5670,7 +5670,7 @@
   }
 
   {
-  
+
     title <
       name = Clinical Rehabilitation ;
       issn = 0269-2155 ;
@@ -5728,7 +5728,7 @@
   }
 
   {
-  
+
     title <
       name = Clinical Trials ;
       issn = 1740-7745 ;
@@ -5770,7 +5770,7 @@
   }
 
   {
-  
+
     title <
       name = Clothing and Textiles Research Journal ;
       issn = 0887-302X ;
@@ -5832,7 +5832,7 @@
   }
 
   {
-  
+
     title <
       name = Communication Disorders Quarterly ;
       issn = 1525-7401 ;
@@ -5898,7 +5898,7 @@
   }
 
   {
-  
+
     title <
       name = Communication Research ;
       issn = 0093-6502 ;
@@ -5969,7 +5969,7 @@
   }
 
   {
-  
+
     title <
       name = Community College Review ;
       issn = 0091-5521 ;
@@ -6041,7 +6041,7 @@
   }
 
   {
-  
+
     title <
       name = Comparative Political Studies ;
       issn = 0010-4140 ;
@@ -6118,7 +6118,7 @@
   }
 
   {
-  
+
     title <
       name = Compensation & Benefits Review ;
       issn = 0886-3687 ;
@@ -6239,7 +6239,7 @@
       au < zapped ; finished ; 2009 ; Complementary Health Practice Review Volume 14 ; 14 ; reingest1.clockss.org:8082 >
 
     }
-    
+
       {
 
         pluginSuffix = ClockssHighWirePressH20Plugin
@@ -6260,13 +6260,13 @@
     }
 
   {
-  
+
     title <
       name = Journal of Evidence-Based Complementary & Alternative Medicine ;
       issn = 2156-5872 ;
       eissn = 2156-5899
     >
-    
+
       comment[jebcam] = 2011-01-01 name changed from Complementary Health Practice to Journal of Evidence-Based Complementary & Alternative Medicine, but ISSN did not.
 
       param[base_url] = http://chp.sagepub.com/
@@ -6286,7 +6286,7 @@
   }
 
   {
-  
+
     title <
       name = Concurrent Engineering ;
       issn = 1063-293X ;
@@ -6338,7 +6338,7 @@
   }
 
   {
-  
+
     title <
       name = Conflict Management and Peace Science ;
       issn = 0738-8942 ;
@@ -6403,7 +6403,7 @@
     title <
       name = Contemporary Education Dialogue ;
       issn = 0973-1849 ;
-      eissn = 2249-5320 
+      eissn = 2249-5320
     >
 
     param[base_url] = http://ced.sagepub.com/
@@ -6434,7 +6434,7 @@
       title <
         name = Contemporary Review of the Middle East ;
         issn = 2347-7989 ;
-        eissn = 2349-0055 
+        eissn = 2349-0055
       >
 
       pluginSuffix = ClockssHighWirePressH20Plugin
@@ -6450,7 +6450,7 @@
     title <
       name = Contemporary Sociology: A Journal of Reviews ;
       issn = 0094-3061 ;
-      eissn = 1939-8638 
+      eissn = 1939-8638
     >
 
     param[base_url] = http://csx.sagepub.com/
@@ -6481,7 +6481,7 @@
     title <
       name = Contexts ;
       issn = 1536-5042 ;
-      eissn = 1537-6052 
+      eissn = 1537-6052
     >
 
     param[base_url] = http://ctx.sagepub.com/
@@ -6510,7 +6510,7 @@
   }
 
   {
-  
+
     title <
       name = Contributions to Indian Sociology ;
       issn = 0069-9667 ;
@@ -6588,7 +6588,7 @@
   }
 
   {
-  
+
     title <
       name = Convergence: The International Journal of Research into New Media Technologies ;
       issn = 1354-8565 ;
@@ -6638,7 +6638,7 @@
   }
 
   {
-  
+
     title <
       name = Cooperation and Conflict ;
       issn = 0010-8367 ;
@@ -6717,7 +6717,7 @@
   }
 
   {
-  
+
     title <
       name = Cornell Hospitality Quarterly ;
       issn = 1938-9655 ;
@@ -6806,7 +6806,7 @@
     title <
       name = Counseling Outcome Research and Evaluation ;
       issn = 2150-1378 ;
-      eissn = 2150-1386 
+      eissn = 2150-1386
     >
 
     param[base_url] = http://cor.sagepub.com/
@@ -6827,7 +6827,7 @@
   }
 
   {
-  
+
     title <
       name = The Counseling Psychologist ;
       issn = 0011-0000 ;
@@ -6899,7 +6899,7 @@
   }
 
   {
-  
+
     title <
       name = Crime & Delinquency ;
       issn = 0011-1287 ;
@@ -6989,7 +6989,7 @@
   }
 
   {
-  
+
     title <
       name = Crime, Media, Culture ;
       issn = 1741-6590 ;
@@ -7029,7 +7029,7 @@
   }
 
   {
-  
+
     title <
       name = Criminal Justice and Behavior ;
       issn = 0093-8548 ;
@@ -7100,7 +7100,7 @@
   }
 
   {
-  
+
     title <
       name = Criminal Justice Policy Review ;
       issn = 0887-4034 ;
@@ -7155,7 +7155,7 @@
   }
 
   {
-  
+
     title <
       name = Criminal Justice Review ;
       issn = 0734-0168 ;
@@ -7224,7 +7224,7 @@
   }
 
   {
-  
+
     title <
       name = Criminology and Criminal Justice ;
       issn = 1748-8958 ;
@@ -7272,7 +7272,7 @@
     title <
       name = Critical Reviews in Oral Biology & Medicine ;
       issn = 1045-4411 ;
-      eissn = 1544-1113 
+      eissn = 1544-1113
     >
 
     param[base_url] = http://cro.sagepub.com/
@@ -7302,7 +7302,7 @@
   }
 
   {
-  
+
     title <
       name = Critical Social Policy ;
       issn = 0261-0183 ;
@@ -7366,7 +7366,7 @@
   }
 
   {
-  
+
     title <
       name = Critical Sociology ;
       issn = 0896-9205 ;
@@ -7436,7 +7436,7 @@
   }
 
   {
-  
+
     title <
       name = Critique of Anthropology ;
       issn = 0308-275X ;
@@ -7500,7 +7500,7 @@
   }
 
   {
-  
+
     title <
       name = Cross-Cultural Research ;
       issn = 1069-3971 ;
@@ -7578,7 +7578,7 @@
   }
 
   {
-  
+
     title <
       name = Cultural Dynamics ;
       issn = 0921-3740 ;
@@ -7634,7 +7634,7 @@
   }
 
   {
-  
+
     title <
       name = Cultural Geographies ;
       issn = 1474-4740 ;
@@ -7685,7 +7685,7 @@
   }
 
   {
-  
+
     title <
       name = Cultural Sociology ;
       issn = 1749-9755 ;
@@ -7723,7 +7723,7 @@
   }
 
   {
-  
+
     title <
       name = Cultural Studies <=\> Critical Methodologies ;
       issn = 1532-7086 ;
@@ -7767,7 +7767,7 @@
   }
 
   {
-  
+
     title <
       name = Culture & Psychology ;
       issn = 1354-067X ;
@@ -7821,7 +7821,7 @@
     title <
       name = Current Directions in Psychological Science ;
       issn = 0963-7214 ;
-      eissn = 1467-8721 
+      eissn = 1467-8721
     >
 
     param[base_url] = http://cdp.sagepub.com/
@@ -7860,7 +7860,7 @@
   }
 
   {
-  
+
     title <
       name = Current Sociology ;
       issn = 0011-3921 ;
@@ -7952,7 +7952,7 @@
   }
 
   {
-  
+
     title <
       name = Currents in Biblical Research ;
       issn = 1476-993X ;
@@ -7995,7 +7995,7 @@
   }
 
   {
-  
+
     title <
       name = Dementia ;
       issn = 1471-3012 ;
@@ -8038,7 +8038,7 @@
   }
 
   {
-  
+
     title <
       name = Diabetes and Vascular Disease Research ;
       issn = 1479-1641 ;
@@ -8079,7 +8079,7 @@
   }
 
   {
-  
+
     title <
       name = The Diabetes Educator ;
       issn = 0145-7217 ;
@@ -8149,7 +8149,7 @@
     title <
       name = Dialogues in Human Geography ;
       issn = 2043-8206 ;
-      eissn = 2043-8214 
+      eissn = 2043-8214
     >
 
     param[base_url] = http://dhg.sagepub.com/
@@ -8169,7 +8169,7 @@
   }
 
   {
-  
+
     title <
       name = Diogenes ;
       issn = 0392-1921 ;
@@ -8257,7 +8257,7 @@
   }
 
   {
-  
+
     title <
       name = Discourse & Communication ;
       issn = 1750-4813 ;
@@ -8295,7 +8295,7 @@
   }
 
   {
-  
+
     title <
       name = Discourse & Society ;
       issn = 0957-9265 ;
@@ -8350,7 +8350,7 @@
   }
 
   {
-  
+
     title <
       name = Discourse Studies ;
       issn = 1461-4456 ;
@@ -8404,11 +8404,11 @@
     >
 
        param[base_url] = http://dij.sagepub.com/
-       
+
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
-      
+
       comment[0] = Jan 2013 name changed from Drug Information Journal to Therapeutic Innovation & Regulatory Science
 
       au < manifest ; exists ; 1970 ; Drug Information Journal Volume 4 ; 4 ; >
@@ -8454,26 +8454,26 @@
       au < zapped ; finished ; 2010 ; Drug Information Journal Volume 44 ; 44 ; >
       au < zapped ; finished ; 2011 ; Drug Information Journal Volume 45 ; 45 ; >
       au < finished ; frozen ; 2012 ; Drug Information Journal Volume 46 ; 46 ; >
-  
+
       }
-  
+
     }
-  
+
     {
-  
+
         title <
           name = Therapeutic Innovation & Regulatory Science ;
           issn = 2168-4790 ;
           eissn = 2168-4804
       >
-  
+
       {
-  
+
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://dij.sagepub.com/
-        
+
         comment[0] = Jan 2013 name changed from Drug Information Journal to Therapeutic Innovation & Regulatory Science
-        
+
       au < crawling ; exists ; 2013 ; Therapeutic Innovation & Regulatory Science Volume 47 ; 47 ; >
       au < manifest ; exists ; 2014 ; Therapeutic Innovation & Regulatory Science Volume 48 ; 48 ; >
       au < expected ; exists ; 2015 ; Therapeutic Innovation & Regulatory Science Volume 49 ; 49 ; >
@@ -8483,15 +8483,15 @@
   }
 
   {
-  
+
     title <
       name = E-Learning and Digital Media ;
-      eissn = 2042-7530 
+      eissn = 2042-7530
     >
 
       param[base_url] = http://ldm.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
-      
+
       au < exists ; exists ; 2004 ; E-Learning and Digital Media Volume 1 ; 1 ; >
       au < exists ; exists ; 2005 ; E-Learning and Digital Media Volume 2 ; 2 ; >
       au < exists ; exists ; 2006 ; E-Learning and Digital Media Volume 3 ; 3 ; >
@@ -8508,7 +8508,7 @@
   }
 
   {
-  
+
     title <
       name = East European Politics & Societies ;
       issn = 0888-3254 ;
@@ -8567,7 +8567,7 @@
   }
 
   {
-  
+
     title <
       name = Economic and Industrial Democracy ;
       issn = 0143-831X ;
@@ -8677,7 +8677,7 @@
     }
 
   {
-  
+
     title <
       name = Economic Development Quarterly ;
       issn = 0891-2424 ;
@@ -8735,7 +8735,7 @@
   }
 
   {
-  
+
     title <
       name = Education and Urban Society ;
       issn = 0013-1245 ;
@@ -8811,7 +8811,7 @@
   }
 
   {
-  
+
     title <
       name = Education, Citizenship and Social Justice ;
       issn = 1746-1979 ;
@@ -8850,7 +8850,7 @@
   }
 
   {
-  
+
     title <
       name = Educational Administration Quarterly ;
       issn = 0013-161X ;
@@ -8923,13 +8923,13 @@
       au < finished ; frozen ; 2012 ; Educational Administration Quarterly Volume 48 ; 48 ; >
       au < crawling ; exists ; 2013 ; Educational Administration Quarterly Volume 49 ; 49 ; >
       au < manifest ; exists ; 2014 ; Educational Administration Quarterly Volume 50 ; 50 ; >
-      
+
     }
 
   }
 
   {
-  
+
     title <
       name = Educational and Psychological Measurement ;
       issn = 0013-1644 ;
@@ -9033,7 +9033,7 @@
   }
 
   {
-  
+
     title <
       name = Educational Evaluation and Policy Analysis ;
       issn = 0162-3737 ;
@@ -9099,7 +9099,7 @@
   }
 
   {
-  
+
     title <
       name = Educational Horizons ;
       issn = 0013-175X ;
@@ -9118,7 +9118,7 @@
   }
 
   {
-  
+
     title <
       name = Educational Management Administration & Leadership ;
       issn = 1741-1432 ;
@@ -9190,7 +9190,7 @@
   }
 
   {
-  
+
     title <
       name = Educational Policy ;
       issn = 0895-9048 ;
@@ -9248,7 +9248,7 @@
   }
 
   {
-  
+
     title <
       name = Educational Researcher ;
       issn = 0013-189X ;
@@ -9325,7 +9325,7 @@
     title <
       name = Electronic News ;
       issn = 1931-2431 ;
-      eissn = 1931-244X 
+      eissn = 1931-244X
     >
 
     param[base_url] = http://enx.sagepub.com/
@@ -9349,7 +9349,7 @@
   }
 
   {
-  
+
     title <
       name = Emotion Review ;
       issn = 1754-0739 ;
@@ -9384,7 +9384,7 @@
   }
 
   {
-  
+
     title <
       name = Environment and Behavior ;
       issn = 0013-9165 ;
@@ -9459,7 +9459,7 @@
   }
 
   {
-  
+
     title <
       name = Environment and Urbanization ;
       issn = 0956-2478 ;
@@ -9518,7 +9518,7 @@
     title <
       name = Environment and Urbanization Asia ;
       issn = 0975-4253 ;
-      eissn = 0976-3546 
+      eissn = 0976-3546
     >
 
     param[base_url] = http://eua.sagepub.com/
@@ -9542,7 +9542,7 @@
 
     title <
       name = Ergonomics in Design: The Quarterly of Human Factors Applications ;
-      issn = 1064-8046 
+      issn = 1064-8046
     >
 
     param[base_url] = http://erg.sagepub.com/
@@ -9580,7 +9580,7 @@
   }
 
   {
-  
+
     title <
       name = Ethnicities ;
       issn = 1468-7968 ;
@@ -9624,7 +9624,7 @@
   }
 
   {
-  
+
     title <
       name = Ethnography ;
       issn = 1466-1381 ;
@@ -9669,7 +9669,7 @@
   }
 
   {
-  
+
     title <
       name = European Educational Research Journal ;
       eissn = 1474-9041 ;
@@ -9697,7 +9697,7 @@
   }
 
   {
-  
+
     title <
       name = European Heart Journal: Acute Cardiovascular Care ;
       issn = 2048-8726 ;
@@ -9790,7 +9790,7 @@
   }
 
   {
-  
+
     title <
       name = European Journal of Archaeology ;
       issn = 1461-9571 ;
@@ -9836,7 +9836,7 @@
       title <
         name = European Journal of Cardiovascular Nursing ;
         issn = 1474-5151 ;
-        eissn = 1873-1953 
+        eissn = 1873-1953
     >
 
       param[base_url] = http://cnu.sagepub.com/
@@ -9869,7 +9869,7 @@
     title <
       name = European Journal of Cardiovascular Prevention & Rehabilitation ;
       issn = 1741-8267 ;
-      eissn = 1741-8275 
+      eissn = 1741-8275
     >
 
     param[base_url] = http://cpr.sagepub.com/
@@ -9915,10 +9915,10 @@
 
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://cpr.sagepub.com/
-        
+
         comment[continues] = European Journal of Cardiovascular Prevention & Rehabilitation, 1741-8267
         comment[0] = Previous issues are at the same url.
-        
+
         au < finished ; frozen ; 2012 ; European Journal of Preventive Cardiology Volume 19 ; 19 ; >
         au < crawling ; exists ; 2013 ; European Journal of Preventive Cardiology Volume 20 ; 20 ; >
         au < manifest ; exists ; 2014 ; European Journal of Preventive Cardiology Volume 21 ; 21 ; >
@@ -9929,7 +9929,7 @@
     }
 
   {
-  
+
     title <
       name = European Journal of Communication ;
       issn = 0267-3231 ;
@@ -9988,7 +9988,7 @@
   }
 
   {
-  
+
     title <
       name = European Journal of Criminology ;
       issn = 1477-3708 ;
@@ -10029,7 +10029,7 @@
   }
 
   {
-  
+
     title <
       name = European Journal of Cultural Studies ;
       issn = 1367-5494 ;
@@ -10076,7 +10076,7 @@
   }
 
   {
-  
+
     title <
       name = European Journal of Industrial Relations ;
       issn = 0959-6801 ;
@@ -10126,7 +10126,7 @@
   }
 
   {
-  
+
     title <
       name = European Journal of International Relations ;
       issn = 1354-0661 ;
@@ -10176,7 +10176,7 @@
   }
 
   {
-  
+
     title <
       name = European Journal of Political Theory ;
       issn = 1474-8851 ;
@@ -10219,7 +10219,7 @@
   }
 
   {
-  
+
     title <
       name = European Journal of Probation ;
       eissn = 2066-2203
@@ -10239,7 +10239,7 @@
   }
 
   {
-  
+
     title <
       name = European Journal of Social Theory ;
       issn = 1368-4310 ;
@@ -10286,7 +10286,7 @@
   }
 
   {
-  
+
     title <
       name = European Journal of Women's Studies ;
       issn = 1350-5068 ;
@@ -10337,7 +10337,7 @@
   }
 
   {
-  
+
     title <
       name = European Physical Education Review ;
       issn = 1356-336X ;
@@ -10387,7 +10387,7 @@
   }
 
   {
-  
+
     title <
       name = European Union Politics ;
       issn = 1465-1165 ;
@@ -10432,7 +10432,7 @@
   }
 
   {
-  
+
     title <
       name = European Urban and Regional Studies ;
       issn = 0969-7764 ;
@@ -10483,7 +10483,7 @@
   }
 
   {
-  
+
     title <
       name = Evaluation ;
       issn = 1356-3890 ;
@@ -10533,7 +10533,7 @@
   }
 
   {
-  
+
     title <
       name = Evaluation & the Health Professions ;
       issn = 0163-2787 ;
@@ -10600,7 +10600,7 @@
   }
 
   {
-  
+
     title <
       name = Evaluation Review ;
       issn = 0193-841X ;
@@ -10666,12 +10666,12 @@
     }
 
   }
-  
+
   {
 
     title <
       name = Exceptional Children ;
-      issn = 0014-4029 
+      issn = 0014-4029
     >
 
       param[base_url] = http://ecx.sagepub.com/
@@ -10696,7 +10696,7 @@
   }
 
   {
-  
+
     title <
       name = The Expository Times ;
       issn = 0014-5246 ;
@@ -10836,7 +10836,7 @@
   }
 
   {
-  
+
     title <
       name = Family and Consumer Sciences Research Journal ;
       issn = 1077-727X ;
@@ -10844,7 +10844,7 @@
     >
 
     param[base_url] = http://fcs.sagepub.com/
-    
+
     comment[moved] = Family and Consumer Sciences Research Journal has moved to Wiley
 
     {
@@ -10860,7 +10860,7 @@
   }
 
   {
-  
+
     title <
       name = Family Business Review ;
       issn = 0894-4865 ;
@@ -10917,7 +10917,7 @@
   }
 
   {
-  
+
     title <
       name = The Family Journal ;
       issn = 1066-4807 ;
@@ -10969,7 +10969,7 @@
   }
 
   {
-  
+
     title <
       name = Feminism & Psychology ;
       issn = 0959-3535 ;
@@ -11023,7 +11023,7 @@
   }
 
   {
-  
+
     title <
       name = Feminist Criminology ;
       issn = 1557-0851 ;
@@ -11062,7 +11062,7 @@
   }
 
   {
-  
+
     title <
       name = Feminist Theology ;
       issn = 0966-7350 ;
@@ -11114,7 +11114,7 @@
   }
 
   {
-  
+
     title <
       name = Feminist Theory ;
       issn = 1464-7001 ;
@@ -11159,7 +11159,7 @@
   }
 
   {
-  
+
     title <
       name = Field Methods ;
       issn = 1525-822X ;
@@ -11215,7 +11215,7 @@
   }
 
   {
-  
+
     title <
       name = First Language ;
       issn = 0142-7237 ;
@@ -11279,7 +11279,7 @@
   }
 
   {
-  
+
     title <
       name = Focus on Autism and Other Developmental Disabilities ;
       issn = 1088-3576 ;
@@ -11338,7 +11338,7 @@
   }
 
   {
-  
+
     title <
       name = Food Science and Technology International ;
       issn = 1082-0132 ;
@@ -11388,7 +11388,7 @@
   }
 
   {
-  
+
     title <
       name = Foot & Ankle Specialist ;
       issn = 1938-6400 ;
@@ -11425,7 +11425,7 @@
   }
 
   {
-  
+
     title <
       name = French Cultural Studies ;
       issn = 0957-1558 ;
@@ -11480,7 +11480,7 @@
   }
 
   {
-  
+
     title <
       name = Games and Culture ;
       issn = 1555-4120 ;
@@ -11519,7 +11519,7 @@
   }
 
   {
-  
+
     title <
       name = Gender & Society ;
       issn = 0891-2432 ;
@@ -11577,7 +11577,7 @@
   }
 
   {
-  
+
     title <
       name = Gender, Technology and Development ;
       issn = 0971-8524 ;
@@ -11624,7 +11624,7 @@
   }
 
   {
-  
+
     title <
       name = General Music Today ;
       issn = 1048-3713 ;
@@ -11680,7 +11680,7 @@
     title <
       name = Genes & Cancer ;
       issn = 1947-6019 ;
-      eissn = 1947-6027 
+      eissn = 1947-6027
     >
 
     param[base_url] = http://gan.sagepub.com/
@@ -11705,7 +11705,7 @@
     title <
       name = Geriatric Orthopaedic Surgery & Rehabilitation ;
       issn = 2151-4585 ;
-      eissn = 2151-4593 
+      eissn = 2151-4593
     >
 
     param[base_url] = http://gos.sagepub.com/
@@ -11713,7 +11713,7 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
-      
+
       au < finished ; frozen ; 2010 ; Geriatric Orthopaedic Surgery & Rehabilitation Volume 1 ; 1 ; >
       au < finished ; crawling ; 2011 ; Geriatric Orthopaedic Surgery & Rehabilitation Volume 2 ; 2 ; >
       au < finished ; frozen ; 2012 ; Geriatric Orthopaedic Surgery & Rehabilitation Volume 3 ; 3 ; >
@@ -11726,7 +11726,7 @@
   }
 
   {
-  
+
     title <
       name = Gifted Child Quarterly ;
       issn = 0016-9862 ;
@@ -11818,7 +11818,7 @@
       title <
         name = Gifted Education International ;
         issn = 0261-4294 ;
-        eissn = 2047-9077 
+        eissn = 2047-9077
     >
 
       param[base_url] = http://gei.sagepub.com/
@@ -11864,7 +11864,7 @@
   }
 
   {
-  
+
     title <
       name = Global Business Review ;
       issn = 0972-1509 ;
@@ -11909,7 +11909,7 @@
   }
 
   {
-  
+
     title <
       name = Global Health Promotion ;
       issn = 1757-9759 ;
@@ -11960,7 +11960,7 @@
   }
 
   {
-  
+
     title <
       name = Global Journal of Emerging Market Economies ;
       issn = 0974-9101 ;
@@ -11995,7 +11995,7 @@
   }
 
   {
-  
+
     title <
       name = Global Media and Communication ;
       issn = 1742-7665 ;
@@ -12011,7 +12011,7 @@
 
       au < zapped ; finished ; 2008 ; Global Media and Communication Volume 4 ; 4 ; >
       au < down ; crawling ; 2009 ; Global Media and Communication Volume 5 ; 5 ; >
-    
+
     }
 
     {
@@ -12063,7 +12063,7 @@
   }
 
   {
-  
+
     title <
       name = Global Social Policy ;
       issn = 1468-0181 ;
@@ -12105,12 +12105,12 @@
     }
 
   }
-  
+
   {
 
     title <
       name = Graft: Organ and Cell Transplantation ;
-      issn = 1522-1628 
+      issn = 1522-1628
     >
 
     comment[dcor] = This triggered title is being reingested, so there's no need for the PDF filter
@@ -12118,15 +12118,15 @@
     param[base_url] = http://graft.stanford.clockss.org/
     implicit < status ; status2 ; year ; name ; param[volume_name] >
     attr[au_feature_key] = pdf
-    
+
     au < down ; manifest ; 2001 ; Graft: Organ and Cell Transplantation Volume 4 ; 4 >
     au < down ; manifest ; 2002 ; Graft: Organ and Cell Transplantation Volume 5 ; 5 >
     au < down ; manifest ; 2003 ; Graft: Organ and Cell Transplantation Volume 6 ; 6 >
-      
+
   }
 
   {
-  
+
     title <
       name = Group & Organization Management ;
       issn = 1059-6011 ;
@@ -12195,7 +12195,7 @@
   }
 
   {
-  
+
     title <
       name = Group Analysis ;
       issn = 0533-3164 ;
@@ -12272,7 +12272,7 @@
   }
 
   {
-  
+
     title <
       name = Group Processes & Intergroup Relations ;
       issn = 1368-4302 ;
@@ -12321,7 +12321,7 @@
     {
       title <
         name = INQUIRY: The Journal of Health Care Organization, Provision, and Financing ;
-        issn = 0046-9580 
+        issn = 0046-9580
       >
 
       pluginSuffix = ClockssHighWirePressH20Plugin
@@ -12344,7 +12344,7 @@
     }
 
   {
-  
+
     title <
       name = Health Education & Behavior ;
       issn = 1090-1981 ;
@@ -12415,7 +12415,7 @@
   }
 
   {
-  
+
     title <
       name = Health Education Journal ;
       issn = 0017-8969 ;
@@ -12518,7 +12518,7 @@
   }
 
   {
-  
+
     title <
       name = Health Informatics Journal ;
       issn = 1460-4582 ;
@@ -12568,7 +12568,7 @@
   }
 
   {
-  
+
     title <
       name = Health Promotion Practice ;
       issn = 1524-8399 ;
@@ -12626,7 +12626,7 @@
   }
 
   {
-  
+
     title <
       name = Health: An Interdisciplinary Journal for the Social Study of Health, Illness and Medicine ;
       issn = 1363-4593 ;
@@ -12674,7 +12674,7 @@
   }
 
   {
-  
+
     title <
       name = High Performance Polymers ;
       issn = 0954-0083 ;
@@ -12730,7 +12730,7 @@
   }
 
   {
-  
+
     title <
       name = Higher Education for the Future ;
       issn = 2347-6311 ;
@@ -12741,11 +12741,11 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < manifest ; exists ; 2014 ; Higher Education for the Future Volume 1 ; 1 ; >
-      
+
   }
-  
+
   {
-  
+
     title <
       name = Hispanic Journal of Behavioral Sciences ;
       issn = 0739-9863 ;
@@ -12815,7 +12815,7 @@
     title <
       name = History and Sociology of South Asia ;
       issn = 2230-8075 ;
-      eissn = 2249-5312 
+      eissn = 2249-5312
     >
 
     param[base_url] = http://hsa.sagepub.com/
@@ -12839,7 +12839,7 @@
   }
 
   {
-  
+
     title <
       name = History of Psychiatry ;
       issn = 0957-154X ;
@@ -12898,7 +12898,7 @@
     title <
       name = History of Science ;
       issn = 0073-2753 ;
-      eissn = 1753-8564 
+      eissn = 1753-8564
     >
 
       param[base_url] = http://hos.sagepub.com/
@@ -12910,7 +12910,7 @@
   }
 
   {
-  
+
     title <
       name = History of the Human Sciences ;
       issn = 0952-6951 ;
@@ -12967,7 +12967,7 @@
   }
 
   {
-  
+
     title <
       name = The Holocene ;
       issn = 0959-6836 ;
@@ -13021,7 +13021,7 @@
   }
 
   {
-  
+
     title <
       name = Home Health Care Management & Practice ;
       issn = 1084-8223 ;
@@ -13076,7 +13076,7 @@
   }
 
   {
-  
+
     title <
       name = Homicide Studies ;
       issn = 1088-7679 ;
@@ -13124,7 +13124,7 @@
   }
 
   {
-  
+
     title <
       name = Human & Experimental Toxicology ;
       issn = 0960-3271 ;
@@ -13187,7 +13187,7 @@
   }
 
   {
-  
+
     title <
       name = Human Factors: The Journal of the Human Factors and Ergonomics Society ;
       issn = 0018-7208 ;
@@ -13276,7 +13276,7 @@
 
       title <
         name = Human Genomics and Proteomics ;
-        eissn = 1757-4242 
+        eissn = 1757-4242
       >
 
       {
@@ -13294,7 +13294,7 @@
     }
 
   {
-  
+
     title <
       name = Human Relations ;
       issn = 0018-7267 ;
@@ -13391,7 +13391,7 @@
   }
 
   {
-  
+
     title <
       name = Human Resource Development Review ;
       issn = 1534-4843 ;
@@ -13434,10 +13434,10 @@
   }
 
   {
-  
+
     title <
       name = Humanity & Society ;
-      issn = 0160-5976 
+      issn = 0160-5976
     >
 
     param[base_url] = http://has.sagepub.com/
@@ -13461,7 +13461,7 @@
       au < expected ; exists ; 2015 ; Humanity & Society Volume 39 ; 39 ; >
 
     }
-    
+
   }
 
   {
@@ -13469,7 +13469,7 @@
     title <
       name = ILRReview: Industrial & Labor Relations Review ;
       issn = 0019-7939 ;
-      eissn = 2162-271X 
+      eissn = 2162-271X
     >
 
       pluginSuffix = ClockssHighWirePressH20Plugin
@@ -13481,7 +13481,7 @@
   }
 
   {
-  
+
     title <
       name = ICAN: Infant, Child, & Adolescent Nutrition ;
       issn = 1941-4064 ;
@@ -13520,7 +13520,7 @@
     title <
       name = ICU Director ;
       issn = 1944-4516 ;
-      eissn = 1944-4524 
+      eissn = 1944-4524
     >
 
     param[base_url] = http://icu.sagepub.com/
@@ -13541,7 +13541,7 @@
   }
 
   {
-  
+
     title <
       name = IFLA Journal ;
       issn = 0340-0352 ;
@@ -13633,7 +13633,7 @@
   }
 
   {
-  
+
     title <
       name = Improving Schools ;
       issn = 1365-4802 ;
@@ -13684,7 +13684,7 @@
     title <
       name = Index on Censorship ;
       issn = 0306-4220 ;
-      eissn = 1746-6067 
+      eissn = 1746-6067
     >
 
     param[base_url] = http://ioc.sagepub.com/
@@ -13743,7 +13743,7 @@
   }
 
   {
-  
+
     title <
       name = India Quarterly: A Journal of International Affairs ;
       issn = 0974-9284 ;
@@ -13782,7 +13782,7 @@
   }
 
   {
-  
+
     title <
       name = Indian Economic & Social History Review ;
       issn = 0019-4646
@@ -13866,7 +13866,7 @@
     title <
       name = Indian Historical Review ;
       issn = 0376-9836 ;
-      eissn = 0975-5977 
+      eissn = 0975-5977
     >
 
     param[base_url] = http://ihr.sagepub.com/
@@ -13898,7 +13898,7 @@
   }
 
   {
-  
+
     title <
       name = Indian Journal of Gender Studies ;
       issn = 0971-5215 ;
@@ -13949,7 +13949,7 @@
   }
 
   {
-  
+
     title <
       name = Indoor and Built Environment ;
       issn = 1420-326X ;
@@ -14002,7 +14002,7 @@
   }
 
   {
-  
+
     title <
       name = Information Development ;
       issn = 0266-6669 ;
@@ -14024,7 +14024,7 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
-      
+
       comment[notReady] = ingest4 has 23 extra urls not on the other ingest machines.
 
       au < manifest ; exists ; 1985 ; Information Development Volume 1 ; 1 ; >
@@ -14068,7 +14068,7 @@
     title <
       name = Information Visualization ;
       issn = 1473-8716 ;
-      eissn = 1473-8724 
+      eissn = 1473-8724
     >
 
     param[base_url] = http://ivi.sagepub.com/
@@ -14095,13 +14095,13 @@
     }
 
   }
-  
+
   {
 
     title <
       name = Insight on Africa ;
       issn = 0975-0878 ;
-      eissn = 0976-3465 
+      eissn = 0976-3465
     >
 
       param[base_url] = http://ioa.sagepub.com/
@@ -14114,19 +14114,19 @@
   }
 
   {
-  
+
     title <
       name = International Area Studies Review ;
       issn = 2233-8659 ;
       eissn = 2049-1123
     >
-    
+
     param[base_url] = http://ias.sagepub.com/
 
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
-      
+
       au < manifest ; exists ; 1997-1998 ; International Area Studies Review Volume 1 ; 1 ; >
       au < manifest ; exists ; 1999 ; International Area Studies Review Volume 2 ; 2 ; >
       au < manifest ; exists ; 2000 ; International Area Studies Review Volume 3 ; 3 ; >
@@ -14144,9 +14144,9 @@
       au < finished ; crawling ; 2012 ; International Area Studies Review Volume 15 ; 15 ; >
       au < crawling ; exists ; 2013 ; International Area Studies Review Volume 16 ; 16 ; >
       au < manifest ; exists ; 2014 ; International Area Studies Review Volume 17 ; 17 ; >
-     
+
     }
-    
+
   }
   {
 
@@ -14156,7 +14156,7 @@
       eissn = 1743-2839 ;
       issnl = 0968-0519
     >
-    
+
     comment[continued_by] = 1753-4259
     comment[ini] = Discontinued in 2007. Continued by Innate Immunity.
 
@@ -14180,11 +14180,11 @@
       au < manifest ; exists ; 2006 ; Journal of Endotoxin Research Volume 12 ; 12 ; >
 
     }
-    
+
   }
 
   {
-  
+
     title <
       name = Innate Immunity ;
       issn = 1753-4259 ;
@@ -14222,7 +14222,7 @@
   }
 
   {
-  
+
     title <
       name = Integrative Cancer Therapies ;
       issn = 1534-7354 ;
@@ -14265,7 +14265,7 @@
   }
 
   {
-  
+
     title <
       name = International Communication Gazette ;
       issn = 1748-0485 ;
@@ -14371,7 +14371,7 @@
   }
 
   {
-  
+
     title <
       name = International Criminal Justice Review ;
       issn = 1057-5677 ;
@@ -14425,7 +14425,7 @@
   }
 
   {
-  
+
     title <
       name = International Journal of Behavioral Development ;
       issn = 0165-0254 ;
@@ -14493,7 +14493,7 @@
   }
 
   {
-  
+
     title <
       name = International Journal of Bilingualism ;
       issn = 1367-0069 ;
@@ -14541,7 +14541,7 @@
   }
 
   {
-  
+
     title <
       name = International Journal of Comparative Sociology ;
       issn = 0020-7152 ;
@@ -14626,7 +14626,7 @@
   }
 
   {
-  
+
     title <
       name = International Journal of Cross Cultural Management ;
       issn = 1470-5958 ;
@@ -14670,7 +14670,7 @@
   }
 
   {
-  
+
     title <
       name = International Journal of Cultural Studies ;
       issn = 1367-8779 ;
@@ -14717,7 +14717,7 @@
   }
 
   {
-  
+
     title <
       name = International Journal of Damage Mechanics ;
       issn = 1056-7895 ;
@@ -14780,7 +14780,7 @@
       {
         param[base_url] = http://jdi.sagepub.com/
         pluginSuffix = ClockssHighWirePressH20Plugin
-        
+
         au < manifest ; exists ; 1995-1996 ; International Journal of Discrimination and the Law Volume 1 ; 1 ; >
         au < manifest ; exists ; 1996-1997 ; International Journal of Discrimination and the Law Volume 2 ; 2 ; >
         au < manifest ; exists ; 1998-1999 ; International Journal of Discrimination and the Law Volume 3 ; 3 ; >
@@ -14798,9 +14798,9 @@
         au < expected ; exists ; 2015 ; International Journal of Discrimination and the Law Volume 15 ; 15 ; >
 
       }
-      
+
     }
-    
+
     {
       title <
         name = International Journal of Electrical Engineering Education ;
@@ -14815,15 +14815,15 @@
 
      au < exists ; exists ; 2014 ; International Journal of Electrical Engineering Education Volume 51 ; 51 ; >
      au < expected ; exists ; 2015 ; International Journal of Electrical Engineering Education Volume 52 ; 52 ; >
-     
+
     }
-    
+
   {
 
     title <
       name = International Journal of Engine Research ;
       issn = 1468-0874 ;
-      eissn = 2041-3149 
+      eissn = 2041-3149
     >
 
     param[base_url] = http://jer.sagepub.com/
@@ -14854,7 +14854,7 @@
   }
 
   {
-  
+
     title <
       name = International Journal of High Performance Computing Applications ;
       issn = 1094-3420 ;
@@ -14912,7 +14912,7 @@
   }
 
   {
-  
+
     title <
       name = The International Journal of Lower Extremity Wounds ;
       issn = 1534-7346 ;
@@ -14955,7 +14955,7 @@
   }
 
   {
-  
+
     title <
       name = International Journal of Music Education ;
       issn = 0255-7614 ;
@@ -14963,7 +14963,7 @@
     >
 
     param[base_url] = http://ijm.sagepub.com/
-    
+
     comment[manifests] = serious problem with malformed manifests over two series.
 
     {
@@ -14979,7 +14979,7 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
-      
+
       au < manifest ; exists ; 1983 ; International Journal of Music Education: Original Series Volume os-1 ; os-1 ; >
       au < manifest ; exists ; 1983 ; International Journal of Music Education: Original Series Volume os-2 ; os-2 ; >
       au < manifest ; exists ; 1984 ; International Journal of Music Education: Original Series Volume os-3 ; os-3 ; >
@@ -15038,7 +15038,7 @@
   }
 
   {
-  
+
     title <
       name = International Journal of Offender Therapy and Comparative Criminology ;
       issn = 0306-624X ;
@@ -15118,7 +15118,7 @@
   }
 
   {
-  
+
     title <
       name = The International Journal of Press/Politics ;
       issn = 1940-1612 ;
@@ -15167,7 +15167,7 @@
   }
 
   {
-  
+
     title <
       name = The International Journal of Robotics Research ;
       issn = 0278-3649 ;
@@ -15230,7 +15230,7 @@
   }
 
   {
-  
+
     title <
       name = International Journal of Rural Management ;
       issn = 0973-0052
@@ -15260,7 +15260,7 @@
   }
 
   {
-  
+
     title <
       name = International Journal of Social Psychiatry ;
       issn = 0020-7640 ;
@@ -15350,7 +15350,7 @@
   }
 
   {
-  
+
     title <
       name = International Journal of Surgical Pathology ;
       issn = 1066-8969 ;
@@ -15402,7 +15402,7 @@
   }
 
   {
-  
+
     title <
       name = International Journal of Toxicology ;
       issn = 1091-5818 ;
@@ -15465,7 +15465,7 @@
   }
 
   {
-  
+
     title <
       name = International Political Science Abstracts ;
       issn = 0020-8345 ;
@@ -15503,7 +15503,7 @@
   }
 
   {
-  
+
     title <
       name = International Political Science Review ;
       issn = 0192-5121 ;
@@ -15568,7 +15568,7 @@
   }
 
   {
-  
+
     title <
       name = International Regional Science Review ;
       issn = 0160-0176 ;
@@ -15635,7 +15635,7 @@
   }
 
   {
-  
+
     title <
       name = International Relations ;
       issn = 0047-1178 ;
@@ -15693,7 +15693,7 @@
   }
 
   {
-  
+
     title <
       name = International Review for the Sociology of Sport ;
       issn = 1012-6902 ;
@@ -15772,7 +15772,7 @@
   }
 
   {
-  
+
     title <
       name = International Review of Administrative Sciences ;
       issn = 0020-8523 ;
@@ -15861,13 +15861,13 @@
   }
 
     {
-  
+
         title <
           name = International Review of Victimology ;
           issn = 0269-7580 ;
           comment[0] = no 2011 journal
       >
-      
+
         param[base_url] = http://irv.sagepub.com/
 
       {
@@ -15894,13 +15894,13 @@
         au < finished ; frozen ; 2012 ; International Review of Victimology Volume 18 ; 18 ; >
         au < crawling ; exists ; 2013 ; International Review of Victimology Volume 19 ; 19 ; >
         au < manifest ; exists ; 2014 ; International Review of Victimology Volume 20 ; 20 ; >
-  
+
       }
-  
+
     }
-    
+
   {
-  
+
     title <
       name = International Small Business Journal ;
       issn = 0266-2426 ;
@@ -15962,7 +15962,7 @@
   }
 
   {
-  
+
     title <
       name = International Social Work ;
       issn = 0020-8728 ;
@@ -16049,7 +16049,7 @@
   }
 
   {
-  
+
     title <
       name = International Sociology ;
       issn = 0268-5809 ;
@@ -16108,7 +16108,7 @@
   }
 
   {
-  
+
     title <
       name = International Studies ;
       issn = 0020-8817 ;
@@ -16185,7 +16185,7 @@
   }
 
   {
-  
+
     title <
       name = Intervention in School and Clinic ;
       issn = 1053-4512
@@ -16263,7 +16263,7 @@
   }
 
   {
-  
+
     title <
       name = Irish Theological Quarterly ;
       issn = 0021-1400 ;
@@ -16362,9 +16362,9 @@
       au < expected ; exists ; 2015 ; Jadavpur Journal of International Relations Volume 19 ; 19 ; >
 
     }
-    
+
     {
-  
+
     title <
       name = Journal for the Study of the New Testament ;
       issn = 0142-064X ;
@@ -16429,7 +16429,7 @@
   }
 
   {
-  
+
     title <
       name = Journal for the Study of the Old Testament ;
       issn = 0309-0892 ;
@@ -16496,7 +16496,7 @@
   }
 
   {
-  
+
     title <
       name = Journal for the Study of the Pseudepigrapha ;
       issn = 0951-8207 ;
@@ -16551,7 +16551,7 @@
 
     title <
       name = Journal of Accounting, Auditing & Finance ;
-      issn = 0148-558X 
+      issn = 0148-558X
     >
 
     param[base_url] = http://jaf.sagepub.com/
@@ -16596,7 +16596,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Adolescent Research ;
       issn = 0743-5584 ;
@@ -16654,12 +16654,12 @@
 
 
   }
-  
+
   {
 
       title <
         name = Journal of Advanced Academics ;
-        issn = 1932-202X 
+        issn = 1932-202X
       >
 
         param[base_url] = http://joa.sagepub.com/
@@ -16694,7 +16694,7 @@
     }
 
   {
-  
+
     title <
       name = Journal of Aging and Health ;
       issn = 0898-2643 ;
@@ -16750,7 +16750,7 @@
   }
 
   {
-  
+
     title <
       name = The Journal of Applied Behavioral Science ;
       issn = 0021-8863 ;
@@ -16830,7 +16830,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Applied Gerontology ;
       issn = 0733-4648 ;
@@ -16898,7 +16898,7 @@
       issn = 1936-7244 ;
       eissn = 1937-0245
       >
-      
+
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://jax.sagepub.com/
 
@@ -16913,9 +16913,9 @@
       au < expected ; exists ; 2015 ; Journal of Applied Social Science Volume 9 ; 9 ; >
 
   }
-  
+
   {
-  
+
     title <
       name = Journal of Asian and African Studies ;
       issn = 0021-9096 ;
@@ -16998,7 +16998,7 @@
     title <
       name = Journal of Asian Security and International Affairs ;
       issn = 2347-7970 ;
-      eissn = 2349-0039 
+      eissn = 2349-0039
     >
 
       pluginSuffix = ClockssHighWirePressH20Plugin
@@ -17014,7 +17014,7 @@
     title <
       name = Journal of Asthma & Allergy Educators ;
       issn = 2150-1297 ;
-      eissn = 2150-1300 
+      eissn = 2150-1300
     >
 
     param[base_url] = http://jaa.sagepub.com/
@@ -17035,7 +17035,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Attention Disorders ;
       issn = 1087-0547 ;
@@ -17083,7 +17083,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Bioactive and Compatible Polymers ;
       issn = 0883-9115 ;
@@ -17142,7 +17142,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Biological Rhythms ;
       issn = 0748-7304 ;
@@ -17201,7 +17201,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Biomaterials Applications ;
       issn = 0885-3282 ;
@@ -17259,7 +17259,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Biomolecular Screening ;
       issn = 1087-0571 ;
@@ -17308,7 +17308,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Black Psychology ;
       issn = 0095-7984 ;
@@ -17378,7 +17378,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Black Studies ;
       issn = 0021-9347 ;
@@ -17452,7 +17452,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Building Physics ;
       issn = 1744-2591 ;
@@ -17519,7 +17519,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Business and Technical Communication ;
       issn = 1050-6519 ;
@@ -17577,7 +17577,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Business Communication ;
       issn = 0021-9436 ;
@@ -17657,7 +17657,7 @@
   }
 
   {
-  
+
     title <
       name = International Journal of Business Communication ;
       issn = 2329-4884 ;
@@ -17677,7 +17677,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Cardiovascular Pharmacology and Therapeutics ;
       issn = 1074-2484 ;
@@ -17726,7 +17726,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Career Assessment ;
       issn = 1069-0727 ;
@@ -17778,7 +17778,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Career Development ;
       issn = 0894-8453 ;
@@ -17849,7 +17849,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Cases in Educational Leadership ;
       eissn = 1555-4589
@@ -17894,7 +17894,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Cellular Plastics ;
       issn = 0021-955X ;
@@ -17974,7 +17974,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Child Health Care ;
       issn = 1367-4935 ;
@@ -18022,7 +18022,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Child Neurology ;
       issn = 0883-0738 ;
@@ -18081,7 +18081,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Classical Sociology ;
       issn = 1468-795X ;
@@ -18125,7 +18125,7 @@
   }
 
   {
-  
+
     title <
       name = The Journal of Clinical Pharmacology ;
       issn = 0091-2700 ;
@@ -18146,7 +18146,7 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
-      
+
       comment[0] = Moving to Wiley Blackwell in 2013.
 
       au < down ; frozen ; 1961 ; The Journal of Clinical Pharmacology Volume 1 ; 1 ; >
@@ -18210,7 +18210,7 @@
 
     title <
       name = Journal of Cognitive Engineering and Decision Making ;
-      issn = 1555-3434 
+      issn = 1555-3434
     >
 
     param[base_url] = http://edm.sagepub.com/
@@ -18234,7 +18234,7 @@
   }
 
   {
-  
+
     title <
       name = The Journal of Commonwealth Literature ;
       issn = 0021-9894 ;
@@ -18303,7 +18303,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Communication Inquiry ;
       issn = 0196-8599 ;
@@ -18361,7 +18361,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Composite Materials ;
       issn = 0021-9983 ;
@@ -18439,7 +18439,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Conflict Resolution ;
       issn = 0022-0027 ;
@@ -18527,7 +18527,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Consumer Culture ;
       issn = 1469-5405 ;
@@ -18571,7 +18571,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Contemporary Criminal Justice ;
       issn = 1043-9862 ;
@@ -18631,7 +18631,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Contemporary Ethnography ;
       issn = 0891-2416 ;
@@ -18704,7 +18704,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Contemporary History ;
       issn = 0022-0094 ;
@@ -18783,7 +18783,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Correctional Health Care ;
       issn = 1078-3458 ;
@@ -18833,7 +18833,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Creative Communications ;
       issn = 0973-2586 ;
@@ -18871,7 +18871,7 @@
   }
 
   {
-  
+
     title <
       name = The Journal of Criminal Law ;
       issn = 0022-0183 ;
@@ -18882,11 +18882,11 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2014 ; The Journal of Criminal Law Volume 78 ; 78 ; >
-    
+
   }
 
   {
-  
+
     title <
       name = Journal of Cross-Cultural Psychology ;
       issn = 0022-0221 ;
@@ -18961,7 +18961,7 @@
   }
 
   {
-  
+
     title <
       name = The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology ;
       issn = 1548-5129 ;
@@ -19006,7 +19006,7 @@
         name = Journal of Dental Biomechanics ;
         eissn = 1758-7360
       >
-    
+
         param[base_url] = http://dbm.sagepub.com/
 
       {
@@ -19019,13 +19019,13 @@
         au < finished ; frozen ; 2012 ; Journal of Dental Biomechanics Volume 3 ; 3 ; >
         au < crawling ; exists ; 2013 ; Journal of Dental Biomechanics Volume 4 ; 4 ; >
         au < expected ; exists ; 2014 ; Journal of Dental Biomechanics Volume 5 ; 5 ; >
-        
+
       }
-      
+
     }
-    
+
   {
-  
+
     title <
       name = Journal of Dental Research ;
       issn = 0022-0345 ;
@@ -19148,7 +19148,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Developing Societies ;
       issn = 0169-796X ;
@@ -19194,7 +19194,7 @@
 
       title <
         name = Journal of Diabetes Science and Technology ;
-        eissn = 1932-2968 
+        eissn = 1932-2968
       >
 
         param[base_url] = http://dst.sagepub.com/
@@ -19214,7 +19214,7 @@
     }
 
   {
-  
+
     title <
       name = Journal of Diagnostic Medical Sonography ;
       issn = 8756-4793 ;
@@ -19274,7 +19274,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Disability Policy Studies ;
       issn = 1044-2073 ;
@@ -19327,22 +19327,22 @@
     }
 
   }
-  
+
   {
-    
+
      title <
       name = Journal of Drug Issues ;
       issn = 0022-0426 ;
       eissn = 1945-1369
-      
+
     >
-    
+
     param[base_url] = http://jod.sagepub.com/
-    
+
     {
-    
+
       pluginSuffix = ClockssHighWirePressH20Plugin
-      
+
       au < manifest ; exists ; 2001 ; Journal of Drug Issues Volume 31 ; 31 ; >
       au < manifest ; exists ; 2002 ; Journal of Drug Issues Volume 32 ; 32 ; >
       au < manifest ; exists ; 2003 ; Journal of Drug Issues Volume 33 ; 33 ; >
@@ -19354,17 +19354,17 @@
       au < zapped ; finished ; 2009 ; Journal of Drug Issues Volume 39 ; 39 ; >
       au < zapped ; finished ; 2010 ; Journal of Drug Issues Volume 40 ; 40 ; >
       au < zapped ; finished ; 2011 ; Journal of Drug Issues Volume 41 ; 41 ; >
-      au < finished ; frozen ; 2012 ; Journal of Drug Issues Volume 42 ; 42 ; > 
+      au < finished ; frozen ; 2012 ; Journal of Drug Issues Volume 42 ; 42 ; >
       au < crawling ; exists ; 2013 ; Journal of Drug Issues Volume 43 ; 43 ; >
       au < manifest ; exists ; 2014 ; Journal of Drug Issues Volume 44 ; 44 ; >
       au < manifest ; exists ; 2015 ; Journal of Drug Issues Volume 45 ; 45 ; >
-    
+
     }
-    
-  }  
+
+  }
 
   {
-  
+
     title <
       name = The Journal of Early Adolescence ;
       issn = 0272-4316 ;
@@ -19428,7 +19428,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Early Childhood Literacy ;
       issn = 1468-7984 ;
@@ -19472,7 +19472,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Early Childhood Research ;
       issn = 1476-718X ;
@@ -19515,7 +19515,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Early Intervention ;
       issn = 1053-8151 ;
@@ -19581,7 +19581,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Education for Sustainable Development ;
       issn = 0973-4082 ;
@@ -19619,7 +19619,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Educational and Behavioral Statistics ;
       issn = 1076-9986 ;
@@ -19688,7 +19688,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Elastomers and Plastics ;
       issn = 0095-2443 ;
@@ -19764,7 +19764,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Emerging Market Finance ;
       issn = 0972-6527 ;
@@ -19807,7 +19807,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Emotional and Behavioral Disorders ;
       issn = 1063-4266 ;
@@ -19859,7 +19859,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of English Linguistics ;
       issn = 0075-4242 ;
@@ -19931,7 +19931,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Entrepreneurship ;
       issn = 0971-3557 ;
@@ -19984,7 +19984,7 @@
   }
 
   {
-  
+
     title <
       name = The Journal of Environment & Development ;
       issn = 1070-4965 ;
@@ -20037,7 +20037,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of European Social Policy ;
       issn = 0958-9287 ;
@@ -20091,7 +20091,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of European Studies ;
       issn = 0047-2441 ;
@@ -20169,7 +20169,7 @@
       title <
         name = Journal of Experiential Education ;
         issn = 1053-8259 ;
-        eissn = 2169-009X 
+        eissn = 2169-009X
     >
 
       pluginSuffix = ClockssHighWirePressH20Plugin
@@ -20189,11 +20189,11 @@
       au < exists ; exists ; 2012 ; Journal of Experiential Education Volume 35 ; 35 ; >
       au < crawling ; exists ; 2013 ; Journal of Experiential Education Volume 36 ; 36 ; >
       au < manifest ; exists ; 2014 ; Journal of Experiential Education Volume 37 ; 37 ; >
-      
+
     }
 
   {
-  
+
     title <
       name = Journal of Family History ;
       issn = 0363-1990 ;
@@ -20262,7 +20262,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Family Issues ;
       issn = 0192-513X ;
@@ -20327,7 +20327,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Family Nursing ;
       issn = 1074-8407 ;
@@ -20381,7 +20381,7 @@
       title <
         name = Journal of Feline Medicine and Surgery ;
         issn = 1098-612X ;
-        eissn = 1532-2750 
+        eissn = 1532-2750
     >
 
       param[base_url] = http://jfm.sagepub.com/
@@ -20389,7 +20389,7 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
-      
+
       au < manifest ; exists ; 1999 ; Journal of Feline Medicine and Surgery Volume 1 ; 1 ; >
       au < manifest ; exists ; 2000 ; Journal of Feline Medicine and Surgery Volume 2 ; 2 ; >
       au < manifest ; exists ; 2001 ; Journal of Feline Medicine and Surgery Volume 3 ; 3 ; >
@@ -20413,7 +20413,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Fire Protection Engineering ;
       issn = 1042-3915 ;
@@ -20467,7 +20467,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Fire Sciences ;
       issn = 0734-9041 ;
@@ -20533,7 +20533,7 @@
     title <
       name = Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector ;
       issn = 1741-1343 ;
-      eissn = 1741-7090 
+      eissn = 1741-7090
     >
 
     param[base_url] = http://jgm.sagepub.com/
@@ -20560,7 +20560,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Geriatric Psychiatry and Neurology ;
       issn = 0891-9887 ;
@@ -20617,7 +20617,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Hand Surgery (European Volume) ;
       issn = 1753-1934 ;
@@ -20689,7 +20689,7 @@
     title <
       name = Journal of Health and Social Behavior ;
       issn = 0022-1465 ;
-      eissn = 2150-6000 
+      eissn = 2150-6000
     >
 
     param[base_url] = http://hsb.sagepub.com/
@@ -20712,11 +20712,11 @@
       au < expected ; exists ; 2015 ; Journal of Health and Social Behavior Volume 56 ; 56 ; >
 
     }
-    
+
     }
 
   {
-  
+
     title <
       name = Journal of Health Management ;
       issn = 0972-0634 ;
@@ -20762,7 +20762,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Health Psychology ;
       issn = 1359-1053 ;
@@ -20811,7 +20811,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Hispanic Higher Education ;
       issn = 1538-1927 ;
@@ -20858,7 +20858,7 @@
     title <
       name = Journal of Histochemistry and Cytochemistry ;
       issn = 0022-1554 ;
-      eissn = 1551-5044 
+      eissn = 1551-5044
     >
 
     param[base_url] = http://jhc.sagepub.com/
@@ -20936,7 +20936,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Holistic Nursing ;
       issn = 0898-0101 ;
@@ -20998,7 +20998,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Hospitality & Tourism Research ;
       issn = 1096-3480 ;
@@ -21066,7 +21066,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Human Lactation ;
       issn = 0890-3344 ;
@@ -21126,7 +21126,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Human Values ;
       issn = 0971-6858 ;
@@ -21175,7 +21175,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Humanistic Psychology ;
       issn = 0022-1678 ;
@@ -21259,7 +21259,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Industrial Relations ;
       issn = 0022-1856 ;
@@ -21345,7 +21345,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Industrial Textiles ;
       issn = 1528-0837 ;
@@ -21427,7 +21427,7 @@
     >
 
     comment[continued_by] = Journal of Infection Prevention 2009-, issn:1757-1774
-    
+
     param[base_url] = http://bji.sagepub.com/
 
     {
@@ -21458,7 +21458,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Infection Prevention ;
       issn = 1757-1774 ;
@@ -21495,7 +21495,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Information Science ;
       issn = 0165-5515 ;
@@ -21565,7 +21565,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Intellectual Disabilities ;
       issn = 1744-6295 ;
@@ -21613,7 +21613,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Intelligent Material Systems and Structures ;
       issn = 1045-389X ;
@@ -21668,7 +21668,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Intensive Care Medicine ;
       issn = 0885-0666 ;
@@ -21766,18 +21766,18 @@
       {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
-        
+
       au < crawling ; exists ; 2012 ; Journal of Interdisciplinary Economics Volume 24 ; 24 ; >
       au < crawling ; exists ; 2013 ; Journal of Interdisciplinary Economics Volume 25 ; 25 ; >
       au < manifest ; exists ; 2014 ; Journal of Interdisciplinary Economics Volume 26 ; 26 ; >
       au < expected ; exists ; 2015 ; Journal of Interdisciplinary Economics Volume 27 ; 27 ; >
 
       }
-      
+
     }
 
   {
-  
+
     title <
       name = Journal of International Political Theory ;
       issn = 1755-0882 ;
@@ -21802,7 +21802,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Interpersonal Violence ;
       issn = 0886-2605 ;
@@ -21861,19 +21861,19 @@
   }
 
     {
-  
+
         title <
           name = JALA (Charlottesville, Va.) ;
           issn = 1535-5535 ;
           eissn = 1540-2452 ;
-          issnl = 1535-5535 
+          issnl = 1535-5535
       >
-  
+
       {
-  
+
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://jla.sagepub.com/
-  
+
         au < manifest ; exists ; 1999 ; JALA (Charlottesville, Va.) Volume 4 ; 4 ; >
         au < manifest ; exists ; 2000 ; JALA (Charlottesville, Va.) Volume 5 ; 5 ; >
         au < manifest ; exists ; 2001 ; JALA (Charlottesville, Va.) Volume 6 ; 6 ; >
@@ -21888,14 +21888,14 @@
         au < zapped ; finished ; 2010 ; JALA (Charlottesville, Va.) Volume 15 ; 15 ; >
 
       }
-  
+
     }
 
   {
 
       title <
         name = Journal of Laboratory Automation ;
-        issn = 2211-0682 
+        issn = 2211-0682
     >
 
       param[base_url] = http://jla.sagepub.com/
@@ -21915,26 +21915,26 @@
   }
 
     {
-  
+
         title <
           name = Journal of Land and Rural Studies ;
-          issn = 2321-0249 
+          issn = 2321-0249
       >
-  
+
       {
-  
+
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://lrs.sagepub.com/
-  
+
         au < crawling ; exists ; 2013 ; Journal of Land and Rural Studies Volume 1 ; 1 ; >
         au < manifest ; exists ; 2014 ; Journal of Land and Rural Studies Volume 2 ; 2 ; >
-  
+
       }
-  
+
     }
 
   {
-  
+
     title <
       name = Journal of Language and Social Psychology ;
       issn = 0261-927X ;
@@ -21997,7 +21997,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Leadership & Organizational Studies ;
       issn = 1548-0518 ;
@@ -22044,11 +22044,11 @@
       au < expected ; exists ; 2015 ; Journal of Leadership & Organizational Studies Volume 22 ; 22 ; >
 
     }
-    
+
     }
 
   {
-  
+
     title <
       name = Journal of Learning Disabilities ;
       issn = 0022-2194
@@ -22124,7 +22124,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Librarianship and Information Science ;
       issn = 0961-0006 ;
@@ -22204,7 +22204,7 @@
     title <
       name = Journal of Literacy Research ;
       issn = 1086-296X ;
-      eissn = 1554-8430 
+      eissn = 1554-8430
     >
 
     param[base_url] = http://jlr.sagepub.com/
@@ -22220,7 +22220,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Macromarketing ;
       issn = 0276-1467 ;
@@ -22284,7 +22284,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Management ;
       issn = 0149-2063 ;
@@ -22354,7 +22354,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Management Education ;
       issn = 1052-5629 ;
@@ -22422,7 +22422,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Management Inquiry ;
       issn = 1056-4926 ;
@@ -22475,7 +22475,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Marketing Education ;
       issn = 0273-4753 ;
@@ -22541,7 +22541,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Material Culture ;
       issn = 1359-1835 ;
@@ -22594,7 +22594,7 @@
     title <
       name = Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing ;
       issn = 1745-7904 ;
-      eissn = 1745-7912 
+      eissn = 1745-7912
     >
 
     param[base_url] = http://mmj.sagepub.com/
@@ -22624,7 +22624,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Mixed Methods Research ;
       issn = 1558-6898 ;
@@ -22662,7 +22662,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Music Teacher Education ;
       issn = 1057-0837 ;
@@ -22714,7 +22714,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Oncology Pharmacy Practice ;
       issn = 1078-1552 ;
@@ -22764,7 +22764,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Parenteral and Enteral Nutrition ;
       issn = 0148-6071 ;
@@ -22832,7 +22832,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Peace Research ;
       issn = 0022-3433 ;
@@ -22913,7 +22913,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Pediatric Oncology Nursing ;
       issn = 1043-4542 ;
@@ -22974,7 +22974,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Pharmacy Practice ;
       issn = 0897-1900 ;
@@ -23031,11 +23031,11 @@
   }
 
   {
-  
+
     title <
       name = Journal of Pharmacy Technology ;
       issn = 8755-1225 ;
-      eissn = 1549-4810 
+      eissn = 1549-4810
     >
 
     param[base_url] = http://pmt.sagepub.com/
@@ -23065,7 +23065,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Planning Education and Research ;
       issn = 0739-456X ;
@@ -23128,7 +23128,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Planning History ;
       issn = 1538-5132 ;
@@ -23171,7 +23171,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Planning Literature ;
       issn = 0885-4122 ;
@@ -23229,7 +23229,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Plastic Film and Sheeting ;
       issn = 8756-0879 ;
@@ -23288,7 +23288,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Positive Behavior Interventions ;
       issn = 1098-3007 ;
@@ -23338,7 +23338,7 @@
     title <
       name = Journal of Primary Care & Community Health ;
       issn = 2150-1319 ;
-      eissn = 2150-1327 
+      eissn = 2150-1327
     >
 
     param[base_url] = http://jpc.sagepub.com/
@@ -23359,7 +23359,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Psychoeducational Assessment ;
       issn = 0734-2829 ;
@@ -23421,7 +23421,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Psychopharmacology ;
       issn = 0269-8811 ;
@@ -23479,7 +23479,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Reinforced Plastics and Composites ;
       issn = 0731-6844 ;
@@ -23542,10 +23542,10 @@
   }
 
   {
-  
+
     title <
       name = Journal of Rehabilitation and Assistive Technologies Engineering ;
-      eissn = 2055-6683 
+      eissn = 2055-6683
     >
 
     param[base_url] = http://jrt.sagepub.com/
@@ -23555,11 +23555,11 @@
   }
 
   {
-  
+
     title <
       name = Journal of the Renin-Angiotensin-Aldosterone System ;
       issn = 1470-3203 ;
-      eissn = 1752-8976 
+      eissn = 1752-8976
     >
 
     param[base_url] = http://jra.sagepub.com/
@@ -23601,7 +23601,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Research in Crime and Delinquency ;
       issn = 0022-4278 ;
@@ -23682,7 +23682,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Research in International Education ;
       issn = 1475-2409 ;
@@ -23725,7 +23725,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Research in Music Education ;
       issn = 0022-4294 ;
@@ -23817,7 +23817,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Research in Nursing ;
       issn = 1744-9871 ;
@@ -23886,9 +23886,9 @@
     au < expected ; exists ; 2015 ; Journal of Research on Leadership Education Volume 10 ; 10 ; >
 
   }
-  
+
   {
-  
+
     title <
       name = Journal of Sandwich Structures and Materials ;
       issn = 1099-6362 ;
@@ -23934,7 +23934,7 @@
   }
 
   {
-  
+
     title <
       name = The Journal of School Nursing ;
       issn = 1059-8405 ;
@@ -23979,7 +23979,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Service Research ;
       issn = 1094-6705 ;
@@ -24026,7 +24026,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Social and Personal Relationships ;
       issn = 0265-4075 ;
@@ -24087,7 +24087,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Social Archaeology ;
       issn = 1469-6053 ;
@@ -24131,7 +24131,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Social Work ;
       issn = 1468-0173 ;
@@ -24175,7 +24175,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Sociology ;
       issn = 1440-7833 ;
@@ -24255,7 +24255,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of South Asian Development ;
       issn = 0973-1741 ;
@@ -24294,11 +24294,11 @@
   }
 
   {
-  
+
     title <
       name = The Journal of Special Education ;
       issn = 0022-4669 ;
-      eissn = 1538-4764 
+      eissn = 1538-4764
      >
 
     param[base_url] = http://sed.sagepub.com/
@@ -24372,7 +24372,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Sport & Social Issues ;
       issn = 0193-7235 ;
@@ -24440,7 +24440,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Sports Economics ;
       issn = 1527-0025 ;
@@ -24489,7 +24489,7 @@
     title <
       name = Journal of Strain Analysis for Engineering Design ;
       issn = 0309-3247 ;
-      eissn = 2041-3130 
+      eissn = 2041-3130
     >
 
     param[base_url] = http://sdj.sagepub.com/
@@ -24554,7 +24554,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Studies in International Education ;
       issn = 1028-3153 ;
@@ -24602,7 +24602,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Teacher Education ;
       issn = 0022-4871 ;
@@ -24697,7 +24697,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of the Academy of Marketing Science ;
       issn = 0092-0703 ;
@@ -24751,7 +24751,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of the American Psychiatric Nurses Association ;
       issn = 1078-3903 ;
@@ -24801,7 +24801,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of the American Psychoanalytic Association ;
       issn = 0003-0651 ;
@@ -24897,7 +24897,7 @@
     title <
       name = Journal for the History of Astronomy ;
       issn = 0021-8286 ;
-      eissn = 1753-8556 
+      eissn = 1753-8556
     >
 
       param[base_url] = http://jha.sagepub.com/
@@ -24980,11 +24980,11 @@
         au < manifest ; exists ; 1969 ; Journal of the Institution of Locomotive Engineers Volume 59 ; 59 ; >
 
       }
-      
+
     }
 
   {
-  
+
     title <
       name = Journal of the International Association of Providers of AIDS Care (JIAPAC) ;
       issn = 1545-1097 ;
@@ -25006,7 +25006,7 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
-      
+
       comment[0] = Jan 2013 name changed from "Physicians in" to "Providers of"
 
       au < manifest ; exists ; 2002 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 1 ; 1 ; >
@@ -25029,7 +25029,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Theoretical Politics ;
       issn = 0951-6298 ;
@@ -25085,7 +25085,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Thermoplastic Composite Materials ;
       issn = 0892-7057 ;
@@ -25145,7 +25145,7 @@
 
       title <
         name = Journal of Tissue Engineering ;
-        eissn = 2041-7314 
+        eissn = 2041-7314
     >
 
       param[base_url] = http://tej.sagepub.com/
@@ -25159,9 +25159,9 @@
       au < expected ; exists ; 2015 ; Journal of Tissue Engineering Volume 6 ; 6 ; >
 
   }
-  
+
   {
-  
+
     title <
       name = Journal of Transcultural Nursing ;
       issn = 1043-6596 ;
@@ -25216,7 +25216,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Transformative Education ;
       issn = 1541-3446 ;
@@ -25258,7 +25258,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Travel Research ;
       issn = 0047-2875 ;
@@ -25335,7 +25335,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Urban History ;
       issn = 0096-1442 ;
@@ -25404,7 +25404,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Vacation Marketing ;
       issn = 1356-7667 ;
@@ -25457,7 +25457,7 @@
 
     title <
       name = Journal of Veterinary Diagnostic Investigation ;
-      issn = 1040-6387 
+      issn = 1040-6387
     >
 
     param[base_url] = http://vdi.sagepub.com/
@@ -25499,7 +25499,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Vibration and Control ;
       issn = 1077-5463 ;
@@ -25549,7 +25549,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Visual Culture ;
       issn = 1470-4129 ;
@@ -25592,7 +25592,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Wide Bandgap Materials ;
       issn = 1524-511X ;
@@ -25622,13 +25622,13 @@
         eissn = 2161-4326 ;
         issnl = 1077-6958
       >
-      
+
       param[base_url] = http://jmc.sagepub.com/
 
       {
 
         pluginSuffix = ClockssHighWirePressH20Plugin
-        
+
         au < manifest ; exists ; 1967 ; Journalism & Mass Communication Educator Volume 22 ; 22 ; >
         au < manifest ; exists ; 1968 ; Journalism & Mass Communication Educator Volume 23 ; 23 ; >
         au < doesNotExist ; doesNotExist ; 0 ; Journalism & Mass Communication Educator Volume 24 ; 24 ; >
@@ -25688,7 +25688,7 @@
     title <
       name = Journalism & Communication Monographs ;
       issn = 1522-6379 ;
-      eissn = 2161-4342 
+      eissn = 2161-4342
     >
 
     param[base_url] = http://jmo.sagepub.com/
@@ -25718,7 +25718,7 @@
     }
 
     }
-    
+
   {
 
     title <
@@ -25796,7 +25796,7 @@
   }
 
   {
-  
+
     title <
       name = Journalism: Theory, Practice, and Criticism ;
       issn = 1464-8849 ;
@@ -25841,7 +25841,7 @@
   }
 
   {
-  
+
     title <
       name = Labor Studies Journal ;
       issn = 0160-449X ;
@@ -25905,7 +25905,7 @@
   }
 
   {
-  
+
     title <
       name = Language and Literature ;
       issn = 0963-9470 ;
@@ -25958,7 +25958,7 @@
   }
 
   {
-  
+
     title <
       name = Language and Speech ;
       issn = 0023-8309 ;
@@ -26045,7 +26045,7 @@
   }
 
   {
-  
+
     title <
       name = Language Teaching Research ;
       issn = 1362-1688 ;
@@ -26093,7 +26093,7 @@
   }
 
   {
-  
+
     title <
       name = Language Testing ;
       issn = 0265-5322 ;
@@ -26154,7 +26154,7 @@
   }
 
   {
-  
+
     title <
       name = Latin American Perspectives ;
       issn = 0094-582X ;
@@ -26225,7 +26225,7 @@
   }
 
   {
-  
+
     title <
       name = Law, Culture and the Humanities ;
       issn = 1743-8721 ;
@@ -26265,7 +26265,7 @@
   }
 
   {
-  
+
     title <
       name = Leadership ;
       issn = 1742-7150 ;
@@ -26305,7 +26305,7 @@
   }
 
   {
-  
+
     title <
       name = Lighting Research and Technology ;
       issn = 1477-1535 ;
@@ -26385,7 +26385,7 @@
     title <
       name = Local Economy: The Journal of the Local Economy Policy Unit ;
       issn = 0269-0942 ;
-      eissn = 1470-9325 
+      eissn = 1470-9325
     >
 
     param[base_url] = http://lec.sagepub.com/
@@ -26430,7 +26430,7 @@
   }
 
   {
-  
+
     title <
       name = Lupus ;
       issn = 0961-2033 ;
@@ -26492,7 +26492,7 @@
       >
 
       {
-      
+
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://mls.sagepub.com/
 
@@ -26519,7 +26519,7 @@
     }
 
   {
-  
+
     title <
       name = Management & Organizational History ;
       issn = 1744-9359 ;
@@ -26541,7 +26541,7 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
-      
+
       comment[0] = Leaving Sage for Taylor & Francis in 2013.
 
       au < manifest ; exists ; 2006 ; Management & Organizational History Volume 1 ; 1 ; >
@@ -26557,7 +26557,7 @@
   }
 
   {
-  
+
     title <
       name = Management Communication Quarterly ;
       issn = 0893-3189 ;
@@ -26615,7 +26615,7 @@
   }
 
   {
-  
+
     title <
       name = Management in Education ;
       issn = 0892-0206 ;
@@ -26673,7 +26673,7 @@
   }
 
   {
-  
+
     title <
       name = Management Learning ;
       issn = 1350-5076 ;
@@ -26748,7 +26748,7 @@
   }
 
   {
-  
+
     title <
       name = Margin: The Journal of Applied Economic Research ;
       issn = 0973-8010 ;
@@ -26786,7 +26786,7 @@
   }
 
   {
-  
+
     title <
       name = Marketing Theory ;
       issn = 1470-5931 ;
@@ -26830,7 +26830,7 @@
   }
 
   {
-  
+
     title <
       name = Mathematics and Mechanics of Solids ;
       issn = 1081-2865 ;
@@ -26883,7 +26883,7 @@
       title <
         name = Measurement and Control ;
         issn = 0020-2940 ;
-        eissn = 2051-8730 
+        eissn = 2051-8730
       >
 
       {
@@ -26945,7 +26945,7 @@
     }
 
   {
-  
+
     title <
       name = Measurement and Evaluation in Counseling and Development ;
       issn = 0748-1756
@@ -26979,7 +26979,7 @@
   }
 
   {
-  
+
     title <
       name = Media, Culture & Society ;
       issn = 0163-4437 ;
@@ -27044,7 +27044,7 @@
   }
 
   {
-  
+
     title <
       name = Media, War & Conflict ;
       issn = 1750-6352 ;
@@ -27081,7 +27081,7 @@
   }
 
   {
-  
+
     title <
       name = Medical Care Research and Review ;
       issn = 1077-5587 ;
@@ -27182,7 +27182,7 @@
   }
 
   {
-  
+
     title <
       name = Medical Decision Making ;
       issn = 0272-989X ;
@@ -27255,7 +27255,7 @@
         param[base_url] = http://mli.sagepub.com/
       {
         pluginSuffix = ClockssHighWirePressH20Plugin
-        
+
         au < manifest ; exists ; 1993-1995 ; Medical Law International Volume 1 ; 1 ; >
         au < manifest ; exists ; 1995-1997 ; Medical Law International Volume 2 ; 2 ; >
         au < manifest ; exists ; 1997-1998 ; Medical Law International Volume 3 ; 3 ; >
@@ -27270,19 +27270,19 @@
         au < finished ; frozen ; 2012 ; Medical Law International Volume 12 ; 12 ; >
         au < crawling ; exists ; 2013 ; Medical Law International Volume 13 ; 13 ; >
         au < manifest ; exists ; 2014 ; Medical Law International Volume 14 ; 14 ; >
-        
+
       }
-      
+
     }
 
     {
-    
+
      title <
        name = Medico-Legal Journal ;
        issn =  0025-8172 ;
        eissn =  2042-1834
      >
-      
+
         param[base_url] = http://mlj.sagepub.com/
         pluginSuffix = ClockssHighWirePressH20Plugin
         comment[0] = no issue MLST-24
@@ -27394,11 +27394,11 @@
         au < finished ; frozen ; 2012 ; Medico-Legal Journal Volume 80 ; 80 ; >
         au < manifest ; exists ; 2013 ; Medico-Legal Journal Volume 81 ; 81 ; >
         au < manifest ; exists ; 2014 ; Medico-Legal Journal Volume 82 ; 82 ; >
-    
+
     }
-    
+
   {
-  
+
     title <
       name = The Medieval History Journal ;
       issn = 0971-9458 ;
@@ -27445,7 +27445,7 @@
   }
 
   {
-  
+
     title <
       name = Memory Studies ;
       issn = 1750-6980 ;
@@ -27482,7 +27482,7 @@
   }
 
   {
-  
+
     title <
       name = Men and Masculinities ;
       issn = 1097-184X ;
@@ -27551,7 +27551,7 @@
     }
 
   {
-  
+
     title <
       name = Millennium - Journal of International Studies ;
       issn = 0305-8298 ;
@@ -27624,7 +27624,7 @@
   }
 
   {
-  
+
     title <
       name = Modern China ;
       issn = 0097-7004 ;
@@ -27694,7 +27694,7 @@
   }
 
   {
-  
+
     title <
       name = Multiple Sclerosis Journal ;
         issn = 1352-4585 ;
@@ -27745,7 +27745,7 @@
   }
 
   {
-  
+
     title <
       name = Music and Medicine ;
       issn = 1943-8621 ;
@@ -27780,7 +27780,7 @@
   }
 
   {
-  
+
     title <
       name = Music Educators Journal ;
       issn = 0027-4321 ;
@@ -27907,14 +27907,14 @@
       au < expected ; exists ; 2015 ; Music Educators Journal Volume 102 ; 102 ; >
 
     }
-    
+
   }
-  
+
   {
 
     title <
       name = Musicae Scientiae ;
-      issn = 1029-8649 
+      issn = 1029-8649
     >
 
     param[base_url] = http://msx.sagepub.com/
@@ -27938,13 +27938,13 @@
     }
 
   }
-    
+
   {
-  
+
     title <
       name = NASN School Nurse ;
       issn = 1942-602X ;
-      eissn = 1942-6038 
+      eissn = 1942-6038
     >
 
     param[base_url] = http://nas.sagepub.com/
@@ -27985,7 +27985,7 @@
   }
 
   {
-  
+
     title <
       name = NASSP Bulletin ;
       issn = 0192-6365 ;
@@ -28114,7 +28114,7 @@
   }
 
   {
-  
+
     title <
       name = National Institute Economic Review ;
       issn = 0027-9501 ;
@@ -28383,7 +28383,7 @@
     title <
       name = The Neurohospitalist ;
       issn = 1941-8744 ;
-      eissn = 1941-8752 
+      eissn = 1941-8752
     >
 
     param[base_url] = http://nho.sagepub.com/
@@ -28403,7 +28403,7 @@
   }
 
   {
-  
+
     title <
       name = Neurorehabilitation and Neural Repair ;
       issn = 1545-9683 ;
@@ -28461,7 +28461,7 @@
   }
 
   {
-  
+
     title <
       name = The Neuroscientist ;
       issn = 1073-8584 ;
@@ -28532,7 +28532,7 @@
     }
 
   {
-  
+
     title <
       name = New Media & Society ;
       issn = 1461-4448 ;
@@ -28578,7 +28578,7 @@
   }
 
   {
-  
+
     title <
       name = Nonprofit and Voluntary Sector Quarterly ;
       issn = 0899-7640 ;
@@ -28651,7 +28651,7 @@
   }
 
   {
-  
+
     title <
       name = Nursing Ethics ;
       issn = 0969-7330 ;
@@ -28702,7 +28702,7 @@
   }
 
   {
-  
+
     title <
       name = Nursing Science Quarterly ;
       issn = 0894-3184 ;
@@ -28763,7 +28763,7 @@
       title <
         name = Nutrition and Health ;
         issn = 0260-1060 ;
-        eissn = 2047-945X 
+        eissn = 2047-945X
     >
 
       param[base_url] = http://nah.sagepub.com/
@@ -28803,7 +28803,7 @@
   }
 
   {
-  
+
     title <
       name = Nutrition in Clinical Practice ;
       issn = 0884-5336 ;
@@ -28860,9 +28860,9 @@
     }
 
   }
-  
+
     {
-  
+
     title <
       name = OTJR: Occupation, Participation and Health ;
       issn = 1539-4492 ;
@@ -28908,9 +28908,9 @@
         au < exists ; exists ; 2014 ; OTJR: Occupation, Participation and Health Volume 34 ; 34 ; >
         au < expected ; exists ; 2015 ; OTJR: Occupation, Participation and Health Volume 35 ; 35 ; >
     }
-  
+
     {
-  
+
     title <
       name = Organization ;
       issn = 1350-5084 ;
@@ -28961,7 +28961,7 @@
   }
 
   {
-  
+
     title <
       name = Organization & Environment ;
       issn = 1086-0266 ;
@@ -29018,7 +29018,7 @@
   }
 
   {
-  
+
     title <
       name = Organization Studies ;
       issn = 0170-8406 ;
@@ -29087,7 +29087,7 @@
     title <
       name = Organizational Psychology Review ;
       issn = 2041-3866 ;
-      eissn = 2041-3874 
+      eissn = 2041-3874
     >
 
     param[base_url] = http://opr.sagepub.com/
@@ -29107,7 +29107,7 @@
   }
 
   {
-  
+
     title <
       name = Organizational Research Methods ;
       issn = 1094-4281 ;
@@ -29158,7 +29158,7 @@
     title <
       name = Otolaryngology -- Head and Neck Surgery ;
       issn = 0194-5998 ;
-      eissn = 1097-6817 
+      eissn = 1097-6817
     >
 
     param[base_url] = http://oto.sagepub.com/
@@ -29214,7 +29214,7 @@
   }
 
   {
-  
+
     title <
       name = Palliative Medicine ;
       issn = 0269-2163 ;
@@ -29272,7 +29272,7 @@
   }
 
   {
-  
+
     title <
       name = Paradigm ;
       issn = 0971-8907
@@ -29285,7 +29285,7 @@
   }
 
   {
-  
+
     title <
       name = Party Politics ;
       issn = 1354-0688 ;
@@ -29335,7 +29335,7 @@
   }
 
   {
-  
+
     title <
       name = Perfusion ;
       issn = 0267-6591 ;
@@ -29394,7 +29394,7 @@
   }
 
   {
-  
+
     title <
       name = Personality and Social Psychology Bulletin ;
       issn = 0146-1672 ;
@@ -29464,7 +29464,7 @@
   }
 
   {
-  
+
     title <
       name = Personality and Social Psychology Review ;
       issn = 1088-8683 ;
@@ -29516,7 +29516,7 @@
     title <
       name = Perspectives on Psychological Science ;
       issn = 1745-6916 ;
-      eissn = 1745-6924 
+      eissn = 1745-6924
     >
 
     param[base_url] = http://pps.sagepub.com/
@@ -29548,7 +29548,7 @@
       eissn = 1476-9042 ;
       issnl = 1466-4240
     >
-    
+
     comment[continued_by] = 1757-9139
     comment[rsh] = journal name changed to Perspectives in Public Health
     param[base_url] = http://rsh.sagepub.com/
@@ -29698,15 +29698,15 @@
 
 
   }
-  
+
   {
-  
+
     title <
       name = Perspectives in Public Health ;
       issn = 1757-9139 ;
       eissn = 1757-9147
     >
-    
+
     comment[continues] = Before 2009, The Journal of the Royal Society for the Promotion of Health, issn:1466-4240
 
     param[base_url] = http://rsh.sagepub.com/
@@ -29723,7 +29723,7 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
-      
+
       comment[0] = title before 2009 changed.
 
       au < doNotProcess ; doNotProcess ; 2009 ; Perspectives in Public Health Volume 129 ; 129 ; >
@@ -29739,7 +29739,7 @@
   }
 
   {
-  
+
     title <
       name = Perspectives in Vascular Surgery and Endovascular Therapy ;
       issn = 1531-0035 ;
@@ -29822,7 +29822,7 @@
     }
 
   {
-  
+
     title <
       name = Philosophy & Social Criticism ;
       issn = 0191-4537 ;
@@ -29892,7 +29892,7 @@
   }
 
   {
-  
+
     title <
       name = Philosophy of the Social Sciences ;
       issn = 0048-3931 ;
@@ -29966,7 +29966,7 @@
   }
 
     {
-  
+
     title <
       name = Planning Theory ;
       issn = 1473-0952 ;
@@ -30009,7 +30009,7 @@
   }
 
   {
-  
+
     title <
       name = Police Quarterly ;
       issn = 1098-6111 ;
@@ -30056,7 +30056,7 @@
   }
 
   {
-  
+
     title <
       name = Policy, Politics, & Nursing Practice ;
       issn = 1527-1544 ;
@@ -30102,7 +30102,7 @@
   }
 
   {
-  
+
     title <
       name = Policy Futures in Education ;
       eissn = 1478-2103
@@ -30127,7 +30127,7 @@
   }
 
   {
-  
+
     title <
       name = Political Research Quarterly ;
       issn = 1065-9129 ;
@@ -30224,7 +30224,7 @@
   }
 
   {
-  
+
     title <
       name = Political Theory ;
       issn = 0090-5917 ;
@@ -30296,7 +30296,7 @@
   }
 
   {
-  
+
     title <
       name = Politics & Society ;
       issn = 0032-3292 ;
@@ -30368,7 +30368,7 @@
   }
 
   {
-  
+
     title <
       name = Politics, Philosophy & Economics ;
       issn = 1470-594X ;
@@ -30411,7 +30411,7 @@
   }
 
   {
-  
+
     title <
       name = The Prison Journal ;
       issn = 0032-8855 ;
@@ -30536,7 +30536,7 @@
   }
 
   {
-  
+
     title <
       name = Probation Journal ;
       issn = 0264-5505 ;
@@ -30705,7 +30705,7 @@
     title <
       name = Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy ;
       issn = 0957-6509 ;
-      eissn = 2041-2967 
+      eissn = 2041-2967
     >
 
     param[base_url] = http://pia.sagepub.com/
@@ -30757,7 +30757,7 @@
     title <
       name = Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture ;
       issn = 0954-4054 ;
-      eissn = 2041-2975 
+      eissn = 2041-2975
     >
 
     param[base_url] = http://pib.sagepub.com/
@@ -30809,7 +30809,7 @@
     title <
       name = Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science ;
       issn = 0954-4062 ;
-      eissn = 2041-2983 
+      eissn = 2041-2983
     >
 
     param[base_url] = http://pic.sagepub.com/
@@ -30861,7 +30861,7 @@
     title <
       name = Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering ;
       issn = 0954-4070 ;
-      eissn = 2041-2991 
+      eissn = 2041-2991
     >
 
     param[base_url] = http://pid.sagepub.com/
@@ -30912,7 +30912,7 @@
     title <
       name = Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering ;
       issn = 0954-4089 ;
-      eissn = 2041-3009 
+      eissn = 2041-3009
     >
 
     param[base_url] = http://pie.sagepub.com/
@@ -30958,7 +30958,7 @@
     title <
       name = Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit ;
       issn = 0954-4097 ;
-      eissn = 2041-3017 
+      eissn = 2041-3017
     >
 
     param[base_url] = http://pif.sagepub.com/
@@ -31004,7 +31004,7 @@
     title <
       name = Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering ;
       issn = 0954-4100 ;
-      eissn = 2041-3025 
+      eissn = 2041-3025
     >
 
     param[base_url] = http://pig.sagepub.com/
@@ -31050,7 +31050,7 @@
     title <
       name = Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine ;
       issn = 0954-4119 ;
-      eissn = 2041-3033 
+      eissn = 2041-3033
     >
 
     param[base_url] = http://pih.sagepub.com/
@@ -31096,7 +31096,7 @@
     title <
       name = Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering ;
       issn = 0959-6518 ;
-      eissn = 2041-3041 
+      eissn = 2041-3041
     >
 
     param[base_url] = http://pii.sagepub.com/
@@ -31140,7 +31140,7 @@
     title <
       name = Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology ;
       issn = 1350-6501 ;
-      eissn = 2041-305X 
+      eissn = 2041-305X
     >
 
     param[base_url] = http://pij.sagepub.com/
@@ -31181,7 +31181,7 @@
     title <
       name = Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics ;
       issn = 1464-4193 ;
-      eissn = 2041-3068 
+      eissn = 2041-3068
     >
 
     param[base_url] = http://pik.sagepub.com/
@@ -31217,7 +31217,7 @@
     title <
       name = Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications ;
       issn = 1464-4207 ;
-      eissn = 2041-3076 
+      eissn = 2041-3076
     >
 
     param[base_url] = http://pil.sagepub.com/
@@ -31253,7 +31253,7 @@
     title <
       name = Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment ;
       issn = 1475-0902 ;
-      eissn = 2041-3084 
+      eissn = 2041-3084
     >
 
     param[base_url] = http://pim.sagepub.com/
@@ -31286,7 +31286,7 @@
     title <
       name = Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems ;
       issn = 1740-3499 ;
-      eissn = 2041-3092 
+      eissn = 2041-3092
     >
 
     param[base_url] = http://pin.sagepub.com/
@@ -31317,7 +31317,7 @@
     title <
       name = Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability ;
       issn = 1748-006X ;
-      eissn = 1748-0078 
+      eissn = 1748-0078
     >
 
     param[base_url] = http://pio.sagepub.com/
@@ -31346,7 +31346,7 @@
     title <
       name = Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology ;
       issn = 1754-3371 ;
-      eissn = 1754-338X 
+      eissn = 1754-338X
     >
 
     param[base_url] = http://pip.sagepub.com/
@@ -31369,7 +31369,7 @@
   }
 
   {
-  
+
     title <
       name = Progress in Development Studies ;
       issn = 1464-9934 ;
@@ -31413,7 +31413,7 @@
   }
 
   {
-  
+
     title <
       name = Progress in Human Geography ;
       issn = 0309-1325 ;
@@ -31481,7 +31481,7 @@
   }
 
   {
-  
+
     title <
       name = Progress in Physical Geography ;
       issn = 0309-1333 ;
@@ -31611,7 +31611,7 @@
     title <
       name = Psychological Science ;
       issn = 0956-7976 ;
-      eissn = 1467-9280 
+      eissn = 1467-9280
     >
 
     param[base_url] = http://pss.sagepub.com/
@@ -31656,7 +31656,7 @@
     title <
       name = Psychological Science in the Public Interest ;
       issn = 1529-1006 ;
-      eissn = 1539-6053 
+      eissn = 1539-6053
     >
 
     param[base_url] = http://psi.sagepub.com/
@@ -31687,7 +31687,7 @@
   }
 
   {
-  
+
     title <
       name = Psychology & Developing Societies ;
       issn = 0971-3336 ;
@@ -31743,7 +31743,7 @@
   }
 
   {
-  
+
     title <
       name = Psychology of Music ;
       issn = 0305-7356 ;
@@ -31823,7 +31823,7 @@
       {
 
         pluginSuffix = ClockssHighWirePressH20Plugin
-        
+
         au < manifest ; exists ; 1976-1977 ; Psychology of Women Quarterly Volume 1 ; 1 ; >
         au < manifest ; exists ; 1978 ; Psychology of Women Quarterly Volume 2 ; 2 ; >
         au < manifest ; exists ; 1979 ; Psychology of Women Quarterly Volume 3 ; 3 ; >
@@ -31869,7 +31869,7 @@
     }
 
   {
-  
+
     title <
       name = Public Finance Review ;
       issn = 1091-1421 ;
@@ -31944,7 +31944,7 @@
 
       title <
         name = Public Personnel Management ;
-        issn = 0091-0260 
+        issn = 0091-0260
     >
 
       pluginSuffix = ClockssHighWirePressH20Plugin
@@ -31995,9 +31995,9 @@
       au < expected ; exists ; 2015 ; Public Personnel Management Volume 44 ; 44 ; >
 
   }
-    
+
   {
-  
+
     title <
       name = Public Policy and Administration ;
       issn = 0952-0767 ;
@@ -32061,7 +32061,7 @@
       title <
         name = Public Relations Inquiry ;
         issn = 2046-147X ;
-        eissn = 2046-1488 
+        eissn = 2046-1488
     >
 
       param[base_url] = http://pri.sagepub.com/
@@ -32080,7 +32080,7 @@
   }
 
   {
-  
+
     title <
       name = Public Understanding of Science ;
       issn = 0963-6625 ;
@@ -32133,7 +32133,7 @@
   }
 
   {
-  
+
     title <
       name = Public Works Management & Policy ;
       issn = 1087-724X ;
@@ -32182,7 +32182,7 @@
   }
 
   {
-  
+
     title <
       name = Punishment & Society ;
       issn = 1462-4745 ;
@@ -32228,7 +32228,7 @@
   }
 
   {
-  
+
     title <
       name = Qualitative Health Research ;
       issn = 1049-7323 ;
@@ -32282,7 +32282,7 @@
   }
 
   {
-  
+
     title <
       name = Qualitative Inquiry ;
       issn = 1077-8004 ;
@@ -32332,7 +32332,7 @@
   }
 
   {
-  
+
     title <
       name = Qualitative Research ;
       issn = 1468-7941 ;
@@ -32375,7 +32375,7 @@
   }
 
   {
-  
+
     title <
       name = Qualitative Social Work ;
       issn = 1473-3250 ;
@@ -32418,7 +32418,7 @@
   }
 
   {
-  
+
     title <
       name = Race & Class ;
       issn = 0306-3968 ;
@@ -32507,7 +32507,7 @@
 
     title <
       name = Race and Justice ;
-      eissn = 2153-3687 
+      eissn = 2153-3687
     >
 
     param[base_url] = http://raj.sagepub.com/
@@ -32527,7 +32527,7 @@
   }
 
   {
-  
+
     title <
       name = Rationality and Society ;
       issn = 1043-4631 ;
@@ -32586,7 +32586,7 @@
 
       title <
         name = Recherche et Applications en Marketing (English Edition) ;
-        eissn = 2051-5707 
+        eissn = 2051-5707
       >
 
       {
@@ -32613,7 +32613,7 @@
       title <
         name = Recherche et Applications en Marketing ;
         issn = 0767-3701 ;
-        eissn = 2051-2821 
+        eissn = 2051-2821
       >
 
       {
@@ -32637,11 +32637,11 @@
     }
 
   {
-  
+
     title <
       name = Rehabilitation Counseling Bulletin ;
       issn = 0034-3552 ;
-      eissn = 1538-4853 
+      eissn = 1538-4853
     >
 
     param[base_url] = http://rcb.sagepub.com/
@@ -32681,7 +32681,7 @@
   }
 
   {
-  
+
     title <
       name = RELC Journal ;
       issn = 0033-6882 ;
@@ -32756,11 +32756,11 @@
   }
 
   {
-  
+
     title <
       name = Remedial and Special Education ;
       issn = 0741-9325 ;
-      eissn = 1538-4756 
+      eissn = 1538-4756
     >
 
     param[base_url] = http://rse.sagepub.com/
@@ -32817,7 +32817,7 @@
   }
 
   {
-  
+
     title <
       name = Reproductive Sciences ;
       issn = 1933-7191 ;
@@ -32871,7 +32871,7 @@
 
       title <
         name = Research & Politics ;
-        eissn = 2053-1680 
+        eissn = 2053-1680
     >
 
       pluginSuffix = ClockssHighWirePressH20Plugin
@@ -32887,7 +32887,7 @@
       title <
         name = Research Ethics ;
         issn = 1747-0161 ;
-        eissn = 2047-6094 
+        eissn = 2047-6094
     >
 
       param[base_url] = http://rea.sagepub.com/
@@ -32895,7 +32895,7 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
-      
+
       au < manifest ; exists ; 2005 ; Research Ethics Volume 1 ; 1 ; >
       au < manifest ; exists ; 2006 ; Research Ethics Volume 2 ; 2 ; >
       au < manifest ; exists ; 2007 ; Research Ethics Volume 3 ; 3 ; >
@@ -32913,7 +32913,7 @@
   }
 
   {
-  
+
     title <
       name = Research on Aging ;
       issn = 0164-0275 ;
@@ -32979,7 +32979,7 @@
   }
 
   {
-  
+
     title <
       name = Research on Social Work Practice ;
       issn = 1049-7315 ;
@@ -33033,7 +33033,7 @@
   }
 
   {
-  
+
     title <
       name = Research Studies in Music Education ;
       issn = 1321-103X ;
@@ -33099,7 +33099,7 @@
   }
 
   {
-  
+
     title <
       name = Reuse/Recycle Newsletter ;
       issn = 0048-7457 ;
@@ -33121,7 +33121,7 @@
   }
 
   {
-  
+
     title <
       name = Review & Expositor ;
       issn = 0034-6373 ;
@@ -33247,7 +33247,7 @@
   }
 
   {
-  
+
     title <
       name = Review of Educational Research ;
       issn = 0034-6543 ;
@@ -33365,7 +33365,7 @@
     title <
       name = Review of Market Integration ;
       issn = 0974-9292 ;
-      eissn = 0975-4709 
+      eissn = 0975-4709
     >
 
     param[base_url] = http://rmi.sagepub.com/
@@ -33387,7 +33387,7 @@
   }
 
   {
-  
+
     title <
       name = Review of Public Personnel Administration ;
       issn = 0734-371X ;
@@ -33451,7 +33451,7 @@
   }
 
   {
-  
+
     title <
       name = Review of Radical Political Economics ;
       issn = 0486-6134 ;
@@ -33527,7 +33527,7 @@
   }
 
   {
-  
+
     title <
       name = Review of Research in Education ;
       issn = 0091-732X ;
@@ -33598,7 +33598,7 @@
 
     title <
       name = Reviews of Human Factors and Ergonomics ;
-      issn = 1557-234X 
+      issn = 1557-234X
     >
 
     param[base_url] = http://rev.sagepub.com/
@@ -33629,35 +33629,35 @@
         name = Sage Open ;
         eissn = 2158-2440
       >
-      
+
         param[base_url] = http://sgo.sagepub.com/
         comment[moved] = changed platforms to Drupal?
-        
+
         {
-        
+
           pluginSuffix = ClockssHighWirePressH20Plugin
 
           au < down ; frozen ; 2011 ; Sage Open Volume 1 ; 1 ; >
           au < down ; crawling ; 2012 ; Sage Open Volume 2 ; 2 ; >
           au < down ; exists ; 2013 ; Sage Open Volume 3 ; 3 ; >
-        
+
         }
 
         {
-        
+
           pluginSuffix = ClockssHighWireDrupalPlugin
 
           au < doNotProcess ; exists ; 2011 ; Sage Open Volume 1 ; 1 ; >
           au < doNotProcess ; exists ; 2012 ; Sage Open Volume 2 ; 2 ; >
           au < testing ; exists ; 2013 ; Sage Open Volume 3 ; 3 ; >
           au < manifest ; exists ; 2014 ; Sage Open Volume 4 ; 4 ; >
-        
+
         }
 
     }
 
   {
-  
+
     title <
       name = Scandinavian Journal of Public Health ;
       issn = 1403-4948 ;
@@ -33729,7 +33729,7 @@
   }
 
   {
-  
+
     title <
       name = Scandinavian Journal of Surgery ;
       issn = 1457-4969 ;
@@ -33757,7 +33757,7 @@
   }
 
   {
-  
+
     title <
       name = School Psychology International ;
       issn = 0143-0343 ;
@@ -33822,7 +33822,7 @@
   }
 
   {
-  
+
     title <
       name = Science Communication ;
       issn = 1075-5470 ;
@@ -33887,7 +33887,7 @@
   }
 
   {
-  
+
     title <
       name = Science Technology & Society ;
       issn = 0971-7218 ;
@@ -33936,7 +33936,7 @@
   }
 
   {
-  
+
     title <
       name = Science, Technology & Human Values ;
       issn = 0162-2439 ;
@@ -34005,7 +34005,7 @@
   }
 
   {
-  
+
     title <
       name = Second Language Research ;
       issn = 0267-6583 ;
@@ -34065,7 +34065,7 @@
   }
 
   {
-  
+
     title <
       name = Security Dialogue ;
       issn = 0967-0106 ;
@@ -34140,7 +34140,7 @@
   }
 
   {
-  
+
     title <
       name = Seminars in Cardiothoracic and Vascular Anesthesia ;
       issn = 1089-2532 ;
@@ -34188,7 +34188,7 @@
   }
 
   {
-  
+
     title <
       name = Sexual Abuse: A Journal of Research and Treatment ;
       issn = 1079-0632 ;
@@ -34244,7 +34244,7 @@
   }
 
   {
-  
+
     title <
       name = Sexualities ;
       issn = 1363-4607 ;
@@ -34333,7 +34333,7 @@
       title <
         name = Shoulder & Elbow ;
         issn = 1758-5732 ;
-        eissn = 1758-5740 
+        eissn = 1758-5740
       >
 
       {
@@ -34353,7 +34353,7 @@
     }
 
   {
-  
+
     title <
       name = SIMULATION ;
       issn = 0037-5497 ;
@@ -34473,7 +34473,7 @@
   }
 
   {
-  
+
     title <
       name = Simulation & Gaming ;
       issn = 1046-8781 ;
@@ -34548,7 +34548,7 @@
   }
 
   {
-  
+
     title <
       name = Small Group Research ;
       issn = 1046-4964 ;
@@ -34623,7 +34623,7 @@
   }
 
   {
-  
+
     title <
       name = Social & Legal Studies ;
       issn = 0964-6639 ;
@@ -34676,7 +34676,7 @@
   }
 
   {
-  
+
     title <
       name = Social Compass ;
       issn = 0037-7686 ;
@@ -34771,7 +34771,7 @@
     title <
       name = Social Currents ;
       issn = 2329-4965 ;
-      eissn = 2329-4973 
+      eissn = 2329-4973
     >
 
     param[base_url] = http://scu.sagepub.com/
@@ -34792,7 +34792,7 @@
     title <
       name = Social Psychological and Personality Science ;
       issn = 1948-5506 ;
-      eissn = 1948-5514 
+      eissn = 1948-5514
     >
 
     param[base_url] = http://spp.sagepub.com/
@@ -34817,7 +34817,7 @@
     title <
       name = Social Psychology Quarterly ;
       issn = 0190-2725 ;
-      eissn = 1939-8999 
+      eissn = 1939-8999
     >
 
     param[base_url] = http://spq.sagepub.com/
@@ -34844,7 +34844,7 @@
   }
 
   {
-  
+
     title <
       name = Social Science Computer Review ;
       issn = 0894-4393 ;
@@ -34906,7 +34906,7 @@
   }
 
   {
-  
+
     title <
       name = Social Science Information ;
       issn = 0539-0184 ;
@@ -34989,7 +34989,7 @@
   }
 
   {
-  
+
     title <
       name = Social Studies of Science ;
       issn = 0306-3127 ;
@@ -35067,7 +35067,7 @@
     title <
       name = Society and Mental Health ;
       issn = 2156-8693 ;
-      eissn = 2156-8731 
+      eissn = 2156-8731
     >
 
     param[base_url] = http://smh.sagepub.com/
@@ -35087,7 +35087,7 @@
   }
 
   {
-  
+
     title <
       name = Sociological Methods & Research ;
       issn = 0049-1241 ;
@@ -35159,7 +35159,7 @@
   }
 
   {
-  
+
     title <
       name = Sociology ;
       issn = 0038-0385 ;
@@ -35241,7 +35241,7 @@
     title <
       name = Sociology of Education ;
       issn = 0038-0407 ;
-      eissn = 1939-8573 
+      eissn = 1939-8573
     >
 
     param[base_url] = http://soe.sagepub.com/
@@ -35318,7 +35318,7 @@
   }
 
   {
-  
+
     title <
       name = South Asia Economic Journal ;
       issn = 1391-5614
@@ -35384,7 +35384,7 @@
   {
     title <
       name = South Asian Journal of Human Resources Management ;
-      issn = 2322-0937 ; 
+      issn = 2322-0937 ;
       eissn = 2349-5790
     >
 
@@ -35397,7 +35397,7 @@
   }
 
   {
-  
+
     title <
       name = South Asia Research ;
       issn = 0262-7280 ;
@@ -35461,7 +35461,7 @@
   }
 
   {
-  
+
     title <
       name = South Asian Survey ;
       issn = 0971-5231
@@ -35508,7 +35508,7 @@
   }
 
   {
-  
+
     title <
       name = Space and Culture ;
       issn = 1206-3312 ;
@@ -35559,7 +35559,7 @@
     title <
       name = Sports Health: A Multidisciplinary Approach ;
       issn = 1941-7381 ;
-      eissn = 1941-0921 
+      eissn = 1941-0921
     >
 
     param[base_url] = http://sph.sagepub.com/
@@ -35585,7 +35585,7 @@
     title <
       name = State and Local Government Review ;
       issn = 0160-323X ;
-      eissn = 1943-3409 
+      eissn = 1943-3409
     >
 
     param[base_url] = http://slg.sagepub.com/
@@ -35623,7 +35623,7 @@
     title <
       name = State Politics & Policy Quarterly ;
       issn = 1532-4400 ;
-      eissn = 1946-1607 
+      eissn = 1946-1607
     >
 
     param[base_url] = http://spa.sagepub.com/
@@ -35653,7 +35653,7 @@
   }
 
   {
-  
+
     title <
       name = Statistical Methods in Medical Research ;
       issn = 0962-2802 ;
@@ -35706,7 +35706,7 @@
   }
 
   {
-  
+
     title <
       name = Statistical Modelling ;
       issn = 1471-082X ;
@@ -35750,7 +35750,7 @@
   }
 
   {
-  
+
     title <
       name = Strategic Organization ;
       issn = 1476-1270 ;
@@ -35792,7 +35792,7 @@
   }
 
   {
-  
+
     title <
       name = Structural Health Monitoring ;
       issn = 1475-9217 ;
@@ -35835,7 +35835,7 @@
   }
 
   {
-  
+
     title <
       name = Studies in Christian Ethics ;
       issn = 0953-9468 ;
@@ -35892,7 +35892,7 @@
   }
 
   {
-  
+
     title <
       name = Studies in History ;
       issn = 0257-6430 ;
@@ -35945,7 +35945,7 @@
       au < finished ; frozen ; 2012 ; Studies in History Volume 28 ; 28 ; >
       au < crawling ; exists ; 2013 ; Studies in History Volume 29 ; 29 ; >
       au < manifest ; exists ; 2014 ; Studies in History Volume 30 ; 30 ; >
-      
+
     }
 
   }
@@ -36005,7 +36005,7 @@
     title <
       name = Studies in Religion/Sciences Religieuses ;
       issn = 0008-4298 ;
-      eissn = 2042-0587 
+      eissn = 2042-0587
     >
 
       param[base_url] = http://sir.sagepub.com/
@@ -36059,7 +36059,7 @@
   }
 
   {
-  
+
     title <
       name = Surgical Innovation ;
       issn = 1553-3506 ;
@@ -36110,7 +36110,7 @@
   }
 
   {
-  
+
     title <
       name = Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children ;
       issn = 0888-4064 ;
@@ -36234,7 +36234,7 @@
       au < exists ; exists ; 2012-2013 ; TEACHING Exceptional Children Volume 45 ; 45 ; >
       au < testing ; exists ; 2013-2014 ; TEACHING Exceptional Children Volume 46 ; 46 ; >
       au < manifest ; exists ; 2014-2015 ; TEACHING Exceptional Children Volume 47 ; 47 ; >
-    
+
   }
 
   {
@@ -36242,7 +36242,7 @@
     title <
       name = Teaching of Psychology ;
       issn = 0098-6283 ;
-      eissn = 1532-8023 
+      eissn = 1532-8023
     >
 
     param[base_url] = http://top.sagepub.com/
@@ -36266,7 +36266,7 @@
       title <
         name = Teaching Public Administration ;
         issn = 0144-7394 ;
-        eissn = 2047-8720 
+        eissn = 2047-8720
     >
 
       param[base_url] = http://tpa.sagepub.com/
@@ -36317,7 +36317,7 @@
     title <
       name = Teaching Sociology ;
       issn = 0092-055X ;
-      eissn = 1939-862X 
+      eissn = 1939-862X
     >
 
     param[base_url] = http://tso.sagepub.com/
@@ -36344,7 +36344,7 @@
   }
 
   {
-  
+
     title <
       name = Technology in Cancer Research & Treatment ;
       issn = 1533-0346 ;
@@ -36372,7 +36372,7 @@
   }
 
   {
-  
+
     title <
       name = Television & New Media ;
       issn = 1527-4764 ;
@@ -36417,7 +36417,7 @@
   }
 
   {
-  
+
     title <
       name = Textile Research Journal ;
       issn = 0040-5175 ;
@@ -36535,7 +36535,7 @@
     title <
       name = Theological Studies ;
       issn = 0040-5639 ;
-      eissn = 2169-1304 
+      eissn = 2169-1304
     >
 
     param[base_url] = http://tsj.sagepub.com/
@@ -36625,7 +36625,7 @@
     title <
       name = Theology ;
       issn = 0040-571X ;
-      eissn = 2044-2696 
+      eissn = 2044-2696
     >
 
     param[base_url] = http://tjx.sagepub.com/
@@ -36762,7 +36762,7 @@
     title <
       name = Theology & Sexuality ;
       issn = 1355-8358 ;
-      eissn = 1745-5170 
+      eissn = 1745-5170
     >
 
     param[base_url] = http://tse.sagepub.com/
@@ -36795,7 +36795,7 @@
     title <
       name = Theology Today ;
       issn = 0040-5736 ;
-      eissn = 2044-2556 
+      eissn = 2044-2556
     >
 
     param[base_url] = http://ttj.sagepub.com/
@@ -36882,7 +36882,7 @@
   }
 
   {
-  
+
     title <
       name = Theoretical Criminology ;
       issn = 1362-4806 ;
@@ -36930,7 +36930,7 @@
   }
 
   {
-  
+
     title <
       name = Theory & Psychology ;
       issn = 0959-3543 ;
@@ -36984,7 +36984,7 @@
   }
 
   {
-  
+
     title <
       name = Theory and Research in Education ;
       issn = 1477-8785 ;
@@ -37026,7 +37026,7 @@
   }
 
   {
-  
+
     title <
       name = Theory, Culture & Society ;
       issn = 0263-2764 ;
@@ -37087,7 +37087,7 @@
   }
 
   {
-  
+
     title <
       name = Therapeutic Advances in Cardiovascular Disease ;
       issn = 1753-9447 ;
@@ -37128,7 +37128,7 @@
     title <
       name = Therapeutic Advances in Chronic Disease ;
       issn = 2040-6223 ;
-      eissn = 2040-6231 
+      eissn = 2040-6231
     >
 
     param[base_url] = http://taj.sagepub.com/
@@ -37153,7 +37153,7 @@
     title <
       name = Therapeutic Advances in Drug Safety ;
       issn = 2042-0986 ;
-      eissn = 2042-0994 
+      eissn = 2042-0994
     >
 
     param[base_url] = http://taw.sagepub.com/
@@ -37178,7 +37178,7 @@
     title <
       name = Therapeutic Advances in Endocrinology and Metabolism ;
       issn = 2042-0188 ;
-      eissn = 2042-0196 
+      eissn = 2042-0196
     >
 
     param[base_url] = http://tae.sagepub.com/
@@ -37199,7 +37199,7 @@
   }
 
   {
-  
+
     title <
       name = Therapeutic Advances in Gastroenterology ;
       issn = 1756-283X ;
@@ -37240,7 +37240,7 @@
     title <
       name = Therapeutic Advances in Hematology ;
       issn = 2040-6207 ;
-      eissn = 2040-6215 
+      eissn = 2040-6215
     >
 
     param[base_url] = http://tah.sagepub.com/
@@ -37261,7 +37261,7 @@
   }
 
   {
-  
+
     title <
       name = Therapeutic Advances in Medical Oncology ;
       issn = 1758-8340 ;
@@ -37300,7 +37300,7 @@
     title <
       name = Therapeutic Advances in Musculoskeletal Disease ;
       issn = 1759-720X ;
-      eissn = 1759-7218 
+      eissn = 1759-7218
     >
 
     param[base_url] = http://tab.sagepub.com/
@@ -37322,7 +37322,7 @@
   }
 
   {
-  
+
     title <
       name = Therapeutic Advances in Neurological Disorders ;
       issn = 1756-2856 ;
@@ -37363,7 +37363,7 @@
     title <
       name = Therapeutic Advances in Psychopharmacology ;
       issn = 2045-1253 ;
-      eissn = 2045-1261 
+      eissn = 2045-1261
     >
 
     param[base_url] = http://tpp.sagepub.com/
@@ -37383,7 +37383,7 @@
   }
 
   {
-  
+
     title <
       name = Therapeutic Advances in Respiratory Disease ;
       issn = 1753-4658 ;
@@ -37421,7 +37421,7 @@
   }
 
   {
-  
+
     title <
       name = Therapeutic Advances in Urology ;
       issn = 1756-2872 ;
@@ -37460,7 +37460,7 @@
     title <
       name = Therapeutic Advances in Vaccines ;
       issn = 2051-0136 ;
-      eissn = 2051-0144 
+      eissn = 2051-0144
     >
 
     {
@@ -37477,7 +37477,7 @@
   }
 
   {
-  
+
     title <
       name = Thesis Eleven ;
       issn = 0725-5136 ;
@@ -37634,7 +37634,7 @@
   }
 
   {
-  
+
     title <
       name = Time & Society ;
       issn = 0961-463X ;
@@ -37687,11 +37687,11 @@
   }
 
   {
-  
+
     title <
       name = Topics in Early Childhood Special Education ;
       issn = 0271-1214 ;
-      eissn = 1538-4845 
+      eissn = 1538-4845
     >
 
     param[base_url] = http://tec.sagepub.com/
@@ -37755,7 +37755,7 @@
     title <
       name = Tourism and Hospitality Research ;
       issn = 1467-3584 ;
-      eissn = 1742-9692 
+      eissn = 1742-9692
     >
 
     param[base_url] = http://thr.sagepub.com/
@@ -37781,7 +37781,7 @@
   }
 
   {
-  
+
     title <
       name = Tourist Studies ;
       issn = 1468-7976 ;
@@ -37824,7 +37824,7 @@
   }
 
   {
-  
+
     title <
       name = Toxicologic Pathology ;
       issn = 0192-6233 ;
@@ -37895,7 +37895,7 @@
   }
 
   {
-  
+
     title <
       name = Toxicology and Industrial Health ;
       issn = 0748-2337 ;
@@ -37955,7 +37955,7 @@
   }
 
   {
-  
+
     title <
       name = Transactions of the Institute of Measurement and Control ;
       issn = 0142-3312 ;
@@ -38021,7 +38021,7 @@
   }
 
   {
-  
+
     title <
       name = Transcultural Psychiatry ;
       issn = 1363-4615 ;
@@ -38106,7 +38106,7 @@
     title <
       name = Transfer: European Review of Labour and Research ;
       issn = 1024-2589 ;
-      eissn = 1996-7284 
+      eissn = 1996-7284
     >
 
     param[base_url] = http://trs.sagepub.com/
@@ -38142,7 +38142,7 @@
   }
 
   {
-  
+
     title <
       name = Transformation: An International Journal of Holistic Mission Studies ;
       issn = 0265-3788
@@ -38201,10 +38201,10 @@
   }
 
   {
-  
+
     title <
       name = Translational Epigenomics ;
-      issn = 2334-4865 
+      issn = 2334-4865
     >
 
       param[base_url] = http://epi.sagepub.com/
@@ -38212,11 +38212,11 @@
 
       au < exists ; exists ; 2014 ; Translational Epigenomics Volume 1 ; 1 ; >
       au < expected ; exists ; 2015 ; Translational Epigenomics Volume 2 ; 2 ; >
-      
+
   }
 
   {
-  
+
     title <
       name = Trauma ;
       issn = 1460-4086 ;
@@ -38262,7 +38262,7 @@
   }
 
   {
-  
+
     title <
       name = Trauma, Violence, & Abuse ;
       issn = 1524-8380 ;
@@ -38307,7 +38307,7 @@
   }
 
   {
-  
+
     title <
       name = Traumatology ;
       issn = 1534-7656 ;
@@ -38357,7 +38357,7 @@
   }
 
   {
-  
+
     title <
       name = Trends in Amplification ;
       issn = 1084-7138 ;
@@ -38399,13 +38399,13 @@
       au < finished ; crawling ; 2012 ; Trends in Amplification Volume 16 ; 16 ; >
       au < crawling ; exists ; 2013 ; Trends in Amplification Volume 17 ; 17 ; >
       au < expected ; exists ; 2014 ; Trends in Amplification Volume 18 ; 18 ; >
- 
+
     }
 
   }
 
     {
-  
+
     title <
       name = Update: Applications of Research in Music Education ;
       issn = 8755-1233 ;
@@ -38465,7 +38465,7 @@
   }
 
   {
-  
+
     title <
       name = Urban Affairs Review ;
       issn = 1078-0874 ;
@@ -38545,7 +38545,7 @@
   }
 
   {
-  
+
     title <
       name = Urban Education ;
       issn = 0042-0859 ;
@@ -38624,7 +38624,7 @@
   }
 
   {
-  
+
     title <
       name = Urban Studies ;
       issn = 0042-0980 ;
@@ -38705,7 +38705,7 @@
     }
 
   {
-  
+
     title <
       name = Vascular and Endovascular Surgery ;
       issn = 1538-5744 ;
@@ -38784,7 +38784,7 @@
   }
 
   {
-  
+
     title <
       name = Vascular Medicine ;
       issn = 1358-863X ;
@@ -38838,11 +38838,11 @@
       title <
         name = Pathologia veterinaria ;
         issn = 0031-2975 ;
-        issnl = 0031-2975 
+        issnl = 0031-2975
       >
 
         comment[continued_by] = Veterinary Pathology
-        
+
       {
 
         pluginSuffix = ClockssHighWirePressH20Plugin
@@ -38865,7 +38865,7 @@
     title <
       name = Veterinary Pathology ;
       issn = 0300-9858 ;
-      eissn = 1544-2217 
+      eissn = 1544-2217
     >
 
        param[base_url] = http://vet.sagepub.com/
@@ -38927,7 +38927,7 @@
   }
 
   {
-  
+
     title <
       name = Violence Against Women ;
       issn = 1077-8012 ;
@@ -38978,7 +38978,7 @@
   }
 
   {
-  
+
     title <
       name = Visual Communication ;
       issn = 1470-3572 ;
@@ -39022,7 +39022,7 @@
   }
 
   {
-  
+
     title <
       name = War in History ;
       issn = 0968-3445 ;
@@ -39074,7 +39074,7 @@
   }
 
   {
-  
+
     title <
       name = Waste Management & Research ;
       issn = 0734-242X ;
@@ -39137,7 +39137,7 @@
   }
 
   {
-  
+
     title <
       name = Western Journal of Nursing Research ;
       issn = 0193-9459 ;
@@ -39204,7 +39204,7 @@
   }
 
   {
-  
+
     title <
       name = Word of Mouth ;
       issn = 1048-3950 ;
@@ -39260,7 +39260,7 @@
   }
 
   {
-  
+
     title <
       name = Work and Occupations ;
       issn = 0730-8884 ;
@@ -39331,7 +39331,7 @@
   }
 
   {
-  
+
     title <
       name = Work, Employment & Society ;
       issn = 0950-0170 ;
@@ -39393,7 +39393,7 @@
     title <
       name = World Journal for Pediatric and Congenital Heart Surgery ;
       issn = 2150-1351 ;
-      eissn = 2150-136X 
+      eissn = 2150-136X
     >
 
     param[base_url] = http://pch.sagepub.com/
@@ -39419,7 +39419,7 @@
     title <
       name = World Policy Journal ;
       issn = 0740-2775 ;
-      eissn = 1936-0924 
+      eissn = 1936-0924
     >
 
     param[base_url] = http://wpj.sagepub.com/
@@ -39445,7 +39445,7 @@
   }
 
   {
-  
+
     title <
       name = Written Communication ;
       issn = 0741-0883 ;
@@ -39506,7 +39506,7 @@
   }
 
   {
-  
+
     title <
       name = Young ;
       issn = 1103-3088 ;
@@ -39558,7 +39558,7 @@
   }
 
   {
-  
+
     title <
       name = Young Exceptional Children ;
       issn = 1096-2506
@@ -39595,7 +39595,7 @@
   }
 
   {
-  
+
     title <
       name = Youth & Society ;
       issn = 0044-118X ;
@@ -39671,7 +39671,7 @@
   }
 
   {
-  
+
     title <
       name = Youth Justice ;
       issn = 1473-2254 ;
@@ -39715,7 +39715,7 @@
   }
 
   {
-  
+
     title <
       name = Youth Violence and Juvenile Justice ;
       issn = 1541-2040 ;
@@ -39755,12 +39755,12 @@
     }
 
   }
-  
+
   {
 
     title <
       name = Engineering in Medicine ;
-      issn = 0046-2039 
+      issn = 0046-2039
     >
 
     param[base_url] = http://eim.sagepub.com/
@@ -39795,7 +39795,7 @@
 
     title <
       name = Gifted Child Today ;
-      issn = 1076-2175 
+      issn = 1076-2175
     >
 
     param[base_url] = http://gct.sagepub.com/
@@ -39853,7 +39853,7 @@
     title <
       name = Interpretation: A Journal of Bible and Theology ;
       issn = 0020-9643 ;
-      eissn = 2159-340X 
+      eissn = 2159-340X
     >
 
     param[base_url] = http://int.sagepub.com/
@@ -39941,7 +39941,7 @@
 
     title <
       name = Journal for the Education of the Gifted ;
-      issn = 0162-3532 
+      issn = 0162-3532
     >
 
     param[base_url] = http://jeg.sagepub.com/
@@ -39983,7 +39983,7 @@
     title <
       name = Journal of Infrastructure Development ;
       issn = 0974-9306 ;
-      eissn = 0975-5969 
+      eissn = 0975-5969
     >
 
     param[base_url] = http://joi.sagepub.com/
@@ -40009,7 +40009,7 @@
 
     title <
       name = Journal of Mechanical Engineering Science ;
-      issn = 0022-2542 
+      issn = 0022-2542
     >
 
     param[base_url] = http://jms.sagepub.com/
@@ -40051,7 +40051,7 @@
 
     title <
       name = Learning Disability Quarterly ;
-      issn = 0731-9487 
+      issn = 0731-9487
     >
 
     param[base_url] = http://ldq.sagepub.com/
@@ -40091,7 +40091,7 @@
     title <
       name = Political Science ;
       issn = 0032-3187 ;
-      eissn = 2041-0611 
+      eissn = 2041-0611
     >
 
     param[base_url] = http://pnz.sagepub.com/
@@ -40176,7 +40176,7 @@
 
     title <
       name = Proceedings of the Institution of Automobile Engineers ;
-      issn = 0369-9838 
+      issn = 0369-9838
     >
 
     param[base_url] = http://pau.sagepub.com/
@@ -40235,7 +40235,7 @@
 
     title <
       name = Proceedings of the Institution of Mechanical Engineers ;
-      issn = 0020-3483 
+      issn = 0020-3483
     >
 
     param[base_url] = http://pme.sagepub.com/
@@ -40448,7 +40448,7 @@
 
     title <
       name = Proceedings of the Institution of Mechanical Engineers: Automobile Division ;
-      issn = 0367-8822 
+      issn = 0367-8822
     >
 
     param[base_url] = http://pad.sagepub.com/
@@ -40456,7 +40456,7 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
-      
+
       comment[0] = Volume numbering jumps from V16 in 1962 to V178 in 1963
 
       au < exists ; exists ; 1947 ; Proceedings of the Institution of Mechanical Engineers: Automobile Division Volume 1 ; 1 ; >
@@ -40491,7 +40491,7 @@
 
     title <
       name = Proceedings of the Institution of Mechanical Engineers, Conference Proceedings ;
-      issn = 0367-8849 
+      issn = 0367-8849
     >
 
     param[base_url] = http://pcp.sagepub.com/
@@ -40517,7 +40517,7 @@
     title <
       name = Social Change ;
       issn = 0049-0857 ;
-      eissn = 0976-3538 
+      eissn = 0976-3538
     >
 
     param[base_url] = http://sch.sagepub.com/
@@ -40553,7 +40553,7 @@
     title <
       name = Social Marketing Quarterly ;
       issn = 1524-5004 ;
-      eissn = 1539-4093 
+      eissn = 1539-4093
     >
 
     param[base_url] = http://smq.sagepub.com/
@@ -40590,7 +40590,7 @@
     title <
       name = Sociological Methodology ;
       issn = 0081-1750 ;
-      eissn = 1467-9531 
+      eissn = 1467-9531
     >
 
     param[base_url] = http://smx.sagepub.com/
@@ -40619,7 +40619,7 @@
     title <
       name = Sociological Theory ;
       issn = 0735-2751 ;
-      eissn = 1467-9558 
+      eissn = 1467-9558
     >
 
     param[base_url] = http://stx.sagepub.com/
@@ -40648,7 +40648,7 @@
     title <
       name = Ultrasonic Imaging ;
       issn = 0161-7346 ;
-      eissn = 1096-0910 
+      eissn = 1096-0910
     >
 
     param[base_url] = http://uix.sagepub.com/
@@ -40704,7 +40704,7 @@
     title <
       name = Vision: The Journal of Business Perspective ;
       issn = 0972-2629 ;
-      eissn = 2249-5304 
+      eissn = 2249-5304
     >
 
       param[base_url] = http://vis.sagepub.com/
@@ -40901,10 +40901,10 @@
     }
 
   {
-  
+
     title <
       name = ASN NEURO ;
-      eissn = 1759-0914 
+      eissn = 1759-0914
     >
 
     pluginSuffix = ClockssHighWirePressH20Plugin
@@ -40916,9 +40916,9 @@
     au < exists ; exists ; 2012 ; ASN NEURO Volume 4 ; 4 ; >
     au < manifest ; exists ; 2013 ; ASN NEURO Volume 5 ; 5 ; >
     au < manifest ; exists ; 2014 ; ASN NEURO Volume 6 ; 6 ; >
-    
+
     }
-    
+
     {
 
       title <
@@ -41145,7 +41145,7 @@
       title <
         name = Canadian Pharmacists Journal / Revue des Pharmaciens du Canada ;
         issn = 1715-1635 ;
-        eissn = 1913-701X 
+        eissn = 1913-701X
       >
 
     pluginSuffix = ClockssHighWirePressH20Plugin
@@ -41275,7 +41275,7 @@
 
       title <
         name = Foreign Trade Review ;
-        issn = 0015-7325 
+        issn = 0015-7325
       >
 
     pluginSuffix = ClockssHighWirePressH20Plugin
@@ -41333,10 +41333,10 @@
       >
 
       {
-      
+
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://ino.sagepub.com/
-    
+
         au < doNotProcess ; doNotProcess ; 2008 ; InnovAiT: The RCGP Journal for Associates in Training Volume 1 ; 1 ; >
         au < doNotProcess ; doNotProcess ; 2009 ; InnovAiT: The RCGP Journal for Associates in Training Volume 2 ; 2 ; >
         au < doNotProcess ; doNotProcess ; 2010 ; InnovAiT: The RCGP Journal for Associates in Training Volume 3 ; 3 ; >
@@ -41344,9 +41344,9 @@
         au < doNotProcess ; doNotProcess ; 2012 ; InnovAiT: The RCGP Journal for Associates in Training Volume 5 ; 5 ; >
         au < crawling ; exists ; 2013 ; InnovAiT: The RCGP Journal for Associates in Training Volume 6 ; 6 ; >
         au < manifest ; exists ; 2014 ; InnovAiT: The RCGP Journal for Associates in Training Volume 7 ; 7 ; >
-        
+
       }
-      
+
       {
 
         param[base_url] = http://rcgp-innovait.oxfordjournals.org/
@@ -41578,7 +41578,7 @@
       param[base_url] = http://uro.sagepub.com/
 
       comment[0] = Jan 2013 name changed from British Journal of Medical and Surgical Urology to Journal of Clinical Urology
-      
+
       au < crawling ; exists ; 2008 ; British Journal of Medical and Surgical Urology Volume 1 ; 1 ; >
       au < crawling ; exists ; 2009 ; British Journal of Medical and Surgical Urology Volume 2 ; 2 ; >
       au < crawling ; exists ; 2010 ; British Journal of Medical and Surgical Urology Volume 3 ; 3 ; >
@@ -41611,7 +41611,7 @@
 
       title <
         name = Orthopaedic Journal of Sports Medicine ;
-        eissn = 2325-9671 
+        eissn = 2325-9671
       >
 
     pluginSuffix = ClockssHighWirePressH20Plugin
@@ -41627,7 +41627,7 @@
 
       title <
         name = Transactional Analysis Journal ;
-        eissn = 0362-1537 
+        eissn = 0362-1537
       >
 
     pluginSuffix = ClockssHighWirePressH20Plugin
@@ -41682,25 +41682,25 @@
     }
 
     {
-    
-      comment[publisher] = old publisher is Royal Society of Medicine Press  
+
+      comment[publisher] = old publisher is Royal Society of Medicine Press
       comment[moved_publishers] = Royal Society of Medicine Press has been acquired by Sage.
       comment[moving_urls] = urls for these publications will be changing in 2013.
-      
+
     }
-    
+
     {
-    
+
       title <
         name = Acta Radiologica ;
         issn = 0284-1851 ;
         eissn = 1600-0455 ;
         issnl = 0284-1851
       >
-  
+
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://acr.sagepub.com/
-  
+
         au < exists ; exists ; 1961 ; Acta Radiologica Volume volos-55 ; volos-55 ; >
         au < exists ; exists ; 1961 ; Acta Radiologica Volume volos-56 ; volos-56 ; >
         au < exists ; exists ; 1962 ; Acta Radiologica Volume volos-57 ; volos-57 ; >
@@ -41760,18 +41760,18 @@
         au < crawling ; exists ; 2012 ; Acta Radiologica Volume 53 ; 53 ; >
         au < crawling ; exists ; 2013 ; Acta Radiologica Volume 54 ; 54 ; >
         au < manifest ; exists ; 2014 ; Acta Radiologica Volume 55 ; 55 ; >
-  
-    }    
-          
+
+    }
+
     {
-  
+
       title <
         name = Annals of Clinical Biochemistry ;
         issn = 0004-5632 ;
         eissn = 1758-1001 ;
         issnl = 0004-5632
       >
-  
+
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://acb.sagepub.com/
 
@@ -41793,18 +41793,18 @@
         au < exists ; exists ; 2012 ; Annals of Clinical Biochemistry Volume 49 ; 49 ; >
         au < manifest ; exists ; 2013 ; Annals of Clinical Biochemistry Volume 50 ; 50 ; >
         au < expected ; exists ; 2014 ; Annals of Clinical Biochemistry Volume 51 ; 51 ; >
-  
+
     }
-  
+
     {
-    
+
       title <
         name = Clinical Ethics ;
         issn = 1477-7509 ;
         eissn = 1758-101X ;
         issnl = 1477-7509
       >
-  
+
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://cet.sagepub.com/
 
@@ -41820,20 +41820,20 @@
         au < expected ; exists ; 2015 ; Clinical Ethics Volume 10 ; 10 ; >
 
     }
-  
+
     {
-    
+
       title <
         name = Clinical Risk ;
         issn = 1356-2622 ;
         eissn = 1758-1028 ;
         issnl = 1356-2622
       >
-  
+
         comment[notmoved] = not yet moved to Sage.
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://cri.sagepub.com/
-  
+
         au < doNotProcess ; exists ; 2001 ; Clinical Risk Volume 7 ; 7 ; >
         au < doNotProcess ; exists ; 2002 ; Clinical Risk Volume 8 ; 8 ; >
         au < doNotProcess ; exists ; 2003 ; Clinical Risk Volume 9 ; 9 ; >
@@ -41848,20 +41848,20 @@
         au < doNotProcess ; exists ; 2012 ; Clinical Risk Volume 18 ; 18 ; >
         au < doNotProcess ; exists ; 2013 ; Clinical Risk Volume 19 ; 19 ; >
         au < doNotProcess ; exists ; 2014 ; Clinical Risk Volume 20 ; 20 ; >
-  
+
     }
-  
+
     {
-    
+
       title <
         name = Experimental Biology and Medicine ;
         issn = 1535-3702 ;
         eissn = 1535-3699
       >
-  
+
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://ebm.sagepub.com/
-  
+
         au < exists ; exists ; 1903 ; Experimental Biology and Medicine Volume 1 ; 1 ; >
         au < exists ; exists ; 1904 ; Experimental Biology and Medicine Volume 2 ; 2 ; >
         au < exists ; exists ; 1905 ; Experimental Biology and Medicine Volume 3 ; 3 ; >
@@ -42101,21 +42101,21 @@
         au < exists ; exists ; 2012 ; Experimental Biology and Medicine Volume 237 ; 237 ; >
         au < crawling ; exists ; 2013 ; Experimental Biology and Medicine Volume 238 ; 238 ; >
         au < manifest ; exists ; 2014 ; Experimental Biology and Medicine Volume 239 ; 239 ; >
-  
+
     }
-  
+
     {
-    
+
       title <
         name = Hand Therapy ;
         issn = 1758-9983 ;
         eissn = 1758-9991 ;
         issnl = 1758-9991
       >
-  
+
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://hth.sagepub.com/
-  
+
         au < exists ; exists ; 2001 ; Hand Therapy Volume 6 ; 6 ; >
         au < exists ; exists ; 2002 ; Hand Therapy Volume 7 ; 7 ; >
         au < exists ; exists ; 2003 ; Hand Therapy Volume 8 ; 8 ; >
@@ -42131,38 +42131,38 @@
         au < crawling ; exists ; 2013 ; Hand Therapy Volume 18 ; 18 ; >
         au < manifest ; exists ; 2014 ; Hand Therapy Volume 19 ; 19 ; >
     }
-  
+
     {
-    
+
       title <
         name = Handbook of Practice Management ;
         type = bookSeries ;
         issn = 0962-144X ;
         eissn = 2047-718X
       >
-      
+
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://hpm.sagepub.com/
       implicit < status ; status2 ; year ; isbn ; name ; param[volume_name] >
-      
+
       au < exists ; exists ; 2009 ; 0-443-04576-3 ; Handbook of Practice Management Volume 71 ; 71 >
-  
+
     }
-  
+
     {
-    
+
       title <
         name = Health Services Management Research ;
         issn = 0951-4848 ;
         eissn = 1758-1044 ;
         issnl = 0951-4848
       >
-  
+
       {
-  
+
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://hsm.sagepub.com/
-  
+
         au < exists ; exists ; 2001 ; Health Services Management Research Volume 14 ; 14 ; >
         au < exists ; exists ; 2002 ; Health Services Management Research Volume 15 ; 15 ; >
         au < exists ; exists ; 2003 ; Health Services Management Research Volume 16 ; 16 ; >
@@ -42177,24 +42177,24 @@
         au < crawling ; exists ; 2012 ; Health Services Management Research Volume 25 ; 25 ; >
         au < crawling ; exists ; 2013 ; Health Services Management Research Volume 26 ; 26 ; >
         au < manifest ; exists ; 2014 ; Health Services Management Research Volume 27 ; 27 ; >
-  
+
       }
-  
+
     }
-  
+
     {
-    
+
       title <
         name = International Journal: Canada's Journal of Global Policy Analysis ;
         issn = 0020-7020 ;
         eissn = 2052-465X
       >
-  
+
       {
-  
+
         plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
         param[base_url] = http://ijx.sagepub.com/
-  
+
         au < manifest ; exists ; 1946 ; International Journal: Canada's Journal of Global Policy Analysis Volume 1 ; 1 ; >
         au < manifest ; exists ; 1947 ; International Journal: Canada's Journal of Global Policy Analysis Volume 2 ; 2 ; >
         au < manifest ; exists ; 1948 ; International Journal: Canada's Journal of Global Policy Analysis Volume 3 ; 3 ; >
@@ -42264,42 +42264,42 @@
         au < crawling ; exists ; 2012 ; International Journal: Canada's Journal of Global Policy Analysis Volume 67 ; 67 ; >
         au < crawling ; exists ; 2013 ; International Journal: Canada's Journal of Global Policy Analysis Volume 68 ; 68 ; >
         au < manifest ; exists ; 2014 ; International Journal: Canada's Journal of Global Policy Analysis Volume 69 ; 69 ; >
-  
+
       }
-  
+
     }
-  
+
     {
-    
+
       title <
         name = International Journal of Care Coordination ;
         eissn = 2053-4353 ;
         issnl = 2053-4353
       >
-  
+
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://icp.sagepub.com/
         comment[continues] = 2040-4026
-  
+
         au < exists ; exists ; 2014 ; International Journal of Care Coordination Volume 17 ; 17 ; >
-  
+
     }
-  
+
     {
-    
+
       title <
         name = International Journal of Care Pathways ;
         issn = 2040-4026 ;
         eissn = 2040-4034 ;
         issnl = 2040-4026
       >
-  
+
       {
-  
+
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://icp.sagepub.com/
         comment[continued_by] = 2053-4354
-  
+
         au < manifest ; exists ; 2005 ; International Journal of Care Pathways Volume 9 ; 9 ; >
         au < manifest ; exists ; 2006 ; International Journal of Care Pathways Volume 10 ; 10 ; >
         au < manifest ; exists ; 2007 ; International Journal of Care Pathways Volume 11 ; 11 ; >
@@ -42310,38 +42310,38 @@
         au < finished ; frozen ; 2012 ; International Journal of Care Pathways Volume 16 ; 16 ; >
 
       }
-  
+
     }
-  
+
     {
-    
+
       title <
         name = International Journal of Green Nanotechnology ;
         issn = 1943-0892 ;
         eissn = 1943-0906 ;
         issnl = 1943-0892
       >
-  
+
       {
-  
+
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://nan.sagepub.com/
-  
+
         au < manifest ; exists ; 2014 ; International Journal of Green Nanotechnology Volume 1 ; 1 ; >
-  
+
       }
-  
+
     }
 
     {
-    
+
       title <
         name = International Journal of Maritime History ;
         issn = 0843-8714 ;
         eissn = 2052-7756 ;
         issnl = 0843-8714
       >
-  
+
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://ijh.sagepub.com/
 
@@ -42376,17 +42376,17 @@
   }
 
     {
-    
+
       title <
         name = International Journal of STD & AIDS ;
         issn = 0956-4624 ;
         eissn = 1758-1052 ;
         issnl = 0956-4624
       >
-  
+
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://std.sagepub.com/
-  
+
         au < exists ; exists ; 1996 ; International Journal of STD & AIDS Volume 7 ; 7 ; >
         au < exists ; exists ; 1997 ; International Journal of STD & AIDS Volume 8 ; 8 ; >
         au < exists ; exists ; 1998 ; International Journal of STD & AIDS Volume 9 ; 9 ; >
@@ -42409,19 +42409,19 @@
         au < manifest ; exists ; 2015 ; International Journal of STD & AIDS Volume 26 ; 26 ; >
 
     }
-  
+
     {
-    
+
       title <
         name = Journal of Health Services Research & Policy ;
         issn = 1355-8196 ;
         eissn = 1758-1060 ;
         issnl = 1355-8196
       >
-  
+
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://hsr.sagepub.com/
-  
+
         au < manifest ; exists ; 2001 ; Journal of Health Services Research & Policy Volume 6 ; 6 ; >
         au < manifest ; exists ; 2002 ; Journal of Health Services Research & Policy Volume 7 ; 7 ; >
         au < manifest ; exists ; 2003 ; Journal of Health Services Research & Policy Volume 8 ; 8 ; >
@@ -42436,22 +42436,22 @@
         au < finished ; frozen ; 2012 ; Journal of Health Services Research & Policy Volume 17 ; 17 ; >
         au < crawling ; exists ; 2013 ; Journal of Health Services Research & Policy Volume 18 ; 18 ; >
         au < manifest ; exists ; 2014 ; Journal of Health Services Research & Policy Volume 19 ; 19 ; >
-  
+
     }
-  
+
     {
-    
+
       title <
         name = Journal of Medical Biography ;
         issn = 0967-7720 ;
         eissn = 1758-1087 ;
         issnl = 0967-7720
       >
-  
+
       {
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://jmb.sagepub.com/
-  
+
         au < manifest ; exists ; 2005 ; Journal of Medical Biography Volume 13 ; 13 ; >
         au < manifest ; exists ; 2006 ; Journal of Medical Biography Volume 14 ; 14 ; >
         au < manifest ; exists ; 2007 ; Journal of Medical Biography Volume 15 ; 15 ; >
@@ -42462,23 +42462,23 @@
         au < finished ; frozen ; 2012 ; Journal of Medical Biography Volume 20 ; 20 ; >
         au < crawling ; exists ; 2013 ; Journal of Medical Biography Volume 21 ; 21 ; >
         au < manifest ; exists ; 2014 ; Journal of Medical Biography Volume 22 ; 22 ; >
-  
+
       }
-  
+
     }
-  
+
     {
-    
+
       title <
         name = Journal of Medical Screening ;
         issn = 0969-1413 ;
         eissn = 1475-5793 ;
         issnl = 0969-1413
       >
-  
+
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://msc.sagepub.com/
-  
+
         au < manifest ; exists ; 1994 ; Journal of Medical Screening Volume 1 ; 1 ; >
         au < manifest ; exists ; 1995 ; Journal of Medical Screening Volume 2 ; 2 ; >
         au < manifest ; exists ; 1996 ; Journal of Medical Screening Volume 3 ; 3 ; >
@@ -42500,22 +42500,22 @@
         au < crawling ; exists ; 2012 ; Journal of Medical Screening Volume 19 ; 19 ; >
         au < crawling ; exists ; 2013 ; Journal of Medical Screening Volume 20 ; 20 ; >
         au < manifest ; exists ; 2014 ; Journal of Medical Screening Volume 21 ; 21 ; >
-  
+
     }
-  
+
     {
-    
+
       title <
         name = Journal of Telemedicine and Telecare ;
         issn = 1357-633X ;
         eissn = 1758-1109 ;
         issnl = 1357-633X
       >
-  
+
       {
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://jtt.sagepub.com/
-  
+
         au < manifest ; exists ; 1995 ; Journal of Telemedicine and Telecare Volume 1 ; 1 ; >
         au < manifest ; exists ; 1996 ; Journal of Telemedicine and Telecare Volume 2 ; 2 ; >
         au < manifest ; exists ; 1997 ; Journal of Telemedicine and Telecare Volume 3 ; 3 ; >
@@ -42536,25 +42536,25 @@
         au < crawling ; exists ; 2012 ; Journal of Telemedicine and Telecare Volume 18 ; 18 ; >
         au < crawling ; exists ; 2013 ; Journal of Telemedicine and Telecare Volume 19 ; 19 ; >
         au < manifest ; exists ; 2014 ; Journal of Telemedicine and Telecare Volume 20 ; 20 ; >
-  
+
       }
-  
+
     }
-  
+
     {
-    
+
       title <
         name = Journal of the Royal Society of Medicine ;
         issn = 0141-0768 ;
         eissn = 1758-1095 ;
         issnl = 0141-0768
       >
-  
+
         pluginSuffix = ClockssHighWirePressH20Plugin
       {
-  
+
         param[base_url] = http://jrs.sagepub.com/
-  
+
         au < manifest ; exists ; 1809 ; Journal of the Royal Society of Medicine Volume MCT-1 ; MCT-1 ; >
         au < manifest ; exists ; 1811 ; Journal of the Royal Society of Medicine Volume MCT-2 ; MCT-2 ; >
         au < manifest ; exists ; 1812 ; Journal of the Royal Society of Medicine Volume MCT-3 ; MCT-3 ; >
@@ -42752,76 +42752,76 @@
         au < crawling ; exists ; 2012 ; Journal of the Royal Society of Medicine Volume 105 ; 105 ; >
         au < crawling ; exists ; 2013 ; Journal of the Royal Society of Medicine Volume 106 ; 106 ; >
         au < manifest ; exists ; 2014 ; Journal of the Royal Society of Medicine Volume 107 ; 107 ; >
-  
+
       }
-  
+
     }
-  
+
     {
-    
+
       title <
         name = JRSM Cardiovascular Disease ;
         eissn = 2048-0040
       >
-  
+
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://cvd.sagepub.com/
-  
+
       au < exists ; exists ; 2012 ; JRSM Cardiovascular Disease Volume 1 ; 1 ; >
       au < crawling ; exists ; 2013 ; JRSM Cardiovascular Disease Volume 2 ; 2 ; >
       au < expected ; exists ; 2014 ; JRSM Cardiovascular Disease Volume 3 ; 3 ; >
-  
+
     }
-  
+
     {
-    
+
       title <
         name = JRSM Short Reports ;
         eissn = 2042-5333
       >
-      
+
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://shr.sagepub.com/
         comment[0] = Title change in 2014, same base_url
         comment[continued_by] = 2054-2704
-  
+
         au < exists ; exists ; 2010 ; JRSM Short Reports Volume 1 ; 1 ; >
         au < exists ; exists ; 2011 ; JRSM Short Reports Volume 2 ; 2 ; >
         au < exists ; exists ; 2012 ; JRSM Short Reports Volume 3 ; 3 ; >
         au < crawling ; exists ; 2013 ; JRSM Short Reports Volume 4 ; 4 ; >
-  
+
     }
-  
+
     {
-    
+
       title <
         name = JRSM Open ;
         eissn = 2054-2704
       >
-      
+
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://shr.sagepub.com/
         comment[continues] = 2042-5333
-  
+
         au < manifest ; exists ; 2014 ; JRSM Open Volume 5 ; 5 ; >
-  
+
     }
-  
+
     {
-    
+
       title <
         name = Laboratory Animals ;
         issn = 0023-6772 ;
         eissn = 1758-1117 ;
         issnl = 0023-6772
       >
-  
+
         pluginSuffix = ClockssHighWirePressH20Plugin
 
       {
-  
+
         param[base_url] = http://lan.sagepub.com/
-  
+
         au < exists ; exists ; 1967 ; Laboratory Animals Volume 1 ; 1 ; >
         au < exists ; exists ; 1968 ; Laboratory Animals Volume 2 ; 2 ; >
         au < exists ; exists ; 1969 ; Laboratory Animals Volume 3 ; 3 ; >
@@ -42870,22 +42870,22 @@
         au < exists ; exists ; 2012 ; Laboratory Animals Volume 46 ; 46 ; >
         au < manifest ; exists ; 2013 ; Laboratory Animals Volume 47 ; 47 ; >
         au < manifest ; exists ; 2014 ; Laboratory Animals Volume 48 ; 48 ; >
-  
+
       }
-  
+
     }
-  
+
     {
-    
+
       title <
         name = Medicine, Science and the Law ;
         issn = 0025-8024 ;
         eissn = 2042-1818
       >
-  
+
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://msl.sagepub.com/
-  
+
         au < exists ; exists ; 2003 ; Medicine, Science and the Law Volume 43 ; 43 ; >
         au < exists ; exists ; 2004 ; Medicine, Science and the Law Volume 44 ; 44 ; >
         au < exists ; exists ; 2005 ; Medicine, Science and the Law Volume 45 ; 45 ; >
@@ -42898,22 +42898,22 @@
         au < exists ; exists ; 2012 ; Medicine, Science and the Law Volume 52 ; 52 ; >
         au < crawling ; exists ; 2013 ; Medicine, Science and the Law Volume 53 ; 53 ; >
         au < manifest ; exists ; 2014 ; Medicine, Science and the Law Volume 54 ; 54 ; >
-  
+
     }
-  
+
     {
-    
+
       title <
         name = Menopause International ;
         issn = 1754-0453 ;
         eissn = 1754-0461 ;
         issnl = 1754-0453
       >
-  
+
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://min.sagepub.com/
         comment[continued_by] = 2053-3691
-  
+
         au < exists ; exists ; 2000 ; Menopause International Volume 6 ; 6 ; >
         au < exists ; exists ; 2001 ; Menopause International Volume 7 ; 7 ; >
         au < exists ; exists ; 2002 ; Menopause International Volume 8 ; 8 ; >
@@ -42928,40 +42928,40 @@
         au < exists ; exists ; 2011 ; Menopause International Volume 17 ; 17 ; >
         au < crawling ; exists ; 2012 ; Menopause International Volume 18 ; 18 ; >
         au < crawling ; exists ; 2013 ; Menopause International Volume 19 ; 19 ; >
-  
+
     }
-  
+
     {
-    
+
       title <
         name = Post Reproductive Health ;
         issn = 2053-3691 ;
         eissn = 2053-3705 ;
         issnl = 2053-3691
       >
-  
+
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://min.sagepub.com/
         comment[continues] = 1754-0453
-  
+
         au < manifest ; exists ; 2014 ; Post Reproductive Health Volume 20 ; 20 ; >
-  
+
     }
-  
+
     {
-    
+
       title <
         name = Obstetric Medicine ;
         issn = 1753-495X ;
         eissn = 1753-4968 ;
         issnl = 1753-495X
       >
-  
+
       {
 
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://obm.sagepub.com/
-  
+
         au < exists ; exists ; 2008 ; Obstetric Medicine Volume 1 ; 1 ; >
         au < exists ; exists ; 2009 ; Obstetric Medicine Volume 2 ; 2 ; >
         au < exists ; exists ; 2010 ; Obstetric Medicine Volume 3 ; 3 ; >
@@ -42969,26 +42969,26 @@
         au < exists ; exists ; 2012 ; Obstetric Medicine Volume 5 ; 5 ; >
         au < crawling ; exists ; 2013 ; Obstetric Medicine Volume 6 ; 6 ; >
         au < manifest ; exists ; 2014 ; Obstetric Medicine Volume 7 ; 7 ; >
-  
+
       }
-  
+
     }
-  
+
     {
-    
+
       title <
         name = Phlebology ;
         issn = 0268-3555 ;
         eissn = 1758-1125 ;
         issnl = 0268-3555
       >
-  
+
         pluginSuffix = ClockssHighWirePressH20Plugin
 
       {
-  
+
         param[base_url] = http://phl.sagepub.com/
-  
+
         au < exists ; exists ; 2003 ; Phlebology Volume 18 ; 18 ; >
         au < exists ; exists ; 2004 ; Phlebology Volume 19 ; 19 ; >
         au < exists ; exists ; 2005 ; Phlebology Volume 20 ; 20 ; >
@@ -43001,22 +43001,22 @@
         au < exists ; exists ; 2012 ; Phlebology Volume 27 ; 27 ; >
         au < crawling ; exists ; 2013 ; Phlebology Volume 28 ; 28 ; >
         au < manifest ; exists ; 2014 ; Phlebology Volume 29 ; 29 ; >
-  
+
       }
-  
+
     }
-  
+
     {
-    
+
       title <
         name = Scottish Medical Journal ;
         issn = 0036-9330 ;
         eissn = 2045-6441
       >
-  
+
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://scm.sagepub.com/
-  
+
       au < exists ; exists ; 2006 ; Scottish Medical Journal Volume 51 ; 51 ; >
       au < exists ; exists ; 2007 ; Scottish Medical Journal Volume 52 ; 52 ; >
       au < exists ; exists ; 2008 ; Scottish Medical Journal Volume 53 ; 53 ; >
@@ -43026,11 +43026,11 @@
       au < exists ; exists ; 2012 ; Scottish Medical Journal Volume 57 ; 57 ; >
       au < crawling ; exists ; 2013 ; Scottish Medical Journal Volume 58 ; 58 ; >
       au < manifest ; exists ; 2014 ; Scottish Medical Journal Volume 59 ; 59 ; >
-  
+
     }
-  
+
     {
-    
+
       title <
         name = Tropical Doctor ;
         issn = 0049-4755 ;
@@ -43038,11 +43038,11 @@
         issnl = 0049-4755
       >
         pluginSuffix = ClockssHighWirePressH20Plugin
-        
+
       {
 
         param[base_url] = http://tdo.sagepub.com/
-  
+
         au < exists ; exists ; 2005 ; Tropical Doctor Volume 35 ; 35 ; >
         au < exists ; exists ; 2006 ; Tropical Doctor Volume 36 ; 36 ; >
         au < exists ; exists ; 2007 ; Tropical Doctor Volume 37 ; 37 ; >
@@ -43053,24 +43053,24 @@
         au < exists ; exists ; 2012 ; Tropical Doctor Volume 42 ; 42 ; >
         au < crawling ; exists ; 2013 ; Tropical Doctor Volume 43 ; 43 ; >
         au < manifest ; exists ; 2014 ; Tropical Doctor Volume 44 ; 44 ; >
-  
+
       }
-  
+
     }
-  
+
     {
-    
+
       title <
         name = Ultrasound ;
         issn = 1742-271X ;
         eissn = 1743-1344
       >
-  
+
       {
-  
+
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://ult.sagepub.com/
-  
+
         au < exists ; exists ; 2004 ; Ultrasound Volume 12 ; 12 ; >
         au < exists ; exists ; 2005 ; Ultrasound Volume 13 ; 13 ; >
         au < exists ; exists ; 2006 ; Ultrasound Volume 14 ; 14 ; >
@@ -43082,24 +43082,24 @@
         au < exists ; exists ; 2012 ; Ultrasound Volume 20 ; 20 ; >
         au < crawling ; exists ; 2013 ; Ultrasound Volume 21 ; 21 ; >
         au < manifest ; exists ; 2014 ; Ultrasound Volume 22 ; 22 ; >
-  
+
       }
-  
+
     }
-  
+
     {
-    
+
       title <
         name = Vascular ;
         issn = 1708-5381 ;
         eissn = 1708-539X
       >
-      
+
       pluginSuffix = ClockssHighWirePressH20Plugin
 
      {
       param[base_url] = http://vas.sagepub.com/
-  
+
       au < exists ; exists ; 2004 ; Vascular Volume 12 ; 12 ; >
       au < exists ; exists ; 2005 ; Vascular Volume 13 ; 13 ; >
       au < exists ; exists ; 2006 ; Vascular Volume 14 ; 14 ; >
@@ -43111,9 +43111,9 @@
       au < exists ; exists ; 2012 ; Vascular Volume 20 ; 20 ; >
       au < crawling ; exists ; 2013 ; Vascular Volume 21 ; 21 ; >
       au < manifest ; exists ; 2014 ; Vascular Volume 22 ; 22 ; >
-      
+
      }
-     
+
     }
 
 
