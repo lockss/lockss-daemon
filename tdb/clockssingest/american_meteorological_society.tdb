@@ -66,6 +66,7 @@
     au < crawling ; exists ; 2012 ; Bulletin of the American Meteorological Society Volume 93 ; 93 >
     au < crawling ; exists ; 2013 ; Bulletin of the American Meteorological Society Volume 94 ; 94 >
     au < manifest ; exists ; 2014 ; Bulletin of the American Meteorological Society Volume 95 ; 95 >
+    au < expected ; exists ; 2015 ; Bulletin of the American Meteorological Society Volume 96 ; 96 >
 
   }
 
@@ -97,6 +98,7 @@
     au < crawling ; exists ; 2012 ; Earth Interactions Volume 16 ; 16 >
     au < crawling ; exists ; 2013 ; Earth Interactions Volume 17 ; 17 >
     au < manifest ; exists ; 2014 ; Earth Interactions Volume 18 ; 18 >
+    au < expected ; exists ; 2015 ; Earth Interactions Volume 19 ; 19 >
     
   }
 
@@ -164,6 +166,7 @@
     au < crawling ; exists ; 2012 ; Journal of Applied Meteorology and Climatology Volume 51 ; 51 >
     au < crawling ; exists ; 2013 ; Journal of Applied Meteorology and Climatology Volume 52 ; 52 >
     au < manifest ; exists ; 2014 ; Journal of Applied Meteorology and Climatology Volume 53 ; 53 >
+    au < expected ; exists ; 2015 ; Journal of Applied Meteorology and Climatology Volume 54 ; 54 >
 
   }
 
@@ -209,6 +212,7 @@
     au < crawling ; exists ; 2012 ; Journal of Atmospheric and Oceanic Technology Volume 29 ; 29 >
     au < crawling ; exists ; 2013 ; Journal of Atmospheric and Oceanic Technology Volume 30 ; 30 >
     au < manifest ; exists ; 2014 ; Journal of Atmospheric and Oceanic Technology Volume 31 ; 31 >
+    au < expected ; exists ; 2015 ; Journal of Atmospheric and Oceanic Technology Volume 32 ; 32 >
 
   }
 
@@ -251,6 +255,7 @@
     au < crawling ; exists ; 2012 ; Journal of Climate Volume 25 ; 25 >
     au < crawling ; exists ; 2013 ; Journal of Climate Volume 26 ; 26 >
     au < manifest ; exists ; 2014 ; Journal of Climate Volume 27 ; 27 >
+    au < expected ; exists ; 2015 ; Journal of Climate Volume 28 ; 28 >
 
   }
 
@@ -281,6 +286,7 @@
     au < notReady ; exists ; 2012 ; Journal of Hydrometeorology Volume 13 ; 13 >
     au < crawling ; exists ; 2013 ; Journal of Hydrometeorology Volume 14 ; 14 >
     au < manifest ; exists ; 2014 ; Journal of Hydrometeorology Volume 15 ; 15 >
+    au < expected ; exists ; 2015 ; Journal of Hydrometeorology Volume 16 ; 16 >
 
   }
 
@@ -339,6 +345,7 @@
     au < crawling ; exists ; 2012 ; Journal of Physical Oceanography Volume 42 ; 42 >
     au < crawling ; exists ; 2013 ; Journal of Physical Oceanography Volume 43 ; 43 >
     au < manifest ; exists ; 2014 ; Journal of Physical Oceanography Volume 44 ; 44 >
+    au < expected ; exists ; 2015 ; Journal of Physical Oceanography Volume 45 ; 45 >
 
   }
 
@@ -424,6 +431,7 @@
     au < crawling ; exists ; 2012 ; Journal of the Atmospheric Sciences Volume 69 ; 69 >
     au < crawling ; exists ; 2013 ; Journal of the Atmospheric Sciences Volume 70 ; 70 >
     au < manifest ; exists ; 2014 ; Journal of the Atmospheric Sciences Volume 71 ; 71 >
+    au < expected ; exists ; 2015 ; Journal of the Atmospheric Sciences Volume 72 ; 72 >
    
   }
 
@@ -458,15 +466,15 @@
     
     param[journal_id] = mwre
     
-    au < manifest ; exists ; 1872 ; Monthly Weather Review Volume 0 ; 0 >  
-    au < manifest ; exists ; 1873 ; Monthly Weather Review Volume 1 ; 1 >  
-    au < manifest ; exists ; 1874 ; Monthly Weather Review Volume 2 ; 2 >  
-    au < manifest ; exists ; 1875 ; Monthly Weather Review Volume 3 ; 3 >  
-    au < manifest ; exists ; 1876 ; Monthly Weather Review Volume 4 ; 4 >  
-    au < manifest ; exists ; 1877 ; Monthly Weather Review Volume 5 ; 5 >  
-    au < manifest ; exists ; 1878 ; Monthly Weather Review Volume 6 ; 6 >  
-    au < manifest ; exists ; 1879 ; Monthly Weather Review Volume 7 ; 7 >  
-    au < manifest ; exists ; 1880 ; Monthly Weather Review Volume 8 ; 8 >  
+    au < manifest ; exists ; 1872 ; Monthly Weather Review Volume 0 ; 0 >
+    au < manifest ; exists ; 1873 ; Monthly Weather Review Volume 1 ; 1 >
+    au < manifest ; exists ; 1874 ; Monthly Weather Review Volume 2 ; 2 >
+    au < manifest ; exists ; 1875 ; Monthly Weather Review Volume 3 ; 3 >
+    au < manifest ; exists ; 1876 ; Monthly Weather Review Volume 4 ; 4 >
+    au < manifest ; exists ; 1877 ; Monthly Weather Review Volume 5 ; 5 >
+    au < manifest ; exists ; 1878 ; Monthly Weather Review Volume 6 ; 6 >
+    au < manifest ; exists ; 1879 ; Monthly Weather Review Volume 7 ; 7 >
+    au < manifest ; exists ; 1880 ; Monthly Weather Review Volume 8 ; 8 >
     au < manifest ; exists ; 1881 ; Monthly Weather Review Volume 9 ; 9 >
     au < manifest ; exists ; 1882 ; Monthly Weather Review Volume 10 ; 10 >
     au < manifest ; exists ; 1883 ; Monthly Weather Review Volume 11 ; 11 >
@@ -559,14 +567,14 @@
     au < manifest ; exists ; 1970 ; Monthly Weather Review Volume 98 ; 98 >
     au < manifest ; exists ; 1971 ; Monthly Weather Review Volume 99 ; 99 >
     au < manifest ; exists ; 1972 ; Monthly Weather Review Volume 100 ; 100 >
-    au < manifest ; exists ; 1973 ; Monthly Weather Review Volume 101 ; 101 >  
-    au < manifest ; exists ; 1974 ; Monthly Weather Review Volume 102 ; 102 >  
-    au < manifest ; exists ; 1975 ; Monthly Weather Review Volume 103 ; 103 >  
-    au < manifest ; exists ; 1976 ; Monthly Weather Review Volume 104 ; 104 >  
-    au < manifest ; exists ; 1977 ; Monthly Weather Review Volume 105 ; 105 >  
-    au < manifest ; exists ; 1978 ; Monthly Weather Review Volume 106 ; 106 >  
-    au < manifest ; exists ; 1979 ; Monthly Weather Review Volume 107 ; 107 >  
-    au < manifest ; exists ; 1980 ; Monthly Weather Review Volume 108 ; 108 >  
+    au < manifest ; exists ; 1973 ; Monthly Weather Review Volume 101 ; 101 >
+    au < manifest ; exists ; 1974 ; Monthly Weather Review Volume 102 ; 102 >
+    au < manifest ; exists ; 1975 ; Monthly Weather Review Volume 103 ; 103 >
+    au < manifest ; exists ; 1976 ; Monthly Weather Review Volume 104 ; 104 >
+    au < manifest ; exists ; 1977 ; Monthly Weather Review Volume 105 ; 105 >
+    au < manifest ; exists ; 1978 ; Monthly Weather Review Volume 106 ; 106 >
+    au < manifest ; exists ; 1979 ; Monthly Weather Review Volume 107 ; 107 >
+    au < manifest ; exists ; 1980 ; Monthly Weather Review Volume 108 ; 108 >
     au < manifest ; exists ; 1981 ; Monthly Weather Review Volume 109 ; 109 >
     au < manifest ; exists ; 1982 ; Monthly Weather Review Volume 110 ; 110 >
     au < manifest ; exists ; 1983 ; Monthly Weather Review Volume 111 ; 111 >
@@ -601,6 +609,7 @@
     au < crawling ; exists ; 2012 ; Monthly Weather Review Volume 140 ; 140 >
     au < crawling ; exists ; 2013 ; Monthly Weather Review Volume 141 ; 141 >
     au < manifest ; exists ; 2014 ; Monthly Weather Review Volume 142 ; 142 >
+    au < expected ; exists ; 2015 ; Monthly Weather Review Volume 143 ; 143 >
     
   }
 
@@ -621,6 +630,7 @@
     au < crawling ; exists ; 2012 ; Weather, Climate, and Society Volume 4 ; 4 >
     au < crawling ; exists ; 2013 ; Weather, Climate, and Society Volume 5 ; 5 >
     au < manifest ; exists ; 2014 ; Weather, Climate, and Society Volume 6 ; 6 >
+    au < expected ; exists ; 2015 ; Weather, Climate, and Society Volume 7 ; 7 >
 
   }
 
@@ -664,6 +674,7 @@
     au < crawling ; exists ; 2012 ; Weather and Forecasting Volume 27 ; 27 >
     au < crawling ; exists ; 2013 ; Weather and Forecasting Volume 28 ; 28 >
     au < manifest ; exists ; 2014 ; Weather and Forecasting Volume 29 ; 29 >
+    au < expected ; exists ; 2015 ; Weather and Forecasting Volume 30 ; 30 >
     
   }
 

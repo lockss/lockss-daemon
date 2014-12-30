@@ -217,6 +217,7 @@
         au < notReady ; exists ; 2012 ; JAMA Dermatology Volume 148 ; 2012 >
         au < crawling ; exists ; 2013 ; JAMA Dermatology Volume 149 ; 2013 >
         au < crawling ; exists ; 2014 ; JAMA Dermatology Volume 150 ; 2014 >
+        au < expected ; exists ; 2015 ; JAMA Dermatology Volume 151 ; 2015 >
     
       }
 
@@ -287,6 +288,7 @@
         au < crawling ; exists ; 2012 ; JAMA Facial Plastic Surgery Volume 14 ; 2012 >
         au < crawling ; exists ; 2013 ; JAMA Facial Plastic Surgery Volume 15 ; 2013 >
         au < crawling ; exists ; 2014 ; JAMA Facial Plastic Surgery Volume 16 ; 2014 >
+        au < expected ; exists ; 2015 ; JAMA Facial Plastic Surgery Volume 17 ; 2015 >
     
       }
 
@@ -419,6 +421,7 @@
         au < crawling ; exists ; 2012 ; JAMA Psychiatry Volume 69 ; 2012 >
         au < crawling ; exists ; 2013 ; JAMA Psychiatry Volume 70 ; 2013 >
         au < crawling ; exists ; 2014 ; JAMA Psychiatry Volume 71 ; 2014 >
+        au < expected ; exists ; 2015 ; JAMA Psychiatry Volume 72 ; 2015 >
     
       }
 
@@ -628,6 +631,7 @@
         au < notReady ; exists ; 2012 ; JAMA Internal Medicine Volume 172 ; 2012 >
         au < crawling ; exists ; 2013 ; JAMA Internal Medicine Volume 173 ; 2013 >
         au < crawling ; exists ; 2014 ; JAMA Internal Medicine Volume 174 ; 2014 >
+        au < expected ; exists ; 2015 ; JAMA Internal Medicine Volume 175 ; 2015 >
     
       }
 
@@ -734,6 +738,7 @@
         au < notReady ; exists ; 2012 ; JAMA Neurology Volume 69 ; 2012 >
         au < notReady ; exists ; 2013 ; JAMA Neurology Volume 70 ; 2013 >
         au < exists ; exists ; 2014 ; JAMA Neurology Volume 71 ; 2014 >
+        au < expected ; exists ; 2015 ; JAMA Neurology Volume 72 ; 2015 >
     
       }
 
@@ -1002,6 +1007,7 @@
         au < notReady ; exists ; 2012 ; JAMA Ophthalmology Volume 130 ; 2012 >
         au < crawling ; exists ; 2013 ; JAMA Ophthalmology Volume 131 ; 2013 >
         au < crawling ; exists ; 2014 ; JAMA Ophthalmology Volume 132 ; 2014 >
+        au < expected ; exists ; 2015 ; JAMA Ophthalmology Volume 133 ; 2015 >
     
       }
 
@@ -1178,6 +1184,7 @@
         au < notReady ; exists ; 2012 ; JAMA Otolaryngology - Head & Neck Surgery Volume 138 ; 2012 >
         au < crawling ; exists ; 2013 ; JAMA Otolaryngology - Head & Neck Surgery Volume 139 ; 2013 >
         au < crawling ; exists ; 2014 ; JAMA Otolaryngology - Head & Neck Surgery Volume 140 ; 2014 >
+        au < expected ; exists ; 2015 ; JAMA Otolaryngology - Head & Neck Surgery Volume 141 ; 2015 >
     
       }
     }
@@ -1381,6 +1388,7 @@
         au < notReady ; exists ; 2012 ; JAMA Pediatrics Volume 166 ; 2012 >
         au < notReady ; exists ; 2013 ; JAMA Pediatrics Volume 167 ; 2013 >
         au < exists ; exists ; 2014 ; JAMA Pediatrics Volume 168 ; 2014 >
+        au < expected ; exists ; 2015 ; JAMA Pediatrics Volume 169 ; 2015 >
     
       }
 
@@ -1566,6 +1574,7 @@
         au < notReady ; exists ; 2012 ; JAMA Surgery Volume 147 ; 2012 >
         au < crawling ; exists ; 2013 ; JAMA Surgery Volume 148 ; 2013 >
         au < crawling ; exists ; 2014 ; JAMA Surgery Volume 149 ; 2014 >
+        au < expected ; exists ; 2015 ; JAMA Surgery Volume 150 ; 2015 >
     
       }
 
@@ -1945,6 +1954,7 @@
         au < crawling ; exists ; 2012 ; JAMA: The Journal of the American Medical Association Volume 307-308 ; 2012 >
         au < crawling ; exists ; 2013 ; JAMA: The Journal of the American Medical Association Volume 309-310 ; 2013 >
         au < notReady ; exists ; 2014 ; JAMA: The Journal of the American Medical Association Volume 311-312 ; 2014 >
+        au < expected ; exists ; 2015 ; JAMA: The Journal of the American Medical Association Volume 313-314 ; 2015 >
     
       }
 
@@ -1980,6 +1990,7 @@
     au < exists ; exists ; 2012 ; Virtual Mentor Volume 14 ; 14 ; 2012 >
     au < exists ; exists ; 2013 ; Virtual Mentor Volume 15 ; 15 ; 2013 >
     au < exists ; exists ; 2014 ; Virtual Mentor Volume 16 ; 16 ; 2014 >
+    au < expected ; exists ; 2015 ; Virtual Mentor Volume 17 ; 17 ; 2015 >
 
   }
 
