@@ -1,5 +1,5 @@
 /*
- * $Id: APSHtmlCrawlFilterFactory.java,v 1.1 2014-12-15 20:33:12 etenbrink Exp $
+ * $Id: APSHtmlCrawlFilterFactory.java,v 1.2 2014-12-30 23:03:13 etenbrink Exp $
  */
 
 /*
@@ -43,8 +43,9 @@ import org.lockss.util.Logger;
 
 public class APSHtmlCrawlFilterFactory extends HighWireDrupalHtmlCrawlFilterFactory {
   
-  Logger log = Logger.getLogger(APSHtmlCrawlFilterFactory.class);
+  private static final Logger log = Logger.getLogger(APSHtmlCrawlFilterFactory.class);
   
+  @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding)

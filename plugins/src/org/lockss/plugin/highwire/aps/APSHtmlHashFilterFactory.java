@@ -1,5 +1,5 @@
 /*
- * $Id: APSHtmlHashFilterFactory.java,v 1.1 2014-12-15 20:33:12 etenbrink Exp $
+ * $Id: APSHtmlHashFilterFactory.java,v 1.2 2014-12-30 23:03:31 etenbrink Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ import org.lockss.util.Logger;
 
 public class APSHtmlHashFilterFactory extends HighWireDrupalHtmlFilterFactory {
   
-  Logger log = Logger.getLogger(APSHtmlHashFilterFactory.class);
+  private static final Logger log = Logger.getLogger(APSHtmlHashFilterFactory.class);
   
   @Override
   public boolean doWSFiltering() {
@@ -58,6 +58,7 @@ public class APSHtmlHashFilterFactory extends HighWireDrupalHtmlFilterFactory {
     return false;
   }
   
+  @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding)
@@ -68,7 +69,8 @@ public class APSHtmlHashFilterFactory extends HighWireDrupalHtmlFilterFactory {
         // right sidebar 
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-right-wrapper"),
         // APS articles sometimes had view links, but not always
-        HtmlNodeFilters.tagWithAttributeRegex("a", "class", "hw-link"),
+        // XXX need to find example or remove this filter
+        // HtmlNodeFilters.tagWithAttributeRegex("a", "class", "hw-link"),
     };
     
     InputStream filtered = super.createFilteredInputStream(au, in, encoding, filters);
