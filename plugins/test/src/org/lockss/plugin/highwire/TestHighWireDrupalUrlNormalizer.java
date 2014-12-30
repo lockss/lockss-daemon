@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireDrupalUrlNormalizer.java,v 1.5 2014-12-15 21:25:48 etenbrink Exp $
+ * $Id: TestHighWireDrupalUrlNormalizer.java,v 1.6 2014-12-30 22:45:19 etenbrink Exp $
  */
 
 /*
@@ -37,7 +37,6 @@ import java.util.Properties;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.plugin.UrlNormalizer;
-import org.lockss.plugin.definable.DefinableArchivalUnit;
 import org.lockss.plugin.definable.DefinablePlugin;
 import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
@@ -63,8 +62,8 @@ public class TestHighWireDrupalUrlNormalizer extends LockssTestCase {
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   static final String VOL_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
   private DefinablePlugin plugin;
-  private DefinableArchivalUnit au;
   
+  @Override
   public void setUp() throws Exception {
     super.setUp();
     plugin = new DefinablePlugin();
@@ -75,7 +74,7 @@ public class TestHighWireDrupalUrlNormalizer extends LockssTestCase {
     props.setProperty(BASE_URL_KEY, "http://www.example.com/");
     
     Configuration config = ConfigurationUtil.fromProps(props);
-    au = (DefinableArchivalUnit)plugin.configureAu(config, null);
+    plugin.configureAu(config, null);
     }
   
   public void testUrlNormalizer() throws Exception {

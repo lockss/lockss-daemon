@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireDrupalPlugin.java,v 1.3 2014-12-15 21:23:36 etenbrink Exp $
+ * $Id: TestHighWireDrupalPlugin.java,v 1.4 2014-12-30 22:44:49 etenbrink Exp $
  */
 
 /*
@@ -57,6 +57,7 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
     super(msg);
   }
   
+  @Override
   public void setUp() throws Exception {
     super.setUp();
     plugin = new DefinablePlugin();
@@ -127,8 +128,7 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
     assertClass(HighWireDrupalHttpResponseHandler.NoFailRetryableNetworkException_3_60S.class, exc);
     
     conn.setURL(starturl);
-    exc = ((HttpResultMap)plugin.getCacheResultMap()).mapException(au, conn,
-        500, "foo");
+    exc = ((HttpResultMap)plugin.getCacheResultMap()).mapException(au, conn, 500, "foo");
     assertClass(RetrySameUrlException.class, exc);
     
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireDrupalHtmlCrawlFilterFactory.java,v 1.3 2014-12-15 21:22:34 etenbrink Exp $
+ * $Id: TestHighWireDrupalHtmlCrawlFilterFactory.java,v 1.4 2014-12-30 22:42:54 etenbrink Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ public class TestHighWireDrupalHtmlCrawlFilterFactory extends LockssTestCase {
   private HighWireDrupalHtmlCrawlFilterFactory fact;
   private MockArchivalUnit mau;
   
+  @Override
   public void setUp() throws Exception {
     super.setUp();
     fact = new HighWireDrupalHtmlCrawlFilterFactory();

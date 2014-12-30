@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireDrupalHtmlMetadataExtractor.java,v 1.2 2014-07-30 16:04:17 etenbrink Exp $
+ * $Id: TestHighWireDrupalHtmlMetadataExtractor.java,v 1.3 2014-12-30 22:44:30 etenbrink Exp $
  */
 
 /*
@@ -59,6 +59,7 @@ public class TestHighWireDrupalHtmlMetadataExtractor extends LockssTestCase {
   private static String BASE_URL = "http://ajpcell.physiology.org/";
   private static String SIM_ROOT = BASE_URL + "hwjn/"; // Simulated journal ID: "HighWire Journal"
   
+  @Override
   public void setUp() throws Exception {
     super.setUp();
     String tempDirPath = setUpDiskSpace();
@@ -74,6 +75,7 @@ public class TestHighWireDrupalHtmlMetadataExtractor extends LockssTestCase {
     hwau = PluginTestUtil.createAndStartAu(PLUGIN_NAME, highWireDrupalAuConfig());
   }
   
+  @Override
   public void tearDown() throws Exception {
     sau.deleteContentTree();
     theDaemon.stopDaemon();
@@ -180,7 +182,8 @@ public class TestHighWireDrupalHtmlMetadataExtractor extends LockssTestCase {
     assertEquals(goodIssue, md.get(MetadataField.FIELD_ISSUE));
     assertEquals(goodStartPage, md.get(MetadataField.FIELD_START_PAGE));
     assertEquals(goodDOI, md.get(MetadataField.FIELD_DOI));
-    assertEquals(goodURL, md.get(MetadataField.FIELD_ACCESS_URL));
+    // will use metadata url if extracted goodURL does not exist and contain content
+    assertEquals(url, md.get(MetadataField.FIELD_ACCESS_URL));
     assertEquals(goodPropId, md.get(MetadataField.FIELD_PROPRIETARY_IDENTIFIER));
   }
   
@@ -229,6 +232,7 @@ public class TestHighWireDrupalHtmlMetadataExtractor extends LockssTestCase {
    *
    */
   public static class MySimulatedPlugin extends SimulatedPlugin {
+    @Override
     public ArchivalUnit createAu0(Configuration auConfig)
         throws ArchivalUnit.ConfigurationException {
       ArchivalUnit au = new SimulatedArchivalUnit(this);
@@ -236,6 +240,7 @@ public class TestHighWireDrupalHtmlMetadataExtractor extends LockssTestCase {
       return au;
     }
     
+    @Override
     public SimulatedContentGenerator getContentGenerator(Configuration cf, String fileRoot) {
       return new MySimulatedContentGenerator(fileRoot);
     }
@@ -251,6 +256,7 @@ public class TestHighWireDrupalHtmlMetadataExtractor extends LockssTestCase {
       super(fileRoot);
     }
     
+    @Override
     public String getHtmlFileContent(String filename, int fileNum, int depth, 
         int branchNum, boolean isAbnormal) {
       
