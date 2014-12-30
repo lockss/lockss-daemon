@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireDrupalHtmlFilterFactory.java,v 1.11 2014-12-30 21:52:31 etenbrink Exp $
+ * $Id: HighWireDrupalHtmlFilterFactory.java,v 1.12 2014-12-30 22:11:39 etenbrink Exp $
  */
 
 /*
@@ -116,7 +116,7 @@ public class HighWireDrupalHtmlFilterFactory implements FilterFactory {
             try {
               if ("div".equals(tagName)) {
                 Attribute a = tag.getAttributeEx(tagName);
-                Vector<Attribute> v = new Vector<>();
+                Vector<Attribute> v = new Vector<Attribute>();
                 v.add(a);
                 if (tag.isEmptyXmlTag()) {
                   Attribute end = tag.getAttributeEx("/");
