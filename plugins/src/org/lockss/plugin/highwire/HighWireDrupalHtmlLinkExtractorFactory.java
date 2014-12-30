@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireDrupalHtmlLinkExtractorFactory.java,v 1.4 2014-08-21 01:05:57 etenbrink Exp $
+ * $Id: HighWireDrupalHtmlLinkExtractorFactory.java,v 1.5 2014-12-30 21:53:34 etenbrink Exp $
  */
 
 /*
@@ -39,9 +39,6 @@ package org.lockss.plugin.highwire;
  * satisfy the crawl rules they will be collected. 
  */
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 import org.jsoup.nodes.Node;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.JsoupHtmlLinkExtractor;
@@ -55,65 +52,76 @@ import org.lockss.util.Logger;
 // an implementation of JsoupHtmlLinkExtractor
 public class HighWireDrupalHtmlLinkExtractorFactory implements LinkExtractorFactory {
   
-  private static final String LINK_NAME = "link";
-  private static final String HREF_NAME = "href";
-  private static final String REL_NAME = "rel";
-  private static final String SHORTLINK = "shortlink";
-  private static final String DIV_NAME = "div";
+  private static final Logger log = Logger.getLogger(HighWireDrupalHtmlLinkExtractorFactory.class);
   
-  protected static Pattern URL_PATTERN = Pattern.compile(
-      "^(https?://[^/]+/)content/[^/]+/[^/]+/[^/?.]+$", Pattern.CASE_INSENSITIVE);
-  protected static Pattern NODE_PATTERN = Pattern.compile(
-      "^/node/([0-9]+)$", Pattern.CASE_INSENSITIVE);
+  private static final String DIVTAG = "div";
+  private static final String RELTAG = "rel";
   
   @Override
   public LinkExtractor createLinkExtractor(String mimeType)
       throws PluginException {
     JsoupHtmlLinkExtractor extractor = new JsoupHtmlLinkExtractor();
-    // we will do some additional processing for <link href="/node/25370" rel="shortlink">
-    extractor.registerTagExtractor(LINK_NAME, new HWSimpleTagLinkExtractor(HREF_NAME));
-    extractor.registerTagExtractor(DIV_NAME, new SimpleTagLinkExtractor(REL_NAME));
+    // we will do some additional processing for <link href="/node/25370" rel="shortlink"> not needed
+    // <div rel"/stuff/more">....</div>  ????
+    extractor.registerTagExtractor(DIVTAG, new HWSimpleTagLinkExtractor(RELTAG));
     return extractor;
   }
   
   public static class HWSimpleTagLinkExtractor extends SimpleTagLinkExtractor {
-    
-    private static Logger log = Logger.getLogger(HWSimpleTagLinkExtractor.class);
     
     // nothing needed in the constructor - just call the parent
     public HWSimpleTagLinkExtractor(String attr) {
       super(attr);
     }
     
-    /*
-     * Extending the way links are extracted by the Jsoup link extractor in a specific case:
-     *   - we are on an article page
-     *   - we hit a link tag of the format:
-     *         <link href="/node/<id>" rel="shortlink">
-     * In this case we create a link to the RIS page by pulling the node id from the href
-     * and generating a link like this:
-     *     <base_url>highwire/citation/<id>/ris         
-     * In any case other than this one, fall back to standard Jsoup implementation
-     */
+    @Override
     public void tagBegin(Node node, ArchivalUnit au, Callback cb) {
-      String srcUrl = node.baseUri();
-      Matcher urlMat = URL_PATTERN.matcher(srcUrl);
-      // Are we on a page for which this would be pertinent? (html landing page)
-      if ( (srcUrl != null) && urlMat.find()) {
-        // now do we have a citation download href?
-        if (node.hasAttr(HREF_NAME) && node.hasAttr(REL_NAME) &&
-            SHORTLINK.equals(node.attr(REL_NAME))) {
-          Matcher hrefMat = NODE_PATTERN.matcher(node.attr(HREF_NAME));
-          if (hrefMat.find()) {
-            String newUrl =  urlMat.group(1) + "highwire/citation/" + hrefMat.group(1) + "/ris";
-            log.debug3("Created/added new url: " + newUrl);
-            cb.foundLink(newUrl);
-          }
-        }
+      // now do we have a citation download href?
+      if (node.hasAttr(RELTAG)) {
+        String newUrl =  node.attr(RELTAG);
+        log.debug3("found url: " + newUrl);
       }
       // for one reason or another, we didn't handle this. Fall back to standard Jsoup
       super.tagBegin(node, au, cb);
     }
   }
-  
+ //  public static class HWSimpleTagLinkExtractor extends SimpleTagLinkExtractor {
+//    
+//    
+//    // nothing needed in the constructor - just call the parent
+//    public HWSimpleTagLinkExtractor(String attr) {
+//      super(attr);
+//    }
+//    
+//    /*
+//     * Extending the way links are extracted by the Jsoup link extractor in a specific case:
+//     *   - we are on an article page
+//     *   - we hit a link tag of the format:
+//     *         <link href="/node/<id>" rel="shortlink">
+//     * In this case we create a link to the RIS page by pulling the node id from the href
+//     * and generating a link like this:
+//     *     <base_url>highwire/citation/<id>/ris         
+//     * In any case other than this one, fall back to standard Jsoup implementation
+//     */
+//    public void tagBegin(Node node, ArchivalUnit au, Callback cb) {
+//      String srcUrl = node.baseUri();
+//      Matcher urlMat = URL_PATTERN.matcher(srcUrl);
+//      // Are we on a page for which this would be pertinent? (html landing page)
+//      if ( (srcUrl != null) && urlMat.find()) {
+//        // now do we have a citation download href?
+//        if (node.hasAttr(HREF) && node.hasAttr(RELTAG) &&
+//            SHORTLINK.equals(node.attr(RELTAG))) {
+//          Matcher hrefMat = NODE_PATTERN.matcher(node.attr(HREF));
+//          if (hrefMat.find()) {
+//            String newUrl =  urlMat.group(1) + "highwire/citation/" + hrefMat.group(1) + "/ris";
+//            log.debug3("Created/added new url: " + newUrl);
+//            cb.foundLink(newUrl);
+//          }
+//        }
+//      }
+//      // for one reason or another, we didn't handle this. Fall back to standard Jsoup
+//      super.tagBegin(node, au, cb);
+//    }
+//  }
+//  
 }
