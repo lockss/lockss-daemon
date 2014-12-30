@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireDrupalHtmlFilterFactory.java,v 1.5 2014-12-15 21:22:56 etenbrink Exp $
+ * $Id: TestHighWireDrupalHtmlFilterFactory.java,v 1.6 2014-12-30 22:43:36 etenbrink Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ public class TestHighWireDrupalHtmlFilterFactory extends LockssTestCase {
   private HighWireDrupalHtmlFilterFactory fact;
   private MockArchivalUnit mau;
   
+  @Override
   public void setUp() throws Exception {
     super.setUp();
     fact = new HighWireDrupalHtmlFilterFactory();
@@ -122,15 +123,15 @@ public class TestHighWireDrupalHtmlFilterFactory extends LockssTestCase {
   private static final String withoutPager = "A<html> </html>9";
   
   //HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-right-wrapper"),
-  private static final String withSidebar = "A<html>\n" +
-      "<div class=\"sidebar-right-wrapper grid-10 omega\">X\n" + 
-      "<div class=\"panel-panel panel-region-sidebar-right\">\n" + 
-      "<div class=\"inside\">" +
-      "<div class=\"panel-pane pane-panels-mini " +
-      "pane-jnl-iss-issue-arch-art pane-style-alt-content\" >\n" + 
-      "</div></div></div></div>\n" +
-      "</html>9";
-  private static final String withoutSidebar = "A<html> </html>9";
+//  private static final String withSidebar = "A<html>\n" +
+//      "<div class=\"sidebar-right-wrapper grid-10 omega\">X\n" + 
+//      "<div class=\"panel-panel panel-region-sidebar-right\">\n" + 
+//      "<div class=\"inside\">" +
+//      "<div class=\"panel-pane pane-panels-mini " +
+//      "pane-jnl-iss-issue-arch-art pane-style-alt-content\" >\n" + 
+//      "</div></div></div></div>\n" +
+//      "</html>9";
+//  private static final String withoutSidebar = "A<html> </html>9";
   
   //new TagNameFilter("script"),
   //new TagNameFilter("noscript"),
@@ -143,12 +144,12 @@ public class TestHighWireDrupalHtmlFilterFactory extends LockssTestCase {
       "A<div> </div>9";
   
   // HtmlNodeFilters.tagWithAttributeRegex("div", "class", "author-tooltip")
-  private static final String withToolTip =
-      "A<html>\n" +
-      "<div class=\"author-tooltip0-asdf\">tip here</div>" +
-      "</html>9";
-  private static final String withoutToolTip =
-      "A<html> </html>9";
+//  private static final String withToolTip =
+//      "A<html>\n" +
+//      "<div class=\"author-tooltip0-asdf\">tip here</div>" +
+//      "</html>9";
+//  private static final String withoutToolTip =
+//      "A<html> </html>9";
   
   private static final String withAside = "<div id=\"page\">" +
       "A<aside>B\n" + 
