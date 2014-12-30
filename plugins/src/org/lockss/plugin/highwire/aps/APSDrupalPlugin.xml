@@ -42,8 +42,16 @@
     </map>
   </entry>
   <entry>
+    <string>required_daemon_version</string>
+    <string>1.67.0</string>
+  </entry>
+  <entry>
     <string>au_name</string>
     <string>"HighWire APS Drupal Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.highwire.aps.APSHtmlCrawlFilterFactory</string>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
@@ -51,6 +59,6 @@
   </entry>
   <entry>
     <string>au_exclude_urls_from_polls_pattern</string>
-    <string>/(css|js)_[^/]+[.](css|js)</string>
+    <string>/(css|js)_[^/]+[.](css|js)$</string>
   </entry>
 </map>
