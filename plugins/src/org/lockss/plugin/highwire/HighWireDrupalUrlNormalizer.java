@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireDrupalUrlNormalizer.java,v 1.7 2014-12-15 21:52:09 etenbrink Exp $
+ * $Id: HighWireDrupalUrlNormalizer.java,v 1.8 2014-12-30 21:58:08 etenbrink Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import org.lockss.util.StringUtil;
 
 public class HighWireDrupalUrlNormalizer implements UrlNormalizer {
   
-  protected static Logger log = Logger.getLogger(HighWireDrupalUrlNormalizer.class);
+  private static final Logger log = Logger.getLogger(HighWireDrupalUrlNormalizer.class);
   
   protected static final String WEB_VIEWER =
       "/sites/all/libraries/pdfjs/web/viewer.html?file=/";
@@ -50,7 +50,7 @@ public class HighWireDrupalUrlNormalizer implements UrlNormalizer {
   
   protected static final String CITATION = "/highwire/citation/";
   protected static final Pattern RIS_PAT = Pattern.compile(
-      "/(ris|bookends|easybib|mendeley|papers|reference-manager|refworks|zotero)$");
+      "/(bookends|easybib|mendeley|papers|reference-manager|refworks|ris|zotero)$");
   
   protected static final String LARGE_JPG = ".large.jpg?";
   protected static final String JS_SUFFIX = ".js?";
@@ -66,6 +66,7 @@ public class HighWireDrupalUrlNormalizer implements UrlNormalizer {
   protected static final String IJKEY_PARAM = "?ijkey=";
   
   
+  @Override
   public String normalizeUrl(String url, ArchivalUnit au)
       throws PluginException {
     // map 

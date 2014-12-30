@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireDrupalHtmlCrawlFilterFactory.java,v 1.5 2014-12-15 20:37:03 etenbrink Exp $
+ * $Id: HighWireDrupalHtmlCrawlFilterFactory.java,v 1.6 2014-12-30 21:50:50 etenbrink Exp $
  */
 
 /*
@@ -49,12 +49,8 @@ public class HighWireDrupalHtmlCrawlFilterFactory implements FilterFactory {
     new TagNameFilter("footer"),
     // Do not crawl for links from aside in BMJ, etc
     new TagNameFilter("aside"),
-    // Do not crawl reference section, right-sidebar, or prev/next pager for links from APS
-//    HtmlNodeFilters.tagWithAttribute("div", "class", "section ref-list"),
-//    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-right-wrapper"),
+    // Do not crawl prev/next pager for links from APS
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pane-highwire-node-pager"),
-    // Do not crawl for links from Royal Society <div class="panel-pane pane-highwire-article-comments-form">
-    // HtmlNodeFilters.tagWithAttributeRegex("div", "class", "comments-form"),
   };
   
   @Override
@@ -78,7 +74,7 @@ public class HighWireDrupalHtmlCrawlFilterFactory implements FilterFactory {
   /* the shared portion of the filtering
    * pick up the extra nodes from the child if there are any
    */
-  private InputStream doFiltering(InputStream in, String encoding, NodeFilter[] moreNodes) {
+  protected InputStream doFiltering(InputStream in, String encoding, NodeFilter[] moreNodes) {
     NodeFilter[] filters = baseHWDrupalFilters;
     if (moreNodes != null) {
       filters = addTo(moreNodes);

@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireDrupalHttpResponseHandler.java,v 1.2 2014-12-15 21:27:48 etenbrink Exp $
+ * $Id: HighWireDrupalHttpResponseHandler.java,v 1.3 2014-12-30 21:56:31 etenbrink Exp $
  */
 
 /*
@@ -39,11 +39,12 @@ import org.lockss.util.urlconn.*;
 
 public class HighWireDrupalHttpResponseHandler implements CacheResultHandler {
   
-  protected static Logger logger = Logger.getLogger(HighWireDrupalHttpResponseHandler.class);
+  private static final Logger logger = Logger.getLogger(HighWireDrupalHttpResponseHandler.class);
   
+  @Override
   public void init(CacheResultMap crmap) {
     logger.warning("Unexpected call to init()");
-    throw new UnsupportedOperationException();
+    throw new UnsupportedOperationException("Unexpected call to HighWireDrupalHttpResponseHandler.init()");
   }
   
   public static class NoFailRetryableNetworkException_3_60S
@@ -55,12 +56,14 @@ public class HighWireDrupalHttpResponseHandler implements CacheResultHandler {
       super(message);
     }
     
+    @Override
     protected void setAttributes() {
       super.setAttributes();
       attributeBits.clear(ATTRIBUTE_FAIL);
     }
   }
   
+  @Override
   public CacheException handleResult(ArchivalUnit au,
                                      String url,
                                      int responseCode) {
@@ -72,28 +75,27 @@ public class HighWireDrupalHttpResponseHandler implements CacheResultHandler {
             url.endsWith(".toc")) {
           return new CacheException.RetrySameUrlException("500 Internal Server Error");
         }
-        else {
-          return new NoFailRetryableNetworkException_3_60S("500 Internal Server Error (non-fatal)");
-        }
+        return new NoFailRetryableNetworkException_3_60S("500 Internal Server Error (non-fatal)");
+        
       case 504:
         logger.debug2("504");
         if (url.contains("/content/")) {
           return new CacheException.RetryableNetworkException_3_60S("504 Gateway Time-out Error");
         }
-        else {
-          return new NoFailRetryableNetworkException_3_60S("504 Gateway Time-out Error (non-fatal)");
-        }
+        return new NoFailRetryableNetworkException_3_60S("504 Gateway Time-out Error (non-fatal)");
+        
       default:
-        logger.debug2("default");
-        throw new UnsupportedOperationException();
+        logger.warning("Unexpected responseCode (" + responseCode + ") in handleResult(): AU " + au.getName() + "; URL " + url);
+        throw new UnsupportedOperationException("Unexpected responseCode (" + responseCode + ")");
     }
   }
   
+  @Override
   public CacheException handleResult(ArchivalUnit au,
                                      String url,
                                      Exception ex) {
     logger.warning("Unexpected call to handleResult(): AU " + au.getName() + "; URL " + url, ex);
-    throw new UnsupportedOperationException();
+    throw new UnsupportedOperationException("Unexpected call to handleResult(): AU " + au.getName() + "; URL " + url, ex);
   }
   
 }

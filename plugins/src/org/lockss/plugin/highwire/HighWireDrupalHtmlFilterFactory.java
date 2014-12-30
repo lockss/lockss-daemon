@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireDrupalHtmlFilterFactory.java,v 1.10 2014-12-15 20:39:45 etenbrink Exp $
+ * $Id: HighWireDrupalHtmlFilterFactory.java,v 1.11 2014-12-30 21:52:31 etenbrink Exp $
  */
 
 /*
@@ -45,6 +45,8 @@ import org.htmlparser.Tag;
 import org.htmlparser.filters.*;
 import org.htmlparser.nodes.TextNode;
 import org.htmlparser.util.NodeList;
+import org.htmlparser.util.ParserException;
+import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.FilterUtil;
 import org.lockss.filter.WhiteSpaceFilter;
@@ -56,21 +58,21 @@ import org.lockss.util.ReaderInputStream;
 
 public class HighWireDrupalHtmlFilterFactory implements FilterFactory {
   
-  Logger log = Logger.getLogger(HighWireDrupalHtmlFilterFactory.class);
+  private static final Logger log = Logger.getLogger(HighWireDrupalHtmlFilterFactory.class);
   
   protected static NodeFilter[] baseHWDrupalFilters = new NodeFilter[] {
+    // No relevant content in header/footer (in crawl filter)
+    new TagNameFilter("header"),
+    new TagNameFilter("footer"),
+    // no need to include aside (in crawl filter)
+    new TagNameFilter("aside"),
+    // prev/next pager can change (in crawl filter)
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pane-highwire-node-pager"),
+    
     // Publisher adding/updating meta tags
     new TagNameFilter("head"),
     // remove ALL comments
     HtmlNodeFilters.comment(),
-    // No relevant content in header/footer (in crawl filter)
-    new TagNameFilter("header"),
-    new TagNameFilter("footer"),
-    // no need to include aside (in crawl filter) 
-    new TagNameFilter("aside"),
-    // right sidebar, prev/next pager can change (in crawl filter) 
-//    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-right-wrapper"),
-    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pane-highwire-node-pager"),
     // copyright statement may change
     HtmlNodeFilters.tagWithAttribute("ul", "class", "copyright-statement"),
     // messages can appear arbitrarily
@@ -82,16 +84,6 @@ public class HighWireDrupalHtmlFilterFactory implements FilterFactory {
     // most scripts are in head, however, if any are in the body they are filtered
     new TagNameFilter("script"),
     new TagNameFilter("noscript"),
-    // while we collect rapid-responses, they change, so do not include for hash
-    // HtmlNodeFilters.tagWithAttributeRegex("div", "class", "rapid-responses"),
-    // BMJ had tags on http://www.bmj.com/content/330/7506/0.8/rapid-responses
-//    HtmlNodeFilters.tagWithAttribute("div", "id", "skip-link"),
-//    HtmlNodeFilters.tagWithAttribute("div", "id", "cookie-notice"),
-//    HtmlNodeFilters.tagWithAttribute("div", "class", "vote-widget"),
-    // <div class="panel-panel panel-region-content-header">
-    // <div class="panel-pane pane-panels-mini pane-oup-explore-citing-articles">
-    // <div class="panel-pane pane-panels-mini pane-oup-explore-related-articles">
-    // <div class="ui-dialog ui-widget
   };
   
   // HTML transform to convert all remaining nodes to plaintext nodes
@@ -111,40 +103,44 @@ public class HighWireDrupalHtmlFilterFactory implements FilterFactory {
     }
   };
   
-  // Transform to remove attributes from select tags
+  // Transform to remove attributes from select tags (div, )
   // some attributes changed over time, either arbitrarily or sequentially
   protected static HtmlTransform xformAttributes = new HtmlTransform() {
     @Override
     public NodeList transform(NodeList nodeList) throws IOException {
-      NodeList nl = new NodeList();
-      for (int sx = 0; sx < nodeList.size(); sx++) {
-        Node snode = nodeList.elementAt(sx);
-        if (snode instanceof Tag) {
-          Tag tag = (Tag) snode;
-          if (tag.isEmptyXmlTag()) {
-            continue;
+      try {
+        nodeList.visitAllNodesWith(new NodeVisitor() {
+          @Override
+          public void visitTag(Tag tag) {
+            String tagName = tag.getTagName().toLowerCase();
+            try {
+              if ("div".equals(tagName)) {
+                Attribute a = tag.getAttributeEx(tagName);
+                Vector<Attribute> v = new Vector<>();
+                v.add(a);
+                if (tag.isEmptyXmlTag()) {
+                  Attribute end = tag.getAttributeEx("/");
+                  v.add(end);
+                }
+                tag.setAttributesEx(v);
+              }
+            }
+            catch (Exception exc) {
+              log.debug2("Internal error (visitor)", exc); // Ignore this tag and move on
+            }
+            // Always
+            super.visitTag(tag);
           }
-          String tagName = tag.getTagName().toLowerCase();
-          NodeList knl = tag.getChildren();
-          if (knl != null) {
-            tag.setChildren(transform(knl));
-          }
-          if ("div".equals(tagName)) {
-            Attribute a = tag.getAttributeEx(tagName);
-            Vector<Attribute> v = new Vector<Attribute>();
-            v.add(a);
-            tag.setAttributesEx(v);
-          }
-          nl.add(tag);
-        }
-        else {
-          nl.add(snode);
-        }
+        });
       }
-      return nl;
+      catch (ParserException pe) {
+        log.debug2("Internal error (parser)", pe); // Bail
+      }
+      return nodeList;
     }
   };
   
+  @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding)
@@ -192,9 +188,9 @@ public class HighWireDrupalHtmlFilterFactory implements FilterFactory {
     if (doWSFiltering()) {
       Reader filteredReader = FilterUtil.getReader(combinedFiltered, encoding);
       return new ReaderInputStream(new WhiteSpaceFilter(filteredReader));
-    } else {
-      return combinedFiltered;
     }
+    
+    return combinedFiltered;
   }
   
   /** Create an array of NodeFilters that combines the baseHWDrupalFilters with

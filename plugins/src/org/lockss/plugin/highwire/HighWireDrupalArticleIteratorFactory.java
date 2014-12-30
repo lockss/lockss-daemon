@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireDrupalArticleIteratorFactory.java,v 1.5 2014-12-15 20:35:26 etenbrink Exp $
+ * $Id: HighWireDrupalArticleIteratorFactory.java,v 1.6 2014-12-30 21:50:03 etenbrink Exp $
  */
 
 /*
@@ -45,23 +45,23 @@ public class HighWireDrupalArticleIteratorFactory
     implements ArticleIteratorFactory,
                ArticleMetadataExtractorFactory {
   
-  protected static Logger log =
-      Logger.getLogger(HighWireDrupalArticleIteratorFactory.class);
+  private static final Logger log = Logger.getLogger(HighWireDrupalArticleIteratorFactory.class);
   
   protected static final String ROOT_TEMPLATE =
     "\"%scontent/%s/\", base_url, volume_name";
   
   // <base_url>/content/<v>/<i>/<pg>
   protected static final String PATTERN_TEMPLATE =
-    "\"^%scontent/%s/(?:[^/]+/)(?:[^./?&]+)$\", " +
-    "base_url, volume_name";
+    "\"^%scontent/%s/(?:[^/]+/)(?:[^./?&]+)$\", base_url, volume_name";
+  
   // various aspects of a HighWire article
   // http://ajpcell.physiology.org/content/302/1/C1
   // http://ajpcell.physiology.org/content/302/1/C1.article-info
   // http://ajpcell.physiology.org/content/302/1/C1.figures-only
   // http://ajpcell.physiology.org/content/302/1/C1.full.pdf+html
   // http://ajpcell.physiology.org/content/302/1/C1.full.pdf
-  
+  // http://ajpcell.physiology.org/content/302/1/C1.full
+  // http://ajpcell.physiology.org/content/302/1/C1.abstract
   // http://bjo.bmj.com/content/96/1/1.extract
   
   // these kinds of urls are not used as part of the AI
@@ -94,6 +94,7 @@ public class HighWireDrupalArticleIteratorFactory
     // set up landing page to be an aspect that will trigger an ArticleFiles
     // NOTE - for the moment this also means full is considered a FULL_TEXT_CU 
     // until this is deprecated
+    // Note: Often the landing page is also the fulltext html
     builder.addAspect(
         LANDING_PATTERN, LANDING_REPLACEMENT,
         ArticleFiles.ROLE_FULL_TEXT_HTML_LANDING_PAGE);
@@ -123,8 +124,8 @@ public class HighWireDrupalArticleIteratorFactory
     // add metadata role from abstract, html, or pdf (NOTE: pdf metadata gets DOI from filename)
     builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA, Arrays.asList(
         ArticleFiles.ROLE_ABSTRACT,
-        ArticleFiles.ROLE_FULL_TEXT_HTML_LANDING_PAGE,
-        ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE));
+        ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE,
+        ArticleFiles.ROLE_FULL_TEXT_HTML_LANDING_PAGE));
     
     // The order in which we want to define full_text_cu.
     // First one that exists will get the job
@@ -138,6 +139,7 @@ public class HighWireDrupalArticleIteratorFactory
     return builder.getSubTreeArticleIterator();
   }
   
+  @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
       throws PluginException {
     return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
