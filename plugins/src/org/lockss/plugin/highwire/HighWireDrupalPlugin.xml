@@ -112,9 +112,9 @@
     <string>au_crawlrules</string>
     <list>
       <!-- no gifs from other volumes -->
-      <string>2,"^%scontent/(?!([^/]+/)?%s)[^?]*[.]gif", base_url, volume_name</string>
+      <string>2,"^%scontent/(?!([^/]+/)?%s/)[^?]*[.]gif", base_url, volume_name</string>
       <!-- all fonts, images, resources, css, js, etc. -->
-      <string>1,"^https?://%s/[^?]*[.](?:eot|svg|ttf|woff|bmp|gif|ico|jpe?g|png|tif?f|(css|js)(?:[?].*)?)$", base_url_host</string>
+      <string>1,"^https?://%s/[^?]*[.](?:bmp|eot|gif|ico|jpe?g|png|svg|tif?f|ttf|woff|(css|js)(?:[?].*)?)$", base_url_host</string>
       <string>1,"^https?://%s[^?]*/highwire/jcore", base_url_host</string>
       <!-- Do not crawl unless from base url -->
       <string>4,"^%s", base_url</string>
@@ -123,16 +123,12 @@
       <!-- filter links with '{' like http://ajprenal.physiology.org/content/299/4/{openurl}?query=rft... -->
       <string>2,"^%s(?:[^?]+([?](sort|tab|form)|most-(cited|read)|featured_article|featured-podcasts|(back-matter|ed-board)[.]pdf)|content/(by/|early/|[^{]+[{]))", base_url</string>
       <string>1,"^%s(?:content(?:/[^/]+)?/(?:%s|suppl)|highwire/(?:filestream|markup|article_citation_preview))/", base_url, volume_name</string>
-      <string>1,"^%shighwire/citation/[^/]+/(ris|bibtex|endnote.?)$", base_url</string>
+      <string>1,"^%shighwire/citation/[^/]+/(bookends|easybib|mendeley|papers|reference-manager|refworks|ris|zotero)$", base_url</string>
     </list>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
     <long>1209600000</long>
-  </entry>
-  <entry>
-    <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.highwire.HighWireDrupalHtmlFilterFactory</string>
   </entry>
   <entry>
     <string>plugin_crawl_url_comparator_factory</string>
@@ -144,10 +140,6 @@
       <string>500=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
       <string>504=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
     </list>
-  </entry>
-  <entry>
-    <string>text/html_link_extractor_factory</string>
-    <string>org.lockss.plugin.highwire.HighWireDrupalHtmlLinkExtractorFactory</string>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
@@ -171,6 +163,10 @@
     <string>org.lockss.plugin.highwire.HighWireDrupalHtmlCrawlFilterFactory</string>
   </entry>
   <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.highwire.HighWireDrupalHtmlFilterFactory</string>
+  </entry>
+  <entry>
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.highwire.HighWireDrupalUrlNormalizer</string>
   </entry>
@@ -188,10 +184,6 @@
     <string>au_permission_checker_factory</string>
     <string>org.lockss.plugin.highwire.HighWireDrupalPermissionCheckerFactory</string>
   </entry>
-  <!-- entry>
-    <string>plugin_per_host_permission_path</string>
-    <string>/lockss.htm</string>
-  </entry -->
   <entry>
     <string>au_http_request_header</string>
     <string>Accept:text/html, image/gif, image/jpeg; q=.2, */*; q=.2</string>
