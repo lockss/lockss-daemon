@@ -1,5 +1,5 @@
 /*
- * $Id: TestELifeDrupalHtmlHashFilterFactory.java,v 1.3 2014-09-11 02:54:40 etenbrink Exp $
+ * $Id: TestELifeDrupalHtmlHashFilterFactory.java,v 1.4 2014-12-31 00:08:54 etenbrink Exp $
  */
 
 /*
@@ -38,11 +38,12 @@ import org.lockss.util.*;
 import org.lockss.test.*;
 
 public class TestELifeDrupalHtmlHashFilterFactory extends LockssTestCase {
-  static String ENC = Constants.DEFAULT_ENCODING;
+//  private static String ENC = Constants.DEFAULT_ENCODING;
   
   private ELifeDrupalHtmlHashFilterFactory fact;
   private MockArchivalUnit mau;
   
+  @Override
   public void setUp() throws Exception {
     super.setUp();
     fact = new ELifeDrupalHtmlHashFilterFactory();
@@ -51,32 +52,56 @@ public class TestELifeDrupalHtmlHashFilterFactory extends LockssTestCase {
   
   // Publisher adding/updating meta tags
   // new TagNameFilter("head"),
-  private static final String headHtml = "<html><head>Title</head></HTML>";
-  private static final String headHtmlFiltered = "<html></HTML>";
+  private static final String headHtml = "<html><head>Title\n</head></HTML>";
+  private static final String headHtmlFiltered = "";
   
   // No relevant content in header/footer
   // new TagNameFilter("header"),
   // new TagNameFilter("footer"),
-  private static final String header = "<div>\n" + 
+  private static final String header = "<div>A\n" + 
       "<header id=\"section-header\" class=\"section section-header\">\n" + 
       "<div id=\"zone-user-wrapper\" class=\"zone-wrapper\"></div>\n" + 
-      "</header>\n" + 
+      "</header>\n9" + 
       "</div>";
-  private static final String headerFiltered = "<div> </div>";
+  private static final String headerFiltered = "A 9";
   
-  private static final String footer = "<div>\n" + 
+  private static final String footer = "<div>A\n" + 
       "<footer id=\"section-footer\" class=\"section section-footer\">\n" + 
       "<div id=\"zone-postscript\" class=\"zone zone-postscript clearfix container-30\"></div>\n" +
-      "</footer>\n" + 
+      "</footer>9\n" + 
       "</div>";
-  private static final String footerFiltered = "<div> </div>";
+  private static final String footerFiltered = "A 9 "; 
+  
+  // new TagNameFilter("script"),
+  private static final String withScript =
+      "<div>" +
+      "<script type=\"text/javascript\">GA_googleFillSlot(\"tower_right_160x600\");</script>" +
+      "</div>";
+  private static final String withoutScript = "";
+  
+  private static final String withRRHeader = "<div id=\"page\">" +
+      "<div id=\"region-responsive-header\" class=\"region-responsive-header\">\n" + 
+      "  <div class=\"region-inner region-responsive-header-inner\">\n" + 
+      "    <div id=\"block-panels-mini-jnl-elife-responsive-bar\" class=\"block\">\n" + 
+      "  <div class=\"block-inner clearfix\">\n" + 
+      "                \n" + 
+      "    <div class=\"content clearfix\">\n" + 
+      "      <div id=\"responsive_bar\" class=\"panel-display clearfix\">\n" + 
+      "</div>\n" + 
+      "  </div>\n" + 
+      "  </div>\n" + 
+      "</div>  </div>\n" + 
+      "</div> " +
+      "</div>";
+  
+  private static final String withoutRRHeader = " ";
   
   // HtmlNodeFilters.tagWithAttribute("div", "id", "zone-header-wrapper"),
   private static final String zheader = "<div>\n" +
       "<div id=\"zone-header-wrapper\" class=\"zone-wrapper zone-header-wrapper clearfix\">" +
       "</div>" +
       "</div>";
-  private static final String zheaderFiltered = "<div> </div>";
+  private static final String zheaderFiltered = " ";
   
   // HtmlNodeFilters.tagWithAttribute("div", "class", "page_header"),
   private static final String pheader = "<div>" +
@@ -86,10 +111,10 @@ public class TestELifeDrupalHtmlHashFilterFactory extends LockssTestCase {
       "</a>\n" + 
       "</div>\n" + 
       "</div>";
-  private static final String pheaderFiltered = "<div> </div>";
+  private static final String pheaderFiltered = " ";
   
   // HtmlNodeFilters.tagWithAttribute("ul", "class", "elife-article-categories"),
-  private static final String artcat = "<div>\n" +
+  private static final String artcat = "<div>\nA" +
       "<ul class=\"elife-article-categories\">\n" + 
       "<li class=\"first\"><a class=\"category-display-channel\" href=\"/category/research-article\">Research article</a></li>\n" + 
       "<li><a class=\"category-heading\" href=\"/category/genes-and-chromosomes\">Genes and chromosomes</a></li>\n" + 
@@ -97,19 +122,21 @@ public class TestELifeDrupalHtmlHashFilterFactory extends LockssTestCase {
       "<li class=\"last\"><a class=\"keyword\" href=\"/browse?keys=%22Mouse%22\">Mouse</a></li>\n" + 
       "</ul>" +
       "</div>";
-  private static final String artcatFiltered = "<div> </div>";
+  private static final String artcatFiltered = " A";
   
   // HtmlNodeFilters.tagWithAttributeRegex("div", "class", "elife-reflink-links-wrapper"),
-  private static final String linksw = "<div>" +
-      "<div class=\"elife-reflink-links-wrapper\">\n" + 
-      "<span class=\"elife-reflink-link life-reflink-link-doi\">\n" + 
-      "<a target=\"_blank\" href=\"/lookup/external-ref/doi?access_num=10.1038/&amp;link_type=DOI\">\n" + 
-      "CrossRef</a></span>\n" + 
-      "<span class=\"elife-reflink-link life-reflink-link-medline\">\n" + 
-      "<a target=\"_blank\" href=\"/lookup/external-ref/medline?access_num=1&amp;link_type=MED\">\n" + 
-      "PubMed</a></span></div>\n" + 
+  private static final String withRef = "<div id=\"page\">" +
+      "<div id=\"references\">" +
+      "<div class=\"elife-reflink-links-wrapper\">" +
+      "<span class=\"elife-reflink-link life-reflink-link-doi\">" +
+      "<a target=\"_blank\" href=\"/lookup/external-ref/doi?access_num=10&amp;link_type=DOI\">" +
+      "CrossRef</a></span><span class=\"elife-reflink-link life-reflink-link-medline\">" +
+      "<a target=\"_blank\" href=\"/lookup/external-ref/medline?access_num=1&amp;link_type=MED\">" +
+      "PubMed</a></span></div>" +
+      "</div>9" +
       "</div>";
-  private static final String linkswFiltered = "<div> </div>";
+  
+  private static final String withoutRef = "9";
   
   // HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-wrapper"),
   private static final String withSidebar = "<div>\n" +
@@ -120,34 +147,29 @@ public class TestELifeDrupalHtmlHashFilterFactory extends LockssTestCase {
       "      </div>\n" + 
       "</div>\n" + 
       "</div>";
-  private static final String withoutSidebar = "<div>\n</div>";
+  private static final String withoutSidebar = " ";
   
-  // new TagNameFilter("script"),
-  private static final String withScript =
-      "<div>" +
-      "<script type=\"text/javascript\">GA_googleFillSlot(\"tower_right_160x600\");</script>" +
-      "</div>";
-  private static final String withoutScript =
-      "<div></div>";
+//  private static final String attrib = "<div>" +
+//  		"<div id=\"foo-categories\">stuff\n" + 
+//      "</div></div>";
+//  private static final String attribFiltered = "stuff ";
   
-  private static final String attrib = "<div>" +
-  		"<div id=\"foo-categories\">stuff\n" + 
-      "</div></div>";
-  private static final String attribFiltered = "<div><div>stuff </div></div>";
   
   public void testFiltering() throws Exception {
+    // from parent
     assertFilterToString(headHtml, headHtmlFiltered);
     assertFilterToString(header, headerFiltered);
     assertFilterToString(footer, footerFiltered);
+    assertFilterToString(withScript, withoutScript);
+    // from crawl filter
+    assertFilterToString(withRRHeader, withoutRRHeader);
+    assertFilterToString(withRef, withoutRef);
+    assertFilterToString(withSidebar, withoutSidebar);
+    
     assertFilterToString(zheader, zheaderFiltered);
     assertFilterToString(pheader, pheaderFiltered);
     assertFilterToString(artcat, artcatFiltered);
-    assertFilterToString(linksw, linkswFiltered);
-    assertFilterToString(attrib, attribFiltered);
-    
-    assertFilterToSame(withSidebar, withoutSidebar);
-    assertFilterToSame(withScript, withoutScript);
-    
+//    assertFilterToString(attrib, attribFiltered);
   }
   
   private void assertFilterToSame(String str1, String str2) throws Exception {

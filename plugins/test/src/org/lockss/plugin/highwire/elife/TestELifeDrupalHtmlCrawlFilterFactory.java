@@ -1,5 +1,5 @@
 /*
- * $Id: TestELifeDrupalHtmlCrawlFilterFactory.java,v 1.2 2014-10-22 16:17:10 etenbrink Exp $
+ * $Id: TestELifeDrupalHtmlCrawlFilterFactory.java,v 1.3 2014-12-31 00:08:54 etenbrink Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ public class TestELifeDrupalHtmlCrawlFilterFactory extends LockssTestCase {
   private ELifeDrupalHtmlCrawlFilterFactory fact;
   private MockArchivalUnit mau;
   
+  @Override
   public void setUp() throws Exception {
     super.setUp();
     fact = new ELifeDrupalHtmlCrawlFilterFactory();
@@ -67,27 +68,38 @@ public class TestELifeDrupalHtmlCrawlFilterFactory extends LockssTestCase {
   private static final String withoutRRHeader = "<div id=\"page\">" +
       "</div>";
   
-  private static final String withRefWrap = "<div id=\"page\">" +
+  private static final String withRef = "<div id=\"page\">" +
+      "<div id=\"references\">" +
       "<div class=\"elife-reflink-links-wrapper\">" +
       "<span class=\"elife-reflink-link life-reflink-link-doi\">" +
       "<a target=\"_blank\" href=\"/lookup/external-ref/doi?access_num=10&amp;link_type=DOI\">" +
       "CrossRef</a></span><span class=\"elife-reflink-link life-reflink-link-medline\">" +
       "<a target=\"_blank\" href=\"/lookup/external-ref/medline?access_num=1&amp;link_type=MED\">" +
       "PubMed</a></span></div>" +
+      "</div>" +
       "</div>";
   
-  private static final String withoutRefWrap = "<div id=\"page\">" +
+  private static final String withoutRef = "<div id=\"page\">" +
+      "</div>";
+  
+  // HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-wrapper"),
+  private static final String withSidebar = "<div>\n" +
+      "<div class=\"sidebar-wrapper grid-9 omega\">\n" + 
+      "      <div class=\"panel-panel panel-region-sidebar-lens\">\n" + 
+      "        <div class=\"panel-pane pane-elife-article-lens-icon hidden-small\">\n" + 
+      "        </div>\n" + 
+      "      </div>\n" + 
+      "</div>\n" + 
+      "</div>";
+  private static final String withoutSidebar = "<div>\n" + 
+      "\n" + 
       "</div>";
   
   private static final String withCorr = "<div id=\"page\">" +
-      "<div class=\"elife-reflink-links-wrapper\">" +
-      "<span class=\"elife-reflink-link life-reflink-link-doi\">" +
-      "<a target=\"_blank\" href=\"/lookup/external-ref/doi?access_num=10&amp;link_type=DOI\">" +
-      "CrossRef</a></span><span class=\"elife-reflink-link life-reflink-link-medline\">" +
-      "<a target=\"_blank\" href=\"/lookup/external-ref/medline?access_num=1&amp;link_type=MED\">" +
-      "PubMed</a></span></div>" +
+      "<div class=\"elife-article-corrections\">" +
+      "<span class=\"elife-article-correction\"><a href=\"/content\">This article has been corrected</a>" +
+      "</span></div>" +
       "</div>";
-  
   private static final String withoutCorr = "<div id=\"page\">" +
       "</div>";
   
@@ -102,18 +114,24 @@ public class TestELifeDrupalHtmlCrawlFilterFactory extends LockssTestCase {
     a = StringUtil.fromInputStream(inA);
     assertEquals(withoutRRHeader, a);
     
-    // "div", "class", "elife-reflink-links-wrapper"
-    inA = fact.createFilteredInputStream(mau, new StringInputStream(withRefWrap),
+    // "div", "id", "references"
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(withRef),
         Constants.DEFAULT_ENCODING);
     a = StringUtil.fromInputStream(inA);
-    assertEquals(withoutRefWrap, a);
+    assertEquals(withoutRef, a);
+    
+    // div", "class", "sidebar-wrapper"
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(withSidebar),
+        Constants.DEFAULT_ENCODING);
+    a = StringUtil.fromInputStream(inA);
+    assertEquals(withoutSidebar, a);
     
     // "div", "class", "elife-article-corrections"
     inA = fact.createFilteredInputStream(mau, new StringInputStream(withCorr),
         Constants.DEFAULT_ENCODING);
     a = StringUtil.fromInputStream(inA);
     assertEquals(withoutCorr, a);
-    
+   
   }
   
 }

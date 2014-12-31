@@ -1,5 +1,5 @@
 /*
- * $Id: TestELifeDrupalPlugin.java,v 1.2 2014-11-12 20:11:59 wkwilson Exp $
+ * $Id: TestELifeDrupalPlugin.java,v 1.3 2014-12-31 00:08:54 etenbrink Exp $
  */
 
 /*
@@ -40,11 +40,10 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 import org.lockss.plugin.definable.*;
+import org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler.NoFailRetryableNetworkException_3_60S;
 import org.lockss.test.*;
 import org.lockss.util.ListUtil;
 import org.lockss.util.urlconn.CacheException;
-import org.lockss.util.urlconn.CacheException.NoRetryDeadLinkException;
-import org.lockss.util.urlconn.CacheException.RetrySameUrlException;
 import org.lockss.util.urlconn.HttpResultMap;
 
 public class TestELifeDrupalPlugin extends LockssTestCase {
@@ -58,6 +57,7 @@ public class TestELifeDrupalPlugin extends LockssTestCase {
     super(msg);
   }
   
+  @Override
   public void setUp() throws Exception {
     super.setUp();
     plugin = new DefinablePlugin();
@@ -126,12 +126,12 @@ public class TestELifeDrupalPlugin extends LockssTestCase {
     CacheException exc =
         ((HttpResultMap)plugin.getCacheResultMap()).mapException(au, conn,
             500, "foo");
-    assertClass(NoRetryDeadLinkException.class, exc);
+    assertClass(NoFailRetryableNetworkException_3_60S.class, exc);
     
     conn.setURL(starturl);
     exc = ((HttpResultMap)plugin.getCacheResultMap()).mapException(au, conn,
         500, "foo");
-    assertClass(RetrySameUrlException.class, exc);
+    assertClass(NoFailRetryableNetworkException_3_60S.class, exc);
     
   }
   
