@@ -1,5 +1,5 @@
 /*
- * $Id: AuMetadataRecorder.java,v 1.21 2014-10-03 23:04:43 fergaloy-sf Exp $
+ * $Id: AuMetadataRecorder.java,v 1.21.2.1 2014-12-31 21:25:13 fergaloy-sf Exp $
  */
 
 /*
@@ -283,7 +283,7 @@ public class AuMetadataRecorder {
    *          the ArticleMetadataInfo
    * @return an ArticleMetadataInfo with the normalized properties.
    */
-  private ArticleMetadataInfo normalizeMetadata(ArticleMetadataInfo mdinfo) {
+  ArticleMetadataInfo normalizeMetadata(ArticleMetadataInfo mdinfo) {
     if (mdinfo.accessUrl != null) {
       String accessUrl = mdinfo.accessUrl.trim();
       if (accessUrl.length() > MAX_URL_COLUMN) {
@@ -311,7 +311,8 @@ public class AuMetadataRecorder {
 
       if (doi.length() > MAX_DOI_COLUMN) {
 	log.warning("doi too long '" + mdinfo.doi + "' for title: '"
-	    + mdinfo.publicationTitle + "' publisher: " + mdinfo.publisher + "'");
+	    + mdinfo.publicationTitle + "' publisher: " + mdinfo.publisher
+	    + "'");
 	mdinfo.doi = DbManager.truncateVarchar(doi, MAX_DOI_COLUMN);
       } else {
 	mdinfo.doi = doi;
@@ -322,7 +323,8 @@ public class AuMetadataRecorder {
       String pubDate = mdinfo.pubDate.trim();
       if (pubDate.length() > MAX_DATE_COLUMN) {
 	log.warning("pubDate too long '" + mdinfo.pubDate + "' for title: '"
-	    + mdinfo.publicationTitle + "' publisher: " + mdinfo.publisher + "'");
+	    + mdinfo.publicationTitle + "' publisher: " + mdinfo.publisher
+	    + "'");
 	mdinfo.pubDate = DbManager.truncateVarchar(pubDate, MAX_DATE_COLUMN);
       } else {
 	mdinfo.pubDate = pubDate;
@@ -333,7 +335,8 @@ public class AuMetadataRecorder {
       String volume = mdinfo.volume.trim();
       if (volume.length() > MAX_VOLUME_COLUMN) {
 	log.warning("volume too long '" + mdinfo.volume + "' for title: '"
-	    + mdinfo.publicationTitle + "' publisher: " + mdinfo.publisher + "'");
+	    + mdinfo.publicationTitle + "' publisher: " + mdinfo.publisher
+	    + "'");
 	mdinfo.volume = DbManager.truncateVarchar(volume, MAX_VOLUME_COLUMN);
       } else {
 	mdinfo.volume = volume;
@@ -344,7 +347,8 @@ public class AuMetadataRecorder {
       String issue = mdinfo.issue.trim();
       if (issue.length() > MAX_ISSUE_COLUMN) {
 	log.warning("issue too long '" + mdinfo.issue + "' for title: '"
-	    + mdinfo.publicationTitle + "' publisher: " + mdinfo.publisher + "'");
+	    + mdinfo.publicationTitle + "' publisher: " + mdinfo.publisher
+	    + "'");
 	mdinfo.issue = DbManager.truncateVarchar(issue, MAX_ISSUE_COLUMN);
       } else {
 	mdinfo.issue = issue;
@@ -403,7 +407,8 @@ public class AuMetadataRecorder {
       if (name.length() > MAX_NAME_COLUMN) {
 	log.warning("journal title too long '" + mdinfo.publicationTitle
 	    + "' for publisher: " + mdinfo.publisher + "'");
-	mdinfo.publicationTitle = DbManager.truncateVarchar(name, MAX_NAME_COLUMN);
+	mdinfo.publicationTitle =
+	    DbManager.truncateVarchar(name, MAX_NAME_COLUMN);
       } else {
 	mdinfo.publicationTitle = name;
       }
@@ -415,7 +420,8 @@ public class AuMetadataRecorder {
 	String name = author.trim();
 	if (name.length() > MAX_AUTHOR_COLUMN) {
 	  log.warning("author too long '" + author + "' for title: '"
-	      + mdinfo.publicationTitle + "' publisher: " + mdinfo.publisher + "'");
+	      + mdinfo.publicationTitle + "' publisher: " + mdinfo.publisher
+	      + "'");
 	  authors.add(DbManager.truncateVarchar(name, MAX_AUTHOR_COLUMN));
 	} else {
 	  authors.add(name);
@@ -430,7 +436,8 @@ public class AuMetadataRecorder {
 	String name = keyword.trim();
 	if (name.length() > MAX_KEYWORD_COLUMN) {
 	  log.warning("keyword too long '" + keyword + "' for title: '"
-	      + mdinfo.publicationTitle + "' publisher: " + mdinfo.publisher + "'");
+	      + mdinfo.publicationTitle + "' publisher: " + mdinfo.publisher
+	      + "'");
 	  keywords.add(DbManager.truncateVarchar(name, MAX_KEYWORD_COLUMN));
 	} else {
 	  keywords.add(name);
@@ -441,15 +448,24 @@ public class AuMetadataRecorder {
 
     if (mdinfo.featuredUrlMap != null) {
       Map<String, String> featuredUrls = new HashMap<String, String>();
-      for (String key : mdinfo.featuredUrlMap.keySet()) {
-	String url = mdinfo.featuredUrlMap.get(key).trim();
+      for (String feature : mdinfo.featuredUrlMap.keySet()) {
+	String validFeature = feature;
+	if (feature.length() > MAX_FEATURE_COLUMN) {
+	  log.warning("feature too long '" + feature + "' for title: '"
+	      + mdinfo.publicationTitle + "' publisher: " + mdinfo.publisher
+	      + "'");
+	  validFeature = DbManager.truncateVarchar(feature, MAX_FEATURE_COLUMN);
+	}
+
+	String url = mdinfo.featuredUrlMap.get(feature).trim();
 	if (url.length() > MAX_URL_COLUMN) {
-	  log.warning("URL too long '" + mdinfo.featuredUrlMap.get(key)
+	  log.warning("URL too long '" + mdinfo.featuredUrlMap.get(feature)
 	      + "' for title: '" + mdinfo.publicationTitle + "' publisher: "
 	      + mdinfo.publisher + "'");
-	  featuredUrls.put(key, DbManager.truncateVarchar(url, MAX_URL_COLUMN));
+	  featuredUrls.put(validFeature,
+	      DbManager.truncateVarchar(url, MAX_URL_COLUMN));
 	} else {
-	  featuredUrls.put(key, url);
+	  featuredUrls.put(validFeature, url);
 	}
       }
       mdinfo.featuredUrlMap = featuredUrls;
@@ -459,7 +475,8 @@ public class AuMetadataRecorder {
       String endPage = mdinfo.endPage.trim();
       if (endPage.length() > MAX_END_PAGE_COLUMN) {
 	log.warning("endPage too long '" + mdinfo.endPage + "' for title: '"
-	    + mdinfo.publicationTitle + "' publisher: " + mdinfo.publisher + "'");
+	    + mdinfo.publicationTitle + "' publisher: " + mdinfo.publisher
+	    + "'");
 	mdinfo.endPage =
 	    DbManager.truncateVarchar(endPage, MAX_END_PAGE_COLUMN);
       } else {
@@ -471,7 +488,8 @@ public class AuMetadataRecorder {
       String coverage = mdinfo.coverage.trim();
       if (coverage.length() > MAX_COVERAGE_COLUMN) {
 	log.warning("coverage too long '" + mdinfo.coverage + "' for title: '"
-	    + mdinfo.publicationTitle + "' publisher: " + mdinfo.publisher + "'");
+	    + mdinfo.publicationTitle + "' publisher: " + mdinfo.publisher
+	    + "'");
 	mdinfo.coverage =
 	    DbManager.truncateVarchar(coverage, MAX_COVERAGE_COLUMN);
       } else {

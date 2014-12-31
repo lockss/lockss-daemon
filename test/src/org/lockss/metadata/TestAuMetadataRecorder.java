@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuMetadataRecorder.java,v 1.9 2014-10-13 22:21:28 fergaloy-sf Exp $
+ * $Id: TestAuMetadataRecorder.java,v 1.9.2.1 2014-12-31 21:25:14 fergaloy-sf Exp $
  */
 
 /*
@@ -37,6 +37,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.Cron;
@@ -49,6 +52,7 @@ import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
+import org.lockss.metadata.ArticleMetadataBuffer.ArticleMetadataInfo;
 import org.lockss.metadata.TestMetadataManager.MySubTreeArticleIteratorFactory;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArticleFiles;
@@ -148,6 +152,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
     runRecordUnknownPublisher3();
     runRecordUnknownPublisher4();
     runRecordNoJournalTitleNoISSNJournal();
+    runNormalizeMetadataTest();
   }
 
   ReindexingTask newReindexingTask(ArchivalUnit au,
@@ -191,8 +196,8 @@ public class TestAuMetadataRecorder extends LockssTestCase {
       // index with no publication titles to create unknown title entries 
       int nTitles = 1;
       int nArticles = 6;
-      ArticleMetadataBuffer metadata =
-          getJournalMetadata("Publisher", nTitles, nArticles, true, false);
+      ArticleMetadataBuffer metadata = getJournalMetadata("Publisher", nTitles,
+	  nArticles, true, false, null);
 
       ReindexingTask task = newReindexingTask(sau0, sau0.getPlugin()
                 .getArticleMetadataExtractor(MetadataTarget.OpenURL(), sau0));
@@ -219,8 +224,8 @@ public class TestAuMetadataRecorder extends LockssTestCase {
                    countAuMetadataItems(conn) - initialArticleCount);
       
       // now index the same AU, this time with a publication title
-      metadata = 
-          getJournalMetadata("Publisher", nTitles, nArticles, false, false);
+      metadata = getJournalMetadata("Publisher", nTitles, nArticles, false,
+	  false, null);
       
       task = newReindexingTask(sau0, sau0.getPlugin()
           .getArticleMetadataExtractor(MetadataTarget.OpenURL(), sau0));
@@ -250,9 +255,8 @@ public class TestAuMetadataRecorder extends LockssTestCase {
   }
 
   private ArticleMetadataBuffer getJournalMetadata(String publishername,
-      int publicationCount, int articleCount, 
-      boolean noJournalTitles, boolean noIssns)
-      throws IOException {
+      int publicationCount, int articleCount, boolean noJournalTitles,
+      boolean noIssns, Map<String, String> featuredUrls) throws IOException {
     ArticleMetadataBuffer result = new ArticleMetadataBuffer(getTempDir());
 
     for (int i = 1; i <= publicationCount; i++) {
@@ -278,6 +282,11 @@ public class TestAuMetadataRecorder extends LockssTestCase {
 	am.put(MetadataField.FIELD_AUTHOR, "Author,First" + i + j);
 	am.put(MetadataField.FIELD_AUTHOR, "Author,Second" + i + j);
 	am.put(MetadataField.FIELD_ACCESS_URL, "http://xyz.com/" + i + j);
+
+	if (featuredUrls != null) {
+	  am.putRaw(MetadataField.FIELD_FEATURED_URL_MAP.getKey(),
+	      featuredUrls);
+	}
 
 	result.add(am);
       }
@@ -610,8 +619,8 @@ public class TestAuMetadataRecorder extends LockssTestCase {
       ReindexingTask task = newReindexingTask(sau0, sau0.getPlugin()
 		.getArticleMetadataExtractor(MetadataTarget.OpenURL(), sau0));
 
-      ArticleMetadataBuffer metadata = 
-          getJournalMetadata(null, 1, 8, false, false);
+      ArticleMetadataBuffer metadata = getJournalMetadata(null, 1, 8, false,
+	  false, null);
 
       // Write the AU metadata to the database.
       new AuMetadataRecorder(task, metadataManager, sau0)
@@ -638,7 +647,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
 
       addJournalTypeAggregates(conn, publicationSeq, true, 2013, 1, 30, 20, 10);
 
-      metadata = getJournalMetadata("Publisher", 1, 8, false, false);
+      metadata = getJournalMetadata("Publisher", 1, 8, false, false, null);
 
       // Write the AU metadata to the database.
       new AuMetadataRecorder(task, metadataManager, sau0)
@@ -700,7 +709,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
 		.getArticleMetadataExtractor(MetadataTarget.OpenURL(), sau0));
 
       ArticleMetadataBuffer metadata =
-	  getJournalMetadata("Publisher", 1, 8, false, false);
+	  getJournalMetadata("Publisher", 1, 8, false, false, null);
 
       // Write the AU metadata to the database.
       new AuMetadataRecorder(task, metadataManager, sau0)
@@ -721,7 +730,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
       // Check that 0 archival unit problems exist.
       assertEquals(0, countAuProblems(conn) - initialProblemCount);
 
-      metadata = getJournalMetadata(null, 1, 8, false, false);
+      metadata = getJournalMetadata(null, 1, 8, false, false, null);
 
       // Write the AU metadata to the database.
       new AuMetadataRecorder(task, metadataManager, sau0)
@@ -782,7 +791,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
 		.getArticleMetadataExtractor(MetadataTarget.OpenURL(), sau0));
 
       ArticleMetadataBuffer metadata = 
-          getJournalMetadata(null, 1, 8, false, false);
+          getJournalMetadata(null, 1, 8, false, false, null);
 
       // Write the AU metadata to the database.
       new AuMetadataRecorder(task, metadataManager, sau0)
@@ -811,7 +820,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
 
       metadataManager.removeAu(conn, sau0.getAuId());
 
-      metadata = getJournalMetadata("Publisher", 1, 8, false, false);
+      metadata = getJournalMetadata("Publisher", 1, 8, false, false, null);
 
       // Write the AU metadata to the database.
       new AuMetadataRecorder(task, metadataManager, sau0)
@@ -873,7 +882,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
 		.getArticleMetadataExtractor(MetadataTarget.OpenURL(), sau0));
 
       ArticleMetadataBuffer metadata =
-	  getJournalMetadata("Publisher", 1, 8, false, false);
+	  getJournalMetadata("Publisher", 1, 8, false, false,  null);
 
       // Write the AU metadata to the database.
       new AuMetadataRecorder(task, metadataManager, sau0)
@@ -896,7 +905,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
 
       metadataManager.removeAu(conn, sau0.getAuId());
 
-      metadata = getJournalMetadata(null, 1, 8, false, false);
+      metadata = getJournalMetadata(null, 1, 8, false, false, null);
 
       // Write the AU metadata to the database.
       new AuMetadataRecorder(task, metadataManager, sau0)
@@ -954,7 +963,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
       int nTitles = 1;
       int nArticles = 6;
       ArticleMetadataBuffer metadata =
-        getJournalMetadata("Publisher", nTitles, nArticles, true, true);
+        getJournalMetadata("Publisher", nTitles, nArticles, true, true, null);
 
       ReindexingTask task = newReindexingTask(sau0, sau0.getPlugin()
 		.getArticleMetadataExtractor(MetadataTarget.OpenURL(), sau0));
@@ -1225,6 +1234,61 @@ public class TestAuMetadataRecorder extends LockssTestCase {
 	  resultSet.getBoolean(IS_PUBLISHER_INVOLVED_COLUMN));
     } finally {
       stmt.close();
+    }
+  }
+
+  private void runNormalizeMetadataTest() throws Exception {
+    // Set up the featured URL map.
+    String validFeatureUrl = "UrlForValidFeature";
+    String validFeature = "ValidFeature";
+    String tooLongFeatureUrl = "UrlForTooLongFeatureName";
+
+    StringBuilder sb = new StringBuilder("FeatureName");
+
+    for (int i = 0; i < MAX_FEATURE_COLUMN; i++) {
+      sb.append("1");
+    }
+
+    String tooLongFeature = sb.append("IsLongerThanMaximumLength").toString();
+
+    Map<String, String> featuredUrls = new HashMap<String, String>();
+    featuredUrls.put(validFeature, validFeatureUrl);
+    featuredUrls.put(tooLongFeature, tooLongFeatureUrl);
+
+    // The expected truncated feature name.
+    String truncatedFeature =
+	DbManager.truncateVarchar(tooLongFeature, MAX_FEATURE_COLUMN);
+    assertNotEquals(tooLongFeature, truncatedFeature);
+
+    // Generate the metadata.
+    ArticleMetadataBuffer metadata =
+	getJournalMetadata("Publisher", 1, 1, true, false, featuredUrls);
+
+    Iterator<ArticleMetadataInfo> mditr = metadata.iterator();
+
+    ReindexingTask task = newReindexingTask(sau0, sau0.getPlugin()
+	.getArticleMetadataExtractor(MetadataTarget.OpenURL(), sau0));
+
+    AuMetadataRecorder amr =
+	new AuMetadataRecorder(task, metadataManager, sau0);
+
+    // Loop through the metadata for each article.
+    while (mditr.hasNext()) {
+      // Normalize all the metadata fields.
+      ArticleMetadataInfo normalizedMdInfo =
+	  amr.normalizeMetadata(mditr.next());
+
+      for (String feature : normalizedMdInfo.featuredUrlMap.keySet()) {
+        String url = normalizedMdInfo.featuredUrlMap.get(feature).trim();
+
+        if (url.equals(validFeatureUrl)) {
+          assertEquals(validFeature, feature);
+        } else if (url.equals(tooLongFeatureUrl)) {
+          assertEquals(truncatedFeature, feature);
+        } else {
+          fail("Unexpected URL: " + url);
+        }
+      }
     }
   }
 
