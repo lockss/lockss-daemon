@@ -1,5 +1,5 @@
 /*
- * $Id: ELifeDrupalHttpResponseHandler.java,v 1.1 2014-06-07 02:32:17 etenbrink Exp $
+ * $Id: ELifeDrupalHttpResponseHandler.java,v 1.2 2014-12-31 00:07:26 etenbrink Exp $
  */
 
 /*
@@ -33,19 +33,22 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.highwire.elife;
 
 import org.lockss.plugin.*;
+import org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 
 
-public class ELifeDrupalHttpResponseHandler implements CacheResultHandler {
+public class ELifeDrupalHttpResponseHandler extends HighWireDrupalHttpResponseHandler {
   
   protected static Logger logger = Logger.getLogger(ELifeDrupalHttpResponseHandler.class);
   
+  @Override
   public void init(CacheResultMap crmap) {
     logger.warning("Unexpected call to init()");
-    throw new UnsupportedOperationException();
+    throw new UnsupportedOperationException("Unexpected call to ELifeDrupalHttpResponseHandler.init()");
   }
   
+  @Override
   public CacheException handleResult(ArchivalUnit au,
                                      String url,
                                      int responseCode) {
@@ -56,20 +59,20 @@ public class ELifeDrupalHttpResponseHandler implements CacheResultHandler {
         if (url.contains("lockss-manifest/")) {
           return new CacheException.RetrySameUrlException("500 Internal Server Error");
         }
-        else {
-          return new CacheException.NoRetryDeadLinkException("500 Internal Server Error (non-fatal)");
-        }
+        
+        return new NoFailRetryableNetworkException_3_60S("500 Internal Server Error (non-fatal)");
+        
       default:
-        logger.debug2("default");
-        throw new UnsupportedOperationException();
+        return super.handleResult(au, url, responseCode);
     }
   }
   
+  @Override
   public CacheException handleResult(ArchivalUnit au,
                                      String url,
                                      Exception ex) {
     logger.warning("Unexpected call to handleResult(): AU " + au.getName() + "; URL " + url, ex);
-    throw new UnsupportedOperationException();
+    throw new UnsupportedOperationException("Unexpected call to handleResult(): AU " + au.getName() + "; URL " + url, ex);
   }
   
 }
