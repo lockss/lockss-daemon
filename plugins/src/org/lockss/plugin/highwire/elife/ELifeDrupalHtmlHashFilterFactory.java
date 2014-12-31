@@ -1,5 +1,5 @@
 /*
- * $Id: ELifeDrupalHtmlHashFilterFactory.java,v 1.2 2014-09-11 02:46:41 etenbrink Exp $
+ * $Id: ELifeDrupalHtmlHashFilterFactory.java,v 1.3 2014-12-31 00:06:13 etenbrink Exp $
  */
 
 /*
@@ -32,94 +32,54 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.highwire.elife;
 
-import java.io.IOException;
 import java.io.InputStream;
-import java.io.Reader;
-import java.util.Vector;
 
-import org.htmlparser.Attribute;
-import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
-import org.htmlparser.Tag;
-import org.htmlparser.filters.*;
-import org.htmlparser.util.NodeList;
 import org.lockss.daemon.PluginException;
-import org.lockss.filter.FilterUtil;
-import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.FilterFactory;
+import org.lockss.plugin.highwire.HighWireDrupalHtmlFilterFactory;
 import org.lockss.util.Logger;
-import org.lockss.util.ReaderInputStream;
 
-public class ELifeDrupalHtmlHashFilterFactory implements FilterFactory {
+public class ELifeDrupalHtmlHashFilterFactory extends HighWireDrupalHtmlFilterFactory {
   
-  Logger log = Logger.getLogger(ELifeDrupalHtmlHashFilterFactory.class);
+  private static final Logger log = Logger.getLogger(ELifeDrupalHtmlHashFilterFactory.class);
   
+  @Override
+  public boolean doWSFiltering() {
+    return true;
+  }
+  @Override
+  public boolean doTagAttributeFiltering() {
+    return false;
+  }
+  @Override
+  public boolean doXformToText() {
+    return true;
+  }
+  
+  @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding)
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
-        // Publisher adding/updating meta tags
-        new TagNameFilter("head"),
-        // remove ALL comments
-        // HtmlNodeFilters.comment(),
-        // No content to compare in header/footer
-        new TagNameFilter("header"),
-        new TagNameFilter("footer"),
+        // Do not hash responsive header (from crawl filter)
+        HtmlNodeFilters.tagWithAttribute("div", "id", "region-responsive-header"),
+        // this replaces references filter as references should not change
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "elife-reflink-links-wrapper"),
+        // this was a source of over-crawl & can be simpler than (from crawl filter)
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-wrapper"),
+        // The next filter is not needed, we care about the correction for the hash
+        // HtmlNodeFilters.tagWithAttributeRegex("div", "class", "elife-article-corrections"),
+        
+        // No relevant content in these headers
         HtmlNodeFilters.tagWithAttribute("div", "id", "zone-header-wrapper"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "page_header"),
         HtmlNodeFilters.tagWithAttribute("ul", "class", "elife-article-categories"),
-        // citation reference extras, right sidebar can change
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "elife-reflink-links-wrapper"),
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-wrapper"),
-        // most scripts are in head, however, if any are in the body they are filtered
-        new TagNameFilter("script"),
-        new TagNameFilter("noscript"),
     };
     
-    // Transform to remove attributes from select tags
-    // some attributes changed over time, either arbitrarily or sequentially
-    HtmlTransform xform = new HtmlTransform() {
-      @Override
-      public NodeList transform(NodeList nodeList) throws IOException {
-        NodeList nl = new NodeList();
-        for (int sx = 0; sx < nodeList.size(); sx++) {
-          Node snode = nodeList.elementAt(sx);
-          if (snode instanceof Tag) {
-            Tag tag = (Tag) snode;
-            if (tag.isEmptyXmlTag()) {
-              continue;
-            }
-            String tagName = tag.getTagName().toLowerCase();
-            NodeList knl = tag.getChildren();
-            if (knl != null) {
-              tag.setChildren(transform(knl));
-            }
-            if ("div".equals(tagName)) {
-              Attribute a = tag.getAttributeEx(tagName);
-              Vector<Attribute> v = new Vector<Attribute>();
-              v.add(a);
-              tag.setAttributesEx(v);
-            }
-            nl.add(tag);
-          }
-          else {
-            nl.add(snode);
-          }
-        }
-        return nl;
-      }
-    };
-    
-    InputStream filtered =  new HtmlFilterInputStream(in, encoding,
-        new HtmlCompoundTransform(
-            HtmlNodeFilterTransform.exclude(new OrFilter(filters)), xform));
-    
-    Reader filteredReader = FilterUtil.getReader(filtered, encoding);
-    return new ReaderInputStream(new WhiteSpaceFilter(filteredReader));
-    
+    return super.createFilteredInputStream(au, in, encoding, filters);
   }
   
 }

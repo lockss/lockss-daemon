@@ -1,5 +1,5 @@
 /*
- * $Id: ELifeDrupalHtmlCrawlFilterFactory.java,v 1.2 2014-10-22 16:16:33 etenbrink Exp $
+ * $Id: ELifeDrupalHtmlCrawlFilterFactory.java,v 1.3 2014-12-31 00:05:44 etenbrink Exp $
  */
 
 /*
@@ -35,12 +35,12 @@ package org.lockss.plugin.highwire.elife;
 import java.io.InputStream;
 
 import org.htmlparser.NodeFilter;
-import org.htmlparser.filters.*;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.highwire.HighWireDrupalHtmlCrawlFilterFactory;
 
-public class ELifeDrupalHtmlCrawlFilterFactory implements FilterFactory {
+public class ELifeDrupalHtmlCrawlFilterFactory extends HighWireDrupalHtmlCrawlFilterFactory {
 
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
@@ -48,16 +48,18 @@ public class ELifeDrupalHtmlCrawlFilterFactory implements FilterFactory {
                                                String encoding)
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
-        // Do not crawl responsive header or reflink-links-wrapper as links not wanted here
+        // Do not crawl responsive header or references as links not wanted here
         HtmlNodeFilters.tagWithAttribute("div", "id", "region-responsive-header"),
-        HtmlNodeFilters.tagWithAttribute("div", "class", "elife-reflink-links-wrapper"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "references"),
         // The following sections were a source of over-crawl (http://elifesciences.org/content/1/e00067)
-        HtmlNodeFilters.tagWithAttribute("div", "id", "related-content"),
+        HtmlNodeFilters.allExceptSubtree(
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-wrapper"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pane-elife-article-toolbox")),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "elife-article-corrections"),
     };
     
-    InputStream filtered = new HtmlFilterInputStream(in, encoding,
-        HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    InputStream filtered = super.createFilteredInputStream(au, in, encoding, filters);
+    
     return filtered;
   }
 

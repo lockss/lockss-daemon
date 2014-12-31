@@ -1,5 +1,5 @@
 /*
- * $Id: ELifeDrupalArticleIteratorFactory.java,v 1.2 2014-10-22 16:13:28 etenbrink Exp $
+ * $Id: ELifeDrupalArticleIteratorFactory.java,v 1.3 2014-12-31 00:05:10 etenbrink Exp $
  */
 
 /*
@@ -45,14 +45,13 @@ public class ELifeDrupalArticleIteratorFactory
     implements ArticleIteratorFactory,
                ArticleMetadataExtractorFactory {
   
-  protected static Logger log =
-      Logger.getLogger(ELifeDrupalArticleIteratorFactory.class);
+  private static final Logger log = Logger.getLogger(ELifeDrupalArticleIteratorFactory.class);
   
   protected static final String ROOT_TEMPLATE =
     "\"%scontent/\", base_url";
   
   protected static final String PATTERN_TEMPLATE =
-    "\"^%scontent/(?:[^/]+/)?[0-9]+/e(?:[^./?&]+)$\", " + "base_url";
+    "\"^%scontent/(elife/)?[0-9]+/e(?:[^./?&]+)$\", base_url";
   // various aspects of an article
   // http://elifesciences.org/content/1/e00311
   // http://elifesciences.org/content/elife/1/e00311.full.pdf
@@ -73,6 +72,7 @@ public class ELifeDrupalArticleIteratorFactory
   protected static final String FIGURES_REPLACEMENT = "/$1/$2/article-data";
   
   
+  @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
                                                       MetadataTarget target)
       throws PluginException {
@@ -109,6 +109,7 @@ public class ELifeDrupalArticleIteratorFactory
     return builder.getSubTreeArticleIterator();
   }
   
+  @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
       throws PluginException {
     return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
