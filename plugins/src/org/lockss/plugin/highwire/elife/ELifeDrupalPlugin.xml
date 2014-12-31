@@ -22,22 +22,22 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>13</string>
+    <string>14</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Substance</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Poll</string>
-        <string>7</string>
+        <string>8</string>
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
     </map>
   </entry>
@@ -46,25 +46,26 @@
     <string>"HighWire eLife Drupal Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
+    <string>required_daemon_version</string>
+    <string>1.67.0</string>
+  </entry>
+  <entry>
     <string>au_start_url</string>
     <string>"%slockss-manifest/elife_%s.html", base_url, volume_name</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <!-- no gifs from other volumes
-      <string>2,"^%scontent/(?!([^/]+/)?%s)[^?]*[.]gif", base_url, volume_name</string>
+      <!-- all content from CDN -->
+      <string>1,"^https?://(.+[.]cloudfront[.]net|cdn.mathjax.org)/."</string>
+      <!-- all fonts, images, resources, css, js, etc. -->
+      <string>1,"^https?://%s/[^?]*[.](?:bmp|eot|gif|ico|jpe?g|png|svg|tif?f|ttf|woff|(css|js)(?:[?].*)?)$", base_url_host</string>
       <string>1,"^https?://%s[^?]*/highwire/jcore", base_url_host</string>
-       -->
-      <!-- permission page & all resources on any CDN (cloudfront host) -->
-      <string>1,"^https?://[^.]+[.]cloudfront[.]net/(lockss[.]htm|[^?]+[.](bmp|gif|ico|jpe?g|png|tif?f|css|js))$"</string>
-      <!-- all images, resources, css, js, etc. -->
-      <string>1,"^https?://%s/[^?]*[.](bmp|gif|ico|jpe?g|png|tif?f|(css|js)([?].*)?)$", base_url_host</string>
       <!-- Do not crawl unless from base url -->
       <string>4,"^%s", base_url</string>
-      <string>1,"^%s(content/[^/]+/e[^/?]+$|highwire/(filestream|markup)/|elife/download-video/)", base_url</string>
+      <string>1,"^%s(content/[^/]+/e[^/?]+$|highwire/(filestream|markup)/|elife/download-)", base_url</string>
       <string>1,"^%scontent(/elife)?/[^/]+/e[^/?]+([.]full[.]pdf$|/article-(data|info)|/.*/embed/)", base_url</string>
-      <string>1,"^%shighwire/citation/[^/]+/ris$", base_url</string>
+      <string>1,"^%shighwire/citation/[^/]+/(bookends|easybib|mendeley|papers|reference-manager|refworks|ris|zotero)$", base_url</string>
     </list>
   </entry>
   <entry>
@@ -86,9 +87,9 @@
     <string>org.lockss.plugin.highwire.elife.ELifeDrupalHtmlCrawlFilterFactory</string>
   </entry>
   <entry>
-    <string>plugin_cache_result_list</string>
-    <list>
-      <string>500=org.lockss.plugin.highwire.elife.ELifeDrupalHttpResponseHandler</string>
-    </list>
+    <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
+         org.lockss.crawler.allowedPluginPermittedHosts= -->
+    <string>au_permitted_host_pattern</string>
+    <string>"(.*[.]cloudfront[.]net|cdn.mathjax.org)"</string>
   </entry>
 </map>
