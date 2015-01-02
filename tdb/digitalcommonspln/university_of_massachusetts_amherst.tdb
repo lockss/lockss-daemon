@@ -1082,10 +1082,10 @@
       param[collection] = dq
       implicit < status ; year ; name ; param[collection_heading] >  
 
-      au < testing ; 2006 ; University of Massachusetts Amherst Digital Quadrangle Series 2006 ; 2006 >
-      au < testing ; 2007 ; University of Massachusetts Amherst Digital Quadrangle Series 2007 ; 2007 >
-      au < testing ; 2008 ; University of Massachusetts Amherst Digital Quadrangle Series 2008 ; 2008 >
-      au < testing ; 2009 ; University of Massachusetts Amherst Digital Quadrangle Series 2009 (Part 1/2) ; 2009 >
+      au < ready ; 2006 ; University of Massachusetts Amherst Digital Quadrangle Series 2006 ; 2006 >
+      au < ready ; 2007 ; University of Massachusetts Amherst Digital Quadrangle Series 2007 ; 2007 >
+      au < ready ; 2008 ; University of Massachusetts Amherst Digital Quadrangle Series 2008 ; 2008 >
+      au < ready ; 2009 ; University of Massachusetts Amherst Digital Quadrangle Series 2009 (Part 1/2) ; 2009 >
 
     }
     
@@ -1167,40 +1167,38 @@
     param[base_url] = http://scholarworks.umass.edu/
     param[collection_type] = ir_series
     param[collection] = econ_faculty_pubs
-    implicit < status ; year ; name ; param[collection_heading] >  
+    implicit < status ; year ; name ; param[collection_heading] ; attr[au_coverage_depth] >  
 
-    attr[au_coverage_depth] = abstracts
-
-    au < testing ; 1981 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 1981 [abstracts only] ; 1981 >
-    au < testing ; 1982 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 1982 [abstracts only] ; 1982 >
-    au < testing ; 1983 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 1983 [abstracts only] ; 1983 >
-    au < testing ; 1984 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 1984 [abstracts only] ; 1984 >
-    au < testing ; 1985 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 1985 [abstracts only] ; 1985 >
-    au < testing ; 1986 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 1986 [abstracts only] ; 1986 >
-    au < testing ; 1987 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 1987 [abstracts only] ; 1987 >
-    au < testing ; 1988 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 1988 [abstracts only] ; 1988 >
-    au < testing ; 1989 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 1989 [abstracts only] ; 1989 >
-    au < testing ; 1990 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 1990 [abstracts only] ; 1990 >
-    au < testing ; 1991 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 1991 [abstracts only] ; 1991 >
-    au < testing ; 1992 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 1992 [abstracts only] ; 1992 >
-    au < testing ; 1993 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 1993 [abstracts only] ; 1993 >
-    au < testing ; 1994 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 1994 [abstracts only] ; 1994 >
-    au < testing ; 1995 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 1995 [abstracts only] ; 1995 >
-    au < testing ; 1996 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 1996 [abstracts only] ; 1996 >
-    au < testing ; 1997 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 1997 [abstracts only] ; 1997 >
-    au < testing ; 1998 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 1998 [abstracts only] ; 1998 >
-    au < testing ; 1999 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 1999 [abstracts only] ; 1999 >
-    au < testing ; 2000 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 2000 [abstracts only] ; 2000 >
-    au < testing ; 2001 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 2001 [abstracts only] ; 2001 >
-    au < testing ; 2002 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 2002 [abstracts only] ; 2002 >
-    au < testing ; 2003 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 2003 [abstracts only] ; 2003 >
-    au < testing ; 2004 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 2004 [abstracts only] ; 2004 >
-    au < testing ; 2005 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 2005 [abstracts only] ; 2005 >
-    au < testing ; 2006 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 2006 [abstracts only] ; 2006 >
-    au < testing ; 2007 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 2007 [abstracts only] ; 2007 >
-    au < testing ; 2008 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 2008 [abstracts only] ; 2008 >
-    au < testing ; 2009 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 2009 [abstracts only] ; 2009 >
-    au < testing ; 2010 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 2010 [abstracts only] ; 2010 >
+    au < ready ; 1981 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 1981 [abstracts only] ; 1981 ; abstracts >
+    au < ready ; 1982 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 1982 [abstracts only] ; 1982 ; abstracts >
+    au < ready ; 1983 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 1983 [abstracts only] ; 1983 ; abstracts >
+    au < ready ; 1984 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 1984 [abstracts only] ; 1984 ; abstracts >
+    au < ready ; 1985 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 1985 [abstracts only] ; 1985 ; abstracts >
+    au < ready ; 1986 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 1986 [abstracts only] ; 1986 ; abstracts >
+    au < ready ; 1987 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 1987 [abstracts only] ; 1987 ; abstracts >
+    au < ready ; 1988 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 1988 [abstracts only] ; 1988 ; abstracts >
+    au < ready ; 1989 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 1989 [abstracts only] ; 1989 ; abstracts >
+    au < ready ; 1990 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 1990 [abstracts only] ; 1990 ; abstracts >
+    au < ready ; 1991 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 1991 [abstracts only] ; 1991 ; abstracts >
+    au < ready ; 1992 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 1992 [abstracts only] ; 1992 ; abstracts >
+    au < ready ; 1993 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 1993 [abstracts only] ; 1993 ; abstracts >
+    au < ready ; 1994 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 1994 [abstracts only] ; 1994 ; abstracts >
+    au < ready ; 1995 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 1995 [abstracts only] ; 1995 ; abstracts >
+    au < ready ; 1996 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 1996 [abstracts only] ; 1996 ; abstracts >
+    au < ready ; 1997 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 1997 [abstracts only] ; 1997 ; abstracts >
+    au < ready ; 1998 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 1998 [abstracts only] ; 1998 ; abstracts >
+    au < ready ; 1999 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 1999 [abstracts only] ; 1999 ; abstracts >
+    au < ready ; 2000 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 2000 [abstracts only] ; 2000 ; abstracts >
+    au < ready ; 2001 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 2001 [abstracts only] ; 2001 ; abstracts >
+    au < ready ; 2002 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 2002 [abstracts only] ; 2002 ; abstracts >
+    au < ready ; 2003 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 2003 [abstracts only] ; 2003 ; abstracts >
+    au < ready ; 2004 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 2004 [abstracts only] ; 2004 ; abstracts >
+    au < ready ; 2005 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 2005 [abstracts only] ; 2005 ; abstracts >
+    au < ready ; 2006 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 2006 [abstracts only] ; 2006 ; abstracts >
+    au < ready ; 2007 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 2007 ; 2007 ; fulltext >
+    au < ready ; 2008 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 2008 [abstracts only] ; 2008 ; abstracts >
+    au < ready ; 2009 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 2009 [abstracts only] ; 2009 ; abstracts >
+    au < ready ; 2010 ; University of Massachusetts Amherst Economics Department Faculty Publications Series 2010 [abstracts only] ; 2010 ; abstracts >
 
   }
 
@@ -1230,57 +1228,57 @@
     param[base_url] = http://scholarworks.umass.edu/
     param[collection_type] = ir_series
     param[collection] = emeritus_sw
-    implicit < status ; year ; name ; param[collection_heading] >  
+    implicit < status ; year ; name ; param[collection_heading] ; attr[au_coverage_depth] >
 
-    au < testing ; 1950 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1950 ; 1950 >
-    au < testing ; 1951 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1951 ; 1951 >
-    au < testing ; 1952 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1952 ; 1952 >
-    au < testing ; 1956 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1956 ; 1956 >
-    au < testing ; 1958 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1958 ; 1958 >
-    au < testing ; 1960 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1960 ; 1960 >
-    au < testing ; 1961 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1961 ; 1961 >
-    au < testing ; 1964 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1964 ; 1964 >
-    au < testing ; 1965 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1965 ; 1965 >
-    au < testing ; 1966 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1966 ; 1966 >
-    au < testing ; 1967 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1967 ; 1967 >
-    au < testing ; 1969 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1969 ; 1969 >
-    au < testing ; 1970 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1970 ; 1970 >
-    au < testing ; 1972 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1972 ; 1972 >
-    au < testing ; 1975 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1975 ; 1975 >
-    au < testing ; 1977 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1977 ; 1977 >
-    au < testing ; 1978 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1978 ; 1978 >
-    au < testing ; 1979 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1979 ; 1979 >
-    au < testing ; 1980 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1980 ; 1980 >
-    au < testing ; 1981 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1981 ; 1981 >
-    au < testing ; 1982 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1982 ; 1982 >
-    au < testing ; 1983 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1983 ; 1983 >
-    au < testing ; 1984 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1984 ; 1984 >
-    au < testing ; 1985 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1985 ; 1985 >
-    au < testing ; 1986 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1986 ; 1986 >
-    au < testing ; 1987 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1987 ; 1987 >
-    au < testing ; 1988 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1988 ; 1988 >
-    au < testing ; 1989 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1989 ; 1989 >
-    au < testing ; 1990 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1990 ; 1990 >
-    au < testing ; 1991 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1991 ; 1991 >
-    au < testing ; 1992 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1992 ; 1992 >
-    au < testing ; 1993 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1993 ; 1993 >
-    au < testing ; 1994 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1994 ; 1994 >
-    au < testing ; 1995 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1995 ; 1995 >
-    au < testing ; 1996 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1996 ; 1996 >
-    au < testing ; 1997 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1997 ; 1997 >
-    au < testing ; 1998 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1998 ; 1998 >
-    au < testing ; 1999 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1999 ; 1999 >
-    au < testing ; 2000 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 2000 ; 2000 >
-    au < testing ; 2001 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 2001 ; 2001 >
-    au < testing ; 2002 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 2002 ; 2002 >
-    au < testing ; 2003 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 2003 ; 2003 >
-    au < testing ; 2004 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 2004 ; 2004 >
-    au < testing ; 2005 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 2005 ; 2005 >
-    au < testing ; 2006 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 2006 ; 2006 >
-    au < testing ; 2007 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 2007 ; 2007 >
-    au < testing ; 2008 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 2008 ; 2008 >
-    au < testing ; 2009 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 2009 ; 2009 >
-    au < testing ; 2010 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 2010 ; 2010 >
+    au < ready ; 1950 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1950 ; 1950 ; fulltext >
+    au < ready ; 1951 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1951 ; 1951 ; fulltext >
+    au < ready ; 1952 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1952 [abstracts only] ; 1952 ; abstracts >
+    au < ready ; 1956 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1956 ; 1956 ; fulltext >
+    au < ready ; 1958 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1958 ; 1958 ; fulltext >
+    au < ready ; 1960 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1960 ; 1960 ; fulltext >
+    au < ready ; 1961 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1961 ; 1961 ; fulltext >
+    au < ready ; 1964 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1964 [abstracts only] ; 1964 ; abstracts >
+    au < ready ; 1965 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1965 [abstracts only] ; 1965 ; abstracts >
+    au < ready ; 1966 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1966 ; 1966 ; fulltext >
+    au < ready ; 1967 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1967 ; 1967 ; fulltext >
+    au < ready ; 1969 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1969 ; 1969 ; fulltext >
+    au < ready ; 1970 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1970 [abstracts only] ; 1970 ; abstracts >
+    au < ready ; 1972 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1972 [abstracts only] ; 1972 ; abstracts >
+    au < ready ; 1975 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1975 [abstracts only] ; 1975 ; abstracts >
+    au < ready ; 1977 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1977 ; 1977 ; fulltext >
+    au < ready ; 1978 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1978 ; 1978 ; fulltext >
+    au < ready ; 1979 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1979 ; 1979 ; fulltext >
+    au < ready ; 1980 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1980 ; 1980 ; fulltext >
+    au < ready ; 1981 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1981 ; 1981 ; fulltext >
+    au < ready ; 1982 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1982 ; 1982 ; fulltext >
+    au < ready ; 1983 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1983 ; 1983 ; fulltext >
+    au < ready ; 1984 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1984 ; 1984 ; fulltext >
+    au < ready ; 1985 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1985 ; 1985 ; fulltext >
+    au < ready ; 1986 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1986 ; 1986 ; fulltext >
+    au < ready ; 1987 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1987 ; 1987 ; fulltext >
+    au < ready ; 1988 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1988 ; 1988 ; fulltext >
+    au < ready ; 1989 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1989 ; 1989 ; fulltext >
+    au < ready ; 1990 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1990 ; 1990 ; fulltext >
+    au < ready ; 1991 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1991 ; 1991 ; fulltext >
+    au < ready ; 1992 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1992 ; 1992 ; fulltext >
+    au < ready ; 1993 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1993 ; 1993 ; fulltext >
+    au < ready ; 1994 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1994 ; 1994 ; fulltext >
+    au < ready ; 1995 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1995 ; 1995 ; fulltext >
+    au < ready ; 1996 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1996 ; 1996 ; fulltext >
+    au < ready ; 1997 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1997 ; 1997 ; fulltext >
+    au < ready ; 1998 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1998 ; 1998 ; fulltext >
+    au < ready ; 1999 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 1999 ; 1999 ; fulltext >
+    au < ready ; 2000 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 2000 ; 2000 ; fulltext >
+    au < ready ; 2001 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 2001 ; 2001 ; fulltext >
+    au < ready ; 2002 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 2002 ; 2002 ; fulltext >
+    au < ready ; 2003 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 2003 ; 2003 ; fulltext >
+    au < ready ; 2004 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 2004 ; 2004 ; fulltext >
+    au < ready ; 2005 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 2005 ; 2005 ; fulltext >
+    au < ready ; 2006 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 2006 [abstracts only] ; 2006 ; abstracts >
+    au < ready ; 2007 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 2007 ; 2007 ; fulltext >
+    au < ready ; 2008 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 2008 ; 2008 ; fulltext >
+    au < ready ; 2009 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 2009 ; 2009 ; fulltext >
+    au < ready ; 2010 ; University of Massachusetts Amherst Emeritus Faculty Author Gallery 2010 ; 2010 ; fulltext >
 
   }
 
@@ -1295,7 +1293,7 @@
     param[collection] = energy_21_century
     implicit < status ; year ; name ; param[collection_theme] >  
 
-    au < testing ; 2005 ; University of Massachusetts Amherst Energy for the 21st Century Symposium 2005 ; 2005 >
+    au < ready ; 2005 ; University of Massachusetts Amherst Energy for the 21st Century Symposium 2005 ; 2005 >
 
   }
 
@@ -1309,19 +1307,19 @@
     param[base_url] = http://scholarworks.umass.edu/
     param[collection_type] = ir_series
     param[collection] = eng_faculty_pubs
-    implicit < status ; year ; name ; param[collection_heading] >
+    implicit < status ; year ; name ; param[collection_heading] ; attr[au_coverage_depth] >
 
-    au < testing ; 1993 ; University of Massachusetts Amherst English Department Faculty Publication Series 1993 ; 1993 >
-    au < testing ; 1994 ; University of Massachusetts Amherst English Department Faculty Publication Series 1994 ; 1994 >
-    au < testing ; 2002 ; University of Massachusetts Amherst English Department Faculty Publication Series 2002 ; 2002 >
-    au < testing ; 2003 ; University of Massachusetts Amherst English Department Faculty Publication Series 2003 ; 2003 >
-    au < testing ; 2006 ; University of Massachusetts Amherst English Department Faculty Publication Series 2006 ; 2006 >
-    au < testing ; 2007 ; University of Massachusetts Amherst English Department Faculty Publication Series 2007 ; 2007 >
-    au < testing ; 2008 ; University of Massachusetts Amherst English Department Faculty Publication Series 2008 ; 2008 >
-    au < testing ; 2009 ; University of Massachusetts Amherst English Department Faculty Publication Series 2009 ; 2009 >
-    au < testing ; 2010 ; University of Massachusetts Amherst English Department Faculty Publication Series 2010 ; 2010 >
-    au < testing ; 2011 ; University of Massachusetts Amherst English Department Faculty Publication Series 2011 ; 2011 >
-    au < testing ; 2013 ; University of Massachusetts Amherst English Department Faculty Publication Series 2013 ; 2013 >
+    au < ready ; 1993 ; University of Massachusetts Amherst English Department Faculty Publication Series 1993 ; 1993 ; fulltext >
+    au < ready ; 1994 ; University of Massachusetts Amherst English Department Faculty Publication Series 1994 ; 1994 ; fulltext >
+    au < ready ; 2002 ; University of Massachusetts Amherst English Department Faculty Publication Series 2002 ; 2002 ; fulltext >
+    au < ready ; 2003 ; University of Massachusetts Amherst English Department Faculty Publication Series 2003 ; 2003 ; fulltext >
+    au < ready ; 2006 ; University of Massachusetts Amherst English Department Faculty Publication Series 2006 ; 2006 ; fulltext >
+    au < ready ; 2007 ; University of Massachusetts Amherst English Department Faculty Publication Series 2007 ; 2007 ; fulltext >
+    au < ready ; 2008 ; University of Massachusetts Amherst English Department Faculty Publication Series 2008 ; 2008 ; fulltext >
+    au < ready ; 2009 ; University of Massachusetts Amherst English Department Faculty Publication Series 2009 ; 2009 ; fulltext >
+    au < ready ; 2010 ; University of Massachusetts Amherst English Department Faculty Publication Series 2010 [abstracts only] ; 2010 ; abstracts >
+    au < ready ; 2011 ; University of Massachusetts Amherst English Department Faculty Publication Series 2011 ; 2011 ; fulltext >
+    au < ready ; 2013 ; University of Massachusetts Amherst English Department Faculty Publication Series 2013 ; 2013 ; fulltext >
 
   }
 
@@ -1366,7 +1364,7 @@
     param[collection] = eco_datasets
     implicit < status ; year ; name ; param[collection_heading] >  
 
-    au < testing ; 2014 ; University of Massachusetts Amherst Environmental Conservation Datasets 2014 ; 2014 >
+    au < ready ; 2014 ; University of Massachusetts Amherst Environmental Conservation Datasets 2014 ; 2014 >
 
   }
 
@@ -1382,7 +1380,7 @@
     param[collection] = eco_ed_materials
     implicit < status ; year ; name ; param[collection_heading] >  
 
-    au < testing ; 2011 ; University of Massachusetts Amherst Environmental Conservation Educational Materials 2011 ; 2011 >
+    au < ready ; 2011 ; University of Massachusetts Amherst Environmental Conservation Educational Materials 2011 ; 2011 >
 
   }
 
@@ -1398,7 +1396,7 @@
     param[collection] = erulemaking
     implicit < status ; name ; param[collection_heading] >
 
-    au < testing ; University of Massachusetts Amherst eRulemaking Research Group: Research, Creative or Professional Activities ; research >
+    au < ready ; University of Massachusetts Amherst eRulemaking Research Group: Research, Creative or Professional Activities ; research >
 
   }
 
@@ -1413,7 +1411,7 @@
     param[collection] = ethics_day
     implicit < status ; year ; name ; param[collection_theme] >  
 
-    au < testing ; 2010 ; University of Massachusetts Amherst Ethics Day 2010 ; 2010 >
+    au < ready ; 2010 ; University of Massachusetts Amherst Ethics Day 2010 ; 2010 >
 
   }
 
@@ -1429,18 +1427,18 @@
     param[collection] = esence
     implicit < status ; year ; name ; param[collection_heading] >
 
-    au < testing ; 1996 ; University of Massachusetts Amherst Ethics in Science and Engineering National Clearinghouse 1996 ; 1996 >
-    au < testing ; 1998 ; University of Massachusetts Amherst Ethics in Science and Engineering National Clearinghouse 1998 ; 1998 >
-    au < testing ; 1999 ; University of Massachusetts Amherst Ethics in Science and Engineering National Clearinghouse 1999 ; 1999 >
-    au < testing ; 2000 ; University of Massachusetts Amherst Ethics in Science and Engineering National Clearinghouse 2000 ; 2000 >
-    au < testing ; 2001 ; University of Massachusetts Amherst Ethics in Science and Engineering National Clearinghouse 2001 ; 2001 >
-    au < testing ; 2002 ; University of Massachusetts Amherst Ethics in Science and Engineering National Clearinghouse 2002 ; 2002 >
-    au < testing ; 2003 ; University of Massachusetts Amherst Ethics in Science and Engineering National Clearinghouse 2003 ; 2003 >
-    au < testing ; 2006 ; University of Massachusetts Amherst Ethics in Science and Engineering National Clearinghouse 2006 ; 2006 >
-    au < testing ; 2007 ; University of Massachusetts Amherst Ethics in Science and Engineering National Clearinghouse 2007 ; 2007 >
-    au < testing ; 2008 ; University of Massachusetts Amherst Ethics in Science and Engineering National Clearinghouse 2008 ; 2008 >
-    au < testing ; 2009 ; University of Massachusetts Amherst Ethics in Science and Engineering National Clearinghouse 2009 ; 2009 >
-    au < testing ; 2010 ; University of Massachusetts Amherst Ethics in Science and Engineering National Clearinghouse 2010 ; 2010 >
+    au < ready ; 1996 ; University of Massachusetts Amherst Ethics in Science and Engineering National Clearinghouse 1996 ; 1996 >
+    au < ready ; 1998 ; University of Massachusetts Amherst Ethics in Science and Engineering National Clearinghouse 1998 ; 1998 >
+    au < ready ; 1999 ; University of Massachusetts Amherst Ethics in Science and Engineering National Clearinghouse 1999 ; 1999 >
+    au < ready ; 2000 ; University of Massachusetts Amherst Ethics in Science and Engineering National Clearinghouse 2000 ; 2000 >
+    au < ready ; 2001 ; University of Massachusetts Amherst Ethics in Science and Engineering National Clearinghouse 2001 ; 2001 >
+    au < ready ; 2002 ; University of Massachusetts Amherst Ethics in Science and Engineering National Clearinghouse 2002 ; 2002 >
+    au < ready ; 2003 ; University of Massachusetts Amherst Ethics in Science and Engineering National Clearinghouse 2003 ; 2003 >
+    au < ready ; 2006 ; University of Massachusetts Amherst Ethics in Science and Engineering National Clearinghouse 2006 ; 2006 >
+    au < ready ; 2007 ; University of Massachusetts Amherst Ethics in Science and Engineering National Clearinghouse 2007 ; 2007 >
+    au < ready ; 2008 ; University of Massachusetts Amherst Ethics in Science and Engineering National Clearinghouse 2008 ; 2008 >
+    au < ready ; 2009 ; University of Massachusetts Amherst Ethics in Science and Engineering National Clearinghouse 2009 ; 2009 >
+    au < ready ; 2010 ; University of Massachusetts Amherst Ethics in Science and Engineering National Clearinghouse 2010 ; 2010 >
 
   }
 
@@ -1488,8 +1486,8 @@
     param[collection] = efsp_field_rpts
     implicit < status ; year ; name ; param[collection_heading] >  
 
-    au < testing ; 2008 ; University of Massachusetts Amherst Final Reports of EFS Student Participants 2008 ; 2008 >
-    au < testing ; 2009 ; University of Massachusetts Amherst Final Reports of EFS Student Participants 2009 ; 2009 >
+    au < ready ; 2008 ; University of Massachusetts Amherst Final Reports of EFS Student Participants 2008 ; 2008 >
+    au < ready ; 2009 ; University of Massachusetts Amherst Final Reports of EFS Student Participants 2009 ; 2009 >
 
   }
 
@@ -1507,40 +1505,40 @@
 
     attr[au_coverage_depth] = abstracts
 
-    au < testing ; 1898 ; University of Massachusetts Amherst Fish Passage Book Chapters 1898 [abstracts only] ; 1898 >
-    au < testing ; 1942 ; University of Massachusetts Amherst Fish Passage Book Chapters 1942 [abstracts only] ; 1942 >
-    au < testing ; 1966 ; University of Massachusetts Amherst Fish Passage Book Chapters 1966 [abstracts only] ; 1966 >
-    au < testing ; 1971 ; University of Massachusetts Amherst Fish Passage Book Chapters 1971 [abstracts only] ; 1971 >
-    au < testing ; 1973 ; University of Massachusetts Amherst Fish Passage Book Chapters 1973 [abstracts only] ; 1973 >
-    au < testing ; 1977 ; University of Massachusetts Amherst Fish Passage Book Chapters 1977 [abstracts only] ; 1977 >
-    au < testing ; 1978 ; University of Massachusetts Amherst Fish Passage Book Chapters 1978 [abstracts only] ; 1978 >
-    au < testing ; 1979 ; University of Massachusetts Amherst Fish Passage Book Chapters 1979 [abstracts only] ; 1979 >
-    au < testing ; 1980 ; University of Massachusetts Amherst Fish Passage Book Chapters 1980 [abstracts only] ; 1980 >
-    au < testing ; 1981 ; University of Massachusetts Amherst Fish Passage Book Chapters 1981 [abstracts only] ; 1981 >
-    au < testing ; 1982 ; University of Massachusetts Amherst Fish Passage Book Chapters 1982 [abstracts only] ; 1982 >
-    au < testing ; 1984 ; University of Massachusetts Amherst Fish Passage Book Chapters 1984 [abstracts only] ; 1984 >
-    au < testing ; 1986 ; University of Massachusetts Amherst Fish Passage Book Chapters 1986 [abstracts only] ; 1986 >
-    au < testing ; 1987 ; University of Massachusetts Amherst Fish Passage Book Chapters 1987 [abstracts only] ; 1987 >
-    au < testing ; 1988 ; University of Massachusetts Amherst Fish Passage Book Chapters 1988 [abstracts only] ; 1988 >
-    au < testing ; 1989 ; University of Massachusetts Amherst Fish Passage Book Chapters 1989 [abstracts only] ; 1989 >
-    au < testing ; 1992 ; University of Massachusetts Amherst Fish Passage Book Chapters 1992 [abstracts only] ; 1992 >
-    au < testing ; 1994 ; University of Massachusetts Amherst Fish Passage Book Chapters 1994 [abstracts only] ; 1994 >
-    au < testing ; 1996 ; University of Massachusetts Amherst Fish Passage Book Chapters 1996 [abstracts only] ; 1996 >
-    au < testing ; 1997 ; University of Massachusetts Amherst Fish Passage Book Chapters 1997 [abstracts only] ; 1997 >
-    au < testing ; 1998 ; University of Massachusetts Amherst Fish Passage Book Chapters 1998 [abstracts only] ; 1998 >
-    au < testing ; 1999 ; University of Massachusetts Amherst Fish Passage Book Chapters 1999 [abstracts only] ; 1999 >
-    au < testing ; 2000 ; University of Massachusetts Amherst Fish Passage Book Chapters 2000 [abstracts only] ; 2000 >
-    au < testing ; 2001 ; University of Massachusetts Amherst Fish Passage Book Chapters 2001 [abstracts only] ; 2001 >
-    au < testing ; 2002 ; University of Massachusetts Amherst Fish Passage Book Chapters 2002 [abstracts only] ; 2002 >
-    au < testing ; 2003 ; University of Massachusetts Amherst Fish Passage Book Chapters 2003 [abstracts only] ; 2003 >
-    au < testing ; 2004 ; University of Massachusetts Amherst Fish Passage Book Chapters 2004 [abstracts only] ; 2004 >
-    au < testing ; 2005 ; University of Massachusetts Amherst Fish Passage Book Chapters 2005 [abstracts only] ; 2005 >
-    au < testing ; 2006 ; University of Massachusetts Amherst Fish Passage Book Chapters 2006 [abstracts only] ; 2006 >
-    au < testing ; 2008 ; University of Massachusetts Amherst Fish Passage Book Chapters 2008 [abstracts only] ; 2008 >
-    au < testing ; 2009 ; University of Massachusetts Amherst Fish Passage Book Chapters 2009 [abstracts only] ; 2009 >
-    au < testing ; 2010 ; University of Massachusetts Amherst Fish Passage Book Chapters 2010 [abstracts only] ; 2010 >
-    au < testing ; 2011 ; University of Massachusetts Amherst Fish Passage Book Chapters 2011 [abstracts only] ; 2011 >
-    au < testing ; 2012 ; University of Massachusetts Amherst Fish Passage Book Chapters 2012 [abstracts only] ; 2012 >
+    au < ready ; 1898 ; University of Massachusetts Amherst Fish Passage Book Chapters 1898 [abstracts only] ; 1898 >
+    au < ready ; 1942 ; University of Massachusetts Amherst Fish Passage Book Chapters 1942 [abstracts only] ; 1942 >
+    au < ready ; 1966 ; University of Massachusetts Amherst Fish Passage Book Chapters 1966 [abstracts only] ; 1966 >
+    au < ready ; 1971 ; University of Massachusetts Amherst Fish Passage Book Chapters 1971 [abstracts only] ; 1971 >
+    au < ready ; 1973 ; University of Massachusetts Amherst Fish Passage Book Chapters 1973 [abstracts only] ; 1973 >
+    au < ready ; 1977 ; University of Massachusetts Amherst Fish Passage Book Chapters 1977 [abstracts only] ; 1977 >
+    au < ready ; 1978 ; University of Massachusetts Amherst Fish Passage Book Chapters 1978 [abstracts only] ; 1978 >
+    au < ready ; 1979 ; University of Massachusetts Amherst Fish Passage Book Chapters 1979 [abstracts only] ; 1979 >
+    au < ready ; 1980 ; University of Massachusetts Amherst Fish Passage Book Chapters 1980 [abstracts only] ; 1980 >
+    au < ready ; 1981 ; University of Massachusetts Amherst Fish Passage Book Chapters 1981 [abstracts only] ; 1981 >
+    au < ready ; 1982 ; University of Massachusetts Amherst Fish Passage Book Chapters 1982 [abstracts only] ; 1982 >
+    au < ready ; 1984 ; University of Massachusetts Amherst Fish Passage Book Chapters 1984 [abstracts only] ; 1984 >
+    au < ready ; 1986 ; University of Massachusetts Amherst Fish Passage Book Chapters 1986 [abstracts only] ; 1986 >
+    au < ready ; 1987 ; University of Massachusetts Amherst Fish Passage Book Chapters 1987 [abstracts only] ; 1987 >
+    au < ready ; 1988 ; University of Massachusetts Amherst Fish Passage Book Chapters 1988 [abstracts only] ; 1988 >
+    au < ready ; 1989 ; University of Massachusetts Amherst Fish Passage Book Chapters 1989 [abstracts only] ; 1989 >
+    au < ready ; 1992 ; University of Massachusetts Amherst Fish Passage Book Chapters 1992 [abstracts only] ; 1992 >
+    au < ready ; 1994 ; University of Massachusetts Amherst Fish Passage Book Chapters 1994 [abstracts only] ; 1994 >
+    au < ready ; 1996 ; University of Massachusetts Amherst Fish Passage Book Chapters 1996 [abstracts only] ; 1996 >
+    au < ready ; 1997 ; University of Massachusetts Amherst Fish Passage Book Chapters 1997 [abstracts only] ; 1997 >
+    au < ready ; 1998 ; University of Massachusetts Amherst Fish Passage Book Chapters 1998 [abstracts only] ; 1998 >
+    au < ready ; 1999 ; University of Massachusetts Amherst Fish Passage Book Chapters 1999 [abstracts only] ; 1999 >
+    au < ready ; 2000 ; University of Massachusetts Amherst Fish Passage Book Chapters 2000 [abstracts only] ; 2000 >
+    au < ready ; 2001 ; University of Massachusetts Amherst Fish Passage Book Chapters 2001 [abstracts only] ; 2001 >
+    au < ready ; 2002 ; University of Massachusetts Amherst Fish Passage Book Chapters 2002 [abstracts only] ; 2002 >
+    au < ready ; 2003 ; University of Massachusetts Amherst Fish Passage Book Chapters 2003 [abstracts only] ; 2003 >
+    au < ready ; 2004 ; University of Massachusetts Amherst Fish Passage Book Chapters 2004 [abstracts only] ; 2004 >
+    au < ready ; 2005 ; University of Massachusetts Amherst Fish Passage Book Chapters 2005 [abstracts only] ; 2005 >
+    au < ready ; 2006 ; University of Massachusetts Amherst Fish Passage Book Chapters 2006 [abstracts only] ; 2006 >
+    au < ready ; 2008 ; University of Massachusetts Amherst Fish Passage Book Chapters 2008 [abstracts only] ; 2008 >
+    au < ready ; 2009 ; University of Massachusetts Amherst Fish Passage Book Chapters 2009 [abstracts only] ; 2009 >
+    au < ready ; 2010 ; University of Massachusetts Amherst Fish Passage Book Chapters 2010 [abstracts only] ; 2010 >
+    au < ready ; 2011 ; University of Massachusetts Amherst Fish Passage Book Chapters 2011 [abstracts only] ; 2011 >
+    au < ready ; 2012 ; University of Massachusetts Amherst Fish Passage Book Chapters 2012 [abstracts only] ; 2012 >
 
   }
 
@@ -1558,20 +1556,20 @@
 
     attr[au_coverage_depth] = abstracts
 
-    au < testing ; 1941 ; University of Massachusetts Amherst Fish Passage Books 1941 [abstracts only] ; 1941 >
-    au < testing ; 1959 ; University of Massachusetts Amherst Fish Passage Books 1959 [abstracts only] ; 1959 >
-    au < testing ; 1967 ; University of Massachusetts Amherst Fish Passage Books 1967 [abstracts only] ; 1967 >
-    au < testing ; 1971 ; University of Massachusetts Amherst Fish Passage Books 1971 [abstracts only] ; 1971 >
-    au < testing ; 1980 ; University of Massachusetts Amherst Fish Passage Books 1980 [abstracts only] ; 1980 >
-    au < testing ; 1993 ; University of Massachusetts Amherst Fish Passage Books 1993 [abstracts only] ; 1993 >
-    au < testing ; 1995 ; University of Massachusetts Amherst Fish Passage Books 1995 [abstracts only] ; 1995 >
-    au < testing ; 1997 ; University of Massachusetts Amherst Fish Passage Books 1997 [abstracts only] ; 1997 >
-    au < testing ; 1998 ; University of Massachusetts Amherst Fish Passage Books 1998 [abstracts only] ; 1998 >
-    au < testing ; 1999 ; University of Massachusetts Amherst Fish Passage Books 1999 [abstracts only] ; 1999 >
-    au < testing ; 2000 ; University of Massachusetts Amherst Fish Passage Books 2000 [abstracts only] ; 2000 >
-    au < testing ; 2002 ; University of Massachusetts Amherst Fish Passage Books 2002 [abstracts only] ; 2002 >
-    au < testing ; 2006 ; University of Massachusetts Amherst Fish Passage Books 2006 [abstracts only] ; 2006 >
-    au < testing ; 2012 ; University of Massachusetts Amherst Fish Passage Books 2012 [abstracts only] ; 2012 >
+    au < ready ; 1941 ; University of Massachusetts Amherst Fish Passage Books 1941 [abstracts only] ; 1941 >
+    au < ready ; 1959 ; University of Massachusetts Amherst Fish Passage Books 1959 [abstracts only] ; 1959 >
+    au < ready ; 1967 ; University of Massachusetts Amherst Fish Passage Books 1967 [abstracts only] ; 1967 >
+    au < ready ; 1971 ; University of Massachusetts Amherst Fish Passage Books 1971 [abstracts only] ; 1971 >
+    au < ready ; 1980 ; University of Massachusetts Amherst Fish Passage Books 1980 [abstracts only] ; 1980 >
+    au < ready ; 1993 ; University of Massachusetts Amherst Fish Passage Books 1993 [abstracts only] ; 1993 >
+    au < ready ; 1995 ; University of Massachusetts Amherst Fish Passage Books 1995 [abstracts only] ; 1995 >
+    au < ready ; 1997 ; University of Massachusetts Amherst Fish Passage Books 1997 [abstracts only] ; 1997 >
+    au < ready ; 1998 ; University of Massachusetts Amherst Fish Passage Books 1998 [abstracts only] ; 1998 >
+    au < ready ; 1999 ; University of Massachusetts Amherst Fish Passage Books 1999 [abstracts only] ; 1999 >
+    au < ready ; 2000 ; University of Massachusetts Amherst Fish Passage Books 2000 [abstracts only] ; 2000 >
+    au < ready ; 2002 ; University of Massachusetts Amherst Fish Passage Books 2002 [abstracts only] ; 2002 >
+    au < ready ; 2006 ; University of Massachusetts Amherst Fish Passage Books 2006 [abstracts only] ; 2006 >
+    au < ready ; 2012 ; University of Massachusetts Amherst Fish Passage Books 2012 [abstracts only] ; 2012 >
 
   }
 
@@ -1587,8 +1585,8 @@
     param[collection] = fishpassage_images
     implicit < status ; year ; name ; param[collection_heading] >
 
-    au < testing ; 2012 ; University of Massachusetts Amherst Fish Passage Carousel Images 2012 ; 2012 >
-    au < testing ; 2014 ; University of Massachusetts Amherst Fish Passage Carousel Images 2014 ; 2014 >
+    au < ready ; 2012 ; University of Massachusetts Amherst Fish Passage Carousel Images 2012 ; 2012 >
+    au < ready ; 2014 ; University of Massachusetts Amherst Fish Passage Carousel Images 2014 ; 2014 >
 
   }
 
@@ -1606,56 +1604,56 @@
 
     attr[au_coverage_depth] = abstracts
 
-    au < testing ; 1931 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1931 [abstracts only] ; 1931 >
-    au < testing ; 1948 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1948 [abstracts only] ; 1948 >
-    au < testing ; 1950 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1950 [abstracts only] ; 1950 >
-    au < testing ; 1958 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1958 [abstracts only] ; 1958 >
-    au < testing ; 1959 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1959 [abstracts only] ; 1959 >
-    au < testing ; 1960 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1960 [abstracts only] ; 1960 >
-    au < testing ; 1962 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1962 [abstracts only] ; 1962 >
-    au < testing ; 1966 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1966 [abstracts only] ; 1966 >
-    au < testing ; 1967 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1967 [abstracts only] ; 1967 >
-    au < testing ; 1969 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1969 [abstracts only] ; 1969 >
-    au < testing ; 1970 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1970 [abstracts only] ; 1970 >
-    au < testing ; 1973 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1973 [abstracts only] ; 1973 >
-    au < testing ; 1974 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1974 [abstracts only] ; 1974 >
-    au < testing ; 1975 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1975 [abstracts only] ; 1975 >
-    au < testing ; 1976 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1976 [abstracts only] ; 1976 >
-    au < testing ; 1977 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1977 [abstracts only] ; 1977 >
-    au < testing ; 1978 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1978 [abstracts only] ; 1978 >
-    au < testing ; 1979 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1979 [abstracts only] ; 1979 >
-    au < testing ; 1980 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1980 [abstracts only] ; 1980 >
-    au < testing ; 1981 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1981 [abstracts only] ; 1981 >
-    au < testing ; 1982 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1982 [abstracts only] ; 1982 >
-    au < testing ; 1983 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1983 [abstracts only] ; 1983 >
-    au < testing ; 1984 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1984 [abstracts only] ; 1984 >
-    au < testing ; 1985 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1985 [abstracts only] ; 1985 >
-    au < testing ; 1986 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1986 [abstracts only] ; 1986 >
-    au < testing ; 1987 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1987 [abstracts only] ; 1987 >
-    au < testing ; 1988 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1988 [abstracts only] ; 1988 >
-    au < testing ; 1989 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1989 [abstracts only] ; 1989 >
-    au < testing ; 1990 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1990 [abstracts only] ; 1990 >
-    au < testing ; 1991 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1991 [abstracts only] ; 1991 >
-    au < testing ; 1992 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1992 [abstracts only] ; 1992 >
-    au < testing ; 1993 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1993 [abstracts only] ; 1993 >
-    au < testing ; 1994 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1994 [abstracts only] ; 1994 >
-    au < testing ; 1995 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1995 [abstracts only] ; 1995 >
-    au < testing ; 1996 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1996 [abstracts only] ; 1996 >
-    au < testing ; 1997 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1997 [abstracts only] ; 1997 >
-    au < testing ; 1998 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1998 [abstracts only] ; 1998 >
-    au < testing ; 1999 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1999 [abstracts only] ; 1999 >
-    au < testing ; 2000 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 2000 [abstracts only] ; 2000 >
-    au < testing ; 2001 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 2001 [abstracts only] ; 2001 >
-    au < testing ; 2002 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 2002 [abstracts only] ; 2002 >
-    au < testing ; 2003 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 2003 [abstracts only] ; 2003 >
-    au < testing ; 2004 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 2004 [abstracts only] ; 2004 >
-    au < testing ; 2005 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 2005 [abstracts only] ; 2005 >
-    au < testing ; 2006 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 2006 [abstracts only] ; 2006 >
-    au < testing ; 2007 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 2007 [abstracts only] ; 2007 >
-    au < testing ; 2008 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 2008 [abstracts only] ; 2008 >
-    au < testing ; 2009 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 2009 [abstracts only] ; 2009 >
-    au < testing ; 2010 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 2010 [abstracts only] ; 2010 >
-    au < testing ; 2011 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 2011 [abstracts only] ; 2011 >
+    au < ready ; 1931 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1931 [abstracts only] ; 1931 >
+    au < ready ; 1948 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1948 [abstracts only] ; 1948 >
+    au < ready ; 1950 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1950 [abstracts only] ; 1950 >
+    au < ready ; 1958 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1958 [abstracts only] ; 1958 >
+    au < ready ; 1959 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1959 [abstracts only] ; 1959 >
+    au < ready ; 1960 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1960 [abstracts only] ; 1960 >
+    au < ready ; 1962 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1962 [abstracts only] ; 1962 >
+    au < ready ; 1966 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1966 [abstracts only] ; 1966 >
+    au < ready ; 1967 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1967 [abstracts only] ; 1967 >
+    au < ready ; 1969 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1969 [abstracts only] ; 1969 >
+    au < ready ; 1970 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1970 [abstracts only] ; 1970 >
+    au < ready ; 1973 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1973 [abstracts only] ; 1973 >
+    au < ready ; 1974 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1974 [abstracts only] ; 1974 >
+    au < ready ; 1975 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1975 [abstracts only] ; 1975 >
+    au < ready ; 1976 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1976 [abstracts only] ; 1976 >
+    au < ready ; 1977 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1977 [abstracts only] ; 1977 >
+    au < ready ; 1978 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1978 [abstracts only] ; 1978 >
+    au < ready ; 1979 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1979 [abstracts only] ; 1979 >
+    au < ready ; 1980 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1980 [abstracts only] ; 1980 >
+    au < ready ; 1981 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1981 [abstracts only] ; 1981 >
+    au < ready ; 1982 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1982 [abstracts only] ; 1982 >
+    au < ready ; 1983 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1983 [abstracts only] ; 1983 >
+    au < ready ; 1984 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1984 [abstracts only] ; 1984 >
+    au < ready ; 1985 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1985 [abstracts only] ; 1985 >
+    au < ready ; 1986 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1986 [abstracts only] ; 1986 >
+    au < ready ; 1987 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1987 [abstracts only] ; 1987 >
+    au < ready ; 1988 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1988 [abstracts only] ; 1988 >
+    au < ready ; 1989 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1989 [abstracts only] ; 1989 >
+    au < ready ; 1990 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1990 [abstracts only] ; 1990 >
+    au < ready ; 1991 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1991 [abstracts only] ; 1991 >
+    au < ready ; 1992 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1992 [abstracts only] ; 1992 >
+    au < ready ; 1993 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1993 [abstracts only] ; 1993 >
+    au < ready ; 1994 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1994 [abstracts only] ; 1994 >
+    au < ready ; 1995 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1995 [abstracts only] ; 1995 >
+    au < ready ; 1996 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1996 [abstracts only] ; 1996 >
+    au < ready ; 1997 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1997 [abstracts only] ; 1997 >
+    au < ready ; 1998 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1998 [abstracts only] ; 1998 >
+    au < ready ; 1999 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 1999 [abstracts only] ; 1999 >
+    au < ready ; 2000 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 2000 [abstracts only] ; 2000 >
+    au < ready ; 2001 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 2001 [abstracts only] ; 2001 >
+    au < ready ; 2002 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 2002 [abstracts only] ; 2002 >
+    au < ready ; 2003 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 2003 [abstracts only] ; 2003 >
+    au < ready ; 2004 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 2004 [abstracts only] ; 2004 >
+    au < ready ; 2005 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 2005 [abstracts only] ; 2005 >
+    au < ready ; 2006 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 2006 [abstracts only] ; 2006 >
+    au < ready ; 2007 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 2007 [abstracts only] ; 2007 >
+    au < ready ; 2008 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 2008 [abstracts only] ; 2008 >
+    au < ready ; 2009 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 2009 [abstracts only] ; 2009 >
+    au < ready ; 2010 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 2010 [abstracts only] ; 2010 >
+    au < ready ; 2011 ; University of Massachusetts Amherst Fish Passage Conference Proceedings 2011 [abstracts only] ; 2011 >
 
   }
 
@@ -1671,7 +1669,7 @@
     param[collection] = fishpassage_archive
     implicit < status ; year ; name ; param[collection_heading] >
 
-    au < testing ; 2009 ; University of Massachusetts Amherst Fish Passage Data Archive 2009 ; 2009 >
+    au < ready ; 2009 ; University of Massachusetts Amherst Fish Passage Data Archive 2009 ; 2009 >
 
   }
 
@@ -1687,12 +1685,14 @@
     param[collection] = fishpassage_dissertations_theses
     implicit < status ; year ; name ; param[collection_heading] >
 
-    au < testing ; 1970 ; University of Massachusetts Amherst Fish Passage Dissertations and Theses 1970 ; 1970 >
-    au < testing ; 1974 ; University of Massachusetts Amherst Fish Passage Dissertations and Theses 1974 ; 1974 >
-    au < testing ; 1995 ; University of Massachusetts Amherst Fish Passage Dissertations and Theses 1995 ; 1995 >
-    au < testing ; 1998 ; University of Massachusetts Amherst Fish Passage Dissertations and Theses 1998 ; 1998 >
-    au < testing ; 2001 ; University of Massachusetts Amherst Fish Passage Dissertations and Theses 2001 ; 2001 >
-    au < testing ; 2005 ; University of Massachusetts Amherst Fish Passage Dissertations and Theses 2005 ; 2005 >
+    attr[au_coverage_depth] = abstracts
+
+    au < ready ; 1970 ; University of Massachusetts Amherst Fish Passage Dissertations and Theses 1970 [abstracts only] ; 1970 >
+    au < ready ; 1974 ; University of Massachusetts Amherst Fish Passage Dissertations and Theses 1974 [abstracts only] ; 1974 >
+    au < ready ; 1995 ; University of Massachusetts Amherst Fish Passage Dissertations and Theses 1995 [abstracts only] ; 1995 >
+    au < ready ; 1998 ; University of Massachusetts Amherst Fish Passage Dissertations and Theses 1998 [abstracts only] ; 1998 >
+    au < ready ; 2001 ; University of Massachusetts Amherst Fish Passage Dissertations and Theses 2001 [abstracts only] ; 2001 >
+    au < ready ; 2005 ; University of Massachusetts Amherst Fish Passage Dissertations and Theses 2005 [abstracts only] ; 2005 >
 
   }
 
@@ -1708,92 +1708,92 @@
     param[collection] = fishpassage_journal_articles
     implicit < status ; year ; name ; param[collection_heading] ; attr[au_coverage_depth] >
 
-    au < testing ; 1892 ; University of Massachusetts Amherst Fish Passage Journal Articles 1892 ; 1892 ; fulltext >
-    au < testing ; 1895 ; University of Massachusetts Amherst Fish Passage Journal Articles 1895 ; 1895 ; fulltext >
-    au < testing ; 1909 ; University of Massachusetts Amherst Fish Passage Journal Articles 1909 ; 1909 ; fulltext >
-    au < testing ; 1912 ; University of Massachusetts Amherst Fish Passage Journal Articles 1912 ; 1912 ; fulltext >
-    au < testing ; 1924 ; University of Massachusetts Amherst Fish Passage Journal Articles 1924 ; 1924 ; fulltext >
-    au < testing ; 1925 ; University of Massachusetts Amherst Fish Passage Journal Articles 1925 ; 1925 ; fulltext >
-    au < testing ; 1926 ; University of Massachusetts Amherst Fish Passage Journal Articles 1926 ; 1926 ; fulltext >
-    au < testing ; 1928 ; University of Massachusetts Amherst Fish Passage Journal Articles 1928 ; 1928 ; fulltext >
-    au < testing ; 1931 ; University of Massachusetts Amherst Fish Passage Journal Articles 1931 ; 1931 ; fulltext >
-    au < testing ; 1933 ; University of Massachusetts Amherst Fish Passage Journal Articles 1933 ; 1933 ; fulltext >
-    au < testing ; 1934 ; University of Massachusetts Amherst Fish Passage Journal Articles 1934 ; 1934 ; fulltext >
-    au < testing ; 1935 ; University of Massachusetts Amherst Fish Passage Journal Articles 1935 ; 1935 ; fulltext >
-    au < testing ; 1936 ; University of Massachusetts Amherst Fish Passage Journal Articles 1936 ; 1936 ; fulltext >
-    au < testing ; 1938 ; University of Massachusetts Amherst Fish Passage Journal Articles 1938 ; 1938 ; fulltext >
-    au < testing ; 1939 ; University of Massachusetts Amherst Fish Passage Journal Articles 1939 ; 1939 ; fulltext >
-    au < testing ; 1940 ; University of Massachusetts Amherst Fish Passage Journal Articles 1940 ; 1940 ; fulltext >
-    au < testing ; 1941 ; University of Massachusetts Amherst Fish Passage Journal Articles 1941 ; 1941 ; fulltext >
-    au < testing ; 1943 ; University of Massachusetts Amherst Fish Passage Journal Articles 1943 ; 1943 ; fulltext >
-    au < testing ; 1945 ; University of Massachusetts Amherst Fish Passage Journal Articles 1945 ; 1945 ; fulltext >
-    au < testing ; 1947 ; University of Massachusetts Amherst Fish Passage Journal Articles 1947 ; 1947 ; fulltext >
-    au < testing ; 1948 ; University of Massachusetts Amherst Fish Passage Journal Articles 1948 ; 1948 ; fulltext >
-    au < testing ; 1950 ; University of Massachusetts Amherst Fish Passage Journal Articles 1950 ; 1950 ; fulltext >
-    au < testing ; 1951 ; University of Massachusetts Amherst Fish Passage Journal Articles 1951 ; 1951 ; fulltext >
-    au < testing ; 1952 ; University of Massachusetts Amherst Fish Passage Journal Articles 1952 ; 1952 ; fulltext >
-    au < testing ; 1953 ; University of Massachusetts Amherst Fish Passage Journal Articles 1953 ; 1953 ; fulltext >
-    au < testing ; 1954 ; University of Massachusetts Amherst Fish Passage Journal Articles 1954 ; 1954 ; fulltext >
-    au < testing ; 1955 ; University of Massachusetts Amherst Fish Passage Journal Articles 1955 ; 1955 ; fulltext >
-    au < testing ; 1956 ; University of Massachusetts Amherst Fish Passage Journal Articles 1956 ; 1956 ; fulltext >
-    au < testing ; 1957 ; University of Massachusetts Amherst Fish Passage Journal Articles 1957 ; 1957 ; fulltext >
-    au < testing ; 1958 ; University of Massachusetts Amherst Fish Passage Journal Articles 1958 ; 1958 ; fulltext >
-    au < testing ; 1959 ; University of Massachusetts Amherst Fish Passage Journal Articles 1959 ; 1959 ; fulltext >
-    au < testing ; 1960 ; University of Massachusetts Amherst Fish Passage Journal Articles 1960 ; 1960 ; fulltext >
-    au < testing ; 1961 ; University of Massachusetts Amherst Fish Passage Journal Articles 1961 ; 1961 ; fulltext >
-    au < testing ; 1962 ; University of Massachusetts Amherst Fish Passage Journal Articles 1962 ; 1962 ; fulltext >
-    au < testing ; 1963 ; University of Massachusetts Amherst Fish Passage Journal Articles 1963 ; 1963 ; fulltext >
-    au < testing ; 1964 ; University of Massachusetts Amherst Fish Passage Journal Articles 1964 ; 1964 ; fulltext >
-    au < testing ; 1965 ; University of Massachusetts Amherst Fish Passage Journal Articles 1965 ; 1965 ; fulltext >
-    au < testing ; 1966 ; University of Massachusetts Amherst Fish Passage Journal Articles 1966 ; 1966 ; fulltext >
-    au < testing ; 1967 ; University of Massachusetts Amherst Fish Passage Journal Articles 1967 ; 1967 ; fulltext >
-    au < testing ; 1968 ; University of Massachusetts Amherst Fish Passage Journal Articles 1968 ; 1968 ; fulltext >
-    au < testing ; 1969 ; University of Massachusetts Amherst Fish Passage Journal Articles 1969 ; 1969 ; fulltext >
-    au < testing ; 1970 ; University of Massachusetts Amherst Fish Passage Journal Articles 1970 ; 1970 ; fulltext >
-    au < testing ; 1971 ; University of Massachusetts Amherst Fish Passage Journal Articles 1971 ; 1971 ; fulltext >
-    au < testing ; 1972 ; University of Massachusetts Amherst Fish Passage Journal Articles 1972 ; 1972 ; fulltext >
-    au < testing ; 1973 ; University of Massachusetts Amherst Fish Passage Journal Articles 1973 ; 1973 ; fulltext >
-    au < testing ; 1974 ; University of Massachusetts Amherst Fish Passage Journal Articles 1974 ; 1974 ; fulltext >
-    au < testing ; 1975 ; University of Massachusetts Amherst Fish Passage Journal Articles 1975 ; 1975 ; fulltext >
-    au < testing ; 1976 ; University of Massachusetts Amherst Fish Passage Journal Articles 1976 ; 1976 ; fulltext >
-    au < testing ; 1977 ; University of Massachusetts Amherst Fish Passage Journal Articles 1977 ; 1977 ; fulltext >
-    au < testing ; 1978 ; University of Massachusetts Amherst Fish Passage Journal Articles 1978 ; 1978 ; fulltext >
-    au < testing ; 1979 ; University of Massachusetts Amherst Fish Passage Journal Articles 1979 ; 1979 ; fulltext >
-    au < testing ; 1980 ; University of Massachusetts Amherst Fish Passage Journal Articles 1980 ; 1980 ; fulltext >
-    au < testing ; 1981 ; University of Massachusetts Amherst Fish Passage Journal Articles 1981 ; 1981 ; fulltext >
-    au < testing ; 1982 ; University of Massachusetts Amherst Fish Passage Journal Articles 1982 ; 1982 ; fulltext >
-    au < testing ; 1983 ; University of Massachusetts Amherst Fish Passage Journal Articles 1983 ; 1983 ; fulltext >
-    au < testing ; 1984 ; University of Massachusetts Amherst Fish Passage Journal Articles 1984 ; 1984 ; fulltext >
-    au < testing ; 1985 ; University of Massachusetts Amherst Fish Passage Journal Articles 1985 ; 1985 ; fulltext >
-    au < testing ; 1986 ; University of Massachusetts Amherst Fish Passage Journal Articles 1986 ; 1986 ; fulltext >
-    au < testing ; 1987 ; University of Massachusetts Amherst Fish Passage Journal Articles 1987 ; 1987 ; fulltext >
-    au < testing ; 1988 ; University of Massachusetts Amherst Fish Passage Journal Articles 1988 ; 1988 ; fulltext >
-    au < testing ; 1989 ; University of Massachusetts Amherst Fish Passage Journal Articles 1989 ; 1989 ; fulltext >
-    au < testing ; 1990 ; University of Massachusetts Amherst Fish Passage Journal Articles 1990 ; 1990 ; fulltext >
-    au < testing ; 1991 ; University of Massachusetts Amherst Fish Passage Journal Articles 1991 ; 1991 ; fulltext >
-    au < testing ; 1992 ; University of Massachusetts Amherst Fish Passage Journal Articles 1992 ; 1992 ; fulltext >
-    au < testing ; 1993 ; University of Massachusetts Amherst Fish Passage Journal Articles 1993 ; 1993 ; fulltext >
-    au < testing ; 1994 ; University of Massachusetts Amherst Fish Passage Journal Articles 1994 ; 1994 ; fulltext >
-    au < testing ; 1995 ; University of Massachusetts Amherst Fish Passage Journal Articles 1995 ; 1995 ; fulltext >
-    au < testing ; 1996 ; University of Massachusetts Amherst Fish Passage Journal Articles 1996 ; 1996 ; fulltext >
-    au < testing ; 1997 ; University of Massachusetts Amherst Fish Passage Journal Articles 1997 ; 1997 ; fulltext >
-    au < testing ; 1998 ; University of Massachusetts Amherst Fish Passage Journal Articles 1998 ; 1998 ; fulltext >
-    au < testing ; 1999 ; University of Massachusetts Amherst Fish Passage Journal Articles 1999 ; 1999 ; fulltext >
-    au < testing ; 2000 ; University of Massachusetts Amherst Fish Passage Journal Articles 2000 ; 2000 ; fulltext >
-    au < testing ; 2001 ; University of Massachusetts Amherst Fish Passage Journal Articles 2001 ; 2001 ; fulltext >
-    au < testing ; 2002 ; University of Massachusetts Amherst Fish Passage Journal Articles 2002 ; 2002 ; fulltext >
-    au < testing ; 2003 ; University of Massachusetts Amherst Fish Passage Journal Articles 2003 ; 2003 ; fulltext >
-    au < testing ; 2004 ; University of Massachusetts Amherst Fish Passage Journal Articles 2004 ; 2004 ; fulltext >
-    au < testing ; 2005 ; University of Massachusetts Amherst Fish Passage Journal Articles 2005 ; 2005 ; fulltext >
-    au < testing ; 2006 ; University of Massachusetts Amherst Fish Passage Journal Articles 2006 ; 2006 ; fulltext >
-    au < testing ; 2007 ; University of Massachusetts Amherst Fish Passage Journal Articles 2007 ; 2007 ; fulltext >
-    au < testing ; 2008 ; University of Massachusetts Amherst Fish Passage Journal Articles 2008 ; 2008 ; fulltext >
-    au < testing ; 2009 ; University of Massachusetts Amherst Fish Passage Journal Articles 2009 ; 2009 ; fulltext >
-    au < testing ; 2010 ; University of Massachusetts Amherst Fish Passage Journal Articles 2010 ; 2010 ; fulltext >
-    au < testing ; 2011 ; University of Massachusetts Amherst Fish Passage Journal Articles 2011 ; 2011 ; fulltext >
-    au < testing ; 2012 ; University of Massachusetts Amherst Fish Passage Journal Articles 2012 ; 2012 ; fulltext >
-    au < testing ; 2013 ; University of Massachusetts Amherst Fish Passage Journal Articles 2013 ; 2013 ; fulltext >
-    au < testing ; 2014 ; University of Massachusetts Amherst Fish Passage Journal Articles 2014 ; 2014 ; fulltext >
+    au < ready ; 1892 ; University of Massachusetts Amherst Fish Passage Journal Articles 1892 [abstracts only] ; 1892 ; abstracts >
+    au < ready ; 1895 ; University of Massachusetts Amherst Fish Passage Journal Articles 1895 [abstracts only] ; 1895 ; abstracts >
+    au < ready ; 1909 ; University of Massachusetts Amherst Fish Passage Journal Articles 1909 [abstracts only] ; 1909 ; abstracts >
+    au < ready ; 1912 ; University of Massachusetts Amherst Fish Passage Journal Articles 1912 [abstracts only] ; 1912 ; abstracts >
+    au < ready ; 1924 ; University of Massachusetts Amherst Fish Passage Journal Articles 1924 [abstracts only] ; 1924 ; abstracts >
+    au < ready ; 1925 ; University of Massachusetts Amherst Fish Passage Journal Articles 1925 [abstracts only] ; 1925 ; abstracts >
+    au < ready ; 1926 ; University of Massachusetts Amherst Fish Passage Journal Articles 1926 [abstracts only] ; 1926 ; abstracts >
+    au < ready ; 1928 ; University of Massachusetts Amherst Fish Passage Journal Articles 1928 [abstracts only] ; 1928 ; abstracts >
+    au < ready ; 1931 ; University of Massachusetts Amherst Fish Passage Journal Articles 1931 [abstracts only] ; 1931 ; abstracts >
+    au < ready ; 1933 ; University of Massachusetts Amherst Fish Passage Journal Articles 1933 [abstracts only] ; 1933 ; abstracts >
+    au < ready ; 1934 ; University of Massachusetts Amherst Fish Passage Journal Articles 1934 [abstracts only] ; 1934 ; abstracts >
+    au < ready ; 1935 ; University of Massachusetts Amherst Fish Passage Journal Articles 1935 [abstracts only] ; 1935 ; abstracts >
+    au < ready ; 1936 ; University of Massachusetts Amherst Fish Passage Journal Articles 1936 [abstracts only] ; 1936 ; abstracts >
+    au < ready ; 1938 ; University of Massachusetts Amherst Fish Passage Journal Articles 1938 [abstracts only] ; 1938 ; abstracts >
+    au < ready ; 1939 ; University of Massachusetts Amherst Fish Passage Journal Articles 1939 [abstracts only] ; 1939 ; abstracts >
+    au < ready ; 1940 ; University of Massachusetts Amherst Fish Passage Journal Articles 1940 [abstracts only] ; 1940 ; abstracts >
+    au < ready ; 1941 ; University of Massachusetts Amherst Fish Passage Journal Articles 1941 [abstracts only] ; 1941 ; abstracts >
+    au < ready ; 1943 ; University of Massachusetts Amherst Fish Passage Journal Articles 1943 [abstracts only] ; 1943 ; abstracts >
+    au < ready ; 1945 ; University of Massachusetts Amherst Fish Passage Journal Articles 1945 [abstracts only] ; 1945 ; abstracts >
+    au < ready ; 1947 ; University of Massachusetts Amherst Fish Passage Journal Articles 1947 [abstracts only] ; 1947 ; abstracts >
+    au < ready ; 1948 ; University of Massachusetts Amherst Fish Passage Journal Articles 1948 [abstracts only] ; 1948 ; abstracts >
+    au < ready ; 1950 ; University of Massachusetts Amherst Fish Passage Journal Articles 1950 [abstracts only] ; 1950 ; abstracts >
+    au < ready ; 1951 ; University of Massachusetts Amherst Fish Passage Journal Articles 1951 [abstracts only] ; 1951 ; abstracts >
+    au < ready ; 1952 ; University of Massachusetts Amherst Fish Passage Journal Articles 1952 [abstracts only] ; 1952 ; abstracts >
+    au < ready ; 1953 ; University of Massachusetts Amherst Fish Passage Journal Articles 1953 [abstracts only] ; 1953 ; abstracts >
+    au < ready ; 1954 ; University of Massachusetts Amherst Fish Passage Journal Articles 1954 [abstracts only] ; 1954 ; abstracts >
+    au < ready ; 1955 ; University of Massachusetts Amherst Fish Passage Journal Articles 1955 [abstracts only] ; 1955 ; abstracts >
+    au < ready ; 1956 ; University of Massachusetts Amherst Fish Passage Journal Articles 1956 [abstracts only] ; 1956 ; abstracts >
+    au < ready ; 1957 ; University of Massachusetts Amherst Fish Passage Journal Articles 1957 [abstracts only] ; 1957 ; abstracts >
+    au < ready ; 1958 ; University of Massachusetts Amherst Fish Passage Journal Articles 1958 [abstracts only] ; 1958 ; abstracts >
+    au < ready ; 1959 ; University of Massachusetts Amherst Fish Passage Journal Articles 1959 [abstracts only] ; 1959 ; abstracts >
+    au < ready ; 1960 ; University of Massachusetts Amherst Fish Passage Journal Articles 1960 [abstracts only] ; 1960 ; abstracts >
+    au < ready ; 1961 ; University of Massachusetts Amherst Fish Passage Journal Articles 1961 [abstracts only] ; 1961 ; abstracts >
+    au < ready ; 1962 ; University of Massachusetts Amherst Fish Passage Journal Articles 1962 [abstracts only] ; 1962 ; abstracts >
+    au < ready ; 1963 ; University of Massachusetts Amherst Fish Passage Journal Articles 1963 [abstracts only] ; 1963 ; abstracts >
+    au < ready ; 1964 ; University of Massachusetts Amherst Fish Passage Journal Articles 1964 [abstracts only] ; 1964 ; abstracts >
+    au < ready ; 1965 ; University of Massachusetts Amherst Fish Passage Journal Articles 1965 [abstracts only] ; 1965 ; abstracts >
+    au < ready ; 1966 ; University of Massachusetts Amherst Fish Passage Journal Articles 1966 [abstracts only] ; 1966 ; abstracts >
+    au < ready ; 1967 ; University of Massachusetts Amherst Fish Passage Journal Articles 1967 [abstracts only] ; 1967 ; abstracts >
+    au < ready ; 1968 ; University of Massachusetts Amherst Fish Passage Journal Articles 1968 [abstracts only] ; 1968 ; abstracts >
+    au < ready ; 1969 ; University of Massachusetts Amherst Fish Passage Journal Articles 1969 [abstracts only] ; 1969 ; abstracts >
+    au < ready ; 1970 ; University of Massachusetts Amherst Fish Passage Journal Articles 1970 [abstracts only] ; 1970 ; abstracts >
+    au < ready ; 1971 ; University of Massachusetts Amherst Fish Passage Journal Articles 1971 [abstracts only] ; 1971 ; abstracts >
+    au < ready ; 1972 ; University of Massachusetts Amherst Fish Passage Journal Articles 1972 [abstracts only] ; 1972 ; abstracts >
+    au < ready ; 1973 ; University of Massachusetts Amherst Fish Passage Journal Articles 1973 [abstracts only] ; 1973 ; abstracts >
+    au < ready ; 1974 ; University of Massachusetts Amherst Fish Passage Journal Articles 1974 [abstracts only] ; 1974 ; abstracts >
+    au < ready ; 1975 ; University of Massachusetts Amherst Fish Passage Journal Articles 1975 [abstracts only] ; 1975 ; abstracts >
+    au < ready ; 1976 ; University of Massachusetts Amherst Fish Passage Journal Articles 1976 [abstracts only] ; 1976 ; abstracts >
+    au < ready ; 1977 ; University of Massachusetts Amherst Fish Passage Journal Articles 1977 [abstracts only] ; 1977 ; abstracts >
+    au < ready ; 1978 ; University of Massachusetts Amherst Fish Passage Journal Articles 1978 [abstracts only] ; 1978 ; abstracts >
+    au < ready ; 1979 ; University of Massachusetts Amherst Fish Passage Journal Articles 1979 [abstracts only] ; 1979 ; abstracts >
+    au < ready ; 1980 ; University of Massachusetts Amherst Fish Passage Journal Articles 1980 [abstracts only] ; 1980 ; abstracts >
+    au < ready ; 1981 ; University of Massachusetts Amherst Fish Passage Journal Articles 1981 [abstracts only] ; 1981 ; abstracts >
+    au < ready ; 1982 ; University of Massachusetts Amherst Fish Passage Journal Articles 1982 [abstracts only] ; 1982 ; abstracts >
+    au < ready ; 1983 ; University of Massachusetts Amherst Fish Passage Journal Articles 1983 [abstracts only] ; 1983 ; abstracts >
+    au < ready ; 1984 ; University of Massachusetts Amherst Fish Passage Journal Articles 1984 [abstracts only] ; 1984 ; abstracts >
+    au < ready ; 1985 ; University of Massachusetts Amherst Fish Passage Journal Articles 1985 [abstracts only] ; 1985 ; abstracts >
+    au < ready ; 1986 ; University of Massachusetts Amherst Fish Passage Journal Articles 1986 [abstracts only] ; 1986 ; abstracts >
+    au < ready ; 1987 ; University of Massachusetts Amherst Fish Passage Journal Articles 1987 [abstracts only] ; 1987 ; abstracts >
+    au < ready ; 1988 ; University of Massachusetts Amherst Fish Passage Journal Articles 1988 [abstracts only] ; 1988 ; abstracts >
+    au < ready ; 1989 ; University of Massachusetts Amherst Fish Passage Journal Articles 1989 [abstracts only] ; 1989 ; abstracts >
+    au < ready ; 1990 ; University of Massachusetts Amherst Fish Passage Journal Articles 1990 [abstracts only] ; 1990 ; abstracts >
+    au < ready ; 1991 ; University of Massachusetts Amherst Fish Passage Journal Articles 1991 [abstracts only] ; 1991 ; abstracts >
+    au < ready ; 1992 ; University of Massachusetts Amherst Fish Passage Journal Articles 1992 [abstracts only] ; 1992 ; abstracts >
+    au < ready ; 1993 ; University of Massachusetts Amherst Fish Passage Journal Articles 1993 [abstracts only] ; 1993 ; abstracts >
+    au < ready ; 1994 ; University of Massachusetts Amherst Fish Passage Journal Articles 1994 [abstracts only] ; 1994 ; abstracts >
+    au < ready ; 1995 ; University of Massachusetts Amherst Fish Passage Journal Articles 1995 [abstracts only] ; 1995 ; abstracts >
+    au < ready ; 1996 ; University of Massachusetts Amherst Fish Passage Journal Articles 1996 [abstracts only] ; 1996 ; abstracts >
+    au < ready ; 1997 ; University of Massachusetts Amherst Fish Passage Journal Articles 1997 [abstracts only] ; 1997 ; abstracts >
+    au < ready ; 1998 ; University of Massachusetts Amherst Fish Passage Journal Articles 1998 [abstracts only] ; 1998 ; abstracts >
+    au < ready ; 1999 ; University of Massachusetts Amherst Fish Passage Journal Articles 1999 [abstracts only] ; 1999 ; abstracts >
+    au < ready ; 2000 ; University of Massachusetts Amherst Fish Passage Journal Articles 2000 [abstracts only] ; 2000 ; abstracts >
+    au < ready ; 2001 ; University of Massachusetts Amherst Fish Passage Journal Articles 2001 [abstracts only] ; 2001 ; abstracts >
+    au < ready ; 2002 ; University of Massachusetts Amherst Fish Passage Journal Articles 2002 [abstracts only] ; 2002 ; abstracts >
+    au < ready ; 2003 ; University of Massachusetts Amherst Fish Passage Journal Articles 2003 [abstracts only] ; 2003 ; abstracts >
+    au < ready ; 2004 ; University of Massachusetts Amherst Fish Passage Journal Articles 2004 [abstracts only] ; 2004 ; abstracts >
+    au < ready ; 2005 ; University of Massachusetts Amherst Fish Passage Journal Articles 2005 [abstracts only] ; 2005 ; abstracts >
+    au < ready ; 2006 ; University of Massachusetts Amherst Fish Passage Journal Articles 2006 [abstracts only] ; 2006 ; abstracts >
+    au < ready ; 2007 ; University of Massachusetts Amherst Fish Passage Journal Articles 2007 [abstracts only] ; 2007 ; abstracts >
+    au < ready ; 2008 ; University of Massachusetts Amherst Fish Passage Journal Articles 2008 [abstracts only] ; 2008 ; abstracts >
+    au < ready ; 2009 ; University of Massachusetts Amherst Fish Passage Journal Articles 2009 [abstracts only] ; 2009 ; abstracts >
+    au < ready ; 2010 ; University of Massachusetts Amherst Fish Passage Journal Articles 2010 [abstracts only] ; 2010 ; abstracts >
+    au < ready ; 2011 ; University of Massachusetts Amherst Fish Passage Journal Articles 2011 [abstracts only] ; 2011 ; abstracts >
+    au < ready ; 2012 ; University of Massachusetts Amherst Fish Passage Journal Articles 2012 ; 2012 ; fulltext >
+    au < ready ; 2013 ; University of Massachusetts Amherst Fish Passage Journal Articles 2013 [abstracts only] ; 2013 ; abstracts >
+    au < ready ; 2014 ; University of Massachusetts Amherst Fish Passage Journal Articles 2014 [abstracts only] ; 2014 ; abstracts >
 
   }
 
@@ -1809,7 +1809,7 @@
     param[collection] = fishpassage_miscellaneous_publications
     implicit < status ; year ; name ; param[collection_heading] >
 
-    au < testing ; 1985 ; University of Massachusetts Amherst Fish Passage Miscellaneous Publications 1985 ; 1985 >
+    au < ready ; 1985 ; University of Massachusetts Amherst Fish Passage Miscellaneous Publications 1985 ; 1985 >
 
   }
 
@@ -1827,77 +1827,77 @@
 
     attr[au_coverage_depth] = abstracts
 
-    au < testing ; 1909 ; University of Massachusetts Amherst Fish Passage Reports 1909 [abstracts only] ; 1909 >
-    au < testing ; 1928 ; University of Massachusetts Amherst Fish Passage Reports 1928 [abstracts only] ; 1928 >
-    au < testing ; 1937 ; University of Massachusetts Amherst Fish Passage Reports 1937 [abstracts only] ; 1937 >
-    au < testing ; 1939 ; University of Massachusetts Amherst Fish Passage Reports 1939 [abstracts only] ; 1939 >
-    au < testing ; 1940 ; University of Massachusetts Amherst Fish Passage Reports 1940 [abstracts only] ; 1940 >
-    au < testing ; 1941 ; University of Massachusetts Amherst Fish Passage Reports 1941 [abstracts only] ; 1941 >
-    au < testing ; 1942 ; University of Massachusetts Amherst Fish Passage Reports 1942 [abstracts only] ; 1942 >
-    au < testing ; 1944 ; University of Massachusetts Amherst Fish Passage Reports 1944 [abstracts only] ; 1944 >
-    au < testing ; 1948 ; University of Massachusetts Amherst Fish Passage Reports 1948 [abstracts only] ; 1948 >
-    au < testing ; 1950 ; University of Massachusetts Amherst Fish Passage Reports 1950 [abstracts only] ; 1950 >
-    au < testing ; 1951 ; University of Massachusetts Amherst Fish Passage Reports 1951 [abstracts only] ; 1951 >
-    au < testing ; 1953 ; University of Massachusetts Amherst Fish Passage Reports 1953 [abstracts only] ; 1953 >
-    au < testing ; 1954 ; University of Massachusetts Amherst Fish Passage Reports 1954 [abstracts only] ; 1954 >
-    au < testing ; 1955 ; University of Massachusetts Amherst Fish Passage Reports 1955 [abstracts only] ; 1955 >
-    au < testing ; 1956 ; University of Massachusetts Amherst Fish Passage Reports 1956 [abstracts only] ; 1956 >
-    au < testing ; 1957 ; University of Massachusetts Amherst Fish Passage Reports 1957 [abstracts only] ; 1957 >
-    au < testing ; 1958 ; University of Massachusetts Amherst Fish Passage Reports 1958 [abstracts only] ; 1958 >
-    au < testing ; 1959 ; University of Massachusetts Amherst Fish Passage Reports 1959 [abstracts only] ; 1959 >
-    au < testing ; 1960 ; University of Massachusetts Amherst Fish Passage Reports 1960 [abstracts only] ; 1960 >
-    au < testing ; 1961 ; University of Massachusetts Amherst Fish Passage Reports 1961 [abstracts only] ; 1961 >
-    au < testing ; 1962 ; University of Massachusetts Amherst Fish Passage Reports 1962 [abstracts only] ; 1962 >
-    au < testing ; 1963 ; University of Massachusetts Amherst Fish Passage Reports 1963 [abstracts only] ; 1963 >
-    au < testing ; 1964 ; University of Massachusetts Amherst Fish Passage Reports 1964 [abstracts only] ; 1964 >
-    au < testing ; 1965 ; University of Massachusetts Amherst Fish Passage Reports 1965 [abstracts only] ; 1965 >
-    au < testing ; 1966 ; University of Massachusetts Amherst Fish Passage Reports 1966 [abstracts only] ; 1966 >
-    au < testing ; 1967 ; University of Massachusetts Amherst Fish Passage Reports 1967 [abstracts only] ; 1967 >
-    au < testing ; 1968 ; University of Massachusetts Amherst Fish Passage Reports 1968 [abstracts only] ; 1968 >
-    au < testing ; 1969 ; University of Massachusetts Amherst Fish Passage Reports 1969 [abstracts only] ; 1969 >
-    au < testing ; 1970 ; University of Massachusetts Amherst Fish Passage Reports 1970 [abstracts only] ; 1970 >
-    au < testing ; 1971 ; University of Massachusetts Amherst Fish Passage Reports 1971 [abstracts only] ; 1971 >
-    au < testing ; 1972 ; University of Massachusetts Amherst Fish Passage Reports 1972 [abstracts only] ; 1972 >
-    au < testing ; 1973 ; University of Massachusetts Amherst Fish Passage Reports 1973 [abstracts only] ; 1973 >
-    au < testing ; 1974 ; University of Massachusetts Amherst Fish Passage Reports 1974 [abstracts only] ; 1974 >
-    au < testing ; 1975 ; University of Massachusetts Amherst Fish Passage Reports 1975 [abstracts only] ; 1975 >
-    au < testing ; 1976 ; University of Massachusetts Amherst Fish Passage Reports 1976 [abstracts only] ; 1976 >
-    au < testing ; 1977 ; University of Massachusetts Amherst Fish Passage Reports 1977 [abstracts only] ; 1977 >
-    au < testing ; 1978 ; University of Massachusetts Amherst Fish Passage Reports 1978 [abstracts only] ; 1978 >
-    au < testing ; 1979 ; University of Massachusetts Amherst Fish Passage Reports 1979 [abstracts only] ; 1979 >
-    au < testing ; 1980 ; University of Massachusetts Amherst Fish Passage Reports 1980 [abstracts only] ; 1980 >
-    au < testing ; 1981 ; University of Massachusetts Amherst Fish Passage Reports 1981 [abstracts only] ; 1981 >
-    au < testing ; 1982 ; University of Massachusetts Amherst Fish Passage Reports 1982 [abstracts only] ; 1982 >
-    au < testing ; 1983 ; University of Massachusetts Amherst Fish Passage Reports 1983 [abstracts only] ; 1983 >
-    au < testing ; 1984 ; University of Massachusetts Amherst Fish Passage Reports 1984 [abstracts only] ; 1984 >
-    au < testing ; 1985 ; University of Massachusetts Amherst Fish Passage Reports 1985 [abstracts only] ; 1985 >
-    au < testing ; 1986 ; University of Massachusetts Amherst Fish Passage Reports 1986 [abstracts only] ; 1986 >
-    au < testing ; 1987 ; University of Massachusetts Amherst Fish Passage Reports 1987 [abstracts only] ; 1987 >
-    au < testing ; 1988 ; University of Massachusetts Amherst Fish Passage Reports 1988 [abstracts only] ; 1988 >
-    au < testing ; 1989 ; University of Massachusetts Amherst Fish Passage Reports 1989 [abstracts only] ; 1989 >
-    au < testing ; 1990 ; University of Massachusetts Amherst Fish Passage Reports 1990 [abstracts only] ; 1990 >
-    au < testing ; 1991 ; University of Massachusetts Amherst Fish Passage Reports 1991 [abstracts only] ; 1991 >
-    au < testing ; 1992 ; University of Massachusetts Amherst Fish Passage Reports 1992 [abstracts only] ; 1992 >
-    au < testing ; 1993 ; University of Massachusetts Amherst Fish Passage Reports 1993 [abstracts only] ; 1993 >
-    au < testing ; 1994 ; University of Massachusetts Amherst Fish Passage Reports 1994 [abstracts only] ; 1994 >
-    au < testing ; 1995 ; University of Massachusetts Amherst Fish Passage Reports 1995 [abstracts only] ; 1995 >
-    au < testing ; 1996 ; University of Massachusetts Amherst Fish Passage Reports 1996 [abstracts only] ; 1996 >
-    au < testing ; 1997 ; University of Massachusetts Amherst Fish Passage Reports 1997 [abstracts only] ; 1997 >
-    au < testing ; 1998 ; University of Massachusetts Amherst Fish Passage Reports 1998 [abstracts only] ; 1998 >
-    au < testing ; 1999 ; University of Massachusetts Amherst Fish Passage Reports 1999 [abstracts only] ; 1999 >
-    au < testing ; 2000 ; University of Massachusetts Amherst Fish Passage Reports 2000 [abstracts only] ; 2000 >
-    au < testing ; 2001 ; University of Massachusetts Amherst Fish Passage Reports 2001 [abstracts only] ; 2001 >
-    au < testing ; 2002 ; University of Massachusetts Amherst Fish Passage Reports 2002 [abstracts only] ; 2002 >
-    au < testing ; 2003 ; University of Massachusetts Amherst Fish Passage Reports 2003 [abstracts only] ; 2003 >
-    au < testing ; 2004 ; University of Massachusetts Amherst Fish Passage Reports 2004 [abstracts only] ; 2004 >
-    au < testing ; 2005 ; University of Massachusetts Amherst Fish Passage Reports 2005 [abstracts only] ; 2005 >
-    au < testing ; 2006 ; University of Massachusetts Amherst Fish Passage Reports 2006 [abstracts only] ; 2006 >
-    au < testing ; 2007 ; University of Massachusetts Amherst Fish Passage Reports 2007 [abstracts only] ; 2007 >
-    au < testing ; 2008 ; University of Massachusetts Amherst Fish Passage Reports 2008 [abstracts only] ; 2008 >
-    au < testing ; 2009 ; University of Massachusetts Amherst Fish Passage Reports 2009 [abstracts only] ; 2009 >
-    au < testing ; 2010 ; University of Massachusetts Amherst Fish Passage Reports 2010 [abstracts only] ; 2010 >
-    au < testing ; 2011 ; University of Massachusetts Amherst Fish Passage Reports 2011 [abstracts only] ; 2011 >
-    au < testing ; 2013 ; University of Massachusetts Amherst Fish Passage Reports 2013 [abstracts only] ; 2013 >
+    au < ready ; 1909 ; University of Massachusetts Amherst Fish Passage Reports 1909 [abstracts only] ; 1909 >
+    au < ready ; 1928 ; University of Massachusetts Amherst Fish Passage Reports 1928 [abstracts only] ; 1928 >
+    au < ready ; 1937 ; University of Massachusetts Amherst Fish Passage Reports 1937 [abstracts only] ; 1937 >
+    au < ready ; 1939 ; University of Massachusetts Amherst Fish Passage Reports 1939 [abstracts only] ; 1939 >
+    au < ready ; 1940 ; University of Massachusetts Amherst Fish Passage Reports 1940 [abstracts only] ; 1940 >
+    au < ready ; 1941 ; University of Massachusetts Amherst Fish Passage Reports 1941 [abstracts only] ; 1941 >
+    au < ready ; 1942 ; University of Massachusetts Amherst Fish Passage Reports 1942 [abstracts only] ; 1942 >
+    au < ready ; 1944 ; University of Massachusetts Amherst Fish Passage Reports 1944 [abstracts only] ; 1944 >
+    au < ready ; 1948 ; University of Massachusetts Amherst Fish Passage Reports 1948 [abstracts only] ; 1948 >
+    au < ready ; 1950 ; University of Massachusetts Amherst Fish Passage Reports 1950 [abstracts only] ; 1950 >
+    au < ready ; 1951 ; University of Massachusetts Amherst Fish Passage Reports 1951 [abstracts only] ; 1951 >
+    au < ready ; 1953 ; University of Massachusetts Amherst Fish Passage Reports 1953 [abstracts only] ; 1953 >
+    au < ready ; 1954 ; University of Massachusetts Amherst Fish Passage Reports 1954 [abstracts only] ; 1954 >
+    au < ready ; 1955 ; University of Massachusetts Amherst Fish Passage Reports 1955 [abstracts only] ; 1955 >
+    au < ready ; 1956 ; University of Massachusetts Amherst Fish Passage Reports 1956 [abstracts only] ; 1956 >
+    au < ready ; 1957 ; University of Massachusetts Amherst Fish Passage Reports 1957 [abstracts only] ; 1957 >
+    au < ready ; 1958 ; University of Massachusetts Amherst Fish Passage Reports 1958 [abstracts only] ; 1958 >
+    au < ready ; 1959 ; University of Massachusetts Amherst Fish Passage Reports 1959 [abstracts only] ; 1959 >
+    au < ready ; 1960 ; University of Massachusetts Amherst Fish Passage Reports 1960 [abstracts only] ; 1960 >
+    au < ready ; 1961 ; University of Massachusetts Amherst Fish Passage Reports 1961 [abstracts only] ; 1961 >
+    au < ready ; 1962 ; University of Massachusetts Amherst Fish Passage Reports 1962 [abstracts only] ; 1962 >
+    au < ready ; 1963 ; University of Massachusetts Amherst Fish Passage Reports 1963 [abstracts only] ; 1963 >
+    au < ready ; 1964 ; University of Massachusetts Amherst Fish Passage Reports 1964 [abstracts only] ; 1964 >
+    au < ready ; 1965 ; University of Massachusetts Amherst Fish Passage Reports 1965 [abstracts only] ; 1965 >
+    au < ready ; 1966 ; University of Massachusetts Amherst Fish Passage Reports 1966 [abstracts only] ; 1966 >
+    au < ready ; 1967 ; University of Massachusetts Amherst Fish Passage Reports 1967 [abstracts only] ; 1967 >
+    au < ready ; 1968 ; University of Massachusetts Amherst Fish Passage Reports 1968 [abstracts only] ; 1968 >
+    au < ready ; 1969 ; University of Massachusetts Amherst Fish Passage Reports 1969 [abstracts only] ; 1969 >
+    au < ready ; 1970 ; University of Massachusetts Amherst Fish Passage Reports 1970 [abstracts only] ; 1970 >
+    au < ready ; 1971 ; University of Massachusetts Amherst Fish Passage Reports 1971 [abstracts only] ; 1971 >
+    au < ready ; 1972 ; University of Massachusetts Amherst Fish Passage Reports 1972 [abstracts only] ; 1972 >
+    au < ready ; 1973 ; University of Massachusetts Amherst Fish Passage Reports 1973 [abstracts only] ; 1973 >
+    au < ready ; 1974 ; University of Massachusetts Amherst Fish Passage Reports 1974 [abstracts only] ; 1974 >
+    au < ready ; 1975 ; University of Massachusetts Amherst Fish Passage Reports 1975 [abstracts only] ; 1975 >
+    au < ready ; 1976 ; University of Massachusetts Amherst Fish Passage Reports 1976 [abstracts only] ; 1976 >
+    au < ready ; 1977 ; University of Massachusetts Amherst Fish Passage Reports 1977 [abstracts only] ; 1977 >
+    au < ready ; 1978 ; University of Massachusetts Amherst Fish Passage Reports 1978 [abstracts only] ; 1978 >
+    au < ready ; 1979 ; University of Massachusetts Amherst Fish Passage Reports 1979 [abstracts only] ; 1979 >
+    au < ready ; 1980 ; University of Massachusetts Amherst Fish Passage Reports 1980 [abstracts only] ; 1980 >
+    au < ready ; 1981 ; University of Massachusetts Amherst Fish Passage Reports 1981 [abstracts only] ; 1981 >
+    au < ready ; 1982 ; University of Massachusetts Amherst Fish Passage Reports 1982 [abstracts only] ; 1982 >
+    au < ready ; 1983 ; University of Massachusetts Amherst Fish Passage Reports 1983 [abstracts only] ; 1983 >
+    au < ready ; 1984 ; University of Massachusetts Amherst Fish Passage Reports 1984 [abstracts only] ; 1984 >
+    au < ready ; 1985 ; University of Massachusetts Amherst Fish Passage Reports 1985 [abstracts only] ; 1985 >
+    au < ready ; 1986 ; University of Massachusetts Amherst Fish Passage Reports 1986 [abstracts only] ; 1986 >
+    au < ready ; 1987 ; University of Massachusetts Amherst Fish Passage Reports 1987 [abstracts only] ; 1987 >
+    au < ready ; 1988 ; University of Massachusetts Amherst Fish Passage Reports 1988 [abstracts only] ; 1988 >
+    au < ready ; 1989 ; University of Massachusetts Amherst Fish Passage Reports 1989 [abstracts only] ; 1989 >
+    au < ready ; 1990 ; University of Massachusetts Amherst Fish Passage Reports 1990 [abstracts only] ; 1990 >
+    au < ready ; 1991 ; University of Massachusetts Amherst Fish Passage Reports 1991 [abstracts only] ; 1991 >
+    au < ready ; 1992 ; University of Massachusetts Amherst Fish Passage Reports 1992 [abstracts only] ; 1992 >
+    au < ready ; 1993 ; University of Massachusetts Amherst Fish Passage Reports 1993 [abstracts only] ; 1993 >
+    au < ready ; 1994 ; University of Massachusetts Amherst Fish Passage Reports 1994 [abstracts only] ; 1994 >
+    au < ready ; 1995 ; University of Massachusetts Amherst Fish Passage Reports 1995 [abstracts only] ; 1995 >
+    au < ready ; 1996 ; University of Massachusetts Amherst Fish Passage Reports 1996 [abstracts only] ; 1996 >
+    au < ready ; 1997 ; University of Massachusetts Amherst Fish Passage Reports 1997 [abstracts only] ; 1997 >
+    au < ready ; 1998 ; University of Massachusetts Amherst Fish Passage Reports 1998 [abstracts only] ; 1998 >
+    au < ready ; 1999 ; University of Massachusetts Amherst Fish Passage Reports 1999 [abstracts only] ; 1999 >
+    au < ready ; 2000 ; University of Massachusetts Amherst Fish Passage Reports 2000 [abstracts only] ; 2000 >
+    au < ready ; 2001 ; University of Massachusetts Amherst Fish Passage Reports 2001 [abstracts only] ; 2001 >
+    au < ready ; 2002 ; University of Massachusetts Amherst Fish Passage Reports 2002 [abstracts only] ; 2002 >
+    au < ready ; 2003 ; University of Massachusetts Amherst Fish Passage Reports 2003 [abstracts only] ; 2003 >
+    au < ready ; 2004 ; University of Massachusetts Amherst Fish Passage Reports 2004 [abstracts only] ; 2004 >
+    au < ready ; 2005 ; University of Massachusetts Amherst Fish Passage Reports 2005 [abstracts only] ; 2005 >
+    au < ready ; 2006 ; University of Massachusetts Amherst Fish Passage Reports 2006 [abstracts only] ; 2006 >
+    au < ready ; 2007 ; University of Massachusetts Amherst Fish Passage Reports 2007 [abstracts only] ; 2007 >
+    au < ready ; 2008 ; University of Massachusetts Amherst Fish Passage Reports 2008 [abstracts only] ; 2008 >
+    au < ready ; 2009 ; University of Massachusetts Amherst Fish Passage Reports 2009 [abstracts only] ; 2009 >
+    au < ready ; 2010 ; University of Massachusetts Amherst Fish Passage Reports 2010 [abstracts only] ; 2010 >
+    au < ready ; 2011 ; University of Massachusetts Amherst Fish Passage Reports 2011 [abstracts only] ; 2011 >
+    au < ready ; 2013 ; University of Massachusetts Amherst Fish Passage Reports 2013 [abstracts only] ; 2013 >
 
   }
 
@@ -1913,8 +1913,8 @@
     param[collection] = fishpassage_technical_reports
     implicit < status ; year ; name ; param[collection_heading] >
 
-    au < testing ; 2013 ; University of Massachusetts Amherst Fish Passage Technical Reports 2013 ; 2013 >
-    au < testing ; 2014 ; University of Massachusetts Amherst Fish Passage Technical Reports 2014 ; 2014 >
+    au < ready ; 2013 ; University of Massachusetts Amherst Fish Passage Technical Reports 2013 ; 2013 >
+    au < ready ; 2014 ; University of Massachusetts Amherst Fish Passage Technical Reports 2014 ; 2014 >
 
   }
 
@@ -1930,57 +1930,57 @@
     param[collection] = fishpassage_unpublished_works
     implicit < status ; year ; name ; param[collection_heading] ; attr[au_coverage_depth] >
 
-    au < testing ; 1900 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1900 [abstracts only] ; 1900 ; abstracts >
-    au < testing ; 1950 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1950 [abstracts only] ; 1950 ; abstracts >
-    au < testing ; 1954 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1954 [abstracts only] ; 1954 ; abstracts >
-    au < testing ; 1955 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1955 [abstracts only] ; 1955 ; abstracts >
-    au < testing ; 1956 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1956 [abstracts only] ; 1956 ; abstracts >
-    au < testing ; 1958 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1958 [abstracts only] ; 1958 ; abstracts >
-    au < testing ; 1959 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1959 [abstracts only] ; 1959 ; abstracts >
-    au < testing ; 1960 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1960 [abstracts only] ; 1960 ; abstracts >
-    au < testing ; 1961 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1961 [abstracts only] ; 1961 ; abstracts >
-    au < testing ; 1962 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1962 [abstracts only] ; 1962 ; abstracts >
-    au < testing ; 1963 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1963 [abstracts only] ; 1963 ; abstracts >
-    au < testing ; 1964 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1964 [abstracts only] ; 1964 ; abstracts >
-    au < testing ; 1965 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1965 [abstracts only] ; 1965 ; abstracts >
-    au < testing ; 1967 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1967 [abstracts only] ; 1967 ; abstracts >
-    au < testing ; 1968 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1968 [abstracts only] ; 1968 ; abstracts >
-    au < testing ; 1969 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1969 [abstracts only] ; 1969 ; abstracts >
-    au < testing ; 1970 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1970 [abstracts only] ; 1970 ; abstracts >
-    au < testing ; 1971 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1971 [abstracts only] ; 1971 ; abstracts >
-    au < testing ; 1972 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1972 [abstracts only] ; 1972 ; abstracts >
-    au < testing ; 1973 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1973 [abstracts only] ; 1973 ; abstracts >
-    au < testing ; 1974 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1974 [abstracts only] ; 1974 ; abstracts >
-    au < testing ; 1975 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1975 [abstracts only] ; 1975 ; abstracts >
-    au < testing ; 1976 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1976 [abstracts only] ; 1976 ; abstracts >
-    au < testing ; 1978 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1978 [abstracts only] ; 1978 ; abstracts >
-    au < testing ; 1979 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1979 [abstracts only] ; 1979 ; abstracts >
-    au < testing ; 1980 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1980 [abstracts only] ; 1980 ; abstracts >
-    au < testing ; 1981 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1981 [abstracts only] ; 1981 ; abstracts >
-    au < testing ; 1982 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1982 [abstracts only] ; 1982 ; abstracts >
-    au < testing ; 1983 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1983 [abstracts only] ; 1983 ; abstracts >
-    au < testing ; 1984 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1984 [abstracts only] ; 1984 ; abstracts >
-    au < testing ; 1985 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1985 [abstracts only] ; 1985 ; abstracts >
-    au < testing ; 1986 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1986 [abstracts only] ; 1986 ; abstracts >
-    au < testing ; 1987 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1987 [abstracts only] ; 1987 ; abstracts >
-    au < testing ; 1988 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1988 [abstracts only] ; 1988 ; abstracts >
-    au < testing ; 1989 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1989 [abstracts only] ; 1989 ; abstracts >
-    au < testing ; 1990 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1990 [abstracts only] ; 1990 ; abstracts >
-    au < testing ; 1991 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1991 [abstracts only] ; 1991 ; abstracts >
-    au < testing ; 1992 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1992 [abstracts only] ; 1992 ; abstracts >
-    au < testing ; 1993 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1993 [abstracts only] ; 1993 ; abstracts >
-    au < testing ; 1994 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1994 [abstracts only] ; 1994 ; abstracts >
-    au < testing ; 1995 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1995 [abstracts only] ; 1995 ; abstracts >
-    au < testing ; 1996 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1996 [abstracts only] ; 1996 ; abstracts >
-    au < testing ; 1997 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1997 [abstracts only] ; 1997 ; abstracts >
-    au < testing ; 1998 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1998 [abstracts only] ; 1998 ; abstracts >
-    au < testing ; 1999 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1999 [abstracts only] ; 1999 ; abstracts >
-    au < testing ; 2000 ; University of Massachusetts Amherst Fish Passage Unpublished Works 2000 [abstracts only] ; 2000 ; abstracts >
-    au < testing ; 2001 ; University of Massachusetts Amherst Fish Passage Unpublished Works 2001 [abstracts only] ; 2001 ; abstracts >
-    au < testing ; 2002 ; University of Massachusetts Amherst Fish Passage Unpublished Works 2002 [abstracts only] ; 2002 ; abstracts >
-    au < testing ; 2003 ; University of Massachusetts Amherst Fish Passage Unpublished Works 2003 [abstracts only] ; 2003 ; abstracts >
-    au < testing ; 2004 ; University of Massachusetts Amherst Fish Passage Unpublished Works 2004 [abstracts only] ; 2004 ; abstracts >
-    au < testing ; 2009 ; University of Massachusetts Amherst Fish Passage Unpublished Works 2009 ; 2009 ; fulltext >
+    au < ready ; 1900 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1900 [abstracts only] ; 1900 ; abstracts >
+    au < ready ; 1950 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1950 [abstracts only] ; 1950 ; abstracts >
+    au < ready ; 1954 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1954 [abstracts only] ; 1954 ; abstracts >
+    au < ready ; 1955 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1955 [abstracts only] ; 1955 ; abstracts >
+    au < ready ; 1956 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1956 [abstracts only] ; 1956 ; abstracts >
+    au < ready ; 1958 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1958 [abstracts only] ; 1958 ; abstracts >
+    au < ready ; 1959 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1959 [abstracts only] ; 1959 ; abstracts >
+    au < ready ; 1960 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1960 [abstracts only] ; 1960 ; abstracts >
+    au < ready ; 1961 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1961 [abstracts only] ; 1961 ; abstracts >
+    au < ready ; 1962 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1962 [abstracts only] ; 1962 ; abstracts >
+    au < ready ; 1963 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1963 [abstracts only] ; 1963 ; abstracts >
+    au < ready ; 1964 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1964 [abstracts only] ; 1964 ; abstracts >
+    au < ready ; 1965 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1965 [abstracts only] ; 1965 ; abstracts >
+    au < ready ; 1967 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1967 [abstracts only] ; 1967 ; abstracts >
+    au < ready ; 1968 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1968 [abstracts only] ; 1968 ; abstracts >
+    au < ready ; 1969 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1969 [abstracts only] ; 1969 ; abstracts >
+    au < ready ; 1970 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1970 [abstracts only] ; 1970 ; abstracts >
+    au < ready ; 1971 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1971 [abstracts only] ; 1971 ; abstracts >
+    au < ready ; 1972 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1972 [abstracts only] ; 1972 ; abstracts >
+    au < ready ; 1973 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1973 [abstracts only] ; 1973 ; abstracts >
+    au < ready ; 1974 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1974 [abstracts only] ; 1974 ; abstracts >
+    au < ready ; 1975 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1975 [abstracts only] ; 1975 ; abstracts >
+    au < ready ; 1976 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1976 [abstracts only] ; 1976 ; abstracts >
+    au < ready ; 1978 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1978 [abstracts only] ; 1978 ; abstracts >
+    au < ready ; 1979 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1979 [abstracts only] ; 1979 ; abstracts >
+    au < ready ; 1980 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1980 [abstracts only] ; 1980 ; abstracts >
+    au < ready ; 1981 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1981 [abstracts only] ; 1981 ; abstracts >
+    au < ready ; 1982 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1982 [abstracts only] ; 1982 ; abstracts >
+    au < ready ; 1983 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1983 [abstracts only] ; 1983 ; abstracts >
+    au < ready ; 1984 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1984 [abstracts only] ; 1984 ; abstracts >
+    au < ready ; 1985 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1985 [abstracts only] ; 1985 ; abstracts >
+    au < ready ; 1986 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1986 [abstracts only] ; 1986 ; abstracts >
+    au < ready ; 1987 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1987 [abstracts only] ; 1987 ; abstracts >
+    au < ready ; 1988 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1988 [abstracts only] ; 1988 ; abstracts >
+    au < ready ; 1989 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1989 [abstracts only] ; 1989 ; abstracts >
+    au < ready ; 1990 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1990 [abstracts only] ; 1990 ; abstracts >
+    au < ready ; 1991 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1991 [abstracts only] ; 1991 ; abstracts >
+    au < ready ; 1992 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1992 [abstracts only] ; 1992 ; abstracts >
+    au < ready ; 1993 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1993 [abstracts only] ; 1993 ; abstracts >
+    au < ready ; 1994 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1994 [abstracts only] ; 1994 ; abstracts >
+    au < ready ; 1995 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1995 [abstracts only] ; 1995 ; abstracts >
+    au < ready ; 1996 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1996 [abstracts only] ; 1996 ; abstracts >
+    au < ready ; 1997 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1997 [abstracts only] ; 1997 ; abstracts >
+    au < ready ; 1998 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1998 [abstracts only] ; 1998 ; abstracts >
+    au < ready ; 1999 ; University of Massachusetts Amherst Fish Passage Unpublished Works 1999 [abstracts only] ; 1999 ; abstracts >
+    au < ready ; 2000 ; University of Massachusetts Amherst Fish Passage Unpublished Works 2000 [abstracts only] ; 2000 ; abstracts >
+    au < ready ; 2001 ; University of Massachusetts Amherst Fish Passage Unpublished Works 2001 [abstracts only] ; 2001 ; abstracts >
+    au < ready ; 2002 ; University of Massachusetts Amherst Fish Passage Unpublished Works 2002 [abstracts only] ; 2002 ; abstracts >
+    au < ready ; 2003 ; University of Massachusetts Amherst Fish Passage Unpublished Works 2003 [abstracts only] ; 2003 ; abstracts >
+    au < ready ; 2004 ; University of Massachusetts Amherst Fish Passage Unpublished Works 2004 [abstracts only] ; 2004 ; abstracts >
+    au < ready ; 2009 ; University of Massachusetts Amherst Fish Passage Unpublished Works 2009 ; 2009 ; fulltext >
 
   }
 
@@ -1995,10 +1995,10 @@
     param[collection] = fishpassage_conference
     implicit < status ; year ; name ; param[collection_theme] >  
 
-    au < testing ; 2011 ; University of Massachusetts Amherst International Conference on Engineering and Ecohydrology for Fish Passage 2011 ; 2011 >
-    au < testing ; 2012 ; University of Massachusetts Amherst International Conference on Engineering and Ecohydrology for Fish Passage 2012 ; 2012 >
-    au < testing ; 2013 ; University of Massachusetts Amherst International Conference on Engineering and Ecohydrology for Fish Passage 2013 ; 2013 >
-    au < testing ; 2014 ; University of Massachusetts Amherst International Conference on Engineering and Ecohydrology for Fish Passage 2014 ; 2014 >
+    au < ready ; 2011 ; University of Massachusetts Amherst International Conference on Engineering and Ecohydrology for Fish Passage 2011 ; 2011 >
+    au < ready ; 2012 ; University of Massachusetts Amherst International Conference on Engineering and Ecohydrology for Fish Passage 2012 ; 2012 >
+    au < ready ; 2013 ; University of Massachusetts Amherst International Conference on Engineering and Ecohydrology for Fish Passage 2013 ; 2013 >
+    au < ready ; 2014 ; University of Massachusetts Amherst International Conference on Engineering and Ecohydrology for Fish Passage 2014 ; 2014 >
 
   }
 
@@ -2014,9 +2014,9 @@
     param[collection] = edethicsinscience
     implicit < status ; year ; name ; param[collection_heading] >  
 
-    au < testing ; 2008 ; University of Massachusetts Amherst International Dimensions of Ethics Education in Science and Engineering 2008 ; 2008 >
-    au < testing ; 2009 ; University of Massachusetts Amherst International Dimensions of Ethics Education in Science and Engineering 2009 ; 2009 >
-    au < testing ; 2010 ; University of Massachusetts Amherst International Dimensions of Ethics Education in Science and Engineering 2010 ; 2010 >
+    au < ready ; 2008 ; University of Massachusetts Amherst International Dimensions of Ethics Education in Science and Engineering 2008 ; 2008 >
+    au < ready ; 2009 ; University of Massachusetts Amherst International Dimensions of Ethics Education in Science and Engineering 2009 ; 2009 >
+    au < ready ; 2010 ; University of Massachusetts Amherst International Dimensions of Ethics Education in Science and Engineering 2010 ; 2010 >
 
   }
 
@@ -2061,16 +2061,16 @@
     param[base_url] = http://scholarworks.umass.edu/
     param[collection_type] = ir_series
     param[collection] = englmfa_theses
-    implicit < status ; year ; name ; param[collection_heading] >
+    implicit < status ; year ; name ; param[collection_heading] ; attr[au_coverage_depth] >
 
-    au < testing ; 2007 ; University of Massachusetts Amherst MFA Program for Poets and Writers Masters Theses Collection 2007 ; 2007 >
-    au < testing ; 2008 ; University of Massachusetts Amherst MFA Program for Poets and Writers Masters Theses Collection 2008 ; 2008 >
-    au < testing ; 2009 ; University of Massachusetts Amherst MFA Program for Poets and Writers Masters Theses Collection 2009 ; 2009 >
-    au < testing ; 2010 ; University of Massachusetts Amherst MFA Program for Poets and Writers Masters Theses Collection 2010 ; 2010 >
-    au < testing ; 2011 ; University of Massachusetts Amherst MFA Program for Poets and Writers Masters Theses Collection 2011 ; 2011 >
-    au < testing ; 2012 ; University of Massachusetts Amherst MFA Program for Poets and Writers Masters Theses Collection 2012 ; 2012 >
-    au < testing ; 2013 ; University of Massachusetts Amherst MFA Program for Poets and Writers Masters Theses Collection 2013 ; 2013 >
-    au < testing ; 2014 ; University of Massachusetts Amherst MFA Program for Poets and Writers Masters Theses Collection 2014 ; 2014 >
+    au < ready ; 2007 ; University of Massachusetts Amherst MFA Program for Poets and Writers Masters Theses Collection 2007 [abstracts only] ; 2007 ; abstracts >
+    au < ready ; 2008 ; University of Massachusetts Amherst MFA Program for Poets and Writers Masters Theses Collection 2008 [abstracts only] ; 2008 ; abstracts >
+    au < ready ; 2009 ; University of Massachusetts Amherst MFA Program for Poets and Writers Masters Theses Collection 2009 [abstracts only] ; 2009 ; abstracts >
+    au < ready ; 2010 ; University of Massachusetts Amherst MFA Program for Poets and Writers Masters Theses Collection 2010 [abstracts only] ; 2010 ; abstracts >
+    au < ready ; 2011 ; University of Massachusetts Amherst MFA Program for Poets and Writers Masters Theses Collection 2011 [abstracts only] ; 2011 ; abstracts >
+    au < ready ; 2012 ; University of Massachusetts Amherst MFA Program for Poets and Writers Masters Theses Collection 2012 [abstracts only] ; 2012 ; abstracts >
+    au < ready ; 2013 ; University of Massachusetts Amherst MFA Program for Poets and Writers Masters Theses Collection 2013 [abstracts only] ; 2013 ; abstracts >
+    au < ready ; 2014 ; University of Massachusetts Amherst MFA Program for Poets and Writers Masters Theses Collection 2014 ; 2014 ; fulltext >
 
   }
 
@@ -2150,7 +2150,7 @@
     param[collection] = esence_site
     implicit < status ; year ; name ; param[collection_heading] >
 
-    au < testing ; 2010 ; University of Massachusetts Amherst Screenshots of the Ethics in Science and Engineering National Clearinghouse 2010 ; 2010 >
+    au < ready ; 2010 ; University of Massachusetts Amherst Screenshots of the Ethics in Science and Engineering National Clearinghouse 2010 ; 2010 >
 
   }
 
@@ -2164,17 +2164,17 @@
     param[base_url] = http://scholarworks.umass.edu/
     param[collection_type] = ir_series
     param[collection] = efsp_pub_articles
-    implicit < status ; year ; name ; param[collection_heading] >  
+    implicit < status ; year ; name ; param[collection_heading] ; attr[au_coverage_depth] >
 
-    au < testing ; 1999 ; University of Massachusetts Amherst Selected Publications of EFS Faculty, Students and Alumni 1999 ; 1999 >
-    au < testing ; 2001 ; University of Massachusetts Amherst Selected Publications of EFS Faculty, Students and Alumni 2001 ; 2001 >
-    au < testing ; 2003 ; University of Massachusetts Amherst Selected Publications of EFS Faculty, Students and Alumni 2003 ; 2003 >
-    au < testing ; 2004 ; University of Massachusetts Amherst Selected Publications of EFS Faculty, Students and Alumni 2004 ; 2004 >
-    au < testing ; 2006 ; University of Massachusetts Amherst Selected Publications of EFS Faculty, Students and Alumni 2006 ; 2006 >
-    au < testing ; 2007 ; University of Massachusetts Amherst Selected Publications of EFS Faculty, Students and Alumni 2007 ; 2007 >
-    au < testing ; 2008 ; University of Massachusetts Amherst Selected Publications of EFS Faculty, Students and Alumni 2008 ; 2008 >
-    au < testing ; 2009 ; University of Massachusetts Amherst Selected Publications of EFS Faculty, Students and Alumni 2009 ; 2009 >
-    au < testing ; 2010 ; University of Massachusetts Amherst Selected Publications of EFS Faculty, Students and Alumni 2010 ; 2010 >
+    au < ready ; 1999 ; University of Massachusetts Amherst Selected Publications of EFS Faculty, Students and Alumni 1999 [abstracts only] ; 1999 >
+    au < ready ; 2001 ; University of Massachusetts Amherst Selected Publications of EFS Faculty, Students and Alumni 2001 [abstracts only] ; 2001 >
+    au < ready ; 2003 ; University of Massachusetts Amherst Selected Publications of EFS Faculty, Students and Alumni 2003 [abstracts only] ; 2003 >
+    au < ready ; 2004 ; University of Massachusetts Amherst Selected Publications of EFS Faculty, Students and Alumni 2004 [abstracts only] ; 2004 ; abstracts >
+    au < ready ; 2006 ; University of Massachusetts Amherst Selected Publications of EFS Faculty, Students and Alumni 2006 ; 2006 ; fulltext >
+    au < ready ; 2007 ; University of Massachusetts Amherst Selected Publications of EFS Faculty, Students and Alumni 2007 ; 2007 ; fulltext >
+    au < ready ; 2008 ; University of Massachusetts Amherst Selected Publications of EFS Faculty, Students and Alumni 2008 ; 2008 ; fulltext >
+    au < ready ; 2009 ; University of Massachusetts Amherst Selected Publications of EFS Faculty, Students and Alumni 2009 ; 2009 ; fulltext >
+    au < ready ; 2010 ; University of Massachusetts Amherst Selected Publications of EFS Faculty, Students and Alumni 2010 ; 2010 ; fulltext >
 
   }
 
