@@ -1,5 +1,5 @@
 /*
- * $Id: TestTimeBase.java,v 1.3 2012-10-01 22:15:33 tlipkis Exp $
+ * $Id: TestTimeBase.java,v 1.4 2015-01-02 06:02:51 tlipkis Exp $
  */
 
 /*
@@ -100,4 +100,21 @@ public class TestTimeBase extends LockssTestCase {
     assertTrue(TimeBase.isSimulated());
     assertEquals(90000000, TimeBase.nowMs());
   }
+
+  public void testCalendar() throws Exception {
+    TimeBase.setReal();
+    Calendar tbcal = TimeBase.nowCalendar();
+    Calendar cal = Calendar.getInstance();
+    int tbyear = tbcal.get(Calendar.YEAR);
+    int year = cal.get(Calendar.YEAR);
+    assertTrue(year == tbyear || (year == tbyear + 1 &&
+				  tbcal.get(Calendar.MONTH) == 11 &&
+				  cal.get(Calendar.MONTH) == 0));
+
+    TimeBase.setSimulated("1970/6/15 01:00:00");
+    Calendar simtbcal = TimeBase.nowCalendar();
+    assertEquals(1970, simtbcal.get(Calendar.YEAR));
+    assertEquals(5, simtbcal.get(Calendar.MONTH));
+  }
+
 }

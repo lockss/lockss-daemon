@@ -1,5 +1,5 @@
 /*
- * $Id: TimeBase.java,v 1.12 2012-03-27 20:55:51 tlipkis Exp $
+ * $Id: TimeBase.java,v 1.13 2015-01-02 06:02:51 tlipkis Exp $
  */
 
 /*
@@ -144,4 +144,12 @@ public class TimeBase {
   public static long msUntil(long when) {
     return when - nowMs();
   }
+
+  /** Return a Calenday set to the current real or simulated time */
+  public static Calendar nowCalendar() {
+    Calendar res = Calendar.getInstance();
+    res.setTimeInMillis(nowMs());
+    return res;
+  }
+
 }
