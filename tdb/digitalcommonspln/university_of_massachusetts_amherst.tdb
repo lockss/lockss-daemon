@@ -1293,7 +1293,8 @@
     param[collection] = energy_21_century
     implicit < status ; year ; name ; param[collection_theme] >  
 
-    au < ready ; 2005 ; University of Massachusetts Amherst Energy for the 21st Century Symposium 2005 ; 2005 >
+    # see note about no PDFs elsewhere
+    au < notReady ; 2005 ; University of Massachusetts Amherst Energy for the 21st Century Symposium 2005 ; 2005 >
 
   }
 
@@ -2166,9 +2167,9 @@
     param[collection] = efsp_pub_articles
     implicit < status ; year ; name ; param[collection_heading] ; attr[au_coverage_depth] >
 
-    au < ready ; 1999 ; University of Massachusetts Amherst Selected Publications of EFS Faculty, Students and Alumni 1999 [abstracts only] ; 1999 >
-    au < ready ; 2001 ; University of Massachusetts Amherst Selected Publications of EFS Faculty, Students and Alumni 2001 [abstracts only] ; 2001 >
-    au < ready ; 2003 ; University of Massachusetts Amherst Selected Publications of EFS Faculty, Students and Alumni 2003 [abstracts only] ; 2003 >
+    au < ready ; 1999 ; University of Massachusetts Amherst Selected Publications of EFS Faculty, Students and Alumni 1999 [abstracts only] ; 1999 ; abstracts >
+    au < ready ; 2001 ; University of Massachusetts Amherst Selected Publications of EFS Faculty, Students and Alumni 2001 [abstracts only] ; 2001 ; abstracts >
+    au < ready ; 2003 ; University of Massachusetts Amherst Selected Publications of EFS Faculty, Students and Alumni 2003 [abstracts only] ; 2003 ; abstracts >
     au < ready ; 2004 ; University of Massachusetts Amherst Selected Publications of EFS Faculty, Students and Alumni 2004 [abstracts only] ; 2004 ; abstracts >
     au < ready ; 2006 ; University of Massachusetts Amherst Selected Publications of EFS Faculty, Students and Alumni 2006 ; 2006 ; fulltext >
     au < ready ; 2007 ; University of Massachusetts Amherst Selected Publications of EFS Faculty, Students and Alumni 2007 ; 2007 ; fulltext >
