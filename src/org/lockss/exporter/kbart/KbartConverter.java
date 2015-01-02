@@ -1,5 +1,5 @@
 /*
- * $Id: KbartConverter.java,v 1.50 2014-10-03 23:04:46 fergaloy-sf Exp $
+ * $Id: KbartConverter.java,v 1.51 2015-01-02 06:02:22 tlipkis Exp $
  */
 
 /*
@@ -522,7 +522,7 @@ public class KbartConverter {
    */
   protected static boolean isPublicationDate(int year) {
     return (year >= MIN_PUB_DATE &&
-        year <= Calendar.getInstance().get(Calendar.YEAR) + MAX_FUTURE_PUB_DATE
+	    year <= BibliographicUtil.getThisYear() + MAX_FUTURE_PUB_DATE
     );
   }
   
@@ -843,22 +843,13 @@ public class KbartConverter {
       // leave empty the last issue/volume/date fields
       // NB: We now record the value and handle the blank requirements within
       // the KbartTitle's getters
-      /*if (range.getLastYear() >= getThisYear()) {
+      /*if (range.getLastYear() >= BibliographicUtil.getThisYear()) {
         kbt.setField(DATE_LAST_ISSUE_ONLINE, "");
         kbt.setField(NUM_LAST_ISSUE_ONLINE, "");
         kbt.setField(NUM_LAST_VOL_ONLINE, "");
       }*/
     }
   }
-
-  /**
-   * Get the current year from a calendar.
-   * @return an integer representing the current year
-   */
-  private static int getThisYear() { 
-    return Calendar.getInstance().get(Calendar.YEAR);
-  }
-
 
   /**
    * Get the value that will be used in the title_id field as defined in
